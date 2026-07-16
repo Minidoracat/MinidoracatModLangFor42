@@ -13,6 +13,13 @@
 
 [hr][/hr]
 
+[h2]📋 支援清單與問題回報[/h2]
+[url=https://github.com/Minidoracat/MinidoracatModLangFor42/blob/master/SUPPORTED_MODS.md]👉 完整支援 MOD 清單（含中文名稱與摘要）[/url]
+[url=https://github.com/Minidoracat/MinidoracatModLangFor42/issues]🐛 GitHub 問題回報[/url]
+[url=https://discord.gg/Gur2V67]💬 Discord 交流與回報[/url]
+
+[hr][/hr]
+
 [h2]🧩 姊妹作：本體完全翻譯[/h2]
 本包涵蓋其他 Workshop 模組的文本；遊戲本體的完整翻譯請搭配訂閱：
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3386633401]👉 [B42]繁體簡體中文完全翻譯 By Minidoracat 如一漢化組[/url]
