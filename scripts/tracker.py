@@ -60,7 +60,8 @@ ATTRIBUTION_INDEX_JSON = SOURCES / "attribution_index.json"
 SCHEMA_VERSION = 1
 # layer-A 抽取器 schema（media/scripts item/recipe 名為 basic 正則版，改抽取規則時 bump）
 # =2：record identity 由 basename 改為相對路徑（同 basename 不同目錄不再互撞）
-EXTRACTOR_SCHEMA = 2
+# =3：script 區塊改行首＋須接 "{" 判定（排除 craftRecipe 內文數量指令）；名稱允許空白全取
+EXTRACTOR_SCHEMA = 3
 
 # As1「[B42]統一模組漢化」包（layer-B 主力上游）；固定納入 watch-list
 AS1_WORKSHOP_ID = "3556540080"
@@ -280,8 +281,9 @@ def load_attribution_keys() -> set[str]:
 # ============================================================
 # 語料抽取與標準化（layer-A / layer-B 共用；record = (kind, relpath, key, value)）
 # ============================================================
-# PZ script item/recipe 區塊名 basic 正則（extractor_schema=1）：抓 <keyword> <name>
-_SCRIPT_BLOCK_RE = re.compile(r"\b(item|craftRecipe|recipe|vehicle|fixing)\s+([\w.]+)")
+# PZ script 定義區塊（extractor_schema=3）：行首 <keyword> <name>，名稱可含空白（craftRecipe 常見），
+# 且名稱後必須接 "{"（同行或下一非空行）才算定義——排除 craftRecipe 內文數量指令（"item 1 Base.Bandage,"）。
+_SCRIPT_LINE_RE = re.compile(r"^\s*(item|craftRecipe|recipe|vehicle|fixing)\s+([^{}\r\n]+?)\s*(\{)?\s*$")
 
 
 def _iter_translate_records(mod_dir: Path, lang: str) -> list[tuple[str, str, str, str]]:
@@ -328,7 +330,16 @@ def _iter_script_records(mod_dir: Path) -> list[tuple[str, str, str, str]]:
         except OSError:
             continue
         rel = tf.relative_to(scripts_dir).as_posix()
-        for kw, name in _SCRIPT_BLOCK_RE.findall(text):
+        lines = text.splitlines()
+        for i, line in enumerate(lines):
+            m = _SCRIPT_LINE_RE.match(line)
+            if not m:
+                continue
+            kw, name, brace = m.group(1), m.group(2).strip(), m.group(3)
+            if not brace:
+                nxt = next((ln.strip() for ln in lines[i + 1:] if ln.strip()), "")
+                if not nxt.startswith("{"):
+                    continue
             records.append((f"script_{kw}", rel, name, name))
     return records
 
@@ -343,9 +354,12 @@ def records_to_map(records: list[tuple[str, str, str, str]]) -> dict[str, str]:
     out: dict[str, str] = {}
     for kind, relpath, key, value in records:
         rid = f"{kind}|{relpath}|{key}"
+        vh = hashlib.sha256(value.encode("utf-8")).hexdigest()[:12]
         if rid in out:
-            raise ValueError(f"重複 record ID（拒絕覆寫，恐掩蓋上游變更）：{rid}")
-        out[rid] = hashlib.sha256(value.encode("utf-8")).hexdigest()[:12]
+            if out[rid] == vh:  # 同值重複（如同名 script 區塊）無資訊損失，靜默折疊
+                continue
+            raise ValueError(f"重複 record ID 且值不同（拒絕覆寫，恐掩蓋上游變更）：{rid}")
+        out[rid] = vh
     return out
 
 
@@ -982,26 +996,31 @@ def _diff_changed(changed, watchlist, steamcmd, install_dir, corpus_state, attri
             failed_ids.append(wid)
             continue
         trim_download(item_dir)
-        if wid == AS1_WORKSHOP_ID:
-            new_records = _iter_translate_records(item_dir, "CN")
-            if not new_records:
-                print(f"  ⚠️ As1 CN 語料解析為空，跳過（不推進狀態）：{wid}", file=sys.stderr)
-                failed_ids.append(wid)
-                continue
-            plan = build_layer_b_plan(new_records, read_repo_sources_cn())
-            if plan:
-                plans.append(plan)
-        else:
-            new_records = extract_corpus(item_dir, "EN")
-            if not new_records:
-                print(f"  ⚠️ 語料解析為空，跳過（不建空 baseline、不推進狀態）：{wid}", file=sys.stderr)
-                failed_ids.append(wid)
-                continue
-            mod_ids = items.get(wid, {}).get("mod_ids", [])
-            plan, new_state = build_layer_a_plan(wid, mod_ids, new_records, corpus_state, attribution)
-            corpus_updates[wid] = new_state
-            if plan:
-                plans.append(plan)
+        try:
+            if wid == AS1_WORKSHOP_ID:
+                new_records = _iter_translate_records(item_dir, "CN")
+                if not new_records:
+                    print(f"  ⚠️ As1 CN 語料解析為空，跳過（不推進狀態）：{wid}", file=sys.stderr)
+                    failed_ids.append(wid)
+                    continue
+                plan = build_layer_b_plan(new_records, read_repo_sources_cn())
+                if plan:
+                    plans.append(plan)
+            else:
+                new_records = extract_corpus(item_dir, "EN")
+                if not new_records:
+                    print(f"  ⚠️ 語料解析為空，跳過（不建空 baseline、不推進狀態）：{wid}", file=sys.stderr)
+                    failed_ids.append(wid)
+                    continue
+                mod_ids = items.get(wid, {}).get("mod_ids", [])
+                plan, new_state = build_layer_a_plan(wid, mod_ids, new_records, corpus_state, attribution)
+                corpus_updates[wid] = new_state
+                if plan:
+                    plans.append(plan)
+        except ValueError as exc:  # 單一模組語料異常不炸全場（成功子集照常推進，失敗者下輪重試）
+            print(f"  ⚠️ 語料處理失敗，跳過（不推進狀態）：{wid}：{exc}", file=sys.stderr)
+            failed_ids.append(wid)
+            continue
         ok_ids.append(wid)
     return plans, ok_ids, corpus_updates, failed_ids
 
