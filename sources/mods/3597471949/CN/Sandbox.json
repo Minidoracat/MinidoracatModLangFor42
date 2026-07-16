@@ -1,0 +1,17 @@
+{
+  "Sandbox_GeneratorPoweredBuildings": "发电机供电建筑",
+  "Sandbox_GeneratorPoweredBuildings_BaseLoadCapacity": "基础负载容量",
+  "Sandbox_GeneratorPoweredBuildings_BaseLoadCapacity_tooltip": "单台发电机在达到100%负载前可承受的基础负载. 较高的值会降低相同建筑负载下的负载率. 默认: 120.0 (范围: 20.0 至 500.0)",
+  "Sandbox_GeneratorPoweredBuildings_HeatRadius": "热源半径",
+  "Sandbox_GeneratorPoweredBuildings_HeatRadius_tooltip": "每个热源的半径 (单位: 格). 较大的值会加热更大的区域, 但可能需要更少的热源. 默认: 20 格 (范围: 15 至 100)",
+  "Sandbox_GeneratorPoweredBuildings_HeatingFuelMultiplier": "供暖燃料倍数",
+  "Sandbox_GeneratorPoweredBuildings_HeatingFuelMultiplier_tooltip": "供暖系统的燃料消耗倍数. 较高的值会增加供暖成本. 默认: 1.0 (范围: 0.1 至 10.0)",
+  "Sandbox_GeneratorPoweredBuildings_HeatingSystemEnabled": "启用供暖系统",
+  "Sandbox_GeneratorPoweredBuildings_HeatingSystemEnabled_tooltip": "启用建筑物供暖系统. 如果禁用, 发电机将不会为建筑物供暖, 也不会消耗燃料用于供暖. 默认: 启用",
+  "Sandbox_GeneratorPoweredBuildings_MaxConsumersPerBuilding": "每建筑最大用电设备数",
+  "Sandbox_GeneratorPoweredBuildings_MaxConsumersPerBuilding_tooltip": "单次建筑扫描中追踪的用电设备硬上限. 较高的值支持更大的建筑但增加扫描开销. 默认: 500 (范围: 50 至 5000)",
+  "Sandbox_GeneratorPoweredBuildings_MaxGeneratorsPerBuilding": "每建筑最大发电机数",
+  "Sandbox_GeneratorPoweredBuildings_MaxGeneratorsPerBuilding_tooltip": "可与单个建筑或供电组关联的最大发电机数. 较高的值支持更大的配置但增加状态大小和扫描开销. 默认: 10 (范围: 1 至 50)",
+  "Sandbox_GeneratorPoweredBuildings_StrainDamageEnabled": "启用负载损坏",
+  "Sandbox_GeneratorPoweredBuildings_StrainDamageEnabled_tooltip": "启用过载时的发电机损坏 (>100% 负载). 禁用时, 发电机不会因负载而受损. 负载导致的燃料消耗增加仍然有效. 默认: 启用"
+}

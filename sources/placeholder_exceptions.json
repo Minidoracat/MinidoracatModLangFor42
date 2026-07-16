@@ -1,0 +1,10 @@
+{
+  "Moodles.json|Moodles_BloodlustMoodle_Custom": {
+    "cn_safe_value": "我的嗜血值已填充至 %1%%. <br>超过50%最终会获得嗜血特质, <br>低于50%则会失去进度<br>(这是指示你正在获得还是失去嗜血特质)",
+    "reason": "As1 原值含 %1%.（%1 之後殘留字面 %.），PZ Translator 轉換後再經 JDK .formatted() 會拋 UnknownFormatConversionException；As1 上游已有玩家崩潰回報。修法：殘留 %. → %%.（字面百分號 JDK 安全轉義）。LangFor42 1.6.6 同類修法。"
+  },
+  "UI.json|UI_EHR_Line_56E73670": {
+    "cn_safe_value": "尸体病触发器 (%s): 暴露=%.1f 当前=%.1f 原始=%.1f 时间=%.2fh 尸体=%%.d 新鲜=%%.d 腐烂=%%.d 腐烂=%%.d 排放=%.2f 环境=%.2f 保护=%.2f 原始信号=%s",
+    "reason": "As1 原值含 4 個 %.d（除錯/遙測字串，%. 之後接 d，殘留字面 %.），與 %s/%.1f/%.2f 同存於一格式字串；JDK .formatted() 會拋 IllegalFormatPrecisionException/UnknownFormatConversionException。修法：殘留 %. → %%.（%.d → %%.d）中和崩潰。疑上游格式字串 bug（%.d 疑本應為 %d），此鍵落在 _unsorted 未歸屬；已回報上游待確認。"
+  }
+}

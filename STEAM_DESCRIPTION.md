@@ -1,0 +1,42 @@
+[h1]🌏 [B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組[/h1]
+[h3]By Minidoracat × 如一漢化組（As1）[/h3]
+
+[hr][/hr]
+
+[h2]✨ 功能特色[/h2]
+[list]
+[*] 460+ 個 Workshop 模組（600+ 個模組 ID）的中文翻譯
+[*] 繁體中文（台灣用語）/ 簡體中文 雙語支援
+[*] 每日自動追蹤各模組文本更新，持續維護校對
+[*] 零偵測共存設計，不與其他 MOD 衝突
+[/list]
+
+[hr][/hr]
+
+[h2]🧩 姊妹作：本體完全翻譯[/h2]
+本包涵蓋其他 Workshop 模組的文本；遊戲本體的完整翻譯請搭配訂閱：
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3386633401]👉 [B42]繁體簡體中文完全翻譯 By Minidoracat 如一漢化組[/url]
+兩者搭配即為完整中文體驗。
+
+[hr][/hr]
+
+[h2]🤝 授權與致謝[/h2]
+本 MOD 為如一漢化組（As1）[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3556540080]「[B42]統一模組漢化」[/url]的授權繁體中文版，掛名如一漢化組。
+簡體文本逐字保留原包內容，繁體文本由簡體經 OpenCC 與台灣用語校正再生。
+感謝如一漢化組授權與長期維護的翻譯成果。
+
+[hr][/hr]
+
+[h2]📋 MOD 資訊[/h2]
+[list]
+[*] [b]Mod ID:[/b] CatModLangFor42
+[*] [b]支援版本:[/b] Build 42.19.0+
+[*] [b]Mod 版本:[/b] 42.19.0-1.0.0
+[*] [b]Workshop ID:[/b] 3765907717
+[/list]
+
+[hr][/hr]
+
+[b]#Build42 #繁體中文 #簡體中文 #漢化 #翻譯 #Minidoracat #如一漢化組[/b]
+
+Tags: Build 42;Language/Translation;Multiplayer

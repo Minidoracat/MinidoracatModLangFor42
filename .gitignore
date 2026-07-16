@@ -1,0 +1,40 @@
+# Claude Code 本機設定
+.mcp.json
+
+# 系統檔案
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 翻譯參考倉庫（外部）
+translation-reference/
+
+# 反編譯產物（若放在專案內應被忽略；預設位置為專案同層 ../pz-decompiled-reference/）
+pz-decompiled-reference/
+decompiled/
+vineflower-*.jar
+*.class
+
+# Python
+__pycache__/
+*.pyc
+
+temp/
+
+# AI / Agent 工具狀態與指引（不公開）
+.code-review-graph/
+.omx/
+.omc/
+.codex/
+.agents/
+.claude/
+.gitnexus/
+.ruff_cache/
+CLAUDE.md
+AGENTS.md
