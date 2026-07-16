@@ -522,16 +522,22 @@ def steamcmd_download(
         workshop_id,
         "+quit",
     ]
-    proc = subprocess.run(cmd, capture_output=True, text=True, timeout=1800)
-    out = proc.stdout + proc.stderr
-    # 三項全過才算成功；任一不滿足回 None（steamcmd rc 不可靠，故三重把關）
-    if proc.returncode != 0:
-        return None
-    if STEAMCMD_SUCCESS_SIGNAL not in out:
-        return None
-    if not (content.is_dir() and any(content.iterdir())):
-        return None
-    return content
+    # 大型物品匿名下載常逾時斷線；steamcmd 會在 downloads/ staging 續傳，故原地重試最多 3 次
+    for attempt in range(1, 4):
+        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=1800)
+        out = proc.stdout + proc.stderr
+        # 三項全過才算成功；任一不滿足視為本次失敗（steamcmd rc 不可靠，故三重把關）
+        if (
+            proc.returncode == 0
+            and STEAMCMD_SUCCESS_SIGNAL in out
+            and content.is_dir()
+            and any(content.iterdir())
+        ):
+            return content
+        if attempt < 3:
+            print(f"  …{workshop_id} 第 {attempt} 次未完成，5 秒後重試（續傳）", file=sys.stderr)
+            time.sleep(5)
+    return None
 
 
 def trim_download(item_dir: Path) -> None:
