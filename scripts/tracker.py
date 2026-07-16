@@ -662,7 +662,7 @@ def commit_state_with_retry(
     """add → commit → (fetch → rebase → push) 全鏈 rc 檢查。
     rebase 失敗立即 abort；只對 non-fast-forward push 重試。回傳 COMMIT_OK / NOCHANGE / FAILED。"""
     if branch is None:
-        branch = os.environ.get("TRACKER_BRANCH") or "master"
+        branch = os.environ.get("TRACKER_BRANCH") or "main"
     rc, _out, err = git(["add", *add_paths])
     if rc != 0:
         print(f"  ⚠️ git add 失敗：{err.strip()}", file=sys.stderr)
@@ -1232,7 +1232,7 @@ def cmd_self_test() -> int:
         return 0, "", ""
 
     status = commit_state_with_retry(
-        ["tracker-state/timestamps.json"], "test", branch="master",
+        ["tracker-state/timestamps.json"], "test", branch="main",
         git=fake_git, sleep=lambda _s: None,
     )
     assert status == COMMIT_OK, "情境6：rebase 後應 push 成功"
