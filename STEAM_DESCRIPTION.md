@@ -14,7 +14,7 @@
 [hr][/hr]
 
 [h2]📋 支援清單與問題回報[/h2]
-[url=https://github.com/Minidoracat/MinidoracatModLangFor42/blob/master/SUPPORTED_MODS.md]👉 完整支援 MOD 清單（含中文名稱與摘要）[/url]
+[url=https://github.com/Minidoracat/MinidoracatModLangFor42/blob/main/SUPPORTED_MODS.md]👉 完整支援 MOD 清單（含中文名稱與摘要）[/url]
 [url=https://github.com/Minidoracat/MinidoracatModLangFor42/issues]🐛 GitHub 問題回報[/url]
 [url=https://discord.gg/Gur2V67]💬 Discord 交流與回報[/url]
 
