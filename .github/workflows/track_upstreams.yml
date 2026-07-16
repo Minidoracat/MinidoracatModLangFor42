@@ -1,4 +1,5 @@
 # 雙上游追蹤器（PZ B42 如一模組翻譯繁中版）
+# 排程：每日 04:17 UTC（台灣 12:17）；手動 Run workflow 預設 dry_run=true 走 preview。
 #
 # 流程：check（查時間戳，無寫權限）→ diff（steamcmd 下載+裁剪+diff，無 GitHub 寫權限）
 #       → issue（冪等開/更 issue + commit 成功子集 state，issues:write + contents:write）。
