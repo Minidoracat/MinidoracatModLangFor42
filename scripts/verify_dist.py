@@ -148,6 +148,22 @@ def _load_exceptions(repo: str) -> dict[str, dict]:
     return data
 
 
+def _load_own(repo: str) -> dict[str, dict]:
+    """讀 sources/own_translations.json 的 entries（原創翻譯層）。
+
+    schema：{"entries": {"<檔名>": {"<鍵>": {"en":..., "ch":..., "cn":...}}}}
+    不存在 → 空 dict。頂層非物件 → 擲例外（呼叫端轉 FAIL）。
+    """
+    path = os.path.join(repo, "sources", "own_translations.json")
+    if not os.path.isfile(path):
+        return {}
+    with open(path, "r", encoding="utf-8-sig") as f:
+        data = json.load(f)
+    if not isinstance(data, dict) or not isinstance(data.get("entries", {}), dict):
+        raise ValueError("own_translations.json 頂層非物件或 entries 形狀錯誤")
+    return data.get("entries", {})
+
+
 def _parse_language_txt(path: str) -> dict[str, str]:
     """解析 PZ language.txt（形如 `text = Traditional Chinese,`）成 {key: value}。"""
     result: dict[str, str] = {}
@@ -209,12 +225,13 @@ def _dist_is_built(dist_cn: str | None) -> bool:
 # 各驗證項（回傳 (ok: bool, details: list[str], ...)）
 # --------------------------------------------------------------------------- #
 def check_cn_parity(
-    as1_cn: str, dist_cn: str, exceptions: dict[str, dict]
-) -> tuple[bool, list[str], list[str], int]:
+    as1_cn: str, dist_cn: str, exceptions: dict[str, dict], own: dict[str, dict]
+) -> tuple[bool, list[str], list[str], int, int]:
     """[1] dist CN 對 As1 快照：檔案集合 + 逐檔鍵集 + 逐鍵值逐字一致。
 
-    登記例外鍵（sources/placeholder_exceptions.json）改判「dist CN 值 == cn_safe_value」，
-    不再要求等於 As1 原值。回傳 (ok, details, warn, applied_count)。
+    登記例外鍵（sources/placeholder_exceptions.json）改判「dist CN 值 == cn_safe_value」；
+    原創翻譯層（sources/own_translations.json）之鍵為合法「多鍵/多檔」，改判
+    「dist CN 值 == own cn」。回傳 (ok, details, warn, applied_count, own_count)。
     """
     as1_files, as1_err = _load_json_dir(as1_cn)
     dist_files, dist_err = _load_json_dir(dist_cn)
@@ -223,11 +240,32 @@ def check_cn_parity(
     details += [f"As1 {e}" for e in as1_err]
     details += [f"dist {e}" for e in dist_err]
 
+    def own_cn(fname: str, key: str) -> str | None:
+        spec = own.get(fname, {}).get(key)
+        return spec.get("cn") if isinstance(spec, dict) else None
+
+    applied_own: set[str] = set()
+
+    def check_own_key(fname: str, key: str, dist_val: object) -> bool:
+        """dist 多出的 (檔,鍵) 若屬原創層 → 核對 own cn 值。回傳是否已處理。"""
+        expect = own_cn(fname, key)
+        if expect is None:
+            return False
+        applied_own.add(f"{fname}|{key}")
+        if dist_val != expect:
+            details.append(
+                f"{fname}: 原創鍵 {key!r} 值不符 | dist={dist_val!r} 應為 own cn={expect!r}"
+            )
+        return True
+
     as1_set, dist_set = set(as1_files), set(dist_files)
     for missing in sorted(as1_set - dist_set):
         details.append(f"檔案缺少：dist 少了 {missing}")
     for extra in sorted(dist_set - as1_set):
-        details.append(f"檔案多出：dist 多了 {extra}")
+        # 純原創檔（As1 無此檔）：逐鍵核對 own；任何非原創鍵仍屬違規
+        for key in sorted(dist_files[extra]):
+            if not check_own_key(extra, key, dist_files[extra][key]):
+                details.append(f"檔案多出：dist 多了 {extra}（含非原創鍵 {key!r}）")
 
     applied: set[str] = set()  # 實際命中 dist(檔,鍵) 的例外
     for fname in sorted(as1_set & dist_set):
@@ -236,7 +274,8 @@ def check_cn_parity(
         for mk in sorted(ak - dk):
             details.append(f"{fname}: 缺鍵 {mk!r}")
         for ek in sorted(dk - ak):
-            details.append(f"{fname}: 多鍵 {ek!r}")
+            if not check_own_key(fname, ek, d[ek]):
+                details.append(f"{fname}: 多鍵 {ek!r}")
         for key in sorted(ak & dk):
             exc = exceptions.get(f"{fname}|{key}")
             if isinstance(exc, dict) and isinstance(exc.get("cn_safe_value"), str):
@@ -256,7 +295,16 @@ def check_cn_parity(
     for ekey in sorted(set(exceptions) - applied):
         warn.append(f"例外鍵 {ekey!r} 未對應任何 dist CN(檔,鍵)，登記可能過期或打錯")
 
-    return (not details), details, warn, len(applied)
+    # 原創層完整性：登記的鍵必須落地；被 As1 收錄者提示退役（build 端 As1 優先）
+    for fname in sorted(own):
+        for key in sorted(own[fname]):
+            oid = f"{fname}|{key}"
+            if fname in as1_files and key in as1_files[fname]:
+                warn.append(f"原創鍵 {oid!r} 已被 As1 收錄（As1 優先），建議自 own_translations.json 退役")
+            elif oid not in applied_own:
+                details.append(f"原創鍵 {oid!r} 未落地於 dist CN")
+
+    return (not details), details, warn, len(applied), len(applied_own)
 
 
 def check_ch_mirror(dist_cn: str, dist_ch: str) -> tuple[bool, list[str]]:
@@ -545,8 +593,13 @@ def run_all(paths: dict) -> int:
     except Exception as exc:  # noqa: BLE001 — 例外檔壞掉直接判 FAIL
         print(f"ERROR：placeholder_exceptions.json 無法解析（{exc}）")
         return 1
+    try:
+        own = _load_own(repo)
+    except Exception as exc:  # noqa: BLE001 — 原創層檔壞掉直接判 FAIL
+        print(f"ERROR：own_translations.json 無法解析（{exc}）")
+        return 1
 
-    ok1, d1, w1, n_exc = check_cn_parity(as1_cn, dist_cn, exceptions)
+    ok1, d1, w1, n_exc, n_own = check_cn_parity(as1_cn, dist_cn, exceptions, own)
     ok2, d2 = check_ch_mirror(dist_cn, dist_ch)
     ok3, d3 = check_encoding(dist_translate)
     ok4, d4_fail, d4_warn = check_placeholder(dist_cn, dist_ch, exceptions)
@@ -573,7 +626,7 @@ def run_all(paths: dict) -> int:
         tail = f"  (WARN {len(warn)})" if warn else ""
         print(f" [{num}] {name:.<28} {status}{tail}")
     print("-" * 64)
-    print(f" 例外鍵 {n_exc} 個已依登記值核對")
+    print(f" 例外鍵 {n_exc} 個已依登記值核對；原創鍵 {n_own} 個已依 own cn 核對")
     overall = "PASS" if n_fail == 0 else "FAIL"
     print(f" 結果：{overall}  (PASS {n_pass} / FAIL {n_fail} / WARN {n_warn})")
     print("=" * 64)

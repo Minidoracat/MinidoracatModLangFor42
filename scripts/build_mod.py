@@ -42,6 +42,7 @@ LUA_SRC = SOURCES / "lua"
 OPENCC_FIXES_JSON = SOURCES / "opencc_fixes.json"
 CH_OVERRIDES_JSON = SOURCES / "ch_overrides.json"
 PLACEHOLDER_EXCEPTIONS_JSON = SOURCES / "placeholder_exceptions.json"
+OWN_TRANSLATIONS_JSON = SOURCES / "own_translations.json"
 
 MOD_MEDIA = (
     PROJECT_ROOT
@@ -214,6 +215,53 @@ def load_placeholder_exceptions() -> dict[str, dict]:
             )
             sys.exit(1)
     return data
+
+
+def load_own_translations() -> dict[str, dict[str, dict]]:
+    """載入 own_translations.json（原創翻譯層；缺失即 fail，不建骨架）。
+
+    schema：{"entries": {"<檔名>": {"<鍵>": {"en": 上游原文, "ch": 繁中, "cn": 簡中}}}}。
+    ch 為直寫繁中（不經 OpenCC）；en 供上游過時比對。
+    """
+    _require_truth_file(OWN_TRANSLATIONS_JSON, "原創翻譯層")
+    try:
+        data = load_json(OWN_TRANSLATIONS_JSON)
+    except json.JSONDecodeError as exc:
+        print(f"❌ own_translations.json 格式錯誤：{exc}", file=sys.stderr)
+        sys.exit(1)
+    entries = data.get("entries", {})
+    for fname, keys in entries.items():
+        for key, spec in keys.items():
+            if not isinstance(spec, dict) or not spec.get("ch") or not spec.get("cn"):
+                print(
+                    f"❌ own_translations.json 條目 {fname}|{key} 缺 ch/cn 欄位。",
+                    file=sys.stderr,
+                )
+                sys.exit(1)
+    return entries
+
+
+def apply_own(
+    merged_cn: dict[str, dict], merged_ch: dict[str, dict], own: dict[str, dict[str, dict]]
+) -> tuple[int, list[str]]:
+    """原創翻譯層合併：只補 As1 未收錄的鍵（As1 優先；同鍵列 shadowed 提示退役）。
+
+    於 regen_ch 之後套用——ch 為直寫繁中不經 OpenCC；placeholder gate 隨後照常涵蓋。
+    回傳 (新增鍵數, shadowed 清單)。
+    """
+    added = 0
+    shadowed: list[str] = []
+    for fname, keys in own.items():
+        cn_map = merged_cn.setdefault(fname, {})
+        ch_map = merged_ch.setdefault(fname, {})
+        for key, spec in keys.items():
+            if key in cn_map:
+                shadowed.append(f"{fname}|{key}")
+                continue
+            cn_map[key] = spec["cn"]
+            ch_map[key] = spec["ch"]
+            added += 1
+    return added, shadowed
 
 
 def convert_value(
@@ -395,6 +443,16 @@ def cmd_build() -> int:
     fix_hits: Counter = Counter()
     merged_ch, used_ov = regen_ch(merged_cn, post_fixes, overrides, fix_hits)
 
+    # 原創翻譯層（As1 未收錄的鍵；ch 直寫、cn 對應）——gate 之前合入使其受 placeholder 檢查
+    own = load_own_translations()
+    own_added, own_shadowed = apply_own(merged_cn, merged_ch, own)
+    if own_added:
+        print(f"  原創翻譯層：新增 {own_added} 鍵")
+    if own_shadowed:
+        print(f"  ⚠️ 原創翻譯層 {len(own_shadowed)} 鍵已被 As1 收錄（As1 優先，建議自 own_translations.json 退役）：")
+        for s in own_shadowed[:10]:
+            print(f"    {s}")
+
     errors, warnings = placeholder_gate(merged_cn, merged_ch)
 
     # Lua 複製計畫先算：basename 衝突屬硬錯，須在清空/寫出前先攔
@@ -435,7 +493,7 @@ def cmd_build() -> int:
     write_text(OUT_CN / "language.txt", LANGUAGE_TXT["CN"])
     lua_count = write_lua(lua_plan)
 
-    print(f"\n✅ 已寫出 CN/CH 各 {total_files} 檔、language.txt ×2、Lua {lua_count} 檔")
+    print(f"\n✅ 已寫出 CN/CH 各 {len(merged_cn)} 檔、language.txt ×2、Lua {lua_count} 檔")
 
     # 未消費人工真相報告（非阻斷，供檢視）
     report_unused(overrides, used_ov, exceptions, used_exc, post_fixes, fix_hits)

@@ -331,8 +331,11 @@ def _iter_translate_records(mod_dir: Path, lang: str) -> list[tuple[str, str, st
         except OSError:
             continue
         relpath = tf.relative_to(mod_dir).as_posix()
+        kv: dict[str, str] = {}
         for m in _TXT_KV_RE.finditer(text.replace("\r\n", "\n")):
-            records.append((f"translate_{lang.lower()}", relpath, m.group(1), m.group(2)))
+            kv[m.group(1)] = m.group(2)  # 同檔重複鍵取後者（PZ 後定義生效；上游 .txt 偶見重複定義）
+        for key in sorted(kv):
+            records.append((f"translate_{lang.lower()}", relpath, key, kv[key]))
     return records
 
 
@@ -1406,12 +1409,13 @@ def cmd_self_test() -> int:
         tdir = Path(td) / "42" / "media" / "lua" / "shared" / "Translate" / "EN"
         tdir.mkdir(parents=True)
         (tdir / "IG_UI_EN.txt").write_text(
-            'IG_UI_EN = {\n    IGUI_Test_A = "Hello",\n    IGUI_Test_B = "World, \\"quoted\\"",\n}\n',
+            'IG_UI_EN = {\n    IGUI_Test_A = "Hello",\n    IGUI_Test_B = "World, \\"quoted\\"",\n'
+            '    IGUI_Test_A = "Hello v2",\n}\n',  # 上游偶見同檔重複定義 → 取後者
             encoding="utf-8",
         )
         recs_txt = _iter_translate_records(Path(td), "EN")
     assert {r[2] for r in recs_txt} == {"IGUI_Test_A", "IGUI_Test_B"}, "情境10：.txt 鍵應被抽取"
-    assert dict((r[2], r[3]) for r in recs_txt)["IGUI_Test_A"] == "Hello", "情境10：.txt 值應被抽取"
+    assert dict((r[2], r[3]) for r in recs_txt)["IGUI_Test_A"] == "Hello v2", "情境10：重複鍵應取後者"
     print("  ✅ 情境10 schema 演進靜默重建＋B41 .txt 翻譯抽取")
 
     print("\n✅ self-test 十情境全通過。")
