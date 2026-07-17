@@ -522,7 +522,11 @@ def steamcmd_download(
         workshop_id,
         "+quit",
     ]
-    # 大型物品匿名下載常逾時斷線；steamcmd 會在 downloads/ staging 續傳，故原地重試最多 3 次
+    # 匿名下載兩大失敗模式，皆以原地重試（最多 3 次）處理：
+    #   1. workshop manifest（ACF）連續下載後毒化 → 之後所有物品固定 Failure（實測換新目錄立即成功）
+    #      → 重試前刪 ACF 讓 steamcmd 重建，內容檔不受影響。
+    #   2. 大型物品逾時斷線 → steamcmd 於 downloads/ staging 續傳。
+    acf = install_dir / "steamapps" / "workshop" / f"appworkshop_{STEAM_APPID}.acf"
     for attempt in range(1, 4):
         proc = subprocess.run(cmd, capture_output=True, text=True, timeout=1800)
         out = proc.stdout + proc.stderr
@@ -535,7 +539,9 @@ def steamcmd_download(
         ):
             return content
         if attempt < 3:
-            print(f"  …{workshop_id} 第 {attempt} 次未完成，5 秒後重試（續傳）", file=sys.stderr)
+            if acf.exists() and _within_scratch(acf):
+                acf.unlink(missing_ok=True)
+            print(f"  …{workshop_id} 第 {attempt} 次未完成，清 ACF 後重試", file=sys.stderr)
             time.sleep(5)
     return None
 
