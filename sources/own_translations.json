@@ -1,5 +1,3218 @@
 {
-  "_comment": "原創翻譯層：上游模組自帶 EN 文本但 As1 未收錄的鍵。人工真相檔（手編或工作流生成後人工審核）。",
-  "_usage": "schema：entries.<檔名>.<鍵> = {en, ch, cn}。en=擷取當時上游原文（供過時比對）；ch=直寫繁中（不經 OpenCC）；cn=對應簡中。與 As1 同鍵時 As1 優先，build 會提示退役該條目。",
-  "entries": {}
+ "_comment": "原創翻譯層：上游模組自帶 EN 文本但 As1 未收錄的鍵。人工真相檔（手編或工作流生成後人工審核）。",
+ "_usage": "schema：entries.<檔名>.<鍵> = {en, ch, cn}。en=擷取當時上游原文（供過時比對）；ch=直寫繁中（不經 OpenCC）；cn=對應簡中。與 As1 同鍵時 As1 優先，build 會提示退役該條目。",
+ "entries": {
+  "Fluids.json": {
+   "Fluid_Container_Aperol": {
+    "en": "Aperol Bottle",
+    "ch": "艾普羅酒瓶",
+    "cn": "阿佩罗酒瓶"
+   },
+   "Fluid_Container_Bailey": {
+    "en": "Bailey's Bottle",
+    "ch": "貝禮詩酒瓶",
+    "cn": "百利酒瓶"
+   },
+   "Fluid_Container_BeerGlass": {
+    "en": "Beer Glass",
+    "ch": "啤酒杯",
+    "cn": "啤酒杯"
+   },
+   "Fluid_Container_BlueishColaGlass": {
+    "en": "Blueish Cola Glass",
+    "ch": "淺藍色可樂杯",
+    "cn": "浅蓝色可乐杯"
+   },
+   "Fluid_Container_Bols": {
+    "en": "Bols Bottle",
+    "ch": "波士酒瓶",
+    "cn": "波士酒瓶"
+   },
+   "Fluid_Container_BootGlass": {
+    "en": "Boot Glass",
+    "ch": "靴形杯",
+    "cn": "靴形杯"
+   },
+   "Fluid_Container_Bundaberg": {
+    "en": "Bundaberg Bottle",
+    "ch": "賓得寶飲料瓶",
+    "cn": "宾得宝饮料瓶"
+   },
+   "Fluid_Container_Cachaca": {
+    "en": "Cachaca Bottle",
+    "ch": "卡沙夏酒瓶",
+    "cn": "卡莎萨酒瓶"
+   },
+   "Fluid_Container_CapriSunPouch": {
+    "en": "CapriSun Pouch",
+    "ch": "Capri-Sun 果汁包",
+    "cn": "果倍爽果汁袋"
+   },
+   "Fluid_Container_Chalice": {
+    "en": "Chalice",
+    "ch": "聖杯",
+    "cn": "圣杯"
+   },
+   "Fluid_Container_ChampagneGlass": {
+    "en": "Champagne Glass",
+    "ch": "香檳杯",
+    "cn": "香槟杯"
+   },
+   "Fluid_Container_ChampagneWithSlice": {
+    "en": "Champagne Glass with Slice",
+    "ch": "香檳杯 (附果片)",
+    "cn": "香槟杯 (附果片)"
+   },
+   "Fluid_Container_ChampagneWithStraw": {
+    "en": "Champagne Glass with Straw",
+    "ch": "香檳杯 (附吸管)",
+    "cn": "香槟杯 (附吸管)"
+   },
+   "Fluid_Container_CherryColaGlass": {
+    "en": "Cherry Cola Glass",
+    "ch": "櫻桃可樂杯",
+    "cn": "樱桃可乐杯"
+   },
+   "Fluid_Container_ColaBottle": {
+    "en": "Cola Bottle",
+    "ch": "可樂瓶",
+    "cn": "可乐瓶"
+   },
+   "Fluid_Container_ColaGlass": {
+    "en": "Cola Glass",
+    "ch": "可樂杯",
+    "cn": "可乐杯"
+   },
+   "Fluid_Container_CoupeGlass": {
+    "en": "Coupe Glass",
+    "ch": "淺碟香檳杯",
+    "cn": "浅碟香槟杯"
+   },
+   "Fluid_Container_CoupeWithIcecubes": {
+    "en": "Coupe Glass with Ice",
+    "ch": "淺碟杯 (加冰)",
+    "cn": "浅碟杯 (加冰)"
+   },
+   "Fluid_Container_CoupeWithSkewer": {
+    "en": "Coupe Glass with Skewer",
+    "ch": "淺碟杯 (附裝飾籤)",
+    "cn": "浅碟杯 (附装饰签)"
+   },
+   "Fluid_Container_CyanColaGlass": {
+    "en": "Cyan Cola Glass",
+    "ch": "青色可樂杯",
+    "cn": "青色可乐杯"
+   },
+   "Fluid_Container_DarkColaGlass": {
+    "en": "Dark Cola Glass",
+    "ch": "深色可樂杯",
+    "cn": "深色可乐杯"
+   },
+   "Fluid_Container_Fireball": {
+    "en": "Fireball Bottle",
+    "ch": "火球酒瓶",
+    "cn": "火球酒瓶"
+   },
+   "Fluid_Container_FluidTintTumbler": {
+    "en": "Glass Cup",
+    "ch": "玻璃杯",
+    "cn": "玻璃杯"
+   },
+   "Fluid_Container_GatoradeBottle": {
+    "en": "Gatorade Bottle",
+    "ch": "開特力瓶",
+    "cn": "佳得乐瓶"
+   },
+   "Fluid_Container_GreenColaGlass": {
+    "en": "Green Cola Glass",
+    "ch": "綠色可樂杯",
+    "cn": "绿色可乐杯"
+   },
+   "Fluid_Container_Hennessy": {
+    "en": "Hennessy Bottle",
+    "ch": "軒尼詩酒瓶",
+    "cn": "轩尼诗酒瓶"
+   },
+   "Fluid_Container_HurricaneGlass": {
+    "en": "Hurricane Glass",
+    "ch": "颶風杯",
+    "cn": "飓风杯"
+   },
+   "Fluid_Container_HurricaneWithSlice": {
+    "en": "Hurricane Glass with Slice",
+    "ch": "颶風杯 (附果片)",
+    "cn": "飓风杯 (附果片)"
+   },
+   "Fluid_Container_HurricaneWithUmbrella": {
+    "en": "Hurricane Glass with Umbrella",
+    "ch": "颶風杯 (附小紙傘)",
+    "cn": "飓风杯 (附小纸伞)"
+   },
+   "Fluid_Container_IceColaGlass": {
+    "en": "Ice White Cola Glass",
+    "ch": "冰白色可樂杯",
+    "cn": "冰白色可乐杯"
+   },
+   "Fluid_Container_IceWine": {
+    "en": "IceWine Bottle",
+    "ch": "冰酒瓶",
+    "cn": "冰酒瓶"
+   },
+   "Fluid_Container_Jeagermeister": {
+    "en": "Jeagermeister Bottle",
+    "ch": "野格酒瓶",
+    "cn": "野格酒瓶"
+   },
+   "Fluid_Container_Kvass": {
+    "en": "Kvass Bottle",
+    "ch": "格瓦斯瓶",
+    "cn": "格瓦斯瓶"
+   },
+   "Fluid_Container_LemonColaGlass": {
+    "en": "Lemon Cola Glass",
+    "ch": "檸檬可樂杯",
+    "cn": "柠檬可乐杯"
+   },
+   "Fluid_Container_MargaritaGlass": {
+    "en": "Margarita Glass",
+    "ch": "瑪格麗特杯",
+    "cn": "玛格丽特杯"
+   },
+   "Fluid_Container_MargaritaWithStraw": {
+    "en": "Margarita Glass with Straw",
+    "ch": "瑪格麗特杯 (附吸管)",
+    "cn": "玛格丽特杯 (附吸管)"
+   },
+   "Fluid_Container_MargaritaWithUmbrella": {
+    "en": "Margarita Glass with Umbrella",
+    "ch": "瑪格麗特杯 (附小紙傘)",
+    "cn": "玛格丽特杯 (附小纸伞)"
+   },
+   "Fluid_Container_MartiniGlass": {
+    "en": "Martini Glass",
+    "ch": "馬丁尼杯",
+    "cn": "马提尼杯"
+   },
+   "Fluid_Container_MartiniWithIcecubes": {
+    "en": "Martini Glass with Ice",
+    "ch": "馬丁尼杯 (加冰)",
+    "cn": "马提尼杯 (加冰)"
+   },
+   "Fluid_Container_MartiniWithSkewer": {
+    "en": "Martini Glass with Skewer",
+    "ch": "馬丁尼杯 (附裝飾籤)",
+    "cn": "马提尼杯 (附装饰签)"
+   },
+   "Fluid_Container_MilkshakeGlassWithStraw": {
+    "en": "Milkshake Glass with Straw",
+    "ch": "奶昔杯 (附吸管)",
+    "cn": "奶昔杯 (附吸管)"
+   },
+   "Fluid_Container_MonsterCan": {
+    "en": "Monster Can",
+    "ch": "魔爪罐",
+    "cn": "魔爪罐"
+   },
+   "Fluid_Container_Moonshine": {
+    "en": "Moonshine Bottle",
+    "ch": "私釀酒瓶",
+    "cn": "私酿酒瓶"
+   },
+   "Fluid_Container_Mouthwash": {
+    "en": "Mouthwash",
+    "ch": "漱口水",
+    "cn": "漱口水"
+   },
+   "Fluid_Container_MulledWine": {
+    "en": "Mulled Wine Bottle",
+    "ch": "熱紅酒瓶",
+    "cn": "热红酒瓶"
+   },
+   "Fluid_Container_OrangeColaGlass": {
+    "en": "Orange Cola Glass",
+    "ch": "橙色可樂杯",
+    "cn": "橙色可乐杯"
+   },
+   "Fluid_Container_Ouzo": {
+    "en": "Ouzo Bottle",
+    "ch": "烏佐酒瓶",
+    "cn": "乌佐酒瓶"
+   },
+   "Fluid_Container_PinkColaGlass": {
+    "en": "Pink Cola Glass",
+    "ch": "粉紅色可樂杯",
+    "cn": "粉色可乐杯"
+   },
+   "Fluid_Container_Pitcher": {
+    "en": "Pitcher",
+    "ch": "大水壺",
+    "cn": "大水壶"
+   },
+   "Fluid_Container_PitcherKool": {
+    "en": "Pitcher but Kool",
+    "ch": "大水壺 (但很酷)",
+    "cn": "大水壶 (但很酷)"
+   },
+   "Fluid_Container_PurpleColaGlass": {
+    "en": "Purple Cola Glass",
+    "ch": "紫色可樂杯",
+    "cn": "紫色可乐杯"
+   },
+   "Fluid_Container_RainbowColaGlass": {
+    "en": "Rainbow Cola Glass",
+    "ch": "彩虹可樂杯",
+    "cn": "彩虹可乐杯"
+   },
+   "Fluid_Container_RedColaGlass": {
+    "en": "Red Cola Glass",
+    "ch": "紅色可樂杯",
+    "cn": "红色可乐杯"
+   },
+   "Fluid_Container_RedbullCan": {
+    "en": "Redbull Can",
+    "ch": "紅牛罐",
+    "cn": "红牛罐"
+   },
+   "Fluid_Container_RockGlass": {
+    "en": "Rock Glass",
+    "ch": "威士忌杯",
+    "cn": "威士忌杯"
+   },
+   "Fluid_Container_RocksWithIcecubes": {
+    "en": "Rocks Glass with Ice",
+    "ch": "威士忌杯 (加冰)",
+    "cn": "威士忌杯 (加冰)"
+   },
+   "Fluid_Container_RocksWithSkewer": {
+    "en": "Rocks Glass with Skewer",
+    "ch": "威士忌杯 (附裝飾籤)",
+    "cn": "威士忌杯 (附装饰签)"
+   },
+   "Fluid_Container_RosaColaGlass": {
+    "en": "Rosa Cola Glass",
+    "ch": "玫瑰色可樂杯",
+    "cn": "玫瑰色可乐杯"
+   },
+   "Fluid_Container_Sake": {
+    "en": "Sake Bottle",
+    "ch": "清酒瓶",
+    "cn": "清酒瓶"
+   },
+   "Fluid_Container_Sambuca": {
+    "en": "Sambuca Bottle",
+    "ch": "珊布卡酒瓶",
+    "cn": "珊布卡酒瓶"
+   },
+   "Fluid_Container_SchnappsMint": {
+    "en": "Schnapps Mint Bottle",
+    "ch": "薄荷香甜酒瓶",
+    "cn": "薄荷香甜酒瓶"
+   },
+   "Fluid_Container_SchnappsSigma": {
+    "en": "Schnapps Sigma Bottle",
+    "ch": "西格瑪香甜酒瓶",
+    "cn": "西格玛香甜酒瓶"
+   },
+   "Fluid_Container_ShotGlass": {
+    "en": "Shot Glass",
+    "ch": "烈酒杯",
+    "cn": "烈酒杯"
+   },
+   "Fluid_Container_Soju": {
+    "en": "Soju Bottle",
+    "ch": "燒酒瓶",
+    "cn": "烧酒瓶"
+   },
+   "Fluid_Container_SunnyD": {
+    "en": "SunnyD Bottle",
+    "ch": "SunnyD 橘子飲料瓶",
+    "cn": "SunnyD 橙味饮料瓶"
+   },
+   "Fluid_Container_Sunset": {
+    "en": "Sunset Sarsaparilla Bottle",
+    "ch": "日落沙士瓶",
+    "cn": "日落沙士瓶"
+   },
+   "Fluid_Container_SyrupBottle": {
+    "en": "Syrup Bottle",
+    "ch": "糖漿瓶",
+    "cn": "糖浆瓶"
+   },
+   "Fluid_Container_TeaStraw": {
+    "en": "Teacup with Straw",
+    "ch": "附吸管茶杯",
+    "cn": "带吸管茶杯"
+   },
+   "Fluid_Container_TeaUmbrella": {
+    "en": "Teacup with Umbrella",
+    "ch": "附小傘茶杯",
+    "cn": "带小伞茶杯"
+   },
+   "Fluid_Container_Tonic": {
+    "en": "Tonic Waterbottle",
+    "ch": "通寧水瓶",
+    "cn": "汤力水瓶"
+   },
+   "Fluid_Container_TumblerStraw": {
+    "en": "Tumbler with Straw",
+    "ch": "附吸管平底杯",
+    "cn": "带吸管平底杯"
+   },
+   "Fluid_Container_TumblerUmbrella": {
+    "en": "Tumbler with Umbrella",
+    "ch": "附小傘平底杯",
+    "cn": "带小伞平底杯"
+   },
+   "Fluid_Container_WineStraw": {
+    "en": "Wineglass with Straw",
+    "ch": "附吸管葡萄酒杯",
+    "cn": "带吸管葡萄酒杯"
+   },
+   "Fluid_Container_WineUmbrella": {
+    "en": "Wineglass with Umbrella",
+    "ch": "附小傘葡萄酒杯",
+    "cn": "带小伞葡萄酒杯"
+   },
+   "Fluid_Container_YellowColaGlass": {
+    "en": "Yellow Cola Glass",
+    "ch": "黃色可樂杯",
+    "cn": "黄色可乐杯"
+   },
+   "Fluid_Name_Aperol": {
+    "en": "Aperol",
+    "ch": "艾普羅香甜酒",
+    "cn": "阿佩罗利口酒"
+   },
+   "Fluid_Name_Apple_Fizz": {
+    "en": "Apple Fizz",
+    "ch": "蘋果費士",
+    "cn": "苹果菲士"
+   },
+   "Fluid_Name_Apple_Jack": {
+    "en": "Apple Jack",
+    "ch": "蘋果傑克酒",
+    "cn": "苹果杰克酒"
+   },
+   "Fluid_Name_Apple_Mead": {
+    "en": "Apple Mead",
+    "ch": "蘋果蜂蜜酒",
+    "cn": "苹果蜂蜜酒"
+   },
+   "Fluid_Name_Appletini": {
+    "en": "Appletini",
+    "ch": "蘋果馬丁尼",
+    "cn": "苹果马提尼"
+   },
+   "Fluid_Name_Aviation": {
+    "en": "Aviation",
+    "ch": "飛行",
+    "cn": "飞行"
+   },
+   "Fluid_Name_B52": {
+    "en": "B52",
+    "ch": "B52 轟炸機",
+    "cn": "B52 轰炸机"
+   },
+   "Fluid_Name_Baileys": {
+    "en": "Baileys Irish Cream",
+    "ch": "貝禮詩奶酒",
+    "cn": "百利甜酒"
+   },
+   "Fluid_Name_BayBreeze": {
+    "en": "Bay Breeze",
+    "ch": "海灣微風",
+    "cn": "海湾微风"
+   },
+   "Fluid_Name_BeesKnees": {
+    "en": "Bee's Knees",
+    "ch": "蜂之膝",
+    "cn": "蜜蜂之膝"
+   },
+   "Fluid_Name_Bellini": {
+    "en": "Bellini",
+    "ch": "貝里尼",
+    "cn": "贝利尼"
+   },
+   "Fluid_Name_Berry_Chocolate_Shake": {
+    "en": "Berry Chocolate Shake",
+    "ch": "莓果巧克力奶昔",
+    "cn": "莓果巧克力奶昔"
+   },
+   "Fluid_Name_BlackOut": {
+    "en": "Black Out",
+    "ch": "黑到斷片",
+    "cn": "黑到断片"
+   },
+   "Fluid_Name_Black_Russian": {
+    "en": "Black Russian",
+    "ch": "黑色俄羅斯",
+    "cn": "黑俄罗斯"
+   },
+   "Fluid_Name_BloodyMary": {
+    "en": "Bloody Mary",
+    "ch": "血腥瑪麗",
+    "cn": "血腥玛丽"
+   },
+   "Fluid_Name_Blue_Lagoon": {
+    "en": "Blue Lagoon",
+    "ch": "藍色珊瑚礁",
+    "cn": "蓝色珊瑚礁"
+   },
+   "Fluid_Name_Blueberry_Lime_Fizz": {
+    "en": "Blueberry Lime Fizz",
+    "ch": "藍莓萊姆費士",
+    "cn": "蓝莓青柠菲士"
+   },
+   "Fluid_Name_Bols": {
+    "en": "Bols Triple-Sec",
+    "ch": "波士橙皮酒",
+    "cn": "波士橙皮酒"
+   },
+   "Fluid_Name_Bubblegum_Bliss": {
+    "en": "Bubblegum Bliss",
+    "ch": "泡泡糖極樂",
+    "cn": "泡泡糖极乐"
+   },
+   "Fluid_Name_Bubbly_Surprise": {
+    "en": "Bubbly Surprise",
+    "ch": "氣泡驚喜",
+    "cn": "气泡惊喜"
+   },
+   "Fluid_Name_Buzzing_Berry": {
+    "en": "Buzzing Berry",
+    "ch": "微醺莓果",
+    "cn": "微醺莓果"
+   },
+   "Fluid_Name_Cachaca": {
+    "en": "Cachaça",
+    "ch": "卡莎薩酒",
+    "cn": "卡莎萨酒"
+   },
+   "Fluid_Name_Caipirinha": {
+    "en": "Caipirinha",
+    "ch": "卡琵莉亞",
+    "cn": "凯匹林纳"
+   },
+   "Fluid_Name_CapeCodder": {
+    "en": "Cape Codder",
+    "ch": "鱈魚角",
+    "cn": "鳕鱼角"
+   },
+   "Fluid_Name_CapriSun_FruitPunch": {
+    "en": "Capri Sun Fruit Punch",
+    "ch": "果倍爽水果潘趣飲料",
+    "cn": "果倍爽水果宾治饮料"
+   },
+   "Fluid_Name_CapriSun_Orange": {
+    "en": "Capri Sun Orange",
+    "ch": "果倍爽柳橙飲料",
+    "cn": "果倍爽香橙饮料"
+   },
+   "Fluid_Name_CapriSun_PacificCooler": {
+    "en": "Capri Sun Pacific Cooler",
+    "ch": "果倍爽太平洋酷樂飲料",
+    "cn": "果倍爽太平洋酷乐饮料"
+   },
+   "Fluid_Name_ChocolateMilkshake": {
+    "en": "Chocolate Milkshake",
+    "ch": "巧克力奶昔",
+    "cn": "巧克力奶昔"
+   },
+   "Fluid_Name_ChocolateSyrup": {
+    "en": "Chocolate Syrup",
+    "ch": "巧克力糖漿",
+    "cn": "巧克力糖浆"
+   },
+   "Fluid_Name_Chocolate_Orange_Bliss": {
+    "en": "Chocolate Orange Bliss",
+    "ch": "巧克力柳橙極樂",
+    "cn": "巧克力香橙极乐"
+   },
+   "Fluid_Name_Chocolate_Sweetheart": {
+    "en": "Chocolate Sweetheart",
+    "ch": "巧克力甜心",
+    "cn": "巧克力甜心"
+   },
+   "Fluid_Name_Citrus_Berry_Mix": {
+    "en": "Citrus Berry Mix",
+    "ch": "柑橘莓果特調",
+    "cn": "柑橘莓果特调"
+   },
+   "Fluid_Name_Cognac": {
+    "en": "Cognac",
+    "ch": "干邑白蘭地",
+    "cn": "干邑白兰地"
+   },
+   "Fluid_Name_Cosmopolitan": {
+    "en": "Cosmopolitan",
+    "ch": "柯夢波丹",
+    "cn": "大都会"
+   },
+   "Fluid_Name_Cranberry_Spark": {
+    "en": "Cranberry Spark",
+    "ch": "蔓越莓氣泡",
+    "cn": "蔓越莓气泡"
+   },
+   "Fluid_Name_CubaLibre": {
+    "en": "Cuba Libre",
+    "ch": "自由古巴",
+    "cn": "自由古巴"
+   },
+   "Fluid_Name_Dragonbreath": {
+    "en": "Dragonbreath",
+    "ch": "龍之吐息",
+    "cn": "龙息"
+   },
+   "Fluid_Name_DummyFluid1": {
+    "en": "Dummy Fluid",
+    "ch": "佔位液體",
+    "cn": "占位液体"
+   },
+   "Fluid_Name_Espresso_Martini": {
+    "en": "Espresso Martini",
+    "ch": "濃縮咖啡馬丁尼",
+    "cn": "浓缩咖啡马天尼"
+   },
+   "Fluid_Name_Fireball": {
+    "en": "Fireball Whiskey",
+    "ch": "火球肉桂威士忌",
+    "cn": "火球肉桂威士忌"
+   },
+   "Fluid_Name_French_75": {
+    "en": "French 75",
+    "ch": "法式 75",
+    "cn": "法式 75"
+   },
+   "Fluid_Name_Gatorade_Cool_Blue": {
+    "en": "Gatorade Cool Blue",
+    "ch": "開特力酷藍",
+    "cn": "佳得乐酷蓝"
+   },
+   "Fluid_Name_Gatorade_Fruit_Punch": {
+    "en": "Gatorade Fruit Punch",
+    "ch": "開特力水果潘趣",
+    "cn": "佳得乐水果宾治"
+   },
+   "Fluid_Name_Gatorade_Orange": {
+    "en": "Gatorade Orange",
+    "ch": "開特力柳橙",
+    "cn": "佳得乐橙味"
+   },
+   "Fluid_Name_Gatorwine": {
+    "en": "Gatorwine",
+    "ch": "開特力紅酒",
+    "cn": "佳得乐红酒"
+   },
+   "Fluid_Name_GinAndTonic": {
+    "en": "Gin & Tonic",
+    "ch": "琴通寧",
+    "cn": "金汤力"
+   },
+   "Fluid_Name_Gin_Fizz": {
+    "en": "Gin Fizz",
+    "ch": "琴費士",
+    "cn": "金菲士"
+   },
+   "Fluid_Name_Ginger_Punch": {
+    "en": "Ginger Punch",
+    "ch": "薑汁潘趣",
+    "cn": "姜汁潘趣"
+   },
+   "Fluid_Name_Ginger_Smash": {
+    "en": "Ginger Smash",
+    "ch": "薑汁斯瑪什",
+    "cn": "姜汁斯玛什"
+   },
+   "Fluid_Name_Golden_Ale": {
+    "en": "Golden Ale",
+    "ch": "金色愛爾啤酒",
+    "cn": "金色艾尔啤酒"
+   },
+   "Fluid_Name_Honey_Citrus_Spritz": {
+    "en": "Honey Citrus Spritz",
+    "ch": "蜂蜜柑橘氣泡飲",
+    "cn": "蜂蜜柑橘气泡饮"
+   },
+   "Fluid_Name_IceWine": {
+    "en": "Ice Wine",
+    "ch": "冰酒",
+    "cn": "冰酒"
+   },
+   "Fluid_Name_Iced_Mocha_Mocktail": {
+    "en": "Iced Mocha Mocktail",
+    "ch": "冰摩卡無酒精調飲",
+    "cn": "冰摩卡无酒精调饮"
+   },
+   "Fluid_Name_IrishCoffee": {
+    "en": "Irish Coffee",
+    "ch": "愛爾蘭咖啡",
+    "cn": "爱尔兰咖啡"
+   },
+   "Fluid_Name_IrishTrashCan": {
+    "en": "Irish Trash Can",
+    "ch": "愛爾蘭垃圾桶",
+    "cn": "爱尔兰垃圾桶"
+   },
+   "Fluid_Name_JaegerBomb": {
+    "en": "Jägerbomb",
+    "ch": "野格炸彈",
+    "cn": "野格炸弹"
+   },
+   "Fluid_Name_Jeagermeister": {
+    "en": "Jägermeister",
+    "ch": "野格利口酒",
+    "cn": "野格利口酒"
+   },
+   "Fluid_Name_Jungle_Juice": {
+    "en": "Jungle Juice",
+    "ch": "叢林果汁",
+    "cn": "丛林果汁"
+   },
+   "Fluid_Name_Kamikaze": {
+    "en": "Kamikaze",
+    "ch": "神風特攻隊",
+    "cn": "神风特攻队"
+   },
+   "Fluid_Name_KoolAid_Cherry": {
+    "en": "Kool-Aid Cherry",
+    "ch": "酷愛櫻桃味飲料",
+    "cn": "酷爱樱桃味饮料"
+   },
+   "Fluid_Name_KoolAid_Grape": {
+    "en": "Kool-Aid Grape",
+    "ch": "酷愛葡萄味飲料",
+    "cn": "酷爱葡萄味饮料"
+   },
+   "Fluid_Name_KoolAid_Orange": {
+    "en": "Kool-Aid (Orange)",
+    "ch": "酷愛飲料 (柳橙)",
+    "cn": "酷爱饮料 (香橙)"
+   },
+   "Fluid_Name_KoolAid_PurplesaurusRex": {
+    "en": "Kool-Aid Purplesaurus Rex",
+    "ch": "酷愛紫龍暴王味飲料",
+    "cn": "酷爱紫龙暴王味饮料"
+   },
+   "Fluid_Name_KoolAid_RockADileRed": {
+    "en": "Kool-Aid Rock-a-dile Red",
+    "ch": "酷愛搖滾鱷紅味飲料",
+    "cn": "酷爱摇滚鳄红味饮料"
+   },
+   "Fluid_Name_KoolAid_Strawberry": {
+    "en": "Kool-Aid Strawberry",
+    "ch": "酷愛草莓味飲料",
+    "cn": "酷爱草莓味饮料"
+   },
+   "Fluid_Name_KoolAid_TropicalPunch": {
+    "en": "Kool-Aid Tropical Punch",
+    "ch": "酷愛熱帶潘趣味飲料",
+    "cn": "酷爱热带宾治味饮料"
+   },
+   "Fluid_Name_Kvass": {
+    "en": "Kvass",
+    "ch": "克瓦斯",
+    "cn": "格瓦斯"
+   },
+   "Fluid_Name_Lemon_Tea_Cooler": {
+    "en": "Lemon Tea Cooler",
+    "ch": "檸檬茶酷樂",
+    "cn": "柠檬茶酷乐"
+   },
+   "Fluid_Name_LongIslandIcedTea": {
+    "en": "Long Island Iced Tea",
+    "ch": "長島冰茶",
+    "cn": "长岛冰茶"
+   },
+   "Fluid_Name_Mai_Tai": {
+    "en": "Mai Tai",
+    "ch": "邁泰",
+    "cn": "迈泰"
+   },
+   "Fluid_Name_Manhattan": {
+    "en": "Manhattan",
+    "ch": "曼哈頓",
+    "cn": "曼哈顿"
+   },
+   "Fluid_Name_Margarita": {
+    "en": "Margarita",
+    "ch": "瑪格麗特",
+    "cn": "玛格丽特"
+   },
+   "Fluid_Name_Martini": {
+    "en": "Martini",
+    "ch": "馬丁尼",
+    "cn": "马提尼"
+   },
+   "Fluid_Name_Mimosa": {
+    "en": "Mimosa",
+    "ch": "含羞草",
+    "cn": "含羞草"
+   },
+   "Fluid_Name_Mocha_Fusion": {
+    "en": "Mocha Fusion",
+    "ch": "摩卡特調",
+    "cn": "摩卡特调"
+   },
+   "Fluid_Name_Mojito": {
+    "en": "Mojito",
+    "ch": "莫希托",
+    "cn": "莫吉托"
+   },
+   "Fluid_Name_Moonshine": {
+    "en": "Moonshine",
+    "ch": "私釀酒",
+    "cn": "私酿酒"
+   },
+   "Fluid_Name_Mouthwash": {
+    "en": "Mint Mouthwash",
+    "ch": "薄荷漱口水",
+    "cn": "薄荷漱口水"
+   },
+   "Fluid_Name_MulledWine": {
+    "en": "Mulled Wine",
+    "ch": "香料熱紅酒",
+    "cn": "热红酒"
+   },
+   "Fluid_Name_Negroni": {
+    "en": "Negroni",
+    "ch": "內格羅尼",
+    "cn": "尼格罗尼"
+   },
+   "Fluid_Name_Old_Fashioned": {
+    "en": "Old Fashioned",
+    "ch": "古典雞尾酒",
+    "cn": "古典鸡尾酒"
+   },
+   "Fluid_Name_Orchard_Delight": {
+    "en": "Orchard Delight",
+    "ch": "果園樂事",
+    "cn": "果园乐事"
+   },
+   "Fluid_Name_Ouzo": {
+    "en": "Ouzo",
+    "ch": "烏佐茴香酒",
+    "cn": "乌佐茴香酒"
+   },
+   "Fluid_Name_Painkiller": {
+    "en": "Painkiller",
+    "ch": "止痛藥",
+    "cn": "止痛药"
+   },
+   "Fluid_Name_Pilk": {
+    "en": "Pilk",
+    "ch": "可樂牛奶",
+    "cn": "可乐牛奶"
+   },
+   "Fluid_Name_Pina_Colada": {
+    "en": "Pina Colada",
+    "ch": "鳳梨可樂達",
+    "cn": "椰林飘香"
+   },
+   "Fluid_Name_Port_Sangria": {
+    "en": "Port Sangria",
+    "ch": "波特桑格利亞",
+    "cn": "波特桑格利亚"
+   },
+   "Fluid_Name_PumpkinSpiceLatte": {
+    "en": "Pumpkin Spice Latte",
+    "ch": "南瓜香料拿鐵",
+    "cn": "南瓜香料拿铁"
+   },
+   "Fluid_Name_PumpkinSyrup": {
+    "en": "Pumpkin Syrup",
+    "ch": "南瓜糖漿",
+    "cn": "南瓜糖浆"
+   },
+   "Fluid_Name_Purple_Citrus_Pop": {
+    "en": "Purple Citrus Pop",
+    "ch": "紫色柑橘汽水",
+    "cn": "紫色柑橘汽水"
+   },
+   "Fluid_Name_Radler": {
+    "en": "Radler",
+    "ch": "拉德勒啤酒",
+    "cn": "拉德勒啤酒"
+   },
+   "Fluid_Name_RanchWater": {
+    "en": "Ranch Water",
+    "ch": "牧場之水",
+    "cn": "牧场水"
+   },
+   "Fluid_Name_Root_Beer": {
+    "en": "Root Beer",
+    "ch": "麥根沙士",
+    "cn": "根汁汽水"
+   },
+   "Fluid_Name_Rum_Runner": {
+    "en": "Rum Runner",
+    "ch": "蘭姆走私者",
+    "cn": "朗姆走私者"
+   },
+   "Fluid_Name_Sake": {
+    "en": "Sake",
+    "ch": "清酒",
+    "cn": "清酒"
+   },
+   "Fluid_Name_Sambuca": {
+    "en": "Sambuca",
+    "ch": "珊布卡茴香酒",
+    "cn": "珊布卡茴香酒"
+   },
+   "Fluid_Name_Sarsaparilla": {
+    "en": "Sarsaparilla",
+    "ch": "沙士",
+    "cn": "沙士"
+   },
+   "Fluid_Name_SchnappsMint": {
+    "en": "Mint Schnapps",
+    "ch": "薄荷烈酒",
+    "cn": "薄荷烈酒"
+   },
+   "Fluid_Name_SchnappsSigma": {
+    "en": "Guarana Lime Schnapps",
+    "ch": "瓜拿納萊姆烈酒",
+    "cn": "瓜拉纳青柠烈酒"
+   },
+   "Fluid_Name_Screwdriver": {
+    "en": "Screwdriver",
+    "ch": "螺絲起子",
+    "cn": "螺丝刀"
+   },
+   "Fluid_Name_SeaBreeze": {
+    "en": "Sea Breeze",
+    "ch": "海風",
+    "cn": "海风"
+   },
+   "Fluid_Name_SexOnTheBeach": {
+    "en": "Sex on the Beach",
+    "ch": "性感海灘",
+    "cn": "性感沙滩"
+   },
+   "Fluid_Name_Sidecar": {
+    "en": "Sidecar",
+    "ch": "側車",
+    "cn": "边车"
+   },
+   "Fluid_Name_SlipperyNipple": {
+    "en": "Slippery Nipple",
+    "ch": "滑溜乳頭",
+    "cn": "滑溜乳头"
+   },
+   "Fluid_Name_Soju": {
+    "en": "Soju",
+    "ch": "燒酒",
+    "cn": "烧酒"
+   },
+   "Fluid_Name_Spiced_Tea_Spritzer": {
+    "en": "Spiced Tea Spritzer",
+    "ch": "香料茶氣泡飲",
+    "cn": "香料茶气泡饮"
+   },
+   "Fluid_Name_StrawberryMilkshake": {
+    "en": "Strawberry Milkshake",
+    "ch": "草莓奶昔",
+    "cn": "草莓奶昔"
+   },
+   "Fluid_Name_StrawberrySyrup": {
+    "en": "Strawberry Syrup",
+    "ch": "草莓糖漿",
+    "cn": "草莓糖浆"
+   },
+   "Fluid_Name_Strawberry_Daiquiri": {
+    "en": "Strawberry Daiquiri",
+    "ch": "草莓黛綺莉",
+    "cn": "草莓代基里"
+   },
+   "Fluid_Name_Strawberry_Lemonade_Sparkler": {
+    "en": "Strawberry Lemonade Sparkler",
+    "ch": "草莓檸檬氣泡飲",
+    "cn": "草莓柠檬气泡饮"
+   },
+   "Fluid_Name_SunnyD": {
+    "en": "SunnyD",
+    "ch": "SunnyD 柳橙汁飲料",
+    "cn": "SunnyD 橙汁饮料"
+   },
+   "Fluid_Name_Sunrise_Spritz": {
+    "en": "Sunrise Spritz",
+    "ch": "日出氣泡飲",
+    "cn": "日出气泡饮"
+   },
+   "Fluid_Name_TequilaShot": {
+    "en": "Tequila Shot",
+    "ch": "龍舌蘭 Shot",
+    "cn": "龙舌兰子弹杯"
+   },
+   "Fluid_Name_Tequila_Sunrise": {
+    "en": "Tequila Sunrise",
+    "ch": "龍舌蘭日出",
+    "cn": "龙舌兰日出"
+   },
+   "Fluid_Name_Tonic": {
+    "en": "Tonic Water",
+    "ch": "通寧水",
+    "cn": "汤力水"
+   },
+   "Fluid_Name_Tropical_Bliss": {
+    "en": "Tropical Bliss",
+    "ch": "熱帶極樂",
+    "cn": "热带极乐"
+   },
+   "Fluid_Name_Tropical_Cooler": {
+    "en": "Tropical Cooler",
+    "ch": "熱帶酷樂",
+    "cn": "热带酷乐"
+   },
+   "Fluid_Name_VanillaMilkshake": {
+    "en": "Vanilla Milkshake",
+    "ch": "香草奶昔",
+    "cn": "香草奶昔"
+   },
+   "Fluid_Name_Virgin_Bloody_Mary": {
+    "en": "Virgin Bloody Mary",
+    "ch": "無酒精血腥瑪麗",
+    "cn": "无酒精血腥玛丽"
+   },
+   "Fluid_Name_Virgin_Cosmo": {
+    "en": "Virgin Cosmo",
+    "ch": "無酒精柯夢波丹",
+    "cn": "无酒精大都会"
+   },
+   "Fluid_Name_Virgin_Margarita": {
+    "en": "Virgin Margarita",
+    "ch": "無酒精瑪格麗特",
+    "cn": "无酒精玛格丽特"
+   },
+   "Fluid_Name_VodkaRedBull": {
+    "en": "Vodka Red Bull",
+    "ch": "伏特加紅牛",
+    "cn": "伏特加红牛"
+   },
+   "Fluid_Name_WhiskeyHighball": {
+    "en": "Whiskey Highball",
+    "ch": "威士忌高球",
+    "cn": "威士忌高球"
+   },
+   "Fluid_Name_Whiskey_Sour": {
+    "en": "Whiskey Sour",
+    "ch": "威士忌沙瓦",
+    "cn": "威士忌酸"
+   },
+   "Fluid_Name_WhiteOut": {
+    "en": "White Out",
+    "ch": "白茫茫",
+    "cn": "白茫茫"
+   },
+   "Fluid_Name_White_Lotus_Tea": {
+    "en": "White Lotus Tea",
+    "ch": "白蓮花茶",
+    "cn": "白莲花茶"
+   },
+   "Fluid_Name_White_Russian": {
+    "en": "White Russian",
+    "ch": "白色俄羅斯",
+    "cn": "白俄罗斯"
+   },
+   "Fluid_Name_Zombie": {
+    "en": "Zombie",
+    "ch": "殭屍",
+    "cn": "僵尸"
+   }
+  },
+  "IG_UI.json": {
+   "IGUI_Beard_BikerStache": {
+    "en": "Biker Stache",
+    "ch": "機車騎士鬍",
+    "cn": "机车党胡"
+   },
+   "IGUI_Beard_DuckTail": {
+    "en": "DuckTail",
+    "ch": "鴨尾鬍",
+    "cn": "鸭尾胡"
+   },
+   "IGUI_Beard_FancyStache": {
+    "en": "Fancy Moustache",
+    "ch": "花俏八字鬍",
+    "cn": "花哨八字胡"
+   },
+   "IGUI_Beard_FrenchFork": {
+    "en": "French Fork",
+    "ch": "法式分叉鬍",
+    "cn": "法式分叉胡"
+   },
+   "IGUI_Beard_GoodmanStache": {
+    "en": "Goodman Stache",
+    "ch": "古德曼鬍",
+    "cn": "古德曼胡"
+   },
+   "IGUI_Beard_HatchetLad": {
+    "en": "Hatchet Lad",
+    "ch": "斧頭小子鬍",
+    "cn": "斧头小子胡"
+   },
+   "IGUI_Beard_Imperial": {
+    "en": "Imperial",
+    "ch": "帝王鬍",
+    "cn": "帝王胡"
+   },
+   "IGUI_Beard_ImperialChops": {
+    "en": "Imperial Chops",
+    "ch": "帝王連鬢鬍",
+    "cn": "帝王连鬓胡"
+   },
+   "IGUI_Beard_Lumberjack": {
+    "en": "Lumberjack",
+    "ch": "伐木工鬍",
+    "cn": "伐木工胡"
+   },
+   "IGUI_Beard_PatchyTee": {
+    "en": "Patchy Goatee",
+    "ch": "稀疏山羊鬍",
+    "cn": "稀疏山羊胡"
+   },
+   "IGUI_Beard_PencilStache": {
+    "en": "Pencil Stache",
+    "ch": "鉛筆鬍",
+    "cn": "铅笔胡"
+   },
+   "IGUI_Beard_Ragnar": {
+    "en": "Ragnar",
+    "ch": "拉格納鬍",
+    "cn": "拉格纳胡"
+   },
+   "IGUI_Beard_Verdi": {
+    "en": "Verdi",
+    "ch": "威爾第鬍",
+    "cn": "威尔第胡"
+   },
+   "IGUI_Beard_WoodburyStache": {
+    "en": "Woodbury Stache",
+    "ch": "伍德伯里鬍",
+    "cn": "伍德伯里胡"
+   },
+   "IGUI_PhunZones_AddRegion": {
+    "en": "Add Region",
+    "ch": "新增地區",
+    "cn": "添加地区"
+   },
+   "IGUI_PhunZones_AddSub": {
+    "en": "Add Sub Zone",
+    "ch": "新增子區域",
+    "cn": "添加子区域"
+   },
+   "IGUI_PhunZones_Building": {
+    "en": "Building",
+    "ch": "建造",
+    "cn": "建造"
+   },
+   "IGUI_PhunZones_Building_tooltip": {
+    "en": "Untick to explicitly forbid building items like walls and such in zone",
+    "ch": "取消勾選以明確禁止在此區域建造牆壁等建築物件",
+    "cn": "取消勾选以明确禁止在此区域建造墙壁等建筑物件"
+   },
+   "IGUI_PhunZones_Destruction": {
+    "en": "Destruction",
+    "ch": "破壞",
+    "cn": "破坏"
+   },
+   "IGUI_PhunZones_Destruction_tooltip": {
+    "en": "Untick to explicitly forbid using a sledgehammer or dissasembly in zone",
+    "ch": "取消勾選以明確禁止在此區域使用大鐵鎚破壞或拆除",
+    "cn": "取消勾选以明确禁止在此区域使用大锤破坏或拆除"
+   },
+   "IGUI_PhunZones_EditRegion": {
+    "en": "Edit Region",
+    "ch": "編輯地區",
+    "cn": "编辑地区"
+   },
+   "IGUI_PhunZones_EditZone": {
+    "en": "Edit Zone",
+    "ch": "編輯區域",
+    "cn": "编辑区域"
+   },
+   "IGUI_PhunZones_Enabled": {
+    "en": "Enabled",
+    "ch": "啟用",
+    "cn": "启用"
+   },
+   "IGUI_PhunZones_Enabled_tooltip": {
+    "en": "Uncheck to deactivate this zone (and any of its sub zones)",
+    "ch": "取消勾選以停用此區域（及其所有子區域）",
+    "cn": "取消勾选以停用此区域（及其所有子区域）"
+   },
+   "IGUI_PhunZones_Fire": {
+    "en": "Fire",
+    "ch": "火勢",
+    "cn": "火势"
+   },
+   "IGUI_PhunZones_Fire_tooltip": {
+    "en": "Untick to explicitly forbid fire from spreading in zone. Note that animations may show briefly, but will quickly fizzle out and no damage will occur",
+    "ch": "取消勾選以明確禁止火勢在此區域蔓延。注意：可能會短暫顯示火焰動畫，但很快就會熄滅，且不會造成任何傷害",
+    "cn": "取消勾选以明确禁止火势在此区域蔓延。注意：可能会短暂显示火焰动画，但很快就会熄灭，且不会造成任何伤害"
+   },
+   "IGUI_PhunZones_Medium": {
+    "en": "Medium",
+    "ch": "中等",
+    "cn": "中等"
+   },
+   "IGUI_PhunZones_Mild": {
+    "en": "Mild",
+    "ch": "溫和",
+    "cn": "温和"
+   },
+   "IGUI_PhunZones_Mods": {
+    "en": "Mods",
+    "ch": "模組",
+    "cn": "模组"
+   },
+   "IGUI_PhunZones_Mods_tooltip": {
+    "en": "Mods that are required to be activated for this zone to be active. You can add multiple mods by separating each with a semi-colon",
+    "ch": "啟用此區域所需的模組。可用分號分隔以加入多個模組",
+    "cn": "启用此区域所需的模组。可用分号分隔以添加多个模组"
+   },
+   "IGUI_PhunZones_NoBuild": {
+    "en": "You cannot build in this area",
+    "ch": "你不能在這個區域建造",
+    "cn": "你不能在这个区域建造"
+   },
+   "IGUI_PhunZones_Pickup": {
+    "en": "Pickup",
+    "ch": "撿起",
+    "cn": "拾取"
+   },
+   "IGUI_PhunZones_Pickup_tooltip": {
+    "en": "Untick to explicitly forbid picking up objects like TV here",
+    "ch": "取消勾選以明確禁止在此處撿起電視等物件",
+    "cn": "取消勾选以明确禁止在此处拾取电视等物件"
+   },
+   "IGUI_PhunZones_Placing": {
+    "en": "Placing",
+    "ch": "放置",
+    "cn": "放置"
+   },
+   "IGUI_PhunZones_Placing_tooltip": {
+    "en": "Untick to explicitly forbid placing items like TV's and suck in zone",
+    "ch": "取消勾選以明確禁止在此區域放置電視等物品",
+    "cn": "取消勾选以明确禁止在此区域放置电视等物品"
+   },
+   "IGUI_PhunZones_Players": {
+    "en": "Players",
+    "ch": "玩家",
+    "cn": "玩家"
+   },
+   "IGUI_PhunZones_Players_tooltip": {
+    "en": "Untick to explicitly prevent players from entering this zone",
+    "ch": "取消勾選以明確禁止玩家進入此區域",
+    "cn": "取消勾选以明确禁止玩家进入此区域"
+   },
+   "IGUI_PhunZones_Property": {
+    "en": "Property",
+    "ch": "屬性",
+    "cn": "属性"
+   },
+   "IGUI_PhunZones_PvPOff": {
+    "en": "PvP Off",
+    "ch": "PvP 關閉",
+    "cn": "PvP 关闭"
+   },
+   "IGUI_PhunZones_PvPOn": {
+    "en": "PvP On",
+    "ch": "PvP 開啟",
+    "cn": "PvP 开启"
+   },
+   "IGUI_PhunZones_RVInteriors": {
+    "en": "Is an RV Zone",
+    "ch": "為 RV 區域",
+    "cn": "为 RV 区域"
+   },
+   "IGUI_PhunZones_RVInteriors_tooltip": {
+    "en": "Tick to flag that this zone inherits its values from wherever the car is at (requires RVInteriors mod)",
+    "ch": "勾選以標記此區域會繼承車輛目前所在位置的數值（需要 RVInteriors 模組）",
+    "cn": "勾选以标记此区域会继承车辆当前所在位置的数值（需要 RVInteriors 模组）"
+   },
+   "IGUI_PhunZones_Regions": {
+    "en": "Regions",
+    "ch": "地區",
+    "cn": "地区"
+   },
+   "IGUI_PhunZones_SafeHouse": {
+    "en": "Allow Safehouses",
+    "ch": "允許安全屋",
+    "cn": "允许安全屋"
+   },
+   "IGUI_PhunZones_Safehouse_tooltip": {
+    "en": "Untick to explicitly forbid safehouse creation in zone",
+    "ch": "取消勾選以明確禁止在此區域建立安全屋",
+    "cn": "取消勾选以明确禁止在此区域创建安全屋"
+   },
+   "IGUI_PhunZones_Scrap": {
+    "en": "Scrapping",
+    "ch": "回收拆解",
+    "cn": "回收拆解"
+   },
+   "IGUI_PhunZones_Scrap_tooltip": {
+    "en": "Untick to explicitly forbid scrapping objects (eg furniture) here",
+    "ch": "取消勾選以明確禁止在此處回收拆解物件（例如家具）",
+    "cn": "取消勾选以明确禁止在此处回收拆解物件（例如家具）"
+   },
+   "IGUI_PhunZones_Spicy": {
+    "en": "Spicy",
+    "ch": "辛辣",
+    "cn": "辛辣"
+   },
+   "IGUI_PhunZones_SuperSpicy": {
+    "en": "Super Spicy",
+    "ch": "超辣",
+    "cn": "超辣"
+   },
+   "IGUI_PhunZones_Value": {
+    "en": "Value",
+    "ch": "數值",
+    "cn": "数值"
+   },
+   "IGUI_ProxInv_Disable": {
+    "en": "Disable",
+    "ch": "停用",
+    "cn": "禁用"
+   },
+   "IGUI_ProxInv_Disabled": {
+    "en": "Disabled",
+    "ch": "已停用",
+    "cn": "已禁用"
+   },
+   "IGUI_ProxInv_Enable": {
+    "en": "Enable",
+    "ch": "啟用",
+    "cn": "启用"
+   },
+   "IGUI_ProxInv_ForceSelected": {
+    "en": "Force Selected",
+    "ch": "強制選取",
+    "cn": "强制选中"
+   },
+   "IGUI_ProxInv_Force_Selected": {
+    "en": "Prox Inv Force Selected: ",
+    "ch": "鄰近物品欄強制選取：",
+    "cn": "邻近物品栏强制选中："
+   },
+   "IGUI_ProxInv_Highlight": {
+    "en": "Highlight",
+    "ch": "高亮顯示",
+    "cn": "高亮显示"
+   },
+   "IGUI_ProxInv_RightClickSettings": {
+    "en": "Right click for settings",
+    "ch": "右鍵開啟設定",
+    "cn": "右键打开设置"
+   },
+   "IGUI_ProxInv_Title": {
+    "en": "Proximity Inv",
+    "ch": "鄰近物品欄",
+    "cn": "邻近物品栏"
+   },
+   "IGUI_ProxInv_Toggle": {
+    "en": "Toggle",
+    "ch": "切換",
+    "cn": "切换"
+   },
+   "IGUI_SearchMode_Categories_DeadAnimals": {
+    "en": "Dead Animals",
+    "ch": "動物屍體",
+    "cn": "动物尸体"
+   },
+   "IGUI_SearchMode_Categories_FishBait": {
+    "en": "Fish Baits",
+    "ch": "魚餌",
+    "cn": "鱼饵"
+   },
+   "IGUI_SearchMode_Categories_WildHerbs": {
+    "en": "Wild Herbs",
+    "ch": "野生草藥",
+    "cn": "野生草药"
+   }
+  },
+  "Print_Media.json": {
+   "Print_Media_DixieGasCoke_info": {
+    "en": "<type:parent, width:1240, height:1754><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/FlyerPics/DixieGasCoke.png\"), width:1240, height:1754>",
+    "ch": "<type:parent, width:1240, height:1754><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/FlyerPics/DixieGasCoke.png\"), width:1240, height:1754>",
+    "cn": "<type:parent, width:1240, height:1754><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/FlyerPics/DixieGasCoke.png\"), width:1240, height:1754>"
+   },
+   "Print_Media_DixieGasCoke_title": {
+    "en": "Dixie Gas Coca Cola Advert",
+    "ch": "迪克西加油站可口可樂廣告",
+    "cn": "迪克西加油站可口可乐广告"
+   },
+   "Print_Media_ListerineConvenience_info": {
+    "en": "<type:parent, width:1240, height:1754><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/FlyerPics/ListerineConvenience.png\"), width:1240, height:1754>",
+    "ch": "<type:parent, width:1240, height:1754><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/FlyerPics/ListerineConvenience.png\"), width:1240, height:1754>",
+    "cn": "<type:parent, width:1240, height:1754><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/FlyerPics/ListerineConvenience.png\"), width:1240, height:1754>"
+   },
+   "Print_Media_ListerineConvenience_title": {
+    "en": "Listerine Advert",
+    "ch": "李施德霖廣告",
+    "cn": "李施德林广告"
+   }
+  },
+  "Print_Text.json": {
+   "Print_Text_DixieGasCoke_info": {
+    "en": "Stop by on your next trip out of, or into Louisville and grab a nice cold refreshing glass bottle Coca Cola.",
+    "ch": "下次進出路易維爾時，順道來一瓶冰涼暢快的玻璃瓶裝可口可樂吧。",
+    "cn": "下次进出路易维尔时，顺路来一瓶冰凉畅快的玻璃瓶装可口可乐吧。"
+   },
+   "Print_Text_DixieGasCoke_title": {
+    "en": "Dixie Gas has Coca Cola",
+    "ch": "迪克西加油站供應可口可樂",
+    "cn": "迪克西加油站供应可口可乐"
+   },
+   "Print_Text_ListerineConvenience_info": {
+    "en": "Whether you keep it in your car glovebox or in your back pocket, Listerine keeps your mouth minty fresh for ANYTHING!",
+    "ch": "不管是放在車上的置物箱還是後口袋，李施德霖都能讓你的口氣保持薄荷清新，隨時應付任何場合！",
+    "cn": "不管是放在车上的储物箱还是后口袋，李施德林都能让你的口气保持薄荷清新，随时应付任何场合！"
+   },
+   "Print_Text_ListerineConvenience_title": {
+    "en": "Listerine keeps you minty fresh!",
+    "ch": "李施德霖讓你口氣薄荷清新！",
+    "cn": "李施德林让你口气薄荷清新！"
+   }
+  },
+  "Sandbox.json": {
+   "Sandbox_Bandits.GroupSizeMax": {
+    "en": "Random Group Size Maximum",
+    "ch": "隨機隊伍規模上限",
+    "cn": "随机队伍规模上限"
+   },
+   "Sandbox_Bandits.GroupSizeMax_tooltip": {
+    "en": "Maximum number of bandits to spawn",
+    "ch": "生成土匪的最多數量",
+    "cn": "生成土匪的最多数量"
+   },
+   "Sandbox_Bandits.GroupSizeMin": {
+    "en": "Random Group Size Minimum",
+    "ch": "隨機隊伍規模下限",
+    "cn": "随机队伍规模下限"
+   },
+   "Sandbox_Bandits.GroupSizeMin_tooltip": {
+    "en": "Minimum number of bandits to spawn",
+    "ch": "生成土匪的最少數量",
+    "cn": "生成土匪的最少数量"
+   },
+   "Sandbox_Bandits.Loadout": {
+    "en": "Weapons loadout",
+    "ch": "武器裝備配置",
+    "cn": "武器装备配置"
+   },
+   "Sandbox_Bandits.Loadout_option1": {
+    "en": "All (ignore loadouts)",
+    "ch": "全部（忽略裝備配置）",
+    "cn": "全部（忽略装备配置）"
+   },
+   "Sandbox_Bandits.Loadout_option2": {
+    "en": "Civilian",
+    "ch": "平民",
+    "cn": "平民"
+   },
+   "Sandbox_Bandits.Loadout_option3": {
+    "en": "Police",
+    "ch": "警察",
+    "cn": "警察"
+   },
+   "Sandbox_Bandits.Loadout_option4": {
+    "en": "Military",
+    "ch": "軍隊",
+    "cn": "军队"
+   },
+   "Sandbox_Bandits.Loadout_option5": {
+    "en": "Exotic",
+    "ch": "異國",
+    "cn": "异国"
+   },
+   "Sandbox_Bandits.Loadout_option6": {
+    "en": "Looted",
+    "ch": "劫掠所得",
+    "cn": "劫掠所得"
+   },
+   "Sandbox_Bandits.Loadout_tooltip": {
+    "en": "NPCs from this wave will select weapons from the following table.",
+    "ch": "此波次的 NPC 將從以下表格中選取武器。",
+    "cn": "此波次的 NPC 将从以下表格中选取武器。"
+   },
+   "Sandbox_Bandits.RandomAmmo": {
+    "en": "Random Ammo Minimum",
+    "ch": "隨機彈藥下限",
+    "cn": "随机弹药下限"
+   },
+   "Sandbox_Bandits.RandomAmmo_tooltip": {
+    "en": "Minimum amount of spare magazines carried if random ammo enabled",
+    "ch": "啟用隨機彈藥時攜帶備用彈匣的最少數量",
+    "cn": "启用随机弹药时携带备用弹匣的最少数量"
+   },
+   "Sandbox_Bandits.RandomHealthMax": {
+    "en": "Random Health Maximum",
+    "ch": "隨機生命值上限",
+    "cn": "随机生命值上限"
+   },
+   "Sandbox_Bandits.RandomHealthMax_tooltip": {
+    "en": "Maximum value for random health if enabled. Higher values may produce unexpected results",
+    "ch": "啟用隨機生命值時的最大值。數值過高可能產生非預期的結果",
+    "cn": "启用随机生命值时的最大值。数值过高可能产生意外结果"
+   },
+   "Sandbox_Bandits.RandomHealthMin": {
+    "en": "Random Health Minimum",
+    "ch": "隨機生命值下限",
+    "cn": "随机生命值下限"
+   },
+   "Sandbox_Bandits.RandomHealthMin_tooltip": {
+    "en": "Minimum value for random health if enabled",
+    "ch": "啟用隨機生命值時的最小值",
+    "cn": "启用随机生命值时的最小值"
+   },
+   "Sandbox_Bandits.SpecialWeapons": {
+    "en": "Special weapons frequency",
+    "ch": "特殊武器出現頻率",
+    "cn": "特殊武器出现频率"
+   },
+   "Sandbox_Bandits.SpecialWeapons_option1": {
+    "en": "Common",
+    "ch": "常見",
+    "cn": "常见"
+   },
+   "Sandbox_Bandits.SpecialWeapons_option2": {
+    "en": "Uncommon",
+    "ch": "少見",
+    "cn": "少见"
+   },
+   "Sandbox_Bandits.SpecialWeapons_option3": {
+    "en": "Rare",
+    "ch": "稀有",
+    "cn": "稀有"
+   },
+   "Sandbox_Bandits.SpecialWeapons_option4": {
+    "en": "Very Rare",
+    "ch": "非常稀有",
+    "cn": "非常稀有"
+   },
+   "Sandbox_Bandits.SpecialWeapons_option5": {
+    "en": "Insanely Rare",
+    "ch": "極度稀有",
+    "cn": "极度稀有"
+   },
+   "Sandbox_Bandits.SpecialWeapons_option6": {
+    "en": "Never",
+    "ch": "從不",
+    "cn": "从不"
+   },
+   "Sandbox_Bandits.SpecialWeapons_tooltip": {
+    "en": "Some loadouts may feature special weapons (automatics, machine guns). Choose how likely they are to appear.",
+    "ch": "部分裝備配置可能包含特殊武器（全自動武器、機槍）。選擇它們出現的機率。",
+    "cn": "部分装备配置可能包含特殊武器（全自动武器、机枪）。选择它们出现的几率。"
+   },
+   "Sandbox_Bandits_AddOptions": {
+    "en": "Bandits Extra Options",
+    "ch": "土匪額外選項",
+    "cn": "土匪额外选项"
+   },
+   "Sandbox_Bandits_AddOptions.AllowGore": {
+    "en": "Show visual gore/injuries",
+    "ch": "顯示血腥/傷勢視覺效果",
+    "cn": "显示血腥/伤势视觉效果"
+   },
+   "Sandbox_Bandits_AddOptions.AllowRaiders": {
+    "en": "Allow Raider AI (always find player)",
+    "ch": "允許襲擊者 AI (永遠找得到玩家)",
+    "cn": "允许袭击者 AI (总能找到玩家)"
+   },
+   "Sandbox_Bandits_AddOptions.AllowRoadblockSandbags": {
+    "en": "Allow sandbag roadblocks",
+    "ch": "允許沙袋路障",
+    "cn": "允许沙袋路障"
+   },
+   "Sandbox_Bandits_AddOptions.BaseSpawnRadius": {
+    "en": "Player base minimum spawn radius",
+    "ch": "玩家基地最小生成半徑",
+    "cn": "玩家基地最小生成半径"
+   },
+   "Sandbox_Bandits_AddOptions.BaseSpawnRadius_tooltip": {
+    "en": "Define a radius around a player base that bandits cannot spawn inside. Recommended to keep low if playing Week One",
+    "ch": "設定玩家基地周圍的半徑範圍，土匪不會在此範圍內生成。若遊玩「第一週」模式建議保持低數值",
+    "cn": "设定玩家基地周围的半径范围，土匪不会在此范围内生成。若游玩“第一周”模式建议保持低数值"
+   },
+   "Sandbox_Bandits_AddOptions.DefenderCooldown": {
+    "en": "Days before visited building occupied",
+    "ch": "造訪過的建築被佔據所需天數",
+    "cn": "造访过的建筑被占据所需天数"
+   },
+   "Sandbox_Bandits_AddOptions.DefenderCooldown_tooltip": {
+    "en": "How many days before any building you've visited for more than 10 minutes of game time can be occupied by defenders",
+    "ch": "你在遊戲時間內停留超過 10 分鐘的建築，需經過多少天後才可能被守衛者佔據",
+    "cn": "你在游戏时间内停留超过 10 分钟的建筑，需经过多少天后才可能被守卫者占据"
+   },
+   "Sandbox_Bandits_AddOptions.GeneratorSettings": {
+    "en": "Bandit safehouses have generators",
+    "ch": "土匪安全屋配有發電機",
+    "cn": "土匪安全屋配有发电机"
+   },
+   "Sandbox_Bandits_AddOptions.GeneratorSettings_option1": {
+    "en": "Always (default)",
+    "ch": "總是（預設）",
+    "cn": "总是（默认）"
+   },
+   "Sandbox_Bandits_AddOptions.GeneratorSettings_option2": {
+    "en": "Always when power off",
+    "ch": "斷電後總是",
+    "cn": "断电后总是"
+   },
+   "Sandbox_Bandits_AddOptions.GeneratorSettings_option3": {
+    "en": "Sometimes when power off",
+    "ch": "斷電後偶爾",
+    "cn": "断电后偶尔"
+   },
+   "Sandbox_Bandits_AddOptions.GeneratorSettings_option4": {
+    "en": "Rarely when power off",
+    "ch": "斷電後很少",
+    "cn": "断电后很少"
+   },
+   "Sandbox_Bandits_AddOptions.GeneratorSettings_option5": {
+    "en": "Never",
+    "ch": "從不",
+    "cn": "从不"
+   },
+   "Sandbox_Bandits_AddOptions.GeneratorSettings_tooltip": {
+    "en": "Adjust when bandit safehouses will spawn with generators",
+    "ch": "調整土匪安全屋生成時附帶發電機的時機",
+    "cn": "调整土匪安全屋生成时附带发电机的时机"
+   },
+   "Sandbox_Bandits_AddOptions.Incognito": {
+    "en": "Spawn icons do not show hostility",
+    "ch": "生成圖示不顯示敵意",
+    "cn": "生成图标不显示敌意"
+   },
+   "Sandbox_Bandits_AddOptions.MeleeBalance": {
+    "en": "New Bandit Melee Rebalance",
+    "ch": "新版土匪近戰重平衡",
+    "cn": "新版土匪近战重平衡"
+   },
+   "Sandbox_Bandits_AddOptions.MeleeBalance_option1": {
+    "en": "Vanilla",
+    "ch": "原版",
+    "cn": "原版"
+   },
+   "Sandbox_Bandits_AddOptions.MeleeBalance_option2": {
+    "en": "Rebalanced",
+    "ch": "重平衡",
+    "cn": "重平衡"
+   },
+   "Sandbox_Bandits_AddOptions.MeleeBalance_tooltip": {
+    "en": "Prevent bandits from performing new melee attacks before their previous one has finished",
+    "ch": "防止土匪在上一次近戰攻擊尚未結束前就發動新的近戰攻擊",
+    "cn": "防止土匪在上一次近战攻击尚未结束前就发动新的近战攻击"
+   },
+   "Sandbox_Bandits_AddOptions.RandomAmmo": {
+    "en": "Random ammo",
+    "ch": "隨機彈藥",
+    "cn": "随机弹药"
+   },
+   "Sandbox_Bandits_AddOptions.RandomGroupSize": {
+    "en": "Random group sizes",
+    "ch": "隨機隊伍規模",
+    "cn": "随机队伍规模"
+   },
+   "Sandbox_Bandits_AddOptions.RandomHealth": {
+    "en": "Random health",
+    "ch": "隨機生命值",
+    "cn": "随机生命值"
+   },
+   "Sandbox_Bandits_AddOptions.RandomLoot": {
+    "en": "Random loot %",
+    "ch": "隨機戰利品 %",
+    "cn": "随机战利品 %"
+   },
+   "Sandbox_Bandits_AddOptions.RandomLoot_tooltip": {
+    "en": "Percentage of normal chance for each loot item to spawn, 100 = normal",
+    "ch": "每件戰利品生成機率相對於正常值的百分比，100 = 正常",
+    "cn": "每件战利品生成几率相对于正常值的百分比，100 = 正常"
+   },
+   "Sandbox_Bandits_AddOptions.SpawnMultiplier": {
+    "en": "General spawn multiplier",
+    "ch": "整體生成倍率",
+    "cn": "整体生成倍率"
+   },
+   "Sandbox_Bandits_AddOptions.SpawnMultiplier_tooltip": {
+    "en": "Percentage multiplier for the chance that any NPC group will appear; 50 = half, 100 = normal, 200 = double",
+    "ch": "任何 NPC 隊伍出現機率的百分比倍率；50 = 一半，100 = 正常，200 = 兩倍",
+    "cn": "任何 NPC 队伍出现几率的百分比倍率；50 = 一半，100 = 正常，200 = 两倍"
+   },
+   "Sandbox_Bandits_AddOptions.TimePersists": {
+    "en": "Bandits progress based on world age",
+    "ch": "土匪隨世界時間成長",
+    "cn": "土匪随世界时间成长"
+   },
+   "Sandbox_Bandits_AddOptions.VehicleInsertionFX": {
+    "en": "Vehicle sounds on bandit spawn",
+    "ch": "土匪生成時播放車輛音效",
+    "cn": "土匪生成时播放车辆音效"
+   },
+   "Sandbox_Bandits_AddOptions.ZoneBoost": {
+    "en": "Spawn chance in wrong terrain",
+    "ch": "非偏好地形生成機率",
+    "cn": "非偏好地形生成几率"
+   },
+   "Sandbox_Bandits_AddOptions.ZoneBoost_tooltip": {
+    "en": "Percentage chance for bandit waves to spawn in forage zones they do not prefer",
+    "ch": "土匪波次在其不偏好的採集區域生成的百分比機率",
+    "cn": "土匪波次在其不偏好的采集区域生成的百分比几率"
+   },
+   "Sandbox_Bandits_AddOptionsDay1": {
+    "en": "Bandits Day 1 Extra Options",
+    "ch": "Bandits 第一天額外選項",
+    "cn": "Bandits 第一天额外选项"
+   },
+   "Sandbox_Bandits_AddOptionsDay1.Family": {
+    "en": "Starting companions",
+    "ch": "初始同伴",
+    "cn": "初始同伴"
+   },
+   "Sandbox_Bandits_AddOptionsDay1.Family_option1": {
+    "en": "Family",
+    "ch": "家人",
+    "cn": "家人"
+   },
+   "Sandbox_Bandits_AddOptionsDay1.Family_option2": {
+    "en": "Colleagues",
+    "ch": "同事",
+    "cn": "同事"
+   },
+   "Sandbox_Bandits_AddOptionsDay1.Family_option3": {
+    "en": "Random",
+    "ch": "隨機",
+    "cn": "随机"
+   },
+   "Sandbox_Bandits_AddOptionsDay1.Family_option4": {
+    "en": "None",
+    "ch": "無",
+    "cn": "无"
+   },
+   "Sandbox_Bandits_AddOptionsDay1.Family_tooltip": {
+    "en": "Companions added at game start",
+    "ch": "遊戲開始時加入的同伴",
+    "cn": "游戏开始时加入的同伴"
+   },
+   "Sandbox_Bandits_AddOptionsDay1.Kaboom": {
+    "en": "Enable nuke",
+    "ch": "啟用核彈",
+    "cn": "启用核弹"
+   },
+   "Sandbox_Bandits_AddOptionsDay1.RandomiseGroups": {
+    "en": "Randomise groups",
+    "ch": "隨機化隊伍",
+    "cn": "随机化队伍"
+   },
+   "Sandbox_Bandits_AddOptionsDay1.StartEquip": {
+    "en": "Starting equipment",
+    "ch": "初始裝備",
+    "cn": "初始装备"
+   },
+   "Sandbox_Bandits_AddOptionsWeek1": {
+    "en": "Bandits Week 1 Extra Options",
+    "ch": "Bandits 第一週額外選項",
+    "cn": "Bandits 第一周额外选项"
+   },
+   "Sandbox_Bandits_AddOptionsWeek1.AllowA10": {
+    "en": "Enable A10 attacks",
+    "ch": "啟用 A10 空襲",
+    "cn": "启用 A10 空袭"
+   },
+   "Sandbox_Bandits_AddOptionsWeek1.AllowBombing": {
+    "en": "Enable bombing",
+    "ch": "啟用轟炸",
+    "cn": "启用轰炸"
+   },
+   "Sandbox_Bandits_AddOptionsWeek1.AllowGas": {
+    "en": "Enable gas attacks",
+    "ch": "啟用毒氣攻擊",
+    "cn": "启用毒气攻击"
+   },
+   "Sandbox_Bandits_AddOptionsWeek1.RandomiseGroups": {
+    "en": "Randomise groups",
+    "ch": "隨機化隊伍",
+    "cn": "随机化队伍"
+   },
+   "Sandbox_Bandits_AddOptionsWeek1.TrespassTimer": {
+    "en": "Trespass grace period",
+    "ch": "擅闖寬限時間",
+    "cn": "擅闯宽限时间"
+   },
+   "Sandbox_Bandits_AddOptionsWeek1.TrespassTimer_option1": {
+    "en": "None (vanilla)",
+    "ch": "無（原版）",
+    "cn": "无（原版）"
+   },
+   "Sandbox_Bandits_AddOptionsWeek1.TrespassTimer_option2": {
+    "en": "Very Short",
+    "ch": "極短",
+    "cn": "极短"
+   },
+   "Sandbox_Bandits_AddOptionsWeek1.TrespassTimer_option3": {
+    "en": "Short",
+    "ch": "短",
+    "cn": "短"
+   },
+   "Sandbox_Bandits_AddOptionsWeek1.TrespassTimer_option4": {
+    "en": "Reasonable",
+    "ch": "合理",
+    "cn": "合理"
+   },
+   "Sandbox_Bandits_AddOptionsWeek1.TrespassTimer_option5": {
+    "en": "Generous",
+    "ch": "寬鬆",
+    "cn": "宽松"
+   },
+   "Sandbox_Bandits_AddOptionsWeek1.TrespassTimer_tooltip": {
+    "en": "Time before you recieve a violent response for trespassing",
+    "ch": "擅闖他人領地後遭到武力回擊前的緩衝時間",
+    "cn": "擅闯他人领地后遭到武力回击前的缓冲时间"
+   },
+   "Sandbox_ImprovedFarmingInfoWindow_CheckFertilizerCount": {
+    "en": "Check Crops with Less Than 3 Fertilizer Uses (Yellow Square)",
+    "ch": "檢查施肥次數少於 3 次的作物（黃色方框）",
+    "cn": "检查施肥次数少于 3 次的作物（黄色方框）"
+   },
+   "Sandbox_Mixology": {
+    "en": "Mixology",
+    "ch": "Mixology 調酒",
+    "cn": "Mixology 调酒"
+   },
+   "Sandbox_Mixology_ItemChance": {
+    "en": "Item Spawn Chance",
+    "ch": "物品生成機率",
+    "cn": "物品生成几率"
+   },
+   "Sandbox_Mixology_ItemChances_option1": {
+    "en": "Insanely rare",
+    "ch": "瘋狂稀有",
+    "cn": "疯狂稀有"
+   },
+   "Sandbox_Mixology_ItemChances_option2": {
+    "en": "Extremely Rare",
+    "ch": "極度稀有",
+    "cn": "极度稀有"
+   },
+   "Sandbox_Mixology_ItemChances_option3": {
+    "en": "Rare",
+    "ch": "稀有",
+    "cn": "稀有"
+   },
+   "Sandbox_Mixology_ItemChances_option4": {
+    "en": "Normal",
+    "ch": "一般",
+    "cn": "正常"
+   },
+   "Sandbox_Mixology_ItemChances_option5": {
+    "en": "Common",
+    "ch": "常見",
+    "cn": "常见"
+   },
+   "Sandbox_Mixology_ItemChances_option6": {
+    "en": "Abundant",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_Mixology_ItemChances_option7": {
+    "en": "Absurdly Abundant",
+    "ch": "多到離譜",
+    "cn": "多到离谱"
+   },
+   "Sandbox_PhunSprintersUI": {
+    "en": "PhunSprintersUI",
+    "ch": "PhunSprintersUI",
+    "cn": "PhunSprintersUI"
+   },
+   "Sandbox_PhunSprintersUI_AddToLoot": {
+    "en": "Lootable Sensor",
+    "ch": "可拾取的感測器",
+    "cn": "可拾取的传感器"
+   },
+   "Sandbox_PhunSprintersUI_AddToLoot_tooltip": {
+    "en": "If Always Show is disabled, tick this so that Military Issued sensor will appear in loot. Wearing these will show the UI. Requires restart",
+    "ch": "若停用「一律顯示」，勾選此項可讓軍用感測器出現在戰利品中。穿戴後即可顯示 UI。需要重新啟動",
+    "cn": "若禁用“始终显示”，勾选此项可让军用传感器出现在战利品中。穿戴后即可显示 UI。需要重启"
+   },
+   "Sandbox_PhunSprintersUI_AlwaysShowElements": {
+    "en": "Always Show",
+    "ch": "一律顯示",
+    "cn": "始终显示"
+   },
+   "Sandbox_PhunSprintersUI_AlwaysShowElements_tooltip": {
+    "en": "Always UI. This requires the PhunSprintersUI mod active. Probably makes sense to disable to moodle option if using this. Requires restart",
+    "ch": "一律顯示 UI。需啟用 PhunSprintersUI 模組。使用此選項時建議停用情緒圖示選項。需要重新啟動",
+    "cn": "始终显示 UI。需启用 PhunSprintersUI 模组。使用此选项时建议禁用情绪图标选项。需要重启"
+   },
+   "Sandbox_PhunSprintersUI_ShowRNCToolTip": {
+    "en": "RNC Integration",
+    "ch": "RNC 整合",
+    "cn": "RNC 集成"
+   },
+   "Sandbox_PhunSprintersUI_ShowRNCToolTip_tooltip": {
+    "en": "If set to true (and you have Rewarding Night Combat mod installed), this will add their tooltip to the moon element, thereby enabling you to remove theirs",
+    "ch": "若啟用（且已安裝 Rewarding Night Combat 模組），會將其提示加入月亮元件，讓你可以移除該模組原本的提示",
+    "cn": "若启用（且已安装 Rewarding Night Combat 模组），会将其提示加入月亮元素，让你可以移除该模组原本的提示"
+   },
+   "Sandbox_PhunSprintersUI_option": {
+    "en": "Layout",
+    "ch": "版面配置",
+    "cn": "布局"
+   },
+   "Sandbox_PhunSprintersUI_option_option1": {
+    "en": "Vertical",
+    "ch": "垂直",
+    "cn": "垂直"
+   },
+   "Sandbox_PhunSprintersUI_option_option2": {
+    "en": "Horizontal",
+    "ch": "水平",
+    "cn": "水平"
+   },
+   "Sandbox_PhunSprinters_ShowMoodle": {
+    "en": "Display Moodle",
+    "ch": "顯示情緒圖示",
+    "cn": "显示情绪图标"
+   },
+   "Sandbox_PhunSprinters_ShowMoodleOnlyWhenRunning": {
+    "en": "Moodle only when at risk",
+    "ch": "僅在有風險時顯示情緒圖示",
+    "cn": "仅在有风险时显示情绪图标"
+   },
+   "Sandbox_PhunSprinters_ShowMoodleOnlyWhenRunning_tooltip": {
+    "en": "Only show moodle when sprinters can spawn",
+    "ch": "僅在奔跑者可能生成時顯示情緒圖示",
+    "cn": "仅在奔跑者可能生成时显示情绪图标"
+   },
+   "Sandbox_PhunSprinters_ShowMoodle_tooltip": {
+    "en": "Show moodle with information about current sprinter risks",
+    "ch": "顯示情緒圖示，呈現目前奔跑者風險資訊",
+    "cn": "显示情绪图标，呈现当前奔跑者风险信息"
+   },
+   "Sandbox_PhunSprinters_VersionKey": {
+    "en": "Version Key",
+    "ch": "版本金鑰",
+    "cn": "版本密钥"
+   },
+   "Sandbox_PhunSprinters_VersionKey_tooltip": {
+    "en": "Advanced setting. Change to reset zed ModData for some reason or another",
+    "ch": "進階設定。修改此值可視需要重置殭屍的 ModData",
+    "cn": "高级设置。修改此值可视需要重置丧尸的 ModData"
+   },
+   "Sandbox_PhunZones_LoadDefaults": {
+    "en": "Load Defaults",
+    "ch": "載入預設區域",
+    "cn": "加载默认区域"
+   },
+   "Sandbox_PhunZones_LoadDefaults_tooltip": {
+    "en": "Load basic vanilla zones. Untick if you do not want to use the vanilla zones PZ ships with (eg you are using a total custom map)",
+    "ch": "載入基本的原版區域。若不想使用 PZ 內建的原版區域（例如你使用的是完全自訂的地圖），請取消勾選",
+    "cn": "加载基本的原版区域。若不想使用 PZ 自带的原版区域（例如你使用的是完全自定义的地图），请取消勾选"
+   },
+   "Sandbox_PhunZones_ProcessOnClient": {
+    "en": "Process on client",
+    "ch": "在客戶端處理",
+    "cn": "在客户端处理"
+   },
+   "Sandbox_PhunZones_ProcessOnClient_tooltip": {
+    "en": "Untick to process client zone location changes on server side (requires server restart)",
+    "ch": "取消勾選以改由伺服器端處理客戶端的區域位置變更（需要重新啟動伺服器）",
+    "cn": "取消勾选以改由服务器端处理客户端的区域位置变更（需要重启服务器）"
+   },
+   "Sandbox_PhunZones_PvPMode": {
+    "en": "PvP Mode",
+    "ch": "PvP 模式",
+    "cn": "PvP 模式"
+   },
+   "Sandbox_PhunZones_PvPMode_Option_option1": {
+    "en": "Enabled",
+    "ch": "啟用",
+    "cn": "启用"
+   },
+   "Sandbox_PhunZones_PvPMode_Option_option2": {
+    "en": "Toggle",
+    "ch": "切換",
+    "cn": "切换"
+   },
+   "Sandbox_PhunZones_PvPMode_Option_option3": {
+    "en": "Disabled",
+    "ch": "停用",
+    "cn": "禁用"
+   },
+   "Sandbox_PhunZones_PvPMode_tooltip": {
+    "en": "Enabled = PvP mode if forced on if player enters a zone with PvP option ticked, Otherwise it gets forced off (default behaviour). Toggle = same as default, but allows player to toggle PvP on/off within PvP areas. Disabled = prevents PhunZones from doing anything with PvP (eg you are managing via another mod)",
+    "ch": "啟用 = 玩家進入勾選了 PvP 選項的區域時強制開啟 PvP 模式，否則強制關閉（預設行為）。切換 = 與預設相同，但允許玩家在 PvP 區域內自行開關 PvP。停用 = 讓 PhunZones 完全不干涉 PvP（例如你透過其他模組管理）",
+    "cn": "启用 = 玩家进入勾选了 PvP 选项的区域时强制开启 PvP 模式，否则强制关闭（默认行为）。切换 = 与默认相同，但允许玩家在 PvP 区域内自行开关 PvP。禁用 = 让 PhunZones 完全不干涉 PvP（例如你通过其他模组管理）"
+   },
+   "Sandbox_PhunZones_ShowZoneChange": {
+    "en": "Show Zone Change",
+    "ch": "顯示區域切換",
+    "cn": "显示区域切换"
+   },
+   "Sandbox_PhunZones_ShowZoneChange_tooltip": {
+    "en": "Display the welcome marquee when entering a new zone",
+    "ch": "進入新區域時顯示歡迎橫幅",
+    "cn": "进入新区域时显示欢迎横幅"
+   },
+   "Sandbox_PhunZones_VehicleTracking": {
+    "en": "Vehicle Tracking",
+    "ch": "車輛追蹤",
+    "cn": "车辆追踪"
+   },
+   "Sandbox_PhunZones_VehicleTracking_tooltip": {
+    "en": "Use the location of the last vehicle entered as the players current location. Ideal for RV Interiors",
+    "ch": "以玩家最後進入的車輛位置作為玩家目前位置。適合搭配 RV Interiors 使用",
+    "cn": "以玩家最后进入的车辆位置作为玩家当前位置。适合搭配 RV Interiors 使用"
+   },
+   "Sandbox_PhunZones_ZedUpdateFrequency": {
+    "en": "Zed check frequency",
+    "ch": "喪屍檢查頻率",
+    "cn": "丧尸检查频率"
+   },
+   "Sandbox_PhunZones_ZedUpdateFrequency_tooltip": {
+    "en": "The number of seconds between updating zeds with zone information used for removing them and by other mods. The higher the number, the less resource intensive it is",
+    "ch": "更新喪屍區域資訊的間隔秒數，用於移除喪屍及供其他模組使用。數值越高，資源消耗越低",
+    "cn": "更新丧尸区域信息的间隔秒数，用于移除丧尸及供其他模组使用。数值越高，资源消耗越低"
+   },
+   "Sandbox_ProxInv": {
+    "en": "Proximity Inventory",
+    "ch": "附近物品欄",
+    "cn": "附近物品栏"
+   }
+  },
+  "UI.json": {
+   "UI_Doctorfail": {
+    "en": "First aid failure",
+    "ch": "急救失敗",
+    "cn": "急救失败"
+   },
+   "UI_Doctorsucceed": {
+    "en": "First aid success",
+    "ch": "急救成功",
+    "cn": "急救成功"
+   },
+   "UI_EPR_Part_Capacitor": {
+    "en": "Capacitor",
+    "ch": "電容器",
+    "cn": "电容器"
+   },
+   "UI_EPR_Part_Lubricant": {
+    "en": "Lubricant",
+    "ch": "潤滑劑",
+    "cn": "润滑剂"
+   },
+   "UI_EPR_Part_Resistor": {
+    "en": "Resistor",
+    "ch": "電阻器",
+    "cn": "电阻器"
+   },
+   "UI_EPR_Part_Transistor": {
+    "en": "Transistor",
+    "ch": "電晶體",
+    "cn": "晶体管"
+   },
+   "UI_EPR_Tool_Multimeter": {
+    "en": "Multimeter",
+    "ch": "三用電表",
+    "cn": "万用表"
+   },
+   "UI_EPR_Tool_Voltmeter": {
+    "en": "Voltmeter",
+    "ch": "電壓表",
+    "cn": "电压表"
+   },
+   "UI_InjuryIndicator_StitchesReady": {
+    "en": "stitches can be removed",
+    "ch": "縫線可以拆除了",
+    "cn": "缝线可以拆除了"
+   },
+   "UI_ShortSighted_Condition": {
+    "en": "The malus can be canceled by wearing glasses",
+    "ch": "戴上眼鏡可以抵銷此負面效果",
+    "cn": "戴上眼镜可以抵消此负面效果"
+   },
+   "UI_equipment_unequip_all": {
+    "en": "Unequip All",
+    "ch": "卸下全部裝備",
+    "cn": "卸下全部装备"
+   },
+   "UI_eris_food_expiry": {
+    "en": "eris food expiry",
+    "ch": "eris 食物保存期限",
+    "cn": "eris 食物保质期"
+   },
+   "UI_mod_eris_food_expiry_days": {
+    "en": "d",
+    "ch": "天",
+    "cn": "天"
+   },
+   "UI_mod_eris_food_expiry_freshbar_label": {
+    "en": "Freshness: ",
+    "ch": "新鮮度：",
+    "cn": "新鲜度："
+   },
+   "UI_mod_eris_food_expiry_hours": {
+    "en": "h",
+    "ch": "時",
+    "cn": "时"
+   },
+   "UI_mod_eris_food_expiry_label_almost_rotten": {
+    "en": "Almost rotten",
+    "ch": "即將腐爛",
+    "cn": "即将腐烂"
+   },
+   "UI_mod_eris_food_expiry_label_completely_rotten": {
+    "en": "Rotten",
+    "ch": "已腐爛",
+    "cn": "已腐烂"
+   },
+   "UI_mod_eris_food_expiry_label_fresh": {
+    "en": "Fresh",
+    "ch": "新鮮",
+    "cn": "新鲜"
+   },
+   "UI_mod_eris_food_expiry_label_neverperish": {
+    "en": "Does not expire",
+    "ch": "不會腐壞",
+    "cn": "不会腐坏"
+   },
+   "UI_mod_eris_food_expiry_label_ok": {
+    "en": "Looks okay",
+    "ch": "看起來還行",
+    "cn": "看起来还行"
+   },
+   "UI_mod_eris_food_expiry_label_rotting": {
+    "en": "Starting to rot",
+    "ch": "開始腐爛",
+    "cn": "开始腐烂"
+   },
+   "UI_mod_eris_food_expiry_label_veryfresh": {
+    "en": "Very Fresh",
+    "ch": "非常新鮮",
+    "cn": "非常新鲜"
+   },
+   "UI_mod_eris_food_expiry_mins": {
+    "en": "m",
+    "ch": "分",
+    "cn": "分"
+   },
+   "UI_mod_eris_food_expiry_months": {
+    "en": "mth",
+    "ch": "月",
+    "cn": "月"
+   },
+   "UI_mod_eris_food_expiry_require_trait": {
+    "en": "Requires Nutritionist Trait",
+    "ch": "需要營養師特質",
+    "cn": "需要营养师特质"
+   },
+   "UI_mod_eris_food_expiry_require_trait_tooltip": {
+    "en": "When enabled, the Nutritionist trait is required to check freshness.",
+    "ch": "啟用後，需要擁有營養師特質才能查看食物新鮮度。",
+    "cn": "启用后，需要拥有营养师特质才能查看食物新鲜度。"
+   },
+   "UI_mod_eris_food_expiry_resolution": {
+    "en": "Resolution",
+    "ch": "顯示精細度",
+    "cn": "显示精细度"
+   },
+   "UI_mod_eris_food_expiry_resolution_comboBox_1": {
+    "en": "Vanilla",
+    "ch": "原版",
+    "cn": "原版"
+   },
+   "UI_mod_eris_food_expiry_resolution_comboBox_2": {
+    "en": "New",
+    "ch": "新式",
+    "cn": "新式"
+   },
+   "UI_mod_eris_food_expiry_rotten_label": {
+    "en": "Rotten in: ",
+    "ch": "腐爛剩餘：",
+    "cn": "腐烂剩余："
+   },
+   "UI_mod_eris_food_expiry_secs": {
+    "en": "s",
+    "ch": "秒",
+    "cn": "秒"
+   },
+   "UI_mod_eris_food_expiry_stale_label": {
+    "en": "Stale in: ",
+    "ch": "不新鮮倒數：",
+    "cn": "不新鲜倒数："
+   },
+   "UI_mod_eris_food_expiry_weeks": {
+    "en": "w",
+    "ch": "週",
+    "cn": "周"
+   },
+   "UI_mod_eris_food_expiry_years": {
+    "en": "yr",
+    "ch": "年",
+    "cn": "年"
+   },
+   "UI_moredesc_AdvancedMechanics": {
+    "en": "Advanced Mechanics",
+    "ch": "高級機械",
+    "cn": "高级机械"
+   },
+   "UI_moredesc_AllExceptHemp": {
+    "en": "all, except Hemp.",
+    "ch": "全部，大麻除外。",
+    "cn": "全部，大麻除外。"
+   },
+   "UI_moredesc_AndXMoreRecipes": {
+    "en": "and %1 more %2 recipes",
+    "ch": "以及另外 %1 個%2配方",
+    "cn": "以及另外 %1 个%2配方"
+   },
+   "UI_moredesc_Assemble": {
+    "en": "Assemble",
+    "ch": "組裝",
+    "cn": "组装"
+   },
+   "UI_moredesc_Assembling": {
+    "en": "Assembling",
+    "ch": "組裝",
+    "cn": "组装"
+   },
+   "UI_moredesc_BasicMechanics": {
+    "en": "Basic Mechanics",
+    "ch": "基礎機械",
+    "cn": "基础机械"
+   },
+   "UI_moredesc_Blade": {
+    "en": "Blade",
+    "ch": "刀刃",
+    "cn": "刀刃"
+   },
+   "UI_moredesc_Blades": {
+    "en": "Blades",
+    "ch": "刀刃",
+    "cn": "刀刃"
+   },
+   "UI_moredesc_Carpentry": {
+    "en": "Carpentry",
+    "ch": "木工",
+    "cn": "木工"
+   },
+   "UI_moredesc_Carve": {
+    "en": "Carve",
+    "ch": "雕刻",
+    "cn": "雕刻"
+   },
+   "UI_moredesc_Carving": {
+    "en": "Carving",
+    "ch": "雕刻",
+    "cn": "雕刻"
+   },
+   "UI_moredesc_CharcoalPit": {
+    "en": "Charcoal Pit",
+    "ch": "燒炭坑",
+    "cn": "烧炭坑"
+   },
+   "UI_moredesc_Construct": {
+    "en": "Construct",
+    "ch": "建造",
+    "cn": "建造"
+   },
+   "UI_moredesc_Construction": {
+    "en": "Construction",
+    "ch": "建造",
+    "cn": "建造"
+   },
+   "UI_moredesc_Constructions": {
+    "en": "Constructions",
+    "ch": "建造項目",
+    "cn": "建造项目"
+   },
+   "UI_moredesc_Cooking": {
+    "en": "Cooking",
+    "ch": "烹飪",
+    "cn": "烹饪"
+   },
+   "UI_moredesc_Cookware": {
+    "en": "Cookware",
+    "ch": "炊具",
+    "cn": "炊具"
+   },
+   "UI_moredesc_Craft": {
+    "en": "Craft",
+    "ch": "打造",
+    "cn": "打造"
+   },
+   "UI_moredesc_DomeKiln": {
+    "en": "Dome Kiln",
+    "ch": "圓頂窯",
+    "cn": "圆顶窑"
+   },
+   "UI_moredesc_Electrical": {
+    "en": "Electrical",
+    "ch": "電力",
+    "cn": "电力"
+   },
+   "UI_moredesc_Farming": {
+    "en": "Farming",
+    "ch": "農耕",
+    "cn": "耕作"
+   },
+   "UI_moredesc_Fishing": {
+    "en": "Fishing",
+    "ch": "釣魚",
+    "cn": "钓鱼"
+   },
+   "UI_moredesc_Forge": {
+    "en": "Forge",
+    "ch": "鍛造",
+    "cn": "锻造"
+   },
+   "UI_moredesc_Forging": {
+    "en": "Forging",
+    "ch": "鍛造",
+    "cn": "锻造"
+   },
+   "UI_moredesc_From": {
+    "en": "from",
+    "ch": "自",
+    "cn": "自"
+   },
+   "UI_moredesc_General": {
+    "en": "General",
+    "ch": "一般",
+    "cn": "常规"
+   },
+   "UI_moredesc_GeneratorMaintenance": {
+    "en": "Generator Maintenance",
+    "ch": "發電機保養",
+    "cn": "发电机保养"
+   },
+   "UI_moredesc_GrowingSeason": {
+    "en": "Growing Season",
+    "ch": "生長季節",
+    "cn": "生长季节"
+   },
+   "UI_moredesc_GrowingSeasons": {
+    "en": "Growing Seasons",
+    "ch": "生長季節",
+    "cn": "生长季节"
+   },
+   "UI_moredesc_GrowingSeasonsTotal": {
+    "en": "%1 growing seasons in total",
+    "ch": "共 %1 個生長季",
+    "cn": "共 %1 个生长季"
+   },
+   "UI_moredesc_HerbalRemedies": {
+    "en": "Herbal Remedies",
+    "ch": "草藥療法",
+    "cn": "草药疗法"
+   },
+   "UI_moredesc_IntermediateMechanics": {
+    "en": "Intermediate Mechanics",
+    "ch": "中級機械",
+    "cn": "中级机械"
+   },
+   "UI_moredesc_Knap": {
+    "en": "Knap",
+    "ch": "打製",
+    "cn": "打制"
+   },
+   "UI_moredesc_Knapping": {
+    "en": "Knapping",
+    "ch": "打製",
+    "cn": "打制"
+   },
+   "UI_moredesc_Knit": {
+    "en": "Knit",
+    "ch": "針織",
+    "cn": "针织"
+   },
+   "UI_moredesc_Knitting": {
+    "en": "Knitting",
+    "ch": "針織",
+    "cn": "针织"
+   },
+   "UI_moredesc_Knowledge": {
+    "en": "Knowledge",
+    "ch": "知識",
+    "cn": "知识"
+   },
+   "UI_moredesc_Make": {
+    "en": "Make",
+    "ch": "製作",
+    "cn": "制作"
+   },
+   "UI_moredesc_MakeJarOf": {
+    "en": "Make Jar of ",
+    "ch": "製作罐裝",
+    "cn": "制作罐装"
+   },
+   "UI_moredesc_Medical": {
+    "en": "Medical",
+    "ch": "醫療",
+    "cn": "医疗"
+   },
+   "UI_moredesc_Metalworking": {
+    "en": "Metalworking",
+    "ch": "金屬加工",
+    "cn": "金属加工"
+   },
+   "UI_moredesc_Miscellaneous": {
+    "en": "Miscellaneous",
+    "ch": "雜項",
+    "cn": "杂项"
+   },
+   "UI_moredesc_OBSOLETE": {
+    "en": "OBSOLETE",
+    "ch": "已棄用",
+    "cn": "已弃用"
+   },
+   "UI_moredesc_Pickling": {
+    "en": "Pickling",
+    "ch": "醃漬",
+    "cn": "腌制"
+   },
+   "UI_moredesc_Prepare": {
+    "en": "Prepare",
+    "ch": "調製",
+    "cn": "调制"
+   },
+   "UI_moredesc_Sew": {
+    "en": "Sew",
+    "ch": "縫製",
+    "cn": "缝制"
+   },
+   "UI_moredesc_Sewing": {
+    "en": "Sewing",
+    "ch": "縫紉",
+    "cn": "缝纫"
+   },
+   "UI_moredesc_Sharpen": {
+    "en": "Sharpen",
+    "ch": "磨利",
+    "cn": "打磨"
+   },
+   "UI_moredesc_Sharpening": {
+    "en": "Sharpening",
+    "ch": "磨利",
+    "cn": "打磨"
+   },
+   "UI_moredesc_Tailoring": {
+    "en": "Tailoring",
+    "ch": "裁縫",
+    "cn": "裁缝"
+   },
+   "UI_moredesc_Trapping": {
+    "en": "Trapping",
+    "ch": "設陷",
+    "cn": "诱捕"
+   },
+   "UI_moredesc_Weaponry": {
+    "en": "Weaponry",
+    "ch": "武器",
+    "cn": "武器"
+   },
+   "UI_moredesc_XRecipes": {
+    "en": "%1 %2 recipes",
+    "ch": "%1 個%2配方",
+    "cn": "%1 个%2配方"
+   },
+   "UI_moredesc_options_MoreDescriptionForTraits": {
+    "en": "Mod More Description For Traits",
+    "ch": "更多特質描述模組",
+    "cn": "更多特质描述模组"
+   },
+   "UI_moredesc_options_ShowForagingStats": {
+    "en": "Show Foraging stats",
+    "ch": "顯示覓食數據",
+    "cn": "显示觅食数据"
+   },
+   "UI_moredesc_options_ShowFreeRecipes": {
+    "en": "Show free recipes ",
+    "ch": "顯示免費配方",
+    "cn": "显示免费配方"
+   },
+   "UI_moredesc_options_ShowMoreDescription": {
+    "en": "Show more description",
+    "ch": "顯示更多描述",
+    "cn": "显示更多描述"
+   },
+   "UI_moredesc_options_Tooltip_ShowForagingStats": {
+    "en": "If checked, will add foraging stats to the traits and professions descriptions",
+    "ch": "若勾選，將在特質與職業描述中加入覓食數據",
+    "cn": "若勾选，将在特质与职业描述中加入觅食数据"
+   },
+   "UI_moredesc_options_Tooltip_ShowFreeRecipes": {
+    "en": "If checked, will add foraging free recipes to the traits and professions descriptions",
+    "ch": "若勾選，將在特質與職業描述中加入免費配方",
+    "cn": "若勾选，将在特质与职业描述中加入免费配方"
+   },
+   "UI_moredesc_options_Tooltip_ShowMoreDescription": {
+    "en": "If not checked , no extra description will be added after the vanilla description",
+    "ch": "若未勾選，將不會在原版描述後附加額外描述",
+    "cn": "若未勾选，将不会在原版描述后附加额外描述"
+   },
+   "UI_options_AllowBanditIcons": {
+    "en": "Display bandit spawn icons",
+    "ch": "顯示土匪生成圖示",
+    "cn": "显示土匪生成图标"
+   },
+   "UI_options_AllowBanditIcons_checkBox_tooltip": {
+    "en": "Icons must also be enabled in Sandbox settings",
+    "ch": "還須在沙盒設定中啟用圖示",
+    "cn": "还须在沙盒设置中启用图标"
+   },
+   "UI_options_BanditsAddOptions": {
+    "en": "Bandits Additional Options",
+    "ch": "Bandits 額外選項",
+    "cn": "Bandits 额外选项"
+   },
+   "UI_optionscreen_binding_ProxInv_Force_Selected": {
+    "en": "Force Selected Key",
+    "ch": "強制選取按鍵",
+    "cn": "强制选取按键"
+   },
+   "UI_prof_moredesc_movespeedintrees": {
+    "en": "%1% move speed in trees",
+    "ch": "樹林中移動速度 %1%",
+    "cn": "树林中移动速度 %1%"
+   },
+   "UI_prof_moredesc_startingregularityexercise": {
+    "en": "Starts with %1 % regularity in all fitness & strength exercises",
+    "ch": "所有體能與力量鍛鍊的初始規律度為 %1 %",
+    "cn": "所有健身与力量锻炼的初始规律度为 %1 %"
+   },
+   "UI_trait_knownrecipes": {
+    "en": "Free recipes :",
+    "ch": "免費配方：",
+    "cn": "免费配方："
+   },
+   "UI_trait_moredesc_Fasterbarricadingspeed": {
+    "en": "Slightly increased barricading speed.",
+    "ch": "封堵速度略微提升。",
+    "cn": "封堵速度略微提升。"
+   },
+   "UI_trait_moredesc_Fasterbuildingspeed": {
+    "en": "Increased building speed.",
+    "ch": "建造速度提升。",
+    "cn": "建造速度提升。"
+   },
+   "UI_trait_moredesc_HPtoallconstructionsexceptwalls": {
+    "en": "%1 HP to all constructions except walls",
+    "ch": "除牆壁外的所有建造物 %1 HP",
+    "cn": "除墙壁外的所有建造物 %1 HP"
+   },
+   "UI_trait_moredesc_acceleration": {
+    "en": "%1% acceleration",
+    "ch": "%1% 加速度",
+    "cn": "%1% 加速度"
+   },
+   "UI_trait_moredesc_accuracywithguns": {
+    "en": "%1% accuracy with guns",
+    "ch": "%1% 槍械命中率",
+    "cn": "%1% 枪械命中率"
+   },
+   "UI_trait_moredesc_aftercraftingdoesntreturnitems": {
+    "en": "After crafting, doesn't return the used items to their original container",
+    "ch": "製作完成後，使用過的物品不會放回原本的容器",
+    "cn": "制作完成后，使用过的物品不会放回原来的容器"
+   },
+   "UI_trait_moredesc_aimingdelaywithguns": {
+    "en": "%1% aiming delay with guns",
+    "ch": "槍械瞄準延遲 %1%",
+    "cn": "枪械瞄准延迟 %1%"
+   },
+   "UI_trait_moredesc_allwoundshealmuchfaster": {
+    "en": "All other wounds heal much faster",
+    "ch": "其他所有傷口癒合速度大幅加快",
+    "cn": "其他所有伤口愈合速度大幅加快"
+   },
+   "UI_trait_moredesc_allwoundshealmuchslower": {
+    "en": "All other wounds heal much slower",
+    "ch": "其他所有傷口癒合速度大幅減慢",
+    "cn": "其他所有伤口愈合速度大幅减慢"
+   },
+   "UI_trait_moredesc_alsogivesblurryvision": {
+    "en": "Gives blurry vision",
+    "ch": "造成視線模糊",
+    "cn": "造成视线模糊"
+   },
+   "UI_trait_moredesc_athleticgaincondition": {
+    "en": "Can be gained by training Fitness to level %1",
+    "ch": "將體格練到 %1 級可獲得",
+    "cn": "将体格练到 %1 级可获得"
+   },
+   "UI_trait_moredesc_athleticlosecondition": {
+    "en": "Lost if Fitness is below %1",
+    "ch": "體格低於 %1 時失去",
+    "cn": "体格低于 %1 时失去"
+   },
+   "UI_trait_moredesc_axetreedamage": {
+    "en": "%1 axe tree damage",
+    "ch": "斧頭砍樹傷害 %1",
+    "cn": "斧头砍树伤害 %1"
+   },
+   "UI_trait_moredesc_basespeedatextremepanic": {
+    "en": "%1 base speed at Extreme Panic",
+    "ch": "極度恐慌時基礎速度 %1",
+    "cn": "极度恐慌时基础速度 %1"
+   },
+   "UI_trait_moredesc_basespeedatstrongpanic": {
+    "en": "%1 base speed at Strong Panic",
+    "ch": "重度恐慌時基礎速度 %1",
+    "cn": "重度恐慌时基础速度 %1"
+   },
+   "UI_trait_moredesc_betteraimingdelay": {
+    "en": "Better aiming delay",
+    "ch": "瞄準延遲較短",
+    "cn": "瞄准延迟较短"
+   },
+   "UI_trait_moredesc_canbegainedbytrainingstrengthtolevel": {
+    "en": "Can be gained by training Strength to level %1",
+    "ch": "將力量訓練至 %1 級即可獲得此特質",
+    "cn": "将力量训练至 %1 级即可获得此特质"
+   },
+   "UI_trait_moredesc_canbelostbytrainingstrengthtolevel5": {
+    "en": "Can be lost by training Stength to level %1",
+    "ch": "將力量訓練至 %1 級即可移除此特質",
+    "cn": "将力量训练至 %1 级即可移除此特质"
+   },
+   "UI_trait_moredesc_cannotgainfitnessxptowardslevel": {
+    "en": "Cannot gain Fitness XP towards level %1",
+    "ch": "無法獲得升往 %1 級的體格經驗",
+    "cn": "无法获得升往 %1 级的体格经验"
+   },
+   "UI_trait_moredesc_cannotgainxptowardsfitnesslevel7orhigher": {
+    "en": "Cannot gain Fitness XP towards levels 7 and higher",
+    "ch": "無法獲得升往 7 級及以上的體格經驗",
+    "cn": "无法获得升往 7 级及以上的体格经验"
+   },
+   "UI_trait_moredesc_canthearsound": {
+    "en": "Can't hear sound. Radio chatter doesn't appear.",
+    "ch": "聽不到聲音。無線電對話不會顯示。",
+    "cn": "听不到声音。无线电对话不会显示。"
+   },
+   "UI_trait_moredesc_chanceofbeingspottedbyazombie": {
+    "en": "%1% chance of being spotted by a zombie",
+    "ch": "%1% 被殭屍發現的機率",
+    "cn": "%1% 被丧尸发现的几率"
+   },
+   "UI_trait_moredesc_chanceofbreakingfirekindling": {
+    "en": "%1% chance of breaking fire kindling",
+    "ch": "%1% 弄壞引火材的機率",
+    "cn": "%1% 弄坏引火材的几率"
+   },
+   "UI_trait_moredesc_chanceofcatchingacold": {
+    "en": "%1% chance of catching a cold",
+    "ch": "%1% 感冒機率",
+    "cn": "%1% 感冒几率"
+   },
+   "UI_trait_moredesc_chanceoffailingitemrepairs": {
+    "en": "%1% chance of failing item repairs",
+    "ch": "修理物品失敗機率 %1%",
+    "cn": "修理物品失败几率 %1%"
+   },
+   "UI_trait_moredesc_chanceofgettingscratchedcutbytrees": {
+    "en": "%1% chance of getting scratched/cut by trees",
+    "ch": "%1% 機率被樹木刮傷/割傷",
+    "cn": "%1% 几率被树木刮伤/割伤"
+   },
+   "UI_trait_moredesc_chanceofnotbeinginjuredbyzombies": {
+    "en": "%1% chance of not being injured by zombies",
+    "ch": "%1% 機率不被殭屍所傷",
+    "cn": "%1% 几率不被丧尸所伤"
+   },
+   "UI_trait_moredesc_chancetotripfromlunge": {
+    "en": "%1% chance to trip from getting attacked by lunging zombies",
+    "ch": "%1% 機率在被撲擊的殭屍攻擊時絆倒",
+    "cn": "%1% 几率在被扑击的丧尸攻击时绊倒"
+   },
+   "UI_trait_moredesc_chancetotripvaultingfence": {
+    "en": "%1% chance to trip when run/sprint vaulting a low fence or getting attacked by lunging zombies",
+    "ch": "%1% 機率在奔跑/衝刺翻越矮圍欄或被撲擊的殭屍攻擊時絆倒",
+    "cn": "%1% 几率在奔跑/冲刺翻越矮栅栏或被扑击的丧尸攻击时绊倒"
+   },
+   "UI_trait_moredesc_chancetotripwhilerunvaulting": {
+    "en": "%1% chance to trip while run/sprint vaulting a low fence",
+    "ch": "%1% 機率在奔跑/衝刺翻越矮圍欄時絆倒",
+    "cn": "%1% 几率在奔跑/冲刺翻越矮栅栏时绊倒"
+   },
+   "UI_trait_moredesc_characterwillstartlosinglife": {
+    "en": "Character will start losing life if weight is below %1",
+    "ch": "體重低於 %1 時角色會開始失去生命值",
+    "cn": "体重低于 %1 时角色会开始失去生命值"
+   },
+   "UI_trait_moredesc_claustrophobic": {
+    "en": "Doesn't get panicked in rooms of %1+ tiles. The smaller the room, the faster the panic increase.",
+    "ch": "在 %1 格以上的房間內不會恐慌。房間越小，恐慌上升越快。",
+    "cn": "在 %1 格以上的房间内不会恐慌。房间越小，恐慌上升越快。"
+   },
+   "UI_trait_moredesc_coldprogressionspeed": {
+    "en": "%1% cold progression speed",
+    "ch": "%1% 感冒惡化速度",
+    "cn": "%1% 感冒恶化速度"
+   },
+   "UI_trait_moredesc_coldstrength": {
+    "en": "%1% cold strength",
+    "ch": "%1% 感冒嚴重度",
+    "cn": "%1% 感冒严重度"
+   },
+   "UI_trait_moredesc_corpsesickness": {
+    "en": "%1% corpse sickness",
+    "ch": "%1% 屍體病",
+    "cn": "%1% 尸体病"
+   },
+   "UI_trait_moredesc_critchancewithguns": {
+    "en": "%1% crit chance with guns",
+    "ch": "%1% 槍械爆擊機率",
+    "cn": "%1% 枪械暴击几率"
+   },
+   "UI_trait_moredesc_currentlybugged": {
+    "en": "(!!! CURRENTLY BUGGED !!!)",
+    "ch": "(!!! 目前有 Bug !!!)",
+    "cn": "(!!! 当前有 Bug !!!)"
+   },
+   "UI_trait_moredesc_decreasedchanceoffailingatallfenceclimb": {
+    "en": "Decreased chance to fail climbing a tall fence or wall",
+    "ch": "降低翻越高柵欄或牆壁失敗的機率",
+    "cn": "降低翻越高栅栏或墙壁失败的几率"
+   },
+   "UI_trait_moredesc_decreasedchanceoffallwhenbumping": {
+    "en": "Decreased chance of falling when bumping into a zombie or survivor",
+    "ch": "撞到殭屍或倖存者時較不容易跌倒",
+    "cn": "撞到丧尸或幸存者时更不容易摔倒"
+   },
+   "UI_trait_moredesc_decreasedchanceofinjurywhenopeningcan": {
+    "en": "Decreased chance of injury when opening a can without can opener",
+    "ch": "不用開罐器開罐頭時較不容易受傷",
+    "cn": "不用开罐器开罐头时更不容易受伤"
+   },
+   "UI_trait_moredesc_decreasedchanceofjammingguns": {
+    "en": "Decreased chance of jamming guns",
+    "ch": "降低槍械卡彈的機率",
+    "cn": "降低枪械卡壳的几率"
+   },
+   "UI_trait_moredesc_decreasedchancetotripfromlunge": {
+    "en": "Decreased chance to trip from getting attacked by lunging zombies",
+    "ch": "被撲擊的殭屍攻擊時較不容易絆倒",
+    "cn": "被扑击的丧尸攻击时更不容易绊倒"
+   },
+   "UI_trait_moredesc_decreasedchancewoundwhenopeningacan": {
+    "en": "Decreased chance of inury when opening a can without a can opener",
+    "ch": "降低不用開罐器開罐頭時受傷的機率",
+    "cn": "降低不用开罐器开罐头时受伤的几率"
+   },
+   "UI_trait_moredesc_doesnotwakeupwhenreaching0tiredness": {
+    "en": "But does not affect sleep time, so the character will stay asleep after reaching 0 tiredness",
+    "ch": "但不影響睡眠時間，因此疲勞歸零後角色仍會繼續沉睡",
+    "cn": "但不影响睡眠时间，因此疲劳归零后角色仍会继续沉睡"
+   },
+   "UI_trait_moredesc_doesntpanicfromzombiereanimating": {
+    "en": "Doesn't panic from zombies reanimating",
+    "ch": "不會因殭屍復活而恐慌",
+    "cn": "不会因丧尸复活而恐慌"
+   },
+   "UI_trait_moredesc_doubledendurancelosswhenrunning": {
+    "en": "Doubled endurance loss when walking with heavy weight or running, sprinting, dragging corpses",
+    "ch": "負重行走或奔跑、衝刺、拖曳屍體時耐力消耗加倍",
+    "cn": "负重行走或奔跑、冲刺、拖拽尸体时耐力消耗加倍"
+   },
+   "UI_trait_moredesc_endurancelosswhenrunningsprintingcarryingdragging": {
+    "en": "%1% endurance loss when running , sprinting , carrying heavy load, or dragging corpses",
+    "ch": "跑步、衝刺、負重或拖曳屍體時的耐力消耗 %1%",
+    "cn": "跑步、冲刺、负重或拖拽尸体时的耐力消耗 %1%"
+   },
+   "UI_trait_moredesc_endurancelosswhenswinging": {
+    "en": "%1% endurance loss when swinging",
+    "ch": "揮擊時的耐力消耗 %1%",
+    "cn": "挥击时的耐力消耗 %1%"
+   },
+   "UI_trait_moredesc_enduranceregeneration": {
+    "en": "%1% endurance regeneration",
+    "ch": "%1% 耐力恢復",
+    "cn": "%1% 耐力恢复"
+   },
+   "UI_trait_moredesc_engineloudnessreversing": {
+    "en": "%1% engine loudness when reversing",
+    "ch": "倒車時引擎噪音 %1%",
+    "cn": "倒车时发动机噪音 %1%"
+   },
+   "UI_trait_moredesc_falldamage": {
+    "en": "%1% fall damage. and slightly increased chance of fracture/deep wound from falling",
+    "ch": "%1% 墜落傷害，且墜落造成骨折/深度傷口的機率略微提高",
+    "cn": "%1% 坠落伤害，且坠落造成骨折/深度伤口的几率略微提高"
+   },
+   "UI_trait_moredesc_fasteraxeswing": {
+    "en": "Swings axes %1 faster",
+    "ch": "揮動斧頭的速度加快 %1",
+    "cn": "挥动斧头的速度加快 %1"
+   },
+   "UI_trait_moredesc_fitlosecondition": {
+    "en": "Replaced by Athletic when reaching level %1 Fitness",
+    "ch": "體格達到 %1 級時會被「運動健將」取代",
+    "cn": "体格达到 %1 级时会被“运动健将”取代"
+   },
+   "UI_trait_moredesc_fitlosecondition2": {
+    "en": "Lost if Fitness is below level %1",
+    "ch": "體格低於 %1 級時失去",
+    "cn": "体格低于 %1 级时失去"
+   },
+   "UI_trait_moredesc_foodillnesschance": {
+    "en": "%1% food illness chance",
+    "ch": "食物中毒機率 %1%",
+    "cn": "食物中毒几率 %1%"
+   },
+   "UI_trait_moredesc_foodillnessduration": {
+    "en": "Food illness lasts ~ %1% on average",
+    "ch": "食物中毒平均持續時間約 %1%",
+    "cn": "食物中毒平均持续时间约 %1%"
+   },
+   "UI_trait_moredesc_footstepsoundradius": {
+    "en": "%1% footstep radius sound",
+    "ch": "%1% 腳步聲範圍",
+    "cn": "%1% 脚步声范围"
+   },
+   "UI_trait_moredesc_fractureseverity": {
+    "en": "%1% fracture severity",
+    "ch": "%1% 骨折嚴重度",
+    "cn": "%1% 骨折严重度"
+   },
+   "UI_trait_moredesc_gearswitchingspeed": {
+    "en": "%1% gear switching speed",
+    "ch": "%1% 換檔速度",
+    "cn": "%1% 换挡速度"
+   },
+   "UI_trait_moredesc_grappleeffectiveness": {
+    "en": "%1% Grapple Effectiveness",
+    "ch": "%1% 擒抱效果",
+    "cn": "%1% 擒抱效果"
+   },
+   "UI_trait_moredesc_greatlydecreasedchanceofscratchbytrees": {
+    "en": "Greatly decreased chance of getting scratched/lacerated while walking or running through trees",
+    "ch": "穿越樹叢行走或奔跑時被抓傷/撕裂傷的機率大幅降低",
+    "cn": "穿越树丛行走或奔跑时被抓伤/撕裂伤的几率大幅降低"
+   },
+   "UI_trait_moredesc_greatlyincreasedchancetofailatallfenceclimb": {
+    "en": "Greatly increased chance to fail a tall fence climb",
+    "ch": "翻越高柵欄的失敗機率大幅提高",
+    "cn": "翻越高栅栏的失败几率大幅提高"
+   },
+   "UI_trait_moredesc_gunaimweatherpenalty": {
+    "en": "%1% gun aim weather penalty",
+    "ch": "%1% 槍械瞄準的天氣懲罰",
+    "cn": "%1% 枪械瞄准的天气惩罚"
+   },
+   "UI_trait_moredesc_hardertostartsleeping": {
+    "en": "Harder to fall asleep",
+    "ch": "更難入睡",
+    "cn": "更难入睡"
+   },
+   "UI_trait_moredesc_highercalorythresholdtogainweight": {
+    "en": "Higher calory threshold to gain weight , if current weight %1kg",
+    "ch": "若目前體重 %1kg，增重所需的熱量門檻較高",
+    "cn": "若当前体重 %1kg，增重所需的热量阈值更高"
+   },
+   "UI_trait_moredesc_hunger": {
+    "en": "%1% hunger",
+    "ch": "%1% 飢餓",
+    "cn": "%1% 饥饿"
+   },
+   "UI_trait_moredesc_ifusingthenewstealthsystem": {
+    "en": "If using the new stealth system :",
+    "ch": "若使用新潛行系統：",
+    "cn": "若使用新潜行系统："
+   },
+   "UI_trait_moredesc_ifusingtheoldstealthsystem": {
+    "en": "If using the old stealth system :",
+    "ch": "若使用舊潛行系統：",
+    "cn": "若使用旧潜行系统："
+   },
+   "UI_trait_moredesc_includingnonpackagedandcookedfood": {
+    "en": "Including non-packaged food and cooked food.",
+    "ch": "包括無包裝食物與烹煮過的食物。",
+    "cn": "包括无包装食物与烹饪过的食物。"
+   },
+   "UI_trait_moredesc_includingtextonmapsandcaloryvaluesonfood": {
+    "en": "Including text on maps or calory values on packaged food",
+    "ch": "包括地圖上的文字或包裝食品上的熱量標示",
+    "cn": "包括地图上的文字或包装食品上的热量标示"
+   },
+   "UI_trait_moredesc_increasedchanceoffallwhenbumping": {
+    "en": "Increased chance of falling when bumping into a zombie or survivor",
+    "ch": "撞到殭屍或倖存者時更容易跌倒",
+    "cn": "撞到丧尸或幸存者时更容易摔倒"
+   },
+   "UI_trait_moredesc_increasedchanceofinjurywhenopeningcan": {
+    "en": "Increased chance of injury when opening a can without can opener",
+    "ch": "不用開罐器開罐頭時更容易受傷",
+    "cn": "不用开罐器开罐头时更容易受伤"
+   },
+   "UI_trait_moredesc_increasedchanceofjammingguns": {
+    "en": "Increased chance of jamming guns",
+    "ch": "提高槍械卡彈的機率",
+    "cn": "提高枪械卡壳的几率"
+   },
+   "UI_trait_moredesc_increasedchancetofailatallfenceclimb": {
+    "en": "Increased chance to fail a tall fence or wall climb",
+    "ch": "翻越高柵欄或牆壁的失敗機率提高",
+    "cn": "翻越高栅栏或墙壁的失败几率提高"
+   },
+   "UI_trait_moredesc_increasedchancewoundwhenopeningacan": {
+    "en": "Increased chance of inury when opening a can without a can opener",
+    "ch": "提高不用開罐器開罐頭時受傷的機率",
+    "cn": "提高不用开罐器开罐头时受伤的几率"
+   },
+   "UI_trait_moredesc_increasedminimumanbiantlight": {
+    "en": "Slightly increased minimum ambient light, except in closed rooms",
+    "ch": "最低環境亮度略微提高（封閉房間除外）",
+    "cn": "最低环境亮度略微提高（封闭房间除外）"
+   },
+   "UI_trait_moredesc_increasedreversingspeed": {
+    "en": "Increased reversing speed.",
+    "ch": "倒車速度提升。",
+    "cn": "倒车速度提升。"
+   },
+   "UI_trait_moredesc_inventorytransferbloodyitemsfasterandstressfull": {
+    "en": "Inventory transfer of bloody items is faster and causes stress",
+    "ch": "轉移帶血物品的速度更快，但會產生壓力",
+    "cn": "转移带血物品的速度更快，但会产生压力"
+   },
+   "UI_trait_moredesc_inventorytransferringtime": {
+    "en": "%1% inventory tranferring time",
+    "ch": "物品欄轉移時間 %1%",
+    "cn": "物品栏转移时间 %1%"
+   },
+   "UI_trait_moredesc_knockbackpower": {
+    "en": "%1% knockback power",
+    "ch": "%1% 擊退力道",
+    "cn": "%1% 击退力度"
+   },
+   "UI_trait_moredesc_levellower": {
+    "en": "(%1 level lower)",
+    "ch": "(低 %1 級)",
+    "cn": "(低 %1 级)"
+   },
+   "UI_trait_moredesc_lightsfiresfaster": {
+    "en": "Lights fires ~%1% faster",
+    "ch": "生火速度加快約 %1%",
+    "cn": "生火速度加快约 %1%"
+   },
+   "UI_trait_moredesc_loot": {
+    "en": "%1% more loot",
+    "ch": "戰利品增加 %1%",
+    "cn": "战利品增加 %1%"
+   },
+   "UI_trait_moredesc_lostifweightgoesabove": {
+    "en": "Lost if weight goes above %1",
+    "ch": "體重超過 %1 時失去此特質",
+    "cn": "体重超过 %1 时失去此特质"
+   },
+   "UI_trait_moredesc_lostifweightgoesbelow": {
+    "en": "Lost if weight goes below %1",
+    "ch": "體重低於 %1 時失去此特質",
+    "cn": "体重低于 %1 时失去此特质"
+   },
+   "UI_trait_moredesc_maluscanberemovedbywearingglasses": {
+    "en": "The maluses can be canceled by wearing glasses",
+    "ch": "配戴眼鏡可消除這些負面效果",
+    "cn": "佩戴眼镜可消除这些负面效果"
+   },
+   "UI_trait_moredesc_maxrangemodifieronweaponsights": {
+    "en": "%1% max range modifier on weapon sights",
+    "ch": "%1% 武器瞄具最大射程修正",
+    "cn": "%1% 武器瞄具最大射程修正"
+   },
+   "UI_trait_moredesc_maxspeed": {
+    "en": "Max speed of %1 MPH",
+    "ch": "最高速度 %1 MPH",
+    "cn": "最高速度 %1 MPH"
+   },
+   "UI_trait_moredesc_meleedamage": {
+    "en": "%1% melee damage",
+    "ch": "%1% 近戰傷害",
+    "cn": "%1% 近战伤害"
+   },
+   "UI_trait_moredesc_motionsickness": {
+    "en": "(Increases faster the faster the vehicle goes, up to %1% sickness maximum)",
+    "ch": "（載具速度越快增加越快，最高至 %1% 暈車值）",
+    "cn": "（车辆速度越快增加越快，最高至 %1% 晕车值）"
+   },
+   "UI_trait_moredesc_motionsickness_alloccupants": {
+    "en": "Motion sickness affects all vehicle occupants, progressing 50% slower for the driver",
+    "ch": "暈車會影響車上所有乘員，駕駛的累積速度減慢 50%",
+    "cn": "晕车会影响车上所有乘员，驾驶员的累积速度减慢 50%"
+   },
+   "UI_trait_moredesc_motionsickness_forwardbackward": {
+    "en": "Motion sickness occurs when moving both forward and backward, with exponential increase based on speed",
+    "ch": "前進與倒車時皆會暈車，且隨車速呈指數增加",
+    "cn": "前进与倒车时均会晕车，且随车速呈指数增加"
+   },
+   "UI_trait_moredesc_motionsickness_offroad": {
+    "en": "%1% sickness progression when off-roading",
+    "ch": "越野行駛時 %1% 暈車累積速度",
+    "cn": "越野行驶时 %1% 晕车累积速度"
+   },
+   "UI_trait_moredesc_motionsickness_skidsturns": {
+    "en": "Effects are doubled during skids or sharp turns",
+    "ch": "打滑或急轉彎時效果加倍",
+    "cn": "打滑或急转弯时效果翻倍"
+   },
+   "UI_trait_moredesc_motionsicknessprogression": {
+    "en": "%1% motion sickness progression",
+    "ch": "%1% 暈車累積速度",
+    "cn": "%1% 晕车累积速度"
+   },
+   "UI_trait_moredesc_needtosetanalarmtotakefulladvantage": {
+    "en": "Set an alarm every night to take full advantage of the trait",
+    "ch": "每晚設定鬧鐘以充分發揮此特質",
+    "cn": "每晚设置闹钟以充分发挥此特质"
+   },
+   "UI_trait_moredesc_nochangetoengineloudness": {
+    "en": "No change to engine loudness",
+    "ch": "引擎噪音不變",
+    "cn": "发动机噪音不变"
+   },
+   "UI_trait_moredesc_noeffectonexercisefatigue": {
+    "en": "No effect on exercise fatigue",
+    "ch": "不影響運動疲勞",
+    "cn": "不影响锻炼疲劳"
+   },
+   "UI_trait_moredesc_nostressfromlootingzombies": {
+    "en": "No stress or unhappiness from stripping items from corpses",
+    "ch": "從屍體上搜刮物品不會產生壓力或不悅",
+    "cn": "从尸体上搜刮物品不会产生压力或不悦"
+   },
+   "UI_trait_moredesc_outofshapegaincondition": {
+    "en": "Gained if Fitness goes below level %1",
+    "ch": "體格降到 %1 級以下時獲得",
+    "cn": "体格降到 %1 级以下时获得"
+   },
+   "UI_trait_moredesc_outofshapelosecondition": {
+    "en": "Can be lost by training Fitness to level %1",
+    "ch": "將體格練到 %1 級可移除",
+    "cn": "将体格练到 %1 级可移除"
+   },
+   "UI_trait_moredesc_outofshapelosecondition2": {
+    "en": "Replaced by Unfit if Fitness goes below level %1",
+    "ch": "體格低於 %1 級時會被「身體很差」取代",
+    "cn": "体格低于 %1 级时会被“身体很差”取代"
+   },
+   "UI_trait_moredesc_panicexceptnightterrors": {
+    "en": "%1% panic, except for night terrors and phobias",
+    "ch": "%1% 恐慌（夜驚與恐懼症除外）",
+    "cn": "%1% 恐慌（夜惊与恐惧症除外）"
+   },
+   "UI_trait_moredesc_percent": {
+    "en": "(%1%)",
+    "ch": "(%1%)",
+    "cn": "(%1%)"
+   },
+   "UI_trait_moredesc_perceptionradius": {
+    "en": "%1% perception radius",
+    "ch": "%1% 感知範圍",
+    "cn": "%1% 感知范围"
+   },
+   "UI_trait_moredesc_raweggsnevercausefoodillness": {
+    "en": "Raw eggs never cause food illness",
+    "ch": "生雞蛋絕不會導致食物中毒",
+    "cn": "生鸡蛋绝不会导致食物中毒"
+   },
+   "UI_trait_moredesc_readingspeed": {
+    "en": "%1% reading speed",
+    "ch": "%1% 閱讀速度",
+    "cn": "%1% 阅读速度"
+   },
+   "UI_trait_moredesc_reducedvisoinconemalusindarkness": {
+    "en": "Reduced vision cone malus in the darkness",
+    "ch": "黑暗中的視野錐懲罰降低",
+    "cn": "黑暗中的视野锥惩罚降低"
+   },
+   "UI_trait_moredesc_replacedbyemaciatedifweightgoesbelow": {
+    "en": "Replaced by Emaciated if weight goes below %1",
+    "ch": "體重低於 %1 時會變為「瘦骨嶙峋」",
+    "cn": "体重低于 %1 时会变为“瘦骨嶙峋”"
+   },
+   "UI_trait_moredesc_replacedbyfeebleatlevel2strength": {
+    "en": "Replaced by Feeble when reaching level %1 Strength",
+    "ch": "力量達到 %1 級時會變為「身體虛弱」",
+    "cn": "力量达到 %1 级时会变为“身体虚弱”"
+   },
+   "UI_trait_moredesc_replacedbyobeseifweightgoesabove": {
+    "en": "Replaced by Obese if weight goes above %1",
+    "ch": "體重超過 %1 時會變為「身肥體胖」",
+    "cn": "体重超过 %1 时会变为“身肥体胖”"
+   },
+   "UI_trait_moredesc_replacedbyoverweightifweightgoesbelow": {
+    "en": "Replaced by High Weight if weight goes below %1",
+    "ch": "體重低於 %1 時會變為「體重過重」",
+    "cn": "体重低于 %1 时会变为“体重过重”"
+   },
+   "UI_trait_moredesc_replacedbystrongatlevel9strength": {
+    "en": "Replaced by Strong when reaching level %1 Strength",
+    "ch": "力量達到 %1 級時會變為「身強力壯」",
+    "cn": "力量达到 %1 级时会变为“身强力壮”"
+   },
+   "UI_trait_moredesc_replacedbyunderweightifweightgoesbelow": {
+    "en": "Replaced by Low Weight if weight goes above %1",
+    "ch": "體重超過 %1 時會變為「體重過輕」",
+    "cn": "体重超过 %1 时会变为“体重过轻”"
+   },
+   "UI_trait_moredesc_replacedbyveruunderweightifweightgoesabove": {
+    "en": "Replaced by Very Low Weight if weight goes above %1",
+    "ch": "體重超過 %1 時會變為「身形消瘦」",
+    "cn": "体重超过 %1 时会变为“身形消瘦”"
+   },
+   "UI_trait_moredesc_replacedbyveryunderweightifweightgoesbelow": {
+    "en": "Replaced by Very Low Weight if weight goes below %1",
+    "ch": "體重低於 %1 時會變為「身形消瘦」",
+    "cn": "体重低于 %1 时会变为“身形消瘦”"
+   },
+   "UI_trait_moredesc_reverseacceleration": {
+    "en": "%1% reverse acceleration",
+    "ch": "%1% 倒車加速度",
+    "cn": "%1% 倒车加速度"
+   },
+   "UI_trait_moredesc_runningsprintingenduranceloss": {
+    "en": "%1% running/sprinting endurance loss from the trait itself",
+    "ch": "%1% 由此特質造成的奔跑/衝刺耐力消耗",
+    "cn": "%1% 由该特质造成的奔跑/冲刺耐力消耗"
+   },
+   "UI_trait_moredesc_runningsprintingspeed": {
+    "en": "%1% running/sprinting speed",
+    "ch": "%1% 奔跑/衝刺速度",
+    "cn": "%1% 奔跑/冲刺速度"
+   },
+   "UI_trait_moredesc_severityofvehicleinjuries": {
+    "en": "%1% severity of vehicle injuries",
+    "ch": "%1% 車禍傷勢嚴重度",
+    "cn": "%1% 车祸伤势严重度"
+   },
+   "UI_trait_moredesc_sleepduration": {
+    "en": "%1% sleep duration",
+    "ch": "%1% 睡眠時長",
+    "cn": "%1% 睡眠时长"
+   },
+   "UI_trait_moredesc_slightlyincreasedropclimbingspeed": {
+    "en": "Slightly increased rope climbing speed",
+    "ch": "略微提升攀爬繩索的速度",
+    "cn": "略微提升攀爬绳索的速度"
+   },
+   "UI_trait_moredesc_slowerropeclimbingspeed": {
+    "en": "Slower rope climbing speed",
+    "ch": "攀爬繩索速度較慢",
+    "cn": "攀爬绳索速度较慢"
+   },
+   "UI_trait_moredesc_soundeffectsmuffled": {
+    "en": "Some sound effects will be muffled.",
+    "ch": "部分音效會變得沉悶模糊。",
+    "cn": "部分音效会变得沉闷模糊。"
+   },
+   "UI_trait_moredesc_speed": {
+    "en": "%1% speed",
+    "ch": "%1% 速度",
+    "cn": "%1% 速度"
+   },
+   "UI_trait_moredesc_startingweight": {
+    "en": "Starting weight is %1",
+    "ch": "初始體重為 %1",
+    "cn": "初始体重为 %1"
+   },
+   "UI_trait_moredesc_stillabletowatchtv": {
+    "en": "Still able to watch TV due to closed captions.",
+    "ch": "由於有字幕，仍然可以看電視。",
+    "cn": "由于有字幕，仍然可以看电视。"
+   },
+   "UI_trait_moredesc_stillcantgoabovemovespeedcap": {
+    "en": "(Still can't go above the move speed cap)",
+    "ch": "（仍無法超過移動速度上限）",
+    "cn": "（仍无法超过移动速度上限）"
+   },
+   "UI_trait_moredesc_stressfromlootingcorpses": {
+    "en": "%1% stress and unhappiness from stripping items from corpses",
+    "ch": "%1% 從屍體上搜刮物品時的壓力與不悅",
+    "cn": "%1% 从尸体上搜刮物品时的压力与不悦"
+   },
+   "UI_trait_moredesc_taintedwatermorepoisonous": {
+    "en": "Tainted water is %1% poisonous",
+    "ch": "受污染的水毒性為 %1%",
+    "cn": "受污染的水毒性为 %1%"
+   },
+   "UI_trait_moredesc_thirst": {
+    "en": "%1% thirst",
+    "ch": "%1% 口渴速度",
+    "cn": "%1% 口渴速度"
+   },
+   "UI_trait_moredesc_tirednesslossratewhileawake": {
+    "en": "%1% tiredness loss rate while awake",
+    "ch": "%1% 清醒時的疲勞增加速度",
+    "cn": "%1% 清醒时的疲劳增加速度"
+   },
+   "UI_trait_moredesc_tirednessrecoveryratewhensleeping": {
+    "en": "%1% tiredness recovery rate when sleeping",
+    "ch": "%1% 睡眠時的疲勞恢復速度",
+    "cn": "%1% 睡眠时的疲劳恢复速度"
+   },
+   "UI_trait_moredesc_topspeed": {
+    "en": "%1% top speed for all vehicles",
+    "ch": "所有載具最高速度 %1%",
+    "cn": "所有车辆最高速度 %1%"
+   },
+   "UI_trait_moredesc_unfitgaincondition": {
+    "en": "Gained if Fitness is below level %1",
+    "ch": "體格低於 %1 級時獲得",
+    "cn": "体格低于 %1 级时获得"
+   },
+   "UI_trait_moredesc_unfitlosecondition": {
+    "en": "Can become Out of Shape by training Fitness to level %1",
+    "ch": "將體格練到 %1 級可轉變為「身體不好」",
+    "cn": "将体格练到 %1 级可转变为“身体不好”"
+   },
+   "UI_trait_moredesc_weaponsightsrangebonusatminimum": {
+    "en": "Weapon sights' bonus range are always at minimum value",
+    "ch": "武器瞄具的加成射程永遠為最小值",
+    "cn": "武器瞄具的加成射程始终为最小值"
+   },
+   "UI_trait_moredesc_widerfieldofview": {
+    "en": "Wider field of view",
+    "ch": "更寬廣的視野",
+    "cn": "更宽阔的视野"
+   },
+   "UI_trait_moredesc_windpenaltywhenaimingwithguns": {
+    "en": "%1% wind penalty when aiming with guns",
+    "ch": "%1% 槍械瞄準時的風力懲罰",
+    "cn": "%1% 枪械瞄准时的风力惩罚"
+   },
+   "UI_trait_moredesc_xpforallskillsexcept": {
+    "en": "%1% xp for all skills, except Fitness and Strength",
+    "ch": "%1% 所有技能經驗（體能與力量除外）",
+    "cn": "%1% 所有技能经验（健身与力量除外）"
+   },
+   "UI_trait_moredesc_xpforweaponskillsandaimingskill": {
+    "en": "%1% XP for all weapon skills and Aiming skill",
+    "ch": "所有武器技能與瞄準技能經驗值 %1%",
+    "cn": "所有武器技能与瞄准技能经验值 %1%"
+   },
+   "UI_trait_moredesc_zombiesbehindvisibleearlier": {
+    "en": "Zombies approaching from behind will be visible much earlier",
+    "ch": "從背後接近的殭屍會提早許多被發現",
+    "cn": "从背后接近的丧尸会提前很多被发现"
+   },
+   "UI_trait_moredesc_zombiesbehindvisiblelater": {
+    "en": "Zombies approaching from behind will be visible later",
+    "ch": "從背後接近的殭屍會較晚被發現",
+    "cn": "从背后接近的丧尸会更晚被发现"
+   },
+   "UI_trait_moredesc_zombificationspeed": {
+    "en": "%1% zombification speed",
+    "ch": "%1% 殭屍化速度",
+    "cn": "%1% 丧尸化速度"
+   },
+   "UI_trait_unluckydesc": {
+    "en": "What could go wrong for you, often does.<br>-10% chance to find rare loot.<br> +5% chance of failing item repairs.",
+    "ch": "會出錯的事，往往真的會發生在你身上。<br>找到稀有戰利品的機率 -10%。<br>修理物品失敗的機率 +5%。",
+    "cn": "会出错的事，往往真的会发生在你身上。<br>找到稀有战利品的几率 -10%。<br>修理物品失败的几率 +5%。"
+   }
+  }
+ }
 }
