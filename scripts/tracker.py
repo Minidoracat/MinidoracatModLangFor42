@@ -1065,12 +1065,14 @@ def _diff_changed(changed, watchlist, steamcmd, install_dir, corpus_state, attri
                     plans.append(plan)
             else:
                 new_records = extract_corpus(item_dir, "EN")
-                if not new_records:
-                    print(f"  ⚠️ 語料解析為空，跳過（不建空 baseline、不推進狀態）：{wid}", file=sys.stderr)
-                    failed_ids.append(wid)
-                    continue
                 mod_ids = items.get(wid, {}).get("mod_ids", [])
                 plan, new_state = build_layer_a_plan(wid, mod_ids, new_records, corpus_state, attribution)
+                if not new_records:
+                    # 下載成功但無可抽取文本（如僅 B41 .txt 格式的模組）＝合法空語料：
+                    # 建帶標記的空 baseline 推進時間戳，止住每日重抓；未來若新增 JSON 文本，
+                    # 空→非空 diff 照樣觸發「可能過時」issue（見自測情境 7）。
+                    new_state["empty_corpus"] = True
+                    print(f"  ℹ️ 語料為空，建空 baseline（疑似僅 B41 格式文本）：{wid}")
                 corpus_updates[wid] = new_state
                 if plan:
                     plans.append(plan)
