@@ -558,24 +558,55 @@ def cmd_manifest() -> int:
         # Markdown 表格安全：去換行、跳脫直線
         return str(text).replace("\n", " ").replace("|", "\\|").strip() or "—"
 
-    all_mod_ids = {m for _, _, mod_ids, _ in rows for m in mod_ids}
-    lines = ["| MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 |", "| --- | --- | --- | --- | --- |"]
-    for ws_id, name, mod_ids, key_count in rows:
+    # 已下架標記來自 tracker state（tracker.py 每日維護；缺檔＝視為全部在架）
+    ts_path = PROJECT_ROOT / "tracker-state" / "timestamps.json"
+    ts_items = load_json(ts_path).get("items", {}) if ts_path.exists() else {}
+    removed_at = {
+        w: (v.get("removed_at") or "")[:10] for w, v in ts_items.items() if v.get("removed")
+    }
+    active_rows = [r for r in rows if r[0] not in removed_at]
+    removed_rows = [r for r in rows if r[0] in removed_at]
+
+    def row_line(ws_id, name, mod_ids, key_count, extra: str = "") -> str:
         link = f"[{cell(name)}]({WORKSHOP_URL.format(ws_id)})"
         ids = ", ".join(f"`{m}`" for m in mod_ids) if mod_ids else "—"
         zh = names_zh.get(ws_id, {})
-        lines.append(
-            f"| {link} | {cell(zh.get('name_zh', ''))} | {cell(zh.get('summary', ''))} | {ids} | {key_count} |"
-        )
+        cells = [link, cell(zh.get("name_zh", "")), cell(zh.get("summary", "")), ids, str(key_count)]
+        if extra:
+            cells.append(extra)
+        return "| " + " | ".join(cells) + " |"
+
+    all_mod_ids = {m for r in active_rows for m in r[2]}
+    lines = ["| MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 |", "| --- | --- | --- | --- | --- |"]
+    lines.extend(row_line(*r) for r in active_rows)
     table = "\n".join(lines)
-    print(f"  彙整 {len(rows)} 個 MOD（中文名稱覆蓋 {sum(1 for w, *_ in rows if w in names_zh)} 個）")
+    print(
+        f"  彙整 {len(rows)} 個 MOD（在架 {len(active_rows)}、已下架 {len(removed_rows)}、"
+        f"中文名稱覆蓋 {sum(1 for w, *_ in rows if w in names_zh)} 個）"
+    )
+
+    removed_section = ""
+    if removed_rows:
+        rlines = [
+            "| MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 下架偵測 |",
+            "| --- | --- | --- | --- | --- | --- |",
+        ]
+        rlines.extend(row_line(*r, extra=removed_at.get(r[0]) or "—") for r in removed_rows)
+        removed_section = (
+            f"\n## 已下架模組（{len(removed_rows)} 個，翻譯保留）\n\n"
+            "以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，"
+            "既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。\n\n"
+            + "\n".join(rlines) + "\n"
+        )
 
     page = (
         "# 支援 MOD 清單\n\n"
         "> 本檔由 `uv run scripts/build_mod.py manifest` 自動生成，請勿手動編輯。\n"
         "> 中文名稱與摘要維護於 `sources/mod_names_zh.json`，修改後重跑 manifest。\n\n"
-        f"共支援 **{len(rows)} 個 Workshop 模組**（{len(all_mod_ids)} 個 mod ID）。\n\n"
+        f"共支援 **{len(active_rows)} 個 Workshop 模組**（{len(all_mod_ids)} 個 mod ID）"
+        f"{f'；另 **{len(removed_rows)} 個已下架**（翻譯保留，見文末）' if removed_rows else ''}。\n\n"
         f"{table}\n"
+        f"{removed_section}"
     )
     old_page = SUPPORTED_MODS_MD.read_text(encoding="utf-8") if SUPPORTED_MODS_MD.exists() else None
     if page != old_page:
@@ -598,7 +629,8 @@ def cmd_manifest() -> int:
         )
         return 1
     summary_line = (
-        f"共支援 **{len(rows)} 個 Workshop 模組**（{len(all_mod_ids)} 個 mod ID），"
+        f"共支援 **{len(active_rows)} 個 Workshop 模組**（{len(all_mod_ids)} 個 mod ID）"
+        f"{f'，另 {len(removed_rows)} 個已下架（翻譯保留）' if removed_rows else ''}，"
         f"完整清單（含中文名稱與摘要）見 [SUPPORTED_MODS.md](./SUPPORTED_MODS.md)。"
     )
     replacement = f"{MANIFEST_START}\n{summary_line}\n{MANIFEST_END}"
