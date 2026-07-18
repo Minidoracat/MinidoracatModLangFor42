@@ -618,6 +618,20 @@ class GhClient:
                 issues.append(json.loads(s))
         return issues
 
+    def ensure_label(self) -> None:
+        """確保『tracker』label 存在（冪等）。缺 label 時 create_issue 會直接失敗
+        （實案：首次真實 issue 於 CI 撞 could not add label: 'tracker' not found）。"""
+        proc = subprocess.run(
+            [
+                "gh", "label", "create", ISSUE_LABEL,
+                "--description", "上游追蹤器自動 issue（待同步/可能過時/已下架）",
+                "--color", "1D76DB",
+            ],
+            capture_output=True, text=True, cwd=str(PROJECT_ROOT),
+        )
+        if proc.returncode != 0 and "already exists" not in (proc.stderr + proc.stdout):
+            raise RuntimeError(f"gh label create 失敗：{proc.stderr}")
+
     def create_issue(self, title: str, body: str) -> int:
         proc = subprocess.run(
             ["gh", "issue", "create", "--label", ISSUE_LABEL, "--title", title, "--body", body],
@@ -1048,6 +1062,8 @@ def cmd_run(args) -> int:
     if failed_ids:
         print(f"  ⚠️ 部分失敗 {len(failed_ids)}/{len(changed)}：{', '.join(failed_ids[:20])}", file=sys.stderr)
     gh = GhClient()
+    if plans:
+        gh.ensure_label()
     index = index_issues(gh.list_tracker_issues())
     for plan in plans:
         action = apply_issue_plan(plan, index, gh, dry_run=False)
@@ -1211,6 +1227,8 @@ def cmd_issue(args) -> int:
     diffs = load_json(Path(args.inp))
     plans = diffs.get("plans", [])
     gh = GhClient()
+    if plans and not args.dry_run:
+        gh.ensure_label()
     index = index_issues(gh.list_tracker_issues())
     for plan in plans:
         action = apply_issue_plan(plan, index, gh, dry_run=args.dry_run)
