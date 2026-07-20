@@ -30,7 +30,7 @@
 以下統計由 `uv run scripts/build_mod.py manifest` 自動生成，請勿手動編輯。
 
 <!-- SUPPORTED_MODS_START -->
-共支援 **459 個 Workshop 模組**（607 個 mod ID），另 12 個已下架（翻譯保留），完整清單（含中文名稱與摘要）見 [SUPPORTED_MODS.md](./SUPPORTED_MODS.md)。
+共支援 **458 個 Workshop 模組**（605 個 mod ID），另 13 個已下架（翻譯保留），完整清單（含中文名稱與摘要）見 [SUPPORTED_MODS.md](./SUPPORTED_MODS.md)。
 <!-- SUPPORTED_MODS_END -->
 
 ## 開發

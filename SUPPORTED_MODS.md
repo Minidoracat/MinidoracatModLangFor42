@@ -3,7 +3,7 @@
 > 本檔由 `uv run scripts/build_mod.py manifest` 自動生成，請勿手動編輯。
 > 中文名稱與摘要維護於 `sources/mod_names_zh.json`，修改後重跑 manifest。
 
-共支援 **459 個 Workshop 模組**（607 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
+共支援 **458 個 Workshop 模組**（605 個 mod ID）；另 **13 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 |
 | --- | --- | --- | --- | --- |
@@ -341,7 +341,6 @@
 | [Legendary DuffelBag](https://steamcommunity.com/sharedfiles/filedetails/?id=3558839307) | 傳奇帆布包 | 新增多種顏色的傳奇帆布行李包。 | `LDB42` | 86 |
 | [Legendary Satchel](https://steamcommunity.com/sharedfiles/filedetails/?id=3560352772) | 傳奇側背包 | 新增多種顏色的傳奇側背包，並附製作教學雜誌。 | `LSB42` | 71 |
 | [Hybrid Gun Repair](https://steamcommunity.com/sharedfiles/filedetails/?id=3562222835) | 混合槍械維修 | 為槍械新增內部零件磨損與維修系統，磨損機率可細部調整。 | `HybridGunRepair_v2`, `HybridlGunRepair` | 100 |
-| [[Federal Rangers] CHIMERA V11 [B42.13.1+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3564110652) | [Federal Rangers] CHIMERA V11 | 新增大量戰術服裝與裝備，如背包、頭盔耳機與護具。 | `Federal_Rangers_Chimera`, `Federal_Rangers_Chimera_PatchN1` | 110 |
 | [[B42] Briefing](https://steamcommunity.com/sharedfiles/filedetails/?id=3565244378) | Briefing 簡報 | 提供遊戲開始年份等大量沙盒選項設定。 | `Briefing` | 124 |
 | [Weather Moodles [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3565697910) | 天氣心情 | 依下雨、起霧、陰天等天氣顯示對應的心情圖示。 | `WeatherMoodles` | 91 |
 | [Injury Indicator [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3565698092) | 受傷指示器 | 受傷或治癒時彈出提示視窗，標示身體各部位傷勢。 | `InjuryIndicator` | 33 |
@@ -467,7 +466,7 @@
 | [Better Vanilla ALICE Suspenders](https://steamcommunity.com/sharedfiles/filedetails/?id=3676721528) | 更好的原版 ALICE 背帶 | 改良原版 ALICE 背帶裝備，並附帶多個出生地點選項描述。 | `bettervanillaalicesuspendersID` | 37 |
 | [Solar Floodlight [42.16] [MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3680577450) | 太陽能探照燈 | 新增可組裝的太陽能探照燈，含電池槽與電池健康度顯示。 | `SolarFloodlight` | 55 |
 
-## 已下架模組（12 個，翻譯保留）
+## 已下架模組（13 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
@@ -480,6 +479,7 @@
 | [3390258342](https://steamcommunity.com/sharedfiles/filedetails/?id=3390258342) | 十年後植被覆蓋 | 提供高、中、低三種等級的植被覆蓋，可清理植被並採集資源。 | `10YL_HIGH_LIGHT_B42`, `10YL_LOW_LIGHT_B42`, `10YL_MEDIUM_LIGHT_B42` | 3 | 2026-07-17 |
 | [3401825906](https://steamcommunity.com/sharedfiles/filedetails/?id=3401825906) | 必備配方 | 新增實用配方，可製作小蘇打、鹽、糖、酵母、木炭粉與飼料乾草。 | `EssentialRecipes` | 6 | 2026-07-17 |
 | [3418366499](https://steamcommunity.com/sharedfiles/filedetails/?id=3418366499) | 傳奇武士刀與脇差 | 新增傳奇武士刀與脇差武器，可製作多種顏色的武士刀刀鞘。 | `LKB42` | 29 | 2026-07-17 |
+| [[Federal Rangers] CHIMERA V11 [B42.13.1+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3564110652) | [Federal Rangers] CHIMERA V11 | 新增大量戰術服裝與裝備，如背包、頭盔耳機與護具。 | `Federal_Rangers_Chimera`, `Federal_Rangers_Chimera_PatchN1` | 110 | 2026-07-18 |
 | [3575320927](https://steamcommunity.com/sharedfiles/filedetails/?id=3575320927) | LTKB42 | 新增可佩戴於背部或大腿的刀鞘，並支援快捷欄掛載。 | `LTKB42` | 4 | 2026-07-17 |
 | [3609353662](https://steamcommunity.com/sharedfiles/filedetails/?id=3609353662) | Pumps Have Propane | 可在加油泵充裝丙烷罐與丙烷噴燈。 | `PumpsHavePropane42` | 2 | 2026-07-17 |
 | [3623609320](https://steamcommunity.com/sharedfiles/filedetails/?id=3623609320) | CSB42MP | 新增清洗物品的右鍵選單選項，可只洗已裝備、未裝備或武器。 | `CSB42MP` | 43 | 2026-07-17 |
