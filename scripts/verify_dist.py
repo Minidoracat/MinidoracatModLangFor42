@@ -164,6 +164,42 @@ def _load_own(repo: str) -> dict[str, dict]:
     return data.get("entries", {})
 
 
+def _load_own_mods(repo: str) -> dict[str, dict]:
+    """讀 origin=='own' 的原創翻譯 mod 目錄 CN，轉成 own oracle 條目。
+
+    回傳 {"<檔名>": {"<鍵>": {"cn": 值}}}——這些 CN 為人工直寫真相
+    （非 As1 快照亦非 build 產物），比照 own_translations 作 parity 核對值。
+    """
+    entries: dict[str, dict] = {}
+    mods_dir = os.path.join(repo, "sources", "mods")
+    if not os.path.isdir(mods_dir):
+        return entries
+    for wid in sorted(os.listdir(mods_dir)):
+        meta_path = os.path.join(mods_dir, wid, "metadata.json")
+        if not os.path.isfile(meta_path):
+            continue
+        with open(meta_path, "r", encoding="utf-8-sig") as f:
+            if json.load(f).get("origin") != "own":
+                continue
+        cn_dir = os.path.join(mods_dir, wid, "CN")
+        if not os.path.isdir(cn_dir):
+            raise ValueError(f"原創 mod {wid} 缺 CN 目錄")
+        for fname in sorted(os.listdir(cn_dir)):
+            if not fname.endswith(".json"):
+                continue
+            with open(os.path.join(cn_dir, fname), "r", encoding="utf-8-sig") as f:
+                data = json.load(f)
+            bucket = entries.setdefault(fname, {})
+            for key, value in data.items():
+                if key in bucket:
+                    # build 端值感知去重允許同值共存，oracle 比照：僅異值視為衝突
+                    if bucket[key].get("cn") == value:
+                        continue
+                    raise ValueError(f"原創 mod 重複鍵且值不一致：{fname}|{key}")
+                bucket[key] = {"cn": value}
+    return entries
+
+
 def _parse_language_txt(path: str) -> dict[str, str]:
     """解析 PZ language.txt（形如 `text = Traditional Chinese,`）成 {key: value}。"""
     result: dict[str, str] = {}
@@ -300,7 +336,7 @@ def check_cn_parity(
         for key in sorted(own[fname]):
             oid = f"{fname}|{key}"
             if fname in as1_files and key in as1_files[fname]:
-                warn.append(f"原創鍵 {oid!r} 已被 As1 收錄（As1 優先），建議自 own_translations.json 退役")
+                warn.append(f"原創鍵 {oid!r} 已被 As1 收錄（As1 優先），建議自對應原創來源（own_translations.json 或原創 mod 目錄）退役")
             elif oid not in applied_own:
                 details.append(f"原創鍵 {oid!r} 未落地於 dist CN")
 
@@ -595,8 +631,16 @@ def run_all(paths: dict) -> int:
         return 1
     try:
         own = _load_own(repo)
+        for fname, keys in _load_own_mods(repo).items():
+            bucket = own.setdefault(fname, {})
+            for key, entry in keys.items():
+                if key in bucket:
+                    raise ValueError(
+                        f"原創鍵重複登錄：{fname}|{key} 同時存在於 own_translations 與原創 mod 目錄"
+                    )
+                bucket[key] = entry
     except Exception as exc:  # noqa: BLE001 — 原創層檔壞掉直接判 FAIL
-        print(f"ERROR：own_translations.json 無法解析（{exc}）")
+        print(f"ERROR：原創翻譯層無法解析（{exc}）")
         return 1
 
     ok1, d1, w1, n_exc, n_own = check_cn_parity(as1_cn, dist_cn, exceptions, own)

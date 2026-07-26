@@ -427,13 +427,33 @@ def _merge_cn_maps(records: list[tuple[str, str, str, str]]) -> dict[str, dict[s
     return merged
 
 
+def _is_own_mod(mod_dir: Path) -> bool:
+    """metadata.json 標 origin=='own' 的原創翻譯 mod（非 As1 衍生）。
+
+    無法判別（metadata 缺失/壞損）時 fail-closed：own CN 一旦誤入 layer-B
+    基準會被假報為 As1 removed，寧可中止也不可降級成 As1 來源。
+    """
+    meta = mod_dir / "metadata.json"
+    if not meta.is_file():
+        raise SystemExit(f"{mod_dir} 缺 metadata.json，無法判別 As1/own 來源（layer-B 基準需明確歸類）")
+    try:
+        return json.loads(meta.read_text(encoding="utf-8-sig")).get("origin") == "own"
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SystemExit(f"無法解析 {meta}：{exc}") from exc
+
+
 def read_repo_sources_cn() -> list[tuple[str, str, str, str]]:
-    """讀本 repo sources/mods/*/CN + sources/_unsorted/CN 的 CN 語料（layer-B 基準）。"""
+    """讀本 repo sources/mods/*/CN + sources/_unsorted/CN 的 CN 語料（layer-B 基準）。
+
+    origin=='own' 的原創 mod 不屬 As1 語料，納入會使 layer-B 恆報 removed，跳過。
+    """
     records: list[tuple[str, str, str, str]] = []
     cn_dirs: list[Path] = []
     mods_dir = SOURCES / "mods"
     if mods_dir.is_dir():
         for mod_dir in sorted(mods_dir.iterdir()):
+            if _is_own_mod(mod_dir):
+                continue
             cn = mod_dir / "CN"
             if cn.is_dir():
                 cn_dirs.append(cn)

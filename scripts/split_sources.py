@@ -416,10 +416,58 @@ def check_completeness(
 
 # ============================================================
 # 寫出（清空本腳本擁有的產出區，保證冪等；勿動 lua/ 與 snapshot.json）
+# 例外：metadata.json 標 origin:"own" 的原創翻譯 mod 目錄為人工真相，
+#       不屬 As1 衍生產出，重跑 split 必須保留（無 origin 欄位＝As1 衍生）
 # ============================================================
+def _own_mod_wids() -> set[str]:
+    """列出 sources/mods 下 origin=='own' 的目錄名（原創翻譯 mod）。"""
+    wids: set[str] = set()
+    if not MODS_DIR.is_dir():
+        return wids
+    for child in MODS_DIR.iterdir():
+        meta = child / "metadata.json"
+        if child.is_dir() and meta.is_file():
+            try:
+                if json.loads(meta.read_text(encoding="utf-8-sig")).get("origin") == "own":
+                    wids.add(child.name)
+            except (OSError, json.JSONDecodeError) as exc:
+                raise SystemExit(f"無法解析 {meta}：{exc}") from exc
+    return wids
+
+
 def write_outputs(out: dict[str, bytes]) -> None:
+    own_wids = _own_mod_wids()
+    as1_owners = {rel.split("/")[1] for rel in out if rel.startswith("mods/")}
+    collision = own_wids & as1_owners
+    if collision:
+        raise SystemExit(
+            f"原創 mod 與 As1 歸屬結果撞 workshop id：{sorted(collision)}——"
+            "As1 已收錄該 mod，請依退役規則處理原創目錄後重跑"
+        )
     if MODS_DIR.exists():
-        shutil.rmtree(MODS_DIR)
+        for child in sorted(MODS_DIR.iterdir()):
+            if child.name in own_wids:
+                continue
+            # 只刪「可證明為 split 產出」的目錄（metadata 含 attributed_via 且非 own）；
+            # 無法歸類（metadata 缺失/壞損/schema 不符）一律 fail-loud——
+            # 靜默刪除會無聲毀掉人工資料且後續 build/verify 全綠（codex review 隔離重現）
+            is_split_generated = False
+            meta_path = child / "metadata.json"
+            if child.is_dir() and meta_path.is_file():
+                try:
+                    meta = json.loads(meta_path.read_text(encoding="utf-8-sig"))
+                    is_split_generated = (
+                        "attributed_via" in meta and meta.get("origin") != "own"
+                    )
+                except (OSError, json.JSONDecodeError):
+                    is_split_generated = False
+            if not (child.is_dir() and is_split_generated):
+                raise SystemExit(
+                    f"sources/mods/{child.name} 無法判別來源"
+                    "（metadata 缺失/壞損，既非 split 產出亦非 origin:'own'）——"
+                    "拒絕刪除以免誤毀人工資料，請人工確認後重跑"
+                )
+            shutil.rmtree(child)
     if UNSORTED_CN.exists():
         shutil.rmtree(UNSORTED_CN)
     if ATTR_INDEX_JSON.exists():

@@ -599,6 +599,8 @@ def cmd_manifest() -> int:
         if not mod_ids:
             mod_ids = [meta["mod_id"]] if meta.get("mod_id") else []
         name = meta.get("name") or meta.get("title") or ws_id
+        if meta.get("origin") == "own":
+            name = f"{name}〔原創翻譯〕"
         cn = mod_dir / "CN"
         key_count = 0
         if cn.is_dir():
