@@ -33,6 +33,14 @@
 共支援 **458 個 Workshop 模組**（605 個 mod ID），另 13 個已下架（翻譯保留），完整清單（含中文名稱與摘要）見 [SUPPORTED_MODS.md](./SUPPORTED_MODS.md)。
 <!-- SUPPORTED_MODS_END -->
 
+## 申請新 MOD 翻譯
+
+想讓某個 Workshop MOD 加入本翻譯包？歡迎透過 [MOD 翻譯申請](../../issues/new?template=translation-request.yml)提出，附上 Workshop 連結與申請理由即可。
+
+- 佇列與進度：見 [translation-request 標籤的 issues](../../issues?q=is%3Aissue+label%3Atranslation-request)。
+- 收錄順序將參考需求熱度（👍 反應數）、文本量與上游更新活躍度綜合評估。
+- 上游「[B42]統一模組漢化」（As1）已涵蓋的 MOD 會隨同步自動加入，不需申請。
+
 ## 開發
 
 生成物（`MOD/` 與 `sources/mods/`）勿手改，請改人工真相層（`sources/ch_overrides.json`、`sources/opencc_fixes.json`、`sources/lua/`、`sources/placeholder_exceptions.json`）後重跑管線。

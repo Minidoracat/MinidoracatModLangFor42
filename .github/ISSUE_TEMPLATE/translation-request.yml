@@ -1,0 +1,45 @@
+name: MOD 翻譯申請
+description: 申請將某個 Workshop MOD 的翻譯加入本翻譯包
+title: "[翻譯申請] MOD 名稱"
+labels: ["translation-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感謝你的申請！請先確認：遊戲內該 MOD 的文字**目前顯示英文**（若已有中文代表已被本包或其他來源涵蓋）。
+        地圖、純材質／模型、無文本的功能型 MOD 不需要翻譯。
+  - type: input
+    id: workshop-url
+    attributes:
+      label: Workshop 連結或 ID
+      placeholder: "https://steamcommunity.com/sharedfiles/filedetails/?id=XXXXXXXXXX"
+    validations:
+      required: true
+  - type: input
+    id: mod-name
+    attributes:
+      label: MOD 名稱
+      placeholder: "例：Project Gurashi Megurigaoka"
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: 申請理由
+      description: 為什麼想要這個 MOD 的中文翻譯？（例：伺服器在用、訂閱數高、文本量大影響體驗）
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: 補充資訊（選填）
+      description: 已知的英文殘留截圖、該 MOD 是否自帶其他語言翻譯等
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 申請前確認
+      options:
+        - label: 我確認遊戲內該 MOD 的文字目前顯示英文（未被本翻譯包涵蓋）
+          required: true
+        - label: 該 MOD 有實際文字內容（非純地圖／材質／模型類）
+          required: true
