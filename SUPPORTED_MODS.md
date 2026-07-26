@@ -3,7 +3,7 @@
 > 本檔由 `uv run scripts/build_mod.py manifest` 自動生成，請勿手動編輯。
 > 中文名稱與摘要維護於 `sources/mod_names_zh.json`，修改後重跑 manifest。
 
-共支援 **458 個 Workshop 模組**（605 個 mod ID）；另 **13 個已下架**（翻譯保留，見文末）。
+共支援 **459 個 Workshop 模組**（606 個 mod ID）；另 **13 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 |
 | --- | --- | --- | --- | --- |
@@ -150,6 +150,7 @@
 | [Simple Silencers](https://steamcommunity.com/sharedfiles/filedetails/?id=3309896124) | 簡易消音器 | 新增可安裝的消音器，降低槍聲傳播半徑但略減射程。 | `SimpleSilencers` | 8 |
 | [[B42/41] Keep Skill Level](https://steamcommunity.com/sharedfiles/filedetails/?id=3314107094) | 保留技能等級 | 死亡後保留各項技能經驗與閱讀進度，可逐項設定。 | `KeepPerkLevel` | 48 |
 | ['98 Nissan Stagea 260RS Autech](https://steamcommunity.com/sharedfiles/filedetails/?id=3315443103) | '98 Nissan Stagea 260RS Autech | 新增 1998 年 Nissan Stagea 260RS Autech 旅行車，含裝甲部件。 | `98stagea` | 17 |
+| [Project Gurashi: Megurigaoka, Kanagawa, Japan〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3318210146) | — | — | `Project Gurashi` | 113 |
 | [[B42/41] Read Book Bypassing Level Restrictions](https://steamcommunity.com/sharedfiles/filedetails/?id=3319538177) | 無視等級限制閱讀書籍 | 可無視等級限制閱讀技能書，並支援黑暗閱讀與邊走邊讀。 | `ReadBookBypassingLevelRestrictions` | 11 |
 | ['82 Pontiac Firebird](https://steamcommunity.com/sharedfiles/filedetails/?id=3320947974) | '82 Pontiac Firebird | 新增 1982 年 Pontiac Firebird 跑車，含 KITT、KARR 等版本。 | `82firebird`, `82firebirdKITT` | 17 |
 | [Trailers!](https://steamcommunity.com/sharedfiles/filedetails/?id=3330403100) | Trailers! 拖車 | 新增大中小型貨運、多用途與牲畜拖車等多種拖車。 | `KI5trailers` | 18 |
