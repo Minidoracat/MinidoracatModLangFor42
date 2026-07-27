@@ -4,6 +4,24 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.19.0-1.3.0] - 2026-07-27
+
+### Added
+
+- **原創翻譯機制（own-mod lane）**：As1 未收錄的 MOD 現可收錄原創翻譯——`origin:"own"` 標記目錄為人工真相，split 重跑保留、verify 以原創 CN 為 oracle 逐鍵核對、tracker 自動監控上游更新、支援清單標示「〔原創翻譯〕」。附負向回歸測試（6 案例）。
+- **首個原創翻譯 MOD：Project Gurashi: Megurigaoka**（《學園孤島》地圖模組，Workshop 3318210146）：113 個 mod 自有鍵——日系食品（愛茶瓶裝綠茶、BOSS牌罐裝黑咖啡、奇巧特巧克力、普奇餅乾棒等）、日本文學與漫畫書名（台版譯名：航海王、影子籃球員、FAIRY TAIL 魔導少年、科學超電磁砲、獵人等）、沙盒選項、職業與出生點描述。SurvivorNames 與 vanilla 覆寫鍵依共存原則排除（不影響未安裝該 MOD 的使用者）。
+- **MOD 翻譯申請流程**：GitHub issue 模板 `translation-request`——歡迎玩家申請將其他 MOD 加入翻譯（README 有入口與收錄原則）。
+
+### Fixed
+
+- **Evolving Traits World**（issue #6）：上游把 Axpert 特質家族改名 Axeman，沿用既有譯文補齊（斧頭專家家族）；`Blacksmith` 選項名跟上上游改為「鐵匠知識」（繁中；簡中待 As1 同步）。
+- **Printer3D**（issue #7）：上游新增拆除功能 5 鍵補譯（拆除3D列印機／回收機、運轉中無法拆除等）。
+- **76chevyKseries**（issue #8）：補譯車斗與車頂備胎零件名（貨箱備胎／車頂備胎，As1 未收錄）。
+
+### Changed
+
+- OpenCC 巡檢排除清單與本體字典同步（幹/髮/里 15 項），配合本體新增的跨專案字典一致性檢查。
+
 ## [42.19.0-1.2.2] - 2026-07-21
 
 ### Changed
