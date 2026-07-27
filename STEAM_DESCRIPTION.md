@@ -16,7 +16,9 @@
 [h2]📋 支援清單與問題回報[/h2]
 [url=https://github.com/Minidoracat/MinidoracatModLangFor42/blob/main/SUPPORTED_MODS.md]👉 完整支援 MOD 清單（含中文名稱與摘要）[/url]
 [url=https://github.com/Minidoracat/MinidoracatModLangFor42/issues]🐛 GitHub 問題回報[/url]
+[url=https://github.com/Minidoracat/MinidoracatModLangFor42/issues/new?template=translation-request.yml]🙋 申請新 MOD 翻譯（附 Workshop 連結與理由即可）[/url]
 [url=https://discord.gg/Gur2V67]💬 Discord 交流與回報[/url]
+想要的 MOD 還沒中文？歡迎透過上方連結申請，收錄順序將參考需求熱度、文本量與上游活躍度；「統一模組漢化」已涵蓋的 MOD 會隨同步自動加入，不需申請。
 
 [hr][/hr]
 
