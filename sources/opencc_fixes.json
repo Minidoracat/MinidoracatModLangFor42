@@ -1,7 +1,7 @@
 {
   "_comment": "OpenCC s2twp 後處理修正字典。由 build_mod.py 讀取（僅 post_fixes；suspicious_patterns 供巡檢工具）。",
   "_usage": "在對應 category 的 rules 陣列加入 {pattern, replacement} 即可；pattern 為 regex。",
-  "_provenance": "七大類移植自本體 MinidoracatLangFor42 scripts/opencc_fixes.json（2026-07-19），依本包語料逐條覆核後調整：不移植「係數→系數」（台灣標準即係數，照搬會退化 72 處）；不移植「^幹$→乾」（本包 UI_Phrases_SWEAR4 值為髒話「幹」）；「髮生」「散髮」加 lookbehind 防護（毛髮生長／披頭散髮為正確用法）。",
+  "_provenance": "七大類移植自本體 MinidoracatLangFor42 scripts/opencc_fixes.json（2026-07-19），依本包語料逐條覆核後調整：不移植「係數→系數」（台灣標準即係數，照搬會退化 72 處）；不移植「^幹$→乾」（本包 UI_Phrases_SWEAR4 值為髒話「幹」）；「髮生」「散髮」加 lookbehind 防護（毛髮生長／披頭散髮為正確用法）。本包自行覆核不收的規則：「數據包→封包」（s2twp 已把 数据包／數據包 一律轉為「資料包」，post_fix 永不命中；network packet 台譯改走 ch_overrides 逐案處理）。",
   "post_fixes": [
     {
       "category": "幹→乾",
@@ -617,6 +617,21 @@
           "pattern": "型(\\s*)別",
           "replacement": "類\\1型",
           "note": "类型→型別 IT 過度在地化；PZ 語料全為一般類型語境（鋒面類型/音樂類型），無程式資料型別"
+        },
+        {
+          "pattern": "墻",
+          "replacement": "牆",
+          "note": "異體字：官方 CH 用「墻」（陸用），台灣標準為「牆」；語料 牆137/墻0（2026-07-29 42.20 補譯掃描）"
+        },
+        {
+          "pattern": "坐(\\s*)標",
+          "replacement": "座\\1標",
+          "note": "coordinates；語料 座標10/坐標0；含空格版"
+        },
+        {
+          "pattern": "拖(\\s*)動(?!\\s*物)",
+          "replacement": "拖\\1曳",
+          "note": "drag；台灣 UI 標準用語；含空格版。負向前瞻擋「拖|動物」跨詞界誤傷（拖动物尸体→拖曳物屍體），代價是漏轉「拖動物品」（語料 0 筆，漏轉優於轉錯）"
         }
       ]
     }
