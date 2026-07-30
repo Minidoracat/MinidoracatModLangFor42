@@ -148,6 +148,24 @@ def _load_exceptions(repo: str) -> dict[str, dict]:
     return data
 
 
+def _load_cn_overrides(repo: str) -> dict[str, dict]:
+    """讀 sources/cn_overrides.json（CN 人工修正層，修 As1 上游錯誤）。
+
+    schema：{"<檔名>|<鍵>": {"value": "...", "reason": "..."}}
+    登記於此的鍵，CN parity 改對 value 核對而非 As1 原值——CN 不再要求與快照
+    逐字一致，但偏離必須逐案登記，oracle 效力保留。
+    不存在 → 空 dict（此時 CN 全數對 As1 逐字核對）。頂層非物件 → 擲例外。
+    """
+    path = os.path.join(repo, "sources", "cn_overrides.json")
+    if not os.path.isfile(path):
+        return {}
+    with open(path, "r", encoding="utf-8-sig") as f:
+        data = json.load(f)
+    if not isinstance(data, dict):
+        raise ValueError("cn_overrides.json 頂層非物件")
+    return {k: v for k, v in data.items() if not k.startswith("_")}
+
+
 def _load_own(repo: str) -> dict[str, dict]:
     """讀 sources/own_translations.json 的 entries（原創翻譯層）。
 
@@ -261,14 +279,21 @@ def _dist_is_built(dist_cn: str | None) -> bool:
 # 各驗證項（回傳 (ok: bool, details: list[str], ...)）
 # --------------------------------------------------------------------------- #
 def check_cn_parity(
-    as1_cn: str, dist_cn: str, exceptions: dict[str, dict], own: dict[str, dict]
+    as1_cn: str,
+    dist_cn: str,
+    exceptions: dict[str, dict],
+    own: dict[str, dict],
+    cn_overrides: dict[str, dict] | None = None,
 ) -> tuple[bool, list[str], list[str], int, int]:
     """[1] dist CN 對 As1 快照：檔案集合 + 逐檔鍵集 + 逐鍵值逐字一致。
 
-    登記例外鍵（sources/placeholder_exceptions.json）改判「dist CN 值 == cn_safe_value」；
-    原創翻譯層（sources/own_translations.json）之鍵為合法「多鍵/多檔」，改判
-    「dist CN 值 == own cn」。回傳 (ok, details, warn, applied_count, own_count)。
+    三類登記偏離改判（優先序同 build：placeholder 例外最後套故最優先）：
+      1. sources/placeholder_exceptions.json → 「dist CN 值 == cn_safe_value」
+      2. sources/cn_overrides.json           → 「dist CN 值 == value」（修上游錯誤）
+      3. sources/own_translations.json       → 合法「多鍵/多檔」，「dist CN 值 == own cn」
+    回傳 (ok, details, warn, applied_count, own_count)。
     """
+    cn_overrides = cn_overrides or {}
     as1_files, as1_err = _load_json_dir(as1_cn)
     dist_files, dist_err = _load_json_dir(dist_cn)
     details: list[str] = []
@@ -303,6 +328,7 @@ def check_cn_parity(
             if not check_own_key(extra, key, dist_files[extra][key]):
                 details.append(f"檔案多出：dist 多了 {extra}（含非原創鍵 {key!r}）")
 
+    applied_cn_ov: set[str] = set()  # 實際命中的 CN 修正鍵
     applied: set[str] = set()  # 實際命中 dist(檔,鍵) 的例外
     for fname in sorted(as1_set & dist_set):
         a, d = as1_files[fname], dist_files[fname]
@@ -322,6 +348,16 @@ def check_cn_parity(
                         f"{fname}: 例外鍵 {key!r} 未套用安全值 | "
                         f"dist={d[key]!r} 應為 cn_safe_value={exc['cn_safe_value']!r}"
                     )
+            elif isinstance(
+                (cov := cn_overrides.get(f"{fname}|{key}")), dict
+            ) and isinstance(cov.get("value"), str):
+                # CN 人工修正鍵：與登記值核對（不再對 As1 原值）
+                applied_cn_ov.add(f"{fname}|{key}")
+                if d[key] != cov["value"]:
+                    details.append(
+                        f"{fname}: CN 修正鍵 {key!r} 未套用登記值 | "
+                        f"dist={d[key]!r} 應為 value={cov['value']!r}"
+                    )
             elif a[key] != d[key]:
                 details.append(
                     f"{fname}: 鍵 {key!r} 值不符 | As1={a[key]!r} dist={d[key]!r}"
@@ -330,6 +366,8 @@ def check_cn_parity(
     # 登記但未命中任何 dist(檔,鍵) 的例外 → WARN（多半是打錯 key 名）
     for ekey in sorted(set(exceptions) - applied):
         warn.append(f"例外鍵 {ekey!r} 未對應任何 dist CN(檔,鍵)，登記可能過期或打錯")
+    for ckey in sorted(set(cn_overrides) - applied_cn_ov):
+        warn.append(f"CN 修正鍵 {ckey!r} 未對應任何 dist CN(檔,鍵)，登記可能過期或打錯")
 
     # 原創層完整性：登記的鍵必須落地；被 As1 收錄者提示退役（build 端 As1 優先）
     for fname in sorted(own):
@@ -630,6 +668,11 @@ def run_all(paths: dict) -> int:
         print(f"ERROR：placeholder_exceptions.json 無法解析（{exc}）")
         return 1
     try:
+        cn_overrides = _load_cn_overrides(repo)
+    except Exception as exc:  # noqa: BLE001
+        print(f"ERROR：cn_overrides.json 無法解析（{exc}）")
+        return 1
+    try:
         own = _load_own(repo)
         for fname, keys in _load_own_mods(repo).items():
             bucket = own.setdefault(fname, {})
@@ -643,7 +686,9 @@ def run_all(paths: dict) -> int:
         print(f"ERROR：原創翻譯層無法解析（{exc}）")
         return 1
 
-    ok1, d1, w1, n_exc, n_own = check_cn_parity(as1_cn, dist_cn, exceptions, own)
+    ok1, d1, w1, n_exc, n_own = check_cn_parity(
+        as1_cn, dist_cn, exceptions, own, cn_overrides
+    )
     ok2, d2 = check_ch_mirror(dist_cn, dist_ch)
     ok3, d3 = check_encoding(dist_translate)
     ok4, d4_fail, d4_warn = check_placeholder(dist_cn, dist_ch, exceptions)

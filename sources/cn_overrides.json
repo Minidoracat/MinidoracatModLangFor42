@@ -1,0 +1,199 @@
+{
+  "_comment": "CN 人工修正層：修 As1 上游錯誤（錯字／疊字等）。build 於 CH 再生前套用，故修正會一併帶到 CH；verify_dist 的 CN parity 對登記值核對而非 As1 原值。schema: {\"<檔名>|<鍵>\": {\"value\": \"...\", \"reason\": \"...\"}}",
+  "Recipes.json|MakeSwordSheath": {
+    "value": "制作剑鞘",
+    "reason": "As1 上游疊字誤植（剑鞘×2 → 剑鞘）；CH 側早已由 ch_overrides 修正"
+  },
+  "Sandbox.json|Sandbox_EHR_RealisticTemperatureCompatibility_tooltip": {
+    "value": "控制EHR在安装真实温度模组时的行为. <LINE> 自动检测模组. 启用强制兼容模式. 禁用让EHR正常管理原版温度.",
+    "reason": "As1 上游疊字誤植（强制×2 → 强制）；CH 側早已由 ch_overrides 修正"
+  },
+  "Sandbox.json|Sandbox_TsarLib_SpawnRateMustang_tooltip": {
+    "value": "控制沙皇福特野马车在世界中的生成频率. 0=不生成, 1.0=默认, 2.0=旧版2倍, 4.0=旧版4倍.",
+    "reason": "As1 上游疊字誤植（野马×2 → 野马）；CH 側早已由 ch_overrides 修正"
+  },
+  "Sandbox.json|Sandbox_UsefulBarrelsRequireHose_tooltip": {
+    "value": "若勾选, 则需要一根橡胶软管从汽油桶中取出汽油.",
+    "reason": "As1 上游疊字誤植（需要×2 → 需要）；CH 側早已由 ch_overrides 修正"
+  },
+  "IG_UI.json|IGUI_KnoxRelay_Scene_VehicleCrash_04": {
+    "value": "已证实发生车辆撞击事件. 可能是一场多车连环相撞, 也可能只是一辆车失控",
+    "reason": "As1 上游疊字誤植（连环×2 → 连环）；CH 側早已由 ch_overrides 修正"
+  },
+  "ItemName.json|PompsItems_MyLittlePony.LotusBlossomPlushie": {
+    "value": "莲花花苞",
+    "reason": "As1 上游疊字誤植（花苞×2 → 花苞）；CH 側早已由 ch_overrides 修正"
+  },
+  "Sandbox.json|Sandbox_JH_SurvivorMultiplierMax_tooltip": {
+    "value": "尸潮规模扩张的最大倍数. 玩家每次幸存增加 +0.1 倍. 默认 15.0 意味着最多 16 倍僵尸. ",
+    "reason": "As1 上游疊字誤植（每次×2 → 每次）；CH 側早已由 ch_overrides 修正"
+  },
+  "ContextMenu.json|Tooltip_TankWater_FilterDepleted": {
+    "value": "滤芯已耗尽. 请更换滤芯.",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確"
+  },
+  "ContextMenu.json|Tooltip_TankWater_RequiresFilterCartridge": {
+    "value": "需要: 滤芯.",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確"
+  },
+  "Tooltip.json|Tooltip_TankWater_FilterDepleted": {
+    "value": "滤芯已耗尽. 请更换滤芯. ",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確"
+  },
+  "Tooltip.json|Tooltip_TankWater_RequiresFilterCartridge": {
+    "value": "需要: 滤芯. ",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確"
+  },
+  "ItemName.json|ItemName_TankWater.FilterCartridge": {
+    "value": "滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確"
+  },
+  "IG_UI.json|IGUI_KnoxRelay_NoNews6_MarcusBeforeJenna_03": {
+    "value": "我想, 那大概是关于过去那段单纯的旧时光吧",
+    "reason": "As1 上游錯誤：疊詞 简单|单纯；CH 側早已正確"
+  },
+  "IG_UI.json|IGUI_VehiclePartKI5TRCLTrunk": {
+    "value": "拖车储物箱",
+    "reason": "As1 上游錯誤：疊字 箱箱；CH 側早已正確"
+  },
+  "ItemName.json|ComputerMod.GameCDPong": {
+    "value": "乒乓球游戏光盘",
+    "reason": "As1 上游錯誤：錯字：乒乓球誤作乓乓球；CH 側早已正確"
+  },
+  "ItemName.json|HaloMarine.HaloMarineUpperLegArmorBase": {
+    "value": "UNSC陆战队大腿护甲",
+    "reason": "As1 上游錯誤：疊字 甲甲；CH 側早已正確"
+  },
+  "ItemName.json|PZCrossbows.ShortWoodBoltShaft": {
+    "value": "短木质弩箭杆",
+    "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確"
+  },
+  "ItemName.json|STFR.DressJacket_Police_KSP_CPT": {
+    "value": "礼服夹克 (肯塔基州警警监)",
+    "reason": "As1 上游錯誤：尾端殘留未清的英文碎片 Dress；CH 側早已正確"
+  },
+  "Recipes.json|ConvertTank2000Type": {
+    "value": "W900: 将2000升油罐转换为2000升水箱",
+    "reason": "As1 上游錯誤：疊字 为为；CH 側早已正確"
+  },
+  "Sandbox.json|Sandbox_DynamicTrading.FactionRespawnChance_tooltip": {
+    "value": "城镇内现有阵营数量低于上限时, 每日生成新阵营的概率.",
+    "reason": "As1 上游錯誤：疊字 刷新|新阵营；CH 側早已正確"
+  },
+  "Stash.json|Stash_P4StealthCamoMap1_Text3": {
+    "value": "当我抵达并命令他放弃抵抗时, 他无视了我的命令并将手伸向了腰带.",
+    "reason": "As1 上游錯誤：疊字 了了；CH 側早已正確"
+  },
+  "UI.json|UI_OGRIMMACHINES_UI_STATUS_TAB_CAN_OPERATE_WITH_LEVEL_FMT": {
+    "value": "%s 等级达到 %d 即可操作!",
+    "reason": "As1 上游錯誤：疊字 可以|以；改為與 CH 一致的語序；CH 側早已正確"
+  },
+  "UI.json|UI_Symbiosis_BloodFamiliarMax": {
+    "value": "你已拥有血契眷属",
+    "reason": "As1 上游錯誤：疊字 有有；CH 側早已正確"
+  },
+  "IG_UI.json|IGUI_KnoxRelay_MorningShow_Jenna_Day28_S6": {
+    "value": "把两条接线碰在一起点火, 然后猛踩油门",
+    "reason": "As1 上游錯誤：原譯語意錯亂（两两擦火交叉一对）；CH 側已正確；CH 側早已正確"
+  },
+  "ContextMenu.json|ContextMenu_TankWater_InstallFilter": {
+    "value": "安装滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確"
+  },
+  "ContextMenu.json|ContextMenu_TankWater_RemoveFilter": {
+    "value": "移除滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確"
+  },
+  "ContextMenu.json|ContextMenu_TankWater_ReplaceFilter": {
+    "value": "更换滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確"
+  },
+  "ItemName.json|MSXBow.BoltShaft": {
+    "value": "弩箭杆",
+    "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確"
+  },
+  "ItemName.json|PZCrossbows.WoodBoltShaft": {
+    "value": "木质弩箭杆",
+    "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確"
+  },
+  "ItemName.json|STFR.DressJacket_Police_WestPoint_CPT": {
+    "value": "礼服夹克 (西点镇警察局警监)",
+    "reason": "As1 上游錯誤：尾端殘留未清的英文碎片 Dress；CH 側早已正確"
+  },
+  "ItemName.json|STFR.DressJacket_Sheriff_Jefferson_CPT": {
+    "value": "礼服夹克 (杰斐逊警察局警监)",
+    "reason": "As1 上游錯誤：尾端殘留未清的英文碎片 Dress；CH 側早已正確"
+  },
+  "ItemName.json|TankWater.FilterCartridge": {
+    "value": "滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確"
+  },
+  "Recipes.json|BoltShaft": {
+    "value": "雕刻弩箭杆",
+    "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確"
+  },
+  "Recipes.json|PZC_CarveShortWoodBoltShafts": {
+    "value": "雕刻短木质弩箭杆",
+    "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確"
+  },
+  "Recipes.json|PZC_CarveWoodBoltShafts": {
+    "value": "雕刻木质弩箭杆",
+    "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確"
+  },
+  "UI.json|ItemName_ComputerMod.GameCDPong": {
+    "value": "乒乓球游戏光盘",
+    "reason": "As1 上游錯誤：錯字：乒乓球誤作乓乓球；CH 側早已正確"
+  },
+  "ContextMenu_EN.json|ContextMenu_TankWater_InstallFilter": {
+    "value": "安装滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯"
+  },
+  "ContextMenu_EN.json|ContextMenu_TankWater_RemoveFilter": {
+    "value": "移除滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯"
+  },
+  "ContextMenu_EN.json|ContextMenu_TankWater_ReplaceFilter": {
+    "value": "更换滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯"
+  },
+  "ContextMenu_EN.json|Tooltip_TankWater_FilterDepleted": {
+    "value": "滤芯已耗尽. 请更换滤芯. ",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯"
+  },
+  "ContextMenu_EN.json|Tooltip_TankWater_RequiresFilterCartridge": {
+    "value": "需要: 滤芯. ",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯"
+  },
+  "ItemName_EN.json|ItemName_TankWater.FilterCartridge": {
+    "value": "滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯"
+  },
+  "ItemName_EN.json|TankWater.FilterCartridge": {
+    "value": "滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯"
+  },
+  "Tooltip_EN.json|Tooltip_TankWater_FilterDepleted": {
+    "value": "滤芯已耗尽. 请更换滤芯.",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯"
+  },
+  "Tooltip_EN.json|Tooltip_TankWater_RequiresFilterCartridge": {
+    "value": "需要: 滤芯.",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯"
+  },
+  "ItemName.json|HDF.StrainedSyrup": {
+    "value": "过滤后的糖浆",
+    "reason": "CH/CN 語意稽核：原譯「一锅水煮甜菜根」是別的物品（鍵名 StrainedSyrup；CH 側正確）"
+  },
+  "UI.json|UI_BetLock_LockpickDoorBobbyPin": {
+    "value": "使用发夹撬门锁",
+    "reason": "CH/CN 語意稽核：原譯「带开锁工具的门」語意不符（鍵名 LockpickDoorBobbyPin；CH 側正確）"
+  },
+  "Sandbox.json|Sandbox_FruitTreeChop_AutoToGroundWhenHeavy": {
+    "value": "超重时强制掉落地面",
+    "reason": "CH/CN 語意稽核：與 mod 自帶 Sandbox_EN.json 的中文一致；原譯「超重自动放置」漏掉「強制掉落」"
+  },
+  "IG_UI.json|IGUI_UW_Radio_Awareness_03": {
+    "value": "每次我出门, 都有些地方感觉不太对劲……我需要更多信息.",
+    "reason": "CH/CN 語意稽核：與 mod 自帶 IG_UI_EN.json 的中文一致；原譯「总感觉不对劲…再看看呢?」為另一句"
+  }
+}

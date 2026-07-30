@@ -41,6 +41,7 @@ UNSORTED_CN = SOURCES / "_unsorted" / "CN"
 LUA_SRC = SOURCES / "lua"
 OPENCC_FIXES_JSON = SOURCES / "opencc_fixes.json"
 CH_OVERRIDES_JSON = SOURCES / "ch_overrides.json"
+CN_OVERRIDES_JSON = SOURCES / "cn_overrides.json"
 PLACEHOLDER_EXCEPTIONS_JSON = SOURCES / "placeholder_exceptions.json"
 OWN_TRANSLATIONS_JSON = SOURCES / "own_translations.json"
 
@@ -217,6 +218,31 @@ def load_placeholder_exceptions() -> dict[str, dict]:
     return data
 
 
+def load_cn_overrides() -> dict[str, dict]:
+    """載入 cn_overrides.json（CN 人工修正層；缺失即 fail，不建骨架）。
+
+    schema：{"<檔名>|<鍵>": {"value": "<修正後 CN 值>", "reason": "..."}}。
+    用途：修 As1 上游的錯字／疊字等錯誤。CN 不再要求與 As1 快照逐字一致——
+    登記於此的鍵，verify_dist 的 CN parity 改對登記值核對（oracle 效力保留）。
+    """
+    _require_truth_file(CN_OVERRIDES_JSON, "CN 人工修正層")
+    try:
+        data = load_json(CN_OVERRIDES_JSON)
+    except json.JSONDecodeError as exc:
+        print(f"❌ cn_overrides.json 格式錯誤：{exc}", file=sys.stderr)
+        sys.exit(1)
+    for ov_key, spec in data.items():
+        if ov_key.startswith("_"):
+            continue
+        if not isinstance(spec, dict) or not isinstance(spec.get("value"), str):
+            print(
+                f"❌ cn_overrides.json 條目 {ov_key!r} 缺 value 欄位（須為字串）。",
+                file=sys.stderr,
+            )
+            sys.exit(1)
+    return data
+
+
 def load_own_translations() -> dict[str, dict[str, dict]]:
     """載入 own_translations.json（原創翻譯層；缺失即 fail，不建骨架）。
 
@@ -324,20 +350,27 @@ def merge_cn(dirs: list[Path]) -> tuple[dict[str, dict], list[str]]:
     return merged, conflicts
 
 
-def apply_exceptions(
-    merged_cn: dict[str, dict], exceptions: dict[str, dict]
+def apply_cn_registry(
+    merged_cn: dict[str, dict], entries: dict[str, dict], field: str
 ) -> set[str]:
-    """對登記的 (檔|鍵) 以 cn_safe_value 全域取代 merged CN 值（不分 owner；merge 已收斂為每鍵一值）。
+    """對登記的 (檔|鍵) 以 entries[key][field] 全域取代 merged CN 值。
 
-    登記鍵因值被換成安全值，後續 placeholder gate 自然不再觸發崩潰簽名。回傳實際套用的登記鍵集合。
+    不分 owner（merge 已收斂為每鍵一值）。供兩個登記檔共用：
+      - placeholder_exceptions.json（field="cn_safe_value"）：換成安全值後 placeholder
+        gate 自然不再觸發崩潰簽名。
+      - cn_overrides.json（field="value"）：修 As1 上游錯誤（錯字／疊字等）。
+    CH 隨後由修正後的 CN 冪等再生，故 CN 修正會一併帶到 CH。
+    回傳實際套用的登記鍵集合。
     """
     used: set[str] = set()
-    for exc_key, spec in exceptions.items():
-        fname, _, key = exc_key.partition("|")
+    for reg_key, spec in entries.items():
+        if reg_key.startswith("_"):
+            continue  # _comment 等說明欄位
+        fname, _, key = reg_key.partition("|")
         fmap = merged_cn.get(fname)
         if fmap is not None and key in fmap:
-            fmap[key] = spec["cn_safe_value"]
-            used.add(exc_key)
+            fmap[key] = spec[field]
+            used.add(reg_key)
     return used
 
 
@@ -436,9 +469,15 @@ def cmd_build() -> int:
     post_fixes = load_post_fixes()
     overrides = load_overrides()
     exceptions = load_placeholder_exceptions()
+    cn_overrides = load_cn_overrides()
 
-    # 登記制崩潰例外：以 cn_safe_value 全域取代 As1 原值（CH 隨後由 safe CN 冪等再生）
-    used_exc = apply_exceptions(merged_cn, exceptions)
+    # CN 人工修正層：先修 As1 上游錯誤（錯字／疊字），CH 隨後由修正後的 CN 再生
+    used_cn_ov = apply_cn_registry(merged_cn, cn_overrides, "value")
+    if used_cn_ov:
+        print(f"  CN 人工修正層：套用 {len(used_cn_ov)} 鍵")
+
+    # 登記制崩潰例外：以 cn_safe_value 全域取代（安全性最後把關，覆蓋前一層）
+    used_exc = apply_cn_registry(merged_cn, exceptions, "cn_safe_value")
 
     fix_hits: Counter = Counter()
     merged_ch, used_ov = regen_ch(merged_cn, post_fixes, overrides, fix_hits)
@@ -496,7 +535,10 @@ def cmd_build() -> int:
     print(f"\n✅ 已寫出 CN/CH 各 {len(merged_cn)} 檔、language.txt ×2、Lua {lua_count} 檔")
 
     # 未消費人工真相報告（非阻斷，供檢視）
-    report_unused(overrides, used_ov, exceptions, used_exc, post_fixes, fix_hits)
+    report_unused(
+        overrides, used_ov, exceptions, used_exc, post_fixes, fix_hits,
+        cn_overrides, used_cn_ov,
+    )
 
     if warnings:
         print(f"\n⚠️ {len(warnings)} 處可疑 % 序列（非阻斷，僅提示）：")
@@ -555,19 +597,26 @@ def report_unused(
     used_exc: set[str],
     post_fixes: list[tuple[re.Pattern, str]],
     fix_hits: Counter,
+    cn_overrides: dict[str, dict] | None = None,
+    used_cn_ov: set[str] | None = None,
 ) -> None:
-    """報告未被消費的人工真相（非阻斷）：ch_overrides 未命中鍵、placeholder_exceptions 未命中鍵、
-    opencc_fixes 零命中 pattern。這些多半是鍵名過時或改寫後遺留，值得人工回頭確認。"""
+    """報告未被消費的人工真相（非阻斷）：ch_overrides / cn_overrides / placeholder_exceptions
+    未命中鍵、opencc_fixes 零命中 pattern。這些多半是鍵名過時或改寫後遺留，值得人工回頭確認。"""
     unused_ov = sorted(set(overrides) - used_ov)
     unused_exc = sorted(set(exceptions) - used_exc)
+    unused_cn_ov = sorted(
+        {k for k in (cn_overrides or {}) if not k.startswith("_")} - (used_cn_ov or set())
+    )
     zero_fixes = [
         post_fixes[i][0].pattern
         for i in range(len(post_fixes))
         if fix_hits.get(i, 0) == 0
     ]
-    if not (unused_ov or unused_exc or zero_fixes):
+    if not (unused_ov or unused_exc or unused_cn_ov or zero_fixes):
         return
     print("\n⚠️ 未消費人工真相（非阻斷，請檢視是否過時或鍵名有誤）：")
+    for k in unused_cn_ov:
+        print(f"  cn_overrides 未命中：{k}")
     for k in unused_ov:
         print(f"  ch_overrides 未命中：{k}")
     for k in unused_exc:

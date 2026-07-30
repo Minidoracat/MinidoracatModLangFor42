@@ -4,6 +4,24 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.19.0-1.4.0] - 2026-07-30
+
+### Added
+
+- **`sources/cn_overrides.json` CN 人工修正層**（第五個人工真相檔）：用來修 As1 上游的 CN 錯字／疊字。schema `{"檔名|鍵": {"value", "reason"}}`；`build_mod.py` 在 **CH 再生之前**套用（故修正會一併帶到 CH），優先序低於 placeholder 例外（安全性最後把關）。與 placeholder 例外共用泛化後的 `apply_cn_registry()`。
+- **`verify_dist.py` 支援 CN 修正層**：`check_cn_parity()` 的 CN 一致性判定從「**絕對等於 As1 快照**」改為「**除登記例外外等於**」——oracle 效力保留，但每一處偏離都必須逐案登記，未命中的登記會 WARN。在此之前 CN 完全不可修：直接改 `sources/mods/*/CN/` 會被 `split_sources` 從快照重生，而刪掉 parity 檢查等於丟掉一個有效的 oracle。
+
+### Fixed
+
+- **疊字誤植 11 鍵**（`sources/ch_overrides.json`，與本體 `698c262` 同期同流程）：`全身性感染期感染期`、`突然突然切換為疾跑`、`靠近飛飛鏢靶`、`在飛飛鏢靶旁`、`建造一個抽抽水機`、`多車連環連環相撞`、`蓮花花苞花苞`、`玩家每次每次倖存`、`木木吉他琴頸` 等。
+- **CN 側疊字與錯字 49 鍵**（上游錯誤，CH 側早已正確）：`制作剑鞘剑鞘`、`启用强制强制兼容模式`、`沙皇福特野马野马车`、`则需要需要一根`、`过滤滤芯`（散在 9 個鍵／含 `*_EN.json`）、`弩箭箭杆`（5 鍵）、`乓乓球游戏光盘`→`乒乓球`（錯字）、`UNSC陆战队大腿护甲甲`、`拖车存储箱箱`、`转换为为`、`伸向了了腰带`、`你已拥有有血契眷属`、`简单单纯`、`每日刷新新阵营`，以及尾端殘留未清的英文碎片 `礼服夹克 (肯塔基州警警监)Dress`（3 鍵）。
+- **CN 語意錯誤 4 鍵**（CH/CN 交叉稽核）：`HDF.StrainedSyrup` 原譯「一锅水煮甜菜根」是別的物品、`UI_BetLock_LockpickDoorBobbyPin` 原譯「带开锁工具的门」語意不符、`Sandbox_FruitTreeChop_AutoToGroundWhenHeavy` 與 `IGUI_UW_Radio_Awareness_03` 兩筆與 mod 自帶中文（`*_EN.json`）不一致。
+- **逐字空格排版 431 筆**（`sources/ch_overrides.json` 的人工覆寫值，遊戲中字間有縫）：CN 與 `sources/` 來源端本來就 0 筆，故空格全來自 CH 覆寫層。只剝 CJK↔CJK 之間的空白，保留 `%1%`、`%s`、`<...>` 等標記；括號內側一併收緊（`半 紮 髮 髻 ( 黑 )` → `半紮髮髻 (黑)`）。刻意保留 2 筆刻意斷續的台詞（`噗 噼 噼 嗒噼`、`不 不 不…嗬 嗬 嗬`）。
+
+### Changed
+
+- **字典護欄同步本體**（`sources/opencc_fixes.json`）：`圖標→圖示` 加 lookbehind 防吃掉「地圖+標記/標籤」、`里面→裡面` 防吃掉人名「阿里+面前」，並新增預防性規則 `許可權→權限`（本包語料 0 筆命中）。
+
 ## [42.19.0-1.3.0] - 2026-07-27
 
 ### Added
