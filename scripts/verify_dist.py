@@ -440,6 +440,18 @@ def check_cn_parity(
     for ckey in sorted(set(cn_overrides) - applied_cn_ov):
         warn.append(f"CN 修正鍵 {ckey!r} 未對應任何 dist CN(檔,鍵)，登記可能過期或打錯")
 
+    # registry as1_value 錨點漂移 → WARN（上游已自行修正，override/例外可能該退役；
+    # 鏡射 build 的同名警告到 oracle 報表，讓它出現在發布前必看的地方）
+    for reg_label, reg in (("cn_overrides", cn_overrides), ("placeholder_exceptions", exceptions)):
+        for rkey, spec in sorted(reg.items()):
+            anchor = spec.get("as1_value") if isinstance(spec, dict) else None
+            if not isinstance(anchor, str):
+                continue
+            rf, _, rk = rkey.partition("|")
+            cur = as1_files.get(rf, {}).get(rk)
+            if isinstance(cur, str) and cur != anchor:
+                warn.append(f"{reg_label} 錨點漂移：{rkey!r} 上游原值已變，請複核是否退役")
+
     # 原創層完整性：登記的鍵必須落地；被 As1 收錄者提示退役（build 端 As1 優先）
     for fname in sorted(own):
         for key in sorted(own[fname]):
@@ -762,19 +774,43 @@ def _git_show_json(repo: str, ref: str, relpath: str) -> dict | None:
 
 
 def cmd_cn_diff(paths: dict, base_ref: str) -> int:
-    """列出 base_ref → 現況間 dist CN 值有變、而 sources/ch 未同步變動的鍵。
+    """列出 base_ref → 現況間 dist CN 值有變、而 CH 真相層未同步變動的鍵。
 
     觀察「輸出」而非輸入：不論變動來自 As1 同步、cn_overrides、placeholder 例外
-    還是 own 層，一律在此匯流受檢。已審台帳中 hash 與現行 CN 相符的鍵視為已
-    背書，不列待複核。有待複核鍵 → 退出 1（供 release 前把關）。
+    還是 own 層，一律在此匯流受檢。CH 真相層＝`sources/ch/`（corpus 鍵）＋
+    `own_translations.json` 的 ch（原創鍵）。已審台帳中 hash 與現行 CN 相符的鍵
+    視為已背書，不列待複核。範圍註記：只看現況存在的鍵——被移除的鍵由 build
+    corpus gate（孤兒鍵）把關，不在本檢查視野。
+    有待複核鍵 → 退出 1（供 release 前把關）；base_ref 無法解析 → 退出 2。
     """
     repo = paths["repo"]
     dist_cn = paths["dist_cn"]
+    proc = subprocess.run(
+        ["git", "-C", repo, "rev-parse", "--verify", f"{base_ref}^{{commit}}"],
+        capture_output=True,
+    )
+    if proc.returncode != 0:
+        print(f"ERROR：base_ref 無法解析為 commit：{base_ref!r}", file=sys.stderr)
+        return 2
     dist_cn_rel = os.path.relpath(dist_cn, repo).replace(os.sep, "/")
     try:
         review_state = _load_review_state(repo)
-    except ValueError:
+    except ValueError as exc:
+        print(f"⚠️ 已審台帳不可用，本次不套用背書豁免（{exc}）")
         review_state = {}
+
+    def own_ch_map(data: dict | None) -> dict[str, dict[str, str]]:
+        out: dict[str, dict[str, str]] = {}
+        for fname, keys in (data or {}).get("entries", {}).items():
+            for key, spec in keys.items():
+                if isinstance(spec, dict) and isinstance(spec.get("ch"), str):
+                    out.setdefault(fname, {})[key] = spec["ch"]
+        return out
+
+    own_path = os.path.join(repo, "sources", "own_translations.json")
+    own_new = own_ch_map(_read_json(own_path) if os.path.isfile(own_path) else None)
+    own_old = own_ch_map(_git_show_json(repo, base_ref, "sources/own_translations.json"))
+
     pending: list[str] = []
     n_changed = 0
     for path in sorted(glob.glob(os.path.join(dist_cn, "*.json"))):
@@ -796,9 +832,14 @@ def cmd_cn_diff(paths: dict, base_ref: str) -> int:
                 ch_path = os.path.join(repo, "sources", "ch", name)
                 new_ch = _read_json(ch_path) if os.path.isfile(ch_path) else {}
                 old_ch = _git_show_json(repo, base_ref, f"sources/ch/{name}") or {}
-            if old_ch.get(key) == new_ch.get(key):
+            if key in new_ch or key in old_ch:
+                covered = old_ch.get(key) != new_ch.get(key)
+            else:
+                # 原創鍵：CH 真相在 own_translations 的 ch
+                covered = own_old.get(name, {}).get(key) != own_new.get(name, {}).get(key)
+            if not covered:
                 pending.append(
-                    f"  {skey}：CN 值已變但 sources/ch 未動｜新 CN={new_cn[key]!r}"
+                    f"  {skey}：CN 值已變但 CH 真相層未動｜新 CN={new_cn[key]!r}"
                 )
     print(f"cn-diff（{base_ref} → 現況）：CN 值變動 {n_changed} 鍵、待複核 {len(pending)} 鍵")
     for line in _cap(pending):
@@ -999,7 +1040,7 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_snapshot_dist(dist_translate, lua_client, args.snapshot_dist)
     if args.compare_dist:
         return cmd_compare_dist(dist_translate, lua_client, args.compare_dist)
-    if args.cn_diff:
+    if args.cn_diff is not None:
         return cmd_cn_diff(paths, args.cn_diff)
     return run_all(paths)
 

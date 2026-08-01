@@ -1144,11 +1144,12 @@ def _diff_changed(changed, watchlist, steamcmd, install_dir, corpus_state, attri
                     new_state["empty_corpus"] = True
                     print(f"  ℹ️ 語料為空，建空 baseline（疑似僅 B41 格式文本）：{wid}")
                 corpus_updates[wid] = new_state
-                if new_records:
-                    en_texts[wid] = {
-                        f"{kind}|{relpath}|{key}": value
-                        for kind, relpath, key, value in sorted(new_records)
-                    }
+                # 空語料也要傳遞 {}：_persist_state 據此清掉殘留的 sources/en/<wid>.json，
+                # 避免 hash state 已空而全文檔殘留（兩個真相來源脫鉤）
+                en_texts[wid] = {
+                    f"{kind}|{relpath}|{key}": value
+                    for kind, relpath, key, value in sorted(new_records)
+                }
                 if plan:
                     plans.append(plan)
         except ValueError as exc:  # 單一模組語料異常不炸全場（成功子集照常推進，失敗者下輪重試）
@@ -1177,10 +1178,13 @@ def _persist_state(ts, meta, ok_ids, removed, corpus_state, corpus_updates, en_t
     corpus_state["schema_version"] = SCHEMA_VERSION
     corpus_state["extractor_schema"] = EXTRACTOR_SCHEMA
     write_json(EN_CORPUS_HASHES_JSON, corpus_state)
-    # EN 全文落受版控正式目錄（非 _dl 暫存）；只寫成功處理的 wid，逐 mod 一檔
+    # EN 全文落受版控正式目錄（非 _dl 暫存）；只寫成功處理的 wid，逐 mod 一檔。
+    # 語料變空 → 刪殘檔，與 hash state 保持同步（缺其一即兩個真相來源脫鉤）。
     for wid, texts in (en_texts or {}).items():
         if texts:
             write_json(EN_TEXT_DIR / f"{wid}.json", texts)
+        else:
+            (EN_TEXT_DIR / f"{wid}.json").unlink(missing_ok=True)
 
 
 # ============================================================
@@ -1387,6 +1391,14 @@ def cmd_self_test() -> int:
     def fake_git(cmd_args):
         calls.append(cmd_args)
         verb = cmd_args[0]
+        if verb == "add":  # 比照真 git：pathspec 不存在即 rc=128（防 sources/en 類缺目錄 bug 再漏）
+            missing = [
+                p for p in cmd_args[1:]
+                if not p.startswith("-") and not (PROJECT_ROOT / p).exists()
+            ]
+            if missing:
+                return 128, "", f"fatal: pathspec '{missing[0]}' did not match any files"
+            return 0, "", ""
         if verb == "diff":  # diff --cached --quiet：rc=1 表有變更
             return 1, "", ""
         if verb == "push":
@@ -1405,6 +1417,20 @@ def cmd_self_test() -> int:
     verbs = [c[0] for c in calls]
     assert verbs.count("fetch") >= 2 and verbs.count("rebase") >= 2, "情境6：每次重試前應 fetch+rebase"
     print("  ✅ 情境6 併發 non-fast-forward → fetch-rebase 重試後成功、無重複 commit")
+
+    # 情境 6b：生產 commit pathspec 必須存在於工作樹（sources/en 需有 .gitkeep 佔位，
+    # 否則零 EN 落地日的 git add 會 pathspec 失敗、state 永遠 commit 不出去）
+    prod_paths = [
+        str(TIMESTAMPS_JSON.relative_to(PROJECT_ROOT)),
+        str(EN_CORPUS_HASHES_JSON.relative_to(PROJECT_ROOT)),
+        str(EN_TEXT_DIR.relative_to(PROJECT_ROOT)),
+    ]
+    for p in prod_paths:
+        assert (PROJECT_ROOT / p).exists(), f"情境6b：生產 commit pathspec 不存在：{p}"
+    status = commit_state_with_retry(prod_paths, "test", branch="main",
+                                     git=fake_git, sleep=lambda _s: None)
+    assert status == COMMIT_OK, "情境6b：生產 pathspec 組合應可 add"
+    print("  ✅ 情境6b 生產 commit pathspec（含 sources/en）存在且可 add")
 
     # 情境 7：空 baseline 已存在（此 workshop_id 曾記錄空語料）＋上游新增 → 應開 issue（非誤判首跑）
     empty_state = {"mods": {"444": {

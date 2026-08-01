@@ -912,79 +912,92 @@
       "patterns": [
         "光(\\s*)標"
       ],
-      "reason": "2026-08-02 裁決 keep：「彩色光標記」是「彩色光＋標記」（發光棒以臨時彩色光標記地格），非 cursor 誤譯，規則誤中。"
+      "reason": "2026-08-02 裁決 keep：「彩色光標記」是「彩色光＋標記」（發光棒以臨時彩色光標記地格），非 cursor 誤譯，規則誤中。",
+      "ch_value": "7fbcdee76c1c19f7"
     },
     "Sandbox.json|Sandbox_TooltipLib_EnableMPSync_tooltip": {
       "patterns": [
         "用(\\s*)戶"
       ],
-      "reason": "2026-08-02 裁決 keep：「用戶端」對應 CN「客户端」= client，台灣合法固定詞，非單獨「用戶」。"
+      "reason": "2026-08-02 裁決 keep：「用戶端」對應 CN「客户端」= client，台灣合法固定詞，非單獨「用戶」。",
+      "ch_value": "a5728f49a5e153ab"
     },
     "Recipes.json|Order the Menu": {
       "patterns": [
         "菜(\\s*)單"
       ],
-      "reason": "2026-08-02 裁決 keep：「訂購菜單」是餐點菜單（裁決指引明示此鍵為餐飲語境），保留"
+      "reason": "2026-08-02 裁決 keep：「訂購菜單」是餐點菜單（裁決指引明示此鍵為餐飲語境），保留",
+      "ch_value": "6e7f26bcd6a8db4e"
     },
     "IG_UI.json|IGUI_Bandits_Speech_ZSStreetChat1_Male_2_2": {
       "patterns": [
         "通(\\s*)過(?!\\s*[測考審檢])"
       ],
-      "reason": "2026-08-02 裁決 keep：「通過路障」是物理通行語境（裁決指引明示），保留"
+      "reason": "2026-08-02 裁決 keep：「通過路障」是物理通行語境（裁決指引明示），保留",
+      "ch_value": "85c25855de2ccd09"
     },
     "IG_UI.json|IGUI_Inspect_Mat_Copper_Base": {
       "patterns": [
         "應(\\s*)用(?!\\s*程)"
       ],
-      "reason": "2026-08-02 裁決 keep：「基本電氣應用」為名詞 application（用途）語境，非 apply 套用，依指引 keep（ch_overrides 釘選語境）。"
+      "reason": "2026-08-02 裁決 keep：「基本電氣應用」為名詞 application（用途）語境，非 apply 套用，依指引 keep（ch_overrides 釘選語境）。",
+      "ch_value": "09251647f5d7b529"
     },
     "IG_UI.json|IGUI_VLQ_1_NotePage2_1_q1s006": {
       "patterns": [
         "應(\\s*)用(?!\\s*程)"
       ],
-      "reason": "2026-08-02 裁決 keep：「研究及應用」為名詞 application 語境（研究與應用並列），非套用設定語意，依 note 釘選 keep。"
+      "reason": "2026-08-02 裁決 keep：「研究及應用」為名詞 application 語境（研究與應用並列），非套用設定語意，依 note 釘選 keep。",
+      "ch_value": "80108adea4653dbd"
     },
     "Sandbox.json|Sandbox_AirdropMod_AirdropMode_tooltip": {
       "patterns": [
         "選(\\s*)中"
       ],
-      "reason": "2026-08-02 裁決 keep：「選中一名玩家」為人被挑中（獲選義）語境，note 明列 ch_overrides 釘選保留。"
+      "reason": "2026-08-02 裁決 keep：「選中一名玩家」為人被挑中（獲選義）語境，note 明列 ch_overrides 釘選保留。",
+      "ch_value": "62761abb469dc963"
     },
     "Sandbox.json|Sandbox_ApocalipseBrProjetoNemesis_BossCooldownCycles_tooltip": {
       "patterns": [
         "選(\\s*)中"
       ],
-      "reason": "2026-08-02 裁決 keep：「被選中為目標」為玩家（人）被挑中之獲選義，符合 note 人被挑中保留準則，非 UI 選取操作。"
+      "reason": "2026-08-02 裁決 keep：「被選中為目標」為玩家（人）被挑中之獲選義，符合 note 人被挑中保留準則，非 UI 選取操作。",
+      "ch_value": "5c13e0518f6cbd34"
     },
     "Sandbox.json|Sandbox_DynamicTrading.BanditHouseRoamerEligiblePercent_tooltip": {
       "patterns": [
         "選(\\s*)中"
       ],
-      "reason": "2026-08-02 裁決 keep：「可被選中執行」為 note 明列 ch_overrides 釘選保留語境（人被挑中）。"
+      "reason": "2026-08-02 裁決 keep：「可被選中執行」為 note 明列 ch_overrides 釘選保留語境（人被挑中）。",
+      "ch_value": "1e63f30b48aa329e"
     },
     "UI.json|UI_PZLinux_MailADS_12": {
       "patterns": [
         "選(\\s*)中"
       ],
-      "reason": "2026-08-02 裁決 keep：「你的名字被隨機選中」為抽中／獲選義（詐騙信抽獎語境），非 UI 選取，台灣用語合法。"
+      "reason": "2026-08-02 裁決 keep：「你的名字被隨機選中」為抽中／獲選義（詐騙信抽獎語境），非 UI 選取，台灣用語合法。",
+      "ch_value": "6976eda3fb550bf6"
     },
     "UI.json|UI_PZLinux_MailADS_16": {
       "patterns": [
         "選(\\s*)中"
       ],
-      "reason": "2026-08-02 裁決 keep：「被選中參加」為 note 明列釘選保留語境（人被挑中）。"
+      "reason": "2026-08-02 裁決 keep：「被選中參加」為 note 明列釘選保留語境（人被挑中）。",
+      "ch_value": "c12539f31829aedf"
     },
     "UI.json|UI_PZLinux_MailADS_19": {
       "patterns": [
         "選(\\s*)中"
       ],
-      "reason": "2026-08-02 裁決 keep：「被 SELECT * FROM rewards; 選中」為人被挑中之獲選義，且與 SQL SELECT 雙關，改動會破哏，keep。"
+      "reason": "2026-08-02 裁決 keep：「被 SELECT * FROM rewards; 選中」為人被挑中之獲選義，且與 SQL SELECT 雙關，改動會破哏，keep。",
+      "ch_value": "a704aeb77f175019"
     },
     "UI.json|UI_PZLinux_MailADS_8": {
       "patterns": [
         "選(\\s*)中"
       ],
-      "reason": "2026-08-02 裁決 keep：「被選中參加」為 note 明列釘選保留語境（人被挑中）。"
+      "reason": "2026-08-02 裁決 keep：「被選中參加」為 note 明列釘選保留語境（人被挑中）。",
+      "ch_value": "d9a7d65ca3f0001c"
     }
   }
 }

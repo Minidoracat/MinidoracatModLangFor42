@@ -599,10 +599,6 @@ def update_sync_worklist(
             delta[f"{fk[0]}|{fk[1]}"] = {
                 "kind": "changed", "old_cn": old[fk], "new_cn": new[fk],
             }
-    registered = _registry_keys()
-    for wkey, spec in delta.items():
-        if wkey in registered:
-            spec["overridden"] = True  # As1 原值被 registry 取代，出貨值以登記為準
     corpus_keys = _corpus_keysets()
     doc: dict = {}
     if WORKLIST_JSON.exists():
@@ -613,6 +609,16 @@ def update_sync_worklist(
                 doc[k] = v
     doc["_comment"] = WORKLIST_COMMENT  # 說明文字以最新常數為準
     doc.update(delta)
+    # overridden 旗標對「全部」條目統一重算（含既有存活條目）：
+    # 鍵進出 registry 時旗標跟著更新，不殘留過時標記
+    registered = _registry_keys()
+    for wkey, spec in doc.items():
+        if "|" not in wkey or not isinstance(spec, dict):
+            continue
+        if wkey in registered:
+            spec["overridden"] = True  # As1 原值被 registry 取代，出貨值以登記為準
+        else:
+            spec.pop("overridden", None)
     WORKLIST_JSON.write_text(dumps_canonical(doc), encoding="utf-8", newline="\n")
     return len(delta)
 

@@ -261,9 +261,18 @@ def load_placeholder_exceptions() -> dict[str, dict]:
         print(f"❌ placeholder_exceptions.json 格式錯誤：{exc}", file=sys.stderr)
         sys.exit(1)
     for exc_key, spec in data.items():
+        if exc_key.startswith("_"):
+            continue
         if not isinstance(spec, dict) or "cn_safe_value" not in spec:
             print(
                 f"❌ placeholder_exceptions.json 條目 {exc_key!r} 缺 cn_safe_value 欄位。",
+                file=sys.stderr,
+            )
+            sys.exit(1)
+        if not isinstance(spec.get("as1_value"), str):
+            print(
+                f"❌ placeholder_exceptions.json 條目 {exc_key!r} 缺 as1_value 錨點"
+                "（登記當時的 As1 原值，過時偵測必要欄位）。",
                 file=sys.stderr,
             )
             sys.exit(1)
@@ -289,6 +298,13 @@ def load_cn_overrides() -> dict[str, dict]:
         if not isinstance(spec, dict) or not isinstance(spec.get("value"), str):
             print(
                 f"❌ cn_overrides.json 條目 {ov_key!r} 缺 value 欄位（須為字串）。",
+                file=sys.stderr,
+            )
+            sys.exit(1)
+        if not isinstance(spec.get("as1_value"), str):
+            print(
+                f"❌ cn_overrides.json 條目 {ov_key!r} 缺 as1_value 錨點"
+                "（登記當時的 As1 原值，過時偵測必要欄位）。",
                 file=sys.stderr,
             )
             sys.exit(1)
@@ -386,7 +402,10 @@ def merge_cn(dirs: list[Path]) -> tuple[dict[str, dict], list[str]]:
 
 
 def apply_cn_registry(
-    merged_cn: dict[str, dict], entries: dict[str, dict], field: str
+    merged_cn: dict[str, dict],
+    entries: dict[str, dict],
+    field: str,
+    raw_values: dict[str, str] | None = None,
 ) -> tuple[set[str], list[str]]:
     """對登記的 (檔|鍵) 以 entries[key][field] 全域取代 merged CN 值。
 
@@ -399,7 +418,9 @@ def apply_cn_registry(
 
     過時偵測：條目帶 `as1_value`（登記當時的 As1 原值）時，與現行 As1 原值比對，
     不符即列 warning——多半是上游已自行修正，override 再蓋上去會靜默壓過上游更新，
-    須人工複核該條目是否退役。
+    須人工複核該條目是否退役。raw_values（{登記鍵: 套用前原值}）供錨點比對用：
+    兩個 registry 依序套用時，後套者的 merged_cn 已被前者改過，必須對套用前
+    快照比對，否則同鍵雙登記時會產生假漂移警告。
     回傳 (實際套用的登記鍵集合, 過時警告清單)。
     """
     used: set[str] = set()
@@ -411,9 +432,10 @@ def apply_cn_registry(
         fmap = merged_cn.get(fname)
         if fmap is not None and key in fmap:
             anchor = spec.get("as1_value")
-            if isinstance(anchor, str) and anchor != fmap[key]:
+            raw = (raw_values or {}).get(reg_key, fmap[key])
+            if isinstance(anchor, str) and anchor != raw:
                 stale.append(
-                    f"  {reg_key}：As1 原值已變（登記時 {anchor!r} → 現行 {fmap[key]!r}），"
+                    f"  {reg_key}：As1 原值已變（登記時 {anchor!r} → 現行 {raw!r}），"
                     "請複核 override 是否退役或更新 as1_value"
                 )
             fmap[key] = spec[field]
@@ -561,8 +583,18 @@ def cmd_build() -> int:
     exceptions = load_placeholder_exceptions()
     cn_overrides = load_cn_overrides()
 
+    # registry 套用前先快照原值（as1_value 錨點一律對 As1 原值比對，不受套用順序影響）
+    raw_anchor: dict[str, str] = {}
+    for reg in (cn_overrides, exceptions):
+        for rk in reg:
+            if rk.startswith("_"):
+                continue
+            rf, _, rkey = rk.partition("|")
+            if rf in merged_cn and rkey in merged_cn[rf]:
+                raw_anchor[rk] = merged_cn[rf][rkey]
+
     # CN 人工修正層：修 As1 上游錯誤（錯字／疊字）；CH 為獨立人工真相，不隨 CN 機轉
-    used_cn_ov, stale_cn_ov = apply_cn_registry(merged_cn, cn_overrides, "value")
+    used_cn_ov, stale_cn_ov = apply_cn_registry(merged_cn, cn_overrides, "value", raw_anchor)
     if used_cn_ov:
         print(f"  CN 人工修正層：套用 {len(used_cn_ov)} 鍵")
     if stale_cn_ov:
@@ -571,7 +603,7 @@ def cmd_build() -> int:
             print(w)
 
     # 登記制崩潰例外：以 cn_safe_value 全域取代（安全性最後把關，覆蓋前一層）
-    used_exc, stale_exc = apply_cn_registry(merged_cn, exceptions, "cn_safe_value")
+    used_exc, stale_exc = apply_cn_registry(merged_cn, exceptions, "cn_safe_value", raw_anchor)
     if stale_exc:
         print(f"\n⚠️ placeholder_exceptions 過時警告 {len(stale_exc)} 條：")
         for w in stale_exc:

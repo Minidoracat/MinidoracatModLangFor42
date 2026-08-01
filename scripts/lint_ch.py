@@ -3,20 +3,24 @@
 # dependencies = []
 # ///
 """
-lint_ch.py — sources/ch corpus 品質稽核（report-only：命中不影響退出碼、不改檔；
-缺檔／格式錯誤仍以非零退出 fail-loud）
+lint_ch.py — sources/ch corpus 品質稽核與棘輪 gate
 
-斷絕 OpenCC 後 CH corpus 為人工真相層，本工具是批次償還審查債的雷達：
-  [A] opencc_fixes 十族 regex：凍結基線殘留的機轉錯誤＋人工新條目回歸（命中＝建議修正）
-  [B] terminology charfix 異體字：本體術語表的一對一安全字級映射（命中＝建議修正）
-  [C] terminology select 術語：須人工裁決的台灣用語（命中＝裁決參考，非錯誤）
-  [D] terminology vendor 同步：本體 repo 在本機時比對 vendor 副本是否漂移
+斷絕 OpenCC 後 CH corpus 為人工真相層，本工具是批次償還審查債的雷達＋防退步 gate：
+  [A] opencc_fixes 十族 regex：凍結基線殘留＋人工新條目回歸（**棘輪 gate**，超基線退出 1）
+  [B] terminology charfix 異體字：一對一安全字級映射（**棘輪 gate**，超基線退出 1）
+  [C] terminology select 術語：須人工裁決的台灣用語（已裁決鍵經 ch_review_state 過濾，
+      餘下為新增待裁決——**棘輪 gate**，超基線退出 1）
+  [D] terminology vendor 同步：本體 repo 在本機時比對 vendor 副本是否漂移（report-only）
+
+豁免與過濾皆 fail-closed：lint_exemptions 條目須帶 ch_value 錨點且與現行 CH 值相符
+才生效；規則損壞／豁免 schema 不符＝非零退出。缺檔／格式錯誤亦 fail-loud。
 
 使用方式：uv run scripts/lint_ch.py [--limit N] [--base-terminology PATH]
 """
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -26,8 +30,17 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CH_DIR = PROJECT_ROOT / "sources" / "ch"
 FIXES_JSON = PROJECT_ROOT / "sources" / "opencc_fixes.json"
 TERM_JSON = PROJECT_ROOT / "sources" / "terminology.json"
+REVIEW_STATE_JSON = PROJECT_ROOT / "sources" / "ch_review_state.json"
+DIST_CN_DIR = (
+    PROJECT_ROOT / "MOD" / "MinidoracatModLangFor42" / "Contents" / "mods"
+    / "MinidoracatModLangFor42" / "42" / "media" / "lua" / "shared" / "Translate" / "CN"
+)
 BASE_TERM_JSON = Path("D:/github/MinidoracatLangFor42/scripts/terminology.json")
-RATCHET = {"A": 0, "B": 0}  # [A]/[B] 命中數棘輪基線（2026-08-02 首批償還後歸零）
+RATCHET = {"A": 0, "B": 0, "C": 0}  # 命中數棘輪基線（2026-08-02 首批償還後歸零）
+
+
+def h16(value: str) -> str:
+    return hashlib.sha256(value.encode("utf-8")).hexdigest()[:16]
 
 
 def load_json(path: Path) -> dict:
@@ -75,21 +88,46 @@ def main() -> int:
     if non_str:
         print(f"⚠️ corpus 非字串值 {len(non_str)} 鍵（異常，掃描已跳過）：{non_str[:5]}")
 
+    schema_errors = 0
     fix_hits = 0
     fixes = load_json(FIXES_JSON)
-    # 裁決豁免登記：(檔|鍵) → {patterns: [...], reason}——經人工裁決為合法語境的
-    # regex 誤中（如「彩色光＋標記」誤中光標），逐筆登記後不再計入 [A]／棘輪。
+    # 裁決豁免登記：(檔|鍵) → {patterns: [...], reason, ch_value}——經人工裁決為
+    # 合法語境的 regex 誤中（如「彩色光＋標記」誤中光標）。fail-closed：
+    #   * pattern 必須存在於 post_fixes 規則集，否則 schema error（豁免空轉零訊號）
+    #   * ch_value（裁決當時 CH 值 sha256[:16]）必須與現行 CH 相符，否則豁免失效
+    #     （命中重新計入棘輪）並列警告——值變了就必須重新裁決
     exemptions = fixes.get("lint_exemptions", {})
+    known_patterns = {
+        r.get("pattern") for g in fixes.get("post_fixes", []) for r in g.get("rules", [])
+    }
+    active_exempt: dict[str, set[str]] = {}
+    for rk, spec in sorted(exemptions.items()):
+        pats = spec.get("patterns") if isinstance(spec, dict) else None
+        if not isinstance(pats, list) or not all(p in known_patterns for p in pats):
+            print(f"❌ lint_exemptions schema/pattern 不符：{rk}（{pats!r}）", file=sys.stderr)
+            schema_errors += 1
+            continue
+        rf, _, rkey = rk.partition("|")
+        val = corpus.get(rf, {}).get(rkey)
+        if not isinstance(val, str):
+            print(f"⚠️ lint_exemptions 過時：{rk} 已不在 corpus，請移除條目")
+            continue
+        anchor = spec.get("ch_value")
+        if anchor != h16(val):
+            print(f"⚠️ lint_exemptions 錨點不符：{rk} 的 CH 值已變，豁免失效，請重新裁決")
+            continue
+        active_exempt[rk] = set(pats)
     for group in fixes.get("post_fixes", []):
         for rule in group.get("rules", []):
             try:
                 pat = re.compile(rule["pattern"])
             except (re.error, KeyError, TypeError) as exc:
-                print(f"⚠️ [A] 規則損壞（{group.get('category', '?')}）：{rule!r}（{exc}）")
+                print(f"❌ [A] 規則損壞（{group.get('category', '?')}）：{rule!r}（{exc}）", file=sys.stderr)
+                schema_errors += 1
                 continue
             hits = [
                 h for h in scan(corpus, pat.search)
-                if rule["pattern"] not in exemptions.get(f"{h[0]}|{h[1]}", {}).get("patterns", [])
+                if rule["pattern"] not in active_exempt.get(f"{h[0]}|{h[1]}", set())
             ]
             if hits:
                 fix_hits += len(hits)
@@ -105,6 +143,23 @@ def main() -> int:
             print(f"\n[B] 異體字 {bad}→{good}：{len(hits)} 鍵")
             show(hits, args.limit)
 
+    # [C] 已裁決過濾：ch_review_state 中 hash 與現行有效 CN 相符的鍵＝已經人工/AI
+    # 逐鍵裁決（keep 或 fix 皆登記），不再重報；餘下命中＝新增待裁決 → 棘輪
+    review_state: dict[str, str] = {}
+    if REVIEW_STATE_JSON.exists():
+        review_state = {
+            k: v for k, v in load_json(REVIEW_STATE_JSON).items()
+            if "|" in k and isinstance(v, str)
+        }
+    dist_cn: dict[str, dict] = {}
+    if DIST_CN_DIR.is_dir():
+        dist_cn = {p.name: load_json(p) for p in sorted(DIST_CN_DIR.glob("*.json"))}
+
+    def adjudicated(fname: str, key: str) -> bool:
+        h = review_state.get(f"{fname}|{key}")
+        val = dist_cn.get(fname, {}).get(key)
+        return bool(h and isinstance(val, str) and h16(val) == h)
+
     select_hits = 0
     non_literal = 0
     for rule in term.get("rules", []):
@@ -115,10 +170,13 @@ def main() -> int:
             non_literal += 1  # 非 literal（regex 型）select 規則本工具不掃，計數提示
             continue
         needle = match["value"]
-        hits = scan(corpus, lambda v, n=needle: n in v)
+        hits = [
+            h for h in scan(corpus, lambda v, n=needle: n in v)
+            if not adjudicated(h[0], h[1])
+        ]
         if hits:
             select_hits += len(hits)
-            print(f"\n[C] 裁決參考 {rule.get('pair', needle)}：{len(hits)} 鍵（{rule.get('note', '')}）")
+            print(f"\n[C] 待裁決 {rule.get('pair', needle)}：{len(hits)} 鍵（{rule.get('note', '')}）")
             show(hits, min(args.limit, 3))
 
     if non_literal:
@@ -137,14 +195,22 @@ def main() -> int:
 
     print(
         f"\n總計：[A] 修正建議 {fix_hits} 鍵、[B] 異體字 {charfix_hits} 鍵、"
-        f"[C] 裁決參考 {select_hits} 鍵（[C] 為語境參考，不計棘輪）"
+        f"[C] 待裁決 {select_hits} 鍵"
     )
-    # 棘輪：[A]/[B] 屬「應修正」類，基線已於 2026-08-02 首批償還歸零——
-    # 超過基線即非零退出（防品質單調劣化）；償還例外時同步調整基線並附理由。
-    exceeded = {k: (n, RATCHET[k]) for k, n in (("A", fix_hits), ("B", charfix_hits)) if n > RATCHET[k]}
+    # 棘輪：基線已於 2026-08-02 首批償還歸零——超過基線即非零退出（防品質單調
+    # 劣化）。[C] 命中時：逐鍵裁決（fix 修 corpus／keep 不動）→ 登記 ch_review_state
+    # 即消化；[A]/[B] 命中：修正，regex 誤中則登記 lint_exemptions（附 ch_value 錨點）。
+    exceeded = {
+        k: (n, RATCHET[k])
+        for k, n in (("A", fix_hits), ("B", charfix_hits), ("C", select_hits))
+        if n > RATCHET[k]
+    }
     if exceeded:
         for cat, (n, base) in exceeded.items():
             print(f"❌ 棘輪超標：[{cat}] {n} 鍵 > 基線 {base}", file=sys.stderr)
+        return 1
+    if schema_errors:
+        print(f"❌ schema/規則錯誤 {schema_errors} 處（見上）", file=sys.stderr)
         return 1
     return 0
 
