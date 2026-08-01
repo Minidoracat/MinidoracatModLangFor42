@@ -40,6 +40,7 @@ import hashlib
 import json
 import os
 import re
+import subprocess
 import sys
 from collections import Counter
 
@@ -747,6 +748,68 @@ def check_as1_drift(repo: str, as1_cn: str) -> tuple[bool, list[str], list[str]]
 
 
 # --------------------------------------------------------------------------- #
+# --cn-diff：git 層 CN 值變動複核（封住四條 registry/手改盲徑的出口檢查）
+# --------------------------------------------------------------------------- #
+def _git_show_json(repo: str, ref: str, relpath: str) -> dict | None:
+    """讀 <ref>:<relpath> 的 JSON；該 ref 無此檔 → None。"""
+    proc = subprocess.run(
+        ["git", "-C", repo, "show", f"{ref}:{relpath}"], capture_output=True
+    )
+    if proc.returncode != 0:
+        return None
+    data = json.loads(proc.stdout.decode("utf-8-sig"))
+    return data if isinstance(data, dict) else None
+
+
+def cmd_cn_diff(paths: dict, base_ref: str) -> int:
+    """列出 base_ref → 現況間 dist CN 值有變、而 sources/ch 未同步變動的鍵。
+
+    觀察「輸出」而非輸入：不論變動來自 As1 同步、cn_overrides、placeholder 例外
+    還是 own 層，一律在此匯流受檢。已審台帳中 hash 與現行 CN 相符的鍵視為已
+    背書，不列待複核。有待複核鍵 → 退出 1（供 release 前把關）。
+    """
+    repo = paths["repo"]
+    dist_cn = paths["dist_cn"]
+    dist_cn_rel = os.path.relpath(dist_cn, repo).replace(os.sep, "/")
+    try:
+        review_state = _load_review_state(repo)
+    except ValueError:
+        review_state = {}
+    pending: list[str] = []
+    n_changed = 0
+    for path in sorted(glob.glob(os.path.join(dist_cn, "*.json"))):
+        name = os.path.basename(path)
+        new_cn = _read_json(path)
+        old_cn = _git_show_json(repo, base_ref, f"{dist_cn_rel}/{name}") or {}
+        new_ch: dict | None = None
+        old_ch: dict = {}
+        for key in sorted(new_cn):
+            if old_cn.get(key) == new_cn[key]:
+                continue
+            n_changed += 1
+            skey = f"{name}|{key}"
+            state_hash = review_state.get(skey)
+            if state_hash and isinstance(new_cn[key], str):
+                if hashlib.sha256(new_cn[key].encode("utf-8")).hexdigest()[:16] == state_hash:
+                    continue  # 已審背書涵蓋現值
+            if new_ch is None:  # 惰性載入該檔的 CH 新舊值
+                ch_path = os.path.join(repo, "sources", "ch", name)
+                new_ch = _read_json(ch_path) if os.path.isfile(ch_path) else {}
+                old_ch = _git_show_json(repo, base_ref, f"sources/ch/{name}") or {}
+            if old_ch.get(key) == new_ch.get(key):
+                pending.append(
+                    f"  {skey}：CN 值已變但 sources/ch 未動｜新 CN={new_cn[key]!r}"
+                )
+    print(f"cn-diff（{base_ref} → 現況）：CN 值變動 {n_changed} 鍵、待複核 {len(pending)} 鍵")
+    for line in _cap(pending):
+        print(line)
+    if pending:
+        print("→ 逐鍵確認 CH 是否須跟進；確認無須變動者於 ch_review_state.json 登記現值 hash。")
+        return 1
+    return 0
+
+
+# --------------------------------------------------------------------------- #
 # 冪等子命令
 # --------------------------------------------------------------------------- #
 def _dist_hash_map(dist_translate: str, lua_client: str | None) -> dict[str, str]:
@@ -911,6 +974,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--snapshot", default=None, help="snapshot.json 路徑（預設：<repo>/sources/snapshot.json）")
     parser.add_argument("--snapshot-dist", metavar="DIR", help="把 dist 現況 hash 存到 <DIR>/dist_hashes.json")
     parser.add_argument("--compare-dist", metavar="DIR", help="比對 dist 現況與 <DIR>/dist_hashes.json（有 diff 退出 1）")
+    parser.add_argument(
+        "--cn-diff", metavar="BASE_REF",
+        help="列出 BASE_REF→現況 dist CN 值變動而 sources/ch 未同步、亦無已審背書的鍵（有即退出 1）",
+    )
     args = parser.parse_args(argv)
 
     repo = os.path.abspath(args.repo)
@@ -932,6 +999,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_snapshot_dist(dist_translate, lua_client, args.snapshot_dist)
     if args.compare_dist:
         return cmd_compare_dist(dist_translate, lua_client, args.compare_dist)
+    if args.cn_diff:
+        return cmd_cn_diff(paths, args.cn_diff)
     return run_all(paths)
 
 

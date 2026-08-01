@@ -27,6 +27,7 @@ CH_DIR = PROJECT_ROOT / "sources" / "ch"
 FIXES_JSON = PROJECT_ROOT / "sources" / "opencc_fixes.json"
 TERM_JSON = PROJECT_ROOT / "sources" / "terminology.json"
 BASE_TERM_JSON = Path("D:/github/MinidoracatLangFor42/scripts/terminology.json")
+RATCHET = {"A": 0, "B": 0}  # [A]/[B] 命中數棘輪基線（2026-08-02 首批償還後歸零）
 
 
 def load_json(path: Path) -> dict:
@@ -76,6 +77,9 @@ def main() -> int:
 
     fix_hits = 0
     fixes = load_json(FIXES_JSON)
+    # 裁決豁免登記：(檔|鍵) → {patterns: [...], reason}——經人工裁決為合法語境的
+    # regex 誤中（如「彩色光＋標記」誤中光標），逐筆登記後不再計入 [A]／棘輪。
+    exemptions = fixes.get("lint_exemptions", {})
     for group in fixes.get("post_fixes", []):
         for rule in group.get("rules", []):
             try:
@@ -83,7 +87,10 @@ def main() -> int:
             except (re.error, KeyError, TypeError) as exc:
                 print(f"⚠️ [A] 規則損壞（{group.get('category', '?')}）：{rule!r}（{exc}）")
                 continue
-            hits = scan(corpus, pat.search)
+            hits = [
+                h for h in scan(corpus, pat.search)
+                if rule["pattern"] not in exemptions.get(f"{h[0]}|{h[1]}", {}).get("patterns", [])
+            ]
             if hits:
                 fix_hits += len(hits)
                 print(f"\n[A] {group.get('category', '?')} pattern={rule['pattern']!r}：{len(hits)} 鍵")
@@ -130,8 +137,15 @@ def main() -> int:
 
     print(
         f"\n總計：[A] 修正建議 {fix_hits} 鍵、[B] 異體字 {charfix_hits} 鍵、"
-        f"[C] 裁決參考 {select_hits} 鍵（report-only，不影響 build）"
+        f"[C] 裁決參考 {select_hits} 鍵（[C] 為語境參考，不計棘輪）"
     )
+    # 棘輪：[A]/[B] 屬「應修正」類，基線已於 2026-08-02 首批償還歸零——
+    # 超過基線即非零退出（防品質單調劣化）；償還例外時同步調整基線並附理由。
+    exceeded = {k: (n, RATCHET[k]) for k, n in (("A", fix_hits), ("B", charfix_hits)) if n > RATCHET[k]}
+    if exceeded:
+        for cat, (n, base) in exceeded.items():
+            print(f"❌ 棘輪超標：[{cat}] {n} 鍵 > 基線 {base}", file=sys.stderr)
+        return 1
     return 0
 
 
