@@ -9,6 +9,7 @@ MinidoracatModLangFor42 拆分管線（PZ B42 如一模組翻譯繁中版）
         sources/mods/<workshop_id>/CN/<原檔名>.json + metadata.json
         sources/_unsorted/CN/<原檔名>.json（用盡候選仍未歸屬）
         sources/attribution_index.json（(檔|鍵) → owner ids 或 "_unsorted"）
+        sources/ch_sync_worklist.json（CN 樹新增/變更/移除鍵 → CH 翻譯待辦，翻譯後移除）
 
 真相模型：
   - As1 CN 快照 = canonical import（唯一事實）。
@@ -44,6 +45,11 @@ SNAPSHOT_JSON = SOURCES / "snapshot.json"
 MODS_DIR = SOURCES / "mods"
 UNSORTED_CN = SOURCES / "_unsorted" / "CN"
 ATTR_INDEX_JSON = SOURCES / "attribution_index.json"
+WORKLIST_JSON = SOURCES / "ch_sync_worklist.json"
+WORKLIST_COMMENT = (
+    "As1 同步 worklist：split_sources.py 於 CN 樹有新增/變更/移除鍵時寫入。"
+    "逐條翻譯落 sources/ch 後移除條目；本檔含未處理條目時 build/verify 拒絕出貨。"
+)
 
 # helper 本地 checkout（snapshot.json 只釘 git SHA，不釘本地路徑）。可用 --helper-dir 覆寫。
 DEFAULT_HELPER_DIR = Path("D:/github/pz-mod-translation-helper/translation_utils")
@@ -488,6 +494,112 @@ def outputs_hash(out: dict[str, bytes]) -> str:
 
 
 # ============================================================
+# CH sync worklist：CN 樹層級差異 → 翻譯待辦
+# （斷絕 OpenCC 後 CH 不再機轉跟進，上游變更必須逐鍵人工/AI 直譯落 sources/ch；
+#   本節在覆寫 CN 樹前 diff 舊有效值，把新增/變更/移除鍵登記到 worklist，
+#   build/verify 於 worklist 未清空時拒絕出貨。）
+# ============================================================
+def load_existing_cn() -> dict[tuple[str, str], str]:
+    """讀現行 CN 樹（As1 衍生目錄＋_unsorted，排除 own）的 {(檔名, 鍵): 值}。
+
+    多重歸屬複製份值一致（前次 split 完整性自檢保證），first-wins 即可。
+    """
+    result: dict[tuple[str, str], str] = {}
+    own = _own_mod_wids()
+    dirs: list[Path] = []
+    if MODS_DIR.is_dir():
+        for child in sorted(MODS_DIR.iterdir()):
+            if child.is_dir() and child.name not in own:
+                cn = child / "CN"
+                if cn.is_dir():
+                    dirs.append(cn)
+    if UNSORTED_CN.is_dir():
+        dirs.append(UNSORTED_CN)
+    for d in dirs:
+        for jf in sorted(d.glob("*.json")):
+            for key, val in load_json(jf).items():
+                result.setdefault((jf.name, key), val)
+    return result
+
+
+def cn_from_outputs(out: dict[str, bytes]) -> dict[tuple[str, str], str]:
+    """從 serialize 產出還原 {(檔名, 鍵): 值}（只取 mods/*/CN 與 _unsorted/CN）。"""
+    result: dict[tuple[str, str], str] = {}
+    for rel, data in out.items():
+        parts = rel.split("/")
+        if rel.startswith("mods/") and len(parts) == 4 and parts[2] == "CN":
+            fname = parts[3]
+        elif rel.startswith("_unsorted/CN/") and len(parts) == 3:
+            fname = parts[2]
+        else:
+            continue
+        for key, val in json.loads(data.decode("utf-8")).items():
+            result.setdefault((fname, key), val)
+    return result
+
+
+def _corpus_keysets() -> dict[str, set[str]]:
+    """讀 sources/ch/*.json 的逐檔鍵集（worklist 自動對帳用；corpus 缺失回空）。"""
+    out: dict[str, set[str]] = {}
+    ch_dir = SOURCES / "ch"
+    if ch_dir.is_dir():
+        for jf in sorted(ch_dir.glob("*.json")):
+            out[jf.name] = set(load_json(jf))
+    return out
+
+
+def _entry_satisfied(entry_key: str, spec, corpus_keys: dict[str, set[str]]) -> bool:
+    """added 條目其鍵已落 corpus／removed 條目其鍵已自 corpus 移除 → 已滿足。
+
+    changed 一律未滿足（值層變更無法自動判定已複核，須人工移除條目）。
+    """
+    kind = spec.get("kind") if isinstance(spec, dict) else None
+    fname, _, key = entry_key.partition("|")
+    present = key in corpus_keys.get(fname, set())
+    return (kind == "added" and present) or (kind == "removed" and not present)
+
+
+def update_sync_worklist(
+    old: dict[tuple[str, str], str], new: dict[tuple[str, str], str]
+) -> int:
+    """CN 差異（added/changed/removed）合併進 worklist；回傳本次新增/更新條目數。
+
+    既有未滿足條目保留（同鍵以新差異覆蓋）、已滿足條目自動清除（對帳，
+    見 _entry_satisfied）；不含 | 的說明欄（_comment 等）原樣保留。
+    old 為空時跳過差異登記——注意這**只在真正首次拆分時安全**：若既有樹被
+    清除後重跑，changed 差異將無法偵測（main() 以 --allow-empty-baseline 把關）。
+    """
+    if not old:
+        print(
+            "  ⚠️ --allow-empty-baseline：無既有 CN 樹，跳過 worklist 差異登記"
+            "（本次 changed 類差異無法偵測）。"
+        )
+        return 0
+    delta: dict[str, dict] = {}
+    for fk in sorted(new.keys() - old.keys()):
+        delta[f"{fk[0]}|{fk[1]}"] = {"kind": "added", "new_cn": new[fk]}
+    for fk in sorted(old.keys() - new.keys()):
+        delta[f"{fk[0]}|{fk[1]}"] = {"kind": "removed", "old_cn": old[fk]}
+    for fk in sorted(old.keys() & new.keys()):
+        if old[fk] != new[fk]:
+            delta[f"{fk[0]}|{fk[1]}"] = {
+                "kind": "changed", "old_cn": old[fk], "new_cn": new[fk],
+            }
+    corpus_keys = _corpus_keysets()
+    doc: dict = {}
+    if WORKLIST_JSON.exists():
+        for k, v in load_json(WORKLIST_JSON).items():
+            if "|" not in k:
+                doc[k] = v  # _comment / 人工加註的說明欄保留
+            elif not _entry_satisfied(k, v, corpus_keys):
+                doc[k] = v
+    doc["_comment"] = WORKLIST_COMMENT  # 說明文字以最新常數為準
+    doc.update(delta)
+    WORKLIST_JSON.write_text(dumps_canonical(doc), encoding="utf-8", newline="\n")
+    return len(delta)
+
+
+# ============================================================
 # 主流程
 # ============================================================
 def main() -> int:
@@ -502,6 +614,11 @@ def main() -> int:
         "--allow-drift",
         action="store_true",
         help="跳過 helper git SHA 釘定檢查，並把 snapshot.json 的 git_sha/pulled_at 更新為現況",
+    )
+    parser.add_argument(
+        "--allow-empty-baseline",
+        action="store_true",
+        help="明示允許在無既有 CN 樹時執行（僅限真正首次拆分；changed 差異將無法偵測）",
     )
     args = parser.parse_args()
     helper_dir: Path = args.helper_dir
@@ -556,6 +673,19 @@ def main() -> int:
             print(f"  - {e}")
         return 1
 
+    old_cn = load_existing_cn()
+    if not old_cn and not args.allow_empty_baseline:
+        print(
+            "❌ 既有 CN 樹為空。若樹曾被清除，本次 changed 差異將無法偵測\n"
+            "   （鍵集 gate 只攔 added/removed，值變更會靜默漏接）。\n"
+            "   請先 `git restore sources/mods sources/_unsorted` 還原舊樹再重跑；\n"
+            "   確為首次拆分時，以 --allow-empty-baseline 明示跳過。",
+            file=sys.stderr,
+        )
+        return 1
+    # worklist 先於樹覆寫落地：中斷時最壞是「worklist 已登記、樹未更新」，
+    # gate 會擋、重跑冪等；反向順序會在中斷後永久遺失差異（舊樹已被覆寫）。
+    n_delta = update_sync_worklist(old_cn, cn_from_outputs(out))
     write_outputs(out)
     manifest_path = write_as1_manifest(cn_dir)
 
@@ -584,6 +714,11 @@ def main() -> int:
     print(f"  產出檔案數           : {len(out)}（含 metadata.json ×{len(result.owners)} + attribution_index.json）")
     print(f"  產出 sha256          : {outputs_hash(out)}")
     print(f"  As1 逐檔 sha256 manifest : {manifest_path.relative_to(PROJECT_ROOT)}（{len(snap)} 檔）")
+    if n_delta:
+        print(
+            f"  ⚠️ sync worklist 新增/更新 {n_delta} 條 → sources/ch_sync_worklist.json"
+            "（對照 EN＋術語表翻譯落 sources/ch 後移除條目，build 才會放行）"
+        )
     print("\n✅ 自檢通過（完整性 + 冪等），已寫出 sources/mods、sources/_unsorted/CN、attribution_index.json、as1_manifest.json。")
     return 0
 

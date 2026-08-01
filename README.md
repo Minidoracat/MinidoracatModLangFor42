@@ -15,7 +15,7 @@
 
 ## 合作與授權
 
-本 MOD 為如一漢化組（As1）「[B42]統一模組漢化」（[Workshop 3556540080](https://steamcommunity.com/sharedfiles/filedetails/?id=3556540080)）的**授權繁體中文版**，掛名如一漢化組。簡中文本逐字保留 As1 原文；繁中文本由簡中經 OpenCC + 台灣用語校正再生。追蹤器每日監看上游包與各支援 MOD 的文本變更並同步更新。
+本 MOD 為如一漢化組（As1）「[B42]統一模組漢化」（[Workshop 3556540080](https://steamcommunity.com/sharedfiles/filedetails/?id=3556540080)）的**授權繁體中文版**，掛名如一漢化組。簡中文本逐字保留 As1 原文；繁中文本為逐鍵人工維護的台灣用語譯文（對照英文原文與術語表校訂，不使用自動簡繁轉換）。追蹤器每日監看上游包與各支援 MOD 的文本變更並同步更新。
 
 ## 安裝方式
 
@@ -43,4 +43,4 @@
 
 ## 開發
 
-生成物（`MOD/` 與 `sources/mods/`）勿手改（例外：`sources/mods/` 下 `metadata.json` 標 `origin: "own"` 的原創翻譯目錄為人工真相），請改人工真相層（`sources/ch_overrides.json`、`sources/opencc_fixes.json`、`sources/lua/`、`sources/placeholder_exceptions.json`）後重跑管線。
+生成物（`MOD/` 與 `sources/mods/`）勿手改（例外：`sources/mods/` 下 `metadata.json` 標 `origin: "own"` 的原創翻譯目錄為人工真相），請改人工真相層（`sources/ch/` 繁中 corpus、`sources/lua/`、`sources/cn_overrides.json`、`sources/placeholder_exceptions.json`）後重跑管線。繁中已斷絕 OpenCC 機轉，逐鍵人工維護。

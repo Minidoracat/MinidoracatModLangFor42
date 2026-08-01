@@ -1,34 +1,33 @@
 # /// script
 # requires-python = ">=3.10"
-# dependencies = ["opencc>=1.4.1"]
+# dependencies = []
 # ///
-# pyright: reportMissingImports=false
 """
 MinidoracatModLangFor42 build 管線（PZ B42 如一模組翻譯繁中版）
 
-用途：把 sources/ 的 canonical import（CN）+ 人工真相層（opencc_fixes / ch_overrides）
-      冪等再生成 MOD/.../Translate/{CH,CN} 成品；並由 metadata 彙整 README 支援清單。
+用途：把 sources/ 的 canonical import（CN）+ 人工真相層（sources/ch corpus）
+      合併成 MOD/.../Translate/{CH,CN} 成品；並由 metadata 彙整 README 支援清單。
 
 使用方式：uv run scripts/build_mod.py [命令]
 
 命令：
-  build     - CH 再生(OpenCC s2twp) + 合併去重 + placeholder gate → 寫出成品（預設）
+  build     - 合併去重 + corpus/worklist/placeholder gate → 寫出成品（預設）
   manifest  - 由 metadata.json + mod_names_zh.json 生成 SUPPORTED_MODS.md，並更新 README 統計摘要
 
-真相模型：CN 為衍生佈局的 canonical import；CH 由 CN 冪等再生
-（OpenCC + opencc_fixes.json + ch_overrides.json），成品不手改。全程確定性輸出。
+真相模型：CN 為衍生佈局的 canonical import；CH 為 sources/ch/ 人工真相 corpus
+（已斷絕 OpenCC 機轉；新增/變更鍵由 AI/人工對照 EN＋術語表直譯後落 corpus）。
+build 僅做合併與把關，不做任何文字轉換。全程確定性輸出。
 """
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import shutil
 import sys
 from collections import Counter
 from pathlib import Path
-
-import opencc
 
 # ============================================================
 # 路徑配置
@@ -39,8 +38,9 @@ SOURCES = PROJECT_ROOT / "sources"
 MODS_DIR = SOURCES / "mods"
 UNSORTED_CN = SOURCES / "_unsorted" / "CN"
 LUA_SRC = SOURCES / "lua"
-OPENCC_FIXES_JSON = SOURCES / "opencc_fixes.json"
-CH_OVERRIDES_JSON = SOURCES / "ch_overrides.json"
+CH_CORPUS_DIR = SOURCES / "ch"
+WORKLIST_JSON = SOURCES / "ch_sync_worklist.json"
+REVIEW_STATE_JSON = SOURCES / "ch_review_state.json"
 CN_OVERRIDES_JSON = SOURCES / "cn_overrides.json"
 PLACEHOLDER_EXCEPTIONS_JSON = SOURCES / "placeholder_exceptions.json"
 OWN_TRANSLATIONS_JSON = SOURCES / "own_translations.json"
@@ -83,7 +83,7 @@ _PCT_TOKEN_RE = re.compile(r"%%|%\.\d+f|%\d+|%[sdi]")
 # 「值是否含真正的 format token」用（不含 %% 與標籤）：%N/%s/%d/%i/%.Nf。
 # 只有含 format token 的值，殘留的字面 %. 才會被 PZ 轉換 + JDK .formatted() 當成轉換符而崩潰。
 _FMT_ONLY_RE = re.compile(r"%\.\d+f|%\d+|%[sdi]")
-# 角括號內容含 CJK 者是文本（如 <吱吱声>、耐力<25%, 疲劳>80%），OpenCC 本就該轉換，
+# 角括號內容含 CJK 者是文本（如 <吱吱声>、耐力<25%, 疲劳>80%），屬翻譯文字一部分，
 # 不得當標籤比對；真正的標籤（<br>、<LINE>、<RGB:...>）皆為 ASCII。
 _CJK_RE = re.compile(r"[㐀-鿿豈-﫿]")
 
@@ -148,22 +148,15 @@ def write_text(path: Path, text: str) -> None:
 
 
 # ============================================================
-# OpenCC 轉換（快取單一 converter 實例 + post_fixes）
+# 人工真相層載入
 # ============================================================
-_CONVERTER: opencc.OpenCC | None = None
-
-
-def get_converter() -> opencc.OpenCC:
-    global _CONVERTER
-    if _CONVERTER is None:
-        _CONVERTER = opencc.OpenCC("s2twp")
-    return _CONVERTER
-
-
 def _require_truth_file(path: Path, label: str) -> None:
     """人工真相檔缺失即 fail（受版控真相檔，build 不自動建骨架）。"""
     if not path.exists():
-        rel = path.relative_to(PROJECT_ROOT)
+        try:
+            rel = path.relative_to(PROJECT_ROOT)
+        except ValueError:  # 路徑不在 repo 下（如測試 monkeypatch）——錯誤路徑不得再擲錯
+            rel = path
         print(
             f"❌ 人工真相檔缺失：{rel}（{label}）。此為受版控真相檔，"
             f"build 不會自動建立；請自版控還原該檔後重試。",
@@ -172,29 +165,88 @@ def _require_truth_file(path: Path, label: str) -> None:
         sys.exit(1)
 
 
-def load_post_fixes() -> list[tuple[re.Pattern, str]]:
-    """載入 opencc_fixes.json 的 post_fixes（缺失即 fail，不建骨架）。"""
-    _require_truth_file(OPENCC_FIXES_JSON, "OpenCC 修正字典")
-    try:
-        data = load_json(OPENCC_FIXES_JSON)
-    except json.JSONDecodeError as exc:
-        print(f"❌ opencc_fixes.json 格式錯誤：{exc}", file=sys.stderr)
+def load_ch_corpus() -> dict[str, dict]:
+    """載入 sources/ch/ 人工繁中 corpus（缺失即 fail，不建骨架）。
+
+    corpus 為人工真相層：CH 不再由 CN 機轉再生，逐鍵值以本目錄為準。
+    """
+    if not CH_CORPUS_DIR.is_dir():
+        print(
+            "❌ 人工真相層缺失：sources/ch/（人工繁中 corpus）。此為受版控真相目錄，"
+            "build 不會自動建立；請自版控還原後重試。",
+            file=sys.stderr,
+        )
         sys.exit(1)
-    fixes: list[tuple[re.Pattern, str]] = []
-    for group in data.get("post_fixes", []):
-        for rule in group.get("rules", []):
-            fixes.append((re.compile(rule["pattern"]), rule["replacement"]))
-    return fixes
+    corpus: dict[str, dict] = {}
+    for jf in sorted(CH_CORPUS_DIR.glob("*.json")):
+        try:
+            data = load_json(jf)
+        except (json.JSONDecodeError, UnicodeDecodeError, OSError, ValueError) as exc:
+            print(f"❌ sources/ch/{jf.name} 讀取失敗：{exc}", file=sys.stderr)
+            sys.exit(1)
+        if not isinstance(data, dict):
+            print(f"❌ sources/ch/{jf.name} 頂層非物件。", file=sys.stderr)
+            sys.exit(1)
+        corpus[jf.name] = data
+    return corpus
 
 
-def load_overrides() -> dict[str, str]:
-    """載入 ch_overrides.json（{"<檔名>|<鍵>": 值}；缺失即 fail，不建骨架）。"""
-    _require_truth_file(CH_OVERRIDES_JSON, "人工繁中覆寫層")
+def load_sync_worklist() -> dict[str, dict]:
+    """讀 ch_sync_worklist.json 的待辦條目（不含 | 的鍵為 _comment 等說明欄）。
+
+    本檔為受版控狀態檔、As1 同步「值變更」的單點防線：**缺失即 fail**——
+    「待辦清空」以「僅剩說明欄的物件」表示，絕不以「檔案不存在」表示
+    （否則一次誤刪即可靜默繞過整道防線）。split_sources.py 於偵測到 CN
+    差異時寫入；逐條翻譯落 corpus 後移除，build 於仍有未滿足條目時拒絕出貨。
+    """
+    _require_truth_file(WORKLIST_JSON, "As1 同步 worklist")
     try:
-        return load_json(CH_OVERRIDES_JSON)
+        data = load_json(WORKLIST_JSON)
     except json.JSONDecodeError as exc:
-        print(f"❌ ch_overrides.json 格式錯誤：{exc}", file=sys.stderr)
+        print(f"❌ ch_sync_worklist.json 格式錯誤：{exc}", file=sys.stderr)
         sys.exit(1)
+    return {k: v for k, v in data.items() if "|" in k}
+
+
+def load_review_state() -> dict[str, str]:
+    """載入 ch_review_state.json（已審台帳：<檔>|<鍵> → 有效 CN 值 sha256[:16]）。"""
+    _require_truth_file(REVIEW_STATE_JSON, "CH 逐項審查台帳")
+    try:
+        data = load_json(REVIEW_STATE_JSON)
+    except json.JSONDecodeError as exc:
+        print(f"❌ ch_review_state.json 格式錯誤：{exc}", file=sys.stderr)
+        sys.exit(1)
+    out: dict[str, str] = {}
+    for k, v in data.items():
+        if "|" not in k:
+            continue  # _comment 等說明欄
+        if not isinstance(v, str):
+            print(f"❌ ch_review_state.json 條目 {k!r} 值非字串。", file=sys.stderr)
+            sys.exit(1)
+        out[k] = v
+    return out
+
+
+def check_registry_ack(
+    merged_cn: dict[str, dict], used_keys: set[str], review_state: dict[str, str]
+) -> list[str]:
+    """registry（cn_overrides / placeholder_exceptions）改的是 build 期 CN 值，
+    split 的 worklist diff 看不到——以已審台帳強制背書：每個命中鍵的現行有效
+    CN 值 hash 必須與 ch_review_state 登記一致，否則拒絕出貨。
+    這確保每次 registry 改值都必經「檢視 sources/ch 對應鍵是否同步」的明示動作。
+    """
+    errors: list[str] = []
+    for reg_key in sorted(used_keys):
+        fname, _, key = reg_key.partition("|")
+        expect = hashlib.sha256(merged_cn[fname][key].encode("utf-8")).hexdigest()[:16]
+        got = review_state.get(reg_key)
+        if got != expect:
+            hint = "未登記" if got is None else f"hash 不符（登記 {got}）"
+            errors.append(
+                f"  {reg_key}：{hint}——請確認 sources/ch 對應鍵已同步後，"
+                f"於 ch_review_state.json 登記 {expect}"
+            )
+    return errors
 
 
 def load_placeholder_exceptions() -> dict[str, dict]:
@@ -272,7 +324,7 @@ def apply_own(
 ) -> tuple[int, list[str]]:
     """原創翻譯層合併：只補 As1 未收錄的鍵（As1 優先；同鍵列 shadowed 提示退役）。
 
-    於 regen_ch 之後套用——ch 為直寫繁中不經 OpenCC；placeholder gate 隨後照常涵蓋。
+    於 corpus 載入之後套用——ch 為直寫繁中人工真相；placeholder gate 隨後照常涵蓋。
     回傳 (新增鍵數, shadowed 清單)。
     """
     added = 0
@@ -288,23 +340,6 @@ def apply_own(
             ch_map[key] = spec["ch"]
             added += 1
     return added, shadowed
-
-
-def convert_value(
-    text: str,
-    post_fixes: list[tuple[re.Pattern, str]],
-    fix_hits: Counter | None = None,
-) -> str:
-    """簡體 → 繁體（台灣用語）+ post_fixes。
-
-    fix_hits 若提供，累計各 post_fix（以清單索引為鍵）的命中次數，供「零命中 pattern」報告。
-    """
-    result = get_converter().convert(text)
-    for idx, (pattern, replacement) in enumerate(post_fixes):
-        result, n = pattern.subn(replacement, result)
-        if n and fix_hits is not None:
-            fix_hits[idx] += n
-    return result
 
 
 # ============================================================
@@ -359,7 +394,8 @@ def apply_cn_registry(
       - placeholder_exceptions.json（field="cn_safe_value"）：換成安全值後 placeholder
         gate 自然不再觸發崩潰簽名。
       - cn_overrides.json（field="value"）：修 As1 上游錯誤（錯字／疊字等）。
-    CH 隨後由修正後的 CN 冪等再生，故 CN 修正會一併帶到 CH。
+    CH 為獨立人工真相 corpus，CN 修正不再自動帶到 CH——語意變更時須同步修
+    sources/ch 對應鍵（並更新 ch_review_state.json）。
     回傳實際套用的登記鍵集合。
     """
     used: set[str] = set()
@@ -374,29 +410,73 @@ def apply_cn_registry(
     return used
 
 
-def regen_ch(
-    merged_cn: dict[str, dict],
-    post_fixes: list[tuple[re.Pattern, str]],
-    overrides: dict[str, str],
-    fix_hits: Counter | None = None,
-) -> tuple[dict[str, dict], set[str]]:
-    """CH 由 CN 冪等再生：OpenCC → post_fixes → ch_overrides（最後套）。
+# 簡體專用字集（斷絕機轉後 CH 為手寫真相，防 CN 值誤貼直接出貨）：
+# 僅收「繁中不合法」的簡化字——已排除 后/干/面/里/云/谷/系/准 等繁中亦有效字。
+# 2026-08-02 實測：凍結 corpus＋own ch 零命中（零基線噪音）、CN 語料 174/176 字觸發。
+_SIMPLIFIED_ONLY = frozenset(
+    "们这边变币笔毕车陈迟达带单当导灯敌电东动断对队尔发费风刚钢国过华画欢环还会"
+    "击鸡际间将节结进举觉开课块来乐离丽历联连两辆灵龙楼录虑论罗妈马买卖满门梦亩"
+    "难鸟农盘钱枪桥亲轻请让认荣伞烧绍师时实识视试书数双谁说丝苏虽岁孙态谈汤铁听"
+    "头图团万为伟卫温稳问乡响项写兴学寻压亚严盐养样阳药页业叶义亿忆艺阴银应营优"
+    "邮语员远运杂载脏则泽张账阵证织职执纸钟种众专转装状驻总组"
+)
 
-    回傳 (merged_ch, 實際套用的 ch_overrides 鍵集合)。fix_hits 透傳給 convert_value 累計命中。
+
+def ch_value_gate(merged_cn: dict[str, dict], merged_ch: dict[str, dict]) -> list[str]:
+    """CH 值層 gate：簡體專用字殘留、CN 有文而 CH 空值、非字串值 → 阻斷。
+
+    corpus 為手寫真相後唯一的簡繁不變式防線；OpenCC 時代此類錯誤在物理上不可能。
     """
-    merged_ch: dict[str, dict] = {}
-    used_ov: set[str] = set()
-    for fname, fmap in merged_cn.items():
-        out: dict[str, str] = {}
-        for key, cn_val in fmap.items():
-            ov_key = f"{fname}|{key}"
-            if ov_key in overrides:
-                out[key] = overrides[ov_key]
-                used_ov.add(ov_key)
-            else:
-                out[key] = convert_value(cn_val, post_fixes, fix_hits)
-        merged_ch[fname] = out
-    return merged_ch, used_ov
+    errors: list[str] = []
+    for fname in sorted(merged_ch):
+        cn_map = merged_cn.get(fname, {})
+        for key in sorted(merged_ch[fname]):
+            val = merged_ch[fname][key]
+            if not isinstance(val, str):
+                errors.append(f"  {fname} | {key}: CH 值非字串（{type(val).__name__}）")
+                continue
+            bad = sorted(set(val) & _SIMPLIFIED_ONLY)
+            if bad:
+                errors.append(
+                    f"  {fname} | {key}: 含簡體專用字「{''.join(bad)}」｜{val[:40]!r}"
+                )
+            elif not val and cn_map.get(key):
+                errors.append(f"  {fname} | {key}: CH 空值但 CN 有內容")
+    return errors
+
+
+CORPUS_GATE_DETAIL_CAP = 30  # corpus gate 逐鍵明細上限（每檔）
+
+
+def corpus_gate(merged_cn: dict[str, dict], corpus: dict[str, dict]) -> list[str]:
+    """corpus 鍵集必須與 merged CN 完全一致（檔案集合＋逐檔鍵集）。
+
+    缺鍵附 CN 值＝待翻譯 worklist；孤兒鍵＝上游已移除，須自 corpus 刪除。
+    值不在此比對——corpus 即 CH 真相，值層品質由 placeholder gate 與 lint 把關。
+    """
+    errors: list[str] = []
+    for fname in sorted(set(merged_cn) | set(corpus)):
+        if fname not in corpus:
+            errors.append(
+                f"  corpus 缺檔：sources/ch/{fname}（{len(merged_cn[fname])} 鍵待翻譯）"
+            )
+            continue
+        if fname not in merged_cn:
+            errors.append(f"  corpus 孤兒檔：sources/ch/{fname}（CN 無此檔，請刪除）")
+            continue
+        cn_keys = set(merged_cn[fname])
+        ch_keys = set(corpus[fname])
+        missing = sorted(cn_keys - ch_keys)
+        orphans = sorted(ch_keys - cn_keys)
+        for key in missing[:CORPUS_GATE_DETAIL_CAP]:
+            errors.append(f"  {fname} | {key} 待翻譯，CN={merged_cn[fname][key]!r}")
+        if len(missing) > CORPUS_GATE_DETAIL_CAP:
+            errors.append(f"  {fname}：…另有 {len(missing) - CORPUS_GATE_DETAIL_CAP} 鍵待翻譯")
+        for key in orphans[:CORPUS_GATE_DETAIL_CAP]:
+            errors.append(f"  {fname} | {key} 為 corpus 孤兒鍵（CN 已無此鍵，請刪除）")
+        if len(orphans) > CORPUS_GATE_DETAIL_CAP:
+            errors.append(f"  {fname}：…另有 {len(orphans) - CORPUS_GATE_DETAIL_CAP} 個孤兒鍵")
+    return errors
 
 
 def placeholder_gate(
@@ -448,7 +528,7 @@ def placeholder_gate(
 # ============================================================
 def cmd_build() -> int:
     print("=" * 60)
-    print("build：CH 再生 + 合併去重 + placeholder gate")
+    print("build：corpus 合併去重 + worklist/鍵集/placeholder gate")
     print("=" * 60)
 
     dirs = collect_source_cn_dirs()
@@ -466,12 +546,11 @@ def cmd_build() -> int:
     print(f"  來源目錄 {len(dirs)} 個 → 合併 {total_files} 檔、{total_keys} 個 (檔,鍵)")
 
     # 人工真相層（缺失即 fail，不自動建骨架）
-    post_fixes = load_post_fixes()
-    overrides = load_overrides()
+    corpus = load_ch_corpus()
     exceptions = load_placeholder_exceptions()
     cn_overrides = load_cn_overrides()
 
-    # CN 人工修正層：先修 As1 上游錯誤（錯字／疊字），CH 隨後由修正後的 CN 再生
+    # CN 人工修正層：修 As1 上游錯誤（錯字／疊字）；CH 為獨立人工真相，不隨 CN 機轉
     used_cn_ov = apply_cn_registry(merged_cn, cn_overrides, "value")
     if used_cn_ov:
         print(f"  CN 人工修正層：套用 {len(used_cn_ov)} 鍵")
@@ -479,8 +558,52 @@ def cmd_build() -> int:
     # 登記制崩潰例外：以 cn_safe_value 全域取代（安全性最後把關，覆蓋前一層）
     used_exc = apply_cn_registry(merged_cn, exceptions, "cn_safe_value")
 
-    fix_hits: Counter = Counter()
-    merged_ch, used_ov = regen_ch(merged_cn, post_fixes, overrides, fix_hits)
+    # registry 背書 gate：registry 改值不經 split（worklist 看不到），
+    # 強制每個命中鍵的有效 CN hash 與已審台帳一致（改值必經 CH 同步檢視）
+    review_state = load_review_state()
+    registry_errors = check_registry_ack(merged_cn, used_cn_ov | used_exc, review_state)
+
+    # 斷絕機轉 gate：sync worklist 未滿足 or corpus 鍵集不鏡像 CN → 拒絕出貨。
+    # worklist 自動對帳：added 已落 corpus / removed 已自 corpus 刪除 → 已滿足
+    # 不阻斷（殘留條目由下次 split 重寫時清除）；changed 一律需人工確認後移除。
+    worklist = load_sync_worklist()
+    worklist_errors: list[str] = []
+    for wkey, spec in sorted(worklist.items()):
+        kind = spec.get("kind") if isinstance(spec, dict) else None
+        wf, _, wk = wkey.partition("|")
+        in_corpus = wk in corpus.get(wf, {})
+        if (kind == "added" and in_corpus) or (kind == "removed" and not in_corpus):
+            continue
+        worklist_errors.append(f"  {wkey}（{kind or '?'}）")
+    corpus_errors = corpus_gate(merged_cn, corpus)
+    if worklist_errors or corpus_errors or registry_errors:
+        if registry_errors:
+            print(
+                f"\n❌ registry 背書 gate {len(registry_errors)} 處"
+                "（cn_overrides/placeholder_exceptions 改值須經 CH 同步檢視並登記）："
+            )
+            for e in registry_errors[:50]:
+                print(e)
+        if worklist_errors:
+            print(
+                f"\n❌ sync worklist 有 {len(worklist_errors)} 條未滿足"
+                "（翻譯落 sources/ch 後自 ch_sync_worklist.json 移除條目）："
+            )
+            for e in worklist_errors[:50]:
+                print(e)
+            if len(worklist_errors) > 50:
+                print(f"  ...（還有 {len(worklist_errors) - 50} 條）")
+        if corpus_errors:
+            print(f"\n❌ corpus 鍵集 gate {len(corpus_errors)} 處（sources/ch 須逐鍵鏡像 CN）：")
+            for e in corpus_errors[:50]:
+                print(e)
+            if len(corpus_errors) > 50:
+                print(f"  ...（還有 {len(corpus_errors) - 50} 處，完整清單見 ch_sync_worklist.json）")
+        print("\n❌ build 失敗，未寫出成品。")
+        return 1
+
+    print(f"  CH corpus：{len(corpus)} 檔（人工真相層，無機轉）")
+    merged_ch = {fname: dict(corpus[fname]) for fname in merged_cn}
 
     # 原創翻譯層（As1 未收錄的鍵；ch 直寫、cn 對應）——gate 之前合入使其受 placeholder 檢查
     own = load_own_translations()
@@ -535,10 +658,7 @@ def cmd_build() -> int:
     print(f"\n✅ 已寫出 CN/CH 各 {len(merged_cn)} 檔、language.txt ×2、Lua {lua_count} 檔")
 
     # 未消費人工真相報告（非阻斷，供檢視）
-    report_unused(
-        overrides, used_ov, exceptions, used_exc, post_fixes, fix_hits,
-        cn_overrides, used_cn_ov,
-    )
+    report_unused(exceptions, used_exc, cn_overrides, used_cn_ov)
 
     if warnings:
         print(f"\n⚠️ {len(warnings)} 處可疑 % 序列（非阻斷，僅提示）：")
@@ -591,38 +711,24 @@ def write_lua(plan: dict[str, Path]) -> int:
 
 
 def report_unused(
-    overrides: dict[str, str],
-    used_ov: set[str],
     exceptions: dict[str, dict],
     used_exc: set[str],
-    post_fixes: list[tuple[re.Pattern, str]],
-    fix_hits: Counter,
-    cn_overrides: dict[str, dict] | None = None,
-    used_cn_ov: set[str] | None = None,
+    cn_overrides: dict[str, dict],
+    used_cn_ov: set[str],
 ) -> None:
-    """報告未被消費的人工真相（非阻斷）：ch_overrides / cn_overrides / placeholder_exceptions
-    未命中鍵、opencc_fixes 零命中 pattern。這些多半是鍵名過時或改寫後遺留，值得人工回頭確認。"""
-    unused_ov = sorted(set(overrides) - used_ov)
+    """報告未被消費的人工真相（非阻斷）：cn_overrides / placeholder_exceptions
+    未命中鍵。這些多半是鍵名過時或改寫後遺留，值得人工回頭確認。"""
     unused_exc = sorted(set(exceptions) - used_exc)
     unused_cn_ov = sorted(
-        {k for k in (cn_overrides or {}) if not k.startswith("_")} - (used_cn_ov or set())
+        {k for k in cn_overrides if not k.startswith("_")} - used_cn_ov
     )
-    zero_fixes = [
-        post_fixes[i][0].pattern
-        for i in range(len(post_fixes))
-        if fix_hits.get(i, 0) == 0
-    ]
-    if not (unused_ov or unused_exc or unused_cn_ov or zero_fixes):
+    if not (unused_exc or unused_cn_ov):
         return
     print("\n⚠️ 未消費人工真相（非阻斷，請檢視是否過時或鍵名有誤）：")
     for k in unused_cn_ov:
         print(f"  cn_overrides 未命中：{k}")
-    for k in unused_ov:
-        print(f"  ch_overrides 未命中：{k}")
     for k in unused_exc:
         print(f"  placeholder_exceptions 未命中：{k}")
-    for p in zero_fixes:
-        print(f"  opencc_fixes 零命中 pattern：{p!r}")
 
 
 # ============================================================
@@ -761,7 +867,7 @@ def main() -> None:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 使用範例：
-  uv run scripts/build_mod.py build      # CH 再生 + 合併 + placeholder gate + 寫出（預設）
+  uv run scripts/build_mod.py build      # 合併 + corpus/worklist/placeholder gate + 寫出（預設）
   uv run scripts/build_mod.py manifest   # 生成 SUPPORTED_MODS.md + 更新 README 摘要
         """,
     )

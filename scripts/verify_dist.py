@@ -22,6 +22,10 @@ verify_dist.py — MinidoracatModLangFor42 的獨立 dist 驗證器（oracle）�
   [7] lua 防護       ：dist media/lua/client/*.lua 與 sources/lua/*/*.lua basename 集合、
                       逐檔 bytes 一致，且每檔含 getActivatedMods/isModActive 防護
   [8] As1 來源漂移   ：sources/as1_manifest.json 存在時重算 As1 CN 逐檔 sha256 比對
+  [9] CH corpus parity：dist CH 逐檔逐鍵值對 sources/ch/ 人工真相 corpus 逐字一致
+                      （原創鍵對 own_translations 的 ch；CH 已斷絕 OpenCC 機轉，值有真相源）
+  [10] sync worklist ：sources/ch_sync_worklist.json 未處理條目必須清空（上游變更未反映不得出貨）
+  [11] 已審鍵漂移     ：ch_review_state.json 已審鍵重算現行 CN hash，不符 → WARN（須重審）
 
 冪等子命令（獨立於預設全跑，供「連跑兩次 build 第二次零 diff」驗證）：
   --snapshot-dist <dir>：把 dist 現況（.json + language.txt + client/*.lua 的 sha256）存到 <dir>/dist_hashes.json
@@ -54,6 +58,16 @@ _GRAMMAR = re.compile(r"%%|%\.\d+f|%\d+|%[sdi]")
 
 # lua 防護規則：每個 client lua 必須含這兩個 API 之一（未啟用目標 MOD 即 no-op）。
 _LUA_GUARD = re.compile(rb"getActivatedMods|isModActive")
+
+# ASCII 標籤（<LINE>、<br>、<RGB:...>）multiset 比對：builder 契約含標籤層，
+# oracle 獨立實作對齊。角括號內容含 CJK 者是翻譯文字（如 <吱吱声>），不算標籤。
+_TAG_RE = re.compile(r"<[^<>]+>")
+_TAG_CJK_RE = re.compile(r"[㐀-鿿豈-﫿]")
+
+
+def extract_tags(value: str) -> list[str]:
+    """抽出值裡的 ASCII 標籤（排除含 CJK 的假標籤）。"""
+    return [t for t in _TAG_RE.findall(value) if not _TAG_CJK_RE.search(t)]
 
 DETAIL_CAP = 20  # 每項失敗明細上限
 
@@ -216,6 +230,62 @@ def _load_own_mods(repo: str) -> dict[str, dict]:
                     raise ValueError(f"原創 mod 重複鍵且值不一致：{fname}|{key}")
                 bucket[key] = {"cn": value}
     return entries
+
+
+def _load_ch_corpus(repo: str) -> dict[str, dict]:
+    """讀 sources/ch/*.json（CH 人工真相 corpus）。缺目錄/解析失敗 → 擲例外（呼叫端轉 FAIL）。"""
+    d = os.path.join(repo, "sources", "ch")
+    if not os.path.isdir(d):
+        raise ValueError("sources/ch 目錄不存在（CH corpus 為人工真相層，必要）")
+    out, errors = _load_json_dir(d)
+    if errors:
+        raise ValueError("; ".join(errors))
+    return out
+
+
+def _load_worklist(repo: str) -> dict[str, object]:
+    """讀 sources/ch_sync_worklist.json 的待辦條目（不含 | 的鍵為說明欄）。
+
+    受版控狀態檔、值變更防線的單點：**缺檔即擲例外**（呼叫端轉 FAIL）——
+    「待辦清空」以「僅剩說明欄的物件」表示，絕不以「檔案不存在」表示。
+    """
+    path = os.path.join(repo, "sources", "ch_sync_worklist.json")
+    if not os.path.isfile(path):
+        raise ValueError(
+            "ch_sync_worklist.json 不存在（受版控狀態檔，缺失＝值變更防線被移除，"
+            "請自版控還原）"
+        )
+    with open(path, "r", encoding="utf-8-sig") as f:
+        data = json.load(f)
+    if not isinstance(data, dict):
+        raise ValueError("ch_sync_worklist.json 頂層非物件")
+    return {k: v for k, v in data.items() if "|" in k}
+
+
+_HASH16_RE = re.compile(r"^[0-9a-f]{16}$")
+
+
+def _load_review_state(repo: str) -> dict[str, str]:
+    """讀 sources/ch_review_state.json（已審鍵 → 審定當下有效 CN 值 sha256[:16]）。
+
+    受版控真相檔：缺檔／schema 不符（非字串、非 16 位 hex）→ 擲例外轉 FAIL，
+    不得靜默丟棄條目（丟棄＝該鍵漂移偵測無聲消失）。
+    """
+    path = os.path.join(repo, "sources", "ch_review_state.json")
+    if not os.path.isfile(path):
+        raise ValueError("ch_review_state.json 不存在（受版控真相檔，請自版控還原）")
+    with open(path, "r", encoding="utf-8-sig") as f:
+        data = json.load(f)
+    if not isinstance(data, dict):
+        raise ValueError("ch_review_state.json 頂層非物件")
+    out: dict[str, str] = {}
+    for k, v in data.items():
+        if "|" not in k:
+            continue  # _comment 等說明欄
+        if not isinstance(v, str) or not _HASH16_RE.match(v):
+            raise ValueError(f"ch_review_state.json 條目 {k!r} 非 16 位 hex hash：{v!r}")
+        out[k] = v
+    return out
 
 
 def _parse_language_txt(path: str) -> dict[str, str]:
@@ -429,10 +499,11 @@ def check_placeholder(
     """[4] placeholder 三層把關（登記例外鍵豁免 FAIL，但登記安全值本身仍受檢）。
 
     FAIL：
-      * format-token 值殘留字面 `%.`（JDK format crash 簽名）——CN/CH 任一側出現即 FAIL，
-        即使兩邊對稱也不放行。
-      * grammar token multiset 不一致（%1/%s/%.1f/%% 等被增刪改）。
-    WARN：可疑（非 grammar）% 的**數量**在 CN/CH 不一致（純字面 % 的 OpenCC 轉換誤差）。
+      * format-token 值殘留字面 `%.`（JDK format crash 簽名）——CN 側僅未登記例外鍵檢；
+        CH 側**一律檢**（CH 為獨立人工資料，登記例外不豁免 CH 安全）。
+      * grammar token multiset 不一致（%1/%s/%.1f/%% 等被增刪改）——例外鍵不豁免。
+      * ASCII 標籤 multiset 不一致（<LINE>/<br>/<RGB:...> 被增刪改）——例外鍵不豁免。
+    WARN：可疑（非 grammar）% 的**數量**在 CN/CH 不一致（純字面 % 的值層差異）。
     """
     cn_files, _ = _load_json_dir(dist_cn)
     ch_files, _ = _load_json_dir(dist_ch)
@@ -454,31 +525,116 @@ def check_placeholder(
         cn, ch = cn_files[fname], ch_files[fname]
         for key in sorted(set(cn) & set(ch)):
             exempt = f"{fname}|{key}" in exceptions
-            cg, cs = extract_tokens(cn[key]) if isinstance(cn[key], str) else ([], [])
-            hg, hs = extract_tokens(ch[key]) if isinstance(ch[key], str) else ([], [])
+            cn_v = cn[key] if isinstance(cn[key], str) else ""
+            ch_v = ch[key] if isinstance(ch[key], str) else ""
+            cg, cs = extract_tokens(cn_v)
+            hg, hs = extract_tokens(ch_v)
 
-            if not exempt:
-                # crash 簽名：CN/CH 各自獨立判定（對稱也 FAIL）
-                if has_crash_signature(cn[key]):
-                    fail.append(
-                        f"{fname}: 鍵 {key!r} CN 值含 format token 且殘留 '%.'（crash 簽名）"
-                        f" | {cn[key]!r}"
-                    )
-                if has_crash_signature(ch[key]):
-                    fail.append(
-                        f"{fname}: 鍵 {key!r} CH 值含 format token 且殘留 '%.'（crash 簽名）"
-                        f" | {ch[key]!r}"
-                    )
-                if Counter(cg) != Counter(hg):
-                    fail.append(
-                        f"{fname}: 鍵 {key!r} token 不符 | CN={sorted(cg)} CH={sorted(hg)}"
-                    )
+            # 登記例外僅豁免 CN 側崩潰簽名（安全值本身已於上方獨立驗過）；
+            # CH 為獨立人工資料，崩潰簽名／token／標籤 multiset 一律照檢。
+            if not exempt and has_crash_signature(cn[key]):
+                fail.append(
+                    f"{fname}: 鍵 {key!r} CN 值含 format token 且殘留 '%.'（crash 簽名）"
+                    f" | {cn[key]!r}"
+                )
+            if has_crash_signature(ch[key]):
+                fail.append(
+                    f"{fname}: 鍵 {key!r} CH 值含 format token 且殘留 '%.'（crash 簽名）"
+                    f" | {ch[key]!r}"
+                )
+            if Counter(cg) != Counter(hg):
+                fail.append(
+                    f"{fname}: 鍵 {key!r} token 不符 | CN={sorted(cg)} CH={sorted(hg)}"
+                )
+            ct, ht = extract_tags(cn_v), extract_tags(ch_v)
+            if Counter(ct) != Counter(ht):
+                fail.append(
+                    f"{fname}: 鍵 {key!r} 標籤不符 | CN={sorted(ct)} CH={sorted(ht)}"
+                )
             # WARN 對例外鍵仍照列（只是不影響退出碼）
             if len(cs) != len(hs):
                 warn.append(
                     f"{fname}: 鍵 {key!r} 可疑 % 數量 CN={len(cs)}({cs}) CH={len(hs)}({hs})"
                 )
     return (not fail), fail, warn
+
+
+def check_ch_corpus_parity(
+    repo: str, dist_ch: str, own: dict[str, dict]
+) -> tuple[bool, list[str]]:
+    """[9] dist CH 逐檔逐鍵值對 sources/ch corpus 逐字一致（雙向）。
+
+    取值優先序同 build：corpus（As1/own-mod 鍵）優先，own_translations 的 ch 其次；
+    兩者皆無＝無真相源 FAIL。corpus 鍵未落地 dist 亦 FAIL。
+    """
+    corpus = _load_ch_corpus(repo)
+    dist, derr = _load_json_dir(dist_ch)
+    details: list[str] = [f"dist CH {e}" for e in derr]
+
+    for fname in sorted(dist):
+        cmap = corpus.get(fname, {})
+        for key in sorted(dist[fname]):
+            val = dist[fname][key]
+            if key in cmap:
+                if val != cmap[key]:
+                    details.append(
+                        f"{fname}: 鍵 {key!r} 值不符 corpus | dist={val!r} corpus={cmap[key]!r}"
+                    )
+            else:
+                spec = own.get(fname, {}).get(key)
+                own_ch = spec.get("ch") if isinstance(spec, dict) else None
+                if own_ch is None:
+                    details.append(f"{fname}: 鍵 {key!r} 無真相源（corpus 與原創層皆無）")
+                elif val != own_ch:
+                    details.append(
+                        f"{fname}: 原創鍵 {key!r} 值不符 own ch | dist={val!r} own={own_ch!r}"
+                    )
+    for fname in sorted(corpus):
+        dmap = dist.get(fname)
+        if dmap is None:
+            details.append(f"corpus 檔 {fname} 未出現在 dist CH")
+            continue
+        for key in sorted(set(corpus[fname]) - set(dmap)):
+            details.append(f"{fname}: corpus 鍵 {key!r} 未落地 dist CH")
+    return (not details), details
+
+
+def check_sync_worklist(repo: str) -> tuple[bool, list[str]]:
+    """[10] sync worklist 待辦必須清空（上游變更未反映到 corpus 不得出貨）。
+
+    自動對帳（與 build 端獨立實作同語意）：added 條目其鍵已落 corpus、
+    removed 條目其鍵已自 corpus 移除 → 已滿足不列；changed 一律列 FAIL
+    直到人工確認移除。corpus 無法載入時保守視為全部未滿足（fail-closed）。
+    """
+    wl = _load_worklist(repo)
+    try:
+        corpus = _load_ch_corpus(repo)
+    except Exception:  # noqa: BLE001 — corpus 壞掉由 [9] 報，此處保守全列
+        corpus = {}
+    details: list[str] = []
+    for k, v in sorted(wl.items()):
+        kind = v.get("kind") if isinstance(v, dict) else None
+        fname, _, key = k.partition("|")
+        present = key in corpus.get(fname, {})
+        if (kind == "added" and present) or (kind == "removed" and not present):
+            continue
+        details.append(f"未處理條目：{k}（{kind or '?'}）")
+    return (not details), details
+
+
+def check_review_drift(repo: str, dist_cn: str) -> tuple[bool, list[str], list[str]]:
+    """[11] 已審鍵 CN 漂移（WARN-only）：review_state 記錄 hash 對現行 dist CN 重算比對。"""
+    state = _load_review_state(repo)
+    cn_files, _ = _load_json_dir(dist_cn)
+    warn: list[str] = []
+    for skey in sorted(state):
+        fname, _, key = skey.partition("|")
+        val = cn_files.get(fname, {}).get(key)
+        if not isinstance(val, str):
+            warn.append(f"已審鍵 {skey!r} 已不在 dist CN（登記過時，請自 ch_review_state.json 移除）")
+        elif hashlib.sha256(val.encode("utf-8")).hexdigest()[:16] != state[skey]:
+            warn.append(f"已審鍵 {skey!r} 的 CN 已漂移（上游改文，請重審 CH 並更新 hash）")
+    return True, [], warn
 
 
 def check_language_txt(dist_cn: str, dist_ch: str) -> tuple[bool, list[str]]:
@@ -695,6 +851,18 @@ def run_all(paths: dict) -> int:
     ok6, d6 = check_language_txt(dist_cn, dist_ch)
     ok7, d7 = check_lua(repo, lua_client)
     ok8, d8, w8 = check_as1_drift(repo, as1_cn)
+    try:
+        ok9, d9 = check_ch_corpus_parity(repo, dist_ch, own)
+    except Exception as exc:  # noqa: BLE001 — corpus 壞掉直接判 FAIL
+        ok9, d9 = False, [f"corpus 無法載入（{exc}）"]
+    try:
+        ok10, d10 = check_sync_worklist(repo)
+    except Exception as exc:  # noqa: BLE001
+        ok10, d10 = False, [f"worklist 無法載入（{exc}）"]
+    try:
+        ok11, d11, w11 = check_review_drift(repo, dist_cn)
+    except Exception as exc:  # noqa: BLE001
+        ok11, d11, w11 = False, [f"review_state 無法載入（{exc}）"], []
 
     rows = [
         ("1", "CN 逐檔 parity", ok1, d1, w1),
@@ -704,6 +872,9 @@ def run_all(paths: dict) -> int:
         ("6", "language.txt", ok6, d6, []),
         ("7", "lua 防護", ok7, d7, []),
         ("8", "As1 來源漂移", ok8, d8, w8),
+        ("9", "CH corpus parity", ok9, d9, []),
+        ("10", "sync worklist", ok10, d10, []),
+        ("11", "已審鍵 CN 漂移（WARN-only）", ok11, d11, w11),
     ]
 
     n_pass = sum(1 for _, _, ok, _, _ in rows if ok)
