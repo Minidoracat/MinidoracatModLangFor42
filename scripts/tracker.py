@@ -52,6 +52,7 @@ TRACKER_STATE = PROJECT_ROOT / "tracker-state"
 WATCHLIST_JSON = TRACKER_STATE / "watchlist.json"
 TIMESTAMPS_JSON = TRACKER_STATE / "timestamps.json"
 EN_CORPUS_HASHES_JSON = TRACKER_STATE / "en_corpus_hashes.json"
+EN_TEXT_DIR = PROJECT_ROOT / "sources" / "en"  # EN 全文落地（大同步翻譯對照；rid 與 hash 檔一致）
 
 SOURCES = PROJECT_ROOT / "sources"
 ATTRIBUTION_INDEX_JSON = SOURCES / "attribution_index.json"
@@ -1072,7 +1073,7 @@ def cmd_run(args) -> int:
     corpus_state = load_corpus_hashes()
     attribution = load_attribution_keys()
 
-    plans, ok_ids, corpus_updates, failed_ids = _diff_changed(
+    plans, ok_ids, corpus_updates, failed_ids, en_texts = _diff_changed(
         changed, watchlist, steamcmd, install_dir, corpus_state, attribution
     )
     plans.extend(build_removed_plans(newly_removed, watchlist))
@@ -1090,10 +1091,11 @@ def cmd_run(args) -> int:
         print(f"  issue {plan['type']}/{plan['workshop_id']} → {action}")
 
     # 提交成功子集 state（僅成功處理者推進 last_success/time_updated）
-    _persist_state(ts, meta, ok_ids, removed, corpus_state, corpus_updates)
+    _persist_state(ts, meta, ok_ids, removed, corpus_state, corpus_updates, en_texts)
     status = commit_state_with_retry(
         [str(TIMESTAMPS_JSON.relative_to(PROJECT_ROOT)),
-         str(EN_CORPUS_HASHES_JSON.relative_to(PROJECT_ROOT))],
+         str(EN_CORPUS_HASHES_JSON.relative_to(PROJECT_ROOT)),
+         str(EN_TEXT_DIR.relative_to(PROJECT_ROOT))],
         f"chore(tracker): 更新追蹤器狀態 {now_iso()}",
     )
     if status == COMMIT_FAILED:
@@ -1104,11 +1106,14 @@ def cmd_run(args) -> int:
 
 
 def _diff_changed(changed, watchlist, steamcmd, install_dir, corpus_state, attribution):
-    """對變動 ids 下載+裁剪+抽取+diff，回 (plans, 成功 ids, corpus 更新, 失敗 ids)。真實模式用。
-    下載失敗/偽成功、或抽取語料為空的 ID 皆不進 ok_ids（不推進 time_updated、不建空 baseline）。"""
+    """對變動 ids 下載+裁剪+抽取+diff，回 (plans, 成功 ids, corpus 更新, 失敗 ids, EN 全文)。
+    下載失敗/偽成功、或抽取語料為空的 ID 皆不進 ok_ids（不推進 time_updated、不建空 baseline）。
+    EN 全文（{wid: {rid: value}}）供 _persist_state 落 sources/en/——tracker 為算 hash 本已
+    下載全文，順手入庫當大同步翻譯對照，免得在最糟時機重新取得 EN（steamcmd 有全滅日前科）。"""
     plans: list[dict] = []
     ok_ids: list[str] = []
     corpus_updates: dict[str, dict] = {}
+    en_texts: dict[str, dict[str, str]] = {}
     failed_ids: list[str] = []
     items = watchlist.get("items", {})
     for wid in changed:
@@ -1139,6 +1144,11 @@ def _diff_changed(changed, watchlist, steamcmd, install_dir, corpus_state, attri
                     new_state["empty_corpus"] = True
                     print(f"  ℹ️ 語料為空，建空 baseline（疑似僅 B41 格式文本）：{wid}")
                 corpus_updates[wid] = new_state
+                if new_records:
+                    en_texts[wid] = {
+                        f"{kind}|{relpath}|{key}": value
+                        for kind, relpath, key, value in sorted(new_records)
+                    }
                 if plan:
                     plans.append(plan)
         except ValueError as exc:  # 單一模組語料異常不炸全場（成功子集照常推進，失敗者下輪重試）
@@ -1146,11 +1156,11 @@ def _diff_changed(changed, watchlist, steamcmd, install_dir, corpus_state, attri
             failed_ids.append(wid)
             continue
         ok_ids.append(wid)
-    return plans, ok_ids, corpus_updates, failed_ids
+    return plans, ok_ids, corpus_updates, failed_ids, en_texts
 
 
-def _persist_state(ts, meta, ok_ids, removed, corpus_state, corpus_updates):
-    """把成功子集寫回狀態物件並落盤。"""
+def _persist_state(ts, meta, ok_ids, removed, corpus_state, corpus_updates, en_texts=None):
+    """把成功子集寫回狀態物件並落盤（含 sources/en/ EN 全文）。"""
     items = ts.setdefault("items", {})
     ok_set = set(ok_ids) | set(removed)
     for wid, entry in meta.items():
@@ -1167,6 +1177,10 @@ def _persist_state(ts, meta, ok_ids, removed, corpus_state, corpus_updates):
     corpus_state["schema_version"] = SCHEMA_VERSION
     corpus_state["extractor_schema"] = EXTRACTOR_SCHEMA
     write_json(EN_CORPUS_HASHES_JSON, corpus_state)
+    # EN 全文落受版控正式目錄（非 _dl 暫存）；只寫成功處理的 wid，逐 mod 一檔
+    for wid, texts in (en_texts or {}).items():
+        if texts:
+            write_json(EN_TEXT_DIR / f"{wid}.json", texts)
 
 
 # ============================================================
@@ -1212,7 +1226,7 @@ def cmd_diff(args) -> int:
     attribution = load_attribution_keys()
     install_dir = resolve_install_dir(args.install_dir)  # 限 tracker scratch root，外部路徑拒絕
     changed_ids = changed_data.get("changed", [])
-    plans, ok_ids, corpus_updates, failed_ids = _diff_changed(
+    plans, ok_ids, corpus_updates, failed_ids, en_texts = _diff_changed(
         changed_ids, watchlist, Path(args.steamcmd),
         install_dir, corpus_state, attribution,
     )
@@ -1229,6 +1243,7 @@ def cmd_diff(args) -> int:
         "removed": changed_data.get("removed", []),
         "meta": changed_data.get("meta", {}),
         "corpus_updates": corpus_updates,
+        "en_texts": en_texts,
         "failed_ids": failed_ids,
     }
     out_path = Path(args.out) if args.out else TRACKER_STATE / "_diffs.json"
@@ -1260,11 +1275,12 @@ def cmd_issue(args) -> int:
     corpus_state = load_corpus_hashes()
     _persist_state(
         ts, diffs.get("meta", {}), diffs.get("ok_ids", []), diffs.get("removed", []),
-        corpus_state, diffs.get("corpus_updates", {}),
+        corpus_state, diffs.get("corpus_updates", {}), diffs.get("en_texts", {}),
     )
     status = commit_state_with_retry(
         [str(TIMESTAMPS_JSON.relative_to(PROJECT_ROOT)),
-         str(EN_CORPUS_HASHES_JSON.relative_to(PROJECT_ROOT))],
+         str(EN_CORPUS_HASHES_JSON.relative_to(PROJECT_ROOT)),
+         str(EN_TEXT_DIR.relative_to(PROJECT_ROOT))],
         f"chore(tracker): 更新追蹤器狀態 {now_iso()}",
     )
     if status == COMMIT_FAILED:
