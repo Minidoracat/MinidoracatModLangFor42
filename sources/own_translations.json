@@ -2,6 +2,238 @@
  "_comment": "原創翻譯層：上游模組自帶 EN 文本但 As1 未收錄的鍵。人工真相檔（手編或工作流生成後人工審核）。",
  "_usage": "schema：entries.<檔名>.<鍵> = {en, ch, cn}。en=擷取當時上游原文（供過時比對）；ch=直寫繁中（不經 OpenCC）；cn=對應簡中。與 As1 同鍵時 As1 優先，build 會提示退役該條目。",
  "entries": {
+  "ContextMenu.json": {
+   "ContextMenu_ClusterBarrel_ClusterInfo": {
+    "en": "Cluster Info",
+    "ch": "串聯資訊",
+    "cn": "串联信息"
+   },
+   "ContextMenu_FuelPumpNotMissingIsBroken": {
+    "en": "This Fuel Pump is Broken Now",
+    "ch": "這把油槍現在已損壞",
+    "cn": "这把油枪现在已损坏"
+   },
+   "ContextMenu_FuelPumpNotMissingIsReturned": {
+    "en": "This Fuel Pump is Not Missing Anymore",
+    "ch": "這把油槍不再遺失",
+    "cn": "这把油枪不再缺失"
+   },
+   "ContextMenu_FuelPumpTHE": {
+    "en": "the fuel station",
+    "ch": "加油站",
+    "cn": "加油站"
+   },
+   "ContextMenu_INV": {
+    "en": "Invisible",
+    "ch": "隱藏",
+    "cn": "隐藏"
+   },
+   "ContextMenu_LargePropaneTankEmpty": {
+    "en": "Large Propane Tank is Empty",
+    "ch": "大型丙烷罐已空",
+    "cn": "大型丙烷罐已空"
+   },
+   "ContextMenu_RefillPropaneTank": {
+    "en": "Refill From Large Propane Tank",
+    "ch": "從大型丙烷罐補充",
+    "cn": "从大型丙烷罐补充"
+   },
+   "ContextMenu_TTF_PickUpSleepingBag": {
+    "en": "Pick Up Sleeping Bag",
+    "ch": "收起睡袋",
+    "cn": "收起睡袋"
+   },
+   "ContextMenu_TTF_PickUpTent": {
+    "en": "Pick Up Tent",
+    "ch": "收起帳篷",
+    "cn": "收起帐篷"
+   },
+   "ContextMenu_TTF_ReplaceGasMaskFilter": {
+    "en": "Replace Gas Mask Filter",
+    "ch": "更換防毒面具濾芯",
+    "cn": "更换防毒面具滤芯"
+   },
+   "ContextMenu_TTF_ReplaceImprovisedGasMaskRag": {
+    "en": "Replace Rag",
+    "ch": "更換濾布",
+    "cn": "更换滤布"
+   },
+   "ContextMenu_TTF_ReplaceRespiratorFilters": {
+    "en": "Replace Respirator Filters",
+    "ch": "更換防毒面罩濾芯",
+    "cn": "更换防毒面罩滤芯"
+   },
+   "ContextMenu_TTF_SetSleepingBag": {
+    "en": "Set Sleeping Bag",
+    "ch": "鋪設睡袋",
+    "cn": "铺设睡袋"
+   },
+   "ContextMenu_TTF_SetTent": {
+    "en": "Set Tent",
+    "ch": "搭設帳篷",
+    "cn": "搭设帐篷"
+   },
+   "ContextMenu_TWF_QoL_PourInto": {
+    "en": "Pour Into",
+    "ch": "倒入",
+    "cn": "倒入"
+   },
+   "ContextMenu_TWF_QoL_PourInto_All": {
+    "en": "Pour Into All Possible",
+    "ch": "倒入所有可用容器",
+    "cn": "倒入所有可用容器"
+   },
+   "ContextMenu_TWF_QoL_PourInto_Inventory": {
+    "en": "Inventory",
+    "ch": "物品欄",
+    "cn": "物品栏"
+   },
+   "ContextMenu_TWF_QoL_PourInto_Nearby": {
+    "en": "Nearby",
+    "ch": "附近",
+    "cn": "附近"
+   },
+   "ContextMenu_TWF_QoL_PourInto_NoTargets": {
+    "en": "No compatible fluid container found",
+    "ch": "找不到相容的液體容器",
+    "cn": "未找到兼容的液体容器"
+   },
+   "ContextMenu_TankWater_Debug": {
+    "en": "Tank Water - Debug",
+    "ch": "儲水箱 - 除錯",
+    "cn": "储水箱 - 调试"
+   },
+   "ContextMenu_TankWater_DebugAddWater": {
+    "en": "Add water",
+    "ch": "加水",
+    "cn": "加水"
+   },
+   "ContextMenu_TankWater_DebugAmount": {
+    "en": "Water amount",
+    "ch": "水量",
+    "cn": "水量"
+   },
+   "ContextMenu_TankWater_DebugCustomAmount": {
+    "en": "Custom amount",
+    "ch": "自訂數量",
+    "cn": "自定义数量"
+   },
+   "ContextMenu_VIS": {
+    "en": "Visible",
+    "ch": "顯示",
+    "cn": "显示"
+   },
+   "ContextMenu_WaterPipe_Corner": {
+    "en": "Corner",
+    "ch": "轉角管道",
+    "cn": "转角管道"
+   },
+   "ContextMenu_WaterPipe_Corner_Param": {
+    "en": "Corner %1",
+    "ch": "轉角管道 (%1)",
+    "cn": "转角管道 (%1)"
+   },
+   "ContextMenu_WaterPipe_Cross": {
+    "en": "Cross",
+    "ch": "十字管道",
+    "cn": "十字管道"
+   },
+   "ContextMenu_WaterPipe_EW": {
+    "en": "EW",
+    "ch": "東西向",
+    "cn": "东西向"
+   },
+   "ContextMenu_WaterPipe_East": {
+    "en": "east",
+    "ch": "東",
+    "cn": "东"
+   },
+   "ContextMenu_WaterPipe_IrrigationPipe": {
+    "en": "Irrigation Pipes",
+    "ch": "灌溉管道",
+    "cn": "灌溉管道"
+   },
+   "ContextMenu_WaterPipe_Line": {
+    "en": "Line",
+    "ch": "直管道",
+    "cn": "直管道"
+   },
+   "ContextMenu_WaterPipe_Line_Param": {
+    "en": "Line %1",
+    "ch": "直管道 (%1)",
+    "cn": "直管道 (%1)"
+   },
+   "ContextMenu_WaterPipe_Lines": {
+    "en": "Lines",
+    "ch": "直管道",
+    "cn": "直管道"
+   },
+   "ContextMenu_WaterPipe_NE": {
+    "en": "NE",
+    "ch": "東北",
+    "cn": "东北"
+   },
+   "ContextMenu_WaterPipe_NS": {
+    "en": "NS",
+    "ch": "南北向",
+    "cn": "南北向"
+   },
+   "ContextMenu_WaterPipe_NW": {
+    "en": "NW",
+    "ch": "西北",
+    "cn": "西北"
+   },
+   "ContextMenu_WaterPipe_North": {
+    "en": "north",
+    "ch": "北",
+    "cn": "北"
+   },
+   "ContextMenu_WaterPipe_PlacePipe": {
+    "en": "Place Irrigation Pipe",
+    "ch": "放置灌溉管道",
+    "cn": "放置灌溉管道"
+   },
+   "ContextMenu_WaterPipe_RemovePipe": {
+    "en": "Remove Irrigation Pipe",
+    "ch": "拆除灌溉管道",
+    "cn": "拆除灌溉管道"
+   },
+   "ContextMenu_WaterPipe_SE": {
+    "en": "SE",
+    "ch": "東南",
+    "cn": "东南"
+   },
+   "ContextMenu_WaterPipe_SW": {
+    "en": "SW",
+    "ch": "西南",
+    "cn": "西南"
+   },
+   "ContextMenu_WaterPipe_South": {
+    "en": "south",
+    "ch": "南",
+    "cn": "南"
+   },
+   "ContextMenu_WaterPipe_T": {
+    "en": "T",
+    "ch": "三通管道",
+    "cn": "三通管道"
+   },
+   "ContextMenu_WaterPipe_T_Param": {
+    "en": "T %1",
+    "ch": "三通管道 (%1)",
+    "cn": "三通管道 (%1)"
+   },
+   "ContextMenu_WaterPipe_West": {
+    "en": "west",
+    "ch": "西",
+    "cn": "西"
+   },
+   "IGUI_CraftingCategories_Mechanics": {
+    "en": "Mechanics",
+    "ch": "技工",
+    "cn": "技工"
+   }
+  },
   "Fluids.json": {
    "Fluid_Container_Aperol": {
     "en": "Aperol Bottle",
@@ -1020,6 +1252,31 @@
    }
   },
   "IG_UI.json": {
+   "IGUI_3DP_Context_Dismantle": {
+    "en": "Dismantle 3D Printer",
+    "ch": "拆除3D列印機",
+    "cn": "拆除3D打印机"
+   },
+   "IGUI_3DP_Context_DismantleRecycler": {
+    "en": "Dismantle Recycling Machine",
+    "ch": "拆除回收機",
+    "cn": "拆除回收机"
+   },
+   "IGUI_3DP_Msg_DismantleBusy": {
+    "en": "The machine cannot be dismantled while it is running.",
+    "ch": "機器運轉中無法拆除。",
+    "cn": "机器运行时无法拆除。"
+   },
+   "IGUI_3DP_Msg_DismantleOutputPending": {
+    "en": "Collect the machine's output before dismantling it.",
+    "ch": "拆除前請先取出機器中的產出物。",
+    "cn": "拆除前请先取出机器中的产出物。"
+   },
+   "IGUI_3DP_Search_Placeholder": {
+    "en": "Search object...",
+    "ch": "搜尋物品…",
+    "cn": "搜索物品…"
+   },
    "IGUI_Beard_BikerStache": {
     "en": "Biker Stache",
     "ch": "機車騎士鬍",
@@ -1089,6 +1346,21 @@
     "en": "Woodbury Stache",
     "ch": "伍德伯里鬍",
     "cn": "伍德伯里胡"
+   },
+   "IGUI_CraftingCategories_Armoring": {
+    "en": "Armoring",
+    "ch": "裝甲",
+    "cn": "装甲"
+   },
+   "IGUI_CraftingCategories_Mechanical": {
+    "en": "Mechanical",
+    "ch": "機械",
+    "cn": "机械"
+   },
+   "IGUI_CraftingCategories_Recycling": {
+    "en": "Recycling",
+    "ch": "回收",
+    "cn": "回收"
    },
    "IGUI_PhunZones_AddRegion": {
     "en": "Add Region",
@@ -1330,6 +1602,21 @@
     "ch": "野生草藥",
     "cn": "野生草药"
    },
+   "IGUI_VehicleName76chevyBlazer": {
+    "en": "'76 Chevrolet K5 Blazer",
+    "ch": "76款雪佛蘭K5開拓者",
+    "cn": "76款雪佛兰K5开拓者"
+   },
+   "IGUI_VehicleNameTodoCaserito": {
+    "en": "Everything Homemade Truck",
+    "ch": "Todo Caserito 家常料理廂式貨車",
+    "cn": "Todo Caserito 家常料理厢式货车"
+   },
+   "IGUI_VehicleNameVacalinStepVan": {
+    "en": "Vacalin Truck",
+    "ch": "Vacalin 廂式貨車",
+    "cn": "Vacalin 厢式货车"
+   },
    "IGUI_VehiclePartCH76SpareTireBed": {
     "en": "Spare Tire Bed",
     "ch": "貨箱備胎",
@@ -1340,30 +1627,287 @@
     "ch": "車頂備胎",
     "cn": "车顶备胎"
    },
-   "IGUI_3DP_Context_Dismantle": {
-    "en": "Dismantle 3D Printer",
-    "ch": "拆除3D列印機",
-    "cn": "拆除3D打印机"
+   "IGUI_WaterPipe_EnoughPipeBack": {
+    "en": "I got enough pipes back",
+    "ch": "我拿回了足夠的管道",
+    "cn": "我拿回了足够的管道"
    },
-   "IGUI_3DP_Context_DismantleRecycler": {
-    "en": "Dismantle Recycling Machine",
-    "ch": "拆除回收機",
-    "cn": "拆除回收机"
+   "IGUI_WaterPipe_NoMorePipe": {
+    "en": "No more pipes",
+    "ch": "沒有管道了",
+    "cn": "没有管道了"
    },
-   "IGUI_3DP_Msg_DismantleBusy": {
-    "en": "The machine cannot be dismantled while it is running.",
-    "ch": "機器運轉中無法拆除。",
-    "cn": "机器运行时无法拆除。"
+   "IGUI_WaterPipe_RecoverPipeProgress": {
+    "en": "I got one pipe back, %1 more before I get the whole back",
+    "ch": "我拿回了一根管道, 還差 %1 根就能全部拿回",
+    "cn": "我拿回了一根管道, 还差 %1 根就能全部拿回"
    },
-   "IGUI_3DP_Msg_DismantleOutputPending": {
-    "en": "Collect the machine's output before dismantling it.",
-    "ch": "拆除前請先取出機器中的產出物。",
-    "cn": "拆除前请先取出机器中的产出物。"
+   "IGUI_WaterPipe_WaterAmount": {
+    "en": "barrel water amount = %1",
+    "ch": "水桶水量 = %1",
+    "cn": "水桶水量 = %1"
+   }
+  },
+  "ItemName.json": {
+   "Base.10UziColtSMGMag": {
+    "en": "10rd Modified Uzi/Colt Model 635 Magazine (9mm)",
+    "ch": "Uzi/柯爾特635型10發改裝彈匣 (9mm)",
+    "cn": "Uzi/柯尔特635型10发改装弹匣 (9mm)"
    },
-   "IGUI_3DP_Search_Placeholder": {
-    "en": "Search object...",
-    "ch": "搜尋物品…",
-    "cn": "搜索物品…"
+   "Base.20M16AR180Mag": {
+    "en": "20rd Modified AR-15/AR-180 Magazine (.223 Rem)",
+    "ch": "AR-15/AR-180 20發改裝彈匣 (.223 Rem)",
+    "cn": "AR-15/AR-180 20发改装弹匣 (.223 Rem)"
+   },
+   "Base.30M16AR180Mag": {
+    "en": "30rd Modified AR-15/AR-180 Magazine (.223 Rem)",
+    "ch": "AR-15/AR-180 30發改裝彈匣 (.223 Rem)",
+    "cn": "AR-15/AR-180 30发改装弹匣 (.223 Rem)"
+   },
+   "Base.40M16AR180Mag": {
+    "en": "40rd Modified AR-180/AR-15 Magazine (.223 Rem)",
+    "ch": "AR-180/AR-15 40發改裝彈匣 (.223 Rem)",
+    "cn": "AR-180/AR-15 40发改装弹匣 (.223 Rem)"
+   },
+   "Base.40UziColtSMGMag": {
+    "en": "40rd Modified Uzi/Colt Model 635 Magazine (9mm)",
+    "ch": "Uzi/柯爾特635型40發改裝彈匣 (9mm)",
+    "cn": "Uzi/柯尔特635型40发改装弹匣 (9mm)"
+   },
+   "Base.45UziColtSMGMag": {
+    "en": "25rd Modified Uzi/Colt 635 Magazine (9mm)",
+    "ch": "Uzi/柯爾特635型25發改裝彈匣 (9mm)",
+    "cn": "Uzi/柯尔特635型25发改装弹匣 (9mm)"
+   },
+   "Base.76chevyBlazerBedCap2": {
+    "en": "76 Chevrolet Blazer Bed Cap",
+    "ch": "76款雪佛蘭開拓者貨廂蓋",
+    "cn": "76款雪佛兰开拓者货厢盖"
+   },
+   "Base.76chevyBlazerTrunkDoor2": {
+    "en": "76 Chevrolet Blazer Trunk Lid",
+    "ch": "76款雪佛蘭開拓者後車廂蓋",
+    "cn": "76款雪佛兰开拓者后备箱盖"
+   },
+   "Base.Book_Fake": {
+    "en": "Book",
+    "ch": "書本",
+    "cn": "书本"
+   },
+   "Base.CrudeDR200AutoTrigger": {
+    "en": "Crude Auto Trigger (Full-Auto Only) (K2/DR200)",
+    "ch": "簡陋自動扳機 (僅全自動) (K2/DR200)",
+    "cn": "简陋自动扳机 (仅全自动) (K2/DR200)"
+   },
+   "Base.CrudeFNCAutoTrigger": {
+    "en": "Crude Auto Trigger (Full-Auto Only) (FNC)",
+    "ch": "簡陋自動扳機 (僅全自動) (FNC)",
+    "cn": "简陋自动扳机 (仅全自动) (FNC)"
+   },
+   "Base.CrudeK1A1AutoTrigger": {
+    "en": "Crude Auto Trigger (Full-Auto Only) (K1A/K1A1)",
+    "ch": "簡陋自動扳機 (僅全自動) (K1A/K1A1)",
+    "cn": "简陋自动扳机 (仅全自动) (K1A/K1A1)"
+   },
+   "Base.DR200": {
+    "en": "Daewoo DR200",
+    "ch": "大宇DR200半自動步槍",
+    "cn": "大宇DR200半自动步枪"
+   },
+   "Base.DR200Stock": {
+    "en": "Daewoo DR200 Sporter Stock",
+    "ch": "大宇DR200運動型槍托",
+    "cn": "大宇DR200运动型枪托"
+   },
+   "Base.DR200Trigger": {
+    "en": "Trigger Parts (Semi) (K2/DR200)",
+    "ch": "扳機零件 (半自動) (K2/DR200)",
+    "cn": "扳机零件 (半自动) (K2/DR200)"
+   },
+   "Base.DWK1A": {
+    "en": "Daewoo K1A",
+    "ch": "大宇K1A卡賓槍",
+    "cn": "大宇K1A卡宾枪"
+   },
+   "Base.DWK1A1": {
+    "en": "Daewoo K1A1",
+    "ch": "大宇K1A1卡賓槍",
+    "cn": "大宇K1A1卡宾枪"
+   },
+   "Base.DWK2": {
+    "en": "Daewoo K2",
+    "ch": "大宇K2自動步槍",
+    "cn": "大宇K2自动步枪"
+   },
+   "Base.FNC": {
+    "en": "FN FNC",
+    "ch": "赫斯塔爾FNC自動步槍",
+    "cn": "赫斯塔尔FNC自动步枪"
+   },
+   "Base.FNCAutoTrigger": {
+    "en": "Select Fire Trigger Parts (Semi/Full-Auto) (FNC)",
+    "ch": "扳機零件 (半自動/全自動) (FNC)",
+    "cn": "扳机零件 (半自动/全自动) (FNC)"
+   },
+   "Base.FNCBurstTrigger": {
+    "en": "Select Fire Trigger Parts (Semi/Burst/Full-Auto) (FNC)",
+    "ch": "扳機零件 (半自動/點射/全自動) (FNC)",
+    "cn": "扳机零件 (半自动/点射/全自动) (FNC)"
+   },
+   "Base.FNCFlashHider": {
+    "en": "FNC Flash Hider (.22 cal)",
+    "ch": "FNC消焰器 (.22口徑)",
+    "cn": "FNC消焰器 (.22口径)"
+   },
+   "Base.FNCParaFolderIn": {
+    "en": "FNC Paratrooper Stock",
+    "ch": "FNC傘兵槍托",
+    "cn": "FNC伞兵枪托"
+   },
+   "Base.FNCParaFolderOut": {
+    "en": "FNC Paratrooper Stock",
+    "ch": "FNC傘兵槍托",
+    "cn": "FNC伞兵枪托"
+   },
+   "Base.FNCScopeMount": {
+    "en": "Scope Mount (FNC)",
+    "ch": "瞄準鏡底座 (FNC)",
+    "cn": "瞄准镜底座 (FNC)"
+   },
+   "Base.FNCStock": {
+    "en": "FNC Fixed Stock",
+    "ch": "FNC固定槍托",
+    "cn": "FNC固定枪托"
+   },
+   "Base.FNCTrigger": {
+    "en": "Trigger Parts (Semi) (FNC)",
+    "ch": "扳機零件 (半自動) (FNC)",
+    "cn": "扳机零件 (半自动) (FNC)"
+   },
+   "Base.FabricRoll_Burlap": {
+    "en": "Burlap Fabric Roll",
+    "ch": "粗麻布捲",
+    "cn": "粗麻布卷"
+   },
+   "Base.FabricRoll_Kevlar": {
+    "en": "Kevlar Fabric Roll",
+    "ch": "凱夫拉布捲",
+    "cn": "凯夫拉布卷"
+   },
+   "Base.FabricRoll_Leather": {
+    "en": "Leather Fabric Roll",
+    "ch": "皮革布捲",
+    "cn": "皮革布卷"
+   },
+   "Base.FabricRoll_Rubber": {
+    "en": "Rubber Fabric Roll",
+    "ch": "橡膠布捲",
+    "cn": "橡胶布卷"
+   },
+   "Base.FabricRoll_Tarp": {
+    "en": "Tarp Fabric Roll",
+    "ch": "油布捲",
+    "cn": "油布卷"
+   },
+   "Base.FakeBook": {
+    "en": "Book",
+    "ch": "書本",
+    "cn": "书本"
+   },
+   "Base.K1A1Trigger": {
+    "en": "Trigger Parts (Semi) (K1A/K1A1)",
+    "ch": "扳機零件 (半自動) (K1A/K1A1)",
+    "cn": "扳机零件 (半自动) (K1A/K1A1)"
+   },
+   "Base.K1AFlashHider": {
+    "en": "K1A Flash Hider (.22 cal)",
+    "ch": "K1A消焰器 (.22口徑)",
+    "cn": "K1A消焰器 (.22口径)"
+   },
+   "Base.K1AFolderIn": {
+    "en": "Daewoo K1A Wire Stock",
+    "ch": "大宇K1A鋼絲槍托",
+    "cn": "大宇K1A钢丝枪托"
+   },
+   "Base.K1AFolderOut": {
+    "en": "Daweoo K1A Stock",
+    "ch": "大宇K1A鋼絲槍托",
+    "cn": "大宇K1A钢丝枪托"
+   },
+   "Base.K1ATrigger": {
+    "en": "Select Fire Trigger Parts (Semi/Full-Auto) (K1A/K1A1)",
+    "ch": "扳機零件 (半自動/全自動) (K1A/K1A1)",
+    "cn": "扳机零件 (半自动/全自动) (K1A/K1A1)"
+   },
+   "Base.K2AutoTrigger": {
+    "en": "Select Fire Trigger Parts (Semi/Full-Auto) (K2/DR200)",
+    "ch": "扳機零件 (半自動/全自動) (K2/DR200)",
+    "cn": "扳机零件 (半自动/全自动) (K2/DR200)"
+   },
+   "Base.K2FlashHider": {
+    "en": "K2 Flash Hider (.22 cal)",
+    "ch": "K2消焰器 (.22口徑)",
+    "cn": "K2消焰器 (.22口径)"
+   },
+   "Base.K2FolderIn": {
+    "en": "K2 Folding Stock",
+    "ch": "K2摺疊槍托",
+    "cn": "K2折叠枪托"
+   },
+   "Base.K2FolderOut": {
+    "en": "K2 Folding Stock",
+    "ch": "K2摺疊槍托",
+    "cn": "K2折叠枪托"
+   },
+   "Base.K2PistolGrip": {
+    "en": "Daewoo K2 Pistol Grip",
+    "ch": "大宇K2手槍握把",
+    "cn": "大宇K2手枪握把"
+   },
+   "Base.K2ScopeMount": {
+    "en": "Scope Mount (K2/DR200)",
+    "ch": "瞄準鏡底座 (K2/DR200)",
+    "cn": "瞄准镜底座 (K2/DR200)"
+   },
+   "Base.UziColtSMGMag": {
+    "en": "32rd Modified Uzi/Colt 635 Magazine (9mm)",
+    "ch": "Uzi/柯爾特635型32發改裝彈匣 (9mm)",
+    "cn": "Uzi/柯尔特635型32发改装弹匣 (9mm)"
+   },
+   "ItemName_Base.FabricRoll_Burlap": {
+    "en": "Burlap Fabric Roll",
+    "ch": "粗麻布捲",
+    "cn": "粗麻布卷"
+   },
+   "ItemName_Base.FabricRoll_Kevlar": {
+    "en": "Kevlar Fabric Roll",
+    "ch": "凱夫拉布捲",
+    "cn": "凯夫拉布卷"
+   },
+   "ItemName_Base.FabricRoll_Leather": {
+    "en": "Leather Fabric Roll",
+    "ch": "皮革布捲",
+    "cn": "皮革布卷"
+   },
+   "ItemName_Base.FabricRoll_Rubber": {
+    "en": "Rubber Fabric Roll",
+    "ch": "橡膠布捲",
+    "cn": "橡胶布卷"
+   },
+   "ItemName_Base.FabricRoll_Tarp": {
+    "en": "Tarp Fabric Roll",
+    "ch": "油布捲",
+    "cn": "油布卷"
+   },
+   "ItemName_WaterPipes.WaterPipe": {
+    "en": "Irrigation Pipe",
+    "ch": "灌溉管道",
+    "cn": "灌溉管道"
+   },
+   "WaterPipes.WaterPipe": {
+    "en": "Irrigation Pipe",
+    "ch": "灌溉管道",
+    "cn": "灌溉管道"
    }
   },
   "Print_Media.json": {
@@ -1408,6 +1952,83 @@
     "en": "Listerine keeps you minty fresh!",
     "ch": "李施德霖讓你口氣薄荷清新！",
     "cn": "李施德林让你口气薄荷清新！"
+   }
+  },
+  "Recipes.json": {
+   "76chevyBlazerMakeBedCover": {
+    "en": "Make 76 Chevrolet Blazer Bed Cover",
+    "ch": "製作76款雪佛蘭開拓者貨廂蓋",
+    "cn": "制作76款雪佛兰开拓者货厢盖"
+   },
+   "76chevyBlazerMakeTrunkLid": {
+    "en": "Make 76 Chevrolet Blazer Trunk Lid",
+    "ch": "製作76款雪佛蘭開拓者後車廂蓋",
+    "cn": "制作76款雪佛兰开拓者后备箱盖"
+   },
+   "76chevyKseriesMakeBackWindowArmor": {
+    "en": "Make 76 Chevrolet C/K Series Back Window Armor",
+    "ch": "製作76款雪佛蘭C/K系列後側窗裝甲",
+    "cn": "制作76款雪佛兰C/K系列后侧窗装甲"
+   },
+   "76chevyKseriesMakeRearWindshieldArmor": {
+    "en": "Make 76 Chevrolet C/K Series Rear Windshield Armor",
+    "ch": "製作76款雪佛蘭C/K系列後擋風裝甲",
+    "cn": "制作76款雪佛兰C/K系列后挡风装甲"
+   },
+   "AS_AssembleBurlapFabricRoll": {
+    "en": "Assemble Burlap Fabric Roll",
+    "ch": "組裝粗麻布捲",
+    "cn": "组装粗麻布卷"
+   },
+   "AS_AssembleTarpFabricRoll": {
+    "en": "Assemble Tarp Fabric Roll",
+    "ch": "組裝油布捲",
+    "cn": "组装油布卷"
+   },
+   "AS_SewDenimFabricRollFromRags": {
+    "en": "Sew Denim Fabric Roll From Rags",
+    "ch": "用牛仔布條縫製牛仔布捲",
+    "cn": "用牛仔布条缝制牛仔布卷"
+   },
+   "AS_SewKevlarFabricRollFromRags": {
+    "en": "Sew Kevlar Fabric Roll From Rags",
+    "ch": "用凱夫拉條縫製凱夫拉布捲",
+    "cn": "用凯夫拉条缝制凯夫拉布卷"
+   },
+   "AS_SewLeatherFabricRollFromRags": {
+    "en": "Sew Leather Fabric Roll From Rags",
+    "ch": "用皮革條縫製皮革布捲",
+    "cn": "用皮革条缝制皮革布卷"
+   },
+   "AS_SewRubberFabricRollFromRags": {
+    "en": "Sew Rubber Fabric Roll From Rags",
+    "ch": "用橡膠條縫製橡膠布捲",
+    "cn": "用橡胶条缝制橡胶布卷"
+   },
+   "Make Irrigation Pipe": {
+    "en": "Make Irrigation Pipe",
+    "ch": "製作灌溉管道",
+    "cn": "制作灌溉管道"
+   },
+   "Recipe_76chevyBlazerMakeBedCover": {
+    "en": "Make 76 Chevrolet Blazer Bed Cover",
+    "ch": "製作76款雪佛蘭開拓者貨廂蓋",
+    "cn": "制作76款雪佛兰开拓者货厢盖"
+   },
+   "Recipe_76chevyBlazerMakeTrunkLid": {
+    "en": "Make 76 Chevrolet Blazer Trunk Lid",
+    "ch": "製作76款雪佛蘭開拓者後車廂蓋",
+    "cn": "制作76款雪佛兰开拓者后备箱盖"
+   },
+   "Recipe_76chevyKseriesMakeBackWindowArmor": {
+    "en": "Make 76 Chevrolet C/K Series Back Window Armor",
+    "ch": "製作76款雪佛蘭C/K系列後側窗裝甲",
+    "cn": "制作76款雪佛兰C/K系列后侧窗装甲"
+   },
+   "Recipe_76chevyKseriesMakeRearWindshieldArmor": {
+    "en": "Make 76 Chevrolet C/K Series Rear Windshield Armor",
+    "ch": "製作76款雪佛蘭C/K系列後擋風裝甲",
+    "cn": "制作76款雪佛兰C/K系列后挡风装甲"
    }
   },
   "Sandbox.json": {
@@ -1806,6 +2427,211 @@
     "ch": "擅闖他人領地後遭到武力回擊前的緩衝時間",
     "cn": "擅闯他人领地后遭到武力回击前的缓冲时间"
    },
+   "Sandbox_ETW_Axeman": {
+    "en": "Ax-pert",
+    "ch": "斧頭專家",
+    "cn": "斧头专家"
+   },
+   "Sandbox_ETW_AxemanTrees": {
+    "en": "Ax-pert Trees Requirement",
+    "ch": "斧頭專家的砍樹要求",
+    "cn": "斧头专家的砍树要求"
+   },
+   "Sandbox_ETW_AxemanTrees_tooltip": {
+    "en": "The number of trees you have to cut down to get the Ax-pert trait",
+    "ch": "獲得斧頭專家特質需要砍伐的樹木數量",
+    "cn": "获得斧头专家特质需要砍伐的树木数量"
+   },
+   "Sandbox_ETW_BodyBiteContribution": {
+    "en": "Body Bite Contribution",
+    "ch": "身體咬傷貢獻值",
+    "cn": "身体咬伤贡献值"
+   },
+   "Sandbox_ETW_BodyBiteContribution_tooltip": {
+    "en": "Severity assigned to each current bite. The Injuries System adds this value every ten in-game minutes. The Healer System checks every minute and, if treatment stays unchanged, gains or loses this total value over ten minutes before applying its treatment multiplier. Any resulting wound infection is not counted separately.",
+    "ch": "分配給每處目前咬傷的嚴重度. 受傷系統每10遊戲分鐘加入一次此值. 恢復系統每分鐘檢查一次, 若治療狀態保持不變, 會在10分鐘內獲得或失去此總值, 然後再套用其治療倍率. 由此造成的傷口感染不會另外計算.",
+    "cn": "分配给每处当前咬伤的严重度. 受伤系统每10游戏分钟加入一次此值. 恢复系统每分钟检查一次, 若治疗状态保持不变, 会在10分钟内获得或失去此总值, 然后再应用其治疗倍率. 由此造成的伤口感染不会另外计算."
+   },
+   "Sandbox_ETW_BodyBurnContribution": {
+    "en": "Body Burn Contribution",
+    "ch": "身體燒傷貢獻值",
+    "cn": "身体烧伤贡献值"
+   },
+   "Sandbox_ETW_BodyBurnContribution_tooltip": {
+    "en": "Severity assigned to each current burn. The Injuries System adds this value every ten in-game minutes. The Healer System checks every minute and, if treatment stays unchanged, gains or loses this total value over ten minutes before applying its treatment multiplier.",
+    "ch": "分配給每處目前燒傷的嚴重度. 受傷系統每10遊戲分鐘加入一次此值. 恢復系統每分鐘檢查一次, 若治療狀態保持不變, 會在10分鐘內獲得或失去此總值, 然後再套用其治療倍率.",
+    "cn": "分配给每处当前烧伤的严重度. 受伤系统每10游戏分钟加入一次此值. 恢复系统每分钟检查一次, 若治疗状态保持不变, 会在10分钟内获得或失去此总值, 然后再应用其治疗倍率."
+   },
+   "Sandbox_ETW_BodyDeepWoundContribution": {
+    "en": "Body Deep Wound Contribution",
+    "ch": "身體深傷口貢獻值",
+    "cn": "身体深伤口贡献值"
+   },
+   "Sandbox_ETW_BodyDeepWoundContribution_tooltip": {
+    "en": "Severity assigned to each current deep wound or stitched deep wound. The Injuries System adds this value every ten in-game minutes for active deep wounds. The Healer System checks every minute and, if treatment stays unchanged, gains or loses this total value over ten minutes before applying its treatment multiplier.",
+    "ch": "分配給每處目前深傷口或已縫合深傷口的嚴重度. 受傷系統每10遊戲分鐘為未縫合的深傷口加入一次此值. 恢復系統每分鐘檢查一次, 若治療狀態保持不變, 會在10分鐘內獲得或失去此總值, 然後再套用其治療倍率.",
+    "cn": "分配给每处当前深伤口或已缝合深伤口的严重度. 受伤系统每10游戏分钟为未缝合的深伤口加入一次此值. 恢复系统每分钟检查一次, 若治疗状态保持不变, 会在10分钟内获得或失去此总值, 然后再应用其治疗倍率."
+   },
+   "Sandbox_ETW_BodyFractureContribution": {
+    "en": "Body Fracture Contribution",
+    "ch": "身體骨折貢獻值",
+    "cn": "身体骨折贡献值"
+   },
+   "Sandbox_ETW_BodyFractureContribution_tooltip": {
+    "en": "Severity assigned to each current fracture. The Injuries System adds this value every ten in-game minutes. The Healer System checks every minute and, if splint treatment stays unchanged, gains or loses this total value over ten minutes before applying its treatment multiplier.",
+    "ch": "分配給每處目前骨折的嚴重度. 受傷系統每10遊戲分鐘加入一次此值. 恢復系統每分鐘檢查一次, 若夾板治療狀態保持不變, 會在10分鐘內獲得或失去此總值, 然後再套用其治療倍率.",
+    "cn": "分配给每处当前骨折的严重度. 受伤系统每10游戏分钟加入一次此值. 恢复系统每分钟检查一次, 若夹板治疗状态保持不变, 会在10分钟内获得或失去此总值, 然后再应用其治疗倍率."
+   },
+   "Sandbox_ETW_BodyLacerationContribution": {
+    "en": "Body Laceration Contribution",
+    "ch": "身體撕裂傷貢獻值",
+    "cn": "身体撕裂伤贡献值"
+   },
+   "Sandbox_ETW_BodyLacerationContribution_tooltip": {
+    "en": "Severity assigned to each current laceration. The Injuries System adds this value every ten in-game minutes. The Healer System checks every minute and, if treatment stays unchanged, gains or loses this total value over ten minutes before applying its treatment multiplier.",
+    "ch": "分配給每處目前撕裂傷的嚴重度. 受傷系統每10遊戲分鐘加入一次此值. 恢復系統每分鐘檢查一次, 若治療狀態保持不變, 會在10分鐘內獲得或失去此總值, 然後再套用其治療倍率.",
+    "cn": "分配给每处当前撕裂伤的严重度. 受伤系统每10游戏分钟加入一次此值. 恢复系统每分钟检查一次, 若治疗状态保持不变, 会在10分钟内获得或失去此总值, 然后再应用其治疗倍率."
+   },
+   "Sandbox_ETW_BodyLodgedBulletContribution": {
+    "en": "Body Lodged Bullet Contribution",
+    "ch": "身體嵌入子彈貢獻值",
+    "cn": "身体嵌入子弹贡献值"
+   },
+   "Sandbox_ETW_BodyLodgedBulletContribution_tooltip": {
+    "en": "Severity assigned to each currently lodged bullet. The Injuries System adds this value every ten in-game minutes. The Healer System checks every minute and loses this total value over ten minutes before applying its neglected-wound multiplier. This is counted in addition to any associated deep wound.",
+    "ch": "分配給每顆目前嵌在體內的子彈的嚴重度. 受傷系統每10遊戲分鐘加入一次此值. 恢復系統每分鐘檢查一次, 會在10分鐘內失去此總值, 然後再套用其未處理傷口倍率. 此值會在相關深傷口的貢獻之外額外計算.",
+    "cn": "分配给每颗当前嵌在体内的子弹的严重度. 受伤系统每10游戏分钟加入一次此值. 恢复系统每分钟检查一次, 会在10分钟内失去此总值, 然后再应用其未处理伤口倍率. 此值会在相关深伤口的贡献之外额外计算."
+   },
+   "Sandbox_ETW_BodyLodgedGlassContribution": {
+    "en": "Body Lodged Glass Contribution",
+    "ch": "身體嵌入玻璃貢獻值",
+    "cn": "身体嵌入玻璃贡献值"
+   },
+   "Sandbox_ETW_BodyLodgedGlassContribution_tooltip": {
+    "en": "Severity assigned to each currently lodged piece of glass. The Injuries System adds this value every ten in-game minutes. The Healer System checks every minute and loses this total value over ten minutes before applying its neglected-wound multiplier. This is counted in addition to any associated deep wound.",
+    "ch": "分配給每片目前嵌在體內的玻璃渣的嚴重度. 受傷系統每10遊戲分鐘加入一次此值. 恢復系統每分鐘檢查一次, 會在10分鐘內失去此總值, 然後再套用其未處理傷口倍率. 此值會在相關深傷口的貢獻之外額外計算.",
+    "cn": "分配给每片当前嵌在体内的玻璃渣的严重度. 受伤系统每10游戏分钟加入一次此值. 恢复系统每分钟检查一次, 会在10分钟内失去此总值, 然后再应用其未处理伤口倍率. 此值会在相关深伤口的贡献之外额外计算."
+   },
+   "Sandbox_ETW_BodyScratchContribution": {
+    "en": "Body Scratch Contribution",
+    "ch": "身體刮傷貢獻值",
+    "cn": "身体刮伤贡献值"
+   },
+   "Sandbox_ETW_BodyScratchContribution_tooltip": {
+    "en": "Severity assigned to each current scratch. The Injuries System adds this value every ten in-game minutes. The Healer System checks every minute and, if treatment stays unchanged, gains or loses this total value over ten minutes before applying its treatment multiplier.",
+    "ch": "分配給每處目前刮傷的嚴重度. 受傷系統每10遊戲分鐘加入一次此值. 恢復系統每分鐘檢查一次, 若治療狀態保持不變, 會在10分鐘內獲得或失去此總值, 然後再套用其治療倍率.",
+    "cn": "分配给每处当前刮伤的严重度. 受伤系统每10游戏分钟加入一次此值. 恢复系统每分钟检查一次, 若治疗状态保持不变, 会在10分钟内获得或失去此总值, 然后再应用其治疗倍率."
+   },
+   "Sandbox_ETW_EatingSpeedSystem": {
+    "en": "Eating Speed System",
+    "ch": "進食速度系統",
+    "cn": "进食速度系统"
+   },
+   "Sandbox_ETW_EatingSpeedSystemCounter": {
+    "en": "Eating Speed System Counter",
+    "ch": "進食速度系統計數器",
+    "cn": "进食速度系统计数器"
+   },
+   "Sandbox_ETW_EatingSpeedSystemCounter_tooltip": {
+    "en": "Total base duration value from completed food-eating actions required to gain Fast Eater. Slow Eater can be lost after half this value. Interrupted actions do not count, and eating-speed traits do not change the amount recorded.",
+    "ch": "獲得快食者所需的已完成進食動作基礎時長總值. 達到此值的一半後即可失去慢食者. 被中斷的動作不計入, 且進食速度特質不會改變記錄的數值.",
+    "cn": "获得快食者所需的已完成进食动作基础时长总值. 达到此值的一半后即可失去慢食者. 被中断的动作不计入, 且进食速度特质不会改变记录的数值."
+   },
+   "Sandbox_ETW_EatingSpeedSystem_tooltip": {
+    "en": "Tracks the base duration values of completed food-eating actions. Interrupted eating actions, drinking, and smoking do not count. At half of the configured counter you can lose Slow Eater; at the full counter you can gain Fast Eater.",
+    "ch": "追蹤已完成進食動作的基礎時長值. 被中斷的進食動作, 飲水和吸菸皆不計入. 計數器達到設定值的一半時可失去慢食者; 達到全值時可獲得快食者.",
+    "cn": "追踪已完成进食动作的基础时长值. 被中断的进食动作, 饮水和吸烟皆不计入. 计数器达到设定值的一半时可失去慢食者; 达到全值时可获得快食者."
+   },
+   "Sandbox_ETW_FastEaterSpeed": {
+    "en": "Fast Eater time reduction (%)",
+    "ch": "快食者時間減少 (%)",
+    "cn": "快食者时间减少 (%)"
+   },
+   "Sandbox_ETW_FastEaterSpeed_tooltip": {
+    "en": "Percentage by which the Fast Eater trait reduces the time needed to eat food. Does not affect drinking or smoking. Set to 0 to disable the speed bonus.",
+    "ch": "快食者特質減少進食所需時間的百分比. 不影響飲水或吸菸. 設為0可停用此速度加成.",
+    "cn": "快食者特质减少进食所需时间的百分比. 不影响饮水或吸烟. 设为0可禁用此速度加成."
+   },
+   "Sandbox_ETW_HealerSystem": {
+    "en": "Healer System",
+    "ch": "恢復系統",
+    "cn": "恢复系统"
+   },
+   "Sandbox_ETW_HealerSystemCounter": {
+    "en": "Healer System Maximum Counter",
+    "ch": "恢復系統計數器上限",
+    "cn": "恢复系统计数器上限"
+   },
+   "Sandbox_ETW_HealerSystemCounter_tooltip": {
+    "en": "Sets both the positive and negative limit of the Healer System counter. Gain Slow Healer at -66%, lose Slow Healer at -33%, lose Fast Healer at +33%, and gain Fast Healer at +66%. Characters who start with Slow Healer or Fast Healer begin at the corresponding negative or positive maximum.",
+    "ch": "設定恢復系統計數器的正負上限. 在-66%獲得恢復慢, 在-33%失去恢復慢, 在+33%失去恢復快, 在+66%獲得恢復快. 開局帶有恢復慢或恢復快的角色會從對應的負向或正向最大值開始.",
+    "cn": "设定恢复系统计数器的正负上限. 在-66%获得缓慢恢复, 在-33%失去缓慢恢复, 在+33%失去快速恢复, 在+66%获得快速恢复. 开局带有缓慢恢复或快速恢复的角色会从对应的负向或正向最大值开始."
+   },
+   "Sandbox_ETW_HealerSystemNeedsAttentionMultiplier": {
+    "en": "Neglected Wound Multiplier",
+    "ch": "未處理傷口倍率",
+    "cn": "未处理伤口倍率"
+   },
+   "Sandbox_ETW_HealerSystemNeedsAttentionMultiplier_tooltip": {
+    "en": "Multiplies severity-weighted Healer System progress lost from wounds that need attention. The system checks every in-game minute and applies one tenth of the configured ten-minute total each time. Wound severity is configured with the shared Body Contribution settings.",
+    "ch": "對因需要處理的傷口而失去的恢復系統進度 (依嚴重度加權) 套用此倍率. 系統每遊戲分鐘檢查一次, 每次套用所設定10分鐘總值的十分之一. 傷口嚴重度由共用的身體貢獻值設定調整.",
+    "cn": "对因需要处理的伤口而失去的恢复系统进度 (依严重度加权) 应用此倍率. 系统每游戏分钟检查一次, 每次应用所设定10分钟总值的十分之一. 伤口严重度由共用的身体贡献值设置调整."
+   },
+   "Sandbox_ETW_HealerSystemProperlyTendedMultiplier": {
+    "en": "Properly Tended Wound Multiplier",
+    "ch": "妥善處理傷口倍率",
+    "cn": "妥善处理伤口倍率"
+   },
+   "Sandbox_ETW_HealerSystemProperlyTendedMultiplier_tooltip": {
+    "en": "Multiplies severity-weighted Healer System progress from properly tended wounds. The system checks every in-game minute and applies one tenth of the configured ten-minute total each time. Wound severity is configured with the shared Body Contribution settings.",
+    "ch": "對妥善處理的傷口帶來的恢復系統進度 (依嚴重度加權) 套用此倍率. 系統每遊戲分鐘檢查一次, 每次套用所設定10分鐘總值的十分之一. 傷口嚴重度由共用的身體貢獻值設定調整.",
+    "cn": "对妥善处理的伤口带来的恢复系统进度 (依严重度加权) 应用此倍率. 系统每游戏分钟检查一次, 每次应用所设定10分钟总值的十分之一. 伤口严重度由共用的身体贡献值设置调整."
+   },
+   "Sandbox_ETW_HealerSystem_tooltip": {
+    "en": "Controls Slow Healer and Fast Healer based on how consistently the character tends current wounds. Wound care is checked every in-game minute. Clean bandages, stitches, and valid splints add severity-weighted progress; dirty bandages, embedded glass or bullets, untreated bleeding, burns needing washing, uncovered wounds, and splintable fractures without a splint remove it. Contribution settings describe the total progress produced over ten in-game minutes when the wound state remains unchanged. Wound infection is not counted, and having no tracked wounds does not change the counter.",
+    "ch": "根據角色照料目前傷口的持續程度控制恢復慢和恢復快. 傷口照護每遊戲分鐘檢查一次. 乾淨的繃帶, 縫合和有效的夾板會增加依嚴重度加權的進度; 髒繃帶, 嵌入的玻璃或子彈, 未處理的流血, 需要清理的燒傷, 未包紮的傷口, 以及可上夾板卻未上夾板的骨折會減少進度. 貢獻值設定描述的是傷口狀態保持不變時, 10遊戲分鐘內產生的總進度. 傷口感染不計入, 沒有被追蹤的傷口時計數器也不會變化.",
+    "cn": "根据角色照料当前伤口的持续程度控制缓慢恢复和快速恢复. 伤口护理每游戏分钟检查一次. 干净的绷带, 缝合和有效的夹板会增加依严重度加权的进度; 脏绷带, 嵌入的玻璃或子弹, 未处理的流血, 需要清理的烧伤, 未包扎的伤口, 以及可上夹板却未上夹板的骨折会减少进度. 贡献值设置描述的是伤口状态保持不变时, 10游戏分钟内产生的总进度. 伤口感染不计入, 没有被追踪的伤口时计数器也不会变化."
+   },
+   "Sandbox_ETW_InjuriesSystem": {
+    "en": "Injuries System",
+    "ch": "受傷系統",
+    "cn": "受伤系统"
+   },
+   "Sandbox_ETW_InjuriesSystemCounter": {
+    "en": "Injuries System Maximum Counter",
+    "ch": "受傷系統計數器上限",
+    "cn": "受伤系统计数器上限"
+   },
+   "Sandbox_ETW_InjuriesSystemCounter_tooltip": {
+    "en": "Sets both the positive and negative limit of the Injuries System counter. Trait thresholds are percentages of this value: gain Thin Skinned at -66%, lose Thin Skinned at -33%, lose Thick Skinned at +33%, and gain Thick Skinned at +66%. Characters who start with Thin Skinned or Thick Skinned begin at the corresponding negative or positive maximum.",
+    "ch": "設定受傷系統計數器的正負上限. 特質門檻為此值的百分比: 在-66%獲得薄皮, 在-33%失去薄皮, 在+33%失去皮厚, 在+66%獲得皮厚. 開局帶有薄皮或皮厚的角色會從對應的負向或正向最大值開始.",
+    "cn": "设定受伤系统计数器的正负上限. 特质门槛为此值的百分比: 在-66%获得细皮嫩肉, 在-33%失去细皮嫩肉, 在+33%失去皮糙肉厚, 在+66%获得皮糙肉厚. 开局带有细皮嫩肉或皮糙肉厚的角色会从对应的负向或正向最大值开始."
+   },
+   "Sandbox_ETW_InjuriesSystemPassiveCounterDecay": {
+    "en": "Injury-free Counter Decay",
+    "ch": "無傷時計數器衰減",
+    "cn": "无伤时计数器衰减"
+   },
+   "Sandbox_ETW_InjuriesSystemPassiveCounterDecay_tooltip": {
+    "en": "How much is subtracted from the Injuries System counter every ten in-game minutes while the character has none of the tracked injuries.",
+    "ch": "角色沒有任何被追蹤的傷勢時, 每10遊戲分鐘從受傷系統計數器扣除的數值.",
+    "cn": "角色没有任何被追踪的伤势时, 每10游戏分钟从受伤系统计数器扣除的数值."
+   },
+   "Sandbox_ETW_InjuriesSystem_tooltip": {
+    "en": "Controls Thin Skinned and Thick Skinned based on the injuries your character sustains over time. Every ten minutes, each current tracked injury increases the counter by its configured contribution, fortifying the character over time. Having no tracked injuries instead decreases the counter. Wound infection does not contribute. The counter is clamped between the negative and positive maximum.<br>Thin Skinned is gained at -66%, Thin Skinned is lost at -33%, Thick Skinned is lost at +33%, and Thick Skinned is gained at +66%.",
+    "ch": "根據角色長期承受的傷勢控制薄皮和皮厚. 每10分鐘, 每處目前被追蹤的傷勢會依其所設貢獻值增加計數器, 使角色隨時間變得更強韌. 沒有被追蹤的傷勢時計數器則會減少. 傷口感染不計入貢獻. 計數器會被限制在負向與正向最大值之間.<br>在-66%獲得薄皮, 在-33%失去薄皮, 在+33%失去皮厚, 在+66%獲得皮厚.",
+    "cn": "根据角色长期承受的伤势控制细皮嫩肉和皮糙肉厚. 每10分钟, 每处当前被追踪的伤势会依其所设贡献值增加计数器, 使角色随时间变得更强韧. 没有被追踪的伤势时计数器则会减少. 伤口感染不计入贡献. 计数器会被限制在负向与正向最大值之间.<br>在-66%获得细皮嫩肉, 在-33%失去细皮嫩肉, 在+33%失去皮糙肉厚, 在+66%获得皮糙肉厚."
+   },
+   "Sandbox_ETW_SlowEaterSpeed": {
+    "en": "Slow Eater time increase (%)",
+    "ch": "慢食者時間增加 (%)",
+    "cn": "慢食者时间增加 (%)"
+   },
+   "Sandbox_ETW_SlowEaterSpeed_tooltip": {
+    "en": "Percentage by which the Slow Eater trait increases the time needed to eat food. Does not affect drinking or smoking. Set to 0 to disable the slowdown.",
+    "ch": "慢食者特質增加進食所需時間的百分比. 不影響飲水或吸菸. 設為0可停用此減速效果.",
+    "cn": "慢食者特质增加进食所需时间的百分比. 不影响饮水或吸烟. 设为0可禁用此减速效果."
+   },
    "Sandbox_ImprovedFarmingInfoWindow_CheckFertilizerCount": {
     "en": "Check Crops with Less Than 3 Fertilizer Uses (Yellow Square)",
     "ch": "檢查施肥次數少於 3 次的作物（黃色方框）",
@@ -2016,20 +2842,42 @@
     "ch": "附近物品欄",
     "cn": "附近物品栏"
    },
-   "Sandbox_ETW_Axeman": {
-    "en": "Ax-pert",
-    "ch": "斧頭專家",
-    "cn": "斧头专家"
+   "Sandbox_TWF_QOL_ForagingIgnoreCollateralSeeds": {
+    "en": "Foraging: Ignore collateral seeds",
+    "ch": "搜尋: 忽略附帶種子",
+    "cn": "搜寻: 忽略附带种子"
    },
-   "Sandbox_ETW_AxemanTrees": {
-    "en": "Ax-pert Trees Requirement",
-    "ch": "斧頭專家的砍樹要求",
-    "cn": "斧头专家的砍树要求"
+   "Sandbox_TWF_QOL_ForagingIgnoreCollateralSeeds_tooltip": {
+    "en": "When enabled, wild crops found through foraging still give the food item, but the automatically generated extra seed items are ignored.\nMultiplayer: controlled by the server and applied authoritatively.\nSingleplayer: Mod Options override this Sandbox setting.",
+    "ch": "啟用後, 透過搜尋找到的野生作物仍會給予食物本身, 但會忽略自動產生的額外種子物品.\n多人遊戲: 由伺服器控制並強制套用.\n單人遊戲: 模組選項會覆蓋此沙盒設定.",
+    "cn": "启用后, 通过搜寻找到的野生作物仍会给予食物本身, 但会忽略自动生成的额外种子物品.\n多人游戏: 由服务器控制并强制应用.\n单人游戏: 模组选项会覆盖此沙盒设置."
    },
-   "Sandbox_ETW_AxemanTrees_tooltip": {
-    "en": "The number of trees you have to cut down to get the Ax-pert trait",
-    "ch": "獲得斧頭專家特質需要砍伐的樹木數量",
-    "cn": "获得斧头专家特质需要砍伐的树木数量"
+   "Sandbox_TWF_QoL": {
+    "en": "TwisTonFire - QoL",
+    "ch": "TwisTonFire - 生活品質",
+    "cn": "TwisTonFire - 生活质量"
+   },
+   "Sandbox_TchernoLib": {
+    "en": "Mod TchernoLib",
+    "ch": "TchernoLib 模組",
+    "cn": "TchernoLib 模组"
+   },
+   "Sandbox_TchernoLib_UselessZombies": {
+    "en": "Useless Zombies",
+    "ch": "無用殭屍",
+    "cn": "无用丧尸"
+   },
+   "Sandbox_TchernoLib_UselessZombies_tooltip": {
+    "en": "When a zombie loses a target it's forbidden to attack (e.g. an infected player), it's marked useless to stop it re-detecting that target - but useless zombies also stop wandering. Off: zombies keep wandering normally, but may walk towards a forbidden target without attacking it.",
+    "ch": "當殭屍失去一個被禁止攻擊的目標時 (例如已感染的玩家), 會被標記為無用, 以免再次偵測到該目標 - 但無用殭屍也會停止遊蕩. 關閉: 殭屍照常遊蕩, 但可能會朝被禁止攻擊的目標走去而不攻擊它.",
+    "cn": "当丧尸失去一个被禁止攻击的目标时 (例如已感染的玩家), 会被标记为无用, 以防其再次侦测到该目标 - 但无用丧尸也会停止游荡. 关闭: 丧尸照常游荡, 但可能会朝被禁止攻击的目标走去而不攻击它."
+   }
+  },
+  "Tooltip.json": {
+   "Tooltip_Riser": {
+    "en": "Weapon furniture. Improves hit and critical chance, slows aiming time.",
+    "ch": "武器配件. 提高命中率和暴擊率, 但會增加瞄準時間.",
+    "cn": "武器配件. 提高命中率和暴击率, 但会增加瞄准时间."
    }
   },
   "UI.json": {
@@ -2073,15 +2921,400 @@
     "ch": "電壓表",
     "cn": "电压表"
    },
+   "UI_ETW_AffinitySystemEnabled": {
+    "en": "Affinity System is enabled",
+    "ch": "親和系統已啟用",
+    "cn": "亲和系统已启用"
+   },
+   "UI_ETW_Help_FAQ": {
+    "en": "<H1> FAQ <LINE> <LINE> <H2> Q: How do I stop/change the sound notifications? How do I resize window? <LINE> <TEXT> A: Esc -> Options -> Mod Options. There are also some other options sprinkled in there <LINE> <LINE> <H2> Q: How do I get trait XYZ? <LINE> <TEXT> A: Hover your mouse over UI elements. There are a lot of tooltips which explain stuff. If it's still not understandable, check sandbox tooltips. <LINE> <LINE> <H2> Q: Text in UI overlaps, how to fix? <LINE> <TEXT> A: There are some settings in Mod Options that might help. UI is designed to try to automatically account for different font sizes, but it is DESIGNED to be used with english language and Game Options -> User Interface (UI) -> Font Size set to 16px. Different languages and font sizes might cause some overlapping despite my efforts to make it auto-resize.",
+    "ch": "<H1> 常見問題 <LINE> <LINE> <H2> Q: 如何停止/更改聲音通知? 如何調整視窗大小? <LINE> <TEXT> A: Esc->選項->模組選項. 那裡也散布著一些其他選項 <LINE> <LINE> <H2> Q: 我要怎麼獲得某某特質? <LINE> <TEXT> A: 將滑鼠懸停在UI元素上. 有大量工具提示會解釋各種內容. 如果還是看不懂, 請檢視沙盒工具提示. <LINE> <LINE> <H2> Q: UI中的文字重疊, 如何修復? <LINE> <TEXT> A: 模組選項中有一些設定可能有幫助. UI設計上會嘗試自動適應不同字型大小, 但它是以英文語言以及遊戲選項->使用者介面 (UI)->字型大小設為16px為基準設計的. 儘管我已盡力讓它自動調整大小, 不同語言和字型大小仍可能導致部分重疊.",
+    "cn": "<H1> 常见问题 <LINE> <LINE> <H2> Q: 如何停止/更改声音通知? 如何调整窗口大小? <LINE> <TEXT> A: Esc->选项->模组选项. 那里也散布着一些其他选项 <LINE> <LINE> <H2> Q: 我要怎么获得某某特质? <LINE> <TEXT> A: 将鼠标悬停在UI元素上. 有大量工具提示会解释各种内容. 如果还是看不懂, 请查看沙盒工具提示. <LINE> <LINE> <H2> Q: UI中的文字重叠, 如何修复? <LINE> <TEXT> A: 模组选项中有一些设置可能有帮助. UI设计上会尝试自动适应不同字体大小, 但它是以英文语言以及游戏选项->用户界面 (UI)->字体大小设为16px为基准设计的. 尽管我已尽力让它自动调整大小, 不同语言和字体大小仍可能导致部分重叠."
+   },
+   "UI_ETW_Options_TooltipWidth": {
+    "en": "[UI] Tooltip width",
+    "ch": "[UI] 工具提示寬度",
+    "cn": "[UI] 工具提示宽度"
+   },
+   "UI_ETW_Options_TooltipWidth_tooltip": {
+    "en": "Maximum width of tooltips on the ETW character page in pixels.",
+    "ch": "ETW角色頁面上工具提示的最大寬度 (畫素).",
+    "cn": "ETW角色页面上工具提示的最大宽度 (像素)."
+   },
    "UI_InjuryIndicator_StitchesReady": {
     "en": "stitches can be removed",
     "ch": "縫線可以拆除了",
     "cn": "缝线可以拆除了"
    },
+   "UI_SEWINGWORKBRANCH_TXT_ALL_INPROGRESS_CLOTH": {
+    "en": "All Cloth Items",
+    "ch": "所有布料物品",
+    "cn": "所有布料物品"
+   },
+   "UI_SEWINGWORKBRANCH_TXT_ONLY_KNOWN_CLOTH": {
+    "en": "Only Known Cloth Items",
+    "ch": "僅限已學會的布料物品",
+    "cn": "仅限已学会的布料物品"
+   },
+   "UI_SEWINGWORKBRANCH_UI_ASSEMBLE_TAB_ASSEMBLE_MATERIALS_LABEL": {
+    "en": "Assemble materials:",
+    "ch": "組裝材料:",
+    "cn": "组装材料:"
+   },
+   "UI_SEWINGWORKBRANCH_UI_ASSEMBLE_TAB_ITEM_INFO_FMT": {
+    "en": "\\n(Fabric: %s, Status: %s)",
+    "ch": "\\n(布料: %s, 狀態: %s)",
+    "cn": "\\n(布料: %s, 状态: %s)"
+   },
+   "UI_SEWINGWORKBRANCH_UI_BUTTON_ASSEMBLE_SELECTED_ITEM": {
+    "en": "Assemble Selected Item",
+    "ch": "組裝選取物品",
+    "cn": "组装选中物品"
+   },
+   "UI_SEWINGWORKBRANCH_UI_CUTDOWN_TAB_KNOWLEDGE_LABEL": {
+    "en": "Knowledge:",
+    "ch": "知識:",
+    "cn": "知识:"
+   },
+   "UI_SEWINGWORKBRANCH_UI_CUTDOWN_TAB_KNOWN_ITEM": {
+    "en": "Learned",
+    "ch": "已學會",
+    "cn": "已学会"
+   },
+   "UI_SEWINGWORKBRANCH_UI_CUTDOWN_TAB_UNKNOWN_ITEM": {
+    "en": "Not possible",
+    "ch": "無法學會",
+    "cn": "无法学会"
+   },
+   "UI_SEWINGWORKBRANCH_UI_CUTDOWN_TAB_UNKNOWN_ITEM_FMT": {
+    "en": "Unknown (%d / %d XP)",
+    "ch": "未知 (%d / %d 經驗值)",
+    "cn": "未知 (%d / %d 经验值)"
+   },
+   "UI_SEWINGWORKBRANCH_UI_REPAIR_TAB_KNOWLEDGE_LABEL": {
+    "en": "Knowledge:",
+    "ch": "知識:",
+    "cn": "知识:"
+   },
+   "UI_SEWINGWORKBRANCH_UI_REPAIR_TAB_KNOWN_ITEM": {
+    "en": "Learned",
+    "ch": "已學會",
+    "cn": "已学会"
+   },
+   "UI_SEWINGWORKBRANCH_UI_REPAIR_TAB_UNKNOWN_ITEM": {
+    "en": "Not possible",
+    "ch": "無法學會",
+    "cn": "无法学会"
+   },
+   "UI_SEWINGWORKBRANCH_UI_REPAIR_TAB_UNKNOWN_ITEM_FMT": {
+    "en": "Unknown (%d / %d XP)",
+    "ch": "未知 (%d / %d 經驗值)",
+    "cn": "未知 (%d / %d 经验值)"
+   },
+   "UI_SEWINGWORKBRANCH_UI_TAB_ASSEMBLE_CLOTHES": {
+    "en": "Assemble Clothes",
+    "ch": "組裝衣物",
+    "cn": "组装衣物"
+   },
    "UI_ShortSighted_Condition": {
     "en": "The malus can be canceled by wearing glasses",
     "ch": "戴上眼鏡可以抵銷此負面效果",
     "cn": "戴上眼镜可以抵消此负面效果"
+   },
+   "UI_TTF_WornKeep_Back": {
+    "en": "Back",
+    "ch": "背部",
+    "cn": "背面"
+   },
+   "UI_TTF_WornKeep_ContextMenuOpen": {
+    "en": "Visible Worn Body Locations",
+    "ch": "可見的穿戴部位",
+    "cn": "可见的穿戴部位"
+   },
+   "UI_TTF_WornKeep_Eyes": {
+    "en": "Eyes",
+    "ch": "眼鏡",
+    "cn": "眼镜"
+   },
+   "UI_TTF_WornKeep_FullHat": {
+    "en": "Full Hat",
+    "ch": "頭部",
+    "cn": "头盔"
+   },
+   "UI_TTF_WornKeep_FullSuitHeadSCBA": {
+    "en": "Full Suit Head SCBA",
+    "ch": "自給式呼吸裝置(頭部)",
+    "cn": "SCBA头部"
+   },
+   "UI_TTF_WornKeep_Hat": {
+    "en": "Hat",
+    "ch": "帽子",
+    "cn": "帽子"
+   },
+   "UI_TTF_WornKeep_KeyRing": {
+    "en": "Key Ring",
+    "ch": "鑰匙環",
+    "cn": "钥匙环"
+   },
+   "UI_TTF_WornKeep_LeftEye": {
+    "en": "Left Eye",
+    "ch": "左眼",
+    "cn": "左眼"
+   },
+   "UI_TTF_WornKeep_Mask": {
+    "en": "Mask",
+    "ch": "面具",
+    "cn": "面具"
+   },
+   "UI_TTF_WornKeep_MaskEyes": {
+    "en": "Mask Eyes",
+    "ch": "眼罩",
+    "cn": "面具眼罩"
+   },
+   "UI_TTF_WornKeep_MaskFull": {
+    "en": "Full Mask",
+    "ch": "全面罩",
+    "cn": "完整面罩"
+   },
+   "UI_TTF_WornKeep_Neck": {
+    "en": "Neck",
+    "ch": "頸部",
+    "cn": "脖子"
+   },
+   "UI_TTF_WornKeep_Nose": {
+    "en": "Nose",
+    "ch": "鼻部",
+    "cn": "鼻子"
+   },
+   "UI_TTF_WornKeep_ReloadFile": {
+    "en": "Reload File",
+    "ch": "重新載入檔案",
+    "cn": "重新加载文件"
+   },
+   "UI_TTF_WornKeep_ResetDefaults": {
+    "en": "Reset Defaults",
+    "ch": "重置為預設值",
+    "cn": "重置为默认值"
+   },
+   "UI_TTF_WornKeep_RightEye": {
+    "en": "Right Eye",
+    "ch": "右眼",
+    "cn": "右眼"
+   },
+   "UI_TTF_WornKeep_SCBA": {
+    "en": "SCBA",
+    "ch": "自給式呼吸裝置",
+    "cn": "SCBA"
+   },
+   "UI_TTF_WornKeep_SCBANoTank": {
+    "en": "SCBA No Tank",
+    "ch": "無氣瓶自給式呼吸裝置",
+    "cn": "无罐的SCBA"
+   },
+   "UI_TTF_WornKeep_Satchel": {
+    "en": "Satchel",
+    "ch": "單肩挎包",
+    "cn": "单肩挎包"
+   },
+   "UI_TTF_WornKeep_Scarf": {
+    "en": "Scarf",
+    "ch": "圍巾",
+    "cn": "围巾"
+   },
+   "UI_TTF_WornKeep_Title": {
+    "en": "Visible Worn Body Locations",
+    "ch": "可見的穿戴部位",
+    "cn": "可见的穿戴部位"
+   },
+   "UI_TTF_WornToggle_HideWornItems": {
+    "en": "Hide worn items",
+    "ch": "隱藏穿戴物品",
+    "cn": "隐藏穿戴物品"
+   },
+   "UI_TTF_WornToggle_ShowWornItems": {
+    "en": "Show worn items",
+    "ch": "顯示穿戴物品",
+    "cn": "显示穿戴物品"
+   },
+   "UI_TWF_QOL_AIM_FLOOR_ATTACK_KEY": {
+    "en": "Aim floor attack key",
+    "ch": "瞄準地面攻擊按鍵",
+    "cn": "瞄准地面攻击按键"
+   },
+   "UI_TWF_QOL_AIM_FLOOR_ATTACK_KEY_TT": {
+    "en": "Default: not assigned. When assigned, this key temporarily forces aim and manually targets floor attacks with your equipped primary weapon. The Vanilla 'Auto Detect Prone or Standing attack' option is automatically disabled while this QoL keybind is active.",
+    "ch": "預設: 未指派. 指派後, 此按鍵會暫時強制瞄準, 並以你裝備的主要武器手動瞄準地面攻擊. 此QoL按鍵作用期間, 原版的'自動進行地面或站立攻擊'選項會自動停用.",
+    "cn": "默认: 未分配. 分配后, 此按键会暂时强制瞄准, 并用你装备的主武器手动瞄准地面攻击. 此QoL按键生效期间, 原版的'自动进行地面或站立攻击'选项会自动禁用."
+   },
+   "UI_TWF_QOL_BETTER_ANIMAL_INFO_WINDOW": {
+    "en": "Better Animal Info Window",
+    "ch": "更好的動物資訊視窗",
+    "cn": "更好的动物信息窗口"
+   },
+   "UI_TWF_QOL_BETTER_ANIMAL_INFO_WINDOW_TT": {
+    "en": "Replaces the vanilla Animal Info Window with an improved version that has better layout, colors, gender highlights, and safer text handling.",
+    "ch": "以改良版取代原版的動物資訊視窗, 具有更好的排版, 顏色, 性別醒目提示與更安全的文字處理.",
+    "cn": "用改进版替换原版的动物信息窗口, 具有更好的布局, 颜色, 性别高亮和更安全的文本处理."
+   },
+   "UI_TWF_QOL_INV_ICON_SCALE": {
+    "en": "Inventory icon scale",
+    "ch": "物品欄圖示縮放",
+    "cn": "物品栏图标缩放"
+   },
+   "UI_TWF_QOL_INV_ICON_SCALE_TT": {
+    "en": "Scales item icons in inventory lists only. <LINE> <LINE> 100 = vanilla size, 200 = double size.",
+    "ch": "僅縮放物品欄清單中的物品圖示. <LINE> <LINE> 100 = 原版大小, 200 = 兩倍大小.",
+    "cn": "仅缩放物品栏列表中的物品图标. <LINE> <LINE> 100 = 原版大小, 200 = 两倍大小."
+   },
+   "UI_TWF_QOL_MELEE_RELOAD_HOTBAR_BELT_CLEANUP_EQUIP": {
+    "en": "Reload Key: Drop Broken Leftovers",
+    "ch": "裝填鍵: 丟棄損壞殘件",
+    "cn": "装填键: 丢弃损坏残件"
+   },
+   "UI_TWF_QOL_MELEE_RELOAD_HOTBAR_BELT_CLEANUP_EQUIP_TT": {
+    "en": "Legacy label. This option now drops broken melee leftovers during melee reload. Auto-equip is part of the main reload feature.",
+    "ch": "舊版標籤. 此選項現在會在近戰裝填時丟棄損壞的近戰武器殘件. 自動裝備已屬於主要裝填功能.",
+    "cn": "旧版标签. 此选项现在会在近战装填时丢弃损坏的近战武器残件. 自动装备已属于主要装填功能."
+   },
+   "UI_TWF_QOL_MELEE_RELOAD_HOTBAR_DROP_LEFTOVERS": {
+    "en": "Reload Key: Drop Broken Leftovers",
+    "ch": "裝填鍵: 丟棄損壞殘件",
+    "cn": "装填键: 丢弃损坏残件"
+   },
+   "UI_TWF_QOL_MELEE_RELOAD_HOTBAR_DROP_LEFTOVERS_TT": {
+    "en": "Optional cleanup. Whenever a melee reload is executed by quick reload or by selecting a weapon from the hold-reload radial menu, broken melee leftovers in the main inventory are dropped to the ground. Cannot be used together with Delete Broken Leftovers.",
+    "ch": "選用的清理功能. 每當透過快速裝填, 或從長按裝填的環形選單中選擇武器而執行近戰裝填時, 主物品欄中損壞的近戰武器殘件會被丟到地上. 不能與'刪除損壞殘件'同時使用.",
+    "cn": "可选的清理功能. 每当通过快速装填, 或从长按装填的环形菜单中选择武器而执行近战装填时, 主物品栏中损坏的近战武器残件会被丢到地上. 不能与'删除损坏残件'同时使用."
+   },
+   "UI_TWF_QOL_MELEE_RELOAD_HOTBAR_ENABLE": {
+    "en": "Reload Key: Attach + Equip Spare Melee Weapons",
+    "ch": "裝填鍵: 掛載並裝備備用近戰武器",
+    "cn": "装填键: 挂载并装备备用近战武器"
+   },
+   "UI_TWF_QOL_MELEE_RELOAD_HOTBAR_ENABLE_TT": {
+    "en": "When enabled, the Reload key can attach spare carried melee weapons to free weapon slots and then equip the newly attached weapon. Short press performs a quick melee reload. Hold Reload opens a melee-only weapon radial menu. Firearms, fishing rods, and Vanilla weapon sharpening remain untouched.",
+    "ch": "啟用後, 裝填鍵可將攜帶的備用近戰武器掛載到空閒的武器槽位, 並接著裝備新掛載的武器. 短按執行快速近戰裝填. 長按裝填鍵會開啟僅含近戰武器的環形選單. 槍械, 釣竿與原版的武器打磨功能不受影響.",
+    "cn": "启用后, 装填键可将携带的备用近战武器挂载到空闲的武器槽位, 并接着装备新挂载的武器. 短按执行快速近战装填. 长按装填键会打开仅含近战武器的环形菜单. 枪械, 鱼竿和原版的武器打磨功能不受影响."
+   },
+   "UI_TWF_QOL_RIPALL_FILTER_ALL": {
+    "en": "All",
+    "ch": "全部",
+    "cn": "全部"
+   },
+   "UI_TWF_QOL_RIPALL_FILTER_COTTON": {
+    "en": "Cotton",
+    "ch": "棉布",
+    "cn": "棉布"
+   },
+   "UI_TWF_QOL_RIPALL_FILTER_DENIM": {
+    "en": "Denim",
+    "ch": "牛仔布",
+    "cn": "牛仔布"
+   },
+   "UI_TWF_QOL_RIPALL_FILTER_LEATHER": {
+    "en": "Leather",
+    "ch": "皮革",
+    "cn": "皮革"
+   },
+   "UI_TWF_QOL_RIPALL_PLAYER_INVENTORY": {
+    "en": "Player Inventory",
+    "ch": "玩家物品欄",
+    "cn": "玩家物品栏"
+   },
+   "UI_TWF_QOL_RIPALL_ROOT": {
+    "en": "Rip All Clothing",
+    "ch": "撕碎所有衣物",
+    "cn": "撕碎所有衣物"
+   },
+   "UI_TWF_QOL_RIPALL_SHARED_CORPSE_INVENTORY": {
+    "en": "Shared Corpse Inventory",
+    "ch": "共用屍體物品欄",
+    "cn": "共享尸体物品栏"
+   },
+   "UI_TWF_QOL_RIPALL_SHARED_INVENTORY": {
+    "en": "Shared Inventory",
+    "ch": "共用物品欄",
+    "cn": "共享物品栏"
+   },
+   "UI_TWF_QOL_RIPALL_STOP_NO_ROOM": {
+    "en": "I can't carry any more clothing.",
+    "ch": "我拿不下更多衣物了.",
+    "cn": "我拿不下更多衣物了."
+   },
+   "UI_TWF_QOL_RIPALL_STOP_NO_TOOL": {
+    "en": "I need usable scissors or a sharp knife to rip denim or leather.",
+    "ch": "我需要可用的剪刀或鋒利的刀才能撕碎牛仔布或皮革.",
+    "cn": "我需要可用的剪刀或锋利的刀才能撕碎牛仔布或皮革."
+   },
+   "UI_TWF_QOL_RIPALL_STOP_TOOL_DULL": {
+    "en": "My scissors or knife are too dull.",
+    "ch": "我的剪刀或刀太鈍了.",
+    "cn": "我的剪刀或刀太钝了."
+   },
+   "UI_TWF_QOL_RIPALL_STOP_TOO_DARK": {
+    "en": "It is too dark to rip denim or leather.",
+    "ch": "光線太暗, 無法撕碎牛仔布或皮革.",
+    "cn": "光线太暗, 无法撕碎牛仔布或皮革."
+   },
+   "UI_TWF_QOL_RIPALL_THIS_CONTAINER": {
+    "en": "This Container",
+    "ch": "此容器",
+    "cn": "此容器"
+   },
+   "UI_TWF_QOL_SECTION_AUDIO": {
+    "en": "Audio",
+    "ch": "音訊",
+    "cn": "音频"
+   },
+   "UI_TWF_QOL_SECTION_COMBAT": {
+    "en": "Combat",
+    "ch": "戰鬥",
+    "cn": "战斗"
+   },
+   "UI_TWF_QOL_SECTION_DKC": {
+    "en": "Daily Kill Count",
+    "ch": "每日擊殺計數",
+    "cn": "每日击杀计数"
+   },
+   "UI_TWF_QOL_SECTION_GAMEPLAY": {
+    "en": "Gameplay",
+    "ch": "遊戲玩法",
+    "cn": "游戏玩法"
+   },
+   "UI_TWF_QOL_SECTION_INVENTORY": {
+    "en": "Inventory",
+    "ch": "物品欄",
+    "cn": "物品栏"
+   },
+   "UI_TWF_QOL_SECTION_INVENTORY_BLOCKED": {
+    "en": "Disable CleanUI, Better Containers, or Reorder Containers to show these options.",
+    "ch": "停用 CleanUI, Better Containers 或 Reorder Containers 後才會顯示這些選項.",
+    "cn": "禁用 CleanUI, Better Containers 或 Reorder Containers 后才会显示这些选项."
+   },
+   "UI_TWF_QOL_SECTION_OTHER": {
+    "en": "Other",
+    "ch": "其他",
+    "cn": "其他"
+   },
+   "UI_TWF_QOL_ZOMBIE_OUTLINE_CUSTOM_COLOR": {
+    "en": "Zombie Outline Color:",
+    "ch": "殭屍輪廓顏色:",
+    "cn": "僵尸轮廓颜色:"
+   },
+   "UI_TWF_QOL_ZOMBIE_OUTLINE_CUSTOM_COLOR_TT": {
+    "en": "Sets your custom zombie outline color.",
+    "ch": "設定你的自訂殭屍輪廓顏色.",
+    "cn": "设置你的自定义僵尸轮廓颜色."
+   },
+   "UI_TWF_QOL_ZOMBIE_OUTLINE_USE_CUSTOM_COLOR": {
+    "en": "Use Custom Zombie Outline Color",
+    "ch": "使用自訂殭屍輪廓顏色",
+    "cn": "使用自定义僵尸轮廓颜色"
+   },
+   "UI_TWF_QOL_ZOMBIE_OUTLINE_USE_CUSTOM_COLOR_TT": {
+    "en": "Replaces the vanilla zombie outline color with the custom color below.",
+    "ch": "以下方的自訂顏色取代原版的殭屍輪廓顏色.",
+    "cn": "用下方的自定义颜色替换原版的僵尸轮廓颜色."
    },
    "UI_equipment_unequip_all": {
     "en": "Unequip All",
@@ -2532,6 +3765,36 @@
     "en": "Starts with %1 % regularity in all fitness & strength exercises",
     "ch": "所有體能與力量鍛鍊的初始規律度為 %1 %",
     "cn": "所有健身与力量锻炼的初始规律度为 %1 %"
+   },
+   "UI_trait_FastEater": {
+    "en": "Fast Eater",
+    "ch": "快食者",
+    "cn": "快食者"
+   },
+   "UI_trait_FastEaterDesc": {
+    "en": "You waste no time eating. Food takes less time to consume.",
+    "ch": "你吃東西從不拖泥帶水. 進食所需時間更短.",
+    "cn": "你吃东西从不拖泥带水. 进食所需时间更短."
+   },
+   "UI_trait_SlowEater": {
+    "en": "Slow Eater",
+    "ch": "慢食者",
+    "cn": "慢食者"
+   },
+   "UI_trait_SlowEaterDesc": {
+    "en": "You take your time eating. Food takes longer to consume.",
+    "ch": "你吃東西慢條斯理. 進食所需時間更長.",
+    "cn": "你吃东西慢条斯理. 进食所需时间更长."
+   },
+   "UI_trait_Squalor": {
+    "en": "Squalid",
+    "ch": "髒亂落魄",
+    "cn": "脏乱落魄"
+   },
+   "UI_trait_SqualorDesc": {
+    "en": "Start in filthy squalor with no items while hungry, thirsty, and sick.",
+    "ch": "開局身處骯髒汙穢的環境, 身無一物, 且處於飢餓, 口渴和生病狀態.",
+    "cn": "开局身处肮脏污秽的环境, 身无一物, 且处于饥饿, 口渴和生病状态."
    },
    "UI_trait_knownrecipes": {
     "en": "Free recipes :",

@@ -326,9 +326,11 @@ def load_own_translations() -> dict[str, dict[str, dict]]:
     entries = data.get("entries", {})
     for fname, keys in entries.items():
         for key, spec in keys.items():
-            if not isinstance(spec, dict) or not spec.get("ch") or not spec.get("cn"):
+            if not isinstance(spec, dict) or any(
+                not isinstance(spec.get(f), str) or not spec.get(f) for f in ("en", "ch", "cn")
+            ):
                 print(
-                    f"❌ own_translations.json 條目 {fname}|{key} 缺 ch/cn 欄位。",
+                    f"❌ own_translations.json 條目 {fname}|{key} 缺 en/ch/cn 欄位（須為非空字串）。",
                     file=sys.stderr,
                 )
                 sys.exit(1)

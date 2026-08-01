@@ -14,6 +14,7 @@ import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import build_mod  # noqa: E402
 import split_sources  # noqa: E402
 import tracker  # noqa: E402
 import verify_dist  # noqa: E402
@@ -112,4 +113,30 @@ with tempfile.TemporaryDirectory() as td:
     except SystemExit:
         pass
 
-print("PASS: own-mod lane 6/6 案例通過")
+# 7. build load_own_translations：en/ch/cn 缺欄、空值或非字串 → SystemExit；合規通過
+with tempfile.TemporaryDirectory() as td:
+    own_json = Path(td) / "own_translations.json"
+    orig = build_mod.OWN_TRANSLATIONS_JSON
+    build_mod.OWN_TRANSLATIONS_JSON = own_json
+    try:
+        ok = {"entries": {"UI.json": {"K": {"en": "e", "ch": "譯", "cn": "译"}}}}
+        own_json.write_text(json.dumps(ok), encoding="utf-8")
+        assert build_mod.load_own_translations() == ok["entries"]
+        for bad_spec in (
+            {"ch": "譯", "cn": "译"},              # 缺 en
+            {"en": "", "ch": "譯", "cn": "译"},    # en 空字串
+            {"en": 1, "ch": "譯", "cn": "译"},     # en 非字串
+            {"en": "e", "ch": "譯"},               # 缺 cn
+        ):
+            own_json.write_text(
+                json.dumps({"entries": {"UI.json": {"K": bad_spec}}}), encoding="utf-8"
+            )
+            try:
+                build_mod.load_own_translations()
+                raise AssertionError(f"未擋下非法條目: {bad_spec}")
+            except SystemExit:
+                pass
+    finally:
+        build_mod.OWN_TRANSLATIONS_JSON = orig
+
+print("PASS: own-mod lane 7/7 案例通過")
