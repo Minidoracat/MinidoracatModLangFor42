@@ -3,7 +3,7 @@
 > 本檔由 `uv run scripts/build_mod.py manifest` 自動生成，請勿手動編輯。
 > 中文名稱與摘要維護於 `sources/mod_names_zh.json`，修改後重跑 manifest。
 
-共支援 **458 個 Workshop 模組**（601 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
+共支援 **459 個 Workshop 模組**（602 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 |
 | --- | --- | --- | --- | --- |
@@ -428,6 +428,7 @@
 | ['70 Plymouth Road Runner](https://steamcommunity.com/sharedfiles/filedetails/?id=3642935062) | 1970 年 Plymouth Road Runner | 新增 1970 年 Plymouth Road Runner 車輛，可製作車門、保險桿等零件。 | `70roadRunner` | 25 |
 | [zRe Vaccine 3.0 [b42.13+ MP] ReMod by kERHUS](https://steamcommunity.com/sharedfiles/filedetails/?id=3643703198) | zRe 疫苗 3.0 ReMod by kERHUS | 新增疫苗與抗病毒藥物研製系統，包含化學試劑、實驗室設備與病毒學書籍。 | `zReModVaccin30bykERHUS`, `zReModVaccin30bykERHUS_Addon` | 33 |
 | [Extensive Power Rework B42 (no longer supported)](https://steamcommunity.com/sharedfiles/filedetails/?id=3643765614) | 深度電力重製（已停止支援） | 重製電力系統，設施會隨時間衰減，需評估損壞、維修與校準來維持供電。 | `EPR_B42` | 253 |
+| [B42 Scavenging Skill〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3645462965) | 拾荒技能 | 新增拾荒技能，搜刮容器時有機率找到額外戰利品，附五本技能書與禿鷲特質，各級機率與經驗皆可調。 | `B4213ScavengingSkill` | 62 |
 | [VorpallySauced - Weapon Mastery System](https://steamcommunity.com/sharedfiles/filedetails/?id=3645781559) | VorpallySauced - 武器精通系統 | 新增武器精通系統，武器隨擊殺累積成長升級，並可獲得各式詞綴強化。 | `VorpallySauced` | 759 |
 | [Project Arcade [B42MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3645980077) | 街機計劃 | 新增街機主題內容與相關配方，為遊戲增添街機機台元素。 | `ProjectArcade` | 38 |
 | ['95 Subaru Impreza WRX STI](https://steamcommunity.com/sharedfiles/filedetails/?id=3647735736) | '95 Subaru Impreza WRX STI | 新增 1995 年 Subaru Impreza WRX STI 車輛，含進口與改舵版本。 | `95impreza` | 4 |
