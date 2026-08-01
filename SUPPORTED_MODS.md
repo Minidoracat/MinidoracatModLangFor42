@@ -3,7 +3,7 @@
 > 本檔由 `uv run scripts/build_mod.py manifest` 自動生成，請勿手動編輯。
 > 中文名稱與摘要維護於 `sources/mod_names_zh.json`，修改後重跑 manifest。
 
-共支援 **459 個 Workshop 模組**（606 個 mod ID）；另 **13 個已下架**（翻譯保留，見文末）。
+共支援 **459 個 Workshop 模組**（604 個 mod ID）；另 **14 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 |
 | --- | --- | --- | --- | --- |
@@ -419,7 +419,6 @@
 | [My Spatial Refuge [B42] [MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3632195933) | 我的空間避難所 | 新增個人空間避難所系統，含經驗精華與多階升級物資。 | `myspatialrefuge` | 200 |
 | [[B42.13+] Pumps Have Propane (Standalone MP/SP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3632444452) | 油泵供應丙烷（獨立版） | 可從加油泵充裝丙烷罐、丙烷噴燈與丙烷罐車。 | `PumpsHavePropaneMP` | 6 |
 | [ModernFirearmsSystem 42.19 (SP/MP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3633421539) | 現代槍械系統 | 新增現代槍械系統，含多種口徑彈藥、彈匣與彈藥背帶。 | `ModernFirearmsSystem` | 34 |
-| [Better Towing / Harrys Tow Truck [B42.13.1]](https://steamcommunity.com/sharedfiles/filedetails/?id=3633899582) | 更好的拖車／Harry 的拖吊車 | 改良車輛拖吊系統，可用拖車槓或掛鉤牽引並調整高度，附拖吊車。 | `BetterTowing`, `DisableDefaultTowing`, `HarrysTowTruck` | 14 |
 | [Challenge Traits - Headshots, CDDA, and More [42.19 + 42.18]](https://steamcommunity.com/sharedfiles/filedetails/?id=3634630898) | 挑戰特質：爆頭、CDDA 等 | 新增爆頭限定、CDDA 等多種挑戰型特質玩法。 | `OCsChallengeTraits` | 37 |
 | [Dynamic Trading (w/ NPC) B42.16](https://steamcommunity.com/sharedfiles/filedetails/?id=3635333613) | 動態交易（含 NPC） | 新增與 NPC 的動態交易系統，含季節事件、通膨與土匪伏擊。 | `DynamicTrading`, `DynamicTradingCommon`, `DynamicTradingV2` | 136 |
 | [[B42MP] Frockin Splendor! Vol.5](https://steamcommunity.com/sharedfiles/filedetails/?id=3635394848) | Frockin Splendor! Vol.5 | 服飾擴充包第五輯，為遊戲新增額外服裝內容。 | `GanydeBielovzki's Frockin Splendor! Vol.5` | 37 |
@@ -466,8 +465,9 @@
 | [PhunCure 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3676251425) | PhunCure 2 趣味解藥 | 新增可注射的解藥，能治癒咬傷、殭屍病毒與傷口感染，效果可自訂。 | `phuncure2` | 33 |
 | [Better Vanilla ALICE Suspenders](https://steamcommunity.com/sharedfiles/filedetails/?id=3676721528) | 更好的原版 ALICE 背帶 | 改良原版 ALICE 背帶裝備，並附帶多個出生地點選項描述。 | `bettervanillaalicesuspendersID` | 37 |
 | [Solar Floodlight [42.16] [MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3680577450) | 太陽能探照燈 | 新增可組裝的太陽能探照燈，含電池槽與電池健康度顯示。 | `SolarFloodlight` | 55 |
+| [Mirage Wardrobe: Multiplayer Transmog [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3770186452) | 幻裝衣櫥：多人連線幻化 | 以裝備部位為單位的服裝幻化衣櫥，變更角色外觀而不影響實際裝備數值；支援收藏解鎖、款式染色、套裝預設、人物觀察窗與多人連線同步。 | `MirageWardrobe42` | 284 |
 
-## 已下架模組（13 個，翻譯保留）
+## 已下架模組（14 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
@@ -485,4 +485,5 @@
 | [3609353662](https://steamcommunity.com/sharedfiles/filedetails/?id=3609353662) | Pumps Have Propane | 可在加油泵充裝丙烷罐與丙烷噴燈。 | `PumpsHavePropane42` | 2 | 2026-07-17 |
 | [3623609320](https://steamcommunity.com/sharedfiles/filedetails/?id=3623609320) | CSB42MP | 新增清洗物品的右鍵選單選項，可只洗已裝備、未裝備或武器。 | `CSB42MP` | 43 | 2026-07-17 |
 | [3625348470](https://steamcommunity.com/sharedfiles/filedetails/?id=3625348470) | Sourdough 酸種麵包 | 新增酸種麵包相關內容與容器，支援單人與伺服器環境。 | `SourdoughHost42.13`, `SourdoughSP&Dedicated42.13` | 1 | 2026-07-17 |
+| [Better Towing / Harrys Tow Truck [B42.13.1]](https://steamcommunity.com/sharedfiles/filedetails/?id=3633899582) | 更好的拖車／Harry 的拖吊車 | 改良車輛拖吊系統，可用拖車槓或掛鉤牽引並調整高度，附拖吊車。 | `BetterTowing`, `DisableDefaultTowing`, `HarrysTowTruck` | 14 | 2026-07-30 |
 | [3651494414](https://steamcommunity.com/sharedfiles/filedetails/?id=3651494414) | DayZ 槍械 | 新增 DayZ 風格槍械相關內容。 | `DayZ_Guns_B42` | 2 | 2026-07-17 |
