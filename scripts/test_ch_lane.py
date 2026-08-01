@@ -98,6 +98,33 @@ with tempfile.TemporaryDirectory() as td:
     got = split_sources.load_existing_cn()
     assert got == {("UI.json", "a"): "1", ("UI.json", "b"): "2"}, f"own 未排除或漏檔: {got}"
 
+# 4b. apply_cn_registry：as1_value 錨點過時警告
+mcn_reg = {"UI.json": {"k": "上游新值", "k2": "未變"}}
+used, stale = build_mod.apply_cn_registry(
+    mcn_reg,
+    {
+        "UI.json|k": {"value": "修正值", "as1_value": "登記時舊值"},
+        "UI.json|k2": {"value": "修2", "as1_value": "未變"},
+    },
+    "value",
+)
+assert used == {"UI.json|k", "UI.json|k2"}
+assert len(stale) == 1 and "UI.json|k" in stale[0], f"as1_value 漂移未警告: {stale}"
+assert mcn_reg["UI.json"]["k"] == "修正值", "override 仍須套用（警告非阻斷）"
+
+# 4c. split worklist：registry 登記鍵標註 overridden
+with tempfile.TemporaryDirectory() as td:
+    src = Path(td)
+    split_sources.SOURCES = src
+    split_sources.WORKLIST_JSON = src / "ch_sync_worklist.json"
+    wjson(src / "cn_overrides.json", {"_comment": "x", "UI.json|kOv": {"value": "v"}})
+    old = {("UI.json", "kOv"): "旧", ("UI.json", "kPlain"): "旧"}
+    new = {("UI.json", "kOv"): "新", ("UI.json", "kPlain"): "新"}
+    split_sources.update_sync_worklist(old, new)
+    doc = json.loads(split_sources.WORKLIST_JSON.read_text(encoding="utf-8"))
+    assert doc["UI.json|kOv"].get("overridden") is True, "登記鍵未標 overridden"
+    assert "overridden" not in doc["UI.json|kPlain"], "未登記鍵誤標"
+
 # 5. build corpus_gate：缺檔/孤兒檔/缺鍵/孤兒鍵
 merged = {"UI.json": {"k1": "v1", "k2": "v2"}, "Only.json": {"x": "y"}}
 corpus = {"UI.json": {"k1": "覆", "k3": "孤"}, "Orphan.json": {"z": "w"}}
@@ -211,4 +238,4 @@ with tempfile.TemporaryDirectory() as td:
     ok, details, warn = verify_dist.check_review_drift(repo, str(dist_cn))
     assert ok and not details and len(warn) == 2, (details, warn)
 
-print("PASS: CH corpus lane 13/13 案例通過")
+print("PASS: CH corpus lane 15/15 案例通過")

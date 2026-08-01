@@ -538,6 +538,20 @@ def cn_from_outputs(out: dict[str, bytes]) -> dict[tuple[str, str], str]:
     return result
 
 
+def _registry_keys() -> set[str]:
+    """cn_overrides / placeholder_exceptions 的登記鍵集（worklist 標註 overridden 用）。
+
+    登記鍵的 As1 原值在 build 期會被 registry 取代，不會出貨——worklist 條目標上
+    overridden 供譯者辨識，避免對著不出貨的原值翻譯。
+    """
+    keys: set[str] = set()
+    for name in ("cn_overrides.json", "placeholder_exceptions.json"):
+        p = SOURCES / name
+        if p.exists():
+            keys |= {k for k in load_json(p) if "|" in k}
+    return keys
+
+
 def _corpus_keysets() -> dict[str, set[str]]:
     """讀 sources/ch/*.json 的逐檔鍵集（worklist 自動對帳用；corpus 缺失回空）。"""
     out: dict[str, set[str]] = {}
@@ -585,6 +599,10 @@ def update_sync_worklist(
             delta[f"{fk[0]}|{fk[1]}"] = {
                 "kind": "changed", "old_cn": old[fk], "new_cn": new[fk],
             }
+    registered = _registry_keys()
+    for wkey, spec in delta.items():
+        if wkey in registered:
+            spec["overridden"] = True  # As1 原值被 registry 取代，出貨值以登記為準
     corpus_keys = _corpus_keysets()
     doc: dict = {}
     if WORKLIST_JSON.exists():

@@ -387,7 +387,7 @@ def merge_cn(dirs: list[Path]) -> tuple[dict[str, dict], list[str]]:
 
 def apply_cn_registry(
     merged_cn: dict[str, dict], entries: dict[str, dict], field: str
-) -> set[str]:
+) -> tuple[set[str], list[str]]:
     """對登記的 (檔|鍵) 以 entries[key][field] 全域取代 merged CN 值。
 
     不分 owner（merge 已收斂為每鍵一值）。供兩個登記檔共用：
@@ -396,18 +396,29 @@ def apply_cn_registry(
       - cn_overrides.json（field="value"）：修 As1 上游錯誤（錯字／疊字等）。
     CH 為獨立人工真相 corpus，CN 修正不再自動帶到 CH——語意變更時須同步修
     sources/ch 對應鍵（並更新 ch_review_state.json）。
-    回傳實際套用的登記鍵集合。
+
+    過時偵測：條目帶 `as1_value`（登記當時的 As1 原值）時，與現行 As1 原值比對，
+    不符即列 warning——多半是上游已自行修正，override 再蓋上去會靜默壓過上游更新，
+    須人工複核該條目是否退役。
+    回傳 (實際套用的登記鍵集合, 過時警告清單)。
     """
     used: set[str] = set()
+    stale: list[str] = []
     for reg_key, spec in entries.items():
         if reg_key.startswith("_"):
             continue  # _comment 等說明欄位
         fname, _, key = reg_key.partition("|")
         fmap = merged_cn.get(fname)
         if fmap is not None and key in fmap:
+            anchor = spec.get("as1_value")
+            if isinstance(anchor, str) and anchor != fmap[key]:
+                stale.append(
+                    f"  {reg_key}：As1 原值已變（登記時 {anchor!r} → 現行 {fmap[key]!r}），"
+                    "請複核 override 是否退役或更新 as1_value"
+                )
             fmap[key] = spec[field]
             used.add(reg_key)
-    return used
+    return used, stale
 
 
 # 簡體專用字集（斷絕機轉後 CH 為手寫真相，防 CN 值誤貼直接出貨）：
@@ -551,12 +562,20 @@ def cmd_build() -> int:
     cn_overrides = load_cn_overrides()
 
     # CN 人工修正層：修 As1 上游錯誤（錯字／疊字）；CH 為獨立人工真相，不隨 CN 機轉
-    used_cn_ov = apply_cn_registry(merged_cn, cn_overrides, "value")
+    used_cn_ov, stale_cn_ov = apply_cn_registry(merged_cn, cn_overrides, "value")
     if used_cn_ov:
         print(f"  CN 人工修正層：套用 {len(used_cn_ov)} 鍵")
+    if stale_cn_ov:
+        print(f"\n⚠️ cn_overrides 過時警告 {len(stale_cn_ov)} 條（上游已改，override 可能該退役）：")
+        for w in stale_cn_ov:
+            print(w)
 
     # 登記制崩潰例外：以 cn_safe_value 全域取代（安全性最後把關，覆蓋前一層）
-    used_exc = apply_cn_registry(merged_cn, exceptions, "cn_safe_value")
+    used_exc, stale_exc = apply_cn_registry(merged_cn, exceptions, "cn_safe_value")
+    if stale_exc:
+        print(f"\n⚠️ placeholder_exceptions 過時警告 {len(stale_exc)} 條：")
+        for w in stale_exc:
+            print(w)
 
     # registry 背書 gate：registry 改值不經 split（worklist 看不到），
     # 強制每個命中鍵的有效 CN hash 與已審台帳一致（改值必經 CH 同步檢視）
