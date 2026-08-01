@@ -63,7 +63,10 @@ SCHEMA_VERSION = 1
 # =2：record identity 由 basename 改為相對路徑（同 basename 不同目錄不再互撞）
 # =3：script 區塊改行首＋須接 "{" 判定（排除 craftRecipe 內文數量指令）；名稱允許空白全取
 # =4：Translate 抽取新增 B41 .txt 格式（Key = "value" 行式）——約 30 個模組僅以 .txt 帶英文文本
-EXTRACTOR_SCHEMA = 4
+# =5：script 抽取改掃「全部」media/scripts 目錄（先前只取第一個，多版本目錄 mod 會漏其一）、
+#     relpath 改 mod_dir 相對（跨版本目錄同名檔不互撞）、item 區塊另抽 DisplayName 獨立
+#     record（script_item_dn，捕捉上游顯示名漂移——先前 value=區塊 id，DisplayName 改動無感）
+EXTRACTOR_SCHEMA = 5
 
 # As1「[B42]統一模組漢化」包（layer-B 主力上游）；固定納入 watch-list
 AS1_WORKSHOP_ID = "3556540080"
@@ -340,35 +343,74 @@ def _iter_translate_records(mod_dir: Path, lang: str) -> list[tuple[str, str, st
     return records
 
 
-def _iter_script_records(mod_dir: Path) -> list[tuple[str, str, str, str]]:
-    """抽取 media/scripts/**/*.txt 的 item/recipe 區塊名（basic 正則、value=名本身）。"""
-    records: list[tuple[str, str, str, str]] = []
-    scripts_dir = None
-    for cand in mod_dir.rglob("scripts"):
-        if cand.is_dir() and cand.parent.name == "media":
-            scripts_dir = cand
+_DISPLAYNAME_RE = re.compile(r"^\s*DisplayName\s*=\s*(.+?)\s*,?\s*$")
+
+
+def _scan_item_displayname(lines: list[str], start: int) -> str | None:
+    """自 item 區塊標頭往下以大括號配對界定範圍，取區塊頂層「最後一筆」DisplayName（無則 None）。
+
+    只認 depth==1（item 本層），巢狀子區塊（component 等）內的 DisplayName 不誤歸屬；
+    同區塊重複 property 取後者——PZ Item.DoParam 逐條覆寫欄位，後定義生效。
+    """
+    # ponytail: 逐行大括號計數，跳過 '/' 開頭註解行；跨行 /* */ 內的不成對大括號仍會干擾
+    # 配對（實測 1575 個 workshop script 檔 0 命中）——若未來誤判，升級為去註解預處理。
+    depth = 0
+    entered = False
+    found: str | None = None
+    for line in lines[start:]:
+        if line.lstrip().startswith("/"):
+            continue
+        if entered and depth == 1:
+            m = _DISPLAYNAME_RE.match(line)
+            if m:
+                found = m.group(1).strip()
+        depth += line.count("{") - line.count("}")
+        if depth > 0:
+            entered = True
+        elif entered:
             break
-    if scripts_dir is None:
-        return records
-    for tf in sorted(scripts_dir.rglob("*.txt")):
-        if tf.is_symlink():  # 跳過 symlink，避免逸出下載目錄
-            continue
-        try:
-            text = tf.read_text(encoding="utf-8-sig", errors="replace")
-        except OSError:
-            continue
-        rel = tf.relative_to(scripts_dir).as_posix()
-        lines = text.splitlines()
-        for i, line in enumerate(lines):
-            m = _SCRIPT_LINE_RE.match(line)
-            if not m:
+    return found
+
+
+def _iter_script_records(mod_dir: Path) -> list[tuple[str, str, str, str]]:
+    """抽取所有 media/scripts/**/*.txt 的 item/recipe 區塊名（basic 正則、value=名本身）；
+    item 區塊另抽 DisplayName 為獨立 record（script_item_dn）。
+
+    EXTRACTOR_SCHEMA=5：掃全部 media/scripts 目錄、relpath 為 mod_dir 相對。
+    同檔同名 item 重複定義時 DisplayName 取後者（PZ 後定義生效，同 translate .txt 慣例）。
+    """
+    records: list[tuple[str, str, str, str]] = []
+    script_dirs = [
+        cand for cand in sorted(mod_dir.rglob("scripts"))
+        if cand.is_dir() and cand.parent.name == "media"
+    ]
+    for scripts_dir in script_dirs:
+        for tf in sorted(scripts_dir.rglob("*.txt")):
+            if tf.is_symlink():  # 跳過 symlink，避免逸出下載目錄
                 continue
-            kw, name, brace = m.group(1), m.group(2).strip(), m.group(3)
-            if not brace:
-                nxt = next((ln.strip() for ln in lines[i + 1:] if ln.strip()), "")
-                if not nxt.startswith("{"):
+            try:
+                text = tf.read_text(encoding="utf-8-sig", errors="replace")
+            except OSError:
+                continue
+            rel = tf.relative_to(mod_dir).as_posix()
+            lines = text.splitlines()
+            dn_map: dict[str, str] = {}
+            for i, line in enumerate(lines):
+                m = _SCRIPT_LINE_RE.match(line)
+                if not m:
                     continue
-            records.append((f"script_{kw}", rel, name, name))
+                kw, name, brace = m.group(1), m.group(2).strip(), m.group(3)
+                if not brace:
+                    nxt = next((ln.strip() for ln in lines[i + 1:] if ln.strip()), "")
+                    if not nxt.startswith("{"):
+                        continue
+                records.append((f"script_{kw}", rel, name, name))
+                if kw == "item":
+                    dn = _scan_item_displayname(lines, i)
+                    if dn is not None:
+                        dn_map[name] = dn
+            for name, dn in dn_map.items():
+                records.append(("script_item_dn", rel, name, dn))
     return records
 
 

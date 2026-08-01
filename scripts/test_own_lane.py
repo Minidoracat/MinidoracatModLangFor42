@@ -139,4 +139,78 @@ with tempfile.TemporaryDirectory() as td:
     finally:
         build_mod.OWN_TRANSLATIONS_JSON = orig
 
-print("PASS: own-mod lane 7/7 案例通過")
+# 8. verify check_vanilla_collision：形狀壞損 fail-closed、碰撞偵測、錨點豁免生效/失效
+with tempfile.TemporaryDirectory() as td:
+    repo = Path(td)
+    (repo / "sources").mkdir()
+
+    def w_vanilla(payload):
+        (repo / "sources" / "vanilla_keys.json").write_text(
+            json.dumps(payload, ensure_ascii=False), encoding="utf-8"
+        )
+
+    def w_own(entries):
+        (repo / "sources" / "own_translations.json").write_text(
+            json.dumps({"entries": entries}, ensure_ascii=False), encoding="utf-8"
+        )
+
+    big = [f"K{i}" for i in range(10001)]
+    w_own({"UI.json": {"K0": {"en": "e", "ch": "譯", "cn": "译"}}})
+    for bad in (
+        {"keys": "K0"},                          # keys 非清單
+        {"keys": ["K0"]},                        # 量級殘缺
+        {"keys": big, "allowlist": {"K0": "散文豁免"}},  # allowlist 無錨點
+    ):
+        w_vanilla(bad)
+        try:
+            verify_dist.check_vanilla_collision(str(repo))
+            raise AssertionError(f"形狀壞損未 fail-closed: {bad if len(str(bad)) < 80 else '...'}")
+        except (ValueError, TypeError, AttributeError):
+            pass
+    w_vanilla({"keys": big, "allowlist": {}})
+    ok, det = verify_dist.check_vanilla_collision(str(repo))
+    assert not ok and "K0" in det[0], f"碰撞未偵測: {det}"
+    import hashlib as _hl
+    anchor = _hl.sha256("e|譯|译".encode("utf-8")).hexdigest()[:16]
+    w_vanilla({"keys": big, "allowlist": {"K0": {"reason": "r", "own_anchor": anchor}}})
+    ok, det = verify_dist.check_vanilla_collision(str(repo))
+    assert ok and not det, f"錨點豁免未生效: {det}"
+    w_own({"UI.json": {"K0": {"en": "e", "ch": "改", "cn": "改"}}})
+    ok, det = verify_dist.check_vanilla_collision(str(repo))
+    assert not ok and "own_anchor 失效" in det[0], f"錨點失效未偵測: {det}"
+
+# 9. tracker _iter_script_records：多 scripts 目錄、dn 後者生效、巢狀子區塊不誤歸屬
+with tempfile.TemporaryDirectory() as td:
+    mod = Path(td)
+    s1 = mod / "42.13" / "media" / "scripts"
+    s2 = mod / "common" / "media" / "scripts"
+    s1.mkdir(parents=True)
+    s2.mkdir(parents=True)
+    (s1 / "items.txt").write_text(
+        "module Base {\n"
+        "    item Dup {\n"
+        "        DisplayName = First,\n"
+        "        component X {\n"
+        "            DisplayName = Nested,\n"
+        "        }\n"
+        "        // } 註解行大括號不干擾\n"
+        "        DisplayName = Last,\n"
+        "    }\n"
+        "    item NoName {\n"
+        "        Weight = 1.0,\n"
+        "    }\n"
+        "}\n",
+        encoding="utf-8",
+    )
+    (s2 / "other.txt").write_text(
+        "module Base {\n    item OtherTree {\n        DisplayName = Common,\n    }\n}\n",
+        encoding="utf-8",
+    )
+    recs = tracker._iter_script_records(mod)
+    dn = {r[2]: r[3] for r in recs if r[0] == "script_item_dn"}
+    assert dn == {"Dup": "Last", "OtherTree": "Common"}, f"dn 抽取錯誤: {dn}"
+    rels = {r[1] for r in recs}
+    assert any(r.startswith("42.13/") for r in rels) and any(r.startswith("common/") for r in rels), \
+        f"多 scripts 目錄未全掃: {rels}"
+
+print("PASS: own-mod lane 9/9 案例通過")

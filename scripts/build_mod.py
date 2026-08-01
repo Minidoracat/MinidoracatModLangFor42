@@ -337,6 +337,58 @@ def load_own_translations() -> dict[str, dict[str, dict]]:
     return entries
 
 
+def report_own_anchor_gaps(own: dict[str, dict[str, dict]]) -> None:
+    """report-only：own_translations 鍵於 tracker-state/en_corpus_hashes.json 查無上游錨點者。
+
+    此類鍵不在 layer-A 全語料 hash 內，上游此後的變動永遠不會觸發「可能過時」issue——
+    顯性化偵測盲區供人工留意。缺 state 檔或壞損時靜默跳過（本檢查非 gate）。
+
+    已知限制：錨點集合為全 mod 裸鍵名扁平聯集（不分 mod/檔），同名鍵存在於不相干 mod
+    時會誤判「有錨點」而漏報——本報告偏鬆，報出的是盲區下限而非全集。
+    """
+    try:
+        state_path = PROJECT_ROOT / "tracker-state" / "en_corpus_hashes.json"
+        if not state_path.is_file():
+            return
+        try:
+            mods = json.loads(state_path.read_text(encoding="utf-8")).get("mods", {})
+        except (OSError, json.JSONDecodeError):
+            return
+        # 錨點＝值感知記錄限定：translate_*（值=英文原文）與 script_item_dn（值=DisplayName）。
+        # script_item/recipe/vehicle 名稱記錄的 value=區塊 id，DisplayName 漂移無感，不算錨點
+        # （改名仍以 added/removed 呈現，但 own 過時比對要的是「顯示文字」層級）。
+        anchors: set[str] = set()
+        for mod in mods.values():
+            records = mod.get("records", {}) if isinstance(mod, dict) else {}
+            for rid in records:
+                parts = rid.split("|", 2)
+                if len(parts) < 3:
+                    continue
+                kind, _rel, key = parts
+                if kind.startswith("translate_"):
+                    anchors.add(key)
+                    if key.startswith("ItemName_"):
+                        anchors.add(key[len("ItemName_"):])  # 上游前綴鍵 ↔ own 裸鍵互通
+                elif kind == "script_item_dn":
+                    anchors.add(key)
+                    anchors.add(f"Base.{key}")            # ItemName 裸鍵慣例（module 慣為 Base）
+                    anchors.add(f"ItemName_Base.{key}")   # 上游前綴鍵鏡像慣例
+        gaps = [
+            f"{fname}|{key}"
+            for fname, keys in sorted(own.items())
+            for key in sorted(keys)
+            if key not in anchors
+        ]
+        if gaps:
+            print(f"  ℹ️ 原創翻譯層 {len(gaps)} 鍵於 tracker 基準查無值感知上游錨點（layer-A 對其顯示文字變動無感）：")
+            for g in gaps[:20]:
+                print(f"    {g}")
+            if len(gaps) > 20:
+                print(f"    ...（還有 {len(gaps) - 20} 條）")
+    except Exception as exc:  # noqa: BLE001 — report-only：state 形狀壞損不得阻斷 build
+        print(f"  ⚠️ 錨點缺口報告略過（state 形狀異常：{exc}）")
+
+
 def apply_own(
     merged_cn: dict[str, dict], merged_ch: dict[str, dict], own: dict[str, dict[str, dict]]
 ) -> tuple[int, list[str]]:
@@ -667,6 +719,7 @@ def cmd_build() -> int:
         print(f"  ⚠️ 原創翻譯層 {len(own_shadowed)} 鍵已被 As1 收錄（As1 優先，建議自 own_translations.json 退役）：")
         for s in own_shadowed[:10]:
             print(f"    {s}")
+    report_own_anchor_gaps(own)
 
     errors, warnings = placeholder_gate(merged_cn, merged_ch)
 

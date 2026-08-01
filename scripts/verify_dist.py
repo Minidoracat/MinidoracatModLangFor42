@@ -904,6 +904,58 @@ def cmd_compare_dist(dist_translate: str, lua_client: str | None, snap_dir: str)
 # --------------------------------------------------------------------------- #
 # 主流程
 # --------------------------------------------------------------------------- #
+def check_vanilla_collision(repo: str) -> tuple[bool, list[str]]:
+    """[12] own_translations 原創鍵不得撞 vanilla 鍵名。
+
+    JSON 全量共存＝同鍵全域覆寫本體翻譯，會影響未安裝該 mod 的使用者；
+    比對基準與 no-op 豁免登記於 sources/vanilla_keys.json（獨立重讀，不共用 builder 載入）。
+    origin=own 的 mod 目錄暫不納入：比對是「裸鍵名」層級，own-mod 的逐地圖檔泛用鍵
+    （title/description 等）會與 vanilla 逐地圖檔內同名鍵跨檔假陽性；待清單改檔域
+    （fname|key）重生後方可納入——own-mod lane 的 vanilla-override 排除目前仍靠人工
+    （見各 metadata note）。
+    allowlist 值可為 {"reason", "own_anchor"}；own_anchor＝登記當時 own 條目
+    sha256(en|ch|cn)[:16]，值變動即豁免失效（同 cn_overrides/lint_exemptions 錨點慣例）。
+    """
+    with open(os.path.join(repo, "sources", "vanilla_keys.json"), encoding="utf-8-sig") as f:
+        data = json.load(f)
+    # 清單完整性 fail-closed：合法 JSON 但形狀壞損（空清單/非字串/非 dict allowlist）
+    # 一律擲例外由呼叫端轉 FAIL，不得靜默視為零碰撞。
+    keys_raw = data.get("keys")
+    if (
+        not isinstance(keys_raw, list)
+        or len(keys_raw) < 10000  # vanilla EN 鍵量級 4.7 萬；遠低於此＝清單殘缺
+        or not all(isinstance(k, str) and k for k in keys_raw)
+    ):
+        raise ValueError("vanilla_keys.json keys 形狀壞損（須為非空字串清單、量級數萬）")
+    allow = data.get("allowlist", {})
+    if not isinstance(allow, dict) or not all(
+        isinstance(s, dict) and isinstance(s.get("own_anchor"), str) and s["own_anchor"]
+        for s in allow.values()
+    ):
+        raise ValueError("vanilla_keys.json allowlist 形狀壞損（每筆須為含非空 own_anchor 的物件）")
+    vanilla = set(keys_raw)
+    details: list[str] = []
+    for fname, keys in sorted(_load_own(repo).items()):
+        for key in sorted(keys):
+            if key not in vanilla:
+                continue
+            spec = allow.get(key)
+            if spec is None:
+                details.append(
+                    f"  {fname}|{key} 撞 vanilla 鍵（覆寫本體翻譯；確認 no-op 後於 vanilla_keys.json allowlist 登記）"
+                )
+                continue
+            entry = keys[key]
+            joined = f"{entry.get('en', '')}|{entry.get('ch', '')}|{entry.get('cn', '')}"
+            got = hashlib.sha256(joined.encode("utf-8")).hexdigest()[:16]
+            if got != spec["own_anchor"]:
+                details.append(
+                    f"  {fname}|{key} allowlist own_anchor 失效（own 值已變動 {got}≠{spec['own_anchor']}，"
+                    "須重新確認 no-op 後更新錨點）"
+                )
+    return not details, details
+
+
 def run_all(paths: dict) -> int:
     repo = paths["repo"]
     as1_cn = paths["as1_cn"]
@@ -967,6 +1019,10 @@ def run_all(paths: dict) -> int:
         ok11, d11, w11 = check_review_drift(repo, dist_cn)
     except Exception as exc:  # noqa: BLE001
         ok11, d11, w11 = False, [f"review_state 無法載入（{exc}）"], []
+    try:
+        ok12, d12 = check_vanilla_collision(repo)
+    except Exception as exc:  # noqa: BLE001 — 清單檔缺失/壞損直接判 FAIL（gate 資料是受版控真相）
+        ok12, d12 = False, [f"vanilla_keys.json 無法載入（{exc}）"]
 
     rows = [
         ("1", "CN 逐檔 parity", ok1, d1, w1),
@@ -979,6 +1035,7 @@ def run_all(paths: dict) -> int:
         ("9", "CH corpus parity", ok9, d9, []),
         ("10", "sync worklist", ok10, d10, []),
         ("11", "已審鍵 CN 漂移（WARN-only）", ok11, d11, w11),
+        ("12", "vanilla 鍵碰撞", ok12, d12, []),
     ]
 
     n_pass = sum(1 for _, _, ok, _, _ in rows if ok)
