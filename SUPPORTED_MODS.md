@@ -3,7 +3,7 @@
 > 本檔由 `uv run scripts/build_mod.py manifest` 自動生成，請勿手動編輯。
 > 中文名稱與摘要維護於 `sources/mod_names_zh.json`，修改後重跑 manifest。
 
-共支援 **459 個 Workshop 模組**（602 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
+共支援 **460 個 Workshop 模組**（603 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 |
 | --- | --- | --- | --- | --- |
@@ -418,6 +418,7 @@
 | [My Spatial Refuge [B42] [MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3632195933) | 我的空間避難所 | 新增個人空間避難所系統，含經驗精華與多階升級物資。 | `myspatialrefuge` | 200 |
 | [[B42.13+] Pumps Have Propane (Standalone MP/SP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3632444452) | 油泵供應丙烷（獨立版） | 可從加油泵充裝丙烷罐、丙烷噴燈與丙烷罐車。 | `PumpsHavePropaneMP` | 6 |
 | [ModernFirearmsSystem 42.19 (SP/MP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3633421539) | 現代槍械系統 | 新增現代槍械系統，含多種口徑彈藥、彈匣與彈藥背帶。 | `ModernFirearmsSystem` | 34 |
+| [Better Safehouse [B42.20- MP]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3634569678) | 更好的安全屋 | 強化多人連線的安全屋管理：副屋主權限、擴建範圍、主重生點與側邊面板等。 | `BetterSafehouse` | 116 |
 | [Challenge Traits - Headshots, CDDA, and More [42.19 + 42.18]](https://steamcommunity.com/sharedfiles/filedetails/?id=3634630898) | 挑戰特質：爆頭、CDDA 等 | 新增爆頭限定、CDDA 等多種挑戰型特質玩法。 | `OCsChallengeTraits` | 37 |
 | [Dynamic Trading (w/ NPC) B42.16](https://steamcommunity.com/sharedfiles/filedetails/?id=3635333613) | 動態交易（含 NPC） | 新增與 NPC 的動態交易系統，含季節事件、通膨與土匪伏擊。 | `DynamicTrading`, `DynamicTradingCommon`, `DynamicTradingV2` | 136 |
 | [[B42MP] Frockin Splendor! Vol.5](https://steamcommunity.com/sharedfiles/filedetails/?id=3635394848) | Frockin Splendor! Vol.5 | 服飾擴充包第五輯，為遊戲新增額外服裝內容。 | `GanydeBielovzki's Frockin Splendor! Vol.5` | 37 |
