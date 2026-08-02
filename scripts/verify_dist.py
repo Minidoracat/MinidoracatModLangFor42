@@ -904,7 +904,7 @@ def cmd_compare_dist(dist_translate: str, lua_client: str | None, snap_dir: str)
 # --------------------------------------------------------------------------- #
 # 主流程
 # --------------------------------------------------------------------------- #
-def check_vanilla_collision(repo: str) -> tuple[bool, list[str]]:
+def check_vanilla_collision(repo: str, dist_cn: str) -> tuple[bool, list[str], list[str]]:
     """[12] own_translations 原創鍵不得撞 vanilla 鍵名。
 
     JSON 全量共存＝同鍵全域覆寫本體翻譯，會影響未安裝該 mod 的使用者；
@@ -934,8 +934,9 @@ def check_vanilla_collision(repo: str) -> tuple[bool, list[str]]:
     ):
         raise ValueError("vanilla_keys.json allowlist 形狀壞損（每筆須為含非空 own_anchor 的物件）")
     vanilla = set(keys_raw)
+    own = _load_own(repo)
     details: list[str] = []
-    for fname, keys in sorted(_load_own(repo).items()):
+    for fname, keys in sorted(own.items()):
         for key in sorted(keys):
             if key not in vanilla:
                 continue
@@ -953,7 +954,75 @@ def check_vanilla_collision(repo: str) -> tuple[bool, list[str]]:
                     f"  {fname}|{key} allowlist own_anchor 失效（own 值已變動 {got}≠{spec['own_anchor']}，"
                     "須重新確認 no-op 後更新錨點）"
                 )
-    return not details, details
+    # report-only：As1 lane 的「新增」vanilla 碰撞顯性化——已知碰撞登記於
+    # as1_overlap_known；不在清單者出 WARN（非阻斷，值層裁決屬人工，台帳見
+    # sources/vanilla_overlap_triage.json）。
+    #
+    # provenance 直接掃 As1 來源（sources/mods/<wid>/CN 排除 origin=own ＋ _unsorted/CN），
+    # 不從 dist 反推——dist 混入 own_translations 與 own-mod 鍵，反推會同時假報與漏報。
+    # 檔域模型：一般鍵屬全域字串表（任何檔內同名鍵都覆寫本體）；地圖檔泛用鍵
+    # （title/description）以檔名查找——vanilla 自身多個地圖檔各帶同名鍵而不互撞——
+    # 故以 vendor 的精確 (檔|鍵) 對判定，避免鍵集×檔名集的笛卡兒積誤報。
+    known_raw = data.get("as1_overlap_known", [])
+    pairs_raw = data.get("vanilla_scoped_pairs", [])
+    if not isinstance(known_raw, list) or not all(isinstance(x, str) for x in known_raw):
+        raise ValueError("vanilla_keys.json as1_overlap_known 形狀壞損（須為字串清單）")
+    if not isinstance(pairs_raw, list) or not all(isinstance(x, str) and "|" in x for x in pairs_raw):
+        raise ValueError("vanilla_keys.json vanilla_scoped_pairs 形狀壞損（須為 '檔|鍵' 字串清單）")
+    warns: list[str] = []
+    known = set(known_raw)
+    scoped_pairs = set(pairs_raw)
+    generic = {"title", "description"}
+    current: set[str] = set()
+    for fname, keys in sorted(_load_as1_lane_cn(repo, warns).items()):
+        for key in sorted(keys):
+            pair = f"{fname}|{key}"
+            hit = pair in scoped_pairs if key in generic else key in vanilla
+            if not hit:
+                continue
+            current.add(pair)
+            if pair not in known:
+                warns.append(f"  新增 vanilla 碰撞（As1 lane）：{pair}（裁決後補登 as1_overlap_known）")
+    for stale in sorted(known - current):
+        warns.append(f"  as1_overlap_known 陳舊條目：{stale}（As1 來源已無此碰撞，建議清理以防同鍵回歸被靜默放行）")
+    return not details, details, warns
+
+
+def _load_as1_lane_cn(repo: str, warns: list[str]) -> dict[str, set[str]]:
+    """As1 lane 的 (檔 → 鍵集)：sources/mods/<wid>/CN 排除 origin=='own' ＋ sources/_unsorted/CN。
+
+    獨立重讀（不共用 builder 收集函式），與 verify 的 oracle 原則一致。
+    """
+    out: dict[str, set[str]] = {}
+    cn_dirs: list[str] = []
+    mods_dir = os.path.join(repo, "sources", "mods")
+    for wid in sorted(os.listdir(mods_dir)) if os.path.isdir(mods_dir) else []:
+        mod_dir = os.path.join(mods_dir, wid)
+        meta_path = os.path.join(mod_dir, "metadata.json")
+        try:
+            with open(meta_path, encoding="utf-8-sig") as f:
+                if json.load(f).get("origin") == "own":
+                    continue
+        except (OSError, json.JSONDecodeError):
+            warns.append(f"  {wid}/metadata.json 無法解析，該 mod 併入 As1 lane 掃描（保守）")
+        cn = os.path.join(mod_dir, "CN")
+        if os.path.isdir(cn):
+            cn_dirs.append(cn)
+    unsorted_cn = os.path.join(repo, "sources", "_unsorted", "CN")
+    if os.path.isdir(unsorted_cn):
+        cn_dirs.append(unsorted_cn)
+    for cn in cn_dirs:
+        for path in sorted(glob.glob(os.path.join(cn, "*.json"))):
+            fname = os.path.basename(path)
+            try:
+                with open(path, encoding="utf-8-sig") as f:
+                    data = json.load(f)
+            except (OSError, json.JSONDecodeError):
+                warns.append(f"  {path} 無法解析，跳過碰撞掃描")
+                continue
+            if isinstance(data, dict):
+                out.setdefault(fname, set()).update(data)
+    return out
 
 
 def run_all(paths: dict) -> int:
@@ -1020,9 +1089,9 @@ def run_all(paths: dict) -> int:
     except Exception as exc:  # noqa: BLE001
         ok11, d11, w11 = False, [f"review_state 無法載入（{exc}）"], []
     try:
-        ok12, d12 = check_vanilla_collision(repo)
+        ok12, d12, w12 = check_vanilla_collision(repo, dist_cn)
     except Exception as exc:  # noqa: BLE001 — 清單檔缺失/壞損直接判 FAIL（gate 資料是受版控真相）
-        ok12, d12 = False, [f"vanilla_keys.json 無法載入（{exc}）"]
+        ok12, d12, w12 = False, [f"vanilla_keys.json 無法載入（{exc}）"], []
 
     rows = [
         ("1", "CN 逐檔 parity", ok1, d1, w1),
@@ -1035,7 +1104,7 @@ def run_all(paths: dict) -> int:
         ("9", "CH corpus parity", ok9, d9, []),
         ("10", "sync worklist", ok10, d10, []),
         ("11", "已審鍵 CN 漂移（WARN-only）", ok11, d11, w11),
-        ("12", "vanilla 鍵碰撞", ok12, d12, []),
+        ("12", "vanilla 鍵碰撞", ok12, d12, w12),
     ]
 
     n_pass = sum(1 for _, _, ok, _, _ in rows if ok)

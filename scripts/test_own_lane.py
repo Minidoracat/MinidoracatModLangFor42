@@ -143,6 +143,8 @@ with tempfile.TemporaryDirectory() as td:
 with tempfile.TemporaryDirectory() as td:
     repo = Path(td)
     (repo / "sources").mkdir()
+    dist_cn_dir = repo / "dist_cn"
+    dist_cn_dir.mkdir()
 
     def w_vanilla(payload):
         (repo / "sources" / "vanilla_keys.json").write_text(
@@ -163,21 +165,62 @@ with tempfile.TemporaryDirectory() as td:
     ):
         w_vanilla(bad)
         try:
-            verify_dist.check_vanilla_collision(str(repo))
+            verify_dist.check_vanilla_collision(str(repo), str(dist_cn_dir))
             raise AssertionError(f"形狀壞損未 fail-closed: {bad if len(str(bad)) < 80 else '...'}")
         except (ValueError, TypeError, AttributeError):
             pass
     w_vanilla({"keys": big, "allowlist": {}})
-    ok, det = verify_dist.check_vanilla_collision(str(repo))
+    ok, det, _w = verify_dist.check_vanilla_collision(str(repo), str(dist_cn_dir))
     assert not ok and "K0" in det[0], f"碰撞未偵測: {det}"
     import hashlib as _hl
     anchor = _hl.sha256("e|譯|译".encode("utf-8")).hexdigest()[:16]
     w_vanilla({"keys": big, "allowlist": {"K0": {"reason": "r", "own_anchor": anchor}}})
-    ok, det = verify_dist.check_vanilla_collision(str(repo))
+    ok, det, _w = verify_dist.check_vanilla_collision(str(repo), str(dist_cn_dir))
     assert ok and not det, f"錨點豁免未生效: {det}"
     w_own({"UI.json": {"K0": {"en": "e", "ch": "改", "cn": "改"}}})
-    ok, det = verify_dist.check_vanilla_collision(str(repo))
+    ok, det, _w = verify_dist.check_vanilla_collision(str(repo), str(dist_cn_dir))
     assert not ok and "own_anchor 失效" in det[0], f"錨點失效未偵測: {det}"
+
+    # 8b. warn 偵測器（As1 lane provenance）：新碰撞/known 靜默/generic 精確對/
+    #     own-mod 排除/_unsorted 納入/stale 條目/新欄位 fail-closed
+    def w_src(wid, meta, fname, payload):
+        base = repo / "sources" / "mods" / wid if wid else repo / "sources" / "_unsorted"
+        (base / "CN").mkdir(parents=True, exist_ok=True)
+        if meta is not None:
+            (base / "metadata.json").write_text(json.dumps(meta), encoding="utf-8")
+        (base / "CN" / fname).write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+
+    big2 = big + ["title"]
+    w_own({"UI.json": {"ZOwnOnly": {"en": "e", "ch": "譯", "cn": "译"}}})  # 不撞 vanilla，免干擾 blocking
+    w_src("111", {"origin": "as1"}, "IG_UI.json", {"K6": "x"})       # As1 一般鍵 → warn
+    w_src("111", None, "SomeMod.json", {"title": "x"})               # generic 非登記對 → 靜默
+    w_src("111", None, "Muldraugh.json", {"title": "x"})             # generic 已登記對 → warn
+    w_src("222", {"origin": "own"}, "IG_UI.json", {"K7": "x"})       # own-mod → 靜默
+    w_src(None, None, "ItemName.json", {"K8": "x"})                  # _unsorted → warn
+    w_vanilla({"keys": big2, "allowlist": {}, "as1_overlap_known": [],
+               "vanilla_scoped_pairs": ["Muldraugh.json|title"]})
+    _ok, _det, warns = verify_dist.check_vanilla_collision(str(repo), str(dist_cn_dir))
+    joined = "\n".join(warns)
+    assert "IG_UI.json|K6" in joined and "Muldraugh.json|title" in joined, warns
+    assert "ItemName.json|K8" in joined, f"_unsorted 未納入: {warns}"
+    assert "IG_UI.json|K7" not in joined, f"own-mod 未排除: {warns}"
+    assert "SomeMod.json|title" not in joined, f"generic 笛卡兒積誤報: {warns}"
+    w_vanilla({"keys": big2, "allowlist": {},
+               "as1_overlap_known": ["IG_UI.json|K6", "Muldraugh.json|title",
+                                     "ItemName.json|K8", "Gone.json|K9"],
+               "vanilla_scoped_pairs": ["Muldraugh.json|title"]})
+    ok, _det, warns = verify_dist.check_vanilla_collision(str(repo), str(dist_cn_dir))
+    joined = "\n".join(warns)
+    assert "新增 vanilla 碰撞" not in joined, f"known 未靜默: {warns}"
+    assert "陳舊條目：Gone.json|K9" in joined, f"stale 未偵測: {warns}"
+    assert ok, "report-only 不得影響 blocking 結果"
+    for bad_field in ({"as1_overlap_known": {"a": 1}}, {"vanilla_scoped_pairs": ["nopipe"]}):
+        w_vanilla({"keys": big2, "allowlist": {}, **bad_field})
+        try:
+            verify_dist.check_vanilla_collision(str(repo), str(dist_cn_dir))
+            raise AssertionError(f"新欄位形狀壞損未 fail-closed: {bad_field}")
+        except ValueError:
+            pass
 
 # 9. tracker _iter_script_records：多 scripts 目錄、dn 後者生效、巢狀子區塊不誤歸屬
 with tempfile.TemporaryDirectory() as td:
