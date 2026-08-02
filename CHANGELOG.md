@@ -4,6 +4,41 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.19.0-1.5.0] - 2026-08-02
+
+### Added
+
+- **新增 4 個 MOD 的翻譯支援，合計 1,195 鍵**：
+  - **Burd's Survival Journals**（3639628777）733 鍵：上游 7/30 改版後 As1 尚未跟上的詛咒日記、聖誕日記、Sandbox 選項與 lore 敘事文本。該 MOD 雖自帶 `CH` 目錄，實為簡體複製品（1,675 鍵中 1,311 鍵與 CN 逐字相同），繁中支援名存實亡；EN 依據以 tracker baseline 逐鍵核實（`translate_en` 5,205 筆零 diff）。
+  - **Better Safehouse**（3634569678）116 鍵〔原創翻譯〕：SubOwner 副屋主、Expansion 擴建、PrimaryRespawn 主重生點、SidePanel 側邊面板等新功能。As1 已收 114 鍵但全落 `_unsorted`，這 116 鍵上游零翻譯，簡中亦為原創直寫。
+  - **B42 Scavenging Skill**（3645462965）62 鍵〔原創翻譯，issue #27〕：技能名定名「拾荒」（本體二字體例；「搜尋」已被 B42 `PlantScavenging` 佔用）、0–10 級發現機率與額外戰利品沙盒選項、5 本雙關書名技能書（意譯保留趣味）。
+  - **Mirage Wardrobe 幻裝衣櫥**（3770186452）284 鍵〔原創翻譯〕：多人連線換裝模組，CH 經四視角評審＋對抗覆核，40 筆鍵級覆寫（套用家族 21 鍵、`Worn/carried` 與 vertical panning 漏譯修復等）。
+- **既有 MOD 補譯 419 鍵**：More Traits 整塊動態特徵沙盒選項 167 鍵（申請者回報查證屬實）、追蹤器「可能過時」issue 清償批 13 個 MOD 共 252 鍵（#10–#26，含 TchernoLib 版本目錄遮蔽的雙鍵、chevy 車輛部件）。
+- **vanilla 覆寫治理**：As1 lane 與遊戲本體同名的 331 鍵全量裁決並建立逐鍵台帳（`sources/vanilla_overlap_triage.json`，含 verdict／值錨點／裁決理由），`verify_dist.py` 新增 [12] vanilla 鍵碰撞 gate——原創翻譯鍵不得撞本體鍵名（會影響未安裝該 MOD 的使用者）。
+- **`sources/en/` 上游英文全文落地**：追蹤器偵測到變更時順手保存該 MOD 的完整 EN 語料，日後補譯不必再依賴 steamcmd 下載（該途徑有整日全面失敗的實例）。
+- **品質防線**：`verify_dist.py --cn-diff <ref>` 出口匯流複核（列出 CN 值變動而繁中真相層未跟進、亦無審查背書的鍵）、`lint_ch.py` 零基線棘輪（品質單調劣化即非零退出）。
+
+### Changed
+
+- **CH 斷絕 OpenCC 機轉，遷移為人工真相 corpus**（架構級單向門）：繁中不再由簡中機器轉換再生，`sources/ch/`（83 檔 70,201 鍵）成為唯一真相，自現行輸出**零 diff 凍結**（dist 逐 byte 不變，僅更換生成機制）。build 降為純合併＋五道 gate（corpus 鍵集、同步 worklist、registry 背書、CH 值層、placeholder）；`ch_overrides.json` 退役（6,537 筆凍入 corpus）、`opencc_fixes.json` 降級為 lint 資料。
+- **CN 修正層加上游值錨點**：`cn_overrides.json` 與 `placeholder_exceptions.json` 的登記須帶 `as1_value`，上游若已自行修正會列過時警告，避免 override 靜默永久壓過。
+- **追蹤器偵測層強化**（extractor schema 4→5）：改掃全部 `media/scripts` 目錄（實測 99/324 個 MOD 有多目錄、長期部分失明）、物品區塊獨立抽取 `DisplayName`。
+- **`ch_value_gate` 接回 build 主流程**：該防線（阻斷簡體專用字殘留與「CN 有文而 CH 空值」）自定義以來唯一呼叫者是單元測試，主流程從未呼叫——文件描述的 gate 實際斷開。斷絕 OpenCC 後 CH 轉為純人工維護，此防線正是為該風險而設。
+
+### Fixed
+
+- **譯名一致性債務清償 118 鍵**：技能名全面對齊遊戲本體面板顯示名 84 鍵（健身→體格、機械→技工、電氣技能→電工、裁縫→縫紉、長/短鈍器→長/短棍、金屬加工→金工，並保護「健身狂」等特質名與「機械師」等職業名不誤傷）；Absorb 語意族統一「領悟」18 鍵——該 MOD 的 Learn 與 Absorb 是不同動作，舊譯與「學習」撞名、「掌握」又與 already-known 撞名，同面板並存四種說法；深傷口、Tarp/Burlap 等統一。
+- **審查債首批償還**：310 鍵逐項語境裁決，修正 34 鍵（質量→品質、計算機→電腦、型別→類型、運行→執行、添加→新增等），305 鍵登記已審台帳；合法語境（開罐頭、遠程武器、用戶端等）不誤殺。
+- **vanilla 覆寫有害項 16 鍵**：繁中 11 鍵落 corpus（取消→否、彈匣誤譯雜誌、10倍→八倍鏡、雕刻蝙蝠→球棒等），簡中 16 筆走 `cn_overrides` 回填本體官方值。
+- **全庫台灣用語 sweep**：四族用語 270 處逐項分類＋對抗覆核，46 筆語境例外覆寫；字典新增 9 條規則（擴充套件→擴展、全域性→全域、聯機→連線、只讀→唯讀、丟失→遺失等 s2twp 誤轉與在地化）。
+- **上游機翻繼承的簡中錯譯**：Burd's 敘事文本 5 筆（crossed the lake→過馬路、red envelope→紅包、the notes→音符、three houses down→三棟房子）——根因是「簡中以上游為底逐字保留」的規則繼承了上游機翻缺陷，原創翻譯層不受 CN parity 限制，改依英文重譯；另修 4 筆 Sandbox 說明漏譯或多述不存在的「消耗」行為。
+- **Cheat Menu Phoenix 誤譯 2 鍵**：`cheat`→「聊天」誤譯，重譯為「未找到套用作弊效果的物品」。
+- **追蹤器每日狀態寫入失敗**：零 EN 落地日 `git add` pathspec 導致 rc=128，狀態 commit 寫了出不去；補 `.gitkeep` 佔位並加回歸測試。
+
+### Notes
+
+- **Better Safehouse 補上追蹤盲區**：該 MOD 的鍵因 attribution helper 無法歸屬而全落 `_unsorted`，導致它從未有 `sources/mods/` 目錄、也從未進入每日監看清單（`gen-watchlist` 只讀各 MOD 的 metadata，補跑無效）。本次建立 own-mod 目錄納管，watchlist 475→476。全庫盤點確認此為唯一真盲區——另有 98 個無 MOD 前綴的裸鍵（`Base.*`／`WaterPipes.*`）雖查無錨點，經 script 記錄反查其所屬 5 個 workshop id 均已在監看。
+
 ## [42.19.0-1.4.0] - 2026-07-30
 
 ### Added
