@@ -721,17 +721,28 @@ def cmd_build() -> int:
             print(f"    {s}")
     report_own_anchor_gaps(own)
 
+    # CH 值層 gate 須在 apply_own 之後：own_translations 的 ch 也走這道簡繁不變式檢查
+    ch_value_errors = ch_value_gate(merged_cn, merged_ch)
     errors, warnings = placeholder_gate(merged_cn, merged_ch)
 
     # Lua 複製計畫先算：basename 衝突屬硬錯，須在清空/寫出前先攔
     lua_plan, lua_conflicts = plan_lua()
 
-    # gate：合併衝突 + placeholder 崩潰簽名/token 不一致 + Lua 衝突 → 不寫出、非零退出
-    if conflicts or errors or lua_conflicts:
+    # gate：合併衝突 + CH 值層 + placeholder 崩潰簽名/token 不一致 + Lua 衝突 → 不寫出、非零退出
+    if conflicts or ch_value_errors or errors or lua_conflicts:
         if conflicts:
             print(f"\n❌ 合併衝突（同 (檔,鍵) 異值）{len(conflicts)} 處：")
             for c in conflicts:
                 print(c)
+        if ch_value_errors:
+            print(
+                f"\n❌ CH 值層 gate {len(ch_value_errors)} 處"
+                "（簡體專用字殘留 / CN 有文而 CH 空值 / 非字串）："
+            )
+            for e in ch_value_errors[:50]:
+                print(e)
+            if len(ch_value_errors) > 50:
+                print(f"  ...（還有 {len(ch_value_errors) - 50} 處）")
         if errors:
             print(f"\n❌ placeholder gate {len(errors)} 處（崩潰簽名 / token 不一致）：")
             for e in errors:
