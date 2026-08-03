@@ -89,6 +89,16 @@
   "reason": "vanilla 'Strawberry Soda' cn「苏打草莓」同型劣譯；官方 CN 回填",
   "value": "草莓汽水"
  },
+ "IG_UI.json|IGUI_Barrel": {
+  "as1_value": "燃料桶",
+  "reason": "9 個 owner 中 8 個為槍械 mod（EN 'Barrel'＝槍管，MFS 3633421539 自帶 CN 亦為「枪管」），僅 GeneratorPlus 3597471949 為小寫 'barrel' 計數量詞（自帶 CN「个桶」）；As1 收斂值「燃料桶」無任何 owner 採用，Steam 玩家回報 MFS 槍管欄顯示燃料桶。多數裁決取「枪管」，對齊 MFS 自帶 CN；已知取捨：GeneratorPlus 資訊視窗單桶時將顯示「(1 槍管)」（複數臂由 IGUI_Barrels=个桶 正確呈現；該 mod 自帶 CH/CN 於載入序在後時會覆回正確量詞）",
+  "value": "枪管"
+ },
+ "IG_UI.json|IGUI_Barrels": {
+  "as1_value": "燃料桶",
+  "reason": "GeneratorPlus 3597471949 獨有鍵，EN 'barrels' 為發電機資訊視窗計數量詞（barrelCount 拼接），mod 自帶 CN「个桶」；計數語境「5 燃料桶」不自然，對齊作者自帶譯法",
+  "value": "个桶"
+ },
  "IG_UI.json|IGUI_ItemCat_HouseholdOrWeaponBlunt": {
   "as1_value": "家用工具/武器-长刀",
   "reason": "鍵名為 Blunt 卻誤譯「长刀」（Long Blade）；同族 ...OrWeaponBlunt 32 鍵中其餘 30 鍵均為长棍，屬 As1 上游錯譯",
@@ -98,6 +108,11 @@
   "as1_value": "杂物/武器-长刀",
   "reason": "鍵名為 Blunt 卻誤譯「长刀」（Long Blade）；同族 ...OrWeaponBlunt 32 鍵中其餘 30 鍵均為长棍，屬 As1 上游錯譯",
   "value": "杂物/武器-长棍"
+ },
+ "IG_UI.json|IGUI_ItemCat_Stock": {
+  "as1_value": "高汤",
+  "reason": "9 個 owner 中 8 個為槍械 mod（MFS EN 'Weapon attachment - Stock'＝槍托分類），僅 CAExtendedCategories 為食物高湯分類（EN 'Stock'）；與 IGUI_Barrel 同型共用鍵衝突，多數＋高頻裁決取槍械語境，格式循 corpus ItemCat「類別-子類」慣例",
+  "value": "武器配件-枪托"
  },
  "IG_UI.json|IGUI_KnoxRelay_MorningShow_Jenna_Day28_S6": {
   "as1_value": "把接线头两两擦火交叉一对, 然后猛踩油门",

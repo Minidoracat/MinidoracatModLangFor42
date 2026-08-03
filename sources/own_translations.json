@@ -3,6 +3,26 @@
  "_usage": "schema：entries.<檔名>.<鍵> = {en, ch, cn}。en=擷取當時上游原文（供過時比對）；ch=直寫繁中（不經 OpenCC）；cn=對應簡中。與 As1 同鍵時 As1 優先，build 會提示退役該條目。",
  "entries": {
   "ContextMenu.json": {
+   "ContextMenu_ADD_Battery_To_Laser": {
+    "en": "Add battery to laser",
+    "ch": "將電池裝入雷射瞄準鏡",
+    "cn": "将电池装入激光瞄准镜"
+   },
+   "ContextMenu_ADD_Battery_To_Light": {
+    "en": "Add battery to light",
+    "ch": "將電池裝入戰術手電筒",
+    "cn": "将电池装入战术手电"
+   },
+   "ContextMenu_AirDrop": {
+    "en": "Open AirDrop",
+    "ch": "開啟空投",
+    "cn": "打开空投"
+   },
+   "ContextMenu_AirDropMarker": {
+    "en": "Use AirDrop marker",
+    "ch": "使用空投標記",
+    "cn": "使用空投标记"
+   },
    "ContextMenu_BurdJournals_AbsorbAll": {
     "en": "Absorb All Rewards",
     "ch": "領悟全部獎勵",
@@ -147,6 +167,16 @@
     "en": "Refill From Large Propane Tank",
     "ch": "從大型丙烷罐補充",
     "cn": "从大型丙烷罐补充"
+   },
+   "ContextMenu_Remove_Battery_To_Laser": {
+    "en": "Remove battery from laser",
+    "ch": "從雷射瞄準鏡取出電池",
+    "cn": "从激光瞄准镜取出电池"
+   },
+   "ContextMenu_Remove_Battery_To_Light": {
+    "en": "Remove battery from light",
+    "ch": "從戰術手電筒取出電池",
+    "cn": "从战术手电取出电池"
    },
    "ContextMenu_TTF_PickUpSleepingBag": {
     "en": "Pick Up Sleeping Bag",
@@ -337,6 +367,26 @@
     "en": "west",
     "ch": "西",
     "cn": "西"
+   },
+   "ContextMenu_dessectall": {
+    "en": "Dessect All",
+    "ch": "解剖全部",
+    "cn": "解剖全部"
+   },
+   "ContextMenu_dessectcorpse": {
+    "en": "Dessect corpse",
+    "ch": "解剖屍體",
+    "cn": "解剖尸体"
+   },
+   "ContextMenu_dessectone": {
+    "en": "Dessect One",
+    "ch": "解剖一具",
+    "cn": "解剖一具"
+   },
+   "ContextMenu_nodessectcorpse": {
+    "en": "Dessect(Need Knifes)",
+    "ch": "解剖(需要刀具)",
+    "cn": "解剖(需要刀具)"
    },
    "IGUI_CraftingCategories_Mechanics": {
     "en": "Mechanics",
@@ -1412,6 +1462,11 @@
     "ch": "用膠帶修補",
     "cn": "用胶带修补"
    },
+   "IGUI-HSGF42.ui": {
+    "en": "Fantasy Workshop Vending Machine",
+    "ch": "奇幻工坊販賣機",
+    "cn": "奇幻工坊自动售货机"
+   },
    "IGUI_3DP_Context_Dismantle": {
     "en": "Dismantle 3D Printer",
     "ch": "拆除3D列印機",
@@ -1436,6 +1491,11 @@
     "en": "Search object...",
     "ch": "搜尋物品…",
     "cn": "搜索物品…"
+   },
+   "IGUI_Barrel_Shroud": {
+    "en": "Barrel shroud",
+    "ch": "護木",
+    "cn": "护木"
    },
    "IGUI_Beard_BikerStache": {
     "en": "Biker Stache",
@@ -1507,6 +1567,26 @@
     "ch": "伍德伯里鬍",
     "cn": "伍德伯里胡"
    },
+   "IGUI_CLIP": {
+    "en": "Magazine",
+    "ch": "彈匣",
+    "cn": "弹匣"
+   },
+   "IGUI_Canon": {
+    "en": "Muzzle",
+    "ch": "槍口",
+    "cn": "枪口"
+   },
+   "IGUI_ClearIOBox": {
+    "en": "The IO container is not empty, please remove items first.",
+    "ch": "IO 容器不是空的, 請先移除物品.",
+    "cn": "IO容器不是空的, 请先移除物品."
+   },
+   "IGUI_Clip": {
+    "en": "Magazine well",
+    "ch": "彈匣井",
+    "cn": "弹匣井"
+   },
    "IGUI_CraftingCategories_Armoring": {
     "en": "Armoring",
     "ch": "裝甲",
@@ -1521,6 +1601,186 @@
     "en": "Recycling",
     "ch": "回收",
     "cn": "回收"
+   },
+   "IGUI_DAMAGED": {
+    "en": "Damaged",
+    "ch": "已損壞",
+    "cn": "已损坏"
+   },
+   "IGUI_EmptyIOBox": {
+    "en": "The IO container is empty, please mark items and try again.",
+    "ch": "IO 容器是空的, 請標記物品後再試一次.",
+    "cn": "IO容器是空的, 请标记物品后再试一次."
+   },
+   "IGUI_FixItem": {
+    "en": "Use Repair Kit",
+    "ch": "使用修理包",
+    "cn": "使用修理包"
+   },
+   "IGUI_Grip": {
+    "en": "Grip",
+    "ch": "握把",
+    "cn": "握把"
+   },
+   "IGUI_ItemCat_Barrel": {
+    "en": "Weapon attachment - Barrel",
+    "ch": "武器配件-槍管",
+    "cn": "武器配件-枪管"
+   },
+   "IGUI_ItemCat_Barrel_Shroud": {
+    "en": "Weapon attachment - Barrel shroud",
+    "ch": "武器配件-護木",
+    "cn": "武器配件-护木"
+   },
+   "IGUI_ItemCat_Canon": {
+    "en": "Weapon attachment - Muzzle",
+    "ch": "武器配件-槍口",
+    "cn": "武器配件-枪口"
+   },
+   "IGUI_ItemCat_Clip": {
+    "en": "Weapon attachment - Magazine",
+    "ch": "武器配件-彈匣",
+    "cn": "武器配件-弹匣"
+   },
+   "IGUI_ItemCat_FireArm": {
+    "en": "Firearm",
+    "ch": "槍械",
+    "cn": "枪械"
+   },
+   "IGUI_ItemCat_Grip": {
+    "en": "Weapon attachment - Grip",
+    "ch": "武器配件-握把",
+    "cn": "武器配件-握把"
+   },
+   "IGUI_ItemCat_Hide_Beam": {
+    "en": "Weapon attachment - Invisible beam",
+    "ch": "武器配件-隱形光束",
+    "cn": "武器配件-隐形光束"
+   },
+   "IGUI_ItemCat_L_Scope": {
+    "en": "Weapon attachment - Left sight",
+    "ch": "武器配件-左側瞄具",
+    "cn": "武器配件-左侧瞄具"
+   },
+   "IGUI_ItemCat_Laser": {
+    "en": "Weapon attachment - Laser",
+    "ch": "武器配件-雷射",
+    "cn": "武器配件-激光"
+   },
+   "IGUI_ItemCat_Light": {
+    "en": "Weapon attachment - Light",
+    "ch": "武器配件-戰術燈",
+    "cn": "武器配件-战术灯"
+   },
+   "IGUI_ItemCat_Misc": {
+    "en": "Weapon attachment - Miscellaneous",
+    "ch": "武器配件-其他",
+    "cn": "武器配件-其他"
+   },
+   "IGUI_ItemCat_R_Scope": {
+    "en": "Weapon attachment - Right sight",
+    "ch": "武器配件-右側瞄具",
+    "cn": "武器配件-右侧瞄具"
+   },
+   "IGUI_ItemCat_RecoilPad": {
+    "en": "Weapon attachment - Recoil pad",
+    "ch": "武器配件-槍托墊",
+    "cn": "武器配件-枪托垫"
+   },
+   "IGUI_ItemCat_Scope": {
+    "en": "Weapon attachment - Sight",
+    "ch": "武器配件-瞄具",
+    "cn": "武器配件-瞄具"
+   },
+   "IGUI_ItemCat_Skin": {
+    "en": "Weapon attachment - Skin (useless)",
+    "ch": "武器配件-塗裝(無實際作用)",
+    "cn": "武器配件-涂装(无实际作用)"
+   },
+   "IGUI_ItemCat_Sling": {
+    "en": "Weapon attachment - Sling",
+    "ch": "武器配件-槍帶",
+    "cn": "武器配件-枪带"
+   },
+   "IGUI_ItemCat_Stool": {
+    "en": "Weapon attachment - Bipod",
+    "ch": "武器配件-兩腳架",
+    "cn": "武器配件-两脚架"
+   },
+   "IGUI_ItemCat_WepFire": {
+    "en": "Weapon - Firearms",
+    "ch": "武器-槍械",
+    "cn": "武器-枪械"
+   },
+   "IGUI_ItemCat_WepMelee": {
+    "en": "Weapon - Melee",
+    "ch": "武器-近戰",
+    "cn": "武器-近战"
+   },
+   "IGUI_L_Scope": {
+    "en": "Left sight",
+    "ch": "左側瞄具",
+    "cn": "左侧瞄具"
+   },
+   "IGUI_Laser": {
+    "en": "Laser",
+    "ch": "雷射",
+    "cn": "激光"
+   },
+   "IGUI_Light": {
+    "en": "Light",
+    "ch": "戰術燈",
+    "cn": "战术灯"
+   },
+   "IGUI_LightMode_GunLight": {
+    "en": "Flashlight",
+    "ch": "戰術手電筒",
+    "cn": "战术手电"
+   },
+   "IGUI_LightMode_Laser": {
+    "en": "Laser",
+    "ch": "雷射",
+    "cn": "激光"
+   },
+   "IGUI_LightMode_LaserAndGunLight": {
+    "en": "Laser + Flashlight",
+    "ch": "雷射＋戰術手電筒",
+    "cn": "激光+战术手电"
+   },
+   "IGUI_LightMode_nil": {
+    "en": "None",
+    "ch": "無",
+    "cn": "无"
+   },
+   "IGUI_Light_BatteryRemaining_GunLight": {
+    "en": "Flashlight battery remaining:",
+    "ch": "戰術手電筒剩餘電量:",
+    "cn": "战术手电剩余电量:"
+   },
+   "IGUI_Light_BatteryRemaining_Laser": {
+    "en": "Laser battery remaining:",
+    "ch": "雷射剩餘電量:",
+    "cn": "激光剩余电量:"
+   },
+   "IGUI_LoadItem": {
+    "en": "Load item",
+    "ch": "裝載物品",
+    "cn": "装载物品"
+   },
+   "IGUI_MarkItem": {
+    "en": "Mark item",
+    "ch": "標記物品",
+    "cn": "标记物品"
+   },
+   "IGUI_Misc": {
+    "en": "Miscellaneous",
+    "ch": "其他配件",
+    "cn": "其他配件"
+   },
+   "IGUI_NotEnough": {
+    "en": "Item has durability, not enough stock to load 1 unit",
+    "ch": "物品具有耐久度, 庫存不足, 無法裝載 1 個單位",
+    "cn": "物品具有耐久度, 库存不足, 无法装载1个单位"
    },
    "IGUI_PhunZones_AddRegion": {
     "en": "Add Region",
@@ -1747,6 +2007,66 @@
     "ch": "切換",
     "cn": "切换"
    },
+   "IGUI_RISKY_ATTACHMENTS": {
+    "en": "Weapon attachments",
+    "ch": "武器配件",
+    "cn": "武器配件"
+   },
+   "IGUI_RISKY_CONDITION": {
+    "en": "Condition",
+    "ch": "耐久度",
+    "cn": "耐久度"
+   },
+   "IGUI_RISKY_INSPECT_WEAPON": {
+    "en": "Inspect weapon",
+    "ch": "檢視武器",
+    "cn": "检视武器"
+   },
+   "IGUI_RISKY_NONE": {
+    "en": "None",
+    "ch": "無",
+    "cn": "无"
+   },
+   "IGUI_RISKY_PRISTINE": {
+    "en": "Pristine",
+    "ch": "嶄新",
+    "cn": "崭新"
+   },
+   "IGUI_RISKY_REPAIR_HEAVILY": {
+    "en": "Heavily repaired",
+    "ch": "大幅修理",
+    "cn": "重度维修"
+   },
+   "IGUI_RISKY_REPAIR_NONE": {
+    "en": "Mint condition",
+    "ch": "完好如新",
+    "cn": "完好如新"
+   },
+   "IGUI_RISKY_REPAIR_SLIGHTLY": {
+    "en": "Slightly repaired",
+    "ch": "稍經修理",
+    "cn": "轻度维修"
+   },
+   "IGUI_R_Scope": {
+    "en": "Right sight",
+    "ch": "右側瞄具",
+    "cn": "右侧瞄具"
+   },
+   "IGUI_RecoilPad": {
+    "en": "Recoil pad",
+    "ch": "槍托墊",
+    "cn": "枪托垫"
+   },
+   "IGUI_SUY": {
+    "en": "Purchase",
+    "ch": "購買",
+    "cn": "购买"
+   },
+   "IGUI_Scope": {
+    "en": "Scope",
+    "ch": "瞄準鏡",
+    "cn": "瞄准镜"
+   },
    "IGUI_SearchMode_Categories_DeadAnimals": {
     "en": "Dead Animals",
     "ch": "動物屍體",
@@ -1761,6 +2081,71 @@
     "en": "Wild Herbs",
     "ch": "野生草藥",
     "cn": "野生草药"
+   },
+   "IGUI_ShellConditonDown": {
+    "en": "Shield durability",
+    "ch": "盾牌耐久度",
+    "cn": "盾牌耐久度"
+   },
+   "IGUI_Skin": {
+    "en": "Skin",
+    "ch": "塗裝",
+    "cn": "涂装"
+   },
+   "IGUI_Sling": {
+    "en": "Sling",
+    "ch": "槍帶",
+    "cn": "枪带"
+   },
+   "IGUI_Spaceid": {
+    "en": "Space ID:",
+    "ch": "空間 ID:",
+    "cn": "空间 ID:"
+   },
+   "IGUI_Stock": {
+    "en": "Stock",
+    "ch": "槍托",
+    "cn": "枪托"
+   },
+   "IGUI_Stool": {
+    "en": "Bipod",
+    "ch": "兩腳架",
+    "cn": "两脚架"
+   },
+   "IGUI_USED": {
+    "en": "Used",
+    "ch": "使用過",
+    "cn": "使用过"
+   },
+   "IGUI_Unit": {
+    "en": "Unit",
+    "ch": "個",
+    "cn": "个"
+   },
+   "IGUI_UnloadItem1": {
+    "en": "Unload 1 item",
+    "ch": "卸載 1 個物品",
+    "cn": "卸载1个物品"
+   },
+   "IGUI_UnloadItem10": {
+    "en": "Unload 10 items",
+    "ch": "卸載 10 個物品",
+    "cn": "卸载10个物品"
+   },
+   "IGUI_UnloadItem100": {
+    "en": "Unload 100 items",
+    "ch": "卸載 100 個物品",
+    "cn": "卸载100个物品"
+   },
+   "IGUI_UnloadItem50": {
+    "en": "Unload 50 items",
+    "ch": "卸載 50 個物品",
+    "cn": "卸载50个物品"
+   },
+   "IGUI_UnloadItemAll": {
+    "en": "Unload all items",
+    "ch": "卸載所有物品",
+    "cn": "卸载所有物品"
    },
    "IGUI_VehicleName76chevyBlazer": {
     "en": "'76 Chevrolet K5 Blazer",
@@ -1806,6 +2191,221 @@
     "en": "barrel water amount = %1",
     "ch": "水桶水量 = %1",
     "cn": "水桶水量 = %1"
+   },
+   "IGUI_WeaponAttackType": {
+    "en": "Fire mode",
+    "ch": "射擊模式",
+    "cn": "射击模式"
+   },
+   "IGUI_WeaponUI_AimingTime": {
+    "en": "Aim time",
+    "ch": "瞄準時間",
+    "cn": "瞄准时间"
+   },
+   "IGUI_WeaponUI_AngleMax": {
+    "en": "Max angle",
+    "ch": "最大角度",
+    "cn": "最大角度"
+   },
+   "IGUI_WeaponUI_AngleMin": {
+    "en": "Min angle",
+    "ch": "最小角度",
+    "cn": "最小角度"
+   },
+   "IGUI_WeaponUI_ClipNow": {
+    "en": "Magazine",
+    "ch": "彈匣容量",
+    "cn": "弹匣容量"
+   },
+   "IGUI_WeaponUI_CriticalChance": {
+    "en": "Crit",
+    "ch": "暴擊率",
+    "cn": "暴击率"
+   },
+   "IGUI_WeaponUI_DamegeMax": {
+    "en": "Max damage",
+    "ch": "最大傷害",
+    "cn": "最大伤害"
+   },
+   "IGUI_WeaponUI_DamegeMin": {
+    "en": "Min damage",
+    "ch": "最小傷害",
+    "cn": "最小伤害"
+   },
+   "IGUI_WeaponUI_Data": {
+    "en": "Weapon data",
+    "ch": "武器資料",
+    "cn": "武器数据"
+   },
+   "IGUI_WeaponUI_FireRate": {
+    "en": "Fire rate",
+    "ch": "射速",
+    "cn": "射速"
+   },
+   "IGUI_WeaponUI_MaxHitCount": {
+    "en": "Penetration",
+    "ch": "穿透力",
+    "cn": "穿透力"
+   },
+   "IGUI_WeaponUI_RangeMax": {
+    "en": "Max range",
+    "ch": "最大射程",
+    "cn": "最大射程"
+   },
+   "IGUI_WeaponUI_RangeMin": {
+    "en": "Min range",
+    "ch": "最小射程",
+    "cn": "最小射程"
+   },
+   "IGUI_WeaponUI_ReloadTime": {
+    "en": "Reload",
+    "ch": "裝填時間",
+    "cn": "装填时间"
+   },
+   "IGUI_WeaponUI_Sound": {
+    "en": "Noise",
+    "ch": "噪音",
+    "cn": "噪音"
+   },
+   "IGUI_WeaponUI_Weight": {
+    "en": "Weight",
+    "ch": "重量",
+    "cn": "重量"
+   },
+   "IGUI_ZombieLeft": {
+    "en": "Zombies remaining:",
+    "ch": "剩餘殭屍:",
+    "cn": "剩余僵尸:"
+   },
+   "IGUI_ZombiesInComing": {
+    "en": "They're coming!",
+    "ch": "它們來了!",
+    "cn": "它们来了!"
+   },
+   "IGUI_biggun_bulletamount": {
+    "en": "Ammunition amount:",
+    "ch": "彈藥數量:",
+    "cn": "弹药数量:"
+   },
+   "IGUI_biggun_bullets": {
+    "en": "Ammunition type:",
+    "ch": "彈藥類型:",
+    "cn": "弹药类型:"
+   },
+   "IGUI_dell": {
+    "en": "for sale",
+    "ch": "出售",
+    "cn": "出售"
+   },
+   "IGUI_infinite": {
+    "en": "infinite",
+    "ch": "無限",
+    "cn": "无限"
+   },
+   "IGUI_insertmoney": {
+    "en": "Drag the credit card into it",
+    "ch": "將信用卡拖入其中",
+    "cn": "将信用卡拖入其中"
+   },
+   "IGUI_intro_jdjy": {
+    "en": "Good value for money, fair to all. ",
+    "ch": "物美價廉, 童叟無欺.",
+    "cn": "物美价廉, 童叟无欺."
+   },
+   "IGUI_invpanel_Weight": {
+    "en": "Weight",
+    "ch": "重量",
+    "cn": "重量"
+   },
+   "IGUI_jdjycount": {
+    "en": "Inventory: ",
+    "ch": "庫存:",
+    "cn": "库存:"
+   },
+   "IGUI_jdjyiprice": {
+    "en": "Unit price: ",
+    "ch": "單價:",
+    "cn": "单价:"
+   },
+   "IGUI_jdjyitemname": {
+    "en": "Product Name: ",
+    "ch": "商品名稱:",
+    "cn": "商品名称:"
+   },
+   "IGUI_jdjylabele_Sell_animalpart": {
+    "en": "Acquisition - Animal",
+    "ch": "收購-動物製品",
+    "cn": "收购-动物制品"
+   },
+   "IGUI_jdjylabell_Sell": {
+    "en": "Acquisition Foundation",
+    "ch": "收購-基礎物資",
+    "cn": "收购-基础物资"
+   },
+   "IGUI_jdjylabell_Sell-book": {
+    "en": "Acquisition Book",
+    "ch": "收購-書籍",
+    "cn": "收购-书籍"
+   },
+   "IGUI_jdjylabell_Sell_maccessory": {
+    "en": "Acquisition - Accessories",
+    "ch": "收購-配件",
+    "cn": "收购-配件"
+   },
+   "IGUI_jdjylabell_Suy_Seed": {
+    "en": "Sell - Seed",
+    "ch": "販售-種子",
+    "cn": "出售-种子"
+   },
+   "IGUI_jdjylabell_Suy_Smmo": {
+    "en": "Sell - Ammunition",
+    "ch": "販售-彈藥",
+    "cn": "出售-弹药"
+   },
+   "IGUI_jdjylabell_Suy_Vehiclemain": {
+    "en": "For Sale - Auto Repair",
+    "ch": "販售-汽車維修用品",
+    "cn": "出售-汽车维修用品"
+   },
+   "IGUI_jdjylabell_Suy_car": {
+    "en": "For Sale - Vehicle",
+    "ch": "販售-載具",
+    "cn": "出售-车辆"
+   },
+   "IGUI_jdjylabell_Suy_ceaponrange": {
+    "en": "Sell - Remote",
+    "ch": "販售-遠程武器",
+    "cn": "出售-远程武器"
+   },
+   "IGUI_jdjylabell_Suy_clotte": {
+    "en": "Sell - Clothes",
+    "ch": "販售-服裝",
+    "cn": "出售-服装"
+   },
+   "IGUI_jdjylabell_Suy_tool": {
+    "en": "Sell - Tools",
+    "ch": "販售-工具",
+    "cn": "出售-工具"
+   },
+   "IGUI_sthifouchushou": {
+    "en": "Is it for sale? ",
+    "ch": "是否出售?",
+    "cn": "是否出售?"
+   },
+   "IGUI_weaponcondition2": {
+    "en": "Condition:",
+    "ch": "耐久度:",
+    "cn": "耐久度:"
+   },
+   "IGUI_yue": {
+    "en": "Balance: ",
+    "ch": "餘額:",
+    "cn": "余额:"
+   },
+   "IGUI_yue-wu": {
+    "en": "Please insert your credit card! ",
+    "ch": "請插入信用卡!",
+    "cn": "请插入信用卡!"
    }
   },
   "ItemName.json": {
@@ -1814,15 +2414,35 @@
     "ch": "Uzi/柯爾特635型10發改裝彈匣 (9mm)",
     "cn": "Uzi/柯尔特635型10发改装弹匣 (9mm)"
    },
+   "Base.145Carton": {
+    "en": "Carton of .145 Ammo",
+    "ch": "整箱 .145 彈藥",
+    "cn": "整箱 .145 弹药"
+   },
    "Base.20M16AR180Mag": {
     "en": "20rd Modified AR-15/AR-180 Magazine (.223 Rem)",
     "ch": "AR-15/AR-180 20發改裝彈匣 (.223 Rem)",
     "cn": "AR-15/AR-180 20发改装弹匣 (.223 Rem)"
    },
+   "Base.308ClipU": {
+    "en": "7.62×51mm 30-Round Magazine",
+    "ch": "7.62×51mm 30發彈匣",
+    "cn": "7.62×51mm 30发弹匣"
+   },
    "Base.30M16AR180Mag": {
     "en": "30rd Modified AR-15/AR-180 Magazine (.223 Rem)",
     "ch": "AR-15/AR-180 30發改裝彈匣 (.223 Rem)",
     "cn": "AR-15/AR-180 30发改装弹匣 (.223 Rem)"
+   },
+   "Base.338Clip_cat": {
+    "en": "8.6mm 10-Round Magazine",
+    "ch": "8.6mm 10發彈匣",
+    "cn": "8.6mm 10发弹匣"
+   },
+   "Base.338Drum_cat": {
+    "en": "8.6mm 100-Round Drum Magazine",
+    "ch": "8.6mm 100發彈鼓",
+    "cn": "8.6mm 100发弹鼓"
    },
    "Base.40M16AR180Mag": {
     "en": "40rd Modified AR-180/AR-15 Magazine (.223 Rem)",
@@ -1834,10 +2454,60 @@
     "ch": "Uzi/柯爾特635型40發改裝彈匣 (9mm)",
     "cn": "Uzi/柯尔特635型40发改装弹匣 (9mm)"
    },
+   "Base.45Clip30": {
+    "en": ".45 ACP 30-Round Extended Magazine",
+    "ch": ".45 ACP 30發延長彈匣",
+    "cn": ".45 ACP 30发延长弹匣"
+   },
    "Base.45UziColtSMGMag": {
     "en": "25rd Modified Uzi/Colt 635 Magazine (9mm)",
     "ch": "Uzi/柯爾特635型25發改裝彈匣 (9mm)",
     "cn": "Uzi/柯尔特635型25发改装弹匣 (9mm)"
+   },
+   "Base.4guanpen_cat": {
+    "en": "Four Horsemen Shotgun",
+    "ch": "四騎士霰彈槍",
+    "cn": "四骑士霰弹枪"
+   },
+   "Base.50Carton": {
+    "en": "Carton of .50 BMG Ammo",
+    "ch": "整箱 .50 BMG 彈藥",
+    "cn": "整箱 .50 BMG 弹药"
+   },
+   "Base.545Drum_cat": {
+    "en": "5.45×39mm 60-Round Drum Magazine",
+    "ch": "5.45×39mm 60發彈鼓",
+    "cn": "5.45×39mm 60发弹鼓"
+   },
+   "Base.58Box": {
+    "en": "Boxed 5.8mm Ammo",
+    "ch": "盒裝5.8mm彈藥",
+    "cn": "盒装5.8mm弹药"
+   },
+   "Base.58Bullets": {
+    "en": "5.8mm Cartridge",
+    "ch": "5.8mm子彈",
+    "cn": "5.8mm子弹"
+   },
+   "Base.58Carton": {
+    "en": "Carton of 5.8mm Ammo",
+    "ch": "整箱 5.8mm 彈藥",
+    "cn": "整箱 5.8mm 弹药"
+   },
+   "Base.58Clip": {
+    "en": "5.8mm 30-Round Magazine",
+    "ch": "5.8mm 30發彈匣",
+    "cn": "5.8mm 30发弹匣"
+   },
+   "Base.58Clip20": {
+    "en": "5.8mm 20-Round Magazine",
+    "ch": "5.8mm 20發彈匣",
+    "cn": "5.8mm 20发弹匣"
+   },
+   "Base.762Drum_cat": {
+    "en": "7.62×54R 73-Round Drum",
+    "ch": "7.62×54R 73發彈鼓",
+    "cn": "7.62×54R 73发弹鼓"
    },
    "Base.76chevyBlazerBedCap2": {
     "en": "76 Chevrolet Blazer Bed Cap",
@@ -2104,10 +2774,420 @@
     "ch": "76款雪佛蘭薩博班後車廂蓋",
     "cn": "76款雪佛兰萨博班后备箱盖"
    },
+   "Base.86Carton": {
+    "en": "Carton of 8.6mm Ammo",
+    "ch": "整箱 8.6mm 彈藥",
+    "cn": "整箱 8.6mm 弹药"
+   },
+   "Base.95Drum_cat": {
+    "en": "5.8mm 65-Round Drum Magazine",
+    "ch": "5.8mm 65發彈鼓",
+    "cn": "5.8mm 65发弹鼓"
+   },
+   "Base.98k_cat": {
+    "en": "Kar98k Bolt Action Rifle",
+    "ch": "Kar98k 栓式步槍",
+    "cn": "Kar98k 栓动式步枪"
+   },
+   "Base.9mmClip25": {
+    "en": "9mm Para 30-Round Magazine",
+    "ch": "9mm Para 30發彈匣",
+    "cn": "9mm Para 30发弹匣"
+   },
+   "Base.9mmDrum_cat": {
+    "en": "9mm Para 50-Round Drum",
+    "ch": "9mm Para 50發彈鼓",
+    "cn": "9mm Para 50发弹鼓"
+   },
+   "Base.AA12Clip": {
+    "en": "AA12 20-Round Shotgun Drum",
+    "ch": "AA12霰彈槍20發彈鼓",
+    "cn": "AA12霰弹枪20发弹鼓"
+   },
+   "Base.AA12_cat": {
+    "en": "AA12 Fully Auto Shotgun",
+    "ch": "AA12 全自動霰彈槍",
+    "cn": "AA12 全自动霰弹枪"
+   },
+   "Base.AEK971_cat": {
+    "en": "AEK971 Assault Rifle",
+    "ch": "AEK971突擊步槍",
+    "cn": "AEK971突击步枪"
+   },
+   "Base.AEK971_cat_Drum": {
+    "en": "AEK971 Assault Rifle",
+    "ch": "AEK971突擊步槍",
+    "cn": "AEK971突击步枪"
+   },
+   "Base.AK103_cat": {
+    "en": "AK103 Assault Rifle",
+    "ch": "AK103 突擊步槍",
+    "cn": "AK103 突击步枪"
+   },
+   "Base.AK103_cat_Drum": {
+    "en": "AK103 Rifle",
+    "ch": "AK103 步槍",
+    "cn": "AK103 步枪"
+   },
+   "Base.AK12_cat": {
+    "en": "AK12 Modern Assault Rifle",
+    "ch": "AK12現代突擊步槍",
+    "cn": "AK12现代突击步枪"
+   },
+   "Base.AK12_cat_Drum": {
+    "en": "AK12 Assault Rifle",
+    "ch": "AK12 突擊步槍",
+    "cn": "AK12 突击步枪"
+   },
+   "Base.AKS74U_cat_Drum": {
+    "en": "AKS74U Short Barrel Rifle",
+    "ch": "AKS74U 短槍管步槍",
+    "cn": "AKS74U 短枪管步枪"
+   },
+   "Base.AMB17_cat": {
+    "en": "AMB17 Nightmare Rifle",
+    "ch": "AMB17 夜魘步槍",
+    "cn": "AMB17 夜魇步枪"
+   },
+   "Base.AMB17_cat_Drum": {
+    "en": "AMB17 Nightmare",
+    "ch": "AMB17 夜魘",
+    "cn": "AMB17 夜魇"
+   },
+   "Base.AN94_cat": {
+    "en": "AN94 Assault Rifle",
+    "ch": "AN94突擊步槍",
+    "cn": "AN94突击步枪"
+   },
+   "Base.AN94_cat_Drum": {
+    "en": "AN94 Assault Rifle",
+    "ch": "AN94突擊步槍",
+    "cn": "AN94突击步枪"
+   },
+   "Base.AR01_Brynhild_cat": {
+    "en": "Brynhild Sniper Variant",
+    "ch": "Brynhild狙擊型",
+    "cn": "Brynhild狙击型"
+   },
+   "Base.AR02_Brynhild_cat": {
+    "en": "Brynhild Assault Variant",
+    "ch": "Brynhild突擊型",
+    "cn": "Brynhild突击型"
+   },
+   "Base.AR03_Brynhild_cat": {
+    "en": "Brynhild Tactical Variant",
+    "ch": "Brynhild戰術型",
+    "cn": "Brynhild战术型"
+   },
+   "Base.AR57Drum_cat": {
+    "en": "5.56mm 60-Round Twin Drum Mag",
+    "ch": "5.56mm 60發雙彈鼓",
+    "cn": "5.56mm 60发双弹鼓"
+   },
+   "Base.AR57_cat": {
+    "en": "AR57 Special Assault Rifle",
+    "ch": "AR57 特種突擊步槍",
+    "cn": "AR57 特种突击步枪"
+   },
+   "Base.ARX200_cat": {
+    "en": "ARX200 Beretta Rifle",
+    "ch": "ARX200 貝瑞塔步槍",
+    "cn": "ARX200 贝雷塔步枪"
+   },
+   "Base.ARX200_cat_Drum": {
+    "en": "ARX200 Rifle",
+    "ch": "ARX200 步槍",
+    "cn": "ARX200 步枪"
+   },
+   "Base.AS_VAL_MOD4_cat": {
+    "en": "AS VAL MOD4 Suppressed Rifle",
+    "ch": "AS VAL MOD4 消音步槍",
+    "cn": "AS VAL MOD4 消音步枪"
+   },
+   "Base.AS_VAL_MOD4_cat_Drum": {
+    "en": "AS VAL MOD4",
+    "ch": "AS VAL MOD4 消音步槍",
+    "cn": "AS VAL MOD4 消音步枪"
+   },
+   "Base.AS_VAL_cat": {
+    "en": "AS VAL Special Suppressed Rifle",
+    "ch": "AS VAL 特種消音步槍",
+    "cn": "AS VAL 特种消音步枪"
+   },
+   "Base.AS_VAL_cat_Drum": {
+    "en": "AS VAL Rifle",
+    "ch": "AS VAL 步槍",
+    "cn": "AS VAL 步枪"
+   },
+   "Base.AWMClip": {
+    "en": ".44 Magnum 5-Round AWM Magazine",
+    "ch": "AWM .44 Magnum 5發彈匣",
+    "cn": "AWM .44 Magnum 5发弹匣"
+   },
+   "Base.AWM_cat": {
+    "en": "AWM Magnum Sniper Rifle",
+    "ch": "AWM馬格南狙擊步槍",
+    "cn": "AWM马格南狙击步枪"
+   },
+   "Base.AX50_cat": {
+    "en": "Accuracy International AX50 Anti-Materiel Rifle",
+    "ch": "精密國際AX50反器材步槍",
+    "cn": "精密国际AX50反器材步枪"
+   },
+   "Base.AX50_cat_Drum": {
+    "en": "AX50 Anti-Materiel Rifle",
+    "ch": "AX50 反器材步槍",
+    "cn": "AX50 反器材步枪"
+   },
+   "Base.AccessoriesBoxA": {
+    "en": "Unmarked Accessory Crate",
+    "ch": "無標記配件箱",
+    "cn": "无标记配件箱"
+   },
+   "Base.AccessoriesBoxAA": {
+    "en": "Rare Loot Crate",
+    "ch": "稀有戰利品箱",
+    "cn": "稀有战利品箱"
+   },
+   "Base.AccessoriesBoxAJ": {
+    "en": "Precision Rifle Crate",
+    "ch": "精準步槍箱",
+    "cn": "精准步枪箱"
+   },
+   "Base.AccessoriesBoxD": {
+    "en": "Magazine Selection Crate",
+    "ch": "彈匣自選箱",
+    "cn": "弹匣自选箱"
+   },
+   "Base.AccessoriesBoxDD": {
+    "en": "Ammo Storage Crate",
+    "ch": "彈藥儲存箱",
+    "cn": "弹药储存箱"
+   },
+   "Base.AccessoriesBoxGQ": {
+    "en": "Unknown Handgun Crate",
+    "ch": "未知手槍箱",
+    "cn": "未知手枪箱"
+   },
+   "Base.AccessoriesBoxP": {
+    "en": "Drum Magazine Selection Crate",
+    "ch": "彈鼓自選箱",
+    "cn": "弹鼓自选箱"
+   },
+   "Base.AccessoriesBoxQ": {
+    "en": "Unknown Rifle Crate",
+    "ch": "未知步槍箱",
+    "cn": "未知步枪箱"
+   },
+   "Base.AccessoriesBoxQM": {
+    "en": "Collectible Firearm Crate",
+    "ch": "收藏槍械箱",
+    "cn": "收藏枪械箱"
+   },
+   "Base.AccessoriesBoxX": {
+    "en": "Unknown Muzzle Device Crate",
+    "ch": "未知槍口裝置箱",
+    "cn": "未知枪口装置箱"
+   },
+   "Base.AccessoriesBoxY": {
+    "en": "Unknown Syringe Crate",
+    "ch": "未知注射器箱",
+    "cn": "未知注射器箱"
+   },
+   "Base.AccessoriesBoxZ": {
+    "en": "General Ordnance Crate",
+    "ch": "綜合軍械箱",
+    "cn": "综合军械箱"
+   },
+   "Base.AccessoriesBoxZQ": {
+    "en": "Heavy Weapon Crate",
+    "ch": "重型武器箱",
+    "cn": "重型武器箱"
+   },
+   "Base.AirDrop": {
+    "en": "Care Package Airdrop",
+    "ch": "補給包空投",
+    "cn": "补给包空投"
+   },
+   "Base.AirDropMarker": {
+    "en": "Airdrop Marker Beacon",
+    "ch": "空投標記信標",
+    "cn": "空投标记信标"
+   },
+   "Base.AirStrikeMarker": {
+    "en": "Airstrike Marker Beacon",
+    "ch": "空襲標記信標",
+    "cn": "空袭标记信标"
+   },
+   "Base.Anaconda_cat": {
+    "en": "Colt Anaconda Revolver",
+    "ch": "柯爾特水蟒左輪手槍",
+    "cn": "柯尔特水蟒左轮手枪"
+   },
+   "Base.ArmorShell": {
+    "en": "Ballistic Shield",
+    "ch": "防彈盾",
+    "cn": "防弹盾"
+   },
+   "Base.AssaultRifle_Drum": {
+    "en": "M16 Assault Rifle",
+    "ch": "M16 突擊步槍",
+    "cn": "M16 突击步枪"
+   },
+   "Base.BAR_cat": {
+    "en": "Browning Automatic Rifle",
+    "ch": "勃朗寧自動步槍",
+    "cn": "勃朗宁自动步枪"
+   },
+   "Base.BRAuto5_cat": {
+    "en": "BRAuto5 Semi-Auto Shotgun",
+    "ch": "BRAuto5 半自動霰彈槍",
+    "cn": "BRAuto5 半自动霰弹枪"
+   },
+   "Base.Bag_cat50": {
+    "en": "NazawaTail",
+    "ch": "無澤尾巴",
+    "cn": "无泽尾巴"
+   },
+   "Base.Bag_cat54": {
+    "en": "AngelHalo",
+    "ch": "天使光環",
+    "cn": "天使光环"
+   },
+   "Base.Bag_cat55": {
+    "en": "WarfarinWaistBag",
+    "ch": "華法琳腰包",
+    "cn": "华法琳腰包"
+   },
+   "Base.Bag_cat_1": {
+    "en": "JourneyMountainsOne",
+    "ch": "踏行千山一",
+    "cn": "踏行千山一"
+   },
+   "Base.Bag_cat_2": {
+    "en": "JourneyMountainsTwo",
+    "ch": "踏行千山二",
+    "cn": "踏行千山二"
+   },
+   "Base.Bag_cat_3": {
+    "en": "JourneyMountainsThree",
+    "ch": "踏行千山三",
+    "cn": "踏行千山三"
+   },
+   "Base.Bag_cat_4": {
+    "en": "JourneyMountainsFour",
+    "ch": "踏行千山四",
+    "cn": "踏行千山四"
+   },
+   "Base.Bag_cat_5": {
+    "en": "JourneyMountainsFive",
+    "ch": "踏行千山五",
+    "cn": "踏行千山五"
+   },
+   "Base.Bag_cat_6": {
+    "en": "JourneyMountainsSix",
+    "ch": "踏行千山六",
+    "cn": "踏行千山六"
+   },
+   "Base.Belt_cat58": {
+    "en": "RoseType-1Belt",
+    "ch": "薔薇1型腰帶",
+    "cn": "蔷薇1型腰带"
+   },
+   "Base.Beowulf_cat": {
+    "en": "Beowulf Assault Rifle",
+    "ch": "Beowulf 突擊步槍",
+    "cn": "Beowulf 突击步枪"
+   },
+   "Base.BerettaM93R_cat": {
+    "en": "Beretta M93R Auto Pistol",
+    "ch": "貝瑞塔 M93R 自動手槍",
+    "cn": "贝雷塔 M93R 自动手枪"
+   },
+   "Base.BerettaM93R_cat_Drum": {
+    "en": "Beretta M93R",
+    "ch": "貝瑞塔 M93R",
+    "cn": "贝雷塔 M93R"
+   },
+   "Base.Berthier_cat": {
+    "en": "Berthier Infantry Rifle",
+    "ch": "貝蒂埃步兵步槍",
+    "cn": "贝蒂埃步兵步枪"
+   },
+   "Base.BombBig": {
+    "en": "MARK-II Defensive Fragmentation Grenade",
+    "ch": "MARK-II 防禦型破片手榴彈",
+    "cn": "MARK-II 防御型破片手榴弹"
+   },
+   "Base.BombSmall": {
+    "en": "MARK-III Offensive Grenade",
+    "ch": "MARK-III 進攻型手榴彈",
+    "cn": "MARK-III 进攻型手榴弹"
+   },
    "Base.Book_Fake": {
     "en": "Book",
     "ch": "書本",
     "cn": "书本"
+   },
+   "Base.Bullets145": {
+    "en": ".145 Heavy Ammo",
+    "ch": ".145 重型彈藥",
+    "cn": ".145 重型弹药"
+   },
+   "Base.Bullets145Box": {
+    "en": "Boxed .145 Ammo",
+    "ch": ".145 盒裝彈藥",
+    "cn": ".145 盒装弹药"
+   },
+   "Base.Bullets145Clip": {
+    "en": ".145 5-Round Magazine",
+    "ch": ".145 5 發彈匣",
+    "cn": ".145 5 发弹匣"
+   },
+   "Base.Bullets50": {
+    "en": ".50 BMG Ammo",
+    "ch": ".50 BMG彈藥",
+    "cn": ".50 BMG弹药"
+   },
+   "Base.Bullets50Box": {
+    "en": "Boxed .50 BMG Ammo",
+    "ch": "盒裝.50 BMG彈藥",
+    "cn": "盒装.50 BMG弹药"
+   },
+   "Base.Bullets50Clip": {
+    "en": ".50 BMG 10-Round Magazine",
+    "ch": ".50 BMG 10發彈匣",
+    "cn": ".50 BMG 10发弹匣"
+   },
+   "Base.Bullets86": {
+    "en": "8.6mm Ammo",
+    "ch": "8.6mm彈藥",
+    "cn": "8.6mm弹药"
+   },
+   "Base.Bullets86Box": {
+    "en": "Boxed 8.6mm Ammo",
+    "ch": "盒裝8.6mm彈藥",
+    "cn": "盒装8.6mm弹药"
+   },
+   "Base.C96_cat": {
+    "en": "C96 Mauser Broomhandle Pistol",
+    "ch": "C96 毛瑟掃帚柄手槍",
+    "cn": "C96 毛瑟扫帚柄手枪"
+   },
+   "Base.COLT902_cat": {
+    "en": "M16 Assault Rifle",
+    "ch": "M16 突擊步槍",
+    "cn": "M16 突击步枪"
+   },
+   "Base.Christine45_cat": {
+    "en": "Christine .45-70 Marksman Rifle",
+    "ch": "Christine .45-70 精確射手步槍",
+    "cn": "Christine .45-70 精确射手步枪"
+   },
+   "Base.CrossbowBolt": {
+    "en": "Crossbow Bolt",
+    "ch": "弩箭",
+    "cn": "弩箭"
    },
    "Base.CrudeDR200AutoTrigger": {
     "en": "Crude Auto Trigger (Full-Auto Only) (K2/DR200)",
@@ -2123,6 +3203,11 @@
     "en": "Crude Auto Trigger (Full-Auto Only) (K1A/K1A1)",
     "ch": "簡陋自動扳機 (僅全自動) (K1A/K1A1)",
     "cn": "简陋自动扳机 (仅全自动) (K1A/K1A1)"
+   },
+   "Base.DP12_cat": {
+    "en": "DP-12 Double Barrel Pump Shotgun",
+    "ch": "DP-12 雙管泵動式霰彈槍",
+    "cn": "DP-12 双管泵动式霰弹枪"
    },
    "Base.DR200": {
     "en": "Daewoo DR200",
@@ -2153,6 +3238,26 @@
     "en": "Daewoo K2",
     "ch": "大宇K2自動步槍",
     "cn": "大宇K2自动步枪"
+   },
+   "Base.DragonBreathBullet": {
+    "en": "Dragon's Breath Incendiary Shot",
+    "ch": "龍息燃燒彈",
+    "cn": "龙息燃烧弹"
+   },
+   "Base.ETG_C": {
+    "en": "eTG-C Regeneration Hormone",
+    "ch": "eTG-C再生荷爾蒙",
+    "cn": "eTG-C再生激素"
+   },
+   "Base.FAL_cat": {
+    "en": "FN FAL Battle Rifle",
+    "ch": "FN FAL戰鬥步槍",
+    "cn": "FN FAL战斗步枪"
+   },
+   "Base.FN57_cat_Drum": {
+    "en": "FN Five-seveN",
+    "ch": "赫斯塔爾57手槍",
+    "cn": "FN57手枪"
    },
    "Base.FNC": {
     "en": "FN FNC",
@@ -2199,6 +3304,11 @@
     "ch": "扳機零件 (半自動) (FNC)",
     "cn": "扳机零件 (半自动) (FNC)"
    },
+   "Base.FN_Evolys_cat": {
+    "en": "FN Evolys Light Machine Gun",
+    "ch": "FN Evolys 輕機槍",
+    "cn": "FN Evolys 轻机枪"
+   },
    "Base.FabricRoll_Burlap": {
     "en": "Burlap Fabric Roll",
     "ch": "粗麻布捲",
@@ -2233,6 +3343,121 @@
     "en": "Fire Dept Medium Hoses",
     "ch": "中型消防水帶",
     "cn": "中型消防水带"
+   },
+   "Base.G17_cat": {
+    "en": "Glock 17 Pistol",
+    "ch": "格洛克17手槍",
+    "cn": "格洛克17手枪"
+   },
+   "Base.G17_cat_Drum": {
+    "en": "Glock17",
+    "ch": "格洛克17",
+    "cn": "格洛克17"
+   },
+   "Base.G18_cat": {
+    "en": "Glock 18 Full Auto Pistol",
+    "ch": "格洛克18全自動手槍",
+    "cn": "格洛克18全自动手枪"
+   },
+   "Base.G18_cat_Drum": {
+    "en": "Glock18",
+    "ch": "格洛克18",
+    "cn": "格洛克18"
+   },
+   "Base.G19_cat": {
+    "en": "Glock 19 Compact Pistol",
+    "ch": "格洛克19緊湊型手槍",
+    "cn": "格洛克19紧凑型手枪"
+   },
+   "Base.G19_cat_Drum": {
+    "en": "Glock19",
+    "ch": "格洛克19",
+    "cn": "格洛克19"
+   },
+   "Base.G34_cat": {
+    "en": "Glock 34 Competition Pistol",
+    "ch": "格洛克34競賽型手槍",
+    "cn": "格洛克34竞赛型手枪"
+   },
+   "Base.G34_cat_Drum": {
+    "en": "Glock34",
+    "ch": "格洛克34",
+    "cn": "格洛克34"
+   },
+   "Base.GM6_cat": {
+    "en": "GM6 Anti-Materiel Bullpup Rifle",
+    "ch": "GM6反器材犢牛式步槍",
+    "cn": "GM6反器材无托式步枪"
+   },
+   "Base.Gentamicin_cat": {
+    "en": "Gentamicin Injection",
+    "ch": "慶大黴素注射劑",
+    "cn": "庆大霉素注射剂"
+   },
+   "Base.Glasses15_nan0": {
+    "en": "UrbanGangGirlGlasses",
+    "ch": "都市幫派少女眼鏡",
+    "cn": "都市帮派少女眼镜"
+   },
+   "Base.GrenadeAmmo": {
+    "en": "Underbarrel Grenade Round",
+    "ch": "下掛式榴彈",
+    "cn": "下挂式榴弹"
+   },
+   "Base.Groza_cat": {
+    "en": "Groza Assault Rifle",
+    "ch": "Groza 突擊步槍",
+    "cn": "Groza 突击步枪"
+   },
+   "Base.Groza_cat_Drum": {
+    "en": "Groza Assault Rifle",
+    "ch": "Groza 突擊步槍",
+    "cn": "Groza 突击步枪"
+   },
+   "Base.HK416_cat": {
+    "en": "HK416 Assault Rifle",
+    "ch": "HK416 突擊步槍",
+    "cn": "HK416 突击步枪"
+   },
+   "Base.HK416_cat_Drum": {
+    "en": "HK416 Assault Rifle",
+    "ch": "HK416 突擊步槍",
+    "cn": "HK416 突击步枪"
+   },
+   "Base.HK51_cat": {
+    "en": "HK51 Short Barrel SMG",
+    "ch": "HK51 短槍管衝鋒槍",
+    "cn": "HK51 短枪管冲锋枪"
+   },
+   "Base.HK51_cat_Drum": {
+    "en": "HK51 SMG",
+    "ch": "HK51 衝鋒槍",
+    "cn": "HK51 冲锋枪"
+   },
+   "Base.Hat15_nan0": {
+    "en": "UrbanGangGirlCap",
+    "ch": "都市幫派少女鴨舌帽",
+    "cn": "都市帮派少女鸭舌帽"
+   },
+   "Base.Holster_cat47": {
+    "en": "GunHolsterBelt",
+    "ch": "槍套腰帶",
+    "cn": "枪套腰带"
+   },
+   "Base.HoneyBadger_cat_Drum": {
+    "en": "Honey Badger Suppressed Rifle",
+    "ch": "蜜獾消音步槍",
+    "cn": "蜜獾消音步枪"
+   },
+   "Base.IOContainer": {
+    "en": "IO Storage Container",
+    "ch": "IO 儲存容器",
+    "cn": "IO 储存容器"
+   },
+   "Base.JumpEggs32": {
+    "en": "ArmBag",
+    "ch": "臂包",
+    "cn": "臂包"
    },
    "Base.K1A1Trigger": {
     "en": "Trigger Parts (Semi) (K1A/K1A1)",
@@ -2289,10 +3514,3240 @@
     "ch": "瞄準鏡底座 (K2/DR200)",
     "cn": "瞄准镜底座 (K2/DR200)"
    },
+   "Base.KS1_KAC_cat": {
+    "en": "KS1-KAC Custom Assault Rifle",
+    "ch": "KS1-KAC 訂製突擊步槍",
+    "cn": "KS1-KAC 定制突击步枪"
+   },
+   "Base.KS1_KAC_cat_Drum": {
+    "en": "KS1-KAC Rifle",
+    "ch": "KS1-KAC 步槍",
+    "cn": "KS1-KAC 步枪"
+   },
+   "Base.KrissVector_cat": {
+    "en": "Kriss Vector SMG",
+    "ch": "Kriss Vector 衝鋒槍",
+    "cn": "Kriss Vector 冲锋枪"
+   },
+   "Base.KrissVector_cat_Drum": {
+    "en": "Kriss Vector",
+    "ch": "Kriss Vector 衝鋒槍",
+    "cn": "Kriss Vector 冲锋枪"
+   },
+   "Base.LWMMG_cat": {
+    "en": "LWMMG Medium Machine Gun",
+    "ch": "LWMMG 中型機槍",
+    "cn": "LWMMG 中型机枪"
+   },
+   "Base.LebelM1886_cat": {
+    "en": "Lebel M1886 Rifle",
+    "ch": "勒貝爾 M1886 步槍",
+    "cn": "勒贝尔 M1886 步枪"
+   },
+   "Base.M14Drum_cat": {
+    "en": "7.62×51mm 50-Round Drum",
+    "ch": "7.62×51mm 50發彈鼓",
+    "cn": "7.62×51mm 50发弹鼓"
+   },
+   "Base.M14EBR_cat": {
+    "en": "M14 EBR Enhanced Battle Rifle",
+    "ch": "M14 EBR 強化型戰鬥步槍",
+    "cn": "M14 EBR 增强型战斗步枪"
+   },
+   "Base.M14_Albedo": {
+    "en": "M14 Albedo Semi-Auto Rifle",
+    "ch": "M14 Albedo半自動步槍",
+    "cn": "M14 Albedo半自动步枪"
+   },
+   "Base.M14_Albedo_Drum": {
+    "en": "M14 Albedo Rifle",
+    "ch": "M14 Albedo 步槍",
+    "cn": "M14 Albedo 步枪"
+   },
+   "Base.M1873_cat": {
+    "en": "Colt Peacemaker M1873",
+    "ch": "柯爾特和平使者 M1873",
+    "cn": "柯尔特和平使者M1873"
+   },
+   "Base.M1887_cat": {
+    "en": "M1887 Lever Action Shotgun",
+    "ch": "M1887 槓桿式霰彈槍",
+    "cn": "M1887 杠杆式霰弹枪"
+   },
+   "Base.M1903_cat": {
+    "en": "M1903 Springfield Rifle",
+    "ch": "春田 M1903 步槍",
+    "cn": "春田 M1903 步枪"
+   },
+   "Base.M1918_cat": {
+    "en": "Modernized BAR M1918",
+    "ch": "現代化BAR M1918",
+    "cn": "现代化BAR M1918"
+   },
+   "Base.M1919a6_cat": {
+    "en": "M1919A6 Machine Gun",
+    "ch": "M1919A6 機槍",
+    "cn": "M1919A6 机枪"
+   },
+   "Base.M1Garand_cat": {
+    "en": "M1 Garand Semi-Auto Rifle",
+    "ch": "春田M1加蘭德半自動步槍",
+    "cn": "春田M1加兰德半自动步枪"
+   },
+   "Base.M200_cat": {
+    "en": "CheyTac M200 Intervention",
+    "ch": "CheyTac M200狙擊步槍",
+    "cn": "CheyTac M200狙击步枪"
+   },
+   "Base.M240_cat": {
+    "en": "M240 General Purpose Machine Gun",
+    "ch": "M240 通用機槍",
+    "cn": "M240 通用机枪"
+   },
+   "Base.M4A1S_Drum": {
+    "en": "M4A1-S Rifle",
+    "ch": "M4A1-S 步槍",
+    "cn": "M4A1-S 步枪"
+   },
+   "Base.M4A1S_cat": {
+    "en": "M4A1-S Carbine",
+    "ch": "M4A1-S 卡賓槍",
+    "cn": "M4A1-S 卡宾枪"
+   },
+   "Base.M4Mk18_cat": {
+    "en": "M4 MK18 Mod Carbine",
+    "ch": "M4 MK18 改裝卡賓槍",
+    "cn": "M4 MK18 改装卡宾枪"
+   },
+   "Base.M4Mk18_cat_Drum": {
+    "en": "M4 MK18 Carbine",
+    "ch": "M4 MK18 卡賓槍",
+    "cn": "M4 MK18 卡宾枪"
+   },
+   "Base.M500_cat": {
+    "en": "Mossberg 500 Revolver",
+    "ch": "M500 左輪手槍",
+    "cn": "M500左轮手枪"
+   },
+   "Base.M7_cat": {
+    "en": "M7 Assault Rifle",
+    "ch": "M7 突擊步槍",
+    "cn": "M7 突击步枪"
+   },
+   "Base.M7_cat_Drum": {
+    "en": "M7 Assault Rifle",
+    "ch": "M7 突擊步槍",
+    "cn": "M7 突击步枪"
+   },
+   "Base.M82_cat": {
+    "en": "Barrett M82 Anti-Materiel Rifle",
+    "ch": "巴雷特 M82 反器材步槍",
+    "cn": "巴雷特 M82 反器材步枪"
+   },
+   "Base.M82_cat_Drum": {
+    "en": "Barrett M82",
+    "ch": "巴雷特 M82",
+    "cn": "巴雷特 M82"
+   },
+   "Base.M870_cat": {
+    "en": "Remington 870 Pump Shotgun",
+    "ch": "雷明頓 870 泵動式霰彈槍",
+    "cn": "雷明顿 870 泵动式霰弹枪"
+   },
+   "Base.M91Drum_cat": {
+    "en": "5.56mm 100-Round Drum Magazine",
+    "ch": "5.56mm 100發彈鼓",
+    "cn": "5.56mm 100发弹鼓"
+   },
+   "Base.M91_cat": {
+    "en": "HK121 General Purpose MG",
+    "ch": "HK121 通用機槍",
+    "cn": "HK121 通用机枪"
+   },
+   "Base.M9A4_cat": {
+    "en": "Beretta M9A4 Handgun",
+    "ch": "貝瑞塔 M9A4 手槍",
+    "cn": "贝雷塔 M9A4 手枪"
+   },
+   "Base.M9A4_cat_Drum": {
+    "en": "Beretta M9A4",
+    "ch": "貝瑞塔 M9A4",
+    "cn": "贝雷塔 M9A4"
+   },
+   "Base.MCX_cat": {
+    "en": "Sig Sauer MCX Carbine",
+    "ch": "Sig Sauer MCX卡賓槍",
+    "cn": "Sig Sauer MCX卡宾枪"
+   },
+   "Base.MCX_cat_Drum": {
+    "en": "MCX Carbine",
+    "ch": "MCX 卡賓槍",
+    "cn": "MCX 卡宾枪"
+   },
+   "Base.MG08_cat": {
+    "en": "MG08 Maxim Machine Gun",
+    "ch": "MG08 馬克沁機槍",
+    "cn": "MG08 马克沁机枪"
+   },
+   "Base.MG338_cat": {
+    "en": ".338 Norma Magnum Machine Gun",
+    "ch": ".338 Norma Magnum 機槍",
+    "cn": ".338 Norma Magnum 机枪"
+   },
+   "Base.MG42Drum_cat": {
+    "en": "7.92×57mm 75-Round Drum",
+    "ch": "7.92×57mm 75發彈鼓",
+    "cn": "7.92×57mm 75发弹鼓"
+   },
+   "Base.MG42_cat": {
+    "en": "MG42 General Purpose Machine Gun",
+    "ch": "MG42通用機槍",
+    "cn": "MG42通用机枪"
+   },
+   "Base.MK12_cat": {
+    "en": "MK12 SPR Designated Marksman Rifle",
+    "ch": "MK12 SPR 精確射手步槍",
+    "cn": "MK12 SPR 精确射手步枪"
+   },
+   "Base.MK12_cat_Drum": {
+    "en": "MK12 DMR",
+    "ch": "MK12 精確射手步槍",
+    "cn": "MK12 精确射手步枪"
+   },
+   "Base.MK18_cat": {
+    "en": "MK18 Hammer of Thor Carbine",
+    "ch": "MK18 雷神之鎚卡賓槍",
+    "cn": "MK18 雷神之锤卡宾枪"
+   },
+   "Base.MK47_cat": {
+    "en": "MK47 Assault Rifle",
+    "ch": "MK47 突擊步槍",
+    "cn": "MK47 突击步枪"
+   },
+   "Base.MP7_cat": {
+    "en": "HK MP7 PDW",
+    "ch": "HK MP7個人防衛武器",
+    "cn": "HK MP7个人防卫武器"
+   },
+   "Base.MP7_cat_Drum": {
+    "en": "MP7 PDW",
+    "ch": "MP7 個人防衛武器",
+    "cn": "MP7 个人防卫武器"
+   },
+   "Base.MSR_cat": {
+    "en": "MSR Modular Sniper Rifle",
+    "ch": "MSR 模組化狙擊步槍",
+    "cn": "MSR 模块化狙击步枪"
+   },
+   "Base.MULEInjection": {
+    "en": "M.U.L.E Stimulant Syringe",
+    "ch": "M.U.L.E興奮劑注射器",
+    "cn": "M.U.L.E兴奋剂注射器"
+   },
+   "Base.Marlin1894_cat": {
+    "en": "Modernized Marlin 1894 Lever Rifle",
+    "ch": "現代化馬林1894槓桿式步槍",
+    "cn": "现代化马林1894杠杆式步枪"
+   },
+   "Base.Mask_cat58": {
+    "en": "RoseType-1Mask",
+    "ch": "薔薇1型面具",
+    "cn": "蔷薇1型面具"
+   },
+   "Base.MetamizoleSodium_cat": {
+    "en": "Metamizole Sodium Syringe",
+    "ch": "安乃近鈉注射器",
+    "cn": "安乃近钠注射器"
+   },
+   "Base.MinigunClip": {
+    "en": "Minigun Feed Drum",
+    "ch": "Minigun供彈鼓",
+    "cn": "Minigun供弹鼓"
+   },
+   "Base.Minigun_cat": {
+    "en": "Rotary Minigun",
+    "ch": "旋轉式迷你機槍",
+    "cn": "旋转式迷你机枪"
+   },
+   "Base.Mophine": {
+    "en": "Morphine Syringe",
+    "ch": "嗎啡注射器",
+    "cn": "吗啡注射器"
+   },
+   "Base.Mosin-Nagant_cat": {
+    "en": "Mosin-Nagant Bolt Rifle",
+    "ch": "Mosin-Nagant栓式步槍",
+    "cn": "Mosin-Nagant栓动步枪"
+   },
+   "Base.Neck100": {
+    "en": "SlaveChoker",
+    "ch": "奴隸頸圈",
+    "cn": "奴隶项圈"
+   },
+   "Base.NormalBullet": {
+    "en": "Deer Slug Shot",
+    "ch": "獵鹿獨頭彈",
+    "cn": "猎鹿独头弹"
+   },
+   "Base.NoveskeN4_cat": {
+    "en": "Noveske N4 Custom AR",
+    "ch": "Noveske N4 訂製 AR 步槍",
+    "cn": "Noveske N4 定制 AR 步枪"
+   },
+   "Base.NoveskeN4_cat_Drum": {
+    "en": "Noveske N4 AR",
+    "ch": "Noveske N4 AR 步槍",
+    "cn": "Noveske N4 AR 步枪"
+   },
+   "Base.PKM_cat": {
+    "en": "PKM General Purpose Machine Gun",
+    "ch": "PKM 通用機槍",
+    "cn": "PKM 通用机枪"
+   },
+   "Base.Pants_cat47": {
+    "en": "ArmedPanties",
+    "ch": "武裝內褲",
+    "cn": "武装内裤"
+   },
+   "Base.Pistol2_Drum": {
+    "en": "1911 Pistol",
+    "ch": "1911手槍",
+    "cn": "1911手枪"
+   },
+   "Base.Pistol_Drum": {
+    "en": "M9 Handgun",
+    "ch": "M9 手槍",
+    "cn": "M9 手枪"
+   },
+   "Base.Propital_cat": {
+    "en": "Propital Syringe",
+    "ch": "Propital注射器",
+    "cn": "Propital注射器"
+   },
+   "Base.QBU191_cat": {
+    "en": "QBU-191 DMR",
+    "ch": "QBU-191 精確射手步槍",
+    "cn": "QBU-191 精确射手步枪"
+   },
+   "Base.QBU191_cat_Drum": {
+    "en": "QBU191 DMR",
+    "ch": "QBU191 精確射手步槍",
+    "cn": "QBU191 精确射手步枪"
+   },
+   "Base.QBZ191_cat": {
+    "en": "QBZ-191 Assault Rifle",
+    "ch": "QBZ-191 突擊步槍",
+    "cn": "QBZ-191 突击步枪"
+   },
+   "Base.QBZ191_cat_Drum": {
+    "en": "QBZ-191 Rifle",
+    "ch": "QBZ-191 步槍",
+    "cn": "QBZ-191 步枪"
+   },
+   "Base.QBZ192_cat_Drum": {
+    "en": "QBZ-192 Compact Rifle",
+    "ch": "QBZ-192 緊湊型步槍",
+    "cn": "QBZ-192 紧凑型步枪"
+   },
+   "Base.QBZ95_cat": {
+    "en": "QBZ-95 Bullpup Rifle",
+    "ch": "QBZ-95 犢牛式步槍",
+    "cn": "QBZ-95 无托式步枪"
+   },
+   "Base.QJS201_cat": {
+    "en": "QJS201 Heavy Machine Gun",
+    "ch": "QJS201 重機槍",
+    "cn": "QJS201 重机枪"
+   },
+   "Base.QJY201_cat": {
+    "en": "QJY201 General Purpose Machine Gun",
+    "ch": "QJY201通用機槍",
+    "cn": "QJY201通用机枪"
+   },
+   "Base.QSZ_92G": {
+    "en": "QSZ-92G Pistol",
+    "ch": "QSZ-92G 手槍",
+    "cn": "QSZ-92G 手枪"
+   },
+   "Base.R301_cat": {
+    "en": "R301 Assault Rifle",
+    "ch": "R301 突擊步槍",
+    "cn": "R301 突击步枪"
+   },
+   "Base.REAPR_cat": {
+    "en": "REAPR General Purpose MG",
+    "ch": "REAPR 通用機槍",
+    "cn": "REAPR 通用机枪"
+   },
+   "Base.ROSE_cat": {
+    "en": "Rose Sniper Rifle",
+    "ch": "薔薇狙擊步槍",
+    "cn": "蔷薇狙击步枪"
+   },
+   "Base.RPGRocket": {
+    "en": "RPG Rocket Projectile",
+    "ch": "RPG火箭彈",
+    "cn": "RPG火箭弹"
+   },
+   "Base.RSC_cat": {
+    "en": "RSC Infantry Rifle",
+    "ch": "RSC 步兵步槍",
+    "cn": "RSC 步兵步枪"
+   },
+   "Base.SAI_GRY_cat": {
+    "en": "SAI-GRY Custom Assault Rifle",
+    "ch": "SAI-GRY 訂製突擊步槍",
+    "cn": "SAI-GRY 定制突击步枪"
+   },
+   "Base.SAI_GRY_cat_Drum": {
+    "en": "SAI-GRY Rifle",
+    "ch": "SAI-GRY 步槍",
+    "cn": "SAI-GRY 步枪"
+   },
+   "Base.SG553_cat": {
+    "en": "SG553 Assault Rifle",
+    "ch": "SG553 突擊步槍",
+    "cn": "SG553 突击步枪"
+   },
+   "Base.SG553_cat_Drum": {
+    "en": "SG553 Rifle",
+    "ch": "SG553 步槍",
+    "cn": "SG553 步枪"
+   },
+   "Base.SIG226_cat": {
+    "en": "Sig Sauer P226 Pistol",
+    "ch": "Sig Sauer P226 手槍",
+    "cn": "Sig Sauer P226 手枪"
+   },
+   "Base.SIGP226_cat_Drum": {
+    "en": "Sig Sauer P226",
+    "ch": "西格紹爾 P226",
+    "cn": "西格绍尔 P226"
+   },
+   "Base.SM_cat1": {
+    "en": "SMGarterBelt",
+    "ch": "SM 吊襪帶",
+    "cn": "SM 吊袜带"
+   },
+   "Base.SRM3_cat": {
+    "en": "SRM3 Assault Rifle",
+    "ch": "SRM3 突擊步槍",
+    "cn": "SRM3 突击步枪"
+   },
+   "Base.SRM3_cat_Drum": {
+    "en": "SRM3 Assault Rifle",
+    "ch": "SRM3 突擊步槍",
+    "cn": "SRM3 突击步枪"
+   },
+   "Base.SVD_cat": {
+    "en": "SVD Dragunov Sniper Rifle",
+    "ch": "SVD 德拉貢諾夫狙擊步槍",
+    "cn": "SVD 德拉贡诺夫狙击步枪"
+   },
+   "Base.SVT40_cat": {
+    "en": "SVT-40 Semi-Auto Rifle",
+    "ch": "SVT-40 半自動步槍",
+    "cn": "SVT-40 半自动步枪"
+   },
+   "Base.Saiga12_cat": {
+    "en": "Saiga-12 Semi-Auto Shotgun",
+    "ch": "Saiga-12 半自動霰彈槍",
+    "cn": "Saiga-12 半自动霰弹枪"
+   },
+   "Base.ScarH_cat": {
+    "en": "SCAR-H Battle Rifle",
+    "ch": "SCAR-H 戰鬥步槍",
+    "cn": "SCAR-H 战斗步枪"
+   },
+   "Base.ScarH_cat_Drum": {
+    "en": "SCAR-H Rifle",
+    "ch": "SCAR-H 步槍",
+    "cn": "SCAR-H 步枪"
+   },
+   "Base.Shoes28_nan0": {
+    "en": "CoreTechSneakers",
+    "ch": "核心科技運動鞋",
+    "cn": "核心科技运动鞋"
+   },
+   "Base.SnipeX_T_Rex_cat": {
+    "en": "T-Rex Anti-Materiel Rifle",
+    "ch": "T-Rex 反器材步槍",
+    "cn": "T-Rex 反器材步枪"
+   },
+   "Base.Socks06_nan0": {
+    "en": "DevilMeshSocks",
+    "ch": "小惡魔網襪",
+    "cn": "小恶魔网眼袜"
+   },
+   "Base.Socks06_nan1": {
+    "en": "DevilMeshSocks2",
+    "ch": "小惡魔網襪 2",
+    "cn": "小恶魔网眼袜 2"
+   },
+   "Base.Socks06_nan2": {
+    "en": "DevilMeshSocks_WhiteShort",
+    "ch": "小惡魔網襪 (白色, 短版)",
+    "cn": "小恶魔网眼袜 (白色, 短款)"
+   },
+   "Base.Socks06_nan3": {
+    "en": "DevilMeshSocks_CreamShort",
+    "ch": "小惡魔網襪 (奶油白, 短版)",
+    "cn": "小恶魔网眼袜 (奶油白, 短款)"
+   },
+   "Base.Socks06_nan4": {
+    "en": "DevilMeshSocks",
+    "ch": "小惡魔網襪",
+    "cn": "小恶魔网眼袜"
+   },
+   "Base.Socks11_nan0": {
+    "en": "FallenAngelStockings",
+    "ch": "墮天使絲襪",
+    "cn": "堕天使丝袜"
+   },
+   "Base.Socks11_nan1": {
+    "en": "FallenAngelStockings_WhitePlaid",
+    "ch": "白色格紋墮天使絲襪",
+    "cn": "白色格纹堕天使丝袜"
+   },
+   "Base.Socks11_nan2": {
+    "en": "FallenAngelStockings_PureWhite",
+    "ch": "純白墮天使絲襪",
+    "cn": "纯白堕天使丝袜"
+   },
+   "Base.Socks11_nan3": {
+    "en": "FallenAngelStockings_Purple",
+    "ch": "紫色墮天使絲襪",
+    "cn": "紫色堕天使丝袜"
+   },
+   "Base.Socks12_nan0": {
+    "en": "EclairShortSocks",
+    "ch": "艾克蕾爾短襪",
+    "cn": "埃克莱尔短袜"
+   },
+   "Base.Socks15_nan0": {
+    "en": "UrbanGangSocks",
+    "ch": "都市幫派襪",
+    "cn": "都市帮派袜"
+   },
+   "Base.Socks_cat01": {
+    "en": "Pantyhose",
+    "ch": "連褲襪",
+    "cn": "连裤袜"
+   },
+   "Base.Socks_cat01_d": {
+    "en": "Knee-HighSocks",
+    "ch": "及膝襪",
+    "cn": "及膝袜"
+   },
+   "Base.Socks_cat02": {
+    "en": "Pantyhose",
+    "ch": "連褲襪",
+    "cn": "连裤袜"
+   },
+   "Base.Socks_cat02_d": {
+    "en": "Knee-HighSocks",
+    "ch": "及膝襪",
+    "cn": "及膝袜"
+   },
+   "Base.Socks_cat03": {
+    "en": "Pantyhose",
+    "ch": "連褲襪",
+    "cn": "连裤袜"
+   },
+   "Base.Socks_cat03_d": {
+    "en": "Knee-HighSocks",
+    "ch": "及膝襪",
+    "cn": "及膝袜"
+   },
+   "Base.Socks_cat04": {
+    "en": "Pantyhose",
+    "ch": "連褲襪",
+    "cn": "连裤袜"
+   },
+   "Base.Socks_cat04_d": {
+    "en": "Knee-HighSocks",
+    "ch": "及膝襪",
+    "cn": "及膝袜"
+   },
+   "Base.Socks_cat05": {
+    "en": "Pantyhose",
+    "ch": "連褲襪",
+    "cn": "连裤袜"
+   },
+   "Base.Socks_cat05_d": {
+    "en": "Knee-HighSocks",
+    "ch": "及膝襪",
+    "cn": "及膝袜"
+   },
+   "Base.Socks_cat06": {
+    "en": "Pantyhose",
+    "ch": "連褲襪",
+    "cn": "连裤袜"
+   },
+   "Base.Socks_cat06_d": {
+    "en": "Knee-HighSocks",
+    "ch": "及膝襪",
+    "cn": "及膝袜"
+   },
+   "Base.Socks_cat07": {
+    "en": "Pantyhose",
+    "ch": "連褲襪",
+    "cn": "连裤袜"
+   },
+   "Base.Socks_cat07_d": {
+    "en": "Knee-HighSocks",
+    "ch": "及膝襪",
+    "cn": "及膝袜"
+   },
+   "Base.Socks_cat52": {
+    "en": "VictorTacticalLegWraps",
+    "ch": "維克托戰術綁腿",
+    "cn": "维克托战术绑腿"
+   },
+   "Base.Socks_cat54": {
+    "en": "ExusiaiKnee-HighSocks",
+    "ch": "能天使及膝襪",
+    "cn": "能天使及膝袜"
+   },
+   "Base.StG-44_cat": {
+    "en": "StG 44 Assault Rifle",
+    "ch": "StG 44 突擊步槍",
+    "cn": "StG 44 突击步枪"
+   },
+   "Base.Striker12_cat": {
+    "en": "Striker 12 Revolving Shotgun",
+    "ch": "Striker 12 轉輪式霰彈槍",
+    "cn": "Striker 12 转轮式霰弹枪"
+   },
+   "Base.TTI_Benelli_M4_cat": {
+    "en": "TTI Benelli M4 Tactical Shotgun",
+    "ch": "TTI 貝內利 M4 戰術霰彈槍",
+    "cn": "TTI 贝内利 M4 战术霰弹枪"
+   },
+   "Base.Taran2011_cat": {
+    "en": "Taran Tactical 2011",
+    "ch": "塔蘭2011",
+    "cn": "塔兰2011"
+   },
+   "Base.Taran2011_cat_Drum": {
+    "en": "Taran 2011",
+    "ch": "塔蘭2011",
+    "cn": "塔兰2011"
+   },
+   "Base.Taurus_cat": {
+    "en": "Taurus Revolver",
+    "ch": "陶魯斯左輪手槍",
+    "cn": "陶鲁斯左轮手枪"
+   },
+   "Base.Thompson_cat": {
+    "en": "Thompson Submachine Gun",
+    "ch": "湯普森衝鋒槍",
+    "cn": "汤普森冲锋枪"
+   },
+   "Base.Thoridal": {
+    "en": "Solis'dar",
+    "ch": "索利達爾",
+    "cn": "索利达尔"
+   },
+   "Base.Tshirt_cat58": {
+    "en": "RoseType-1Sleeves",
+    "ch": "薔薇1型袖套",
+    "cn": "蔷薇1型袖套"
+   },
+   "Base.Type81_cat": {
+    "en": "Type 81 Assault Rifle",
+    "ch": "81式突擊步槍",
+    "cn": "81式突击步枪"
+   },
+   "Base.Type81_cat_Drum": {
+    "en": "Type81 Rifle",
+    "ch": "Type81 步槍",
+    "cn": "Type81 步枪"
+   },
+   "Base.TyphoonF12Mag": {
+    "en": "Typhoon F12 10-Round Shotgun Mag",
+    "ch": "Typhoon F12霰彈槍10發彈匣",
+    "cn": "Typhoon F12霰弹枪10发弹匣"
+   },
+   "Base.Typhoon_cat": {
+    "en": "Typhoon F12 Shotgun",
+    "ch": "Typhoon F12 霰彈槍",
+    "cn": "Typhoon F12 霰弹枪"
+   },
+   "Base.UMP45_cat": {
+    "en": "UMP45 Submachine Gun",
+    "ch": "UMP45衝鋒槍",
+    "cn": "UMP45冲锋枪"
+   },
+   "Base.UMP45_cat_Drum": {
+    "en": "UMP45 SMG",
+    "ch": "UMP45衝鋒槍",
+    "cn": "UMP45冲锋枪"
+   },
+   "Base.URG_S_cat": {
+    "en": "URG-S Assault Rifle",
+    "ch": "URG-S 突擊步槍",
+    "cn": "URG-S 突击步枪"
+   },
+   "Base.URG_S_cat_Drum": {
+    "en": "URG-S Rifle",
+    "ch": "URG-S 步槍",
+    "cn": "URG-S 步枪"
+   },
+   "Base.UTS12_cat": {
+    "en": "UTS-15 Pump Shotgun",
+    "ch": "UTS-15 泵動式霰彈槍",
+    "cn": "UTS-15 泵动式霰弹枪"
+   },
+   "Base.UTS15_cat": {
+    "en": "UTS-15 Bullpup Shotgun",
+    "ch": "UTS-15犢牛式霰彈槍",
+    "cn": "UTS-15无托式霰弹枪"
+   },
    "Base.UziColtSMGMag": {
     "en": "32rd Modified Uzi/Colt 635 Magazine (9mm)",
     "ch": "Uzi/柯爾特635型32發改裝彈匣 (9mm)",
     "cn": "Uzi/柯尔特635型32发改装弹匣 (9mm)"
+   },
+   "Base.VSSM1_cat": {
+    "en": "VSSM Suppressed Marksman Rifle",
+    "ch": "VSSM消音精確射手步槍",
+    "cn": "VSSM消音精确射手步枪"
+   },
+   "Base.VSSM_cat": {
+    "en": "VSSM Suppressed Sniper Rifle",
+    "ch": "VSSM 消音狙擊步槍",
+    "cn": "VSSM 消音狙击步枪"
+   },
+   "Base.VSSM_cat_Drum": {
+    "en": "VSSM Sniper Rifle",
+    "ch": "VSSM 狙擊步槍",
+    "cn": "VSSM 狙击步枪"
+   },
+   "Base.Vest_cat47": {
+    "en": "UtilityBelt",
+    "ch": "裝備腰帶",
+    "cn": "装备腰带"
+   },
+   "Base.XM109_cat": {
+    "en": "XM109 Anti-Materiel Payload Rifle",
+    "ch": "XM109反器材酬載步槍",
+    "cn": "XM109反器材载荷步枪"
+   },
+   "Base.XTG12": {
+    "en": "xTG-12 Antitoxin",
+    "ch": "xTG-12抗毒劑",
+    "cn": "xTG-12抗毒剂"
+   },
+   "Base.XXhong": {
+    "en": "LittleRedShirt",
+    "ch": "小紅襯衫",
+    "cn": "小红衬衫"
+   },
+   "Base.Zagustin": {
+    "en": "Hemostatic Agent",
+    "ch": "止血劑",
+    "cn": "止血剂"
+   },
+   "Base.annaxiezi": {
+    "en": "YRBoots",
+    "ch": "YR 靴子",
+    "cn": "YR 靴子"
+   },
+   "Base.ar_10_cat": {
+    "en": "Knight's M110 Sniper Rifle",
+    "ch": "奈特M110狙擊步槍",
+    "cn": "奈特M110狙击步枪"
+   },
+   "Base.ar_10_cat_Drum": {
+    "en": "M110 Sniper Rifle",
+    "ch": "M110 狙擊步槍",
+    "cn": "M110 狙击步枪"
+   },
+   "Base.bag09_nan0": {
+    "en": "ArmedGunBelt",
+    "ch": "武裝槍腰帶",
+    "cn": "武装枪腰带"
+   },
+   "Base.bag09_nan1": {
+    "en": "ArmedGunBelt_Pink",
+    "ch": "武裝槍帶 (粉紅)",
+    "cn": "武装枪带 (粉色)"
+   },
+   "Base.bag_cat40": {
+    "en": "SQBag",
+    "ch": "SQ包",
+    "cn": "SQ包"
+   },
+   "Base.bag_cat51": {
+    "en": "KrolikUtilityBelt",
+    "ch": "可露凱裝備腰帶",
+    "cn": "可露凯装备腰带"
+   },
+   "Base.beike_cat1": {
+    "en": "TwoSeashells_Large",
+    "ch": "兩枚大貝殼",
+    "cn": "两枚大贝壳"
+   },
+   "Base.beike_cat2": {
+    "en": "OneSeashell",
+    "ch": "一枚貝殼",
+    "cn": "一枚贝壳"
+   },
+   "Base.belt_cat19": {
+    "en": "TacticalHarness",
+    "ch": "戰術背帶",
+    "cn": "战术背带"
+   },
+   "Base.belt_cat24": {
+    "en": "LaraBelt",
+    "ch": "勞拉腰帶",
+    "cn": "劳拉腰带"
+   },
+   "Base.belt_cat28": {
+    "en": "JillBelt",
+    "ch": "吉兒腰帶",
+    "cn": "吉尔腰带"
+   },
+   "Base.belt_cat32": {
+    "en": "RapiTacticalBelt",
+    "ch": "拉毗戰術腰帶",
+    "cn": "拉毗战术腰带"
+   },
+   "Base.belt_cat38": {
+    "en": "AdaWongUtilityBelt",
+    "ch": "艾達王裝備腰帶",
+    "cn": "艾达王装备腰带"
+   },
+   "Base.belt_catgun": {
+    "en": "TacticalHolster",
+    "ch": "戰術槍套",
+    "cn": "战术枪套"
+   },
+   "Base.bolt": {
+    "en": "Standard Crossbow Bolt",
+    "ch": "標準弩箭",
+    "cn": "标准弩箭"
+   },
+   "Base.boombolt": {
+    "en": "Explosive Crossbow Bolt",
+    "ch": "爆炸弩箭",
+    "cn": "爆炸弩箭"
+   },
+   "Base.bra_cat19": {
+    "en": "QuietTacticalUnderwear_Small",
+    "ch": "靜靜戰術內衣_S",
+    "cn": "静静战术内衣_S"
+   },
+   "Base.bra_cat19_1": {
+    "en": "QuietTacticalUnderwear_Large",
+    "ch": "靜靜戰術內衣 (大尺寸)",
+    "cn": "静静战术内衣 (大码)"
+   },
+   "Base.catKatana_": {
+    "en": "Muramasa Sword Scabbard",
+    "ch": "村正劍鞘",
+    "cn": "村正剑鞘"
+   },
+   "Base.catKatana_chaoxi": {
+    "en": "Tidal Katana",
+    "ch": "潮汐武士刀",
+    "cn": "潮汐武士刀"
+   },
+   "Base.catKatana_guiwan_Q": {
+    "en": "Onimaru Kunitsuna Scabbard",
+    "ch": "鬼丸國綱刀鞘",
+    "cn": "鬼丸国纲刀鞘"
+   },
+   "Base.catKatana_yehuang_Q": {
+    "en": "Night Emperor Scabbard",
+    "ch": "夜帝刀鞘",
+    "cn": "夜帝刀鞘"
+   },
+   "Base.catKatana_yulin_Q": {
+    "en": "Imperial Guard Longsword Scabbard",
+    "ch": "御林軍長劍劍鞘",
+    "cn": "御林军长剑剑鞘"
+   },
+   "Base.clothes01_nan0": {
+    "en": "UrbanGirlSportsUnderwear",
+    "ch": "都市少女運動內衣",
+    "cn": "都市少女运动内衣"
+   },
+   "Base.clothes01_nan0G": {
+    "en": "UrbanGirlSportsUnderwear_Large",
+    "ch": "都市少女運動內衣 (大尺寸)",
+    "cn": "都市少女运动内衣 (大码)"
+   },
+   "Base.clothes01_nan1": {
+    "en": "UrbanGirlCoat",
+    "ch": "都市少女外套",
+    "cn": "都市少女外套"
+   },
+   "Base.clothes01_nan10": {
+    "en": "UrbanGirlSportsUnderwear_Blue-Black",
+    "ch": "都市少女運動內衣 (藍/黑)",
+    "cn": "都市少女运动内衣 (蓝/黑)"
+   },
+   "Base.clothes01_nan10G": {
+    "en": "UrbanGirlSportsUnderwear_Large_Blue-Black",
+    "ch": "都市少女運動內衣 (大尺寸, 藍/黑)",
+    "cn": "都市少女运动内衣 (大码, 蓝/黑)"
+   },
+   "Base.clothes01_nan11": {
+    "en": "UrbanGirlCoat_Blue-Black",
+    "ch": "都市少女外套 (藍/黑)",
+    "cn": "都市少女外套 (蓝/黑)"
+   },
+   "Base.clothes01_nan12": {
+    "en": "UrbanGirlSleevelessShirt_Blue-Black",
+    "ch": "都市少女無袖上衣 (藍/黑)",
+    "cn": "都市少女无袖上衣 (蓝/黑)"
+   },
+   "Base.clothes01_nan12G": {
+    "en": "UrbanGirlSleevelessShirtG_Blue-Black",
+    "ch": "都市少女無袖上衣 (G, 藍/黑)",
+    "cn": "都市少女无袖上衣 (G, 蓝/黑)"
+   },
+   "Base.clothes01_nan2": {
+    "en": "UrbanGirlSleevelessShirt",
+    "ch": "都市少女無袖上衣",
+    "cn": "都市少女无袖上衣"
+   },
+   "Base.clothes01_nan20": {
+    "en": "UrbanGirlSportsUnderwear_White-Pink",
+    "ch": "都市少女運動內衣 (白/粉紅)",
+    "cn": "都市少女运动内衣 (白/粉色)"
+   },
+   "Base.clothes01_nan20G": {
+    "en": "UrbanGirlSportsUnderwearG_White-Pink",
+    "ch": "都市少女運動內衣 (G, 白/粉紅)",
+    "cn": "都市少女运动内衣 (G, 白/粉色)"
+   },
+   "Base.clothes01_nan21": {
+    "en": "UrbanGirlCoat_White-Pink",
+    "ch": "都市少女外套 (白/粉紅)",
+    "cn": "都市少女外套 (白/粉色)"
+   },
+   "Base.clothes01_nan22": {
+    "en": "UrbanGirlSleevelessShirt_White-Pink",
+    "ch": "都市少女無袖上衣 (白/粉紅)",
+    "cn": "都市少女无袖上衣 (白/粉色)"
+   },
+   "Base.clothes01_nan22G": {
+    "en": "UrbanGirlSleevelessShirtG_White-Pink",
+    "ch": "都市少女無袖上衣 (G, 白/粉紅)",
+    "cn": "都市少女无袖上衣 (G, 白/粉色)"
+   },
+   "Base.clothes01_nan2G": {
+    "en": "UrbanGirlSleevelessShirt_Large",
+    "ch": "都市少女無袖上衣 (大尺寸)",
+    "cn": "都市少女无袖上衣 (大码)"
+   },
+   "Base.clothes02_nan0": {
+    "en": "GothicDress",
+    "ch": "哥德洋裝",
+    "cn": "哥特连衣裙"
+   },
+   "Base.clothes02_nan1": {
+    "en": "GothicWoolCoat",
+    "ch": "哥德羊毛大衣",
+    "cn": "哥特羊毛大衣"
+   },
+   "Base.clothes03_nan0": {
+    "en": "ShinraShirt",
+    "ch": "神羅襯衫",
+    "cn": "神罗衬衫"
+   },
+   "Base.clothes04_nan0": {
+    "en": "OathCoat",
+    "ch": "誓約外套",
+    "cn": "誓约外套"
+   },
+   "Base.clothes04_nan0G": {
+    "en": "OathCoat_Large",
+    "ch": "誓約外套 (大尺寸)",
+    "cn": "誓约外套 (大码)"
+   },
+   "Base.clothes04_nan1": {
+    "en": "OathShirt",
+    "ch": "誓約襯衫",
+    "cn": "誓约衬衫"
+   },
+   "Base.clothes04_nan1G": {
+    "en": "OathShirt_Large",
+    "ch": "誓約襯衫 (大尺寸)",
+    "cn": "誓约衬衫 (大码)"
+   },
+   "Base.clothes05_nan0": {
+    "en": "BelovedDress",
+    "ch": "摯愛洋裝",
+    "cn": "挚爱连衣裙"
+   },
+   "Base.clothes05_nan0G": {
+    "en": "BelovedDress_Large",
+    "ch": "摯愛洋裝 (大尺寸)",
+    "cn": "挚爱连衣裙 (大码)"
+   },
+   "Base.clothes06_nan0": {
+    "en": "DevilCoat",
+    "ch": "小惡魔外套",
+    "cn": "小恶魔外套"
+   },
+   "Base.clothes06_nan0_1": {
+    "en": "DevilTop",
+    "ch": "小惡魔上衣",
+    "cn": "小恶魔上衣"
+   },
+   "Base.clothes06_nan1": {
+    "en": "DevilCoat_WhiteHeart",
+    "ch": "小惡魔外套 (白色愛心)",
+    "cn": "小恶魔外套 (白色爱心)"
+   },
+   "Base.clothes06_nan1_1": {
+    "en": "DevilTop_PlaidPink",
+    "ch": "小惡魔上衣 (粉紅格紋)",
+    "cn": "小恶魔上衣 (粉色格纹)"
+   },
+   "Base.clothes06_nan2": {
+    "en": "DevilCoat_BlackHeart",
+    "ch": "小惡魔外套 (黑色愛心)",
+    "cn": "小恶魔外套 (黑色爱心)"
+   },
+   "Base.clothes06_nan2_1": {
+    "en": "DevilTop_GreyPlaid",
+    "ch": "小惡魔上衣 (灰色格紋)",
+    "cn": "小恶魔上衣 (灰色格纹)"
+   },
+   "Base.clothes06_nan3": {
+    "en": "DevilCoat_White-Black",
+    "ch": "小惡魔外套 (白/黑)",
+    "cn": "小恶魔外套 (白/黑)"
+   },
+   "Base.clothes06_nan3_1": {
+    "en": "DevilTop_CreamWhite",
+    "ch": "小惡魔上衣 (奶油白)",
+    "cn": "小恶魔上衣 (奶油白)"
+   },
+   "Base.clothes06_nan4": {
+    "en": "DevilCoat_PureWhite",
+    "ch": "小惡魔外套 (純白)",
+    "cn": "小恶魔外套 (纯白)"
+   },
+   "Base.clothes06_nan4_1": {
+    "en": "DevilTop_BlackMesh",
+    "ch": "小惡魔上衣 (黑色網紗)",
+    "cn": "小恶魔上衣 (黑色网纱)"
+   },
+   "Base.clothes07_nan0": {
+    "en": "LilyGirlCoat",
+    "ch": "百合少女外套",
+    "cn": "百合少女外套"
+   },
+   "Base.clothes08_nan0": {
+    "en": "MineGirlCoat",
+    "ch": "地雷系少女外套",
+    "cn": "地雷系少女外套"
+   },
+   "Base.clothes09_nan0": {
+    "en": "ArmedMaidCoat",
+    "ch": "武裝女僕外套",
+    "cn": "武装女仆外套"
+   },
+   "Base.clothes09_nan1": {
+    "en": "ArmedMaidCoat_Pink",
+    "ch": "武裝女僕外套 (粉紅)",
+    "cn": "武装女仆外套 (粉色)"
+   },
+   "Base.clothes10_nan0": {
+    "en": "StreetGirlTankTop",
+    "ch": "街頭少女背心",
+    "cn": "街头少女背心"
+   },
+   "Base.clothes10_nan1": {
+    "en": "StreetGirlCoat",
+    "ch": "街頭少女外套",
+    "cn": "街头少女外套"
+   },
+   "Base.clothes11_nan0": {
+    "en": "FallenAngelJacket",
+    "ch": "墮天使夾克",
+    "cn": "堕天使夹克"
+   },
+   "Base.clothes11_nan0_1": {
+    "en": "FallenAngelUnderwear",
+    "ch": "墮天使內衣",
+    "cn": "堕天使内衣"
+   },
+   "Base.clothes11_nan0_2": {
+    "en": "FallenAngelTankTop",
+    "ch": "墮天使背心",
+    "cn": "堕天使背心"
+   },
+   "Base.clothes11_nan1": {
+    "en": "FallenAngelJacket_WhitePlaid",
+    "ch": "白色格紋墮天使夾克",
+    "cn": "白色格纹堕天使夹克"
+   },
+   "Base.clothes11_nan1_1": {
+    "en": "FallenAngelUnderwear_WhitePlaid",
+    "ch": "白色格紋墮天使內衣",
+    "cn": "白色格纹堕天使内衣"
+   },
+   "Base.clothes11_nan1_2": {
+    "en": "FallenAngelTankTop_WhitePlaid",
+    "ch": "白色格紋墮天使背心",
+    "cn": "白色格纹堕天使背心"
+   },
+   "Base.clothes11_nan2": {
+    "en": "FallenAngelJacket_PureWhite",
+    "ch": "純白墮天使夾克",
+    "cn": "纯白堕天使夹克"
+   },
+   "Base.clothes11_nan2_1": {
+    "en": "FallenAngelUnderwear_PureWhite",
+    "ch": "純白墮天使內衣",
+    "cn": "纯白堕天使内衣"
+   },
+   "Base.clothes11_nan2_2": {
+    "en": "FallenAngelTankTop_PureWhite",
+    "ch": "純白墮天使背心",
+    "cn": "纯白堕天使背心"
+   },
+   "Base.clothes11_nan3": {
+    "en": "FallenAngelJacket_Purple",
+    "ch": "紫色墮天使夾克",
+    "cn": "紫色堕天使夹克"
+   },
+   "Base.clothes11_nan3_1": {
+    "en": "FallenAngelUnderwear_Purple",
+    "ch": "紫色墮天使內衣",
+    "cn": "紫色堕天使内衣"
+   },
+   "Base.clothes11_nan3_2": {
+    "en": "FallenAngelTankTop_Purple",
+    "ch": "紫色墮天使背心",
+    "cn": "紫色堕天使背心"
+   },
+   "Base.clothes12_nan0": {
+    "en": "EclairDress",
+    "ch": "艾克蕾爾洋裝",
+    "cn": "埃克莱尔连衣裙"
+   },
+   "Base.clothes12_nan0g": {
+    "en": "EclairDress_Large",
+    "ch": "艾克蕾爾洋裝 (大)",
+    "cn": "埃克莱尔连衣裙 (大)"
+   },
+   "Base.clothes14_nan0": {
+    "en": "ChristmasCoat",
+    "ch": "聖誕外套",
+    "cn": "圣诞外套"
+   },
+   "Base.clothes14_nan0G": {
+    "en": "ChristmasCoat_Large",
+    "ch": "聖誕外套 (大)",
+    "cn": "圣诞外套 (大)"
+   },
+   "Base.clothes15_nan0": {
+    "en": "UrbanGangGirlSleevelessShirt",
+    "ch": "都市幫派少女無袖襯衫",
+    "cn": "都市帮派少女无袖衬衫"
+   },
+   "Base.clothes15_nan0G": {
+    "en": "UrbanGangGirlSleevelessShirt_Large",
+    "ch": "都市幫派少女無袖襯衫 (大)",
+    "cn": "都市帮派少女无袖衬衫 (大)"
+   },
+   "Base.clothes15_nan0_1": {
+    "en": "UrbanGangGirlCoat",
+    "ch": "都市幫派少女外套",
+    "cn": "都市帮派少女外套"
+   },
+   "Base.clothes27_nan1": {
+    "en": "TrendyGirl",
+    "ch": "潮流少女",
+    "cn": "潮流少女"
+   },
+   "Base.clothes27_nan1G": {
+    "en": "TrendyGirl_BigBreast",
+    "ch": "潮流少女 (大胸版)",
+    "cn": "潮流少女 (大胸版)"
+   },
+   "Base.clothes28_nan0": {
+    "en": "CoreTechShirt",
+    "ch": "核心科技襯衫",
+    "cn": "核心科技衬衫"
+   },
+   "Base.clothes28_nan1": {
+    "en": "CoreTechCoat",
+    "ch": "核心科技外套",
+    "cn": "核心科技外套"
+   },
+   "Base.clothes_cat1": {
+    "en": "YorhaTacticalOutfit_Small",
+    "ch": "寄葉戰術服 (小)",
+    "cn": "寄叶战术服 (小)"
+   },
+   "Base.clothes_cat14": {
+    "en": "SnowCharmSkirt_Large",
+    "ch": "媚雪裙 (大)",
+    "cn": "媚雪裙 (大)"
+   },
+   "Base.clothes_cat14_1": {
+    "en": "SnowCharmSkirt_Small",
+    "ch": "媚雪裙 (小)",
+    "cn": "媚雪裙 (小)"
+   },
+   "Base.clothes_cat15": {
+    "en": "BunnyGirlJumpsuit_Large",
+    "ch": "兔女郎連身衣 (大)",
+    "cn": "兔女郎连体衣 (大)"
+   },
+   "Base.clothes_cat16": {
+    "en": "JKGreenRainLongStyle_Small",
+    "ch": "JK 青時雨長版 (小)",
+    "cn": "JK 青时雨长款 (小)"
+   },
+   "Base.clothes_cat16_1": {
+    "en": "JKGreenRainLongStyle_Large",
+    "ch": "JK 青時雨長版 (大)",
+    "cn": "JK 青时雨长款 (大)"
+   },
+   "Base.clothes_cat16_2": {
+    "en": "JKGreenRainShortStyle_Large",
+    "ch": "JK 青時雨短版 (大)",
+    "cn": "JK 青时雨短款 (大)"
+   },
+   "Base.clothes_cat17": {
+    "en": "AnnaUniform_Large",
+    "ch": "安娜制服 (大)",
+    "cn": "安娜制服 (大)"
+   },
+   "Base.clothes_cat18": {
+    "en": "TifaCombatOutfit_Large",
+    "ch": "蒂法戰鬥服 (大)",
+    "cn": "蒂法战斗服 (大)"
+   },
+   "Base.clothes_cat20": {
+    "en": "SeptemberDress_Small",
+    "ch": "九月洋裝_S",
+    "cn": "九月连衣裙_S"
+   },
+   "Base.clothes_cat20_1": {
+    "en": "SeptemberDress_Small",
+    "ch": "九月洋裝_S",
+    "cn": "九月连衣裙_S"
+   },
+   "Base.clothes_cat21": {
+    "en": "SuspenderShirt",
+    "ch": "吊帶襯衫",
+    "cn": "背带衬衫"
+   },
+   "Base.clothes_cat22": {
+    "en": "SeptemberJKCoat",
+    "ch": "九月JK外套",
+    "cn": "九月JK外套"
+   },
+   "Base.clothes_cat23": {
+    "en": "CuteGirlOutfit",
+    "ch": "可愛少女套裝",
+    "cn": "可爱少女套装"
+   },
+   "Base.clothes_cat24": {
+    "en": "LaraTop_Large",
+    "ch": "勞拉上衣 (大尺寸)",
+    "cn": "劳拉上衣 (大码)"
+   },
+   "Base.clothes_cat25": {
+    "en": "CowUnderwear_Large",
+    "ch": "乳牛內衣 (大尺寸)",
+    "cn": "奶牛内衣 (大码)"
+   },
+   "Base.clothes_cat26": {
+    "en": "OLTop_Large",
+    "ch": "OL上衣 (大尺寸)",
+    "cn": "OL上衣 (大码)"
+   },
+   "Base.clothes_cat27": {
+    "en": "InspectorTights_Large",
+    "ch": "搜查官緊身衣 (大尺寸)",
+    "cn": "搜查官紧身衣 (大码)"
+   },
+   "Base.clothes_cat28": {
+    "en": "JillTop_Large",
+    "ch": "吉兒上衣 (大尺寸)",
+    "cn": "吉尔上衣 (大码)"
+   },
+   "Base.clothes_cat29": {
+    "en": "CheongsamTop_Large",
+    "ch": "旗袍上衣 (大尺寸)",
+    "cn": "旗袍上衣 (大码)"
+   },
+   "Base.clothes_cat31": {
+    "en": "AnnaMaidOutfit_Large",
+    "ch": "安娜女僕裝 (大尺寸)",
+    "cn": "安娜女仆装 (大码)"
+   },
+   "Base.clothes_cat32": {
+    "en": "RapiCheongsam_Large",
+    "ch": "拉毗旗袍 (大尺寸)",
+    "cn": "拉毗旗袍 (大码)"
+   },
+   "Base.clothes_cat32A": {
+    "en": "RapiTacticalVest",
+    "ch": "拉毗戰術背心",
+    "cn": "拉毗战术背心"
+   },
+   "Base.clothes_cat33": {
+    "en": "IshtarSacredRobe",
+    "ch": "伊絲塔神聖長袍",
+    "cn": "伊什塔尔神圣长袍"
+   },
+   "Base.clothes_cat35": {
+    "en": "MikoDress_Small",
+    "ch": "巫女服_S",
+    "cn": "巫女服_S"
+   },
+   "Base.clothes_cat38": {
+    "en": "AdaWongCheongsam_Large",
+    "ch": "艾達王旗袍 (大尺寸)",
+    "cn": "艾达王旗袍 (大码)"
+   },
+   "Base.clothes_cat38_1": {
+    "en": "AdaWongCombatSuit_Large",
+    "ch": "艾達王戰鬥服 (大尺寸)",
+    "cn": "艾达王战斗服 (大码)"
+   },
+   "Base.clothes_cat40": {
+    "en": "SQOutfit_Small",
+    "ch": "SQ套裝_S",
+    "cn": "SQ套装_S"
+   },
+   "Base.clothes_cat44": {
+    "en": "Minazuki_Large",
+    "ch": "水無月 (大尺寸)",
+    "cn": "水无月 (大码)"
+   },
+   "Base.clothes_cat45": {
+    "en": "ProPear_Small",
+    "ch": "Pro梨_S",
+    "cn": "Pro梨_S"
+   },
+   "Base.clothes_cat46": {
+    "en": "UntoldHighHeels",
+    "ch": "未語高跟鞋",
+    "cn": "未语高跟鞋"
+   },
+   "Base.clothes_cat47": {
+    "en": "ArmedSchoolSwimsuit_Large",
+    "ch": "武裝學校泳裝 (大尺寸)",
+    "cn": "武装学校泳装 (大码)"
+   },
+   "Base.clothes_cat47_1": {
+    "en": "ArmedUnderwear_Large",
+    "ch": "武裝內衣 (大尺寸)",
+    "cn": "武装内衣 (大码)"
+   },
+   "Base.clothes_cat48": {
+    "en": "SpeedStarOutfit_Large",
+    "ch": "速度之星套裝 (大尺寸)",
+    "cn": "速度之星套装 (大码)"
+   },
+   "Base.clothes_cat49": {
+    "en": "ReverseBunnySuit_Large",
+    "ch": "逆兔女郎裝 (大尺寸)",
+    "cn": "逆兔女郎装 (大码)"
+   },
+   "Base.clothes_cat50": {
+    "en": "NazawaTop_Small",
+    "ch": "無澤上衣_S",
+    "cn": "无泽上衣_S"
+   },
+   "Base.clothes_cat51": {
+    "en": "KrolikTop_Small",
+    "ch": "可露凱上衣_S",
+    "cn": "可露凯上衣_S"
+   },
+   "Base.clothes_cat52": {
+    "en": "VictorTacticalVest_Small",
+    "ch": "維克托戰術背心_S",
+    "cn": "维克托战术背心_S"
+   },
+   "Base.clothes_cat52_1": {
+    "en": "VictorTacticalCoat_Small",
+    "ch": "維克托戰術外套_S",
+    "cn": "维克托战术外套_S"
+   },
+   "Base.clothes_cat53": {
+    "en": "SabrinaOutfit_Small",
+    "ch": "塞布麗娜套裝_S",
+    "cn": "塞布丽娜套装_S"
+   },
+   "Base.clothes_cat54": {
+    "en": "ExusiaiOutfit_Small",
+    "ch": "能天使套裝_S",
+    "cn": "能天使套装_S"
+   },
+   "Base.clothes_cat54_1": {
+    "en": "ExusiaiPetticoat",
+    "ch": "能天使襯裙",
+    "cn": "能天使衬裙"
+   },
+   "Base.clothes_cat55": {
+    "en": "WarfarinOutfit_Small",
+    "ch": "華法琳套裝_S",
+    "cn": "华法琳套装_S"
+   },
+   "Base.clothes_cat56": {
+    "en": "GiantBreastArmor",
+    "ch": "巨乳盔甲",
+    "cn": "巨乳盔甲"
+   },
+   "Base.clothes_cat57": {
+    "en": "MacchiatoOutfit_Small",
+    "ch": "瑪奇朵套裝_S",
+    "cn": "玛奇朵套装_S"
+   },
+   "Base.clothes_cat58": {
+    "en": "RoseType-1_Small",
+    "ch": "薔薇1型 (小型)",
+    "cn": "蔷薇1型 (小型)"
+   },
+   "Base.clothes_cat58_1": {
+    "en": "RoseType-1Bodysuit_Small",
+    "ch": "薔薇1型緊身衣 (小型)",
+    "cn": "蔷薇1型紧身衣 (小型)"
+   },
+   "Base.clothes_cat8": {
+    "en": "NippleCover_Large",
+    "ch": "乳貼 (大)",
+    "cn": "乳贴 (大)"
+   },
+   "Base.clothes_cat8_1": {
+    "en": "PrivateCover",
+    "ch": "私處貼",
+    "cn": "私处贴"
+   },
+   "Base.clothes_cat8_2": {
+    "en": "HeartNippleCover_Large",
+    "ch": "愛心乳貼 (大)",
+    "cn": "爱心乳贴 (大)"
+   },
+   "Base.clothes_cat9": {
+    "en": "ShyNunOutfit_Large",
+    "ch": "害羞修女服 (大)",
+    "cn": "害羞修女服 (大)"
+   },
+   "Base.crossbow_cat": {
+    "en": "Compound Crossbow",
+    "ch": "複合十字弩",
+    "cn": "复合十字弩"
+   },
+   "Base.factorMax_cat": {
+    "en": "Factor .50 Prototype Rifle",
+    "ch": "Factor .50 原型步槍",
+    "cn": "Factor .50 原型步枪"
+   },
+   "Base.factor_cat": {
+    "en": "Factor .50 Production Variant Rifle",
+    "ch": "Factor .50 量產型步槍",
+    "cn": "Factor .50 量产型步枪"
+   },
+   "Base.firebolt": {
+    "en": "Incendiary Crossbow Bolt",
+    "ch": "燃燒弩箭",
+    "cn": "燃烧弩箭"
+   },
+   "Base.glove01_nan0": {
+    "en": "UrbanGirlFingerlessGloves",
+    "ch": "都市少女露指手套",
+    "cn": "都市少女露指手套"
+   },
+   "Base.glove01_nan10": {
+    "en": "UrbanGirlFingerlessGloves_Blue-Black",
+    "ch": "都市少女露指手套 (藍/黑)",
+    "cn": "都市少女露指手套 (蓝/黑)"
+   },
+   "Base.glove01_nan20": {
+    "en": "UrbanGirlFingerlessGloves_White-Pink",
+    "ch": "都市少女露指手套 (白/粉紅)",
+    "cn": "都市少女露指手套 (白/粉色)"
+   },
+   "Base.glove05_nan0": {
+    "en": "BelovedSleeves",
+    "ch": "摯愛袖套",
+    "cn": "挚爱袖套"
+   },
+   "Base.glove07_nan0": {
+    "en": "LilyGirlSleeves",
+    "ch": "百合少女袖套",
+    "cn": "百合少女袖套"
+   },
+   "Base.glove08_nan0": {
+    "en": "MineGirlSleeves",
+    "ch": "地雷系少女袖套",
+    "cn": "地雷系少女袖套"
+   },
+   "Base.glove09_nan0": {
+    "en": "ArmedMaidSleeves",
+    "ch": "武裝女僕袖套",
+    "cn": "武装女仆袖套"
+   },
+   "Base.glove09_nan1": {
+    "en": "ArmedMaidSleeves_Pink",
+    "ch": "武裝女僕袖套 (粉紅)",
+    "cn": "武装女仆袖套 (粉色)"
+   },
+   "Base.glove15_nan0": {
+    "en": "UrbanGangGirlFingerlessGloves",
+    "ch": "都市幫派少女露指手套",
+    "cn": "都市帮派少女露指手套"
+   },
+   "Base.glove_cat18": {
+    "en": "TifaGloves",
+    "ch": "蒂法手套",
+    "cn": "蒂法手套"
+   },
+   "Base.glove_cat19": {
+    "en": "QuietTacticalGloves",
+    "ch": "靜靜戰術手套",
+    "cn": "静静战术手套"
+   },
+   "Base.glove_cat20": {
+    "en": "SeptemberArmorGauntlet",
+    "ch": "九月裝甲護手",
+    "cn": "九月装甲护手"
+   },
+   "Base.glove_cat28": {
+    "en": "JillGloves",
+    "ch": "吉兒手套",
+    "cn": "吉尔手套"
+   },
+   "Base.glove_cat33": {
+    "en": "IshtarArmGuards",
+    "ch": "伊絲塔護臂",
+    "cn": "伊什塔尔护臂"
+   },
+   "Base.glove_cat35": {
+    "en": "MikoWristOrnament",
+    "ch": "巫女腕飾",
+    "cn": "巫女腕饰"
+   },
+   "Base.glove_cat50": {
+    "en": "NazawaFluffyGloves",
+    "ch": "無澤毛絨手套",
+    "cn": "无泽毛绒手套"
+   },
+   "Base.glove_cat54": {
+    "en": "ExusiaiGloves",
+    "ch": "能天使手套",
+    "cn": "能天使手套"
+   },
+   "Base.glove_cat55": {
+    "en": "WarfarinGloves",
+    "ch": "華法琳手套",
+    "cn": "华法琳手套"
+   },
+   "Base.glove_cat56": {
+    "en": "GiantBreastArmorGloves",
+    "ch": "巨乳盔甲手套",
+    "cn": "巨乳盔甲手套"
+   },
+   "Base.glove_cat58": {
+    "en": "RoseType-1Gloves",
+    "ch": "薔薇1型手套",
+    "cn": "蔷薇1型手套"
+   },
+   "Base.gongjvxiuli_cat": {
+    "en": "Universal Weapon Repair Kit",
+    "ch": "通用武器修理套件",
+    "cn": "通用武器修理套件"
+   },
+   "Base.hair_cat54": {
+    "en": "ExusiaiHairstyle",
+    "ch": "能天使髮型",
+    "cn": "能天使发型"
+   },
+   "Base.hair_cat55": {
+    "en": "WarfarinLongHair",
+    "ch": "華法琳長髮",
+    "cn": "华法琳长发"
+   },
+   "Base.head_2B": {
+    "en": "YorhaNo.2Type-BTacticalEyeMask",
+    "ch": "寄葉二號B型戰術眼罩",
+    "cn": "寄叶二号B型战术眼罩"
+   },
+   "Base.head_cat48": {
+    "en": "SpeedStarHat",
+    "ch": "速度之星帽子",
+    "cn": "速度之星帽子"
+   },
+   "Base.head_cat50": {
+    "en": "NazawaMask",
+    "ch": "無澤面具",
+    "cn": "无泽面具"
+   },
+   "Base.head_junyong": {
+    "en": "TacticalMilitaryHelmet",
+    "ch": "戰術軍用頭盔",
+    "cn": "战术军用头盔"
+   },
+   "Base.head_motuo": {
+    "en": "CatEarMotorcycleHelmet",
+    "ch": "貓耳摩托車頭盔",
+    "cn": "猫耳摩托车头盔"
+   },
+   "Base.heitaoA_cat": {
+    "en": "Ace of Spades Rifle",
+    "ch": "黑桃 A 步槍",
+    "cn": "黑桃 A 步枪"
+   },
+   "Base.interceptor_cat": {
+    "en": "Interceptor Tactical Crossbow",
+    "ch": "攔截者戰術弩",
+    "cn": "拦截者战术弩"
+   },
+   "Base.lanchester_cat": {
+    "en": "Lanchester Submachine Gun",
+    "ch": "蘭徹斯特衝鋒槍",
+    "cn": "兰彻斯特冲锋枪"
+   },
+   "Base.lebelm1886_cat": {
+    "en": "Lebel M1886 Infantry Rifle",
+    "ch": "勒貝爾 M1886 步兵步槍",
+    "cn": "勒贝尔 M1886 步兵步枪"
+   },
+   "Base.lewis_cat": {
+    "en": "Lewis Light Machine Gun",
+    "ch": "劉易斯輕機槍",
+    "cn": "刘易斯轻机枪"
+   },
+   "Base.lugerP08_cat": {
+    "en": "Luger P08 Pistol",
+    "ch": "魯格 P08 手槍",
+    "cn": "鲁格 P08 手枪"
+   },
+   "Base.mg338_cat": {
+    "en": ".338 MG338 Machine Gun",
+    "ch": ".338 MG338 機槍",
+    "cn": ".338 MG338 机枪"
+   },
+   "Base.mk47_cat": {
+    "en": "MK47 Hybrid Rifle",
+    "ch": "MK47混合式步槍",
+    "cn": "MK47混合式步枪"
+   },
+   "Base.mk47_cat_Drum": {
+    "en": "MK47 Rifle",
+    "ch": "MK47 步槍",
+    "cn": "MK47 步枪"
+   },
+   "Base.mp5_cat": {
+    "en": "MP5 Submachine Gun",
+    "ch": "MP5 衝鋒槍",
+    "cn": "MP5 冲锋枪"
+   },
+   "Base.mp5_cat_Drum": {
+    "en": "MP5 SMG",
+    "ch": "MP5 衝鋒槍",
+    "cn": "MP5 冲锋枪"
+   },
+   "Base.neck_cat17": {
+    "en": "AnnaNecktie",
+    "ch": "安娜領帶",
+    "cn": "安娜领带"
+   },
+   "Base.neck_cat22": {
+    "en": "SeptemberJKNecktie",
+    "ch": "九月JK領帶",
+    "cn": "九月JK领带"
+   },
+   "Base.neck_cat25": {
+    "en": "CowChoker",
+    "ch": "乳牛項圈",
+    "cn": "奶牛颈圈"
+   },
+   "Base.neiku06_nan0": {
+    "en": "DevilHotPants",
+    "ch": "小惡魔熱褲",
+    "cn": "小恶魔热裤"
+   },
+   "Base.neiku06_nan1": {
+    "en": "DevilHotPants2",
+    "ch": "小惡魔熱褲 2",
+    "cn": "小恶魔热裤 2"
+   },
+   "Base.neiku06_nan2": {
+    "en": "DevilHotPants_White",
+    "ch": "小惡魔熱褲 (白)",
+    "cn": "小恶魔热裤 (白)"
+   },
+   "Base.neiku06_nan3": {
+    "en": "DevilHotPants4",
+    "ch": "小惡魔熱褲 4",
+    "cn": "小恶魔热裤 4"
+   },
+   "Base.neiku06_nan4": {
+    "en": "DevilHotPants",
+    "ch": "小惡魔熱褲",
+    "cn": "小恶魔热裤"
+   },
+   "Base.neiku_cat16": {
+    "en": "JKGreenRainCombatUnderwear",
+    "ch": "JK 青時雨戰鬥內衣",
+    "cn": "JK 青时雨战斗内衣"
+   },
+   "Base.neiku_cat19": {
+    "en": "High-WaistedPanties",
+    "ch": "高腰內褲",
+    "cn": "高腰内裤"
+   },
+   "Base.pant01_nan0": {
+    "en": "UrbanGirlSportsShorts",
+    "ch": "都市少女運動短褲",
+    "cn": "都市少女运动短裤"
+   },
+   "Base.pant01_nan10": {
+    "en": "UrbanGirlSportsShorts_Blue-Black",
+    "ch": "都市少女運動短褲 (藍/黑)",
+    "cn": "都市少女运动短裤 (蓝/黑)"
+   },
+   "Base.pant01_nan20": {
+    "en": "UrbanGirlSportsShorts_White-Pink",
+    "ch": "都市少女運動短褲 (白/粉紅)",
+    "cn": "都市少女运动短裤 (白/粉色)"
+   },
+   "Base.pant03_nan0": {
+    "en": "ShinraHotPants",
+    "ch": "神羅熱褲",
+    "cn": "神罗热裤"
+   },
+   "Base.pant03_nan1": {
+    "en": "ShinraPleatedSkirt",
+    "ch": "神羅百褶裙",
+    "cn": "神罗百褶裙"
+   },
+   "Base.pant04_nan0": {
+    "en": "OathSkirt",
+    "ch": "誓約裙",
+    "cn": "誓约裙"
+   },
+   "Base.pant05_nan0": {
+    "en": "BelovedSkirt",
+    "ch": "摯愛裙",
+    "cn": "挚爱裙"
+   },
+   "Base.pant06_nan0": {
+    "en": "DevilSkirt",
+    "ch": "小惡魔裙",
+    "cn": "小恶魔裙"
+   },
+   "Base.pant06_nan1": {
+    "en": "DevilSkirt_PlaidPink",
+    "ch": "小惡魔裙 (粉紅格紋)",
+    "cn": "小恶魔裙 (粉色格纹)"
+   },
+   "Base.pant06_nan2": {
+    "en": "DevilSkirt3_GreyPlaid",
+    "ch": "小惡魔裙 3 (灰色格紋)",
+    "cn": "小恶魔裙 3 (灰色格纹)"
+   },
+   "Base.pant06_nan3": {
+    "en": "DevilSkirt_White",
+    "ch": "小惡魔裙 (白)",
+    "cn": "小恶魔裙 (白)"
+   },
+   "Base.pant06_nan4": {
+    "en": "DevilSkirt_Black",
+    "ch": "小惡魔裙 (黑)",
+    "cn": "小恶魔裙 (黑)"
+   },
+   "Base.pant07_nan0": {
+    "en": "LilyGirlSkirt",
+    "ch": "百合少女裙",
+    "cn": "百合少女裙"
+   },
+   "Base.pant08_nan0": {
+    "en": "MineGirlSkirt",
+    "ch": "地雷系少女裙",
+    "cn": "地雷系少女裙"
+   },
+   "Base.pant09_nan0": {
+    "en": "ArmedMaidKnee-HighSocks",
+    "ch": "武裝女僕及膝襪",
+    "cn": "武装女仆及膝袜"
+   },
+   "Base.pant09_nan1": {
+    "en": "ArmedMaidKnee-HighSocks_Pink",
+    "ch": "武裝女僕及膝襪 (粉紅)",
+    "cn": "武装女仆及膝袜 (粉色)"
+   },
+   "Base.pant10_nan0": {
+    "en": "StreetGirlMiniSkirt",
+    "ch": "街頭少女迷你裙",
+    "cn": "街头少女迷你裙"
+   },
+   "Base.pant11_nan0_1": {
+    "en": "FallenAngelPleatedSkirt",
+    "ch": "墮天使百褶裙",
+    "cn": "堕天使百褶裙"
+   },
+   "Base.pant11_nan1_1": {
+    "en": "FallenAngelPleatedSkirt_WhitePlaid",
+    "ch": "白色格紋墮天使百褶裙",
+    "cn": "白色格纹堕天使百褶裙"
+   },
+   "Base.pant11_nan2_1": {
+    "en": "FallenAngelPleatedSkirt_PureWhite",
+    "ch": "純白墮天使百褶裙",
+    "cn": "纯白堕天使百褶裙"
+   },
+   "Base.pant11_nan3_1": {
+    "en": "FallenAngelPleatedSkirt_Purple",
+    "ch": "紫色墮天使百褶裙",
+    "cn": "紫色堕天使百褶裙"
+   },
+   "Base.pant15_nan0": {
+    "en": "UrbanGangGirlShorts",
+    "ch": "都市幫派少女短褲",
+    "cn": "都市帮派少女短裤"
+   },
+   "Base.pant26_nan0": {
+    "en": "CakeSkirt",
+    "ch": "蛋糕裙",
+    "cn": "蛋糕裙"
+   },
+   "Base.pant28_nan0": {
+    "en": "CoreTechMiniSkirt",
+    "ch": "核心科技迷你裙",
+    "cn": "核心科技迷你裙"
+   },
+   "Base.pant_cat11": {
+    "en": "OathPantyhose",
+    "ch": "誓約褲襪",
+    "cn": "誓约连裤袜"
+   },
+   "Base.pant_cat15": {
+    "en": "BunnyGirlOveralls",
+    "ch": "兔女郎連身褲",
+    "cn": "兔女郎连体裤"
+   },
+   "Base.pant_cat15_h": {
+    "en": "BunnyGirlWarmOveralls",
+    "ch": "兔女郎保暖連身褲",
+    "cn": "兔女郎保暖连体裤"
+   },
+   "Base.pant_cat16": {
+    "en": "JKGreenRainSkirt",
+    "ch": "JK 青時雨裙",
+    "cn": "JK 青时雨裙"
+   },
+   "Base.pant_cat16_1": {
+    "en": "JKGreenRainSkirt_NoBelt",
+    "ch": "JK 青時雨裙 (無腰帶)",
+    "cn": "JK 青时雨裙 (无腰带)"
+   },
+   "Base.pant_cat18": {
+    "en": "TifaSuspenderSkirt",
+    "ch": "蒂法吊帶裙",
+    "cn": "蒂法背带裙"
+   },
+   "Base.pant_cat19": {
+    "en": "RippedPantyhose",
+    "ch": "破洞連褲襪",
+    "cn": "破洞连裤袜"
+   },
+   "Base.pant_cat22": {
+    "en": "SeptemberJKSkirt",
+    "ch": "九月JK裙",
+    "cn": "九月JK裙"
+   },
+   "Base.pant_cat24": {
+    "en": "LaraShorts",
+    "ch": "勞拉短褲",
+    "cn": "劳拉短裤"
+   },
+   "Base.pant_cat25": {
+    "en": "CowPanties",
+    "ch": "乳牛內褲",
+    "cn": "奶牛内裤"
+   },
+   "Base.pant_cat26": {
+    "en": "OLPencilSkirt",
+    "ch": "OL窄裙",
+    "cn": "OL包臀裙"
+   },
+   "Base.pant_cat28": {
+    "en": "JillShorts",
+    "ch": "吉兒短褲",
+    "cn": "吉尔短裤"
+   },
+   "Base.pant_cat29": {
+    "en": "CheongsamLace-UpPants",
+    "ch": "旗袍綁帶褲",
+    "cn": "旗袍系带裤"
+   },
+   "Base.pant_cat33": {
+    "en": "IshtarLegGuards",
+    "ch": "伊絲塔護腿",
+    "cn": "伊什塔尔护腿"
+   },
+   "Base.pant_cat35": {
+    "en": "MikoSkirt",
+    "ch": "巫女裙",
+    "cn": "巫女裙"
+   },
+   "Base.pant_cat48": {
+    "en": "SpeedStarPants",
+    "ch": "速度之星長褲",
+    "cn": "速度之星长裤"
+   },
+   "Base.pant_cat50": {
+    "en": "NazawaMiniSkirt",
+    "ch": "無澤迷你裙",
+    "cn": "无泽迷你裙"
+   },
+   "Base.pant_cat52": {
+    "en": "VictorTacticalPants",
+    "ch": "維克托戰術長褲",
+    "cn": "维克托战术长裤"
+   },
+   "Base.pant_cat53": {
+    "en": "SabrinaPants",
+    "ch": "塞布麗娜長褲",
+    "cn": "塞布丽娜长裤"
+   },
+   "Base.pant_cat54": {
+    "en": "ExusiaiPants",
+    "ch": "能天使長褲",
+    "cn": "能天使长裤"
+   },
+   "Base.pant_cat55": {
+    "en": "WarfarinPants",
+    "ch": "華法琳長褲",
+    "cn": "华法琳长裤"
+   },
+   "Base.pant_cat57": {
+    "en": "MacchiatoPants",
+    "ch": "瑪奇朵長褲",
+    "cn": "玛奇朵长裤"
+   },
+   "Base.pant_cat9": {
+    "en": "NunBowDecoration",
+    "ch": "修女蝴蝶結裝飾",
+    "cn": "修女蝴蝶结装饰"
+   },
+   "Base.part1_cat": {
+    "en": "Firearm Magazine Components",
+    "ch": "槍械彈匣零件",
+    "cn": "枪械弹匣零件"
+   },
+   "Base.part2_cat": {
+    "en": "Firearm Metal Components",
+    "ch": "槍械金屬零件",
+    "cn": "枪械金属零件"
+   },
+   "Base.part3_cat": {
+    "en": "Firearm Polymer Components",
+    "ch": "槍械聚合物零件",
+    "cn": "枪械聚合物零件"
+   },
+   "Base.part4_cat": {
+    "en": "Firearm Rubber Components",
+    "ch": "槍械橡膠零件",
+    "cn": "枪械橡胶零件"
+   },
+   "Base.picao_cat": {
+    "en": "FurScarf",
+    "ch": "毛皮圍巾",
+    "cn": "皮草围巾"
+   },
+   "Base.rutie20": {
+    "en": "NippleCover",
+    "ch": "乳貼",
+    "cn": "乳贴"
+   },
+   "Base.shoe01_nan0": {
+    "en": "UrbanGirlSneakers",
+    "ch": "都市少女運動鞋",
+    "cn": "都市少女运动鞋"
+   },
+   "Base.shoe01_nan10": {
+    "en": "UrbanGirlSneakers_Blue-Black",
+    "ch": "都市少女運動鞋 (藍/黑)",
+    "cn": "都市少女运动鞋 (蓝/黑)"
+   },
+   "Base.shoe01_nan20": {
+    "en": "UrbanGirlSneakers_White-Pink",
+    "ch": "都市少女運動鞋 (白/粉紅)",
+    "cn": "都市少女运动鞋 (白/粉色)"
+   },
+   "Base.shoe02_nan0": {
+    "en": "GothicPlatformHighHeels",
+    "ch": "哥德厚底高跟鞋",
+    "cn": "哥特厚底高跟鞋"
+   },
+   "Base.shoe03_nan0": {
+    "en": "ShinraLace-UpHighHeels",
+    "ch": "神羅綁帶高跟鞋",
+    "cn": "神罗系带高跟鞋"
+   },
+   "Base.shoe04_nan0": {
+    "en": "OathHighHeels",
+    "ch": "誓約高跟鞋",
+    "cn": "誓约高跟鞋"
+   },
+   "Base.shoe06_nan0": {
+    "en": "DevilPlatformShoes",
+    "ch": "小惡魔厚底鞋",
+    "cn": "小恶魔松糕鞋"
+   },
+   "Base.shoe06_nan1": {
+    "en": "DevilPlatformShoes_White",
+    "ch": "小惡魔厚底鞋 (白)",
+    "cn": "小恶魔松糕鞋 (白)"
+   },
+   "Base.shoe06_nan2": {
+    "en": "DevilPlatformShoes_Black",
+    "ch": "小惡魔厚底鞋 (黑)",
+    "cn": "小恶魔松糕鞋 (黑)"
+   },
+   "Base.shoe06_nan3": {
+    "en": "DevilPlatformShoes4",
+    "ch": "小惡魔厚底鞋 4",
+    "cn": "小恶魔松糕鞋 4"
+   },
+   "Base.shoe06_nan4": {
+    "en": "DevilPlatformShoes_WhiteWings",
+    "ch": "小惡魔厚底鞋 (白色翅膀)",
+    "cn": "小恶魔松糕鞋 (白色翅膀)"
+   },
+   "Base.shoe07_nan0": {
+    "en": "LilyGirlShoes",
+    "ch": "百合少女鞋",
+    "cn": "百合少女鞋"
+   },
+   "Base.shoe08_nan0": {
+    "en": "MineGirlShoes",
+    "ch": "地雷系少女鞋",
+    "cn": "地雷系少女鞋"
+   },
+   "Base.shoe09_nan0": {
+    "en": "ArmedMaidShoes",
+    "ch": "武裝女僕鞋",
+    "cn": "武装女仆鞋"
+   },
+   "Base.shoe09_nan1": {
+    "en": "ArmedMaidShoes_Pink",
+    "ch": "武裝女僕鞋 (粉紅)",
+    "cn": "武装女仆鞋 (粉色)"
+   },
+   "Base.shoe11_nan0": {
+    "en": "FallenAngelPlatformShoes",
+    "ch": "墮天使厚底鞋",
+    "cn": "堕天使厚底鞋"
+   },
+   "Base.shoe11_nan1": {
+    "en": "FallenAngelPlatformShoes_WhitePlaid",
+    "ch": "白色格紋墮天使厚底鞋",
+    "cn": "白色格纹堕天使厚底鞋"
+   },
+   "Base.shoe11_nan2": {
+    "en": "FallenAngelPlatformShoes_PureWhite",
+    "ch": "純白墮天使厚底鞋",
+    "cn": "纯白堕天使厚底鞋"
+   },
+   "Base.shoe11_nan3": {
+    "en": "FallenAngelPlatformShoes_Purple",
+    "ch": "紫色墮天使厚底鞋",
+    "cn": "紫色堕天使厚底鞋"
+   },
+   "Base.shoe12_nan0": {
+    "en": "EclairPlatformShoes",
+    "ch": "艾克蕾爾厚底鞋",
+    "cn": "埃克莱尔厚底鞋"
+   },
+   "Base.shoe15_nan0": {
+    "en": "UrbanGangGirlShoes",
+    "ch": "都市幫派少女鞋",
+    "cn": "都市帮派少女鞋"
+   },
+   "Base.shoe_cat1": {
+    "en": "YorhaTacticalLongBoots",
+    "ch": "寄葉戰術長靴",
+    "cn": "寄叶战术长靴"
+   },
+   "Base.shoe_cat14": {
+    "en": "SnowCharmHighHeels",
+    "ch": "媚雪高跟鞋",
+    "cn": "媚雪高跟鞋"
+   },
+   "Base.shoe_cat15": {
+    "en": "BunnyGirlHighHeels",
+    "ch": "兔女郎高跟鞋",
+    "cn": "兔女郎高跟鞋"
+   },
+   "Base.shoe_cat16": {
+    "en": "GreenRainJKLeatherShoes",
+    "ch": "青時雨 JK 皮鞋",
+    "cn": "青时雨 JK 皮鞋"
+   },
+   "Base.shoe_cat17": {
+    "en": "AnnaHighHeels",
+    "ch": "安娜高跟鞋",
+    "cn": "安娜高跟鞋"
+   },
+   "Base.shoe_cat18": {
+    "en": "TifaShoes",
+    "ch": "蒂法鞋",
+    "cn": "蒂法鞋"
+   },
+   "Base.shoe_cat19": {
+    "en": "QuietLeatherShoes",
+    "ch": "靜靜皮鞋",
+    "cn": "静静皮鞋"
+   },
+   "Base.shoe_cat20": {
+    "en": "SeptemberCombatShoes",
+    "ch": "九月戰鬥鞋",
+    "cn": "九月战斗鞋"
+   },
+   "Base.shoe_cat24": {
+    "en": "LaraShoes",
+    "ch": "勞拉鞋",
+    "cn": "劳拉鞋"
+   },
+   "Base.shoe_cat28": {
+    "en": "JillShoes",
+    "ch": "吉兒鞋",
+    "cn": "吉尔鞋"
+   },
+   "Base.shoe_cat40": {
+    "en": "SQShoes",
+    "ch": "SQ鞋",
+    "cn": "SQ鞋"
+   },
+   "Base.shoe_cat48": {
+    "en": "SpeedStarHighHeels",
+    "ch": "速度之星高跟鞋",
+    "cn": "速度之星高跟鞋"
+   },
+   "Base.shoe_cat50": {
+    "en": "NazawaFluffyShoes",
+    "ch": "無澤毛絨鞋",
+    "cn": "无泽毛绒鞋"
+   },
+   "Base.shoe_cat51": {
+    "en": "KrolikShoes",
+    "ch": "可露凱鞋",
+    "cn": "可露凯鞋"
+   },
+   "Base.shoe_cat52": {
+    "en": "VictorTacticalBoots",
+    "ch": "維克托戰術靴",
+    "cn": "维克托战术靴"
+   },
+   "Base.shoe_cat53": {
+    "en": "SabrinaShoes",
+    "ch": "塞布麗娜鞋",
+    "cn": "塞布丽娜鞋"
+   },
+   "Base.shoe_cat54": {
+    "en": "ExusiaiShoes",
+    "ch": "能天使鞋",
+    "cn": "能天使鞋"
+   },
+   "Base.shoe_cat55": {
+    "en": "WarfarinShoes",
+    "ch": "華法琳鞋",
+    "cn": "华法琳鞋"
+   },
+   "Base.shoe_cat56": {
+    "en": "GiantBreastCombatBoots",
+    "ch": "巨乳戰鬥靴",
+    "cn": "巨乳战斗靴"
+   },
+   "Base.shoe_cat57": {
+    "en": "MacchiatoShoes",
+    "ch": "瑪奇朵鞋",
+    "cn": "玛奇朵鞋"
+   },
+   "Base.shoe_cat58": {
+    "en": "RoseType-1HighHeels",
+    "ch": "薔薇1型高跟鞋",
+    "cn": "蔷薇1型高跟鞋"
+   },
+   "Base.socks_nan3": {
+    "en": "ShinraSocks",
+    "ch": "神羅襪子",
+    "cn": "神罗袜子"
+   },
+   "Base.usp45_cat": {
+    "en": "USP .45 ACP Pistol",
+    "ch": "USP .45 ACP 手槍",
+    "cn": "USP .45 ACP 手枪"
+   },
+   "Base.usp45_cat_Drum": {
+    "en": "USP45 Handgun",
+    "ch": "USP45 手槍",
+    "cn": "USP45 手枪"
+   },
+   "Base.uzi_cat_Drum": {
+    "en": "Uzi SMG",
+    "ch": "Uzi 衝鋒槍",
+    "cn": "Uzi 冲锋枪"
+   },
+   "Base.xiaobangshou_cat2": {
+    "en": "Backup Pocket Pistol",
+    "ch": "備用袖珍手槍",
+    "cn": "备用袖珍手枪"
+   },
+   "Base.youling_cat": {
+    "en": "Wraith Sniper Rifle",
+    "ch": "幽靈狙擊步槍",
+    "cn": "幽灵狙击步枪"
+   },
+   "Base.夜煌": {
+    "en": "Night Emperor Katana",
+    "ch": "夜帝武士刀",
+    "cn": "夜帝武士刀"
+   },
+   "Base.御林长刀": {
+    "en": "Imperial Guard Longsword",
+    "ch": "御林軍長劍",
+    "cn": "御林军长剑"
+   },
+   "Base.现代化马林": {
+    "en": "Modernized Marlin Lever-Action Rifle",
+    "ch": "現代化馬林槓桿式步槍",
+    "cn": "现代化马林杠杆式步枪"
+   },
+   "Base.索利达尔": {
+    "en": "Solis'dar Bow",
+    "ch": "索利達爾弓",
+    "cn": "索利达尔弓"
+   },
+   "Base.阎魔刀": {
+    "en": "Yamato Blade",
+    "ch": "閻魔刀",
+    "cn": "阎魔刀"
+   },
+   "Base.阎魔刀鞘": {
+    "en": "Yamato Scabbard",
+    "ch": "閻魔刀鞘",
+    "cn": "阎魔刀鞘"
+   },
+   "Base.高频村雨": {
+    "en": "High-Frequency Muramasa Blade",
+    "ch": "高頻村正刀",
+    "cn": "高频村正刀"
+   },
+   "Base.鬼丸国纲": {
+    "en": "Onimaru Kunitsuna",
+    "ch": "鬼丸國綱",
+    "cn": "鬼丸国纲"
+   },
+   "Box_ChestRig_01": {
+    "en": "Portable Chest Rig 01 Box",
+    "ch": "可攜式胸掛 01 (整盒)",
+    "cn": "便携式胸挂 01 (整盒)"
+   },
+   "Box_ChestRig_02": {
+    "en": "Portable Chest Rig Box",
+    "ch": "可攜式胸掛 (整盒)",
+    "cn": "便携式胸挂 (整盒)"
+   },
+   "Box_ChestRig_03": {
+    "en": "Portable Chest Rig Box",
+    "ch": "可攜式胸掛 (整盒)",
+    "cn": "便携式胸挂 (整盒)"
+   },
+   "Box_ChestRig_04": {
+    "en": "Portable Chest Rig Box",
+    "ch": "可攜式胸掛 (整盒)",
+    "cn": "便携式胸挂 (整盒)"
+   },
+   "Box_ChestRig_05": {
+    "en": "Portable Chest Rig Box",
+    "ch": "可攜式胸掛 (整盒)",
+    "cn": "便携式胸挂 (整盒)"
+   },
+   "Box_ChestRig_06": {
+    "en": "Portable Chest Rig Box",
+    "ch": "可攜式胸掛 (整盒)",
+    "cn": "便携式胸挂 (整盒)"
+   },
+   "Box_ChestRig_07": {
+    "en": "Portable Chest Rig Box",
+    "ch": "可攜式胸掛 (整盒)",
+    "cn": "便携式胸挂 (整盒)"
+   },
+   "Box_Helmet_00": {
+    "en": "Box of Helmets",
+    "ch": "頭盔 (整盒)",
+    "cn": "头盔 (整盒)"
+   },
+   "Box_Helmet_01": {
+    "en": "Box of Helmets",
+    "ch": "頭盔 (整盒)",
+    "cn": "头盔 (整盒)"
+   },
+   "Box_Helmet_02": {
+    "en": "Box of Helmets",
+    "ch": "頭盔 (整盒)",
+    "cn": "头盔 (整盒)"
+   },
+   "Box_Helmet_03": {
+    "en": "Box of Helmets",
+    "ch": "頭盔 (整盒)",
+    "cn": "头盔 (整盒)"
+   },
+   "Box_RuBag_00": {
+    "en": "Box of Breast Inserts",
+    "ch": "義乳 (整盒)",
+    "cn": "义乳 (整盒)"
+   },
+   "Box_SST_00": {
+    "en": "Tactical 01 Set Box",
+    "ch": "戰術 01 套裝 (整盒)",
+    "cn": "战术 01 套装 (整盒)"
+   },
+   "Box_Socks_00": {
+    "en": "Box of Socks",
+    "ch": "襪子 (整盒)",
+    "cn": "袜子 (整盒)"
+   },
+   "Box_XXhong_00": {
+    "en": "Red Blouse Box",
+    "ch": "紅色女用襯衫 (整盒)",
+    "cn": "红色女式衬衫 (整盒)"
+   },
+   "Box_anna": {
+    "en": "Anna Set Box",
+    "ch": "安娜套裝 (整盒)",
+    "cn": "安娜套装 (整盒)"
+   },
+   "Box_cat1": {
+    "en": "Type 2 YoRHa Set Box",
+    "ch": "二型寄葉套裝 (整盒)",
+    "cn": "二型寄叶套装 (整盒)"
+   },
+   "Box_cat14_00": {
+    "en": "Meixue Set Box",
+    "ch": "媚雪套裝 (整盒)",
+    "cn": "媚雪套装 (整盒)"
+   },
+   "Box_cat15_00": {
+    "en": "Bunny Girl Set Box",
+    "ch": "兔女郎套裝 (整盒)",
+    "cn": "兔女郎套装 (整盒)"
+   },
+   "Box_cat16_00": {
+    "en": "Amaryllis Set Box",
+    "ch": "孤挺花套裝 (整盒)",
+    "cn": "朱顶红套装 (整盒)"
+   },
+   "Box_cat18_00": {
+    "en": "Tifa Set Box",
+    "ch": "蒂法套裝 (整盒)",
+    "cn": "蒂法套装 (整盒)"
+   },
+   "Box_cat19_00": {
+    "en": "Quiet Set Box",
+    "ch": "靜靜套裝 (整盒)",
+    "cn": "静静套装 (整盒)"
+   },
+   "Box_cat20_00": {
+    "en": "September Set Box",
+    "ch": "九月套裝 (整盒)",
+    "cn": "九月套装 (整盒)"
+   },
+   "Box_cat21_00": {
+    "en": "Suspender Shirt Box",
+    "ch": "吊帶襯衫 (整盒)",
+    "cn": "背带衬衫 (整盒)"
+   },
+   "Box_cat22_00": {
+    "en": "September JK Set Box",
+    "ch": "九月JK套裝 (整盒)",
+    "cn": "九月JK套装 (整盒)"
+   },
+   "Box_cat23_00": {
+    "en": "Cat23 Set Box",
+    "ch": "Cat23 套裝 (整盒)",
+    "cn": "Cat23 套装 (整盒)"
+   },
+   "Box_cat24_00": {
+    "en": "Lara Set Box",
+    "ch": "蘿拉套裝 (整盒)",
+    "cn": "劳拉套装 (整盒)"
+   },
+   "Box_cat25_00": {
+    "en": "Cow Pattern Set Box",
+    "ch": "乳牛花紋套裝 (整盒)",
+    "cn": "奶牛图案套装 (整盒)"
+   },
+   "Box_cat26_00": {
+    "en": "OL Outfit Set Box",
+    "ch": "OL 服裝套裝 (整盒)",
+    "cn": "OL 服装套装 (整盒)"
+   },
+   "Box_cat27_00": {
+    "en": "Inspector Bodysuit Box",
+    "ch": "搜查官緊身衣 (整盒)",
+    "cn": "搜查官紧身衣 (整盒)"
+   },
+   "Box_cat28_00": {
+    "en": "Jill Set Box",
+    "ch": "吉兒套裝 (整盒)",
+    "cn": "吉尔套装 (整盒)"
+   },
+   "Box_cat29_00": {
+    "en": "Cheongsam Set Box",
+    "ch": "旗袍套裝 (整盒)",
+    "cn": "旗袍套装 (整盒)"
+   },
+   "Box_cat32_00": {
+    "en": "Rapi Set Box",
+    "ch": "拉毗套裝 (整盒)",
+    "cn": "拉毗套装 (整盒)"
+   },
+   "Box_cat33_00": {
+    "en": "Ishtar Set Box",
+    "ch": "伊絲塔套裝 (整盒)",
+    "cn": "伊什塔尔套装 (整盒)"
+   },
+   "Box_cat35_00": {
+    "en": "Miko Set Box",
+    "ch": "巫女套裝 (整盒)",
+    "cn": "巫女套装 (整盒)"
+   },
+   "Box_cat38_00": {
+    "en": "Ada Wong Set Box",
+    "ch": "艾達王套裝 (整盒)",
+    "cn": "艾达王套装 (整盒)"
+   },
+   "Box_cat40_00": {
+    "en": "SQ Set Box",
+    "ch": "SQ 套裝 (整盒)",
+    "cn": "SQ 套装 (整盒)"
+   },
+   "Box_cat44_00": {
+    "en": "Minazuki Box",
+    "ch": "水無月 (整盒)",
+    "cn": "水无月 (整盒)"
+   },
+   "Box_cat46_00": {
+    "en": "Weiyu Set Box",
+    "ch": "未語套裝 (整盒)",
+    "cn": "未语套装 (整盒)"
+   },
+   "Box_cat47_00": {
+    "en": "47 Outfit Set Box",
+    "ch": "47 服裝套裝 (整盒)",
+    "cn": "47 服装套装 (整盒)"
+   },
+   "Box_cat48_00": {
+    "en": "Speed Star Set Box",
+    "ch": "速度之星套裝 (整盒)",
+    "cn": "速度之星套装 (整盒)"
+   },
+   "Box_cat49_00": {
+    "en": "Reverse Lady Box",
+    "ch": "反轉女郎 (整盒)",
+    "cn": "反转女郎 (整盒)"
+   },
+   "Box_cat50_00": {
+    "en": "Mizawa Set Box",
+    "ch": "無澤套裝 (整盒)",
+    "cn": "无泽套装 (整盒)"
+   },
+   "Box_cat51_00": {
+    "en": "Clukay Set Box",
+    "ch": "可露凱套裝 (整盒)",
+    "cn": "可露凯套装 (整盒)"
+   },
+   "Box_cat52_00": {
+    "en": "Victor Set Box",
+    "ch": "維克托套裝 (整盒)",
+    "cn": "维克托套装 (整盒)"
+   },
+   "Box_cat53_00": {
+    "en": "Sabrina Set Box",
+    "ch": "莎賓娜套裝 (整盒)",
+    "cn": "萨布丽娜套装 (整盒)"
+   },
+   "Box_cat54_00": {
+    "en": "Exusiai Set Box",
+    "ch": "能天使套裝 (整盒)",
+    "cn": "能天使套装 (整盒)"
+   },
+   "Box_cat55_00": {
+    "en": "Vilmina Set Box",
+    "ch": "薇爾米娜套裝 (整盒)",
+    "cn": "薇尔米娜套装 (整盒)"
+   },
+   "Box_cat56_00": {
+    "en": "Armored Bust Set Box",
+    "ch": "胸甲套裝 (整盒)",
+    "cn": "胸甲套装 (整盒)"
+   },
+   "Box_cat57_00": {
+    "en": "Macchiato Set Box",
+    "ch": "瑪奇朵套裝 (整盒)",
+    "cn": "玛奇朵套装 (整盒)"
+   },
+   "Box_cat58_00": {
+    "en": "Rose Type 1 Set Box",
+    "ch": "薔薇1型套裝 (整盒)",
+    "cn": "蔷薇1型套装 (整盒)"
+   },
+   "Box_cat60_00": {
+    "en": "Laya Set Box",
+    "ch": "萊雅套裝 (整盒)",
+    "cn": "莱雅套装 (整盒)"
+   },
+   "Box_cat61_00": {
+    "en": "Kikata Kazu Set Box",
+    "ch": "鬼方佳套裝 (整盒)",
+    "cn": "鬼方佳套装 (整盒)"
+   },
+   "Box_cat62_00": {
+    "en": "Black Robe Box",
+    "ch": "黑色長袍 (整盒)",
+    "cn": "黑色长袍 (整盒)"
+   },
+   "Box_cat63_00": {
+    "en": "Fluorite Set Box",
+    "ch": "螢石套裝 (整盒)",
+    "cn": "萤石套装 (整盒)"
+   },
+   "Box_cat8": {
+    "en": "Box of Pasties",
+    "ch": "盒裝乳貼",
+    "cn": "盒装乳贴"
+   },
+   "Box_cat9": {
+    "en": "Cat9 Box",
+    "ch": "Cat9 盒",
+    "cn": "Cat9 盒"
+   },
+   "Box_catM_00": {
+    "en": "Backless Sweater Box",
+    "ch": "露背毛衣 (整盒)",
+    "cn": "露背毛衣 (整盒)"
+   },
+   "Box_cat_00": {
+    "en": "Lingerie Set Box",
+    "ch": "內衣套裝 (整盒)",
+    "cn": "内衣套装 (整盒)"
+   },
+   "Box_cat_JK": {
+    "en": "Tactical JK Set Box",
+    "ch": "戰術 JK 套裝 (整盒)",
+    "cn": "战术 JK 套装 (整盒)"
+   },
+   "Box_mai01_00": {
+    "en": "Mai Xiaowen Set Box",
+    "ch": "麥曉雯套裝 (整盒)",
+    "cn": "麦晓雯套装 (整盒)"
+   },
+   "Box_nan00_head": {
+    "en": "Koroe Mask Box",
+    "ch": "Koroe 面具盒",
+    "cn": "Koroe 面具盒"
+   },
+   "Box_nan01_00": {
+    "en": "City Girl Sports Set Box",
+    "ch": "城市少女運動套裝 (整盒)",
+    "cn": "城市少女运动套装 (整盒)"
+   },
+   "Box_nan01_01": {
+    "en": "City Girl Sports Blue-Black Set Box",
+    "ch": "城市少女藍黑配色運動套裝 (整盒)",
+    "cn": "城市少女蓝黑配色运动套装 (整盒)"
+   },
+   "Box_nan01_02": {
+    "en": "City Girl Sports White-Pink Set Box",
+    "ch": "城市少女白粉配色運動套裝 (整盒)",
+    "cn": "城市少女白粉配色运动套装 (整盒)"
+   },
+   "Box_nan02_00": {
+    "en": "Gothic Set Box",
+    "ch": "哥德套裝 (整盒)",
+    "cn": "哥特套装 (整盒)"
+   },
+   "Box_nan03_00": {
+    "en": "Shinra Set Box",
+    "ch": "神羅套裝 (整盒)",
+    "cn": "森罗套装 (整盒)"
+   },
+   "Box_nan04_00": {
+    "en": "Oath Set Box",
+    "ch": "誓約套裝 (整盒)",
+    "cn": "誓约套装 (整盒)"
+   },
+   "Box_nan05_00": {
+    "en": "Xin'ai Set Box",
+    "ch": "心愛套裝 (整盒)",
+    "cn": "心爱套装 (整盒)"
+   },
+   "Box_nan06_00": {
+    "en": "Little Devil Set Box",
+    "ch": "小惡魔套裝 (整盒)",
+    "cn": "小恶魔套装 (整盒)"
+   },
+   "Box_nan06_01": {
+    "en": "Little Devil White Heart Set Box",
+    "ch": "小惡魔白心套裝 (整盒)",
+    "cn": "小恶魔白心套装 (整盒)"
+   },
+   "Box_nan06_02": {
+    "en": "Little Devil Black Heart Set Box",
+    "ch": "小惡魔黑心套裝 (整盒)",
+    "cn": "小恶魔黑心套装 (整盒)"
+   },
+   "Box_nan06_04": {
+    "en": "Little Devil Pure White Coat Box",
+    "ch": "小惡魔純白外套 (整盒)",
+    "cn": "小恶魔纯白外套 (整盒)"
+   },
+   "Box_nan07_00": {
+    "en": "Lily Maiden Set Box",
+    "ch": "百合少女套裝 (整盒)",
+    "cn": "百合少女套装 (整盒)"
+   },
+   "Box_nan08_00": {
+    "en": "Mine Style Maiden Set Box",
+    "ch": "地雷系少女套裝 (整盒)",
+    "cn": "地雷系少女套装 (整盒)"
+   },
+   "Box_nan09_00": {
+    "en": "Armed Maid Set Box",
+    "ch": "武裝女僕套裝 (整盒)",
+    "cn": "武装女仆套装 (整盒)"
+   },
+   "Box_nan09_01": {
+    "en": "Armed Maid Pink Set Box",
+    "ch": "武裝女僕粉紅套裝 (整盒)",
+    "cn": "武装女仆粉色套装 (整盒)"
+   },
+   "Box_nan10_00": {
+    "en": "Street Girl Set Box",
+    "ch": "街頭少女套裝 (整盒)",
+    "cn": "街头少女套装 (整盒)"
+   },
+   "Box_nan11_00": {
+    "en": "Fallen Angel Set Box",
+    "ch": "墮天使套裝 (整盒)",
+    "cn": "堕天使套装 (整盒)"
+   },
+   "Box_nan11_01": {
+    "en": "Fallen Angel White Plaid Set Box",
+    "ch": "墮天使白色格紋套裝 (整盒)",
+    "cn": "堕天使白色格纹套装 (整盒)"
+   },
+   "Box_nan11_02": {
+    "en": "Fallen Angel White Set Box",
+    "ch": "墮天使白色套裝 (整盒)",
+    "cn": "堕天使白色套装 (整盒)"
+   },
+   "Box_nan11_03": {
+    "en": "Fallen Angel Purple Set Box",
+    "ch": "墮天使紫色套裝 (整盒)",
+    "cn": "堕天使紫色套装 (整盒)"
+   },
+   "Box_nan12_00": {
+    "en": "Eclair Set Box",
+    "ch": "艾克蕾爾套裝 (整盒)",
+    "cn": "埃克莱尔套装 (整盒)"
+   },
+   "Box_nan13_00": {
+    "en": "Bloom Set Box",
+    "ch": "綻放套裝 (整盒)",
+    "cn": "绽放套装 (整盒)"
+   },
+   "Box_nan14_00": {
+    "en": "Christmas Set Box",
+    "ch": "聖誕套裝 (整盒)",
+    "cn": "圣诞套装 (整盒)"
+   },
+   "Box_nan15_00": {
+    "en": "Urban Gang Girl Set Box",
+    "ch": "都市幫派少女套裝 (整盒)",
+    "cn": "都市帮派少女套装 (整盒)"
+   },
+   "Box_nan26_00": {
+    "en": "Cake Skirt Box",
+    "ch": "蛋糕裙 (整盒)",
+    "cn": "蛋糕裙 (整盒)"
+   },
+   "Box_nan27_01": {
+    "en": "Trendy Girl Set Box",
+    "ch": "潮流少女套裝 (整盒)",
+    "cn": "潮流少女套装 (整盒)"
+   },
+   "Box_nan28_00": {
+    "en": "Little Devil Black-White Set Box",
+    "ch": "小惡魔黑白套裝 (整盒)",
+    "cn": "小恶魔黑白套装 (整盒)"
+   },
+   "Box_nan45_00": {
+    "en": "Pro Pear Set Box",
+    "ch": "Pro 梨套裝 (整盒)",
+    "cn": "Pro 梨套装 (整盒)"
+   },
+   "Gunpart.556Drum_cat": {
+    "en": "5.56mm Drum Magazine",
+    "ch": "5.56mm 彈鼓",
+    "cn": "5.56mm 弹鼓"
+   },
+   "Gunpart.558holo": {
+    "en": "558 Holographic Sight",
+    "ch": "558 全息瞄準鏡",
+    "cn": "558 全息瞄准镜"
+   },
+   "Gunpart.AACMini7_Silencer": {
+    "en": "AAC Mini7 Suppressor",
+    "ch": "AAC Mini7 消音器",
+    "cn": "AAC Mini7 消音器"
+   },
+   "Gunpart.AFG_Blk": {
+    "en": "Magpul AFG Tactical Foregrip",
+    "ch": "Magpul AFG 戰術前握把",
+    "cn": "Magpul AFG 战术前握把"
+   },
+   "Gunpart.AK12Stock": {
+    "en": "MCNN Stock",
+    "ch": "MCNN 槍托",
+    "cn": "MCNN 枪托"
+   },
+   "Gunpart.AKSStock": {
+    "en": "AKS Stock",
+    "ch": "AKS 槍托",
+    "cn": "AKS 枪托"
+   },
+   "Gunpart.AR15_slience": {
+    "en": "SD Muzzle Suppressor",
+    "ch": "SD 槍口消音器",
+    "cn": "SD 枪口消音器"
+   },
+   "Gunpart.ASh-12_Grip": {
+    "en": "Vertical Foregrip",
+    "ch": "垂直前握把",
+    "cn": "垂直前握把"
+   },
+   "Gunpart.ATACR": {
+    "en": "ATACR 8X Riflescope",
+    "ch": "ATACR 8X 步槍瞄準鏡",
+    "cn": "ATACR 8X 步枪瞄准镜"
+   },
+   "Gunpart.AmmoPD": {
+    "en": "Ammo Programmer",
+    "ch": "彈藥編程器",
+    "cn": "弹药编程器"
+   },
+   "Gunpart.AmmoShellDish_cat": {
+    "en": "Shotgun Shell Carrier",
+    "ch": "霰彈攜彈器",
+    "cn": "霰弹携弹器"
+   },
+   "Gunpart.AmmoStraps_cat": {
+    "en": "Ammo Bandolier",
+    "ch": "彈藥帶",
+    "cn": "弹药带"
+   },
+   "Gunpart.ArmytekPredator_Bottom": {
+    "en": "Military Tactical Light T1",
+    "ch": "軍用戰術燈 T1",
+    "cn": "军用战术灯 T1"
+   },
+   "Gunpart.ArmytekPredator_Bottom1": {
+    "en": "Military Tactical Light T2",
+    "ch": "軍用戰術燈 T2",
+    "cn": "军用战术灯 T2"
+   },
+   "Gunpart.ArmytekPredator_Bottom2": {
+    "en": "Pistol Tactical Light T1",
+    "ch": "手槍戰術燈 T1",
+    "cn": "手枪战术灯 T1"
+   },
+   "Gunpart.ArmytekPredator_Bottom3": {
+    "en": "Pistol Tactical Light T2",
+    "ch": "手槍戰術燈 T2",
+    "cn": "手枪战术灯 T2"
+   },
+   "Gunpart.COMPM4": {
+    "en": "COMPM4 Inside-Barrel Red Dot",
+    "ch": "COMPM4 槍管內紅點瞄準鏡",
+    "cn": "COMPM4 枪管内红点瞄准镜"
+   },
+   "Gunpart.CQBR_ACOG_RU": {
+    "en": "552 Holographic Combat Optic",
+    "ch": "552 全息戰鬥瞄具",
+    "cn": "552 全息战斗瞄具"
+   },
+   "Gunpart.Carryhandle": {
+    "en": "AR Carry Handle",
+    "ch": "AR 提把",
+    "cn": "AR 提把"
+   },
+   "Gunpart.CobraGrip": {
+    "en": "Cobra Foregrip",
+    "ch": "Cobra 前握把",
+    "cn": "Cobra 前握把"
+   },
+   "Gunpart.CombatOps_Stock_blk": {
+    "en": "CombatOps M4 Stock",
+    "ch": "CombatOps M4 槍托",
+    "cn": "CombatOps M4 枪托"
+   },
+   "Gunpart.DBAL77Laser_cat": {
+    "en": "DBAL77 Laser Pointer",
+    "ch": "DBAL77 雷射指示器",
+    "cn": "DBAL77 激光指示器"
+   },
+   "Gunpart.DBAL_9021_Bottom": {
+    "en": "Universal IR Laser Device",
+    "ch": "通用紅外線雷射裝置",
+    "cn": "通用红外激光装置"
+   },
+   "Gunpart.FortisNitride_RED2": {
+    "en": "FN Muzzle Flash Hider",
+    "ch": "FN 槍口消焰器",
+    "cn": "FN 枪口消焰器"
+   },
+   "Gunpart.G18HandCare": {
+    "en": "Glock 18 Handguard Wrap",
+    "ch": "Glock 18 護木包覆套",
+    "cn": "Glock 18 护木包覆套"
+   },
+   "Gunpart.G18Stock_cat": {
+    "en": "Glock18 Stock Attachment",
+    "ch": "Glock 18 槍托配件",
+    "cn": "Glock 18 枪托配件"
+   },
+   "Gunpart.G33_cat": {
+    "en": "G33 Magnifier Combo Optic",
+    "ch": "G33 放大鏡組合瞄具",
+    "cn": "G33 放大镜组合瞄具"
+   },
+   "Gunpart.GP25_cat": {
+    "en": "GP-25 Grenade Launcher",
+    "ch": "GP-25 榴彈發射器",
+    "cn": "GP-25 榴弹发射器"
+   },
+   "Gunpart.GP25_cat_empty": {
+    "en": "Empty GP-25 Grenade Launcher",
+    "ch": "GP-25 榴彈發射器(空)",
+    "cn": "GP-25 榴弹发射器(空)"
+   },
+   "Gunpart.HAMR_cat": {
+    "en": "HAMR Combo Sight",
+    "ch": "HAMR 複合瞄具",
+    "cn": "HAMR 组合瞄具"
+   },
+   "Gunpart.HD511a_cat": {
+    "en": "Hawke HD511a Red Dot Sight",
+    "ch": "Hawke HD511a 紅點瞄準鏡",
+    "cn": "Hawke HD511a 红点瞄准镜"
+   },
+   "Gunpart.Harris_Open": {
+    "en": "Standard Harris Bipod",
+    "ch": "標準 Harris 兩腳架",
+    "cn": "标准 Harris 两脚架"
+   },
+   "Gunpart.Harris_Open1": {
+    "en": "Heavy-Duty Bipod",
+    "ch": "重型兩腳架",
+    "cn": "重型两脚架"
+   },
+   "Gunpart.HeartbeatSensor": {
+    "en": "Virus Detector",
+    "ch": "病毒偵測器",
+    "cn": "病毒探测器"
+   },
+   "Gunpart.HeartbeatSensorPlus": {
+    "en": "Virus Detector Mk.II",
+    "ch": "病毒偵測器 Mk.II",
+    "cn": "病毒探测器 Mk.II"
+   },
+   "Gunpart.HeraCQR_Grip": {
+    "en": "Hera CQR Tactical Foregrip",
+    "ch": "Hera CQR 戰術前握把",
+    "cn": "Hera CQR 战术前握把"
+   },
+   "Gunpart.HeraCQR_Stock": {
+    "en": "Hera CQR Stock",
+    "ch": "Hera CQR 槍托",
+    "cn": "Hera CQR 枪托"
+   },
+   "Gunpart.M203_cat": {
+    "en": "M203 Grenade Launcher",
+    "ch": "M203 榴彈發射器",
+    "cn": "M203 榴弹发射器"
+   },
+   "Gunpart.M203_cat_empty": {
+    "en": "Empty M203 Grenade Launcher",
+    "ch": "空的 M203 榴彈發射器",
+    "cn": "空的 M203 榴弹发射器"
+   },
+   "Gunpart.M26_cat": {
+    "en": "M26 Underbarrel Shotgun",
+    "ch": "M26 下掛式霰彈槍",
+    "cn": "M26 下挂式霰弹枪"
+   },
+   "Gunpart.M26_cat_empty": {
+    "en": "Empty M26 Underbarrel Shotgun",
+    "ch": "空的 M26 下掛式霰彈槍",
+    "cn": "空的 M26 下挂式霰弹枪"
+   },
+   "Gunpart.M82_cat_Silencer": {
+    "en": "Anti-Materiel Rifle Suppressor",
+    "ch": "反器材步槍消音器",
+    "cn": "反器材步枪消音器"
+   },
+   "Gunpart.M82_cat_muzzle": {
+    "en": "Anti-Materiel Rifle Muzzle Brake",
+    "ch": "反器材步槍制退器",
+    "cn": "反器材步枪制退器"
+   },
+   "Gunpart.MZ_HCO": {
+    "en": "HCO Holographic Sight",
+    "ch": "HCO 全息瞄準鏡",
+    "cn": "HCO 全息瞄准镜"
+   },
+   "Gunpart.MZ_RMR": {
+    "en": "RMR Reflex Sight",
+    "ch": "RMR 反射式瞄具",
+    "cn": "RMR 反射式瞄具"
+   },
+   "Gunpart.MZ_paoduijing": {
+    "en": "Spotting Scope",
+    "ch": "觀測鏡",
+    "cn": "观测镜"
+   },
+   "Gunpart.MagpulStock": {
+    "en": "Magpul Stock",
+    "ch": "Magpul 槍托",
+    "cn": "Magpul 枪托"
+   },
+   "Gunpart.Marlin1894": {
+    "en": "Marlin 1894",
+    "ch": "馬林1894",
+    "cn": "马林1894"
+   },
+   "Gunpart.Mk18Stock": {
+    "en": "MK18 Stock",
+    "ch": "MK18 槍托",
+    "cn": "MK18 枪托"
+   },
+   "Gunpart.PEQ_cat": {
+    "en": "PEQ IR Laser",
+    "ch": "PEQ 紅外線雷射",
+    "cn": "PEQ 红外激光"
+   },
+   "Gunpart.PEScope_cat": {
+    "en": "PE Optic Sight",
+    "ch": "PE 光學瞄具",
+    "cn": "PE 光学瞄具"
+   },
+   "Gunpart.PSO_1_cat": {
+    "en": "PSO-1 Optic Scope",
+    "ch": "PSO-1 光學瞄準鏡",
+    "cn": "PSO-1 光学瞄准镜"
+   },
+   "Gunpart.QG_ATSB": {
+    "en": "Alloy Tool Steel Barrel",
+    "ch": "合金工具鋼槍管",
+    "cn": "合金工具钢枪管"
+   },
+   "Gunpart.QG_CCB": {
+    "en": "Ceramic Composite Barrel",
+    "ch": "陶瓷複合槍管",
+    "cn": "陶瓷复合枪管"
+   },
+   "Gunpart.QG_CFWSB": {
+    "en": "Carbon Fiber Clad Steel Barrel",
+    "ch": "碳纖維包覆鋼製槍管",
+    "cn": "碳纤维包覆钢制枪管"
+   },
+   "Gunpart.QG_CSB": {
+    "en": "Carbon Steel Barrel",
+    "ch": "碳鋼槍管",
+    "cn": "碳钢枪管"
+   },
+   "Gunpart.QG_TAB": {
+    "en": "Titanium Alloy Barrel",
+    "ch": "鈦合金槍管",
+    "cn": "钛合金枪管"
+   },
+   "Gunpart.QG_TTAB": {
+    "en": "Tungsten Alloy Barrel",
+    "ch": "鎢合金槍管",
+    "cn": "钨合金枪管"
+   },
+   "Gunpart.QT_F93": {
+    "en": "F93 Stock",
+    "ch": "F93 槍托",
+    "cn": "F93 枪托"
+   },
+   "Gunpart.QT_Gen3": {
+    "en": "Gen3 Stock",
+    "ch": "Gen3 槍托",
+    "cn": "Gen3 枪托"
+   },
+   "Gunpart.QT_LDT416": {
+    "en": "LDT416 Stock",
+    "ch": "LDT416 槍托",
+    "cn": "LDT416 枪托"
+   },
+   "Gunpart.QT_lugerP80": {
+    "en": "Wooden Stock",
+    "ch": "木製槍托",
+    "cn": "木制枪托"
+   },
+   "Gunpart.RPGLauncher_cat": {
+    "en": "RPG Launcher",
+    "ch": "RPG 發射器",
+    "cn": "RPG 发射器"
+   },
+   "Gunpart.RPGLauncher_cat_empty": {
+    "en": "Empty RPG Launcher",
+    "ch": "空的 RPG 發射器",
+    "cn": "空的 RPG 发射器"
+   },
+   "Gunpart.Recoilpad_cat": {
+    "en": "Recoil Buttpad",
+    "ch": "後坐力緩衝墊",
+    "cn": "后坐力缓冲垫"
+   },
+   "Gunpart.SE-5Grip": {
+    "en": "Stark SE-5 Ergonomic Foregrip",
+    "ch": "Stark SE-5 人體工學前握把",
+    "cn": "Stark SE-5 人体工学前握把"
+   },
+   "Gunpart.SMSUP_cat": {
+    "en": "Shotgun Suppressor",
+    "ch": "霰彈槍消音器",
+    "cn": "霰弹枪消音器"
+   },
+   "Gunpart.Sling_cat": {
+    "en": "Lightweight Gun Sling",
+    "ch": "輕量化槍背帶",
+    "cn": "轻量化枪背带"
+   },
+   "Gunpart.Snipex24": {
+    "en": "24X High Power Scope",
+    "ch": "24X 高倍率瞄準鏡",
+    "cn": "24X 高倍率瞄准镜"
+   },
+   "Gunpart.SurefireX400Flashlight_laser": {
+    "en": "SureFire X400 Light & Laser",
+    "ch": "SureFire X400 槍燈與雷射",
+    "cn": "SureFire X400 枪灯与激光"
+   },
+   "Gunpart.TA11_4X_Scope": {
+    "en": "TA11 4X Prism Scope",
+    "ch": "TA11 4X 稜鏡瞄準鏡",
+    "cn": "TA11 4X 棱镜瞄准镜"
+   },
+   "Gunpart.ThermalImaging_cat": {
+    "en": "Thermal Imaging Scope",
+    "ch": "熱成像瞄準鏡",
+    "cn": "热成像瞄准镜"
+   },
+   "Gunpart.TshiftGrip": {
+    "en": "Tshift Foregrip",
+    "ch": "Tshift 前握把",
+    "cn": "Tshift 前握把"
+   },
+   "Gunpart.Unertl8X_cat": {
+    "en": "Unertl 8X Scope",
+    "ch": "Unertl 8X 瞄準鏡",
+    "cn": "Unertl 8X 瞄准镜"
+   },
+   "Gunpart.VP09": {
+    "en": "Angled Muzzle Brake",
+    "ch": "斜角制退器",
+    "cn": "斜角制退器"
+   },
+   "Gunpart.ViperStock": {
+    "en": "Viper Stock",
+    "ch": "Viper 槍托",
+    "cn": "Viper 枪托"
+   },
+   "Gunpart.VltorEmod_Blk_Stock": {
+    "en": "Vltor Emod Stock",
+    "ch": "Vltor Emod 槍托",
+    "cn": "Vltor Emod 枪托"
+   },
+   "Gunpart.VortexSight": {
+    "en": "Vortex 3X Magnified Sight",
+    "ch": "Vortex 3X 放大瞄具",
+    "cn": "Vortex 3X 放大瞄具"
+   },
+   "Gunpart.WB_SST": {
+    "en": "SST Ergonomic Grip",
+    "ch": "SST 人體工學握把",
+    "cn": "SST 人体工学握把"
+   },
+   "Gunpart.WB_xie": {
+    "en": "Angled Foregrip",
+    "ch": "斜角前握把",
+    "cn": "斜角前握把"
+   },
+   "Gunpart.WaltherMRS_1": {
+    "en": "Walther MRS Reflex Sight",
+    "ch": "Walther MRS 反射式瞄具",
+    "cn": "Walther MRS 反射式瞄具"
+   },
+   "Gunpart.WaltherMRS_2": {
+    "en": "RMR Pistol Reflex Red Dot Sight",
+    "ch": "RMR 手槍反射式紅點瞄準鏡",
+    "cn": "RMR 手枪反射式红点瞄准镜"
+   },
+   "Gunpart.XM157_cat": {
+    "en": "XM157 Smart Optic",
+    "ch": "XM157 智慧型瞄具",
+    "cn": "XM157 智能瞄具"
+   },
+   "Gunpart.XY_109": {
+    "en": "109 Muzzle Brake",
+    "ch": "109 制退器",
+    "cn": "109 制退器"
+   },
+   "Gunpart.XY_1911": {
+    "en": "S1911 Muzzle Brake",
+    "ch": "S1911 制退器",
+    "cn": "S1911 制退器"
+   },
+   "Gunpart.XY_4guan": {
+    "en": "Heavy Shotgun Suppressor",
+    "ch": "重型霰彈槍消音器",
+    "cn": "重型霰弹枪消音器"
+   },
+   "Gunpart.XY_Beowulf": {
+    "en": "Beowulf Muzzle Brake",
+    "ch": "Beowulf 制退器",
+    "cn": "Beowulf 制退器"
+   },
+   "Gunpart.XY_CARVER": {
+    "en": "CARVER Muzzle Brake",
+    "ch": "CARVER 制退器",
+    "cn": "CARVER 制退器"
+   },
+   "Gunpart.XY_M4MK18": {
+    "en": "MK18 Muzzle Suppressor",
+    "ch": "MK18 槍口消音器",
+    "cn": "MK18 枪口消音器"
+   },
+   "Gunpart.XY_MK109": {
+    "en": "MK109 Muzzle Brake",
+    "ch": "MK109 制退器",
+    "cn": "MK109 制退器"
+   },
+   "Gunpart.XY_MK18": {
+    "en": "MK18 Muzzle Brake",
+    "ch": "MK18 制退器",
+    "cn": "MK18 制退器"
+   },
+   "Gunpart.XY_OF": {
+    "en": "Oil Can Style Suppressor",
+    "ch": "機油罐式消音器",
+    "cn": "机油罐式消音器"
+   },
+   "Gunpart.XY_XDZT": {
+    "en": "XDZT Muzzle Brake",
+    "ch": "XDZT 制退器",
+    "cn": "XDZT 制退器"
+   },
+   "Gunpart.XY_baoguo": {
+    "en": "BG Suppressor",
+    "ch": "BG 消音器",
+    "cn": "BG 消音器"
+   },
+   "Gunpart.XY_fang": {
+    "en": "FAN Muzzle Suppressor",
+    "ch": "FAN 槍口消音器",
+    "cn": "FAN 枪口消音器"
+   },
+   "Gunpart.XY_kac": {
+    "en": "NT4 Suppressor",
+    "ch": "NT4 消音器",
+    "cn": "NT4 消音器"
+   },
+   "Gunpart.XY_pomen": {
+    "en": "PO Muzzle Brake",
+    "ch": "PO 制退器",
+    "cn": "PO 制退器"
+   },
+   "Gunpart.XY_sr_s": {
+    "en": "SRS Suppressor",
+    "ch": "SRS 消音器",
+    "cn": "SRS 消音器"
+   },
+   "Gunpart.XY_yazhui": {
+    "en": "YZ Muzzle Brake",
+    "ch": "YZ 制退器",
+    "cn": "YZ 制退器"
+   },
+   "Gunpart.ar15Stock": {
+    "en": "R15 Stock",
+    "ch": "R15 槍托",
+    "cn": "R15 枪托"
+   },
+   "Gunpart.ar15_ddStock": {
+    "en": "Red Kestrel Stock",
+    "ch": "紅隼槍托",
+    "cn": "红隼枪托"
+   },
+   "Gunpart.bayonet1_cat": {
+    "en": "M9MilitaryBayonet",
+    "ch": "M9軍用刺刀",
+    "cn": "M9军用刺刀"
+   },
+   "Gunpart.bayonet2_cat": {
+    "en": "9X1 Military Bayonet",
+    "ch": "9X1 軍用刺刀",
+    "cn": "9X1 军用刺刀"
+   },
+   "Gunpart.ipsc_cat": {
+    "en": "Support Bipod",
+    "ch": "支撐兩腳架",
+    "cn": "支撑两脚架"
+   },
+   "Gunpart.kriss_muzzle_d_Silencer": {
+    "en": "Kriss Vector Suppressor",
+    "ch": "Kriss Vector 消音器",
+    "cn": "Kriss Vector 消音器"
+   },
+   "Gunpart.leupold": {
+    "en": "Leupold Combo Scope",
+    "ch": "Leupold 組合瞄準鏡",
+    "cn": "Leupold 组合瞄准镜"
+   },
+   "Gunpart.okp7": {
+    "en": "OKP7 Reflex Sight",
+    "ch": "OKP7 反射式瞄具",
+    "cn": "OKP7 反射式瞄具"
+   },
+   "Gunpart.usp_cat_fang_Silencer": {
+    "en": "Square Pistol Suppressor",
+    "ch": "方形手槍消音器",
+    "cn": "方形手枪消音器"
+   },
+   "Gunpart.usp_cat_yuan_Silencer": {
+    "en": "Round Pistol Suppressor",
+    "ch": "圓形手槍消音器",
+    "cn": "圆形手枪消音器"
+   },
+   "Gunpart.wave_dd_slience": {
+    "en": "Short Yellow Muzzle Suppressor",
+    "ch": "黃色短型槍口消音器",
+    "cn": "黄色短型枪口消音器"
    },
    "ItemName_Base.FabricRoll_Burlap": {
     "en": "Burlap Fabric Roll",
@@ -2417,6 +6872,51 @@
    }
   },
   "Recipes.json": {
+   ".50弹匣": {
+    "en": ".50 10-Round Magazine",
+    "ch": ".50 10 發彈匣",
+    "cn": ".50 10发弹匣"
+   },
+   "45弹匣": {
+    "en": ".45 7-Round Magazine",
+    "ch": ".45 7 發彈匣",
+    "cn": ".45 7发弹匣"
+   },
+   "5.8_30弹匣": {
+    "en": "5.8 30-Round Magazine",
+    "ch": "5.8 30 發彈匣",
+    "cn": "5.8 30发弹匣"
+   },
+   "5.8机枪弹鼓": {
+    "en": "5.8 100-Round Drum Magazine",
+    "ch": "5.8 100 發彈鼓",
+    "cn": "5.8 100发弹鼓"
+   },
+   "556弹匣": {
+    "en": "5.56 30-Round Magazine",
+    "ch": "5.56 30 發彈匣",
+    "cn": "5.56 30发弹匣"
+   },
+   "556弹鼓": {
+    "en": "5.56 60-Round Drum Magazine",
+    "ch": "5.56 60 發彈鼓",
+    "cn": "5.56 60发弹鼓"
+   },
+   "762_20弹匣": {
+    "en": "7.62 20-Round Magazine",
+    "ch": "7.62 20 發彈匣",
+    "cn": "7.62 20发弹匣"
+   },
+   "762弹匣": {
+    "en": "7.62 30-Round Magazine",
+    "ch": "7.62 30 發彈匣",
+    "cn": "7.62 30发弹匣"
+   },
+   "762弹鼓": {
+    "en": "7.62 73-Round Drum Magazine",
+    "ch": "7.62 73 發彈鼓",
+    "cn": "7.62 73发弹鼓"
+   },
    "76chevyBlazerMakeBedCover": {
     "en": "Make 76 Chevrolet Blazer Bed Cover",
     "ch": "製作76款雪佛蘭開拓者貨廂蓋",
@@ -2436,6 +6936,26 @@
     "en": "Make 76 Chevrolet C/K Series Rear Windshield Armor",
     "ch": "製作76款雪佛蘭C/K系列後擋風裝甲",
     "cn": "制作76款雪佛兰C/K系列后挡风装甲"
+   },
+   "8.6机枪弹鼓": {
+    "en": "8.6 100-Round Drum Magazine",
+    "ch": "8.6 100 發彈鼓",
+    "cn": "8.6 100发弹鼓"
+   },
+   "9mm弹匣": {
+    "en": "9mm 15-Round Magazine",
+    "ch": "9mm 15 發彈匣",
+    "cn": "9mm 15发弹匣"
+   },
+   "9mm弹鼓": {
+    "en": "9mm 50-Round Drum Magazine",
+    "ch": "9mm 50 發彈鼓",
+    "cn": "9mm 50发弹鼓"
+   },
+   "AR57特种弹鼓": {
+    "en": "5.56 60-Round AR57 Drum Magazine",
+    "ch": "5.56 AR57 60 發彈鼓",
+    "cn": "5.56 AR57 60发弹鼓"
    },
    "AS_AssembleBurlapFabricRoll": {
     "en": "Assemble Burlap Fabric Roll",
@@ -2487,6 +7007,11 @@
     "ch": "裝訂生存日記 (線團 + 皮革)",
     "cn": "装订生存日记 (线团 + 皮革)"
    },
+   "ClipMode": {
+    "en": "Switch to Standard Magazine Mode (Remove All Attachments First)",
+    "ch": "切換至標準彈匣模式(請先卸下所有配件)",
+    "cn": "切换至标准弹匣模式(请先卸下所有配件)"
+   },
    "CraftJournal_Bound": {
     "en": "Craft Journal",
     "ch": "製作日記",
@@ -2497,15 +7022,120 @@
     "ch": "製作筆記本",
     "cn": "制作笔记本"
    },
+   "Creat_IObox": {
+    "en": "Craft IO Container",
+    "ch": "製作 IO 容器",
+    "cn": "制作IO容器"
+   },
+   "DrumMode": {
+    "en": "Switch to Drum Mode (Remove All Attachments First)",
+    "ch": "切換至彈鼓模式(請先卸下所有配件)",
+    "cn": "切换至弹鼓模式(请先卸下所有配件)"
+   },
    "EraseFilledJournal": {
     "en": "Erase Filled Journal",
     "ch": "清空寫滿的日記",
     "cn": "清空写满的日记"
    },
+   "M14弹鼓": {
+    "en": "7.62 50-Round M14 Drum Magazine",
+    "ch": "7.62 M14 50 發彈鼓",
+    "cn": "7.62 M14 50发弹鼓"
+   },
+   "MG42弹匣": {
+    "en": "7.62 75-Round MG42 Drum Magazine",
+    "ch": "7.62 MG42 75 發彈鼓",
+    "cn": "7.62 MG42 75发弹鼓"
+   },
    "Make Irrigation Pipe": {
     "en": "Make Irrigation Pipe",
     "ch": "製作灌溉管道",
     "cn": "制作灌溉管道"
+   },
+   "Minigun弹链": {
+    "en": "Minigun Ammo Belt",
+    "ch": "Minigun 彈鏈",
+    "cn": "Minigun弹链"
+   },
+   "OpenBoxOfBullets10": {
+    "en": "Open .50 Ammo Pack",
+    "ch": "打開 .50 彈藥包",
+    "cn": "打开.50弹药包"
+   },
+   "Open_AccessoriesBoxA": {
+    "en": "Unidentified Attachment Crate",
+    "ch": "未鑑定的配件箱",
+    "cn": "未鉴定的配件箱"
+   },
+   "Open_AccessoriesBoxAA": {
+    "en": "Open Rare Loot Crate",
+    "ch": "開啟稀有戰利品箱",
+    "cn": "打开稀有战利品箱"
+   },
+   "Open_AccessoriesBoxAJ": {
+    "en": "Unidentified Marksman Weapon Crate",
+    "ch": "未鑑定的精確射手武器箱",
+    "cn": "未鉴定的精确射手武器箱"
+   },
+   "Open_AccessoriesBoxD": {
+    "en": "Open Magazine Crate",
+    "ch": "開啟彈匣箱",
+    "cn": "打开弹匣箱"
+   },
+   "Open_AccessoriesBoxDD": {
+    "en": "Open Ammo Crate",
+    "ch": "開啟彈藥箱",
+    "cn": "打开弹药箱"
+   },
+   "Open_AccessoriesBoxGQ": {
+    "en": "Unidentified Handgun Crate",
+    "ch": "未鑑定的手槍箱",
+    "cn": "未鉴定的手枪箱"
+   },
+   "Open_AccessoriesBoxQ": {
+    "en": "Unidentified Rifle Crate",
+    "ch": "未鑑定的步槍箱",
+    "cn": "未鉴定的步枪箱"
+   },
+   "Open_AccessoriesBoxQM": {
+    "en": "Open Collectible Crate",
+    "ch": "開啟收藏品箱",
+    "cn": "打开收藏品箱"
+   },
+   "Open_AccessoriesBoxX": {
+    "en": "Unidentified Muzzle Device Crate",
+    "ch": "未鑑定的槍口裝置箱",
+    "cn": "未鉴定的枪口装置箱"
+   },
+   "Open_AccessoriesBoxY": {
+    "en": "Unidentified Syringe Crate",
+    "ch": "未鑑定的針劑箱",
+    "cn": "未鉴定的针剂箱"
+   },
+   "Open_AccessoriesBoxZ": {
+    "en": "Open Armory Crate",
+    "ch": "開啟軍械箱",
+    "cn": "打开军械箱"
+   },
+   "Open_AccessoriesBoxZQ": {
+    "en": "Unidentified Heavy Weapon Crate",
+    "ch": "未鑑定的重型武器箱",
+    "cn": "未鉴定的重型武器箱"
+   },
+   "Open_AirDrop": {
+    "en": "Open Airdrop",
+    "ch": "開啟空投",
+    "cn": "打开空投"
+   },
+   "Open_Bullets50Box": {
+    "en": "Open Box of .50 Ammo",
+    "ch": "打開 .50 彈藥盒",
+    "cn": "打开.50弹药盒"
+   },
+   "Place_Bullets50_in_Box": {
+    "en": "Pack .50 Ammo into Box",
+    "ch": "將 .50 彈藥裝入盒中",
+    "cn": "将.50弹药装入盒中"
    },
    "Recipe_76chevyBlazerMakeBedCover": {
     "en": "Make 76 Chevrolet Blazer Bed Cover",
@@ -2601,9 +7231,134 @@
     "en": "Restore Journal (Thread + Leather)",
     "ch": "修復日記 (線團 + 皮革)",
     "cn": "修复日记 (线团 + 皮革)"
+   },
+   "Use_ETG_C": {
+    "en": "Inject Medication",
+    "ch": "注射藥劑",
+    "cn": "注射药剂"
+   },
+   "Use_Gentamicin_cat": {
+    "en": "Inject Medication",
+    "ch": "注射藥劑",
+    "cn": "注射药剂"
+   },
+   "Use_MULEInjection": {
+    "en": "Inject Medication",
+    "ch": "注射藥劑",
+    "cn": "注射药剂"
+   },
+   "Use_MetamizoleSodium_cat": {
+    "en": "Inject Medication",
+    "ch": "注射藥劑",
+    "cn": "注射药剂"
+   },
+   "Use_Mophine": {
+    "en": "Inject Medication",
+    "ch": "注射藥劑",
+    "cn": "注射药剂"
+   },
+   "Use_Propital_cat": {
+    "en": "Inject Medication",
+    "ch": "注射藥劑",
+    "cn": "注射药剂"
+   },
+   "Use_XTG12": {
+    "en": "Inject Medication",
+    "ch": "注射藥劑",
+    "cn": "注射药剂"
+   },
+   "Use_Zagustin": {
+    "en": "Inject Medication",
+    "ch": "注射藥劑",
+    "cn": "注射药剂"
+   },
+   "刀鞘": {
+    "en": "Craft Scabbard",
+    "ch": "製作刀鞘",
+    "cn": "制作刀鞘"
+   },
+   "双762弹匣": {
+    "en": "5.56 60-Round Dual-Clamped Magazine",
+    "ch": "5.56 60 發雙聯彈匣",
+    "cn": "5.56 60发双联弹匣"
+   },
+   "机枪556弹鼓": {
+    "en": "5.56 100-Round LMG Drum Magazine",
+    "ch": "5.56 輕機槍 100 發彈鼓",
+    "cn": "5.56轻机枪100发弹鼓"
+   },
+   "榴弹弹匣": {
+    "en": "Grenade Magazine",
+    "ch": "榴彈彈匣",
+    "cn": "榴弹弹匣"
+   },
+   "短762弹匣": {
+    "en": "7.62 7-Round Compact Magazine",
+    "ch": "7.62 7 發短型彈匣",
+    "cn": "7.62 7发短型弹匣"
+   },
+   "箭袋Dorlach": {
+    "en": "Dorlach Quiver",
+    "ch": "Dorlach 箭袋",
+    "cn": "Dorlach箭袋"
+   },
+   "长45弹匣": {
+    "en": ".45 30-Round Extended Magazine",
+    "ch": ".45 30 發加長彈匣",
+    "cn": ".45 30发加长弹匣"
+   },
+   "长9mm弹匣": {
+    "en": "9 30-Round Extended Magazine",
+    "ch": "9mm 30 發加長彈匣",
+    "cn": "9mm 30发加长弹匣"
+   },
+   "霰弹弹匣": {
+    "en": "12ga 10-Round Shotgun Magazine",
+    "ch": "12ga 10 發霰彈槍彈匣",
+    "cn": "12ga 10发霰弹枪弹匣"
+   },
+   "霰弹弹鼓": {
+    "en": "12ga 20-Round Shotgun Drum Magazine",
+    "ch": "12ga 20 發霰彈槍彈鼓",
+    "cn": "12ga 20发霰弹枪弹鼓"
+   },
+   "马格南弹匣": {
+    "en": "Magnum 8-Round Magazine",
+    "ch": "馬格南 8 發彈匣",
+    "cn": "马格南8发弹匣"
+   },
+   "马格南狙击弹匣": {
+    "en": "Magnum 5-Round Sniper Magazine",
+    "ch": "馬格南 5 發狙擊步槍彈匣",
+    "cn": "马格南5发狙击步枪弹匣"
    }
   },
   "Sandbox.json": {
+   "Sandbox_ADWWF": {
+    "en": "Advanced Firearms",
+    "ch": "高階槍械",
+    "cn": "先进枪械"
+   },
+   "Sandbox_AirDropDefault": {
+    "en": "Airdrop Loot Configuration",
+    "ch": "空投物資設定",
+    "cn": "空投物资设置"
+   },
+   "Sandbox_AirDropDefaultNum": {
+    "en": "Default Airdrop Item Count",
+    "ch": "預設空投物品數量",
+    "cn": "默认空投物品数量"
+   },
+   "Sandbox_AirdropVolume": {
+    "en": "Airdrop Music Volume",
+    "ch": "空投音樂音量",
+    "cn": "空投音乐音量"
+   },
+   "Sandbox_AirdropWithBGM": {
+    "en": "Enable Airdrop Combat Background Music",
+    "ch": "啟用空投戰鬥背景音樂",
+    "cn": "启用空投战斗背景音乐"
+   },
    "Sandbox_Bandits.GroupSizeMax": {
     "en": "Random Group Size Maximum",
     "ch": "隨機隊伍規模上限",
@@ -4679,6 +9434,31 @@
     "ch": "在活躍季節期間, 符合條件的世界生成破舊日記有機率變為已包裝的聖誕節日記.",
     "cn": "在活跃季节期间, 符合条件的世界生成破旧日记有概率变为已包装的圣诞节日记."
    },
+   "Sandbox_Disposalofcorp_zombie_meat": {
+    "en": "[Disposal of corpse]Whether to keep zombie meat",
+    "ch": "[屍體處理]是否保留殭屍肉",
+    "cn": "[尸体处理]是否保留僵尸肉"
+   },
+   "Sandbox_Disposalofcorpendurance": {
+    "en": "[Disposal of corpse]Whether to consume endurance",
+    "ch": "[屍體處理]是否消耗耐力",
+    "cn": "[尸体处理]是否消耗耐力"
+   },
+   "Sandbox_Disposalofcorpkeepitems": {
+    "en": "[Disposal of corpse]Whether to keep items on zombies",
+    "ch": "[屍體處理]是否保留殭屍身上的物品",
+    "cn": "[尸体处理]是否保留僵尸身上的物品"
+   },
+   "Sandbox_Disposalofcorpzombie_intestines": {
+    "en": "[Disposal of corpse]Whether to keep zombie intestines",
+    "ch": "[屍體處理]是否保留殭屍腸道",
+    "cn": "[尸体处理]是否保留僵尸肠道"
+   },
+   "Sandbox_EFK": {
+    "en": "Escape From Kentucky",
+    "ch": "逃離肯塔基",
+    "cn": "逃离肯塔基"
+   },
    "Sandbox_ETW_Axeman": {
     "en": "Ax-pert",
     "ch": "斧頭專家",
@@ -4884,10 +9664,25 @@
     "ch": "慢食者特質增加進食所需時間的百分比. 不影響飲水或吸菸. 設為0可停用此減速效果.",
     "cn": "慢食者特质增加进食所需时间的百分比. 不影响饮水或吸烟. 设为0可禁用此减速效果."
    },
+   "Sandbox_IOcontainer": {
+    "en": "IO Container Settings",
+    "ch": "IO 容器設定",
+    "cn": "IO容器设置"
+   },
    "Sandbox_ImprovedFarmingInfoWindow_CheckFertilizerCount": {
     "en": "Check Crops with Less Than 3 Fertilizer Uses (Yellow Square)",
     "ch": "檢查施肥次數少於 3 次的作物（黃色方框）",
     "cn": "检查施肥次数少于 3 次的作物（黄色方框）"
+   },
+   "Sandbox_LaserAndGunLightUseBattery": {
+    "en": "Laser & Weapon Lights Consume Batteries",
+    "ch": "雷射與槍燈會消耗電池",
+    "cn": "激光与枪灯会消耗电池"
+   },
+   "Sandbox_LaserAndGunLightUseBattery_tooltip": {
+    "en": "Green batteries are required to recharge lasers and tactical weapon lights.",
+    "ch": "需要綠色電池才能為雷射瞄具與戰術槍燈充電.",
+    "cn": "需要绿色电池才能为激光瞄具与战术枪灯充电."
    },
    "Sandbox_Mixology": {
     "en": "Mixology",
@@ -4933,6 +9728,706 @@
     "en": "Absurdly Abundant",
     "ch": "多到離譜",
     "cn": "多到离谱"
+   },
+   "Sandbox_ModernFirearmsSystemSandbox": {
+    "en": "Global Firearm Damage Multiplier (Example:0.5 = 50% Base Damage)",
+    "ch": "全域槍械傷害倍率 (範例: 0.5 = 50% 基礎傷害)",
+    "cn": "全局枪械伤害倍率 (示例: 0.5 = 50% 基础伤害)"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_56S_cat_Spawn": {
+    "en": "Model 56 Semi-Auto Spawn Chance",
+    "ch": "56式半自動步槍生成機率",
+    "cn": "56式半自动步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_98k_cat_Spawn": {
+    "en": "Kar98k Spawn Chance",
+    "ch": "毛瑟Kar98k步槍生成機率",
+    "cn": "毛瑟Kar98k步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_AA12_cat_Spawn": {
+    "en": "AA12 Full-Auto Shotgun Spawn Chance",
+    "ch": "艾奇遜AA12全自動霰彈槍生成機率",
+    "cn": "艾奇逊AA12全自动霰弹枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_AEK971_cat_Spawn": {
+    "en": "AEK971 Spawn Chance",
+    "ch": "AEK971 生成機率",
+    "cn": "AEK971生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_AK103_cat_Spawn": {
+    "en": "AK103 Spawn Chance",
+    "ch": "AK103 生成機率",
+    "cn": "AK103生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_AK12_cat_Spawn": {
+    "en": "AK12 Spawn Chance",
+    "ch": "AK12 生成機率",
+    "cn": "AK12生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_AKS74U_cat_Spawn": {
+    "en": "AKS74U Spawn Chance",
+    "ch": "AKS74U 生成機率",
+    "cn": "AKS74U生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_AMB17_cat_Spawn": {
+    "en": "AMB17 Nightmare Spawn Chance",
+    "ch": "AMB17 夜魘步槍生成機率",
+    "cn": "AMB17 夜魇步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_AN94_cat_Spawn": {
+    "en": "AN94 Spawn Chance",
+    "ch": "AN94 生成機率",
+    "cn": "AN94生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_ARX200_cat_Spawn": {
+    "en": "Beretta ARX200 Spawn Chance",
+    "ch": "貝瑞塔ARX200突擊步槍生成機率",
+    "cn": "贝瑞塔ARX200突击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_AS_VAL_MOD4_cat_Spawn": {
+    "en": "AS VAL MOD4 Spawn Chance",
+    "ch": "AS VAL MOD4 生成機率",
+    "cn": "AS VAL MOD4生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_AS_VAL_cat_Spawn": {
+    "en": "AS VAL Suppressed Rifle Spawn Chance",
+    "ch": "AS VAL消音步槍生成機率",
+    "cn": "AS VAL消音步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_AWM_cat_Spawn": {
+    "en": "AWM Magnum Sniper Spawn Chance",
+    "ch": "AWM馬格南狙擊步槍生成機率",
+    "cn": "AWM马格南狙击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_AX50_cat_Spawn": {
+    "en": "Accuracy International AX50 Spawn Chance",
+    "ch": "精密國際AX50反器材步槍生成機率",
+    "cn": "精密国际AX50反器材步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Anaconda_cat_Spawn": {
+    "en": "Colt Anaconda Spawn Chance",
+    "ch": "柯爾特水蟒左輪手槍生成機率",
+    "cn": "柯尔特蟒蛇左轮手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_AssaultRifle2_Spawn": {
+    "en": "M14 Battle Rifle Spawn Chance",
+    "ch": "M14 戰鬥步槍生成機率",
+    "cn": "M14战斗步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_AssaultRifle_Spawn": {
+    "en": "M16 Assault Rifle Spawn Chance",
+    "ch": "M16 突擊步槍生成機率",
+    "cn": "M16突击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_BAR_cat_Spawn": {
+    "en": "Browning Automatic Rifle Spawn Chance",
+    "ch": "勃朗寧自動步槍生成機率",
+    "cn": "勃朗宁自动步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_BRAuto5_cat_Spawn": {
+    "en": "BRAuto5 Semi-Auto Shotgun Spawn Chance",
+    "ch": "BRAuto5半自動霰彈槍生成機率",
+    "cn": "BRAuto5半自动霰弹枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_BerettaM93R_cat_Spawn": {
+    "en": "Beretta M93R Auto Pistol Spawn Chance",
+    "ch": "貝瑞塔 M93R 自動手槍生成機率",
+    "cn": "贝雷塔M93R自动手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Berthier_cat_Spawn": {
+    "en": "Berthier Infantry Rifle Spawn Chance",
+    "ch": "貝蒂埃步兵步槍生成機率",
+    "cn": "贝蒂埃步兵步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_C96_cat_Spawn": {
+    "en": "Mauser C96 Pistol Spawn Chance",
+    "ch": "毛瑟 C96 手槍生成機率",
+    "cn": "毛瑟C96手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_ChiappaTripleThreat_cat_Spawn": {
+    "en": "Triple-Barreled Shotgun Spawn Chance",
+    "ch": "三管霰彈槍生成機率",
+    "cn": "三管霰弹枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Christine45_cat_Spawn": {
+    "en": "Christine .45-70 DMR Spawn Chance",
+    "ch": "克里斯汀.45-70精確射手步槍生成機率",
+    "cn": "克里斯汀.45-70精确射手步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_DP12_cat_Spawn": {
+    "en": "DP-12 Pump Shotgun Spawn Chance",
+    "ch": "DP-12泵動式霰彈槍生成機率",
+    "cn": "DP-12泵动式霰弹枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_DoubleBarrelShotgun_Spawn": {
+    "en": "Vanilla Double Barrel Shotgun Spawn Chance",
+    "ch": "原版雙管霰彈槍生成機率",
+    "cn": "原版双管霰弹枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_EMP_cat_Spawn": {
+    "en": "EMP Submachine Gun Spawn Chance",
+    "ch": "EMP 衝鋒槍生成機率",
+    "cn": "EMP冲锋枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_FAL_cat_Spawn": {
+    "en": "FN FAL DMR Spawn Chance",
+    "ch": "FN FAL精確射手步槍生成機率",
+    "cn": "FN FAL精确射手步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_FN57_cat_Spawn": {
+    "en": "FN Five-seveN Spawn Chance",
+    "ch": "赫斯塔爾57手槍生成機率",
+    "cn": "FN57手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_FN_Evolys_cat_Spawn": {
+    "en": "FN Evolys LMG Spawn Chance",
+    "ch": "FN Evolys輕機槍生成機率",
+    "cn": "FN Evolys轻机枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_G17_cat_Spawn": {
+    "en": "Glock 17 Spawn Chance",
+    "ch": "格洛克17手槍生成機率",
+    "cn": "格洛克17手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_G18_cat_Spawn": {
+    "en": "Glock 18 Full-Auto Spawn Chance",
+    "ch": "格洛克18全自動手槍生成機率",
+    "cn": "格洛克18全自动手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_G19_cat_Spawn": {
+    "en": "Glock 19 Spawn Chance",
+    "ch": "格洛克19手槍生成機率",
+    "cn": "格洛克19手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_G34_cat_Spawn": {
+    "en": "Glock 34 Competition Spawn Chance",
+    "ch": "格洛克34競賽型手槍生成機率",
+    "cn": "格洛克34竞赛型手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_GM6_cat_Spawn": {
+    "en": "GM6 Anti-Materiel Spawn Chance",
+    "ch": "GM6反器材步槍生成機率",
+    "cn": "GM6反器材步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Groza_cat_Spawn": {
+    "en": "Groza Spawn Chance",
+    "ch": "Groza突擊步槍生成機率",
+    "cn": "Groza突击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_HK416_cat_Spawn": {
+    "en": "HK416 Spawn Chance",
+    "ch": "HK416 生成機率",
+    "cn": "HK416生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_HK51_cat_Spawn": {
+    "en": "HK51 SMG Spawn Chance",
+    "ch": "HK51 衝鋒槍生成機率",
+    "cn": "HK51冲锋枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_HoneyBadger_cat_Spawn": {
+    "en": "Honey Badger Rifle Spawn Chance",
+    "ch": "蜜獾步槍生成機率",
+    "cn": "蜜獾步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_HuntingRifle_Spawn": {
+    "en": "Vanilla Hunting Rifle Spawn Chance",
+    "ch": "原版狩獵步槍生成機率",
+    "cn": "原版狩猎步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_JS14_Rifle_Spawn": {
+    "en": "Vanilla JS14 Rifle Spawn Chance",
+    "ch": "原版儒格Mini-14半自動步槍生成機率",
+    "cn": "原版鲁格Mini-14半自动步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_JS3T_Shotgun_Spawn": {
+    "en": "Vanilla JS3T Shotgun Spawn Chance",
+    "ch": "原版貝內利霰彈槍生成機率",
+    "cn": "原版贝内利霰弹枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_KS1_KAC_cat_Spawn": {
+    "en": "KS1-KAC Custom AR Spawn Chance",
+    "ch": "KS1-KAC客製化突擊步槍生成機率",
+    "cn": "KS1-KAC定制突击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_KrissVector_cat_Spawn": {
+    "en": "Kriss Vector SMG Spawn Chance",
+    "ch": "Kriss Vector 衝鋒槍生成機率",
+    "cn": "Kriss Vector 冲锋枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_L92_Carbine_Spawn": {
+    "en": "Vanilla L92 Carbine Spawn Chance",
+    "ch": "原版溫徹斯特1892步槍生成機率",
+    "cn": "原版温彻斯特1892步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_L94_Rifle_Spawn": {
+    "en": "Vanilla L94 Rifle Spawn Chance",
+    "ch": "原版溫徹斯特1894步槍生成機率",
+    "cn": "原版温彻斯特1894步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_LWMMG_cat_Spawn": {
+    "en": "LWMMG Medium MG Spawn Chance",
+    "ch": "LWMMG輕量化中型機槍生成機率",
+    "cn": "LWMMG轻量化中型机枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_LebelM1886_cat_Spawn": {
+    "en": "Lebel M1886 Spawn Chance",
+    "ch": "勒貝爾M1886步槍生成機率",
+    "cn": "勒贝尔M1886步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M14_Albedo_Spawn": {
+    "en": "M14 Albedo Semi-Auto Spawn Chance",
+    "ch": "M14 Albedo半自動步槍生成機率",
+    "cn": "M14 Albedo半自动步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M1866_cat_Spawn": {
+    "en": "M1866 Lever Rifle Spawn Chance",
+    "ch": "M1866槓桿式步槍生成機率",
+    "cn": "M1866杠杆式步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M1873_cat_Spawn": {
+    "en": "Colt Peacemaker M1873 Spawn Chance",
+    "ch": "柯爾特和平使者 M1873 生成機率",
+    "cn": "柯尔特和平使者M1873生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M1887_cat_Spawn": {
+    "en": "M1887 Lever Shotgun Spawn Chance",
+    "ch": "M1887槓桿式霰彈槍生成機率",
+    "cn": "M1887杠杆式霰弹枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M1918_cat_Spawn": {
+    "en": "Modernized M1918 BAR Spawn Chance",
+    "ch": "現代化M1918勃朗寧自動步槍生成機率",
+    "cn": "现代化M1918勃朗宁自动步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M1919a6_cat_Spawn": {
+    "en": "M1919A6 MG Spawn Chance",
+    "ch": "M1919A6機槍生成機率",
+    "cn": "M1919A6机枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M1Garand_cat_Spawn": {
+    "en": "M1 Garand Spawn Chance",
+    "ch": "春田M1加蘭德半自動步槍生成機率",
+    "cn": "春田M1加兰德半自动步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M200_cat_Spawn": {
+    "en": "CheyTac M200 Spawn Chance",
+    "ch": "CheyTac M200狙擊步槍生成機率",
+    "cn": "CheyTac M200狙击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M240_cat_Spawn": {
+    "en": "M240 GPMG Spawn Chance",
+    "ch": "M240通用機槍生成機率",
+    "cn": "M240通用机枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M4A1S_cat_Spawn": {
+    "en": "M4A1-S Spawn Chance",
+    "ch": "M4A1-S 生成機率",
+    "cn": "M4A1-S生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M4Mk18_cat_Spawn": {
+    "en": "M4 MK18 Spawn Chance",
+    "ch": "M4 MK18 生成機率",
+    "cn": "M4 MK18生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M500_cat_Spawn": {
+    "en": "Mossberg 500 Revolver Spawn Chance",
+    "ch": "M500 左輪手槍生成機率",
+    "cn": "M500左轮手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M7_cat_Spawn": {
+    "en": "M7 Assault Rifle Spawn Chance",
+    "ch": "M7突擊步槍生成機率",
+    "cn": "M7突击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M82_cat_Spawn": {
+    "en": "Barrett M82 Spawn Chance",
+    "ch": "巴雷特M82反器材步槍生成機率",
+    "cn": "巴雷特M82反器材步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M870_cat_Spawn": {
+    "en": "Remington 870 Spawn Chance",
+    "ch": "雷明頓870霰彈槍生成機率",
+    "cn": "雷明顿870霰弹枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M91_cat_Spawn": {
+    "en": "HK121 GPMG Spawn Chance",
+    "ch": "HK121通用機槍生成機率",
+    "cn": "HK121通用机枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_M9A4_cat_Spawn": {
+    "en": "Beretta M9A4 Spawn Chance",
+    "ch": "貝瑞塔 M9A4 手槍生成機率",
+    "cn": "伯莱塔M9A4手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_MCX_cat_Spawn": {
+    "en": "Sig MCX Spawn Chance",
+    "ch": "Sig MCX 生成機率",
+    "cn": "Sig MCX生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_MK12_cat_Spawn": {
+    "en": "MK12 SPR Spawn Chance",
+    "ch": "MK12特種用途步槍生成機率",
+    "cn": "MK12特种用途步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_MK18_cat_Spawn": {
+    "en": "MK18 Hammer of Thor Spawn Chance",
+    "ch": "MK18 雷神之鎚生成機率",
+    "cn": "MK18雷神之锤生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_MP7_cat_Spawn": {
+    "en": "HK MP7 PDW Spawn Chance",
+    "ch": "HK MP7 個人防衛武器生成機率",
+    "cn": "HK MP7个人防卫武器生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Marlin1894_Spawn": {
+    "en": "Marlin 1894 Lever Rifle Spawn Chance",
+    "ch": "馬林1894槓桿式步槍生成機率",
+    "cn": "马林1894杠杆式步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Minigun_cat_Spawn": {
+    "en": "Rotary Minigun Spawn Chance",
+    "ch": "旋轉式迷你機槍生成機率",
+    "cn": "旋转式迷你机枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Mosin_Nagant_cat_Spawn": {
+    "en": "Mosin-Nagant Spawn Chance",
+    "ch": "莫辛-納甘步槍生成機率",
+    "cn": "莫辛-纳甘步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_NoveskeN4_cat_Spawn": {
+    "en": "Noveske N4 Spawn Chance",
+    "ch": "Noveske N4突擊步槍生成機率",
+    "cn": "Noveske N4突击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_PKM_cat_Spawn": {
+    "en": "PKM GPMG Spawn Chance",
+    "ch": "PKM通用機槍生成機率",
+    "cn": "PKM通用机枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Pistol2_Spawn": {
+    "en": "M1911 Pistol Spawn Chance",
+    "ch": "M1911 手槍生成機率",
+    "cn": "M1911手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Pistol3_Spawn": {
+    "en": "Desert Eagle Spawn Chance",
+    "ch": "沙漠之鷹手槍生成機率",
+    "cn": "沙漠之鹰手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Pistol_Spawn": {
+    "en": "M9 Pistol Spawn Chance",
+    "ch": "M9 手槍生成機率",
+    "cn": "M9手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_QBU191_cat_Spawn": {
+    "en": "QBU-191 DMR Spawn Chance",
+    "ch": "QBU-191精確射手步槍生成機率",
+    "cn": "QBU-191精确射手步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_QBZ191_cat_Spawn": {
+    "en": "QBZ-191 Spawn Chance",
+    "ch": "QBZ-191 生成機率",
+    "cn": "QBZ-191生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_QBZ192_cat_Spawn": {
+    "en": "QBZ-192 Compact Spawn Chance",
+    "ch": "QBZ-192 緊湊型生成機率",
+    "cn": "QBZ-192紧凑型生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_QJY201_cat_Spawn": {
+    "en": "QJY201 Machine Gun Spawn Chance",
+    "ch": "QJY201機槍生成機率",
+    "cn": "QJY201机枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_QSZ_92G_Spawn": {
+    "en": "QSZ-92G Pistol Spawn Chance",
+    "ch": "QSZ-92G 手槍生成機率",
+    "cn": "QSZ-92G手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_REAPR_cat_Spawn": {
+    "en": "REAPR GPMG Spawn Chance",
+    "ch": "REAPR通用機槍生成機率",
+    "cn": "REAPR通用机枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_ROSE_cat_Spawn": {
+    "en": "Rose Sniper Rifle Spawn Chance",
+    "ch": "薔薇狙擊步槍生成機率",
+    "cn": "蔷薇狙击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_RPK16_cat_Spawn": {
+    "en": "RPK16 LMG Spawn Chance",
+    "ch": "RPK16輕機槍生成機率",
+    "cn": "RPK16轻机枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_RSC_cat_Spawn": {
+    "en": "RSC Infantry Rifle Spawn Chance",
+    "ch": "RSC步兵步槍生成機率",
+    "cn": "RSC步兵步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Requiem_cat_Spawn": {
+    "en": "Requiem Large-Caliber Pistol Spawn Chance",
+    "ch": "安魂曲手炮生成機率",
+    "cn": "安魂曲手炮生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Revolver_Long_Spawn": {
+    "en": "Vanilla Long Revolver Spawn Chance",
+    "ch": "原版長管左輪手槍生成機率",
+    "cn": "原版长管左轮手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Revolver_Spawn": {
+    "en": "Vanilla Revolver Spawn Chance",
+    "ch": "原版左輪手槍生成機率",
+    "cn": "原版左轮手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_SAI_GRY_cat_Spawn": {
+    "en": "SAI-GRY Spawn Chance",
+    "ch": "SAI-GRY 生成機率",
+    "cn": "SAI-GRY生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_SG553_cat_Spawn": {
+    "en": "SG553 Spawn Chance",
+    "ch": "SG553 生成機率",
+    "cn": "SG553生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_SIGP226_cat_Spawn": {
+    "en": "Sig Sauer P226 Spawn Chance",
+    "ch": "西格紹爾 P226 手槍生成機率",
+    "cn": "西格绍尔P226手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_SRM3_cat_Spawn": {
+    "en": "SRM3 Spawn Chance",
+    "ch": "SRM3突擊步槍生成機率",
+    "cn": "SRM3突击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_SVD_cat_Spawn": {
+    "en": "SVD Dragunov Spawn Chance",
+    "ch": "SVD德拉貢諾夫狙擊步槍生成機率",
+    "cn": "SVD德拉贡诺夫狙击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_SVT40_cat_Spawn": {
+    "en": "SVT-40 Spawn Chance",
+    "ch": "SVT-40半自動步槍生成機率",
+    "cn": "SVT-40半自动步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Saiga12_cat_Spawn": {
+    "en": "Saiga-12 Spawn Chance",
+    "ch": "Saiga-12霰彈槍生成機率",
+    "cn": "Saiga-12霰弹枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_ScarH_cat_Spawn": {
+    "en": "SCAR-H Spawn Chance",
+    "ch": "SCAR-H突擊步槍生成機率",
+    "cn": "SCAR-H突击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_ShotgunSawnoff_Spawn": {
+    "en": "Vanilla Sawed-Off Double Barrel Spawn Chance",
+    "ch": "原版鋸短型雙管霰彈槍生成機率",
+    "cn": "原版锯短型双管霰弹枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Shotgun_Spawn": {
+    "en": "Vanilla Pump Shotgun Spawn Chance",
+    "ch": "原版雷明頓M870泵動式霰彈槍生成機率",
+    "cn": "原版雷明顿M870泵动式霰弹枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_SnipeX_T_Rex_cat_Spawn": {
+    "en": "T-Rex Anti-Materiel Spawn Chance",
+    "ch": "SnipeX T-Rex反器材步槍生成機率",
+    "cn": "SnipeX T-Rex反器材步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Striker12_cat_Spawn": {
+    "en": "Striker 12 Spawn Chance",
+    "ch": "Striker 12霰彈槍生成機率",
+    "cn": "Striker 12霰弹枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_TTI_Benelli_M4_cat_Spawn": {
+    "en": "TTI Benelli M4 Spawn Chance",
+    "ch": "TTI貝內利M4霰彈槍生成機率",
+    "cn": "TTI贝内利M4霰弹枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Taran2011_cat_Spawn": {
+    "en": "Taran Tactical 2011 Spawn Chance",
+    "ch": "塔蘭2011 生成機率",
+    "cn": "塔兰2011生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Taurus_cat_Spawn": {
+    "en": "Taurus Revolver Spawn Chance",
+    "ch": "陶魯斯左輪手槍生成機率",
+    "cn": "陶鲁斯左轮手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Thompson_cat_Spawn": {
+    "en": "Thompson SMG Spawn Chance",
+    "ch": "湯普森衝鋒槍生成機率",
+    "cn": "汤普森冲锋枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Thoridal_Spawn": {
+    "en": "Solis'dar Spawn Chance",
+    "ch": "索利達爾生成機率",
+    "cn": "索利达尔生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_TrapperCarbine_Spawn": {
+    "en": "Vanilla Trapper Carbine Spawn Chance",
+    "ch": "原版馬林45步槍生成機率",
+    "cn": "原版马林45步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_Type81_cat_Spawn": {
+    "en": "Type 81 Spawn Chance",
+    "ch": "81式突擊步槍生成機率",
+    "cn": "81式突击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_UMP45_cat_Spawn": {
+    "en": "UMP45 SMG Spawn Chance",
+    "ch": "UMP45 衝鋒槍生成機率",
+    "cn": "UMP45冲锋枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_URG_S_cat_Spawn": {
+    "en": "URG-S Spawn Chance",
+    "ch": "URG-S突擊步槍生成機率",
+    "cn": "URG-S突击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_UTS15_cat_Spawn": {
+    "en": "UTS-15 Bullpup Shotgun Spawn Chance",
+    "ch": "UTS-15犢牛式霰彈槍生成機率",
+    "cn": "UTS-15无托式霰弹枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_VSSM_cat_Spawn": {
+    "en": "VSSM Suppressed Sniper Spawn Chance",
+    "ch": "VSSM消音狙擊步槍生成機率",
+    "cn": "VSSM消音狙击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_VarmintRifle_Spawn": {
+    "en": "Vanilla Varmint Rifle Spawn Chance",
+    "ch": "原版雷明頓700狙擊步槍生成機率",
+    "cn": "原版雷明顿700狙击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_XM109_cat_Spawn": {
+    "en": "XM109 Anti-Materiel Spawn Chance",
+    "ch": "XM109反器材步槍生成機率",
+    "cn": "XM109反器材步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_ar_10_cat_Spawn": {
+    "en": "Knight's M110 Sniper Spawn Chance",
+    "ch": "奈特M110狙擊步槍生成機率",
+    "cn": "奈特M110狙击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_interceptor_cat_Spawn": {
+    "en": "Interceptor Tactical Crossbow Spawn Chance",
+    "ch": "攔截者戰術弩生成機率",
+    "cn": "拦截者战术弩生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_lewis_cat_Spawn": {
+    "en": "Lewis LMG Spawn Chance",
+    "ch": "劉易斯輕機槍生成機率",
+    "cn": "刘易斯轻机枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_lugerP08_cat_Spawn": {
+    "en": "Luger P08 Pistol Spawn Chance",
+    "ch": "魯格 P08 手槍生成機率",
+    "cn": "鲁格P08手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_m1903_cat_Spawn": {
+    "en": "M1903 Springfield Spawn Chance",
+    "ch": "春田M1903步槍生成機率",
+    "cn": "春田M1903步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_mg338_cat_Spawn": {
+    "en": ".338 MG338 Spawn Chance",
+    "ch": "MG338 .338口徑通用機槍生成機率",
+    "cn": "MG338 .338口径通用机枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_minigun_cat_Spawn": {
+    "en": "Minigun Spawn Chance",
+    "ch": "迷你機槍生成機率",
+    "cn": "迷你机枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_mk47_cat_Spawn": {
+    "en": "MK47 Spawn Chance",
+    "ch": "MK47突擊步槍生成機率",
+    "cn": "MK47突击步枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_mp5_cat_Spawn": {
+    "en": "MP5 SMG Spawn Chance",
+    "ch": "MP5 衝鋒槍生成機率",
+    "cn": "MP5冲锋枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_origin12_cat_Spawn": {
+    "en": "Origin-12 Shotgun Spawn Chance",
+    "ch": "Origin-12霰彈槍生成機率",
+    "cn": "Origin-12霰弹枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_usp45_cat_Spawn": {
+    "en": "USP .45 Pistol Spawn Chance",
+    "ch": "USP .45 手槍生成機率",
+    "cn": "USP .45手枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_uzi_cat_Spawn": {
+    "en": "UZI SMG Spawn Chance",
+    "ch": "UZI 衝鋒槍生成機率",
+    "cn": "UZI冲锋枪生成概率"
+   },
+   "Sandbox_ModernFirearmsSystemSandbox_44": {
+    "en": ".44 Magnum Weapon Damage Multiplier",
+    "ch": ".44 Magnum 武器傷害倍率",
+    "cn": ".44 Magnum 武器伤害倍率"
+   },
+   "Sandbox_ModernFirearmsSystemSandbox_45": {
+    "en": ".45 ACP Weapon Damage Multiplier",
+    "ch": ".45 ACP 武器傷害倍率",
+    "cn": ".45 ACP 武器伤害倍率"
+   },
+   "Sandbox_ModernFirearmsSystemSandbox_50": {
+    "en": ".50 BMG Weapon Damage Multiplier",
+    "ch": ".50 BMG 武器傷害倍率",
+    "cn": ".50 BMG 武器伤害倍率"
+   },
+   "Sandbox_ModernFirearmsSystemSandbox_545": {
+    "en": "5.45 Weapon Damage Multiplier",
+    "ch": "5.45 武器傷害倍率",
+    "cn": "5.45 武器伤害倍率"
+   },
+   "Sandbox_ModernFirearmsSystemSandbox_556": {
+    "en": "5.56 Weapon Damage Multiplier",
+    "ch": "5.56 武器傷害倍率",
+    "cn": "5.56 武器伤害倍率"
+   },
+   "Sandbox_ModernFirearmsSystemSandbox_58": {
+    "en": "5.8mm Weapon Damage Multiplier",
+    "ch": "5.8mm 武器傷害倍率",
+    "cn": "5.8mm 武器伤害倍率"
+   },
+   "Sandbox_ModernFirearmsSystemSandbox_68": {
+    "en": "6.8mm Weapon Damage Multiplier",
+    "ch": "6.8mm 武器傷害倍率",
+    "cn": "6.8mm 武器伤害倍率"
+   },
+   "Sandbox_ModernFirearmsSystemSandbox_762": {
+    "en": "7.62mm Weapon Damage Multiplier",
+    "ch": "7.62mm 武器傷害倍率",
+    "cn": "7.62mm 武器伤害倍率"
+   },
+   "Sandbox_ModernFirearmsSystemSandbox_86": {
+    "en": "8.6mm Weapon Damage Multiplier",
+    "ch": "8.6mm 武器傷害倍率",
+    "cn": "8.6mm 武器伤害倍率"
+   },
+   "Sandbox_ModernFirearmsSystemSandbox_9mm": {
+    "en": "9mm Weapon Damage Multiplier",
+    "ch": "9mm 武器傷害倍率",
+    "cn": "9mm 武器伤害倍率"
+   },
+   "Sandbox_ModernFirearmsSystemSandbox_Bolt": {
+    "en": "Crossbow Bolt Damage Multiplier",
+    "ch": "弩箭傷害倍率",
+    "cn": "弩箭伤害倍率"
+   },
+   "Sandbox_ModernFirearmsSystemSandbox_Gun": {
+    "en": "Firearm Spawn Rate Settings",
+    "ch": "槍械生成率設定",
+    "cn": "枪械生成率设置"
+   },
+   "Sandbox_ModernFirearmsSystemSandbox_Shotgun": {
+    "en": "Shotgun Shell Damage Multiplier",
+    "ch": "霰彈槍彈藥傷害倍率",
+    "cn": "霰弹枪弹药伤害倍率"
    },
    "Sandbox_MoreTraitsDynamic": {
     "en": "More Traits - Dynamic",
@@ -5924,6 +11419,11 @@
     "ch": "附近物品欄",
     "cn": "附近物品栏"
    },
+   "Sandbox_ShieldCondition": {
+    "en": "Shield Durability Degradation Rate",
+    "ch": "盾牌耐久度衰減率",
+    "cn": "盾牌耐久度衰减率"
+   },
    "Sandbox_TWF_QOL_ForagingIgnoreCollateralSeeds": {
     "en": "Foraging: Ignore collateral seeds",
     "ch": "搜尋: 忽略附帶種子",
@@ -5956,6 +11456,71 @@
    }
   },
   "Tooltip.json": {
+   "Tooltip_558holo": {
+    "en": "Primary Sight<br>Aim Time -2<br>Low Light Performance +4<br>Aim Range 1-21",
+    "ch": "主要瞄具<br>瞄準時間 -2<br>低光源效能 +4<br>瞄準範圍 1-21",
+    "cn": "主瞄具<br>瞄准时间 -2<br>低光性能 +4<br>瞄准范围 1-21"
+   },
+   "Tooltip_AACMini7_Silencer": {
+    "en": "Suppressor<br>Aim Time -1<br>Damage -0.5<br>Range -1<br>Noise -80%",
+    "ch": "消音器<br>瞄準時間 -1<br>傷害 -0.5<br>射程 -1<br>噪音 -80%",
+    "cn": "消音器<br>瞄准时间 -1<br>伤害 -0.5<br>射程 -1<br>噪音 -80%"
+   },
+   "Tooltip_AFG_Blk": {
+    "en": "Grip<br>Aim Time -3<br>Recoil -1",
+    "ch": "握把<br>瞄準時間 -3<br>後坐力 -1",
+    "cn": "握把<br>瞄准时间 -3<br>后坐力 -1"
+   },
+   "Tooltip_AK12Stock": {
+    "en": "Stock<br>Aim Time -6<br>Recoil +3<br>Critical Hit Chance +8",
+    "ch": "槍托<br>瞄準時間 -6<br>後坐力 +3<br>暴擊率 +8",
+    "cn": "枪托<br>瞄准时间 -6<br>后坐力 +3<br>暴击率 +8"
+   },
+   "Tooltip_AKSStock": {
+    "en": "Stock<br>Weight -0.5<br>Critical Hit Chance +8",
+    "ch": "槍托<br>重量 -0.5<br>暴擊率 +8",
+    "cn": "枪托<br>重量 -0.5<br>暴击率 +8"
+   },
+   "Tooltip_AR15_slience": {
+    "en": "Suppressor<br>Aim Time -1<br>Damage -0.5<br>Range -1<br>Noise -70%",
+    "ch": "消音器<br>瞄準時間 -1<br>傷害 -0.5<br>射程 -1<br>噪音 -70%",
+    "cn": "消音器<br>瞄准时间 -1<br>伤害 -0.5<br>射程 -1<br>噪音 -70%"
+   },
+   "Tooltip_ASh_12_Grip": {
+    "en": "Aim time: -1<br>Fire rate: +2<br>Accuracy: +3%",
+    "ch": "瞄準時間: -1<br>射速: +2<br>命中率: +3%",
+    "cn": "瞄准时间: -1<br>射速: +2<br>命中率: +3%"
+   },
+   "Tooltip_ATACR": {
+    "en": "Primary Sight<br>Aim Time +25<br>Critical Hit Chance +16<br>Aim Range 10-64<br>Field of View +0.1",
+    "ch": "主要瞄具<br>瞄準時間 +25<br>暴擊率 +16<br>瞄準範圍 10-64<br>視野 +0.1",
+    "cn": "主瞄具<br>瞄准时间 +25<br>暴击率 +16<br>瞄准范围 10-64<br>视野 +0.1"
+   },
+   "Tooltip_AmmoPD": {
+    "en": "Left Sight<br>Ammo Programming Device<br>Aim Time -3<br>Range +4<br>Critical Hit Chance +8<br>Fire Rate +1",
+    "ch": "左側瞄具<br>彈藥編程裝置<br>瞄準時間 -3<br>射程 +4<br>暴擊率 +8<br>射速 +1",
+    "cn": "左侧瞄具<br>弹药编程装置<br>瞄准时间 -3<br>射程 +4<br>暴击率 +8<br>射速 +1"
+   },
+   "Tooltip_AmmoShellDish_cat": {
+    "en": "Reload Time -7",
+    "ch": "裝填時間 -7",
+    "cn": "装填时间 -7"
+   },
+   "Tooltip_AmmoStraps_cat": {
+    "en": "Reload Time -5",
+    "ch": "裝填時間 -5",
+    "cn": "装填时间 -5"
+   },
+   "Tooltip_ArmytekPredator_Bottom": {
+    "en": "Automatically turns on when aiming.",
+    "ch": "瞄準時自動開啟.",
+    "cn": "瞄准时自动开启."
+   },
+   "Tooltip_ArmytekPredator_Bottom2": {
+    "en": "Automatically turns on when aiming.",
+    "ch": "瞄準時自動開啟.",
+    "cn": "瞄准时自动开启."
+   },
    "Tooltip_BlankSurvivalJournal": {
     "en": "A blank journal ready to record your survival knowledge.",
     "ch": "一本空白日記, 可用於記錄你的生存知識.",
@@ -6421,25 +11986,785 @@
     "ch": "一本節日戰利品日記, 裡面裝滿了聖誕老人的獎勵和筆記.",
     "cn": "一本节日战利品日记, 里面装满了圣诞老人的奖励和笔记."
    },
+   "Tooltip_COMPM4": {
+    "en": "Primary Sight<br>Aim Time +5<br>Aim Range 4-31<br>Low Light Performance +6<br>Field of View +0.01",
+    "ch": "主要瞄具<br>瞄準時間 +5<br>瞄準範圍 4-31<br>低光源效能 +6<br>視野 +0.01",
+    "cn": "主瞄具<br>瞄准时间 +5<br>瞄准范围 4-31<br>低光性能 +6<br>视野 +0.01"
+   },
+   "Tooltip_CQBR_ACOG_RU": {
+    "en": "Primary Sight<br>Aim Time -2<br>Low Light Performance +4<br>Aim Range 4-31",
+    "ch": "主要瞄具<br>瞄準時間 -2<br>低光源效能 +4<br>瞄準範圍 4-31",
+    "cn": "主瞄具<br>瞄准时间 -2<br>低光性能 +4<br>瞄准范围 4-31"
+   },
+   "Tooltip_Carryhandle": {
+    "en": "Primary Sight<br>Aim Time -1<br>Weight -2",
+    "ch": "主要瞄具<br>瞄準時間 -1<br>重量 -2",
+    "cn": "主瞄具<br>瞄准时间 -1<br>重量 -2"
+   },
+   "Tooltip_Clip_556Drum_cat": {
+    "en": "Weapon component: 5.56mm drum magazine (60)",
+    "ch": "武器零件: 5.56mm 彈鼓(60)",
+    "cn": "武器部件: 5.56mm 弹鼓(60)"
+   },
+   "Tooltip_Clip_762Drum_cat": {
+    "en": "Weapon component: M14 drum magazine (50)",
+    "ch": "武器零件: M14 彈鼓(50)",
+    "cn": "武器部件: M14 弹鼓(50)"
+   },
+   "Tooltip_Clip_9mmDrum_cat": {
+    "en": "Weapon component: Drum magazine (100)",
+    "ch": "武器零件: 彈鼓(100)",
+    "cn": "武器部件: 弹鼓(100)"
+   },
+   "Tooltip_Clip_AA12_cat": {
+    "en": "Weapon component: Drum magazine (100)",
+    "ch": "武器零件: 彈鼓(100)",
+    "cn": "武器部件: 弹鼓(100)"
+   },
+   "Tooltip_Clip_AEK971_cat": {
+    "en": "W.i.p",
+    "ch": "開發中",
+    "cn": "开发中"
+   },
+   "Tooltip_Clip_AK103_cat": {
+    "en": "Weapon component: M14 drum magazine (50)",
+    "ch": "武器零件: M14 彈鼓(50)",
+    "cn": "武器部件: M14 弹鼓(50)"
+   },
+   "Tooltip_Clip_AWM_cat": {
+    "en": "Weapon component: Drum magazine (100)",
+    "ch": "武器零件: 彈鼓(100)",
+    "cn": "武器部件: 弹鼓(100)"
+   },
+   "Tooltip_Clip_AX50_cat": {
+    "en": "Weapon component: AX50 magazine",
+    "ch": "武器零件: AX50 彈匣",
+    "cn": "武器部件: AX50 弹匣"
+   },
+   "Tooltip_Clip_AssaultRifle": {
+    "en": "AR15 magazine",
+    "ch": "AR15 彈匣",
+    "cn": "AR15 弹匣"
+   },
+   "Tooltip_Clip_BAR_cat": {
+    "en": "W.i.p",
+    "ch": "開發中",
+    "cn": "开发中"
+   },
+   "Tooltip_Clip_Beowulf_cat": {
+    "en": "Beowulf magazine",
+    "ch": "Beowulf 彈匣",
+    "cn": "Beowulf 弹匣"
+   },
+   "Tooltip_Clip_COLT902_100cat": {
+    "en": "AR15 magazine",
+    "ch": "AR15 彈匣",
+    "cn": "AR15 弹匣"
+   },
+   "Tooltip_Clip_COLT902_60cat": {
+    "en": "AR15 magazine",
+    "ch": "AR15 彈匣",
+    "cn": "AR15 弹匣"
+   },
+   "Tooltip_Clip_FAL_cat": {
+    "en": "W.i.p",
+    "ch": "開發中",
+    "cn": "开发中"
+   },
+   "Tooltip_Clip_FN_Evolys_cat": {
+    "en": "W.i.p",
+    "ch": "開發中",
+    "cn": "开发中"
+   },
+   "Tooltip_Clip_FactorMax_cat": {
+    "en": "Weapon component: Drum magazine (100)",
+    "ch": "武器零件: 彈鼓(100)",
+    "cn": "武器部件: 弹鼓(100)"
+   },
+   "Tooltip_Clip_Factor_cat": {
+    "en": "Weapon component: Drum magazine (100)",
+    "ch": "武器零件: 彈鼓(100)",
+    "cn": "武器部件: 弹鼓(100)"
+   },
+   "Tooltip_Clip_GM6_cat": {
+    "en": "Weapon component: Drum magazine (100)",
+    "ch": "武器零件: 彈鼓(100)",
+    "cn": "武器部件: 弹鼓(100)"
+   },
+   "Tooltip_Clip_HK416_cat": {
+    "en": "HK416 magazine",
+    "ch": "HK416 彈匣",
+    "cn": "HK416 弹匣"
+   },
+   "Tooltip_Clip_HK417_cat": {
+    "en": "W.i.p",
+    "ch": "開發中",
+    "cn": "开发中"
+   },
+   "Tooltip_Clip_HuntingRifle": {
+    "en": "MSR magazine",
+    "ch": "MSR 彈匣",
+    "cn": "MSR 弹匣"
+   },
+   "Tooltip_Clip_KrissVector_cat": {
+    "en": "Vector magazine",
+    "ch": "Vector 彈匣",
+    "cn": "Vector 弹匣"
+   },
+   "Tooltip_Clip_LWMMG_cat": {
+    "en": "Weapon component: Drum magazine (100)",
+    "ch": "武器零件: 彈鼓(100)",
+    "cn": "武器部件: 弹鼓(100)"
+   },
+   "Tooltip_Clip_M14Drum_cat": {
+    "en": "Weapon component: M14 drum magazine (50)",
+    "ch": "武器零件: M14 彈鼓(50)",
+    "cn": "武器部件: M14 弹鼓(50)"
+   },
+   "Tooltip_Clip_M200_cat": {
+    "en": "Weapon component: Drum magazine (100)",
+    "ch": "武器零件: 彈鼓(100)",
+    "cn": "武器部件: 弹鼓(100)"
+   },
+   "Tooltip_Clip_M82_cat": {
+    "en": "M82 magazine",
+    "ch": "M82 彈匣",
+    "cn": "M82 弹匣"
+   },
+   "Tooltip_Clip_MCX_cat": {
+    "en": "W.i.p",
+    "ch": "開發中",
+    "cn": "开发中"
+   },
+   "Tooltip_Clip_MDR_cat": {
+    "en": "Weapon component: Drum magazine (100)",
+    "ch": "武器零件: 彈鼓(100)",
+    "cn": "武器部件: 弹鼓(100)"
+   },
+   "Tooltip_Clip_MK12_cat": {
+    "en": "MK12 magazine",
+    "ch": "MK12 彈匣",
+    "cn": "MK12 弹匣"
+   },
+   "Tooltip_Clip_MK18_cat": {
+    "en": "W.i.p",
+    "ch": "開發中",
+    "cn": "开发中"
+   },
+   "Tooltip_Clip_MP7_cat": {
+    "en": "Weapon component: Drum magazine (100)",
+    "ch": "武器零件: 彈鼓(100)",
+    "cn": "武器部件: 弹鼓(100)"
+   },
+   "Tooltip_Clip_PKM_cat": {
+    "en": "W.i.p",
+    "ch": "開發中",
+    "cn": "开发中"
+   },
+   "Tooltip_Clip_QBZ191_cat": {
+    "en": "QBZ191 magazine",
+    "ch": "QBZ191 彈匣",
+    "cn": "QBZ191 弹匣"
+   },
+   "Tooltip_Clip_QLU_11": {
+    "en": "Weapon component: Drum magazine (100)",
+    "ch": "武器零件: 彈鼓(100)",
+    "cn": "武器部件: 弹鼓(100)"
+   },
+   "Tooltip_Clip_QLU_11_cat": {
+    "en": "Weapon component: Drum magazine (100)",
+    "ch": "武器零件: 彈鼓(100)",
+    "cn": "武器部件: 弹鼓(100)"
+   },
+   "Tooltip_Clip_R301_cat": {
+    "en": "AX50 magazine",
+    "ch": "AX50 彈匣",
+    "cn": "AX50 弹匣"
+   },
+   "Tooltip_Clip_Saiga12_cat": {
+    "en": "Weapon component: Drum magazine (100)",
+    "ch": "武器零件: 彈鼓(100)",
+    "cn": "武器部件: 弹鼓(100)"
+   },
+   "Tooltip_Clip_ScarH_cat": {
+    "en": "SCAR-H magazine",
+    "ch": "SCAR-H 彈匣",
+    "cn": "SCAR-H 弹匣"
+   },
+   "Tooltip_Clip_ar_10_cat": {
+    "en": "Weapon component: AR10 magazine",
+    "ch": "武器零件: AR10 彈匣",
+    "cn": "武器部件: AR10 弹匣"
+   },
+   "Tooltip_Clip_mk47_cat": {
+    "en": "Weapon component: Drum magazine (100)",
+    "ch": "武器零件: 彈鼓(100)",
+    "cn": "武器部件: 弹鼓(100)"
+   },
+   "Tooltip_CobraGrip": {
+    "en": "Grip<br>Aim Time -3<br>Recoil -1<br>Critical Hit Chance +8",
+    "ch": "握把<br>瞄準時間 -3<br>後坐力 -1<br>暴擊率 +8",
+    "cn": "握把<br>瞄准时间 -3<br>后坐力 -1<br>暴击率 +8"
+   },
+   "Tooltip_CombatOps_Stock_blk": {
+    "en": "Stock<br>Aim Time -3<br>Recoil -1",
+    "ch": "槍托<br>瞄準時間 -3<br>後坐力 -1",
+    "cn": "枪托<br>瞄准时间 -3<br>后坐力 -1"
+   },
    "Tooltip_CursedJournal": {
     "en": "A sealed journal that feels wrong to hold.",
     "ch": "一本被封印的日記, 握在手中會感到莫名的不適.",
     "cn": "一本被封印的日记, 握在手中会感到莫名的不适感."
    },
+   "Tooltip_DBAL77Laser_cat": {
+    "en": "Laser<br>Aim Time -2",
+    "ch": "雷射<br>瞄準時間 -2",
+    "cn": "激光<br>瞄准时间 -2"
+   },
+   "Tooltip_DBAL_9021_Bottom": {
+    "en": "Laser<br>Aim Time -2",
+    "ch": "雷射<br>瞄準時間 -2",
+    "cn": "激光<br>瞄准时间 -2"
+   },
+   "Tooltip_DoubleClickToRemove": {
+    "en": "Double-click to remove",
+    "ch": "按兩下即可移除",
+    "cn": "双击移除"
+   },
    "Tooltip_FilledSurvivalJournal": {
     "en": "A journal containing recorded survival skills. Right-click to read.",
-    "ch": "一本記錄了生存技能的日記. 點擊右鍵即可閱讀.",
+    "ch": "一本記錄了生存技能的日記. 以右鍵點選即可閱讀.",
     "cn": "一本记录了生存技能的日记.右键点击可阅读."
+   },
+   "Tooltip_FortisNitride_RED2": {
+    "en": "Muzzle Brake<br>Aim Time -6<br>Recoil -2",
+    "ch": "制退器<br>瞄準時間 -6<br>後坐力 -2",
+    "cn": "制退器<br>瞄准时间 -6<br>后坐力 -2"
+   },
+   "Tooltip_G33_cat": {
+    "en": "Right Sight<br>3x Combo Scope<br>Aim Time -2<br>Low Light Performance +3",
+    "ch": "右側瞄具<br>3 倍組合瞄準鏡<br>瞄準時間 -2<br>低光源效能 +3",
+    "cn": "右侧瞄具<br>3倍组合瞄准镜<br>瞄准时间 -2<br>低光性能 +3"
+   },
+   "Tooltip_GP25_cat": {
+    "en": "Aim and press G to load<br>Aim and press G to fire",
+    "ch": "瞄準並按 G 裝填<br>瞄準並按 G 發射",
+    "cn": "瞄准并按 G 装填<br>瞄准并按 G 发射"
+   },
+   "Tooltip_GP25_cat_empty": {
+    "en": "Aim and press G to load<br>Aim and press G to fire",
+    "ch": "瞄準並按 G 裝填<br>瞄準並按 G 發射",
+    "cn": "瞄准并按 G 装填<br>瞄准并按 G 发射"
+   },
+   "Tooltip_GunB": {
+    "en": "Aim and press left mouse button to attack",
+    "ch": "瞄準並按滑鼠左鍵攻擊",
+    "cn": "瞄准并按鼠标左键攻击"
+   },
+   "Tooltip_GunP": {
+    "en": "Aim and press G to reload<br>Aim and press G to fire",
+    "ch": "瞄準並按 G 裝填<br>瞄準並按 G 開火",
+    "cn": "瞄准并按 G 装填<br>瞄准并按 G 开火"
+   },
+   "Tooltip_HAMR_cat": {
+    "en": "Primary Sight<br>Aim Time +8<br>Critical Hit Chance +16<br>Aim Range 3-32",
+    "ch": "主要瞄具<br>瞄準時間 +8<br>暴擊率 +16<br>瞄準範圍 3-32",
+    "cn": "主瞄具<br>瞄准时间 +8<br>暴击率 +16<br>瞄准范围 3-32"
+   },
+   "Tooltip_HD511a_cat": {
+    "en": "Primary Sight<br>Aim Time -3<br>Low Light Performance +5<br>Aim Range 1-22",
+    "ch": "主要瞄具<br>瞄準時間 -3<br>低光源效能 +5<br>瞄準範圍 1-22",
+    "cn": "主瞄具<br>瞄准时间 -3<br>低光性能 +5<br>瞄准范围 1-22"
+   },
+   "Tooltip_Harris_Open": {
+    "en": "Bipod<br>Aim Time -10<br>Recoil -1",
+    "ch": "兩腳架<br>瞄準時間 -10<br>後坐力 -1",
+    "cn": "两脚架<br>瞄准时间 -10<br>后坐力 -1"
+   },
+   "Tooltip_Harris_Open1": {
+    "en": "Bipod<br>Aim Time -13<br>Recoil +1<br>Weight +1",
+    "ch": "兩腳架<br>瞄準時間 -13<br>後坐力 +1<br>重量 +1",
+    "cn": "两脚架<br>瞄准时间 -13<br>后坐力 +1<br>重量 +1"
+   },
+   "Tooltip_HeartbeatSensor": {
+    "en": "Radar detection<br>Connection loss (W.i.P ???)",
+    "ch": "雷達偵測<br>連線中斷(開發中???)",
+    "cn": "雷达探测<br>连接中断(开发中???)"
+   },
+   "Tooltip_HeraCQR_Grip": {
+    "en": "Grip<br>Aim Time -5",
+    "ch": "握把<br>瞄準時間 -5",
+    "cn": "握把<br>瞄准时间 -5"
+   },
+   "Tooltip_HeraCQR_Stock": {
+    "en": "Stock<br>Aim Time -8<br>Recoil +2",
+    "ch": "槍托<br>瞄準時間 -8<br>後坐力 +2",
+    "cn": "枪托<br>瞄准时间 -8<br>后坐力 +2"
+   },
+   "Tooltip_M203_cat": {
+    "en": "Aim and press G to load<br>Aim and press G to fire",
+    "ch": "瞄準並按 G 裝填<br>瞄準並按 G 發射",
+    "cn": "瞄准并按 G 装填<br>瞄准并按 G 发射"
+   },
+   "Tooltip_M203_cat_empty": {
+    "en": "Aim and press G to load<br>Aim and press G to fire",
+    "ch": "瞄準並按 G 裝填<br>瞄準並按 G 發射",
+    "cn": "瞄准并按 G 装填<br>瞄准并按 G 发射"
+   },
+   "Tooltip_M28_cat": {
+    "en": "Aim and press G to load<br>Aim and press G to fire",
+    "ch": "瞄準並按 G 裝填<br>瞄準並按 G 發射",
+    "cn": "瞄准并按 G 装填<br>瞄准并按 G 发射"
+   },
+   "Tooltip_M28_cat_empty": {
+    "en": "Aim and press G to load<br>Aim and press G to fire",
+    "ch": "瞄準並按 G 裝填<br>瞄準並按 G 發射",
+    "cn": "瞄准并按 G 装填<br>瞄准并按 G 发射"
+   },
+   "Tooltip_M82_cat_Silencer": {
+    "en": "Suppressor<br>Aim Time -1<br>Damage -1<br>Range -2<br>Noise -50%",
+    "ch": "消音器<br>瞄準時間 -1<br>傷害 -1<br>射程 -2<br>噪音 -50%",
+    "cn": "消音器<br>瞄准时间 -1<br>伤害 -1<br>射程 -2<br>噪音 -50%"
+   },
+   "Tooltip_M82_cat_muzzle": {
+    "en": "Muzzle Brake<br>Aim Time -10<br>Recoil -2",
+    "ch": "制退器<br>瞄準時間 -10<br>後坐力 -2",
+    "cn": "制退器<br>瞄准时间 -10<br>后坐力 -2"
+   },
+   "Tooltip_MK18Stock": {
+    "en": "Aim time: -5<br>Damage: +0.4<br>Recoil: -1",
+    "ch": "瞄準時間: -5<br>傷害: +0.4<br>後坐力: -1",
+    "cn": "瞄准时间: -5<br>伤害: +0.4<br>后坐力: -1"
+   },
+   "Tooltip_MZ_RMR": {
+    "en": "Primary Sight<br>Aim Time -3<br>Aim Range 1-21",
+    "ch": "主要瞄具<br>瞄準時間 -3<br>瞄準範圍 1-21",
+    "cn": "主瞄具<br>瞄准时间 -3<br>瞄准范围 1-21"
+   },
+   "Tooltip_MZ_UH1": {
+    "en": "Primary Sight<br>Aim Time -3<br>Aim Range 1-21",
+    "ch": "主要瞄具<br>瞄準時間 -3<br>瞄準範圍 1-21",
+    "cn": "主瞄具<br>瞄准时间 -3<br>瞄准范围 1-21"
+   },
+   "Tooltip_MZ_paoduijing": {
+    "en": "Primary Sight<br>Aim Time +5<br>Aim Range 5-50<br>Field of View +0.05",
+    "ch": "主要瞄具<br>瞄準時間 +5<br>瞄準範圍 5-50<br>視野 +0.05",
+    "cn": "主瞄具<br>瞄准时间 +5<br>瞄准范围 5-50<br>视野 +0.05"
+   },
+   "Tooltip_MagpulStock": {
+    "en": "Stock<br>Critical Hit Chance +16",
+    "ch": "槍托<br>暴擊率 +16",
+    "cn": "枪托<br>暴击率 +16"
+   },
+   "Tooltip_Mk18Stock": {
+    "en": "Stock<br>Aim Time -5<br>Recoil -1",
+    "ch": "槍托<br>瞄準時間 -5<br>後坐力 -1",
+    "cn": "枪托<br>瞄准时间 -5<br>后坐力 -1"
+   },
+   "Tooltip_PEQ_cat": {
+    "en": "Laser<br>Aim Time -1<br>Range +1",
+    "ch": "雷射<br>瞄準時間 -1<br>射程 +1",
+    "cn": "激光<br>瞄准时间 -1<br>射程 +1"
+   },
+   "Tooltip_PEScope_cat": {
+    "en": "Primary Sight<br>Aim Time +2<br>Aim Range 4-35",
+    "ch": "主要瞄具<br>瞄準時間 +2<br>瞄準範圍 4-35",
+    "cn": "主瞄具<br>瞄准时间 +2<br>瞄准范围 4-35"
+   },
+   "Tooltip_PSO_1_cat": {
+    "en": "Primary Sight<br>Aim Time +3<br>Aim Range 5-34",
+    "ch": "主要瞄具<br>瞄準時間 +3<br>瞄準範圍 5-34",
+    "cn": "主瞄具<br>瞄准时间 +3<br>瞄准范围 5-34"
+   },
+   "Tooltip_QG_ATSB": {
+    "en": "Recoil -1<br>Range +5",
+    "ch": "後坐力 -1<br>射程 +5",
+    "cn": "后坐力 -1<br>射程 +5"
+   },
+   "Tooltip_QG_CCB": {
+    "en": "Aim Time +1<br>Range +2<br>Damage +0.5",
+    "ch": "瞄準時間 +1<br>射程 +2<br>傷害 +0.5",
+    "cn": "瞄准时间 +1<br>射程 +2<br>伤害 +0.5"
+   },
+   "Tooltip_QG_CFWSB": {
+    "en": "Weight -0.3<br>Range +7",
+    "ch": "重量 -0.3<br>射程 +7",
+    "cn": "重量 -0.3<br>射程 +7"
+   },
+   "Tooltip_QG_CSB": {
+    "en": "Weight +0.1<br>Range +5<br>Damage +0.2",
+    "ch": "重量 +0.1<br>射程 +5<br>傷害 +0.2",
+    "cn": "重量 +0.1<br>射程 +5<br>伤害 +0.2"
+   },
+   "Tooltip_QG_TAB": {
+    "en": "Weight -0.5<br>Range +5",
+    "ch": "重量 -0.5<br>射程 +5",
+    "cn": "重量 -0.5<br>射程 +5"
+   },
+   "Tooltip_QG_TTAB": {
+    "en": "Weight +0.5<br>Range +12",
+    "ch": "重量 +0.5<br>射程 +12",
+    "cn": "重量 +0.5<br>射程 +12"
+   },
+   "Tooltip_QT_F93": {
+    "en": "Stock<br>Aim Time -6<br>Critical Hit Chance +8",
+    "ch": "槍托<br>瞄準時間 -6<br>暴擊率 +8",
+    "cn": "枪托<br>瞄准时间 -6<br>暴击率 +8"
+   },
+   "Tooltip_QT_Gen3": {
+    "en": "Stock<br>Aim Time -7<br>Critical Hit Chance +8",
+    "ch": "槍托<br>瞄準時間 -7<br>暴擊率 +8",
+    "cn": "枪托<br>瞄准时间 -7<br>暴击率 +8"
+   },
+   "Tooltip_QT_LDT416": {
+    "en": "Stock<br>Aim Time -10",
+    "ch": "槍托<br>瞄準時間 -10",
+    "cn": "枪托<br>瞄准时间 -10"
+   },
+   "Tooltip_QT_lugerP80": {
+    "en": "Stock<br>Aim Time -6<br>Critical Hit Chance +8",
+    "ch": "槍托<br>瞄準時間 -6<br>暴擊率 +8",
+    "cn": "枪托<br>瞄准时间 -6<br>暴击率 +8"
+   },
+   "Tooltip_QT_sr": {
+    "en": "Stock<br>Aim Time -6<br>Recoil -1<br>Critical Hit Chance +8",
+    "ch": "槍托<br>瞄準時間 -6<br>後坐力 -1<br>暴擊率 +8",
+    "cn": "枪托<br>瞄准时间 -6<br>后坐力 -1<br>暴击率 +8"
+   },
+   "Tooltip_Recoilpad_cat": {
+    "en": "Recoil -2",
+    "ch": "後坐力 -2",
+    "cn": "后坐力 -2"
    },
    "Tooltip_Riser": {
     "en": "Weapon furniture. Improves hit and critical chance, slows aiming time.",
     "ch": "武器配件. 提高命中率和暴擊率, 但會增加瞄準時間.",
     "cn": "武器配件. 提高命中率和暴击率, 但会增加瞄准时间."
    },
+   "Tooltip_SE_5Grip": {
+    "en": "Aim time: -1<br>Fire rate: +2<br>Accuracy: +6%",
+    "ch": "瞄準時間: -1<br>射速: +2<br>命中率: +6%",
+    "cn": "瞄准时间: -1<br>射速: +2<br>命中率: +6%"
+   },
+   "Tooltip_SMSUP_cat": {
+    "en": "Suppressor<br>Aim Time -1<br>Damage -0.5<br>Noise -70%",
+    "ch": "消音器<br>瞄準時間 -1<br>傷害 -0.5<br>噪音 -70%",
+    "cn": "消音器<br>瞄准时间 -1<br>伤害 -0.5<br>噪音 -70%"
+   },
+   "Tooltip_Sling_cat": {
+    "en": "Weight -0.5",
+    "ch": "重量 -0.5",
+    "cn": "重量 -0.5"
+   },
+   "Tooltip_TA11_4X_Scope": {
+    "en": "Primary Sight<br>Aim Time +10<br>Aim Range 4-31<br>Low Light Performance +7",
+    "ch": "主要瞄具<br>瞄準時間 +10<br>瞄準範圍 4-31<br>低光源效能 +7",
+    "cn": "主瞄具<br>瞄准时间 +10<br>瞄准范围 4-31<br>低光性能 +7"
+   },
+   "Tooltip_TroyM7_Blk": {
+    "en": "Stock<br>Aim Time -4<br>Critical Hit Chance +8",
+    "ch": "槍托<br>瞄準時間 -4<br>暴擊率 +8",
+    "cn": "枪托<br>瞄准时间 -4<br>暴击率 +8"
+   },
+   "Tooltip_TshiftGrip": {
+    "en": "Grip<br>Aim Time -7<br>Recoil +2",
+    "ch": "握把<br>瞄準時間 -7<br>後坐力 +2",
+    "cn": "握把<br>瞄准时间 -7<br>后坐力 +2"
+   },
+   "Tooltip_Unertl8X_cat": {
+    "en": "Primary Sight<br>Aim Time +4<br>Aim Range 6-34",
+    "ch": "主要瞄具<br>瞄準時間 +4<br>瞄準範圍 6-34",
+    "cn": "主瞄具<br>瞄准时间 +4<br>瞄准范围 6-34"
+   },
+   "Tooltip_VP09": {
+    "en": "Muzzle Brake<br>Aim Time -7<br>Recoil -1",
+    "ch": "制退器<br>瞄準時間 -7<br>後坐力 -1",
+    "cn": "制退器<br>瞄准时间 -7<br>后坐力 -1"
+   },
+   "Tooltip_ViperStock": {
+    "en": "Stock<br>Aim Time -2<br>Recoil -2",
+    "ch": "槍托<br>瞄準時間 -2<br>後坐力 -2",
+    "cn": "枪托<br>瞄准时间 -2<br>后坐力 -2"
+   },
+   "Tooltip_VltorEmod_Blk_Stock": {
+    "en": "Stock<br>Aim Time -5<br>Critical Hit Chance +8",
+    "ch": "槍托<br>瞄準時間 -5<br>暴擊率 +8",
+    "cn": "枪托<br>瞄准时间 -5<br>暴击率 +8"
+   },
+   "Tooltip_VortexSight": {
+    "en": "Primary Sight<br>Aim Time +7<br>Critical Hit Chance +8<br>Aim Range 3-26<br>Field of View +0.03",
+    "ch": "主要瞄具<br>瞄準時間 +7<br>暴擊率 +8<br>瞄準範圍 3-26<br>視野 +0.03",
+    "cn": "主瞄具<br>瞄准时间 +7<br>暴击率 +8<br>瞄准范围 3-26<br>视野 +0.03"
+   },
+   "Tooltip_WB_SST": {
+    "en": "Grip<br>Aim Time -4<br>Recoil -1",
+    "ch": "握把<br>瞄準時間 -4<br>後坐力 -1",
+    "cn": "握把<br>瞄准时间 -4<br>后坐力 -1"
+   },
+   "Tooltip_WB_xie": {
+    "en": "Grip<br>Aim Time +2<br>Recoil -2",
+    "ch": "握把<br>瞄準時間 +2<br>後坐力 -2",
+    "cn": "握把<br>瞄准时间 +2<br>后坐力 -2"
+   },
+   "Tooltip_WaltherMRS_1": {
+    "en": "Primary Sight<br>Aim Time -3<br>Aim Range 1-20",
+    "ch": "主要瞄具<br>瞄準時間 -3<br>瞄準範圍 1-20",
+    "cn": "主瞄具<br>瞄准时间 -3<br>瞄准范围 1-20"
+   },
+   "Tooltip_WaltherMRS_2": {
+    "en": "Primary Sight<br>Aim Time -4<br>Aim Range 1-21",
+    "ch": "主要瞄具<br>瞄準時間 -4<br>瞄準範圍 1-21",
+    "cn": "主瞄具<br>瞄准时间 -4<br>瞄准范围 1-21"
+   },
+   "Tooltip_XM157_cat": {
+    "en": "Primary Sight<br>Aim Time +4<br>Aim Range 5-54<br>Field of View +0.04",
+    "ch": "主要瞄具<br>瞄準時間 +4<br>瞄準範圍 5-54<br>視野 +0.04",
+    "cn": "主瞄具<br>瞄准时间 +4<br>瞄准范围 5-54<br>视野 +0.04"
+   },
+   "Tooltip_XY_109": {
+    "en": "Muzzle Brake<br>Aim Time -6<br>Recoil -2",
+    "ch": "制退器<br>瞄準時間 -6<br>後坐力 -2",
+    "cn": "制退器<br>瞄准时间 -6<br>后坐力 -2"
+   },
+   "Tooltip_XY_1911": {
+    "en": "Muzzle Brake<br>Aim Time -7<br>Recoil -2",
+    "ch": "制退器<br>瞄準時間 -7<br>後坐力 -2",
+    "cn": "制退器<br>瞄准时间 -7<br>后坐力 -2"
+   },
+   "Tooltip_XY_4guan": {
+    "en": "Suppressor<br>Damage -0.5<br>Range -1<br>Noise -80%",
+    "ch": "消音器<br>傷害 -0.5<br>射程 -1<br>噪音 -80%",
+    "cn": "消音器<br>伤害 -0.5<br>射程 -1<br>噪音 -80%"
+   },
+   "Tooltip_XY_Beowulf": {
+    "en": "Muzzle Brake<br>Aim Time -2<br>Recoil -2",
+    "ch": "制退器<br>瞄準時間 -2<br>後坐力 -2",
+    "cn": "制退器<br>瞄准时间 -2<br>后坐力 -2"
+   },
+   "Tooltip_XY_CARVER": {
+    "en": "Muzzle Brake<br>Aim Time -8<br>Recoil -2",
+    "ch": "制退器<br>瞄準時間 -8<br>後坐力 -2",
+    "cn": "制退器<br>瞄准时间 -8<br>后坐力 -2"
+   },
+   "Tooltip_XY_M4MK18": {
+    "en": "Suppressor<br>Aim Time -1<br>Damage -0.5<br>Range -1<br>Noise -85%",
+    "ch": "消音器<br>瞄準時間 -1<br>傷害 -0.5<br>射程 -1<br>噪音 -85%",
+    "cn": "消音器<br>瞄准时间 -1<br>伤害 -0.5<br>射程 -1<br>噪音 -85%"
+   },
+   "Tooltip_XY_M4MK18_cat": {
+    "en": "Aim time: -1<br>Damage: -0.5<br>Range: -1<br>Noise: -85%",
+    "ch": "瞄準時間: -1<br>傷害: -0.5<br>射程: -1<br>噪音: -85%",
+    "cn": "瞄准时间: -1<br>伤害: -0.5<br>射程: -1<br>噪音: -85%"
+   },
+   "Tooltip_XY_MK18": {
+    "en": "Muzzle Brake<br>Aim Time -8<br>Recoil -1",
+    "ch": "制退器<br>瞄準時間 -8<br>後坐力 -1",
+    "cn": "制退器<br>瞄准时间 -8<br>后坐力 -1"
+   },
+   "Tooltip_XY_OF": {
+    "en": "Suppressor<br>Noise -50%",
+    "ch": "消音器<br>噪音 -50%",
+    "cn": "消音器<br>噪音 -50%"
+   },
+   "Tooltip_XY_XDZT": {
+    "en": "Muzzle Brake<br>Aim Time -9<br>Recoil -1",
+    "ch": "制退器<br>瞄準時間 -9<br>後坐力 -1",
+    "cn": "制退器<br>瞄准时间 -9<br>后坐力 -1"
+   },
+   "Tooltip_XY_baoguo": {
+    "en": "Suppressor<br>Aim Time -1<br>Damage -0.85<br>Range -1<br>Noise -85%",
+    "ch": "消音器<br>瞄準時間 -1<br>傷害 -0.85<br>射程 -1<br>噪音 -85%",
+    "cn": "消音器<br>瞄准时间 -1<br>伤害 -0.85<br>射程 -1<br>噪音 -85%"
+   },
+   "Tooltip_XY_fang": {
+    "en": "Suppressor<br>Aim Time -1<br>Damage -0.5<br>Range -1<br>Noise -80%",
+    "ch": "消音器<br>瞄準時間 -1<br>傷害 -0.5<br>射程 -1<br>噪音 -80%",
+    "cn": "消音器<br>瞄准时间 -1<br>伤害 -0.5<br>射程 -1<br>噪音 -80%"
+   },
+   "Tooltip_XY_fang1_Silencer": {
+    "en": "Suppressor<br>Aim Time -1<br>Damage -0.5<br>Range -1<br>Noise -80%",
+    "ch": "消音器<br>瞄準時間 -1<br>傷害 -0.5<br>射程 -1<br>噪音 -80%",
+    "cn": "消音器<br>瞄准时间 -1<br>伤害 -0.5<br>射程 -1<br>噪音 -80%"
+   },
+   "Tooltip_XY_kac": {
+    "en": "Suppressor<br>Aim Time -1<br>Damage -0.5<br>Range -1<br>Noise -80%",
+    "ch": "消音器<br>瞄準時間 -1<br>傷害 -0.5<br>射程 -1<br>噪音 -80%",
+    "cn": "消音器<br>瞄准时间 -1<br>伤害 -0.5<br>射程 -1<br>噪音 -80%"
+   },
+   "Tooltip_XY_pomen": {
+    "en": "Muzzle Brake<br>Aim Time -6<br>Recoil -2<br>Door Breaching +5",
+    "ch": "制退器<br>瞄準時間 -6<br>後坐力 -2<br>破門 +5",
+    "cn": "制退器<br>瞄准时间 -6<br>后坐力 -2<br>破门 +5"
+   },
+   "Tooltip_XY_sr_s": {
+    "en": "Suppressor<br>Aim Time -1<br>Damage -0.5<br>Noise -80%",
+    "ch": "消音器<br>瞄準時間 -1<br>傷害 -0.5<br>噪音 -80%",
+    "cn": "消音器<br>瞄准时间 -1<br>伤害 -0.5<br>噪音 -80%"
+   },
+   "Tooltip_XY_yazhui": {
+    "en": "Muzzle Brake<br>Recoil -7<br>Aim Time -2",
+    "ch": "制退器<br>後坐力 -7<br>瞄準時間 -2",
+    "cn": "制退器<br>后坐力 -7<br>瞄准时间 -2"
+   },
    "Tooltip_YuletideJournal": {
     "en": "A wrapped Yuletide journal with bundled supplies hidden inside.",
     "ch": "一本包裝好的聖誕日記, 裡面藏著附贈的用品.",
     "cn": "一本包装好的圣诞日记, 里面藏着捆绑的用品."
+   },
+   "Tooltip_Zombie_intestines": {
+    "en": "塞的满满的，谁知道僵尸吃了什么好东西。",
+    "ch": "塞得滿滿的, 誰知道殭屍吃了什麼好東西.",
+    "cn": "塞得满满的, 谁知道僵尸吃了什么好东西."
+   },
+   "Tooltip_ar15Stock": {
+    "en": "Stock<br>Aim Time -2<br>Recoil -1<br>Critical Hit Chance +8",
+    "ch": "槍托<br>瞄準時間 -2<br>後坐力 -1<br>暴擊率 +8",
+    "cn": "枪托<br>瞄准时间 -2<br>后坐力 -1<br>暴击率 +8"
+   },
+   "Tooltip_ipsc_cat": {
+    "en": "Weapon Mount<br>Aim Time -4<br>Damage +0.3",
+    "ch": "武器支架<br>瞄準時間 -4<br>傷害 +0.3",
+    "cn": "武器支架<br>瞄准时间 -4<br>伤害 +0.3"
+   },
+   "Tooltip_item_AirDropMarker": {
+    "en": "Right click to deploy smoke<br>Causes loud noise<br>Continuously attracts zombies<br>Until air drop arrives<br>Prepare for battle",
+    "ch": "按右鍵部署煙霧<br>會發出巨大噪音<br>持續吸引殭屍<br>直到空投抵達<br>準備戰鬥",
+    "cn": "右键部署烟雾<br>会发出巨大噪音<br>持续吸引僵尸<br>直到空投抵达<br>准备战斗"
+   },
+   "Tooltip_item_AmmoBag": {
+    "en": "Hold a weapon in your hand and right-click this item to bind ammunition.",
+    "ch": "將武器拿在手中, 然後以右鍵點選此物品來綁定彈藥.",
+    "cn": "将武器拿在手中, 然后右键点击该物品来绑定弹药."
+   },
+   "Tooltip_item_ArmorShieldBody": {
+    "en": "Equipment Body<br>Block Frontal Damage",
+    "ch": "裝備於身體<br>阻擋正面傷害",
+    "cn": "装备于身体<br>阻挡正面伤害"
+   },
+   "Tooltip_item_ArmorShieldHand": {
+    "en": "Equipment Left Hand<br>Block Frontal Damage",
+    "ch": "裝備於左手<br>阻擋正面傷害",
+    "cn": "装备于左手<br>阻挡正面伤害"
+   },
+   "Tooltip_item_ArmorShieldHand_cat": {
+    "en": "Equipment Left Hand<br>Block Frontal Damage",
+    "ch": "裝備於左手<br>阻擋正面傷害",
+    "cn": "装备于左手<br>阻挡正面伤害"
+   },
+   "Tooltip_item_QBU191_cat": {
+    "en": "The QBU-191 is the sniper/marksman variant of the Chinese QBZ-191 assault rifle",
+    "ch": "QBU-191 是中國 QBZ-191 突擊步槍的狙擊／精確射手衍生型",
+    "cn": "QBU-191 是中国 QBZ-191 突击步枪的狙击/精确射手衍生型"
+   },
+   "Tooltip_item_QJY201_cat": {
+    "en": "QJY-201 is a Chinese 7.62mm universal machine gun developed as a more modern variant of the American M60 and based on its function.",
+    "ch": "QJY-201 是中國研發的 7.62mm 通用機槍, 定位為美國 M60 的現代化衍生型, 並以其功能為基礎.",
+    "cn": "QJY-201 是中国研发的 7.62mm 通用机枪, 定位为美国 M60 的现代化衍生型, 并以其功能为基础."
+   },
+   "Tooltip_item_REAPR_cat": {
+    "en": "The REAPR is a light machine gun developed for use in ground troops. It features a high rate of fire and accuracy, making it ideal for combat at medium ranges.<br>Recoil Enhanced Automatic Precision Rifle",
+    "ch": "REAPR 是一款為地面部隊研發的輕機槍. 它射速快且命中率高, 非常適合中距離作戰. <br>後坐力強化自動精確步槍",
+    "cn": "REAPR 是一款为地面部队研发的轻机枪. 它射速快且命中率高, 非常适合中距离作战. <br>后坐力强化自动精确步枪"
+   },
+   "Tooltip_kriss_muzzle_d_Silencer": {
+    "en": "Suppressor<br>Aim Time -1<br>Damage -0.5<br>Range -1<br>Noise -80%",
+    "ch": "消音器<br>瞄準時間 -1<br>傷害 -0.5<br>射程 -1<br>噪音 -80%",
+    "cn": "消音器<br>瞄准时间 -1<br>伤害 -0.5<br>射程 -1<br>噪音 -80%"
+   },
+   "Tooltip_leupold": {
+    "en": "Right Sight<br>6x Combo Scope<br>Aim Time -1<br>Low Light Performance +5",
+    "ch": "右側瞄具<br>6 倍組合瞄準鏡<br>瞄準時間 -1<br>低光源效能 +5",
+    "cn": "右侧瞄具<br>6倍组合瞄准镜<br>瞄准时间 -1<br>低光性能 +5"
+   },
+   "Tooltip_weapon_AimingTime": {
+    "en": "Aiming Time",
+    "ch": "瞄準時間",
+    "cn": "瞄准时间"
+   },
+   "Tooltip_weapon_Angle": {
+    "en": "Angle",
+    "ch": "角度",
+    "cn": "角度"
+   },
+   "Tooltip_weapon_ClipSize": {
+    "en": "Clip Size",
+    "ch": "彈匣容量",
+    "cn": "弹匣容量"
+   },
+   "Tooltip_weapon_Grip": {
+    "en": "Grip",
+    "ch": "握把",
+    "cn": "握把"
+   },
+   "Tooltip_weapon_HitChance": {
+    "en": "Hit Chance",
+    "ch": "命中率",
+    "cn": "命中率"
+   },
+   "Tooltip_weapon_L_Scope": {
+    "en": "Left sight",
+    "ch": "左側瞄具",
+    "cn": "左侧瞄具"
+   },
+   "Tooltip_weapon_Laser": {
+    "en": "Laser",
+    "ch": "雷射",
+    "cn": "激光"
+   },
+   "Tooltip_weapon_MaxRange": {
+    "en": "Range",
+    "ch": "射程",
+    "cn": "射程"
+   },
+   "Tooltip_weapon_MinRange": {
+    "en": "Min Range",
+    "ch": "最小射程",
+    "cn": "最小射程"
+   },
+   "Tooltip_weapon_Misc": {
+    "en": "Miscellaneous",
+    "ch": "其他",
+    "cn": "其他"
+   },
+   "Tooltip_weapon_PartType": {
+    "en": "Part Type",
+    "ch": "零件類型",
+    "cn": "部件类型"
+   },
+   "Tooltip_weapon_R_Scope": {
+    "en": "Right sight",
+    "ch": "右側瞄具",
+    "cn": "右侧瞄具"
+   },
+   "Tooltip_weapon_RecoilDelay": {
+    "en": "Recoil Delay",
+    "ch": "後坐力延遲",
+    "cn": "后坐力延迟"
+   },
+   "Tooltip_weapon_ReloadTime": {
+    "en": "Reload Time",
+    "ch": "裝填時間",
+    "cn": "装填时间"
+   },
+   "Tooltip_weapon_Silencer": {
+    "en": "Suppressor",
+    "ch": "消音器",
+    "cn": "消音器"
+   },
+   "Tooltip_weapon_Skin": {
+    "en": "Skin",
+    "ch": "塗裝",
+    "cn": "涂装"
+   },
+   "Tooltip_weapon_SoundRadius": {
+    "en": "Noise",
+    "ch": "噪音",
+    "cn": "噪音"
+   },
+   "Tooltip_weapon_Stool": {
+    "en": "Bipod",
+    "ch": "兩腳架",
+    "cn": "两脚架"
    }
   },
   "UI.json": {
@@ -7698,6 +14023,36 @@
     "ch": "ETW角色頁面上工具提示的最大寬度 (畫素).",
     "cn": "ETW角色页面上工具提示的最大宽度 (像素)."
    },
+   "UI_GunpartTooltip_EnableCompact": {
+    "en": "Enable Compact Tooltip",
+    "ch": "啟用精簡提示",
+    "cn": "启用精简提示"
+   },
+   "UI_GunpartTooltip_EnableCompact_tooltip": {
+    "en": "Use compact custom tooltip for weapon parts with many mount points",
+    "ch": "對具有多個安裝點的武器零件使用精簡的自訂提示",
+    "cn": "对具有多个安装点的武器部件使用精简的自定义提示"
+   },
+   "UI_GunpartTooltip_ModOptions_Display": {
+    "en": "Display Options",
+    "ch": "顯示選項",
+    "cn": "显示选项"
+   },
+   "UI_GunpartTooltip_ModOptions_Title": {
+    "en": "Gunpart Tooltip",
+    "ch": "槍械零件提示",
+    "cn": "枪械部件提示"
+   },
+   "UI_GunpartTooltip_ShowMountList": {
+    "en": "Show Weapon Compatibility",
+    "ch": "顯示武器相容性",
+    "cn": "显示武器兼容性"
+   },
+   "UI_GunpartTooltip_ShowMountList_tooltip": {
+    "en": "Display weapon compatibility list in gunpart tooltips",
+    "ch": "在槍械零件提示中顯示武器相容性清單",
+    "cn": "在枪械部件提示中显示武器兼容性列表"
+   },
    "UI_InjuryIndicator_StitchesReady": {
     "en": "stitches can be removed",
     "ch": "縫線可以拆除了",
@@ -8508,10 +14863,35 @@
     "ch": "Bandits 額外選項",
     "cn": "Bandits 额外选项"
    },
+   "UI_optionscreen_binding_GunLineDown": {
+    "en": "Switch Tactical Stance",
+    "ch": "切換戰術姿勢",
+    "cn": "切换战术姿态"
+   },
+   "UI_optionscreen_binding_KeySetting_AWCWF": {
+    "en": "Escape From Kentucky Key Settings",
+    "ch": "Escape From Kentucky 按鍵設定",
+    "cn": "Escape From Kentucky 按键设置"
+   },
+   "UI_optionscreen_binding_LauchGrenadelauncherat": {
+    "en": "Launch Attached Device",
+    "ch": "發射附掛裝置",
+    "cn": "发射附挂装置"
+   },
+   "UI_optionscreen_binding_OpenWindownCat": {
+    "en": "Open Weapon Console",
+    "ch": "開啟武器控制台",
+    "cn": "打开武器控制台"
+   },
    "UI_optionscreen_binding_ProxInv_Force_Selected": {
     "en": "Force Selected Key",
     "ch": "強制選取按鍵",
     "cn": "强制选取按键"
+   },
+   "UI_optionscreen_binding_SwtichLightSet": {
+    "en": "Toggle Light Mode",
+    "ch": "切換燈光模式",
+    "cn": "切换灯光模式"
    },
    "UI_prof_moredesc_movespeedintrees": {
     "en": "%1% move speed in trees",
