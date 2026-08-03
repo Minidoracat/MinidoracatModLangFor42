@@ -3,7 +3,7 @@
 > 本檔由 `uv run scripts/build_mod.py manifest` 自動生成，請勿手動編輯。
 > 中文名稱與摘要維護於 `sources/mod_names_zh.json`，修改後重跑 manifest。
 
-共支援 **460 個 Workshop 模組**（603 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
+共支援 **466 個 Workshop 模組**（609 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 |
 | --- | --- | --- | --- | --- |
@@ -241,6 +241,7 @@
 | [U.S. M548 Cargo Carrier by Papa_Chad](https://steamcommunity.com/sharedfiles/filedetails/?id=3424497614) | U.S. M548 貨運運輸車 (Papa_Chad) | 新增美軍 M548 履帶式貨運運輸車輛。 | `U.S. M548 Cargo Carrier by Papa_Chad` | 1 |
 | [Immersive Suicide [B42/B41]](https://steamcommunity.com/sharedfiles/filedetails/?id=3426448380) | 沉浸式自殺 | 新增自殺互動選項，含確認視窗與強制殭屍化等沙盒設定。 | `stanks_suicide` | 12 |
 | ['86 Chevrolet CUCVs + M101A2 Trailer](https://steamcommunity.com/sharedfiles/filedetails/?id=3428008364) | '86 Chevrolet CUCV 軍用卡車 + M101A2 拖車 | 新增 1986 年雪佛蘭 CUCV 軍用車系與 M101A2 拖車，含裝甲與配件製作。 | `86chevyCUCV` | 59 |
+| [Nepenthe's Dismantle Any Car〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3428369137) | 任意車輛拆解 | 可拆解完好車輛（非僅殘骸）以取得金工材料。 | `NepWreckWorkingCars` | 11 |
 | [Money From Credit Cards](https://steamcommunity.com/sharedfiles/filedetails/?id=3428650803) | 信用卡提款 | 可從信用卡提取金錢，支援銀行需求、銷毀機率等沙盒設定。 | `MoneyFromCreditCards` | 25 |
 | [HydeCo. Bees!](https://steamcommunity.com/sharedfiles/filedetails/?id=3430224478) | HydeCo. 養蜂！ | 新增養蜂系統，含蜂箱、熏煙器、養蜂裝備與蜂蠟蠟燭等大量物品。 | `HydeCoBees` | 391 |
 | [[B42MP] Frockin Splendor! Vol.3](https://steamcommunity.com/sharedfiles/filedetails/?id=3431256608) | 華麗服飾！Vol.3 | 新增多款華麗服飾與鞋履，支援多種穿法調整選項。 | `GanydeBielovzki's Frockin Splendor! Vol.3` | 60 |
@@ -252,6 +253,7 @@
 | [Vehicle Military Zones](https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337) | 軍事區域車輛 | 在軍事區域生成軍用車輛，可調整生成率、鑰匙與損壞機率。 | `VMZNEW` | 13 |
 | [[B42] Useful Barrels](https://steamcommunity.com/sharedfiles/filedetails/?id=3436537035) | 有用的汽油桶 | 讓汽油桶可儲存燃料、酒類、飲料與染料等多種液體，可沙盒調整。 | `UsefulBarrels`, `UsefulBarrelsMP` | 80 |
 | [[B41/B42.18] Injectors [Distribution Update]](https://steamcommunity.com/sharedfiles/filedetails/?id=3437429771) | 注射針劑 | 新增腎上腺素、嗎啡等多種注射針劑，提供各類增益效果。 | `Injectors` | 26 |
+| [CleanUI [B42.12]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3437629766) | 簡潔介面 | 以更精簡快速的版面取代原版物品欄、戰利品與右鍵選單介面。 | `CleanUI` | 53 |
 | [Nepenthe's High Beams](https://steamcommunity.com/sharedfiles/filedetails/?id=3438126404) | Nepenthe 的遠光燈 | 為車輛新增遠光燈控制，支援快捷鍵、徑向選單與常亮模式。 | `NepHighBeams` | 21 |
 | [HydeCo. Unlimited Cars 42.16.3](https://steamcommunity.com/sharedfiles/filedetails/?id=3438759949) | HydeCo. 無限車輛 | 調整車輛生成機制，可自訂燒毀、鑰匙、零件損壞機率與拖車生成。 | `hydecounlimitedcars` | 51 |
 | [Military Ponchos: RELOADED](https://steamcommunity.com/sharedfiles/filedetails/?id=3439247001) | 軍用雨披：重製版 | 新增多國迷彩軍用雨披，兼具雨具與偽裝用途。 | `MilitaryPonchosRELOADED` | 14 |
@@ -297,6 +299,7 @@
 | [[B42] Survival HUD](https://steamcommunity.com/sharedfiles/filedetails/?id=3495906499) | 生存 HUD | 新增可自訂的生存狀態 HUD，顯示健康、飽食度、疲勞等需求。 | `SurvivalHUD` | 16 |
 | [Somewhat Traits [42.19]](https://steamcommunity.com/sharedfiles/filedetails/?id=3498347699) | 零零總總特質 | 新增多種正負面特質與技能加成選項，豐富角色創建。 | `SomewhatTraits`, `SomewhatTraitsCore`, `SomewhatTraitsSkills` | 133 |
 | [Show Key Origin [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3501701205) | 顯示鑰匙來源 | 顯示鑰匙對應建築的方向與距離，可設定需持指南針才生效。 | `ShowKeyOrigin` | 9 |
+| [Neat Crafting [B42.12]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3502080466) | 整潔製作 | 重製製作視窗側欄與配方清單，加入搜尋、篩選與版面切換功能。 | `Neat_Crafting` | 69 |
 | ['91 Nissan 240SX](https://steamcommunity.com/sharedfiles/filedetails/?id=3504401781) | 1991 Nissan 240SX | 新增 1991 年 Nissan 240SX 跑車，含跳燈、天窗等部件。 | `91nissan240sx` | 8 |
 | [Halo Marine Armor [B41/B42.14]](https://steamcommunity.com/sharedfiles/filedetails/?id=3507919075) | 最後一戰陸戰隊護甲 | 新增《最後一戰》UNSC 陸戰隊護甲套裝，含頭盔與胸甲等。 | `HaloMarineArmor` | 25 |
 | [Street Smarts](https://steamcommunity.com/sharedfiles/filedetails/?id=3511535258) | 街頭智慧 | 讓新角色初始知曉出生點周邊與道路資訊，範圍可調整。 | `NepLocalKnowledge` | 11 |
@@ -360,6 +363,7 @@
 | [TwisTonFire - Better Trapping](https://steamcommunity.com/sharedfiles/filedetails/?id=3573232324) | TwisTonFire - 更好的陷阱 | 改良陷阱系統，顯示動物種類、可用誘餌與捕捉時間等資訊。 | `twisttrapping`, `twisttrappingvanilla` | 37 |
 | [TwisTonFire - Improved Soundoptions](https://steamcommunity.com/sharedfiles/filedetails/?id=3575778063) | TwisTonFire - 改良音效選項 | 強化音效設定介面，支援搜尋、篩選、收藏與批量調整音量。 | `twistimso` | 18 |
 | [TwisTonFire - Dude, Where Is My Car?](https://steamcommunity.com/sharedfiles/filedetails/?id=3576268735) | TwisTonFire - 老兄，我的車呢？ | 可用筆在地圖上標記並追蹤車輛位置，方便找回愛車。 | `twistdwimc` | 6 |
+| [Combine small leather into medium〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3576417449) | 小型皮革合併 | 可將兩塊小型原始皮合併成一塊中型原始皮。 | `leathersmalltomedium` | 1 |
 | [Vanilla Foods Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=3577903007) | 原版食物擴充 | 大幅擴充原版食物種類，新增啤酒、零食、乳製品等大量品項。 | `VanillaFoodsExpanded` | 2069 |
 | [TwisTonFire - Quick'n'Auto Mark](https://steamcommunity.com/sharedfiles/filedetails/?id=3579410548) | TwisTonFire - 快速自動標記 | 進入建築時自動在地圖標記，可自訂延遲時間與標記符號。 | `twistquickautomark` | 17 |
 | [ST Additions - Pry Open (A Crowbar Mod)](https://steamcommunity.com/sharedfiles/filedetails/?id=3579640010) | ST 擴充 - 撬開（撬棍模組） | 可用撬棍撬開門窗、車門與車庫門，成功率受多種技能影響。 | `STA_PryOpen` | 189 |
@@ -418,6 +422,7 @@
 | [My Spatial Refuge [B42] [MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3632195933) | 我的空間避難所 | 新增個人空間避難所系統，含經驗精華與多階升級物資。 | `myspatialrefuge` | 200 |
 | [[B42.13+] Pumps Have Propane (Standalone MP/SP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3632444452) | 油泵供應丙烷（獨立版） | 可從加油泵充裝丙烷罐、丙烷噴燈與丙烷罐車。 | `PumpsHavePropaneMP` | 6 |
 | [ModernFirearmsSystem 42.19 (SP/MP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3633421539) | 現代槍械系統 | 新增現代槍械系統，含多種口徑彈藥、彈匣與彈藥背帶。 | `ModernFirearmsSystem` | 34 |
+| [Craft Propane〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3634065654) | 丙烷填充 | 新增以木炭與水填充丙烷罐的配方。 | `CraftPropane` | 3 |
 | [Better Safehouse [B42.20- MP]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3634569678) | 更好的安全屋 | 強化多人連線的安全屋管理：副屋主權限、擴建範圍、主重生點與側邊面板等。 | `BetterSafehouse` | 116 |
 | [Challenge Traits - Headshots, CDDA, and More [42.19 + 42.18]](https://steamcommunity.com/sharedfiles/filedetails/?id=3634630898) | 挑戰特質：爆頭、CDDA 等 | 新增爆頭限定、CDDA 等多種挑戰型特質玩法。 | `OCsChallengeTraits` | 37 |
 | [Dynamic Trading (w/ NPC) B42.16](https://steamcommunity.com/sharedfiles/filedetails/?id=3635333613) | 動態交易（含 NPC） | 新增與 NPC 的動態交易系統，含季節事件、通膨與土匪伏擊。 | `DynamicTrading`, `DynamicTradingCommon`, `DynamicTradingV2` | 136 |
@@ -429,6 +434,7 @@
 | ['70 Plymouth Road Runner](https://steamcommunity.com/sharedfiles/filedetails/?id=3642935062) | 1970 年 Plymouth Road Runner | 新增 1970 年 Plymouth Road Runner 車輛，可製作車門、保險桿等零件。 | `70roadRunner` | 25 |
 | [zRe Vaccine 3.0 [b42.13+ MP] ReMod by kERHUS](https://steamcommunity.com/sharedfiles/filedetails/?id=3643703198) | zRe 疫苗 3.0 ReMod by kERHUS | 新增疫苗與抗病毒藥物研製系統，包含化學試劑、實驗室設備與病毒學書籍。 | `zReModVaccin30bykERHUS`, `zReModVaccin30bykERHUS_Addon` | 33 |
 | [Extensive Power Rework B42 (no longer supported)](https://steamcommunity.com/sharedfiles/filedetails/?id=3643765614) | 深度電力重製（已停止支援） | 重製電力系統，設施會隨時間衰減，需評估損壞、維修與校準來維持供電。 | `EPR_B42` | 253 |
+| [Mysterious Vehicle Claim Key〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3643840023) | 神秘車輛認領鑰匙 | 多人伺服器車輛認領系統，可綁定車輛擁有者並設定共享權限。 | `Mysterious Vehicle Claim Key` | 87 |
 | [B42 Scavenging Skill〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3645462965) | 拾荒技能 | 新增拾荒技能，搜刮容器時有機率找到額外戰利品，附五本技能書與禿鷲特質，各級機率與經驗皆可調。 | `B4213ScavengingSkill` | 62 |
 | [VorpallySauced - Weapon Mastery System](https://steamcommunity.com/sharedfiles/filedetails/?id=3645781559) | VorpallySauced - 武器精通系統 | 新增武器精通系統，武器隨擊殺累積成長升級，並可獲得各式詞綴強化。 | `VorpallySauced` | 759 |
 | [Project Arcade [B42MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3645980077) | 街機計劃 | 新增街機主題內容與相關配方，為遊戲增添街機機台元素。 | `ProjectArcade` | 38 |

@@ -1,0 +1,9 @@
+{
+    "mod_ids": [
+        "CraftPropane"
+    ],
+    "name": "Craft Propane",
+    "note": "原創翻譯（2026-08-03 使用者核准收錄）。上游無 Translate 目錄，遊戲內直接顯示配方 id「CreatePropane」。CN/CH 皆人工直寫。本目錄另收 2 個製作分類鍵（`IGUI_CraftCategory_MetalWorking`／`IGUI_CraftingCategories_MetalWorking`，分別供 Neat Crafting 側欄與原版製作 UI）——`MetalWorking`（大寫 W）這個 category 字面值的唯一 consumer 就是本 mod 的 craftpropane.txt，與本體的 `Metalworking`（小寫 w）是不同鍵，故隨本 mod 走 own lane 而非 own_translations。譯名依上游腳本實際 I/O 裁決：inputs 需未滿的 Base.PropaneTank（flags NotFull）＋木炭＋水＋橡膠軟管，outputs 仍是同一個 PropaneTank，本質為填充而非從無到有製作，故作「填充丙烷罐」而非「製作丙烷罐」（上游資料夾名亦為 RefillPropane；mod.info 的 id 則是 CraftPropane）。風險：上游無 EN 錨點，tracker layer-A 對此鍵變動無感（屬偵測盲區）。",
+    "origin": "own",
+    "workshop_id": "3634065654"
+}
