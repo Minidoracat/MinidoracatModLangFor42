@@ -1,1003 +1,1003 @@
 {
-  "_comment": "【已降級為 lint 資料】斷絕 OpenCC 後 build 不再讀取本檔；十族 regex 由 scripts/lint_ch.py 以 report-only 方式掃 sources/ch corpus，作為凍結基線殘留錯誤與人工新條目的回歸防護網。",
-  "_usage": "在對應 category 的 rules 陣列加入 {pattern, replacement} 供 lint 掃描；pattern 為 regex，replacement 僅供人工參考（lint 不自動改寫）。",
-  "_provenance": "七大類移植自本體 MinidoracatLangFor42 scripts/opencc_fixes.json（2026-07-19），依本包語料逐條覆核後調整：不移植「係數→系數」（台灣標準即係數，照搬會退化 72 處）；不移植「^幹$→乾」（本包 UI_Phrases_SWEAR4 值為髒話「幹」）；「髮生」「散髮」加 lookbehind 防護（毛髮生長／披頭散髮為正確用法）。本包自行覆核不收的規則：「數據包→封包」（s2twp 已把 数据包／數據包 一律轉為「資料包」，post_fix 永不命中；network packet 台譯改走 ch_overrides 逐案處理）。",
-  "post_fixes": [
+ "_comment": "【已降級為 lint 資料】斷絕 OpenCC 後 build 不再讀取本檔；十族 regex 由 scripts/lint_ch.py 以 report-only 方式掃 sources/ch corpus，作為凍結基線殘留錯誤與人工新條目的回歸防護網。",
+ "_usage": "在對應 category 的 rules 陣列加入 {pattern, replacement} 供 lint 掃描；pattern 為 regex，replacement 僅供人工參考（lint 不自動改寫）。",
+ "_provenance": "七大類移植自本體 MinidoracatLangFor42 scripts/opencc_fixes.json（2026-07-19），依本包語料逐條覆核後調整：不移植「係數→系數」（台灣標準即係數，照搬會退化 72 處）；不移植「^幹$→乾」（本包 UI_Phrases_SWEAR4 值為髒話「幹」）；「髮生」「散髮」加 lookbehind 防護（毛髮生長／披頭散髮為正確用法）。本包自行覆核不收的規則：「數據包→封包」（s2twp 已把 数据包／數據包 一律轉為「資料包」，post_fix 永不命中；network packet 台譯改走 ch_overrides 逐案處理）。",
+ "post_fixes": [
+  {
+   "category": "幹→乾",
+   "description": "乾燥、乾貨相關：OpenCC 常把「乾」誤轉為「幹」",
+   "rules": [
     {
-      "category": "幹→乾",
-      "description": "乾燥、乾貨相關：OpenCC 常把「乾」誤轉為「幹」",
-      "rules": [
-        {
-          "pattern": "幹(大麥捆|羅勒葉|黑鼠尾草|貓糧|洋甘菊|細香蔥|香菜|聚合草|錦葵|狗糧)",
-          "replacement": "乾\\1",
-          "note": "乾燥物品"
-        },
-        {
-          "pattern": "幹(黑豆|鷹嘴豆|芸豆|扁豆|豌豆)",
-          "replacement": "乾\\1",
-          "note": "乾燥豆類"
-        },
-        {
-          "pattern": "幹(大麻捆|薰衣草花瓣|萬壽菊|薄荷|牛至|歐芹|車前草|罌粟果|玫瑰花瓣|迷迭香|黑麥捆|鼠尾草|向日葵花盤|百里香|菸草|小麥捆|野蒜)",
-          "replacement": "乾\\1",
-          "note": "乾燥植物"
-        },
-        {
-          "pattern": "幹(哈瓦那辣椒|墨西哥辣椒)",
-          "replacement": "乾\\1",
-          "note": "乾燥辣椒"
-        },
-        {
-          "pattern": "杏幹",
-          "replacement": "杏乾"
-        },
-        {
-          "pattern": "幹拉麵",
-          "replacement": "乾拉麵"
-        },
-        {
-          "pattern": "口有點幹",
-          "replacement": "口有點乾"
-        },
-        {
-          "pattern": "幹\\s*草",
-          "replacement": "乾草",
-          "note": "乾草（飼料），含空格版"
-        },
-        {
-          "pattern": "幹燥",
-          "replacement": "乾燥"
-        },
-        {
-          "pattern": "幹爽",
-          "replacement": "乾爽"
-        },
-        {
-          "pattern": "幹淨",
-          "replacement": "乾淨"
-        },
-        {
-          "pattern": "幹糧",
-          "replacement": "乾糧"
-        },
-        {
-          "pattern": "幹柴",
-          "replacement": "乾柴"
-        },
-        {
-          "pattern": "幹葉",
-          "replacement": "乾葉"
-        },
-        {
-          "pattern": "風幹",
-          "replacement": "風乾"
-        },
-        {
-          "pattern": "晾幹",
-          "replacement": "晾乾"
-        },
-        {
-          "pattern": "烘幹",
-          "replacement": "烘乾"
-        },
-        {
-          "pattern": "曬幹",
-          "replacement": "曬乾"
-        },
-        {
-          "pattern": "吹幹",
-          "replacement": "吹乾"
-        },
-        {
-          "pattern": "擦幹",
-          "replacement": "擦乾"
-        },
-        {
-          "pattern": "幹巷",
-          "replacement": "乾巷",
-          "note": "街道名 Dry Lane"
-        },
-        {
-          "pattern": "弄幹",
-          "replacement": "弄乾"
-        }
-      ]
+     "pattern": "幹(大麥捆|羅勒葉|黑鼠尾草|貓糧|洋甘菊|細香蔥|香菜|聚合草|錦葵|狗糧)",
+     "replacement": "乾\\1",
+     "note": "乾燥物品"
     },
     {
-      "category": "幹→干",
-      "description": "干擾、干預：「干」不是「乾」也不是「幹」",
-      "rules": [
-        {
-          "pattern": "幹\\s*擾",
-          "replacement": "干擾",
-          "note": "含空格版（傳單排版）"
-        },
-        {
-          "pattern": "幹預",
-          "replacement": "干預"
-        }
-      ]
+     "pattern": "幹(黑豆|鷹嘴豆|芸豆|扁豆|豌豆)",
+     "replacement": "乾\\1",
+     "note": "乾燥豆類"
     },
     {
-      "category": "髮→發",
-      "description": "動詞「發」被誤轉為「髮」",
-      "rules": [
-        {
-          "pattern": "(?<![毛頭])髮生",
-          "replacement": "發生",
-          "note": "排除「毛髮生長」「頭髮生長」等正確用法"
-        },
-        {
-          "pattern": "髮現",
-          "replacement": "發現"
-        },
-        {
-          "pattern": "髮射",
-          "replacement": "發射"
-        },
-        {
-          "pattern": "髮動",
-          "replacement": "發動"
-        },
-        {
-          "pattern": "髮出",
-          "replacement": "發出"
-        },
-        {
-          "pattern": "髮展",
-          "replacement": "發展"
-        },
-        {
-          "pattern": "髮送",
-          "replacement": "發送"
-        },
-        {
-          "pattern": "髮佈",
-          "replacement": "發佈"
-        },
-        {
-          "pattern": "髮布",
-          "replacement": "發布"
-        },
-        {
-          "pattern": "髮揮",
-          "replacement": "發揮"
-        },
-        {
-          "pattern": "髮言",
-          "replacement": "發言"
-        },
-        {
-          "pattern": "髮電",
-          "replacement": "發電"
-        },
-        {
-          "pattern": "髮炎",
-          "replacement": "發炎"
-        },
-        {
-          "pattern": "髮燒",
-          "replacement": "發燒"
-        },
-        {
-          "pattern": "髮酵",
-          "replacement": "發酵"
-        },
-        {
-          "pattern": "髮芽",
-          "replacement": "發芽"
-        },
-        {
-          "pattern": "爆髮",
-          "replacement": "爆發"
-        },
-        {
-          "pattern": "開髮",
-          "replacement": "開發"
-        },
-        {
-          "pattern": "觸髮",
-          "replacement": "觸發"
-        },
-        {
-          "pattern": "蒸髮",
-          "replacement": "蒸發"
-        },
-        {
-          "pattern": "揮髮",
-          "replacement": "揮發"
-        },
-        {
-          "pattern": "(?<!頭)散髮",
-          "replacement": "散發",
-          "note": "排除「披頭散髮」"
-        },
-        {
-          "pattern": "啟髮",
-          "replacement": "啟發"
-        },
-        {
-          "pattern": "批髮",
-          "replacement": "批發"
-        },
-        {
-          "pattern": "沙髮",
-          "replacement": "沙發"
-        },
-        {
-          "pattern": "另一頭髮生(?!長)",
-          "replacement": "另一頭發生",
-          "note": "「河的另一頭」+「發生」撞頭髮 lookbehind 防護漏網（2026-07-19 本體遷移實證，同步）"
-        },
-        {
-          "pattern": "街頭髮生",
-          "replacement": "街頭發生",
-          "note": "「街頭」+「發生」同類漏網；無頭髮語境（2026-07-19 同步自本體）"
-        }
-      ]
+     "pattern": "幹(大麻捆|薰衣草花瓣|萬壽菊|薄荷|牛至|歐芹|車前草|罌粟果|玫瑰花瓣|迷迭香|黑麥捆|鼠尾草|向日葵花盤|百里香|菸草|小麥捆|野蒜)",
+     "replacement": "乾\\1",
+     "note": "乾燥植物"
     },
     {
-      "category": "發→髮",
-      "description": "名詞「髮」被誤轉為「發」（髮型名等）",
-      "rules": [
-        {
-          "pattern": "發霧",
-          "replacement": "髮霧"
-        },
-        {
-          "pattern": "胭脂魚發",
-          "replacement": "胭脂魚髮",
-          "note": "髮型名稱"
-        },
-        {
-          "pattern": "掩眼發",
-          "replacement": "掩眼髮",
-          "note": "髮型名稱"
-        }
-      ]
+     "pattern": "幹(哈瓦那辣椒|墨西哥辣椒)",
+     "replacement": "乾\\1",
+     "note": "乾燥辣椒"
     },
     {
-      "category": "係→系",
-      "description": "系統：「係」應為「系」（注意：台灣標準寫「係數」，勿加係數規則）",
-      "rules": [
-        {
-          "pattern": "係統",
-          "replacement": "系統"
-        }
-      ]
+     "pattern": "杏幹",
+     "replacement": "杏乾"
     },
     {
-      "category": "面→麵",
-      "description": "麵食相關",
-      "rules": [
-        {
-          "pattern": "面包",
-          "replacement": "麵包"
-        },
-        {
-          "pattern": "面條",
-          "replacement": "麵條"
-        },
-        {
-          "pattern": "面粉",
-          "replacement": "麵粉"
-        },
-        {
-          "pattern": "拉面",
-          "replacement": "拉麵"
-        },
-        {
-          "pattern": "方便面",
-          "replacement": "方便麵"
-        },
-        {
-          "pattern": "掛面",
-          "replacement": "掛麵"
-        },
-        {
-          "pattern": "炒面",
-          "replacement": "炒麵"
-        },
-        {
-          "pattern": "泡面",
-          "replacement": "泡麵"
-        },
-        {
-          "pattern": "面團",
-          "replacement": "麵團"
-        },
-        {
-          "pattern": "面糊",
-          "replacement": "麵糊"
-        },
-        {
-          "pattern": "和麵(?=\\s*[具部膜罩])",
-          "replacement": "和面",
-          "note": "反向防護：s2twp 詞條「和面→和麵」（揉麵團）誤吃「和+面具/面部」跨詞（2026-08-02 實證 4 處，同句「或面具」對「和麵具」為觸發鐵證，前文「和」是必要條件故收窄）；codex 覆核：裸「麵(?=[具部膜罩])」會誤傷「這種麵具有嚼勁」（麵＋具有跨詞），收窄後僅剩「和麵具有技巧」類極端句殘險，現語料零命中"
-        }
-      ]
+     "pattern": "幹拉麵",
+     "replacement": "乾拉麵"
     },
     {
-      "category": "里→裡",
-      "description": "「裡面」的「裡」被保留為「里」",
-      "rules": [
-        {
-          "pattern": "(?<!阿)里面",
-          "replacement": "裡面",
-          "note": "lookbehind 防人名「阿里」+「面前」跨詞誤傷（2026-07-30 同步自本體）"
-        },
-        {
-          "pattern": "這里",
-          "replacement": "這裡"
-        },
-        {
-          "pattern": "那里",
-          "replacement": "那裡"
-        },
-        {
-          "pattern": "哪里",
-          "replacement": "哪裡"
-        },
-        {
-          "pattern": "心里",
-          "replacement": "心裡"
-        },
-        {
-          "pattern": "家里",
-          "replacement": "家裡"
-        },
-        {
-          "pattern": "手里",
-          "replacement": "手裡"
-        },
-        {
-          "pattern": "屋里",
-          "replacement": "屋裡"
-        },
-        {
-          "pattern": "東西里",
-          "replacement": "東西裡"
-        },
-        {
-          "pattern": "劇本里",
-          "replacement": "劇本裡"
-        }
-      ]
+     "pattern": "口有點幹",
+     "replacement": "口有點乾"
     },
     {
-      "category": "OpenCC 分詞詞條陷阱",
-      "description": "STPhrases 貪婪比對誤吃相鄰字造成的殘留/誤字",
-      "rules": [
-        {
-          "pattern": "干燥",
-          "replacement": "乾燥",
-          "note": "「近日干燥」等：「日干」被當干支詞條吃掉致「干燥」未轉；繁中無任何語境保留「干燥」"
-        },
-        {
-          "pattern": "箇",
-          "replacement": "個",
-          "note": "「个旧→箇舊」（雲南地名）與「个中→箇中」（成語）誤套；「個中」亦為台灣標準寫法，全域替換無誤傷"
-        },
-        {
-          "pattern": "(?<![限機體管編建學])制作",
-          "replacement": "製作",
-          "note": "「在家制作」「無法制作」等分詞漏網；lookbehind 防「限制作用/管制作業」跨詞。已知誤保護：「有限制作價值」（mod 3617732907，走 ch_overrides 修）（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "(龍\\s*)卷(\\s*風)",
-          "replacement": "\\1捲\\2",
-          "note": "龍捲風分詞漏網（本體 Brandenburg 實證；本包「飛馳·龍卷風」車輛名）（2026-07-19 同步自本體）"
-        }
-      ]
+     "pattern": "幹\\s*草",
+     "replacement": "乾草",
+     "note": "乾草（飼料），含空格版"
     },
     {
-      "category": "s2twp 過度在地化修正",
-      "rules": [
-        {
-          "pattern": "高階餐廳",
-          "replacement": "高級餐廳",
-          "_note": "TWPhrases 高级→高階 針對技術語境；餐廳語境應為高級（As1 42.19 新鍵 UI_BurdJournals_LorePool_StashNoun）"
-        },
-        {
-          "pattern": "外掛(?!背包|式)",
-          "replacement": "模組",
-          "note": "插件→外掛；台灣遊戲圈「外掛」=作弊程式。暫譯「模組」，終譯（EN item：項目/物件）待裁決後全局統一（2026-07-19 同步自本體）。(?!背包|式) 防車輛外掛式背包等正當用法（模組包 ATA 實證誤傷）"
-        },
-        {
-          "pattern": "擴(\\s*)充(\\s*)套(\\s*)件",
-          "replacement": "擴\\1展",
-          "note": "s2twp 扩展→擴充套件（IT extension 詞條誤套一般 expand/extended 語境）；2026-08-02 全量掃描 24 處（Mirage 視角縮放系列 9 鍵＋車輛/銑床/配方/任務/儲物 15 處）零軟體擴充功能語境；本體語料 0 出現（本體 CH 已凍結，勿移植）"
-        },
-        {
-          "pattern": "全(\\s*)域(\\s*)性",
-          "replacement": "全\\1域",
-          "note": "s2twp 全局→全域性（贅「性」，全域性開關/全域性倍率語法不通）；2026-08-02 全量 20 處全為 global 語境；本體 global 定名「全域」16 處、「全域性」0 處。CN「全局性」→「全域性性」疊字經本規則替換後恰收斂為「全域性」，屬預期正確（本體 CH 已凍結且語料零出現，勿移植）。若日後 As1 帶入「全局性」（→全域性性→本規則收斂為「全域性」），須另立專用規則改「全面性」，勿依賴本條"
-        }
-      ]
+     "pattern": "幹燥",
+     "replacement": "乾燥"
     },
     {
-      "category": "台灣用語統一（2026-07-19 全量掃描）",
-      "description": "字級客觀類：簡繁殘留、量詞、既有主流用字統一；⚠️「手柄」條未同步（本包 handle 把手語境 13 處）",
-      "rules": [
-        {
-          "pattern": "僵(\\s*)屍",
-          "replacement": "殭\\1屍",
-          "note": "台灣標準＋本體主流（246 處殭屍 vs 57 殘留）；含「殭屍毀滅工程」遊戲名；含 CJK 空格版（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "自(\\s*)制(?!\\s*(?:力|能力))",
-          "replacement": "自\\1製",
-          "note": "crafted/makeshift 物品名（自製匕首等 45 處）；(?!力) 防「自制力」；codex 修正：\\s* 防「自 制 力」空格版誤傷（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "鼠(\\s*)標",
-          "replacement": "滑\\1鼠",
-          "note": "s2twp 分詞漏網（移動鼠標/按下鼠標左鍵）；含空格版（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "屏(\\s*)幕",
-          "replacement": "螢\\1幕",
-          "note": "s2twp 分詞漏網；含空格版（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "服(\\s*)務(\\s*)器",
-          "replacement": "伺\\1服\\2器",
-          "note": "s2twp 分詞漏網（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "網(\\s*)絡",
-          "replacement": "網\\1路",
-          "note": "s2twp 分詞漏網（電話網絡等）（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "([一每這那幾兩])(\\s*)只(?=\\s*(?:死\\s*)?(?:家\\s*鼠|殭\\s*屍|僵\\s*屍|母\\s*雞|兔\\s*子|小\\s*狗|野\\s*鴨|狗))",
-          "replacement": "\\1\\2隻",
-          "note": "動物量詞誤轉；lookahead 動物集合，絕不可全域（「這只是/那只是」=just）；codex 修正：CJK 空格版（那 只 殭 屍）（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "一(\\s*)只(?=\\s*需\\s*要\\s*柺\\s*杖\\s*的\\s*野\\s*鴨)",
-          "replacement": "一\\1隻",
-          "note": "動物量詞個案（RM 台詞）（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "(?<!地)(?<!地\\s)圖(\\s*)標",
-          "replacement": "圖\\1示",
-          "note": "icon=圖示（37 處）（2026-07-19 同步自本體）。lookbehind 防「地圖+標記/標籤」跨詞誤傷（2026-07-30 同步自本體）"
-        },
-        {
-          "pattern": "窗(\\s*)口",
-          "replacement": "視\\1窗",
-          "note": "window=視窗（8 處）（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "控(\\s*)件",
-          "replacement": "控\\1制\\1項",
-          "note": "control=控制項（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "滑(\\s*)鼠(\\s*)指(\\s*)針",
-          "replacement": "滑\\1鼠\\2游\\3標",
-          "note": "mouse pointer=滑鼠游標；先於光標規則（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "光(\\s*)標",
-          "replacement": "游\\1標",
-          "note": "cursor=游標；儀表「指針」不受影響（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "搜(\\s*)索",
-          "replacement": "搜\\1尋",
-          "note": "search=搜尋（PZ 全 search 語境，無搜索票法律語境）（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "(?<![縫聚集組整混癒融接結回綜撮])合(\\s*)並",
-          "replacement": "合\\1併",
-          "note": "merge=合併；lookbehind 防「縫合並包扎」（縫合+並，本包實證誤傷）等動詞+並跨詞"
-        },
-        {
-          "pattern": "幸(\\s*)存",
-          "replacement": "倖\\1存",
-          "note": "倖存=台灣標準（30 處）（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "自(\\s*)定(\\s*)義",
-          "replacement": "自\\1訂",
-          "note": "custom=自訂（24 處）（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "調試",
-          "replacement": "除錯",
-          "note": "debug=除錯（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "教(\\s*)程",
-          "replacement": "教\\1學",
-          "note": "tutorial=教學（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "信(\\s*)息",
-          "replacement": "資\\1訊",
-          "note": "information=資訊；message 語境（ServerWelcomeMessage）由 override 改「訊息」（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "界(\\s*)面",
-          "replacement": "介\\1面",
-          "note": "interface=介面（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "交(\\s*)互",
-          "replacement": "互\\1動",
-          "note": "interaction=互動（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "創(\\s*)建",
-          "replacement": "建\\1立",
-          "note": "create=建立（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "兼(\\s*)容",
-          "replacement": "相\\1容",
-          "note": "compatible=相容（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "加(\\s*)載",
-          "replacement": "載\\1入",
-          "note": "load=載入（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "登(\\s*)錄",
-          "replacement": "登\\1入",
-          "note": "login=登入（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "默(\\s*)認",
-          "replacement": "預\\1設",
-          "note": "default=預設（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "用(\\s*)戶",
-          "replacement": "使\\1用\\1者",
-          "note": "user=使用者（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "菜(\\s*)單",
-          "replacement": "選\\1單",
-          "note": "UI menu=選單。⚠️ 2026-07-19 全量掃描 33 處全 UI 語境；未來如出現餐飲菜單語境（RM 烹飪節目）需改窄化前綴版（codex 警示）（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "列(\\s*)表",
-          "replacement": "清\\1單",
-          "note": "list=清單（67 處；與既有「伺服器清單」override 值一致）（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "當(\\s*)前",
-          "replacement": "目\\1前",
-          "note": "current=目前（56 處）（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "通(\\s*)過(?!\\s*[測考審檢])",
-          "replacement": "透\\1過",
-          "note": "via/through=透過（42 處全掃無測驗語境）；lookahead 防「通過測驗」（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "單(\\s*)擊",
-          "replacement": "點\\1擊",
-          "note": "click=點擊（雙擊不受影響）（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "不(\\s*)支(\\s*)持(?=\\s*的\\s*模\\s*組)",
-          "replacement": "不\\1支\\2援",
-          "note": "unsupported mods 窄版（codex 建議，防「支持某人」）（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "(高|低|睡眠|光照|霧氣|水面|水坑|建築|空氣)(\\s*)質(\\s*)量",
-          "replacement": "\\1\\2品\\3質",
-          "note": "quality 正向詞組（codex 窄化案）（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "質(\\s*)量(\\s*)保(\\s*)證",
-          "replacement": "品\\1質\\2保\\3證",
-          "note": "QA 職稱（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "更好的質量",
-          "replacement": "更好的品質",
-          "note": "quality（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "的(\\s*)質(\\s*)量",
-          "replacement": "的\\1品\\2質",
-          "note": "「捕獲物的質量」等 perks 描述；物理 mass 語境現無（note 防範）（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "(肉類|物品)質量",
-          "replacement": "\\1品質",
-          "note": "perks 描述無「的」變體（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "在設置裡",
-          "replacement": "在設定裡",
-          "note": "settings 語境（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "其他設置",
-          "replacement": "其他設定",
-          "note": "settings 語境（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "諮(\\s*)詢(\\s*)前(\\s*)臺",
-          "replacement": "諮\\1詢\\2櫃\\3檯",
-          "note": "旅館語境（1 處）；含 CJK 空格版（2026-07-19 同步自本體）"
-        },
-        {
-          "pattern": "型(\\s*)別",
-          "replacement": "類\\1型",
-          "note": "类型→型別 IT 過度在地化；PZ 語料全為一般類型語境（鋒面類型/音樂類型），無程式資料型別"
-        },
-        {
-          "pattern": "墻",
-          "replacement": "牆",
-          "note": "異體字：官方 CH 用「墻」（陸用），台灣標準為「牆」；語料 牆137/墻0（2026-07-29 42.20 補譯掃描）"
-        },
-        {
-          "pattern": "坐(\\s*)標",
-          "replacement": "座\\1標",
-          "note": "coordinates；語料 座標10/坐標0；含空格版"
-        },
-        {
-          "pattern": "拖(\\s*)動(?!\\s*物)",
-          "replacement": "拖\\1曳",
-          "note": "drag；台灣 UI 標準用語；含空格版。負向前瞻擋「拖|動物」跨詞界誤傷（拖动物尸体→拖曳物屍體），代價是漏轉「拖動物品」（語料 0 筆，漏轉優於轉錯）"
-        },
-        {
-          "pattern": "許可權",
-          "replacement": "權限",
-          "note": "permission=權限。s2twp 把 权限 轉成微軟術語「許可權」；2026-07-30 自本體同步（本包語料 0 筆命中，預防性規則）"
-        },
-        {
-          "pattern": "(?<![關串並])聯(\\s*)機(?!\\s*[構制床])",
-          "replacement": "連\\1線",
-          "note": "online/multiplayer=連線；本體 連線85/聯機0；2026-08-02 全量 6 處全 multiplayer 語境。Mirage 四鍵另以 ch_overrides 採「多人連線/多人遊戲」語境化措辭，本規則為全庫兜底（本體 CH 已凍結且語料零出現，勿移植）。2026-08-02 覆核加固：lookbehind/lookahead 防「關聯機制/串聯機床/並聯機構」跨詞誤傷（現語料 0 命中，預防性）"
-        },
-        {
-          "pattern": "賬",
-          "replacement": "帳",
-          "note": "TW 標準用「帳」、無「賬」正當用途（本體 帳號5/賬號0）；字級規則同時涵蓋 賬號/賬戶/對賬 等（覆核放寬自詞級 賬號；既有 16 條 賬戶 逐鍵覆寫可退役，另案處理）（本體 CH 已凍結且語料零出現，勿移植）"
-        },
-        {
-          "pattern": "只(\\s*)讀(?!\\s*[了過取書完懂])",
-          "replacement": "唯\\1讀",
-          "note": "read-only=唯讀（本體 唯讀1/只讀0；本包既有「唯讀全域剪貼簿」先例）；負向前瞻防「只讀過/只讀了」動詞語境；2026-08-02 全量 4 處全 read-only（Mirage 2＋CSR 面板＋PZLinux 掛載）（本體 CH 已凍結且語料零出現，勿移植）。2026-08-02 覆核加固：擴充否定集防「只讀取/只讀書」（現語料 0 命中，預防性）"
-        },
-        {
-          "pattern": "應(\\s*)用(?!\\s*程)",
-          "replacement": "套\\1用",
-          "note": "動詞 apply=套用（使用者 2026-08-02 裁決全庫整批；ch_overrides 15+ 既往裁決＋本體官方 UI_btn_apply=套用）；(?!程) 防「應用程式」（全庫唯一實戰命中 UI_JeevesPC_BS_OpenFromMenuHalo；語料無「應用程序」形態）；名詞 application（基本電氣應用/研究及應用）以 ch_overrides 釘選；163 處/156 鍵逐處分類＋對抗覆核後落地（本體 CH 已凍結，勿移植）；UI.json|UI_CMRB_Message_AttemptTracing 與 UI_CMRB.json 同鍵原為 cheat→聊天 上游誤譯，2026-08-02 已語意重譯（套用作弊效果的物品）——上游 EN 無法取得（steamcmd 匿名下載當日全面失敗、無公開 repo；已以 en_corpus hash 96c975631f99 反推 51 萬候選未中，鄰鍵 DoorLocked/DoorUnlocked 反推成功確認作者簡單過去式句風），依 CN 句構重譯，日後取得 EN 可覆核"
-        },
-        {
-          "pattern": "丟(\\s*)失",
-          "replacement": "遺\\1失",
-          "note": "lost=遺失（使用者 2026-08-02 裁決）；17 處/17 鍵全量分類：實體物品/資料語境全改；本心→失去、訊號→中斷、血液→流失、NPC 同伴→消失、抽象能力（技能）→失去，以 ch_overrides 語境化（遺失限實體物品/資料，不用於人與抽象）（本體 CH 已凍結，勿移植）"
-        },
-        {
-          "pattern": "選(\\s*)中",
-          "replacement": "選\\1取",
-          "note": "UI select=選取（使用者 2026-08-02 裁決）；74 處/71 鍵全量分類。收斂準則：人被挑中＝獲選義保留「選中」（被選中參加/選中一名玩家/可被選中執行，ch_overrides 釘選）；物件被系統抽選＝選取（外觀被選取機率/車輛被選取頻率/隨機選取曲目）；checkbox 語境改「勾選」（本體慣例 9 處實證）（本體 CH 已凍結，勿移植）"
-        }
-      ]
+     "pattern": "幹爽",
+     "replacement": "乾爽"
+    },
+    {
+     "pattern": "幹淨",
+     "replacement": "乾淨"
+    },
+    {
+     "pattern": "幹糧",
+     "replacement": "乾糧"
+    },
+    {
+     "pattern": "幹柴",
+     "replacement": "乾柴"
+    },
+    {
+     "pattern": "幹葉",
+     "replacement": "乾葉"
+    },
+    {
+     "pattern": "風幹",
+     "replacement": "風乾"
+    },
+    {
+     "pattern": "晾幹",
+     "replacement": "晾乾"
+    },
+    {
+     "pattern": "烘幹",
+     "replacement": "烘乾"
+    },
+    {
+     "pattern": "曬幹",
+     "replacement": "曬乾"
+    },
+    {
+     "pattern": "吹幹",
+     "replacement": "吹乾"
+    },
+    {
+     "pattern": "擦幹",
+     "replacement": "擦乾"
+    },
+    {
+     "pattern": "幹巷",
+     "replacement": "乾巷",
+     "note": "街道名 Dry Lane"
+    },
+    {
+     "pattern": "弄幹",
+     "replacement": "弄乾"
     }
-  ],
-  "suspicious_patterns": [
+   ]
+  },
+  {
+   "category": "幹→干",
+   "description": "干擾、干預：「干」不是「乾」也不是「幹」",
+   "rules": [
     {
-      "char": "外掛",
-      "description": "s2twp 插件→外掛；作弊歧義需人工定譯",
-      "before_exclude": [],
-      "after_exclude": []
+     "pattern": "幹\\s*擾",
+     "replacement": "干擾",
+     "note": "含空格版（傳單排版）"
     },
     {
-      "char": "幹",
-      "description": "可能需要 幹→乾 修正",
-      "before_exclude": [
-        "軀",
-        "主",
-        "事",
-        "能",
-        "若"
-      ],
-      "after_exclude": [
-        "掉",
-        "活",
-        "勁",
-        "嘛",
-        "嗎",
-        "了",
-        "的",
-        "就",
-        "麼",
-        "什",
-        "道",
-        "不",
-        "得",
-        "髒",
-        "腳",
-        "部",
-        "線",
-        "事",
-        "員",
-        "涉",
-        "細胞",
-        "將",
-        "過",
-        "到",
-        "完",
-        "他",
-        "你",
-        "她",
-        "我",
-        "這",
-        "那",
-        "啥",
-        "嚒",
-        "?",
-        "!",
-        "…",
-        ",",
-        "."
-      ]
-    },
-    {
-      "char": "髮",
-      "description": "可能需要 髮→發 修正",
-      "before_exclude": [
-        "頭",
-        "白",
-        "黑",
-        "金",
-        "紅",
-        "長",
-        "短",
-        "捲",
-        "直",
-        "假",
-        "美",
-        "染",
-        "剪",
-        "洗",
-        "理",
-        "鬢",
-        "碎",
-        "毛",
-        "落",
-        "脫",
-        "束",
-        "結",
-        "編",
-        "一頭",
-        "魚",
-        "眼",
-        "護",
-        "剃",
-        "鬆",
-        "創",
-        "接",
-        "於",
-        "生",
-        "秀"
-      ],
-      "after_exclude": [
-        "型",
-        "色",
-        "際",
-        "質",
-        "梢",
-        "絲",
-        "根",
-        "端",
-        "飾",
-        "油",
-        "膚",
-        "廊",
-        "辮",
-        "膠",
-        "蠟",
-        "指",
-        "圈",
-        "線",
-        "霧",
-        "髻",
-        "簪",
-        "夾",
-        "帶",
-        "片",
-        "束",
-        "素",
-        "革命"
-      ]
-    },
-    {
-      "char": "里",
-      "description": "可能需要 里→裡 修正",
-      "before_exclude": [
-        "阿",
-        "千",
-        "萬",
-        "百",
-        "公",
-        "英",
-        "華",
-        "道",
-        "卡路",
-        "佛羅",
-        "密蘇",
-        "馬德",
-        "士滿",
-        "西西",
-        "科多",
-        "爾德",
-        "所",
-        "底",
-        "歇斯底",
-        "拉",
-        "亨",
-        "莫",
-        "瑪",
-        "凱",
-        "查",
-        "傑",
-        "伯",
-        "卡",
-        "格",
-        "特",
-        "加",
-        "普",
-        "尤",
-        "貝",
-        "德",
-        "帕特",
-        "米特",
-        "布部",
-        "哈",
-        "溫布",
-        "達",
-        "傑弗",
-        "峇",
-        "弗",
-        "蒂伯雷"
-      ],
-      "after_exclude": [
-        "程",
-        "拉",
-        "斯",
-        "約",
-        "昂",
-        "奧",
-        "弗",
-        "尼",
-        "納",
-        "德",
-        "亞",
-        "氏",
-        "爾",
-        "根",
-        "芒",
-        "羅",
-        "布",
-        "克",
-        "巴",
-        "茲",
-        "曼",
-        "奇",
-        "科",
-        "士",
-        "誇",
-        "古",
-        "姆",
-        "維",
-        "諾",
-        "安",
-        "瓦",
-        "昆",
-        "蘭",
-        "森",
-        "高",
-        "波",
-        "田",
-        "歐斯",
-        "子一"
-      ]
+     "pattern": "幹預",
+     "replacement": "干預"
     }
-  ],
-  "lint_exemptions": {
-    "Tooltip.json|Tooltip_CSR_Glowstick": {
-      "patterns": [
-        "光(\\s*)標"
-      ],
-      "reason": "2026-08-02 裁決 keep：「彩色光標記」是「彩色光＋標記」（發光棒以臨時彩色光標記地格），非 cursor 誤譯，規則誤中。",
-      "ch_value": "7fbcdee76c1c19f7"
+   ]
+  },
+  {
+   "category": "髮→發",
+   "description": "動詞「發」被誤轉為「髮」",
+   "rules": [
+    {
+     "pattern": "(?<![毛頭])髮生",
+     "replacement": "發生",
+     "note": "排除「毛髮生長」「頭髮生長」等正確用法"
     },
-    "Sandbox.json|Sandbox_TooltipLib_EnableMPSync_tooltip": {
-      "patterns": [
-        "用(\\s*)戶"
-      ],
-      "reason": "2026-08-02 裁決 keep：「用戶端」對應 CN「客户端」= client，台灣合法固定詞，非單獨「用戶」。",
-      "ch_value": "a5728f49a5e153ab"
+    {
+     "pattern": "髮現",
+     "replacement": "發現"
     },
-    "Recipes.json|Order the Menu": {
-      "patterns": [
-        "菜(\\s*)單"
-      ],
-      "reason": "2026-08-02 裁決 keep：「訂購菜單」是餐點菜單（裁決指引明示此鍵為餐飲語境），保留",
-      "ch_value": "6e7f26bcd6a8db4e"
+    {
+     "pattern": "髮射",
+     "replacement": "發射"
     },
-    "IG_UI.json|IGUI_Bandits_Speech_ZSStreetChat1_Male_2_2": {
-      "patterns": [
-        "通(\\s*)過(?!\\s*[測考審檢])"
-      ],
-      "reason": "2026-08-02 裁決 keep：「通過路障」是物理通行語境（裁決指引明示），保留",
-      "ch_value": "85c25855de2ccd09"
+    {
+     "pattern": "髮動",
+     "replacement": "發動"
     },
-    "IG_UI.json|IGUI_Inspect_Mat_Copper_Base": {
-      "patterns": [
-        "應(\\s*)用(?!\\s*程)"
-      ],
-      "reason": "2026-08-02 裁決 keep：「基本電氣應用」為名詞 application（用途）語境，非 apply 套用，依指引 keep（ch_overrides 釘選語境）。",
-      "ch_value": "09251647f5d7b529"
+    {
+     "pattern": "髮出",
+     "replacement": "發出"
     },
-    "IG_UI.json|IGUI_VLQ_1_NotePage2_1_q1s006": {
-      "patterns": [
-        "應(\\s*)用(?!\\s*程)"
-      ],
-      "reason": "2026-08-02 裁決 keep：「研究及應用」為名詞 application 語境（研究與應用並列），非套用設定語意，依 note 釘選 keep。",
-      "ch_value": "80108adea4653dbd"
+    {
+     "pattern": "髮展",
+     "replacement": "發展"
     },
-    "Sandbox.json|Sandbox_AirdropMod_AirdropMode_tooltip": {
-      "patterns": [
-        "選(\\s*)中"
-      ],
-      "reason": "2026-08-02 裁決 keep：「選中一名玩家」為人被挑中（獲選義）語境，note 明列 ch_overrides 釘選保留。",
-      "ch_value": "62761abb469dc963"
+    {
+     "pattern": "髮送",
+     "replacement": "發送"
     },
-    "Sandbox.json|Sandbox_ApocalipseBrProjetoNemesis_BossCooldownCycles_tooltip": {
-      "patterns": [
-        "選(\\s*)中"
-      ],
-      "reason": "2026-08-02 裁決 keep：「被選中為目標」為玩家（人）被挑中之獲選義，符合 note 人被挑中保留準則，非 UI 選取操作。",
-      "ch_value": "5c13e0518f6cbd34"
+    {
+     "pattern": "髮佈",
+     "replacement": "發佈"
     },
-    "Sandbox.json|Sandbox_DynamicTrading.BanditHouseRoamerEligiblePercent_tooltip": {
-      "patterns": [
-        "選(\\s*)中"
-      ],
-      "reason": "2026-08-02 裁決 keep：「可被選中執行」為 note 明列 ch_overrides 釘選保留語境（人被挑中）。",
-      "ch_value": "1e63f30b48aa329e"
+    {
+     "pattern": "髮布",
+     "replacement": "發布"
     },
-    "UI.json|UI_PZLinux_MailADS_12": {
-      "patterns": [
-        "選(\\s*)中"
-      ],
-      "reason": "2026-08-02 裁決 keep：「你的名字被隨機選中」為抽中／獲選義（詐騙信抽獎語境），非 UI 選取，台灣用語合法。",
-      "ch_value": "6976eda3fb550bf6"
+    {
+     "pattern": "髮揮",
+     "replacement": "發揮"
     },
-    "UI.json|UI_PZLinux_MailADS_16": {
-      "patterns": [
-        "選(\\s*)中"
-      ],
-      "reason": "2026-08-02 裁決 keep：「被選中參加」為 note 明列釘選保留語境（人被挑中）。",
-      "ch_value": "c12539f31829aedf"
+    {
+     "pattern": "髮言",
+     "replacement": "發言"
     },
-    "UI.json|UI_PZLinux_MailADS_19": {
-      "patterns": [
-        "選(\\s*)中"
-      ],
-      "reason": "2026-08-02 裁決 keep：「被 SELECT * FROM rewards; 選中」為人被挑中之獲選義，且與 SQL SELECT 雙關，改動會破哏，keep。",
-      "ch_value": "a704aeb77f175019"
+    {
+     "pattern": "髮電",
+     "replacement": "發電"
     },
-    "UI.json|UI_PZLinux_MailADS_8": {
-      "patterns": [
-        "選(\\s*)中"
-      ],
-      "reason": "2026-08-02 裁決 keep：「被選中參加」為 note 明列釘選保留語境（人被挑中）。",
-      "ch_value": "d9a7d65ca3f0001c"
+    {
+     "pattern": "髮炎",
+     "replacement": "發炎"
+    },
+    {
+     "pattern": "髮燒",
+     "replacement": "發燒"
+    },
+    {
+     "pattern": "髮酵",
+     "replacement": "發酵"
+    },
+    {
+     "pattern": "髮芽",
+     "replacement": "發芽"
+    },
+    {
+     "pattern": "爆髮",
+     "replacement": "爆發"
+    },
+    {
+     "pattern": "開髮",
+     "replacement": "開發"
+    },
+    {
+     "pattern": "觸髮",
+     "replacement": "觸發"
+    },
+    {
+     "pattern": "蒸髮",
+     "replacement": "蒸發"
+    },
+    {
+     "pattern": "揮髮",
+     "replacement": "揮發"
+    },
+    {
+     "pattern": "(?<!頭)散髮",
+     "replacement": "散發",
+     "note": "排除「披頭散髮」"
+    },
+    {
+     "pattern": "啟髮",
+     "replacement": "啟發"
+    },
+    {
+     "pattern": "批髮",
+     "replacement": "批發"
+    },
+    {
+     "pattern": "沙髮",
+     "replacement": "沙發"
+    },
+    {
+     "pattern": "另一頭髮生(?!長)",
+     "replacement": "另一頭發生",
+     "note": "「河的另一頭」+「發生」撞頭髮 lookbehind 防護漏網（2026-07-19 本體遷移實證，同步）"
+    },
+    {
+     "pattern": "街頭髮生",
+     "replacement": "街頭發生",
+     "note": "「街頭」+「發生」同類漏網；無頭髮語境（2026-07-19 同步自本體）"
     }
+   ]
+  },
+  {
+   "category": "發→髮",
+   "description": "名詞「髮」被誤轉為「發」（髮型名等）",
+   "rules": [
+    {
+     "pattern": "發霧",
+     "replacement": "髮霧"
+    },
+    {
+     "pattern": "胭脂魚發",
+     "replacement": "胭脂魚髮",
+     "note": "髮型名稱"
+    },
+    {
+     "pattern": "掩眼發",
+     "replacement": "掩眼髮",
+     "note": "髮型名稱"
+    }
+   ]
+  },
+  {
+   "category": "係→系",
+   "description": "系統：「係」應為「系」（注意：台灣標準寫「係數」，勿加係數規則）",
+   "rules": [
+    {
+     "pattern": "係統",
+     "replacement": "系統"
+    }
+   ]
+  },
+  {
+   "category": "面→麵",
+   "description": "麵食相關",
+   "rules": [
+    {
+     "pattern": "面包",
+     "replacement": "麵包"
+    },
+    {
+     "pattern": "面條",
+     "replacement": "麵條"
+    },
+    {
+     "pattern": "面粉",
+     "replacement": "麵粉"
+    },
+    {
+     "pattern": "拉面",
+     "replacement": "拉麵"
+    },
+    {
+     "pattern": "方便面",
+     "replacement": "方便麵"
+    },
+    {
+     "pattern": "掛面",
+     "replacement": "掛麵"
+    },
+    {
+     "pattern": "炒面",
+     "replacement": "炒麵"
+    },
+    {
+     "pattern": "泡面",
+     "replacement": "泡麵"
+    },
+    {
+     "pattern": "面團",
+     "replacement": "麵團"
+    },
+    {
+     "pattern": "面糊",
+     "replacement": "麵糊"
+    },
+    {
+     "pattern": "和麵(?=\\s*[具部膜罩])",
+     "replacement": "和面",
+     "note": "反向防護：s2twp 詞條「和面→和麵」（揉麵團）誤吃「和+面具/面部」跨詞（2026-08-02 實證 4 處，同句「或面具」對「和麵具」為觸發鐵證，前文「和」是必要條件故收窄）；codex 覆核：裸「麵(?=[具部膜罩])」會誤傷「這種麵具有嚼勁」（麵＋具有跨詞），收窄後僅剩「和麵具有技巧」類極端句殘險，現語料零命中"
+    }
+   ]
+  },
+  {
+   "category": "里→裡",
+   "description": "「裡面」的「裡」被保留為「里」",
+   "rules": [
+    {
+     "pattern": "(?<!阿)里面",
+     "replacement": "裡面",
+     "note": "lookbehind 防人名「阿里」+「面前」跨詞誤傷（2026-07-30 同步自本體）"
+    },
+    {
+     "pattern": "這里",
+     "replacement": "這裡"
+    },
+    {
+     "pattern": "那里",
+     "replacement": "那裡"
+    },
+    {
+     "pattern": "哪里",
+     "replacement": "哪裡"
+    },
+    {
+     "pattern": "心里",
+     "replacement": "心裡"
+    },
+    {
+     "pattern": "家里",
+     "replacement": "家裡"
+    },
+    {
+     "pattern": "手里",
+     "replacement": "手裡"
+    },
+    {
+     "pattern": "屋里",
+     "replacement": "屋裡"
+    },
+    {
+     "pattern": "東西里",
+     "replacement": "東西裡"
+    },
+    {
+     "pattern": "劇本里",
+     "replacement": "劇本裡"
+    }
+   ]
+  },
+  {
+   "category": "OpenCC 分詞詞條陷阱",
+   "description": "STPhrases 貪婪比對誤吃相鄰字造成的殘留/誤字",
+   "rules": [
+    {
+     "pattern": "干燥",
+     "replacement": "乾燥",
+     "note": "「近日干燥」等：「日干」被當干支詞條吃掉致「干燥」未轉；繁中無任何語境保留「干燥」"
+    },
+    {
+     "pattern": "箇",
+     "replacement": "個",
+     "note": "「个旧→箇舊」（雲南地名）與「个中→箇中」（成語）誤套；「個中」亦為台灣標準寫法，全域替換無誤傷"
+    },
+    {
+     "pattern": "(?<![限機體管編建學])制作",
+     "replacement": "製作",
+     "note": "「在家制作」「無法制作」等分詞漏網；lookbehind 防「限制作用/管制作業」跨詞。已知誤保護：「有限制作價值」（mod 3617732907，走 ch_overrides 修）（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "(龍\\s*)卷(\\s*風)",
+     "replacement": "\\1捲\\2",
+     "note": "龍捲風分詞漏網（本體 Brandenburg 實證；本包「飛馳·龍卷風」車輛名）（2026-07-19 同步自本體）"
+    }
+   ]
+  },
+  {
+   "category": "s2twp 過度在地化修正",
+   "rules": [
+    {
+     "pattern": "高階餐廳",
+     "replacement": "高級餐廳",
+     "_note": "TWPhrases 高级→高階 針對技術語境；餐廳語境應為高級（As1 42.19 新鍵 UI_BurdJournals_LorePool_StashNoun）"
+    },
+    {
+     "pattern": "外掛(?!背包|式)",
+     "replacement": "模組",
+     "note": "插件→外掛；台灣遊戲圈「外掛」=作弊程式。暫譯「模組」，終譯（EN item：項目/物件）待裁決後全局統一（2026-07-19 同步自本體）。(?!背包|式) 防車輛外掛式背包等正當用法（模組包 ATA 實證誤傷）"
+    },
+    {
+     "pattern": "擴(\\s*)充(\\s*)套(\\s*)件",
+     "replacement": "擴\\1展",
+     "note": "s2twp 扩展→擴充套件（IT extension 詞條誤套一般 expand/extended 語境）；2026-08-02 全量掃描 24 處（Mirage 視角縮放系列 9 鍵＋車輛/銑床/配方/任務/儲物 15 處）零軟體擴充功能語境；本體語料 0 出現（本體 CH 已凍結，勿移植）"
+    },
+    {
+     "pattern": "全(\\s*)域(\\s*)性",
+     "replacement": "全\\1域",
+     "note": "s2twp 全局→全域性（贅「性」，全域性開關/全域性倍率語法不通）；2026-08-02 全量 20 處全為 global 語境；本體 global 定名「全域」16 處、「全域性」0 處。CN「全局性」→「全域性性」疊字經本規則替換後恰收斂為「全域性」，屬預期正確（本體 CH 已凍結且語料零出現，勿移植）。若日後 As1 帶入「全局性」（→全域性性→本規則收斂為「全域性」），須另立專用規則改「全面性」，勿依賴本條"
+    }
+   ]
+  },
+  {
+   "category": "台灣用語統一（2026-07-19 全量掃描）",
+   "description": "字級客觀類：簡繁殘留、量詞、既有主流用字統一；⚠️「手柄」條未同步（本包 handle 把手語境 13 處）",
+   "rules": [
+    {
+     "pattern": "僵(\\s*)屍",
+     "replacement": "殭\\1屍",
+     "note": "台灣標準＋本體主流（246 處殭屍 vs 57 殘留）；含「殭屍毀滅工程」遊戲名；含 CJK 空格版（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "自(\\s*)制(?!\\s*(?:力|能力))",
+     "replacement": "自\\1製",
+     "note": "crafted/makeshift 物品名（自製匕首等 45 處）；(?!力) 防「自制力」；codex 修正：\\s* 防「自 制 力」空格版誤傷（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "鼠(\\s*)標",
+     "replacement": "滑\\1鼠",
+     "note": "s2twp 分詞漏網（移動鼠標/按下鼠標左鍵）；含空格版（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "屏(\\s*)幕",
+     "replacement": "螢\\1幕",
+     "note": "s2twp 分詞漏網；含空格版（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "服(\\s*)務(\\s*)器",
+     "replacement": "伺\\1服\\2器",
+     "note": "s2twp 分詞漏網（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "網(\\s*)絡",
+     "replacement": "網\\1路",
+     "note": "s2twp 分詞漏網（電話網絡等）（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "([一每這那幾兩])(\\s*)只(?=\\s*(?:死\\s*)?(?:家\\s*鼠|殭\\s*屍|僵\\s*屍|母\\s*雞|兔\\s*子|小\\s*狗|野\\s*鴨|狗))",
+     "replacement": "\\1\\2隻",
+     "note": "動物量詞誤轉；lookahead 動物集合，絕不可全域（「這只是/那只是」=just）；codex 修正：CJK 空格版（那 只 殭 屍）（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "一(\\s*)只(?=\\s*需\\s*要\\s*柺\\s*杖\\s*的\\s*野\\s*鴨)",
+     "replacement": "一\\1隻",
+     "note": "動物量詞個案（RM 台詞）（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "(?<!地)(?<!地\\s)圖(\\s*)標",
+     "replacement": "圖\\1示",
+     "note": "icon=圖示（37 處）（2026-07-19 同步自本體）。lookbehind 防「地圖+標記/標籤」跨詞誤傷（2026-07-30 同步自本體）"
+    },
+    {
+     "pattern": "窗(\\s*)口",
+     "replacement": "視\\1窗",
+     "note": "window=視窗（8 處）（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "控(\\s*)件",
+     "replacement": "控\\1制\\1項",
+     "note": "control=控制項（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "滑(\\s*)鼠(\\s*)指(\\s*)針",
+     "replacement": "滑\\1鼠\\2游\\3標",
+     "note": "mouse pointer=滑鼠游標；先於光標規則（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "光(\\s*)標",
+     "replacement": "游\\1標",
+     "note": "cursor=游標；儀表「指針」不受影響（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "搜(\\s*)索",
+     "replacement": "搜\\1尋",
+     "note": "search=搜尋（PZ 全 search 語境，無搜索票法律語境）（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "(?<![縫聚集組整混癒融接結回綜撮])合(\\s*)並",
+     "replacement": "合\\1併",
+     "note": "merge=合併；lookbehind 防「縫合並包扎」（縫合+並，本包實證誤傷）等動詞+並跨詞"
+    },
+    {
+     "pattern": "幸(\\s*)存",
+     "replacement": "倖\\1存",
+     "note": "倖存=台灣標準（30 處）（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "自(\\s*)定(\\s*)義",
+     "replacement": "自\\1訂",
+     "note": "custom=自訂（24 處）（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "調試",
+     "replacement": "除錯",
+     "note": "debug=除錯（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "教(\\s*)程",
+     "replacement": "教\\1學",
+     "note": "tutorial=教學（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "信(\\s*)息",
+     "replacement": "資\\1訊",
+     "note": "information=資訊；message 語境（ServerWelcomeMessage）由 override 改「訊息」（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "界(\\s*)面",
+     "replacement": "介\\1面",
+     "note": "interface=介面（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "交(\\s*)互",
+     "replacement": "互\\1動",
+     "note": "interaction=互動（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "創(\\s*)建",
+     "replacement": "建\\1立",
+     "note": "create=建立（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "兼(\\s*)容",
+     "replacement": "相\\1容",
+     "note": "compatible=相容（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "加(\\s*)載",
+     "replacement": "載\\1入",
+     "note": "load=載入（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "登(\\s*)錄",
+     "replacement": "登\\1入",
+     "note": "login=登入（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "默(\\s*)認",
+     "replacement": "預\\1設",
+     "note": "default=預設（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "用(\\s*)戶",
+     "replacement": "使\\1用\\1者",
+     "note": "user=使用者（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "菜(\\s*)單",
+     "replacement": "選\\1單",
+     "note": "UI menu=選單。⚠️ 2026-07-19 全量掃描 33 處全 UI 語境；未來如出現餐飲菜單語境（RM 烹飪節目）需改窄化前綴版（codex 警示）（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "列(\\s*)表",
+     "replacement": "清\\1單",
+     "note": "list=清單（67 處；與既有「伺服器清單」override 值一致）（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "當(\\s*)前",
+     "replacement": "目\\1前",
+     "note": "current=目前（56 處）（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "通(\\s*)過(?!\\s*[測考審檢])",
+     "replacement": "透\\1過",
+     "note": "via/through=透過（42 處全掃無測驗語境）；lookahead 防「通過測驗」（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "單(\\s*)擊",
+     "replacement": "點\\1擊",
+     "note": "click=點擊（雙擊不受影響）（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "不(\\s*)支(\\s*)持(?=\\s*的\\s*模\\s*組)",
+     "replacement": "不\\1支\\2援",
+     "note": "unsupported mods 窄版（codex 建議，防「支持某人」）（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "(高|低|睡眠|光照|霧氣|水面|水坑|建築|空氣)(\\s*)質(\\s*)量",
+     "replacement": "\\1\\2品\\3質",
+     "note": "quality 正向詞組（codex 窄化案）（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "質(\\s*)量(\\s*)保(\\s*)證",
+     "replacement": "品\\1質\\2保\\3證",
+     "note": "QA 職稱（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "更好的質量",
+     "replacement": "更好的品質",
+     "note": "quality（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "的(\\s*)質(\\s*)量",
+     "replacement": "的\\1品\\2質",
+     "note": "「捕獲物的質量」等 perks 描述；物理 mass 語境現無（note 防範）（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "(肉類|物品)質量",
+     "replacement": "\\1品質",
+     "note": "perks 描述無「的」變體（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "在設置裡",
+     "replacement": "在設定裡",
+     "note": "settings 語境（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "其他設置",
+     "replacement": "其他設定",
+     "note": "settings 語境（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "諮(\\s*)詢(\\s*)前(\\s*)臺",
+     "replacement": "諮\\1詢\\2櫃\\3檯",
+     "note": "旅館語境（1 處）；含 CJK 空格版（2026-07-19 同步自本體）"
+    },
+    {
+     "pattern": "型(\\s*)別",
+     "replacement": "類\\1型",
+     "note": "类型→型別 IT 過度在地化；PZ 語料全為一般類型語境（鋒面類型/音樂類型），無程式資料型別"
+    },
+    {
+     "pattern": "墻",
+     "replacement": "牆",
+     "note": "異體字：官方 CH 用「墻」（陸用），台灣標準為「牆」；語料 牆137/墻0（2026-07-29 42.20 補譯掃描）"
+    },
+    {
+     "pattern": "坐(\\s*)標",
+     "replacement": "座\\1標",
+     "note": "coordinates；語料 座標10/坐標0；含空格版"
+    },
+    {
+     "pattern": "拖(\\s*)動(?!\\s*物)",
+     "replacement": "拖\\1曳",
+     "note": "drag；台灣 UI 標準用語；含空格版。負向前瞻擋「拖|動物」跨詞界誤傷（拖动物尸体→拖曳物屍體），代價是漏轉「拖動物品」（語料 0 筆，漏轉優於轉錯）"
+    },
+    {
+     "pattern": "許可權",
+     "replacement": "權限",
+     "note": "permission=權限。s2twp 把 权限 轉成微軟術語「許可權」；2026-07-30 自本體同步（本包語料 0 筆命中，預防性規則）"
+    },
+    {
+     "pattern": "(?<![關串並])聯(\\s*)機(?!\\s*[構制床])",
+     "replacement": "連\\1線",
+     "note": "online/multiplayer=連線；本體 連線85/聯機0；2026-08-02 全量 6 處全 multiplayer 語境。Mirage 四鍵另以 ch_overrides 採「多人連線/多人遊戲」語境化措辭，本規則為全庫兜底（本體 CH 已凍結且語料零出現，勿移植）。2026-08-02 覆核加固：lookbehind/lookahead 防「關聯機制/串聯機床/並聯機構」跨詞誤傷（現語料 0 命中，預防性）"
+    },
+    {
+     "pattern": "賬",
+     "replacement": "帳",
+     "note": "TW 標準用「帳」、無「賬」正當用途（本體 帳號5/賬號0）；字級規則同時涵蓋 賬號/賬戶/對賬 等（覆核放寬自詞級 賬號；既有 16 條 賬戶 逐鍵覆寫可退役，另案處理）（本體 CH 已凍結且語料零出現，勿移植）"
+    },
+    {
+     "pattern": "只(\\s*)讀(?!\\s*[了過取書完懂])",
+     "replacement": "唯\\1讀",
+     "note": "read-only=唯讀（本體 唯讀1/只讀0；本包既有「唯讀全域剪貼簿」先例）；負向前瞻防「只讀過/只讀了」動詞語境；2026-08-02 全量 4 處全 read-only（Mirage 2＋CSR 面板＋PZLinux 掛載）（本體 CH 已凍結且語料零出現，勿移植）。2026-08-02 覆核加固：擴充否定集防「只讀取/只讀書」（現語料 0 命中，預防性）"
+    },
+    {
+     "pattern": "應(\\s*)用(?!\\s*程)",
+     "replacement": "套\\1用",
+     "note": "動詞 apply=套用（使用者 2026-08-02 裁決全庫整批；ch_overrides 15+ 既往裁決＋本體官方 UI_btn_apply=套用）；(?!程) 防「應用程式」（全庫唯一實戰命中 UI_JeevesPC_BS_OpenFromMenuHalo；語料無「應用程序」形態）；名詞 application（基本電氣應用/研究及應用）以 ch_overrides 釘選；163 處/156 鍵逐處分類＋對抗覆核後落地（本體 CH 已凍結，勿移植）；UI.json|UI_CMRB_Message_AttemptTracing 與 UI_CMRB.json 同鍵原為 cheat→聊天 上游誤譯，2026-08-02 已語意重譯（套用作弊效果的物品）——上游 EN 無法取得（steamcmd 匿名下載當日全面失敗、無公開 repo；已以 en_corpus hash 96c975631f99 反推 51 萬候選未中，鄰鍵 DoorLocked/DoorUnlocked 反推成功確認作者簡單過去式句風），依 CN 句構重譯，日後取得 EN 可覆核"
+    },
+    {
+     "pattern": "丟(\\s*)失",
+     "replacement": "遺\\1失",
+     "note": "lost=遺失（使用者 2026-08-02 裁決）；17 處/17 鍵全量分類：實體物品/資料語境全改；本心→失去、訊號→中斷、血液→流失、NPC 同伴→消失、抽象能力（技能）→失去，以 ch_overrides 語境化（遺失限實體物品/資料，不用於人與抽象）（本體 CH 已凍結，勿移植）"
+    },
+    {
+     "pattern": "選(\\s*)中",
+     "replacement": "選\\1取",
+     "note": "UI select=選取（使用者 2026-08-02 裁決）；74 處/71 鍵全量分類。收斂準則：人被挑中＝獲選義保留「選中」（被選中參加/選中一名玩家/可被選中執行，ch_overrides 釘選）；物件被系統抽選＝選取（外觀被選取機率/車輛被選取頻率/隨機選取曲目）；checkbox 語境改「勾選」（本體慣例 9 處實證）（本體 CH 已凍結，勿移植）"
+    }
+   ]
   }
+ ],
+ "suspicious_patterns": [
+  {
+   "char": "外掛",
+   "description": "s2twp 插件→外掛；作弊歧義需人工定譯",
+   "before_exclude": [],
+   "after_exclude": []
+  },
+  {
+   "char": "幹",
+   "description": "可能需要 幹→乾 修正",
+   "before_exclude": [
+    "軀",
+    "主",
+    "事",
+    "能",
+    "若"
+   ],
+   "after_exclude": [
+    "掉",
+    "活",
+    "勁",
+    "嘛",
+    "嗎",
+    "了",
+    "的",
+    "就",
+    "麼",
+    "什",
+    "道",
+    "不",
+    "得",
+    "髒",
+    "腳",
+    "部",
+    "線",
+    "事",
+    "員",
+    "涉",
+    "細胞",
+    "將",
+    "過",
+    "到",
+    "完",
+    "他",
+    "你",
+    "她",
+    "我",
+    "這",
+    "那",
+    "啥",
+    "嚒",
+    "?",
+    "!",
+    "…",
+    ",",
+    "."
+   ]
+  },
+  {
+   "char": "髮",
+   "description": "可能需要 髮→發 修正",
+   "before_exclude": [
+    "頭",
+    "白",
+    "黑",
+    "金",
+    "紅",
+    "長",
+    "短",
+    "捲",
+    "直",
+    "假",
+    "美",
+    "染",
+    "剪",
+    "洗",
+    "理",
+    "鬢",
+    "碎",
+    "毛",
+    "落",
+    "脫",
+    "束",
+    "結",
+    "編",
+    "一頭",
+    "魚",
+    "眼",
+    "護",
+    "剃",
+    "鬆",
+    "創",
+    "接",
+    "於",
+    "生",
+    "秀"
+   ],
+   "after_exclude": [
+    "型",
+    "色",
+    "際",
+    "質",
+    "梢",
+    "絲",
+    "根",
+    "端",
+    "飾",
+    "油",
+    "膚",
+    "廊",
+    "辮",
+    "膠",
+    "蠟",
+    "指",
+    "圈",
+    "線",
+    "霧",
+    "髻",
+    "簪",
+    "夾",
+    "帶",
+    "片",
+    "束",
+    "素",
+    "革命"
+   ]
+  },
+  {
+   "char": "里",
+   "description": "可能需要 里→裡 修正",
+   "before_exclude": [
+    "阿",
+    "千",
+    "萬",
+    "百",
+    "公",
+    "英",
+    "華",
+    "道",
+    "卡路",
+    "佛羅",
+    "密蘇",
+    "馬德",
+    "士滿",
+    "西西",
+    "科多",
+    "爾德",
+    "所",
+    "底",
+    "歇斯底",
+    "拉",
+    "亨",
+    "莫",
+    "瑪",
+    "凱",
+    "查",
+    "傑",
+    "伯",
+    "卡",
+    "格",
+    "特",
+    "加",
+    "普",
+    "尤",
+    "貝",
+    "德",
+    "帕特",
+    "米特",
+    "布部",
+    "哈",
+    "溫布",
+    "達",
+    "傑弗",
+    "峇",
+    "弗",
+    "蒂伯雷"
+   ],
+   "after_exclude": [
+    "程",
+    "拉",
+    "斯",
+    "約",
+    "昂",
+    "奧",
+    "弗",
+    "尼",
+    "納",
+    "德",
+    "亞",
+    "氏",
+    "爾",
+    "根",
+    "芒",
+    "羅",
+    "布",
+    "克",
+    "巴",
+    "茲",
+    "曼",
+    "奇",
+    "科",
+    "士",
+    "誇",
+    "古",
+    "姆",
+    "維",
+    "諾",
+    "安",
+    "瓦",
+    "昆",
+    "蘭",
+    "森",
+    "高",
+    "波",
+    "田",
+    "歐斯",
+    "子一"
+   ]
+  }
+ ],
+ "lint_exemptions": {
+  "Tooltip.json|Tooltip_CSR_Glowstick": {
+   "patterns": [
+    "光(\\s*)標"
+   ],
+   "reason": "2026-08-02 裁決 keep：「彩色光標記」是「彩色光＋標記」（發光棒以臨時彩色光標記地格），非 cursor 誤譯，規則誤中；2026-08-03 <LINE>→<br> 正規化後重新錨定，誤報語境（彩色光標記＝光＋標記）不變",
+   "ch_value": "bfb0aba187afc59e"
+  },
+  "Sandbox.json|Sandbox_TooltipLib_EnableMPSync_tooltip": {
+   "patterns": [
+    "用(\\s*)戶"
+   ],
+   "reason": "2026-08-02 裁決 keep：「用戶端」對應 CN「客户端」= client，台灣合法固定詞，非單獨「用戶」。",
+   "ch_value": "a5728f49a5e153ab"
+  },
+  "Recipes.json|Order the Menu": {
+   "patterns": [
+    "菜(\\s*)單"
+   ],
+   "reason": "2026-08-02 裁決 keep：「訂購菜單」是餐點菜單（裁決指引明示此鍵為餐飲語境），保留",
+   "ch_value": "6e7f26bcd6a8db4e"
+  },
+  "IG_UI.json|IGUI_Bandits_Speech_ZSStreetChat1_Male_2_2": {
+   "patterns": [
+    "通(\\s*)過(?!\\s*[測考審檢])"
+   ],
+   "reason": "2026-08-02 裁決 keep：「通過路障」是物理通行語境（裁決指引明示），保留",
+   "ch_value": "85c25855de2ccd09"
+  },
+  "IG_UI.json|IGUI_Inspect_Mat_Copper_Base": {
+   "patterns": [
+    "應(\\s*)用(?!\\s*程)"
+   ],
+   "reason": "2026-08-02 裁決 keep：「基本電氣應用」為名詞 application（用途）語境，非 apply 套用，依指引 keep（ch_overrides 釘選語境）。",
+   "ch_value": "09251647f5d7b529"
+  },
+  "IG_UI.json|IGUI_VLQ_1_NotePage2_1_q1s006": {
+   "patterns": [
+    "應(\\s*)用(?!\\s*程)"
+   ],
+   "reason": "2026-08-02 裁決 keep：「研究及應用」為名詞 application 語境（研究與應用並列），非套用設定語意，依 note 釘選 keep。",
+   "ch_value": "80108adea4653dbd"
+  },
+  "Sandbox.json|Sandbox_AirdropMod_AirdropMode_tooltip": {
+   "patterns": [
+    "選(\\s*)中"
+   ],
+   "reason": "2026-08-02 裁決 keep：「選中一名玩家」為人被挑中（獲選義）語境，note 明列 ch_overrides 釘選保留。",
+   "ch_value": "62761abb469dc963"
+  },
+  "Sandbox.json|Sandbox_ApocalipseBrProjetoNemesis_BossCooldownCycles_tooltip": {
+   "patterns": [
+    "選(\\s*)中"
+   ],
+   "reason": "2026-08-02 裁決 keep：「被選中為目標」為玩家（人）被挑中之獲選義，符合 note 人被挑中保留準則，非 UI 選取操作。",
+   "ch_value": "5c13e0518f6cbd34"
+  },
+  "Sandbox.json|Sandbox_DynamicTrading.BanditHouseRoamerEligiblePercent_tooltip": {
+   "patterns": [
+    "選(\\s*)中"
+   ],
+   "reason": "2026-08-02 裁決 keep：「可被選中執行」為 note 明列 ch_overrides 釘選保留語境（人被挑中）。",
+   "ch_value": "1e63f30b48aa329e"
+  },
+  "UI.json|UI_PZLinux_MailADS_12": {
+   "patterns": [
+    "選(\\s*)中"
+   ],
+   "reason": "2026-08-02 裁決 keep：「你的名字被隨機選中」為抽中／獲選義（詐騙信抽獎語境），非 UI 選取，台灣用語合法。",
+   "ch_value": "6976eda3fb550bf6"
+  },
+  "UI.json|UI_PZLinux_MailADS_16": {
+   "patterns": [
+    "選(\\s*)中"
+   ],
+   "reason": "2026-08-02 裁決 keep：「被選中參加」為 note 明列釘選保留語境（人被挑中）。",
+   "ch_value": "c12539f31829aedf"
+  },
+  "UI.json|UI_PZLinux_MailADS_19": {
+   "patterns": [
+    "選(\\s*)中"
+   ],
+   "reason": "2026-08-02 裁決 keep：「被 SELECT * FROM rewards; 選中」為人被挑中之獲選義，且與 SQL SELECT 雙關，改動會破哏，keep。",
+   "ch_value": "a704aeb77f175019"
+  },
+  "UI.json|UI_PZLinux_MailADS_8": {
+   "patterns": [
+    "選(\\s*)中"
+   ],
+   "reason": "2026-08-02 裁決 keep：「被選中參加」為 note 明列釘選保留語境（人被挑中）。",
+   "ch_value": "d9a7d65ca3f0001c"
+  }
+ }
 }
