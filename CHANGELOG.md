@@ -4,6 +4,22 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.19.0-1.6.0] - 2026-08-03
+
+### Added
+
+- **ModernFirearmsSystem（3633421539）全量補譯 1,276 鍵**入 own_translations（含 BackpackSystem／BladesmithSystem 子 mod；IG_UI 110、ItemName 771、Tooltip 165、Sandbox 154、Recipes 55、UI 11、ContextMenu 10）；5 個 vanilla 碰撞鍵依收錄鐵律排除。
+
+### Fixed
+
+- **共用 IGUI 鍵三裁決**（Steam 玩家回報查證屬實）：`IGUI_Barrel` 燃料桶→槍管（9 owner 中 8 個槍械 mod 多數裁決）、`IGUI_Barrel_Shroud` 補「護木/护木」、`IGUI_Barrels`→個桶（GenPlus 計數量詞）、`IGUI_ItemCat_Stock` 高湯→武器配件-槍托。MFS 雙邊 review findings 全數修正：13 組品牌譯名 ItemName↔Sandbox 統一、16 筆 `_Large` 誤標修正、55 鍵全形標點半形化、術語對齊。
+- **Tooltip 114 鍵 `<LINE>`→`<br>` 正規化**（本體側玩家回報藥品描述出現字面 `<LINE>`，未裝 EHR 亦可見——本包 Tooltip.json 全域載入）：上游譯文（As1＋EHR 自帶 CN）把僅 richText 面板認得的 `<LINE>` 用在物品欄純文字 tooltip；統一改為官方慣例 `<br>`（兩種消費端皆安全）。`<RGB:>` 標記分治：EHR 藥品 28 鍵刪除（純文字端原樣顯示）、CSR 躲藏系 8 鍵＋Inventions 1 鍵保留（richText 端）。CN 走 cn_overrides +114 條（含 as1_value 錨點）、CH 直改 corpus、ch_review_state 114 鍵背書。
+
+### Notes
+
+- 本次與本體 MOD `42.20.0-1.14.1` 同日發布（本體側同批修復：休息選單父項 Moveables 5 鍵、技能描述 tooltip、crafting entity 名稱等，詳見本體 CHANGELOG）。
+- gate 全綠：build 冪等雙跑零 diff、verify_dist 11/11 PASS、lint_ch 0/0/0、cn-diff 對 v42.19.0-1.5.0 待複核 0。
+
 ## [42.19.0-1.5.0] - 2026-08-02
 
 ### Added
