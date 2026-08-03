@@ -40,7 +40,7 @@
 [list]
 [*] [b]Mod ID:[/b] CatModLangFor42
 [*] [b]支援版本:[/b] Build 42.19.0+
-[*] [b]Mod 版本:[/b] 42.19.0-1.6.0
+[*] [b]Mod 版本:[/b] 42.19.0-1.7.0
 [*] [b]Workshop ID:[/b] 3765907717
 [/list]
 

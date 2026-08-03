@@ -4,6 +4,36 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.19.0-1.7.0] - 2026-08-04
+
+### Added
+
+- **新增 6 個 MOD 的翻譯支援，合計 224 鍵**（玩家於正式服回報未翻譯字串後逐案核准收錄）：
+  - **CleanUI**（3437629766）53 鍵〔原創翻譯〕：取代原版物品欄／戰利品面板的 UI mod，玩家回報的「Equipped Items」即出自此包。上游打包六個版本分支（鍵數 49/50/50/53/53/53），PZ 42.20 只載入 42.19，舊三分支僅有 legacy `UI_EN.txt` 不生效。
+  - **Neat Crafting**（3502080466）69 鍵〔原創翻譯〕：取代整個製作視窗側欄，開製作介面即全螢幕英文。排除已由 As1 出貨的 `IGUI_XP_NC_SetPanelMinSize_tooltip` 不重複收。
+  - **Mysterious Vehicle Claim Key**（3643840023）87 鍵〔原創翻譯〕：多人服車輛認領系統。claim/unclaim 定名「認領／取消認領」（收錄前 corpus 認領 72 : 登記 32，AVCS 為孤例；MVCK 實際建立所有權，「認領」較精確）。
+  - **Nepenthe's Dismantle Any Car**（3428369137）11 鍵、**Craft Propane**（3634065654）3 鍵、**小型皮革合併**（3576417449）1 鍵〔皆原創翻譯〕。
+- **既有支援 MOD 補譯 52 鍵**入 own_translations：
+  - **KI5 車輛輪胎 32 鍵＋W900 配方 2 鍵**：`Convert_KI5Tire_To_Vanilla` 的所需物品欄依 `rSemiTruck_KI5_TireConvert.lua` 的 `Tire2`/`Offroad2` 規則做版本夾感知掃描，實為 32 個 fullType 全缺（來源 20 個 mod 皆已支援），非表面可見的 1～2 鍵。
+  - **製作分類 16 鍵**：`IGUI_CraftCategory_*` 供 Neat 家族側欄（查找鏈 `UI_CraftCat_` → `IGUI_CraftCategory_` → `IGUI_perks_` → `ContextMenu_`）、`IGUI_CraftingCategories_*` 供原版製作 UI（`ISWidgetRecipeCategories.lua` 走 `getText` 無 fallback，查不到會顯示原始鍵名）。兩組譯名逐字一致，避免同一分類在兩種 UI 下顯示不同名稱。注意 `MetalWorking`（大寫 W）與本體 `Metalworking` 是不同鍵，其唯一 consumer 為 Craft Propane，故隨該 mod 走 own lane。
+  - Bag Upgrade Plus 缺名 2 鍵（`SchoolbagPlus` 上游連 EN DisplayName 都未定義、`Fluid_Container_HydrationBackpackPlus` 上游無 `Fluids.json`）、School's Out 過膝襪 2 鍵。
+
+### Fixed
+
+- **繁中既有債 5 鍵**：`Base.SheetSlingBagPlus` 布**制**→布**製**（簡體殘留漏網）；Hydration 家族 4 鍵「水合背包」→「水袋背包」（原為 Hydration 直譯，與本體譯名不一致）。CN 側受 As1 逐字 parity gate 限制維持原文，語意類更新待上游同步帶入。
+- **`IGUI_CraftingCategories_Mechanics` 錯置**：鍵名前綴與檔名不符（放在 `ContextMenu.json` 桶），搬回 `IG_UI.json`——原位置的鍵遊戲永遠查不到。
+
+### Changed
+
+- **製作分類 `UI_CraftCat_*` 譯名一律跟隨 Neat Building 自帶繁中**：本包載入順序在 mod 之後會覆蓋 mod 自帶值，若採本體 `IGUI_perks_*` 那套會造成 18 個分類名對玩家無預警變動（護甲→防具、金工→金屬加工、裁縫→縫紉，且 Survival/Survivalist 整組對調）。副作用：Neat 家族日後自行修訂繁中會被本包壓住，屬 JSON 全量共存模型的固有取捨。
+
+### Notes
+
+- 玩家回報以正式服 `pzserver.ini` 的 `WorkshopItems` 為查證基準（本地訂閱清單含大量未上服 mod），相關 runbook 已補入 AGENTS.md。
+- 回報中的鑰匙圈英文（`IGUI_KeyRingName`）為遊戲本體鍵，受 vanilla 覆寫鐵律限制不由本包處理，已於本體翻譯包解決。
+- gate 全綠：build 冪等雙跑零 diff、verify_dist 11/11 PASS、lint_ch 0/0/0、cn-diff 對 v42.19.0-1.6.0 待複核 0。
+- Claude 與 codex 雙邊 review-plus 獨立審查；codex 四輪複核後 APPROVE（期間修正 provenance lane 分流 1 處、metadata 事實記載 5 處）。
+
 ## [42.19.0-1.6.0] - 2026-08-03
 
 ### Added
