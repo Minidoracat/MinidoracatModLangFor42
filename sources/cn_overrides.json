@@ -154,6 +154,11 @@
   "reason": "vanilla 純標籤 'Soap' 被譯成帶參數「所需肥皂:%1」，本體語境會裸露 %1；全庫查無 mod 重定義，官方值回填",
   "value": "肥皂"
  },
+ "ItemName.json|ATA2.TransportShelve": {
+  "as1_value": "便携式炉灶",
+  "reason": "As1 上游張冠李戴：該物品為貨架（Icon=media/ui/Container_Shelf、配方僅 3 木板 3 釘、上游自帶 EN=Portable shelve），爐灶另有 TransportOven",
+  "value": "便携式货架"
+ },
  "ItemName.json|Base.Magazine": {
   "as1_value": "弹匣",
   "reason": "vanilla 可閱讀雜誌 'Magazine' 誤譯「彈匣」（曝光度高）；Firearms mod EN hash 證實同值無重定義，官方值回填",
@@ -243,6 +248,31 @@
   "as1_value": "过滤滤芯",
   "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
   "value": "滤芯"
+ },
+ "Recipes.json|67gt500eMakeHood": {
+  "as1_value": "制作67款眼镜蛇Eleanour引擎盖",
+  "reason": "As1 上游錯字：Shelby GT500 的 Eleanor 誤拼 Eleanour（同 mod IGUI_VehicleName67gt500e 已作 Eleanor）",
+  "value": "制作67款眼镜蛇Eleanor引擎盖"
+ },
+ "Recipes.json|67gt500eMakeReinforcedFrontBumper": {
+  "as1_value": "制作67款眼镜蛇Eleanour加固前保险杠",
+  "reason": "As1 上游錯字：Eleanour→Eleanor",
+  "value": "制作67款眼镜蛇Eleanor加固前保险杠"
+ },
+ "Recipes.json|67gt500eMakeTire": {
+  "as1_value": "制作67款眼镜蛇Eleanour轮胎",
+  "reason": "As1 上游錯字：Eleanour→Eleanor",
+  "value": "制作67款眼镜蛇Eleanor轮胎"
+ },
+ "Recipes.json|89volvo240MakeRoofrack": {
+  "as1_value": "制作89款沃尔沃245旅行车车顶行李架",
+  "reason": "As1 上游張冠李戴：本配方 outputs 為 Base.89volvo240Roofrack1（DisplayName=89 Volvo 200 Series Roofrack），卻寫成 245 旅行車；與 89volvo245MakeRoofrack 互相對調",
+  "value": "制作89款沃尔沃200系列车顶行李架"
+ },
+ "Recipes.json|89volvo245MakeRoofrack": {
+  "as1_value": "制作89款沃尔沃200系列车顶行李架",
+  "reason": "As1 上游張冠李戴：本配方 outputs 為 Base.89volvo245WagonRoofrack1（DisplayName=89 Volvo 245 Wagon Roofrack），與 89volvo240MakeRoofrack 互相對調",
+  "value": "制作89款沃尔沃245旅行车车顶行李架"
  },
  "Recipes.json|BoltShaft": {
   "as1_value": "雕刻弩箭箭杆",
