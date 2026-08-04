@@ -1,5 +1,5 @@
 {
- "_comment": "【已降級為 lint 資料】斷絕 OpenCC 後 build 不再讀取本檔；十族 regex 由 scripts/lint_ch.py 以 report-only 方式掃 sources/ch corpus，作為凍結基線殘留錯誤與人工新條目的回歸防護網。",
+ "_comment": "【已降級為 lint 資料】斷絕 OpenCC 後 build 不再讀取本檔；十族 regex 由 scripts/lint_ch.py 以 report-only 方式掃 sources/ch corpus 與 own_translations 的 ch 欄，作為凍結基線殘留錯誤與人工新條目的回歸防護網。",
  "_usage": "在對應 category 的 rules 陣列加入 {pattern, replacement} 供 lint 掃描；pattern 為 regex，replacement 僅供人工參考（lint 不自動改寫）。",
  "_provenance": "七大類移植自本體 MinidoracatLangFor42 scripts/opencc_fixes.json（2026-07-19），依本包語料逐條覆核後調整：不移植「係數→系數」（台灣標準即係數，照搬會退化 72 處）；不移植「^幹$→乾」（本包 UI_Phrases_SWEAR4 值為髒話「幹」）；「髮生」「散髮」加 lookbehind 防護（毛髮生長／披頭散髮為正確用法）。本包自行覆核不收的規則：「數據包→封包」（s2twp 已把 数据包／數據包 一律轉為「資料包」，post_fix 永不命中；network packet 台譯改走 ch_overrides 逐案處理）。",
  "post_fixes": [
@@ -998,6 +998,20 @@
    ],
    "reason": "2026-08-02 裁決 keep：「被選中參加」為 note 明列釘選保留語境（人被挑中）。",
    "ch_value": "d9a7d65ca3f0001c"
+  },
+  "UI.json|UI_BurdJournals_LoreTemplate_CursedSkillOnlyOffer": {
+   "patterns": [
+    "選(\\s*)中"
+   ],
+   "reason": "2026-08-04 裁決 keep：「{{skillNameB}}選中了它自己」是 lore 敘事動詞「選中」(chose)，非 UI 選取動作，規則誤中",
+   "ch_value": "7a1bba1cb72e27e6"
+  },
+  "UI.json|UI_BurdJournals_LoreTemplate_KrampusMilkCookies": {
+   "patterns": [
+    "選(\\s*)中"
+   ],
+   "reason": "2026-08-04 裁決 keep：「我們被選中了.我問被選中要做什麼」是被動語態「被選中」(chosen)，非 UI 選取動作，規則誤中",
+   "ch_value": "1bd5cf8dfaa5422d"
   }
  }
 }

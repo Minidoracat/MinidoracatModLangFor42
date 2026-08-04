@@ -3,7 +3,12 @@
 # dependencies = []
 # ///
 """
-lint_ch.py — sources/ch corpus 品質稽核與棘輪 gate
+lint_ch.py — CH 真相層品質稽核與棘輪 gate
+
+掃描範圍為**兩個 CH 真相層**：`sources/ch/` corpus 與 `sources/own_translations.json`
+的 `ch` 欄（原創翻譯層）。兩者 (檔名|鍵) 命名空間互斥（own 鍵依設計不進 corpus，
+apply_own 在 corpus_gate 之後才合入），故合併掃描後 lint_exemptions 與
+ch_review_state 的 (檔名|鍵) 查找對兩層一致適用；報告以 [own] 標記來源真相層。
 
 斷絕 OpenCC 後 CH corpus 為人工真相層，本工具是批次償還審查債的雷達＋防退步 gate：
   [A] opencc_fixes 十族 regex：凍結基線殘留＋人工新條目回歸（**棘輪 gate**，超基線退出 1）
@@ -28,6 +33,7 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CH_DIR = PROJECT_ROOT / "sources" / "ch"
+OWN_JSON = PROJECT_ROOT / "sources" / "own_translations.json"
 FIXES_JSON = PROJECT_ROOT / "sources" / "opencc_fixes.json"
 TERM_JSON = PROJECT_ROOT / "sources" / "terminology.json"
 REVIEW_STATE_JSON = PROJECT_ROOT / "sources" / "ch_review_state.json"
@@ -57,10 +63,12 @@ def scan(corpus: dict[str, dict], hit) -> list[tuple[str, str, str]]:
     ]
 
 
-def show(hits: list[tuple[str, str, str]], limit: int) -> None:
+def show(hits: list[tuple[str, str, str]], limit: int, own: set[tuple[str, str]]) -> None:
+    """印命中例句；own 層鍵標 [own]，指明該去哪個真相層修。"""
     for fname, key, val in hits[:limit]:
         preview = val if len(val) <= 60 else val[:60] + "…"
-        print(f"    {fname} | {key}：{preview!r}")
+        tag = " [own]" if (fname, key) in own else ""
+        print(f"    {fname} | {key}{tag}：{preview!r}")
     if len(hits) > limit:
         print(f"    ...（還有 {len(hits) - limit} 鍵）")
 
@@ -74,17 +82,37 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    for path, label in ((CH_DIR, "corpus 目錄"), (FIXES_JSON, "lint 規則"), (TERM_JSON, "術語表")):
+    for path, label in (
+        (CH_DIR, "corpus 目錄"), (OWN_JSON, "原創翻譯層"),
+        (FIXES_JSON, "lint 規則"), (TERM_JSON, "術語表"),
+    ):
         if not path.exists():
             print(f"❌ {label}不存在：{path}", file=sys.stderr)
             return 1
 
     corpus = {p.name: load_json(p) for p in sorted(CH_DIR.glob("*.json"))}
     n_keys = sum(len(m) for m in corpus.values())
+
+    # own_translations 的 ch 欄同為 CH 真相層，併入同一輪掃描。命名空間互斥
+    # （own 鍵不進 corpus，見 build 的 apply_own 時序），撞名即真相層重疊＝fail-loud。
+    own_entries = load_json(OWN_JSON).get("entries", {})
+    own_keys: set[tuple[str, str]] = set()
+    n_own = 0
+    for fname, emap in own_entries.items():
+        fmap = corpus.setdefault(fname, {})
+        for key, spec in emap.items():
+            if key in fmap:
+                print(f"❌ 真相層重疊：{fname}|{key} 同時存在於 sources/ch 與 own_translations",
+                      file=sys.stderr)
+                return 1
+            fmap[key] = spec.get("ch") if isinstance(spec, dict) else spec
+            own_keys.add((fname, key))
+            n_own += 1
+
     non_str = [
         (f, k) for f, m in corpus.items() for k, v in m.items() if not isinstance(v, str)
     ]
-    print(f"corpus：{len(corpus)} 檔、{n_keys} 鍵")
+    print(f"corpus：{len(corpus)} 檔、{n_keys} 鍵（＋own_translations {len(own_entries)} 檔、{n_own} 鍵）")
     if non_str:
         print(f"⚠️ corpus 非字串值 {len(non_str)} 鍵（異常，掃描已跳過）：{non_str[:5]}")
 
@@ -132,7 +160,7 @@ def main() -> int:
             if hits:
                 fix_hits += len(hits)
                 print(f"\n[A] {group.get('category', '?')} pattern={rule['pattern']!r}：{len(hits)} 鍵")
-                show(hits, args.limit)
+                show(hits, args.limit, own_keys)
 
     term = load_json(TERM_JSON)
     charfix_hits = 0
@@ -141,7 +169,7 @@ def main() -> int:
         if hits:
             charfix_hits += len(hits)
             print(f"\n[B] 異體字 {bad}→{good}：{len(hits)} 鍵")
-            show(hits, args.limit)
+            show(hits, args.limit, own_keys)
 
     # [C] 已裁決過濾：ch_review_state 中 hash 與現行有效 CN 相符的鍵＝已經人工/AI
     # 逐鍵裁決（keep 或 fix 皆登記），不再重報；餘下命中＝新增待裁決 → 棘輪
@@ -177,7 +205,7 @@ def main() -> int:
         if hits:
             select_hits += len(hits)
             print(f"\n[C] 待裁決 {rule.get('pair', needle)}：{len(hits)} 鍵（{rule.get('note', '')}）")
-            show(hits, min(args.limit, 3))
+            show(hits, min(args.limit, 3), own_keys)
 
     if non_literal:
         print(f"\nNOTE: {non_literal} 條非 literal 的 select 規則未掃描（本工具僅支援 literal）")
