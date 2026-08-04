@@ -16,6 +16,11 @@ ch_review_state 的 (檔名|鍵) 查找對兩層一致適用；報告以 [own] �
   [C] terminology select 術語：須人工裁決的台灣用語（已裁決鍵經 ch_review_state 過濾，
       餘下為新增待裁決——**棘輪 gate**，超基線退出 1）
   [D] terminology vendor 同步：本體 repo 在本機時比對 vendor 副本是否漂移（report-only）
+  [E] terminology replace 術語：無條件替換的已核准規則（**棘輪 gate**，超基線退出 1）。
+      CH 凍結後本 repo 不跑 terminology 引擎（CH 直取真相層、無任何機轉），這些規則
+      因此完全無人執行——[E] 是它們唯一的落地檢查。誤中走 lint_exemptions（帶
+      ch_value 錨點），不走 ch_review_state：replace 語意是「一律替換」，開放台帳
+      keep 會變成繞過 gate 的後門。
 
 豁免與過濾皆 fail-closed：lint_exemptions 條目須帶 ch_value 錨點且與現行 CH 值相符
 才生效；規則損壞／豁免 schema 不符＝非零退出。缺檔／格式錯誤亦 fail-loud。
@@ -42,7 +47,7 @@ DIST_CN_DIR = (
     / "MinidoracatModLangFor42" / "42" / "media" / "lua" / "shared" / "Translate" / "CN"
 )
 BASE_TERM_JSON = Path("D:/github/MinidoracatLangFor42/scripts/terminology.json")
-RATCHET = {"A": 0, "B": 0, "C": 0}  # 命中數棘輪基線（2026-08-02 首批償還後歸零）
+RATCHET = {"A": 0, "B": 0, "C": 0, "E": 0}  # 命中數棘輪基線（2026-08-02 首批償還後歸零）
 
 
 def h16(value: str) -> str:
@@ -119,6 +124,14 @@ def main() -> int:
     schema_errors = 0
     fix_hits = 0
     fixes = load_json(FIXES_JSON)
+    term = load_json(TERM_JSON)
+    # approved 且 mode=replace 的規則＝[E] 的掃描域；pattern 一併納入 known_patterns，
+    # 否則 [E] 誤中無法登記豁免（會被判 schema error）。
+    replace_rules = [
+        r for r in term.get("rules", [])
+        if r.get("status") == "approved" and r.get("mode") == "replace"
+        and isinstance(r.get("match", {}).get("value"), str)
+    ]
     # 裁決豁免登記：(檔|鍵) → {patterns: [...], reason, ch_value}——經人工裁決為
     # 合法語境的 regex 誤中（如「彩色光＋標記」誤中光標）。fail-closed：
     #   * pattern 必須存在於 post_fixes 規則集，否則 schema error（豁免空轉零訊號）
@@ -127,7 +140,7 @@ def main() -> int:
     exemptions = fixes.get("lint_exemptions", {})
     known_patterns = {
         r.get("pattern") for g in fixes.get("post_fixes", []) for r in g.get("rules", [])
-    }
+    } | {r["match"]["value"] for r in replace_rules}
     active_exempt: dict[str, set[str]] = {}
     for rk, spec in sorted(exemptions.items()):
         pats = spec.get("patterns") if isinstance(spec, dict) else None
@@ -162,7 +175,6 @@ def main() -> int:
                 print(f"\n[A] {group.get('category', '?')} pattern={rule['pattern']!r}：{len(hits)} 鍵")
                 show(hits, args.limit, own_keys)
 
-    term = load_json(TERM_JSON)
     charfix_hits = 0
     for bad, good in sorted(term.get("charfix", {}).items()):
         hits = scan(corpus, lambda v, b=bad: b in v)
@@ -210,6 +222,31 @@ def main() -> int:
     if non_literal:
         print(f"\nNOTE: {non_literal} 條非 literal 的 select 規則未掃描（本工具僅支援 literal）")
 
+    # [E] approved replace 規則：CH 凍結後本 repo 無 terminology 引擎執行它們，此處是
+    # 唯一落地檢查。誤中走 lint_exemptions（pattern 已納入 known_patterns），不吃
+    # ch_review_state——replace 語意為一律替換，台帳 keep 會變成繞過 gate 的後門。
+    replace_hits = 0
+    for rule in replace_rules:
+        m = rule["match"]
+        if m.get("type") == "regex":
+            try:
+                pat = re.compile(m["value"])
+            except re.error as exc:
+                print(f"❌ [E] 規則損壞：{rule.get('pair', m['value'])!r}（{exc}）", file=sys.stderr)
+                schema_errors += 1
+                continue
+            test = (lambda v, p=pat: bool(p.search(v)))
+        else:
+            test = (lambda v, n=m["value"]: n in v)
+        hits = [
+            h for h in scan(corpus, test)
+            if m["value"] not in active_exempt.get(f"{h[0]}|{h[1]}", set())
+        ]
+        if hits:
+            replace_hits += len(hits)
+            print(f"\n[E] 應替換 {rule.get('pair', m['value'])}（→{rule.get('replace')!r}）：{len(hits)} 鍵")
+            show(hits, args.limit, own_keys)
+
     base_term = args.base_terminology
     if base_term.exists():
         base = load_json(base_term)
@@ -223,14 +260,14 @@ def main() -> int:
 
     print(
         f"\n總計：[A] 修正建議 {fix_hits} 鍵、[B] 異體字 {charfix_hits} 鍵、"
-        f"[C] 待裁決 {select_hits} 鍵"
+        f"[C] 待裁決 {select_hits} 鍵、[E] 應替換 {replace_hits} 鍵"
     )
     # 棘輪：基線已於 2026-08-02 首批償還歸零——超過基線即非零退出（防品質單調
     # 劣化）。[C] 命中時：逐鍵裁決（fix 修 corpus／keep 不動）→ 登記 ch_review_state
     # 即消化；[A]/[B] 命中：修正，regex 誤中則登記 lint_exemptions（附 ch_value 錨點）。
     exceeded = {
         k: (n, RATCHET[k])
-        for k, n in (("A", fix_hits), ("B", charfix_hits), ("C", select_hits))
+        for k, n in (("A", fix_hits), ("B", charfix_hits), ("C", select_hits), ("E", replace_hits))
         if n > RATCHET[k]
     }
     if exceeded:
