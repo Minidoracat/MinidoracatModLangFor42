@@ -4,6 +4,37 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.19.0-1.8.0] - 2026-08-04
+
+### Added
+
+- **damnlib（that DAMN Library, 3171167894）script 物品名 196 鍵**——玩家回報「Small Modern Roofrack」在安裝選單與物品欄顯示英文、tooltip 直接顯示鍵名 `Tooltip_item_damnRoofrack`。根因是 damnlib 把物品名寫死在 script 的 `DisplayName`，自帶 `Translate/EN` 只有 Fluids/IG_UI/Recipes/Sandbox/Tooltip 五類、**沒有 ItemName.json**，As1 因此抓不到：208 個 script 物品僅覆蓋 9。配方名有翻是因為它走 `Recipes.json` 的另一個 map，故出現「配方有名字、物品沒名字」。譯名鍵為裸 `module.item`（`Translator.java` 的 JSON loader 不補 `ItemName_` 前綴，與 vanilla ItemName.json 5137 鍵格式一致）。略過 4 個明示不可生成的 dummy/debug。**連帶效果：本機 Workshop 有 49 個 mod 直接相依 damnlib 且全部引用這批 library 物品，修一次全部受惠。**
+- **`Tooltip_item_damnRoofrack` 1 鍵**：上游 bug——script 宣告了此鍵但 damnlib 自己的 EN Tooltip.json（43 鍵）未定義，42.0／42.13 亦同，故任何語言都顯示原始鍵名。四種車頂行李架共用，本包定義 CH/CN 即生效；`en` 欄由本包擬定，tracker 會列為查無上游錨點的偵測盲區（report-only）。
+- **三 MOD 上游追蹤缺口補譯 81 鍵**（追蹤器 issue #28／#29／#31 收尾）：AutoMechanics 11、WayMoreCars 57、myspatialrefuge 13。除 issue 報的 delta 外，一併清償同批 MOD 的既有覆蓋缺口（WayMoreCars 的 CarBomb 族、TireStack 族、`CraftVanillaVehicle*` 車窗／輪胎配方 33 鍵等）。
+- **新增出貨檔 `RecipeGroups.json`**（CH/CN）：本包首次輸出該檔名，格式比照原版扁平物件。
+
+### Fixed
+
+- **標準／重型部件譯名相同致物品欄無法辨認**（codex review 抓出）：`80chevyCKseriesTire1/2`、`90chevyCKseriesTire1/2`、`86chevyCUCVTire1/2`、`85gmBbodyTire3/4`、`85gmBbodyWagonBumperRear1/2` 五組上游 DisplayName 本就相同，照譯即複製歧義；依各自配方（`製作雪佛蘭CUCV標準/重型輪胎` 等）正名，連帶修正 3 個既有鍵。
+- **譯名未對齊該物品自己的既有配方名**：福特維多利亞皇冠→福特CVPI（語料 34:19）、旅行版→旅行車（93:9）、多用途→通用貨箱（4:0）、輪胎N型→N型輪胎、軍用水桶→軍用儲水桶、龐蒂亞克拉力I/II→Rally I/II、分體式→分離式（3:1）。CN 側另修 `后车厢盖`→`后备箱盖`（110:3）、`(100 入)`→`(100个装)`（「入」為台灣包裝用語）。
+- **車窗物品名去歧義**：`CraftVanillaVehicle{Front,Rear}Window*` 12 個配方由「車前窗／車後窗」改為**前側車窗／後側車窗**。遊戲資料實證為側窗——`part WindowFrontLeft { area = SeatFrontLeft }`、`item FrontWindow1 { Icon = SideWindow }`（Windshield 用 `CarWindshield`）；避開「車前窗」被讀成擋風玻璃、「後車窗」在台灣車廠手冊常指後擋玻璃的雙重歧義，並符合公路局隔熱紙法規「前側窗／後側窗」分類。本體包 MinidoracatLangFor42 同批對齊（`Base.{Front,Rear}Window{1,2,3}`）。
+- **`ExtractSteelFrom{LargePlus,VeryLarge}Item` 錨定錯誤**：原譯「從…中提取鋼材」錨到鐵製品族的 outlier，改為鋼製品族的「廢鋼熔鑄 (…)」。
+- **AutoMechanics 沙盒選項標題去歧義**：`跳過無經驗部件`→`跳過不給經驗的部件`（原偏正結構易讀成「部件本身沒有經驗」）。
+- **CH 真相層存量術語債清償 62 鍵**（新 gate 導入後首次全量清償）：異體字 9（污→汙、祕→秘）、select 逐鍵裁決 3 修 33 keep、replace 規則 13 修（點擊→點選、磁盤→磁碟、查看→檢視、信號→訊號 等），regex 誤中 4 鍵登記 `lint_exemptions`（含羈絆義的「聯繫」、「彩色光＋標記」）。
+
+### Changed
+
+- **`lint_ch.py` 棘輪涵蓋 `own_translations.json` 的 `ch` 欄**：原本只掃 `sources/ch` corpus，3,262 個原創翻譯值完全在 gate 之外。兩層 (檔名|鍵) 命名空間互斥（實測撞名 0），故 `lint_exemptions` 與 `ch_review_state` 的查找對兩層一致適用；撞名時 fail-loud。報告加 `[own]` 標記指明該回哪層修。
+- **`lint_ch.py` 新增 [E] 掃 `terminology.json` 的 `mode=replace` 規則**：129 條已核准規則（literal 79＋regex 50）原本**兩個真相層都不掃**——[A] 掃的是 `opencc_fixes` 的 post_fixes、[C] 只掃 `mode=select` 且 literal 型。CH 凍結後本 repo 不跑 terminology 引擎，[E] 是這些規則唯一的落地檢查。誤中走 `lint_exemptions`（帶 `ch_value` 錨點），不吃 `ch_review_state`——replace 語意為一律替換，開放台帳 keep 等於留後門。
+
+### Notes
+
+- 兩道新 gate 於 damnlib 批次首次生效：[C] 擋下「極致性能車指南」，依規則 note「汽車性能；系統效能」判 keep 並登記台帳。
+- gate 接線以注入真違規實測（非只看綠燈）：[A]/[B]/[C]/[E] 正向皆 exit 1、豁免生效不報、`ch_value` 錨點失效重新計入、未知 pattern 判 schema error、真相層重疊 fail-loud。過程中抓到 [E] 初版把類別加進「總計」顯示卻漏加進棘輪判定的靜默失守。
+- gate 全綠：build 冪等雙跑零 diff（171 檔）、verify_dist 11/11 PASS（原創鍵 4,258）、lint_ch [A]0 [B]0 [C]0 [E]0、cn-diff 對 v42.19.0-1.7.0 待複核 0。
+- Claude 與 codex 雙邊 review 獨立審查；codex 對 damnlib 批次判 REQUEST CHANGES 並抓出標準／重型同名缺陷，修正後全數落地（駁回 1 項：座椅骨架→框架，語料 3:2 與 `Tooltip_item_damnSeatFrame` 皆站骨架）。
+- 已知未關缺口：全包尚有約 1,950 個 script `DisplayName` 未覆蓋（跨 60 個 mod，同 damnlib 根因），其中 199 個上游寫死的是簡體字、41 個為 SFX/debug、57 個 DisplayName 等於 item id。
+
 ## [42.19.0-1.7.0] - 2026-08-04
 
 ### Added
