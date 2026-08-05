@@ -47,7 +47,48 @@ DIST_CN_DIR = (
     / "MinidoracatModLangFor42" / "42" / "media" / "lua" / "shared" / "Translate" / "CN"
 )
 BASE_TERM_JSON = Path("D:/github/MinidoracatLangFor42/scripts/terminology.json")
-RATCHET = {"A": 0, "B": 0, "C": 0, "E": 0}  # 命中數棘輪基線（2026-08-02 首批償還後歸零）
+RATCHET = {"A": 0, "B": 0, "C": 0, "E": 0, "F": 0}  # 命中數棘輪基線（2026-08-02 首批償還後歸零）
+
+# [F] 42.20.1 Translator.formatted() 安全文法：安全 token（%%/%1-%9/%s/%d/%.Nf/%+.Nf）
+# 之外的裸 % 必炸（UnknownFormatConversionException → 主選單黑畫面）。
+# 與 build_mod.sanitize_format_tokens 同語意（lint 為獨立稽核工具，不 import builder）。
+# precision 用 ASCII [0-9] 並限 2 位：\d 是 Unicode-aware（%.١f 會被誤放行，JDK 崩潰），
+# 無上限則 %.2147483648f 拋 IllegalFormatPrecisionException。
+_FMT_SAFE_RE = re.compile(r"%\+?\.[0-9]{1,2}f|%[1-9]|%[sd]")
+# Java 完整位置參數 %N$<conversion> → PZ 簡寫 %N（formatFixer 自行補 $s）；
+# conversion 須完整消費（date/time 為 [tT] 後再接一字母）。
+# flags 有界重複：與 width `[0-9]*` 在 `0` 上重疊，無界時長 0 串失敗匹配 O(N²)
+_FMT_POSITIONAL_RE = re.compile(
+    r"%([1-9])\$[-#+ 0,(]{0,8}[0-9]*(?:\.[0-9]+)?(?:[tT][a-zA-Z]|[a-zA-Z])"
+)
+
+
+def fmt_sanitize(value: str) -> str:
+    """與 build_mod.sanitize_format_tokens 同語意（獨立實作，測試驗等價）。
+
+    left-to-right 掃描、`%%` 最優先——全域 sub 會穿透字面 `%%`（`%%1$s` → `%%1`）。
+    """
+    if "%" not in value:
+        return value
+    out: list[str] = []
+    i, n = 0, len(value)
+    while i < n:
+        if value[i] != "%":
+            out.append(value[i])
+            i += 1
+        elif value.startswith("%%", i):
+            out.append("%%")
+            i += 2
+        elif (p := _FMT_POSITIONAL_RE.match(value, i)) and not value.startswith("$", p.end()):
+            out.append(f"%{p.group(1)}")
+            i = p.end()
+        elif m := _FMT_SAFE_RE.match(value, i):
+            out.append(m.group())
+            i = m.end()
+        else:
+            out.append("%%")
+            i += 1
+    return "".join(out)
 
 
 def h16(value: str) -> str:
@@ -247,6 +288,16 @@ def main() -> int:
             print(f"\n[E] 應替換 {rule.get('pair', m['value'])}（→{rule.get('replace')!r}）：{len(hits)} 鍵")
             show(hits, args.limit, own_keys)
 
+    # [F] 42.20.1 formatted() 危險 % 序列：CH 真相層（corpus＋own ch）值必須已是
+    # 安全形式（裸 % 逸出 %%、%N$s 正規化為 %N）。build 的 format 安全 gate 同語意
+    # 阻斷出貨，此處提早在翻譯工作流雷達可見。
+    # 掃描域僅 CH（本工具定位為 CH 品質稽核，[A]-[E] 皆繁中規則）——own 的 cn 側
+    # 與 own-mod CN 由 build 的 format_gate_errors 涵蓋，非防線缺口。
+    fmt_hits = scan(corpus, lambda v: "%" in v and fmt_sanitize(v) != v)
+    if fmt_hits:
+        print(f"\n[F] 42.20.1 formatted() 危險 % 序列：{len(fmt_hits)} 鍵（裸 % 須逸出為 %%）")
+        show(fmt_hits, args.limit, own_keys)
+
     base_term = args.base_terminology
     if base_term.exists():
         base = load_json(base_term)
@@ -260,14 +311,18 @@ def main() -> int:
 
     print(
         f"\n總計：[A] 修正建議 {fix_hits} 鍵、[B] 異體字 {charfix_hits} 鍵、"
-        f"[C] 待裁決 {select_hits} 鍵、[E] 應替換 {replace_hits} 鍵"
+        f"[C] 待裁決 {select_hits} 鍵、[E] 應替換 {replace_hits} 鍵、"
+        f"[F] 危險 % {len(fmt_hits)} 鍵"
     )
     # 棘輪：基線已於 2026-08-02 首批償還歸零——超過基線即非零退出（防品質單調
     # 劣化）。[C] 命中時：逐鍵裁決（fix 修 corpus／keep 不動）→ 登記 ch_review_state
     # 即消化；[A]/[B] 命中：修正，regex 誤中則登記 lint_exemptions（附 ch_value 錨點）。
     exceeded = {
         k: (n, RATCHET[k])
-        for k, n in (("A", fix_hits), ("B", charfix_hits), ("C", select_hits), ("E", replace_hits))
+        for k, n in (
+            ("A", fix_hits), ("B", charfix_hits), ("C", select_hits),
+            ("E", replace_hits), ("F", len(fmt_hits)),
+        )
         if n > RATCHET[k]
     }
     if exceeded:

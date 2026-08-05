@@ -12,12 +12,14 @@ verify_dist.py — MinidoracatModLangFor42 的獨立 dist 驗證器（oracle）�
   * 純標準函式庫，無第三方相依 → 供 `uv run scripts/verify_dist.py` 直接執行。
 
 驗證項（預設全跑；任一 FAIL → 退出碼 1，全 PASS → 0）：
-  [1] CN 逐檔 parity：dist CN/*.json 對 As1 快照逐檔逐鍵值逐字一致
-      （登記例外鍵改為對 cn_safe_value 核對，見 sources/placeholder_exceptions.json）
+  [1] CN 逐檔 parity：dist CN/*.json 對 sanitize(As1 快照值) 逐檔逐鍵一致
+      （42.20.1 formatted() 安全逸出後的應出貨值；登記例外鍵改為對
+      sanitize(cn_safe_value) 核對，見 sources/placeholder_exceptions.json）
   [2] CH 鏡像       ：dist CH/*.json 與 dist CN 檔案集合、逐檔鍵集一致（值不比）
   [3] 編碼          ：dist 全部 .json 為 UTF-8 無 BOM 且可解析
-  [4] placeholder   ：format-token 值殘留 `%.` → FAIL（JDK format crash 簽名）；
-                      token multiset 不符 → FAIL；純字面可疑 % 數量不符 → WARN
+  [4] placeholder   ：dist 兩側殘留 grammar 外的必炸 % 序列 → FAIL（42.20.1 硬性）；
+                      format-token 值殘留 `%.` → FAIL（JDK format crash 簽名）；
+                      token multiset 不符（%% 不入 multiset）→ FAIL
   [6] language.txt  ：CH/CN 目錄各有 language.txt 且 text 欄位正確
   [7] lua 防護       ：dist media/lua/client/*.lua 與 sources/lua/*/*.lua basename 集合、
                       逐檔 bytes 一致，且每檔含 getActivatedMods/isModActive 防護
@@ -52,10 +54,96 @@ DIST_TRANSLATE_GLOB = "MOD/*/Contents/mods/*/42/media/lua/shared/Translate"
 AS1_CN_SUBPATH = "media/lua/shared/Translate/CN"
 
 # placeholder grammar：與 build_mod.py 的文法定義對齊（153 個合法 %.1f 不可誤殺）。
-# 順序即優先序：%% > %.Nf > %N（正整數位置參數）> %s/%d/%i。
-# 未被此文法吸收的 % 一律歸「可疑」桶（裸 % 只列 warning）——
-# 例如裸 % (如 "50%") 與 crash 簽名 %. (percent 緊接句點) 都刻意不算 grammar。
-_GRAMMAR = re.compile(r"%%|%\.\d+f|%\d+|%[sdi]")
+# 順序即優先序：%% > %.Nf（可帶 + 旗標）> %N（%1-%9 位置參數）> %s/%d。
+# %i 已自 grammar 移除：42.20.1 Translator 對 getText 結果強制 String.formatted()，
+# Java 無 %i 轉換符（UnknownFormatConversionException 未被捕捉＝主選單黑畫面）。
+# 編號佔位收緊為 %[1-9]（原 %\d+）：遊戲 FORMAT_TOKEN 為 %%|%([1-9])，%0 不在其內、
+# formatted() 對其必炸——若當合法 token 吸收，[4] 的必炸殘留檢查會靜默漏掉 %0 類序列。
+# 未被此文法吸收的 % 一律歸「可疑」桶——sanitize 後 dist 不得殘留任何可疑 %（[4] FAIL）。
+# precision 一律 ASCII [0-9] 且限 2 位：\d 是 Unicode-aware（%.١f 會被誤判為合法，
+# 而 JDK 拋 UnknownFormatConversionException）；無上限則 %.2147483648f 會拋
+# IllegalFormatPrecisionException。兩者皆非 MissingFormatArgumentException＝未被捕＝崩潰。
+_PREC = r"%\+?\.[0-9]{1,2}f"
+# 「佔位符緊接 %%」整體吸收為單一 token（格式單位，CN/CH 須配對）——順序在前。
+# 與獨立字面 %%（自 multiset 排除，允許「百分之…」譯法）區隔；獨立實作對齊 builder。
+_GRAMMAR = re.compile(rf"(?:%[1-9]|%[sd]|{_PREC})%%|%%|{_PREC}|%[1-9]|%[sd]")
+# dist 不得殘留任何 `%<數字>$` 形式：sanitize 會把合法的 %N$<conv> 正規化為 %N，
+# 殘留者即歧義值（%1$s$A）或超出 PZ %1-%9 的 index（%10$s）——兩者 formatFixer
+# 都處理不了，顯示必然損壞，一律 fail-loud 交人工裁決。
+_POSITIONAL_AT = re.compile(r"%[0-9]+\$")
+
+
+def has_positional_residue(value: str) -> bool:
+    """找 `%<數字>$` 殘留——**left-to-right 掃描且先消費字面 `%%`**。
+
+    不可用全域 search：那會穿透逸出。`%%1$s` 是「字面百分號＋文字 `1$s`」，
+    formatFixer 保持原樣、`.formatted()` 顯示 `%1$s`，本來就是安全值；
+    但 search 會從第二個 `%` 命中 `%1$` 而誤報（`%%0$s`、`%%10$s`、`%%%%1$s` 同）。
+    negative lookbehind 也不夠——`%%%1$s` 的第三個 `%` 才是真殘留。
+    與 sanitize 同一套優先序，兩處必須一起改。
+    """
+    i, n = 0, len(value)
+    while i < n:
+        if value[i] != "%":
+            i += 1
+        elif value.startswith("%%", i):
+            i += 2
+        elif _POSITIONAL_AT.match(value, i):
+            return True
+        else:
+            i += 1
+    return False
+
+# sanitize 期望值語意（獨立實作，與 builder 同語意不共用碼）：
+# build 對合併後 CN 全量逸出裸 %——oracle 對 As1 原值/registry 登記值套同一轉換
+# 得到「應出貨值」再核對 parity。安全 token 對齊遊戲 FORMAT_TOKEN（%%|%[1-9]）
+# 與 .formatted() 可捕捉集（%s/%d/%.Nf/%+.Nf）；其餘 % 逸出為 %%。
+_SANITIZE_TOKEN = re.compile(rf"{_PREC}|%[1-9]|%[sd]")
+# Java 完整位置參數 `%N$<conversion>` → PZ 簡寫 %N（formatFixer 自行補 $s，
+# 寫全形式會疊成 %N$s$s 導致顯示損壞）。conversion 須完整消費：date/time 為
+# [tT] 後再接一字母，只吃 t 會留下孤兒字母。與 builder 的 _POSITIONAL_RE 同語意。
+# flags 有界重複（見 builder 同名常數註解）：與 width `[0-9]*` 在 `0` 上重疊，
+# 無界時對長 0 串的失敗匹配呈 O(N²) 回溯。
+_POSITIONAL = re.compile(
+    r"%([1-9])\$[-#+ 0,(]{0,8}[0-9]*(?:\.[0-9]+)?(?:[tT][a-zA-Z]|[a-zA-Z])"
+)
+
+
+def sanitize_expectation(value: object) -> object:
+    """把期望值（As1 原值 / cn_safe_value / cn_overrides value）轉為 build 應出貨形式。
+
+    left-to-right 單次掃描，`%%` 最優先消費——不可用全域 sub 前置改寫位置參數，
+    那會穿透字面 `%%`（`%%1$s` → `%%1`）。緊接另一 `$` 的歧義值保守不轉以保冪等，
+    由 [4] 的 `%N$` 殘留檢查 fail-loud。非字串原樣返還（parity 對非字串仍逐字比對）。
+    own 層（own_translations cn / 原創 mod 目錄 CN）為人工直寫真相，**不套本轉換**
+    ——真相檔必須直寫安全值，dist 與其不一致即 FAIL（fail-loud 逼修真相檔）。
+    """
+    if not isinstance(value, str) or "%" not in value:
+        return value
+    out: list[str] = []
+    i, n = 0, len(value)
+    while i < n:
+        if value[i] != "%":
+            out.append(value[i])
+            i += 1
+            continue
+        if value.startswith("%%", i):
+            out.append("%%")
+            i += 2
+            continue
+        pos = _POSITIONAL.match(value, i)
+        if pos and not value.startswith("$", pos.end()):
+            out.append(f"%{pos.group(1)}")
+            i = pos.end()
+            continue
+        m = _SANITIZE_TOKEN.match(value, i)
+        if m:
+            out.append(m.group())
+            i = m.end()
+            continue
+        out.append("%%")
+        i += 1
+    return "".join(out)
 
 # lua 防護規則：每個 client lua 必須含這兩個 API 之一（未啟用目標 MOD 即 no-op）。
 _LUA_GUARD = re.compile(rb"getActivatedMods|isModActive")
@@ -135,7 +223,7 @@ def extract_tokens(value: str) -> tuple[list[str], list[str]]:
 def has_crash_signature(value: object) -> bool:
     """JDK String.format crash 簽名：值同時含 format token 且殘留字面 `%.`。
 
-    格式化字串（含 %N/%s/%d/%i/%.Nf 任一）若又出現未構成 %.Nf 的 `%.`，
+    格式化字串（含 %N/%s/%d/%.Nf 任一）若又出現未構成 %.Nf 的 `%.`，
     Java `String.formatted()` 會擲 UnknownFormatConversionException 而崩潰。
     無 format token 的純文字 `%.`（如 "5%.等"）不會被格式化，不算 crash（見 [4] WARN）。
     """
@@ -410,28 +498,34 @@ def check_cn_parity(
             if not check_own_key(fname, ek, d[ek]):
                 details.append(f"{fname}: 多鍵 {ek!r}")
         for key in sorted(ak & dk):
+            # 期望值一律過 sanitize_expectation（As1 原值與 registry 登記值皆為
+            # sanitize 前語意，build 出貨前會逸出裸 %；own 鍵不在本迴圈——
+            # ak & dk 僅含 As1 鍵，own 層於 check_own_key 以原值核對）。
             exc = exceptions.get(f"{fname}|{key}")
             if isinstance(exc, dict) and isinstance(exc.get("cn_safe_value"), str):
                 # 例外鍵：與登記安全值核對（不再對 As1 原值）
                 applied.add(f"{fname}|{key}")
-                if d[key] != exc["cn_safe_value"]:
+                if d[key] != sanitize_expectation(exc["cn_safe_value"]):
                     details.append(
                         f"{fname}: 例外鍵 {key!r} 未套用安全值 | "
-                        f"dist={d[key]!r} 應為 cn_safe_value={exc['cn_safe_value']!r}"
+                        f"dist={d[key]!r} 應為 sanitize(cn_safe_value)="
+                        f"{sanitize_expectation(exc['cn_safe_value'])!r}"
                     )
             elif isinstance(
                 (cov := cn_overrides.get(f"{fname}|{key}")), dict
             ) and isinstance(cov.get("value"), str):
                 # CN 人工修正鍵：與登記值核對（不再對 As1 原值）
                 applied_cn_ov.add(f"{fname}|{key}")
-                if d[key] != cov["value"]:
+                if d[key] != sanitize_expectation(cov["value"]):
                     details.append(
                         f"{fname}: CN 修正鍵 {key!r} 未套用登記值 | "
-                        f"dist={d[key]!r} 應為 value={cov['value']!r}"
+                        f"dist={d[key]!r} 應為 sanitize(value)="
+                        f"{sanitize_expectation(cov['value'])!r}"
                     )
-            elif a[key] != d[key]:
+            elif sanitize_expectation(a[key]) != d[key]:
                 details.append(
-                    f"{fname}: 鍵 {key!r} 值不符 | As1={a[key]!r} dist={d[key]!r}"
+                    f"{fname}: 鍵 {key!r} 值不符 | sanitize(As1)="
+                    f"{sanitize_expectation(a[key])!r} dist={d[key]!r}"
                 )
 
     # 登記但未命中任何 dist(檔,鍵) 的例外 → WARN（多半是打錯 key 名）
@@ -512,11 +606,14 @@ def check_placeholder(
     """[4] placeholder 三層把關（登記例外鍵豁免 FAIL，但登記安全值本身仍受檢）。
 
     FAIL：
+      * **任何可疑（非 grammar）% 殘留**——42.20.1 Translator 對 getText 結果強制
+        String.formatted()，grammar 外的 % 拋 UnknownFormatConversionException
+        （主選單黑畫面）。build 端 sanitize 後 dist 兩側都必須歸零，例外鍵不豁免。
       * format-token 值殘留字面 `%.`（JDK format crash 簽名）——CN 側僅未登記例外鍵檢；
         CH 側**一律檢**（CH 為獨立人工資料，登記例外不豁免 CH 安全）。
-      * grammar token multiset 不一致（%1/%s/%.1f/%% 等被增刪改）——例外鍵不豁免。
+      * grammar token multiset 不一致（%1/%s/%.1f 等被增刪改）——例外鍵不豁免。
+        %% 為字面逸出非佔位，不入 multiset（sanitize 後字面 % 繁簡寫法允許不同）。
       * ASCII 標籤 multiset 不一致（<LINE>/<br>/<RGB:...> 被增刪改）——例外鍵不豁免。
-    WARN：可疑（非 grammar）% 的**數量**在 CN/CH 不一致（純字面 % 的值層差異）。
     """
     cn_files, _ = _load_json_dir(dist_cn)
     ch_files, _ = _load_json_dir(dist_ch)
@@ -545,6 +642,25 @@ def check_placeholder(
 
             # 登記例外僅豁免 CN 側崩潰簽名（安全值本身已於上方獨立驗過）；
             # CH 為獨立人工資料，崩潰簽名／token／標籤 multiset 一律照檢。
+            # 42.20.1 硬性：dist 任一側殘留 grammar 外的 % ＝必炸序列，一律 FAIL
+            # （build sanitize 後應歸零；此為 oracle 端獨立重驗，例外鍵不豁免）。
+            for side, seqs in (("CN", cs), ("CH", hs)):
+                if seqs:
+                    fail.append(
+                        f"{fname}: 鍵 {key!r} {side} 值殘留必炸 % 序列 {seqs}"
+                        f"（42.20.1 formatted() 拋 UnknownFormatConversionException）"
+                        f" | {(cn_v if side == 'CN' else ch_v)[:60]!r}"
+                    )
+            # %N$ 殘留＝顯示損壞：$s 不含 %，上面的 % 掃描看不到它——獨立檢查。
+            # sanitize 會把合法的 %N$<conv> 正規化為 %N，故 dist 殘留者必為歧義值
+            # （%1$s$A）或超出 PZ %1-%9 的 index（%10$s）——formatFixer 都處理不了。
+            for side, val in (("CN", cn_v), ("CH", ch_v)):
+                if has_positional_residue(val):
+                    fail.append(
+                        f"{fname}: 鍵 {key!r} {side} 值殘留 %N$ 位置參數（formatFixer 會疊成 "
+                        f"%N$s$s ＝顯示損壞；歧義或 index 超出 %1-%9，須人工改寫）"
+                        f" | {val[:60]!r}"
+                    )
             if not exempt and has_crash_signature(cn[key]):
                 fail.append(
                     f"{fname}: 鍵 {key!r} CN 值含 format token 且殘留 '%.'（crash 簽名）"
@@ -555,7 +671,8 @@ def check_placeholder(
                     f"{fname}: 鍵 {key!r} CH 值含 format token 且殘留 '%.'（crash 簽名）"
                     f" | {ch[key]!r}"
                 )
-            if Counter(cg) != Counter(hg):
+            # %% 為字面逸出（非佔位），不入 multiset 比對
+            if Counter(t for t in cg if t != "%%") != Counter(t for t in hg if t != "%%"):
                 fail.append(
                     f"{fname}: 鍵 {key!r} token 不符 | CN={sorted(cg)} CH={sorted(hg)}"
                 )
@@ -563,11 +680,6 @@ def check_placeholder(
             if Counter(ct) != Counter(ht):
                 fail.append(
                     f"{fname}: 鍵 {key!r} 標籤不符 | CN={sorted(ct)} CH={sorted(ht)}"
-                )
-            # WARN 對例外鍵仍照列（只是不影響退出碼）
-            if len(cs) != len(hs):
-                warn.append(
-                    f"{fname}: 鍵 {key!r} 可疑 % 數量 CN={len(cs)}({cs}) CH={len(hs)}({hs})"
                 )
     return (not fail), fail, warn
 

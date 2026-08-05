@@ -16,7 +16,10 @@ MinidoracatModLangFor42 build 管線（PZ B42 如一模組翻譯繁中版）
 
 真相模型：CN 為衍生佈局的 canonical import；CH 為 sources/ch/ 人工真相 corpus
 （已斷絕 OpenCC 機轉；新增/變更鍵由 AI/人工對照 EN＋術語表直譯後落 corpus）。
-build 僅做合併與把關，不做任何文字轉換。全程確定性輸出。
+build 僅做合併與把關，不做任何文字轉換——唯一例外：CN 值全量過
+sanitize_format_tokens（42.20.1 Translator.formatted() 安全逸出，機械冪等；
+As1 快照不可手改故於 build 期處理；CH/own 為人工真相須直寫安全值、gate 把關）。
+全程確定性輸出。
 """
 from __future__ import annotations
 
@@ -75,24 +78,104 @@ LANGUAGE_TXT = {
 # ============================================================
 # placeholder token 文法
 # ============================================================
+# 42.20.1 起 zombie.core.Translator 於載入期對每值跑 formatFixer（只認 %% 與 %1-%9，
+# %N → %N$s），getText 再對結果跑 String.formatted(args)、僅捕 MissingFormatArgumentException。
+# 因此 %s/%d/%.Nf（無參數時 MissingFormatArgument 被捕、原文返還）是安全 token；
+# 裸 % 與 %i/%F 等非法轉換符會拋 UnknownFormatConversionException（主選單黑畫面）。
 # multiset 比對用：% 格式 token + <...> 標籤，CN/CH 須逐一致
-# conversion 只允許 %.Nf（f 限定）；%.N[其他字母] 太寬，會把崩潰簽名誤吞成合法 token，故收緊。
-_FMT_TOKEN_RE = re.compile(r"%%|%\.\d+f|%\d+|%[sdi]|<[^<>]+>")
+# conversion 只允許 %.Nf（f 限定，可帶 + 旗標）；%.N[其他字母] 太寬，會把崩潰簽名誤吞成合法 token，故收緊。
+# %i 已自 allowlist 移除——Java 無 %i 轉換符，出現即必炸，一律視為裸 % 逸出。
+# 編號佔位一律 %[1-9] 單位數——與遊戲 FORMAT_TOKEN（%%|%([1-9])）逐字對齊。
+# %0 不在遊戲文法內（formatFixer 不改寫、formatted() 拋 UnknownFormatConversionException），
+# 故不得當合法 token 吸收，否則必炸序列會被靜默漏掉；%10 同遊戲解為 %1 後接字面 0。
+# **一律用 [0-9] 而非 \d**：Python 的 \d 是 Unicode-aware，會把 %.١f（阿拉伯數字）
+# 判為合法 precision，而 JDK 對它拋 UnknownFormatConversionException（未被捕＝崩潰）。
+# precision 位數同樣設上限：%.2147483648f 超出 int 會拋 IllegalFormatPrecisionException。
+# 上限 2 位涵蓋一切實用場景（現有語料 708 個 precision token 最大值為 5）；
+# 三位數以上一律逸出成字面——寧可顯示 %.123f 也不崩潰。
+_PRECISION = r"%\+?\.[0-9]{1,2}f"
+# 「佔位符緊接 %%」（如 %1%%、%.1f%%）是**格式單位**——百分比符號屬該數值的一部分，
+# CN/CH 必須逐一配對（漏掉即數值單位消失）。故整體吸收為單一 token 進 multiset，
+# 與獨立字面 %%（允許譯成「百分之…」）區隔開。順序在前，優先於單獨的 %%。
+_ADJ_PCT = rf"(?:%[1-9]|%[sd]|{_PRECISION})%%"
+_FMT_TOKEN_RE = re.compile(rf"{_ADJ_PCT}|%%|{_PRECISION}|%[1-9]|%[sd]|<[^<>]+>")
 # 掃 grammar 之外的 % 用：只認 % 系列 token（不含標籤）
-_PCT_TOKEN_RE = re.compile(r"%%|%\.\d+f|%\d+|%[sdi]")
-# 「值是否含真正的 format token」用（不含 %% 與標籤）：%N/%s/%d/%i/%.Nf。
+_PCT_TOKEN_RE = re.compile(rf"{_ADJ_PCT}|%%|{_PRECISION}|%[1-9]|%[sd]")
+# 「值是否含真正的 format token」用（不含 %% 與標籤）：%N/%s/%d/%.Nf。
 # 只有含 format token 的值，殘留的字面 %. 才會被 PZ 轉換 + JDK .formatted() 當成轉換符而崩潰。
-_FMT_ONLY_RE = re.compile(r"%\.\d+f|%\d+|%[sdi]")
+_FMT_ONLY_RE = re.compile(rf"{_PRECISION}|%[1-9]|%[sd]")
+# sanitize 安全 token（不含 %%，%% 由 tokenizer 優先另行消費）
+_SAFE_RE = re.compile(rf"{_PRECISION}|%[1-9]|%[sd]")
+# Java 完整位置參數 `%N$<conversion>`（%1$s、%2$.1f、%1$,d、%1$tY…）→ 正規化為 PZ 簡寫 %N。
+# formatFixer 對 %N 一律補 $s，故值裡已寫完整形式時會疊成 %1$s$s，
+# formatted() 輸出「值$s」＝顯示損壞（不崩潰，但字串壞掉）。實例：Burd's Journals 上游 EN。
+# conversion 必須**完整**消費：date/time 是 [tT] 後再接一個字母，只吃 t 會留下孤兒字母。
+# flags 用**有界**重複：`[-#+ 0,(]*` 與其後的 width `[0-9]*` 在 `0` 上重疊，
+# 對「%1$ + 長串 0 + 非 conversion」的失敗匹配會 O(N²) 回溯（N=4000 約 0.16s，
+# 外部 As1／own 值可觸發的 build-time availability 風險）。Java flags 至多 6 種，
+# 上限 8 足夠且把回溯壓成線性。
+_POSITIONAL_RE = re.compile(
+    r"%([1-9])\$[-#+ 0,(]{0,8}[0-9]*(?:\.[0-9]+)?(?:[tT][a-zA-Z]|[a-zA-Z])"
+)
+
+
+def sanitize_format_tokens(value: str) -> str:
+    """42.20.1 Translator.formatted() 安全化（冪等）。
+
+    **left-to-right 單次掃描**，依 PZ／JDK 優先序逐 token 消費——不可用全域 sub
+    前置改寫：那會在 tokenizer 之前動手，把 `%%1$s` 的字面 `%%` 穿透成 `%%1`。
+    優先序：`%%`（字面逸出，最優先）> `%N$<conv>` → `%N` > 安全 token 原樣 > 其餘 % 逸出 `%%`。
+
+    `%N$<conv>` 後**緊接另一個 `$`** 者（如 `%1$s$A`）語意有歧義，保守不轉、原樣留下
+    ——正規化會逐次剝離（不冪等）而靜默丟失字面文字；改由 verify [4] 的 `%N$` 檢查
+    fail-loud 交人工裁決。同理 `%10$s` 這類超出 PZ %1-%9 的 index 也不轉、由 oracle 攔。
+
+    **刻意不做 printf→編號轉換**（與本體 repo 修法不同）：第三方 mod 的消費模式是
+    Lua 端 string.format(getText(...))——無參數 getText 觸發 MissingFormatArgumentException
+    被 Translator 捕捉後原文返還，%s/%d/%.Nf 照常由 mod 消費；若轉成 %1-%9，
+    formatFixer 會把 %N 改寫成 %N$s，反而炸掉 mod 的 string.format。
+    本函式只消滅必炸序列（裸 %、%i、%F 等 Java 非法轉換符）與 %N$ 顯示損壞。
+    """
+    if "%" not in value:
+        return value
+    out: list[str] = []
+    i, n = 0, len(value)
+    while i < n:
+        if value[i] != "%":
+            out.append(value[i])
+            i += 1
+            continue
+        if value.startswith("%%", i):  # 字面逸出最優先，勿被後續規則穿透
+            out.append("%%")
+            i += 2
+            continue
+        m = _POSITIONAL_RE.match(value, i)
+        if m and not value.startswith("$", m.end()):
+            out.append(f"%{m.group(1)}")
+            i = m.end()
+            continue
+        m = _SAFE_RE.match(value, i)
+        if m:
+            out.append(m.group())
+            i = m.end()
+            continue
+        out.append("%%")
+        i += 1
+    return "".join(out)
 # 角括號內容含 CJK 者是文本（如 <吱吱声>、耐力<25%, 疲劳>80%），屬翻譯文字一部分，
 # 不得當標籤比對；真正的標籤（<br>、<LINE>、<RGB:...>）皆為 ASCII。
 _CJK_RE = re.compile(r"[㐀-鿿豈-﫿]")
 
 
 def token_multiset(value: str) -> Counter:
-    """抽取 allowlist 內的 format token 與標籤，回傳 multiset。"""
+    """抽取 allowlist 內的 format token 與標籤，回傳 multiset。
+
+    %% 為字面逸出、非佔位，不入 multiset——sanitize 之後字面 % 的繁簡寫法
+    允許不同（如 CN「50%%」對 CH「百分之五十」），強制配對會誤殺合法翻譯。
+    """
     tokens = [
         t for t in _FMT_TOKEN_RE.findall(value)
-        if not (t.startswith("<") and _CJK_RE.search(t))
+        if t != "%%" and not (t.startswith("<") and _CJK_RE.search(t))
     ]
     return Counter(tokens)
 
@@ -232,7 +315,8 @@ def check_registry_ack(
 ) -> list[str]:
     """registry（cn_overrides / placeholder_exceptions）改的是 build 期 CN 值，
     split 的 worklist diff 看不到——以已審台帳強制背書：每個命中鍵的現行有效
-    CN 值 hash 必須與 ch_review_state 登記一致，否則拒絕出貨。
+    CN 值 hash（＝sanitize 後的出貨值，呼叫端須在 sanitize 之後才呼叫本檢查）
+    必須與 ch_review_state 登記一致，否則拒絕出貨。
     這確保每次 registry 改值都必經「檢視 sources/ch 對應鍵是否同步」的明示動作。
     """
     errors: list[str] = []
@@ -426,6 +510,75 @@ def collect_source_cn_dirs() -> list[Path]:
     if UNSORTED_CN.is_dir():
         dirs.append(UNSORTED_CN)
     return dirs
+
+
+def collect_own_mod_cn_dirs() -> list[Path]:
+    """origin=='own' 的原創 mod CN 目錄——**人工直寫真相**，非 As1 衍生。
+
+    這些值與 sources/ch corpus 同屬「build 不機轉、須直寫安全值」的真相層，
+    但它們同時也在 collect_source_cn_dirs 的收集範圍內（合併後吃 build 期
+    sanitize）。若無本 gate，往 own-mod CN 寫裸 % 會被靜默逸出出貨，
+    真相檔與 dist 分歧且 build 全綠——verify [1] 的 own 原值比對雖能 fail-loud，
+    但那是 oracle 端事後把關，不該是唯一防線。
+    """
+    dirs: list[Path] = []
+    if not MODS_DIR.is_dir():
+        return dirs
+    for mod_dir in sorted(MODS_DIR.iterdir()):
+        meta, cn = mod_dir / "metadata.json", mod_dir / "CN"
+        if not (meta.is_file() and cn.is_dir()):
+            continue
+        try:
+            is_own = load_json(meta).get("origin") == "own"
+        except (json.JSONDecodeError, UnicodeDecodeError, OSError, ValueError) as exc:
+            print(f"❌ {meta.relative_to(PROJECT_ROOT)} 讀取失敗：{exc}", file=sys.stderr)
+            sys.exit(1)
+        if is_own:
+            dirs.append(cn)
+    return dirs
+
+
+def format_gate_errors(
+    merged_ch: dict[str, dict],
+    own: dict[str, dict[str, dict]],
+    own_mod_dirs: list[Path],
+) -> list[str]:
+    """format 安全 gate：**人工真相層**的值必須已是 formatted() 安全形式。
+
+    涵蓋三處不受 build 期 sanitize 保護（或不該受其保護）的真相層：
+      1. sources/ch corpus（CH 全部，build 不對 CH 機轉）
+      2. own_translations.json 的 ch + cn（原創層直寫）
+      3. origin=='own' 的 mod CN 目錄（人工直寫真相，雖混在 CN 合併流內）
+    錯誤訊息附 sanitize 後的建議值，讓修真相檔是照抄而非重推。
+    """
+    errors = [
+        f"  sources/ch/{fname} | {key}: 含 formatted() 必炸 % 序列，"
+        f"請改為 {sanitize_format_tokens(val)!r}"
+        for fname in sorted(merged_ch)
+        for key, val in sorted(merged_ch[fname].items())
+        if isinstance(val, str) and sanitize_format_tokens(val) != val
+    ]
+    errors += [
+        f"  own_translations {fname}|{key}.{field}: 含 formatted() 必炸 % 序列，"
+        f"請改為 {sanitize_format_tokens(spec[field])!r}"
+        for fname, keys in sorted(own.items())
+        for key, spec in sorted(keys.items())
+        for field in ("ch", "cn")
+        if sanitize_format_tokens(spec[field]) != spec[field]
+    ]
+    for cn_dir in own_mod_dirs:
+        try:  # 路徑不在 repo 下（測試 tempdir 等）——錯誤路徑不得再擲錯
+            rel = cn_dir.relative_to(PROJECT_ROOT).as_posix()
+        except ValueError:
+            rel = cn_dir.as_posix()
+        for jf in sorted(cn_dir.glob("*.json")):
+            for key, val in sorted(load_json(jf).items()):
+                if isinstance(val, str) and sanitize_format_tokens(val) != val:
+                    errors.append(
+                        f"  {rel}/{jf.name} | {key}: 含 formatted() 必炸 % 序列，"
+                        f"請改為 {sanitize_format_tokens(val)!r}"
+                    )
+    return errors
 
 
 def merge_cn(dirs: list[Path]) -> tuple[dict[str, dict], list[str]]:
@@ -663,6 +816,18 @@ def cmd_build() -> int:
         for w in stale_exc:
             print(w)
 
+    # 42.20.1 formatted() 安全逸出：CN 真相為 As1 快照不可手改，於 build 期全量
+    # 機械 sanitize（冪等；registry 值一體適用）。verify_dist 以同語意對 sanitize
+    # 後的期望值核對 CN parity；「有效 CN 值」（背書 hash、已審台帳）自此指出貨值。
+    n_sanitized = 0
+    for fmap in merged_cn.values():
+        for key, val in fmap.items():
+            if isinstance(val, str) and (fixed := sanitize_format_tokens(val)) != val:
+                fmap[key] = fixed
+                n_sanitized += 1
+    if n_sanitized:
+        print(f"  CN sanitize：{n_sanitized} 鍵含裸 % 等必炸序列，已逸出為 formatted() 安全形式")
+
     # registry 背書 gate：registry 改值不經 split（worklist 看不到），
     # 強制每個命中鍵的有效 CN hash 與已審台帳一致（改值必經 CH 同步檢視）
     review_state = load_review_state()
@@ -712,6 +877,11 @@ def cmd_build() -> int:
 
     # 原創翻譯層（As1 未收錄的鍵；ch 直寫、cn 對應）——gate 之前合入使其受 placeholder 檢查
     own = load_own_translations()
+
+    # format 安全 gate：人工真相層（corpus / own_translations / own-mod CN）須直寫
+    # formatted() 安全形式（build 不對它們機轉，不安全即擋、附建議值）
+    fmt_errors = format_gate_errors(merged_ch, own, collect_own_mod_cn_dirs())
+
     own_added, own_shadowed = apply_own(merged_cn, merged_ch, own)
     if own_added:
         print(f"  原創翻譯層：新增 {own_added} 鍵")
@@ -728,12 +898,22 @@ def cmd_build() -> int:
     # Lua 複製計畫先算：basename 衝突屬硬錯，須在清空/寫出前先攔
     lua_plan, lua_conflicts = plan_lua()
 
-    # gate：合併衝突 + CH 值層 + placeholder 崩潰簽名/token 不一致 + Lua 衝突 → 不寫出、非零退出
-    if conflicts or ch_value_errors or errors or lua_conflicts:
+    # gate：合併衝突 + CH 值層 + format 安全 + placeholder 崩潰簽名/token 不一致 + Lua 衝突
+    # → 不寫出、非零退出
+    if conflicts or ch_value_errors or fmt_errors or errors or lua_conflicts:
         if conflicts:
             print(f"\n❌ 合併衝突（同 (檔,鍵) 異值）{len(conflicts)} 處：")
             for c in conflicts:
                 print(c)
+        if fmt_errors:
+            print(
+                f"\n❌ format 安全 gate {len(fmt_errors)} 處"
+                "（42.20.1 formatted() 必炸 % 序列，真相層須直寫安全值）："
+            )
+            for e in fmt_errors[:50]:
+                print(e)
+            if len(fmt_errors) > 50:
+                print(f"  ...（還有 {len(fmt_errors) - 50} 處）")
         if ch_value_errors:
             print(
                 f"\n❌ CH 值層 gate {len(ch_value_errors)} 處"

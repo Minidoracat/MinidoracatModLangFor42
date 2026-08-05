@@ -423,7 +423,7 @@
 | [[B42.13+] Pumps Have Propane (Standalone MP/SP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3632444452) | 油泵供應丙烷（獨立版） | 可從加油泵充裝丙烷罐、丙烷噴燈與丙烷罐車。 | `PumpsHavePropaneMP` | 6 |
 | [ModernFirearmsSystem 42.19 (SP/MP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3633421539) | 現代槍械系統 | 新增現代槍械系統，含多種口徑彈藥、彈匣與彈藥背帶。 | `ModernFirearmsSystem` | 34 |
 | [Craft Propane〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3634065654) | 丙烷填充 | 新增以木炭與水填充丙烷罐的配方。 | `CraftPropane` | 3 |
-| [Better Safehouse [B42.20- MP]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3634569678) | 更好的安全屋 | 強化多人連線的安全屋管理：副屋主權限、擴建範圍、主重生點與側邊面板等。 | `BetterSafehouse` | 116 |
+| [Better Safehouse [B42.20- MP]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3634569678) | 更好的安全屋 | 強化多人連線的安全屋管理：副屋主權限、擴建範圍、主重生點與側邊面板等。 | `BetterSafehouse` | 121 |
 | [Challenge Traits - Headshots, CDDA, and More [42.19 + 42.18]](https://steamcommunity.com/sharedfiles/filedetails/?id=3634630898) | 挑戰特質：爆頭、CDDA 等 | 新增爆頭限定、CDDA 等多種挑戰型特質玩法。 | `OCsChallengeTraits` | 37 |
 | [Dynamic Trading (w/ NPC) B42.16](https://steamcommunity.com/sharedfiles/filedetails/?id=3635333613) | 動態交易（含 NPC） | 新增與 NPC 的動態交易系統，含季節事件、通膨與土匪伏擊。 | `DynamicTrading`, `DynamicTradingCommon`, `DynamicTradingV2` | 136 |
 | [[B42MP] Frockin Splendor! Vol.5](https://steamcommunity.com/sharedfiles/filedetails/?id=3635394848) | Frockin Splendor! Vol.5 | 服飾擴充包第五輯，為遊戲新增額外服裝內容。 | `GanydeBielovzki's Frockin Splendor! Vol.5` | 37 |
