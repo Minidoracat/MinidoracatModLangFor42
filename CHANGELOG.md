@@ -4,6 +4,38 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.20.1-1.9.0] - 2026-08-05
+
+### Fixed
+
+- **PZ 42.20.1 主選單黑畫面（崩潰級）**：42.20.1 起 `zombie.core.Translator` 於載入期對每個譯值跑 `formatFixer`（只認 `%%` 與 `%1`-`%9`），`getText` 再對結果強制跑 `String.formatted(args)` 且**僅捕捉 `MissingFormatArgumentException`**——文法外的 `%`（裸 `%`、`%i`、`%F`…）會拋 `UnknownFormatConversionException` 炸穿而使主選單黑畫面。本包 CH/CN 各 856 個值含此類序列（含 `Compendium`、`ContextMenu`、`IG_UI`、`Tooltip`、`UI` 等檔）。管線新增 `sanitize_format_tokens` 全量逸出，**dist 殘留歸零**。
+- **`%N$s` 顯示損壞**：`formatFixer` 對 `%N` 一律補 `$s`，值裡若已寫 Java 完整位置參數會疊成 `%1$s$s`，輸出變成「值$s」。`$s` 不含 `%`，任何以 `%` 為起點的掃描都看不到它，故另設獨立檢查。`own_translations` 的 `UI_BurdJournals_BatchAlreadyClaimedSummary` 已改為 PZ 簡寫 `%1/%2`。
+- **上游 EN 致死鍵 fallback 補洞 5 鍵**：第三方 mod 自帶 EN 若仍是裸 `%`（作者未更新），我方未收錄的鍵會 fallback 到 EN 而崩潰。補譯 ETW 草藥雜誌計數器 2 鍵、Somewhat Traits 變異性 2 鍵（新增出貨檔 `Sandbox_EN.json` 的原創層 entry）、Dead Man's Dossier `Tooltip_DMD_MilitaryPage1` 1 鍵（上游已將鍵名 `Lore_`→`Tooltip_`，沿用 As1 既有審定譯文）。**未覆蓋致死鍵歸零。**
+
+### Added
+
+- **`sanitize_format_tokens`（build 期，機械冪等）**：CN 真相為 As1 快照不可手改，故於合併後全量逸出；安全 token 為 `%%`／`%1`-`%9`／`%s`／`%d`／`%.Nf`／`%+.Nf`。**printf 刻意不轉編號**（與本體 repo 修法分歧）——第三方 mod 靠 Lua `string.format(getText(...))` 消費，轉編號會被 `formatFixer` 改寫成 `%N$s` 反而炸掉 mod 端。
+- **format 安全 gate（build）**：CH corpus／`own_translations` 的 `ch`＋`cn`／`origin=own` 的 mod CN 三個人工真相層不受 build 期機轉保護，值須直寫安全形式，不安全即擋並附建議值。
+- **`lint_ch.py` [F] 棘輪**：CH 真相層危險 `%` 序列雷達，基線 0，讓問題在翻譯工作流早期可見。
+- **`scripts/test_format_tokens.py`**：sanitize 語意與冪等、builder／oracle／lint 三份獨立實作等價、verify [4] 必炸殘留與 `%N$` 殘留、multiset 的 `%%` 兩分法、build format gate 三真相層掃描域。
+
+### Changed
+
+- **`versionMin` 42.19.0 → 42.20.1（只支援最新穩定版）**：42.20.0 及更早無載入期 `formatFixer`，且**無參** `getText(desc)` 不跑 `.formatted()`，逸出後的 696 個純字面百分號值在舊版會顯示雙百分號。42.20.1 不修＝黑畫面完全不能玩，嚴重度不對等，故跟上最新版、不保留舊版相容分支。README／STEAM_DESCRIPTION／workshop.txt 的「支援版本」同步為 Build 42.20.1+。
+- **verify [1] CN parity 改對 `sanitize(As1 原值/登記值)` 核對**；[4] dist 兩側殘留文法外 `%` 一律 FAIL。「有效 CN 值」口徑自此指 sanitize 後的出貨值（registry 背書 gate、`ch_review_state` hash、`--cn-diff` 皆同）。
+- **token multiset 的 `%%` 兩分法**：獨立字面 `%%` 排除比對（容許「50%」譯成「百分之五十」）；**緊接佔位符的 `%%`（`%1%%`、`%.1f%%`）整體吸收為單一 token 並強制 CN/CH 配對**——它是數值的單位，CH 漏掉即「數值單位消失」而鍵集與 parity 全無感（現況 284 處全一致）。
+
+### Notes
+
+- **一次性遷移 967 值**：CH corpus 747、`own_translations` 的 ch/cn 218、`origin=own` 的 mod CN 2；`ch_review_state` 同步遷移 117 個 hash（口徑改為 sanitize 後出貨值）。全部值皆精確等於 `sanitize(舊值)`，零鍵集／結構／非目標欄位漂移。
+- **反編譯確證**：修法依據取自 42.20.1 快照的 `Translator.formatFixer`／`reportMissingArgumentsFromPastAbuse`／`fixupArgs`，並逐字模擬其 regex 替換驗證推導；42.18／42.19／42.20.0 交叉比對確認 `formatFixer` 為 42.20.1 新增。
+- **已知現象（非缺陷）**：42.20.1 對「無參 `getText` ＋ 值含 printf token」會記一行 Warning 後原文返還，這正是 mod 端 `string.format` 能運作的機制；逸出 printf 反而會炸掉消費端。
+- gate 全綠：build 冪等雙跑零 diff（171 檔）、`lint_ch` [A]0 [B]0 [C]0 [E]0 [F]0、`cn-diff` 對 v42.19.0-1.8.0 待複核 0、dist 必炸殘留 0 ／ `%N$` 殘留 0。
+- **`verify_dist` [1][8] 無法直跑**：`sources/snapshot.json` 釘定的 As1 42.19 本機樹已被 Steam 更新覆蓋（追蹤器 issue #30「待同步」）。改以版控中的 `sources/mods/*/CN` 建代理樹跑 [1] 完整比對邏輯（先驗 As1 lane 對 HEAD 零變更才成立），PASS：80 檔／69,804 鍵，與 snapshot 釘定的 `as1_filekeys` 一致。**代理不替代 [8] 的來源 provenance**，該盲區待 As1 同步後消除；其餘 [2][3][4][6][7][9][10][11][12] 全 PASS 零 WARN。
+- Claude 四 lane 與 codex 六輪 review 獨立審查後收斂至 APPROVE。codex 抓出四項本地未見的缺陷：`%1$s` 三份實作共同漏檢、`\d` 為 Unicode-aware 使 `%.١f` 誤判為安全（JDK 拋 `UnknownFormatConversionException`）、sanitize 用全域 `re.sub` 會穿透字面 `%%`、以及**修了 sanitize 卻漏修 verify 殘留檢查**的同源第二落點。另修 positional regex 的 flags/width 重疊造成的 O(N²) 回溯（N=4000 由 0.162s 降至 0.0007s）。
+- 順手清償：`SUPPORTED_MODS.md` 的 Better Safehouse 鍵數 116→121——`55e8608` 改了該 mod 的 CN 鍵數卻漏跑 `build_mod.py manifest`（AGENTS.md 列為「gate 管不到、漏做即靜默失守」的例行動作），本次重跑補正。
+- 已知未關缺口：ETW／Somewhat Traits／Dead Man's Dossier 另有 103／127／60 個**非致死**缺翻譯鍵（顯示英文但不崩潰），屬獨立的覆蓋率補完任務。
+
 ## [42.19.0-1.8.0] - 2026-08-04
 
 ### Added
