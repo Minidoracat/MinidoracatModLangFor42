@@ -974,5 +974,10 @@
     "as1_value": "<IMAGE:media/textures/Item_Military_Helmet_Patriot- WhitePlain.pngIMAGE:media/textures/Item_Military_Helmet_Patriot- White.png><LINE>",
     "reason": "As1 上游標記損壞：兩個 <IMAGE:> 黏成一個（缺 \"><\"），遊戲內圖片無法顯示。同族 EnablePressGearLoot_tooltip 為正確形式可對照。",
     "value": "<IMAGE:media/textures/Item_Military_Helmet_Patriot- WhitePlain.png><IMAGE:media/textures/Item_Military_Helmet_Patriot- White.png><LINE>"
+  },
+  "ContextMenu.json|ContextMenu_VehicleUnhotwireSkill": {
+    "as1_value": "你需要 <br> 电工技能 1 级和 <br> 技工技能 2 级 <br> 才能解除短接",
+    "reason": "As1 上游數值錯誤：上游 EN 為 Electrical 6 / Mechanics 8 / Metalworking 4，CN 誤植為 1/2 且整條金屬加工需求漏譯。玩家依此判斷會誤以為低技能即可解除短接。",
+    "value": "你需要 <br> 电工技能 6 级和 <br> 技工技能 8 级和 <br> 金属加工技能 4 级 <br> 才能解除短接"
   }
 }
