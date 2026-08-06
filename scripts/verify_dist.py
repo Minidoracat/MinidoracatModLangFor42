@@ -1154,6 +1154,98 @@ def _load_as1_lane_cn(repo: str, warns: list[str]) -> dict[str, set[str]]:
     return out
 
 
+# --- [13] 檔名可載入性 ------------------------------------------------------ #
+# PZ 的 Translator 只載入白名單檔名（Translator.BY_NAME，31 個）＋ 每張地圖以自身
+# 目錄名載入的 title/description（readMapTranslation():392）。**其餘檔名一律不讀。**
+# 而 getTextInternal():419 是按**鍵前綴**嚴格路由到特定 map，沒有 fallback 全域搜尋——
+# 所以「鍵放對檔名」是生效的必要條件，放錯就永遠取不到（玩家看到鍵名）。
+# 上游 As1 自己就出貨 UI_EN.json / Compendium.json 等不可載入檔名，我方忠實鏡像，
+# 於是 2026-08-07 查出 205 個鍵**只**存在於不可載入檔而從未生效。
+# 本檢查不管「有沒有多餘檔案」（那是 As1 的事，我方不動），只管**鍵有沒有被困住**。
+TRANSLATOR_WHITELIST = frozenset({
+    "Tooltip", "IG_UI", "Recipes", "RecipeGroups", "Farming", "ContextMenu", "SurvivalGuide",
+    "UI", "Items", "ItemName", "Moodles", "Sandbox", "Challenge", "Stash", "Moveables",
+    "MakeUp", "GameSound", "DynamicRadio", "EvolvedRecipeName", "Recorded_Media",
+    "SurvivorNames", "Attributes", "Fluids", "Print_Media", "Print_Text", "Entity",
+    "RadioData", "BodyParts", "MapLabel", "Credits", "Mod",
+})
+# getTextInternal 的前綴路由表（長前綴優先，避免 Print_Media_ 被 Print_ 之類截走）
+PREFIX_ROUTE = (
+    ("SurvivorSurname_", "SurvivorNames"), ("SurvivorName_", "SurvivorNames"),
+    ("SurvivalGuide_", "SurvivalGuide"), ("Print_Media_", "Print_Media"),
+    ("Print_Text_", "Print_Text"), ("ContextMenu_", "ContextMenu"),
+    ("Attributes_", "Attributes"), ("BODYPART_", "BodyParts"), ("GameSound_", "GameSound"),
+    ("Challenge_", "Challenge"), ("MapLabel_", "MapLabel"), ("Moodles_", "Moodles"),
+    ("Farming_", "Farming"), ("Sandbox_", "Sandbox"), ("Tooltip_", "Tooltip"),
+    ("credits_", "Credits"), ("AEBS_", "DynamicRadio"), ("Stash_", "Stash"),
+    ("Fluid_", "Fluids"), ("IGUI_", "IG_UI"), ("MakeUp", "MakeUp"), ("EC_", "Entity"),
+    ("RD_", "RadioData"), ("RM_", "Recorded_Media"), ("UI_", "UI"),
+)
+
+
+def _routed_file(key: str) -> str | None:
+    for prefix, target in PREFIX_ROUTE:
+        if key.startswith(prefix):
+            return target
+    return None
+
+
+def _upstream_keys(repo: str) -> set[str]:
+    """sources/en/ 鏡像裡所有上游 translate_en 鍵名（判斷「這個鍵名還算數嗎」）。"""
+    out: set[str] = set()
+    en_dir = os.path.join(repo, "sources", "en")
+    if not os.path.isdir(en_dir):
+        return out
+    for name in os.listdir(en_dir):
+        if not name.endswith(".json"):
+            continue
+        try:
+            with open(os.path.join(en_dir, name), encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception:  # noqa: BLE001 — 單一鏡像壞掉不該讓整項 gate 誤判
+            continue
+        for rid in data:
+            kind, _, rest = rid.partition("|")
+            if kind == "translate_en":
+                out.add(rest.partition("|")[2])
+    return out
+
+
+def check_loadable_files(repo: str, dist_ch: str) -> tuple[bool, list[str], list[str]]:
+    """[13] 有前綴路由的鍵不得只存在於 PZ 不會載入的檔案裡。
+
+    只看 CH——CH/CN 檔案結構由 [2] CH 鏡像保證一致，重複掃兩次沒有額外資訊。
+
+    **FAIL 只給「上游現在還在用這個鍵名」者**——那才是真正的浪費：上游會呼叫它、
+    我方也譯好了，只因放錯檔案而永遠取不到。上游查無同名鍵者判 WARN：多半是 As1
+    鏡像進來的作廢鍵名（實例：As1 的 DeadMansDossier.json 用 `UI_DMD_*`，而該 mod
+    現行鍵是 `IGUI_DMD_*`，搬過去也沒用），搬檔救不了，要靠重新補譯。
+    """
+    stems = {p[:-5] for p in os.listdir(dist_ch) if p.endswith(".json")}
+    live: dict[str, dict] = {}
+    for stem in stems & TRANSLATOR_WHITELIST:
+        with open(os.path.join(dist_ch, f"{stem}.json"), encoding="utf-8") as f:
+            live[stem] = json.load(f)
+    upstream = _upstream_keys(repo)
+    stranded: list[str] = []
+    obsolete: list[str] = []
+    for stem in sorted(stems - TRANSLATOR_WHITELIST):
+        with open(os.path.join(dist_ch, f"{stem}.json"), encoding="utf-8") as f:
+            data = json.load(f)
+        # 地圖名檔由 readMapTranslation 以目錄名載入，只取這兩鍵——合法，非死檔
+        if set(data) <= {"title", "description"}:
+            continue
+        for key in data:
+            target = _routed_file(key)
+            if not target or key in live.get(target, {}):
+                continue
+            line = f"{stem}.json|{key} → 應落在 {target}.json（PZ 不載入 {stem}.json）"
+            (stranded if key in upstream else obsolete).append(line)
+    if obsolete:
+        obsolete.insert(0, f"（以下 {len(obsolete)} 鍵上游查無同名鍵＝作廢鍵名，搬檔無用，須重新補譯）")
+    return not stranded, stranded, obsolete
+
+
 def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
     repo = paths["repo"]
     as1_cn = paths["as1_cn"]
@@ -1235,6 +1327,10 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         ok12, d12, w12 = check_vanilla_collision(repo, dist_cn)
     except Exception as exc:  # noqa: BLE001 — 清單檔缺失/壞損直接判 FAIL（gate 資料是受版控真相）
         ok12, d12, w12 = False, [f"vanilla_keys.json 無法載入（{exc}）"], []
+    try:
+        ok13, d13, w13 = check_loadable_files(repo, dist_ch)
+    except Exception as exc:  # noqa: BLE001
+        ok13, d13, w13 = False, [f"檔名可載入性檢查失敗（{exc}）"], []
 
     rows = [
         ("1", "CN 逐檔 parity（As1 缺席時僅降級 As1 比對）" if as1_missing else "CN 逐檔 parity",
@@ -1249,6 +1345,7 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         ("10", "sync worklist", ok10, d10, []),
         ("11", "已審鍵 CN 漂移（WARN-only）", ok11, d11, w11),
         ("12", "vanilla 鍵碰撞", ok12, d12, w12),
+        ("13", "檔名可載入性", ok13, d13, w13),
     ]
 
     n_pass = sum(1 for _, _, ok, _, _ in rows if ok is True)
