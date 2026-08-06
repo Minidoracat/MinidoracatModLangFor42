@@ -852,6 +852,26 @@
     "en": "Blocked Area",
     "ch": "區域受阻",
     "cn": "区域受阻"
+   },
+   "ContextMenu_IdentifyAll": {
+    "en": "All",
+    "ch": "全部",
+    "cn": "全部"
+   },
+   "ContextMenu_IdentifyHalf": {
+    "en": "Half",
+    "ch": "一半",
+    "cn": "一半"
+   },
+   "ContextMenu_StudyPlant": {
+    "en": "Study",
+    "ch": "研究",
+    "cn": "研究"
+   },
+   "ContextMenu_StudyPlantTT": {
+    "en": "Study berries and mushrooms to learn to differentiate which ones are poisonous.",
+    "ch": "研究漿果與蘑菇, 學會分辨哪些有毒.",
+    "cn": "研究浆果与蘑菇, 学会分辨哪些有毒."
    }
   },
   "Fluids.json": {
@@ -3656,6 +3676,11 @@
     "en": "Num. Created: <SPACE><RGB:1,1,0> %1",
     "ch": "已製作數量: <SPACE><RGB:1,1,0> %1",
     "cn": "已制作数量: <SPACE><RGB:1,1,0> %1"
+   },
+   "IGUI_PlayerText_PlantStudyDone": {
+    "en": "Done.",
+    "ch": "好了.",
+    "cn": "好了."
    }
   },
   "ItemName.json": {
@@ -29896,6 +29921,221 @@
     "en": "Lifestyle: Hobbies",
     "ch": "生活風格: 興趣嗜好",
     "cn": "生活风格: 兴趣爱好"
+   },
+   "UI_trait_AddictedToCaffeine": {
+    "en": "Addicted to caffeine",
+    "ch": "咖啡因成癮",
+    "cn": "咖啡因成瘾"
+   },
+   "UI_trait_AddictedToCaffeineDesc": {
+    "en": "Irritability, stress and fatigue when not consuming caffeine.",
+    "ch": "沒攝取咖啡因時會焦躁, 有壓力且疲勞.",
+    "cn": "没摄取咖啡因时会焦躁, 有压力且疲劳."
+   },
+   "UI_trait_Alcoholic": {
+    "en": "Alcoholic",
+    "ch": "酗酒成性",
+    "cn": "酗酒成性"
+   },
+   "UI_trait_AlcoholicDesc": {
+    "en": "You need alcohol flowing through your veins to feel good.",
+    "ch": "血管裡得流著酒精, 你才覺得舒坦.",
+    "cn": "血管里得流着酒精, 你才觉得舒坦."
+   },
+   "UI_trait_AmateurElectrician": {
+    "en": "Amateur electrician",
+    "ch": "業餘電工",
+    "cn": "业余电工"
+   },
+   "UI_trait_AmateurElectricianDesc": {
+    "en": "You have practiced enough, you are ready to connect generators.",
+    "ch": "你練習得夠久了, 已經可以接發電機.",
+    "cn": "你练习得够久了, 已经可以接发电机."
+   },
+   "UI_trait_Anorexy": {
+    "en": "Anorexia",
+    "ch": "厭食症",
+    "cn": "厌食症"
+   },
+   "UI_trait_AnorexyDesc": {
+    "en": "Eating disorder. Intense fear of gaining weight.",
+    "ch": "飲食失調. 極度害怕變胖.",
+    "cn": "饮食失调. 极度害怕变胖."
+   },
+   "UI_trait_Flabby": {
+    "en": "Flabby",
+    "ch": "身形鬆垮",
+    "cn": "身形松垮"
+   },
+   "UI_trait_FlabbyDesc": {
+    "en": "Your condition is bad, your fitness is reduced.",
+    "ch": "你的身體狀況不佳, 體格下降.",
+    "cn": "你的身体状况不佳, 体格下降."
+   },
+   "UI_trait_BrittleKnees": {
+    "en": "Brittle Knees",
+    "ch": "膝蓋脆弱",
+    "cn": "膝盖脆弱"
+   },
+   "UI_trait_BrittleKneesDesc": {
+    "en": "Your condition is terrible, your fitness is very reduced.",
+    "ch": "你的身體狀況很糟, 體格大幅下降.",
+    "cn": "你的身体状况很糟, 体格大幅下降."
+   },
+   "UI_trait_Flimsy": {
+    "en": "Flimsy",
+    "ch": "氣力不足",
+    "cn": "气力不足"
+   },
+   "UI_trait_FlimsyDesc": {
+    "en": "Your condition is bad, your strength is reduced.",
+    "ch": "你的身體狀況不佳, 力量下降.",
+    "cn": "你的身体状况不佳, 力量下降."
+   },
+   "UI_trait_Frail": {
+    "en": "Frail",
+    "ch": "弱不禁風",
+    "cn": "弱不禁风"
+   },
+   "UI_trait_FrailDesc": {
+    "en": "Your condition is terrible, your strength is very reduced.",
+    "ch": "你的身體狀況很糟, 力量大幅下降.",
+    "cn": "你的身体状况很糟, 力量大幅下降."
+   },
+   "UI_trait_Melancholic": {
+    "en": "Melancholic",
+    "ch": "鬱鬱寡歡",
+    "cn": "郁郁寡欢"
+   },
+   "UI_trait_MelancholicDesc": {
+    "en": "Feelings of hopelessness are constant. Sad situations affect you more strongly.",
+    "ch": "絕望感揮之不去. 悲傷的處境對你影響更大.",
+    "cn": "绝望感挥之不去. 悲伤的处境对你影响更大."
+   },
+   "UI_trait_NervousWreck": {
+    "en": "Nervous Wreck",
+    "ch": "神經緊繃",
+    "cn": "神经紧绷"
+   },
+   "UI_trait_NervousWreckDesc": {
+    "en": "You are anxious by nature. Stressful situations affect you more strongly.",
+    "ch": "你天生容易焦慮. 高壓的處境對你影響更大.",
+    "cn": "你天生容易焦虑. 高压的处境对你影响更大."
+   },
+   "UI_trait_Nightmares": {
+    "en": "Nightmares",
+    "ch": "惡夢連連",
+    "cn": "恶梦连连"
+   },
+   "UI_trait_NightmaresDesc": {
+    "en": "You suffer nightmares more often than others.",
+    "ch": "你比別人更常做惡夢.",
+    "cn": "你比别人更常做恶梦."
+   },
+   "UI_trait_PhysicallyActive": {
+    "en": "Physically Active",
+    "ch": "活力充沛",
+    "cn": "活力充沛"
+   },
+   "UI_trait_PhysicallyActiveDesc": {
+    "en": "Energetic person. Spending energy makes you feel good.",
+    "ch": "精力旺盛的人. 消耗體力讓你感覺良好.",
+    "cn": "精力旺盛的人. 消耗体力让你感觉良好."
+   },
+   "UI_trait_PillsAllergy": {
+    "en": "Allergic to pills",
+    "ch": "藥物過敏",
+    "cn": "药物过敏"
+   },
+   "UI_trait_PillsAllergyDesc": {
+    "en": "Taking pills is not good for you. Perhaps the books are friendlier.",
+    "ch": "吃藥對你沒好處. 或許書本對你友善一些.",
+    "cn": "吃药对你没好处. 或许书本对你友善一些."
+   },
+   "UI_trait_Prodigy": {
+    "en": "Prodigy",
+    "ch": "天賦異稟",
+    "cn": "天赋异禀"
+   },
+   "UI_trait_ProdigyDesc": {
+    "en": "You train Strength and Fitness faster than other people.",
+    "ch": "你的力量與體格練得比別人快.",
+    "cn": "你的力量与体格练得比别人快."
+   },
+   "UI_trait_Sedentary": {
+    "en": "Sedentary",
+    "ch": "久坐不動",
+    "cn": "久坐不动"
+   },
+   "UI_trait_SedentaryDesc": {
+    "en": "Inactive lifestyle. You don't like wasting energy.",
+    "ch": "缺乏活動的生活方式. 你不喜歡浪費體力.",
+    "cn": "缺乏活动的生活方式. 你不喜欢浪费体力."
+   },
+   "UI_trait_WildPlantsAllergy": {
+    "en": "Allergic to wild plants",
+    "ch": "野生植物過敏",
+    "cn": "野生植物过敏"
+   },
+   "UI_trait_WildPlantsAllergyDesc": {
+    "en": "Wild plants generate allergies, some more, some less. Better to avoid them.",
+    "ch": "野生植物會引起過敏, 有的嚴重有的輕微. 最好避開.",
+    "cn": "野生植物会引起过敏, 有的严重有的轻微. 最好避开."
+   },
+   "UI_trait_durabile": {
+    "en": "Durability",
+    "ch": "耐久",
+    "cn": "耐久"
+   },
+   "UI_trait_amcarpenter": {
+    "en": "Carpenter",
+    "ch": "木匠",
+    "cn": "木匠"
+   },
+   "UI_trait_amcook": {
+    "en": "Scullion",
+    "ch": "廚房幫工",
+    "cn": "厨房帮工"
+   },
+   "UI_trait_amelectrician": {
+    "en": "Electrical-technician",
+    "ch": "電氣技師",
+    "cn": "电气技师"
+   },
+   "UI_trait_amforager": {
+    "en": "Forager",
+    "ch": "採集者",
+    "cn": "采集者"
+   },
+   "UI_trait_ammechanic": {
+    "en": "Auto Mechanic",
+    "ch": "汽車技工",
+    "cn": "汽车技工"
+   },
+   "UI_trait_ammetalworker": {
+    "en": "Metalwelder",
+    "ch": "金屬焊工",
+    "cn": "金属焊工"
+   },
+   "UI_trait_amtrapper": {
+    "en": "Trapper",
+    "ch": "捕獸人",
+    "cn": "捕兽人"
+   },
+   "UI_trait_gunfan": {
+    "en": "Shooter",
+    "ch": "射手",
+    "cn": "射手"
+   },
+   "UI_trait_shortbladefan": {
+    "en": "Piercer",
+    "ch": "穿刺者",
+    "cn": "穿刺者"
+   },
+   "UI_trait_shortbluntfan": {
+    "en": "Crusher",
+    "ch": "粉碎者",
+    "cn": "粉碎者"
    }
   }
  }
