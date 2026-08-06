@@ -3446,6 +3446,16 @@
     "en": "...You hear a broadcast on the radio from the military announcing that a %1 supply crate was dropped %2 hours ago. They hope it can help those still alive, and urge everyone to hold on until the military can regain control of the situation... You have marked the location of the supply crate on your map.",
     "ch": "…你在無線電裡聽到軍方廣播, 宣布 %2 小時前空投了一箱 %1 物資. 他們希望這能幫上還活著的人, 並呼籲大家撐到軍方重新控制局勢為止… 你已在地圖上標出物資箱的位置.",
     "cn": "…你在无线电里听到军方广播, 宣布 %2 小时前空投了一箱 %1 物资. 他们希望这能帮上还活着的人, 并呼吁大家撑到军方重新控制局势为止… 你已在地图上标出物资箱的位置."
+   },
+   "IGUI_PlayerText_SWWelp": {
+    "en": "Welp.",
+    "ch": "完了.",
+    "cn": "完了."
+   },
+   "IGUI_PlayerText_SWYeet": {
+    "en": "YEET!",
+    "ch": "飛啦!",
+    "cn": "飞啦!"
    }
   },
   "ItemName.json": {
@@ -29056,6 +29066,456 @@
     "en": "Homemade Berry Flavored Soda",
     "ch": "自製莓果汽水",
     "cn": "自制莓果汽水"
+   },
+   "UI_trait_SWCrafty": {
+    "en": "Productive",
+    "ch": "手腳俐落",
+    "cn": "手脚麻利"
+   },
+   "UI_trait_SWCraftyDesc": {
+    "en": "Twice faster crafting and tailoring actions.",
+    "ch": "製作與裁縫動作速度加快兩倍.",
+    "cn": "制作与裁缝动作速度加快两倍."
+   },
+   "UI_trait_SWScardycat": {
+    "en": "Scaredy-cat",
+    "ch": "膽小鬼",
+    "cn": "胆小鬼"
+   },
+   "UI_trait_SWScardycatDesc": {
+    "en": "Chance to scream when surrounded, based on the amount of very close zombies.",
+    "ch": "被包圍時有機率尖叫, 取決於貼身殭屍的數量.",
+    "cn": "被包围时有几率尖叫, 取决于贴身僵尸的数量."
+   },
+   "UI_trait_SWFrogCompanion": {
+    "en": "Frog Companion",
+    "ch": "青蛙夥伴",
+    "cn": "青蛙伙伴"
+   },
+   "UI_trait_SWFrogCompanionDesc": {
+    "en": "Reduces unhappiness and stress with Frog in the inventory.",
+    "ch": "背包中有青蛙時減少不快樂與壓力.",
+    "cn": "背包中有青蛙时减少不快乐与压力."
+   },
+   "UI_trait_SWFrogCompanionAlt": {
+    "en": "Companion",
+    "ch": "小夥伴",
+    "cn": "小伙伴"
+   },
+   "UI_trait_SWFrogCompanionAltDesc": {
+    "en": "Reduces unhappiness and stress with Frog, Slug or Snail companion in the inventory.",
+    "ch": "背包中有青蛙, 蛞蝓或蝸牛夥伴時減少不快樂與壓力.",
+    "cn": "背包中有青蛙, 蛞蝓或蜗牛伙伴时减少不快乐与压力."
+   },
+   "UI_trait_SWAcrophobicDesc": {
+    "en": "Height causes stress, especially when outside.",
+    "ch": "高度會引起壓力, 尤其是在戶外.",
+    "cn": "高度会引起压力, 尤其是在户外."
+   },
+   "UI_trait_SWAdaptiveMetabolismDesc": {
+    "en": "Adjusts calorie burn rate when near unhealthy weight.",
+    "ch": "接近不健康體重時調整卡路里消耗速率.",
+    "cn": "接近不健康体重时调整卡路里消耗速率."
+   },
+   "UI_trait_SWAntivaxxerDesc": {
+    "en": "Can't use cures.",
+    "ch": "無法使用解藥.",
+    "cn": "无法使用解药."
+   },
+   "UI_trait_SWBouncerDesc": {
+    "en": "Slows down endurance loss during fight.",
+    "ch": "減慢戰鬥中的耐力消耗.",
+    "cn": "减慢战斗中的耐力消耗."
+   },
+   "UI_trait_SWBrittleDesc": {
+    "en": "High chance of hand or foot fracture from falling, based on Nimble lvl.",
+    "ch": "因摔倒導致手或腳骨折的機率較高, 取決於靈活等級.",
+    "cn": "因摔倒导致手或脚骨折的几率较高, 取决于灵活等级."
+   },
+   "UI_trait_SWColdSensitiveDesc": {
+    "en": "Being cold increases stress, based on Hypothermia moodle lvl.",
+    "ch": "寒冷會增加壓力, 取決於體溫過低情緒等級.",
+    "cn": "寒冷会增加压力, 取决于体温过低情绪等级."
+   },
+   "UI_trait_SWCompetitiveEaterDesc": {
+    "en": "Twice faster food and drink consumption actions.",
+    "ch": "進食與飲用動作速度加快兩倍.",
+    "cn": "进食与饮用动作速度加快两倍."
+   },
+   "UI_trait_SWCouchDwellerDesc": {
+    "en": "Reduces unhappiness and slows down boredom gain when indoors.",
+    "ch": "在室內時減少不快樂並減慢無聊累積速度.",
+    "cn": "在室内时减少不快乐并减慢无聊累积速度."
+   },
+   "UI_trait_SWDrunkardDesc": {
+    "en": "Stays drunk for longer and doesn't get fatigue from alcohol, not being drunk adds chance to drop weapon during fight, based on Endurance moodle lvl.",
+    "ch": "醉酒時間更長且酒精不會造成疲勞, 未醉酒時會增加戰鬥中掉落武器的機率, 取決於耐力情緒等級.",
+    "cn": "醉酒时间更长且酒精不会造成疲劳, 未醉酒时会增加战斗中掉落武器的几率, 取决于耐力情绪等级."
+   },
+   "UI_trait_SWFlailerDesc": {
+    "en": "Chance to trip and scream when running, based on Panic moodle lvl.",
+    "ch": "跑步時有機率絆倒並尖叫, 取決於恐慌情緒等級.",
+    "cn": "跑步时有几率绊倒并尖叫, 取决于恐慌情绪等级."
+   },
+   "UI_trait_SWFlatEartherDesc": {
+    "en": "Can't use map and minimap. Can read map items.",
+    "ch": "無法使用地圖和小地圖. 可閱讀地圖物品.",
+    "cn": "无法使用地图和小地图. 可阅读地图物品."
+   },
+   "UI_trait_SWFlimsyDesc": {
+    "en": "Wearing heavy bags on the back causes upper arms pain which can drastically slow down the attack speed.",
+    "ch": "背上揹著重背包會導致上臂疼痛, 從而大幅降低攻擊速度.",
+    "cn": "背上背着重背包会导致上臂疼痛, 从而大幅降低攻击速度."
+   },
+   "UI_trait_SWHeatSensitiveDesc": {
+    "en": "Being hot increases stress, based on Hyperthermia moodle lvl.",
+    "ch": "炎熱會增加壓力, 取決於體溫過高情緒等級.",
+    "cn": "炎热会增加压力, 取决于体温过高情绪等级."
+   },
+   "UI_trait_SWImmuneResponseDesc": {
+    "en": "Improves endurance recovery when infected with knox, based on Sickness moodle lvl.",
+    "ch": "感染諾克斯病毒時提高耐力恢復速度, 取決於疾病情緒等級.",
+    "cn": "感染诺克斯病毒时提高耐力恢复速度, 取决于疾病情绪等级."
+   },
+   "UI_trait_SWInjuredDesc": {
+    "en": "Spawns with a various severity fracture in random lower body part.",
+    "ch": "出生時下半身隨機部位帶有不同嚴重程度的骨折.",
+    "cn": "出生时下半身随机部位带有不同严重程度的骨折."
+   },
+   "UI_trait_SWIronLiverDesc": {
+    "en": "Stays drunk for less time and doesn't get fatigue from alcohol.",
+    "ch": "醉酒時間更短, 且酒精不會造成疲勞.",
+    "cn": "醉酒时间更短, 且酒精不会造成疲劳."
+   },
+   "UI_trait_SWLudditeDesc": {
+    "en": "Equipping guns causes stress, based on Aiming lvl.",
+    "ch": "裝備槍枝會引起壓力, 取決於瞄準等級.",
+    "cn": "装备枪支会引起压力, 取决于瞄准等级."
+   },
+   "UI_trait_SWLurcherDesc": {
+    "en": "Chance to trip when running exhausted, based on Nimble level and Endurance moodle level.",
+    "ch": "筋疲力盡時跑步有機率絆倒, 取決於靈活等級與耐力情緒等級.",
+    "cn": "筋疲力尽时跑步有几率绊倒, 取决于灵活等级与耐力情绪等级."
+   },
+   "UI_trait_SWManiacDesc": {
+    "en": "Reduces unhappiness and stress when bloody.",
+    "ch": "渾身是血時減少不快樂與壓力.",
+    "cn": "浑身是血时减少不快乐与压力."
+   },
+   "UI_trait_SWOneTrickPonyDesc": {
+    "en": "The highest weapon skill is the only weapon type the player can equip. Doesn't affect ranged weapons.",
+    "ch": "玩家只能裝備等級最高的那類武器. 不影響遠程武器.",
+    "cn": "玩家只能装备等级最高的那类武器. 不影响远程武器."
+   },
+   "UI_trait_SWPacerDesc": {
+    "en": "Slows down endurance loss when running or sprinting.",
+    "ch": "跑步或衝刺時減慢耐力消耗.",
+    "cn": "跑步或冲刺时减慢耐力消耗."
+   },
+   "UI_trait_SWParamedicDesc": {
+    "en": "Twice faster first aid actions.",
+    "ch": "急救動作速度加快兩倍.",
+    "cn": "急救动作速度加快两倍."
+   },
+   "UI_trait_SWPitCrewDesc": {
+    "en": "Twice faster vehicle and refueling actions.",
+    "ch": "載具與加油動作速度加快兩倍.",
+    "cn": "载具与加油动作速度加快两倍."
+   },
+   "UI_trait_SWRavenousDesc": {
+    "en": "Hunger causes pain, based on Hunger moodle lvl.",
+    "ch": "飢餓會引起疼痛, 取決於飢餓情緒等級.",
+    "cn": "饥饿会引起疼痛, 取决于饥饿情绪等级."
+   },
+   "UI_trait_SWSlothDesc": {
+    "en": "Slows down fatigue gain when walking or standing still.",
+    "ch": "行走或靜止時減慢疲勞累積速度.",
+    "cn": "行走或静止时减慢疲劳累积速度."
+   },
+   "UI_trait_SWSprintDemonDesc": {
+    "en": "Sprinting reduces stress and unhappiness.",
+    "ch": "衝刺可減少壓力與不快樂.",
+    "cn": "冲刺可减少压力与不快乐."
+   },
+   "UI_trait_SWSquirrelDesc": {
+    "en": "Slows down fatigue gain when running or sprinting.",
+    "ch": "跑步或衝刺時減慢疲勞累積速度.",
+    "cn": "跑步或冲刺时减慢疲劳累积速度."
+   },
+   "UI_trait_SWSundayRunnerDesc": {
+    "en": "Sprinting increases stress and unhappiness.",
+    "ch": "衝刺會增加壓力與不快樂.",
+    "cn": "冲刺会增加压力与不快乐."
+   },
+   "UI_trait_SWTrekkerDesc": {
+    "en": "Improves endurance recovery when walking or standing still.",
+    "ch": "行走或靜止時提高耐力恢復速度.",
+    "cn": "行走或静止时提高耐力恢复速度."
+   },
+   "UI_trait_SWVehophobicDesc": {
+    "en": "Can't enter vehicles.",
+    "ch": "無法進入載具.",
+    "cn": "无法进入载具."
+   },
+   "UI_trait_SWPlusAiming": {
+    "en": "+1 Aiming",
+    "ch": "+1瞄準",
+    "cn": "+1瞄准"
+   },
+   "UI_trait_SWPlusAimingDesc": {
+    "en": "+1 Aiming",
+    "ch": "+1瞄準",
+    "cn": "+1瞄准"
+   },
+   "UI_trait_SWPlusAnimalCare": {
+    "en": "+1 Animal Care",
+    "ch": "+1畜牧",
+    "cn": "+1畜牧"
+   },
+   "UI_trait_SWPlusAnimalCareDesc": {
+    "en": "+1 Animal Care",
+    "ch": "+1畜牧",
+    "cn": "+1畜牧"
+   },
+   "UI_trait_SWPlusAxe": {
+    "en": "+1 Axe",
+    "ch": "+1斧頭",
+    "cn": "+1斧头"
+   },
+   "UI_trait_SWPlusAxeDesc": {
+    "en": "+1 Axe",
+    "ch": "+1斧頭",
+    "cn": "+1斧头"
+   },
+   "UI_trait_SWPlusCarpentry": {
+    "en": "+1 Carpentry",
+    "ch": "+1木工",
+    "cn": "+1木工"
+   },
+   "UI_trait_SWPlusCarpentryDesc": {
+    "en": "+1 Carpentry",
+    "ch": "+1木工",
+    "cn": "+1木工"
+   },
+   "UI_trait_SWPlusCarving": {
+    "en": "+1 Carving",
+    "ch": "+1雕刻",
+    "cn": "+1雕刻"
+   },
+   "UI_trait_SWPlusCarvingDesc": {
+    "en": "+1 Carving",
+    "ch": "+1雕刻",
+    "cn": "+1雕刻"
+   },
+   "UI_trait_SWPlusCooking": {
+    "en": "+1 Cooking",
+    "ch": "+1烹飪",
+    "cn": "+1烹饪"
+   },
+   "UI_trait_SWPlusCookingDesc": {
+    "en": "+1 Cooking",
+    "ch": "+1烹飪",
+    "cn": "+1烹饪"
+   },
+   "UI_trait_SWPlusElectrical": {
+    "en": "+1 Electrical",
+    "ch": "+1電工",
+    "cn": "+1电工"
+   },
+   "UI_trait_SWPlusElectricalDesc": {
+    "en": "+1 Electrical",
+    "ch": "+1電工",
+    "cn": "+1电工"
+   },
+   "UI_trait_SWPlusForaging": {
+    "en": "+1 Foraging",
+    "ch": "+1搜尋",
+    "cn": "+1搜寻"
+   },
+   "UI_trait_SWPlusForagingDesc": {
+    "en": "+1 Foraging",
+    "ch": "+1搜尋",
+    "cn": "+1搜寻"
+   },
+   "UI_trait_SWPlusKnapping": {
+    "en": "+1 Knapping",
+    "ch": "+1石器",
+    "cn": "+1石器"
+   },
+   "UI_trait_SWPlusKnappingDesc": {
+    "en": "+1 Knapping",
+    "ch": "+1石器",
+    "cn": "+1石器"
+   },
+   "UI_trait_SWPlusLightfooted": {
+    "en": "+1 Lightfooted",
+    "ch": "+1輕巧",
+    "cn": "+1轻巧"
+   },
+   "UI_trait_SWPlusLightfootedDesc": {
+    "en": "+1 Lightfooted",
+    "ch": "+1輕巧",
+    "cn": "+1轻巧"
+   },
+   "UI_trait_SWPlusLongBlade": {
+    "en": "+1 Long Blade",
+    "ch": "+1長刀",
+    "cn": "+1长刀"
+   },
+   "UI_trait_SWPlusLongBladeDesc": {
+    "en": "+1 Long Blade",
+    "ch": "+1長刀",
+    "cn": "+1长刀"
+   },
+   "UI_trait_SWPlusMaintenance": {
+    "en": "+1 Maintenance",
+    "ch": "+1維護",
+    "cn": "+1维护"
+   },
+   "UI_trait_SWPlusMaintenanceDesc": {
+    "en": "+1 Maintenance",
+    "ch": "+1維護",
+    "cn": "+1维护"
+   },
+   "UI_trait_SWPlusMasonry": {
+    "en": "+1 Masonry",
+    "ch": "+1石工",
+    "cn": "+1石工"
+   },
+   "UI_trait_SWPlusMasonryDesc": {
+    "en": "+1 Masonry",
+    "ch": "+1石工",
+    "cn": "+1石工"
+   },
+   "UI_trait_SWPlusMetalworking": {
+    "en": "+1 Metalworking",
+    "ch": "+1金屬加工",
+    "cn": "+1金属加工"
+   },
+   "UI_trait_SWPlusMetalworkingDesc": {
+    "en": "+1 Metalworking",
+    "ch": "+1金屬加工",
+    "cn": "+1金属加工"
+   },
+   "UI_trait_SWPlusNimble": {
+    "en": "+1 Nimble",
+    "ch": "+1靈活",
+    "cn": "+1灵活"
+   },
+   "UI_trait_SWPlusNimbleDesc": {
+    "en": "+1 Nimble",
+    "ch": "+1靈活",
+    "cn": "+1灵活"
+   },
+   "UI_trait_SWPlusNimbleExtra": {
+    "en": "+3 Nimble",
+    "ch": "+3靈活",
+    "cn": "+3灵活"
+   },
+   "UI_trait_SWPlusNimbleExtraDesc": {
+    "en": "+3 Nimble",
+    "ch": "+3靈活",
+    "cn": "+3灵活"
+   },
+   "UI_trait_SWPlusPottery": {
+    "en": "+1 Pottery",
+    "ch": "+1陶藝",
+    "cn": "+1陶艺"
+   },
+   "UI_trait_SWPlusPotteryDesc": {
+    "en": "+1 Pottery",
+    "ch": "+1陶藝",
+    "cn": "+1陶艺"
+   },
+   "UI_trait_SWPlusReloading": {
+    "en": "+1 Reloading",
+    "ch": "+1裝填",
+    "cn": "+1装填"
+   },
+   "UI_trait_SWPlusReloadingDesc": {
+    "en": "+1 Reloading",
+    "ch": "+1裝填",
+    "cn": "+1装填"
+   },
+   "UI_trait_SWPlusShortBlade": {
+    "en": "+1 Short Blade",
+    "ch": "+1短刀",
+    "cn": "+1短刀"
+   },
+   "UI_trait_SWPlusShortBladeDesc": {
+    "en": "+1 Short Blade",
+    "ch": "+1短刀",
+    "cn": "+1短刀"
+   },
+   "UI_trait_SWPlusShortBlunt": {
+    "en": "+1 Short Blunt",
+    "ch": "+1短棍",
+    "cn": "+1短棍"
+   },
+   "UI_trait_SWPlusShortBluntDesc": {
+    "en": "+1 Short Blunt",
+    "ch": "+1短棍",
+    "cn": "+1短棍"
+   },
+   "UI_trait_SWPlusSneaking": {
+    "en": "+1 Sneaking",
+    "ch": "+1潛行",
+    "cn": "+1潜行"
+   },
+   "UI_trait_SWPlusSneakingDesc": {
+    "en": "+1 Sneaking",
+    "ch": "+1潛行",
+    "cn": "+1潜行"
+   },
+   "UI_trait_SWPlusSpear": {
+    "en": "+1 Spear",
+    "ch": "+1長矛",
+    "cn": "+1长矛"
+   },
+   "UI_trait_SWPlusSpearDesc": {
+    "en": "+1 Spear",
+    "ch": "+1長矛",
+    "cn": "+1长矛"
+   },
+   "UI_trait_SWPlusSprinting": {
+    "en": "+3 Sprinting",
+    "ch": "+3衝刺",
+    "cn": "+3冲刺"
+   },
+   "UI_trait_SWPlusSprintingDesc": {
+    "en": "+3 Sprinting",
+    "ch": "+3衝刺",
+    "cn": "+3冲刺"
+   },
+   "UI_trait_SWPlusTracking": {
+    "en": "+1 Tracking",
+    "ch": "+1追蹤",
+    "cn": "+1追踪"
+   },
+   "UI_trait_SWPlusTrackingDesc": {
+    "en": "+1 Tracking",
+    "ch": "+1追蹤",
+    "cn": "+1追踪"
+   },
+   "UI_trait_SWPlusTrapping": {
+    "en": "+1 Trapping",
+    "ch": "+1誘捕",
+    "cn": "+1诱捕"
+   },
+   "UI_trait_SWPlusTrappingDesc": {
+    "en": "+1 Trapping",
+    "ch": "+1誘捕",
+    "cn": "+1诱捕"
+   },
+   "UI_trait_SWPlusWelding": {
+    "en": "+1 Welding",
+    "ch": "+1焊接",
+    "cn": "+1焊接"
+   },
+   "UI_trait_SWPlusWeldingDesc": {
+    "en": "+1 Welding",
+    "ch": "+1焊接",
+    "cn": "+1焊接"
    }
   }
  }
