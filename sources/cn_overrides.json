@@ -1,958 +1,978 @@
 {
- "ContextMenu.json|ContextMenu_TankWater_InstallFilter": {
-  "as1_value": "安装过滤滤芯",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
-  "value": "安装滤芯"
- },
- "ContextMenu.json|ContextMenu_TankWater_RemoveFilter": {
-  "as1_value": "移除过滤滤芯",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
-  "value": "移除滤芯"
- },
- "ContextMenu.json|ContextMenu_TankWater_ReplaceFilter": {
-  "as1_value": "更换过滤滤芯",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
-  "value": "更换滤芯"
- },
- "ContextMenu.json|ContextMenu_WearDown": {
-  "as1_value": "脱下",
-  "reason": "vanilla 鍵 'Wear Down' 誤譯「脫下」（與 TakeOff 張冠李戴）；官方值回填",
-  "value": "穿在下面"
- },
- "ContextMenu.json|ContextMenu_WearUp": {
-  "as1_value": "穿上",
-  "reason": "vanilla 鍵 'Wear Up'（衣物層序）誤譯「穿上」，與一般 Wear 混淆；mod EN 經實檔+hash 證實未重定義，官方值回填",
-  "value": "穿在上面"
- },
- "ContextMenu.json|Tooltip_TankWater_FilterDepleted": {
-  "as1_value": "滤芯已耗尽. 请更换过滤滤芯.",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
-  "value": "滤芯已耗尽. 请更换滤芯."
- },
- "ContextMenu.json|Tooltip_TankWater_RequiresFilterCartridge": {
-  "as1_value": "需要: 过滤滤芯.",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
-  "value": "需要: 滤芯."
- },
- "ContextMenu_EN.json|ContextMenu_TankWater_InstallFilter": {
-  "as1_value": "安装过滤滤芯",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
-  "value": "安装滤芯"
- },
- "ContextMenu_EN.json|ContextMenu_TankWater_RemoveFilter": {
-  "as1_value": "移除过滤滤芯",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
-  "value": "移除滤芯"
- },
- "ContextMenu_EN.json|ContextMenu_TankWater_ReplaceFilter": {
-  "as1_value": "更换过滤滤芯",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
-  "value": "更换滤芯"
- },
- "ContextMenu_EN.json|Tooltip_TankWater_FilterDepleted": {
-  "as1_value": "滤芯已耗尽. 请更换过滤滤芯. ",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
-  "value": "滤芯已耗尽. 请更换滤芯. "
- },
- "ContextMenu_EN.json|Tooltip_TankWater_RequiresFilterCartridge": {
-  "as1_value": "需要: 过滤滤芯. ",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
-  "value": "需要: 滤芯. "
- },
- "Fluids.json|Fluid_Name_SodaBlueberry": {
-  "as1_value": "苏打蓝莓",
-  "reason": "vanilla 'Blueberry Soda' cn「苏打蓝莓」同型劣譯；官方 CN 回填",
-  "value": "蓝莓汽水"
- },
- "Fluids.json|Fluid_Name_SodaBubblegum": {
-  "as1_value": "苏打泡泡糖",
-  "reason": "vanilla 'Bubblegum Soda' cn「苏打泡泡糖」中心詞顛倒；CH 早已正確，官方 CN 回填",
-  "value": "泡泡糖汽水"
- },
- "Fluids.json|Fluid_Name_SodaGrape": {
-  "as1_value": "苏打葡萄",
-  "reason": "vanilla 'Grape Soda' cn「苏打葡萄」key 名直排劣譯；官方 CN 回填",
-  "value": "葡萄汽水"
- },
- "Fluids.json|Fluid_Name_SodaPineapple": {
-  "as1_value": "苏打菠萝",
-  "reason": "vanilla 'Pineapple Soda' cn「苏打菠萝」同型劣譯；官方 CN 回填",
-  "value": "菠萝汽水"
- },
- "Fluids.json|Fluid_Name_SodaPop": {
-  "as1_value": "苏打汽水",
-  "reason": "vanilla 'Orange Soda' 泛化成「蘇打汽水」遺失口味；全庫查無 Fluid_Name_Soda* mod 重定義，官方值回填",
-  "value": "橙味汽水"
- },
- "Fluids.json|Fluid_Name_SodaStrewberry": {
-  "as1_value": "苏打草莓",
-  "reason": "vanilla 'Strawberry Soda' cn「苏打草莓」同型劣譯；官方 CN 回填",
-  "value": "草莓汽水"
- },
- "IG_UI.json|IGUI_Barrel": {
-  "as1_value": "燃料桶",
-  "reason": "9 個 owner 中 8 個為槍械 mod（EN 'Barrel'＝槍管，MFS 3633421539 自帶 CN 亦為「枪管」），僅 GeneratorPlus 3597471949 為小寫 'barrel' 計數量詞（自帶 CN「个桶」）；As1 收斂值「燃料桶」無任何 owner 採用，Steam 玩家回報 MFS 槍管欄顯示燃料桶。多數裁決取「枪管」，對齊 MFS 自帶 CN；已知取捨：GeneratorPlus 資訊視窗單桶時將顯示「(1 槍管)」（複數臂由 IGUI_Barrels=个桶 正確呈現；該 mod 自帶 CH/CN 於載入序在後時會覆回正確量詞）",
-  "value": "枪管"
- },
- "IG_UI.json|IGUI_Barrels": {
-  "as1_value": "燃料桶",
-  "reason": "GeneratorPlus 3597471949 獨有鍵，EN 'barrels' 為發電機資訊視窗計數量詞（barrelCount 拼接），mod 自帶 CN「个桶」；計數語境「5 燃料桶」不自然，對齊作者自帶譯法",
-  "value": "个桶"
- },
- "IG_UI.json|IGUI_ItemCat_HouseholdOrWeaponBlunt": {
-  "as1_value": "家用工具/武器-长刀",
-  "reason": "鍵名為 Blunt 卻誤譯「长刀」（Long Blade）；同族 ...OrWeaponBlunt 32 鍵中其餘 30 鍵均為长棍，屬 As1 上游錯譯",
-  "value": "家用工具/武器-长棍"
- },
- "IG_UI.json|IGUI_ItemCat_JunkOrWeaponBlunt": {
-  "as1_value": "杂物/武器-长刀",
-  "reason": "鍵名為 Blunt 卻誤譯「长刀」（Long Blade）；同族 ...OrWeaponBlunt 32 鍵中其餘 30 鍵均為长棍，屬 As1 上游錯譯",
-  "value": "杂物/武器-长棍"
- },
- "IG_UI.json|IGUI_ItemCat_Stock": {
-  "as1_value": "高汤",
-  "reason": "9 個 owner 中 8 個為槍械 mod（MFS EN 'Weapon attachment - Stock'＝槍托分類），僅 CAExtendedCategories 為食物高湯分類（EN 'Stock'）；與 IGUI_Barrel 同型共用鍵衝突，多數＋高頻裁決取槍械語境，格式循 corpus ItemCat「類別-子類」慣例",
-  "value": "武器配件-枪托"
- },
- "IG_UI.json|IGUI_KnoxRelay_MorningShow_Jenna_Day28_S6": {
-  "as1_value": "把接线头两两擦火交叉一对, 然后猛踩油门",
-  "reason": "As1 上游錯誤：原譯語意錯亂（两两擦火交叉一对）；CH 側早已正確",
-  "value": "把两条接线碰在一起点火, 然后猛踩油门"
- },
- "IG_UI.json|IGUI_KnoxRelay_NoNews6_MarcusBeforeJenna_03": {
-  "as1_value": "我想, 那大概是关于过去那段简单单纯的旧时光吧",
-  "reason": "As1 上游錯誤：疊詞 简单|单纯；CH 側早已正確",
-  "value": "我想, 那大概是关于过去那段单纯的旧时光吧"
- },
- "IG_UI.json|IGUI_KnoxRelay_Scene_VehicleCrash_04": {
-  "as1_value": "已证实发生车辆撞击事件. 可能是一场多车连环连环相撞, 也可能只是一辆车失控",
-  "reason": "As1 上游疊字誤植（连环×2 → 连环）；CH 側早已由 ch_overrides 修正",
-  "value": "已证实发生车辆撞击事件. 可能是一场多车连环相撞, 也可能只是一辆车失控"
- },
- "IG_UI.json|IGUI_No": {
-  "as1_value": "取消",
-  "reason": "vanilla 是/否對話框否定鈕誤譯「取消」，影響面極大；唯一同鍵 mod EN 實檔='No' 無重定義依據，官方值回填",
-  "value": "否"
- },
- "IG_UI.json|IGUI_UW_Radio_Awareness_03": {
-  "as1_value": "总感觉不对劲…再看看呢?",
-  "reason": "CH/CN 語意稽核：與 mod 自帶 IG_UI_EN.json 的中文一致；原譯「总感觉不对劲…再看看呢?」為另一句",
-  "value": "每次我出门, 都有些地方感觉不太对劲……我需要更多信息."
- },
- "IG_UI.json|IGUI_VehicleNameCarLightsKST": {
-  "as1_value": "骑士·林铃警用版",
-  "reason": "STFR mod EN hash 證實 'Police Chevalier Nyala'（警用版結構有據），但 Nyala=林羚 被誤植同音「林鈴/林铃」；僅修字誤保留 mod 語意",
-  "value": "骑士·林羚警用版"
- },
- "IG_UI.json|IGUI_VehiclePartKI5TRCLTrunk": {
-  "as1_value": "拖车存储箱箱",
-  "reason": "As1 上游錯誤：疊字 箱箱；CH 側早已正確",
-  "value": "拖车储物箱"
- },
- "IG_UI.json|IGUI_Washing_Soap": {
-  "as1_value": "所需肥皂:%1",
-  "reason": "vanilla 純標籤 'Soap' 被譯成帶參數「所需肥皂:%1」，本體語境會裸露 %1；全庫查無 mod 重定義，官方值回填",
-  "value": "肥皂"
- },
- "ItemName.json|ATA2.TransportShelve": {
-  "as1_value": "便携式炉灶",
-  "reason": "As1 上游張冠李戴：該物品為貨架（Icon=media/ui/Container_Shelf、配方僅 3 木板 3 釘、上游自帶 EN=Portable shelve），爐灶另有 TransportOven",
-  "value": "便携式货架"
- },
- "ItemName.json|Base.Magazine": {
-  "as1_value": "弹匣",
-  "reason": "vanilla 可閱讀雜誌 'Magazine' 誤譯「彈匣」（曝光度高）；Firearms mod EN hash 證實同值無重定義，官方值回填",
-  "value": "杂志"
- },
- "ItemName.json|Base.RecoilPad": {
-  "as1_value": "角形握把",
-  "reason": "vanilla 'Recoil Pad' 誤譯「角形握把」（Angled Grip 為他 mod 另一獨立鍵）；Guns93 EN 實檔 'Rubber Recoil Pad' 佐證，官方值回填。明知 Guns93 mod EN 帶 Rubber 前綴，仍取 vanilla 用語以顧及未裝 mod 玩家",
-  "value": "缓冲垫"
- },
- "ItemName.json|Base.x8Scope": {
-  "as1_value": "霍克10倍瞄准镜",
-  "reason": "vanilla 'x8 Scope' 誤譯「霍克10倍瞄準鏡」（倍率 8→10 誤導＋品牌捏造）；三 owner EN 全數 hash 證實無此重定義，官方值回填",
-  "value": "瞄准镜 (8 倍)"
- },
- "ItemName.json|ComputerMod.GameCDPong": {
-  "as1_value": "乓乓球游戏光盘",
-  "reason": "As1 上游錯誤：錯字：乒乓球誤作乓乓球；CH 側早已正確",
-  "value": "乒乓球游戏光盘"
- },
- "ItemName.json|HDF.StrainedSyrup": {
-  "as1_value": "一锅水煮甜菜根",
-  "reason": "CH/CN 語意稽核：原譯「一锅水煮甜菜根」是別的物品（鍵名 StrainedSyrup；CH 側正確）",
-  "value": "过滤后的糖浆"
- },
- "ItemName.json|HaloMarine.HaloMarineUpperLegArmorBase": {
-  "as1_value": "UNSC陆战队大腿护甲甲",
-  "reason": "As1 上游錯誤：疊字 甲甲；CH 側早已正確",
-  "value": "UNSC陆战队大腿护甲"
- },
- "ItemName.json|ItemName_TankWater.FilterCartridge": {
-  "as1_value": "过滤滤芯",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
-  "value": "滤芯"
- },
- "ItemName.json|MSXBow.BoltShaft": {
-  "as1_value": "弩箭箭杆",
-  "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
-  "value": "弩箭杆"
- },
- "ItemName.json|PZCrossbows.ShortWoodBoltShaft": {
-  "as1_value": "短木质弩箭箭杆",
-  "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
-  "value": "短木质弩箭杆"
- },
- "ItemName.json|PZCrossbows.WoodBoltShaft": {
-  "as1_value": "木质弩箭箭杆",
-  "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
-  "value": "木质弩箭杆"
- },
- "ItemName.json|PompsItems_MyLittlePony.LotusBlossomPlushie": {
-  "as1_value": "莲花花苞花苞",
-  "reason": "As1 上游疊字誤植（花苞×2 → 花苞）；CH 側早已由 ch_overrides 修正",
-  "value": "莲花花苞"
- },
- "ItemName.json|STFR.DressJacket_Police_KSP_CPT": {
-  "as1_value": "礼服夹克 (肯塔基州警警监)Dress",
-  "reason": "As1 上游錯誤：尾端殘留未清的英文碎片 Dress；CH 側早已正確",
-  "value": "礼服夹克 (肯塔基州警警监)"
- },
- "ItemName.json|STFR.DressJacket_Police_WestPoint_CPT": {
-  "as1_value": "礼服夹克 (西点镇警察局警监)Dress",
-  "reason": "As1 上游錯誤：尾端殘留未清的英文碎片 Dress；CH 側早已正確",
-  "value": "礼服夹克 (西点镇警察局警监)"
- },
- "ItemName.json|STFR.DressJacket_Sheriff_Jefferson_CPT": {
-  "as1_value": "礼服夹克 (杰斐逊警察局警监)Dress",
-  "reason": "As1 上游錯誤：尾端殘留未清的英文碎片 Dress；CH 側早已正確",
-  "value": "礼服夹克 (杰斐逊警察局警监)"
- },
- "ItemName.json|SkillBookExpansionB42.BookNimbleSet": {
-  "as1_value": "一套关于灵活书",
-  "reason": "As1 上游漏字：套裝書名缺「的」（同系列共 11 鍵，其餘 10 鍵均為「一套关于X的书」）；CH 側早已正確",
-  "value": "一套关于灵活的书"
- },
- "ItemName.json|TankWater.FilterCartridge": {
-  "as1_value": "过滤滤芯",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
-  "value": "滤芯"
- },
- "ItemName_EN.json|ItemName_TankWater.FilterCartridge": {
-  "as1_value": "过滤滤芯",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
-  "value": "滤芯"
- },
- "ItemName_EN.json|TankWater.FilterCartridge": {
-  "as1_value": "过滤滤芯",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
-  "value": "滤芯"
- },
- "Recipes.json|67gt500eMakeHood": {
-  "as1_value": "制作67款眼镜蛇Eleanour引擎盖",
-  "reason": "As1 上游錯字：Shelby GT500 的 Eleanor 誤拼 Eleanour（同 mod IGUI_VehicleName67gt500e 已作 Eleanor）",
-  "value": "制作67款眼镜蛇Eleanor引擎盖"
- },
- "Recipes.json|67gt500eMakeReinforcedFrontBumper": {
-  "as1_value": "制作67款眼镜蛇Eleanour加固前保险杠",
-  "reason": "As1 上游錯字：Eleanour→Eleanor",
-  "value": "制作67款眼镜蛇Eleanor加固前保险杠"
- },
- "Recipes.json|67gt500eMakeTire": {
-  "as1_value": "制作67款眼镜蛇Eleanour轮胎",
-  "reason": "As1 上游錯字：Eleanour→Eleanor",
-  "value": "制作67款眼镜蛇Eleanor轮胎"
- },
- "Recipes.json|89volvo240MakeRoofrack": {
-  "as1_value": "制作89款沃尔沃245旅行车车顶行李架",
-  "reason": "As1 上游張冠李戴：本配方 outputs 為 Base.89volvo240Roofrack1（DisplayName=89 Volvo 200 Series Roofrack），卻寫成 245 旅行車；與 89volvo245MakeRoofrack 互相對調",
-  "value": "制作89款沃尔沃200系列车顶行李架"
- },
- "Recipes.json|89volvo245MakeRoofrack": {
-  "as1_value": "制作89款沃尔沃200系列车顶行李架",
-  "reason": "As1 上游張冠李戴：本配方 outputs 為 Base.89volvo245WagonRoofrack1（DisplayName=89 Volvo 245 Wagon Roofrack），與 89volvo240MakeRoofrack 互相對調",
-  "value": "制作89款沃尔沃245旅行车车顶行李架"
- },
- "Recipes.json|BoltShaft": {
-  "as1_value": "雕刻弩箭箭杆",
-  "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
-  "value": "雕刻弩箭杆"
- },
- "Recipes.json|ConvertTank2000Type": {
-  "as1_value": "W900: 将2000升油罐转换为为2000升水箱",
-  "reason": "As1 上游錯誤：疊字 为为；CH 側早已正確",
-  "value": "W900: 将2000升油罐转换为2000升水箱"
- },
- "Recipes.json|MakeSwordSheath": {
-  "as1_value": "制作剑鞘剑鞘",
-  "reason": "As1 上游疊字誤植（剑鞘×2 → 剑鞘）；CH 側早已由 ch_overrides 修正",
-  "value": "制作剑鞘"
- },
- "Recipes.json|PZC_CarveShortWoodBoltShafts": {
-  "as1_value": "雕刻短木质弩箭箭杆",
-  "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
-  "value": "雕刻短木质弩箭杆"
- },
- "Recipes.json|PZC_CarveWoodBoltShafts": {
-  "as1_value": "雕刻木质弩箭箭杆",
-  "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
-  "value": "雕刻木质弩箭杆"
- },
- "Sandbox.json|Sandbox_DynamicTrading.FactionRespawnChance_tooltip": {
-  "as1_value": "城镇内现有阵营数量低于上限时, 每日刷新新阵营的概率.",
-  "reason": "As1 上游錯誤：疊字 刷新|新阵营；CH 側早已正確",
-  "value": "城镇内现有阵营数量低于上限时, 每日生成新阵营的概率."
- },
- "Sandbox.json|Sandbox_EHR_RealisticTemperatureCompatibility_tooltip": {
-  "as1_value": "控制EHR在安装真实温度模组时的行为. <LINE> 自动检测模组. 启用强制强制兼容模式. 禁用让EHR正常管理原版温度.",
-  "reason": "As1 上游疊字誤植（强制×2 → 强制）；CH 側早已由 ch_overrides 修正",
-  "value": "控制EHR在安装真实温度模组时的行为. <LINE> 自动检测模组. 启用强制兼容模式. 禁用让EHR正常管理原版温度."
- },
- "Sandbox.json|Sandbox_FruitTreeChop_AutoToGroundWhenHeavy": {
-  "as1_value": "超重自动放置",
-  "reason": "CH/CN 語意稽核：與 mod 自帶 Sandbox_EN.json 的中文一致；原譯「超重自动放置」漏掉「強制掉落」",
-  "value": "超重时强制掉落地面"
- },
- "Sandbox.json|Sandbox_JH_SurvivorMultiplierMax_tooltip": {
-  "as1_value": "尸潮规模扩张的最大倍数. 玩家每次每次幸存增加 +0.1 倍. 默认 15.0 意味着最多 16 倍僵尸. ",
-  "reason": "As1 上游疊字誤植（每次×2 → 每次）；CH 側早已由 ch_overrides 修正",
-  "value": "尸潮规模扩张的最大倍数. 玩家每次幸存增加 +0.1 倍. 默认 15.0 意味着最多 16 倍僵尸. "
- },
- "Sandbox.json|Sandbox_TsarLib_SpawnRateMustang_tooltip": {
-  "as1_value": "控制沙皇福特野马野马车在世界中的生成频率. 0=不生成, 1.0=默认, 2.0=旧版2倍, 4.0=旧版4倍.",
-  "reason": "As1 上游疊字誤植（野马×2 → 野马）；CH 側早已由 ch_overrides 修正",
-  "value": "控制沙皇福特野马车在世界中的生成频率. 0=不生成, 1.0=默认, 2.0=旧版2倍, 4.0=旧版4倍."
- },
- "Sandbox.json|Sandbox_UsefulBarrelsRequireHose_tooltip": {
-  "as1_value": "若勾选, 则需要需要一根橡胶软管从汽油桶中取出汽油.",
-  "reason": "As1 上游疊字誤植（需要×2 → 需要）；CH 側早已由 ch_overrides 修正",
-  "value": "若勾选, 则需要一根橡胶软管从汽油桶中取出汽油."
- },
- "Stash.json|Stash_P4StealthCamoMap1_Text3": {
-  "as1_value": "当我抵达并命令他放弃抵抗时, 他无视了我的命令并将手伸向了了腰带.",
-  "reason": "As1 上游錯誤：疊字 了了；CH 側早已正確",
-  "value": "当我抵达并命令他放弃抵抗时, 他无视了我的命令并将手伸向了腰带."
- },
- "Tooltip.json|Tooltip_ActivatedCharcoal": {
-  "as1_value": "医用级活性炭. <LINE> 吸收毒素-治愈食物中毒和毒素中毒. <LINE> 治疗时间: 食物中毒 6 小时, 毒素中毒 12 小时.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "医用级活性炭.<br>吸收毒素-治愈食物中毒和毒素中毒.<br>治疗时间: 食物中毒 6 小时, 毒素中毒 12 小时."
- },
- "Tooltip.json|Tooltip_AlbendazoleInjection": {
-  "as1_value": "注射用阿苯达唑抗寄生虫药. <LINE> 快速治愈严重寄生虫感染 (72 小时). <LINE> 需要注射器. <LINE> <RGB:1,0.5,0> 副作用: 腹痛, 头晕",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "注射用阿苯达唑抗寄生虫药.<br>快速治愈严重寄生虫感染 (72 小时).<br>需要注射器.<br>副作用: 腹痛, 头晕"
- },
- "Tooltip.json|Tooltip_AlchoholicBandage": {
-  "as1_value": "酒精预处理的清洁绷带. <LINE> 一次使用即可清洁伤口并敷上清洁绷带.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "酒精预处理的清洁绷带.<br>一次使用即可清洁伤口并敷上清洁绷带."
- },
- "Tooltip.json|Tooltip_AntiDiarrheal": {
-  "as1_value": "止泻片. <LINE> 强力缓解痢疾腹泻和便意. <LINE> 暂时抑制饥饿/口渴上限. 不能治愈.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "止泻片.<br>强力缓解痢疾腹泻和便意.<br>暂时抑制饥饿/口渴上限. 不能治愈."
- },
- "Tooltip.json|Tooltip_AntiInflammatory": {
-  "as1_value": "非甾体抗炎药片. <LINE> 减轻肿胀, 疼痛和轻度疾病相关发烧. <LINE> 强力缓解症状. 不能治愈.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "非甾体抗炎药片.<br>减轻肿胀, 疼痛和轻度疾病相关发烧.<br>强力缓解症状. 不能治愈."
- },
- "Tooltip.json|Tooltip_AntiNauseaTablets": {
-  "as1_value": "止吐药. <LINE> 大幅减轻食物中毒, 痢疾或尸体病引起的恶心和呕吐. <LINE> 缓解症状. 不能治愈.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "止吐药.<br>大幅减轻食物中毒, 痢疾或尸体病引起的恶心和呕吐.<br>缓解症状. 不能治愈."
- },
- "Tooltip.json|Tooltip_AntibioticOintment": {
-  "as1_value": "处方抗生素软膏. <LINE> 治愈皮肤感染 (伤口, 蜂窝性组织炎). <LINE> 外用. 治疗时间: 72 小时.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "处方抗生素软膏.<br>治愈皮肤感染 (伤口, 蜂窝性组织炎).<br>外用. 治疗时间: 72 小时."
- },
- "Tooltip.json|Tooltip_AntibodyTestKit": {
-  "as1_value": "基因疗法的血液兼容性测试. <LINE> 在使用基因治疗注射器前检测你的存活几率. <LINE> <LINE> 基于血型的结果: <LINE>-高兼容性 (75%+) <LINE>-中兼容性 (50-74%) <LINE>-低兼容性 (25-49%) <LINE>-严重风险 (<25%) <LINE> <LINE> 一次性使用-使用后消耗.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "基因疗法的血液兼容性测试.<br>在使用基因治疗注射器前检测你的存活几率.<br><br>基于血型的结果:<br>-高兼容性 (75%+)<br>-中兼容性 (50-74%)<br>-低兼容性 (25-49%)<br>-严重风险 (<25%)<br><br>一次性使用-使用后消耗."
- },
- "Tooltip.json|Tooltip_AntifungalTablets": {
-  "as1_value": "口服抗真菌药物. <LINE> 治愈尸体曲霉菌病. <LINE> 治疗时间: 5 天.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "口服抗真菌药物.<br>治愈尸体曲霉菌病.<br>治疗时间: 5 天."
- },
- "Tooltip.json|Tooltip_AntiparasiticPills": {
-  "as1_value": "抗寄生虫药物. <LINE> 治愈寄生虫感染 (旋毛虫病, 角化过度型疥疮). <LINE> 治疗时间: 7 天.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "抗寄生虫药物.<br>治愈寄生虫感染 (旋毛虫病, 角化过度型疥疮).<br>治疗时间: 7 天."
- },
- "Tooltip.json|Tooltip_Antipsychotics": {
-  "as1_value": "处方抗精神病药物. <LINE> 通过 8 剂疗程治愈谵妄. <LINE> 治疗时间: 96 小时.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "处方抗精神病药物.<br>通过 8 剂疗程治愈谵妄.<br>治疗时间: 96 小时."
- },
- "Tooltip.json|Tooltip_AntipyreticTablets": {
-  "as1_value": "退烧药片. <LINE> 可将疾病相关发烧降至 37.0 摄氏度. <LINE> 不能降低环境过热.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "退烧药片.<br>可将疾病相关发烧降至 37.0 摄氏度.<br>不能降低环境过热."
- },
- "Tooltip.json|Tooltip_AntipyreticTea": {
-  "as1_value": "草药退烧茶. <LINE> 像退烧药一样减轻疾病相关的发热. <LINE> 略微减轻口渴, 并返还一个空杯子.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "草药退烧茶.<br>像退烧药一样减轻疾病相关的发热.<br>略微减轻口渴, 并返还一个空杯子."
- },
- "Tooltip.json|Tooltip_AntisepticCream": {
-  "as1_value": "处方抗菌乳膏. <LINE> 涂抹于活动性伤口以预防感染. <LINE> 生效期间 100% 预防伤口感染. 不能治愈已有感染.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "处方抗菌乳膏.<br>涂抹于活动性伤口以预防感染.<br>生效期间 100% 预防伤口感染. 不能治愈已有感染."
- },
- "Tooltip.json|Tooltip_AntiviralCapsules": {
-  "as1_value": "处方抗病毒药物. <LINE> 治愈病毒感染 (感冒, 胃肠炎). <LINE> 治疗时间: 48 小时.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "处方抗病毒药物.<br>治愈病毒感染 (感冒, 胃肠炎).<br>治疗时间: 48 小时."
- },
- "Tooltip.json|Tooltip_Art_BeautyInfo": {
-  "as1_value": "<H2> 美观度覆盖层 <LINE><TEXT> 点击拖动可移动 <LINE> 右键点击可移除 <LINE> 双击获取更多信息",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "<H2> 美观度覆盖层<br><TEXT> 点击拖动可移动<br>右键点击可移除<br>双击获取更多信息"
- },
- "Tooltip.json|Tooltip_BloodBagABNeg": {
-  "as1_value": "含有 AB-型血的血袋. <LINE> 兼容性需要血型知识或急救等级 8. <LINE> 恢复 500 毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "含有 AB-型血的血袋.<br>兼容性需要血型知识或急救等级 8.<br>恢复 500 毫升血容量.<br>易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!"
- },
- "Tooltip.json|Tooltip_BloodBagABPos": {
-  "as1_value": "含有 AB+型血的血袋. <LINE> 兼容性需要血型知识或急救等级 8. <LINE> 恢复 500 毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "含有 AB+型血的血袋.<br>兼容性需要血型知识或急救等级 8.<br>恢复 500 毫升血容量.<br>易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!"
- },
- "Tooltip.json|Tooltip_BloodBagANeg": {
-  "as1_value": "含有A-型血的血袋. <LINE> 兼容性需要血型知识或急救等级 8. <LINE> 恢复 500 毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "含有A-型血的血袋.<br>兼容性需要血型知识或急救等级 8.<br>恢复 500 毫升血容量.<br>易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!"
- },
- "Tooltip.json|Tooltip_BloodBagAPos": {
-  "as1_value": "含有A+型血的血袋. <LINE> 兼容性需要血型知识或急救等级 8. <LINE> 恢复 500 毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "含有A+型血的血袋.<br>兼容性需要血型知识或急救等级 8.<br>恢复 500 毫升血容量.<br>易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!"
- },
- "Tooltip.json|Tooltip_BloodBagBNeg": {
-  "as1_value": "含有 B-型血的血袋. <LINE> 兼容性需要血型知识或急救等级 8. <LINE> 恢复 500 毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "含有 B-型血的血袋.<br>兼容性需要血型知识或急救等级 8.<br>恢复 500 毫升血容量.<br>易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!"
- },
- "Tooltip.json|Tooltip_BloodBagBPos": {
-  "as1_value": "含有 B+型血的血袋. <LINE> 兼容性需要血型知识或急救等级 8. <LINE> 恢复 500 毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "含有 B+型血的血袋.<br>兼容性需要血型知识或急救等级 8.<br>恢复 500 毫升血容量.<br>易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!"
- },
- "Tooltip.json|Tooltip_BloodBagONeg": {
-  "as1_value": "含有O-型血的血袋. <LINE> 兼容性需要血型知识或急救等级 8. <LINE> 恢复 500 毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "含有O-型血的血袋.<br>兼容性需要血型知识或急救等级 8.<br>恢复 500 毫升血容量.<br>易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!"
- },
- "Tooltip.json|Tooltip_BloodBagOPos": {
-  "as1_value": "含有O+型血的血袋. <LINE> 兼容性需要血型知识或急救等级 8. <LINE> 恢复 500 毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "含有O+型血的血袋.<br>兼容性需要血型知识或急救等级 8.<br>恢复 500 毫升血容量.<br>易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!"
- },
- "Tooltip.json|Tooltip_BroadSpectrumAntibiotics": {
-  "as1_value": "广谱抗生素药片. <LINE> 治愈多种细菌感染, 包括肺炎, 痢疾和败血症. <LINE> 治疗时间: 72 小时.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "广谱抗生素药片.<br>治愈多种细菌感染, 包括肺炎, 痢疾和败血症.<br>治疗时间: 72 小时."
- },
- "Tooltip.json|Tooltip_BronchodilatorInhaler": {
-  "as1_value": "用于呼吸困难的吸入器. <LINE> 打开气道-有助于肺炎和尸体病. <LINE> 45% 呼吸改善. 不能治愈.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "用于呼吸困难的吸入器.<br>打开气道-有助于肺炎和尸体病.<br>45% 呼吸改善. 不能治愈."
- },
- "Tooltip.json|Tooltip_CSR_BundleMaterials": {
-  "as1_value": "将相同材料捆扎成减轻重量的材料包。<LINE>解包时将保留绳索类型和材料耐久度",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "将相同材料捆扎成减轻重量的材料包。<br>解包时将保留绳索类型和材料耐久度"
- },
- "Tooltip.json|Tooltip_CSR_BundleMixedConstruction": {
-  "as1_value": "将一套混合建材捆扎成一个减轻重量的材料包. <LINE>内含: 5 块木板, 2 根金属管, 2 根金属棒, 2 块金属板和 4 块小金属板",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "将一套混合建材捆扎成一个减轻重量的材料包.<br>内含: 5 块木板, 2 根金属管, 2 根金属棒, 2 块金属板和 4 块小金属板"
- },
- "Tooltip.json|Tooltip_CSR_CraftFullToolbox": {
-  "as1_value": "添加一把管钳以完善工具箱. <LINE>可当作全部六种标准工具使用",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "添加一把管钳以完善工具箱.<br>可当作全部六种标准工具使用"
- },
- "Tooltip.json|Tooltip_CSR_CraftToolRoll": {
-  "as1_value": "将三件手工具捆绑成一个工具卷. <LINE>该工具卷可同时当作锯子, 锤子和螺丝刀使用",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "将三件手工具捆绑成一个工具卷.<br>该工具卷可同时当作锯子, 锤子和螺丝刀使用"
- },
- "Tooltip.json|Tooltip_CSR_CraftToolbox": {
-  "as1_value": "将五种工具组合成一个工具箱. <LINE>可当作锯子, 锤子, 螺丝刀, 扳手和轮胎扳手使用",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "将五种工具组合成一个工具箱.<br>可当作锯子, 锤子, 螺丝刀, 扳手和轮胎扳手使用"
- },
- "Tooltip.json|Tooltip_CSR_Firework": {
-  "as1_value": "小型干扰烟花. <LINE>需要: 物品栏中有打火机或火柴. <LINE>右键点击烟花点燃引信. <LINE>30秒内吸引并迷惑附近的僵尸",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "小型干扰烟花.<br>需要: 物品栏中有打火机或火柴.<br>右键点击烟花点燃引信.<br>30秒内吸引并迷惑附近的僵尸"
- },
- "Tooltip.json|Tooltip_CSR_FullToolbox": {
-  "as1_value": "一个装满工具的工具箱, 内含锯子, 锤子, 螺丝刀, 扳手, 轮胎扳手和管钳. <LINE>可同时当作这六种工具使用. <LINE>随使用而损耗. 损坏时, 返还空工具箱",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "一个装满工具的工具箱, 内含锯子, 锤子, 螺丝刀, 扳手, 轮胎扳手和管钳.<br>可同时当作这六种工具使用.<br>随使用而损耗. 损坏时, 返还空工具箱"
- },
- "Tooltip.json|Tooltip_CSR_Glowstick": {
-  "as1_value": "扔出去给一个方块标记上临时彩色光.<LINE> 可以在露营、生存、电子和工具物资中找到",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "扔出去给一个方块标记上临时彩色光.<br>可以在露营、生存、电子和工具物资中找到"
- },
- "Tooltip.json|Tooltip_CSR_HideBarrel": {
-  "as1_value": "躲在桶里. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> <RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (空间狭小). <LINE> 按 ESC 或移动结束",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "躲在桶里.<br><br>对僵尸隐身.<br><RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加.<br><RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (空间狭小).<br>按 ESC 或移动结束"
- },
- "Tooltip.json|Tooltip_CSR_HideBed": {
-  "as1_value": "躲在床下. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> 按 ESC 或移动结束",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "躲在床下.<br><br>对僵尸隐身.<br><RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加.<br>按 ESC 或移动结束"
- },
- "Tooltip.json|Tooltip_CSR_HideCloset": {
-  "as1_value": "躲在衣柜里. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> 按 ESC 或移动结束",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "躲在衣柜里.<br><br>对僵尸隐身.<br><RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加.<br>按 ESC 或移动结束"
- },
- "Tooltip.json|Tooltip_CSR_HideCouch": {
-  "as1_value": "躲在沙发后面. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> 按 ESC 或移动结束",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "躲在沙发后面.<br><br>对僵尸隐身.<br><RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加.<br>按 ESC 或移动结束"
- },
- "Tooltip.json|Tooltip_CSR_HideCrate": {
-  "as1_value": "躲在板条箱里. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> <RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (空间狭小). <LINE> 按 ESC 或移动结束",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "躲在板条箱里.<br><br>对僵尸隐身.<br><RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加.<br><RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (空间狭小).<br>按 ESC 或移动结束"
- },
- "Tooltip.json|Tooltip_CSR_HideDumpster": {
-  "as1_value": "躲在垃圾桶里. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> <RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (里面很臭). <LINE> 按 ESC 或移动结束",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "躲在垃圾桶里.<br><br>对僵尸隐身.<br><RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加.<br><RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (里面很臭).<br>按 ESC 或移动结束"
- },
- "Tooltip.json|Tooltip_CSR_HideFridge": {
-  "as1_value": "躲在冰箱里. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> <RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (空间狭小). <LINE> 按 ESC 或移动结束",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "躲在冰箱里.<br><br>对僵尸隐身.<br><RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加.<br><RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (空间狭小).<br>按 ESC 或移动结束"
- },
- "Tooltip.json|Tooltip_CSR_HideTable": {
-  "as1_value": "躲在桌子下面. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> 按 ESC 或移动结束",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "躲在桌子下面.<br><br>对僵尸隐身.<br><RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加.<br>按 ESC 或移动结束"
- },
- "Tooltip.json|Tooltip_CSR_MaterialBundle": {
-  "as1_value": "捆扎好的材料包, 降低了携带重量. <LINE>解包后可回收原始材料和绳索",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "捆扎好的材料包, 降低了携带重量.<br>解包后可回收原始材料和绳索"
- },
- "Tooltip.json|Tooltip_CSR_MixedMaterialBundle": {
-  "as1_value": "捆扎好的混合建材包, 降低了携带重量. <LINE>包含木板, 金属管, 金属棒, 金属板和小金属板",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "捆扎好的混合建材包, 降低了携带重量.<br>包含木板, 金属管, 金属棒, 金属板和小金属板"
- },
- "Tooltip.json|Tooltip_CSR_ToolRoll": {
-  "as1_value": "一个紧凑的卷包, 内含锯子, 锤子和螺丝刀. <LINE>可同时当作这三种工具使用. <LINE>随使用而损耗. 损坏时, 返还空卷包",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "一个紧凑的卷包, 内含锯子, 锤子和螺丝刀.<br>可同时当作这三种工具使用.<br>随使用而损耗. 损坏时, 返还空卷包"
- },
- "Tooltip.json|Tooltip_CSR_Toolbox": {
-  "as1_value": "一个工具箱, 内含锯子, 锤子, 螺丝刀, 扳手和轮胎扳手. <LINE>可同时当作这五种工具使用. <LINE>随使用而损耗. 损坏时, 返还空工具箱",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "一个工具箱, 内含锯子, 锤子, 螺丝刀, 扳手和轮胎扳手.<br>可同时当作这五种工具使用.<br>随使用而损耗. 损坏时, 返还空工具箱"
- },
- "Tooltip.json|Tooltip_CaffeinePills": {
-  "as1_value": "强效咖啡因药片. <LINE> 消除疲劳并阻止疲劳增加 12 小时. <LINE> 生效期间阻止睡眠. <LINE> <RGB:1,0.5,0> 反噬: 效果消失时达到最大疲劳.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "强效咖啡因药片.<br>消除疲劳并阻止疲劳增加 12 小时.<br>生效期间阻止睡眠.<br>反噬: 效果消失时达到最大疲劳."
- },
- "Tooltip.json|Tooltip_ChelationKit": {
-  "as1_value": "用于重金属中毒的螯合疗法套件. <LINE> 从血液中去除重金属 (24 小时). <LINE> 需要静脉输液套件. <LINE> <RGB:1,0.5,0> 副作用: 头痛, 疲劳, 恶心",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "用于重金属中毒的螯合疗法套件.<br>从血液中去除重金属 (24 小时).<br>需要静脉输液套件.<br>副作用: 头痛, 疲劳, 恶心"
- },
- "Tooltip.json|Tooltip_CleanRoom_MissingItems_Bleach": {
-  "as1_value": "<LINE> - 漂白剂 (需要用于: 血迹和地板污渍)",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "<br>- 漂白剂 (需要用于: 血迹和地板污渍)"
- },
- "Tooltip.json|Tooltip_CleanRoom_MissingItems_Broom": {
-  "as1_value": "<LINE> - 扫帚 (需要用于: 垃圾和尘土)",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "<br>- 扫帚 (需要用于: 垃圾和尘土)"
- },
- "Tooltip.json|Tooltip_CleanRoom_MissingItems_Gloves": {
-  "as1_value": "<LINE> - 手套 (需要用于: 碎玻璃)",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "<br>- 手套 (需要用于: 碎玻璃)"
- },
- "Tooltip.json|Tooltip_CleanRoom_MissingItems_Mop": {
-  "as1_value": "<LINE> - 拖把 (需要用于: 血迹和地板污渍)",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "<br>- 拖把 (需要用于: 血迹和地板污渍)"
- },
- "Tooltip.json|Tooltip_ColdFluTablets": {
-  "as1_value": "非处方感冒和流感缓解药. <LINE> 减轻发烧, 疲劳和轻微疼痛. <LINE> 不能治愈-仅缓解症状 (40%).",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "非处方感冒和流感缓解药.<br>减轻发烧, 疲劳和轻微疼痛.<br>不能治愈-仅缓解症状 (40%)."
- },
- "Tooltip.json|Tooltip_CombatStimulants": {
-  "as1_value": "受限战斗兴奋剂. <LINE> 使双手武器攻击速度提升3小时. <LINE> 激活期间可阻断压力、恐慌和不快情绪。  <LINE> 提供强大的耐力支持, 且不会将体力锁定在100%. <LINE> 8次剂量瓶装. <LINE> <RGB:1,0.5,0> 反噬: 6小时内出现80%疲劳、脱水及四肢肌肉疼痛.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "受限战斗兴奋剂.<br>使双手武器攻击速度提升3小时.<br>激活期间可阻断压力、恐慌和不快情绪。<br>提供强大的耐力支持, 且不会将体力锁定在100%.<br>8次剂量瓶装.<br>反噬: 6小时内出现80%疲劳、脱水及四肢肌肉疼痛."
- },
- "Tooltip.json|Tooltip_CommonColdTea": {
-  "as1_value": "温热的草药茶. <LINE> 通过8剂疗程可治愈普通感冒. <LINE> 略微减轻口渴, 并返还一个空杯子.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "温热的草药茶.<br>通过8剂疗程可治愈普通感冒.<br>略微减轻口渴, 并返还一个空杯子."
- },
- "Tooltip.json|Tooltip_CorticosteroidInjection": {
-  "as1_value": "医院级皮质类固醇注射剂. <LINE> 快速治愈严重尸体气道刺激 (12 小时). <LINE> 需要注射器. <LINE> <RGB:1,0.5,0> 副作用: 免疫抑制, 失眠症",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "医院级皮质类固醇注射剂.<br>快速治愈严重尸体气道刺激 (12 小时).<br>需要注射器.<br>副作用: 免疫抑制, 失眠症"
- },
- "Tooltip.json|Tooltip_CoughSuppressant": {
-  "as1_value": "止咳药片. <LINE> 减少咳嗽冲动-避免吸引僵尸! <LINE> 45% 咳嗽减少. 不能治愈.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "止咳药片.<br>减少咳嗽冲动-避免吸引僵尸!<br>45% 咳嗽减少. 不能治愈."
- },
- "Tooltip.json|Tooltip_CoughSyrup": {
-  "as1_value": "液体止咳药. <LINE> 抑制咳嗽反射-利于潜行! <LINE> 减少 50% 的咳嗽. 不能治愈.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "液体止咳药.<br>抑制咳嗽反射-利于潜行!<br>减少 50% 的咳嗽. 不能治愈."
- },
- "Tooltip.json|Tooltip_DualOrexinReceptor": {
-  "as1_value": "处方睡眠药物. <LINE> 可在活动性失眠症期间助眠. <LINE> 通过8次剂量疗程可治愈失眠症. <LINE> 治疗时间: 96 小时.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "处方睡眠药物.<br>可在活动性失眠症期间助眠.<br>通过8次剂量疗程可治愈失眠症.<br>治疗时间: 96 小时."
- },
- "Tooltip.json|Tooltip_EhrRecipePlantBasedAntibiotics": {
-  "as1_value": "制备植物抗生素的配方笔记. <LINE> 教授: 植物抗生素. <LINE> 急救 8 级无需阅读即可制作.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "制备植物抗生素的配方笔记.<br>教授: 植物抗生素.<br>急救 8 级无需阅读即可制作."
- },
- "Tooltip.json|Tooltip_EhrRecipeUltimateCraftGuide": {
-  "as1_value": "制备EHR药物、茶饮、脂油、蜂蜜和紧急天然物资的综合野外笔记. <LINE> 教授所有EHR药物制作配方. <LINE> 急救6级和采集4级无需阅读即可制作.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "制备EHR药物、茶饮、脂油、蜂蜜和紧急天然物资的综合野外笔记.<br>教授所有EHR药物制作配方.<br>急救6级和采集4级无需阅读即可制作."
- },
- "Tooltip.json|Tooltip_ElectrolytePowder": {
-  "as1_value": "电解质补充粉-与水混合. <LINE> 治疗由痢疾, 高温或呕吐引起的脱水. <LINE> 40% 症状缓解. 不能治愈.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "电解质补充粉-与水混合.<br>治疗由痢疾, 高温或呕吐引起的脱水.<br>40% 症状缓解. 不能治愈."
- },
- "Tooltip.json|Tooltip_EmergencySepsisKit": {
-  "as1_value": "败血症急救治疗套件. <LINE> 最快治愈败血症 (24 小时). <LINE> 需要静脉输液套件. <LINE> <RGB:1,0.5,0> 副作用: 严重疲劳, 恶心, 发烧",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "败血症急救治疗套件.<br>最快治愈败血症 (24 小时).<br>需要静脉输液套件.<br>副作用: 严重疲劳, 恶心, 发烧"
- },
- "Tooltip.json|Tooltip_EmptyBloodBag": {
-  "as1_value": "空的无菌采血袋. <LINE> 可用于抽取和储存自己的血液. <LINE> 需要 80% 以上血容量才能安全献血. <LINE> 生成与你血型匹配的血袋. <LINE> <RGB:1,0.5,0> 装满后冷冻储存!",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "空的无菌采血袋.<br>可用于抽取和储存自己的血液.<br>需要 80% 以上血容量才能安全献血.<br>生成与你血型匹配的血袋.<br>装满后冷冻储存!"
- },
- "Tooltip.json|Tooltip_Epinephrine": {
-  "as1_value": "急救肾上腺素自动注射器. <LINE> 治疗严重过敏反应和心脏骤停. <LINE> 可使昏迷患者苏醒.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "急救肾上腺素自动注射器.<br>治疗严重过敏反应和心脏骤停.<br>可使昏迷患者苏醒."
- },
- "Tooltip.json|Tooltip_Furosemide": {
-  "as1_value": "用于严重输血反应的袢利尿剂. <LINE> 通过 6 剂疗程治愈急性溶血性输血反应. <LINE> 治疗时间: 48 小时. <LINE> <RGB:1,0.5,0> 副作用: 脱水, 腰痛, 利尿作用",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "用于严重输血反应的袢利尿剂.<br>通过 6 剂疗程治愈急性溶血性输血反应.<br>治疗时间: 48 小时.<br>副作用: 脱水, 腰痛, 利尿作用"
- },
- "Tooltip.json|Tooltip_GeneTherapyKit": {
-  "as1_value": "针对诺克斯病毒的实验性基因疗法. <LINE> <RGB:1,0.3,0.3> 极其稀有-军事研究物品 <LINE> <LINE> 成功率取决于血型兼容性. <LINE> 先使用抗体检测套件检查兼容性! <LINE> <LINE> <RGB:0,1,0> 成功: 永久免疫 <LINE> <RGB:1,0,0> 失败: 立即死亡",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "针对诺克斯病毒的实验性基因疗法.<br>极其稀有-军事研究物品<br><br>成功率取决于血型兼容性.<br>先使用抗体检测套件检查兼容性!<br><br>成功: 永久免疫<br>失败: 立即死亡"
- },
- "Tooltip.json|Tooltip_HomemadeAntibioticOintment": {
-  "as1_value": "自制的抗生素软膏. <LINE> 治愈皮肤感染（伤口、蜂窝性组织炎）. <LINE> 外用. 治疗时间: 72小时.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "自制的抗生素软膏.<br>治愈皮肤感染（伤口、蜂窝性组织炎）.<br>外用. 治疗时间: 72小时."
- },
- "Tooltip.json|Tooltip_HomemadeAntisepticCream": {
-  "as1_value": "自制的抗菌乳膏. <LINE> 涂在活跃的伤口上以防止感染. <LINE> 使用期间 100% 防止伤口感染. 不能治愈已有的感染.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "自制的抗菌乳膏.<br>涂在活跃的伤口上以防止感染.<br>使用期间 100% 防止伤口感染. 不能治愈已有的感染."
- },
- "Tooltip.json|Tooltip_HomemadeCoughSyrup": {
-  "as1_value": "自制的止咳糖浆. <LINE>缓解咳嗽. <LINE>不能治愈呼吸道疾病.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "自制的止咳糖浆.<br>缓解咳嗽.<br>不能治愈呼吸道疾病."
- },
- "Tooltip.json|Tooltip_HomemadeMuscleRelaxant": {
-  "as1_value": "自制的肌肉松弛剂. <LINE> 缓解肌肉痉挛和肌肉疼痛. <LINE> 不能治愈破伤风或寄生虫.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "自制的肌肉松弛剂.<br>缓解肌肉痉挛和肌肉疼痛.<br>不能治愈破伤风或寄生虫."
- },
- "Tooltip.json|Tooltip_HomemadePainkillers": {
-  "as1_value": "自制的止痛药制剂. <LINE> 缓解身体部位疼痛.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "自制的止痛药制剂.<br>缓解身体部位疼痛."
- },
- "Tooltip.json|Tooltip_HomemadeSleepingPills": {
-  "as1_value": "自制的安眠药. <LINE>使用期间可入睡, 有助于治疗失眠症.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "自制的安眠药.<br>使用期间可入睡, 有助于治疗失眠症."
- },
- "Tooltip.json|Tooltip_HomemadeTopicalPermethrin": {
-  "as1_value": "自制的外用氯菊酯. <LINE> 通过 6 剂疗程可治愈角化型疥疮. <LINE> 治疗时间: 72小时. <LINE> 使用期间可减轻瘙痒、发热和健康值损失.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "自制的外用氯菊酯.<br>通过 6 剂疗程可治愈角化型疥疮.<br>治疗时间: 72小时.<br>使用期间可减轻瘙痒、发热和健康值损失."
- },
- "Tooltip.json|Tooltip_IVAmphotericin": {
-  "as1_value": "静脉两性霉素 B-强效抗真菌药. <LINE> 快速治愈严重尸体曲霉菌病 (24 小时). <LINE> 需要静脉输液套件. <LINE> <RGB:1,0.5,0> 副作用: 发烧, 肾脏负担, 疲劳",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "静脉两性霉素 B-强效抗真菌药.<br>快速治愈严重尸体曲霉菌病 (24 小时).<br>需要静脉输液套件.<br>副作用: 发烧, 肾脏负担, 疲劳"
- },
- "Tooltip.json|Tooltip_IVAntibiotics": {
-  "as1_value": "静脉抗生素溶液. <LINE> 快速治愈严重感染, 包括痢疾 (36 小时). <LINE> 需要静脉输液套件. <LINE> <RGB:1,0.5,0> 副作用: 恶心, 疲劳",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "静脉抗生素溶液.<br>快速治愈严重感染, 包括痢疾 (36 小时).<br>需要静脉输液套件.<br>副作用: 恶心, 疲劳"
- },
- "Tooltip.json|Tooltip_IVCiprofloxacin": {
-  "as1_value": "静脉环丙沙星氟喹诺酮抗生素. <LINE> 快速治愈胃肠道和呼吸道细菌感染 (12 小时). <LINE> 需要静脉输液套件. <LINE> <RGB:1,0.5,0> 副作用: 肌腱无力, 头晕",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "静脉环丙沙星氟喹诺酮抗生素.<br>快速治愈胃肠道和呼吸道细菌感染 (12 小时).<br>需要静脉输液套件.<br>副作用: 肌腱无力, 头晕"
- },
- "Tooltip.json|Tooltip_IVFluids": {
-  "as1_value": "静脉输液支持. <LINE> 快速治愈急性输血反应 (24 小时). <LINE> 强力补水和缓解健康损失. <LINE> 需要静脉输液套件.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "静脉输液支持.<br>快速治愈急性输血反应 (24 小时).<br>强力补水和缓解健康损失.<br>需要静脉输液套件."
- },
- "Tooltip.json|Tooltip_IVKit": {
-  "as1_value": "完整的静脉输液套件, 包含导管, 针头和连接器. <LINE> 使用静脉药物所需. <LINE> 一次性使用-使用后消耗.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "完整的静脉输液套件, 包含导管, 针头和连接器.<br>使用静脉药物所需.<br>一次性使用-使用后消耗."
- },
- "Tooltip.json|Tooltip_IVMetronidazole": {
-  "as1_value": "用于厌氧菌的静脉甲硝唑. <LINE> 快速治愈痢疾和败血症 (24 小时). <LINE> 需要静脉输液套件. <LINE> <RGB:1,0.5,0> 副作用: 金属味, 恶心",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "用于厌氧菌的静脉甲硝唑.<br>快速治愈痢疾和败血症 (24 小时).<br>需要静脉输液套件.<br>副作用: 金属味, 恶心"
- },
- "Tooltip.json|Tooltip_IVVancomycin": {
-  "as1_value": "静脉万古霉素-最后手段抗生素. <LINE> 快速治愈耐药感染 (48 小时). <LINE> 需要静脉输液套件. <LINE> <RGB:1,0.5,0> 副作用: 红人综合征, 肾脏负担",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "静脉万古霉素-最后手段抗生素.<br>快速治愈耐药感染 (48 小时).<br>需要静脉输液套件.<br>副作用: 红人综合征, 肾脏负担"
- },
- "Tooltip.json|Tooltip_ImmunoboosterShot": {
-  "as1_value": "诺克斯病毒暴露前预防. <LINE> <RGB:0,1,0> 提供 24 小时免疫力 <LINE> <LINE> 必须在被咬之前服用! <LINE> 如果已经感染则无效. <LINE> <LINE> 两次使用之间间隔 7 天. <LINE> <LINE> <RGB:1,0.5,0> 副作用 (生效期间): <LINE> 轻度恶心,耐力恢复降低, <LINE> 偶尔颤抖",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "诺克斯病毒暴露前预防.<br>提供 24 小时免疫力<br><br>必须在被咬之前服用!<br>如果已经感染则无效.<br><br>两次使用之间间隔 7 天.<br><br>副作用 (生效期间):<br>轻度恶心,耐力恢复降低,<br>偶尔颤抖"
- },
- "Tooltip.json|Tooltip_InstantIcePack": {
-  "as1_value": "急救速效降温包盒. <LINE> 通过 4 剂降温疗程治愈中暑. <LINE> 减轻发烧, 意识混乱, 虚脱风险, 脱水和健康损失.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "急救速效降温包盒.<br>通过 4 剂降温疗程治愈中暑.<br>减轻发烧, 意识混乱, 虚脱风险, 脱水和健康损失."
- },
- "Tooltip.json|Tooltip_Inventions_NextPage": {
-  "as1_value": "点击 \"状态\" 按钮在页面间循环: <LINE><RGB:0.8,0.8,0.8> 下一页: <SPACE><ORANGE>",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "点击 \"状态\" 按钮在页面间循环:<br><RGB:0.8,0.8,0.8> 下一页: <SPACE><ORANGE>"
- },
- "Tooltip.json|Tooltip_MedicalWildPlants": {
-  "as1_value": "用于识别药用野生植物的野外笔记. <LINE> 如果你的急救或搜寻技能太低, 可解锁EHR药用植物搜索功能.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "用于识别药用野生植物的野外笔记.<br>如果你的急救或搜寻技能太低, 可解锁EHR药用植物搜索功能."
- },
- "Tooltip.json|Tooltip_MuscleRelaxants": {
-  "as1_value": "非处方肌肉松弛剂. <LINE> 缓解破伤风或寄生虫引起的肌肉痉挛. <LINE> 40% 痉挛减轻. 不能治愈.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "非处方肌肉松弛剂.<br>缓解破伤风或寄生虫引起的肌肉痉挛.<br>40% 痉挛减轻. 不能治愈."
- },
- "Tooltip.json|Tooltip_NitricOxideBooster": {
-  "as1_value": "性能增强药片. <LINE> 锁定耐力在 100% 持续 3 小时. <LINE> <RGB:1,0.5,0> 使用后副作用: 全身肌肉疼痛 6 小时.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "性能增强药片.<br>锁定耐力在 100% 持续 3 小时.<br>使用后副作用: 全身肌肉疼痛 6 小时."
- },
- "Tooltip.json|Tooltip_OralRehydrationKit": {
-  "as1_value": "医用补液溶液套装. <LINE> 治愈基于脱水的疾病 (痢疾, 热衰竭). <LINE> 治疗时间: 48 小时, 8 剂疗程.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "医用补液溶液套装.<br>治愈基于脱水的疾病 (痢疾, 热衰竭).<br>治疗时间: 48 小时, 8 剂疗程."
- },
- "Tooltip.json|Tooltip_PhalanxPills": {
-  "as1_value": "诺克斯病毒抑制药物. <LINE> <RGB:1,0.5,0> 不能治愈-重置感染进度 <LINE> <LINE> 每次使用效果递减: <LINE> 第 1 次: 完全重置 | 第 2 次: 重置至 25% <LINE> 第 3 次: 重置至 50% | 第 4 次: 重置至 75% <LINE> 第 5 次及以上: 无效 (身体已适应) <LINE> <LINE> <RGB:1,0.5,0> 副作用: <LINE> 严重恶心 (6 小时),发烧 (12 小时), <LINE> 免疫力减弱 (48 小时)",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "诺克斯病毒抑制药物.<br>不能治愈-重置感染进度<br><br>每次使用效果递减:<br>第 1 次: 完全重置 | 第 2 次: 重置至 25%<br>第 3 次: 重置至 50% | 第 4 次: 重置至 75%<br>第 5 次及以上: 无效 (身体已适应)<br><br>副作用:<br>严重恶心 (6 小时),发烧 (12 小时),<br>免疫力减弱 (48 小时)"
- },
- "Tooltip.json|Tooltip_PillsAntidepressant": {
-  "as1_value": "抗抑郁药. <LINE> 使用原版行为帮助减少恐慌和抑郁. <LINE> 允许在失眠症期间助眠. <LINE> 长疗程失眠症治疗: 168 小时.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "抗抑郁药.<br>使用原版行为帮助减少恐慌和抑郁.<br>允许在失眠症期间助眠.<br>长疗程失眠症治疗: 168 小时."
- },
- "Tooltip.json|Tooltip_PillsBetablocker": {
-  "as1_value": "β受体阻滞剂. <LINE> 使用原版行为帮助控制恐慌. <LINE>EHR追踪剩余剂量和有效持续时间.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "β受体阻滞剂.<br>使用原版行为帮助控制恐慌.<br>EHR追踪剩余剂量和有效持续时间."
- },
- "Tooltip.json|Tooltip_PillsSleeping": {
-  "as1_value": "安眠药片. <LINE> 使用原版睡眠行为. <LINE>EHR追踪剩余剂量和生效持续时间.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "安眠药片.<br>使用原版睡眠行为.<br>EHR追踪剩余剂量和生效持续时间."
- },
- "Tooltip.json|Tooltip_PlantBasedAntibiotics": {
-  "as1_value": "植物性广谱抗生素. <LINE> 治愈多种细菌感染, 包括肺炎, 痢疾和败血症. <LINE> 治疗时间: 72 小时. <LINE> 用新鲜草药制作.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "植物性广谱抗生素.<br>治愈多种细菌感染, 包括肺炎, 痢疾和败血症.<br>治疗时间: 72 小时.<br>用新鲜草药制作."
- },
- "Tooltip.json|Tooltip_PrescriptionAntibiotics": {
-  "as1_value": "强效处方抗生素. <LINE> 治愈细菌感染 (伤口, 蜂窝性组织炎, 肺炎). <LINE> 治疗时间: 72 小时.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "强效处方抗生素.<br>治愈细菌感染 (伤口, 蜂窝性组织炎, 肺炎).<br>治疗时间: 72 小时."
- },
- "Tooltip.json|Tooltip_RelaxantTea": {
-  "as1_value": "镇静草药茶. <LINE> 逐渐将压力降至零. <LINE> 略微减轻口渴, 并返还一个空杯子.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "镇静草药茶.<br>逐渐将压力降至零.<br>略微减轻口渴, 并返还一个空杯子."
- },
- "Tooltip.json|Tooltip_RespiratorySupportKit": {
-  "as1_value": "便携式氧气和气道支持套件. <LINE> 快速治愈尸体病 (6 小时). <LINE> 强力缓解呼吸, 头晕, 恶心和虚弱. <LINE> 每套 3 次使用, 每 3 小时一次剂量.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "便携式氧气和气道支持套件.<br>快速治愈尸体病 (6 小时).<br>强力缓解呼吸, 头晕, 恶心和虚弱.<br>每套 3 次使用, 每 3 小时一次剂量."
- },
- "Tooltip.json|Tooltip_RifampicinComboPack": {
-  "as1_value": "利福平联合治疗结核病. <LINE> 快速治愈结核病 (14 天 vs 21 天). <LINE> <RGB:1,0.5,0> 副作用: 橙色尿液, 肝脏负担, 疲劳",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "利福平联合治疗结核病.<br>快速治愈结核病 (14 天 vs 21 天).<br>副作用: 橙色尿液, 肝脏负担, 疲劳"
- },
- "Tooltip.json|Tooltip_SalineBag": {
-  "as1_value": "无菌生理盐水静脉输液袋. <LINE> 无需血型匹配. <LINE> 恢复 250 毫升血容量. <LINE> <RGB:0.7,0.7,0.7> 保质期长, 但需保持密封.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "无菌生理盐水静脉输液袋.<br>无需血型匹配.<br>恢复 250 毫升血容量.<br>保质期长, 但需保持密封."
- },
- "Tooltip.json|Tooltip_SalvageVehicle": {
-  "as1_value": "佩戴焊工面罩, 使用丙烷喷灯拆解车辆, 可将车辆从道路上清理移走. 整车拆解相比拆解汽车残骸耗时更长, 消耗更多丙烷, 但能产出额外物资,还能获得更多技能经验值.<LINE> 金工技能等级越高, 拆解获得的可用零件和材料就越多. <LINE> * 建议先提前拆空车辆配件并清空后备箱",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "佩戴焊工面罩, 使用丙烷喷灯拆解车辆, 可将车辆从道路上清理移走. 整车拆解相比拆解汽车残骸耗时更长, 消耗更多丙烷, 但能产出额外物资,还能获得更多技能经验值.<br>金工技能等级越高, 拆解获得的可用零件和材料就越多.<br>* 建议先提前拆空车辆配件并清空后备箱"
- },
- "Tooltip.json|Tooltip_Sculpting_B_Hedge": {
-  "as1_value": "更高的艺术和农业技能可以解锁更复杂的设计.<LINE><LINE>最快的雕塑类型.<LINE>永远不会失败.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "更高的艺术和农业技能可以解锁更复杂的设计.<br><br>最快的雕塑类型.<br>永远不会失败."
- },
- "Tooltip.json|Tooltip_Sculpting_B_Ice": {
-  "as1_value": "艺术技能越高, 雕塑越令人惊叹.<LINE><LINE>极高的美感值.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "艺术技能越高, 雕塑越令人惊叹.<br><br>极高的美感值."
- },
- "Tooltip.json|Tooltip_Sculpting_B_Metal": {
-  "as1_value": "高艺术和金属加工技能确保你的作品既耐用又耀眼, 解锁更复杂的设计.<LINE>有很小的失败几率.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "高艺术和金属加工技能确保你的作品既耐用又耀眼, 解锁更复杂的设计.<br>有很小的失败几率."
- },
- "Tooltip.json|Tooltip_Sculpting_C_Ice": {
-  "as1_value": "需要锤子和冰凿.<LINE><LINE>会融化.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "需要锤子和冰凿.<br><br>会融化."
- },
- "Tooltip.json|Tooltip_Sculpting_C_Metal": {
-  "as1_value": "消耗丙烷.<LINE><LINE>需要丙烷喷灯, 锤子和焊接面罩.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "消耗丙烷.<br><br>需要丙烷喷灯, 锤子和焊接面罩."
- },
- "Tooltip.json|Tooltip_Sculpting_C_Stone": {
-  "as1_value": "失败几率高.<LINE><LINE>最慢的雕塑类型.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "失败几率高.<br><br>最慢的雕塑类型."
- },
- "Tooltip.json|Tooltip_SterilizedBandages": {
-  "as1_value": "密封包装的清洁绷带. <LINE> 作为普通清洁绷带使用. <LINE> 最多容纳 5 条清洁绷带. <LINE> 不消毒伤口.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "密封包装的清洁绷带.<br>作为普通清洁绷带使用.<br>最多容纳 5 条清洁绷带.<br>不消毒伤口."
- },
- "Tooltip.json|Tooltip_Syringe": {
-  "as1_value": "无菌一次性注射器. <LINE> 注射药物所需. <LINE> 一次性使用-使用后消耗.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "无菌一次性注射器.<br>注射药物所需.<br>一次性使用-使用后消耗."
- },
- "Tooltip.json|Tooltip_TBAntibiotics": {
-  "as1_value": "异烟肼-一线结核治疗药物. <LINE> 通过长期治疗治愈结核病. <LINE> 治疗时间: 21 天 (结核病为慢性病).",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "异烟肼-一线结核治疗药物.<br>通过长期治疗治愈结核病.<br>治疗时间: 21 天 (结核病为慢性病)."
- },
- "Tooltip.json|Tooltip_TaMOOgotchi": {
-  "as1_value": "一个小小的, 牛形的电子宠物. <LINE> 在你的背包里右键它, 选择\"打开电子牛\"来释放你的牛.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "一个小小的, 牛形的电子宠物.<br>在你的背包里右键它, 选择\"打开电子牛\"来释放你的牛."
- },
- "Tooltip.json|Tooltip_TankWater_FilterDepleted": {
-  "as1_value": "滤芯已耗尽. 请更换过滤滤芯. ",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
-  "value": "滤芯已耗尽. 请更换滤芯. "
- },
- "Tooltip.json|Tooltip_TankWater_RequiresFilterCartridge": {
-  "as1_value": "需要: 过滤滤芯. ",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
-  "value": "需要: 滤芯. "
- },
- "Tooltip.json|Tooltip_TetanusAntitoxin": {
-  "as1_value": "破伤风抗毒素注射剂. <LINE> 中和破伤风毒素-治愈破伤风. <LINE> 需要注射器. 治疗时间: 5 天.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "破伤风抗毒素注射剂.<br>中和破伤风毒素-治愈破伤风.<br>需要注射器. 治疗时间: 5 天."
- },
- "Tooltip.json|Tooltip_TetanusImmunoglobulin": {
-  "as1_value": "破伤风免疫球蛋白-即时保护. <LINE> 快速治愈破伤风 (48 小时). <LINE> 需要注射器. <LINE> <RGB:1,0.5,0> 副作用: 注射疼痛, 发烧",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
-  "value": "破伤风免疫球蛋白-即时保护.<br>快速治愈破伤风 (48 小时).<br>需要注射器.<br>副作用: 注射疼痛, 发烧"
- },
- "Tooltip.json|Tooltip_TopicalPermethrin": {
-  "as1_value": "外用氯菊酯乳膏. <LINE> 通过 6 剂疗程治愈角化过度型疥疮. <LINE> 治疗时间: 72 小时. <LINE> 生效期间减轻瘙痒, 发烧和健康损失.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "外用氯菊酯乳膏.<br>通过 6 剂疗程治愈角化过度型疥疮.<br>治疗时间: 72 小时.<br>生效期间减轻瘙痒, 发烧和健康损失."
- },
- "Tooltip.json|Tooltip_Toy_Talk": {
-  "as1_value": "<H2> 提升幸福感! <LINE><TEXT><SIZE:small> - 重复使用效果递减.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "<H2> 提升幸福感!<br><TEXT><SIZE:small> - 重复使用效果递减."
- },
- "Tooltip.json|Tooltip_WireBundle": {
-  "as1_value": "一束音箱线. 用于将音箱连接到音乐设备 (黑胶唱片机或高保真音响). <LINE> <LINE> 包含200英尺的线. 每次连接每格距离会消耗5英尺.",
-  "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-  "value": "一束音箱线. 用于将音箱连接到音乐设备 (黑胶唱片机或高保真音响).<br><br>包含200英尺的线. 每次连接每格距离会消耗5英尺."
- },
- "Tooltip.json|Tooltip_item_Unattached": {
-  "as1_value": "取下",
-  "reason": "vanilla 狀態詞 'unattached' 誤作動作詞「取下」；唯一同鍵 mod EN hash 證實同值，官方值回填",
-  "value": "未装备"
- },
- "Tooltip_EN.json|Tooltip_TankWater_FilterDepleted": {
-  "as1_value": "滤芯已耗尽. 请更换过滤滤芯.",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
-  "value": "滤芯已耗尽. 请更换滤芯."
- },
- "Tooltip_EN.json|Tooltip_TankWater_RequiresFilterCartridge": {
-  "as1_value": "需要: 过滤滤芯.",
-  "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
-  "value": "需要: 滤芯."
- },
- "UI.json|ItemName_ComputerMod.GameCDPong": {
-  "as1_value": "乓乓球游戏光盘",
-  "reason": "As1 上游錯誤：錯字：乒乓球誤作乓乓球；CH 側早已正確",
-  "value": "乒乓球游戏光盘"
- },
- "UI.json|UI_BetLock_LockpickDoorBobbyPin": {
-  "as1_value": "带开锁工具的门",
-  "reason": "CH/CN 語意稽核：原譯「带开锁工具的门」語意不符（鍵名 LockpickDoorBobbyPin；CH 側正確）",
-  "value": "使用发夹撬门锁"
- },
- "UI.json|UI_OGRIMMACHINES_UI_STATUS_TAB_CAN_OPERATE_WITH_LEVEL_FMT": {
-  "as1_value": "可以以 %s 等级 %d 操作!",
-  "reason": "As1 上游錯誤：疊字 可以|以；改為與 CH 一致的語序；CH 側早已正確",
-  "value": "%s 等级达到 %d 即可操作!"
- },
- "UI.json|UI_Symbiosis_BloodFamiliarMax": {
-  "as1_value": "你已拥有有血契眷属",
-  "reason": "As1 上游錯誤：疊字 有有；CH 側早已正確",
-  "value": "你已拥有血契眷属"
- },
- "UI.json|UI_trait_WhittlerDesc": {
-  "as1_value": "可以雕刻木头和骨头物品. <br><br>已掌握知识: <br>-磨尖骨头<br>-制作骨头鱼钩<br>-制作骨头缝纫针<br>-磨尖颚骨<br>-雕刻编织针<br>-雕刻蝙蝠<br>-制作骨头斧头头<br>-制作骨头锥子<br>-制作大骨珠<br>-雕刻木叉<br>-制作骨头叉<br>-雕刻木铲<br>-雕刻高脚杯<br>-雕刻桶<br>-雕刻剥皮工具<br>-雕刻短棍<br>-雕刻哨子<br><br>搜索加成: <br>+30% 概率找到木柴<br>",
-  "reason": "已掌握知識清單 'Carve Bat'（雕刻球棒配方）誤譯「雕刻蝙蝠」；僅修該項",
-  "value": "可以雕刻木头和骨头物品. <br><br>已掌握知识: <br>-磨尖骨头<br>-制作骨头鱼钩<br>-制作骨头缝纫针<br>-磨尖颚骨<br>-雕刻编织针<br>-雕刻球棒<br>-制作骨头斧头头<br>-制作骨头锥子<br>-制作大骨珠<br>-雕刻木叉<br>-制作骨头叉<br>-雕刻木铲<br>-雕刻高脚杯<br>-雕刻桶<br>-雕刻剥皮工具<br>-雕刻短棍<br>-雕刻哨子<br><br>搜索加成: <br>+30% 概率找到木柴<br>"
- },
- "_comment": "CN 人工修正層：修 As1 上游錯誤（錯字／疊字等）。build 於 CH 再生前套用，故修正會一併帶到 CH；verify_dist 的 CN parity 對登記值核對而非 As1 原值。schema: {\"<檔名>|<鍵>\": {\"value\": \"...\", \"reason\": \"...\"}}"
+  "ContextMenu.json|ContextMenu_TankWater_InstallFilter": {
+    "as1_value": "安装过滤滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
+    "value": "安装滤芯"
+  },
+  "ContextMenu.json|ContextMenu_TankWater_RemoveFilter": {
+    "as1_value": "移除过滤滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
+    "value": "移除滤芯"
+  },
+  "ContextMenu.json|ContextMenu_TankWater_ReplaceFilter": {
+    "as1_value": "更换过滤滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
+    "value": "更换滤芯"
+  },
+  "ContextMenu.json|ContextMenu_WearDown": {
+    "as1_value": "脱下",
+    "reason": "vanilla 鍵 'Wear Down' 誤譯「脫下」（與 TakeOff 張冠李戴）；官方值回填",
+    "value": "穿在下面"
+  },
+  "ContextMenu.json|ContextMenu_WearUp": {
+    "as1_value": "穿上",
+    "reason": "vanilla 鍵 'Wear Up'（衣物層序）誤譯「穿上」，與一般 Wear 混淆；mod EN 經實檔+hash 證實未重定義，官方值回填",
+    "value": "穿在上面"
+  },
+  "ContextMenu.json|Tooltip_TankWater_FilterDepleted": {
+    "as1_value": "滤芯已耗尽. 请更换过滤滤芯.",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
+    "value": "滤芯已耗尽. 请更换滤芯."
+  },
+  "ContextMenu.json|Tooltip_TankWater_RequiresFilterCartridge": {
+    "as1_value": "需要: 过滤滤芯.",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
+    "value": "需要: 滤芯."
+  },
+  "ContextMenu_EN.json|ContextMenu_TankWater_InstallFilter": {
+    "as1_value": "安装过滤滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
+    "value": "安装滤芯"
+  },
+  "ContextMenu_EN.json|ContextMenu_TankWater_RemoveFilter": {
+    "as1_value": "移除过滤滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
+    "value": "移除滤芯"
+  },
+  "ContextMenu_EN.json|ContextMenu_TankWater_ReplaceFilter": {
+    "as1_value": "更换过滤滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
+    "value": "更换滤芯"
+  },
+  "ContextMenu_EN.json|Tooltip_TankWater_FilterDepleted": {
+    "as1_value": "滤芯已耗尽. 请更换过滤滤芯. ",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
+    "value": "滤芯已耗尽. 请更换滤芯. "
+  },
+  "ContextMenu_EN.json|Tooltip_TankWater_RequiresFilterCartridge": {
+    "as1_value": "需要: 过滤滤芯. ",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
+    "value": "需要: 滤芯. "
+  },
+  "Fluids.json|Fluid_Name_SodaBlueberry": {
+    "as1_value": "苏打蓝莓",
+    "reason": "vanilla 'Blueberry Soda' cn「苏打蓝莓」同型劣譯；官方 CN 回填",
+    "value": "蓝莓汽水"
+  },
+  "Fluids.json|Fluid_Name_SodaBubblegum": {
+    "as1_value": "苏打泡泡糖",
+    "reason": "vanilla 'Bubblegum Soda' cn「苏打泡泡糖」中心詞顛倒；CH 早已正確，官方 CN 回填",
+    "value": "泡泡糖汽水"
+  },
+  "Fluids.json|Fluid_Name_SodaGrape": {
+    "as1_value": "苏打葡萄",
+    "reason": "vanilla 'Grape Soda' cn「苏打葡萄」key 名直排劣譯；官方 CN 回填",
+    "value": "葡萄汽水"
+  },
+  "Fluids.json|Fluid_Name_SodaPineapple": {
+    "as1_value": "苏打菠萝",
+    "reason": "vanilla 'Pineapple Soda' cn「苏打菠萝」同型劣譯；官方 CN 回填",
+    "value": "菠萝汽水"
+  },
+  "Fluids.json|Fluid_Name_SodaPop": {
+    "as1_value": "苏打汽水",
+    "reason": "vanilla 'Orange Soda' 泛化成「蘇打汽水」遺失口味；全庫查無 Fluid_Name_Soda* mod 重定義，官方值回填",
+    "value": "橙味汽水"
+  },
+  "Fluids.json|Fluid_Name_SodaStrewberry": {
+    "as1_value": "苏打草莓",
+    "reason": "vanilla 'Strawberry Soda' cn「苏打草莓」同型劣譯；官方 CN 回填",
+    "value": "草莓汽水"
+  },
+  "IG_UI.json|IGUI_Barrel": {
+    "as1_value": "燃料桶",
+    "reason": "9 個 owner 中 8 個為槍械 mod（EN 'Barrel'＝槍管，MFS 3633421539 自帶 CN 亦為「枪管」），僅 GeneratorPlus 3597471949 為小寫 'barrel' 計數量詞（自帶 CN「个桶」）；As1 收斂值「燃料桶」無任何 owner 採用，Steam 玩家回報 MFS 槍管欄顯示燃料桶。多數裁決取「枪管」，對齊 MFS 自帶 CN；已知取捨：GeneratorPlus 資訊視窗單桶時將顯示「(1 槍管)」（複數臂由 IGUI_Barrels=个桶 正確呈現；該 mod 自帶 CH/CN 於載入序在後時會覆回正確量詞）",
+    "value": "枪管"
+  },
+  "IG_UI.json|IGUI_Barrels": {
+    "as1_value": "燃料桶",
+    "reason": "GeneratorPlus 3597471949 獨有鍵，EN 'barrels' 為發電機資訊視窗計數量詞（barrelCount 拼接），mod 自帶 CN「个桶」；計數語境「5 燃料桶」不自然，對齊作者自帶譯法",
+    "value": "个桶"
+  },
+  "IG_UI.json|IGUI_ItemCat_HouseholdOrWeaponBlunt": {
+    "as1_value": "家用工具/武器-长刀",
+    "reason": "鍵名為 Blunt 卻誤譯「长刀」（Long Blade）；同族 ...OrWeaponBlunt 32 鍵中其餘 30 鍵均為长棍，屬 As1 上游錯譯",
+    "value": "家用工具/武器-长棍"
+  },
+  "IG_UI.json|IGUI_ItemCat_JunkOrWeaponBlunt": {
+    "as1_value": "杂物/武器-长刀",
+    "reason": "鍵名為 Blunt 卻誤譯「长刀」（Long Blade）；同族 ...OrWeaponBlunt 32 鍵中其餘 30 鍵均為长棍，屬 As1 上游錯譯",
+    "value": "杂物/武器-长棍"
+  },
+  "IG_UI.json|IGUI_ItemCat_Stock": {
+    "as1_value": "高汤",
+    "reason": "9 個 owner 中 8 個為槍械 mod（MFS EN 'Weapon attachment - Stock'＝槍托分類），僅 CAExtendedCategories 為食物高湯分類（EN 'Stock'）；與 IGUI_Barrel 同型共用鍵衝突，多數＋高頻裁決取槍械語境，格式循 corpus ItemCat「類別-子類」慣例",
+    "value": "武器配件-枪托"
+  },
+  "IG_UI.json|IGUI_KnoxRelay_MorningShow_Jenna_Day28_S6": {
+    "as1_value": "把接线头两两擦火交叉一对, 然后猛踩油门",
+    "reason": "As1 上游錯誤：原譯語意錯亂（两两擦火交叉一对）；CH 側早已正確",
+    "value": "把两条接线碰在一起点火, 然后猛踩油门"
+  },
+  "IG_UI.json|IGUI_KnoxRelay_NoNews6_MarcusBeforeJenna_03": {
+    "as1_value": "我想, 那大概是关于过去那段简单单纯的旧时光吧",
+    "reason": "As1 上游錯誤：疊詞 简单|单纯；CH 側早已正確",
+    "value": "我想, 那大概是关于过去那段单纯的旧时光吧"
+  },
+  "IG_UI.json|IGUI_KnoxRelay_Scene_VehicleCrash_04": {
+    "as1_value": "已证实发生车辆撞击事件. 可能是一场多车连环连环相撞, 也可能只是一辆车失控",
+    "reason": "As1 上游疊字誤植（连环×2 → 连环）；CH 側早已由 ch_overrides 修正",
+    "value": "已证实发生车辆撞击事件. 可能是一场多车连环相撞, 也可能只是一辆车失控"
+  },
+  "IG_UI.json|IGUI_No": {
+    "as1_value": "取消",
+    "reason": "vanilla 是/否對話框否定鈕誤譯「取消」，影響面極大；唯一同鍵 mod EN 實檔='No' 無重定義依據，官方值回填",
+    "value": "否"
+  },
+  "IG_UI.json|IGUI_UW_Radio_Awareness_03": {
+    "as1_value": "总感觉不对劲…再看看呢?",
+    "reason": "CH/CN 語意稽核：與 mod 自帶 IG_UI_EN.json 的中文一致；原譯「总感觉不对劲…再看看呢?」為另一句",
+    "value": "每次我出门, 都有些地方感觉不太对劲……我需要更多信息."
+  },
+  "IG_UI.json|IGUI_VehicleNameCarLightsKST": {
+    "as1_value": "骑士·林铃警用版",
+    "reason": "STFR mod EN hash 證實 'Police Chevalier Nyala'（警用版結構有據），但 Nyala=林羚 被誤植同音「林鈴/林铃」；僅修字誤保留 mod 語意",
+    "value": "骑士·林羚警用版"
+  },
+  "IG_UI.json|IGUI_VehiclePartKI5TRCLTrunk": {
+    "as1_value": "拖车存储箱箱",
+    "reason": "As1 上游錯誤：疊字 箱箱；CH 側早已正確",
+    "value": "拖车储物箱"
+  },
+  "IG_UI.json|IGUI_Washing_Soap": {
+    "as1_value": "所需肥皂:%1",
+    "reason": "vanilla 純標籤 'Soap' 被譯成帶參數「所需肥皂:%1」，本體語境會裸露 %1；全庫查無 mod 重定義，官方值回填",
+    "value": "肥皂"
+  },
+  "ItemName.json|ATA2.TransportShelve": {
+    "as1_value": "便携式炉灶",
+    "reason": "As1 上游張冠李戴：該物品為貨架（Icon=media/ui/Container_Shelf、配方僅 3 木板 3 釘、上游自帶 EN=Portable shelve），爐灶另有 TransportOven",
+    "value": "便携式货架"
+  },
+  "ItemName.json|Base.Magazine": {
+    "as1_value": "弹匣",
+    "reason": "vanilla 可閱讀雜誌 'Magazine' 誤譯「彈匣」（曝光度高）；Firearms mod EN hash 證實同值無重定義，官方值回填",
+    "value": "杂志"
+  },
+  "ItemName.json|Base.RecoilPad": {
+    "as1_value": "角形握把",
+    "reason": "vanilla 'Recoil Pad' 誤譯「角形握把」（Angled Grip 為他 mod 另一獨立鍵）；Guns93 EN 實檔 'Rubber Recoil Pad' 佐證，官方值回填。明知 Guns93 mod EN 帶 Rubber 前綴，仍取 vanilla 用語以顧及未裝 mod 玩家",
+    "value": "缓冲垫"
+  },
+  "ItemName.json|Base.x8Scope": {
+    "as1_value": "霍克10倍瞄准镜",
+    "reason": "vanilla 'x8 Scope' 誤譯「霍克10倍瞄準鏡」（倍率 8→10 誤導＋品牌捏造）；三 owner EN 全數 hash 證實無此重定義，官方值回填",
+    "value": "瞄准镜 (8 倍)"
+  },
+  "ItemName.json|ComputerMod.GameCDPong": {
+    "as1_value": "乓乓球游戏光盘",
+    "reason": "As1 上游錯誤：錯字：乒乓球誤作乓乓球；CH 側早已正確",
+    "value": "乒乓球游戏光盘"
+  },
+  "ItemName.json|HDF.StrainedSyrup": {
+    "as1_value": "一锅水煮甜菜根",
+    "reason": "CH/CN 語意稽核：原譯「一锅水煮甜菜根」是別的物品（鍵名 StrainedSyrup；CH 側正確）",
+    "value": "过滤后的糖浆"
+  },
+  "ItemName.json|HaloMarine.HaloMarineUpperLegArmorBase": {
+    "as1_value": "UNSC陆战队大腿护甲甲",
+    "reason": "As1 上游錯誤：疊字 甲甲；CH 側早已正確",
+    "value": "UNSC陆战队大腿护甲"
+  },
+  "ItemName.json|ItemName_TankWater.FilterCartridge": {
+    "as1_value": "过滤滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
+    "value": "滤芯"
+  },
+  "ItemName.json|MSXBow.BoltShaft": {
+    "as1_value": "弩箭箭杆",
+    "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
+    "value": "弩箭杆"
+  },
+  "ItemName.json|PZCrossbows.ShortWoodBoltShaft": {
+    "as1_value": "短木质弩箭箭杆",
+    "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
+    "value": "短木质弩箭杆"
+  },
+  "ItemName.json|PZCrossbows.WoodBoltShaft": {
+    "as1_value": "木质弩箭箭杆",
+    "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
+    "value": "木质弩箭杆"
+  },
+  "ItemName.json|PompsItems_MyLittlePony.LotusBlossomPlushie": {
+    "as1_value": "莲花花苞花苞",
+    "reason": "As1 上游疊字誤植（花苞×2 → 花苞）；CH 側早已由 ch_overrides 修正",
+    "value": "莲花花苞"
+  },
+  "ItemName.json|STFR.DressJacket_Police_KSP_CPT": {
+    "as1_value": "礼服夹克 (肯塔基州警警监)Dress",
+    "reason": "As1 上游錯誤：尾端殘留未清的英文碎片 Dress；CH 側早已正確",
+    "value": "礼服夹克 (肯塔基州警警监)"
+  },
+  "ItemName.json|STFR.DressJacket_Police_WestPoint_CPT": {
+    "as1_value": "礼服夹克 (西点镇警察局警监)Dress",
+    "reason": "As1 上游錯誤：尾端殘留未清的英文碎片 Dress；CH 側早已正確",
+    "value": "礼服夹克 (西点镇警察局警监)"
+  },
+  "ItemName.json|STFR.DressJacket_Sheriff_Jefferson_CPT": {
+    "as1_value": "礼服夹克 (杰斐逊警察局警监)Dress",
+    "reason": "As1 上游錯誤：尾端殘留未清的英文碎片 Dress；CH 側早已正確",
+    "value": "礼服夹克 (杰斐逊警察局警监)"
+  },
+  "ItemName.json|SkillBookExpansionB42.BookNimbleSet": {
+    "as1_value": "一套关于灵活书",
+    "reason": "As1 上游漏字：套裝書名缺「的」（同系列共 11 鍵，其餘 10 鍵均為「一套关于X的书」）；CH 側早已正確",
+    "value": "一套关于灵活的书"
+  },
+  "ItemName.json|TankWater.FilterCartridge": {
+    "as1_value": "过滤滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
+    "value": "滤芯"
+  },
+  "ItemName_EN.json|ItemName_TankWater.FilterCartridge": {
+    "as1_value": "过滤滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
+    "value": "滤芯"
+  },
+  "ItemName_EN.json|TankWater.FilterCartridge": {
+    "as1_value": "过滤滤芯",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
+    "value": "滤芯"
+  },
+  "Recipes.json|67gt500eMakeHood": {
+    "as1_value": "制作67款眼镜蛇Eleanour引擎盖",
+    "reason": "As1 上游錯字：Shelby GT500 的 Eleanor 誤拼 Eleanour（同 mod IGUI_VehicleName67gt500e 已作 Eleanor）",
+    "value": "制作67款眼镜蛇Eleanor引擎盖"
+  },
+  "Recipes.json|67gt500eMakeReinforcedFrontBumper": {
+    "as1_value": "制作67款眼镜蛇Eleanour加固前保险杠",
+    "reason": "As1 上游錯字：Eleanour→Eleanor",
+    "value": "制作67款眼镜蛇Eleanor加固前保险杠"
+  },
+  "Recipes.json|67gt500eMakeTire": {
+    "as1_value": "制作67款眼镜蛇Eleanour轮胎",
+    "reason": "As1 上游錯字：Eleanour→Eleanor",
+    "value": "制作67款眼镜蛇Eleanor轮胎"
+  },
+  "Recipes.json|89volvo240MakeRoofrack": {
+    "as1_value": "制作89款沃尔沃245旅行车车顶行李架",
+    "reason": "As1 上游張冠李戴：本配方 outputs 為 Base.89volvo240Roofrack1（DisplayName=89 Volvo 200 Series Roofrack），卻寫成 245 旅行車；與 89volvo245MakeRoofrack 互相對調",
+    "value": "制作89款沃尔沃200系列车顶行李架"
+  },
+  "Recipes.json|89volvo245MakeRoofrack": {
+    "as1_value": "制作89款沃尔沃200系列车顶行李架",
+    "reason": "As1 上游張冠李戴：本配方 outputs 為 Base.89volvo245WagonRoofrack1（DisplayName=89 Volvo 245 Wagon Roofrack），與 89volvo240MakeRoofrack 互相對調",
+    "value": "制作89款沃尔沃245旅行车车顶行李架"
+  },
+  "Recipes.json|BoltShaft": {
+    "as1_value": "雕刻弩箭箭杆",
+    "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
+    "value": "雕刻弩箭杆"
+  },
+  "Recipes.json|ConvertTank2000Type": {
+    "as1_value": "W900: 将2000升油罐转换为为2000升水箱",
+    "reason": "As1 上游錯誤：疊字 为为；CH 側早已正確",
+    "value": "W900: 将2000升油罐转换为2000升水箱"
+  },
+  "Recipes.json|MakeSwordSheath": {
+    "as1_value": "制作剑鞘剑鞘",
+    "reason": "As1 上游疊字誤植（剑鞘×2 → 剑鞘）；CH 側早已由 ch_overrides 修正",
+    "value": "制作剑鞘"
+  },
+  "Recipes.json|PZC_CarveShortWoodBoltShafts": {
+    "as1_value": "雕刻短木质弩箭箭杆",
+    "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
+    "value": "雕刻短木质弩箭杆"
+  },
+  "Recipes.json|PZC_CarveWoodBoltShafts": {
+    "as1_value": "雕刻木质弩箭箭杆",
+    "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
+    "value": "雕刻木质弩箭杆"
+  },
+  "Sandbox.json|Sandbox_DynamicTrading.FactionRespawnChance_tooltip": {
+    "as1_value": "城镇内现有阵营数量低于上限时, 每日刷新新阵营的概率.",
+    "reason": "As1 上游錯誤：疊字 刷新|新阵营；CH 側早已正確",
+    "value": "城镇内现有阵营数量低于上限时, 每日生成新阵营的概率."
+  },
+  "Sandbox.json|Sandbox_EHR_RealisticTemperatureCompatibility_tooltip": {
+    "as1_value": "控制EHR在安装真实温度模组时的行为. <LINE> 自动检测模组. 启用强制强制兼容模式. 禁用让EHR正常管理原版温度.",
+    "reason": "As1 上游疊字誤植（强制×2 → 强制）；CH 側早已由 ch_overrides 修正",
+    "value": "控制EHR在安装真实温度模组时的行为. <LINE> 自动检测模组. 启用强制兼容模式. 禁用让EHR正常管理原版温度."
+  },
+  "Sandbox.json|Sandbox_FruitTreeChop_AutoToGroundWhenHeavy": {
+    "as1_value": "超重自动放置",
+    "reason": "CH/CN 語意稽核：與 mod 自帶 Sandbox_EN.json 的中文一致；原譯「超重自动放置」漏掉「強制掉落」",
+    "value": "超重时强制掉落地面"
+  },
+  "Sandbox.json|Sandbox_JH_SurvivorMultiplierMax_tooltip": {
+    "as1_value": "尸潮规模扩张的最大倍数. 玩家每次每次幸存增加 +0.1 倍. 默认 15.0 意味着最多 16 倍僵尸. ",
+    "reason": "As1 上游疊字誤植（每次×2 → 每次）；CH 側早已由 ch_overrides 修正",
+    "value": "尸潮规模扩张的最大倍数. 玩家每次幸存增加 +0.1 倍. 默认 15.0 意味着最多 16 倍僵尸. "
+  },
+  "Sandbox.json|Sandbox_TsarLib_SpawnRateMustang_tooltip": {
+    "as1_value": "控制沙皇福特野马野马车在世界中的生成频率. 0=不生成, 1.0=默认, 2.0=旧版2倍, 4.0=旧版4倍.",
+    "reason": "As1 上游疊字誤植（野马×2 → 野马）；CH 側早已由 ch_overrides 修正",
+    "value": "控制沙皇福特野马车在世界中的生成频率. 0=不生成, 1.0=默认, 2.0=旧版2倍, 4.0=旧版4倍."
+  },
+  "Sandbox.json|Sandbox_UsefulBarrelsRequireHose_tooltip": {
+    "as1_value": "若勾选, 则需要需要一根橡胶软管从汽油桶中取出汽油.",
+    "reason": "As1 上游疊字誤植（需要×2 → 需要）；CH 側早已由 ch_overrides 修正",
+    "value": "若勾选, 则需要一根橡胶软管从汽油桶中取出汽油."
+  },
+  "Stash.json|Stash_P4StealthCamoMap1_Text3": {
+    "as1_value": "当我抵达并命令他放弃抵抗时, 他无视了我的命令并将手伸向了了腰带.",
+    "reason": "As1 上游錯誤：疊字 了了；CH 側早已正確",
+    "value": "当我抵达并命令他放弃抵抗时, 他无视了我的命令并将手伸向了腰带."
+  },
+  "Tooltip.json|Tooltip_ActivatedCharcoal": {
+    "as1_value": "医用级活性炭. <LINE> 吸收毒素-治愈食物中毒和毒素中毒. <LINE> 治疗时间: 食物中毒 6 小时, 毒素中毒 12 小时.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "医用级活性炭.<br>吸收毒素-治愈食物中毒和毒素中毒.<br>治疗时间: 食物中毒 6 小时, 毒素中毒 12 小时."
+  },
+  "Tooltip.json|Tooltip_AlbendazoleInjection": {
+    "as1_value": "注射用阿苯达唑抗寄生虫药. <LINE> 快速治愈严重寄生虫感染 (72 小时). <LINE> 需要注射器. <LINE> <RGB:1,0.5,0> 副作用: 腹痛, 头晕",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "注射用阿苯达唑抗寄生虫药.<br>快速治愈严重寄生虫感染 (72 小时).<br>需要注射器.<br>副作用: 腹痛, 头晕"
+  },
+  "Tooltip.json|Tooltip_AlchoholicBandage": {
+    "as1_value": "酒精预处理的清洁绷带. <LINE> 一次使用即可清洁伤口并敷上清洁绷带.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "酒精预处理的清洁绷带.<br>一次使用即可清洁伤口并敷上清洁绷带."
+  },
+  "Tooltip.json|Tooltip_AntiDiarrheal": {
+    "as1_value": "止泻片. <LINE> 强力缓解痢疾腹泻和便意. <LINE> 暂时抑制饥饿/口渴上限. 不能治愈.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "止泻片.<br>强力缓解痢疾腹泻和便意.<br>暂时抑制饥饿/口渴上限. 不能治愈."
+  },
+  "Tooltip.json|Tooltip_AntiInflammatory": {
+    "as1_value": "非甾体抗炎药片. <LINE> 减轻肿胀, 疼痛和轻度疾病相关发烧. <LINE> 强力缓解症状. 不能治愈.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "非甾体抗炎药片.<br>减轻肿胀, 疼痛和轻度疾病相关发烧.<br>强力缓解症状. 不能治愈."
+  },
+  "Tooltip.json|Tooltip_AntiNauseaTablets": {
+    "as1_value": "止吐药. <LINE> 大幅减轻食物中毒, 痢疾或尸体病引起的恶心和呕吐. <LINE> 缓解症状. 不能治愈.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "止吐药.<br>大幅减轻食物中毒, 痢疾或尸体病引起的恶心和呕吐.<br>缓解症状. 不能治愈."
+  },
+  "Tooltip.json|Tooltip_AntibioticOintment": {
+    "as1_value": "处方抗生素软膏. <LINE> 治愈皮肤感染 (伤口, 蜂窝性组织炎). <LINE> 外用. 治疗时间: 72 小时.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "处方抗生素软膏.<br>治愈皮肤感染 (伤口, 蜂窝性组织炎).<br>外用. 治疗时间: 72 小时."
+  },
+  "Tooltip.json|Tooltip_AntibodyTestKit": {
+    "as1_value": "基因疗法的血液兼容性测试. <LINE> 在使用基因治疗注射器前检测你的存活几率. <LINE> <LINE> 基于血型的结果: <LINE>-高兼容性 (75%+) <LINE>-中兼容性 (50-74%) <LINE>-低兼容性 (25-49%) <LINE>-严重风险 (<25%) <LINE> <LINE> 一次性使用-使用后消耗.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "基因疗法的血液兼容性测试.<br>在使用基因治疗注射器前检测你的存活几率.<br><br>基于血型的结果:<br>-高兼容性 (75%+)<br>-中兼容性 (50-74%)<br>-低兼容性 (25-49%)<br>-严重风险 (<25%)<br><br>一次性使用-使用后消耗."
+  },
+  "Tooltip.json|Tooltip_AntifungalTablets": {
+    "as1_value": "口服抗真菌药物. <LINE> 治愈尸体曲霉菌病. <LINE> 治疗时间: 5 天.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "口服抗真菌药物.<br>治愈尸体曲霉菌病.<br>治疗时间: 5 天."
+  },
+  "Tooltip.json|Tooltip_AntiparasiticPills": {
+    "as1_value": "抗寄生虫药物. <LINE> 治愈寄生虫感染 (旋毛虫病, 角化过度型疥疮). <LINE> 治疗时间: 7 天.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "抗寄生虫药物.<br>治愈寄生虫感染 (旋毛虫病, 角化过度型疥疮).<br>治疗时间: 7 天."
+  },
+  "Tooltip.json|Tooltip_Antipsychotics": {
+    "as1_value": "处方抗精神病药物. <LINE> 通过 8 剂疗程治愈谵妄. <LINE> 治疗时间: 96 小时.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "处方抗精神病药物.<br>通过 8 剂疗程治愈谵妄.<br>治疗时间: 96 小时."
+  },
+  "Tooltip.json|Tooltip_AntipyreticTablets": {
+    "as1_value": "退烧药片. <LINE> 可将疾病相关发烧降至 37.0 摄氏度. <LINE> 不能降低环境过热.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "退烧药片.<br>可将疾病相关发烧降至 37.0 摄氏度.<br>不能降低环境过热."
+  },
+  "Tooltip.json|Tooltip_AntipyreticTea": {
+    "as1_value": "草药退烧茶. <LINE> 像退烧药一样减轻疾病相关的发热. <LINE> 略微减轻口渴, 并返还一个空杯子.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "草药退烧茶.<br>像退烧药一样减轻疾病相关的发热.<br>略微减轻口渴, 并返还一个空杯子."
+  },
+  "Tooltip.json|Tooltip_AntisepticCream": {
+    "as1_value": "处方抗菌乳膏. <LINE> 涂抹于活动性伤口以预防感染. <LINE> 生效期间 100% 预防伤口感染. 不能治愈已有感染.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "处方抗菌乳膏.<br>涂抹于活动性伤口以预防感染.<br>生效期间 100% 预防伤口感染. 不能治愈已有感染."
+  },
+  "Tooltip.json|Tooltip_AntiviralCapsules": {
+    "as1_value": "处方抗病毒药物. <LINE> 治愈病毒感染 (感冒, 胃肠炎). <LINE> 治疗时间: 48 小时.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "处方抗病毒药物.<br>治愈病毒感染 (感冒, 胃肠炎).<br>治疗时间: 48 小时."
+  },
+  "Tooltip.json|Tooltip_Art_BeautyInfo": {
+    "as1_value": "<H2> 美观度覆盖层 <LINE><TEXT> 点击拖动可移动 <LINE> 右键点击可移除 <LINE> 双击获取更多信息",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "<H2> 美观度覆盖层<br><TEXT> 点击拖动可移动<br>右键点击可移除<br>双击获取更多信息"
+  },
+  "Tooltip.json|Tooltip_BloodBagABNeg": {
+    "as1_value": "含有 AB-型血的血袋. <LINE> 兼容性需要血型知识或急救等级 8. <LINE> 恢复 500 毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "含有 AB-型血的血袋.<br>兼容性需要血型知识或急救等级 8.<br>恢复 500 毫升血容量.<br>易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!"
+  },
+  "Tooltip.json|Tooltip_BloodBagABPos": {
+    "as1_value": "含有 AB+型血的血袋. <LINE> 兼容性需要血型知识或急救等级 8. <LINE> 恢复 500 毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "含有 AB+型血的血袋.<br>兼容性需要血型知识或急救等级 8.<br>恢复 500 毫升血容量.<br>易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!"
+  },
+  "Tooltip.json|Tooltip_BloodBagANeg": {
+    "as1_value": "含有A-型血的血袋. <LINE> 兼容性需要血型知识或急救等级 8. <LINE> 恢复 500 毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "含有A-型血的血袋.<br>兼容性需要血型知识或急救等级 8.<br>恢复 500 毫升血容量.<br>易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!"
+  },
+  "Tooltip.json|Tooltip_BloodBagAPos": {
+    "as1_value": "含有A+型血的血袋. <LINE> 兼容性需要血型知识或急救等级 8. <LINE> 恢复 500 毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "含有A+型血的血袋.<br>兼容性需要血型知识或急救等级 8.<br>恢复 500 毫升血容量.<br>易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!"
+  },
+  "Tooltip.json|Tooltip_BloodBagBNeg": {
+    "as1_value": "含有 B-型血的血袋. <LINE> 兼容性需要血型知识或急救等级 8. <LINE> 恢复 500 毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "含有 B-型血的血袋.<br>兼容性需要血型知识或急救等级 8.<br>恢复 500 毫升血容量.<br>易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!"
+  },
+  "Tooltip.json|Tooltip_BloodBagBPos": {
+    "as1_value": "含有 B+型血的血袋. <LINE> 兼容性需要血型知识或急救等级 8. <LINE> 恢复 500 毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "含有 B+型血的血袋.<br>兼容性需要血型知识或急救等级 8.<br>恢复 500 毫升血容量.<br>易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!"
+  },
+  "Tooltip.json|Tooltip_BloodBagONeg": {
+    "as1_value": "含有O-型血的血袋. <LINE> 兼容性需要血型知识或急救等级 8. <LINE> 恢复 500 毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "含有O-型血的血袋.<br>兼容性需要血型知识或急救等级 8.<br>恢复 500 毫升血容量.<br>易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!"
+  },
+  "Tooltip.json|Tooltip_BloodBagOPos": {
+    "as1_value": "含有O+型血的血袋. <LINE> 兼容性需要血型知识或急救等级 8. <LINE> 恢复 500 毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "含有O+型血的血袋.<br>兼容性需要血型知识或急救等级 8.<br>恢复 500 毫升血容量.<br>易腐: 冷冻储存. 离开冷冻储存 2 小时后变质!"
+  },
+  "Tooltip.json|Tooltip_BroadSpectrumAntibiotics": {
+    "as1_value": "广谱抗生素药片. <LINE> 治愈多种细菌感染, 包括肺炎, 痢疾和败血症. <LINE> 治疗时间: 72 小时.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "广谱抗生素药片.<br>治愈多种细菌感染, 包括肺炎, 痢疾和败血症.<br>治疗时间: 72 小时."
+  },
+  "Tooltip.json|Tooltip_BronchodilatorInhaler": {
+    "as1_value": "用于呼吸困难的吸入器. <LINE> 打开气道-有助于肺炎和尸体病. <LINE> 45% 呼吸改善. 不能治愈.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "用于呼吸困难的吸入器.<br>打开气道-有助于肺炎和尸体病.<br>45% 呼吸改善. 不能治愈."
+  },
+  "Tooltip.json|Tooltip_CSR_BundleMaterials": {
+    "as1_value": "将相同材料捆扎成减轻重量的材料包。<LINE>解包时将保留绳索类型和材料耐久度",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "将相同材料捆扎成减轻重量的材料包。<br>解包时将保留绳索类型和材料耐久度"
+  },
+  "Tooltip.json|Tooltip_CSR_BundleMixedConstruction": {
+    "as1_value": "将一套混合建材捆扎成一个减轻重量的材料包. <LINE>内含: 5 块木板, 2 根金属管, 2 根金属棒, 2 块金属板和 4 块小金属板",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "将一套混合建材捆扎成一个减轻重量的材料包.<br>内含: 5 块木板, 2 根金属管, 2 根金属棒, 2 块金属板和 4 块小金属板"
+  },
+  "Tooltip.json|Tooltip_CSR_CraftFullToolbox": {
+    "as1_value": "添加一把管钳以完善工具箱. <LINE>可当作全部六种标准工具使用",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "添加一把管钳以完善工具箱.<br>可当作全部六种标准工具使用"
+  },
+  "Tooltip.json|Tooltip_CSR_CraftToolRoll": {
+    "as1_value": "将三件手工具捆绑成一个工具卷. <LINE>该工具卷可同时当作锯子, 锤子和螺丝刀使用",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "将三件手工具捆绑成一个工具卷.<br>该工具卷可同时当作锯子, 锤子和螺丝刀使用"
+  },
+  "Tooltip.json|Tooltip_CSR_CraftToolbox": {
+    "as1_value": "将五种工具组合成一个工具箱. <LINE>可当作锯子, 锤子, 螺丝刀, 扳手和轮胎扳手使用",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "将五种工具组合成一个工具箱.<br>可当作锯子, 锤子, 螺丝刀, 扳手和轮胎扳手使用"
+  },
+  "Tooltip.json|Tooltip_CSR_Firework": {
+    "as1_value": "小型干扰烟花. <LINE>需要: 物品栏中有打火机或火柴. <LINE>右键点击烟花点燃引信. <LINE>30秒内吸引并迷惑附近的僵尸",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "小型干扰烟花.<br>需要: 物品栏中有打火机或火柴.<br>右键点击烟花点燃引信.<br>30秒内吸引并迷惑附近的僵尸"
+  },
+  "Tooltip.json|Tooltip_CSR_FullToolbox": {
+    "as1_value": "一个装满工具的工具箱, 内含锯子, 锤子, 螺丝刀, 扳手, 轮胎扳手和管钳. <LINE>可同时当作这六种工具使用. <LINE>随使用而损耗. 损坏时, 返还空工具箱",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "一个装满工具的工具箱, 内含锯子, 锤子, 螺丝刀, 扳手, 轮胎扳手和管钳.<br>可同时当作这六种工具使用.<br>随使用而损耗. 损坏时, 返还空工具箱"
+  },
+  "Tooltip.json|Tooltip_CSR_Glowstick": {
+    "as1_value": "扔出去给一个方块标记上临时彩色光.<LINE> 可以在露营、生存、电子和工具物资中找到",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "扔出去给一个方块标记上临时彩色光.<br>可以在露营、生存、电子和工具物资中找到"
+  },
+  "Tooltip.json|Tooltip_CSR_HideBarrel": {
+    "as1_value": "躲在桶里. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> <RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (空间狭小). <LINE> 按 ESC 或移动结束",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "躲在桶里.<br><br>对僵尸隐身.<br><RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加.<br><RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (空间狭小).<br>按 ESC 或移动结束"
+  },
+  "Tooltip.json|Tooltip_CSR_HideBed": {
+    "as1_value": "躲在床下. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> 按 ESC 或移动结束",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "躲在床下.<br><br>对僵尸隐身.<br><RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加.<br>按 ESC 或移动结束"
+  },
+  "Tooltip.json|Tooltip_CSR_HideCloset": {
+    "as1_value": "躲在衣柜里. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> 按 ESC 或移动结束",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "躲在衣柜里.<br><br>对僵尸隐身.<br><RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加.<br>按 ESC 或移动结束"
+  },
+  "Tooltip.json|Tooltip_CSR_HideCouch": {
+    "as1_value": "躲在沙发后面. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> 按 ESC 或移动结束",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "躲在沙发后面.<br><br>对僵尸隐身.<br><RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加.<br>按 ESC 或移动结束"
+  },
+  "Tooltip.json|Tooltip_CSR_HideCrate": {
+    "as1_value": "躲在板条箱里. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> <RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (空间狭小). <LINE> 按 ESC 或移动结束",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "躲在板条箱里.<br><br>对僵尸隐身.<br><RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加.<br><RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (空间狭小).<br>按 ESC 或移动结束"
+  },
+  "Tooltip.json|Tooltip_CSR_HideDumpster": {
+    "as1_value": "躲在垃圾桶里. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> <RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (里面很臭). <LINE> 按 ESC 或移动结束",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "躲在垃圾桶里.<br><br>对僵尸隐身.<br><RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加.<br><RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (里面很臭).<br>按 ESC 或移动结束"
+  },
+  "Tooltip.json|Tooltip_CSR_HideFridge": {
+    "as1_value": "躲在冰箱里. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> <RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (空间狭小). <LINE> 按 ESC 或移动结束",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "躲在冰箱里.<br><br>对僵尸隐身.<br><RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加.<br><RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (空间狭小).<br>按 ESC 或移动结束"
+  },
+  "Tooltip.json|Tooltip_CSR_HideTable": {
+    "as1_value": "躲在桌子下面. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> 按 ESC 或移动结束",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "躲在桌子下面.<br><br>对僵尸隐身.<br><RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加.<br>按 ESC 或移动结束"
+  },
+  "Tooltip.json|Tooltip_CSR_MaterialBundle": {
+    "as1_value": "捆扎好的材料包, 降低了携带重量. <LINE>解包后可回收原始材料和绳索",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "捆扎好的材料包, 降低了携带重量.<br>解包后可回收原始材料和绳索"
+  },
+  "Tooltip.json|Tooltip_CSR_MixedMaterialBundle": {
+    "as1_value": "捆扎好的混合建材包, 降低了携带重量. <LINE>包含木板, 金属管, 金属棒, 金属板和小金属板",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "捆扎好的混合建材包, 降低了携带重量.<br>包含木板, 金属管, 金属棒, 金属板和小金属板"
+  },
+  "Tooltip.json|Tooltip_CSR_ToolRoll": {
+    "as1_value": "一个紧凑的卷包, 内含锯子, 锤子和螺丝刀. <LINE>可同时当作这三种工具使用. <LINE>随使用而损耗. 损坏时, 返还空卷包",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "一个紧凑的卷包, 内含锯子, 锤子和螺丝刀.<br>可同时当作这三种工具使用.<br>随使用而损耗. 损坏时, 返还空卷包"
+  },
+  "Tooltip.json|Tooltip_CSR_Toolbox": {
+    "as1_value": "一个工具箱, 内含锯子, 锤子, 螺丝刀, 扳手和轮胎扳手. <LINE>可同时当作这五种工具使用. <LINE>随使用而损耗. 损坏时, 返还空工具箱",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "一个工具箱, 内含锯子, 锤子, 螺丝刀, 扳手和轮胎扳手.<br>可同时当作这五种工具使用.<br>随使用而损耗. 损坏时, 返还空工具箱"
+  },
+  "Tooltip.json|Tooltip_CaffeinePills": {
+    "as1_value": "强效咖啡因药片. <LINE> 消除疲劳并阻止疲劳增加 12 小时. <LINE> 生效期间阻止睡眠. <LINE> <RGB:1,0.5,0> 反噬: 效果消失时达到最大疲劳.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "强效咖啡因药片.<br>消除疲劳并阻止疲劳增加 12 小时.<br>生效期间阻止睡眠.<br>反噬: 效果消失时达到最大疲劳."
+  },
+  "Tooltip.json|Tooltip_ChelationKit": {
+    "as1_value": "用于重金属中毒的螯合疗法套件. <LINE> 从血液中去除重金属 (24 小时). <LINE> 需要静脉输液套件. <LINE> <RGB:1,0.5,0> 副作用: 头痛, 疲劳, 恶心",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "用于重金属中毒的螯合疗法套件.<br>从血液中去除重金属 (24 小时).<br>需要静脉输液套件.<br>副作用: 头痛, 疲劳, 恶心"
+  },
+  "Tooltip.json|Tooltip_CleanRoom_MissingItems_Bleach": {
+    "as1_value": "<LINE> - 漂白剂 (需要用于: 血迹和地板污渍)",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "<br>- 漂白剂 (需要用于: 血迹和地板污渍)"
+  },
+  "Tooltip.json|Tooltip_CleanRoom_MissingItems_Broom": {
+    "as1_value": "<LINE> - 扫帚 (需要用于: 垃圾和尘土)",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "<br>- 扫帚 (需要用于: 垃圾和尘土)"
+  },
+  "Tooltip.json|Tooltip_CleanRoom_MissingItems_Gloves": {
+    "as1_value": "<LINE> - 手套 (需要用于: 碎玻璃)",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "<br>- 手套 (需要用于: 碎玻璃)"
+  },
+  "Tooltip.json|Tooltip_CleanRoom_MissingItems_Mop": {
+    "as1_value": "<LINE> - 拖把 (需要用于: 血迹和地板污渍)",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "<br>- 拖把 (需要用于: 血迹和地板污渍)"
+  },
+  "Tooltip.json|Tooltip_ColdFluTablets": {
+    "as1_value": "非处方感冒和流感缓解药. <LINE> 减轻发烧, 疲劳和轻微疼痛. <LINE> 不能治愈-仅缓解症状 (40%).",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "非处方感冒和流感缓解药.<br>减轻发烧, 疲劳和轻微疼痛.<br>不能治愈-仅缓解症状 (40%)."
+  },
+  "Tooltip.json|Tooltip_CombatStimulants": {
+    "as1_value": "受限战斗兴奋剂. <LINE> 使双手武器攻击速度提升3小时. <LINE> 激活期间可阻断压力、恐慌和不快情绪。  <LINE> 提供强大的耐力支持, 且不会将体力锁定在100%. <LINE> 8次剂量瓶装. <LINE> <RGB:1,0.5,0> 反噬: 6小时内出现80%疲劳、脱水及四肢肌肉疼痛.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "受限战斗兴奋剂.<br>使双手武器攻击速度提升3小时.<br>激活期间可阻断压力、恐慌和不快情绪。<br>提供强大的耐力支持, 且不会将体力锁定在100%.<br>8次剂量瓶装.<br>反噬: 6小时内出现80%疲劳、脱水及四肢肌肉疼痛."
+  },
+  "Tooltip.json|Tooltip_CommonColdTea": {
+    "as1_value": "温热的草药茶. <LINE> 通过8剂疗程可治愈普通感冒. <LINE> 略微减轻口渴, 并返还一个空杯子.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "温热的草药茶.<br>通过8剂疗程可治愈普通感冒.<br>略微减轻口渴, 并返还一个空杯子."
+  },
+  "Tooltip.json|Tooltip_CorticosteroidInjection": {
+    "as1_value": "医院级皮质类固醇注射剂. <LINE> 快速治愈严重尸体气道刺激 (12 小时). <LINE> 需要注射器. <LINE> <RGB:1,0.5,0> 副作用: 免疫抑制, 失眠症",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "医院级皮质类固醇注射剂.<br>快速治愈严重尸体气道刺激 (12 小时).<br>需要注射器.<br>副作用: 免疫抑制, 失眠症"
+  },
+  "Tooltip.json|Tooltip_CoughSuppressant": {
+    "as1_value": "止咳药片. <LINE> 减少咳嗽冲动-避免吸引僵尸! <LINE> 45% 咳嗽减少. 不能治愈.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "止咳药片.<br>减少咳嗽冲动-避免吸引僵尸!<br>45% 咳嗽减少. 不能治愈."
+  },
+  "Tooltip.json|Tooltip_CoughSyrup": {
+    "as1_value": "液体止咳药. <LINE> 抑制咳嗽反射-利于潜行! <LINE> 减少 50% 的咳嗽. 不能治愈.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "液体止咳药.<br>抑制咳嗽反射-利于潜行!<br>减少 50% 的咳嗽. 不能治愈."
+  },
+  "Tooltip.json|Tooltip_DualOrexinReceptor": {
+    "as1_value": "处方睡眠药物. <LINE> 可在活动性失眠症期间助眠. <LINE> 通过8次剂量疗程可治愈失眠症. <LINE> 治疗时间: 96 小时.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "处方睡眠药物.<br>可在活动性失眠症期间助眠.<br>通过8次剂量疗程可治愈失眠症.<br>治疗时间: 96 小时."
+  },
+  "Tooltip.json|Tooltip_EhrRecipePlantBasedAntibiotics": {
+    "as1_value": "制备植物抗生素的配方笔记. <LINE> 教授: 植物抗生素. <LINE> 急救 8 级无需阅读即可制作.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "制备植物抗生素的配方笔记.<br>教授: 植物抗生素.<br>急救 8 级无需阅读即可制作."
+  },
+  "Tooltip.json|Tooltip_EhrRecipeUltimateCraftGuide": {
+    "as1_value": "制备EHR药物、茶饮、脂油、蜂蜜和紧急天然物资的综合野外笔记. <LINE> 教授所有EHR药物制作配方. <LINE> 急救6级和采集4级无需阅读即可制作.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "制备EHR药物、茶饮、脂油、蜂蜜和紧急天然物资的综合野外笔记.<br>教授所有EHR药物制作配方.<br>急救6级和采集4级无需阅读即可制作."
+  },
+  "Tooltip.json|Tooltip_ElectrolytePowder": {
+    "as1_value": "电解质补充粉-与水混合. <LINE> 治疗由痢疾, 高温或呕吐引起的脱水. <LINE> 40% 症状缓解. 不能治愈.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "电解质补充粉-与水混合.<br>治疗由痢疾, 高温或呕吐引起的脱水.<br>40% 症状缓解. 不能治愈."
+  },
+  "Tooltip.json|Tooltip_EmergencySepsisKit": {
+    "as1_value": "败血症急救治疗套件. <LINE> 最快治愈败血症 (24 小时). <LINE> 需要静脉输液套件. <LINE> <RGB:1,0.5,0> 副作用: 严重疲劳, 恶心, 发烧",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "败血症急救治疗套件.<br>最快治愈败血症 (24 小时).<br>需要静脉输液套件.<br>副作用: 严重疲劳, 恶心, 发烧"
+  },
+  "Tooltip.json|Tooltip_EmptyBloodBag": {
+    "as1_value": "空的无菌采血袋. <LINE> 可用于抽取和储存自己的血液. <LINE> 需要 80% 以上血容量才能安全献血. <LINE> 生成与你血型匹配的血袋. <LINE> <RGB:1,0.5,0> 装满后冷冻储存!",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "空的无菌采血袋.<br>可用于抽取和储存自己的血液.<br>需要 80% 以上血容量才能安全献血.<br>生成与你血型匹配的血袋.<br>装满后冷冻储存!"
+  },
+  "Tooltip.json|Tooltip_Epinephrine": {
+    "as1_value": "急救肾上腺素自动注射器. <LINE> 治疗严重过敏反应和心脏骤停. <LINE> 可使昏迷患者苏醒.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "急救肾上腺素自动注射器.<br>治疗严重过敏反应和心脏骤停.<br>可使昏迷患者苏醒."
+  },
+  "Tooltip.json|Tooltip_Furosemide": {
+    "as1_value": "用于严重输血反应的袢利尿剂. <LINE> 通过 6 剂疗程治愈急性溶血性输血反应. <LINE> 治疗时间: 48 小时. <LINE> <RGB:1,0.5,0> 副作用: 脱水, 腰痛, 利尿作用",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "用于严重输血反应的袢利尿剂.<br>通过 6 剂疗程治愈急性溶血性输血反应.<br>治疗时间: 48 小时.<br>副作用: 脱水, 腰痛, 利尿作用"
+  },
+  "Tooltip.json|Tooltip_GeneTherapyKit": {
+    "as1_value": "针对诺克斯病毒的实验性基因疗法. <LINE> <RGB:1,0.3,0.3> 极其稀有-军事研究物品 <LINE> <LINE> 成功率取决于血型兼容性. <LINE> 先使用抗体检测套件检查兼容性! <LINE> <LINE> <RGB:0,1,0> 成功: 永久免疫 <LINE> <RGB:1,0,0> 失败: 立即死亡",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "针对诺克斯病毒的实验性基因疗法.<br>极其稀有-军事研究物品<br><br>成功率取决于血型兼容性.<br>先使用抗体检测套件检查兼容性!<br><br>成功: 永久免疫<br>失败: 立即死亡"
+  },
+  "Tooltip.json|Tooltip_HomemadeAntibioticOintment": {
+    "as1_value": "自制的抗生素软膏. <LINE> 治愈皮肤感染（伤口、蜂窝性组织炎）. <LINE> 外用. 治疗时间: 72小时.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "自制的抗生素软膏.<br>治愈皮肤感染（伤口、蜂窝性组织炎）.<br>外用. 治疗时间: 72小时."
+  },
+  "Tooltip.json|Tooltip_HomemadeAntisepticCream": {
+    "as1_value": "自制的抗菌乳膏. <LINE> 涂在活跃的伤口上以防止感染. <LINE> 使用期间 100% 防止伤口感染. 不能治愈已有的感染.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "自制的抗菌乳膏.<br>涂在活跃的伤口上以防止感染.<br>使用期间 100% 防止伤口感染. 不能治愈已有的感染."
+  },
+  "Tooltip.json|Tooltip_HomemadeCoughSyrup": {
+    "as1_value": "自制的止咳糖浆. <LINE>缓解咳嗽. <LINE>不能治愈呼吸道疾病.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "自制的止咳糖浆.<br>缓解咳嗽.<br>不能治愈呼吸道疾病."
+  },
+  "Tooltip.json|Tooltip_HomemadeMuscleRelaxant": {
+    "as1_value": "自制的肌肉松弛剂. <LINE> 缓解肌肉痉挛和肌肉疼痛. <LINE> 不能治愈破伤风或寄生虫.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "自制的肌肉松弛剂.<br>缓解肌肉痉挛和肌肉疼痛.<br>不能治愈破伤风或寄生虫."
+  },
+  "Tooltip.json|Tooltip_HomemadePainkillers": {
+    "as1_value": "自制的止痛药制剂. <LINE> 缓解身体部位疼痛.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "自制的止痛药制剂.<br>缓解身体部位疼痛."
+  },
+  "Tooltip.json|Tooltip_HomemadeSleepingPills": {
+    "as1_value": "自制的安眠药. <LINE>使用期间可入睡, 有助于治疗失眠症.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "自制的安眠药.<br>使用期间可入睡, 有助于治疗失眠症."
+  },
+  "Tooltip.json|Tooltip_HomemadeTopicalPermethrin": {
+    "as1_value": "自制的外用氯菊酯. <LINE> 通过 6 剂疗程可治愈角化型疥疮. <LINE> 治疗时间: 72小时. <LINE> 使用期间可减轻瘙痒、发热和健康值损失.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "自制的外用氯菊酯.<br>通过 6 剂疗程可治愈角化型疥疮.<br>治疗时间: 72小时.<br>使用期间可减轻瘙痒、发热和健康值损失."
+  },
+  "Tooltip.json|Tooltip_IVAmphotericin": {
+    "as1_value": "静脉两性霉素 B-强效抗真菌药. <LINE> 快速治愈严重尸体曲霉菌病 (24 小时). <LINE> 需要静脉输液套件. <LINE> <RGB:1,0.5,0> 副作用: 发烧, 肾脏负担, 疲劳",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "静脉两性霉素 B-强效抗真菌药.<br>快速治愈严重尸体曲霉菌病 (24 小时).<br>需要静脉输液套件.<br>副作用: 发烧, 肾脏负担, 疲劳"
+  },
+  "Tooltip.json|Tooltip_IVAntibiotics": {
+    "as1_value": "静脉抗生素溶液. <LINE> 快速治愈严重感染, 包括痢疾 (36 小时). <LINE> 需要静脉输液套件. <LINE> <RGB:1,0.5,0> 副作用: 恶心, 疲劳",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "静脉抗生素溶液.<br>快速治愈严重感染, 包括痢疾 (36 小时).<br>需要静脉输液套件.<br>副作用: 恶心, 疲劳"
+  },
+  "Tooltip.json|Tooltip_IVCiprofloxacin": {
+    "as1_value": "静脉环丙沙星氟喹诺酮抗生素. <LINE> 快速治愈胃肠道和呼吸道细菌感染 (12 小时). <LINE> 需要静脉输液套件. <LINE> <RGB:1,0.5,0> 副作用: 肌腱无力, 头晕",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "静脉环丙沙星氟喹诺酮抗生素.<br>快速治愈胃肠道和呼吸道细菌感染 (12 小时).<br>需要静脉输液套件.<br>副作用: 肌腱无力, 头晕"
+  },
+  "Tooltip.json|Tooltip_IVFluids": {
+    "as1_value": "静脉输液支持. <LINE> 快速治愈急性输血反应 (24 小时). <LINE> 强力补水和缓解健康损失. <LINE> 需要静脉输液套件.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "静脉输液支持.<br>快速治愈急性输血反应 (24 小时).<br>强力补水和缓解健康损失.<br>需要静脉输液套件."
+  },
+  "Tooltip.json|Tooltip_IVKit": {
+    "as1_value": "完整的静脉输液套件, 包含导管, 针头和连接器. <LINE> 使用静脉药物所需. <LINE> 一次性使用-使用后消耗.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "完整的静脉输液套件, 包含导管, 针头和连接器.<br>使用静脉药物所需.<br>一次性使用-使用后消耗."
+  },
+  "Tooltip.json|Tooltip_IVMetronidazole": {
+    "as1_value": "用于厌氧菌的静脉甲硝唑. <LINE> 快速治愈痢疾和败血症 (24 小时). <LINE> 需要静脉输液套件. <LINE> <RGB:1,0.5,0> 副作用: 金属味, 恶心",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "用于厌氧菌的静脉甲硝唑.<br>快速治愈痢疾和败血症 (24 小时).<br>需要静脉输液套件.<br>副作用: 金属味, 恶心"
+  },
+  "Tooltip.json|Tooltip_IVVancomycin": {
+    "as1_value": "静脉万古霉素-最后手段抗生素. <LINE> 快速治愈耐药感染 (48 小时). <LINE> 需要静脉输液套件. <LINE> <RGB:1,0.5,0> 副作用: 红人综合征, 肾脏负担",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "静脉万古霉素-最后手段抗生素.<br>快速治愈耐药感染 (48 小时).<br>需要静脉输液套件.<br>副作用: 红人综合征, 肾脏负担"
+  },
+  "Tooltip.json|Tooltip_ImmunoboosterShot": {
+    "as1_value": "诺克斯病毒暴露前预防. <LINE> <RGB:0,1,0> 提供 24 小时免疫力 <LINE> <LINE> 必须在被咬之前服用! <LINE> 如果已经感染则无效. <LINE> <LINE> 两次使用之间间隔 7 天. <LINE> <LINE> <RGB:1,0.5,0> 副作用 (生效期间): <LINE> 轻度恶心,耐力恢复降低, <LINE> 偶尔颤抖",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "诺克斯病毒暴露前预防.<br>提供 24 小时免疫力<br><br>必须在被咬之前服用!<br>如果已经感染则无效.<br><br>两次使用之间间隔 7 天.<br><br>副作用 (生效期间):<br>轻度恶心,耐力恢复降低,<br>偶尔颤抖"
+  },
+  "Tooltip.json|Tooltip_InstantIcePack": {
+    "as1_value": "急救速效降温包盒. <LINE> 通过 4 剂降温疗程治愈中暑. <LINE> 减轻发烧, 意识混乱, 虚脱风险, 脱水和健康损失.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "急救速效降温包盒.<br>通过 4 剂降温疗程治愈中暑.<br>减轻发烧, 意识混乱, 虚脱风险, 脱水和健康损失."
+  },
+  "Tooltip.json|Tooltip_Inventions_NextPage": {
+    "as1_value": "点击 \"状态\" 按钮在页面间循环: <LINE><RGB:0.8,0.8,0.8> 下一页: <SPACE><ORANGE>",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "点击 \"状态\" 按钮在页面间循环:<br><RGB:0.8,0.8,0.8> 下一页: <SPACE><ORANGE>"
+  },
+  "Tooltip.json|Tooltip_MedicalWildPlants": {
+    "as1_value": "用于识别药用野生植物的野外笔记. <LINE> 如果你的急救或搜寻技能太低, 可解锁EHR药用植物搜索功能.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "用于识别药用野生植物的野外笔记.<br>如果你的急救或搜寻技能太低, 可解锁EHR药用植物搜索功能."
+  },
+  "Tooltip.json|Tooltip_MuscleRelaxants": {
+    "as1_value": "非处方肌肉松弛剂. <LINE> 缓解破伤风或寄生虫引起的肌肉痉挛. <LINE> 40% 痉挛减轻. 不能治愈.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "非处方肌肉松弛剂.<br>缓解破伤风或寄生虫引起的肌肉痉挛.<br>40% 痉挛减轻. 不能治愈."
+  },
+  "Tooltip.json|Tooltip_NitricOxideBooster": {
+    "as1_value": "性能增强药片. <LINE> 锁定耐力在 100% 持续 3 小时. <LINE> <RGB:1,0.5,0> 使用后副作用: 全身肌肉疼痛 6 小时.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "性能增强药片.<br>锁定耐力在 100% 持续 3 小时.<br>使用后副作用: 全身肌肉疼痛 6 小时."
+  },
+  "Tooltip.json|Tooltip_OralRehydrationKit": {
+    "as1_value": "医用补液溶液套装. <LINE> 治愈基于脱水的疾病 (痢疾, 热衰竭). <LINE> 治疗时间: 48 小时, 8 剂疗程.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "医用补液溶液套装.<br>治愈基于脱水的疾病 (痢疾, 热衰竭).<br>治疗时间: 48 小时, 8 剂疗程."
+  },
+  "Tooltip.json|Tooltip_PhalanxPills": {
+    "as1_value": "诺克斯病毒抑制药物. <LINE> <RGB:1,0.5,0> 不能治愈-重置感染进度 <LINE> <LINE> 每次使用效果递减: <LINE> 第 1 次: 完全重置 | 第 2 次: 重置至 25% <LINE> 第 3 次: 重置至 50% | 第 4 次: 重置至 75% <LINE> 第 5 次及以上: 无效 (身体已适应) <LINE> <LINE> <RGB:1,0.5,0> 副作用: <LINE> 严重恶心 (6 小时),发烧 (12 小时), <LINE> 免疫力减弱 (48 小时)",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "诺克斯病毒抑制药物.<br>不能治愈-重置感染进度<br><br>每次使用效果递减:<br>第 1 次: 完全重置 | 第 2 次: 重置至 25%<br>第 3 次: 重置至 50% | 第 4 次: 重置至 75%<br>第 5 次及以上: 无效 (身体已适应)<br><br>副作用:<br>严重恶心 (6 小时),发烧 (12 小时),<br>免疫力减弱 (48 小时)"
+  },
+  "Tooltip.json|Tooltip_PillsAntidepressant": {
+    "as1_value": "抗抑郁药. <LINE> 使用原版行为帮助减少恐慌和抑郁. <LINE> 允许在失眠症期间助眠. <LINE> 长疗程失眠症治疗: 168 小时.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "抗抑郁药.<br>使用原版行为帮助减少恐慌和抑郁.<br>允许在失眠症期间助眠.<br>长疗程失眠症治疗: 168 小时."
+  },
+  "Tooltip.json|Tooltip_PillsBetablocker": {
+    "as1_value": "β受体阻滞剂. <LINE> 使用原版行为帮助控制恐慌. <LINE>EHR追踪剩余剂量和有效持续时间.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "β受体阻滞剂.<br>使用原版行为帮助控制恐慌.<br>EHR追踪剩余剂量和有效持续时间."
+  },
+  "Tooltip.json|Tooltip_PillsSleeping": {
+    "as1_value": "安眠药片. <LINE> 使用原版睡眠行为. <LINE>EHR追踪剩余剂量和生效持续时间.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "安眠药片.<br>使用原版睡眠行为.<br>EHR追踪剩余剂量和生效持续时间."
+  },
+  "Tooltip.json|Tooltip_PlantBasedAntibiotics": {
+    "as1_value": "植物性广谱抗生素. <LINE> 治愈多种细菌感染, 包括肺炎, 痢疾和败血症. <LINE> 治疗时间: 72 小时. <LINE> 用新鲜草药制作.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "植物性广谱抗生素.<br>治愈多种细菌感染, 包括肺炎, 痢疾和败血症.<br>治疗时间: 72 小时.<br>用新鲜草药制作."
+  },
+  "Tooltip.json|Tooltip_PrescriptionAntibiotics": {
+    "as1_value": "强效处方抗生素. <LINE> 治愈细菌感染 (伤口, 蜂窝性组织炎, 肺炎). <LINE> 治疗时间: 72 小时.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "强效处方抗生素.<br>治愈细菌感染 (伤口, 蜂窝性组织炎, 肺炎).<br>治疗时间: 72 小时."
+  },
+  "Tooltip.json|Tooltip_RelaxantTea": {
+    "as1_value": "镇静草药茶. <LINE> 逐渐将压力降至零. <LINE> 略微减轻口渴, 并返还一个空杯子.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "镇静草药茶.<br>逐渐将压力降至零.<br>略微减轻口渴, 并返还一个空杯子."
+  },
+  "Tooltip.json|Tooltip_RespiratorySupportKit": {
+    "as1_value": "便携式氧气和气道支持套件. <LINE> 快速治愈尸体病 (6 小时). <LINE> 强力缓解呼吸, 头晕, 恶心和虚弱. <LINE> 每套 3 次使用, 每 3 小时一次剂量.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "便携式氧气和气道支持套件.<br>快速治愈尸体病 (6 小时).<br>强力缓解呼吸, 头晕, 恶心和虚弱.<br>每套 3 次使用, 每 3 小时一次剂量."
+  },
+  "Tooltip.json|Tooltip_RifampicinComboPack": {
+    "as1_value": "利福平联合治疗结核病. <LINE> 快速治愈结核病 (14 天 vs 21 天). <LINE> <RGB:1,0.5,0> 副作用: 橙色尿液, 肝脏负担, 疲劳",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "利福平联合治疗结核病.<br>快速治愈结核病 (14 天 vs 21 天).<br>副作用: 橙色尿液, 肝脏负担, 疲劳"
+  },
+  "Tooltip.json|Tooltip_SalineBag": {
+    "as1_value": "无菌生理盐水静脉输液袋. <LINE> 无需血型匹配. <LINE> 恢复 250 毫升血容量. <LINE> <RGB:0.7,0.7,0.7> 保质期长, 但需保持密封.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "无菌生理盐水静脉输液袋.<br>无需血型匹配.<br>恢复 250 毫升血容量.<br>保质期长, 但需保持密封."
+  },
+  "Tooltip.json|Tooltip_SalvageVehicle": {
+    "as1_value": "佩戴焊工面罩, 使用丙烷喷灯拆解车辆, 可将车辆从道路上清理移走. 整车拆解相比拆解汽车残骸耗时更长, 消耗更多丙烷, 但能产出额外物资,还能获得更多技能经验值.<LINE> 金工技能等级越高, 拆解获得的可用零件和材料就越多. <LINE> * 建议先提前拆空车辆配件并清空后备箱",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "佩戴焊工面罩, 使用丙烷喷灯拆解车辆, 可将车辆从道路上清理移走. 整车拆解相比拆解汽车残骸耗时更长, 消耗更多丙烷, 但能产出额外物资,还能获得更多技能经验值.<br>金工技能等级越高, 拆解获得的可用零件和材料就越多.<br>* 建议先提前拆空车辆配件并清空后备箱"
+  },
+  "Tooltip.json|Tooltip_Sculpting_B_Hedge": {
+    "as1_value": "更高的艺术和农业技能可以解锁更复杂的设计.<LINE><LINE>最快的雕塑类型.<LINE>永远不会失败.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "更高的艺术和农业技能可以解锁更复杂的设计.<br><br>最快的雕塑类型.<br>永远不会失败."
+  },
+  "Tooltip.json|Tooltip_Sculpting_B_Ice": {
+    "as1_value": "艺术技能越高, 雕塑越令人惊叹.<LINE><LINE>极高的美感值.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "艺术技能越高, 雕塑越令人惊叹.<br><br>极高的美感值."
+  },
+  "Tooltip.json|Tooltip_Sculpting_B_Metal": {
+    "as1_value": "高艺术和金属加工技能确保你的作品既耐用又耀眼, 解锁更复杂的设计.<LINE>有很小的失败几率.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "高艺术和金属加工技能确保你的作品既耐用又耀眼, 解锁更复杂的设计.<br>有很小的失败几率."
+  },
+  "Tooltip.json|Tooltip_Sculpting_C_Ice": {
+    "as1_value": "需要锤子和冰凿.<LINE><LINE>会融化.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "需要锤子和冰凿.<br><br>会融化."
+  },
+  "Tooltip.json|Tooltip_Sculpting_C_Metal": {
+    "as1_value": "消耗丙烷.<LINE><LINE>需要丙烷喷灯, 锤子和焊接面罩.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "消耗丙烷.<br><br>需要丙烷喷灯, 锤子和焊接面罩."
+  },
+  "Tooltip.json|Tooltip_Sculpting_C_Stone": {
+    "as1_value": "失败几率高.<LINE><LINE>最慢的雕塑类型.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "失败几率高.<br><br>最慢的雕塑类型."
+  },
+  "Tooltip.json|Tooltip_SterilizedBandages": {
+    "as1_value": "密封包装的清洁绷带. <LINE> 作为普通清洁绷带使用. <LINE> 最多容纳 5 条清洁绷带. <LINE> 不消毒伤口.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "密封包装的清洁绷带.<br>作为普通清洁绷带使用.<br>最多容纳 5 条清洁绷带.<br>不消毒伤口."
+  },
+  "Tooltip.json|Tooltip_Syringe": {
+    "as1_value": "无菌一次性注射器. <LINE> 注射药物所需. <LINE> 一次性使用-使用后消耗.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "无菌一次性注射器.<br>注射药物所需.<br>一次性使用-使用后消耗."
+  },
+  "Tooltip.json|Tooltip_TBAntibiotics": {
+    "as1_value": "异烟肼-一线结核治疗药物. <LINE> 通过长期治疗治愈结核病. <LINE> 治疗时间: 21 天 (结核病为慢性病).",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "异烟肼-一线结核治疗药物.<br>通过长期治疗治愈结核病.<br>治疗时间: 21 天 (结核病为慢性病)."
+  },
+  "Tooltip.json|Tooltip_TaMOOgotchi": {
+    "as1_value": "一个小小的, 牛形的电子宠物. <LINE> 在你的背包里右键它, 选择\"打开电子牛\"来释放你的牛.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "一个小小的, 牛形的电子宠物.<br>在你的背包里右键它, 选择\"打开电子牛\"来释放你的牛."
+  },
+  "Tooltip.json|Tooltip_TankWater_FilterDepleted": {
+    "as1_value": "滤芯已耗尽. 请更换过滤滤芯. ",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
+    "value": "滤芯已耗尽. 请更换滤芯. "
+  },
+  "Tooltip.json|Tooltip_TankWater_RequiresFilterCartridge": {
+    "as1_value": "需要: 过滤滤芯. ",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯；CH 側早已正確",
+    "value": "需要: 滤芯. "
+  },
+  "Tooltip.json|Tooltip_TetanusAntitoxin": {
+    "as1_value": "破伤风抗毒素注射剂. <LINE> 中和破伤风毒素-治愈破伤风. <LINE> 需要注射器. 治疗时间: 5 天.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "破伤风抗毒素注射剂.<br>中和破伤风毒素-治愈破伤风.<br>需要注射器. 治疗时间: 5 天."
+  },
+  "Tooltip.json|Tooltip_TetanusImmunoglobulin": {
+    "as1_value": "破伤风免疫球蛋白-即时保护. <LINE> 快速治愈破伤风 (48 小时). <LINE> 需要注射器. <LINE> <RGB:1,0.5,0> 副作用: 注射疼痛, 发烧",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）；<RGB> 純文字端原樣顯示，一併移除",
+    "value": "破伤风免疫球蛋白-即时保护.<br>快速治愈破伤风 (48 小时).<br>需要注射器.<br>副作用: 注射疼痛, 发烧"
+  },
+  "Tooltip.json|Tooltip_TopicalPermethrin": {
+    "as1_value": "外用氯菊酯乳膏. <LINE> 通过 6 剂疗程治愈角化过度型疥疮. <LINE> 治疗时间: 72 小时. <LINE> 生效期间减轻瘙痒, 发烧和健康损失.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "外用氯菊酯乳膏.<br>通过 6 剂疗程治愈角化过度型疥疮.<br>治疗时间: 72 小时.<br>生效期间减轻瘙痒, 发烧和健康损失."
+  },
+  "Tooltip.json|Tooltip_Toy_Talk": {
+    "as1_value": "<H2> 提升幸福感! <LINE><TEXT><SIZE:small> - 重复使用效果递减.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "<H2> 提升幸福感!<br><TEXT><SIZE:small> - 重复使用效果递减."
+  },
+  "Tooltip.json|Tooltip_WireBundle": {
+    "as1_value": "一束音箱线. 用于将音箱连接到音乐设备 (黑胶唱片机或高保真音响). <LINE> <LINE> 包含200英尺的线. 每次连接每格距离会消耗5英尺.",
+    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
+    "value": "一束音箱线. 用于将音箱连接到音乐设备 (黑胶唱片机或高保真音响).<br><br>包含200英尺的线. 每次连接每格距离会消耗5英尺."
+  },
+  "Tooltip.json|Tooltip_item_Unattached": {
+    "as1_value": "取下",
+    "reason": "vanilla 狀態詞 'unattached' 誤作動作詞「取下」；唯一同鍵 mod EN hash 證實同值，官方值回填",
+    "value": "未装备"
+  },
+  "Tooltip_EN.json|Tooltip_TankWater_FilterDepleted": {
+    "as1_value": "滤芯已耗尽. 请更换过滤滤芯.",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
+    "value": "滤芯已耗尽. 请更换滤芯."
+  },
+  "Tooltip_EN.json|Tooltip_TankWater_RequiresFilterCartridge": {
+    "as1_value": "需要: 过滤滤芯.",
+    "reason": "As1 上游錯誤：疊詞 过滤|滤芯",
+    "value": "需要: 滤芯."
+  },
+  "UI.json|ItemName_ComputerMod.GameCDPong": {
+    "as1_value": "乓乓球游戏光盘",
+    "reason": "As1 上游錯誤：錯字：乒乓球誤作乓乓球；CH 側早已正確",
+    "value": "乒乓球游戏光盘"
+  },
+  "UI.json|UI_BetLock_LockpickDoorBobbyPin": {
+    "as1_value": "带开锁工具的门",
+    "reason": "CH/CN 語意稽核：原譯「带开锁工具的门」語意不符（鍵名 LockpickDoorBobbyPin；CH 側正確）",
+    "value": "使用发夹撬门锁"
+  },
+  "UI.json|UI_OGRIMMACHINES_UI_STATUS_TAB_CAN_OPERATE_WITH_LEVEL_FMT": {
+    "as1_value": "可以以 %s 等级 %d 操作!",
+    "reason": "As1 上游錯誤：疊字 可以|以；改為與 CH 一致的語序；CH 側早已正確",
+    "value": "%s 等级达到 %d 即可操作!"
+  },
+  "UI.json|UI_Symbiosis_BloodFamiliarMax": {
+    "as1_value": "你已拥有有血契眷属",
+    "reason": "As1 上游錯誤：疊字 有有；CH 側早已正確",
+    "value": "你已拥有血契眷属"
+  },
+  "UI.json|UI_trait_WhittlerDesc": {
+    "as1_value": "可以雕刻木头和骨头物品. <br><br>已掌握知识: <br>-磨尖骨头<br>-制作骨头鱼钩<br>-制作骨头缝纫针<br>-磨尖颚骨<br>-雕刻编织针<br>-雕刻蝙蝠<br>-制作骨头斧头头<br>-制作骨头锥子<br>-制作大骨珠<br>-雕刻木叉<br>-制作骨头叉<br>-雕刻木铲<br>-雕刻高脚杯<br>-雕刻桶<br>-雕刻剥皮工具<br>-雕刻短棍<br>-雕刻哨子<br><br>搜索加成: <br>+30% 概率找到木柴<br>",
+    "reason": "已掌握知識清單 'Carve Bat'（雕刻球棒配方）誤譯「雕刻蝙蝠」；僅修該項",
+    "value": "可以雕刻木头和骨头物品. <br><br>已掌握知识: <br>-磨尖骨头<br>-制作骨头鱼钩<br>-制作骨头缝纫针<br>-磨尖颚骨<br>-雕刻编织针<br>-雕刻球棒<br>-制作骨头斧头头<br>-制作骨头锥子<br>-制作大骨珠<br>-雕刻木叉<br>-制作骨头叉<br>-雕刻木铲<br>-雕刻高脚杯<br>-雕刻桶<br>-雕刻剥皮工具<br>-雕刻短棍<br>-雕刻哨子<br><br>搜索加成: <br>+30% 概率找到木柴<br>"
+  },
+  "_comment": "CN 人工修正層：修 As1 上游錯誤（錯字／疊字等）。build 於 CH 再生前套用，故修正會一併帶到 CH；verify_dist 的 CN parity 對登記值核對而非 As1 原值。schema: {\"<檔名>|<鍵>\": {\"value\": \"...\", \"reason\": \"...\"}}",
+  "Sandbox.json|Sandbox_KATTAJ1_EnableBlackGearLoot_tooltip": {
+    "as1_value": "<IMAGE:media/textures/Item_Military_Helmet_Patriot- BlackPlain.pngIMAGE:media/textures/Item_Military_Helmet_Patriot- Black.png><LINE>",
+    "reason": "As1 上游標記損壞：兩個 <IMAGE:> 黏成一個（缺 \"><\"），遊戲內圖片無法顯示。同族 EnablePressGearLoot_tooltip 為正確形式可對照。",
+    "value": "<IMAGE:media/textures/Item_Military_Helmet_Patriot- BlackPlain.png><IMAGE:media/textures/Item_Military_Helmet_Patriot- Black.png><LINE>"
+  },
+  "Sandbox.json|Sandbox_KATTAJ1_EnableDesertGearLoot_tooltip": {
+    "as1_value": "<IMAGE:media/textures/Item_Military_Helmet_Patriot- DesertPlain.pngIMAGE:media/textures/Item_Military_Helmet_Patriot- Desert.png><LINE>",
+    "reason": "As1 上游標記損壞：兩個 <IMAGE:> 黏成一個（缺 \"><\"），遊戲內圖片無法顯示。同族 EnablePressGearLoot_tooltip 為正確形式可對照。",
+    "value": "<IMAGE:media/textures/Item_Military_Helmet_Patriot- DesertPlain.png><IMAGE:media/textures/Item_Military_Helmet_Patriot- Desert.png><LINE>"
+  },
+  "Sandbox.json|Sandbox_KATTAJ1_EnableGreenGearLoot_tooltip": {
+    "as1_value": "<IMAGE:media/textures/Item_Military_Helmet_Patriot- GreenPlain.pngIMAGE:media/textures/Item_Military_Helmet_Patriot- Green.png><LINE>",
+    "reason": "As1 上游標記損壞：兩個 <IMAGE:> 黏成一個（缺 \"><\"），遊戲內圖片無法顯示。同族 EnablePressGearLoot_tooltip 為正確形式可對照。",
+    "value": "<IMAGE:media/textures/Item_Military_Helmet_Patriot- GreenPlain.png><IMAGE:media/textures/Item_Military_Helmet_Patriot- Green.png><LINE>"
+  },
+  "Sandbox.json|Sandbox_KATTAJ1_EnableWhiteGearLoot_tooltip": {
+    "as1_value": "<IMAGE:media/textures/Item_Military_Helmet_Patriot- WhitePlain.pngIMAGE:media/textures/Item_Military_Helmet_Patriot- White.png><LINE>",
+    "reason": "As1 上游標記損壞：兩個 <IMAGE:> 黏成一個（缺 \"><\"），遊戲內圖片無法顯示。同族 EnablePressGearLoot_tooltip 為正確形式可對照。",
+    "value": "<IMAGE:media/textures/Item_Military_Helmet_Patriot- WhitePlain.png><IMAGE:media/textures/Item_Military_Helmet_Patriot- White.png><LINE>"
+  }
 }
