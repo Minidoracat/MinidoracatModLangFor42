@@ -13,7 +13,7 @@ tracker.py — MinidoracatModLangFor42 雙上游追蹤器（PZ B42 如一模組�
   * 純標準函式庫（urllib / subprocess / hashlib）→ 供 `uv run scripts/tracker.py` 直接執行，CI 免裝依賴。
   * API client 免 key 為主（研究實證端點無 key 參數）；STEAM_API_KEY 為設定選項、非 429 解藥（附加而已）。
   * 交易順序：取數 → diff → 開/更 issue → 最後 commit 成功子集 state；--dry-run 保證零 issue 零 commit。
-  * 核心邏輯（diff / issue 冪等 / git 重試）皆以可注入依賴實作，供內建 self-test 十情境 mock 驗證。
+  * 核心邏輯（diff / issue 冪等 / git 重試）皆以可注入依賴實作，供內建 self-test 十二情境 mock 驗證。
 
 命令（uv run scripts/tracker.py <命令>）：
   gen-watchlist  由 sources/mods/*/metadata.json 支持清單生成 tracker-state/watchlist.json（固定含 As1；支持清單變動後重跑）
@@ -21,7 +21,7 @@ tracker.py — MinidoracatModLangFor42 雙上游追蹤器（PZ B42 如一模組�
   check          僅打 API 查時間戳，寫 changed 清單 artifact（workflow check job；無寫權限）
   diff           讀 changed，下載+裁剪+抽取+diff，寫 diffs artifact（workflow download job；無 GitHub 權限）
   issue          讀 diffs，列 open issue 冪等開/更，commit 成功子集 state（workflow issue+state job）
-  self-test      內建十情境 mock 測試
+  self-test      內建十二情境 mock 測試
 """
 from __future__ import annotations
 
@@ -66,7 +66,18 @@ SCHEMA_VERSION = 1
 # =5：script 抽取改掃「全部」media/scripts 目錄（先前只取第一個，多版本目錄 mod 會漏其一）、
 #     relpath 改 mod_dir 相對（跨版本目錄同名檔不互撞）、item 區塊另抽 DisplayName 獨立
 #     record（script_item_dn，捕捉上游顯示名漂移——先前 value=區塊 id，DisplayName 改動無感）
-EXTRACTOR_SCHEMA = 5
+# =6：新增 Lua 文本抽取（lua_gettext / lua_literal）——Translate/scripts 之外的第三個文本來源。
+#     mod 的玩家可見字串未必都走 Translate 檔：getText("KEY") 的鍵若我方未收＝遊戲顯示英文，
+#     而直接寫死在 Lua 的字面英文連鍵都沒有，只能靠 sources/lua/ 覆寫。兩者原先完全不可見。
+# =7：Lua 抽取由 regex 改為最小 lexical scan（跳註解／長字串、identifier 邊界、平衡括號）。
+#     **擷取行為一變就必須 bump**——否則舊基準 schema 相符但語料 hash 不同，下一次 run
+#     會對每個含 Lua 的 mod 開一張假「可能過時」issue（實測 110 張）。schema 不符則走
+#     靜默重建，這正是該機制存在的理由。
+EXTRACTOR_SCHEMA = 7
+
+# 只有這些 kind 帶真英文文本，值得落 sources/en/ 鏡像；其餘 script_* 的 value 就是區塊 id
+# 本身（實測 118,307 筆鏡像裡有 60,567 筆 value==key），純屬變更偵測用，留在 hash 台帳即可。
+TEXT_BEARING_KINDS = frozenset({"translate_en", "script_item_dn", "lua_literal"})
 
 # As1「[B42]統一模組漢化」包（layer-B 主力上游）；固定納入 watch-list
 AS1_WORKSHOP_ID = "3556540080"
@@ -116,9 +127,30 @@ def load_json(path: Path) -> dict:
 
 
 def write_json(path: Path, data: dict) -> None:
+    """原子寫出：先寫同目錄暫存檔再 os.replace。
+
+    en_corpus_hashes.json 是 30MB+ 的受版控真相，且 backfill 期間每 10 個 mod 就重寫一次；
+    直接覆寫時若中途中斷會留下截斷的 JSON＝基準毀損、整輪重跑。同目錄暫存確保 replace
+    是同一檔案系統上的原子操作。
+    """
     path.parent.mkdir(parents=True, exist_ok=True)
     text = json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
-    path.write_text(text, encoding="utf-8", newline="\n")
+    tmp = path.with_name(path.name + ".tmp")
+    try:
+        tmp.write_text(text, encoding="utf-8", newline="\n")
+        # Windows：目標若正被其他行程開啟讀取（例：backfill 執行中同時跑 coverage），
+        # os.replace 會拋 PermissionError——舊的直接覆寫不會。原子性不能換來新的當機，
+        # 故短重試；POSIX 無此限制，重試不會執行到。
+        for attempt in range(3):
+            try:
+                os.replace(tmp, path)
+                break
+            except PermissionError:
+                if attempt == 2:
+                    raise
+                time.sleep(0.3)
+    finally:
+        tmp.unlink(missing_ok=True)
 
 
 # ============================================================
@@ -414,9 +446,217 @@ def _iter_script_records(mod_dir: Path) -> list[tuple[str, str, str, str]]:
     return records
 
 
+# --- Lua 文本抽取（EXTRACTOR_SCHEMA=6）------------------------------------- #
+# 這一層刻意不用純 regex。實測 regex 版四種錯法（皆已納入 self-test 情境 11）：
+#   1. `-- getText("IGUI_Dead")` 註解裡的呼叫被當成真引用
+#   2. `targetText(` 因未檢查 identifier 邊界而從字中命中 `getText`
+#   3. `setText("Don't open this")` 因 quote class 排除 `'` 而整串漏抓
+#   4. 「sink 之後 N 字元內找第一個字串」會抓到不相干的下一句
+# 故先做最小 lexical scan（跳註解與長字串、取出短字串常值的精確 span），
+# 再用平衡括號界定呼叫範圍。
+_LUA_IDENT_CHARS = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_")
+
+# 直接吃字面字串的 UI 文字 API——命中即「寫死英文」，連翻譯鍵都沒有，
+# 只能靠 sources/lua/ 覆寫。清單保守，寧可漏抓也不要灌一堆 false positive。
+_LUA_UI_SINKS = (
+    "setTitle", "setName", "setText", "setTooltip", "setToolTip", "setSecondLine",
+    "addOption", "addLabel", "ISModalDialog.new", "ISTextBox.new",
+)
+_LUA_GETTEXT_NAMES = ("getText", "getTextOrNull")
+# 平衡括號掃描上限：避免對病態輸入退化，也擋掉「呼叫沒收尾」時吃到整個檔案。
+_LUA_CALL_MAX_SPAN = 2000
+# 字面看起來像「英文句子」才收：至少兩個詞、開頭字母、不含路徑/識別字特徵。
+_LUA_PROSE_RE = re.compile(r"^[A-Za-z][A-Za-z0-9 ,.'!?:;()\-/%]*\s[A-Za-z0-9].*$")
+_LUA_NOT_PROSE_RE = re.compile(r"\.(lua|png|txt|ogg|wav|json)\b|[\\/]{1,2}|^\s*$", re.I)
+_LUA_ESCAPES = {"n": "\n", "t": "\t", "r": "\r", '"': '"', "'": "'", "\\": "\\"}
+
+
+def _lua_long_bracket(text: str, i: int) -> int | None:
+    """`text[i]` 起若為長括號 `[=*[`，回傳 `=` 的層數，否則 None。"""
+    if i >= len(text) or text[i] != "[":
+        return None
+    j = i + 1
+    while j < len(text) and text[j] == "=":
+        j += 1
+    return j - i - 1 if j < len(text) and text[j] == "[" else None
+
+
+def _lua_scan(text: str) -> tuple[str, list[tuple[int, int, str]]]:
+    """最小 Lua lexer：回傳 (masked, strings)。
+
+    * ``masked``：與原文等長，註解與所有字串「內容」置換為空白——供 identifier
+      邊界判斷與平衡括號掃描，確保註解／字串裡的括號與關鍵字不干擾。
+    * ``strings``：短字串常值 ``(起, 迄, 解碼後內容)``；起迄為含引號的 span。
+      長字串 `[[...]]` 不收（PZ mod 的 UI 文字實務上都用短字串，長字串多為資料塊）。
+    """
+    n = len(text)
+    out = list(text)
+    strings: list[tuple[int, int, str]] = []
+    i = 0
+    while i < n:
+        c = text[i]
+        if c == "-" and text.startswith("--", i):
+            lvl = _lua_long_bracket(text, i + 2)
+            if lvl is None:  # 行註解
+                j = text.find("\n", i)
+                j = n if j < 0 else j
+            else:  # 長註解 --[=*[ ... ]=*]
+                close = "]" + "=" * lvl + "]"
+                k = text.find(close, i + 2)
+                j = n if k < 0 else k + len(close)
+            for p in range(i, j):
+                if out[p] != "\n":
+                    out[p] = " "
+            i = j
+            continue
+        if c in "\"'":
+            quote = c
+            j = i + 1
+            buf: list[str] = []
+            while j < n:
+                ch = text[j]
+                if ch == "\\" and j + 1 < n:
+                    buf.append(_LUA_ESCAPES.get(text[j + 1], text[j + 1]))
+                    j += 2
+                    continue
+                if ch == quote or ch == "\n":  # 收尾或未閉合（Lua 短字串不跨行）
+                    break
+                buf.append(ch)
+                j += 1
+            if j < n and text[j] == quote:
+                strings.append((i, j + 1, "".join(buf)))
+                for p in range(i + 1, j):
+                    out[p] = " "
+                i = j + 1
+                continue
+            i += 1  # 未閉合：不當字串，避免吃掉整個檔案
+            continue
+        lvl = _lua_long_bracket(text, i)
+        if lvl is not None:
+            close = "]" + "=" * lvl + "]"
+            k = text.find(close, i)
+            j = n if k < 0 else k + len(close)
+            for p in range(i, j):
+                if out[p] != "\n":
+                    out[p] = " "
+            i = j
+            continue
+        i += 1
+    return "".join(out), strings
+
+
+def _lua_calls(masked: str, names: tuple[str, ...]) -> list[tuple[int, int]]:
+    """在 masked 文字中找 `name(` 呼叫，回傳 (左括號位置, 右括號位置) 的平衡括號 span。
+
+    identifier 邊界必檢——否則 `targetText(` 會從字中命中 `getText`。
+    """
+    spans: list[tuple[int, int]] = []
+    for name in names:
+        start = 0
+        while True:
+            idx = masked.find(name, start)
+            if idx < 0:
+                break
+            start = idx + 1
+            prev = idx - 1
+            # 名稱前一字元不得是 identifier 字元（`.` 允許：ISModalDialog.new / self.getText）
+            if prev >= 0 and masked[prev] in _LUA_IDENT_CHARS:
+                continue
+            end_id = idx + len(name)
+            if end_id < len(masked) and masked[end_id] in _LUA_IDENT_CHARS:
+                continue  # `getTextWidth(` 之類不算
+            j = end_id
+            while j < len(masked) and masked[j] in " \t":
+                j += 1
+            if j >= len(masked) or masked[j] != "(":
+                continue
+            depth, k, limit = 0, j, min(len(masked), j + _LUA_CALL_MAX_SPAN)
+            close = -1
+            while k < limit:
+                if masked[k] == "(":
+                    depth += 1
+                elif masked[k] == ")":
+                    depth -= 1
+                    if depth == 0:
+                        close = k
+                        break
+                k += 1
+            if close > 0:
+                spans.append((j, close))
+    return spans
+
+
+def _iter_lua_records(mod_dir: Path) -> list[tuple[str, str, str, str]]:
+    """抽取 Lua 兩類文本（schema 6）：
+
+    * ``lua_gettext``：getText/getTextOrNull 的**第一個引數字面**＝翻譯鍵。
+      value=鍵本身（無英文可取；鍵有沒有譯文要跟 Translate 語料交叉比對）。
+      **用途是覆蓋率查核**——被 Lua 引用＝確證玩家可見，優先序高於「在上游 EN 檔
+      裡但可能根本沒用到」的鍵。
+    * ``lua_literal``：UI 文字 API 直接吃的英文字面。value=字面本身，key=其
+      sha1[:12]（用 hash 而非行號，讓上游改行不製造假變更）。**這是唯一沒有翻譯鍵
+      可用的文本**，要蓋只能走 sources/lua/ 覆寫。
+
+    判準：
+    * 字面落在任一 getText 呼叫的括號內 → 屬 `getText("KEY", "English")` 慣用法，
+      該鍵已由 lua_gettext 收錄，不重複算成「寫死」。
+    * 只收「至少兩個詞、不含路徑/副檔名特徵、長度 ≥8」的字面；單字標籤
+      （Cancel/Building）與資源名一律放掉——寧可漏抓也不要污染語料。
+
+    已知盲區：動態組鍵 ``getText("Pre" .. v)`` 只會收到前綴（使用端以
+    `_is_real_key` 濾掉）；`[[長字串]]` 不收。
+    """
+    records: list[tuple[str, str, str, str]] = []
+    for lf in sorted(mod_dir.rglob("*.lua")):
+        if lf.is_symlink():  # 跳過 symlink，避免逸出下載目錄
+            continue
+        try:
+            text = lf.read_text(encoding="utf-8-sig", errors="replace")
+        except OSError:
+            continue
+        rel = lf.relative_to(mod_dir).as_posix()
+        masked, strings = _lua_scan(text)
+        gt_spans = _lua_calls(masked, _LUA_GETTEXT_NAMES)
+
+        def first_arg(open_i: int, close_i: int) -> tuple[int, int, str] | None:
+            """呼叫的第一個引數若是字串常值（其前只有空白）則回傳之。"""
+            for s, e, v in strings:
+                if s <= open_i or s >= close_i:
+                    continue
+                return (s, e, v) if not masked[open_i + 1:s].strip() else None
+            return None
+
+        keys: set[str] = set()
+        for o, c in gt_spans:
+            arg = first_arg(o, c)
+            if arg:
+                keys.add(arg[2])
+        for key in sorted(keys):
+            records.append(("lua_gettext", rel, key, key))
+
+        lits: dict[str, str] = {}
+        for o, c in _lua_calls(masked, _LUA_UI_SINKS):
+            for s, _e, v in strings:
+                if not (o < s < c):
+                    continue
+                if any(go < s < gc for go, gc in gt_spans):
+                    continue  # getText 的引數，有鍵可譯，不算寫死
+                if len(v) < 8 or _LUA_NOT_PROSE_RE.search(v) or not _LUA_PROSE_RE.match(v):
+                    continue
+                lits[hashlib.sha1(v.encode("utf-8")).hexdigest()[:12]] = v
+                break  # 每個呼叫只取第一個合格字面，避免一次呼叫灌一堆
+        for kh in sorted(lits):
+            records.append(("lua_literal", rel, kh, lits[kh]))
+    return records
+
+
 def extract_corpus(mod_dir: Path, lang: str = "EN") -> list[tuple[str, str, str, str]]:
-    """layer-A 全語料：Translate/<lang> 為主 + media/scripts item/recipe 名（basic）。"""
-    return _iter_translate_records(mod_dir, lang) + _iter_script_records(mod_dir)
+    """layer-A 全語料：Translate/<lang> + media/scripts item/recipe 名 + Lua 文本（schema 6）。"""
+    return (
+        _iter_translate_records(mod_dir, lang)
+        + _iter_script_records(mod_dir)
+        + _iter_lua_records(mod_dir)
+    )
 
 
 def records_to_map(records: list[tuple[str, str, str, str]]) -> dict[str, str]:
@@ -637,11 +877,19 @@ def steamcmd_download(
 
 
 def trim_download(item_dir: Path) -> None:
-    """裁剪：只留 media/**/Translate/ 與 media/scripts/ 文本，其餘刪除（縮小 artifact）。"""
+    """裁剪：只留 media/**/Translate/、media/scripts/ 與 *.lua，其餘刪除（縮小 artifact）。
+
+    schema 6 起 Lua 也是文本來源（getText 鍵引用＋寫死英文字面），**不能再刪**——
+    先前刪掉 Lua 等於讓該層文本對追蹤器永久不可見。
+    """
 
     def keep(path: Path) -> bool:
         parts = path.parts
-        return "Translate" in parts or ("media" in parts and "scripts" in parts)
+        return (
+            "Translate" in parts
+            or ("media" in parts and "scripts" in parts)
+            or path.suffix.lower() == ".lua"
+        )
 
     for f in list(item_dir.rglob("*")):
         if f.is_file() and not keep(f):
@@ -1188,9 +1436,12 @@ def _diff_changed(changed, watchlist, steamcmd, install_dir, corpus_state, attri
                 corpus_updates[wid] = new_state
                 # 空語料也要傳遞 {}：_persist_state 據此清掉殘留的 sources/en/<wid>.json，
                 # 避免 hash state 已空而全文檔殘留（兩個真相來源脫鉤）
+                # 只鏡像帶真英文的 kind（見 TEXT_BEARING_KINDS）：其餘 script_* 的 value
+                # 就是區塊 id 本身，鏡像它等於把檔案灌大一倍卻零翻譯價值。
                 en_texts[wid] = {
                     f"{kind}|{relpath}|{key}": value
                     for kind, relpath, key, value in sorted(new_records)
+                    if kind in TEXT_BEARING_KINDS
                 }
                 if plan:
                     plans.append(plan)
@@ -1337,11 +1588,285 @@ def cmd_issue(args) -> int:
 
 
 # ============================================================
-# 命令：self-test（十情境 mock 測試，assert-based）
+# 命令：coverage（上游 EN vs 我方已收 的缺口報表）
+# ============================================================
+# PZ 允許同一檔內 legacy `<Stem>_KEY` 與 B42 bare `KEY` 兩種寫法並存（實測上游 EN 側
+# prefixed 56,205 / bare 38,042）。兩側比對前必須正規化到同一形式，否則虛增缺口約 6,300 鍵。
+def _key_stem(basename: str) -> str:
+    """檔名 → 語意 namespace（`IG_UI_EN.txt` / `IG_UI.json` 皆為 `IG_UI`）。"""
+    stem = basename.rsplit(".", 1)[0]
+    for suf in ("_EN", "_CN", "_CH"):
+        if stem.endswith(suf):
+            stem = stem[: -len(suf)]
+    return stem
+
+
+def _canon_key(basename: str, key: str) -> str:
+    stem = _key_stem(basename)
+    return key[len(stem) + 1:] if stem and key.startswith(stem + "_") else key
+
+
+# PZ 翻譯鍵形：`[A-Za-z0-9_.-]`。`lua_gettext` 記錄的是 getText 第一引數的**原始字面**，
+# 兩類不是真鍵，須於使用端濾掉（擷取器刻意只記錄所見、不做解讀）：
+#   1. 非鍵形——mod 拿 getText 當 no-op 包英文/符號用（'I drop items!'、' / 100 %'、'<'）
+#   2. 以 `_` 結尾——動態組鍵前綴 getText("IGUI_AnimalType_" .. t)，前綴本身不是鍵
+# 實測 8,950 個去重鍵中此類共 306 個（3.4%）。
+_TRANSLATION_KEY_RE = re.compile(r"^[A-Za-z0-9_.\-]+$")
+
+
+def _is_real_key(key: str) -> bool:
+    return bool(_TRANSLATION_KEY_RE.match(key)) and not key.endswith("_")
+
+
+def _load_shipped_keys() -> tuple[set[tuple[str, str]], set[str]]:
+    """我方實際出貨的鍵，回傳 (身分集, runtime 完整鍵集)。
+
+    * **身分集** `(stem, canon)` — 給 `translate_en` 缺口用。**namespace 必須保留**：
+      只留 canon 會讓 `Tooltip_OpenJacket` 與 `ContextMenu_OpenJacket` 塌成同一身分，
+      使某 mod 的 Tooltip 真缺口被另一 mod 的 ContextMenu 鍵遮蔽（實測遮掉 405 個）。
+      同時容納 legacy `<Stem>_KEY` 與 B42 bare `KEY` 兩種寫法。
+    * **runtime 完整鍵集** — 給 `lua_gettext` 缺口用。Lua 寫的是程式碼裡的完整鍵
+      （`getText("ItemName_Base.X")`），故同時放入 `canon` 與 `<stem>_<canon>` 兩種別名。
+    """
+    ident: set[tuple[str, str]] = set()
+    full: set[str] = set()
+
+    def take(basename: str, ks) -> None:
+        stem = _key_stem(basename)
+        for k in ks:
+            c = _canon_key(basename, k)
+            ident.add((stem, c))
+            full.add(k)
+            full.add(c)
+            if stem:
+                full.add(f"{stem}_{c}")
+
+    mods_dir = SOURCES / "mods"
+    if mods_dir.is_dir():
+        for wid_dir in mods_dir.iterdir():
+            cn = wid_dir / "CN"
+            if cn.is_dir():
+                for jf in cn.glob("*.json"):
+                    take(jf.name, load_json(jf))
+    uns = SOURCES / "_unsorted" / "CN"
+    if uns.is_dir():
+        for jf in uns.glob("*.json"):
+            take(jf.name, load_json(jf))
+    own = SOURCES / "own_translations.json"
+    if own.is_file():
+        for fname, entries in load_json(own).get("entries", {}).items():
+            take(fname, entries)
+    return ident, full
+
+
+def cmd_coverage(args) -> int:
+    """報表：上游 EN 鍵有多少我方沒收，並以「Lua 確證可見」優先排序。
+
+    三個口徑，可信度由高到低：
+      * ``lua_gettext`` 缺口 — mod 的 Lua **真的去取了這個鍵**＝確證玩家看得到，最該補。
+      * ``translate_en`` 缺口 — 上游 EN 檔裡有，但未必被用到（含廢棄鍵）。
+      * ``lua_literal`` — 寫死在 Lua、根本沒有翻譯鍵，JSON 補再多也蓋不掉，
+        只能走 sources/lua/ 覆寫。
+    vanilla 鍵一律扣除（收錄鐵律：不得覆寫本體）。
+    """
+    corpus_state = load_corpus_hashes()
+    mods = corpus_state.get("mods", {})
+    shipped_ident, shipped_full = _load_shipped_keys()
+    vraw = set(load_json(SOURCES / "vanilla_keys.json").get("keys", []))
+    vanilla = vraw | {k.split("_", 1)[1] for k in vraw if "_" in k}
+
+    rows = []
+    tot = {"en": 0, "en_gap": 0, "lua": 0, "lua_gap": 0, "lit": 0, "lua_undef": 0}
+    for wid in sorted(mods):
+        en_ids: set[tuple[str, str]] = set()
+        en_full: set[str] = set()
+        lua_ids: set[str] = set()
+        lits: set[str] = set()
+        for rid in mods[wid].get("records", {}):
+            kind, _, rest = rid.partition("|")
+            relpath, _, key = rest.partition("|")
+            if kind == "translate_en":
+                base = relpath.rsplit("/", 1)[-1]
+                stem, canon = _key_stem(base), _canon_key(base, key)
+                en_ids.add((stem, canon))  # 保留 namespace，否則跨檔同名鍵互相遮蔽
+                en_full.add(key)           # runtime 完整鍵，供 lua_gettext 判上游有無定義
+                en_full.add(canon)
+                if stem:
+                    en_full.add(f"{stem}_{canon}")
+            elif kind == "lua_gettext":
+                if _is_real_key(key):  # 濾掉非鍵形字面與動態組鍵前綴（見 _is_real_key）
+                    lua_ids.add(key)
+            elif kind == "lua_literal":
+                lits.add(key)
+        en_gap = {x for x in en_ids - shipped_ident if x[1] not in vanilla}
+        lua_all_gap = (lua_ids - shipped_full) - vanilla
+        # Lua 引用但上游自己也沒定義＝上游 bug（遊戲顯示鍵名），非我方可補的缺口
+        lua_undef = lua_all_gap - en_full
+        lua_gap = lua_all_gap - lua_undef
+        # **totals 先累加再決定是否列表**：放在 continue 之後會把「完全無缺口」的 mod
+        # 排除在分母外，覆蓋率分母因而嚴重低報（實測 EN 76,063 vs 實際 89,764）。
+        tot["en"] += len(en_ids); tot["en_gap"] += len(en_gap)
+        tot["lua"] += len(lua_ids); tot["lua_gap"] += len(lua_gap)
+        tot["lit"] += len(lits); tot["lua_undef"] += len(lua_undef)
+        if not (en_gap or lua_gap or lits):
+            continue
+        rows.append((wid, len(en_ids), len(en_gap), len(lua_ids), len(lua_gap), len(lits),
+                     sorted(lua_gap)[:5], len(lua_undef)))
+
+    print(f"基準涵蓋 {len(mods)} 個 mod（extractor_schema={corpus_state.get('extractor_schema')}）")
+    print(f"我方已出貨鍵 {len(shipped_ident)}；vanilla 排除鍵 {len(vanilla)}")
+    print()
+    print(f"上游 EN 鍵 {tot['en']}  → 缺口 {tot['en_gap']}")
+    print(f"Lua 引用鍵 {tot['lua']}  → **可補的確證可見缺口 {tot['lua_gap']}**（最高優先）")
+    print(f"  （另有 {tot['lua_undef']} 個鍵上游自己也沒定義＝上游 bug，遊戲顯示鍵名，非我方缺口）")
+    print(f"Lua 寫死英文 {tot['lit']}（無翻譯鍵，只能走 sources/lua/ 覆寫）")
+    print()
+    top = args.limit or 30
+    print(f"=== 依「確證可見缺口」排序 Top {top} ===")
+    print(f"{'workshop_id':>12} {'EN缺':>6} {'可補':>5} {'上游bug':>7} {'寫死':>5}  範例")
+    for r in sorted(rows, key=lambda r: (-r[4], -r[5], -r[2]))[:top]:
+        wid, _en, en_gap, _lua, lua_gap, lit, samp, undef = r
+        print(f"{wid:>12} {en_gap:>6} {lua_gap:>5} {undef:>7} {lit:>5}  {[x[:26] for x in samp[:3]]}")
+    if args.out:
+        write_json(Path(args.out), {
+            "totals": tot,
+            "mods": {r[0]: {"en": r[1], "en_gap": r[2], "lua": r[3], "lua_gap": r[4],
+                            "lua_literal": r[5], "lua_undefined_upstream": r[7]} for r in rows},
+        })
+        print(f"\n明細 → {args.out}")
+    return 0
+
+
+# ============================================================
+# 命令：backfill-en（一次性全量 EN 落地）
+# ============================================================
+def cmd_backfill_en(args) -> int:
+    """把 watchlist 全部 mod 的上游 EN 全文補齊到 sources/en/，並重建 hash 基準。
+
+    存在理由：`sources/en/` 原本只在「tracker 偵測到該 mod 有更新」時順手落地，
+    是漸進累積（481 個 mod 只有 75 個有檔）。要達到「所有支援 MOD 的 EN 都可在 git
+    追蹤比對」得主動補齊一次，之後才由排程自然維護。
+
+    可續跑：已有現行 extractor schema 基準 **且** sources/en 檔存在者跳過。
+    schema 演進（如 5→6 新增 Lua 抽取）會使既有檔全部過時，屆時本指令即重抽工具。
+    逐 mod 落盤、失敗不中斷全場，末尾列出失敗清單供重跑。
+    """
+    if args.steamcmd is None:
+        print("❌ backfill-en 需 --steamcmd 指定 steamcmd 路徑。", file=sys.stderr)
+        return 1
+    steamcmd = Path(args.steamcmd)
+    install_dir = resolve_install_dir(args.install_dir)  # 限 tracker scratch root
+    watchlist = load_watchlist()
+    corpus_state = load_corpus_hashes()
+    attribution = load_attribution_keys()
+    items = watchlist.get("items", {})
+
+    # As1 包本身走 layer-B（它帶的是 CN 不是 EN），不在 EN backfill 範圍。
+    wids = [w for w in items if w != AS1_WORKSHOP_ID]
+    # 已自 Workshop 下架者（timestamps 的 removed 旗標，API result=9）永遠抓不到：
+    # 不跳過的話每輪都要對它們各重試 3 次＋逾時，且退出碼永遠非零。
+    ts_items = load_timestamps().get("items", {})
+    gone = [w for w in wids if ts_items.get(w, {}).get("removed")]
+    if gone and not args.only:
+        print(f"跳過已下架 {len(gone)} 個（Workshop 已移除，抓不到）：{','.join(gone)}")
+        wids = [w for w in wids if w not in gone]
+    if args.only:
+        want = {w.strip() for w in args.only.split(",") if w.strip()}
+        wids = [w for w in wids if w in want]
+    if args.limit:
+        wids = wids[: args.limit]
+
+    def is_done(wid: str) -> bool:
+        st = corpus_state.get("mods", {}).get(wid)
+        if not st or st.get("extractor_schema") != EXTRACTOR_SCHEMA:
+            return False
+        if (EN_TEXT_DIR / f"{wid}.json").is_file():
+            return True
+        # 合法無檔的兩種情形，缺一即會每輪重抓（實測曾有 7 個 mod 卡在第二種）：
+        #   1. 語料整個為空（empty_corpus）
+        #   2. 語料非空但**全是不進鏡像的 kind**（純 script_item/craftRecipe 的 mod）
+        recs = st.get("records") or {}
+        return bool(st.get("empty_corpus")) or (
+            bool(recs) and not any(r.split("|", 1)[0] in TEXT_BEARING_KINDS for r in recs)
+        )
+
+    todo = [w for w in wids if args.force or not is_done(w)]
+    print(f"backfill-en：watchlist {len(wids)} 個 mod，待處理 {len(todo)}（已完成 {len(wids) - len(todo)}）")
+    if not todo:
+        return 0
+    EN_TEXT_DIR.mkdir(parents=True, exist_ok=True)
+
+    failed: list[str] = []
+    done = 0
+    for i, wid in enumerate(todo, 1):
+        mod_ids = items.get(wid, {}).get("mod_ids", [])
+        print(f"[{i}/{len(todo)}] {wid} …", flush=True)
+        item_dir = None
+        try:
+            # 下載也放進 try：steamcmd_download 的 subprocess.run(timeout=1800) 會拋
+            # TimeoutExpired，留在 try 外時單一 mod 逾時就中止整批，違反「失敗不中斷」。
+            item_dir = steamcmd_download(wid, steamcmd, install_dir)
+            if item_dir is None:
+                print(f"  ⚠️ 下載失敗，跳過（可重跑）：{wid}", file=sys.stderr)
+                failed.append(wid)
+                continue
+            records = extract_corpus(item_dir)
+            # schema 不符 → build_layer_a_plan 靜默重建基準（回傳 plan=None），正是 backfill 要的。
+            # 但 --force 對 schema 已相符的 mod 會拿到**真 plan**＝上游有變更、本該開
+            # 「可能過時」issue；backfill 不開 issue，靜默丟棄等於吃掉訊號，故明示警告。
+            plan, new_state = build_layer_a_plan(wid, mod_ids, records, corpus_state, attribution)
+            if plan is not None:
+                print(
+                    f"  ⚠️ {wid} 偵測到上游語料變更（本該開「可能過時」issue）；"
+                    "backfill 只重建基準，該訊號已被吸收——需要追蹤請改跑 `tracker.py run`。",
+                    file=sys.stderr,
+                )
+            if not records:
+                new_state["empty_corpus"] = True
+            corpus_state.setdefault("mods", {})[wid] = new_state
+            texts = {
+                f"{kind}|{relpath}|{key}": value
+                for kind, relpath, key, value in sorted(records)
+                if kind in TEXT_BEARING_KINDS
+            }
+            if texts:
+                write_json(EN_TEXT_DIR / f"{wid}.json", texts)
+            else:
+                (EN_TEXT_DIR / f"{wid}.json").unlink(missing_ok=True)
+            kinds: dict[str, int] = {}
+            for r in records:
+                kinds[r[0]] = kinds.get(r[0], 0) + 1
+            print(f"  ✓ {len(records)} 筆（鏡像 {len(texts)}）{kinds}")
+            done += 1
+        except (ValueError, OSError, subprocess.SubprocessError) as exc:
+            # 單一 mod 的語料異常／IO 失敗／steamcmd 逾時一律不炸全場，記入失敗清單可重跑。
+            # 只捕 ValueError 太窄：write_json 的 OSError 會漏出去中止整輪。
+            print(f"  ⚠️ 處理失敗，跳過：{wid}：{type(exc).__name__}: {exc}", file=sys.stderr)
+            failed.append(wid)
+        finally:
+            # _dl 是暫存：抽完即刪，避免 481 個 mod 的內容堆在磁碟上
+            if item_dir is not None and _within_scratch(item_dir):
+                shutil.rmtree(item_dir, ignore_errors=True)
+        if done % 10 == 0:  # 每 10 個落一次 hash 基準（中斷不丟已完成的工作）
+            corpus_state["schema_version"] = SCHEMA_VERSION
+            corpus_state["extractor_schema"] = EXTRACTOR_SCHEMA
+            write_json(EN_CORPUS_HASHES_JSON, corpus_state)
+
+    corpus_state["schema_version"] = SCHEMA_VERSION
+    corpus_state["extractor_schema"] = EXTRACTOR_SCHEMA
+    write_json(EN_CORPUS_HASHES_JSON, corpus_state)
+    print(f"\n完成 {done}/{len(todo)}；失敗 {len(failed)}")
+    if failed:
+        print("失敗清單（重跑本指令即續傳）：" + ",".join(failed))
+    return 1 if failed else 0
+
+
+# ============================================================
+# 命令：self-test（十二情境 mock 測試，assert-based）
 # ============================================================
 def cmd_self_test() -> int:
     print("=" * 60)
-    print("self-test：十情境 mock 測試")
+    print("self-test：十二情境 mock 測試")
     print("=" * 60)
 
     def rec(kind, rel, key, val):
@@ -1540,7 +2065,75 @@ def cmd_self_test() -> int:
     assert dict((r[2], r[3]) for r in recs_txt)["IGUI_Test_A"] == "Hello v2", "情境10：重複鍵應取後者"
     print("  ✅ 情境10 schema 演進靜默重建＋B41 .txt 翻譯抽取")
 
-    print("\n✅ self-test 十情境全通過。")
+    # 情境 11（schema 6）：Lua 文本抽取——getText 鍵引用與「寫死英文」要分得開。
+    # 上游常見 getText("KEY", "English") 慣用法：那串英文有鍵、由 lua_gettext 收，
+    # 誤收成 lua_literal 會虛報「無鍵可譯」（實測某 mod 因此假報 16 筆）。
+    with tempfile.TemporaryDirectory() as td:
+        ld = Path(td) / "42" / "media" / "lua" / "client"
+        ld.mkdir(parents=True)
+        (ld / "Sample.lua").write_text(
+            'context:addOption(getText("IGUI_Foo_Bar"), a, b)\n'                 # 有鍵 → 只算 gettext
+            'context:addOption(getText("IGUI_Foo_Baz",\n'
+            '        "Custom claim is disabled here."), a)\n'                    # 第二引數有鍵 → 不算寫死
+            'btn:setTitle("Open Debug Panel")\n'                                 # 真寫死 → lua_literal
+            'x:setText("Cancel")\n'                                              # 單字＜8 → 保守放掉
+            'y:setName("icons/thing.png")\n'                                     # 資源路徑 → 排除
+            'z:setTooltip(myVariable)\n'                                         # 非字面 → 無記錄
+            'w = getTextOrNull("IGUI_Foo_Qux")\n'                                # OrNull 也要收
+            # --- 以下四項是 regex 版實際踩過的錯，改 lexical scan 後才擋得住 ---
+            '-- getText("IGUI_InLineComment")\n'                                 # 行註解內不得收
+            '--[[ getText("IGUI_InBlockComment") ]]\n'                           # 長註解內不得收
+            'targetText("IGUI_MidIdentifier")\n'                                 # identifier 中段不得命中
+            'local sn = getTextWidth("Some Wide Label")\n'                       # getTextWidth 不是 getText
+            'local s2 = "a -- b"\n'                                              # 字串裡的 -- 不是註解
+            'lbl:setText("Don\'t open this window")\n',                          # 雙引號內的 ' 要抓得到
+            encoding="utf-8",
+        )
+        rl = _iter_lua_records(Path(td))
+    gk = {r[2] for r in rl if r[0] == "lua_gettext"}
+    lits = {r[3] for r in rl if r[0] == "lua_literal"}
+    assert gk == {"IGUI_Foo_Bar", "IGUI_Foo_Baz", "IGUI_Foo_Qux"}, f"情境11：getText 鍵抽取錯誤 {gk}"
+    assert lits == {"Open Debug Panel", "Don't open this window"}, \
+        f"情境11：寫死字面判定錯誤 {lits}"
+    assert all(r[1].startswith("42/media/lua/") for r in rl), "情境11：relpath 應為 mod_dir 相對"
+    # 同一字面於同檔重複出現只留一筆（key=sha1），且 relpath 不同才各自成 record
+    assert len([r for r in rl if r[0] == "lua_literal"]) == 2, "情境11：同檔同字面應折疊"
+    # trim_download 不得再刪 Lua（schema 6 起 Lua 是文本來源）
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        (root / "media" / "lua" / "client").mkdir(parents=True)
+        (root / "media" / "lua" / "client" / "A.lua").write_text("-- x", encoding="utf-8")
+        (root / "media" / "textures").mkdir(parents=True)
+        (root / "media" / "textures" / "b.png").write_bytes(b"x")
+        trim_download(root)
+        assert (root / "media" / "lua" / "client" / "A.lua").exists(), "情境11：trim 不得刪 Lua"
+        assert not (root / "media" / "textures" / "b.png").exists(), "情境11：trim 應刪非文本檔"
+    # 鏡像只收帶真英文的 kind
+    assert "lua_gettext" not in TEXT_BEARING_KINDS and "script_item" not in TEXT_BEARING_KINDS, \
+        "情境11：id-only kind 不得進鏡像"
+    assert {"translate_en", "script_item_dn", "lua_literal"} <= TEXT_BEARING_KINDS, \
+        "情境11：帶文本的 kind 必須進鏡像"
+    print("  ✅ 情境11 Lua 文本抽取（gettext/寫死分流）＋trim 留 Lua＋鏡像 kind 白名單")
+
+    # 情境 12：coverage 的鍵形正規化——本次唯一寫錯兩次的地方，錯了不會有任何測試變紅。
+    #   錯法一：只留 canon 形 → Tooltip_X 與 ContextMenu_X 塌成同身分，跨 mod 互相遮蔽缺口
+    #   錯法二：兩側都加雙形式 → translate_en 缺口被重複計算
+    assert _key_stem("IG_UI_EN.txt") == "IG_UI" == _key_stem("IG_UI.json"), "情境12：stem 正規化"
+    assert _canon_key("ItemName.json", "ItemName_Base.Axe") == "Base.Axe", "情境12：去 legacy 前綴"
+    assert _canon_key("ItemName.json", "Base.Axe") == "Base.Axe", "情境12：bare 形不動"
+    assert _canon_key("Sandbox_EN.txt", "Sandbox_Foo") == "Foo", "情境12：_EN 檔名 stem"
+    # namespace 必須保留：兩者 canon 相同但身分不得相同
+    id_a = (_key_stem("Tooltip.json"), _canon_key("Tooltip.json", "Tooltip_OpenJacket"))
+    id_b = (_key_stem("ContextMenu.json"), _canon_key("ContextMenu.json", "ContextMenu_OpenJacket"))
+    assert id_a[1] == id_b[1] and id_a != id_b, "情境12：namespace 塌陷會讓缺口互相遮蔽"
+    # lua_gettext 使用端過濾：非鍵形與動態組鍵前綴都不是真鍵
+    assert _is_real_key("IGUI_Foo_Bar"), "情境12：正常鍵應通過"
+    assert not _is_real_key("I drop items!"), "情境12：非鍵形字面應濾掉"
+    assert not _is_real_key(" / 100 %"), "情境12：符號字面應濾掉"
+    assert not _is_real_key("IGUI_AnimalType_"), "情境12：動態組鍵前綴應濾掉"
+    print("  ✅ 情境12 coverage 鍵形正規化（stem/canon/namespace 保留/真鍵過濾）")
+
+    print("\n✅ self-test 十二情境全通過。")
     return 0
 
 
@@ -1555,7 +2148,7 @@ def main() -> None:
 使用範例：
   uv run scripts/tracker.py gen-watchlist          # 由 sources/mods/ 生成 watchlist.json（含 As1）
   uv run scripts/tracker.py --dry-run --limit 5    # 真打 API 查 5 個時間戳，不下載/不開 issue
-  uv run scripts/tracker.py self-test              # 十情境 mock 測試
+  uv run scripts/tracker.py self-test              # 十二情境 mock 測試
   uv run scripts/tracker.py check  --out c.json    # workflow check job
   uv run scripts/tracker.py diff   --in c.json --out d.json --steamcmd <path>
   uv run scripts/tracker.py issue  --in d.json     # workflow issue+state job
@@ -1563,8 +2156,16 @@ def main() -> None:
     )
     parser.add_argument(
         "command", nargs="?", default="run",
-        choices=["gen-watchlist", "run", "check", "diff", "issue", "self-test"],
+        choices=["gen-watchlist", "run", "check", "diff", "issue", "self-test", "backfill-en", "coverage"],
         help="執行的命令（預設：run）",
+    )
+    parser.add_argument(
+        "--only", default=None,
+        help="backfill-en：只處理這些 workshop_id（逗號分隔），供抽查／重跑失敗清單",
+    )
+    parser.add_argument(
+        "--force", action="store_true",
+        help="backfill-en：已完成者也重抽（schema 未變但想強制重建時用）",
     )
     parser.add_argument("--dry-run", action="store_true", help="只印計畫，零 issue 零 commit")
     parser.add_argument(
@@ -1591,6 +2192,10 @@ def main() -> None:
         sys.exit(cmd_issue(args))
     elif args.command == "self-test":
         sys.exit(cmd_self_test())
+    elif args.command == "backfill-en":
+        sys.exit(cmd_backfill_en(args))
+    elif args.command == "coverage":
+        sys.exit(cmd_coverage(args))
 
 
 if __name__ == "__main__":

@@ -12,6 +12,8 @@ verify_dist.py — MinidoracatModLangFor42 的獨立 dist 驗證器（oracle）�
   * 純標準函式庫，無第三方相依 → 供 `uv run scripts/verify_dist.py` 直接執行。
 
 驗證項（預設全跑；任一 FAIL → 退出碼 1，全 PASS → 0）：
+  ※ As1 快照樹缺席（Steam 覆蓋了 Workshop 版本目錄）時 [1]/[8] 判 **SKIP**，其餘照跑；
+    SKIP≠PASS，退出碼仍為 1，除非明示 --allow-missing-as1。
   [1] CN 逐檔 parity：dist CN/*.json 對 sanitize(As1 快照值) 逐檔逐鍵一致
       （42.20.1 formatted() 安全逸出後的應出貨值；登記例外鍵改為對
       sanitize(cn_safe_value) 核對，見 sources/placeholder_exceptions.json）
@@ -443,6 +445,7 @@ def check_cn_parity(
     exceptions: dict[str, dict],
     own: dict[str, dict],
     cn_overrides: dict[str, dict] | None = None,
+    as1_available: bool = True,
 ) -> tuple[bool, list[str], list[str], int, int]:
     """[1] dist CN 對 As1 快照：檔案集合 + 逐檔鍵集 + 逐鍵值逐字一致。
 
@@ -451,9 +454,15 @@ def check_cn_parity(
       2. sources/cn_overrides.json           → 「dist CN 值 == value」（修上游錯誤）
       3. sources/own_translations.json       → 合法「多鍵/多檔」，「dist CN 值 == own cn」
     回傳 (ok, details, warn, applied_count, own_count)。
+
+    ``as1_available=False``（快照樹被 Steam 覆蓋而消失）時**只降級 As1 相關比對**：
+    檔案集合、缺鍵/多鍵、以及對 As1 原值的 parity 一律跳過。**其餘照驗**——
+    own CN 值、placeholder 例外安全值、cn_overrides 登記值、原創鍵落地完整性都
+    不依賴 As1，整個函式一起 SKIP 會讓 `--allow-missing-as1` 在這些真相層損壞時
+    仍然 exit 0，等於把獨立 oracle 讓掉一大半。
     """
     cn_overrides = cn_overrides or {}
-    as1_files, as1_err = _load_json_dir(as1_cn)
+    as1_files, as1_err = ({}, []) if not as1_available else _load_json_dir(as1_cn)
     dist_files, dist_err = _load_json_dir(dist_cn)
     details: list[str] = []
     warn: list[str] = []
@@ -479,25 +488,32 @@ def check_cn_parity(
         return True
 
     as1_set, dist_set = set(as1_files), set(dist_files)
-    for missing in sorted(as1_set - dist_set):
-        details.append(f"檔案缺少：dist 少了 {missing}")
+    if as1_available:
+        for missing in sorted(as1_set - dist_set):
+            details.append(f"檔案缺少：dist 少了 {missing}")
     for extra in sorted(dist_set - as1_set):
-        # 純原創檔（As1 無此檔）：逐鍵核對 own；任何非原創鍵仍屬違規
+        # 純原創檔（As1 無此檔）：逐鍵核對 own；任何非原創鍵仍屬違規。
+        # As1 缺席時整個 dist 都落在這裡，無從判斷「該不該有」——只驗 own 值，不報多出。
         for key in sorted(dist_files[extra]):
-            if not check_own_key(extra, key, dist_files[extra][key]):
+            if not check_own_key(extra, key, dist_files[extra][key]) and as1_available:
                 details.append(f"檔案多出：dist 多了 {extra}（含非原創鍵 {key!r}）")
 
     applied_cn_ov: set[str] = set()  # 實際命中的 CN 修正鍵
     applied: set[str] = set()  # 實際命中 dist(檔,鍵) 的例外
-    for fname in sorted(as1_set & dist_set):
-        a, d = as1_files[fname], dist_files[fname]
+    # As1 缺席時仍逐檔走一遍 dist——例外／override 的值層核對不依賴 As1，不可一起跳過。
+    for fname in sorted(as1_set & dist_set) if as1_available else sorted(dist_set):
+        a, d = as1_files.get(fname, {}), dist_files[fname]
         ak, dk = set(a), set(d)
-        for mk in sorted(ak - dk):
-            details.append(f"{fname}: 缺鍵 {mk!r}")
-        for ek in sorted(dk - ak):
-            if not check_own_key(fname, ek, d[ek]):
-                details.append(f"{fname}: 多鍵 {ek!r}")
-        for key in sorted(ak & dk):
+        if as1_available:
+            for mk in sorted(ak - dk):
+                details.append(f"{fname}: 缺鍵 {mk!r}")
+            for ek in sorted(dk - ak):
+                if not check_own_key(fname, ek, d[ek]):
+                    details.append(f"{fname}: 多鍵 {ek!r}")
+        else:
+            for ek in sorted(dk):
+                check_own_key(fname, ek, d[ek])  # own 值照驗，非 own 無從判斷
+        for key in sorted(dk if not as1_available else (ak & dk)):
             # 期望值一律過 sanitize_expectation（As1 原值與 registry 登記值皆為
             # sanitize 前語意，build 出貨前會逸出裸 %；own 鍵不在本迴圈——
             # ak & dk 僅含 As1 鍵，own 層於 check_own_key 以原值核對）。
@@ -522,7 +538,8 @@ def check_cn_parity(
                         f"dist={d[key]!r} 應為 sanitize(value)="
                         f"{sanitize_expectation(cov['value'])!r}"
                     )
-            elif sanitize_expectation(a[key]) != d[key]:
+            elif key in a and sanitize_expectation(a[key]) != d[key]:
+                # `key in a` 守門：As1 缺席時 a 為空，此比對無從進行（其餘核對照跑）
                 details.append(
                     f"{fname}: 鍵 {key!r} 值不符 | sanitize(As1)="
                     f"{sanitize_expectation(a[key])!r} dist={d[key]!r}"
@@ -1137,7 +1154,7 @@ def _load_as1_lane_cn(repo: str, warns: list[str]) -> dict[str, set[str]]:
     return out
 
 
-def run_all(paths: dict) -> int:
+def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
     repo = paths["repo"]
     as1_cn = paths["as1_cn"]
     dist_translate = paths["dist_translate"]
@@ -1151,9 +1168,20 @@ def run_all(paths: dict) -> int:
     print(f" dist   : {dist_translate}")
     print()
 
-    if not os.path.isdir(as1_cn):
-        print(f"ERROR：As1 快照 CN 目錄不存在：{as1_cn}")
-        return 1
+    # As1 快照樹是 Steam 管理的 Workshop 目錄，Valve 會在上游改版時直接覆蓋版本資料夾
+    # （實例：2026-08-05 As1 的 42.19/ 被 42.20/ 取代，舊版 Workshop 不提供重新下載＝
+    # 該快照永久消失）。舊行為是在此硬性 return 1，導致其餘 10 項完全跑不到；
+    # 改為把 [1]/[8] 判 SKIP、其餘照跑，讓「哪些還好、哪些壞了」看得見。
+    # 退出碼預設仍為 1（SKIP 不等於 PASS，不得讓 release gate 靜默放行）。
+    as1_missing = not os.path.isdir(as1_cn)
+    if as1_missing:
+        print(f"⚠ As1 快照 CN 目錄不存在：{as1_cn}")
+        print("  → [8] As1 漂移判 SKIP；[1] 仍照跑，只降級「對 As1 原值」的比對——")
+        print("     own CN 值、placeholder 例外安全值、cn_overrides 登記值、原創鍵落地照驗。")
+        print("  → 成因多為 Steam 覆蓋了 Workshop 版本目錄；舊版無法重新下載，")
+        print("     須改釘新快照（sources/snapshot.json 的 source_tree）並處理其值差異。")
+        print("  → 退出碼仍為 1。確知要以降級結果當 gate 時加 --allow-missing-as1。")
+        print()
 
     try:
         exceptions = _load_exceptions(repo)
@@ -1179,15 +1207,18 @@ def run_all(paths: dict) -> int:
         print(f"ERROR：原創翻譯層無法解析（{exc}）")
         return 1
 
+    # ok 為 None＝SKIP（無法判定），有別於 False＝FAIL（判定為壞）。
+    # [1] 即使 As1 缺席也照跑：只降級 As1 相關比對，own 值／例外／override／原創落地
+    # 這些不依賴 As1 的核對必須留著，否則 --allow-missing-as1 會連它們一起放行。
     ok1, d1, w1, n_exc, n_own = check_cn_parity(
-        as1_cn, dist_cn, exceptions, own, cn_overrides
+        as1_cn, dist_cn, exceptions, own, cn_overrides, as1_available=not as1_missing
     )
     ok2, d2 = check_ch_mirror(dist_cn, dist_ch)
     ok3, d3 = check_encoding(dist_translate)
     ok4, d4_fail, d4_warn = check_placeholder(dist_cn, dist_ch, exceptions)
     ok6, d6 = check_language_txt(dist_cn, dist_ch)
     ok7, d7 = check_lua(repo, lua_client)
-    ok8, d8, w8 = check_as1_drift(repo, as1_cn)
+    ok8, d8, w8 = (None, [], []) if as1_missing else check_as1_drift(repo, as1_cn)
     try:
         ok9, d9 = check_ch_corpus_parity(repo, dist_ch, own)
     except Exception as exc:  # noqa: BLE001 — corpus 壞掉直接判 FAIL
@@ -1206,7 +1237,8 @@ def run_all(paths: dict) -> int:
         ok12, d12, w12 = False, [f"vanilla_keys.json 無法載入（{exc}）"], []
 
     rows = [
-        ("1", "CN 逐檔 parity", ok1, d1, w1),
+        ("1", "CN 逐檔 parity（As1 缺席時僅降級 As1 比對）" if as1_missing else "CN 逐檔 parity",
+         ok1, d1, w1),
         ("2", "CH 鏡像", ok2, d2, []),
         ("3", "編碼（UTF-8 無 BOM）", ok3, d3, []),
         ("4", "placeholder", ok4, d4_fail, d4_warn),
@@ -1219,18 +1251,25 @@ def run_all(paths: dict) -> int:
         ("12", "vanilla 鍵碰撞", ok12, d12, w12),
     ]
 
-    n_pass = sum(1 for _, _, ok, _, _ in rows if ok)
-    n_fail = sum(1 for _, _, ok, _, _ in rows if not ok)
+    n_pass = sum(1 for _, _, ok, _, _ in rows if ok is True)
+    n_fail = sum(1 for _, _, ok, _, _ in rows if ok is False)
+    n_skip = sum(1 for _, _, ok, _, _ in rows if ok is None)
     n_warn = sum(len(warn) for _, _, _, _, warn in rows)
 
     for num, name, ok, _det, warn in rows:
-        status = "PASS" if ok else "FAIL"
+        status = "PASS" if ok is True else ("SKIP" if ok is None else "FAIL")
         tail = f"  (WARN {len(warn)})" if warn else ""
         print(f" [{num}] {name:.<28} {status}{tail}")
     print("-" * 64)
-    print(f" 例外鍵 {n_exc} 個已依登記值核對；原創鍵 {n_own} 個已依 own cn 核對")
-    overall = "PASS" if n_fail == 0 else "FAIL"
-    print(f" 結果：{overall}  (PASS {n_pass} / FAIL {n_fail} / WARN {n_warn})")
+    print(f" 例外鍵 {n_exc} 個已依登記值核對；原創鍵 {n_own} 個已依 own cn 核對"
+          + ("（As1 原值 parity 因快照缺席未驗）" if as1_missing else ""))
+    # SKIP 不是 PASS：預設仍判 FAIL，除非呼叫端明示接受降級。
+    degraded = n_skip > 0 and not allow_missing_as1
+    overall = "PASS" if (n_fail == 0 and not degraded) else "FAIL"
+    tail = f" / SKIP {n_skip}" if n_skip else ""
+    print(f" 結果：{overall}  (PASS {n_pass} / FAIL {n_fail}{tail} / WARN {n_warn})")
+    if n_skip and allow_missing_as1:
+        print(" ⚠ --allow-missing-as1：以其餘項目當 gate，As1 端未驗證")
     print("=" * 64)
 
     for num, name, ok, det, warn in rows:
@@ -1243,7 +1282,7 @@ def run_all(paths: dict) -> int:
             for line in _cap(warn):
                 print(f"  {line}")
 
-    return 0 if n_fail == 0 else 1
+    return 0 if (n_fail == 0 and not degraded) else 1
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -1256,6 +1295,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--cn-diff", metavar="BASE_REF",
         help="列出 BASE_REF→現況 dist CN 值變動而 sources/ch 未同步、亦無已審背書的鍵（有即退出 1）",
+    )
+    parser.add_argument(
+        "--allow-missing-as1", action="store_true",
+        help="As1 快照樹缺席時，以其餘 10 項當 gate（[1]/[8] 判 SKIP 但不影響退出碼）。"
+             "僅供快照重釘期間的過渡使用，release 前務必移除。",
     )
     args = parser.parse_args(argv)
 
@@ -1280,7 +1324,7 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_compare_dist(dist_translate, lua_client, args.compare_dist)
     if args.cn_diff is not None:
         return cmd_cn_diff(paths, args.cn_diff)
-    return run_all(paths)
+    return run_all(paths, allow_missing_as1=args.allow_missing_as1)
 
 
 if __name__ == "__main__":
