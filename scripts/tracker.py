@@ -79,6 +79,72 @@ EXTRACTOR_SCHEMA = 7
 # 本身（實測 118,307 筆鏡像裡有 60,567 筆 value==key），純屬變更偵測用，留在 hash 台帳即可。
 TEXT_BEARING_KINDS = frozenset({"translate_en", "script_item_dn", "lua_literal"})
 
+# --- B42 有效分支解析 ------------------------------------------------------- #
+# 抽取器忠實記錄 mod 內**所有**分支，但引擎只載入其中兩個。拿非有效分支的鍵去補譯
+# ＝死資料：2026-08-06 那批 899 鍵有 385 筆（43%）因此白做，且其中 2 筆的 EN 取自
+# 已改名／已作廢的舊分支，直接譯錯。
+#
+# 規則出處＝反編譯的 42.20.2 遊戲碼（jar sha256 09a80a46…f416，與安裝檔相符）：
+#   * ZomboidFileSystem.loadMod():648/:665 全文只有兩次 searchFolders——`common/`
+#     與唯一一個「最佳版本夾」，後者疊在前者之上。**mod 根目錄的 media/ 不載入**
+#     （B41 遺留）；:486 的可見性門檻也只認 common/mod.info 或 <版本夾>/mod.info。
+#   * getModVersionDirName():460 取「換算整數 ≥ 42000 且 ≤ 遊戲版本」的**最大者**。
+#   * getGameVersionIntFromName():557 只取前兩段（major*1000+minor），第三段丟棄，
+#     所以 42.20.2 與 42.20 同值。
+#   * Translator.tryFillMapFromFile():353 路徑寫死 `.json`——legacy `_EN.txt` 在 B42
+#     **完全不被讀取**（全庫僅 IsoWorld.java:1333 一句 debug 訊息提及）。故 `.txt`
+#     裡的 EN 定義在執行期並不存在，不能拿來當補譯依據。
+GAME_VERSION_INT = int(os.environ.get("PZ_GAME_VERSION_INT", "42020"))
+MIN_REQUIRED_INT = 42000  # ChooseGameInfo.getMinRequiredVersion() = GameVersion(42, 0)
+
+
+def _version_int(name: str) -> int:
+    """版本夾名 → 引擎整數；規則同 getGameVersionIntFromName（第三段丟棄）。"""
+    parts = name.split(".")
+    try:
+        if len(parts) == 1:
+            return int(parts[0]) * 1000
+        return int(parts[0]) * 1000 + min(int(parts[1]), 999)
+    except ValueError:
+        return 0
+
+
+def resolve_effective_branches(record_ids) -> dict[str, set[str]]:
+    """{sub_mod: {遊戲會載入的 tag}}——`common` 恆載入，加上唯一一個最佳版本夾。
+
+    record id 的 relpath 形如 ``mods/<sub_mod>/<tag>/media/...``。tag 為 ``media``
+    者代表 mod 根（B41 遺留），永遠不會入選。無合格版本夾時只剩 ``common``。
+    """
+    tags: dict[str, set[str]] = {}
+    for rid in record_ids:
+        _, _, rest = rid.partition("|")
+        relpath, _, _ = rest.partition("|")
+        parts = relpath.split("/")
+        if len(parts) >= 3 and parts[0] == "mods":
+            tags.setdefault(parts[1], set()).add(parts[2])
+    out: dict[str, set[str]] = {}
+    for sub, ts in tags.items():
+        cands = [t for t in ts
+                 if t != "common" and MIN_REQUIRED_INT <= _version_int(t) <= GAME_VERSION_INT]
+        out[sub] = {"common"} | ({max(cands, key=_version_int)} if cands else set())
+    return out
+
+
+def is_effective(rid: str, eff: dict[str, set[str]]) -> bool:
+    """該 record 在執行期是否真的存在。
+
+    路徑不符 ``mods/<sub>/<tag>/…`` 形狀者一律放行（少數 mod 的語料路徑不帶
+    分支層，寧可高估也不要靜默丟棄）。``translate_en`` 另要求副檔名為 ``.json``。
+    """
+    kind, _, rest = rid.partition("|")
+    relpath, _, _ = rest.partition("|")
+    parts = relpath.split("/")
+    if len(parts) < 3 or parts[0] != "mods":
+        return True
+    if parts[2] not in eff.get(parts[1], set()):
+        return False
+    return kind != "translate_en" or relpath.endswith(".json")
+
 # As1「[B42]統一模組漢化」包（layer-B 主力上游）；固定納入 watch-list
 AS1_WORKSHOP_ID = "3556540080"
 AS1_MOD_ID = "B42ModTrans_CN"
@@ -1682,7 +1748,11 @@ def cmd_coverage(args) -> int:
         en_full: set[str] = set()
         lua_ids: set[str] = set()
         lits: set[str] = set()
+        # 只認引擎真的會載入的分支——舊版本夾／mod 根 media/ 的鍵補了也是死資料
+        eff = resolve_effective_branches(mods[wid].get("records", {}))
         for rid in mods[wid].get("records", {}):
+            if not is_effective(rid, eff):
+                continue
             kind, _, rest = rid.partition("|")
             relpath, _, key = rest.partition("|")
             if kind == "translate_en":
@@ -2133,7 +2203,35 @@ def cmd_self_test() -> int:
     assert not _is_real_key("IGUI_AnimalType_"), "情境12：動態組鍵前綴應濾掉"
     print("  ✅ 情境12 coverage 鍵形正規化（stem/canon/namespace 保留/真鍵過濾）")
 
-    print("\n✅ self-test 十二情境全通過。")
+    # 情境 13：B42 有效分支解析——2026-08-06 那批 899 鍵有 385 筆補在遊戲不載入的
+    # 分支上（43% 白做），其中 2 筆的 EN 還取自已改名的舊分支而直接譯錯。
+    assert _version_int("42") == 42000, "情境13：單段版本"
+    assert _version_int("42.15") == 42015, "情境13：兩段版本"
+    assert _version_int("42.20.2") == _version_int("42.20"), "情境13：第三段須丟棄"
+    assert _version_int("common") == 0, "情境13：非版本名"
+    ids = [
+        "translate_en|mods/M/common/media/lua/shared/Translate/EN/UI.json|K_common",
+        "translate_en|mods/M/42.12/media/lua/shared/Translate/EN/UI.json|K_old",
+        "translate_en|mods/M/42.15/media/lua/shared/Translate/EN/UI.json|K_best",
+        "translate_en|mods/M/42.99/media/lua/shared/Translate/EN/UI.json|K_future",
+        "translate_en|mods/M/media/lua/shared/Translate/EN/UI.json|K_root",
+        "translate_en|mods/M/42.15/media/lua/shared/Translate/EN/UI_EN.txt|K_legacy",
+        "lua_gettext|mods/M/42.15/media/lua/client/X.lua|K_lua",
+    ]
+    eff = resolve_effective_branches(ids)
+    assert eff["M"] == {"common", "42.15"}, f"情境13：應為 common+最佳版本夾，實得 {eff['M']}"
+    got = {rid.rsplit("|", 1)[-1] for rid in ids if is_effective(rid, eff)}
+    # K_old 舊版本夾、K_future 高於遊戲版本、K_root mod 根 media/ 都不載入；
+    # K_legacy 在有效版本夾內但 Translator 只讀 .json，執行期不存在
+    assert got == {"K_common", "K_best", "K_lua"}, f"情境13：有效集錯誤，實得 {got}"
+    # 無合格版本夾時只剩 common（引擎的 versionDir 指向不存在的 42.0）
+    only = resolve_effective_branches(["translate_en|mods/N/common/media/x/UI.json|K"])
+    assert only["N"] == {"common"}, "情境13：無版本夾時只認 common"
+    # 路徑不符 mods/<sub>/<tag>/ 形狀者放行——寧可高估也不要靜默丟棄
+    assert is_effective("translate_en|generated/UI.json|K", eff), "情境13：非分支路徑應放行"
+    print("  ✅ 情境13 B42 有效分支（common+最佳版本夾／排除 root 與 legacy .txt）")
+
+    print("\n✅ self-test 十三情境全通過。")
     return 0
 
 

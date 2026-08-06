@@ -27,6 +27,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import tracker  # noqa: E402 — 共用 B42 有效分支解析，避免兩支各自實作而分岔
+
 ROOT = Path(__file__).resolve().parent.parent
 BASE_GAME = Path("D:/SteamLibrary/steamapps/common/ProjectZomboid/media/lua/shared/Translate")
 KEY_RE = re.compile(r"^[A-Za-z0-9_.\-]+$")
@@ -116,11 +119,17 @@ def main() -> int:
         print(f"❌ tracker 無 {wid} 的基準，先跑 backfill-en", file=sys.stderr)
         return 1
     recs = state[wid]["records"]
+    # 只取引擎真的會載入的分支（common ＋ 唯一最佳版本夾），且 EN 必須來自 .json。
+    # 抽取器收全部分支，但拿舊版本夾／mod 根 media/ 的鍵去補譯＝死資料，
+    # 更糟的是舊分支可能用已改名或語意不同的鍵，會直接譯錯。規則出處見 tracker.py。
+    eff = tracker.resolve_effective_branches(recs)
 
     en_text: dict[str, str] = {}
     en_file: dict[str, str] = {}
     lua: set[str] = set()
     for rid, _h in recs.items():
+        if not tracker.is_effective(rid, eff):
+            continue
         kind, _, rest = rid.partition("|")
         rel, _, key = rest.partition("|")
         if kind == "lua_gettext" and KEY_RE.match(key) and not key.endswith("_"):
@@ -131,6 +140,8 @@ def main() -> int:
     mirror = ROOT / "sources/en" / f"{wid}.json"
     if mirror.is_file():
         for rid, v in _jload(mirror).items():
+            if not tracker.is_effective(rid, eff):
+                continue
             kind, _, rest = rid.partition("|")
             _, _, key = rest.partition("|")
             if kind == "translate_en" and isinstance(v, str):
