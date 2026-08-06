@@ -1,1455 +1,1455 @@
 {
- "_comment": "As1 lane vanilla 同名異值鍵的值層裁決台帳（2026-08-02 全量 triage，wf_1cdd592b；證據含 mod EN 實檔與 en_corpus_hashes sha256 反推）。verdict：style_ok=風格差異無害｜improvement=修正官方滯後/誤譯｜mod_intended=owner mod 重定義 EN、翻譯符合 mod 語意（對未裝 mod 玩家屬 JSON 共存固有取捨）｜harmful_fixed=確認有害已修（CH 落 sources/ch、CN 走 cn_overrides）｜uncertain=無法定位依據、保守不改。anchor＝裁決當時有效 CN 值 sha256[:16]（上游改值即裁決失效須重審，同 cn_overrides/lint_exemptions 錨點慣例）；新增碰撞由 verify [12] report-only 警示，裁決後補登本檔與 vanilla_keys.json as1_overlap_known。",
- "entries": {
-  "Brandenburg, KY.json|description": {
-   "verdict": "uncertain",
-   "anchor": "95b50380be044316",
-   "rationale": "ch/cn 整段替換為另一版城鎮介紹（「(新地點)」、Outside Notes 酒吧、桑德蘭山療養院之旅），與 van_en（四月龍捲風、PS Delilah 蒸汽船）完全不同。owner 為 29 個地圖模組聯集，高度疑似某地圖模組自帶重寫版 Brandenburg 描述，但本地僅 As1 CN 包(3556540080)有此文，兩處 workshop 根目錄均查無對應 EN 原文可引。保守不改，建議後續定位來源模組。"
-  },
-  "ContextMenu.json|ContextMenu_Container": {
-   "verdict": "uncertain",
-   "anchor": "7f6ca5a7742bd10e",
-   "rationale": "「此容器」偏離 van_en「Containers」（複數類別標籤），值直傳自 As1 上游包(3556540080)，兩處 workshop 目錄 rg 均查無任何 mod 重定義該鍵 EN。語意漂移輕微（仍是容器語境），保守不改。"
-  },
-  "ContextMenu.json|ContextMenu_Floor": {
-   "verdict": "style_ok",
-   "anchor": "c9a0955518c9967e",
-   "rationale": "Floor 譯 地面 與官方 地板 僅語感差，建造/放置語境皆可理解，無害。"
-  },
-  "ContextMenu.json|ContextMenu_LeftThigh": {
-   "verdict": "mod_intended",
-   "anchor": "6b99d6bb43793bad",
-   "rationale": "RandomClothing (3397182976) 重定義 EN 為 \"Wear on Left Thigh\"（_dl 實檔查證），ch/cn 戴在左大腿 為其忠實翻譯；對本體玩家（van_en on Left Thigh）語意亦相容。"
-  },
-  "ContextMenu.json|ContextMenu_PinkChevron": {
-   "verdict": "style_ok",
-   "anchor": "5d4be9f1c69c48d9",
-   "rationale": "「粉紅色V形花紋」為 van_en 'Pink Chevron' 的合理翻譯，與官方「粉色 V 形」僅風格差異。"
-  },
-  "ContextMenu.json|ContextMenu_PinkFloral": {
-   "verdict": "style_ok",
-   "anchor": "7b8a47ebe5902c5c",
-   "rationale": "ch「粉紅色花卉」與官方「粉色花卉」僅用詞差異；cn 與 van_cn 完全相同。無害。"
-  },
-  "ContextMenu.json|ContextMenu_RightThigh": {
-   "verdict": "mod_intended",
-   "anchor": "370af87afd256a4b",
-   "rationale": "RandomClothing (3397182976) EN 重定義為 \"Wear on Right Thigh\"，戴在右大腿 為其忠實翻譯；對原版玩家（van_en \"on Right Thigh\"）亦無害。"
-  },
-  "ContextMenu.json|ContextMenu_WearDown": {
-   "verdict": "harmful_fixed",
-   "anchor": "317804a435cdb608",
-   "rationale": "SpongieOpenJackets EN 實檔+hash 證實 'Wear Down'（=vanilla），無 mod 依據。「脫下」與 TakeOff 張冠李戴，於 vanilla 層序選單為反義級誤導，維持 harmful。"
-  },
-  "ContextMenu.json|ContextMenu_WearUp": {
-   "verdict": "harmful_fixed",
-   "anchor": "97f79c54df9178a6",
-   "rationale": "唯一重定義者 SpongieOpenJackets(2812326159) EN 實檔與 corpus hash 雙重證實為 'Wear Up'（與 vanilla 同值），無任何 mod 依據支持「穿上」。vanilla B42 此鍵為衣物層序選單（穿在外層），「穿上」丟失層序語意並與一般 Wear 混淆，維持 harmful。"
-  },
-  "Ekron, KY.json|description": {
-   "verdict": "mod_intended",
-   "anchor": "53a953eeefe4a0b4",
-   "rationale": "「Ekron, KY」為 29 個地圖 mod 同捆自帶的地圖描述檔（sources/mods/2788256295 等皆有），內容譯自 mod 地圖簡介（矮人工廠/社區大學/『就算是死』也得去的射擊場 對應 mod EN 'midget factory and community college... to die for shooting range'），「(新地點)」為 mod 地圖標記。B42 本體新增同名地圖才產生鍵碰撞，覆寫屬 mod 設計固有取捨。mod EN 正本未在本地 _dl，屬內容對應推證。"
-  },
-  "Fluids.json|Fluid_Container_SmallCarton": {
-   "verdict": "style_ok",
-   "anchor": "c76877ce38f42e9a",
-   "rationale": "小紙盒 與官方簡中 小纸盒 完全同義，較官方繁中 小盒 更明確，無害。"
-  },
-  "Fluids.json|Fluid_Name_SodaBlueberry": {
-   "verdict": "harmful_fixed",
-   "anchor": "8d7b299ce2212097",
-   "rationale": "uncertain 升級：corpus 全掃證實無任何 mod 定義此鍵，cn「苏打蓝莓」與已判 harmful 的 SodaGrape/Strewberry 完全同型（官方 蓝莓汽水），ch 免改，cn 側升級 confirmed_harmful 以求一致。"
-  },
-  "Fluids.json|Fluid_Name_SodaBubblegum": {
-   "verdict": "harmful_fixed",
-   "anchor": "8e37102c1693d1b8",
-   "rationale": "ch 與官方同值免改；cn「苏打泡泡糖」中心詞顛倒（van_en 'Bubblegum Soda'→官方 泡泡糖汽水）。全庫查無 mod 重定義，cn 側 harmful 維持，登記待上游。"
-  },
-  "Fluids.json|Fluid_Name_SodaGrape": {
-   "verdict": "harmful_fixed",
-   "anchor": "0c6167d451f57c8e",
-   "rationale": "ch 免改；cn「苏打葡萄」為 key 名直排劣譯，van_en 'Grape Soda'，全庫查無 mod 重定義。cn 側 harmful 維持。"
-  },
-  "Fluids.json|Fluid_Name_SodaLime": {
-   "verdict": "style_ok",
-   "anchor": "5460214cf02a8bd8",
-   "rationale": "ch 萊姆汽水 與官方繁中相同；cn 苏打青柠 語序不若官方 青柠汽水 順口但同指萊姆汽水飲品，屬風格差（cn 受 As1 parity 鎖定）。"
-  },
-  "Fluids.json|Fluid_Name_SodaPineapple": {
-   "verdict": "harmful_fixed",
-   "anchor": "7e9b5e62d1ab61ca",
-   "rationale": "uncertain 升級：同 SodaBlueberry，corpus 證實無定義 mod，cn「苏打菠萝」對官方 菠萝汽水 為同型劣譯，ch 免改，cn 側升級 confirmed_harmful。"
-  },
-  "Fluids.json|Fluid_Name_SodaPop": {
-   "verdict": "harmful_fixed",
-   "anchor": "d27e668a3ad2e6cd",
-   "rationale": "van_en 'Orange Soda'；corpus 與兩處 workshop 全庫查無任何 Fluid_Name_Soda* 重定義（含 Mixology/TwisTonFire 實檔複核）。「蘇打汽水」遺失口味資訊，維持 harmful。"
-  },
-  "Fluids.json|Fluid_Name_SodaStrewberry": {
-   "verdict": "harmful_fixed",
-   "anchor": "d15e0e7902d7e21b",
-   "rationale": "ch 免改；cn「苏打草莓」同型劣譯，van_en 'Strawberry Soda'，全庫查無 mod 重定義。cn 側 harmful 維持。"
-  },
-  "IG_UI.json|ContextMenu_WashAllClothing": {
-   "verdict": "style_ok",
-   "anchor": "a2f33017d9559e37",
-   "rationale": "清洗選單下的 All Clothing 擴寫為 清洗全部汙穢衣物，敘述式但語意正確（僅髒衣會被洗），對玩家無害。查無 mod EN（僅見於 As1 上游）。"
-  },
-  "IG_UI.json|ContextMenu_WashClothing": {
-   "verdict": "uncertain",
-   "anchor": "42b6e0495b7c0f17",
-   "rationale": "本體三語值皆為佔位符 %1（整條選單文字由程式代入），ch/cn 固定字串 清洗衣物 遺失 %1，顯示會退化為通用標籤但仍可理解；疑為洗衣類 mod 重定義，_unsorted 且 records 查無定義 mod，保守不改，但佔位符差異應納入 placeholder 稽核。"
-  },
-  "IG_UI.json|IGUI_CraftingUI_ShowAllVersion": {
-   "verdict": "style_ok",
-   "anchor": "b217840e21d55b79",
-   "rationale": "「顯示所有品質」略去「建築」，但在建造/製作 UI 語境語意無損，屬風格精簡。"
-  },
-  "IG_UI.json|IGUI_ItemCat_MaterialWeapon": {
-   "verdict": "style_ok",
-   "anchor": "898e1eb000127e56",
-   "rationale": "「材料-武器」vs 官方「材料/武器」僅分隔符差異。"
-  },
-  "IG_UI.json|IGUI_Lights": {
-   "verdict": "style_ok",
-   "anchor": "3b579010a041e11d",
-   "rationale": "Lights 譯 燈光 與官方 燈 僅風格差。"
-  },
-  "IG_UI.json|IGUI_MapOption_Symbols": {
-   "verdict": "mod_intended",
-   "anchor": "36a4a3b549df016b",
-   "rationale": "MinimapStyleOptions (3526517370) 重定義此鍵（en_corpus_hashes records 佐證；EN 字串雜湊未還原成功），「顯示小地圖標記」正是該 mod 的小地圖選項語意。附註：ch「示記」建議統一為「標記」（用字小瑕）。"
-  },
-  "IG_UI.json|IGUI_MapOption_TerrainImage": {
-   "verdict": "style_ok",
-   "anchor": "cb390731b2a0a05d",
-   "rationale": "「地形影像」vs 官方「地形圖片」，同義風格差。"
-  },
-  "IG_UI.json|IGUI_No": {
-   "verdict": "harmful_fixed",
-   "anchor": "0c70665b6eb65f1a",
-   "rationale": "全 corpus 唯一同鍵重定義者 The-Only-Cure(3580276809) EN 實檔讀出為 'No'（=vanilla），其餘命中皆 IGUI_No* 子字串誤報。核心是/否對話框否定鈕譯「取消」無任何依據且影響面極大，維持 harmful。"
-  },
-  "IG_UI.json|IGUI_PowerConsumption": {
-   "verdict": "style_ok",
-   "anchor": "d08ab72ea33a1067",
-   "rationale": "耗電量 是 Power Consumption 的準確譯法（不遜於官方 能量消耗），惟值尾多帶冒號，若原版 UI 自行補分隔符可能出現雙冒號，屬外觀小瑕疵非語意錯誤。"
-  },
-  "IG_UI.json|IGUI_VehicleNameCarLightsKST": {
-   "verdict": "harmful_fixed",
-   "anchor": "eae22b34f9ca66dc",
-   "rationale": "本審獨立以 sha256 反推複核：STFR(3459638181) EN hash ddb7f5d124a3 = 'Police Chevalier Nyala' 命中，mod 重定義成立、「警用版」結構有據；但 Nyala 官方譯名為 林羚（van_ch 騎士·林羚 (州警)），「林鈴」為同音誤植，mod 與本體語境皆錯，維持 harmful，僅修 羚 字並保留 mod 命名結構。"
-  },
-  "IG_UI.json|IGUI_VehicleNameModernCarLightsMeadeSheriff": {
-   "verdict": "style_ok",
-   "anchor": "1a4efbd4ede10bd3",
-   "rationale": "「飛馳·精英警用版」保留車型與警用語意，僅略去「米德縣」地名，對玩家無害的風格取捨。"
-  },
-  "IG_UI.json|IGUI_VehicleNamePickUpVanLightsStatePolice": {
-   "verdict": "style_ok",
-   "anchor": "4e21bd9c6531226c",
-   "rationale": "「飛馳·鬥牛士警用版」與官方「飛馳·鬥牛士 (州警)」同義，僅後綴格式差異。"
-  },
-  "IG_UI.json|IGUI_VehiclePartTrunkDoorOpened": {
-   "verdict": "mod_intended",
-   "anchor": "e45b2e5d2abd2532",
-   "rationale": "複核推翻原判：明確排除：ATA_Petyarbuilt(3403314193) 重定義同鍵，hash f396e7640ee1 反推命中 'Cattle Loading Ramp'（byte 級證實）——「牲畜運載坡道」為忠實翻譯，張冠李戴疑慮解除（屬 mod 沿用部件槽之設計）。"
-  },
-  "IG_UI.json|IGUI_VehiclePartWindowMiddleLeft": {
-   "verdict": "style_ok",
-   "anchor": "a3feaf845c0870dc",
-   "rationale": "左中部車窗 與官方 左中窗 同義，純風格差；damnlib (3171167894) 亦定義同鍵。無害。"
-  },
-  "IG_UI.json|IGUI_VehiclePartWindowMiddleRight": {
-   "verdict": "style_ok",
-   "anchor": "54c947e2f63d9b91",
-   "rationale": "「右中部車窗」為 'Middle Right Window' 合理翻譯，與官方「右中窗」僅詳略差。"
-  },
-  "IG_UI.json|IGUI_Washing_Soap": {
-   "verdict": "harmful_fixed",
-   "anchor": "247d71e18ca631b2",
-   "rationale": "corpus 全掃+修正 glob 重掃兩處 workshop 均無任何 mod 重定義此鍵。官方三語皆純標籤 Soap/肥皂，「所需肥皂:%1」在本體語境會裸露 %1，維持 harmful。"
-  },
-  "IG_UI.json|IGUI_Washing_WithoutSoap": {
-   "verdict": "style_ok",
-   "anchor": "9b759d7f9968dc92",
-   "rationale": "無肥皂, 勉強清洗 與 van_en \"Not Enough Soap (Slower)\" 大意一致（沿用 B41 \"Without Soap\" 口徑），遺失 (較慢) 資訊但不誤導，無害。"
-  },
-  "IG_UI.json|IGUI_Yes": {
-   "verdict": "style_ok",
-   "anchor": "fac2a67ad87807c4",
-   "rationale": "The-Only-Cure (3580276809) EN 亦為 \"Yes\"（與本體同值）。確定 是中文 UI 肯定鈕常見譯法，語意無誤；與 IGUI_No=否 的配對稍不對稱但無害。"
-  },
-  "IG_UI.json|IGUI_media_idle": {
-   "verdict": "uncertain",
-   "anchor": "b073db9c0bd6f2ed",
-   "rationale": "van_en 為操作提示 '- PRESS 'PLAY' TO START -'，ch/cn「就緒」改為狀態標籤，遺失按播放提示但非誤導（該處確為待機狀態）。_unsorted 且本地查無 mod EN 重定義（疑媒體播放類模組），保守不改。"
-  },
-  "Irvington, KY.json|description": {
-   "verdict": "mod_intended",
-   "anchor": "6925fd663a23ecc5",
-   "rationale": "同 Ekron：29 個地圖 mod 同捆的「Irvington, KY」描述檔，內容譯自 mod 地圖簡介（賽車賽道聞名/最『撕心裂肺』的車禍 對應 mod EN 'home of the famous race track... most heartbreaking crashes'），帶「(新地點)」mod 標記。B42 本體同名地圖碰撞屬 mod 設計固有。"
-  },
-  "ItemName.json|Base.3030Box": {
-   "verdict": "style_ok",
-   "anchor": "a4e738844c75b254",
-   "rationale": ".30-30 WCF彈藥 (整盒) 與 van_en 同義（WCF 即 .30-30 Winchester 全稱），值與 Firearms (2256623447) 自帶 CN 逐字一致，對所有玩家無害。"
-  },
-  "ItemName.json|Base.3030Carton": {
-   "verdict": "style_ok",
-   "anchor": "d7ec8160cc1e667f",
-   "rationale": "Guns93 (3183820077) EN 與本體同值 \"Carton of .30-30 Rounds\"；「.30-30子彈 (整箱)」僅為「箱裝…」的格式風格差。"
-  },
-  "ItemName.json|Base.308Box": {
-   "verdict": "style_ok",
-   "anchor": "cee4a3fb3b923f0a",
-   "rationale": "ch「7.62x51mm彈藥 (整盒)」與 van_en 'Box of 7.62x51mm Rounds' 語意一致（.308≈7.62x51）；owner Guns93(3183820077) mod EN 'Box of .308 Rounds' 亦同義。僅格式風格差。"
-  },
-  "ItemName.json|Base.308Bullets": {
-   "verdict": "mod_intended",
-   "anchor": "c5a93f92073ecc51",
-   "rationale": "owner 3633421539 (Escape from Kentucky) EN 重定義：\"Base.308Bullets\": \"7.62×51mm NATO Ammo\"；本包「7.62x51mm彈藥」相符，且同時兼容 van_en '7.62x51mm Round'，對未裝 mod 玩家亦無害。"
-  },
-  "ItemName.json|Base.308Carton": {
-   "verdict": "mod_intended",
-   "anchor": "6ba9e837c51f3d26",
-   "rationale": "Guns93 (3183820077) EN 重定義為 \"Carton of .308 Rounds\"，VFE (3611718925) 自帶 CN 亦為 .308弹药 (整件)；.308 Win 與 7.62x51 為同族彈，mod 設計取捨。"
-  },
-  "ItemName.json|Base.44Clip": {
-   "verdict": "mod_intended",
-   "anchor": "8a25a88a229ce21c",
-   "rationale": "EFK (3633421539) EN=\".44 Magnum 8-Round Magazine\"（實檔），Firearms (2256623447) EN=\"Desert Eagle Magazine\"（sha256 反推證實）。「.44手槍彈匣」符合 mod 語意；本體虛構名 B-F Magazine 的官方 ch 沙漠之鷹彈匣 本就指同物。"
-  },
-  "ItemName.json|Base.45Clip": {
-   "verdict": "mod_intended",
-   "anchor": "17cf28f258f3b5c5",
-   "rationale": "owner Escape from Kentucky(3633421539) scripts/Ammo/45.txt 重定義 DisplayName = '.45 Auto Magazine'，ch「.45手槍彈匣」符合 mod 泛化語意（vanilla 為 'M1911 Auto Magazine'）。"
-  },
-  "ItemName.json|Base.556Box": {
-   "verdict": "style_ok",
-   "anchor": "700b67530aec6945",
-   "rationale": "「5.56x45mm彈藥 (整盒)」是 van_en 'Box of 5.56x45mm Rounds' 的合理翻譯，僅格式異於官方「盒裝 5.56mm 子彈」。（Guns93 另重定義為 .223 Rem，本包未跟從，但現值對所有玩家無害。）"
-  },
-  "ItemName.json|Base.556Bullets": {
-   "verdict": "style_ok",
-   "anchor": "dc9318c4daea105d",
-   "rationale": "5.56x45mm彈藥 即 van_en \"5.56x45mm Round\" 的直譯（且與 Firearms 自帶 CN 一致），較官方繁中 5.56mm 子彈 更完整。"
-  },
-  "ItemName.json|Base.556Carton": {
-   "verdict": "style_ok",
-   "anchor": "afdf6b7d4f5317dc",
-   "rationale": "ch「5.56x45mm子彈 (整箱)」沿本體 van_en (5.56x45mm) 語意，僅格式風格差。附註：Guns93 EN 重定義為 \"Carton of .223 Rem Rounds\"，ch 未跟改，但 .223/5.56 實務同規格彈，對兩側玩家皆無實害。"
-  },
-  "ItemName.json|Base.556Clip": {
-   "verdict": "mod_intended",
-   "anchor": "4effce97b5619e9c",
-   "rationale": "owner Escape from Kentucky(3633421539) scripts/Ammo/556.txt 重定義 DisplayName = '.556 Magazine'（Guns93 RU 檔亦顯示 STANAG 系重定義），ch「5.56mm自動步槍彈匣」符合 mod 泛化語意（vanilla 為 'M16 Magazine'）。"
-  },
-  "ItemName.json|Base.9mmClip": {
-   "verdict": "mod_intended",
-   "anchor": "78bc68894e29214a",
-   "rationale": "owner 3633421539 EN 重定義：\"Base.9mmClip\": \"9mm Para 15-Round Magazine\"；本包「9mm手槍彈匣」符合 mod 泛化語意（原版限定 M9 彈匣）。"
-  },
-  "ItemName.json|Base.AmmoStraps": {
-   "verdict": "style_ok",
-   "anchor": "a51146fbb57fae58",
-   "rationale": "彈藥揹帶 與官方 彈藥帶 同義（揹帶為正確台繁用字），與 MFS (3633421539) 自帶 CN 弹药背带 一致，無害。"
-  },
-  "ItemName.json|Base.AssaultRifle": {
-   "verdict": "mod_intended",
-   "anchor": "3a50e07744a94f4e",
-   "rationale": "Firearms (2256623447) EN 重定義為 \"M16A1\"（sha256 反推證實）。「M16自動步槍」符合 mod 真實槍名語意（M16A1 為全自動步槍）；對本體玩家仍是 M16，無誤導。"
-  },
-  "ItemName.json|Base.AssaultRifle2": {
-   "verdict": "style_ok",
-   "anchor": "e2beffe613892059",
-   "rationale": "van_en 'M1A Rifle'；M1A 即 M14 的民用半自動衍生型，ch「M14半自動步槍」語意等同，官方 van_ch 亦作「M14 步槍」。風格差而已。"
-  },
-  "ItemName.json|Base.BeerBottle": {
-   "verdict": "mod_intended",
-   "anchor": "5b0b678e72c4054b",
-   "rationale": "owner 3577903007 (Vanilla Foods Expanded) EN 重定義：ItemName_Base.BeerBottle = \"Bottle of American Light Lager\"；「玻璃瓶 (美式淡拉格啤酒)」為其準確翻譯。"
-  },
-  "ItemName.json|Base.BeerCan": {
-   "verdict": "mod_intended",
-   "anchor": "1b0f37daa112ac59",
-   "rationale": "VFE (3577903007) EN 重定義為 \"Can of American Light Lager\"，易開罐 (美式淡拉格啤酒) 忠實對應 mod 語意。"
-  },
-  "ItemName.json|Base.BeerCanPack": {
-   "verdict": "mod_intended",
-   "anchor": "afe34616a06c9a66",
-   "rationale": "Vanilla Foods Expanded (3577903007) EN 重定義為 \"Pack of American Light Lager\"（_dl 實檔），「美式淡拉格啤酒 (整箱)」忠實對譯；本體玩家看到的箱裝罐裝啤酒被具體化為淡拉格，屬 mod 設計取捨。"
-  },
-  "ItemName.json|Base.BeerPack": {
-   "verdict": "mod_intended",
-   "anchor": "afe34616a06c9a66",
-   "rationale": "owner Vanilla Foods Expanded(3577903007) EN: ItemName_Base.BeerPack = 'Pack of American Light Lager'，ch「美式淡拉格啤酒 (整箱)」為其準確翻譯。"
-  },
-  "ItemName.json|Base.Biscuit": {
-   "verdict": "mod_intended",
-   "anchor": "466d86931f6740bd",
-   "rationale": "VFE (3577903007) EN 重定義：ItemName_Base.Biscuit = \"Buttermilk Biscuit\"；「酪乳司康」是美式 biscuit 的合理在地化。"
-  },
-  "ItemName.json|Base.BouillonCube": {
-   "verdict": "mod_intended",
-   "anchor": "90bd21cbf15907fb",
-   "rationale": "VFE EN 重定義為 \"Chicken Bouillion Cube\"，雞肉湯塊 符合 mod 語意。"
-  },
-  "ItemName.json|Base.Bullets357": {
-   "verdict": "mod_intended",
-   "anchor": "89a66c84a9262e23",
-   "rationale": "Firearms (2256623447) EN 重定義為 \".357 Round\"（sha256 反推證實），ch「.357彈藥」貼合 mod EN；對本體玩家僅少「馬格南」字樣，口徑資訊不失真。"
-  },
-  "ItemName.json|Base.Bullets357Box": {
-   "verdict": "style_ok",
-   "anchor": "72e79e1f1704f56f",
-   "rationale": "ch「.357彈藥 (整盒)」符合 van_en 'Box of .357 Magnum Rounds'（略去「馬格南」不影響辨識）。owner Brita's(2256623447) 不在本地，但無需 mod 依據即已合理。"
-  },
-  "ItemName.json|Base.Bullets357Carton": {
-   "verdict": "style_ok",
-   "anchor": "39bcc8109c38eee1",
-   "rationale": "「.357馬格南彈 (整箱)」與官方「箱裝.357馬格南子彈」同義，僅格式差異。owner 雖 _unsorted 但語意未偏離 van_en。"
-  },
-  "ItemName.json|Base.Bullets38": {
-   "verdict": "style_ok",
-   "anchor": "98913ea085d698ec",
-   "rationale": ".38彈藥 與 van_en \".38 Special Round\" 同物（官方簡中亦僅作 .38子弹），略去 Special 屬風格取捨，與 Firearms/MFS 自帶 CN 一致。"
-  },
-  "ItemName.json|Base.Bullets38Box": {
-   "verdict": "style_ok",
-   "anchor": "167cd22c16828048",
-   "rationale": "Guns93 與 Firearms EN 皆與本體同值 \"Box of .38 Special Rounds\"；「.38彈藥 (整盒)」為格式風格差（略去「特殊/Special」不影響辨識）。"
-  },
-  "ItemName.json|Base.Bullets38Carton": {
-   "verdict": "style_ok",
-   "anchor": "15434ce227e3960f",
-   "rationale": "owner Guns93(3183820077) mod EN 'Carton of .38 Special Rounds' 與 van_en 相同；ch「.38特殊彈 (整箱)」為 .38 Special 的正確直譯（官方略作「.38子彈」）。"
-  },
-  "ItemName.json|Base.Bullets44": {
-   "verdict": "mod_intended",
-   "anchor": "5ff3bbdd1ed995e9",
-   "rationale": "owner 3633421539 EN 重定義：\"Base.Bullets44\": \".44 Magnum Ammo\"；「.44 MAG彈藥」相符，亦兼容 van_en。"
-  },
-  "ItemName.json|Base.Bullets44Box": {
-   "verdict": "style_ok",
-   "anchor": "2eb04177ea3512d5",
-   "rationale": ".44 MAG彈藥 (整盒) 與 van_en \"Box of .44 Magnum Rounds\" 同義（MAG=Magnum 縮寫），與 Firearms/MFS 自帶 CN 一致。"
-  },
-  "ItemName.json|Base.Bullets44Carton": {
-   "verdict": "style_ok",
-   "anchor": "3419f58adc3f998f",
-   "rationale": "Guns93 EN 與本體同值 \"Carton of .44 Magnum Rounds\"；「.44馬格南彈 (整箱)」純格式風格差。"
-  },
-  "ItemName.json|Base.Bullets45": {
-   "verdict": "style_ok",
-   "anchor": "87146c36dfce8322",
-   "rationale": "van_en '.45 ACP Round'，ch「.45 ACP彈藥」準確；owner Guns93 mod EN '.45 Auto Rounds' 同義（.45 Auto = .45 ACP）。"
-  },
-  "ItemName.json|Base.Bullets45Box": {
-   "verdict": "mod_intended",
-   "anchor": "071384d48ba220fa",
-   "rationale": "owner 3633421539 EN 重定義：\"Base.Bullets45Box\": \"Boxed .45 ACP Ammo\"；「.45 ACP彈藥 (整盒)」相符。"
-  },
-  "ItemName.json|Base.Bullets45Carton": {
-   "verdict": "style_ok",
-   "anchor": "c124cb8f3c787ea1",
-   "rationale": ".45 ACP子彈 (整箱) 與 van_en 同義；Guns93 EN 亦僅改稱 \"Carton of .45 Auto Rounds\"（.45 Auto=.45 ACP），兩側口徑皆吻合。"
-  },
-  "ItemName.json|Base.Bullets9mm": {
-   "verdict": "style_ok",
-   "anchor": "656fc9d01e5ce3f7",
-   "rationale": "本體 9x19mm Round、Firearms EN \"9x19mm Parabellum Round\"（雜湊證實）、Guns93 \"9mm Round\"；ch「9x19mm彈藥」與三者皆相容，風格差。"
-  },
-  "ItemName.json|Base.Bullets9mmBox": {
-   "verdict": "style_ok",
-   "anchor": "e6193c1c021ca0bc",
-   "rationale": "ch「9x19mm彈藥 (整盒)」與 van_en 'Box of 9x19mm Rounds' 語意一致，僅格式風格差。"
-  },
-  "ItemName.json|Base.Bullets9mmCarton": {
-   "verdict": "style_ok",
-   "anchor": "ce84c02a082415c8",
-   "rationale": "「9x19mm子彈 (整箱)」是 van_en 'Carton of 9x19mm Rounds' 的合理翻譯（owner Guns93 的 EN 'Carton of 9mm Rounds' 亦相容），僅格式異於官方。"
-  },
-  "ItemName.json|Base.Burger": {
-   "verdict": "uncertain",
-   "anchor": "9c122ee050a0a97c",
-   "rationale": "招牌漢堡 較 van_en \"Burger\" 多了 招牌 修飾，疑食物系 mod 重定義但 VFE EN 查無 Base.Burger、_dl 僅 As1 上游含此值，無從查證；偏離輕微且無害，保守不改。"
-  },
-  "ItemName.json|Base.BurgerRecipe": {
-   "verdict": "uncertain",
-   "anchor": "5de18b45c41782b3",
-   "rationale": "van_en 僅 \"Burger\"，ch「招牌漢堡配方」多出 招牌/配方 語意；_unsorted 且 en_corpus_hashes 查無任何 mod 定義此鍵，無從查證來源，保守不改。"
-  },
-  "ItemName.json|Base.Burrito": {
-   "verdict": "mod_intended",
-   "anchor": "19991c40c9ae2023",
-   "rationale": "owner VFE(3577903007) EN: ItemName_Base.Burrito = 'Pork Burrito'，ch「豬肉捲餅」為其準確翻譯。"
-  },
-  "ItemName.json|Base.Cereal": {
-   "verdict": "mod_intended",
-   "anchor": "7437d2a77f249e4c",
-   "rationale": "VFE (3577903007) EN 重定義：ItemName_Base.Cereal = \"Corn Flakes\"；「玉米片」相符。"
-  },
-  "ItemName.json|Base.CerealBowl": {
-   "verdict": "mod_intended",
-   "anchor": "cec8a18cce99cddd",
-   "rationale": "VFE EN 重定義為 \"Bowl of Corn Flakes\"，碗 (玉米片) 符合 mod 語意（並沿官方簡中 碗 (麦片) 的括號慣例）。"
-  },
-  "ItemName.json|Base.Cheese": {
-   "verdict": "mod_intended",
-   "anchor": "dd6a0c5de9477ee3",
-   "rationale": "VFE 食物 (3577903007) EN 重定義為 \"Cheddar Cheese\"（實檔），「切達乳酪/切达奶酪」忠實對譯，mod 設計取捨。"
-  },
-  "ItemName.json|Base.ChokeTubeFull": {
-   "verdict": "style_ok",
-   "anchor": "348c47a09441ed51",
-   "rationale": "van_en 'Choke Tube - Full'（Guns93 mod EN 同文），ch「霰彈槍全縮口喉縮」語意正確（喉縮=choke 的華語槍械圈用語），僅較官方「收束器(全縮口)」冗長。"
-  },
-  "ItemName.json|Base.ChokeTubeImproved": {
-   "verdict": "style_ok",
-   "anchor": "09ae7b2ff93ab9f4",
-   "rationale": "「霰彈槍改良型喉縮」是 van_en 'Choke Tube - Improved' 的正確翻譯（喉縮=choke 專業術語，與 van_cn 用語一致），亦符 Guns93 EN 'Choke Tube, Improved'。僅與 van_ch「收束器(改良型)」術語取向不同。"
-  },
-  "ItemName.json|Base.ConeIcecream": {
-   "verdict": "mod_intended",
-   "anchor": "85f3193fc538dcd3",
-   "rationale": "VFE EN 重定義為 \"Vanilla Ice Cream Cone\"，香草冰淇淋甜筒 忠實對應。"
-  },
-  "ItemName.json|Base.ConeIcecreamMelted": {
-   "verdict": "mod_intended",
-   "anchor": "5e68bb081003ac9a",
-   "rationale": "VFE 食物 EN 重定義為 \"Vanilla Ice Cream Cone (Melted)\"（實檔），「香草冰淇淋甜筒 (融化)」忠實對譯。"
-  },
-  "ItemName.json|Base.Crackers": {
-   "verdict": "mod_intended",
-   "anchor": "db17d9dc54b0689d",
-   "rationale": "owner VFE(3577903007) EN: ItemName_Base.Crackers = 'Saltine Crackers'，ch「蘇打餅乾」即 Saltine 的標準譯法。"
-  },
-  "ItemName.json|Base.DoubleBarrelShotgun": {
-   "verdict": "mod_intended",
-   "anchor": "0dcbb16fd6a0a779",
-   "rationale": "「斯托格教練霰彈槍」= Stoeger Coach Gun 實槍名，只可能源自 owner 2256623447(firearmmod)/3611718925(VFExpansionRedux) 以實槍名重命名原版槍械的 EN；兩 mod 均不在本地 _dl/SteamLibrary 無法引原文，以品牌對應與 As1 譯鏈推證。"
-  },
-  "ItemName.json|Base.DoubleBarrelShotgunSawnoff": {
-   "verdict": "mod_intended",
-   "anchor": "20e37943c5caa2de",
-   "rationale": "Firearms (2256623447) 與 VFE (3611718925) 自帶 CN 均為 斯托格教练霰弹枪 (锯短) 且與本包逐字一致，屬該系 mod 將雙管槍重製為 Stoeger Coach Gun 真實槍名的設計。"
-  },
-  "ItemName.json|Base.GranolaBar": {
-   "verdict": "mod_intended",
-   "anchor": "107cb2b08bf0eb19",
-   "rationale": "VFE 食物 EN 重定義為 \"Peanut Butter Granola Bar\"（實檔），「花生醬格蘭諾拉棒」忠實對譯。"
-  },
-  "ItemName.json|Base.GunLight": {
-   "verdict": "mod_intended",
-   "anchor": "e942422ac88a7e5b",
-   "rationale": "owner Guns93(3183820077) mod EN 重定義 GunLight = 'Weapon Light w/ Clamp Mount'，ch「手槍戰術燈」符合戰術槍燈語意（「手槍」前綴疑承另一 owner Brita's 的定義，Brita's 檔不在本地）。"
-  },
-  "ItemName.json|Base.HolsterAnkle": {
-   "verdict": "uncertain",
-   "anchor": "d431f72c5686aa2a",
-   "rationale": "「T4S-Kin腳踝槍套」帶 mod 品牌前綴（疑 T4S 系戰術裝備 mod 重命名），owner=_unsorted 且兩處 workshop rg 查無定義該 EN 的 mod（僅見他包 DE/PTBR 譯文）。功能語意「腳踝槍套」未失真，淨危害低，保守不改。"
-  },
-  "ItemName.json|Base.HuntingRifle": {
-   "verdict": "mod_intended",
-   "anchor": "efcf6ffbf60ee253",
-   "rationale": "Firearms 與 VFE 自帶 CN 均為 狩猎步枪 且與本包一致，屬 mod 把虛構名 MSR788 改回通稱獵槍的重定義。"
-  },
-  "ItemName.json|Base.Icecream": {
-   "verdict": "mod_intended",
-   "anchor": "5fae9c7b72494ecc",
-   "rationale": "VFE 食物 EN 重定義為 \"Ice Cream - Vanilla\"（實檔），「香草冰淇淋」忠實對譯。"
-  },
-  "ItemName.json|Base.IcecreamMelted": {
-   "verdict": "mod_intended",
-   "anchor": "cf2ccd10224f3099",
-   "rationale": "owner VFE(3577903007) EN: ItemName_Base.IcecreamMelted = 'Vanilla Ice Cream (Melted)'，ch「香草冰淇淋 (融化)」為其準確翻譯。"
-  },
-  "ItemName.json|Base.Icing": {
-   "verdict": "mod_intended",
-   "anchor": "2a400bf5d6b17398",
-   "rationale": "VFE (3577903007) EN 重定義：ItemName_Base.Icing = \"Vanilla Frosting\"；「香草糖霜」相符。"
-  },
-  "ItemName.json|Base.JS14_Clip": {
-   "verdict": "mod_intended",
-   "anchor": "e5cdbee37743658f",
-   "rationale": "Firearms 自帶 CN 5.56mm自动步枪20发弹匣 與本包逐字一致，屬 mod 將虛構 JS-14 重製為真實 5.56 自動步槍體系的設計。"
-  },
-  "ItemName.json|Base.JS14_Rifle": {
-   "verdict": "mod_intended",
-   "anchor": "c7f18dae33673665",
-   "rationale": "Firearms (2256623447) EN 重定義為 \"Ruger Mini-14\"（sha256 反推證實），「儒格Mini-14半自動步槍」符合 mod 真名語意（半自動 為事實補充）；JS-14 的現實原型即 Mini-14，對本體玩家亦不張冠李戴。"
-  },
-  "ItemName.json|Base.JS3T_Shotgun": {
-   "verdict": "mod_intended",
-   "anchor": "4c4555f86bb9ce98",
-   "rationale": "複核推翻原判：排除：Firearms(2256623447) corpus 證實重定義同鍵且 hash 126e6ceab778 ≠ h('JS-3T Tactical Shotgun')，即 mod 確實改了 EN 名；該 mod 慣以真實槍名重命名（JS-3T 原型即 Benelli M3），「貝內利霰彈槍」符合其命名方案。"
-  },
-  "ItemName.json|Base.L92_Carbine": {
-   "verdict": "mod_intended",
-   "anchor": "bfa2f82c11750aa8",
-   "rationale": "「溫徹斯特1892步槍」對應原版虛構槍 L92 Carbine 的實槍原型 Winchester 1892，屬 owner 2256623447(firearmmod) 實槍名重命名設計；mod 未入本地無法引 EN 原文，以品牌對應推證。"
-  },
-  "ItemName.json|Base.L94_Rifle": {
-   "verdict": "mod_intended",
-   "anchor": "58cd4816e433459e",
-   "rationale": "Firearms 自帶 CN 温彻斯特1894步枪 與本包逐字一致，mod 將虛構 L94 重製為 Winchester 1894。"
-  },
-  "ItemName.json|Base.Laser": {
-   "verdict": "style_ok",
-   "anchor": "aab992c2f3c516ce",
-   "rationale": "van_en Laser Sight；本體此配件僅能裝手槍，「手槍雷射指示器」的 手槍 前綴屬事實補充、指示器/瞄準器 為用詞差，對所有玩家無誤導。owner 端 Guns93 EN=\"Laser Sight w/ Clamp Mount (Off)\"、EFK=\"Damaged Firearm Parts\" 各自重定義，Firearms EN 未還原，ch 取通用描述屬合理折衷。"
-  },
-  "ItemName.json|Base.Lettuce": {
-   "verdict": "uncertain",
-   "anchor": "59466aa9da246aef",
-   "rationale": "ch「克里斯生菜」偏離 van_en 'Lettuce'，疑為某模組 'Crisphead Lettuce'（結球萵苣）的音譯，但 _unsorted 且本地查無任何 mod 重定義（VFE/TwisTonFire EN 均無此鍵）。「克里斯」音譯品質不佳，惟語意仍是生菜，保守不改並建議定位來源。"
-  },
-  "ItemName.json|Base.M14Clip": {
-   "verdict": "mod_intended",
-   "anchor": "5e3b1d0c642300f3",
-   "rationale": "owner 3633421539 EN 重定義：\"Base.M14Clip\": \"7.62×51mm 20-Round M14 Magazine\"；「7.62mm自動步槍彈匣」符合 mod 語意。"
-  },
-  "ItemName.json|Base.MSR7T_Rifle": {
-   "verdict": "mod_intended",
-   "anchor": "aeb462a714722148",
-   "rationale": "Firearms 自帶 CN 狙击步枪 與本包逐字一致，屬 mod 重定義取捨。"
-  },
-  "ItemName.json|Base.Magazine": {
-   "verdict": "harmful_fixed",
-   "anchor": "df4e5e391972f4ec",
-   "rationale": "以 hash 反推複核：Firearms(2256623447) EN ItemName hash 9042ee84d0a2 = 'Magazine' 命中（與 vanilla 同值），且 corpus 中該 mod 無 script_item Magazine 覆寫紀錄（其彈匣為 223Clip/AKM_Mag 等自有 item）。可閱讀雜誌譯「彈匣」無任何依據且曝光度高，維持 harmful。"
-  },
-  "ItemName.json|Base.PastaPan": {
-   "verdict": "mod_intended",
-   "anchor": "31bbb9d8cac1aaf0",
-   "rationale": "owner VFE(3577903007) EN: ItemName_Base.PastaPan = 'Spaghetti'，ch「義大利麵 (烹飪中)」符合 mod 語意並附鍋中狀態註記。"
-  },
-  "ItemName.json|Base.PastaPanCopper": {
-   "verdict": "mod_intended",
-   "anchor": "31bbb9d8cac1aaf0",
-   "rationale": "VFE (3577903007) EN 重定義：ItemName_Base.PastaPanCopper = \"Spaghetti\"；「義大利麵 (烹飪中)」為 mod 名稱加鍋具語境註記，相符。"
-  },
-  "ItemName.json|Base.PastaPot": {
-   "verdict": "mod_intended",
-   "anchor": "31bbb9d8cac1aaf0",
-   "rationale": "VFE EN 重定義為 \"Spaghetti\"（鍋煮義麵狀態物品），義大利麵 (烹飪中) 貼合 mod 語意，(烹飪中) 為合理補述。"
-  },
-  "ItemName.json|Base.PastaPotForged": {
-   "verdict": "mod_intended",
-   "anchor": "31bbb9d8cac1aaf0",
-   "rationale": "VFE 食物 EN 重定義為 \"Spaghetti\"（實檔），「義大利麵 (烹飪中)」主體對譯正確、(烹飪中) 為譯者補充語境（本體該鍵掛在蒸煮鍋上），無害。"
-  },
-  "ItemName.json|Base.PillsVitamins": {
-   "verdict": "improvement",
-   "anchor": "df74f6a5a4a6d47d",
-   "rationale": "本體 van_en 已改為 'Caffeine Pills'，官方 van_ch「維他命」/van_cn「维生素」為未跟進的舊譯；ch「咖啡因片」/cn「咖啡因片」正確對應現行 van_en，屬修正官方滯後的改善型覆寫。"
-  },
-  "ItemName.json|Base.Pistol": {
-   "verdict": "mod_intended",
-   "anchor": "d384c2ac72342ec2",
-   "rationale": "「貝瑞塔手槍」對應 owner 2256623447(firearmmod) 將 M9 改為實槍名 Beretta 的設計（M9 本即 Beretta 92FS 軍規型，對未裝 mod 玩家也不算誤導）；mod 未入本地，以品牌對應推證。"
-  },
-  "ItemName.json|Base.Pistol2": {
-   "verdict": "style_ok",
-   "anchor": "1e90713e721301aa",
-   "rationale": "M1911手槍 與官方 M1911 手槍 僅空格差異。"
-  },
-  "ItemName.json|Base.Pistol3": {
-   "verdict": "mod_intended",
-   "anchor": "4cc6dca108c2b8dc",
-   "rationale": "EFK EN=\"Desert Eagle Pistol\"（實檔）、Firearms EN=\"Desert Eagle\"（sha256 證實）。ch 沙漠之鷹手槍 與官方 van_ch 完全同值（CH 側零覆寫效應）；僅 cn 側把官方 B-F 手枪 改為 沙漠之鹰手枪，符合 mod 真名語意。"
-  },
-  "ItemName.json|Base.Pizza": {
-   "verdict": "mod_intended",
-   "anchor": "757c58d94027f3b5",
-   "rationale": "owner VFE(3577903007) EN: ItemName_Base.Pizza = 'Slice of Cheese Pizza'，ch「乳酪披薩塊」為其準確翻譯。"
-  },
-  "ItemName.json|Base.PizzaWhole": {
-   "verdict": "mod_intended",
-   "anchor": "cd207f19ce9cf7fa",
-   "rationale": "VFE (3577903007) EN 重定義：ItemName_Base.PizzaWhole = \"Cheese Pizza\"；「乳酪披薩」相符。"
-  },
-  "ItemName.json|Base.Popsicle": {
-   "verdict": "mod_intended",
-   "anchor": "9a65077def56f68a",
-   "rationale": "VFE EN 重定義為 \"Raspberry Popsicle\"（42.18 改 \"Popsicle - Raspberry\"），覆盆子冰棒 符合 mod 語意。"
-  },
-  "ItemName.json|Base.RecoilPad": {
-   "verdict": "harmful_fixed",
-   "anchor": "3c1f90c9a746ab94",
-   "rationale": "Guns93(3183820077) EN 經 sources/en 實檔+hash 28b4dd8ea990='Rubber Recoil Pad' 證實；EFK(3633421539) 之 item RecoilPad 走 base:weaponpart 模板無改名。「Angled Grip」實為 WAR/GaelGunStore 的另一獨立鍵 Base.AngleGrip，「角形握把」屬鄰鍵張冠李戴，維持 harmful。"
-  },
-  "ItemName.json|Base.RedDot": {
-   "verdict": "mod_intended",
-   "anchor": "fff9bd919cc817f2",
-   "rationale": "owner Guns93(3183820077) mod EN 重定義 RedDot = 'Aimpoint (Red Dot)'（品牌化改名），確立此鍵屬 mod 重定義範疇；ch「EOTECH 1倍全息瞄準鏡」對應另一 owner Brita's 系的品牌定義。任一 owner 有重定義即算 mod_intended。"
-  },
-  "ItemName.json|Base.Revolver": {
-   "verdict": "mod_intended",
-   "anchor": "eab37737860d9256",
-   "rationale": "「.357左輪手槍」偏離 van_en 'Patrol Revolver'（van_ch 作 M625），對應 owner 2256623447(firearmmod) 對原版左輪的實槍化重命名/口徑重製；mod 未入本地無法引 EN 原文，以 As1 譯鏈（As1 依 mod 實際 EN 翻譯）推證。"
-  },
-  "ItemName.json|Base.Revolver_Long": {
-   "verdict": "mod_intended",
-   "anchor": "92d9049ff3e98618",
-   "rationale": "Firearms 與 VFE 自帶 CN 均為 .44马格南左轮手枪 且與本包一致；原版 Magnum 即 .44 口徑長管左輪，補述亦不誤導原版玩家。"
-  },
-  "ItemName.json|Base.Revolver_Short": {
-   "verdict": "mod_intended",
-   "anchor": "6e48b3777730595c",
-   "rationale": "Firearms (2256623447) EN 重定義為 \"S&W M36\"（sha256 反推證實），M36 即 .38 Special 短管左輪；「.38左輪手槍」符合 mod 語意，對本體玩家（SN38 亦為 .38 左輪）不誤導，僅失品牌風格。"
-  },
-  "ItemName.json|Base.Shoes_ArmyBoots": {
-   "verdict": "style_ok",
-   "anchor": "2381b7facea679ce",
-   "rationale": "owner Boots Expanded(2850935956) EN 'Military Boots' 與 van_en 相同；ch「軍用靴」正確（與 van_cn 同文，僅與 van_ch「軍靴」風格差）。"
-  },
-  "ItemName.json|Base.Shoes_ArmyBootsDesert": {
-   "verdict": "style_ok",
-   "anchor": "2029cc01deb4c571",
-   "rationale": "owner 2850935956 (SM4BootsExpanded) EN 與 van_en 完全相同 'Military Boots - Desert'；「軍用靴 (沙漠)」僅格式異於 van_ch「軍用沙漠靴」（與 van_cn 同構）。"
-  },
-  "ItemName.json|Base.Shoes_Black": {
-   "verdict": "improvement",
-   "anchor": "c15e52c4c18cb5e9",
-   "rationale": "Boots Expanded EN 維持 \"Shoes\"，但該物品即黑色皮鞋；黑鞋 與官方簡中 皮鞋 (黑) 口徑一致，較官方繁中籠統的 鞋子 更能區分色版，屬改善型覆寫。"
-  },
-  "ItemName.json|Base.Shoes_BlackBoots": {
-   "verdict": "style_ok",
-   "anchor": "56e59add8584d83c",
-   "rationale": "Boots Expanded (2850935956) EN 為 \"Boots\"/\"Boots - Long\"（實檔）；「黑靴」符合本體該物品實際外觀（黑色靴），並為該 mod 多色靴系提供區辨，無害的具體化。"
-  },
-  "ItemName.json|Base.Shoes_BlueTrainers": {
-   "verdict": "mod_intended",
-   "anchor": "5280b9880ed454a7",
-   "rationale": "owner Boots Expanded(2850935956) EN: Base.Shoes_BlueTrainers = 'Hitop Sneakers'，ch「高幫運動鞋」為其準確翻譯。"
-  },
-  "ItemName.json|Base.Shoes_Brown": {
-   "verdict": "mod_intended",
-   "anchor": "e1191beaa4d21533",
-   "rationale": "SM4BootsExpanded (2850935956) EN 重定義：\"Base.Shoes_Brown\": \"Booties\"；「短靴」相符（mod 把泛用 Shoes 改為短靴類）。"
-  },
-  "ItemName.json|Base.Shoes_CowboyBoots": {
-   "verdict": "style_ok",
-   "anchor": "6430abc27b7c1a2b",
-   "rationale": "Boots Expanded EN 同 van_en \"Western Boots\"；西部靴 為直譯，與官方 牛仔靴 僅風格差。"
-  },
-  "ItemName.json|Base.Shoes_CowboyBoots_Black": {
-   "verdict": "style_ok",
-   "anchor": "6430abc27b7c1a2b",
-   "rationale": "Boots Expanded EN 與本體同值 \"Western Boots\"（實檔）；「西部靴」為忠實直譯，官方 黑色牛仔靴 為意譯加色，兩者皆無害。"
-  },
-  "ItemName.json|Base.Shoes_CowboyBoots_Brown": {
-   "verdict": "style_ok",
-   "anchor": "6430abc27b7c1a2b",
-   "rationale": "van_en 'Western Boots'（Boots Expanded mod EN 同文），ch「西部靴」為正確直譯，官方另補「棕色牛仔靴」色系描述，屬風格取捨。"
-  },
-  "ItemName.json|Base.Shoes_CowboyBoots_Fancy": {
-   "verdict": "style_ok",
-   "anchor": "7d80fa6ccc4a5835",
-   "rationale": "mod EN 與 van_en 相同 'Western Boots - Embroidered'；「西部靴 (刺繡)」是更貼字面的翻譯，與官方「繡花牛仔靴」僅風格差異。"
-  },
-  "ItemName.json|Base.Shoes_CowboyBoots_SnakeSkin": {
-   "verdict": "style_ok",
-   "anchor": "88d9fbf1664110e1",
-   "rationale": "西部靴 (蛇皮) 與官方 蛇皮牛仔靴 同義，僅格式風格差。"
-  },
-  "ItemName.json|Base.Shoes_CrudeLeatherFootwear": {
-   "verdict": "style_ok",
-   "anchor": "e50b2a3d3b210649",
-   "rationale": "EN \"Crude Leather Footwear\"（mod 同值）；粗製皮靴 vs 官方 粗製皮鞋 僅 靴/鞋 用詞差，Boots Expanded 語境下取靴亦合理。"
-  },
-  "ItemName.json|Base.Shoes_Fancy": {
-   "verdict": "mod_intended",
-   "anchor": "bae05cebfa70aad0",
-   "rationale": "owner Boots Expanded(2850935956) EN: Base.Shoes_Fancy = 'Booties - Fancy'，ch「精緻短靴」符合 mod 重定義語意（vanilla 為 'Fancy Shoes'）。"
-  },
-  "ItemName.json|Base.Shoes_FlipFlop": {
-   "verdict": "style_ok",
-   "anchor": "e7495e9a7be553a5",
-   "rationale": "mod EN 與 van_en 相同 'Flip-flops'；ch「人字拖」語意正確惟台灣慣用「夾腳拖」（van_ch），屬可潤色的用詞取向，非錯誤。"
-  },
-  "ItemName.json|Base.Shoes_HikingBoots": {
-   "verdict": "style_ok",
-   "anchor": "f92fa1e7d5998f22",
-   "rationale": "徒步靴 為 Hiking Boots 合理譯法（台灣慣用 登山靴 較佳，屬用語風格差非錯譯）。"
-  },
-  "ItemName.json|Base.Shoes_Random": {
-   "verdict": "style_ok",
-   "anchor": "24788aed076fdc66",
-   "rationale": "Boots Expanded EN 與本體同值 \"Shoes\"（實檔）；「休閒鞋」輕度具體化（官方 cn 亦具體化為 皮鞋），無誤導。"
-  },
-  "ItemName.json|Base.Shoes_RedTrainers": {
-   "verdict": "mod_intended",
-   "anchor": "1b8bbcd25afdef67",
-   "rationale": "owner Boots Expanded(2850935956) EN: Base.Shoes_RedTrainers = 'Converse Sneakers'，ch「匡威運動鞋」為其準確翻譯。"
-  },
-  "ItemName.json|Base.Shoes_Wellies": {
-   "verdict": "style_ok",
-   "anchor": "8c1824d25c1e0786",
-   "rationale": "「橡膠雨靴」是 van_en 'Rubber Boots' 的合理翻譯，亦符 SM4 mod EN 'Boots - Rubber'；僅比官方「雨靴」多材質字。"
-  },
-  "ItemName.json|Base.Shotgun": {
-   "verdict": "mod_intended",
-   "anchor": "dc868a9f42ed371b",
-   "rationale": "Firearms 與 VFE 自帶 CN 均為 雷明顿M870霰弹枪 且與本包一致，mod 將虛構 JS-2000 重製為 Remington M870。"
-  },
-  "ItemName.json|Base.ShotgunSawnoff": {
-   "verdict": "mod_intended",
-   "anchor": "50dbe159452ab37b",
-   "rationale": "owner 為 Firearms (2256623447) 與 3611718925；EN 字串雜湊未反推成功，但 Firearms 對同批鍵全面真名化已獲 sha256 證實（M16A1、S&W M36、Ruger Mini-14、Remington Model 700、Desert Eagle 五鍵命中），JS-2000 的現實原型即 Remington 870，「雷明頓M870霰彈槍 (鋸短)」與該模式完全一致，判 mod 重定義之高信度推定。"
-  },
-  "ItemName.json|Base.ShotgunShells": {
-   "verdict": "style_ok",
-   "anchor": "e85f0c32b4e051a8",
-   "rationale": "ch「12GA霰彈槍彈藥」與 van_en '12g Round' 語意一致且更明確；owner Guns93 mod EN 'Buckshot Shell' 亦不衝突。"
-  },
-  "ItemName.json|Base.ShotgunShellsBox": {
-   "verdict": "style_ok",
-   "anchor": "dbe2ff55116039a1",
-   "rationale": "「12GA霰彈槍彈藥 (整盒)」兼容 van_en 'Box of 12g Rounds' 與 Guns93 EN 'Box of 12ga Buckshot'，語意無偏離，僅格式差異。"
-  },
-  "ItemName.json|Base.ShotgunShellsCarton": {
-   "verdict": "style_ok",
-   "anchor": "76aa6c03d7303381",
-   "rationale": "12號霰彈 (整箱) 與 van_en \"Carton of 12g Rounds\" 同義（12 gauge=12號鉛徑）；Guns93 EN 重定義 \"Carton of 12ga Buckshot\" 亦相容，兩側皆無害。"
-  },
-  "ItemName.json|Base.Socks_Ankle": {
-   "verdict": "improvement",
-   "anchor": "bfe5fbd225838a74",
-   "rationale": "物品為踝襪（Socks_Ankle），ch 短襪 較官方 van_ch 襪子 更精確，且與官方 van_cn 短袜 一致，屬改善型覆寫。"
-  },
-  "ItemName.json|Base.Socks_Ankle_Black": {
-   "verdict": "style_ok",
-   "anchor": "bfe5fbd225838a74",
-   "rationale": "van_en 'Socks'（Boots Expanded mod EN 同文），ch「短襪」正確，僅較官方少「(黑)」色註。"
-  },
-  "ItemName.json|Base.Socks_Ankle_White": {
-   "verdict": "mod_intended",
-   "anchor": "bfe5fbd225838a74",
-   "rationale": "SM4BootsExpanded (2850935956) EN 重定義：\"Base.Socks_Ankle_White\": \"Socks\"（去掉顏色後綴）；「短襪」相符，僅少了官方的「(白)」。"
-  },
-  "ItemName.json|Base.Socks_LegWarmers": {
-   "verdict": "style_ok",
-   "anchor": "f9e83175f03a33e0",
-   "rationale": "暖腿套 與官方 護腿襪套 均為 Legwarmers 合理譯法，風格差。"
-  },
-  "ItemName.json|Base.TVDinner": {
-   "verdict": "mod_intended",
-   "anchor": "adb895269350e7fd",
-   "rationale": "VFE 食物 EN 重定義為 \"TV Dinner - Lasagna\"（實檔），ch 千層麵 取其品項半段（略去 TV Dinner），符合 mod 語意；本體 微波食品 被具體化為千層麵屬 mod 取捨。"
-  },
-  "ItemName.json|Base.Teabag2": {
-   "verdict": "mod_intended",
-   "anchor": "65cb2cd8df05b632",
-   "rationale": "owner VFE(3577903007) EN: ItemName_Base.Teabag2 = 'Black Tea Bag'，ch「紅茶包」為其準確翻譯。"
-  },
-  "ItemName.json|Base.TrapperCarbine": {
-   "verdict": "mod_intended",
-   "anchor": "b19f4e2bf8442456",
-   "rationale": "複核推翻原判：排除：FirearmsBETA 42.15 corpus 證實重定義同鍵且 hash 118a7d7fd4e5 ≠ h('Trapper Carbine')，mod 確有改名；Trapper Carbine 原型即 Marlin 槓桿槍，「馬林45步槍」符合其真實槍名方案。"
-  },
-  "ItemName.json|Base.TritiumSights": {
-   "verdict": "mod_intended",
-   "anchor": "79ce476e611e954d",
-   "rationale": "MFS (3633421539) 自帶 CN 1倍红瞄准镜 與本包逐字一致，屬該 mod 將此鍵重用為 1 倍紅點鏡的設計；同 wid 下 EfK EN 亦重定義此鍵（\"Damaged Firearm Parts\"），可證此鍵屬 mod 重製範疇。"
-  },
-  "ItemName.json|Base.VarmintRifle": {
-   "verdict": "mod_intended",
-   "anchor": "993e7431a1ffe8cd",
-   "rationale": "Firearms (2256623447) EN 重定義為 \"Remington Model 700\"（sha256 反推證實），「雷明頓700狙擊步槍」符合 mod 真名語意（「狙擊」為通俗稱法，R700 為 M24/M40 狙擊槍基礎，輕度演繹可接受）。"
-  },
-  "ItemName.json|Base.WaterPotForgedPasta": {
-   "verdict": "mod_intended",
-   "anchor": "cefd23bb46042900",
-   "rationale": "owner VFE(3577903007) EN: Base.WaterPotForgedPasta = 'Cooking Pot with Spaghetti'，ch「燉鍋裝義大利麵」符合 mod 語意（鍋具稱呼與官方「粗製蒸煮鍋」屬風格差）。"
-  },
-  "ItemName.json|Base.WaterPotPasta": {
-   "verdict": "mod_intended",
-   "anchor": "cefd23bb46042900",
-   "rationale": "VFE (3577903007) EN 重定義：ItemName_Base.WaterPotPasta = \"Cooking Pot with Spaghetti\"；「燉鍋裝義大利麵」相符，亦兼容 van_en。"
-  },
-  "ItemName.json|Base.WaterSaucepanPasta": {
-   "verdict": "style_ok",
-   "anchor": "78a10cc53d992e9f",
-   "rationale": "VFE EN \"Saucepan with Spaghetti\" 與 van_en 同義；湯鍋裝義大利麵 與官方 裝有義大利麵的湯鍋 僅語序風格差。"
-  },
-  "ItemName.json|Base.WaterSaucepanPastaCopper": {
-   "verdict": "style_ok",
-   "anchor": "6d2092097f5a34e5",
-   "rationale": "VFE EN \"Copper Saucepan with Spaghetti\"（實檔）與本體語意等價；「銅鍋裝義大利麵」對兩者皆為忠實風格變體。"
-  },
-  "ItemName.json|Base.Wine": {
-   "verdict": "mod_intended",
-   "anchor": "8f05d5acaf663255",
-   "rationale": "owner VFE(3577903007) EN: ItemName_Base.Wine = 'Bottle of Chardonnay'，ch「玻璃瓶 (夏多內白葡萄酒)」為其準確翻譯（夏多內為台譯、cn 霞多丽為陸譯，各自正確）。"
-  },
-  "ItemName.json|Base.Wine2": {
-   "verdict": "mod_intended",
-   "anchor": "8f05d5acaf663255",
-   "rationale": "VFE (3577903007) EN 重定義：ItemName_Base.Wine2 = \"Bottle of Chardonnay\"；「玻璃瓶 (夏多內白葡萄酒)」正確對應——若無 mod 語境會像紅酒→白酒的重大誤譯，實為 mod 設計取捨。"
-  },
-  "ItemName.json|Base.WineBox": {
-   "verdict": "mod_intended",
-   "anchor": "7c8fc1ebbf39f520",
-   "rationale": "VFE EN 重定義為 \"Boxed Chardonnay\"（由紅酒改為夏多內白酒），紙盒 (夏多內白葡萄酒) 忠實對應 mod 語意。"
-  },
-  "ItemName.json|Base.WineRed_Boxed": {
-   "verdict": "mod_intended",
-   "anchor": "7c8fc1ebbf39f520",
-   "rationale": "VFE 食物 EN 重定義為 \"Boxed Chardonnay\"（實檔），「紙盒 (夏多內白葡萄酒)」忠實對譯；本體盒裝紅酒變白酒是 mod 設計取捨的固有代價。"
-  },
-  "ItemName.json|Base.WineWhite_Boxed": {
-   "verdict": "mod_intended",
-   "anchor": "7c8fc1ebbf39f520",
-   "rationale": "owner VFE(3577903007) EN: Base.WineWhite_Boxed = 'Boxed Chardonnay'，ch「紙盒 (夏多內白葡萄酒)」為其準確翻譯。"
-  },
-  "ItemName.json|Base.Yoghurt": {
-   "verdict": "mod_intended",
-   "anchor": "a5b8fe3352ace964",
-   "rationale": "VFE (3577903007) EN 重定義：ItemName_Base.Yoghurt = \"Vanilla Yogurt\"；「香草優格」相符。"
-  },
-  "ItemName.json|Base.x2Scope": {
-   "verdict": "mod_intended",
-   "anchor": "6444cd9e742c2bed",
-   "rationale": "Firearms 與 MFS 自帶 CN 均為 ACOG 2倍瞄准镜 且與本包一致，屬 mod 賦予真實型號的設計；倍率資訊保留，對原版玩家亦不誤導。"
-  },
-  "ItemName.json|Base.x4Scope": {
-   "verdict": "mod_intended",
-   "anchor": "5b2b93341bb9b7a0",
-   "rationale": "複核推翻原判：排除：Firearms hash fa966501090d ≠ h('x4 Scope')（Guns93 同鍵 hash 則=原版值），證實 Firearms 確實將 x4Scope 改名為他值（LVPO 系），As1 譯文對應該 mod 重定義而非誤譯 vanilla。"
-  },
-  "ItemName.json|Base.x8Scope": {
-   "verdict": "harmful_fixed",
-   "anchor": "fa85306173cf7dea",
-   "rationale": "uncertain 升級：三個 owner 的 EN 全數 hash 證實——Firearms 052ccfc484c5='x8 Scope'、Guns93 同值、EFK 69f366251719='Damaged 8X Scope'，無一支持「霍克10倍瞄準鏡」；倍率 8x→10x 誤導與品牌捏造成立，升級 confirmed_harmful（官方 van_ch 八倍鏡）。"
-  },
-  "Recipes.json|MakeSpikedClub": {
-   "verdict": "style_ok",
-   "anchor": "b61389ef8d66e6fd",
-   "rationale": "「製作帶刺棍棒」與官方「製作尖刺棍棒」同義，用詞差異。"
-  },
-  "Recipes.json|MakeTortillaChips": {
-   "verdict": "style_ok",
-   "anchor": "68e52727b930ea90",
-   "rationale": "Herbalist (2875059598) 自帶 CN 制作玉米片 與本包一致；官方繁中本身即意譯為 製作玉米脆片（非直譯 Slice Tortilla），本包僅少一 脆 字，風格差。"
-  },
-  "Tooltip.json|Tooltip_Antibiotics": {
-   "verdict": "mod_intended",
-   "anchor": "9d3a8b3ba87e9753",
-   "rationale": "Herbalist (2875059598) 重定義此鍵（en_corpus_hashes records 佐證；EN 雜湊未還原），「用於製作抗生素.」符合草藥合成 mod 的原料/合成提示語意；代價是本體抗生素的「無法防止殭屍化」警語被覆蓋，屬 mod 取捨。"
-  },
-  "Tooltip.json|Tooltip_Ginseng": {
-   "verdict": "style_ok",
-   "anchor": "af618d5abf420b44",
-   "rationale": "「服用以恢復耐力.」與 van_en 'Eat to restore endurance.' 語意一致（與 van_cn 同文，僅與 van_ch「食用可恢復」風格差）。"
-  },
-  "Tooltip.json|Tooltip_Laser": {
-   "verdict": "mod_intended",
-   "anchor": "59cfaf5d0f9c960d",
-   "rationale": "Guns93 (3183820077, sources/en) EN 重定義：\"Tooltip_Laser\": \"Weapon attachment. Improves firearm aiming time.\"；「減少瞄準時間」相符，「提高暴擊機率」為其他槍械 mod 版本的雷射效果描述。偏離 van_en 屬 mod 機制改動。"
-  },
-  "Tooltip.json|Tooltip_Literature_XpMultiplier": {
-   "verdict": "mod_intended",
-   "anchor": "59a326d951e10699",
-   "rationale": "複核推翻原判：推翻：corpus hash 證實 SimpleSkillBooks(3291799176, mods/SimpleSkillBooks/42.13/.../Tooltip.json) 重定義同鍵 EN，原判「_dl 全庫查無 mod 重定義」不成立；workshop 頁證實該 mod 機制即「技能書直接給固定經驗、Book1 於零經驗時給滿第一級所需 XP、停用原版倍率」，無 %1 的固定敘述正是該 mod tooltip 的翻譯。"
-  },
-  "Tooltip.json|Tooltip_Painkillers": {
-   "verdict": "mod_intended",
-   "anchor": "1f1a5ace0c152963",
-   "rationale": "同 Antibiotics：Herbalist 重定義此鍵（records 佐證），「用於製作止痛藥.」符合其合成語意。"
-  },
-  "Tooltip.json|Tooltip_PillsAntidepressant": {
-   "verdict": "uncertain",
-   "anchor": "b7851f76f6784003",
-   "rationale": "ch/cn 大量新增失眠治療機制（168 小時療程、助眠），顯為某失眠/藥物模組重定義之翻譯，且「減少恐慌」不符 vanilla 抗憂鬱藥效果；但 _unsorted 且本地查無 mod EN 出處。未裝該模組玩家會看到不存在機制的說明，建議定位來源後改判；暫保守不改。"
-  },
-  "Tooltip.json|Tooltip_PillsBetablocker": {
-   "verdict": "uncertain",
-   "anchor": "62887522691b561b",
-   "rationale": "文本自述「β受體阻斷劑/EHR追蹤剩餘劑量」顯為 EHR 醫療系統 mod 重定義的 tooltip（不可能是 van_en 'Reduces panic.' 的誤譯），但該 mod 未在本地兩處 workshop，無法引 EN 原文佐證，依規保守列 uncertain。"
-  },
-  "Tooltip.json|Tooltip_PillsSleeping": {
-   "verdict": "uncertain",
-   "anchor": "89b45e04d4a12641",
-   "rationale": "文案自述 EHR追蹤剩餘劑量（明顯為 EHR 系醫療 mod 的重定義文案），但 _dl 無法定位該 mod EN 佐證；對未裝 mod 玩家會看到含 mod 名的提示，屬輕度洩漏而非誤導，保守不改、建議補歸屬。"
-  },
-  "Tooltip.json|Tooltip_Scope": {
-   "verdict": "uncertain",
-   "anchor": "6b76ddae7467b9c0",
-   "rationale": "「提高暴擊機率和瞄準距離, 但增加瞄準時間.」為 B41 風格瞄具敘述，偏離 B42 van_en（增程/降近距精度）；_unsorted 且 records 查無定義 mod，無從查證，保守不改。"
-  },
-  "Tooltip.json|Tooltip_item_Unattached": {
-   "verdict": "harmful_fixed",
-   "anchor": "2e03e7c94fc7b46f",
-   "rationale": "uncertain 升級：corpus 唯一重定義者 FancyLanterns(3267733558) hash fa55674973ef='unattached' 命中（=vanilla 同值），mod 重定義假說排除。「取下」把狀態詞誤作動作詞、偏離官方 未附加，升級 confirmed_harmful。"
-  },
-  "Tooltip.json|Tooltip_weapon_Canon": {
-   "verdict": "mod_intended",
-   "anchor": "625beec4b59c7575",
-   "rationale": "Guns93 (3183820077, sources/en) EN 重定義：\"Tooltip_weapon_Canon\": \"Muzzle Device\"；「槍口」相符 mod 語意（官方 van_en 'Canon'=槍管）。"
-  },
-  "Tooltip.json|Tooltip_weapon_RecoilPad": {
-   "verdict": "improvement",
-   "anchor": "8728ec0ef8a71f57",
-   "rationale": "後坐力緩衝墊 較官方 緩衝墊 更完整還原 Recoil Pad 語意（EfK EN 亦僅作 \"Recoil pad\"），屬改善型覆寫。"
-  },
-  "Tooltip.json|Tooltip_weapon_Scope": {
-   "verdict": "style_ok",
-   "anchor": "682bd5545a781367",
-   "rationale": "EFK EN 與本體同值 \"Scope\"（實檔）；瞄準鏡 vs 官方 瞄具 純用詞差，無害。"
-  },
-  "Tooltip.json|Tooltip_weapon_Sling": {
-   "verdict": "style_ok",
-   "anchor": "b27756aea328ee2f",
-   "rationale": "「槍背帶」為 'Sling' 的準確譯法，與官方「槍帶」僅風格差。"
-  },
-  "UI.json|UI_ChestHair": {
-   "verdict": "mod_intended",
-   "anchor": "2870abbc3b7f707d",
-   "rationale": "BetterCharacterInfo (3488600400, D:/SteamLibrary) EN 重定義：\"UI_ChestHair\": \"Body Hair\"（42.15）/\"B.Hair\"（42.16+）；「體毛」相符 mod 將胸毛欄位泛化為體毛的設計。"
-  },
-  "UI.json|UI_Close": {
-   "verdict": "style_ok",
-   "anchor": "3fd47edce45b3603",
-   "rationale": "ch 與官方相同；cn 关闭 較官方 关闭界面 更貼 van_en \"Close\"，無害。"
-  },
-  "UI.json|UI_ClothingType_Back": {
-   "verdict": "style_ok",
-   "anchor": "7b027a689c73cf4c",
-   "rationale": "rasProfessions (2675128168) EN 與本體同值 \"Back\"（實檔）；後背/背部 同義風格差。"
-  },
-  "UI.json|UI_ClothingType_BeltExtra": {
-   "verdict": "style_ok",
-   "anchor": "6e6ae8a1cc9965cf",
-   "rationale": "「皮帶掛載」與官方「腰帶額外」均指 Belt Extra 掛載槽位，package 版反而較達意，屬風格差。"
-  },
-  "UI.json|UI_ClothingType_JacketSuit": {
-   "verdict": "mod_intended",
-   "anchor": "b0ab93fb3dd20cc0",
-   "rationale": "rasProfessions (2675128168, _dl) EN 重定義：UI_ClothingType_JacketSuit = \"Long Jacket\"；「大衣」相符 mod 語意（官方 van_en 'Suit Jacket'=西裝外套）。"
-  },
-  "UI.json|UI_ClothingType_Neck": {
-   "verdict": "style_ok",
-   "anchor": "e3b1367eddea9efd",
-   "rationale": "脖子 與官方簡中相同，與官方繁中 頸部 僅用語風格差。"
-  },
-  "UI.json|UI_ClothingType_Torso1Legs1": {
-   "verdict": "mod_intended",
-   "anchor": "4a5c60d2f7127fd0",
-   "rationale": "rasProfessions (2675128168) EN 重定義為 \"Long Johns\"（_dl 實檔），「貼身下裝」對應衛生衣褲語意；本體「軀幹與腿」部位標籤被具體化，屬 mod 取捨。"
-  },
-  "UI.json|UI_ClothingType_UnderwearExtra1": {
-   "verdict": "style_ok",
-   "anchor": "f08c1ac91140b68c",
-   "rationale": "van_en 現為 'Underwear Legs'，官方「內衣褲額外 1」為舊鍵名直譯、package「貼身衣物」泛化遺失 Legs——兩側同樣不精準，覆寫淨影響中性。"
-  },
-  "UI.json|UI_Intro1": {
-   "verdict": "mod_intended",
-   "anchor": "ae8be282e3224121",
-   "rationale": "BanditsWeekOne (3403180543, _dl) EN 重定義：\"UI_Intro1\": \"I STOOD ALONE WITH THE BURDEN\"；「我獨自揹負著重擔.」逐字相符，屬該 mod 改寫開場文的設計。"
-  },
-  "UI.json|UI_Intro2": {
-   "verdict": "mod_intended",
-   "anchor": "cc3f0eb167c0241e",
-   "rationale": "BanditsWeekOne (3403180543) EN 重定義為 \"OF A TRUTH TOO DARK TO BE SPOKEN,\"，關於一個過於黑暗、無法言說的真相, 為其忠實翻譯。惟屬開場字卡序列，全域覆寫會使未裝 Week One 的玩家看到原版/mod 混搭字卡，已另列 flags。"
-  },
-  "UI.json|UI_Intro3": {
-   "verdict": "mod_intended",
-   "anchor": "ea73b84f46ae4e71",
-   "rationale": "Bandits Week One (3403180543) 重寫開場三句，EN=\"A WHISPER THE WORLD REFUSED TO HEAR.\"（_dl 實檔），「世人不願傾聽的低語.」為精準對譯；代價是未裝 mod 玩家的標誌性開場白 THIS IS HOW YOU DIED 被替換，屬 mod 設計取捨。"
-  },
-  "UI.json|UI_Ok": {
-   "verdict": "style_ok",
-   "anchor": "fac2a67ad87807c4",
-   "rationale": "「確定」vs 官方「確認」，同義風格差。"
-  },
-  "UI.json|UI_btn_close": {
-   "verdict": "style_ok",
-   "anchor": "3fd47edce45b3603",
-   "rationale": "ch「關閉」與 van_ch 完全相同；cn「关闭」是 van_en 'CLOSE' 的合理翻譯，僅比官方 cn「关闭界面」精簡。"
-  },
-  "UI.json|UI_btn_next": {
-   "verdict": "style_ok",
-   "anchor": "a898d7c3d78cb1c0",
-   "rationale": "下一個 為 NEXT 的合理泛譯，與官方 下一頁 僅風格差。"
-  },
-  "UI.json|UI_modselector_auto": {
-   "verdict": "mod_intended",
-   "anchor": "b1b3ce0078a8b1e6",
-   "rationale": "ModLoadOrderSorter_b42 (3423660713) 重定義此鍵（records 佐證；EN 雜湊未還原），該 mod 功能即自動排序模組載入順序，「自動排序」貼合其語意；對本體玩家亦不失真（AUTO 鈕）。"
-  },
-  "UI.json|UI_modselector_showEnabledMods": {
-   "verdict": "style_ok",
-   "anchor": "e6296bcbf9a3f78d",
-   "rationale": "ch 與官方完全相同；cn 僅少一「的」字，純風格差。"
-  },
-  "UI.json|UI_optionscreen_binding_Hotbar 6": {
-   "verdict": "style_ok",
-   "anchor": "34a595f6648b00d8",
-   "rationale": "僅「快捷欄6」與「快捷欄 6」的空格差異。"
-  },
-  "UI.json|UI_optionscreen_binding_Hotbar 7": {
-   "verdict": "style_ok",
-   "anchor": "7675c28fb909e119",
-   "rationale": "快捷欄7 與官方 快捷欄 7 僅空格差異。"
-  },
-  "UI.json|UI_optionscreen_binding_Hotbar 8": {
-   "verdict": "style_ok",
-   "anchor": "1992c3f8dff99d75",
-   "rationale": "僅「快捷欄8」與官方「快捷欄 8」的空格差；Authentic Z 亦定義同鍵。無實質影響。"
-  },
-  "UI.json|UI_prof_unemployed": {
-   "verdict": "style_ok",
-   "anchor": "cbd2976057800cc4",
-   "rationale": "van_en 已改為 'Custom Occupation'，官方 van_ch「無業」與 package「無業遊民」同屬未跟進的舊譯；cn 側「无业游民」與官方 van_cn 完全相同。覆寫淨影響中性，僅 ch 風格差。"
-  },
-  "UI.json|UI_profdesc_Mechanics": {
-   "verdict": "mod_intended",
-   "anchor": "9aee54da73b0e694",
-   "rationale": "MoreDescriptionForTraits 家族重定義：B41 版(2685168362, _dl)已證該 mod 重定義多個 UI_profdesc_*（chef/electrician/metalworker 等），本列「已掌握知識/搜尋加成」段落是其 B42 版職業描述的標準簽名，首句仍忠於 van_en。B42 版未入 _dl，屬家族推證。"
-  },
-  "UI.json|UI_profdesc_electrician": {
-   "verdict": "mod_intended",
-   "anchor": "fd3f5a7614259288",
-   "rationale": "MoreDescriptionForTraits (2685168362) EN 重定義此鍵（\"Can operate generators.<br>Knows how to make remote controllers, remote triggers and timers...\"），本包為其擴充版翻譯：首句忠於原版，後附配方/搜尋加成明細，對原版玩家為補充資訊。"
-  },
-  "UI.json|UI_profdesc_engineer": {
-   "verdict": "mod_intended",
-   "anchor": "02a2f4041e9cdc48",
-   "rationale": "Detailed Descriptions for Occupations and Traits (3387957272) 重寫本體職業描述（records 佐證此鍵），ch 為其「已掌握知識/搜尋加成」詳述樣式，內容為本體 B42 工程師實際知識與加成的文件化，對所有玩家近乎改善。"
-  },
-  "UI.json|UI_profdesc_lumberjack": {
-   "verdict": "improvement",
-   "anchor": "dc61edce8522c517",
-   "rationale": "官方 van_ch 漏譯第二句（砍樹肌肉勞損較少），package ch 補齊兩句且皆正確；後附「搜尋加成」清單與本體覓食系統的職業加成方向一致（伐木工找木柴加成為本體真值）。比官方更完整。"
-  },
-  "UI.json|UI_profdesc_metalworker": {
-   "verdict": "mod_intended",
-   "anchor": "dd4899dfe9eb97cc",
-   "rationale": "MoreDescriptionForTraits (2685168362, _dl) EN 檔直接含 UI_profdesc_metalworker 重定義；本列為其 B42 版（附配方清單/搜尋加成），首句忠於 van_en。"
-  },
-  "UI.json|UI_profdesc_parkranger": {
-   "verdict": "mod_intended",
-   "anchor": "53f4160322783f45",
-   "rationale": "MDFT EN 重定義此鍵（\"Allows much faster movement...Knows all trap recipes.\"），本包首句忠於原版並附陷阱配方與搜尋加成明細。"
-  },
-  "UI.json|UI_profdesc_unemployed": {
-   "verdict": "mod_intended",
-   "anchor": "f129217066d71137",
-   "rationale": "Detailed Descriptions (3387957272) 定義此鍵（records 佐證）；ch 首句即現行 van_en 的忠實翻譯（官方 van_ch「8 免費特質點數.」反而過時），後接詳述加成，近乎改善。"
-  },
-  "UI.json|UI_trait_AdrenalineJunkieDesc": {
-   "verdict": "mod_intended",
-   "anchor": "1463cc9b31c9ac94",
-   "rationale": "複核推翻原判：排除：corpus 證實 Detailed Descriptions(3387957272) 與 SomewhatTraits(3498347699) 均重定義同鍵；SomewhatTraits 明文「expands 14 vanilla traits」，附加機制（依近距殭屍提升耐力恢復）符合其擴充設計，非 As1 捏造。"
-  },
-  "UI.json|UI_trait_AllThumbsDesc": {
-   "verdict": "mod_intended",
-   "anchor": "6dae82e4e0abeaeb",
-   "rationale": "MDFT (2685168362) EN 檔含 UI_trait_AllThumbsDesc 重定義；本列首段忠實翻譯 B42 van_en，附加數值段（+100% 轉移/+20% 瞄準延遲）為 mod B42 版描述。"
-  },
-  "UI.json|UI_trait_ArtisanDesc": {
-   "verdict": "improvement",
-   "anchor": "a83ae456a0675125",
-   "rationale": "首句忠實對應 van_en，後附之玻璃工藝配方清單為 B42 該特質實際授予的已知配方，對玩家為正確補充；本地 MDFT 版本（B41 期）未含此 B42 鍵，判為改善型擴寫。"
-  },
-  "UI.json|UI_trait_AsthmaticDesc": {
-   "verdict": "mod_intended",
-   "anchor": "877d0d9da251f137",
-   "rationale": "Detailed Descriptions (3387957272) 定義此鍵（records 佐證），ch 為首句忠實翻譯加 +40%/+20% 數值詳述樣式；另一定義者 MoreDescriptionForTraits 的數值 (+100%/+30%) 不符，來源指向前者。"
-  },
-  "UI.json|UI_trait_BlacksmithDesc": {
-   "verdict": "improvement",
-   "anchor": "b8266b62217c0523",
-   "rationale": "主句正確翻譯 van_en，附加「已掌握知識」清單為本體 B42 鍛造職業/特質實際授予配方（熔爐、高爐、圓頂窯等皆 vanilla B42 內容）的文件化增補，對所有玩家為額外正確資訊。清單逐項數值未逐一驗證，方向無誤。"
-  },
-  "UI.json|UI_trait_BurglarDesc": {
-   "verdict": "mod_intended",
-   "anchor": "2f141f26a2580eaa",
-   "rationale": "複核推翻原判：明確排除：P4ThiefExpansion(2596620950) EN 實檔讀出 'Can steal, stealth move, and hotwire vehicles. Less chance of breaking window locks.'——「可以偷竊, 潛行」為 mod 重定義的忠實翻譯，非憑空捏造。"
-  },
-  "UI.json|UI_trait_ConspicuousDesc": {
-   "verdict": "mod_intended",
-   "anchor": "20675478cae55e68",
-   "rationale": "MDFT EN 重定義（\"More likely to be spotted by zombies.<br>(+100% chance of getting spotted...)\"），本包數值與其一致。"
-  },
-  "UI.json|UI_trait_Cook2Desc": {
-   "verdict": "mod_intended",
-   "anchor": "d04921eddee3a268",
-   "rationale": "Detailed Descriptions (3387957272) 定義此鍵（records 佐證），ch 為其配方清單+搜尋加成詳述樣式，內容文件化本體廚師已知配方，近乎改善。"
-  },
-  "UI.json|UI_trait_CookDesc": {
-   "verdict": "improvement",
-   "anchor": "0a9011a973709838",
-   "rationale": "主句正確，附加配方清單為本體 B42 廚師授予配方（蛋糕麵糊、派皮、麵糰等 vanilla 內容）與覓食加成的文件化增補；ch 並將 cn 的「曲奇」在地化為「餅乾」。屬改善型覆寫。"
-  },
-  "UI.json|UI_trait_CraftyDesc": {
-   "verdict": "style_ok",
-   "anchor": "8830f2d7b5f96c50",
-   "rationale": "「製作技能的經驗獲取增加」與 van_en 'Increased XP gains for Crafting skills.' 完全同義，僅措辭異於官方。"
-  },
-  "UI.json|UI_trait_DesensitizedDesc": {
-   "verdict": "mod_intended",
-   "anchor": "23dcabd09001b38d",
-   "rationale": "MDFT EN 重定義（\"Does not reach states of panic.<br>(Except for night terrors.)\"），本包 免疫恐慌/更容易做噩夢 等對應其機制補述。"
-  },
-  "UI.json|UI_trait_DexterousDesc": {
-   "verdict": "mod_intended",
-   "anchor": "78266b8f60db8cd6",
-   "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；首三行忠實對譯 van_en，後接 +50%/-20% 等詳述，近乎改善。"
-  },
-  "UI.json|UI_trait_DisorganizedDesc": {
-   "verdict": "improvement",
-   "anchor": "4206b597ec42b47b",
-   "rationale": "官方 van_ch 漏譯第二句（影響世界容器和背包、不影響主物品欄；van_cn 有），package ch 補齊並附「-30% 容量」——即本體 Disorganized 實際數值。比官方 CH 更完整正確。"
-  },
-  "UI.json|UI_trait_FastHealerDesc": {
-   "verdict": "mod_intended",
-   "anchor": "70fd66ab52c90edf",
-   "rationale": "MDFT (2685168362) EN 檔含 UI_trait_FastHealerDesc 重定義；首句忠於 van_en，附加「-40% 傷害嚴重度」為 mod 數值揭示。"
-  },
-  "UI.json|UI_trait_FastLearnerDesc": {
-   "verdict": "mod_intended",
-   "anchor": "f2f5017f4541ebb3",
-   "rationale": "MDFT EN 重定義（\"+30% xp for all skills, except Fitness and Strength\"），本包數值一致且正確。"
-  },
-  "UI.json|UI_trait_FastReaderDesc": {
-   "verdict": "mod_intended",
-   "anchor": "47d972ba2a95b3f7",
-   "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；忠實首句加 +30% 閱讀速度（本體實值）詳述，近乎改善。"
-  },
-  "UI.json|UI_trait_HemophobicDesc": {
-   "verdict": "mod_intended",
-   "anchor": "a46e9fd3e93bc21d",
-   "rationale": "複核推翻原判：推翻：corpus hash 證實 SomewhatTraits(3498347699) 與 Detailed Descriptions(3387957272) 均重定義同鍵 EN，且 SomewhatTraits workshop 頁明文「Removes the restriction of First Aid actions on other players from 'Fear of Blood'」——該 mod 真的移除了不可替他人急救限制，「在為自己或他人進行急救時會感到恐慌」正是其重製後語意的忠實翻譯，原判「查無 mod 重定義依據」不成立。"
-  },
-  "UI.json|UI_trait_HerbalistDesc": {
-   "verdict": "mod_intended",
-   "anchor": "e2e3d1541b4fa8fa",
-   "rationale": "MDFT (2685168362) EN 檔含 UI_trait_HerbalistDesc 重定義；本列「已掌握知識/搜尋加成」為其 B42 版簽名，首句忠於 van_en。"
-  },
-  "UI.json|UI_trait_HighThirstDesc": {
-   "verdict": "mod_intended",
-   "anchor": "54b9922a6d65c9b6",
-   "rationale": "MDFT EN 重定義（\"+100% thirst.\"），本包一致。"
-  },
-  "UI.json|UI_trait_IlliterateDesc": {
-   "verdict": "improvement",
-   "anchor": "47125a268f5ace90",
-   "rationale": "ch「無法閱讀任何書籍或世界上的文字.」是現行 van_en (Cannot read any books or in-world text.) 的忠實完整翻譯；官方 van_ch「無法閱讀書籍.」漏了 in-world text，屬改善型覆寫。"
-  },
-  "UI.json|UI_trait_InconspicuousDesc": {
-   "verdict": "improvement",
-   "anchor": "8447f572d5fe60f9",
-   "rationale": "主句正確，附加「-50% 被發現的機率」與本體 Inconspicuous 實際值一致（MoreDescriptionForTraits mod EN 亦文件化為 -50%），屬正確的資訊增補。"
-  },
-  "UI.json|UI_trait_InsomniacDesc": {
-   "verdict": "mod_intended",
-   "anchor": "db22835771069450",
-   "rationale": "MDFT (2685168362) EN 檔含 UI_trait_InsomniacDesc 重定義（B41 版：'Sleeps less hours, and 50% slower loss of tiredness...'）；本列「睡眠中斷會導致壓力」對應 B42 版睡眠機制描述。首句「逐漸消退」弱化了 van_en 的 slow 語感，但屬 mod 描述體系非誤譯。"
-  },
-  "UI.json|UI_trait_InventiveDesc": {
-   "verdict": "style_ok",
-   "anchor": "b2682914a8464a2b",
-   "rationale": "僅為 van_en 的改寫直譯，語意與官方一致。"
-  },
-  "UI.json|UI_trait_IronGutDesc": {
-   "verdict": "mod_intended",
-   "anchor": "d7195c1d0ee71516",
-   "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；首句忠實加 -50% 詳述與雞蛋豁免（本體機制文件化），近乎改善。"
-  },
-  "UI.json|UI_trait_LessSleepDesc": {
-   "verdict": "improvement",
-   "anchor": "460e246b8575f8bd",
-   "rationale": "主句正確；附加值中 -30% 疲勞速度、+25% 睡眠疲勞恢復與 MoreDescriptionForTraits EN 文件一致（本體真值），-25% 睡眠時長一項未能獨立驗證但無矛盾跡象。整體屬文件化改善。"
-  },
-  "UI.json|UI_trait_LowThirstDesc": {
-   "verdict": "mod_intended",
-   "anchor": "238a03889287c200",
-   "rationale": "MDFT (2685168362) EN 檔含 UI_trait_LowThirstDesc 重定義；首句忠於 van_en，附加「-50% 口渴度」為 mod 數值揭示。"
-  },
-  "UI.json|UI_trait_MasonDesc": {
-   "verdict": "improvement",
-   "anchor": "02603aa29fee67f3",
-   "rationale": "首句忠於 van_en，後附熔爐/窯建造配方清單為 B42 該特質實際授予內容，屬正確補充（本地 MDFT B41 版未含此鍵）。"
-  },
-  "UI.json|UI_trait_Mechanics2Desc": {
-   "verdict": "mod_intended",
-   "anchor": "9be789b269570bdb",
-   "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；首句即 van_en 忠實翻譯，加機械學知識清單詳述，近乎改善。"
-  },
-  "UI.json|UI_trait_MechanicsDesc": {
-   "verdict": "improvement",
-   "anchor": "aac6dfde80b24983",
-   "rationale": "主句正確，附加「基礎機械學/中級機械學」即本體機械師實際授予的配方知識（vanilla 事實），屬正確的文件化增補。"
-  },
-  "UI.json|UI_trait_MetalWorkerDesc": {
-   "verdict": "improvement",
-   "anchor": "d00062011683001b",
-   "rationale": "「可以將搜尋到的金屬焊接成物品和路障」比 van_ch「可以焊接金屬來製造物品和進行加固」更完整：補回 van_en 的 foraged（搜尋到的）與 barricades（路障），屬改善型覆寫。"
-  },
-  "UI.json|UI_trait_MoreSleepDesc": {
-   "verdict": "mod_intended",
-   "anchor": "ef3403d51d03020f",
-   "rationale": "MDFT EN 重定義（\"+30% tiredness rate.<br>-18% tiredness recovery rate when sleeping.\"），本包數值對應。"
-  },
-  "UI.json|UI_trait_NightVisionDesc": {
-   "verdict": "mod_intended",
-   "anchor": "fb06df4783778bf7",
-   "rationale": "Detailed Descriptions 定義此鍵（records 佐證），詳述樣式；唯 ch/cn 內「+20@」疑為「+20%」誤植，建議 sources/ch 順手修正該字元。"
-  },
-  "UI.json|UI_trait_Pacifist": {
-   "verdict": "style_ok",
-   "anchor": "e130e9cca33cd71f",
-   "rationale": "ch「和平主義者」與官方 van_ch 完全相同；僅 cn「和平主义者」與 van_cn「爱好和平」風格差。van_en 已改為 'Reluctant Fighter' 但官方各語系亦未跟進，非 package 特有問題。"
-  },
-  "UI.json|UI_trait_PacifistDesc": {
-   "verdict": "mod_intended",
-   "anchor": "3a9fe548454350f2",
-   "rationale": "MDFT (2685168362) EN 檔含 UI_trait_PacifistDesc 重定義；首句忠於 van_en 'Decreased combat XP gains.'（且比 van_ch「不太熟悉武器」更準），附技能清單為 mod 數值揭示。"
-  },
-  "UI.json|UI_trait_PackmuleDesc": {
-   "verdict": "mod_intended",
-   "anchor": "31ae82523b875d0d",
-   "rationale": "MDFT EN 重定義（\"Increased container inventory capacity.(+30%...)\"），本包 +30% 容量 一致。"
-  },
-  "UI.json|UI_trait_ScoutDesc": {
-   "verdict": "mod_intended",
-   "anchor": "b1821aafd8f526c3",
-   "rationale": "Detailed Descriptions (3387957272) 定義此鍵（records 佐證），清單樣式與其一致（童軍知曉釣具製作等）；唯 ch 未含 van_en 核心句「生火更快」，EN 未還原無法確認是翻譯缺漏或 mod 原文如此，列入複核。"
-  },
-  "UI.json|UI_trait_SlowHealerDesc": {
-   "verdict": "mod_intended",
-   "anchor": "54dd3a8bac7d154a",
-   "rationale": "複核推翻原判：排除：Detailed Descriptions(3387957272) 重定義同鍵，其格式明文為「原版描述保留於首行＋換行後附數值（取自遊戲檔案）」，與 As1『主句+<br><br>+數值』結構完全吻合；+60% 為該 mod 的 B42 實測值，與 MDFT B41 的 +20% 屬不同 mod 不同版本，矛盾不成立。"
-  },
-  "UI.json|UI_trait_SlowLearnerDesc": {
-   "verdict": "mod_intended",
-   "anchor": "f8af806942008d78",
-   "rationale": "MDFT (2685168362) EN 檔含 UI_trait_SlowLearnerDesc 重定義；首句忠於 van_en，附「-30% 所有技能經驗」為 mod 數值揭示。"
-  },
-  "UI.json|UI_trait_SlowReaderDesc": {
-   "verdict": "mod_intended",
-   "anchor": "b97befc433127c87",
-   "rationale": "MDFT EN 重定義（\"-30% reading speed.\"），本包一致。"
-  },
-  "UI.json|UI_trait_SmokerDesc": {
-   "verdict": "style_ok",
-   "anchor": "b9ebc9aa8dddfe21",
-   "rationale": "ch 兩句與 van_en 逐句對應（不抽菸不快樂上升/抽菸後壓力與不快樂下降），與官方 van_ch 僅語序與風格差；Detailed Descriptions 亦定義此鍵。無害。"
-  },
-  "UI.json|UI_trait_SpeedDemonDesc": {
-   "verdict": "mod_intended",
-   "anchor": "f967e82d99eab586",
-   "rationale": "複核推翻原判：排除：同 SlowHealer，Detailed Descriptions 重定義同鍵且結構吻合；數值行出自該 mod（B42 Speed Demon 實際含車速/加減速加成），「屍體抓取」或為其中一項機制之譯法問題，屬 mod 翻譯品質範疇而非 vanilla 覆寫危害。"
-  },
-  "UI.json|UI_trait_SundayDriverDesc": {
-   "verdict": "mod_intended",
-   "anchor": "02fc6752ec61aa7f",
-   "rationale": "MDFT (2685168362) EN 檔含 UI_trait_SundayDriverDesc 重定義；首句忠於 van_en，附載具數值段為 mod 揭示。"
-  },
-  "UI.json|UI_trait_ThinSkinnedDesc": {
-   "verdict": "mod_intended",
-   "anchor": "ec0050f14aeabb90",
-   "rationale": "MDFT EN 重定義（增傷機率/樹木刮傷補述），本包 +30% 受傷機率與樹木脆弱性補述對應其口徑。"
-  },
-  "UI.json|UI_trait_WeakStomachDesc": {
-   "verdict": "mod_intended",
-   "anchor": "0007bb05e6968527",
-   "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；首句忠實加 +100% 詳述，近乎改善。"
-  },
-  "UI.json|UI_trait_WhittlerDesc": {
-   "verdict": "harmful_fixed",
-   "anchor": "fc34256520337c14",
-   "rationale": "主句正確，附加清單為本體 B42 雕刻特質授予配方的文件化增補。瑕疵：清單中「雕刻蝙蝠」應為「雕刻球棒」（Carve Bat 誤譯），建議後續順手修正該詞，不影響整體改善判定。"
-  },
-  "UI.json|UI_trait_WildernessKnowledgeDesc": {
-   "verdict": "mod_intended",
-   "anchor": "5db40f0a42132d2b",
-   "rationale": "B42 新特質，不在 MDFT B41 鍵集合，但「已掌握知識/搜尋加成」完整段落結構與已驗證的 MDFT 家族簽名一致，首句忠於 van_en；屬其 B42 版重定義（家族推證）。"
-  },
-  "UI.json|UI_trait_agoraphobicdesc": {
-   "verdict": "mod_intended",
-   "anchor": "5a71a2abea1089f9",
-   "rationale": "MDFT EN 重定義此鍵（\"Gets panicked outdoors.\"），本包首句忠於原版並附搜尋視野補述。"
-  },
-  "UI.json|UI_trait_athleticdesc": {
-   "verdict": "mod_intended",
-   "anchor": "35510776c5122bd1",
-   "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；首兩句忠實對譯加 +20%/-40%/+25% 詳述，近乎改善。"
-  },
-  "UI.json|UI_trait_axemandesc": {
-   "verdict": "improvement",
-   "anchor": "d4341fc543616c5e",
-   "rationale": "主句正確且完整覆蓋 van_en 兩句；附加 +25% 斧擊/砍樹速度為熟知本體真值，+50% 砍樹額外傷害未逐證但與本體 Axe Man 樹傷加成機制方向一致。屬文件化改善。"
-  },
-  "UI.json|UI_trait_bravedesc": {
-   "verdict": "mod_intended",
-   "anchor": "ea67854e31432881",
-   "rationale": "MDFT (2685168362, _dl) EN 直接引證：UI_trait_bravedesc = \"Less prone to becoming panicked.<br>(-70% panic, except for night terrors and phobias.)\"；本列為其 B42 版（含屍體相關數值），首句忠於 van_en。"
-  },
-  "UI.json|UI_trait_claustrodesc": {
-   "verdict": "mod_intended",
-   "anchor": "bdc2b8f916d23d8c",
-   "rationale": "MDFT EN 重定義（\"But not in 70-tiles + sized rooms...\"），本包 大於70格的房間不會造成恐慌 與其一致，對原版玩家為正確機制補充。"
-  },
-  "UI.json|UI_trait_clumsydesc": {
-   "verdict": "mod_intended",
-   "anchor": "40d86051df309712",
-   "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；首句忠實加摔倒/腳步聲等機制詳述，近乎改善。"
-  },
-  "UI.json|UI_trait_cowardlydesc": {
-   "verdict": "improvement",
-   "anchor": "90d5342b357e30f6",
-   "rationale": "主句正確；附加「+100% 恐慌」為本體 Cowardly 真值（恐慌加倍），搜屍不快樂度/屍體抓取兩項為 B42 新機制文件化、未逐證但無矛盾。整體屬改善型增補。"
-  },
-  "UI.json|UI_trait_eagleeyeddesc": {
-   "verdict": "mod_intended",
-   "anchor": "cd506401964fc55c",
-   "rationale": "MDFT (2685168362) EN 檔含 UI_trait_eagleeyeddesc 重定義；本列前三句完整翻譯 B42 van_en（含 van_ch 漏掉的武器瞄具句），附搜尋加成為 mod 揭示。"
-  },
-  "UI.json|UI_trait_emaciateddesc": {
-   "verdict": "mod_intended",
-   "anchor": "5552462b2d5eada3",
-   "rationale": "MDFT EN 重定義（-60% melee damage、+40% fall damage 等），本包數值明細對應其口徑。"
-  },
-  "UI.json|UI_trait_feebledesc": {
-   "verdict": "mod_intended",
-   "anchor": "c2f231bb655f0db1",
-   "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；忠實對譯加 -10% 攜帶重量詳述，近乎改善。"
-  },
-  "UI.json|UI_trait_gracefuldesc": {
-   "verdict": "improvement",
-   "anchor": "41ab0b8accc336c7",
-   "rationale": "主句正確；附加摔倒機率、腳步聲、撞殭屍摔倒等數值為本體 Graceful 機制的文件化，方向與本體一致、無矛盾跡象。"
-  },
-  "UI.json|UI_trait_handydesc": {
-   "verdict": "mod_intended",
-   "anchor": "a721797aad8fbd5b",
-   "rationale": "MDFT (2685168362, _dl) EN 直接引證：UI_trait_handydesc = \"Faster and stronger constructions.<br>(+100 HP...Increased building speed.Slightly increased barricading speed.)\"；本列「提高一倍」為 B42 版措辭。（小疵：句尾混用全形「。」與 \\n，可順手 lint。）"
-  },
-  "UI.json|UI_trait_hardheardesc": {
-   "verdict": "style_ok",
-   "anchor": "3f2fda0fdaf85df9",
-   "rationale": "僅為 van_en 的直譯改寫，語意與官方一致。"
-  },
-  "UI.json|UI_trait_heartyappetitedesc": {
-   "verdict": "mod_intended",
-   "anchor": "b47a6d7bcd15001e",
-   "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；首句忠實加 +50% 飢餓與搜尋加成詳述，近乎改善。"
-  },
-  "UI.json|UI_trait_keenhearingdesc": {
-   "verdict": "style_ok",
-   "anchor": "982ebf37fb500e45",
-   "rationale": "「感知半徑更大.」為 van_en 'Larger perception radius.' 直譯，與官方僅風格差，無附加內容。"
-  },
-  "UI.json|UI_trait_lighteaterdesc": {
-   "verdict": "mod_intended",
-   "anchor": "62cb77a649b4391a",
-   "rationale": "MDFT (2685168362) EN 檔含 UI_trait_lighteaterdesc 重定義；首句忠於 van_en，附「-25% 飢餓度」為 mod 數值揭示。（cn「需要更少频繁地进食」措辭生硬，屬 As1 側品質，非語意錯誤。）"
-  },
-  "UI.json|UI_trait_marksmandesc": {
-   "verdict": "improvement",
-   "anchor": "22160bd03b706060",
-   "rationale": "首兩句忠於 van_en（含傷害提升，原版 EN 本有 damage），後附搜尋模式視野/彈藥加成為特質實際效果補充，屬改善型擴寫。"
-  },
-  "UI.json|UI_trait_nightowldesc": {
-   "verdict": "mod_intended",
-   "anchor": "f81ecd01dd32ca8d",
-   "rationale": "此鍵有 Detailed Descriptions 與 SomewhatTraits (3498347699) 兩個重定義者（records 佐證）；ch 前半忠實對譯 van_en，後半「夜晚黑暗減壓、延緩疲勞」為 mod 改動效果描述（樣式更像 SomewhatTraits），任一重定義即算 mod 取捨。"
-  },
-  "UI.json|UI_trait_nutritionistdesc": {
-   "verdict": "improvement",
-   "anchor": "13dedd5ee23c8cf1",
-   "rationale": "主句正確（檢視食物營養價值），附加覓食加成與本體覓食系統的特質加成方向一致，屬文件化增補。"
-  },
-  "UI.json|UI_trait_obesedesc": {
-   "verdict": "mod_intended",
-   "anchor": "3776309fc6ff0d58",
-   "rationale": "MDFT (2685168362, _dl) EN 直接引證：UI_trait_obesedesc = \"Reduced running speed...(Starting weight is 105.<br>Replaced by Overweight if weight goes below 100.<br>+20% chance to trip...+40% fall damage...)\"；本列逐項對應。"
-  },
-  "UI.json|UI_trait_outdoorsmandesc": {
-   "verdict": "mod_intended",
-   "anchor": "6e3018fa79bf69f3",
-   "rationale": "MDFT EN 重定義（生火加速、感冒機率、樹木刮傷等明細），本包對應其口徑並附搜尋加成。"
-  },
-  "UI.json|UI_trait_outofshapedesc": {
-   "verdict": "style_ok",
-   "anchor": "f1dbb1bf638ce862",
-   "rationale": "ch「耐力低,耐力恢復也極低.」語意同 van_en（極低 較 low 稍強、逗號後缺空格為小瑕），無誤導；Detailed Descriptions 亦定義此鍵。"
-  },
-  "UI.json|UI_trait_overweightdesc": {
-   "verdict": "improvement",
-   "anchor": "1e3dde4991d6878a",
-   "rationale": "主句正確；附加體重機制（初始 95、>100 轉肥胖、<85 消失）皆為本體真值，摔倒/攀爬等數值為機制文件化。比官方單句更完整。"
-  },
-  "UI.json|UI_trait_pronetoillnessdesc": {
-   "verdict": "mod_intended",
-   "anchor": "746cf11bcba46bf0",
-   "rationale": "MDFT (2685168362, _dl) EN 直接引證：UI_trait_pronetoillnessdesc = \"More prone to disease. Faster rate of zombification.<br>(+25% zombification speed, +70% chance of catching a cold...)\"；本列數值逐項對應（B42 版另含屍體疾病項）。"
-  },
-  "UI.json|UI_trait_resilientdesc": {
-   "verdict": "mod_intended",
-   "anchor": "bd045501eb72e901",
-   "rationale": "MDFT EN 重定義（\"-25% zombification speed, -55% chance of catching a cold, -20% cold strength, -50% cold progression\"），本包數值一致（+25% 殭屍化持續時間即 -25% 速度之等價表述）。"
-  },
-  "UI.json|UI_trait_shortsighdesc": {
-   "verdict": "mod_intended",
-   "anchor": "6619e12b50ebe7dd",
-   "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；首三句忠實對譯 van_en（官方 van_ch 反而缺第三句），加模糊/眼鏡機制與 -2 視野詳述，近乎改善。"
-  },
-  "UI.json|UI_trait_stoutdesc": {
-   "verdict": "improvement",
-   "anchor": "61b0fbb2374be6d3",
-   "rationale": "主句完整覆蓋 van_en 兩句，附加「+25% 攜帶重量」與本體 Stout 負重加成一致，屬文件化改善。"
-  },
-  "UI.json|UI_trait_strongdesc": {
-   "verdict": "mod_intended",
-   "anchor": "614caee361a989e6",
-   "rationale": "MDFT (2685168362, _dl) EN 直接引證：UI_trait_strongdesc = \"Extra knockback from melee weapons and increased carry weight.<br>(+40% melee damage...)\"；本列為其 B42 版數值。"
-  },
-  "UI.json|UI_trait_thickskinneddesc": {
-   "verdict": "mod_intended",
-   "anchor": "09092178ae3baaf1",
-   "rationale": "MDFT EN 重定義（\"+30% chance of not being injured...樹木刮傷保護\"），本包對應。"
-  },
-  "UI.json|UI_trait_tinkerer": {
-   "verdict": "style_ok",
-   "anchor": "f842bb6c380d6909",
-   "rationale": "More Traits (1299328280) EN 與本體同值 \"Tinkerer\"（_dl 實檔），且「修補匠人」即該 mod 自帶繁中譯名；與官方 修補高手 同義，純風格差。"
-  },
-  "UI.json|UI_trait_underweightdesc": {
-   "verdict": "improvement",
-   "anchor": "9c04541faf885844",
-   "rationale": "主句正確；附加體重機制（初始 70、<65 轉極瘦、>75 消失、-20% 傷害）皆為本體真值文件化，比官方更完整。"
-  },
-  "UI.json|UI_trait_unfitdesc": {
-   "verdict": "style_ok",
-   "anchor": "8c44366cd1e71388",
-   "rationale": "「耐力和耐力恢復極低.」與 van_en 'Very low endurance and endurance regeneration.' 同義（MDFT 亦重定義此鍵，本列未附加數值段）；僅句構異於官方，尾端多一個無害 <br>。"
-  },
-  "UI.json|UI_trait_veryunderweightdesc": {
-   "verdict": "mod_intended",
-   "anchor": "6a763318e99aabc1",
-   "rationale": "MDFT EN 重定義（起始體重60、特質替換門檻、-40% 傷害、+20% 摔傷等），本包明細對應其口徑。"
-  },
-  "UI.json|UI_trait_weakdesc": {
-   "verdict": "mod_intended",
-   "anchor": "23f02ada26b56153",
-   "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；兩句忠實對譯加 -25%/-40% 詳述，近乎改善。"
-  },
-  "UI.json|UI_trait_weightgaindesc": {
-   "verdict": "improvement",
-   "anchor": "103a0af9e5a3fc3a",
-   "rationale": "主句正確對應 van_en（永久增重傾向、初始超重特質），附加「體重<90 時增重所需卡路里 -30%」為機制文件化增補，無矛盾跡象。"
-  },
-  "UI.json|UI_trait_weightlossdesc": {
-   "verdict": "mod_intended",
-   "anchor": "154422d80e440bc7",
-   "rationale": "不在 MDFT B41 鍵集合，但首兩句忠於 van_en、附加「體重高於70 增重卡路里+80%」數值揭示，結構與 MDFT 家族簽名一致，屬其 B42 版重定義（家族推證）。"
+  "_comment": "As1 lane vanilla 同名異值鍵的值層裁決台帳（2026-08-02 全量 triage，wf_1cdd592b；證據含 mod EN 實檔與 en_corpus_hashes sha256 反推）。verdict：style_ok=風格差異無害｜improvement=修正官方滯後/誤譯｜mod_intended=owner mod 重定義 EN、翻譯符合 mod 語意（對未裝 mod 玩家屬 JSON 共存固有取捨）｜harmful_fixed=確認有害已修（CH 落 sources/ch、CN 走 cn_overrides）｜uncertain=無法定位依據、保守不改。anchor＝裁決當時有效 CN 值 sha256[:16]（上游改值即裁決失效須重審，同 cn_overrides/lint_exemptions 錨點慣例）；新增碰撞由 verify [12] report-only 警示，裁決後補登本檔與 vanilla_keys.json as1_overlap_known。",
+  "entries": {
+    "Brandenburg, KY.json|description": {
+      "verdict": "uncertain",
+      "anchor": "95b50380be044316",
+      "rationale": "ch/cn 整段替換為另一版城鎮介紹（「(新地點)」、Outside Notes 酒吧、桑德蘭山療養院之旅），與 van_en（四月龍捲風、PS Delilah 蒸汽船）完全不同。owner 為 29 個地圖模組聯集，高度疑似某地圖模組自帶重寫版 Brandenburg 描述，但本地僅 As1 CN 包(3556540080)有此文，兩處 workshop 根目錄均查無對應 EN 原文可引。保守不改，建議後續定位來源模組。"
+    },
+    "ContextMenu.json|ContextMenu_Container": {
+      "verdict": "uncertain",
+      "anchor": "7f6ca5a7742bd10e",
+      "rationale": "「此容器」偏離 van_en「Containers」（複數類別標籤），值直傳自 As1 上游包(3556540080)，兩處 workshop 目錄 rg 均查無任何 mod 重定義該鍵 EN。語意漂移輕微（仍是容器語境），保守不改。"
+    },
+    "ContextMenu.json|ContextMenu_Floor": {
+      "verdict": "style_ok",
+      "anchor": "c9a0955518c9967e",
+      "rationale": "Floor 譯 地面 與官方 地板 僅語感差，建造/放置語境皆可理解，無害。"
+    },
+    "ContextMenu.json|ContextMenu_LeftThigh": {
+      "verdict": "mod_intended",
+      "anchor": "6b99d6bb43793bad",
+      "rationale": "RandomClothing (3397182976) 重定義 EN 為 \"Wear on Left Thigh\"（_dl 實檔查證），ch/cn 戴在左大腿 為其忠實翻譯；對本體玩家（van_en on Left Thigh）語意亦相容。"
+    },
+    "ContextMenu.json|ContextMenu_PinkChevron": {
+      "verdict": "style_ok",
+      "anchor": "5d4be9f1c69c48d9",
+      "rationale": "「粉紅色V形花紋」為 van_en 'Pink Chevron' 的合理翻譯，與官方「粉色 V 形」僅風格差異。"
+    },
+    "ContextMenu.json|ContextMenu_PinkFloral": {
+      "verdict": "style_ok",
+      "anchor": "7b8a47ebe5902c5c",
+      "rationale": "ch「粉紅色花卉」與官方「粉色花卉」僅用詞差異；cn 與 van_cn 完全相同。無害。"
+    },
+    "ContextMenu.json|ContextMenu_RightThigh": {
+      "verdict": "mod_intended",
+      "anchor": "370af87afd256a4b",
+      "rationale": "RandomClothing (3397182976) EN 重定義為 \"Wear on Right Thigh\"，戴在右大腿 為其忠實翻譯；對原版玩家（van_en \"on Right Thigh\"）亦無害。"
+    },
+    "ContextMenu.json|ContextMenu_WearDown": {
+      "verdict": "harmful_fixed",
+      "anchor": "317804a435cdb608",
+      "rationale": "SpongieOpenJackets EN 實檔+hash 證實 'Wear Down'（=vanilla），無 mod 依據。「脫下」與 TakeOff 張冠李戴，於 vanilla 層序選單為反義級誤導，維持 harmful。"
+    },
+    "ContextMenu.json|ContextMenu_WearUp": {
+      "verdict": "harmful_fixed",
+      "anchor": "97f79c54df9178a6",
+      "rationale": "唯一重定義者 SpongieOpenJackets(2812326159) EN 實檔與 corpus hash 雙重證實為 'Wear Up'（與 vanilla 同值），無任何 mod 依據支持「穿上」。vanilla B42 此鍵為衣物層序選單（穿在外層），「穿上」丟失層序語意並與一般 Wear 混淆，維持 harmful。"
+    },
+    "Ekron, KY.json|description": {
+      "verdict": "mod_intended",
+      "anchor": "53a953eeefe4a0b4",
+      "rationale": "「Ekron, KY」為 29 個地圖 mod 同捆自帶的地圖描述檔（sources/mods/2788256295 等皆有），內容譯自 mod 地圖簡介（矮人工廠/社區大學/『就算是死』也得去的射擊場 對應 mod EN 'midget factory and community college... to die for shooting range'），「(新地點)」為 mod 地圖標記。B42 本體新增同名地圖才產生鍵碰撞，覆寫屬 mod 設計固有取捨。mod EN 正本未在本地 _dl，屬內容對應推證。"
+    },
+    "Fluids.json|Fluid_Container_SmallCarton": {
+      "verdict": "style_ok",
+      "anchor": "c76877ce38f42e9a",
+      "rationale": "小紙盒 與官方簡中 小纸盒 完全同義，較官方繁中 小盒 更明確，無害。"
+    },
+    "Fluids.json|Fluid_Name_SodaBlueberry": {
+      "verdict": "harmful_fixed",
+      "anchor": "8d7b299ce2212097",
+      "rationale": "uncertain 升級：corpus 全掃證實無任何 mod 定義此鍵，cn「苏打蓝莓」與已判 harmful 的 SodaGrape/Strewberry 完全同型（官方 蓝莓汽水），ch 免改，cn 側升級 confirmed_harmful 以求一致。"
+    },
+    "Fluids.json|Fluid_Name_SodaBubblegum": {
+      "verdict": "harmful_fixed",
+      "anchor": "8e37102c1693d1b8",
+      "rationale": "ch 與官方同值免改；cn「苏打泡泡糖」中心詞顛倒（van_en 'Bubblegum Soda'→官方 泡泡糖汽水）。全庫查無 mod 重定義，cn 側 harmful 維持，登記待上游。"
+    },
+    "Fluids.json|Fluid_Name_SodaGrape": {
+      "verdict": "harmful_fixed",
+      "anchor": "0c6167d451f57c8e",
+      "rationale": "ch 免改；cn「苏打葡萄」為 key 名直排劣譯，van_en 'Grape Soda'，全庫查無 mod 重定義。cn 側 harmful 維持。"
+    },
+    "Fluids.json|Fluid_Name_SodaLime": {
+      "verdict": "style_ok",
+      "anchor": "5460214cf02a8bd8",
+      "rationale": "ch 萊姆汽水 與官方繁中相同；cn 苏打青柠 語序不若官方 青柠汽水 順口但同指萊姆汽水飲品，屬風格差（cn 受 As1 parity 鎖定）。"
+    },
+    "Fluids.json|Fluid_Name_SodaPineapple": {
+      "verdict": "harmful_fixed",
+      "anchor": "7e9b5e62d1ab61ca",
+      "rationale": "uncertain 升級：同 SodaBlueberry，corpus 證實無定義 mod，cn「苏打菠萝」對官方 菠萝汽水 為同型劣譯，ch 免改，cn 側升級 confirmed_harmful。"
+    },
+    "Fluids.json|Fluid_Name_SodaPop": {
+      "verdict": "harmful_fixed",
+      "anchor": "d27e668a3ad2e6cd",
+      "rationale": "van_en 'Orange Soda'；corpus 與兩處 workshop 全庫查無任何 Fluid_Name_Soda* 重定義（含 Mixology/TwisTonFire 實檔複核）。「蘇打汽水」遺失口味資訊，維持 harmful。"
+    },
+    "Fluids.json|Fluid_Name_SodaStrewberry": {
+      "verdict": "harmful_fixed",
+      "anchor": "d15e0e7902d7e21b",
+      "rationale": "ch 免改；cn「苏打草莓」同型劣譯，van_en 'Strawberry Soda'，全庫查無 mod 重定義。cn 側 harmful 維持。"
+    },
+    "IG_UI.json|ContextMenu_WashAllClothing": {
+      "verdict": "style_ok",
+      "anchor": "a2f33017d9559e37",
+      "rationale": "清洗選單下的 All Clothing 擴寫為 清洗全部汙穢衣物，敘述式但語意正確（僅髒衣會被洗），對玩家無害。查無 mod EN（僅見於 As1 上游）。"
+    },
+    "IG_UI.json|ContextMenu_WashClothing": {
+      "verdict": "uncertain",
+      "anchor": "42b6e0495b7c0f17",
+      "rationale": "本體三語值皆為佔位符 %1（整條選單文字由程式代入），ch/cn 固定字串 清洗衣物 遺失 %1，顯示會退化為通用標籤但仍可理解；疑為洗衣類 mod 重定義，_unsorted 且 records 查無定義 mod，保守不改，但佔位符差異應納入 placeholder 稽核。"
+    },
+    "IG_UI.json|IGUI_CraftingUI_ShowAllVersion": {
+      "verdict": "style_ok",
+      "anchor": "b217840e21d55b79",
+      "rationale": "「顯示所有品質」略去「建築」，但在建造/製作 UI 語境語意無損，屬風格精簡。"
+    },
+    "IG_UI.json|IGUI_ItemCat_MaterialWeapon": {
+      "verdict": "style_ok",
+      "anchor": "898e1eb000127e56",
+      "rationale": "「材料-武器」vs 官方「材料/武器」僅分隔符差異。"
+    },
+    "IG_UI.json|IGUI_Lights": {
+      "verdict": "style_ok",
+      "anchor": "3b579010a041e11d",
+      "rationale": "Lights 譯 燈光 與官方 燈 僅風格差。"
+    },
+    "IG_UI.json|IGUI_MapOption_Symbols": {
+      "verdict": "mod_intended",
+      "anchor": "36a4a3b549df016b",
+      "rationale": "MinimapStyleOptions (3526517370) 重定義此鍵（en_corpus_hashes records 佐證；EN 字串雜湊未還原成功），「顯示小地圖標記」正是該 mod 的小地圖選項語意。附註：ch「示記」建議統一為「標記」（用字小瑕）。"
+    },
+    "IG_UI.json|IGUI_MapOption_TerrainImage": {
+      "verdict": "style_ok",
+      "anchor": "cb390731b2a0a05d",
+      "rationale": "「地形影像」vs 官方「地形圖片」，同義風格差。"
+    },
+    "IG_UI.json|IGUI_No": {
+      "verdict": "harmful_fixed",
+      "anchor": "0c70665b6eb65f1a",
+      "rationale": "全 corpus 唯一同鍵重定義者 The-Only-Cure(3580276809) EN 實檔讀出為 'No'（=vanilla），其餘命中皆 IGUI_No* 子字串誤報。核心是/否對話框否定鈕譯「取消」無任何依據且影響面極大，維持 harmful。"
+    },
+    "IG_UI.json|IGUI_PowerConsumption": {
+      "verdict": "style_ok",
+      "anchor": "d08ab72ea33a1067",
+      "rationale": "耗電量 是 Power Consumption 的準確譯法（不遜於官方 能量消耗），惟值尾多帶冒號，若原版 UI 自行補分隔符可能出現雙冒號，屬外觀小瑕疵非語意錯誤。"
+    },
+    "IG_UI.json|IGUI_VehicleNameCarLightsKST": {
+      "verdict": "harmful_fixed",
+      "anchor": "eae22b34f9ca66dc",
+      "rationale": "本審獨立以 sha256 反推複核：STFR(3459638181) EN hash ddb7f5d124a3 = 'Police Chevalier Nyala' 命中，mod 重定義成立、「警用版」結構有據；但 Nyala 官方譯名為 林羚（van_ch 騎士·林羚 (州警)），「林鈴」為同音誤植，mod 與本體語境皆錯，維持 harmful，僅修 羚 字並保留 mod 命名結構。"
+    },
+    "IG_UI.json|IGUI_VehicleNameModernCarLightsMeadeSheriff": {
+      "verdict": "style_ok",
+      "anchor": "1a4efbd4ede10bd3",
+      "rationale": "「飛馳·精英警用版」保留車型與警用語意，僅略去「米德縣」地名，對玩家無害的風格取捨。"
+    },
+    "IG_UI.json|IGUI_VehicleNamePickUpVanLightsStatePolice": {
+      "verdict": "style_ok",
+      "anchor": "4e21bd9c6531226c",
+      "rationale": "「飛馳·鬥牛士警用版」與官方「飛馳·鬥牛士 (州警)」同義，僅後綴格式差異。"
+    },
+    "IG_UI.json|IGUI_VehiclePartTrunkDoorOpened": {
+      "verdict": "mod_intended",
+      "anchor": "e45b2e5d2abd2532",
+      "rationale": "複核推翻原判：明確排除：ATA_Petyarbuilt(3403314193) 重定義同鍵，hash f396e7640ee1 反推命中 'Cattle Loading Ramp'（byte 級證實）——「牲畜運載坡道」為忠實翻譯，張冠李戴疑慮解除（屬 mod 沿用部件槽之設計）。"
+    },
+    "IG_UI.json|IGUI_VehiclePartWindowMiddleLeft": {
+      "verdict": "style_ok",
+      "anchor": "a3feaf845c0870dc",
+      "rationale": "左中部車窗 與官方 左中窗 同義，純風格差；damnlib (3171167894) 亦定義同鍵。無害。"
+    },
+    "IG_UI.json|IGUI_VehiclePartWindowMiddleRight": {
+      "verdict": "style_ok",
+      "anchor": "54c947e2f63d9b91",
+      "rationale": "「右中部車窗」為 'Middle Right Window' 合理翻譯，與官方「右中窗」僅詳略差。"
+    },
+    "IG_UI.json|IGUI_Washing_Soap": {
+      "verdict": "harmful_fixed",
+      "anchor": "247d71e18ca631b2",
+      "rationale": "corpus 全掃+修正 glob 重掃兩處 workshop 均無任何 mod 重定義此鍵。官方三語皆純標籤 Soap/肥皂，「所需肥皂:%1」在本體語境會裸露 %1，維持 harmful。"
+    },
+    "IG_UI.json|IGUI_Washing_WithoutSoap": {
+      "verdict": "style_ok",
+      "anchor": "9b759d7f9968dc92",
+      "rationale": "無肥皂, 勉強清洗 與 van_en \"Not Enough Soap (Slower)\" 大意一致（沿用 B41 \"Without Soap\" 口徑），遺失 (較慢) 資訊但不誤導，無害。"
+    },
+    "IG_UI.json|IGUI_Yes": {
+      "verdict": "style_ok",
+      "anchor": "fac2a67ad87807c4",
+      "rationale": "The-Only-Cure (3580276809) EN 亦為 \"Yes\"（與本體同值）。確定 是中文 UI 肯定鈕常見譯法，語意無誤；與 IGUI_No=否 的配對稍不對稱但無害。"
+    },
+    "IG_UI.json|IGUI_media_idle": {
+      "verdict": "uncertain",
+      "anchor": "b073db9c0bd6f2ed",
+      "rationale": "van_en 為操作提示 '- PRESS 'PLAY' TO START -'，ch/cn「就緒」改為狀態標籤，遺失按播放提示但非誤導（該處確為待機狀態）。_unsorted 且本地查無 mod EN 重定義（疑媒體播放類模組），保守不改。"
+    },
+    "Irvington, KY.json|description": {
+      "verdict": "mod_intended",
+      "anchor": "6925fd663a23ecc5",
+      "rationale": "同 Ekron：29 個地圖 mod 同捆的「Irvington, KY」描述檔，內容譯自 mod 地圖簡介（賽車賽道聞名/最『撕心裂肺』的車禍 對應 mod EN 'home of the famous race track... most heartbreaking crashes'），帶「(新地點)」mod 標記。B42 本體同名地圖碰撞屬 mod 設計固有。"
+    },
+    "ItemName.json|Base.3030Box": {
+      "verdict": "style_ok",
+      "anchor": "a4e738844c75b254",
+      "rationale": ".30-30 WCF彈藥 (整盒) 與 van_en 同義（WCF 即 .30-30 Winchester 全稱），值與 Firearms (2256623447) 自帶 CN 逐字一致，對所有玩家無害。"
+    },
+    "ItemName.json|Base.3030Carton": {
+      "verdict": "style_ok",
+      "anchor": "d7ec8160cc1e667f",
+      "rationale": "Guns93 (3183820077) EN 與本體同值 \"Carton of .30-30 Rounds\"；「.30-30子彈 (整箱)」僅為「箱裝…」的格式風格差。"
+    },
+    "ItemName.json|Base.308Box": {
+      "verdict": "style_ok",
+      "anchor": "cee4a3fb3b923f0a",
+      "rationale": "ch「7.62x51mm彈藥 (整盒)」與 van_en 'Box of 7.62x51mm Rounds' 語意一致（.308≈7.62x51）；owner Guns93(3183820077) mod EN 'Box of .308 Rounds' 亦同義。僅格式風格差。"
+    },
+    "ItemName.json|Base.308Bullets": {
+      "verdict": "mod_intended",
+      "anchor": "c5a93f92073ecc51",
+      "rationale": "owner 3633421539 (Escape from Kentucky) EN 重定義：\"Base.308Bullets\": \"7.62×51mm NATO Ammo\"；本包「7.62x51mm彈藥」相符，且同時兼容 van_en '7.62x51mm Round'，對未裝 mod 玩家亦無害。"
+    },
+    "ItemName.json|Base.308Carton": {
+      "verdict": "mod_intended",
+      "anchor": "6ba9e837c51f3d26",
+      "rationale": "Guns93 (3183820077) EN 重定義為 \"Carton of .308 Rounds\"，VFE (3611718925) 自帶 CN 亦為 .308弹药 (整件)；.308 Win 與 7.62x51 為同族彈，mod 設計取捨。"
+    },
+    "ItemName.json|Base.44Clip": {
+      "verdict": "mod_intended",
+      "anchor": "8a25a88a229ce21c",
+      "rationale": "EFK (3633421539) EN=\".44 Magnum 8-Round Magazine\"（實檔），Firearms (2256623447) EN=\"Desert Eagle Magazine\"（sha256 反推證實）。「.44手槍彈匣」符合 mod 語意；本體虛構名 B-F Magazine 的官方 ch 沙漠之鷹彈匣 本就指同物。"
+    },
+    "ItemName.json|Base.45Clip": {
+      "verdict": "mod_intended",
+      "anchor": "17cf28f258f3b5c5",
+      "rationale": "owner Escape from Kentucky(3633421539) scripts/Ammo/45.txt 重定義 DisplayName = '.45 Auto Magazine'，ch「.45手槍彈匣」符合 mod 泛化語意（vanilla 為 'M1911 Auto Magazine'）。"
+    },
+    "ItemName.json|Base.556Box": {
+      "verdict": "style_ok",
+      "anchor": "700b67530aec6945",
+      "rationale": "「5.56x45mm彈藥 (整盒)」是 van_en 'Box of 5.56x45mm Rounds' 的合理翻譯，僅格式異於官方「盒裝 5.56mm 子彈」。（Guns93 另重定義為 .223 Rem，本包未跟從，但現值對所有玩家無害。）"
+    },
+    "ItemName.json|Base.556Bullets": {
+      "verdict": "style_ok",
+      "anchor": "dc9318c4daea105d",
+      "rationale": "5.56x45mm彈藥 即 van_en \"5.56x45mm Round\" 的直譯（且與 Firearms 自帶 CN 一致），較官方繁中 5.56mm 子彈 更完整。"
+    },
+    "ItemName.json|Base.556Carton": {
+      "verdict": "style_ok",
+      "anchor": "afdf6b7d4f5317dc",
+      "rationale": "ch「5.56x45mm子彈 (整箱)」沿本體 van_en (5.56x45mm) 語意，僅格式風格差。附註：Guns93 EN 重定義為 \"Carton of .223 Rem Rounds\"，ch 未跟改，但 .223/5.56 實務同規格彈，對兩側玩家皆無實害。"
+    },
+    "ItemName.json|Base.556Clip": {
+      "verdict": "mod_intended",
+      "anchor": "4effce97b5619e9c",
+      "rationale": "owner Escape from Kentucky(3633421539) scripts/Ammo/556.txt 重定義 DisplayName = '.556 Magazine'（Guns93 RU 檔亦顯示 STANAG 系重定義），ch「5.56mm自動步槍彈匣」符合 mod 泛化語意（vanilla 為 'M16 Magazine'）。"
+    },
+    "ItemName.json|Base.9mmClip": {
+      "verdict": "mod_intended",
+      "anchor": "78bc68894e29214a",
+      "rationale": "owner 3633421539 EN 重定義：\"Base.9mmClip\": \"9mm Para 15-Round Magazine\"；本包「9mm手槍彈匣」符合 mod 泛化語意（原版限定 M9 彈匣）。"
+    },
+    "ItemName.json|Base.AmmoStraps": {
+      "verdict": "style_ok",
+      "anchor": "a51146fbb57fae58",
+      "rationale": "彈藥揹帶 與官方 彈藥帶 同義（揹帶為正確台繁用字），與 MFS (3633421539) 自帶 CN 弹药背带 一致，無害。"
+    },
+    "ItemName.json|Base.AssaultRifle": {
+      "verdict": "mod_intended",
+      "anchor": "3a50e07744a94f4e",
+      "rationale": "Firearms (2256623447) EN 重定義為 \"M16A1\"（sha256 反推證實）。「M16自動步槍」符合 mod 真實槍名語意（M16A1 為全自動步槍）；對本體玩家仍是 M16，無誤導。"
+    },
+    "ItemName.json|Base.AssaultRifle2": {
+      "verdict": "style_ok",
+      "anchor": "e2beffe613892059",
+      "rationale": "van_en 'M1A Rifle'；M1A 即 M14 的民用半自動衍生型，ch「M14半自動步槍」語意等同，官方 van_ch 亦作「M14 步槍」。風格差而已。"
+    },
+    "ItemName.json|Base.BeerBottle": {
+      "verdict": "mod_intended",
+      "anchor": "5b0b678e72c4054b",
+      "rationale": "owner 3577903007 (Vanilla Foods Expanded) EN 重定義：ItemName_Base.BeerBottle = \"Bottle of American Light Lager\"；「玻璃瓶 (美式淡拉格啤酒)」為其準確翻譯。"
+    },
+    "ItemName.json|Base.BeerCan": {
+      "verdict": "mod_intended",
+      "anchor": "1b0f37daa112ac59",
+      "rationale": "VFE (3577903007) EN 重定義為 \"Can of American Light Lager\"，易開罐 (美式淡拉格啤酒) 忠實對應 mod 語意。"
+    },
+    "ItemName.json|Base.BeerCanPack": {
+      "verdict": "mod_intended",
+      "anchor": "afe34616a06c9a66",
+      "rationale": "Vanilla Foods Expanded (3577903007) EN 重定義為 \"Pack of American Light Lager\"（_dl 實檔），「美式淡拉格啤酒 (整箱)」忠實對譯；本體玩家看到的箱裝罐裝啤酒被具體化為淡拉格，屬 mod 設計取捨。"
+    },
+    "ItemName.json|Base.BeerPack": {
+      "verdict": "mod_intended",
+      "anchor": "afe34616a06c9a66",
+      "rationale": "owner Vanilla Foods Expanded(3577903007) EN: ItemName_Base.BeerPack = 'Pack of American Light Lager'，ch「美式淡拉格啤酒 (整箱)」為其準確翻譯。"
+    },
+    "ItemName.json|Base.Biscuit": {
+      "verdict": "mod_intended",
+      "anchor": "466d86931f6740bd",
+      "rationale": "VFE (3577903007) EN 重定義：ItemName_Base.Biscuit = \"Buttermilk Biscuit\"；「酪乳司康」是美式 biscuit 的合理在地化。"
+    },
+    "ItemName.json|Base.BouillonCube": {
+      "verdict": "mod_intended",
+      "anchor": "90bd21cbf15907fb",
+      "rationale": "VFE EN 重定義為 \"Chicken Bouillion Cube\"，雞肉湯塊 符合 mod 語意。"
+    },
+    "ItemName.json|Base.Bullets357": {
+      "verdict": "mod_intended",
+      "anchor": "89a66c84a9262e23",
+      "rationale": "Firearms (2256623447) EN 重定義為 \".357 Round\"（sha256 反推證實），ch「.357彈藥」貼合 mod EN；對本體玩家僅少「馬格南」字樣，口徑資訊不失真。"
+    },
+    "ItemName.json|Base.Bullets357Box": {
+      "verdict": "style_ok",
+      "anchor": "72e79e1f1704f56f",
+      "rationale": "ch「.357彈藥 (整盒)」符合 van_en 'Box of .357 Magnum Rounds'（略去「馬格南」不影響辨識）。owner Brita's(2256623447) 不在本地，但無需 mod 依據即已合理。"
+    },
+    "ItemName.json|Base.Bullets357Carton": {
+      "verdict": "style_ok",
+      "anchor": "39bcc8109c38eee1",
+      "rationale": "「.357馬格南彈 (整箱)」與官方「箱裝.357馬格南子彈」同義，僅格式差異。owner 雖 _unsorted 但語意未偏離 van_en。"
+    },
+    "ItemName.json|Base.Bullets38": {
+      "verdict": "style_ok",
+      "anchor": "98913ea085d698ec",
+      "rationale": ".38彈藥 與 van_en \".38 Special Round\" 同物（官方簡中亦僅作 .38子弹），略去 Special 屬風格取捨，與 Firearms/MFS 自帶 CN 一致。"
+    },
+    "ItemName.json|Base.Bullets38Box": {
+      "verdict": "style_ok",
+      "anchor": "167cd22c16828048",
+      "rationale": "Guns93 與 Firearms EN 皆與本體同值 \"Box of .38 Special Rounds\"；「.38彈藥 (整盒)」為格式風格差（略去「特殊/Special」不影響辨識）。"
+    },
+    "ItemName.json|Base.Bullets38Carton": {
+      "verdict": "style_ok",
+      "anchor": "15434ce227e3960f",
+      "rationale": "owner Guns93(3183820077) mod EN 'Carton of .38 Special Rounds' 與 van_en 相同；ch「.38特殊彈 (整箱)」為 .38 Special 的正確直譯（官方略作「.38子彈」）。"
+    },
+    "ItemName.json|Base.Bullets44": {
+      "verdict": "mod_intended",
+      "anchor": "5ff3bbdd1ed995e9",
+      "rationale": "owner 3633421539 EN 重定義：\"Base.Bullets44\": \".44 Magnum Ammo\"；「.44 MAG彈藥」相符，亦兼容 van_en。"
+    },
+    "ItemName.json|Base.Bullets44Box": {
+      "verdict": "style_ok",
+      "anchor": "2eb04177ea3512d5",
+      "rationale": ".44 MAG彈藥 (整盒) 與 van_en \"Box of .44 Magnum Rounds\" 同義（MAG=Magnum 縮寫），與 Firearms/MFS 自帶 CN 一致。"
+    },
+    "ItemName.json|Base.Bullets44Carton": {
+      "verdict": "style_ok",
+      "anchor": "3419f58adc3f998f",
+      "rationale": "Guns93 EN 與本體同值 \"Carton of .44 Magnum Rounds\"；「.44馬格南彈 (整箱)」純格式風格差。"
+    },
+    "ItemName.json|Base.Bullets45": {
+      "verdict": "style_ok",
+      "anchor": "87146c36dfce8322",
+      "rationale": "van_en '.45 ACP Round'，ch「.45 ACP彈藥」準確；owner Guns93 mod EN '.45 Auto Rounds' 同義（.45 Auto = .45 ACP）。"
+    },
+    "ItemName.json|Base.Bullets45Box": {
+      "verdict": "mod_intended",
+      "anchor": "071384d48ba220fa",
+      "rationale": "owner 3633421539 EN 重定義：\"Base.Bullets45Box\": \"Boxed .45 ACP Ammo\"；「.45 ACP彈藥 (整盒)」相符。"
+    },
+    "ItemName.json|Base.Bullets45Carton": {
+      "verdict": "style_ok",
+      "anchor": "c124cb8f3c787ea1",
+      "rationale": ".45 ACP子彈 (整箱) 與 van_en 同義；Guns93 EN 亦僅改稱 \"Carton of .45 Auto Rounds\"（.45 Auto=.45 ACP），兩側口徑皆吻合。"
+    },
+    "ItemName.json|Base.Bullets9mm": {
+      "verdict": "style_ok",
+      "anchor": "656fc9d01e5ce3f7",
+      "rationale": "本體 9x19mm Round、Firearms EN \"9x19mm Parabellum Round\"（雜湊證實）、Guns93 \"9mm Round\"；ch「9x19mm彈藥」與三者皆相容，風格差。"
+    },
+    "ItemName.json|Base.Bullets9mmBox": {
+      "verdict": "style_ok",
+      "anchor": "e6193c1c021ca0bc",
+      "rationale": "ch「9x19mm彈藥 (整盒)」與 van_en 'Box of 9x19mm Rounds' 語意一致，僅格式風格差。"
+    },
+    "ItemName.json|Base.Bullets9mmCarton": {
+      "verdict": "style_ok",
+      "anchor": "ce84c02a082415c8",
+      "rationale": "「9x19mm子彈 (整箱)」是 van_en 'Carton of 9x19mm Rounds' 的合理翻譯（owner Guns93 的 EN 'Carton of 9mm Rounds' 亦相容），僅格式異於官方。"
+    },
+    "ItemName.json|Base.Burger": {
+      "verdict": "uncertain",
+      "anchor": "9c122ee050a0a97c",
+      "rationale": "招牌漢堡 較 van_en \"Burger\" 多了 招牌 修飾，疑食物系 mod 重定義但 VFE EN 查無 Base.Burger、_dl 僅 As1 上游含此值，無從查證；偏離輕微且無害，保守不改。"
+    },
+    "ItemName.json|Base.BurgerRecipe": {
+      "verdict": "uncertain",
+      "anchor": "5de18b45c41782b3",
+      "rationale": "van_en 僅 \"Burger\"，ch「招牌漢堡配方」多出 招牌/配方 語意；_unsorted 且 en_corpus_hashes 查無任何 mod 定義此鍵，無從查證來源，保守不改。"
+    },
+    "ItemName.json|Base.Burrito": {
+      "verdict": "mod_intended",
+      "anchor": "19991c40c9ae2023",
+      "rationale": "owner VFE(3577903007) EN: ItemName_Base.Burrito = 'Pork Burrito'，ch「豬肉捲餅」為其準確翻譯。"
+    },
+    "ItemName.json|Base.Cereal": {
+      "verdict": "mod_intended",
+      "anchor": "7437d2a77f249e4c",
+      "rationale": "VFE (3577903007) EN 重定義：ItemName_Base.Cereal = \"Corn Flakes\"；「玉米片」相符。"
+    },
+    "ItemName.json|Base.CerealBowl": {
+      "verdict": "mod_intended",
+      "anchor": "cec8a18cce99cddd",
+      "rationale": "VFE EN 重定義為 \"Bowl of Corn Flakes\"，碗 (玉米片) 符合 mod 語意（並沿官方簡中 碗 (麦片) 的括號慣例）。"
+    },
+    "ItemName.json|Base.Cheese": {
+      "verdict": "mod_intended",
+      "anchor": "dd6a0c5de9477ee3",
+      "rationale": "VFE 食物 (3577903007) EN 重定義為 \"Cheddar Cheese\"（實檔），「切達乳酪/切达奶酪」忠實對譯，mod 設計取捨。"
+    },
+    "ItemName.json|Base.ChokeTubeFull": {
+      "verdict": "style_ok",
+      "anchor": "348c47a09441ed51",
+      "rationale": "van_en 'Choke Tube - Full'（Guns93 mod EN 同文），ch「霰彈槍全縮口喉縮」語意正確（喉縮=choke 的華語槍械圈用語），僅較官方「收束器(全縮口)」冗長。"
+    },
+    "ItemName.json|Base.ChokeTubeImproved": {
+      "verdict": "style_ok",
+      "anchor": "09ae7b2ff93ab9f4",
+      "rationale": "「霰彈槍改良型喉縮」是 van_en 'Choke Tube - Improved' 的正確翻譯（喉縮=choke 專業術語，與 van_cn 用語一致），亦符 Guns93 EN 'Choke Tube, Improved'。僅與 van_ch「收束器(改良型)」術語取向不同。"
+    },
+    "ItemName.json|Base.ConeIcecream": {
+      "verdict": "mod_intended",
+      "anchor": "85f3193fc538dcd3",
+      "rationale": "VFE EN 重定義為 \"Vanilla Ice Cream Cone\"，香草冰淇淋甜筒 忠實對應。"
+    },
+    "ItemName.json|Base.ConeIcecreamMelted": {
+      "verdict": "mod_intended",
+      "anchor": "5e68bb081003ac9a",
+      "rationale": "VFE 食物 EN 重定義為 \"Vanilla Ice Cream Cone (Melted)\"（實檔），「香草冰淇淋甜筒 (融化)」忠實對譯。"
+    },
+    "ItemName.json|Base.Crackers": {
+      "verdict": "mod_intended",
+      "anchor": "db17d9dc54b0689d",
+      "rationale": "owner VFE(3577903007) EN: ItemName_Base.Crackers = 'Saltine Crackers'，ch「蘇打餅乾」即 Saltine 的標準譯法。"
+    },
+    "ItemName.json|Base.DoubleBarrelShotgun": {
+      "verdict": "mod_intended",
+      "anchor": "0dcbb16fd6a0a779",
+      "rationale": "「斯托格教練霰彈槍」= Stoeger Coach Gun 實槍名，只可能源自 owner 2256623447(firearmmod)/3611718925(VFExpansionRedux) 以實槍名重命名原版槍械的 EN；兩 mod 均不在本地 _dl/SteamLibrary 無法引原文，以品牌對應與 As1 譯鏈推證。"
+    },
+    "ItemName.json|Base.DoubleBarrelShotgunSawnoff": {
+      "verdict": "mod_intended",
+      "anchor": "20e37943c5caa2de",
+      "rationale": "Firearms (2256623447) 與 VFE (3611718925) 自帶 CN 均為 斯托格教练霰弹枪 (锯短) 且與本包逐字一致，屬該系 mod 將雙管槍重製為 Stoeger Coach Gun 真實槍名的設計。"
+    },
+    "ItemName.json|Base.GranolaBar": {
+      "verdict": "mod_intended",
+      "anchor": "107cb2b08bf0eb19",
+      "rationale": "VFE 食物 EN 重定義為 \"Peanut Butter Granola Bar\"（實檔），「花生醬格蘭諾拉棒」忠實對譯。"
+    },
+    "ItemName.json|Base.GunLight": {
+      "verdict": "mod_intended",
+      "anchor": "e942422ac88a7e5b",
+      "rationale": "owner Guns93(3183820077) mod EN 重定義 GunLight = 'Weapon Light w/ Clamp Mount'，ch「手槍戰術燈」符合戰術槍燈語意（「手槍」前綴疑承另一 owner Brita's 的定義，Brita's 檔不在本地）。"
+    },
+    "ItemName.json|Base.HolsterAnkle": {
+      "verdict": "uncertain",
+      "anchor": "d431f72c5686aa2a",
+      "rationale": "「T4S-Kin腳踝槍套」帶 mod 品牌前綴（疑 T4S 系戰術裝備 mod 重命名），owner=_unsorted 且兩處 workshop rg 查無定義該 EN 的 mod（僅見他包 DE/PTBR 譯文）。功能語意「腳踝槍套」未失真，淨危害低，保守不改。"
+    },
+    "ItemName.json|Base.HuntingRifle": {
+      "verdict": "mod_intended",
+      "anchor": "efcf6ffbf60ee253",
+      "rationale": "Firearms 與 VFE 自帶 CN 均為 狩猎步枪 且與本包一致，屬 mod 把虛構名 MSR788 改回通稱獵槍的重定義。"
+    },
+    "ItemName.json|Base.Icecream": {
+      "verdict": "mod_intended",
+      "anchor": "5fae9c7b72494ecc",
+      "rationale": "VFE 食物 EN 重定義為 \"Ice Cream - Vanilla\"（實檔），「香草冰淇淋」忠實對譯。"
+    },
+    "ItemName.json|Base.IcecreamMelted": {
+      "verdict": "mod_intended",
+      "anchor": "cf2ccd10224f3099",
+      "rationale": "owner VFE(3577903007) EN: ItemName_Base.IcecreamMelted = 'Vanilla Ice Cream (Melted)'，ch「香草冰淇淋 (融化)」為其準確翻譯。"
+    },
+    "ItemName.json|Base.Icing": {
+      "verdict": "mod_intended",
+      "anchor": "2a400bf5d6b17398",
+      "rationale": "VFE (3577903007) EN 重定義：ItemName_Base.Icing = \"Vanilla Frosting\"；「香草糖霜」相符。"
+    },
+    "ItemName.json|Base.JS14_Clip": {
+      "verdict": "mod_intended",
+      "anchor": "e5cdbee37743658f",
+      "rationale": "Firearms 自帶 CN 5.56mm自动步枪20发弹匣 與本包逐字一致，屬 mod 將虛構 JS-14 重製為真實 5.56 自動步槍體系的設計。"
+    },
+    "ItemName.json|Base.JS14_Rifle": {
+      "verdict": "mod_intended",
+      "anchor": "c7f18dae33673665",
+      "rationale": "Firearms (2256623447) EN 重定義為 \"Ruger Mini-14\"（sha256 反推證實），「儒格Mini-14半自動步槍」符合 mod 真名語意（半自動 為事實補充）；JS-14 的現實原型即 Mini-14，對本體玩家亦不張冠李戴。"
+    },
+    "ItemName.json|Base.JS3T_Shotgun": {
+      "verdict": "mod_intended",
+      "anchor": "4c4555f86bb9ce98",
+      "rationale": "複核推翻原判：排除：Firearms(2256623447) corpus 證實重定義同鍵且 hash 126e6ceab778 ≠ h('JS-3T Tactical Shotgun')，即 mod 確實改了 EN 名；該 mod 慣以真實槍名重命名（JS-3T 原型即 Benelli M3），「貝內利霰彈槍」符合其命名方案。"
+    },
+    "ItemName.json|Base.L92_Carbine": {
+      "verdict": "mod_intended",
+      "anchor": "bfa2f82c11750aa8",
+      "rationale": "「溫徹斯特1892步槍」對應原版虛構槍 L92 Carbine 的實槍原型 Winchester 1892，屬 owner 2256623447(firearmmod) 實槍名重命名設計；mod 未入本地無法引 EN 原文，以品牌對應推證。"
+    },
+    "ItemName.json|Base.L94_Rifle": {
+      "verdict": "mod_intended",
+      "anchor": "58cd4816e433459e",
+      "rationale": "Firearms 自帶 CN 温彻斯特1894步枪 與本包逐字一致，mod 將虛構 L94 重製為 Winchester 1894。"
+    },
+    "ItemName.json|Base.Laser": {
+      "verdict": "style_ok",
+      "anchor": "aab992c2f3c516ce",
+      "rationale": "van_en Laser Sight；本體此配件僅能裝手槍，「手槍雷射指示器」的 手槍 前綴屬事實補充、指示器/瞄準器 為用詞差，對所有玩家無誤導。owner 端 Guns93 EN=\"Laser Sight w/ Clamp Mount (Off)\"、EFK=\"Damaged Firearm Parts\" 各自重定義，Firearms EN 未還原，ch 取通用描述屬合理折衷。"
+    },
+    "ItemName.json|Base.Lettuce": {
+      "verdict": "uncertain",
+      "anchor": "59466aa9da246aef",
+      "rationale": "ch「克里斯生菜」偏離 van_en 'Lettuce'，疑為某模組 'Crisphead Lettuce'（結球萵苣）的音譯，但 _unsorted 且本地查無任何 mod 重定義（VFE/TwisTonFire EN 均無此鍵）。「克里斯」音譯品質不佳，惟語意仍是生菜，保守不改並建議定位來源。"
+    },
+    "ItemName.json|Base.M14Clip": {
+      "verdict": "mod_intended",
+      "anchor": "5e3b1d0c642300f3",
+      "rationale": "owner 3633421539 EN 重定義：\"Base.M14Clip\": \"7.62×51mm 20-Round M14 Magazine\"；「7.62mm自動步槍彈匣」符合 mod 語意。"
+    },
+    "ItemName.json|Base.MSR7T_Rifle": {
+      "verdict": "mod_intended",
+      "anchor": "aeb462a714722148",
+      "rationale": "Firearms 自帶 CN 狙击步枪 與本包逐字一致，屬 mod 重定義取捨。"
+    },
+    "ItemName.json|Base.Magazine": {
+      "verdict": "harmful_fixed",
+      "anchor": "df4e5e391972f4ec",
+      "rationale": "以 hash 反推複核：Firearms(2256623447) EN ItemName hash 9042ee84d0a2 = 'Magazine' 命中（與 vanilla 同值），且 corpus 中該 mod 無 script_item Magazine 覆寫紀錄（其彈匣為 223Clip/AKM_Mag 等自有 item）。可閱讀雜誌譯「彈匣」無任何依據且曝光度高，維持 harmful。"
+    },
+    "ItemName.json|Base.PastaPan": {
+      "verdict": "mod_intended",
+      "anchor": "31bbb9d8cac1aaf0",
+      "rationale": "owner VFE(3577903007) EN: ItemName_Base.PastaPan = 'Spaghetti'，ch「義大利麵 (烹飪中)」符合 mod 語意並附鍋中狀態註記。"
+    },
+    "ItemName.json|Base.PastaPanCopper": {
+      "verdict": "mod_intended",
+      "anchor": "31bbb9d8cac1aaf0",
+      "rationale": "VFE (3577903007) EN 重定義：ItemName_Base.PastaPanCopper = \"Spaghetti\"；「義大利麵 (烹飪中)」為 mod 名稱加鍋具語境註記，相符。"
+    },
+    "ItemName.json|Base.PastaPot": {
+      "verdict": "mod_intended",
+      "anchor": "31bbb9d8cac1aaf0",
+      "rationale": "VFE EN 重定義為 \"Spaghetti\"（鍋煮義麵狀態物品），義大利麵 (烹飪中) 貼合 mod 語意，(烹飪中) 為合理補述。"
+    },
+    "ItemName.json|Base.PastaPotForged": {
+      "verdict": "mod_intended",
+      "anchor": "31bbb9d8cac1aaf0",
+      "rationale": "VFE 食物 EN 重定義為 \"Spaghetti\"（實檔），「義大利麵 (烹飪中)」主體對譯正確、(烹飪中) 為譯者補充語境（本體該鍵掛在蒸煮鍋上），無害。"
+    },
+    "ItemName.json|Base.PillsVitamins": {
+      "verdict": "improvement",
+      "anchor": "df74f6a5a4a6d47d",
+      "rationale": "本體 van_en 已改為 'Caffeine Pills'，官方 van_ch「維他命」/van_cn「维生素」為未跟進的舊譯；ch「咖啡因片」/cn「咖啡因片」正確對應現行 van_en，屬修正官方滯後的改善型覆寫。"
+    },
+    "ItemName.json|Base.Pistol": {
+      "verdict": "mod_intended",
+      "anchor": "d384c2ac72342ec2",
+      "rationale": "「貝瑞塔手槍」對應 owner 2256623447(firearmmod) 將 M9 改為實槍名 Beretta 的設計（M9 本即 Beretta 92FS 軍規型，對未裝 mod 玩家也不算誤導）；mod 未入本地，以品牌對應推證。"
+    },
+    "ItemName.json|Base.Pistol2": {
+      "verdict": "style_ok",
+      "anchor": "1e90713e721301aa",
+      "rationale": "M1911手槍 與官方 M1911 手槍 僅空格差異。"
+    },
+    "ItemName.json|Base.Pistol3": {
+      "verdict": "mod_intended",
+      "anchor": "4cc6dca108c2b8dc",
+      "rationale": "EFK EN=\"Desert Eagle Pistol\"（實檔）、Firearms EN=\"Desert Eagle\"（sha256 證實）。ch 沙漠之鷹手槍 與官方 van_ch 完全同值（CH 側零覆寫效應）；僅 cn 側把官方 B-F 手枪 改為 沙漠之鹰手枪，符合 mod 真名語意。"
+    },
+    "ItemName.json|Base.Pizza": {
+      "verdict": "mod_intended",
+      "anchor": "757c58d94027f3b5",
+      "rationale": "owner VFE(3577903007) EN: ItemName_Base.Pizza = 'Slice of Cheese Pizza'，ch「乳酪披薩塊」為其準確翻譯。"
+    },
+    "ItemName.json|Base.PizzaWhole": {
+      "verdict": "mod_intended",
+      "anchor": "cd207f19ce9cf7fa",
+      "rationale": "VFE (3577903007) EN 重定義：ItemName_Base.PizzaWhole = \"Cheese Pizza\"；「乳酪披薩」相符。"
+    },
+    "ItemName.json|Base.Popsicle": {
+      "verdict": "mod_intended",
+      "anchor": "9a65077def56f68a",
+      "rationale": "VFE EN 重定義為 \"Raspberry Popsicle\"（42.18 改 \"Popsicle - Raspberry\"），覆盆子冰棒 符合 mod 語意。"
+    },
+    "ItemName.json|Base.RecoilPad": {
+      "verdict": "harmful_fixed",
+      "anchor": "3c1f90c9a746ab94",
+      "rationale": "Guns93(3183820077) EN 經 sources/en 實檔+hash 28b4dd8ea990='Rubber Recoil Pad' 證實；EFK(3633421539) 之 item RecoilPad 走 base:weaponpart 模板無改名。「Angled Grip」實為 WAR/GaelGunStore 的另一獨立鍵 Base.AngleGrip，「角形握把」屬鄰鍵張冠李戴，維持 harmful。"
+    },
+    "ItemName.json|Base.RedDot": {
+      "verdict": "mod_intended",
+      "anchor": "fff9bd919cc817f2",
+      "rationale": "owner Guns93(3183820077) mod EN 重定義 RedDot = 'Aimpoint (Red Dot)'（品牌化改名），確立此鍵屬 mod 重定義範疇；ch「EOTECH 1倍全息瞄準鏡」對應另一 owner Brita's 系的品牌定義。任一 owner 有重定義即算 mod_intended。"
+    },
+    "ItemName.json|Base.Revolver": {
+      "verdict": "mod_intended",
+      "anchor": "eab37737860d9256",
+      "rationale": "「.357左輪手槍」偏離 van_en 'Patrol Revolver'（van_ch 作 M625），對應 owner 2256623447(firearmmod) 對原版左輪的實槍化重命名/口徑重製；mod 未入本地無法引 EN 原文，以 As1 譯鏈（As1 依 mod 實際 EN 翻譯）推證。"
+    },
+    "ItemName.json|Base.Revolver_Long": {
+      "verdict": "mod_intended",
+      "anchor": "92d9049ff3e98618",
+      "rationale": "Firearms 與 VFE 自帶 CN 均為 .44马格南左轮手枪 且與本包一致；原版 Magnum 即 .44 口徑長管左輪，補述亦不誤導原版玩家。"
+    },
+    "ItemName.json|Base.Revolver_Short": {
+      "verdict": "mod_intended",
+      "anchor": "6e48b3777730595c",
+      "rationale": "Firearms (2256623447) EN 重定義為 \"S&W M36\"（sha256 反推證實），M36 即 .38 Special 短管左輪；「.38左輪手槍」符合 mod 語意，對本體玩家（SN38 亦為 .38 左輪）不誤導，僅失品牌風格。"
+    },
+    "ItemName.json|Base.Shoes_ArmyBoots": {
+      "verdict": "style_ok",
+      "anchor": "2381b7facea679ce",
+      "rationale": "owner Boots Expanded(2850935956) EN 'Military Boots' 與 van_en 相同；ch「軍用靴」正確（與 van_cn 同文，僅與 van_ch「軍靴」風格差）。"
+    },
+    "ItemName.json|Base.Shoes_ArmyBootsDesert": {
+      "verdict": "style_ok",
+      "anchor": "2029cc01deb4c571",
+      "rationale": "owner 2850935956 (SM4BootsExpanded) EN 與 van_en 完全相同 'Military Boots - Desert'；「軍用靴 (沙漠)」僅格式異於 van_ch「軍用沙漠靴」（與 van_cn 同構）。"
+    },
+    "ItemName.json|Base.Shoes_Black": {
+      "verdict": "improvement",
+      "anchor": "c15e52c4c18cb5e9",
+      "rationale": "Boots Expanded EN 維持 \"Shoes\"，但該物品即黑色皮鞋；黑鞋 與官方簡中 皮鞋 (黑) 口徑一致，較官方繁中籠統的 鞋子 更能區分色版，屬改善型覆寫。"
+    },
+    "ItemName.json|Base.Shoes_BlackBoots": {
+      "verdict": "style_ok",
+      "anchor": "56e59add8584d83c",
+      "rationale": "Boots Expanded (2850935956) EN 為 \"Boots\"/\"Boots - Long\"（實檔）；「黑靴」符合本體該物品實際外觀（黑色靴），並為該 mod 多色靴系提供區辨，無害的具體化。"
+    },
+    "ItemName.json|Base.Shoes_BlueTrainers": {
+      "verdict": "mod_intended",
+      "anchor": "5280b9880ed454a7",
+      "rationale": "owner Boots Expanded(2850935956) EN: Base.Shoes_BlueTrainers = 'Hitop Sneakers'，ch「高幫運動鞋」為其準確翻譯。"
+    },
+    "ItemName.json|Base.Shoes_Brown": {
+      "verdict": "mod_intended",
+      "anchor": "e1191beaa4d21533",
+      "rationale": "SM4BootsExpanded (2850935956) EN 重定義：\"Base.Shoes_Brown\": \"Booties\"；「短靴」相符（mod 把泛用 Shoes 改為短靴類）。"
+    },
+    "ItemName.json|Base.Shoes_CowboyBoots": {
+      "verdict": "style_ok",
+      "anchor": "6430abc27b7c1a2b",
+      "rationale": "Boots Expanded EN 同 van_en \"Western Boots\"；西部靴 為直譯，與官方 牛仔靴 僅風格差。"
+    },
+    "ItemName.json|Base.Shoes_CowboyBoots_Black": {
+      "verdict": "style_ok",
+      "anchor": "6430abc27b7c1a2b",
+      "rationale": "Boots Expanded EN 與本體同值 \"Western Boots\"（實檔）；「西部靴」為忠實直譯，官方 黑色牛仔靴 為意譯加色，兩者皆無害。"
+    },
+    "ItemName.json|Base.Shoes_CowboyBoots_Brown": {
+      "verdict": "style_ok",
+      "anchor": "6430abc27b7c1a2b",
+      "rationale": "van_en 'Western Boots'（Boots Expanded mod EN 同文），ch「西部靴」為正確直譯，官方另補「棕色牛仔靴」色系描述，屬風格取捨。"
+    },
+    "ItemName.json|Base.Shoes_CowboyBoots_Fancy": {
+      "verdict": "style_ok",
+      "anchor": "7d80fa6ccc4a5835",
+      "rationale": "mod EN 與 van_en 相同 'Western Boots - Embroidered'；「西部靴 (刺繡)」是更貼字面的翻譯，與官方「繡花牛仔靴」僅風格差異。"
+    },
+    "ItemName.json|Base.Shoes_CowboyBoots_SnakeSkin": {
+      "verdict": "style_ok",
+      "anchor": "88d9fbf1664110e1",
+      "rationale": "西部靴 (蛇皮) 與官方 蛇皮牛仔靴 同義，僅格式風格差。"
+    },
+    "ItemName.json|Base.Shoes_CrudeLeatherFootwear": {
+      "verdict": "style_ok",
+      "anchor": "e50b2a3d3b210649",
+      "rationale": "EN \"Crude Leather Footwear\"（mod 同值）；粗製皮靴 vs 官方 粗製皮鞋 僅 靴/鞋 用詞差，Boots Expanded 語境下取靴亦合理。"
+    },
+    "ItemName.json|Base.Shoes_Fancy": {
+      "verdict": "mod_intended",
+      "anchor": "bae05cebfa70aad0",
+      "rationale": "owner Boots Expanded(2850935956) EN: Base.Shoes_Fancy = 'Booties - Fancy'，ch「精緻短靴」符合 mod 重定義語意（vanilla 為 'Fancy Shoes'）。"
+    },
+    "ItemName.json|Base.Shoes_FlipFlop": {
+      "verdict": "style_ok",
+      "anchor": "e7495e9a7be553a5",
+      "rationale": "mod EN 與 van_en 相同 'Flip-flops'；ch「人字拖」語意正確惟台灣慣用「夾腳拖」（van_ch），屬可潤色的用詞取向，非錯誤。"
+    },
+    "ItemName.json|Base.Shoes_HikingBoots": {
+      "verdict": "style_ok",
+      "anchor": "f92fa1e7d5998f22",
+      "rationale": "徒步靴 為 Hiking Boots 合理譯法（台灣慣用 登山靴 較佳，屬用語風格差非錯譯）。"
+    },
+    "ItemName.json|Base.Shoes_Random": {
+      "verdict": "style_ok",
+      "anchor": "24788aed076fdc66",
+      "rationale": "Boots Expanded EN 與本體同值 \"Shoes\"（實檔）；「休閒鞋」輕度具體化（官方 cn 亦具體化為 皮鞋），無誤導。"
+    },
+    "ItemName.json|Base.Shoes_RedTrainers": {
+      "verdict": "mod_intended",
+      "anchor": "1b8bbcd25afdef67",
+      "rationale": "owner Boots Expanded(2850935956) EN: Base.Shoes_RedTrainers = 'Converse Sneakers'，ch「匡威運動鞋」為其準確翻譯。"
+    },
+    "ItemName.json|Base.Shoes_Wellies": {
+      "verdict": "style_ok",
+      "anchor": "8c1824d25c1e0786",
+      "rationale": "「橡膠雨靴」是 van_en 'Rubber Boots' 的合理翻譯，亦符 SM4 mod EN 'Boots - Rubber'；僅比官方「雨靴」多材質字。"
+    },
+    "ItemName.json|Base.Shotgun": {
+      "verdict": "mod_intended",
+      "anchor": "dc868a9f42ed371b",
+      "rationale": "Firearms 與 VFE 自帶 CN 均為 雷明顿M870霰弹枪 且與本包一致，mod 將虛構 JS-2000 重製為 Remington M870。"
+    },
+    "ItemName.json|Base.ShotgunSawnoff": {
+      "verdict": "mod_intended",
+      "anchor": "50dbe159452ab37b",
+      "rationale": "owner 為 Firearms (2256623447) 與 3611718925；EN 字串雜湊未反推成功，但 Firearms 對同批鍵全面真名化已獲 sha256 證實（M16A1、S&W M36、Ruger Mini-14、Remington Model 700、Desert Eagle 五鍵命中），JS-2000 的現實原型即 Remington 870，「雷明頓M870霰彈槍 (鋸短)」與該模式完全一致，判 mod 重定義之高信度推定。"
+    },
+    "ItemName.json|Base.ShotgunShells": {
+      "verdict": "style_ok",
+      "anchor": "e85f0c32b4e051a8",
+      "rationale": "ch「12GA霰彈槍彈藥」與 van_en '12g Round' 語意一致且更明確；owner Guns93 mod EN 'Buckshot Shell' 亦不衝突。"
+    },
+    "ItemName.json|Base.ShotgunShellsBox": {
+      "verdict": "style_ok",
+      "anchor": "dbe2ff55116039a1",
+      "rationale": "「12GA霰彈槍彈藥 (整盒)」兼容 van_en 'Box of 12g Rounds' 與 Guns93 EN 'Box of 12ga Buckshot'，語意無偏離，僅格式差異。"
+    },
+    "ItemName.json|Base.ShotgunShellsCarton": {
+      "verdict": "style_ok",
+      "anchor": "76aa6c03d7303381",
+      "rationale": "12號霰彈 (整箱) 與 van_en \"Carton of 12g Rounds\" 同義（12 gauge=12號鉛徑）；Guns93 EN 重定義 \"Carton of 12ga Buckshot\" 亦相容，兩側皆無害。"
+    },
+    "ItemName.json|Base.Socks_Ankle": {
+      "verdict": "improvement",
+      "anchor": "bfe5fbd225838a74",
+      "rationale": "物品為踝襪（Socks_Ankle），ch 短襪 較官方 van_ch 襪子 更精確，且與官方 van_cn 短袜 一致，屬改善型覆寫。"
+    },
+    "ItemName.json|Base.Socks_Ankle_Black": {
+      "verdict": "style_ok",
+      "anchor": "bfe5fbd225838a74",
+      "rationale": "van_en 'Socks'（Boots Expanded mod EN 同文），ch「短襪」正確，僅較官方少「(黑)」色註。"
+    },
+    "ItemName.json|Base.Socks_Ankle_White": {
+      "verdict": "mod_intended",
+      "anchor": "bfe5fbd225838a74",
+      "rationale": "SM4BootsExpanded (2850935956) EN 重定義：\"Base.Socks_Ankle_White\": \"Socks\"（去掉顏色後綴）；「短襪」相符，僅少了官方的「(白)」。"
+    },
+    "ItemName.json|Base.Socks_LegWarmers": {
+      "verdict": "style_ok",
+      "anchor": "f9e83175f03a33e0",
+      "rationale": "暖腿套 與官方 護腿襪套 均為 Legwarmers 合理譯法，風格差。"
+    },
+    "ItemName.json|Base.TVDinner": {
+      "verdict": "mod_intended",
+      "anchor": "adb895269350e7fd",
+      "rationale": "VFE 食物 EN 重定義為 \"TV Dinner - Lasagna\"（實檔），ch 千層麵 取其品項半段（略去 TV Dinner），符合 mod 語意；本體 微波食品 被具體化為千層麵屬 mod 取捨。"
+    },
+    "ItemName.json|Base.Teabag2": {
+      "verdict": "mod_intended",
+      "anchor": "65cb2cd8df05b632",
+      "rationale": "owner VFE(3577903007) EN: ItemName_Base.Teabag2 = 'Black Tea Bag'，ch「紅茶包」為其準確翻譯。"
+    },
+    "ItemName.json|Base.TrapperCarbine": {
+      "verdict": "mod_intended",
+      "anchor": "b19f4e2bf8442456",
+      "rationale": "複核再推翻（2026-08-06）：前次以「Trapper Carbine 原型即 Marlin 槓桿槍」推測譯名為「馬林45步槍」，但未解 hash 即下結論。實證 sha256('Winchester Model 1894')[:12] = 118a7d7fd4e5，正是本條記錄的 hash——mod 改名後的 EN 顯示名就是 Winchester Model 1894，非 Marlin。CH 已更正為「溫徹斯特1894步槍」，與同族 Base.TrapperCarbine_Sawn「溫徹斯特1894步槍 (鋸短)」一致。原判定 verdict 不變。"
+    },
+    "ItemName.json|Base.TritiumSights": {
+      "verdict": "mod_intended",
+      "anchor": "79ce476e611e954d",
+      "rationale": "MFS (3633421539) 自帶 CN 1倍红瞄准镜 與本包逐字一致，屬該 mod 將此鍵重用為 1 倍紅點鏡的設計；同 wid 下 EfK EN 亦重定義此鍵（\"Damaged Firearm Parts\"），可證此鍵屬 mod 重製範疇。"
+    },
+    "ItemName.json|Base.VarmintRifle": {
+      "verdict": "mod_intended",
+      "anchor": "993e7431a1ffe8cd",
+      "rationale": "Firearms (2256623447) EN 重定義為 \"Remington Model 700\"（sha256 反推證實），「雷明頓700狙擊步槍」符合 mod 真名語意（「狙擊」為通俗稱法，R700 為 M24/M40 狙擊槍基礎，輕度演繹可接受）。"
+    },
+    "ItemName.json|Base.WaterPotForgedPasta": {
+      "verdict": "mod_intended",
+      "anchor": "cefd23bb46042900",
+      "rationale": "owner VFE(3577903007) EN: Base.WaterPotForgedPasta = 'Cooking Pot with Spaghetti'，ch「燉鍋裝義大利麵」符合 mod 語意（鍋具稱呼與官方「粗製蒸煮鍋」屬風格差）。"
+    },
+    "ItemName.json|Base.WaterPotPasta": {
+      "verdict": "mod_intended",
+      "anchor": "cefd23bb46042900",
+      "rationale": "VFE (3577903007) EN 重定義：ItemName_Base.WaterPotPasta = \"Cooking Pot with Spaghetti\"；「燉鍋裝義大利麵」相符，亦兼容 van_en。"
+    },
+    "ItemName.json|Base.WaterSaucepanPasta": {
+      "verdict": "style_ok",
+      "anchor": "78a10cc53d992e9f",
+      "rationale": "VFE EN \"Saucepan with Spaghetti\" 與 van_en 同義；湯鍋裝義大利麵 與官方 裝有義大利麵的湯鍋 僅語序風格差。"
+    },
+    "ItemName.json|Base.WaterSaucepanPastaCopper": {
+      "verdict": "style_ok",
+      "anchor": "6d2092097f5a34e5",
+      "rationale": "VFE EN \"Copper Saucepan with Spaghetti\"（實檔）與本體語意等價；「銅鍋裝義大利麵」對兩者皆為忠實風格變體。"
+    },
+    "ItemName.json|Base.Wine": {
+      "verdict": "mod_intended",
+      "anchor": "8f05d5acaf663255",
+      "rationale": "owner VFE(3577903007) EN: ItemName_Base.Wine = 'Bottle of Chardonnay'，ch「玻璃瓶 (夏多內白葡萄酒)」為其準確翻譯（夏多內為台譯、cn 霞多丽為陸譯，各自正確）。"
+    },
+    "ItemName.json|Base.Wine2": {
+      "verdict": "mod_intended",
+      "anchor": "8f05d5acaf663255",
+      "rationale": "VFE (3577903007) EN 重定義：ItemName_Base.Wine2 = \"Bottle of Chardonnay\"；「玻璃瓶 (夏多內白葡萄酒)」正確對應——若無 mod 語境會像紅酒→白酒的重大誤譯，實為 mod 設計取捨。"
+    },
+    "ItemName.json|Base.WineBox": {
+      "verdict": "mod_intended",
+      "anchor": "7c8fc1ebbf39f520",
+      "rationale": "VFE EN 重定義為 \"Boxed Chardonnay\"（由紅酒改為夏多內白酒），紙盒 (夏多內白葡萄酒) 忠實對應 mod 語意。"
+    },
+    "ItemName.json|Base.WineRed_Boxed": {
+      "verdict": "mod_intended",
+      "anchor": "7c8fc1ebbf39f520",
+      "rationale": "VFE 食物 EN 重定義為 \"Boxed Chardonnay\"（實檔），「紙盒 (夏多內白葡萄酒)」忠實對譯；本體盒裝紅酒變白酒是 mod 設計取捨的固有代價。"
+    },
+    "ItemName.json|Base.WineWhite_Boxed": {
+      "verdict": "mod_intended",
+      "anchor": "7c8fc1ebbf39f520",
+      "rationale": "owner VFE(3577903007) EN: Base.WineWhite_Boxed = 'Boxed Chardonnay'，ch「紙盒 (夏多內白葡萄酒)」為其準確翻譯。"
+    },
+    "ItemName.json|Base.Yoghurt": {
+      "verdict": "mod_intended",
+      "anchor": "a5b8fe3352ace964",
+      "rationale": "VFE (3577903007) EN 重定義：ItemName_Base.Yoghurt = \"Vanilla Yogurt\"；「香草優格」相符。"
+    },
+    "ItemName.json|Base.x2Scope": {
+      "verdict": "mod_intended",
+      "anchor": "6444cd9e742c2bed",
+      "rationale": "Firearms 與 MFS 自帶 CN 均為 ACOG 2倍瞄准镜 且與本包一致，屬 mod 賦予真實型號的設計；倍率資訊保留，對原版玩家亦不誤導。"
+    },
+    "ItemName.json|Base.x4Scope": {
+      "verdict": "mod_intended",
+      "anchor": "5b2b93341bb9b7a0",
+      "rationale": "複核推翻原判：排除：Firearms hash fa966501090d ≠ h('x4 Scope')（Guns93 同鍵 hash 則=原版值），證實 Firearms 確實將 x4Scope 改名為他值（LVPO 系），As1 譯文對應該 mod 重定義而非誤譯 vanilla。"
+    },
+    "ItemName.json|Base.x8Scope": {
+      "verdict": "harmful_fixed",
+      "anchor": "fa85306173cf7dea",
+      "rationale": "uncertain 升級：三個 owner 的 EN 全數 hash 證實——Firearms 052ccfc484c5='x8 Scope'、Guns93 同值、EFK 69f366251719='Damaged 8X Scope'，無一支持「霍克10倍瞄準鏡」；倍率 8x→10x 誤導與品牌捏造成立，升級 confirmed_harmful（官方 van_ch 八倍鏡）。"
+    },
+    "Recipes.json|MakeSpikedClub": {
+      "verdict": "style_ok",
+      "anchor": "b61389ef8d66e6fd",
+      "rationale": "「製作帶刺棍棒」與官方「製作尖刺棍棒」同義，用詞差異。"
+    },
+    "Recipes.json|MakeTortillaChips": {
+      "verdict": "style_ok",
+      "anchor": "68e52727b930ea90",
+      "rationale": "Herbalist (2875059598) 自帶 CN 制作玉米片 與本包一致；官方繁中本身即意譯為 製作玉米脆片（非直譯 Slice Tortilla），本包僅少一 脆 字，風格差。"
+    },
+    "Tooltip.json|Tooltip_Antibiotics": {
+      "verdict": "mod_intended",
+      "anchor": "9d3a8b3ba87e9753",
+      "rationale": "Herbalist (2875059598) 重定義此鍵（en_corpus_hashes records 佐證；EN 雜湊未還原），「用於製作抗生素.」符合草藥合成 mod 的原料/合成提示語意；代價是本體抗生素的「無法防止殭屍化」警語被覆蓋，屬 mod 取捨。"
+    },
+    "Tooltip.json|Tooltip_Ginseng": {
+      "verdict": "style_ok",
+      "anchor": "af618d5abf420b44",
+      "rationale": "「服用以恢復耐力.」與 van_en 'Eat to restore endurance.' 語意一致（與 van_cn 同文，僅與 van_ch「食用可恢復」風格差）。"
+    },
+    "Tooltip.json|Tooltip_Laser": {
+      "verdict": "mod_intended",
+      "anchor": "59cfaf5d0f9c960d",
+      "rationale": "Guns93 (3183820077, sources/en) EN 重定義：\"Tooltip_Laser\": \"Weapon attachment. Improves firearm aiming time.\"；「減少瞄準時間」相符，「提高暴擊機率」為其他槍械 mod 版本的雷射效果描述。偏離 van_en 屬 mod 機制改動。"
+    },
+    "Tooltip.json|Tooltip_Literature_XpMultiplier": {
+      "verdict": "mod_intended",
+      "anchor": "59a326d951e10699",
+      "rationale": "複核推翻原判：推翻：corpus hash 證實 SimpleSkillBooks(3291799176, mods/SimpleSkillBooks/42.13/.../Tooltip.json) 重定義同鍵 EN，原判「_dl 全庫查無 mod 重定義」不成立；workshop 頁證實該 mod 機制即「技能書直接給固定經驗、Book1 於零經驗時給滿第一級所需 XP、停用原版倍率」，無 %1 的固定敘述正是該 mod tooltip 的翻譯。"
+    },
+    "Tooltip.json|Tooltip_Painkillers": {
+      "verdict": "mod_intended",
+      "anchor": "1f1a5ace0c152963",
+      "rationale": "同 Antibiotics：Herbalist 重定義此鍵（records 佐證），「用於製作止痛藥.」符合其合成語意。"
+    },
+    "Tooltip.json|Tooltip_PillsAntidepressant": {
+      "verdict": "uncertain",
+      "anchor": "b7851f76f6784003",
+      "rationale": "ch/cn 大量新增失眠治療機制（168 小時療程、助眠），顯為某失眠/藥物模組重定義之翻譯，且「減少恐慌」不符 vanilla 抗憂鬱藥效果；但 _unsorted 且本地查無 mod EN 出處。未裝該模組玩家會看到不存在機制的說明，建議定位來源後改判；暫保守不改。"
+    },
+    "Tooltip.json|Tooltip_PillsBetablocker": {
+      "verdict": "uncertain",
+      "anchor": "62887522691b561b",
+      "rationale": "文本自述「β受體阻斷劑/EHR追蹤剩餘劑量」顯為 EHR 醫療系統 mod 重定義的 tooltip（不可能是 van_en 'Reduces panic.' 的誤譯），但該 mod 未在本地兩處 workshop，無法引 EN 原文佐證，依規保守列 uncertain。"
+    },
+    "Tooltip.json|Tooltip_PillsSleeping": {
+      "verdict": "uncertain",
+      "anchor": "89b45e04d4a12641",
+      "rationale": "文案自述 EHR追蹤剩餘劑量（明顯為 EHR 系醫療 mod 的重定義文案），但 _dl 無法定位該 mod EN 佐證；對未裝 mod 玩家會看到含 mod 名的提示，屬輕度洩漏而非誤導，保守不改、建議補歸屬。"
+    },
+    "Tooltip.json|Tooltip_Scope": {
+      "verdict": "uncertain",
+      "anchor": "6b76ddae7467b9c0",
+      "rationale": "「提高暴擊機率和瞄準距離, 但增加瞄準時間.」為 B41 風格瞄具敘述，偏離 B42 van_en（增程/降近距精度）；_unsorted 且 records 查無定義 mod，無從查證，保守不改。"
+    },
+    "Tooltip.json|Tooltip_item_Unattached": {
+      "verdict": "harmful_fixed",
+      "anchor": "2e03e7c94fc7b46f",
+      "rationale": "uncertain 升級：corpus 唯一重定義者 FancyLanterns(3267733558) hash fa55674973ef='unattached' 命中（=vanilla 同值），mod 重定義假說排除。「取下」把狀態詞誤作動作詞、偏離官方 未附加，升級 confirmed_harmful。"
+    },
+    "Tooltip.json|Tooltip_weapon_Canon": {
+      "verdict": "mod_intended",
+      "anchor": "625beec4b59c7575",
+      "rationale": "Guns93 (3183820077, sources/en) EN 重定義：\"Tooltip_weapon_Canon\": \"Muzzle Device\"；「槍口」相符 mod 語意（官方 van_en 'Canon'=槍管）。"
+    },
+    "Tooltip.json|Tooltip_weapon_RecoilPad": {
+      "verdict": "improvement",
+      "anchor": "8728ec0ef8a71f57",
+      "rationale": "後坐力緩衝墊 較官方 緩衝墊 更完整還原 Recoil Pad 語意（EfK EN 亦僅作 \"Recoil pad\"），屬改善型覆寫。"
+    },
+    "Tooltip.json|Tooltip_weapon_Scope": {
+      "verdict": "style_ok",
+      "anchor": "682bd5545a781367",
+      "rationale": "EFK EN 與本體同值 \"Scope\"（實檔）；瞄準鏡 vs 官方 瞄具 純用詞差，無害。"
+    },
+    "Tooltip.json|Tooltip_weapon_Sling": {
+      "verdict": "style_ok",
+      "anchor": "b27756aea328ee2f",
+      "rationale": "「槍背帶」為 'Sling' 的準確譯法，與官方「槍帶」僅風格差。"
+    },
+    "UI.json|UI_ChestHair": {
+      "verdict": "mod_intended",
+      "anchor": "2870abbc3b7f707d",
+      "rationale": "BetterCharacterInfo (3488600400, D:/SteamLibrary) EN 重定義：\"UI_ChestHair\": \"Body Hair\"（42.15）/\"B.Hair\"（42.16+）；「體毛」相符 mod 將胸毛欄位泛化為體毛的設計。"
+    },
+    "UI.json|UI_Close": {
+      "verdict": "style_ok",
+      "anchor": "3fd47edce45b3603",
+      "rationale": "ch 與官方相同；cn 关闭 較官方 关闭界面 更貼 van_en \"Close\"，無害。"
+    },
+    "UI.json|UI_ClothingType_Back": {
+      "verdict": "style_ok",
+      "anchor": "7b027a689c73cf4c",
+      "rationale": "rasProfessions (2675128168) EN 與本體同值 \"Back\"（實檔）；後背/背部 同義風格差。"
+    },
+    "UI.json|UI_ClothingType_BeltExtra": {
+      "verdict": "style_ok",
+      "anchor": "6e6ae8a1cc9965cf",
+      "rationale": "「皮帶掛載」與官方「腰帶額外」均指 Belt Extra 掛載槽位，package 版反而較達意，屬風格差。"
+    },
+    "UI.json|UI_ClothingType_JacketSuit": {
+      "verdict": "mod_intended",
+      "anchor": "b0ab93fb3dd20cc0",
+      "rationale": "rasProfessions (2675128168, _dl) EN 重定義：UI_ClothingType_JacketSuit = \"Long Jacket\"；「大衣」相符 mod 語意（官方 van_en 'Suit Jacket'=西裝外套）。"
+    },
+    "UI.json|UI_ClothingType_Neck": {
+      "verdict": "style_ok",
+      "anchor": "e3b1367eddea9efd",
+      "rationale": "脖子 與官方簡中相同，與官方繁中 頸部 僅用語風格差。"
+    },
+    "UI.json|UI_ClothingType_Torso1Legs1": {
+      "verdict": "mod_intended",
+      "anchor": "4a5c60d2f7127fd0",
+      "rationale": "rasProfessions (2675128168) EN 重定義為 \"Long Johns\"（_dl 實檔），「貼身下裝」對應衛生衣褲語意；本體「軀幹與腿」部位標籤被具體化，屬 mod 取捨。"
+    },
+    "UI.json|UI_ClothingType_UnderwearExtra1": {
+      "verdict": "style_ok",
+      "anchor": "f08c1ac91140b68c",
+      "rationale": "van_en 現為 'Underwear Legs'，官方「內衣褲額外 1」為舊鍵名直譯、package「貼身衣物」泛化遺失 Legs——兩側同樣不精準，覆寫淨影響中性。"
+    },
+    "UI.json|UI_Intro1": {
+      "verdict": "mod_intended",
+      "anchor": "ae8be282e3224121",
+      "rationale": "BanditsWeekOne (3403180543, _dl) EN 重定義：\"UI_Intro1\": \"I STOOD ALONE WITH THE BURDEN\"；「我獨自揹負著重擔.」逐字相符，屬該 mod 改寫開場文的設計。"
+    },
+    "UI.json|UI_Intro2": {
+      "verdict": "mod_intended",
+      "anchor": "cc3f0eb167c0241e",
+      "rationale": "BanditsWeekOne (3403180543) EN 重定義為 \"OF A TRUTH TOO DARK TO BE SPOKEN,\"，關於一個過於黑暗、無法言說的真相, 為其忠實翻譯。惟屬開場字卡序列，全域覆寫會使未裝 Week One 的玩家看到原版/mod 混搭字卡，已另列 flags。"
+    },
+    "UI.json|UI_Intro3": {
+      "verdict": "mod_intended",
+      "anchor": "ea73b84f46ae4e71",
+      "rationale": "Bandits Week One (3403180543) 重寫開場三句，EN=\"A WHISPER THE WORLD REFUSED TO HEAR.\"（_dl 實檔），「世人不願傾聽的低語.」為精準對譯；代價是未裝 mod 玩家的標誌性開場白 THIS IS HOW YOU DIED 被替換，屬 mod 設計取捨。"
+    },
+    "UI.json|UI_Ok": {
+      "verdict": "style_ok",
+      "anchor": "fac2a67ad87807c4",
+      "rationale": "「確定」vs 官方「確認」，同義風格差。"
+    },
+    "UI.json|UI_btn_close": {
+      "verdict": "style_ok",
+      "anchor": "3fd47edce45b3603",
+      "rationale": "ch「關閉」與 van_ch 完全相同；cn「关闭」是 van_en 'CLOSE' 的合理翻譯，僅比官方 cn「关闭界面」精簡。"
+    },
+    "UI.json|UI_btn_next": {
+      "verdict": "style_ok",
+      "anchor": "a898d7c3d78cb1c0",
+      "rationale": "下一個 為 NEXT 的合理泛譯，與官方 下一頁 僅風格差。"
+    },
+    "UI.json|UI_modselector_auto": {
+      "verdict": "mod_intended",
+      "anchor": "b1b3ce0078a8b1e6",
+      "rationale": "ModLoadOrderSorter_b42 (3423660713) 重定義此鍵（records 佐證；EN 雜湊未還原），該 mod 功能即自動排序模組載入順序，「自動排序」貼合其語意；對本體玩家亦不失真（AUTO 鈕）。"
+    },
+    "UI.json|UI_modselector_showEnabledMods": {
+      "verdict": "style_ok",
+      "anchor": "e6296bcbf9a3f78d",
+      "rationale": "ch 與官方完全相同；cn 僅少一「的」字，純風格差。"
+    },
+    "UI.json|UI_optionscreen_binding_Hotbar 6": {
+      "verdict": "style_ok",
+      "anchor": "34a595f6648b00d8",
+      "rationale": "僅「快捷欄6」與「快捷欄 6」的空格差異。"
+    },
+    "UI.json|UI_optionscreen_binding_Hotbar 7": {
+      "verdict": "style_ok",
+      "anchor": "7675c28fb909e119",
+      "rationale": "快捷欄7 與官方 快捷欄 7 僅空格差異。"
+    },
+    "UI.json|UI_optionscreen_binding_Hotbar 8": {
+      "verdict": "style_ok",
+      "anchor": "1992c3f8dff99d75",
+      "rationale": "僅「快捷欄8」與官方「快捷欄 8」的空格差；Authentic Z 亦定義同鍵。無實質影響。"
+    },
+    "UI.json|UI_prof_unemployed": {
+      "verdict": "style_ok",
+      "anchor": "cbd2976057800cc4",
+      "rationale": "van_en 已改為 'Custom Occupation'，官方 van_ch「無業」與 package「無業遊民」同屬未跟進的舊譯；cn 側「无业游民」與官方 van_cn 完全相同。覆寫淨影響中性，僅 ch 風格差。"
+    },
+    "UI.json|UI_profdesc_Mechanics": {
+      "verdict": "mod_intended",
+      "anchor": "9aee54da73b0e694",
+      "rationale": "MoreDescriptionForTraits 家族重定義：B41 版(2685168362, _dl)已證該 mod 重定義多個 UI_profdesc_*（chef/electrician/metalworker 等），本列「已掌握知識/搜尋加成」段落是其 B42 版職業描述的標準簽名，首句仍忠於 van_en。B42 版未入 _dl，屬家族推證。"
+    },
+    "UI.json|UI_profdesc_electrician": {
+      "verdict": "mod_intended",
+      "anchor": "fd3f5a7614259288",
+      "rationale": "MoreDescriptionForTraits (2685168362) EN 重定義此鍵（\"Can operate generators.<br>Knows how to make remote controllers, remote triggers and timers...\"），本包為其擴充版翻譯：首句忠於原版，後附配方/搜尋加成明細，對原版玩家為補充資訊。"
+    },
+    "UI.json|UI_profdesc_engineer": {
+      "verdict": "mod_intended",
+      "anchor": "02a2f4041e9cdc48",
+      "rationale": "Detailed Descriptions for Occupations and Traits (3387957272) 重寫本體職業描述（records 佐證此鍵），ch 為其「已掌握知識/搜尋加成」詳述樣式，內容為本體 B42 工程師實際知識與加成的文件化，對所有玩家近乎改善。"
+    },
+    "UI.json|UI_profdesc_lumberjack": {
+      "verdict": "improvement",
+      "anchor": "dc61edce8522c517",
+      "rationale": "官方 van_ch 漏譯第二句（砍樹肌肉勞損較少），package ch 補齊兩句且皆正確；後附「搜尋加成」清單與本體覓食系統的職業加成方向一致（伐木工找木柴加成為本體真值）。比官方更完整。"
+    },
+    "UI.json|UI_profdesc_metalworker": {
+      "verdict": "mod_intended",
+      "anchor": "dd4899dfe9eb97cc",
+      "rationale": "MoreDescriptionForTraits (2685168362, _dl) EN 檔直接含 UI_profdesc_metalworker 重定義；本列為其 B42 版（附配方清單/搜尋加成），首句忠於 van_en。"
+    },
+    "UI.json|UI_profdesc_parkranger": {
+      "verdict": "mod_intended",
+      "anchor": "53f4160322783f45",
+      "rationale": "MDFT EN 重定義此鍵（\"Allows much faster movement...Knows all trap recipes.\"），本包首句忠於原版並附陷阱配方與搜尋加成明細。"
+    },
+    "UI.json|UI_profdesc_unemployed": {
+      "verdict": "mod_intended",
+      "anchor": "f129217066d71137",
+      "rationale": "Detailed Descriptions (3387957272) 定義此鍵（records 佐證）；ch 首句即現行 van_en 的忠實翻譯（官方 van_ch「8 免費特質點數.」反而過時），後接詳述加成，近乎改善。"
+    },
+    "UI.json|UI_trait_AdrenalineJunkieDesc": {
+      "verdict": "mod_intended",
+      "anchor": "1463cc9b31c9ac94",
+      "rationale": "複核推翻原判：排除：corpus 證實 Detailed Descriptions(3387957272) 與 SomewhatTraits(3498347699) 均重定義同鍵；SomewhatTraits 明文「expands 14 vanilla traits」，附加機制（依近距殭屍提升耐力恢復）符合其擴充設計，非 As1 捏造。"
+    },
+    "UI.json|UI_trait_AllThumbsDesc": {
+      "verdict": "mod_intended",
+      "anchor": "6dae82e4e0abeaeb",
+      "rationale": "MDFT (2685168362) EN 檔含 UI_trait_AllThumbsDesc 重定義；本列首段忠實翻譯 B42 van_en，附加數值段（+100% 轉移/+20% 瞄準延遲）為 mod B42 版描述。"
+    },
+    "UI.json|UI_trait_ArtisanDesc": {
+      "verdict": "improvement",
+      "anchor": "a83ae456a0675125",
+      "rationale": "首句忠實對應 van_en，後附之玻璃工藝配方清單為 B42 該特質實際授予的已知配方，對玩家為正確補充；本地 MDFT 版本（B41 期）未含此 B42 鍵，判為改善型擴寫。"
+    },
+    "UI.json|UI_trait_AsthmaticDesc": {
+      "verdict": "mod_intended",
+      "anchor": "877d0d9da251f137",
+      "rationale": "Detailed Descriptions (3387957272) 定義此鍵（records 佐證），ch 為首句忠實翻譯加 +40%/+20% 數值詳述樣式；另一定義者 MoreDescriptionForTraits 的數值 (+100%/+30%) 不符，來源指向前者。"
+    },
+    "UI.json|UI_trait_BlacksmithDesc": {
+      "verdict": "improvement",
+      "anchor": "b8266b62217c0523",
+      "rationale": "主句正確翻譯 van_en，附加「已掌握知識」清單為本體 B42 鍛造職業/特質實際授予配方（熔爐、高爐、圓頂窯等皆 vanilla B42 內容）的文件化增補，對所有玩家為額外正確資訊。清單逐項數值未逐一驗證，方向無誤。"
+    },
+    "UI.json|UI_trait_BurglarDesc": {
+      "verdict": "mod_intended",
+      "anchor": "2f141f26a2580eaa",
+      "rationale": "複核推翻原判：明確排除：P4ThiefExpansion(2596620950) EN 實檔讀出 'Can steal, stealth move, and hotwire vehicles. Less chance of breaking window locks.'——「可以偷竊, 潛行」為 mod 重定義的忠實翻譯，非憑空捏造。"
+    },
+    "UI.json|UI_trait_ConspicuousDesc": {
+      "verdict": "mod_intended",
+      "anchor": "20675478cae55e68",
+      "rationale": "MDFT EN 重定義（\"More likely to be spotted by zombies.<br>(+100% chance of getting spotted...)\"），本包數值與其一致。"
+    },
+    "UI.json|UI_trait_Cook2Desc": {
+      "verdict": "mod_intended",
+      "anchor": "d04921eddee3a268",
+      "rationale": "Detailed Descriptions (3387957272) 定義此鍵（records 佐證），ch 為其配方清單+搜尋加成詳述樣式，內容文件化本體廚師已知配方，近乎改善。"
+    },
+    "UI.json|UI_trait_CookDesc": {
+      "verdict": "improvement",
+      "anchor": "0a9011a973709838",
+      "rationale": "主句正確，附加配方清單為本體 B42 廚師授予配方（蛋糕麵糊、派皮、麵糰等 vanilla 內容）與覓食加成的文件化增補；ch 並將 cn 的「曲奇」在地化為「餅乾」。屬改善型覆寫。"
+    },
+    "UI.json|UI_trait_CraftyDesc": {
+      "verdict": "style_ok",
+      "anchor": "8830f2d7b5f96c50",
+      "rationale": "「製作技能的經驗獲取增加」與 van_en 'Increased XP gains for Crafting skills.' 完全同義，僅措辭異於官方。"
+    },
+    "UI.json|UI_trait_DesensitizedDesc": {
+      "verdict": "mod_intended",
+      "anchor": "23dcabd09001b38d",
+      "rationale": "MDFT EN 重定義（\"Does not reach states of panic.<br>(Except for night terrors.)\"），本包 免疫恐慌/更容易做噩夢 等對應其機制補述。"
+    },
+    "UI.json|UI_trait_DexterousDesc": {
+      "verdict": "mod_intended",
+      "anchor": "78266b8f60db8cd6",
+      "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；首三行忠實對譯 van_en，後接 +50%/-20% 等詳述，近乎改善。"
+    },
+    "UI.json|UI_trait_DisorganizedDesc": {
+      "verdict": "improvement",
+      "anchor": "4206b597ec42b47b",
+      "rationale": "官方 van_ch 漏譯第二句（影響世界容器和背包、不影響主物品欄；van_cn 有），package ch 補齊並附「-30% 容量」——即本體 Disorganized 實際數值。比官方 CH 更完整正確。"
+    },
+    "UI.json|UI_trait_FastHealerDesc": {
+      "verdict": "mod_intended",
+      "anchor": "70fd66ab52c90edf",
+      "rationale": "MDFT (2685168362) EN 檔含 UI_trait_FastHealerDesc 重定義；首句忠於 van_en，附加「-40% 傷害嚴重度」為 mod 數值揭示。"
+    },
+    "UI.json|UI_trait_FastLearnerDesc": {
+      "verdict": "mod_intended",
+      "anchor": "f2f5017f4541ebb3",
+      "rationale": "MDFT EN 重定義（\"+30% xp for all skills, except Fitness and Strength\"），本包數值一致且正確。"
+    },
+    "UI.json|UI_trait_FastReaderDesc": {
+      "verdict": "mod_intended",
+      "anchor": "47d972ba2a95b3f7",
+      "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；忠實首句加 +30% 閱讀速度（本體實值）詳述，近乎改善。"
+    },
+    "UI.json|UI_trait_HemophobicDesc": {
+      "verdict": "mod_intended",
+      "anchor": "a46e9fd3e93bc21d",
+      "rationale": "複核推翻原判：推翻：corpus hash 證實 SomewhatTraits(3498347699) 與 Detailed Descriptions(3387957272) 均重定義同鍵 EN，且 SomewhatTraits workshop 頁明文「Removes the restriction of First Aid actions on other players from 'Fear of Blood'」——該 mod 真的移除了不可替他人急救限制，「在為自己或他人進行急救時會感到恐慌」正是其重製後語意的忠實翻譯，原判「查無 mod 重定義依據」不成立。"
+    },
+    "UI.json|UI_trait_HerbalistDesc": {
+      "verdict": "mod_intended",
+      "anchor": "e2e3d1541b4fa8fa",
+      "rationale": "MDFT (2685168362) EN 檔含 UI_trait_HerbalistDesc 重定義；本列「已掌握知識/搜尋加成」為其 B42 版簽名，首句忠於 van_en。"
+    },
+    "UI.json|UI_trait_HighThirstDesc": {
+      "verdict": "mod_intended",
+      "anchor": "54b9922a6d65c9b6",
+      "rationale": "MDFT EN 重定義（\"+100% thirst.\"），本包一致。"
+    },
+    "UI.json|UI_trait_IlliterateDesc": {
+      "verdict": "improvement",
+      "anchor": "47125a268f5ace90",
+      "rationale": "ch「無法閱讀任何書籍或世界上的文字.」是現行 van_en (Cannot read any books or in-world text.) 的忠實完整翻譯；官方 van_ch「無法閱讀書籍.」漏了 in-world text，屬改善型覆寫。"
+    },
+    "UI.json|UI_trait_InconspicuousDesc": {
+      "verdict": "improvement",
+      "anchor": "8447f572d5fe60f9",
+      "rationale": "主句正確，附加「-50% 被發現的機率」與本體 Inconspicuous 實際值一致（MoreDescriptionForTraits mod EN 亦文件化為 -50%），屬正確的資訊增補。"
+    },
+    "UI.json|UI_trait_InsomniacDesc": {
+      "verdict": "mod_intended",
+      "anchor": "db22835771069450",
+      "rationale": "MDFT (2685168362) EN 檔含 UI_trait_InsomniacDesc 重定義（B41 版：'Sleeps less hours, and 50% slower loss of tiredness...'）；本列「睡眠中斷會導致壓力」對應 B42 版睡眠機制描述。首句「逐漸消退」弱化了 van_en 的 slow 語感，但屬 mod 描述體系非誤譯。"
+    },
+    "UI.json|UI_trait_InventiveDesc": {
+      "verdict": "style_ok",
+      "anchor": "b2682914a8464a2b",
+      "rationale": "僅為 van_en 的改寫直譯，語意與官方一致。"
+    },
+    "UI.json|UI_trait_IronGutDesc": {
+      "verdict": "mod_intended",
+      "anchor": "d7195c1d0ee71516",
+      "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；首句忠實加 -50% 詳述與雞蛋豁免（本體機制文件化），近乎改善。"
+    },
+    "UI.json|UI_trait_LessSleepDesc": {
+      "verdict": "improvement",
+      "anchor": "460e246b8575f8bd",
+      "rationale": "主句正確；附加值中 -30% 疲勞速度、+25% 睡眠疲勞恢復與 MoreDescriptionForTraits EN 文件一致（本體真值），-25% 睡眠時長一項未能獨立驗證但無矛盾跡象。整體屬文件化改善。"
+    },
+    "UI.json|UI_trait_LowThirstDesc": {
+      "verdict": "mod_intended",
+      "anchor": "238a03889287c200",
+      "rationale": "MDFT (2685168362) EN 檔含 UI_trait_LowThirstDesc 重定義；首句忠於 van_en，附加「-50% 口渴度」為 mod 數值揭示。"
+    },
+    "UI.json|UI_trait_MasonDesc": {
+      "verdict": "improvement",
+      "anchor": "02603aa29fee67f3",
+      "rationale": "首句忠於 van_en，後附熔爐/窯建造配方清單為 B42 該特質實際授予內容，屬正確補充（本地 MDFT B41 版未含此鍵）。"
+    },
+    "UI.json|UI_trait_Mechanics2Desc": {
+      "verdict": "mod_intended",
+      "anchor": "9be789b269570bdb",
+      "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；首句即 van_en 忠實翻譯，加機械學知識清單詳述，近乎改善。"
+    },
+    "UI.json|UI_trait_MechanicsDesc": {
+      "verdict": "improvement",
+      "anchor": "aac6dfde80b24983",
+      "rationale": "主句正確，附加「基礎機械學/中級機械學」即本體機械師實際授予的配方知識（vanilla 事實），屬正確的文件化增補。"
+    },
+    "UI.json|UI_trait_MetalWorkerDesc": {
+      "verdict": "improvement",
+      "anchor": "d00062011683001b",
+      "rationale": "「可以將搜尋到的金屬焊接成物品和路障」比 van_ch「可以焊接金屬來製造物品和進行加固」更完整：補回 van_en 的 foraged（搜尋到的）與 barricades（路障），屬改善型覆寫。"
+    },
+    "UI.json|UI_trait_MoreSleepDesc": {
+      "verdict": "mod_intended",
+      "anchor": "ef3403d51d03020f",
+      "rationale": "MDFT EN 重定義（\"+30% tiredness rate.<br>-18% tiredness recovery rate when sleeping.\"），本包數值對應。"
+    },
+    "UI.json|UI_trait_NightVisionDesc": {
+      "verdict": "mod_intended",
+      "anchor": "fb06df4783778bf7",
+      "rationale": "Detailed Descriptions 定義此鍵（records 佐證），詳述樣式；唯 ch/cn 內「+20@」疑為「+20%」誤植，建議 sources/ch 順手修正該字元。"
+    },
+    "UI.json|UI_trait_Pacifist": {
+      "verdict": "style_ok",
+      "anchor": "e130e9cca33cd71f",
+      "rationale": "ch「和平主義者」與官方 van_ch 完全相同；僅 cn「和平主义者」與 van_cn「爱好和平」風格差。van_en 已改為 'Reluctant Fighter' 但官方各語系亦未跟進，非 package 特有問題。"
+    },
+    "UI.json|UI_trait_PacifistDesc": {
+      "verdict": "mod_intended",
+      "anchor": "3a9fe548454350f2",
+      "rationale": "MDFT (2685168362) EN 檔含 UI_trait_PacifistDesc 重定義；首句忠於 van_en 'Decreased combat XP gains.'（且比 van_ch「不太熟悉武器」更準），附技能清單為 mod 數值揭示。"
+    },
+    "UI.json|UI_trait_PackmuleDesc": {
+      "verdict": "mod_intended",
+      "anchor": "31ae82523b875d0d",
+      "rationale": "MDFT EN 重定義（\"Increased container inventory capacity.(+30%...)\"），本包 +30% 容量 一致。"
+    },
+    "UI.json|UI_trait_ScoutDesc": {
+      "verdict": "mod_intended",
+      "anchor": "b1821aafd8f526c3",
+      "rationale": "Detailed Descriptions (3387957272) 定義此鍵（records 佐證），清單樣式與其一致（童軍知曉釣具製作等）；唯 ch 未含 van_en 核心句「生火更快」，EN 未還原無法確認是翻譯缺漏或 mod 原文如此，列入複核。"
+    },
+    "UI.json|UI_trait_SlowHealerDesc": {
+      "verdict": "mod_intended",
+      "anchor": "54dd3a8bac7d154a",
+      "rationale": "複核推翻原判：排除：Detailed Descriptions(3387957272) 重定義同鍵，其格式明文為「原版描述保留於首行＋換行後附數值（取自遊戲檔案）」，與 As1『主句+<br><br>+數值』結構完全吻合；+60% 為該 mod 的 B42 實測值，與 MDFT B41 的 +20% 屬不同 mod 不同版本，矛盾不成立。"
+    },
+    "UI.json|UI_trait_SlowLearnerDesc": {
+      "verdict": "mod_intended",
+      "anchor": "f8af806942008d78",
+      "rationale": "MDFT (2685168362) EN 檔含 UI_trait_SlowLearnerDesc 重定義；首句忠於 van_en，附「-30% 所有技能經驗」為 mod 數值揭示。"
+    },
+    "UI.json|UI_trait_SlowReaderDesc": {
+      "verdict": "mod_intended",
+      "anchor": "b97befc433127c87",
+      "rationale": "MDFT EN 重定義（\"-30% reading speed.\"），本包一致。"
+    },
+    "UI.json|UI_trait_SmokerDesc": {
+      "verdict": "style_ok",
+      "anchor": "b9ebc9aa8dddfe21",
+      "rationale": "ch 兩句與 van_en 逐句對應（不抽菸不快樂上升/抽菸後壓力與不快樂下降），與官方 van_ch 僅語序與風格差；Detailed Descriptions 亦定義此鍵。無害。"
+    },
+    "UI.json|UI_trait_SpeedDemonDesc": {
+      "verdict": "mod_intended",
+      "anchor": "f967e82d99eab586",
+      "rationale": "複核推翻原判：排除：同 SlowHealer，Detailed Descriptions 重定義同鍵且結構吻合；數值行出自該 mod（B42 Speed Demon 實際含車速/加減速加成），「屍體抓取」或為其中一項機制之譯法問題，屬 mod 翻譯品質範疇而非 vanilla 覆寫危害。"
+    },
+    "UI.json|UI_trait_SundayDriverDesc": {
+      "verdict": "mod_intended",
+      "anchor": "02fc6752ec61aa7f",
+      "rationale": "MDFT (2685168362) EN 檔含 UI_trait_SundayDriverDesc 重定義；首句忠於 van_en，附載具數值段為 mod 揭示。"
+    },
+    "UI.json|UI_trait_ThinSkinnedDesc": {
+      "verdict": "mod_intended",
+      "anchor": "ec0050f14aeabb90",
+      "rationale": "MDFT EN 重定義（增傷機率/樹木刮傷補述），本包 +30% 受傷機率與樹木脆弱性補述對應其口徑。"
+    },
+    "UI.json|UI_trait_WeakStomachDesc": {
+      "verdict": "mod_intended",
+      "anchor": "0007bb05e6968527",
+      "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；首句忠實加 +100% 詳述，近乎改善。"
+    },
+    "UI.json|UI_trait_WhittlerDesc": {
+      "verdict": "harmful_fixed",
+      "anchor": "fc34256520337c14",
+      "rationale": "主句正確，附加清單為本體 B42 雕刻特質授予配方的文件化增補。瑕疵：清單中「雕刻蝙蝠」應為「雕刻球棒」（Carve Bat 誤譯），建議後續順手修正該詞，不影響整體改善判定。"
+    },
+    "UI.json|UI_trait_WildernessKnowledgeDesc": {
+      "verdict": "mod_intended",
+      "anchor": "5db40f0a42132d2b",
+      "rationale": "B42 新特質，不在 MDFT B41 鍵集合，但「已掌握知識/搜尋加成」完整段落結構與已驗證的 MDFT 家族簽名一致，首句忠於 van_en；屬其 B42 版重定義（家族推證）。"
+    },
+    "UI.json|UI_trait_agoraphobicdesc": {
+      "verdict": "mod_intended",
+      "anchor": "5a71a2abea1089f9",
+      "rationale": "MDFT EN 重定義此鍵（\"Gets panicked outdoors.\"），本包首句忠於原版並附搜尋視野補述。"
+    },
+    "UI.json|UI_trait_athleticdesc": {
+      "verdict": "mod_intended",
+      "anchor": "35510776c5122bd1",
+      "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；首兩句忠實對譯加 +20%/-40%/+25% 詳述，近乎改善。"
+    },
+    "UI.json|UI_trait_axemandesc": {
+      "verdict": "improvement",
+      "anchor": "d4341fc543616c5e",
+      "rationale": "主句正確且完整覆蓋 van_en 兩句；附加 +25% 斧擊/砍樹速度為熟知本體真值，+50% 砍樹額外傷害未逐證但與本體 Axe Man 樹傷加成機制方向一致。屬文件化改善。"
+    },
+    "UI.json|UI_trait_bravedesc": {
+      "verdict": "mod_intended",
+      "anchor": "ea67854e31432881",
+      "rationale": "MDFT (2685168362, _dl) EN 直接引證：UI_trait_bravedesc = \"Less prone to becoming panicked.<br>(-70% panic, except for night terrors and phobias.)\"；本列為其 B42 版（含屍體相關數值），首句忠於 van_en。"
+    },
+    "UI.json|UI_trait_claustrodesc": {
+      "verdict": "mod_intended",
+      "anchor": "bdc2b8f916d23d8c",
+      "rationale": "MDFT EN 重定義（\"But not in 70-tiles + sized rooms...\"），本包 大於70格的房間不會造成恐慌 與其一致，對原版玩家為正確機制補充。"
+    },
+    "UI.json|UI_trait_clumsydesc": {
+      "verdict": "mod_intended",
+      "anchor": "40d86051df309712",
+      "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；首句忠實加摔倒/腳步聲等機制詳述，近乎改善。"
+    },
+    "UI.json|UI_trait_cowardlydesc": {
+      "verdict": "improvement",
+      "anchor": "90d5342b357e30f6",
+      "rationale": "主句正確；附加「+100% 恐慌」為本體 Cowardly 真值（恐慌加倍），搜屍不快樂度/屍體抓取兩項為 B42 新機制文件化、未逐證但無矛盾。整體屬改善型增補。"
+    },
+    "UI.json|UI_trait_eagleeyeddesc": {
+      "verdict": "mod_intended",
+      "anchor": "cd506401964fc55c",
+      "rationale": "MDFT (2685168362) EN 檔含 UI_trait_eagleeyeddesc 重定義；本列前三句完整翻譯 B42 van_en（含 van_ch 漏掉的武器瞄具句），附搜尋加成為 mod 揭示。"
+    },
+    "UI.json|UI_trait_emaciateddesc": {
+      "verdict": "mod_intended",
+      "anchor": "5552462b2d5eada3",
+      "rationale": "MDFT EN 重定義（-60% melee damage、+40% fall damage 等），本包數值明細對應其口徑。"
+    },
+    "UI.json|UI_trait_feebledesc": {
+      "verdict": "mod_intended",
+      "anchor": "c2f231bb655f0db1",
+      "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；忠實對譯加 -10% 攜帶重量詳述，近乎改善。"
+    },
+    "UI.json|UI_trait_gracefuldesc": {
+      "verdict": "improvement",
+      "anchor": "41ab0b8accc336c7",
+      "rationale": "主句正確；附加摔倒機率、腳步聲、撞殭屍摔倒等數值為本體 Graceful 機制的文件化，方向與本體一致、無矛盾跡象。"
+    },
+    "UI.json|UI_trait_handydesc": {
+      "verdict": "mod_intended",
+      "anchor": "a721797aad8fbd5b",
+      "rationale": "MDFT (2685168362, _dl) EN 直接引證：UI_trait_handydesc = \"Faster and stronger constructions.<br>(+100 HP...Increased building speed.Slightly increased barricading speed.)\"；本列「提高一倍」為 B42 版措辭。（小疵：句尾混用全形「。」與 \\n，可順手 lint。）"
+    },
+    "UI.json|UI_trait_hardheardesc": {
+      "verdict": "style_ok",
+      "anchor": "3f2fda0fdaf85df9",
+      "rationale": "僅為 van_en 的直譯改寫，語意與官方一致。"
+    },
+    "UI.json|UI_trait_heartyappetitedesc": {
+      "verdict": "mod_intended",
+      "anchor": "b47a6d7bcd15001e",
+      "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；首句忠實加 +50% 飢餓與搜尋加成詳述，近乎改善。"
+    },
+    "UI.json|UI_trait_keenhearingdesc": {
+      "verdict": "style_ok",
+      "anchor": "982ebf37fb500e45",
+      "rationale": "「感知半徑更大.」為 van_en 'Larger perception radius.' 直譯，與官方僅風格差，無附加內容。"
+    },
+    "UI.json|UI_trait_lighteaterdesc": {
+      "verdict": "mod_intended",
+      "anchor": "62cb77a649b4391a",
+      "rationale": "MDFT (2685168362) EN 檔含 UI_trait_lighteaterdesc 重定義；首句忠於 van_en，附「-25% 飢餓度」為 mod 數值揭示。（cn「需要更少频繁地进食」措辭生硬，屬 As1 側品質，非語意錯誤。）"
+    },
+    "UI.json|UI_trait_marksmandesc": {
+      "verdict": "improvement",
+      "anchor": "22160bd03b706060",
+      "rationale": "首兩句忠於 van_en（含傷害提升，原版 EN 本有 damage），後附搜尋模式視野/彈藥加成為特質實際效果補充，屬改善型擴寫。"
+    },
+    "UI.json|UI_trait_nightowldesc": {
+      "verdict": "mod_intended",
+      "anchor": "f81ecd01dd32ca8d",
+      "rationale": "此鍵有 Detailed Descriptions 與 SomewhatTraits (3498347699) 兩個重定義者（records 佐證）；ch 前半忠實對譯 van_en，後半「夜晚黑暗減壓、延緩疲勞」為 mod 改動效果描述（樣式更像 SomewhatTraits），任一重定義即算 mod 取捨。"
+    },
+    "UI.json|UI_trait_nutritionistdesc": {
+      "verdict": "improvement",
+      "anchor": "13dedd5ee23c8cf1",
+      "rationale": "主句正確（檢視食物營養價值），附加覓食加成與本體覓食系統的特質加成方向一致，屬文件化增補。"
+    },
+    "UI.json|UI_trait_obesedesc": {
+      "verdict": "mod_intended",
+      "anchor": "3776309fc6ff0d58",
+      "rationale": "MDFT (2685168362, _dl) EN 直接引證：UI_trait_obesedesc = \"Reduced running speed...(Starting weight is 105.<br>Replaced by Overweight if weight goes below 100.<br>+20% chance to trip...+40% fall damage...)\"；本列逐項對應。"
+    },
+    "UI.json|UI_trait_outdoorsmandesc": {
+      "verdict": "mod_intended",
+      "anchor": "6e3018fa79bf69f3",
+      "rationale": "MDFT EN 重定義（生火加速、感冒機率、樹木刮傷等明細），本包對應其口徑並附搜尋加成。"
+    },
+    "UI.json|UI_trait_outofshapedesc": {
+      "verdict": "style_ok",
+      "anchor": "f1dbb1bf638ce862",
+      "rationale": "ch「耐力低,耐力恢復也極低.」語意同 van_en（極低 較 low 稍強、逗號後缺空格為小瑕），無誤導；Detailed Descriptions 亦定義此鍵。"
+    },
+    "UI.json|UI_trait_overweightdesc": {
+      "verdict": "improvement",
+      "anchor": "1e3dde4991d6878a",
+      "rationale": "主句正確；附加體重機制（初始 95、>100 轉肥胖、<85 消失）皆為本體真值，摔倒/攀爬等數值為機制文件化。比官方單句更完整。"
+    },
+    "UI.json|UI_trait_pronetoillnessdesc": {
+      "verdict": "mod_intended",
+      "anchor": "746cf11bcba46bf0",
+      "rationale": "MDFT (2685168362, _dl) EN 直接引證：UI_trait_pronetoillnessdesc = \"More prone to disease. Faster rate of zombification.<br>(+25% zombification speed, +70% chance of catching a cold...)\"；本列數值逐項對應（B42 版另含屍體疾病項）。"
+    },
+    "UI.json|UI_trait_resilientdesc": {
+      "verdict": "mod_intended",
+      "anchor": "bd045501eb72e901",
+      "rationale": "MDFT EN 重定義（\"-25% zombification speed, -55% chance of catching a cold, -20% cold strength, -50% cold progression\"），本包數值一致（+25% 殭屍化持續時間即 -25% 速度之等價表述）。"
+    },
+    "UI.json|UI_trait_shortsighdesc": {
+      "verdict": "mod_intended",
+      "anchor": "6619e12b50ebe7dd",
+      "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；首三句忠實對譯 van_en（官方 van_ch 反而缺第三句），加模糊/眼鏡機制與 -2 視野詳述，近乎改善。"
+    },
+    "UI.json|UI_trait_stoutdesc": {
+      "verdict": "improvement",
+      "anchor": "61b0fbb2374be6d3",
+      "rationale": "主句完整覆蓋 van_en 兩句，附加「+25% 攜帶重量」與本體 Stout 負重加成一致，屬文件化改善。"
+    },
+    "UI.json|UI_trait_strongdesc": {
+      "verdict": "mod_intended",
+      "anchor": "614caee361a989e6",
+      "rationale": "MDFT (2685168362, _dl) EN 直接引證：UI_trait_strongdesc = \"Extra knockback from melee weapons and increased carry weight.<br>(+40% melee damage...)\"；本列為其 B42 版數值。"
+    },
+    "UI.json|UI_trait_thickskinneddesc": {
+      "verdict": "mod_intended",
+      "anchor": "09092178ae3baaf1",
+      "rationale": "MDFT EN 重定義（\"+30% chance of not being injured...樹木刮傷保護\"），本包對應。"
+    },
+    "UI.json|UI_trait_tinkerer": {
+      "verdict": "style_ok",
+      "anchor": "f842bb6c380d6909",
+      "rationale": "More Traits (1299328280) EN 與本體同值 \"Tinkerer\"（_dl 實檔），且「修補匠人」即該 mod 自帶繁中譯名；與官方 修補高手 同義，純風格差。"
+    },
+    "UI.json|UI_trait_underweightdesc": {
+      "verdict": "improvement",
+      "anchor": "9c04541faf885844",
+      "rationale": "主句正確；附加體重機制（初始 70、<65 轉極瘦、>75 消失、-20% 傷害）皆為本體真值文件化，比官方更完整。"
+    },
+    "UI.json|UI_trait_unfitdesc": {
+      "verdict": "style_ok",
+      "anchor": "8c44366cd1e71388",
+      "rationale": "「耐力和耐力恢復極低.」與 van_en 'Very low endurance and endurance regeneration.' 同義（MDFT 亦重定義此鍵，本列未附加數值段）；僅句構異於官方，尾端多一個無害 <br>。"
+    },
+    "UI.json|UI_trait_veryunderweightdesc": {
+      "verdict": "mod_intended",
+      "anchor": "6a763318e99aabc1",
+      "rationale": "MDFT EN 重定義（起始體重60、特質替換門檻、-40% 傷害、+20% 摔傷等），本包明細對應其口徑。"
+    },
+    "UI.json|UI_trait_weakdesc": {
+      "verdict": "mod_intended",
+      "anchor": "23f02ada26b56153",
+      "rationale": "Detailed Descriptions 定義此鍵（records 佐證）；兩句忠實對譯加 -25%/-40% 詳述，近乎改善。"
+    },
+    "UI.json|UI_trait_weightgaindesc": {
+      "verdict": "improvement",
+      "anchor": "103a0af9e5a3fc3a",
+      "rationale": "主句正確對應 van_en（永久增重傾向、初始超重特質），附加「體重<90 時增重所需卡路里 -30%」為機制文件化增補，無矛盾跡象。"
+    },
+    "UI.json|UI_trait_weightlossdesc": {
+      "verdict": "mod_intended",
+      "anchor": "154422d80e440bc7",
+      "rationale": "不在 MDFT B41 鍵集合，但首兩句忠於 van_en、附加「體重高於70 增重卡路里+80%」數值揭示，結構與 MDFT 家族簽名一致，屬其 B42 版重定義（家族推證）。"
+    }
   }
- }
 }
