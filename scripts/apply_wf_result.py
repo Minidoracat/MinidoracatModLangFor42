@@ -26,7 +26,11 @@ MARKUP = (
     (r"\[img=music\]", "img標記"), (r"\*\*", "雙星號"), (r"----", "斷訊殘字"),
     (r"<[A-Za-z][^>]*>", "角括號標記"), (r"%[1-9]", "位置token"), (r"\{[a-zA-Z_]+\}", "大括號佔位"),
 )
-MAINLAND = ("質量", "信息", "默認", "視頻", "軟件", "屏幕", "網絡", "鼠標", "內存", "硬盤", "服務器")
+# CH 側的陸用語預篩。**只收沒有台灣正當語境的詞**——像「質量」在物理義
+# （質量守恆／質量數）是台灣標準用語，放進來只會製造誤報，交給 lint_ch 的
+# terminology 規則去逐鍵裁決即可。「電視頻道」含子字串「視頻」，故用負向前後文。
+MAINLAND = ("信息", "默認", "軟件", "屏幕", "網絡", "鼠標", "內存", "硬盤", "服務器")
+MAINLAND_RE = re.compile("|".join(MAINLAND) + r"|(?<!電)視頻(?!道)")
 
 
 def _jload(p):
@@ -104,9 +108,9 @@ def main() -> int:
             bad["CH全形標點"].append((en[:32], ch[:38]))
         if "..." in ch:
             bad["未正規化省略號"].append((en[:32], ch[:38]))
-        for w in MAINLAND:
-            if w in ch:
-                bad["CH陸用語"].append((en[:28], ch[:34], w))
+        m = MAINLAND_RE.search(ch)
+        if m:
+            bad["CH陸用語"].append((en[:28], ch[:34], m.group(0)))
     for k, v in bad.items():
         print(f"  ❌ {k}: {len(v)}  {v[:3]}")
     if bad:
