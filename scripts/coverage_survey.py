@@ -8,10 +8,13 @@
 「這個鍵在遊戲裡會不會顯示成中文」。三道 coverage 沒有的濾網：
 
   1. **有效分支**：只算 `common/` ＋ 唯一最佳版本夾（`tracker.resolve_effective_branches`）。
-  2. **只認 `.json`**：`Translator.tryFillMapFromFile():353` 路徑寫死 `.json`，
-     legacy `_EN.txt` 的 EN 定義在執行期並不存在。
-  3. **檔名要對**：`getTextInternal():419` 按鍵前綴硬路由到特定 map，
+  2. **檔名要對**：`getTextInternal():419` 按鍵前綴硬路由到特定 map，
      鍵放在別的檔案裡等於沒翻。coverage 用裸鍵名比對，會把這種情況誤判為已覆蓋。
+
+**刻意不套 `.json` 濾網**（2026-08-07 修正）：`tracker.is_effective` 會排除
+legacy `_EN.txt` 的 `translate_en`，那是為了「EN 錨點該從哪取」而設。但一個鍵的
+上游 EN 定義存不存在，**不影響我方譯文能否顯示**——`Translator` 是按鍵查我方
+CH/CN 的。把這類鍵從分母剔除會低估宇宙、也讓 1,485 個真正可補的鍵從雷達上消失。
 
 用途：抓出「掛名支援但玩家全看英文」的 mod——這類缺口 `coverage` 的
 「Lua 確證可見」口徑看不見（上游若不用 getText 取鍵就不計入）。
@@ -60,6 +63,17 @@ def _jload(p):
         return json.load(f)
 
 
+def _branch_ok(rid: str, eff: dict[str, set[str]]) -> bool:
+    """該 record 是否落在遊戲會載入的分支。與 tracker.is_effective 的差別是
+    **不看副檔名**——見模組 docstring 對 `.json` 濾網的說明。"""
+    _, _, rest = rid.partition("|")
+    relpath, _, _ = rest.partition("|")
+    parts = relpath.split("/")
+    if len(parts) < 3 or parts[0] != "mods":
+        return True
+    return parts[2] in eff.get(parts[1], set())
+
+
 def target_file(src_stem: str, key: str) -> str | None:
     """這個鍵要生效，必須落在哪個檔？None＝前綴無路由，放哪都取不到。"""
     if src_stem in WHITELIST:
@@ -91,8 +105,8 @@ def main() -> int:
         need: set[str] = set()          # "<落點檔>|<鍵>"
         unroutable = 0
         for rid in recs:
-            if not tracker.is_effective(rid, eff):
-                continue                # 有效分支濾網（含 .json-only）
+            if not _branch_ok(rid, eff):
+                continue                # 只濾分支，不濾副檔名（見模組 docstring）
             kind, _, rest = rid.partition("|")
             rel, _, key = rest.partition("|")
             if kind != "translate_en" or key in vanilla:
