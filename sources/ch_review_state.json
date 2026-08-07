@@ -1474,7 +1474,7 @@
  "IG_UI.json|IGUI_PSRWindowsSumaryTab_InfoText": "72cf93d164d73721",
  "IG_UI.json|IGUI_PZLinux_Contracts_Medical_Intro": "91ead0335361e0e7",
  "IG_UI.json|IGUI_PZLinux_Location_pkg_echo_creek_speedy_go_01_Description": "46eebd0780be1565",
- "IG_UI.json|IGUI_PZLinux_MailAds_13": "ff05586ec1803279",
+ "IG_UI.json|IGUI_PZLinux_MailAds_13": "5d4a0385b42c588a",
  "IG_UI.json|IGUI_PaintingQuality": "55847d2e5bed2ac5",
  "IG_UI.json|IGUI_PaintingStyleCubism": "bc295ff5696c8834",
  "IG_UI.json|IGUI_PaintingStyleDeco": "ac40db6607b72f56",
@@ -7106,8 +7106,6 @@
  "UI.json|UI_BurdJournals_LoreTemplate_YuletideRadioCarol": "e33afb0e248be89b",
  "UI.json|UI_BurdJournals_LoreTemplate_YuletideSkillOnlyRibbon": "efdf001bc88a2968",
  "UI.json|UI_BurdJournals_LoreTemplate_YuletideSkillOnlySnowLesson": "1e4b534c4035dd6e",
- "UI.json|UI_BurdJournals_RecordNoChangesNoEligibleEntries": "1a9cf40795276488",
- "UI.json|UI_BurdJournals_RecordNoChangesNoEntriesSubmitted": "6682745efc11fda0",
  "UI.json|UI_BurdJournals_SkillsLearned": "229b024f0ec52c8d",
  "UI.json|UI_BurdJournals_SnapshotCurrentBaselineLabel": "fa02efe6a384134b",
  "UI.json|UI_BurdJournals_StatZombieKills": "e5ba3361004ab2d4",
@@ -8051,5 +8049,8 @@
  "Uspensk.json|description": "26e85c4e4d1560d7",
  "WolfBondHygieneAttraction.json|Tooltip_WolfBond_Mouthwash": "ed3ed2ec894362a2",
  "_comment": "CH 逐項審查台帳：鍵=<檔名>|<鍵>，值=審定當下有效 CN 值的 sha256[:16]。verify_dist 對已審鍵核對現行 CN hash，不符即 WARN（CN 已漂移，須重審）。種子來自遷移前 ch_overrides.json（人工審定層）；新審定鍵由批次償還／同步流程追加。",
+ "_keep_rationale": {
+  "IG_UI.json|IGUI_PZLinux_MailAds_13": "2026-08-08 keep：EN `Unbelievable news!`。terminology select 規則 `消息→訊息` 命中「難以置信的好消息!」，但此處為 news 義（好消息／壞消息），台灣正當用法；`訊息` 是 message/notification 義，替換會失真。"
+ },
  "aRandom.json|description": "e27bde27a177ea96"
 }
