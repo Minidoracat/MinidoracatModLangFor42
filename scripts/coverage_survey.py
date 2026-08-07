@@ -99,9 +99,20 @@ def main() -> int:
 
     state = _jload(ROOT / "tracker-state/en_corpus_hashes.json")["mods"]
     rows, tot_up, tot_cov = [], 0, 0
+    n_blank = 0
     for wid in sorted(state):
         recs = state[wid].get("records") or {}
         eff = tracker.resolve_effective_branches(recs)
+        # 上游把鍵定義成空字串者不計入分母——遊戲顯示空白，沒有可翻的內容，
+        # 填中文等於憑空造內容。狀態檔只有 hash，故查 sources/en/ 鏡像取值；
+        # 無鏡像的 mod 無從判斷，一律照計（寧可高估分母）。
+        mirror_p = ROOT / "sources/en" / f"{wid}.json"
+        blank: set[str] = set()
+        if mirror_p.is_file():
+            for rid, val in _jload(mirror_p).items():
+                if rid.startswith("translate_en|") and not (isinstance(val, str) and val.strip()):
+                    blank.add(rid.partition("|")[2].partition("|")[2])
+        n_blank += len(blank)
         need: set[str] = set()          # "<落點檔>|<鍵>"
         unroutable = 0
         for rid in recs:
@@ -110,6 +121,8 @@ def main() -> int:
             kind, _, rest = rid.partition("|")
             rel, _, key = rest.partition("|")
             if kind != "translate_en" or key in vanilla:
+                continue
+            if key in blank:            # 上游值為空字串，無可翻內容
                 continue
             stem = os.path.basename(rel)[:-5]
             tgt = target_file(stem, key)
@@ -129,6 +142,7 @@ def main() -> int:
 
     print(f"有效鍵合計 {tot_up}　已覆蓋 {tot_cov}（{tot_cov / tot_up * 100:.1f}%）　"
           f"缺口 {tot_up - tot_cov}　涵蓋 {len(rows)} 個 mod")
+    print(f"（另有 {n_blank} 個鍵上游值為空字串，無可翻內容，不計入分母）")
     zero = [r for r in rows if r["covered"] == 0 and r["upstream"] >= args.min_keys]
     print(f"\n★ 零覆蓋 mod（有效鍵 ≥{args.min_keys}）：{len(zero)} 個、"
           f"合計 {sum(r['upstream'] for r in zero)} 鍵——玩家全看英文")
