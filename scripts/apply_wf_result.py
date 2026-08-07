@@ -22,9 +22,17 @@ import re
 import sys
 from pathlib import Path
 
+# 角括號在 PZ 有**兩種**用途，不可用同一條規則檢查：
+#   * 真標記 `<br> <LINE> <TEXT> <CENTRE> <SPACE> <RGB:..> <IMAGE:..>`——引擎解析，
+#     必須逐字存活，翻了就壞版面。
+#   * 顯示用文字 `<Hidden>`／`<static>`——玩家看得到，**本來就該翻**
+#     （本體先例：`<噗滋>`／`<對講機雜訊>`／`<爆炸>`）。
+# 故只對真標記做逐字守恆，另外用「角括號對數」抓括號被吃掉的情況。
+PZ_TAG = r"<(?:br|BR|LINE|TEXT|CENTRE|CENTER|SPACE|RGB:[^>]*|IMAGE:[^>]*)>"
 MARKUP = (
     (r"\[img=music\]", "img標記"), (r"\*\*", "雙星號"), (r"----", "斷訊殘字"),
-    (r"<[A-Za-z][^>]*>", "角括號標記"), (r"%[1-9]", "位置token"), (r"\{[a-zA-Z_]+\}", "大括號佔位"),
+    (PZ_TAG, "PZ標記"), (r"<", "角括號數"), (r"%[1-9]", "位置token"),
+    (r"\{[a-zA-Z_]+\}", "大括號佔位"),
 )
 # CH 側的陸用語預篩。**只收沒有台灣正當語境的詞**——像「質量」在物理義
 # （質量守恆／質量數）是台灣標準用語，放進來只會製造誤報，交給 lint_ch 的
@@ -106,7 +114,9 @@ def main() -> int:
                 bad[nm].append((en[:44], ch[:44]))
         if any(c in ch for c in "，。？！：；"):
             bad["CH全形標點"].append((en[:32], ch[:38]))
-        if "..." in ch:
+        # 只抓「中文句子裡的三點」＝該正規化為「…」；ASCII 圖案／摩斯訊號式的
+        # `... --- ...` 不是省略號，原樣保留才對。
+        if re.search(r"[一-鿿]\s*\.\.\.|\.\.\.\s*[一-鿿]", ch):
             bad["未正規化省略號"].append((en[:32], ch[:38]))
         m = MAINLAND_RE.search(ch)
         if m:
