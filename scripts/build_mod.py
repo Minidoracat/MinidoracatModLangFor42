@@ -473,6 +473,61 @@ def report_own_anchor_gaps(own: dict[str, dict[str, dict]]) -> None:
         print(f"  ⚠️ 錨點缺口報告略過（state 形狀異常：{exc}）")
 
 
+def report_stale_as1_keys() -> None:
+    """report-only：As1 譯了、但該 mod 上游已不再定義的鍵（＝上游改名後的遺留）。
+
+    與 `report_own_anchor_gaps` 互補——那支管 own 層，這支管 As1 衍生層。
+    實例（2026-08-08 查證）：B42 PZLinux 把整批鍵名由 `UI_PZLinux_*` 改成
+    `IGUI_PZLinux_*`，該 mod 的 Lua 現在只呼叫新鍵名（61 個 .lua 掃描，舊鍵名 0 命中），
+    但 As1 語料仍留著 280 個舊鍵，於是我方照樣出貨——玩家永遠看不到，純屬死重量，
+    且與新譯是同一批文本的第二份分歧譯文。
+
+    **不是 gate、也不自動移除**：`split_sources` 有硬性不變式「owner ＋ _unsorted
+    聯集 == As1 快照，一個不多一個不少」，刪了下次 split 會再生。要清除須先重釘 As1
+    快照、確認上游 As1 自己也已改名，屬 As1 同步流程的一環。
+
+    只涵蓋 `sources/mods/<wid>/` 有歸屬的鍵；`_unsorted` 無 mod 歸屬，判不了（PZLinux
+    那 280 鍵正落在此，見上）。缺鏡像的 mod 一律跳過（無從判斷≠已作廢）。
+    """
+    try:
+        mods_dir = SOURCES / "mods"
+        en_dir = SOURCES / "en"
+        if not mods_dir.is_dir() or not en_dir.is_dir():
+            return
+        rows: list[tuple[str, int, int]] = []
+        for mod_dir in sorted(p for p in mods_dir.iterdir() if p.is_dir()):
+            mirror = en_dir / f"{mod_dir.name}.json"
+            if not mirror.is_file():
+                continue                      # 未收錄的 mod：無從判斷
+            try:
+                upstream = {rid.rpartition("|")[2]
+                            for rid in json.loads(mirror.read_text(encoding="utf-8"))}
+            except (OSError, json.JSONDecodeError):
+                continue
+            if not upstream:
+                continue
+            have: set[str] = set()
+            for f in mod_dir.glob("C*/*.json"):
+                try:
+                    have |= set(json.loads(f.read_text(encoding="utf-8")))
+                except (OSError, json.JSONDecodeError):
+                    continue
+            stale = have - upstream
+            if stale:
+                rows.append((mod_dir.name, len(stale), len(have)))
+        if rows:
+            rows.sort(key=lambda r: -r[1])
+            total = sum(n for _, n, _ in rows)
+            print(f"  ℹ️ As1 衍生層 {total} 鍵於上游已查無同名鍵（改名遺留，出貨但玩家看不到），"
+                  f"分佈 {len(rows)} 個 mod：")
+            for wid, n_stale, n_have in rows[:10]:
+                print(f"    {wid}  {n_stale}/{n_have}")
+            if len(rows) > 10:
+                print(f"    ...（還有 {len(rows) - 10} 個 mod）")
+    except Exception as exc:  # noqa: BLE001 — report-only 不得阻斷 build
+        print(f"  ⚠️ As1 作廢鍵報告略過（{exc}）")
+
+
 def apply_own(
     merged_cn: dict[str, dict], merged_ch: dict[str, dict], own: dict[str, dict[str, dict]]
 ) -> tuple[int, list[str]]:
@@ -890,6 +945,7 @@ def cmd_build() -> int:
         for s in own_shadowed[:10]:
             print(f"    {s}")
     report_own_anchor_gaps(own)
+    report_stale_as1_keys()
 
     # CH 值層 gate 須在 apply_own 之後：own_translations 的 ch 也走這道簡繁不變式檢查
     ch_value_errors = ch_value_gate(merged_cn, merged_ch)
