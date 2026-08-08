@@ -30,6 +30,12 @@ verify_dist.py — MinidoracatModLangFor42 的獨立 dist 驗證器（oracle）�
                       （原創鍵對 own_translations 的 ch；CH 已斷絕 OpenCC 機轉，值有真相源）
   [10] sync worklist ：sources/ch_sync_worklist.json 未處理條目必須清空（上游變更未反映不得出貨）
   [11] 已審鍵漂移     ：ch_review_state.json 已審鍵重算現行 CN hash，不符 → WARN（須重審）
+  [12] vanilla 鍵碰撞 ：own 原創鍵不得撞 vanilla 鍵名（JSON 全量共存＝全域覆寫，
+                      會影響未安裝該 mod 的使用者）
+  [13] 檔名可載入性   ：有前綴路由的鍵不得只存在於 PZ 不會載入的檔名裡（放錯＝永遠取不到）；
+                      上游查無同名鍵者＝作廢鍵名 → WARN
+  [14] own 層 CN 用字 ：own 層 CN 不得殘留 t2s 抓不到的台灣字形（助詞「著」須寫「着」、
+                      「牠」「妳」、直角引號）——只掃 own，As1 快照忠實鏡像不歸本項管
 
 冪等子命令（獨立於預設全跑，供「連跑兩次 build 第二次零 diff」驗證）：
   --snapshot-dist <dir>：把 dist 現況（.json + language.txt + client/*.lua 的 sha256）存到 <dir>/dist_hashes.json
@@ -1246,6 +1252,54 @@ def check_loadable_files(repo: str, dist_ch: str) -> tuple[bool, list[str], list
     return not stranded, stranded, obsolete
 
 
+# --- [14] own 層 CN 用字 ---------------------------------------------------- #
+# own 層 CN 是我方人工真相（own_translations.json 的 cn 欄 ＋ origin=own 的 mod CN），
+# 且多數由 CH 跑 opencc t2s 生成——t2s **只換字形不換詞彙**，還有幾個字它根本不動：
+#   * `著`：簡化字表保留「著」(zhù，著名/著作/顯著/土著)，故助詞 zhe 的「抱著」
+#     轉完仍是「抱著」，大陸須寫「抱着」。任何字集檢查與 hash 錨點都攔不到。
+#   * `牠`／`妳`：大陸不使用動物與女性專用第三／第二人稱。
+#   * 直角引號 `「」`：own 層 CN 慣例用 `“”`。
+# 2026-08-08 全庫稽核後這四類在 own 層皆為 0，此檢查是防回歸的棘輪。
+# **掃描域只有 own 層**：As1 快照的 CN 我方忠實鏡像（實測 52 鍵用「」皆與快照逐字相同），
+# 要偏離須走 cn_overrides 登記，不歸本檢查管。
+CN_ZHU_WORDS = (  # 「著」在大陸的合法用法（zhù），掃描前先剝掉避免誤報
+    "著名", "著作", "著述", "著者", "著錄", "著录", "著書", "著书", "著稱", "著称",
+    "顯著", "显著", "土著", "原著", "名著", "巨著", "專著", "专著", "編著", "编著",
+    "論著", "论著", "合著", "譯著", "译著",
+)
+CN_BAD_GLYPHS = (("牠", "它"), ("妳", "你"), ("「", "“"), ("」", "”"))
+# 句尾／標點前的「著」＝署名（「由 Kkat 著.」「…尤塞恩・博爾特著」），大陸正字。
+# 助詞 zhe 幾乎恆在句中（抱著一線希望／潦草寫著「…」／地下室藏著補給——實測四例皆然），
+# 故放行句尾形是可接受的取捨：**寧可漏報，不可逼人把正確的簡中改壞**。
+CN_ZHU_TAIL = re.compile(r"著(?=$|[\s.,;!?)\]」』”、。，；！？]|<)")
+
+
+def check_own_cn_glyphs(repo: str) -> tuple[bool, list[str], list[str]]:
+    """[14] own 層 CN 不得殘留 t2s 抓不到的台灣字形。"""
+    src: list[tuple[str, str, str]] = []
+    for fname, bucket in _load_own(repo).items():
+        for key, spec in bucket.items():
+            if isinstance(spec, dict) and isinstance(spec.get("cn"), str):
+                src.append((f"own_translations:{fname}", key, spec["cn"]))
+    for fname, bucket in _load_own_mods(repo).items():
+        for key, spec in bucket.items():
+            if isinstance(spec, dict) and isinstance(spec.get("cn"), str):
+                src.append((f"own-mod:{fname}", key, spec["cn"]))
+
+    fail: list[str] = []
+    for label, key, val in src:
+        stripped = val
+        for word in CN_ZHU_WORDS:
+            stripped = stripped.replace(word, "")
+        stripped = CN_ZHU_TAIL.sub("", stripped)
+        if "著" in stripped:
+            fail.append(f"{label}|{key}：CN 有「著」（助詞 zhe 須寫「着」）：{val[:44]!r}")
+        for bad, good in CN_BAD_GLYPHS:
+            if bad in val:
+                fail.append(f"{label}|{key}：CN 有「{bad}」（應為「{good}」）：{val[:44]!r}")
+    return not fail, fail, []
+
+
 def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
     repo = paths["repo"]
     as1_cn = paths["as1_cn"]
@@ -1331,6 +1385,10 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         ok13, d13, w13 = check_loadable_files(repo, dist_ch)
     except Exception as exc:  # noqa: BLE001
         ok13, d13, w13 = False, [f"檔名可載入性檢查失敗（{exc}）"], []
+    try:
+        ok14, d14, w14 = check_own_cn_glyphs(repo)
+    except Exception as exc:  # noqa: BLE001
+        ok14, d14, w14 = False, [f"own CN 用字檢查失敗（{exc}）"], []
 
     rows = [
         ("1", "CN 逐檔 parity（As1 缺席時僅降級 As1 比對）" if as1_missing else "CN 逐檔 parity",
@@ -1346,6 +1404,7 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         ("11", "已審鍵 CN 漂移（WARN-only）", ok11, d11, w11),
         ("12", "vanilla 鍵碰撞", ok12, d12, w12),
         ("13", "檔名可載入性", ok13, d13, w13),
+        ("14", "own 層 CN 用字", ok14, d14, w14),
     ]
 
     n_pass = sum(1 for _, _, ok, _, _ in rows if ok is True)
