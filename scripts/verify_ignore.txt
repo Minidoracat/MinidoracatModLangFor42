@@ -1,0 +1,6 @@
+# 逐一查證後豁免的 finding。新增條目前必須先查證，並在此註明依據。
+#
+# UI_EHR_Line_05F6EF83（CH/CN）：Expanded Helicopter Events 的體溫 debug 字串，
+# %+.3f 是帶 + 旗標的 printf 指令，由該 MOD 以 string.format 消費；
+# 檢查器刻意不認旗標字元（避免「% d」漏抓），故此鍵永久豁免。保留原樣才正確。
+UI_EHR_Line_05F6EF83
