@@ -47,6 +47,7 @@ REVIEW_STATE_JSON = SOURCES / "ch_review_state.json"
 CN_OVERRIDES_JSON = SOURCES / "cn_overrides.json"
 PLACEHOLDER_EXCEPTIONS_JSON = SOURCES / "placeholder_exceptions.json"
 OWN_TRANSLATIONS_JSON = SOURCES / "own_translations.json"
+VANILLA_KEYS_JSON = SOURCES / "vanilla_keys.json"
 
 MOD_MEDIA = (
     PROJECT_ROOT
@@ -393,6 +394,116 @@ def load_cn_overrides() -> dict[str, dict]:
             )
             sys.exit(1)
     return data
+
+
+# vanilla 一定會有的核心字串檔。整個 bucket 消失是最危險的殘缺——**總鍵數幾乎不變**
+# （拿掉 ItemName.json 仍有 42,364 鍵），純量級門檻攔不到，抑制卻會對該檔全面失效。
+VANILLA_CORE_FILES = frozenset({
+    "ItemName.json", "UI.json", "IG_UI.json", "ContextMenu.json", "Tooltip.json",
+    "Recipes.json", "Sandbox.json", "Fluids.json", "Moveables.json", "Moodles.json",
+})
+
+
+def _vanilla_basis_problem(data: dict) -> str | None:
+    """基準不可信的理由，可信則 None。**fail-closed 的重點在結構不變式而非量級**。
+
+    2026-08-10 review 實證：舊版只驗「總數 ≥ 10000」，於是
+    (a) 整個 `ItemName.json` bucket 消失仍過關（剩 42,364 鍵）——`Base.Shotgun` 直接放行；
+    (b) 同一個鍵重複 10,001 次也過關，實際 unique pair 只有 1。
+    兩者都是「看起來 fail-closed、實際 fail-open」。
+    """
+    scoped = data.get("scoped_keys")
+    if not isinstance(scoped, dict) or not scoped:
+        return "scoped_keys 缺失或非物件"
+    seen: set[str] = set()
+    for fname, ks in scoped.items():
+        if not isinstance(fname, str) or not fname:
+            return f"檔名非法：{fname!r}"
+        if not isinstance(ks, list) or not all(isinstance(k, str) and k for k in ks):
+            return f"{fname} 的鍵清單非法（須為非空字串清單）"
+        if len(set(ks)) != len(ks):
+            return f"{fname} 內有重複鍵（灌水會讓量級檢查失真）"
+        seen.update(ks)
+    if missing := VANILLA_CORE_FILES - set(scoped):
+        return f"缺少核心字串檔 {sorted(missing)}（該檔的出貨抑制會整批失效）"
+    if len(scoped) < 30:
+        return f"只有 {len(scoped)} 個檔（vanilla 量級 43，遠低於此＝擷取殘缺）"
+    if sum(len(v) for v in scoped.values()) < 10000:
+        return "檔域鍵量級不足（vanilla 量級 4.7 萬）"
+    if set(data.get("keys") or []) != seen:
+        # 兩欄由 extract_vanilla_keys.py 單一 writer 共同重生，不一致＝有人手改或只重生一半
+        return "keys 與 scoped_keys 的聯集不一致（基準只重生了一半？）"
+    return None
+
+
+def load_vanilla_scoped() -> tuple[dict[str, set[str]], dict[str, dict]]:
+    """vanilla 檔域鍵基準 `{檔名: {鍵}}` 與 keep 豁免登記（缺失即 fail）。
+
+    PZ 的 `Translator.tryFillMapFromFile()` 把每個 mod 的 Translate 檔 `map.put()`
+    進同一張全域字串表，後載入者覆寫前者——**同 (檔,鍵) 出貨即全域改寫本體譯文，
+    連沒裝任何模組的玩家都會看到**。本包是模組翻譯包，故 vanilla 同名鍵一律不出貨。
+    """
+    _require_truth_file(VANILLA_KEYS_JSON, "vanilla 鍵名基準")
+    data = load_json(VANILLA_KEYS_JSON)
+    problem = _vanilla_basis_problem(data)
+    if problem:
+        print(
+            f"❌ vanilla_keys.json 基準不可信：{problem}。"
+            "遊戲更新後請跑 scripts/extract_vanilla_keys.py 重生。",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+    keep = data.get("keep", {})
+    if not isinstance(keep, dict) or not all(
+        isinstance(s, dict)
+        and isinstance(s.get("anchor"), str)
+        and s["anchor"]
+        and isinstance(s.get("reason"), str)
+        and s["reason"].strip()
+        for s in keep.values()
+    ):
+        print(
+            "❌ vanilla_keys.json keep 形狀壞損（每筆須為含非空 anchor 與非空 reason 的物件）。"
+            "保留一個覆寫＝改寫全體玩家看到的本體文字，必須寫明理由。",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+    return {f: set(ks) for f, ks in data["scoped_keys"].items()}, keep
+
+
+def suppress_vanilla(
+    merged_cn: dict[str, dict], merged_ch: dict[str, dict]
+) -> tuple[int, list[str], list[str]]:
+    """出貨前剔除 vanilla 同名 (檔,鍵)；CN/CH 對稱處理以維持 [2] 鍵集鏡像。
+
+    回傳 (剔除鍵數, keep 豁免鍵, 錨點失效訊息)。keep 錨點對出貨 CH 值比對——
+    豁免是「已確認這個覆寫無害」的背書，值一變背書即失效。
+    """
+    scoped, keep = load_vanilla_scoped()
+    dropped = 0
+    kept: list[str] = []
+    anchor_errors: list[str] = []
+    for fname, van_keys in scoped.items():
+        cn_map, ch_map = merged_cn.get(fname), merged_ch.get(fname)
+        if cn_map is None:
+            continue
+        for key in sorted(van_keys & set(cn_map)):
+            pair = f"{fname}|{key}"
+            if pair in keep:
+                kept.append(pair)
+                ch_val = (ch_map or {}).get(key, "")
+                got = hashlib.sha256(str(ch_val).encode("utf-8")).hexdigest()[:16]
+                if got != keep[pair]["anchor"]:
+                    anchor_errors.append(
+                        f"  {pair} keep 錨點失效（出貨 CH 值已變動 {got}≠{keep[pair]['anchor']}，"
+                        "須重新確認無害後更新錨點）"
+                    )
+                continue
+            cn_map.pop(key, None)
+            if ch_map is not None:
+                ch_map.pop(key, None)
+            dropped += 1
+    return dropped, kept, anchor_errors
 
 
 def load_own_translations() -> dict[str, dict[str, dict]]:
@@ -954,9 +1065,23 @@ def cmd_build() -> int:
     # Lua 複製計畫先算：basename 衝突屬硬錯，須在清空/寫出前先攔
     lua_plan, lua_conflicts = plan_lua()
 
+    # vanilla 出貨抑制：置於所有鍵集/值層 gate 之後——corpus 鍵集鏡像、placeholder、
+    # CH 值層都對「完整合併結果」把關（真相層照樣要正確），只有出貨那一步濾掉本體同名鍵。
+    n_suppressed, kept_vanilla, keep_anchor_errors = suppress_vanilla(merged_cn, merged_ch)
+    if n_suppressed:
+        print(f"  vanilla 出貨抑制：剔除 {n_suppressed} 個本體同名 (檔,鍵)（避免全域改寫本體譯文）")
+    if kept_vanilla:
+        print(f"  ⚠️ keep 登記豁免 {len(kept_vanilla)} 鍵仍出貨（刻意覆寫本體）：")
+        for k in kept_vanilla[:20]:
+            print(f"    {k}")
+
     # gate：合併衝突 + CH 值層 + format 安全 + placeholder 崩潰簽名/token 不一致 + Lua 衝突
     # → 不寫出、非零退出
-    if conflicts or ch_value_errors or fmt_errors or errors or lua_conflicts:
+    if keep_anchor_errors:
+        print(f"\n❌ vanilla keep 錨點失效 {len(keep_anchor_errors)} 處：")
+        for e in keep_anchor_errors:
+            print(e)
+    if conflicts or ch_value_errors or fmt_errors or errors or lua_conflicts or keep_anchor_errors:
         if conflicts:
             print(f"\n❌ 合併衝突（同 (檔,鍵) 異值）{len(conflicts)} 處：")
             for c in conflicts:

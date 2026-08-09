@@ -4,6 +4,28 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Fixed
+
+- **本包會改掉遊戲原版的物品名與文字（328 鍵）—— 已全數停止出貨**。玩家回報：未安裝任何槍械替換 MOD，原版 JS-2000 霰彈槍卻顯示為「雷明頓M870霰彈槍」，移除本包即恢復（[Workshop 留言](https://steamcommunity.com/sharedfiles/filedetails/?id=3765907717)）。
+  成因是 PZ 的 `Translator.tryFillMapFromFile()` 把**每個 mod 的 Translate 檔併進同一張全域字串表**、後載入者覆寫前者——沒有「只在某 MOD 啟用時生效」這回事。As1 上游收錄了 Firearms（`2256623447`）、Vanilla Firearms Expansion（`3611718925`）等**重製原版槍**的 MOD 譯文，這些 MOD 直接改寫 `ItemName.json|Base.Shotgun` 等本體鍵，於是全體玩家的原版物品跟著被改名。
+  影響範圍不只槍械：槍械／彈藥／配件 66 鍵、食物酒類鞋襪 74 鍵、UI／Tooltip／ContextMenu／Fluids 等 188 鍵。其中對原版玩家明確有害者包括 `Base.Wine2`（Red Wine）→「夏多內**白**葡萄酒」、`Base.x4Scope`（x4）→「LVPO **8倍**」、`Tooltip_Antibiotics`（抗傷口感染、不能防變殭屍）→「用於製作抗生素.」。
+  另有 10 鍵連來源 MOD 自己的現行英文都對不上（`Base.Shotgun` 上游現為 Mossberg 500、`Base.x4Scope` 現為 ACOG 4x32），即使裝了該 MOD 也是錯的。
+- **這些原版字串現在改由遊戲本體／本體翻譯包提供**，本包不再插手。副作用：有裝上述槍械 MOD 的玩家會看到原版名稱而非 MOD 重製名——JSON 全域表無法做條件式生效，要兩邊兼顧只能拆成依賴該 MOD 的獨立翻譯子包，尚未實作。
+
+### Added
+
+- **`build_mod.suppress_vanilla()` 出貨抑制**：所有 gate 之後、寫出之前，把命中本體鍵名基準的 (檔,鍵) 自 CN/CH 對稱剔除。真相層不動——As1 CN 仍是 canonical import、`sources/ch` corpus 仍是人工真相，抑制只發生在出貨那一步。要刻意保留某個覆寫須登記 `vanilla_keys.json` 的 `keep`（帶出貨值錨點，值一改豁免即失效）。
+- **`verify_dist [12]` 自 report-only 升為 blocking**：獨立重掃 dist CN/CH，殘留任何非 `keep` 的本體同名鍵即 FAIL。原本 As1 lane 只出 WARN、且其中 327 鍵全登記在 `as1_overlap_known` 裡當通行證（另 1 鍵走 own lane 的 `allowlist`），等於防線完全靜音——這正是問題存在近半年沒被攔下的原因。
+- **`scripts/extract_vanilla_keys.py`**：自本機 PZ 安裝重生本體鍵名基準，新增**檔域**欄位 `scoped_keys`（`{檔名:[鍵]}`）。舊基準只有扁平裸鍵集，無法區分「同名鍵在不同檔案不互撞」，故無法拿來做精確抑制。**遊戲大版本更新後必跑。**
+- **`scripts/test_vanilla_suppress.py`** 回歸測試 9 組：對稱剔除、`keep` 豁免與錨點漂移（build 與 oracle 各驗一次）、基準殘缺 fail-closed（含「整個 bucket 消失」與「同鍵灌水」兩種假 fail-closed）、dist 洩漏偵測、檔域語意不退化成跨檔比對、[13] 不把抑制鍵誤報成受困鍵。
+
+### Changed
+
+- 退役 `own_translations.json` 的 `IG_UI.json|IGUI_SearchMode_Categories_WildHerbs`（en/ch/cn 與官方逐字相同，抑制後永遠不會落地）及其 `allowlist` 豁免登記。
+- `sources/vanilla_overlap_triage.json` 降為歷史紀錄：出貨抑制後，值層裁決不再決定「要不要出貨」。（該台帳本身也已被證實有誤——`Base.x4Scope` 的裁決是靠 hash 反推「Firearms 改名為 LVPO 系」，取得上游 EN 實文後確認實際是 `ACOG 4x32`。）
+
 ## [42.20.2-1.10.0] - 2026-08-08
 
 ### Added

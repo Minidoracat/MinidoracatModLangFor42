@@ -157,11 +157,26 @@ with tempfile.TemporaryDirectory() as td:
         )
 
     big = [f"K{i}" for i in range(10001)]
+    # 檔域基準（dist 面主閘門與抑制集合的來源）。基準的 fail-closed 檢查要求核心字串檔
+    # 齊備、≥30 檔、且 keys == union(scoped_keys)，故補齊；各補位檔的鍵取自 big 以維持聯集。
+    CORE = ("ItemName.json", "UI.json", "IG_UI.json", "ContextMenu.json", "Tooltip.json",
+            "Recipes.json", "Sandbox.json", "Fluids.json", "Moveables.json", "Moodles.json")
+    def mk_scoped(**extra):
+        out = {"UI.json": list(big)}
+        out.update({f: ["K1"] for f in CORE if f != "UI.json"})
+        out.update({f"Pad{i}.json": ["K2"] for i in range(21)})
+        out.update(extra)
+        return out
+    scoped = mk_scoped()
     w_own({"UI.json": {"K0": {"en": "e", "ch": "譯", "cn": "译"}}})
     for bad in (
-        {"keys": "K0"},                          # keys 非清單
-        {"keys": ["K0"]},                        # 量級殘缺
-        {"keys": big, "allowlist": {"K0": "散文豁免"}},  # allowlist 無錨點
+        {"keys": "K0", "scoped_keys": scoped},               # keys 非清單
+        {"keys": ["K0"], "scoped_keys": scoped},             # 量級殘缺
+        {"keys": big, "scoped_keys": scoped, "allowlist": {"K0": "散文豁免"}},  # allowlist 無錨點
+        {"keys": big, "allowlist": {}},                      # 缺 scoped_keys
+        {"keys": big, "scoped_keys": {"UI.json": ["K0"]}, "allowlist": {}},  # 檔域基準殘缺
+        {"keys": big, "scoped_keys": mk_scoped(**{"ItemName.json": None}), "allowlist": {}},  # bucket 型別錯
+        {"keys": big, "scoped_keys": scoped, "keep": {"UI.json|K0": "散文豁免"}},  # keep 無錨點
     ):
         w_vanilla(bad)
         try:
@@ -169,12 +184,12 @@ with tempfile.TemporaryDirectory() as td:
             raise AssertionError(f"形狀壞損未 fail-closed: {bad if len(str(bad)) < 80 else '...'}")
         except (ValueError, TypeError, AttributeError):
             pass
-    w_vanilla({"keys": big, "allowlist": {}})
+    w_vanilla({"keys": big, "scoped_keys": scoped, "allowlist": {}})
     ok, det, _w = verify_dist.check_vanilla_collision(str(repo), str(dist_cn_dir))
     assert not ok and "K0" in det[0], f"碰撞未偵測: {det}"
     import hashlib as _hl
     anchor = _hl.sha256("e|譯|译".encode("utf-8")).hexdigest()[:16]
-    w_vanilla({"keys": big, "allowlist": {"K0": {"reason": "r", "own_anchor": anchor}}})
+    w_vanilla({"keys": big, "scoped_keys": scoped, "allowlist": {"K0": {"reason": "r", "own_anchor": anchor}}})
     ok, det, _w = verify_dist.check_vanilla_collision(str(repo), str(dist_cn_dir))
     assert ok and not det, f"錨點豁免未生效: {det}"
     w_own({"UI.json": {"K0": {"en": "e", "ch": "改", "cn": "改"}}})
@@ -191,13 +206,14 @@ with tempfile.TemporaryDirectory() as td:
         (base / "CN" / fname).write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
 
     big2 = big + ["title"]
+    scoped2 = mk_scoped(**{"Muldraugh.json": ["title"], "SomeMod.json": ["title"]})
     w_own({"UI.json": {"ZOwnOnly": {"en": "e", "ch": "譯", "cn": "译"}}})  # 不撞 vanilla，免干擾 blocking
     w_src("111", {"origin": "as1"}, "IG_UI.json", {"K6": "x"})       # As1 一般鍵 → warn
     w_src("111", None, "SomeMod.json", {"title": "x"})               # generic 非登記對 → 靜默
     w_src("111", None, "Muldraugh.json", {"title": "x"})             # generic 已登記對 → warn
     w_src("222", {"origin": "own"}, "IG_UI.json", {"K7": "x"})       # own-mod → 靜默
     w_src(None, None, "ItemName.json", {"K8": "x"})                  # _unsorted → warn
-    w_vanilla({"keys": big2, "allowlist": {}, "as1_overlap_known": [],
+    w_vanilla({"keys": big2, "scoped_keys": scoped2, "allowlist": {}, "as1_overlap_known": [],
                "vanilla_scoped_pairs": ["Muldraugh.json|title"]})
     _ok, _det, warns = verify_dist.check_vanilla_collision(str(repo), str(dist_cn_dir))
     joined = "\n".join(warns)
@@ -205,7 +221,7 @@ with tempfile.TemporaryDirectory() as td:
     assert "ItemName.json|K8" in joined, f"_unsorted 未納入: {warns}"
     assert "IG_UI.json|K7" not in joined, f"own-mod 未排除: {warns}"
     assert "SomeMod.json|title" not in joined, f"generic 笛卡兒積誤報: {warns}"
-    w_vanilla({"keys": big2, "allowlist": {},
+    w_vanilla({"keys": big2, "scoped_keys": scoped2, "allowlist": {},
                "as1_overlap_known": ["IG_UI.json|K6", "Muldraugh.json|title",
                                      "ItemName.json|K8", "Gone.json|K9"],
                "vanilla_scoped_pairs": ["Muldraugh.json|title"]})
@@ -215,7 +231,7 @@ with tempfile.TemporaryDirectory() as td:
     assert "陳舊條目：Gone.json|K9" in joined, f"stale 未偵測: {warns}"
     assert ok, "report-only 不得影響 blocking 結果"
     for bad_field in ({"as1_overlap_known": {"a": 1}}, {"vanilla_scoped_pairs": ["nopipe"]}):
-        w_vanilla({"keys": big2, "allowlist": {}, **bad_field})
+        w_vanilla({"keys": big2, "scoped_keys": scoped2, "allowlist": {}, **bad_field})
         try:
             verify_dist.check_vanilla_collision(str(repo), str(dist_cn_dir))
             raise AssertionError(f"新欄位形狀壞損未 fail-closed: {bad_field}")

@@ -445,6 +445,67 @@ def _dist_is_built(dist_cn: str | None) -> bool:
 # --------------------------------------------------------------------------- #
 # 各驗證項（回傳 (ok: bool, details: list[str], ...)）
 # --------------------------------------------------------------------------- #
+# vanilla 必有的核心字串檔（獨立列舉，不共用 builder 常數——oracle 原則）
+VANILLA_CORE_FILES = frozenset({
+    "ItemName.json", "UI.json", "IG_UI.json", "ContextMenu.json", "Tooltip.json",
+    "Recipes.json", "Sandbox.json", "Fluids.json", "Moveables.json", "Moodles.json",
+})
+
+
+def _load_vanilla_basis(repo: str) -> tuple[dict[str, set[str]], dict[str, dict]]:
+    """vanilla 檔域鍵基準與 keep 豁免（獨立重讀，不共用 builder 載入）。
+
+    形狀壞損一律擲例外由呼叫端轉 FAIL——合法 JSON 但基準殘缺若靜默視為「零 vanilla 鍵」，
+    出貨抑制與 [12] 會同時失效，等於本體覆寫防線整個消失。
+    """
+    with open(os.path.join(repo, "sources", "vanilla_keys.json"), encoding="utf-8-sig") as f:
+        data = json.load(f)
+    scoped = data.get("scoped_keys")
+    if not isinstance(scoped, dict) or not scoped:
+        raise ValueError("vanilla_keys.json scoped_keys 缺失或非物件")
+    union: set[str] = set()
+    for fname, ks in scoped.items():
+        if not isinstance(fname, str) or not fname:
+            raise ValueError(f"vanilla_keys.json scoped_keys 檔名非法：{fname!r}")
+        if not isinstance(ks, list) or not all(isinstance(k, str) and k for k in ks):
+            raise ValueError(f"vanilla_keys.json scoped_keys[{fname}] 非非空字串清單")
+        if len(set(ks)) != len(ks):
+            raise ValueError(f"vanilla_keys.json scoped_keys[{fname}] 有重複鍵")
+        union.update(ks)
+    # **量級門檻不足以 fail-closed**：整個 ItemName.json bucket 消失後仍有 42,364 鍵、
+    # 同鍵重複萬次也能湊數，兩者都會讓該檔的抑制整批靜默失效。故另驗結構不變式。
+    if missing := VANILLA_CORE_FILES - set(scoped):
+        raise ValueError(f"vanilla_keys.json 缺少核心字串檔 {sorted(missing)}")
+    if len(scoped) < 30 or len(union) < 10000:
+        raise ValueError(
+            f"vanilla_keys.json 基準殘缺（{len(scoped)} 檔／{len(union)} 鍵；vanilla 量級 43 檔／4.7 萬鍵）"
+        )
+    if set(data.get("keys") or []) != union:
+        raise ValueError("vanilla_keys.json keys 與 scoped_keys 聯集不一致（基準只重生了一半？）")
+    keep = data.get("keep", {})
+    if not isinstance(keep, dict) or not all(
+        isinstance(s, dict)
+        and isinstance(s.get("anchor"), str)
+        and s["anchor"]
+        and isinstance(s.get("reason"), str)
+        and s["reason"].strip()
+        for s in keep.values()
+    ):
+        raise ValueError("vanilla_keys.json keep 形狀壞損（每筆須為含非空 anchor 與非空 reason 的物件）")
+    return {f: set(ks) for f, ks in scoped.items()}, keep
+
+
+def suppressed_pairs(repo: str) -> set[str]:
+    """出貨抑制的 (檔|鍵)：vanilla 檔域鍵扣掉 keep 登記。
+
+    dist 面向的期望（[1] 缺鍵、[9] corpus 落地、[11] 已審鍵在位）一律扣除本集合——
+    真相層仍保有這些鍵（As1 CN 是 canonical import、corpus 是人工真相），
+    抑制只發生在出貨那一步。
+    """
+    scoped, keep = _load_vanilla_basis(repo)
+    return {f"{f}|{k}" for f, ks in scoped.items() for k in ks} - set(keep)
+
+
 def check_cn_parity(
     as1_cn: str,
     dist_cn: str,
@@ -452,6 +513,7 @@ def check_cn_parity(
     own: dict[str, dict],
     cn_overrides: dict[str, dict] | None = None,
     as1_available: bool = True,
+    suppressed: set[str] | None = None,
 ) -> tuple[bool, list[str], list[str], int, int]:
     """[1] dist CN 對 As1 快照：檔案集合 + 逐檔鍵集 + 逐鍵值逐字一致。
 
@@ -468,6 +530,7 @@ def check_cn_parity(
     仍然 exit 0，等於把獨立 oracle 讓掉一大半。
     """
     cn_overrides = cn_overrides or {}
+    suppressed = suppressed if suppressed is not None else set()
     as1_files, as1_err = ({}, []) if not as1_available else _load_json_dir(as1_cn)
     dist_files, dist_err = _load_json_dir(dist_cn)
     details: list[str] = []
@@ -512,6 +575,8 @@ def check_cn_parity(
         ak, dk = set(a), set(d)
         if as1_available:
             for mk in sorted(ak - dk):
+                if f"{fname}|{mk}" in suppressed:
+                    continue  # vanilla 同名鍵：build 刻意不出貨（本體譯文優先）
                 details.append(f"{fname}: 缺鍵 {mk!r}")
             for ek in sorted(dk - ak):
                 if not check_own_key(fname, ek, d[ek]):
@@ -551,11 +616,20 @@ def check_cn_parity(
                     f"{sanitize_expectation(a[key])!r} dist={d[key]!r}"
                 )
 
-    # 登記但未命中任何 dist(檔,鍵) 的例外 → WARN（多半是打錯 key 名）
-    for ekey in sorted(set(exceptions) - applied):
-        warn.append(f"例外鍵 {ekey!r} 未對應任何 dist CN(檔,鍵)，登記可能過期或打錯")
-    for ckey in sorted(set(cn_overrides) - applied_cn_ov):
-        warn.append(f"CN 修正鍵 {ckey!r} 未對應任何 dist CN(檔,鍵)，登記可能過期或打錯")
+    # 登記但未命中任何 dist(檔,鍵) 的例外 → WARN（多半是打錯 key 名）。
+    # 抑制鍵不算「登記過期」：registry 仍作用於合併結果（真相層照樣被修正），
+    # 只是最後不出貨；把它們列進來會讓真正打錯的登記淹沒在噪音裡。
+    for label, reg, hit in (
+        ("例外鍵", exceptions, applied),
+        ("CN 修正鍵", cn_overrides, applied_cn_ov),
+    ):
+        for rkey in sorted(set(reg) - hit):
+            if rkey in suppressed:
+                # 登記本身沒壞（仍作用於合併結果），但該鍵已不出貨＝這筆修正對玩家無效果。
+                # 靜默略過會讓死登記永遠留在檔裡，故照樣出聲、只是換個訊息。
+                warn.append(f"{label} {rkey!r} 命中出貨抑制鍵（本體同名，已無出貨效果，建議退役）")
+            else:
+                warn.append(f"{label} {rkey!r} 未對應任何 dist CN(檔,鍵)，登記可能過期或打錯")
 
     # registry as1_value 錨點漂移 → WARN（上游已自行修正，override/例外可能該退役；
     # 鏡射 build 的同名警告到 oracle 報表，讓它出現在發布前必看的地方）
@@ -575,6 +649,8 @@ def check_cn_parity(
             oid = f"{fname}|{key}"
             if fname in as1_files and key in as1_files[fname]:
                 warn.append(f"原創鍵 {oid!r} 已被 As1 收錄（As1 優先），建議自對應原創來源（own_translations.json 或原創 mod 目錄）退役")
+            elif oid in suppressed:
+                warn.append(f"原創鍵 {oid!r} 撞 vanilla 鍵已被出貨抑制（永遠不會落地），建議退役")
             elif oid not in applied_own:
                 details.append(f"原創鍵 {oid!r} 未落地於 dist CN")
 
@@ -708,7 +784,7 @@ def check_placeholder(
 
 
 def check_ch_corpus_parity(
-    repo: str, dist_ch: str, own: dict[str, dict]
+    repo: str, dist_ch: str, own: dict[str, dict], suppressed: set[str] | None = None
 ) -> tuple[bool, list[str]]:
     """[9] dist CH 逐檔逐鍵值對 sources/ch corpus 逐字一致（雙向）。
 
@@ -716,6 +792,7 @@ def check_ch_corpus_parity(
     兩者皆無＝無真相源 FAIL。corpus 鍵未落地 dist 亦 FAIL。
     """
     corpus = _load_ch_corpus(repo)
+    suppressed = suppressed if suppressed is not None else set()
     dist, derr = _load_json_dir(dist_ch)
     details: list[str] = [f"dist CH {e}" for e in derr]
 
@@ -743,6 +820,8 @@ def check_ch_corpus_parity(
             details.append(f"corpus 檔 {fname} 未出現在 dist CH")
             continue
         for key in sorted(set(corpus[fname]) - set(dmap)):
+            if f"{fname}|{key}" in suppressed:
+                continue  # vanilla 同名鍵：corpus 保有真相，出貨刻意抑制
             details.append(f"{fname}: corpus 鍵 {key!r} 未落地 dist CH")
     return (not details), details
 
@@ -770,13 +849,26 @@ def check_sync_worklist(repo: str) -> tuple[bool, list[str]]:
     return (not details), details
 
 
-def check_review_drift(repo: str, dist_cn: str) -> tuple[bool, list[str], list[str]]:
+def check_review_drift(
+    repo: str, dist_cn: str, suppressed: set[str] | None = None
+) -> tuple[bool, list[str], list[str]]:
     """[11] 已審鍵 CN 漂移（WARN-only）：review_state 記錄 hash 對現行 dist CN 重算比對。"""
     state = _load_review_state(repo)
+    suppressed = suppressed if suppressed is not None else set()
     cn_files, _ = _load_json_dir(dist_cn)
+    # 抑制鍵不在 dist，無從對出貨值重算 hash；但「登記過時」這件事仍要守——
+    # 改以真相層（sources/ch corpus）是否還有該鍵判定，否則這批登記會變成永遠沒人看的死條目。
+    corpus = _load_ch_corpus(repo) if suppressed else {}
     warn: list[str] = []
     for skey in sorted(state):
         fname, _, key = skey.partition("|")
+        if skey in suppressed:
+            if key not in corpus.get(fname, {}):
+                warn.append(
+                    f"已審鍵 {skey!r} 為出貨抑制鍵且已自 corpus 消失"
+                    "（登記過時，請自 ch_review_state.json 移除）"
+                )
+            continue  # 值層漂移無從對出貨值驗——該鍵永不出貨，無玩家影響
         val = cn_files.get(fname, {}).get(key)
         if not isinstance(val, str):
             warn.append(f"已審鍵 {skey!r} 已不在 dist CN（登記過時，請自 ch_review_state.json 移除）")
@@ -1039,15 +1131,24 @@ def cmd_compare_dist(dist_translate: str, lua_client: str | None, snap_dir: str)
 # --------------------------------------------------------------------------- #
 # 主流程
 # --------------------------------------------------------------------------- #
-def check_vanilla_collision(repo: str, dist_cn: str) -> tuple[bool, list[str], list[str]]:
-    """[12] own_translations 原創鍵不得撞 vanilla 鍵名。
+def check_vanilla_collision(
+    repo: str, dist_cn: str, dist_ch: str | None = None
+) -> tuple[bool, list[str], list[str]]:
+    """[12] 出貨物不得覆寫本體字串；own_translations 原創鍵不得撞 vanilla 鍵名。
 
-    JSON 全量共存＝同鍵全域覆寫本體翻譯，會影響未安裝該 mod 的使用者；
+    **主閘門（dist 面）**：PZ 的 `Translator.tryFillMapFromFile()` 把每個 mod 的
+    Translate 檔 `map.put()` 進同一張全域字串表、後載入者覆寫，故 dist 內任何
+    vanilla 同 (檔,鍵) 都會改寫本體譯文——連沒裝任何模組的玩家都受影響
+    （2026-08-10 玩家回報：原版霰彈槍被改名為 Remington M870）。build 的
+    `suppress_vanilla()` 應已剔除；本項獨立重掃 dist 確認抑制真的生效，
+    只有登記於 `keep` 者放行。
+
+    **副閘門（own 來源面）**：原創鍵一開始就不該撞 vanilla 鍵名；
     比對基準與 no-op 豁免登記於 sources/vanilla_keys.json（獨立重讀，不共用 builder 載入）。
-    origin=own 的 mod 目錄暫不納入：比對是「裸鍵名」層級，own-mod 的逐地圖檔泛用鍵
-    （title/description 等）會與 vanilla 逐地圖檔內同名鍵跨檔假陽性；待清單改檔域
-    （fname|key）重生後方可納入——own-mod lane 的 vanilla-override 排除目前仍靠人工
-    （見各 metadata note）。
+    own_translations 走裸鍵名比對（跨檔即算撞，對「原創鍵不得撞本體」是刻意保守的網）；
+    origin=own 的 mod 目錄走**檔域**比對——它們帶逐地圖檔泛用鍵（title/description），
+    裸鍵比對會與 vanilla 各地圖檔跨檔假陽性，這也是 2026-08-02 當時暫不納入的原因；
+    `scoped_keys` 落地後該理由消失，改以精確 (檔|鍵) 納入 blocking。
     allowlist 值可為 {"reason", "own_anchor"}；own_anchor＝登記當時 own 條目
     sha256(en|ch|cn)[:16]，值變動即豁免失效（同 cn_overrides/lint_exemptions 錨點慣例）。
     """
@@ -1071,6 +1172,32 @@ def check_vanilla_collision(repo: str, dist_cn: str) -> tuple[bool, list[str], l
     vanilla = set(keys_raw)
     own = _load_own(repo)
     details: list[str] = []
+
+    # --- 主閘門：dist 不得殘留 vanilla 同 (檔,鍵) ---
+    scoped, keep = _load_vanilla_basis(repo)
+    for label, dist_dir in (("CN", dist_cn), ("CH", dist_ch)):
+        if dist_dir is None:
+            continue
+        dist_files, dist_err = _load_json_dir(dist_dir)
+        details += [f"dist {label} {e}" for e in dist_err]
+        for fname, van_keys in sorted(scoped.items()):
+            for key in sorted(van_keys & set(dist_files.get(fname, {}))):
+                pair = f"{fname}|{key}"
+                spec = keep.get(pair)
+                if spec is None:
+                    details.append(
+                        f"  dist {label}/{fname}|{key} 覆寫本體字串"
+                        "（模組翻譯包不得改動 vanilla 譯文；確認無害後於 vanilla_keys.json keep 登記）"
+                    )
+                elif label == "CH":
+                    # keep 錨點對出貨 CH 值——豁免是對「當時那個值」的背書，值一變背書即失效。
+                    # build 也驗一次；oracle 獨立重驗，避免 dist 被手改後無人察覺。
+                    got = hashlib.sha256(str(dist_files[fname][key]).encode("utf-8")).hexdigest()[:16]
+                    if got != spec["anchor"]:
+                        details.append(
+                            f"  {pair} keep 錨點失效（出貨 CH 值已變動 {got}≠{spec['anchor']}，"
+                            "須重新確認無害後更新錨點）"
+                        )
     for fname, keys in sorted(own.items()):
         for key in sorted(keys):
             if key not in vanilla:
@@ -1089,6 +1216,13 @@ def check_vanilla_collision(repo: str, dist_cn: str) -> tuple[bool, list[str], l
                     f"  {fname}|{key} allowlist own_anchor 失效（own 值已變動 {got}≠{spec['own_anchor']}，"
                     "須重新確認 no-op 後更新錨點）"
                 )
+
+    # origin=own 的 mod 目錄：檔域比對（無 allowlist——原創 mod 譯文本就不該碰本體鍵）
+    for fname, keys in sorted(_load_own_mods(repo).items()):
+        for key in sorted(set(keys) & scoped.get(fname, set())):
+            details.append(
+                f"  {fname}|{key} 撞 vanilla 鍵（origin=own mod 目錄；原創譯文不得覆寫本體，請改鍵名或移除）"
+            )
     # report-only：As1 lane 的「新增」vanilla 碰撞顯性化——已知碰撞登記於
     # as1_overlap_known；不在清單者出 WARN（非阻斷，值層裁決屬人工，台帳見
     # sources/vanilla_overlap_triage.json）。
@@ -1217,7 +1351,9 @@ def _upstream_keys(repo: str) -> set[str]:
     return out
 
 
-def check_loadable_files(repo: str, dist_ch: str) -> tuple[bool, list[str], list[str]]:
+def check_loadable_files(
+    repo: str, dist_ch: str, suppressed: set[str] | None = None
+) -> tuple[bool, list[str], list[str]]:
     """[13] 有前綴路由的鍵不得只存在於 PZ 不會載入的檔案裡。
 
     只看 CH——CH/CN 檔案結構由 [2] CH 鏡像保證一致，重複掃兩次沒有額外資訊。
@@ -1245,6 +1381,8 @@ def check_loadable_files(repo: str, dist_ch: str) -> tuple[bool, list[str], list
             target = _routed_file(key)
             if not target or key in live.get(target, {}):
                 continue
+            if f"{target}.json|{key}" in (suppressed or set()):
+                continue  # 本體同名鍵：目標檔裡的缺席是刻意的，搬過去只會被 [12] 擋下
             line = f"{stem}.json|{key} → 應落在 {target}.json（PZ 不載入 {stem}.json）"
             (stranded if key in upstream else obsolete).append(line)
     if obsolete:
@@ -1353,11 +1491,25 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         print(f"ERROR：原創翻譯層無法解析（{exc}）")
         return 1
 
+    # 出貨抑制集合：dist 面向的期望一律扣除（真相層仍持有這些鍵，只是不出貨）。
+    # 基準壞損直接判 FAIL——靜默當成空集合會讓 [1]/[9]/[11] 誤報一整批「缺鍵」。
+    try:
+        suppressed = suppressed_pairs(repo)
+    except Exception as exc:  # noqa: BLE001
+        print(f"ERROR：vanilla 鍵名基準無法載入（{exc}）")
+        return 1
+
     # ok 為 None＝SKIP（無法判定），有別於 False＝FAIL（判定為壞）。
     # [1] 即使 As1 缺席也照跑：只降級 As1 相關比對，own 值／例外／override／原創落地
     # 這些不依賴 As1 的核對必須留著，否則 --allow-missing-as1 會連它們一起放行。
     ok1, d1, w1, n_exc, n_own = check_cn_parity(
-        as1_cn, dist_cn, exceptions, own, cn_overrides, as1_available=not as1_missing
+        as1_cn,
+        dist_cn,
+        exceptions,
+        own,
+        cn_overrides,
+        as1_available=not as1_missing,
+        suppressed=suppressed,
     )
     ok2, d2 = check_ch_mirror(dist_cn, dist_ch)
     ok3, d3 = check_encoding(dist_translate)
@@ -1366,7 +1518,7 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
     ok7, d7 = check_lua(repo, lua_client)
     ok8, d8, w8 = (None, [], []) if as1_missing else check_as1_drift(repo, as1_cn)
     try:
-        ok9, d9 = check_ch_corpus_parity(repo, dist_ch, own)
+        ok9, d9 = check_ch_corpus_parity(repo, dist_ch, own, suppressed)
     except Exception as exc:  # noqa: BLE001 — corpus 壞掉直接判 FAIL
         ok9, d9 = False, [f"corpus 無法載入（{exc}）"]
     try:
@@ -1374,15 +1526,15 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
     except Exception as exc:  # noqa: BLE001
         ok10, d10 = False, [f"worklist 無法載入（{exc}）"]
     try:
-        ok11, d11, w11 = check_review_drift(repo, dist_cn)
+        ok11, d11, w11 = check_review_drift(repo, dist_cn, suppressed)
     except Exception as exc:  # noqa: BLE001
         ok11, d11, w11 = False, [f"review_state 無法載入（{exc}）"], []
     try:
-        ok12, d12, w12 = check_vanilla_collision(repo, dist_cn)
+        ok12, d12, w12 = check_vanilla_collision(repo, dist_cn, dist_ch)
     except Exception as exc:  # noqa: BLE001 — 清單檔缺失/壞損直接判 FAIL（gate 資料是受版控真相）
         ok12, d12, w12 = False, [f"vanilla_keys.json 無法載入（{exc}）"], []
     try:
-        ok13, d13, w13 = check_loadable_files(repo, dist_ch)
+        ok13, d13, w13 = check_loadable_files(repo, dist_ch, suppressed)
     except Exception as exc:  # noqa: BLE001
         ok13, d13, w13 = False, [f"檔名可載入性檢查失敗（{exc}）"], []
     try:

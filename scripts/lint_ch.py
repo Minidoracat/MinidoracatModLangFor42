@@ -42,6 +42,7 @@ OWN_JSON = PROJECT_ROOT / "sources" / "own_translations.json"
 FIXES_JSON = PROJECT_ROOT / "sources" / "opencc_fixes.json"
 TERM_JSON = PROJECT_ROOT / "sources" / "terminology.json"
 REVIEW_STATE_JSON = PROJECT_ROOT / "sources" / "ch_review_state.json"
+VANILLA_KEYS_JSON = PROJECT_ROOT / "sources" / "vanilla_keys.json"
 DIST_CN_DIR = (
     PROJECT_ROOT / "MOD" / "MinidoracatModLangFor42" / "Contents" / "mods"
     / "MinidoracatModLangFor42" / "42" / "media" / "lua" / "shared" / "Translate" / "CN"
@@ -99,6 +100,26 @@ def load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
+def _load_suppressed() -> dict[str, set[str]]:
+    """出貨抑制的 {檔名: {鍵}}＝vanilla 檔域基準扣掉 keep 登記。
+
+    fail-loud：基準缺失/壞損時擲例外——靜默回空集合會讓抑制鍵重新進掃描域，
+    [C] 立刻炸出一批假的「待裁決」（正是 2026-08-10 這次踩到的）。
+    """
+    data = load_json(VANILLA_KEYS_JSON)
+    scoped = data.get("scoped_keys")
+    if not isinstance(scoped, dict) or not scoped:
+        raise ValueError("vanilla_keys.json scoped_keys 缺失或非物件")
+    keep = data.get("keep", {})
+    if not isinstance(keep, dict):
+        raise ValueError("vanilla_keys.json keep 非物件")
+    return {
+        fname: {k for k in keys if f"{fname}|{k}" not in keep}
+        for fname, keys in scoped.items()
+        if isinstance(keys, list)
+    }
+
+
 def scan(corpus: dict[str, dict], hit) -> list[tuple[str, str, str]]:
     """回傳 [(檔名, 鍵, 值)] 命中清單；hit 為 value → bool。"""
     return [
@@ -137,6 +158,19 @@ def main() -> int:
             return 1
 
     corpus = {p.name: load_json(p) for p in sorted(CH_DIR.glob("*.json"))}
+    # vanilla 出貨抑制鍵排除：corpus 仍保有它們（真相層不因出貨政策而刪），但它們
+    # **永遠不會出貨**，譯文用字對玩家零影響，掃了只會製造無法收斂的噪音。
+    # 更直接的理由：[C] 的 adjudicated() 以 dist CN 值查 ch_review_state 台帳，
+    # 抑制鍵不在 dist ⇒ 已裁決鍵一律查不到 ⇒ 全部退回「待裁決」而炸掉棘輪。
+    # 若日後把某鍵登記進 keep 而恢復出貨，它會自動重新納入掃描。
+    n_suppressed = 0
+    for fname, keys in _load_suppressed().items():
+        fmap = corpus.get(fname)
+        if not fmap:
+            continue
+        for key in keys & set(fmap):
+            del fmap[key]
+            n_suppressed += 1
     n_keys = sum(len(m) for m in corpus.values())
 
     # own_translations 的 ch 欄同為 CH 真相層，併入同一輪掃描。命名空間互斥
