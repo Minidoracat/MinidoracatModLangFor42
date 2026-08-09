@@ -120,6 +120,32 @@ _POSITIONAL_RE = re.compile(
 )
 
 
+# 反向正規化：上游把「已經安全」的 token 又逸出一次的形態。
+# 2026-08-10 As1 42.20 同步實證：上游對 64,541 鍵做了 % 逸出，其中 1,397 鍵逸出過頭
+# （`%1`→`%%1`、`%s`→`%%s`、`%.2f`→`%%.2f`），另有 89 鍵是全域 `%`→`%%` 導致合法的
+# 字面 `%%` 變成 `%%%%`。照單全收會讓佔位符變成字面文字——玩家看到「攻擊速度: %1」。
+# 安全性實證（同步當下）：我方 145,595 個正確值中，`%%` 緊接安全 token 起始者 0 筆、
+# 含 `%%%%` 者 0 筆，故這兩條反向規則在本語料上不會誤傷合法的字面百分號。
+_OVER_ESCAPED = re.compile(r"%%(?=(?:[1-9]|s|d|\.\d+f|\+\.\d+f))")
+
+
+def normalize_over_escape(value: str) -> str:
+    """把上游過度逸出的 token 還原成安全形式（機械、冪等）。
+
+    只作用於 As1 canonical import，於合併後、registry 套用前執行——registry 值是
+    人工直寫真相，不套本轉換。與 sanitize_format_tokens 的關係：**先還原再逸出**
+    （`normalize` 處理「逸出過頭」，`sanitize` 處理「該逸出而沒逸出」）。
+    """
+    if not isinstance(value, str) or "%%" not in value:
+        return value
+    for _ in range(8):  # 收斂到定點；巢狀逸出（%%%%%%%%）需多輪
+        nxt = _OVER_ESCAPED.sub("%", value).replace("%%%%", "%%")
+        if nxt == value:
+            break
+        value = nxt
+    return value
+
+
 def sanitize_format_tokens(value: str) -> str:
     """42.20.1 Translator.formatted() 安全化（冪等）。
 
@@ -944,6 +970,17 @@ def cmd_build() -> int:
         return 1
 
     merged_cn, conflicts = merge_cn(dirs)
+    # 上游過度逸出還原：緊接合併之後、registry 與 anchor 快照之前——registry 值是人工
+    # 直寫真相不套本轉換，而 as1_value 錨點對還原後的值比對（還原對 42.19 期值為 no-op，
+    # 既有錨點不受影響），避免上游只是改了逸出就讓整批 override 誤報過時。
+    n_unescaped = 0
+    for fmap in merged_cn.values():
+        for key, val in fmap.items():
+            if isinstance(val, str) and (fixed := normalize_over_escape(val)) != val:
+                fmap[key] = fixed
+                n_unescaped += 1
+    if n_unescaped:
+        print(f"  上游過度逸出還原：{n_unescaped} 鍵（`%%1`→`%1` 等，避免佔位符變字面文字）")
     total_files = len(merged_cn)
     total_keys = sum(len(m) for m in merged_cn.values())
     if total_keys == 0:

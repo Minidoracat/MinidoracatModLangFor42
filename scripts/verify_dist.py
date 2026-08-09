@@ -79,6 +79,8 @@ _GRAMMAR = re.compile(rf"(?:%[1-9]|%[sd]|{_PREC})%%|%%|{_PREC}|%[1-9]|%[sd]")
 # 殘留者即歧義值（%1$s$A）或超出 PZ %1-%9 的 index（%10$s）——兩者 formatFixer
 # 都處理不了，顯示必然損壞，一律 fail-loud 交人工裁決。
 _POSITIONAL_AT = re.compile(r"%[0-9]+\$")
+# 「`%%` 後面接的是一個已經安全的 token」＝上游逸出過頭的簽名（見 as1_expectation）
+_OVER_ESCAPE_TAIL = re.compile(r"(?:[1-9]|s|d|\.\d+f|\+\.\d+f)")
 
 
 def has_positional_residue(value: str) -> bool:
@@ -115,6 +117,39 @@ _SANITIZE_TOKEN = re.compile(rf"{_PREC}|%[1-9]|%[sd]")
 _POSITIONAL = re.compile(
     r"%([1-9])\$[-#+ 0,(]{0,8}[0-9]*(?:\.[0-9]+)?(?:[tT][a-zA-Z]|[a-zA-Z])"
 )
+
+
+def as1_expectation(value: object) -> object:
+    """As1 原值 → build 應出貨形式：**先還原上游過度逸出，再套 sanitize**。
+
+    只用於 As1 原值比對。registry 值（cn_safe_value / cn_overrides value）是人工
+    直寫真相，不套還原——那層必須直寫正確形式，錯了就要 fail-loud。
+
+    獨立實作（不 import builder）：上游把已安全的 `%1`/`%s`/`%.2f` 又逸出一次，
+    照收會讓佔位符變字面文字；全域 `%`→`%%` 另使合法字面 `%%` 變成 `%%%%`。
+    """
+    if not isinstance(value, str) or "%%" not in value:
+        return sanitize_expectation(value)
+    prev = None
+    cur = value
+    guard = 0
+    while cur != prev and guard < 8:
+        prev, guard = cur, guard + 1
+        buf: list[str] = []
+        i = 0
+        while i < len(cur):
+            if cur.startswith("%%%%", i):
+                buf.append("%%")
+                i += 4
+                continue
+            if cur.startswith("%%", i) and _OVER_ESCAPE_TAIL.match(cur, i + 2):
+                buf.append("%")
+                i += 2
+                continue
+            buf.append(cur[i])
+            i += 1
+        cur = "".join(buf)
+    return sanitize_expectation(cur)
 
 
 def sanitize_expectation(value: object) -> object:
@@ -609,11 +644,11 @@ def check_cn_parity(
                         f"dist={d[key]!r} 應為 sanitize(value)="
                         f"{sanitize_expectation(cov['value'])!r}"
                     )
-            elif key in a and sanitize_expectation(a[key]) != d[key]:
+            elif key in a and as1_expectation(a[key]) != d[key]:
                 # `key in a` 守門：As1 缺席時 a 為空，此比對無從進行（其餘核對照跑）
                 details.append(
-                    f"{fname}: 鍵 {key!r} 值不符 | sanitize(As1)="
-                    f"{sanitize_expectation(a[key])!r} dist={d[key]!r}"
+                    f"{fname}: 鍵 {key!r} 值不符 | 期望(As1 還原+sanitize)="
+                    f"{as1_expectation(a[key])!r} dist={d[key]!r}"
                 )
 
     # 登記但未命中任何 dist(檔,鍵) 的例外 → WARN（多半是打錯 key 名）。
@@ -625,9 +660,10 @@ def check_cn_parity(
     ):
         for rkey in sorted(set(reg) - hit):
             if rkey in suppressed:
-                # 登記本身沒壞（仍作用於合併結果），但該鍵已不出貨＝這筆修正對玩家無效果。
-                # 靜默略過會讓死登記永遠留在檔裡，故照樣出聲、只是換個訊息。
-                warn.append(f"{label} {rkey!r} 命中出貨抑制鍵（本體同名，已無出貨效果，建議退役）")
+                # 登記仍有作用：placeholder / CH 值層等 gate 跑在出貨抑制之前，對完整合併
+                # 結果把關，退役這類登記會讓真相層失去校驗（實測會直接炸 placeholder gate）。
+                # 故只提示「不出貨」，**不要建議退役**。
+                warn.append(f"{label} {rkey!r} 命中出貨抑制鍵（本體同名，僅作用於 gate 前的合併結果，不出貨）")
             else:
                 warn.append(f"{label} {rkey!r} 未對應任何 dist CN(檔,鍵)，登記可能過期或打錯")
 
