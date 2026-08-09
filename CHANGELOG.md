@@ -4,7 +4,7 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
-## [Unreleased]
+## [42.20.2-1.11.0] - 2026-08-10
 
 ### Fixed
 
@@ -25,6 +25,26 @@
 
 - 退役 `own_translations.json` 的 `IG_UI.json|IGUI_SearchMode_Categories_WildHerbs`（en/ch/cn 與官方逐字相同，抑制後永遠不會落地）及其 `allowlist` 豁免登記。
 - `sources/vanilla_overlap_triage.json` 降為歷史紀錄：出貨抑制後，值層裁決不再決定「要不要出貨」。（該台帳本身也已被證實有誤——`Base.x4Scope` 的裁決是靠 hash 反推「Firearms 改名為 LVPO 系」，取得上游 EN 實文後確認實際是 `ACOG 4x32`。）
+
+### Changed（As1 快照重釘 42.20）
+
+- **`verify_dist [8] As1 來源漂移` 恢復可驗證**，連續兩次發布的盲區關閉。快照 `source_tree` 自 `42.19` 改為 `42.20`——Steam 於 2026-08-05 直接以 `42.20/` 覆蓋 `42.19/` 且 Workshop 不提供舊版下載，被釘的樹永久消失。上游 `42/` 與 `42.20/` 內容逐位元組相同、`version.txt` 同為 v3.11.0；釘 `42.20` 是因 PZ B42 只載入「≤ 遊戲版本的唯一最佳版本資料夾」。
+- **同步差異：新增 1、值變更 2,010、移除 5,264，實質文字變更 0。** 2,010 筆值變更全是 `%` 逸出差異——613 筆與我方 sanitize 後等價，1,203 筆把已安全的 `%1`/`%s`/`%.2f` 又逸出一次，194 筆全域 `%`→`%%` 連合法字面 `%%` 都變成 `%%%%`。後兩類照收會讓佔位符變成字面文字（玩家看到「攻擊速度: %1」）。
+- **改以機械反向正規化處理，而非 1,397 筆逐鍵登記**：新增 `build_mod.normalize_over_escape()`（`%%`+安全 token → `%`、`%%%%` → `%%`，迭代至定點），於合併後、registry 與錨點快照之前執行；`verify_dist.as1_expectation()` 為獨立實作。兩份實作對 As1 42.20 全量 64,541 值零分歧且冪等，還原後與現行出貨值對 2,010 筆變更全數逐字相同。安全性實證：我方 145,595 個正確值中 `%%` 緊接安全 token 起始者 0 筆、含 `%%%%` 者 0 筆。
+- **上游移除的 5,264 鍵依「是否還在用」分流，支援清單零流失（維持 481 個 MOD）**：
+  - 2,102 鍵屬 8 個被 As1 整包放棄的模組（Burd's Survival Journals 961、Printer3D 628、Hanksie's Musical Wonders 428、Fred's NVG、Forged by Combat、Military Ponchos 等）→ 改列 own lane 的 `sources/mods/<wid>/`（`origin:"own"`）。放這裡而非 `own_translations.json`，是為了保住 `SUPPORTED_MODS.md` 列名與 `gen-watchlist` 上游監看——只放後者會讓這 8 個模組從兩份清單同時消失。
+  - 783 鍵為零星移除 → `own_translations.json`。
+  - 2,375 鍵上游查無同名鍵（2,357 屬 `_unsorted`）→ 跟著刪，As1 是在清理作廢鍵。
+  - 4 鍵值為 `'  '`（As1 的空白佔位）→ 不再出貨；玩家因此看到英文原文而非一片空白。
+- 新增的 1 鍵為上游畸形資料（整行英文被當成鍵名），忠實鏡像進 corpus。
+- 登記同步：`ch_review_state` 清 278 條陳舊條目、`as1_overlap_known` 重算為 325 條、`cn_overrides`／`placeholder_exceptions` 共 16 筆 `as1_value` 錨點重錨。`lint_ch` 改為排除出貨抑制鍵——其 [C] 以 dist CN 值查已審台帳，抑制鍵查不到會讓已裁決鍵全數退回待裁決而炸掉棘輪。
+
+### Notes
+
+- **本次為近期首次 `verify_dist` 13 項全 PASS、退出碼 0**（不帶 `--allow-missing-as1`）。build 冪等雙跑零 diff（181 檔）、`verify_mod` 10 PASS、`lint_ch` 棘輪 [A][B][C][E][F] 全 0、`--cn-diff v42.20.2-1.10.0` 待複核 0、6 支測試全過。
+- **出貨鍵數 98,276 → 95,576（−2,700）**：vanilla 出貨抑制 321、上游作廢鍵清理 2,375、撞 vanilla 的 own 鍵 4。
+- **有效覆蓋率 70,075 / 70,883（98.9%）**。824 個缺口中 **820 個在本次之前即存在**——1.10.0 宣告的 100% 是對當時快照而言，之後上游各模組新增了字串（最大宗：`3414697768` 502 鍵）。本次同步未造成覆蓋率回歸，該缺口列為下一輪補譯目標。
+- **`lint_ch [D]` 提示 terminology vendor 與本體不同步**（本體 repo 已更新術語表）。不在棘輪內、不阻斷；重新 vendor 可能帶進新術語而觸發新的 [C] 待裁決，列為獨立工作包。
 
 ## [42.20.2-1.10.0] - 2026-08-08
 
