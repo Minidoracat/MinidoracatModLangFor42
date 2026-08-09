@@ -170,7 +170,7 @@
 
 ### Notes
 
-- 玩家回報以正式服 `pzserver.ini` 的 `WorkshopItems` 為查證基準（本地訂閱清單含大量未上服 mod），相關 runbook 已補入 AGENTS.md。
+- 玩家回報以正式服伺服器設定檔的 `WorkshopItems` 為查證基準（本地訂閱清單含大量未上服 mod），相關 runbook 已補入 AGENTS.md。
 - 回報中的鑰匙圈英文（`IGUI_KeyRingName`）為遊戲本體鍵，受 vanilla 覆寫鐵律限制不由本包處理，已於本體翻譯包解決。
 - gate 全綠：build 冪等雙跑零 diff、verify_dist 11/11 PASS、lint_ch 0/0/0、cn-diff 對 v42.19.0-1.6.0 待複核 0。
 - Claude 與 codex 雙邊 review-plus 獨立審查；codex 四輪複核後 APPROVE（期間修正 provenance lane 分流 1 處、metadata 事實記載 5 處）。
