@@ -979,5 +979,110 @@
     "as1_value": "你需要 <br> 电工技能 1 级和 <br> 技工技能 2 级 <br> 才能解除短接",
     "reason": "As1 上游數值錯誤：上游 EN 為 Electrical 6 / Mechanics 8 / Metalworking 4，CN 誤植為 1/2 且整條金屬加工需求漏譯。玩家依此判斷會誤以為低技能即可解除短接。",
     "value": "你需要 <br> 电工技能 6 级和 <br> 技工技能 8 级和 <br> 金属加工技能 4 级 <br> 才能解除短接"
+  },
+  "Tooltip.json|Tooltip_SWSP_GunAccuracy": {
+    "as1_value": "精度: %1%% (+%2)%%",
+    "reason": "上游把百分號逸出移進括號內（Accuracy: %1%% (+%2%%)）",
+    "value": "精度: %1%% (+%2%%)"
+  },
+  "UI.json|UI_MLOS_SaveToFile_Tooltip": {
+    "as1_value": "保存到文件 <LINE><RGB:0.8,0.8,0.8> 模组列表和创意工坊 ID 列表将会保存到'Lua'文件夹的'%s'文件中",
+    "reason": "上游現行 Lua 已改用 getText 帶參數（%1），As1 值停在 Lua fallback 的 printf 佔位，PZ Translator 不認得會顯示字面；已對 MLOS_ModSelector_overrides.lua:128 getText(key, modsInfoFileName) 證實",
+    "value": "保存到文件 <LINE><RGB:0.8,0.8,0.8> 模组列表和创意工坊 ID 列表将会保存到'Lua'文件夹的'%1'文件中"
+  },
+  "Tooltip.json|Tooltip_Not_enough_drink": {
+    "as1_value": "饮料不足",
+    "reason": "上游改文，As1 譯文已過時：Not enough drink → Not enough liquid",
+    "value": "液体不足"
+  },
+  "Sandbox.json|Sandbox_VanillaBoxDropRate_tooltip": {
+    "as1_value": "掉落率倍率",
+    "reason": "上游改文，As1 譯文已過時；且 As1 原譯『掉落率倍率』本就是標題級文字、與該 tooltip 不符",
+    "value": "每只僵尸针对 9 种整盒弹药各自的掉落几率 (百分比).\n多数僵尸会对 9 种各掷两次: 一次来自服装、\n一次来自默认池, 合计 18 次.\n默认值 0.5 约每 12 具尸体掉一盒, 其余尸体约每 23 具一盒.\n一盒含 20 至 50 发, 因此数值稍高影响就很大.\n设为 0 即关闭掉落."
+  },
+  "Sandbox.json|Sandbox_VanillaCartonDropRate_tooltip": {
+    "as1_value": "掉落率倍率",
+    "reason": "上游改文，As1 譯文已過時；同上，As1 原譯與該 tooltip 不符",
+    "value": "每只僵尸针对 9 种整箱弹药各自的掉落几率 (百分比).\n多数僵尸会对 9 种各掷两次: 一次来自服装、\n一次来自默认池, 合计 18 次.\n默认值 0.05 约每 110 具尸体掉一箱, 其余尸体约每 220 具一箱.\n一箱等于 12 盒, 因此即使数值 1 也会让它变得常见.\n设为 0 即关闭掉落."
+  },
+  "Sandbox.json|Sandbox_GydeTraitMags_NegToPos_tooltip": {
+    "as1_value": "如果角色初始拥有某个负面特质, 则允许获得其对应的正面特质 (例如: 周日司机 → 速度狂).",
+    "reason": "上游改文，As1 譯文已過時：特質描述全面改寫（B42 本體 Axe Man→Ax-pert）",
+    "value": "如果角色初始拥有某个负面特质, 则允许获得其对应的正面特质 (例如: 周日司机 → 速度狂).\n\n若启用本项并关闭“一次性杂志”, 阅读杂志当下即会给予该正面特质."
+  },
+  "Sandbox.json|Sandbox_GydeTraitMags_SpawnAxeMan": {
+    "as1_value": "生成特质杂志-伐木工人",
+    "reason": "上游改文，As1 譯文已過時：特質描述全面改寫（B42 本體 Axe Man→Ax-pert）",
+    "value": "生成特质杂志-伐木工"
+  },
+  "Sandbox.json|Sandbox_GydeTraitMags_SpawnAxeMan_tooltip": {
+    "as1_value": "禁用后, 游戏中将不再生成特质杂志-伐木工人.\n\n特质描述:\n挥斧速度提高25%% (战斗和砍树).",
+    "reason": "上游改文，As1 譯文已過時：特質描述全面改寫（B42 本體 Axe Man→Ax-pert）",
+    "value": "禁用后, 游戏中将不再生成特质杂志-伐木工.\n\n特质描述:\n- 挥斧与砍伐速度 +25%%.\n- 使用斧头时额外砍伐伤害 +50%%."
+  },
+  "Sandbox.json|Sandbox_GydeTraitMags_SpawnBurglar_tooltip": {
+    "as1_value": "禁用后, 游戏中将不再生成特质杂志-窃贼. \n\n特质描述:\n可以短接车辆, 并且在强行打开窗户时破坏锁的几率较小.",
+    "reason": "上游改文，As1 譯文已過時：特質描述全面改寫（B42 本體 Axe Man→Ax-pert）",
+    "value": "禁用后, 游戏中将不再生成特质杂志-窃贼.\n\n特质描述:\n- 可以短接车辆\n- 破坏窗锁的几率降低 50%%.\n- 提升攀爬床单绳的速度"
+  },
+  "Sandbox.json|Sandbox_GydeTraitMags_SpawnDextrous_tooltip": {
+    "as1_value": "禁用后, 游戏中将不再生成特质杂志-眼疾手快.\n\n特质描述:\n50%%的库存转移时间.",
+    "reason": "上游改文，As1 譯文已過時：特質描述全面改寫（B42 本體 Axe Man→Ax-pert）",
+    "value": "禁用后, 游戏中将不再生成特质杂志-眼疾手快.\n\n特质描述:\n库存转移时间为 50%%.\n- 成功排除枪械卡壳的几率 +2%%.\n- 瞄准延迟 -20%%: 更快进入瞄准/举枪姿势."
+  },
+  "Sandbox.json|Sandbox_GydeTraitMags_SpawnFastLearner_tooltip": {
+    "as1_value": "禁用后, 游戏中将不再生成特质杂志-学习神速.\n\n特质描述:\n除了力量和体格技能外, 所有技能的XP提高130%%.",
+    "reason": "上游改文，As1 譯文已過時：特質描述全面改寫（B42 本體 Axe Man→Ax-pert）",
+    "value": "禁用后, 游戏中将不再生成特质杂志-学习神速.\n\n特质描述:\n除了力量和体格技能外, 所有技能的经验值获取为 130%%."
+  },
+  "Sandbox.json|Sandbox_GydeTraitMags_SpawnGraceful_tooltip": {
+    "as1_value": "禁用后, 游戏中将不再生成特质杂志-身轻如燕.\n\n特质描述:\n60%%的脚步声半径.\n90%%的几率在跑步/冲刺翻越低矮围栏或猛冲僵尸时摔倒.",
+    "reason": "上游改文，As1 譯文已過時：特質描述全面改寫（B42 本體 Axe Man→Ax-pert）",
+    "value": "禁用后, 游戏中将不再生成特质杂志-身轻如燕.\n\n特质描述:\n- 脚步声半径 60%%.\n- 翻越时绊倒几率 -10%%."
+  },
+  "Sandbox.json|Sandbox_GydeTraitMags_SpawnHandy_tooltip": {
+    "as1_value": "禁用后, 游戏中将不再生成特质杂志-巧手良工.\n\n特质描述:\n所有建筑的生命值增加100HP. \\n提高建筑速度 (约11%%).",
+    "reason": "上游改文，As1 譯文已過時：特質描述全面改寫（B42 本體 Axe Man→Ax-pert）",
+    "value": "禁用后, 游戏中将不再生成特质杂志-巧手良工.\n\n特质描述:\n- 部分建筑的生命值 +100 HP.\n- 建造速度更快 (约 11%%)."
+  },
+  "Sandbox.json|Sandbox_GydeTraitMags_SpawnInconspicuous_tooltip": {
+    "as1_value": "禁用后, 游戏中将不再生成特质杂志-毫不起眼.\n\n特质描述:\n50%%的几率被僵尸发现.",
+    "reason": "上游改文，As1 譯文已過時：特質描述全面改寫（B42 本體 Axe Man→Ax-pert）",
+    "value": "禁用后, 游戏中将不再生成特质杂志-毫不起眼.\n\n特质描述:\n- 被僵尸发现的几率为 50%%."
+  },
+  "Sandbox.json|Sandbox_GydeTraitMags_SpawnKeenHearing_tooltip": {
+    "as1_value": "禁用后, 游戏中将不再生成特质杂志-听觉灵敏.\n\n特质描述:\n200%%的感知半径. 更早的发现背后的僵尸.",
+    "reason": "上游改文，As1 譯文已過時：特質描述全面改寫（B42 本體 Axe Man→Ax-pert）",
+    "value": "禁用后, 游戏中将不再生成特质杂志-听觉灵敏.\n\n特质描述:\n- 感知半径 200%%.\n- 更早察觉从背后接近的僵尸."
+  },
+  "Sandbox.json|Sandbox_GydeTraitMags_SpawnNutritionist_tooltip": {
+    "as1_value": "禁用后, 游戏中将不再生成特质杂志-营养学家.\n\n特质描述:\n允许玩家查看任何食物的营养值, 即便是没有包装的食物.",
+    "reason": "上游改文，As1 譯文已過時：特質描述全面改寫（B42 本體 Axe Man→Ax-pert）",
+    "value": "禁用后, 游戏中将不再生成特质杂志-营养学家.\n\n特质描述:\n- 允许玩家查看任何食物的营养值, 即便是没有包装的食物."
+  },
+  "Sandbox.json|Sandbox_GydeTraitMags_SpawnOrganized_tooltip": {
+    "as1_value": "禁用后, 游戏中将不再生成特质杂志-井井有条.\n\n特质描述:\n所有容器的容量提高130%%, 包括箱子, 橱柜和汽车.",
+    "reason": "上游改文，As1 譯文已過時：特質描述全面改寫（B42 本體 Axe Man→Ax-pert）",
+    "value": "禁用后, 游戏中将不再生成特质杂志-井井有条.\n\n特质描述:\n- 所有容器的容量为 130%%, 包括背包, 载具与地面容器."
+  },
+  "Sandbox.json|Sandbox_GydeTraitMags_SpawnOutdoorsman_tooltip": {
+    "as1_value": "禁用后, 游戏中将不再生成特质杂志-户外专家 . \\n\\n特质描述: \\n感冒的几率为10%%. 在步行或跑步穿过树木时, 被刮伤或割伤的几率为1%%或1.25%%. 在篝火上使用刻痕木板更快地点火.",
+    "reason": "上游改文，As1 譯文已過時：特質描述全面改寫（B42 本體 Axe Man→Ax-pert）",
+    "value": "禁用后, 游戏中将不再生成特质杂志-户外专家.\n\n特质描述:\n- 感冒的几率为 10%%.\n- 步行或跑步穿过树木时, 被刮伤或撕裂伤的几率为 1%% 或 1.25%%.\n- 使用刻痕木板在篝火上点火更快."
+  },
+  "Sandbox.json|Sandbox_GydeTraitMags_SpawnSpeedDemon_tooltip": {
+    "as1_value": "禁用后, 游戏中将不再生成特质杂志-超速狂魔.\n\n特质描述:\n档位切换速度提高200%%, 所有载具的最高速度提高115%%.",
+    "reason": "上游改文，As1 譯文已過時：特質描述全面改寫（B42 本體 Axe Man→Ax-pert）",
+    "value": "禁用后, 游戏中将不再生成特质杂志-超速狂魔.\n\n特质描述:\n- 档位切换速度 200%%\n- 所有载具的最高速度 115%%."
+  },
+  "Sandbox.json|Sandbox_VanillaDropRate": {
+    "as1_value": "绞肉机掉落概率",
+    "reason": "跨 mod 共用鍵（attribution: 3389050623 AmmoLootDrop + 3665548194 Legion Weaponry，後者語意是絞肉機）——As1 值偏向 Legion 一方，只裝 AmmoLootDrop 的玩家會看到不相干文案；改用兩邊皆成立的中性文案，要各自精確須走 isModActive Lua 覆寫或獨立子包",
+    "value": "物品掉落率"
+  },
+  "Sandbox.json|Sandbox_VanillaDropRate_tooltip": {
+    "as1_value": "僵尸有多少可能掉落绞肉机？",
+    "reason": "跨 mod 共用鍵（attribution: 3389050623 AmmoLootDrop + 3665548194 Legion Weaponry，後者語意是絞肉機）——As1 值偏向 Legion 一方，只裝 AmmoLootDrop 的玩家會看到不相干文案；改用兩邊皆成立的中性文案，要各自精確須走 isModActive Lua 覆寫或獨立子包",
+    "value": "控制僵尸掉落该物品的概率."
   }
 }
