@@ -191,4 +191,25 @@ with tempfile.TemporaryDirectory() as td:
         {"UI.json": {"c": "好 5%%"}}, {}, []
     ), "全安全值不得誤報"
 
-print("PASS: format tokens 7/7 案例通過")
+# 8. restore_over_escape：錨點漂移比對只還原、不 sanitize
+#    2026-08-10 實案：42.20 的 As1 把 `%s`/`%1` 全逸出成 `%%s`/`%%1`，verify [1] 的
+#    `as1_value` 錨點比對直接拿 As1 原始值比，讓 6 條帶佔位符的登記全數假報「上游原值
+#    已變，請複核是否退役」。build 端不受影響是因為它的錨點快照取在 normalize 之後。
+#    照假警報退役 override＝把上游的過度逸出當成正確值收下，佔位符會變字面文字。
+R = verify_dist.restore_over_escape
+assert R("可以以 %%s 等级 %%d 操作!") == "可以以 %s 等级 %d 操作!", "安全 token 還原失敗"
+assert R("所需肥皂:%%1") == "所需肥皂:%1", "%%1 還原失敗"
+assert R("精度: %%1%% (+%%2)%%") == "精度: %1%% (+%2)%%", "混合逸出還原失敗"
+assert R("暴露=%%.1f 时间=%%.2fh") == "暴露=%.1f 时间=%.2fh", "精度 token 還原失敗"
+assert R("%%%%") == "%%", "全域 %→%% 使合法字面 %% 變 %%%% 的還原失敗"
+# **只還原不 sanitize**：as1_value 記的是 As1 原值不是應出貨值，多套 sanitize 會讓
+# 裸 % 被逸出而再次假報漂移
+assert R("50%的机率") == "50%的机率", "restore 不得順手 sanitize 裸 %"
+assert R("沒有百分號") == "沒有百分號" and R("") == "", "無 %% 者原樣返還"
+assert R(R("可以以 %%s 操作")) == R("可以以 %%s 操作"), "還原須冪等"
+# as1_expectation 仍是「還原後再 sanitize」——抽出 restore 不得改變其語意
+assert verify_dist.as1_expectation("50%的机率") == "50%%的机率", "as1_expectation 語意被改壞"
+assert verify_dist.as1_expectation("所需肥皂:%%1") == "所需肥皂:%1", "as1_expectation 語意被改壞"
+assert verify_dist.as1_expectation(None) is None, "非字串原樣返還"
+
+print("PASS: format tokens 8/8 案例通過")

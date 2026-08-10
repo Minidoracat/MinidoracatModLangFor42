@@ -122,17 +122,17 @@ _POSITIONAL = re.compile(
 )
 
 
-def as1_expectation(value: object) -> object:
-    """As1 原值 → build 應出貨形式：**先還原上游過度逸出，再套 sanitize**。
-
-    只用於 As1 原值比對。registry 值（cn_safe_value / cn_overrides value）是人工
-    直寫真相，不套還原——那層必須直寫正確形式，錯了就要 fail-loud。
+def restore_over_escape(value: str) -> str:
+    """只做「還原上游過度逸出」：`%%`+安全 token → `%`、`%%%%` → `%%`，迭代至定點。
 
     獨立實作（不 import builder）：上游把已安全的 `%1`/`%s`/`%.2f` 又逸出一次，
     照收會讓佔位符變字面文字；全域 `%`→`%%` 另使合法字面 `%%` 變成 `%%%%`。
+
+    與 `as1_expectation` 分開是因為 **`as1_value` 錨點記的是 As1 原值、不是應出貨值**，
+    比對錨點時只能還原、不可再套 sanitize。
     """
-    if not isinstance(value, str) or "%%" not in value:
-        return sanitize_expectation(value)
+    if "%%" not in value:
+        return value
     prev = None
     cur = value
     guard = 0
@@ -152,7 +152,18 @@ def as1_expectation(value: object) -> object:
             buf.append(cur[i])
             i += 1
         cur = "".join(buf)
-    return sanitize_expectation(cur)
+    return cur
+
+
+def as1_expectation(value: object) -> object:
+    """As1 原值 → build 應出貨形式：**先還原上游過度逸出，再套 sanitize**。
+
+    只用於 As1 原值比對。registry 值（cn_safe_value / cn_overrides value）是人工
+    直寫真相，不套還原——那層必須直寫正確形式，錯了就要 fail-loud。
+    """
+    if not isinstance(value, str):
+        return sanitize_expectation(value)
+    return sanitize_expectation(restore_over_escape(value))
 
 
 def sanitize_expectation(value: object) -> object:
@@ -679,7 +690,11 @@ def check_cn_parity(
                 continue
             rf, _, rk = rkey.partition("|")
             cur = as1_files.get(rf, {}).get(rk)
-            if isinstance(cur, str) and cur != anchor:
+            # 比對前先還原上游過度逸出：42.20 的 As1 把 `%s`/`%1` 全逸出成 `%%s`/`%%1`，
+            # 拿原始值比對會讓每一條帶佔位符的登記都假報漂移（實測 6 條全是這樣）。
+            # build 端不受影響是因為它的錨點快照取在 normalize_over_escape **之後**；
+            # 這裡直接讀 As1 檔，必須自己還原才能與 build 同語意。
+            if isinstance(cur, str) and restore_over_escape(cur) != anchor:
                 warn.append(f"{reg_label} 錨點漂移：{rkey!r} 上游原值已變，請複核是否退役")
 
     # 原創層完整性：登記的鍵必須落地；被 As1 收錄者提示退役（build 端 As1 優先）
