@@ -545,14 +545,22 @@ def _load_vanilla_basis(repo: str) -> tuple[dict[str, set[str]], dict[str, dict]
 
 
 def suppressed_pairs(repo: str) -> set[str]:
-    """出貨抑制的 (檔|鍵)：vanilla 檔域鍵扣掉 keep 登記。
+    """出貨抑制的 (檔|鍵)：vanilla 檔域鍵扣掉 keep 登記，再加上 unshipped_keys 登記。
 
     dist 面向的期望（[1] 缺鍵、[9] corpus 落地、[11] 已審鍵在位）一律扣除本集合——
     真相層仍保有這些鍵（As1 CN 是 canonical import、corpus 是人工真相），
     抑制只發生在出貨那一步。
+
+    `unshipped_keys.json` 是第二個來源：鍵落在 PZ 不載入的檔名、且找不到正確落點者
+    （見該檔 `_rule`）。兩者語意相同，故共用同一個扣除集合。
     """
     scoped, keep = _load_vanilla_basis(repo)
-    return {f"{f}|{k}" for f, ks in scoped.items() for k in ks} - set(keep)
+    pairs = {f"{f}|{k}" for f, ks in scoped.items() for k in ks} - set(keep)
+    path = os.path.join(repo, "sources", "unshipped_keys.json")
+    if os.path.isfile(path):
+        with open(path, encoding="utf-8-sig") as f:
+            pairs |= set(json.load(f).get("entries", {}))
+    return pairs
 
 
 def check_cn_parity(

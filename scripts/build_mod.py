@@ -48,6 +48,7 @@ CN_OVERRIDES_JSON = SOURCES / "cn_overrides.json"
 PLACEHOLDER_EXCEPTIONS_JSON = SOURCES / "placeholder_exceptions.json"
 OWN_TRANSLATIONS_JSON = SOURCES / "own_translations.json"
 VANILLA_KEYS_JSON = SOURCES / "vanilla_keys.json"
+UNSHIPPED_KEYS_JSON = SOURCES / "unshipped_keys.json"
 
 MOD_MEDIA = (
     PROJECT_ROOT
@@ -460,6 +461,46 @@ def _vanilla_basis_problem(data: dict) -> str | None:
         # 兩欄由 extract_vanilla_keys.py 單一 writer 共同重生，不一致＝有人手改或只重生一半
         return "keys 與 scoped_keys 的聯集不一致（基準只重生了一半？）"
     return None
+
+
+def suppress_unshipped(
+    merged_cn: dict[str, dict], merged_ch: dict[str, dict]
+) -> tuple[int, list[str], list[str]]:
+    """出貨前剔除 `unshipped_keys.json` 登記的 (檔,鍵)；CN/CH 對稱以維持 [2] 鍵集鏡像。
+
+    語意同 vanilla 出貨抑制：**真相層照樣保留**（`_unsorted/CN` 是 As1 lane 鏡像，
+    刪掉會讓 layer-B 永遠報差異；`sources/ch` 也須逐鍵鏡像 CN 才過 corpus 鍵集 gate），
+    只有出貨那一步濾掉。用於「鍵落在 PZ 不載入的檔名、且找不到正確落點」者。
+
+    `as1_value` 錨點對**抑制前的合併 CN 值**比對：上游動過該鍵就是重新查 mod 的訊號
+    （見該檔 `_recheck`）。回傳 (剔除數, 錨點漂移訊息, 登記但未命中的條目)。
+    """
+    if not UNSHIPPED_KEYS_JSON.is_file():
+        return 0, [], []
+    entries = load_json(UNSHIPPED_KEYS_JSON).get("entries", {})
+    dropped = 0
+    drift: list[str] = []
+    unused: list[str] = []
+    for pair, spec in sorted(entries.items()):
+        fname, _, key = pair.partition("|")
+        cn_map = merged_cn.get(fname)
+        if cn_map is None or key not in cn_map:
+            unused.append(pair)
+            continue
+        anchor = spec.get("as1_value")
+        if isinstance(anchor, str) and cn_map[key] != anchor:
+            drift.append(
+                f"  {pair}：上游值已變（登記時 {anchor!r} → 現行 {cn_map[key]!r}），"
+                "請重查該 mod 是否已可指認（見 unshipped_keys.json 的 _recheck）"
+            )
+        cn_map.pop(key, None)
+        if merged_ch.get(fname) is not None:
+            merged_ch[fname].pop(key, None)
+        dropped += 1
+    # 清空的檔**照樣出貨成空 JSON**——[1]/[9] 是逐「檔」比對檔案集合，少一個檔就 FAIL。
+    # vanilla 抑制早就把 6 個檔（Brandenburg, KY／CisternsName／PZKMZ_* 等）清成空檔
+    # 並照常寫出，本函式沿用同一慣例。（我一度加了「空檔就不寫」，直接炸掉那 6 個檔。）
+    return dropped, drift, unused
 
 
 def load_vanilla_scoped() -> tuple[dict[str, set[str]], dict[str, dict]]:
@@ -1111,6 +1152,18 @@ def cmd_build() -> int:
         print(f"  ⚠️ keep 登記豁免 {len(kept_vanilla)} 鍵仍出貨（刻意覆寫本體）：")
         for k in kept_vanilla[:20]:
             print(f"    {k}")
+
+    # 已裁決不出貨（鍵落在 PZ 不載入的檔名、且找不到正確落點）
+    n_unshipped, unshipped_drift, unshipped_unused = suppress_unshipped(merged_cn, merged_ch)
+    if n_unshipped:
+        print(f"  已裁決不出貨：剔除 {n_unshipped} 個 (檔,鍵)（見 sources/unshipped_keys.json）")
+    if unshipped_drift:
+        print(f"  ⚠️ unshipped_keys 錨點漂移 {len(unshipped_drift)} 條——上游動過，該重查 mod：")
+        for line in unshipped_drift:
+            print(line)
+    if unshipped_unused:
+        print(f"  ⚠️ unshipped_keys 未命中 {len(unshipped_unused)} 條（鍵已不在合併結果，"
+              f"登記可退役）：{', '.join(unshipped_unused[:10])}")
 
     # gate：合併衝突 + CH 值層 + format 安全 + placeholder 崩潰簽名/token 不一致 + Lua 衝突
     # → 不寫出、非零退出

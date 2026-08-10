@@ -1,0 +1,15 @@
+{
+ "_comment": "已裁決不出貨的 (檔名|鍵)。**真相層照樣保留**——`sources/_unsorted/CN` 是 As1 lane 的忠實鏡像，刪掉會讓 tracker 的 layer-B 把它報成永久差異、每次 As1 更新都開假的『待同步』issue；`sources/ch` 也必須逐鍵鏡像 CN 才過 corpus 鍵集 gate。所以抑制只發生在出貨那一步，語意與 vanilla 出貨抑制相同。",
+ "_rule": "登記前必須查證到底：(1) 該鍵落在 PZ 不載入的檔名（見 verify_dist.TRANSLATOR_WHITELIST），且 (2) 找不到正確落點——通常是無法指認所屬 mod，故無從得知上游現行鍵名。能指認 mod 就該補正確鍵而不是登記在此（實例：BarrEx／Super Bulldozer／Last Cup Coffee 都是這樣救回來的，見 744670b、da34211）。查 mod 的方法：Workshop 搜尋端點查『內部 id』 https://steamcommunity.com/workshop/browse/?appid=108600&searchtext=<內部id> ——鍵名前綴多半是內部 id 而非顯示名，語意搜尋常常找不到。",
+ "_recheck": "**As1 每次更新後重查一次**。判準：`as1_value` 錨點漂移即代表上游動過該鍵，verify [1] 會出 WARN——那是重新查 mod 的訊號。另外每隔一段時間可重跑一次 Workshop 端點搜尋：mod 可能只是當時改名或暫時下架。查到 mod 就把鍵補到正確檔（走 own_translations，en 錨點取上游 EN 檔或 Lua 的 text(key, fallback) 第二引數），並從本檔移除。",
+ "entries": {
+  "WolfBondHygieneAttraction.json|ContextMenu_WolfBond_HygieneAttraction": {
+   "as1_value": "口腔卫生 / 魅力加分",
+   "reason": "2026-08-11 裁決不出貨：檔名 WolfBondHygieneAttraction.json 不在 PZ 的 Translator.BY_NAME 白名單，永遠不被載入；鍵應落在 ContextMenu.json，但查不到所屬 mod 故無從確認上游現行鍵名。已試：Workshop 端點搜尋 WolfBond／HygieneAttraction 皆無結果、本機 Steam 訂閱庫全掃無此 mod（只有 As1 包自己與我方發布包命中）、en_corpus_hashes 零紀錄（該 mod 從未被 attribution 歸屬，落在 _unsorted）。As1 42.20 仍保留此鍵，故非上游已刪。"
+  },
+  "WolfBondHygieneAttraction.json|Tooltip_WolfBond_Mouthwash": {
+   "as1_value": "清新口气. 每天一次, 口腔护理更到位.",
+   "reason": "同上，鍵應落在 Tooltip.json。與 ContextMenu_WolfBond_HygieneAttraction 同屬一個未指認的 mod，兩鍵一起裁決。"
+  }
+ }
+}
