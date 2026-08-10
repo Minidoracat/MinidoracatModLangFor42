@@ -1084,5 +1084,15 @@
     "as1_value": "僵尸有多少可能掉落绞肉机？",
     "reason": "跨 mod 共用鍵（attribution: 3389050623 AmmoLootDrop + 3665548194 Legion Weaponry，後者語意是絞肉機）——As1 值偏向 Legion 一方，只裝 AmmoLootDrop 的玩家會看到不相干文案；改用兩邊皆成立的中性文案，要各自精確須走 isModActive Lua 覆寫或獨立子包",
     "value": "控制僵尸掉落该物品的概率."
+  },
+  "UI.json|UI_ModLoadOrder": {
+    "as1_value": "模组加载顺序",
+    "reason": "上游 42.20 改版：EN 由 'MOD LOAD ORDER' 改為 'LOAD ORDER'，面板下方新增 地圖/模組 兩個分頁，標題不再限定模組",
+    "value": "加载顺序"
+  },
+  "UI.json|UI_ModLoadOrderTooltip": {
+    "as1_value": "调整已激活模组及其依赖项的加载顺序.",
+    "reason": "上游 42.20 改版：EN 新增 ModID 與 MapFolder 兩種載入順序，原譯已不完整",
+    "value": "调整已激活地图模组及其依赖项的 ModID 与 MapFolder 加载顺序."
   }
 }
