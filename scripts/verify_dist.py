@@ -36,6 +36,9 @@ verify_dist.py — MinidoracatModLangFor42 的獨立 dist 驗證器（oracle）�
                       上游查無同名鍵者＝作廢鍵名 → WARN
   [14] own 層 CN 用字 ：own 層 CN 不得殘留 t2s 抓不到的台灣字形（助詞「著」須寫「着」、
                       「牠」「妳」、直角引號）——只掃 own，As1 快照忠實鏡像不歸本項管
+  [15] ItemName 死鍵  ：`ItemName_<M>.<I>` 是 B41 鍵形，B42 只查裸 `<M>.<I>`（反編譯實證）；
+                      前綴鍵無裸鍵對應＝玩家看到英文。豁免須登記 itemname_dead_allowlist.json。
+                      **`Base.` 不等於本體**——MOD 也能往 module Base 加物品，只認 vanilla scoped 基準
 
 冪等子命令（獨立於預設全跑，供「連跑兩次 build 第二次零 diff」驗證）：
   --snapshot-dist <dir>：把 dist 現況（.json + language.txt + client/*.lua 的 sha256）存到 <dir>/dist_hashes.json
@@ -1474,6 +1477,52 @@ def check_own_cn_glyphs(repo: str) -> tuple[bool, list[str], list[str]]:
     return not fail, fail, []
 
 
+# --- [15] ItemName 死鍵 ------------------------------------------------------ #
+# `ItemName_<Module>.<Item>` 是 B41 `ItemName_EN.txt` 時代的鍵形，**B42 不會讀它**：
+#   * Translator.tryFillMapFromFile():362-366 把 JSON 鍵原封不動 map.put(k,…)，零前綴處理。
+#   * Translator.getItemNameFromFullType():601 只做 itemName.get(fullType)，fullType 是
+#     裸的 `Module.Item`（Item.java:3053 以 getFullName() 呼叫）。
+#   * 全庫 `ItemName_` 只出現在 debugItemNames() 的除錯輸出。
+# （出處：反編譯 42.20.2，jar sha256 09a80a46…f416，與安裝檔相符。）
+# 所以前綴鍵若沒有對應的裸 fullType，該物品名等於沒翻譯——玩家看到英文，而 build／
+# CH parity／lint 三道都是綠的，2026-08-10 就是這樣漏了 1,034 鍵才被雙邊 review 抓到。
+# **`Base.` 開頭不等於本體**：MOD 同樣能往 `module Base` 加物品（實例 `Base.44Clip20`
+# 是 mod 的高容量彈匣，vanilla 只有 `Base.44Clip`），故豁免只認 vanilla scoped 基準。
+ITEMNAME_DEAD_ALLOWLIST = "itemname_dead_allowlist.json"
+
+
+def check_itemname_dead_keys(repo: str, dist_ch: str) -> tuple[bool, list[str], list[str]]:
+    """[15] `ItemName_` 前綴鍵必須另有裸 fullType，否則遊戲永遠讀不到。"""
+    files, err = _load_json_dir(dist_ch)
+    if err:
+        return False, err, []
+    data = files.get("ItemName.json", {})
+    pref = {k[len("ItemName_"):]: k for k in data if k.startswith("ItemName_")}
+    bare = {k for k in data if not k.startswith("ItemName_")}
+
+    vpath = os.path.join(repo, "sources", "vanilla_keys.json")
+    with open(vpath, encoding="utf-8-sig") as fh:
+        vanilla = set(json.load(fh).get("scoped_keys", {}).get("ItemName.json", []))
+
+    apath = os.path.join(repo, "sources", ITEMNAME_DEAD_ALLOWLIST)
+    with open(apath, encoding="utf-8-sig") as fh:
+        allow = json.load(fh).get("entries", {})
+
+    fail = [
+        f"{pref[b]} 是死鍵且無裸鍵 `{b}`——玩家看到英文。"
+        f"補裸鍵，或查證後登記 sources/{ITEMNAME_DEAD_ALLOWLIST}"
+        for b in sorted(pref)
+        if b not in bare and b not in vanilla and b not in allow
+    ]
+    # 反向棘輪：已補好或已不存在的條目要從 allowlist 移除，否則清單會爛掉沒人發現
+    warn = [
+        f"{ITEMNAME_DEAD_ALLOWLIST} 條目過時，請移除：{b}"
+        for b in sorted(allow)
+        if b in bare or b not in pref
+    ]
+    return not fail, fail, warn
+
+
 def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
     repo = paths["repo"]
     as1_cn = paths["as1_cn"]
@@ -1577,6 +1626,10 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         ok14, d14, w14 = check_own_cn_glyphs(repo)
     except Exception as exc:  # noqa: BLE001
         ok14, d14, w14 = False, [f"own CN 用字檢查失敗（{exc}）"], []
+    try:
+        ok15, d15, w15 = check_itemname_dead_keys(repo, dist_ch)
+    except Exception as exc:  # noqa: BLE001 — 清單檔缺失/壞損直接判 FAIL（gate 資料是受版控真相）
+        ok15, d15, w15 = False, [f"ItemName 死鍵檢查失敗（{exc}）"], []
 
     rows = [
         ("1", "CN 逐檔 parity（As1 缺席時僅降級 As1 比對）" if as1_missing else "CN 逐檔 parity",
@@ -1593,6 +1646,7 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         ("12", "vanilla 鍵碰撞", ok12, d12, w12),
         ("13", "檔名可載入性", ok13, d13, w13),
         ("14", "own 層 CN 用字", ok14, d14, w14),
+        ("15", "ItemName 死鍵", ok15, d15, w15),
     ]
 
     n_pass = sum(1 for _, _, ok, _, _ in rows if ok is True)
