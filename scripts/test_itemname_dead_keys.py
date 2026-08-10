@@ -86,3 +86,52 @@ fail, warn = run({"Foo.Bar": "巴"}, [], {})
 assert not fail and not warn, f"乾淨輸入被誤報：{fail} {warn}"
 
 print("✅ test_itemname_dead_keys：7 組情境全過")
+
+# --- [13] 改名後繼者抑制（同檔測試，共用 verify_dist import）------------------ #
+# 2026-08-10 實測：60 條 [13] 警告裡有 11 條是「上游把 UI_X 改名為 IGUI_X，我方兩個
+# 鍵都在，新鍵已出貨」——舊鍵確實死著但零缺口，報它只是噪音、害人重複追查。
+# 抑制判準必須**兩個條件同時成立**，少一個都會靜默吞掉真缺口：
+S = verify_dist._renamed_successors
+assert S("UI_DMD_Assemble") == ("IGUI_DMD_Assemble",), "UI_ → IGUI_ 後繼者推導錯"
+assert S("IGUI_DMD_Assemble") == ("UI_DMD_Assemble",), "IGUI_ → UI_ 後繼者推導錯"
+assert S("Sandbox_Foo") == (), "非 UI_/IGUI_ 前綴不得亂猜後繼者"
+assert S("UI_") == ("IGUI_",) and S("Recipes_X") == (), "邊界"
+
+
+def _g13(dist_ch_files, upstream, repo_sources_en):
+    """組臨時 dist + sources/en，回 [13] 的 (fail, warn)。"""
+    with tempfile.TemporaryDirectory() as td:
+        ch = Path(td) / "CH"
+        ch.mkdir()
+        for name, data in dist_ch_files.items():
+            (ch / name).write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+        en = Path(td) / "sources" / "en"
+        en.mkdir(parents=True)
+        (en / "1.json").write_text(json.dumps(
+            {f"translate_en|mods/m/42/media/lua/shared/Translate/EN/x.json|{k}": "e"
+             for k in upstream}, ensure_ascii=False), encoding="utf-8")
+        ok, fail, warn = verify_dist.check_loadable_files(td, str(ch))
+        return fail, [w for w in warn if "→" in w]
+
+
+# 後繼者在上游且已出貨 → 不報
+fail, warn = _g13({"Dead.json": {"UI_X": "舊"}, "IG_UI.json": {"IGUI_X": "新"}},
+                  upstream=["IGUI_X"], repo_sources_en=None)
+assert not fail and not warn, f"已由改名後繼者涵蓋卻仍報：{fail} {warn}"
+
+# 後繼者已出貨但**上游沒有** → 仍要報（可能是我方自己亂放前綴，不是真改名）
+fail, warn = _g13({"Dead.json": {"UI_X": "舊"}, "IG_UI.json": {"IGUI_X": "新"}},
+                  upstream=[], repo_sources_en=None)
+assert warn, "後繼者無上游佐證時不得抑制——會吞掉真缺口"
+
+# 後繼者在上游但**沒出貨** → 仍要報
+fail, warn = _g13({"Dead.json": {"UI_X": "舊"}, "IG_UI.json": {"IGUI_Other": "x"}},
+                  upstream=["IGUI_X"], repo_sources_en=None)
+assert warn, "後繼者未出貨時不得抑制"
+
+# 同名鍵已在正確檔 → 本來就不報（既有行為不得回歸）
+fail, warn = _g13({"Dead.json": {"UI_X": "舊"}, "UI.json": {"UI_X": "活"}},
+                  upstream=["UI_X"], repo_sources_en=None)
+assert not fail and not warn, f"同名鍵已在正確檔卻仍報：{fail} {warn}"
+
+print("✅ test [13] 改名後繼者抑制：5 組情境全過")

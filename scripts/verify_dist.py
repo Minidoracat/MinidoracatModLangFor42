@@ -1384,6 +1384,20 @@ def _routed_file(key: str) -> str | None:
     return None
 
 
+def _renamed_successors(key: str) -> tuple[str, ...]:
+    """同一鍵在上游改名後可能的新鍵名（僅 UI_ ↔ IGUI_ 前綴互換）。
+
+    只收這一組是因為它有實據（DeadMansDossier：`UI_DMD_*` → `IGUI_DMD_*`），且兩者
+    路由到不同檔（UI.json / IG_UI.json）故舊鍵必然受困。刻意不做模糊比對——猜錯會把
+    真缺口靜默吞掉，比多報一條嚴重得多。
+    """
+    if key.startswith("UI_"):
+        return ("IGUI_" + key[3:],)
+    if key.startswith("IGUI_"):
+        return ("UI_" + key[5:],)
+    return ()
+
+
 def _upstream_keys(repo: str) -> set[str]:
     """sources/en/ 鏡像裡所有上游 translate_en 鍵名（判斷「這個鍵名還算數嗎」）。"""
     out: set[str] = set()
@@ -1413,15 +1427,20 @@ def check_loadable_files(
     只看 CH——CH/CN 檔案結構由 [2] CH 鏡像保證一致，重複掃兩次沒有額外資訊。
 
     **FAIL 只給「上游現在還在用這個鍵名」者**——那才是真正的浪費：上游會呼叫它、
-    我方也譯好了，只因放錯檔案而永遠取不到。上游查無同名鍵者判 WARN：多半是 As1
-    鏡像進來的作廢鍵名（實例：As1 的 DeadMansDossier.json 用 `UI_DMD_*`，而該 mod
-    現行鍵是 `IGUI_DMD_*`，搬過去也沒用），搬檔救不了，要靠重新補譯。
+    我方也譯好了，只因放錯檔案而永遠取不到。上游查無同名鍵者判 WARN。
+
+    **已由改名後繼者涵蓋者完全不報**：上游把 `UI_X` 改名為 `IGUI_X`（實例
+    DeadMansDossier）時，我方常同時留著 As1 鏡像的舊鍵與已補好的新鍵。舊鍵確實死著，
+    但玩家看得到新鍵、沒有任何缺口——把它報成缺陷只是噪音，2026-08-10 實測 60 條裡
+    有 22 條屬此類，害人重複追查。判準要**兩個條件同時成立**：後繼鍵在上游語料裡
+    存在（證明那是真的改名，不是我方自己亂猜前綴），且已在可載入檔出貨。
     """
     stems = {p[:-5] for p in os.listdir(dist_ch) if p.endswith(".json")}
     live: dict[str, dict] = {}
     for stem in stems & TRANSLATOR_WHITELIST:
         with open(os.path.join(dist_ch, f"{stem}.json"), encoding="utf-8") as f:
             live[stem] = json.load(f)
+    live_all = {k for d in live.values() for k in d}
     upstream = _upstream_keys(repo)
     stranded: list[str] = []
     obsolete: list[str] = []
@@ -1437,10 +1456,16 @@ def check_loadable_files(
                 continue
             if f"{target}.json|{key}" in (suppressed or set()):
                 continue  # 本體同名鍵：目標檔裡的缺席是刻意的，搬過去只會被 [12] 擋下
+            if any(s in upstream and s in live_all for s in _renamed_successors(key)):
+                continue  # 上游改名後的新鍵已在出貨，舊鍵死著但零缺口
             line = f"{stem}.json|{key} → 應落在 {target}.json（PZ 不載入 {stem}.json）"
             (stranded if key in upstream else obsolete).append(line)
     if obsolete:
-        obsolete.insert(0, f"（以下 {len(obsolete)} 鍵上游查無同名鍵＝作廢鍵名，搬檔無用，須重新補譯）")
+        obsolete.insert(0, (
+            f"（以下 {len(obsolete)} 鍵在上游語料查無同名鍵。**這不等於鍵已作廢**——"
+            "也可能該 mod 根本不在監看清單（As1 收錄但 attribution 歸不了屬者落在 "
+            "sources/_unsorted，我方對其上游狀態零資料），本檢查無法區分。"
+            "判定前先確認該 mod 有無上游語料）"))
     return not stranded, stranded, obsolete
 
 
