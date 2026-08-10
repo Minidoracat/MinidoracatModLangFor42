@@ -99,21 +99,6 @@
     "reason": "GeneratorPlus 3597471949 獨有鍵，EN 'barrels' 為發電機資訊視窗計數量詞（barrelCount 拼接），mod 自帶 CN「个桶」；計數語境「5 燃料桶」不自然，對齊作者自帶譯法",
     "value": "个桶"
   },
-  "IG_UI.json|IGUI_ItemCat_HouseholdOrWeaponBlunt": {
-    "as1_value": "家用工具/武器-长刀",
-    "reason": "鍵名為 Blunt 卻誤譯「长刀」（Long Blade）；同族 ...OrWeaponBlunt 32 鍵中其餘 30 鍵均為长棍，屬 As1 上游錯譯",
-    "value": "家用工具/武器-长棍"
-  },
-  "IG_UI.json|IGUI_ItemCat_JunkOrWeaponBlunt": {
-    "as1_value": "杂物/武器-长刀",
-    "reason": "鍵名為 Blunt 卻誤譯「长刀」（Long Blade）；同族 ...OrWeaponBlunt 32 鍵中其餘 30 鍵均為长棍，屬 As1 上游錯譯",
-    "value": "杂物/武器-长棍"
-  },
-  "IG_UI.json|IGUI_ItemCat_Stock": {
-    "as1_value": "高汤",
-    "reason": "9 個 owner 中 8 個為槍械 mod（MFS EN 'Weapon attachment - Stock'＝槍托分類），僅 CAExtendedCategories 為食物高湯分類（EN 'Stock'）；與 IGUI_Barrel 同型共用鍵衝突，多數＋高頻裁決取槍械語境，格式循 corpus ItemCat「類別-子類」慣例",
-    "value": "武器配件-枪托"
-  },
   "IG_UI.json|IGUI_KnoxRelay_MorningShow_Jenna_Day28_S6": {
     "as1_value": "把接线头两两擦火交叉一对, 然后猛踩油门",
     "reason": "As1 上游錯誤：原譯語意錯亂（两两擦火交叉一对）；CH 側早已正確",
@@ -179,11 +164,6 @@
     "reason": "As1 上游錯誤：錯字：乒乓球誤作乓乓球；CH 側早已正確",
     "value": "乒乓球游戏光盘"
   },
-  "ItemName.json|HDF.StrainedSyrup": {
-    "as1_value": "一锅水煮甜菜根",
-    "reason": "CH/CN 語意稽核：原譯「一锅水煮甜菜根」是別的物品（鍵名 StrainedSyrup；CH 側正確）",
-    "value": "过滤后的糖浆"
-  },
   "ItemName.json|HaloMarine.HaloMarineUpperLegArmorBase": {
     "as1_value": "UNSC陆战队大腿护甲甲",
     "reason": "As1 上游錯誤：疊字 甲甲；CH 側早已正確",
@@ -198,16 +178,6 @@
     "as1_value": "弩箭箭杆",
     "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
     "value": "弩箭杆"
-  },
-  "ItemName.json|PZCrossbows.ShortWoodBoltShaft": {
-    "as1_value": "短木质弩箭箭杆",
-    "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
-    "value": "短木质弩箭杆"
-  },
-  "ItemName.json|PZCrossbows.WoodBoltShaft": {
-    "as1_value": "木质弩箭箭杆",
-    "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
-    "value": "木质弩箭杆"
   },
   "ItemName.json|PompsItems_MyLittlePony.LotusBlossomPlushie": {
     "as1_value": "莲花花苞花苞",
@@ -288,16 +258,6 @@
     "as1_value": "制作剑鞘剑鞘",
     "reason": "As1 上游疊字誤植（剑鞘×2 → 剑鞘）；CH 側早已由 ch_overrides 修正",
     "value": "制作剑鞘"
-  },
-  "Recipes.json|PZC_CarveShortWoodBoltShafts": {
-    "as1_value": "雕刻短木质弩箭箭杆",
-    "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
-    "value": "雕刻短木质弩箭杆"
-  },
-  "Recipes.json|PZC_CarveWoodBoltShafts": {
-    "as1_value": "雕刻木质弩箭箭杆",
-    "reason": "As1 上游錯誤：疊字 箭箭；CH 側早已正確",
-    "value": "雕刻木质弩箭杆"
   },
   "Sandbox.json|Sandbox_DynamicTrading.FactionRespawnChance_tooltip": {
     "as1_value": "城镇内现有阵营数量低于上限时, 每日刷新新阵营的概率.",
@@ -498,11 +458,6 @@
     "as1_value": "一个装满工具的工具箱, 内含锯子, 锤子, 螺丝刀, 扳手, 轮胎扳手和管钳. <LINE>可同时当作这六种工具使用. <LINE>随使用而损耗. 损坏时, 返还空工具箱",
     "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
     "value": "一个装满工具的工具箱, 内含锯子, 锤子, 螺丝刀, 扳手, 轮胎扳手和管钳.<br>可同时当作这六种工具使用.<br>随使用而损耗. 损坏时, 返还空工具箱"
-  },
-  "Tooltip.json|Tooltip_CSR_Glowstick": {
-    "as1_value": "扔出去给一个方块标记上临时彩色光.<LINE> 可以在露营、生存、电子和工具物资中找到",
-    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-    "value": "扔出去给一个方块标记上临时彩色光.<br>可以在露营、生存、电子和工具物资中找到"
   },
   "Tooltip.json|Tooltip_CSR_HideBarrel": {
     "as1_value": "躲在桶里. <LINE> <LINE> 对僵尸隐身. <LINE> <RGB:1,0.8,0.2> 无聊 <RGB:1,1,1> 值在躲藏时增加. <LINE> <RGB:1,0.4,0.4> 恶心 <RGB:1,1,1> 值缓慢增加 (空间狭小). <LINE> 按 ESC 或移动结束",
@@ -943,11 +898,6 @@
     "as1_value": "可以以 %s 等级 %d 操作!",
     "reason": "As1 上游錯誤：疊字 可以|以；改為與 CH 一致的語序；CH 側早已正確",
     "value": "%s 等级达到 %d 即可操作!"
-  },
-  "UI.json|UI_Symbiosis_BloodFamiliarMax": {
-    "as1_value": "你已拥有有血契眷属",
-    "reason": "As1 上游錯誤：疊字 有有；CH 側早已正確",
-    "value": "你已拥有血契眷属"
   },
   "UI.json|UI_trait_WhittlerDesc": {
     "as1_value": "可以雕刻木头和骨头物品. <br><br>已掌握知识: <br>-磨尖骨头<br>-制作骨头鱼钩<br>-制作骨头缝纫针<br>-磨尖颚骨<br>-雕刻编织针<br>-雕刻蝙蝠<br>-制作骨头斧头头<br>-制作骨头锥子<br>-制作大骨珠<br>-雕刻木叉<br>-制作骨头叉<br>-雕刻木铲<br>-雕刻高脚杯<br>-雕刻桶<br>-雕刻剥皮工具<br>-雕刻短棍<br>-雕刻哨子<br><br>搜索加成: <br>+30%% 概率找到木柴<br>",

@@ -908,14 +908,6 @@
   }
  ],
  "lint_exemptions": {
-  "Tooltip.json|Tooltip_CSR_Glowstick": {
-   "patterns": [
-    "光(\\s*)標",
-    "(?<![激閃])光標(?!靶)"
-   ],
-   "reason": "2026-08-02 裁決 keep：「彩色光標記」是「彩色光＋標記」（發光棒以臨時彩色光標記地格），非 cursor 誤譯，規則誤中；2026-08-03 <LINE>→<br> 正規化後重新錨定，誤報語境（彩色光標記＝光＋標記）不變；2026-08-04 追加 terminology 同義 pattern（[E] 同一誤中）",
-   "ch_value": "945b62cb6771d64b"
-  },
   "Sandbox.json|Sandbox_TooltipLib_EnableMPSync_tooltip": {
    "patterns": [
     "用(\\s*)戶"
@@ -950,13 +942,6 @@
    ],
    "reason": "2026-08-02 裁決 keep：「研究及應用」為名詞 application 語境（研究與應用並列），非套用設定語意，依 note 釘選 keep。",
    "ch_value": "80108adea4653dbd"
-  },
-  "Sandbox.json|Sandbox_AirdropMod_AirdropMode_tooltip": {
-   "patterns": [
-    "選(\\s*)中"
-   ],
-   "reason": "2026-08-02 裁決 keep：「選中一名玩家」為人被挑中（獲選義）語境，note 明列 ch_overrides 釘選保留。",
-   "ch_value": "62761abb469dc963"
   },
   "Sandbox.json|Sandbox_ApocalipseBrProjetoNemesis_BossCooldownCycles_tooltip": {
    "patterns": [
