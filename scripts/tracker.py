@@ -6,7 +6,7 @@
 tracker.py — MinidoracatModLangFor42 雙上游追蹤器（PZ B42 如一模組翻譯繁中版）
 
 用途：排程（每日）偵測兩層上游變更，確有文本 diff 才開/更新 GitHub issue，跨 cron 保存去重狀態。
-  layer-B（主力）：As1 包 3556540080 新 42.19 樹 vs 本 repo sources/ → 有 diff 開「待同步」issue。
+  layer-B（主力）：As1 包 3556540080 新 CN 樹（版本樹釘於 sources/snapshot.json）vs 本 repo sources/ → 有 diff 開「待同步」issue。
   layer-A（品保）：原始 mod 全語料 kind|相對路徑|鍵|英文值 hash vs baseline → 分類新增/刪除/修改，開「可能過時」issue。
 
 設計要點：
@@ -56,6 +56,7 @@ EN_TEXT_DIR = PROJECT_ROOT / "sources" / "en"  # EN 全文落地（大同步翻�
 
 SOURCES = PROJECT_ROOT / "sources"
 ATTRIBUTION_INDEX_JSON = SOURCES / "attribution_index.json"
+SNAPSHOT_JSON = SOURCES / "snapshot.json"  # As1 釘定版本樹（issue 內文用；勿在本檔寫死版本號）
 
 # schema 版本（狀態格式演進時 bump；讀取時可據此遷移）
 SCHEMA_VERSION = 1
@@ -1325,11 +1326,14 @@ def build_layer_b_plan(
     )
     content_hash = hashlib.sha256(payload.encode("utf-8")).hexdigest()
     marker = make_marker(ISSUE_TYPE_SYNC, AS1_WORKSHOP_ID, content_hash)
+    # 版本樹取自 snapshot.json，勿寫死：Steam 直接覆蓋版本資料夾（2026-08-05 的
+    # 42.19→42.20 前例），寫死的版本號在每次重釘快照後就變成錯的。
+    as1_tree = load_json(SNAPSHOT_JSON)["as1"]["source_tree"]
     lines = [
         marker,
         f"## 待同步：As1 包更新（Workshop {AS1_WORKSHOP_ID}）",
         "",
-        "As1「[B42]統一模組漢化」新 42.19 CN 樹與本 repo `sources/` 現況存在差異，需重跑拆分/build 管線同步。",
+        f"As1「[B42]統一模組漢化」新 {as1_tree} CN 樹與本 repo `sources/` 現況存在差異，需重跑拆分/build 管線同步。",
         "",
         f"- 新增：{len(diff['added'])}",
         f"- 刪除：{len(diff['removed'])}",
