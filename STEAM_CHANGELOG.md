@@ -1,59 +1,63 @@
-[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.20.2-1.11.0[/h1]
-[i]2026-08-10[/i]
+[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.20.2-1.12.0[/h1]
+[i]2026-08-11[/i]
 
 [h3]• 玩家摘要[/h3]
 [list]
-[*] [b]修正：本包會擅自改掉「原版」物品名稱與介面文字。[/b] 感謝玩家回報——即使沒有訂閱任何槍械替換 MOD，原版的 JS-2000 霰彈槍也會被改名成「雷明頓M870霰彈槍」。這類問題共 [b]328 處[/b]，除了槍械，還包括原版的紅酒被寫成「夏多內白葡萄酒」、4 倍瞄準鏡被寫成「8 倍」、抗生素的說明被換成完全不同的內容。這些原版文字現在一律交還給遊戲本體的官方中文，本包不再插手。
-[*] [b]請留意這個取捨[/b]：如果你[b]有[/b]訂閱 Firearms、Vanilla Firearms Expansion 這類會重製原版槍的 MOD，之後這些槍會顯示原版名稱（JS-2000），而不是 MOD 的真實槍名。遊戲的翻譯機制無法做到「裝了才生效」，兩者只能擇一；要兼顧的話得另外拆一個獨立子包，之後再評估。
-[*] [b]上游停止支援的模組，本包繼續翻譯。[/b] 這次同步時，如一漢化組移除了 Burd's Survival Journals、Printer3D、Hanksie's Musical Wonders 等模組的譯文，本包把這些譯文接手保留，玩家端沒有任何中文消失。支援模組數維持 [b]481 個[/b]。
-[*] [b]同步上游時擋下一批會讓數字變亂碼的寫法。[/b] 上游這次調整了文字格式，若原樣採用，部分提示會把數字顯示成字面的「%1」（例如「攻擊速度: %1」）。本包已自動還原，玩家不會遇到。
-[/list]
-
-[h3]🔧 Fixed[/h3]
-[list]
-[*] [b]本包會改掉遊戲原版的物品名與文字（328 鍵）—— 已全數停止出貨[/b]。玩家回報：未安裝任何槍械替換 MOD，原版 JS-2000 霰彈槍卻顯示為「雷明頓M870霰彈槍」，移除本包即恢復（[Workshop 留言](https://steamcommunity.com/sharedfiles/filedetails/?id=3765907717)）。
-[/list]
-成因是 PZ 的 Translator.tryFillMapFromFile() 把[b]每個 mod 的 Translate 檔併進同一張全域字串表[/b]、後載入者覆寫前者——沒有「只在某 MOD 啟用時生效」這回事。As1 上游收錄了 Firearms（2256623447）、Vanilla Firearms Expansion（3611718925）等[b]重製原版槍[/b]的 MOD 譯文，這些 MOD 直接改寫 ItemName.json|Base.Shotgun 等本體鍵，於是全體玩家的原版物品跟著被改名。
-影響範圍不只槍械：槍械／彈藥／配件 66 鍵、食物酒類鞋襪 74 鍵、UI／Tooltip／ContextMenu／Fluids 等 188 鍵。其中對原版玩家明確有害者包括 Base.Wine2（Red Wine）→「夏多內[b]白[/b]葡萄酒」、Base.x4Scope（x4）→「LVPO [b]8倍[/b]」、Tooltip_Antibiotics（抗傷口感染、不能防變殭屍）→「用於製作抗生素.」。
-另有 10 鍵連來源 MOD 自己的現行英文都對不上（Base.Shotgun 上游現為 Mossberg 500、Base.x4Scope 現為 ACOG 4x32），即使裝了該 MOD 也是錯的。
-[list]
-[*] [b]這些原版字串現在改由遊戲本體／本體翻譯包提供[/b]，本包不再插手。副作用：有裝上述槍械 MOD 的玩家會看到原版名稱而非 MOD 重製名——JSON 全域表無法做條件式生效，要兩邊兼顧只能拆成依賴該 MOD 的獨立翻譯子包，尚未實作。
+[*] [b]954 個物品名第一次真的變成中文。[/b] 這批譯文其實一直都在包裡，但用的是 B41 時代的舊鍵格式（ItemName_模組.物品），B42 的遊戲引擎根本不會去讀它——玩家看到的一直是英文。這次全數改成 B42 讀得到的寫法，涵蓋 3D 列印機、拾荒技能、進階醫療系統、Zomboid Storylines、True Music 隨身聽等模組的物品。
+[*] [b]Barrels Expanded 的 41 則提示訊息救回來了——這個連英文版都是壞的。[/b] 該模組把訊息放在 PZ 不會載入的檔案裡，所有語言的玩家看到的都是「UI_BarrEx_TransferRejection_BarrelEmpty」這種鍵名。我們把譯文放進正確的檔案就修好了，等於順手幫上游修了 bug。另外 Super Bulldozer 3 則、Last Cup Coffee 4 則也用同樣方式救回。
+[*] [b]新增支援 2 個模組（481 → 483 個）[/b]：Better Sorting（物品分類）與 Gore's SVU4 Core（車輛裝甲改裝，含 4 個子模組）。兩者都是玩家申請的——前者工作坊雖然寫著支援簡中，但那些中文檔是 B41 遺留、B42 完全讀不到；後者則是自帶的中文檔裡面全是英文。
+[*] [b]繁中的「喪屍」全部統一成「殭屍」[/b]（130 處）。殭屍是繁中正字，之前混用純屬歷史殘留。簡中維持大陸慣例不動。
+[*] [b]支援清單現在會標註「這個模組我們補不了」。[/b] 有些模組把文字放在遊戲翻譯機制取不到的地方，任何翻譯包都無能為力。與其讓玩家訂閱後才發現，不如先寫清楚——目前標註了 Dynamic Trading (w/ NPC) 與 Dynamic Emergency TV Channel 兩個。
 [/list]
 
 [h3]✨ Added[/h3]
 [list]
-[*] [b]build_mod.suppress_vanilla() 出貨抑制[/b]：所有 gate 之後、寫出之前，把命中本體鍵名基準的 (檔,鍵) 自 CN/CH 對稱剔除。真相層不動——As1 CN 仍是 canonical import、sources/ch corpus 仍是人工真相，抑制只發生在出貨那一步。要刻意保留某個覆寫須登記 vanilla_keys.json 的 keep（帶出貨值錨點，值一改豁免即失效）。
-[*] [b]verify_dist [12] 自 report-only 升為 blocking[/b]：獨立重掃 dist CN/CH，殘留任何非 keep 的本體同名鍵即 FAIL。原本 As1 lane 只出 WARN、且其中 327 鍵全登記在 as1_overlap_known 裡當通行證（另 1 鍵走 own lane 的 allowlist），等於防線完全靜音——這正是問題存在近半年沒被攔下的原因。
-[*] [b]scripts/extract_vanilla_keys.py[/b]：自本機 PZ 安裝重生本體鍵名基準，新增[b]檔域[/b]欄位 scoped_keys（{檔名:[鍵]}）。舊基準只有扁平裸鍵集，無法區分「同名鍵在不同檔案不互撞」，故無法拿來做精確抑制。[b]遊戲大版本更新後必跑。[/b]
-[*] [b]scripts/test_vanilla_suppress.py[/b] 回歸測試 9 組：對稱剔除、keep 豁免與錨點漂移（build 與 oracle 各驗一次）、基準殘缺 fail-closed（含「整個 bucket 消失」與「同鍵灌水」兩種假 fail-closed）、dist 洩漏偵測、檔域語意不退化成跨檔比對、[13] 不把抑制鍵誤報成受困鍵。
+[*] [b]收錄 #76 Better Sorting（2313387159）36 鍵、#77 Gore's SVU4 Core（3730070661）247 鍵[/b]，均為 own lane 原創翻譯（origin:"own"）。
+[list]
+[*] #76 上游中文檔失效原因雙重：檔案留在 [b]mod 根目錄 media/[/b]（loadMod() 只搜 common/ 與版本夾）且為 [b]legacy _CH.txt 格式[/b]（tryFillMapFromFile() 路徑寫死 .json），兩者各自即足以致命；42/ 分支只有 EN 80 鍵，故該 mod 在 B42 是全語言失效而非僅中文。80 鍵零 vanilla 碰撞，44 鍵本包既有覆蓋，補譯 36 鍵。
+[*] #77 單一 Workshop 項目含 4 個 mod，上游自帶 CH/CN 八檔逐一比對確認 [b]全為 EN 原文空殼[/b]。排除 9 個 Base.LightBulb* vanilla 覆寫鍵，補 9 個上游未建鍵的 script DisplayName 物品。Recipes.json 裸鍵經 42.20.2 反編譯確證為活鍵（CraftRecipe.java:362 → Translator.getRecipeName() → recipe.get(name) 裸鍵查表）。同系列 3760377708／3742291546 為純模型掛件包不收錄；前者另有 6 句寫死於自訂 UI 的英文，無鍵可譯、已裁決不加 Lua 覆寫。
+[/list]
+[*] [b]verify_dist [15] ItemName 死鍵閘門[/b]：ItemName_<Module>.<Item> 前綴形在 B42 完全不被讀取（tryFillMapFromFile():362-366 原封 map.put、getItemNameFromFullType():601 只查裸 Module.Item）。對不在 itemname_dead_allowlist.json、又非 vanilla 的死鍵判 FAIL。回歸測試 scripts/test_itemname_dead_keys.py。
+[*] [b]sources/unshipped_keys.json 已裁決不出貨登記機制[/b]：適用於「鍵落在 PZ 不載入的檔名、且找不到正確落點」者。真相層照樣保留（_unsorted/CN 是 As1 忠實鏡像，刪掉會讓 tracker layer-B 永遠報差異），抑制只在出貨那一步，與 vanilla 出貨抑制共用 suppressed_pairs()。as1_value 錨點在上游動過時出 warning ＝重查訊號。回歸測試 scripts/test_unshipped_keys.py。
+[*] [b]mod_names_zh.json 選配 note 欄位[/b]：標註「上游把文字放在 PZ 翻譯表取不到的位置、任何翻譯包都補不了」的涵蓋範圍例外，渲染於 SUPPORTED_MODS.md 摘要之後（慣例 ⚠️ 起頭）。只登記已查證到機制的個案，不拿覆蓋率比值反推。
+[*] [b]scripts/gen_steam_changelog.py[/b]：由 CHANGELOG 版本區塊生成 Workshop 更新註記；CHANGELOG 每版新增「玩家摘要」節作為其來源。
+[*] [b]own_translations.json 條目支援選配 _note[/b]，記該鍵的人工裁決理由（build 只驗 en/ch/cn 非空，底線開頭欄位忽略）。
+[/list]
+
+[h3]🔧 Fixed[/h3]
+[list]
+[*] [b]954 個 ItemName_ 前綴死鍵補上對應裸鍵[/b]，分三輪落地並各自修正前一輪的錯誤判斷：
+[list]
+[*] 首輪 101 鍵。module 名不可猜——靠 steamcmd 下載 11 個 mod、以大括號深度界定 module X { 逐檔解析，才發現 3DPrinter→Printer3D、ScavengerSkill→ScavengingSkill、BetterSafehouse_X→BetterSafehouse.X 三處猜錯。
+[*] 次輪 820 鍵。首輪宣稱「872 個 Base.* 死鍵是 vanilla 抑制副產物、死但無害」是[b]推論不是查證[/b]且錯誤：以 scoped_keys["ItemName.json"] 核對，872 個中只有 29 個真是 vanilla，其餘 843 個是 MOD 往 module Base 加的物品（Base.44Clip20 是高容量彈匣、vanilla 只有 Base.44Clip）。真缺口是 1,034 而非 191。
+[*] 末輪 33 鍵。前輪把 118 個殘餘一律登記「查無來源」是[b]把工具限制當成事實[/b]：DisplayName 抽取器寫壞（只抽到 255 筆、實際 4,298 筆）、沒去讀 mod 自帶的 Translate/EN/ItemName.json（且 PZ mod JSON 常帶尾逗號會讓 json.loads 拋錯後被 silent skip）、兩個 mod 的 wid 沒指認出來。
+[/list]
+[*] [b]41 個 BarrEx 訊息從 PZ 不載入的檔名救回，順帶修掉上游自己的 bug[/b]。Barrels Expanded（3727387302，Workshop 標題搜不到、須用搜尋端點查內部 id）把 40 個轉移失敗訊息定義在 Translate/EN/TransferMessages.json，但該檔名不在 Translator.BY_NAME 白名單、PZ 從不載入，而 BarrEx_Main.lua:254 用 getText() 消費它們——[b]這批訊息對所有語言（含英文）都是壞的[/b]，玩家看到原始鍵名。我方把鍵放進自己的 UI.json 即修復。
+[*] [b]Super Bulldozer 3 鍵、Last Cup Coffee 4 鍵救回[/b]：先前判「mod 已下架」是搜尋方式錯誤，兩者都還在。
+[*] [b]5 鍵 placeholder 契約修正[/b]（%s/%d → %1）：以[b]上游現行 Lua[/b] 證實契約已從 string.format 轉為 getText 帶參數，停在舊寫法會讓玩家看到字面佔位符。本機 Steam 副本可能是舊版，hash 不符時不可採信。另修 19 鍵過時簡中。
+[*] [b]43 張「可能過時」issue 清償[/b]：issue 內文的增刪改計數不可直接採信（record id 帶相對路徑，上游搬檔會被算成大量 added+removed），改由 git 歷史重建真實 diff；[b]必須先濾有效版本分支[/b]，本次若略過此步會漏判 49 個鍵。
+[*] [b]verify [13] 不再把「已由改名後繼者涵蓋」的死鍵報成缺陷[/b]，並修正誤導的警告文字。
+[*] [b]錨點漂移比對補套過度逸出還原[/b]——6 條登記全是假警報。
+[*] 修正兩處回歸：rich-text <LINE> 前後空白不可壓縮；共用鍵不得寫入單一 mod 的專屬全文。
 [/list]
 
 [h3]🔄 Changed[/h3]
 [list]
-[*] 退役 own_translations.json 的 IG_UI.json|IGUI_SearchMode_Categories_WildHerbs（en/ch/cn 與官方逐字相同，抑制後永遠不會落地）及其 allowlist 豁免登記。
-[*] sources/vanilla_overlap_triage.json 降為歷史紀錄：出貨抑制後，值層裁決不再決定「要不要出貨」。（該台帳本身也已被證實有誤——Base.x4Scope 的裁決是靠 hash 反推「Firearms 改名為 LVPO 系」，取得上游 EN 實文後確認實際是 ACOG 4x32。）
-[/list]
-
-[h3]• Changed（As1 快照重釘 42.20）[/h3]
-[list]
-[*] [b]verify_dist [8] As1 來源漂移 恢復可驗證[/b]，連續兩次發布的盲區關閉。快照 source_tree 自 42.19 改為 42.20——Steam 於 2026-08-05 直接以 42.20/ 覆蓋 42.19/ 且 Workshop 不提供舊版下載，被釘的樹永久消失。上游 42/ 與 42.20/ 內容逐位元組相同、version.txt 同為 v3.11.0；釘 42.20 是因 PZ B42 只載入「≤ 遊戲版本的唯一最佳版本資料夾」。
-[*] [b]同步差異：新增 1、值變更 2,010、移除 5,264，實質文字變更 0。[/b] 2,010 筆值變更全是 % 逸出差異——613 筆與我方 sanitize 後等價，1,203 筆把已安全的 %1/%s/%.2f 又逸出一次，194 筆全域 %→%% 連合法字面 %% 都變成 %%%%。後兩類照收會讓佔位符變成字面文字（玩家看到「攻擊速度: %1」）。
-[*] [b]改以機械反向正規化處理，而非 1,397 筆逐鍵登記[/b]：新增 build_mod.normalize_over_escape()（%%+安全 token → %、%%%% → %%，迭代至定點），於合併後、registry 與錨點快照之前執行；verify_dist.as1_expectation() 為獨立實作。兩份實作對 As1 42.20 全量 64,541 值零分歧且冪等，還原後與現行出貨值對 2,010 筆變更全數逐字相同。安全性實證：我方 145,595 個正確值中 %% 緊接安全 token 起始者 0 筆、含 %%%% 者 0 筆。
-[*] [b]上游移除的 5,264 鍵依「是否還在用」分流，支援清單零流失（維持 481 個 MOD）[/b]：
-[list]
-[*] 2,102 鍵屬 8 個被 As1 整包放棄的模組（Burd's Survival Journals 961、Printer3D 628、Hanksie's Musical Wonders 428、Fred's NVG、Forged by Combat、Military Ponchos 等）→ 改列 own lane 的 sources/mods/<wid>/（origin:"own"）。放這裡而非 own_translations.json，是為了保住 SUPPORTED_MODS.md 列名與 gen-watchlist 上游監看——只放後者會讓這 8 個模組從兩份清單同時消失。
-[*] 783 鍵為零星移除 → own_translations.json。
-[*] 2,375 鍵上游查無同名鍵（2,357 屬 _unsorted）→ 跟著刪，As1 是在清理作廢鍵。
-[*] 4 鍵值為 '  '（As1 的空白佔位）→ 不再出貨；玩家因此看到英文原文而非一片空白。
-[/list]
-[*] 新增的 1 鍵為上游畸形資料（整行英文被當成鍵名），忠實鏡像進 corpus。
-[*] 登記同步：ch_review_state 清 278 條陳舊條目、as1_overlap_known 重算為 325 條、cn_overrides／placeholder_exceptions 共 16 筆 as1_value 錨點重錨。lint_ch 改為排除出貨抑制鍵——其 [C] 以 dist CN 值查已審台帳，抑制鍵查不到會讓已裁決鍵全數退回待裁決而炸掉棘輪。
+[*] [b]術語錨定基準修正（本次最大宗值變更，120 鍵）[/b]：#77 首版譯文錨在[b]遊戲內建[/b] CH/CN 檔，此為錯誤基準——玩家並用本體翻譯包 MinidoracatLangFor42 時，該包後載入覆寫全域字串表，內建值不是所見值。全面改對本體包定案：引擎蓋→引擎罩、制動器→煞車、懸掛→懸吊、座位→座椅、後車蓋→後備箱蓋、老舊/一般/性能→老式/普通/高階；技能名機械→技工、金屬加工→金工（後者尤重：CN「金属加工」在本體是 Metalworking 另一技能，會讓玩家找錯技能欄）。120 個車輛配方[b]逐部件建映射而非全域替換[/b]——本體包 CN 對輪胎 Old 作「廉价」、煞車作「老式」，機械替換會抹平此差異。
+[*] [b]CH 側 zombie 統一為「殭屍」[/b]（106 鍵、130 處）。CN 欄刻意不動：大陸用 丧尸/僵尸 與繁中正字無關，本包 CN 現況的不一致源自 As1 自身，依規則跟隨個別 mod 錨點。
+[*] [b]terminology.json re-vendor 至本體 5ef995c[/b]（rules 171→176），lint_ch [D] 轉為同步 ✓。帶進 喪屍→殭屍（為此在本體新增，作防回歸棘輪）、大米→白米、蒜蓉→蒜末、黃油→奶油、梁→樑 五條；新規則在本包既有命中 15 鍵，只動 CH。
+[*] [b]IGUI_ItemCat_Misc 改中性文案「其他」[/b]：多 owner 共用鍵，Better Sorting 作一般雜項（實測其 BaseCategories.lua 指派 21 件雜物）、武器 mod 4 家作「武器配件雜項」。JSON 全域表無法條件式生效，取兩邊皆成立的寫法。
+[*] [b]WolfBond 2 鍵停止出貨[/b]：Workshop 端點搜尋、本機訂閱庫全掃、en_corpus_hashes 三處皆無此 mod，依裁決登記 unshipped_keys.json。
+[*] [b]AmmoLootDrop 兩則 tooltip 標點改半形[/b]，對齊 Sandbox corpus 慣例（3,172 半形 vs 106 全形）。
+[*] 清理 12 條失效登記（dist 零變動實證，出貨不受影響）；補登 13 個已審鍵、還原 ETW en 錨點 provenance。
+[*] tracker sync issue 內文的版本樹改由 snapshot.json 帶入，不再寫死。
 [/list]
 
 [h3]📝 Notes[/h3]
 [list]
-[*] [b]本次為近期首次 verify_dist 13 項全 PASS、退出碼 0[/b]（不帶 --allow-missing-as1）。build 冪等雙跑零 diff（181 檔）、verify_mod 10 PASS、lint_ch 棘輪 [A][B][C][E][F] 全 0、--cn-diff v42.20.2-1.10.0 待複核 0、6 支測試全過。
-[*] [b]出貨鍵數 98,276 → 95,576（−2,700）[/b]：vanilla 出貨抑制 321、上游作廢鍵清理 2,375、撞 vanilla 的 own 鍵 4。
-[*] [b]有效覆蓋率 70,075 / 70,883（98.9%）[/b]。824 個缺口中 [b]820 個在本次之前即存在[/b]——1.10.0 宣告的 100% 是對當時快照而言，之後上游各模組新增了字串（最大宗：3414697768 502 鍵）。本次同步未造成覆蓋率回歸，該缺口列為下一輪補譯目標。
-[*] [b]lint_ch [D] 提示 terminology vendor 與本體不同步[/b]（本體 repo 已更新術語表）。不在棘輪內、不阻斷；重新 vendor 可能帶進新術語而觸發新的 [C] 待裁決，列為獨立工作包。
+[*] [b]出貨鍵數 95,576 → 96,889（+1,313）[/b]：ItemName 裸鍵補齊為主要來源，另含受困鍵救回與本次兩個新模組的 283 鍵。
+[*] [b]支援 MOD 481 → 483 個。[/b]
+[*] [b]有效覆蓋率 70,449 / 71,155（99.0%）[/b]，上版 98.9%。零覆蓋 mod 0 個。剩餘 706 個缺口中 406 個集中於單一 mod（3414697768，46.6%），為上游新增字串，列為下一輪補譯目標。
+[*] 驗證：build 綠、verify_dist [b]14/14 PASS[/b]（不帶 --allow-missing-as1）、冪等雙跑零 diff（173 檔）、manifest --check 同步、lint_ch 棘輪 [A][B][C][E][F] 全 0、--cn-diff v42.20.2-1.11.0 待複核 0、9 支回歸測試全過。
+[*] [b]scripts/test_*.py 仍非自動 gate[/b]：repo 無 CI 執行它們（唯一 workflow 只跑 tracker.py），全靠收尾驗證階段人工跑。要讓它真的攔得住漏跑，得另外接 CI——列為獨立工作包。
 [/list]
