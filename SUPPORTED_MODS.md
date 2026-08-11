@@ -428,7 +428,7 @@
 | [Craft Propane〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3634065654) | 丙烷填充 | 新增以木炭與水填充丙烷罐的配方。 | `CraftPropane` | 3 | — |
 | [Better Safehouse [B42.20- MP]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3634569678) | 更好的安全屋 | 強化多人連線的安全屋管理：副屋主權限、擴建範圍、主重生點與側邊面板等。 | `BetterSafehouse` | 121 | — |
 | [Challenge Traits - Headshots, CDDA, and More [42.19 + 42.18]](https://steamcommunity.com/sharedfiles/filedetails/?id=3634630898) | 挑戰特質：爆頭、CDDA 等 | 新增爆頭限定、CDDA 等多種挑戰型特質玩法。 | `OCsChallengeTraits` | 37 | — |
-| [Dynamic Trading (w/ NPC) B42.16](https://steamcommunity.com/sharedfiles/filedetails/?id=3635333613) | 動態交易（含 NPC） | 新增與 NPC 的動態交易系統，含季節事件、通膨與土匪伏擊。 | `DynamicTrading`, `DynamicTradingCommon`, `DynamicTradingV2` | 136 | ⚠️ 本包只涵蓋沙盒／伺服器設定；UI、對話與公告共 533 句由該 MOD 自有的文字系統處理，未走遊戲翻譯機制，翻譯包無法覆蓋（見 issue #91）。 |
+| [Dynamic Trading (w/ NPC) B42.16](https://steamcommunity.com/sharedfiles/filedetails/?id=3635333613) | 動態交易（含 NPC） | 新增與 NPC 的動態交易系統，含季節事件、通膨與土匪伏擊。 | `DynamicTrading`, `DynamicTradingCommon`, `DynamicTradingV2` | 136 | ⚠️ 本包只涵蓋沙盒／伺服器設定；UI、對話與公告共 533 句由該 MOD 自有的文字系統處理，管理員 debug 選單等 139 句則寫死於程式碼、連翻譯鍵都沒有，兩者都未走遊戲翻譯機制，翻譯包無法覆蓋（見 issue #91）。 |
 | [[B42MP] Frockin Splendor! Vol.5](https://steamcommunity.com/sharedfiles/filedetails/?id=3635394848) | Frockin Splendor! Vol.5 | 服飾擴充包第五輯，為遊戲新增額外服裝內容。 | `GanydeBielovzki's Frockin Splendor! Vol.5` | 37 | — |
 | [R.U. BMP-2 by Papa_Chad](https://steamcommunity.com/sharedfiles/filedetails/?id=3635550823) | R.U. BMP-2 by Papa_Chad | 新增俄系 BMP-2 步兵戰車，配備 2A42 30mm 機炮。 | `R.U. BMP-2 by Papa_Chad` | 1 | — |
 | [Show Weapon Stats Plus](https://steamcommunity.com/sharedfiles/filedetails/?id=3635921724) | 顯示武器數值增強版 | 在提示中顯示武器傷害、狀況、精度、噪音等詳細數值，項目可自訂。 | `showweaponstatsplus4213` | 43 | — |
