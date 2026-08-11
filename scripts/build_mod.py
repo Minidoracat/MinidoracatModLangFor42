@@ -67,8 +67,8 @@ OUT_LUA = MOD_MEDIA / "lua" / "client"
 
 README = PROJECT_ROOT / "README.md"
 SUPPORTED_MODS_MD = PROJECT_ROOT / "SUPPORTED_MODS.md"
-# 人工真相：{wid: {name_zh, summary, note?}}。note＝涵蓋範圍例外說明（渲染時接在摘要後，
-# 慣例以 ⚠️ 起頭）：上游把文字放在 PZ 翻譯表取不到的位置，任何翻譯包都補不了。
+# 人工真相：{wid: {name_zh, summary, note?}}。note＝涵蓋範圍例外說明（渲染成獨立的
+# 「涵蓋範圍」欄，慣例以 ⚠️ 起頭）：上游把文字放在 PZ 翻譯表取不到的位置，任何翻譯包都補不了。
 MOD_NAMES_ZH_JSON = SOURCES / "mod_names_zh.json"
 MANIFEST_START = "<!-- SUPPORTED_MODS_START -->"
 MANIFEST_END = "<!-- SUPPORTED_MODS_END -->"
@@ -1367,17 +1367,27 @@ def cmd_manifest(check_only: bool = False) -> int:
         link = f"[{cell(name)}]({WORKSHOP_URL.format(ws_id)})"
         ids = ", ".join(f"`{m}`" for m in mod_ids) if mod_ids else "—"
         zh = names_zh.get(ws_id, {})
-        # note（選配）＝涵蓋範圍例外說明：上游把文字放在 PZ 翻譯表取不到的地方，
-        # 任何翻譯包都補不了。附在摘要後而非另開一欄——實際命中者僅個位數，
-        # 開一整欄會讓 460+ 列全部多一個空格子。
-        summary = " ".join(x for x in (zh.get("summary", ""), zh.get("note", "")) if x)
-        cells = [link, cell(zh.get("name_zh", "")), cell(summary), ids, str(key_count)]
+        # note（選配）＝涵蓋範圍例外說明：上游把文字放在 PZ 翻譯表取不到的地方
+        # （Lua 寫死字面、自有文字系統、鍵前綴不在 getTextInternal 路由表），
+        # 任何翻譯包都補不了。獨立一欄＝「已查證有此類文字的 MOD」可掃清單；
+        # 空欄意為「未發現或未查證」，**不主動全庫普查**，遇到（多為玩家回報）才查證登記。
+        cells = [
+            link,
+            cell(zh.get("name_zh", "")),
+            cell(zh.get("summary", "")),
+            ids,
+            str(key_count),
+            cell(zh.get("note", "")),
+        ]
         if extra:
             cells.append(extra)
         return "| " + " | ".join(cells) + " |"
 
     all_mod_ids = {m for r in active_rows for m in r[2]}
-    lines = ["| MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 |", "| --- | --- | --- | --- | --- |"]
+    lines = [
+        "| MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 涵蓋範圍 |",
+        "| --- | --- | --- | --- | --- | --- |",
+    ]
     lines.extend(row_line(*r) for r in active_rows)
     table = "\n".join(lines)
     print(
@@ -1388,8 +1398,8 @@ def cmd_manifest(check_only: bool = False) -> int:
     removed_section = ""
     if removed_rows:
         rlines = [
-            "| MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 下架偵測 |",
-            "| --- | --- | --- | --- | --- | --- |",
+            "| MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 涵蓋範圍 | 下架偵測 |",
+            "| --- | --- | --- | --- | --- | --- | --- |",
         ]
         rlines.extend(row_line(*r, extra=removed_at.get(r[0]) or "—") for r in removed_rows)
         removed_section = (
@@ -1403,8 +1413,9 @@ def cmd_manifest(check_only: bool = False) -> int:
         "# 支援 MOD 清單\n\n"
         "> 本檔由 `uv run scripts/build_mod.py manifest` 自動生成，請勿手動編輯。\n"
         "> 中文名稱與摘要維護於 `sources/mod_names_zh.json`，修改後重跑 manifest。\n"
-        "> 摘要末尾若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制，"
-        "本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。\n\n"
+        "> 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制"
+        "（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。\n"
+        "> 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。\n\n"
         f"共支援 **{len(active_rows)} 個 Workshop 模組**（{len(all_mod_ids)} 個 mod ID）"
         f"{f'；另 **{len(removed_rows)} 個已下架**（翻譯保留，見文末）' if removed_rows else ''}。\n\n"
         f"{table}\n"

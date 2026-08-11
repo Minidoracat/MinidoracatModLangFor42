@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import contextlib
 import io
+import re
 import sys
 import tempfile
 from pathlib import Path
@@ -90,4 +91,22 @@ for argv in (["build", "--check"], ["--check"]):  # 後者靠 command 預設值�
     else:  # pragma: no cover — main() 一定會 sys.exit
         raise AssertionError(f"{argv} 未被擋下")
 
-print("✅ test_manifest_fresh：6 組情境全過")
+# 7. 表格欄數合約：header／分隔列／資料列的欄數必須齊一。
+#    前六條都是「生成器輸出 vs 生成物」比對，兩邊一起錯照樣全綠——加欄位時改了
+#    header 卻漏改 row_line（或反之）正是這種同步性錯誤，產出的 Markdown 會渲染
+#    錯位而 build／verify／lint 三道無感。欄數寫死＝合約變更必須顯式改這裡。
+page = real.read_text(encoding="utf-8")
+head, sep, tail = page.partition("\n## 已下架模組")
+assert sep, "已下架模組區塊不見了——欄數合約只驗到一半"
+
+
+def _cols(line: str) -> int:
+    """Markdown 表格列的欄數。cell() 把值內的 | 跳脫成 \\|，切欄時不可命中它。"""
+    return len(re.split(r"(?<!\\)\|", line.strip())) - 2
+
+
+for label, chunk, want in (("在架", head, 6), ("已下架", tail, 7)):
+    widths = {_cols(ln) for ln in chunk.splitlines() if ln.startswith("|")}
+    assert widths == {want}, f"{label}表欄數不齊：{sorted(widths)}，應全為 {want}"
+
+print("✅ test_manifest_fresh：7 組情境全過")
