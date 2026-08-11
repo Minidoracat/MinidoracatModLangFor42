@@ -4,13 +4,14 @@
 > 中文名稱與摘要維護於 `sources/mod_names_zh.json`，修改後重跑 manifest。
 > 摘要末尾若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制，本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 
-共支援 **466 個 Workshop 模組**（609 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
+共支援 **468 個 Workshop 模組**（614 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 |
 | --- | --- | --- | --- | --- |
 | [More Traits](https://steamcommunity.com/sharedfiles/filedetails/?id=1299328280) | 更多特質 | 新增大量正負面特質供角色創建選擇，並加入藏品武器與收藏雜誌等相關物品。 | `1299328280/ToadTraits`, `1299328280/ToadTraitsDisablePrepared`, `1299328280/ToadTraitsDisableSpec`, `1299328280/ToadTraitsDynamic`, `ToadTraits`, `ToadTraitsDisablePrepared`, `ToadTraitsDisableSpec`, `ToadTraitsDynamic` | 421 |
 | [Firearms](https://steamcommunity.com/sharedfiles/filedetails/?id=2256623447) | 槍械擴充 | 新增多種真實槍械、彈藥、彈匣與消音器等武器配件。 | `2256623447/firearmmod`, `2256623447/firearmmodbeta`, `2256623447/firearmmodvanilla`, `firearmmod`, `firearmmodbeta`, `firearmmodvanilla` | 348 |
 | [Combat Text (B40+B41+B42)](https://steamcommunity.com/sharedfiles/filedetails/?id=2286124931) | 戰鬥文字 | 顯示浮動傷害數值與生命值等戰鬥資訊，字體與顏色皆可自訂。 | `CombatText` | 35 |
+| [Better Sorting〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=2313387159) | 更好的分類（原版） | 重新整理物品顯示類別的原版 mod（v2.1.0 全面翻修），物品欄分類與篩選更精細。 | `BetterSortCC` | 36 |
 | [Authentic Z](https://steamcommunity.com/sharedfiles/filedetails/?id=2335368829) | Authentic Z | 新增大量服裝與背包等外觀內容，並加入可用的電鋸工具。 | `Authentic Z - Current`, `AuthenticZBackpacks+`, `AuthenticZLite` | 13 |
 | [Antibodies (v1.97) [B41 + B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=2392676812) | 抗體系統 | 加入抗體對抗感染機制，恢復進度受角色狀態與情緒影響，選項豐富可調。 | `2392676812/lgd_antibodies`, `lgd_antibodies` | 233 |
 | [Conditional-Speech](https://steamcommunity.com/sharedfiles/filedetails/?id=2398253681) | 情境自言自語 | 角色會依當前狀態與情境自言自語，說話可能吸引殭屍，內容可自訂停用。 | `Conditional-Speech` | 998 |
@@ -473,6 +474,7 @@
 | [PhunCure 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3676251425) | PhunCure 2 趣味解藥 | 新增可注射的解藥，能治癒咬傷、殭屍病毒與傷口感染，效果可自訂。 | `phuncure2` | 33 |
 | [Better Vanilla ALICE Suspenders](https://steamcommunity.com/sharedfiles/filedetails/?id=3676721528) | 更好的原版 ALICE 背帶 | 改良原版 ALICE 背帶裝備，並附帶多個出生地點選項描述。 | `bettervanillaalicesuspendersID` | 37 |
 | [Solar Floodlight [42.16] [MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3680577450) | 太陽能探照燈 | 新增可組裝的太陽能探照燈，含電池槽與電池健康度顯示。 | `SolarFloodlight` | 55 |
+| [Gore's SVU4 Core〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3730070661) | Gore 的 SVU4 核心 | 標準化車輛升級 4 核心：車輛裝甲與升級件、車頂架／車頂照明、車輛烤漆；同捆工業流體儲存、備用引擎零件與原版車輛部件製作共 4 個子模組。 | `GoresSVU4Core`, `GoresIndustrialFluidInfrastructure`, `GoresSpareEnginePartsCrafting`, `GoresVanillaVehiclePartsCrafting` | 247 |
 | [Mirage Wardrobe: Multiplayer Transmog [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3770186452) | 幻裝衣櫥：多人連線幻化 | 以裝備部位為單位的服裝幻化衣櫥，變更角色外觀而不影響實際裝備數值；支援收藏解鎖、款式染色、套裝預設、人物觀察窗與多人連線同步。 | `MirageWardrobe42` | 284 |
 
 ## 已下架模組（15 個，翻譯保留）
