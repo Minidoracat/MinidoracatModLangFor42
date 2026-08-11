@@ -212,7 +212,7 @@
 | [Mixology](https://steamcommunity.com/sharedfiles/filedetails/?id=3405131820) | Mixology 調酒 | 新增調飲相關內容，包含奶昔杯與能量飲料等液體物品。 | `DummyFluidMod`, `Mixology` | 2 |
 | [Autotsar Tuning Atelier - Fjord Mustard [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3405178154) | Autotsar 改裝工坊 - Fjord Mustard | 新增可改裝的福特野馬風格車輛，生成率可由沙盒選項調整。 | `ATA_Mustang` | 3 |
 | [Sapph's Cooking [B42+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3409143790) | Sapph 的烹飪 | 新增烹飪相關內容，包含保溫杯、果汁與能量飲料等飲品物品。 | `SapphCooking_B42` | 4 |
-| [Dynamic Emergency TV Channel](https://steamcommunity.com/sharedfiles/filedetails/?id=3409272479) | 動態緊急電視頻道 | 新增可自訂的緊急廣播電視頻道，節目內容與時段皆可設定。 | `EmergencyTVChannel` | 115 |
+| [Dynamic Emergency TV Channel](https://steamcommunity.com/sharedfiles/filedetails/?id=3409272479) | 動態緊急電視頻道 | 新增可自訂的緊急廣播電視頻道，節目內容與時段皆可設定。 ⚠️ 沙盒設定與媒體標題有中文；播報台詞 830 句本包已備妥譯文，但該 MOD 取用的鍵名不在遊戲翻譯機制的路由上，它會落回自己寫死的英文表，播報內容維持英文。 | `EmergencyTVChannel` | 115 |
 | ['84 Jeep XJ Cherokee](https://steamcommunity.com/sharedfiles/filedetails/?id=3409287192) | '84 Jeep XJ Cherokee | 新增 1984 年 Jeep Cherokee XJ 車輛，含警用、護林員等多種版本。 | `84jeepXJ` | 7 |
 | [W900 Semi-Truck [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3409472393) | W900 半掛卡車 | 新增 W900 半掛卡車與拖車，含裝甲、車輪等多種改裝零件。 | `RotatorsLib`, `rSemiTruck` | 137 |
 | [Alarm Syndrome](https://steamcommunity.com/sharedfiles/filedetails/?id=3409527910) | 鬧鐘症候群 | 改善鬧鐘管理，可自動取消鬧鐘、顯示圖示並從右鍵選單快速取消。 | `P4AlarmSyndrome` | 8 |
