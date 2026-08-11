@@ -13,6 +13,7 @@ MinidoracatModLangFor42 build 管線（PZ B42 如一模組翻譯繁中版）
 命令：
   build     - 合併去重 + corpus/worklist/placeholder gate → 寫出成品（預設）
   manifest  - 由 metadata.json + mod_names_zh.json 生成 SUPPORTED_MODS.md，並更新 README 統計摘要
+              （--check：只驗不寫，生成物與來源不同步即退出 1）
 
 真相模型：CN 為衍生佈局的 canonical import；CH 為 sources/ch/ 人工真相 corpus
 （已斷絕 OpenCC 機轉；新增/變更鍵由 AI/人工對照 EN＋術語表直譯後落 corpus）。
@@ -66,7 +67,9 @@ OUT_LUA = MOD_MEDIA / "lua" / "client"
 
 README = PROJECT_ROOT / "README.md"
 SUPPORTED_MODS_MD = PROJECT_ROOT / "SUPPORTED_MODS.md"
-MOD_NAMES_ZH_JSON = SOURCES / "mod_names_zh.json"  # 人工真相：{wid: {name_zh, summary}}
+# 人工真相：{wid: {name_zh, summary, note?}}。note＝涵蓋範圍例外說明（渲染時接在摘要後，
+# 慣例以 ⚠️ 起頭）：上游把文字放在 PZ 翻譯表取不到的位置，任何翻譯包都補不了。
+MOD_NAMES_ZH_JSON = SOURCES / "mod_names_zh.json"
 MANIFEST_START = "<!-- SUPPORTED_MODS_START -->"
 MANIFEST_END = "<!-- SUPPORTED_MODS_END -->"
 WORKSHOP_URL = "https://steamcommunity.com/sharedfiles/filedetails/?id={}"
@@ -1302,14 +1305,22 @@ def report_unused(
 # ============================================================
 # manifest 命令
 # ============================================================
-def cmd_manifest() -> int:
+def cmd_manifest(check_only: bool = False) -> int:
+    """check_only=True：不寫檔，產物與來源不同步即回傳 1。
+
+    存在理由：SUPPORTED_MODS.md／README 摘要是生成物，但**沒有任何 gate 攔得到漂移**——
+    改了 sources 卻沒重跑 manifest，文件就靜默停留在舊數字。實例：`cfcf3d8` 給
+    3628922658 補了 18 個裸 ItemName 鍵（總數 628→646），文件卻一直寫 628，
+    直到隔天有人剛好重生才發現。回歸測試 `scripts/test_manifest_fresh.py`。
+    """
     print("=" * 60)
     print("manifest：由 metadata.json 彙整 README 支援清單")
     print("=" * 60)
 
     if not MODS_DIR.is_dir():
+        # check 模式 fail-closed：來源缺席＝「無法驗證」，不是「驗過沒問題」。
         print("⚠️ 找不到 sources/mods/，README 未更新。")
-        return 0
+        return 1 if check_only else 0
 
     rows: list[tuple[str, str, list[str], int]] = []
     for mod_dir in sorted(MODS_DIR.iterdir()):
@@ -1333,13 +1344,15 @@ def cmd_manifest() -> int:
 
     if not rows:
         print("⚠️ sources/mods/ 無任何 MOD 目錄，未更新。")
-        return 0
+        return 1 if check_only else 0
 
     names_zh: dict = load_json(MOD_NAMES_ZH_JSON) if MOD_NAMES_ZH_JSON.exists() else {}
 
     def cell(text: str) -> str:
-        # Markdown 表格安全：去換行、跳脫直線
-        return str(text).replace("\n", " ").replace("|", "\\|").strip() or "—"
+        # Markdown 表格安全：去換行、跳脫直線。**CR 也要去**——JSON 字串合法帶 \r，
+        # 殘留的 CR 被 Markdown parser 當換行，整列會被拆斷。
+        out = str(text).replace("\r", " ").replace("\n", " ").replace("|", "\\|")
+        return out.strip() or "—"
 
     # 已下架標記來自 tracker state（tracker.py 每日維護；缺檔＝視為全部在架）
     ts_path = PROJECT_ROOT / "tracker-state" / "timestamps.json"
@@ -1354,7 +1367,11 @@ def cmd_manifest() -> int:
         link = f"[{cell(name)}]({WORKSHOP_URL.format(ws_id)})"
         ids = ", ".join(f"`{m}`" for m in mod_ids) if mod_ids else "—"
         zh = names_zh.get(ws_id, {})
-        cells = [link, cell(zh.get("name_zh", "")), cell(zh.get("summary", "")), ids, str(key_count)]
+        # note（選配）＝涵蓋範圍例外說明：上游把文字放在 PZ 翻譯表取不到的地方，
+        # 任何翻譯包都補不了。附在摘要後而非另開一欄——實際命中者僅個位數，
+        # 開一整欄會讓 460+ 列全部多一個空格子。
+        summary = " ".join(x for x in (zh.get("summary", ""), zh.get("note", "")) if x)
+        cells = [link, cell(zh.get("name_zh", "")), cell(summary), ids, str(key_count)]
         if extra:
             cells.append(extra)
         return "| " + " | ".join(cells) + " |"
@@ -1385,22 +1402,30 @@ def cmd_manifest() -> int:
     page = (
         "# 支援 MOD 清單\n\n"
         "> 本檔由 `uv run scripts/build_mod.py manifest` 自動生成，請勿手動編輯。\n"
-        "> 中文名稱與摘要維護於 `sources/mod_names_zh.json`，修改後重跑 manifest。\n\n"
+        "> 中文名稱與摘要維護於 `sources/mod_names_zh.json`，修改後重跑 manifest。\n"
+        "> 摘要末尾若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制，"
+        "本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。\n\n"
         f"共支援 **{len(active_rows)} 個 Workshop 模組**（{len(all_mod_ids)} 個 mod ID）"
         f"{f'；另 **{len(removed_rows)} 個已下架**（翻譯保留，見文末）' if removed_rows else ''}。\n\n"
         f"{table}\n"
         f"{removed_section}"
     )
+    drift: list[str] = []
     old_page = SUPPORTED_MODS_MD.read_text(encoding="utf-8") if SUPPORTED_MODS_MD.exists() else None
     if page != old_page:
-        SUPPORTED_MODS_MD.write_text(page, encoding="utf-8", newline="\n")
-        print(f"✅ 已更新 {SUPPORTED_MODS_MD.name}（{len(rows)} 個 MOD）")
+        if check_only:
+            drift.append(SUPPORTED_MODS_MD.name)
+            print(f"❌ {SUPPORTED_MODS_MD.name} 與來源不同步（需重跑 manifest）")
+        else:
+            SUPPORTED_MODS_MD.write_text(page, encoding="utf-8", newline="\n")
+            print(f"✅ 已更新 {SUPPORTED_MODS_MD.name}（{len(rows)} 個 MOD）")
     else:
         print(f"ℹ️ {SUPPORTED_MODS_MD.name} 內容未變動")
 
     if not README.exists():
+        # 同上的 fail-closed：README 缺席代表摘要那半段沒驗到，不可因另一半同步就報綠。
         print(f"⚠️ README 不存在（{README.name}），跳過更新。")
-        return 0
+        return 1 if (check_only or drift) else 0
     content = README.read_text(encoding="utf-8")
     pattern = re.compile(
         re.escape(MANIFEST_START) + r".*?" + re.escape(MANIFEST_END), re.DOTALL
@@ -1419,11 +1444,15 @@ def cmd_manifest() -> int:
     replacement = f"{MANIFEST_START}\n{summary_line}\n{MANIFEST_END}"
     updated = pattern.sub(lambda _m: replacement, content)
     if updated != content:
-        README.write_text(updated, encoding="utf-8", newline="\n")
-        print(f"✅ 已更新 {README.name} 支援清單摘要")
+        if check_only:
+            drift.append(README.name)
+            print(f"❌ {README.name} 支援清單摘要與來源不同步（需重跑 manifest）")
+        else:
+            README.write_text(updated, encoding="utf-8", newline="\n")
+            print(f"✅ 已更新 {README.name} 支援清單摘要")
     else:
         print("ℹ️ README 支援清單摘要未變動")
-    return 0
+    return 1 if drift else 0
 
 
 # ============================================================
@@ -1437,6 +1466,7 @@ def main() -> None:
 使用範例：
   uv run scripts/build_mod.py build      # 合併 + corpus/worklist/placeholder gate + 寫出（預設）
   uv run scripts/build_mod.py manifest   # 生成 SUPPORTED_MODS.md + 更新 README 摘要
+  uv run scripts/build_mod.py manifest --check   # 只驗生成物是否與來源同步（不寫檔，有漂移退出 1）
         """,
     )
     parser.add_argument(
@@ -1446,12 +1476,20 @@ def main() -> None:
         choices=["build", "manifest"],
         help="執行的命令（預設：build）",
     )
+    parser.add_argument(
+        "--check", action="store_true",
+        help="僅 manifest：不寫檔，生成物與來源不同步即退出 1",
+    )
     args = parser.parse_args()
+    # --check 只對 manifest 有意義。不擋的話 `build --check` 會被默默接受並跑真正的
+    # 寫入式 build——使用者以為在 dry-run，實際成品已經被覆蓋。
+    if args.check and args.command != "manifest":
+        parser.error("--check 僅適用於 manifest 命令")
 
     if args.command == "build":
         sys.exit(cmd_build())
     elif args.command == "manifest":
-        sys.exit(cmd_manifest())
+        sys.exit(cmd_manifest(check_only=args.check))
 
 
 if __name__ == "__main__":

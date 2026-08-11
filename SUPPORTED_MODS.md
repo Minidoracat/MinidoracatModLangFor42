@@ -2,6 +2,7 @@
 
 > 本檔由 `uv run scripts/build_mod.py manifest` 自動生成，請勿手動編輯。
 > 中文名稱與摘要維護於 `sources/mod_names_zh.json`，修改後重跑 manifest。
+> 摘要末尾若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制，本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 
 共支援 **466 個 Workshop 模組**（609 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
 
@@ -415,7 +416,7 @@
 | [[B42.13] Simple Slings Mod - Rifle Slings Only](https://steamcommunity.com/sharedfiles/filedetails/?id=3625951765) | 簡易背帶模組（僅步槍背帶） | 新增武器背帶，可將步槍揹在肩上或背部快捷欄位。 | `OmniSimplesling` | 15 |
 | [Hoarder's Delight - Box & Carton Bulk Packing [42.19 + 42.18]](https://steamcommunity.com/sharedfiles/filedetails/?id=3626823538) | 囤積者之樂：整盒整箱打包 | 可將大量物品打包成整盒或整箱，方便囤積與搬運。 | `OCsPacking` | 358 |
 | [PhunCure](https://steamcommunity.com/sharedfiles/filedetails/?id=3628843367) | PhunCure 趣味解藥 | 新增可治癒咬傷、殭屍病毒與傷口感染的解藥系統，選項可調。 | `phuncure` | 29 |
-| [Printer3D: Manufacturing & Recycling System〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3628922658) | 3D 列印：製造與回收系統 | 新增 3D 列印機與塑膠回收系統，可掃描並列印多種物品。 | `3DPrinter` | 628 |
+| [Printer3D: Manufacturing & Recycling System〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3628922658) | 3D 列印：製造與回收系統 | 新增 3D 列印機與塑膠回收系統，可掃描並列印多種物品。 | `3DPrinter` | 646 |
 | [[WAR] REDUX](https://steamcommunity.com/sharedfiles/filedetails/?id=3630196063) | [WAR] REDUX | 戰爭主題內容重製版，為遊戲新增額外物品。 | `WAR_REDUX` | 1 |
 | ['69 Dodge Charger](https://steamcommunity.com/sharedfiles/filedetails/?id=3631989559) | 1969 年 Dodge Charger | 新增 1969 年 Dodge Charger 車輛，含多種預設版本與可製作零件。 | `69charger` | 41 |
 | [Automatic Refueling [B42][SP][MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3632134603) | 自動加油 | 讓油泵自動為車輛加油，油泵流速、損壞與修復皆可調整。 | `AutomaticRefuelingB42` | 26 |
@@ -425,7 +426,7 @@
 | [Craft Propane〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3634065654) | 丙烷填充 | 新增以木炭與水填充丙烷罐的配方。 | `CraftPropane` | 3 |
 | [Better Safehouse [B42.20- MP]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3634569678) | 更好的安全屋 | 強化多人連線的安全屋管理：副屋主權限、擴建範圍、主重生點與側邊面板等。 | `BetterSafehouse` | 121 |
 | [Challenge Traits - Headshots, CDDA, and More [42.19 + 42.18]](https://steamcommunity.com/sharedfiles/filedetails/?id=3634630898) | 挑戰特質：爆頭、CDDA 等 | 新增爆頭限定、CDDA 等多種挑戰型特質玩法。 | `OCsChallengeTraits` | 37 |
-| [Dynamic Trading (w/ NPC) B42.16](https://steamcommunity.com/sharedfiles/filedetails/?id=3635333613) | 動態交易（含 NPC） | 新增與 NPC 的動態交易系統，含季節事件、通膨與土匪伏擊。 | `DynamicTrading`, `DynamicTradingCommon`, `DynamicTradingV2` | 136 |
+| [Dynamic Trading (w/ NPC) B42.16](https://steamcommunity.com/sharedfiles/filedetails/?id=3635333613) | 動態交易（含 NPC） | 新增與 NPC 的動態交易系統，含季節事件、通膨與土匪伏擊。 ⚠️ 本包只涵蓋沙盒／伺服器設定；UI、對話與公告共 533 句由該 MOD 自有的文字系統處理，未走遊戲翻譯機制，翻譯包無法覆蓋（見 issue #91）。 | `DynamicTrading`, `DynamicTradingCommon`, `DynamicTradingV2` | 136 |
 | [[B42MP] Frockin Splendor! Vol.5](https://steamcommunity.com/sharedfiles/filedetails/?id=3635394848) | Frockin Splendor! Vol.5 | 服飾擴充包第五輯，為遊戲新增額外服裝內容。 | `GanydeBielovzki's Frockin Splendor! Vol.5` | 37 |
 | [R.U. BMP-2 by Papa_Chad](https://steamcommunity.com/sharedfiles/filedetails/?id=3635550823) | R.U. BMP-2 by Papa_Chad | 新增俄系 BMP-2 步兵戰車，配備 2A42 30mm 機炮。 | `R.U. BMP-2 by Papa_Chad` | 1 |
 | [Show Weapon Stats Plus](https://steamcommunity.com/sharedfiles/filedetails/?id=3635921724) | 顯示武器數值增強版 | 在提示中顯示武器傷害、狀況、精度、噪音等詳細數值，項目可自訂。 | `showweaponstatsplus4213` | 43 |
