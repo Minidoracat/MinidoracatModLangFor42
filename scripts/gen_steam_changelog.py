@@ -11,8 +11,13 @@
 靠人工「複製時記得跳過技術區塊」遲早會漏，而漏掉的後果是把出處行號、內部機制、
 甚至攻擊面描述貼上公開頁面。改由腳本抽取＋轉換，來源單一、規則固定。
 
+受眾切分有兩種寫法，本腳本都吃（家族內兩種 repo 各用一種）：
+- **`### 玩家摘要` 節**（本 repo）：整版只取這一節，`### Added`／`### Fixed` 等
+  維護者向小節全數剔除。不然玩家會收到一整頁鍵名、行號與內部機制。
+- **無該節**（多數 repo）：全節都是玩家層 bullet，只剝 `>` 引用塊。
+
 轉換規則：
-- 只取指定版本那一節；`>` 開頭的引用塊（技術要點）整段剔除
+- 只取指定版本那一節（有 `### 玩家摘要` 就再收斂到該小節）；`>` 引用塊整段剔除
 - `### 小節` → [h3] 加對應 emoji；`- 項目` → [list][*]；4 空格縮排 → 巢狀 [list]
 - `**粗體**` → [b][/b]；反引號整個剝掉（依撰寫規則，玩家層本就不該出現程式碼）
 - 產出後自動跑洩漏掃描（路徑／IP／SteamID／主機名）並在有命中時以非零碼結束
@@ -111,6 +116,15 @@ def main():
         print(f"找不到版本節：{want or '（最新）'}")
         return 2
     body = lines[start:end]
+
+    # 有「玩家摘要」節就只取它——其餘小節（Added/Fixed/Changed…）是維護者向的，
+    # 貼上 Workshop 只會淹掉玩家真正要看的東西。沒有該節的 repo 維持原行為。
+    for i, raw in enumerate(body):
+        if re.match(r"^###\s+玩家摘要\s*$", raw):
+            nxt = next((j for j in range(i + 1, len(body))
+                        if re.match(r"^###\s+", body[j])), len(body))
+            body = body[i + 1:nxt]
+            break
 
     out = [f"[h1]{mod_display_name()} {version}[/h1]"]
     if date:
