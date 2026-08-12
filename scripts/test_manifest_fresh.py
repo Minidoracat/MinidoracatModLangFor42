@@ -105,7 +105,8 @@ def _cols(line: str) -> int:
     return len(re.split(r"(?<!\\)\|", line.strip())) - 2
 
 
-for label, chunk, want in (("在架", head, 6), ("已下架", tail, 7)):
+# 欄位合約：MOD／中文名稱／摘要／Mod IDs／鍵數／覆寫本體／涵蓋範圍（＋已下架區多一欄下架偵測）
+for label, chunk, want in (("在架", head, 7), ("已下架", tail, 8)):
     widths = {_cols(ln) for ln in chunk.splitlines() if ln.startswith("|")}
     assert widths == {want}, f"{label}表欄數不齊：{sorted(widths)}，應全為 {want}"
 

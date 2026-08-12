@@ -290,9 +290,9 @@
     "value": "若勾选, 则需要一根橡胶软管从汽油桶中取出汽油."
   },
   "Stash.json|Stash_P4StealthCamoMap1_Text3": {
-    "as1_value": "当我抵达并命令他放弃抵抗时, 他无视了我的命令并将手伸向了了腰带.",
-    "reason": "As1 上游錯誤：疊字 了了；CH 側早已正確",
-    "value": "当我抵达并命令他放弃抵抗时, 他无视了我的命令并将手伸向了腰带."
+    "as1_value": "当我抵达并命令他放弃抵抗时, 他无视了我的命令并将手伸向了腰带.",
+    "reason": "動作對象改了：舊 EN「reached for something on his belt」，現行譯成「將手伸向了腰帶」（伸向腰帶本身）；新 EN 明寫「reached for the device on his waist」，指的是腰間那個裝置——即 Map2_Text3/Text4 的「那個裝置」",
+    "value": "当我抵达并命令他放弃抵抗时, 他无视了我的命令并将手伸向了腰间的装置."
   },
   "Tooltip.json|Tooltip_ActivatedCharcoal": {
     "as1_value": "医用级活性炭. <LINE> 吸收毒素-治愈食物中毒和毒素中毒. <LINE> 治疗时间: 食物中毒 6 小时, 毒素中毒 12 小时.",
@@ -1069,5 +1069,45 @@
     "as1_value": "在工具损失耐久前所需的挖掘次数",
     "reason": "上游 EN 改寫並新增「與原版鎬/大錘同機制」說明（issue #100）",
     "value": "两次耐久判定之间需完成的挖掘动作次数. 每次判定采用与丁字镐和破墙大锤相同的原版机制."
+  },
+  "Stash.json|Stash_P4StealthCamoMap2_Text5": {
+    "as1_value": "幸运的是, 借助微弱的机器嗡嗡声, 我仍然能看到他, 并设法让他保持在视线范围内.",
+    "reason": "追蹤機制改寫且新增資訊：舊 EN 是「thanks to a faint hum 我仍然看得到他」，現行照譯成「藉助微弱的機器嗡嗡聲, 我仍然能看到他」；新 EN 拆成兩段因果——先「聽見」機械聲，再「專注時才能辨認出他的輪廓（outline）」",
+    "value": "幸运的是, 我能听见机器的嗡嗡声. 只要专注去看, 就能辨认出他的轮廓, 持续掌握他的行踪…"
+  },
+  "UI.json|UI_P4StealthCamo_Options_EasyToFind_Tooltip": {
+    "as1_value": "勾选此项将在各城市预设生成点放置隐形迷彩和研发资料. 此设置一旦启用不可撤销.",
+    "reason": "新 EN 新增兩項舊 EN 沒有的資訊：(1)「Once placed, these items are not removed by disabling this option」——現行只寫「一旦啟用不可撤銷」，未說明停用不會移除已放置物品；(2)「Requires a restart after changing」——現行完全沒有",
+    "value": "启用后, 会在固定的警察局位置额外放置隐形迷彩装置和蓝图. <br>已放置的物品不会因禁用此选项而移除. <br>更改后需要重新启动."
+  },
+  "Sandbox.json|Sandbox_P4ThiefExpansion_WorldSpawn_tooltip": {
+    "as1_value": "启用窃贼技能书的世界生成功能.",
+    "reason": "這筆是真的加了資訊：EN 由「Enables world spawn for Thief Books.」改成「Allows Thief skill books to spawn at fixed locations in the world.」，多出 \"at fixed locations\"（限定為世界中的固定地點生成，而非一般戰利品隨機生成）",
+    "value": "允许盗贼技能书在世界中的固定地点生成."
+  },
+  "UI.json|UI_P4ThiefExpansion_Options_StealthAlpha_Name": {
+    "as1_value": "隐身时透明度",
+    "reason": "EN 由 Transparency 改成 Opacity，是把量測方向講反的錯誤修正，不是潤稿：本滑桿 0=完全透明、10=完全不透明，值越大越不透明，量的是不透明度",
+    "value": "隐身时不透明度"
+  },
+  "UI.json|UI_P4ThiefExpansion_Options_StealthAlpha_Tooltip": {
+    "as1_value": "可调整隐身时角色的透明度. <br>0=完全透明 10=不透明",
+    "reason": "與 _Name 同一處修正必須連動：EN transparency→opacity、\"10=No transparency\"→\"10 = Fully opaque\"",
+    "value": "可调整隐身时角色的不透明度. <br>0=完全透明 10=完全不透明"
+  },
+  "Sandbox.json|Sandbox_P4ThiefExpansion_WorldSpawn": {
+    "as1_value": "窃贼技能书世界生成",
+    "reason": "術語一致：本 mod 技能面板鍵 IGUI_perks_Thief 與 12 個 ItemName 皆作「盜賊／盗贼」，僅此組 2 鍵作「竊賊／窃贼」；與其 tooltip 連動改齊",
+    "value": "盗贼技能书世界生成"
+  },
+  "Sandbox.json|Sandbox_P4ThiefExpansion_MultiplierConfigStealth_tooltip": {
+    "as1_value": "设置隐身技能的升级速度. (需禁用全局经验倍率才能生效)",
+    "reason": "術語一致：該選項名自己作「潛行技能經驗倍率」、技能鍵 IGUI_perks_Stealth 作「潛行」，tooltip 卻寫「隱身技能」（隱身是狀態、潛行是技能）",
+    "value": "设置潜行技能的升级速度. (需禁用全局经验倍率才能生效)"
+  },
+  "Stash.json|Stash_P4StealthCamoMap4_Text1": {
+    "as1_value": "在遥远的西部军事研究所, 有某项最新技术的研发资料.",
+    "reason": "上游 EN 新增 used in those devices，把研發資料明確綁到隱形迷彩裝置；原譯「某項最新技術」失去這層指涉，且下一句 Text2 並未提到裝置、撐不起該關聯",
+    "value": "在遥远的西部军事研究所, 有那些装置所用先进技术的研发资料."
   }
 }

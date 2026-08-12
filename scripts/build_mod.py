@@ -1305,6 +1305,45 @@ def report_unused(
 # ============================================================
 # manifest 命令
 # ============================================================
+def vanilla_override_counts() -> dict[str, int | None]:
+    """`{wid: 該 MOD 覆寫了幾個本體 (檔,鍵)}`；無上游 EN 鏡像可判定者為 `None`。
+
+    **覆寫本體是 MOD 自己的行為**：它在自帶的 `Translate/` 檔裡放了與本體同名的
+    (檔,鍵)，而 PZ 把所有 mod 的翻譯檔 `map.put()` 進同一張全域字串表、後載入者勝
+    （`Translator.java:353`），於是那句官方文字被改掉。本包對這些鍵**一律不出貨**
+    （見「vanilla 出貨抑制」），遊戲內顯示的是本體原譯；但玩家仍該知道「裝了這個 MOD
+    會有官方文字被改動」——尤其像 `UI_B42MP`（多人測試歡迎頁被換成模組作者募款文案）
+    這種與該 MOD 功能無關的改動。故列成 SUPPORTED_MODS.md 的獨立一欄。
+
+    只算 `translate_en`（翻譯檔覆寫），且只算引擎真的會載入的分支——非有效分支的鍵
+    是死資料，計進去只會虛報。
+    """
+    import tracker  # 有效分支規則的單一實作來源，勿在此重寫
+
+    vk = load_json(VANILLA_KEYS_JSON)
+    scoped = {f: set(ks) for f, ks in (vk.get("scoped_keys") or {}).items()}
+    out: dict[str, int | None] = {}
+    for mod_dir in sorted(MODS_DIR.iterdir()):
+        if not mod_dir.is_dir():
+            continue
+        mirror = SOURCES / "en" / f"{mod_dir.name}.json"
+        if not mirror.is_file():
+            out[mod_dir.name] = None      # 多為已下架、無法重新下載者
+            continue
+        recs = load_json(mirror)
+        eff = tracker.resolve_effective_branches(recs)
+        hits = set()
+        for rid in recs:
+            if not rid.startswith("translate_en|") or not tracker.is_effective(rid, eff):
+                continue
+            _, relpath, key = rid.split("|", 2)   # record id ＝ kind|relpath|key
+            fname = relpath.rsplit("/", 1)[-1]
+            if key in scoped.get(fname, ()):
+                hits.add((fname, key))
+        out[mod_dir.name] = len(hits)
+    return out
+
+
 def cmd_manifest(check_only: bool = False) -> int:
     """check_only=True：不寫檔，產物與來源不同步即回傳 1。
 
@@ -1363,6 +1402,14 @@ def cmd_manifest(check_only: bool = False) -> int:
     active_rows = [r for r in rows if r[0] not in removed_at]
     removed_rows = [r for r in rows if r[0] in removed_at]
 
+    overrides = vanilla_override_counts()
+
+    def override_cell(ws_id: str) -> str:
+        n = overrides.get(ws_id)
+        if n is None:
+            return "?"          # 無上游 EN 鏡像（多為已下架、無法重新下載）＝無法判定
+        return f"⚠️ {n}" if n else "—"
+
     def row_line(ws_id, name, mod_ids, key_count, extra: str = "") -> str:
         link = f"[{cell(name)}]({WORKSHOP_URL.format(ws_id)})"
         ids = ", ".join(f"`{m}`" for m in mod_ids) if mod_ids else "—"
@@ -1377,6 +1424,7 @@ def cmd_manifest(check_only: bool = False) -> int:
             cell(zh.get("summary", "")),
             ids,
             str(key_count),
+            override_cell(ws_id),
             cell(zh.get("note", "")),
         ]
         if extra:
@@ -1385,8 +1433,8 @@ def cmd_manifest(check_only: bool = False) -> int:
 
     all_mod_ids = {m for r in active_rows for m in r[2]}
     lines = [
-        "| MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 涵蓋範圍 |",
-        "| --- | --- | --- | --- | --- | --- |",
+        "| MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |",
+        "| --- | --- | --- | --- | --- | --- | --- |",
     ]
     lines.extend(row_line(*r) for r in active_rows)
     table = "\n".join(lines)
@@ -1398,8 +1446,8 @@ def cmd_manifest(check_only: bool = False) -> int:
     removed_section = ""
     if removed_rows:
         rlines = [
-            "| MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 涵蓋範圍 | 下架偵測 |",
-            "| --- | --- | --- | --- | --- | --- | --- |",
+            "| MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 | 下架偵測 |",
+            "| --- | --- | --- | --- | --- | --- | --- | --- |",
         ]
         rlines.extend(row_line(*r, extra=removed_at.get(r[0]) or "—") for r in removed_rows)
         removed_section = (
@@ -1413,6 +1461,13 @@ def cmd_manifest(check_only: bool = False) -> int:
         "# 支援 MOD 清單\n\n"
         "> 本檔由 `uv run scripts/build_mod.py manifest` 自動生成，請勿手動編輯。\n"
         "> 中文名稱與摘要維護於 `sources/mod_names_zh.json`，修改後重跑 manifest。\n"
+        "> 「覆寫本體」欄＝**該 MOD 自己改寫了幾個遊戲本體的官方翻譯鍵**。PZ 把所有 MOD 的翻譯檔"
+        "併進同一張全域字串表、後載入者勝，所以裝了這類 MOD 之後，被它改寫的官方文字就會跟著變"
+        "（例如原版彈匣被改成某槍械 MOD 的專屬名稱，或多人測試歡迎頁被換成模組作者的募款文案）。\n"
+        "> **本包對這些鍵一律不出貨中文**，遊戲內顯示的是遊戲本體自己的譯文，"
+        "所以本包不會幫任何 MOD 把官方文字改掉；此欄純粹是讓你知道**那個 MOD 本身**會動到哪些官方內容。"
+        "數字為引擎實際會載入的分支中，與本體同檔同名的鍵數；`—` 代表沒有，`?` 代表該 MOD"
+        "（多為已下架）取不到上游文本、無法判定。\n"
         "> 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制"
         "（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。\n"
         "> 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。\n\n"
