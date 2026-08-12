@@ -74,7 +74,9 @@ SCHEMA_VERSION = 1
 #     **擷取行為一變就必須 bump**——否則舊基準 schema 相符但語料 hash 不同，下一次 run
 #     會對每個含 Lua 的 mod 開一張假「可能過時」issue（實測 110 張）。schema 不符則走
 #     靜默重建，這正是該機制存在的理由。
-EXTRACTOR_SCHEMA = 7
+#     schema 8（2026-08-12）：上游 Translate JSON 改用 `load_upstream_json` 容錯解析
+#     結尾多餘逗號——先前整檔跳過，等於該檔的鍵對追蹤器與覆蓋率永久不存在。
+EXTRACTOR_SCHEMA = 8
 
 # 只有這些 kind 帶真英文文本，值得落 sources/en/ 鏡像；其餘 script_* 的 value 就是區塊 id
 # 本身（實測 118,307 筆鏡像裡有 60,567 筆 value==key），純屬變更偵測用，留在 hash 台帳即可。
@@ -191,6 +193,63 @@ def now_iso() -> str:
 # ============================================================
 def load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+# 容錯上限：每輪刪一個逗號且字串必然變短，故必定收斂；上限只是病態輸入的保險絲
+_TRAILING_COMMA_LIMIT = 500
+
+
+def _drop_trailing_comma(text: str, pos: int) -> str | None:
+    """把解析器停在 ``pos`` 的那個多餘逗號刪掉；不是這個情形則回 ``None``。
+
+    兩種停點都要處理，**因為訊息與位置隨行尾格式而異**（實測 CPython 3.13）：
+    LF 檔停在逗號本身（``Illegal trailing comma``），CRLF 檔停在後面的 ``}``
+    （``Expecting property name enclosed in double quotes``）。只認前者會讓
+    CRLF 的上游檔案全部落回「整檔跳過」——而上游 mod 用 CRLF 是常態。
+
+    安全性：``pos`` 是解析器**在結構位置**停下的地方，故其字元與往回略過的空白
+    都在字串字面之外，刪掉的逗號必然是結構性的，不會動到值裡的 ``"[x,] "``。
+    """
+    if text[pos : pos + 1] == ",":
+        return text[:pos] + text[pos + 1 :]
+    if text[pos : pos + 1] not in ("}", "]"):
+        return None
+    i = pos - 1
+    while i >= 0 and text[i] in " \t\r\n":
+        i -= 1
+    if i < 0 or text[i] != ",":
+        return None
+    return text[:i] + text[i + 1 :]
+
+
+def load_upstream_json(path: Path) -> tuple[dict, bool]:
+    """讀**上游**模組的 JSON，回傳 (資料, 是否走了容錯路徑)。
+
+    上游翻譯檔常帶結尾多餘逗號——遊戲照樣載入、`json.loads` 直接拋。原本的做法是
+    印一行 stderr 就跳過整檔，等於**該檔的每一個鍵對追蹤器、`sources/en/` 鏡像、
+    coverage 全部不存在，而所有 gate 都是綠的**。2026-08-12 實測 PompsItems
+    （2752664795）四個 EN 檔皆如此，1,766 個鍵長期隱形，其中 104 個是玩家看得到、
+    我方沒出貨的文字（issue #111 表面上只有 7 筆 id-only record，就是這樣藏起來的）。
+
+    **只刪解析器自己停下的那一個逗號**（見 `_drop_trailing_comma`），逐次重試。
+    不可改用 `re.sub(r",(\\s*[}\\]])", ...)` 之類的全文替換——那會連字串值裡的
+    `"list is [x,] here"` 一起改成 `[x]`，靜默竄改上游原文（＝我方 EN 錨點失真）。
+    解析器停下的位置在文法上必然落在字串外，這是本作法唯一安全的理由。
+
+    只對「上游來源」容錯：`sources/` 底下是我方人工真相，壞 JSON 應該炸給人看。
+    """
+    text = path.read_text(encoding="utf-8-sig")
+    lenient = False
+    for _ in range(_TRAILING_COMMA_LIMIT):
+        try:
+            return json.loads(text), lenient
+        except json.JSONDecodeError as exc:
+            fixed = _drop_trailing_comma(text, exc.pos)
+            if fixed is None:
+                raise
+            text = fixed
+            lenient = True
+    raise ValueError(f"{path}：多餘逗號超過 {_TRAILING_COMMA_LIMIT} 個，判定為壞檔而非可容錯的小瑕疵")
 
 
 def write_json(path: Path, data: dict) -> None:
@@ -414,10 +473,14 @@ def _iter_translate_records(mod_dir: Path, lang: str) -> list[tuple[str, str, st
         if not _in_translate_lang(jf, lang):
             continue
         try:
-            data = load_json(jf)
-        except (json.JSONDecodeError, OSError) as exc:
-            print(f"  ⚠️ 壞 JSON 跳過：{jf}（{exc}）", file=sys.stderr)
+            data, lenient = load_upstream_json(jf)
+        # ValueError 涵蓋 JSONDecodeError 與容錯上限——單一壞檔不該炸掉整輪排程
+        except (ValueError, OSError) as exc:
+            # 容錯後仍失敗＝這一整檔的鍵對追蹤器與覆蓋率報表永久不存在，講清楚後果
+            print(f"  ❌ JSON 無法解析，整檔的翻譯鍵將不被追蹤：{jf}（{exc}）", file=sys.stderr)
             continue
+        if lenient:
+            print(f"  ⚠️ JSON 帶結尾多餘逗號，已容錯解析：{jf}", file=sys.stderr)
         if not isinstance(data, dict):
             continue
         # record identity 帶相對路徑（同 basename 不同目錄不互撞；EXTRACTOR_SCHEMA=2）
@@ -2235,7 +2298,40 @@ def cmd_self_test() -> int:
     assert is_effective("translate_en|generated/UI.json|K", eff), "情境13：非分支路徑應放行"
     print("  ✅ 情境13 B42 有效分支（common+最佳版本夾／排除 root 與 legacy .txt）")
 
-    print("\n✅ self-test 十三情境全通過。")
+    # --- 情境14：上游 JSON 帶結尾多餘逗號時仍抽得到鍵（PZ 容忍、Python 不容忍）---
+    # 舊行為是整檔跳過＝該檔的鍵對追蹤器與覆蓋率永久不存在，而所有 gate 都是綠的
+    # （實測 PompsItems 2752664795 因此隱形 1,766 鍵、104 個玩家可見缺口）。
+    with tempfile.TemporaryDirectory() as td:
+        tdir = Path(td) / "mods/M/42/media/lua/shared/Translate/EN"
+        tdir.mkdir(parents=True)
+        # 值裡刻意放 `[x,]` 與 `, }`——全文 regex 版的容錯會把它們一起改掉（實測踩過）。
+        # **行尾兩種都要測**：CPython 對 LF 檔報「Illegal trailing comma」並停在逗號，
+        # 對 CRLF 檔報「Expecting property name」並停在 `}`；只處理前者會讓 CRLF 上游檔全滅。
+        body = '{{{nl} "Base.A": "list is [x,] here",{nl} "Base.B": "brace , }} inside",{nl}}}{nl}'
+        (tdir / "ItemName.json").write_bytes(body.format(nl="\n").encode("utf-8"))
+        (tdir / "ItemNameCRLF.json").write_bytes(body.format(nl="\r\n").encode("utf-8"))
+        (tdir / "UI.json").write_bytes(b'{ "UI_X": "X" }')
+        (tdir / "Broken.json").write_bytes(b'{ "UI_Y": ')  # 容錯也救不回
+        recs = {(r[2], r[3]) for r in _iter_translate_records(Path(td), "EN")}
+        assert ("Base.A", "list is [x,] here") in recs, "情境14：尾逗號檔的鍵被丟棄或值被竄改"
+        assert ("Base.B", "brace , } inside") in recs, "情境14：末鍵漏抽或值被竄改"
+        assert ("UI_X", "X") in recs, "情境14：正常檔受影響"
+        assert not any(k == "UI_Y" for k, _ in recs), "情境14：真正壞掉的 JSON 不該生出記錄"
+        want = {"Base.A": "list is [x,] here", "Base.B": "brace , } inside"}
+        for fname in ("ItemName.json", "ItemNameCRLF.json"):
+            data, lenient = load_upstream_json(tdir / fname)
+            assert lenient, f"情境14：{fname} 應標記為走了容錯路徑"
+            assert data == want, f"情境14：{fname} 容錯把字串值裡的逗號一起刪了（只能刪結構性的那一個）"
+        # 巢狀陣列＋物件各一個尾逗號，逐次修好；正常檔不得標記為容錯
+        multi = Path(td) / "multi.json"
+        multi.write_bytes(b'{"a": ["x", "y",], "b": "z",}')
+        assert load_upstream_json(multi) == ({"a": ["x", "y"], "b": "z"}, True), "情境14：多處尾逗號未修好"
+        clean = Path(td) / "clean.json"
+        clean.write_bytes('{"K": "a, b} c", "L": "[x,]"}'.encode("utf-8"))
+        assert load_upstream_json(clean) == ({"K": "a, b} c", "L": "[x,]"}, False), "情境14：正常檔誤走容錯"
+    print("  ✅ 情境14 上游 JSON 尾逗號容錯（LF/CRLF 皆修、壞 JSON 不生記錄、字串值不被竄改）")
+
+    print("\n✅ self-test 十四情境全通過。")
     return 0
 
 
@@ -2250,7 +2346,7 @@ def main() -> None:
 使用範例：
   uv run scripts/tracker.py gen-watchlist          # 由 sources/mods/ 生成 watchlist.json（含 As1）
   uv run scripts/tracker.py --dry-run --limit 5    # 真打 API 查 5 個時間戳，不下載/不開 issue
-  uv run scripts/tracker.py self-test              # 十二情境 mock 測試
+  uv run scripts/tracker.py self-test              # 十四情境 mock 測試
   uv run scripts/tracker.py check  --out c.json    # workflow check job
   uv run scripts/tracker.py diff   --in c.json --out d.json --steamcmd <path>
   uv run scripts/tracker.py issue  --in d.json     # workflow issue+state job
