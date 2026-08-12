@@ -532,6 +532,13 @@ def _load_vanilla_basis(repo: str) -> tuple[dict[str, set[str]], dict[str, dict]
     if set(data.get("keys") or []) != union:
         raise ValueError("vanilla_keys.json keys 與 scoped_keys 聯集不一致（基準只重生了一半？）")
     keep = data.get("keep", {})
+    # 2026-08-12 使用者裁決：不得覆蓋本體任何一個現有 EN/CH/CN 鍵，一個都不行。
+    # oracle 獨立再擋一次——build 端若被繞過，這裡仍會炸。
+    if keep:
+        raise ValueError(
+            f"vanilla_keys.json 的 keep 有 {len(keep)} 條登記（{sorted(keep)[:5]}）；"
+            "本包不得覆蓋本體任何現有翻譯鍵，keep 必須維持全空"
+        )
     if not isinstance(keep, dict) or not all(
         isinstance(s, dict)
         and isinstance(s.get("anchor"), str)

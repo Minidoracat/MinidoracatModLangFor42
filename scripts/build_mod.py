@@ -524,6 +524,16 @@ def load_vanilla_scoped() -> tuple[dict[str, set[str]], dict[str, dict]]:
         )
         sys.exit(1)
     keep = data.get("keep", {})
+    # 2026-08-12 使用者裁決：**MOD 翻譯不得覆蓋本體任何一個現有 EN/CH/CN 鍵，一個都不行。**
+    # keep 欄位保留（避免舊資料讀不動）但不再是放行通道——非空即拒絕出貨。
+    if keep:
+        print(
+            f"❌ vanilla_keys.json 的 keep 有 {len(keep)} 條登記：{sorted(keep)[:5]}。"
+            "本包不得覆蓋本體任何一個現有翻譯鍵（使用者裁決，無例外），keep 必須維持全空；"
+            "要處理個別鍵請改用 sources/unshipped_keys.json 或直接移除該鍵的譯文。",
+            file=sys.stderr,
+        )
+        sys.exit(1)
     if not isinstance(keep, dict) or not all(
         isinstance(s, dict)
         and isinstance(s.get("anchor"), str)
@@ -1306,7 +1316,7 @@ def report_unused(
 # manifest 命令
 # ============================================================
 def vanilla_override_counts() -> dict[str, int | None]:
-    """`{wid: 該 MOD 覆寫了幾個本體 (檔,鍵)}`；無上游 EN 鏡像可判定者為 `None`。
+    """`{wid: 該 MOD 覆寫了幾個本體 (檔,鍵)}`——**下限**；完全無資料可判定者為 `None`。
 
     **覆寫本體是 MOD 自己的行為**：它在自帶的 `Translate/` 檔裡放了與本體同名的
     (檔,鍵)，而 PZ 把所有 mod 的翻譯檔 `map.put()` 進同一張全域字串表、後載入者勝
@@ -1315,8 +1325,18 @@ def vanilla_override_counts() -> dict[str, int | None]:
     會有官方文字被改動」——尤其像 `UI_B42MP`（多人測試歡迎頁被換成模組作者募款文案）
     這種與該 MOD 功能無關的改動。故列成 SUPPORTED_MODS.md 的獨立一欄。
 
-    只算 `translate_en`（翻譯檔覆寫），且只算引擎真的會載入的分支——非有效分支的鍵
-    是死資料，計進去只會虛報。
+    **兩個來源取聯集**，缺一都會漏報，而漏報的代價是玩家被告知「這個 MOD 不動官方
+    文字」而其實會動：
+
+    1. `sources/en/<wid>.json`——上游自帶 EN 翻譯檔（只算 `translate_en`，且只算引擎
+       真的會載入的分支；非有效分支是死資料，計進去只會虛報）。
+    2. `sources/mods/<wid>/CN/`——As1 收錄的該 mod 譯文。**這一路不可省**：mod 可以
+       只在自己的 CN／CH 檔覆寫本體鍵而 EN 檔沒有，只看 EN 就是重蹈
+       `extract_vanilla_keys` 舊版的覆轍（2026-08-12 codex review 抓到：`3633421539`
+       的 `Tooltip_item_Weight` 只在 CN 側；改聯集後另有 25 個 mod 由「—」變成有碰撞）。
+
+    **回傳值是下限**：上游自帶的 CN/CH 檔我方沒有鏡像，覆寫只存在於那裡的鍵仍數不到。
+    故渲染成 `≥N`，且 `—` 只代表「在這兩個口徑下未發現」，不是「保證沒有」。
     """
     import tracker  # 有效分支規則的單一實作來源，勿在此重寫
 
@@ -1326,21 +1346,31 @@ def vanilla_override_counts() -> dict[str, int | None]:
     for mod_dir in sorted(MODS_DIR.iterdir()):
         if not mod_dir.is_dir():
             continue
+        hits: set[tuple[str, str]] = set()
+        seen_any = False
+
         mirror = SOURCES / "en" / f"{mod_dir.name}.json"
-        if not mirror.is_file():
-            out[mod_dir.name] = None      # 多為已下架、無法重新下載者
-            continue
-        recs = load_json(mirror)
-        eff = tracker.resolve_effective_branches(recs)
-        hits = set()
-        for rid in recs:
-            if not rid.startswith("translate_en|") or not tracker.is_effective(rid, eff):
-                continue
-            _, relpath, key = rid.split("|", 2)   # record id ＝ kind|relpath|key
-            fname = relpath.rsplit("/", 1)[-1]
-            if key in scoped.get(fname, ()):
-                hits.add((fname, key))
-        out[mod_dir.name] = len(hits)
+        if mirror.is_file():
+            seen_any = True
+            recs = load_json(mirror)
+            eff = tracker.resolve_effective_branches(recs)
+            for rid in recs:
+                if not rid.startswith("translate_en|") or not tracker.is_effective(rid, eff):
+                    continue
+                _, relpath, key = rid.split("|", 2)   # record id ＝ kind|relpath|key
+                fname = relpath.rsplit("/", 1)[-1]
+                if key in scoped.get(fname, ()):
+                    hits.add((fname, key))
+
+        cn_dir = mod_dir / "CN"
+        if cn_dir.is_dir():
+            seen_any = True
+            for jf in sorted(cn_dir.glob("*.json")):
+                for key in load_json(jf):
+                    if key in scoped.get(jf.name, ()):
+                        hits.add((jf.name, key))
+
+        out[mod_dir.name] = len(hits) if seen_any else None
     return out
 
 
@@ -1407,8 +1437,8 @@ def cmd_manifest(check_only: bool = False) -> int:
     def override_cell(ws_id: str) -> str:
         n = overrides.get(ws_id)
         if n is None:
-            return "?"          # 無上游 EN 鏡像（多為已下架、無法重新下載）＝無法判定
-        return f"⚠️ {n}" if n else "—"
+            return "?"          # 兩個來源都沒有（多為已下架、無法重新下載）＝無法判定
+        return f"⚠️ ≥{n}" if n else "—"
 
     def row_line(ws_id, name, mod_ids, key_count, extra: str = "") -> str:
         link = f"[{cell(name)}]({WORKSHOP_URL.format(ws_id)})"
@@ -1465,9 +1495,10 @@ def cmd_manifest(check_only: bool = False) -> int:
         "併進同一張全域字串表、後載入者勝，所以裝了這類 MOD 之後，被它改寫的官方文字就會跟著變"
         "（例如原版彈匣被改成某槍械 MOD 的專屬名稱，或多人測試歡迎頁被換成模組作者的募款文案）。\n"
         "> **本包對這些鍵一律不出貨中文**，遊戲內顯示的是遊戲本體自己的譯文，"
-        "所以本包不會幫任何 MOD 把官方文字改掉；此欄純粹是讓你知道**那個 MOD 本身**會動到哪些官方內容。"
-        "數字為引擎實際會載入的分支中，與本體同檔同名的鍵數；`—` 代表沒有，`?` 代表該 MOD"
-        "（多為已下架）取不到上游文本、無法判定。\n"
+        "所以本包不會幫任何 MOD 把官方文字改掉；此欄純粹是讓你知道**那個 MOD 本身**會動到哪些官方內容。\n"
+        "> 數字取自「該 MOD 自帶的英文翻譯檔（只算引擎會載入的分支）」與「本包收錄的該 MOD 中文譯文」兩個來源的聯集，"
+        "**是下限故標成 `≥`**——MOD 自帶的中文檔本包沒有鏡像，只存在於那裡的覆寫數不到。"
+        "`—` 代表在這兩個來源裡沒發現，不等於保證沒有；`?` 代表該 MOD（多為已下架）兩個來源都取不到、無法判定。\n"
         "> 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制"
         "（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。\n"
         "> 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。\n\n"

@@ -92,31 +92,24 @@ with tempfile.TemporaryDirectory() as td:
         assert "IGUI_ModOnly" in m["IG_UI.json"], f"{label} 誤刪模組自有鍵 IGUI_ModOnly"
     assert set(cn["ItemName.json"]) == set(ch["ItemName.json"]), "CN/CH 剔除不對稱（會破 [2] 鏡像）"
 
-# --- 2. build：keep 登記的鍵保留；錨點相符無錯 -------------------------------- #
-with tempfile.TemporaryDirectory() as td:
-    vk = Path(td) / "sources" / "vanilla_keys.json"
-    write_vanilla_keys(vk, keep={"ItemName.json|Base.Shotgun": keep_spec(sha16("雷明頓M870"))})
-    build_mod.VANILLA_KEYS_JSON = vk
-    cn, ch = fresh_maps()
-    dropped, kept, anchor_errors = build_mod.suppress_vanilla(cn, ch)
-
-    assert dropped == 2, f"keep 一鍵時應剔除 2 個，實得 {dropped}"
-    assert kept == ["ItemName.json|Base.Shotgun"], f"keep 豁免未回報：{kept}"
-    assert not anchor_errors, f"錨點相符卻報錯：{anchor_errors}"
-    assert ch["ItemName.json"]["Base.Shotgun"] == "雷明頓M870", "keep 鍵被誤刪"
-    assert cn["ItemName.json"]["Base.Shotgun"] == "雷明顿M870", "keep 鍵 CN 側被誤刪"
-
-# --- 3. build：keep 錨點漂移 → 阻斷錯誤（豁免是對「當時那個值」的背書） -------- #
-with tempfile.TemporaryDirectory() as td:
-    vk = Path(td) / "sources" / "vanilla_keys.json"
-    write_vanilla_keys(vk, keep={"ItemName.json|Base.Shotgun": keep_spec(sha16("舊值"))})
-    build_mod.VANILLA_KEYS_JSON = vk
-    cn, ch = fresh_maps()
-    _, kept, anchor_errors = build_mod.suppress_vanilla(cn, ch)
-
-    assert kept == ["ItemName.json|Base.Shotgun"], "keep 鍵仍應被視為豁免"
-    assert len(anchor_errors) == 1, f"錨點漂移未阻斷：{anchor_errors}"
-    assert "keep 錨點失效" in anchor_errors[0], f"錯誤訊息不對：{anchor_errors[0]}"
+# --- 2/3. keep 不再是放行通道：非空即 fail-closed（2026-08-12 使用者裁決）------- #
+# 「MOD 翻譯不得覆蓋本體任何一個現有 EN/CH/CN 鍵，一個都不行」。keep 欄位保留只為了
+# 讓舊資料讀得動，但 build 與 oracle 都不再據它放行——留著豁免通道，原則就只是口號。
+for label, spec in (("錨點相符", keep_spec(sha16("雷明頓M870"))), ("錨點漂移", keep_spec(sha16("舊值")))):
+    with tempfile.TemporaryDirectory() as td:
+        vk = Path(td) / "sources" / "vanilla_keys.json"
+        write_vanilla_keys(vk, keep={"ItemName.json|Base.Shotgun": spec})
+        build_mod.VANILLA_KEYS_JSON = vk
+        try:
+            build_mod.suppress_vanilla(*fresh_maps())
+            raise AssertionError(f"build 對非空 keep（{label}）未 fail-closed——豁免通道還開著")
+        except SystemExit as exc:
+            assert exc.code == 1, f"應以 exit 1 中止，實得 {exc.code}"
+        try:
+            verify_dist._load_vanilla_basis(str(Path(td)))
+            raise AssertionError(f"oracle 對非空 keep（{label}）未 fail-closed")
+        except ValueError as exc:
+            assert "keep" in str(exc), f"錯誤訊息未指出 keep：{exc}"
 
 # --- 4. build/verify：基準不可信 → fail-closed 的各種形態 --------------------- #
 # 純量級門檻是**假的 fail-closed**：2026-08-10 review 實測，拿掉整個 ItemName.json
@@ -208,7 +201,7 @@ with tempfile.TemporaryDirectory() as td:
     assert "Mod.Gun" not in joined, f"誤報模組自有鍵：{joined}"
     assert sum("Base.Shotgun" in d for d in details) == 2, "CN/CH 兩側都應各報一次"
 
-# --- 6. verify [12]：抑制乾淨的 dist → PASS；keep 登記者放行 ------------------ #
+# --- 6. verify [12]：抑制乾淨的 dist → PASS；有 keep 登記一律 FAIL ------------- #
 with tempfile.TemporaryDirectory() as td:
     repo, dcn, dch = make_repo(td, {"Mod.Gun": "模組槍"})
     ok, details, _ = verify_dist.check_vanilla_collision(repo, dcn, dch)
@@ -220,33 +213,21 @@ with tempfile.TemporaryDirectory() as td:
         {"Base.Shotgun": "雷明頓M870"},
         keep={"ItemName.json|Base.Shotgun": keep_spec(sha16("雷明頓M870"))},
     )
-    ok, details, _ = verify_dist.check_vanilla_collision(repo, dcn, dch)
-    assert ok, f"keep 登記鍵不該被 [12] 攔下：{details}"
+    # 基準不可信一律擲 ValueError 由 verify 主流程轉 FAIL（同其他 fail-closed 形態）
+    try:
+        verify_dist.check_vanilla_collision(repo, dcn, dch)
+        raise AssertionError("有 keep 登記卻沒擋——豁免通道還開著")
+    except ValueError as exc:
+        assert "keep" in str(exc), f"未指出是 keep 問題：{exc}"
 
-# --- 6b. verify [12]：keep 錨點對出貨 CH 值漂移 → FAIL（oracle 獨立於 build 再驗一次） - #
-with tempfile.TemporaryDirectory() as td:
-    repo, dcn, dch = make_repo(
-        td,
-        {"Base.Shotgun": "改過的名字"},
-        keep={"ItemName.json|Base.Shotgun": keep_spec(sha16("雷明頓M870"))},
-    )
-    ok, details, _ = verify_dist.check_vanilla_collision(repo, dcn, dch)
-    assert not ok, "keep 錨點漂移卻判 PASS——dist 被手改也不會被發現"
-    joined = "\n".join(details)
-    assert "keep 錨點失效" in joined, f"錯誤訊息不對：{joined}"
-    assert sum("keep 錨點失效" in d for d in details) == 1, f"錨點只對 CH 值驗一次：{details}"
-
-# --- 7. verify：suppressed_pairs 扣除 keep（dist 面期望的共同基礎） ----------- #
+# --- 7. verify：suppressed_pairs 涵蓋全部 vanilla 鍵（不再有 keep 例外）------- #
 with tempfile.TemporaryDirectory() as td:
     repo = Path(td)
-    write_vanilla_keys(
-        repo / "sources" / "vanilla_keys.json",
-        keep={"ItemName.json|Base.Pistol": keep_spec("deadbeefdeadbeef")},
-    )
+    write_vanilla_keys(repo / "sources" / "vanilla_keys.json")
     pairs = verify_dist.suppressed_pairs(str(repo))
     assert "ItemName.json|Base.Shotgun" in pairs, "vanilla 鍵未納入抑制集合"
+    assert "ItemName.json|Base.Pistol" in pairs, "vanilla 鍵未納入抑制集合"
     assert "IG_UI.json|IGUI_Vanilla" in pairs, "跨檔 vanilla 鍵未納入抑制集合"
-    assert "ItemName.json|Base.Pistol" not in pairs, "keep 登記鍵不該進抑制集合"
     # 檔域語意：同名鍵只在同檔算撞（vanilla 多張地圖檔各帶 title/description 而不互撞）
     assert "IG_UI.json|Base.Shotgun" not in pairs, "抑制集合洩漏成跨檔比對"
 
@@ -274,11 +255,11 @@ with tempfile.TemporaryDirectory() as td:
 # 抑制鍵不在 dist ⇒ 已裁決的鍵一律查不到 ⇒ 全部退回「待裁決」把棘輪炸掉。
 with tempfile.TemporaryDirectory() as td:
     vk = Path(td) / "vanilla_keys.json"
-    write_vanilla_keys(vk, keep={"ItemName.json|Base.Pistol": keep_spec("deadbeefdeadbeef")})
+    write_vanilla_keys(vk)          # keep 恆空——build/verify 已擋掉非空的情形
     lint_ch.VANILLA_KEYS_JSON = vk
     sup = lint_ch._load_suppressed()
     assert "Base.Shotgun" in sup["ItemName.json"], "抑制鍵未納入 lint 排除集合"
-    assert "Base.Pistol" not in sup["ItemName.json"], "keep 鍵不該自 lint 掃描域排除（它會出貨）"
+    assert "Base.Pistol" in sup["ItemName.json"], "抑制鍵未納入 lint 排除集合"
     assert "IGUI_Vanilla" in sup["IG_UI.json"], "跨檔抑制鍵未納入"
 
     vk.write_text(json.dumps({"keys": []}), encoding="utf-8")  # 基準壞損

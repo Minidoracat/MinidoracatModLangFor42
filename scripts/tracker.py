@@ -199,8 +199,19 @@ def load_json(path: Path) -> dict:
 _TRAILING_COMMA_LIMIT = 500
 
 
+def _next_nonspace(text: str, i: int) -> str:
+    while i < len(text) and text[i] in " \t\r\n":
+        i += 1
+    return text[i : i + 1]
+
+
 def _drop_trailing_comma(text: str, pos: int) -> str | None:
     """把解析器停在 ``pos`` 的那個多餘逗號刪掉；不是這個情形則回 ``None``。
+
+    **只認真正的尾逗號**——刪掉後緊接的非空白字元必須是 ``}`` 或 ``]``。少了這道
+    確認就會把「壞掉但不是尾逗號」的 JSON 靜默改成另一份合法資料
+    （2026-08-12 codex review 的反例：``[1,,2]`` → ``[1,2]``、``{,"a":1}`` → ``{"a":1}``），
+    那等於偽造上游原文，比整檔跳過更糟。
 
     兩種停點都要處理，**因為訊息與位置隨行尾格式而異**（實測 CPython 3.13）：
     LF 檔停在逗號本身（``Illegal trailing comma``），CRLF 檔停在後面的 ``}``
@@ -210,14 +221,26 @@ def _drop_trailing_comma(text: str, pos: int) -> str | None:
     安全性：``pos`` 是解析器**在結構位置**停下的地方，故其字元與往回略過的空白
     都在字串字面之外，刪掉的逗號必然是結構性的，不會動到值裡的 ``"[x,] "``。
     """
+    # 先定位候選逗號：停在逗號上就是它；停在收尾括號上則往回略過空白找。
     if text[pos : pos + 1] == ",":
-        return text[:pos] + text[pos + 1 :]
-    if text[pos : pos + 1] not in ("}", "]"):
+        i = pos
+    elif text[pos : pos + 1] in ("}", "]"):
+        i = pos - 1
+        while i >= 0 and text[i] in " \t\r\n":
+            i -= 1
+        if i < 0 or text[i] != ",":
+            return None
+    else:
         return None
-    i = pos - 1
-    while i >= 0 and text[i] in " \t\r\n":
-        i -= 1
-    if i < 0 or text[i] != ",":
+    # 真尾逗號的定義：**後面接收尾括號、前面接一個完整的值**。
+    # 少了任一邊就會把壞檔改成另一份合法資料：後面沒檢查 → `[1,,2]`→`[1,2]`；
+    # 前面沒檢查 → `{,"a":1}`→`{"a":1}`、`{"a":1,,}`→`{"a":1}`。
+    if _next_nonspace(text, i + 1) not in ("}", "]"):
+        return None
+    j = i - 1
+    while j >= 0 and text[j] in " \t\r\n":
+        j -= 1
+    if j < 0 or text[j] in (",", "{", "[", ":"):
         return None
     return text[:i] + text[i + 1 :]
 
@@ -240,7 +263,7 @@ def load_upstream_json(path: Path) -> tuple[dict, bool]:
     """
     text = path.read_text(encoding="utf-8-sig")
     lenient = False
-    for _ in range(_TRAILING_COMMA_LIMIT):
+    for _ in range(_TRAILING_COMMA_LIMIT + 1):   # +1：最後一次修完仍要有機會 parse
         try:
             return json.loads(text), lenient
         except json.JSONDecodeError as exc:
@@ -2326,6 +2349,16 @@ def cmd_self_test() -> int:
         multi = Path(td) / "multi.json"
         multi.write_bytes(b'{"a": ["x", "y",], "b": "z",}')
         assert load_upstream_json(multi) == ({"a": ["x", "y"], "b": "z"}, True), "情境14：多處尾逗號未修好"
+        # 負例：**不是**尾逗號的壞 JSON 一律拒絕，不可靜默「修」成另一份合法資料
+        # （codex review 反例：舊版把 [1,,2] 修成 [1,2]、{,"a":1} 修成 {"a":1}＝偽造上游原文）
+        for i, bad in enumerate((b'[1,,2]', b'{"a":1,,"b":2}', b'{,"a":1}', b'{"a":1,,}')):
+            bp = Path(td) / f"bad{i}.json"
+            bp.write_bytes(bad)
+            try:
+                load_upstream_json(bp)
+                raise AssertionError(f"情境14：壞 JSON {bad!r} 被容錯靜默改成合法資料")
+            except json.JSONDecodeError:
+                pass
         clean = Path(td) / "clean.json"
         clean.write_bytes('{"K": "a, b} c", "L": "[x,]"}'.encode("utf-8"))
         assert load_upstream_json(clean) == ({"K": "a, b} c", "L": "[x,]"}, False), "情境14：正常檔誤走容錯"

@@ -1109,5 +1109,50 @@
     "as1_value": "在遥远的西部军事研究所, 有某项最新技术的研发资料.",
     "reason": "上游 EN 新增 used in those devices，把研發資料明確綁到隱形迷彩裝置；原譯「某項最新技術」失去這層指涉，且下一句 Text2 並未提到裝置、撐不起該關聯",
     "value": "在遥远的西部军事研究所, 有那些装置所用先进技术的研发资料."
+  },
+  "Stash.json|Stash_P4StealthCamoMap1_Text5": {
+    "as1_value": "他还有意识, 所以我把他转送到了罗斯伍德监狱的医疗室.",
+    "reason": "上游 EN 由 I transported 改為 we transported，行為主體由個人變成一組人",
+    "value": "他还有意识, 所以我们把他转送到了罗斯伍德监狱的医疗室."
+  },
+  "Stash.json|Stash_P4StealthCamoMap1_Text6": {
+    "as1_value": "另一名嫌疑人的同伙逃往西北方向, 我已通知勃兰登堡警察局.",
+    "reason": "上游 EN 由 Another of the suspect's accomplices 改為單數 The suspect's accomplice，且通知改為被動 has been notified；原譯的「另一名」與「我已通知」皆已不成立",
+    "value": "嫌疑人的同伙逃往西北方向. 已通知勃兰登堡警察局."
+  },
+  "Stash.json|Stash_P4StealthCamoMap2_Text2": {
+    "as1_value": "奇怪的是, 他被关在了地下单人牢房……他是不是还做了别的事?",
+    "reason": "上游 EN 由 Did he do something else? 改為 What the hell did he do?，並加上 straight into；原譯「是不是還做了別的事」語意與語氣皆已不符",
+    "value": "奇怪的是, 他们直接把他关进了地下单人牢房……他到底做了什么?"
+  },
+  "Stash.json|Stash_P4StealthCamoMap2_Text6": {
+    "as1_value": "罗斯伍德警察局处境艰难, 我一直收到来自路易斯维尔总部的报告.",
+    "reason": "上游 EN 由 getting continuous reports 改為 has not stopped calling——是總部一直來電催，不是我方收到報告",
+    "value": "罗斯伍德警察局似乎焦头烂额, 路易斯维尔总部的电话又打个不停."
+  },
+  "Stash.json|Stash_P4StealthCamoMap3_Text4": {
+    "as1_value": "不过，由于Spiffo被怀疑与爆发事件有关，这位CEO并不配合。",
+    "reason": "上游 EN 新增 still refuses our recovery request（明確拒絕我方的回收要求），原譯僅寫「並不配合」失去指涉",
+    "value": "Spiffo已被怀疑与爆发事件有关，其CEO仍拒绝我们的回收要求。"
+  },
+  "Tooltip.json|Tooltip_Silencer": {
+    "as1_value": "声音传播半径降低80%%, 但射程略微降低",
+    "reason": "多 owner 共用鍵（attribution_index：2256623447 槍械擴充＋3309896124 簡易消音器）。原譯採用簡易消音器專屬的「-80%% 半徑、射程略降」，對槍械擴充（EN 僅 Suppresses the sound of a firing gun.）不成立，改為兩邊皆成立的中性文案",
+    "value": "降低开枪时的声音传播范围."
+  },
+  "UI.json|UI_P4ThiefExpansion_Options_ShowStealingMenu_Tooltip": {
+    "as1_value": "在右键菜单中显示\\\"偷窃\\\"命令.",
+    "reason": "原值含字面反斜線（顯示成 \\\"偷竊\\\"），改用中文引號；CH 用「」、CN 用“”依本包慣例",
+    "value": "在右键菜单中显示“偷窃”命令."
+  },
+  "UI.json|UI_P4ThiefExpansion_Options_ShowStealthMenu_Tooltip": {
+    "as1_value": "在右键菜单中显示\\\"隐藏\\\"命令.",
+    "reason": "原值含字面反斜線（顯示成 \\\"隱藏\\\"），改用中文引號；CH 用「」、CN 用“”依本包慣例",
+    "value": "在右键菜单中显示“隐藏”命令."
+  },
+  "UI.json|UI_P4ThiefExpansion_Options_SoundVolumeStealingFumble_Tooltip": {
+    "as1_value": "可调整偷窃发出声响时的音效音量.",
+    "reason": "EN 為 when a stealing attempt is fumbled（偷竊失手時），原譯「偷竊發出聲響時」漏掉失手這個條件",
+    "value": "可调整偷窃失手时的音效音量."
   }
 }

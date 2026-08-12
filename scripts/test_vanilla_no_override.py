@@ -35,7 +35,9 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_TRANSLATE = Path("D:/SteamLibrary/steamapps/common/ProjectZomboid/media/lua/shared/Translate")
 DIST = ROOT / "MOD/MinidoracatModLangFor42/Contents/mods/MinidoracatModLangFor42/42/media/lua/shared/Translate"
 LANGS = ("EN", "CH", "CN")
-MIN_KEYS = 10000  # 量級守門：遠低於此＝讀到殘缺安裝，不可當成「本體沒幾個鍵」
+MIN_KEYS = 10000        # 本體量級守門：遠低於此＝讀到殘缺安裝，不可當成「本體沒幾個鍵」
+MIN_DIST_FILES = 50     # dist 量級守門：現況 85 檔／10 萬鍵，殘缺 dist 掃出來的零交集沒有意義
+MIN_DIST_KEYS = 20000
 
 
 def load_dir(d: Path) -> dict[str, dict]:
@@ -69,10 +71,28 @@ def main(argv: list[str] | None = None) -> int:
         print(f"❌ 只讀到 {total} 個本體鍵，量級不對——確認 --translate-dir 指向完整安裝。")
         return 1
 
-    # [1] 零覆蓋
+    # [1] 零覆蓋。**先確認 dist 真的在**——空集合對空集合永遠零交集，
+    # 「因為讀不到 dist 所以通過」正是這道防線最該擋住的東西（2026-08-12 codex
+    # review 實測：把 DIST 指向不存在的路徑，舊版照樣印 ✅ 並回傳 0）。
+    dist_maps: dict[str, dict[str, dict]] = {}
+    for lang in ("CN", "CH"):
+        d = DIST / lang
+        if not d.is_dir():
+            print(f"❌ 找不到 dist 目錄 {d}——請先跑 build_mod.py build。無 dist 可掃≠零覆蓋。")
+            return 1
+        dist_maps[lang] = load_dir(d)
+        n_keys = sum(len(v) for v in dist_maps[lang].values())
+        if len(dist_maps[lang]) < MIN_DIST_FILES or n_keys < MIN_DIST_KEYS:
+            print(f"❌ dist/{lang} 只有 {len(dist_maps[lang])} 檔、{n_keys} 鍵，量級不對"
+                  f"（門檻 {MIN_DIST_FILES} 檔／{MIN_DIST_KEYS} 鍵）——掃了殘缺的 dist 等於沒掃。")
+            return 1
+    if set(dist_maps["CN"]) != set(dist_maps["CH"]):
+        print("❌ dist CN/CH 檔案集合不一致，先修 build 再驗零覆蓋。")
+        return 1
+
     hits: list[str] = []
     for lang in ("CN", "CH"):
-        for fname, data in load_dir(DIST / lang).items():
+        for fname, data in dist_maps[lang].items():
             for key in data:
                 if key in base.get(fname, ()):  # 檔域比對：同名鍵只在同檔互撞
                     hits.append(f"{lang}/{fname}|{key}")
