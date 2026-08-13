@@ -12,7 +12,7 @@
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
-| [More Traits](https://steamcommunity.com/sharedfiles/filedetails/?id=1299328280) | 更多特質 | 新增大量正負面特質供角色創建選擇，並加入藏品武器與收藏雜誌等相關物品。 | `1299328280/ToadTraits`, `1299328280/ToadTraitsDisablePrepared`, `1299328280/ToadTraitsDisableSpec`, `1299328280/ToadTraitsDynamic`, `ToadTraits`, `ToadTraitsDisablePrepared`, `ToadTraitsDisableSpec`, `ToadTraitsDynamic` | 421 | ⚠️ ≥1 | — |
+| [More Traits](https://steamcommunity.com/sharedfiles/filedetails/?id=1299328280) | 更多特質 | 新增大量正負面特質供角色創建選擇，並加入藏品武器與收藏雜誌等相關物品。 | `1299328280/ToadTraits`, `1299328280/ToadTraitsDisablePrepared`, `1299328280/ToadTraitsDisableSpec`, `1299328280/ToadTraitsDynamic`, `ToadTraits`, `ToadTraitsDisablePrepared`, `ToadTraitsDisableSpec`, `ToadTraitsDynamic` | 421 | ⚠️ ≥1 | ⚠️ MOD 選項面板頂端的標題與說明共 2 句寫死在 Lua（PZAPIModOptions.lua 的 addTitle/addDescription 未包 getText），任何翻譯包都補不了；其餘特質、物品、沙盒設定與製作配方皆已涵蓋。 |
 | [Firearms](https://steamcommunity.com/sharedfiles/filedetails/?id=2256623447) | 槍械擴充 | 新增多種真實槍械、彈藥、彈匣與消音器等武器配件。 | `2256623447/firearmmod`, `2256623447/firearmmodbeta`, `2256623447/firearmmodvanilla`, `firearmmod`, `firearmmodbeta`, `firearmmodvanilla` | 348 | ⚠️ ≥56 | — |
 | [Combat Text (B40+B41+B42)](https://steamcommunity.com/sharedfiles/filedetails/?id=2286124931) | 戰鬥文字 | 顯示浮動傷害數值與生命值等戰鬥資訊，字體與顏色皆可自訂。 | `CombatText` | 35 | — | — |
 | [Better Sorting〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=2313387159) | 更好的分類（原版） | 重新整理物品顯示類別的原版 mod（v2.1.0 全面翻修），物品欄分類與篩選更精細。 | `BetterSortCC` | 40 | — | — |

@@ -112589,6 +112589,89 @@
     "en": "Sew Click Clack's Accounting Outfit",
     "ch": "縫製喀嗒喀嗒的會計服",
     "cn": "缝制咔嗒咔嗒的会计服"
+   },
+   "Improvise Bandage": {
+    "en": "Improvise Bandage",
+    "ch": "臨時製作繃帶",
+    "cn": "临时制作绷带",
+    "_note": "issue #125：More Traits(1299328280) 的 media/scripts/ToadRecipes.txt 定義 19 個 craftRecipe，但上游只附韓文 Recipes 檔、沒有 EN，故 As1 的 EN 驅動擷取整組漏收，製作頁面全顯示英文。B42 的配方顯示名鍵＝craftRecipe 原名（含空格、無 Recipe_ 前綴）：ISRecipeScrollingListBox.lua:351 → CraftRecipe.getTranslationName() → Translator.getRecipeName():676 直接 recipe.get(name)；ScriptBucket.CreateFromTokenPP 只做 split(\"[{}]\")+trim() 保留空格（42.20.2 反編譯）。en 欄＝配方原名本身（上游即以此當英文顯示文字）。上游韓文檔用的是 B41 時代的 Recipe_* 前綴鍵，在 B42 完全失效，勿照抄。"
+   },
+   "Improvise Splint": {
+    "en": "Improvise Splint",
+    "ch": "臨時製作夾板",
+    "cn": "临时制作夹板"
+   },
+   "Improvise Suture": {
+    "en": "Improvise Suture",
+    "ch": "臨時製作縫合針",
+    "cn": "临时制作缝合针"
+   },
+   "Improvise Suture Holder": {
+    "en": "Improvise Suture Holder",
+    "ch": "臨時製作持針鉗",
+    "cn": "临时制作持针钳"
+   },
+   "Improvise Disinfectant": {
+    "en": "Improvise Disinfectant",
+    "ch": "臨時製作消毒劑",
+    "cn": "临时制作消毒剂"
+   },
+   "Improvise Painkillers": {
+    "en": "Improvise Painkillers",
+    "ch": "臨時製作止痛藥",
+    "cn": "临时制作止痛药"
+   },
+   "Improvise Antibiotics": {
+    "en": "Improvise Antibiotics",
+    "ch": "臨時製作抗生素",
+    "cn": "临时制作抗生素"
+   },
+   "Improvise Betablockers": {
+    "en": "Improvise Betablockers",
+    "ch": "臨時製作β-阻斷劑",
+    "cn": "临时制作β-阻断剂"
+   },
+   "Improvise Antidepressants": {
+    "en": "Improvise Antidepressants",
+    "ch": "臨時製作抗憂鬱藥",
+    "cn": "临时制作抗抑郁药",
+    "_note": "輸出物為 Base.PillsAntiDep：本體包 CH 作「抗憂鬱藥」、官方簡中作「抗抑郁药」，逐邊各自對齊。"
+   },
+   "Improvise Sleeping Pills": {
+    "en": "Improvise Sleeping Pills",
+    "ch": "臨時製作安眠藥",
+    "cn": "临时制作安眠药"
+   },
+   "Mince Corpse into Fertilizer": {
+    "en": "Mince Corpse into Fertilizer",
+    "ch": "將屍體絞成肥料",
+    "cn": "将尸体绞成肥料"
+   },
+   "Make Papier Mache": {
+    "en": "Make Papier Mache",
+    "ch": "製作紙漿",
+    "cn": "制作纸浆"
+   },
+   "Make Papier Mache Sword": {
+    "en": "Make Papier Mache Sword",
+    "ch": "製作紙漿劍",
+    "cn": "制作纸浆剑"
+   },
+   "Make Wood Glue": {
+    "en": "Make Wood Glue",
+    "ch": "製作木膠",
+    "cn": "制作木胶"
+   },
+   "Make Duct Tape": {
+    "en": "Make Duct Tape",
+    "ch": "製作大力膠帶",
+    "cn": "制作管道胶带",
+    "_note": "輸出物為 Base.DuctTape：本體包 CH 作「大力膠帶」、官方簡中作「管道胶带」，屬詞級分歧，兩邊逐筆各自對齊，勿由 ch 機轉。"
+   },
+   "Extract Propane From Corpse": {
+    "en": "Extract Propane From Corpse",
+    "ch": "從屍體提取丙烷",
+    "cn": "从尸体提取丙烷"
    }
   },
   "Sandbox.json": {
@@ -140090,6 +140173,12 @@
     "en": "When enabled, the warning that bathing will start without changing clothes is not displayed when you are already in a bathtub or shower.",
     "ch": "啟用後, 當你已在浴缸或淋浴間內時, 不會顯示將不更換衣物直接開始沐浴的警告.",
     "cn": "启用后, 当你已在浴缸或淋浴间内时, 不会显示将不更换衣物直接开始沐浴的警告."
+   },
+   "UI_trait_slowpoke": {
+    "en": "Slowpoke",
+    "ch": "磨磨蹭蹭",
+    "cn": "磨磨蹭蹭",
+    "_note": "issue #125：MoreTraits - Dynamic 的 MoreTraits - Dynamic.lua:284（有效分支 42.17，該檔無任何 Lua 長註解，確認為活程式碼）在移除 gimp 特質時以 getText(\"UI_trait_slowpoke\") 顯示 halo 文字，但該鍵未定義於任何檔、任何語言。上游 EN 的 UI_trait_gimp 即為 \"Slowpoke\"，可判定作者誤植鍵名，故值與 UI_trait_gimp 一致（磨磨蹭蹭），非自行造詞。【同批已撤】UI_trait_lightdrink/harddrink(+desc) 曾一併登記，後查出唯一 producer MoreTraitsMainCreationMethods.lua:413-414 位於該檔第 1 行 --[[ 至第 426 行 --]] 的整檔註解內、永不執行，且 ToadTraits.txt 未以 character_trait_definition 補回，屬死鍵故移除。教訓：以 regex 掃 getText( 判定活引用時必須先排除 Lua 註解區塊。"
    }
   },
   "MakeUp.json": {
