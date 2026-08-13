@@ -29,17 +29,17 @@ ISRecipeScrollingListBox.lua:351  craftRecipe:getTranslationName()
 
 | 項目 | 數量 |
 | --- | --- |
-| 未收錄的配方顯示名（(wid,鍵) 計次） | **2311** |
-| 去重後的相異鍵 | **2150** |
-| 涉及 MOD | **70** |
+| 未收錄的配方顯示名（(wid,鍵) 計次） | **2260** |
+| 去重後的相異鍵 | **2124** |
+| 涉及 MOD | **67** |
 | 其中在正式服啟用中 | **0** 個 MOD、0 鍵 |
 
 ### 成因分類
 
 - **Class A — 上游根本沒有 EN `Recipes.json`**：1681 鍵 / 38 個 MOD。As1 的擷取以各 MOD 自帶 EN 檔為源，沒有 EN 檔就整組跳過。**issue #125 即此類**。部分 MOD 只留 legacy `Recipes_EN.txt`（B42 只讀 `.json`，等於沒有）。
-- **Class B — 上游有 EN `Recipes.json` 但仍缺**：630 鍵 / 32 個 MOD：
-  - 577 鍵：上游自己的 EN 檔也沒有這個配方名（上游漏建鍵）。
-  - 53 鍵：上游 EN 有、As1 從未收錄——我方收錄缺口，最直接可補。
+- **Class B — 上游有 EN `Recipes.json` 但仍缺**：579 鍵 / 29 個 MOD：
+  - 572 鍵：上游自己的 EN 檔也沒有這個配方名（上游漏建鍵）。
+  - 7 鍵：上游 EN 有、As1 從未收錄——我方收錄缺口，最直接可補。
 
 ## 可重現性與已知誤差
 
@@ -79,7 +79,8 @@ dist `Recipes.json` ＋ `sources/vanilla_keys.json`），**但數字是上限**�
   全部依 `outputs` 的產出物 DisplayName 定名。原本一併登記的 7 個 `tsarslib` 鍵經 codex review
   查出被版本夾遮蔽、屬 dead output，已移除。
 - [x] **Class B「上游 EN 有、As1 未收」——Jigga's Green Fire 68 鍵** — 42.20.2-1.14.0。術語全部錨定本包既有的 240 個 `Greenfire.*` 物品名。
-- [ ] **Class B 其餘** — Pomp's Items 23 鍵待 8 隻小馬譯名裁決（其物品名亦未翻，需一併處理）。
+- [x] **Class B 其餘——Pomp's Items（`2752664795`／`2792387747`）26 個配方名 ＋ 24 個物品名**  — 42.20.2-1.14.0。8 隻小馬先定譯名再一併補物品名與配方名：Fancy Pants 採官方配音譯名  （台版花俏公子／陸版范西潘，兩地維基角色列表載明），Sixer→六號 沿用同 mod 既有   `PINumberNine`→九號 先例，其餘依本包 OC 意譯慣例；句型全部沿用既有 `PINumberNine*` 與  `PIVeenSundown*` 的物品／配方格式。
+- [~] **Class B 表上僅存的 7 個「上游 EN 有」為 More Guitars(`3410974338`) 的 Flying V 系列，  已查明是假缺口**——該 MOD 自帶 166 個活的繁中配方名，玩家看得到中文，**不要補**。
 - [ ] **Class A 1681 鍵** — 無 EN 可對照，須逐 MOD 下載讀 script。
 
 ## 逐 MOD 清單
@@ -102,9 +103,7 @@ dist `Recipes.json` ＋ `sources/vanilla_keys.json`），**但數字是上限**�
 | Todo Caserito 家常料理 | `3600616323` | B |  | 29/147 |  |
 | ADVANCED WARFARE: [WAR] | `3590791727` | A |  | 28/28 |  |
 | 更多吉他 | `3410974338` | B |  | 27/163 | 7 |
-| Pomp 的物品 | `2752664795` | B |  | 26/429 | 23 |
 | 自訂容器 | `2719850086` | A |  | 25/25 |  |
-| Pomp 的物品 - 彩虹小馬 | `2792387747` | B |  | 24/360 | 23 |
 | N.W.M.F. 軍械庫 | `3651242585` | A |  | 24/24 |  |
 | SecretZ 大流行（Alpha） | `3494374578` | A |  | 23/24 |  |
 | 軍用工具組 | `2705406713` | A |  | 22/22 |  |
@@ -146,7 +145,6 @@ dist `Recipes.json` ＋ `sources/vanilla_keys.json`），**但數字是上限**�
 | WarThunderVehicleLibrary | `3399660368` | A |  | 2/2 |  |
 | 唯一療法 | `3580276809` | B |  | 2/2 |  |
 | [WAR] REDUX | `3630196063` | A |  | 2/2 |  |
-| Pomp 的物品 - 純食物版 | `2792348686` | B |  | 1/62 |  |
 | '70 Dodge Challenger | `2873290424` | B |  | 1/25 |  |
 | Guns of 93 | `3183820077` | B |  | 1/88 |  |
 | 簡易消音器 | `3309896124` | A |  | 1/1 |  |
