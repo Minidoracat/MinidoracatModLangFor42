@@ -1181,6 +1181,48 @@ def _is_non_fast_forward(stderr: str) -> bool:
     return "non-fast-forward" in s or "rejected" in s or "fetch first" in s
 
 
+# SUPPORTED_MODS.md／README 支援清單摘要是 manifest 的生成物，而其輸入之一正是本追蹤器
+# 每日刷新的 `sources/en/**`：「覆寫本體」欄由 `build_mod.vanilla_override_counts()` 拿
+# `sources/en/<wid>.json`（濾有效分支、只算 translate_en）對 `vanilla_keys.json` 的
+# `scoped_keys` 取交集算出。排程刷了 EN 鏡像卻不重跑 manifest，生成物就靜默過期，
+# 而 build／verify／lint **沒有任何一道驗生成物新鮮度**。
+# 實例：c8f5064 讓 Hephas 那列停在 `—`（正確值 `⚠️ ≥3`，該 mod 的 B42 分支由 legacy
+# `_EN.txt` 換成 `.json`，三個撞本體的 `UI_prof_*` 首次進入有效集）錯了一整天而三道 gate
+# 全綠；AGENTS.md 另記載 cfcf3d8 同款前例（鍵數錯一整天）。
+# 故 state commit 前一併重生，並與 state 進**同一個 commit** 保持原子性。
+MANIFEST_OUTPUTS = ("SUPPORTED_MODS.md", "README.md")
+
+
+def refresh_manifest() -> bool:
+    """重生 SUPPORTED_MODS.md／README 支援清單摘要。回傳是否成功。
+
+    失敗**不阻斷** state commit——追蹤器停止推進的代價（issue 不再開、上游變更漏偵測）
+    遠大於生成物晚一輪同步，且 state 推進本身是自癒的。呼叫端改以非零退出碼讓 CI 轉紅。
+    """
+    proc = subprocess.run(
+        [sys.executable, str(PROJECT_ROOT / "scripts" / "build_mod.py"), "manifest"],
+        capture_output=True, text=True, cwd=str(PROJECT_ROOT),
+    )
+    if proc.returncode != 0:
+        detail = (proc.stderr or proc.stdout or "").strip()[:500]
+        print(f"  ⚠️ manifest 重生失敗（rc={proc.returncode}）：{detail}", file=sys.stderr)
+        return False
+    return True
+
+
+def state_add_paths() -> list[str]:
+    """state commit 的 pathspec（追蹤器狀態＋EN 鏡像＋manifest 生成物）。
+
+    生產與 self-test 情境 6b 共用同一份，避免兩邊各自維護而漂移。
+    """
+    return [
+        str(TIMESTAMPS_JSON.relative_to(PROJECT_ROOT)),
+        str(EN_CORPUS_HASHES_JSON.relative_to(PROJECT_ROOT)),
+        str(EN_TEXT_DIR.relative_to(PROJECT_ROOT)),
+        *MANIFEST_OUTPUTS,
+    ]
+
+
 def commit_state_with_retry(
     add_paths: list[str],
     message: str,
@@ -1538,17 +1580,16 @@ def cmd_run(args) -> int:
 
     # 提交成功子集 state（僅成功處理者推進 last_success/time_updated）
     _persist_state(ts, meta, ok_ids, removed, corpus_state, corpus_updates, en_texts)
+    manifest_ok = refresh_manifest()  # EN 鏡像變動會改到 SUPPORTED_MODS.md 的「覆寫本體」欄
     status = commit_state_with_retry(
-        [str(TIMESTAMPS_JSON.relative_to(PROJECT_ROOT)),
-         str(EN_CORPUS_HASHES_JSON.relative_to(PROJECT_ROOT)),
-         str(EN_TEXT_DIR.relative_to(PROJECT_ROOT))],
+        state_add_paths(),
         f"chore(tracker): 更新追蹤器狀態 {now_iso()}",
     )
     if status == COMMIT_FAILED:
         print("❌ state commit/push 失敗（下輪自癒）。", file=sys.stderr)
         return 1
     print(f"\n完成：issue {len(plans)} 筆、state {'已提交' if status == COMMIT_OK else '無變更'}。")
-    return 0
+    return 0 if manifest_ok else 1
 
 
 def _diff_changed(changed, watchlist, steamcmd, install_dir, corpus_state, attribution):
@@ -1730,17 +1771,16 @@ def cmd_issue(args) -> int:
         ts, diffs.get("meta", {}), diffs.get("ok_ids", []), diffs.get("removed", []),
         corpus_state, diffs.get("corpus_updates", {}), diffs.get("en_texts", {}),
     )
+    manifest_ok = refresh_manifest()  # EN 鏡像變動會改到 SUPPORTED_MODS.md 的「覆寫本體」欄
     status = commit_state_with_retry(
-        [str(TIMESTAMPS_JSON.relative_to(PROJECT_ROOT)),
-         str(EN_CORPUS_HASHES_JSON.relative_to(PROJECT_ROOT)),
-         str(EN_TEXT_DIR.relative_to(PROJECT_ROOT))],
+        state_add_paths(),
         f"chore(tracker): 更新追蹤器狀態 {now_iso()}",
     )
     if status == COMMIT_FAILED:
         print("❌ state commit/push 失敗（下輪自癒）。", file=sys.stderr)
         return 1
     print(f"完成：issue {len(plans)} 筆、state {'已提交' if status == COMMIT_OK else '無變更'}。")
-    return 0
+    return 0 if manifest_ok else 1
 
 
 # ============================================================
@@ -2146,18 +2186,18 @@ def cmd_self_test() -> int:
     print("  ✅ 情境6 併發 non-fast-forward → fetch-rebase 重試後成功、無重複 commit")
 
     # 情境 6b：生產 commit pathspec 必須存在於工作樹（sources/en 需有 .gitkeep 佔位，
-    # 否則零 EN 落地日的 git add 會 pathspec 失敗、state 永遠 commit 不出去）
-    prod_paths = [
-        str(TIMESTAMPS_JSON.relative_to(PROJECT_ROOT)),
-        str(EN_CORPUS_HASHES_JSON.relative_to(PROJECT_ROOT)),
-        str(EN_TEXT_DIR.relative_to(PROJECT_ROOT)),
-    ]
+    # 否則零 EN 落地日的 git add 會 pathspec 失敗、state 永遠 commit 不出去）。
+    # 另驗 manifest 生成物有進 pathspec——排程刷 sources/en 卻不重生／不提交
+    # SUPPORTED_MODS.md，「覆寫本體」欄就靜默過期而三道 gate 全綠（c8f5064 實例）。
+    prod_paths = state_add_paths()
     for p in prod_paths:
         assert (PROJECT_ROOT / p).exists(), f"情境6b：生產 commit pathspec 不存在：{p}"
+    for out in MANIFEST_OUTPUTS:
+        assert out in prod_paths, f"情境6b：manifest 生成物未進 state commit pathspec：{out}"
     status = commit_state_with_retry(prod_paths, "test", branch="main",
                                      git=fake_git, sleep=lambda _s: None)
     assert status == COMMIT_OK, "情境6b：生產 pathspec 組合應可 add"
-    print("  ✅ 情境6b 生產 commit pathspec（含 sources/en）存在且可 add")
+    print("  ✅ 情境6b 生產 commit pathspec（含 sources/en 與 manifest 生成物）存在且可 add")
 
     # 情境 7：空 baseline 已存在（此 workshop_id 曾記錄空語料）＋上游新增 → 應開 issue（非誤判首跑）
     empty_state = {"mods": {"444": {
