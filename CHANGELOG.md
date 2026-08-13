@@ -4,6 +4,58 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.20.2-1.14.0] - 2026-08-13
+
+### 玩家摘要
+
+> 本節為 Workshop 更新註記用的白話版；以下各節為維護者向的技術細節。
+
+- **修掉 26 個「連沒裝任何模組也會被改掉」的原版官方文字——本版最重要的修正。** PZ 把所有模組的翻譯檔併進同一張表、後載入者勝，所以某些模組改寫原版譯文之後，本包跟著出貨就等於全域改掉官方文字。實際被改掉的包括：多人測試的歡迎與警告畫面被換成某模組作者的募款文案、原版「MSR700 彈匣」被改成特定槍械模組的專屬名稱（吊帶、機械瞄具、.223 彈藥等 7 項同類）、職業「竊賊」的說明被加上原版沒有的偷竊潛行能力、特質「體態優良」的說明被清空成一個空白。這類鍵現在一律不出貨，交還給遊戲本體。
+- **製作頁面補上 164 個配方名。** 起因是玩家回報 More Traits 的製作頁面全是英文，查出來是一整類系統性漏收——模組定義了配方，但沒附英文配方檔（或上游自己也漏建鍵），我們的收錄流程就整組跳過，而且既有的覆蓋率統計完全看不出來。這一版先補完**正式伺服器實際啟用的所有模組**，另加 Jigga's Green Fire（大麻模組）68 個與 Pomp's Items（小馬模組）26 個。
+- **Pomp's Items 的 8 隻小馬有中文名了**，連帶 24 個絨毛玩具與服裝的物品名。其中 Fancy Pants 採官方配音譯名「花俏公子」。
+- **PompsItems 有 1,766 個文字先前完全沒被追蹤到。** 該模組的翻譯檔有多餘的逗號，PZ 自己讀得下去、我們的追蹤器讀不下去，於是整個檔案在我們眼中等於不存在——而所有檢查都是綠的。修好後其中 104 個玩家看得到、我們沒出貨的文字才浮現。
+- **清償 14 張「可能過時」issue：新譯 81 鍵、修正 16 條過時譯文。** 比較有感的：Stealth 模組的「透明度」其實是不透明度（原譯讓 0 與 10 的刻度整個反過來）、竊賊→盜賊、隱身技能→潛行技能。
+- **支援清單新增兩欄。** 「覆寫本體」讓你知道某個模組本身會動到幾個官方翻譯（目前 73 個模組有標記）；「涵蓋範圍」標註哪些模組有翻譯包補不了的英文——目前登記 Gore's SVU4 Core、Dynamic Trading、More Traits 三個。
+
+### Added
+
+- **`RECIPE_COVERAGE_AUDIT.md`（新檔）**：`craftRecipe` 配方顯示名的全庫覆蓋率稽核。B42 的配方顯示名鍵＝`craftRecipe` 原名（**含空格、無 `Recipe_` 前綴**，`Recipe_X_Y` 是 B41 形、在 B42 完全失效）：`ISRecipeScrollingListBox.lua:351` → `CraftRecipe.Load():362` → `Translator.getRecipeName():676` 的 `recipe.get(name)` 直查。`en_corpus_hashes`（schema 8）已記 `script_craftRecipe`，全庫可從版控資料直接算、不必下載 483 個 mod；方法以 8 個實際下載的 MOD 交叉驗證，逐一相符。**數字為上限**——MOD 可能自帶活的 `Translate/CH/Recipes.json`（追蹤器只記 EN，看不到），已實證 More Guitars 自帶 166 個活繁中配方名；反之只有 legacy `Recipes_CH.txt` 者仍算缺口（B42 只讀 `.json`）。
+- **配方顯示名 164 鍵**，分三批：
+  - **issue #125 More Traits（`1299328280`）16 鍵**。上游只附韓文 `Recipes.json`、沒有 EN 檔，As1 的 EN 驅動擷取整組漏收；該 MOD 五個 EN 檔都是 100%，覆蓋率統計完全看不出這個缺口。上游韓文檔用的是 B41 的 `Recipe_` 前綴形，在 B42 失效，未照抄其鍵名。
+  - **正式服啟用中的 51 個 runtime 鍵**（拉 `pzserver.ini` 的 `WorkshopItems` 交叉比對）。44 鍵沿用既有譯文——Beetle 23、M998 19 經 recipe body 逐一比對確認為上游把點號拿掉的真改名；M101A2 2 鍵**不是改名**，是上游 common EN JSON 的無點號鍵與實際 recipe 名不符、那個舊鍵本就取不到。7 鍵新譯，全部依 `outputs` 的產出物 DisplayName 定名。
+  - **Jigga's Green Fire 68 鍵**，術語全部錨定本包既有的 240 個 `Greenfire.*` 物品名。語意不明者一律查 script 實證：`CutCannabis`（剪刀）／`TearCannabis`（徒手）／`GrindCannabis`（研磨器）產出同一個 `CannabisShake`，分別作剪碎／撕碎／研磨；`MakeFlyCure` 產出 `Base.GardeningSprayCigarettes` ＝本體「除蟲噴霧」。
+  - **Pomp's Items 26 鍵**（見下）。
+- **Pomp's Items 8 隻小馬定名 ＋ 24 個物品名**。本包既有 420 個小馬 Plushie 譯名中僅 3% 保留拉丁字母且多為縮寫，預設意譯。`Fancy Pants`→花俏公子／范西潘為**官方配音譯名**（兩地維基百科《彩虹小馬》角色列表次要角色節載明並附配音員資料）；`Sixer`→六號／六号 沿用同 mod 既有 `PINumberNine*`→九號／九号 的完全同型先例；`Mulberry Merlot`→桑椹梅洛／桑葚梅洛（Merlot 錨 `Fluid_Name_VFX_Merlot`「梅洛紅葡萄酒」，mulberry 為台灣桑椹／大陸桑葚的詞級分歧）。句型全部沿用既有 `PINumberNine*` 與 `PIVeenSundown*` 的物品／配方格式，未自創。
+- **`SUPPORTED_MODS.md` 新增「覆寫本體」欄**，由 `vanilla_override_counts()` 計算而非人工登記：取「上游 EN 鏡像 ∪ 本包收錄的該 mod CN 譯文」聯集對 `scoped_keys` 取交集。仍是**下限**（上游自帶 CN/CH 檔我方無鏡像），故渲染為 `≥N`。目前 73 個 MOD 有標記，15 個標 `?`。
+- **`SUPPORTED_MODS.md` 新增「涵蓋範圍」欄**：上游把文字放在 PZ 翻譯表取不到的位置時登記，讓玩家訂閱前就知道。頁首明寫這是**遇到才查證**的登記、非全庫普查。
+- **清償 14 張「可能過時」issue（#109-#122）新譯 81 鍵**：#117 PZLinux 21、#122 MirageWardrobe 29、#111 PompsItems 9、#110 ThiefExpansion 8、#121 TABAS 6、#109 BetterSorting 4、#116 W900 2、#119 LegendaryBackpack 2。issue 內文的 1,565 筆宣稱變更經 `resolve_effective_branches()` ＋ `kind::檔名|鍵` 正規化後收斂為 180 筆真變更，其中 5 張零真變更。
+- **`scripts/test_vanilla_no_override.py`**：不看快照、直接讀本機 PZ 安裝現況驗 dist 零覆蓋。**不認 `keep` 豁免、無降級旗標**——「因為讀不到本體所以通過」的綠燈正是這裡最該擋住的東西。
+
+### Fixed
+
+- **本體鍵基準改 `EN ∪ CH ∪ CN` 三語聯集，26 個被全域改寫的官方字串停止出貨**。`extract_vanilla_keys.py` 過去只從本體 **EN** 目錄擷取，漏掉本體**只在中文檔定義、EN 沒有**的 1,465 個鍵——而那正是我方 CH/CN 檔會直接覆寫掉的本體譯文（`Translator.java:353` 全域 `map.put()`、後載入者勝）。其他語言（PTBR/AR/…）只在該語言檔出現的鍵**刻意不納入**：我方只出貨 CH/CN，納入只會白白砍掉模組譯文（實例：`UI_CraftCat_*` 37 鍵僅存在於本體 PTBR 檔、本體 Lua 零引用，卻有多個模組實際在用）。副作用是 `verify [12]` 副閘門攔到 4 個 own 鍵，一律退役而非登記豁免。
+- **上游 JSON 尾逗號改容錯解析，修掉「整檔翻譯鍵靜默消失」的盲區**。`_iter_translate_records` 遇 `JSONDecodeError` 只印一行 stderr 就跳過整檔；PZ 自己的解析器容忍結尾多餘逗號、Python 不容忍，於是那個檔的每一個翻譯鍵對追蹤器、`sources/en/` 鏡像、coverage／gap／survey **全部不存在，而所有 gate 都是綠的**。新增 `load_upstream_json`：只刪解析器自己停下位置的那一個逗號再重試，逐次收斂——**不可**改用全文 `re.sub` 替換，那會把字串值裡的 `"list is [x,] here"` 一起改掉＝靜默竄改上游原文。**行尾兩種都要處理**：CPython 對 LF 檔報 `Illegal trailing comma` 並停在逗號，對 CRLF 檔報 `Expecting property name` 並停在 `}`。`EXTRACTOR_SCHEMA` 7→8。
+- **容錯解析的過度寬鬆缺陷**（codex review blocking）：`_drop_trailing_comma` 原本只確認「解析器停在逗號上」就刪，反例 `[1,,2]`→`[1,2]`、`{,"a":1}`→`{"a":1}` 等於偽造上游原文。改為候選逗號**後面接收尾括號、前面接一個完整的值**兩邊都檢查。另修 `_TRAILING_COMMA_LIMIT` 的 off-by-one。
+- **零覆蓋 gate 的 fail-open**（codex review blocking）：`test_vanilla_no_override.py` 對不存在的 dist 目錄讀到空集合後仍判通過。改為先驗目錄存在、檔數與鍵數達量級門檻、兩側檔案集合一致。
+- **`gen_steam_changelog` 把維護者向內容貼進 Workshop**：本 repo 的白話版集中在 `### 玩家摘要` 節，但腳本只剝 `>` 引用塊，於是三個技術節原封不動被貼上公開頁面（1.13.0 產出 6,200 位元組 21 條，含鍵名與行號引用）。修為：版本區塊內若有 `### 玩家摘要` 就收斂到該小節。產出 6,200 → 855 位元組。
+- **譯文修正 12 鍵**：P4 Stash 5 鍵（EN 確有敘事事實變動）；`Tooltip_Silencer` 共用鍵改中性文案（同屬槍械擴充與簡易消音器兩個 owner，原譯採後者專屬數值對前者不成立）；字面反斜線 2 鍵改中文引號；`SoundVolumeStealingFumble_Tooltip` 補回「失手」條件；MirageWardrobe CN 的 Undo 3 鍵「撤回」→「撤销」。
+- **16 鍵過時譯文**，只挑 EN 真的動到資訊者：`StealthAlpha_Name/_Tooltip`（EN `Transparency`→`Opacity`，原譯「透明度」與 0=完全透明/10=完全不透明的刻度自相矛盾）、`EasyToFind_Tooltip` 補兩項新資訊、`Stash_*Map1_Text3` 受詞改變、MirageWardrobe 分組重構、術語一致（竊賊→盜賊、隱身技能→潛行技能、全域開關→總開關）。
+- **`3635333613` Dynamic Trading 的涵蓋範圍 note 補上寫死於程式碼的 139 句**：原 note 只寫了 UI／對話 533 句，漏掉管理員 debug 選單等 139 句連翻譯鍵都沒有。
+
+### Changed
+
+- **`keep` 豁免通道焊死**（使用者裁決 2026-08-12）：每次都要掃 MOD 的鍵有沒有跟本體 EN/CH/CN 衝突，撞到就取消該鍵出貨，**不得覆蓋本體任何一個 key**。`build_mod.load_vanilla_scoped()` 與 `verify_dist._load_vanilla_basis()` 改為只要 `keep` 非空就直接失敗；要處理個別鍵請走 `unshipped_keys.json`。
+- **全庫 EN 鏡像重抽（schema 8）**：schema 演進後 467/468 份鏡像仍是舊 schema、數字不可信。`backfill-en --force` 全量重抽 468/468 零失敗，**全庫 75 個上游檔靠新的容錯才讀得到**。重算 coverage：上游 EN 鍵 72,391、缺口 1,086，其中確證玩家可見且可補的只有 11 個。
+- **`ch_review_state.json` +151 筆**，含「EN 變動但譯文經核對仍成立」的裁決，以及 `Recipes.json|PIFrozenPizzaCheese` 沿用同族既有裁決的登記（hash 與三個同族鍵完全相同）。不登記則未來 CN 漂移不受 `verify [11]` 監測而 gate 全綠。
+- **`test_manifest_fresh.py` 欄數合約 6/7 → 7/8**，並新增欄數齊一情境：前六組都是「生成器輸出 vs 生成物」比對，兩邊一起錯照樣綠。
+
+### 已裁決不跟進
+
+- **`UI_trait_lightdrink`／`UI_trait_harddrink`（＋desc）4 鍵不收**（codex 獨立 review 指出）：唯一 producer `MoreTraitsMainCreationMethods.lua:413-414` 位於該檔第 1 行 `--[[` 至第 426 行 `--]]` 的整檔註解內、永不執行，且 `ToadTraits.txt` 未以 `character_trait_definition` 補回，屬死鍵。**教訓：以 regex 掃 `getText(` 判定活引用時必須先排除 Lua 註解區塊。**
+- **7 個 `tsarslib` 配方鍵不收**（codex 獨立 review 指出）：`common/` 與版本夾**不是取聯集，是相對路徑覆蓋**——`ZomboidFileSystem.loadMod()` 先掃 `common/` 以相對路徑為鍵寫 `activeFileMap`，再掃版本夾以同一個鍵覆寫（原始碼會印 `mod "X" overrides <rel>`），`ScriptManager` 再按相對路徑去重載入。該 mod 的 `ata2_items.txt` 在 `common/` 是空白形、在 `42.17/` 是底線形，runtime 只有後者存在。**`resolve_effective_branches()` / `is_effective()` 目前不處理這件事，影響所有 kind，已記入報表建議節待根治。**
+- **More Guitars（`3410974338`）的 7 個 Flying V 配方鍵不補**：該 MOD 自帶 166 個活的繁中配方名，玩家看得到中文，屬版控估算的已知誤差。
+- **Class A 的 1,681 鍵本版不動**：上游無 EN 可對照，須逐 MOD 下載讀 script 自 `outputs` 定名，另行分批。
+
 ## [42.20.2-1.13.0] - 2026-08-11
 
 ### 玩家摘要
