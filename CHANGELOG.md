@@ -4,6 +4,39 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.20.2-1.15.0] - 2026-08-13
+
+### 玩家摘要
+
+> 本節為 Workshop 更新註記用的白話版；以下各節為維護者向的技術細節。
+
+- **新支援兩個模組、共 160 個文字。** **MRE Mod（即食口糧）** 112 個：1993 與 2026 兩種年份、合計 36 道菜的美軍即食口糧，連整盒包裝、拆封配方與生成率／營養值的沙盒設定都翻了。**[SVRP] 經典弓箭** 48 個：複合弓、獵弓、中世紀弓與多款十字弩，加上木質／金屬／碳製的箭矢與弩箭、戰術箭袋，以及打包與拆包配方。
+- **弓弩的名字跟你可能已經在用的另一個弓箭模組完全一致。** 這個模組有 24 件物品的英文名與弓術中心（GaelGunStore）完全相同，我們逐字沿用既有譯名，不會出現同一把弓在兩個模組叫不同名字的情況。
+- **補譯 Hepha 職業與特質、PZLinux、LockInteriors 共 54 個文字**，並清掉 6 張上游更新通知。占大宗的是 Hepha 的職業與特質敘述 42 條。
+- **有一張翻譯申請查證後決定不收：LG Extended Plumbing。** 該模組作者已於 8/12 自行補上含繁體、簡體在內的 27 種語言，本包若跟著出貨反而會蓋掉作者自己寫的譯文。如果你看到的仍是英文，請更新該模組並重開遊戲。
+
+### Added
+
+- **MRE Mod（`3765409550`）112 鍵原創翻譯**（issue #123）。上游只出 EN、無任何中文，有效分支 `42/`。物品名 43 鍵的上游**沒有 EN `ItemName.json`**，鍵取自 `media/scripts` 的 item `DisplayName`，以裸 fullType `bdtmre.<item>` 落地（module 名須讀 script 實證，不可由 mod id 推測）。配方 7 鍵同樣無上游 EN 檔，鍵＝`craftRecipe` 裸區塊名，譯名依 `outputs` 的產出物定名。MRE 一律譯「即食口糧／即食口粮」，錨定本包 SapphCooking 既有譯法；43 個 Tooltip 統一為「\<盒\> 盒，\<年\> 年版第 N 號餐」句式。
+- **[SVRP] ClassicBows（`3776949545`）48 鍵原創翻譯**（issue #124）。上游只出 EN／ES。**上游 EN 檔的 81 個鍵全是引擎死鍵、一個都不收**：`ItemName.json` 48 鍵是 B41 的 `ItemName_` 前綴形，`Recipes.json` 的 `Recipe_*` 21 與 `craftRecipe_*` 12 也都取不到。42.20.2 反編譯佐證：`Translator.java:597` 以裸 fullType 查物品名、`:675` 以裸名稱查配方名、`ScriptBucket.java:97` 只 trim 外側空白（故 9 個含空格的配方名如 `Craft Medieval Bow` 須原樣保留）。實收＝script `DisplayName` 推得的 27 個 `Base.SVRP_CB_*` ＋ 21 個 craftRecipe 裸區塊名。24 個物品名與 GaelGunStore（`3616176188`）的 `own_translations` 條目 EN 全同，**逐字沿用**避免同一件物品在兩個模組出現兩套名稱；Bow String Silencer／Arrow／Bolt 三鍵為新譯。該 mod 另有 4 處 `getText` 取本體鍵（`ContextMenu_Add/Remove_Weapon_Upgrade`、`IGUI_JobType_Load/UnloadBulletsIntoFirearm`），本體 CH/CN 皆有官方譯文，依 vanilla 鐵律不收。
+- **補譯 54 鍵 / 7 檔**（issue #127–#132 六張「可能過時」的實際缺口）：ItemName 32、Recipes 8、IG_UI 8、Sandbox 3、Fluids／Tooltip／ContextMenu 各 1。issue 內文的增刪計數全部不可直接採信——`extractor_schema` 7→8 全量重抽與 CI 隔天用自己下載的包比對，加上上游改動版本夾，數字被路徑搬家灌爆；濾有效分支＋正規化後 #128／#131 實為零變動，#127 是上游把 B42 分支由 legacy `_EN.txt` 換成 `.json`（舊分支那 332 鍵從來沒生效過，談不上過時）。
+- **`.github/workflows/tests.yml`（新檔）**：push／PR／手動觸發，跑 9 支純 repo 回歸測試＋`tracker.py self-test`＋`lint_ch.py` 棘輪。此前 repo 唯一的 workflow 只跑 tracker，`scripts/test_*.py` 全靠人工在收尾階段記得跑。`test_vanilla_no_override.py` 與 build/verify 全鏈**刻意不納入**：前者是對本機 PZ 安裝現況的端到端斷言且 fail-closed 無豁免旗標，後者的 verify `[8]` 需要 Steam 管理的 As1 快照樹，CI 上帶 `--allow-missing-as1` 的 PASS 等於沒驗 As1 端。
+
+### Fixed
+
+- **追蹤器刷新 EN 鏡像後會把 `SUPPORTED_MODS.md` 靜默改成過期**。「覆寫本體」欄由 `sources/en/<wid>.json` 對 `vanilla_keys.json` 算出，而 `sources/en/**` 正是排程每日刷新並 commit 的東西——刷了卻從不重跑 manifest，而 build／verify／lint 沒有任何一道驗生成物新鮮度。實例 `c8f5064`：Hepha 把 B42 分支換成 `.json`，三個撞本體的 `UI_prof_*` 首次進入有效集，該列本該從 `—` 變 `⚠️ ≥3` 卻錯了一整天而三道 gate 全綠。`cmd_run`／`cmd_issue` 現於 `_persist_state()` 後呼叫 `refresh_manifest()`，生成物與 state 併入**同一個 commit**；重生失敗不阻斷 state 推進（追蹤器停擺的代價更大且 state 自癒），改以非零退出碼讓 CI 轉紅。
+- **`Base.OutcastBox` 譯名與同 mod 既有 Tooltip 自相矛盾**（codex 複核發現）：原譯「邊緣人便當盒」錨的是本體 `Base.Lunchbox`，但本鍵是該 mod 自有物品、且同 mod 的 `Tooltip_OutcastBox` 已作「復古午餐盒」。改為「邊緣人午餐盒」後，本包 CH 全庫的午餐盒 21 : 便當盒 1 矛盾歸零。
+
+### Changed
+
+- **`RECIPE_COVERAGE_AUDIT.md` 依 CI 追蹤器更新重算**：缺口 2,260 → 2,261（相異 2,124 → 2,125）；Class A 1,681→1,674 / 38→37 MOD、Class B 579→587 / 29→30 MOD。分類移動來自上游新增 EN `Recipes` 檔（Class A → B）。出貨內容零變動。
+- **`tracker.py` 的 state commit pathspec 收斂為單一來源**：`cmd_run`／`cmd_issue` 原本各自 hardcode 一份，改走 `state_add_paths()`；self-test 情境 6b 一併改用同一函式並加驗 manifest 生成物確實在 pathspec 內。
+
+### 已裁決不跟進
+
+- **LG Extended Plumbing（`3779561845`）不收錄**（issue #126，已關閉）。上游 2026-08-12 的 v3.2.0 已自行補上含繁中／簡中在內的 27 種語言（更新紀錄：`27 languages. Nothing is hardcoded in English any more.`），現行版有效分支 `42.20/` 的 CH 三檔（ContextMenu 14／Sandbox 9／Mod 2）逐鍵齊全。PZ 把所有 mod 的 `Translate` 檔併進同一張全域表、後載入者勝，本包載入順序在一般 mod 之後，收錄等同蓋掉作者譯文。另 `Mod.json` 的 `name`／`description` **任何第三方翻譯包都補不了**——`Translator.readModTranslation()` 只讀該 mod 自己的 common／版本夾。
+- **`coverage_survey.py` 對 SVRP ClassicBows 恆報 0%** 屬工具口徑、不修。該工具不做 `ItemName_` 前綴正規化（`tracker.py` 的 `_canon_key` 有做，self-test 情境 12），上游那 81 個死鍵全被算成缺口；權威口徑是 `tracker.py coverage` 的 `lua_gap`＝0。已記入該 mod 的 `metadata.json` note，避免日後被當成真缺口追。
+
 ## [42.20.2-1.14.0] - 2026-08-13
 
 ### 玩家摘要
