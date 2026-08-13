@@ -141,7 +141,7 @@
 | [B42.19 Real Firearms【Upd #48】WIP](https://steamcommunity.com/sharedfiles/filedetails/?id=3238830225) | Real Firearms 真實槍械 | 新增真實槍械內容，含彈藥盒、彈匣、子彈與槍械配件分類。 | `RealFirearms` | 7 | — | — |
 | ['80 MAN KAT1](https://steamcommunity.com/sharedfiles/filedetails/?id=3248388837) | '80 MAN KAT1 軍用卡車 | 新增 1980 年 MAN KAT1 軍用卡車，含儲物箱、車頂行李架等部件。 | `80manKat1` | 12 | — | — |
 | ['81 DeLorean DMC-12](https://steamcommunity.com/sharedfiles/filedetails/?id=3253385114) | '81 DeLorean DMC-12 | 新增 1981 年 DeLorean DMC-12 車輛，含時光機版本與裝甲部件。 | `81deloreanDMC12`, `81deloreanDMC12BTTF` | 15 | — | — |
-| [Hephas Occupations and Traits](https://steamcommunity.com/sharedfiles/filedetails/?id=3256482412) | Hepha 職業與特質 | 新增額外職業與特質選項，如牧場主等職業內容。 | `HephasOccupationsAndTraits`, `HephasOccupationsAndTraits_WithVanillaProfessions` | 1 | — | — |
+| [Hephas Occupations and Traits](https://steamcommunity.com/sharedfiles/filedetails/?id=3256482412) | Hepha 職業與特質 | 新增額外職業與特質選項，如牧場主等職業內容。 | `HephasOccupationsAndTraits`, `HephasOccupationsAndTraits_WithVanillaProfessions` | 1 | ⚠️ ≥3 | — |
 | [Know Your Calories!](https://steamcommunity.com/sharedfiles/filedetails/?id=3257953004) | 了解你的卡路里！ | 依烹飪等級或營養師特質顯示食物卡路里與營養素資訊。 | `KnowYourCalories` | 23 | — | — |
 | ['68 Pontiac Firebird](https://steamcommunity.com/sharedfiles/filedetails/?id=3258343790) | '68 Pontiac Firebird | 新增 1968 年 Pontiac Firebird 跑車，含 350、400、Ram Air 等版本。 | `68firebird` | 19 | — | — |
 | [Fancy Lanterns [42.19]](https://steamcommunity.com/sharedfiles/filedetails/?id=3267733558) | 華麗提燈 | 新增多種顏色的華麗提燈、火炬與手電筒等光源物品。 | `FancyLanterns` | 69 | ⚠️ ≥1 | — |

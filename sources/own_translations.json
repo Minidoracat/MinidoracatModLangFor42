@@ -3587,6 +3587,12 @@
     "en": "Measure temperature",
     "ch": "測量體溫",
     "cn": "测量体温"
+   },
+   "ContextMenu_ForceUnlock": {
+    "en": "Force lock",
+    "ch": "強行破鎖",
+    "cn": "强行破锁",
+    "_note": "上游鍵名寫 Unlock、EN 值卻是 \"Force lock\"，而同組 IGUI_LockInteriors_ForceUnlock 說明為「用撬棍強行破壞鎖」，故譯為「強行破鎖」而非解鎖；亦避開意為 lockpicking 的「撬鎖」。"
    }
   },
   "Fluids.json": {
@@ -5069,6 +5075,11 @@
     "en": "Ammonia bottle",
     "ch": "氨水瓶",
     "cn": "氨水瓶"
+   },
+   "Fluid_Name_Petrus1970": {
+    "en": "Petrus 1970 - Pomerol",
+    "ch": "柏圖斯 1970 - 波美侯",
+    "cn": "柏图斯 1970 - 波美侯"
    }
   },
   "IG_UI.json": {
@@ -19257,6 +19268,47 @@
     "en": "Too much water.",
     "ch": "水量太多.",
     "cn": "水量太多."
+   },
+   "IGUI_LockInteriors_FootNote": {
+    "en": "Lock Interiors mod",
+    "ch": "Lock Interiors 模組",
+    "cn": "Lock Interiors 模组"
+   },
+   "IGUI_LockInteriors_ForceUnlock": {
+    "en": "Force the lock with a crowbar. May fail and damage the tool.",
+    "ch": "用撬棍強行破鎖. 可能失敗並損壞工具.",
+    "cn": "用撬棍强行破锁. 可能失败并损坏工具.",
+    "_note": "crowbar 取「撬棍」而非本體 CH 的「鐵撬」：本家本體包 MinidoracatLangFor42 已把 Base.Crowbar CH 覆寫為「撬棍」，且本包 dist CH 現況撬棍 80 次、鐵撬 0 次。錨定本體包與本包既有慣例。"
+   },
+   "IGUI_LockInteriors_LockDoor": {
+    "en": "Lock this door.",
+    "ch": "鎖住這扇門.",
+    "cn": "锁住这扇门."
+   },
+   "IGUI_LockInteriors_LockWindow": {
+    "en": "Lock this Window.",
+    "ch": "鎖住這扇窗戶.",
+    "cn": "锁住这扇窗户."
+   },
+   "IGUI_LockInteriors_PadLockWindow": {
+    "en": "Lock the Window with a Padlock.",
+    "ch": "使用掛鎖鎖住窗戶.",
+    "cn": "使用挂锁锁住窗户."
+   },
+   "IGUI_LockInteriors_Title": {
+    "en": "Info",
+    "ch": "資訊",
+    "cn": "信息"
+   },
+   "IGUI_LockInteriors_UnlockDoor": {
+    "en": "Unlock this door.",
+    "ch": "解鎖這扇門.",
+    "cn": "解锁这扇门."
+   },
+   "IGUI_LockInteriors_UnlockWindow": {
+    "en": "Unlock this Window.",
+    "ch": "解鎖這扇窗戶.",
+    "cn": "解锁这扇窗户."
    }
   },
   "ItemName.json": {
@@ -103118,6 +103170,171 @@
     "ch": "還有某人",
     "cn": "还有某人",
     "_note": "somebody as well 的雙關，重組為自然中文笑點；音譯會完全失去玩笑。"
+   },
+   "Base.ARRLHandbook": {
+    "en": "'The ARRL Handbook for Radio Amateurs' - American Radio Relay League",
+    "ch": "《ARRL 業餘無線電手冊》- 美國無線電中繼聯盟",
+    "cn": "《ARRL 业余无线电手册》- 美国无线电中继联盟"
+   },
+   "Base.BlacksmithsHammer": {
+    "en": " Blacksmith's Hammer ",
+    "ch": "鐵匠專用錘",
+    "cn": "铁匠专用锤",
+    "_note": "刻意譯為「鐵匠專用錘/铁匠专用锤」以與本體 Base.SmithingHammer（官方 CH 鐵匠錘／CN 铁匠锤）區隔——兩者是不同物品，同名會讓玩家無法分辨。"
+   },
+   "Base.BuildersHammer": {
+    "en": "Builder's Hammer ",
+    "ch": "建築工錘",
+    "cn": "建筑工锤"
+   },
+   "Base.ChefsPan": {
+    "en": "Chef's Pan",
+    "ch": "廚師平底鍋",
+    "cn": "厨师平底锅"
+   },
+   "Base.ChefsPanHandle": {
+    "en": "Chef's Pan Handle ",
+    "ch": "廚師平底鍋柄",
+    "cn": "厨师平底锅柄"
+   },
+   "Base.ContractorsVest": {
+    "en": "Mercenaries's Vest ",
+    "ch": "傭兵背心",
+    "cn": "雇佣兵背心",
+    "_note": "上游鍵名為 ContractorsVest、script DisplayName 為 Contractor's Vest，但 Translate/EN 值是 \"Mercenaries's Vest\"（兼有拼字錯誤）。依「以實際會顯示的 EN 值為準」譯作傭兵/雇佣兵；若上游日後改回 Contractor 需重譯。"
+   },
+   "Base.FarmersSeedbag": {
+    "en": "Farmer's Seedbag",
+    "ch": "農夫種子袋",
+    "cn": "农夫种子袋"
+   },
+   "Base.FieldMedicFannyPack": {
+    "en": "Field Medic Fanny Pack",
+    "ch": "戰地醫護兵腰包",
+    "cn": "战地医护兵腰包"
+   },
+   "Base.FieldMedicFannyPackBack": {
+    "en": "Field Medic's Fanny Pack (Back)",
+    "ch": "戰地醫護兵腰包 (背面)",
+    "cn": "战地医护兵腰包 (背面)"
+   },
+   "Base.FlexTape": {
+    "en": "Flex Tape",
+    "ch": "萬能膠帶",
+    "cn": "万能胶带"
+   },
+   "Base.Folgers": {
+    "en": "Folgers Classic Roast",
+    "ch": "Folgers 經典烘焙咖啡",
+    "cn": "福爵经典烘焙咖啡",
+    "_note": "Folgers 在大陸有註冊中文品牌名「福爵」故 CN 用之；台灣未以中文名販售，CH 保留拉丁品牌名（本包 CH 有既有拉丁保留前例）。此為刻意的兩岸不對稱，非漏譯。"
+   },
+   "Base.HeavyWormScrew": {
+    "en": "Heavy Worm Screw ",
+    "ch": "重型蝸桿螺絲",
+    "cn": "重型蜗杆螺丝"
+   },
+   "Base.ItbyStephenKing": {
+    "en": "'IT' - Stephen King",
+    "ch": "《牠》- 史蒂芬·金",
+    "cn": "《它》- 斯蒂芬·金"
+   },
+   "Base.Jim": {
+    "en": "Jim the Earthworm",
+    "ch": "蚯蚓吉姆",
+    "cn": "蚯蚓吉姆"
+   },
+   "Base.JurassicPark": {
+    "en": "'Jurassic Park' - Michael Crichton",
+    "ch": "《侏羅紀公園》- 麥可·克萊頓",
+    "cn": "《侏罗纪公园》- 迈克尔·克莱顿"
+   },
+   "Base.MarvelSpiderMan#1": {
+    "en": "Marvel's Spider-Man #1",
+    "ch": "漫威《蜘蛛人》第1期",
+    "cn": "漫威《蜘蛛侠》第1期"
+   },
+   "Base.MechanicsWrench": {
+    "en": "Mechanic's Wrench ",
+    "ch": "機工扳手",
+    "cn": "汽修工扳手"
+   },
+   "Base.OutcastBox": {
+    "en": "Outcast Box",
+    "ch": "邊緣人午餐盒",
+    "cn": "边缘人午餐盒",
+    "_note": "Lunchbox 取「午餐盒」而非本體 Base.Lunchbox 官方 CH「便當盒」：本鍵是 mod 自有物品 Base.OutcastBox，與本體 Base.Lunchbox 並非同一物品，故適用「同 mod 既有譯文」層級——同 mod 的 Tooltip_OutcastBox 既有 CH 譯文即為「復古午餐盒」。本包 CH 全庫另有 20 處「午餐盒」、0 處「便當盒」，若單鍵改用本體官方名反而製造全庫唯一的局部矛盾。CN 側本體官方即「午餐盒」，兩側一致。"
+   },
+   "Base.Petrus1970": {
+    "en": "Petrus 1970 - Pomerol",
+    "ch": "柏圖斯 1970 - 波美侯",
+    "cn": "柏图斯 1970 - 波美侯"
+   },
+   "Base.ScoutsSatchel": {
+    "en": "Scout's Satchel",
+    "ch": "偵察兵側背包",
+    "cn": "侦察兵单肩包"
+   },
+   "Base.ScrapAngler_Vest": {
+    "en": "Scrap Angler's Vest",
+    "ch": "廢料釣手背心",
+    "cn": "废料钓手背心"
+   },
+   "Base.SinCity": {
+    "en": "Sin City - The Hard Goodbye",
+    "ch": "《萬惡城市》- 艱難的告別",
+    "cn": "《罪恶之城》- 艰难的告别"
+   },
+   "Base.SpecialistRadio": {
+    "en": "Specialist's Radio",
+    "ch": "通訊專家無線電",
+    "cn": "通讯专家无线电"
+   },
+   "Base.SurvivorsCrunch": {
+    "en": "Survivor's Crunch",
+    "ch": "倖存者脆片",
+    "cn": "幸存者脆片",
+    "_note": "Crunch 取「脆片」而非穀片/麦片：同 mod Tooltip_SurvivorsCrunch 明述其由昆蟲、木屑與少許馬鈴薯水果製成，並非穀物早餐片，譯穀片與 EN 及 tooltip 相牴觸；構詞另與 PompsItems「咖啡脆」、VFX「霜脆麥片」一致。ch 倖存/cn 幸存 為詞級分歧（dist CH 全庫 0 個「幸存」、CN 全庫 0 個「倖存」）。配方 Recipe_Make_Survivors_Crunch 同名。"
+   },
+   "Base.ThreadsmithsKit": {
+    "en": "Threadsmith's Kit",
+    "ch": "織匠縫紉工具包",
+    "cn": "织匠缝纫工具包"
+   },
+   "Base.TinkerersGloves": {
+    "en": "Tinkerer's Gloves",
+    "ch": "修補匠手套",
+    "cn": "修补匠手套"
+   },
+   "Base.TrackersHat": {
+    "en": "Tracker's Hat",
+    "ch": "追蹤獵手帽",
+    "cn": "追踪猎手帽"
+   },
+   "Base.TradersFannyPack": {
+    "en": "Trader's Fanny Pack",
+    "ch": "商人腰包",
+    "cn": "商人腰包"
+   },
+   "Base.TradersFannyPackBack": {
+    "en": "Trader's Fanny Pack (Back)",
+    "ch": "商人腰包 (背面)",
+    "cn": "商人腰包 (背面)"
+   },
+   "Base.WanderersBoots": {
+    "en": " Wanderer's Boots",
+    "ch": "流浪者靴",
+    "cn": "流浪者靴"
+   },
+   "Base.WatchmensGloves": {
+    "en": "Watchmen's Gloves",
+    "ch": "守夜人手套",
+    "cn": "守夜人手套"
+   },
+   "Base.WoodcuttersShirt": {
+    "en": "Woodcutter's Shirt",
+    "ch": "樵夫襯衫",
+    "cn": "樵夫衬衫"
    }
   },
   "Items.json": {
@@ -113627,6 +113844,48 @@
     "ch": "開啟袋裝衛生棉",
     "cn": "打开袋装卫生巾",
     "_note": "RECIPE_COVERAGE_AUDIT 第三批補完。輸入 PISanitaryPadPack / PISanitaryPadBox、產出 10 個 PISanitaryPad；用詞錨本包既有 ItemName PISanitaryPadPack「袋裝衛生棉／袋装卫生巾」（衛生棉／卫生巾 為既有詞級分歧）。 CH 動詞依 terminology 的語料慣例用「開啟」（該規則為 select，無同族先例故從慣例）；CN 側用大陸口語「打开」。"
+   },
+   "Recipe_Chefs_Pan_Cooking_Time": {
+    "en": "Dettach Chef's Handle From Pan",
+    "ch": "從平底鍋上拆下廚師鍋柄",
+    "cn": "从平底锅上拆下厨师锅柄",
+    "_note": "上游鍵名（Cooking_Time）與 EN 值（\"Dettach Chef's Handle From Pan\"，Dettach 為拼錯）語意不符，且 legacy _EN.txt 尚留舊值 \"Cooking Mode\"。B42 只載入 .json，故以 .json 的值為準翻譯。與 Recipe_Chefs_Pan_Fighting_Time 成對。"
+   },
+   "Recipe_Chefs_Pan_Fighting_Time": {
+    "en": "Attach Chef's Handle To Pan",
+    "ch": "將廚師鍋柄裝到平底鍋上",
+    "cn": "将厨师锅柄装到平底锅上",
+    "_note": "同 Recipe_Chefs_Pan_Cooking_Time：鍵名與 EN 值語意不符，以 .json 現行值（\"Attach Chef's Handle To Pan\"）為準。"
+   },
+   "Recipe_Craft_Flex_Tape": {
+    "en": "Craft Flext Tape",
+    "ch": "製作萬能膠帶",
+    "cn": "制作万能胶带"
+   },
+   "Recipe_Cut_Flex_Tape": {
+    "en": "Cut Flex Tape",
+    "ch": "裁切萬能膠帶",
+    "cn": "裁切万能胶带"
+   },
+   "Recipe_Make_Survivors_Crunch": {
+    "en": "Make Survivors Crunch",
+    "ch": "製作倖存者脆片",
+    "cn": "制作幸存者脆片"
+   },
+   "Recipe_Tool_Mode": {
+    "en": "Tool Mode",
+    "ch": "切換至工具模式",
+    "cn": "切换至工具模式"
+   },
+   "Recipe_Weapon_Mode": {
+    "en": "Weapon Mode",
+    "ch": "切換至武器模式",
+    "cn": "切换至武器模式"
+   },
+   "UncorkPetrus1970": {
+    "en": "Uncork Petrus 1970",
+    "ch": "開瓶柏圖斯 1970",
+    "cn": "开瓶柏图斯 1970"
    }
   },
   "Sandbox.json": {
@@ -127674,6 +127933,21 @@
     "en": "Start with a Legendary Backpack (Grey) in your inventory.",
     "ch": "開局時背包中會有一個灰色傳奇背包.",
     "cn": "开局背包中自带一个灰色传奇背包."
+   },
+   "Sandbox_PZLinux_CustomDarkWebItems": {
+    "en": "Custom Dark Web Items (Base.ItemName:Price, comma-separated)",
+    "ch": "自訂暗網商品 (Base.ItemName:Price, 用逗號分隔)",
+    "cn": "自定义暗网商品 (Base.ItemName:Price, 用逗号分隔)"
+   },
+   "Sandbox_PZLinux_StartingBalanceMax": {
+    "en": "Starting Bank Balance (Maximum)",
+    "ch": "初始銀行餘額 (最大值)",
+    "cn": "初始银行余额 (最大值)"
+   },
+   "Sandbox_PZLinux_StartingBalanceMin": {
+    "en": "Starting Bank Balance (Minimum)",
+    "ch": "初始銀行餘額 (最小值)",
+    "cn": "初始银行余额 (最小值)"
    }
   },
   "Tooltip.json": {
@@ -133151,6 +133425,11 @@
     "en": "Rest easy Anon, wherever you are.<br>This pony features craftable outfits.",
     "ch": "安息吧, 匿名者, 無論你身在何方.<br>此小馬有可製作的服裝.",
     "cn": "安息吧, 匿名者, 无论你身在何方.<br>此小马有可制作的服装."
+   },
+   "Tooltip_ARRLHandbook": {
+    "en": "An exhaustive handbook of radio theory, equipment, antennas, and operating practice. <br>Its margins are filled with faded notes from someone determined to keep Kentucky talking.",
+    "ch": "一本詳盡的無線電手冊, 涵蓋理論、器材、天線與操作實務. <br>頁邊空白處寫滿了褪色的筆記, 出自某個一心想讓肯塔基州保持通聯的人.",
+    "cn": "一本详尽的无线电手册, 涵盖理论、设备、天线与操作实践. <br>页边空白处写满了褪色的笔记, 出自某个一心想让肯塔基州保持通联的人."
    }
   },
   "UI.json": {
