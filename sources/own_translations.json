@@ -13200,9 +13200,9 @@
     "cn": "马弗炉"
    },
    "IGUI_CraftingWindow_ZVirusVaccine42BETA:Workbench": {
-    "en": "Technical Workbench",
-    "ch": "技術工作臺",
-    "cn": "技术工作台"
+    "en": "Workbench",
+    "ch": "工作臺",
+    "cn": "工作台"
    },
    "IGUI_UW_Radio_Teaser_Imprecise_01": {
     "en": "Atmospheric data remains inconclusive. Further updates may follow.",
@@ -19309,6 +19309,42 @@
     "en": "Unlock this Window.",
     "ch": "解鎖這扇窗戶.",
     "cn": "解锁这扇窗户."
+   },
+   "IGUI_CraftingCategories_ERS": {
+    "en": "ERS",
+    "ch": "ERS",
+    "cn": "ERS",
+    "_note": "issue #148：上游新增此鍵作為 IGUI_CraftCategory_ERS 的別名（舊鍵仍在上游、我方也已出貨），非改名，兩者同譯「ERS」。"
+   },
+   "IGUI_CraftingCategories_Laboratory": {
+    "en": "Laboratory",
+    "ch": "實驗室",
+    "cn": "实验室"
+   },
+   "IGUI_CraftingCategories_WeaponPart": {
+    "en": "Weapon Parts",
+    "ch": "武器部件",
+    "cn": "武器部件"
+   },
+   "IGUI_VehicleNameM4_Sherman": {
+    "en": "M4A1 Sherman",
+    "ch": "M4A1雪曼",
+    "cn": "M4A1谢尔曼"
+   },
+   "IGUI_VehiclePartM1919A4_Coax_Driver": {
+    "en": "M1919A4 Coax",
+    "ch": "M1919A4同軸機槍",
+    "cn": "M1919A4同轴机枪"
+   },
+   "IGUI_VehiclePartM1_76mm": {
+    "en": "76mm M1 Cannon",
+    "ch": "M1 76mm砲",
+    "cn": "M1 76mm炮"
+   },
+   "IGUI_VehiclePartM1_76mm_Driver": {
+    "en": "76mm M1 Cannon",
+    "ch": "M1 76mm砲",
+    "cn": "M1 76mm炮"
    }
   },
   "ItemName.json": {
@@ -103335,6 +103371,27 @@
     "en": "Woodcutter's Shirt",
     "ch": "樵夫襯衫",
     "cn": "樵夫衬衫"
+   },
+   "Base.M4_Front_Door2": {
+    "en": "M4 Front Door",
+    "ch": "M4前艙門",
+    "cn": "M4前舱门",
+    "_note": "issue #133：Military Tool Kit 是戰車包（同 mod 既有鍵含履帶／砲塔／坦克頂部），Front Door 指車體前方艙蓋。注意本包另有 Base.M4_Carryhandle＝「柯爾特M4提把」屬槍械 mod，命名空間相同但鍵不同，勿混用譯名。"
+   },
+   "Base.M4_Hood2": {
+    "en": "M4 Hood",
+    "ch": "M4引擎蓋",
+    "cn": "M4引擎盖"
+   },
+   "Base.M4_Turret_Door2": {
+    "en": "M4 Turret Door",
+    "ch": "M4砲塔艙門",
+    "cn": "M4炮塔舱门"
+   },
+   "Herbalist.TortillaUncooked": {
+    "en": "Tortilla Uncooked",
+    "ch": "玉米餅 (未烹飪)",
+    "cn": "玉米饼 (未烹饪)"
    }
   },
   "Items.json": {
@@ -113886,6 +113943,12 @@
     "en": "Uncork Petrus 1970",
     "ch": "開瓶柏圖斯 1970",
     "cn": "开瓶柏图斯 1970"
+   },
+   "MakeLargeSheetMold": {
+    "en": "Press Large Sheet Mold",
+    "ch": "壓製大黏土板模具",
+    "cn": "压制大粘土板模具",
+    "_note": "issue #140：上游把 Recipe_MakeLargeSheetMold 改名為此鍵（EN 值未變）。EN 短標 Press Large Sheet Mold 省略了 clay，但依 outputs 產出物 RepairableWindows.ClayLargeSheetMoldUnfired＝Large Clay Sheet Mold (Unfired) 補回「黏土」，與同族 FireClayLargeSheetMold「燒製大型黏土板模具」一致；舊鍵屬 As1 衍生層，依 split 不變式保留不動。"
    }
   },
   "Sandbox.json": {
@@ -127734,156 +127797,6 @@
     "ch": "啟用後, 敲碎巨石會產生附近殭屍聽得到的環境聲響. 預設為關閉.",
     "cn": "启用后, 敲碎巨石会产生附近僵尸听得到的环境声响. 默认为关闭."
    },
-   "Sandbox_MuleAccessory": {
-    "en": "Wrist Slot",
-    "ch": "手腕槽位",
-    "cn": "手腕槽位"
-   },
-   "Sandbox_MuleAccessory_tooltip": {
-    "en": "Enables dedicated wrist slot for watches and bracelets, can be worn with forearm protection.",
-    "ch": "啟用專用手腕槽位用於手錶和手鍊, 可與前臂防護同時穿戴.",
-    "cn": "启用专用手腕槽位用于手表和手链, 可与前臂防护同时穿戴."
-   },
-   "Sandbox_MuleEarProtector": {
-    "en": "Ear Protector Slot",
-    "ch": "耳部防護槽位",
-    "cn": "耳部防护槽位"
-   },
-   "Sandbox_MuleEarProtector_tooltip": {
-    "en": "Enables dedicated ear protector slot, cannot be worn with full helmets or suit heads.",
-    "ch": "啟用專用耳部防護槽位, 無法與全罩式頭盔或頭套同時佩戴.",
-    "cn": "启用专用耳部防护槽位, 无法与全盔或头套同时佩戴."
-   },
-   "Sandbox_MuleLooseBack": {
-    "en": "Duffel Bag Slot",
-    "ch": "行李袋槽位",
-    "cn": "行李袋槽位"
-   },
-   "Sandbox_MuleLooseBack_tooltip": {
-    "en": "Enables dedicated lower back slot for duffel and golf bags, can be worn with backpacks.",
-    "ch": "啟用專用下背部槽位用於行李袋和高爾夫球包, 可與背包同時穿戴.",
-    "cn": "启用专用下背部槽位用于行李袋和高尔夫球包, 可与背包同时穿戴."
-   },
-   "Sandbox_MuleOverShoulder": {
-    "en": "Cloth Gun Case Slot",
-    "ch": "布製槍箱槽位",
-    "cn": "布制枪箱槽位"
-   },
-   "Sandbox_MuleOverShoulder_tooltip": {
-    "en": "Enables dedicated rifle case slot, can be worn with backpacks.",
-    "ch": "啟用專用布製槍箱槽位, 可與背包同時穿戴.",
-    "cn": "启用专用布制枪箱槽位, 可与背包同时穿戴."
-   },
-   "Sandbox_MuleWallet": {
-    "en": "Wallet Slot",
-    "ch": "錢包槽位",
-    "cn": "钱包槽位"
-   },
-   "Sandbox_MuleWallet_tooltip": {
-    "en": "(Singleplayer only) Enables dedicated wallet slot and gives all wallets 50 weight reduction.",
-    "ch": "(僅限單人遊戲) 啟用專用錢包槽位, 並使所有錢包獲得 50%% 負重減免.",
-    "cn": "(仅限单人游戏) 启用专用钱包槽位, 并使所有钱包获得 50%% 负重减免."
-   },
-   "Sandbox_MuleWebbing_ALICE": {
-    "en": "Military Bag Webbing",
-    "ch": "軍用背包織帶",
-    "cn": "军用背包织带"
-   },
-   "Sandbox_MuleWebbing_ALICE_tooltip": {
-    "en": "Enables webbing slots on all military and survivor backpacks.",
-    "ch": "為所有軍用和倖存者背包啟用織帶槽位.",
-    "cn": "为所有军用和幸存者背包启用织带槽位."
-   },
-   "Sandbox_MuleWebbing_CrudeBag": {
-    "en": "Crude Bag Webbing",
-    "ch": "簡易背包織帶",
-    "cn": "简易背包织带"
-   },
-   "Sandbox_MuleWebbing_CrudeBag_tooltip": {
-    "en": "Enables webbing slots on all small crafted backpacks.",
-    "ch": "為所有小型手工背包啟用織帶槽位.",
-    "cn": "为所有小型手工背包启用织带槽位."
-   },
-   "Sandbox_MuleWebbing_Framepack": {
-    "en": "Framepack Webbing",
-    "ch": "框架背包織帶",
-    "cn": "框架背包织带"
-   },
-   "Sandbox_MuleWebbing_Framepack_tooltip": {
-    "en": "Enables webbing slots on all crafted framepacks.",
-    "ch": "為所有手工製作的框架背包啟用織帶槽位.",
-    "cn": "为所有手工制作的框架背包启用织带槽位."
-   },
-   "Sandbox_MuleWebbing_HikingBag": {
-    "en": "Hiking Bag Webbing",
-    "ch": "登山包織帶",
-    "cn": "登山包织带"
-   },
-   "Sandbox_MuleWebbing_HikingBag_tooltip": {
-    "en": "Enables webbing slots on all hiking backpacks.",
-    "ch": "為所有登山包啟用織帶槽位.",
-    "cn": "为所有登山包启用织带槽位."
-   },
-   "Sandbox_MuleWebbing_SchoolBag": {
-    "en": "School Bag Webbing",
-    "ch": "書包織帶",
-    "cn": "书包织带"
-   },
-   "Sandbox_MuleWebbing_SchoolBag_tooltip": {
-    "en": "Enables webbing slots on all small backpacks.",
-    "ch": "為所有小型背包啟用織帶槽位.",
-    "cn": "为所有小型背包启用织带槽位."
-   },
-   "Sandbox_MulePouch": {
-    "en": "Pouch Slot",
-    "ch": "口袋槽位",
-    "cn": "口袋槽位"
-   },
-   "Sandbox_MulePouch_tooltip": {
-    "en": "(Singleplayer only) Enables dedicated pouch slot, cannot be worn with wallets.",
-    "ch": "(僅限單人遊戲) 啟用專用口袋槽位, 無法與錢包同時佩戴.",
-    "cn": "(仅限单人游戏) 启用专用口袋槽位, 无法与钱包同时佩戴."
-   },
-   "Sandbox_MulePouchKeyring": {
-    "en": "Auto-Pouch",
-    "ch": "口袋自動裝備",
-    "cn": "口袋自动装备"
-   },
-   "Sandbox_MulePouchKeyring_tooltip": {
-    "en": "(Don't use with Pouch Slot) Enables keyring auto-equip feature to all vanilla pouches.",
-    "ch": "(請勿與口袋槽位並用) 讓所有原版口袋都具備鑰匙圈自動裝備功能.",
-    "cn": "(请勿与口袋槽位并用) 让所有原版口袋都具备钥匙环自动装备功能."
-   },
-   "Sandbox_MuleWalletKeyring": {
-    "en": "Auto-Wallet",
-    "ch": "錢包自動裝備",
-    "cn": "钱包自动装备"
-   },
-   "Sandbox_MuleWalletKeyring_tooltip": {
-    "en": "(Don't use with Wallet Slot) Enables keyring auto-equip feature to all vanilla wallets and gives all wallets 50 weight reduction.",
-    "ch": "(請勿與錢包槽位並用) 讓所有原版錢包都具備鑰匙圈自動裝備功能, 並使所有錢包獲得 50%% 負重減免.",
-    "cn": "(请勿与钱包槽位并用) 让所有原版钱包都具备钥匙环自动装备功能, 并使所有钱包获得 50%% 负重减免."
-   },
-   "Sandbox_MuleGlasses": {
-    "en": "Glasses Slot",
-    "ch": "眼鏡槽位",
-    "cn": "眼镜槽位"
-   },
-   "Sandbox_MuleGlasses_tooltip": {
-    "en": "Enables dedicated glasses slot, can be worn with masks and full helmets.",
-    "ch": "啟用專用眼鏡槽位, 可與面罩和全罩式頭盔同時佩戴.",
-    "cn": "启用专用眼镜槽位, 可与面罩和全盔同时佩戴."
-   },
-   "Sandbox_MuleShoulderPad": {
-    "en": "Shoulder Pad Slot",
-    "ch": "護肩槽位",
-    "cn": "护肩槽位"
-   },
-   "Sandbox_MuleShoulderPad_tooltip": {
-    "en": "Enables dedicated shoulder pad slots, can be worn with backpacks.",
-    "ch": "啟用專用護肩槽位, 可與背包同時穿戴.",
-    "cn": "启用专用护肩槽位, 可与背包同时穿戴."
-   },
    "Sandbox_STA_PryOpen_PryEnableSoftMin": {
     "en": "Enable Soft Minimum Strength",
     "ch": "啟用軟性力量下限",
@@ -127948,6 +127861,303 @@
     "en": "Starting Bank Balance (Minimum)",
     "ch": "初始銀行餘額 (最小值)",
     "cn": "初始银行余额 (最小值)"
+   },
+   "Sandbox_MuleAttachment1": {
+    "en": "Attach: Lantern",
+    "ch": "掛載: 提燈",
+    "cn": "挂载: 提灯"
+   },
+   "Sandbox_MuleAttachment1_tooltip": {
+    "en": "Enables attaching lanterns to belt slots.",
+    "ch": "允許將提燈掛載至腰帶槽位.",
+    "cn": "允许将提灯挂载至腰带槽位."
+   },
+   "Sandbox_MuleAttachment2": {
+    "en": "Attach: Welding Torch",
+    "ch": "掛載: 瓦斯噴槍",
+    "cn": "挂载: 丙烷喷灯",
+    "_note": "issue #143：Welding Torch 即本體 Base.BlowTorch 的 EN 顯示名，譯名跟隨本體物品名（CH「瓦斯噴槍」／CN「丙烷喷灯」），玩家才對得起物品欄。"
+   },
+   "Sandbox_MuleAttachment2_tooltip": {
+    "en": "Enables attaching welding torches to back slot.",
+    "ch": "允許將瓦斯噴槍掛載至背部槽位.",
+    "cn": "允许将丙烷喷灯挂载至背部槽位."
+   },
+   "Sandbox_MuleBack1": {
+    "en": "Slot: Duffel Bag",
+    "ch": "槽位: 行李袋",
+    "cn": "槽位: 行李袋"
+   },
+   "Sandbox_MuleBack1_tooltip": {
+    "en": "Enables dedicated slot for duffel and golf bags, can be worn with backpacks.",
+    "ch": "啟用行李袋與高爾夫球袋的專用槽位, 可與背包同時穿戴.",
+    "cn": "启用行李袋与高尔夫球袋的专用槽位, 可与背包同时穿戴."
+   },
+   "Sandbox_MuleBack2": {
+    "en": "Slot: Cloth Gun Case",
+    "ch": "槽位: 布製槍箱",
+    "cn": "槽位: 布制枪箱"
+   },
+   "Sandbox_MuleBack2_tooltip": {
+    "en": "Enables dedicated cloth gun case slot, can be worn with backpacks and duffels (will overwrite 'Satchel: Sling' if both enabled).",
+    "ch": "啟用布製槍箱專用槽位, 可與背包和行李袋同時穿戴 (若兩者同時啟用, 會覆蓋'側背包: 武器背帶').",
+    "cn": "启用布制枪箱专用槽位, 可与背包和行李袋同时穿戴 (若两者同时启用, 会覆盖'挎包: 武器背带')."
+   },
+   "Sandbox_MuleBracelet": {
+    "en": "Slot: Bracelet",
+    "ch": "槽位: 手鍊",
+    "cn": "槽位: 手链"
+   },
+   "Sandbox_MuleBracelet_tooltip": {
+    "en": "Enables dedicated bracelet slot, can be worn with watches and forearm armor.",
+    "ch": "啟用手鍊專用槽位, 可與手錶和前臂護甲同時穿戴.",
+    "cn": "启用手链专用槽位, 可与手表和前臂护甲同时穿戴."
+   },
+   "Sandbox_MuleEar": {
+    "en": "Slot: Ear Protector",
+    "ch": "槽位: 護耳罩",
+    "cn": "槽位: 隔音耳罩"
+   },
+   "Sandbox_MuleEar_tooltip": {
+    "en": "Enables dedicated ear protector slot, cannot be worn with full helmets or suit heads.",
+    "ch": "啟用護耳罩專用槽位, 無法與全罩式頭盔或連身裝頭套同時穿戴.",
+    "cn": "启用隔音耳罩专用槽位, 无法与全盔或连体服头套同时穿戴."
+   },
+   "Sandbox_MuleExclusion1": {
+    "en": "Merge: Wrist",
+    "ch": "合併: 手腕",
+    "cn": "合并: 手腕"
+   },
+   "Sandbox_MuleExclusion1_tooltip": {
+    "en": "If enabled watches and bracelets will be forced to share a slot, but maintain their ability to be worn with forearm armor.",
+    "ch": "啟用後, 手錶與手鍊會強制共用同一槽位, 但仍可與前臂護甲同時穿戴.",
+    "cn": "启用后, 手表与手链会强制共用同一槽位, 但仍可与前臂护甲同时穿戴."
+   },
+   "Sandbox_MuleExclusion2": {
+    "en": "Merge: Pocket",
+    "ch": "合併: 口袋",
+    "cn": "合并: 口袋"
+   },
+   "Sandbox_MuleExclusion2_tooltip": {
+    "en": "If enabled wallets and pouches will be forced to share a slot.",
+    "ch": "啟用後, 錢包與口袋會強制共用同一槽位.",
+    "cn": "启用后, 钱包与口袋会强制共用同一槽位."
+   },
+   "Sandbox_MulePouch1": {
+    "en": "Slot: Pouch",
+    "ch": "槽位: 口袋",
+    "cn": "槽位: 口袋",
+    "_note": "issue #143：Pouch 是本體 Base.DiceBag／GemBag／SeedBag_Farming 的 EN 顯示名，本體 CH/CN 皆作「口袋」，非腰包（fanny pack）；被本輪移除的舊鍵 Sandbox_MulePouch 原本也是「口袋」。"
+   },
+   "Sandbox_MulePouch1_tooltip": {
+    "en": "(Singleplayer only) Enables dedicated pouch slot.",
+    "ch": "(僅限單人遊戲) 啟用口袋專用槽位.",
+    "cn": "(仅限单人游戏) 启用口袋专用槽位."
+   },
+   "Sandbox_MulePouch2": {
+    "en": "Keyring: Pouch",
+    "ch": "鑰匙圈: 口袋",
+    "cn": "钥匙环: 口袋"
+   },
+   "Sandbox_MulePouch2_tooltip": {
+    "en": "(Does not work with 'Slot: Pouch') Enables keyring auto-equipping behavior to pouches.",
+    "ch": "(無法與'槽位: 口袋'並用) 讓口袋具備鑰匙圈自動裝備功能.",
+    "cn": "(无法与'槽位: 口袋'并用) 让口袋具备钥匙环自动装备功能."
+   },
+   "Sandbox_MuleSatchel1": {
+    "en": "Satchel: Sling",
+    "ch": "側背包: 武器背帶",
+    "cn": "挎包: 武器背带"
+   },
+   "Sandbox_MuleSatchel1_tooltip": {
+    "en": "Enables slings to be worn in the satchel slot.",
+    "ch": "允許將武器背帶穿戴於側背包槽位.",
+    "cn": "允许将武器背带穿戴于挎包槽位."
+   },
+   "Sandbox_MuleSatchel2": {
+    "en": "Satchel: Cloth Gun Case",
+    "ch": "側背包: 布製槍箱",
+    "cn": "挎包: 布制枪箱"
+   },
+   "Sandbox_MuleSatchel2_tooltip": {
+    "en": "Enables cloth gun cases to be worn in the satchel slot.",
+    "ch": "允許將布製槍箱穿戴於側背包槽位.",
+    "cn": "允许将布制枪箱穿戴于挎包槽位."
+   },
+   "Sandbox_MuleShoulder": {
+    "en": "Slot: Shoulder Pad",
+    "ch": "槽位: 護肩",
+    "cn": "槽位: 护肩"
+   },
+   "Sandbox_MuleShoulder_tooltip": {
+    "en": "Enables dedicated shoulder slot with the ability to equip alongside backpacks and SCBA gear.",
+    "ch": "啟用肩部專用槽位, 可與背包和自給式呼吸器同時裝備.",
+    "cn": "启用肩部专用槽位, 可与背包和自给式呼吸器同时装备."
+   },
+   "Sandbox_MuleVest1": {
+    "en": "Vest: Capacity",
+    "ch": "背心: 容量",
+    "cn": "背心: 容量"
+   },
+   "Sandbox_MuleVest1_tooltip": {
+    "en": "Enables carry capacity on all hunting vests and converts them from a clothing item to a container item. If changed mid-game any already existing vests will disappear.",
+    "ch": "啟用所有狩獵背心的攜帶容量, 並將其從衣物改為容器物品. 若在遊戲中途更改, 任何已存在的背心都會消失.",
+    "cn": "启用所有狩猎背心的携带容量, 并将其从衣物改为容器物品. 若在游戏中途更改, 任何已存在的背心都会消失."
+   },
+   "Sandbox_MuleVest2": {
+    "en": "Vest: Attachments",
+    "ch": "背心: 掛載槽位",
+    "cn": "背心: 挂载槽位"
+   },
+   "Sandbox_MuleVest2_tooltip": {
+    "en": "Enables two new vest attachment slots and allows for firearm magazines/cd players to equip to them.",
+    "ch": "新增兩個背心掛載槽位, 可用來裝備彈匣或隨身聽.",
+    "cn": "新增两个背心挂载槽位, 可用来装备弹匣或随身听."
+   },
+   "Sandbox_MuleVest3": {
+    "en": "Vest: Repair",
+    "ch": "背心: 修理",
+    "cn": "背心: 修理"
+   },
+   "Sandbox_MuleVest3_tooltip": {
+    "en": "(Does not work with 'Vest: Capacity') Enables patching holes on hunting vests.",
+    "ch": "(無法與'背心: 容量'並用) 允許修補狩獵背心上的破洞.",
+    "cn": "(无法与'背心: 容量'并用) 允许修补狩猎背心上的破洞."
+   },
+   "Sandbox_MuleVest4": {
+    "en": "Vest: Immunity",
+    "ch": "背心: 免破損",
+    "cn": "背心: 免破损"
+   },
+   "Sandbox_MuleVest4_tooltip": {
+    "en": "Disables the ability to gain holes on all hunting vests (will overwrite 'Vest: Repair' if both enabled).",
+    "ch": "停用所有狩獵背心產生破洞的機制 (若兩者同時啟用, 會覆蓋'背心: 修理').",
+    "cn": "禁用所有狩猎背心产生破洞的机制 (若两者同时启用, 会覆盖'背心: 修理')."
+   },
+   "Sandbox_MuleWallet1": {
+    "en": "Slot: Wallet",
+    "ch": "槽位: 錢包",
+    "cn": "槽位: 钱包"
+   },
+   "Sandbox_MuleWallet1_tooltip": {
+    "en": "(Singleplayer only) Enables dedicated wallet slot.",
+    "ch": "(僅限單人遊戲) 啟用錢包專用槽位.",
+    "cn": "(仅限单人游戏) 启用钱包专用槽位."
+   },
+   "Sandbox_MuleWallet2": {
+    "en": "Keyring: Wallet",
+    "ch": "鑰匙圈: 錢包",
+    "cn": "钥匙环: 钱包"
+   },
+   "Sandbox_MuleWallet2_tooltip": {
+    "en": "(Does not work with 'Slot: Wallet') Enables keyring auto-equipping behavior to wallets.",
+    "ch": "(無法與'槽位: 錢包'並用) 讓錢包具備鑰匙圈自動裝備功能.",
+    "cn": "(无法与'槽位: 钱包'并用) 让钱包具备钥匙环自动装备功能."
+   },
+   "Sandbox_MuleWalletFix": {
+    "en": "Buff: Wallet",
+    "ch": "強化: 錢包",
+    "cn": "强化: 钱包"
+   },
+   "Sandbox_MuleWalletFix_tooltip": {
+    "en": "Increases wallet weight reduction from 0 to 30.",
+    "ch": "將錢包的負重減免由 0 提高到 30.",
+    "cn": "将钱包的负重减免由 0 提高到 30."
+   },
+   "Sandbox_MuleWatch": {
+    "en": "Slot: Watch",
+    "ch": "槽位: 手錶",
+    "cn": "槽位: 手表"
+   },
+   "Sandbox_MuleWatch_tooltip": {
+    "en": "Enabled dedicated watch slot, can be worn with bracelets and forearm armor.",
+    "ch": "啟用手錶專用槽位, 可與手鍊和前臂護甲同時穿戴.",
+    "cn": "启用手表专用槽位, 可与手链和前臂护甲同时穿戴."
+   },
+   "Sandbox_MuleWebbing1": {
+    "en": "Webbing: School Bag",
+    "ch": "織帶: 書包",
+    "cn": "织带: 书包"
+   },
+   "Sandbox_MuleWebbing1_tooltip": {
+    "en": "Enables webbing slots on all small backpacks.",
+    "ch": "為所有小型背包啟用織帶槽位.",
+    "cn": "为所有小型背包启用织带槽位."
+   },
+   "Sandbox_MuleWebbing2": {
+    "en": "Webbing: Hiking Bag",
+    "ch": "織帶: 登山包",
+    "cn": "织带: 登山包"
+   },
+   "Sandbox_MuleWebbing2_tooltip": {
+    "en": "Enables webbing slots on all hiking backpacks.",
+    "ch": "為所有登山包啟用織帶槽位.",
+    "cn": "为所有登山包启用织带槽位."
+   },
+   "Sandbox_MuleWebbing3": {
+    "en": "Webbing: Military Bag",
+    "ch": "織帶: 軍用背包",
+    "cn": "织带: 军用背包"
+   },
+   "Sandbox_MuleWebbing3_tooltip": {
+    "en": "Enables webbing slots on all military and survivor backpacks.",
+    "ch": "為所有軍用和倖存者背包啟用織帶槽位.",
+    "cn": "为所有军用和幸存者背包启用织带槽位."
+   },
+   "Sandbox_MuleWebbing4": {
+    "en": "Webbing: Crude Bag",
+    "ch": "織帶: 簡易背包",
+    "cn": "织带: 简易背包"
+   },
+   "Sandbox_MuleWebbing4_tooltip": {
+    "en": "Enables webbing slots on all small crafted backpacks.",
+    "ch": "為所有小型手工背包啟用織帶槽位.",
+    "cn": "为所有小型手工背包启用织带槽位."
+   },
+   "Sandbox_MuleWebbing5": {
+    "en": "Webbing: Framepack",
+    "ch": "織帶: 框架背包",
+    "cn": "织带: 框架背包"
+   },
+   "Sandbox_MuleWebbing5_tooltip": {
+    "en": "Enables webbing slots on all framepacks.",
+    "ch": "為所有框架背包啟用織帶槽位.",
+    "cn": "为所有框架背包启用织带槽位."
+   },
+   "Sandbox_TakeABathAndShower_RemainingWaterRandomizationIntensity": {
+    "en": "Remaining Water Random Reduction",
+    "ch": "剩餘水量隨機減量",
+    "cn": "剩余水量随机减量"
+   },
+   "Sandbox_TakeABathAndShower_RemainingWaterRandomizationIntensity_option1": {
+    "en": "None",
+    "ch": "無",
+    "cn": "无"
+   },
+   "Sandbox_TakeABathAndShower_RemainingWaterRandomizationIntensity_option2": {
+    "en": "Up to 25%% reduction",
+    "ch": "最多減少 25%%",
+    "cn": "最多减少 25%%"
+   },
+   "Sandbox_TakeABathAndShower_RemainingWaterRandomizationIntensity_option3": {
+    "en": "Up to 50%% reduction",
+    "ch": "最多減少 50%%",
+    "cn": "最多减少 50%%"
+   },
+   "Sandbox_TakeABathAndShower_RemainingWaterRandomizationIntensity_option4": {
+    "en": "Up to 75%% reduction",
+    "ch": "最多減少 75%%",
+    "cn": "最多减少 75%%"
+   },
+   "Sandbox_TakeABathAndShower_RemainingWaterRandomizationIntensity_option5": {
+    "en": "Up to 100%% reduction",
+    "ch": "最多減少 100%%",
+    "cn": "最多减少 100%%"
+   },
+   "Sandbox_TakeABathAndShower_RemainingWaterRandomizationIntensity_tooltip": {
+    "en": "Randomizes the amount of water remaining after the water shutoff. <LINE>Higher values can reduce the configured remaining water by a larger amount.",
+    "ch": "隨機化停水後的剩餘水量. <LINE> 數值越高, 設定的剩餘水量被減少的幅度越大.",
+    "cn": "随机化停水后的剩余水量. <LINE> 数值越高, 设定的剩余水量被减少的幅度越大."
    }
   },
   "Tooltip.json": {
@@ -141334,9 +141544,10 @@
     "cn": "将打开容器或拆包箱盒所得的物品放回原来的容器. 打开并食用所产生的剩料与空容器不受此设置影响, 一律归还."
    },
    "UI_Text_Dumpmessage": {
-    "en": "UNAUTHORIZED STEAM MOD REUPLOAD DETECTED - This server is using an unauthorized version of a mod that is not an official Steam Workshop release. Redistribution of this modified version violates the license terms of PZK Forge Studio and applicable third-party licenses. The server owner must remove this copy and use the official release to avoid further legal action.",
-    "ch": "偵測到未經授權的 STEAM 模組轉載 - 本伺服器使用的模組版本並非 Steam 創意工坊的官方發行版, 未經授權. 散布此修改版本違反 PZK Forge Studio 的授權條款及相關第三方授權. 伺服器管理者必須移除此副本並改用官方發行版, 以免衍生後續法律行動.",
-    "cn": "检测到未经授权的 STEAM 模组转载 - 本服务器使用的模组版本并非 Steam 创意工坊的官方发行版, 未经授权. 分发此修改版本违反 PZK Forge Studio 的授权条款及相关第三方授权. 服务器管理员必须移除此副本并改用官方发行版, 以免引发后续法律行动."
+    "en": "This server is using an unauthorized and copyrighted version of a mod that is not an official Steam Workshop release.",
+    "ch": "本伺服器使用的是未經授權且受著作權保護的模組版本, 並非 Steam 創意工坊的官方發行版.",
+    "cn": "本服务器使用的是未经授权且受版权保护的模组版本, 并非 Steam 创意工坊的官方发行版.",
+    "_note": "issue #136：上游把長版侵權警告改為單句陳述，譯文同步縮短，刻意不保留已被上游刪除的主張（轉載偵測／違反授權條款／必須移除／法律行動）。"
    },
    "UI_CleanUI_HideEquipped": {
     "en": "Hide Equipped Items",
@@ -141413,6 +141624,12 @@
     "ch": "磨磨蹭蹭",
     "cn": "磨磨蹭蹭",
     "_note": "issue #125：MoreTraits - Dynamic 的 MoreTraits - Dynamic.lua:284（有效分支 42.17，該檔無任何 Lua 長註解，確認為活程式碼）在移除 gimp 特質時以 getText(\"UI_trait_slowpoke\") 顯示 halo 文字，但該鍵未定義於任何檔、任何語言。上游 EN 的 UI_trait_gimp 即為 \"Slowpoke\"，可判定作者誤植鍵名，故值與 UI_trait_gimp 一致（磨磨蹭蹭），非自行造詞。【同批已撤】UI_trait_lightdrink/harddrink(+desc) 曾一併登記，後查出唯一 producer MoreTraitsMainCreationMethods.lua:413-414 位於該檔第 1 行 --[[ 至第 426 行 --]] 的整檔註解內、永不執行，且 ToadTraits.txt 未以 character_trait_definition 補回，屬死鍵故移除。教訓：以 regex 掃 getText( 判定活引用時必須先排除 Lua 註解區塊。"
+   },
+   "UI_TABAS_UsualBathTime": {
+    "en": "Usual Bath Time",
+    "ch": "一般洗澡時間",
+    "cn": "一般洗澡时长",
+    "_note": "非 tracker diff 觸發：處理 issue #144 時逐鍵複核發現的既存缺口——上游 42.20 有效分支已定義此鍵且有有效 lua_gettext consumer（TABAS_ModOprions.lua），我方 dist 卻無，屬玩家確證可見缺口。"
    }
   },
   "MakeUp.json": {

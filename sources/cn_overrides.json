@@ -290,8 +290,8 @@
     "value": "若勾选, 则需要一根橡胶软管从汽油桶中取出汽油."
   },
   "Stash.json|Stash_P4StealthCamoMap1_Text3": {
-    "as1_value": "当我抵达并命令他放弃抵抗时, 他无视了我的命令并将手伸向了腰带.",
-    "reason": "動作對象改了：舊 EN「reached for something on his belt」，現行譯成「將手伸向了腰帶」（伸向腰帶本身）；新 EN 明寫「reached for the device on his waist」，指的是腰間那個裝置——即 Map2_Text3/Text4 的「那個裝置」",
+    "as1_value": "当我抵达并命令他放弃抵抗时, 他无视了我的命令并将手伸向了了腰带.",
+    "reason": "動作對象改了：舊 EN「reached for something on his belt」，現行譯成「將手伸向了腰帶」（伸向腰帶本身）；新 EN 明寫「reached for the device on his waist」，指的是腰間那個裝置——即 Map2_Text3/Text4 的「那個裝置」；2026-08-15 複核：上游本次變動只是把「伸向了腰带」打成疊字「伸向了了腰带」，未修正語意，override 續留，錨點同步更新",
     "value": "当我抵达并命令他放弃抵抗时, 他无视了我的命令并将手伸向了腰间的装置."
   },
   "Tooltip.json|Tooltip_ActivatedCharcoal": {
@@ -1154,5 +1154,10 @@
     "as1_value": "可调整偷窃发出声响时的音效音量.",
     "reason": "EN 為 when a stealing attempt is fumbled（偷竊失手時），原譯「偷竊發出聲響時」漏掉失手這個條件",
     "value": "可调整偷窃失手时的音效音量."
+  },
+  "Sandbox.json|Sandbox_MuleCanteen": {
+    "as1_value": "水壶槽位",
+    "reason": "上游 EN 由 Canteen Slot 改為 Slot: Canteen（issue #143 沙盒選項整組改為『分類: 項目』短標格式）；As1 原譯為改版前語序",
+    "value": "槽位: 水壶"
   }
 }
