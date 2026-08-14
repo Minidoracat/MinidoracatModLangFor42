@@ -113949,6 +113949,47 @@
     "ch": "壓製大黏土板模具",
     "cn": "压制大粘土板模具",
     "_note": "issue #140：上游把 Recipe_MakeLargeSheetMold 改名為此鍵（EN 值未變）。EN 短標 Press Large Sheet Mold 省略了 clay，但依 outputs 產出物 RepairableWindows.ClayLargeSheetMoldUnfired＝Large Clay Sheet Mold (Unfired) 補回「黏土」，與同族 FireClayLargeSheetMold「燒製大型黏土板模具」一致；舊鍵屬 As1 衍生層，依 split 不變式保留不動。"
+   },
+   "ClothBagUpgrade": {
+    "en": "ClothBagUpgrade",
+    "ch": "製作背包容量升級 (布質)",
+    "cn": "制作背包容量升级 (布质)",
+    "_note": "issue #151：Dynamic Backpack Upgrades(2996978365) 的 media/scripts/recipes/DynamicBackPackRecipes.txt 定義 8 個 craftRecipe，上游 8 種語言的 Recipes.json（含自帶繁中）**全部用 B41 時代的 Recipe_* 前綴鍵**，在 B42 完全失效——B42 的配方顯示名鍵＝craftRecipe 原名、無前綴（Translator.getRecipeName 直查 recipe.get(name)），故連上游自己的中文都不生效，玩家在製作頁面看到英文區塊名。我方補正確鍵形即可修好。譯名依各配方 outputs 的產出物既有譯名定名（如 ClothBagUpgrade → DynamicBackpacks.UpgradeCapacityCloth＝「背包容量升級 (布質)」）。As1 已收的 8 個 Recipe_* 死鍵保留不動（split 不變式）。"
+   },
+   "DenimBagUpgrade": {
+    "en": "DenimBagUpgrade",
+    "ch": "製作背包容量升級 (牛仔)",
+    "cn": "制作背包容量升级 (牛仔)"
+   },
+   "LeatherBagUpgrade": {
+    "en": "LeatherBagUpgrade",
+    "ch": "製作背包容量升級 (皮革)",
+    "cn": "制作背包容量升级 (皮革)"
+   },
+   "ImproviseMilitaryBagUpgrade": {
+    "en": "ImproviseMilitaryBagUpgrade",
+    "ch": "轉換背包容量升級 (軍用)",
+    "cn": "转换背包容量升级 (军用)"
+   },
+   "MakeClothStrapsUpgrade": {
+    "en": "MakeClothStrapsUpgrade",
+    "ch": "製作背包減重升級 (布質)",
+    "cn": "制作背包减重升级 (布质)"
+   },
+   "MakeDenimStrapsUpgrade": {
+    "en": "MakeDenimStrapsUpgrade",
+    "ch": "製作背包減重升級 (牛仔)",
+    "cn": "制作背包减重升级 (牛仔)"
+   },
+   "MakeLeatherStrapsUpgrade": {
+    "en": "MakeLeatherStrapsUpgrade",
+    "ch": "製作背包減重升級 (皮革)",
+    "cn": "制作背包减重升级 (皮革)"
+   },
+   "ImproviseMilitaryStrapsUpgrade": {
+    "en": "ImproviseMilitaryStrapsUpgrade",
+    "ch": "轉換背包減重升級 (軍用)",
+    "cn": "转换背包减重升级 (军用)"
    }
   },
   "Sandbox.json": {
