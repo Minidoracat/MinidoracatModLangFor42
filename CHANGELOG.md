@@ -4,6 +4,49 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.20.2-1.16.0] - 2026-08-15
+
+### 玩家摘要
+
+> 本節為 Workshop 更新註記用的白話版；以下各節為維護者向的技術細節。
+
+- **新支援三個模組、共 1,147 個文字。** **職場知識（Working Knowledge）** 754 個：檔案櫃與辦公桌裡的 372 種職場文件，讀一次給對應技能一次性經驗，文件名與說明全翻。**死靈法術（Dead Magic）** 383 個：法術、儀式、附魔、遺物與奧術研究樹的完整介面。**臨時消音器（Improvised Silencers）** 10 個：金屬管、手電筒、水瓶自製的消音器與配方。
+- **修好動態背包升級的合成表**（玩家回報）。那個模組的 8 個配方名一直顯示英文，原因是它自己附的中文（含繁體）在 Build 42 掛不上去——連模組作者自己的翻譯都沒生效。我方以正確方式重新提供，就修好了。
+- **死靈法術有三個儀式名一直是錯的，這次改對了。** 「枯萎凋零」其實是**伐木**儀式（一次放倒範圍內所有樹）、「鷹眼視域」其實是**亡者視域**（標記視線外的殭屍）、「電湧領域」其實是**電力領域**（像發電機一樣為附近建築供電）。另外把「魔法書」與「法術書」分開——前者是可以收錄法術的載體，後者是記載單一法術、可以抄進前者的書。
+- **跟上 18 個模組的上游更新：補譯 77 個文字、修正 6 個過時譯文。** 大宗是 **Pack Mule** 的沙盒選項整組改版（52 個）與 **軍用工具組** 的雪曼戰車部件。同時清掉 30 條上游早已改名、已經用不到的舊翻譯。
+- **PZLinux 的涵蓋範圍說明更正了。** 該模組的銀行餘額、契約與出售狀態提示、駭客訊息等文字是直接寫在程式裡的，任何翻譯包都改不了——支援清單上已標註，訂閱前就能知道。
+
+### Added
+
+- **Working Knowledge（`3717099183`）754 鍵原創翻譯**（issue #153）。ItemName 372（職場文件名）＋Tooltip 372（說明＋`Trains: 技能`）＋Sandbox 10。上游有完整簡中、無繁中且鍵形正確，故**簡中直取上游**（僅把全形標點正規化為本包慣例的半形，377 筆），CH 由 Workflow 八批分譯＋對抗複核產出。三項判讀：(a) `Trains: X` 的技能名以 **mod 的 Lua 實際給的技能**為準而非 EN 字面——`Running`→`Sprinting`「衝刺」、`Agriculture`→`Farming`「耕作」、`Animal Care`→`Husbandry`「畜牧」、`Welding`→`MetalWelding`「金工」、`Knapping`→`FlintKnapping`「石器」，31 個技能名跨八批一致；(b) EN 的句中軟換行在 CH 側比照上游 CN 合併掉、只留段落分隔，繁簡排版才一致；(c) 50 個 `WK_Doc_*` placeholder **不收**——`WK_LootReplace.lua` 在容器生成當下就 `container:AddItem` 換成真文件，玩家永遠看不到，其 `DisplayName` 一律是 `Document`。
+- **Dead Magic（`3686883520`）383 鍵原創翻譯**（issue #154）。**As1 其實已收 97 鍵，但 attribution helper 歸不了屬、全落在 `sources/_unsorted`**，因此該 mod 從未有自己的目錄、也從未被 `gen-watchlist` 監看；本次建 own lane 目錄一併解除該盲區（97 鍵留在 `_unsorted` 不動，split 不變式）。實收＝`translate_en` 缺口 369 ＋ 14 個上游未建 ItemName 鍵的附魔標記物品（script `DisplayName`，module 為 `Base` 故鍵形是 `Base.DM_Enchant*Token`，已對 `vanilla_keys` 核實零碰撞）。`Mod.json` 2 鍵不收（`readModTranslation()` 只讀 mod 自己的檔，我方出貨對其零作用）；`lua_gettext` 的 `ContextMenu_Read`／`IGUI_ZombiePopulation_TeleportHere` 為本體鍵，依 vanilla 鐵律不收；2 條 `lua_literal` 是 `getText(K) or "fallback"` 形，翻譯鍵優先、不構成涵蓋缺口。
+- **Improvised Silencers（`3779164273`）10 鍵原創翻譯**（issue #152）。有效分支僅 `common`（`42.0` 夾只有 `.keep` 佔位）。上游 12 個 `translate_en` 鍵的鍵形全部正確，簡中玩家原本就看得到，缺的只有繁中；CN 直取上游、僅正規化標點。**`Tooltip_Silencer` 與 `Tooltip_MetalPipeSilencer` 不收**——兩者是跨 mod 共用鍵（前者同屬 Firearms `2256623447` 與 Simple Silencers `3309896124`），且數值不一致（Simple 的金屬管消音器 50%、本 mod 60%），寫任一方的專屬全文都會砸掉另一方。
+- **Dynamic Backpack Upgrades（`2996978365`）8 個 B42 配方顯示名**（issue #151）。上游 8 種語言的 `Recipes.json`（含它自帶的繁中）**全部只有 B41 的 `Recipe_X_Y` 前綴鍵**，B42 的配方顯示名鍵＝`craftRecipe` 原名無前綴（`Translator.getRecipeName()` 直查），故連上游自己的中文都不生效。我方補正確鍵形即修好；譯名依各配方 `outputs` 的產出物既有譯名定名。同型於 issue #125，屬 `RECIPE_COVERAGE_AUDIT.md` 的 Class B。
+- **補譯 77 鍵、改譯 6 鍵**（issue #133–#150 十八張「可能過時」的實際缺口）：Pack Mule 沙盒選項重構 52、Military Tool Kit 戰車部件 7、TakeABathAndShower 8、Gore's SVU4 引擎零件分級 5、其餘 Herbalist／SimpleSilencers／RepairableWindows／ZVirusVaccine／ERS 各 1–2。
+
+### Fixed
+
+- **Dead Magic 三個儀式名誤譯**（As1 lane，CH 改 corpus ＋ CN 走 `cn_overrides` 帶錨點）。逐條以上游 EN 敘述複驗：`Ritual_Fell` 的 `Fell`＝伐倒樹木（"Brings down every tree in the ritual radius"／"A woodcutting rite"），原譯「枯萎凋零」把 fell 誤解為 fall/wither；`Ritual_GraveSight` 的 `Grave Sight`＝亡者（"Marks all zombies…reveals nearby dead in spectral outline"），原譯「鷹眼視域」屬增譯且與同 mod `Farsight`「千里眼」語意重疊；`Ritual_PowerField` 的 `Power Field`＝供電力場（"powers nearby structures like a generator"），原譯「電湧領域」是 power surge 的語意、錯置。
+- **Grimoire 與 Spellbook 術語分流**。上游是兩種不同物品（前者可收錄法術、分學徒／中階／大師三階，後者記載單一法術且可銘刻進前者），原本都譯「法術書」會產生「可以銘刻進法術書的法術書」的句子。統一為 **Grimoire＝魔法書、Spellbook＝法術書**，連同兩個既有 As1 鍵一併調整。
+- **PZK VLC 的侵權警告譯文跟上上游改寫**（issue #136）：上游把長版（含移除要求與法律行動威嚇）改為單句陳述，譯文同步縮短，不保留已被刪除的主張。
+- **`Recipe_MakeLargeSheetMold` 改名後的新鍵補譯**（issue #140）：EN 短標 `Press Large Sheet Mold` 省略了 clay，但依 `outputs` 產出物 `Large Clay Sheet Mold (Unfired)` 補回「黏土」，與同族 `FireClayLargeSheetMold`「燒製大型黏土板模具」一致。
+- **PZLinux 涵蓋範圍 note 更正**（issue #141）：原本只看了新增的 5 條 `lua_literal`（都在 admin 選單）就寫「玩家可見介面皆已涵蓋」，逐條複核有效分支全部 32 條後發現多數是一般玩家會看到的（銀行／錢包餘額、契約與出售服務狀態、駭客小遊戲訊息、連線提示），已移除該保證。
+- **lint 棘轮命中逐條處置**：污→汙（4）、祕→秘（2）、批量→批次、信號→訊號、搜索→搜尋、數據→紀錄、應用→用法、未通過→未通過考核，共 12 處。「藥物交互作用」是台灣醫藥標準術語（衛福部藥品仿單與健保用藥指引通用），屬 `交(\s*)互` pattern 誤中，登記 `lint_exemptions` 帶 `ch_value` 錨點。
+- **合併英文軟換行造成的標點沾黏**：移除 EN 句中折行後，「句號＋下一句」會黏成「機率.截跡」，102 筆受影響，已補做標點正規化（512 處）。
+
+### Changed
+
+- **汰除 30 個作廢鍵**（issue #143）：`own_translations` 中的 `Sandbox_Mule*` 30 鍵（2026-08-11 處理 #101 時補的）本輪已被上游全數改名，對現行有效鍵集命中 0。屬我方自有資料、不受 `split_sources` 不變式限制，連同 `ch_review_state` 對應登記一併移除；另有 32 個殭屍鍵落在 As1 衍生層，依不變式保留。
+- **`ch_review_state` 清理與擴充**：移除 2 筆已從真相層完全消失的登記（`IGUI_perks_Metalworking`／`UI_B42MP`，2026-08-12 vanilla 三語聯集基準的殘留）；本版累計新增 1,271 筆、更新 3 筆、移除 32 筆（`git diff v42.20.2-1.15.0..HEAD -- sources/ch_review_state.json` 可複驗）。登記範圍除新譯與改譯外，也涵蓋「判定譯文仍成立」的 EN 錨點刷新（#137／#138）——後者同樣是一次裁決，漏登則日後 CN 漂移不受 verify `[11]` 監測而 gate 全綠。
+- **`cn_overrides` 錨點複核**：`Stash_P4StealthCamoMap1_Text3` 的上游本次只是把「伸向了腰带」打成疊字「伸向了了腰带」、未修正語意，override 續留、錨點同步更新。
+- **`gen-watchlist` 納管三個新 wid**，上游 EN 更新後會照常開「可能過時」issue；`manifest` 重生（485→488 個 MOD，三者皆帶〔原創翻譯〕徽章）。
+
+### 已裁決不跟進
+
+- **`Tooltip_Silencer`／`Tooltip_MetalPipeSilencer` 的數值差異**（issue #152）：跨 mod 共用鍵且兩個消音器 mod 的降噪數值不同（50% vs 60%），JSON 全域表做不到條件式生效，維持現行來自 As1 已收 mod 的譯文。要各自精確須走 `isModActive` Lua 覆寫或獨立子包。
+- **PZLinux 的 32 條 `lua_literal`**（issue #141）：無翻譯鍵、JSON 蓋不掉，依現行方針不新增 `sources/lua/` 覆寫，改以支援清單的涵蓋範圍 note 揭露。
+- **`HEADER_Sandbox_EN_81deloreanDMC12` 的「DMC-1」缺字**（issue #137）：`HEADER_` 前綴不在 `getTextInternal()` 路由表，玩家看不到，屬低優先資料清理，本輪不處理。
+
 ## [42.20.2-1.15.0] - 2026-08-13
 
 ### 玩家摘要
