@@ -1,0 +1,9 @@
+{
+    "workshop_id": "3779164273",
+    "mod_ids": [
+        "ImprovisedSilencers"
+    ],
+    "name": "Improvised Silencers (Build 42.20 Compatibility)",
+    "origin": "own",
+    "note": "translation-request #152。上游只出 EN／CN／DE／ES／PTBR／RU（無繁中），有效分支僅 common（42.0 分支只有 .keep 佔位檔）。上游 12 個 translate_en 鍵的鍵形全部正確（ItemName 用裸 fullType、Recipes 用 craftRecipe 裸區塊名），故簡中玩家原本就看得到，缺的只有繁中。實收 10 鍵：ItemName 4＋Recipes 4＋Tooltip 2。**Tooltip_Silencer 與 Tooltip_MetalPipeSilencer 不收**——兩者為跨 mod 共用鍵，attribution 顯示 Tooltip_Silencer 同屬 Firearms(2256623447) 與 Simple Silencers(3309896124)、Tooltip_MetalPipeSilencer 屬 Simple Silencers；且數值不一致（Simple 的金屬管消音器為 50%%，本 mod 為 60%%），寫任一方的專屬全文都會砸掉另一方。我方現行出貨值來自 As1 已收的那兩個 mod，維持不動；要各自精確須走 isModActive Lua 覆寫或獨立子包。CN 直取上游自帶簡中（用詞道地、鍵形正確），僅把全形標點正規化為本包慣例的半形；CH 逐鍵對照 EN 直寫。mod 另有 1 處 getText 取本體鍵 ContextMenu_Add_Weapon_Upgrade，依 vanilla 鐵律不收。"
+}

@@ -1,0 +1,9 @@
+{
+    "workshop_id": "3717099183",
+    "mod_ids": [
+        "WorkingKnowledge"
+    ],
+    "name": "Working Knowledge",
+    "origin": "own",
+    "note": "translation-request #153。上游出 EN／CN／ES／FR／PTBR／RU（有簡中、無繁中），有效分支 common ＋ 42，鍵形全部正確故簡中玩家原本就看得到，缺的只有繁中。實收 754 鍵：ItemName 372（職場文件名）＋Tooltip 372（說明＋Trains: 技能）＋Sandbox 10。零 vanilla 碰撞、零既有出貨碰撞。**CN 直取上游自帶簡中**（用詞道地、鍵形正確），僅把全形標點正規化為本包慣例的半形（377 筆）；CH 逐鍵對照 EN 新譯（Workflow 8 批＋對抗複核，25 條複核修正）。EN 的句中軟換行（\n）在 CH 側比照上游 CN 合併掉、只保留段落分隔 \n\n，繁簡排版才一致。Tooltip 末尾的 Trains: X 技能名採**遊戲本體官方繁中譯名**——以 mod 的 Lua 實際給的技能為準而非 EN 字面：Running→Sprinting「衝刺」、Agriculture→Farming「耕作」、Animal Care→Husbandry「畜牧」、Welding→MetalWelding「金工」、Knapping→FlintKnapping「石器」；31 個技能名跨 8 批一致。**50 個 WK_Doc_* placeholder 不收**——WK_LootReplace.lua 在容器生成當下就把它們換成真文件（container:AddItem），玩家永遠看不到，其 DisplayName 一律為 Document。上游另有 legacy ItemName_EN.txt，B42 不讀，忽略。"
+}
