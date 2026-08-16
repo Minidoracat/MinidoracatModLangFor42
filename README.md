@@ -10,7 +10,7 @@
 |------|-----|
 | **Mod ID** | `CatModLangFor42` |
 | **支援版本** | Build 42.20.1+ |
-| **Mod 版本** | 42.20.2-1.16.0 |
+| **Mod 版本** | 42.20.2-1.17.0 |
 | **Workshop ID** | [3765907717](https://steamcommunity.com/sharedfiles/filedetails/?id=3765907717) |
 
 ## 合作與授權

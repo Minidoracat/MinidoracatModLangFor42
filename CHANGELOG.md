@@ -4,6 +4,46 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.20.2-1.17.0] - 2026-08-16
+
+### 玩家摘要
+
+> 本節為 Workshop 更新註記用的白話版；以下各節為維護者向的技術細節。
+
+- **跟上 28 個模組的上游更新，補譯 629 個文字。** 大宗是 **Burd 生存日記** 227 個（日記外觀自訂、多人權限管理、筆記編輯器）、**死靈法術** 189 個（遺物效果、研究樹細節、法術檢視面板、附魔後綴）、**PZLinux** 74 個（契約零件名與訓練課程）、**整盒整箱彈藥掉落** 60 個（新武器掉落子模組的沙盒選項）、**空間避難所** 27 個、**Gore's SVU4** 18 個（消音器配方）。
+- **修好 65 個配方名一直顯示英文的問題。** 這些配方我方其實早就譯好了，但譯文掛在 Build 41 時代的舊鍵名上，Build 42 根本不會去讀——玩家在製作選單看到的還是英文。涵蓋養蜂、製陶、太陽能板、義肢、萬能膠帶、槍械維修、彈藥裝箱等 20 多個模組。同時新增自動檢查，防止同類問題再發生。
+- **消音器與煞車的名稱改成跟遊戲本體一致。** 原本做出「重型高性能消声器」裝上車卻顯示「消声器 (高级)」，同一個東西兩個名字。現在製作選單與成品名稱統一用官方譯名（繁中「老舊／普通／高性能剎車」、簡中「制动器 (老式/普通/高级)」）。
+- **路障傷害殭屍的設定說明改對了。** 車輛傷害的預設值與說明文字一直沿用舊版（寫「按生命值百分比計算」、預設 5%），但上游早就改成固定扣血模型（預設 15，實際扣 0.15 點血，不是 15%）；兩個已停用的冷卻時間選項也補上「已棄用」標示。
+- **簡體中文的用詞在地化。** 修正 12 類台灣說法：核准→批准、检视→查看、重新命名→重命名、重新整理→刷新、栏位→槽位、载入→加载、套用→应用、储存→保存、拖曳→拖动、选取→选中等。
+- **`.357` 子彈的繁中名稱跟上本體**（麥格農→馬格南）。本體自己 `.44` 用「麥格農」、`.357` 用「馬格南」，我方逐鍵跟各自的官方譯名，以玩家實際在遊戲裡看到的為準。
+
+### Added
+
+- **`verify [16]` Recipes 死鍵 gate**（`scripts/verify_dist.py`）。`Recipe_<X>` 是 B41 `Recipes_EN.txt` 時代的鍵形，`craftRecipe_<X>` 是上游在 B42 端多加了 script 類型名當前綴；兩者 B42 都不讀——配方顯示名走 `Translator.getRecipeName(name)` → `recipe.get(name)` 裸區塊名查表（`CraftRecipe.java:362`，`ScriptBucket` 只 trim 不去空格）。前綴鍵去前綴後對得上上游現行區塊名、卻沒出貨該裸鍵即 FAIL。四道設計要點各對應一個實測過的失效模式：(a) **濾有效版本分支**（沿用 `tracker.resolve_effective_branches()`／`is_effective()`，不另寫第二套）——8,816 個區塊名有 1,889 個只存在死分支，首版漏了這道濾網就誤把 Firearms 的 `ConvertAmmo`／`DetractStock`／`ExtendStock` 判成缺口（現行 42.16 已改名 `ToggleStock`）；(b) **還原方向不可寫成 `body.replace("_", " ")`**——上游區塊名會混用空格與底線（`SVRP_CB_Pack Metal Arrows`），全換空格會把區塊本來就有的底線也換掉而漏報，改以區塊名底線化後當索引鍵、原形也收（JSON 鍵允許空格）、精確命中優先；(c) **歧義 fail-closed**——`Foo Bar_Baz` 與 `Foo_Bar Baz` 底線化後會自然撞名，只記 WARN 會放行真缺口，故候選中有任一未出貨即 FAIL 要求人工裁決；(d) **實據殘缺 fail-closed**——`mods` 形狀壞損／`records` 非 dict／濾後區塊名少於 `RECIPE_BLOCKS_MIN`(1000)／allowlist `entries` 形狀壞損都擲例外轉 FAIL，因為空 blocks 會讓判定全部回空、gate 綠燈，那是最危險的失效模式（比照 `[12]` 對 vanilla keys 的量級門檻）。另對 `extractor_schema < 5` 的 mod 出 WARN 讓已知的局部漏報盲區可見（schema 5 起才掃全部 `media/scripts` 目錄；現況 2 個停在 schema 3），刻意不判 FAIL——schema 落後是正常狀態，mod 沒更新就不會重抽。
+- **`sources/recipe_dead_allowlist.json`** 人工真相層（`[16]` 的豁免登記，schema `{"entries": {"<裸區塊名>": "<理由>"}}`）。目前留空：唯一符合條件的 `Dismantle Headphones` 撞本體 vanilla，由 `vanilla_keys.scoped_keys` 基準自動放行——登記反而會被反向棘輪報過時，且基準日後移除該鍵時過時豁免會靜默接手放行。
+- **`scripts/test_recipe_dead_keys.py`** 30 組情境回歸測試，**含對 checked-in dist 實跑一次**——其餘全是 synthetic fixture，只有它們的話真實 dist 新增死鍵時 CI 仍會全綠（`[16]` 不依賴 As1 快照，CI 上跑得動，不像 `[8]`）。納入 `tests.yml`（9→10 支）。
+- **補譯 629 鍵**（28 張「可能過時」issue #155–#183 的實際缺口）：Burd 生存日記 227（`sources/mods/3639628777/CN/` own lane，含新增 `ContextMenu.json`／`Sandbox.json` 兩檔）、Dead Magic 189、PZLinux 74（契約零件名與訓練課程技能名逐鍵吻合本體 `ItemName`／`IGUI_perks_*`，含刻意的繁簡不對稱；`{1}`／`{2}` 佔位符原樣保留，不誤轉 `%1`）、AmmoLootDrop 60、Spatial Refuge 27、Gore's SVU4 18、AmmoConverter 9（口徑名 CH 跟本體 CH、CN 跟本體 CN，兩者刻意不對稱）、WayMoreCars 5、LFB42／LSB42 各 3、P4MySoCalledSnack 3、CleanUI 2、QAMARK 2、TABAS 1、ModManager 1、SVRP ClassicBows 4。
+- **清償 65 個既有裸配方鍵缺口**（`[16]` 上線後盤點所得）。這些鍵的譯文早已存在、卻掛在永不被查的前綴鍵上，玩家在製作選單看到英文。`en` 錨點一律取有效分支的上游值（`firearmsOpenBoxOfBullets20`／`50` 原本誤取 42.12 舊分支的 `Open Box of Bullets`，現行 42.16 是 `Open Box (20 Bullets)`／`(50 Bullets)`）；多 owner 共用的 4 鍵附 `_note` 記裁決理由（`Make DIY Battery`／`Make Inverter`／`Make Solar Panel` 屬 Immersive Solar Arrays 原版與其 B42.13 fork，`firearmsOpenBoxOfBullets20` 屬 Firearms 與已停更的 CJ Firearm，值對每個 owner 都成立）。
+
+### Fixed
+
+- **#170 SVRP ClassicBows 的 4 鍵誤用 B41 前綴鍵形**（雙邊 review 攔下的 blocking）。`Recipe_Craft_{Metal,Wooden}_{Arrows,Bolts}_from_Plank` 改為上游現行裸 craftRecipe 區塊名 `Craft Metal Arrows from Plank` 等，以 `tracker-state` 的 `script_craftRecipe` 記錄逐一核實（`sha256(區塊名)[:12]` 對得上，非推測）。原本玩家用木板製箭那 4 列仍顯示英文，而 build／verify 14 項／lint 三道全綠——這正是本版新增 `[16]` 的直接由來。metadata note 同步更正上游 EN 鍵數（Recipes 33→37、`Recipe_*` 21→25、JSON 死鍵 81→85，並註明 legacy `Sandbox_EN.txt` 11 鍵不計，B42 完全不讀 `.txt`）。
+- **#169 Gore SVU4 同一製作選單內兩套用詞**。等級與車型詞一律對齊本體 `ItemName`：CH「老舊／普通／高性能」＋「剎車／消音器／備用引擎零件」、CN「老式／普通／高级」＋「制动器／消声器／引擎零件」（本體自身繁簡不對稱是刻意的，各語言各自跟本體）。原本 CN 新鍵寫「高性能」而本體是「消声器 (高级)」、既有煞車鍵已寫「高级」；CH 側則是煞車鍵停在「老式／高階」而本體是「老舊／高性能」。連帶修正車型詞（新鍵「重型／標準」→沿用既有「商用型／標準型」）與 `Tooltip_GSEPC_*` 三鍵的等級敘述。
+- **#160 BarricadesHurtZombies 只修一半**。補齊車輛側鄰鍵 `VehicleBaseDamage`（預設 5%%→15%%）／`_tooltip`（改寫為「固定扣 0.15 點血、基礎金屬車 0.1875、**不是** 15%」）／`VehicleDamageCooldown` 與 `ThumpDamageCooldown` 標籤（補「已棄用, 不再生效」）。原本同一設定頁裡結構傷害說「固定 HP」、車輛傷害說「按生命值百分比」，且預設值 5 是上游從未有過的數字。CN 走 `cn_overrides` 帶 `as1_value` 錨點。
+- **own 層 CN 殘留台灣用語 12 類**。核准→批准、检视→查看、重新命名→重命名、重新整理→刷新、栏位→槽位、载入→加载、套用→应用、物件→物体、储存→保存、拖曳→拖动、选取→选中、关掉→关闭。判準是 As1 CN 語料詞頻（「重新命名」全庫 0:22、「检视」0:107、「套用」1:154、「栏位」5:108），**非機械替換**：「小物件」「实体储存」與敘事口吻的「关掉」屬大陸同樣成立，「把袜子按颜色重新整理」（動詞整理）、「当防水套用的避孕套」（分詞誤判）一律不動。`verify [14]` 只擋 著／牠／妳／「」，詞級在地化無法機械判定——這是 `AGENTS.md` 真相模型第 6 條點名的盲區。
+- **CH `.357` 彈藥名跟本體**（麥格農→馬格南，5 鍵）。本體 `Base.Bullets357` 是「.357馬格南子彈」而 `Base.Bullets44` 是「.44 麥格農子彈」，本體自身不對稱；我方逐鍵跟各自的官方譯名，`.44` 保持不動。
+- **倒裝語病**「每具你擊殺的殭屍」→「你每擊殺一具殭屍」（CH/CN 同步，2 鍵 ×2 語言）。
+- **`AGENTS.md` 的 `[15]` schema 敘述**：寫成頂層 `{"<裸fullType>": "<理由>"}`，實際是 `{"entries": {...}}`（既有文件錯誤，順手更正；該檔不進版控故不在 commit 內）。
+
+### Changed
+
+- **退役 3 個誤補的死分支裸鍵**：`ConvertAmmo`／`DetractStock`／`ExtendStock`（Firearms `2256623447`）只存在 42.12–42.13 分支，現行有效分支 42.16 已改名 `ToggleStock`，出貨無用。屬我方自有資料、不受 `split_sources` 不變式限制，連同 `ch_review_state` 對應登記一併移除。
+- **`ch_review_state` 新增 728 筆、更新 15 筆**（`git diff v42.20.2-1.16.0..HEAD -- sources/ch_review_state.json` 可複驗）。除新譯與改譯外，也涵蓋 registry 背書 gate 要求的 `cn_overrides` 命中鍵——漏登則日後 CN 漂移不受 `verify [11]` 監測而 gate 全綠。
+
+### 驗證
+
+兩個內容 commit（`cd372e2`／`17be975`）**各自**跑過完整鏈，不是只有最終狀態綠：build → `verify_dist`（14/14 → 15/15 PASS，未帶 `--allow-missing-as1`）→ 冪等雙跑 `--compare-dist` 零 diff（173 檔）→ `lint_ch` 棘輪全零 → 回歸測試（9 支 → 10 支）→ `test_vanilla_no_override` 對本機本體 48,718 個 (檔,鍵) 零覆蓋 → `tracker.py self-test` 十四情境 → `manifest --check` 同步。release 前另跑 `--cn-diff v42.20.2-1.16.0`：CN 值變動 725 鍵、**待複核 0**。CI `tests` workflow 於 `17be975` 綠燈（含新增測試對 checked-in dist 的實跑）。
+
 ## [42.20.2-1.16.0] - 2026-08-15
 
 ### 玩家摘要
