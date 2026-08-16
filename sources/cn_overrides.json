@@ -947,13 +947,13 @@
   },
   "Sandbox.json|Sandbox_VanillaBoxDropRate_tooltip": {
     "as1_value": "掉落率倍率",
-    "reason": "上游改文，As1 譯文已過時；且 As1 原譯『掉落率倍率』本就是標題級文字、與該 tooltip 不符",
-    "value": "每只僵尸针对 9 种整盒弹药各自的掉落几率 (百分比).\n多数僵尸会对 9 种各掷两次: 一次来自服装、\n一次来自默认池, 合计 18 次.\n默认值 0.5 约每 12 具尸体掉一盒, 其余尸体约每 23 具一盒.\n一盒含 20 至 50 发, 因此数值稍高影响就很大.\n设为 0 即关闭掉落."
+    "reason": "上游 EN 語意變更（tracker stale 3389050623），CN 跟進新 EN",
+    "value": "你每击杀一只僵尸、每种整盒弹药的掉落几率 (百分比).\n\n每个仍开启的种类各自掷骰, 多数僵尸会把\n整份清单掷两次. 9 种全开就是每具 18 次.\n\n<RGB:0.100,0.800,1.000>所以 0.5 不是 0.5%% 的僵尸会掉.\n大约每 12 具尸体才会留下一盒.\n\n<RGB:0.800,1.000,0.000>一盒有 20 至 50 发, 因此数值稍高影响就很大.\n\n<RGB:1,1,1>设为 0 即关闭掉落."
   },
   "Sandbox.json|Sandbox_VanillaCartonDropRate_tooltip": {
     "as1_value": "掉落率倍率",
-    "reason": "上游改文，As1 譯文已過時；同上，As1 原譯與該 tooltip 不符",
-    "value": "每只僵尸针对 9 种整箱弹药各自的掉落几率 (百分比).\n多数僵尸会对 9 种各掷两次: 一次来自服装、\n一次来自默认池, 合计 18 次.\n默认值 0.05 约每 110 具尸体掉一箱, 其余尸体约每 220 具一箱.\n一箱等于 12 盒, 因此即使数值 1 也会让它变得常见.\n设为 0 即关闭掉落."
+    "reason": "上游 EN 語意變更（tracker stale 3389050623），CN 跟進新 EN",
+    "value": "你每击杀一只僵尸、每种整箱弹药的掉落几率 (百分比).\n\n每个仍开启的种类各自掷骰, 多数僵尸会把\n整份清单掷两次. 9 种全开就是每具 18 次.\n\n<RGB:0.100,0.800,1.000>所以 0.05 不是 0.05%% 的僵尸会掉.\n大约每 110 具尸体才会留下一箱.\n\n<RGB:0.800,1.000,0.000>一箱等于 12 盒, 因此即使数值 1 也会让它变得常见.\n\n<RGB:1,1,1>设为 0 即关闭掉落."
   },
   "Sandbox.json|Sandbox_GydeTraitMags_NegToPos_tooltip": {
     "as1_value": "如果角色初始拥有某个负面特质, 则允许获得其对应的正面特质 (例如: 周日司机 → 速度狂).",
@@ -1184,5 +1184,120 @@
     "as1_value": "查看法术书",
     "reason": "Grimoire 與 Spellbook 是上游兩種不同物品（前者可收錄法術、分學徒／中階／大師三階，後者記載單一法術且可銘刻進前者），原譯把兩者都作「法術書」會產生「可以銘刻進法術書的法術書」的句子；統一為 Grimoire＝魔法書、Spellbook＝法術書",
     "value": "查看魔法书"
+  },
+  "Recipes.json|P4TakeApollo": {
+    "as1_value": "拿出Apol巧克力",
+    "reason": "上游 EN 語意變更（tracker stale 2877535263），CN 跟進新 EN",
+    "value": "拿出 1 个 Apol 巧克力"
+  },
+  "Recipes.json|P4TakeChococones": {
+    "as1_value": "拿出巧克力甜筒",
+    "reason": "上游 EN 語意變更（tracker stale 2877535263），CN 跟進新 EN",
+    "value": "拿出 1 个巧克力甜筒"
+  },
+  "Recipes.json|P4TakeChocorooms": {
+    "as1_value": "拿出蘑古力‌",
+    "reason": "上游 EN 語意變更（tracker stale 2877535263），CN 跟進新 EN",
+    "value": "拿出 1 个蘑古力"
+  },
+  "Recipes.json|ConvertTo308": {
+    "as1_value": "转换为. 308子弹",
+    "reason": "上游 EN 語意變更（tracker stale 3388844065），CN 跟進新 EN",
+    "value": "转换为 7.62x51mm 子弹"
+  },
+  "Recipes.json|ConvertTo308Box": {
+    "as1_value": "转换为. 308子弹 (整盒)",
+    "reason": "上游 EN 語意變更（tracker stale 3388844065），CN 跟進新 EN",
+    "value": "转换为 7.62x51mm 子弹 (整盒)"
+  },
+  "Recipes.json|ConvertTo45Auto": {
+    "as1_value": "转换为. 45 ACP子弹",
+    "reason": "上游 EN 語意變更（tracker stale 3388844065），CN 跟進新 EN",
+    "value": "转换为 .45 ACP 子弹"
+  },
+  "Recipes.json|ConvertTo45AutoBox": {
+    "as1_value": "转换为. 45 ACP子弹 (整盒)",
+    "reason": "上游 EN 語意變更（tracker stale 3388844065），CN 跟進新 EN",
+    "value": "转换为 .45 ACP 子弹 (整盒)"
+  },
+  "Recipes.json|ConvertTo556": {
+    "as1_value": "转换为5. 56mm子弹",
+    "reason": "上游 EN 語意變更（tracker stale 3388844065），CN 跟進新 EN",
+    "value": "转换为 5.56x45mm 子弹"
+  },
+  "Recipes.json|ConvertTo556Box": {
+    "as1_value": "转换为5. 56mm子弹 (整盒)",
+    "reason": "上游 EN 語意變更（tracker stale 3388844065），CN 跟進新 EN",
+    "value": "转换为 5.56x45mm 子弹 (整盒)"
+  },
+  "Recipes.json|ConvertTo9mm": {
+    "as1_value": "转换为9mm子弹",
+    "reason": "上游 EN 語意變更（tracker stale 3388844065），CN 跟進新 EN",
+    "value": "转换为 9x19mm 子弹"
+  },
+  "Recipes.json|ConvertTo9mmBox": {
+    "as1_value": "转换为9mm子弹 (整盒)",
+    "reason": "上游 EN 語意變更（tracker stale 3388844065），CN 跟進新 EN",
+    "value": "转换为 9x19mm 子弹 (整盒)"
+  },
+  "Recipes.json|ConvertToShotgunShells": {
+    "as1_value": "转换为霰弹枪子弹",
+    "reason": "上游 EN 語意變更（tracker stale 3388844065），CN 跟進新 EN",
+    "value": "转换为 12g 子弹"
+  },
+  "Recipes.json|ConvertToShotgunShellsBox": {
+    "as1_value": "转换为霰弹枪子弹 (整盒)",
+    "reason": "上游 EN 語意變更（tracker stale 3388844065），CN 跟進新 EN",
+    "value": "转换为 12g 子弹 (整盒)"
+  },
+  "Sandbox.json|Sandbox_BarricadesHurtZombies_BaseDamage": {
+    "as1_value": "基础伤害 (默认: 5%%)",
+    "reason": "上游 EN 語意變更（tracker stale 3402208866），CN 跟進新 EN",
+    "value": "基础伤害 (默认: 18%%)"
+  },
+  "Sandbox.json|Sandbox_BarricadesHurtZombies_BaseDamage_tooltip": {
+    "as1_value": "丧尸攻击木质路障或无装甲车辆时受到的基础伤害 (按他们的生命值百分比计算). 此数值将与材料和装甲类型加成相乘.",
+    "reason": "上游 EN 語意變更（tracker stale 3402208866），CN 跟進新 EN",
+    "value": "默认值 18 表示每次确认的结构撞击事件, 在应用材料与物体倍率前固定扣除 0.18 点僵尸生命, 不是该僵尸生命值的 18%%. Build 42.20 计算的是实际 ThumpFrame 事件; 本模组每次回调应用 1 单位伤害. 旧存档可能还留着较旧的数值, 若要使用当前默认平衡请设为 18."
+  },
+  "Sandbox.json|Sandbox_BarricadesHurtZombies_ThumpDamageCooldown_tooltip": {
+    "as1_value": "僵尸撞击路障、门或窗户受到伤害的最小时间间隔(以毫秒计). 防止同一僵尸过快受到伤害. 0表示无冷却时间, 默认值为500.",
+    "reason": "上游 EN 語意變更（tracker stale 3402208866），CN 跟進新 EN",
+    "value": "已弃用的兼容性选项. 此设置不会被使用; 结构伤害改为绑定原版的实际撞击世界音效事件."
+  },
+  "Sandbox.json|Sandbox_BarricadesHurtZombies_VehicleDamageCooldown_tooltip": {
+    "as1_value": "车辆对丧尸造成伤害的最小间隔时间 (毫秒). 0表示无冷却.",
+    "reason": "上游 EN 語意變更（tracker stale 3402208866），CN 跟進新 EN",
+    "value": "已弃用的兼容性选项. 此设置不会被使用; 车辆伤害改为绑定原版的实际车辆撞击信号."
+  },
+  "Tooltip.json|Tooltip_item_P4JellyBase": {
+    "as1_value": "请在冰箱冷藏凝固2小时以上.",
+    "reason": "上游 EN 語意變更（tracker stale 2877535263），CN 跟進新 EN",
+    "value": "请在冰箱冷藏凝固 2 小时以上."
+  },
+  "Tooltip.json|Tooltip_item_P4PuddingBase": {
+    "as1_value": "请在冰箱冷藏凝固1小时以上.",
+    "reason": "上游 EN 語意變更（tracker stale 2877535263），CN 跟進新 EN",
+    "value": "请在冰箱冷藏凝固 1 小时以上."
+  },
+  "Sandbox.json|Sandbox_BarricadesHurtZombies_VehicleBaseDamage": {
+    "as1_value": "载具基础伤害 (默认: 5%%)",
+    "reason": "上游 EN 語意變更（tracker stale 3402208866 同批車輛側鄰鍵），CN 跟進新 EN",
+    "value": "载具基础伤害 (默认: 15%%)"
+  },
+  "Sandbox.json|Sandbox_BarricadesHurtZombies_VehicleBaseDamage_tooltip": {
+    "as1_value": "僵尸攻击无装甲车辆时受到的基础伤害 (按他们的生命值百分比计算). 该数值与木质路障相独立以便分别进行调整. 车辆往往比路障拥有更多耐久. ",
+    "reason": "上游 EN 語意變更（tracker stale 3402208866 同批車輛側鄰鍵），CN 跟進新 EN",
+    "value": "数值 15 表示每次车辆撞击, 在应用材料倍率前固定扣除 0.15 点僵尸生命. 因此基础金属车辆每次确认撞击会扣除 0.1875 点生命. 不是该僵尸生命值的 15%%."
+  },
+  "Sandbox.json|Sandbox_BarricadesHurtZombies_VehicleDamageCooldown": {
+    "as1_value": "车辆伤害冷却时间",
+    "reason": "上游 EN 語意變更（tracker stale 3402208866 同批車輛側鄰鍵），CN 跟進新 EN",
+    "value": "车辆伤害冷却 (已弃用, 不再生效)"
+  },
+  "Sandbox.json|Sandbox_BarricadesHurtZombies_ThumpDamageCooldown": {
+    "as1_value": "撞击伤害冷却",
+    "reason": "上游 EN 語意變更（tracker stale 3402208866 同批車輛側鄰鍵），CN 跟進新 EN",
+    "value": "撞击伤害冷却 (已弃用, 不再生效)"
   }
 }

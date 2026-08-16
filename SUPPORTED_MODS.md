@@ -436,7 +436,7 @@
 | [R.U. BMP-2 by Papa_Chad](https://steamcommunity.com/sharedfiles/filedetails/?id=3635550823) | R.U. BMP-2 by Papa_Chad | 新增俄系 BMP-2 步兵戰車，配備 2A42 30mm 機炮。 | `R.U. BMP-2 by Papa_Chad` | 1 | — | — |
 | [Show Weapon Stats Plus](https://steamcommunity.com/sharedfiles/filedetails/?id=3635921724) | 顯示武器數值增強版 | 在提示中顯示武器傷害、狀況、精度、噪音等詳細數值，項目可自訂。 | `showweaponstatsplus4213` | 43 | — | — |
 | [Extensive Health Rework B42 (no longer supported)](https://steamcommunity.com/sharedfiles/filedetails/?id=3638633196) | 大規模健康系統重製（已停止支援） | 大幅重製健康系統，新增失血、昏厥、真菌感染等擬真疾病機制。 | `EHR` | 395 | — | — |
-| [Burd's Survival Journals (B41/42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3639628777) | 伯德的生存日誌 | 可將技能、配方與特質記錄成日誌，供之後的角色閱讀繼承。 | `BurdSurvivalJournals` | 961 | — | — |
+| [Burd's Survival Journals (B41/42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3639628777) | 伯德的生存日誌 | 可將技能、配方與特質記錄成日誌，供之後的角色閱讀繼承。 | `BurdSurvivalJournals` | 1188 | — | — |
 | ['70 Plymouth Road Runner](https://steamcommunity.com/sharedfiles/filedetails/?id=3642935062) | 1970 年 Plymouth Road Runner | 新增 1970 年 Plymouth Road Runner 車輛，可製作車門、保險桿等零件。 | `70roadRunner` | 25 | — | — |
 | [zRe Vaccine 3.0 [b42.13+ MP] ReMod by kERHUS](https://steamcommunity.com/sharedfiles/filedetails/?id=3643703198) | zRe 疫苗 3.0 ReMod by kERHUS | 新增疫苗與抗病毒藥物研製系統，包含化學試劑、實驗室設備與病毒學書籍。 | `zReModVaccin30bykERHUS`, `zReModVaccin30bykERHUS_Addon` | 33 | — | — |
 | [Extensive Power Rework B42 (no longer supported)](https://steamcommunity.com/sharedfiles/filedetails/?id=3643765614) | 深度電力重製（已停止支援） | 重製電力系統，設施會隨時間衰減，需評估損壞、維修與校準來維持供電。 | `EPR_B42` | 253 | — | — |
@@ -478,12 +478,12 @@
 | [PhunCure 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3676251425) | PhunCure 2 趣味解藥 | 新增可注射的解藥，能治癒咬傷、殭屍病毒與傷口感染，效果可自訂。 | `phuncure2` | 33 | — | — |
 | [Better Vanilla ALICE Suspenders](https://steamcommunity.com/sharedfiles/filedetails/?id=3676721528) | 更好的原版 ALICE 背帶 | 改良原版 ALICE 背帶裝備，並附帶多個出生地點選項描述。 | `bettervanillaalicesuspendersID` | 37 | ⚠️ ≥3 | — |
 | [Solar Floodlight [42.16] [MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3680577450) | 太陽能探照燈 | 新增可組裝的太陽能探照燈，含電池槽與電池健康度顯示。 | `SolarFloodlight` | 55 | — | — |
-| [Dead Magic〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3686883520) | 死靈法術 | 新增完整魔法系統：法術書與魔法書、儀式、附魔、遺物與奧術研究樹。 | `DeadMagic` | 383 | — | — |
+| [Dead Magic〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3686883520) | 死靈法術 | 新增完整魔法系統：法術書與魔法書、儀式、附魔、遺物與奧術研究樹。 | `DeadMagic` | 572 | — | — |
 | [Working Knowledge〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3717099183) | 職場知識 | 在檔案櫃、辦公桌等容器中加入 372 種職場文件，閱讀一次可獲得對應技能的一次性經驗。 | `WorkingKnowledge` | 754 | — | — |
-| [Gore's SVU4 Core〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3730070661) | Gore 的 SVU4 核心 | 標準化車輛升級 4 核心：車輛裝甲與升級件、車頂架／車頂照明、車輛烤漆；同捆工業流體儲存、備用引擎零件與原版車輛部件製作共 4 個子模組。 | `GoresSVU4Core`, `GoresIndustrialFluidInfrastructure`, `GoresSpareEnginePartsCrafting`, `GoresVanillaVehiclePartsCrafting` | 252 | ⚠️ ≥9 | ⚠️ 本包涵蓋物品名、車頂燈右鍵選單、沙盒設定與製作配方；車輛裝甲改裝介面（車輛輪盤 V →Upgrades）的標籤與按鈕文字由該 MOD 大量寫死於 Lua（僅視窗標題的車輛名走遊戲譯文），未走遊戲翻譯機制，翻譯包無法覆蓋。 |
+| [Gore's SVU4 Core〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3730070661) | Gore 的 SVU4 核心 | 標準化車輛升級 4 核心：車輛裝甲與升級件、車頂架／車頂照明、車輛烤漆；同捆工業流體儲存、備用引擎零件與原版車輛部件製作共 4 個子模組。 | `GoresSVU4Core`, `GoresIndustrialFluidInfrastructure`, `GoresSpareEnginePartsCrafting`, `GoresVanillaVehiclePartsCrafting` | 270 | ⚠️ ≥9 | ⚠️ 本包涵蓋物品名、車頂燈右鍵選單、沙盒設定與製作配方；車輛裝甲改裝介面（車輛輪盤 V →Upgrades）的標籤與按鈕文字由該 MOD 大量寫死於 Lua（僅視窗標題的車輛名走遊戲譯文），未走遊戲翻譯機制，翻譯包無法覆蓋。 |
 | [MRE Mod [B42.20.2]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3765409550) | 即食口糧 | 新增 1993 與 2026 兩個年份、共 36 種菜色的美軍即食口糧，附整盒包裝、拆封配方與生成率／營養值沙盒設定。 | `bdtmre` | 112 | — | — |
 | [Mirage Wardrobe: Multiplayer Transmog [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3770186452) | 幻裝衣櫥：多人連線幻化 | 以裝備部位為單位的服裝幻化衣櫥，變更角色外觀而不影響實際裝備數值；支援收藏解鎖、款式染色、套裝預設、人物觀察窗與多人連線同步。 | `MirageWardrobe42` | 313 | — | — |
-| [[SVRP] ClassicBows〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3776949545) | 經典弓箭 | 新增複合弓、獵弓、中世紀弓與多款十字弩，搭配木質／金屬／碳製箭矢與弩箭、戰術箭袋及整包打包配方。 | `SVRPClassicBows` | 48 | — | — |
+| [[SVRP] ClassicBows〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3776949545) | 經典弓箭 | 新增複合弓、獵弓、中世紀弓與多款十字弩，搭配木質／金屬／碳製箭矢與弩箭、戰術箭袋及整包打包配方。 | `SVRPClassicBows` | 52 | — | — |
 | [Improvised Silencers (Build 42.20 Compatibility)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3779164273) | 臨時消音器 | 新增可用金屬管、手電筒、水瓶等材料自製的消音器，各自有不同的降噪幅度與射程代價。 | `ImprovisedSilencers` | 10 | — | — |
 
 ## 已下架模組（15 個，翻譯保留）

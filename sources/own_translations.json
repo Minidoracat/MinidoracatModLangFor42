@@ -209,9 +209,9 @@
     "cn": "大型丙烷罐已空"
    },
    "ContextMenu_RefillPropaneTank": {
-    "en": "Refill From Large Propane Tank",
-    "ch": "從大型丙烷罐補充",
-    "cn": "从大型丙烷罐补充"
+    "en": "Refill From Industrial Propane Tank",
+    "ch": "從工業丙烷罐補充",
+    "cn": "从工业丙烷罐补充"
    },
    "ContextMenu_Remove_Battery_To_Laser": {
     "en": "Remove battery from laser",
@@ -3593,6 +3593,16 @@
     "ch": "強行破鎖",
     "cn": "强行破锁",
     "_note": "上游鍵名寫 Unlock、EN 值卻是 \"Force lock\"，而同組 IGUI_LockInteriors_ForceUnlock 說明為「用撬棍強行破壞鎖」，故譯為「強行破鎖」而非解鎖；亦避開意為 lockpicking 的「撬鎖」。"
+   },
+   "ContextMenu_IndustrialPropaneTankEmpty": {
+    "en": "Industrial Propane Tank is Empty",
+    "ch": "工業丙烷罐已空",
+    "cn": "工业丙烷罐已空"
+   },
+   "ContextMenu_TABAS_WashGrime": {
+    "en": "Wash Grime",
+    "ch": "清洗汙垢",
+    "cn": "清洗污垢"
    }
   },
   "Fluids.json": {
@@ -19345,6 +19355,416 @@
     "en": "76mm M1 Cannon",
     "ch": "M1 76mm砲",
     "cn": "M1 76mm炮"
+   },
+   "IGUI_CraftingCategories_Legendaries": {
+    "en": "Legendaries",
+    "ch": "傳奇",
+    "cn": "传奇"
+   },
+   "IGUI_PZLinux_ContractPart_AlcoholWipes": {
+    "en": "Alcohol Wipes",
+    "ch": "酒精棉片",
+    "cn": "酒精湿巾"
+   },
+   "IGUI_PZLinux_ContractPart_AlcoholedCottonBalls": {
+    "en": "Cotton Balls Doused in Alcohol",
+    "ch": "已消毒棉花球",
+    "cn": "酒精棉球"
+   },
+   "IGUI_PZLinux_ContractPart_Antibiotics": {
+    "en": "Antibiotics",
+    "ch": "抗生素",
+    "cn": "抗生素"
+   },
+   "IGUI_PZLinux_ContractPart_AssaultRifle": {
+    "en": "M16 Assault Rifle",
+    "ch": "M16 突擊步槍",
+    "cn": "M16突击步枪"
+   },
+   "IGUI_PZLinux_ContractPart_AssaultRifle2": {
+    "en": "M1A Rifle",
+    "ch": "M14 步槍",
+    "cn": "M1A 步枪"
+   },
+   "IGUI_PZLinux_ContractPart_Bandage": {
+    "en": "Bandage",
+    "ch": "繃帶",
+    "cn": "绷带"
+   },
+   "IGUI_PZLinux_ContractPart_Bandaid": {
+    "en": "Bandage: Adhesive",
+    "ch": "OK繃",
+    "cn": "创可贴"
+   },
+   "IGUI_PZLinux_ContractPart_CarBattery1": {
+    "en": "Battery: Standard",
+    "ch": "車電池: 標準",
+    "cn": "汽车电池: 标准"
+   },
+   "IGUI_PZLinux_ContractPart_CarBattery2": {
+    "en": "Battery: Sport",
+    "ch": "車電池: 運動型",
+    "cn": "汽车电池: 运动型"
+   },
+   "IGUI_PZLinux_ContractPart_CarBattery3": {
+    "en": "Battery: Resistant",
+    "ch": "車電池: 耐用型",
+    "cn": "汽车电池: 耐用型"
+   },
+   "IGUI_PZLinux_ContractPart_Disinfectant": {
+    "en": "Bottle of Disinfectant",
+    "ch": "瓶裝消毒水",
+    "cn": "消毒剂"
+   },
+   "IGUI_PZLinux_ContractPart_DoubleBarrelShotgun": {
+    "en": "Double Barrel Shotgun",
+    "ch": "雙管散彈槍",
+    "cn": "双管霰弹枪"
+   },
+   "IGUI_PZLinux_ContractPart_DoubleBarrelShotgunSawnoff": {
+    "en": "Sawed-off Double Barrel Shotgun",
+    "ch": "削短雙管散彈槍",
+    "cn": "双管霰弹枪 (锯短)"
+   },
+   "IGUI_PZLinux_ContractPart_HuntingRifle": {
+    "en": "MSR788 Rifle",
+    "ch": "MSR788 步槍",
+    "cn": "MSR788狩猎步枪"
+   },
+   "IGUI_PZLinux_ContractPart_Pills": {
+    "en": "Painkillers",
+    "ch": "止痛藥",
+    "cn": "止痛药"
+   },
+   "IGUI_PZLinux_ContractPart_PillsAntiDep": {
+    "en": "Antidepressants",
+    "ch": "抑鬱藥",
+    "cn": "抗抑郁药"
+   },
+   "IGUI_PZLinux_ContractPart_PillsBeta": {
+    "en": "Beta Blockers",
+    "ch": "乙型阻斷劑",
+    "cn": "β-阻断剂"
+   },
+   "IGUI_PZLinux_ContractPart_PillsSleepingTablets": {
+    "en": "Sleeping Pills",
+    "ch": "安眠藥",
+    "cn": "安眠药"
+   },
+   "IGUI_PZLinux_ContractPart_PillsVitamins": {
+    "en": "Caffeine Pills",
+    "ch": "咖啡因藥片",
+    "cn": "咖啡因药片"
+   },
+   "IGUI_PZLinux_ContractPart_Pistol": {
+    "en": "M9 Pistol",
+    "ch": "M9 手槍",
+    "cn": "M9 手枪"
+   },
+   "IGUI_PZLinux_ContractPart_Pistol2": {
+    "en": "M1911 Pistol",
+    "ch": "M1911 手槍",
+    "cn": "M1911 手枪"
+   },
+   "IGUI_PZLinux_ContractPart_Pistol3": {
+    "en": "B-F Pistol",
+    "ch": "沙漠之鷹手槍",
+    "cn": "B-F 手枪"
+   },
+   "IGUI_PZLinux_ContractPart_Revolver": {
+    "en": "Patrol Revolver",
+    "ch": "M625 左輪手槍",
+    "cn": "巡逻用左轮手枪"
+   },
+   "IGUI_PZLinux_ContractPart_RevolverLong": {
+    "en": "Magnum",
+    "ch": "麥格農",
+    "cn": "马格南左轮手枪"
+   },
+   "IGUI_PZLinux_ContractPart_RevolverShort": {
+    "en": "SN38 Revolver",
+    "ch": "M36 左輪手槍",
+    "cn": "SN38 左轮手枪"
+   },
+   "IGUI_PZLinux_ContractPart_Shotgun": {
+    "en": "JS-2000 Shotgun",
+    "ch": "JS-2000 散彈槍",
+    "cn": "JS-2000霰弹枪"
+   },
+   "IGUI_PZLinux_ContractPart_ShotgunSawnoff": {
+    "en": "Sawed-off JS-2000 Shotgun",
+    "ch": "削短 JS-2000 散彈槍",
+    "cn": "JS-2000 霰弹枪 (锯短)"
+   },
+   "IGUI_PZLinux_ContractPart_VarmintRifle": {
+    "en": "MSR700 Rifle",
+    "ch": "MSR700 步槍",
+    "cn": "MSR700猎狐步枪"
+   },
+   "IGUI_PZLinux_ContractPart_ModernBrake1": {
+    "en": "Performance brakes: Standard",
+    "ch": "高性能剎車: 標準",
+    "cn": "高性能制动器: 标准"
+   },
+   "IGUI_PZLinux_ContractPart_ModernBrake2": {
+    "en": "Performance brakes: Sport",
+    "ch": "高性能剎車: 運動型",
+    "cn": "高性能制动器: 运动型"
+   },
+   "IGUI_PZLinux_ContractPart_ModernBrake3": {
+    "en": "Performance brakes: Resistant",
+    "ch": "高性能剎車: 耐用型",
+    "cn": "高性能制动器: 耐用型"
+   },
+   "IGUI_PZLinux_ContractPart_ModernCarMuffler1": {
+    "en": "Performance silencers: Standard",
+    "ch": "高性能消音器: 標準",
+    "cn": "高性能消声器: 标准"
+   },
+   "IGUI_PZLinux_ContractPart_ModernCarMuffler2": {
+    "en": "Performance silencers: Sport",
+    "ch": "高性能消音器: 運動型",
+    "cn": "高性能消声器: 运动型"
+   },
+   "IGUI_PZLinux_ContractPart_ModernCarMuffler3": {
+    "en": "Performance silencers: Resistant",
+    "ch": "高性能消音器: 耐用型",
+    "cn": "高性能消声器: 耐用型"
+   },
+   "IGUI_PZLinux_ContractPart_ModernSuspension1": {
+    "en": "Performance suspension: Standard",
+    "ch": "高性能懸吊: 標準",
+    "cn": "高性能悬挂: 标准"
+   },
+   "IGUI_PZLinux_ContractPart_ModernSuspension2": {
+    "en": "Performance suspension: Sport",
+    "ch": "高性能懸吊: 運動型",
+    "cn": "高性能悬挂: 运动型"
+   },
+   "IGUI_PZLinux_ContractPart_ModernSuspension3": {
+    "en": "Performance suspension: Resistant",
+    "ch": "高性能懸吊: 耐用型",
+    "cn": "高性能悬挂: 耐用型"
+   },
+   "IGUI_PZLinux_ContractPart_NormalBrake1": {
+    "en": "Standard brakes: Standard",
+    "ch": "普通剎車: 標準",
+    "cn": "普通制动器: 标准"
+   },
+   "IGUI_PZLinux_ContractPart_NormalBrake2": {
+    "en": "Standard brakes: Sport",
+    "ch": "普通剎車: 運動型",
+    "cn": "普通制动器: 运动型"
+   },
+   "IGUI_PZLinux_ContractPart_NormalBrake3": {
+    "en": "Standard brakes: Resistant",
+    "ch": "普通剎車: 耐用型",
+    "cn": "普通制动器: 耐用型"
+   },
+   "IGUI_PZLinux_ContractPart_NormalCarMuffler1": {
+    "en": "Standard silencers: Standard",
+    "ch": "普通消音器: 標準",
+    "cn": "普通消声器: 标准"
+   },
+   "IGUI_PZLinux_ContractPart_NormalCarMuffler2": {
+    "en": "Standard silencers: Sport",
+    "ch": "普通消音器: 運動型",
+    "cn": "普通消声器: 运动型"
+   },
+   "IGUI_PZLinux_ContractPart_NormalCarMuffler3": {
+    "en": "Standard silencers: Resistant",
+    "ch": "普通消音器: 耐用型",
+    "cn": "普通消声器: 耐用型"
+   },
+   "IGUI_PZLinux_ContractPart_NormalSuspension1": {
+    "en": "Standard suspension: Standard",
+    "ch": "普通懸吊: 標準",
+    "cn": "普通悬挂: 标准"
+   },
+   "IGUI_PZLinux_ContractPart_NormalSuspension2": {
+    "en": "Standard suspension: Sport",
+    "ch": "普通懸吊: 運動型",
+    "cn": "普通悬挂: 运动型"
+   },
+   "IGUI_PZLinux_ContractPart_NormalSuspension3": {
+    "en": "Standard suspension: Resistant",
+    "ch": "普通懸吊: 耐用型",
+    "cn": "普通悬挂: 耐用型"
+   },
+   "IGUI_PZLinux_Training_Blacksmith": {
+    "en": "Blacksmithing",
+    "ch": "鍛造",
+    "cn": "锻造"
+   },
+   "IGUI_PZLinux_Training_Cooking": {
+    "en": "Cooking",
+    "ch": "烹飪",
+    "cn": "烹饪"
+   },
+   "IGUI_PZLinux_Training_Electricity": {
+    "en": "Electrical",
+    "ch": "電工",
+    "cn": "电工"
+   },
+   "IGUI_PZLinux_Training_Farming": {
+    "en": "Agriculture",
+    "ch": "耕作",
+    "cn": "耕作"
+   },
+   "IGUI_PZLinux_Training_FirstAid": {
+    "en": "First Aid",
+    "ch": "急救",
+    "cn": "急救"
+   },
+   "IGUI_PZLinux_Training_Fishing": {
+    "en": "Fishing",
+    "ch": "釣魚",
+    "cn": "钓鱼"
+   },
+   "IGUI_PZLinux_Training_Foraging": {
+    "en": "Foraging",
+    "ch": "搜尋",
+    "cn": "搜寻"
+   },
+   "IGUI_PZLinux_Training_Husbandry": {
+    "en": "Animal Care",
+    "ch": "畜牧",
+    "cn": "畜牧"
+   },
+   "IGUI_PZLinux_Training_Masonry": {
+    "en": "Masonry",
+    "ch": "石工",
+    "cn": "石工"
+   },
+   "IGUI_PZLinux_Training_Mechanics": {
+    "en": "Mechanics",
+    "ch": "技工",
+    "cn": "技工"
+   },
+   "IGUI_PZLinux_Training_Metalworking": {
+    "en": "Welding",
+    "ch": "金工",
+    "cn": "金工"
+   },
+   "IGUI_PZLinux_Training_Pottery": {
+    "en": "Pottery",
+    "ch": "陶藝",
+    "cn": "陶艺"
+   },
+   "IGUI_PZLinux_Training_Tailoring": {
+    "en": "Tailoring",
+    "ch": "縫紉",
+    "cn": "缝纫"
+   },
+   "IGUI_PZLinux_Training_Trapping": {
+    "en": "Trapping",
+    "ch": "誘捕",
+    "cn": "诱捕"
+   },
+   "IGUI_PZLinux_Training_Woodwork": {
+    "en": "Carpentry",
+    "ch": "木工",
+    "cn": "木工"
+   },
+   "IGUI_PZLinux_Training_AlreadyInProgress": {
+    "en": "Finish your current training first",
+    "ch": "請先完成目前的訓練",
+    "cn": "请先完成当前的训练"
+   },
+   "IGUI_PZLinux_Training_Buy": {
+    "en": "Start",
+    "ch": "開始",
+    "cn": "开始"
+   },
+   "IGUI_PZLinux_Training_Cancel": {
+    "en": "Cancel",
+    "ch": "取消",
+    "cn": "取消"
+   },
+   "IGUI_PZLinux_Training_ChooseCourse": {
+    "en": "This week's courses:",
+    "ch": "本週課程:",
+    "cn": "本周课程:"
+   },
+   "IGUI_PZLinux_Training_Completed": {
+    "en": "Training complete: +{1} XP",
+    "ch": "訓練完成: +{1} 經驗",
+    "cn": "训练完成: +{1} 经验"
+   },
+   "IGUI_PZLinux_Training_CourseNoLongerAvailable": {
+    "en": "Course no longer available",
+    "ch": "課程已不再開放",
+    "cn": "课程已不再开放"
+   },
+   "IGUI_PZLinux_Training_Detail": {
+    "en": "+{1} XP - ${2} - about {3} in-game hours",
+    "ch": "+{1} 經驗 - ${2} - 約 {3} 遊戲內小時",
+    "cn": "+{1} 经验 - ${2} - 约 {3} 游戏内小时"
+   },
+   "IGUI_PZLinux_Training_InProgress": {
+    "en": "In progress: {1}",
+    "ch": "進行中: {1}",
+    "cn": "进行中: {1}"
+   },
+   "IGUI_PZLinux_Training_NotEnoughMoney": {
+    "en": "Not enough money",
+    "ch": "金錢不足",
+    "cn": "金钱不足"
+   },
+   "IGUI_PZLinux_Training_PurchaseFailed": {
+    "en": "Purchase failed, try again",
+    "ch": "購買失敗, 請再試一次",
+    "cn": "购买失败, 请再试一次"
+   },
+   "IGUI_PZLinux_Training_StayHere": {
+    "en": "Stay here to keep training. Progress pauses if you leave.",
+    "ch": "留在這裡才能繼續訓練. 離開後進度會暫停.",
+    "cn": "留在这里才能继续训练. 离开后进度会暂停."
+   },
+   "IGUI_PZLinux_Training_Title": {
+    "en": "PZLinux Training",
+    "ch": "PZLinux 訓練",
+    "cn": "PZLinux 训练"
+   },
+   "IGUI_ManageRefuge": {
+    "en": "Manage Refuge",
+    "ch": "管理避難所",
+    "cn": "管理避难所"
+   },
+   "IGUI_SpatialWellAlreadyBuilt": {
+    "en": "This refuge already has a Spatial Well.",
+    "ch": "這座避難所已經有一口空間之井.",
+    "cn": "这座避难所已经有一口空间之井."
+   },
+   "IGUI_SpatialWellBuildFailed": {
+    "en": "The Spatial Well failed to take shape.",
+    "ch": "空間之井沒能成形.",
+    "cn": "空间之井没能成形."
+   },
+   "IGUI_SpatialWellBuilding": {
+    "en": "The refuge is shaping the Spatial Well...",
+    "ch": "避難所正在塑造空間之井...",
+    "cn": "避难所正在塑造空间之井..."
+   },
+   "IGUI_SpatialWellBuilt": {
+    "en": "The Spatial Well is bound to the refuge.",
+    "ch": "空間之井已綁定到這座避難所.",
+    "cn": "空间之井已绑定到这座避难所."
+   },
+   "IGUI_SpatialWellInvalidLocation": {
+    "en": "The Spatial Well cannot be placed there.",
+    "ch": "空間之井不能放在那裡.",
+    "cn": "空间之井不能放在那里."
+   },
+   "IGUI_SpatialWellMissingResources": {
+    "en": "I do not have the resources for the Spatial Well.",
+    "ch": "我沒有建造空間之井所需的資源.",
+    "cn": "我没有建造空间之井所需的资源."
+   },
+   "IGUI_SpatialWellNotInRefuge": {
+    "en": "I can only place this inside my refuge.",
+    "ch": "我只能把它放在自己的避難所裡.",
+    "cn": "我只能把它放在自己的避难所里."
    }
   },
   "ItemName.json": {
@@ -113990,6 +114410,66 @@
     "en": "ImproviseMilitaryStrapsUpgrade",
     "ch": "轉換背包減重升級 (軍用)",
     "cn": "转换背包减重升级 (军用)"
+   },
+   "ConvertTo3030Carton": {
+    "en": "Convert to Carton of .30-30 Rounds",
+    "ch": "轉換為 .30-30 子彈 (整箱)",
+    "cn": "转换为 .30-30 子弹 (整箱)"
+   },
+   "ConvertTo308Carton": {
+    "en": "Convert to Carton of 7.62x51mm Rounds",
+    "ch": "轉換為 .308 子彈 (整箱)",
+    "cn": "转换为 7.62x51mm 子弹 (整箱)"
+   },
+   "ConvertTo357MagnumCarton": {
+    "en": "Convert to Carton of .357 Magnum Rounds",
+    "ch": "轉換為 .357 馬格南子彈 (整箱)",
+    "cn": "转换为 .357马格南子弹 (整箱)"
+   },
+   "ConvertTo38SpecialCarton": {
+    "en": "Convert to Carton of .38 Special Rounds",
+    "ch": "轉換為 .38 特殊子彈 (整箱)",
+    "cn": "转换为 .38特种子弹 (整箱)"
+   },
+   "ConvertTo44MagnumCarton": {
+    "en": "Convert to Carton of .44 Magnum Rounds",
+    "ch": "轉換為 .44 麥格農子彈 (整箱)",
+    "cn": "转换为 .44马格南子弹 (整箱)"
+   },
+   "ConvertTo45AutoCarton": {
+    "en": "Convert to Carton of .45 ACP Rounds",
+    "ch": "轉換為 .45 自動子彈 (整箱)",
+    "cn": "转换为 .45 ACP 子弹 (整箱)"
+   },
+   "ConvertTo556Carton": {
+    "en": "Convert to Carton of 5.56x45mm Rounds",
+    "ch": "轉換為 5.56mm 子彈 (整箱)",
+    "cn": "转换为 5.56x45mm 子弹 (整箱)"
+   },
+   "ConvertTo9mmCarton": {
+    "en": "Convert to Carton of 9x19mm Rounds",
+    "ch": "轉換為 9mm 子彈 (整箱)",
+    "cn": "转换为 9x19mm 子弹 (整箱)"
+   },
+   "ConvertToShotgunShellsCarton": {
+    "en": "Convert to Carton of 12g Rounds",
+    "ch": "轉換為散彈 (整箱)",
+    "cn": "转换为 12g 子弹 (整箱)"
+   },
+   "P4TakeAllApollo": {
+    "en": "Take Out All Remaining Apol Chocolate",
+    "ch": "拿出剩餘全部 Apol 巧克力",
+    "cn": "拿出剩余全部 Apol 巧克力"
+   },
+   "P4TakeAllChococones": {
+    "en": "Take Out All Remaining Chococones",
+    "ch": "拿出剩餘全部巧克力甜筒",
+    "cn": "拿出剩余全部巧克力甜筒"
+   },
+   "P4TakeAllChocorooms": {
+    "en": "Take Out All Remaining Chocorooms",
+    "ch": "拿出剩餘全部蘑古力",
+    "cn": "拿出剩余全部蘑古力"
    }
   },
   "Sandbox.json": {
@@ -114552,11 +115032,6 @@
     "en": "Legacy Full Current Data",
     "ch": "舊版完整目前資料",
     "cn": "旧版完整当前数据"
-   },
-   "Sandbox_BurdJournals_BaselineRecordingMode_tooltip": {
-    "en": "When Only Record Earned Progress is enabled, this controls how player journals are recorded. Strict Earned Only subtracts baseline starting data from recorded skills, traits, and recipes. Legacy Full Current Data records the character's full current data instead, matching older BSJ behavior. Ignored when Only Record Earned Progress is disabled.",
-    "ch": "啟用僅記錄遊戲獲得的進度後, 此設定會控制玩家日記如何記錄. 嚴格僅記錄已賺取進度會從已記錄的技能, 特質與配方中扣除基準起始資料. 舊版完整目前資料則會改為記錄角色目前的完整資料, 與舊版 BSJ 行為一致. 停用僅記錄遊戲獲得的進度時會忽略此設定.",
-    "cn": "启用仅记录游戏获得的进度后, 此设置会控制玩家日记如何记录. 严格仅记录已赚取进度会从记录的技能, 特质和配方中扣除基准起始数据. 旧版完整当前数据则会改为记录角色当前的完整数据, 与旧版 BSJ 行为一致. 关闭仅记录游戏获得的进度时将忽略此设置."
    },
    "Sandbox_BurdJournals_BaselineSnapshotsAutoCapture": {
     "en": "Auto-Capture Baseline Snapshots",
@@ -115247,11 +115722,6 @@
     "en": "Enable Player Journal Notes",
     "ch": "啟用玩家日記筆記",
     "cn": "启用玩家日记笔记"
-   },
-   "Sandbox_BurdJournals_EnablePlayerJournalNotes_tooltip": {
-    "en": "Allow players to write freeform note pages in personal journals. Existing notes remain readable when this is disabled.",
-    "ch": "允許玩家在個人日記中書寫自由格式的筆記頁. 停用後, 已有筆記仍可閱讀.",
-    "cn": "允许玩家在个人日记中书写自由格式的笔记页. 禁用后, 已有笔记仍可阅读."
    },
    "Sandbox_BurdJournals_EnablePlayerJournals": {
     "en": "Enable Player Journals",
@@ -128199,6 +128669,351 @@
     "en": "Randomizes the amount of water remaining after the water shutoff. <LINE>Higher values can reduce the configured remaining water by a larger amount.",
     "ch": "隨機化停水後的剩餘水量. <LINE> 數值越高, 設定的剩餘水量被減少的幅度越大.",
     "cn": "随机化停水后的剩余水量. <LINE> 数值越高, 设定的剩余水量被减少的幅度越大."
+   },
+   "Sandbox_GamestaInitMaxIndustrialPropaneTankMulti": {
+    "en": "Initial Maximum Industrial Propane Tank Multiplier",
+    "ch": "工業丙烷罐初始最大倍率",
+    "cn": "工业丙烷罐初始最大倍率"
+   },
+   "Sandbox_GamestaInitMaxIndustrialPropaneTankMulti_tooltip": {
+    "en": "The initial MAXIMUM number of propane tanks that can be filled from an industrial sized propane tank, which measures to 81 units per propane tank multiplied by this multiplier (default = 170, the real world maximum value of a 1,000 gallon tank).",
+    "ch": "工業級丙烷罐一開始最多能灌幾罐一般丙烷罐. 以每罐 81 單位乘此倍率 (預設 170, 約等於現實 1,000 加侖槽的上限).",
+    "cn": "工业级丙烷罐一开始最多能灌几罐普通丙烷罐. 以每罐 81 单位乘此倍率 (默认 170, 约等于现实 1,000 加仑槽的上限)."
+   },
+   "Sandbox_GamestaInitMinIndustrialPropaneTankMulti": {
+    "en": "Initial Minimum Industrial Propane Tank Multiplier",
+    "ch": "工業丙烷罐初始最小倍率",
+    "cn": "工业丙烷罐初始最小倍率"
+   },
+   "Sandbox_GamestaInitMinIndustrialPropaneTankMulti_tooltip": {
+    "en": "The initial MINIMUM number of propane tanks that can be filled from an industrial sized propane tank, which measures to 81 units per propane tank multiplied by this multiplier (default = 0, no one is coming to refill it).",
+    "ch": "工業級丙烷罐一開始最少能灌幾罐一般丙烷罐. 以每罐 81 單位乘此倍率 (預設 0, 沒人會來補罐).",
+    "cn": "工业级丙烷罐一开始最少能灌几罐普通丙烷罐. 以每罐 81 单位乘此倍率 (默认 0, 没人会来补罐)."
+   },
+   "Sandbox_LFO_StartWithLFGrey": {
+    "en": "Legendary Fanny Pack (Grey)",
+    "ch": "傳奇腰包 (灰)",
+    "cn": "传奇腰包 (灰)"
+   },
+   "Sandbox_LFO_StartWithLFGrey_tooltip": {
+    "en": "Start with a Legendary Fanny Pack (Grey) in your inventory.",
+    "ch": "開局背包裡有一個傳奇腰包 (灰).",
+    "cn": "开局背包里有一个传奇腰包 (灰)."
+   },
+   "Sandbox_LSO_StartWithLSGrey": {
+    "en": "Legendary Satchel (Grey)",
+    "ch": "傳奇挎包 (灰)",
+    "cn": "传奇挎包 (灰)"
+   },
+   "Sandbox_LSO_StartWithLSGrey_tooltip": {
+    "en": "Start with a Legendary Satchel (Grey) in your inventory.",
+    "ch": "開局背包裡有一個傳奇挎包 (灰).",
+    "cn": "开局背包里有一个传奇挎包 (灰)."
+   },
+   "Sandbox_VanillaBox_Ammo3030Box": {
+    "en": "Drop .30-30",
+    "ch": "掉落 .30-30",
+    "cn": "掉落 .30-30"
+   },
+   "Sandbox_VanillaBox_Ammo308Box": {
+    "en": "Drop 7.62x51mm",
+    "ch": "掉落 .308",
+    "cn": "掉落 7.62x51mm"
+   },
+   "Sandbox_VanillaBox_Ammo556Box": {
+    "en": "Drop 5.56x45mm",
+    "ch": "掉落 5.56mm",
+    "cn": "掉落 5.56x45mm"
+   },
+   "Sandbox_VanillaBox_AmmoBullets357Box": {
+    "en": "Drop .357 Magnum",
+    "ch": "掉落 .357 馬格南",
+    "cn": "掉落 .357马格南"
+   },
+   "Sandbox_VanillaBox_AmmoBullets38Box": {
+    "en": "Drop .38 Special",
+    "ch": "掉落 .38 特殊",
+    "cn": "掉落 .38特种"
+   },
+   "Sandbox_VanillaBox_AmmoBullets44Box": {
+    "en": "Drop .44 Magnum",
+    "ch": "掉落 .44 麥格農",
+    "cn": "掉落 .44马格南"
+   },
+   "Sandbox_VanillaBox_AmmoBullets45Box": {
+    "en": "Drop .45 ACP",
+    "ch": "掉落 .45 自動",
+    "cn": "掉落 .45 ACP"
+   },
+   "Sandbox_VanillaBox_AmmoBullets9mmBox": {
+    "en": "Drop 9x19mm",
+    "ch": "掉落 9mm",
+    "cn": "掉落 9x19mm"
+   },
+   "Sandbox_VanillaBox_AmmoShotgunShellsBox": {
+    "en": "Drop 12g Shotgun",
+    "ch": "掉落 散彈",
+    "cn": "掉落 12g"
+   },
+   "Sandbox_VanillaCarton_Ammo3030Carton": {
+    "en": "Drop .30-30",
+    "ch": "掉落 .30-30",
+    "cn": "掉落 .30-30"
+   },
+   "Sandbox_VanillaCarton_Ammo308Carton": {
+    "en": "Drop 7.62x51mm",
+    "ch": "掉落 .308",
+    "cn": "掉落 7.62x51mm"
+   },
+   "Sandbox_VanillaCarton_Ammo556Carton": {
+    "en": "Drop 5.56x45mm",
+    "ch": "掉落 5.56mm",
+    "cn": "掉落 5.56x45mm"
+   },
+   "Sandbox_VanillaCarton_AmmoBullets357Carton": {
+    "en": "Drop .357 Magnum",
+    "ch": "掉落 .357 馬格南",
+    "cn": "掉落 .357马格南"
+   },
+   "Sandbox_VanillaCarton_AmmoBullets38Carton": {
+    "en": "Drop .38 Special",
+    "ch": "掉落 .38 特殊",
+    "cn": "掉落 .38特种"
+   },
+   "Sandbox_VanillaCarton_AmmoBullets44Carton": {
+    "en": "Drop .44 Magnum",
+    "ch": "掉落 .44 麥格農",
+    "cn": "掉落 .44马格南"
+   },
+   "Sandbox_VanillaCarton_AmmoBullets45Carton": {
+    "en": "Drop .45 ACP",
+    "ch": "掉落 .45 自動",
+    "cn": "掉落 .45 ACP"
+   },
+   "Sandbox_VanillaCarton_AmmoBullets9mmCarton": {
+    "en": "Drop 9x19mm",
+    "ch": "掉落 9mm",
+    "cn": "掉落 9x19mm"
+   },
+   "Sandbox_VanillaCarton_AmmoShotgunShellsCarton": {
+    "en": "Drop 12g Shotgun",
+    "ch": "掉落 散彈",
+    "cn": "掉落 12g"
+   },
+   "Sandbox_Vanilla_Ammo3030Bullets": {
+    "en": "Drop .30-30",
+    "ch": "掉落 .30-30",
+    "cn": "掉落 .30-30"
+   },
+   "Sandbox_Vanilla_Ammo308Bullets": {
+    "en": "Drop 7.62x51mm",
+    "ch": "掉落 .308",
+    "cn": "掉落 7.62x51mm"
+   },
+   "Sandbox_Vanilla_Ammo556Bullets": {
+    "en": "Drop 5.56x45mm",
+    "ch": "掉落 5.56mm",
+    "cn": "掉落 5.56x45mm"
+   },
+   "Sandbox_Vanilla_AmmoBullets357": {
+    "en": "Drop .357 Magnum",
+    "ch": "掉落 .357 馬格南",
+    "cn": "掉落 .357马格南"
+   },
+   "Sandbox_Vanilla_AmmoBullets38": {
+    "en": "Drop .38 Special",
+    "ch": "掉落 .38 特殊",
+    "cn": "掉落 .38特种"
+   },
+   "Sandbox_Vanilla_AmmoBullets44": {
+    "en": "Drop .44 Magnum",
+    "ch": "掉落 .44 麥格農",
+    "cn": "掉落 .44马格南"
+   },
+   "Sandbox_Vanilla_AmmoBullets45": {
+    "en": "Drop .45 ACP",
+    "ch": "掉落 .45 自動",
+    "cn": "掉落 .45 ACP"
+   },
+   "Sandbox_Vanilla_AmmoBullets9mm": {
+    "en": "Drop 9x19mm",
+    "ch": "掉落 9mm",
+    "cn": "掉落 9x19mm"
+   },
+   "Sandbox_Vanilla_AmmoShotgunShells": {
+    "en": "Drop 12g Shotgun",
+    "ch": "掉落 散彈",
+    "cn": "掉落 12g"
+   },
+   "Sandbox_AmmoLootDropVanillaWeapon": {
+    "en": "Zombies Drop Weapons",
+    "ch": "殭屍掉落武器",
+    "cn": "僵尸掉落武器"
+   },
+   "Sandbox_VanillaBox_ArmedZombiesOnly": {
+    "en": "Only Armed Zombies Drop Boxes",
+    "ch": "僅武裝殭屍掉落整盒",
+    "cn": "仅武装僵尸掉落整盒"
+   },
+   "Sandbox_VanillaCarton_ArmedZombiesOnly": {
+    "en": "Only Armed Zombies Drop Cartons",
+    "ch": "僅武裝殭屍掉落整箱",
+    "cn": "仅武装僵尸掉落整箱"
+   },
+   "Sandbox_VanillaWeaponDropRate": {
+    "en": "Weapon Drop Rate",
+    "ch": "武器掉落率",
+    "cn": "武器掉落率"
+   },
+   "Sandbox_VanillaWeapon_ArmedZombiesOnly": {
+    "en": "Only Armed Zombies Drop Weapons",
+    "ch": "僅武裝殭屍掉落武器",
+    "cn": "仅武装僵尸掉落武器"
+   },
+   "Sandbox_VanillaWeapon_DropMagazine": {
+    "en": "Drop a Magazine With It",
+    "ch": "一併掉落彈匣",
+    "cn": "一并掉落弹匣"
+   },
+   "Sandbox_Vanilla_ArmedZombiesOnly": {
+    "en": "Only Armed Zombies Drop Ammo",
+    "ch": "僅武裝殭屍掉落彈藥",
+    "cn": "仅武装僵尸掉落弹药"
+   },
+   "Sandbox_Vanilla_LooseRoundsMax": {
+    "en": "Most Rounds Per Drop",
+    "ch": "單次掉落最多發數",
+    "cn": "单次掉落最多发数"
+   },
+   "Sandbox_VanillaWeapon_Guns3030": {
+    "en": "Drop .30-30 Weapons",
+    "ch": "掉落 .30-30 武器",
+    "cn": "掉落 .30-30 武器"
+   },
+   "Sandbox_VanillaWeapon_Guns308": {
+    "en": "Drop 7.62x51mm Weapons",
+    "ch": "掉落 .308 武器",
+    "cn": "掉落 7.62x51mm 武器"
+   },
+   "Sandbox_VanillaWeapon_Guns357": {
+    "en": "Drop .357 Magnum Weapons",
+    "ch": "掉落 .357 馬格南武器",
+    "cn": "掉落 .357马格南武器"
+   },
+   "Sandbox_VanillaWeapon_Guns38": {
+    "en": "Drop .38 Special Weapons",
+    "ch": "掉落 .38 特殊武器",
+    "cn": "掉落 .38特种武器"
+   },
+   "Sandbox_VanillaWeapon_Guns44": {
+    "en": "Drop .44 Magnum Weapons",
+    "ch": "掉落 .44 麥格農武器",
+    "cn": "掉落 .44马格南武器"
+   },
+   "Sandbox_VanillaWeapon_Guns45": {
+    "en": "Drop .45 ACP Weapons",
+    "ch": "掉落 .45 自動武器",
+    "cn": "掉落 .45 ACP 武器"
+   },
+   "Sandbox_VanillaWeapon_Guns556": {
+    "en": "Drop 5.56x45mm Weapons",
+    "ch": "掉落 5.56mm 武器",
+    "cn": "掉落 5.56x45mm 武器"
+   },
+   "Sandbox_VanillaWeapon_Guns9mm": {
+    "en": "Drop 9x19mm Weapons",
+    "ch": "掉落 9mm 武器",
+    "cn": "掉落 9x19mm 武器"
+   },
+   "Sandbox_VanillaWeapon_GunsShotgun": {
+    "en": "Drop 12g Shotguns",
+    "ch": "掉落 散彈槍",
+    "cn": "掉落 12g 霰弹枪"
+   },
+   "Sandbox_VanillaWeapon_Guns3030_tooltip": {
+    "en": "L94 Rifle",
+    "ch": "L94 步槍",
+    "cn": "L94步枪"
+   },
+   "Sandbox_VanillaWeapon_Guns38_tooltip": {
+    "en": "SN38 Revolver",
+    "ch": "M36 左輪手槍",
+    "cn": "SN38 左轮手枪"
+   },
+   "Sandbox_VanillaWeapon_Guns9mm_tooltip": {
+    "en": "M9 Pistol",
+    "ch": "M9 手槍",
+    "cn": "M9 手枪"
+   },
+   "Sandbox_VanillaWeapon_Guns308_tooltip": {
+    "en": "MSR788 Rifle\nMSR7T Tactical Rifle\nM1A Rifle",
+    "ch": "MSR788 步槍\nMSR7T 戰術步槍\nM14 步槍",
+    "cn": "MSR788狩猎步枪\nMSR7T战术步枪\nM1A 步枪"
+   },
+   "Sandbox_VanillaWeapon_Guns357_tooltip": {
+    "en": "Patrol Revolver\nL92 Carbine",
+    "ch": "M625 左輪手槍\nL92 卡賓槍",
+    "cn": "巡逻用左轮手枪\nL92卡宾枪"
+   },
+   "Sandbox_VanillaWeapon_Guns44_tooltip": {
+    "en": "B-F Pistol\nMagnum",
+    "ch": "沙漠之鷹手槍\n麥格農",
+    "cn": "B-F 手枪\n马格南左轮手枪"
+   },
+   "Sandbox_VanillaWeapon_Guns45_tooltip": {
+    "en": "M1911 Pistol\nTrapper Carbine",
+    "ch": "M1911 手槍\n捕手卡賓槍",
+    "cn": "M1911 手枪\n捕手卡宾枪"
+   },
+   "Sandbox_VanillaWeapon_Guns556_tooltip": {
+    "en": "MSR700 Rifle\nM16 Assault Rifle\nJS-14 Rifle",
+    "ch": "MSR700 步槍\nM16 突擊步槍\nJS-14 式步槍",
+    "cn": "MSR700猎狐步枪\nM16突击步枪\nJS-14式步枪"
+   },
+   "Sandbox_VanillaWeapon_GunsShotgun_tooltip": {
+    "en": "JS-2000 Shotgun\nSawed-off JS-2000 Shotgun\nDouble Barrel Shotgun\nSawed-off Double Barrel Shotgun\nJS-3T Tactical Shotgun",
+    "ch": "JS-2000 散彈槍\n削短 JS-2000 散彈槍\n雙管散彈槍\n削短雙管散彈槍\nJS-3T 戰術霰彈槍",
+    "cn": "JS-2000霰弹枪\nJS-2000 霰弹枪 (锯短)\n双管霰弹枪\n双管霰弹枪 (锯短)\nJS-3T战术霰弹枪"
+   },
+   "Sandbox_VanillaBox_ArmedZombiesOnly_tooltip": {
+    "en": "OFF: every zombie can drop boxes.\nThat is how it has always worked.\n\nON: only zombies who would have\nbeen carrying drop any, and only\nwhat fits their gun:\n\n<RGB:0.100,0.800,1.000>Soldiers - every kind\nHunters and rangers - most kinds\nPolice and bandits - pistol, shells\nFarmers - rifle and shells\nDetectives, mobsters - pistol only\n\n<RGB:1,1,1>Everyone else drops nothing, and\nbarely one zombie in a hundred out\nin town is dressed for it.\n\n<RGB:0.800,1.000,0.000>So look where those people worked:\npolice stations, army bases,\nprisons, farms and bars.\n\n<RGB:1,1,1>Raising the drop rate helps, but\nwill not make the suburbs pay.",
+    "ch": "關閉: 每具殭屍都可能掉落整盒彈藥.\n這是一直以來的運作方式.\n\n開啟: 只有本來就會攜槍的殭屍才會掉落,\n且只掉符合其槍種的彈藥:\n\n<RGB:0.100,0.800,1.000>士兵 - 所有種類\n獵人與護林員 - 多數種類\n警察與匪徒 - 手槍、散彈\n農夫 - 步槍與散彈\n警探、黑幫 - 僅手槍\n\n<RGB:1,1,1>其餘什麼都不掉, 而且鎮上\n一百具裡大概只有一具穿成那樣.\n\n<RGB:0.800,1.000,0.000>所以去那些人工作的地方找:\n警局、軍營、監獄、農場與酒吧.\n\n<RGB:1,1,1>提高掉落率有幫助, 但救不了郊區.",
+    "cn": "关闭: 每只僵尸都可能掉落整盒弹药.\n这是一直以来的运作方式.\n\n开启: 只有本来就会携枪的僵尸才会掉落,\n且只掉符合其枪种的弹药:\n\n<RGB:0.100,0.800,1.000>士兵 - 所有种类\n猎人与护林员 - 多数种类\n警察与匪徒 - 手枪、霰弹\n农夫 - 步枪与霰弹\n警探、黑帮 - 仅手枪\n\n<RGB:1,1,1>其余什么都不掉, 而且镇上\n一百具里大概只有一具穿成那样.\n\n<RGB:0.800,1.000,0.000>所以去那些人工作的地方找:\n警局、军营、监狱、农场与酒吧.\n\n<RGB:1,1,1>提高掉落率有帮助, 但救不了郊区."
+   },
+   "Sandbox_VanillaCarton_ArmedZombiesOnly_tooltip": {
+    "en": "OFF: every zombie can drop cartons.\nThat is how it has always worked.\n\nON: only zombies who would have\nbeen carrying drop any, and only\nwhat fits their gun:\n\n<RGB:0.100,0.800,1.000>Soldiers - every kind\nHunters and rangers - most kinds\nPolice and bandits - pistol, shells\nFarmers - rifle and shells\nDetectives, mobsters - pistol only\n\n<RGB:1,1,1>Everyone else drops nothing, and\nbarely one zombie in a hundred out\nin town is dressed for it.\n\n<RGB:0.800,1.000,0.000>So look where those people worked:\npolice stations, army bases,\nprisons, farms and bars.\n\n<RGB:1,1,1>Raising the drop rate helps, but\nwill not make the suburbs pay.",
+    "ch": "關閉: 每具殭屍都可能掉落整箱彈藥.\n這是一直以來的運作方式.\n\n開啟: 只有本來就會攜槍的殭屍才會掉落,\n且只掉符合其槍種的彈藥:\n\n<RGB:0.100,0.800,1.000>士兵 - 所有種類\n獵人與護林員 - 多數種類\n警察與匪徒 - 手槍、散彈\n農夫 - 步槍與散彈\n警探、黑幫 - 僅手槍\n\n<RGB:1,1,1>其餘什麼都不掉, 而且鎮上\n一百具裡大概只有一具穿成那樣.\n\n<RGB:0.800,1.000,0.000>所以去那些人工作的地方找:\n警局、軍營、監獄、農場與酒吧.\n\n<RGB:1,1,1>提高掉落率有幫助, 但救不了郊區.",
+    "cn": "关闭: 每只僵尸都可能掉落整箱弹药.\n这是一直以来的运作方式.\n\n开启: 只有本来就会携枪的僵尸才会掉落,\n且只掉符合其枪种的弹药:\n\n<RGB:0.100,0.800,1.000>士兵 - 所有种类\n猎人与护林员 - 多数种类\n警察与匪徒 - 手枪、霰弹\n农夫 - 步枪与霰弹\n警探、黑帮 - 仅手枪\n\n<RGB:1,1,1>其余什么都不掉, 而且镇上\n一百具里大概只有一具穿成那样.\n\n<RGB:0.800,1.000,0.000>所以去那些人工作的地方找:\n警局、军营、监狱、农场与酒吧.\n\n<RGB:1,1,1>提高掉落率有帮助, 但救不了郊区."
+   },
+   "Sandbox_Vanilla_ArmedZombiesOnly_tooltip": {
+    "en": "OFF: every zombie can drop ammo.\nThat is how it has always worked.\n\nON: only zombies who would have\nbeen carrying drop any, and only\nwhat fits their gun:\n\n<RGB:0.100,0.800,1.000>Soldiers - every kind\nHunters and rangers - most kinds\nPolice and bandits - pistol, shells\nFarmers - rifle and shells\nDetectives, mobsters - pistol only\n\n<RGB:1,1,1>Everyone else drops nothing, and\nbarely one zombie in a hundred out\nin town is dressed for it.\n\n<RGB:0.800,1.000,0.000>So look where those people worked:\npolice stations, army bases,\nprisons, farms and bars.\n\n<RGB:1,1,1>Raising the drop rate helps, but\nwill not make the suburbs pay.",
+    "ch": "關閉: 每具殭屍都可能掉落彈藥.\n這是一直以來的運作方式.\n\n開啟: 只有本來就會攜槍的殭屍才會掉落,\n且只掉符合其槍種的彈藥:\n\n<RGB:0.100,0.800,1.000>士兵 - 所有種類\n獵人與護林員 - 多數種類\n警察與匪徒 - 手槍、散彈\n農夫 - 步槍與散彈\n警探、黑幫 - 僅手槍\n\n<RGB:1,1,1>其餘什麼都不掉, 而且鎮上\n一百具裡大概只有一具穿成那樣.\n\n<RGB:0.800,1.000,0.000>所以去那些人工作的地方找:\n警局、軍營、監獄、農場與酒吧.\n\n<RGB:1,1,1>提高掉落率有幫助, 但救不了郊區.",
+    "cn": "关闭: 每只僵尸都可能掉落弹药.\n这是一直以来的运作方式.\n\n开启: 只有本来就会携枪的僵尸才会掉落,\n且只掉符合其枪种的弹药:\n\n<RGB:0.100,0.800,1.000>士兵 - 所有种类\n猎人与护林员 - 多数种类\n警察与匪徒 - 手枪、霰弹\n农夫 - 步枪与霰弹\n警探、黑帮 - 仅手枪\n\n<RGB:1,1,1>其余什么都不掉, 而且镇上\n一百具里大概只有一具穿成那样.\n\n<RGB:0.800,1.000,0.000>所以去那些人工作的地方找:\n警局、军营、监狱、农场与酒吧.\n\n<RGB:1,1,1>提高掉落率有帮助, 但救不了郊区."
+   },
+   "Sandbox_VanillaWeapon_ArmedZombiesOnly_tooltip": {
+    "en": "OFF: every zombie can drop a gun,\noffice workers and nurses included.\n\nON: only the zombies who would\nhave been carrying one drop any,\nand only what suits them:\n\n<RGB:0.100,0.800,1.000>Soldiers - every kind\nHunters and rangers - every kind\nPolice and bandits - pistols and\nshotguns\nFarmers - shotguns and rifles\nDetectives, mobsters - pistols\n\n<RGB:1,1,1>Everyone else drops nothing, and\nbarely one zombie in a hundred out\nin town is dressed for it.\n\n<RGB:0.800,1.000,0.000>So look where those people worked:\npolice stations, army bases,\nprisons, farms and bars.\n\n<RGB:1,1,1>Raising the drop rate helps, but\nwill not make the suburbs pay.",
+    "ch": "關閉: 每具殭屍都可能掉槍, 上班族跟護理師也不例外.\n\n開啟: 只有本來就會攜槍的殭屍才會掉落,\n且只掉適合他們的槍種:\n\n<RGB:0.100,0.800,1.000>士兵 - 所有種類\n獵人與護林員 - 所有種類\n警察與匪徒 - 手槍與散彈槍\n農夫 - 散彈槍與步槍\n警探、黑幫 - 手槍\n\n<RGB:1,1,1>其餘什麼都不掉, 而且鎮上\n一百具裡大概只有一具穿成那樣.\n\n<RGB:0.800,1.000,0.000>所以去那些人工作的地方找:\n警局、軍營、監獄、農場與酒吧.\n\n<RGB:1,1,1>提高掉落率有幫助, 但救不了郊區.",
+    "cn": "关闭: 每只僵尸都可能掉枪, 上班族和护士也不例外.\n\n开启: 只有本来就会携枪的僵尸才会掉落,\n且只掉适合他们的枪种:\n\n<RGB:0.100,0.800,1.000>士兵 - 所有种类\n猎人与护林员 - 所有种类\n警察与匪徒 - 手枪与霰弹枪\n农夫 - 霰弹枪与步枪\n警探、黑帮 - 手枪\n\n<RGB:1,1,1>其余什么都不掉, 而且镇上\n一百具里大概只有一具穿成那样.\n\n<RGB:0.800,1.000,0.000>所以去那些人工作的地方找:\n警局、军营、监狱、农场与酒吧.\n\n<RGB:1,1,1>提高掉落率有帮助, 但救不了郊区."
+   },
+   "Sandbox_VanillaWeaponDropRate_tooltip": {
+    "en": "Percent chance that a zombie you\nkill is carrying a gun.\n\nThis is the total, not the chance\nper gun. It is split across every\nkind you leave on, so switching a\ncaliber off changes which gun turns\nup, never how often one does.\n\n<RGB:0.100,0.800,1.000>Most zombies roll twice, once for\ntheir outfit and once for the\ndefault pool, so 0.1 leaves a gun\non about 1 corpse in 500.\n\n<RGB:0.800,1.000,0.000>A gun is worth a great deal more\nthan a handful of rounds, so raise\nit gently.\n\n<RGB:1,1,1>Set to 0 to turn the drop off.",
+    "ch": "你擊殺的殭屍身上帶槍的機率 (百分比).\n\n這是總機率, 不是每把槍各自的機率.\n會平分給你仍開啟的槍種, 所以關掉某口徑\n只會改變掉出哪把槍, 不會改變掉槍有多勤.\n\n<RGB:0.100,0.800,1.000>多數殭屍會擲兩次: 一次來自服裝、\n一次來自預設池, 因此 0.1 大約\n每 500 具屍體才掉一把槍.\n\n<RGB:0.800,1.000,0.000>一把槍比一把子彈值錢得多,\n所以請慢慢調高.\n\n<RGB:1,1,1>設為 0 即關閉掉落.",
+    "cn": "你击杀的僵尸身上带枪的几率 (百分比).\n\n这是总几率, 不是每把枪各自的几率.\n会平分给你仍开启的枪种, 所以关闭某口径\n只会改变掉出哪把枪, 不会改变掉枪有多勤.\n\n<RGB:0.100,0.800,1.000>多数僵尸会掷两次: 一次来自服装、\n一次来自默认池, 因此 0.1 大约\n每 500 具尸体才掉一把枪.\n\n<RGB:0.800,1.000,0.000>一把枪比一把子弹值钱得多,\n所以请慢慢调高.\n\n<RGB:1,1,1>设为 0 即关闭掉落."
+   },
+   "Sandbox_VanillaWeapon_DropMagazine_tooltip": {
+    "en": "ON: the magazine a gun feeds from\ndrops at the same rate, so a rifle\noff a corpse is not dead weight.\n\nIt rolls on its own, so it will not\nalways land on the same zombie as\nthe gun it belongs to.\n\n<RGB:0.100,0.800,1.000>Only the 7 guns that take one are\naffected. Revolvers, shotguns and\nthe bolt rifles feed loose rounds\nand never needed it.\n\n<RGB:1,1,1>OFF: guns only.",
+    "ch": "開啟: 槍枝所用的彈匣會以相同機率掉落,\n屍體上撿到的步槍才不會變成空槍.\n\n彈匣單獨擲骰, 所以不一定跟所屬的槍\n掉在同一具殭屍上.\n\n<RGB:0.100,0.800,1.000>只有 7 種需要彈匣的槍會受影響.\n左輪、散彈槍與栓動步槍用的是散裝子彈,\n本來就不需要彈匣.\n\n<RGB:1,1,1>關閉: 只掉槍.",
+    "cn": "开启: 枪械所用的弹匣会以相同几率掉落,\n尸体上捡到的步枪才不会变成空枪.\n\n弹匣单独掷骰, 所以不一定跟所属的枪\n掉在同一只僵尸上.\n\n<RGB:0.100,0.800,1.000>只有 7 种需要弹匣的枪会受影响.\n左轮、霰弹枪与栓动步枪用的是散装子弹,\n本来就不需要弹匣.\n\n<RGB:1,1,1>关闭: 只掉枪."
+   },
+   "Sandbox_Vanilla_LooseRoundsMax_tooltip": {
+    "en": "How much a drop is worth. A drop that\nlands leaves a random 1 to this many\nrounds.\n\n<RGB:0.100,0.800,1.000>This does not change how often ammo\nturns up, only how much of it. The\ndrop rate above is what changes that.\n\n<RGB:0.800,1.000,0.000>Each round type rolls its own amount,\nso a corpse carrying two calibers\nrolls a number for each.\n\n<RGB:1,1,1>At the default 10 a corpse that is\ncarrying holds about 8 rounds, which\nis worth bending down for.\n\nSet it to 1 for a single round, the\nway this mod worked before 42.10.\n\nA corpse only carries so much, so a\nvery high number is cut short on one\nthat is already loaded.",
+    "ch": "一次掉落值多少. 成功掉落時會隨機留下\n1 到此數的子彈.\n\n<RGB:0.100,0.800,1.000>這不改變彈藥出現有多勤, 只改變數量.\n出現頻率由上方的掉落率決定.\n\n<RGB:0.800,1.000,0.000>每種口徑各自擲一次數量,\n所以帶兩種口徑的屍體會各擲一次.\n\n<RGB:1,1,1>預設 10 時, 有帶彈藥的屍體大約 8 發,\n值得彎腰撿.\n\n設為 1 就只掉 1 發, 也就是 42.10 以前的行為.\n\n屍體能帶的量有限, 已經裝填很多的屍體\n就算把數字調很高也會被截短.",
+    "cn": "一次掉落值多少. 成功掉落时会随机留下\n1 到此数的子弹.\n\n<RGB:0.100,0.800,1.000>这不改变弹药出现有多勤, 只改变数量.\n出现频率由上方的掉落率决定.\n\n<RGB:0.800,1.000,0.000>每种口径各自掷一次数量,\n所以带两种口径的尸体会各掷一次.\n\n<RGB:1,1,1>默认 10 时, 有带弹药的尸体大约 8 发,\n值得弯腰捡.\n\n设为 1 就只掉 1 发, 也就是 42.10 以前的行为.\n\n尸体能带的量有限, 已经装填很多的尸体\n就算把数字调很高也会被截短."
+   },
+   "Sandbox_PZLinux_CustomMoneyItems": {
+    "en": "Custom Money Items (ItemName, comma-separated -- treated as $1 cash for ATM/bank purposes, e.g. from a weightless-money mod)",
+    "ch": "自訂貨幣物品 (ItemName, 逗號分隔 -- 在 ATM／銀行視為 1 元現金, 例如無重量貨幣模組)",
+    "cn": "自定义货币物品 (ItemName, 逗号分隔 -- 在 ATM／银行视为 1 元现金, 例如无重量货币模组)"
    }
   },
   "Tooltip.json": {
@@ -133758,11 +134573,6 @@
     "en": "Cannot absorb this stat",
     "ch": "無法領悟此項屬性",
     "cn": "无法领悟此项属性"
-   },
-   "UI_BurdJournals_ConfirmUnsavedNotes": {
-    "en": "You have unsaved journal notes. Save them before recording?",
-    "ch": "你有未儲存的日記筆記. 記錄前要先儲存嗎?",
-    "cn": "你有未保存的日记笔记. 记录前要先保存吗?"
    },
    "UI_BurdJournals_CursedCardExpired": {
     "en": "Curse dormant",
@@ -141671,6 +142481,126 @@
     "ch": "一般洗澡時間",
     "cn": "一般洗澡时长",
     "_note": "非 tracker diff 觸發：處理 issue #144 時逐鍵複核發現的既存缺口——上游 42.20 有效分支已定義此鍵且有有效 lua_gettext consumer（TABAS_ModOprions.lua），我方 dist 卻無，屬玩家確證可見缺口。"
+   },
+   "UI_CleanUI_OptimizeLargeStacks": {
+    "en": "Optimize Large Stacks",
+    "ch": "最佳化大型堆疊",
+    "cn": "优化大型堆叠"
+   },
+   "UI_CleanUI_OptimizeLargeStacks_Tooltip": {
+    "en": "Improves performance with very large item stacks by reducing repeated calculations. Disable if stack selection, dragging, or transfer behaves unexpectedly.",
+    "ch": "減少重複計算, 改善極大物品堆疊時的效能. 若選取、拖曳或轉移堆疊出現異常, 請關閉此選項.",
+    "cn": "减少重复计算, 改善极大物品堆叠时的性能. 若选中、拖动或转移堆叠出现异常, 请关闭此选项."
+   },
+   "UI_ServerSettings_ListOfMods_VN": {
+    "en": "Mods used by this server (%1 / %2):",
+    "ch": "本伺服器使用的模組 (%1 / %2):",
+    "cn": "本服务器使用的模组 (%1 / %2):"
+   },
+   "UI_QAMARK_Verbose": {
+    "en": "Verbose messages:",
+    "ch": "詳細訊息:",
+    "cn": "详细消息:"
+   },
+   "UI_QAMARK_VerboseTooltip": {
+    "en": "Show a message when marking is blocked, for example when it is too dark.\nDefault: OFF.",
+    "ch": "標記被阻擋時顯示訊息, 例如太暗.\n預設: 關閉.",
+    "cn": "标记被阻挡时显示消息, 例如太暗.\n默认: 关闭."
+   },
+   "UI_RefugeManagement_Title": {
+    "en": "Manage Spatial Refuge",
+    "ch": "管理空間避難所",
+    "cn": "管理空间避难所"
+   },
+   "UI_RefugeTab_Customization": {
+    "en": "Customization",
+    "ch": "外觀自訂",
+    "cn": "外观自定义"
+   },
+   "UI_RefugeTab_Upgrades": {
+    "en": "Upgrades",
+    "ch": "升級",
+    "cn": "升级"
+   },
+   "UI_SpatialWell_Build": {
+    "en": "Choose placement",
+    "ch": "選擇放置位置",
+    "cn": "选择放置位置"
+   },
+   "UI_SpatialWell_Built": {
+    "en": "Already built",
+    "ch": "已建造",
+    "cn": "已建造"
+   },
+   "UI_SpatialWell_Capacity": {
+    "en": "Water capacity",
+    "ch": "蓄水量",
+    "cn": "蓄水量"
+   },
+   "UI_SpatialWell_Description": {
+    "en": "A relic-bound well that draws clean water from beyond ordinary space.",
+    "ch": "一口綁定遺物的井, 從尋常空間之外抽取乾淨的水.",
+    "cn": "一口绑定遗物的井, 从寻常空间之外抽取干净的水."
+   },
+   "UI_SpatialWell_Description2": {
+    "en": "Place one inside your refuge; it slowly replenishes itself.",
+    "ch": "在避難所內放置一口; 它會慢慢自行補水.",
+    "cn": "在避难所内放置一口; 它会慢慢自行补水."
+   },
+   "UI_SpatialWell_EmptyBucket": {
+    "en": "Empty bucket",
+    "ch": "空水桶",
+    "cn": "空水桶"
+   },
+   "UI_SpatialWell_Immovable": {
+    "en": "Cannot be moved or dismantled",
+    "ch": "無法移動或拆除",
+    "cn": "无法移动或拆除"
+   },
+   "UI_SpatialWell_Name": {
+    "en": "Spatial Well",
+    "ch": "空間之井",
+    "cn": "空间之井"
+   },
+   "UI_SpatialWell_NoSkillRequired": {
+    "en": "No building skill required",
+    "ch": "不需要建築技能",
+    "cn": "不需要建筑技能"
+   },
+   "UI_SpatialWell_Properties": {
+    "en": "Properties",
+    "ch": "屬性",
+    "cn": "属性"
+   },
+   "UI_SpatialWell_RefillRate": {
+    "en": "Regeneration",
+    "ch": "再生",
+    "cn": "再生"
+   },
+   "UI_SpatialWell_RefillValue": {
+    "en": "%1 units per hour",
+    "ch": "每小時 %1 單位",
+    "cn": "每小时 %1 单位"
+   },
+   "UI_SpatialWell_RequiredResources": {
+    "en": "Required resources",
+    "ch": "所需資源",
+    "cn": "所需资源"
+   },
+   "UI_SpatialWell_Status": {
+    "en": "Status",
+    "ch": "狀態",
+    "cn": "状态"
+   },
+   "UI_SpatialWell_Status_Built": {
+    "en": "Built",
+    "ch": "已建造",
+    "cn": "已建造"
+   },
+   "UI_SpatialWell_Status_NotBuilt": {
+    "en": "Not built",
+    "ch": "未建造",
+    "cn": "未建造"
    }
   },
   "MakeUp.json": {
