@@ -39,6 +39,10 @@ verify_dist.py — MinidoracatModLangFor42 的獨立 dist 驗證器（oracle）�
   [15] ItemName 死鍵  ：`ItemName_<M>.<I>` 是 B41 鍵形，B42 只查裸 `<M>.<I>`（反編譯實證）；
                       前綴鍵無裸鍵對應＝玩家看到英文。豁免須登記 itemname_dead_allowlist.json。
                       **`Base.` 不等於本體**——MOD 也能往 module Base 加物品，只認 vanilla scoped 基準
+  [16] Recipes 死鍵   ：`Recipe_<X>`／`craftRecipe_<X>` 是 B41 配方鍵形，B42 只查裸
+                      craftRecipe 區塊名（Translator.getRecipeName→recipe.get(name)）；
+                      去前綴後對得上上游現行區塊名、卻沒出貨該裸鍵＝玩家看到英文配方名。
+                      豁免須登記 recipe_dead_allowlist.json
 
 冪等子命令（獨立於預設全跑，供「連跑兩次 build 第二次零 diff」驗證）：
   --snapshot-dist <dir>：把 dist 現況（.json + language.txt + client/*.lua 的 sha256）存到 <dir>/dist_hashes.json
@@ -56,6 +60,10 @@ import re
 import subprocess
 import sys
 from collections import Counter
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# [16] 的有效版本分支判定沿用 tracker 的實作，不另寫第二套（AGENTS.md 明載勿分岔）。
+import tracker  # noqa: E402
 
 # dist 內層 Translate 目錄（相對 repo 根）的 glob；避免硬編長資料夾名，
 # 執行期以實際存在的路徑為準（模板慣例：資料夾=長名、mod.info id=短名）。
@@ -1578,6 +1586,209 @@ def check_itemname_dead_keys(repo: str, dist_ch: str) -> tuple[bool, list[str], 
     return not fail, fail, warn
 
 
+# --- [16] Recipes 死鍵 ------------------------------------------------------- #
+# `Recipe_<X>` 是 B41 `Recipes_EN.txt` 時代的鍵形；`craftRecipe_<X>` 不是 B41 遺留，而是
+# B42 端多加了 script 類型名當前綴（上游自己寫錯，實例 SVRP ClassicBows 的
+# `craftRecipe_SVRP_CB_*`）。兩者結果一樣：B42 的配方顯示名查表是
+# `Translator.getRecipeName(name)` → `recipe.get(name)`，`name` 是**裸的 craftRecipe
+# 區塊名**（CraftRecipe.java:362 以區塊名呼叫，ScriptBucket 只 trim、不去空格），零前綴
+# 處理。所以帶前綴的鍵永遠不會被查到——譯得再好也顯示英文。
+# 判定要有上游實據才算數：只有「去前綴後對得上上游現行 script_craftRecipe 區塊名」的
+# 前綴鍵才判死鍵，否則無從區分「B41 遺留鍵形」與「上游 Translate 檔自帶、無從還原的
+# 閒置前綴鍵」（實例：測試情境 3 的 `Recipe_SomethingUpstreamNeverHad`）。無前綴的鍵
+# 一律在本 gate 視野外——`MakeCarMuffler*` 這類不帶前綴的閒置鍵不是本項要抓的東西。
+# 由來：2026-08-16 的 #170 SVRP ClassicBows 收了 4 個 `Recipe_*_from_Plank`，build／
+# verify 14 項／lint 全綠通過，靠人工 review 才攔下；同批盤點另發現 69 個既有同類缺口。
+# **區塊名刻意取全庫 union、不按 owner 切**：PZ 的字串表沒有 per-mod 命名空間
+# （`Translator.tryFillMapFromFile()` 把每個 mod 的鍵 put 進同一張全域 map），
+# `recipe.get(name)` 只認裸名。上游任一 mod 有區塊 `X`，我方出貨鍵 `X` 就會被查到；
+# 前綴鍵原本屬於哪個 mod 對「玩家看不看得到中文」零影響。改按 owner 比對反而要靠
+# attribution 索引，而該索引本身有 `_unsorted` 盲區，只會製造漏報。
+# 同名區塊分屬多 mod 而語意不同者（實例 `Make DIY Battery` 屬 2969478819＋3652024179）
+# 屬**資料層裁決**——補值時須確認譯文對每個 owner 都成立，與本 gate 的判定維度無關。
+RECIPE_DEAD_ALLOWLIST = "recipe_dead_allowlist.json"
+RECIPE_DEAD_PREFIXES = ("craftRecipe_", "Recipe_")
+
+
+# 現況量級：481 個 mod、8,816 個 craftRecipe 區塊名（**濾前**），濾掉只存在死分支者後
+# 約 6,900 個——門檻比的是**濾後** `len(out)`。設 1000 是為了抓「實據整批消失」：那才是
+# 這道 gate 最危險的失效模式，`blocks` 空集合會讓 `_recipe_bare_names()` 全回空清單、
+# 一鍵不報、gate 綠燈，整道防線靜默關閉（#170 類死鍵可再次全綠出貨）。合法 JSON
+# 但形狀壞損（`mods` 被清空／寫成 `[]`／`null`、extractor schema 改版使 `script_craftRecipe`
+# 記錄改名、單一 mod 的 `records` 寫成 list）都走這條路，故一律 fail-closed 擲例外由
+# 呼叫端轉 FAIL，比照 [12] `check_vanilla_collision` 對 `keys` 的量級門檻。
+RECIPE_BLOCKS_MIN = 1000
+
+# `script_craftRecipe` 抽取完整性的最低 per-mod schema。`tracker.EXTRACTOR_SCHEMA=5` 起
+# 「掃**全部** media/scripts 目錄」——先前只取第一個，多版本目錄的 mod 會漏掉其餘目錄的
+# 區塊名。schema 6/7/8 的變更只動 Lua 與 Translate JSON 解析，不影響 script 抽取，故 >=5
+# 即完整。低於此者的區塊名清單可能殘缺，gate 會對它們的 legacy 鍵誤判「無實據」＝**局部
+# 漏報**，而 RECIPE_BLOCKS_MIN 是總量門檻、抓不到這種。
+# 刻意判 WARN 而非 FAIL：schema 落後是**正常狀態**（tracker 只在該 mod 有更新時重抽，
+# 沒更新就一直停在舊 schema），硬 FAIL 會讓 gate 永遠紅、逼人做與本次變更無關的
+# backfill。要消除盲區跑 `tracker.py backfill-en` 或等該 mod 更新。
+CRAFT_SCHEMA_MIN = 5
+
+
+def _upstream_craft_blocks(repo: str) -> tuple[set[str], list[str]]:
+    """上游**有效分支**的 craftRecipe 區塊名（＝B42 真正會查的鍵），與 schema 落後的 mod。
+
+    有效分支過濾是必要的、不是保險：tracker 忠實記錄 mod 內所有版本分支，但引擎只載入
+    `common/` ＋唯一一個最佳版本夾。2026-08-16 實測 8,816 個區塊名裡有 1,889 個只存在於
+    死分支——不濾就會把「上游早就改名的舊區塊」當成現行實據，逼人去補永不被查的裸鍵
+    （實例：Firearms 2256623447 的 `ConvertAmmo`／`DetractStock`／`ExtendStock` 只在
+    42.12–42.13，現行有效分支 42.16 已改名 `ToggleStock`）。判定沿用 `tracker.py` 的
+    `resolve_effective_branches()`／`is_effective()`，**不得另寫第二套**（AGENTS.md 明載
+    `gap_worksheet.py` 也共用同一份，勿分岔）。
+    """
+    path = os.path.join(repo, "tracker-state", "en_corpus_hashes.json")
+    with open(path, encoding="utf-8-sig") as fh:
+        state = json.load(fh)
+    mods = state.get("mods")
+    if not isinstance(mods, dict) or not mods:
+        raise ValueError("en_corpus_hashes.json 的 mods 形狀壞損（須為非空 dict）")
+    out: set[str] = set()
+    corrupt: list[str] = []
+    stale: list[str] = []
+    for wid, info in mods.items():
+        records = info.get("records") if isinstance(info, dict) else None
+        if not isinstance(records, dict):
+            corrupt.append(str(wid))
+            continue
+        schema = info.get("extractor_schema")
+        if not isinstance(schema, int) or schema < CRAFT_SCHEMA_MIN:
+            stale.append(f"{wid}(schema={schema})")
+        eff = tracker.resolve_effective_branches(records)
+        for rid in records:
+            kind, _, rest = rid.partition("|")
+            if kind == "script_craftRecipe" and tracker.is_effective(rid, eff):
+                out.add(rest.rpartition("|")[2])
+    if corrupt:
+        raise ValueError(
+            f"en_corpus_hashes.json 有 {len(corrupt)} 個 mod 的 records 形狀壞損"
+            f"（{', '.join(corrupt[:5])}…）——上游實據殘缺，不得以「零死鍵」放行")
+    if len(out) < RECIPE_BLOCKS_MIN:
+        raise ValueError(
+            f"en_corpus_hashes.json 只取得 {len(out)} 個有效分支 script_craftRecipe 區塊名"
+            f"（現況量級 6900+，下限 {RECIPE_BLOCKS_MIN}）——上游實據殘缺或 extractor schema"
+            " 已改版，不得以「零死鍵」放行")
+    return out, sorted(stale)
+
+
+def _block_index(blocks: set[str]) -> dict[str, list[str]]:
+    """區塊名查找索引 `{查找鍵: [原區塊名…]}`，同時收原形與空格底線化形。
+
+    上游區塊名可能含空格（`Craft Metal Arrows from Plank`）、含底線（`MakeBeeSmoker`）
+    或**兩者混用**（`SVRP_CB_Pack Metal Arrows`），而 B41 legacy 鍵一般把空格寫成底線。
+    所以還原不能用 `body.replace("_", " ")`——那會把區塊本來就有的底線也換掉，混用形一律
+    漏報。方向要反過來：把**區塊名**底線化後當索引鍵，用 legacy 鍵的 body 去查。
+    原形也一併收，因為 JSON 鍵允許空格，legacy 鍵不保證一定把空格換成底線。
+    """
+    index: dict[str, list[str]] = {}
+    for block in blocks:
+        index.setdefault(block, []).append(block)
+        underscored = block.replace(" ", "_")
+        if underscored != block:
+            index.setdefault(underscored, []).append(block)
+    return index
+
+
+def _recipe_bare_names(key: str, index: dict[str, list[str]]) -> list[str]:
+    """前綴鍵還原成上游區塊名候選：0 個＝無實據不判死鍵，>1 個＝歧義（由呼叫端報 WARN）。
+
+    精確命中優先：`body` 本身就是現行區塊名時直接採用，不讓底線化索引把它擴成多義。
+    """
+    for prefix in RECIPE_DEAD_PREFIXES:
+        if not key.startswith(prefix):
+            continue
+        body = key[len(prefix):]
+        if not body:
+            return []
+        cands = index.get(body, [])
+        if body in cands:
+            return [body]
+        return sorted(cands)
+    return []
+
+
+def _load_recipe_allowlist(repo: str) -> dict[str, str]:
+    """`recipe_dead_allowlist.json` 的 entries，形狀壞損一律擲例外（gate 資料是受版控真相）。"""
+    path = os.path.join(repo, "sources", RECIPE_DEAD_ALLOWLIST)
+    with open(path, encoding="utf-8-sig") as fh:
+        entries = json.load(fh).get("entries")
+    if not isinstance(entries, dict) or not all(
+        isinstance(k, str) and k and isinstance(v, str) and v for k, v in entries.items()
+    ):
+        raise ValueError(
+            f"{RECIPE_DEAD_ALLOWLIST} 的 entries 形狀壞損"
+            "（須為 {裸區塊名: 非空理由字串} 的 dict）")
+    return entries
+
+
+def check_recipe_dead_keys(repo: str, dist_ch: str) -> tuple[bool, list[str], list[str]]:
+    """[16] 對得上上游區塊名的 `Recipe_`／`craftRecipe_` 前綴鍵必須另有裸鍵。"""
+    files, err = _load_json_dir(dist_ch)
+    if err:
+        return False, err, []
+    # 只掃 CH：CH/CN 的檔案集合與逐檔鍵集由 [2] CH 鏡像保證一致（run_all 無條件跑），
+    # 本項只需要鍵集、不看值，重複掃 CN 沒有額外資訊。
+    data = files.get("Recipes.json", {})
+    blocks, stale_schema = _upstream_craft_blocks(repo)
+    index = _block_index(blocks)
+
+    vpath = os.path.join(repo, "sources", "vanilla_keys.json")
+    with open(vpath, encoding="utf-8-sig") as fh:
+        vanilla = set(json.load(fh).get("scoped_keys", {}).get("Recipes.json", []))
+    allow = _load_recipe_allowlist(repo)
+
+    def satisfied(bare: str) -> bool:
+        """該裸名已出貨／屬本體／已裁決豁免＝玩家看得到中文，不算缺口。"""
+        return bare in data or bare in vanilla or bare in allow
+
+    pref: dict[str, list[str]] = {}
+    fail: list[str] = []
+    for key in data:
+        cands = _recipe_bare_names(key, index)
+        missing = [b for b in cands if not satisfied(b)]
+        if not missing:
+            continue
+        if len(cands) > 1:
+            # **歧義一律 fail-closed**：底線化後撞名是會自然發生的（`Foo Bar_Baz` 與
+            # `Foo_Bar Baz` 都正規化成 `Foo_Bar_Baz`），只記 WARN 就會讓「兩個裸鍵都沒
+            # 出貨」的真缺口綠燈放行。歧義本身不可機械消解——prefix 鍵沒帶 owner 資訊，
+            # 只能人工裁決：補齊全部候選，或查證後把不該補的登記 allowlist。
+            fail.append(
+                f"{key} 可還原成多個上游區塊名（{', '.join(cands)}），其中"
+                f" {', '.join(missing)} 未出貨——請人工裁決：補齊裸鍵，"
+                f"或查證後登記 sources/{RECIPE_DEAD_ALLOWLIST}")
+        else:
+            pref.setdefault(cands[0], []).append(key)
+
+    fail += [
+        f"{'／'.join(sorted(pref[b]))} 是死鍵且無裸鍵 `{b}`——玩家看到英文配方名。"
+        f"補裸鍵，或查證後登記 sources/{RECIPE_DEAD_ALLOWLIST}"
+        for b in sorted(pref)
+    ]
+    # 反向棘輪：已補好、前綴鍵已消失、或已由 vanilla 基準自動放行的條目都該移除，
+    # 否則清單會爛掉沒人發現（漏掉 vanilla 這條，基準日後移除該鍵時過時豁免會靜默接手）。
+    # `pref` 只收「未滿足」的裸名，故過時判定要另掃全部 prefix 鍵的候選集合。
+    referenced = {b for key in data for b in _recipe_bare_names(key, index)}
+    warn = [
+        f"{RECIPE_DEAD_ALLOWLIST} 條目過時，請移除：{b}"
+        for b in sorted(allow)
+        if b in data or b not in referenced or b in vanilla
+    ]
+    if stale_schema:
+        # 局部漏報盲區可見化：這些 mod 的 script 抽取用的是「只掃第一個 media/scripts
+        # 目錄」的舊規則，區塊名清單可能殘缺，本項對它們的 legacy 鍵會誤判「無實據」。
+        warn.append(
+            f"{len(stale_schema)} 個 mod 的 extractor_schema < {CRAFT_SCHEMA_MIN}"
+            "（script 抽取當時只掃第一個 media/scripts 目錄），其 craftRecipe 區塊名清單"
+            f"可能殘缺＝本項對它們的 legacy 鍵會漏報：{', '.join(stale_schema)}。"
+            "要消除跑 `tracker.py backfill-en`，或等該 mod 更新時自動重抽")
+    return not fail, fail, warn
+
+
 def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
     repo = paths["repo"]
     as1_cn = paths["as1_cn"]
@@ -1685,6 +1896,10 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         ok15, d15, w15 = check_itemname_dead_keys(repo, dist_ch)
     except Exception as exc:  # noqa: BLE001 — 清單檔缺失/壞損直接判 FAIL（gate 資料是受版控真相）
         ok15, d15, w15 = False, [f"ItemName 死鍵檢查失敗（{exc}）"], []
+    try:
+        ok16, d16, w16 = check_recipe_dead_keys(repo, dist_ch)
+    except Exception as exc:  # noqa: BLE001 — 清單檔缺失/壞損直接判 FAIL（gate 資料是受版控真相）
+        ok16, d16, w16 = False, [f"Recipes 死鍵檢查失敗（{exc}）"], []
 
     rows = [
         ("1", "CN 逐檔 parity（As1 缺席時僅降級 As1 比對）" if as1_missing else "CN 逐檔 parity",
@@ -1702,6 +1917,7 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         ("13", "檔名可載入性", ok13, d13, w13),
         ("14", "own 層 CN 用字", ok14, d14, w14),
         ("15", "ItemName 死鍵", ok15, d15, w15),
+        ("16", "Recipes 死鍵", ok16, d16, w16),
     ]
 
     n_pass = sum(1 for _, _, ok, _, _ in rows if ok is True)

@@ -1,0 +1,4 @@
+{
+  "_comment": "verify [16] Recipes 死鍵豁免。key = 上游現行有效分支的 craftRecipe 裸區塊名，value = 查證後不補該裸鍵的理由。B42 的配方顯示名以裸區塊名查表（Translator.getRecipeName → recipe.get(name)），故 `Recipe_X`（B41 鍵形）／`craftRecipe_X`（B42 誤加前綴）永不生效；有上游同名區塊卻沒出貨裸鍵＝玩家看到英文配方名。**撞本體 vanilla 的裸名不必登記**——gate 已用 `vanilla_keys.scoped_keys['Recipes.json']` 自動放行，登記反而會被反向棘輪報過時（實例 `Dismantle Headphones`）。只登記真的不該補、又非 vanilla 的個案；能補就補。",
+  "entries": {}
+}

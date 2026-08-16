@@ -43,7 +43,7 @@ jobs:
           enable-cache: false # 全部純標準函式庫，無相依可快取
 
       # 逐支跑並收集結果，讓一支失敗不遮蔽其餘（CI 一次看完所有紅燈）
-      - name: 回歸測試（9 支純 repo gate）
+      - name: 回歸測試（10 支純 repo gate）
         run: |
           set -u
           failed=()
@@ -54,6 +54,7 @@ jobs:
             test_manifest_fresh \
             test_own_cn_glyphs \
             test_own_lane \
+            test_recipe_dead_keys \
             test_unshipped_keys \
             test_vanilla_suppress \
             test_verify_as1_skip
@@ -71,7 +72,7 @@ jobs:
             echo "::error::${#failed[@]} 支回歸測試失敗：${failed[*]}"
             exit 1
           fi
-          echo "✅ 9 支回歸測試全過"
+          echo "✅ 10 支回歸測試全過"
 
       # tracker 自身的十四情境 mock 測試（純記憶體，不碰網路與 git 遠端）
       - name: tracker self-test
