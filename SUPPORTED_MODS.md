@@ -357,7 +357,7 @@
 | [[B42] Chevrolet Corvette C6](https://steamcommunity.com/sharedfiles/filedetails/?id=3566330206) | Chevrolet Corvette C6 | 新增雪佛蘭 Corvette C6 跑車車輛。 | `[B42]Chevrolet Corvette C6` | 1 | — | — |
 | [Trap Manager](https://steamcommunity.com/sharedfiles/filedetails/?id=3566766862) | 陷阱管理器 | 提供陷阱管理介面，顯示捕獲動物、誘餌狀態並可自動刷新。 | `TrapManager` | 161 | — | — |
 | ['65 Pontiac Banshee](https://steamcommunity.com/sharedfiles/filedetails/?id=3566868353) | '65 Pontiac Banshee | 新增 1965 年 Pontiac Banshee 車輛，含多種版本與車體零件。 | `65banshee` | 11 | — | — |
-| [[B42] Mod Manager](https://steamcommunity.com/sharedfiles/filedetails/?id=3567084868) | 模組管理器 | 強化模組管理介面，可排序、檢視作者、依賴項與更新資訊。 | `ModManager` | 57 | ⚠️ ≥2 | — |
+| [[B42] Mod Manager](https://steamcommunity.com/sharedfiles/filedetails/?id=3567084868) | 模組管理器 | 強化模組管理介面，可排序、檢視作者、依賴項與更新資訊。 | `ModManager` | 57 | ⚠️ ≥1 | — |
 | [Milk Them All [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3568280195) | 全部擠奶 | 可一鍵將奶擠入多個液體容器，並提供容器限制等選項。 | `Ivmakk_MilkThemAll` | 21 | — | — |
 | [Hybrid Melee Repair](https://steamcommunity.com/sharedfiles/filedetails/?id=3569031613) | 混合近戰維修 | 為近戰武器新增刀刃與握柄零件磨損及維修系統。 | `HybridMeleeRepair`, `HybridMeleeRepairb42_12` | 52 | — | — |
 | [[B42]Kill Cell - Armory](https://steamcommunity.com/sharedfiles/filedetails/?id=3569050120) | Kill Cell - 軍械庫 | 新增 20 餘種現代槍械與戰術裝備，如頭盔、防彈背心與戰術腰帶。 | `Kill Cell - Armory` | 1 | — | — |
