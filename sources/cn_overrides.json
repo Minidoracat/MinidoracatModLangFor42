@@ -1299,5 +1299,190 @@
     "as1_value": "撞击伤害冷却",
     "reason": "上游 EN 語意變更（tracker stale 3402208866 同批車輛側鄰鍵），CN 跟進新 EN",
     "value": "撞击伤害冷却 (已弃用, 不再生效)"
+  },
+  "Sandbox.json|Sandbox_ETW_UIPage": {
+    "as1_value": "统计数据UI页面",
+    "reason": "上游 UI Page with Stats→UI Progress Pages，語意由「統計資料」改為「進度」",
+    "value": "UI 进度页面"
+  },
+  "Sandbox.json|Sandbox_ETW_UIPage_tooltip": {
+    "as1_value": "这将在角色界面中启用一个页面, 显示你获得/失去特质的详细进度信息",
+    "reason": "上游改寫：明列三個進度分頁並說明停用時仍保留說明/翻譯狀態分頁。分頁名沿用 UI_ETW_SubTab_* 既有譯法",
+    "value": "在 ETW 角色页面启用生命体征, 永久性特质与非永久性特质进度选项卡. 禁用时说明与翻译状态选项卡仍可使用."
+  },
+  "Sandbox.json|Sandbox_SaucedCarts_SpeedPenaltyMultiplier_tooltip": {
+    "as1_value": "推手推车时的移动速度惩罚. 100=默认, 0=无惩罚, 200=双倍惩罚.",
+    "reason": "上游上限由 200 改為 500 並新增衝刺動畫失效說明",
+    "value": "推手推车时的移动速度惩罚. 100 = 默认 (跑步略慢), 0 = 无惩罚, 500 = 五倍惩罚. 数值过高会让推车者慢到无法冲刺, 站上车滑行的冲刺动画也会因此禁用."
+  },
+  "UI.json|UI_VorpallySauced_Suffix": {
+    "as1_value": "后缀: %s",
+    "reason": "上游 EN 由 %s 改為 %1；consumer 為 fmtText→getText(key,...) 帶參形式（Core.lua 實證，全 mod 零 string.format(getText），printf token 會顯示成字面",
+    "value": "后缀: %1"
+  },
+  "UI.json|UI_VorpallySauced_Prefix": {
+    "as1_value": "前缀: %s",
+    "reason": "同上，%s→%1",
+    "value": "前缀: %1"
+  },
+  "UI.json|UI_VorpallySauced_TotalKills": {
+    "as1_value": "总击杀: %d",
+    "reason": "同上，%d→%1；ShortOrderAddon.lua 實證 fmtText(\"UI_VorpallySauced_TotalKills\", tostring(info.kills))",
+    "value": "总击杀: %1"
+  },
+  "UI.json|UI_VorpallySauced_Mastered": {
+    "as1_value": "已精通 (%d 次击杀)",
+    "reason": "同上，%d→%1；EN 文字未變故僅換 token",
+    "value": "已精通 (%1 次击杀)"
+  },
+  "UI.json|UI_VorpallySauced_KillProgress": {
+    "as1_value": "击杀: %d/%d, 下一阶段 %s",
+    "reason": "同上，%d/%d/%s→%1/%2/%3",
+    "value": "击杀: %1/%2, 下一阶段 %3"
+  },
+  "UI.json|UI_VorpallySauced_NextAwakening": {
+    "as1_value": "下次觉醒: %d 次击杀后觉醒",
+    "reason": "同上，%d→%1",
+    "value": "下次觉醒: %1 次击杀后觉醒"
+  },
+  "UI.json|UI_VorpallySauced_NextMastery": {
+    "as1_value": "下次精通: %d 次击杀后精通",
+    "reason": "同上，%d→%1",
+    "value": "下次精通: %1 次击杀后精通"
+  },
+  "UI.json|UI_VorpallySauced_NotifyTooltipLib": {
+    "as1_value": "可启用VorpallySauced: Enhanced Tooltips\n\n请从 Steam 创意工坊安装 'TooltipLib', 以查看包含属性明细、击杀进度和精通级别颜色的完整武器成长提示.\n\n未安装时武器仍可正常运作, 但旧式提示将在未来版本中移除.",
+    "reason": "上游由「選用增強提示」改為「必要前置, 缺少則完全無提示」，語意反轉。銘印/羈絆沿用 UI_VorpallySauced_AffixMarks/AffixBonds",
+    "value": "VorpallySauced: 缺少 TooltipLib \n\nTooltipLib 为必要前置. 缺少它时, VorpallySauced 完全不会显示工具提示.\n\n你的武器仍会累积铭印, 羁绊与属性 — 只是无法显示. 请于 Steam 创意工坊订阅 'TooltipLib'. 在服务器上还须将它加入 Mods= 行."
+  },
+  "Sandbox.json|Sandbox_ImmersiveBlackouts_ElectricityCooldown_tooltip": {
+    "as1_value": "电力可能中断或恢复的判定间隔 (小时).",
+    "reason": "上游由單一 Cooldown 改為 min-max 區間並新增格式與範例三行",
+    "value": "电力可能中断或恢复之间的时间范围 (小时).\n格式: 最小值 - 最大值\n示例: 0-0 = 无冷却, 1-3 = 1 至 3 小时的随机冷却, 1-1 = 固定 1 小时冷却."
+  },
+  "Sandbox.json|Sandbox_ImmersiveBlackouts_WaterCooldown_tooltip": {
+    "as1_value": "供水可能中断或恢复的判定间隔 (小时).",
+    "reason": "同上",
+    "value": "供水可能中断或恢复之间的时间范围 (小时).\n格式: 最小值 - 最大值\n示例: 0-0 = 无冷却, 1-3 = 1 至 3 小时的随机冷却, 1-1 = 固定 1 小时冷却."
+  },
+  "Sandbox.json|Sandbox_AutoMechanics_ConditionLossPercentageThreshold_tooltip": {
+    "as1_value": "可接受的部件状态损失百分比.<LINE> 0 (默认 - 推荐用于公共服务器) 将保护车辆部件的状态.<LINE> 100 允许玩家为所欲为 (推荐用于私人服务器).<LINE> 仅在多人游戏客户端或启用了详细模式 (Verbose) 的单人玩家中生效.",
+    "reason": "上游移除 0 的「default」標註（預設值已改），譯文同步移除「預設 -」",
+    "value": "可接受的部件状态损失百分比.<LINE> 0 (推荐用于公共服务器) 将保护车辆部件的状态.<LINE> 100 允许玩家为所欲为 (推荐用于私人服务器).<LINE> 仅在多人游戏客户端或启用了详细模式 (Verbose) 的单人玩家中生效."
+  },
+  "Tooltip.json|Tooltip_CContainer_Tiers": {
+    "as1_value": "放置物品后右键点击可'升级'. 通过在沙盒设置中调整'分级存储容器'选项来解锁更高等级",
+    "reason": "上游新增 Remove Upgrade 選項",
+    "value": "放置物品后右键点击可'升级'或'移除升级'. 通过在沙盒设置中调整'分级存储容器'选项来解锁更高等级"
+  },
+  "UI.json|UI_BanditsCreator_AI_Defenders_Tooltip": {
+    "as1_value": "可能在设有障碍的建筑中生成.",
+    "reason": "上游補述駐守與攻擊入侵者行為",
+    "value": "可能在设有障碍的建筑中生成. 他们会驻守原地, 并攻击任何入侵者."
+  },
+  "UI.json|UI_BanditsCreator_AI_Campers_Tooltip": {
+    "as1_value": "可能在野外随帐篷营地生成.",
+    "reason": "上游補述駐守與睡眠狀態",
+    "value": "可能在野外随帐篷营地生成. 他们会驻守原地, 也可能只是在睡觉."
+  },
+  "UI.json|UI_BanditsCreator_AI_Assault_Tooltip": {
+    "as1_value": "可能作为突击小组生成.",
+    "reason": "上游補述生成距離與攻擊目標；強盜/氏族沿用 UI_BanditsCreator_Bandit_Clan 既有譯法",
+    "value": "可能以小队形式在距玩家约 60 格处生成. 该小队会攻击看到或听到的最近敌人 (僵尸, 玩家, 其他氏族的强盗)."
+  },
+  "UI.json|UI_BanditsCreator_AI_Wanderer_Tooltip": {
+    "as1_value": "修复我",
+    "reason": "上游把佔位符 FIXME 換成正式文案；As1 簡中原本直譯成「修复我」＝可見錯誤",
+    "value": "他们会在远离玩家处生成, 并在地图上自由游荡. 玩家可能偶然遇上他们 (若他们曾遭遇其他氏族, 遇到的可能是尸体)."
+  },
+  "UI.json|UI_BanditsCreator_AI_Roadblock_Tooltip": {
+    "as1_value": "可能组织道路封锁.",
+    "reason": "上游補述生成距離與駐守行為",
+    "value": "可能以小队形式在距玩家约 60 格的道路上生成, 并构筑路障. 他们会驻守原地."
+  },
+  "UI.json|UI_BanditsCreator_AI_Friendly_Tooltip": {
+    "as1_value": "不会攻击人类玩家.",
+    "reason": "上游補述反擊條件",
+    "value": "不会攻击人类玩家, 除非玩家先动手."
+  },
+  "UI.json|UI_BanditsCreator_Hourly_Spawn_Chance_Tooltip": {
+    "as1_value": "每小时生成的平均名义几率.",
+    "reason": "上游補述逐氏族獨立計算",
+    "value": "此氏族每小时生成的平均名义几率. 每个氏族各自独立计算其生成几率."
+  },
+  "UI.json|UI_BanditsCreator_Hourly_Spawn_Chance": {
+    "as1_value": "生成几率 (%%)",
+    "reason": "上游 Spawn chance→Hourly spawn chance，補上每小時語意",
+    "value": "每小时生成几率 (%%)"
+  },
+  "Tooltip.json|Tooltip_HydeCoBees_ExtinguishBeeSmoker": {
+    "as1_value": "熄灭点燃的养蜂熏烟器.",
+    "reason": "上游新增燃料保留說明",
+    "value": "熄灭熏烟器, 剩余的燃料会保留到下次使用."
+  },
+  "Tooltip.json|Tooltip_HydeCoBees_Beehive": {
+    "as1_value": "一个野生的蜂巢. 打开后可收获蜂巢和蜜蜂.",
+    "reason": "As1 原譯「打開後可收穫蜂巢和蜜蜂」漏掉蜂群警告；上游現行文案為警告＋建議先燻",
+    "value": "一个野生蜂巢. 敲开可能引来愤怒的蜂群. 建议先用熏烟器处理."
+  },
+  "Tooltip.json|Tooltip_HydeCoBees_BeeswaxStickyResin": {
+    "as1_value": "一种由蜂蜡和树脂制成的粘性材料, 在野外可替代针线用于缝纫.",
+    "reason": "上游大幅擴充用途（環氧樹脂替代, 縫合傷口, 護甲, 蜂巢膠帶, 耐久消耗）",
+    "value": "蜂蜡与树脂调成的粘性混合物. 搭配胶带时可当环氧树脂修理武器与工具. 也能替代缝纫针 — 补衣服, 缝合伤口, 制作护甲 — 并可用于制作蜂巢胶带. 使用会逐渐消耗."
+  },
+  "Tooltip.json|Tooltip_HydeCoBees_BeeSmokerLit": {
+    "as1_value": "一个点燃的养蜂熏烟器, 用于控制蜂群, 并能提供少量照明.",
+    "reason": "上游改為燃料消耗機制說明；As1 原譯的「提供少量照明」已不在上游文案",
+    "value": "已点燃的蜂箱熏烟器. 每次对蜂箱使用会烧掉五分之一的燃料, 保持点燃时也会缓慢闷烧, 用完请记得熄灭."
+  },
+  "Tooltip.json|Tooltip_HydeCoBees_MakeStickyTapeRoll": {
+    "as1_value": "将蜂蜡粘性树脂和布料组合, 制成一卷粘性胶带.",
+    "reason": "上游配方材料由「蜂蠟黏性樹脂＋布料」改為「精煉樹脂或蜂膠＋紙張」",
+    "value": "用精炼树脂或蜂胶涂覆纸张, 制成一卷粘性胶带."
+  },
+  "Tooltip.json|Tooltip_HydeCoBees_WaspNest": {
+    "as1_value": "一个黄蜂巢. 请小心处理!",
+    "reason": "As1 原譯僅「請小心處理」過於籠統；上游明列擾動風險與先燻建議",
+    "value": "一个野生黄蜂巢. 扰动或敲开可能引来危险的蜂群. 建议先用熏烟器处理."
+  },
+  "Tooltip.json|Tooltip_HydeCoBees_Mead": {
+    "as1_value": "一种由蜂蜜制成的甜味酒精饮料.",
+    "reason": "上游新增密封酒與舊式開口瓶的區別說明",
+    "value": "以蜂蜜制成的甜味酒精饮料. 现在从发酵桶取出的蜂蜜酒都是密封的, 可永久保存; 这种旧式的开口瓶装就只是一般饮料."
+  },
+  "Tooltip.json|Tooltip_HydeCoBees_StickyTapeRoll": {
+    "as1_value": "一卷粘性胶带, 在制作和修理中可替代环氧树脂.",
+    "reason": "上游由「可替代環氧樹脂」改為「等同玻璃纖維膠帶, 須搭配環氧樹脂」，語意相反",
+    "value": "一卷树脂涂覆的纸胶带. 修理武器与工具时可当玻璃纤维胶带 — 须搭配环氧树脂使用, 例如蜂蜡粘性树脂."
+  },
+  "Tooltip.json|Tooltip_HydeCoBees_FibrousHiveTape": {
+    "as1_value": "一种由蜂巢纤维制成的强力胶带, 在制作和修理中可替代玻璃纤维胶带.",
+    "reason": "上游補述須搭配環氧樹脂使用",
+    "value": "以蜂巢纤维制成的强力胶带. 修理武器与工具时可当玻璃纤维胶带 — 须搭配环氧树脂使用, 例如蜂蜡粘性树脂."
+  },
+  "Sandbox.json|Sandbox_rSemiTruck": {
+    "as1_value": "肯沃斯W900军用半挂卡车",
+    "reason": "上游移除 Military 字樣（該選項已不限軍用車），譯文同步移除「軍用」",
+    "value": "肯沃斯W900半挂卡车"
+  },
+  "UI.json|UI_BanditsCreator_Day_Start_End_Tooltip": {
+    "as1_value": "氏族可能生成的时间段. \\n在单人游戏中, 天数指的是世界年龄. \\n在多人游戏中, 天数指的是生成点附近玩家的存活天数. \\n在两种情况下, 天数都从零开始计算.",
+    "reason": "上游有效分支（42.20 .json）用真換行，As1 值沿用 B41 _EN.txt 時代的字面 \\n；Translator 只把 <br> 轉換行（42.20.3 Translator.java:502/823），字面 \\n 會原樣顯示給玩家。改為真換行對齊上游。",
+    "value": "氏族可能生成的时间段. \n在单人游戏中, 天数指的是世界年龄. \n在多人游戏中, 天数指的是生成点附近玩家的存活天数. \n在两种情况下, 天数都从零开始计算."
+  },
+  "Tooltip.json|Tooltip_SSS_Bad_Months": {
+    "as1_value": "逆月份:",
+    "reason": "同 mod 內 CN 用語分歧：本批新增的 `UI_SSS_ModOptions_ShowBadMonths*` 採「不利月份」（與 As1 既有 CH `Tooltip_SSS_Bad_Month_Hardy` = 不利月份耐受性 一致），此三鍵 As1 CN 仍為「逆月份」。統一為「不利月份」以免同一功能兩套用語。",
+    "value": "不利月份:"
+  },
+  "Tooltip.json|Tooltip_SSS_Bad_Month_Hardy": {
+    "as1_value": "逆月份耐性:",
+    "reason": "同 mod 內 CN 用語分歧：本批新增的 `UI_SSS_ModOptions_ShowBadMonths*` 採「不利月份」（與 As1 既有 CH `Tooltip_SSS_Bad_Month_Hardy` = 不利月份耐受性 一致），此三鍵 As1 CN 仍為「逆月份」。統一為「不利月份」以免同一功能兩套用語。",
+    "value": "不利月份耐性:"
+  },
+  "Tooltip.json|Tooltip_SSS_Bad_Month_Hardy_Growth_Stage": {
+    "as1_value": "逆月份耐性生长阶段:",
+    "reason": "同 mod 內 CN 用語分歧：本批新增的 `UI_SSS_ModOptions_ShowBadMonths*` 採「不利月份」（與 As1 既有 CH `Tooltip_SSS_Bad_Month_Hardy` = 不利月份耐受性 一致），此三鍵 As1 CN 仍為「逆月份」。統一為「不利月份」以免同一功能兩套用語。",
+    "value": "不利月份耐性生长阶段:"
   }
 }
