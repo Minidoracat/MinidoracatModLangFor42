@@ -53,14 +53,17 @@ def git_show(ref: str, path: str) -> dict:
 
 
 def write_json(path: Path, data: dict, sort_keys: bool = False) -> None:
-    """就地改寫，**沿用該檔原有行尾**。
+    """就地改寫，**一律 LF**。
 
-    `.gitattributes` 是 `* -text`（禁止 git 行尾轉換），所以行尾是檔案內容的一部分：
-    `ch_review_state.json` 一向是 CRLF、`opencc_fixes.json` 是 LF。寫死其中一種會讓
-    只改兩個 hash 的 commit 變成整檔 diff（實測 16,112 行），把真正的改動淹掉。
+    `.gitattributes` 是 `* -text`（禁止 git 行尾轉換），所以行尾是檔案內容的一部分，
+    漏指定 `newline` 在 Windows 上會寫出 CRLF。本函式因此顯式寫死 LF。
+
+    歷史：這裡原本會嗅探該檔原有行尾並沿用，理由是「`ch_review_state.json` 一向是
+    CRLF，寫死 LF 會產生 16,112 行整檔 diff」。該前提已不成立——兩個目標檔現皆為 LF
+    （`scripts/test_serialization.py` 把「受版控 JSON 一律 LF」升成零基線棘輪）。
+    沿用嗅探反而會在 CRLF 因任何路徑回流時**原樣固化**，讓 gate 紅燈而成因難查。
     """
-    eol = "\r\n" if b"\r\n" in path.read_bytes() else "\n"
-    with open(path, "w", encoding="utf-8", newline=eol) as f:
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
         json.dump(data, f, ensure_ascii=False, indent=1, sort_keys=sort_keys)
         f.write("\n")
 
