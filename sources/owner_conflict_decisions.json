@@ -474,6 +474,391 @@
    "reason": "同物中性裁決：Empty Buckshot Shell／Empty Shotgun Shell 都是空霰彈殼，採不綁 buckshot 的中性譯名。",
    "ch": "空霰彈殼",
    "cn": "空霰弹壳"
+  },
+  "Tooltip|Tooltip_ArmyBoots": {
+   "action": "translate",
+   "signature": "26f9fb75199b254e",
+   "reason": "只有 Boots Expanded Vanilla B42 root 活用本鍵；full root 同名翻譯是 B41 遷移死鍵。現值 2.5/600 等於唯一活 owner。",
+   "ch": "踩踏力道: 2.5 耐久度: 600",
+   "cn": "踩踏力度: 2.5 耐久度: 600"
+  },
+  "Tooltip|Tooltip_ArmyBootsDesert": {
+   "action": "translate",
+   "signature": "26f9fb75199b254e",
+   "reason": "兩個 B42 root 均無 item 綁此裸 Tooltip（both-dead）；維持 legacy 值，不產生 runtime 誤導。",
+   "ch": "踩踏力度: 2.5 耐久度: 600",
+   "cn": "踩踏力度: 2.5 耐久度: 600"
+  },
+  "Tooltip|Tooltip_BkChemistryCourse": {
+   "action": "translate",
+   "signature": "3fa65f0195a3632a",
+   "reason": "兩 owner 同為「化學課程書」這一實體：ZVirusVaccine42BETA 的 LabBooks.BkChemistryCourse 顯示名 'Intro to Basic Chemistry'，zReVaccin 3 的 zReLabItems.BkChemistryCourse 顯示名 'Laboratory, Vol 4 - Short Chemistry Course'，兩者都是該 mod 化學/病毒學研究線的技能書。差異純屬 flavor：ZVirus 額外編了「表面是基礎化學書、實則寫滿實驗室不穩定試劑的手寫筆記、不該在市面流通」的敘事，zRe 只寫「給對化學有興趣的人的小手冊」。現行出貨值把 ZVirus 專屬敘事整段寫死，對 zRe 是憑空捏造的物品背景（違反 AGENTS.md「多 owner 共用鍵不得寫入單一 mod 的專屬全文」）。改為只保留兩邊共同為真的核心「基礎化學課程手冊」即誠實。兩 owner 的 item 命名空間為 LabItems.*／zReLabItems.*，可同時啟用、物品並存，故本鍵無法用 isModActive 分流，必須取中性文案。placeholder：兩邊皆無 printf/編號 token；ZVirus 原文含一個 <br>、zRe 無，owner 之間本就不一致，中性化為單句後不保留 <br>，無數字與單位需守恆。非 vanilla 鍵（vanilla_keys.json 604 個 Tooltip_ 鍵無此鍵），不觸發零覆蓋本體規則。",
+   "ch": "基礎化學課程手冊.",
+   "cn": "基础化学课程手册."
+  },
+  "Tooltip|Tooltip_BkLaboratoryEquipment1": {
+   "action": "translate",
+   "signature": "4a3f4433a661d740",
+   "reason": "兩 owner 指的是同一種書：ZVirus 的 ItemName_LabBooks.BkLaboratoryEquipment1='Laboratory Equipment Vol. 1'，zReVaccin 3 的 ItemName_zReLabItems.BkLaboratoryEquipment1='Laboratory. Vol 1 - Equipment'，都是該 mod 實驗室書籍系列的第一卷「器材篇」，功能同為解鎖／教學組裝實驗室器材的技能書。英文差異只是敘述風格（ZVirus 'Technical guide on building laboratory equipment.' 用總括語氣，zReVaccin 'Blueprints and tips for assembling various laboratory equipment.' 拆成圖紙＋技巧），沒有不同實體、不同數值、不同機制。現行中性譯文不宣稱任何一方獨有的內容（不寫「圖紙」也不寫具體器材清單），對兩者皆成立，建議維持現值。兩個疫苗 mod 的 item 命名空間互不重疊（ZVirus 為 LabItems.*／LabBooks.*，zReVaccin 3 為 zReLabItems.*，見 sources/en/3615135168.json 與 sources/en/3643703198.json 的 ItemName 鍵），代表兩者可同時安裝啟用，Tooltip 又是全域 map，因此本家族沒有 isModActive 二選一的空間，中性化是唯一可行解。",
+   "ch": "建造實驗室裝置的技術指南.",
+   "cn": "建造实验室设备的技术指南."
+  },
+  "Tooltip|Tooltip_BkLaboratoryEquipment2": {
+   "action": "translate",
+   "signature": "f3b5d71ba0736ccc",
+   "reason": "兩 owner 都是實驗室器材第二卷，內容皆為科學裝飾／海報製作，現行中性描述成立。",
+   "ch": "建造科學裝飾品的手冊.",
+   "cn": "建造科学装饰品的手册."
+  },
+  "Tooltip|Tooltip_BkLaboratoryEquipment3": {
+   "action": "translate",
+   "signature": "1c6c2fccf16c52d4",
+   "reason": "兩 owner 都是「第 3 卷實驗室書籍, 教的是熔爐(馬弗爐)操作」這個同一實體：3615135168/ZVirusVaccine42BETA 的 LabBooks.BkLaboratoryEquipment3='Laboratory Equipment Vol. 3' 搭 'Complete guide to using the laboratory furnace.'；3643703198/zReVaccin 3 的 zReLabItems.BkLaboratoryEquipment3='Laboratory. Vol 3 - Lab Glassware' 搭 'Instructions for operating a muffle furnace with practical examples.'。兩邊都有 muffle furnace 實體與其組裝配方（A: LabAssembleMuffleFurnace / Tooltip_LabMuffleFurnace；B: Tooltip_LabMuffleFurnace、Recipe_zReLabFrnMakeSyringeReusable 走熔爐），書籍指向的機制一致。英文差異只在修飾語（A『完整』vs B『附實例』），皆非機制或數值承諾，現行譯文未宣稱任一 owner 獨有的功能，對兩者都成立，建議維持。無 placeholder、無 <br>、無數字，守恆無虞。",
+   "ch": "操作實驗室熔爐的完整指南.",
+   "cn": "操作实验室熔炉的完整指南."
+  },
+  "Tooltip|Tooltip_BkVirologyCourses1": {
+   "action": "translate",
+   "signature": "8fcc800c0863471a",
+   "reason": "兩 owner 同為「病毒學第一冊」技能書：ZVirus 的 LabBooks.BkVirologyCourses1 = 'Virology Book with Handwritten Notes'，zRe 的 zReLabItems.BkVirologyCourses1 = 'Laboratory, Vol 5 - Virology'（兩邊都另有 BkVirologyCourses2 進階冊，序列一致）。兩份 tooltip 的共同核心完全重疊——ZVirus「教授生物材料採集與分析的基礎」、zRe「採集與研究生物材料的方法」。唯一衝突是 ZVirus 額外綁了具名虛構設定「休森博士（Dr. Hughson）在諾克斯事件前的血液異常早期筆記」，這個人名與事件在 zRe 完全不存在，現行出貨值卻把它寫死並且把「教授…基礎知識」降為次要子句。改為只留兩邊共同為真的敘述即誠實，且不流失任何 owner 的實質資訊。同上鍵，兩 mod 物品命名空間不同可並存，無法 isModActive 分流。placeholder：兩邊皆無 printf/編號 token；ZVirus 原文一個 <br>、zRe 無，owner 不一致故不保留；無數字與單位。非 vanilla 鍵。",
+   "ch": "教授採集與研究生物材料的基礎方法.",
+   "cn": "教授采集与研究生物材料的基础方法."
+  },
+  "Tooltip|Tooltip_BkVirologyCourses2": {
+   "action": "translate",
+   "signature": "ea2bdb2bab6c1286",
+   "reason": "**現行值必須改**：「休森博士的機密筆記」是 ZVirus 專屬的虛構人物 Dr. Hughson，zReVaccin 3 這一鍵對應的是 ItemName_zReLabItems.BkVirologyCourses2='Laboratory, Vol 6 - Virology'，一本普通的系列教材第六卷，沒有任何 Hughson 角色；由於兩 mod 可同時安裝、Tooltip 是全域鍵，帶人名的版本對 zReVaccin 玩家是純假訊息。但兩者仍存在誠實交集：ZVirus 的 ItemName 是 'Advanced Virology Book with Handwritten Notes'（明寫 Advanced），zReVaccin 是該系列最高卷 Vol 6，故「高階病毒學教材」對兩者皆成立；內容交集取 ZVirus 'advanced methodologies for vaccine and antiviral creation' ∩ zReVaccin 'Production and use of antiviral drugs' = 抗病毒藥物的製造。刻意不寫「疫苗」：zReVaccin 該書英文只講抗病毒藥物，寫進疫苗會讓玩家誤判 Vol 6 能解鎖疫苗配方；刻意不寫「使用」：ZVirus 只提 creation。「高階」而非「進階」是為對齊語料既有慣例（sources/ch 全庫 高階 114 次 vs 進階 52 次，且同族 Tooltip_CmpSyringeWithAdvancedVaccine 已出貨為「高階疫苗」）。兩個疫苗 mod 的 item 命名空間互不重疊（ZVirus 為 LabItems.*／LabBooks.*，zReVaccin 3 為 zReLabItems.*），代表兩者可同時安裝啟用，Tooltip 又是全域 map，因此本家族沒有 isModActive 二選一的空間，中性化是唯一可行解。",
+   "ch": "高階病毒學教材. 教授抗病毒藥物的製造方法.",
+   "cn": "高级病毒学教材. 教授抗病毒药物的制造方法."
+  },
+  "Tooltip|Tooltip_BlackBoots": {
+   "action": "translate",
+   "signature": "350a0201c77d3934",
+   "reason": "只有 Boots Expanded Vanilla B42 root 活用本鍵；full root 同名翻譯是死鍵。現值 2.5/400 等於唯一活 owner。",
+   "ch": "踩踏力道: 2.5 耐久度: 400",
+   "cn": "踩踏力度: 2.5 耐久度: 400"
+  },
+  "Tooltip|Tooltip_ChAmmonia": {
+   "action": "translate",
+   "signature": "479ce41b18d34372",
+   "reason": "兩 owner 的物品名皆為 'Ammonia'（A: LabItems.ChAmmonia；B: zReLabItems.ChAmmonia），同為實驗室氨水試劑這個同一實體，B 另有 Recipe_zReLabChmMixItemChAmmonia='Obtain ammonia' 取得配方。英文差異只在敘述精度（A 交代物質常識用途, B 只說當試劑）。現行譯文『通常用於化學反應和強力清潔』屬**物質常識性描述**而非機制承諾（未宣稱任何配方、數值或工作站綁定），兩 owner 的物品都確實是氨水, 故對兩者皆誠實, 建議維持。唯一保留：若日後任一 owner 把清潔用途做成實際配方而另一方沒有, 此句才會升級為機制落差, 屆時再重審。",
+   "ch": "氨水溶液. 通常用於化學反應和強力清潔.",
+   "cn": "氨水溶液. 通常用于化学反应和强力清洁."
+  },
+  "Tooltip|Tooltip_ChHydrochloricAcidCan": {
+   "action": "translate",
+   "signature": "6c48bc96cc4a19af",
+   "reason": "兩 owner 同為「一罐鹽酸」這一實體（ZVirus LabItems.ChHydrochloricAcidCan = 'Hydrochloric Acid'；zRe zReLabItems.ChHydrochloricAcidCan = 'Hydrochloric Acid Can'），且兩份 tooltip 都是同一件事：這是酸、處理要小心（ZVirus 'Handle with extreme care'、zRe 'Always wear gloves when handling acid'）。唯一不成立的是現行出貨值開頭的「濃」——'Concentrated' 只有 ZVirus 寫，zRe 從未宣稱濃度，而且 zRe 在同族鍵裡是刻意分級的：它把 'Very strong acid. Take precautions.' 留給 Tooltip_ChSulfuricAcidCan（硫酸），鹽酸只給一般手套警告，寫「濃鹽酸」會拉高 zRe 那罐的規格宣稱。故僅刪去「濃／浓」一字，其餘保留，改動最小且對兩 owner 皆真。未寫入 zRe 的「戴手套」是刻意的：那是 zRe 的專屬字面，且「需極度小心」已涵蓋其語意。兩 mod 可同時啟用、命名空間不同，無法 isModActive 分流。placeholder：兩邊皆無 token、無 <br>、無數字單位。非 vanilla 鍵。",
+   "ch": "鹽酸. 處理時需極度小心.",
+   "cn": "盐酸. 处理时需极度小心."
+  },
+  "Tooltip|Tooltip_ChSodiumHydroxideBag": {
+   "action": "translate",
+   "signature": "4363eb926c13780e",
+   "reason": "兩 owner 是同一種真實物質的同一種容器裝：ItemName_LabItems.ChSodiumHydroxideBag='Sodium Hydroxide' 與 ItemName_zReLabItems.ChSodiumHydroxideBag='Sodium Hydroxide Bag'，皆為袋裝氫氧化鈉。英文敘述角度不同但不衝突：ZVirus 給身分＋用途（'basic reagent for chemical synthesis'），zReVaccin 給安全提示（'Always wear gloves when handling this chemical reagent.'），而 zReVaccin 自己也把它定性為 chemical reagent，故「用於化學合成的基本試劑」對兩者都成立，沒有數值或機制衝突。現行值同時保留了物質身分（對兩邊都必要，因為 ItemName 已另譯）與中性用途描述，僅省略 zReVaccin 的戴手套提示（省略而非誤述，且該提示對 ZVirus 未必成立），建議維持。兩 mod 的 item 命名空間互不重疊可同時啟用，Tooltip 為全域 map，中性化是唯一可行解。",
+   "ch": "氫氧化鈉 - 用於化學合成的基本試劑.",
+   "cn": "氢氧化钠 - 用于化学合成的基本试剂."
+  },
+  "Tooltip|Tooltip_ChSulfuricAcidCan": {
+   "action": "translate",
+   "signature": "64a88e206a2c04dd",
+   "reason": "兩 owner 同為硫酸罐，差異僅危險警語風格；現行高腐蝕性／專業使用不涉及機制數值。",
+   "ch": "高腐蝕性硫酸. 僅供專業使用.",
+   "cn": "高腐蚀性硫酸. 仅供专业使用."
+  },
+  "Tooltip|Tooltip_CmpAlbuminPills": {
+   "action": "translate",
+   "signature": "be42a6390106e896",
+   "reason": "兩 owner 都是「白蛋白藥丸, 作用是延長疫苗效果」這個同一實體（物品名兩邊都只叫 'Albumin'），B 的白蛋白反應系統在疫苗 tooltip 明寫『High reaction to albumin, ~9-12 pills』／『Low reaction ~5-7 pills』, 與 A 的『prolongs vaccine effects』同一機制方向, 故『延長疫苗效果』對兩者皆成立。**但現行譯文另外宣稱了 A 獨有的兩件事**：『純化』(A: Purified) 與『改善恢復』(A: Improves recovery)——後者是機制級主張, B 完全未宣稱, 對 B 使用者屬無依據承諾。建議改為只保留交集語意的中性文案（本欄 ch/cn）。落地方式：ch 直接改 sources/ch/Tooltip.json；cn 需在 cn_overrides.json 登記, as1_value 錨點 = '纯化白蛋白. 改善恢复并延长疫苗效果.'，reason 寫多 owner 共用鍵、原譯採 A 獨有的『改善恢復/純化』對 B 不成立（與已登記的 Tooltip_Silencer 同一模式）。無 placeholder／<br>／數字, 守恆無虞。",
+   "ch": "白蛋白. 可延長疫苗的效果.",
+   "cn": "白蛋白. 可延长疫苗的效果."
+  },
+  "Tooltip|Tooltip_CmpSyringeWithBlood": {
+   "action": "translate",
+   "signature": "0eace679516e4d1f",
+   "reason": "兩 owner 的物品顯示名字面相同（ZVirus LabItems.CmpSyringeWithBlood = 'Syringe with Blood'、zRe zReLabItems.CmpSyringeWithBlood = 'Syringe with Blood'），同為「裝有血液的注射器樣本」這一實體，且兩份 tooltip 的用途宣稱相容而非互斥：ZVirus 'Blood sample collected via syringe. Can be analyzed.'、zRe 'Used for further analysis, research, and vaccine development.'——zRe 的用途是 ZVirus 的超集，兩邊都以「可供分析」為核心。現行出貨值逐字檢驗對兩 owner 皆為真（zRe 那支確實是注射器採得的血液樣本，也確實供分析），沒有任何 owner 專屬的假設或虛構設定，故維持原值不動、不製造無效益的 churn 與 ch_review_state 重審成本。刻意不補「與疫苗研製」：那是 zRe 的專屬字面，對 ZVirus 雖不至於為假但屬單向擴寫，而現值已對兩者成立。placeholder：兩邊皆無 token、無 <br>、無數字單位。非 vanilla 鍵。",
+   "ch": "透過注射器收集的血液樣本. 可以進行分析.",
+   "cn": "通过注射器收集的血液样本. 可以进行分析."
+  },
+  "Tooltip|Tooltip_CmpSyringeWithCure": {
+   "action": "translate",
+   "signature": "8983d8461c43f6c8",
+   "reason": "**現行值有假訊息必須改**：「永久消除病毒感染」的「永久」對兩個 owner 都不成立——ZVirus 原文結尾就明寫 'Try not to get bitten again.'（治好後仍會再被感染），zReVaccin 則只給 'one day of virus immunity if uninfected'（一天免疫），沒有任何一方提供永久免疫。扣掉這個錯誤後兩者主效果字面完全一致：ZVirus 'FULL CURE. Completely eliminates the viral infection.'、zReVaccin 'Completely cures infection.'，且都是一次性（非 Reusable）注射器版本，故存在誠實中性句。與同族被判 incompatible 的疫苗鍵（例如 CmpSyringeWithPlainVaccine：ZVirus 是減緩感染進展、zReVaccin 是把感染值降到 5% 並綁白蛋白反應顆數）差別在此：那些鍵是**主效果本身不同**，本鍵主效果相同、差異只在附帶效果（zReVaccin 多一天免疫、ZVirus 多一句再感染警告），附帶效果採省略處理即可，不需要 lua。修法採最小 diff：只把「永久消除」改為「可徹底消除」，保留「完全解藥」（ZVirus 'FULL CURE' 直譯，zReVaccin 'Completely cures' 亦成立）。兩 mod 命名空間互不重疊可同時啟用，Tooltip 為全域 map，中性化是唯一可行解。",
+   "ch": "完全解藥. 永久消除病毒感染.",
+   "cn": "完全解药. 永久消除病毒感染."
+  },
+  "Tooltip|Tooltip_DoubleClickToRemove": {
+   "action": "translate",
+   "signature": "36b4d11e1de41250",
+   "reason": "八個 owner 都是雙擊移除附件／物件，現行「按兩下即可移除」為共同語意。",
+   "ch": "按兩下即可移除",
+   "cn": "双击移除"
+  },
+  "Tooltip|Tooltip_GothBoots": {
+   "action": "translate",
+   "signature": "22266db0c889da18",
+   "reason": "只有 Boots Expanded full B42 root 活用本鍵；Vanilla root 同名值是死鍵，採唯一活 owner 6.0/600。",
+   "ch": "踩踏力度: 6.0 耐久度: 600",
+   "cn": "踩踏力度: 6.0 耐久度: 600"
+  },
+  "Tooltip|Tooltip_GunP": {
+   "action": "translate",
+   "signature": "cee8e00b905914f8",
+   "reason": "八 owner 共同動作為按 G 裝填／開火，只有一方額外要求瞄準；移除 owner 專屬的「瞄準並」。",
+   "ch": "按 G 裝填<br>按 G 開火",
+   "cn": "按 G 装填<br>按 G 开火"
+  },
+  "Tooltip|Tooltip_HikingBoots": {
+   "action": "translate",
+   "signature": "e5347c5824b0f076",
+   "reason": "只有 Boots Expanded Vanilla B42 root 活用本鍵，現值 2.2/600 正確；full root 同名值是死鍵。",
+   "ch": "踩踏力度: 2.2 耐久度: 600",
+   "cn": "踩踏力度: 2.2 耐久度: 600"
+  },
+  "Tooltip|Tooltip_Hitops": {
+   "action": "translate",
+   "signature": "1cc0d0f9e93dd459",
+   "reason": "liveness：**SINGLE:FULL，不是衝突**。只有 Boots Expanded（id SM4BootsExpandedB42）的 item Shoes_Hitops 綁 Tooltip_Hitops；Boots Expanded Vanilla 側**無任何 item 綁本鍵**（死鍵，只在它的 Tooltip_EN.txt 裡有字串）。因此本鍵只有一個活 owner，應忽實翻譯活 owner（FULL）的字串 'Stomp Power: 2.00   Durability: 300'；現行出貨值 1.6/300 是**死 owner（VAN）的值**，必須改。改完對 VAN-only 玩家也零影響（它那邊本鍵永不渲染）。**已知上游失準（殘留，不代上游修）**：活 item Shoes_Hitops 的實際屬性是 StompPower=1.6、ConditionMax=30，與它自己 tooltip 寫的 2.00/300 不符（整個 Boots 家族的 Durability 那一欄是 B41 舊尺度，B42 ConditionMax 差約 20 倍）。我採「忽實翻譯活 owner 字串、不代上游修數字」：若改出 1.6 反而是面上套用另一個 mod 的字串（正是本次稽核要消除的錯誤類型），且上游日後修正 StompPower 時我方反而錯；此規則已與 AuditTooltipA 同步並在 chunk1 採用，兩 chunk 一致。用詞：維持「踩踏力度」（dist CH 該欄 64 鍵用力度、僅 3 鍵用力道為離群；CN 側 67 鍵全用力度）。placeholder：無 printf／編號 token；三空白分欄依全族慣例壓為單一空白，數字與 ASCII 標籤語意完整守恆。非 vanilla 鍵。",
+   "ch": "踩踏力度: 2.00 耐久度: 300",
+   "cn": "踩踏力度: 2.00 耐久度: 300"
+  },
+  "Tooltip|Tooltip_LabCentrifuge": {
+   "action": "translate",
+   "signature": "2fa62f6838cd325d",
+   "reason": "同一種器材、同一種功能：兩邊 ItemName 都是 'Centrifuge'，用途都是把血液分離成成分。關鍵是現行值裡「血漿和細胞」這個較具體的說法對 zReVaccin 也成立，並非 ZVirus 專屬——zReVaccin 自己的產物鍵就是 Tooltip_CmpFlaskWithBloodPlasma（'Used as a component for creating medications.'）與 Tooltip_CmpFlaskWithBloodCells（'Active blood cells...'），可確認其 'separating blood into components' 的 components 正是血漿與血球。故無需退回更模糊的「分離成成分」，現行值即為誠實且資訊量較高的中性譯文，建議維持。兩 mod 命名空間互不重疊可同時啟用，Tooltip 為全域 map，中性化是唯一可行解。",
+   "ch": "實驗室離心機, 用於將血液分離成血漿和細胞.",
+   "cn": "实验室离心机, 用于将血液分离成血浆和细胞."
+  },
+  "Tooltip|Tooltip_LabChemistrySet": {
+   "action": "translate",
+   "signature": "c9521414d69fb1a8",
+   "reason": "兩 owner 同為進行化學反應的工作台，現行合成／混合／純化描述對兩邊成立。",
+   "ch": "化學工作臺, 用於合成, 混合和純化過程.",
+   "cn": "化学工作台, 用于合成, 混合和纯化过程."
+  },
+  "Tooltip|Tooltip_LabChromatograph": {
+   "action": "translate",
+   "signature": "68166c6f116b0741",
+   "reason": "兩 owner 同為「色譜儀」這個同一實體, 且**功能與需求都對得上**：物品名兩邊都是 'Chromatograph'；『提取抗體』對兩者都成立（A: Recipes.json|ChmExtractAntibodiesFromLeukocytes 'Extract Antibodies' 且 Tooltip_ChmExtractAntibodiesFromLeukocytes 明寫 using chromatography；B: Recipe_zReLabChmExtractAntibodiesFromLeukocytes '5. Extract antibodies from leukocytes' 並產出 CmpTestTubeWithAntibodies）；『需要電腦』兩邊英文都寫（A: Requires a nearby computer / B: Requires a computer to operate）；『簡易』對兩者亦成立（兩邊都是玩家用雜物組裝, A: LabAssembleChromatograph, B: Recipe_zReLabAssembleChromatograph）。故語意層維持現行譯文即可, 判 neutral_ok。**須修一處 CH 誤字**：CH 現值『一臺電腦』是 OpenCC 一簡對多繁誤轉（台→臺）, 台灣量詞用『一台』, CN 側本來就是『一台电脑』, 屬 CH lane 品質問題而非 owner 衝突, 改 sources/ch/Tooltip.json 即可（或登 opencc_fixes.json, 該檔已有『前臺→櫃檯』同類規則）, 不需動 CN、不影響 placeholder gate。另記一筆保真觀察：兩 owner 英文都有 <br>（第一句功能／第二句電腦需求）, 現行譯文把它壓成 '. '；因 gate 只比 CN/CH 兩側標籤 multiset, 不算失敗, 若日後要補 <br> 須 CN/CH 同步並登記 cn_overrides。",
+   "ch": "簡易色譜儀, 用於提取抗體和分離化合物. 需要附近有一臺電腦.",
+   "cn": "简易色谱仪, 用于提取抗体和分离化合物. 需要附近有一台电脑."
+  },
+  "Tooltip|Tooltip_LabEasel": {
+   "action": "translate",
+   "signature": "6fc0c74bcdefce99",
+   "reason": "表面上兩份英文像不同東西（ZVirus 'Easel used to create posters and illustrative signs.' vs zRe 'An essential attribute for any portrait or landscape artist.'），但查 owner 的實際 consumer 後確認**兩邊的畫架功能相同、都是拿來畫海報的**：zReVaccin 3 自帶 LabPosterBiohazard／LabPosterHumanBrain／LabPosterPeriodicTable／LabPosterWashHands 四個海報物品與對應的 Recipe_zReLabDecPaint*Poster 配方，且其 Tooltip_BkLaboratoryEquipment2 明寫 'Practical guide to creating visual aids and posters.'——zRe 的畫架 tooltip 只是文藝 flavor，功能與 ZVirus 的 LabAssembleEasel／IGUI_CraftingWindow_ZVirusVaccine42BETA:Easel 一致。故現行出貨值逐項為真：兩邊都做海報，而 zRe 的四張海報（生物危害、人腦、元素週期表、洗手）正是「說明標誌」。維持原值不動，不因英文 flavor 差異做無效益改寫。此鍵不需 lua：兩 mod 雖可同時啟用（LabItems.* vs zReLabItems.* 並存），但中性文案對兩者同時成立。placeholder：兩邊皆無 token、無 <br>、無數字單位。非 vanilla 鍵。",
+   "ch": "用於製作海報和說明標誌的畫架.",
+   "cn": "用于制作海报和说明标志的画架."
+  },
+  "Tooltip|Tooltip_LabFlaskDirty": {
+   "action": "translate",
+   "signature": "d90a6365b46aeb4a",
+   "reason": "兩 owner 同為「髒燒瓶」這個中間態物品：ItemName_LabItems.LabFlaskDirty='Dirty Flask'、ItemName_zReLabItems.LabFlaskDirty='Flask (dirty)'，都必須先消毒才能回到可用狀態。英文差異只是敘述層次：ZVirus 講狀態＋需求（'Contaminated flask.<br>Requires sterilization.'），zReVaccin 直接講方法（'Can be sterilized in hot water.'）。現行值取狀態＋需求這一層，對兩者都真（zReVaccin 之所以寫「可用熱水消毒」正是因為它需要消毒），並刻意不寫「熱水」這個 zReVaccin 專屬的消毒管道，避免對 ZVirus 過度宣稱。`<br>` 只有 ZVirus 這一側有，兩 owner 本來就不一致故無法同時守恆，屬純排版差異不構成語意衝突，現行以「. 」攤平為單行，兩邊都能正常顯示。建議維持。",
+   "ch": "受汙染的燒瓶. 需要消毒.",
+   "cn": "受污染的烧瓶. 需要消毒."
+  },
+  "Tooltip|Tooltip_LabMicroscope": {
+   "action": "translate",
+   "signature": "a60381097f2d7455",
+   "reason": "兩 owner 同為血球操作／分析顯微鏡；zRe consumer 的白血球萃取配方明確要求 Microscope，現行描述成立。",
+   "ch": "桌上型顯微鏡, 用於分析細胞並從血液樣本中分離白血球.",
+   "cn": "台式显微镜, 用于分析细胞并从血液样本中分离白细胞."
+  },
+  "Tooltip|Tooltip_LabMuffleFurnace": {
+   "action": "translate",
+   "signature": "acc7dcabfce6a854",
+   "reason": "兩 owner 同為「高溫熔爐(馬弗爐), 用來處理玻璃與金屬」這個同一實體與同一用途：A 'High-temperature furnace used to melt glass and metals.'、B 'Furnace for processing glass and soft metals.'，兩邊都靠它產玻璃器皿（A 有 LabAssembleMuffleFurnace 與 IGUI_CraftingWindow_ZVirusVaccine42BETA:MuffleFurnace 工作站；B 的可重複注射器走 Recipe_zReLabFrnMakeSyringeReusable, Frn 即 furnace）。英文差異只在金屬範圍的敘述精度（metals 對 soft metals）, 屬平衡/精度差異而非不同實體或不同機制, 軟金屬本身即金屬, 現行譯文未宣稱任一 owner 獨有的功能, 對兩者皆成立, 建議維持（與台帳既有 .22Bullets『命名精度差異不算 owner 衝突』同一判準）。無 placeholder／<br>／數字。注意：本欄 cn 照抄 dist 現值, 不做任何改動。",
+   "ch": "用於熔化玻璃和金屬的高溫熔爐.",
+   "cn": "用于熔化玻璃和金属的高温熔炉."
+  },
+  "Tooltip|Tooltip_LabSpectrometer": {
+   "action": "translate",
+   "signature": "62ff15e3214ff3da",
+   "reason": "兩 owner 同為「分光計」這一分析裝置（顯示名兩邊都是 'Spectrometer'），核心功能重疊：檢測樣本中不該存在的成分。但現行出貨值有兩處只對 ZVirus 成立：(1)「行動式／便携式」——'Portable' 只有 ZVirus 寫，且 zRe 的分光計是**工作站**（有 Lab_Spectrometer 實體名、IGUI_CraftingWindow_Lab_Spectrometer 製作視窗與 Recipe_zReLabAssembleSpectrometer 組裝配方），對它宣稱「可攜」是明確的假敘述；(2)「血液中是否存在殭屍病毒」把偵測對象窄化到 ZVirus 的專屬用法，zRe 寫的是通用的 'testing samples for foreign elements'。改為「檢測樣本中的異常成分」同時涵蓋 ZVirus 的血中病毒偵測與 zRe 的異物元素檢測，且不宣稱可攜性。順帶修正現況 CH／CN 的用詞分歧（現行 CH 用「行動式」、CN 用「便携式」，兩者都要移除）。兩 mod 可同時啟用、命名空間不同（LabItems.LabSpectrometer vs zReLabItems.LabSpectrometer 並存），故必須取中性文案而非 isModActive 分流。placeholder：兩邊皆無 token、無 <br>、無數字單位。非 vanilla 鍵。",
+   "ch": "分光計, 用於檢測樣本中的異常成分.",
+   "cn": "分光计, 用于检测样本中的异常成分."
+  },
+  "Tooltip|Tooltip_LabSyringe": {
+   "action": "translate",
+   "signature": "f547599b7c916773",
+   "reason": "兩 owner 的英文幾乎逐字對應，是本批最乾淨的 neutral：ZVirus 'Disposable sterile syringe.<br>Used for injections and blood collection.'、zReVaccin 'Disposable syringe for injections and blood draws.'，ItemName 兩邊都是 'Syringe'。唯一字面差異是 zReVaccin 本鍵沒寫 sterile，但其同族 Tooltip_LabSyringePack='Ten sterile disposable syringes.' 已確認該注射器是無菌的，故「無菌」不是對 zReVaccin 的過度宣稱。用途、耗材性質、機制完全一致，無數值與 placeholder，建議維持現值。",
+   "ch": "無菌一次性注射器. 用於注射和採血.",
+   "cn": "无菌一次性注射器. 用于注射和采血."
+  },
+  "Tooltip|Tooltip_LabSyringePack": {
+   "action": "translate",
+   "signature": "b7635f1f970e2894",
+   "reason": "兩 owner 都是 10 支無菌一次性注射器，現行數量與語意一致。",
+   "ch": "10支裝無菌一次性注射器.",
+   "cn": "10支装无菌一次性注射器."
+  },
+  "Tooltip|Tooltip_LabSyringeReusable": {
+   "action": "translate",
+   "signature": "02dbadf379616357",
+   "reason": "兩 owner 物品名都是 'Reusable Syringe'（A: LabItems.LabSyringeReusable／B: zReLabItems.LabSyringeReusable）, 同一實體。現行譯文兩項主張逐一驗證皆成立：(1)『可消毒』——A 有 Recipes.json|ChmSterilizeLabSyringeReusable 'Sterilize Reusable Syringe'；B 有 Tooltip_LabSyringeReusableUsed 'Can be sterilized in hot water' 與 Recipe_zReLabChmSterilizeTestTube『Sterilize lab glassware』；(2)『玻璃』——A 英文直接寫 glass syringe, B 的可重複注射器是在熔爐（處理玻璃的工作站）以 Recipe_zReLabFrnMakeSyringeReusable 製作, 且 B 把它歸在 lab glassware 消毒流程內, 故屬玻璃器皿無誤。B 獨有的『用於注射與抽血』未被寫入譯文（屬省略非誤述, A 也確實用於抽血：CmpSyringeReusableWithBlood）。判 neutral_ok, 建議維持。保真觀察：A 英文有 1 個 <br>、B 沒有, 共用譯文不帶 <br> 對兩者都不算捏造, 且 gate 只比 CN/CH 兩側一致性, 無風險。",
+   "ch": "可重複使用的玻璃注射器. 可消毒.",
+   "cn": "可复用玻璃注射器. 可消毒."
+  },
+  "Tooltip|Tooltip_LabSyringeReusableUsed": {
+   "action": "translate",
+   "signature": "1852a978ac8afbaa",
+   "reason": "兩 owner 同為「用過的可重複使用注射器」這一實體（ZVirus LabItems.LabSyringeReusableUsed = 'Used Reusable Syringe'；zRe zReLabItems.LabSyringeReusableUsed = 'Reusable Syringe (used)'），且兩份 tooltip 對機制的認定一致——都是「已使用、需消毒後才能再用」（ZVirus 'Requires sterilization.'；zRe 'Can be sterilized in hot water.'，且 zRe 在 Tooltip_LabTestTubeDirty／Tooltip_LabFlaskDirty 重複使用同一句，可確認這是它表示「髒污器材可消毒回收」的固定句式，與 ZVirus 的 ChmSterilizeLabSyringeReusable 消毒配方對應同一機制）。現行出貨值逐項對兩 owner 皆真，維持不動。刻意不寫 zRe 的「熱水」：那是 zRe 專屬的消毒方法字面，ZVirus 的消毒配方未必同法。placeholder：ZVirus 原文含一個 <br>、zRe 無，owner 之間本就不一致；現行值為單句無 <br>，兩邊渲染皆正確且無資訊流失，不為了形式守恆而改動已出貨的誠實值。無數字與單位。非 vanilla 鍵。",
+   "ch": "用過的可重複使用注射器. 需要消毒.",
+   "cn": "用过的可复用注射器. 需要消毒."
+  },
+  "Tooltip|Tooltip_LabSyringeUsed": {
+   "action": "translate",
+   "signature": "d96f5a3b74ca5d80",
+   "reason": "兩 owner 同為「用過的一次性注射器」廢棄態，且結論一致：ZVirus 'Used syringe. Cannot be reused.'、zReVaccin 'Not reusable.'，ItemName 分別是 'Used Syringe' 與 'Syringe (used)'。zReVaccin 只寫結論（不可重用）而省略狀態，現行值把狀態與結論都寫出來，對兩者皆真——並且必須與同族的可重用線（ZVirus LabSyringeReusableUsed='Used Reusable Syringe'、zReVaccin='Reusable Syringe (used)'，兩邊都可消毒後再用）保持區別，現行值的「不可重複使用」正確地只落在一次性這條線上。無數值與 placeholder，建議維持。",
+   "ch": "用過的注射器. 不可重複使用.",
+   "cn": "用过的注射器. 不可重复使用."
+  },
+  "Tooltip|Tooltip_LabTestResultNegative": {
+   "action": "translate",
+   "signature": "765eea27f00bf9ef",
+   "reason": "ZVirus 側未綁此 Tooltip（死鍵），只有 zRe 活；現行陰性／未感染對唯一活 owner 成立。",
+   "ch": "血液測試結果: 陰性 (未感染).",
+   "cn": "血液测试结果: 阴性 (未感染)."
+  },
+  "Tooltip|Tooltip_LabTestResultPositive": {
+   "action": "translate",
+   "signature": "6bffc045f0c975ad",
+   "reason": "兩 owner 同為「感染檢測呈陽性的結果物品」這個同一實體（A: LabItems.LabTestResultPositive='Result: Positive'；B: zReLabItems.LabTestResultPositive='Test: Positive'）, 且兩邊都是**以血液**進行檢測（A: ContextMenu_TestBlood 'Perform Blood Test'、Tooltip_BloodTest_* 系列；B: Recipe_zReLabChmDoBloodTest 'Perform infection test' 與 Recipe_zReLabChmDoBloodAnalysis 'Perform detailed blood analysis'）, 故『血液測試結果: 陽性 (已感染)』對兩者皆誠實。英文差異只在風味句（A『命不長了』／B『檢出病毒』）, 現行譯文兩句都不採, 只保留雙方共有的判讀結果, 正是中性作法, 且與已出貨的同族鍵 Tooltip_LabTestResultNegative『血液測試結果: 陰性 (未感染).』格式一致, 建議維持。保真觀察：兩 owner 英文各有 1 個 <br>, 譯文壓成單句, 屬既有慣例, 不影響 gate。",
+   "ch": "血液測試結果: 陽性 (已感染).",
+   "cn": "血液测试结果: 阳性 (已感染)."
+  },
+  "Tooltip|Tooltip_LabTestTube": {
+   "action": "translate",
+   "signature": "fc5b4bd652daac38",
+   "reason": "liveness：**SINGLE:zRe，不是衝突**——本次稽核最大的一個推翻。ZVirus 的 item LabTestTube 實際寫的是 `Tooltip = Tooltip_item_LabTestTube`（另一個鍵，值為 'Test tube used to collect biological samples.'），**沒有任何 ZVirus item 綁 Tooltip_LabTestTube**，所以它在 ZVirus 側是死鍵；唯一活 owner 是 zRe（zReVAC2_1_1_BaseItems.txt item LabTestTube -> Tooltip = Tooltip_LabTestTube）。因此正確的出貨值是 zRe 的字串 'Container for storing biological materials.'，而現行出貨值整句都來自死 owner ZVirus（含它的「清潔」宣稱與「最好不要想著喝這裡面的任何東西」玩笑句），必須全句改掉。順帶消除現值裡格式壞損的 ' <br> '（前後多餘空白、會在換行處留下游離空格）。注意我前一版的推論（「兩邊都有 Dirty 孪生鍵所以乾淨對兩者皆真」）雖然成立，但用錯了層次：既然 ZVirus 根本不消費本鍵，就不應把它的字面拿來影響譯文。zRe 並有 LabTestTubeDirty（'Test Tube (dirty)'）與 LabTestTubePack（'Test Tube Box'）各自的 tooltip 鍵，故不需在本鍵裡替它補「乾淨」。placeholder：活 owner 字串無 token、無 <br>、無數字單位，守恆完整。非 vanilla 鍵。",
+   "ch": "用於存放生物材料的容器.",
+   "cn": "用于存放生物材料的容器."
+  },
+  "Tooltip|Tooltip_LabTestTubeDirty": {
+   "action": "translate",
+   "signature": "1ac7af26f47f7c47",
+   "reason": "與 Tooltip_LabFlaskDirty 同型：兩 owner 同為「髒試管」中間態（ItemName_LabItems.LabTestTubeDirty='Dirty Test Tube'、ItemName_zReLabItems.LabTestTubeDirty='Test Tube (dirty)'），ZVirus 給狀態＋強制需求（'Contaminated test tube.<br>Must be sterilized.'），zReVaccin 給消毒方法（'Can be sterilized in hot water.'）。現行值取狀態＋需求層，並保留 ZVirus 的 Must 語氣（「必須消毒」）——這對 zReVaccin 也成立，因為髒試管不消毒就不能承裝生物樣本。刻意不寫「熱水」以免對 ZVirus 過度宣稱。`<br>` 僅單側存在，兩 owner 不一致故無法同時守恆，屬排版差異非語意衝突。建議維持。",
+   "ch": "受汙染的試管. 必須消毒.",
+   "cn": "受污染的试管. 必须消毒."
+  },
+  "Tooltip|Tooltip_LabWorkbench": {
+   "action": "translate",
+   "signature": "0f777eea2b5ecf8f",
+   "reason": "zRe 側無 item/Lua 綁定（死鍵），只有 ZVirus 活；現行工作台組裝／維護描述正確。",
+   "ch": "堅固的工作臺, 用於組裝和維護裝置.",
+   "cn": "坚固的工作台, 用于组装和维护设备."
+  },
+  "Tooltip|Tooltip_MetalPipeSilencer": {
+   "action": "translate",
+   "signature": "bdf85421ca07763c",
+   "reason": "兩 owner 是**同一實體**（同一 item id Base.MetalPipeSilencer, 同為金屬管自製消音器：3309896124/SimpleSilencers 'Makeshift Suppressor'、3779164273/Improvised Silencers 'Metal Pipe Silencer'；後者明顯是前者的擴充衍生, 另加手電筒/水瓶消音器）, 差別只有降噪百分比 50%% 對 60%%。此情形本專案已有**完全同型的既決先例**：cn_overrides.json 的 'Tooltip.json|Tooltip_Silencer'（owner=2256623447 槍械擴充＋3309896124）原譯採 SimpleSilencers 專屬的『-80%% 半徑』, 因對另一 owner 不成立而改為不含數字的中性文案『降低开枪时的声音传播范围.』並已出貨。故本鍵同樣採「刪掉衝突數字、保留雙方共有語意」：兩 owner 英文都寫『但射程略微降低』(slightly lowers range), 這句可保留, 只有百分比須去掉。額外支持：Improvised Silencers 的降噪值本身是 sandbox 可調（Sandbox_ISIL_MetalPipeNoiseReduction, Extended Realism Mode）, 把任何固定百分比寫死在共用譯文本就不精確。落地：ch 改 sources/ch/Tooltip.json；cn 登記 cn_overrides.json, as1_value 錨點 '声音传播半径降低50%%, 但射程略微降低'。placeholder 安全：新值不含 %, 而 %% 屬字面逸出不入 multiset 比對, CN/CH 同步移除即過 gate（Tooltip_Silencer 先例已驗證）。",
+   "ch": "降低開槍時的聲音傳播範圍, 但射程略微降低",
+   "cn": "降低开枪时的声音传播范围, 但射程略微降低"
+  },
+  "Tooltip|Tooltip_RidingBoots": {
+   "action": "translate",
+   "signature": "bedef8311831b4f5",
+   "reason": "本鍵是 Boots Expanded 家族裡的**唯一例外**：兩個 owner 的數值完全相同——Boots Expanded Vanilla 'Stomp Power: 3.3   Durability: 400' 對 Boots Expanded 'Stomp Power: 3.30   Durability: 400'，差異純粹是小數位寫法（3.3 == 3.30），踩踏力度與耐久度兩個數字在數學上一致。故現行出貨值對兩個 owner 都是誠實的，維持原值、不隨同族其他鍵一起走 lua。同族對照：Converse／Hitops／Shoes／Trainers／WinterBoots 的數值真的不同，那些才需要條件覆寫。placeholder／格式：無 printf 或編號 token；上游用三空白分欄，現行值壓成單一空白，這是 dist 內 70 餘個同族踩踏鍵的既有統一慣例（若只把本鍵改成三空白反而與全族不一致），且數字、單位與標籤語意完整守恆，判定為可接受的排版差異。非 vanilla 鍵（vanilla_keys.json 無 Tooltip_RidingBoots）。",
+   "ch": "踩踏力度: 3.3 耐久度: 400",
+   "cn": "踩踏力度: 3.3 耐久度: 400"
+  },
+  "Tooltip|Tooltip_SWSP_Crit": {
+   "action": "translate",
+   "signature": "269de4b8c382cccb",
+   "reason": "兩個 SWSP consumer 對 Crit 的舊鍵行皆被註解，新版改用 Tooltip_SWSP_CritChance；本鍵 B42 both-dead，維持現值。",
+   "ch": "暴擊: %1%% (+%2%%), %3x",
+   "cn": "暴击: %1%% (+%2%%), %3x"
+  },
+  "Tooltip|Tooltip_Scandroid": {
+   "action": "translate",
+   "signature": "386c0351ae34258a",
+   "reason": "**假衝突**：同一 wid 2335368829 內三個 root（Authentic Z - Current／Lite／Backpacks+）的 Tooltip_Scandroid 英文其實**逐字相同**（'The tag says \"We are here, by design.\"'）, 描述的也是同一件衣物（Jacket_Scandroid, 只是模組前綴不同：AuthenticZClothing／AuthenticZLite／AuthenticZBackpacksPlus）。census 之所以判 DIFF, 是上游檔案的逸出差異：Current/42 的 Tooltip_EN.txt 存成 'The tag says \\\"…\\\"'（多一層反斜線）, Lite/42 的 Tooltip_EN.json 甚至在引號處被截斷成 'The tag says '（畸形 JSON 抽取產物）——皆為抽取/逸出雜訊, 非語意或實體差異。現行譯文對三個 root 都成立, 且 CH 用「」、CN 用“” 符合兩側標點慣例, 建議維持。無 placeholder／<br>／數字。",
+   "ch": "標籤上寫著「我們的存在, 是被設計出來的.」",
+   "cn": "标签上写着“我们的存在, 是被设计出来的.”"
+  },
+  "Tooltip|Tooltip_Silencer": {
+   "action": "translate",
+   "signature": "ee5f4aa586852143",
+   "reason": "四個 owner 收斂成三份英文，但仍有誠實交集，且交集正是現行值。三方語意差異：Firearms／FirearmsBETA（同 wid 兩 root，值相同）只講通用效果 'Suppresses the sound of a firing gun.'，且它根本沒有 Base.Silencer 這個 item——它用這個通用鍵服務自家一整排口徑專屬消音器（Base.9mmSilencer／.45Silencer／ShotgunSilencer／ImprovisedSilencer…），其抑制效果依口徑並由 sandbox 選項 Sandbox_Firearms_SuppressorEffectiveness* 逐一調整，沒有固定百分比、也沒有射程懲罰；Simple Silencers 與 Improvised Silencers 則都綁在 Base.Silencer 上，兩者對本鍵的數值一致（皆 80%）且都帶「略微降低射程」。因此：寫 80% 對 Firearms 是假（其值可變且無固定數字），寫「略微降低射程」對 Firearms 也是假（無此懲罰）；反向來看，Firearms 的通用句是另兩者的嚴格上位敘述，取交集（降低開槍噪音傳播範圍）對三方全真。這不是擅自平均數字，而是「有數字 vs 無數字」取交集。本鍵已有既有裁決在案：sources/mods/3779164273/metadata.json 明載 Tooltip_Silencer 為跨 mod 共用鍵、數值不一致、寫任一方專屬全文都會砸掉另一方，故該 mod 收錄時刻意不收此鍵、維持現行出貨值不動。維持 decision；若日後要各自精確，需 isModActive 覆寫或獨立子包（該 metadata 亦已記載此路線）。",
+   "ch": "降低開槍時的聲音傳播範圍.",
+   "cn": "降低开枪时的声音传播范围."
+  },
+  "Tooltip|Tooltip_Sneakers": {
+   "action": "translate",
+   "signature": "54adcbf87ad7710c",
+   "reason": "只有 Boots Expanded Vanilla B42 root 活用本鍵；full root 同名翻譯是死鍵。維持現值；CH 踩踏力度全族用語另案處理，不在 owner 衝突批次夾帶單鍵術語改動。",
+   "ch": "踩踏力度: 1.6 耐久度: 250",
+   "cn": "踩踏力度: 1.6 耐久度: 250"
+  },
+  "Tooltip|Tooltip_StrappedShoes": {
+   "action": "translate",
+   "signature": "8b30a5ff50dfe0f6",
+   "reason": "兩個 B42 root 均無 item 綁此裸 Tooltip（both-dead）；維持 legacy 值。",
+   "ch": "踩踏力度: 2.2 耐久度: 300",
+   "cn": "踩踏力度: 2.2 耐久度: 300"
+  },
+  "Tooltip|Tooltip_Trainers": {
+   "action": "translate",
+   "signature": "0904069894dfdea7",
+   "reason": "兩個 B42 root 均無 item 綁此裸 Tooltip（both-dead）；維持 legacy 值。",
+   "ch": "踩踏力度: 1.6 耐久度: 250",
+   "cn": "踩踏力度: 1.6 耐久度: 250"
+  },
+  "Tooltip|Tooltip_VLUpgradeFitnessSerum1": {
+   "action": "translate",
+   "signature": "8f10883dedaede50",
+   "reason": "三個 owner 全屬同一 workshop item（3620552991 Zomboid Storylines）同一作者的框架 mod 新舊版本：storylinesfw 是現行框架，vlquestfw 與 vlquestfw_legacy_42_12 是舊版／版本釘死分支，三者對應的是同一個 item Base.VLUpgradeFitnessSerum1（三邊 ItemName 皆為 'Fitness-enhancing Serum'、Recipes 皆為 'Use Fitness-enhancing Serum'），機制同一：體能+1、注射上臂、永久、需空注射器。唯一差異是 storylinesfw 多一句上限說明 'but it will depend on the limits of your physical condition.'——而且同檔還留著 Tooltip_VLUpgradeFitnessSerum1_Deleting，內容正是舊版原句並被作者標記為待刪，可證這是**同一機制的敘述精修**，不是功能分歧。現行值等於舊版全文，對三者的核心敘述都真，僅省略了新版補上的上限提醒（省略而非誤述）。刻意不把上限句寫進去：那是對兩個 legacy 分支未經驗證的加碼宣稱。本鍵沒有語意衝突需要解，故不需 lua。與同族 Tooltip_VLUpgradeStrengthSerum1（同樣三 owner、同樣只有 storylines 多上限句）保持同一判法與同一標點風格。建議維持現值。",
+   "ch": "體能+1.直接注射到上臂以永久增強體能.需要一個空注射器來使用.",
+   "cn": "体能+1.直接注射到上臂以永久增强体能.需要一个空注射器来使用."
+  },
+  "Tooltip|Tooltip_VLUpgradeStrengthSerum1": {
+   "action": "translate",
+   "signature": "c9221b8f1d1da83f",
+   "reason": "三 owner 都是力量永久 +1 的上臂注射血清、需空注射器；storylines 只多條件提示，現行共同核心成立。",
+   "ch": "力量+1.直接注射到上臂以永久增強力量.需要一個空注射器來使用.",
+   "cn": "力量+1.直接注射到上臂以永久增强力量.需要一个空注射器来使用."
+  },
+  "Tooltip|Tooltip_Wellies": {
+   "action": "translate",
+   "signature": "0e425bc769825260",
+   "reason": "只有 Boots Expanded Vanilla B42 root 活用本鍵，現值 2.1/400 正確；full root 同名值是死鍵。",
+   "ch": "踩踏力度: 2.1 耐久度: 400",
+   "cn": "踩踏力度: 2.1 耐久度: 400"
+  },
+  "Tooltip|Tooltip_WinterBoots": {
+   "action": "translate",
+   "signature": "0792b4d17daa8a27",
+   "reason": "liveness：**SINGLE:FULL，不是衝突**。只有 Boots Expanded（id SM4BootsExpandedB42）的 item Shoes_LongWinterBoots 綁 Tooltip_WinterBoots；Boots Expanded Vanilla 側無任何 item 綁本鍵（死鍵）。故應忽實翻譯活 owner（FULL）的字串 'Stomp Power: 3.20   Durability: 800'；現行出貨值 3.0/800 的踩踏力度來自**死 owner（VAN）**，必須改。改完對 VAN-only 玩家零影響（本鍵在它那邊永不渲染）。**已知上游失準（殘留，不代上游修）**：活 item Shoes_LongWinterBoots 實際 StompPower=3.0、ConditionMax=47，與它自己 tooltip 寫的 3.20/800 不符（整個 Boots 家族的 Durability 那一欄是 B41 舊尺度，B42 ConditionMax 差約 20 倍）。我採「忽實翻譯活 owner 字串、不代上游修數字」：若因為 3.0 碰巧符合實際 StompPower 而維持現值，实质上是拿另一個 mod 的字串套到活 owner 身上（正是本次稽核要消除的錯誤類型），且上游日後修正數值時我方反而錯；此規則已與 AuditTooltipA 同步並在 chunk1 採用，兩 chunk 一致。另注：VAN 那行死字串上游寫得本身也壞（行尾多了一個單引號），更不宜當依據。用詞：維持「踩踏力度」。placeholder：無 printf／編號 token；三空白分欄依全族慣例壓為單一空白，數字與 ASCII 標籤守恆。非 vanilla 鍵。",
+   "ch": "踩踏力度: 3.20 耐久度: 800",
+   "cn": "踩踏力度: 3.20 耐久度: 800"
+  },
+  "Tooltip|Tooltip_WorkBoots": {
+   "action": "translate",
+   "signature": "712abdf4a6d4807c",
+   "reason": "只有 Boots Expanded Vanilla B42 root 活用本鍵，現值 2.2/600 正確；full root 同名值是死鍵。",
+   "ch": "踩踏力度: 2.2 耐久度: 600",
+   "cn": "踩踏力度: 2.2 耐久度: 600"
+  },
+  "Tooltip|Tooltip_weapon_GunLight": {
+   "action": "translate",
+   "signature": "15066128d6b59eda",
+   "reason": "Firearms／BETA／RaccoonCity 都是 Gun Light，同物無數值差異；現行槍燈／戰術電筒各語區均可辨識。",
+   "ch": "槍燈",
+   "cn": "战术电筒"
+  },
+  "Tooltip|Tooltip_FlashHider": {
+   "action": "translate",
+   "signature": "9871355fc670d34e",
+   "reason": "liveness：REAL-CONFLICT（Guns93Test 4 個 item：9mmFlashHider、A1FlashHider、M14FlashHiderThread、M14CamoFlashHiderThread；FRAcceptableGunsDemo 8 個 item：fr_ar15_muzzle_a2／a2e2／car15／lr300、fr_m14_muzzle_mil／short、fr_mini14_muzzle_black／chrome），且兩 mod id 不同（guns93 對 FRAcceptableGunsDEMO）、item 命名空間不同，可同時啟用並存。實讀 script 後找到兩邊皆真的交集，故不必動用 lua：Guns93 那 4 個 item **全部** `CanAttach = Guns93WeaponPartsThreadedCanonPart`，而該函式（Guns93RecipeCode.lua:1077-1104）就是在檢查 `isThreaded`——也就是 Guns93 的消焰器同樣要求螺紋槍管，正好等於 FR 那句 'fits on threaded barrels.'。於是照 sources/cn_overrides.json 的 Tooltip_Silencer 既決先例（多 owner 數字／機制衝突 → 刪去只有一方成立的部分、保留兩邊皆真的中性文案，且已出貨）處理：砍掉 Guns93 獨有的「需扳手」（Tags 含 guns93:UseWrench）與「降低聲音半徑」（SoundRadiusModifier=-10），也砍掉 FR 獨有的後坐與瞄準修正（RecoilDelayModifier=-2.0、AimingTimeModifier=1，FR 側完全沒有 SoundRadiusModifier）。現行出貨值把扳手需求與降噪效果寫死，對 FR 那 8 個 item 是假的機制宣稱，必須改。用詞與 dist 既有慣例完全一致（Tooltip_22Silencer／30Silencer／45Silencer 皆以「需要螺紋槍管.」開頭；ItemName 已用「消焰器」與「螺紋槍管」）。已知取舍：Guns93 玩家會失去「降噪 10」這項資訊；若要兩邊全精度，唯一途徑是以 item fullType 前綴（Base.fr_* 對其餘）在 tooltip 渲染端分流的 lua（**不能用 isModActive**，兩 mod 可同時啟用且雙方消焰器在同一場遊戲並存），但那每次任一 mod 新增 item 就可能失效，成本遠高於收益。placeholder：兩邊皆無 token、無 <br>、無數字單位。非 vanilla 鍵。",
+   "ch": "消焰器. 可安裝在螺紋槍管上.",
+   "cn": "消焰器. 可安装在螺纹枪管上."
+  },
+  "Tooltip|Tooltip_SWSP_Damage": {
+   "action": "translate",
+   "signature": "de3e1e939938c401",
+   "reason": "liveness：**SINGLE:OLD，不是衝突**。新 wid 3635921724（id showweaponstatsplus4213）的 Lua **完全沒引用本鍵**——它改用 Tooltip_SWSP_DamageValue（swsp_main.lua:153/158）與 Tooltip_SWSP_DamageValueAndEffective（:151），Tooltip_SWSP_Damage 只剩在它的 Tooltip.json 裡當死字串（已用尾界 `(?![A-Za-z0-9_])` 比對排除 DamageValue 的子字串偽陽性，並逐行確認非 `--` 註解）。唯一活 consumer 是舊 wid 3391710239（id showweaponstatsplus，mods/Show Weapon Stats Plus/42/mod.info，B42 可載入）的 swsp_main.lua:95 `string.format(getText(\"Tooltip_SWSP_Damage\"), minDamage, maxDamage, 30 + weaponLevel * 10)` ——printf 消費路徑。故正確出貨值必須是 printf 形式；現行 dist 的 '%1-%2 (+%3%%)' 對唯一活 consumer 不是顯示字面而是**直接報錯**（Lua string.format 解析 '%1-' 時把 1 當寬度、'-' 當轉換字元，拋 invalid option），必須改。順帶恢復上游 '%s- %s' 中間的空白（現值漏了）。型別確認：第三參是 `30 + weaponLevel * 10` 整數表示式，用 %d 正確；AGENTS.md:576 記「無參 getText + 值含 printf token 會記 Warning 後原文返還——這正是 mod 端 string.format(getText(...)) 能運作的機制」，故本鍵保留 printf token 是對的、不可逸出。此判定同時推翻了我前一版的 uncertain：当時偵到的 `%s` 「通解」假設已不需要，因為新 wid 根本不消費本鍵，沒有要兼容的第二個 consumer。CH／CN token 對稱（%s、%s、%d%%），與 EN token multiset 完全守恆。非 vanilla 鍵。",
+   "ch": "傷害: %s- %s (+%d%%)",
+   "cn": "伤害: %s- %s (+%d%%)"
   }
  }
 }

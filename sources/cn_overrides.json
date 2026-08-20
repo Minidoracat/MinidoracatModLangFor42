@@ -1534,5 +1534,70 @@
     "as1_value": "柯尔特CAR-15自动步枪",
     "reason": "#230 家族一致性：VFE 的 Base.CAR15 與 Base.CAR15Folded EN 皆為 CAR-15 Assault Rifle；折疊槍托不應讓顯示名由卡賓槍變成自動步槍。",
     "value": "柯尔特CAR-15卡宾枪"
+  },
+  "Tooltip.json|Tooltip_BkChemistryCourse": {
+    "as1_value": "看起来像一本基础化学书, 但充满了关于实验室所用不稳定试剂的手写笔记. 绝对不是应该在市面上流通的东西.",
+    "reason": "#232 owner 衝突中性裁決：兩 owner 同為「化學課程書」這一實體：ZVirusVaccine42BETA 的 LabBooks.BkChemistryCourse 顯示名 'Intro to Basic Chemistry'，zReVaccin 3 的 zReLabItems.BkChemistryCourse 顯示名 'Laboratory, Vol 4 - Short Chemistry Course'，兩者都是該 mod 化學/病毒學研究線的技能書。差異純屬 flavor：ZVirus 額外編了「表面是基礎化學書、實則寫滿實驗室不穩定試劑的手寫筆記、不該在市面流通」的敘事，zRe 只寫「給對化學有興趣的人的小手冊」。現行出貨值把 ZVirus 專屬敘事整段寫死，對 zRe 是憑空捏造的物品背景（違反 AGENTS.md「多 owner 共用鍵不得寫入單一 mod 的專屬全文」）。改為只保留兩邊共同為真的核心「基礎化學課程手冊」即誠實。兩 owner 的 item 命名空間為 LabItems.*／zReLabItems.*，可同時啟用、物品並存，故本鍵無法用 isModActive 分流，必須取中性文案。placeholder：兩邊皆無 printf/編號 token；ZVirus 原文含一個 <br>、zRe 無，owner 之間本就不一致，中性化為單句後不保留 <br>，無數字與單位需守恆。非 vanilla 鍵（vanilla_keys.json 604 個 Tooltip_ 鍵無此鍵），不觸發零覆蓋本體規則。",
+    "value": "基础化学课程手册."
+  },
+  "Tooltip.json|Tooltip_BkVirologyCourses1": {
+    "as1_value": "休森博士关于诺克斯事件前观察到的血液异常的早期笔记. 教授生物材料收集和分析的基础知识.",
+    "reason": "#232 owner 衝突中性裁決：兩 owner 同為「病毒學第一冊」技能書：ZVirus 的 LabBooks.BkVirologyCourses1 = 'Virology Book with Handwritten Notes'，zRe 的 zReLabItems.BkVirologyCourses1 = 'Laboratory, Vol 5 - Virology'（兩邊都另有 BkVirologyCourses2 進階冊，序列一致）。兩份 tooltip 的共同核心完全重疊——ZVirus「教授生物材料採集與分析的基礎」、zRe「採集與研究生物材料的方法」。唯一衝突是 ZVirus 額外綁了具名虛構設定「休森博士（Dr. Hughson）在諾克斯事件前的血液異常早期筆記」，這個人名與事件在 zRe 完全不存在，現行出貨值卻把它寫死並且把「教授…基礎知識」降為次要子句。改為只留兩邊共同為真的敘述即誠實，且不流失任何 owner 的實質資訊。同上鍵，兩 mod 物品命名空間不同可並存，無法 isModActive 分流。placeholder：兩邊皆無 printf/編號 token；ZVirus 原文一個 <br>、zRe 無，owner 不一致故不保留；無數字與單位。非 vanilla 鍵。",
+    "value": "教授采集与研究生物材料的基础方法."
+  },
+  "Tooltip.json|Tooltip_BkVirologyCourses2": {
+    "as1_value": "休森博士的机密笔记. 教授疫苗和抗病毒药物制造的高级方法.",
+    "reason": "#232 owner 衝突中性裁決：**現行值必須改**：「休森博士的機密筆記」是 ZVirus 專屬的虛構人物 Dr. Hughson，zReVaccin 3 這一鍵對應的是 ItemName_zReLabItems.BkVirologyCourses2='Laboratory, Vol 6 - Virology'，一本普通的系列教材第六卷，沒有任何 Hughson 角色；由於兩 mod 可同時安裝、Tooltip 是全域鍵，帶人名的版本對 zReVaccin 玩家是純假訊息。但兩者仍存在誠實交集：ZVirus 的 ItemName 是 'Advanced Virology Book with Handwritten Notes'（明寫 Advanced），zReVaccin 是該系列最高卷 Vol 6，故「高階病毒學教材」對兩者皆成立；內容交集取 ZVirus 'advanced methodologies for vaccine and antiviral creation' ∩ zReVaccin 'Production and use of antiviral drugs' = 抗病毒藥物的製造。刻意不寫「疫苗」：zReVaccin 該書英文只講抗病毒藥物，寫進疫苗會讓玩家誤判 Vol 6 能解鎖疫苗配方；刻意不寫「使用」：ZVirus 只提 creation。「高階」而非「進階」是為對齊語料既有慣例（sources/ch 全庫 高階 114 次 vs 進階 52 次，且同族 Tooltip_CmpSyringeWithAdvancedVaccine 已出貨為「高階疫苗」）。兩個疫苗 mod 的 item 命名空間互不重疊（ZVirus 為 LabItems.*／LabBooks.*，zReVaccin 3 為 zReLabItems.*），代表兩者可同時安裝啟用，Tooltip 又是全域 map，因此本家族沒有 isModActive 二選一的空間，中性化是唯一可行解。",
+    "value": "高级病毒学教材. 教授抗病毒药物的制造方法."
+  },
+  "Tooltip.json|Tooltip_ChHydrochloricAcidCan": {
+    "as1_value": "浓盐酸. 处理时需极度小心.",
+    "reason": "#232 owner 衝突中性裁決：兩 owner 同為「一罐鹽酸」這一實體（ZVirus LabItems.ChHydrochloricAcidCan = 'Hydrochloric Acid'；zRe zReLabItems.ChHydrochloricAcidCan = 'Hydrochloric Acid Can'），且兩份 tooltip 都是同一件事：這是酸、處理要小心（ZVirus 'Handle with extreme care'、zRe 'Always wear gloves when handling acid'）。唯一不成立的是現行出貨值開頭的「濃」——'Concentrated' 只有 ZVirus 寫，zRe 從未宣稱濃度，而且 zRe 在同族鍵裡是刻意分級的：它把 'Very strong acid. Take precautions.' 留給 Tooltip_ChSulfuricAcidCan（硫酸），鹽酸只給一般手套警告，寫「濃鹽酸」會拉高 zRe 那罐的規格宣稱。故僅刪去「濃／浓」一字，其餘保留，改動最小且對兩 owner 皆真。未寫入 zRe 的「戴手套」是刻意的：那是 zRe 的專屬字面，且「需極度小心」已涵蓋其語意。兩 mod 可同時啟用、命名空間不同，無法 isModActive 分流。placeholder：兩邊皆無 token、無 <br>、無數字單位。非 vanilla 鍵。",
+    "value": "盐酸. 处理时需极度小心."
+  },
+  "Tooltip.json|Tooltip_CmpAlbuminPills": {
+    "as1_value": "纯化白蛋白. 改善恢复并延长疫苗效果.",
+    "reason": "#232 owner 衝突中性裁決：兩 owner 都是「白蛋白藥丸, 作用是延長疫苗效果」這個同一實體（物品名兩邊都只叫 'Albumin'），B 的白蛋白反應系統在疫苗 tooltip 明寫『High reaction to albumin, ~9-12 pills』／『Low reaction ~5-7 pills』, 與 A 的『prolongs vaccine effects』同一機制方向, 故『延長疫苗效果』對兩者皆成立。**但現行譯文另外宣稱了 A 獨有的兩件事**：『純化』(A: Purified) 與『改善恢復』(A: Improves recovery)——後者是機制級主張, B 完全未宣稱, 對 B 使用者屬無依據承諾。建議改為只保留交集語意的中性文案（本欄 ch/cn）。落地方式：ch 直接改 sources/ch/Tooltip.json；cn 需在 cn_overrides.json 登記, as1_value 錨點 = '纯化白蛋白. 改善恢复并延长疫苗效果.'，reason 寫多 owner 共用鍵、原譯採 A 獨有的『改善恢復/純化』對 B 不成立（與已登記的 Tooltip_Silencer 同一模式）。無 placeholder／<br>／數字, 守恆無虞。",
+    "value": "白蛋白. 可延长疫苗的效果."
+  },
+  "Tooltip.json|Tooltip_GothBoots": {
+    "as1_value": "踩踏力度: 6.0 耐久度: 800",
+    "reason": "#232 owner 衝突中性裁決：只有 Boots Expanded full B42 root 活用本鍵；Vanilla root 同名值是死鍵，採唯一活 owner 6.0/600。",
+    "value": "踩踏力度: 6.0 耐久度: 600"
+  },
+  "Tooltip.json|Tooltip_Hitops": {
+    "as1_value": "踩踏力度: 1.6 耐久度: 300",
+    "reason": "#232 owner 衝突中性裁決：liveness：**SINGLE:FULL，不是衝突**。只有 Boots Expanded（id SM4BootsExpandedB42）的 item Shoes_Hitops 綁 Tooltip_Hitops；Boots Expanded Vanilla 側**無任何 item 綁本鍵**（死鍵，只在它的 Tooltip_EN.txt 裡有字串）。因此本鍵只有一個活 owner，應忽實翻譯活 owner（FULL）的字串 'Stomp Power: 2.00   Durability: 300'；現行出貨值 1.6/300 是**死 owner（VAN）的值**，必須改。改完對 VAN-only 玩家也零影響（它那邊本鍵永不渲染）。**已知上游失準（殘留，不代上游修）**：活 item Shoes_Hitops 的實際屬性是 StompPower=1.6、ConditionMax=30，與它自己 tooltip 寫的 2.00/300 不符（整個 Boots 家族的 Durability 那一欄是 B41 舊尺度，B42 ConditionMax 差約 20 倍）。我採「忽實翻譯活 owner 字串、不代上游修數字」：若改出 1.6 反而是面上套用另一個 mod 的字串（正是本次稽核要消除的錯誤類型），且上游日後修正 StompPower 時我方反而錯；此規則已與 AuditTooltipA 同步並在 chunk1 採用，兩 chunk 一致。用詞：維持「踩踏力度」（dist CH 該欄 64 鍵用力度、僅 3 鍵用力道為離群；CN 側 67 鍵全用力度）。placeholder：無 printf／編號 token；三空白分欄依全族慣例壓為單一空白，數字與 ASCII 標籤語意完整守恆。非 vanilla 鍵。",
+    "value": "踩踏力度: 2.00 耐久度: 300"
+  },
+  "Tooltip.json|Tooltip_LabSpectrometer": {
+    "as1_value": "便携式分光计, 用于检测血液中是否存在僵尸病毒.",
+    "reason": "#232 owner 衝突中性裁決：兩 owner 同為「分光計」這一分析裝置（顯示名兩邊都是 'Spectrometer'），核心功能重疊：檢測樣本中不該存在的成分。但現行出貨值有兩處只對 ZVirus 成立：(1)「行動式／便携式」——'Portable' 只有 ZVirus 寫，且 zRe 的分光計是**工作站**（有 Lab_Spectrometer 實體名、IGUI_CraftingWindow_Lab_Spectrometer 製作視窗與 Recipe_zReLabAssembleSpectrometer 組裝配方），對它宣稱「可攜」是明確的假敘述；(2)「血液中是否存在殭屍病毒」把偵測對象窄化到 ZVirus 的專屬用法，zRe 寫的是通用的 'testing samples for foreign elements'。改為「檢測樣本中的異常成分」同時涵蓋 ZVirus 的血中病毒偵測與 zRe 的異物元素檢測，且不宣稱可攜性。順帶修正現況 CH／CN 的用詞分歧（現行 CH 用「行動式」、CN 用「便携式」，兩者都要移除）。兩 mod 可同時啟用、命名空間不同（LabItems.LabSpectrometer vs zReLabItems.LabSpectrometer 並存），故必須取中性文案而非 isModActive 分流。placeholder：兩邊皆無 token、無 <br>、無數字單位。非 vanilla 鍵。",
+    "value": "分光计, 用于检测样本中的异常成分."
+  },
+  "Tooltip.json|Tooltip_LabTestTube": {
+    "as1_value": "用于生物样本的清洁试管. <br> 最好不要想着喝这里面的任何东西.",
+    "reason": "#232 owner 衝突中性裁決：liveness：**SINGLE:zRe，不是衝突**——本次稽核最大的一個推翻。ZVirus 的 item LabTestTube 實際寫的是 `Tooltip = Tooltip_item_LabTestTube`（另一個鍵，值為 'Test tube used to collect biological samples.'），**沒有任何 ZVirus item 綁 Tooltip_LabTestTube**，所以它在 ZVirus 側是死鍵；唯一活 owner 是 zRe（zReVAC2_1_1_BaseItems.txt item LabTestTube -> Tooltip = Tooltip_LabTestTube）。因此正確的出貨值是 zRe 的字串 'Container for storing biological materials.'，而現行出貨值整句都來自死 owner ZVirus（含它的「清潔」宣稱與「最好不要想著喝這裡面的任何東西」玩笑句），必須全句改掉。順帶消除現值裡格式壞損的 ' <br> '（前後多餘空白、會在換行處留下游離空格）。注意我前一版的推論（「兩邊都有 Dirty 孪生鍵所以乾淨對兩者皆真」）雖然成立，但用錯了層次：既然 ZVirus 根本不消費本鍵，就不應把它的字面拿來影響譯文。zRe 並有 LabTestTubeDirty（'Test Tube (dirty)'）與 LabTestTubePack（'Test Tube Box'）各自的 tooltip 鍵，故不需在本鍵裡替它補「乾淨」。placeholder：活 owner 字串無 token、無 <br>、無數字單位，守恆完整。非 vanilla 鍵。",
+    "value": "用于存放生物材料的容器."
+  },
+  "Tooltip.json|Tooltip_MetalPipeSilencer": {
+    "as1_value": "声音传播半径降低50%%, 但射程略微降低",
+    "reason": "#232 owner 衝突中性裁決：兩 owner 是**同一實體**（同一 item id Base.MetalPipeSilencer, 同為金屬管自製消音器：3309896124/SimpleSilencers 'Makeshift Suppressor'、3779164273/Improvised Silencers 'Metal Pipe Silencer'；後者明顯是前者的擴充衍生, 另加手電筒/水瓶消音器）, 差別只有降噪百分比 50%% 對 60%%。此情形本專案已有**完全同型的既決先例**：cn_overrides.json 的 'Tooltip.json|Tooltip_Silencer'（owner=2256623447 槍械擴充＋3309896124）原譯採 SimpleSilencers 專屬的『-80%% 半徑』, 因對另一 owner 不成立而改為不含數字的中性文案『降低开枪时的声音传播范围.』並已出貨。故本鍵同樣採「刪掉衝突數字、保留雙方共有語意」：兩 owner 英文都寫『但射程略微降低』(slightly lowers range), 這句可保留, 只有百分比須去掉。額外支持：Improvised Silencers 的降噪值本身是 sandbox 可調（Sandbox_ISIL_MetalPipeNoiseReduction, Extended Realism Mode）, 把任何固定百分比寫死在共用譯文本就不精確。落地：ch 改 sources/ch/Tooltip.json；cn 登記 cn_overrides.json, as1_value 錨點 '声音传播半径降低50%%, 但射程略微降低'。placeholder 安全：新值不含 %, 而 %% 屬字面逸出不入 multiset 比對, CN/CH 同步移除即過 gate（Tooltip_Silencer 先例已驗證）。",
+    "value": "降低开枪时的声音传播范围, 但射程略微降低"
+  },
+  "Tooltip.json|Tooltip_WinterBoots": {
+    "as1_value": "踩踏力度: 3.0 耐久度: 800",
+    "reason": "#232 owner 衝突中性裁決：liveness：**SINGLE:FULL，不是衝突**。只有 Boots Expanded（id SM4BootsExpandedB42）的 item Shoes_LongWinterBoots 綁 Tooltip_WinterBoots；Boots Expanded Vanilla 側無任何 item 綁本鍵（死鍵）。故應忽實翻譯活 owner（FULL）的字串 'Stomp Power: 3.20   Durability: 800'；現行出貨值 3.0/800 的踩踏力度來自**死 owner（VAN）**，必須改。改完對 VAN-only 玩家零影響（本鍵在它那邊永不渲染）。**已知上游失準（殘留，不代上游修）**：活 item Shoes_LongWinterBoots 實際 StompPower=3.0、ConditionMax=47，與它自己 tooltip 寫的 3.20/800 不符（整個 Boots 家族的 Durability 那一欄是 B41 舊尺度，B42 ConditionMax 差約 20 倍）。我採「忽實翻譯活 owner 字串、不代上游修數字」：若因為 3.0 碰巧符合實際 StompPower 而維持現值，实质上是拿另一個 mod 的字串套到活 owner 身上（正是本次稽核要消除的錯誤類型），且上游日後修正數值時我方反而錯；此規則已與 AuditTooltipA 同步並在 chunk1 採用，兩 chunk 一致。另注：VAN 那行死字串上游寫得本身也壞（行尾多了一個單引號），更不宜當依據。用詞：維持「踩踏力度」。placeholder：無 printf／編號 token；三空白分欄依全族慣例壓為單一空白，數字與 ASCII 標籤守恆。非 vanilla 鍵。",
+    "value": "踩踏力度: 3.20 耐久度: 800"
+  },
+  "Tooltip.json|Tooltip_FlashHider": {
+    "as1_value": "武器配件. 需要扳手进行安装. 轻微减少枪械的声音半径.",
+    "reason": "#232 owner 衝突中性裁決：liveness：REAL-CONFLICT（Guns93Test 4 個 item：9mmFlashHider、A1FlashHider、M14FlashHiderThread、M14CamoFlashHiderThread；FRAcceptableGunsDemo 8 個 item：fr_ar15_muzzle_a2／a2e2／car15／lr300、fr_m14_muzzle_mil／short、fr_mini14_muzzle_black／chrome），且兩 mod id 不同（guns93 對 FRAcceptableGunsDEMO）、item 命名空間不同，可同時啟用並存。實讀 script 後找到兩邊皆真的交集，故不必動用 lua：Guns93 那 4 個 item **全部** `CanAttach = Guns93WeaponPartsThreadedCanonPart`，而該函式（Guns93RecipeCode.lua:1077-1104）就是在檢查 `isThreaded`——也就是 Guns93 的消焰器同樣要求螺紋槍管，正好等於 FR 那句 'fits on threaded barrels.'。於是照 sources/cn_overrides.json 的 Tooltip_Silencer 既決先例（多 owner 數字／機制衝突 → 刪去只有一方成立的部分、保留兩邊皆真的中性文案，且已出貨）處理：砍掉 Guns93 獨有的「需扳手」（Tags 含 guns93:UseWrench）與「降低聲音半徑」（SoundRadiusModifier=-10），也砍掉 FR 獨有的後坐與瞄準修正（RecoilDelayModifier=-2.0、AimingTimeModifier=1，FR 側完全沒有 SoundRadiusModifier）。現行出貨值把扳手需求與降噪效果寫死，對 FR 那 8 個 item 是假的機制宣稱，必須改。用詞與 dist 既有慣例完全一致（Tooltip_22Silencer／30Silencer／45Silencer 皆以「需要螺紋槍管.」開頭；ItemName 已用「消焰器」與「螺紋槍管」）。已知取舍：Guns93 玩家會失去「降噪 10」這項資訊；若要兩邊全精度，唯一途徑是以 item fullType 前綴（Base.fr_* 對其餘）在 tooltip 渲染端分流的 lua（**不能用 isModActive**，兩 mod 可同時啟用且雙方消焰器在同一場遊戲並存），但那每次任一 mod 新增 item 就可能失效，成本遠高於收益。placeholder：兩邊皆無 token、無 <br>、無數字單位。非 vanilla 鍵。",
+    "value": "消焰器. 可安装在螺纹枪管上."
+  },
+  "Tooltip.json|Tooltip_SWSP_Damage": {
+    "as1_value": "伤害: %1-%2 (+%3%%)",
+    "reason": "#232 owner 衝突中性裁決：liveness：**SINGLE:OLD，不是衝突**。新 wid 3635921724（id showweaponstatsplus4213）的 Lua **完全沒引用本鍵**——它改用 Tooltip_SWSP_DamageValue（swsp_main.lua:153/158）與 Tooltip_SWSP_DamageValueAndEffective（:151），Tooltip_SWSP_Damage 只剩在它的 Tooltip.json 裡當死字串（已用尾界 `(?![A-Za-z0-9_])` 比對排除 DamageValue 的子字串偽陽性，並逐行確認非 `--` 註解）。唯一活 consumer 是舊 wid 3391710239（id showweaponstatsplus，mods/Show Weapon Stats Plus/42/mod.info，B42 可載入）的 swsp_main.lua:95 `string.format(getText(\"Tooltip_SWSP_Damage\"), minDamage, maxDamage, 30 + weaponLevel * 10)` ——printf 消費路徑。故正確出貨值必須是 printf 形式；現行 dist 的 '%1-%2 (+%3%%)' 對唯一活 consumer 不是顯示字面而是**直接報錯**（Lua string.format 解析 '%1-' 時把 1 當寬度、'-' 當轉換字元，拋 invalid option），必須改。順帶恢復上游 '%s- %s' 中間的空白（現值漏了）。型別確認：第三參是 `30 + weaponLevel * 10` 整數表示式，用 %d 正確；AGENTS.md:576 記「無參 getText + 值含 printf token 會記 Warning 後原文返還——這正是 mod 端 string.format(getText(...)) 能運作的機制」，故本鍵保留 printf token 是對的、不可逸出。此判定同時推翻了我前一版的 uncertain：当時偵到的 `%s` 「通解」假設已不需要，因為新 wid 根本不消費本鍵，沒有要兼容的第二個 consumer。CH／CN token 對稱（%s、%s、%d%%），與 EN token multiset 完全守恆。非 vanilla 鍵。",
+    "value": "伤害: %s- %s (+%d%%)"
   }
 }
