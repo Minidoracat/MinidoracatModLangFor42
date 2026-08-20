@@ -56,8 +56,61 @@ def main() -> int:
 
     raw = _jload(args.result)
     res = raw.get("result", raw) if isinstance(raw, dict) else raw
-    tr = res["translations"]
+    # **`--result` 與 `--strings` 兩側都要受控拒絕**：兩者都是外部（工作流輸出）artifact，
+    # 形狀壞掉時只有一邊給得出可讀訊息、另一邊拋裸 traceback，是無意義的不對稱。
+    tr = res.get("translations") if isinstance(res, dict) else None
+    if not isinstance(tr, list) or any(not isinstance(t, dict) for t in tr):
+        print(f"❌ --result 的 translations 應為物件陣列，實得 "
+              f"{type(tr).__name__}（頂層 {type(res).__name__}）", file=sys.stderr)
+        return 1
     src = _jload(args.strings)
+    # **wid 級跳過與 owner 衝突都要在這裡再擋一次**：`prep_mod_strings` 遇到缺 tracker
+    # 基準／缺 `sources/en` 鏡像／state 落後於鏡像／同鍵多 owner 不同英文時會非零退出，
+    # 但仍寫出 artifact（不寫的話舊的成功檔會留在原地被誤用，更糟）。而 artifact 少了
+    # 這兩個欄位之外的任何跡象——`strings` 與 `_gap` 長得跟「這個 mod 沒缺口」一模一樣。
+    # 只靠人盯退出碼＝#221 的管線級重演。
+    # **欄位必須存在且型別精確**，不可寫成 `src.get(x) or []`：那會讓「舊版 prep 產出的
+    # artifact（根本沒這兩欄）」與「欄位型別壞掉」雙雙判成安全通過，等於 gate 只在
+    # 「新版 prep 且真的有衝突」時才生效——最該擋的陳舊 artifact 正好從縫裡走掉。
+    # **`src` 本身先驗是 dict**：`--strings` 若是合法 JSON 的 list／字串／數字，
+    # `src.get()` 會拋 AttributeError／TypeError traceback，而不是受控的 schema 拒絕。
+    if not isinstance(src, dict):
+        print(f"❌ 來源 artifact 頂層應為物件，實得 {type(src).__name__}"
+              "（請以現行 `prep_mod_strings.py` 重新產生）", file=sys.stderr)
+        return 1
+    schema: dict[str, type] = {"_unchecked": list, "_owner_conflicts": dict}
+    bad = [f"{k}：{'缺欄位' if k not in src else f'型別為 {type(src[k]).__name__}，應為 {t.__name__}'}"
+           for k, t in schema.items() if not isinstance(src.get(k), t)]
+    if bad:
+        print("❌ 來源 artifact 的 fail-closed 欄位不合格，拒絕套用（請以現行 "
+              "`prep_mod_strings.py` 重新產生）：", file=sys.stderr)
+        for x in bad:
+            print(f"   {x}", file=sys.stderr)
+        return 1
+    # `_undecidable` **不阻斷**（那是逐鍵盲區，不是整批不可用），但必須印出來：
+    # 整個 mod 的 `extractor_schema < 9` 時 `_gap` 只剩 `translate_en`、rc=0，artifact 與
+    # 「這個 mod 沒有物品名缺口」在管線上完全不可區分——正是本檔上方註解說的「只靠人盯
+    # 退出碼＝#221 的管線級重演」。
+    und = src.get("_undecidable")
+    if isinstance(und, dict) and und:
+        print(f"⚠️ 來源 artifact 有 {len(und)} 個 mod 的部分缺口不可判定"
+              "（未列入缺口，也不算已覆蓋）：", file=sys.stderr)
+        for wid, info in list(und.items())[:8]:
+            print(f"   {wid}：{(info or {}).get('why')}", file=sys.stderr)
+        if len(und) > 8:
+            print(f"   ...（還有 {len(und) - 8} 個）", file=sys.stderr)
+    blockers = [(k, src[k]) for k in schema if src[k]]
+    if blockers:
+        for field, val in blockers:
+            print(f"❌ 來源 artifact 的 {field} 非空（{len(val)} 項），拒絕套用：",
+                  file=sys.stderr)
+            for x in (val if isinstance(val, list) else [f"{k} → {v}" for k, v in val.items()]):
+                print(f"   {x}", file=sys.stderr)
+        print("   `_unchecked`：先跑 `tracker.py backfill-en` 補齊基準／鏡像後重跑 prep。\n"
+              "   `_owner_conflicts`：同一 fullType 被多個 mod 定義成不同英文，`ItemName`\n"
+              "   是全域表、後載入者覆寫，須人工裁出對每個 owner 都成立的中性譯文後\n"
+              "   直接寫進 `own_translations.json`（附 `_note` 記裁決理由）。", file=sys.stderr)
+        return 1
     want = {r["en"] for r in src["strings"]}
     gap = src["_gap"]
 

@@ -120,7 +120,10 @@ def main() -> int:
                 updated += 1
             else:
                 added += 1
-            bucket[k] = {"en": spec["en"], "ch": spec["ch"], "cn": spec["cn"]}
+            # 保留 `_note` 等底線開頭欄位：那是人工裁決記錄（多 owner 中性譯法的理由、
+            # 型號依據等），覆寫成三欄會把它靜默清掉，下一個人就看不到裁決依據了。
+            keep = {c: v for c, v in bucket.get(k, {}).items() if c.startswith("_")}
+            bucket[k] = {"en": spec["en"], "ch": spec["ch"], "cn": spec["cn"], **keep}
     with open(own_p, "w", encoding="utf-8", newline="\n") as f:
         json.dump(own, f, ensure_ascii=False, indent=1)
         f.write("\n")

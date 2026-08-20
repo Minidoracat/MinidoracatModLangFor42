@@ -645,9 +645,15 @@ def report_own_anchor_gaps(own: dict[str, dict[str, dict]]) -> None:
                     if key.startswith("ItemName_"):
                         anchors.add(key[len("ItemName_"):])  # 上游前綴鍵 ↔ own 裸鍵互通
                 elif kind == "script_item_dn":
+                    # schema>=9 的 key 已是完整 fullType（`Module.Item`）——它就是
+                    # ItemName 出貨鍵本身，故連前綴形一起收。
+                    # schema<=8 的遺留基準只有裸 item 名（module 未記錄）：**不補猜
+                    # `Base.<name>`**——那違反「module 名不可猜」硬規則，猜錯會讓真正
+                    # 沒有錨點的 own 鍵被誤判成有錨點，把該出的 warning 壓掉。裸名照原樣
+                    # 收，錨點對不上就讓它出現在報告裡（本函式偏鬆、報的是盲區下限）。
                     anchors.add(key)
-                    anchors.add(f"Base.{key}")            # ItemName 裸鍵慣例（module 慣為 Base）
-                    anchors.add(f"ItemName_Base.{key}")   # 上游前綴鍵鏡像慣例
+                    if "." in key:
+                        anchors.add(f"ItemName_{key}")
         gaps = [
             f"{fname}|{key}"
             for fname, keys in sorted(own.items())

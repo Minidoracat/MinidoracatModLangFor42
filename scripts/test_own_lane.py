@@ -238,7 +238,8 @@ with tempfile.TemporaryDirectory() as td:
         except ValueError:
             pass
 
-# 9. tracker _iter_script_records：多 scripts 目錄、dn 後者生效、巢狀子區塊不誤歸屬
+# 9. tracker _iter_script_records：多 scripts 目錄、dn 後者生效、巢狀子區塊不誤歸屬、
+#    item key 帶 module（EXTRACTOR_SCHEMA=9 的完整 fullType）
 with tempfile.TemporaryDirectory() as td:
     mod = Path(td)
     s1 = mod / "42.13" / "media" / "scripts"
@@ -252,7 +253,10 @@ with tempfile.TemporaryDirectory() as td:
         "        component X {\n"
         "            DisplayName = Nested,\n"
         "        }\n"
-        "        // } 註解行大括號不干擾\n"
+        # 引擎只刪 `/* */`（ScriptParser.stripComments），**不認 `//`**——所以這裡必須用
+        # 區塊註解才能測「註解內的大括號不干擾配對」。用 `//` 的話那個 `}` 在引擎眼中
+        # 真的會關掉 item 區塊，後面的 DisplayName 就不屬於它了。
+        "        /* } 註解內大括號不干擾 */\n"
         "        DisplayName = Last,\n"
         "    }\n"
         "    item NoName {\n"
@@ -267,7 +271,7 @@ with tempfile.TemporaryDirectory() as td:
     )
     recs = tracker._iter_script_records(mod)
     dn = {r[2]: r[3] for r in recs if r[0] == "script_item_dn"}
-    assert dn == {"Dup": "Last", "OtherTree": "Common"}, f"dn 抽取錯誤: {dn}"
+    assert dn == {"Base.Dup": "Last", "Base.OtherTree": "Common"}, f"dn 抽取錯誤: {dn}"
     rels = {r[1] for r in recs}
     assert any(r.startswith("42.13/") for r in rels) and any(r.startswith("common/") for r in rels), \
         f"多 scripts 目錄未全掃: {rels}"

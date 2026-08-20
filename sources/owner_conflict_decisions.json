@@ -1,0 +1,4 @@
+{
+ "_comment": "owner 衝突的人工裁決台帳。key = \"<落點檔>|<鍵>\"。每條需四欄，缺一即視為過時：signature（該鍵完整 census 簽名，算法見 prep_mod_strings.census_signature()：sorted((owner, raw_en)) 的 canonical JSON sha256[:16]）、reason（非空，記怎麼裁的）、ch 與 cn（裁決當下的出貨譯文錨點，本包雙語出貨故兩側都要）。prep_mod_strings 只在四項全符且該鍵已出貨時放行（改列 _owner_conflicts_resolved report-only）；owner 增減、上游改值、缺 reason、譯文未出貨、或出貨 ch/cn 任一漂移，一律維持 blocking 要求重新裁決。",
+ "entries": {}
+}

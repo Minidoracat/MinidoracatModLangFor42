@@ -13,7 +13,7 @@ tracker.py — MinidoracatModLangFor42 雙上游追蹤器（PZ B42 如一模組�
   * 純標準函式庫（urllib / subprocess / hashlib）→ 供 `uv run scripts/tracker.py` 直接執行，CI 免裝依賴。
   * API client 免 key 為主（研究實證端點無 key 參數）；STEAM_API_KEY 為設定選項、非 429 解藥（附加而已）。
   * 交易順序：取數 → diff → 開/更 issue → 最後 commit 成功子集 state；--dry-run 保證零 issue 零 commit。
-  * 核心邏輯（diff / issue 冪等 / git 重試）皆以可注入依賴實作，供內建 self-test 十二情境 mock 驗證。
+  * 核心邏輯（diff / issue 冪等 / git 重試）皆以可注入依賴實作，供內建 self-test 十五情境 mock 驗證。
 
 命令（uv run scripts/tracker.py <命令>）：
   gen-watchlist  由 sources/mods/*/metadata.json 支持清單生成 tracker-state/watchlist.json（固定含 As1；支持清單變動後重跑）
@@ -21,11 +21,12 @@ tracker.py — MinidoracatModLangFor42 雙上游追蹤器（PZ B42 如一模組�
   check          僅打 API 查時間戳，寫 changed 清單 artifact（workflow check job；無寫權限）
   diff           讀 changed，下載+裁剪+抽取+diff，寫 diffs artifact（workflow download job；無 GitHub 權限）
   issue          讀 diffs，列 open issue 冪等開/更，commit 成功子集 state（workflow issue+state job）
-  self-test      內建十二情境 mock 測試
+  self-test      內建十五情境 mock 測試
 """
 from __future__ import annotations
 
 import argparse
+import bisect
 import hashlib
 import json
 import os
@@ -76,11 +77,30 @@ SCHEMA_VERSION = 1
 #     靜默重建，這正是該機制存在的理由。
 #     schema 8（2026-08-12）：上游 Translate JSON 改用 `load_upstream_json` 容錯解析
 #     結尾多餘逗號——先前整檔跳過，等於該檔的鍵對追蹤器與覆蓋率永久不存在。
-EXTRACTOR_SCHEMA = 8
+#     schema 9（2026-08-19）：`script_item`／`script_item_dn` 的 key 由裸區塊名改為完整
+#     fullType `Module.Item`（見 `_module_by_line`）。B42 查物品名走
+#     Item.OnScriptsLoaded() → Translator.getItemNameFromFullType() → itemName.get(fullType)，
+#     對應出貨鍵是 ItemName.json 的裸鍵 `Module.Item`；record 少了 module 就無法把「上游有
+#     這個物品」對上「我方出貨了這個鍵」，coverage 因此完全看不到 script 物品顯示名缺口
+#     （#221，粗篩下限 6,758 鍵／108 個 mod 隱形；#184 是玩家附截圖才發現的個案）。
+#     拿 suffix 猜會把「別的 module 同名鍵已出貨」誤判為已覆蓋，違反「module 名不可猜」
+#     硬規則，故只有把 module 記進 record 這一條精確路徑。
+EXTRACTOR_SCHEMA = 9
+
+# `script_item`／`script_item_dn` 的 key 自此 schema 起帶 module（＝可與 ItemName 出貨鍵
+# 精確比對）。低於此值的 per-mod 基準一律判「不可判定」，不得當成零缺口。
+ITEM_MODULE_SCHEMA = 9
 
 # 只有這些 kind 帶真英文文本，值得落 sources/en/ 鏡像；其餘 script_* 的 value 就是區塊 id
 # 本身（實測 118,307 筆鏡像裡有 60,567 筆 value==key），純屬變更偵測用，留在 hash 台帳即可。
 TEXT_BEARING_KINDS = frozenset({"translate_en", "script_item_dn", "lua_literal"})
+# 抽取器會產出的**全部** kind。`backfill_done` 與 `prep_mod_strings.rid_ids` 共用同一份
+# 白名單驗 rid 形狀——各自寫一份遲早分岔（其中一邊漏認新 kind 就會把正常 state 判壞損）。
+EXTRACTOR_KINDS = frozenset({
+    "translate_en", "script_item_dn", "script_item", "script_recipe",
+    "script_vehicle", "script_fixing", "script_craftRecipe",
+    "lua_gettext", "lua_literal",
+})
 
 # --- B42 有效分支解析 ------------------------------------------------------- #
 # 抽取器忠實記錄 mod 內**所有**分支，但引擎只載入其中兩個。拿非有效分支的鍵去補譯
@@ -147,6 +167,16 @@ def is_effective(rid: str, eff: dict[str, set[str]]) -> bool:
     if parts[2] not in eff.get(parts[1], set()):
         return False
     return kind != "translate_en" or relpath.endswith(".json")
+
+
+def _branch_tag(rid: str) -> str:
+    """record id 的分支 tag（``mods/<sub_mod>/<tag>/…`` 的 tag；不符該形狀回空字串）。
+
+    用於「同一鍵在 common 與版本夾都定義」時決定誰勝出——引擎是 common 恆載入、
+    最佳版本夾疊在其上，故版本夾的值才是實際顯示值。
+    """
+    parts = rid.partition("|")[2].partition("|")[0].split("/")
+    return parts[2] if len(parts) >= 3 and parts[0] == "mods" else ""
 
 # As1「[B42]統一模組漢化」包（layer-B 主力上游）；固定納入 watch-list
 AS1_WORKSHOP_ID = "3556540080"
@@ -278,7 +308,8 @@ def load_upstream_json(path: Path) -> tuple[dict, bool]:
 def write_json(path: Path, data: dict) -> None:
     """原子寫出：先寫同目錄暫存檔再 os.replace。
 
-    en_corpus_hashes.json 是 30MB+ 的受版控真相，且 backfill 期間每 10 個 mod 就重寫一次；
+    en_corpus_hashes.json 是 30MB+ 的受版控真相，且 backfill 期間**每個 mod** 都重寫一次
+    （state-first 落盤是關住「非鏡像 kind record 永久遺失」的唯一防線，見 `cmd_backfill_en`）；
     直接覆寫時若中途中斷會留下截斷的 JSON＝基準毀損、整輪重跑。同目錄暫存確保 replace
     是同一檔案系統上的原子操作。
     """
@@ -528,33 +559,275 @@ def _iter_translate_records(mod_dir: Path, lang: str) -> list[tuple[str, str, st
     return records
 
 
-_DISPLAYNAME_RE = re.compile(r"^\s*DisplayName\s*=\s*(.+?)\s*,?\s*$")
+def _mask_comments(text: str) -> str:
+    """把 `/* … */` 區塊註解的內容換成空白（**等長、行數不變**），供區塊掃描與大括號配對用。
 
+    出處＝反編譯的 `ScriptParser.stripComments()`（42.17/42.18/42.19 三版一致）：它只刪
+    **成對**的 `/* */`——`lastIndexOf("*/")` 為 -1 時整個 while 不進、原文保留——且
+    **完全不認 `//`**。故這裡刻意只遮成對 `/* */`，未閉合的 `/*` 原樣留下，`//` 一概不遮：
+    `DisplayName = Foo // bar,` 的值在引擎眼中就是 `Foo // bar`（`readBlock` 的 value
+    收到逗號為止），整檔遮 `//` 會憑空改掉上游原文。行尾 `//` 裡的大括號因此仍可能墊高
+    depth，那條路由 `_module_by_line` 的毒化防線接手（退化成可見盲區，不產出錯 fullType）。
 
-def _scan_item_displayname(lines: list[str], start: int) -> str | None:
-    """自 item 區塊標頭往下以大括號配對界定範圍，取區塊頂層「最後一筆」DisplayName（無則 None）。
+    先前只跳「整行以 `/` 開頭」的行，於是跨行 `/* … */` 內的 item 宣告照樣被抽成
+    record：落在 module 之外時只是 `?.` 雜訊（可見），落在 module 之內時會變成**假
+    缺口**送進補譯管線、最終出貨一個引擎永遠查不到的死鍵（實測 583 個 workshop
+    script 檔有 1 筆：`AhuToolWeapon.Sledgehammer_Broken`）。
 
-    只認 depth==1（item 本層），巢狀子區塊（component 等）內的 DisplayName 不誤歸屬；
-    同區塊重複 property 取後者——PZ Item.DoParam 逐條覆寫欄位，後定義生效。
+    **巢狀註解必須整段一起遮**，與 `stripComments` 的後向掃描等效：它由最後一個 `*/`
+    往前找 `/*`，若兩者之間還夾著 `*/` 就把起點再往前推，等於巢狀整組刪除。改用天真的
+    前向 `find("*/")` 會在**第一個內層** `*/` 就收尾，把外層註解的後半段暴露出來——
+    實測 `Ahu'sToolWeapon/Ahu_Blunt.txt:125-175` 正是這個形狀（外層註解包著一個已停用
+    的 item，內含三段 `/* ==== */` 分隔線）：暴露的 `}` 會提前關掉 `module AhuToolWeapon`，
+    使其後所有真 item 全部落 `?.`（4 筆），把可見缺口變成不可判定。
+
+    **已知語意偏離（實測 489 個 workshop script 檔 0 命中，故現況輸出與引擎一致；要修
+    必須連同 `EXTRACTOR_SCHEMA` bump 並全庫重抽——同一 schema 必須同一 parser，本機樣本
+    不是全宇宙）**：對「落單 `*/`」（前面沒有配對 `/*`，編輯時刪掉 `/*` 的常見殘留）
+    本實作照前向計數忽略它、只遮成對區間。引擎是後向掃描（`stripComments():51-85`：由
+    最後一個 `*/` 往前，內層 while 處理巢狀，`lastIndexOf("/*", …)` 回 -1 就 `break`
+    **整個函式**），**行為依落單 `*/` 的位置分三種，方向並不一致**：
+      * 落單在**所有成對之後**（檔尾殘留）→ 第一輪就走到它，內層巢狀回走耗盡使
+        `start == -1` → break → **整檔一個註解都不刪**。我方遮掉全部成對＝假零缺口，
+        這是影響面最大的形狀。
+      * 落單在**中間** → 它之後的成對照常被刪；回走到它時 break → 落單**之前**的成對
+        連同其中的 item 完整保留。我方遮掉那些＝假零缺口。
+      * 落單在**所有成對之前** → 每個成對都被刪、落單本身保留 → 與我方等效。
+    另有一種形似但不同的形狀：`/*U … /*P*/ … */`（外層 `/*U` 未閉合）。回走終止在未閉合
+    的 `/*U`，引擎刪 `[U, 最後的 */]` **整段**（連中間真實內容），這是巢狀整組刪除的正常
+    語意，我方 `_mask_comments` 同樣如此處理，不算偏離。
+
+    同批未命中的另一項偏離：本實作把註解**換成等長空白**（行號與 offset 必須守恆，
+    `_module_by_line` 依賴逐行對位），引擎則是真的**刪除**。差別只在註解夾在識別字中間
+    時——`it/*x*/em Foo {` 引擎接成 `item Foo {`、我方留下 `it     em Foo {` 而不認得。
+    要同時保住行號對位與貼合刪除語意，得改成「刪除＋維護 offset 映射表」，成本遠高於
+    收益（0 命中）。
     """
-    # ponytail: 逐行大括號計數，跳過 '/' 開頭註解行；跨行 /* */ 內的不成對大括號仍會干擾
-    # 配對（實測 1575 個 workshop script 檔 0 命中）——若未來誤判，升級為去註解預處理。
+    out = list(text)
+    n = len(text)
+    i = 0
     depth = 0
-    entered = False
-    found: str | None = None
-    for line in lines[start:]:
-        if line.lstrip().startswith("/"):
-            continue
-        if entered and depth == 1:
-            m = _DISPLAYNAME_RE.match(line)
-            if m:
-                found = m.group(1).strip()
-        depth += line.count("{") - line.count("}")
-        if depth > 0:
-            entered = True
-        elif entered:
+    start = 0
+    while i < n:
+        if text.startswith("/*", i):
+            if depth == 0:
+                start = i
+            depth += 1
+            i += 2
+        elif depth and text.startswith("*/", i):
+            depth -= 1
+            i += 2
+            if depth == 0:
+                for p in range(start, i):
+                    if out[p] != "\n":
+                        out[p] = " "
+        else:
+            i += 1
+    # depth>0 收尾＝未閉合註解：引擎不刪（lastIndexOf("*/") 找不到配對即 break），
+    # 這裡同樣原樣留下——遮到檔尾會憑空吃掉整批真 item。
+    return "".join(out)
+
+
+# item 區塊宣告。引擎的權威路徑是 `ScriptBucket.CreateFromTokenPP()`（42.20.3 反編譯
+# `ScriptBucket.java:94-97`）：`token.split("[{}]")[0].replace(scriptTag, "").trim()`
+# ——取 `{` 之前的整段 header、去掉 tag 字樣、只 trim 兩端。**不是** `readBlock()` 的
+# `header.split("\\s+")[1]`（那是 Block 樹的 id，不是 script 物件的載入名），所以區塊名
+# 允許含空白，且 `//` 之後的字元**屬於名字的一部分**（引擎完全不認 `//` 為註解）。
+_ITEM_DECL_RE = re.compile(r"(?<![A-Za-z0-9_])item[ \t]+([^{}\r\n]+?)\s*\{")
+
+
+def _top_level_item_decls(masked: str) -> list[tuple[int, int, str]]:
+    """module body 頂層的 item 宣告：`[(名字起點, body 起點, 名字)]`。
+
+    **不看「行」**：引擎的 `parseTokens()` 按大括號切 token，沒有行的概念，故
+    `item JacketBulky01 { DisplayName = X, Hidden = true }`（同列）與 `}item Frostmourne {`
+    （同一行第二個 item）都合法。行首錨定的版本會整批漏掉，該 item 連 record 都沒有，
+    coverage 於是報假零缺口——實測 585 個 workshop script 檔：同列寫法 192 筆／3 個 mod、
+    同行第二個 item 1 筆。
+
+    **depth gate 是必要的**：`ScriptModule.ParseScriptPP()` 只把 module 頂層 token 交給
+    item bucket，故巢狀層（`craftRecipe` 的 `inputs { item 1 Base.X, }`、`component { … }`）
+    裡的 `item` 不是物品定義；沒有 gate 的寬鬆匹配會多收 6,190 筆 phantom fullType。
+    `depth==1`＝module body 內（正常情形）；`depth==0`＝module 之外，引擎的
+    `CreateFromToken()` 只處理 `token.indexOf("module") == 0` 的 token，故那種 item 不會
+    被載入——仍收下但由呼叫端標成 `UNKNOWN_MODULE`（可見盲區），不當成真物品。
+
+    **已知語意偏離（實測 489 個 workshop script 檔全部 0 命中，故現況輸出與引擎一致；
+    要修必須連同 `EXTRACTOR_SCHEMA` bump 並全庫重抽——同一 schema 必須同一 parser，
+    本機樣本不是全宇宙，未訂閱 mod 若命中就會留下舊 parser 的 phantom/漏值）**：
+      1. `_ITEM_DECL_RE` 只檢查前一字元非識別字，沒有錨到 token 邊界。引擎的
+         `ScriptModule.GetTokenType()` 取 `token.substring(0, indexOf('{')).trim()` 再截到
+         第一個空白，故 `// item Foo {` 的 type 是 `//`、**不會**交給 item bucket；本實作
+         會收下它。正解＝match 後回掃到最近的 `{`／`}`（或檔首），中間須全為空白才收。
+      2. `depth >= 2` 的 item 宣告一律靜默丟棄。正常情形那是巢狀層（該丟），但若大括號
+         配對被墊高（行尾 `//` 裡的大括號、屬性值裸大括號），module 層的**真** item 也會
+         被丟成「連 record 都沒有」——比 `_module_by_line` 的毒化（退化成可見 `?.`）更隱蔽。
+         **沒有安全的 heuristic**：真巢狀 item 通常同樣位於實體行首（self-test 的
+         `PhantomInput` 就是），拿行首當判準會把大量巢狀 item 誤記成 `UNKNOWN_MODULE`。
+         要修就得重建可信的 token/depth 邊界（與 `parseTokens()` 同構），或把
+         `_module_by_line` 的毒化狀態一併傳進來共用同一份判斷。
+    """
+    out: list[tuple[int, int, str]] = []
+    depth = 0
+    pos = 0
+    n = len(masked)
+    while pos < n:
+        m = _ITEM_DECL_RE.search(masked, pos)
+        if m is None:
             break
+        # 把 depth 推進到這個 match 的 `{`（不含），沿途累計大括號
+        for c in masked[pos:m.end() - 1]:
+            if c == "{":
+                depth += 1
+            elif c == "}":
+                depth = max(0, depth - 1)
+        name = m.group(1).strip()
+        if depth <= 1 and name:
+            out.append((m.start(), m.end(), name))
+        depth += 1              # 消費該 item 自己的 `{`
+        pos = m.end()
+    return out
+
+
+def _item_display_name(text: str, body_start: int) -> str | None:
+    """自 item body（`{` 之後）取頂層最後一筆 `DisplayName` 值；無則 None。
+
+    逐字複製引擎的兩層語意（42.20.3 反編譯）：
+      1. `ScriptParser.readBlock()`：只在遇到 `,` 時 `new Value(substring(start, i))`，
+         遇到 `}` **直接 return**。故沒有尾逗號的 property 引擎根本不套用（Value 從未
+         建立），掃到 `}` 就停、殘料丟棄；`Type = Normal, DisplayName = Foo,` 這種同列
+         多 property 也自然抽得到（逐行版錨在行首會漏，實測受影響 192 筆）。
+      2. `Item.Load()`：`p = s.split("=")`，`param = p[0].trim()`、`val = p[1].trim()`。
+         **必須取 p[1] 而不是整段 RHS**：`DisplayName == Vepr…` 的 p[1] 是空字串（雙等號
+         中間），引擎顯示空白，整段 RHS 會誤抽成 `= Vepr…`（實測 Base.MagVepr）。
+         `DisplayName = A = B` 同理只取 `A`。`param` 比對不分大小寫（`DoParam` 用
+         `equalsIgnoreCase`）。
+      3. 空值一律回 None 並**覆寫**先前結果（後定義生效）：遊戲顯示空白，填中文＝憑空
+         造內容，同 AGENTS.md 對上游空值鍵的既有原則。
+    巢狀子區塊（component 等）內的 DisplayName 不誤歸屬——只認 depth==0 的 token。
+
+    **已知語意偏離（實測 489 個 workshop script 檔 0 命中；要修必須連同 `EXTRACTOR_SCHEMA`
+    bump 並全庫重抽）**：引擎的 `readBlock()` 在子區塊 parse 完後是 recursive-return，
+    緊貼在子區塊 `}` 後面的那個逗號屬於**外層迴圈尚未開始的一輪**，於是 `}` 與 `,` 之間
+    的殘料不成為 token；本實作把 `}` 之後直接當新 segment 起點，形同多切一刀。差別只在
+    `{…},DisplayName = X,` 這種「子區塊收尾後緊接同一段內還塞了 property」的寫法上。
+    """
+    found: str | None = None
+    depth = 0
+    seg_start = body_start
+    for i in range(body_start, len(text)):
+        c = text[i]
+        if c == "{":
+            depth += 1
+        elif c == "}":
+            if depth == 0:
+                break          # item 區塊結束；未收尾的殘料同引擎一樣丟棄
+            depth -= 1
+            seg_start = i + 1
+        elif c == "," and depth == 0:
+            parts = text[seg_start:i].split("=")
+            if len(parts) >= 2 and parts[0].strip().lower() == "displayname":
+                found = parts[1].strip() or None
+            seg_start = i + 1
     return found
+
+
+# `module X { … }` 的區塊邊界（EXTRACTOR_SCHEMA=9）。只有 item 需要它——物品名查表用
+# 完整 fullType，而配方名走 `Translator.getRecipeName(裸區塊名)`、車輛名走
+# `IGUI_VehicleName<裸名>`，那些 kind 加前綴反而會讓 verify_dist [16] 的上游實據對不上。
+#
+# 名字的取法與 item 同源（`ScriptManager.CreateFromToken()`，`ScriptManager.java:1308-1311`）：
+# `token.split("[{}]")[0].replace("module", "").trim()`。故**不剝 `//`**——`module Base // x`
+# 的 module 名在引擎眼中真的是 `Base // x`，剝掉會產出偏離引擎的鍵，違反「module 名不可猜」
+# （實測 585 個 workshop script 檔 0 命中此形，故現況零影響）。`/* */` 已由 `_mask_comments`
+# 遮成空白，regex 尾端的 `\s*` 自然吃掉，不需另一層剝除。
+# 另注意引擎的 `replace` 是**大小寫敏感且全域**：名字裡若含小寫 tag 子字串會被挖掉
+# （`item my item x` → `my  x`）。實測 0 命中，故本實作不模擬該邊角。
+_MODULE_LINE_RE = re.compile(r"^\s*module\s+([^{}\r\n]+?)\s*(\{)?\s*$")
+
+# 無法歸屬 module 的 item，其 key 用此前綴標記。**刻意不回退成裸名**：裸名混在
+# fullType 裡會被 coverage 當成另一種鍵形處理，於是「module 解析漏判」與「該 item
+# 真的不存在」兩件事無從區分，缺口再次隱形（正是 #221 的病）。前綴含 `?`，永不可能
+# 與出貨鍵相符，故 coverage 只能把它計為「不可判定」並把 wid 列出來。
+UNKNOWN_MODULE = "?"
+
+
+def _module_by_line(lines: list[str]) -> list[str | None]:
+    """每行 → 所屬 module 名（不在任何 module 區塊內則 None）。
+
+    以大括號配對界定範圍，故同檔多 module 各自歸屬（#184 那個 mod 同檔就有
+    `module Base` 與 `module FrockinSplendor`），**不是取檔內第一個**。PZ 的 module
+    只能是頂層區塊，故只在 depth==0 認標頭；`{` 允許同行或下一非空行（同
+    `_SCRIPT_LINE_RE` 慣例）。
+
+    呼叫端（`_iter_script_records`）傳入的是 `_mask_comments` 遮蔽過的行，故 `/* */` 內的
+    大括號不再干擾；本函式仍自行跳 '/' 開頭的整行註解，對未遮蔽輸入也不致誤判。剩下的
+    失準來源是**行尾 `//`**（引擎不認 `//`，故不遮）與屬性值裡的裸大括號（實測 583 個
+    workshop script 檔各 0 命中）：失準後 `depth != 0` 會使後續 `module Y` 標頭永遠不被辨識，
+    Y 的 item
+    會沿用前一個 module 名而拼出**看似有效卻錯誤**的 fullType——那比落入 `UNKNOWN_MODULE`
+    更糟（錯 module 可能剛好命中另一個已出貨鍵，於是真缺口再次靜默）。故一旦在 depth>0
+    看見頂層 `module` 標頭（PZ 的 module 只能是頂層，這就是配對已失準的確證），即**毒化
+    該檔剩餘部分**：其後所有行一律不歸屬 module，item 落 `UNKNOWN_MODULE` 而顯性化。
+
+    已知殘留（fail-visible，不修）：`module X { // 註解` 這種「同行 `{` 之後還有註解」
+    整行不匹配 `_MODULE_LINE_RE`（`\\s*$` 吃不下），該 module 認不出 → 其 item 落
+    `UNKNOWN_MODULE`。實測同樣 0 命中，且後果可見而非錯值。
+
+    **已知語意偏離（實測 489 個 workshop script 檔 0 命中；要修必須連同
+    `EXTRACTOR_SCHEMA` bump 並全庫重抽）**：本函式對「整行以 `/` 開頭」`continue`，因而
+    **不計該行的大括號**。`/* */` 已由 `_mask_comments` 遮成空白（那種行的 `stripped`
+    是空的），所以這個分支現在只攔到 `//` 開頭的行——而依 `ScriptBucket.CreateFromTokenPP()`
+    的實據，引擎**不認 `//` 為註解**、那些大括號是真的。於是同一份 masked 文字有兩套
+    depth 模型：`_top_level_item_decls` 逐字元計入 `//` 行的大括號（與引擎一致），本函式
+    不計。方向是**本函式讓 module 持續過久**：`// }` 那個 `}` 引擎會算、depth 提早降回 0，
+    本函式不算、`cur` 繼續掛著，於是其後的 item 被歸到**早已關閉的 module** 而拼出看似
+    有效的錯 fullType（不是 fail-visible 的 `?.`）。錯 module 可能剛好命中另一個已出貨鍵，
+    真缺口再次靜默——與本函式毒化防線要防的失效模式同類。
+    """
+    out: list[str | None] = [None] * len(lines)
+    cur: str | None = None      # 目前生效的 module
+    pending: str | None = None  # 已見 `module X`，等它的 "{"
+    depth = 0
+    poisoned = False            # 大括號配對已失準 → 其後一律不歸屬
+    for i, line in enumerate(lines):
+        stripped = line.lstrip()
+        if stripped.startswith("/"):
+            out[i] = cur
+            continue
+        m = _MODULE_LINE_RE.match(line)
+        if m and depth > 0:     # 頂層標頭卻在區塊內 ⇒ 配對失準（見 docstring）
+            poisoned = True
+        if poisoned:
+            out[i] = None
+            continue
+        if depth == 0:
+            if m:
+                # `module Rotators /* Legacy */` 真實存在；名字解不出時 cur 留 None，
+                # 該區塊內的 item 就落 UNKNOWN_MODULE（可見），而非拼出錯誤 fullType。
+                # 名字只 trim（引擎 `replace(tag,"").trim()`）；`/* */` 已由 `_mask_comments`
+                # 遮成空白，`//` 依實據**屬於名字**，都不另外剝除。
+                name = m.group(1).strip() or None
+                if m.group(2):          # `module X {` 同行：該行的 "{" 即區塊起點
+                    cur, pending, depth = name, None, 1
+                    out[i] = cur
+                else:                   # `{` 在下一非空行（regex 保證本行無大括號）
+                    pending = name
+                continue
+            if pending is not None:
+                # 空行不作廢（`module X` 與 `{` 之間空行是常見寫法）；任何其他非註解
+                # 內容出現＝該標頭沒接區塊，`pending` 必須立刻作廢——留著會讓後面第
+                # 一個無關的頂層 `{` 被誤認成它的起點，產出**看似有效卻錯誤**的
+                # fullType，比落入 UNKNOWN_MODULE 更糟（錯 module 會誤判已覆蓋）。
+                if stripped.startswith("{"):
+                    cur, pending = pending, None
+                elif stripped:
+                    pending = None
+        out[i] = cur
+        depth += line.count("{") - line.count("}")
+        if depth <= 0:
+            depth, cur = 0, None
+    return out
 
 
 def _iter_script_records(mod_dir: Path) -> list[tuple[str, str, str, str]]:
@@ -563,6 +836,8 @@ def _iter_script_records(mod_dir: Path) -> list[tuple[str, str, str, str]]:
 
     EXTRACTOR_SCHEMA=5：掃全部 media/scripts 目錄、relpath 為 mod_dir 相對。
     同檔同名 item 重複定義時 DisplayName 取後者（PZ 後定義生效，同 translate .txt 慣例）。
+    EXTRACTOR_SCHEMA=9：item 系列的 key 為完整 fullType `Module.Item`；其餘 kind 維持
+    裸區塊名（見 `_MODULE_LINE_RE` 註解）。
     """
     records: list[tuple[str, str, str, str]] = []
     script_dirs = [
@@ -578,24 +853,39 @@ def _iter_script_records(mod_dir: Path) -> list[tuple[str, str, str, str]]:
             except OSError:
                 continue
             rel = tf.relative_to(mod_dir).as_posix()
-            lines = text.splitlines()
-            dn_map: dict[str, str] = {}
+            # 遮蔽 `/* */` 後再掃：註解掉的 item 區塊在引擎眼中不存在，抽出來會變成
+            # 假缺口（見 `_mask_comments`）。行數不變，故行號與原檔一一對應。
+            masked = _mask_comments(text)
+            lines = masked.splitlines()
+            module_of = _module_by_line(lines)
+            # 非 item 的區塊名維持逐行匹配——verify_dist [16] 以現行 `script_craftRecipe`
+            # 集合為死鍵判定實據，放寬它的匹配會改變 gate 行為，屬另一件事。
             for i, line in enumerate(lines):
                 m = _SCRIPT_LINE_RE.match(line)
-                if not m:
+                if not m or m.group(1) == "item":
                     continue
                 kw, name, brace = m.group(1), m.group(2).strip(), m.group(3)
+                if not name:  # `craftRecipe /* x */`：解不出區塊名，不能記成空鍵
+                    continue
                 if not brace:
                     nxt = next((ln.strip() for ln in lines[i + 1:] if ln.strip()), "")
                     if not nxt.startswith("{"):
                         continue
                 records.append((f"script_{kw}", rel, name, name))
-                if kw == "item":
-                    dn = _scan_item_displayname(lines, i)
-                    if dn is not None:
-                        dn_map[name] = dn
-            for name, dn in dn_map.items():
-                records.append(("script_item_dn", rel, name, dn))
+            # item 走**字元級**宣告掃描（`{` 同行或換行皆可）＋ comma-token DisplayName，
+            # 與 ScriptParser.readBlock 的語意一致（見 `_ITEM_DECL_RE`／`_item_display_name`）。
+            dn_map: dict[str, str] = {}
+            # 行號一次算好（`count("\n", 0, pos)` 逐筆重掃前綴＝O(items × 檔長)）
+            nl_pos = [i for i, c in enumerate(masked) if c == "\n"]
+            for start, body, name in _top_level_item_decls(masked):
+                ln_no = bisect.bisect_left(nl_pos, start)
+                full = f"{module_of[ln_no] or UNKNOWN_MODULE}.{name}"
+                records.append(("script_item", rel, full, full))
+                dn = _item_display_name(masked, body)
+                if dn is not None:
+                    dn_map[full] = dn   # 同檔同名重複定義取後者（PZ 後定義生效）
+            for full, dn in dn_map.items():
+                records.append(("script_item_dn", rel, full, dn))
     return records
 
 
@@ -817,7 +1107,7 @@ def records_to_map(records: list[tuple[str, str, str, str]]) -> dict[str, str]:
     out: dict[str, str] = {}
     for kind, relpath, key, value in records:
         rid = f"{kind}|{relpath}|{key}"
-        vh = hashlib.sha256(value.encode("utf-8")).hexdigest()[:12]
+        vh = value_hash(value)
         if rid in out:
             if out[rid] == vh:  # 同值重複（如同名 script 區塊）無資訊損失，靜默折疊
                 continue
@@ -1364,6 +1654,14 @@ def build_layer_a_plan(
     mods = corpus_state.get("mods", {})
     is_first_run = workshop_id not in mods  # 以 key 是否存在判首跑，勿用空 old_map（空 baseline 亦有效）
     old_mod = mods.get(workshop_id, {})
+    # **舊基準形狀壞損＝視同首跑，靜默重建 baseline**（同「schema 不符」的既有處理）：
+    # 否則 `old_mod.get()` 會拋 AttributeError、`diff_corpus` 的 `set(old_map)` 會拋
+    # TypeError，而那發生在 `cmd_backfill_en` 的 per-mod 失敗處理**之前**——每次重跑都在
+    # 寫回新 state 前中止，於是 `backfill_done` 判未完成、重抽、再炸，永久修不好那個 wid
+    # （prep 的 `_unchecked` 叫人「重抽該 mod」就成了空指示）。
+    if not isinstance(old_mod, dict) or not isinstance(old_mod.get("records"), dict):
+        is_first_run = True
+        old_mod = {}
     old_map = old_mod.get("records", {})
     new_map = records_to_map(new_records)
     new_hash = corpus_hash(new_records)
@@ -1814,8 +2112,8 @@ def _is_real_key(key: str) -> bool:
     return bool(_TRANSLATION_KEY_RE.match(key)) and not key.endswith("_")
 
 
-def _load_shipped_keys() -> tuple[set[tuple[str, str]], set[str]]:
-    """我方實際出貨的鍵，回傳 (身分集, runtime 完整鍵集)。
+def _load_shipped_keys() -> tuple[set[tuple[str, str]], set[str], set[str]]:
+    """我方實際出貨的鍵，回傳 (身分集, runtime 完整鍵集, ItemName fullType 集)。
 
     * **身分集** `(stem, canon)` — 給 `translate_en` 缺口用。**namespace 必須保留**：
       只留 canon 會讓 `Tooltip_OpenJacket` 與 `ContextMenu_OpenJacket` 塌成同一身分，
@@ -1823,9 +2121,17 @@ def _load_shipped_keys() -> tuple[set[tuple[str, str]], set[str]]:
       同時容納 legacy `<Stem>_KEY` 與 B42 bare `KEY` 兩種寫法。
     * **runtime 完整鍵集** — 給 `lua_gettext` 缺口用。Lua 寫的是程式碼裡的完整鍵
       （`getText("ItemName_Base.X")`），故同時放入 `canon` 與 `<stem>_<canon>` 兩種別名。
+    * **ItemName fullType 集** — 給 `script_item_dn` 缺口用，**唯一完全不做正規化的
+      口徑**：`getItemNameFromFullType()` 以裸 `Module.Item` 查 ItemName map，故只有
+      `ItemName.json` 裡真的長成 `Module.Item` 的鍵會被引擎查到。前綴形
+      `ItemName_Base.X` 是 B41 遺留死鍵（B42 完全不讀，見 verify_dist [15]），
+      **刻意不去前綴計入**——那會把「只出貨死鍵」誤報成已覆蓋。同理不扣除
+      `itemname_dead_allowlist` 的已裁決豁免：gate 放行與「玩家是否看到英文」是
+      兩件事，報表要看得到。
     """
     ident: set[tuple[str, str]] = set()
     full: set[str] = set()
+    itemnames: set[str] = set()
 
     def take(basename: str, ks) -> None:
         stem = _key_stem(basename)
@@ -1836,6 +2142,8 @@ def _load_shipped_keys() -> tuple[set[tuple[str, str]], set[str]]:
             full.add(c)
             if stem:
                 full.add(f"{stem}_{c}")
+        if basename == "ItemName.json":
+            itemnames.update(k for k in ks if _is_runtime_item_key(k))
 
     mods_dir = SOURCES / "mods"
     if mods_dir.is_dir():
@@ -1852,35 +2160,215 @@ def _load_shipped_keys() -> tuple[set[tuple[str, str]], set[str]]:
     if own.is_file():
         for fname, entries in load_json(own).get("entries", {}).items():
             take(fname, entries)
-    return ident, full
+    return ident, full, itemnames
+
+
+def _is_runtime_item_key(key: str) -> bool:
+    """`ItemName.json` 的鍵是否真的會被 `getItemNameFromFullType()` 查到。
+
+    引擎以裸 `Module.Item` 查表：B41 前綴形 `ItemName_Base.X` 是死鍵（B42 完全不讀，
+    見 verify_dist [15]），無 module 段的鍵也不可能是 fullType。兩者都不算覆蓋——
+    把它們算進去就會把「只出貨死鍵」誤報成已覆蓋。
+    """
+    return "." in key and not key.startswith("ItemName_")
+
+def value_hash(value: str) -> str:
+    """state 的 record 值就是這個（`records_to_map` 的口徑），consumer 端比對共用。"""
+    return hashlib.sha256(value.encode("utf-8")).hexdigest()[:12]
+
+
+def mirror_incoherent_rids(records: dict, mirror: dict) -> set[str]:
+    """鏡像與 state 不一致的 rid：**鏡像有而 state 沒有**，或**同 rid 值 hash 不符**。
+
+    `backfill-en` 每個 mod 先原子落 state、再寫鏡像，故正常狀態下兩者恆一致。不一致只
+    會發生在**中斷／寫入失敗留下的殘跡**或人工動過鏡像檔，而兩種形狀都會害到 consumer：
+      * 鏡像多 rid（state 舊）→ 宇宙取自 state，那些鍵的缺口靜默低報成零。
+      * 同 rid 值不同（state 已是新 hash、鏡像仍是舊文本，或反之）→ 值取自鏡像，於是
+        拿**過期英文**當翻譯來源，還會讓 id-only／malformed 判定用錯的值。
+    兩者都是 #221 那種「看起來綠燈、其實沒看」的失效模式，故 `coverage`／
+    `prep_mod_strings` 都必須顯性列出而非靜默採用。
+
+    刻意**不**驗「state 有而鏡像沒有」：那是 `backfill_done()` 的職責，且合法狀態
+    （該 mod 無 text-bearing record ⇒ 鏡像被刪除）也長這樣。
+    """
+    bad = {rid for rid in mirror if rid not in records}
+    for rid, val in mirror.items():
+        if rid in records and (not isinstance(val, str)
+                               or value_hash(val) != records[rid]):
+            bad.add(rid)
+    return bad
+
+
+def owner_of(rid: str) -> str:
+    """rid → 引擎實際的載入單位（mod root），**不是 workshop id**。
+
+    `ZomboidFileSystem.loadMod()` 是按**啟用的 mod ID** 載入，一個 workshop 項目常含多個
+    可獨立啟用的 mod（addon）。把整個 wid 壓成單一 owner 會把真衝突當成「同一個 mod 自己
+    的疊加」吃掉——實例 wid `2791656602` 的 `fhqwhgads' Motorious Zone` 與
+    `... - Real Names Adddon`，同鍵 `IGUI_VehicleNamefhq250GTO` 一邊 Ferrari、一邊
+    Impennarsi，只啟用 base mod 的玩家會拿到 addon 的譯名。common→版本夾的優先序也只
+    存在於同一個 mod root 內。
+    """
+    relpath = rid.partition("|")[2].partition("|")[0]
+    parts = relpath.split("/")
+    return parts[1] if len(parts) > 1 and parts[0] == "mods" else relpath
+
+
+def winning_dn_text(recs: dict, mirror: dict, eff: dict, is_eff=None) -> dict:
+    """每個 `(owner, fullType)` 的 **runtime 勝出值**。
+
+    勝出 rid 由 **state** 決定：同一 owner 內 common 先、有效版本夾後覆寫（引擎讓版本夾
+    疊在 common 之上）。值查鏡像；**勝出 rid 缺值或非字串時整鍵不入結果**（交給
+    `missing` 盲區），**絕不可回退用 common 的舊值**——common 與版本夾同 fullType、鏡像
+    只剩 common 那筆時（backfill 中斷殘跡；`mirror_incoherent_rids` 依設計不驗 state 有
+    →鏡像沒有），回退等於拿**低優先序的舊英文**當翻譯來源，census 也會用它比 owner
+    衝突＝與引擎執行期相反的結論。先前兩個 consumer 都直接迭代 mirror rows 建值，正是
+    這個遮蔽。
+
+    **一律按 `(owner, fullType)` 分組，無「不分 owner」模式**：同 wid 可有多個獨立
+    mod root，跨 root 選單一 winner 會讓 A 的值遮掉 B 的缺值／id-only 判定——正是
+    owner 粒度要修的盲區。
+    """
+    chk = is_eff or is_effective
+    winner: dict = {}
+    rows = [r for r in recs if r.startswith("script_item_dn|") and chk(r, eff)]
+    for rid in sorted(rows, key=lambda r: _branch_tag(r) != "common"):
+        winner[(owner_of(rid), rid.rpartition("|")[2])] = rid
+    out: dict = {}
+    for key, rid in winner.items():
+        v = mirror.get(rid)
+        if isinstance(v, str):
+            out[key] = v
+    return out
+
+
+def _item_dn_stats(
+    schema, dn_keys: set[str], dn_text: dict[str, str],
+    shipped_items: set[str], vanilla_items: set[str], item_keys: int = 0,
+) -> dict:
+    """script 物品顯示名的覆蓋統計：`{total, gap, idonly, blind, kinds, why}`。
+
+    **四種盲區一律計數、絕不靜默跳過**（#221 的病因就是靜默），且分成兩種行動：
+      重抽可消除 —
+      1. `schema < ITEM_MODULE_SCHEMA`（`kinds` 記 `schema`）— 舊基準的 key 沒有 module，
+         無從精確比對。backfill 會略過已下架項目、失敗項也保留舊 state，故混合 schema
+         必然存在。
+      2. `mirror` — `dn_text` 缺該筆的值（鏡像整個不存在時 `dn_text` 為空，該 mod 全數
+         落入這一類），取不到 DisplayName 就無法判斷上游是否只給了 item id。
+      重抽無效 —
+      3. `unknown_module` — `_module_by_line` 沒解出 module（畸形檔、大括號配對失準）。
+         要修的是 parser，不是重抽。
+      4. `malformed` — 上游 property 沒收尾逗號，引擎的 `split("=")[1]` 把下一欄名稱一起
+         吃進 DisplayName（值含換行）。是上游 script 格式錯誤，只能回報上游或個案處理。
+    `idonly`（DisplayName 等於 item id 或為空白）**不是盲區**，是獨立的扣除項，另行回報。
+    """
+    if not isinstance(schema, int) or schema < ITEM_MODULE_SCHEMA:
+        # `dn_keys` 空**不等於**沒有 script 物品：`script_item_dn` 是 schema 5 才加的
+        # kind，schema 3/4 的舊基準只有 `script_item`（實測 2 個 mod 共 79 筆）。只看
+        # `dn_keys` 會把它們判成零缺口而完全不列出——那正是 #221 的靜默。故以
+        # 「有任何 item record」為準。
+        n = len(dn_keys) or item_keys
+        why = f"schema={schema}（key 無 module）" if n else None
+        # `blind_keys` 給空集：schema<9 的鍵是裸名，不可能與 `Module.Item` 形的本批鍵相交
+        return {"total": len(dn_keys), "gap": set(), "idonly": 0, "blind_keys": set(),
+                "blind": n, "kinds": {"schema"} if n else set(), "why": why}
+    unknown = {k for k in dn_keys if k.startswith(UNKNOWN_MODULE + ".")}
+    known = dn_keys - unknown
+    # **先扣已出貨與 vanilla**：那些鍵不論鏡像缺值或上游格式壞損都不是我方的待辦，
+    # 算進 blind 只會讓「不可判定 N 筆」與行動分類虛胖。
+    todo = (known - shipped_items) - vanilla_items
+    missing = todo - dn_text.keys()
+    # 上游的 property 沒收尾逗號、下一個 property 才有時，引擎的 `split("=")[1]` 會把
+    # 下一欄名稱一起吃進值（`Item.Load`），玩家真的看到那串含換行的垃圾。抽取器忠實
+    # 記錄它（變更偵測需要），但它**不能當翻譯來源**——譯什麼都不對。故計為不可判定，
+    # 兩支工具同口徑（實測 24 筆／1 個檔）。
+    malformed = {k for k in todo - missing if "\n" in dn_text[k] or "\r" in dn_text[k]}
+    # 「上游沒給真英文名」的兩種形狀，一律扣除、不進 gap：
+    #   * 值等於 item id 本身（`DisplayName = Sledgehammer_Broken`）
+    #   * 值為空白（`DisplayName = ,` 或整串空白）。**這一支在 producer 路徑上不可達**：
+    #     `_item_display_name()` 對空值回 `None`，該 item 根本不產生 `script_item_dn`
+    #     record。留著是 consumer 端的 fail-closed（鏡像被人工改動、或值非字串時仍成立），
+    #     成本近乎零；勿因「用不到」而刪。
+    # **判定必須留在這個共用函式裡**：先前 prep 自己在 `local` 那層多加一道 `.strip()`
+    # 濾網，於是 coverage 的 `dn_gap` 恆比 prep 的 `_gap` 多，差額既不進 `_undecidable`
+    # 也不進 `_unchecked`＝兩支腳本分岔（正是本函式註解一開始要避免的事）。
+    candidate = todo - missing - malformed
+    idonly = {k for k in candidate
+              if not dn_text[k].strip() or dn_text[k] == k.rpartition(".")[2]}
+    gap = candidate - idonly
+    kinds = set()
+    reasons = []
+    if unknown:
+        kinds.add("unknown_module")
+        reasons.append(f"{len(unknown)} 筆 module 未解出")
+    if missing:
+        kinds.add("mirror")
+        reasons.append(f"{len(missing)} 筆 sources/en 鏡像缺值")
+    if malformed:
+        kinds.add("malformed")
+        reasons.append(f"{len(malformed)} 筆上游 DisplayName 夾帶下一欄（無尾逗號）")
+    # `blind_keys` 是 **mirror／malformed 兩桶的明細**，給 prep 的 census 盲區交集用。
+    # 刻意不含 `unknown`（`?.` 前綴不可能與任何真 fullType 相交）也不含 schema 桶（裸名
+    # 鍵形同樣對不上 `Module.Item`）；**絕不可用「不在 census 的都算盲區」反推**——id-only
+    # 與上游留白也不在 census，那是合法扣除，誤列會把正常批次 fail-closed 卡死
+    # （實測 `Base.M249`：一邊 translate_en "FN M249"、另一邊 script id-only "M249"）。
+    return {"total": len(dn_keys), "gap": gap, "idonly": len(idonly),
+            "blind": len(unknown) + len(missing) + len(malformed), "kinds": kinds,
+            "blind_keys": missing | malformed,
+            "why": "；".join(reasons) or None}
 
 
 def cmd_coverage(args) -> int:
-    """報表：上游 EN 鍵有多少我方沒收，並以「Lua 確證可見」優先排序。
+    """報表：上游 EN 鍵有多少我方沒收，並以「確證玩家可見」優先排序。
 
-    三個口徑，可信度由高到低：
-      * ``lua_gettext`` 缺口 — mod 的 Lua **真的去取了這個鍵**＝確證玩家看得到，最該補。
+    四個口徑，可信度由高到低：
+      * ``item_dn`` 缺口 — script 定義的物品顯示名。物品欄一定顯示它＝確證可見，
+        且 schema 9 起 key 帶 module，可與 `ItemName.json` 出貨鍵**精確**比對
+        （不做任何 suffix 猜測，見 `_load_shipped_keys`）。
+      * ``lua_gettext`` 缺口 — mod 的 Lua **真的去取了這個鍵**＝確證玩家看得到。
       * ``translate_en`` 缺口 — 上游 EN 檔裡有，但未必被用到（含廢棄鍵）。
       * ``lua_literal`` — 寫死在 Lua、根本沒有翻譯鍵，JSON 補再多也蓋不掉，
         只能走 sources/lua/ 覆寫。
-    vanilla 鍵一律扣除（收錄鐵律：不得覆寫本體）。
+    vanilla 鍵一律扣除（收錄鐵律：不得覆寫本體）。不可判定者逐 mod 列出，既不併入
+    缺口也不當成零缺口（見 `_item_dn_stats`）。
     """
     corpus_state = load_corpus_hashes()
     mods = corpus_state.get("mods", {})
-    shipped_ident, shipped_full = _load_shipped_keys()
-    vraw = set(load_json(SOURCES / "vanilla_keys.json").get("keys", []))
+    shipped_ident, shipped_full, shipped_items = _load_shipped_keys()
+    vjson = load_json(SOURCES / "vanilla_keys.json")
+    vraw = set(vjson.get("keys", []))
     vanilla = vraw | {k.split("_", 1)[1] for k in vraw if "_" in k}
+    # item_dn 用**檔域**基準：物品名只查 ItemName map，扁平聯集會把其他檔的同名鍵
+    # 也當成本體鍵而過度扣除（於是真缺口被藏起來）。
+    # 欄位缺失一律炸（同 verify_dist/_load_vanilla_basis、lint_ch、build_mod 的
+    # fail-closed 慣例）：靜默退化成空集合＝這道本體排除整批失效，於是本體鍵被
+    # 當成缺口送進補譯管線，違反「不得覆寫本體」鐵律的第一道防線。
+    vanilla_items = set(vjson["scoped_keys"]["ItemName.json"])
 
-    rows = []
-    tot = {"en": 0, "en_gap": 0, "lua": 0, "lua_gap": 0, "lit": 0, "lua_undef": 0}
+    rows: list[dict] = []
+    tot = {"en": 0, "en_gap": 0, "lua": 0, "lua_gap": 0, "lit": 0, "lua_undef": 0,
+           "dn": 0, "dn_gap": 0, "dn_idonly": 0, "dn_blind": 0}
+    blind: list[tuple[str, str, set[str]]] = []   # (wid, 人讀原因, kinds)
+    en_stale: list[tuple[str, int]] = []          # (wid, 非物品名的不一致 rid 數)
     for wid in sorted(mods):
         en_ids: set[tuple[str, str]] = set()
         en_full: set[str] = set()
         lua_ids: set[str] = set()
         lits: set[str] = set()
+        # per-owner 分開統計（owner=mod root，引擎的載入單位）；wid 級累加器已無人讀
+        o_dn: dict[str, set] = {}     # owner（mod root）→ script_item_dn fullType 集
+        o_item: dict[str, set] = {}   # owner → script_item 裸名集
         # 只認引擎真的會載入的分支——舊版本夾／mod 根 media/ 的鍵補了也是死資料
-        eff = resolve_effective_branches(mods[wid].get("records", {}))
-        for rid in mods[wid].get("records", {}):
+        recs = mods[wid].get("records")
+        # **形狀壞損一律炸，不得靜默退化成空集合**：`records` 若是 list／字串／None，
+        # 下面每個迴圈都跑零圈，於是這個 mod 的缺口與盲區雙雙為 0＝#221 的靜默零缺口
+        # （同 `verify_dist` [16] 對實據殘缺 fail-closed 的既定慣例）。
+        if not isinstance(recs, dict):
+            raise ValueError(
+                f"{wid}：tracker state 的 records 形狀壞損（{type(recs).__name__}），"
+                "缺口統計無法信任——修 `tracker-state/en_corpus_hashes.json` 或重跑 backfill-en")
+        eff = resolve_effective_branches(recs)
+        for rid in recs:
             if not is_effective(rid, eff):
                 continue
             kind, _, rest = rid.partition("|")
@@ -1898,43 +2386,250 @@ def cmd_coverage(args) -> int:
                     lua_ids.add(key)
             elif kind == "lua_literal":
                 lits.add(key)
+            elif kind == "script_item_dn":
+                o_dn.setdefault(owner_of(rid), set()).add(key)
+            elif kind == "script_item":
+                o_item.setdefault(owner_of(rid), set()).add(key)
         en_gap = {x for x in en_ids - shipped_ident if x[1] not in vanilla}
         lua_all_gap = (lua_ids - shipped_full) - vanilla
         # Lua 引用但上游自己也沒定義＝上游 bug（遊戲顯示鍵名），非我方可補的缺口
         lua_undef = lua_all_gap - en_full
         lua_gap = lua_all_gap - lua_undef
+        # DisplayName 值只在 sources/en 鏡像裡（狀態檔只有 hash）。缺鏡像／缺該筆值的
+        # 後果交給 _item_dn_stats 計成盲區，不在這裡靜默跳過。
+        # **值一律走 `winning_dn_text`**：勝出 rid 由 state 決定（同 owner 內 common 先、
+        # 版本夾後覆寫），勝出 rid 缺值即整鍵落 missing——直接迭代 mirror rows 會在
+        # 「版本夾那筆缺值」時回退用 common 的舊英文（backfill 中斷殘跡可達），與引擎
+        # 執行期相反。
+        win: dict = {}
+        stale_dn: set[str] = set()
+        mirror = EN_TEXT_DIR / f"{wid}.json"
+        if mirror.is_file():
+            mdata = load_json(mirror)
+            # **先驗 state↔鏡像 coherence**：兩個口徑的宇宙都取自 state，state 落後或值
+            # 不符時缺口會靜默低報成零。不能只在 `dn_keys` 非空時讀鏡像——state 落後的
+            # 極端情形正是 `dn_keys` 為空而鏡像滿的那一種。
+            # **不可只濾 `script_item_dn`**：鏡像以 `translate_en` 為大宗，只看 dn 會讓
+            # EN 口徑的同一種低報完全不出聲（而 `prep_mod_strings` 對它 fail-closed，
+            # 於是兩支工具對同一份 state 給出互相矛盾的結論）。
+            bad = mirror_incoherent_rids(recs, mdata)
+            # **只認有效分支**：死分支的鏡像殘跡不影響任何判定（那些鍵補了也是死資料），
+            # 拿它去剔除會把有效分支的好值一起砍掉、把死資料鍵計進不可判定。
+            stale_dn = {r for r in bad
+                        if r.startswith("script_item_dn|") and is_effective(r, eff)}
+            if bad - stale_dn:
+                en_stale.append((wid, len(bad - stale_dn)))
+            # **排除層級是 `(owner, fullType)`，不是裸 fullType**：A root 的壞 rid 若以
+            # 裸 fullType 過濾，會把 B root 同鍵的健康勝出值一起刪掉（多扣）；反向另計
+            # 時 B state 有同鍵又會誤判「已在宇宙」而漏計。
+            stale_ok = {(owner_of(r), r.rpartition("|")[2]) for r in stale_dn}
+            win = {ok: v for ok, v in winning_dn_text(recs, mdata, eff).items()
+                   if ok not in stale_ok}
+        # **逐 owner 各算一次**（owner=mod root，引擎的載入單位）：同 wid 可有多個獨立
+        # mod root，跨 root 合併會讓 A 的值遮掉 B 的缺值／id-only 判定。彙總時 total／
+        # idonly／blind 相加、gap 取聯集（同鍵多 owner 都缺就是一個缺口）。
+        schema_w = mods[wid].get("extractor_schema")
+        dn = {"total": 0, "gap": set(), "idonly": 0, "blind": 0,
+              "kinds": set(), "why": None}
+        whys = []
+        for o in sorted(set(o_dn) | set(o_item)):
+            st_o = _item_dn_stats(schema_w, o_dn.get(o, set()),
+                                  {k: v for (ow, k), v in win.items() if ow == o},
+                                  shipped_items, vanilla_items,
+                                  len(o_item.get(o, set())))
+            dn["total"] += st_o["total"]; dn["idonly"] += st_o["idonly"]
+            dn["blind"] += st_o["blind"]; dn["gap"] |= st_o["gap"]
+            dn["kinds"] |= st_o["kinds"]
+            if st_o["why"]:
+                # 判準要用**實際迭代的集合**：只看 `o_dn` 時，schema<9（只有 `script_item`）
+                # 的多 root mod 會輸出多筆未標 owner 的完全相同字串。
+                whys.append(st_o["why"] if len(set(o_dn) | set(o_item)) < 2
+                            else f"[{o}] {st_o['why']}")
+        dn["why"] = "；".join(whys) or None
+        if stale_dn:
+            # **不重複計 blind**：`stale_ok ∩ 宇宙` 已因上面的剔除自然落入 `missing`
+            # （`mirror` 盲區）。留著更糟——`_item_dn_stats` 會拿**過期值**去判 gap／
+            # id-only／malformed。只有「鏡像新增而 state 尚無**該 owner**」的 (owner,鍵)
+            # 不在宇宙內、missing 算不到，必須另計，否則又是低報。
+            # **另計時同樣先扣已出貨與 vanilla**（同 `_item_dn_stats` 的既定原則）。
+            extra = {(o, k) for o, k in stale_ok
+                     if k not in o_dn.get(o, set())
+                     and k not in shipped_items and k not in vanilla_items}
+            dn["blind"] += len(extra)
+            dn["kinds"] = dn["kinds"] | {"stale_state"}
+            # 只報**另計**的那批：全數列出會含已被 `missing` 計過的鍵，讀者把兩個
+            # 子句相加就會高估不可判定量。
+            dn["why"] = "；".join(filter(None, [
+                dn["why"], f"{len(stale_ok)} 個物品名的鏡像與 state 不一致"
+                           f"（其中 {len(extra)} 個另計、其餘已列於上或屬已出貨／vanilla）"]))
+        if dn["why"]:
+            blind.append((wid, dn["why"], dn["kinds"]))
         # **totals 先累加再決定是否列表**：放在 continue 之後會把「完全無缺口」的 mod
         # 排除在分母外，覆蓋率分母因而嚴重低報（實測 EN 76,063 vs 實際 89,764）。
         tot["en"] += len(en_ids); tot["en_gap"] += len(en_gap)
         tot["lua"] += len(lua_ids); tot["lua_gap"] += len(lua_gap)
         tot["lit"] += len(lits); tot["lua_undef"] += len(lua_undef)
-        if not (en_gap or lua_gap or lits):
+        tot["dn"] += dn["total"]; tot["dn_gap"] += len(dn["gap"])
+        tot["dn_idonly"] += dn["idonly"]; tot["dn_blind"] += dn["blind"]
+        if not (en_gap or lua_gap or lits or dn["gap"]):
             continue
-        rows.append((wid, len(en_ids), len(en_gap), len(lua_ids), len(lua_gap), len(lits),
-                     sorted(lua_gap)[:5], len(lua_undef)))
+        rows.append({
+            "wid": wid, "en": len(en_ids), "en_gap": len(en_gap),
+            "lua": len(lua_ids), "lua_gap": len(lua_gap), "lit": len(lits),
+            "lua_undef": len(lua_undef), "dn": dn["total"], "dn_gap": len(dn["gap"]),
+            "samples": sorted(dn["gap"])[:5] or sorted(lua_gap)[:5],
+        })
 
     print(f"基準涵蓋 {len(mods)} 個 mod（extractor_schema={corpus_state.get('extractor_schema')}）")
-    print(f"我方已出貨鍵 {len(shipped_ident)}；vanilla 排除鍵 {len(vanilla)}")
+    print(f"我方已出貨鍵 {len(shipped_ident)}（其中 ItemName fullType {len(shipped_items)}）"
+          f"；vanilla 排除鍵 {len(vanilla)}（ItemName 檔域 {len(vanilla_items)}）")
     print()
     print(f"上游 EN 鍵 {tot['en']}  → 缺口 {tot['en_gap']}")
-    print(f"Lua 引用鍵 {tot['lua']}  → **可補的確證可見缺口 {tot['lua_gap']}**（最高優先）")
+    print(f"script 物品名 {tot['dn']}  → **可補的確證可見缺口 {tot['dn_gap']}**（精確比對 fullType）")
+    print(f"  （另扣除 {tot['dn_idonly']} 筆 DisplayName 等於 item id 或為空白＝上游沒給真英文名）")
+    print(f"Lua 引用鍵 {tot['lua']}  → **可補的確證可見缺口 {tot['lua_gap']}**（同屬最高優先）")
     print(f"  （另有 {tot['lua_undef']} 個鍵上游自己也沒定義＝上游 bug，遊戲顯示鍵名，非我方缺口）")
     print(f"Lua 寫死英文 {tot['lit']}（無翻譯鍵，只能走 sources/lua/ 覆寫）")
+    if en_stale:
+        # `dn["blind"]` 是物品名專屬計數器，故非物品名的不一致獨立通報而非併進去。
+        # **兩種形狀的後果不同，不可一律宣稱「缺口低報」**：`en_gap`／`lua_gap` 的宇宙取自
+        # state 的**鍵身分**、完全不讀鏡像值，所以純值漂移（鍵集相同）不影響缺口數字，只
+        # 影響 `prep_mod_strings` 拿到的翻譯來源正確性；只有「鏡像多 rid」那一支才是低報。
+        # `prep` 對兩者都是 wid 級 fail-closed，若這裡完全不出聲，兩支工具就會對同一份
+        # state 給出矛盾結論。
+        print()
+        print(f"⚠️ {len(en_stale)} 個 mod 的**非物品名** record（`translate_en`／"
+              f"`lua_literal`）鏡像與 state 不一致（共 {sum(n for _, n in en_stale)} 筆）"
+              "→ 鏡像多 rid 者其 EN 缺口低報、值漂移者其翻譯來源已過期；"
+              "跑 `tracker.py backfill-en` 重抽即消除：")
+        for wid, n in sorted(en_stale, key=lambda x: -x[1])[:10]:
+            print(f"    {wid}：{n} 筆")
+    if blind:
+        # 每種成因對應不同行動，混在一起就會給出假保證（對 parser 漏判與上游格式錯誤
+        # 說「重抽即消除」，人會白燒一輪 backfill 而不去修真正的東西）。
+        REFETCHABLE = {"schema", "mirror", "stale_state"}
+        refetch_blind = [b for b in blind if b[2] <= REFETCHABLE]
+        parser_blind = [b for b in blind if "unknown_module" in b[2]]
+        upstream_blind = [b for b in blind if "malformed" in b[2]]
+        stale_blind = [b for b in blind if "stale_state" in b[2]]
+        print()
+        print(f"⚠️ {len(blind)} 個 mod 的物品名缺口**不可判定**（共 {tot['dn_blind']} 筆，"
+              "未計入上方缺口，也不算零缺口）：")
+        # **部分數字與上方「script 物品名」不是同一個宇宙，別直接加減**：`schema` 桶用
+        # `len(dn_keys) or item_keys`——schema 5–8 有 `script_item_dn`，那些鍵**同時**進
+        # total 與 blind；只有 schema 3/4（只有 `script_item`）的 blind 不在 total 裡。
+        # 實測 910 筆 blind 中 479 筆在 total 內、431 筆跨宇宙。
+        print("  （schema 3/4 的 blind 計的是 `script_item` 裸名鍵、不在上方 total 宇宙內；"
+              "schema 5–8 的則同時計入兩邊，勿直接加減）")
+        if refetch_blind:
+            # 標籤要涵蓋 `stale_state`——它也在 `REFETCHABLE` 裡，只寫「schema 落後／鏡像
+            # 缺值」會讓 `kinds == {"stale_state"}` 的 mod 被算進一個名不符實的分類。
+            print(f"  · {len(refetch_blind)} 個純屬 schema 落後／鏡像缺值／state 不一致"
+                  " → 跑 `tracker.py backfill-en` 重抽即消除")
+        if stale_blind:
+            # **不寫「其中」**：`stale_blind` 自 blind 全集算，kinds 同時含 unknown_module
+            # 的 mod 不在 `refetch_blind` 裡卻仍被算進來，「其中」會讓兩個數字對不上。
+            print(f"  · {len(stale_blind)} 個有**鏡像與 state 不一致**（backfill 中斷殘跡）"
+                  " → 重抽該 mod 即消除，但在那之前它的缺口數是低報的")
+        if parser_blind:
+            print(f"  · {len(parser_blind)} 個有 module 未解出（`?.` 鍵）"
+                  " → **重抽無效**，要修的是 `_module_by_line` 的 module 邊界解析")
+        if upstream_blind:
+            print(f"  · {len(upstream_blind)} 個有上游 DisplayName 夾帶下一欄（無尾逗號）"
+                  " → **重抽無效**，是上游 script 格式錯誤，只能回報上游或個案處理")
+        # 需要動手的兩類排前面，不該被 schema 雜訊擠出預覽
+        def _pri(b):
+            return (not (b[2] - REFETCHABLE), b[0])
+        for wid, why, _k in sorted(blind, key=_pri)[:15]:
+            print(f"    {wid}：{why}")
+        if len(blind) > 15:
+            print(f"    ...（還有 {len(blind) - 15} 個）")
     print()
     top = args.limit or 30
-    print(f"=== 依「確證可見缺口」排序 Top {top} ===")
-    print(f"{'workshop_id':>12} {'EN缺':>6} {'可補':>5} {'上游bug':>7} {'寫死':>5}  範例")
-    for r in sorted(rows, key=lambda r: (-r[4], -r[5], -r[2]))[:top]:
-        wid, _en, en_gap, _lua, lua_gap, lit, samp, undef = r
-        print(f"{wid:>12} {en_gap:>6} {lua_gap:>5} {undef:>7} {lit:>5}  {[x[:26] for x in samp[:3]]}")
+    print(f"=== 依「確證可見缺口（物品名＋Lua 引用）」排序 Top {top} ===")
+    print(f"{'workshop_id':>12} {'EN缺':>6} {'物品名':>6} {'可補':>5} {'上游bug':>7} {'寫死':>5}  範例")
+    order = sorted(rows, key=lambda r: (-(r["dn_gap"] + r["lua_gap"]), -r["lit"], -r["en_gap"]))
+    for r in order[:top]:
+        print(f"{r['wid']:>12} {r['en_gap']:>6} {r['dn_gap']:>6} {r['lua_gap']:>5} "
+              f"{r['lua_undef']:>7} {r['lit']:>5}  {[x[:24] for x in r['samples'][:3]]}")
     if args.out:
         write_json(Path(args.out), {
             "totals": tot,
-            "mods": {r[0]: {"en": r[1], "en_gap": r[2], "lua": r[3], "lua_gap": r[4],
-                            "lua_literal": r[5], "lua_undefined_upstream": r[7]} for r in rows},
+            # **不可只寫物品名的 undecidable**：`coverage --out` 是給自動消費者看的，
+            # 非物品名的不一致只印 stdout 就等於 artifact 給出假乾淨結果。
+            "state_mirror_incoherent": {wid: n for wid, n in sorted(en_stale)},
+            "undecidable": {wid: {"why": why, "kinds": sorted(kinds)}
+                            for wid, why, kinds in blind},
+            "mods": {r["wid"]: {"en": r["en"], "en_gap": r["en_gap"],
+                                "item_dn": r["dn"], "item_dn_gap": r["dn_gap"],
+                                "lua": r["lua"], "lua_gap": r["lua_gap"],
+                                "lua_literal": r["lit"],
+                                "lua_undefined_upstream": r["lua_undef"]} for r in rows},
         })
         print(f"\n明細 → {args.out}")
     return 0
+
+
+def backfill_done(st: dict | None, mirror: Path) -> bool:
+    """該 mod 的 `sources/en` 鏡像是否與 state 完全對齊（backfill 續跑的跳過判準）。
+
+    **必須比對鏡像內容，不能只看「檔案存在」**：`--force` 重抽已是現行 schema 的 mod 時，
+    schema 標記兩邊相同，只看存在性會把「鏡像已是新版、state 仍是舊版」判成已完成 → 該
+    mod 永久不重抽，而 coverage 以舊 state 的 records 當宇宙，新增的 item 既不進 gap 也不
+    進 blind＝#221 的靜默零缺口重演。
+
+    逐 rid 比對**值 hash**（state 的 record 值就是 `sha256(value)[:12]`，見
+    `records_to_map`）。只比鍵集不夠：上游若只改文本、鍵集不變，鏡像已是新值而 state 仍是
+    舊 hash 的組合照樣會被判「已完成」。
+
+    **能力邊界（設計上由寫序負責，不是本函式）**：只變更非鏡像 kind
+    （`lua_gettext`／`script_item`／`script_craftRecipe`…）時鏡像內容不變，本函式無從察覺。
+    關住那個窗口的是 `cmd_backfill_en` 的**每個 mod state-first 原子落盤**——state 一落地
+    就代表該輪全部 record 已記下，中斷不會留下「新 record 只存在於記憶體」的狀態。若改回
+    批次 checkpoint 或鏡像先寫，這個失效模式就會回來，而本函式攔不到。
+    """
+    # `st` 本身也要驗：非 dict 時 `.get()` 直接拋 AttributeError，而本函式在 `cmd_backfill_en`
+    # 建 `todo` 時被呼叫——那在 per-mod 失敗處理之前，整批會直接中止。
+    if not isinstance(st, dict) or st.get("extractor_schema") != EXTRACTOR_SCHEMA:
+        return False
+    recs = st.get("records")
+    # **形狀壞損一律判「未完成」**：`st.get("records") or {}` 會把 list／字串當成可判定
+    # 資料——`records=["script_item|…"]` 時 `want` 為空、`bool(recs)` 為真，於是直接回
+    # True 而永久略過這個壞損 state（prep 的 `_unchecked` 叫人重跑 backfill 也修不了，
+    # 因為不加 `--force` 就會被這裡跳過）。含 text-bearing rid 的壞容器更會在 `recs[r]`
+    # 炸掉整批。rid 形狀同理：未知 kind／缺分隔符的 rid 不可當成已對齊的證據
+    # （空 key 只有 `lua_gettext` 合法，見 `prep_mod_strings.rid_ids`）。
+    if not isinstance(recs, dict):
+        return False
+    for rid in recs:
+        kind, s1, rest = rid.partition("|")
+        relpath, s2, key = rest.partition("|")
+        if (kind not in EXTRACTOR_KINDS or not s1 or not s2 or not relpath
+                or (not key and kind != "lua_gettext")):
+            return False
+    want = {r for r in recs if r.split("|", 1)[0] in TEXT_BEARING_KINDS}
+    if not want:
+        # 合法無檔的兩種情形，缺一即會每輪重抓（實測曾有 7 個 mod 卡在第二種）：
+        #   1. 語料整個為空（empty_corpus）
+        #   2. 語料非空但**全是不進鏡像的 kind**（純 script_item/craftRecipe 的 mod）
+        # 兩者都**要求鏡像不存在**：上游把文本全數移除時，若 `unlink` 前中斷或刪檔失敗，
+        # 舊鏡像會殘留而 state 已宣告無文本；只看 state 就會永久跳過、鏡像永遠不清。
+        return (bool(st.get("empty_corpus")) or bool(recs)) and not mirror.exists()
+    if not mirror.is_file():
+        return False
+    try:
+        mir = load_json(mirror)
+    except (ValueError, OSError):
+        return False
+    # 合法 JSON 但頂層非 dict（例如 `null`）→ 下面的 `set(mir)`／`mir[r]` 會拋
+    # TypeError，同樣在 per-mod 失敗處理之前中止整批。
+    if not isinstance(mir, dict):
+        return False
+    return want == set(mir) and all(
+        isinstance(mir[r], str)
+        and value_hash(mir[r]) == recs[r]
+        for r in want
+    )
 
 
 # ============================================================
@@ -1947,9 +2642,15 @@ def cmd_backfill_en(args) -> int:
     是漸進累積（481 個 mod 只有 75 個有檔）。要達到「所有支援 MOD 的 EN 都可在 git
     追蹤比對」得主動補齊一次，之後才由排程自然維護。
 
-    可續跑：已有現行 extractor schema 基準 **且** sources/en 檔存在者跳過。
-    schema 演進（如 5→6 新增 Lua 抽取）會使既有檔全部過時，屆時本指令即重抽工具。
-    逐 mod 落盤、失敗不中斷全場，末尾列出失敗清單供重跑。
+    可續跑：`backfill_done()` 判定——schema 相符、且鏡像逐 rid 值 hash 與 state 對齊者
+    跳過（只看「檔案存在」會把「鏡像已新、state 仍舊」判成永久完成）。schema 演進
+    （如 5→6 新增 Lua 抽取）會使既有檔全部過時，屆時本指令即重抽工具。
+
+    **每個 mod 都 state-first 原子落盤、鏡像後寫**，而非批次 checkpoint：只變更非鏡像
+    kind 的 mod（`lua_gettext`／`script_item`／`script_craftRecipe`…）鏡像內容不變，
+    `backfill_done()` 無從偵測，中斷時那批 record 會永久遺失。代價是每個 mod 多一次
+    state 全檔寫入（全庫約 480 次），換掉一個無法事後偵測的失效模式。
+    失敗不中斷全場，末尾列出失敗清單供重跑。
     """
     if args.steamcmd is None:
         print("❌ backfill-en 需 --steamcmd 指定 steamcmd 路徑。", file=sys.stderr)
@@ -1977,18 +2678,8 @@ def cmd_backfill_en(args) -> int:
         wids = wids[: args.limit]
 
     def is_done(wid: str) -> bool:
-        st = corpus_state.get("mods", {}).get(wid)
-        if not st or st.get("extractor_schema") != EXTRACTOR_SCHEMA:
-            return False
-        if (EN_TEXT_DIR / f"{wid}.json").is_file():
-            return True
-        # 合法無檔的兩種情形，缺一即會每輪重抓（實測曾有 7 個 mod 卡在第二種）：
-        #   1. 語料整個為空（empty_corpus）
-        #   2. 語料非空但**全是不進鏡像的 kind**（純 script_item/craftRecipe 的 mod）
-        recs = st.get("records") or {}
-        return bool(st.get("empty_corpus")) or (
-            bool(recs) and not any(r.split("|", 1)[0] in TEXT_BEARING_KINDS for r in recs)
-        )
+        return backfill_done(corpus_state.get("mods", {}).get(wid),
+                             EN_TEXT_DIR / f"{wid}.json")
 
     todo = [w for w in wids if args.force or not is_done(w)]
     print(f"backfill-en：watchlist {len(wids)} 個 mod，待處理 {len(todo)}（已完成 {len(wids) - len(todo)}）")
@@ -2023,12 +2714,23 @@ def cmd_backfill_en(args) -> int:
                 )
             if not records:
                 new_state["empty_corpus"] = True
-            corpus_state.setdefault("mods", {})[wid] = new_state
             texts = {
                 f"{kind}|{relpath}|{key}": value
                 for kind, relpath, key, value in sorted(records)
                 if kind in TEXT_BEARING_KINDS
             }
+            # **state 先原子落盤、每個 mod 都落，鏡像後寫**。三個約束合起來才關得住窗口：
+            #   * 每 10 個 checkpoint 一次 → 中斷時最多 9 個 mod 的 state 遺失。若那些 mod
+            #     的變更**只落在非鏡像 kind**（`lua_gettext`／`script_item`／
+            #     `script_craftRecipe`…），鏡像內容根本不變，`backfill_done()` 的 text hash
+            #     比對驗不出差異 → 續跑判成已完成 → 那批 record 永久遺失。
+            #   * 反序（鏡像先）也關不掉這個窗口，理由同上——鏡像不變就沒有可比的證據。
+            #   * state-first 則相反：state 已持久化就代表「這一輪的全部 record 都記下了」；
+            #     若中斷在鏡像寫入前，state 新／鏡像舊的**文本**差異由 hash gate 抓到重抽。
+            corpus_state.setdefault("mods", {})[wid] = new_state
+            corpus_state["schema_version"] = SCHEMA_VERSION
+            corpus_state["extractor_schema"] = EXTRACTOR_SCHEMA
+            write_json(EN_CORPUS_HASHES_JSON, corpus_state)
             if texts:
                 write_json(EN_TEXT_DIR / f"{wid}.json", texts)
             else:
@@ -2047,14 +2749,10 @@ def cmd_backfill_en(args) -> int:
             # _dl 是暫存：抽完即刪，避免 481 個 mod 的內容堆在磁碟上
             if item_dir is not None and _within_scratch(item_dir):
                 shutil.rmtree(item_dir, ignore_errors=True)
-        if done % 10 == 0:  # 每 10 個落一次 hash 基準（中斷不丟已完成的工作）
-            corpus_state["schema_version"] = SCHEMA_VERSION
-            corpus_state["extractor_schema"] = EXTRACTOR_SCHEMA
-            write_json(EN_CORPUS_HASHES_JSON, corpus_state)
-
-    corpus_state["schema_version"] = SCHEMA_VERSION
-    corpus_state["extractor_schema"] = EXTRACTOR_SCHEMA
-    write_json(EN_CORPUS_HASHES_JSON, corpus_state)
+    # **迴圈後不再重寫 state**：state-first 之後每輪成功迭代都已寫過同一份物件，失敗路徑
+    # 未動它（`corpus_state[wid] = new_state` 在 try 內、寫入前）。留著只是多一次 30MB
+    # 序列化，而且「全部 mod 都失敗」時會把頂層 `extractor_schema` 標記推進到新版——
+    # 明明沒有任何 per-mod 真的重抽過。
     print(f"\n完成 {done}/{len(todo)}；失敗 {len(failed)}")
     if failed:
         print("失敗清單（重跑本指令即續傳）：" + ",".join(failed))
@@ -2062,11 +2760,11 @@ def cmd_backfill_en(args) -> int:
 
 
 # ============================================================
-# 命令：self-test（十二情境 mock 測試，assert-based）
+# 命令：self-test（十五情境 mock 測試，assert-based）
 # ============================================================
 def cmd_self_test() -> int:
     print("=" * 60)
-    print("self-test：十二情境 mock 測試")
+    print("self-test：十五情境 mock 測試")
     print("=" * 60)
 
     def rec(kind, rel, key, val):
@@ -2404,7 +3102,314 @@ def cmd_self_test() -> int:
         assert load_upstream_json(clean) == ({"K": "a, b} c", "L": "[x,]"}, False), "情境14：正常檔誤走容錯"
     print("  ✅ 情境14 上游 JSON 尾逗號容錯（LF/CRLF 皆修、壞 JSON 不生記錄、字串值不被竄改）")
 
-    print("\n✅ self-test 十四情境全通過。")
+    # --- 情境15（schema 9）：script 物品顯示名缺口（#221）---------------------
+    # module 沒進 record 時 coverage 完全看不到這一類缺口：受影響的 mod 顯示
+    # en_gap=0、甚至不出現在報表裡，而玩家在物品欄看到一整批英文物品名
+    # （#184 是玩家附截圖才發現的個案；粗篩下限 6,758 鍵／108 個 mod）。
+    with tempfile.TemporaryDirectory() as td:
+        sdir = Path(td) / "common" / "media" / "scripts"
+        sdir.mkdir(parents=True)
+        (sdir / "items.txt").write_text(
+            "module Base\n{\n"
+            "    item Hammer\n    {\n        DisplayName = Big Hammer,\n    }\n"
+            "    craftRecipe Make Hammer\n    {\n        Output { item Base.Hammer, }\n    }\n"
+            "}\n"
+            "module FrockinSplendor {\n"
+            "    imports\n    {\n        Base\n    }\n"
+            "    item Hammer {\n        DisplayName = Fancy Hammer,\n    }\n"
+            "}\n"
+            "item Orphan\n{\n    DisplayName = No Module,\n}\n"
+            "module Dangling\n    Something = 1,\n{\n"
+            "    item Late\n    {\n        DisplayName = Late Item,\n    }\n"
+            "}\n"
+            # 行內註解真實存在（`module Rotators /* Legacy */`、`item X /* Spawn */`）：
+            # 連註解一起收進 key 會拼出不存在的 fullType＝虛報缺口（實測 67 筆／6 mod）
+            "module Rotators /* Legacy */\n{\n"
+            "    item Wheel /* Spawn */\n    {\n        DisplayName = Big Wheel,\n    }\n"
+            "}\n"
+            # `//` 形註解與「名字整個被註解吃掉」兩條路徑
+            "module Slashed // legacy\n{\n"
+            "    item Bolt // spawn\n    {\n        DisplayName = Steel Bolt,\n    }\n"
+            "    item /* nameless */\n    {\n        DisplayName = Nameless,\n    }\n"
+            "}\n"
+            # `module X` 與 `{` 之間空行是常見寫法，**不得**作廢 pending
+            "module Spaced\n\n{\n"
+            "    item Nut\n    {\n        DisplayName = Hex Nut,\n    }\n"
+            "}\n"
+            # 成對 `/* … */` 內的 item 在引擎眼中不存在（ScriptParser.stripComments）；
+            # 抽出來且落在 module 內就是**假缺口**（實測 Ahu_Blunt.txt 的 Sledgehammer_Broken）
+            "module Ghosted\n{\n"
+            "/*\n"
+            "    item Commented\n    {\n        DisplayName = Should Not Exist,\n    }\n"
+            "*/\n"
+            "    item Real\n    {\n        DisplayName = Real Item,\n    }\n"
+            "}\n"
+            # 未閉合 `/*` 引擎**不刪**（lastIndexOf(\"*/\") == -1 → while 不進、原文保留），
+            # 故其後的 item 照樣要抽到——遮到檔尾會憑空吃掉整批真 item
+            "/* 這個註解沒有結尾\n"
+            "module Unclosed\n{\n"
+            "    item Kept\n    {\n        DisplayName = Kept Item,\n    }\n"
+            "}\n"
+            # 引擎按字元逗號 token、不按行：同列 `item X { … }` 與同列多 property 都合法，
+            # 逐行版會整個漏掉（實測 192 筆／3 個 mod 的 item 連 record 都沒有＝假零缺口）
+            "module Inline\n{\n"
+            "    item Jacket01 { DisplayName = Inline Jacket, Hidden = true }\n"
+            "    item Multi\n    {\n        Type = Normal, DisplayName = Multi Prop,\n    }\n"
+            # 雙等號：`Item.Load` 取 split(\"=\")[1]（空字串）→ 引擎顯示空白，不是 `= Vepr`
+            "    item DoubleEq\n    {\n        DisplayName == Vepr Mag,\n    }\n"
+            # 沒有尾逗號＝引擎遇 `}` 直接 return，Value 從未建立 → 該 property 不套用
+            "    item NoComma\n    {\n        DisplayName = Never Applied\n    }\n"
+            "}\n"
+            # 同一行第二個 item（`}item X {`）與巢狀層的 item：前者是真物品、後者不是
+            # （ParseScriptPP 只把 module 頂層 token 交給 item bucket），depth gate 分得開
+            "module Tight\n{\n"
+            "    item First\n    {\n        DisplayName = First Blade,\n    }item Second\n"
+            "    {\n        DisplayName = Second Blade,\n    }\n"
+            "    craftRecipe Forge\n    {\n"
+            "        inputs\n        {\n            item PhantomInput\n            {\n"
+            "                DisplayName = Should Not Be A Product,\n            }\n"
+            "        }\n    }\n"
+            "}\n",
+            encoding="utf-8",
+        )
+        recs = _iter_script_records(Path(td))
+        dn = {r[2]: r[3] for r in recs if r[0] == "script_item_dn"}
+        # 同名 item 分屬兩個 module＝兩個不同物品；只記裸名會塌成一筆而互相遮蔽
+        assert dn.get("Base.Hammer") == "Big Hammer", f"情境15：module 歸屬錯誤：{dn}"
+        assert dn.get("FrockinSplendor.Hammer") == "Fancy Hammer", \
+            f"情境15：同檔第二個 module 未各自歸屬（不能只取檔內第一個）：{dn}"
+        # module 外的 item 標記為不可判定；**不得**回退成裸名——裸名混進 fullType 集後，
+        # 「解析漏判」與「該物品真的不存在」就再也分不開＝缺口又隱形
+        assert dn.get("?.Orphan") == "No Module", f"情境15：module 外 item 未標記：{dn}"
+        # `module Dangling` 沒接區塊 → pending 必須立刻作廢，否則後面第一個頂層 `{`
+        # 會被誤認成它的起點，產出**看似有效卻錯誤**的 fullType（比未解出更糟）
+        assert dn.get("?.Late") == "Late Item", f"情境15：懸空 module 標頭被誤配：{dn}"
+        assert dn.get("Rotators.Wheel") == "Big Wheel", \
+            f"情境15：區塊名／module 名的行內註解未剝除（會拼出不存在的 fullType）：{dn}"
+        # 同一行第二個 item 必須抽到（行首錨定版會漏；實測 workshop 命中 1 筆）
+        assert dn.get("Tight.First") == "First Blade" and dn.get("Tight.Second") == "Second Blade", \
+            f"情境15：同一行第二個 item 漏抽（`}}item X {{`）：{dn}"
+        # 巢狀層的 item 不是物品定義，拼成 fullType 就是 phantom（無 gate 會多收 6,190 筆）
+        assert not any("PhantomInput" in r[2] for r in recs), \
+            f"情境15：巢狀層的 item 被誤收成物品：{[r[2] for r in recs if 'Phantom' in r[2]]}"
+        # `//` 依 CreateFromTokenPP 屬於名字的一部分，不得剝除
+        assert dn.get("Slashed // legacy.Bolt // spawn") == "Steel Bolt", \
+            f"情境15：`//` 被當成註解剝掉（引擎不認 `//`，剝了就偏離實際 fullType）：{dn}"
+        # 配方名走 getRecipeName(裸區塊名)；加前綴會讓 verify_dist [16] 的上游實據對不上
+        assert "Ghosted.Commented" not in dn and "Should Not Exist" not in dn.values(), \
+            f"情境15：跨行 /* */ 內的 item 被抽成 record（會變成假缺口）：{dn}"
+        assert dn.get("Ghosted.Real") == "Real Item", \
+            f"情境15：註解遮蔽把同 module 的真 item 一起吃掉了：{dn}"
+        assert dn.get("Unclosed.Kept") == "Kept Item", \
+            f"情境15：未閉合 /* 被遮到檔尾（引擎不刪，這裡也不該刪）：{dn}"
+        rel = "common/media/scripts/items.txt"
+        assert ("script_craftRecipe", rel, "Make Hammer", "Make Hammer") in recs, \
+            "情境15：craftRecipe 不得帶 module 前綴"
+        assert all("." in r[2] for r in recs if r[0] == "script_item"), \
+            "情境15：script_item 一律帶 module 段"
+        assert not any(r[2].endswith(".") or r[2] == "?." for r in recs if r[0] == "script_item"), \
+            f"情境15：`item /* x */` 解不出名字時不得記成空鍵：{[r[2] for r in recs]}"
+        assert dn.get("Spaced.Nut") == "Hex Nut", \
+            f"情境15：`module X` 與 `{{` 之間的空行被誤判為作廢：{dn}"
+        # 引擎按字元逗號 token、不按行：同列 `{`、同列多 property 都要抽得到
+        assert dn.get("Inline.Jacket01") == "Inline Jacket", \
+            f"情境15：同列 `item X {{ … }}` 整個被漏掉（假零缺口的來源）：{dn}"
+        assert dn.get("Inline.Multi") == "Multi Prop", \
+            f"情境15：同列多 property 的 DisplayName 抽不到（regex 錨在行首）：{dn}"
+        # `DisplayName == X` 的 split("=")[1] 是空字串 → 引擎顯示空白，不得抽成 `= X`
+        assert "Inline.DoubleEq" not in dn, \
+            f"情境15：雙等號的空值被誤抽成整段 RHS：{dn.get('Inline.DoubleEq')!r}"
+        # 無尾逗號的 property 引擎不套用（遇 `}` 直接 return，Value 從未建立）
+        assert "Inline.NoComma" not in dn, \
+            f"情境15：無尾逗號的 DisplayName 仍被收錄（引擎其實不套用）：{dn.get('Inline.NoComma')!r}"
+        assert ("script_item", rel, "Inline.NoComma", "Inline.NoComma") in recs, \
+            "情境15：item 本身仍須有 record（只是沒有 DisplayName）"
+
+    # 大括號配對向上失準（行尾註解／屬性值裡的裸 `{`）：depth 回不到 0 會讓後續 module
+    # 標頭永遠不被辨識，其 item 沿用前一個 module 名而拼出**看似有效卻錯誤**的 fullType
+    # （錯 module 可能剛好命中另一個已出貨鍵 → 真缺口再次靜默）。必須退化成可見盲區。
+    poisoned = _module_by_line([
+        "module A",
+        "{",
+        "    item X",
+        "    {",
+        "        Tags = Foo, // 這裡有個沒配對的 {",
+        "    }",
+        "}",
+        "module B",
+        "{",
+        "    item Y",
+        "    {",
+        "    }",
+        "}",
+    ])
+    assert poisoned[10] is None, \
+        f"情境15：大括號失準後 module B 的 item 被錯歸屬（應退化為 UNKNOWN_MODULE）：{poisoned}"
+
+    # record id 的分支 tag：決定同鍵在 common 與版本夾都定義時誰勝出
+    assert _branch_tag("script_item_dn|mods/M/common/media/scripts/i.txt|Base.X") == "common"
+    assert _branch_tag("script_item_dn|mods/M/42.15/media/scripts/i.txt|Base.X") == "42.15"
+    assert _branch_tag("script_item_dn|generated/i.txt|Base.X") == "", "情境15：非分支路徑應回空"
+
+    # 精確比對：前綴死鍵與無 module 段的鍵都不算覆蓋（getItemNameFromFullType 查不到）
+    assert _is_runtime_item_key("Base.Dress"), "情境15：裸 fullType 應算覆蓋"
+    assert not _is_runtime_item_key("ItemName_Base.Dress"), "情境15：B41 前綴死鍵不算覆蓋"
+    assert not _is_runtime_item_key("Dress"), "情境15：無 module 段不可能是 fullType"
+    dn_keys = {"Base.Hammer", "Base.Axe", "Base.Dress", "Base.Plain", "?.Orphan", "Base.NoText"}
+    dn_text = {"Base.Hammer": "Big Hammer", "Base.Axe": "Fire Axe", "Base.Dress": "Red Dress",
+               "Base.Plain": "Plain", "?.Orphan": "Orphan"}
+    st = _item_dn_stats(EXTRACTOR_SCHEMA, dn_keys, dn_text, {"Base.Hammer"}, {"Base.Axe"})
+    assert st["gap"] == {"Base.Dress"}, f"情境15：缺口判定錯誤（已出貨/vanilla/id-only 未扣）：{st}"
+    assert st["idonly"] == 1, f"情境15：DisplayName 等於 item id 未扣除：{st}"
+    assert st["blind"] == 2 and st["why"], f"情境15：盲區未計數或無可讀原因：{st}"
+    # `kinds` 是 cmd_coverage 分流訊息的依據（schema／鏡像缺值可靠重抽消除，`?.` 不行）；
+    # **每條回傳路徑都必須帶它**，缺一即 cmd_coverage 在混合 schema 實跑時 KeyError
+    assert st["kinds"] == {"unknown_module", "mirror"}, f"情境15：kinds 分類錯誤：{st}"
+    # 已出貨／vanilla 的鍵即使 DisplayName 等於 item id 也不得計入 idonly，否則報表的
+    # 「另扣除 N 筆」會虛胖成「所有 id-only 鍵」而失去意義
+    same = _item_dn_stats(EXTRACTOR_SCHEMA, {"Base.Same"}, {"Base.Same": "Same"},
+                          {"Base.Same"}, set())
+    assert same["gap"] == set() and same["idonly"] == 0, f"情境15：idonly 計數虛胖：{same}"
+    # 舊 schema 的 key 沒有 module → **全判不可判定**，不得當成零缺口（backfill 會略過
+    # 已下架項目、失敗項也保留舊 state，故混合 schema 必然存在）
+    for stale in (ITEM_MODULE_SCHEMA - 1, None, "9"):
+        old = _item_dn_stats(stale, dn_keys, dn_text, {"Base.Hammer"}, {"Base.Axe"})
+        assert old["gap"] == set() and old["blind"] == len(dn_keys), \
+            f"情境15：schema={stale} 應全判不可判定：{old}"
+        assert old["kinds"] == {"schema"}, f"情境15：舊 schema 的 kinds 缺失：{old}"
+    # 沒有 script 物品的舊基準 mod 不是盲區——對它們報「不可判定」會用數百筆雜訊
+    # 把真正的 `?.` 與鏡像缺值擠出預覽（混合 schema 是常態，這種 mod 佔多數）
+    empty = _item_dn_stats(ITEM_MODULE_SCHEMA - 1, set(), {}, set(), set())
+    assert empty["why"] is None and empty["blind"] == 0 and empty["kinds"] == set(), \
+        f"情境15：無 script 物品的舊基準 mod 被誤列為盲區：{empty}"
+    # 上游 property 沒收尾逗號時，引擎的 split("=")[1] 會把下一欄名稱吃進值——那串垃圾
+    # 不能當翻譯來源，須計為不可判定且**不得**被歸類成「重抽即消除」
+    bad = _item_dn_stats(EXTRACTOR_SCHEMA, {"Base.Junk"},
+                         {"Base.Junk": "junkname\n\t\tIcon"}, set(), set())
+    assert bad["gap"] == set() and bad["kinds"] == {"malformed"}, \
+        f"情境15：上游 DisplayName 夾帶下一欄未計為 malformed 不可判定：{bad}"
+    # 上游把 DisplayName 留空＝沒有真英文名可譯，與「值等於 item id」同一條扣除線；
+    # 判定必須留在共用函式，consumer 自行加濾網會讓 dn_gap 與 _gap 分岔。
+    blank = _item_dn_stats(EXTRACTOR_SCHEMA, {"Base.Blank"}, {"Base.Blank": "  "},
+                           set(), set())
+    assert blank["gap"] == set() and blank["idonly"] == 1 and blank["kinds"] == set(), \
+        f"情境15：空白 DisplayName 未併入 idonly 扣除：{blank}"
+    # backfill 續跑判準：只看「檔案存在」會在鏡像已新、state 仍舊時判成永久完成，
+    # 而 coverage 以舊 state 當宇宙 → 新增/改動的 item 既不進 gap 也不進 blind（#221）。
+    with tempfile.TemporaryDirectory() as td:
+        mp = Path(td) / "1.json"
+        rid_a = "translate_en|mods/M/42.20/media/lua/shared/Translate/EN/UI.json|UI_A"
+        rid_b = "script_item_dn|mods/M/42.20/media/scripts/i.txt|Base.X"
+        texts = {rid_a: "Alpha", rid_b: "Big X"}
+        good = {"extractor_schema": EXTRACTOR_SCHEMA, "records": records_to_map([
+            ("translate_en", "mods/M/42.20/media/lua/shared/Translate/EN/UI.json", "UI_A", "Alpha"),
+            ("script_item_dn", "mods/M/42.20/media/scripts/i.txt", "Base.X", "Big X"),
+            ("script_item", "mods/M/42.20/media/scripts/i.txt", "Base.X", "Base.X"),
+        ])}
+        assert not backfill_done(good, mp), "情境15：鏡像缺檔不得判完成"
+        write_json(mp, texts)
+        assert backfill_done(good, mp), "情境15：state 與鏡像一致卻判未完成"
+        # 值變、鍵集不變——只比鍵集會漏掉這種（上游只改文本的情形佔多數）
+        write_json(mp, {**texts, rid_b: "Bigger X"})
+        assert not backfill_done(good, mp), "情境15：值 hash 不符仍判完成（只比了鍵集）"
+        # 鍵集不符
+        write_json(mp, {rid_a: "Alpha"})
+        assert not backfill_done(good, mp), "情境15：鏡像少一個 rid 仍判完成"
+        assert not backfill_done({**good, "extractor_schema": EXTRACTOR_SCHEMA - 1}, mp), \
+            "情境15：舊 schema 不得判完成"
+        # 純 script_item/craftRecipe 的 mod 合法無鏡像檔；語料整個為空亦然
+        only_ids = {"extractor_schema": EXTRACTOR_SCHEMA,
+                    "records": {"script_item|mods/M/42.20/media/scripts/i.txt|Base.X": "aa"}}
+        assert backfill_done(only_ids, Path(td) / "nope.json"), \
+            "情境15：全是不進鏡像的 kind 時無鏡像檔是合法完成狀態"
+        assert backfill_done({"extractor_schema": EXTRACTOR_SCHEMA, "records": {},
+                              "empty_corpus": True}, Path(td) / "nope.json"), \
+            "情境15：empty_corpus 是合法完成狀態"
+        # 上游把文本全數移除時，殘留的舊鏡像必須讓判定退回未完成（否則永遠不會被清）
+        assert not backfill_done(only_ids, mp), \
+            "情境15：state 宣告無文本卻有殘留舊鏡像，仍被判完成"
+        # 新增的容器／rid 守衛：壞損 state 被判「已完成」會鎖死修復路徑——prep 的
+        # `_unchecked` 叫人跑 backfill-en，這裡又跳過，不加 `--force` 永遠修不好。
+        # **每條的其餘條件都要與「會判完成」的形狀一致**，守衛才是唯一的失敗原因：
+        #   * 容器守衛：`records` 非 dict 且**鏡像不存在**——退化成 `recs or {}` 時
+        #     `bool(recs)` 為真、`want` 為空，就會回 True（判完成）。
+        #   * rid 守衛：壞 rid 是 text-bearing、且**鏡像內容與它完全對齊**——退化成不驗
+        #     形狀時 `want == set(mir)` 且 hash 相符，就會回 True。
+        # 外層容器也要驗：`st` 非 dict 會在 `.get()` 拋 AttributeError；鏡像頂層為
+        # `null` 會在 `set(mir)` 拋 TypeError。兩者都發生在 `cmd_backfill_en` 建 `todo`
+        # 時＝per-mod 失敗處理之前，整批直接中止。
+        for _bad_st in (None, ["x"], "s", 3):
+            assert not backfill_done(_bad_st, mp), f"情境15：st={_bad_st!r} 竟判完成"
+        _nulm = Path(td) / "nullmirror.json"
+        _nulm.write_text("null", encoding="utf-8")
+        assert not backfill_done(good, _nulm), "情境15：鏡像頂層為 null 竟判完成（會拋 TypeError）"
+        _nope = Path(td) / "nope2.json"
+        assert not backfill_done({"extractor_schema": EXTRACTOR_SCHEMA,
+                                  "records": ["not", "a", "dict"]}, _nope), \
+            "情境15：records 非 dict 竟判完成（壞損 state 會被永久略過）"
+        for _bad_rid in ("translate_en|only-two-segments",
+                         f"bogus_kind|mods/M/42.20/media/scripts/i.txt|Base.X",
+                         "translate_en|mods/M/42.20/media/lua/shared/Translate/EN/UI.json|"):
+            _bp = Path(td) / "badrid.json"
+            write_json(_bp, {_bad_rid: "V"})
+            assert not backfill_done({"extractor_schema": EXTRACTOR_SCHEMA,
+                                      "records": {_bad_rid: value_hash("V")}}, _bp), \
+                f"情境15：壞損 rid 竟判完成（{_bad_rid!r}）"
+        # `lua_gettext` 的空 key 是合法上游寫法（`getText("")`，全庫實測 3 筆），不得因空
+        # key 就判壞損——否則那 2 個 mod 每輪都重抽。（先把鏡像寫回一致狀態：上面的
+        # 「鍵集不符」斷言留下了殘缺鏡像。）
+        write_json(mp, texts)
+        assert backfill_done({"extractor_schema": EXTRACTOR_SCHEMA, "records": {
+            **good["records"], "lua_gettext|mods/M/42.20/media/lua/a.lua|": "cc"}}, mp), \
+            "情境15：`lua_gettext` 的合法空 key 被判壞損（那 2 個 mod 會每輪重抽）"
+        # **能力邊界要有測試釘住**：只改非鏡像 kind 時鏡像不變，`backfill_done` 必然判
+        # 「已完成」——關住這個窗口的是 state-first 每 mod 落盤，不是本函式。這條斷言的
+        # 意義是讓「把它改回批次 checkpoint / 鏡像先寫」的人看到自己在拆哪一道防線。
+        write_json(mp, texts)
+        plus_lua = {**good, "records": {**good["records"],
+                                        "lua_gettext|mods/M/42.20/media/lua/a.lua|UI_New": "cc"}}
+        assert backfill_done(plus_lua, mp), \
+            "情境15：非鏡像 kind 的增量本就不影響鏡像；此判定由 state-first 落盤負責"
+        # state↔鏡像 coherence：鏡像領先（backfill 中斷殘跡）會讓宇宙少鍵、缺口低報成零
+        assert mirror_incoherent_rids(good["records"], {**texts, "script_item_dn|p|Base.New": "N"}) \
+            == {"script_item_dn|p|Base.New"}, "情境15：未偵測到鏡像領先 state"
+        assert mirror_incoherent_rids(good["records"], texts) == set(), \
+            "情境15：一致的 state/鏡像被誤報為不一致"
+        assert mirror_incoherent_rids(plus_lua["records"], texts) == set(), \
+            "情境15：state 有而鏡像沒有屬 backfill_done 職責，不該由本函式報"
+        # **同 rid 值 hash 不符**是 state-first 唯一還開著的窗口（鏡像寫入失敗／人工改檔），
+        # 只驗鍵集會放行過期英文當翻譯來源，且 id-only／malformed 判定也會用錯值。
+        assert mirror_incoherent_rids(good["records"], {**texts, rid_b: "Bigger X"}) == {rid_b}, \
+            "情境15：同 rid 值 hash 不符未被偵測（只比了鍵集）"
+        assert mirror_incoherent_rids(good["records"], {**texts, rid_b: 123}) == {rid_b}, \
+            "情境15：鏡像值非字串未被偵測"
+    # winner 語意：勝出 rid 由 state 決定（同 owner 內 common 先、版本夾後），勝出者缺值
+    # 即整鍵不入——**絕不回退 common 舊值**（否則拿低優先序的過期英文當翻譯來源）。
+    # coverage 側沒有其他測試碰到這支 helper，改壞了 prep 的 4s/4t 才會紅，太遠。
+    _c = "mods/M/common/media/scripts/i.txt"
+    _v = "mods/M/42.20/media/scripts/i.txt"
+    _recs = {f"script_item_dn|{_c}|Base.X": "h1", f"script_item_dn|{_v}|Base.X": "h2"}
+    _eff = resolve_effective_branches(_recs)
+    assert winning_dn_text(_recs, {f"script_item_dn|{_c}|Base.X": "Common",
+                                   f"script_item_dn|{_v}|Base.X": "Versioned"},
+                           _eff) == {("M", "Base.X"): "Versioned"}, \
+        "情境15：版本夾未疊在 common 之上"
+    assert winning_dn_text(_recs, {f"script_item_dn|{_c}|Base.X": "Common"}, _eff) == {}, \
+        "情境15：勝出 rid 缺值卻回退用 common 的舊值"
+    assert winning_dn_text(_recs, {f"script_item_dn|{_c}|Base.X": "Common",
+                                   f"script_item_dn|{_v}|Base.X": 123}, _eff) == {}, \
+        "情境15：勝出 rid 值非字串卻回退"
+    # 同 wid 兩個 mod root 各自獨立（跨 root 選單一 winner 會讓 A 遮掉 B 的缺值判定）
+    _n = "mods/N/42.20/media/scripts/i.txt"
+    assert winning_dn_text({**_recs, f"script_item_dn|{_n}|Base.X": "h3"},
+                           {f"script_item_dn|{_v}|Base.X": "V",
+                            f"script_item_dn|{_n}|Base.X": "N"},
+                           resolve_effective_branches(
+                               {**_recs, f"script_item_dn|{_n}|Base.X": "h3"})) == {
+        ("M", "Base.X"): "V", ("N", "Base.X"): "N"}, "情境15：owner 未分開"
+    print("  ✅ 情境15 script 物品名 fullType（多 module／懸空標頭／盲區計數／精確比對／winner）")
+
+    print("\n✅ self-test 十五情境全通過。")
     return 0
 
 
@@ -2419,7 +3424,7 @@ def main() -> None:
 使用範例：
   uv run scripts/tracker.py gen-watchlist          # 由 sources/mods/ 生成 watchlist.json（含 As1）
   uv run scripts/tracker.py --dry-run --limit 5    # 真打 API 查 5 個時間戳，不下載/不開 issue
-  uv run scripts/tracker.py self-test              # 十四情境 mock 測試
+  uv run scripts/tracker.py self-test              # 十五情境 mock 測試
   uv run scripts/tracker.py check  --out c.json    # workflow check job
   uv run scripts/tracker.py diff   --in c.json --out d.json --steamcmd <path>
   uv run scripts/tracker.py issue  --in d.json     # workflow issue+state job

@@ -3,7 +3,7 @@
 # 存在理由：`scripts/test_*.py` 這批 gate 過去**沒有任何自動執行者**——repo 唯一的
 # workflow 是 track_upstreams.yml，它只跑 tracker.py。AGENTS.md 因此明載「這（當時的）10 支
 # 測試全靠收尾驗證階段人工跑。要讓它真的攔得住漏跑，得另外接 CI」。本檔就是那個 CI。
-# 下方清單為現行計數（11 支），與該歷史引述的 10 不同是正常的——後續新增測試會續增。
+# 下方清單為現行計數（14 支），與該歷史引述的 10 不同是正常的——後續新增測試會續增。
 #
 # 實際漏掉過的例子：
 #   * c8f5064（排程刷新 sources/en）→ SUPPORTED_MODS.md 的「覆寫本體」欄靜默過期一整天，
@@ -50,12 +50,15 @@ jobs:
         run: |
           set -u
           tests=(
+            test_apply_gates
+            test_backfill_writeorder
             test_ch_lane
             test_format_tokens
             test_itemname_dead_keys
             test_manifest_fresh
             test_own_cn_glyphs
             test_own_lane
+            test_prep_item_dn
             test_recipe_dead_keys
             test_serialization
             test_unshipped_keys
@@ -79,7 +82,7 @@ jobs:
           fi
           echo "✅ ${#tests[@]} 支回歸測試全過"
 
-      # tracker 自身的十四情境 mock 測試（純記憶體，不碰網路與 git 遠端）
+      # tracker 自身的十五情境 mock 測試（純記憶體，不碰網路與 git 遠端）
       - name: tracker self-test
         run: uv run scripts/tracker.py self-test
 

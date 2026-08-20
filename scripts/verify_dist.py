@@ -1621,9 +1621,12 @@ RECIPE_BLOCKS_MIN = 1000
 
 # `script_craftRecipe` 抽取完整性的最低 per-mod schema。`tracker.EXTRACTOR_SCHEMA=5` 起
 # 「掃**全部** media/scripts 目錄」——先前只取第一個，多版本目錄的 mod 會漏掉其餘目錄的
-# 區塊名。schema 6/7/8 的變更只動 Lua 與 Translate JSON 解析，不影響 script 抽取，故 >=5
-# 即完整。低於此者的區塊名清單可能殘缺，gate 會對它們的 legacy 鍵誤判「無實據」＝**局部
-# 漏報**，而 RECIPE_BLOCKS_MIN 是總量門檻、抓不到這種。
+# 區塊名。schema 6/7/8 的變更只動 Lua 與 Translate JSON 解析，不影響 script 抽取；schema 9
+# 動了 script 抽取（item key 改帶 module、區塊名剝除行內註解），但 craftRecipe 的區塊名
+# **零影響**——實測 13,776 個 craftRecipe 記錄無一含行內註解，且加 module 前綴刻意只套在
+# item 系列（配方名走 `getRecipeName(裸區塊名)`）。故門檻仍為 >=5。低於此者的區塊名清單
+# 可能殘缺，gate 會對它們的 legacy 鍵誤判「無實據」＝**局部漏報**，而 RECIPE_BLOCKS_MIN
+# 是總量門檻、抓不到這種。
 # 刻意判 WARN 而非 FAIL：schema 落後是**正常狀態**（tracker 只在該 mod 有更新時重抽，
 # 沒更新就一直停在舊 schema），硬 FAIL 會讓 gate 永遠紅、逼人做與本次變更無關的
 # backfill。要消除盲區跑 `tracker.py backfill-en` 或等該 mod 更新。
