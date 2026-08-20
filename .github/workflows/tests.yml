@@ -82,6 +82,11 @@ jobs:
           fi
           echo "✅ ${#tests[@]} 支回歸測試全過"
 
+      # owner census 全庫裁決閘門：不產生翻譯待辦，只驗 decision／unship signature 與
+      # 衝突消失後的退役訊號。正式 build/verify 不讀 tracker census，這道 CI 不可省。
+      - name: owner conflict decisions
+        run: uv run scripts/prep_mod_strings.py --check-decisions --out /tmp/owner-decisions.json
+
       # tracker 自身的十五情境 mock 測試（純記憶體，不碰網路與 git 遠端）
       - name: tracker self-test
         run: uv run scripts/tracker.py self-test

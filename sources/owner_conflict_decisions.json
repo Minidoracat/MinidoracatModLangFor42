@@ -1,4 +1,479 @@
 {
- "_comment": "owner 衝突的人工裁決台帳。key = \"<落點檔>|<鍵>\"。每條需四欄，缺一即視為過時：signature（該鍵完整 census 簽名，算法見 prep_mod_strings.census_signature()：sorted((owner, raw_en)) 的 canonical JSON sha256[:16]）、reason（非空，記怎麼裁的）、ch 與 cn（裁決當下的出貨譯文錨點，本包雙語出貨故兩側都要）。prep_mod_strings 只在四項全符且該鍵已出貨時放行（改列 _owner_conflicts_resolved report-only）；owner 增減、上游改值、缺 reason、譯文未出貨、或出貨 ch/cn 任一漂移，一律維持 blocking 要求重新裁決。",
- "entries": {}
+ "_comment": "owner 衝突人工裁決台帳。translate：signature/reason/ch/cn 四項全符且已出貨才放行；unship：action=unship、signature/reason 全符，且 unshipped_keys.json 的對應條目owner_signature 相符、ItemName 前綴孿生鍵已同步登記（其 owner_signature 錨孿生鍵自身 census）、dist 已重建移除該鍵才放行。owner 增減、上游改值或錨點漂移一律重新 blocking。",
+ "entries": {
+  "ItemName|Base.Glock23": {
+   "action": "unship",
+   "signature": "cb64e0e8ae91b4d1",
+   "reason": "2026-08-20 #230 裁決不出貨：多 owner 以同一 key 表示不同槍。3183820077/Guns93Test 是 Glock 23（script 另寫 Glock 22），3616176188/GaelGunStore 與 3623297453/Legacy 則是 USP-45；廠牌、型號、口徑皆不同，沒有誠實中性譯名，JSON 又無啟用偵測。"
+  },
+  "ItemName|Base.1000Tank1": {
+   "action": "translate",
+   "signature": "fb9d6b1fb65c832b",
+   "reason": "兩個 owner 都是「油罐車用 1000 容量儲油罐」這個同一類車輛零件：PZKVanillaPlusCarPack 定義在 FuelTruckTanks_vehiclesitems.txt（同檔另有 250/500/1000Tank1~8 系列，丙烷與水罐則走 1000PropaneTank1、*_Water_Tank1 等別的 key），tsarslib 定義在 template_TruckTank.txt 並自帶 ContextMenu「Fill Gasoline Storage Tank From Fuel Truck/Pump」，可確認同為汽油罐。英文差異只是命名風格（generic「Storage Tank」vs 帶容量的「Tank 1000」），非不同實體，現行中性譯名對兩者皆成立。唯一保留：容量單位「L」上游都沒寫（tsarslib 刻意用無單位的「Tank 1000」），屬全家族既有慣例問題而非 owner 衝突；Base.500Tank1~3、Base.1000Tank2~3 已全部出貨為「500L/1000L儲油罐」，只改這一鍵會製造家族不一致，故建議維持現值，把單位查證另案處理。",
+   "ch": "1000L儲油罐",
+   "cn": "1000L储油罐"
+  },
+  "ItemName|Base.22Bullets": {
+   "action": "translate",
+   "signature": "9916ca4de28ab82c",
+   "reason": "兩者同為 .22 LR 邊緣底火彈：Guns93Test 明寫 '.22 LR Round'（同族 Base.22Box='Box of .22 LR Rounds'、Base.22BulletsBrass='.22 LR Empty Brass'）；VFE 雖只寫 '.22 Round'，但其 .22 槍械是 Ruger Mk2（Base.MK2）與 R1022（Base.1022，即 Ruger 10/22）、M15-22、CP33，全為 .22 LR 平台，可確認同一彈種。英文差異僅在有無標註 LR，屬命名精度差異。現行 '.22彈藥' 未宣稱任何獨有規格，對兩 owner 都成立，且與已出貨的 Base.22Box='.22彈藥 (整盒)'、Base.22Carton='.22彈藥 (整件)' 同族一致，建議維持。",
+   "ch": ".22彈藥",
+   "cn": ".22弹药"
+  },
+  "ItemName|Base.45Silencer": {
+   "action": "translate",
+   "signature": "15bdc83cdb61bd64",
+   "reason": "三個 owner（Firearms 與 FirearmsBETA 為同一 wid 的兩個 mod root，值完全相同；Guns93Test）都是「.45 口徑消音器」這個同一實體，口徑一致、無型號衝突。英文差異只在是否附加用途詞：Firearms 用 '.45 Suppressor'，Guns93Test 用 'Pistol Silencer (.45 cal)'。現行 '.45消音器' 刻意不寫「手槍」是正確選擇——Guns93Test 自己的 Tooltip_45Silencer 說明它也能裝在多數步槍口徑上（只是耗損較快），寫死「手槍」會偏向 Guns93 的分類而對 Firearms 與實際功能都不精確。與已出貨的 Base.9mmSilencer='9mm消音器'、Base.10mmSilencer='10mm消音器' 同族格式一致，建議維持。",
+   "ch": ".45消音器",
+   "cn": ".45消音器"
+  },
+  "ItemName|Base.545Box": {
+   "action": "translate",
+   "signature": "068072e7c9868735",
+   "reason": "兩者同為 5.45×39mm 盒裝彈：VFES 寫 'Box of 5.45mm Rounds'，Escape from Kentucky 寫 'Boxed 5.45×39mm Ammo'（其同族 Base.545Bullets='5.45×39mm Cartridge'、Base.545Clip='5.45×39mm 30-Round Magazine'）。5.45mm 在 PZ 生態中唯一對應 5.45×39，屬同一彈種的不同標註粒度，非不同實體。現行譯名不宣稱裝彈數（兩 owner 都沒給盒內發數），也不寫死 ×39，對兩者皆成立；與已出貨的 Base.545Bullets='5.45mm彈藥'、Base.545Carton/Case/Crate/Pack 同族格式一致，建議維持。",
+   "ch": "5.45mm彈藥 (整盒)",
+   "cn": "5.45mm弹药 (整盒)"
+  },
+  "ItemName|Base.63beetleFrontSeat1": {
+   "action": "translate",
+   "signature": "f75477fc79cd7efd",
+   "reason": "這不是兩台車的不同座椅，而是同一張金龜車座椅被兩個 mod 共用：63Type2Van 的 63Type2Van_vehiclesitems.txt 自己把 Base.63beetleFrontSeat1 / Base.63beetleRearSeat1 宣告為 '63 VW Type 1 Front/Rear Seat'——它所有自家零件都叫 '63 VW Type 2 ...'，唯獨座椅沿用 beetle 前綴與 Type 1 命名，證明是刻意重用 Type 1（金龜車）座椅資產。VW 1300 = Type 1 = Beetle，兩邊英文指的是同一實體（一邊用引擎排氣量標註、一邊用車型代號標註）。CH「金龜車」與 CN「Type1」雖然用詞策略不同，但各自都是該語區對 VW Type 1 的既有處理，且與同族 27 個 Base.63beetle* 鍵（車身套件、保險桿、車門…）完全一致，單改此鍵會破壞家族一致性，建議維持。",
+   "ch": "63款福斯金龜車前座椅",
+   "cn": "63款大众Type1前座椅"
+  },
+  "ItemName|Base.792Box": {
+   "action": "translate",
+   "signature": "30c8a5b310240b90",
+   "reason": "7.92mm 與 8mm Mauser 是同一彈種（7.92×57mm Mauser）的兩種標註法，不是兩種彈：Guns93Test 的 script 原名就是 'Box of 7.92x57 Mauser Rounds'，自家 ItemName 才改標成 '8mm Mauser'；WarThunderVehicleLibrary 的 7.92mm 用於 IGUI_MainGun792mm『7.92mm Machine Gun』，即德系 7.92×57 機槍彈。功能上一邊是步槍彈盒、一邊是車載機槍彈盒，但同 key 即同一 item（載入時只有一份 script 定義生效），名稱層無誠實性問題。現行值與已出貨同族（Base.792Bullets/792Carton/792BulletsBrass 全用 '8mm Mauser'）一致，另有獨立的 Base.792x57* 家族使用 '7.92x57mm' 寫法，故此鍵維持現值即可，不建議單獨改成 7.92mm 造成家族分裂。",
+   "ch": "8mm Mauser子彈 (整盒)",
+   "cn": "8mm Mauser子弹 (整盒)"
+  },
+  "ItemName|Base.AK47": {
+   "action": "translate",
+   "signature": "458b1255e32a37d9",
+   "reason": "三個 owner（Firearms / FirearmsBETA 同 wid 兩 root，值相同；VFE）都是 7.62×39 的 AK-47 本體，同型號同口徑。英文差異只是有無後綴類別詞（'AK-47' vs 'AK-47 Assault Rifle'）。VFE 對應彈匣 Base.762Clip='AK-47 Magazine'、Firearms 為 Base.AK_Mag='AK-47 Magazine'，皆同一槍。現行譯名不含任何 owner 專屬型號/廠牌宣稱，與已出貨的 Base.AK47Folded/Unfolded、Base.762Clip、Base.AK_Mag 同族一致，建議維持。",
+   "ch": "AK-47自動步槍",
+   "cn": "AK-47自动步枪"
+  },
+  "ItemName|Base.CZ75": {
+   "action": "translate",
+   "signature": "4eff78ba6c3f3e54",
+   "reason": "三個 owner 指的是同一把 9mm CZ 75 手槍，而且巧合的是連自帶英文都收斂到同一字串：GaelGunStore 與其 Legacy 版的 script DisplayName 是 'CZ75 Pistol'，但兩者自家 ItemName 覆寫成 'CZ 75 Pistol'，與 VFE 的 'CZ 75 Pistol' 完全相同（工作包 values 取的是 script 值，故看起來有差）。GGS 的 Base.Clip_CZ75='Clip 9mm 15round' 亦確認為 9mm。「捷克」對應 CZ = Česká zbrojovka，對三 owner 皆成立，無型號/口徑衝突，建議維持。",
+   "ch": "捷克CZ75手槍",
+   "cn": "捷克CZ75手枪"
+  },
+  "ItemName|Base.FAL": {
+   "action": "translate",
+   "signature": "7acdf2e0cdab499e",
+   "reason": "四個 owner 都是 FN FAL 本體（7.62 NATO/.308 級），無型號或口徑分歧：Guns93Test 'FN FAL'（Base.FALMag='FN FAL Magazine (.308 Win)'）、GaelGunStore 與 Legacy 自家 ItemName 'FN FAL Rifle'、VFE 'FAL Battle Rifle'。英文差異只在廠牌前綴與類別詞（Battle Rifle vs 無）。FAL 為 FN（Fabrique Nationale de Herstal）產品，寫「赫斯塔爾」不是偏向某 owner 的宣稱，且與已出貨的 Base.FALClassic、Base.FALClip、Base.FALMag、Base.FAL_CQB 同族用法一致。註：GGS 的 FAL CQB 走獨立 key Base.FAL_CQB，不會混淆。建議維持。",
+   "ch": "赫斯塔爾FAL自動步槍",
+   "cn": "赫斯塔尔FAL自动步枪"
+  },
+  "ItemName|Base.M249": {
+   "action": "translate",
+   "signature": "3d11a87a96e93f55",
+   "reason": "兩個 owner 都是 FN M249 5.56/.223 輕機槍：Guns93Test 'FN M249'（彈藥箱 Base.M249Box='M249 Ammo Box (Belted .223)'）、VFES 'M249 Light Machinegun'（彈藥箱 Base.556box100='M249 Box'）。英文差異只是廠牌前綴 vs 類別後綴，同一實體。現行譯名同時保留廠牌與類別，對兩者皆成立；與已出貨的 Base.556box100='赫斯塔爾M249輕機槍彈藥箱'、Base.M249Box='M249彈藥箱 (.223彈鏈)' 一致，建議維持。",
+   "ch": "赫斯塔爾M249輕機槍",
+   "cn": "赫斯塔尔M249轻机枪"
+  },
+  "ItemName|Base.MAC10Mag": {
+   "action": "translate",
+   "signature": "fd7ca9bbc251dde8",
+   "reason": "同物中性裁決：Firearms 為 MAC 10 Magazine，Guns93 為 30rd Cobray MAC-10 Magazine (.45 Auto)；兩者都是 MAC-10 的 .45 ACP 彈匣。移除 owner 專屬廠牌，採 MAC-10衝鋒槍彈匣，與本批已中性化的 Base.MAC10='MAC-10衝鋒槍' 一致。",
+   "ch": "MAC-10衝鋒槍彈匣",
+   "cn": "MAC-10冲锋枪弹匣"
+  },
+  "ItemName|Base.MP7": {
+   "action": "translate",
+   "signature": "c4b05661eeef75b0",
+   "reason": "本包最需要交叉檢查的一鍵，但證據支持中性可行。表面上 GaelGunStore 的值是 'MP7 9mm'（機制上改膛 9mm，Base.Clip_MP7='Clip 9mm 15round'）而 VFEP93 是 4.6mm 平台（Base.46Clip40='MP7 Magazine'、Base.46Bullets='4.6mm Round'），像是口徑衝突；但 'MP7 9mm' 只是 GGS 的 script DisplayName，GGS 與 Legacy 自家 ItemName 已覆寫成 'Heckler & Koch MP7 Submachine Gun'，即兩個 owner 實際顯示的都是不帶口徑的 H&K MP7。因此現行不宣稱口徑的譯名對兩者都誠實，也沒有丟掉作者原本要給玩家的資訊。口徑辨識資訊落在彈匣鍵而非槍身鍵（已出貨 Base.Clip_MP7='9mm 15 發彈匣'、Base.46Clip40='黑克勒-科赫MP7衝鋒槍彈匣'、Gunpart.Clip_MP7_cat='MP7 4.6mm 彈匣'），玩家仍能區分。建議維持；若主 agent 要零風險，替代方案是改為不帶類別詞的「黑克勒-科赫MP7」，但沒有必要。",
+   "ch": "黑克勒-科赫MP7衝鋒槍",
+   "cn": "黑克勒-科赫MP7冲锋枪"
+  },
+  "ItemName|Base.P90": {
+   "action": "translate",
+   "signature": "76b99c0da17685fd",
+   "reason": "與 Base.MP7 同型情境：GaelGunStore script 寫 'P90 9mm'（改膛 9mm，Base.Clip_P90='Clip 9mm 15round'），VFEP93 為 5.7mm 平台（Base.57Clip50='P90 Magazine'、Base.57Bullets='5.7mm Round'）；但 GGS 與 Legacy 自家 ItemName 已覆寫為 'FN P90 Submachine Gun'，兩 owner 實際顯示皆為不帶口徑的 FN P90，同一把槍。現行譯名不宣稱口徑，對兩者皆誠實，口徑辨識落在彈匣鍵（已出貨 Base.Clip_P90='9mm 15 發彈匣'、Base.57Clip50='赫斯塔爾P90衝鋒槍彈匣'）。附帶提醒主 agent：同前綴的 Base.P90Mag 已出貨為「儒格P90手槍彈匣 (.45 Auto)」，那是完全不同的 Ruger P90 手槍，屬另一鍵，勿把兩者混為一族。建議維持本鍵現值。",
+   "ch": "赫斯塔爾P90衝鋒槍",
+   "cn": "赫斯塔尔P90冲锋枪"
+  },
+  "ItemName|Base.SVD": {
+   "action": "translate",
+   "signature": "f35b4dfd04edc202",
+   "reason": "三個 owner 都是 7.62×54R 的 SVD 德拉貢諾夫狙擊步槍：VFES 'Dragunov Sniper Rifle'（Base.762Clip10='Dragunov Magazine'）、GaelGunStore 與 Legacy 的 script 'SVD Rifle' 但自家 ItemName 覆寫為 'Dragunov SVD Sniper Rifle'（Base.Clip_SVD='Clip 762x54r 20 round'）。英文差異只是型號代號與人名的取捨，同一實體。GGS 的其他變體（SVD12/SVDK/SVD_short）都走獨立 key，不會被本鍵影響。現行譯名與已出貨的 Base.762Clip10='德拉貢諾夫狙擊步槍彈匣'、Base.SVD_cat='SVD 德拉貢諾夫狙擊步槍' 一致，建議維持。",
+   "ch": "德拉貢諾夫狙擊步槍",
+   "cn": "德拉贡诺夫狙击步枪"
+  },
+  "ItemName|Base.SlingAalt": {
+   "action": "translate",
+   "signature": "deb246b2ff2b62f5",
+   "reason": "四個 owner 是同一組背帶 item 的本體與換皮 addon，不是不同實體：NoirRifleSlings（含 4 版 root）在 Sling_items.txt 定義 Base.SlingA/SlingAalt/SlingAalt2/SlingAalt3='Rifle Sling'，Dark Weapon Slings 與 Invisible Weapon Slings 則對同一組 key 覆寫 ItemName='Weapon Sling'，且共用同一套 ContextMenu_SlingStyle1~4 與 IGUI_HotbarAttachment_Sling* 鍵，證明是同一功能系統的貼圖變體。'Weapon Sling' 是 'Rifle Sling' 的上位詞，現行「武器背帶」對四者皆成立（換皮版可掛非步槍武器，寫死「步槍」才會偏向 Noir）。另發現一個純內部一致性問題（非 owner 衝突、非本鍵可單獨解決）：同族 Base.SlingA 與 ItemName_Base.SlingA* 出貨為「武器揹帶」，而 Base.SlingAalt/Aalt2/Aalt3 為「武器背帶」，揹/背 用字不統一；建議整組另案統一，不要只改本鍵。",
+   "ch": "武器背帶",
+   "cn": "武器背带"
+  },
+  "ItemName|Base.UMP45": {
+   "action": "translate",
+   "signature": "a899d26b099594ba",
+   "reason": "三個 owner 都是 H&K UMP .45：VFES 'UMP-45 Submachinegun'（Base.45Clip25='UMP-45 Magazine'）、GaelGunStore 與 Legacy 的 script 'UMP-45' 但自家 ItemName 覆寫為 'Heckler & Koch UMP .45 Submachine Gun'（Base.Clip_UMP45='Clip 45 15round'）。口徑一致（.45 由型號本身承載），無型號分歧。GGS 的長槍管版走獨立 key Base.UMP45_long，不受影響。現行譯名等同 GGS 自家英文，對 VFES 也成立，建議維持。",
+   "ch": "黑克勒-科赫UMP45衝鋒槍",
+   "cn": "黑克勒-科赫UMP45冲锋枪"
+  },
+  "ItemName|Tsarcraft.TCBoombox": {
+   "action": "translate",
+   "signature": "04a17113460709d0",
+   "reason": "同物裁決：TrueMusic 重用 Tsarcraft 音樂物件，tsarslib 原名 Boombox 'Kazakhstan-102-stereo'。CH 修正壞字串『哈薩克斯風坦』與 stereo 誤譯，採手提音響'哈薩克-102-立體聲'；CN 採手提音响'哈萨克斯坦-102-立体声'。B42 runtime 查裸鍵；ItemName_ 前綴鍵屬 legacy，保留通用『手提音響』不影響 runtime，非漏改。",
+   "ch": "手提音響'哈薩克-102-立體聲'",
+   "cn": "手提音响'哈萨克斯坦-102-立体声'"
+  },
+  "ItemName|Base.1000Tank2": {
+   "action": "translate",
+   "signature": "fb9d6b1fb65c832b",
+   "reason": "同物命名差異：兩 owner 的 script DisplayName 皆為 Storage Tank；PZK 位於 FuelTruckTanks_vehiclesitems，tsarslib 的同族 consumer 明寫 Fill Gasoline Storage Tank From Fuel Truck/Pump，且水／丙烷罐另有獨立 key。故現行儲油罐對兩邊皆成立；容量單位 L 屬既有同族慣例，單改此鍵反而破壞 500/1000Tank1~3 一致性。",
+   "ch": "1000L儲油罐",
+   "cn": "1000L储油罐"
+  },
+  "ItemName|Base.22Carton": {
+   "action": "translate",
+   "signature": "80351742209e28b8",
+   "reason": "Guns93 寫 .22 LR、VFE 寫 .22，同一口徑家族（.22 通稱即 .22 LR），差異僅命名精細度。現行譯名只寫 .22 未主張 LR，對兩 owner 皆成立，維持現值。",
+   "ch": ".22彈藥 (整件)",
+   "cn": ".22弹药 (整件)"
+  },
+  "ItemName|Base.500Tank1": {
+   "action": "translate",
+   "signature": "5670fa64f68032fc",
+   "reason": "同物命名差異：兩 owner 的 script DisplayName 皆為 Storage Tank；PZK 位於 FuelTruckTanks_vehiclesitems，tsarslib 的同族 consumer 明寫 Fill Gasoline Storage Tank From Fuel Truck/Pump，且水／丙烷罐另有獨立 key。故現行儲油罐對兩邊皆成立；容量單位 L 屬既有同族慣例，單改此鍵反而破壞 500/1000Tank1~3 一致性。",
+   "ch": "500L儲油罐",
+   "cn": "500L储油罐"
+  },
+  "ItemName|Base.545Bullets": {
+   "action": "translate",
+   "signature": "0b6be78d11b4f405",
+   "reason": "VFES「5.45mm Round」與 EFK「5.45×39mm Cartridge」是同一彈藥（5.45 實務上即 5.45×39mm，無歧義口徑）。現行譯名寫 5.45mm 不綁 ×39 標法，對兩 owner 皆誠實，維持現值。",
+   "ch": "5.45mm彈藥",
+   "cn": "5.45mm弹药"
+  },
+  "ItemName|Base.63beetleRearSeat1": {
+   "action": "translate",
+   "signature": "d1db0e72febce976",
+   "reason": "「63 VW 1300」與「63 VW Type 1」指同一實體：VW Type 1 就是金龜車，1300 是 Type 1 車系的引擎型號，兩個 mod（63beetle 與 63Type2Van）共用同一張後座椅零件。CH 用「金龜車」、CN 用「Type1」都涵蓋兩邊命名，維持現值即可（僅為 1300⊂Type 1 的詳略差）。",
+   "ch": "63款福斯金龜車後座椅",
+   "cn": "63款大众Type1后座椅"
+  },
+  "ItemName|Base.792Bullets": {
+   "action": "translate",
+   "signature": "9a52c8a2664a9e95",
+   "reason": "「8mm Mauser Round」與「7.92 Ammo」是同一彈藥：7.92×57mm Mauser 的通稱即 8mm Mauser，兩名指同一 cartridge。現行譯名對兩 owner 皆成立，且與同倉的 Base.792BulletsBrass「空黃銅彈殼 (8mm Mauser)」寫法一致，維持現值。",
+   "ch": "8mm Mauser子彈",
+   "cn": "8mm Mauser子弹"
+  },
+  "ItemName|Base.AR15": {
+   "action": "translate",
+   "signature": "5ddfb30f8a389504",
+   "reason": "五個 owner 全部指 AR-15 平台同一槍（AR-15 / AR15 Assault Rifle），實體相容。但現行「柯爾特AR-15自動步槍」有兩處偏置：(1)「柯爾特」品牌無任何 owner 主張；(2)「自動」與 Firearms/Guns93 的半自動 AR-15 矛盾（Guns93 自帶 Trigger Group (Semi) (AR-15) 配件即證），僅 GaelGunStore 稱 Assault Rifle。去品牌、去射擊模式改「AR-15步槍」對全部 owner 誠實。",
+   "ch": "AR-15步槍",
+   "cn": "AR-15步枪"
+  },
+  "ItemName|Base.Clip_556Clip": {
+   "action": "translate",
+   "signature": "89c51de5bf478b97",
+   "reason": "GaelGunStore「Clip 556x45 30round」明示口徑與容量；WAR「M4A1 556 Clip」綁槍型但 M4A1 用的就是 5.56x45 標準 30 發 STANAG，且 WAR 命名慣例會在名稱標注非標容量（M4A1 100R CMAG、P90 50R、G17 17R），素名即標準 30 發。現行口徑＋容量的中性寫法（own_translations 已有 _note 記載此裁決）對所有 owner 成立，維持現值。殘餘風險：WAR 端 MaxAmmo 未直接讀 script 驗證，惟命名慣例佐證充分。",
+   "ch": "5.56x45 30 發彈匣",
+   "cn": "5.56x45 30 发弹匣"
+  },
+  "ItemName|Base.Galil": {
+   "action": "translate",
+   "signature": "0d63e4f150050f4c",
+   "reason": "「Galil Assault Rifle」與「IMI Galil」同指以色列 IMI Galil 步槍，僅品牌前綴與類別後綴的詳略差。現行「加利爾自動步槍」不綁品牌寫法對兩 owner 皆成立，維持現值。",
+   "ch": "加利爾自動步槍",
+   "cn": "加利尔自动步枪"
+  },
+  "ItemName|Base.M60": {
+   "action": "translate",
+   "signature": "f9b12e529515ec65",
+   "reason": "「M60」與「Saco-Lowell M60」同指 M60 通用機槍（Saco-Lowell 是史實製造商），實體相同。但「薩科」品牌僅 Guns93 一家主張，Firearms 只稱 M60；去品牌改「M60通用機槍」是零偏置的中性寫法，對所有 owner 成立。",
+   "ch": "M60通用機槍",
+   "cn": "M60通用机枪"
+  },
+  "ItemName|Base.MP5": {
+   "action": "translate",
+   "signature": "7efb590593bc579d",
+   "reason": "三家分別稱 MP5A1、HK MP5、MP5 Submachinegun——同為 HK MP5 家族，但「A1」子型號僅 Firearms 一家主張，其餘 owner 未指定變體。現行「黑克勒-科赫MP5A1衝鋒槍」把 A1 硬套到所有 owner 不誠實；去掉 A1 改「黑克勒-科赫MP5衝鋒槍」對全部成立（A1 仍是 MP5），且與倉內既有 ItemName_Base.MP5 譯法完全一致。",
+   "ch": "黑克勒-科赫MP5衝鋒槍",
+   "cn": "黑克勒-科赫MP5冲锋枪"
+  },
+  "ItemName|Base.MetalPipeSilencer": {
+   "action": "translate",
+   "signature": "e92d1b4f9da00ce7",
+   "reason": "「Makeshift Suppressor」與「Metal Pipe Silencer」同指以金屬管自製的簡易消音器：兩 mod 皆為土製消音器主題，且共用鍵名 MetalPipeSilencer 本身即宣告材質。現行「金屬管消音器」是兩名的交集事實，對兩 owner 皆誠實，維持現值。",
+   "ch": "金屬管消音器",
+   "cn": "金属管消音器"
+  },
+  "ItemName|Base.SKS": {
+   "action": "translate",
+   "signature": "4028d49a3ee25689",
+   "reason": "「SKS」與「SKS Rifle」同指 SKS 半自動步槍，僅後綴詳略差。SKS 本身即半自動設計（Guns93 的 SKSTrigger 亦標 Semi），「SKS半自動步槍」對全部 owner 成立，維持現值。",
+   "ch": "SKS半自動步槍",
+   "cn": "SKS半自动步枪"
+  },
+  "ItemName|Base.Saiga12": {
+   "action": "translate",
+   "signature": "59bb9676b66215cb",
+   "reason": "「Saiga-12」與「Saiga-12 Shotgun」同指俄製 Saiga-12 霰彈槍，僅後綴詳略差。現行譯名對兩 owner 皆成立，維持現值。（附帶觀察：倉內 Base.Saiga12_cat 用拉丁「Saiga-12」而此鍵用「賽加-12」，屬風格不一致，非本衝突範疇。）",
+   "ch": "賽加-12霰彈槍",
+   "cn": "赛加-12霰弹枪"
+  },
+  "ItemName|Base.SlingAalt2": {
+   "action": "translate",
+   "signature": "deb246b2ff2b62f5",
+   "reason": "「Rifle Sling」與「Weapon Sling」來自同一背帶系列的換色/變體 mod（Noir 兩包、Dark/Invisible 兩包，共用 SlingAalt 鍵系），實體同為槍用背帶。「武器背帶」是 Rifle Sling 的上位詞，對全部 owner 誠實，維持現值。",
+   "ch": "武器背帶",
+   "cn": "武器背带"
+  },
+  "ItemName|Base.USP45": {
+   "action": "translate",
+   "signature": "e7a607994596c7e2",
+   "reason": "「USP-45 Pistol」與「USP-45」同指 HK USP .45 手槍，僅後綴詳略差。USP 唯一製造商即 Heckler & Koch，品牌前綴屬客觀事實而非 owner 偏置，現行譯名對全部 owner 成立，維持現值。",
+   "ch": "黑克勒-科赫USP-45手槍",
+   "cn": "黑克勒-科赫USP-45手枪"
+  },
+  "ItemName|Tsarcraft.TCVinylplayer": {
+   "action": "translate",
+   "signature": "026043ed61f242e7",
+   "reason": "TrueMusic_b42 與 tsarslib 是同一 Tsar 生態系（Tsarcraft 命名空間為其專屬），兩邊定義的是同一台黑膠唱機：TrueMusic script 給通用名，tsarslib translate 補型號 'Elektronika S1-01'——同型佐證：Walkman 鍵兩邊都叫 \"Portable player 'Sany Wutman'\"。型號名是同一實體的更精確描述而非偏置，維持現值。",
+   "ch": "黑膠唱機'Elektronika S1-01'",
+   "cn": "黑胶唱机'Elektronika S1-01'"
+  },
+  "ItemName|Base.1000Tank3": {
+   "action": "translate",
+   "signature": "fb9d6b1fb65c832b",
+   "reason": "同物命名差異。兩個 owner 都是「載油卡車/拖車用 1000 容量儲油槽」：PZK 定義在 FuelTruckTanks_vehiclesitems.txt（燃料罐族，其水罐另走 *_Water_Tank* 鍵），tsarslib 定義在 template_TruckTank.txt，兩邊 script DisplayName 完全相同（皆 \"Storage Tank\"），僅 tsarslib 額外用 ItemName 覆寫成把容量寫進名字的 \"Tank 1000\"。容量數字內嵌於 item id（1000Tank3）且與 tsarslib 英文的 1000 一致，故現行「1000L儲油罐」對兩者同時成立，無任一 owner 偏向。殘留小疑點：L（公升）單位無法從語料的 DisplayName 讀出，只能由 item id 數字與 B42 流體系統慣例推得；但此疑點對兩個 owner 完全對稱，不影響多-owner 相容性判定。",
+   "ch": "1000L儲油罐",
+   "cn": "1000L储油罐"
+  },
+  "ItemName|Base.22Silencer": {
+   "action": "translate",
+   "signature": "bcb8dd0f96394a21",
+   "reason": "同物命名差異，且現行譯文的「.22 LR」對兩個 owner 皆為事實。Firearms 直接寫 \".22 LR Suppressor\"；Guns93Test 寫 \"Pistol Silencer (.22 cal)\"，但其 Tooltip_22Silencer 明言「will reduce the sound radius of .22 LR Firearms」，且該 mod 的 .22 彈藥族就是 Base.22Bullets = \".22 LR Round\"，故 Guns93 的「.22 cal」即 .22 LR，非另一種 .22 口徑。差異只在 Suppressor/Silencer 用字，以及 Guns93 額外冠上「Pistol」限定（Firearms 未限定）；現行譯文未寫「手槍」，正好落在兩者交集，無偏向。",
+   "ch": ".22 LR消音器",
+   "cn": ".22 LR消音器"
+  },
+  "ItemName|Base.500Tank2": {
+   "action": "translate",
+   "signature": "5670fa64f68032fc",
+   "reason": "與 Base.1000Tank3 同一組衝突、同一結論，僅容量為 500。PZK 的 FuelTruckTanks 與 tsarslib 的 template_TruckTank 對 Base.500Tank2 給出完全相同的 script DisplayName \"Storage Tank\"，tsarslib 另以 ItemName 覆寫為 \"Tank 500\"；容量數字亦內嵌於 item id 並與英文一致。現行「500L儲油罐」對兩者同時成立。L 單位的同一小疑點對兩 owner 對稱，不影響相容性。",
+   "ch": "500L儲油罐",
+   "cn": "500L储油罐"
+  },
+  "ItemName|Base.545Carton": {
+   "action": "translate",
+   "signature": "b7f684180191e33a",
+   "reason": "同物命名/格式差異。兩個 owner 都是 5.45×39mm 的 carton（整件，PZ 彈藥階層 Bullets→Box→Carton 的最上層，內含數個 Box）。VFES 寫 \"Carton of 5.45mm Ammo Boxes\"（明寫內含 boxes），EfK 寫 \"Carton of 5.45×39mm Ammo\"（明寫口徑全稱），兩者指同一階層同一物；VFES 的 5.45mm 由其同族鍵可證即 AK-74 的 5.45（同族 Box/Bullets/Clip/Case/Crate/Pack 全為 5.45mm），EfK 同族亦全為 5.45×39mm，不存在 5.45×18 PSM 之類的第二種 5.45。現行「5.45mm彈藥 (整件)」未寫入任一方特有的措辭（既不寫 boxes 內含物、也不寫 ×39），對兩者皆成立。",
+   "ch": "5.45mm彈藥 (整件)",
+   "cn": "5.45mm弹药 (整件)"
+  },
+  "ItemName|Base.762x39Box": {
+   "action": "translate",
+   "signature": "33e08253fc6e685d",
+   "reason": "同物命名/格式差異。兩個 owner 都是 7.62×39mm 的 Box（整盒）。工作包所列的 GaelGunStore_Legacy 值 \"Box of .762x39 Bullets\" 其實是該 mod 的 script DisplayName（作者打錯小數點，寫成 .762），而其自帶英文 Translate 寫的是 \"Box of 7.62x39mm Rounds (30 Rounds)\"，與 Firearms 的 \"Box of 7.62x39mm Rounds\" 同物，僅多標 30 發容量。現行譯文未寫入發數，正好對容量未明的 Firearms 與標 30 發的 Gael 同時成立；亦未沿用 Gael 的 .762 錯誤寫法。",
+   "ch": "7.62x39mm彈藥 (整盒)",
+   "cn": "7.62x39mm弹药 (整盒)"
+  },
+  "ItemName|Base.9mmSilencer": {
+   "action": "translate",
+   "signature": "4be7e92aca889acb",
+   "reason": "同物命名差異。兩個 owner 都是 9mm 用消音器：Firearms \"9mm Suppressor\"、Guns93Test \"Pistol Silencer (9mm)\"（其 script DN 即 \"9mm Silencer\"）。差異只有 Suppressor/Silencer 用字與 Guns93 額外的「Pistol」限定；現行「9mm消音器」不含「手槍」二字，落在兩者交集，對兩個 owner 皆成立且無偏向。",
+   "ch": "9mm消音器",
+   "cn": "9mm消音器"
+  },
+  "ItemName|Base.Anaconda": {
+   "action": "translate",
+   "signature": "52493c1a107c00d2",
+   "reason": "同物命名差異，非撞 key。Guns93Test 直接寫 \"Colt Anaconda\"；GaelGunStore（含 Legacy）script DN 寫 \"Anaconda 44\"，但同 mod 自帶英文 Translate 明寫 \"Colt Anaconda Revolver\"，作者意圖就是柯爾特巨蟒 .44 Magnum。已做撞 key 反查：GaelGunStore 的 Revolvers.txt 全表只有這一支 Anaconda（另有 Base.Python357 \"Python .357\" 為另一支柯爾特），沒有把 Base.Anaconda 挪用成別的槍（對照本批 Base.Glock23 就是挪用案例）。故「柯爾特巨蟒左輪手槍」對所有 owner 成立。",
+   "ch": "柯爾特巨蟒左輪手槍",
+   "cn": "柯尔特巨蟒左轮手枪"
+  },
+  "ItemName|Base.Clip_Pistol": {
+   "action": "translate",
+   "signature": "83fa8474d8c7e756",
+   "reason": "實體具體程度不同，但存在誠實的中性上位詞，故非 incompatible。WAR（ADVANCED WARFARE）的 Base.Clip_Pistol 是其 Base.Pistol（該 mod 把原版 Base.Pistol 覆寫成 \"[IWI] JERICHO\"）配套的彈匣件，故稱 \"IWI JERICHO Clip\"；GaelGunStore（含 Legacy）的 Base.Clip_Pistol 是 GunPartItem/Clip.txt 裡的泛用手槍彈匣 \"Clip Pistol\"。IWI Jericho 941 本身即手槍，其彈匣確實是手槍彈匣，因此「手槍彈匣」對兩個 owner 都是真陳述、且不寫入任一方專屬型號。此結論與 own_translations 既存 _note 的裁決一致（該 _note 已明載同一理由），本次以語料獨立覆核通過。",
+   "ch": "手槍彈匣",
+   "cn": "手枪弹匣"
+  },
+  "ItemName|Base.M733": {
+   "action": "translate",
+   "signature": "4f797906e463d665",
+   "reason": "同槍不同命名慣例。Colt Model 733 就是 M733 Commando，Firearms 用綽號 \"Colt Commando\"、Guns93Test 用型號 \"Colt Model 733\"，item id 本身即 M733，兩者指同一支槍。現行譯文取綽號路線（突擊隊＝Commando），對兩個 owner 皆成立、無偏向；「自動步槍」的分類措辭亦與 Guns93Test 自身把它放在 Guns93GunsAutoRifles.txt 一致（嚴格說 M733 是 11.5 吋槍管的卡賓槍，但這是兩 owner 共同承擔的既有措辭問題，非多-owner 相容性問題）。",
+   "ch": "柯爾特突擊隊自動步槍",
+   "cn": "柯尔特突击队自动步枪"
+  },
+  "ItemName|Base.MP5Mag": {
+   "action": "translate",
+   "signature": "358a6e28ce395d27",
+   "reason": "同物命名詳略差異。兩個 owner 都是 HK MP5（9mm）彈匣：Firearms \"MP5 Magazine\"、Guns93Test \"30rd HK MP5 Magazine (9mm)\"（其 script DN 即 \"HK MP5 Magazine\"）。差異只在 Guns93 多標 30 發容量。MP5 本即 Heckler & Koch 產品，故「黑克勒-科赫」對兩者皆為事實；現行譯文未寫入發數，正好對容量未明的 Firearms 與標 30 發的 Guns93 同時成立，無偏向。",
+   "ch": "黑克勒-科赫MP5衝鋒槍彈匣",
+   "cn": "黑克勒-科赫MP5冲锋枪弹匣"
+  },
+  "ItemName|Base.Mini14": {
+   "action": "translate",
+   "signature": "c08d57dacd4f1310",
+   "reason": "同槍不同命名詳略。Mini-14 是 Ruger 的獨有產品，市面上不存在第二家的 Mini-14，故 Guns93Test 的 \"Ruger Mini-14\" 與 VFE 的 \"Mini-14 Rifle\" 必為同一支槍；另查得 FirearmsBETA 42.13 亦持有本鍵且寫 \"Ruger Mini-14\"，三方一致。現行「儒格Mini-14步槍」（CN 依大陸慣用「鲁格」）對所有 owner 成立。",
+   "ch": "儒格Mini-14步槍",
+   "cn": "鲁格Mini-14步枪"
+  },
+  "ItemName|Base.SPAS12": {
+   "action": "translate",
+   "signature": "dfc2f4863729fc3b",
+   "reason": "同槍不同命名詳略，五個 owner 全指 Franchi SPAS-12。Firearms／FirearmsBETA／Guns93Test 皆明寫 \"Franchi SPAS-12\"；GaelGunStore（含 Legacy）script DN 寫 \"SPAS-12\"，其自帶英文 Translate 寫 \"SPAS-12 Shotgun\"。SPAS-12 為 Franchi 獨有型號。已做撞 key 反查：GaelGunStore 的 Escopeta_semi.txt 另有獨立的 Base.SPAS15 \"SPAS-15 Shotgun\"，Base.SPAS12 未被挪用。現行譯文對所有 owner 成立。",
+   "ch": "弗蘭齊SPAS-12霰彈槍",
+   "cn": "弗兰齐SPAS-12霰弹枪"
+  },
+  "ItemName|Base.Silencer": {
+   "action": "translate",
+   "signature": "bf5f15758a6c78ec",
+   "reason": "同物命名差異（Suppressor vs Silencer 同義）。兩個 owner 的 Base.Silencer 都是「正規／工廠製」那一級的消音器，且降噪值一致：SimpleSilencers 的 Tooltip_Silencer 與 Improvised Silencers 的 Tooltip_Silencer 都寫 80% 噪音半徑削減，兩 mod 也都同時持有 Base.MetalPipeSilencer 作為簡易自製版（前者 \"Makeshift Suppressor\"、後者 \"Metal Pipe Silencer\"），鍵組與數值高度重合，屬同一設計的衍生關係。Improvised Silencers 的 Sandbox 選項另有 \"Professional Suppressor Noise Reduction\" 對應本鍵，可證它在該 mod 內同樣是「專業級」而非自製級。現行「消音器」是不偏向任一方用字的中性譯法，對兩者皆成立。",
+   "ch": "消音器",
+   "cn": "消音器"
+  },
+  "ItemName|Base.SlingAalt3": {
+   "action": "translate",
+   "signature": "deb246b2ff2b62f5",
+   "reason": "同一套背帶框架的重製／換皮，非不同物。四個 mod_root 全部持有完全相同的四鍵組 Base.SlingA / SlingAalt / SlingAalt2 / SlingAalt3（對應四種揹法），且都是 scripts/clothing 下的可穿戴背帶：NoirRifleSlings 與 NoirRifleSlings4 稱 \"Rifle Sling\"，Dark Weapon Slings 與 Invisible Weapon Slings 稱 \"Weapon Sling\"（後者僅材質為隱形版，命名仍用同一泛稱，其 IGUI_HotbarAttachment_Sling* 亦全為 \"Weapon Sling\"）。現行「武器背帶」採較寬的 Weapon 而非 Rifle，可同時涵蓋只掛步槍與泛用武器兩種說法，對四個 owner 皆成立。",
+   "ch": "武器背帶",
+   "cn": "武器背带"
+  },
+  "ItemName|Base.UZI": {
+   "action": "translate",
+   "signature": "fc47b5032ce78769",
+   "reason": "同槍不同命名，且「衝鋒槍」對兩個 owner 都成立。關鍵反查：Firearms 雖把 Base.UZI 譯為 \"UZI Carbine\"，但該 mod 並無另一支 UZI SMG 品項（全 mod 只有這一支 UZI 及其配件），且其 Sandbox 說明文字直接寫 \"Whether or not UZI SMGs spawn.\"，證明作者自己就把它當衝鋒槍，Carbine 只是命名風格而非另一種半自動卡賓型。GaelGunStore（含 Legacy）script DN \"UZI 9mm\"、自帶英文 \"UZI Submachine Gun\"，並另有獨立的 Base.Micro_UZI，故 Base.UZI 是全尺寸 9mm 烏茲。現行「UZI衝鋒槍」對兩者皆成立。",
+   "ch": "UZI衝鋒槍",
+   "cn": "UZI冲锋枪"
+  },
+  "ItemName|Tsarcraft.TCWalkman": {
+   "action": "translate",
+   "signature": "5d80ac68a2a14625",
+   "reason": "同物，且兩個 owner 自帶的英文 Translate 逐字相同，不存在偏向問題。決定性證據：TrueMusic_b42 自己的 ItemName_EN.txt 也寫 \"Portable player 'Sany Wutman'\"，與 tsarslib 完全一致；工作包所列的 \"Walkman\" 只是 TrueMusic 的 script DisplayName（原始 script 名），會被共用的 ItemName 鍵覆寫。兩者同屬 Tsarcraft 系列（Tsarcraft.* 命名空間，tsarslib 為其函式庫），tsarslib 定義該虛構品牌為正式名稱。故現行「隨身聽'Sany Wutman'」保留虛構品牌對兩個 owner 皆成立；若改成泛稱『隨身聽』反而丟失兩方共同認可的品牌資訊。",
+   "ch": "隨身聽'Sany Wutman'",
+   "cn": "随身听'Sany Wutman'"
+  },
+  "ItemName|Base.22Box": {
+   "action": "translate",
+   "signature": "3b7d05294f90ec2f",
+   "reason": "兩 owner 均為一盒 .22 口徑子彈，差異僅在 Guns93Test 標明 LR 而 VFE 未標。現行譯名不指定 LR，對兩邊都成立，維持現行。",
+   "ch": ".22彈藥 (整盒)",
+   "cn": ".22弹药 (整盒)"
+  },
+  "ItemName|Base.45Clip25": {
+   "action": "translate",
+   "signature": "0f678ade30498894",
+   "reason": "VFES 為 UMP-45 彈匣，GaelGun_Legacy 為通用 .45 ACP 25 發彈匣（其自帶翻譯層即 '.45 ACP Magazine (25 Rounds)'）。UMP-45 彈匣正是 25 發 .45 ACP 彈匣，故中性名對兩邊皆為事實；現行譯名指名 UMP45 偏向 VFES，建議改為中性名。",
+   "ch": ".45 ACP彈匣 (25發)",
+   "cn": ".45 ACP弹匣 (25发)"
+  },
+  "ItemName|Base.500Tank3": {
+   "action": "translate",
+   "signature": "5670fa64f68032fc",
+   "reason": "同物命名差異：兩 owner 的 script DisplayName 皆為 Storage Tank；PZK 位於 FuelTruckTanks_vehiclesitems，tsarslib 的同族 consumer 明寫 Fill Gasoline Storage Tank From Fuel Truck/Pump，且水／丙烷罐另有獨立 key。故現行儲油罐對兩邊皆成立；容量單位 L 屬既有同族慣例，單改此鍵反而破壞 500/1000Tank1~3 一致性。",
+   "ch": "500L儲油罐",
+   "cn": "500L储油罐"
+  },
+  "ItemName|Base.545Clip": {
+   "action": "translate",
+   "signature": "195d6f7fa5e29e66",
+   "reason": "兩 owner 均為 5.45 口徑彈匣（5.45 實務上即 5.45×39mm），差異僅在 EFK 標明 30 發。現行譯名不聲稱發數，對兩邊都成立，維持現行。",
+   "ch": "5.45mm彈匣",
+   "cn": "5.45mm弹匣"
+  },
+  "ItemName|Base.762x39Bullets": {
+   "action": "translate",
+   "signature": "8950e02686a50b04",
+   "reason": "三 owner 均為 7.62×39mm 子彈，僅命名格式差異（'.762x39 Ammo' 是 GaelGun 的非標準寫法，指同一彈種）。現行譯名完全中性，維持現行。",
+   "ch": "7.62x39mm彈藥",
+   "cn": "7.62x39mm弹药"
+  },
+  "ItemName|Base.AA12": {
+   "action": "translate",
+   "signature": "e0c7c799c02b6d86",
+   "reason": "三 owner 均為 Atchisson AA-12 自動霰彈槍，僅連字號/後綴差異。艾奇遜（Atchisson）為該槍設計者，對所有 owner 皆為事實，維持現行。",
+   "ch": "艾奇遜AA12霰彈槍",
+   "cn": "艾奇逊AA12霰弹枪"
+  },
+  "ItemName|Base.CAR15": {
+   "action": "translate",
+   "signature": "222fcb59309ff2fb",
+   "reason": "兩 owner 均指 CAR-15（key 即 CAR15）——AR-15 平台的柯爾特卡賓型，同一實體。CAR-15 本即 Colt Automatic Rifle-15，冠「柯爾特」對兩邊皆事實。建議把現行「自動步槍」改為「卡賓槍」：Guns93 明寫 Carbine，且 CAR-15 系列本質為卡賓槍，交集更精確；VFE 的 Assault Rifle 亦不因此失真。",
+   "ch": "柯爾特CAR-15卡賓槍",
+   "cn": "柯尔特CAR-15卡宾枪"
+  },
+  "ItemName|Base.Colt9mm": {
+   "action": "translate",
+   "signature": "b375e417f9dcd627",
+   "reason": "兩 owner 均為 Colt 9mm 卡賓槍（Colt 9mm SMG/carbine，AR-15 平台 9mm 版），GaelGun 的 'Colt9mm 9mm' 只是機械式命名。現行譯名對兩邊皆事實，維持現行。",
+   "ch": "柯爾特AR-15 9mm卡賓槍",
+   "cn": "柯尔特AR-15 9mm卡宾枪"
+  },
+  "ItemName|Base.M16A2": {
+   "action": "translate",
+   "signature": "222fcf2ca4f3c94a",
+   "reason": "五 owner 均為 M16A2，同一實體；但廠牌互斥——GaelGun 標 Daniel Defense，現行譯名卻寫柯爾特（且其餘三 owner 無廠牌）。中性解法是去掉廠牌，'M16A2自動步槍' 對所有 owner 皆誠實。",
+   "ch": "M16A2自動步槍",
+   "cn": "M16A2自动步枪"
+  },
+  "ItemName|Base.MAC10": {
+   "action": "translate",
+   "signature": "08f779d63878afa5",
+   "reason": "兩組 owner 均指 MAC-10 衝鋒槍（Cobray M-10 即 MAC-10 的 Cobray 製版本，同一槍）。現行 '科布雷M-10' 偏向 Guns93 的廠牌寫法，對 GaelGun 玩家辨識度低；'MAC-10' 是通用名，對兩邊皆誠實且更易辨識，建議改用。",
+   "ch": "MAC-10衝鋒槍",
+   "cn": "MAC-10冲锋枪"
+  },
+  "ItemName|Base.MP5SD": {
+   "action": "translate",
+   "signature": "fc7b28c3d51d1a7e",
+   "reason": "三 owner 均為 H&K MP5SD（整合消音型 MP5），僅後綴差異（Submachinegun vs 9mm）。現行譯名廠牌與型號對所有 owner 皆事實，維持現行。",
+   "ch": "黑克勒-科赫MP5SD衝鋒槍",
+   "cn": "黑克勒-科赫MP5SD冲锋枪"
+  },
+  "ItemName|Base.Mosin": {
+   "action": "translate",
+   "signature": "817362505b9b1569",
+   "reason": "三 owner 均為莫辛-納甘步槍，同一實體。但兩邊英文都未稱 sniper（基本型是栓動步槍非狙擊型），現行 '莫辛-納甘狙擊步槍' 的「狙擊」是過度指定，建議去掉改為 '莫辛-納甘步槍'。",
+   "ch": "莫辛-納甘步槍",
+   "cn": "莫辛-纳甘步枪"
+  },
+  "ItemName|Base.SV98": {
+   "action": "translate",
+   "signature": "4cd8ca5da8de01f6",
+   "reason": "三 owner 均為 SV-98，該槍本即俄製狙擊步槍，VFES 亦明寫 Sniper Rifle。現行譯名對所有 owner 皆事實，維持現行。",
+   "ch": "SV-98狙擊步槍",
+   "cn": "SV-98狙击步枪"
+  },
+  "ItemName|Base.SlingA": {
+   "action": "translate",
+   "signature": "deb246b2ff2b62f5",
+   "reason": "四 owner 均為武器揹帶飾品類 mod（Noir 系列叫 Rifle Sling，Dark/Invisible 系列叫 Weapon Sling），實體同類。現行 '武器揹帶' 是兩名的上位詞（武器⊇步槍），對所有 owner 成立；Invisible 版僅是視覺隱形變體，物品本質仍是揹帶。維持現行。",
+   "ch": "武器揹帶",
+   "cn": "武器背带"
+  },
+  "ItemName|Base.TEC9": {
+   "action": "translate",
+   "signature": "5a8150050606d36d",
+   "reason": "三 owner 均為 Intratec TEC-9（9mm 半自動手槍），僅命名格式差異。廠牌 Intratec 對所有 owner 皆事實，維持現行。",
+   "ch": "英特拉泰克TEC-9手槍",
+   "cn": "英特拉泰克TEC-9手枪"
+  },
+  "ItemName|Gunpart.bayonet1_cat": {
+   "action": "translate",
+   "signature": "2a7a9d75767c317a",
+   "reason": "兩 owner 屬同一 workshop 項目（3633421539）下的兩個 mod root，值差異僅是有無空格（M9 Military Bayonet vs M9MilitaryBayonet），必然同一實體。現行譯名維持。",
+   "ch": "M9軍用刺刀",
+   "cn": "M9军用刺刀"
+  },
+  "ItemName|Base.ShotgunShells_Casing": {
+   "action": "translate",
+   "signature": "376310f74512b66f",
+   "reason": "同物中性裁決：Empty Buckshot Shell／Empty Shotgun Shell 都是空霰彈殼，採不綁 buckshot 的中性譯名。",
+   "ch": "空霰彈殼",
+   "cn": "空霰弹壳"
+  }
+ }
 }

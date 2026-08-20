@@ -99,4 +99,22 @@ with tempfile.TemporaryDirectory() as td:
     pairs = verify_dist.suppressed_pairs(td)
     assert "Dead.json|K" in pairs, f"suppressed_pairs 未納入 unshipped_keys：{pairs}"
 
-print("✅ test_unshipped_keys：7 組情境全過")
+# 8. own 原創鍵被 unshipped 抑制時，oracle warning 不得誤稱「撞 vanilla、建議退役」
+#    ——owner conflict 的真相層刻意保留，退役會讓上游追蹤與裁決錨點失效。
+with tempfile.TemporaryDirectory() as td:
+    dist = Path(td) / "CN"
+    dist.mkdir()
+    ok, details, warn, _, _ = verify_dist.check_cn_parity(
+        "", str(dist), {}, {"Dead.json": {"K": {"cn": "原創值"}}},
+        as1_available=False, suppressed={"Dead.json|K"}, unshipped={"Dead.json|K"})
+    assert ok and not details, details
+    joined = "\n".join(warn)
+    assert "unshipped_keys" in joined and "人工裁決不出貨" in joined, joined
+    assert "vanilla 出貨抑制" not in joined and "建議退役" not in joined, \
+        f"人工不出貨被誤報成 vanilla 碰撞／應退役：{joined}"
+
+    _, _, vanilla_warn, _, _ = verify_dist.check_cn_parity(
+        "", str(dist), {}, {"Dead.json": {"K": {"cn": "原創值"}}},
+        as1_available=False, suppressed={"Dead.json|K"}, unshipped=set())
+    assert "vanilla 出貨抑制" in "\n".join(vanilla_warn), vanilla_warn
+print("✅ test_unshipped_keys：8 組情境全過")

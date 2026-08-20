@@ -53,7 +53,9 @@ def run(*, records: dict, mirror: dict, dist_items: dict, vanilla: list[str],
         decisions: dict | None = None, dist_cn: dict | None = None,
         bad_json: bool = False, want_err: bool = False,
         records_raw: object = None, bad_mirror_top: bool = False,
-        bad_ledger: str | None = None, state_entry_raw: object = None):
+        bad_ledger: str | None = None, state_entry_raw: object = None,
+        unshipped: dict | None = None, bad_unshipped: str | None = None,
+        check_decisions: bool = False):
     """組臨時 repo + dist，跑 `prep_mod_strings.main()`，回 (rc, artifact, stdout)。"""
     bad_hash = bad_hash or set()
     global CASES
@@ -68,6 +70,12 @@ def run(*, records: dict, mirror: dict, dist_items: dict, vanilla: list[str],
         if decisions is not None:
             (root / "sources" / "owner_conflict_decisions.json").write_text(
                 json.dumps({"entries": decisions}, ensure_ascii=False), encoding="utf-8")
+        if unshipped is not None:
+            (root / "sources" / "unshipped_keys.json").write_text(
+                json.dumps({"entries": unshipped}, ensure_ascii=False), encoding="utf-8")
+        if bad_unshipped is not None:
+            (root / "sources" / "unshipped_keys.json").write_text(
+                bad_unshipped, encoding="utf-8")
         (root / "sources" / "vanilla_keys.json").write_text(
             json.dumps(vanilla_json if vanilla_json is not None
                        else {"keys": [], "scoped_keys": {"ItemName.json": vanilla}},
@@ -115,7 +123,10 @@ def run(*, records: dict, mirror: dict, dist_items: dict, vanilla: list[str],
             sys.stderr = err
             prep_mod_strings.ROOT = root
             prep_mod_strings.DIST_CH = dist
-            sys.argv = ["prep", *(wids or ["1"]), "--out", str(out)]
+            selected = [] if check_decisions else (wids or ["1"])
+            sys.argv = ["prep", *selected, "--out", str(out)]
+            if check_decisions:
+                sys.argv.append("--check-decisions")
             rc = prep_mod_strings.main()
         finally:
             sys.stderr = old_err
@@ -424,6 +435,37 @@ assert art["_owner_conflicts"] == {}, f"4p. 已背書仍列 blocking：{art['_ow
 assert "ItemName|Base.Shared" not in art["_gap"], \
     f"4p. 已背書的鍵仍在 _gap（會被當缺口再翻一次）：{art['_gap']}"
 
+# 4p2. **裁決驗證必須先於 batch 分流**：非本批 owner 的已裁衝突也要進 resolved、從
+#      `_owner_conflicts_other` 移除。若先 early-continue，66 筆已裁鍵會永久留在 708 待辦。
+OTHER_OWNERS = {"2/M": "Other B", "2/N": "Other A"}
+OTHER_SIG = prep_mod_strings.census_signature(OTHER_OWNERS)
+rc, art = run(
+    records={f"script_item_dn|{EFF}|Base.Mine": "hP2"},
+    mirror={f"script_item_dn|{EFF}|Base.Mine": "Mine"},
+    dist_items={"Base.Other": "其他"}, dist_cn={"Base.Other": "其他"},
+    vanilla=[], second_wid="2",
+    second_records={f"script_item_dn|{EFF}|Base.Other": "hP3",
+                    f"script_item_dn|{ROOT_B}|Base.Other": "hP4"},
+    second_mirror={f"script_item_dn|{EFF}|Base.Other": "Other B",
+                   f"script_item_dn|{ROOT_B}|Base.Other": "Other A"},
+    wids=["1"], decisions={"ItemName|Base.Other": {
+        "signature": OTHER_SIG, "reason": "本批外中性裁決", "ch": "其他", "cn": "其他"}})
+assert rc == 0 and "ItemName|Base.Other" in art["_owner_conflicts_resolved"], \
+    f"4p2. 非本批已裁衝突未進 resolved：rc={rc} {art}"
+assert "ItemName|Base.Other" not in art["_owner_conflicts_other"], \
+    f"4p2. 已裁鍵仍留在 report-only 待辦：{art['_owner_conflicts_other']}"
+
+# 4p3. `--check-decisions` 不需 batch wid：只驗全庫台帳／unship drift，正式鏈與 CI 用這條。
+rc, art = run(**CONFLICT_FIXTURE, dist_items={"Base.Shared": "共用譯名"},
+              dist_cn={"Base.Shared": "共用译名"},
+              decisions={"ItemName|Base.Shared": D}, check_decisions=True)
+assert rc == 0 and art["strings"] == [], f"4p3. 合格台帳 check mode 失敗：rc={rc} {art}"
+rc, art = run(**CONFLICT_FIXTURE, dist_items={"Base.Shared": "共用譯名"},
+              dist_cn={"Base.Shared": "共用译名"},
+              decisions={"ItemName|Base.Shared": {**D, "signature": "0" * 16}},
+              check_decisions=True)
+assert rc == 1, f"4p3. 過時 signature 在 check mode 未阻斷：rc={rc}"
+
 # 4q. 台帳的六種過時形狀都必須維持 blocking——少任何一項，裁決就變成永久放行通道
 for label, dist, dist_cn, dec in (
     ("signature 不符（owner 增減／上游改值）", {"Base.Shared": "共用譯名"},
@@ -451,6 +493,122 @@ for label, dist, dist_cn, dec in (
     assert rc == 1, f"4q. {label} 未維持 blocking：rc={rc}"
     assert "ItemName|Base.Shared" in art["_owner_conflicts"], \
         f"4q. {label} 未列入 _owner_conflicts：{art.get('_owner_conflicts')}"
+
+# 4q2. **不同實體撞 key 可裁決為 `action: unship`**：台帳與 unshipped registry 的
+#      `owner_signature` 雙向錨定 census；build 另以 `as1_value` 監看抑制前 CN 漂移。
+#      ItemName 還要同步抑制舊式前綴鍵，且裸／前綴在 CH/CN dist 四格都已移除。
+UNSHIP_DEC = {"action": "unship", "signature": SIG, "reason": "兩 owner 是不同實體，無中性譯名"}
+UNSHIP_FIXTURE = {
+    **CONFLICT_FIXTURE,
+    "records": {
+        **CONFLICT_FIXTURE["records"],
+        f"translate_en|{EN_IN}|ItemName_Base.Shared": "hTwin",
+    },
+    "mirror": {
+        **CONFLICT_FIXTURE["mirror"],
+        f"translate_en|{EN_IN}|ItemName_Base.Shared": "Shared Pistol",
+    },
+}
+UNSHIP_BARE = "ItemName.json|Base.Shared"
+UNSHIP_TWIN = "ItemName.json|ItemName_Base.Shared"
+TWIN_SIG = prep_mod_strings.census_signature({"1/M": "Shared Pistol"})
+UNSHIP_REG = {
+    UNSHIP_BARE: {"as1_value": "共用译名", "owner_signature": SIG,
+                  "reason": "owner 衝突，裁決不出貨"},
+    UNSHIP_TWIN: {"as1_value": "共用译名", "owner_signature": TWIN_SIG,
+                  "reason": "同步抑制 B41 前綴死鍵；裸鍵不出貨後它不能單獨留在 dist"},
+}
+rc, art = run(**UNSHIP_FIXTURE, dist_items={}, dist_cn={},
+              decisions={"ItemName|Base.Shared": UNSHIP_DEC}, unshipped=UNSHIP_REG)
+assert rc == 0 and "ItemName|Base.Shared" in art["_owner_conflicts_resolved"], \
+    f"4q2. 已雙向背書的 unship 仍 blocking：rc={rc} {art}"
+assert "ItemName|Base.Shared" not in art["_gap"], \
+    f"4q2. 已 unship 的裸鍵仍留在 _gap：{art['_gap']}"
+assert "ItemName|ItemName_Base.Shared" not in art["_gap"], \
+    f"4q2. 已抑制的前綴孿生鍵仍留在 _gap：{art['_gap']}"
+assert not any(r["en"] in {"Owner A Name", "Owner B Name", "Shared Pistol"}
+               for r in art["strings"]), \
+    f"4q2. 已 unship 的 owner 英文仍留在 strings：{art['strings']}"
+
+for label, dist, dist_cn, reg, decision in (
+    ("registry 缺裸鍵", {}, {}, {UNSHIP_TWIN: UNSHIP_REG[UNSHIP_TWIN]}, UNSHIP_DEC),
+    ("registry 缺前綴孿生鍵", {}, {}, {UNSHIP_BARE: UNSHIP_REG[UNSHIP_BARE]}, UNSHIP_DEC),
+    ("裸鍵缺 as1_value", {}, {},
+     {**UNSHIP_REG,
+      UNSHIP_BARE: {k: v for k, v in UNSHIP_REG[UNSHIP_BARE].items() if k != "as1_value"}},
+     UNSHIP_DEC),
+    ("前綴孿生鍵缺 as1_value", {}, {},
+     {**UNSHIP_REG,
+      UNSHIP_TWIN: {k: v for k, v in UNSHIP_REG[UNSHIP_TWIN].items() if k != "as1_value"}},
+     UNSHIP_DEC),
+    ("裸鍵 owner_signature 過時", {}, {},
+     {**UNSHIP_REG,
+      UNSHIP_BARE: {**UNSHIP_REG[UNSHIP_BARE], "owner_signature": "0" * 16}}, UNSHIP_DEC),
+    ("前綴孿生鍵 owner_signature 過時", {}, {},
+     {**UNSHIP_REG,
+      UNSHIP_TWIN: {**UNSHIP_REG[UNSHIP_TWIN], "owner_signature": "0" * 16}}, UNSHIP_DEC),
+    ("前綴孿生鍵空 spec", {}, {}, {**UNSHIP_REG, UNSHIP_TWIN: {}}, UNSHIP_DEC),
+    ("CH 裸鍵仍在 dist", {"Base.Shared": "共用譯名"}, {}, UNSHIP_REG, UNSHIP_DEC),
+    ("CN 裸鍵仍在 dist", {}, {"Base.Shared": "共用译名"}, UNSHIP_REG, UNSHIP_DEC),
+    ("CH 前綴孿生鍵仍在 dist", {"ItemName_Base.Shared": "共用譯名"}, {},
+     UNSHIP_REG, UNSHIP_DEC),
+    ("CN 前綴孿生鍵仍在 dist", {}, {"ItemName_Base.Shared": "共用译名"},
+     UNSHIP_REG, UNSHIP_DEC),
+    ("未知 action typo", {}, {}, UNSHIP_REG, {**UNSHIP_DEC, "action": "unshipped"}),
+):
+    rc, art = run(**UNSHIP_FIXTURE, dist_items=dist, dist_cn=dist_cn,
+                  decisions={"ItemName|Base.Shared": decision}, unshipped=reg)
+    assert rc == 1 and "ItemName|Base.Shared" in art["_owner_conflicts"], \
+        f"4q2. {label} 未維持 blocking：rc={rc} {art.get('_owner_conflicts')}"
+
+# 4q2b. 沒有 B41 前綴孿生鍵時不得強迫登記幽靈條目；registry 只放裸鍵仍應 resolved。
+rc, art = run(**CONFLICT_FIXTURE, dist_items={}, dist_cn={},
+              decisions={"ItemName|Base.Shared": UNSHIP_DEC},
+              unshipped={UNSHIP_BARE: UNSHIP_REG[UNSHIP_BARE]})
+assert rc == 0 and "ItemName|Base.Shared" in art["_owner_conflicts_resolved"], \
+    f"4q2b. 無孿生鍵時被迫登記幽靈條目：rc={rc} {art}"
+
+# 衝突 key 本身已帶 `ItemName_` 前綴時不得再要求 `ItemName_ItemName_*`。
+PREFIX_OWNERS = {"1/M": "Prefix A", "2/M": "Prefix B"}
+PREFIX_SIG = prep_mod_strings.census_signature(PREFIX_OWNERS)
+PREFIX_PAIR = "ItemName.json|ItemName_Base.Prefix"
+rc, art = run(
+    records={f"translate_en|{EN_IN}|ItemName_Base.Prefix": "hPre1"},
+    mirror={f"translate_en|{EN_IN}|ItemName_Base.Prefix": "Prefix A"},
+    dist_items={}, dist_cn={}, vanilla=[], second_wid="2",
+    second_records={f"translate_en|{EN_IN}|ItemName_Base.Prefix": "hPre2"},
+    second_mirror={f"translate_en|{EN_IN}|ItemName_Base.Prefix": "Prefix B"},
+    wids=["1", "2"], decisions={"ItemName|ItemName_Base.Prefix": {
+        "action": "unship", "signature": PREFIX_SIG, "reason": "已前綴 key 裁決不出貨"}},
+    unshipped={PREFIX_PAIR: {
+        "as1_value": "前綴值", "owner_signature": PREFIX_SIG, "reason": "不雙前綴"}})
+assert rc == 0 and "ItemName|ItemName_Base.Prefix" in art["_owner_conflicts_resolved"], \
+    f"4q2b. 已前綴 key 被要求 ItemName_ItemName_*：rc={rc} {art}"
+
+# 4q2c. **上游把衝突修掉後 unship 必須要求退役／恢復出貨**。若只在「仍是衝突」的
+#       census 迴圈驗 decision，單一 owner／英文收斂時會先 continue，registry 永久不重審。
+rc, art = run(
+    records={f"script_item_dn|{EFF}|Base.Shared": "hOne"},
+    mirror={f"script_item_dn|{EFF}|Base.Shared": "Owner A Name"},
+    dist_items={}, dist_cn={}, vanilla=[], wids=["1"],
+    decisions={"ItemName|Base.Shared": UNSHIP_DEC},
+    unshipped={UNSHIP_BARE: UNSHIP_REG[UNSHIP_BARE]})
+assert rc == 1 and any("owner 衝突已消失" in u for u in art["_unchecked"]), \
+    f"4q2c. 衝突消失後 unship 仍靜默生效：rc={rc} {art['_unchecked']}"
+
+# 4q3. unshipped registry 是人工真相；四種壞損都須列 `_unchecked` 且 artifact 照樣重寫。
+for label, payload in (
+    ("非法 JSON", "{ nope"),
+    ("頂層非 object", '["x"]'),
+    ("缺 entries", "{}"),
+    ("entries 非 object", '{"entries": []}'),
+):
+    rc, art = run(**UNSHIP_FIXTURE, dist_items={}, dist_cn={},
+                  decisions={"ItemName|Base.Shared": UNSHIP_DEC},
+                  bad_unshipped=payload)
+    assert art is not None, f"4q3. {label}：artifact 未重寫"
+    assert rc == 1 and any("unshipped_keys.json" in u for u in art["_unchecked"]), \
+        f"4q3. {label} 未 fail-closed：rc={rc} {art['_unchecked']}"
 
 # 4o2. **純空白 ≠ 空字串**：引擎 `isNullOrEmpty` 只認長度零（`StringUtils.java:11`），
 #      `"  "` 是非空值、**一律 put／覆寫**——common 非空、版本夾 `"  "` 時執行期顯示

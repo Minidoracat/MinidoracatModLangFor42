@@ -1484,5 +1484,55 @@
     "as1_value": "逆月份耐性生长阶段:",
     "reason": "同 mod 內 CN 用語分歧：本批新增的 `UI_SSS_ModOptions_ShowBadMonths*` 採「不利月份」（與 As1 既有 CH `Tooltip_SSS_Bad_Month_Hardy` = 不利月份耐受性 一致），此三鍵 As1 CN 仍為「逆月份」。統一為「不利月份」以免同一功能兩套用語。",
     "value": "不利月份耐性生长阶段:"
+  },
+  "ItemName.json|Base.MAC10Mag": {
+    "as1_value": "英格拉姆MAC-10冲锋枪弹匣",
+    "reason": "owner 衝突裁決：同物中性裁決：Firearms 為 MAC 10 Magazine，Guns93 為 30rd Cobray MAC-10 Magazine (.45 Auto)；兩者都是 MAC-10 的 .45 ACP 彈匣。移除 owner 專屬廠牌，採 MAC-10衝鋒槍彈匣，與本批已中性化的 Base.MAC10='MAC-10衝鋒槍' 一致。",
+    "value": "MAC-10冲锋枪弹匣"
+  },
+  "ItemName.json|Tsarcraft.TCBoombox": {
+    "as1_value": "收音机'哈萨克斯坦-102-回响'",
+    "reason": "owner 衝突裁決：同物裁決：TrueMusic 重用 Tsarcraft 音樂物件，tsarslib 原名 Boombox 'Kazakhstan-102-stereo'。CH 修正壞字串『哈薩克斯風坦』與 stereo 誤譯，採手提音響'哈薩克-102-立體聲'；CN 採手提音响'哈萨克斯坦-102-立体声'。B42 runtime 查裸鍵；ItemName_ 前綴鍵屬 legacy，保留通用『手提音響』不影響 runtime，非漏改。",
+    "value": "手提音响'哈萨克斯坦-102-立体声'"
+  },
+  "ItemName.json|Base.AR15": {
+    "as1_value": "柯尔特AR-15自动步枪",
+    "reason": "owner 衝突裁決：五個 owner 全部指 AR-15 平台同一槍（AR-15 / AR15 Assault Rifle），實體相容。但現行「柯爾特AR-15自動步槍」有兩處偏置：(1)「柯爾特」品牌無任何 owner 主張；(2)「自動」與 Firearms/Guns93 的半自動 AR-15 矛盾（Guns93 自帶 Trigger Group (Semi) (AR-15) 配件即證），僅 GaelGunStore 稱 Assault Rifle。去品牌、去射擊模式改「AR-15步槍」對全部 owner 誠實。",
+    "value": "AR-15步枪"
+  },
+  "ItemName.json|Base.M60": {
+    "as1_value": "萨科M60通用机枪",
+    "reason": "owner 衝突裁決：「M60」與「Saco-Lowell M60」同指 M60 通用機槍（Saco-Lowell 是史實製造商），實體相同。但「薩科」品牌僅 Guns93 一家主張，Firearms 只稱 M60；去品牌改「M60通用機槍」是零偏置的中性寫法，對所有 owner 成立。",
+    "value": "M60通用机枪"
+  },
+  "ItemName.json|Base.MP5": {
+    "as1_value": "黑克勒-科赫MP5A1冲锋枪",
+    "reason": "owner 衝突裁決：三家分別稱 MP5A1、HK MP5、MP5 Submachinegun——同為 HK MP5 家族，但「A1」子型號僅 Firearms 一家主張，其餘 owner 未指定變體。現行「黑克勒-科赫MP5A1衝鋒槍」把 A1 硬套到所有 owner 不誠實；去掉 A1 改「黑克勒-科赫MP5衝鋒槍」對全部成立（A1 仍是 MP5），且與倉內既有 ItemName_Base.MP5 譯法完全一致。",
+    "value": "黑克勒-科赫MP5冲锋枪"
+  },
+  "ItemName.json|Base.45Clip25": {
+    "as1_value": "黑克勒-科赫UMP45冲锋枪弹匣",
+    "reason": "owner 衝突裁決：VFES 為 UMP-45 彈匣，GaelGun_Legacy 為通用 .45 ACP 25 發彈匣（其自帶翻譯層即 '.45 ACP Magazine (25 Rounds)'）。UMP-45 彈匣正是 25 發 .45 ACP 彈匣，故中性名對兩邊皆為事實；現行譯名指名 UMP45 偏向 VFES，建議改為中性名。",
+    "value": ".45 ACP弹匣 (25发)"
+  },
+  "ItemName.json|Base.CAR15": {
+    "as1_value": "柯尔特CAR-15自动步枪",
+    "reason": "owner 衝突裁決：兩 owner 均指 CAR-15（key 即 CAR15）——AR-15 平台的柯爾特卡賓型，同一實體。CAR-15 本即 Colt Automatic Rifle-15，冠「柯爾特」對兩邊皆事實。建議把現行「自動步槍」改為「卡賓槍」：Guns93 明寫 Carbine，且 CAR-15 系列本質為卡賓槍，交集更精確；VFE 的 Assault Rifle 亦不因此失真。",
+    "value": "柯尔特CAR-15卡宾枪"
+  },
+  "ItemName.json|Base.M16A2": {
+    "as1_value": "柯尔特M16A2自动步枪",
+    "reason": "owner 衝突裁決：五 owner 均為 M16A2，同一實體；但廠牌互斥——GaelGun 標 Daniel Defense，現行譯名卻寫柯爾特（且其餘三 owner 無廠牌）。中性解法是去掉廠牌，'M16A2自動步槍' 對所有 owner 皆誠實。",
+    "value": "M16A2自动步枪"
+  },
+  "ItemName.json|Base.Mosin": {
+    "as1_value": "莫辛-纳甘狙击步枪",
+    "reason": "owner 衝突裁決：三 owner 均為莫辛-納甘步槍，同一實體。但兩邊英文都未稱 sniper（基本型是栓動步槍非狙擊型），現行 '莫辛-納甘狙擊步槍' 的「狙擊」是過度指定，建議去掉改為 '莫辛-納甘步槍'。",
+    "value": "莫辛-纳甘步枪"
+  },
+  "ItemName.json|Base.CAR15Folded": {
+    "as1_value": "柯尔特CAR-15自动步枪",
+    "reason": "#230 家族一致性：VFE 的 Base.CAR15 與 Base.CAR15Folded EN 皆為 CAR-15 Assault Rifle；折疊槍托不應讓顯示名由卡賓槍變成自動步槍。",
+    "value": "柯尔特CAR-15卡宾枪"
   }
 }

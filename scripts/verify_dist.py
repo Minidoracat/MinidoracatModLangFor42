@@ -586,6 +586,7 @@ def check_cn_parity(
     cn_overrides: dict[str, dict] | None = None,
     as1_available: bool = True,
     suppressed: set[str] | None = None,
+    unshipped: set[str] | None = None,
 ) -> tuple[bool, list[str], list[str], int, int]:
     """[1] dist CN 對 As1 快照：檔案集合 + 逐檔鍵集 + 逐鍵值逐字一致。
 
@@ -603,6 +604,7 @@ def check_cn_parity(
     """
     cn_overrides = cn_overrides or {}
     suppressed = suppressed if suppressed is not None else set()
+    unshipped = unshipped if unshipped is not None else set()
     as1_files, as1_err = ({}, []) if not as1_available else _load_json_dir(as1_cn)
     dist_files, dist_err = _load_json_dir(dist_cn)
     details: list[str] = []
@@ -727,7 +729,16 @@ def check_cn_parity(
             if fname in as1_files and key in as1_files[fname]:
                 warn.append(f"原創鍵 {oid!r} 已被 As1 收錄（As1 優先），建議自對應原創來源（own_translations.json 或原創 mod 目錄）退役")
             elif oid in suppressed:
-                warn.append(f"原創鍵 {oid!r} 撞 vanilla 鍵已被出貨抑制（永遠不會落地），建議退役")
+                if oid in unshipped:
+                    warn.append(
+                        f"原創鍵 {oid!r} 已由 unshipped_keys／owner conflict 人工裁決不出貨；"
+                        "真相層刻意保留供 gate／上游追蹤，依 owner_signature／as1_value 漂移重審"
+                    )
+                else:
+                    warn.append(
+                        f"原創鍵 {oid!r} 命中 vanilla 出貨抑制；"
+                        "本包不得覆寫本體鍵，真相層僅保留供 gate／上游追蹤"
+                    )
             elif oid not in applied_own:
                 details.append(f"原創鍵 {oid!r} 未落地於 dist CN")
 
@@ -1849,6 +1860,15 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
     # 基準壞損直接判 FAIL——靜默當成空集合會讓 [1]/[9]/[11] 誤報一整批「缺鍵」。
     try:
         suppressed = suppressed_pairs(repo)
+        upath = os.path.join(repo, "sources", "unshipped_keys.json")
+        unshipped = set()
+        if os.path.isfile(upath):
+            with open(upath, encoding="utf-8-sig") as fh:
+                udata = json.load(fh)
+            entries = udata.get("entries") if isinstance(udata, dict) else None
+            if not isinstance(entries, dict):
+                raise ValueError("unshipped_keys.json 的 entries 形狀壞損")
+            unshipped = set(entries)
     except Exception as exc:  # noqa: BLE001
         print(f"ERROR：vanilla 鍵名基準無法載入（{exc}）")
         return 1
@@ -1864,6 +1884,7 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         cn_overrides,
         as1_available=not as1_missing,
         suppressed=suppressed,
+        unshipped=unshipped,
     )
     ok2, d2 = check_ch_mirror(dist_cn, dist_ch)
     ok3, d3 = check_encoding(dist_translate)

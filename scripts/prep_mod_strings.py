@@ -169,9 +169,13 @@ def converge_owner(recs: dict, mirror: dict, eff: dict, *, vanilla: set[str],
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("wids", nargs="+")
+    ap.add_argument("wids", nargs="*")
     ap.add_argument("--out", required=True)
+    ap.add_argument("--check-decisions", action="store_true",
+                    help="只驗全庫 owner conflict decision／unship registry，不產生翻譯待辦")
     args = ap.parse_args()
+    if not args.wids and not args.check_decisions:
+        ap.error("至少給一個 wid；若只驗裁決台帳，使用 --check-decisions")
 
     shipped_ch = {f"{p[:-5]}|{k}": v
                   for p in os.listdir(DIST_CH) if p.endswith(".json")
@@ -492,16 +496,69 @@ def main() -> int:
         elif not reported:
             unchecked.append(f"{dec_p.name} 的 entries 形狀壞損或缺失"
                              "——裁決台帳不可用，所有 owner 衝突維持 blocking")
+    # `action: "unship"` 的裁決需與 `unshipped_keys.json` **雙向背書**：台帳與 registry
+    # 的 `owner_signature` 共同錨定 owner census；build 另以 `as1_value` 監看抑制前有效
+    # CN 值漂移。缺任一邊都維持 blocking。
+    unship_p = ROOT / "sources/unshipped_keys.json"
+    unship_entries: dict = {}
+    if unship_p.is_file():
+        try:
+            raw_unship = _jload(unship_p)
+        except (ValueError, OSError):
+            raw_unship = None
+        cand_unship = raw_unship.get("entries") if isinstance(raw_unship, dict) else None
+        if isinstance(cand_unship, dict):
+            unship_entries = cand_unship
+        else:
+            unchecked.append(f"{unship_p.name} 無法解析或 entries 形狀壞損"
+                             "——不出貨裁決不可用，相關 owner 衝突維持 blocking")
     conflicts: dict[str, dict[str, str]] = {}
     conflicts_other: dict[str, dict[str, str]] = {}
     resolved: dict[str, dict[str, str]] = {}
     stale_dec: list[str] = []
+
+    # **unship 裁決即使「衝突已消失」也必須重審**：build 本身不讀 owner census，會繼續
+    # 抑制；故 check mode 全庫 blocking。一般 prep 只在該 owner 涉及本批時 blocking，
+    # 非本批則降為 stale report——否則任一無關 mod 更新都會凍結全庫所有補譯工作。
+    skipped_ids = {fk for _, _, ids in skipped for fk in ids}
+
+    def unship_issue(message: str, owners: dict | None) -> None:
+        if args.check_decisions or (owners and set(owners) & batch_owners):
+            unchecked.append(message)
+        else:
+            stale_dec.append(message)
+
+    for fk, d in decided.items():
+        if not isinstance(d, dict) or d.get("action") != "unship":
+            continue
+        owners = census.get(fk)
+        if not owners:
+            if fk in skipped_ids:
+                unship_issue(f"{fk}：相關 owner 載入失敗，census 不可判定；"
+                             "先修基準／鏡像，不得據此退役 unship", owners)
+            else:
+                unship_issue(f"{fk}：unship 裁決鍵已不在 census，應退役／重查", owners)
+            continue
+        if len({norm_en(v) for v in owners.values()}) < 2:
+            unship_issue(f"{fk}：owner 衝突已消失，unship 裁決應退役並恢復出貨", owners)
+        signature = census_signature(owners)
+        fname, _, key = fk.partition("|")
+        bare = unship_entries.get(f"{fname}.json|{key}")
+        if not isinstance(bare, dict) or bare.get("owner_signature") != signature:
+            unship_issue(f"{fk}：unship 裸鍵 owner_signature 已過時或缺失", owners)
+        if fname == "ItemName" and not key.startswith("ItemName_"):
+            twin_fk = f"ItemName|ItemName_{key}"
+            twin = unship_entries.get(f"ItemName.json|ItemName_{key}")
+            if isinstance(twin, dict):
+                twin_owners = census.get(twin_fk)
+                # 前綴孿生鍵可能只存在 As1 真相層、不在 upstream census；仍需抑制，
+                # 不可因 census 缺席要求退役。只有能算出 census 時才驗 owner_signature。
+                if twin_owners and twin.get("owner_signature") != census_signature(twin_owners):
+                    unship_issue(f"{twin_fk}：unship 前綴孿生鍵 owner_signature 已過時", owners)
+    resolved_unship_keys: set[str] = set()
     for fk, owners in census.items():
         # 比對用 `norm_en`（排版級漂移不算衝突，見該函式），**列出的仍是原值**供人核對。
         if len({norm_en(v) for v in owners.values()}) < 2:
-            continue
-        if not (set(owners) & batch_owners):
-            conflicts_other[fk] = owners
             continue
         # **裁決要有可機讀的完成狀態**，否則 census 不扣 shipped 會讓同一組 owner/value 永遠
         # 報衝突、相關 wid 連無關的新缺口都無法 apply（工具實質不可用）。條件缺一即過時：
@@ -511,35 +568,84 @@ def main() -> int:
         #     而該鍵又不在 CN dist 時，`None == None` 會把從未裁決過的東西放行；
         #   * 該鍵已出貨——裁決的產物是譯文，沒出貨等於沒裁完，而 `gap.setdefault` 的
         #     first-wins 會把某一個 owner 的語意直接落地。
+        # 後兩條是 `action: "translate"` 的出貨錨點；`action: "unship"`（不同實體撞同一鍵、
+        # 無中性譯名）改錨 `unshipped_keys.json` 雙向背書＋dist 已抑制，見下方分支。
         # 「沒登記」與「登記成 null」由下方的 `elif fk in decided` 分開（**承重的是那一行**，
         # 不是這裡的取值方式）：null 是壞損條目，要具名報出來而非靜默當成沒登記。
         d = decided[fk] if fk in decided else None
         if isinstance(d, dict):
             why = None
-            if d.get("signature") != census_signature(owners):
+            signature = census_signature(owners)
+            action = d.get("action", "translate")
+            if d.get("signature") != signature:
                 why = "裁決簽名已過時（owner 增減或上游改值）"
             elif not isinstance(d.get("reason"), str) or not d["reason"].strip():
                 why = "裁決缺 reason（無從得知當初怎麼裁的）"
-            elif not isinstance(d.get("ch"), str) or not isinstance(d.get("cn"), str):
-                why = "裁決缺 ch／cn 出貨錨點（兩側都是裁決產物，缺一即不完整）"
-            elif fk not in shipped:
-                why = "已登記裁決但譯文尚未出貨"
-            elif d["ch"] != shipped_ch.get(fk) or d["cn"] != shipped_cn.get(fk):
-                why = (f"出貨譯文已漂移（登記 ch={d['ch']!r} cn={d['cn']!r}，"
-                       f"現況 ch={shipped_ch.get(fk)!r} cn={shipped_cn.get(fk)!r}）")
+            elif action == "unship":
+                # ledger key 不含 `.json`；unshipped registry 沿用 `<檔名.json>|<鍵>` schema。
+                fname, _, key = fk.partition("|")
+                pair = f"{fname}.json|{key}"
+                spec = unship_entries.get(pair)
+                twin_fk = (f"ItemName|ItemName_{key}"
+                           if fname == "ItemName" and not key.startswith("ItemName_") else None)
+                # 只有真相層／census 真的存在 B41 前綴孿生鍵才強制雙抑制；不存在時不要逼
+                # registry 塞幽靈條目，否則 build 每輪都報「未命中、可退役」假警報。
+                twin_exists = bool(twin_fk and twin_fk in census)
+                twin_pair = (f"ItemName.json|ItemName_{key}" if twin_exists else None)
+                twin_spec = unship_entries.get(twin_pair) if twin_pair else None
+                twin_signature = census_signature(census[twin_fk]) if twin_exists else None
+                if not isinstance(spec, dict):
+                    why = f"裁決為 unship，但 {pair} 未登記於 unshipped_keys.json"
+                elif not isinstance(spec.get("as1_value"), str):
+                    why = "unshipped_keys 裸鍵缺 as1_value（抑制前有效 CN 錨點）"
+                elif spec.get("owner_signature") != signature:
+                    why = "unshipped_keys 的 owner_signature 已過時"
+                elif twin_exists and not isinstance(twin_spec, dict):
+                    why = f"ItemName 不出貨須同步登記舊式前綴鍵 ItemName_{key}"
+                elif twin_exists and not isinstance(twin_spec.get("as1_value"), str):
+                    why = "ItemName 前綴孿生鍵缺 as1_value（抑制前有效 CN 錨點）"
+                elif twin_exists and twin_spec.get("owner_signature") != twin_signature:
+                    # 孿生條目錨**自己的** census，不是裸鍵 census。否則孿生 owner／EN 漂移
+                    # 偵測不到，且孿生自己成為衝突時無法以自身 signature 完成裁決。
+                    why = "ItemName 前綴孿生鍵的 owner_signature 已過時或缺失"
+                elif fk in shipped_ch or fk in shipped_cn:
+                    why = "裁決為 unship，但裸鍵仍在 CH/CN dist（先跑 build_mod.py build）"
+                elif twin_fk and (twin_fk in shipped_ch or twin_fk in shipped_cn):
+                    # 前綴舊鍵若留在 dist，裸鍵被抑制後 verify [15] 會判為無裸鍵死鍵。
+                    why = "裁決為 unship，但 ItemName 前綴孿生鍵仍在 CH/CN dist"
+            elif action == "translate":
+                if not isinstance(d.get("ch"), str) or not isinstance(d.get("cn"), str):
+                    why = "裁決缺 ch／cn 出貨錨點（兩側都是裁決產物，缺一即不完整）"
+                elif fk not in shipped:
+                    why = "已登記中性譯名裁決但譯文尚未出貨"
+                elif d["ch"] != shipped_ch.get(fk) or d["cn"] != shipped_cn.get(fk):
+                    why = (f"出貨譯文已漂移（登記 ch={d['ch']!r} cn={d['cn']!r}，"
+                           f"現況 ch={shipped_ch.get(fk)!r} cn={shipped_cn.get(fk)!r}）")
+            else:
+                why = f"未知 action={action!r}（只接受 translate／unship）"
             if why is None:
                 resolved[fk] = owners
+                if action == "unship":
+                    resolved_unship_keys.add(fk)
+                    if twin_fk:
+                        resolved_unship_keys.add(twin_fk)
                 continue
             stale_dec.append(f"{fk}：{why}")
         elif fk in decided:
             # 條目存在但形狀壞損（含明確的 `null`）：**必須具名**，否則操作者只看到
             # 「owner 衝突」，不知道自己登記的那條被整條忽略，會以為 gate 壞了而繞過它。
             stale_dec.append(f"{fk}：裁決條目形狀壞損（{type(d).__name__}），已忽略")
-        conflicts[fk] = owners
+        # **裁決驗證是全庫規則，必須在 batch 分流之前跑**：否則 `_owner_conflicts_other`
+        # 先 `continue`，台帳永遠不生效，已裁的 66 鍵會永久留在 708 待辦裡。
+        # 合格者已在上方 `continue`；未裁決／裁決過時者才依是否涉及本批 owner 分流。
+        (conflicts if set(owners) & batch_owners else conflicts_other)[fk] = owners
     # **`batch_keys` 由 census 反推**：census 不扣 shipped，才涵蓋「本批 owner 的鍵已出貨、
-    # 而被跳過的 wid 是新 owner」這個形狀——用扣過 shipped 的 `local`／`gap` 取交集會漏掉，
-    # 那正是前面要防的「shipped 隱藏新 owner conflict」。
+    # 而被跳過的 wid 是新 owner」這個形狀——用扣過 shipped 的 `local`／`gap` 取交集會漏掉。
     batch_keys = {fk for fk, owners in census.items() if set(owners) & batch_owners}
+    if args.check_decisions:
+        # check mode 沒有 batch_owners；把**所有 decision key**當成必驗 identity，讓下方
+        # skipped 交集把相關 owner 的鏡像／state 盲區轉成 non-zero，避免台帳假綠。
+        batch_keys |= set(decided)
     # 被跳過的 wid 若與本批身分集有交集，它可能就是另一個 owner——census 少了它，衝突
     # 判定即為假陰性。故列 `_unchecked` 讓退出碼與消費端都攔住。
     for wid, why, ids in skipped:
@@ -551,7 +657,9 @@ def main() -> int:
     # 衝突鍵**必須在建 by_en 之前**自 `_gap` 移除：留著就是 first-wins 的譯文，忽略
     # 退出碼時照樣落地；反之若只從 `_gap` 移除卻已進 `strings`，下游會拿到沒有落點的
     # 孤兒字串。
-    for fk in conflicts:
+    for fk in set(conflicts) | resolved_unship_keys:
+        # blocking 衝突與已裁決 unship 都不能送進 `_gap`／`strings`。後者若殘留，下一步
+        # `apply_wf_result` 會把「無誠實中性譯名」的 first-wins 英文重新寫回真相層。
         gap.pop(fk, None)
     by_en: dict[str, list[str]] = collections.defaultdict(list)
     wid_of: dict[str, set[str]] = collections.defaultdict(set)
@@ -605,7 +713,7 @@ def main() -> int:
     if conflicts_other:
         print(f"  ℹ️ 另有 {len(conflicts_other)} 個鍵在**本批之外**的 owner 間就已衝突"
               "（report-only，不阻斷本批；已出貨者需人工重新核對 `_note`）")
-    if unchecked or conflicts:
+    if unchecked or conflicts or (args.check_decisions and stale_dec):
         # **非零退出**：wid 級跳過會讓 artifact 長得跟「這個 mod 沒缺口」一模一樣，
         # 下游 apply_wf_result 只讀 strings/_gap，於是整個 mod 的物品名再次隱形（#221）。
         # 多 owner 衝突同理——first-wins 會把另一方的語意靜默丟掉，必須人工裁決。
@@ -615,7 +723,6 @@ def main() -> int:
             print(f"❌ owner 衝突：{fk} → {owners}", file=sys.stderr)
         return 1
     return 0
-
 
 if __name__ == "__main__":
     sys.exit(main())

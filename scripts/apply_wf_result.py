@@ -106,10 +106,12 @@ def main() -> int:
                   file=sys.stderr)
             for x in (val if isinstance(val, list) else [f"{k} → {v}" for k, v in val.items()]):
                 print(f"   {x}", file=sys.stderr)
-        print("   `_unchecked`：先跑 `tracker.py backfill-en` 補齊基準／鏡像後重跑 prep。\n"
-              "   `_owner_conflicts`：同一 fullType 被多個 mod 定義成不同英文，`ItemName`\n"
-              "   是全域表、後載入者覆寫，須人工裁出對每個 owner 都成立的中性譯文後\n"
-              "   直接寫進 `own_translations.json`（附 `_note` 記裁決理由）。", file=sys.stderr)
+        print("   `_unchecked`：依訊息補齊基準／鏡像／registry 後重跑 prep。\n"
+              "   `_owner_conflicts`：先查每個 owner 的實體與上游英文；若有對所有 owner 都成立的"
+              "中性譯名，落真相層並在 owner_conflict_decisions.json 登記 action=translate 的"
+              "signature/reason/ch/cn；若不同實體無誠實中性譯名，登記 action=unship，並在"
+              "unshipped_keys.json 以 owner_signature 雙向背書（ItemName 前綴孿生鍵同步處理）。",
+              file=sys.stderr)
         return 1
     want = {r["en"] for r in src["strings"]}
     gap = src["_gap"]
