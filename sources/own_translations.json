@@ -3608,6 +3608,31 @@
     "en": "Feast!",
     "ch": "大快朵頤!",
     "cn": "大快朵颐!"
+   },
+   "ContextMenu_MBA_Make_Bow": {
+    "en": "Make Bow",
+    "ch": "製作弓",
+    "cn": "制作弓"
+   },
+   "ContextMenu_MBA_Put_On_Arrow": {
+    "en": "Put %1 on %2",
+    "ch": "把%1裝到%2上",
+    "cn": "把%1装到%2上"
+   },
+   "ContextMenu_MBA_Remove_Arrowhead": {
+    "en": "Remove Arrowhead",
+    "ch": "取下箭頭",
+    "cn": "取下箭头"
+   },
+   "ContextMenu_MBA_Remove_Fletchings": {
+    "en": "Remove Fletchings",
+    "ch": "取下箭羽",
+    "cn": "取下箭羽"
+   },
+   "ContextMenu_MBA_snap_into_twigs": {
+    "en": "Snap into Twigs",
+    "ch": "折成小樹枝",
+    "cn": "折成小树枝"
    }
   },
   "Fluids.json": {
@@ -5500,6 +5525,26 @@
     "en": "Aged Blueberry Mead",
     "ch": "藍莓蜂蜜酒 (熟成)",
     "cn": "蓝莓蜂蜜酒 (熟成)"
+   },
+   "Fluid_Container_HoneycombOpen": {
+    "en": "Opened Comb",
+    "ch": "已打開的巢脾",
+    "cn": "已打开的巢脾"
+   },
+   "Fluid_Container_TermoARGEmpty": {
+    "en": "Thermo empty",
+    "ch": "空保溫瓶",
+    "cn": "空保温瓶"
+   },
+   "Fluid_Container_TermoARGFull": {
+    "en": "Thermo cold",
+    "ch": "冷保溫瓶",
+    "cn": "冷保温瓶"
+   },
+   "Fluid_Container_TermoARGFullHot": {
+    "en": "Thermo hot",
+    "ch": "熱保溫瓶",
+    "cn": "热保温瓶"
    }
   },
   "IG_UI.json": {
@@ -20836,6 +20881,61 @@
     "ch": "華麗服飾洋裝",
     "cn": "华丽服饰连衣裙",
     "_note": "上游 B42 遷移漏帶的救援鍵：有效分支 42/.../EN/IG_UI.json 只有 8 個類別，此鍵僅存在於 LEGACY/42.12、LEGACY/42.13 與 mod 根 media/ 的 _EN.txt（B42 三者都不載入），英文玩家也看到原始鍵名＝上游 bug。EN 值取自那些不載入的分支，故 tracker 基準查無錨點（build 的 report_own_anchor_gaps 會列出，屬預期）。譯法沿用同系列「華麗服飾＋品類」。"
+   },
+   "IGUI_MBA_arrow": {
+    "en": "Arrow",
+    "ch": "箭",
+    "cn": "箭"
+   },
+   "IGUI_MBA_arrow_headless": {
+    "en": "Arrow (Headless)",
+    "ch": "箭 (無箭頭)",
+    "cn": "箭 (无箭头)"
+   },
+   "IGUI_MBA_arrow_shaft_of_wood": {
+    "en": "Arrow Shaft of Wood",
+    "ch": "木箭桿",
+    "cn": "木箭杆"
+   },
+   "IGUI_MBA_arrow_unfletched": {
+    "en": "Arrow (Unfletched)",
+    "ch": "箭 (無箭羽)",
+    "cn": "箭 (无箭羽)"
+   },
+   "IGUI_MBA_fluflu": {
+    "en": " (Flu-flu)",
+    "ch": " (散羽)",
+    "cn": " (散羽)"
+   },
+   "IGUI_MBA_recipe_AddArrowHead": {
+    "en": "Add Arrowhead",
+    "ch": "裝上箭頭",
+    "cn": "装上箭头"
+   },
+   "IGUI_MBA_recipe_AddFletchings": {
+    "en": "Add Fletchings",
+    "ch": "裝上箭羽",
+    "cn": "装上箭羽"
+   },
+   "IGUI_MBA_recipe_RemoveArrowHead": {
+    "en": "Remove Arrowhead",
+    "ch": "取下箭頭",
+    "cn": "取下箭头"
+   },
+   "IGUI_MBA_recipe_RemoveFletchings": {
+    "en": "Remove Fletchings",
+    "ch": "取下箭羽",
+    "cn": "取下箭羽"
+   },
+   "IGUI_MBA_snap_into_twigs": {
+    "en": "Snap into Twigs",
+    "ch": "折成小樹枝",
+    "cn": "折成小树枝"
+   },
+   "IGUI_perks_Archery": {
+    "en": "Archery",
+    "ch": "射箭",
+    "cn": "射箭"
    }
   },
   "ItemName.json": {
@@ -35475,9 +35575,10 @@
     "cn": "蒂基镇地图"
    },
    "Tikitown.TikitownTonic": {
-    "en": "Tikitown Tonic",
-    "ch": "蒂基鎮提神飲料",
-    "cn": "蒂基镇提神饮料"
+    "en": "Tonic",
+    "ch": "提神飲料",
+    "cn": "提神饮料",
+    "_note": "2026-08-21 #235 上游把 DisplayName 由 Tikitown Tonic 改為 Tonic, 譯名同步去品牌。"
    },
    "Tikitown.Trousers_BSSOPoliceBlack": {
     "en": "BSSO Police - Black Trousers",
@@ -94966,9 +95067,10 @@
     "cn": "马苏里拉奶酪披萨"
    },
    "TodoCaserito.PizzaNapo": {
-    "en": "Pizza with tomato slices",
-    "ch": "拿坡里披薩",
-    "cn": "那不勒斯披萨"
+    "en": "Argentine style pizza with tomato slices",
+    "ch": "阿根廷風拿坡里披薩",
+    "cn": "阿根廷风那不勒斯披萨",
+    "_note": "2026-08-21 #227 上游改為 Argentine style pizza with tomato slices；該 mod 的 MakePizzaNapo 仍稱 Neapolitan, 故保留拿坡里並補阿根廷風。"
    },
    "TodoCaserito.PorcionLemonPie": {
     "en": "Slice of lemon pie",
@@ -118160,10 +118262,896 @@
     "_note": "跨 mod 共用鍵（GaelGunStore／ADVANCED WARFARE），上游 EN 完全相同，為配件佔位物，照字面直譯。"
    },
    "Base.ShotgunShells_Casing": {
-    "en": "Empty Shotgun Shell",
+    "en": "Empty Shotgun Shells",
     "ch": "空霰彈殼",
     "cn": "空霰弹壳",
     "_note": "#230 owner 衝突中性裁決：3225267257 為 Empty Buckshot Shell、3630196063 為 Empty Shotgun Shell；兩者都是已擊發／空的霰彈殼，採不綁彈種的中性名稱。"
+   },
+   "_AM_ItemName_comment_6": {
+    "en": "NOT AVAILABLE ITEMS",
+    "ch": "不可用物品",
+    "cn": "不可用物品"
+   },
+   "ammomaker.ammomaker_BoxBulletsHandgunLAP": {
+    "en": "Box Bullets Handgun L AP",
+    "ch": "手槍大口徑穿甲彈頭 (整盒)",
+    "cn": "手枪大口径穿甲弹头 (整盒)"
+   },
+   "ammomaker.ammomaker_BoxBulletsHandgunLHP": {
+    "en": "Box Bullets Handgun L HP",
+    "ch": "手槍大口徑空尖彈頭 (整盒)",
+    "cn": "手枪大口径空尖弹头 (整盒)"
+   },
+   "ammomaker.ammomaker_BoxBulletsHandgunLTR": {
+    "en": "Box Bullets Handgun L TR",
+    "ch": "手槍大口徑曳光彈頭 (整盒)",
+    "cn": "手枪大口径曳光弹头 (整盒)"
+   },
+   "ammomaker.ammomaker_BoxBulletsHandgunMAP": {
+    "en": "Box Bullets Handgun M AP",
+    "ch": "手槍中口徑穿甲彈頭 (整盒)",
+    "cn": "手枪中口径穿甲弹头 (整盒)"
+   },
+   "ammomaker.ammomaker_BoxBulletsHandgunMHP": {
+    "en": "Box Bullets Handgun M HP",
+    "ch": "手槍中口徑空尖彈頭 (整盒)",
+    "cn": "手枪中口径空尖弹头 (整盒)"
+   },
+   "ammomaker.ammomaker_BoxBulletsHandgunMTR": {
+    "en": "Box Bullets Handgun M TR",
+    "ch": "手槍中口徑曳光彈頭 (整盒)",
+    "cn": "手枪中口径曳光弹头 (整盒)"
+   },
+   "ammomaker.ammomaker_BoxBulletsHandgunSAP": {
+    "en": "Box Bullets Handgun S AP",
+    "ch": "手槍小口徑穿甲彈頭 (整盒)",
+    "cn": "手枪小口径穿甲弹头 (整盒)"
+   },
+   "ammomaker.ammomaker_BoxBulletsHandgunSHP": {
+    "en": "Box Bullets Handgun S HP",
+    "ch": "手槍小口徑空尖彈頭 (整盒)",
+    "cn": "手枪小口径空尖弹头 (整盒)"
+   },
+   "ammomaker.ammomaker_BoxBulletsHandgunSTR": {
+    "en": "Box Bullets Handgun S TR",
+    "ch": "手槍小口徑曳光彈頭 (整盒)",
+    "cn": "手枪小口径曳光弹头 (整盒)"
+   },
+   "ammomaker.ammomaker_BoxBulletsRifleLAP": {
+    "en": "Box Bullets Rifle L AP",
+    "ch": "步槍大口徑穿甲彈頭 (整盒)",
+    "cn": "步枪大口径穿甲弹头 (整盒)"
+   },
+   "ammomaker.ammomaker_BoxBulletsRifleLHP": {
+    "en": "Box Bullets Rifle L HP",
+    "ch": "步槍大口徑空尖彈頭 (整盒)",
+    "cn": "步枪大口径空尖弹头 (整盒)"
+   },
+   "ammomaker.ammomaker_BoxBulletsRifleLTR": {
+    "en": "Box Bullets Rifle L TR",
+    "ch": "步槍大口徑曳光彈頭 (整盒)",
+    "cn": "步枪大口径曳光弹头 (整盒)"
+   },
+   "ammomaker.ammomaker_BoxBulletsRifleMAP": {
+    "en": "Box Bullets Rifle M AP",
+    "ch": "步槍中口徑穿甲彈頭 (整盒)",
+    "cn": "步枪中口径穿甲弹头 (整盒)"
+   },
+   "ammomaker.ammomaker_BoxBulletsRifleMHP": {
+    "en": "Box Bullets Rifle M HP",
+    "ch": "步槍中口徑空尖彈頭 (整盒)",
+    "cn": "步枪中口径空尖弹头 (整盒)"
+   },
+   "ammomaker.ammomaker_BoxBulletsRifleMTR": {
+    "en": "Box Bullets Rifle M TR",
+    "ch": "步槍中口徑曳光彈頭 (整盒)",
+    "cn": "步枪中口径曳光弹头 (整盒)"
+   },
+   "ammomaker.ammomaker_BoxBulletsRifleSTR": {
+    "en": "Box Bullets Rifle S TR",
+    "ch": "步槍小口徑曳光彈頭 (整盒)",
+    "cn": "步枪小口径曳光弹头 (整盒)"
+   },
+   "ammomaker.ammomaker_BoxPyroFiller12": {
+    "en": "Box Pyro Filler 12",
+    "ch": "12號煙火填充劑 (整盒)",
+    "cn": "12号烟火填充剂 (整盒)"
+   },
+   "ammomaker.ammomaker_BulletHandgunLAP": {
+    "en": "Bullet Handgun L AP",
+    "ch": "手槍大口徑穿甲彈頭",
+    "cn": "手枪大口径穿甲弹头"
+   },
+   "ammomaker.ammomaker_BulletHandgunLHP": {
+    "en": "Bullet Handgun L HP",
+    "ch": "手槍大口徑空尖彈頭",
+    "cn": "手枪大口径空尖弹头"
+   },
+   "ammomaker.ammomaker_BulletHandgunLTR": {
+    "en": "Bullet Handgun L TR",
+    "ch": "手槍大口徑曳光彈頭",
+    "cn": "手枪大口径曳光弹头"
+   },
+   "ammomaker.ammomaker_BulletHandgunMAP": {
+    "en": "Bullet Handgun M AP",
+    "ch": "手槍中口徑穿甲彈頭",
+    "cn": "手枪中口径穿甲弹头"
+   },
+   "ammomaker.ammomaker_BulletHandgunMHP": {
+    "en": "Bullet Handgun M HP",
+    "ch": "手槍中口徑空尖彈頭",
+    "cn": "手枪中口径空尖弹头"
+   },
+   "ammomaker.ammomaker_BulletHandgunMTR": {
+    "en": "Bullet Handgun M TR",
+    "ch": "手槍中口徑曳光彈頭",
+    "cn": "手枪中口径曳光弹头"
+   },
+   "ammomaker.ammomaker_BulletHandgunSAP": {
+    "en": "Bullet Handgun S AP",
+    "ch": "手槍小口徑穿甲彈頭",
+    "cn": "手枪小口径穿甲弹头"
+   },
+   "ammomaker.ammomaker_BulletHandgunSHP": {
+    "en": "Bullet Handgun S HP",
+    "ch": "手槍小口徑空尖彈頭",
+    "cn": "手枪小口径空尖弹头"
+   },
+   "ammomaker.ammomaker_BulletHandgunSTR": {
+    "en": "Bullet Handgun S TR",
+    "ch": "手槍小口徑曳光彈頭",
+    "cn": "手枪小口径曳光弹头"
+   },
+   "ammomaker.ammomaker_BulletRifleLAP": {
+    "en": "Bullet Rifle L AP",
+    "ch": "步槍大口徑穿甲彈頭",
+    "cn": "步枪大口径穿甲弹头"
+   },
+   "ammomaker.ammomaker_BulletRifleLHP": {
+    "en": "Bullet Rifle L HP",
+    "ch": "步槍大口徑空尖彈頭",
+    "cn": "步枪大口径空尖弹头"
+   },
+   "ammomaker.ammomaker_BulletRifleLTR": {
+    "en": "Bullet Rifle L TR",
+    "ch": "步槍大口徑曳光彈頭",
+    "cn": "步枪大口径曳光弹头"
+   },
+   "ammomaker.ammomaker_BulletRifleMAP": {
+    "en": "Bullet Rifle M AP",
+    "ch": "步槍中口徑穿甲彈頭",
+    "cn": "步枪中口径穿甲弹头"
+   },
+   "ammomaker.ammomaker_BulletRifleMHP": {
+    "en": "Bullet Rifle M HP",
+    "ch": "步槍中口徑空尖彈頭",
+    "cn": "步枪中口径空尖弹头"
+   },
+   "ammomaker.ammomaker_BulletRifleMTR": {
+    "en": "Bullet Rifle M TR",
+    "ch": "步槍中口徑曳光彈頭",
+    "cn": "步枪中口径曳光弹头"
+   },
+   "ammomaker.ammomaker_BulletRifleSTR": {
+    "en": "Bullet Rifle S TR",
+    "ch": "步槍小口徑曳光彈頭",
+    "cn": "步枪小口径曳光弹头"
+   },
+   "ammomaker.ammomaker_CasingRar": {
+    "en": "Casing RAR",
+    "ch": "RAR藥筒",
+    "cn": "RAR药筒"
+   },
+   "ammomaker.ammomaker_CasingRarOld": {
+    "en": "Casing RAR Old",
+    "ch": "舊RAR藥筒",
+    "cn": "旧RAR药筒"
+   },
+   "ammomaker.ammomaker_MagAmmoWorldJune93": {
+    "en": "Ammo World Magazine - June 93",
+    "ch": "《彈藥世界》雜誌 - 93年6月",
+    "cn": "《弹药世界》杂志 - 93年6月"
+   },
+   "ammomaker.ammomaker_ProjectileRarHE": {
+    "en": "Projectile RAR HE",
+    "ch": "RAR高爆彈頭",
+    "cn": "RAR高爆弹头"
+   },
+   "ammomaker.ammomaker_PyroFiller12": {
+    "en": "Pyro Filler 12",
+    "ch": "12號煙火填充劑",
+    "cn": "12号烟火填充剂"
+   },
+   "ammomaker.ammomaker_PyroPaste": {
+    "en": "Pyro Paste",
+    "ch": "煙火糊",
+    "cn": "烟火糊"
+   },
+   "Base.87fordF700BumperRear2": {
+    "en": "dont spawn this",
+    "ch": "不要生成此物",
+    "cn": "不要生成此物",
+    "_note": "2026-08-21 #236 上游 DisplayName 就是開發者標記 'dont spawn this'（87fordB700 的占位 item，正常遊戲不生成）。忠實直譯而非留空：留空會讓 ItemName map 存入空值、玩家萬一取得時看到空白；直譯至少能讓人看出是占位物。"
+   },
+   "Base.87fordB700RearSeat2": {
+    "en": "dont spawn this",
+    "ch": "不要生成此物",
+    "cn": "不要生成此物",
+    "_note": "2026-08-21 #236 上游 DisplayName 就是開發者標記 'dont spawn this'（87fordB700 的占位 item，正常遊戲不生成）。忠實直譯而非留空：留空會讓 ItemName map 存入空值、玩家萬一取得時看到空白；直譯至少能讓人看出是占位物。"
+   },
+   "HydeCoBees.HoneyBandaid": {
+    "en": "Honey Bandaid",
+    "ch": "蜂蜜OK繃",
+    "cn": "蜂蜜创可贴"
+   },
+   "HydeCoBees.MedicatedBandage": {
+    "en": "Medicated Bandage",
+    "ch": "藥用繃帶",
+    "cn": "药用绷带"
+   },
+   "HydeCoBees.PropolisTincture": {
+    "en": "Propolis Tincture",
+    "ch": "蜂膠酊",
+    "cn": "蜂胶酊"
+   },
+   "HydeCoBees.StingSalve": {
+    "en": "Beeswax Sting Salve",
+    "ch": "蜂蠟螫傷藥膏",
+    "cn": "蜂蜡蜇伤药膏"
+   },
+   "TodoCaserito.TermoARGEmpty": {
+    "en": "Empty thermos (Lumilagro)",
+    "ch": "空保溫瓶 (Lumilagro)",
+    "cn": "空保温瓶 (Lumilagro)"
+   },
+   "TodoCaserito.TermoARGFullHot": {
+    "en": "Thermos (Lumilagro) with hot water",
+    "ch": "裝熱水的保溫瓶 (Lumilagro)",
+    "cn": "装热水的保温瓶 (Lumilagro)"
+   },
+   "TodoCaserito.Lomo": {
+    "en": "Tenderloin beef",
+    "ch": "牛菲力",
+    "cn": "牛里脊"
+   },
+   "TodoCaserito.LomoSliced": {
+    "en": "Tenderloin sliced",
+    "ch": "切片菲力",
+    "cn": "切片里脊"
+   },
+   "TodoCaserito.Matambre": {
+    "en": "Rose Meat bovine",
+    "ch": "玫瑰牛肉",
+    "cn": "玫瑰牛肉"
+   },
+   "TodoCaserito.MatambreALPizza": {
+    "en": "Rose Meat to the pizza",
+    "ch": "披薩用玫瑰肉",
+    "cn": "披萨用玫瑰肉"
+   },
+   "TodoCaserito.MatambreArrollado": {
+    "en": "Rose Meat vegetable roulade",
+    "ch": "玫瑰肉蔬菜卷",
+    "cn": "玫瑰肉蔬菜卷"
+   },
+   "TodoCaserito.MatambreCFritas": {
+    "en": "Rose Meat to the pizza with french fries",
+    "ch": "附薯條的披薩用玫瑰肉",
+    "cn": "附薯条的披萨用玫瑰肉"
+   },
+   "TodoCaserito.MateImperialAmargo": {
+    "en": "Bitter Imperial mate gourd",
+    "ch": "苦味帝國瑪黛杯",
+    "cn": "苦味帝国玛黛杯"
+   },
+   "TodoCaserito.MateImperialDulce": {
+    "en": "Sweet Imperial mate gourd",
+    "ch": "甜味帝國瑪黛杯",
+    "cn": "甜味帝国玛黛杯"
+   },
+   "TodoCaserito.MateImperialVacio": {
+    "en": "Empty Imperial mate gourd",
+    "ch": "空的帝國瑪黛杯",
+    "cn": "空的帝国玛黛杯"
+   },
+   "TodoCaserito.MateImperialconYerba": {
+    "en": "Prepared Imperial mate gourd",
+    "ch": "已準備的帝國瑪黛杯",
+    "cn": "已准备的帝国玛黛杯"
+   },
+   "TodoCaserito.SandwichLomito": {
+    "en": "Loaded tenderloin sandwich",
+    "ch": "滿料菲力三明治",
+    "cn": "满料里脊三明治"
+   },
+   "TodoCaserito.TermoARGFull": {
+    "en": "Thermos (Lumilagro) with water",
+    "ch": "裝水的保溫瓶 (Lumilagro)",
+    "cn": "装水的保温瓶 (Lumilagro)"
+   },
+   "TodoCaserito.Yerba_CBSe": {
+    "en": "CBSe yerba mate",
+    "ch": "CBSe瑪黛茶葉",
+    "cn": "CBSe玛黛茶叶"
+   },
+   "TodoCaserito.Yerba_CruzDeMalta": {
+    "en": "Cruz de Malta yerba mate",
+    "ch": "Cruz de Malta瑪黛茶葉",
+    "cn": "Cruz de Malta玛黛茶叶"
+   },
+   "TodoCaserito.Yerba_NoblezaGaucha": {
+    "en": "Nobleza Gaucha yerba mate",
+    "ch": "Nobleza Gaucha瑪黛茶葉",
+    "cn": "Nobleza Gaucha玛黛茶叶"
+   },
+   "TodoCaserito.Yerba_Rosamonte": {
+    "en": "Rosamonte yerba mate",
+    "ch": "Rosamonte瑪黛茶葉",
+    "cn": "Rosamonte玛黛茶叶"
+   },
+   "TodoCaserito.Yerba_Taragui": {
+    "en": "Taragui yerba mate",
+    "ch": "Taragui瑪黛茶葉",
+    "cn": "Taragui玛黛茶叶"
+   },
+   "HBVCEF.30_Casing": {
+    "en": ".30 Casing",
+    "ch": ".30彈殼",
+    "cn": ".30弹壳"
+   },
+   "HBVCEF.380_Casing": {
+    "en": ".380 Casing",
+    "ch": ".380彈殼",
+    "cn": ".380弹壳"
+   },
+   "HBVCEF.50BMG_Casing": {
+    "en": ".50 BMG Casing",
+    "ch": ".50 BMG彈殼",
+    "cn": ".50 BMG弹壳"
+   },
+   "HBVCEF.7x57_Casing": {
+    "en": "7x57mm Casing",
+    "ch": "7x57mm彈殼",
+    "cn": "7x57mm弹壳"
+   },
+   "Base.WK_Doc_ArmySurplusLiterature": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_TailoringTools": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_CarDealerDesk": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_CobblerTools": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_PoliceLockers": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_BlacksmithLiterature": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_FishingStoreGear": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_MedicalOfficeDesk": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_ArmyBunkerLockers": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_ToolCabinetMechanics": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_FilingCabinetGeneric": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_MetalShopTools": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_OfficeDeskHome": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_WildWestBlacksmith": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_FurnitureFactoryTools": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_ClassroomSecondaryDesk": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_KidsDesk": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_ToolStoreMisc": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_HuntingLockers": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_WaitingRoomDesk": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_LeatherworkingTools": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_MechanicShelfBooks": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_ButcherLiterature": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_RangerLockers": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_ArmyBunkerStorage": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_ClockRepairTools": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_OfficeDrawers": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_BlacksmithTools": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_ElectricianTools": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_OfficeDesk": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_CarvingWorkshopMaterials": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_PoliceFilingCabinet": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_RangerBooks": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_FireDeptLockers": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_PlumbingSupplies": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_WeldingWorkshopTools": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_KnappingBooks": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_CarvingWorkshopTools": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_BlacksmithMolds": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_ClassroomDesk": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_FireStorageTools": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_CarpentryBooks": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_ClassroomShelves": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_OfficeDeskHomeClassy": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_PoliceDesk": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_CarDealerFilingCabinet": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_DeskGeneric": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_GlassWorkshopTools": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_PoliceLibraryLegal": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_PotteryStudioTools": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_TailoringLiterature": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_KnappingTools": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_PoliceCaptainDesk": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_RangerDesk": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_TeacherDesk": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_GardenStoreMisc": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_ToolCabinetFarming": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.WK_Doc_ClockRepairLiterature": {
+    "en": "Document",
+    "ch": "文件",
+    "cn": "文件",
+    "_note": "2026-08-21 #228 上游 WK_placeholders.txt 把整批 60 個文件 item 的 DisplayName 都寫成'Document'（同值非漏抽）。忠實譯「文件」＝紙本文件語意，非電腦檔案；已於ch_review_state 逐鍵登記，lint [C] 文件→檔案 規則不再重報。"
+   },
+   "Base.SVRP_CB_arrow_metal_broken": {
+    "en": "Broken Metal Arrow",
+    "ch": "損壞的金屬箭矢",
+    "cn": "损坏的金属箭矢",
+    "_note": "2026-08-21 #243 用詞對齊同族既有裸鍵（碳製/金屬/木質 箭矢・弩箭）。"
+   },
+   "Base.SVRP_CB_bolt_carbon_broken": {
+    "en": "Broken Carbon Bolt",
+    "ch": "損壞的碳製弩箭",
+    "cn": "损坏的碳制弩箭",
+    "_note": "2026-08-21 #243 用詞對齊同族既有裸鍵（碳製/金屬/木質 箭矢・弩箭）。"
+   },
+   "Base.SVRP_CB_arrow_wood_broken": {
+    "en": "Broken Wooden Arrow",
+    "ch": "損壞的木質箭矢",
+    "cn": "损坏的木质箭矢",
+    "_note": "2026-08-21 #243 用詞對齊同族既有裸鍵（碳製/金屬/木質 箭矢・弩箭）。"
+   },
+   "Base.SVRP_CB_bolt_wood_broken": {
+    "en": "Broken Wooden Bolt",
+    "ch": "損壞的木質弩箭",
+    "cn": "损坏的木质弩箭",
+    "_note": "2026-08-21 #243 用詞對齊同族既有裸鍵（碳製/金屬/木質 箭矢・弩箭）。"
+   },
+   "Base.SVRP_CB_arrow_carbon_broken": {
+    "en": "Broken Carbon Arrow",
+    "ch": "損壞的碳製箭矢",
+    "cn": "损坏的碳制箭矢",
+    "_note": "2026-08-21 #243 用詞對齊同族既有裸鍵（碳製/金屬/木質 箭矢・弩箭）。"
+   },
+   "Base.SVRP_CB_bolt_metal_broken": {
+    "en": "Broken Metal Bolt",
+    "ch": "損壞的金屬弩箭",
+    "cn": "损坏的金属弩箭",
+    "_note": "2026-08-21 #243 用詞對齊同族既有裸鍵（碳製/金屬/木質 箭矢・弩箭）。"
+   },
+   "Base.PotatoSilencer": {
+    "en": "Potato Suppressor",
+    "ch": "馬鈴薯消音器",
+    "cn": "土豆消音器"
+   },
+   "ItemName_Base.SVRP_CB_Bow_compbound": {
+    "en": "Compound Bow",
+    "ch": "複合弓",
+    "cn": "复合弓"
+   },
+   "ItemName_Base.SVRP_CB_Bow_compbound2": {
+    "en": "Reinforced Compound Bow",
+    "ch": "強化複合弓",
+    "cn": "强化复合弓"
+   },
+   "ItemName_Base.SVRP_CB_Bow_crafted": {
+    "en": "Crafted Bow",
+    "ch": "自製弓",
+    "cn": "自制弓"
+   },
+   "ItemName_Base.SVRP_CB_Bow_hunting": {
+    "en": "Hunting Bow",
+    "ch": "獵弓",
+    "cn": "猎弓"
+   },
+   "ItemName_Base.SVRP_CB_Bow_medieval": {
+    "en": "Medieval Bow",
+    "ch": "中世紀弓",
+    "cn": "中世纪弓"
+   },
+   "ItemName_Base.SVRP_CB_Crossbow": {
+    "en": "Crossbow",
+    "ch": "十字弩",
+    "cn": "十字弩"
+   },
+   "ItemName_Base.SVRP_CB_Crossbow_TenPoint": {
+    "en": "TenPoint Crossbow",
+    "ch": "天魄複合滑輪弩",
+    "cn": "天魄复合滑轮弩"
+   },
+   "ItemName_Base.SVRP_CB_Crossbow_hunting": {
+    "en": "Hunting Crossbow",
+    "ch": "獵弩",
+    "cn": "猎弩"
+   },
+   "ItemName_Base.SVRP_CB_Crossbow_medieval": {
+    "en": "Medieval Crossbow",
+    "ch": "中世紀弩",
+    "cn": "中世纪弩"
+   },
+   "ItemName_Base.SVRP_CB_Crossbow_zhnets": {
+    "en": "Zhnets Crossbow",
+    "ch": "收割者複合滑輪弩",
+    "cn": "收割者复合滑轮弩"
+   },
+   "ItemName_Base.SVRP_CB_arrow_carbon": {
+    "en": "Carbon Arrow",
+    "ch": "碳製箭矢",
+    "cn": "碳制箭矢"
+   },
+   "ItemName_Base.SVRP_CB_arrow_carbon_broken": {
+    "en": "Broken Carbon Arrow",
+    "ch": "損壞的碳製箭矢",
+    "cn": "损坏的碳制箭矢"
+   },
+   "ItemName_Base.SVRP_CB_arrow_carbon_pack": {
+    "en": "Pack of Carbon Arrows",
+    "ch": "碳製箭矢 (整包)",
+    "cn": "碳制箭矢 (整包)"
+   },
+   "ItemName_Base.SVRP_CB_arrow_metal": {
+    "en": "Metal Arrow",
+    "ch": "金屬箭矢",
+    "cn": "金属箭矢"
+   },
+   "ItemName_Base.SVRP_CB_arrow_metal_broken": {
+    "en": "Broken Metal Arrow",
+    "ch": "損壞的金屬箭矢",
+    "cn": "损坏的金属箭矢"
+   },
+   "ItemName_Base.SVRP_CB_arrow_metal_pack": {
+    "en": "Pack of Metal Arrows",
+    "ch": "金屬箭矢 (整包)",
+    "cn": "金属箭矢 (整包)"
+   },
+   "ItemName_Base.SVRP_CB_arrow_wood": {
+    "en": "Wooden Arrow",
+    "ch": "木質箭矢",
+    "cn": "木质箭矢"
+   },
+   "ItemName_Base.SVRP_CB_arrow_wood_broken": {
+    "en": "Broken Wooden Arrow",
+    "ch": "損壞的木質箭矢",
+    "cn": "损坏的木质箭矢"
+   },
+   "ItemName_Base.SVRP_CB_arrow_wood_pack": {
+    "en": "Pack of Wooden Arrows",
+    "ch": "木質箭矢 (整包)",
+    "cn": "木质箭矢 (整包)"
+   },
+   "ItemName_Base.SVRP_CB_bolt_carbon": {
+    "en": "Carbon Bolt",
+    "ch": "碳製弩箭",
+    "cn": "碳制弩箭"
+   },
+   "ItemName_Base.SVRP_CB_bolt_carbon_broken": {
+    "en": "Broken Carbon Bolt",
+    "ch": "損壞的碳製弩箭",
+    "cn": "损坏的碳制弩箭"
+   },
+   "ItemName_Base.SVRP_CB_bolt_carbon_pack": {
+    "en": "Pack of Carbon Bolts",
+    "ch": "碳製弩箭 (整包)",
+    "cn": "碳制弩箭 (整包)"
+   },
+   "ItemName_Base.SVRP_CB_bolt_metal": {
+    "en": "Metal Bolt",
+    "ch": "金屬弩箭",
+    "cn": "金属弩箭"
+   },
+   "ItemName_Base.SVRP_CB_bolt_metal_broken": {
+    "en": "Broken Metal Bolt",
+    "ch": "損壞的金屬弩箭",
+    "cn": "损坏的金属弩箭"
+   },
+   "ItemName_Base.SVRP_CB_bolt_metal_pack": {
+    "en": "Pack of Metal Bolts",
+    "ch": "金屬弩箭 (整包)",
+    "cn": "金属弩箭 (整包)"
+   },
+   "ItemName_Base.SVRP_CB_bolt_wood": {
+    "en": "Wooden Bolt",
+    "ch": "木質弩箭",
+    "cn": "木质弩箭"
+   },
+   "ItemName_Base.SVRP_CB_bolt_wood_broken": {
+    "en": "Broken Wooden Bolt",
+    "ch": "損壞的木質弩箭",
+    "cn": "损坏的木质弩箭"
+   },
+   "ItemName_Base.SVRP_CB_bolt_wood_pack": {
+    "en": "Pack of Wooden Bolts",
+    "ch": "木質弩箭 (整包)",
+    "cn": "木质弩箭 (整包)"
+   },
+   "ItemName_Base.SVRP_CB_tactical_Quiver": {
+    "en": "Tactical Quiver",
+    "ch": "戰術箭袋",
+    "cn": "战术箭袋"
+   },
+   "ItemName_Base.SVRP_CB_tactical_Quiver_woodland": {
+    "en": "Woodland Tactical Quiver",
+    "ch": "林地戰術箭袋",
+    "cn": "林地战术箭袋"
    }
   },
   "Items.json": {
@@ -124577,8 +125565,9 @@
    },
    "MakePanDulce": {
     "en": "Prepare christmas sweet bread",
-    "ch": "製作聖誕甜麵包",
-    "cn": "制作圣诞甜面包"
+    "ch": "製作甜麵包",
+    "cn": "制作甜面包",
+    "_note": "2026-08-21 中性裁決：Todo Caserito 配方名帶 christmas，但其物品 TodoCaserito.PanDulce='Sweet bread'；AbuelitaLinda 的 Recipes／物品皆為 Sweet Bread。聖誕是單側修飾，中性「製作甜麵包」對兩 owner 都成立。"
    },
    "MakePanRalladoCasero": {
     "en": "Prepare homemade breadcrumbs",
@@ -129416,6 +130405,716 @@
     "en": "Open Small Box",
     "ch": "開啟小箱子",
     "cn": "打开小箱子"
+   },
+   "Make12Dragon": {
+    "en": "Make 12 bore dragon shell",
+    "ch": "製作12號龍息彈",
+    "cn": "制作12号龙息弹"
+   },
+   "Make22LRAP": {
+    "en": "Make .22 LR AP",
+    "ch": "製作.22 LR穿甲彈",
+    "cn": "制作.22 LR穿甲弹"
+   },
+   "Make22LRTR": {
+    "en": "Make .22 LR TR",
+    "ch": "製作.22 LR曳光彈",
+    "cn": "制作.22 LR曳光弹"
+   },
+   "Make3006SpringAP": {
+    "en": "Make .30-06 Spring AP",
+    "ch": "製作.30-06春田穿甲彈",
+    "cn": "制作.30-06春田穿甲弹"
+   },
+   "Make3006SpringTR": {
+    "en": "Make .30-06 Spring TR",
+    "ch": "製作.30-06春田曳光彈",
+    "cn": "制作.30-06春田曳光弹"
+   },
+   "Make303BritishAP": {
+    "en": "Make .303 British AP",
+    "ch": "製作.303英式穿甲彈",
+    "cn": "制作.303英式穿甲弹"
+   },
+   "Make303BritishTR": {
+    "en": "Make .303 British TR",
+    "ch": "製作.303英式曳光彈",
+    "cn": "制作.303英式曳光弹"
+   },
+   "Make308WinAP": {
+    "en": "Make .308 Winchester AP",
+    "ch": "製作.308溫徹斯特穿甲彈",
+    "cn": "制作.308温彻斯特穿甲弹"
+   },
+   "Make308WinTR": {
+    "en": "Make .308 Winchester TR",
+    "ch": "製作.308溫徹斯特曳光彈",
+    "cn": "制作.308温彻斯特曳光弹"
+   },
+   "Make32ACPAP": {
+    "en": "Make .32 ACP AP",
+    "ch": "製作.32 ACP穿甲彈",
+    "cn": "制作.32 ACP穿甲弹"
+   },
+   "Make32ACPTR": {
+    "en": "Make .32 ACP TR",
+    "ch": "製作.32 ACP曳光彈",
+    "cn": "制作.32 ACP曳光弹"
+   },
+   "Make357MagAP": {
+    "en": "Make .357 Magnum AP",
+    "ch": "製作.357馬格南穿甲彈",
+    "cn": "制作.357马格南穿甲弹"
+   },
+   "Make357MagTR": {
+    "en": "Make .357 Magnum TR",
+    "ch": "製作.357馬格南曳光彈",
+    "cn": "制作.357马格南曳光弹"
+   },
+   "Make38SPAP": {
+    "en": "Make .38 Special AP",
+    "ch": "製作.38特種穿甲彈",
+    "cn": "制作.38特种穿甲弹"
+   },
+   "Make38SPTR": {
+    "en": "Make .38 Special TR",
+    "ch": "製作.38特種曳光彈",
+    "cn": "制作.38特种曳光弹"
+   },
+   "Make44MagAP": {
+    "en": "Make .44 Magnum AP",
+    "ch": "製作.44馬格南穿甲彈",
+    "cn": "制作.44马格南穿甲弹"
+   },
+   "Make44MagTR": {
+    "en": "Make .44 Magnum TR",
+    "ch": "製作.44馬格南曳光彈",
+    "cn": "制作.44马格南曳光弹"
+   },
+   "Make45ACPAP": {
+    "en": "Make .45 ACP AP",
+    "ch": "製作.45 ACP穿甲彈",
+    "cn": "制作.45 ACP穿甲弹"
+   },
+   "Make45ACPTR": {
+    "en": "Make .45 ACP TR",
+    "ch": "製作.45 ACP曳光彈",
+    "cn": "制作.45 ACP曳光弹"
+   },
+   "Make500SWMagAP": {
+    "en": "Make .500 S&W Magnum AP",
+    "ch": "製作.500 S&W馬格南穿甲彈",
+    "cn": "制作.500 S&W马格南穿甲弹"
+   },
+   "Make500SWMagTR": {
+    "en": "Make .500 S&W Magnum TR",
+    "ch": "製作.500 S&W馬格南曳光彈",
+    "cn": "制作.500 S&W马格南曳光弹"
+   },
+   "Make50BMGAP": {
+    "en": "Make .50 BMG AP",
+    "ch": "製作.50 BMG穿甲彈",
+    "cn": "制作.50 BMG穿甲弹"
+   },
+   "Make50BMGTR": {
+    "en": "Make .50 BMG TR",
+    "ch": "製作.50 BMG曳光彈",
+    "cn": "制作.50 BMG曳光弹"
+   },
+   "Make545x39AP": {
+    "en": "Make 5.45x39mm AP",
+    "ch": "製作5.45x39mm穿甲彈",
+    "cn": "制作5.45x39mm穿甲弹"
+   },
+   "Make545x39TR": {
+    "en": "Make 5.45x39mm TR",
+    "ch": "製作5.45x39mm曳光彈",
+    "cn": "制作5.45x39mm曳光弹"
+   },
+   "Make556x45TR": {
+    "en": "Make 5.56x45mm NATO TR",
+    "ch": "製作5.56x45mm北約曳光彈",
+    "cn": "制作5.56x45mm北约曳光弹"
+   },
+   "Make762x39AP": {
+    "en": "Make 7.62x39mm AP",
+    "ch": "製作7.62x39mm穿甲彈",
+    "cn": "制作7.62x39mm穿甲弹"
+   },
+   "Make762x39TR": {
+    "en": "Make 7.62x39mm TR",
+    "ch": "製作7.62x39mm曳光彈",
+    "cn": "制作7.62x39mm曳光弹"
+   },
+   "Make762x54RAP": {
+    "en": "Make 7.62x54mmR AP",
+    "ch": "製作7.62x54mmR穿甲彈",
+    "cn": "制作7.62x54mmR穿甲弹"
+   },
+   "Make762x54RTR": {
+    "en": "Make 7.62x54mmR TR",
+    "ch": "製作7.62x54mmR曳光彈",
+    "cn": "制作7.62x54mmR曳光弹"
+   },
+   "Make765x21Para": {
+    "en": "Make 7.65x21mm Parabellum",
+    "ch": "製作7.65x21mm帕拉貝倫彈",
+    "cn": "制作7.65x21mm帕拉贝伦弹"
+   },
+   "Make792x57MausAP": {
+    "en": "Make 7.92x57mm Maus AP",
+    "ch": "製作7.92x57mm毛瑟穿甲彈",
+    "cn": "制作7.92x57mm毛瑟穿甲弹"
+   },
+   "Make792x57MausTR": {
+    "en": "Make 7.92x57mm Maus TR",
+    "ch": "製作7.92x57mm毛瑟曳光彈",
+    "cn": "制作7.92x57mm毛瑟曳光弹"
+   },
+   "Make9x19ParaAP": {
+    "en": "Make 9mm Luger AP",
+    "ch": "製作9mm魯格穿甲彈",
+    "cn": "制作9mm鲁格穿甲弹"
+   },
+   "Make9x19ParaTR": {
+    "en": "Make 9mm Luger TR",
+    "ch": "製作9mm魯格曳光彈",
+    "cn": "制作9mm鲁格曳光弹"
+   },
+   "Make9x39AP": {
+    "en": "Make 9x39mm AP",
+    "ch": "製作9x39mm穿甲彈",
+    "cn": "制作9x39mm穿甲弹"
+   },
+   "Make9x39TR": {
+    "en": "Make 9x39mm TR",
+    "ch": "製作9x39mm曳光彈",
+    "cn": "制作9x39mm曳光弹"
+   },
+   "MakeBulletsHandgunLAP": {
+    "en": "Make Bullets Handgun L AP",
+    "ch": "製作手槍大口徑穿甲彈頭",
+    "cn": "制作手枪大口径穿甲弹头"
+   },
+   "MakeBulletsHandgunMAP": {
+    "en": "Make Bullets Handgun M AP",
+    "ch": "製作手槍中口徑穿甲彈頭",
+    "cn": "制作手枪中口径穿甲弹头"
+   },
+   "MakeBulletsHandgunSAP": {
+    "en": "Make Bullets Handgun S AP",
+    "ch": "製作手槍小口徑穿甲彈頭",
+    "cn": "制作手枪小口径穿甲弹头"
+   },
+   "MakeBulletsRifleLAP": {
+    "en": "Make Bullets Rifle L AP",
+    "ch": "製作步槍大口徑穿甲彈頭",
+    "cn": "制作步枪大口径穿甲弹头"
+   },
+   "MakeBulletsRifleMAP": {
+    "en": "Make Bullets Rifle M AP",
+    "ch": "製作步槍中口徑穿甲彈頭",
+    "cn": "制作步枪中口径穿甲弹头"
+   },
+   "MakeCasingRar": {
+    "en": "Make Casing RAR",
+    "ch": "製作RAR藥筒",
+    "cn": "制作RAR药筒"
+   },
+   "MakePG7V": {
+    "en": "Make PG-7V grenade",
+    "ch": "製作PG-7V榴彈",
+    "cn": "制作PG-7V榴弹"
+   },
+   "MakeProjectileRarHE": {
+    "en": "Make Projectile RAR HE",
+    "ch": "製作RAR高爆彈頭",
+    "cn": "制作RAR高爆弹头"
+   },
+   "MakePyroFiller12": {
+    "en": "Make Pyro Filler 12",
+    "ch": "製作12號煙火填充劑",
+    "cn": "制作12号烟火填充剂"
+   },
+   "MakePyroPaste": {
+    "en": "Make Pyro Paste",
+    "ch": "製作煙火糊",
+    "cn": "制作烟火糊"
+   },
+   "MakeTracerBullet": {
+    "en": "Make Tracer Bullet",
+    "ch": "製作曳光彈頭",
+    "cn": "制作曳光弹头"
+   },
+   "Produce12Dragon": {
+    "en": "Produce 12 bore dragon shells",
+    "ch": "量產12號龍息彈",
+    "cn": "量产12号龙息弹"
+   },
+   "Produce22LRAP": {
+    "en": "Produce .22 LR AP",
+    "ch": "量產.22 LR穿甲彈",
+    "cn": "量产.22 LR穿甲弹"
+   },
+   "Produce22LRTR": {
+    "en": "Produce .22 LR TR",
+    "ch": "量產.22 LR曳光彈",
+    "cn": "量产.22 LR曳光弹"
+   },
+   "Produce3006SpringAP": {
+    "en": "Produce .30-06 Spring AP",
+    "ch": "量產.30-06春田穿甲彈",
+    "cn": "量产.30-06春田穿甲弹"
+   },
+   "Produce3006SpringTR": {
+    "en": "Produce .30-06 Spring TR",
+    "ch": "量產.30-06春田曳光彈",
+    "cn": "量产.30-06春田曳光弹"
+   },
+   "Produce303BritishAP": {
+    "en": "Produce .303 British AP",
+    "ch": "量產.303英式穿甲彈",
+    "cn": "量产.303英式穿甲弹"
+   },
+   "Produce303BritishTR": {
+    "en": "Produce .303 British TR",
+    "ch": "量產.303英式曳光彈",
+    "cn": "量产.303英式曳光弹"
+   },
+   "Produce308WinAP": {
+    "en": "Produce .308 Winchester AP",
+    "ch": "量產.308溫徹斯特穿甲彈",
+    "cn": "量产.308温彻斯特穿甲弹"
+   },
+   "Produce308WinTR": {
+    "en": "Produce .308 Winchester TR",
+    "ch": "量產.308溫徹斯特曳光彈",
+    "cn": "量产.308温彻斯特曳光弹"
+   },
+   "Produce32ACPAP": {
+    "en": "Produce .32 ACP AP",
+    "ch": "量產.32 ACP穿甲彈",
+    "cn": "量产.32 ACP穿甲弹"
+   },
+   "Produce32ACPTR": {
+    "en": "Produce .32 ACP TR",
+    "ch": "量產.32 ACP曳光彈",
+    "cn": "量产.32 ACP曳光弹"
+   },
+   "Produce357MagAP": {
+    "en": "Produce .357 Magnum AP",
+    "ch": "量產.357馬格南穿甲彈",
+    "cn": "量产.357马格南穿甲弹"
+   },
+   "Produce357MagTR": {
+    "en": "Produce .357 Magnum TR",
+    "ch": "量產.357馬格南曳光彈",
+    "cn": "量产.357马格南曳光弹"
+   },
+   "Produce38SPAP": {
+    "en": "Produce .38 Special AP",
+    "ch": "量產.38特種穿甲彈",
+    "cn": "量产.38特种穿甲弹"
+   },
+   "Produce38SPTR": {
+    "en": "Produce .38 Special TR",
+    "ch": "量產.38特種曳光彈",
+    "cn": "量产.38特种曳光弹"
+   },
+   "Produce44MagAP": {
+    "en": "Produce .44 Magnum AP",
+    "ch": "量產.44馬格南穿甲彈",
+    "cn": "量产.44马格南穿甲弹"
+   },
+   "Produce44MagTR": {
+    "en": "Produce .44 Magnum TR",
+    "ch": "量產.44馬格南曳光彈",
+    "cn": "量产.44马格南曳光弹"
+   },
+   "Produce45ACPAP": {
+    "en": "Produce .45 ACP AP",
+    "ch": "量產.45 ACP穿甲彈",
+    "cn": "量产.45 ACP穿甲弹"
+   },
+   "Produce45ACPTR": {
+    "en": "Produce .45 ACP TR",
+    "ch": "量產.45 ACP曳光彈",
+    "cn": "量产.45 ACP曳光弹"
+   },
+   "Produce500SWMagAP": {
+    "en": "Produce .500 S&W Mag AP",
+    "ch": "量產.500 S&W馬格南穿甲彈",
+    "cn": "量产.500 S&W马格南穿甲弹"
+   },
+   "Produce500SWMagTR": {
+    "en": "Produce .500 S&W Mag TR",
+    "ch": "量產.500 S&W馬格南曳光彈",
+    "cn": "量产.500 S&W马格南曳光弹"
+   },
+   "Produce50BMGAP": {
+    "en": "Produce .50 BMG AP",
+    "ch": "量產.50 BMG穿甲彈",
+    "cn": "量产.50 BMG穿甲弹"
+   },
+   "Produce50BMGTR": {
+    "en": "Produce .50 BMG TR",
+    "ch": "量產.50 BMG曳光彈",
+    "cn": "量产.50 BMG曳光弹"
+   },
+   "Produce545x39AP": {
+    "en": "Produce 5.45x39mm AP",
+    "ch": "量產5.45x39mm穿甲彈",
+    "cn": "量产5.45x39mm穿甲弹"
+   },
+   "Produce545x39TR": {
+    "en": "Produce 5.45x39mm TR",
+    "ch": "量產5.45x39mm曳光彈",
+    "cn": "量产5.45x39mm曳光弹"
+   },
+   "Produce556x45TR": {
+    "en": "Produce 5.56x45mm NATO TR",
+    "ch": "量產5.56x45mm北約曳光彈",
+    "cn": "量产5.56x45mm北约曳光弹"
+   },
+   "Produce762x39AP": {
+    "en": "Produce 7.62x39mm AP",
+    "ch": "量產7.62x39mm穿甲彈",
+    "cn": "量产7.62x39mm穿甲弹"
+   },
+   "Produce762x39TR": {
+    "en": "Produce 7.62x39mm TR",
+    "ch": "量產7.62x39mm曳光彈",
+    "cn": "量产7.62x39mm曳光弹"
+   },
+   "Produce762x54RAP": {
+    "en": "Produce 7.62x54mmR AP",
+    "ch": "量產7.62x54mmR穿甲彈",
+    "cn": "量产7.62x54mmR穿甲弹"
+   },
+   "Produce762x54RTR": {
+    "en": "Produce 7.62x54mmR TR",
+    "ch": "量產7.62x54mmR曳光彈",
+    "cn": "量产7.62x54mmR曳光弹"
+   },
+   "Produce765x21Para": {
+    "en": "Produce 7.65x21mm Parabellum",
+    "ch": "量產7.65x21mm帕拉貝倫彈",
+    "cn": "量产7.65x21mm帕拉贝伦弹"
+   },
+   "Produce792x57MausAP": {
+    "en": "Produce 7.92x57mm Maus AP",
+    "ch": "量產7.92x57mm毛瑟穿甲彈",
+    "cn": "量产7.92x57mm毛瑟穿甲弹"
+   },
+   "Produce792x57MausTR": {
+    "en": "Produce 7.92x57mm Maus TR",
+    "ch": "量產7.92x57mm毛瑟曳光彈",
+    "cn": "量产7.92x57mm毛瑟曳光弹"
+   },
+   "Produce9x19ParaAP": {
+    "en": "Produce 9mm Luger AP",
+    "ch": "量產9mm魯格穿甲彈",
+    "cn": "量产9mm鲁格穿甲弹"
+   },
+   "Produce9x19ParaTR": {
+    "en": "Produce 9mm Luger TR",
+    "ch": "量產9mm魯格曳光彈",
+    "cn": "量产9mm鲁格曳光弹"
+   },
+   "Produce9x39AP": {
+    "en": "Produce 9x39mm AP",
+    "ch": "量產9x39mm穿甲彈",
+    "cn": "量产9x39mm穿甲弹"
+   },
+   "Produce9x39TR": {
+    "en": "Produce 9x39mm TR",
+    "ch": "量產9x39mm曳光彈",
+    "cn": "量产9x39mm曳光弹"
+   },
+   "RecycleCasingRar": {
+    "en": "Recycle Casing RAR",
+    "ch": "回收RAR藥筒",
+    "cn": "回收RAR药筒"
+   },
+   "RecyclePyroFiller12": {
+    "en": "Recycle Pyro Filler 12",
+    "ch": "回收12號煙火填充劑",
+    "cn": "回收12号烟火填充剂"
+   },
+   "Dismantle_Laser_Tag_Cartridge": {
+    "en": "Dismantle Laser Tag Cartridge",
+    "ch": "拆解雷射槍戰彈匣",
+    "cn": "拆解激光枪战弹匣"
+   },
+   "Dismantle_Laser_Tag_Harness": {
+    "en": "Dismantle Laser Tag Harness",
+    "ch": "拆解雷射槍戰背心",
+    "cn": "拆解激光枪战背心"
+   },
+   "Dismantle_Laser_Tag_Helmet": {
+    "en": "Dismantle Laser Tag Helmet",
+    "ch": "拆解雷射槍戰頭盔",
+    "cn": "拆解激光枪战头盔"
+   },
+   "HydeCoBees_ApplyStingSalve": {
+    "en": "Rub Salve on Bee Stings",
+    "ch": "把藥膏擦在蜂螫上",
+    "cn": "把药膏擦在蜂蜇上"
+   },
+   "HydeCoBees_MakeHoneyBandaids": {
+    "en": "Make Honey Bandaids",
+    "ch": "製作蜂蜜OK繃",
+    "cn": "制作蜂蜜创可贴"
+   },
+   "HydeCoBees_MakeMedicatedBandage": {
+    "en": "Make Medicated Bandage",
+    "ch": "製作藥用繃帶",
+    "cn": "制作药用绷带"
+   },
+   "HydeCoBees_MakePropolisTincture": {
+    "en": "Make Propolis Tincture",
+    "ch": "製作蜂膠酊",
+    "cn": "制作蜂胶酊"
+   },
+   "HydeCoBees_MakeStingSalve": {
+    "en": "Make Beeswax Sting Salve",
+    "ch": "製作蜂蠟螫傷藥膏",
+    "cn": "制作蜂蜡蜇伤药膏"
+   },
+   "Recipe_HydeCoBees_ApplyStingSalve": {
+    "en": "Rub Salve on Bee Stings",
+    "ch": "把藥膏擦在蜂螫上",
+    "cn": "把药膏擦在蜂蜇上"
+   },
+   "Recipe_HydeCoBees_MakeHoneyBandaids": {
+    "en": "Make Honey Bandaids",
+    "ch": "製作蜂蜜OK繃",
+    "cn": "制作蜂蜜创可贴"
+   },
+   "Recipe_HydeCoBees_MakeMedicatedBandage": {
+    "en": "Make Medicated Bandage",
+    "ch": "製作藥用繃帶",
+    "cn": "制作药用绷带"
+   },
+   "Recipe_HydeCoBees_MakePropolisTincture": {
+    "en": "Make Propolis Tincture",
+    "ch": "製作蜂膠酊",
+    "cn": "制作蜂胶酊"
+   },
+   "Recipe_HydeCoBees_MakeStingSalve": {
+    "en": "Make Beeswax Sting Salve",
+    "ch": "製作蜂蠟螫傷藥膏",
+    "cn": "制作蜂蜡蜇伤药膏"
+   },
+   "CargarTermoARGHot": {
+    "en": "Fill thermos with hot water",
+    "ch": "把熱水裝進保溫瓶",
+    "cn": "把热水装进保温瓶"
+   },
+   "CebarMateImperialAmargo": {
+    "en": "Brew bitter Imperial Mate",
+    "ch": "沖泡苦味帝國瑪黛茶",
+    "cn": "冲泡苦味帝国玛黛茶"
+   },
+   "CebarMateImperialDulce": {
+    "en": "Brew sweet Imperial Mate",
+    "ch": "沖泡甜味帝國瑪黛茶",
+    "cn": "冲泡甜味帝国玛黛茶"
+   },
+   "LimpiarMateImperial": {
+    "en": "Clean and dry the mate",
+    "ch": "清洗並晾乾瑪黛杯",
+    "cn": "清洗并晾干玛黛杯"
+   },
+   "LomoSliced": {
+    "en": "Sliced tenderloin",
+    "ch": "切片菲力",
+    "cn": "切片里脊"
+   },
+   "MakeMatambreALPizza": {
+    "en": "Prepare rose Meat to the pizza",
+    "ch": "準備披薩用玫瑰肉",
+    "cn": "准备披萨用玫瑰肉"
+   },
+   "MakeMatambreArrollado": {
+    "en": "Prepare Rose Meat vegetable roulade",
+    "ch": "準備玫瑰肉蔬菜卷",
+    "cn": "准备玫瑰肉蔬菜卷"
+   },
+   "MakeMatambreCFritas": {
+    "en": "Prepare rose meat to the pizza with french fries",
+    "ch": "準備附薯條的披薩用玫瑰肉",
+    "cn": "准备附薯条的披萨用玫瑰肉"
+   },
+   "MakeSandwichLomito": {
+    "en": "Prepare tenderloin sandwich loaded",
+    "ch": "準備滿料菲力三明治",
+    "cn": "准备满料里脊三明治"
+   },
+   "PrepararMateI": {
+    "en": "Prepare Imperial Mate",
+    "ch": "準備帝國瑪黛茶",
+    "cn": "准备帝国玛黛茶"
+   },
+   "Recipe_Craft_Medieval_Bow": {
+    "en": "Craft Medieval Bow",
+    "ch": "製作中世紀弓",
+    "cn": "制作中世纪弓"
+   },
+   "Recipe_Craft_Medieval_Crossbow": {
+    "en": "Craft Medieval Crossbow",
+    "ch": "製作中世紀弩",
+    "cn": "制作中世纪弩"
+   },
+   "Recipe_Craft_Metal_Arrows": {
+    "en": "Craft Metal Arrows",
+    "ch": "製作金屬箭",
+    "cn": "制作金属箭"
+   },
+   "Recipe_Craft_Metal_Arrows_from_Plank": {
+    "en": "Craft Metal Arrows (Plank)",
+    "ch": "製作金屬箭 (木板)",
+    "cn": "制作金属箭 (木板)"
+   },
+   "Recipe_Craft_Metal_Bolts": {
+    "en": "Craft Metal Bolts",
+    "ch": "製作金屬弩矢",
+    "cn": "制作金属弩矢"
+   },
+   "Recipe_Craft_Metal_Bolts_from_Plank": {
+    "en": "Craft Metal Bolts (Plank)",
+    "ch": "製作金屬弩矢 (木板)",
+    "cn": "制作金属弩矢 (木板)"
+   },
+   "Recipe_Craft_Simple_Bow": {
+    "en": "Craft Simple Bow",
+    "ch": "製作簡易弓",
+    "cn": "制作简易弓"
+   },
+   "Recipe_Craft_Tactical_Quiver": {
+    "en": "Craft Tactical Quiver",
+    "ch": "製作戰術箭袋",
+    "cn": "制作战术箭袋"
+   },
+   "Recipe_Craft_Wooden_Arrows": {
+    "en": "Craft Wooden Arrows",
+    "ch": "製作木箭",
+    "cn": "制作木箭"
+   },
+   "Recipe_Craft_Wooden_Arrows_from_Plank": {
+    "en": "Craft Wooden Arrows (Plank)",
+    "ch": "製作木箭 (木板)",
+    "cn": "制作木箭 (木板)"
+   },
+   "Recipe_Craft_Wooden_Bolts": {
+    "en": "Craft Wooden Bolts",
+    "ch": "製作木弩矢",
+    "cn": "制作木弩矢"
+   },
+   "Recipe_Craft_Wooden_Bolts_from_Plank": {
+    "en": "Craft Wooden Bolts (Plank)",
+    "ch": "製作木弩矢 (木板)",
+    "cn": "制作木弩矢 (木板)"
+   },
+   "Recipe_Craft_Woodland_Tactical_Quiver": {
+    "en": "Craft Woodland Tactical Quiver",
+    "ch": "製作林地戰術箭袋",
+    "cn": "制作林地战术箭袋"
+   },
+   "CraftPotatoSilencer": {
+    "en": "Prepare Potato Suppressor",
+    "ch": "準備馬鈴薯消音器",
+    "cn": "准备土豆消音器"
+   },
+   "Dismantle Broken Carbon Ammo": {
+    "en": "Dismantle Broken Carbon Ammo",
+    "ch": "拆解損壞的碳製彈藥",
+    "cn": "拆解损坏的碳制弹药"
+   },
+   "Dismantle Broken Metal Ammo": {
+    "en": "Dismantle Broken Metal Ammo",
+    "ch": "拆解損壞的金屬彈藥",
+    "cn": "拆解损坏的金属弹药"
+   },
+   "Dismantle Broken Wooden Ammo": {
+    "en": "Dismantle Broken Wooden Ammo",
+    "ch": "拆解損壞的木質彈藥",
+    "cn": "拆解损坏的木质弹药"
+   },
+   "Recipe_Dismantle_Broken_Carbon_Ammo": {
+    "en": "Dismantle Broken Carbon Ammo",
+    "ch": "拆解損壞的碳製彈藥",
+    "cn": "拆解损坏的碳制弹药"
+   },
+   "Recipe_Dismantle_Broken_Metal_Ammo": {
+    "en": "Dismantle Broken Metal Ammo",
+    "ch": "拆解損壞的金屬彈藥",
+    "cn": "拆解损坏的金属弹药"
+   },
+   "Recipe_Dismantle_Broken_Wooden_Ammo": {
+    "en": "Dismantle Broken Wooden Ammo",
+    "ch": "拆解損壞的木質彈藥",
+    "cn": "拆解损坏的木质弹药"
+   },
+   "Recipe_SVRP_CB_OpenCarbonArrowPack": {
+    "en": "Open Carbon Arrow Pack",
+    "ch": "開啟碳製箭矢 (整包)",
+    "cn": "打开碳制箭矢 (整包)"
+   },
+   "Recipe_SVRP_CB_OpenCarbonBoltPack": {
+    "en": "Open Carbon Bolt Pack",
+    "ch": "開啟碳製弩箭 (整包)",
+    "cn": "打开碳制弩箭 (整包)"
+   },
+   "Recipe_SVRP_CB_OpenMetalArrowPack": {
+    "en": "Open Metal Arrow Pack",
+    "ch": "開啟金屬箭矢 (整包)",
+    "cn": "打开金属箭矢 (整包)"
+   },
+   "Recipe_SVRP_CB_OpenMetalBoltPack": {
+    "en": "Open Metal Bolt Pack",
+    "ch": "開啟金屬弩箭 (整包)",
+    "cn": "打开金属弩箭 (整包)"
+   },
+   "Recipe_SVRP_CB_OpenWoodenArrowPack": {
+    "en": "Open Wooden Arrow Pack",
+    "ch": "開啟木質箭矢 (整包)",
+    "cn": "打开木质箭矢 (整包)"
+   },
+   "Recipe_SVRP_CB_OpenWoodenBoltPack": {
+    "en": "Open Wooden Bolt Pack",
+    "ch": "開啟木質弩箭 (整包)",
+    "cn": "打开木质弩箭 (整包)"
+   },
+   "Recipe_SVRP_CB_PackCarbonArrows": {
+    "en": "Pack Carbon Arrows",
+    "ch": "打包碳製箭矢",
+    "cn": "打包碳制箭矢"
+   },
+   "Recipe_SVRP_CB_PackCarbonBolts": {
+    "en": "Pack Carbon Bolts",
+    "ch": "打包碳製弩箭",
+    "cn": "打包碳制弩箭"
+   },
+   "Recipe_SVRP_CB_PackMetalArrows": {
+    "en": "Pack Metal Arrows",
+    "ch": "打包金屬箭矢",
+    "cn": "打包金属箭矢"
+   },
+   "Recipe_SVRP_CB_PackMetalBolts": {
+    "en": "Pack Metal Bolts",
+    "ch": "打包金屬弩箭",
+    "cn": "打包金属弩箭"
+   },
+   "Recipe_SVRP_CB_PackWoodenArrows": {
+    "en": "Pack Wooden Arrows",
+    "ch": "打包木質箭矢",
+    "cn": "打包木质箭矢"
+   },
+   "Recipe_SVRP_CB_PackWoodenBolts": {
+    "en": "Pack Wooden Bolts",
+    "ch": "打包木質弩箭",
+    "cn": "打包木质弩箭"
    }
   },
   "Sandbox.json": {
@@ -131650,7 +133349,7 @@
     "cn": "追踪已完成进食动作的基础时长值. 被中断的进食动作, 饮水和吸烟皆不计入. 计数器达到设定值的一半时可失去慢食者; 达到全值时可获得快食者."
    },
    "Sandbox_ETW_FastEaterSpeed": {
-    "en": "Fast Eater time reduction (%)",
+    "en": "Fast Eater time reduction (%%)",
     "ch": "快食者時間減少 (%%)",
     "cn": "快食者时间减少 (%%)"
    },
@@ -131670,7 +133369,7 @@
     "cn": "恢复系统计数器上限"
    },
    "Sandbox_ETW_HealerSystemCounter_tooltip": {
-    "en": "Sets both the positive and negative limit of the Healer System counter. Gain Slow Healer at -66%, lose Slow Healer at -33%, lose Fast Healer at +33%, and gain Fast Healer at +66%. Characters who start with Slow Healer or Fast Healer begin at the corresponding negative or positive maximum.",
+    "en": "Sets both the positive and negative limit of the Healer System counter. Gain Slow Healer at -66%%, lose Slow Healer at -33%%, lose Fast Healer at +33%%, and gain Fast Healer at +66%%. Characters who start with Slow Healer or Fast Healer begin at the corresponding negative or positive maximum.",
     "ch": "設定恢復系統計數器的正負上限. 在-66%%獲得恢復慢, 在-33%%失去恢復慢, 在+33%%失去恢復快, 在+66%%獲得恢復快. 開局帶有恢復慢或恢復快的角色會從對應的負向或正向最大值開始.",
     "cn": "设定恢复系统计数器的正负上限. 在-66%%获得缓慢恢复, 在-33%%失去缓慢恢复, 在+33%%失去快速恢复, 在+66%%获得快速恢复. 开局带有缓慢恢复或快速恢复的角色会从对应的负向或正向最大值开始."
    },
@@ -131700,12 +133399,12 @@
     "cn": "根据角色照料当前伤口的持续程度控制缓慢恢复和快速恢复. 伤口护理每游戏分钟检查一次. 干净的绷带, 缝合和有效的夹板会增加依严重度加权的进度; 脏绷带, 嵌入的玻璃或子弹, 未处理的流血, 需要清理的烧伤, 未包扎的伤口, 以及可上夹板却未上夹板的骨折会减少进度. 贡献值设置描述的是伤口状态保持不变时, 10游戏分钟内产生的总进度. 伤口感染不计入, 没有被追踪的伤口时计数器也不会变化."
    },
    "Sandbox_ETW_HerbalistJournalCounterIncrease": {
-    "en": "Herbalist Journal Counter Increase %",
+    "en": "Herbalist Journal Counter Increase %%",
     "ch": "草藥雜誌計數器增加 %%",
     "cn": "草药杂志计数器增加 %%"
    },
    "Sandbox_ETW_HerbalistJournalCounterIncrease_tooltip": {
-    "en": "Determines the percentage of the maximum Herbalist counter added the first time a character reads The Herbalist journal. This bonus can only be received once. For example, if the maximum counter is 1000 and this is set to 50%, reading the journal adds 500 points",
+    "en": "Determines the percentage of the maximum Herbalist counter added the first time a character reads The Herbalist journal. This bonus can only be received once. For example, if the maximum counter is 1000 and this is set to 50%%, reading the journal adds 500 points",
     "ch": "決定角色首次閱讀草藥雜誌時, 增加草藥計數器上限的百分比. 此加成只能獲得一次. 例如, 若計數器上限為1000且此項設為50%%, 閱讀該雜誌會增加500點",
     "cn": "决定角色首次阅读草药杂志时, 增加草药计数器上限的百分比. 此加成只能获得一次. 例如, 若计数器上限为1000且此项设为50%%, 阅读该杂志会增加500点"
    },
@@ -131720,7 +133419,7 @@
     "cn": "受伤系统计数器上限"
    },
    "Sandbox_ETW_InjuriesSystemCounter_tooltip": {
-    "en": "Sets both the positive and negative limit of the Injuries System counter. Trait thresholds are percentages of this value: gain Thin Skinned at -66%, lose Thin Skinned at -33%, lose Thick Skinned at +33%, and gain Thick Skinned at +66%. Characters who start with Thin Skinned or Thick Skinned begin at the corresponding negative or positive maximum.",
+    "en": "Sets both the positive and negative limit of the Injuries System counter. Trait thresholds are percentages of this value: gain Thin Skinned at -66%%, lose Thin Skinned at -33%%, lose Thick Skinned at +33%%, and gain Thick Skinned at +66%%. Characters who start with Thin Skinned or Thick Skinned begin at the corresponding negative or positive maximum.",
     "ch": "設定受傷系統計數器的正負上限. 特質門檻為此值的百分比: 在-66%%獲得薄皮, 在-33%%失去薄皮, 在+33%%失去皮厚, 在+66%%獲得皮厚. 開局帶有薄皮或皮厚的角色會從對應的負向或正向最大值開始.",
     "cn": "设定受伤系统计数器的正负上限. 特质阈值为此值的百分比: 在-66%%获得细皮嫩肉, 在-33%%失去细皮嫩肉, 在+33%%失去皮糙肉厚, 在+66%%获得皮糙肉厚. 开局带有细皮嫩肉或皮糙肉厚的角色会从对应的负向或正向最大值开始."
    },
@@ -131735,12 +133434,12 @@
     "cn": "角色没有任何被追踪的伤势时, 每10游戏分钟从受伤系统计数器扣除的数值."
    },
    "Sandbox_ETW_InjuriesSystem_tooltip": {
-    "en": "Controls Thin Skinned and Thick Skinned based on the injuries your character sustains over time. Every ten minutes, each current tracked injury increases the counter by its configured contribution, fortifying the character over time. Having no tracked injuries instead decreases the counter. Wound infection does not contribute. The counter is clamped between the negative and positive maximum.<br>Thin Skinned is gained at -66%, Thin Skinned is lost at -33%, Thick Skinned is lost at +33%, and Thick Skinned is gained at +66%.",
+    "en": "Controls Thin Skinned and Thick Skinned based on the injuries your character sustains over time. Every ten minutes, each current tracked injury increases the counter by its configured contribution, fortifying the character over time. Having no tracked injuries instead decreases the counter. Wound infection does not contribute. The counter is clamped between the negative and positive maximum.<br>Thin Skinned is gained at -66%%, Thin Skinned is lost at -33%%, Thick Skinned is lost at +33%%, and Thick Skinned is gained at +66%%.",
     "ch": "根據角色長期承受的傷勢控制薄皮和皮厚. 每10分鐘, 每處目前被追蹤的傷勢會依其所設貢獻值增加計數器, 使角色隨時間變得更強韌. 沒有被追蹤的傷勢時計數器則會減少. 傷口感染不計入貢獻. 計數器會被限制在負向與正向最大值之間.<br>在-66%%獲得薄皮, 在-33%%失去薄皮, 在+33%%失去皮厚, 在+66%%獲得皮厚.",
     "cn": "根据角色长期承受的伤势控制细皮嫩肉和皮糙肉厚. 每10分钟, 每处当前被追踪的伤势会依其所设贡献值增加计数器, 使角色随时间变得更强韧. 没有被追踪的伤势时计数器则会减少. 伤口感染不计入贡献. 计数器会被限制在负向与正向最大值之间.<br>在-66%%获得细皮嫩肉, 在-33%%失去细皮嫩肉, 在+33%%失去皮糙肉厚, 在+66%%获得皮糙肉厚."
    },
    "Sandbox_ETW_SlowEaterSpeed": {
-    "en": "Slow Eater time increase (%)",
+    "en": "Slow Eater time increase (%%)",
     "ch": "慢食者時間增加 (%%)",
     "cn": "慢食者时间增加 (%%)"
    },
@@ -139780,44 +141479,26 @@
     "cn": "调整接触僵尸的减速力度. 100 = 默认曲线 (1 只僵尸约 85%% 速度, 4 只以上近乎停止). 数值越低越温和, 越高越严苛. 不影响撞下车的判定."
    },
    "Sandbox_ImmersiveBlackouts_ElectricityShutoffDayRange": {
-    "en": "Electricity Shutoff Day Range",
+    "en": "Shutoff Day Range",
     "ch": "停電日期範圍",
     "cn": "停电日期范围"
    },
    "Sandbox_ImmersiveBlackouts_ElectricityShutoffDayRange_tooltip": {
-    "en": "Sets the day range for a random permanent electricity shutoff.\nFormat: minimum day - maximum day\nExamples: 0-30 = random day, 30-30 = fixed day.\nChanges the vanilla 'Electricity Shutoff' day setting.",
+    "en": "Sets the day range for a random permanent shutoff.\nFormat: minimum day - maximum day\nExamples: 0-30 = random day, 30-30 = fixed day.\nOverrides the vanilla 'Electricity Shutoff' day setting.",
     "ch": "設定隨機永久停電發生的日期範圍.\n格式: 最小天數 - 最大天數\n範例: 0-30 = 隨機日期, 30-30 = 固定日期.\n此設定會變更原版的「停電時間」設定.",
     "cn": "设定随机永久停电发生的日期范围.\n格式: 最小天数 - 最大天数\n示例: 0-30 = 随机日期, 30-30 = 固定日期.\n此设定会变更原版的“停电时间”设定."
    },
    "Sandbox_ImmersiveBlackouts_ElectricityStartDay": {
-    "en": "Days Before Electricity Shutoff",
-    "ch": "停電前天數",
-    "cn": "停电前天数"
+    "en": "Random Outage Offset",
+    "ch": "隨機停電提前天數",
+    "cn": "随机停电提前天数",
+    "_note": "2026-08-21 #241 上游改名 Random Outage Offset 並新增三行範例, 譯文同步補齊."
    },
    "Sandbox_ImmersiveBlackouts_ElectricityStartDay_tooltip": {
-    "en": "How many days before the scheduled electricity shutoff random outages will begin.",
-    "ch": "在預定停電日的前幾天開始出現隨機停電.",
-    "cn": "在预定停电日的前几天开始出现随机停电."
-   },
-   "Sandbox_ImmersiveBlackouts_IgnoreElectricityStartDay": {
-    "en": "Ignore Electricity Outage Start Day",
-    "ch": "忽略停電起始日",
-    "cn": "忽略停电起始日"
-   },
-   "Sandbox_ImmersiveBlackouts_IgnoreElectricityStartDay_tooltip": {
-    "en": "If enabled, random power outages will occur regardless of the 'Days Before Electricity Shutoff' setting.",
-    "ch": "如果啟用, 無論「停電前天數」設定為何, 都會發生隨機停電.",
-    "cn": "如果启用, 无论“停电前天数”如何设置, 都会发生随机停电."
-   },
-   "Sandbox_ImmersiveBlackouts_IgnoreWaterStartDay": {
-    "en": "Ignore Water Outage Start Day",
-    "ch": "忽略停水起始日",
-    "cn": "忽略停水起始日"
-   },
-   "Sandbox_ImmersiveBlackouts_IgnoreWaterStartDay_tooltip": {
-    "en": "If enabled, random water outages will occur regardless of the 'Days Before Water Shutoff' setting.",
-    "ch": "如果啟用, 無論「停水前天數」設定為何, 都會發生隨機停水.",
-    "cn": "如果启用, 无论“停水前天数”如何设置, 都会发生随机停水."
+    "en": "Number of days before the scheduled permanent shutoff to start random outages.\nExamples: Vanilla shutoff: 30, Offset: 0 = random outages are disabled.\nVanilla shutoff: 30, Offset: 5 = random outages start on day 25.\nVanilla shutoff: Disabled (2147483647), Offset: 2147483647 = random outages start from day 0.",
+    "ch": "在預定的永久停電日之前幾天開始出現隨機停電.\n範例: 原版停電日 30, 提前 0 = 停用隨機停電.\n原版停電日 30, 提前 5 = 隨機停電從第 25 天開始.\n原版停電日 停用 (2147483647), 提前 2147483647 = 隨機停電從第 0 天開始.",
+    "cn": "在预定的永久停电日之前几天开始出现随机停电.\n示例: 原版停电日 30, 提前 0 = 停用随机停电.\n原版停电日 30, 提前 5 = 随机停电从第 25 天开始.\n原版停电日 停用 (2147483647), 提前 2147483647 = 随机停电从第 0 天开始.",
+    "_note": "2026-08-21 #241 上游改名 Random Outage Offset 並新增三行範例, 譯文同步補齊."
    },
    "Sandbox_ImmersiveBlackouts_Radio": {
     "en": "Radio",
@@ -139825,29 +141506,31 @@
     "cn": "广播"
    },
    "Sandbox_ImmersiveBlackouts_Radio_tooltip": {
-    "en": "Enables automatic emergency radio broadcasts from the Knox Emergency Regional Infrastructure Service on 89.2 MHz.\nThe radio will provide information about upcoming water and power outages, current infrastructure status, and other emergency events.",
+    "en": "Enables automatic emergency radio broadcasts from the Knox Emergency Regional Infrastructure Service on 89.2 MHz.\nThe radio will provide information about upcoming outages, current infrastructure status, and other emergency events.",
     "ch": "啟用諾克斯緊急區域基礎設施服務處在 89.2 MHz 上的自動緊急廣播.\n該廣播會提供即將到來的停水停電, 目前基礎設施狀態以及其他緊急事件的資訊.",
     "cn": "启用诺克斯紧急区域基础设施服务处在 89.2 MHz 上的自动紧急广播.\n该广播会提供即将到来的停水停电, 当前基础设施状态以及其他紧急事件的信息."
    },
    "Sandbox_ImmersiveBlackouts_WaterShutoffDayRange": {
-    "en": "Water Shutoff Day Range",
+    "en": "Shutoff Day Range",
     "ch": "停水日期範圍",
     "cn": "停水日期范围"
    },
    "Sandbox_ImmersiveBlackouts_WaterShutoffDayRange_tooltip": {
-    "en": "Sets the day range for a random permanent water shutoff.\nFormat: minimum day - maximum day\nExamples: 0-30 = random day, 30-30 = fixed day.\nChanges the vanilla 'Water Shutoff' day setting.",
+    "en": "Sets the day range for a random permanent shutoff.\nFormat: minimum day - maximum day\nExamples: 0-30 = random day, 30-30 = fixed day.\nOverrides the vanilla 'Water Shutoff' day setting.",
     "ch": "設定隨機永久停水發生的日期範圍.\n格式: 最小天數 - 最大天數\n範例: 0-30 = 隨機日期, 30-30 = 固定日期.\n此設定會變更原版的「停水時間」設定.",
     "cn": "设定随机永久停水发生的日期范围.\n格式: 最小天数 - 最大天数\n示例: 0-30 = 随机日期, 30-30 = 固定日期.\n此设定会变更原版的“停水时间”设定."
    },
    "Sandbox_ImmersiveBlackouts_WaterStartDay": {
-    "en": "Days Before Water Shutoff",
-    "ch": "停水前天數",
-    "cn": "停水前天数"
+    "en": "Random Outage Offset",
+    "ch": "隨機停水提前天數",
+    "cn": "随机停水提前天数",
+    "_note": "2026-08-21 #241 上游改名 Random Outage Offset 並新增三行範例, 譯文同步補齊."
    },
    "Sandbox_ImmersiveBlackouts_WaterStartDay_tooltip": {
-    "en": "How many days before the scheduled water shutoff random outages will begin.",
-    "ch": "在預定停水日的前幾天開始出現隨機停水.",
-    "cn": "在预定停水日的前几天开始出现随机停水."
+    "en": "Number of days before the scheduled permanent shutoff to start random outages.\nExamples: Vanilla shutoff: 30, Offset: 0 = random outages are disabled.\nVanilla shutoff: 30, Offset: 5 = random outages start on day 25.\nVanilla shutoff: Disabled (2147483647), Offset: 2147483647 = random outages start from day 0.",
+    "ch": "在預定的永久停水日之前幾天開始出現隨機停水.\n範例: 原版停水日 30, 提前 0 = 停用隨機停水.\n原版停水日 30, 提前 5 = 隨機停水從第 25 天開始.\n原版停水日 停用 (2147483647), 提前 2147483647 = 隨機停水從第 0 天開始.",
+    "cn": "在预定的永久停水日之前几天开始出现随机停水.\n示例: 原版停水日 30, 提前 0 = 停用随机停水.\n原版停水日 30, 提前 5 = 随机停水从第 25 天开始.\n原版停水日 停用 (2147483647), 提前 2147483647 = 随机停水从第 0 天开始.",
+    "_note": "2026-08-21 #241 上游改名 Random Outage Offset 並新增三行範例, 譯文同步補齊."
    },
    "Sandbox_DestroyBoulder_AluminumFragmentsMax": {
     "en": "Aluminum fragments max amount",
@@ -143274,16 +144957,6 @@
     "ch": "力量未達下限時的成功率倍率 (於其他倍率之後套用).",
     "cn": "力量未达下限时的成功率倍率 (在其他倍率之后应用)."
    },
-   "Sandbox_ImmersiveBlackouts_WeatherInfluence": {
-    "en": "Weather Influence",
-    "ch": "天氣影響",
-    "cn": "天气影响"
-   },
-   "Sandbox_ImmersiveBlackouts_WeatherInfluence_tooltip": {
-    "en": "Weather conditions affect the chance of power outages.\nBad weather increases the chance of outages and decreases the chance of power being restored.\nAt maximum influence, weather can modify the chance by up to 10%%.",
-    "ch": "天氣狀況會影響停電的機率.\n惡劣天氣會提高停電機率, 並降低恢復供電的機率.\n影響力達到最大時, 天氣最多可使機率變動 10%%.",
-    "cn": "天气状况会影响停电的概率.\n恶劣天气会提高停电概率, 并降低恢复供电的概率.\n影响力达到最大时, 天气最多可使概率变动 10%%."
-   },
    "Sandbox_rSemiTruck_CarTrailerSpawns": {
     "en": "Car Trailer Spawns",
     "ch": "運車拖車生成",
@@ -144227,7 +145900,7 @@
     "cn": "仅在以保留列表模式运行世界清理的服务器上才有意义 (启用了 ItemRemovalListBlacklistToggle), 此时所有不在 WorldItemRemovalList 上的物品类型都会在区块加载时被删除 — 包含留在地上且装着全部货物的手推车. 启用此选项后, SaucedCarts 会在每次启动时于内存中把自己的手推车类型加入该列表, 让清理永远不会删除手推车. 默认关闭, 因为它会改变你的清理列表行为; 但绝不会写入你的配置文件."
    },
    "Sandbox_ImmersiveBlackouts_DynamicWaterChance": {
-    "en": "Dynamic Water Chance",
+    "en": "Dynamic Chance",
     "ch": "動態供水機率",
     "cn": "动态供水概率"
    },
@@ -144237,37 +145910,37 @@
     "cn": "沉浸式停电: 供水"
    },
    "Sandbox_ImmersiveBlackouts_WeatherInfluenceElectricity": {
-    "en": "Weather Influence on Electricity",
+    "en": "Weather Influence",
     "ch": "天氣對電力的影響",
     "cn": "天气对电力的影响"
    },
    "Sandbox_ImmersiveBlackouts_WeatherInfluenceWater_tooltip": {
-    "en": "Weather conditions affect the chance of water outages.\nBad weather increases the chance of outages and decreases the chance of water being restored.\nDetermines the maximum percentage of weather influence on the chance.",
+    "en": "Weather conditions affect the chance of outages.\nBad weather increases the chance of outages and decreases the chance of restoration.\nDetermines the maximum percentage of weather influence on the chance.",
     "ch": "天氣狀況會影響停水發生的機率.\n惡劣天氣會提高中斷機率, 並降低供水恢復的機率.\n決定天氣對機率影響的最大百分比.",
     "cn": "天气状况会影响停水发生的概率.\n恶劣天气会提高中断概率, 并降低供水恢复的概率.\n决定天气对概率影响的最大百分比."
    },
    "Sandbox_ImmersiveBlackouts_DynamicWaterChance_tooltip": {
-    "en": "Dynamically adjusts the chance of water shutoffs and restorations based on how close the scheduled shutoff day is.\nUses the maximum chance set in the Water Shutoff Chance and Water Restore Chance settings.\nThe restore chance always remains at a minimum of 5%%.\nIt is recommended to use a cooldown when this option is enabled.",
+    "en": "Dynamically adjusts the chance of shutoffs and restorations based on how close the scheduled shutoff day is.\nUses the maximum chance set in the Shutoff Chance and Restore Chance settings.\nThe restore chance always remains at a minimum of 5%%.\nIt is recommended to use a cooldown when this option is enabled.",
     "ch": "根據預定停水日的接近程度, 動態調整停水與供水恢復的機率.\n使用'停水機率'與'供水恢復機率'設定中的最大機率值.\n恢復機率始終維持在至少 5%%.\n啟用此選項時建議搭配冷卻時間.",
     "cn": "根据预定停水日的接近程度, 动态调整停水与供水恢复的概率.\n使用'停水概率'与'供水恢复概率'设置中的最大概率值.\n恢复概率始终维持在至少 5%%.\n启用此选项时建议搭配冷却时间."
    },
    "Sandbox_ImmersiveBlackouts_DynamicElectricityChance_tooltip": {
-    "en": "Dynamically adjusts the chance of power shutoffs and restorations based on how close the scheduled shutoff day is.\nUses the maximum chance set in the Electricity Shutoff Chance and Electricity Restore Chance settings.\nThe restore chance always remains at a minimum of 5%%.\nIt is recommended to use a cooldown when this option is enabled.",
+    "en": "Dynamically adjusts the chance of shutoffs and restorations based on how close the scheduled shutoff day is.\nUses the maximum chance set in the Shutoff Chance and Restore Chance settings.\nThe restore chance always remains at a minimum of 5%%.\nIt is recommended to use a cooldown when this option is enabled.",
     "ch": "根據預定停電日的接近程度, 動態調整停電與電力恢復的機率.\n使用'斷電機率'與'電力恢復機率'設定中的最大機率值.\n恢復機率始終維持在至少 5%%.\n啟用此選項時建議搭配冷卻時間.",
     "cn": "根据预定停电日的接近程度, 动态调整停电与电力恢复的概率.\n使用'断电概率'与'电力恢复概率'设置中的最大概率值.\n恢复概率始终维持在至少 5%%.\n启用此选项时建议搭配冷却时间."
    },
    "Sandbox_ImmersiveBlackouts_WeatherInfluenceElectricity_tooltip": {
-    "en": "Weather conditions affect the chance of power outages.\nBad weather increases the chance of outages and decreases the chance of power being restored.\nDetermines the maximum percentage of weather influence on the chance.",
+    "en": "Weather conditions affect the chance of outages.\nBad weather increases the chance of outages and decreases the chance of restoration.\nDetermines the maximum percentage of weather influence on the chance.",
     "ch": "天氣狀況會影響停電發生的機率.\n惡劣天氣會提高中斷機率, 並降低電力恢復的機率.\n決定天氣對機率影響的最大百分比.",
     "cn": "天气状况会影响停电发生的概率.\n恶劣天气会提高中断概率, 并降低电力恢复的概率.\n决定天气对概率影响的最大百分比."
    },
    "Sandbox_ImmersiveBlackouts_WeatherInfluenceWater": {
-    "en": "Weather Influence on Water",
+    "en": "Weather Influence",
     "ch": "天氣對供水的影響",
     "cn": "天气对供水的影响"
    },
    "Sandbox_ImmersiveBlackouts_DynamicElectricityChance": {
-    "en": "Dynamic Electricity Chance",
+    "en": "Dynamic Chance",
     "ch": "動態電力機率",
     "cn": "动态电力概率"
    },
@@ -144370,6 +146043,263 @@
     "en": "Simple Silencers",
     "ch": "簡易消音器",
     "cn": "简易消音器"
+   },
+   "Sandbox_ammomakerLoot": {
+    "en": "Ammo Maker Loot",
+    "ch": "彈藥製作戰利品",
+    "cn": "弹药制作战利品"
+   },
+   "Sandbox_ammomakerOptions": {
+    "en": "Ammo Maker Options",
+    "ch": "彈藥製作選項",
+    "cn": "弹药制作选项"
+   },
+   "Sandbox_ammomaker_CollectAdditionalSeeds": {
+    "en": "Collect Additional Seeds",
+    "ch": "收集額外種子",
+    "cn": "收集额外种子"
+   },
+   "Sandbox_ammomaker_CollectAdditionalSeeds_tooltip": {
+    "en": "Adds additional seeds to the player inventory when using the collect seeds recipe from the base game",
+    "ch": "使用本體收集種子配方時, 額外把種子加入玩家物品欄",
+    "cn": "使用本体收集种子配方时, 额外把种子加入玩家物品栏"
+   },
+   "Sandbox_ammomaker_DropCasingsReload": {
+    "en": "Drop Casings Reload",
+    "ch": "裝彈時掉落彈殼",
+    "cn": "装弹时掉落弹壳"
+   },
+   "Sandbox_ammomaker_DropCasingsReload_tooltip": {
+    "en": "Drops casings on ground when reloading revolvers or break-action firearms instead of adding them to player inventory",
+    "ch": "為左輪或中折式槍械裝彈時把彈殼掉在地上, 而不是放進玩家物品欄",
+    "cn": "为左轮或中折式枪械装弹时把弹壳掉在地上, 而不是放进玩家物品栏"
+   },
+   "Sandbox_ammomaker_ShowHiddenRecipes": {
+    "en": "Show Hidden Recipes",
+    "ch": "顯示隱藏配方",
+    "cn": "显示隐藏配方"
+   },
+   "Sandbox_ammomaker_ShowHiddenRecipes_tooltip": {
+    "en": "Shows inactive recipes as N/A in the crafting menu",
+    "ch": "在製作選單把未啟用的配方顯示為N/A",
+    "cn": "在制作菜单把未启用的配方显示为N/A"
+   },
+   "Sandbox_ETW_HealerSystemSleepingMultiplier": {
+    "en": "Sleeping Multiplier",
+    "ch": "睡眠倍率",
+    "cn": "睡眠倍率"
+   },
+   "Sandbox_ETW_HealerSystemSleepingMultiplier_tooltip": {
+    "en": "Multiplies Healer System counter changes while the player is asleep. The default greatly reduces changes caused by wounds that cannot be tended during sleep.",
+    "ch": "玩家睡著時, 治療系統計數的變化倍率. 預設會大幅降低睡眠中無法包紮的傷口所造成的變化.",
+    "cn": "玩家睡着时, 治疗系统计数的变化倍率. 默认会大幅降低睡眠中无法包扎的伤口所造成的变化."
+   },
+   "Sandbox_ETW_PainToleranceExerciseMultiplier": {
+    "en": "Exercise Pain Multiplier",
+    "ch": "運動疼痛倍率",
+    "cn": "运动疼痛倍率"
+   },
+   "Sandbox_ETW_PainToleranceExerciseMultiplier_tooltip": {
+    "en": "Multiplies only the exercise-stiffness portion of pain added to the Pain Tolerance counter. Pain from wounds and other sources is unaffected.",
+    "ch": "此倍率只套用在疼痛耐受計數中來自運動僵硬的那一部分. 傷口或其他來源造成的疼痛不受影響.",
+    "cn": "此倍率仅适用于疼痛耐受计数中来自运动僵硬的部分. 伤口或其他来源造成的疼痛不受影响."
+   },
+   "Sandbox_UnseasonalWeather_PauseWhileDriving": {
+    "en": "Pause mod updates while driving",
+    "ch": "開車時暫停模組更新",
+    "cn": "开车时暂停模组更新"
+   },
+   "Sandbox_UnseasonalWeather_PauseWhileDriving_tooltip": {
+    "en": "Skips global event scans while all active players travel in vehicles and stops this mod's heat, rain-exposure and forced wind-sprite updates for the driver. Active weather is kept; it is never cleared.",
+    "ch": "所有線上玩家都在載具裡時略過全域事件掃描, 並停止本模組對駕駛者的高溫、淋雨與強制風效更新. 進行中的天氣會保留, 絕不會被清除.",
+    "cn": "所有在线玩家都在载具内时跳过全局事件扫描, 并停止本模组针对驾驶者的高温、淋雨与强制风效更新. 进行中的天气会保留, 绝不会被清除.",
+    "_note": "2026-08-21 CN 逐鍵在地化：跳过／全局／载具内；wind-sprite 譯為「風效」避免誤讀為奇幻精靈。"
+   },
+   "Sandbox_WorkingKnowledge_ConsumeOnRead": {
+    "en": "Destroy Document After Reading",
+    "ch": "讀完後銷毀文件",
+    "cn": "读完后销毁文件"
+   },
+   "Sandbox_WorkingKnowledge_ConsumeOnRead_tooltip": {
+    "en": "When enabled, a document is destroyed once it has been read, so it cannot be passed to another survivor. Intended for multiplayer servers that do not want a single copy training the whole group. Default: off.",
+    "ch": "啟用後, 文件一經閱讀就會銷毀, 無法再傳給其他倖存者. 給不想讓一份副本訓練整隊的多人伺服器使用. 預設: 關.",
+    "cn": "启用后, 文件一经阅读就会销毁, 无法再传给其他幸存者. 给不想让一份副本训练整队的多人服务器使用. 默认: 关."
+   },
+   "Sandbox_SVRPClassicBows": {
+    "en": "Classic Bows",
+    "ch": "經典弓弩",
+    "cn": "经典弓弩"
+   },
+   "Sandbox_SVRPClassicBows_AimingXPMultiplier": {
+    "en": "Aiming XP Multiplier",
+    "ch": "瞄準經驗倍率",
+    "cn": "瞄准经验倍率"
+   },
+   "Sandbox_SVRPClassicBows_AimingXPMultiplier_tooltip": {
+    "en": "Multiplies the base Aiming XP awarded when attacking or killing zombies with bows and crossbows. (Default: 1.0)",
+    "ch": "用弓或弩攻擊或擊殺殭屍時, 基礎瞄準經驗的倍率. (預設: 1.0)",
+    "cn": "用弓或弩攻击或击杀僵尸时, 基础瞄准经验的倍率. (默认: 1.0)"
+   },
+   "Sandbox_SVRPClassicBows_DamageScale": {
+    "en": "Damage Scale",
+    "ch": "傷害倍率",
+    "cn": "伤害倍率"
+   },
+   "Sandbox_SVRPClassicBows_DamageScale_tooltip": {
+    "en": "A global multiplier applied to the base damage of all bows and crossbows. Increase this if you want bows to be more lethal. (Default: 1.0)",
+    "ch": "套用到所有弓和弩基礎傷害的全域倍率. 想讓弓更致命就調高. (預設: 1.0)",
+    "cn": "应用到所有弓和弩基础伤害的全局倍率. 想让弓更致命就调高. (默认: 1.0)",
+    "_note": "｜2026-08-21 CN 詞級在地化修正。 ｜2026-08-21 對齊本包既有慣例：CN 应用/示例/粘性、CH 反坦克。"
+   },
+   "Sandbox_SVRPClassicBows_RecoverMissedArrowsChance": {
+    "en": "Recover Arrows from Environment (%)",
+    "ch": "從環境回收箭矢 (%%)",
+    "cn": "从环境回收箭矢 (%%)"
+   },
+   "Sandbox_SVRPClassicBows_RecoverMissedArrowsChance_tooltip": {
+    "en": "The % chance (0-100) that a missed arrow or bolt survives hitting walls or the ground, allowing you to pick it back up. (Default: 100)",
+    "ch": "射失的箭或弩矢打到牆或地面後仍能留下來讓你撿回的機率%% (0-100). (預設: 100)",
+    "cn": "射失的箭或弩矢打到墙或地面后仍能留下来让你捡回的几率%% (0-100). (默认: 100)"
+   },
+   "Sandbox_SVRPClassicBows_RetroactiveSpawnBows": {
+    "en": "Retroactive Loot Spawning",
+    "ch": "回溯戰利品生成",
+    "cn": "回溯战利品生成"
+   },
+   "Sandbox_SVRPClassicBows_RetroactiveSpawnBows_tooltip": {
+    "en": "If checked, the server will automatically scan empty hunting and gun containers as you explore the world, spawning bows in them. Turn this on if you added this mod to an existing save!",
+    "ch": "勾選後, 伺服器會在你探索世界時自動掃描空的狩獵與槍械容器並在裡面生成弓. 若是把本模組加進既有存檔, 請開啟這個選項!",
+    "cn": "勾选后, 服务器会在你探索世界时自动扫描空的狩猎与枪械容器并在里面生成弓. 若是把本模组加进既有存档, 请开启这个选项!"
+   },
+   "Sandbox_SVRPClassicBows_SpawnRateMultiplier": {
+    "en": "Loot Spawn Rate Multiplier",
+    "ch": "戰利品生成率倍率",
+    "cn": "战利品生成率倍率"
+   },
+   "Sandbox_SVRPClassicBows_SpawnRateMultiplier_tooltip": {
+    "en": "Multiplies the chance of finding bows, crossbows, and ammo in the world. Set higher than 1.0 to find them more often. (Default: 1.0)",
+    "ch": "在世界上找到弓、弩和彈藥的機率倍率. 設高於 1.0 會更容易找到. (預設: 1.0)",
+    "cn": "在世界上找到弓、弩和弹药的几率倍率. 设高于 1.0 会更容易找到. (默认: 1.0)"
+   },
+   "Sandbox_ISIL": {
+    "en": "Improvised Silencers",
+    "ch": "簡易消音器",
+    "cn": "简易消音器"
+   },
+   "Sandbox_ISIL_CaliberBasedWear": {
+    "en": "Caliber-based Suppressor Wear",
+    "ch": "依口徑消耗消音器耐久",
+    "cn": "依口径消耗消音器耐久"
+   },
+   "Sandbox_ISIL_CaliberBasedWear_tooltip": {
+    "en": "Adjusts suppressor wear by ammunition caliber. Small calibers consume less durability, while rifle and shotgun ammunition consume more. Unknown ammunition uses the standard 9mm wear rate.",
+    "ch": "依彈藥口徑調整消音器損耗. 小口徑消耗較少耐久, 步槍與霰彈則消耗較多. 未知彈藥套用標準 9mm 損耗率.",
+    "cn": "依弹药口径调整消音器损耗. 小口径消耗较少耐久, 步枪与霰弹则消耗较多. 未知弹药应用标准 9mm 损耗率.",
+    "_note": "｜2026-08-21 對齊本包既有慣例：CN 应用/示例/粘性、CH 反坦克。"
+   },
+   "Sandbox_ISIL_EnableDurability": {
+    "en": "Enable Suppressor Durability",
+    "ch": "啟用消音器耐久",
+    "cn": "启用消音器耐久"
+   },
+   "Sandbox_ISIL_EnableDurability_tooltip": {
+    "en": "Suppressors lose durability whenever the weapon is fired and are destroyed when exhausted. Only applies while Extended Realism Mode is enabled.",
+    "ch": "每次開槍消音器都會掉耐久, 耗盡即毀. 只在啟用進階寫實模式時生效.",
+    "cn": "每次开枪消音器都会掉耐久, 耗尽即毁. 只在启用进阶写实模式时生效."
+   },
+   "Sandbox_ISIL_ExtendedMode": {
+    "en": "Extended Realism Mode",
+    "ch": "進階寫實模式",
+    "cn": "进阶写实模式"
+   },
+   "Sandbox_ISIL_ExtendedMode_tooltip": {
+    "en": "Enables configurable suppression strength and optional suppressor durability. Disabled by default to preserve the original mod balance.",
+    "ch": "啟用可設定的消音強度與可選的消音器耐久. 預設關閉以保留模組原本的平衡.",
+    "cn": "启用可设定的消音强度与可选的消音器耐久. 默认关闭以保留模组原本的平衡."
+   },
+   "Sandbox_ISIL_HandTorchDurability": {
+    "en": "Hand Torch Suppressor Durability (base shots)",
+    "ch": "手電筒消音器耐久 (基礎發數)",
+    "cn": "手电筒消音器耐久 (基础发数)"
+   },
+   "Sandbox_ISIL_HandTorchDurability_tooltip": {
+    "en": "Number of 9mm-equivalent shots before a hand torch suppressor is destroyed.",
+    "ch": "手電筒消音器在毀掉前可承受的 9mm 等值射擊發數.",
+    "cn": "手电筒消音器在毁掉前可承受的 9mm 等值射击发数."
+   },
+   "Sandbox_ISIL_HandTorchNoiseReduction": {
+    "en": "Hand Torch Suppressor Noise Reduction (%%)",
+    "ch": "手電筒消音器噪音減幅 (%%)",
+    "cn": "手电筒消音器噪音减幅 (%%)"
+   },
+   "Sandbox_ISIL_HandTorchNoiseReduction_tooltip": {
+    "en": "Percentage reduction applied to firearm sound radius and volume in Extended Realism Mode.",
+    "ch": "進階寫實模式下套用到槍械聲音半徑與音量的減幅百分比.",
+    "cn": "进阶写实模式下应用到枪械声音半径与音量的减幅百分比.",
+    "_note": "｜2026-08-21 對齊本包既有慣例：CN 应用/示例/粘性、CH 反坦克。"
+   },
+   "Sandbox_ISIL_MetalPipeDurability": {
+    "en": "Metal Pipe Suppressor Durability (base shots)",
+    "ch": "鐵管消音器耐久 (基礎發數)",
+    "cn": "铁管消音器耐久 (基础发数)"
+   },
+   "Sandbox_ISIL_MetalPipeDurability_tooltip": {
+    "en": "Number of 9mm-equivalent shots before a metal pipe suppressor is destroyed.",
+    "ch": "鐵管消音器在毀掉前可承受的 9mm 等值射擊發數.",
+    "cn": "铁管消音器在毁掉前可承受的 9mm 等值射击发数."
+   },
+   "Sandbox_ISIL_MetalPipeNoiseReduction": {
+    "en": "Metal Pipe Suppressor Noise Reduction (%%)",
+    "ch": "鐵管消音器噪音減幅 (%%)",
+    "cn": "铁管消音器噪音减幅 (%%)"
+   },
+   "Sandbox_ISIL_MetalPipeNoiseReduction_tooltip": {
+    "en": "Percentage reduction applied to firearm sound radius and volume in Extended Realism Mode.",
+    "ch": "進階寫實模式下套用到槍械聲音半徑與音量的減幅百分比.",
+    "cn": "进阶写实模式下应用到枪械声音半径与音量的减幅百分比.",
+    "_note": "｜2026-08-21 對齊本包既有慣例：CN 应用/示例/粘性、CH 反坦克。"
+   },
+   "Sandbox_ISIL_ProfessionalDurability": {
+    "en": "Professional Suppressor Durability (base shots)",
+    "ch": "專業消音器耐久 (基礎發數)",
+    "cn": "专业消音器耐久 (基础发数)"
+   },
+   "Sandbox_ISIL_ProfessionalDurability_tooltip": {
+    "en": "Number of 9mm-equivalent shots before a professional suppressor is destroyed.",
+    "ch": "專業消音器在毀掉前可承受的 9mm 等值射擊發數.",
+    "cn": "专业消音器在毁掉前可承受的 9mm 等值射击发数."
+   },
+   "Sandbox_ISIL_ProfessionalNoiseReduction": {
+    "en": "Professional Suppressor Noise Reduction (%%)",
+    "ch": "專業消音器噪音減幅 (%%)",
+    "cn": "专业消音器噪音减幅 (%%)"
+   },
+   "Sandbox_ISIL_ProfessionalNoiseReduction_tooltip": {
+    "en": "Percentage reduction applied to firearm sound radius and volume in Extended Realism Mode.",
+    "ch": "進階寫實模式下套用到槍械聲音半徑與音量的減幅百分比.",
+    "cn": "进阶写实模式下应用到枪械声音半径与音量的减幅百分比.",
+    "_note": "｜2026-08-21 對齊本包既有慣例：CN 应用/示例/粘性、CH 反坦克。"
+   },
+   "Sandbox_ISIL_WaterBottleDurability": {
+    "en": "Water Bottle Suppressor Durability (base shots)",
+    "ch": "水瓶消音器耐久 (基礎發數)",
+    "cn": "水瓶消音器耐久 (基础发数)"
+   },
+   "Sandbox_ISIL_WaterBottleDurability_tooltip": {
+    "en": "Number of 9mm-equivalent shots before a water bottle suppressor is destroyed.",
+    "ch": "水瓶消音器在毀掉前可承受的 9mm 等值射擊發數.",
+    "cn": "水瓶消音器在毁掉前可承受的 9mm 等值射击发数."
+   },
+   "Sandbox_ISIL_WaterBottleNoiseReduction": {
+    "en": "Water Bottle Suppressor Noise Reduction (%%)",
+    "ch": "水瓶消音器噪音減幅 (%%)",
+    "cn": "水瓶消音器噪音减幅 (%%)"
+   },
+   "Sandbox_ISIL_WaterBottleNoiseReduction_tooltip": {
+    "en": "Percentage reduction applied to firearm sound radius and volume in Extended Realism Mode.",
+    "ch": "進階寫實模式下套用到槍械聲音半徑與音量的減幅百分比.",
+    "cn": "进阶写实模式下应用到枪械声音半径与音量的减幅百分比.",
+    "_note": "｜2026-08-21 對齊本包既有慣例：CN 应用/示例/粘性、CH 反坦克。"
    }
   },
   "Tooltip.json": {
@@ -147375,14 +149305,16 @@
     "cn": "经典传统, 现在更加甜蜜"
    },
    "Tooltip_HydeCoBees_BeeSmoker": {
-    "en": "An empty bee smoker. Pack it with twigs, pine needles or a pinecone, then light it with a lighter or matches. Use the lit smoker on a hive to calm the bees before harvesting.",
-    "ch": "空的蜂箱燻煙器. 裝入小樹枝, 松針或松果, 再用打火機或火柴點燃. 採收前對蜂箱使用點燃的燻煙器, 可安撫蜂群.",
-    "cn": "空的蜂箱熏烟器. 装入小树枝, 松针或松果, 再用打火机或火柴点燃. 采收前对蜂箱使用点燃的熏烟器, 可安抚蜂群."
+    "en": "An empty bee smoker.<br>Pack it with twigs, pine needles or a pinecone, then light it with a lighter<br>or matches.<br>Use the lit smoker on a hive to calm the bees before harvesting.",
+    "ch": "空的蜂箱燻煙器.<br>裝入小樹枝, 松針或松果, 再用打火機或火柴點燃.<br>採收前對蜂箱使用點燃的燻煙器, 可安撫蜂群.",
+    "cn": "空的蜂箱熏烟器.<br>装入小树枝, 松针或松果, 再用打火机或火柴点燃.<br>采收前对蜂箱使用点燃的熏烟器, 可安抚蜂群.",
+    "_note": "2026-08-21 上游文本變更同步（可能過時 issue 批次）。"
    },
    "Tooltip_HydeCoBees_BeeSmokerFueled": {
-    "en": "A bee smoker packed with fuel and ready to light. Whatever fuel is left carries over when you light it.",
-    "ch": "已填滿燃料, 隨時可以點燃的蜂箱燻煙器. 點燃時剩餘的燃料會一併帶入.",
-    "cn": "已填满燃料, 随时可以点燃的蜂箱熏烟器. 点燃时剩余的燃料会一并带入."
+    "en": "A bee smoker packed with fuel and ready to light.<br>Whatever fuel is left carries over when you light it.",
+    "ch": "已填滿燃料, 隨時可以點燃的蜂箱燻煙器.<br>點燃時剩餘的燃料會一併帶入.",
+    "cn": "已填满燃料, 随时可以点燃的蜂箱熏烟器.<br>点燃时剩余的燃料会一并带入.",
+    "_note": "2026-08-21 上游文本變更同步（可能過時 issue 批次）。"
    },
    "Tooltip_HydeCoBees_BeekeepingMagazine": {
     "en": "Teaches cultivated hive construction and queen-larvae rearing.",
@@ -147420,24 +149352,28 @@
     "cn": "将牛奶加上盐和酸性物 (醋或柠檬) 一起加热, 制成新鲜的奶酪凝乳."
    },
    "Tooltip_HydeCoBees_MeadFermentationBarrel": {
-    "en": "Brew mead by the barrel: equal parts honey and water, <LINE> plus yeast and any fruit you fancy. <LINE> Bottle early for a young mead, on time for the full flavor, <LINE> or hold out for something stronger. <LINE> Wait too long and the batch spoils. Holds 35 bottles' worth.",
-    "ch": "以整桶釀造蜂蜜酒: 蜂蜜與水等量, <LINE> 再加酵母和你喜歡的任何水果. <LINE> 提早裝瓶得到新酒, 準時裝瓶風味最完整, <LINE> 或再多等一陣子換取更烈的酒體. <LINE> 等太久這批就會變質. 容量為 35 瓶份.",
-    "cn": "以整桶酿造蜂蜜酒: 蜂蜜与水等量, <LINE> 再加酵母和你喜欢的任何水果. <LINE> 提早装瓶得到新酒, 准时装瓶风味最完整, <LINE> 或再多等一阵子换取更烈的酒体. <LINE> 等太久这批就会变质. 容量为 35 瓶份."
+    "en": "Brews mead from honey, water, and yeast. 35 bottles a batch.",
+    "ch": "以蜂蜜、水與酵母釀造蜂蜜酒. 每批 35 瓶.",
+    "cn": "以蜂蜜、水与酵母酿造蜂蜜酒. 每批 35 瓶.",
+    "_note": "2026-08-21 #237 上游簡化釀造機制：移除提早/準時裝瓶與變質規則, 譯文同步改寫。"
    },
    "Tooltip_HydeCoBees_MeadMixture": {
-    "en": "Unfermented honey must from an old brewing method. Mead is now brewed in a fermentation barrel straight from honey, water and yeast.",
-    "ch": "舊釀法留下的未發酵蜂蜜酒醪. 現在的蜂蜜酒改由蜂蜜, 水與酵母直接在發酵桶中釀造.",
-    "cn": "旧酿法留下的未发酵蜂蜜酒醪. 现在的蜂蜜酒改由蜂蜜, 水与酵母直接在发酵桶中酿造."
+    "en": "Unfermented honey must from an old brewing method.<br>Mead is now brewed in a fermentation barrel straight from honey, water and<br>yeast.",
+    "ch": "舊釀法留下的未發酵蜂蜜酒醪.<br>現在的蜂蜜酒改由蜂蜜, 水與酵母直接在發酵桶中釀造.",
+    "cn": "旧酿法留下的未发酵蜂蜜酒醪.<br>现在的蜂蜜酒改由蜂蜜, 水与酵母直接在发酵桶中酿造.",
+    "_note": "2026-08-21 上游文本變更同步（可能過時 issue 批次）。"
    },
    "Tooltip_HydeCoBees_PineNeedlePaintbrush": {
-    "en": "A handcrafted paintbrush made from pine needles. Useful for creating sticky tapes and painting.",
-    "ch": "用松針手工製作的畫筆. 可用來製作黏性膠帶和塗刷上色.",
-    "cn": "用松针手工制作的画笔. 可用来制作粘性胶带和涂刷上色."
+    "en": "A handcrafted paintbrush made from pine needles.<br>Useful for creating sticky tapes and painting.",
+    "ch": "用松針手工製作的畫筆.<br>可用來製作黏性膠帶和塗刷上色.",
+    "cn": "用松针手工制作的画笔.<br>可用来制作粘性胶带和涂刷上色.",
+    "_note": "2026-08-21 上游文本變更同步（可能過時 issue 批次）。"
    },
    "Tooltip_HydeCoBees_Propolis": {
-    "en": "A sticky bee resin byproduct from harvesting honeycombs in a cultivated beehive. Has many uses in advanced crafting.",
-    "ch": "在人工蜂箱採收蜂巢時產生的黏性蜂膠副產品. 在進階製作中用途廣泛.",
-    "cn": "在人工蜂箱采收蜂巢时产生的粘性蜂胶副产品. 在进阶制作中用途广泛."
+    "en": "A sticky bee resin byproduct from harvesting honeycombs in a cultivated<br>beehive.<br>Has many uses in advanced crafting.",
+    "ch": "在人工蜂箱採收蜂巢時產生的黏性蜂膠副產品.<br>在進階製作中用途廣泛.",
+    "cn": "在人工蜂箱采收蜂巢时产生的粘性蜂胶副产品.<br>在进阶制作中用途广泛.",
+    "_note": "2026-08-21 上游文本變更同步（可能過時 issue 批次）。"
    },
    "Tooltip_HydeCoBees_QueenCage": {
     "en": "A small cage used to safely remove and carry a hive queen.",
@@ -149885,7 +151821,7 @@
     "cn": "把蜂蜡碎块塑成瓶塞. 一个可密封一瓶蜂蜜或一瓶蜂蜜酒."
    },
    "Tooltip_HydeCoBees_BottleHoney": {
-    "en": "Seal a glass bottle holding a full litre of honey with a wax cork. Pour the honey in first; the cork is used up.",
+    "en": "Seal a glass bottle holding a full litre of honey with a wax cork.<br>Pour the honey in first; the cork is used up.",
     "ch": "用蜂蠟塞密封裝有滿滿一公升蜂蜜的玻璃瓶. 先把蜂蜜倒進瓶裡; 瓶塞會被消耗掉.",
     "cn": "用蜂蜡塞密封装有满满一升蜂蜜的玻璃瓶. 先把蜂蜜倒进瓶里; 瓶塞会被消耗掉."
    },
@@ -149905,7 +151841,7 @@
     "cn": "把糖搅进一罐水里."
    },
    "Tooltip_HydeCoBees_WaxedStopper": {
-    "en": "A beeswax cork. Bottling honey takes one; the mead barrel uses one, or a real cork, to seal each bottle it fills.",
+    "en": "A beeswax cork. Bottling honey takes one;<br>the mead barrel uses one, or a real cork, to seal each bottle it fills.",
     "ch": "一個蜂蠟塞. 蜂蜜裝瓶需要一個; 蜂蜜酒桶每裝滿一瓶也會用掉一個, 或改用真正的軟木塞.",
     "cn": "一个蜂蜡塞. 蜂蜜装瓶需要一个; 蜂蜜酒桶每装满一瓶也会用掉一个, 或改用真正的软木塞."
    },
@@ -149925,7 +151861,7 @@
     "cn": "把培养物舀进酵母包里. 罐子会保留下来."
    },
    "Tooltip_HydeCoBees_SealedMead": {
-    "en": "Mead sealed at the barrel. Sealed glass keeps it exactly as it was bottled - it will not age or spoil. Open it with a corkscrew or any sharp tool.",
+    "en": "Mead sealed at the barrel.<br>Sealed glass keeps it exactly as it was bottled - it will not age or spoil.<br>Open it with a corkscrew or any sharp tool.",
     "ch": "在酒桶邊直接密封的蜂蜜酒. 密封的玻璃能讓它維持裝瓶當時的狀態 - 不會繼續熟成, 也不會變質. 用開瓶器或任何尖銳工具即可開封.",
     "cn": "在酒桶边直接密封的蜂蜜酒. 密封的玻璃能让它保持装瓶当时的状态 - 不会继续熟成, 也不会变质. 用开瓶器或任何尖锐工具即可开封."
    },
@@ -149935,7 +151871,7 @@
     "cn": "给大蒜打蜡以保鲜."
    },
    "Tooltip_HydeCoBees_OpenSealedMead": {
-    "en": "Pull the seal with a corkscrew, a knife, or anything else with a point. Once open, drink it or pour it out.",
+    "en": "Pull the seal with a corkscrew, a knife, or anything else with a point.<br>Once open, drink it or pour it out.",
     "ch": "用開瓶器, 刀子或其他任何帶尖頭的工具拔開封口. 開封後就能飲用或倒出.",
     "cn": "用开瓶器, 刀子或其他任何带尖头的工具拔开封口. 开封后就能饮用或倒出."
    },
@@ -149978,6 +151914,808 @@
     "en": "You already copied the map from the cards",
     "ch": "你已經從卡片上抄下地圖了",
     "cn": "你已经从卡片上抄下地图了"
+   },
+   "Tooltip_Item_BoxBulletsHandgunLAP": {
+    "en": "Box of 25 Bullets Handgun L AP",
+    "ch": "25發裝手槍大口徑穿甲彈頭",
+    "cn": "25发装手枪大口径穿甲弹头"
+   },
+   "Tooltip_Item_BoxBulletsHandgunLHP": {
+    "en": "Box of 25 Bullets Handgun L HP",
+    "ch": "25發裝手槍大口徑空尖彈頭",
+    "cn": "25发装手枪大口径空尖弹头"
+   },
+   "Tooltip_Item_BoxBulletsHandgunLTR": {
+    "en": "Box of 25 Bullets Handgun L TR",
+    "ch": "25發裝手槍大口徑曳光彈頭",
+    "cn": "25发装手枪大口径曳光弹头"
+   },
+   "Tooltip_Item_BoxBulletsHandgunMAP": {
+    "en": "Box of 25 Bullets Handgun M AP",
+    "ch": "25發裝手槍中口徑穿甲彈頭",
+    "cn": "25发装手枪中口径穿甲弹头"
+   },
+   "Tooltip_Item_BoxBulletsHandgunMHP": {
+    "en": "Box of 25 Bullets Handgun M HP",
+    "ch": "25發裝手槍中口徑空尖彈頭",
+    "cn": "25发装手枪中口径空尖弹头"
+   },
+   "Tooltip_Item_BoxBulletsHandgunMTR": {
+    "en": "Box of 25 Bullets Handgun M TR",
+    "ch": "25發裝手槍中口徑曳光彈頭",
+    "cn": "25发装手枪中口径曳光弹头"
+   },
+   "Tooltip_Item_BoxBulletsHandgunSAP": {
+    "en": "Box of 25 Bullets Handgun S AP",
+    "ch": "25發裝手槍小口徑穿甲彈頭",
+    "cn": "25发装手枪小口径穿甲弹头"
+   },
+   "Tooltip_Item_BoxBulletsHandgunSHP": {
+    "en": "Box of 25 Bullets Handgun S HP",
+    "ch": "25發裝手槍小口徑空尖彈頭",
+    "cn": "25发装手枪小口径空尖弹头"
+   },
+   "Tooltip_Item_BoxBulletsHandgunSTR": {
+    "en": "Box of 25 Bullets Handgun S TR",
+    "ch": "25發裝手槍小口徑曳光彈頭",
+    "cn": "25发装手枪小口径曳光弹头"
+   },
+   "Tooltip_Item_BoxBulletsRifleLAP": {
+    "en": "Box of 25 Bullets Rifle L AP",
+    "ch": "25發裝步槍大口徑穿甲彈頭",
+    "cn": "25发装步枪大口径穿甲弹头"
+   },
+   "Tooltip_Item_BoxBulletsRifleLHP": {
+    "en": "Box of 25 Bullets Rifle L HP",
+    "ch": "25發裝步槍大口徑空尖彈頭",
+    "cn": "25发装步枪大口径空尖弹头"
+   },
+   "Tooltip_Item_BoxBulletsRifleLTR": {
+    "en": "Box of 25 Bullets Rifle L TR",
+    "ch": "25發裝步槍大口徑曳光彈頭",
+    "cn": "25发装步枪大口径曳光弹头"
+   },
+   "Tooltip_Item_BoxBulletsRifleMAP": {
+    "en": "Box of 25 Bullets Rifle M AP",
+    "ch": "25發裝步槍中口徑穿甲彈頭",
+    "cn": "25发装步枪中口径穿甲弹头"
+   },
+   "Tooltip_Item_BoxBulletsRifleMHP": {
+    "en": "Box of 25 Bullets Rifle M HP",
+    "ch": "25發裝步槍中口徑空尖彈頭",
+    "cn": "25发装步枪中口径空尖弹头"
+   },
+   "Tooltip_Item_BoxBulletsRifleMTR": {
+    "en": "Box of 25 Bullets Rifle M TR",
+    "ch": "25發裝步槍中口徑曳光彈頭",
+    "cn": "25发装步枪中口径曳光弹头"
+   },
+   "Tooltip_Item_BoxBulletsRifleSTR": {
+    "en": "Box of 25 Bullets Rifle S TR",
+    "ch": "25發裝步槍小口徑曳光彈頭",
+    "cn": "25发装步枪小口径曳光弹头"
+   },
+   "Tooltip_Item_BoxPyroFiller12": {
+    "en": "Box of 25 Pyro Filler 12",
+    "ch": "25發裝12號煙火填充劑",
+    "cn": "25发装12号烟火填充剂"
+   },
+   "Tooltip_Item_BulletHandgunLAP": {
+    "en": "Large size armour piercing handgun bullet. Castable with any furnace",
+    "ch": "大口徑手槍穿甲彈頭. 可用任意熔爐鑄造",
+    "cn": "大口径手枪穿甲弹头. 可用任意熔炉铸造"
+   },
+   "Tooltip_Item_BulletHandgunLHP": {
+    "en": "Large size hollow point handgun bullet. Craftable from standard bullets",
+    "ch": "大口徑手槍空尖彈頭. 可由標準彈頭製作",
+    "cn": "大口径手枪空尖弹头. 可由标准弹头制作"
+   },
+   "Tooltip_Item_BulletHandgunLTR": {
+    "en": "Large size tracer handgun bullet. Craftable from standard bullets",
+    "ch": "大口徑手槍曳光彈頭. 可由標準彈頭製作",
+    "cn": "大口径手枪曳光弹头. 可由标准弹头制作"
+   },
+   "Tooltip_Item_BulletHandgunMAP": {
+    "en": "Medium size armour piercing handgun bullet. Castable with any furnace",
+    "ch": "中口徑手槍穿甲彈頭. 可用任意熔爐鑄造",
+    "cn": "中口径手枪穿甲弹头. 可用任意熔炉铸造"
+   },
+   "Tooltip_Item_BulletHandgunMHP": {
+    "en": "Medium size hollow point handgun bullet. Craftable from standard bullets",
+    "ch": "中口徑手槍空尖彈頭. 可由標準彈頭製作",
+    "cn": "中口径手枪空尖弹头. 可由标准弹头制作"
+   },
+   "Tooltip_Item_BulletHandgunMTR": {
+    "en": "Medium size tracer handgun bullet. Craftable from standard bullets",
+    "ch": "中口徑手槍曳光彈頭. 可由標準彈頭製作",
+    "cn": "中口径手枪曳光弹头. 可由标准弹头制作"
+   },
+   "Tooltip_Item_BulletHandgunSAP": {
+    "en": "Small size armour piercing handgun bullet. Castable with any furnace",
+    "ch": "小口徑手槍穿甲彈頭. 可用任意熔爐鑄造",
+    "cn": "小口径手枪穿甲弹头. 可用任意熔炉铸造"
+   },
+   "Tooltip_Item_BulletHandgunSHP": {
+    "en": "Small size hollow point handgun bullet. Craftable from standard bullets",
+    "ch": "小口徑手槍空尖彈頭. 可由標準彈頭製作",
+    "cn": "小口径手枪空尖弹头. 可由标准弹头制作"
+   },
+   "Tooltip_Item_BulletHandgunSTR": {
+    "en": "Small size tracer handgun bullet. Craftable from standard bullets",
+    "ch": "小口徑手槍曳光彈頭. 可由標準彈頭製作",
+    "cn": "小口径手枪曳光弹头. 可由标准弹头制作"
+   },
+   "Tooltip_Item_BulletRifleLAP": {
+    "en": "Large size armour piercing rifle bullet. Castable with any furnace",
+    "ch": "大口徑步槍穿甲彈頭. 可用任意熔爐鑄造",
+    "cn": "大口径步枪穿甲弹头. 可用任意熔炉铸造"
+   },
+   "Tooltip_Item_BulletRifleLHP": {
+    "en": "Large size hollow point rifle bullet. Craftable from standard bullets",
+    "ch": "大口徑步槍空尖彈頭. 可由標準彈頭製作",
+    "cn": "大口径步枪空尖弹头. 可由标准弹头制作"
+   },
+   "Tooltip_Item_BulletRifleLTR": {
+    "en": "Large size tracer rifle bullet. Craftable from standard bullets",
+    "ch": "大口徑步槍曳光彈頭. 可由標準彈頭製作",
+    "cn": "大口径步枪曳光弹头. 可由标准弹头制作"
+   },
+   "Tooltip_Item_BulletRifleMAP": {
+    "en": "Medium size armour piercing rifle bullet. Castable with any furnace",
+    "ch": "中口徑步槍穿甲彈頭. 可用任意熔爐鑄造",
+    "cn": "中口径步枪穿甲弹头. 可用任意熔炉铸造"
+   },
+   "Tooltip_Item_BulletRifleMHP": {
+    "en": "Medium size hollow point rifle bullet. Craftable from standard bullets",
+    "ch": "中口徑步槍空尖彈頭. 可由標準彈頭製作",
+    "cn": "中口径步枪空尖弹头. 可由标准弹头制作"
+   },
+   "Tooltip_Item_BulletRifleMTR": {
+    "en": "Medium size tracer rifle bullet. Craftable from standard bullets",
+    "ch": "中口徑步槍曳光彈頭. 可由標準彈頭製作",
+    "cn": "中口径步枪曳光弹头. 可由标准弹头制作"
+   },
+   "Tooltip_Item_BulletRifleSTR": {
+    "en": "Small size tracer rifle bullet. Craftable from standard bullets",
+    "ch": "小口徑步槍曳光彈頭. 可由標準彈頭製作",
+    "cn": "小口径步枪曳光弹头. 可由标准弹头制作"
+   },
+   "Tooltip_Item_CasingRar": {
+    "en": "Rocket-assisted-recoilless expelling charge casing. Forgeable with advanced forge",
+    "ch": "火箭助推無後座拋射藥筒. 需用進階鍛造爐鍛造",
+    "cn": "火箭助推无后座抛射药筒. 需用进阶锻造炉锻造"
+   },
+   "Tooltip_Item_MagAmmoWorldJune93": {
+    "en": "In this issue of Ammo World, our team took on the challenge of forging a DIY reloading press",
+    "ch": "本期《彈藥世界》, 本刊團隊挑戰鍛造一台自製裝彈機",
+    "cn": "本期《弹药世界》, 本刊团队挑战锻造一台自制装弹机"
+   },
+   "Tooltip_Item_ProjectileRarHE": {
+    "en": "Rocket-assisted-recoilless high explosive projectile. Forgeable with advanced forge",
+    "ch": "火箭助推無後座高爆彈頭. 需用進階鍛造爐鍛造",
+    "cn": "火箭助推无后座高爆弹头. 需用进阶锻造炉锻造"
+   },
+   "Tooltip_Item_PyroFiller12": {
+    "en": "Pyrotechnic filler for dragon breath shotgun shells. Craftable from pyro paste",
+    "ch": "龍息霰彈用煙火填充劑. 可由煙火糊製作",
+    "cn": "龙息霰弹用烟火填充剂. 可由烟火糊制作"
+   },
+   "Tooltip_Item_PyroPaste": {
+    "en": "Paste to create visual pyrotechnic effects",
+    "ch": "用來製造視覺煙火效果的糊劑",
+    "cn": "用来制造视觉烟火效果的糊剂"
+   },
+   "Tooltip_Recipe_Make12Dragon": {
+    "en": "Assemble 12 bore dragon breath shell (aka. 12-gauge) - 18.5mm - 1860",
+    "ch": "組裝12號龍息彈 (12鉛徑) - 18.5mm - 1860",
+    "cn": "组装12号龙息弹 (12铅径) - 18.5mm - 1860"
+   },
+   "Tooltip_Recipe_Make22LRAP": {
+    "en": "Assemble .22 long rifle AP armour piercing round - 1887",
+    "ch": "組裝.22 LR穿甲彈 - 1887",
+    "cn": "组装.22 LR穿甲弹 - 1887"
+   },
+   "Tooltip_Recipe_Make22LRTR": {
+    "en": "Assemble .22 long rifle TR tracer round - 1887",
+    "ch": "組裝.22 LR曳光彈 - 1887",
+    "cn": "组装.22 LR曳光弹 - 1887"
+   },
+   "Tooltip_Recipe_Make3006SpringAP": {
+    "en": "Assemble .30-06 Springfield AP armour piercing round - 1906",
+    "ch": "組裝.30-06春田穿甲彈 - 1906",
+    "cn": "组装.30-06春田穿甲弹 - 1906"
+   },
+   "Tooltip_Recipe_Make3006SpringTR": {
+    "en": "Assemble .30-06 Springfield TR tracer round - 1906",
+    "ch": "組裝.30-06春田曳光彈 - 1906",
+    "cn": "组装.30-06春田曳光弹 - 1906"
+   },
+   "Tooltip_Recipe_Make303BritishAP": {
+    "en": "Assemble .303 British AP armour piercing round - 1889",
+    "ch": "組裝.303英式穿甲彈 - 1889",
+    "cn": "组装.303英式穿甲弹 - 1889"
+   },
+   "Tooltip_Recipe_Make303BritishTR": {
+    "en": "Assemble .303 British TR tracer round - 1889",
+    "ch": "組裝.303英式曳光彈 - 1889",
+    "cn": "组装.303英式曳光弹 - 1889"
+   },
+   "Tooltip_Recipe_Make308WinAP": {
+    "en": "Assemble .308 Winchester AP armour piercing round - 1952",
+    "ch": "組裝.308溫徹斯特穿甲彈 - 1952",
+    "cn": "组装.308温彻斯特穿甲弹 - 1952"
+   },
+   "Tooltip_Recipe_Make308WinTR": {
+    "en": "Assemble .308 Winchester TR tracer round - 1952",
+    "ch": "組裝.308溫徹斯特曳光彈 - 1952",
+    "cn": "组装.308温彻斯特曳光弹 - 1952"
+   },
+   "Tooltip_Recipe_Make32ACPAP": {
+    "en": "Assemble .32 ACP AP armour piercing round - 1899",
+    "ch": "組裝.32 ACP穿甲彈 - 1899",
+    "cn": "组装.32 ACP穿甲弹 - 1899"
+   },
+   "Tooltip_Recipe_Make32ACPTR": {
+    "en": "Assemble .32 ACP TR tracer round - 1899",
+    "ch": "組裝.32 ACP曳光彈 - 1899",
+    "cn": "组装.32 ACP曳光弹 - 1899"
+   },
+   "Tooltip_Recipe_Make357MagAP": {
+    "en": "Assemble .357 Magnum AP armour piercing round - 1934",
+    "ch": "組裝.357馬格南穿甲彈 - 1934",
+    "cn": "组装.357马格南穿甲弹 - 1934"
+   },
+   "Tooltip_Recipe_Make357MagTR": {
+    "en": "Assemble .357 Magnum TR tracer round - 1934",
+    "ch": "組裝.357馬格南曳光彈 - 1934",
+    "cn": "组装.357马格南曳光弹 - 1934"
+   },
+   "Tooltip_Recipe_Make38SPAP": {
+    "en": "Assemble .38 Special AP armour piercing round - 1898",
+    "ch": "組裝.38特種穿甲彈 - 1898",
+    "cn": "组装.38特种穿甲弹 - 1898"
+   },
+   "Tooltip_Recipe_Make38SPTR": {
+    "en": "Assemble .38 Special TR tracer round - 1898",
+    "ch": "組裝.38特種曳光彈 - 1898",
+    "cn": "组装.38特种曳光弹 - 1898"
+   },
+   "Tooltip_Recipe_Make44MagAP": {
+    "en": "Assemble .44 Magnum AP armour piercing round - 1950",
+    "ch": "組裝.44馬格南穿甲彈 - 1950",
+    "cn": "组装.44马格南穿甲弹 - 1950"
+   },
+   "Tooltip_Recipe_Make44MagTR": {
+    "en": "Assemble .44 Magnum TR tracer round - 1950",
+    "ch": "組裝.44馬格南曳光彈 - 1950",
+    "cn": "组装.44马格南曳光弹 - 1950"
+   },
+   "Tooltip_Recipe_Make45ACPAP": {
+    "en": "Assemble .45 ACP AP armour piercing round - 1904",
+    "ch": "組裝.45 ACP穿甲彈 - 1904",
+    "cn": "组装.45 ACP穿甲弹 - 1904"
+   },
+   "Tooltip_Recipe_Make45ACPTR": {
+    "en": "Assemble .45 ACP TR tracer round - 1904",
+    "ch": "組裝.45 ACP曳光彈 - 1904",
+    "cn": "组装.45 ACP曳光弹 - 1904"
+   },
+   "Tooltip_Recipe_Make500SWMagAP": {
+    "en": "Assemble .500 S&W Magnum AP armour piercing round - 2003",
+    "ch": "組裝.500 S&W馬格南穿甲彈 - 2003",
+    "cn": "组装.500 S&W马格南穿甲弹 - 2003"
+   },
+   "Tooltip_Recipe_Make500SWMagTR": {
+    "en": "Assemble .500 S&W Magnum TR tracer round - 2003",
+    "ch": "組裝.500 S&W馬格南曳光彈 - 2003",
+    "cn": "组装.500 S&W马格南曳光弹 - 2003"
+   },
+   "Tooltip_Recipe_Make50BMGAP": {
+    "en": "Assemble .50 BMG AP armour piercing round - 1921",
+    "ch": "組裝.50 BMG穿甲彈 - 1921",
+    "cn": "组装.50 BMG穿甲弹 - 1921"
+   },
+   "Tooltip_Recipe_Make50BMGTR": {
+    "en": "Assemble .50 BMG TR tracer round - 1921",
+    "ch": "組裝.50 BMG曳光彈 - 1921",
+    "cn": "组装.50 BMG曳光弹 - 1921"
+   },
+   "Tooltip_Recipe_Make545x39AP": {
+    "en": "Assemble 5.45x39mm AP armour piercing round - 1974",
+    "ch": "組裝5.45x39mm穿甲彈 - 1974",
+    "cn": "组装5.45x39mm穿甲弹 - 1974"
+   },
+   "Tooltip_Recipe_Make545x39TR": {
+    "en": "Assemble 5.45x39mm TR tracer round - 1974",
+    "ch": "組裝5.45x39mm曳光彈 - 1974",
+    "cn": "组装5.45x39mm曳光弹 - 1974"
+   },
+   "Tooltip_Recipe_Make556x45TR": {
+    "en": "Assemble 5.56x45mm NATO TR tracer round - 1980",
+    "ch": "組裝5.56x45mm北約曳光彈 - 1980",
+    "cn": "组装5.56x45mm北约曳光弹 - 1980"
+   },
+   "Tooltip_Recipe_Make762x39AP": {
+    "en": "Assemble 7.62x39mm AP armour piercing round - 1945",
+    "ch": "組裝7.62x39mm穿甲彈 - 1945",
+    "cn": "组装7.62x39mm穿甲弹 - 1945"
+   },
+   "Tooltip_Recipe_Make762x39TR": {
+    "en": "Assemble 7.62x39mm TR tracer round - 1945",
+    "ch": "組裝7.62x39mm曳光彈 - 1945",
+    "cn": "组装7.62x39mm曳光弹 - 1945"
+   },
+   "Tooltip_Recipe_Make762x54RAP": {
+    "en": "Assemble 7.62x54mmR AP armour piercing round - 1891",
+    "ch": "組裝7.62x54mmR穿甲彈 - 1891",
+    "cn": "组装7.62x54mmR穿甲弹 - 1891"
+   },
+   "Tooltip_Recipe_Make762x54RTR": {
+    "en": "Assemble 7.62x54mmR TR tracer round - 1891",
+    "ch": "組裝7.62x54mmR曳光彈 - 1891",
+    "cn": "组装7.62x54mmR曳光弹 - 1891"
+   },
+   "Tooltip_Recipe_Make765x21Para": {
+    "en": "Assemble 7.65x21mm Parabellum round (aka. .30 Luger) - 1898",
+    "ch": "組裝7.65x21mm帕拉貝倫彈 (即.30魯格) - 1898",
+    "cn": "组装7.65x21mm帕拉贝伦弹 (即.30鲁格) - 1898"
+   },
+   "Tooltip_Recipe_Make792x57MausAP": {
+    "en": "Assemble 7.92x57mm Mauser AP armour piercing round - 1905",
+    "ch": "組裝7.92x57mm毛瑟穿甲彈 - 1905",
+    "cn": "组装7.92x57mm毛瑟穿甲弹 - 1905"
+   },
+   "Tooltip_Recipe_Make792x57MausTR": {
+    "en": "Assemble 7.92x57mm Mauser TR tracer round - 1905",
+    "ch": "組裝7.92x57mm毛瑟曳光彈 - 1905",
+    "cn": "组装7.92x57mm毛瑟曳光弹 - 1905"
+   },
+   "Tooltip_Recipe_Make9x19ParaAP": {
+    "en": "Assemble 9mm Luger AP armour piercing round - 1901",
+    "ch": "組裝9mm魯格穿甲彈 - 1901",
+    "cn": "组装9mm鲁格穿甲弹 - 1901"
+   },
+   "Tooltip_Recipe_Make9x19ParaTR": {
+    "en": "Assemble 9mm Luger TR tracer round - 1901",
+    "ch": "組裝9mm魯格曳光彈 - 1901",
+    "cn": "组装9mm鲁格曳光弹 - 1901"
+   },
+   "Tooltip_Recipe_Make9x39AP": {
+    "en": "Assemble 9x39mm AP armour piercing round - 1980",
+    "ch": "組裝9x39mm穿甲彈 - 1980",
+    "cn": "组装9x39mm穿甲弹 - 1980"
+   },
+   "Tooltip_Recipe_Make9x39TR": {
+    "en": "Assemble 9x39mm TR tracer round - 1980",
+    "ch": "組裝9x39mm曳光彈 - 1980",
+    "cn": "组装9x39mm曳光弹 - 1980"
+   },
+   "Tooltip_Recipe_MakeBulletsHandgunLAP": {
+    "en": "Cast large size armour piercing handgun bullets",
+    "ch": "鑄造大口徑手槍穿甲彈頭",
+    "cn": "铸造大口径手枪穿甲弹头"
+   },
+   "Tooltip_Recipe_MakeBulletsHandgunMAP": {
+    "en": "Cast medium size armour piercing handgun bullets",
+    "ch": "鑄造中口徑手槍穿甲彈頭",
+    "cn": "铸造中口径手枪穿甲弹头"
+   },
+   "Tooltip_Recipe_MakeBulletsHandgunSAP": {
+    "en": "Cast small size armour piercing handgun bullets",
+    "ch": "鑄造小口徑手槍穿甲彈頭",
+    "cn": "铸造小口径手枪穿甲弹头"
+   },
+   "Tooltip_Recipe_MakeBulletsRifleLAP": {
+    "en": "Cast large size armour piercing rifle bullets",
+    "ch": "鑄造大口徑步槍穿甲彈頭",
+    "cn": "铸造大口径步枪穿甲弹头"
+   },
+   "Tooltip_Recipe_MakeBulletsRifleMAP": {
+    "en": "Cast medium size armour piercing rifle bullets",
+    "ch": "鑄造中口徑步槍穿甲彈頭",
+    "cn": "铸造中口径步枪穿甲弹头"
+   },
+   "Tooltip_Recipe_MakeCasingRar": {
+    "en": "Forge rocket-assisted-recoilless expelling charge casing",
+    "ch": "鍛造火箭助推無後座拋射藥筒",
+    "cn": "锻造火箭助推无后座抛射药筒"
+   },
+   "Tooltip_Recipe_MakePG7V": {
+    "en": "Assemble PG-7V high explosive anti tank grenade shell - 1961",
+    "ch": "組裝PG-7V反坦克高爆榴彈 - 1961",
+    "cn": "组装PG-7V反坦克高爆榴弹 - 1961",
+    "_note": "｜2026-08-21 對齊本包既有慣例：CN 应用/示例/粘性、CH 反坦克。"
+   },
+   "Tooltip_Recipe_MakeProjectileRarHE": {
+    "en": "Forge rocket-assisted-recoilless high explosive projectile",
+    "ch": "鍛造火箭助推無後座高爆彈頭",
+    "cn": "锻造火箭助推无后座高爆弹头"
+   },
+   "Tooltip_Recipe_MakePyroFiller12": {
+    "en": "Craft pyrotechnic filler for shotguns with pyro paste",
+    "ch": "用煙火糊製作霰彈槍用煙火填充劑",
+    "cn": "用烟火糊制作霰弹枪用烟火填充剂"
+   },
+   "Tooltip_Recipe_MakePyroPaste": {
+    "en": "Mix pyrotechnic materials into pyro paste",
+    "ch": "把煙火材料混合成煙火糊",
+    "cn": "把烟火材料混合成烟火糊"
+   },
+   "Tooltip_Recipe_MakeTracerBullet": {
+    "en": "Craft tracer bullet from standard bullet",
+    "ch": "用標準彈頭製作曳光彈頭",
+    "cn": "用标准弹头制作曳光弹头"
+   },
+   "Tooltip_Recipe_Produce12Dragon": {
+    "en": "Assemble 12 bore dragon breath shells with reloading press",
+    "ch": "組裝12號龍息彈 (裝彈機)",
+    "cn": "组装12号龙息弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce22LRAP": {
+    "en": "Assemble .22 long rifle AP rounds with reloading press",
+    "ch": "組裝.22 LR穿甲彈 (裝彈機)",
+    "cn": "组装.22 LR穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce22LRTR": {
+    "en": "Assemble .22 long rifle TR rounds with reloading press",
+    "ch": "組裝.22 LR曳光彈 (裝彈機)",
+    "cn": "组装.22 LR曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce3006SpringAP": {
+    "en": "Assemble .30-06 Springfield AP rounds with reloading press",
+    "ch": "組裝.30-06春田穿甲彈 (裝彈機)",
+    "cn": "组装.30-06春田穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce3006SpringTR": {
+    "en": "Assemble .30-06 Springfield TR rounds with reloading press",
+    "ch": "組裝.30-06春田曳光彈 (裝彈機)",
+    "cn": "组装.30-06春田曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce303BritishAP": {
+    "en": "Assemble .303 British AP rounds with reloading press",
+    "ch": "組裝.303英式穿甲彈 (裝彈機)",
+    "cn": "组装.303英式穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce303BritishTR": {
+    "en": "Assemble .303 British TR rounds with reloading press",
+    "ch": "組裝.303英式曳光彈 (裝彈機)",
+    "cn": "组装.303英式曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce308WinAP": {
+    "en": "Assemble .308 Winchester AP rounds with reloading press",
+    "ch": "組裝.308溫徹斯特穿甲彈 (裝彈機)",
+    "cn": "组装.308温彻斯特穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce308WinTR": {
+    "en": "Assemble .308 Winchester TR rounds with reloading press",
+    "ch": "組裝.308溫徹斯特曳光彈 (裝彈機)",
+    "cn": "组装.308温彻斯特曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce32ACPAP": {
+    "en": "Assemble .32 ACP AP rounds with reloading press",
+    "ch": "組裝.32 ACP穿甲彈 (裝彈機)",
+    "cn": "组装.32 ACP穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce32ACPTR": {
+    "en": "Assemble .32 ACP TR rounds with reloading press",
+    "ch": "組裝.32 ACP曳光彈 (裝彈機)",
+    "cn": "组装.32 ACP曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce357MagAP": {
+    "en": "Assemble .357 Magnum AP rounds with reloading press",
+    "ch": "組裝.357馬格南穿甲彈 (裝彈機)",
+    "cn": "组装.357马格南穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce357MagTR": {
+    "en": "Assemble .357 Magnum TR rounds with reloading press",
+    "ch": "組裝.357馬格南曳光彈 (裝彈機)",
+    "cn": "组装.357马格南曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce38SPAP": {
+    "en": "Assemble .38 Special AP rounds with reloading press",
+    "ch": "組裝.38特種穿甲彈 (裝彈機)",
+    "cn": "组装.38特种穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce38SPTR": {
+    "en": "Assemble .38 Special TR rounds with reloading press",
+    "ch": "組裝.38特種曳光彈 (裝彈機)",
+    "cn": "组装.38特种曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce44MagAP": {
+    "en": "Assemble .44 Magnum AP rounds with reloading press",
+    "ch": "組裝.44馬格南穿甲彈 (裝彈機)",
+    "cn": "组装.44马格南穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce44MagTR": {
+    "en": "Assemble .44 Magnum TR rounds with reloading press",
+    "ch": "組裝.44馬格南曳光彈 (裝彈機)",
+    "cn": "组装.44马格南曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce45ACPAP": {
+    "en": "Assemble .45 ACP AP rounds with reloading press",
+    "ch": "組裝.45 ACP穿甲彈 (裝彈機)",
+    "cn": "组装.45 ACP穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce45ACPTR": {
+    "en": "Assemble .45 ACP TR rounds with reloading press",
+    "ch": "組裝.45 ACP曳光彈 (裝彈機)",
+    "cn": "组装.45 ACP曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce500SWMagAP": {
+    "en": "Assemble .500 S&W Magnum AP rounds with reloading press",
+    "ch": "組裝.500 S&W馬格南穿甲彈 (裝彈機)",
+    "cn": "组装.500 S&W马格南穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce500SWMagTR": {
+    "en": "Assemble .500 S&W Magnum TR rounds with reloading press",
+    "ch": "組裝.500 S&W馬格南曳光彈 (裝彈機)",
+    "cn": "组装.500 S&W马格南曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce50BMGAP": {
+    "en": "Assemble .50 BMG AP rounds with reloading press",
+    "ch": "組裝.50 BMG穿甲彈 (裝彈機)",
+    "cn": "组装.50 BMG穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce50BMGTR": {
+    "en": "Assemble .50 BMG TR rounds with reloading press",
+    "ch": "組裝.50 BMG曳光彈 (裝彈機)",
+    "cn": "组装.50 BMG曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce545x39AP": {
+    "en": "Assemble 5.45x39mm AP rounds with reloading press",
+    "ch": "組裝5.45x39mm穿甲彈 (裝彈機)",
+    "cn": "组装5.45x39mm穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce545x39TR": {
+    "en": "Assemble 5.45x39mm TR rounds with reloading press",
+    "ch": "組裝5.45x39mm曳光彈 (裝彈機)",
+    "cn": "组装5.45x39mm曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce556x45TR": {
+    "en": "Assemble 5.56x45mm NATO TR rounds with reloading press",
+    "ch": "組裝5.56x45mm北約曳光彈 (裝彈機)",
+    "cn": "组装5.56x45mm北约曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce762x39AP": {
+    "en": "Assemble 7.62x39mm AP rounds with reloading press",
+    "ch": "組裝7.62x39mm穿甲彈 (裝彈機)",
+    "cn": "组装7.62x39mm穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce762x39TR": {
+    "en": "Assemble 7.62x39mm TR rounds with reloading press",
+    "ch": "組裝7.62x39mm曳光彈 (裝彈機)",
+    "cn": "组装7.62x39mm曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce762x54RAP": {
+    "en": "Assemble 7.62x54mmR AP rounds with reloading press",
+    "ch": "組裝7.62x54mmR穿甲彈 (裝彈機)",
+    "cn": "组装7.62x54mmR穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce762x54RTR": {
+    "en": "Assemble 7.62x54mmR TR rounds with reloading press",
+    "ch": "組裝7.62x54mmR曳光彈 (裝彈機)",
+    "cn": "组装7.62x54mmR曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce765x21Para": {
+    "en": "Assemble 7.65x21mm Parabellum rounds with reloading press",
+    "ch": "組裝7.65x21mm帕拉貝倫彈 (裝彈機)",
+    "cn": "组装7.65x21mm帕拉贝伦弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce792x57MausAP": {
+    "en": "Assemble 7.92x57mm Mauser AP rounds with reloading press",
+    "ch": "組裝7.92x57mm毛瑟穿甲彈 (裝彈機)",
+    "cn": "组装7.92x57mm毛瑟穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce792x57MausTR": {
+    "en": "Assemble 7.92x57mm Mauser TR rounds with reloading press",
+    "ch": "組裝7.92x57mm毛瑟曳光彈 (裝彈機)",
+    "cn": "组装7.92x57mm毛瑟曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce9x19ParaAP": {
+    "en": "Assemble 9mm Luger AP rounds with reloading press",
+    "ch": "組裝9mm魯格穿甲彈 (裝彈機)",
+    "cn": "组装9mm鲁格穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce9x19ParaTR": {
+    "en": "Assemble 9mm Luger TR rounds with reloading press",
+    "ch": "組裝9mm魯格曳光彈 (裝彈機)",
+    "cn": "组装9mm鲁格曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce9x39AP": {
+    "en": "Assemble 9x39mm AP rounds with reloading press",
+    "ch": "組裝9x39mm穿甲彈 (裝彈機)",
+    "cn": "组装9x39mm穿甲弹 (装弹机)"
+   },
+   "Tooltip_Recipe_Produce9x39TR": {
+    "en": "Assemble 9x39mm TR rounds with reloading press",
+    "ch": "組裝9x39mm曳光彈 (裝彈機)",
+    "cn": "组装9x39mm曳光弹 (装弹机)"
+   },
+   "Tooltip_Recipe_RecycleCasingRar": {
+    "en": "Recycle rocket-assisted-recoilless expelling charge casing",
+    "ch": "回收火箭助推無後座拋射藥筒",
+    "cn": "回收火箭助推无后座抛射药筒"
+   },
+   "Tooltip_Recipe_RecyclePyroFiller12": {
+    "en": "Recycle 12 bore pyro fillers",
+    "ch": "回收12號煙火填充劑",
+    "cn": "回收12号烟火填充剂"
+   },
+   "_AM_ItemName_comment_5": {
+    "en": "LITERATURE ITEMS",
+    "ch": "文獻物品",
+    "cn": "文献物品"
+   },
+   "Tooltip_HydeCoBees_ApplyStingSalve": {
+    "en": "Rub one dose of salve over your bee stings. Swelling and venom drop sharply; the relief is immediate.",
+    "ch": "取一劑藥膏擦在蜂螫上. 腫脹和毒液會明顯消退, 舒緩幾乎立刻生效.",
+    "cn": "取一剂药膏擦在蜂蜇上. 肿胀和毒液会明显消退, 舒缓几乎立刻生效."
+   },
+   "Tooltip_HydeCoBees_HoneyBandaid": {
+    "en": "A little wax-paper plaster with a dab of honey. For scrapes and small cuts.",
+    "ch": "一小片蠟紙膠布, 點了蜂蜜. 用來處理擦傷和小割傷.",
+    "cn": "一小片蜡纸胶布, 点了蜂蜜. 用来处理擦伤和小割伤."
+   },
+   "Tooltip_HydeCoBees_MakeHoneyBandaids": {
+    "en": "Cut a ripped sheet into strips, wax the backs, dab honey on the pads. Makes two.",
+    "ch": "把撕裂的布剪成條, 背面塗蠟, 墊面點蜂蜜. 可做兩片.",
+    "cn": "把撕裂的布剪成条, 背面涂蜡, 垫面点蜂蜜. 可做两片."
+   },
+   "Tooltip_HydeCoBees_MakeMedicatedBandage": {
+    "en": "Soak a bandage in one dose of propolis tincture.",
+    "ch": "把繃帶浸入一劑蜂膠酊.",
+    "cn": "把绷带浸入一剂蜂胶酊."
+   },
+   "Tooltip_HydeCoBees_MakePropolisTincture": {
+    "en": "Grind propolis into water in a clean jar. The bees seal their hive with it; it can seal you too.",
+    "ch": "在乾淨的罐子裡把蜂膠磨進水中. 蜜蜂用它封巢, 也能拿來幫你封傷口.",
+    "cn": "在干净的罐子里把蜂胶磨进水中. 蜜蜂用它封巢, 也能拿来帮你封伤口."
+   },
+   "Tooltip_HydeCoBees_MakeStingSalve": {
+    "en": "Work beeswax, plantain, and honey into an empty jar. The beekeeper's answer to a bad day at the hive.",
+    "ch": "把蜂蠟、車前草和蜂蜜揉進空罐. 養蜂人應付蜂場糟日子的辦法.",
+    "cn": "把蜂蜡、车前草和蜂蜜揉进空罐. 养蜂人应付蜂场糟日子的办法."
+   },
+   "Tooltip_HydeCoBees_MedicatedBandage": {
+    "en": "A bandage soaked in propolis tincture. Binds better than a plain bandage and fights wound infection.",
+    "ch": "浸過蜂膠酊的繃帶. 比普通繃帶更服貼, 還能對抗傷口感染.",
+    "cn": "浸过蜂胶酊的绷带. 比普通绷带更服帖, 还能对抗伤口感染."
+   },
+   "Tooltip_HydeCoBees_PropolisTincture": {
+    "en": "Propolis steeped in water - the hive's own antiseptic. Ten wound disinfections; the jar comes back when it runs dry. Use it from the health panel like any disinfectant.",
+    "ch": "泡在水裡的蜂膠 - 蜂巢自帶的消毒劑. 可消毒傷口十次; 用盡後罐子會回來. 跟其他消毒劑一樣從健康面板使用.",
+    "cn": "泡在水里的蜂胶 - 蜂巢自带的消毒剂. 可消毒伤口十次; 用尽后罐子会回来. 跟其他消毒剂一样从健康面板使用."
+   },
+   "Tooltip_HydeCoBees_StingSalve": {
+    "en": "Beeswax and plantain worked into a jar of salve. Five applications; each one takes most of the swelling and venom out of your bee stings.",
+    "ch": "蜂蠟和車前草揉成一罐藥膏. 可用五次; 每次都能大幅消除蜂螫的腫脹和毒液.",
+    "cn": "蜂蜡和车前草揉成一罐药膏. 可用五次; 每次都能大幅消除蜂蜇的肿胀和毒液."
+   },
+   "Tooltip_Lomo": {
+    "en": "Distinguished by being a very lean cut of meat with no intramuscular fat",
+    "ch": "特色是非常瘦、沒有肌內脂肪的部位",
+    "cn": "特色是非常瘦、没有肌内脂肪的部位"
+   },
+   "Tooltip_LomoSliced": {
+    "en": "Ideal for quick grilling or pan-searing, keeping the center juicy",
+    "ch": "適合快烤或熱鍋煎, 能保持中心多汁",
+    "cn": "适合快烤或热锅煎, 能保持中心多汁"
+   },
+   "Tooltip_MakeMatambreArrollado": {
+    "en": "Crafted using traditional methods and presented with passion for the holiday season.",
+    "ch": "以傳統作法製作, 帶著過節的熱情端上桌.",
+    "cn": "以传统作法制作, 带着过节的热情端上桌."
+   },
+   "Tooltip_Matambre": {
+    "en": "Very popular in some South American countries; a thin, flat cut taken from between the animal's ribs",
+    "ch": "在部分南美國家很受歡迎; 取自肋骨之間的薄而扁平的部位",
+    "cn": "在部分南美国家很受欢迎; 取自肋骨之间的薄而扁平的部位"
+   },
+   "Tooltip_MatambreALPizza": {
+    "en": "A grilled temptation—tradition turned into flavor; the classic that never fails",
+    "ch": "烤架上的誘惑 - 傳統化成味道; 永遠不會失手的經典",
+    "cn": "烤架上的诱惑 - 传统化成味道; 永远不会失手的经典"
+   },
+   "Tooltip_MatambreCFritas": {
+    "en": "Flavor that hits the spot—the king of the Argentine table, with the perfect crunch",
+    "ch": "味道正中要害 - 阿根廷餐桌上的王者, 酥脆剛好",
+    "cn": "味道正中要害 - 阿根廷餐桌上的王者, 酥脆刚好"
+   },
+   "Tooltip_MateImperialAmargo": {
+    "en": "A good mate pairs well with *tortilla* or homemade bread in the morning",
+    "ch": "早上配 *豬油餅* 或自製麵包的瑪黛茶特別對味",
+    "cn": "早上配 *猪油饼* 或自制面包的玛黛茶特别对味",
+    "_note": "2026-08-21 #227 該 mod 的 tortilla 是阿根廷 tortillas de grasa（豬油餅），與墨西哥玉米餅不同——同批 Recipes|MakeTortilla unship 裁決即以此為依據，譯名須一致。"
+   },
+   "Tooltip_MateImperialDulce": {
+    "en": "The yin and yang of the countryside—loved by some, hated by others",
+    "ch": "鄉間的一體兩面 - 有人愛有人厭",
+    "cn": "乡间的一体两面 - 有人爱有人厌"
+   },
+   "Tooltip_MateImperialV": {
+    "en": "An Imperial mate, embroidered and engraved by leather and alpaca artisans",
+    "ch": "帝國瑪黛杯, 由皮革與羊駝毛工匠刺繡雕刻",
+    "cn": "帝国玛黛杯, 由皮革与羊驼毛工匠刺绣雕刻"
+   },
+   "Tooltip_MateImperialY": {
+    "en": "A delight in your hands, ready to be prepared",
+    "ch": "捧在手裡就開心, 隨時可以沖泡",
+    "cn": "捧在手里就开心, 随时可以冲泡"
+   },
+   "Tooltip_SandwichLomo": {
+    "en": "The classic, must-have *solomillo cordobés* from Argentina—courtesy of José (Coco) Turello",
+    "ch": "阿根廷經典必吃的 *科爾多瓦菲力* - 承蒙 José (Coco) Turello",
+    "cn": "阿根廷经典必吃的 *科尔多瓦里脊* - 承蒙 José (Coco) Turello"
+   },
+   "Tooltip_TermoARGEmpty": {
+    "en": "A vintage thermos with many stories told around the campfire",
+    "ch": "一把舊保溫瓶, 營火旁講過許多故事",
+    "cn": "一把旧保温瓶, 营火旁讲过许多故事"
+   },
+   "Tooltip_TermoARGFullHot": {
+    "en": "Keeps liquids at high temperatures—be careful not to burn yourself",
+    "ch": "能把液體保持在高溫 - 小心別燙到",
+    "cn": "能把液体保持在高温 - 小心别烫到"
+   },
+   "Tooltip_Yerba_CBSe": {
+    "en": "Natural bitterness takes a back seat—ideal for avoiding acidity or enjoying a lighter mate",
+    "ch": "天生的苦味退居二線 - 適合想避開酸味、或想喝淡一點的瑪黛茶",
+    "cn": "天生的苦味退居二线 - 适合想避开酸味、或想喝淡一点的玛黛茶"
+   },
+   "Tooltip_Yerba_CruzDeMalta": {
+    "en": "Features a coarser grind and less dust,<br> allowing for a slow flavor release and a longer-lasting, smooth mate experience",
+    "ch": "研磨較粗、粉末較少,<br> 風味釋放較慢, 瑪黛茶喝起來更持久順口",
+    "cn": "研磨较粗、粉末较少,<br> 风味释放较慢, 玛黛茶喝起来更持久顺口"
+   },
+   "Tooltip_Yerba_NoblezaGaucha": {
+    "en": "A quintessential example of the Argentine countryside: <br> straightforward and bold, with a strong, aged character that holds up well over long sessions",
+    "ch": "阿根廷鄉間的典型: <br> 直接大膽, 陳味濃、耐喝, 長時間續杯也不垮",
+    "cn": "阿根廷乡间的典型: <br> 直接大胆, 陈味浓、耐喝, 长时间续杯也不垮"
+   },
+   "Tooltip_Yerba_Rosamonte": {
+    "en": "A top choice for those who enjoy an intense mate that doesn't lose its flavor quickly",
+    "ch": "喜歡濃烈、風味不會一下子淡掉的瑪黛茶的首選",
+    "cn": "喜欢浓烈、风味不会一下子淡掉的玛黛茶的首选"
+   },
+   "Tooltip_Yerba_Taragui": {
+    "en": "A very consistent, classic yerba;<br> the traditional version offers a full-bodied mouthfeel from the very first sip",
+    "ch": "非常穩定的經典瑪黛茶葉;<br> 傳統款從第一口就有飽滿口感",
+    "cn": "非常稳定的经典玛黛茶叶;<br> 传统款从第一口就有饱满口感"
+   },
+   "Tooltip_MBA_Bow_Stave": {
+    "en": "This stave is not yet a bow.<br>It must be carved some more.<br>It's in the right click menu.",
+    "ch": "這根弓胚還不是弓.<br>還得再削一些.<br>動作在右鍵選單裡.",
+    "cn": "这根弓胚还不是弓.<br>还得再削一些.<br>动作在右键菜单里."
+   },
+   "Tooltip_MBA_FluFlu": {
+    "en": "Reduces range.<br>Increases accuracy by the same amount normal fletchings do.",
+    "ch": "縮短射程.<br>命中提升量與一般箭羽相同.",
+    "cn": "缩短射程.<br>命中提升量与一般箭羽相同."
+   },
+   "Tooltip_MBA_Increases_Accuracy": {
+    "en": "Increases accuracy.",
+    "ch": "提高命中.",
+    "cn": "提高命中."
+   },
+   "Tooltip_MBA_Modular_Arrow": {
+    "en": "Assembly and disassembly in right-click menu",
+    "ch": "組裝與拆解在右鍵選單",
+    "cn": "组装与拆解在右键菜单"
+   },
+   "Tooltip_MBA_Old_Shaft": {
+    "en": "Can't be used to make arrows. The mod was<br>changed and different arrow shafts are used now.",
+    "ch": "不能用來做箭. 模組已經<br>改過, 現在用的是另一種箭桿.",
+    "cn": "不能用来做箭. 模组已经<br>改过, 现在用的是另一种箭杆."
+   },
+   "Tooltip_PotatoSilencer": {
+    "en": "Reduces firearm noise radius by 10%% but lowers range. Destroyed after one shot.",
+    "ch": "把槍械噪音半徑降低 10%%, 但會縮短射程. 開一槍就毀.",
+    "cn": "把枪械噪音半径降低 10%%, 但会缩短射程. 开一枪就毁."
+   },
+   "Tooltip_SuppressorCondition": {
+    "en": "Suppressor Condition:",
+    "ch": "消音器狀況:",
+    "cn": "消音器状况:"
    }
   },
   "UI.json": {
@@ -160193,6 +162931,42 @@
     "en": "Returns:",
     "ch": "歸還:",
     "cn": "归还:"
+   },
+   "UI_ETW_aaa_TranslationVersion": {
+    "en": "This is a note for translators, please do not translate. Set translation version to the latest ETW release you are translating for. This is used to track which translation is up-to-date and which is not.",
+    "ch": "譯者備註, 請勿當遊戲文本翻譯. 請把翻譯版本設成你正在翻譯的最新 ETW 發行版. 用來追蹤譯文是否跟上.",
+    "cn": "译者备注, 请勿当游戏文本翻译. 请把翻译版本设成你正在翻译的最新 ETW 发行版. 用来追踪译文是否跟上."
+   },
+   "UI_HCB_Sting_SalveApplied": {
+    "en": "The salve cools the stings almost at once.",
+    "ch": "藥膏幾乎立刻讓螫傷冷卻下來.",
+    "cn": "药膏几乎立刻让蜇伤冷却下来."
+   },
+   "UI_CleanUI_AllowLootPanelContainerReordering": {
+    "en": "Allow Loot Panel Container Reordering",
+    "ch": "允許戰利品面板容器重新排序",
+    "cn": "允许战利品面板容器重新排序"
+   },
+   "UI_CleanUI_AllowLootPanelContainerReordering_Tooltip": {
+    "en": "Allow dragging container buttons in the loot panel to reorder them. Disabled by default because loot containers can come from world objects, vehicles, corpses, proximity mods, and other dynamic sources.",
+    "ch": "允許在戰利品面板拖曳容器按鈕來重新排序. 預設關閉, 因為戰利品容器可能來自世界物件、載具、屍體、鄰近偵測類模組和其他動態來源.",
+    "cn": "允许在战利品面板中拖动容器按钮来重新排序. 默认关闭, 因为战利品容器可能来自世界物体、载具、尸体、邻近检测类模组和其他动态来源.",
+    "_note": "2026-08-21 CN 逐鍵在地化：拖动／世界物体／邻近检测类模组。"
+   },
+   "UI_MBA_Progress": {
+    "en": "Progress",
+    "ch": "進度",
+    "cn": "进度"
+   },
+   "UI_trait_archer": {
+    "en": "Archer",
+    "ch": "弓箭手",
+    "cn": "弓箭手"
+   },
+   "UI_trait_archerdesc": {
+    "en": "Start with a bow and arrows.<br>+2 Archery",
+    "ch": "開局帶一把弓和箭.<br>+2 射箭",
+    "cn": "开局带一把弓和箭.<br>+2 射箭"
    }
   },
   "MakeUp.json": {

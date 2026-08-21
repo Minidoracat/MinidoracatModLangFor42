@@ -859,6 +859,107 @@
    "reason": "liveness：**SINGLE:OLD，不是衝突**。新 wid 3635921724（id showweaponstatsplus4213）的 Lua **完全沒引用本鍵**——它改用 Tooltip_SWSP_DamageValue（swsp_main.lua:153/158）與 Tooltip_SWSP_DamageValueAndEffective（:151），Tooltip_SWSP_Damage 只剩在它的 Tooltip.json 裡當死字串（已用尾界 `(?![A-Za-z0-9_])` 比對排除 DamageValue 的子字串偽陽性，並逐行確認非 `--` 註解）。唯一活 consumer 是舊 wid 3391710239（id showweaponstatsplus，mods/Show Weapon Stats Plus/42/mod.info，B42 可載入）的 swsp_main.lua:95 `string.format(getText(\"Tooltip_SWSP_Damage\"), minDamage, maxDamage, 30 + weaponLevel * 10)` ——printf 消費路徑。故正確出貨值必須是 printf 形式；現行 dist 的 '%1-%2 (+%3%%)' 對唯一活 consumer 不是顯示字面而是**直接報錯**（Lua string.format 解析 '%1-' 時把 1 當寬度、'-' 當轉換字元，拋 invalid option），必須改。順帶恢復上游 '%s- %s' 中間的空白（現值漏了）。型別確認：第三參是 `30 + weaponLevel * 10` 整數表示式，用 %d 正確；AGENTS.md:576 記「無參 getText + 值含 printf token 會記 Warning 後原文返還——這正是 mod 端 string.format(getText(...)) 能運作的機制」，故本鍵保留 printf token 是對的、不可逸出。此判定同時推翻了我前一版的 uncertain：当時偵到的 `%s` 「通解」假設已不需要，因為新 wid 根本不消費本鍵，沒有要兼容的第二個 consumer。CH／CN token 對稱（%s、%s、%d%%），與 EN token multiset 完全守恆。非 vanilla 鍵。",
    "ch": "傷害: %s- %s (+%d%%)",
    "cn": "伤害: %s- %s (+%d%%)"
+  },
+  "IG_UI|IGUI_VehiclePartSeatP1": {
+   "action": "translate",
+   "signature": "eb9ee4cde2200058",
+   "reason": "三個 owner 都是車輛第 1 個乘客座：2705406713/Military Tool Kit 與 2705655822/U.S. M113 APC by Papa_Chad 寫 'P1 Seat'，3110911330/87fordB700 寫 'Seat 1'。P1＝Passenger 1，與 Seat 1 同一座位編號，不是不同零件。現行「座椅1」未宣稱任何車型專屬名稱，對三者皆成立。",
+   "ch": "座椅1",
+   "cn": "座椅1"
+  },
+  "IG_UI|IGUI_VehiclePartSeatP2": {
+   "action": "translate",
+   "signature": "fde7b4282cdc0920",
+   "reason": "三個 owner 都是車輛第 2 個乘客座：Military Tool Kit 與 Papa_Chad M113 寫 'P2 Seat'，87fordB700 寫 'Seat 2'。P2＝Passenger 2，與 Seat 2 同一座位編號。現行「座椅2」對三者皆成立。",
+   "ch": "座椅2",
+   "cn": "座椅2"
+  },
+  "IG_UI|IGUI_VehiclePartSeatP3": {
+   "action": "translate",
+   "signature": "48a918ab7e76555a",
+   "reason": "三個 owner 都是車輛第 3 個乘客座：Military Tool Kit 與 Papa_Chad M113 寫 'P3 Seat'，87fordB700 寫 'Seat 3'。P3＝Passenger 3，與 Seat 3 同一座位編號。現行「座椅3」對三者皆成立。",
+   "ch": "座椅3",
+   "cn": "座椅3"
+  },
+  "IG_UI|IGUI_VehiclePartSeatP4": {
+   "action": "translate",
+   "signature": "59c2a474eb73cba7",
+   "reason": "三個 owner 都是車輛第 4 個乘客座：Military Tool Kit 與 Papa_Chad M113 寫 'P4 Seat'，87fordB700 寫 'Seat 4'。P4＝Passenger 4，與 Seat 4 同一座位編號。現行「座椅4」對三者皆成立。",
+   "ch": "座椅4",
+   "cn": "座椅4"
+  },
+  "IG_UI|IGUI_VehiclePartSeatP5": {
+   "action": "translate",
+   "signature": "722aa24f905c39d6",
+   "reason": "三個 owner 都是車輛第 5 個乘客座：Military Tool Kit 與 Papa_Chad M113 寫 'P5 Seat'，87fordB700 寫 'Seat 5'。P5＝Passenger 5，與 Seat 5 同一座位編號。現行「座椅5」對三者皆成立。",
+   "ch": "座椅5",
+   "cn": "座椅5"
+  },
+  "IG_UI|IGUI_VehiclePartSeatP6": {
+   "action": "translate",
+   "signature": "5e555fb49a0dc8fb",
+   "reason": "三個 owner 都是車輛第 6 個乘客座：Military Tool Kit 與 Papa_Chad M113 寫 'P6 Seat'，87fordB700 寫 'Seat 6'。P6＝Passenger 6，與 Seat 6 同一座位編號。現行「座椅6」對三者皆成立。",
+   "ch": "座椅6",
+   "cn": "座椅6"
+  },
+  "IG_UI|IGUI_CraftingCategories_Mechanics": {
+   "action": "translate",
+   "signature": "5eb3e7e2f731a94a",
+   "reason": "三個 owner 都是車輛維修類配方分類：3520758551/More Car Features + Spawn Zones Expansion 寫 'Mechanics'，3730070661 的 Gores Spare Engine Parts Crafting 與 Gores Vanilla Vehicle Parts Crafting 寫 'Mechanical'。不是不同分類，只是名詞／形容詞。本體官方技能名 IGUI_perks_Mechanics＝「技工」，現行分類譯名跟技能走，對三者皆成立。vanilla scoped_keys 有其他 IGUI_CraftingCategories_* 但沒有 Mechanics，故非本體覆寫。",
+   "ch": "技工",
+   "cn": "技工"
+  },
+  "UI|UI_TTF_Sounds_ResetFiltered": {
+   "action": "translate",
+   "signature": "4f4901b1f355a929",
+   "reason": "三個 owner 都是 TwisTonFire 音效選項的「把已篩選項目重設為 100%」：3480305875 的 QoL Modpack 與 RR Edition 寫 'Reset filtered to 100%%'（formatted 安全形式），3575778063/TwisTonFire - IMPROVED SOUNDOPIONS 寫 'Reset filtered to 100%'（裸 %）。語意相同，差異只在百分號逸出。現行「將篩選項目重置為100%%」是 42.20.1 formatted() 安全形式，對三者皆成立。",
+   "ch": "將篩選項目重置為100%%",
+   "cn": "将筛选项目重置为100%%"
+  },
+  "Recipes|MakeTacoShell": {
+   "action": "translate",
+   "signature": "7c06ef13ee996d61",
+   "reason": "三個 owner 都是製作塔可餅皮：2875059598/Herbalist 與 Herbalist_NoBiofuel 寫 'Make Taco Shell'，3600616323/Todo Caserito 寫 'Prepare taco shell'。同一食物、動詞 Make／Prepare 的風格差，不是不同食譜。現行「製作塔可餅皮」對三者皆成立。",
+   "ch": "製作塔可餅皮",
+   "cn": "制作塔可饼皮"
+  },
+  "Recipes|MakeYeast": {
+   "action": "translate",
+   "signature": "bad5490a6790d9f5",
+   "reason": "三個 owner 都是取得酵母：2875059598/Herbalist 與 Herbalist_NoBiofuel 寫 'Make Yeast'，3600616323/Todo Caserito 寫 'Obtain yeast'（該 mod 另有 MakeLevaduraCaseraJar='Prepare brewer's yeast' 專指自製啤酒酵母罐）。Make／Obtain 是取得途徑的措辭差，產物都是酵母本身。現行「製作酵母」未宣稱任何特定菌種或容器，對三者皆成立。",
+   "ch": "製作酵母",
+   "cn": "制作酵母"
+  },
+  "Recipes|MakePanDulce": {
+   "action": "translate",
+   "signature": "cef88dfa858cd486",
+   "reason": "兩個 owner 都是拉丁甜麵包 pan dulce：3600616323/Todo Caserito 的 Recipes 寫 'Prepare christmas sweet bread'，但其物品 TodoCaserito.PanDulce 本身是 'Sweet bread'；3622474939/AbuelitaLindaMexicanFoods 的 Recipes 與物品皆為 'Make Sweet Bread'／'Sweet Bread'。聖誕是 Todo Caserito 單側的配方名修飾，不是另一種食物。中性譯名「製作甜麵包」對兩者皆成立，與已出貨的 MakePanDulceRosa='製作粉紅甜麵包' 同族一致。",
+   "ch": "製作甜麵包",
+   "cn": "制作甜面包"
+  },
+  "Recipes|MakeTortilla": {
+   "action": "unship",
+   "signature": "6e81123984d7f843",
+   "reason": "2026-08-21 裁決不出貨：同一 Recipes|MakeTortilla 在不同 owner 是不同食物。2875059598/Herbalist（與 NoBiofuel 變體）與 3622474939/AbuelitaLindaMexicanFoods 的 EN 是 'Make Tortilla'，對應墨西哥玉米餅（Herbalist 另有 TortillaDough／TortillaUncooked／MakeTortillaChips；AbuelitaLinda 物品 AbuelitaLinda.AL_Tortilla='Tortilla'）。3600616323/Todo Caserito 的 EN 是 'Prepare lard biscuits'——阿根廷 tortillas de grasa（豬油餅），且該 mod 另有 MakeTortillaCasera='Prepare homemade tortillas' 專門表示真正的玉米餅。玉米餅與豬油餅沒有誠實中性譯名，JSON 無啟用偵測。"
+  },
+  "UI|UI_trait_BloodlustDesc": {
+   "action": "unship",
+   "signature": "67b26b6fe37581d7",
+   "reason": "2026-08-21 裁決不出貨：三個 owner 用同一鍵描述三種互不相容的機制。2459400130/Dynamic-Traits-main「停不下來的殺意，沒有受害者則心情受影響」（不殺才扣心情）；2914075159/Evolving Traits World「以消滅亡靈為樂，擊殺殭屍獲得幸福感並減少壓力／恐慌」（殺了才加心情）；3657541591/Superheroes「攻速加倍、傷害三倍、近戰擊殺回復耐力、Desensitized」（純戰鬥數值、與心情無關）。三者無交集，任何單一 JSON 值都對至少兩個 owner 不成立；依 AGENTS.md「多 owner 共用鍵…沒有誠實中性值就不出貨」不出貨。**已接受的退化**：2459400130 只出貨 legacy UI_EN.txt（42.0 與 mod root media/），B42 Translator.tryFillMapFromFile 路徑寫死 .json，該 owner 無 EN 底層，故只啟用該 mod 的玩家在特質說明會看到字面鍵名 UI_trait_BloodlustDesc；ETW 與 Superheroes 都有 .json EN，抑制後看到的是自己 mod 的正確英文。先前一版曾以 #232 commit 的『Tooltip 禁止 unship』先例出貨 ETW 文案，但該先例的補救手段（Translator live-map Lua）從未落地，且 AGENTS.md 同一條規則明文禁止 Lua 覆寫，故以現行硬規則為準。日後任一 owner 補上 .json EN 或改鍵名即重新裁決。"
+  },
+  "UI|UI_trait_PluviophileDesc": {
+   "action": "translate",
+   "signature": "08942fa9e6b6c890",
+   "reason": "兩個 owner 都是「喜歡下雨，淋雨心情變好」：2459400130/Dynamic-Traits-main 全文即此；2914075159/Evolving Traits World 另有「外出雨天緩慢減少不高興／壓力／無聊、打傘效果減半」與完整 Rihanna Umbrella 歌詞。照 #232 Tooltip 先例刪去單側機制與歌詞，保留兩邊皆真的交集。",
+   "ch": "你熱愛下雨, 淋雨時心情會變好.",
+   "cn": "你热爱下雨, 淋雨时心情会变好."
+  },
+  "UI|UI_trait_PluviophobiaDesc": {
+   "action": "translate",
+   "signature": "70e2e2692510080c",
+   "reason": "兩個 owner 都是「討厭下雨，淋雨心情變差」：2459400130/Dynamic-Traits-main 全文即此；2914075159/Evolving Traits World 另有「外出雨天緩慢增加不高興／壓力／無聊、打傘效果減半」與同一段 Umbrella 歌詞。照 #232 Tooltip 先例刪去單側機制與歌詞，保留兩邊皆真的交集。",
+   "ch": "你討厭下雨, 淋雨時心情會變差.",
+   "cn": "你讨厌下雨, 淋雨时心情会变差."
   }
  }
 }

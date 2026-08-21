@@ -1599,5 +1599,100 @@
     "as1_value": "伤害: %1-%2 (+%3%%)",
     "reason": "#232 owner 衝突中性裁決：liveness：**SINGLE:OLD，不是衝突**。新 wid 3635921724（id showweaponstatsplus4213）的 Lua **完全沒引用本鍵**——它改用 Tooltip_SWSP_DamageValue（swsp_main.lua:153/158）與 Tooltip_SWSP_DamageValueAndEffective（:151），Tooltip_SWSP_Damage 只剩在它的 Tooltip.json 裡當死字串（已用尾界 `(?![A-Za-z0-9_])` 比對排除 DamageValue 的子字串偽陽性，並逐行確認非 `--` 註解）。唯一活 consumer 是舊 wid 3391710239（id showweaponstatsplus，mods/Show Weapon Stats Plus/42/mod.info，B42 可載入）的 swsp_main.lua:95 `string.format(getText(\"Tooltip_SWSP_Damage\"), minDamage, maxDamage, 30 + weaponLevel * 10)` ——printf 消費路徑。故正確出貨值必須是 printf 形式；現行 dist 的 '%1-%2 (+%3%%)' 對唯一活 consumer 不是顯示字面而是**直接報錯**（Lua string.format 解析 '%1-' 時把 1 當寬度、'-' 當轉換字元，拋 invalid option），必須改。順帶恢復上游 '%s- %s' 中間的空白（現值漏了）。型別確認：第三參是 `30 + weaponLevel * 10` 整數表示式，用 %d 正確；AGENTS.md:576 記「無參 getText + 值含 printf token 會記 Warning 後原文返還——這正是 mod 端 string.format(getText(...)) 能運作的機制」，故本鍵保留 printf token 是對的、不可逸出。此判定同時推翻了我前一版的 uncertain：当時偵到的 `%s` 「通解」假設已不需要，因為新 wid 根本不消費本鍵，沒有要兼容的第二個 consumer。CH／CN token 對稱（%s、%s、%d%%），與 EN token multiset 完全守恆。非 vanilla 鍵。",
     "value": "伤害: %s- %s (+%d%%)"
+  },
+  "UI.json|UI_trait_PluviophileDesc": {
+    "as1_value": "你热爱下雨, 喜欢淋雨的感觉. 在雨天外出时会逐渐减少不高兴、压力和无聊. 如果打伞, 效果减半. <br>你可以站在我的伞下, 伞下, 伞下<br>伞下, 伞下, 伞下<br>伞下, 伞下, 伞下<br>伞下, 伞下, 伞下, 伞下, 伞下, 伞下<br>这些花哨的东西永远不会介入<br>你是我的一部分, 在此直到永恒<br>当世界已尽其力<br>当世界已发完它的牌<br>如果手牌艰难, 我们将一起治愈你的心",
+    "reason": "2026-08-21 owner 衝突中性裁決：Dynamic-Traits 只寫「喜歡下雨，淋雨心情變好」；ETW 另有具體數值、雨傘減半與 Umbrella 歌詞。刪去 ETW 獨有機制與歌詞，保留兩邊皆真的交集。",
+    "value": "你热爱下雨, 淋雨时心情会变好."
+  },
+  "UI.json|UI_trait_PluviophobiaDesc": {
+    "as1_value": "你讨厌下雨, 讨厌淋雨的感觉. 在雨天外出时会逐渐增加不高兴、压力和无聊. 如果打伞, 效果减半.<br>你可以站在我的伞下, 伞下, 伞下<br>伞下, 伞下, 伞下<br>伞下, 伞下, 伞下<br>伞下, 伞下, 伞下, 伞下, 伞下, 伞下<br>这些花哨的东西永远不会介入<br>你是我的一部分, 在此直到永恒<br>当世界已尽其力<br>当世界已发完它的牌<br>如果手牌艰难, 我们将一起治愈你的心",
+    "reason": "2026-08-21 owner 衝突中性裁決：Dynamic-Traits 只寫「討厭下雨，淋雨心情變差」；ETW 另有具體數值、雨傘減半與 Umbrella 歌詞。刪去 ETW 獨有機制與歌詞，保留兩邊皆真的交集。",
+    "value": "你讨厌下雨, 淋雨时心情会变差."
+  },
+  "ContextMenu.json|ContextMenu_FuelPumpRepairOption": {
+    "as1_value": "'这台油枪被某个不小心的人扯坏了…'<br>需要:<br> - 维护 1 级<br> - 一根橡胶软管<br> - 一整瓶木胶",
+    "reason": "2026-08-21 #226 上游改條件：維護 1 級→2 級，並新增膠帶可替代木膠。",
+    "value": "'这台油枪被某个不小心的人扯坏了…'<br>需要:<br> - 维护 2 级<br> - 一根橡胶软管<br> - 一整瓶木胶<br>   或一整卷胶带"
+  },
+  "ItemName.json|_AM_ItemName_comment_5": {
+    "as1_value": "不可用物品",
+    "reason": "2026-08-21 #222 有效分支 42.20 改為 LITERATURE ITEMS。",
+    "value": "文献物品"
+  },
+  "Sandbox.json|_AM_Sandbox_comment_0": {
+    "as1_value": "常规",
+    "reason": "2026-08-21 #222 有效分支 42.20 改為 OPTIONS。",
+    "value": "选项"
+  },
+  "Sandbox.json|_AM_Sandbox_comment_1": {
+    "as1_value": "物品分布",
+    "reason": "2026-08-21 #222 有效分支 42.20 改為 LOOT。",
+    "value": "战利品"
+  },
+  "Tooltip.json|Tooltip_Recipe_RecycleBulletsHandgunL": {
+    "as1_value": "回收手枪大口径弹头",
+    "reason": "2026-08-21 #222 上游補 of all types。",
+    "value": "回收所有类型的手枪大口径弹头"
+  },
+  "Tooltip.json|Tooltip_Recipe_RecycleBulletsHandgunM": {
+    "as1_value": "回收手枪中口径弹头",
+    "reason": "2026-08-21 #222 上游補 of all types。",
+    "value": "回收所有类型的手枪中口径弹头"
+  },
+  "Tooltip.json|Tooltip_Recipe_RecycleBulletsHandgunS": {
+    "as1_value": "回收手枪小口径弹头",
+    "reason": "2026-08-21 #222 上游補 of all types。",
+    "value": "回收所有类型的手枪小口径弹头"
+  },
+  "Tooltip.json|Tooltip_Recipe_RecycleBulletsRifleL": {
+    "as1_value": "回收步枪大口径弹头",
+    "reason": "2026-08-21 #222 上游補 of all types。",
+    "value": "回收所有类型的步枪大口径弹头"
+  },
+  "Tooltip.json|Tooltip_Recipe_RecycleBulletsRifleM": {
+    "as1_value": "回收步枪中口径弹头",
+    "reason": "2026-08-21 #222 上游補 of all types。",
+    "value": "回收所有类型的步枪中口径弹头"
+  },
+  "Tooltip.json|Tooltip_Recipe_RecycleBulletsRifleS": {
+    "as1_value": "回收步枪小口径弹头",
+    "reason": "2026-08-21 #222 上游補 of all types。",
+    "value": "回收所有类型的步枪小口径弹头"
+  },
+  "Tooltip.json|Tooltip_HydeCoBees_CrackOpenHive": {
+    "as1_value": "打开野生蜂巢, 收获蜂巢和蜜蜂.",
+    "reason": "2026-08-21 #237 上游新增警告句（This will seriously anger the hive and can trigger an aggressive swarm），As1 未跟上。",
+    "value": "敲开野生蜂巢, 收获蜂巢和蜜蜂.<br>这会严重激怒蜂巢, 可能引来攻击性蜂群."
+  },
+  "Tooltip.json|Tooltip_HydeCoBees_CrackOpenWaspNest": {
+    "as1_value": "打开黄蜂巢, 收获黄蜂和蜂巢碎片.",
+    "reason": "2026-08-21 #237 上游新增警告句，As1 未跟上。",
+    "value": "敲开黄蜂巢, 收获黄蜂和蜂巢碎片.<br>这会严重激怒蜂巢, 可能引来攻击性蜂群."
+  },
+  "Tooltip.json|Tooltip_HydeCoBees_CultivatedBeehive": {
+    "as1_value": "一个人工养殖的蜂巢, 可随时间推移收获蜜蜂和蜂巢.",
+    "reason": "2026-08-21 #237 上游改寫為 A working hive: bees, larvae, and honeycomb over time（新增 larvae）。",
+    "value": "运作中的蜂巢: 随时间产出蜜蜂, 幼虫和蜂巢."
+  },
+  "Sandbox.json|Sandbox_ImmersiveBlackouts_ElectricityPercentOFF_tooltip": {
+    "as1_value": "电力中断的概率 (百分比).\\n每10分钟判定一次.",
+    "reason": "2026-08-21 #241 As1 值把換行寫成字面 \\n（引擎只把 <br> 轉換行，字面 \\n 會原樣顯示）；上游現行為真換行，故改為真換行。用字沿用 As1 的「概率」。",
+    "value": "电力中断的概率 (百分比).\n每10分钟判定一次."
+  },
+  "Sandbox.json|Sandbox_ImmersiveBlackouts_ElectricityPercentON_tooltip": {
+    "as1_value": "电力恢复的概率 (百分比).\\n每10分钟判定一次.",
+    "reason": "2026-08-21 #241 As1 值把換行寫成字面 \\n（引擎只把 <br> 轉換行，字面 \\n 會原樣顯示）；上游現行為真換行，故改為真換行。用字沿用 As1 的「概率」。",
+    "value": "电力恢复的概率 (百分比).\n每10分钟判定一次."
+  },
+  "Sandbox.json|Sandbox_ImmersiveBlackouts_WaterPercentOFF_tooltip": {
+    "as1_value": "供水中断的概率 (百分比).\\n每10分钟判定一次.",
+    "reason": "2026-08-21 #241 As1 值把換行寫成字面 \\n（引擎只把 <br> 轉換行，字面 \\n 會原樣顯示）；上游現行為真換行，故改為真換行。用字沿用 As1 的「概率」。",
+    "value": "供水中断的概率 (百分比).\n每10分钟判定一次."
+  },
+  "Sandbox.json|Sandbox_ImmersiveBlackouts_WaterPercentON_tooltip": {
+    "as1_value": "供水恢复的概率 (百分比).\\n每10分钟判定一次.",
+    "reason": "2026-08-21 #241 As1 值把換行寫成字面 \\n（引擎只把 <br> 轉換行，字面 \\n 會原樣顯示）；上游現行為真換行，故改為真換行。用字沿用 As1 的「概率」。",
+    "value": "供水恢复的概率 (百分比).\n每10分钟判定一次."
   }
 }

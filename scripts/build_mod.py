@@ -473,7 +473,12 @@ def suppress_unshipped(
 
     語意同 vanilla 出貨抑制：**真相層照樣保留**（`_unsorted/CN` 是 As1 lane 鏡像，
     刪掉會讓 layer-B 永遠報差異；`sources/ch` 也須逐鍵鏡像 CN 才過 corpus 鍵集 gate），
-    只有出貨那一步濾掉。用於「鍵落在 PZ 不載入的檔名、且找不到正確落點」者。
+    只有出貨那一步濾掉。登記分兩類（判準與複查規則見該檔 `_rule`／`_recheck`）：
+    (1) 鍵落在 PZ 不載入的檔名、且找不到正確落點；(2) #230 起的 owner 衝突——同一
+    (檔,鍵) 被多個 owner 定義成不同實體、無誠實中性譯名，與
+    `owner_conflict_decisions.json` 的 `action:"unship"` 以 `owner_signature` 雙向背書。
+    **第二類的檔名通常是可載入的**（`ItemName.json|Base.Glock23`、
+    `Recipes.json|MakeTortilla`），不可因「檔名可載入」就當成可退役的垃圾條目。
 
     `as1_value` 錨點對**抑制前的合併 CN 值**比對：上游動過該鍵就是重新查 mod 的訊號
     （見該檔 `_recheck`）。回傳 (剔除數, 錨點漂移訊息, 登記但未命中的條目)。
