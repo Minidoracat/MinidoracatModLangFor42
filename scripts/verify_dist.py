@@ -1652,8 +1652,7 @@ def _upstream_craft_blocks(repo: str) -> tuple[set[str], list[str]]:
     死分支——不濾就會把「上游早就改名的舊區塊」當成現行實據，逼人去補永不被查的裸鍵
     （實例：Firearms 2256623447 的 `ConvertAmmo`／`DetractStock`／`ExtendStock` 只在
     42.12–42.13，現行有效分支 42.16 已改名 `ToggleStock`）。判定沿用 `tracker.py` 的
-    `resolve_effective_branches()`／`is_effective()`，**不得另寫第二套**（AGENTS.md 明載
-    `gap_worksheet.py` 也共用同一份，勿分岔）。
+    `resolve_effective_branches()`／`is_effective()`，**不得另寫第二套**。
     """
     path = os.path.join(repo, "tracker-state", "en_corpus_hashes.json")
     with open(path, encoding="utf-8-sig") as fh:

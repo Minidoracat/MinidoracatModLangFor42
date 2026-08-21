@@ -33,6 +33,12 @@
 共支援 **473 個 Workshop 模組**（619 個 mod ID），另 15 個已下架（翻譯保留），完整清單（含中文名稱與摘要）見 [SUPPORTED_MODS.md](./SUPPORTED_MODS.md)。
 <!-- SUPPORTED_MODS_END -->
 
+## 翻譯範圍（權威政策）
+
+- 本包只維護 PZ `Translate/{CH,CN}/*.json` 文本；上游缺少可載入的 JSON key 時，可由本包補譯。
+- 本包不新增、修改、覆寫、監看或維護任何 MOD Lua，也不為特定 MOD 建立 Lua consumer 相容層。
+- 若未翻譯根因是 Lua 寫死文字、自有 UI、Lua 未使用正確 JSON key 或其他非 JSON 行為，本包只提供可驗證資訊；由 issue 提交者自行向 MOD 作者回報。提交者不回報或上游不修，本包不處理。
+
 ## 申請新 MOD 翻譯
 
 想讓某個 Workshop MOD 加入本翻譯包？歡迎透過 [MOD 翻譯申請](../../issues/new?template=translation-request.yml)提出，附上 Workshop 連結與申請理由即可。
@@ -43,4 +49,4 @@
 
 ## 開發
 
-生成物（`MOD/` 與 `sources/mods/`）勿手改（例外：`sources/mods/` 下 `metadata.json` 標 `origin: "own"` 的原創翻譯目錄為人工真相），請改人工真相層（`sources/ch/` 繁中 corpus、`sources/lua/`、`sources/cn_overrides.json`、`sources/placeholder_exceptions.json`）後重跑管線。繁中已斷絕 OpenCC 機轉，逐鍵人工維護。
+生成物（`MOD/` 與 `sources/mods/`）勿手改（例外：`sources/mods/` 下 `metadata.json` 標 `origin: "own"` 的原創翻譯目錄為人工真相），請改人工真相層（`sources/ch/` 繁中 corpus、`sources/cn_overrides.json`、`sources/placeholder_exceptions.json`）後重跑管線。`sources/lua/` 為凍結歷史產物，不新增、不修改、不維護。繁中已斷絕 OpenCC 機轉，逐鍵人工維護。

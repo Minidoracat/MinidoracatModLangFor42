@@ -54,6 +54,7 @@ WATCHLIST_JSON = TRACKER_STATE / "watchlist.json"
 TIMESTAMPS_JSON = TRACKER_STATE / "timestamps.json"
 EN_CORPUS_HASHES_JSON = TRACKER_STATE / "en_corpus_hashes.json"
 EN_TEXT_DIR = PROJECT_ROOT / "sources" / "en"  # EN 全文落地（大同步翻譯對照；rid 與 hash 檔一致）
+BACKFILL_PLANS_JSON = PROJECT_ROOT / ".omc" / "tmp" / "backfill_plans.json"
 
 SOURCES = PROJECT_ROOT / "sources"
 ATTRIBUTION_INDEX_JSON = SOURCES / "attribution_index.json"
@@ -85,22 +86,23 @@ SCHEMA_VERSION = 1
 #     （#221，粗篩下限 6,758 鍵／108 個 mod 隱形；#184 是玩家附截圖才發現的個案）。
 #     拿 suffix 猜會把「別的 module 同名鍵已出貨」誤判為已覆蓋，違反「module 名不可猜」
 #     硬規則，故只有把 module 記進 record 這一條精確路徑。
-EXTRACTOR_SCHEMA = 9
+#     schema 10：停止把 MOD Lua 納入 layer-A。專案只維護 JSON 翻譯；Lua 寫死文字或
+#     consumer 行為交由 issue 提交者向 MOD 作者回報。schema bump 讓既有 Lua records
+#     靜默重建 baseline，不因大量 removed records 開「可能過時」issue。
+EXTRACTOR_SCHEMA = 10
 
 # `script_item`／`script_item_dn` 的 key 自此 schema 起帶 module（＝可與 ItemName 出貨鍵
 # 精確比對）。低於此值的 per-mod 基準一律判「不可判定」，不得當成零缺口。
 ITEM_MODULE_SCHEMA = 9
 
-# 只有這些 kind 帶真英文文本，值得落 sources/en/ 鏡像；其餘 script_* 的 value 就是區塊 id
-# 本身（實測 118,307 筆鏡像裡有 60,567 筆 value==key），純屬變更偵測用，留在 hash 台帳即可。
-TEXT_BEARING_KINDS = frozenset({"translate_en", "script_item_dn", "lua_literal"})
-# 抽取器會產出的**全部** kind。`backfill_done` 與 `prep_mod_strings.rid_ids` 共用同一份
-# 白名單驗 rid 形狀——各自寫一份遲早分岔（其中一邊漏認新 kind 就會把正常 state 判壞損）。
-EXTRACTOR_KINDS = frozenset({
+# schema 10 現行抽取面；Lua kinds 只保留在歷史 schema 9 讀取白名單。
+TEXT_BEARING_KINDS = frozenset({"translate_en", "script_item_dn"})
+CURRENT_EXTRACTOR_KINDS = frozenset({
     "translate_en", "script_item_dn", "script_item", "script_recipe",
     "script_vehicle", "script_fixing", "script_craftRecipe",
-    "lua_gettext", "lua_literal",
 })
+LEGACY_LUA_KINDS = frozenset({"lua_gettext", "lua_literal"})
+EXTRACTOR_KINDS = CURRENT_EXTRACTOR_KINDS | LEGACY_LUA_KINDS
 
 # --- B42 有效分支解析 ------------------------------------------------------- #
 # 抽取器忠實記錄 mod 內**所有**分支，但引擎只載入其中兩個。拿非有效分支的鍵去補譯
@@ -889,217 +891,10 @@ def _iter_script_records(mod_dir: Path) -> list[tuple[str, str, str, str]]:
     return records
 
 
-# --- Lua 文本抽取（EXTRACTOR_SCHEMA=6）------------------------------------- #
-# 這一層刻意不用純 regex。實測 regex 版四種錯法（皆已納入 self-test 情境 11）：
-#   1. `-- getText("IGUI_Dead")` 註解裡的呼叫被當成真引用
-#   2. `targetText(` 因未檢查 identifier 邊界而從字中命中 `getText`
-#   3. `setText("Don't open this")` 因 quote class 排除 `'` 而整串漏抓
-#   4. 「sink 之後 N 字元內找第一個字串」會抓到不相干的下一句
-# 故先做最小 lexical scan（跳註解與長字串、取出短字串常值的精確 span），
-# 再用平衡括號界定呼叫範圍。
-_LUA_IDENT_CHARS = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_")
-
-# 直接吃字面字串的 UI 文字 API——命中即「寫死英文」，連翻譯鍵都沒有，
-# 只能靠 sources/lua/ 覆寫。清單保守，寧可漏抓也不要灌一堆 false positive。
-_LUA_UI_SINKS = (
-    "setTitle", "setName", "setText", "setTooltip", "setToolTip", "setSecondLine",
-    "addOption", "addLabel", "ISModalDialog.new", "ISTextBox.new",
-)
-_LUA_GETTEXT_NAMES = ("getText", "getTextOrNull")
-# 平衡括號掃描上限：避免對病態輸入退化，也擋掉「呼叫沒收尾」時吃到整個檔案。
-_LUA_CALL_MAX_SPAN = 2000
-# 字面看起來像「英文句子」才收：至少兩個詞、開頭字母、不含路徑/識別字特徵。
-_LUA_PROSE_RE = re.compile(r"^[A-Za-z][A-Za-z0-9 ,.'!?:;()\-/%]*\s[A-Za-z0-9].*$")
-_LUA_NOT_PROSE_RE = re.compile(r"\.(lua|png|txt|ogg|wav|json)\b|[\\/]{1,2}|^\s*$", re.I)
-_LUA_ESCAPES = {"n": "\n", "t": "\t", "r": "\r", '"': '"', "'": "'", "\\": "\\"}
-
-
-def _lua_long_bracket(text: str, i: int) -> int | None:
-    """`text[i]` 起若為長括號 `[=*[`，回傳 `=` 的層數，否則 None。"""
-    if i >= len(text) or text[i] != "[":
-        return None
-    j = i + 1
-    while j < len(text) and text[j] == "=":
-        j += 1
-    return j - i - 1 if j < len(text) and text[j] == "[" else None
-
-
-def _lua_scan(text: str) -> tuple[str, list[tuple[int, int, str]]]:
-    """最小 Lua lexer：回傳 (masked, strings)。
-
-    * ``masked``：與原文等長，註解與所有字串「內容」置換為空白——供 identifier
-      邊界判斷與平衡括號掃描，確保註解／字串裡的括號與關鍵字不干擾。
-    * ``strings``：短字串常值 ``(起, 迄, 解碼後內容)``；起迄為含引號的 span。
-      長字串 `[[...]]` 不收（PZ mod 的 UI 文字實務上都用短字串，長字串多為資料塊）。
-    """
-    n = len(text)
-    out = list(text)
-    strings: list[tuple[int, int, str]] = []
-    i = 0
-    while i < n:
-        c = text[i]
-        if c == "-" and text.startswith("--", i):
-            lvl = _lua_long_bracket(text, i + 2)
-            if lvl is None:  # 行註解
-                j = text.find("\n", i)
-                j = n if j < 0 else j
-            else:  # 長註解 --[=*[ ... ]=*]
-                close = "]" + "=" * lvl + "]"
-                k = text.find(close, i + 2)
-                j = n if k < 0 else k + len(close)
-            for p in range(i, j):
-                if out[p] != "\n":
-                    out[p] = " "
-            i = j
-            continue
-        if c in "\"'":
-            quote = c
-            j = i + 1
-            buf: list[str] = []
-            while j < n:
-                ch = text[j]
-                if ch == "\\" and j + 1 < n:
-                    buf.append(_LUA_ESCAPES.get(text[j + 1], text[j + 1]))
-                    j += 2
-                    continue
-                if ch == quote or ch == "\n":  # 收尾或未閉合（Lua 短字串不跨行）
-                    break
-                buf.append(ch)
-                j += 1
-            if j < n and text[j] == quote:
-                strings.append((i, j + 1, "".join(buf)))
-                for p in range(i + 1, j):
-                    out[p] = " "
-                i = j + 1
-                continue
-            i += 1  # 未閉合：不當字串，避免吃掉整個檔案
-            continue
-        lvl = _lua_long_bracket(text, i)
-        if lvl is not None:
-            close = "]" + "=" * lvl + "]"
-            k = text.find(close, i)
-            j = n if k < 0 else k + len(close)
-            for p in range(i, j):
-                if out[p] != "\n":
-                    out[p] = " "
-            i = j
-            continue
-        i += 1
-    return "".join(out), strings
-
-
-def _lua_calls(masked: str, names: tuple[str, ...]) -> list[tuple[int, int]]:
-    """在 masked 文字中找 `name(` 呼叫，回傳 (左括號位置, 右括號位置) 的平衡括號 span。
-
-    identifier 邊界必檢——否則 `targetText(` 會從字中命中 `getText`。
-    """
-    spans: list[tuple[int, int]] = []
-    for name in names:
-        start = 0
-        while True:
-            idx = masked.find(name, start)
-            if idx < 0:
-                break
-            start = idx + 1
-            prev = idx - 1
-            # 名稱前一字元不得是 identifier 字元（`.` 允許：ISModalDialog.new / self.getText）
-            if prev >= 0 and masked[prev] in _LUA_IDENT_CHARS:
-                continue
-            end_id = idx + len(name)
-            if end_id < len(masked) and masked[end_id] in _LUA_IDENT_CHARS:
-                continue  # `getTextWidth(` 之類不算
-            j = end_id
-            while j < len(masked) and masked[j] in " \t":
-                j += 1
-            if j >= len(masked) or masked[j] != "(":
-                continue
-            depth, k, limit = 0, j, min(len(masked), j + _LUA_CALL_MAX_SPAN)
-            close = -1
-            while k < limit:
-                if masked[k] == "(":
-                    depth += 1
-                elif masked[k] == ")":
-                    depth -= 1
-                    if depth == 0:
-                        close = k
-                        break
-                k += 1
-            if close > 0:
-                spans.append((j, close))
-    return spans
-
-
-def _iter_lua_records(mod_dir: Path) -> list[tuple[str, str, str, str]]:
-    """抽取 Lua 兩類文本（schema 6）：
-
-    * ``lua_gettext``：getText/getTextOrNull 的**第一個引數字面**＝翻譯鍵。
-      value=鍵本身（無英文可取；鍵有沒有譯文要跟 Translate 語料交叉比對）。
-      **用途是覆蓋率查核**——被 Lua 引用＝確證玩家可見，優先序高於「在上游 EN 檔
-      裡但可能根本沒用到」的鍵。
-    * ``lua_literal``：UI 文字 API 直接吃的英文字面。value=字面本身，key=其
-      sha1[:12]（用 hash 而非行號，讓上游改行不製造假變更）。**這是唯一沒有翻譯鍵
-      可用的文本**，要蓋只能走 sources/lua/ 覆寫。
-
-    判準：
-    * 字面落在任一 getText 呼叫的括號內 → 屬 `getText("KEY", "English")` 慣用法，
-      該鍵已由 lua_gettext 收錄，不重複算成「寫死」。
-    * 只收「至少兩個詞、不含路徑/副檔名特徵、長度 ≥8」的字面；單字標籤
-      （Cancel/Building）與資源名一律放掉——寧可漏抓也不要污染語料。
-
-    已知盲區：動態組鍵 ``getText("Pre" .. v)`` 只會收到前綴（使用端以
-    `_is_real_key` 濾掉）；`[[長字串]]` 不收。
-    """
-    records: list[tuple[str, str, str, str]] = []
-    for lf in sorted(mod_dir.rglob("*.lua")):
-        if lf.is_symlink():  # 跳過 symlink，避免逸出下載目錄
-            continue
-        try:
-            text = lf.read_text(encoding="utf-8-sig", errors="replace")
-        except OSError:
-            continue
-        rel = lf.relative_to(mod_dir).as_posix()
-        masked, strings = _lua_scan(text)
-        gt_spans = _lua_calls(masked, _LUA_GETTEXT_NAMES)
-
-        def first_arg(open_i: int, close_i: int) -> tuple[int, int, str] | None:
-            """呼叫的第一個引數若是字串常值（其前只有空白）則回傳之。"""
-            for s, e, v in strings:
-                if s <= open_i or s >= close_i:
-                    continue
-                return (s, e, v) if not masked[open_i + 1:s].strip() else None
-            return None
-
-        keys: set[str] = set()
-        for o, c in gt_spans:
-            arg = first_arg(o, c)
-            if arg:
-                keys.add(arg[2])
-        for key in sorted(keys):
-            records.append(("lua_gettext", rel, key, key))
-
-        lits: dict[str, str] = {}
-        for o, c in _lua_calls(masked, _LUA_UI_SINKS):
-            for s, _e, v in strings:
-                if not (o < s < c):
-                    continue
-                if any(go < s < gc for go, gc in gt_spans):
-                    continue  # getText 的引數，有鍵可譯，不算寫死
-                if len(v) < 8 or _LUA_NOT_PROSE_RE.search(v) or not _LUA_PROSE_RE.match(v):
-                    continue
-                lits[hashlib.sha1(v.encode("utf-8")).hexdigest()[:12]] = v
-                break  # 每個呼叫只取第一個合格字面，避免一次呼叫灌一堆
-        for kh in sorted(lits):
-            records.append(("lua_literal", rel, kh, lits[kh]))
-    return records
-
 
 def extract_corpus(mod_dir: Path, lang: str = "EN") -> list[tuple[str, str, str, str]]:
-    """layer-A 全語料：Translate/<lang> + media/scripts item/recipe 名 + Lua 文本（schema 6）。"""
-    return (
-        _iter_translate_records(mod_dir, lang)
-        + _iter_script_records(mod_dir)
-        + _iter_lua_records(mod_dir)
-    )
+    """layer-A 語料：Translate/<lang> JSON/TXT + media/scripts 顯示名；不追蹤 MOD Lua。"""
+    return _iter_translate_records(mod_dir, lang) + _iter_script_records(mod_dir)
 
 
 def records_to_map(records: list[tuple[str, str, str, str]]) -> dict[str, str]:
@@ -1320,10 +1115,10 @@ def steamcmd_download(
 
 
 def trim_download(item_dir: Path) -> None:
-    """裁剪：只留 media/**/Translate/、media/scripts/ 與 *.lua，其餘刪除（縮小 artifact）。
+    """裁剪：保留 Translate、media/scripts 與既有 Lua 路徑，其餘刪除。
 
-    schema 6 起 Lua 也是文本來源（getText 鍵引用＋寫死英文字面），**不能再刪**——
-    先前刪掉 Lua 等於讓該層文本對追蹤器永久不可見。
+    schema 10 不抽取 Lua；保留 `*.lua` 只是沿用下載裁剪行為，不形成持久取證、
+    corpus record 或變更訊號。
     """
 
     def keep(path: Path) -> bool:
@@ -1674,11 +1469,20 @@ def build_layer_a_plan(
     # 首跑（此 workshop_id 從未建 baseline）→ 靜默建 baseline、零 issue（避免 500+ 洪水）
     if is_first_run:
         return None, new_state
-    # 抽取器 schema 演進 → 新舊語料不可比，靜默重建 baseline（避免規則變更引發假 issue 洪水）
-    if old_mod.get("extractor_schema") != EXTRACTOR_SCHEMA:
-        return None, new_state
-    # 純時間戳變動但語料一致 → 不開
-    if old_mod.get("corpus_hash") == new_hash:
+    old_schema = old_mod.get("extractor_schema")
+    if old_schema == EXTRACTOR_SCHEMA:
+        # 純時間戳變動但語料一致 → 不開
+        if old_mod.get("corpus_hash") == new_hash:
+            return None, new_state
+    elif old_schema == 9:
+        # 9→10 只是停止追蹤 Lua，JSON 語料仍可比：先從舊 baseline 扣掉兩個 Lua kind 再
+        # diff，才不會把同輪真正的 JSON 變更一起吞掉（舊 corpus_hash 含 Lua，不可比）。
+        old_map = {
+            rid: value for rid, value in old_map.items()
+            if rid.partition("|")[0] not in {"lua_gettext", "lua_literal"}
+        }
+    else:
+        # 其他抽取器 schema 演進 → 新舊語料不可比，靜默重建 baseline（避免規則變更引發假 issue 洪水）
         return None, new_state
     diff = diff_corpus(old_map, new_records)
     if not (diff["added"] or diff["removed"] or diff["modified"]):
@@ -2077,6 +1881,8 @@ def cmd_issue(args) -> int:
     if status == COMMIT_FAILED:
         print("❌ state commit/push 失敗（下輪自癒）。", file=sys.stderr)
         return 1
+    if status == COMMIT_OK and Path(args.inp).resolve() == BACKFILL_PLANS_JSON.resolve():
+        BACKFILL_PLANS_JSON.unlink(missing_ok=True)
     print(f"完成：issue {len(plans)} 筆、state {'已提交' if status == COMMIT_OK else '無變更'}。")
     return 0 if manifest_ok else 1
 
@@ -2100,27 +1906,13 @@ def _canon_key(basename: str, key: str) -> str:
     return key[len(stem) + 1:] if stem and key.startswith(stem + "_") else key
 
 
-# PZ 翻譯鍵形：`[A-Za-z0-9_.-]`。`lua_gettext` 記錄的是 getText 第一引數的**原始字面**，
-# 兩類不是真鍵，須於使用端濾掉（擷取器刻意只記錄所見、不做解讀）：
-#   1. 非鍵形——mod 拿 getText 當 no-op 包英文/符號用（'I drop items!'、' / 100 %'、'<'）
-#   2. 以 `_` 結尾——動態組鍵前綴 getText("IGUI_AnimalType_" .. t)，前綴本身不是鍵
-# 實測 8,950 個去重鍵中此類共 306 個（3.4%）。
-_TRANSLATION_KEY_RE = re.compile(r"^[A-Za-z0-9_.\-]+$")
-
-
-def _is_real_key(key: str) -> bool:
-    return bool(_TRANSLATION_KEY_RE.match(key)) and not key.endswith("_")
-
-
-def _load_shipped_keys() -> tuple[set[tuple[str, str]], set[str], set[str]]:
-    """我方實際出貨的鍵，回傳 (身分集, runtime 完整鍵集, ItemName fullType 集)。
+def _load_shipped_keys() -> tuple[set[tuple[str, str]], set[str]]:
+    """我方實際出貨的鍵，回傳 (身分集, ItemName fullType 集)。
 
     * **身分集** `(stem, canon)` — 給 `translate_en` 缺口用。**namespace 必須保留**：
       只留 canon 會讓 `Tooltip_OpenJacket` 與 `ContextMenu_OpenJacket` 塌成同一身分，
       使某 mod 的 Tooltip 真缺口被另一 mod 的 ContextMenu 鍵遮蔽（實測遮掉 405 個）。
       同時容納 legacy `<Stem>_KEY` 與 B42 bare `KEY` 兩種寫法。
-    * **runtime 完整鍵集** — 給 `lua_gettext` 缺口用。Lua 寫的是程式碼裡的完整鍵
-      （`getText("ItemName_Base.X")`），故同時放入 `canon` 與 `<stem>_<canon>` 兩種別名。
     * **ItemName fullType 集** — 給 `script_item_dn` 缺口用，**唯一完全不做正規化的
       口徑**：`getItemNameFromFullType()` 以裸 `Module.Item` 查 ItemName map，故只有
       `ItemName.json` 裡真的長成 `Module.Item` 的鍵會被引擎查到。前綴形
@@ -2130,18 +1922,12 @@ def _load_shipped_keys() -> tuple[set[tuple[str, str]], set[str], set[str]]:
       兩件事，報表要看得到。
     """
     ident: set[tuple[str, str]] = set()
-    full: set[str] = set()
     itemnames: set[str] = set()
 
     def take(basename: str, ks) -> None:
         stem = _key_stem(basename)
         for k in ks:
-            c = _canon_key(basename, k)
-            ident.add((stem, c))
-            full.add(k)
-            full.add(c)
-            if stem:
-                full.add(f"{stem}_{c}")
+            ident.add((stem, _canon_key(basename, k)))
         if basename == "ItemName.json":
             itemnames.update(k for k in ks if _is_runtime_item_key(k))
 
@@ -2160,7 +1946,7 @@ def _load_shipped_keys() -> tuple[set[tuple[str, str]], set[str], set[str]]:
     if own.is_file():
         for fname, entries in load_json(own).get("entries", {}).items():
             take(fname, entries)
-    return ident, full, itemnames
+    return ident, itemnames
 
 
 def _is_runtime_item_key(key: str) -> bool:
@@ -2319,22 +2105,19 @@ def _item_dn_stats(
 
 
 def cmd_coverage(args) -> int:
-    """報表：上游 EN 鍵有多少我方沒收，並以「確證玩家可見」優先排序。
+    """報表：上游 JSON／script 文本有多少我方沒收。
 
-    四個口徑，可信度由高到低：
+    兩個口徑：
       * ``item_dn`` 缺口 — script 定義的物品顯示名。物品欄一定顯示它＝確證可見，
         且 schema 9 起 key 帶 module，可與 `ItemName.json` 出貨鍵**精確**比對
         （不做任何 suffix 猜測，見 `_load_shipped_keys`）。
-      * ``lua_gettext`` 缺口 — mod 的 Lua **真的去取了這個鍵**＝確證玩家看得到。
-      * ``translate_en`` 缺口 — 上游 EN 檔裡有，但未必被用到（含廢棄鍵）。
-      * ``lua_literal`` — 寫死在 Lua、根本沒有翻譯鍵，JSON 補再多也蓋不掉，
-        只能走 sources/lua/ 覆寫。
-    vanilla 鍵一律扣除（收錄鐵律：不得覆寫本體）。不可判定者逐 mod 列出，既不併入
-    缺口也不當成零缺口（見 `_item_dn_stats`）。
+      * ``translate_en`` 缺口 — 上游 EN JSON/TXT 裡有，但未必被用到（含廢棄鍵）。
+    schema 10 起不再統計 MOD Lua；非 JSON 根因交由 issue 提交者向 MOD 作者回報。
+    vanilla 鍵一律扣除。不可判定者逐 mod 列出，既不併入缺口也不當成零缺口。
     """
     corpus_state = load_corpus_hashes()
     mods = corpus_state.get("mods", {})
-    shipped_ident, shipped_full, shipped_items = _load_shipped_keys()
+    shipped_ident, shipped_items = _load_shipped_keys()
     vjson = load_json(SOURCES / "vanilla_keys.json")
     vraw = set(vjson.get("keys", []))
     vanilla = vraw | {k.split("_", 1)[1] for k in vraw if "_" in k}
@@ -2346,15 +2129,11 @@ def cmd_coverage(args) -> int:
     vanilla_items = set(vjson["scoped_keys"]["ItemName.json"])
 
     rows: list[dict] = []
-    tot = {"en": 0, "en_gap": 0, "lua": 0, "lua_gap": 0, "lit": 0, "lua_undef": 0,
-           "dn": 0, "dn_gap": 0, "dn_idonly": 0, "dn_blind": 0}
+    tot = {"en": 0, "en_gap": 0, "dn": 0, "dn_gap": 0, "dn_idonly": 0, "dn_blind": 0}
     blind: list[tuple[str, str, set[str]]] = []   # (wid, 人讀原因, kinds)
-    en_stale: list[tuple[str, int]] = []          # (wid, 非物品名的不一致 rid 數)
+    en_stale: list[tuple[str, int]] = []          # (wid, translate_en 的不一致 rid 數)
     for wid in sorted(mods):
         en_ids: set[tuple[str, str]] = set()
-        en_full: set[str] = set()
-        lua_ids: set[str] = set()
-        lits: set[str] = set()
         # per-owner 分開統計（owner=mod root，引擎的載入單位）；wid 級累加器已無人讀
         o_dn: dict[str, set] = {}     # owner（mod root）→ script_item_dn fullType 集
         o_item: dict[str, set] = {}   # owner → script_item 裸名集
@@ -2377,24 +2156,11 @@ def cmd_coverage(args) -> int:
                 base = relpath.rsplit("/", 1)[-1]
                 stem, canon = _key_stem(base), _canon_key(base, key)
                 en_ids.add((stem, canon))  # 保留 namespace，否則跨檔同名鍵互相遮蔽
-                en_full.add(key)           # runtime 完整鍵，供 lua_gettext 判上游有無定義
-                en_full.add(canon)
-                if stem:
-                    en_full.add(f"{stem}_{canon}")
-            elif kind == "lua_gettext":
-                if _is_real_key(key):  # 濾掉非鍵形字面與動態組鍵前綴（見 _is_real_key）
-                    lua_ids.add(key)
-            elif kind == "lua_literal":
-                lits.add(key)
             elif kind == "script_item_dn":
                 o_dn.setdefault(owner_of(rid), set()).add(key)
             elif kind == "script_item":
                 o_item.setdefault(owner_of(rid), set()).add(key)
         en_gap = {x for x in en_ids - shipped_ident if x[1] not in vanilla}
-        lua_all_gap = (lua_ids - shipped_full) - vanilla
-        # Lua 引用但上游自己也沒定義＝上游 bug（遊戲顯示鍵名），非我方可補的缺口
-        lua_undef = lua_all_gap - en_full
-        lua_gap = lua_all_gap - lua_undef
         # DisplayName 值只在 sources/en 鏡像裡（狀態檔只有 hash）。缺鏡像／缺該筆值的
         # 後果交給 _item_dn_stats 計成盲區，不在這裡靜默跳過。
         # **值一律走 `winning_dn_text`**：勝出 rid 由 state 決定（同 owner 內 common 先、
@@ -2417,8 +2183,9 @@ def cmd_coverage(args) -> int:
             # 拿它去剔除會把有效分支的好值一起砍掉、把死資料鍵計進不可判定。
             stale_dn = {r for r in bad
                         if r.startswith("script_item_dn|") and is_effective(r, eff)}
-            if bad - stale_dn:
-                en_stale.append((wid, len(bad - stale_dn)))
+            other_bad = bad - stale_dn
+            if other_bad:
+                en_stale.append((wid, len(other_bad)))
             # **排除層級是 `(owner, fullType)`，不是裸 fullType**：A root 的壞 rid 若以
             # 裸 fullType 過濾，會把 B root 同鍵的健康勝出值一起刪掉（多扣）；反向另計
             # 時 B state 有同鍵又會誤判「已在宇宙」而漏計。
@@ -2467,17 +2234,14 @@ def cmd_coverage(args) -> int:
         # **totals 先累加再決定是否列表**：放在 continue 之後會把「完全無缺口」的 mod
         # 排除在分母外，覆蓋率分母因而嚴重低報（實測 EN 76,063 vs 實際 89,764）。
         tot["en"] += len(en_ids); tot["en_gap"] += len(en_gap)
-        tot["lua"] += len(lua_ids); tot["lua_gap"] += len(lua_gap)
-        tot["lit"] += len(lits); tot["lua_undef"] += len(lua_undef)
         tot["dn"] += dn["total"]; tot["dn_gap"] += len(dn["gap"])
         tot["dn_idonly"] += dn["idonly"]; tot["dn_blind"] += dn["blind"]
-        if not (en_gap or lua_gap or lits or dn["gap"]):
+        if not (en_gap or dn["gap"]):
             continue
         rows.append({
             "wid": wid, "en": len(en_ids), "en_gap": len(en_gap),
-            "lua": len(lua_ids), "lua_gap": len(lua_gap), "lit": len(lits),
-            "lua_undef": len(lua_undef), "dn": dn["total"], "dn_gap": len(dn["gap"]),
-            "samples": sorted(dn["gap"])[:5] or sorted(lua_gap)[:5],
+            "dn": dn["total"], "dn_gap": len(dn["gap"]),
+            "samples": sorted(dn["gap"])[:5],
         })
 
     print(f"基準涵蓋 {len(mods)} 個 mod（extractor_schema={corpus_state.get('extractor_schema')}）")
@@ -2487,21 +2251,12 @@ def cmd_coverage(args) -> int:
     print(f"上游 EN 鍵 {tot['en']}  → 缺口 {tot['en_gap']}")
     print(f"script 物品名 {tot['dn']}  → **可補的確證可見缺口 {tot['dn_gap']}**（精確比對 fullType）")
     print(f"  （另扣除 {tot['dn_idonly']} 筆 DisplayName 等於 item id 或為空白＝上游沒給真英文名）")
-    print(f"Lua 引用鍵 {tot['lua']}  → **可補的確證可見缺口 {tot['lua_gap']}**（同屬最高優先）")
-    print(f"  （另有 {tot['lua_undef']} 個鍵上游自己也沒定義＝上游 bug，遊戲顯示鍵名，非我方缺口）")
-    print(f"Lua 寫死英文 {tot['lit']}（無翻譯鍵，只能走 sources/lua/ 覆寫）")
+    print("MOD Lua 口徑：schema 10 起停用，不納入缺口、排序或 artifact")
     if en_stale:
-        # `dn["blind"]` 是物品名專屬計數器，故非物品名的不一致獨立通報而非併進去。
-        # **兩種形狀的後果不同，不可一律宣稱「缺口低報」**：`en_gap`／`lua_gap` 的宇宙取自
-        # state 的**鍵身分**、完全不讀鏡像值，所以純值漂移（鍵集相同）不影響缺口數字，只
-        # 影響 `prep_mod_strings` 拿到的翻譯來源正確性；只有「鏡像多 rid」那一支才是低報。
-        # `prep` 對兩者都是 wid 級 fail-closed，若這裡完全不出聲，兩支工具就會對同一份
-        # state 給出矛盾結論。
+        # 物品名不一致另計 blind；其餘（translate_en、退役／未知 kind）獨立通報。
         print()
-        print(f"⚠️ {len(en_stale)} 個 mod 的**非物品名** record（`translate_en`／"
-              f"`lua_literal`）鏡像與 state 不一致（共 {sum(n for _, n in en_stale)} 筆）"
-              "→ 鏡像多 rid 者其 EN 缺口低報、值漂移者其翻譯來源已過期；"
-              "跑 `tracker.py backfill-en` 重抽即消除：")
+        print(f"⚠️ {len(en_stale)} 個 mod 的非物品名／非現行 record 鏡像與 state 不一致"
+              f"（共 {sum(n for _, n in en_stale)} 筆）→ 跑 `tracker.py backfill-en` 重抽消除：")
         for wid, n in sorted(en_stale, key=lambda x: -x[1])[:10]:
             print(f"    {wid}：{n} 筆")
     if blind:
@@ -2546,25 +2301,22 @@ def cmd_coverage(args) -> int:
             print(f"    ...（還有 {len(blind) - 15} 個）")
     print()
     top = args.limit or 30
-    print(f"=== 依「確證可見缺口（物品名＋Lua 引用）」排序 Top {top} ===")
-    print(f"{'workshop_id':>12} {'EN缺':>6} {'物品名':>6} {'可補':>5} {'上游bug':>7} {'寫死':>5}  範例")
-    order = sorted(rows, key=lambda r: (-(r["dn_gap"] + r["lua_gap"]), -r["lit"], -r["en_gap"]))
+    print(f"=== 依「JSON／script 可補缺口」排序 Top {top} ===")
+    print(f"{'workshop_id':>12} {'EN缺':>6} {'物品名':>6}  範例")
+    order = sorted(rows, key=lambda r: (-r["dn_gap"], -r["en_gap"]))
     for r in order[:top]:
-        print(f"{r['wid']:>12} {r['en_gap']:>6} {r['dn_gap']:>6} {r['lua_gap']:>5} "
-              f"{r['lua_undef']:>7} {r['lit']:>5}  {[x[:24] for x in r['samples'][:3]]}")
+        print(f"{r['wid']:>12} {r['en_gap']:>6} {r['dn_gap']:>6}  "
+              f"{[x[:24] for x in r['samples'][:3]]}")
     if args.out:
         write_json(Path(args.out), {
+            "schema": {"extractor": EXTRACTOR_SCHEMA, "lua_tracking": "disabled"},
             "totals": tot,
-            # **不可只寫物品名的 undecidable**：`coverage --out` 是給自動消費者看的，
-            # 非物品名的不一致只印 stdout 就等於 artifact 給出假乾淨結果。
             "state_mirror_incoherent": {wid: n for wid, n in sorted(en_stale)},
             "undecidable": {wid: {"why": why, "kinds": sorted(kinds)}
                             for wid, why, kinds in blind},
             "mods": {r["wid"]: {"en": r["en"], "en_gap": r["en_gap"],
-                                "item_dn": r["dn"], "item_dn_gap": r["dn_gap"],
-                                "lua": r["lua"], "lua_gap": r["lua_gap"],
-                                "lua_literal": r["lit"],
-                                "lua_undefined_upstream": r["lua_undef"]} for r in rows},
+                                "item_dn": r["dn"], "item_dn_gap": r["dn_gap"]}
+                     for r in rows},
         })
         print(f"\n明細 → {args.out}")
     return 0
@@ -2593,19 +2345,14 @@ def backfill_done(st: dict | None, mirror: Path) -> bool:
     if not isinstance(st, dict) or st.get("extractor_schema") != EXTRACTOR_SCHEMA:
         return False
     recs = st.get("records")
-    # **形狀壞損一律判「未完成」**：`st.get("records") or {}` 會把 list／字串當成可判定
-    # 資料——`records=["script_item|…"]` 時 `want` 為空、`bool(recs)` 為真，於是直接回
-    # True 而永久略過這個壞損 state（prep 的 `_unchecked` 叫人重跑 backfill 也修不了，
-    # 因為不加 `--force` 就會被這裡跳過）。含 text-bearing rid 的壞容器更會在 `recs[r]`
-    # 炸掉整批。rid 形狀同理：未知 kind／缺分隔符的 rid 不可當成已對齊的證據
-    # （空 key 只有 `lua_gettext` 合法，見 `prep_mod_strings.rid_ids`）。
+    # **形狀壞損一律判「未完成」**：容器非 dict、未知／歷史 kind、缺分隔符、
+    # 空路徑或空 key 都不得被當成 schema 10 的完成證據。
     if not isinstance(recs, dict):
         return False
     for rid in recs:
         kind, s1, rest = rid.partition("|")
         relpath, s2, key = rest.partition("|")
-        if (kind not in EXTRACTOR_KINDS or not s1 or not s2 or not relpath
-                or (not key and kind != "lua_gettext")):
+        if kind not in CURRENT_EXTRACTOR_KINDS or not s1 or not s2 or not relpath or not key:
             return False
     want = {r for r in recs if r.split("|", 1)[0] in TEXT_BEARING_KINDS}
     if not want:
@@ -2636,82 +2383,58 @@ def backfill_done(st: dict | None, mirror: Path) -> bool:
 # 命令：backfill-en（一次性全量 EN 落地）
 # ============================================================
 def cmd_backfill_en(args) -> int:
-    """把 watchlist 全部 mod 的上游 EN 全文補齊到 sources/en/，並重建 hash 基準。
-
-    存在理由：`sources/en/` 原本只在「tracker 偵測到該 mod 有更新」時順手落地，
-    是漸進累積（481 個 mod 只有 75 個有檔）。要達到「所有支援 MOD 的 EN 都可在 git
-    追蹤比對」得主動補齊一次，之後才由排程自然維護。
-
-    可續跑：`backfill_done()` 判定——schema 相符、且鏡像逐 rid 值 hash 與 state 對齊者
-    跳過（只看「檔案存在」會把「鏡像已新、state 仍舊」判成永久完成）。schema 演進
-    （如 5→6 新增 Lua 抽取）會使既有檔全部過時，屆時本指令即重抽工具。
-
-    **每個 mod 都 state-first 原子落盤、鏡像後寫**，而非批次 checkpoint：只變更非鏡像
-    kind 的 mod（`lua_gettext`／`script_item`／`script_craftRecipe`…）鏡像內容不變，
-    `backfill_done()` 無從偵測，中斷時那批 record 會永久遺失。代價是每個 mod 多一次
-    state 全檔寫入（全庫約 480 次），換掉一個無法事後偵測的失效模式。
-    失敗不中斷全場，末尾列出失敗清單供重跑。
-    """
+    """全量補齊 sources/en 並重建 hash baseline；逐 mod state-first，可續跑。"""
     if args.steamcmd is None:
         print("❌ backfill-en 需 --steamcmd 指定 steamcmd 路徑。", file=sys.stderr)
         return 1
     steamcmd = Path(args.steamcmd)
-    install_dir = resolve_install_dir(args.install_dir)  # 限 tracker scratch root
+    install_dir = resolve_install_dir(args.install_dir)
     watchlist = load_watchlist()
     corpus_state = load_corpus_hashes()
     attribution = load_attribution_keys()
     items = watchlist.get("items", {})
 
-    # As1 包本身走 layer-B（它帶的是 CN 不是 EN），不在 EN backfill 範圍。
     wids = [w for w in items if w != AS1_WORKSHOP_ID]
-    # 已自 Workshop 下架者（timestamps 的 removed 旗標，API result=9）永遠抓不到：
-    # 不跳過的話每輪都要對它們各重試 3 次＋逾時，且退出碼永遠非零。
     ts_items = load_timestamps().get("items", {})
     gone = [w for w in wids if ts_items.get(w, {}).get("removed")]
     if gone and not args.only:
         print(f"跳過已下架 {len(gone)} 個（Workshop 已移除，抓不到）：{','.join(gone)}")
         wids = [w for w in wids if w not in gone]
     if args.only:
-        want = {w.strip() for w in args.only.split(",") if w.strip()}
-        wids = [w for w in wids if w in want]
+        wanted = {w.strip() for w in args.only.split(",") if w.strip()}
+        wids = [w for w in wids if w in wanted]
     if args.limit:
-        wids = wids[: args.limit]
+        wids = wids[:args.limit]
 
     def is_done(wid: str) -> bool:
-        return backfill_done(corpus_state.get("mods", {}).get(wid),
-                             EN_TEXT_DIR / f"{wid}.json")
+        return backfill_done(
+            corpus_state.get("mods", {}).get(wid), EN_TEXT_DIR / f"{wid}.json")
 
     todo = [w for w in wids if args.force or not is_done(w)]
-    print(f"backfill-en：watchlist {len(wids)} 個 mod，待處理 {len(todo)}（已完成 {len(wids) - len(todo)}）")
+    print(f"backfill-en：watchlist {len(wids)} 個 mod，待處理 {len(todo)}"
+          f"（已完成 {len(wids) - len(todo)}）")
     if not todo:
         return 0
     EN_TEXT_DIR.mkdir(parents=True, exist_ok=True)
 
     failed: list[str] = []
+    pending_plans: list[dict] = []
+    pending_updates: dict[str, dict] = {}
+    pending_texts: dict[str, dict] = {}
     done = 0
     for i, wid in enumerate(todo, 1):
         mod_ids = items.get(wid, {}).get("mod_ids", [])
         print(f"[{i}/{len(todo)}] {wid} …", flush=True)
         item_dir = None
         try:
-            # 下載也放進 try：steamcmd_download 的 subprocess.run(timeout=1800) 會拋
-            # TimeoutExpired，留在 try 外時單一 mod 逾時就中止整批，違反「失敗不中斷」。
             item_dir = steamcmd_download(wid, steamcmd, install_dir)
             if item_dir is None:
                 print(f"  ⚠️ 下載失敗，跳過（可重跑）：{wid}", file=sys.stderr)
                 failed.append(wid)
                 continue
             records = extract_corpus(item_dir)
-            # schema 不符 → build_layer_a_plan 靜默重建基準（回傳 plan=None），正是 backfill 要的。
-            # 但 --force 對 schema 已相符的 mod 會拿到**真 plan**＝上游有變更、本該開
-            # 「可能過時」issue；backfill 不開 issue，靜默丟棄等於吃掉訊號，故明示警告。
-            plan, new_state = build_layer_a_plan(wid, mod_ids, records, corpus_state, attribution)
-            if plan is not None:
-                print(
-                    f"  ⚠️ {wid} 偵測到上游語料變更（本該開「可能過時」issue）；"
-                    "backfill 只重建基準，該訊號已被吸收——需要追蹤請改跑 `tracker.py run`。",
-                    file=sys.stderr,
-                )
+            plan, new_state = build_layer_a_plan(
+                wid, mod_ids, records, corpus_state, attribution)
             if not records:
                 new_state["empty_corpus"] = True
             texts = {
@@ -2719,14 +2442,20 @@ def cmd_backfill_en(args) -> int:
                 for kind, relpath, key, value in sorted(records)
                 if kind in TEXT_BEARING_KINDS
             }
-            # **state 先原子落盤、每個 mod 都落，鏡像後寫**。三個約束合起來才關得住窗口：
-            #   * 每 10 個 checkpoint 一次 → 中斷時最多 9 個 mod 的 state 遺失。若那些 mod
-            #     的變更**只落在非鏡像 kind**（`lua_gettext`／`script_item`／
-            #     `script_craftRecipe`…），鏡像內容根本不變，`backfill_done()` 的 text hash
-            #     比對驗不出差異 → 續跑判成已完成 → 那批 record 永久遺失。
-            #   * 反序（鏡像先）也關不掉這個窗口，理由同上——鏡像不變就沒有可比的證據。
-            #   * state-first 則相反：state 已持久化就代表「這一輪的全部 record 都記下了」；
-            #     若中斷在鏡像寫入前，state 新／鏡像舊的**文本**差異由 hash gate 抓到重抽。
+            # backfill 不開 issue；plan 與對應 state/mirror 一起持久化。`tracker.py issue`
+            # 只在 issue 成功後套用 baseline，故不吞訊號，也不形成永久重試迴圈。
+            if plan is not None:
+                pending_plans.append(plan)
+                pending_updates[wid] = new_state
+                pending_texts[wid] = texts
+                failed.append(wid)
+                print(
+                    f"  ⚠️ {wid} 真正上游語料有變，已排入 {BACKFILL_PLANS_JSON}；"
+                    "執行 `tracker.py issue --in` 該檔即可完成 issue 與 baseline 遷移。",
+                    file=sys.stderr,
+                )
+                continue
+
             corpus_state.setdefault("mods", {})[wid] = new_state
             corpus_state["schema_version"] = SCHEMA_VERSION
             corpus_state["extractor_schema"] = EXTRACTOR_SCHEMA
@@ -2736,23 +2465,32 @@ def cmd_backfill_en(args) -> int:
             else:
                 (EN_TEXT_DIR / f"{wid}.json").unlink(missing_ok=True)
             kinds: dict[str, int] = {}
-            for r in records:
-                kinds[r[0]] = kinds.get(r[0], 0) + 1
+            for record in records:
+                kinds[record[0]] = kinds.get(record[0], 0) + 1
             print(f"  ✓ {len(records)} 筆（鏡像 {len(texts)}）{kinds}")
             done += 1
         except (ValueError, OSError, subprocess.SubprocessError) as exc:
-            # 單一 mod 的語料異常／IO 失敗／steamcmd 逾時一律不炸全場，記入失敗清單可重跑。
-            # 只捕 ValueError 太窄：write_json 的 OSError 會漏出去中止整輪。
-            print(f"  ⚠️ 處理失敗，跳過：{wid}：{type(exc).__name__}: {exc}", file=sys.stderr)
+            print(f"  ⚠️ 處理失敗，跳過：{wid}：{type(exc).__name__}: {exc}",
+                  file=sys.stderr)
             failed.append(wid)
         finally:
-            # _dl 是暫存：抽完即刪，避免 481 個 mod 的內容堆在磁碟上
             if item_dir is not None and _within_scratch(item_dir):
                 shutil.rmtree(item_dir, ignore_errors=True)
-    # **迴圈後不再重寫 state**：state-first 之後每輪成功迭代都已寫過同一份物件，失敗路徑
-    # 未動它（`corpus_state[wid] = new_state` 在 try 內、寫入前）。留著只是多一次 30MB
-    # 序列化，而且「全部 mod 都失敗」時會把頂層 `extractor_schema` 標記推進到新版——
-    # 明明沒有任何 per-mod 真的重抽過。
+
+    if pending_plans:
+        pending_ids = [plan["workshop_id"] for plan in pending_plans]
+        write_json(BACKFILL_PLANS_JSON, {
+            "generated_at": now_iso(),
+            "plans": pending_plans,
+            "ok_ids": pending_ids,
+            "removed": [],
+            "meta": {},
+            "corpus_updates": pending_updates,
+            "en_texts": pending_texts,
+            "failed_ids": [],
+        })
+        print(f"待套用 issue plan → {BACKFILL_PLANS_JSON}")
+
     print(f"\n完成 {done}/{len(todo)}；失敗 {len(failed)}")
     if failed:
         print("失敗清單（重跑本指令即續傳）：" + ",".join(failed))
@@ -2943,7 +2681,10 @@ def cmd_self_test() -> int:
 
     # 情境 10：extractor schema 演進 → 舊 schema 基準靜默重建（不開 issue）；B41 .txt 翻譯檔可抽取
     old10 = {"mods": {"555": {
-        "corpus_hash": "deadbeef", "extractor_schema": EXTRACTOR_SCHEMA - 1,
+        "corpus_hash": "deadbeef",
+        # 寫死 8 而非 `EXTRACTOR_SCHEMA - N`：下次 bump 後相對算式會滑進 9，
+        # 那條走 Lua 遷移而非靜默重建，本情境要驗的是「不可比 → 靜默重建」。
+        "extractor_schema": 8,
         "records": {"translate_en|Items_EN.json|Base.Old": "aaa"},
     }}}
     recs10 = [rec("translate_en", "Items_EN.json", "Base.New", "New")]
@@ -2963,55 +2704,43 @@ def cmd_self_test() -> int:
     assert dict((r[2], r[3]) for r in recs_txt)["IGUI_Test_A"] == "Hello v2", "情境10：重複鍵應取後者"
     print("  ✅ 情境10 schema 演進靜默重建＋B41 .txt 翻譯抽取")
 
-    # 情境 11（schema 6）：Lua 文本抽取——getText 鍵引用與「寫死英文」要分得開。
-    # 上游常見 getText("KEY", "English") 慣用法：那串英文有鍵、由 lua_gettext 收，
-    # 誤收成 lua_literal 會虛報「無鍵可譯」（實測某 mod 因此假報 16 筆）。
-    with tempfile.TemporaryDirectory() as td:
-        ld = Path(td) / "42" / "media" / "lua" / "client"
-        ld.mkdir(parents=True)
-        (ld / "Sample.lua").write_text(
-            'context:addOption(getText("IGUI_Foo_Bar"), a, b)\n'                 # 有鍵 → 只算 gettext
-            'context:addOption(getText("IGUI_Foo_Baz",\n'
-            '        "Custom claim is disabled here."), a)\n'                    # 第二引數有鍵 → 不算寫死
-            'btn:setTitle("Open Debug Panel")\n'                                 # 真寫死 → lua_literal
-            'x:setText("Cancel")\n'                                              # 單字＜8 → 保守放掉
-            'y:setName("icons/thing.png")\n'                                     # 資源路徑 → 排除
-            'z:setTooltip(myVariable)\n'                                         # 非字面 → 無記錄
-            'w = getTextOrNull("IGUI_Foo_Qux")\n'                                # OrNull 也要收
-            # --- 以下四項是 regex 版實際踩過的錯，改 lexical scan 後才擋得住 ---
-            '-- getText("IGUI_InLineComment")\n'                                 # 行註解內不得收
-            '--[[ getText("IGUI_InBlockComment") ]]\n'                           # 長註解內不得收
-            'targetText("IGUI_MidIdentifier")\n'                                 # identifier 中段不得命中
-            'local sn = getTextWidth("Some Wide Label")\n'                       # getTextWidth 不是 getText
-            'local s2 = "a -- b"\n'                                              # 字串裡的 -- 不是註解
-            'lbl:setText("Don\'t open this window")\n',                          # 雙引號內的 ' 要抓得到
-            encoding="utf-8",
-        )
-        rl = _iter_lua_records(Path(td))
-    gk = {r[2] for r in rl if r[0] == "lua_gettext"}
-    lits = {r[3] for r in rl if r[0] == "lua_literal"}
-    assert gk == {"IGUI_Foo_Bar", "IGUI_Foo_Baz", "IGUI_Foo_Qux"}, f"情境11：getText 鍵抽取錯誤 {gk}"
-    assert lits == {"Open Debug Panel", "Don't open this window"}, \
-        f"情境11：寫死字面判定錯誤 {lits}"
-    assert all(r[1].startswith("42/media/lua/") for r in rl), "情境11：relpath 應為 mod_dir 相對"
-    # 同一字面於同檔重複出現只留一筆（key=sha1），且 relpath 不同才各自成 record
-    assert len([r for r in rl if r[0] == "lua_literal"]) == 2, "情境11：同檔同字面應折疊"
-    # trim_download 不得再刪 Lua（schema 6 起 Lua 是文本來源）
+    # 情境 11（schema 10）：JSON-only 邊界。Lua-only 變動不得進 corpus，也不得製造
+    # 「可能過時」issue；非 JSON 根因由 issue 提交者向 MOD 作者回報。
     with tempfile.TemporaryDirectory() as td:
         root = Path(td)
-        (root / "media" / "lua" / "client").mkdir(parents=True)
-        (root / "media" / "lua" / "client" / "A.lua").write_text("-- x", encoding="utf-8")
-        (root / "media" / "textures").mkdir(parents=True)
-        (root / "media" / "textures" / "b.png").write_bytes(b"x")
-        trim_download(root)
-        assert (root / "media" / "lua" / "client" / "A.lua").exists(), "情境11：trim 不得刪 Lua"
-        assert not (root / "media" / "textures" / "b.png").exists(), "情境11：trim 應刪非文本檔"
-    # 鏡像只收帶真英文的 kind
-    assert "lua_gettext" not in TEXT_BEARING_KINDS and "script_item" not in TEXT_BEARING_KINDS, \
-        "情境11：id-only kind 不得進鏡像"
-    assert {"translate_en", "script_item_dn", "lua_literal"} <= TEXT_BEARING_KINDS, \
-        "情境11：帶文本的 kind 必須進鏡像"
-    print("  ✅ 情境11 Lua 文本抽取（gettext/寫死分流）＋trim 留 Lua＋鏡像 kind 白名單")
+        lf = root / "42" / "media" / "lua" / "client" / "Sample.lua"
+        lf.parent.mkdir(parents=True)
+        lf.write_text('getText("IGUI_Old")\nbtn:setTitle("Old text")\n', encoding="utf-8")
+        before = extract_corpus(root)
+        lf.write_text('getText("IGUI_New")\nbtn:setTitle("New text")\n', encoding="utf-8")
+        after = extract_corpus(root)
+    assert before == after == [], f"情境11：Lua-only 變動進入 corpus：{before!r} → {after!r}"
+    lua_state = {"mods": {"lua-only": {
+        "corpus_hash": corpus_hash(before),
+        "extractor_schema": EXTRACTOR_SCHEMA,
+        "records": records_to_map(before),
+    }}}
+    lua_plan, _ = build_layer_a_plan("lua-only", ["LuaOnly"], after, lua_state, set())
+    assert lua_plan is None, "情境11：Lua-only 變動不應開可能過時 issue"
+    json_rel = "mods/M/42/media/lua/shared/Translate/EN/UI.json"
+    legacy_state = {"mods": {"legacy-lua": {
+        "corpus_hash": "schema9-hash",
+        "extractor_schema": 9,
+        "records": {
+            f"translate_en|{json_rel}|UI_Test": value_hash("Old JSON"),
+            "lua_gettext|mods/M/42/media/lua/client/X.lua|UI_Test": value_hash("UI_Test"),
+            "lua_literal|mods/M/42/media/lua/client/X.lua|abc": value_hash("Old Lua"),
+        },
+    }}}
+    same_json = [rec("translate_en", json_rel, "UI_Test", "Old JSON")]
+    same_plan, _ = build_layer_a_plan(
+        "legacy-lua", ["LegacyLua"], same_json, legacy_state, set())
+    assert same_plan is None, "情境11：schema 9 舊 Lua records 被誤報成 removed"
+    changed_json = [rec("translate_en", json_rel, "UI_Test", "New JSON")]
+    changed_plan, _ = build_layer_a_plan(
+        "legacy-lua", ["LegacyLua"], changed_json, legacy_state, set())
+    assert changed_plan is not None, "情境11：schema 9→10 遷移吞掉同輪真 JSON 變更"
+    print("  ✅ 情境11 JSON-only：Lua-only 變動不進 corpus、不開 issue")
 
     # 情境 12：coverage 的鍵形正規化——本次唯一寫錯兩次的地方，錯了不會有任何測試變紅。
     #   錯法一：只留 canon 形 → Tooltip_X 與 ContextMenu_X 塌成同身分，跨 mod 互相遮蔽缺口
@@ -3024,12 +2753,7 @@ def cmd_self_test() -> int:
     id_a = (_key_stem("Tooltip.json"), _canon_key("Tooltip.json", "Tooltip_OpenJacket"))
     id_b = (_key_stem("ContextMenu.json"), _canon_key("ContextMenu.json", "ContextMenu_OpenJacket"))
     assert id_a[1] == id_b[1] and id_a != id_b, "情境12：namespace 塌陷會讓缺口互相遮蔽"
-    # lua_gettext 使用端過濾：非鍵形與動態組鍵前綴都不是真鍵
-    assert _is_real_key("IGUI_Foo_Bar"), "情境12：正常鍵應通過"
-    assert not _is_real_key("I drop items!"), "情境12：非鍵形字面應濾掉"
-    assert not _is_real_key(" / 100 %"), "情境12：符號字面應濾掉"
-    assert not _is_real_key("IGUI_AnimalType_"), "情境12：動態組鍵前綴應濾掉"
-    print("  ✅ 情境12 coverage 鍵形正規化（stem/canon/namespace 保留/真鍵過濾）")
+    print("  ✅ 情境12 coverage 鍵形正規化（stem/canon/namespace 保留）")
 
     # 情境 13：B42 有效分支解析——2026-08-06 那批 899 鍵有 385 筆補在遊戲不載入的
     # 分支上（43% 白做），其中 2 筆的 EN 還取自已改名的舊分支而直接譯錯。
@@ -3355,28 +3079,27 @@ def cmd_self_test() -> int:
             assert not backfill_done({"extractor_schema": EXTRACTOR_SCHEMA,
                                       "records": {_bad_rid: value_hash("V")}}, _bp), \
                 f"情境15：壞損 rid 竟判完成（{_bad_rid!r}）"
-        # `lua_gettext` 的空 key 是合法上游寫法（`getText("")`，全庫實測 3 筆），不得因空
-        # key 就判壞損——否則那 2 個 mod 每輪都重抽。（先把鏡像寫回一致狀態：上面的
-        # 「鍵集不符」斷言留下了殘缺鏡像。）
+        # schema 10 對歷史 Lua kind fail-closed，即使 state/mirror 彼此一致也必須重抽清理。
+        write_json(mp, {**texts, "lua_literal|mods/M/42.20/media/lua/a.lua|abc": "Old Lua"})
+        polluted = {"extractor_schema": EXTRACTOR_SCHEMA, "records": {
+            **good["records"],
+            "lua_literal|mods/M/42.20/media/lua/a.lua|abc": value_hash("Old Lua"),
+        }}
+        assert not backfill_done(polluted, mp), "情境15：schema 10 Lua 污染被判完成"
         write_json(mp, texts)
-        assert backfill_done({"extractor_schema": EXTRACTOR_SCHEMA, "records": {
-            **good["records"], "lua_gettext|mods/M/42.20/media/lua/a.lua|": "cc"}}, mp), \
-            "情境15：`lua_gettext` 的合法空 key 被判壞損（那 2 個 mod 會每輪重抽）"
-        # **能力邊界要有測試釘住**：只改非鏡像 kind 時鏡像不變，`backfill_done` 必然判
-        # 「已完成」——關住這個窗口的是 state-first 每 mod 落盤，不是本函式。這條斷言的
-        # 意義是讓「把它改回批次 checkpoint / 鏡像先寫」的人看到自己在拆哪一道防線。
-        write_json(mp, texts)
-        plus_lua = {**good, "records": {**good["records"],
-                                        "lua_gettext|mods/M/42.20/media/lua/a.lua|UI_New": "cc"}}
-        assert backfill_done(plus_lua, mp), \
-            "情境15：非鏡像 kind 的增量本就不影響鏡像；此判定由 state-first 落盤負責"
+        plus_script = {**good, "records": {
+            **good["records"],
+            "script_item|mods/M/42.20/media/scripts/i.txt|Base.New": "cc",
+        }}
+        assert backfill_done(plus_script, mp), \
+            "情境15：合法非鏡像 script kind 增量被誤判未完成"
         # state↔鏡像 coherence：鏡像領先（backfill 中斷殘跡）會讓宇宙少鍵、缺口低報成零
         assert mirror_incoherent_rids(good["records"], {**texts, "script_item_dn|p|Base.New": "N"}) \
             == {"script_item_dn|p|Base.New"}, "情境15：未偵測到鏡像領先 state"
         assert mirror_incoherent_rids(good["records"], texts) == set(), \
             "情境15：一致的 state/鏡像被誤報為不一致"
-        assert mirror_incoherent_rids(plus_lua["records"], texts) == set(), \
-            "情境15：state 有而鏡像沒有屬 backfill_done 職責，不該由本函式報"
+        assert mirror_incoherent_rids(plus_script["records"], texts) == set(), \
+            "情境15：state 有而鏡像沒有的合法非鏡像 kind 被誤報"
         # **同 rid 值 hash 不符**是 state-first 唯一還開著的窗口（鏡像寫入失敗／人工改檔），
         # 只驗鍵集會放行過期英文當翻譯來源，且 id-only／malformed 判定也會用錯值。
         assert mirror_incoherent_rids(good["records"], {**texts, rid_b: "Bigger X"}) == {rid_b}, \

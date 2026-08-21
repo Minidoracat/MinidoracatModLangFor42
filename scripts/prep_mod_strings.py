@@ -5,9 +5,8 @@
 
     uv run scripts/prep_mod_strings.py <wid> [<wid> ...] --out <檔案>
 
-與 `gap_worksheet.py` 的差別：後者只提「Lua 確證可見」的鍵（getText 現場），
-本支提**所有落點檔對得上的有效鍵**——物品名走專用 getter、不經 getText，
-`coverage_survey.py` 揭露那才是缺口主體（62% 在 ItemName）。
+本支提**所有落點檔對得上的 JSON／script 物品名有效缺口**；物品名走專用 getter，
+不依賴 MOD Lua consumer。
 
 兩類來源：上游 `Translate/EN` 的鍵（`translate_en`），以及 script 定義的物品顯示名
 （`script_item_dn`，落點固定 `ItemName`、鍵為完整 fullType `Module.Item`）。後者需
@@ -213,7 +212,8 @@ def main() -> int:
     batch_owners: set[str] = set()            # 本批 wid 底下的 owner（決定 blocking 範圍）
     gap: dict[str, tuple[str, str]] = {}      # "<file>|<key>" -> (en, wid)
 
-    # kind 白名單以 tracker 為準（`backfill_done` 同一份），勿在此再列一次而分岔
+    # prep 仍需讀 schema 9 歷史 state，故用 current＋legacy 聯集；現行 schema 10 的
+    # `backfill_done` 另用 CURRENT_EXTRACTOR_KINDS，刻意不共用。
     KNOWN_KINDS = tracker.EXTRACTOR_KINDS
 
     def rid_ids(rids) -> set[str] | None:
