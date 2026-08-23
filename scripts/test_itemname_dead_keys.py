@@ -1,25 +1,15 @@
 # /// script
 # requires-python = ">=3.10"
 # ///
-"""verify [15] ItemName 死鍵棘輪的回歸測試。
+"""Regression tests for verify [15] effective-fullType enforcement.
 
-背景：`ItemName_<Module>.<Item>` 是 B41 `ItemName_EN.txt` 時代的鍵形，**B42 不讀它**——
-`Translator.tryFillMapFromFile()` 把 JSON 鍵原封不動存進 map，`getItemNameFromFullType()`
-只以裸 `Module.Item` 查表（42.20.2 反編譯實證）。前綴鍵若沒有對應裸鍵，該物品名等於沒翻譯，
-而 build／CH parity／lint 三道全綠——2026-08-10 就是這樣漏了 1,034 鍵。
+The gate accepts only exact effective `script_item_dn` fullTypes. Missing or
+wrong modules are never inferred from suffixes — they fail until a human repairs
+the true key or explicitly records an unresolved-module deferral.
 
-要鎖住的四件事：
-  1. 只有前綴鍵、無裸鍵 → FAIL。這是本檢查存在的理由。
-  2. **`Base.` 開頭不得整批放行**。MOD 同樣能往 `module Base` 加物品（實例 `Base.44Clip20`
-     是 mod 的高容量彈匣，vanilla 只有 `Base.44Clip`）。當初就是誤判「Base.* ＝ vanilla」
-     才漏了 843 鍵，只認 vanilla scoped 基準。
-  3. 已登記 allowlist 者放行——但 allowlist 是「查證後的暫緩」，不是「不用管」。
-  4. 反向棘椪：裸鍵已補好或前綴鍵已消失時，allowlist 條目要出 WARN 提醒移除，
-     否則清單會爛掉沒人發現。
-
-執行：uv run scripts/test_itemname_dead_keys.py
-不依賴測試框架，assert 失敗即測試失敗（exit code != 0）。
+Run: uv run scripts/test_itemname_dead_keys.py
 """
+
 from __future__ import annotations
 
 import json
@@ -31,8 +21,18 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import verify_dist  # noqa: E402
 
 
-def run(dist_itemname: dict, vanilla: list[str], allow: dict) -> tuple[list[str], list[str]]:
-    """組臨時 repo + dist，回 ([15] 的 fail, warn)。"""
+def run(
+    dist_itemname: dict,
+    vanilla: list[str],
+    allow: object,
+    fulltypes: list[str] | None = None,
+    *,
+    schema: object = 10,
+    record_ids: list[str] | None = None,
+    records_override: object | None = None,
+    state_override: object | None = None,
+) -> tuple[list[str], list[str]]:
+    """Build a temporary repo/dist and return [15] fail/warn lists."""
     with tempfile.TemporaryDirectory() as td:
         src = Path(td) / "sources"
         src.mkdir()
@@ -41,51 +41,153 @@ def run(dist_itemname: dict, vanilla: list[str], allow: dict) -> tuple[list[str]
             encoding="utf-8")
         (src / "itemname_dead_allowlist.json").write_text(
             json.dumps({"entries": allow}, ensure_ascii=False), encoding="utf-8")
+        if records_override is not None:
+            records = records_override
+        elif record_ids is None:
+            records = {
+                f"script_item_dn|mods/m/42/media/scripts/items.txt|{full}": "hash"
+                for full in (fulltypes or [])
+            }
+        else:
+            records = {rid: "hash" for rid in record_ids}
+        state = Path(td) / "tracker-state"
+        state.mkdir()
+        payload = {"mods": {"1": {"extractor_schema": schema, "records": records}}}
+        if state_override is not None:
+            payload = state_override
+        (state / "en_corpus_hashes.json").write_text(
+            json.dumps(payload), encoding="utf-8")
         ch = Path(td) / "CH"
         ch.mkdir()
         (ch / "ItemName.json").write_text(json.dumps(dist_itemname, ensure_ascii=False),
                                           encoding="utf-8")
-        ok, fail, warn = verify_dist.check_itemname_dead_keys(td, str(ch))
+        old_min = verify_dist.ITEM_FULLTYPES_MIN
+        verify_dist.ITEM_FULLTYPES_MIN = 0
+        try:
+            ok, fail, warn = verify_dist.check_itemname_dead_keys(td, str(ch))
+        finally:
+            verify_dist.ITEM_FULLTYPES_MIN = old_min
         assert ok == (not fail), "ok 與 fail 清單不一致"
         return fail, warn
 
 
-# 1. 只有前綴鍵、無裸鍵 → FAIL
-fail, _ = run({"ItemName_Foo.Bar": "巴"}, [], {})
-assert fail, "無裸鍵的前綴鍵未被抓到"
-assert "Foo.Bar" in fail[0], f"失敗訊息應指名裸鍵：{fail[0]}"
+# 1. Exact effective prefix body, no bare key => FAIL.
+fail, _ = run({"ItemName_Foo.Bar": "巴"}, [], {}, ["Foo.Bar"])
+assert fail and "Foo.Bar" in fail[0], fail
 
-# 2. 有裸鍵 → PASS（前綴鍵是重複但無害）
-fail, _ = run({"ItemName_Foo.Bar": "巴", "Foo.Bar": "巴"}, [], {})
-assert not fail, f"已有裸鍵仍誤報：{fail}"
+# 2. Exact effective + shipped bare key => PASS.
+fail, _ = run({"ItemName_Foo.Bar": "巴", "Foo.Bar": "巴"}, [], {}, ["Foo.Bar"])
+assert not fail, fail
 
-# 3. 裸鍵屬 vanilla → 放行（本體已自帶，補了會撞名，見 gate [12]）
-fail, _ = run({"ItemName_Base.Axe": "斧頭"}, ["Base.Axe"], {})
-assert not fail, f"vanilla 鍵被誤報：{fail}"
+# 3. Vanilla is independent evidence; Base.* alone is not.
+fail, _ = run({"ItemName_Base.Axe": "斧頭"}, ["Base.Axe"], {}, [])
+assert not fail, fail
+fail, _ = run({"ItemName_Base.44Clip20": "44彈匣"}, ["Base.44Clip"], {},
+              ["Base.44Clip20"])
+assert fail, "mod item in module Base was incorrectly exempted"
 
-# 4. **關鍵回歸**：`Base.` 開頭但不在 vanilla 基準 → 仍須 FAIL
-#    （2026-08-10 的漏判就是把整個 Base.* 當成 vanilla）
-fail, _ = run({"ItemName_Base.44Clip20": "44彈匣(20發)"}, ["Base.44Clip"], {})
-assert fail, "mod 塞進 module Base 的物品被誤放行——這正是當初漏 843 鍵的原因"
+# 4. Exact current allowlist defers; resolved exact key makes it stale.
+fail, _ = run({"ItemName_Foo.Bar": "巴"}, [], {"Foo.Bar": "reason"}, ["Foo.Bar"])
+assert not fail, fail
+fail, warn = run({"ItemName_Foo.Bar": "巴", "Foo.Bar": "巴"}, [],
+                 {"Foo.Bar": "old"}, ["Foo.Bar"])
+assert not fail and warn, (fail, warn)
 
-# 5. 已登記 allowlist → 放行
-fail, _ = run({"ItemName_Foo.Bar": "巴"}, [], {"Foo.Bar": "上游查無此 item，wid 不明"})
-assert not fail, f"已登記豁免仍誤報：{fail}"
+# 5. Module-less prefix does NOT match a unique Base.* suffix candidate.
+fail, _ = run({"ItemName_ClipboardEmpty": "空寫字板"}, [], {},
+              ["Base.ClipboardEmpty"])
+assert fail and "禁止依 suffix" in fail[0], fail
+fail, _ = run({"ItemName_ClipboardEmpty": "空寫字板",
+               "ClipboardEmpty": "錯 module 修復"}, [], {}, ["Base.ClipboardEmpty"])
+assert fail, "unreachable suffix-only bare key created a false green"
+fail, _ = run({"ItemName_ClipboardEmpty": "空寫字板"}, [],
+              {"ClipboardEmpty": "owner unresolved"}, ["Base.ClipboardEmpty"])
+assert not fail, fail
 
-# 6. 反向棘輪：裸鍵已補好，allowlist 條目該出 WARN
-fail, warn = run({"ItemName_Foo.Bar": "巴", "Foo.Bar": "巴"}, [], {"Foo.Bar": "舊理由"})
-assert not fail, "已補裸鍵不該 FAIL"
-assert warn and "Foo.Bar" in warn[0], f"過時 allowlist 條目未出 WARN：{warn}"
+# 6. Schema <9 never proves a module, even if its key looks like fullType.
+for legacy in ("ClipboardEmpty", "Foo.Bar"):
+    fail, _ = run({f"ItemName_{legacy}": "舊鍵", legacy: "未證實裸鍵"}, [], {},
+                  [legacy], schema=8)
+    assert fail, f"schema 8 evidence created a false green: {legacy}"
+fail, _ = run({"ItemName_ClipboardEmpty": "舊鍵",
+               "ClipboardEmpty": "未證實裸鍵"}, [], {}, ["ClipboardEmpty"])
+assert fail, "schema 10 stale module-less evidence created a false green"
 
-# 6b. 前綴鍵整個消失（上游改名/移除），allowlist 條目也該出 WARN
-fail, warn = run({"Other.Key": "其他"}, [], {"Foo.Bar": "舊理由"})
-assert not fail and warn, f"前綴鍵已不存在時應出 WARN：fail={fail} warn={warn}"
+# 7. Wrong legacy module remains unresolved even if that wrong bare key ships.
+wrong_module_dist = {
+    "ItemName_Base.MPoncho": "斗篷",
+    "Base.MPoncho": "錯 module 裸鍵",
+    "GDMPoncho.MPoncho": "軍用斗篷",
+}
+fail, _ = run(wrong_module_dist, [], {}, ["GDMPoncho.MPoncho"])
+assert fail, "a non-effective bare key must not prove its own module"
+fail, warn = run(wrong_module_dist, [],
+                 {"Base.MPoncho": "manually repaired as GDMPoncho.MPoncho"},
+                 ["GDMPoncho.MPoncho"])
+assert not fail and not warn, (fail, warn)
 
-# 7. 空 dist、無前綴鍵 → PASS 且零 WARN
-fail, warn = run({"Foo.Bar": "巴"}, [], {})
-assert not fail and not warn, f"乾淨輸入被誤報：{fail} {warn}"
+# 8. A real dead-branch bare key cannot prove current provenance.
+dead_branch_records = [
+    "script_item_dn|mods/m/42.19/media/scripts/items.txt|Base.Rossi92",
+    "script_item_dn|mods/m/42.20/media/scripts/items.txt|Other.CurrentItem",
+]
+dead_dist = {"ItemName_Base.Rossi92": "舊槍", "Base.Rossi92": "舊裸鍵"}
+fail, _ = run(dead_dist, [], {}, record_ids=dead_branch_records)
+assert fail and "無法精確" in fail[0], fail
+fail, warn = run(dead_dist, [], {"Base.Rossi92": "dead branch"},
+                 record_ids=dead_branch_records)
+assert not fail and not warn, (fail, warn)
 
-print("✅ test_itemname_dead_keys：7 組情境全過")
+# 9. UNKNOWN_MODULE is undecidable evidence, not corruption or exact provenance.
+fail, _ = run({"ItemName_ClipboardEmpty": "空寫字板",
+               "ClipboardEmpty": "錯 module 修復"}, [], {},
+              ["?.ClipboardEmpty"])
+assert fail, "UNKNOWN_MODULE evidence created a false green"
+
+# 10. Producer-legal keys may contain `|` and multiple dots.
+for full in ("Base.Pack|Mk.2", "Foo.Bar.Baz"):
+    fail, _ = run({f"ItemName_{full}": "前綴", full: "裸鍵"}, [], {}, [full])
+    assert not fail, (full, fail)
+fail, _ = run({"ItemName_Mk.2": "截斷前綴", "Mk.2": "截斷裸鍵"}, [], {},
+              ["Base.Pack|Mk.2"])
+assert fail, "rpartition-style truncated evidence created a false green"
+
+# 11. Malformed tracker state/evidence fails closed.
+bad_states = [
+    {"state_override": []},
+    {"state_override": {"mods": {"1": []}}},
+    {"records_override": []},
+    {"record_ids": ["unknown|mods/m/42/x.txt|Foo.Bar"]},
+    {"record_ids": ["script_item_dn|mods/m/42/x.txt"]},
+    {"record_ids": ["script_item_dn||Foo.Bar"]},
+    {"record_ids": ["script_item_dn|mods/m/42/x.txt|"]},
+    {"state_override": {"mods": {"1": {"records": {}}}}},
+    {"schema": True},
+]
+for kwargs in bad_states:
+    try:
+        run({"ItemName_Foo.Bar": "巴"}, [], {}, **kwargs)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError(f"壞損 tracker state 未 fail-closed：{kwargs}")
+
+# 12. Malformed allowlist entries fail closed.
+for bad_allow in (["Foo.Bar"], {"Foo.Bar": ""}, {"": "reason"}):
+    try:
+        run({"ItemName_Foo.Bar": "巴"}, [], bad_allow, ["Foo.Bar"])
+    except ValueError:
+        pass
+    else:
+        raise AssertionError(f"壞損 allowlist 未 fail-closed：{bad_allow}")
+
+# 13. Prefix removed makes a deferral stale; clean no-prefix input passes.
+fail, warn = run({"Other.Key": "其他"}, [], {"Foo.Bar": "old"}, ["Foo.Bar"])
+assert not fail and warn, (fail, warn)
+fail, warn = run({"Foo.Bar": "巴"}, [], {}, [])
+assert not fail and not warn, (fail, warn)
+
+print("✅ test_itemname_dead_keys：13 組 provenance/fail-closed 情境全過")
 
 # --- [13] 改名後繼者抑制（同檔測試，共用 verify_dist import）------------------ #
 # 2026-08-10 實測：60 條 [13] 警告裡有 11 條是「上游把 UI_X 改名為 IGUI_X，我方兩個

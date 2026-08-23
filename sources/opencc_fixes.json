@@ -1026,6 +1026,582 @@
    ],
    "ch_value": "5c5f882caf9a74a9",
    "reason": "「藥物交互作用」是台灣醫藥標準術語（衛福部藥品仿單與健保用藥指引通用），陸用語才作「相互作用」；本 pattern 針對的是「交互」誤用情形，此處為誤中"
+  },
+  "IG_UI.json|IGUI_BookAiming5_Pg4": {
+   "patterns": [
+    "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
+    "窗(\\s*)口"
+   ],
+   "reason": "「窗口」指實體窗戶而非 UI 視窗；「打開」亦為實體開窗動作。",
+   "ch_value": "be41c756210864a5"
+  },
+  "IG_UI.json|IGUI_BookCarpentry5_Pg15": {
+   "patterns": [
+    "(?<![演計運估換推心珠])算法"
+   ],
+   "reason": "梁字命中非姓氏，依繁中用字改為「樑」。",
+   "ch_value": "f411183ce4199254"
+  },
+  "IG_UI.json|IGUI_BookElectrician3_Pg12": {
+   "patterns": [
+    "(?<![存站])在線"
+   ],
+   "reason": "「在線上面」由介詞「在」與實體電線組成，並非 online。",
+   "ch_value": "a93c371769ce0424"
+  },
+  "IG_UI.json|IGUI_BookLongBlade2_Pg10": {
+   "patterns": [
+    "應(\\s*)用(?!\\s*程)"
+   ],
+   "reason": "「應用物理」是學科／名詞用法，不是 apply 動作。",
+   "ch_value": "4e6d370f874bb161"
+  },
+  "IG_UI.json|IGUI_BookMetalWelding1_Pg8": {
+   "patterns": [
+    "的(\\s*)質(\\s*)量"
+   ],
+   "reason": "此處「質量」明確指金屬板的物理 mass。",
+   "ch_value": "5d7d9bb48be63dca"
+  },
+  "IG_UI.json|IGUI_BookMetalWelding4_Pg13": {
+   "patterns": [
+    "硬件"
+   ],
+   "reason": "「淬硬件」指淬火後的硬化工件，並非 computer hardware。",
+   "ch_value": "beead9c85a112365"
+  },
+  "IG_UI.json|IGUI_BookTrapping4_Pg15": {
+   "patterns": [
+    "應(\\s*)用(?!\\s*程)",
+    "菜(\\s*)單"
+   ],
+   "reason": "「菜單」是食物清單的合法用法；「應用動物心理學」是名詞片語。",
+   "ch_value": "f84de3c2b741de92"
+  },
+  "IG_UI.json|IGUI_Dream197": {
+   "patterns": [
+    "信號"
+   ],
+   "reason": "「信號」指實體信號彈／信號槍，屬合法物理訊號用語。",
+   "ch_value": "efe258d791ed9eb5"
+  },
+  "ItemName.json|Base.CSR_HandFlareBlue": {
+   "patterns": [
+    "信號"
+   ],
+   "reason": "「信號」指實體信號彈／信號槍，屬合法物理訊號用語。",
+   "ch_value": "66032516c35fc883"
+  },
+  "ItemName.json|Base.CSR_SignalPistol": {
+   "patterns": [
+    "信號"
+   ],
+   "reason": "「信號」指實體信號彈／信號槍，屬合法物理訊號用語。",
+   "ch_value": "5ed2e6ae855522b9"
+  },
+  "Recipes.json|Recipe_CSR_CraftGlowstickGreen": {
+   "patterns": [
+    "信號"
+   ],
+   "reason": "信號棒是實體信號器材，不是電子訊號。",
+   "ch_value": "9a982dfaf663f383"
+  },
+  "Recipes.json|Recipe_CSR_PackSignalFlareRoundBox": {
+   "patterns": [
+    "信號"
+   ],
+   "reason": "信號彈是實體信號器材，不是電子訊號。",
+   "ch_value": "264086341cca4f90"
+  },
+  "Sandbox.json|Sandbox_AirdropMod_AirdropTriggerChopper_tooltip": {
+   "patterns": [
+    "用(\\s*)戶"
+   ],
+   "reason": "「用戶端」是 client 的固定技術用語，不等同 user。",
+   "ch_value": "58f820879c711f69"
+  },
+  "Sandbox.json|Sandbox_AutoDrop_LootMode_option1": {
+   "patterns": [
+    "用(\\s*)戶"
+   ],
+   "reason": "「用戶端」是 client 的固定技術用語，不等同 user。",
+   "ch_value": "cfe56d8d6be9b88d"
+  },
+  "Sandbox.json|Sandbox_DynamicObjectives.QuestRewardPoolBags_tooltip": {
+   "patterns": [
+    "登(\\s*)錄",
+    "登錄"
+   ],
+   "reason": "「登錄表」是 registry 的正確譯法；僅將電腦語境的「程序化」改為「程式化」。",
+   "ch_value": "38f12a91010e4b7a"
+  },
+  "Sandbox.json|Sandbox_PhunServer_SetHours_tooltip": {
+   "patterns": [
+    "(?<![存站])在線"
+   ],
+   "reason": "原文是固定詞「在線上」；套用規則會誤成「線上上」。",
+   "ch_value": "79d619c3cb284f14"
+  },
+  "UI.json|UI_AirdropMod_CommandClientOnly": {
+   "patterns": [
+    "用(\\s*)戶"
+   ],
+   "reason": "「用戶端」是 client 的固定技術用語，不等同 user。",
+   "ch_value": "18d608bdfe0c38b0"
+  },
+  "UI.json|UI_HiResClock_GlobalRestoreAllDefaults_Tooltip": {
+   "patterns": [
+    "登(\\s*)錄",
+    "登錄"
+   ],
+   "reason": "「登錄表」是 registry 的正確譯法，不是登入動作。",
+   "ch_value": "5d67e304370736c6"
+  },
+  "UI.json|UI_HiResClock_WatchFamilyAnalog": {
+   "patterns": [
+    "(?<![時錶鐘秒分])指針"
+   ],
+   "reason": "此鍵明確代表類比時鐘的實體指針。",
+   "ch_value": "e4de870735084a99"
+  },
+  "UI.json|UI_Lesson_LongBlunt_Advanced_Q1_C2": {
+   "patterns": [
+    "的(\\s*)質(\\s*)量"
+   ],
+   "reason": "此處明確是實心鋼的物理質量 mass，不是品質。",
+   "ch_value": "791e4af63434bcfa"
+  },
+  "UI.json|UI_optionscreen_binding_ExcrementumStatus": {
+   "patterns": [
+    "泄(?!殖)"
+   ],
+   "reason": "「排泄物」是固定生理學詞彙，不能改成「排洩物」。",
+   "ch_value": "a067b88846beea9b"
+  },
+  "IG_UI.json|IGUI_BookAiming5_Pg7": {
+   "patterns": [
+    "(?<!使)用戶(?![端名])",
+    "用(\\s*)戶"
+   ],
+   "reason": "命中來自跨詞界「衣物用＋戶外」；原句是用戶外防味噴霧處理衣物，並非 user／用戶，兩條規則套用都會破壞句子。",
+   "ch_value": "47ad61a2b842f504"
+  },
+  "IG_UI.json|IGUI_BookCooking4_Pg7": {
+   "patterns": [
+    "發霧"
+   ],
+   "reason": "此處描述料理、誘餌、合金或咖啡的品質／高級品，不是技能 tier；維持「高級」。",
+   "ch_value": "fce55302ff5a3175"
+  },
+  "IG_UI.json|IGUI_BookElectrician3_Pg13": {
+   "patterns": [
+    "(?<!使)用戶(?![端名])",
+    "用(\\s*)戶"
+   ],
+   "reason": "此處是電子、工業、醫療、焊接、陶輪、爐具、無線電等實體設備；「設備」本就是台灣標準工業用語，不需改成裝置。",
+   "ch_value": "f1076d7b54b9b668"
+  },
+  "IG_UI.json|IGUI_BookElectrician4_Pg12": {
+   "patterns": [
+    "應(\\s*)用(?!\\s*程)"
+   ],
+   "reason": "「應用物理」是 Applied Physics 的固定學科用語，改成「套用物理」會失真。",
+   "ch_value": "0d02f14587d4e0af"
+  },
+  "IG_UI.json|IGUI_BookFlintKnapping2_Pg10": {
+   "patterns": [
+    "界(\\s*)面"
+   ],
+   "reason": "此處是種子、食物、石材或屍體／物品的保存與保存期限，屬 preservation／retention，不是電腦資料儲存。",
+   "ch_value": "bf81325d09f47b65"
+  },
+  "IG_UI.json|IGUI_BookFlintKnapping4_Pg3": {
+   "patterns": [
+    "應(\\s*)用(?!\\s*程)"
+   ],
+   "reason": "「應用施密特原理」是把原理運用於林中測試的動詞義，台灣用法正確，改「套用」反而生硬。",
+   "ch_value": "4105163e5d70cf80"
+  },
+  "IG_UI.json|IGUI_BookHusbandry3_Pg11": {
+   "patterns": [
+    "泄(?!殖)"
+   ],
+   "reason": "命中的是生理學固定詞「排泄」，不是洩漏／洩露；改成「排洩」不符合本句術語慣例。",
+   "ch_value": "d90522f19ff91d18"
+  },
+  "IG_UI.json|IGUI_BookTrapping5_Pg1": {
+   "patterns": [
+    "應(\\s*)用(?!\\s*程)"
+   ],
+   "reason": "標題「應用動物心理學」指 Applied Animal Psychology／心理學的實際運用，不是 UI 套用動作。",
+   "ch_value": "cd8082a799d5767e"
+  },
+  "IG_UI.json|IGUI_PhunServer_NoOtherPlayerOnline": {
+   "patterns": [
+    "(?<![存站])在線"
+   ],
+   "reason": "現值「目前只有你在線上」已是自然台灣用語；regex 只截到「在線」會產生錯誤的「線上上」。",
+   "ch_value": "45c43bcc82da983d"
+  },
+  "IG_UI_EN.json|IGUI_Inspect_Mat_Copper_Base": {
+   "patterns": [
+    "應(\\s*)用(?!\\s*程)"
+   ],
+   "reason": "「基本電氣應用」指銅材的 electrical applications，是名詞義的應用範圍，不是 UI 套用。",
+   "ch_value": "09251647f5d7b529"
+  },
+  "ItemName.json|Base.CSR_HandFlareGreen": {
+   "patterns": [
+    "信號"
+   ],
+   "reason": "「信號彈」是此模組與同族物品既有固定名稱，指實體照明／求救彈，不是電子訊號欄位。",
+   "ch_value": "052ecfb05807eaef"
+  },
+  "Sandbox.json|Sandbox_DynamicObjectives.QuestRewardPoolFoods_tooltip": {
+   "patterns": [
+    "登(\\s*)錄",
+    "登錄"
+   ],
+   "reason": "Dynamic Objectives 的 program 是電腦程式；「物品登錄表」是 registry 的合法譯法，不得誤改成登入。",
+   "ch_value": "4e0a1f8e4449c211"
+  },
+  "UI.json|UI_EHR_Immunity_AntibioticPressure": {
+   "patterns": [
+    "(?<![限機體管編建學])制作"
+   ],
+   "reason": "命中來自跨詞界「抑制＋作用」形成字面『制作』，不是簡體『製作』；替換會把『抑制作用』破壞成『抑製作用』。",
+   "ch_value": "b7cec28c49ae147b"
+  },
+  "UI.json|UI_HiResClock_IngameAnalogFPS": {
+   "patterns": [
+    "(?<![時錶鐘秒分])指針"
+   ],
+   "reason": "此鍵控制類比時鐘指針的更新 FPS；「指針」是實體鐘針義，不是資料指標。",
+   "ch_value": "fe6bd3890c318d2b"
+  },
+  "IG_UI.json|IGUI_BookFlintKnapping3_Pg1": {
+   "patterns": [
+    "應(\\s*)用(?!\\s*程)"
+   ],
+   "reason": "「應用物理學」是固定學科名稱，不是 apply 選項；保留「應用」並豁免該 A pattern。",
+   "ch_value": "1beaa47159059849"
+  },
+  "IG_UI.json|IGUI_BookGlassmaking4_Pg11": {
+   "patterns": [
+    "面糊"
+   ],
+   "reason": "命中片段其實是「上面＋糊一層」，不是食物「麵糊」；保留原文並豁免該 A pattern。",
+   "ch_value": "15e864536f7a8c5a"
+  },
+  "IG_UI.json|IGUI_BookTrapping5_Pg10": {
+   "patterns": [
+    "通(\\s*)過(?!\\s*[測考審檢])"
+   ],
+   "reason": "動物「快步通過」是實際穿越路段的動作，台灣語境可用「通過」；不是藉由手段的「透過」，故豁免 A pattern。",
+   "ch_value": "6a36aa012f513338"
+  },
+  "IG_UI.json|IGUI_Dream71": {
+   "patterns": [
+    "菜(\\s*)單"
+   ],
+   "reason": "「當日特價菜單」明確是餐廳供餐內容，台灣正確用語就是「菜單」，故保留並豁免 A pattern。",
+   "ch_value": "c58b6cffffbe28f0"
+  },
+  "IG_UI.json|IGUI_PhunServer_OneOtherPlayerOnline": {
+   "patterns": [
+    "(?<![存站])在線"
+   ],
+   "reason": "原值「在線上」已是台灣自然用語；finding 只匹配其中「在線」，機械替換會產生「線上上」，故保留並豁免。",
+   "ch_value": "9511ac808cc45c16"
+  },
+  "Sandbox.json|Sandbox_BVD_RealismHPWeight_tooltip": {
+   "patterns": [
+    "登(\\s*)錄",
+    "登錄"
+   ],
+   "reason": "「引擎推力與質量」是物理 mass；「API 登錄自己的資料」是資料登錄而非 login，兩個登錄 A/E pattern 均屬合法語境並予豁免。",
+   "ch_value": "130bcd1b7b26fd3f"
+  },
+  "Sandbox.json|Sandbox_DynamicObjectives.QuestRewardPoolMedicine_tooltip": {
+   "patterns": [
+    "登(\\s*)錄",
+    "登錄"
+   ],
+   "reason": "「程序化任務獎勵」指 procedural generation，不是電腦程式本體；改為自然的「程序生成的任務獎勵」，而 registry 的「登錄表」保留並豁免登入規則。",
+   "ch_value": "f3dd4a083a19492d"
+  },
+  "Sandbox.json|Sandbox_EHR_ConcussionFallChanceMultiplier_tooltip": {
+   "patterns": [
+    "通(\\s*)過(?!\\s*[測考審檢])"
+   ],
+   "reason": "此處是角色通過創傷判定，等同通過測試／判定；台灣用「通過」正確，故保留並豁免 A pattern。",
+   "ch_value": "a7be5d847c99b6ea"
+  },
+  "Sandbox.json|Sandbox_Excrementum_OverlayIsAllowed_tooltip": {
+   "patterns": [
+    "用(\\s*)戶"
+   ],
+   "reason": "兩處「用戶端」都是 client 的台灣標準譯法；A pattern 誤切詞，不應改成「使用者端」，故保留並豁免。",
+   "ch_value": "830f78b3efd5a13b"
+  },
+  "UI.json|UI_HiResClock_AnalogSettings": {
+   "patterns": [
+    "(?<![時錶鐘秒分])指針"
+   ],
+   "reason": "本鍵明確是 analog clock 的實體指針；不是滑鼠 pointer／抽象指標，故保留「指針」並豁免 E pattern。",
+   "ch_value": "4a714cbfe247a7a6"
+  },
+  "UI.json|UI_HiResClock_OverrideAnalog": {
+   "patterns": [
+    "(?<![時錶鐘秒分])指針"
+   ],
+   "reason": "本鍵明確是 analog clock 的實體指針；不是滑鼠 pointer／抽象指標，故保留「指針」並豁免 E pattern。",
+   "ch_value": "7dad6364f160c72f"
+  },
+  "UI.json|UI_Lesson_Glassmaking_Advanced_P3": {
+   "patterns": [
+    "(?<![存站])在線"
+   ],
+   "reason": "命中的是「在線痕」＝在＋線痕的跨詞組合，不是 online；保留原文並豁免 E pattern。",
+   "ch_value": "07b60367e976f822"
+  },
+  "UI.json|UI_MSM_Help_Safety_06": {
+   "patterns": [
+    "登(\\s*)錄",
+    "登錄"
+   ],
+   "reason": "「登錄檔」是 Windows Registry 的台灣標準譯名，不是登入動作；保留並豁免兩個登錄 pattern。",
+   "ch_value": "cc507d8994d3568e"
+  },
+  "IG_UI.json|IGUI_BookAiming1_Pg7": {
+   "patterns": [
+    "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
+    "窗(\\s*)口"
+   ],
+   "reason": "「靜止窗口大概能維持兩秒」是射擊呼吸中的時間窗口，不是 UI 視窗或實體窗戶；A/E 兩個模式在本鍵均為語意假陽性。",
+   "ch_value": "3da9dfbc9b276a22"
+  },
+  "IG_UI.json|IGUI_BookAiming3_Pg6": {
+   "patterns": [
+    "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
+    "窗(\\s*)口"
+   ],
+   "reason": "「時間窗口抓準了」是可射擊時機的時間窗口，不是 UI 視窗或實體窗戶；A/E 兩個模式均須鍵級豁免。",
+   "ch_value": "0430943d1eae1805"
+  },
+  "IG_UI.json|IGUI_BookForaging3_Pg3": {
+   "patterns": [
+    "面包"
+   ],
+   "reason": "命中內容是「裡面包著銅線」的跨詞邊界（裡面＋包著），不是食物「麵包」；改字會破壞句意。",
+   "ch_value": "8ed29f3655dddbc5"
+  },
+  "IG_UI.json|IGUI_BookMechanic2_Pg1": {
+   "patterns": [
+    "黃油"
+   ],
+   "reason": "「石化了的黃油、鏽成一坨的螺絲」明確是車底機件上的潤滑脂，不是 butter；改成「奶油」會造成機械語境錯譯。",
+   "ch_value": "3f46720fbd7d033c"
+  },
+  "IG_UI.json|IGUI_Dream169": {
+   "patterns": [
+    "(?<![時錶鐘秒分])指針"
+   ],
+   "reason": "同段明載「舊鬧鐘」「牆上還掛著一只鐘」，五處「指針」全是鐘錶實體指針；不可改成抽象指標。",
+   "ch_value": "1eee1f1bc771126c"
+  },
+  "IG_UI.json|IGUI_PhunServer_OtherPlayersOnline": {
+   "patterns": [
+    "(?<![存站])在線"
+   ],
+   "reason": "現值是完整且正確的「共有 %1 人在線上」，pattern 只命中「在線上」前兩字；替換會產生錯誤的「線上上」。",
+   "ch_value": "7b3bd6af82550023"
+  },
+  "Sandbox.json|Sandbox_DynamicObjectives.QuestRewardPoolWeapons_tooltip": {
+   "patterns": [
+    "登(\\s*)錄",
+    "登錄"
+   ],
+   "reason": "「動態交易物品登錄表」是 item registry／登錄表，不是帳號 login；A 與 E 的登入替換在本鍵均不成立。句中「程序化任務獎勵」是 procedural reward 概念，也非可執行程式名稱。",
+   "ch_value": "723f0564c66ec9e0"
+  },
+  "Sandbox.json|Sandbox_EHR_ConcussionVehicleChanceMultiplier_tooltip": {
+   "patterns": [
+    "通(\\s*)過(?!\\s*[測考審檢])"
+   ],
+   "reason": "「通過創傷判定」明確是 pass a trauma check 的通過判定義；改成「透過創傷判定」會把 pass 誤成 via。",
+   "ch_value": "b757a9d0001e20b3"
+  },
+  "Sandbox.json|Sandbox_SPNCharCustom_StubbleHeadGrowth": {
+   "patterns": [
+    "(?<![毛頭])髮生"
+   ],
+   "reason": "「頭部短髮生長週期」是短髮＋生長的合法跨詞組合；不是「發生」誤轉，改字會變成錯誤的「短發」。",
+   "ch_value": "05e78327e90627ba"
+  },
+  "UI.json|UI_HiResClock_FPSColor": {
+   "patterns": [
+    "(?<![時錶鐘秒分])指針"
+   ],
+   "reason": "鍵名 HiResClock_FPSColor 且值為「指針 FPS 顏色」，指的是類比時鐘指針顏色；屬鐘錶實體指針。",
+   "ch_value": "dfec2bba6a3c94c9"
+  },
+  "UI.json|UI_HiResClock_PreviewAnalog": {
+   "patterns": [
+    "(?<![時錶鐘秒分])指針"
+   ],
+   "reason": "鍵名 HiResClock_PreviewAnalog 且值為「指針」，明確是類比時鐘預覽中的鐘錶指針。",
+   "ch_value": "e4de870735084a99"
+  },
+  "UI.json|UI_options_claimableoutposts_attackMoodles_tooltip": {
+   "patterns": [
+    "用(\\s*)戶"
+   ],
+   "reason": "「僅用戶端生效」中的「用戶端」是 client 端固定技術詞，非指一名 user；改成「使用者端」會違反專案既有負向護欄。",
+   "ch_value": "0225e77cf77dd674"
+  },
+  "IG_UI.json|IGUI_BookCarpentry2_Pg7": {
+   "patterns": [
+    "(?<![存站])在線"
+   ],
+   "reason": "「鋸子壓在線正中切」是「壓在＋線」跨詞界，並非 online；保留原文並豁免此 E pattern。",
+   "ch_value": "b66c99c3d83af8b6"
+  },
+  "IG_UI.json|IGUI_BookFarming4_Pg15": {
+   "patterns": [
+    "應(\\s*)用(?!\\s*程)"
+   ],
+   "reason": "「有機化學在田間尺度上的應用」的「應用」是 application 名詞，不是 apply 動詞；保留並豁免此 A pattern。",
+   "ch_value": "6ff9631a021b8ced"
+  },
+  "IG_UI.json|IGUI_BookFirstAid1_Pg8": {
+   "patterns": [
+    "面糊"
+   ],
+   "reason": "「燒傷、上面糊著奶油」是「上面＋糊著」跨詞界，不是麵糊；保留並豁免此 A pattern。",
+   "ch_value": "a80110fbb06de35a"
+  },
+  "IG_UI.json|IGUI_BookGlassmaking2_Pg13": {
+   "patterns": [
+    "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
+    "窗(\\s*)口"
+   ],
+   "reason": "「短暫的作業窗口」指玻璃可加工的時間區間，不是 UI 視窗；A/E 兩個窗口 pattern 均須豁免。",
+   "ch_value": "f435c86de4ad7da7"
+  },
+  "IG_UI.json|IGUI_BookHusbandry2_Pg3": {
+   "patterns": [
+    "泄(?!殖)"
+   ],
+   "reason": "「動物天天排泄」是台灣通用的生理術語「排泄」，不是「排洩」；保留並豁免此 E pattern。",
+   "ch_value": "b10b56bb8625ac62"
+  },
+  "IG_UI.json|IGUI_BookMechanic2_Pg11": {
+   "patterns": [
+    "黃油"
+   ],
+   "reason": "球籠內的「重載黃油」是機械潤滑脂，不是食用 butter；保留並豁免黃油→奶油 pattern。",
+   "ch_value": "f1dd3a99a6a46f0b"
+  },
+  "IG_UI.json|IGUI_BookPottery5_Pg2": {
+   "patterns": [
+    "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
+    "窗(\\s*)口"
+   ],
+   "reason": "「穿過 573°C 這個精確窗口」指窯溫控制區間，不是 UI 視窗；A/E 兩個窗口 pattern 均須豁免。",
+   "ch_value": "29400260aeb67978"
+  },
+  "IG_UI.json|IGUI_BookTracking5_Pg1": {
+   "patterns": [
+    "(?<![激閃])光標(?!靶)",
+    "光(\\s*)標"
+   ],
+   "reason": "「不光標示幾何方向」是「不光＋標示」跨詞界，不含 cursor「光標」；A/E 兩個 pattern 均須豁免。",
+   "ch_value": "c3095d307b4a07b4"
+  },
+  "IG_UI.json|IGUI_BookTrapping5_Pg15": {
+   "patterns": [
+    "菜(\\s*)單"
+   ],
+   "reason": "CH 中「祕」為 B 類異體字，依台灣字形統一為「秘」，其餘語意與標記不動。 「動物新陳代謝的祕密菜單」是食物／攝食內容的菜單隱喻，不是 UI 選單；保留菜單並豁免 A pattern。 「動物新陳代謝的祕密菜單」是攝食內容的菜單隱喻，不是 UI menu；保留「菜單」。",
+   "ch_value": "d3410772764ed2b0"
+  },
+  "IG_UI.json|IGUI_PlayerText_CheckOK": {
+   "patterns": [
+    "通(\\s*)過(?!\\s*[測考審檢])"
+   ],
+   "reason": "「檢查通過」表示檢查結果合格，不是 via/through；保留並豁免通過→透過的 A pattern。",
+   "ch_value": "9de386274111ad89"
+  },
+  "UI.json|UI_HiResClock_GlobalAnalogFPSColor": {
+   "patterns": [
+    "(?<![時錶鐘秒分])指針"
+   ],
+   "reason": "「指針 FPS 顏色」指類比時鐘的實體指針，不是 UI pointer；保留並豁免 E pattern。",
+   "ch_value": "dfec2bba6a3c94c9"
+  },
+  "UI.json|UI_HiResClock_PreviewMode_Tooltip": {
+   "patterns": [
+    "(?<![時錶鐘秒分])指針"
+   ],
+   "reason": "「指針手錶模式」是類比錶針語境，不是 UI pointer；保留並豁免 E pattern。",
+   "ch_value": "4f5a4e68c2dfb164"
+  },
+  "UI.json|UI_Lesson_Foraging_Beginner_P2": {
+   "patterns": [
+    "通(\\s*)過(?!\\s*[測考審檢])"
+   ],
+   "reason": "「所有步驟都通過後」表示可食性測試各階段合格，不是經由；保留「通過」，A pattern 豁免，C 亦完成人工審查。 「所有步驟都通過後」是測試結果合格，不是經由；保留「通過」。",
+   "ch_value": "7c98937e846efea7"
+  },
+  "IG_UI.json|IGUI_BookFlintKnapping4_Pg14": {
+   "patterns": [
+    "應(\\s*)用(?!\\s*程)"
+   ],
+   "reason": "「將工程學應用於武器庫」是學術知識 application to 的合法用法，不是 UI 的 apply；保持原文並錨定豁免。",
+   "ch_value": "1b8955329584bd18"
+  },
+  "ItemName.json|Base.AnalogTorqueWrench": {
+   "patterns": [
+    "(?<![時錶鐘秒分])指針"
+   ],
+   "reason": "「指針式扭力扳手」以實體指針顯示扭矩，不是抽象指標；錨定豁免。",
+   "ch_value": "80d1c4eef882d684"
+  },
+  "ItemName.json|Base.CSR_SignalFlareRoundBox": {
+   "patterns": [
+    "信號"
+   ],
+   "reason": "「信號彈」是台灣軍事／救難固定名稱，不改成「訊號彈」；錨定 E 規則豁免。",
+   "ch_value": "83252b8650b73c60"
+  },
+  "Recipes.json|Recipe_CSR_OpenSignalFlareRoundBox": {
+   "patterns": [
+    "信號"
+   ],
+   "reason": "「信號彈」是台灣軍事／救難固定名稱；同鍵「打開」是實體盒開啟，兩者均保留，僅對 E pattern 錨定豁免。",
+   "ch_value": "2c1b738dabec4d73"
+  },
+  "Sandbox.json|Sandbox_Excrementum": {
+   "patterns": [
+    "泄(?!殖)"
+   ],
+   "reason": "「排泄物」是教育部收錄的固定生理詞，不能改成「排洩物」；錨定 E 規則豁免。",
+   "ch_value": "9ed0ed0ddd88bf29"
+  },
+  "UI.json|UI_HiResClock_GlobalOverrideAnalog_Tooltip": {
+   "patterns": [
+    "(?<![時錶鐘秒分])指針"
+   ],
+   "reason": "此處是類比時鐘造型的實體指針資源；保留「指針」並錨定豁免。",
+   "ch_value": "1a9c3cc3bfce401d"
+  },
+  "UI.json|UI_HiResClock_SaveSkinColors_Tooltip": {
+   "patterns": [
+    "(?<![時錶鐘秒分])指針"
+   ],
+   "reason": "此處設定時鐘指針動畫 FPS 與顏色，指的是實體鐘針；保留並錨定豁免。",
+   "ch_value": "0a4aeb5b2ed26117"
   }
  }
 }

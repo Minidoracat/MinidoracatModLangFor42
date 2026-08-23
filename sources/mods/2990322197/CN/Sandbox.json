@@ -1,0 +1,17 @@
+{
+  "Sandbox_pointblankhf": "零距离射击",
+  "Sandbox_pointblankhf_PointBlankBonusDamageMultiplier": "零距离射击: 额外伤害倍率 (仅在禁用立即击杀时生效)",
+  "Sandbox_pointblankhf_PointBlankBonusDamageMultiplier_tooltip": "该倍率会应用于上述的额外伤害. 它不会影响基础伤害数值, 仅影响额外伤害. 参考以下公式:\n\n TotalDamage = BaseDamage + PointBlankDamage\n PointBlankDamage = (Max(BaseDamage,PointBlankMinimumBonusDamage) * PointBlankBonusDamageMultiplier )\n",
+  "Sandbox_pointblankhf_PointBlankDisableMultiplayerCommandUpdates": "零距离射击: 禁用多人联机指令更新",
+  "Sandbox_pointblankhf_PointBlankDisableMultiplayerCommandUpdates_tooltip": "仅用于调试目的. 正常情况下你不应更改此项. 但如果遇到服务器/客户端/网络问题, 此选项会禁用服务器与客户端之间的同步更新. 若不启用它, 当你零距击杀僵尸时, 其他玩家视角下它的死亡可能会存在延迟.",
+  "Sandbox_pointblankhf_PointBlankEffectiveRange": "零距离射击: 有效射程",
+  "Sandbox_pointblankhf_PointBlankEffectiveRange_tooltip": "当僵尸与你的距离低于该数值时, 被击中会受到零距伤害. 适用于单手武器 (手枪, 左轮手枪).",
+  "Sandbox_pointblankhf_PointBlankInstantKill": "零距离射击: 立即击杀",
+  "Sandbox_pointblankhf_PointBlankInstantKill_tooltip": "若开启, 在零距离射程内射中僵尸时, 僵尸会立即死亡.\n若为关闭, 则由下方数值决定额外伤害",
+  "Sandbox_pointblankhf_PointBlankMinTicksBetweenPointBlankKills": "零距离射击: 零距离击杀之间的最小间隔 (刻)",
+  "Sandbox_pointblankhf_PointBlankMinTicksBetweenPointBlankKills_tooltip": "你可以调高该数值, 以在零距离击杀之间强制加入\"冷却\"时间. 默认情况下, 这可确保零距离射击不会在同一刻内多次触发",
+  "Sandbox_pointblankhf_PointBlankMinimumBonusDamage": "零距离射击: 最低额外伤害 (仅在禁用立即击杀时生效)",
+  "Sandbox_pointblankhf_PointBlankMinimumBonusDamage_tooltip": "禁用立即击杀时, 会施加的最低额外伤害.\n例如, 若基础伤害为.0001, 实际额外伤害会被提升至至少该数值 (默认为.15).\n参考以下公式:\n\n TotalDamage = BaseDamage + PointBlankDamage\n PointBlankDamage = (Max(BaseDamage,PointBlankMinimumBonusDamage) * PointBlankBonusDamageMultiplier )\n",
+  "Sandbox_pointblankhf_PointBlankXpMultiplier": "零距离射击: 瞄准经验倍率",
+  "Sandbox_pointblankhf_PointBlankXpMultiplier_tooltip": "击杀僵尸获得的任何经验都会乘以该数值."
+}

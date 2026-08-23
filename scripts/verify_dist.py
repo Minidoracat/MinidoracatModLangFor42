@@ -1563,16 +1563,107 @@ def check_own_cn_glyphs(repo: str) -> tuple[bool, list[str], list[str]]:
 # **`Base.` 開頭不等於本體**：MOD 同樣能往 `module Base` 加物品（實例 `Base.44Clip20`
 # 是 mod 的高容量彈匣，vanilla 只有 `Base.44Clip`），故豁免只認 vanilla scoped 基準。
 ITEMNAME_DEAD_ALLOWLIST = "itemname_dead_allowlist.json"
+ITEM_FULLTYPES_MIN = 1000
+
+def _is_item_fulltype(value: str) -> bool:
+    """Check only invariants guaranteed by tracker's unescaped producer."""
+    return (
+        value == value.strip()
+        and "." in value[1:-1]
+        and not any(char in value for char in "{}\r\n")
+    )
+
+
+
+
+def _upstream_item_fulltypes(repo: str) -> set[str]:
+    """Return effective-branch `script_item_dn` fullTypes, fail-closed.
+
+    Module names are never inferred from suffixes. The only evidence accepted
+    by [15] is the exact `Module.Item` extracted by tracker schema 9+ from the
+    currently loadable branch. This keeps `Foo.Bar` distinct from `Other.Bar`
+    and prevents a missing module from being "repaired" to whichever suffix
+    happens to be unique in today's incomplete tracker universe.
+    """
+    path = os.path.join(repo, "tracker-state", "en_corpus_hashes.json")
+    with open(path, encoding="utf-8-sig") as fh:
+        state = json.load(fh)
+    if not isinstance(state, dict):
+        raise ValueError("en_corpus_hashes.json 頂層形狀壞損（須為 dict）")
+    mods = state.get("mods")
+    if not isinstance(mods, dict) or not mods:
+        raise ValueError("en_corpus_hashes.json 的 mods 形狀壞損（須為非空 dict）")
+    out: set[str] = set()
+    corrupt: list[str] = []
+    for wid, info in mods.items():
+        if not isinstance(info, dict):
+            corrupt.append(f"{wid}: mod entry 非 dict")
+            continue
+        records = info.get("records")
+        if not isinstance(records, dict):
+            corrupt.append(f"{wid}: records 非 dict")
+            continue
+        schema = info.get("extractor_schema")
+        if type(schema) is not int:
+            corrupt.append(f"{wid}: extractor_schema 非整數")
+            continue
+        parsed: list[tuple[str, str, str]] = []
+        for rid in records:
+            kind, first_sep, rest = rid.partition("|")
+            relpath, second_sep, key = rest.partition("|")
+            if (
+                kind not in tracker.EXTRACTOR_KINDS
+                or not first_sep or not second_sep or not relpath
+                or (not key and kind != "lua_gettext")
+            ):
+                corrupt.append(f"{wid}: 壞損 record `{rid}`")
+                continue
+            parsed.append((rid, kind, key))
+        if len(parsed) != len(records):
+            continue
+        if schema < tracker.ITEM_MODULE_SCHEMA:
+            continue
+        eff = tracker.resolve_effective_branches(records)
+        for rid, kind, full in parsed:
+            if kind != "script_item_dn":
+                continue
+            # Legacy/stale state can contain module-less item names even after a
+            # wid-level schema bump. They are undecidable, never exact evidence.
+            if "." not in full[1:-1] or full.startswith(f"{tracker.UNKNOWN_MODULE}."):
+                continue
+            if not _is_item_fulltype(full):
+                corrupt.append(f"{wid}: 壞損 script_item_dn fullType `{full}`")
+                continue
+            if tracker.is_effective(rid, eff):
+                out.add(full)
+    if corrupt:
+        raise ValueError(
+            f"en_corpus_hashes.json 有 {len(corrupt)} 處 ItemName 上游實據壞損"
+            f"（{'; '.join(corrupt[:5])}）")
+    if len(out) < ITEM_FULLTYPES_MIN:
+        raise ValueError(
+            f"en_corpus_hashes.json 只取得 {len(out)} 個有效分支 script_item_dn fullType"
+            f"（現況量級 15300+，下限 {ITEM_FULLTYPES_MIN}）——不得以零缺口放行")
+    return out
+
+
 
 
 def check_itemname_dead_keys(repo: str, dist_ch: str) -> tuple[bool, list[str], list[str]]:
-    """[15] `ItemName_` 前綴鍵必須另有裸 fullType，否則遊戲永遠讀不到。"""
+    """[15] Require exact effective fullType coverage or an explicit deferral.
+
+    `ItemName_` suffix matching is intentionally forbidden. Even one apparent
+    `*.Bar` candidate does not prove the module. A non-exact prefix is therefore
+    not ignored: it blocks until a human identifies the real module and repairs
+    it, or records why it cannot yet be repaired in the allowlist.
+    """
     files, err = _load_json_dir(dist_ch)
     if err:
         return False, err, []
     data = files.get("ItemName.json", {})
     pref = {k[len("ItemName_"):]: k for k in data if k.startswith("ItemName_")}
     bare = {k for k in data if not k.startswith("ItemName_")}
+    effective = _upstream_item_fulltypes(repo)
 
     vpath = os.path.join(repo, "sources", "vanilla_keys.json")
     with open(vpath, encoding="utf-8-sig") as fh:
@@ -1580,19 +1671,39 @@ def check_itemname_dead_keys(repo: str, dist_ch: str) -> tuple[bool, list[str], 
 
     apath = os.path.join(repo, "sources", ITEMNAME_DEAD_ALLOWLIST)
     with open(apath, encoding="utf-8-sig") as fh:
-        allow = json.load(fh).get("entries", {})
+        allow_data = json.load(fh)
+    if not isinstance(allow_data, dict) or "entries" not in allow_data:
+        raise ValueError(f"{ITEMNAME_DEAD_ALLOWLIST} 須為含 entries 的物件")
+    allow = allow_data["entries"]
+    if not isinstance(allow, dict) or any(
+        not isinstance(full, str) or not full
+        or not isinstance(reason, str) or not reason.strip()
+        for full, reason in allow.items()
+    ):
+        raise ValueError(
+            f"{ITEMNAME_DEAD_ALLOWLIST} entries 須為 {{鍵: 非空理由}} 物件")
 
-    fail = [
-        f"{pref[b]} 是死鍵且無裸鍵 `{b}`——玩家看到英文。"
-        f"補裸鍵，或查證後登記 sources/{ITEMNAME_DEAD_ALLOWLIST}"
-        for b in sorted(pref)
-        if b not in bare and b not in vanilla and b not in allow
-    ]
-    # 反向棘輪：已補好或已不存在的條目要從 allowlist 移除，否則清單會爛掉沒人發現
+    resolved = vanilla | (effective & bare)
+    fail: list[str] = []
+    for body in sorted(pref):
+        if body in resolved or body in allow:
+            continue
+        if body in effective:
+            fail.append(
+                f"{pref[body]} 對應 effective fullType `{body}`，但無精確裸鍵——"
+                f"玩家看到英文。補裸鍵，或查證後登記 sources/{ITEMNAME_DEAD_ALLOWLIST}")
+        else:
+            fail.append(
+                f"{pref[body]} 的 prefix body `{body}` 無法精確對上 effective "
+                f"script_item_dn fullType；禁止依 suffix 猜 module。請查 owner/mod script "
+                f"後補正確裸鍵，或登記 sources/{ITEMNAME_DEAD_ALLOWLIST}")
+    # A non-exact allowlist entry is an intentional unresolved-module deferral.
+    # It becomes stale only when its prefix disappears or independent evidence
+    # (vanilla, or effective tracker fullType plus shipped bare key) resolves it.
     warn = [
-        f"{ITEMNAME_DEAD_ALLOWLIST} 條目過時，請移除：{b}"
-        for b in sorted(allow)
-        if b in bare or b not in pref
+        f"{ITEMNAME_DEAD_ALLOWLIST} 條目過時，請移除：{full}"
+        for full in sorted(allow)
+        if full not in pref or full in resolved
     ]
     return not fail, fail, warn
 

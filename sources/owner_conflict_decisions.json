@@ -190,8 +190,8 @@
   },
   "ItemName|Base.M60": {
    "action": "translate",
-   "signature": "f9b12e529515ec65",
-   "reason": "「M60」與「Saco-Lowell M60」同指 M60 通用機槍（Saco-Lowell 是史實製造商），實體相同。但「薩科」品牌僅 Guns93 一家主張，Firearms 只稱 M60；去品牌改「M60通用機槍」是零偏置的中性寫法，對所有 owner 成立。",
+   "signature": "32191ba2f8800e32",
+   "reason": "「M60」與「Saco-Lowell M60」同指 M60 通用機槍（Saco-Lowell 是史實製造商），實體相同。但「薩科」品牌僅 Guns93 一家主張，Firearms 只稱 M60；去品牌改「M60通用機槍」是零偏置的中性寫法，對所有 owner 成立。 2026-08-22 重新錨定：tracker backfill-en 全庫重抽後 census 新增 owner 「Totally's NATO Firearms Pack B42」（EN 'M60 Medium Machine Gun'），仍指同一實體，既有中性譯名對其同樣成立，故僅更新 signature、裁決不變。",
    "ch": "M60通用機槍",
    "cn": "M60通用机枪"
   },
@@ -414,8 +414,8 @@
   },
   "ItemName|Base.M16A2": {
    "action": "translate",
-   "signature": "222fcf2ca4f3c94a",
-   "reason": "五 owner 均為 M16A2，同一實體；但廠牌互斥——GaelGun 標 Daniel Defense，現行譯名卻寫柯爾特（且其餘三 owner 無廠牌）。中性解法是去掉廠牌，'M16A2自動步槍' 對所有 owner 皆誠實。",
+   "signature": "3d6a40e75964c1fd",
+   "reason": "六 owner 中四家均為 M16A2，同一實體；但廠牌互斥——GaelGun 標 Daniel Defense，現行譯名卻寫柯爾特（且其餘三 owner 無廠牌）。中性解法是去掉廠牌，'M16A2自動步槍' 對所有 owner 皆誠實。 2026-08-22 重新錨定：tracker backfill-en 全庫重抽後 census 新增 owner 「Totally's NATO Firearms Pack B42」（EN 'M16A2'），仍指同一實體，既有中性譯名對其同樣成立，故僅更新 signature、裁決不變。",
    "ch": "M16A2自動步槍",
    "cn": "M16A2自动步枪"
   },
@@ -940,7 +940,7 @@
   "Recipes|MakeTortilla": {
    "action": "unship",
    "signature": "6e81123984d7f843",
-   "reason": "2026-08-21 裁決不出貨：同一 Recipes|MakeTortilla 在不同 owner 是不同食物。2875059598/Herbalist（與 NoBiofuel 變體）與 3622474939/AbuelitaLindaMexicanFoods 的 EN 是 'Make Tortilla'，對應墨西哥玉米餅（Herbalist 另有 TortillaDough／TortillaUncooked／MakeTortillaChips；AbuelitaLinda 物品 AbuelitaLinda.AL_Tortilla='Tortilla'）。3600616323/Todo Caserito 的 EN 是 'Prepare lard biscuits'——阿根廷 tortillas de grasa（豬油餅），且該 mod 另有 MakeTortillaCasera='Prepare homemade tortillas' 專門表示真正的玉米餅。玉米餅與豬油餅沒有誠實中性譯名，JSON 無啟用偵測。"
+   "reason": "2026-08-21 裁決不出貨：同一 Recipes|MakeTortilla 在不同 owner 是不同食物。2875059598/Herbalist（與 NoBiofuel 變體）與 3622474939/AbuelitaLindaMexicanFoods 的 EN 是 'Make Tortilla'，對應墨西哥玉米餅（Herbalist 另有 TortillaDough／TortillaUncooked／MakeTortillaChips；AbuelitaLinda 物品 AbuelitaLinda.AL_Tortilla='Tortilla'）。3600616323/Todo Caserito 的 EN 是 'Prepare lard biscuits'——阿根廷 tortillas de grasa（豬油餅），且該 mod 另有 MakeTortillaCasera，但現行腳本／物品已查證為西班牙煎蛋餅，不能替代本鍵的阿根廷豬油餅語意。墨西哥玉米餅與阿根廷豬油餅沒有誠實中性譯名，JSON 無啟用偵測。"
   },
   "UI|UI_trait_BloodlustDesc": {
    "action": "unship",
@@ -960,6 +960,1191 @@
    "reason": "兩個 owner 都是「討厭下雨，淋雨心情變差」：2459400130/Dynamic-Traits-main 全文即此；2914075159/Evolving Traits World 另有「外出雨天緩慢增加不高興／壓力／無聊、打傘效果減半」與同一段 Umbrella 歌詞。照 #232 Tooltip 先例刪去單側機制與歌詞，保留兩邊皆真的交集。",
    "ch": "你討厭下雨, 淋雨時心情會變差.",
    "cn": "你讨厌下雨, 淋雨时心情会变差."
+  },
+  "IG_UI|IGUI_VehicleNamefhq240SXCabrio": {
+   "action": "unship",
+   "signature": "d610e886b701f77a",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun RC2400 Convertible」（規避商標的虛構品牌）vs Real Names Addon「Nissan 240SX Convertible (S13)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq250GTO": {
+   "action": "unship",
+   "signature": "a9ae3197fe1ec292",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Impennarsi Stinger 3000」（規避商標的虛構品牌）vs Real Names Addon「Ferrari 250 GTO Series 1」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq250GTO3387GT": {
+   "action": "unship",
+   "signature": "03d57e6f165e5a58",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Impennarsi Stinger 3000」（規避商標的虛構品牌）vs Real Names Addon「Ferrari 250 GTO (S/N 3387GT)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq250GTO3451GT": {
+   "action": "unship",
+   "signature": "28244ba3ce7fb99d",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Impennarsi Stinger 3000」（規避商標的虛構品牌）vs Real Names Addon「Ferrari 250 GTO (S/N 3451GT)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq250GTO3505GT": {
+   "action": "unship",
+   "signature": "3f4ce2ed485d2ea3",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Impennarsi Stinger 3000」（規避商標的虛構品牌）vs Real Names Addon「Ferrari 250 GTO (S/N 3505GT)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq250GTO3705GT": {
+   "action": "unship",
+   "signature": "91dadbaf122c7325",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Impennarsi Stinger 3000」（規避商標的虛構品牌）vs Real Names Addon「Ferrari 250 GTO (S/N 3705GT)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq250GTO4153GT": {
+   "action": "unship",
+   "signature": "973cade9ab163f4d",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Impennarsi Stinger 3000」（規避商標的虛構品牌）vs Real Names Addon「Ferrari 250 GTO (S/N 4153GT)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq250GTORed": {
+   "action": "unship",
+   "signature": "a9ae3197fe1ec292",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Impennarsi Stinger 3000」（規避商標的虛構品牌）vs Real Names Addon「Ferrari 250 GTO Series 1」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq300ZXZ32": {
+   "action": "unship",
+   "signature": "bff4b4138ae0ec49",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun 200XV」（規避商標的虛構品牌）vs Real Names Addon「Nissan 300ZX (Z32)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq300ZXZ32Forza": {
+   "action": "unship",
+   "signature": "8fee52ddc06a571a",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun 200XV Rossi Motorsport Custom」（規避商標的虛構品牌）vs Real Names Addon「Nissan 300ZX (Z32) Rossi Motorsport Custom」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq300ZXZ32MC2Police": {
+   "action": "unship",
+   "signature": "23eacd9e1e875626",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun 200XV Tokyo Police Car」（規避商標的虛構品牌）vs Real Names Addon「Nissan 300ZX (Z32) Tokyo Police Car」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq300ZXZ32Plus2": {
+   "action": "unship",
+   "signature": "a013fccaf5eff0d0",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun 200XV 2+2」（規避商標的虛構品牌）vs Real Names Addon「Nissan 300ZX (Z32) 2+2」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq300ZXZ32Slicktop": {
+   "action": "unship",
+   "signature": "bff4b4138ae0ec49",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun 200XV」（規避商標的虛構品牌）vs Real Names Addon「Nissan 300ZX (Z32)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq57BelAir": {
+   "action": "unship",
+   "signature": "3041c26029dcdd5f",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Chevalier Bomber」（規避商標的虛構品牌）vs Real Names Addon「Chevrolet '57 Bel Air」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq57BelAirKSP": {
+   "action": "unship",
+   "signature": "ac42b782df0f0731",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Chevalier Bomber Police」（規避商標的虛構品牌）vs Real Names Addon「Chevrolet '57 150 KSP」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq57BelAirPolice": {
+   "action": "unship",
+   "signature": "8e95e1db4a4944fd",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Chevalier Bomber Police」（規避商標的虛構品牌）vs Real Names Addon「Chevrolet '57 Bel Air Police」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq57Chev150": {
+   "action": "unship",
+   "signature": "1dbbbd8f96b1b9b3",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Chevalier Sedan」（規避商標的虛構品牌）vs Real Names Addon「Chevrolet 150」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq57Chev1502Door": {
+   "action": "unship",
+   "signature": "3502fa5410a45a5d",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Chevalier 2-Door Sedan」（規避商標的虛構品牌）vs Real Names Addon「Chevrolet 150 2-Door Sedan」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq57Chev210": {
+   "action": "unship",
+   "signature": "03c9923917de9e8f",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Chevalier Sedan 2-Series」（規避商標的虛構品牌）vs Real Names Addon「Chevrolet 210」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq57Chev2102Door": {
+   "action": "unship",
+   "signature": "68fb4a146ad08db8",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Chevalier 2-Door Sedan 2-Series」（規避商標的虛構品牌）vs Real Names Addon「Chevrolet 210 2-Door Sedan」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq58Belvedere": {
+   "action": "unship",
+   "signature": "901713eaa1869ae0",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Mayflower Bellezza」（規避商標的虛構品牌）vs Real Names Addon「Plymouth '58 Belvedere」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq58Fury": {
+   "action": "unship",
+   "signature": "303dbf2e2a1c474b",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Mayflower Vengeance」（規避商標的虛構品牌）vs Real Names Addon「Plymouth '58 Fury」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq58Porsche356": {
+   "action": "unship",
+   "signature": "1ca837883bee75aa",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Vornehm Ameise」（規避商標的虛構品牌）vs Real Names Addon「Porsche 356A」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq58Savoy": {
+   "action": "unship",
+   "signature": "0750303c3e5aabdb",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Mayflower Arles」（規避商標的虛構品牌）vs Real Names Addon「Plymouth '58 Savoy」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq58Sub360": {
+   "action": "unship",
+   "signature": "6fd707f1f57ac029",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades Tentomushi」（規避商標的虛構品牌）vs Real Names Addon「Subaru 360」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq61KarmannGhia": {
+   "action": "unship",
+   "signature": "efdc5627d36095d6",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Krichten Giovanni Klages」（規避商標的虛構品牌）vs Real Names Addon「Volkswagen Type 14 Karmann Ghia」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq67Porsche911": {
+   "action": "unship",
+   "signature": "860e7027e7404a31",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Vornehm Sternschnuppe S」（規避商標的虛構品牌）vs Real Names Addon「Porsche 911」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq67Porsche912": {
+   "action": "unship",
+   "signature": "dcca6909050b813e",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Vornehm Sternschnuppe」（規避商標的虛構品牌）vs Real Names Addon「Porsche 912」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq69GTO": {
+   "action": "unship",
+   "signature": "621c0a2365d32430",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Roanoke '69 Goat」（規避商標的虛構品牌）vs Real Names Addon「Pontiac '69 GTO」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq70Challenger": {
+   "action": "unship",
+   "signature": "a9d81e954cc72b28",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Dash Competitor」（規避商標的虛構品牌）vs Real Names Addon「Dodge '70 Challenger」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq70ChallengerRT": {
+   "action": "unship",
+   "signature": "10d2a4dc6ec379c8",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Dash Competitor T/S」（規避商標的虛構品牌）vs Real Names Addon「Dodge '70 Challenger R/T」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq70ChallengerSF": {
+   "action": "unship",
+   "signature": "ab0d84868098961e",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Dash Competitor Detective Special」（規避商標的虛構品牌）vs Real Names Addon「Dodge '70 Challenger Detective Special」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq70ChallengerShaker": {
+   "action": "unship",
+   "signature": "10d2a4dc6ec379c8",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Dash Competitor T/S」（規避商標的虛構品牌）vs Real Names Addon「Dodge '70 Challenger R/T」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq70ChallengerTA": {
+   "action": "unship",
+   "signature": "83c5a1e31cdfe411",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Dash Competitor S/R」（規避商標的虛構品牌）vs Real Names Addon「Dodge '70 Challenger T/A」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq70ChallengerTARace": {
+   "action": "unship",
+   "signature": "44a5c32f5a388d1a",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Dash Competitor Race Car」（規避商標的虛構品牌）vs Real Names Addon「Dodge '70 Challenger Trans-Am Race Car」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq70Porsche914": {
+   "action": "unship",
+   "signature": "070484a19d106f3e",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Vornehm Mit4」（規避商標的虛構品牌）vs Real Names Addon「Porsche 914」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq71Cuda": {
+   "action": "unship",
+   "signature": "9fb221911a39c9aa",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Mayflower Pike」（規避商標的虛構品牌）vs Real Names Addon「Plymouth '71 'Cuda」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq78BRAT_DL": {
+   "action": "unship",
+   "signature": "f4952a3bc5708fc0",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades RSCL」（規避商標的虛構品牌）vs Real Names Addon「Subaru BRAT DL」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq78BRAT_DL_Camp": {
+   "action": "unship",
+   "signature": "f4952a3bc5708fc0",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades RSCL」（規避商標的虛構品牌）vs Real Names Addon「Subaru BRAT DL」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq78BRAT_GL": {
+   "action": "unship",
+   "signature": "f2d678c6917eef06",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades RSCL SE」（規避商標的虛構品牌）vs Real Names Addon「Subaru BRAT GL」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq78BRAT_GL_Camp": {
+   "action": "unship",
+   "signature": "f2d678c6917eef06",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades RSCL SE」（規避商標的虛構品牌）vs Real Names Addon「Subaru BRAT GL」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq78Scirocco": {
+   "action": "unship",
+   "signature": "5930706241520a57",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Krichten Notus」（規避商標的虛構品牌）vs Real Names Addon「Volkswagen '78 Scirocco (Mk. 1)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq78SciroccoS": {
+   "action": "unship",
+   "signature": "dbc97267d539ad0c",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Krichten Notus Sport」（規避商標的虛構品牌）vs Real Names Addon「Volkswagen '78 Scirocco S (Mk. 1)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq78SubWag_DL": {
+   "action": "unship",
+   "signature": "913263704cac5e59",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades '78 Fedele Wagon」（規避商標的虛構品牌）vs Real Names Addon「Subaru DL Wagon」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq78SubWag_GL": {
+   "action": "unship",
+   "signature": "1c9b2603c4e9685a",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades '78 Fedele Wagon 4WD」（規避商標的虛構品牌）vs Real Names Addon「Subaru GL Wagon」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq83PulsarNX": {
+   "action": "unship",
+   "signature": "ab6a19639fdd0376",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Losan Neutron SP」（規避商標的虛構品牌）vs Real Names Addon「 Datsun-Nissan Pulsar NX (N12)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq85SubXT": {
+   "action": "unship",
+   "signature": "22112c31457310a8",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades WDG」（規避商標的虛構品牌）vs Real Names Addon「Subaru XT GL」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq85SubXT_4WD_T": {
+   "action": "unship",
+   "signature": "c2abdc2922c041f3",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades WDG 4WD Turbo」（規避商標的虛構品牌）vs Real Names Addon「Subaru XT GL-10 Turbo-Traction」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq85SubXT_Rally": {
+   "action": "unship",
+   "signature": "c4be5088a3cb517a",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades WDG Rally Car」（規避商標的虛構品牌）vs Real Names Addon「Subaru XT Rally Car」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq86Accord": {
+   "action": "unship",
+   "signature": "375906d2d78db3d9",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Tokai Codrac」（規避商標的虛構品牌）vs Real Names Addon「Honda Accord (CA)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq86AccordAeroDeck": {
+   "action": "unship",
+   "signature": "09040dabdec85bde",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Tokai Codrac SportWag」（規避商標的虛構品牌）vs Real Names Addon「Honda Accord AeroDeck (CA)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq88Mazda626": {
+   "action": "unship",
+   "signature": "8305a321ebb08c87",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Matsuda Lepus」（規避商標的虛構品牌）vs Real Names Addon「Mazda 626 (GD)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq91CutlassCiera": {
+   "action": "unship",
+   "signature": "bf78bcb704b58d69",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Goldsmobile Saber Aires」（規避商標的虛構品牌）vs Real Names Addon「Oldsmobile Cutlass Ciera」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq91CutlassCruiser": {
+   "action": "unship",
+   "signature": "c80a07e1da9bef8e",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Goldsmobile Saber Wagon」（規避商標的虛構品牌）vs Real Names Addon「Oldsmobile Cutlass Cruiser」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq91CutlassCruiser_Taxi": {
+   "action": "unship",
+   "signature": "5de5407ff1fd099f",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Goldsmobile Saber Wagon Taxi」（規避商標的虛構品牌）vs Real Names Addon「Oldsmobile Cutlass Cruiser Taxi」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq92Econoline": {
+   "action": "unship",
+   "signature": "d6eb4c2be0c3b374",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin New Valuline」（規避商標的虛構品牌）vs Real Names Addon「Ford Econoline」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq92Econoline4Door": {
+   "action": "unship",
+   "signature": "d6eb4c2be0c3b374",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin New Valuline」（規避商標的虛構品牌）vs Real Names Addon「Ford Econoline」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq92EconolineAmbulance": {
+   "action": "unship",
+   "signature": "b8686a1bedcd2a28",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin New Valuline Ambulance」（規避商標的虛構品牌）vs Real Names Addon「Ford Econoline Ambulance」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq92EconolineAmbulanceLightbar": {
+   "action": "unship",
+   "signature": "b8686a1bedcd2a28",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin New Valuline Ambulance」（規避商標的虛構品牌）vs Real Names Addon「Ford Econoline Ambulance」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq92EconolinePanel": {
+   "action": "unship",
+   "signature": "d7a485640b2c3463",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin New Valuline Cargo Van」（規避商標的虛構品牌）vs Real Names Addon「Ford Econoline Cargo Van」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq92EconolineT3Ambulance": {
+   "action": "unship",
+   "signature": "53fe3f0c9e3e4df0",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin New Valuline Type III Ambulance」（規避商標的虛構品牌）vs Real Names Addon「Ford Econoline Type III Ambulance」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq92EconolineValkyrie": {
+   "action": "unship",
+   "signature": "0a831d9cf9e4c5ce",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin New Valuline Valkyrie Custom」（規避商標的虛構品牌）vs Real Names Addon「Ford Econoline Valkyrie Custom」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq92EconolineXL": {
+   "action": "unship",
+   "signature": "42b8ea18854a6d9e",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin New Valuline XL」（規避商標的虛構品牌）vs Real Names Addon「Ford Econoline XL」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq92EconolineXLPanel": {
+   "action": "unship",
+   "signature": "5ce4c02b32d3abd3",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin New Valuline XL Cargo Van」（規避商標的虛構品牌）vs Real Names Addon「Ford Econoline XL Cargo Van」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq92Escort": {
+   "action": "unship",
+   "signature": "ea6123fe513b889c",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Entourage」（規避商標的虛構品牌）vs Real Names Addon「Ford Escort」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq92EscortWag": {
+   "action": "unship",
+   "signature": "d21ca5dde1568a49",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Entourage Wagon」（規避商標的虛構品牌）vs Real Names Addon「Ford Escort Wagon」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq92Tracer": {
+   "action": "unship",
+   "signature": "6f0ffef7a0c6d9c6",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Minerva Spearhead」（規避商標的虛構品牌）vs Real Names Addon「Mercury Tracer」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq92TracerWag": {
+   "action": "unship",
+   "signature": "df7fdea4f87f22e1",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Minerva Spearhead Wagon」（規避商標的虛構品牌）vs Real Names Addon「Mercury Tracer Wagon」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq93Ranger": {
+   "action": "unship",
+   "signature": "3cda7a82f6231e19",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Mojave」（規避商標的虛構品牌）vs Real Names Addon「Ford Ranger」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq93RangerLBed": {
+   "action": "unship",
+   "signature": "471b4343288471de",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Mojave Long Bed」（規避商標的虛構品牌）vs Real Names Addon「Ford Ranger Long Bed」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq93RangerSCab": {
+   "action": "unship",
+   "signature": "0408e4e174b33bf2",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Mojave Extended Cab」（規避商標的虛構品牌）vs Real Names Addon「Ford Ranger Super Cab」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqAZ1": {
+   "action": "unship",
+   "signature": "55ae2e6a69e0d985",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Matsuda MZ-660」（規避商標的虛構品牌）vs Real Names Addon「Mazda Autozam AZ-1」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqB10M": {
+   "action": "unship",
+   "signature": "5c1fa2db81b398ec",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Bohag MT20S」（規避商標的虛構品牌）vs Real Names Addon「Volvo B10M」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqB10M_Riv": {
+   "action": "unship",
+   "signature": "5c1fa2db81b398ec",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Bohag MT20S」（規避商標的虛構品牌）vs Real Names Addon「Volvo B10M」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqBeat": {
+   "action": "unship",
+   "signature": "d1e9784a83bdee90",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Tokai Decibel」（規避商標的虛構品牌）vs Real Names Addon「Honda Beat」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqBeatMugen": {
+   "action": "unship",
+   "signature": "a1abf08bdb05c6d0",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Tokai Sokudo Decibel」（規避商標的虛構品牌）vs Real Names Addon「Honda Mugen Beat」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqBeatRace": {
+   "action": "unship",
+   "signature": "edf05418696ca480",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Tokai Decibel Race Car」（規避商標的虛構品牌）vs Real Names Addon「Honda Beat Race Car」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqBomberBFS": {
+   "action": "translate",
+   "signature": "fdbdabf7bffac842",
+   "reason": "共同中性名稱已查證：base 與 Real Names owner 的有效 EN 分別只差品牌前綴，兩者共同且完整可識別的名稱為 `Bomber BFS`；JSON 出貨此值對兩 owner 都成立，無須退化為英文。",
+   "ch": "Bomber BFS",
+   "cn": "Bomber BFS"
+  },
+  "IG_UI|IGUI_VehicleNamefhqBronco": {
+   "action": "unship",
+   "signature": "05da522243161dfc",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Rodeo」（規避商標的虛構品牌）vs Real Names Addon「Ford Bronco」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqBroncoHalfCab": {
+   "action": "unship",
+   "signature": "4a7e1fd121e16837",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Rodeo Pickup」（規避商標的虛構品牌）vs Real Names Addon「Ford Bronco Half-Cab」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqBroncoHalfCabOffroad": {
+   "action": "unship",
+   "signature": "c88cb4a485aba2f7",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Rodeo Pickup Offroad」（規避商標的虛構品牌）vs Real Names Addon「Ford Bronco Half-Cab Offroad」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqBroncoOffroad": {
+   "action": "unship",
+   "signature": "40af7d1963e56520",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Rodeo Offroad」（規避商標的虛構品牌）vs Real Names Addon「Ford Bronco Offroad」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqCappuccino": {
+   "action": "unship",
+   "signature": "2f0a86bddfa23d2d",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Takatsuka Espresso」（規避商標的虛構品牌）vs Real Names Addon「Suzuki Cappuccino」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqCara": {
+   "action": "unship",
+   "signature": "3a61fd95eee8a20f",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Takatsuka Gina」（規避商標的虛構品牌）vs Real Names Addon「Suzuki Cara」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqCelicaGT4RC": {
+   "action": "unship",
+   "signature": "ce1b04c6fd93acee",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Paraisa 4WDRS-SE」（規避商標的虛構品牌）vs Real Names Addon「Toyota Celica GT-FOUR RC」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqCelicaST185": {
+   "action": "unship",
+   "signature": "67e996b8a6e03a75",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Paraisa 4WD Turbo」（規避商標的虛構品牌）vs Real Names Addon「Toyota Celica All-Trac Turbo (ST185)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqCelicaST185Rally": {
+   "action": "unship",
+   "signature": "2c6ae8dcbacc359e",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Paraisa Rally Car」（規避商標的虛構品牌）vs Real Names Addon「Toyota Celica Rally Car (ST185)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqCelicaT180": {
+   "action": "unship",
+   "signature": "e89c155863048548",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Paraisa (Early)」（規避商標的虛構品牌）vs Real Names Addon「Toyota Celica ST (T180)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqCelicaT180Cabrio": {
+   "action": "unship",
+   "signature": "0d1e08183170c19f",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Paraisa Convertible」（規避商標的虛構品牌）vs Real Names Addon「Toyota Celica Convertible (T180)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqCelicaT180Coupe": {
+   "action": "unship",
+   "signature": "3336eefb8ab42ff0",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Paraisa Coupe」（規避商標的虛構品牌）vs Real Names Addon「Toyota Celica ST Coupe (T180)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqCelicaT180Coupe_GT": {
+   "action": "unship",
+   "signature": "e6cd8641ad2c8f74",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Paraisa GT Coupe」（規避商標的虛構品牌）vs Real Names Addon「Toyota Celica GT Coupe (T180)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqChaserJZX90": {
+   "action": "unship",
+   "signature": "b5a359a0852d7a85",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Cazador」（規避商標的虛構品牌）vs Real Names Addon「Toyota Chaser (X90)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqChili": {
+   "action": "unship",
+   "signature": "24d78b1e5cadc367",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Diamant Piment Derby」（規避商標的虛構品牌）vs Real Names Addon「Chili」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqCountach": {
+   "action": "unship",
+   "signature": "c7254ca3dfbd7a71",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Iltoro Vicio」（規避商標的虛構品牌）vs Real Names Addon「Lamborghini Countach LP400」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqCrestaJZX90": {
+   "action": "unship",
+   "signature": "78cb30f9956ca5a3",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Penacho」（規避商標的虛構品牌）vs Real Names Addon「Toyota Cresta (X90)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqDeltaEvo": {
+   "action": "unship",
+   "signature": "4361e6ac65d65425",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Rallia Kappa RS」（規避商標的虛構品牌）vs Real Names Addon「Lancia Delta Integrale Evoluzione」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqDeltaEvoRally": {
+   "action": "unship",
+   "signature": "fbc68d00982d7d1e",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Rallia Kappa RS Rally Car」（規避商標的虛構品牌）vs Real Names Addon「Lancia Delta Integrale Evoluzione Rally Car」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqDiablo": {
+   "action": "unship",
+   "signature": "2b0b4ff98c67b0a3",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Iltoro Romulus」（規避商標的虛構品牌）vs Real Names Addon「Lamborghini Diablo」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqDiabloInterceptor": {
+   "action": "unship",
+   "signature": "67dad3406295889c",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Iltoro Romulus Police Interceptor」（規避商標的虛構品牌）vs Real Names Addon「Lamborghini Diablo Police Interceptor」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqDiabloPolice": {
+   "action": "unship",
+   "signature": "6de38ef557640280",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Iltoro Romulus Police Car」（規避商標的虛構品牌）vs Real Names Addon「Lamborghini Diablo Police Car」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqDiabloSE30": {
+   "action": "unship",
+   "signature": "520227252089a58a",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Iltoro Romulus Anniversary Edition」（規避商標的虛構品牌）vs Real Names Addon「Lamborghini Diablo SE30」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqDiabloStrosek": {
+   "action": "unship",
+   "signature": "2ab13825ae9cbcce",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Iltoro Romulus DE Custom」（規避商標的虛構品牌）vs Real Names Addon「Strosek Lamborghini Diablo」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqE36318iCoupe": {
+   "action": "unship",
+   "signature": "889129059c7fe2a3",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Wittelsbach Konig」（規避商標的虛構品牌）vs Real Names Addon「BMW 318i (E36)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqE36318iSedan": {
+   "action": "unship",
+   "signature": "cec01f0a01b2fa61",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Wittelsbach Konig Sedan」（規避商標的虛構品牌）vs Real Names Addon「BMW 318i Sedan (E36)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqE36M3Coupe": {
+   "action": "unship",
+   "signature": "58ce67a45d8ab864",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Wittelsbach Konig RK」（規避商標的虛構品牌）vs Real Names Addon「BMW M3 (E36)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqE36M3GTR": {
+   "action": "unship",
+   "signature": "d15f4d796775f379",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Wittelsbach Konig RK GT」（規避商標的虛構品牌）vs Real Names Addon「BMW M3 GTR (E36)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqE36M3GTRMW": {
+   "action": "unship",
+   "signature": "2fda7414955636ff",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Wittelsbach Konig RK GT 'Blacklist'」（規避商標的虛構品牌）vs Real Names Addon「BMW M3 GTR (E36) 'Most Wanted'」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqE36M3Sedan": {
+   "action": "unship",
+   "signature": "e01cab5607c48ea4",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Wittelsbach Konig RK Sedan」（規避商標的虛構品牌）vs Real Names Addon「BMW M3 Sedan (E36)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangGT": {
+   "action": "unship",
+   "signature": "147590fef52fb254",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec GT」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang GT」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangGTCabrio": {
+   "action": "unship",
+   "signature": "9752ad17d0661934",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec GT Convertible」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang GT Convertible」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangHatchSSP": {
+   "action": "unship",
+   "signature": "1927273555e87789",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec Police」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang SSP」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangHatchSSPLightbar": {
+   "action": "unship",
+   "signature": "1927273555e87789",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec Police」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang SSP」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangLX": {
+   "action": "unship",
+   "signature": "da9693fedb4ff11d",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangLX50": {
+   "action": "unship",
+   "signature": "b6624ea3b1f39a88",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec  5.0L」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang  5.0L」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangLX50Custom": {
+   "action": "unship",
+   "signature": "da9693fedb4ff11d",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangLXCabrio": {
+   "action": "unship",
+   "signature": "98ec4083fec6e217",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec Convertible」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang LX Convertible」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangLXCabrio50": {
+   "action": "unship",
+   "signature": "96af2bbd3753aa9d",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec 5.0L Convertible」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang LX 5.0L Convertible」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangLXCoupe": {
+   "action": "unship",
+   "signature": "da9693fedb4ff11d",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangLXCoupe50": {
+   "action": "unship",
+   "signature": "70db21922bce1795",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec 5.0L」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang 5.0L」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangPanda": {
+   "action": "unship",
+   "signature": "cc72d22902020dde",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec 'Panda'」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang 'Panda'」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangSAACMkII": {
+   "action": "unship",
+   "signature": "c4c10d8ed6560289",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec SE」（規避商標的虛構品牌）vs Real Names Addon「SAAC Mustang Mk. II」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangSSP": {
+   "action": "unship",
+   "signature": "1927273555e87789",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec Police」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang SSP」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangSSPLightbar": {
+   "action": "unship",
+   "signature": "1927273555e87789",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec Police」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang SSP」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangSVO": {
+   "action": "unship",
+   "signature": "73e05688e8a7bb2b",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec TS」（規避商標的虛構品牌）vs Real Names Addon「Ford Mustang SVO」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangSVO2": {
+   "action": "unship",
+   "signature": "73e05688e8a7bb2b",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec TS」（規避商標的虛構品牌）vs Real Names Addon「Ford Mustang SVO」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangSVT": {
+   "action": "unship",
+   "signature": "6a657c4891d2b7b0",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec Stinger」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang SVT Cobra」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangSVTR": {
+   "action": "unship",
+   "signature": "843c65cef2e54f49",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Fennec Stinger S」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang Cobra R」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFBMustangU2": {
+   "action": "unship",
+   "signature": "3be5a2a102a8ef97",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin Caballo Air Force Chase Car」（規避商標的虛構品牌）vs Real Names Addon「Ford Fox Body Mustang USAF U-2 Chase Car」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFiero": {
+   "action": "unship",
+   "signature": "786aeedd1eef3812",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Roanoke Enfuego 4RS」（規避商標的虛構品牌）vs Real Names Addon「Pontiac Fiero 2M4」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFieroGT": {
+   "action": "unship",
+   "signature": "e930a5ef530a2d11",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Roanoke Enfuego GT Coupe」（規避商標的虛構品牌）vs Real Names Addon「Pontiac Fiero GT」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFieroGTFastback": {
+   "action": "unship",
+   "signature": "eb0801816a94b77e",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Roanoke Enfuego GT」（規避商標的虛構品牌）vs Real Names Addon「Pontiac Fiero GT Fastback」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFieroIndy": {
+   "action": "unship",
+   "signature": "25077303aab6101a",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Roanoke Enfuego Indy」（規避商標的虛構品牌）vs Real Names Addon「Pontiac Indy Fiero」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFieroJalapeno": {
+   "action": "unship",
+   "signature": "d9dd5a011c0b1330",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Roanoke Enfuego Custom Buggy」（規避商標的虛構品牌）vs Real Names Addon「PISA Jalapeño Fiero」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqFieroPace": {
+   "action": "unship",
+   "signature": "3468f66f289ae6cb",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Roanoke Enfuego Pace Car」（規避商標的虛構品牌）vs Real Names Addon「Pontiac Fiero Pace Car」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqG4Coupe": {
+   "action": "unship",
+   "signature": "b3bef051b35947a9",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Walklett 105GT」（規避商標的虛構品牌）vs Real Names Addon「Ginetta G4 Coupe」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqGT40": {
+   "action": "unship",
+   "signature": "16bc0447ca7d19cb",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin LM70」（規避商標的虛構品牌）vs Real Names Addon「Ford GT40 Mk. I」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqGT40Gulf": {
+   "action": "unship",
+   "signature": "0a6cb0bbbd36c6d6",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin LM70 Race Car」（規避商標的虛構品牌）vs Real Names Addon「Ford GT40 Mk. I Race Car」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqGT40LM": {
+   "action": "unship",
+   "signature": "ba4710babe49911d",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin LM70 GTLM Edition」（規避商標的虛構品牌）vs Real Names Addon「Ford GT40 Mk. I LM Edition」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqGT40MkII": {
+   "action": "unship",
+   "signature": "56e34b7372a06fb2",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin LM70 II」（規避商標的虛構品牌）vs Real Names Addon「Ford GT40 Mk. II」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqGT40MkIIRace": {
+   "action": "unship",
+   "signature": "456424368d8f1da2",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Franklin LM70 II Race Car」（規避商標的虛構品牌）vs Real Names Addon「Ford GT40 Mk. II '66 Le Mans Race Car」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqH1": {
+   "action": "unship",
+   "signature": "0d629c52d76386e3",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Delta Mark One」（規避商標的虛構品牌）vs Real Names Addon「Hummer H1」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqH1Pickup": {
+   "action": "unship",
+   "signature": "10a7cc4084a0ba65",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Delta Mark One」（規避商標的虛構品牌）vs Real Names Addon「Hummer H1 Pickup」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqH1Pickup_Offroad": {
+   "action": "unship",
+   "signature": "b711415f2f2f670f",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Delta Mark One」（規避商標的虛構品牌）vs Real Names Addon「Hummer H1 Offroad Pickup」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqH1_Offroad": {
+   "action": "unship",
+   "signature": "e87184ab05ecc221",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Delta Mark One」（規避商標的虛構品牌）vs Real Names Addon「Hummer H1 Offroad」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqHQPanelVan": {
+   "action": "unship",
+   "signature": "475228ae7800b7ce",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Hoffstone Panel Van」（規避商標的虛構品牌）vs Real Names Addon「Holden Panel Van (HQ)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqHQSandman": {
+   "action": "unship",
+   "signature": "0d576af8eb295f2d",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Hoffstone Shoreline」（規避商標的虛構品牌）vs Real Names Addon「Holden Sandman (HQ)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqHQSandmanUte": {
+   "action": "unship",
+   "signature": "ebbc8f7faad5ebc1",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Hoffstone Shoreline Ute」（規避商標的虛構品牌）vs Real Names Addon「Holden Sandman Ute (HQ)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqHQUte": {
+   "action": "unship",
+   "signature": "363a586218ed7478",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Hoffstone Ute」（規避商標的虛構品牌）vs Real Names Addon「Holden Ute (HQ)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqImpreza": {
+   "action": "unship",
+   "signature": "8498a0c848aad01b",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades Scozzese」（規避商標的虛構品牌）vs Real Names Addon「Subaru Impreza (GC)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqImprezaCoupe": {
+   "action": "unship",
+   "signature": "c1cebcf7a411a497",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades Scozzese Coupe」（規避商標的虛構品牌）vs Real Names Addon「Subaru Impreza (GM)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqImprezaOutback": {
+   "action": "unship",
+   "signature": "ec5f66b6c890c936",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades Scozzese Trailcruiser」（規避商標的虛構品牌）vs Real Names Addon「Subaru Impreza Outback (GF)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqImprezaRally": {
+   "action": "unship",
+   "signature": "4a31044a4a04cad8",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades Scozzese Prototype Rally Car」（規避商標的虛構品牌）vs Real Names Addon「Subaru WRC 555 Impreza Prototype」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqImprezaWRX": {
+   "action": "unship",
+   "signature": "a62d44f93148958c",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades Scozzese RCS」（規避商標的虛構品牌）vs Real Names Addon「Subaru Impreza WRX (GC)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqImprezaWRXWag": {
+   "action": "unship",
+   "signature": "1a22336179ac56a0",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades Scozzese RCS Wagon」（規避商標的虛構品牌）vs Real Names Addon「Subaru Impreza WRX (GF)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqImprezaWRXWagOffroad": {
+   "action": "unship",
+   "signature": "3ab1eaa4a6fd5b8f",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades Scozzese RCS Wagon Offroad」（規避商標的虛構品牌）vs Real Names Addon「Subaru Impreza WRX Offroad (GF)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqImprezaWag": {
+   "action": "unship",
+   "signature": "2d2b90ebf61e7083",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades Scozzese Wagon」（規避商標的虛構品牌）vs Real Names Addon「Subaru Impreza (GF)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqInfJ30": {
+   "action": "unship",
+   "signature": "1edbb6af7a767ae0",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Mobius Comona」（規避商標的虛構品牌）vs Real Names Addon「Infiniti J30 (Y32)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqInfJ30t": {
+   "action": "unship",
+   "signature": "2668ee3916b7016d",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Mobius Comona S」（規避商標的虛構品牌）vs Real Names Addon「Infiniti J30t (Y32)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqLM002": {
+   "action": "unship",
+   "signature": "4da188bb087c2216",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Iltoro R4-M80」（規避商標的虛構品牌）vs Real Names Addon「Lamborghini LM002」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqLM002Estate": {
+   "action": "unship",
+   "signature": "aba1e5b08bc281fe",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Iltoro R4-M80 Estate」（規避商標的虛構品牌）vs Real Names Addon「Lamborghini LM002 Estate」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqLeCar": {
+   "action": "unship",
+   "signature": "7a359b66928d9637",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Diamant Piment」（規避商標的虛構品牌）vs Real Names Addon「Renault Le Car」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqLeCarPolice": {
+   "action": "unship",
+   "signature": "6390ac25d9c003bc",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Diamant Piment Police」（規避商標的虛構品牌）vs Real Names Addon「Renault Le Car Police」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqLexusLS400": {
+   "action": "unship",
+   "signature": "b602484d25afeba7",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Vectre Lux80」（規避商標的虛構品牌）vs Real Names Addon「Lexus LS400」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqLexusSC300": {
+   "action": "unship",
+   "signature": "b21e89a858bd9eaf",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Vectre FRC60」（規避商標的虛構品牌）vs Real Names Addon「Lexus SC300」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqLexusSC400": {
+   "action": "unship",
+   "signature": "f205ee8d8ee88d36",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Vectre FRC80」（規避商標的虛構品牌）vs Real Names Addon「Lexus SC400」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqLoyale": {
+   "action": "unship",
+   "signature": "c9d732a114f8ed69",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades Fedele」（規避商標的虛構品牌）vs Real Names Addon「Subaru Loyale GL」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqLoyaleRally": {
+   "action": "unship",
+   "signature": "394a7082bccff299",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades Fedele Rally Car」（規避商標的虛構品牌）vs Real Names Addon「Subaru Loyale Rally Car」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqLoyaleWag": {
+   "action": "unship",
+   "signature": "605edcfbd2999c5b",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades Fedele Wagon」（規避商標的虛構品牌）vs Real Names Addon「Subaru Loyale GL Wagon」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqLoyaleWagPickup": {
+   "action": "unship",
+   "signature": "0948b4dee4a1071a",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades Fedele Custom Pickup Sedan」（規避商標的虛構品牌）vs Real Names Addon「Subaru Loyale Custom Pickup Sedan」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqLoyaleWag_4WD": {
+   "action": "unship",
+   "signature": "fa2aeeacb8699b2d",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades Fedele Wagon 4WD」（規避商標的虛構品牌）vs Real Names Addon「Subaru Loyale GL 4WD Wagon」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqLoyale_4WD": {
+   "action": "unship",
+   "signature": "69086eaffcfb6d24",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Pleiades Fedele 4WD」（規避商標的虛構品牌）vs Real Names Addon「Subaru Loyale GL 4WD」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqM20b": {
+   "action": "unship",
+   "signature": "c1c38c31a0944b11",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Yoshikikuo TK240R」（規避商標的虛構品牌）vs Real Names Addon「Tommykaira M20b」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqM715CivMZ": {
+   "action": "translate",
+   "signature": "92bfe5f013e3b281",
+   "reason": "共同中性名稱已查證：base 與 Real Names owner 的有效 EN 分別只差品牌前綴，兩者共同且完整可識別的名稱為 `M715`；JSON 出貨此值對兩 owner 都成立，無須退化為英文。",
+   "ch": "M715",
+   "cn": "M715"
+  },
+  "IG_UI|IGUI_VehicleNamefhqM715MZ": {
+   "action": "translate",
+   "signature": "92bfe5f013e3b281",
+   "reason": "共同中性名稱已查證：base 與 Real Names owner 的有效 EN 分別只差品牌前綴，兩者共同且完整可識別的名稱為 `M715`；JSON 出貨此值對兩 owner 都成立，無須退化為英文。",
+   "ch": "M715",
+   "cn": "M715"
+  },
+  "IG_UI|IGUI_VehicleNamefhqM715hardtopCivMZ": {
+   "action": "translate",
+   "signature": "92bfe5f013e3b281",
+   "reason": "共同中性名稱已查證：base 與 Real Names owner 的有效 EN 分別只差品牌前綴，兩者共同且完整可識別的名稱為 `M715`；JSON 出貨此值對兩 owner 都成立，無須退化為英文。",
+   "ch": "M715",
+   "cn": "M715"
+  },
+  "IG_UI|IGUI_VehicleNamefhqM715hardtopMZ": {
+   "action": "translate",
+   "signature": "92bfe5f013e3b281",
+   "reason": "共同中性名稱已查證：base 與 Real Names owner 的有效 EN 分別只差品牌前綴，兩者共同且完整可識別的名稱為 `M715`；JSON 出貨此值對兩 owner 都成立，無須退化為英文。",
+   "ch": "M715",
+   "cn": "M715"
+  },
+  "IG_UI|IGUI_VehicleNamefhqMX5NA": {
+   "action": "unship",
+   "signature": "3fc3933c2ccea24a",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Matsuda Minia」（規避商標的虛構品牌）vs Real Names Addon「Mazda MX-5 Miata (NA)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqMX5NAHardtop": {
+   "action": "unship",
+   "signature": "3fc3933c2ccea24a",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Matsuda Minia」（規避商標的虛構品牌）vs Real Names Addon「Mazda MX-5 Miata (NA)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqMX5NAOffroad": {
+   "action": "unship",
+   "signature": "82430713274f7186",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Matsuda Minia Offroad」（規避商標的虛構品牌）vs Real Names Addon「Mazda MX-5 Miata (NA) Offroad」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqMX5NARally": {
+   "action": "unship",
+   "signature": "d2c513af7bea2388",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Matsuda Minia Rally」（規避商標的虛構品牌）vs Real Names Addon「Mazda MX-5 Miata (NA) Rally」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqMX5NAWink": {
+   "action": "unship",
+   "signature": "3fc3933c2ccea24a",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Matsuda Minia」（規避商標的虛構品牌）vs Real Names Addon「Mazda MX-5 Miata (NA)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqMarkIIJZX90": {
+   "action": "unship",
+   "signature": "797552fe56d135ef",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Cima V2」（規避商標的虛構品牌）vs Real Names Addon「Toyota Mark II (X90)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqMcLarenF1": {
+   "action": "unship",
+   "signature": "3dd229d214a50fb4",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Aron Motors BM12」（規避商標的虛構品牌）vs Real Names Addon「McLaren F1」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqNSX": {
+   "action": "unship",
+   "signature": "21ca9bdc7ff725c0",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Preciro ME-SC」（規避商標的虛構品牌）vs Real Names Addon「Acura NSX (NA1)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqNX2000": {
+   "action": "unship",
+   "signature": "f6a4a5a109a1632a",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun Tsugi」（規避商標的虛構品牌）vs Real Names Addon「Nissan NX2000 (B13)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqPrevia": {
+   "action": "unship",
+   "signature": "dd6506f4fc910512",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Avanzo」（規避商標的虛構品牌）vs Real Names Addon「Toyota Previa」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqPreviaAllTrac": {
+   "action": "unship",
+   "signature": "19ec13c4a33e7a3d",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Avanzo 4-All」（規避商標的虛構品牌）vs Real Names Addon「Toyota Previa All-Trac」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqPreviaFujiwara": {
+   "action": "unship",
+   "signature": "18f9e066c3c38237",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Avanzo 'Tofu Delivery'」（規避商標的虛構品牌）vs Real Names Addon「Toyota Previa Tofu Delivery」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqPreviaM3": {
+   "action": "unship",
+   "signature": "e2d9228a006a19fb",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Cursed Minivan」（規避商標的虛構品牌）vs Real Names Addon「Cursed Toyota Previa」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqPreviaOffroad": {
+   "action": "unship",
+   "signature": "588b0342f2d9bd60",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Avanzo Offroad」（規避商標的虛構品牌）vs Real Names Addon「Toyota Previa Offroad」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqR32GTR": {
+   "action": "unship",
+   "signature": "b0869f620a04e54b",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun Streetscape R6」（規避商標的虛構品牌）vs Real Names Addon「Nissan Skyline GTR (R32)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqR32GTRN1": {
+   "action": "unship",
+   "signature": "c44e87fbae596ff6",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun Streetscape R6 GT」（規避商標的虛構品牌）vs Real Names Addon「Nissan Skyline GTR (R32) N1」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqR32GTRPace": {
+   "action": "unship",
+   "signature": "560f62b1962d04ab",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun Streetscape R6 Pace Car」（規避商標的虛構品牌）vs Real Names Addon「Nissan Skyline GTR (R32) Pace Car」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqR32GTRTommy": {
+   "action": "unship",
+   "signature": "ed6e54f20fbb6d09",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Yoshikikuo S」（規避商標的虛構品牌）vs Real Names Addon「Tommykaira R (R32)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqR32GTRTouring": {
+   "action": "unship",
+   "signature": "0a1a3a20534dee7e",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun Streetscape R6 Touring Car」（規避商標的虛構品牌）vs Real Names Addon「Nissan Skyline GTR (R32) Group A」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqR32GTS": {
+   "action": "unship",
+   "signature": "57768dd8dc23225a",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun Streetscape RT-S」（規避商標的虛構品牌）vs Real Names Addon「Nissan Skyline GTS (R32)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqR32Sedan": {
+   "action": "unship",
+   "signature": "7a1bc42ded769f5a",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun Streetscape Sedan」（規避商標的虛構品牌）vs Real Names Addon「Nissan Skyline Sedan (R32)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqRX7FB": {
+   "action": "unship",
+   "signature": "bc45bdd088926ade",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Matsuda Zavana 'Beta'」（規避商標的虛構品牌）vs Real Names Addon「Mazda RX-7 (FB)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqRX7FB_C": {
+   "action": "unship",
+   "signature": "03acfb9c0cd2d0f8",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Matsuda Zavana 'Beta' SE」（規避商標的虛構品牌）vs Real Names Addon「Mazda RX-7 GSL (FB)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqRX7FB_GSL": {
+   "action": "unship",
+   "signature": "03acfb9c0cd2d0f8",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Matsuda Zavana 'Beta' SE」（規避商標的虛構品牌）vs Real Names Addon「Mazda RX-7 GSL (FB)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqRX7FB_SCCARally": {
+   "action": "unship",
+   "signature": "d4fabeebda85b1bf",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Matsuda Zavana 'Beta' Rally Car」（規避商標的虛構品牌）vs Real Names Addon「Mazda RX-7 SCCA Pro Rally Car (FB)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqRX7SA": {
+   "action": "unship",
+   "signature": "cb661e6d18d4df38",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Matsuda Zavana 'Alpha'」（規避商標的虛構品牌）vs Real Names Addon「Mazda RX-7 (SA22)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqRobinMk2": {
+   "action": "unship",
+   "signature": "cdb9ccf3c2aeea8d",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Lawrence Finch」（規避商標的虛構品牌）vs Real Names Addon「Reliant Robin Mk. II」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqRobinMk2Stabilisers": {
+   "action": "unship",
+   "signature": "d2a994546e5fa4d3",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Lawrence Finch With Stabilizers」（規避商標的虛構品牌）vs Real Names Addon「Reliant Robin Mk. II」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqRollbinMk2": {
+   "action": "unship",
+   "signature": "3cda1f8657fe9e64",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Unstable Lawrence Finch」（規避商標的虛構品牌）vs Real Names Addon「Unstable Reliant Robin Mk. II」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqRollbinMk2Stabilisers": {
+   "action": "unship",
+   "signature": "f57f47e54a1daa12",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Unstable Lawrence Finch With Stabilizers」（規避商標的虛構品牌）vs Real Names Addon「Stabilized Reliant Robin Mk. II」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqSidekick": {
+   "action": "unship",
+   "signature": "ad90c42e212e5e59",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Takatsuka Strenuus」（規避商標的虛構品牌）vs Real Names Addon「Suzuki Sidekick」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqSidekickHardtop": {
+   "action": "unship",
+   "signature": "ad90c42e212e5e59",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Takatsuka Strenuus」（規避商標的虛構品牌）vs Real Names Addon「Suzuki Sidekick」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqSidekickLWB": {
+   "action": "unship",
+   "signature": "6fc2a2bddc3884fc",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Takatsuka Strenuus 4-Door」（規避商標的虛構品牌）vs Real Names Addon「Suzuki Sidekick 4-Door」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqSidekickLWBRanger": {
+   "action": "unship",
+   "signature": "c80597d84cd49dfc",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Takatsuka Strenuus 4-Door Ranger」（規避商標的虛構品牌）vs Real Names Addon「Suzuki Sidekick 4-Door Ranger」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqStratos": {
+   "action": "unship",
+   "signature": "d825510bdd3ef377",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Rallia Mesos」（規避商標的虛構品牌）vs Real Names Addon「Lancia Stratos」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqStratosRally": {
+   "action": "unship",
+   "signature": "dc5156173838ca7b",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Rallia Mesos Rally Car」（規避商標的虛構品牌）vs Real Names Addon「Lancia Stratos Rally Car」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqSupraMkIV": {
+   "action": "unship",
+   "signature": "06d48e0b11c34769",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Raspu」（規避商標的虛構品牌）vs Real Names Addon「Toyota Supra (Mk. IV A80)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqSupraMkIVOWR": {
+   "action": "unship",
+   "signature": "e792ff9409b9eb79",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Raspu OW Racing」（規避商標的虛構品牌）vs Real Names Addon「Toyota Supra (Mk. IV A80) OW Racing」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqSupraMkIVOWROOTHST": {
+   "action": "unship",
+   "signature": "b69a16f056f73a04",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Raspu OOTHST Racing」（規避商標的虛構品牌）vs Real Names Addon「Toyota Supra (Mk. IV A80) OOTHST Racing」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqSupraMkIVSmooth": {
+   "action": "unship",
+   "signature": "06d48e0b11c34769",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Kiichiro Raspu」（規避商標的虛構品牌）vs Real Names Addon「Toyota Supra (Mk. IV A80)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqV140_400SEL": {
+   "action": "unship",
+   "signature": "c1c3abd16cfab44e",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Mercia Lang E-3000 LWB」（規避商標的虛構品牌）vs Real Names Addon「Mercedes-Benz 400SEL/S420 (V140)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqV140_500SEL": {
+   "action": "unship",
+   "signature": "2daa66827f0022e0",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Mercia Lang E-4000 LWB」（規避商標的虛構品牌）vs Real Names Addon「Mercedes-Benz 500SEL/S500 (V140)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqV140_600SEL": {
+   "action": "unship",
+   "signature": "ef9416d10dff9531",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Mercia Lang E-5000 LWB」（規避商標的虛構品牌）vs Real Names Addon「Mercedes-Benz 600SEL/S600 (V140)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqV140_600SEL_AMG": {
+   "action": "unship",
+   "signature": "7b4f0c923bd4cc16",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Mercia Lang E-5000 LWB DRP」（規避商標的虛構品牌）vs Real Names Addon「AMG Mercedes-Benz 600SEL (V140)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqV140_800SEL": {
+   "action": "unship",
+   "signature": "7881ca9bd967e44b",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Mercia Lang E-6000 W18 Proto」（規避商標的虛構品牌）vs Real Names Addon「Mercedes-Benz 800SEL Prototype (V140)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqVWT2T1": {
+   "action": "unship",
+   "signature": "b144bb9e55ef0cee",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Krichten Minibus」（規避商標的虛構品牌）vs Real Names Addon「Volkswagen Type 2 Transporter (T1)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqVWT2T1CrewCab": {
+   "action": "unship",
+   "signature": "8d8c96e9c86d131b",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Krichten Minibus Pickup」（規避商標的虛構品牌）vs Real Names Addon「Volkswagen Type 2 Crew Cab Pickup (T1)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqVWT2T1Livery": {
+   "action": "unship",
+   "signature": "900853c6a3b38a8c",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Krichten Minibus Cargo Van」（規避商標的虛構品牌）vs Real Names Addon「Volkswagen Type 2 Transporter Cargo (T1)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqVWT2T1Truck": {
+   "action": "unship",
+   "signature": "bc27b0e90878c589",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Krichten Minibus Pickup」（規避商標的虛構品牌）vs Real Names Addon「Volkswagen Type 2 Pickup (T1)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqVWT2T1Van": {
+   "action": "unship",
+   "signature": "900853c6a3b38a8c",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Krichten Minibus Cargo Van」（規避商標的虛構品牌）vs Real Names Addon「Volkswagen Type 2 Transporter Cargo (T1)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqW140_300SD": {
+   "action": "unship",
+   "signature": "178fac9bb3c4218b",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Mercia Lang E-2000D」（規避商標的虛構品牌）vs Real Names Addon「Mercedes-Benz 300SD/S350 Turbodiesel (W140)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqW140_400SE": {
+   "action": "unship",
+   "signature": "4691f797e6f37be7",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Mercia Lang E-3000」（規避商標的虛構品牌）vs Real Names Addon「Mercedes-Benz 400SE/S420 (W140)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqW140_500SE": {
+   "action": "unship",
+   "signature": "ba9d8eb3f2f94845",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Mercia Lang E-4000」（規避商標的虛構品牌）vs Real Names Addon「Mercedes-Benz 500SE/S500 (W140)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqW140_600SE": {
+   "action": "unship",
+   "signature": "80d75a4fb78d9117",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Mercia Lang E-5000」（規避商標的虛構品牌）vs Real Names Addon「Mercedes-Benz 600SE/S600 (W140)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqZeroR": {
+   "action": "unship",
+   "signature": "583bd1de20a33b1b",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「TRS TURBO GT」（規避商標的虛構品牌）vs Real Names Addon「HKS Zero-R」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqonevia": {
+   "action": "unship",
+   "signature": "9cbb19175768352b",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun RC2400 Coupe」（規避商標的虛構品牌）vs Real Names Addon「Nissan 240SX Coupe (S13)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqoneviaPreFL": {
+   "action": "unship",
+   "signature": "9cbb19175768352b",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun RC2400 Coupe」（規避商標的虛構品牌）vs Real Names Addon「Nissan 240SX Coupe (S13)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqoneviaS": {
+   "action": "unship",
+   "signature": "41b6f87821888806",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun RC2400 Coupe Custom」（規避商標的虛構品牌）vs Real Names Addon「Nissan 240SX Coupe (S13) Custom」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "IG_UI|IGUI_VehicleNamefhqoneviadrift": {
+   "action": "unship",
+   "signature": "2c06029040f3fd9b",
+   "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun RC2400 Coupe Drift Custom」（規避商標的虛構品牌）vs Real Names Addon「Nissan 240SX Coupe (S13) Drift Custom」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
   }
  }
 }

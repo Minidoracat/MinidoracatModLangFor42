@@ -2,11 +2,13 @@
   "as1": {
     "workshop_id": "3556540080",
     "mod_id": "B42ModTrans_CN",
-    "time_updated": 1785931905,
-    "time_updated_iso": "2026-08-05T12:11:45Z",
+    "time_updated": 1787313909,
+    "time_updated_iso": "2026-08-21T12:05:09Z",
     "version_txt_last": "v3.11.0",
     "source_tree": "42.20",
-    "local_path": "D:/SteamLibrary/steamapps/workshop/content/108600/3556540080/mods/B42ModTrans_CN_As1"
+    "local_path": "D:/SteamLibrary/steamapps/workshop/content/108600/3556540080/mods/B42ModTrans_CN_As1",
+    "workshop_changelog_version": "v3.7.1",
+    "_version_note": "As1 有兩套不同步的版號：mod 內 version.txt 最後一條停在 v.3.11.0 (2026.03.12)，Workshop Change Notes 另走 v3.6.x/v3.7.x。故 version_txt_last 已是死指標，偵測新版只能靠 time_updated 與 as1_manifest.json 的逐檔 sha256。time_updated 取自 Workshop Change Notes 頁面該筆公告的 <p id> 屬性（即 unix 秒），勿用 Steam Web API。"
   },
   "helper": {
     "repo": "LTian21/pz-mod-translation-helper",
@@ -14,11 +16,13 @@
     "pulled_at": "2026-07-16"
   },
   "measured": {
-    "as1_files": 79,
-    "as1_filekeys": 64541,
-    "as1_unique_keys": 62026,
-    "coverage_key_source_map_pct": 63.6,
-    "coverage_key_source_mod_pct": 26.4,
-    "coverage_union_pct": 64.2
+    "as1_files": 85,
+    "as1_filekeys": 108088,
+    "as1_unique_keys": 104515,
+    "coverage_key_source_map_pct": 49.8,
+    "coverage_key_source_mod_pct": 18.9,
+    "coverage_union_pct": 50.2,
+    "_note": "覆蓋率自 2026-08-05 的 64.2% 掉到 50.2%，成因是 helper (LTian21/pz-mod-translation-helper) 自 2026-06-05 起停更，attribution 索引跟不上 As1 v3.7.0 的擴充；未歸屬鍵全落 sources/_unsorted。",
+    "_derivation": "三個 coverage 欄位＝「helper 索引各自含有該鍵」的比例，分母為 as1_filekeys：map_pct = |{(f,k) in As1 : k in key_source_map 反查}| / as1_filekeys；mod_pct 同式改用 key_source_mod 反查；union_pct 取兩者聯集。**勿與 metadata.json 的 attributed_via 加總混用**——後者是套完優先序（manual > map > mod_tuple）後的歸類計數，同一鍵只計一次且會複製到多個 owner，兩者口徑不同（現況 attributed_via: map 60250 / mod_tuple 575）。重算腳本語意見 split_sources.load_map_index / load_mod_index。"
   }
 }
