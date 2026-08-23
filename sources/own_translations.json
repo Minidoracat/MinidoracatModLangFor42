@@ -129784,6 +129784,16 @@
     "en": "If disabled, non-admin players can't change Conditional Speech's Mod Options - they'll see the current settings greyed out.",
     "ch": "停用後, 非管理員玩家無法變更 Conditional Speech 的模組選項, 目前設定只會反灰顯示.",
     "cn": "禁用后, 非管理员玩家无法更改 Conditional Speech 的模组选项, 当前设置只会置灰显示."
+   },
+   "Sandbox_HydeCoAGD_WorldHighlightsEnabled": {
+    "en": "Mark doors and gates in the world",
+    "ch": "在世界中標示車庫門與大門",
+    "cn": "在世界中标记车库门与大门"
+   },
+   "Sandbox_HydeCoAGD_WorldHighlightsEnabled_tooltip": {
+    "en": "Outline linked garage doors and gates while hovering a remote or controller, using radial menus, or browsing the manager windows. Turn off and nothing is ever marked.",
+    "ch": "將滑鼠懸停在遙控器或控制器上, 使用徑向選單, 或瀏覽管理器視窗時, 會為已連結的車庫門與大門顯示世界高亮. 關閉後就不會再標示任何東西.",
+    "cn": "将鼠标悬停在遥控器或控制器上, 使用径向菜单, 或浏览管理器窗口时, 会为已连接的车库门与大门显示世界高亮. 关闭后就不会再标记任何东西."
    }
   },
   "Tooltip.json": {
@@ -139932,6 +139942,951 @@
     "en": "careful, the car won't take much more of that",
     "ch": "小心點, 車子撐不了幾次了.",
     "cn": "小心点, 车子撑不了几次了."
+   },
+   "UI_AGD_AllControllersPaired": {
+    "en": "All Gate Controllers in inventory are already paired",
+    "ch": "物品欄中的大門控制器皆已配對",
+    "cn": "物品栏中的大门控制器均已配对"
+   },
+   "UI_AGD_BatteryInsertedCharge": {
+    "en": "Battery inserted. %1%% charge.",
+    "ch": "已裝入電池. 電量 %1%%.",
+    "cn": "已装入电池. 电量 %1%%."
+   },
+   "UI_AGD_BatteryInstalled": {
+    "en": "Battery installed",
+    "ch": "已安裝電池",
+    "cn": "已安装电池"
+   },
+   "UI_AGD_BatteryNumbered": {
+    "en": "[%1%%] Battery #%2",
+    "ch": "[%1%%] 電池 #%2",
+    "cn": "[%1%%] 电池 #%2"
+   },
+   "UI_AGD_BatteryPct": {
+    "en": "Battery: %1%%",
+    "ch": "電池: %1%%",
+    "cn": "电池: %1%%"
+   },
+   "UI_AGD_BatteryRemovedShort": {
+    "en": "Battery removed",
+    "ch": "已取出電池",
+    "cn": "已取出电池"
+   },
+   "UI_AGD_BatteryRemovedZero": {
+    "en": "Battery removed. 0%% charge remaining.",
+    "ch": "已取出電池. 剩餘電量 0%%.",
+    "cn": "已取出电池. 剩余电量 0%%."
+   },
+   "UI_AGD_BindToSlot1": {
+    "en": "Bind to %1 (Slot 1)",
+    "ch": "綁定到 %1 (槽位 1)",
+    "cn": "绑定到 %1 (槽位 1)"
+   },
+   "UI_AGD_BindToSlot2": {
+    "en": "Bind to %1 (Slot 2)",
+    "ch": "綁定到 %1 (槽位 2)",
+    "cn": "绑定到 %1 (槽位 2)"
+   },
+   "UI_AGD_BindToSlot3": {
+    "en": "Bind to %1 (Slot 3)",
+    "ch": "綁定到 %1 (槽位 3)",
+    "cn": "绑定到 %1 (槽位 3)"
+   },
+   "UI_AGD_ChainDriveNA": {
+    "en": "Chain Drive: n/a",
+    "ch": "鏈傳動元件: 不適用",
+    "cn": "链传动组件: 不适用"
+   },
+   "UI_AGD_ChainDrivePrefix": {
+    "en": "Chain Drive: %1",
+    "ch": "鏈傳動元件: %1",
+    "cn": "链传动组件: %1"
+   },
+   "UI_AGD_CoordsShortUnknown": {
+    "en": "Coords: unknown",
+    "ch": "座標: 未知",
+    "cn": "坐标: 未知"
+   },
+   "UI_AGD_CoordsShortXYZ": {
+    "en": "Coords: %1,%2,%3",
+    "ch": "座標: %1,%2,%3",
+    "cn": "坐标: %1,%2,%3"
+   },
+   "UI_AGD_CtrlBattDeadInsertReplace": {
+    "en": "Controller battery is dead - insert/replace a battery",
+    "ch": "控制器電池沒電 - 請裝入或更換電池",
+    "cn": "控制器电池没电 - 请装入或更换电池"
+   },
+   "UI_AGD_CtrlBatteryMissingDead": {
+    "en": "Controller battery is missing or dead",
+    "ch": "控制器缺少電池或電池沒電",
+    "cn": "控制器电池缺失或没电"
+   },
+   "UI_AGD_DeadParenSuffix": {
+    "en": " (dead)",
+    "ch": " (沒電)",
+    "cn": " (没电)"
+   },
+   "UI_AGD_DeadWord": {
+    "en": "Dead",
+    "ch": "沒電",
+    "cn": "没电"
+   },
+   "UI_AGD_DistanceTilesAway": {
+    "en": "Distance: %1 tiles away",
+    "ch": "距離: %1 格",
+    "cn": "距离: %1 格"
+   },
+   "UI_AGD_DistanceUnknownWord": {
+    "en": "distance unknown",
+    "ch": "距離未知",
+    "cn": "距离未知"
+   },
+   "UI_AGD_DoorCouldNotUnlock": {
+    "en": "Door found but could not be unlocked",
+    "ch": "已找到門但無法解鎖",
+    "cn": "已找到门但无法解锁"
+   },
+   "UI_AGD_DriveBatteryCharge": {
+    "en": "Drive Battery Charge",
+    "ch": "驅動電池電量",
+    "cn": "驱动电池电量"
+   },
+   "UI_AGD_DriveBatteryCondLabel": {
+    "en": "Drive Battery Condition",
+    "ch": "驅動電池狀況",
+    "cn": "驱动电池状况"
+   },
+   "UI_AGD_DriveBatteryCondition": {
+    "en": "Drive Battery: %1%%  •  Condition: %2%%",
+    "ch": "驅動電池: %1%%  •  狀況: %2%%",
+    "cn": "驱动电池: %1%%  •  状况: %2%%"
+   },
+   "UI_AGD_DriveNone": {
+    "en": "Drive: -",
+    "ch": "驅動: -",
+    "cn": "驱动: -"
+   },
+   "UI_AGD_DrivePackHeavyDuty": {
+    "en": "Drive Pack: Heavy-Duty",
+    "ch": "鏈傳動元件: 重型",
+    "cn": "链传动组件: 重型"
+   },
+   "UI_AGD_DrivePackInstalled": {
+    "en": "Drive pack installed",
+    "ch": "已安裝鏈傳動元件",
+    "cn": "已安装链传动组件"
+   },
+   "UI_AGD_DrivePackNone": {
+    "en": "Drive Pack: none (driveless)",
+    "ch": "鏈傳動元件: 無 (無驅動)",
+    "cn": "链传动组件: 无 (无驱动)"
+   },
+   "UI_AGD_DrivePackRemoved": {
+    "en": "Drive pack removed",
+    "ch": "已移除鏈傳動元件",
+    "cn": "已移除链传动组件"
+   },
+   "UI_AGD_DrivePackSport": {
+    "en": "Drive Pack: Sport",
+    "ch": "鏈傳動元件: 運動型",
+    "cn": "链传动组件: 运动型"
+   },
+   "UI_AGD_DrivePackStandard": {
+    "en": "Drive Pack: Standard",
+    "ch": "鏈傳動元件: 標準型",
+    "cn": "链传动组件: 标准型"
+   },
+   "UI_AGD_DrivePct": {
+    "en": "Drive: %1%%",
+    "ch": "驅動: %1%%",
+    "cn": "驱动: %1%%"
+   },
+   "UI_AGD_EnterNameInChat": {
+    "en": "Enter name in chat and press OK",
+    "ch": "在聊天中輸入名稱並按 OK",
+    "cn": "在聊天中输入名称并按 OK"
+   },
+   "UI_AGD_FrequencyF": {
+    "en": "Frequency: F-%1",
+    "ch": "頻率: F-%1",
+    "cn": "频率: F-%1"
+   },
+   "UI_AGD_FrequencyInUse": {
+    "en": "Frequency F-%1 is already in use",
+    "ch": "頻率 F-%1 已被使用",
+    "cn": "频率 F-%1 已被使用"
+   },
+   "UI_AGD_FrequencyNotSet": {
+    "en": "Frequency: Not Set",
+    "ch": "頻率: 未設定",
+    "cn": "频率: 未设置"
+   },
+   "UI_AGD_FrequencySetTo": {
+    "en": "Frequency set to F-%1",
+    "ch": "頻率已設為 F-%1",
+    "cn": "频率已设为 F-%1"
+   },
+   "UI_AGD_GarageDoorRemoteName": {
+    "en": "Garage Door Remote",
+    "ch": "車庫門遙控器",
+    "cn": "车库门遥控器"
+   },
+   "UI_AGD_GarageRemote": {
+    "en": "Garage Remote",
+    "ch": "車庫遙控器",
+    "cn": "车库遥控器"
+   },
+   "UI_AGD_GarageRemotes": {
+    "en": "Garage Remotes",
+    "ch": "車庫遙控器",
+    "cn": "车库遥控器"
+   },
+   "UI_AGD_GateAdded": {
+    "en": "Gate added",
+    "ch": "已新增大門",
+    "cn": "已添加大门"
+   },
+   "UI_AGD_GateAlreadyInList": {
+    "en": "Gate already in list",
+    "ch": "大門已在清單中",
+    "cn": "大门已在列表中"
+   },
+   "UI_AGD_GateControllerShort": {
+    "en": "Gate Controller",
+    "ch": "大門控制器",
+    "cn": "大门控制器"
+   },
+   "UI_AGD_GateControllers": {
+    "en": "Gate Controllers",
+    "ch": "大門控制器",
+    "cn": "大门控制器"
+   },
+   "UI_AGD_GateEntryRemoved": {
+    "en": "Gate entry removed",
+    "ch": "已移除大門條目",
+    "cn": "已移除大门条目"
+   },
+   "UI_AGD_GateRenamed": {
+    "en": "Gate renamed",
+    "ch": "大門已重新命名",
+    "cn": "大门已重命名"
+   },
+   "UI_AGD_GrantElectrical": {
+    "en": "Electrical %1+",
+    "ch": "電工 %1+",
+    "cn": "电工 %1+"
+   },
+   "UI_AGD_GrantHacking": {
+    "en": "Hacking %1+",
+    "ch": "駭客 %1+",
+    "cn": "黑客 %1+"
+   },
+   "UI_AGD_HydeCoGateControllerName": {
+    "en": "HydeCo Gate Controller",
+    "ch": "HydeCo 大門控制器",
+    "cn": "HydeCo 大门控制器"
+   },
+   "UI_AGD_InsertBatteryX": {
+    "en": "Insert Battery (%1)",
+    "ch": "裝入電池 (%1)",
+    "cn": "装入电池 (%1)"
+   },
+   "UI_AGD_InstallChainDrive": {
+    "en": "Install Chain Drive",
+    "ch": "安裝鏈傳動元件",
+    "cn": "安装链传动组件"
+   },
+   "UI_AGD_InstallHeavyDutyPack": {
+    "en": "Install Heavy-Duty Pack",
+    "ch": "安裝重型鏈傳動元件",
+    "cn": "安装重型链传动组件"
+   },
+   "UI_AGD_InstallSportPack": {
+    "en": "Install Sport Pack",
+    "ch": "安裝運動型鏈傳動元件",
+    "cn": "安装运动型链传动组件"
+   },
+   "UI_AGD_InstallStandardPack": {
+    "en": "Install Standard Pack",
+    "ch": "安裝標準型鏈傳動元件",
+    "cn": "安装标准型链传动组件"
+   },
+   "UI_AGD_LockLocked": {
+    "en": "Lock: locked",
+    "ch": "鎖定: 已鎖定",
+    "cn": "锁定: 已锁定"
+   },
+   "UI_AGD_LockOutOfRange": {
+    "en": "Lock: out of range",
+    "ch": "鎖定: 超出範圍",
+    "cn": "锁定: 超出范围"
+   },
+   "UI_AGD_LockPairedGarage": {
+    "en": "Lock Paired Garage",
+    "ch": "鎖定已配對車庫",
+    "cn": "锁定已配对车库"
+   },
+   "UI_AGD_LockUnknown": {
+    "en": "Lock: unknown",
+    "ch": "鎖定: 未知",
+    "cn": "锁定: 未知"
+   },
+   "UI_AGD_LockUnlocked": {
+    "en": "Lock: unlocked",
+    "ch": "鎖定: 已解鎖",
+    "cn": "锁定: 已解锁"
+   },
+   "UI_AGD_LockoutCleared": {
+    "en": "Lockout cleared",
+    "ch": "鎖定狀態已解除",
+    "cn": "锁定状态已解除"
+   },
+   "UI_AGD_ManageGarages": {
+    "en": "Manage Garages...",
+    "ch": "管理車庫…",
+    "cn": "管理车库…"
+   },
+   "UI_AGD_NameCleared": {
+    "en": "Name cleared",
+    "ch": "名稱已清除",
+    "cn": "名称已清除"
+   },
+   "UI_AGD_NamedX": {
+    "en": "Named: %1",
+    "ch": "名稱: %1",
+    "cn": "名称: %1"
+   },
+   "UI_AGD_NoControllerPairedGate": {
+    "en": "No controller paired to this gate",
+    "ch": "此大門尚未配對控制器",
+    "cn": "此大门尚未配对控制器"
+   },
+   "UI_AGD_NoGateInRange": {
+    "en": "No gate in range",
+    "ch": "範圍內沒有大門",
+    "cn": "范围内没有大门"
+   },
+   "UI_AGD_NoPairedController": {
+    "en": "No Paired Controller",
+    "ch": "無已配對控制器",
+    "cn": "无已配对控制器"
+   },
+   "UI_AGD_NoPairedRemote": {
+    "en": "No Paired Remote",
+    "ch": "無已配對遙控器",
+    "cn": "无已配对遥控器"
+   },
+   "UI_AGD_NoRemote": {
+    "en": "No Remote",
+    "ch": "無遙控器",
+    "cn": "无遥控器"
+   },
+   "UI_AGD_NoServerResponse": {
+    "en": "No server response. Ensure the mod is enabled on the SERVER/host.",
+    "ch": "伺服器沒有回應. 請確認此模組已在 SERVER/主機上啟用.",
+    "cn": "服务器没有响应. 请确认此模组已在 SERVER/主机上启用."
+   },
+   "UI_AGD_NotSet": {
+    "en": "Not Set",
+    "ch": "未設定",
+    "cn": "未设置"
+   },
+   "UI_AGD_OpenRemoteHUDThisItem": {
+    "en": "Open Remote HUD (this item)",
+    "ch": "開啟遙控器 HUD (此物品)",
+    "cn": "打开遥控器 HUD (此物品)"
+   },
+   "UI_AGD_PackHeavyDuty": {
+    "en": "Pack: Heavy-Duty",
+    "ch": "鏈傳動元件: 重型",
+    "cn": "链传动组件: 重型"
+   },
+   "UI_AGD_PackNone": {
+    "en": "Pack: -",
+    "ch": "鏈傳動元件: -",
+    "cn": "链传动组件: -"
+   },
+   "UI_AGD_PackSport": {
+    "en": "Pack: Sport",
+    "ch": "鏈傳動元件: 運動型",
+    "cn": "链传动组件: 运动型"
+   },
+   "UI_AGD_PackStandard": {
+    "en": "Pack: Standard",
+    "ch": "鏈傳動元件: 標準型",
+    "cn": "链传动组件: 标准型"
+   },
+   "UI_AGD_PackX": {
+    "en": "Pack %1",
+    "ch": "鏈傳動元件 %1",
+    "cn": "链传动组件 %1"
+   },
+   "UI_AGD_PairControllerFirst": {
+    "en": "Pair the controller to a gate first",
+    "ch": "請先將控制器配對到大門",
+    "cn": "请先将控制器配对到大门"
+   },
+   "UI_AGD_PairControllerToX": {
+    "en": "Pair Controller to %1",
+    "ch": "將控制器配對到 %1",
+    "cn": "将控制器配对到 %1"
+   },
+   "UI_AGD_PairRemoteEnter4DigitCode": {
+    "en": "Pair Remote (enter 4-digit code)",
+    "ch": "配對遙控器 (輸入 4 位數密碼)",
+    "cn": "配对遥控器 (输入 4 位数密码)"
+   },
+   "UI_AGD_PairRemoteNoGarageFound": {
+    "en": "Pair Remote (no garage found)",
+    "ch": "配對遙控器 (找不到車庫)",
+    "cn": "配对遥控器 (未找到车库)"
+   },
+   "UI_AGD_PairXToY": {
+    "en": "Pair %1 to %2",
+    "ch": "將 %1 配對到 %2",
+    "cn": "将 %1 配对到 %2"
+   },
+   "UI_AGD_PairedInRange": {
+    "en": "Paired: %1 (in range)",
+    "ch": "已配對: %1 (在範圍內)",
+    "cn": "已配对: %1 (在范围内)"
+   },
+   "UI_AGD_PairedOutOfRange": {
+    "en": "Paired: %1 (out of range)",
+    "ch": "已配對: %1 (超出範圍)",
+    "cn": "已配对: %1 (超出范围)"
+   },
+   "UI_AGD_PctBattery": {
+    "en": "%1%% battery",
+    "ch": "%1%% 電池",
+    "cn": "%1%% 电池"
+   },
+   "UI_AGD_PctCondition": {
+    "en": "%1%% condition",
+    "ch": "%1%% 狀況",
+    "cn": "%1%% 状况"
+   },
+   "UI_AGD_QuickPairRemote": {
+    "en": "Quick Pair Remote",
+    "ch": "快速配對遙控器",
+    "cn": "快速配对遥控器"
+   },
+   "UI_AGD_RemoteHUDOff": {
+    "en": "Remote HUD: Off",
+    "ch": "遙控器 HUD: 關閉",
+    "cn": "遥控器 HUD: 关闭"
+   },
+   "UI_AGD_RemoteHUDOn": {
+    "en": "Remote HUD: On",
+    "ch": "遙控器 HUD: 開啟",
+    "cn": "遥控器 HUD: 开启"
+   },
+   "UI_AGD_RemoveBattery": {
+    "en": "Remove Battery",
+    "ch": "取出電池",
+    "cn": "取出电池"
+   },
+   "UI_AGD_RemoveChainDriveX": {
+    "en": "Remove Chain Drive (%1)",
+    "ch": "移除鏈傳動元件 (%1)",
+    "cn": "移除链传动组件 (%1)"
+   },
+   "UI_AGD_RenameRemote": {
+    "en": "Rename Remote",
+    "ch": "重新命名遙控器",
+    "cn": "重命名遥控器"
+   },
+   "UI_AGD_ReqBattery": {
+    "en": "Requires: Battery",
+    "ch": "需要: 電池",
+    "cn": "需要: 电池"
+   },
+   "UI_AGD_ReqDriveBatteryInstalled": {
+    "en": "Requires: Drive Battery installed",
+    "ch": "需要: 已安裝驅動電池",
+    "cn": "需要: 已安装驱动电池"
+   },
+   "UI_AGD_ReqDrivePackTools": {
+    "en": "Requires: Drive Pack + Wrench + Screwdriver",
+    "ch": "需要: 鏈傳動元件 + 扳手 + 螺絲起子",
+    "cn": "需要: 链传动组件 + 扳手 + 螺丝刀"
+   },
+   "UI_AGD_ReqElectricalSkill": {
+    "en": "Requires Electrical skill %1+",
+    "ch": "需要電工技能 %1+",
+    "cn": "需要电工技能 %1+"
+   },
+   "UI_AGD_ReqGateControllerInv": {
+    "en": "Requires a Gate Controller in inventory",
+    "ch": "物品欄中需要大門控制器",
+    "cn": "物品栏中需要大门控制器"
+   },
+   "UI_AGD_ReqHDCarBattery": {
+    "en": "Requires a Heavy-Duty car battery in inventory",
+    "ch": "物品欄中需要重型汽車電瓶",
+    "cn": "物品栏中需要重型汽车电瓶"
+   },
+   "UI_AGD_ReqHackingSkill": {
+    "en": "Requires Hacking skill %1+",
+    "ch": "需要駭客技能 %1+",
+    "cn": "需要黑客技能 %1+"
+   },
+   "UI_AGD_ReqMatchingCarBattery": {
+    "en": "Requires the matching car battery for this drive",
+    "ch": "需要與此鏈傳動元件相符的汽車電瓶",
+    "cn": "需要与此链传动组件匹配的汽车电瓶"
+   },
+   "UI_AGD_ReqSportCarBattery": {
+    "en": "Requires a Sport car battery in inventory",
+    "ch": "物品欄中需要運動型汽車電瓶",
+    "cn": "物品栏中需要运动型汽车电瓶"
+   },
+   "UI_AGD_ReqStdCarBattery": {
+    "en": "Requires a Standard car battery in inventory",
+    "ch": "物品欄中需要標準型汽車電瓶",
+    "cn": "物品栏中需要标准型汽车电瓶"
+   },
+   "UI_AGD_ReqWrenchScrewdriver": {
+    "en": "Requires: Wrench + Screwdriver",
+    "ch": "需要: 扳手 + 螺絲起子",
+    "cn": "需要: 扳手 + 螺丝刀"
+   },
+   "UI_AGD_RequiresGateController": {
+    "en": "Requires Gate Controller",
+    "ch": "需要大門控制器",
+    "cn": "需要大门控制器"
+   },
+   "UI_AGD_SelectChainDriveSize": {
+    "en": "Select a chain drive size to install",
+    "ch": "選擇要安裝的鏈傳動元件規格",
+    "cn": "选择要安装的链传动组件规格"
+   },
+   "UI_AGD_SelectGateFirst": {
+    "en": "Select a gate entry first",
+    "ch": "請先選擇一個大門條目",
+    "cn": "请先选择一个大门条目"
+   },
+   "UI_AGD_ServerDoorNotFound": {
+    "en": "Server could not find that door - stand closer and retry",
+    "ch": "伺服器找不到那扇門 - 請靠近後重試",
+    "cn": "服务器找不到那扇门 - 请靠近后重试"
+   },
+   "UI_AGD_SetDoorCodeTitle": {
+    "en": "Set Door Code (0-9999)",
+    "ch": "設定門禁密碼 (0-9999)",
+    "cn": "设置门禁密码 (0-9999)"
+   },
+   "UI_AGD_SetGateFrequencyTitle": {
+    "en": "Set Gate Frequency",
+    "ch": "設定大門頻率",
+    "cn": "设置大门频率"
+   },
+   "UI_AGD_ShowPairing": {
+    "en": "Show Pairing",
+    "ch": "顯示配對資訊",
+    "cn": "显示配对信息"
+   },
+   "UI_AGD_SizeUnknown": {
+    "en": "Size: unknown",
+    "ch": "尺寸: 未知",
+    "cn": "尺寸: 未知"
+   },
+   "UI_AGD_SizeWxH": {
+    "en": "Size: %1x%2",
+    "ch": "尺寸: %1x%2",
+    "cn": "尺寸: %1x%2"
+   },
+   "UI_AGD_SlotN": {
+    "en": "Slot %1",
+    "ch": "槽位 %1",
+    "cn": "槽位 %1"
+   },
+   "UI_AGD_StateClosed": {
+    "en": "State: closed",
+    "ch": "狀態: 已關閉",
+    "cn": "状态: 关闭"
+   },
+   "UI_AGD_StateMixed": {
+    "en": "State: mixed",
+    "ch": "狀態: 混合",
+    "cn": "状态: 部分开启"
+   },
+   "UI_AGD_StateOpen": {
+    "en": "State: open",
+    "ch": "狀態: 已開啟",
+    "cn": "状态: 开启"
+   },
+   "UI_AGD_StateOutOfRange": {
+    "en": "State: out of range",
+    "ch": "狀態: 超出範圍",
+    "cn": "状态: 超出范围"
+   },
+   "UI_AGD_StateUnknown": {
+    "en": "State: unknown",
+    "ch": "狀態: 未知",
+    "cn": "状态: 未知"
+   },
+   "UI_AGD_SyncingGateEntry": {
+    "en": "Syncing gate entry from server...",
+    "ch": "正在從伺服器同步大門條目…",
+    "cn": "正在从服务器同步大门条目…"
+   },
+   "UI_AGD_TierHeavyDuty": {
+    "en": "Heavy-Duty",
+    "ch": "重型",
+    "cn": "重型"
+   },
+   "UI_AGD_TierSport": {
+    "en": "Sport",
+    "ch": "運動型",
+    "cn": "运动型"
+   },
+   "UI_AGD_TierStandard": {
+    "en": "Standard",
+    "ch": "標準型",
+    "cn": "标准型"
+   },
+   "UI_AGD_TipAccessKeypad": {
+    "en": "Walk to the keypad to view and interact with it.",
+    "ch": "走到鍵盤前即可檢視並操作.",
+    "cn": "走到键盘前即可查看并操作."
+   },
+   "UI_AGD_TipBindRemote": {
+    "en": "Bind this remote to a toggle key for quick use (slots 1-3).",
+    "ch": "將此遙控器綁定到切換按鍵以便快速使用 (槽位 1-3).",
+    "cn": "将此遥控器绑定到切换按键以便快速使用 (槽位 1-3)."
+   },
+   "UI_AGD_TipChangeCode": {
+    "en": "Approach the keypad and change the code.",
+    "ch": "靠近鍵盤並更改密碼.",
+    "cn": "靠近键盘并更改密码."
+   },
+   "UI_AGD_TipChooseRemote": {
+    "en": "Choose a paired remote to operate the door.",
+    "ch": "選擇已配對的遙控器來操作此門.",
+    "cn": "选择已配对的遥控器来操作此门."
+   },
+   "UI_AGD_TipChooseSlot": {
+    "en": "Choose a slot to bind or clear the current binding.",
+    "ch": "選擇一個槽位以綁定或清除目前綁定.",
+    "cn": "选择一个槽位以绑定或清除当前绑定."
+   },
+   "UI_AGD_TipEligibleVia": {
+    "en": "Eligible via %1. Reveals code and unlocks.",
+    "ch": "符合條件 (透過 %1). 會顯示密碼並解鎖.",
+    "cn": "符合条件 (通过 %1). 会显示密码并解锁."
+   },
+   "UI_AGD_TipHeavyDutyPack": {
+    "en": "Heavy-Duty pack (requires Heavy-Duty car battery)",
+    "ch": "重型鏈傳動元件 (需要重型汽車電瓶)",
+    "cn": "重型链传动组件 (需要重型汽车电瓶)"
+   },
+   "UI_AGD_TipInsertBattery": {
+    "en": "Insert a battery from your inventory into this remote.",
+    "ch": "從物品欄取出電池裝入此遙控器.",
+    "cn": "从物品栏取出电池装入此遥控器."
+   },
+   "UI_AGD_TipInsertThisBattery": {
+    "en": "Insert this battery (%1%% charge)",
+    "ch": "裝入此電池 (電量 %1%%)",
+    "cn": "装入此电池 (电量 %1%%)"
+   },
+   "UI_AGD_TipInspectMotor": {
+    "en": "Inspect the motor to reveal the internal code and view the keypad.",
+    "ch": "檢查馬達以顯示內部密碼並檢視鍵盤.",
+    "cn": "检查电机以显示内部密码并查看键盘."
+   },
+   "UI_AGD_TipInstallDriveLock": {
+    "en": "Install a Chain Drive Pack before gate can be locked",
+    "ch": "須先安裝鏈傳動元件才能鎖定大門",
+    "cn": "须先安装链传动组件才能锁定大门"
+   },
+   "UI_AGD_TipInstallDriveOperate": {
+    "en": "Install a Chain Drive Pack before gate can be operated",
+    "ch": "須先安裝鏈傳動元件才能操作大門",
+    "cn": "须先安装链传动组件才能操作大门"
+   },
+   "UI_AGD_TipInstallDriveUnlock": {
+    "en": "Install a Chain Drive Pack before gate can be unlocked",
+    "ch": "須先安裝鏈傳動元件才能解鎖大門",
+    "cn": "须先安装链传动组件才能解锁大门"
+   },
+   "UI_AGD_TipLockGateBattery": {
+    "en": "Lock the paired gate (Battery %1%%)",
+    "ch": "鎖定已配對大門 (電池 %1%%)",
+    "cn": "锁定已配对大门 (电池 %1%%)"
+   },
+   "UI_AGD_TipLockGateNoBattery": {
+    "en": "Lock the paired gate (battery required)",
+    "ch": "鎖定已配對大門 (需要電池)",
+    "cn": "锁定已配对大门 (需要电池)"
+   },
+   "UI_AGD_TipLockNearestDoor": {
+    "en": "Lock the nearest paired door",
+    "ch": "鎖定最近的已配對門",
+    "cn": "锁定最近的已配对门"
+   },
+   "UI_AGD_TipLockPairedGarage": {
+    "en": "Lock the paired garage group.",
+    "ch": "鎖定已配對的車庫門組.",
+    "cn": "锁定已配对的车库门组."
+   },
+   "UI_AGD_TipLockPairedGate": {
+    "en": "Lock the paired gate",
+    "ch": "鎖定已配對大門",
+    "cn": "锁定已配对大门"
+   },
+   "UI_AGD_TipLockedOutKeypad": {
+    "en": "Keypad is locked out; requires hacking before it can be used.",
+    "ch": "鍵盤處於鎖定狀態; 須先入侵才能使用.",
+    "cn": "键盘处于锁定状态; 须先入侵才能使用."
+   },
+   "UI_AGD_TipLockedOutPairRemote": {
+    "en": "Keypad is locked out; hack it before pairing a remote.",
+    "ch": "鍵盤處於鎖定狀態; 配對遙控器前須先入侵.",
+    "cn": "键盘处于锁定状态; 配对遥控器前须先入侵."
+   },
+   "UI_AGD_TipLockedOutPairing": {
+    "en": "Keypad is locked out; requires hacking before pairing.",
+    "ch": "鍵盤處於鎖定狀態; 配對前須先入侵.",
+    "cn": "键盘处于锁定状态; 配对前须先入侵."
+   },
+   "UI_AGD_TipNameGarage": {
+    "en": "Set a custom name for this garage group.",
+    "ch": "為此車庫門組設定自訂名稱.",
+    "cn": "为此车库门组设置自定义名称."
+   },
+   "UI_AGD_TipNeedRemoteToPair": {
+    "en": "You need a remote in your inventory to pair.",
+    "ch": "物品欄中需要遙控器才能配對.",
+    "cn": "物品栏中需要遥控器才能配对."
+   },
+   "UI_AGD_TipNoGarageFoundNearby": {
+    "en": "No garage found nearby to pair.",
+    "ch": "附近找不到可配對的車庫.",
+    "cn": "附近找不到可配对的车库."
+   },
+   "UI_AGD_TipOpenClosePairedDoor": {
+    "en": "Open or close the paired door",
+    "ch": "開啟或關閉已配對的門",
+    "cn": "打开或关闭已配对的门"
+   },
+   "UI_AGD_TipOpenGarageManager2": {
+    "en": "Open the HydeCo Garage Manager to view and edit garages.",
+    "ch": "開啟 HydeCo 車庫管理器以檢視並編輯車庫.",
+    "cn": "打开 HydeCo 车库管理器以查看并编辑车库."
+   },
+   "UI_AGD_TipOpenGateManager": {
+    "en": "Open the HydeCo Gate Manager",
+    "ch": "開啟 HydeCo 大門管理器",
+    "cn": "打开 HydeCo 大门管理器"
+   },
+   "UI_AGD_TipOperateDoorRemote": {
+    "en": "Operate this door using your paired remote. Consumes battery.",
+    "ch": "使用已配對的遙控器操作此門. 會消耗電池電量.",
+    "cn": "使用已配对的遥控器操作此门. 会消耗电池电量."
+   },
+   "UI_AGD_TipOperateWithRemote": {
+    "en": "Operate with this remote.",
+    "ch": "使用此遙控器操作.",
+    "cn": "使用此遥控器操作."
+   },
+   "UI_AGD_TipPairHeldRemote": {
+    "en": "Pair a held remote to this door by entering its code. One remote controls one garage; re-pairing replaces the previous pairing.",
+    "ch": "輸入密碼, 將手持遙控器配對到此門. 一支遙控器只能控制一座車庫; 重新配對會取代先前的配對.",
+    "cn": "输入密码, 将手持遥控器配对到此门. 一个遥控器只能控制一个车库; 重新配对会替换先前的配对."
+   },
+   "UI_AGD_TipPairNearestGate": {
+    "en": "Pair this controller to the nearest gate",
+    "ch": "將此控制器配對到最近的大門",
+    "cn": "将此控制器配对到最近的大门"
+   },
+   "UI_AGD_TipPairRemoteCode": {
+    "en": "Pair this remote to the nearest garage by entering its 4-digit code. One remote controls one garage; re-pairing replaces the previous pairing.",
+    "ch": "輸入 4 位數密碼, 將此遙控器配對到最近的車庫. 一支遙控器只能控制一座車庫; 重新配對會取代先前的配對.",
+    "cn": "输入 4 位数密码, 将此遥控器配对到最近的车库. 一个遥控器只能控制一个车库; 重新配对会替换先前的配对."
+   },
+   "UI_AGD_TipPairSpecificRemote": {
+    "en": "Pair this specific remote to the door.",
+    "ch": "將此特定遙控器配對到這扇門.",
+    "cn": "将此特定遥控器配对到这扇门."
+   },
+   "UI_AGD_TipPairThisController": {
+    "en": "Pair this controller to the selected gate",
+    "ch": "將此控制器配對到選定的大門",
+    "cn": "将此控制器配对到所选大门"
+   },
+   "UI_AGD_TipPairUnpairDoor": {
+    "en": "Pair with or unpair from a door",
+    "ch": "與門配對或取消配對",
+    "cn": "与门配对或取消配对"
+   },
+   "UI_AGD_TipPairUnpairedController": {
+    "en": "Pair an unpaired Gate Controller to this gate",
+    "ch": "將尚未配對的大門控制器配對到此大門",
+    "cn": "将尚未配对的大门控制器配对到此大门"
+   },
+   "UI_AGD_TipQuickPair": {
+    "en": "Instantly pair this remote to the nearest discovered garage.",
+    "ch": "立即將此遙控器配對到最近已發現的車庫.",
+    "cn": "立即将此遥控器配对到最近已发现的车库."
+   },
+   "UI_AGD_TipRemoteHUD": {
+    "en": "Shows status for this remote: code, battery, and quick actions.",
+    "ch": "顯示此遙控器的狀態: 密碼, 電池與快捷操作.",
+    "cn": "显示此遥控器的状态: 密码, 电池与快捷操作."
+   },
+   "UI_AGD_TipRemoveBattery": {
+    "en": "Remove the battery from this remote.",
+    "ch": "取出此遙控器的電池.",
+    "cn": "取出此遥控器的电池."
+   },
+   "UI_AGD_TipRemoveChainDrive": {
+    "en": "Detach the mounted chain drive and return it to inventory (Requires: Wrench + Screwdriver)",
+    "ch": "拆下已安裝的鏈傳動元件並放回物品欄 (需要: 扳手 + 螺絲起子)",
+    "cn": "拆下已安装的链传动组件并放回物品栏 (需要: 扳手 + 螺丝刀)"
+   },
+   "UI_AGD_TipRemoveCtrlBattery": {
+    "en": "Remove the controller's battery",
+    "ch": "取出控制器的電池",
+    "cn": "取出控制器的电池"
+   },
+   "UI_AGD_TipRemoveInstalledBattery": {
+    "en": "Remove the installed battery for recharging or swap",
+    "ch": "取出已安裝的電池以便充電或更換",
+    "cn": "取出已安装的电池以便充电或更换"
+   },
+   "UI_AGD_TipRenameRemote": {
+    "en": "Rename this remote",
+    "ch": "重新命名此遙控器",
+    "cn": "重命名此遥控器"
+   },
+   "UI_AGD_TipRevealHack": {
+    "en": "Reveal the code and unlock via hacking.",
+    "ch": "透過入侵顯示密碼並解鎖.",
+    "cn": "通过入侵显示密码并解锁."
+   },
+   "UI_AGD_TipShowPairing": {
+    "en": "Show paired door code and whether it's in range. A remote can only hold one pairing; pairing a new door overwrites the old.",
+    "ch": "顯示已配對門的密碼以及是否在範圍內. 一支遙控器只能儲存一組配對; 配對新的門會覆寫舊的.",
+    "cn": "显示已配对门的密码以及是否在范围内. 一个遥控器只能保存一组配对; 配对新的门会覆盖旧的."
+   },
+   "UI_AGD_TipSportPack": {
+    "en": "Sport pack (requires Sport car battery)",
+    "ch": "運動型鏈傳動元件 (需要運動型汽車電瓶)",
+    "cn": "运动型链传动组件 (需要运动型汽车电瓶)"
+   },
+   "UI_AGD_TipStandardPack": {
+    "en": "Standard pack (requires Standard car battery)",
+    "ch": "標準型鏈傳動元件 (需要標準型汽車電瓶)",
+    "cn": "标准型链传动组件 (需要标准型汽车电瓶)"
+   },
+   "UI_AGD_TipToggleGate": {
+    "en": "Toggle the paired gate",
+    "ch": "切換已配對大門",
+    "cn": "切换已配对大门"
+   },
+   "UI_AGD_TipToggleGateBattery": {
+    "en": "Toggle this gate (Battery %1%% charge)",
+    "ch": "切換此大門 (電池電量 %1%%)",
+    "cn": "切换此大门 (电池电量 %1%%)"
+   },
+   "UI_AGD_TipToggleGateReq": {
+    "en": "Toggle this gate (requires paired controller and installed battery)",
+    "ch": "切換此大門 (需要已配對的控制器與已安裝的電池)",
+    "cn": "切换此大门 (需要已配对的控制器与已安装的电池)"
+   },
+   "UI_AGD_TipToggleLayout": {
+    "en": "Toggle compact/expanded layout",
+    "ch": "切換精簡/展開版面",
+    "cn": "切换紧凑/展开布局"
+   },
+   "UI_AGD_TipUnlockGateBattery": {
+    "en": "Unlock the paired gate (Battery %1%%)",
+    "ch": "解鎖已配對大門 (電池 %1%%)",
+    "cn": "解锁已配对大门 (电池 %1%%)"
+   },
+   "UI_AGD_TipUnlockGateNoBattery": {
+    "en": "Unlock the paired gate (battery required)",
+    "ch": "解鎖已配對大門 (需要電池)",
+    "cn": "解锁已配对大门 (需要电池)"
+   },
+   "UI_AGD_TipUnlockNearestDoor": {
+    "en": "Unlock the nearest paired door",
+    "ch": "解鎖最近的已配對門",
+    "cn": "解锁最近的已配对门"
+   },
+   "UI_AGD_TipUnlockPairedGarage": {
+    "en": "Unlock the paired garage group.",
+    "ch": "解鎖已配對的車庫門組.",
+    "cn": "解锁已配对的车库门组."
+   },
+   "UI_AGD_TipUnlockPairedGate": {
+    "en": "Unlock the paired gate",
+    "ch": "解鎖已配對大門",
+    "cn": "解锁已配对大门"
+   },
+   "UI_AGD_TipUnpairController": {
+    "en": "Remove pairing from this controller",
+    "ch": "取消此控制器的配對",
+    "cn": "取消此控制器的配对"
+   },
+   "UI_AGD_TipUnpairRemote": {
+    "en": "Remove pairing from this remote (it can then be paired to a different door).",
+    "ch": "取消此遙控器的配對 (之後可配對到其他門).",
+    "cn": "取消此遥控器的配对 (之后可配对到其他门)."
+   },
+   "UI_AGD_TipUseRemote": {
+    "en": "Operate the paired garage in range. Consumes battery.",
+    "ch": "操作範圍內已配對的車庫. 會消耗電池電量.",
+    "cn": "操作范围内已配对的车库. 会消耗电池电量."
+   },
+   "UI_AGD_TipWalkKeypadUnlock": {
+    "en": "Walk to the keypad and enter the 4-digit code to unlock.",
+    "ch": "走到鍵盤前並輸入 4 位數密碼以解鎖.",
+    "cn": "走到键盘前并输入 4 位数密码以解锁."
+   },
+   "UI_AGD_ToggleSelectedGate": {
+    "en": "Toggle the selected gate",
+    "ch": "切換選定的大門",
+    "cn": "切换所选大门"
+   },
+   "UI_AGD_Unavailable": {
+    "en": "Unavailable",
+    "ch": "無法使用",
+    "cn": "不可用"
+   },
+   "UI_AGD_UnlockPairedGarage": {
+    "en": "Unlock Paired Garage",
+    "ch": "解鎖已配對車庫",
+    "cn": "解锁已配对车库"
+   },
+   "UI_AGD_Unnamed": {
+    "en": "<unnamed>",
+    "ch": "<unnamed>",
+    "cn": "<unnamed>"
+   },
+   "UI_AGD_UnpairRemote": {
+    "en": "Unpair Remote",
+    "ch": "取消配對遙控器",
+    "cn": "取消配对遥控器"
+   },
+   "UI_AGD_UnpairedCtrlBatteryDead": {
+    "en": "Unpaired controller battery is missing or dead",
+    "ch": "未配對的控制器缺少電池或電池沒電",
+    "cn": "未配对控制器的电池缺失或没电"
+   },
+   "UI_AGD_UpdatingCoordinates": {
+    "en": "Updating coordinates...",
+    "ch": "正在更新座標…",
+    "cn": "正在更新坐标…"
+   },
+   "UI_AGD_UseRemote": {
+    "en": "Use Remote",
+    "ch": "使用遙控器",
+    "cn": "使用遥控器"
    }
   },
   "MakeUp.json": {
