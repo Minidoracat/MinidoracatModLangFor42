@@ -112156,6 +112156,16 @@
     "en": "If enabled, Container Trailers can spawn in both normal and fixed vehicle zones. If disabled, Container Trailers will not spawn.",
     "ch": "若啟用, 貨櫃拖車可在一般車輛區域與固定車輛區域生成. 若停用, 貨櫃拖車不會生成.",
     "cn": "若启用, 集装箱拖车可以在常规和固定车辆区域生成. 若禁用, 集装箱拖车将不会生成."
+   },
+   "Sandbox_ConditionalSpeechAllowClientModOptions": {
+    "en": "Allow Clients To Edit Mod Options",
+    "ch": "允許客戶端修改模組選項",
+    "cn": "允许客户端修改模组选项"
+   },
+   "Sandbox_ConditionalSpeechAllowClientModOptions_tooltip": {
+    "en": "If disabled, non-admin players can't change Conditional Speech's Mod Options - they'll see the current settings greyed out.",
+    "ch": "停用後, 非管理員玩家無法變更 Conditional Speech 的模組選項, 目前設定只會反灰顯示.",
+    "cn": "禁用后, 非管理员玩家无法更改 Conditional Speech 的模组选项, 当前设置只会置灰显示."
    }
   },
   "Tooltip.json": {
@@ -121934,6 +121944,376 @@
     "en": "%%",
     "ch": "%%",
     "cn": "%%"
+   },
+   "UI_Config_AnimalTracks": {
+    "en": "Animal Tracks",
+    "ch": "動物足跡",
+    "cn": "动物足迹"
+   },
+   "UI_Config_ChopTree": {
+    "en": "Chop Tree",
+    "ch": "砍樹",
+    "cn": "砍树"
+   },
+   "UI_Config_Explore": {
+    "en": "Explore",
+    "ch": "探索",
+    "cn": "探索"
+   },
+   "UI_Config_FoodRaw": {
+    "en": "Food Raw",
+    "ch": "生食",
+    "cn": "生食"
+   },
+   "UI_Config_FoodRotten": {
+    "en": "Food Rotten",
+    "ch": "腐爛食物",
+    "cn": "腐烂食物"
+   },
+   "UI_Config_Foraged": {
+    "en": "Foraged",
+    "ch": "採集",
+    "cn": "搜寻"
+   },
+   "UI_Config_FoundLoot": {
+    "en": "Found Loot",
+    "ch": "發現戰利品",
+    "cn": "发现战利品"
+   },
+   "UI_Config_Holes": {
+    "en": "Holes",
+    "ch": "衣物破洞",
+    "cn": "衣物破洞"
+   },
+   "UI_Config_Kill": {
+    "en": "Kill",
+    "ch": "擊殺",
+    "cn": "击杀"
+   },
+   "UI_Config_LevelUp": {
+    "en": "Level Up",
+    "ch": "升級",
+    "cn": "升级"
+   },
+   "UI_Config_MultiHit": {
+    "en": "Multi Hit",
+    "ch": "多次攻擊",
+    "cn": "多次攻击"
+   },
+   "UI_Config_PanicCallback": {
+    "en": "Panic Callback",
+    "ch": "恐慌回想",
+    "cn": "恐慌回想"
+   },
+   "UI_Config_SickFromFood": {
+    "en": "Sick From Food",
+    "ch": "食物中毒",
+    "cn": "食物中毒"
+   },
+   "UI_Config_VehicleDamage": {
+    "en": "Vehicle Damage",
+    "ch": "車輛受損",
+    "cn": "车辆受损"
+   },
+   "UI_Phrases_AnimalTracks1": {
+    "en": "something's been through here",
+    "ch": "有東西經過這裡.",
+    "cn": "有东西经过这里."
+   },
+   "UI_Phrases_AnimalTracks2": {
+    "en": "tracks, recent by the look of it",
+    "ch": "足跡, 看起來是剛留下的.",
+    "cn": "足迹, 看起来是刚留下的."
+   },
+   "UI_Phrases_AnimalTracks3": {
+    "en": "an animal came through here",
+    "ch": "有動物從這裡經過.",
+    "cn": "有动物从这里经过."
+   },
+   "UI_Phrases_Bored17": {
+    "en": "could go for some <RecentFood> right about now",
+    "ch": "現在真想來點<RecentFood>.",
+    "cn": "现在真想来点<RecentFood>."
+   },
+   "UI_Phrases_Bored18": {
+    "en": "keep thinking about that <RecentFood> I had",
+    "ch": "一直想著之前吃的<RecentFood>.",
+    "cn": "一直想着之前吃的<RecentFood>."
+   },
+   "UI_Phrases_ChopTree1": {
+    "en": "come on, fall already",
+    "ch": "快點, 倒下吧.",
+    "cn": "快点, 倒下吧."
+   },
+   "UI_Phrases_ChopTree2": {
+    "en": "this tree is tougher than it looks",
+    "ch": "這棵樹比看起來還難砍.",
+    "cn": "这棵树比看起来还难砍."
+   },
+   "UI_Phrases_ChopTree3": {
+    "en": "<SWEAR>, my arms are getting tired",
+    "ch": "<SWEAR>, 我的手臂快沒力了.",
+    "cn": "<SWEAR>, 我的胳膊快没劲了."
+   },
+   "UI_Phrases_ChopTree4": {
+    "en": "almost through it",
+    "ch": "快砍斷了.",
+    "cn": "快砍断了."
+   },
+   "UI_Phrases_Explore1": {
+    "en": "wonder what's in here",
+    "ch": "不知道這裡有什麼.",
+    "cn": "不知道这里有什么."
+   },
+   "UI_Phrases_Explore2": {
+    "en": "let's see what we've got",
+    "ch": "來看看有什麼.",
+    "cn": "来看看有什么."
+   },
+   "UI_Phrases_Explore3": {
+    "en": "haven't been in here before",
+    "ch": "以前沒進來過.",
+    "cn": "以前没进来过."
+   },
+   "UI_Phrases_Explore4": {
+    "en": "new room",
+    "ch": "新房間.",
+    "cn": "新房间."
+   },
+   "UI_Phrases_FoodRaw1": {
+    "en": "probably shouldn't have eaten that raw",
+    "ch": "那個大概不該生吃.",
+    "cn": "那个大概不该生吃."
+   },
+   "UI_Phrases_FoodRaw2": {
+    "en": "that definitely needed cooking first",
+    "ch": "那絕對該先煮過.",
+    "cn": "那绝对该先煮熟."
+   },
+   "UI_Phrases_FoodRaw3": {
+    "en": "<SWEAR>, that wasn't cooked properly",
+    "ch": "<SWEAR>, 那根本沒煮熟.",
+    "cn": "<SWEAR>, 那根本没煮熟."
+   },
+   "UI_Phrases_FoodRaw4": {
+    "en": "I might regret eating that raw",
+    "ch": "生吃那個我可能會後悔.",
+    "cn": "生吃那个我可能会后悔."
+   },
+   "UI_Phrases_FoodRaw5": {
+    "en": "should've cooked that first",
+    "ch": "早該先煮過的.",
+    "cn": "早该先煮熟的."
+   },
+   "UI_Phrases_FoodRotten1": {
+    "en": "<SWEAR>, that was rotten",
+    "ch": "<SWEAR>, 那已經壞了.",
+    "cn": "<SWEAR>, 那已经坏了."
+   },
+   "UI_Phrases_FoodRotten2": {
+    "en": "that tasted awful",
+    "ch": "那味道真糟.",
+    "cn": "那味道真糟."
+   },
+   "UI_Phrases_FoodRotten3": {
+    "en": "I shouldn't have eaten that",
+    "ch": "我不該吃那個的.",
+    "cn": "我不该吃那个的."
+   },
+   "UI_Phrases_FoodRotten4": {
+    "en": "that food had gone off",
+    "ch": "那東西已經變質了.",
+    "cn": "那东西已经变质了."
+   },
+   "UI_Phrases_FoodRotten5": {
+    "en": "I think I'm going to regret that",
+    "ch": "我覺得我會後悔.",
+    "cn": "我觉得我会后悔."
+   },
+   "UI_Phrases_Foraged1": {
+    "en": "there we go",
+    "ch": "有了.",
+    "cn": "有了."
+   },
+   "UI_Phrases_Foraged2": {
+    "en": "that'll do",
+    "ch": "這樣就夠了.",
+    "cn": "这样就够了."
+   },
+   "UI_Phrases_Foraged3": {
+    "en": "worth the walk",
+    "ch": "這趟沒白走.",
+    "cn": "这趟没白走."
+   },
+   "UI_Phrases_FoundLoot1": {
+    "en": "let's see what's in here",
+    "ch": "來看看裡面有什麼.",
+    "cn": "来看看里面有什么."
+   },
+   "UI_Phrases_FoundLoot2": {
+    "en": "might be something useful in here",
+    "ch": "這裡面可能有能用的東西.",
+    "cn": "这里面可能有能用的东西."
+   },
+   "UI_Phrases_FoundLoot3": {
+    "en": "worth a look",
+    "ch": "值得看一下.",
+    "cn": "值得看一下."
+   },
+   "UI_Phrases_Holes1": {
+    "en": "<SWEAR>, I've got a hole in my clothes",
+    "ch": "<SWEAR>, 我衣服破了個洞.",
+    "cn": "<SWEAR>, 我衣服破了个洞."
+   },
+   "UI_Phrases_Holes2": {
+    "en": "my clothes are getting torn up",
+    "ch": "我的衣服越來越破了.",
+    "cn": "我的衣服越来越破了."
+   },
+   "UI_Phrases_Holes3": {
+    "en": "I need to patch this up",
+    "ch": "得把這裡補一補.",
+    "cn": "得把这儿补一补."
+   },
+   "UI_Phrases_Holes4": {
+    "en": "great, another hole",
+    "ch": "好極了, 又一個洞.",
+    "cn": "好极了, 又一个洞."
+   },
+   "UI_Phrases_Holes5": {
+    "en": "these clothes won't last much longer",
+    "ch": "這身衣服撐不了多久了.",
+    "cn": "这身衣服撑不了多久了."
+   },
+   "UI_Phrases_Kill1": {
+    "en": "got you",
+    "ch": "逮到你了.",
+    "cn": "逮到你了."
+   },
+   "UI_Phrases_Kill2": {
+    "en": "that's one down",
+    "ch": "解決一個.",
+    "cn": "解决一个."
+   },
+   "UI_Phrases_Kill3": {
+    "en": "stay down",
+    "ch": "別再起來了.",
+    "cn": "别再起来了."
+   },
+   "UI_Phrases_Kill4": {
+    "en": "one less to worry about",
+    "ch": "少一個麻煩.",
+    "cn": "少一个麻烦."
+   },
+   "UI_Phrases_Kill5": {
+    "en": "<SWEAR>, got it",
+    "ch": "<SWEAR>, 搞定.",
+    "cn": "<SWEAR>, 搞定."
+   },
+   "UI_Phrases_LevelUp1": {
+    "en": "I'm getting better at this",
+    "ch": "我越來越上手了.",
+    "cn": "我越来越上手了."
+   },
+   "UI_Phrases_LevelUp2": {
+    "en": "I'm improving",
+    "ch": "我在進步.",
+    "cn": "我在进步."
+   },
+   "UI_Phrases_LevelUp3": {
+    "en": "all this practice is paying off",
+    "ch": "這些練習沒白費.",
+    "cn": "这些练习没白费."
+   },
+   "UI_Phrases_LevelUp4": {
+    "en": "I'm getting the hang of this",
+    "ch": "我抓到訣竅了.",
+    "cn": "我摸到门道了."
+   },
+   "UI_Phrases_MultiHit1": {
+    "en": "just die already",
+    "ch": "快點死吧.",
+    "cn": "快点死吧."
+   },
+   "UI_Phrases_MultiHit2": {
+    "en": "how many hits does it take",
+    "ch": "到底要打幾下?",
+    "cn": "到底要打几下?"
+   },
+   "UI_Phrases_MultiHit3": {
+    "en": "<SWEAR>, go down",
+    "ch": "<SWEAR>, 倒下吧.",
+    "cn": "<SWEAR>, 倒下吧."
+   },
+   "UI_Phrases_MultiHit4": {
+    "en": "this one won't quit",
+    "ch": "這隻怎麼還不倒.",
+    "cn": "这只怎么还不倒."
+   },
+   "UI_Phrases_MultiHit5": {
+    "en": "stay still",
+    "ch": "別動.",
+    "cn": "别动."
+   },
+   "UI_Phrases_PanicCallback1": {
+    "en": "not again, just like last time",
+    "ch": "又來了, 跟上次一樣.",
+    "cn": "又来了, 跟上次一样."
+   },
+   "UI_Phrases_PanicCallback2": {
+    "en": "I can still do this, just like before",
+    "ch": "我還是辦得到, 就跟以前一樣.",
+    "cn": "我还能做到, 就跟以前一样."
+   },
+   "UI_Phrases_PanicCallback3": {
+    "en": "<Pain>, not again",
+    "ch": "<Pain>, 別又來了.",
+    "cn": "<Pain>, 别又来了."
+   },
+   "UI_Phrases_PanicCallback4": {
+    "en": "I got through it last time, I can do it again",
+    "ch": "上次撐過來了, 這次也行.",
+    "cn": "上次撑过来了, 这次也行."
+   },
+   "UI_Phrases_SickFromFood1": {
+    "en": "should've thrown that food out",
+    "ch": "早該把那東西丟掉的.",
+    "cn": "早该把那东西扔掉的."
+   },
+   "UI_Phrases_SickFromFood2": {
+    "en": "knew that rotten food would catch up with me",
+    "ch": "就知道吃壞東西遲早會出事.",
+    "cn": "就知道吃坏东西迟早得出事."
+   },
+   "UI_Phrases_SickFromFood3": {
+    "en": "<Pain>, my stomach",
+    "ch": "<Pain>, 我的肚子.",
+    "cn": "<Pain>, 我的肚子."
+   },
+   "UI_Phrases_SickFromFood4": {
+    "en": "that's what I get for eating that",
+    "ch": "吃了那個就是這種下場.",
+    "cn": "吃了那个就是这种下场."
+   },
+   "UI_Phrases_VehicleDamage1": {
+    "en": "<SWEAR>, that hurt the car",
+    "ch": "<SWEAR>, 這下傷到車子了.",
+    "cn": "<SWEAR>, 这下伤到车子了."
+   },
+   "UI_Phrases_VehicleDamage2": {
+    "en": "that's gonna leave a mark",
+    "ch": "這下肯定會留下痕跡.",
+    "cn": "这下肯定会留下痕迹."
+   },
+   "UI_Phrases_VehicleDamage3": {
+    "en": "watch it!",
+    "ch": "小心!",
+    "cn": "小心!"
+   },
+   "UI_Phrases_VehicleDamage4": {
+    "en": "careful, the car won't take much more of that",
+    "ch": "小心點, 車子撐不了幾次了.",
+    "cn": "小心点, 车子撑不了几次了."
    }
   },
   "MakeUp.json": {
