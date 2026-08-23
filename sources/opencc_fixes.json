@@ -1602,6 +1602,21 @@
    ],
    "reason": "此處設定時鐘指針動畫 FPS 與顏色，指的是實體鐘針；保留並錨定豁免。",
    "ch_value": "0a4aeb5b2ed26117"
+  },
+  "Tooltip.json|Tooltip_MoreBuild_IlluminatedSign": {
+   "patterns": [
+    "光(\\s*)標",
+    "(?<![激閃])光標(?!靶)"
+   ],
+   "reason": "2026-08-24 #185 裁決 keep：「發光標牌」= illuminated sign，光＋標牌跨詞，非 cursor 光標。",
+   "ch_value": "5c162c05f8d8c556"
+  },
+  "UI.json|UI_Aegis_OptHiddenTip": {
+   "patterns": [
+    "用(\\s*)戶"
+   ],
+   "reason": "2026-08-24 #213 裁決 keep：「用戶端」= client，台灣資訊技術合法固定詞，非單獨「用戶」。",
+   "ch_value": "9623f2fa7397c191"
   }
  }
 }

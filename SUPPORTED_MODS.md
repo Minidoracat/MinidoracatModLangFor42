@@ -8,7 +8,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **546 個 Workshop 模組**（712 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
+共支援 **549 個 Workshop 模組**（715 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -549,14 +549,17 @@
 | [[J&G] Umbrella Corp Uniform [B42/41]](https://steamcommunity.com/sharedfiles/filedetails/?id=3675741487) | J&G 保護傘公司制服 | 新增保護傘公司風格制服、護具與腰、腿部槍套掛載點。 | `[J&G] Umbrella Corp Uniform` | 9 | — | — |
 | [PhunCure 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3676251425) | PhunCure 2 趣味解藥 | 新增可注射的解藥，能治癒咬傷、殭屍病毒與傷口感染，效果可自訂。 | `phuncure2` | 33 | — | — |
 | [Better Vanilla ALICE Suspenders](https://steamcommunity.com/sharedfiles/filedetails/?id=3676721528) | 更好的原版 ALICE 背帶 | 改良原版 ALICE 背帶裝備，並附帶多個出生地點選項描述。 | `bettervanillaalicesuspendersID` | 38 | ⚠️ ≥3 | — |
+| [Chopper Drop [B42][MP][SP]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3678109350) | 直升機空投 | 定期投放高風險、高報酬的軍用物資箱事件. | `ChopperDrop` | 1 | — | — |
 | [Solar Floodlight [42.16] [MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3680577450) | 太陽能探照燈 | 新增可組裝的太陽能探照燈，含電池槽與電池健康度顯示。 | `SolarFloodlight` | 55 | — | — |
 | [Dead Magic〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3686883520) | 死靈法術 | 新增完整魔法系統：法術書與魔法書、儀式、附魔、遺物與奧術研究樹。 | `DeadMagic` | 203 | — | — |
 | [Working Knowledge〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3717099183) | 職場知識 | 在檔案櫃、辦公桌等容器中加入 372 種職場文件，閱讀一次可獲得對應技能的一次性經驗。 | `WorkingKnowledge` | 372 | — | — |
 | [Gore's SVU4 Core〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3730070661) | Gore 的 SVU4 核心 | 標準化車輛升級 4 核心：車輛裝甲與升級件、車頂架／車頂照明、車輛烤漆；同捆工業流體儲存、備用引擎零件與原版車輛部件製作共 4 個子模組。 | `GoresSVU4Core`, `GoresIndustrialFluidInfrastructure`, `GoresSpareEnginePartsCrafting`, `GoresVanillaVehiclePartsCrafting` | 50 | ⚠️ ≥9 | ⚠️ 本包涵蓋物品名、車頂燈右鍵選單、沙盒設定與製作配方；車輛裝甲改裝介面（車輛輪盤 V →Upgrades）的標籤與按鈕文字由該 MOD 大量寫死於 Lua（僅視窗標題的車輛名走遊戲譯文），未走遊戲翻譯機制，翻譯包無法覆蓋。 |
 | [MRE Mod [B42.20.2]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3765409550) | 即食口糧 | 新增 1993 與 2026 兩個年份、共 36 種菜色的美軍即食口糧，附整盒包裝、拆封配方與生成率／營養值沙盒設定。 | `bdtmre` | 52 | — | — |
+| [Aegis Panel〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3766508989) | Aegis 管理面板 | 功能完整的多人伺服器管理員與玩家管理工具面板. | `AP` | 1092 | — | ⚠️ 內建說明、更新記錄與導覽刻意寫死 EN/DE，部分建材名稱與操作日誌也走英文；這些文字不經 PZ JSON 翻譯表，任何翻譯包都無法補上。 |
 | [Mirage Wardrobe: Multiplayer Transmog [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3770186452) | 幻裝衣櫥：多人連線幻化 | 以裝備部位為單位的服裝幻化衣櫥，變更角色外觀而不影響實際裝備數值；支援收藏解鎖、款式染色、套裝預設、人物觀察窗與多人連線同步。 | `MirageWardrobe42` | 313 | — | — |
 | [[SVRP] ClassicBows〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3776949545) | 經典弓箭 | 新增複合弓、獵弓、中世紀弓與多款十字弩，搭配木質／金屬／碳製箭矢與弩箭、戰術箭袋及整包打包配方。 | `SVRPClassicBows` | 52 | — | — |
 | [Improvised Silencers (Build 42.20 Compatibility)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3779164273) | 臨時消音器 | 新增可用金屬管、手電筒、水瓶等材料自製的消音器，各自有不同的降噪幅度與射程代價。 | `ImprovisedSilencers` | 10 | — | — |
+| [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1338 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
 ## 已下架模組（15 個，翻譯保留）
