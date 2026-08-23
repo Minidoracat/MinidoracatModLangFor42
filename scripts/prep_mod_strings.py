@@ -21,6 +21,10 @@ per-mod `extractor_schema >= 9` 才有 module 可精確比對；不可判定者�
     en / keys（連動出貨鍵數）/ files（落點檔）/ key_samples / wid
 並附 `_gap`：`"<落點檔>|<鍵>" -> en`，落地時用它把譯文展開回所有鍵。
 
+`_owner_conflicts`／`_owner_conflicts_other`／`_owner_conflicts_resolved` 的每個 owner
+條目帶 `{en, has_json_en, en_source}`（見 `annotate`）：`has_json_en` 決定「抑制後這個
+owner 的玩家看到自己 mod 的英文，還是字面鍵名」，是 translate／unship 裁決的承重事實。
+
 有效性判準見 tracker.resolve_effective_branches：`common` ＋唯一最佳版本夾。
 此處**只濾分支不濾副檔名**——`_EN.txt` 的鍵在執行期沒有 EN 定義，但我方譯文
 照樣生效（Translator 按鍵查譯文），把它們算進缺口才對。
@@ -37,7 +41,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import tracker  # noqa: E402
-from coverage_survey import DIST_CH, target_file  # noqa: E402
+from coverage_survey import DIST_CH, WHITELIST, target_file  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -100,8 +104,49 @@ def census_signature(owners: dict[str, str]) -> str:
     ).hexdigest()[:16]
 
 
+# `has_json_en` 用的來源標記：script DisplayName 不是 Translate 檔，走的是
+# `getItemNameFromFullType()` → `Item.getDisplayName()` 的 fallback 路徑。
+EN_SOURCE_SCRIPT = "script"
+
+
+def loadable_json(basename: str) -> bool:
+    """這個上游來源檔在 B42 會被 `Translator` 載入嗎？
+
+    **兩個條件都要滿足**，缺一即取不到 EN：
+      * 副檔名是 `.json`——`Translator.tryFillMapFromFile()` 的路徑寫死 `.json`
+        （`Translator.java:354`），legacy `_EN.txt` 在 B42 永不被讀取。
+      * 檔名 stem 在 `Translator.BY_NAME` 的 31 個白名單內——故 `UI_EN.json`
+        這種「是 json 但檔名不對」的死檔同樣不算（As1 上游就有這樣出貨的）。
+    """
+    stem, _, ext = basename.rpartition(".")
+    return ext == "json" and stem in WHITELIST
+
+
+def annotate(owners: dict[str, str], srcs: dict[str, str]) -> dict[str, dict]:
+    """把 `{owner: en}` 加註成 `{owner: {en, has_json_en, en_source}}`，供裁決用。
+
+    裁決 `translate` 還是 `unship` 的關鍵是「抑制後這個 owner 的玩家看到什麼」：
+      * `has_json_en: true` → 看到該 mod 自己的英文（Translator map 有 EN 底層）。
+      * `has_json_en: false` 且 `en_source` 是死檔（`*_EN.txt`／非白名單檔名）
+        → 看到 `getTextInternal()` 回傳的**字面鍵名**（`Translator.java:495`）。
+        unship 對這個 owner 是有可見代價的，要在 reason 裡記為已接受殘留。
+      * `has_json_en: false` 且 `en_source == EN_SOURCE_SCRIPT` → 仍看到英文，但走
+        `getItemNameFromFullType()` → `Item.getDisplayName()` 的 fallback，不經
+        Translator。**不可與死檔混為一談**，故 `en_source` 必須一起輸出。
+
+    `srcs` 缺該 owner 時 `en_source` 為 `None`、`has_json_en` 為 `False`——那是
+    en_src 與 census 不同步（不該發生），保守當成沒有 EN 底層而非靜默放行。
+    """
+    return {o: {"en": en,
+                "has_json_en": bool(srcs.get(o)) and loadable_json(srcs[o]),
+                "en_source": srcs.get(o)}
+            for o, en in owners.items()}
+
+
 def converge_owner(recs: dict, mirror: dict, eff: dict, *, vanilla: set[str],
-                   dn_gap: dict[str, set[str]]) -> dict[tuple[str, str], str]:
+                   dn_gap: dict[str, set[str]],
+                   src: dict[tuple[str, str], str] | None = None
+                   ) -> dict[tuple[str, str], str]:
     """把一個 wid 的 record 收斂成 `{(owner, "檔|鍵"): en}`，**不扣 shipped**。
 
     兩層優先序都在同一個 owner 內套（跨 owner 是衝突，不是覆寫）：
@@ -110,6 +155,10 @@ def converge_owner(recs: dict, mirror: dict, eff: dict, *, vanilla: set[str],
         退回 `Item.getDisplayName()`）。上游留白的 `translate_en` 同樣參與——它會把
         同鍵的 script DisplayName 頂掉，只 `continue` 會留下無據的英文。
     `dn_gap` 是 `_item_dn_stats` 判出的可補物品名，形狀 `{owner: {fullType}}`。
+    `src` 是選配 out-param：填入每個 `(owner, "檔|鍵")` **勝出來源**的檔名
+    （`"UI.json"`／`"UI_EN.txt"`）或 `EN_SOURCE_SCRIPT`。做成 out-param 而非改回傳
+    型別，是為了讓既有呼叫端零改動——而勝出優先序只能在這裡決定，另寫一份判定就會
+    與本函式分岔（`AGENTS.md`「不要另寫第二套」）。
     """
     out: dict[tuple[str, str], str] = {}
     # **dn 值一律走 `tracker.winning_dn_text`**：勝出 rid 由 state 決定（同 owner 內
@@ -121,6 +170,8 @@ def converge_owner(recs: dict, mirror: dict, eff: dict, *, vanilla: set[str],
         for k in keys:
             if (owner, k) in dn_val:
                 out[(owner, f"ItemName|{k}")] = dn_val[(owner, k)]
+                if src is not None:
+                    src[(owner, f"ItemName|{k}")] = EN_SOURCE_SCRIPT
     en_rids = [r for r in recs if r.startswith("translate_en|") and branch_ok(r, eff)]
     # **空值的語意由 `tryFillMapFromFile():362` 的 put 條件決定**：
     # `if (!map.containsKey(k) || !isNullOrEmpty(v))`，且 `isNullOrEmpty` 是
@@ -139,7 +190,8 @@ def converge_owner(recs: dict, mirror: dict, eff: dict, *, vanilla: set[str],
         relpath, _, key = rid.partition("|")[2].partition("|")
         if key in vanilla:
             continue
-        tgt = target_file(os.path.basename(relpath).rsplit(".", 1)[0], key)
+        base = os.path.basename(relpath)
+        tgt = target_file(base.rsplit(".", 1)[0], key)
         if not tgt:
             continue
         val = mirror.get(rid)
@@ -151,17 +203,25 @@ def converge_owner(recs: dict, mirror: dict, eff: dict, *, vanilla: set[str],
             # common 的舊英文＝拿過期值當翻譯來源。整鍵撤銷，交給呼叫端的 `en_missing`
             # 通報（mirror 盲區）。不標 seen：後續若另有同鍵 rid（不同檔）仍可重建。
             out.pop(ok, None)
+            if src is not None:
+                src.pop(ok, None)
             continue
         if not isinstance(val, str) or val == "":
             if ok not in seen_en:
                 out.pop(ok, None)
+                if src is not None:
+                    src.pop(ok, None)
                 seen_en.add(ok)
             continue
         if not val.strip():
             out.pop(ok, None)   # 純空白：引擎一律覆寫，執行期顯示空白＝不是缺口
+            if src is not None:
+                src.pop(ok, None)
             seen_en.add(ok)
             continue
         out[ok] = val
+        if src is not None:
+            src[ok] = base
         seen_en.add(ok)
     return out
 
@@ -209,6 +269,10 @@ def main() -> int:
     # 「先 apply A、日後才處理 B」的衝突永久消失（B 的鍵已 shipped 而被過濾掉）；而
     # 「已出貨」只證明當時有譯文，不證明對**後來才進 tracker 的 owner** 裁決過。
     census: dict[str, dict[str, str]] = collections.defaultdict(dict)
+    # 平行於 census 的「勝出來源檔名」索引，形狀 `{檔|鍵: {owner: 檔名｜"script"}}`。
+    # **刻意不併進 census**：`census_signature()` 對 census 的值做 hash，混進來源就會讓
+    # 全部既有裁決的 signature 一次失效、382 條台帳全部要重簽。
+    en_src: dict[str, dict[str, str]] = collections.defaultdict(dict)
     batch_owners: set[str] = set()            # 本批 wid 底下的 owner（決定 blocking 範圍）
     gap: dict[str, tuple[str, str]] = {}      # "<file>|<key>" -> (en, wid)
 
@@ -380,9 +444,12 @@ def main() -> int:
                                                   len(owners_item.get(o, set())))
                         for o in stats}
         census_dn = {o: st_c["gap"] for o, st_c in census_stats.items()}
-        cen = converge_owner(recs, mirror, eff, vanilla=vanilla, dn_gap=census_dn)
+        cen_src: dict[tuple[str, str], str] = {}
+        cen = converge_owner(recs, mirror, eff, vanilla=vanilla, dn_gap=census_dn,
+                             src=cen_src)
         for (owner, fk), en in cen.items():
             census[fk][f"{wid}/{owner}"] = en
+            en_src[fk][f"{wid}/{owner}"] = cen_src[(owner, fk)]
         if wid not in args.wids:
             # **非本批 wid 的 census 盲區也要 fail-closed**：`load_wid` 成功不代表這個 wid
             # 的每個 owner 都進了 census——落入 `mirror` 缺值／`malformed` 桶的鍵不進
@@ -679,13 +746,19 @@ def main() -> int:
     with open(out, "w", encoding="utf-8") as f:
         json.dump({"strings": rows, "_gap": {k: v[0] for k, v in gap.items()},
                    "_unchecked": unchecked, "_undecidable": undecidable,
-                   "_owner_conflicts": conflicts,
+                   # 三個衝突欄位都帶 `has_json_en`／`en_source` 加註（見 `annotate`）：
+                   # 裁決 translate vs unship 全靠它，先前得逐一人工翻 `sources/en/<wid>.json`
+                   # 的 rid 路徑，是最容易判錯的環節（#245 項目 1）。
+                   "_owner_conflicts": {fk: annotate(o, en_src.get(fk, {}))
+                                        for fk, o in conflicts.items()},
                    # 不涉及本批 owner 的歷史衝突：report-only，但**必須寫進 artifact**，
                    # 否則它們只存在於某次 stdout，下一個人無從知道有這批待辦。
-                   "_owner_conflicts_other": conflicts_other,
+                   "_owner_conflicts_other": {fk: annotate(o, en_src.get(fk, {}))
+                                              for fk, o in conflicts_other.items()},
                    # 已由 `sources/owner_conflict_decisions.json` 背書者：report-only，
                    # 但寫進 artifact 讓「放行了哪些」可稽核。
-                   "_owner_conflicts_resolved": resolved},
+                   "_owner_conflicts_resolved": {fk: annotate(o, en_src.get(fk, {}))
+                                                 for fk, o in resolved.items()}},
                   f, ensure_ascii=False, indent=1)
     print(f"{len(gap)} 鍵 → {len(rows)} 條相異字串"
           f"（重複率 {(1 - len(rows) / max(len(gap), 1)) * 100:.1f}%）→ {out}")
@@ -703,7 +776,11 @@ def main() -> int:
         print(f"  ⚠️ {len(conflicts)} 個鍵被多個 mod 定義成不同英文（`ItemName` 是全域表，"
               "譯文須對每個 owner 都成立）:")
         for fk, owners in list(conflicts.items())[:8]:
-            print(f"    {fk}: " + " | ".join(f"{w}={e[:40]!r}" for w, e in owners.items()))
+            srcs = en_src.get(fk, {})
+            print(f"    {fk}: " + " | ".join(
+                f"{w}={e[:40]!r}"
+                f"[{'json' if srcs.get(w) and loadable_json(srcs[w]) else srcs.get(w) or '?'}]"
+                for w, e in owners.items()))
         if len(conflicts) > 8:
             print(f"    ...（還有 {len(conflicts) - 8} 個）")
     if resolved:
@@ -720,7 +797,9 @@ def main() -> int:
         for u in unchecked:
             print(f"❌ 未檢查：{u}", file=sys.stderr)
         for fk, owners in conflicts.items():
-            print(f"❌ owner 衝突：{fk} → {owners}", file=sys.stderr)
+            # stderr 一樣帶加註：這是人裁決時唯一會看的輸出，缺了它就得再開 artifact。
+            print(f"❌ owner 衝突：{fk} → "
+                  f"{annotate(owners, en_src.get(fk, {}))}", file=sys.stderr)
         return 1
     return 0
 
