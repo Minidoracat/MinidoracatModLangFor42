@@ -122860,6 +122860,1914 @@
     "ch": "開啟稀有隨機箱",
     "cn": "打开稀有随机箱",
     "_note": "B42 bare-key repair: tracker 現行 script_craftRecipe 區塊顯示名為 `OpenRandombox_Rare`，As1 只提供引擎不讀的 `Recipe_OpenRandombox_Rare`；沿用前綴鍵譯值。"
+   },
+   "ConvertTo762x39": {
+    "en": "Convert to 7.62x39mm Round",
+    "ch": "轉換為7.62x39mm子彈",
+    "cn": "转换为7.62x39mm子弹",
+    "_note": "多 owner：一方省略 x39mm 寫成 7.62 Round，三方明寫 7.62x39mm；key 本身為 762x39，採精確口徑。"
+   },
+   "ConvertTo762x39Box": {
+    "en": "Convert to Box of 7.62x39mm Rounds",
+    "ch": "轉換為7.62x39mm子彈 (整盒)",
+    "cn": "转换为7.62x39mm子弹 (整盒)",
+    "_note": "多 owner：一方省略 x39mm 寫成 Box of 7.62 Rounds，三方明寫 7.62x39mm；採精確口徑。"
+   },
+   "ConvertTo9x18mm": {
+    "en": "Convert to 9x18mm Round",
+    "ch": "轉換為9x18mm子彈",
+    "cn": "转换为9x18mm子弹",
+    "_note": "多 owner：一方寫 9x18mm，另一方加 Makarov；取不綁平台的共同口徑。"
+   },
+   "ConvertTo303Box": {
+    "en": "Convert to Box of .303 British Rounds",
+    "ch": "轉換為.303 British子彈 (整盒)",
+    "cn": "转换为.303 British子弹 (整盒)"
+   },
+   "ConvertTo303Bullets": {
+    "en": "Convert to .303 British Round",
+    "ch": "轉換為.303 British子彈",
+    "cn": "转换为.303 British子弹"
+   },
+   "ConvertTo303BulletsAP": {
+    "en": "Convert to .303 British AP Round",
+    "ch": "轉換為.303 British穿甲彈",
+    "cn": "转换为.303 British穿甲弹"
+   },
+   "ConvertTo303BulletsAPBox": {
+    "en": "Convert to Box of .303 British AP Rounds",
+    "ch": "轉換為.303 British穿甲彈 (整盒)",
+    "cn": "转换为.303 British穿甲弹 (整盒)"
+   },
+   "ConvertTo303BulletsTracer": {
+    "en": "Convert to .303 British Tracer Round",
+    "ch": "轉換為.303 British曳光彈",
+    "cn": "转换为.303 British曳光弹"
+   },
+   "ConvertTo303BulletsTracerBox": {
+    "en": "Convert to Box of .303 British Tracer Rounds",
+    "ch": "轉換為.303 British曳光彈 (整盒)",
+    "cn": "转换为.303 British曳光弹 (整盒)"
+   },
+   "ConvertTo303Carton": {
+    "en": "Convert to Carton of .303 British Rounds",
+    "ch": "轉換為.303 British子彈 (整箱)",
+    "cn": "转换为.303 British子弹 (整箱)"
+   },
+   "ConvertTo308BulletsAP": {
+    "en": "Convert to .308 Winchester AP Round",
+    "ch": "轉換為.308溫徹斯特穿甲彈",
+    "cn": "转换为.308温彻斯特穿甲弹"
+   },
+   "ConvertTo308BulletsAPBox": {
+    "en": "Convert to Box of .308 Winchester AP Rounds",
+    "ch": "轉換為.308溫徹斯特穿甲彈 (整盒)",
+    "cn": "转换为.308温彻斯特穿甲弹 (整盒)"
+   },
+   "ConvertTo308BulletsTracer": {
+    "en": "Convert to .308 Winchester Tracer Round",
+    "ch": "轉換為.308溫徹斯特曳光彈",
+    "cn": "转换为.308温彻斯特曳光弹"
+   },
+   "ConvertTo308BulletsTracerBox": {
+    "en": "Convert to Box of .308 Winchester Tracer Rounds",
+    "ch": "轉換為.308溫徹斯特曳光彈 (整盒)",
+    "cn": "转换为.308温彻斯特曳光弹 (整盒)"
+   },
+   "ConvertTo30_06Box": {
+    "en": "Convert to Box of .30-06 Rounds",
+    "ch": "轉換為.30-06子彈 (整盒)",
+    "cn": "转换为.30-06子弹 (整盒)"
+   },
+   "ConvertTo30_06Bullets": {
+    "en": "Convert to .30-06 Round",
+    "ch": "轉換為.30-06子彈",
+    "cn": "转换为.30-06子弹"
+   },
+   "ConvertTo30_06BulletsAP": {
+    "en": "Convert to .30-06 AP Round",
+    "ch": "轉換為.30-06穿甲彈",
+    "cn": "转换为.30-06穿甲弹"
+   },
+   "ConvertTo30_06BulletsAPBox": {
+    "en": "Convert to Box of .30-06 AP Rounds",
+    "ch": "轉換為.30-06穿甲彈 (整盒)",
+    "cn": "转换为.30-06穿甲弹 (整盒)"
+   },
+   "ConvertTo30_06BulletsTracer": {
+    "en": "Convert to .30-06 Tracer Round",
+    "ch": "轉換為.30-06曳光彈",
+    "cn": "转换为.30-06曳光弹"
+   },
+   "ConvertTo30_06BulletsTracerBox": {
+    "en": "Convert to Box of .30-06 Tracer Rounds",
+    "ch": "轉換為.30-06曳光彈 (整盒)",
+    "cn": "转换为.30-06曳光弹 (整盒)"
+   },
+   "ConvertTo30_06Carton": {
+    "en": "Convert to Carton of .30-06 Rounds",
+    "ch": "轉換為.30-06子彈 (整箱)",
+    "cn": "转换为.30-06子弹 (整箱)"
+   },
+   "ConvertTo32ACP": {
+    "en": "Convert to .32 ACP Round",
+    "ch": "轉換為.32 ACP子彈",
+    "cn": "转换为.32 ACP子弹"
+   },
+   "ConvertTo32ACPBox": {
+    "en": "Convert to Box of .32 ACP Rounds",
+    "ch": "轉換為.32 ACP子彈 (整盒)",
+    "cn": "转换为.32 ACP子弹 (整盒)"
+   },
+   "ConvertTo545x39": {
+    "en": "Convert to 5.45x39mm Round",
+    "ch": "轉換為5.45x39mm子彈",
+    "cn": "转换为5.45x39mm子弹"
+   },
+   "ConvertTo545x39Box": {
+    "en": "Convert to Box of 5.45x39mm Rounds",
+    "ch": "轉換為5.45x39mm子彈 (整盒)",
+    "cn": "转换为5.45x39mm子弹 (整盒)"
+   },
+   "ConvertTo545x39BulletsAP": {
+    "en": "Convert to 5.45x39mm AP Round",
+    "ch": "轉換為5.45x39mm穿甲彈",
+    "cn": "转换为5.45x39mm穿甲弹"
+   },
+   "ConvertTo545x39BulletsAPBox": {
+    "en": "Convert to Box of 5.45x39mm AP Rounds",
+    "ch": "轉換為5.45x39mm穿甲彈 (整盒)",
+    "cn": "转换为5.45x39mm穿甲弹 (整盒)"
+   },
+   "ConvertTo545x39BulletsTracer": {
+    "en": "Convert to 5.45x39mm Tracer Round",
+    "ch": "轉換為5.45x39mm曳光彈",
+    "cn": "转换为5.45x39mm曳光弹"
+   },
+   "ConvertTo545x39BulletsTracerBox": {
+    "en": "Convert to Box of 5.45x39mm Tracer Rounds",
+    "ch": "轉換為5.45x39mm曳光彈 (整盒)",
+    "cn": "转换为5.45x39mm曳光弹 (整盒)"
+   },
+   "ConvertTo545x39Carton": {
+    "en": "Convert to Carton of 5.45x39mm Rounds",
+    "ch": "轉換為5.45x39mm子彈 (整箱)",
+    "cn": "转换为5.45x39mm子弹 (整箱)"
+   },
+   "ConvertTo556BulletsAP": {
+    "en": "Convert to 5.56x45mm AP Round",
+    "ch": "轉換為5.56x45mm穿甲彈",
+    "cn": "转换为5.56x45mm穿甲弹"
+   },
+   "ConvertTo556BulletsAPBox": {
+    "en": "Convert to Box of 5.56x45mm AP Rounds",
+    "ch": "轉換為5.56x45mm穿甲彈 (整盒)",
+    "cn": "转换为5.56x45mm穿甲弹 (整盒)"
+   },
+   "ConvertTo556BulletsTracer": {
+    "en": "Convert to 5.56x45mm Tracer Round",
+    "ch": "轉換為5.56x45mm曳光彈",
+    "cn": "转换为5.56x45mm曳光弹"
+   },
+   "ConvertTo556BulletsTracerBox": {
+    "en": "Convert to Box of 5.56x45mm Tracer Rounds",
+    "ch": "轉換為5.56x45mm曳光彈 (整盒)",
+    "cn": "转换为5.56x45mm曳光弹 (整盒)"
+   },
+   "ConvertTo762x39Bullets": {
+    "en": "Convert to 7.62x39mm Round",
+    "ch": "轉換為7.62x39mm子彈",
+    "cn": "转换为7.62x39mm子弹"
+   },
+   "ConvertTo762x39BulletsAP": {
+    "en": "Convert to 7.62x39mm AP Round",
+    "ch": "轉換為7.62x39mm穿甲彈",
+    "cn": "转换为7.62x39mm穿甲弹"
+   },
+   "ConvertTo762x39BulletsAPBox": {
+    "en": "Convert to Box of 7.62x39mm AP Rounds",
+    "ch": "轉換為7.62x39mm穿甲彈 (整盒)",
+    "cn": "转换为7.62x39mm穿甲弹 (整盒)"
+   },
+   "ConvertTo762x39BulletsTracer": {
+    "en": "Convert to 7.62x39mm Tracer Round",
+    "ch": "轉換為7.62x39mm曳光彈",
+    "cn": "转换为7.62x39mm曳光弹"
+   },
+   "ConvertTo762x39BulletsTracerBox": {
+    "en": "Convert to Box of 7.62x39mm Tracer Rounds",
+    "ch": "轉換為7.62x39mm曳光彈 (整盒)",
+    "cn": "转换为7.62x39mm曳光弹 (整盒)"
+   },
+   "ConvertTo762x39Carton": {
+    "en": "Convert to Carton of 7.62x39mm Rounds",
+    "ch": "轉換為7.62x39mm子彈 (整箱)",
+    "cn": "转换为7.62x39mm子弹 (整箱)"
+   },
+   "ConvertTo762x54rBullets": {
+    "en": "Convert to 7.62x54mmR Round",
+    "ch": "轉換為7.62x54mmR子彈",
+    "cn": "转换为7.62x54mmR子弹"
+   },
+   "ConvertTo762x54rBulletsAP": {
+    "en": "Convert to 7.62x54mmR AP Round",
+    "ch": "轉換為7.62x54mmR穿甲彈",
+    "cn": "转换为7.62x54mmR穿甲弹"
+   },
+   "ConvertTo762x54rBulletsAPBox": {
+    "en": "Convert to Box of 7.62x54mmR AP Rounds",
+    "ch": "轉換為7.62x54mmR穿甲彈 (整盒)",
+    "cn": "转换为7.62x54mmR穿甲弹 (整盒)"
+   },
+   "ConvertTo762x54rBulletsTracer": {
+    "en": "Convert to 7.62x54mmR Tracer Round",
+    "ch": "轉換為7.62x54mmR曳光彈",
+    "cn": "转换为7.62x54mmR曳光弹"
+   },
+   "ConvertTo762x54rBulletsTracerBox": {
+    "en": "Convert to Box of 7.62x54mmR Tracer Rounds",
+    "ch": "轉換為7.62x54mmR曳光彈 (整盒)",
+    "cn": "转换为7.62x54mmR曳光弹 (整盒)"
+   },
+   "ConvertTo762x54rCarton": {
+    "en": "Convert to Carton of 7.62x54mmR Rounds",
+    "ch": "轉換為7.62x54mmR子彈 (整箱)",
+    "cn": "转换为7.62x54mmR子弹 (整箱)"
+   },
+   "ConvertTo792x57Box": {
+    "en": "Convert to Box of 7.92x57mm Rounds",
+    "ch": "轉換為7.92x57mm子彈 (整盒)",
+    "cn": "转换为7.92x57mm子弹 (整盒)"
+   },
+   "ConvertTo792x57Bullets": {
+    "en": "Convert to 7.92x57mm Round",
+    "ch": "轉換為7.92x57mm子彈",
+    "cn": "转换为7.92x57mm子弹"
+   },
+   "ConvertTo792x57BulletsAP": {
+    "en": "Convert to 7.92x57mm AP Round",
+    "ch": "轉換為7.92x57mm穿甲彈",
+    "cn": "转换为7.92x57mm穿甲弹"
+   },
+   "ConvertTo792x57BulletsAPBox": {
+    "en": "Convert to Box of 7.92x57mm AP Rounds",
+    "ch": "轉換為7.92x57mm穿甲彈 (整盒)",
+    "cn": "转换为7.92x57mm穿甲弹 (整盒)"
+   },
+   "ConvertTo792x57BulletsTracer": {
+    "en": "Convert to 7.92x57mm Tracer Round",
+    "ch": "轉換為7.92x57mm曳光彈",
+    "cn": "转换为7.92x57mm曳光弹"
+   },
+   "ConvertTo792x57BulletsTracerBox": {
+    "en": "Convert to Box of 7.92x57mm Tracer Rounds",
+    "ch": "轉換為7.92x57mm曳光彈 (整盒)",
+    "cn": "转换为7.92x57mm曳光弹 (整盒)"
+   },
+   "ConvertTo792x57Carton": {
+    "en": "Convert to Carton of 7.92x57mm Rounds",
+    "ch": "轉換為7.92x57mm子彈 (整箱)",
+    "cn": "转换为7.92x57mm子弹 (整箱)"
+   },
+   "ConvertTo9x39Bullets": {
+    "en": "Convert to 9x39mm Round",
+    "ch": "轉換為9x39mm子彈",
+    "cn": "转换为9x39mm子弹"
+   },
+   "ConvertTo9x39BulletsAP": {
+    "en": "Convert to 9x39mm AP Round",
+    "ch": "轉換為9x39mm穿甲彈",
+    "cn": "转换为9x39mm穿甲弹"
+   },
+   "ConvertTo9x39BulletsAPBox": {
+    "en": "Convert to Box of 9x39mm AP Rounds",
+    "ch": "轉換為9x39mm穿甲彈 (整盒)",
+    "cn": "转换为9x39mm穿甲弹 (整盒)"
+   },
+   "ConvertTo9x39BulletsTracer": {
+    "en": "Convert to 9x39mm Tracer Round",
+    "ch": "轉換為9x39mm曳光彈",
+    "cn": "转换为9x39mm曳光弹"
+   },
+   "ConvertTo9x39BulletsTracerBox": {
+    "en": "Convert to Box of 9x39mm Tracer Rounds",
+    "ch": "轉換為9x39mm曳光彈 (整盒)",
+    "cn": "转换为9x39mm曳光弹 (整盒)"
+   },
+   "ConvertToBase_762x39Box": {
+    "en": "Convert to Box of 7.62x39mm Rounds",
+    "ch": "轉換為7.62x39mm子彈 (整盒)",
+    "cn": "转换为7.62x39mm子弹 (整盒)"
+   },
+   "ConvertToBase_762x54rBox": {
+    "en": "Convert to Box of 7.62x54mmR Rounds",
+    "ch": "轉換為7.62x54mmR子彈 (整盒)",
+    "cn": "转换为7.62x54mmR子弹 (整盒)"
+   },
+   "ConvertToBase_9x39Box": {
+    "en": "Convert to Box of 9x39mm Rounds",
+    "ch": "轉換為9x39mm子彈 (整盒)",
+    "cn": "转换为9x39mm子弹 (整盒)"
+   },
+   "ConvertToBullets22Carton": {
+    "en": "Convert to Carton of .22 LR Rounds",
+    "ch": "轉換為.22 LR子彈 (整箱)",
+    "cn": "转换为.22 LR子弹 (整箱)"
+   },
+   "ConvertToBullets22LR": {
+    "en": "Convert to .22 LR Round",
+    "ch": "轉換為.22 LR子彈",
+    "cn": "转换为.22 LR子弹"
+   },
+   "ConvertToBullets22LRAP": {
+    "en": "Convert to .22 LR AP Round",
+    "ch": "轉換為.22 LR穿甲彈",
+    "cn": "转换为.22 LR穿甲弹"
+   },
+   "ConvertToBullets22LRAPBox": {
+    "en": "Convert to Box of .22 LR AP Rounds",
+    "ch": "轉換為.22 LR穿甲彈 (整盒)",
+    "cn": "转换为.22 LR穿甲弹 (整盒)"
+   },
+   "ConvertToBullets22LRBox": {
+    "en": "Convert to Box of .22 LR Rounds",
+    "ch": "轉換為.22 LR子彈 (整盒)",
+    "cn": "转换为.22 LR子弹 (整盒)"
+   },
+   "ConvertToBullets22LRTracer": {
+    "en": "Convert to .22 LR Tracer Round",
+    "ch": "轉換為.22 LR曳光彈",
+    "cn": "转换为.22 LR曳光弹"
+   },
+   "ConvertToBullets22LRTracerBox": {
+    "en": "Convert to Box of .22 LR Tracer Rounds",
+    "ch": "轉換為.22 LR曳光彈 (整盒)",
+    "cn": "转换为.22 LR曳光弹 (整盒)"
+   },
+   "ConvertToBullets32AP": {
+    "en": "Convert to .32 ACP AP Round",
+    "ch": "轉換為.32 ACP穿甲彈",
+    "cn": "转换为.32 ACP穿甲弹"
+   },
+   "ConvertToBullets32APBox": {
+    "en": "Convert to Box of .32 ACP AP Rounds",
+    "ch": "轉換為.32 ACP穿甲彈 (整盒)",
+    "cn": "转换为.32 ACP穿甲弹 (整盒)"
+   },
+   "ConvertToBullets32Carton": {
+    "en": "Convert to Carton of .32 ACP Rounds",
+    "ch": "轉換為.32 ACP子彈 (整箱)",
+    "cn": "转换为.32 ACP子弹 (整箱)"
+   },
+   "ConvertToBullets32Tracer": {
+    "en": "Convert to .32 ACP Tracer Round",
+    "ch": "轉換為.32 ACP曳光彈",
+    "cn": "转换为.32 ACP曳光弹"
+   },
+   "ConvertToBullets32TracerBox": {
+    "en": "Convert to Box of .32 ACP Tracer Rounds",
+    "ch": "轉換為.32 ACP曳光彈 (整盒)",
+    "cn": "转换为.32 ACP曳光弹 (整盒)"
+   },
+   "ConvertToBullets357AP": {
+    "en": "Convert to .357 Magnum AP Round",
+    "ch": "轉換為.357馬格南穿甲彈",
+    "cn": "转换为.357马格南穿甲弹"
+   },
+   "ConvertToBullets357APBox": {
+    "en": "Convert to Box of .357 Magnum AP Rounds",
+    "ch": "轉換為.357馬格南穿甲彈 (整盒)",
+    "cn": "转换为.357马格南穿甲弹 (整盒)"
+   },
+   "ConvertToBullets357Tracer": {
+    "en": "Convert to .357 Magnum Tracer Round",
+    "ch": "轉換為.357馬格南曳光彈",
+    "cn": "转换为.357马格南曳光弹"
+   },
+   "ConvertToBullets357TracerBox": {
+    "en": "Convert to Box of .357 Magnum Tracer Rounds",
+    "ch": "轉換為.357馬格南曳光彈 (整盒)",
+    "cn": "转换为.357马格南曳光弹 (整盒)"
+   },
+   "ConvertToBullets38AP": {
+    "en": "Convert to .38 Special AP Round",
+    "ch": "轉換為.38特殊穿甲彈",
+    "cn": "转换为.38特殊穿甲弹"
+   },
+   "ConvertToBullets38APBox": {
+    "en": "Convert to Box of .38 Special AP Rounds",
+    "ch": "轉換為.38特殊穿甲彈 (整盒)",
+    "cn": "转换为.38特殊穿甲弹 (整盒)"
+   },
+   "ConvertToBullets38Tracer": {
+    "en": "Convert to .38 Special Tracer Round",
+    "ch": "轉換為.38特殊曳光彈",
+    "cn": "转换为.38特殊曳光弹"
+   },
+   "ConvertToBullets38TracerBox": {
+    "en": "Convert to Box of .38 Special Tracer Rounds",
+    "ch": "轉換為.38特殊曳光彈 (整盒)",
+    "cn": "转换为.38特殊曳光弹 (整盒)"
+   },
+   "ConvertToBullets44AP": {
+    "en": "Convert to .44 Magnum AP Round",
+    "ch": "轉換為.44馬格南穿甲彈",
+    "cn": "转换为.44马格南穿甲弹"
+   },
+   "ConvertToBullets44APBox": {
+    "en": "Convert to Box of .44 Magnum AP Rounds",
+    "ch": "轉換為.44馬格南穿甲彈 (整盒)",
+    "cn": "转换为.44马格南穿甲弹 (整盒)"
+   },
+   "ConvertToBullets44Tracer": {
+    "en": "Convert to .44 Magnum Tracer Round",
+    "ch": "轉換為.44馬格南曳光彈",
+    "cn": "转换为.44马格南曳光弹"
+   },
+   "ConvertToBullets44TracerBox": {
+    "en": "Convert to Box of .44 Magnum Tracer Rounds",
+    "ch": "轉換為.44馬格南曳光彈 (整盒)",
+    "cn": "转换为.44马格南曳光弹 (整盒)"
+   },
+   "ConvertToBullets45AP": {
+    "en": "Convert to .45 ACP AP Round",
+    "ch": "轉換為.45 ACP穿甲彈",
+    "cn": "转换为.45 ACP穿甲弹"
+   },
+   "ConvertToBullets45APBox": {
+    "en": "Convert to Box of .45 ACP AP Rounds",
+    "ch": "轉換為.45 ACP穿甲彈 (整盒)",
+    "cn": "转换为.45 ACP穿甲弹 (整盒)"
+   },
+   "ConvertToBullets45Tracer": {
+    "en": "Convert to .45 ACP Tracer Round",
+    "ch": "轉換為.45 ACP曳光彈",
+    "cn": "转换为.45 ACP曳光弹"
+   },
+   "ConvertToBullets45TracerBox": {
+    "en": "Convert to Box of .45 ACP Tracer Rounds",
+    "ch": "轉換為.45 ACP曳光彈 (整盒)",
+    "cn": "转换为.45 ACP曳光弹 (整盒)"
+   },
+   "ConvertToBullets50": {
+    "en": "Convert to .50 BMG Round",
+    "ch": "轉換為.50 BMG子彈",
+    "cn": "转换为.50 BMG子弹"
+   },
+   "ConvertToBullets50AP": {
+    "en": "Convert to .50 BMG AP Round",
+    "ch": "轉換為.50 BMG穿甲彈",
+    "cn": "转换为.50 BMG穿甲弹"
+   },
+   "ConvertToBullets50APBox": {
+    "en": "Convert to Box of .50 BMG AP Rounds",
+    "ch": "轉換為.50 BMG穿甲彈 (整盒)",
+    "cn": "转换为.50 BMG穿甲弹 (整盒)"
+   },
+   "ConvertToBullets50Box": {
+    "en": "Convert to Box of .50 BMG Rounds",
+    "ch": "轉換為.50 BMG子彈 (整盒)",
+    "cn": "转换为.50 BMG子弹 (整盒)"
+   },
+   "ConvertToBullets50CalCarton": {
+    "en": "Convert to Carton of .50 BMG Rounds",
+    "ch": "轉換為.50 BMG子彈 (整箱)",
+    "cn": "转换为.50 BMG子弹 (整箱)"
+   },
+   "ConvertToBullets50Magnum": {
+    "en": "Convert to .50 AE Round",
+    "ch": "轉換為.50 AE子彈",
+    "cn": "转换为.50 AE子弹"
+   },
+   "ConvertToBullets50MagnumAP": {
+    "en": "Convert to .50 AE AP Round",
+    "ch": "轉換為.50 AE穿甲彈",
+    "cn": "转换为.50 AE穿甲弹"
+   },
+   "ConvertToBullets50MagnumAPBox": {
+    "en": "Convert to Box of .50 AE AP Rounds",
+    "ch": "轉換為.50 AE穿甲彈 (整盒)",
+    "cn": "转换为.50 AE穿甲弹 (整盒)"
+   },
+   "ConvertToBullets50MagnumBox": {
+    "en": "Convert to Box of .50 AE Rounds",
+    "ch": "轉換為.50 AE子彈 (整盒)",
+    "cn": "转换为.50 AE子弹 (整盒)"
+   },
+   "ConvertToBullets50MagnumCarton": {
+    "en": "Convert to Carton of .50 AE Rounds",
+    "ch": "轉換為.50 AE子彈 (整箱)",
+    "cn": "转换为.50 AE子弹 (整箱)"
+   },
+   "ConvertToBullets50MagnumTracer": {
+    "en": "Convert to .50 AE Tracer Round",
+    "ch": "轉換為.50 AE曳光彈",
+    "cn": "转换为.50 AE曳光弹"
+   },
+   "ConvertToBullets50MagnumTracerBox": {
+    "en": "Convert to Box of .50 AE Tracer Rounds",
+    "ch": "轉換為.50 AE曳光彈 (整盒)",
+    "cn": "转换为.50 AE曳光弹 (整盒)"
+   },
+   "ConvertToBullets50Tracer": {
+    "en": "Convert to .50 BMG Tracer Round",
+    "ch": "轉換為.50 BMG曳光彈",
+    "cn": "转换为.50 BMG曳光弹"
+   },
+   "ConvertToBullets50TracerBox": {
+    "en": "Convert to Box of .50 BMG Tracer Rounds",
+    "ch": "轉換為.50 BMG曳光彈 (整盒)",
+    "cn": "转换为.50 BMG曳光弹 (整盒)"
+   },
+   "ConvertToBullets9mmAP": {
+    "en": "Convert to 9mm AP Round",
+    "ch": "轉換為9mm穿甲彈",
+    "cn": "转换为9mm穿甲弹"
+   },
+   "ConvertToBullets9mmAPBox": {
+    "en": "Convert to Box of 9mm AP Rounds",
+    "ch": "轉換為9mm穿甲彈 (整盒)",
+    "cn": "转换为9mm穿甲弹 (整盒)"
+   },
+   "ConvertToBullets9mmTracer": {
+    "en": "Convert to 9mm Tracer Round",
+    "ch": "轉換為9mm曳光彈",
+    "cn": "转换为9mm曳光弹"
+   },
+   "ConvertToBullets9mmTracerBox": {
+    "en": "Convert to Box of 9mm Tracer Rounds",
+    "ch": "轉換為9mm曳光彈 (整盒)",
+    "cn": "转换为9mm曳光弹 (整盒)"
+   },
+   "ConvertToBullets9x39Carton": {
+    "en": "Convert to Carton of 9x39mm Rounds",
+    "ch": "轉換為9x39mm子彈 (整箱)",
+    "cn": "转换为9x39mm子弹 (整箱)"
+   },
+   "ConvertToDragonBreathShell": {
+    "en": "Convert to 12ga Dragon's Breath Round",
+    "ch": "轉換為12ga龍息彈",
+    "cn": "转换为12ga龙息弹"
+   },
+   "ConvertToDragonBreathShellBox": {
+    "en": "Convert to Box of 12ga Dragon's Breath Rounds",
+    "ch": "轉換為12ga龍息彈 (整盒)",
+    "cn": "转换为12ga龙息弹 (整盒)"
+   },
+   "ConvertToShotgunSlug": {
+    "en": "Convert to 12ga Slug Round",
+    "ch": "轉換為12ga獨頭彈",
+    "cn": "转换为12ga独头弹"
+   },
+   "ConvertToShotgunSlugBox": {
+    "en": "Convert to Box of 12ga Slug Rounds",
+    "ch": "轉換為12ga獨頭彈 (整盒)",
+    "cn": "转换为12ga独头弹 (整盒)"
+   },
+   "ConvertTo223Box": {
+    "en": "Convert to Box of .223 Rounds",
+    "ch": "轉換為.223子彈 (整盒)",
+    "cn": "转换为.223子弹 (整盒)"
+   },
+   "ConvertTo223Bullets": {
+    "en": "Convert to .223 Round",
+    "ch": "轉換為.223子彈",
+    "cn": "转换为.223子弹"
+   },
+   "ConvertTo22Box": {
+    "en": "Convert to Box of .22 LR Rounds",
+    "ch": "轉換為.22 LR子彈 (整盒)",
+    "cn": "转换为.22 LR子弹 (整盒)"
+   },
+   "ConvertTo22Bullets": {
+    "en": "Convert to .22 LR Round",
+    "ch": "轉換為.22 LR子彈",
+    "cn": "转换为.22 LR子弹"
+   },
+   "ConvertToMarzGuns_12Gauge_Box_Buckshot": {
+    "en": "Convert to Box of 12 Gauge Buckshot Rounds",
+    "ch": "轉換為12號鹿彈 (整盒)",
+    "cn": "转换为12号鹿弹 (整盒)"
+   },
+   "ConvertToMarzGuns_12Gauge_Box_Slug": {
+    "en": "Convert to Box of 12 Gauge Slug Rounds",
+    "ch": "轉換為12號獨頭彈 (整盒)",
+    "cn": "转换为12号独头弹 (整盒)"
+   },
+   "ConvertToMarzGuns_12Gauge_Carton_Buckshot": {
+    "en": "Convert to Carton of 12 Gauge Buckshot Rounds",
+    "ch": "轉換為12號鹿彈 (整箱)",
+    "cn": "转换为12号鹿弹 (整箱)"
+   },
+   "ConvertToMarzGuns_12Gauge_Carton_Slug": {
+    "en": "Convert to Carton of 12 Gauge Slug Rounds",
+    "ch": "轉換為12號獨頭彈 (整箱)",
+    "cn": "转换为12号独头弹 (整箱)"
+   },
+   "ConvertToMarzGuns_12Gauge_Crate_Buckshot": {
+    "en": "Convert to Crate of 12 Gauge Buckshot Rounds",
+    "ch": "轉換為12號鹿彈 (整件)",
+    "cn": "转换为12号鹿弹 (整件)"
+   },
+   "ConvertToMarzGuns_12Gauge_Crate_Slug": {
+    "en": "Convert to Crate of 12 Gauge Slug Rounds",
+    "ch": "轉換為12號獨頭彈 (整件)",
+    "cn": "转换为12号独头弹 (整件)"
+   },
+   "ConvertToMarzGuns_12Gauge_Shell_Buckshot": {
+    "en": "Convert to 12 Gauge Buckshot Round",
+    "ch": "轉換為12號鹿彈",
+    "cn": "转换为12号鹿弹"
+   },
+   "ConvertToMarzGuns_12Gauge_Shell_Slug": {
+    "en": "Convert to 12 Gauge Slug Round",
+    "ch": "轉換為12號獨頭彈",
+    "cn": "转换为12号独头弹"
+   },
+   "ConvertToMarzGuns_223_Box": {
+    "en": "Convert to Box of .223 Remington Rounds",
+    "ch": "轉換為.223雷明頓子彈 (整盒)",
+    "cn": "转换为.223雷明顿子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_223_Bullet": {
+    "en": "Convert to .223 Remington Round",
+    "ch": "轉換為.223雷明頓子彈",
+    "cn": "转换为.223雷明顿子弹"
+   },
+   "ConvertToMarzGuns_223_Carton": {
+    "en": "Convert to Carton of .223 Remington Rounds",
+    "ch": "轉換為.223雷明頓子彈 (整箱)",
+    "cn": "转换为.223雷明顿子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_223_Crate": {
+    "en": "Convert to Crate of .223 Remington Rounds",
+    "ch": "轉換為.223雷明頓子彈 (整件)",
+    "cn": "转换为.223雷明顿子弹 (整件)"
+   },
+   "ConvertToMarzGuns_3006_Box": {
+    "en": "Convert to Box of .30-06 Springfield Rounds",
+    "ch": "轉換為.30-06春田子彈 (整盒)",
+    "cn": "转换为.30-06春田子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_3006_Bullet": {
+    "en": "Convert to .30-06 Springfield Round",
+    "ch": "轉換為.30-06春田子彈",
+    "cn": "转换为.30-06春田子弹"
+   },
+   "ConvertToMarzGuns_3006_Carton": {
+    "en": "Convert to Carton of .30-06 Springfield Rounds",
+    "ch": "轉換為.30-06春田子彈 (整箱)",
+    "cn": "转换为.30-06春田子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_3006_Crate": {
+    "en": "Convert to Crate of .30-06 Springfield Rounds",
+    "ch": "轉換為.30-06春田子彈 (整件)",
+    "cn": "转换为.30-06春田子弹 (整件)"
+   },
+   "ConvertToMarzGuns_3030_Box": {
+    "en": "Convert to Box of .30-30 Rounds",
+    "ch": "轉換為.30-30子彈 (整盒)",
+    "cn": "转换为.30-30子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_3030_Bullet": {
+    "en": "Convert to .30-30 Round",
+    "ch": "轉換為.30-30子彈",
+    "cn": "转换为.30-30子弹"
+   },
+   "ConvertToMarzGuns_3030_Carton": {
+    "en": "Convert to Carton of .30-30 Rounds",
+    "ch": "轉換為.30-30子彈 (整箱)",
+    "cn": "转换为.30-30子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_3030_Crate": {
+    "en": "Convert to Crate of .30-30 Rounds",
+    "ch": "轉換為.30-30子彈 (整件)",
+    "cn": "转换为.30-30子弹 (整件)"
+   },
+   "ConvertToMarzGuns_308_Box": {
+    "en": "Convert to Box of .308 Winchester Rounds",
+    "ch": "轉換為.308溫徹斯特子彈 (整盒)",
+    "cn": "转换为.308温彻斯特子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_308_Bullet": {
+    "en": "Convert to .308 Winchester Round",
+    "ch": "轉換為.308溫徹斯特子彈",
+    "cn": "转换为.308温彻斯特子弹"
+   },
+   "ConvertToMarzGuns_308_Carton": {
+    "en": "Convert to Carton of .308 Winchester Rounds",
+    "ch": "轉換為.308溫徹斯特子彈 (整箱)",
+    "cn": "转换为.308温彻斯特子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_308_Crate": {
+    "en": "Convert to Crate of .308 Winchester Rounds",
+    "ch": "轉換為.308溫徹斯特子彈 (整件)",
+    "cn": "转换为.308温彻斯特子弹 (整件)"
+   },
+   "ConvertToMarzGuns_357_Box": {
+    "en": "Convert to Box of .357 Magnum Rounds",
+    "ch": "轉換為.357馬格南子彈 (整盒)",
+    "cn": "转换为.357马格南子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_357_Bullet": {
+    "en": "Convert to .357 Magnum Round",
+    "ch": "轉換為.357馬格南子彈",
+    "cn": "转换为.357马格南子弹"
+   },
+   "ConvertToMarzGuns_357_Carton": {
+    "en": "Convert to Carton of .357 Magnum Rounds",
+    "ch": "轉換為.357馬格南子彈 (整箱)",
+    "cn": "转换为.357马格南子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_357_Crate": {
+    "en": "Convert to Crate of .357 Magnum Rounds",
+    "ch": "轉換為.357馬格南子彈 (整件)",
+    "cn": "转换为.357马格南子弹 (整件)"
+   },
+   "ConvertToMarzGuns_38_Box": {
+    "en": "Convert to Box of .38 Special Rounds",
+    "ch": "轉換為.38特殊子彈 (整盒)",
+    "cn": "转换为.38特殊子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_38_Bullet": {
+    "en": "Convert to .38 Special Round",
+    "ch": "轉換為.38特殊子彈",
+    "cn": "转换为.38特殊子弹"
+   },
+   "ConvertToMarzGuns_38_Carton": {
+    "en": "Convert to Carton of .38 Special Rounds",
+    "ch": "轉換為.38特殊子彈 (整箱)",
+    "cn": "转换为.38特殊子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_38_Crate": {
+    "en": "Convert to Crate of .38 Special Rounds",
+    "ch": "轉換為.38特殊子彈 (整件)",
+    "cn": "转换为.38特殊子弹 (整件)"
+   },
+   "ConvertToMarzGuns_44_Box": {
+    "en": "Convert to Box of .44 Magnum Rounds",
+    "ch": "轉換為.44馬格南子彈 (整盒)",
+    "cn": "转换为.44马格南子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_44_Bullet": {
+    "en": "Convert to .44 Magnum Round",
+    "ch": "轉換為.44馬格南子彈",
+    "cn": "转换为.44马格南子弹"
+   },
+   "ConvertToMarzGuns_44_Carton": {
+    "en": "Convert to Carton of .44 Magnum Rounds",
+    "ch": "轉換為.44馬格南子彈 (整箱)",
+    "cn": "转换为.44马格南子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_44_Crate": {
+    "en": "Convert to Crate of .44 Magnum Rounds",
+    "ch": "轉換為.44馬格南子彈 (整件)",
+    "cn": "转换为.44马格南子弹 (整件)"
+   },
+   "ConvertToMarzGuns_4570_Box": {
+    "en": "Convert to Box of .45-70 Government Rounds",
+    "ch": "轉換為.45-70軍用子彈 (整盒)",
+    "cn": "转换为.45-70军用子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_4570_Bullet": {
+    "en": "Convert to .45-70 Government Round",
+    "ch": "轉換為.45-70軍用子彈",
+    "cn": "转换为.45-70军用子弹"
+   },
+   "ConvertToMarzGuns_4570_Carton": {
+    "en": "Convert to Carton of .45-70 Government Rounds",
+    "ch": "轉換為.45-70軍用子彈 (整箱)",
+    "cn": "转换为.45-70军用子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_4570_Crate": {
+    "en": "Convert to Crate of .45-70 Government Rounds",
+    "ch": "轉換為.45-70軍用子彈 (整件)",
+    "cn": "转换为.45-70军用子弹 (整件)"
+   },
+   "ConvertToMarzGuns_45_Box": {
+    "en": "Convert to Box of .45 ACP Rounds",
+    "ch": "轉換為.45 ACP子彈 (整盒)",
+    "cn": "转换为.45 ACP子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_45_Bullet": {
+    "en": "Convert to .45 ACP Round",
+    "ch": "轉換為.45 ACP子彈",
+    "cn": "转换为.45 ACP子弹"
+   },
+   "ConvertToMarzGuns_45_Carton": {
+    "en": "Convert to Carton of .45 ACP Rounds",
+    "ch": "轉換為.45 ACP子彈 (整箱)",
+    "cn": "转换为.45 ACP子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_45_Crate": {
+    "en": "Convert to Crate of .45 ACP Rounds",
+    "ch": "轉換為.45 ACP子彈 (整件)",
+    "cn": "转换为.45 ACP子弹 (整件)"
+   },
+   "ConvertToMarzGuns_50_Box": {
+    "en": "Convert to Box of .50 AE Rounds",
+    "ch": "轉換為.50 AE子彈 (整盒)",
+    "cn": "转换为.50 AE子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_50_Bullet": {
+    "en": "Convert to .50 AE Round",
+    "ch": "轉換為.50 AE子彈",
+    "cn": "转换为.50 AE子弹"
+   },
+   "ConvertToMarzGuns_50_Carton": {
+    "en": "Convert to Carton of .50 AE Rounds",
+    "ch": "轉換為.50 AE子彈 (整箱)",
+    "cn": "转换为.50 AE子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_50_Crate": {
+    "en": "Convert to Crate of .50 AE Rounds",
+    "ch": "轉換為.50 AE子彈 (整件)",
+    "cn": "转换为.50 AE子弹 (整件)"
+   },
+   "ConvertToMarzGuns_545x39_Box": {
+    "en": "Convert to Box of 5.45x39mm Rounds",
+    "ch": "轉換為5.45x39mm子彈 (整盒)",
+    "cn": "转换为5.45x39mm子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_545x39_Bullet": {
+    "en": "Convert to 5.45x39mm Round",
+    "ch": "轉換為5.45x39mm子彈",
+    "cn": "转换为5.45x39mm子弹"
+   },
+   "ConvertToMarzGuns_545x39_Carton": {
+    "en": "Convert to Carton of 5.45x39mm Rounds",
+    "ch": "轉換為5.45x39mm子彈 (整箱)",
+    "cn": "转换为5.45x39mm子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_545x39_Crate": {
+    "en": "Convert to Crate of 5.45x39mm Rounds",
+    "ch": "轉換為5.45x39mm子彈 (整件)",
+    "cn": "转换为5.45x39mm子弹 (整件)"
+   },
+   "ConvertToMarzGuns_556x45_Box": {
+    "en": "Convert to Box of 5.56x45mm Rounds",
+    "ch": "轉換為5.56x45mm子彈 (整盒)",
+    "cn": "转换为5.56x45mm子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_556x45_Box_ArmorPiercing": {
+    "en": "Convert to Box of 5.56x45mm Armor Piercing Rounds",
+    "ch": "轉換為5.56x45mm穿甲彈 (整盒)",
+    "cn": "转换为5.56x45mm穿甲弹 (整盒)"
+   },
+   "ConvertToMarzGuns_556x45_Box_HollowPoint": {
+    "en": "Convert to Box of 5.56x45mm Hollow Point Rounds",
+    "ch": "轉換為5.56x45mm空尖彈 (整盒)",
+    "cn": "转换为5.56x45mm空尖弹 (整盒)"
+   },
+   "ConvertToMarzGuns_556x45_Box_Overpressured": {
+    "en": "Convert to Box of 5.56x45mm [+P] Rounds",
+    "ch": "轉換為5.56x45mm高壓彈 (整盒)",
+    "cn": "转换为5.56x45mm高压弹 (整盒)"
+   },
+   "ConvertToMarzGuns_556x45_Box_Subsonic": {
+    "en": "Convert to Box of 5.56x45mm Subsonic Rounds",
+    "ch": "轉換為5.56x45mm亞音速彈 (整盒)",
+    "cn": "转换为5.56x45mm亚音速弹 (整盒)"
+   },
+   "ConvertToMarzGuns_556x45_Bullet": {
+    "en": "Convert to 5.56x45mm Round",
+    "ch": "轉換為5.56x45mm子彈",
+    "cn": "转换为5.56x45mm子弹"
+   },
+   "ConvertToMarzGuns_556x45_Bullet_ArmorPiercing": {
+    "en": "Convert to 5.56x45mm Armor Piercing Round",
+    "ch": "轉換為5.56x45mm穿甲彈",
+    "cn": "转换为5.56x45mm穿甲弹"
+   },
+   "ConvertToMarzGuns_556x45_Bullet_HollowPoint": {
+    "en": "Convert to 5.56x45mm Hollow Point Round",
+    "ch": "轉換為5.56x45mm空尖彈",
+    "cn": "转换为5.56x45mm空尖弹"
+   },
+   "ConvertToMarzGuns_556x45_Bullet_Overpressured": {
+    "en": "Convert to 5.56x45mm [+P] Round",
+    "ch": "轉換為5.56x45mm高壓彈",
+    "cn": "转换为5.56x45mm高压弹"
+   },
+   "ConvertToMarzGuns_556x45_Bullet_Subsonic": {
+    "en": "Convert to 5.56x45mm Subsonic Round",
+    "ch": "轉換為5.56x45mm亞音速彈",
+    "cn": "转换为5.56x45mm亚音速弹"
+   },
+   "ConvertToMarzGuns_556x45_Carton": {
+    "en": "Convert to Carton of 5.56x45mm Rounds",
+    "ch": "轉換為5.56x45mm子彈 (整箱)",
+    "cn": "转换为5.56x45mm子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_556x45_Carton_ArmorPiercing": {
+    "en": "Convert to Carton of 5.56x45mm Armor Piercing Rounds",
+    "ch": "轉換為5.56x45mm穿甲彈 (整箱)",
+    "cn": "转换为5.56x45mm穿甲弹 (整箱)"
+   },
+   "ConvertToMarzGuns_556x45_Carton_HollowPoint": {
+    "en": "Convert to Carton of 5.56x45mm Hollow Point Rounds",
+    "ch": "轉換為5.56x45mm空尖彈 (整箱)",
+    "cn": "转换为5.56x45mm空尖弹 (整箱)"
+   },
+   "ConvertToMarzGuns_556x45_Carton_Overpressured": {
+    "en": "Convert to Carton of 5.56x45mm [+P] Rounds",
+    "ch": "轉換為5.56x45mm高壓彈 (整箱)",
+    "cn": "转换为5.56x45mm高压弹 (整箱)"
+   },
+   "ConvertToMarzGuns_556x45_Carton_Subsonic": {
+    "en": "Convert to Carton of 5.56x45mm Subsonic Rounds",
+    "ch": "轉換為5.56x45mm亞音速彈 (整箱)",
+    "cn": "转换为5.56x45mm亚音速弹 (整箱)"
+   },
+   "ConvertToMarzGuns_556x45_Crate": {
+    "en": "Convert to Crate of 5.56x45mm Rounds",
+    "ch": "轉換為5.56x45mm子彈 (整件)",
+    "cn": "转换为5.56x45mm子弹 (整件)"
+   },
+   "ConvertToMarzGuns_556x45_Crate_ArmorPiercing": {
+    "en": "Convert to Crate of 5.56x45mm Armor Piercing Rounds",
+    "ch": "轉換為5.56x45mm穿甲彈 (整件)",
+    "cn": "转换为5.56x45mm穿甲弹 (整件)"
+   },
+   "ConvertToMarzGuns_556x45_Crate_HollowPoint": {
+    "en": "Convert to Crate of 5.56x45mm Hollow Point Rounds",
+    "ch": "轉換為5.56x45mm空尖彈 (整件)",
+    "cn": "转换为5.56x45mm空尖弹 (整件)"
+   },
+   "ConvertToMarzGuns_556x45_Crate_Overpressured": {
+    "en": "Convert to Crate of 5.56x45mm [+P] Rounds",
+    "ch": "轉換為5.56x45mm高壓彈 (整件)",
+    "cn": "转换为5.56x45mm高压弹 (整件)"
+   },
+   "ConvertToMarzGuns_556x45_Crate_Subsonic": {
+    "en": "Convert to Crate of 5.56x45mm Subsonic Rounds",
+    "ch": "轉換為5.56x45mm亞音速彈 (整件)",
+    "cn": "转换为5.56x45mm亚音速弹 (整件)"
+   },
+   "ConvertToMarzGuns_762x39_Box": {
+    "en": "Convert to Box of 7.62x39mm Rounds",
+    "ch": "轉換為7.62x39mm子彈 (整盒)",
+    "cn": "转换为7.62x39mm子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_762x39_Bullet": {
+    "en": "Convert to 7.62x39mm Round",
+    "ch": "轉換為7.62x39mm子彈",
+    "cn": "转换为7.62x39mm子弹"
+   },
+   "ConvertToMarzGuns_762x39_Carton": {
+    "en": "Convert to Carton of 7.62x39mm Rounds",
+    "ch": "轉換為7.62x39mm子彈 (整箱)",
+    "cn": "转换为7.62x39mm子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_762x39_Crate": {
+    "en": "Convert to Crate of 7.62x39mm Rounds",
+    "ch": "轉換為7.62x39mm子彈 (整件)",
+    "cn": "转换为7.62x39mm子弹 (整件)"
+   },
+   "ConvertToMarzGuns_762x51_Box": {
+    "en": "Convert to Box of 7.62x51mm Rounds",
+    "ch": "轉換為7.62x51mm子彈 (整盒)",
+    "cn": "转换为7.62x51mm子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_762x51_Bullet": {
+    "en": "Convert to 7.62x51mm Round",
+    "ch": "轉換為7.62x51mm子彈",
+    "cn": "转换为7.62x51mm子弹"
+   },
+   "ConvertToMarzGuns_762x51_Carton": {
+    "en": "Convert to Carton of 7.62x51mm Rounds",
+    "ch": "轉換為7.62x51mm子彈 (整箱)",
+    "cn": "转换为7.62x51mm子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_762x51_Crate": {
+    "en": "Convert to Crate of 7.62x51mm Rounds",
+    "ch": "轉換為7.62x51mm子彈 (整件)",
+    "cn": "转换为7.62x51mm子弹 (整件)"
+   },
+   "ConvertToMarzGuns_762x54_Box": {
+    "en": "Convert to Box of 7.62x54mm Rounds",
+    "ch": "轉換為7.62x54mm子彈 (整盒)",
+    "cn": "转换为7.62x54mm子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_762x54_Bullet": {
+    "en": "Convert to 7.62x54mm Round",
+    "ch": "轉換為7.62x54mm子彈",
+    "cn": "转换为7.62x54mm子弹"
+   },
+   "ConvertToMarzGuns_762x54_Carton": {
+    "en": "Convert to Carton of 7.62x54mm Rounds",
+    "ch": "轉換為7.62x54mm子彈 (整箱)",
+    "cn": "转换为7.62x54mm子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_762x54_Crate": {
+    "en": "Convert to Crate of 7.62x54mm Rounds",
+    "ch": "轉換為7.62x54mm子彈 (整件)",
+    "cn": "转换为7.62x54mm子弹 (整件)"
+   },
+   "ConvertToMarzGuns_9x19_Box": {
+    "en": "Convert to Box of 9x19mm Rounds",
+    "ch": "轉換為9x19mm子彈 (整盒)",
+    "cn": "转换为9x19mm子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_9x19_Bullet": {
+    "en": "Convert to 9x19mm Round",
+    "ch": "轉換為9x19mm子彈",
+    "cn": "转换为9x19mm子弹"
+   },
+   "ConvertToMarzGuns_9x19_Carton": {
+    "en": "Convert to Carton of 9x19mm Rounds",
+    "ch": "轉換為9x19mm子彈 (整箱)",
+    "cn": "转换为9x19mm子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_9x19_Crate": {
+    "en": "Convert to Crate of 9x19mm Rounds",
+    "ch": "轉換為9x19mm子彈 (整件)",
+    "cn": "转换为9x19mm子弹 (整件)"
+   },
+   "ConvertToMarzGuns_9x39_Box": {
+    "en": "Convert to Box of 9x39mm Rounds",
+    "ch": "轉換為9x39mm子彈 (整盒)",
+    "cn": "转换为9x39mm子弹 (整盒)"
+   },
+   "ConvertToMarzGuns_9x39_Bullet": {
+    "en": "Convert to 9x39mm Round",
+    "ch": "轉換為9x39mm子彈",
+    "cn": "转换为9x39mm子弹"
+   },
+   "ConvertToMarzGuns_9x39_Carton": {
+    "en": "Convert to Carton of 9x39mm Rounds",
+    "ch": "轉換為9x39mm子彈 (整箱)",
+    "cn": "转换为9x39mm子弹 (整箱)"
+   },
+   "ConvertToMarzGuns_9x39_Crate": {
+    "en": "Convert to Crate of 9x39mm Rounds",
+    "ch": "轉換為9x39mm子彈 (整件)",
+    "cn": "转换为9x39mm子弹 (整件)"
+   },
+   "ConvertTokra_22LR": {
+    "en": "Convert to .22 LR Round",
+    "ch": "轉換為.22 LR子彈",
+    "cn": "转换为.22 LR子弹"
+   },
+   "ConvertTokra_22LRBox": {
+    "en": "Convert to Box of .22 LR Rounds",
+    "ch": "轉換為.22 LR子彈 (整盒)",
+    "cn": "转换为.22 LR子弹 (整盒)"
+   },
+   "ConvertTokra_50Bmg": {
+    "en": "Convert to .50 BMG Round",
+    "ch": "轉換為.50 BMG子彈",
+    "cn": "转换为.50 BMG子弹"
+   },
+   "ConvertTokra_50BmgBox": {
+    "en": "Convert to Box of .50 BMG Rounds",
+    "ch": "轉換為.50 BMG子彈 (整盒)",
+    "cn": "转换为.50 BMG子弹 (整盒)"
+   },
+   "ConvertTokra_545": {
+    "en": "Convert to 5.45x39 Round",
+    "ch": "轉換為5.45x39子彈",
+    "cn": "转换为5.45x39子弹"
+   },
+   "ConvertTokra_545Box": {
+    "en": "Convert to Box of 5.45x39 Rounds",
+    "ch": "轉換為5.45x39子彈 (整盒)",
+    "cn": "转换为5.45x39子弹 (整盒)"
+   },
+   "ConvertTokra_762": {
+    "en": "Convert to 7.62x39 Round",
+    "ch": "轉換為7.62x39子彈",
+    "cn": "转换为7.62x39子弹"
+   },
+   "ConvertTokra_762Box": {
+    "en": "Convert to Box of 7.62x39 Rounds",
+    "ch": "轉換為7.62x39子彈 (整盒)",
+    "cn": "转换为7.62x39子弹 (整盒)"
+   },
+   "ConvertTokra_762_54R": {
+    "en": "Convert to 7.62x54R Round",
+    "ch": "轉換為7.62x54R子彈",
+    "cn": "转换为7.62x54R子弹"
+   },
+   "ConvertTokra_762_54RBox": {
+    "en": "Convert to Box of 7.62x54R Rounds",
+    "ch": "轉換為7.62x54R子彈 (整盒)",
+    "cn": "转换为7.62x54R子弹 (整盒)"
+   },
+   "ConvertTokra_9_39": {
+    "en": "Convert to 9x39 Round",
+    "ch": "轉換為9x39子彈",
+    "cn": "转换为9x39子弹"
+   },
+   "ConvertTokra_9_39Box": {
+    "en": "Convert to Box of 9x39 Rounds",
+    "ch": "轉換為9x39子彈 (整盒)",
+    "cn": "转换为9x39子弹 (整盒)"
+   },
+   "ConvertTo145Carton": {
+    "en": "Convert to Carton of 14.5mm Rounds",
+    "ch": "轉換為14.5mm子彈 (整箱)",
+    "cn": "转换为14.5mm子弹 (整箱)"
+   },
+   "ConvertTo50Carton": {
+    "en": "Convert to Carton of .50 BMG Rounds",
+    "ch": "轉換為.50 BMG子彈 (整箱)",
+    "cn": "转换为.50 BMG子弹 (整箱)"
+   },
+   "ConvertTo545Box": {
+    "en": "Convert to Box of 5.45x39 Rounds",
+    "ch": "轉換為5.45x39子彈 (整盒)",
+    "cn": "转换为5.45x39子弹 (整盒)"
+   },
+   "ConvertTo545Bullets": {
+    "en": "Convert to 5.45x39 Round",
+    "ch": "轉換為5.45x39子彈",
+    "cn": "转换为5.45x39子弹"
+   },
+   "ConvertTo545Carton": {
+    "en": "Convert to Carton of 5.45x39 Rounds",
+    "ch": "轉換為5.45x39子彈 (整箱)",
+    "cn": "转换为5.45x39子弹 (整箱)"
+   },
+   "ConvertTo58Box": {
+    "en": "Convert to Box of 5.8mm Rounds",
+    "ch": "轉換為5.8mm子彈 (整盒)",
+    "cn": "转换为5.8mm子弹 (整盒)"
+   },
+   "ConvertTo58Carton": {
+    "en": "Convert to Carton of 5.8mm Rounds",
+    "ch": "轉換為5.8mm子彈 (整箱)",
+    "cn": "转换为5.8mm子弹 (整箱)"
+   },
+   "ConvertTo86Carton": {
+    "en": "Convert to Carton of 8.6mm Rounds",
+    "ch": "轉換為8.6mm子彈 (整箱)",
+    "cn": "转换为8.6mm子弹 (整箱)"
+   },
+   "ConvertToA_58bullets": {
+    "en": "Convert to 5.8mm Round",
+    "ch": "轉換為5.8mm子彈",
+    "cn": "转换为5.8mm子弹"
+   },
+   "ConvertToBullets145": {
+    "en": "Convert to 14.5mm Round",
+    "ch": "轉換為14.5mm子彈",
+    "cn": "转换为14.5mm子弹"
+   },
+   "ConvertToBullets145Box": {
+    "en": "Convert to Box of 14.5mm Rounds",
+    "ch": "轉換為14.5mm子彈 (整盒)",
+    "cn": "转换为14.5mm子弹 (整盒)"
+   },
+   "ConvertToBullets86": {
+    "en": "Convert to 8.6mm Round",
+    "ch": "轉換為8.6mm子彈",
+    "cn": "转换为8.6mm子弹"
+   },
+   "ConvertToBullets86Box": {
+    "en": "Convert to Box of 8.6mm Rounds",
+    "ch": "轉換為8.6mm子彈 (整盒)",
+    "cn": "转换为8.6mm子弹 (整盒)"
+   },
+   "ConvertTo12x70ShotgunShells": {
+    "en": "Convert to 12x70 Shotgun Round",
+    "ch": "轉換為12x70霰彈",
+    "cn": "转换为12x70霰弹"
+   },
+   "ConvertTo12x70ShotgunShells_Box": {
+    "en": "Convert to Box of 12x70 Shotgun Rounds",
+    "ch": "轉換為12x70霰彈 (整盒)",
+    "cn": "转换为12x70霰弹 (整盒)"
+   },
+   "ConvertTo23x75ShotgunShells": {
+    "en": "Convert to 23x75mmR Round",
+    "ch": "轉換為23x75mmR子彈",
+    "cn": "转换为23x75mmR子弹"
+   },
+   "ConvertTo23x75ShotgunShells_Box": {
+    "en": "Convert to Box of 23x75mmR Rounds",
+    "ch": "轉換為23x75mmR子彈 (整盒)",
+    "cn": "转换为23x75mmR子弹 (整盒)"
+   },
+   "ConvertToAmmoCan_545x39": {
+    "en": "Convert to Can of 5.45x39 Rounds",
+    "ch": "轉換為5.45x39子彈 (整罐)",
+    "cn": "转换为5.45x39子弹 (整罐)"
+   },
+   "ConvertToAmmoCan_762x39": {
+    "en": "Convert to Can of 7.62x39 Rounds",
+    "ch": "轉換為7.62x39子彈 (整罐)",
+    "cn": "转换为7.62x39子弹 (整罐)"
+   },
+   "ConvertToAmmoCan_762x54R": {
+    "en": "Convert to Can of 7.62x54R Rounds",
+    "ch": "轉換為7.62x54R子彈 (整罐)",
+    "cn": "转换为7.62x54R子弹 (整罐)"
+   },
+   "ConvertToAmmoCan_9x18mm": {
+    "en": "Convert to Can of 9x18mm Rounds",
+    "ch": "轉換為9x18mm子彈 (整罐)",
+    "cn": "转换为9x18mm子弹 (整罐)"
+   },
+   "ConvertToAmmoCan_9x39mm": {
+    "en": "Convert to Can of 9x39mm Rounds",
+    "ch": "轉換為9x39mm子彈 (整罐)",
+    "cn": "转换为9x39mm子弹 (整罐)"
+   },
+   "ConvertToAmmoCrate_545x39": {
+    "en": "Convert to Crate of 5.45x39 Rounds",
+    "ch": "轉換為5.45x39子彈 (木箱)",
+    "cn": "转换为5.45x39子弹 (木箱)"
+   },
+   "ConvertToAmmoCrate_762x39": {
+    "en": "Convert to Crate of 7.62x39 Rounds",
+    "ch": "轉換為7.62x39子彈 (木箱)",
+    "cn": "转换为7.62x39子弹 (木箱)"
+   },
+   "ConvertToAmmoCrate_762x54R": {
+    "en": "Convert to Crate of 7.62x54R Rounds",
+    "ch": "轉換為7.62x54R子彈 (木箱)",
+    "cn": "转换为7.62x54R子弹 (木箱)"
+   },
+   "ConvertToAmmoCrate_9x18mm": {
+    "en": "Convert to Crate of 9x18mm Rounds",
+    "ch": "轉換為9x18mm子彈 (木箱)",
+    "cn": "转换为9x18mm子弹 (木箱)"
+   },
+   "ConvertToAmmoCrate_9x39mm": {
+    "en": "Convert to Crate of 9x39mm Rounds",
+    "ch": "轉換為9x39mm子彈 (木箱)",
+    "cn": "转换为9x39mm子弹 (木箱)"
+   },
+   "ConvertToBullets22LR_Box": {
+    "en": "Convert to Box of .22 LR Rounds",
+    "ch": "轉換為.22 LR子彈 (整盒)",
+    "cn": "转换为.22 LR子弹 (整盒)"
+   },
+   "ConvertToBullets545x39": {
+    "en": "Convert to 5.45x39 Round",
+    "ch": "轉換為5.45x39子彈",
+    "cn": "转换为5.45x39子弹"
+   },
+   "ConvertToBullets545x39_Box": {
+    "en": "Convert to Box of 5.45x39 Rounds",
+    "ch": "轉換為5.45x39子彈 (整盒)",
+    "cn": "转换为5.45x39子弹 (整盒)"
+   },
+   "ConvertToBullets762x25": {
+    "en": "Convert to 7.62x25 Round",
+    "ch": "轉換為7.62x25子彈",
+    "cn": "转换为7.62x25子弹"
+   },
+   "ConvertToBullets762x25_Box": {
+    "en": "Convert to Box of 7.62x25 Rounds",
+    "ch": "轉換為7.62x25子彈 (整盒)",
+    "cn": "转换为7.62x25子弹 (整盒)"
+   },
+   "ConvertToBullets762x38R": {
+    "en": "Convert to 7.62x38R Round",
+    "ch": "轉換為7.62x38R子彈",
+    "cn": "转换为7.62x38R子弹"
+   },
+   "ConvertToBullets762x38R_Box": {
+    "en": "Convert to Box of 7.62x38R Rounds",
+    "ch": "轉換為7.62x38R子彈 (整盒)",
+    "cn": "转换为7.62x38R子弹 (整盒)"
+   },
+   "ConvertToBullets762x39": {
+    "en": "Convert to 7.62x39 Round",
+    "ch": "轉換為7.62x39子彈",
+    "cn": "转换为7.62x39子弹"
+   },
+   "ConvertToBullets762x39_Box": {
+    "en": "Convert to Box of 7.62x39 Rounds",
+    "ch": "轉換為7.62x39子彈 (整盒)",
+    "cn": "转换为7.62x39子弹 (整盒)"
+   },
+   "ConvertToBullets762x54R": {
+    "en": "Convert to 7.62x54R Round",
+    "ch": "轉換為7.62x54R子彈",
+    "cn": "转换为7.62x54R子弹"
+   },
+   "ConvertToBullets762x54R_Box": {
+    "en": "Convert to Box of 7.62x54R Rounds",
+    "ch": "轉換為7.62x54R子彈 (整盒)",
+    "cn": "转换为7.62x54R子弹 (整盒)"
+   },
+   "ConvertToBullets9x18mm_Box": {
+    "en": "Convert to Box of 9x18mm Rounds",
+    "ch": "轉換為9x18mm子彈 (整盒)",
+    "cn": "转换为9x18mm子弹 (整盒)"
+   },
+   "ConvertToBullets9x19mm": {
+    "en": "Convert to 9x19mm Round",
+    "ch": "轉換為9x19mm子彈",
+    "cn": "转换为9x19mm子弹"
+   },
+   "ConvertToBullets9x19mm_Box": {
+    "en": "Convert to Box of 9x19mm Rounds",
+    "ch": "轉換為9x19mm子彈 (整盒)",
+    "cn": "转换为9x19mm子弹 (整盒)"
+   },
+   "ConvertToBullets9x39mm": {
+    "en": "Convert to 9x39mm Round",
+    "ch": "轉換為9x39mm子彈",
+    "cn": "转换为9x39mm子弹"
+   },
+   "ConvertToBullets9x39mm_Box": {
+    "en": "Convert to Box of 9x39mm Rounds",
+    "ch": "轉換為9x39mm子彈 (整盒)",
+    "cn": "转换为9x39mm子弹 (整盒)"
+   },
+   "ConvertToRF_127x55Box": {
+    "en": "Convert to Box of 12.7x55 Rounds",
+    "ch": "轉換為12.7x55子彈 (整盒)",
+    "cn": "转换为12.7x55子弹 (整盒)"
+   },
+   "ConvertToRF_127x55Bullets": {
+    "en": "Convert to 12.7x55 Round",
+    "ch": "轉換為12.7x55子彈",
+    "cn": "转换为12.7x55子弹"
+   },
+   "ConvertToRF_127x55Carton": {
+    "en": "Convert to Carton of 12.7x55 Rounds",
+    "ch": "轉換為12.7x55子彈 (整箱)",
+    "cn": "转换为12.7x55子弹 (整箱)"
+   },
+   "ConvertToRF_12GaugeBox": {
+    "en": "Convert to Box of 12 Gauge Rounds",
+    "ch": "轉換為12號霰彈 (整盒)",
+    "cn": "转换为12号霰弹 (整盒)"
+   },
+   "ConvertToRF_12GaugeBullets": {
+    "en": "Convert to 12 Gauge Round",
+    "ch": "轉換為12號霰彈",
+    "cn": "转换为12号霰弹"
+   },
+   "ConvertToRF_12GaugeCarton": {
+    "en": "Convert to Carton of 12 Gauge Rounds",
+    "ch": "轉換為12號霰彈 (整箱)",
+    "cn": "转换为12号霰弹 (整箱)"
+   },
+   "ConvertToRF_3006Box": {
+    "en": "Convert to Box of .30-06 Rounds",
+    "ch": "轉換為.30-06子彈 (整盒)",
+    "cn": "转换为.30-06子弹 (整盒)"
+   },
+   "ConvertToRF_3006Bullets": {
+    "en": "Convert to .30-06 Round",
+    "ch": "轉換為.30-06子彈",
+    "cn": "转换为.30-06子弹"
+   },
+   "ConvertToRF_3006Carton": {
+    "en": "Convert to Carton of .30-06 Rounds",
+    "ch": "轉換為.30-06子彈 (整箱)",
+    "cn": "转换为.30-06子弹 (整箱)"
+   },
+   "ConvertToRF_30CarbineBox": {
+    "en": "Convert to Box of .30 Carbine Rounds",
+    "ch": "轉換為.30卡賓槍子彈 (整盒)",
+    "cn": "转换为.30卡宾枪子弹 (整盒)"
+   },
+   "ConvertToRF_30CarbineBullets": {
+    "en": "Convert to .30 Carbine Round",
+    "ch": "轉換為.30卡賓槍子彈",
+    "cn": "转换为.30卡宾枪子弹"
+   },
+   "ConvertToRF_30CarbineCarton": {
+    "en": "Convert to Carton of .30 Carbine Rounds",
+    "ch": "轉換為.30卡賓槍子彈 (整箱)",
+    "cn": "转换为.30卡宾枪子弹 (整箱)"
+   },
+   "ConvertToRF_357Box": {
+    "en": "Convert to Box of .357 Magnum Rounds",
+    "ch": "轉換為.357馬格南子彈 (整盒)",
+    "cn": "转换为.357马格南子弹 (整盒)"
+   },
+   "ConvertToRF_357Bullets": {
+    "en": "Convert to .357 Magnum Round",
+    "ch": "轉換為.357馬格南子彈",
+    "cn": "转换为.357马格南子弹"
+   },
+   "ConvertToRF_357Carton": {
+    "en": "Convert to Carton of .357 Magnum Rounds",
+    "ch": "轉換為.357馬格南子彈 (整箱)",
+    "cn": "转换为.357马格南子弹 (整箱)"
+   },
+   "ConvertToRF_380Box": {
+    "en": "Convert to Box of .380 ACP Rounds",
+    "ch": "轉換為.380 ACP子彈 (整盒)",
+    "cn": "转换为.380 ACP子弹 (整盒)"
+   },
+   "ConvertToRF_380Bullets": {
+    "en": "Convert to .380 ACP Round",
+    "ch": "轉換為.380 ACP子彈",
+    "cn": "转换为.380 ACP子弹"
+   },
+   "ConvertToRF_380Carton": {
+    "en": "Convert to Carton of .380 ACP Rounds",
+    "ch": "轉換為.380 ACP子彈 (整箱)",
+    "cn": "转换为.380 ACP子弹 (整箱)"
+   },
+   "ConvertToRF_45Box": {
+    "en": "Convert to Box of .45 ACP Rounds",
+    "ch": "轉換為.45 ACP子彈 (整盒)",
+    "cn": "转换为.45 ACP子弹 (整盒)"
+   },
+   "ConvertToRF_45Bullets": {
+    "en": "Convert to .45 ACP Round",
+    "ch": "轉換為.45 ACP子彈",
+    "cn": "转换为.45 ACP子弹"
+   },
+   "ConvertToRF_45Carton": {
+    "en": "Convert to Carton of .45 ACP Rounds",
+    "ch": "轉換為.45 ACP子彈 (整箱)",
+    "cn": "转换为.45 ACP子弹 (整箱)"
+   },
+   "ConvertToRF_500Box": {
+    "en": "Convert to Box of .500 Magnum Rounds",
+    "ch": "轉換為.500馬格南子彈 (整盒)",
+    "cn": "转换为.500马格南子弹 (整盒)"
+   },
+   "ConvertToRF_500Bullets": {
+    "en": "Convert to .500 Magnum Round",
+    "ch": "轉換為.500馬格南子彈",
+    "cn": "转换为.500马格南子弹"
+   },
+   "ConvertToRF_500Carton": {
+    "en": "Convert to Carton of .500 Magnum Rounds",
+    "ch": "轉換為.500馬格南子彈 (整箱)",
+    "cn": "转换为.500马格南子弹 (整箱)"
+   },
+   "ConvertToRF_545x39Box": {
+    "en": "Convert to Box of 5.45x39 Rounds",
+    "ch": "轉換為5.45x39子彈 (整盒)",
+    "cn": "转换为5.45x39子弹 (整盒)"
+   },
+   "ConvertToRF_545x39Bullets": {
+    "en": "Convert to 5.45x39 Round",
+    "ch": "轉換為5.45x39子彈",
+    "cn": "转换为5.45x39子弹"
+   },
+   "ConvertToRF_545x39Carton": {
+    "en": "Convert to Carton of 5.45x39 Rounds",
+    "ch": "轉換為5.45x39子彈 (整箱)",
+    "cn": "转换为5.45x39子弹 (整箱)"
+   },
+   "ConvertToRF_556x45Box": {
+    "en": "Convert to Box of 5.56x45 NATO Rounds",
+    "ch": "轉換為5.56x45 NATO子彈 (整盒)",
+    "cn": "转换为5.56x45 NATO子弹 (整盒)"
+   },
+   "ConvertToRF_556x45Bullets": {
+    "en": "Convert to 5.56x45 NATO Round",
+    "ch": "轉換為5.56x45 NATO子彈",
+    "cn": "转换为5.56x45 NATO子弹"
+   },
+   "ConvertToRF_556x45Carton": {
+    "en": "Convert to Carton of 5.56x45 NATO Rounds",
+    "ch": "轉換為5.56x45 NATO子彈 (整箱)",
+    "cn": "转换为5.56x45 NATO子弹 (整箱)"
+   },
+   "ConvertToRF_762x25Box": {
+    "en": "Convert to Box of 7.62x25 Tokarev Rounds",
+    "ch": "轉換為7.62x25托卡列夫子彈 (整盒)",
+    "cn": "转换为7.62x25托卡列夫子弹 (整盒)"
+   },
+   "ConvertToRF_762x25Bullets": {
+    "en": "Convert to 7.62x25 Tokarev Round",
+    "ch": "轉換為7.62x25托卡列夫子彈",
+    "cn": "转换为7.62x25托卡列夫子弹"
+   },
+   "ConvertToRF_762x25Carton": {
+    "en": "Convert to Carton of 7.62x25 Tokarev Rounds",
+    "ch": "轉換為7.62x25托卡列夫子彈 (整箱)",
+    "cn": "转换为7.62x25托卡列夫子弹 (整箱)"
+   },
+   "ConvertToRF_762x39Box": {
+    "en": "Convert to Box of 7.62x39 Rounds",
+    "ch": "轉換為7.62x39子彈 (整盒)",
+    "cn": "转换为7.62x39子弹 (整盒)"
+   },
+   "ConvertToRF_762x39Bullets": {
+    "en": "Convert to 7.62x39 Round",
+    "ch": "轉換為7.62x39子彈",
+    "cn": "转换为7.62x39子弹"
+   },
+   "ConvertToRF_762x39Carton": {
+    "en": "Convert to Carton of 7.62x39 Rounds",
+    "ch": "轉換為7.62x39子彈 (整箱)",
+    "cn": "转换为7.62x39子弹 (整箱)"
+   },
+   "ConvertToRF_762x51Box": {
+    "en": "Convert to Box of 7.62x51 NATO Rounds",
+    "ch": "轉換為7.62x51 NATO子彈 (整盒)",
+    "cn": "转换为7.62x51 NATO子弹 (整盒)"
+   },
+   "ConvertToRF_762x51Bullets": {
+    "en": "Convert to 7.62x51 NATO Round",
+    "ch": "轉換為7.62x51 NATO子彈",
+    "cn": "转换为7.62x51 NATO子弹"
+   },
+   "ConvertToRF_762x51Carton": {
+    "en": "Convert to Carton of 7.62x51 NATO Rounds",
+    "ch": "轉換為7.62x51 NATO子彈 (整箱)",
+    "cn": "转换为7.62x51 NATO子弹 (整箱)"
+   },
+   "ConvertToRF_762x54Box": {
+    "en": "Convert to Box of 7.62x54R Rounds",
+    "ch": "轉換為7.62x54R子彈 (整盒)",
+    "cn": "转换为7.62x54R子弹 (整盒)"
+   },
+   "ConvertToRF_762x54Bullets": {
+    "en": "Convert to 7.62x54R Round",
+    "ch": "轉換為7.62x54R子彈",
+    "cn": "转换为7.62x54R子弹"
+   },
+   "ConvertToRF_762x54Carton": {
+    "en": "Convert to Carton of 7.62x54R Rounds",
+    "ch": "轉換為7.62x54R子彈 (整箱)",
+    "cn": "转换为7.62x54R子弹 (整箱)"
+   },
+   "ConvertToRF_792x33Box": {
+    "en": "Convert to Box of 7.92x33 Kurz Rounds",
+    "ch": "轉換為7.92x33短子彈 (整盒)",
+    "cn": "转换为7.92x33短子弹 (整盒)"
+   },
+   "ConvertToRF_792x33Bullets": {
+    "en": "Convert to 7.92x33 Kurz Round",
+    "ch": "轉換為7.92x33短子彈",
+    "cn": "转换为7.92x33短子弹"
+   },
+   "ConvertToRF_792x33Carton": {
+    "en": "Convert to Carton of 7.92x33 Kurz Rounds",
+    "ch": "轉換為7.92x33短子彈 (整箱)",
+    "cn": "转换为7.92x33短子弹 (整箱)"
+   },
+   "ConvertToRF_792x57Box": {
+    "en": "Convert to Box of 7.92x57 Mauser Rounds",
+    "ch": "轉換為7.92x57毛瑟子彈 (整盒)",
+    "cn": "转换为7.92x57毛瑟子弹 (整盒)"
+   },
+   "ConvertToRF_792x57Bullets": {
+    "en": "Convert to 7.92x57 Mauser Round",
+    "ch": "轉換為7.92x57毛瑟子彈",
+    "cn": "转换为7.92x57毛瑟子弹"
+   },
+   "ConvertToRF_792x57Carton": {
+    "en": "Convert to Carton of 7.92x57 Mauser Rounds",
+    "ch": "轉換為7.92x57毛瑟子彈 (整箱)",
+    "cn": "转换为7.92x57毛瑟子弹 (整箱)"
+   },
+   "ConvertToRF_9x18Box": {
+    "en": "Convert to Box of 9x18 Makarov Rounds",
+    "ch": "轉換為9x18馬卡洛夫子彈 (整盒)",
+    "cn": "转换为9x18马卡洛夫子弹 (整盒)"
+   },
+   "ConvertToRF_9x18Bullets": {
+    "en": "Convert to 9x18 Makarov Round",
+    "ch": "轉換為9x18馬卡洛夫子彈",
+    "cn": "转换为9x18马卡洛夫子弹"
+   },
+   "ConvertToRF_9x18Carton": {
+    "en": "Convert to Carton of 9x18 Makarov Rounds",
+    "ch": "轉換為9x18馬卡洛夫子彈 (整箱)",
+    "cn": "转换为9x18马卡洛夫子弹 (整箱)"
+   },
+   "ConvertToRF_9x19Box": {
+    "en": "Convert to Box of 9x19 Rounds",
+    "ch": "轉換為9x19子彈 (整盒)",
+    "cn": "转换为9x19子弹 (整盒)"
+   },
+   "ConvertToRF_9x19Bullets": {
+    "en": "Convert to 9x19 Round",
+    "ch": "轉換為9x19子彈",
+    "cn": "转换为9x19子弹"
+   },
+   "ConvertToRF_9x19Carton": {
+    "en": "Convert to Carton of 9x19 Rounds",
+    "ch": "轉換為9x19子彈 (整箱)",
+    "cn": "转换为9x19子弹 (整箱)"
+   },
+   "ConvertTo3006": {
+    "en": "Convert to .30-06 Round",
+    "ch": "轉換為.30-06子彈",
+    "cn": "转换为.30-06子弹"
+   },
+   "ConvertTo3006Box": {
+    "en": "Convert to Box of .30-06 Rounds",
+    "ch": "轉換為.30-06子彈 (整盒)",
+    "cn": "转换为.30-06子弹 (整盒)"
+   },
+   "ConvertTo30Carbine": {
+    "en": "Convert to .30 Carbine Round",
+    "ch": "轉換為.30卡賓槍子彈",
+    "cn": "转换为.30卡宾枪子弹"
+   },
+   "ConvertTo30CarbineBox": {
+    "en": "Convert to Box of .30 Carbine Rounds",
+    "ch": "轉換為.30卡賓槍子彈 (整盒)",
+    "cn": "转换为.30卡宾枪子弹 (整盒)"
+   },
+   "ConvertTo10mmAuto": {
+    "en": "Convert to 10mm Auto Round",
+    "ch": "轉換為10mm Auto子彈",
+    "cn": "转换为10mm Auto子弹"
+   },
+   "ConvertTo10mmAutoBox": {
+    "en": "Convert to Box of 10mm Auto Rounds",
+    "ch": "轉換為10mm Auto子彈 (整盒)",
+    "cn": "转换为10mm Auto子弹 (整盒)"
+   },
+   "ConvertTo25ACP": {
+    "en": "Convert to .25 ACP Round",
+    "ch": "轉換為.25 ACP子彈",
+    "cn": "转换为.25 ACP子弹"
+   },
+   "ConvertTo25ACPBox": {
+    "en": "Convert to Box of .25 ACP Rounds",
+    "ch": "轉換為.25 ACP子彈 (整盒)",
+    "cn": "转换为.25 ACP子弹 (整盒)"
+   },
+   "ConvertTo380ACP": {
+    "en": "Convert to .380 ACP Round",
+    "ch": "轉換為.380 ACP子彈",
+    "cn": "转换为.380 ACP子弹"
+   },
+   "ConvertTo380ACPBox": {
+    "en": "Convert to Box of .380 ACP Rounds",
+    "ch": "轉換為.380 ACP子彈 (整盒)",
+    "cn": "转换为.380 ACP子弹 (整盒)"
+   },
+   "ConvertTo762x54R": {
+    "en": "Convert to 7.62x54mmR Round",
+    "ch": "轉換為7.62x54mmR子彈",
+    "cn": "转换为7.62x54mmR子弹"
+   },
+   "ConvertTo762x54RBox": {
+    "en": "Convert to Box of 7.62x54mmR Rounds",
+    "ch": "轉換為7.62x54mmR子彈 (整盒)",
+    "cn": "转换为7.62x54mmR子弹 (整盒)"
+   },
+   "ConvertTo9x18mmBox": {
+    "en": "Convert to Box of 9x18mm Makarov Rounds",
+    "ch": "轉換為9x18mm馬卡洛夫子彈 (整盒)",
+    "cn": "转换为9x18mm马卡洛夫子弹 (整盒)"
+   },
+   "ConvertTo9x39": {
+    "en": "Convert to 9x39mm Round",
+    "ch": "轉換為9x39mm子彈",
+    "cn": "转换为9x39mm子弹"
+   },
+   "ConvertTo9x39Box": {
+    "en": "Convert to Box of 9x39mm Rounds",
+    "ch": "轉換為9x39mm子彈 (整盒)",
+    "cn": "转换为9x39mm子弹 (整盒)"
+   },
+   "ConvertTo11x59mmRGras": {
+    "en": "Convert to 11x59mmR Gras Round",
+    "ch": "轉換為11x59mmR Gras子彈",
+    "cn": "转换为11x59mmR Gras子弹"
+   },
+   "ConvertTo11x59mmRGrasBox": {
+    "en": "Convert to Box of 11x59mmR Gras Rounds",
+    "ch": "轉換為11x59mmR Gras子彈 (整盒)",
+    "cn": "转换为11x59mmR Gras子弹 (整盒)"
+   },
+   "ConvertTo75x54French": {
+    "en": "Convert to 7.5x54 French Round",
+    "ch": "轉換為7.5x54 French子彈",
+    "cn": "转换为7.5x54 French子弹"
+   },
+   "ConvertTo75x54FrenchBox": {
+    "en": "Convert to Box of 7.5x54 French Rounds",
+    "ch": "轉換為7.5x54 French子彈 (整盒)",
+    "cn": "转换为7.5x54 French子弹 (整盒)"
+   },
+   "ConvertTo8mmLebel": {
+    "en": "Convert to 8mm Lebel Round",
+    "ch": "轉換為8mm Lebel子彈",
+    "cn": "转换为8mm Lebel子弹"
+   },
+   "ConvertTo8mmLebelBox": {
+    "en": "Convert to Box of 8mm Lebel Rounds",
+    "ch": "轉換為8mm Lebel子彈 (整盒)",
+    "cn": "转换为8mm Lebel子弹 (整盒)"
+   },
+   "ConvertTo8x27mm": {
+    "en": "Convert to 8x27mm Round",
+    "ch": "轉換為8x27mm子彈",
+    "cn": "转换为8x27mm子弹"
+   },
+   "ConvertTo8x27mmBox": {
+    "en": "Convert to Box of 8x27mm Rounds",
+    "ch": "轉換為8x27mm子彈 (整盒)",
+    "cn": "转换为8x27mm子弹 (整盒)"
+   },
+   "ConvertTo223Carton": {
+    "en": "Convert to Carton of .223 Rounds",
+    "ch": "轉換為.223子彈 (整箱)",
+    "cn": "转换为.223子弹 (整箱)"
+   },
+   "ConvertTo22Carton": {
+    "en": "Convert to Carton of .22 LR Rounds",
+    "ch": "轉換為.22 LR子彈 (整箱)",
+    "cn": "转换为.22 LR子弹 (整箱)"
+   },
+   "ConvertTo762Carton": {
+    "en": "Convert to Carton of 7.62x39mm Rounds",
+    "ch": "轉換為7.62x39mm子彈 (整箱)",
+    "cn": "转换为7.62x39mm子弹 (整箱)"
+   },
+   "ConvertTo762x39BulletsCarton": {
+    "en": "Convert to Carton of 7.62x39mm Rounds",
+    "ch": "轉換為7.62x39mm子彈 (整箱)",
+    "cn": "转换为7.62x39mm子弹 (整箱)"
+   },
+   "ConvertToBullets10mmCarton": {
+    "en": "Convert to Carton of 10mm Auto Rounds",
+    "ch": "轉換為10mm Auto子彈 (整箱)",
+    "cn": "转换为10mm Auto子弹 (整箱)"
+   },
+   "ConvertToBullets22": {
+    "en": "Convert to .22 LR Round",
+    "ch": "轉換為.22 LR子彈",
+    "cn": "转换为.22 LR子弹"
+   },
+   "ConvertToBullets22Box": {
+    "en": "Convert to Box of .22 LR Rounds",
+    "ch": "轉換為.22 LR子彈 (整盒)",
+    "cn": "转换为.22 LR子弹 (整盒)"
+   },
+   "ConvertToBullets3006Carton": {
+    "en": "Convert to Carton of .30-06 Rounds",
+    "ch": "轉換為.30-06子彈 (整箱)",
+    "cn": "转换为.30-06子弹 (整箱)"
+   },
+   "ConvertToBullets4440": {
+    "en": "Convert to .44-40 WCF Round",
+    "ch": "轉換為.44-40 WCF子彈",
+    "cn": "转换为.44-40 WCF子弹"
+   },
+   "ConvertToBullets4440Box": {
+    "en": "Convert to Box of .44-40 WCF Rounds",
+    "ch": "轉換為.44-40 WCF子彈 (整盒)",
+    "cn": "转换为.44-40 WCF子弹 (整盒)"
+   },
+   "ConvertToBullets4440Carton": {
+    "en": "Convert to Carton of .44-40 WCF Rounds",
+    "ch": "轉換為.44-40 WCF子彈 (整箱)",
+    "cn": "转换为.44-40 WCF子弹 (整箱)"
+   },
+   "ConvertTo10mmBox": {
+    "en": "Convert to Box of 10mm Rounds",
+    "ch": "轉換為10mm子彈 (整盒)",
+    "cn": "转换为10mm子弹 (整盒)"
+   },
+   "ConvertTo10mmBullets": {
+    "en": "Convert to 10mm Round",
+    "ch": "轉換為10mm子彈",
+    "cn": "转换为10mm子弹"
+   },
+   "ConvertTo10mmCarton": {
+    "en": "Convert to Carton of 10mm Rounds",
+    "ch": "轉換為10mm子彈 (整箱)",
+    "cn": "转换为10mm子弹 (整箱)"
+   },
+   "ConvertTo25Box": {
+    "en": "Convert to Box of .25 Auto Rounds",
+    "ch": "轉換為.25 Auto子彈 (整盒)",
+    "cn": "转换为.25 Auto子弹 (整盒)"
+   },
+   "ConvertTo25Bullets": {
+    "en": "Convert to .25 Auto Round",
+    "ch": "轉換為.25 Auto子彈",
+    "cn": "转换为.25 Auto子弹"
+   },
+   "ConvertTo25Carton": {
+    "en": "Convert to Carton of .25 Auto Rounds",
+    "ch": "轉換為.25 Auto子彈 (整箱)",
+    "cn": "转换为.25 Auto子弹 (整箱)"
+   },
+   "ConvertTo3006Bullets": {
+    "en": "Convert to .30-06 Round",
+    "ch": "轉換為.30-06子彈",
+    "cn": "转换为.30-06子弹"
+   },
+   "ConvertTo3006Carton": {
+    "en": "Convert to Carton of .30-06 Rounds",
+    "ch": "轉換為.30-06子彈 (整箱)",
+    "cn": "转换为.30-06子弹 (整箱)"
+   },
+   "ConvertTo30CarBox": {
+    "en": "Convert to Box of .30 Carbine Rounds",
+    "ch": "轉換為.30卡賓槍子彈 (整盒)",
+    "cn": "转换为.30卡宾枪子弹 (整盒)"
+   },
+   "ConvertTo30CarBullets": {
+    "en": "Convert to .30 Carbine Round",
+    "ch": "轉換為.30卡賓槍子彈",
+    "cn": "转换为.30卡宾枪子弹"
+   },
+   "ConvertTo30CarCarton": {
+    "en": "Convert to Carton of .30 Carbine Rounds",
+    "ch": "轉換為.30卡賓槍子彈 (整箱)",
+    "cn": "转换为.30卡宾枪子弹 (整箱)"
+   },
+   "ConvertTo380Box": {
+    "en": "Convert to Box of .380 Auto Rounds",
+    "ch": "轉換為.380 Auto子彈 (整盒)",
+    "cn": "转换为.380 Auto子弹 (整盒)"
+   },
+   "ConvertTo380Bullets": {
+    "en": "Convert to .380 Auto Round",
+    "ch": "轉換為.380 Auto子彈",
+    "cn": "转换为.380 Auto子弹"
+   },
+   "ConvertTo380Carton": {
+    "en": "Convert to Carton of .380 Auto Rounds",
+    "ch": "轉換為.380 Auto子彈 (整箱)",
+    "cn": "转换为.380 Auto子弹 (整箱)"
+   },
+   "ConvertTo40Box": {
+    "en": "Convert to Box of .40 S&W Rounds",
+    "ch": "轉換為.40 S&W子彈 (整盒)",
+    "cn": "转换为.40 S&W子弹 (整盒)"
+   },
+   "ConvertTo40Bullets": {
+    "en": "Convert to .40 S&W Round",
+    "ch": "轉換為.40 S&W子彈",
+    "cn": "转换为.40 S&W子弹"
+   },
+   "ConvertTo40Carton": {
+    "en": "Convert to Carton of .40 S&W Rounds",
+    "ch": "轉換為.40 S&W子彈 (整箱)",
+    "cn": "转换为.40 S&W子弹 (整箱)"
+   },
+   "ConvertTo45LCBox": {
+    "en": "Convert to Box of .45 Colt Rounds",
+    "ch": "轉換為.45 Colt子彈 (整盒)",
+    "cn": "转换为.45 Colt子弹 (整盒)"
+   },
+   "ConvertTo45LCBullets": {
+    "en": "Convert to .45 Colt Round",
+    "ch": "轉換為.45 Colt子彈",
+    "cn": "转换为.45 Colt子弹"
+   },
+   "ConvertTo45LCCarton": {
+    "en": "Convert to Carton of .45 Colt Rounds",
+    "ch": "轉換為.45 Colt子彈 (整箱)",
+    "cn": "转换为.45 Colt子弹 (整箱)"
+   },
+   "ConvertTo76239Box": {
+    "en": "Convert to Box of 7.62x39 Rounds",
+    "ch": "轉換為7.62x39子彈 (整盒)",
+    "cn": "转换为7.62x39子弹 (整盒)"
+   },
+   "ConvertTo76239Bullets": {
+    "en": "Convert to 7.62x39 Round",
+    "ch": "轉換為7.62x39子彈",
+    "cn": "转换为7.62x39子弹"
+   },
+   "ConvertTo76239Carton": {
+    "en": "Convert to Carton of 7.62x39 Rounds",
+    "ch": "轉換為7.62x39子彈 (整箱)",
+    "cn": "转换为7.62x39子弹 (整箱)"
+   },
+   "ConvertTo792Box": {
+    "en": "Convert to Box of 8mm Mauser Rounds",
+    "ch": "轉換為8mm毛瑟子彈 (整盒)",
+    "cn": "转换为8mm毛瑟子弹 (整盒)"
+   },
+   "ConvertTo792Bullets": {
+    "en": "Convert to 8mm Mauser Round",
+    "ch": "轉換為8mm毛瑟子彈",
+    "cn": "转换为8mm毛瑟子弹"
+   },
+   "ConvertTo792Carton": {
+    "en": "Convert to Carton of 8mm Mauser Rounds",
+    "ch": "轉換為8mm毛瑟子彈 (整箱)",
+    "cn": "转换为8mm毛瑟子弹 (整箱)"
+   },
+   "ConvertToBase_3006Box": {
+    "en": "Convert to Box of .30-06 Rounds",
+    "ch": "轉換為.30-06子彈 (整盒)",
+    "cn": "转换为.30-06子弹 (整盒)"
+   },
+   "ConvertToSlugBulletBox": {
+    "en": "Convert to Box of 12ga Slug Rounds",
+    "ch": "轉換為12ga獨頭彈 (整盒)",
+    "cn": "转换为12ga独头弹 (整盒)"
+   },
+   "ConvertToSlugBullets": {
+    "en": "Convert to 12ga Slug Round",
+    "ch": "轉換為12ga獨頭彈",
+    "cn": "转换为12ga独头弹"
+   },
+   "ConvertToSlugCarton": {
+    "en": "Convert to Carton of 12ga Slug Rounds",
+    "ch": "轉換為12ga獨頭彈 (整箱)",
+    "cn": "转换为12ga独头弹 (整箱)"
    }
   },
   "Sandbox.json": {
