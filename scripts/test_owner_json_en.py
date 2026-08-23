@@ -2,7 +2,8 @@
 # /// script
 # requires-python = ">=3.11"
 # ///
-"""回歸測試：owner 衝突的 `has_json_en`／`en_source` 加註（#245 項目 1）。
+"""回歸測試：owner 衝突的 `has_json_en`／`en_source` 加註與 `OWNER_CONFLICTS.md`
+渲染（#245 項目 1、2）。
 
 裁決 `translate` 還是 `unship` 的承重事實是「抑制後這個 owner 的玩家看到自己 mod 的
 英文，還是 `getTextInternal()` 回傳的字面鍵名」。這一步先前靠人逐一翻
@@ -21,6 +22,9 @@
 4. **`src` out-param 與 `out` 全程同步**。`converge_owner` 有三處撤銷分支（鏡像缺值、
    首次即空值、純空白），漏 pop 任何一處就會留下已撤銷鍵的來源標記，讓下一個同鍵 owner
    拿到別人的來源。
+5. **`OWNER_CONFLICTS.md` 的表格不得被值裡的 `|` 拆欄**。落點鍵本身就是
+   `IG_UI|IGUI_X` 這種形狀，而 GFM 的表格切欄發生在 inline 解析之前——**code span
+   不保護 `|`**。漏轉義會讓整列往右錯位一格，而 Markdown 不會報錯。
 """
 from __future__ import annotations
 
@@ -167,8 +171,62 @@ out7 = pms.converge_owner({r_ok: "Hello"}, {r_ok: "Hello"}, EFF,
                           vanilla=set(), dn_gap={})
 check(out7 == out, "src=None 時回傳值與帶 src 時相同（既有呼叫端零影響）")
 
+
+# --- 5. OWNER_CONFLICTS.md 渲染 ------------------------------------------- #
+check(pms._md_pipe("IG_UI|IGUI_X") == "IG_UI\\|IGUI_X", "_md_pipe 轉義 |")
+check(pms._md_cell("a|b") == "a\\|b", "_md_cell 轉義 |")
+check(pms._md_cell("<br>x") == "&lt;br&gt;x", "_md_cell 轉義角括號（避免被當 HTML）")
+check(pms._md_cell("a\nb") == "a b", "_md_cell 把換行折成空白以維持單列")
+check(pms._md_cell("x" * 20, 10).endswith("…") and len(pms._md_cell("x" * 20, 10)) == 10,
+      "_md_cell 依 limit 截斷並標示省略")
+
+DEC = {
+    "ItemName|Base.Glock23": {"action": "unship", "reason": "不同槍|不同口徑",
+                              "signature": "x"},
+    "UI|UI_trait_X": {"action": "translate", "reason": "取中性譯名",
+                      "ch": "甲", "cn": "甲", "signature": "y",
+                      "upstream_report": "https://example/1"},
+    "UI|UI_bad_shape": "壞掉的條目",
+}
+CEN = {"ItemName|Base.Glock23": {"1/A": "Glock 23", "2/B": "USP-45"},
+       "UI|UI_trait_X": {"3/C": "Desc <br> here", "4/D": "Other"}}
+SRC = {"ItemName|Base.Glock23": {"1/A": "ItemName.json", "2/B": pms.EN_SOURCE_SCRIPT},
+       "UI|UI_trait_X": {"3/C": "UI.json", "4/D": "UI_EN.txt"}}
+page = pms.render_owner_report(DEC, CEN, SRC)
+
+# 5a. 主表每列必須恰好 4 欄（＝5 個未轉義的 `|`）。這條是本節的承重點：漏轉義時
+#     Markdown 不會報錯，只會靜默錯位，肉眼看渲染結果才發現。
+# 只取兩個資料節內的列——檔頭另有兩張 2 欄的說明表（處理方式、標記意義），
+# 用「`| ` 開頭」寬篩會把它們一起算進來而誤報。
+body = []
+in_section = False
+for ln in page.split("\n"):
+    if ln.startswith("## "):
+        in_section = ln.startswith(("## 不出貨的鍵", "## 採中性譯名的鍵"))
+    elif in_section and ln.startswith("| ") and not ln.startswith(("| 鍵 |", "|---")):
+        body.append(ln)
+# `\|` 是轉義過的，先剝掉再數才是真正的欄位分隔符。**不可寫進 f-string 的 expression**
+# ——Python 3.11 不允許 f-string 運算式含反斜線（本檔宣告 requires-python >=3.11）。
+n_bad = sum(1 for ln in body if ln.replace("\\|", "").count("|") != 5)
+check(len(body) == 2 and n_bad == 0,
+      f"主表每列 4 欄（實測 {len(body)} 列、應為 2，異常 {n_bad}）")
+check("`ItemName\\|Base.Glock23`" in page, "鍵名的 | 已轉義（backtick 內也要）")
+
+# 5b. 分節與內容
+check("## 不出貨的鍵（1）" in page and "## 採中性譯名的鍵（1）" in page,
+      "依 action 分兩節並標數量")
+check("_(json)_" in page and "_(script)_" in page and "死檔 UI_EN.txt" in page,
+      "三態標記都渲染出來（json／script／死檔）")
+check("https://example/1" in page, "upstream_report 選配欄有渲染")
+check("壞掉的條目" not in page, "形狀壞損的台帳條目跳過，不得讓渲染整個炸掉")
+check(page.endswith("\n") and "\r" not in page, "輸出為 LF ＋尾端換行（受版控生成物）")
+
+# 5c. 確定性：同輸入必須同輸出（否則 --owner-report-check 會恆紅）
+check(pms.render_owner_report(DEC, CEN, SRC) == page, "渲染具確定性")
+
 if FAIL:
     print(f"\n❌ test_owner_json_en：{FAIL}/{CHECKS} 項失敗", file=sys.stderr)
     sys.exit(1)
 print(f"✅ test_owner_json_en：{CHECKS} 項全過"
-      "（loadable_json 兩條件、annotate 三態、signature 不受影響、src/out 全程同步）")
+      "（loadable_json 兩條件、annotate 三態、signature 不受影響、"
+      "src/out 全程同步、OWNER_CONFLICTS.md 表格不被 | 拆欄）")

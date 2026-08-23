@@ -85,8 +85,12 @@ jobs:
 
       # owner census 全庫裁決閘門：不產生翻譯待辦，只驗 decision／unship signature 與
       # 衝突消失後的退役訊號。正式 build/verify 不讀 tracker census，這道 CI 不可省。
-      - name: owner conflict decisions
-        run: uv run scripts/prep_mod_strings.py --check-decisions --out /tmp/owner-decisions.json
+      # 同時驗 OWNER_CONFLICTS.md 是否與「裁決台帳＋census」同步——它是生成物，改了
+      # 台帳卻沒重跑就會靜默停在舊內容（同 SUPPORTED_MODS.md 漂移一整天的前例）。
+      - name: owner conflict decisions ＋ OWNER_CONFLICTS.md 同步
+        run: |
+          uv run scripts/prep_mod_strings.py --check-decisions --owner-report-check \
+            --out /tmp/owner-decisions.json
 
       # tracker 自身的十五情境 mock 測試（純記憶體，不碰網路與 git 遠端）
       - name: tracker self-test

@@ -143,6 +143,112 @@ def annotate(owners: dict[str, str], srcs: dict[str, str]) -> dict[str, dict]:
             for o, en in owners.items()}
 
 
+OWNER_CONFLICTS_MD = ROOT / "OWNER_CONFLICTS.md"
+
+
+def _md_pipe(s: str) -> str:
+    """轉義表格用的 `|`。**backtick 內也要轉**：GFM 的表格切欄發生在 inline 解析之前，
+    code span 不保護 `|`（規範明文要求「including inside other inline spans」）。
+    落點鍵本身就是 `IG_UI|IGUI_X` 這種形狀，漏轉會讓整列往右錯位一格。
+    """
+    return s.replace("|", "\\|")
+
+
+def _md_cell(s: str, limit: int = 600) -> str:
+    """把上游英文／裁決摘要塞進 Markdown 表格單元格。
+
+    上游值可含 `|`（會拆斷表格）、換行、以及 `<br>`／`<RGB:..>` 這類 PZ 標記（`<`
+    在 Markdown 裡會被當 HTML 起始）。全部轉義；換行折成空白以維持單列。
+
+    `limit` 預設放寬到 600：`reason` 是這份公開紀錄的核心價值（MOD 作者要據此判斷
+    該不該改自己的鍵名），截短到看不出結論就失去意義。
+    """
+    s = (s.replace("\\", "\\\\").replace("|", "\\|")
+          .replace("<", "&lt;").replace(">", "&gt;"))
+    s = " ".join(s.split())
+    return s if len(s) <= limit else s[:limit - 1] + "…"
+
+
+def render_owner_report(decided: dict, census: dict[str, dict[str, str]],
+                        en_src: dict[str, dict[str, str]]) -> str:
+    """把裁決台帳渲染成公開紀錄 `OWNER_CONFLICTS.md`。
+
+    **為什麼放在本檔而不是 `build_mod.py`**（#245 項目 2 原本建議比照 `manifest`）：
+    表格要的「owner 清單與各自上游英文」只存在於 census（tracker state ＋
+    `sources/en` 鏡像），`owner_conflict_decisions.json` 只有 `signature` hash。
+    讓 build 去算 census 就是把本檔的收斂邏輯複製第二份，違反「不要另寫第二套」。
+
+    只列**已裁決**條目——這是對外的「為什麼這個鍵沒有中文／為什麼是這個譯名」紀錄，
+    未裁決的待辦留在 artifact 的 `_owner_conflicts_other`，不對玩家公開。
+    """
+    rows = {"unship": [], "translate": []}
+    for fk, d in sorted(decided.items()):
+        if not isinstance(d, dict):
+            continue
+        action = d.get("action", "translate")
+        if action not in rows:
+            continue
+        owners = census.get(fk) or {}
+        srcs = en_src.get(fk) or {}
+        ann = annotate(owners, srcs)
+        # owner 欄同時給「抑制後看得到什麼」——那是這份文件對 MOD 作者最有用的一格。
+        parts = []
+        for o in sorted(ann):
+            a = ann[o]
+            tag = ("json" if a["has_json_en"]
+                   else "script" if a["en_source"] == EN_SOURCE_SCRIPT
+                   else f"死檔 {a['en_source']}" if a["en_source"] else "來源未知")
+            parts.append(f"`{_md_pipe(o)}` = {_md_cell(a['en'], 60)} _({tag})_")
+        up = d.get("upstream_report")
+        up_cell = _md_cell(str(up), 60) if up else "—"
+        rows[action].append(
+            f"| `{_md_pipe(fk)}` | {'<br>'.join(parts) or '_census 查無 owner_'} | "
+            f"{_md_cell(d.get('reason') or '')} | {up_cell} |")
+
+    n_uns, n_tr = len(rows["unship"]), len(rows["translate"])
+    tally: collections.Counter = collections.Counter()
+    for fk in decided:
+        for o, a in annotate(census.get(fk) or {}, en_src.get(fk) or {}).items():
+            tally["json" if a["has_json_en"]
+                  else "script" if a["en_source"] == EN_SOURCE_SCRIPT else "dead"] += 1
+    out = [
+        "# owner 衝突裁決紀錄",
+        "",
+        "**本檔由 `uv run scripts/prep_mod_strings.py --owner-report` 生成，勿手改。**",
+        "裁決理由的真相層是 `sources/owner_conflict_decisions.json`。",
+        "",
+        "PZ 的 `Translator` 把每個 mod 的翻譯檔載入**同一張全域字串表**，沒有「只在某個",
+        "mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指向不同的東西時，任一譯名",
+        "都會讓另一批玩家看到錯的內容。本檔記錄這些衝突各自怎麼處理，以及為什麼。",
+        "",
+        "| 處理方式 | 說明 |",
+        "|---|---|",
+        "| `translate` | 找到對每個 MOD 都成立的中性譯名，照常出貨中文。 |",
+        "| `unship` | 不同實體、沒有誠實的中性譯名，該鍵不出貨中文。 |",
+        "",
+        "`unship` 之後玩家看到什麼，取決於該 MOD 自己有沒有 B42 讀得到的英文：",
+        "",
+        "| 標記 | 意義 |",
+        "|---|---|",
+        "| _(json)_ | 該 MOD 有可載入的 `.json` 英文檔 → 顯示它自己的英文。 |",
+        "| _(script)_ | 物品名寫在 `media/scripts` → 引擎 fallback 到 script，仍顯示英文。 |",
+        "| _(死檔 …)_ | 英文只放在 B42 已不讀取的檔（`*_EN.txt`、非白名單檔名）→ "
+        "**顯示代號而非英文**。建議向該 MOD 作者反映改用 `.json`。 |",
+        "",
+        f"現況：已裁決 **{n_uns + n_tr}** 個鍵（`unship` {n_uns}、`translate` {n_tr}）。"
+        f"這些鍵的 owner 條目共 {sum(tally.values())} 筆："
+        f"可載入 `.json` {tally['json']}、script {tally['script']}、死檔 {tally['dead']}。",
+    ]
+    for action, title, lead in [
+        ("unship", "不出貨的鍵", "這些鍵沒有中文。上游英文與各 MOD 的顯示行為如下。"),
+        ("translate", "採中性譯名的鍵", "這些鍵有中文，且該譯名對每個 MOD 都成立。"),
+    ]:
+        out += ["", f"## {title}（{len(rows[action])}）", "", lead, "",
+                "| 鍵 | owner 與上游英文 | 裁決摘要 | 已回報上游 |",
+                "|---|---|---|---|"] + rows[action]
+    return "\n".join(out) + "\n"
+
+
 def converge_owner(recs: dict, mirror: dict, eff: dict, *, vanilla: set[str],
                    dn_gap: dict[str, set[str]],
                    src: dict[tuple[str, str], str] | None = None
@@ -232,7 +338,17 @@ def main() -> int:
     ap.add_argument("--out", required=True)
     ap.add_argument("--check-decisions", action="store_true",
                     help="只驗全庫 owner conflict decision／unship registry，不產生翻譯待辦")
+    ap.add_argument("--owner-report", action="store_true",
+                    help="由裁決台帳＋census 渲染 OWNER_CONFLICTS.md（隱含全庫模式）")
+    ap.add_argument("--owner-report-check", action="store_true",
+                    help="只驗 OWNER_CONFLICTS.md 是否與來源同步，不寫檔（不同步即退出 1）")
     args = ap.parse_args()
+    # `--owner-report*` 需要完整 census（owner 清單與各自上游英文只在那裡），與
+    # `--check-decisions` 同一個資料範圍，故隱含它——否則只給 report 旗標會走進
+    # 「需要 wid」的分支而 error out。
+    want_report = args.owner_report or args.owner_report_check
+    if want_report:
+        args.check_decisions = True
     if not args.wids and not args.check_decisions:
         ap.error("至少給一個 wid；若只驗裁決台帳，使用 --check-decisions")
 
@@ -790,7 +906,23 @@ def main() -> int:
     if conflicts_other:
         print(f"  ℹ️ 另有 {len(conflicts_other)} 個鍵在**本批之外**的 owner 間就已衝突"
               "（report-only，不阻斷本批；已出貨者需人工重新核對 `_note`）")
-    if unchecked or conflicts or (args.check_decisions and stale_dec):
+    report_drift = False
+    if want_report:
+        # **報告在退出碼判定之前產生**：它的來源是裁決台帳＋census，與 `conflicts`
+        # 是否為空無關；擺在 `return 1` 之後會讓「有待裁決衝突」順帶讓報告永遠不更新。
+        page = render_owner_report(decided, census, en_src)
+        old = (OWNER_CONFLICTS_MD.read_text(encoding="utf-8")
+               if OWNER_CONFLICTS_MD.exists() else None)
+        if page == old:
+            print(f"  ℹ️ {OWNER_CONFLICTS_MD.name} 內容未變動")
+        elif args.owner_report_check:
+            report_drift = True
+            print(f"❌ {OWNER_CONFLICTS_MD.name} 與來源不同步"
+                  "（需重跑 --owner-report）", file=sys.stderr)
+        else:
+            OWNER_CONFLICTS_MD.write_text(page, encoding="utf-8", newline="\n")
+            print(f"  ✅ 已更新 {OWNER_CONFLICTS_MD.name}")
+    if unchecked or conflicts or report_drift or (args.check_decisions and stale_dec):
         # **非零退出**：wid 級跳過會讓 artifact 長得跟「這個 mod 沒缺口」一模一樣，
         # 下游 apply_wf_result 只讀 strings/_gap，於是整個 mod 的物品名再次隱形（#221）。
         # 多 owner 衝突同理——first-wins 會把另一方的語意靜默丟掉，必須人工裁決。
