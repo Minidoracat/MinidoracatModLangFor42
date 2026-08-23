@@ -3,7 +3,8 @@
 # 存在理由：`scripts/test_*.py` 這批 gate 過去**沒有任何自動執行者**——repo 唯一的
 # workflow 是 track_upstreams.yml，它只跑 tracker.py。AGENTS.md 因此明載「這（當時的）10 支
 # 測試全靠收尾驗證階段人工跑。要讓它真的攔得住漏跑，得另外接 CI」。本檔就是那個 CI。
-# 下方清單為現行計數（15 支），與該歷史引述的 10 不同是正常的——後續新增測試會續增。
+# 下方 `tests` 陣列即現行全集（**不在此寫死支數**，否則加了測試漏改就是假帳）；與該歷史
+# 引述的 10 支不同是正常的——後續新增測試會續增。
 #
 # 實際漏掉過的例子：
 #   * c8f5064（排程刷新 sources/en）→ SUPPORTED_MODS.md 的「覆寫本體」欄靜默過期一整天，
@@ -63,6 +64,7 @@ jobs:
             test_recipe_dead_keys
             test_serialization
             test_unshipped_keys
+            test_untranslatable_keys
             test_vanilla_suppress
             test_verify_as1_skip
           )

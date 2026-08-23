@@ -55,7 +55,8 @@ def run(*, records: dict, mirror: dict, dist_items: dict, vanilla: list[str],
         records_raw: object = None, bad_mirror_top: bool = False,
         bad_ledger: str | None = None, state_entry_raw: object = None,
         unshipped: dict | None = None, bad_unshipped: str | None = None,
-        check_decisions: bool = False):
+        untranslatable: dict | None = None, bad_untranslatable: str | None = None,
+        old_artifact: dict | None = None, check_decisions: bool = False):
     """組臨時 repo + dist，跑 `prep_mod_strings.main()`，回 (rc, artifact, stdout)。"""
     bad_hash = bad_hash or set()
     global CASES
@@ -76,6 +77,12 @@ def run(*, records: dict, mirror: dict, dist_items: dict, vanilla: list[str],
         if bad_unshipped is not None:
             (root / "sources" / "unshipped_keys.json").write_text(
                 bad_unshipped, encoding="utf-8")
+        if untranslatable is not None:
+            (root / "sources" / "untranslatable_keys.json").write_text(
+                json.dumps({"entries": untranslatable}, ensure_ascii=False), encoding="utf-8")
+        if bad_untranslatable is not None:
+            (root / "sources" / "untranslatable_keys.json").write_text(
+                bad_untranslatable, encoding="utf-8")
         (root / "sources" / "vanilla_keys.json").write_text(
             json.dumps(vanilla_json if vanilla_json is not None
                        else {"keys": [], "scoped_keys": {"ItemName.json": vanilla}},
@@ -116,6 +123,8 @@ def run(*, records: dict, mirror: dict, dist_items: dict, vanilla: list[str],
         (dist / "ItemName.json").write_text(json.dumps(dist_items, ensure_ascii=False),
                                             encoding="utf-8")
         out = root / "out.json"
+        if old_artifact is not None:
+            out.write_text(json.dumps(old_artifact, ensure_ascii=False), encoding="utf-8")
         old_root, old_dist, old_argv = (prep_mod_strings.ROOT, prep_mod_strings.DIST_CH,
                                         sys.argv)
         err, old_err = io.StringIO(), sys.stderr
@@ -204,6 +213,36 @@ rc, art = run(records=recs, mirror=mir, dist_items={}, vanilla=[],
 assert art["_gap"] == {}, f"4. 舊 schema 不得產生缺口：{art['_gap']}"
 assert art["_undecidable"]["1"]["kinds"] == ["schema"], \
     f"4. 舊 schema 未計為不可判定：{art['_undecidable']}"
+
+# 4a. schema **號稱現行**卻仍帶裸 key＝state/schema 自相矛盾（extractor 升級後沒真正
+#     重抽），不得冒充可補 gap，應列 stale_schema blind（實測筆數與「兩 consumer 對同
+#     一鍵分歧」的完整理由見 `tracker._item_dn_stats`）。
+r_bare = f"script_item_dn|{EFF}|ClassicTire1"
+rc, art = run(records={r_bare: "h-bare"}, mirror={r_bare: "Classic Tire"},
+              dist_items={}, vanilla=[], schema=tracker.ITEM_MODULE_SCHEMA)
+assert art["_gap"] == {}, f"4a. 現行 schema 的裸 key 不得冒充 gap：{art['_gap']}"
+assert art["_undecidable"]["1"]["kinds"] == ["stale_schema"], \
+    f"4a. schema/key 自相矛盾未列 stale_schema：{art['_undecidable']}"
+assert "重抽" in art["_undecidable"]["1"]["why"], \
+    f"4a. stale_schema 須給可行動指示（重抽該 mod）：{art['_undecidable']}"
+
+# 4c. untranslatable registry 與 coverage 同一 canonical identity：`UI.json|UI_Internal`
+#     對 prep gap `UI|UI_Internal` 應命中（coverage 口徑是 `(UI, Internal)`）。若 prep 用 raw
+#     identity、coverage 用 `_canon_key`，兩 consumer 會分岔。
+r_internal = f"translate_en|{EFF.replace('scripts/items.txt', 'lua/shared/Translate/EN/UI.json')}|UI_Internal"
+rc, art = run(records={r_internal: "h-int"}, mirror={r_internal: "Internal"},
+              dist_items={}, vanilla=[],
+              untranslatable={"UI.json|UI_Internal": "內部鍵"})
+assert art["_gap"] == {}, f"4c. prep 未以 canonical identity 扣除 UI prefix key：{art['_gap']}"
+
+# 4c2. temp ROOT 隔離：真 repo 已登記這個 Mirage 鍵，但臨時 repo 沒有 registry，prep 必須
+#      把它視為缺口。若呼叫 `tracker.load_untranslatable()` 不傳 temp ROOT，就會穿透讀真 repo、
+#      測試假綠且正式工具在 linked/fixture repo 讀錯來源。
+r_isolated = f"script_item_dn|{EFF}|MirageWardrobeRender.JacketBulky01"
+rc, art = run(records={r_isolated: "h-iso"}, mirror={r_isolated: "Render Carrier"},
+              dist_items={}, vanilla=[])
+assert set(art["_gap"]) == {"ItemName|MirageWardrobeRender.JacketBulky01"}, \
+    f"4c2. temp repo 被真 repo registry 汙染：{art['_gap']}"
 # 4b. `script_item_dn` 是 schema 5 才加的 kind；schema 3/4 的舊基準只有 `script_item`。
 #     只看 dn_keys 會把那些 mod 判成「沒有 script 物品」而完全不列出＝#221 的靜默。
 #     **鏡像必須真的不存在**（`write_mirror=False`）：producer 在無 text-bearing record 時
@@ -214,6 +253,23 @@ assert art["_unchecked"] == [], \
     f"4b. 無 text-bearing record 時鏡像不存在是合法狀態，不該早退：{art['_unchecked']}"
 assert art["_undecidable"].get("1", {}).get("kinds") == ["schema"], \
     f"4b. 舊 schema 只有 script_item 時仍須列為不可判定：{art['_undecidable']}"
+
+# 4c3. registry 壞損**不得讓例外逃出 main**：呼叫點在 artifact json.dump 之前，逃逸會留下
+#      `--out` 的舊成功檔；下游看到那份 `_unchecked: []` 就會照常放行。應轉成
+#      `_unchecked`、覆寫 artifact、rc=1（同 load_wid／裁決台帳既有 contract）。
+r_safe = f"script_item_dn|{EFF}|Base.Safe"
+stale_artifact = {"strings": [{"en": "STALE"}], "_gap": {"ItemName|STALE": "STALE"},
+                  "_unchecked": [], "_undecidable": {}, "_owner_conflicts": {}}
+rc, art, err = run(records={r_safe: "h-safe"}, mirror={r_safe: "Safe Item"},
+                   dist_items={}, vanilla=[],
+                   bad_untranslatable='{"entries":{"ItemName.json|Base.Hidden":""}}',
+                   old_artifact=stale_artifact, want_err=True)
+assert rc == 1, f"4c3. 壞 registry 應受控 rc=1，實得 {rc}"
+assert art != stale_artifact and art["_unchecked"], \
+    f"4c3. 舊成功 artifact 未被覆寫／缺 _unchecked：{art}"
+assert "untranslatable" in art["_unchecked"][0] and "ValueError" in art["_unchecked"][0], \
+    f"4c3. _unchecked 未具名根因：{art['_unchecked']}"
+assert "STALE" not in art["_gap"], f"4c3. 舊 artifact 的 gap 殘留：{art['_gap']}"
 
 # 4d. **state 落後於鏡像**（backfill 中斷殘跡）：宇宙取自 state，缺的那些鍵會靜默低報成
 #     零缺口——#221 的失效模式。須列 `_unchecked` 並非零退出，不得當成「沒缺口」。

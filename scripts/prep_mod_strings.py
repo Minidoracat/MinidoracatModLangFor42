@@ -837,13 +837,27 @@ def main() -> int:
             unchecked.append(f"{wid}（非本批）：{why}——它與本批共用 {len(hit)} 個鍵"
                              f"（如 {sorted(hit)[0]}），無法判定是否 owner 衝突；重抽該 mod")
 
-    # 衝突鍵**必須在建 by_en 之前**自 `_gap` 移除：留著就是 first-wins 的譯文，忽略
+    # 這三類鍵**必須在建 by_en 之前**自 `_gap` 移除：留著就是 first-wins 的譯文，忽略
     # 退出碼時照樣落地；反之若只從 `_gap` 移除卻已進 `strings`，下游會拿到沒有落點的
-    # 孤兒字串。
+    # 孤兒字串。已裁決 unship 若殘留，下一步 `apply_wf_result` 會把「無誠實中性譯名」的
+    # first-wins 英文重新寫回真相層；已裁決不補譯者殘留則會被送去翻譯。registry 的解析與
+    # fail-closed 驗證共用 `tracker.load_untranslatable()`，避免兩 consumer 分岔；路徑同
+    # 其他 registry 走 `ROOT`，否則測試 harness 的臨時 repo 會讀到真 repo 的登記。
+    try:
+        untr_pairs, _ = tracker.load_untranslatable(ROOT / "sources/untranslatable_keys.json")
+    except (ValueError, OSError) as exc:
+        # **producer 失敗也必須重寫 artifact**：例外逃逸發生在下方 json.dump 之前，
+        # 舊成功檔會留在 `--out`，`apply_wf_result` 讀到那份安全形狀仍可放行——與
+        # load_wid／裁決台帳壞損的既有 fail-closed contract 完全相同。故轉 `_unchecked`、
+        # 用空扣除集繼續到 artifact 寫出，最後由統一 rc 判定回 1。
+        unchecked.append(f"untranslatable registry 不可用：{type(exc).__name__}: {exc}")
+        untr_pairs = set()
     for fk in set(conflicts) | resolved_unship_keys:
-        # blocking 衝突與已裁決 unship 都不能送進 `_gap`／`strings`。後者若殘留，下一步
-        # `apply_wf_result` 會把「無誠實中性譯名」的 first-wins 英文重新寫回真相層。
         gap.pop(fk, None)
+    for fk in list(gap):
+        stem, _, key = fk.partition("|")
+        if (stem, tracker._canon_key(f"{stem}.json", key)) in untr_pairs:
+            gap.pop(fk)
     by_en: dict[str, list[str]] = collections.defaultdict(list)
     wid_of: dict[str, set[str]] = collections.defaultdict(set)
     for fk, (en, wid) in gap.items():

@@ -2208,6 +2208,83 @@
    "reason": "2026-08-23 #249 owner 衝突中性裁決：3409472393/rSemiTruck 的上游英文是 Middle（三軸卡車的中間軸），3402491515/tsarslib 與 3403314193/ATA_Petyarbuilt 是 Rear。採 key 本身的 Middle 語意譯「中」，理由三點：(1) rSemiTruck 的 template_rSemiTruck_4tire_axle.txt 同時定義 TireMiddle* 與 TireRear*，且 TireMiddleRight 的 requireInstalled = BrakeRearRight;SuspensionRearRight，本體 template_brake/suspension 亦補入 Rear 組——Rear 與 Middle 確實同時存在於同一台 W900，舊值「左後X」會讓玩家在同一個機械介面看到兩個相同名稱；(2) 同 template 的 part WheelChainMiddleLeft { parent = TireMiddleLeft } 已出貨為「左中輪防滑鏈」，父子件一個「中」一個「後」是單車內部自相矛盾；(3) 本體與本包對 Middle 一律譯「中」（本體 DoorMiddleLeft＝左中門；本包 ATA2ProtectionDoorMiddleLeft＝左中車門防護、Freeplace1MiddleLeft＝左中自由空間，均與對應 RearLeft 區分）。tsarslib 側的 wheel = Rear* 是引擎物理錨點而非顯示方位（rSemiTruck 的 Middle 同樣重用 Rear anchor）。不採 unship：rSemiTruck 自身出貨的CH/CN IG_UI.json 是未翻譯的英文原文，抑制後中文介面會依載入順序在英文與 tsarslib 譯名間擲骰，且兩 mod 寫同一全域鍵，unship 解決不了衝突。",
    "ch": "右中胎",
    "cn": "右中胎"
+  },
+  "ItemName|Base.HK91": {
+   "action": "translate",
+   "signature": "2f55b9d31ed07b37",
+   "reason": "2026-08-23 #231 多 owner：HK91／Heckler and Koch HK91。取不加廠牌與武器模式的中性名稱。",
+   "ch": "HK91步槍",
+   "cn": "HK91步枪"
+  },
+  "ItemName|Base.AR10": {
+   "action": "translate",
+   "signature": "c837d333e713dc02",
+   "reason": "2026-08-23 #231 多 owner：AI ArmaLite AR-10／AR-10。取共同的 AR-10 步槍，不綁 AI/ArmaLite 前綴。",
+   "ch": "AR-10步槍",
+   "cn": "AR-10步枪"
+  },
+  "ItemName|Base.G3A3": {
+   "action": "translate",
+   "signature": "0f88ef359b7e21a1",
+   "reason": "2026-08-23 #231 多 owner：Heckler & Koch G3A3／G3。取涵蓋整個 G3 系列的中性名稱，不綁 A3。",
+   "ch": "H&K G3步槍",
+   "cn": "H&K G3步枪"
+  },
+  "ItemName|Base.M4": {
+   "action": "translate",
+   "signature": "480a2b115a3cbd5e",
+   "reason": "2026-08-23 #231 多 owner：M4 Carbine／M4 Assault Rifle。M4 的共同實體是卡賓槍，沿用現值。",
+   "ch": "M4卡賓槍",
+   "cn": "M4卡宾枪"
+  },
+  "ItemName|Base.WAR_TENPOINT_CROSSBOW": {
+   "action": "translate",
+   "signature": "3644a887093dd595",
+   "reason": "2026-08-23 #231 多 owner：[Tenpoint] Hunting CrossBow／TenPoint Crossbow。統一品牌大小寫，去除非共同的「狩獵」。",
+   "ch": "TenPoint弩",
+   "cn": "TenPoint弩"
+  },
+  "ItemName|Base.Clip_M4_URGI_BLOCK_I": {
+   "action": "translate",
+   "signature": "d9ac3ecb3737aaff",
+   "reason": "2026-08-23 #231 多 owner：M4 Clip／M4A1 PMAG Clip。取 M4 系列彈匣，不綁 PMAG 或 M4A1。",
+   "ch": "M4系列彈匣",
+   "cn": "M4系列弹匣"
+  },
+  "ItemName|Base.76254Bullets": {
+   "action": "translate",
+   "signature": "7a86dadd5ed4e350",
+   "reason": "2026-08-23 #231 多 owner：7.62x54mm Round／7.62×54mmR Bullets。為同一 7.62x54mmR 彈藥，採正確 R 後綴。",
+   "ch": "7.62x54mmR彈藥",
+   "cn": "7.62x54mmR弹药"
+  },
+  "ItemName|Base.Clip_45Clip": {
+   "action": "translate",
+   "signature": "ba20053eaf3f5ce8",
+   "reason": "2026-08-23 #231 多 owner：.45 15 發彈匣／1911A1 彈匣。容量與型號不共同，取 .45 口徑手槍彈匣。",
+   "ch": ".45口徑手槍彈匣",
+   "cn": ".45口径手枪弹匣"
+  },
+  "ItemName|Base.WoodShaft_Arrow": {
+   "action": "translate",
+   "signature": "fe77cdf3dab12589",
+   "reason": "2026-08-23 #231 多 owner：Arrow Wood Shaft／Arrow。取不限定材質與部件層級的中性「箭矢」。",
+   "ch": "箭矢",
+   "cn": "箭矢"
+  },
+  "ItemName|Base.Clip_9mmClip": {
+   "action": "translate",
+   "signature": "d9015982a80c4983",
+   "reason": "2026-08-23 #231 多 owner：9mm 15 發彈匣／Beretta 92FS 彈匣；92FS 標準容量即 15 發，現值成立。",
+   "ch": "9mm 15發彈匣",
+   "cn": "9mm 15发弹匣"
+  },
+  "ItemName|Base.9mmG17RMagazine": {
+   "action": "translate",
+   "signature": "1757c265b3226b95",
+   "reason": "2026-08-23 #231 多 owner：G17 17R Magazine／Glock 17 Magazine。取不綁容量的 Glock 17 彈匣。",
+   "ch": "Glock 17彈匣",
+   "cn": "Glock 17弹匣"
   }
  }
 }

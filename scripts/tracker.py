@@ -1949,6 +1949,35 @@ def _load_shipped_keys() -> tuple[set[tuple[str, str]], set[str]]:
     return ident, itemnames
 
 
+def load_untranslatable(path: Path | None = None) -> tuple[set[tuple[str, str]], set[str]]:
+    """讀 registry，回 `(canonical 檔域身分集, ItemName raw fullType 集)`。
+
+    缺檔＝空集合（漸進登記）；存在但形狀壞損一律炸。registry key 嚴格是
+    `<非空檔名.json>|<非空鍵>`——漏 `.json` 時 prep 可能仍扣、coverage 的 ItemName
+    口徑卻不扣；`UI.json|UI_Foo` 若不 canonicalize，coverage 以 `(UI, Foo)`、prep 以
+    `(UI, UI_Foo)`，同樣分岔。兩個 consumer 必須吃同一個 identity。
+    """
+    p = path or SOURCES / "untranslatable_keys.json"
+    if not p.is_file():
+        return set(), set()
+    data = load_json(p)
+    entries = data.get("entries") if isinstance(data, dict) else None
+    if not isinstance(entries, dict):
+        raise ValueError(f"{p.name}：形狀壞損（需 {{'entries': {{'<檔.json>|<鍵>': '<理由>'}}}}）")
+    pairs: set[tuple[str, str]] = set()
+    items: set[str] = set()
+    for pair, reason in entries.items():
+        if not isinstance(pair, str) or "|" not in pair or not isinstance(reason, str) or not reason.strip():
+            raise ValueError(f"{p.name}：形狀壞損（需 {{'entries': {{'<檔.json>|<鍵>': '<理由>'}}}}）")
+        fname, key = pair.split("|", 1)
+        if not fname.endswith(".json") or not fname[:-5] or not key:
+            raise ValueError(f"{p.name}：非法 pair {pair!r}（檔名須以 .json 結尾、兩側非空）")
+        pairs.add((_key_stem(fname), _canon_key(fname, key)))
+        if fname == "ItemName.json":
+            items.add(key)
+    return pairs, items
+
+
 def _is_runtime_item_key(key: str) -> bool:
     """`ItemName.json` 的鍵是否真的會被 `getItemNameFromFullType()` 查到。
 
@@ -2058,8 +2087,15 @@ def _item_dn_stats(
         # `blind_keys` 給空集：schema<9 的鍵是裸名，不可能與 `Module.Item` 形的本批鍵相交
         return {"total": len(dn_keys), "gap": set(), "idonly": 0, "blind_keys": set(),
                 "blind": n, "kinds": {"schema"} if n else set(), "why": why}
+    # schema 9 起 `script_item_dn` 的 key 必須是完整 `Module.Item`；裸 key 代表 extractor
+    # 升級後 state 沒真正重抽（實測 schema=10 仍殘留 369 筆／4 mod：ClassicTire1、
+    # 12GClip5、KatanaSheath、Makarov 等）。把它們當 gap 會要求人翻一個**引擎永遠不查的
+    # 裸鍵**；prep 反而從同 mod legacy ItemName_EN.txt 錨到 `Base.X`，兩 consumer 分歧。
+    # 這不是「module 未解出」的 parser 盲區（producer 正常會寫 `?.X`），而是 state/schema
+    # 自相矛盾，重抽可消除，故獨立列 `stale_schema`。
+    stale_bare = {k for k in dn_keys if "." not in k}
     unknown = {k for k in dn_keys if k.startswith(UNKNOWN_MODULE + ".")}
-    known = dn_keys - unknown
+    known = dn_keys - unknown - stale_bare
     # **先扣已出貨與 vanilla**：那些鍵不論鏡像缺值或上游格式壞損都不是我方的待辦，
     # 算進 blind 只會讓「不可判定 N 筆」與行動分類虛胖。
     todo = (known - shipped_items) - vanilla_items
@@ -2087,6 +2123,9 @@ def _item_dn_stats(
     if unknown:
         kinds.add("unknown_module")
         reasons.append(f"{len(unknown)} 筆 module 未解出")
+    if stale_bare:
+        kinds.add("stale_schema")
+        reasons.append(f"{len(stale_bare)} 筆 schema={schema} 卻仍是裸 key（重抽該 mod）")
     if missing:
         kinds.add("mirror")
         reasons.append(f"{len(missing)} 筆 sources/en 鏡像缺值")
@@ -2099,8 +2138,8 @@ def _item_dn_stats(
     # 與上游留白也不在 census，那是合法扣除，誤列會把正常批次 fail-closed 卡死
     # （實測 `Base.M249`：一邊 translate_en "FN M249"、另一邊 script id-only "M249"）。
     return {"total": len(dn_keys), "gap": gap, "idonly": len(idonly),
-            "blind": len(unknown) + len(missing) + len(malformed), "kinds": kinds,
-            "blind_keys": missing | malformed,
+            "blind": len(unknown) + len(stale_bare) + len(missing) + len(malformed),
+            "kinds": kinds, "blind_keys": missing | malformed,
             "why": "；".join(reasons) or None}
 
 
@@ -2127,6 +2166,8 @@ def cmd_coverage(args) -> int:
     # fail-closed 慣例）：靜默退化成空集合＝這道本體排除整批失效，於是本體鍵被
     # 當成缺口送進補譯管線，違反「不得覆寫本體」鐵律的第一道防線。
     vanilla_items = set(vjson["scoped_keys"]["ItemName.json"])
+    # 已裁決不補譯的鍵。兩個口徑各自形狀：EN 走 `(檔 stem, 鍵)`、物品名走裸 fullType。
+    untr_pairs, untr_items = load_untranslatable()
 
     rows: list[dict] = []
     tot = {"en": 0, "en_gap": 0, "dn": 0, "dn_gap": 0, "dn_idonly": 0, "dn_blind": 0}
@@ -2160,7 +2201,8 @@ def cmd_coverage(args) -> int:
                 o_dn.setdefault(owner_of(rid), set()).add(key)
             elif kind == "script_item":
                 o_item.setdefault(owner_of(rid), set()).add(key)
-        en_gap = {x for x in en_ids - shipped_ident if x[1] not in vanilla}
+        en_gap = {x for x in en_ids - shipped_ident
+                  if x[1] not in vanilla and x not in untr_pairs}
         # DisplayName 值只在 sources/en 鏡像裡（狀態檔只有 hash）。缺鏡像／缺該筆值的
         # 後果交給 _item_dn_stats 計成盲區，不在這裡靜默跳過。
         # **值一律走 `winning_dn_text`**：勝出 rid 由 state 決定（同 owner 內 common 先、
@@ -2212,6 +2254,9 @@ def cmd_coverage(args) -> int:
                 # 的多 root mod 會輸出多筆未標 owner 的完全相同字串。
                 whys.append(st_o["why"] if len(set(o_dn) | set(o_item)) < 2
                             else f"[{o}] {st_o['why']}")
+        # 已裁決不補譯者在**逐 owner 累加之後**統一扣：`_item_dn_stats` 的 total／idonly／
+        # blind 是同一份輸入的分類統計，只從 gap 扣才不會讓那些分母跟著失真。
+        dn["gap"] -= untr_items
         dn["why"] = "；".join(whys) or None
         if stale_dn:
             # **不重複計 blind**：`stale_ok ∩ 宇宙` 已因上面的剔除自然落入 `missing`
