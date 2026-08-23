@@ -3779,6 +3779,16 @@
   "reason": "同 E6Rail: As1 漏「·」, own 的「铁路作业版」與本族統一的「铁路工程版」不一致; 取 As1 原句只補「·」.",
   "value": "骑士·F6 铁路工程版"
  },
+ "IG_UI.json|IGUI_VehiclePartBrakeMiddleLeft": {
+  "as1_value": "左后制动器",
+  "reason": "2026-08-23 #249 owner 衝突中性裁決：3409472393/rSemiTruck 的上游英文是 Middle（三軸卡車的中間軸），3402491515/tsarslib 與 3403314193/ATA_Petyarbuilt 是 Rear。採 key 本身的 Middle 語意譯「中」，理由三點：(1) rSemiTruck 的 template_rSemiTruck_4tire_axle.txt 同時定義 TireMiddle* 與 TireRear*，且 TireMiddleRight 的 requireInstalled = BrakeRearRight;SuspensionRearRight，本體 template_brake/suspension 亦補入 Rear 組——Rear 與 Middle 確實同時存在於同一台 W900，舊值「左後X」會讓玩家在同一個機械介面看到兩個相同名稱；(2) 同 template 的 part WheelChainMiddleLeft { parent = TireMiddleLeft } 已出貨為「左中輪防滑鏈」，父子件一個「中」一個「後」是單車內部自相矛盾；(3) 本體與本包對 Middle 一律譯「中」（本體 DoorMiddleLeft＝左中門；本包 ATA2ProtectionDoorMiddleLeft＝左中車門防護、Freeplace1MiddleLeft＝左中自由空間，均與對應 RearLeft 區分）。tsarslib 側的 wheel = Rear* 是引擎物理錨點而非顯示方位（rSemiTruck 的 Middle 同樣重用 Rear anchor）。不採 unship：rSemiTruck 自身出貨的CH/CN IG_UI.json 是未翻譯的英文原文，抑制後中文介面會依載入順序在英文與 tsarslib 譯名間擲骰，且兩 mod 寫同一全域鍵，unship 解決不了衝突。",
+  "value": "左中制动"
+ },
+ "IG_UI.json|IGUI_VehiclePartBrakeMiddleRight": {
+  "as1_value": "右后制动器",
+  "reason": "2026-08-23 #249 owner 衝突中性裁決：3409472393/rSemiTruck 的上游英文是 Middle（三軸卡車的中間軸），3402491515/tsarslib 與 3403314193/ATA_Petyarbuilt 是 Rear。採 key 本身的 Middle 語意譯「中」，理由三點：(1) rSemiTruck 的 template_rSemiTruck_4tire_axle.txt 同時定義 TireMiddle* 與 TireRear*，且 TireMiddleRight 的 requireInstalled = BrakeRearRight;SuspensionRearRight，本體 template_brake/suspension 亦補入 Rear 組——Rear 與 Middle 確實同時存在於同一台 W900，舊值「左後X」會讓玩家在同一個機械介面看到兩個相同名稱；(2) 同 template 的 part WheelChainMiddleLeft { parent = TireMiddleLeft } 已出貨為「左中輪防滑鏈」，父子件一個「中」一個「後」是單車內部自相矛盾；(3) 本體與本包對 Middle 一律譯「中」（本體 DoorMiddleLeft＝左中門；本包 ATA2ProtectionDoorMiddleLeft＝左中車門防護、Freeplace1MiddleLeft＝左中自由空間，均與對應 RearLeft 區分）。tsarslib 側的 wheel = Rear* 是引擎物理錨點而非顯示方位（rSemiTruck 的 Middle 同樣重用 Rear anchor）。不採 unship：rSemiTruck 自身出貨的CH/CN IG_UI.json 是未翻譯的英文原文，抑制後中文介面會依載入順序在英文與 tsarslib 譯名間擲骰，且兩 mod 寫同一全域鍵，unship 解決不了衝突。",
+  "value": "右中制动"
+ },
  "IG_UI.json|IGUI_VehiclePartCH76TrunkSub": {
   "as1_value": "后备箱",
   "reason": "EN 是 Trunk Storage; As1 譯「后备箱」與本體車體部件 Base.NormalTrunk*/BigTrunk*「后备箱」撞名——同一台車的載具面板會出現兩個「后备箱」; own「后备箱储物柜」保住區分.",
@@ -3843,6 +3853,26 @@
   "as1_value": "乘员位6",
   "reason": "owner conflict decision 恢復：三個 owner 都是車輛第 6 個乘客座：Military Tool Kit 與 Papa_Chad M113 寫 'P6 Seat'，87fordB700 寫 'Seat 6'。P6＝Passenger 6，與 Seat 6 同一座位編號。現行「座椅6」對三者皆成立。",
   "value": "座椅6"
+ },
+ "IG_UI.json|IGUI_VehiclePartSuspensionMiddleLeft": {
+  "as1_value": "左后悬挂",
+  "reason": "2026-08-23 #249 owner 衝突中性裁決：3409472393/rSemiTruck 的上游英文是 Middle（三軸卡車的中間軸），3402491515/tsarslib 與 3403314193/ATA_Petyarbuilt 是 Rear。採 key 本身的 Middle 語意譯「中」，理由三點：(1) rSemiTruck 的 template_rSemiTruck_4tire_axle.txt 同時定義 TireMiddle* 與 TireRear*，且 TireMiddleRight 的 requireInstalled = BrakeRearRight;SuspensionRearRight，本體 template_brake/suspension 亦補入 Rear 組——Rear 與 Middle 確實同時存在於同一台 W900，舊值「左後X」會讓玩家在同一個機械介面看到兩個相同名稱；(2) 同 template 的 part WheelChainMiddleLeft { parent = TireMiddleLeft } 已出貨為「左中輪防滑鏈」，父子件一個「中」一個「後」是單車內部自相矛盾；(3) 本體與本包對 Middle 一律譯「中」（本體 DoorMiddleLeft＝左中門；本包 ATA2ProtectionDoorMiddleLeft＝左中車門防護、Freeplace1MiddleLeft＝左中自由空間，均與對應 RearLeft 區分）。tsarslib 側的 wheel = Rear* 是引擎物理錨點而非顯示方位（rSemiTruck 的 Middle 同樣重用 Rear anchor）。不採 unship：rSemiTruck 自身出貨的CH/CN IG_UI.json 是未翻譯的英文原文，抑制後中文介面會依載入順序在英文與 tsarslib 譯名間擲骰，且兩 mod 寫同一全域鍵，unship 解決不了衝突。",
+  "value": "左中悬挂"
+ },
+ "IG_UI.json|IGUI_VehiclePartSuspensionMiddleRight": {
+  "as1_value": "右后悬挂",
+  "reason": "2026-08-23 #249 owner 衝突中性裁決：3409472393/rSemiTruck 的上游英文是 Middle（三軸卡車的中間軸），3402491515/tsarslib 與 3403314193/ATA_Petyarbuilt 是 Rear。採 key 本身的 Middle 語意譯「中」，理由三點：(1) rSemiTruck 的 template_rSemiTruck_4tire_axle.txt 同時定義 TireMiddle* 與 TireRear*，且 TireMiddleRight 的 requireInstalled = BrakeRearRight;SuspensionRearRight，本體 template_brake/suspension 亦補入 Rear 組——Rear 與 Middle 確實同時存在於同一台 W900，舊值「左後X」會讓玩家在同一個機械介面看到兩個相同名稱；(2) 同 template 的 part WheelChainMiddleLeft { parent = TireMiddleLeft } 已出貨為「左中輪防滑鏈」，父子件一個「中」一個「後」是單車內部自相矛盾；(3) 本體與本包對 Middle 一律譯「中」（本體 DoorMiddleLeft＝左中門；本包 ATA2ProtectionDoorMiddleLeft＝左中車門防護、Freeplace1MiddleLeft＝左中自由空間，均與對應 RearLeft 區分）。tsarslib 側的 wheel = Rear* 是引擎物理錨點而非顯示方位（rSemiTruck 的 Middle 同樣重用 Rear anchor）。不採 unship：rSemiTruck 自身出貨的CH/CN IG_UI.json 是未翻譯的英文原文，抑制後中文介面會依載入順序在英文與 tsarslib 譯名間擲骰，且兩 mod 寫同一全域鍵，unship 解決不了衝突。",
+  "value": "右中悬挂"
+ },
+ "IG_UI.json|IGUI_VehiclePartTireMiddleLeft": {
+  "as1_value": "左后胎",
+  "reason": "2026-08-23 #249 owner 衝突中性裁決：3409472393/rSemiTruck 的上游英文是 Middle（三軸卡車的中間軸），3402491515/tsarslib 與 3403314193/ATA_Petyarbuilt 是 Rear。採 key 本身的 Middle 語意譯「中」，理由三點：(1) rSemiTruck 的 template_rSemiTruck_4tire_axle.txt 同時定義 TireMiddle* 與 TireRear*，且 TireMiddleRight 的 requireInstalled = BrakeRearRight;SuspensionRearRight，本體 template_brake/suspension 亦補入 Rear 組——Rear 與 Middle 確實同時存在於同一台 W900，舊值「左後X」會讓玩家在同一個機械介面看到兩個相同名稱；(2) 同 template 的 part WheelChainMiddleLeft { parent = TireMiddleLeft } 已出貨為「左中輪防滑鏈」，父子件一個「中」一個「後」是單車內部自相矛盾；(3) 本體與本包對 Middle 一律譯「中」（本體 DoorMiddleLeft＝左中門；本包 ATA2ProtectionDoorMiddleLeft＝左中車門防護、Freeplace1MiddleLeft＝左中自由空間，均與對應 RearLeft 區分）。tsarslib 側的 wheel = Rear* 是引擎物理錨點而非顯示方位（rSemiTruck 的 Middle 同樣重用 Rear anchor）。不採 unship：rSemiTruck 自身出貨的CH/CN IG_UI.json 是未翻譯的英文原文，抑制後中文介面會依載入順序在英文與 tsarslib 譯名間擲骰，且兩 mod 寫同一全域鍵，unship 解決不了衝突。",
+  "value": "左中胎"
+ },
+ "IG_UI.json|IGUI_VehiclePartTireMiddleRight": {
+  "as1_value": "右后胎",
+  "reason": "2026-08-23 #249 owner 衝突中性裁決：3409472393/rSemiTruck 的上游英文是 Middle（三軸卡車的中間軸），3402491515/tsarslib 與 3403314193/ATA_Petyarbuilt 是 Rear。採 key 本身的 Middle 語意譯「中」，理由三點：(1) rSemiTruck 的 template_rSemiTruck_4tire_axle.txt 同時定義 TireMiddle* 與 TireRear*，且 TireMiddleRight 的 requireInstalled = BrakeRearRight;SuspensionRearRight，本體 template_brake/suspension 亦補入 Rear 組——Rear 與 Middle 確實同時存在於同一台 W900，舊值「左後X」會讓玩家在同一個機械介面看到兩個相同名稱；(2) 同 template 的 part WheelChainMiddleLeft { parent = TireMiddleLeft } 已出貨為「左中輪防滑鏈」，父子件一個「中」一個「後」是單車內部自相矛盾；(3) 本體與本包對 Middle 一律譯「中」（本體 DoorMiddleLeft＝左中門；本包 ATA2ProtectionDoorMiddleLeft＝左中車門防護、Freeplace1MiddleLeft＝左中自由空間，均與對應 RearLeft 區分）。tsarslib 側的 wheel = Rear* 是引擎物理錨點而非顯示方位（rSemiTruck 的 Middle 同樣重用 Rear anchor）。不採 unship：rSemiTruck 自身出貨的CH/CN IG_UI.json 是未翻譯的英文原文，抑制後中文介面會依載入順序在英文與 tsarslib 譯名間擲骰，且兩 mod 寫同一全域鍵，unship 解決不了衝突。",
+  "value": "右中胎"
  },
  "IG_UI.json|IGUI_Washing_Soap": {
   "as1_value": "所需肥皂:%1",
@@ -12768,6 +12798,11 @@
   "as1_value": "选择即食口粮营养值是使用平衡后的游戏数值，或接近现实的高数值. ",
   "reason": "EN \"more realistic higher values\" 的比較級 \"more\"，own「更贴近现实的较高数值」有譯出、As1「接近现实的高数值」漏掉；採 own 並把全形「，。」正規化為半形。",
   "value": "选择即食口粮的营养值采用平衡的游戏性数值, 还是更贴近现实的较高数值."
+ },
+ "Sandbox.json|Sandbox_rSemiTruck_MilSpawnMultiplier_tooltip": {
+  "as1_value": "将各区域中所有W900军用车辆的生成概率乘以该倍率.<br>1.0=默认, 0.0=永不生成, 2.0=双倍概率.",
+  "reason": "2026-08-23 #249：上游現行 EN 為 `0.5 = default`，且 rSemiTruck 的 media/sandbox-options.txt 宣告 `option rSemiTruck.MilSpawnMultiplier { default = 0.5 }`，程式端預設確為 0.5；As1 值仍寫 1.0=默认，是玩家可見的錯誤資訊。僅更正數值，其餘沿用 As1 原文。",
+  "value": "将各区域中所有W900军用车辆的生成概率乘以该倍率.<br>0.5=默认, 0.0=永不生成, 2.0=双倍概率."
  },
  "Sandbox.json|Sandbox_rSemiTruck_MultiWreckerSlots_tooltip": {
   "as1_value": "设置多用途拖车一次可以运载多少辆车.<br>降低此设置仅会阻止向更高槽位装载新车; 已装载的车辆仍可卸下.",
