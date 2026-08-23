@@ -2145,6 +2145,20 @@
    "action": "unship",
    "signature": "2c06029040f3fd9b",
    "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun RC2400 Coupe Drift Custom」（規避商標的虛構品牌）vs Real Names Addon「Nissan 240SX Coupe (S13) Drift Custom」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "Sandbox|Sandbox_VanillaDropRate": {
+   "action": "translate",
+   "signature": "d7e63dc0ad4b4bee",
+   "reason": "2026-08-23 #248 補登既有中性裁決（cn_overrides 早於本台帳建立即已記錄理由）：3389050623/AmmoLootDropB42 的英文是彈藥掉落率, 3665548194/Legion 的英文是絞肉機掉落率, 同一 Sandbox 鍵被兩個不同實體共用。As1 原值偏向 Legion 一方（「绞肉机掉落概率」／「僵尸有多少可能掉落绞肉机？」），只裝 AmmoLootDrop 的玩家會看到不相干文案。改採對兩個 owner 都成立的中性文案「物品掉落率」；JSON 全域表無啟用偵測，要各自精確只能走 Lua 覆寫或獨立子包，兩者皆違反本包 JSON-only 邊界。上游 42.20 把 AmmoLootDrop 側 tooltip 擴寫為長篇說明，仍**不採用**——那份文本整段是彈藥語意，套上去會讓 Legion 玩家看到不相干內容。",
+   "ch": "物品掉落率",
+   "cn": "物品掉落率"
+  },
+  "Sandbox|Sandbox_VanillaDropRate_tooltip": {
+   "action": "translate",
+   "signature": "7c68f3b84cf3b6fe",
+   "reason": "2026-08-23 #248 補登既有中性裁決（cn_overrides 早於本台帳建立即已記錄理由）：3389050623/AmmoLootDropB42 的英文是彈藥掉落率, 3665548194/Legion 的英文是絞肉機掉落率, 同一 Sandbox 鍵被兩個不同實體共用。As1 原值偏向 Legion 一方（「绞肉机掉落概率」／「僵尸有多少可能掉落绞肉机？」），只裝 AmmoLootDrop 的玩家會看到不相干文案。改採對兩個 owner 都成立的中性文案「物品掉落率」；JSON 全域表無啟用偵測，要各自精確只能走 Lua 覆寫或獨立子包，兩者皆違反本包 JSON-only 邊界。上游 42.20 把 AmmoLootDrop 側 tooltip 擴寫為長篇說明，仍**不採用**——那份文本整段是彈藥語意，套上去會讓 Legion 玩家看到不相干內容。",
+   "ch": "控制殭屍掉落此物品的機率.",
+   "cn": "控制僵尸掉落该物品的概率."
   }
  }
 }
