@@ -4,6 +4,67 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.20.2-1.18.0] - 2026-08-24
+
+### 玩家摘要
+
+> 本節為 Workshop 更新註記用的白話版；以下各節為維護者向的技術細節。
+
+- **同步如一漢化組 As1 v3.7.1：新增 75 個 MOD，As1 唯一鍵淨增 42,489。** 新增與更新內容均完成繁中真相層、簡中出貨、追蹤清單、支援清單及確定性重建。
+- **新支援 Chopper Drop、Aegis Panel、More Builds。** 本包新增 2,431 個真相鍵：Chopper Drop 原創 1 鍵、Aegis Panel 1,092 鍵、More Builds 1,338 鍵；Chopper Drop 另承接 As1 已收錄的 90 鍵，實際涵蓋 91 鍵。
+- **物品名確證缺口歸零。** #221 首批補譯 2,543 鍵，#231 再補 3,522 鍵；另逐鍵確認 398 個渲染載體、分類哨兵、dummy、placeholder 與音效代理屬內部實作，不應翻譯。
+- **清償 66 張「可能過時」issue，共補譯 2,096 鍵。** 三個批次為 34 張／867 鍵、18 張／543 鍵、10 張／23 鍵；另完成 AmmoConverter 378、HydeCo 自動車庫門 191、Conditional-Speech 76、RotatorsLib 18 鍵。
+- **多 MOD 共用鍵改為可稽核治理。** 396 筆 owner 衝突裁決均以 signature 與對應出貨／抑制錨點背書，`OWNER_CONFLICTS.md` 公開記錄，發版閘門為 0 blocking。
+- **發版前再做一次跨模型複核。** 修正 More Builds 111 個簡中舊場景／材質名、MarzGuns 5 個 crate 量詞與 24 個配方名；Burd Journals 全審 210 個 CN 差異，登記 174 筆已審 hash、22 筆 CN override，並修正 27 筆 CH。
+
+### Added
+
+- **As1 v3.7.1 同步**（#239）：新增 75 個 MOD，`as1_unique_keys` 淨增 42,489；保留 As1 CN canonical import，CH 逐鍵人工維護，不使用簡繁機轉。
+- **Chopper Drop（`3678109350`）混合收錄**（#246）：本包原創 `Base.ChopperDropRadio` 1 鍵；另有 As1 `_unsorted` 90 鍵，實際出貨 91 鍵。新增 metadata 使其納入 watchlist 與支援清單。
+- **Aegis Panel（`3766508989`）原創翻譯 1,092 鍵**（#213）：UI 1,025、Sandbox 67；簡中逐鍵對 EN 修正 24 筆上游誤譯，繁中人工翻譯。Lua 寫死的說明與紀錄依 JSON-only 邊界不處理，已於支援清單揭露。
+- **More Builds（`515555911`）原創翻譯 1,338 鍵**（#185）：ContextMenu 1,044、Tooltip 230、UI 45、Sandbox 19。260 個 `craftRecipe` 全部 `ignoreFromBuildMenu`，顯示名走 MOD 自有 ContextMenu，故不新增 `Recipes.json`。
+- **物品名補譯兩批**：#221 補譯 2,543 鍵；#231 補譯 3,522 鍵並將確證玩家可見缺口歸零。
+- **`sources/untranslatable_keys.json`**：登記 398 個已查證的內部／測試／渲染鍵；prep 與 coverage 共用 canonical identity，壞損資料 fail-closed。
+- **Owner conflict 公開治理**（#245）：新增 `has_json_en`／`en_source`、`OWNER_CONFLICTS.md`、`--owner-report-check` 與 CI 同步閘門。
+- **Tracker schema 9→10**：script 物品名改用完整 fullType；追蹤範圍收斂為可形成 JSON 翻譯的來源，Lua-only 變動不再開 issue。
+- **行尾／編碼棘輪**：`test_serialization.py` 驗證 3,906 個受版控 JSON 為 LF、UTF-8 無 BOM。
+
+### Fixed
+
+- **三批 stale issue 清償**：34 張補譯 867 鍵、改譯 45 鍵；18 張補譯 543 鍵、完成 15 筆 owner 裁決與 19 值上游同步；10 張補譯 23 鍵、同步 7 值並完成 2 筆 owner 裁決。
+- **#184 Frockin Splendor**：補譯 37 個服裝物品名與 1 個缺失的分類鍵；確認根因是翻譯鍵缺口，而非載入順序或 Lua 寫死文字。
+- **#247 AmmoConverter**：補譯 378 個彈藥轉換配方，收斂 27 個既有核心配方及 3 筆 owner 裁決；Grok 複核後再統一 5 個 MarzGuns crate 量詞與 24 個 recipe 產物名。
+- **#259 HydeCo Automatic Garage Doors**：補譯 191 鍵，統一車庫門、鏈傳動元件、遙控器、電池與狀態用詞。
+- **#254 Conditional-Speech**：補譯 76 鍵，新增 15 個觸發事件族的分類與角色自語；最終有效鍵 568/568 涵蓋。
+- **#249 RotatorsLib**：補譯 18 鍵；三軸車 Middle 部件改為「中」並與真 Rear 部件區分；修正軍用車生成倍率預設值 0.5。
+- **#230／#232 owner 衝突清償**：無誠實中性譯名者改為不出貨，避免單一全域 JSON 值覆蓋另一個 MOD 的實體。
+- **More Builds 回顧性校正**：修正 111 個簡中舊品牌、舊場景、木材、顏色與家具類型名稱。
+- **Burd Journals 發版差異**：逐鍵複核 210 個 CN 變動；22 筆必要偏離改走 `cn_overrides`，修正作者句型、來源 tooltip、Worn／Damaged 區分、函式識別字空格、lore 反義與破句等 27 筆 CH。
+
+### Changed
+
+- **ItemName／prep／coverage 身分統一**：`ItemName_Base.Foo` 與 runtime `Base.Foo` 使用同一 canonical identity；`stale_schema` 正確列入「重抽即消除」分類。
+- **Owner decision gate**：現況 396 筆裁決背書、0 blocking；`OWNER_CONFLICTS.md` 與來源同步。
+- **JSON-only 邊界明文化**：不新增／修改 MOD Lua 覆寫；Lua 寫死文字、自有 UI 與不可載入檔名只做範圍揭露或回報上游。
+
+### 已裁決不跟進
+
+- **Aegis Panel 的 `AegisHelpContent` 與部分 moderation log**：上游 Lua 寫死英文，沒有 JSON key；依專案邊界不新增 Lua 覆寫。
+- **More Builds 上游三組 name／tooltip 自身矛盾**：各自依 EN 保守翻譯，不猜 sprite 或改寫 MOD 行為。
+- **無法以單一全域 JSON 誠實表達的 owner 衝突**：維持不出貨；玩家由各 MOD 自己的英文 fallback，避免把另一個 MOD 的專屬譯文套過去。
+
+### 驗證
+
+- `build_mod.py build` 通過；`verify_dist.py` **15/15 PASS**，未使用 `--allow-missing-as1`。
+- 確定性雙跑 **181 個檔案零 diff**。
+- `verify_dist.py --cn-diff v42.20.2-1.17.0`：**51,939 個 CN 值變動，待複核 0**。
+- 16 支純 repo 回歸測試全過；tracker self-test 15 情境全過。
+- owner decision gate：396 筆背書、0 blocking；`OWNER_CONFLICTS.md` 同步。
+- `lint_ch.py` 五類棘輪全零。
+- 本機 PZ 本體 48,718 個 `(檔,鍵)` 與 dist CH/CN **零交集**。
+- `test_serialization.py`：3,906 個受版控 JSON 全合規。
+- `manifest --check` 無漂移；`main` 的 `tests` workflow 綠燈。
+
 ## [42.20.2-1.17.0] - 2026-08-16
 
 ### 玩家摘要
