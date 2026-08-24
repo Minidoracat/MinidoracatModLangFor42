@@ -549,7 +549,7 @@
 | [[J&G] Umbrella Corp Uniform [B42/41]](https://steamcommunity.com/sharedfiles/filedetails/?id=3675741487) | J&G 保護傘公司制服 | 新增保護傘公司風格制服、護具與腰、腿部槍套掛載點。 | `[J&G] Umbrella Corp Uniform` | 9 | — | — |
 | [PhunCure 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3676251425) | PhunCure 2 趣味解藥 | 新增可注射的解藥，能治癒咬傷、殭屍病毒與傷口感染，效果可自訂。 | `phuncure2` | 33 | — | — |
 | [Better Vanilla ALICE Suspenders](https://steamcommunity.com/sharedfiles/filedetails/?id=3676721528) | 更好的原版 ALICE 背帶 | 改良原版 ALICE 背帶裝備，並附帶多個出生地點選項描述。 | `bettervanillaalicesuspendersID` | 38 | ⚠️ ≥3 | — |
-| [Chopper Drop [B42][MP][SP]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3678109350) | 直升機空投 | 定期投放高風險、高報酬的軍用物資箱事件. | `ChopperDrop` | 1 | — | — |
+| [Chopper Drop [B42][MP][SP]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3678109350) | 直升機空投 | 定期投放高風險、高報酬的軍用物資箱事件. | `ChopperDrop` | 1 | — | ⚠️ 清單統計的鍵數只算到本包原創的 1 個鍵；本 MOD 另有 90 個鍵已由 As1 上游文字表（_unsorted）提供，實際出貨涵蓋為 91 個鍵。 |
 | [Solar Floodlight [42.16] [MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3680577450) | 太陽能探照燈 | 新增可組裝的太陽能探照燈，含電池槽與電池健康度顯示。 | `SolarFloodlight` | 55 | — | — |
 | [Dead Magic〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3686883520) | 死靈法術 | 新增完整魔法系統：法術書與魔法書、儀式、附魔、遺物與奧術研究樹。 | `DeadMagic` | 203 | — | — |
 | [Working Knowledge〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3717099183) | 職場知識 | 在檔案櫃、辦公桌等容器中加入 372 種職場文件，閱讀一次可獲得對應技能的一次性經驗。 | `WorkingKnowledge` | 372 | — | — |
