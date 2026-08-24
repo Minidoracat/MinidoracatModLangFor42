@@ -1950,12 +1950,19 @@ def _load_shipped_keys() -> tuple[set[tuple[str, str]], set[str]]:
 
 
 def load_untranslatable(path: Path | None = None) -> tuple[set[tuple[str, str]], set[str]]:
-    """讀 registry，回 `(canonical 檔域身分集, ItemName raw fullType 集)`。
+    """讀 registry，回 `(canonical 檔域身分集, ItemName canonical runtime fullType 集)`。
 
     缺檔＝空集合（漸進登記）；存在但形狀壞損一律炸。registry key 嚴格是
     `<非空檔名.json>|<非空鍵>`——漏 `.json` 時 prep 可能仍扣、coverage 的 ItemName
     口徑卻不扣；`UI.json|UI_Foo` 若不 canonicalize，coverage 以 `(UI, Foo)`、prep 以
     `(UI, UI_Foo)`，同樣分岔。兩個 consumer 必須吃同一個 identity。
+
+    **ItemName 那一套口徑同樣是 canonical，不是 raw**：`ItemName.json|ItemName_Base.Foo`
+    一律回 `Base.Foo`。coverage 拿它扣 `dn["gap"]`（`script_item_dn` 的鍵恆是裸
+    `Module.Item`），prep 走 `untr_pairs` 的 `(ItemName, Base.Foo)`——留 raw 前綴形時
+    prep 扣得掉、coverage 扣不掉，同一筆人工裁決在兩支工具給出相反結論。B41 前綴形本身
+    是引擎不讀的死鍵（見 `_is_runtime_item_key`），登記者寫哪一種形都必須落到同一個
+    runtime 身分。
     """
     p = path or SOURCES / "untranslatable_keys.json"
     if not p.is_file():
@@ -1972,9 +1979,10 @@ def load_untranslatable(path: Path | None = None) -> tuple[set[tuple[str, str]],
         fname, key = pair.split("|", 1)
         if not fname.endswith(".json") or not fname[:-5] or not key:
             raise ValueError(f"{p.name}：非法 pair {pair!r}（檔名須以 .json 結尾、兩側非空）")
-        pairs.add((_key_stem(fname), _canon_key(fname, key)))
+        canon = _canon_key(fname, key)
+        pairs.add((_key_stem(fname), canon))
         if fname == "ItemName.json":
-            items.add(key)
+            items.add(canon)
     return pairs, items
 
 
@@ -2166,7 +2174,9 @@ def cmd_coverage(args) -> int:
     # fail-closed 慣例）：靜默退化成空集合＝這道本體排除整批失效，於是本體鍵被
     # 當成缺口送進補譯管線，違反「不得覆寫本體」鐵律的第一道防線。
     vanilla_items = set(vjson["scoped_keys"]["ItemName.json"])
-    # 已裁決不補譯的鍵。兩個口徑各自形狀：EN 走 `(檔 stem, 鍵)`、物品名走裸 fullType。
+    # 已裁決不補譯的鍵。兩個口徑各自形狀：EN 走 `(檔 stem, canonical 鍵)`、物品名走
+    # canonical runtime fullType（登記寫 `ItemName_Base.Foo` 也會落成 `Base.Foo`，與
+    # `script_item_dn` 的裸 `Module.Item` 及 prep 的 `untr_pairs` 同一個身分）。
     untr_pairs, untr_items = load_untranslatable()
 
     rows: list[dict] = []
@@ -2307,7 +2317,12 @@ def cmd_coverage(args) -> int:
     if blind:
         # 每種成因對應不同行動，混在一起就會給出假保證（對 parser 漏判與上游格式錯誤
         # 說「重抽即消除」，人會白燒一輪 backfill 而不去修真正的東西）。
-        REFETCHABLE = {"schema", "mirror", "stale_state"}
+        # `stale_schema`（號稱現行 schema 卻仍是裸 key）**必須列進來**：它就是「extractor
+        # 升級後 state 沒真正重抽」，重抽該 mod 即消除（見 `_item_dn_stats`）。漏了它，
+        # `kinds == {"stale_schema"}` 的 mod 一項行動分類都不落——`refetch_blind` 不收、
+        # parser／upstream 也不收，於是它只出現在總數與明細列表裡而沒有任何指示；`_pri`
+        # 還會把它排到「需要動手修 parser／回報上游」那批前面，把真正要動手的擠出預覽。
+        REFETCHABLE = {"schema", "stale_schema", "mirror", "stale_state"}
         refetch_blind = [b for b in blind if b[2] <= REFETCHABLE]
         parser_blind = [b for b in blind if "unknown_module" in b[2]]
         upstream_blind = [b for b in blind if "malformed" in b[2]]
@@ -2322,10 +2337,11 @@ def cmd_coverage(args) -> int:
         print("  （schema 3/4 的 blind 計的是 `script_item` 裸名鍵、不在上方 total 宇宙內；"
               "schema 5–8 的則同時計入兩邊，勿直接加減）")
         if refetch_blind:
-            # 標籤要涵蓋 `stale_state`——它也在 `REFETCHABLE` 裡，只寫「schema 落後／鏡像
-            # 缺值」會讓 `kinds == {"stale_state"}` 的 mod 被算進一個名不符實的分類。
-            print(f"  · {len(refetch_blind)} 個純屬 schema 落後／鏡像缺值／state 不一致"
-                  " → 跑 `tracker.py backfill-en` 重抽即消除")
+            # 標籤要涵蓋 `stale_state` 與 `stale_schema`——它們也在 `REFETCHABLE` 裡，只寫
+            # 「schema 落後／鏡像缺值」會讓 `kinds == {"stale_state"}`／`{"stale_schema"}`
+            # 的 mod 被算進一個名不符實的分類。
+            print(f"  · {len(refetch_blind)} 個純屬 schema 落後／裸 key 殘留／鏡像缺值／"
+                  "state 不一致 → 跑 `tracker.py backfill-en` 重抽即消除")
         if stale_blind:
             # **不寫「其中」**：`stale_blind` 自 blind 全集算，kinds 同時含 unknown_module
             # 的 mod 不在 `refetch_blind` 裡卻仍被算進來，「其中」會讓兩個數字對不上。

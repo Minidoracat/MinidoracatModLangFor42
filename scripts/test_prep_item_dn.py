@@ -56,7 +56,8 @@ def run(*, records: dict, mirror: dict, dist_items: dict, vanilla: list[str],
         bad_ledger: str | None = None, state_entry_raw: object = None,
         unshipped: dict | None = None, bad_unshipped: str | None = None,
         untranslatable: dict | None = None, bad_untranslatable: str | None = None,
-        old_artifact: dict | None = None, check_decisions: bool = False):
+        old_artifact: dict | None = None, check_decisions: bool = False,
+        owner_report_check: bool = False, owner_report_md: str | None = None):
     """組臨時 repo + dist，跑 `prep_mod_strings.main()`，回 (rc, artifact, stdout)。"""
     bad_hash = bad_hash or set()
     global CASES
@@ -125,22 +126,42 @@ def run(*, records: dict, mirror: dict, dist_items: dict, vanilla: list[str],
         out = root / "out.json"
         if old_artifact is not None:
             out.write_text(json.dumps(old_artifact, ensure_ascii=False), encoding="utf-8")
-        old_root, old_dist, old_argv = (prep_mod_strings.ROOT, prep_mod_strings.DIST_CH,
-                                        sys.argv)
+        # `OWNER_CONFLICTS_MD` 是 import 時由真 repo 的 ROOT 算出的常數，**必須一起改指**
+        # 到臨時 repo，否則 report 模式會拿真 repo 的報告比對（恆漂移＝假紅），寫入模式
+        # 還會真的動到版本控制中的檔案。
+        report_md = root / "OWNER_CONFLICTS.md"
+        if owner_report_md is not None:
+            report_md.write_text(owner_report_md, encoding="utf-8", newline="\n")
+        old_root, old_dist, old_md, old_argv = (
+            prep_mod_strings.ROOT, prep_mod_strings.DIST_CH,
+            prep_mod_strings.OWNER_CONFLICTS_MD, sys.argv)
         err, old_err = io.StringIO(), sys.stderr
         try:
             sys.stderr = err
             prep_mod_strings.ROOT = root
             prep_mod_strings.DIST_CH = dist
-            selected = [] if check_decisions else (wids or ["1"])
-            sys.argv = ["prep", *selected, "--out", str(out)]
+            prep_mod_strings.OWNER_CONFLICTS_MD = report_md
+            # `--owner-report*` 隱含全庫模式（見 main 的 `want_report`），與
+            # `--check-decisions` 同一個資料範圍，故一樣不給 wid。
+            selected = [] if (check_decisions or owner_report_check) else (wids or ["1"])
+            base = ["prep", *selected, "--out", str(out)]
             if check_decisions:
-                sys.argv.append("--check-decisions")
-            rc = prep_mod_strings.main()
+                base.append("--check-decisions")
+            if owner_report_check:
+                # 沒給舊報告內容＝先跑一次 `--owner-report` 產生**與來源同步**的一份，
+                # 再 check（round-trip 應 rc=0）；給了內容就直接 check 那份過時報告。
+                argvs = [] if owner_report_md is not None else [[*base, "--owner-report"]]
+                argvs.append([*base, "--owner-report-check"])
+            else:
+                argvs = [base]
+            for argv in argvs:
+                sys.argv = argv
+                rc = prep_mod_strings.main()
         finally:
             sys.stderr = old_err
             (prep_mod_strings.ROOT, prep_mod_strings.DIST_CH,
-             sys.argv) = old_root, old_dist, old_argv
+             prep_mod_strings.OWNER_CONFLICTS_MD,
+             sys.argv) = old_root, old_dist, old_md, old_argv
         art = json.loads(out.read_text(encoding="utf-8")) if out.is_file() else None
         return (rc, art, err.getvalue()) if want_err else (rc, art)
 
@@ -234,6 +255,17 @@ rc, art = run(records={r_internal: "h-int"}, mirror={r_internal: "Internal"},
               dist_items={}, vanilla=[],
               untranslatable={"UI.json|UI_Internal": "內部鍵"})
 assert art["_gap"] == {}, f"4c. prep 未以 canonical identity 扣除 UI prefix key：{art['_gap']}"
+
+# 4c4. 同一筆裁決寫成 **B41 前綴形**時兩個 consumer 也必須扣同一個 runtime 身分：
+#      `ItemName.json|ItemName_Base.Prefixed` 對 prep gap `ItemName|Base.Prefixed` 應命中。
+#      coverage 側的對照案例在 `test_untranslatable_keys`（`untr_items` 同樣走 `_canon_key`）；
+#      任一側留 raw 前綴形，同一筆人工裁決就會在兩支工具給出相反結論。
+r_prefixed = f"script_item_dn|{EFF}|Base.Prefixed"
+rc, art = run(records={r_prefixed: "h-pre"}, mirror={r_prefixed: "Prefixed Item"},
+              dist_items={}, vanilla=[],
+              untranslatable={"ItemName.json|ItemName_Base.Prefixed": "內部載體"})
+assert art["_gap"] == {}, \
+    f"4c4. prep 未以 canonical runtime 身分扣除前綴形登記：{art['_gap']}"
 
 # 4c2. temp ROOT 隔離：真 repo 已登記這個 Mirage 鍵，但臨時 repo 沒有 registry，prep 必須
 #      把它視為缺口。若呼叫 `tracker.load_untranslatable()` 不傳 temp ROOT，就會穿透讀真 repo、
@@ -521,6 +553,20 @@ rc, art = run(**CONFLICT_FIXTURE, dist_items={"Base.Shared": "共用譯名"},
               decisions={"ItemName|Base.Shared": {**D, "signature": "0" * 16}},
               check_decisions=True)
 assert rc == 1, f"4p3. 過時 signature 在 check mode 未阻斷：rc={rc}"
+
+# 4p4. `--owner-report-check` 的退出碼必須與**報告漂移本身**耦合，不能只反映有無衝突：
+#      少了 `report_drift`（或改成只看 conflicts/unchecked）時，CI 的 report gate 對一份
+#      無衝突但早已過時的 `OWNER_CONFLICTS.md` 會給 rc=0，公開紀錄就能無限期停在舊內容。
+#      兩支都要有：只驗過時那支時「恆回 1」也會綠，只驗同步那支時「恆回 0」也會綠。
+REPORT_FIXTURE = dict(records={f"script_item_dn|{EFF}|Base.Rep": "hM1"},
+                      mirror={f"script_item_dn|{EFF}|Base.Rep": "Report Item"},
+                      dist_items={}, vanilla=[])
+rc, art = run(**REPORT_FIXTURE, owner_report_check=True)
+assert rc == 0, f"4p4. 剛由 --owner-report 產生的同步報告仍被判漂移＝gate 恆紅：rc={rc}"
+rc, art, err = run(**REPORT_FIXTURE, owner_report_check=True,
+                   owner_report_md="# 過時的舊報告\n", want_err=True)
+assert rc == 1, f"4p4. 過時的 OWNER_CONFLICTS.md 未讓 --owner-report-check 非零退出：rc={rc}"
+assert "與來源不同步" in err, f"4p4. 未具名報出報告漂移：{err!r}"
 
 # 4q. 台帳的六種過時形狀都必須維持 blocking——少任何一項，裁決就變成永久放行通道
 for label, dist, dist_cn, dec in (
