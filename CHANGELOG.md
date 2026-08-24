@@ -4,6 +4,53 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.20.2-1.18.1] - 2026-08-24
+
+### 玩家摘要
+
+> 本節為 Workshop 更新註記用的白話版；以下各節為維護者向的技術細節。
+
+- **清償 #261–#273 共 13 張「可能過時」issue。** 依有效版本夾、JSON 載入規則與現行 EN 重算後，補譯 127 鍵、同步 4 個既有譯文。
+- **補齊多個近期更新 MOD 的介面與設定。** 包含 organizedCategories、N&C's Narcotics、Long-Term Preservation、The Only Cure、Way More Cars、Take A Bath And Shower、Beanie Babies、UH-1B 與 TT Power Plant。
+- **修正 OCsChallengeTraits 與 Horse 的過時說明。** 房屋火災特質改為沙盒關火時帶燒傷開局；Horse 更新幼馬與肉丸警告文案。
+- **TrueSmoking 與 TrapManager 經複核確認不用改譯。** 前者只是有效版本路徑複本，後者只是將百分號改成已相容的 `%%` 寫法。
+- **已下架的 Rain 的斧與刃維持翻譯保留。** Workshop 頁仍無法存取；既有訂閱者與側載玩家仍可使用翻譯，日後重新上架會自動恢復追蹤。
+
+### Added
+
+- **#261 TT Power Plant**：補譯改名後的鍛造石灰漿物品名。
+- **#262 organizedCategories**：補譯 24 個本次新增／修改的分類操作與設定鍵。
+- **#263 N&C's Narcotics**：補譯 22 個本次新增／修改的美沙酮、類固醇狀態與除錯設定鍵。
+- **#264 UH-1B Helicopter**：補譯雙掛鉤掛載貨物操作。
+- **#266 Way More Cars**：補譯 2 個禁止原版車輛生成的沙盒設定鍵。
+- **#268 Beanie Babies**：補譯 Seamore the Seal 的物品名、標籤與拆標籤配方，共 3 鍵；`bb_dummy` 維持內部佔位、不出貨。
+- **#269 The Only Cure**：補譯 3 個新增特質說明。
+- **#270 Take A Bath And Shower**：補譯自動／手動模式 2 鍵。
+- **#271 Long-Term Preservation Extended**：補譯 69 鍵，包括 42 個 Sandbox、4 個 Recipes，以及從不可載入 `UI_EN.json` 救回正確 `UI.json` 的 23 個 UI 鍵。
+
+### Fixed
+
+- **#272 OCsChallengeTraits**：同步 2 個上游改文；補回 House Fire 特質並改正「多人無效」的過時說明。
+- **#273 Horse**：同步 2 個上游改文，更新幼馬類型與肉丸警告。
+- **#265 TrueSmoking**：155 筆 headline 新增經確認是 42.20 路徑複本；有效 149 鍵早已完整出貨，無需改檔。
+- **#267 TrapManager**：18 筆 headline 修改中，有效 9 鍵只改百分號逸出；CH/CN 原本已使用 `%%`，無需改檔。
+
+### 已裁決不跟進
+
+- **#274 Rain 的斧與刃**：Steam Workshop 實開仍為無法存取。依下架預設政策保留翻譯與 watchlist，不清除 source tree；若重新上架，追蹤器會自動恢復。
+
+### 驗證
+
+- `build_mod.py build` 通過；`verify_dist.py` **15/15 PASS**。
+- 確定性雙跑 **181 個檔案零 diff**。
+- `verify_dist.py --cn-diff v42.20.2-1.18.0`：**131 個 CN 值變動，待複核 0**。
+- 16 支純 repo 回歸測試全過；tracker self-test 15 情境全過。
+- owner decision gate：396 筆背書、0 blocking；`OWNER_CONFLICTS.md` 同步。
+- `lint_ch.py` 五類棘輪全零。
+- 本機 PZ 本體 48,718 個 `(檔,鍵)` 與 dist CH/CN 零交集。
+- `test_serialization.py`：3,906 個受版控 JSON 全合規。
+- `manifest --check` 無漂移；內容 commit `443e038` 的 CI 綠燈。
+
 ## [42.20.2-1.18.0] - 2026-08-24
 
 ### 玩家摘要
