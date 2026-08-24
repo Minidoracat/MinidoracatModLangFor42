@@ -13209,6 +13209,21 @@
   "reason": "兩側都不是本體物品名: own「胶带」不完整, as1「大力胶带」非官方 — 本體 Base.DuctTape=管道胶带. 已與 CnIgRest 約定 IG_UI.json 同名鍵出同一字串 (同名跨檔不一致會讓生效值取決於載入順序).",
   "value": "需要: 管道胶带"
  },
+ "Tooltip.json|Tooltip_BurdJournals_OriginCrafted": {
+  "as1_value": "来源:",
+  "reason": "2026-08-24 release cn-diff 複核：EN 全家系為完整句「Origin: Crafted」，As1 只剩「来源:」前綴，玩家看不到來源類型；補「自制」對齊 IGUI_ItemCat_Crafted；CH 已同步／仍成立，review hash 已登記。",
+  "value": "来源: 自制"
+ },
+ "Tooltip.json|Tooltip_BurdJournals_OriginWorld": {
+  "as1_value": "来源:",
+  "reason": "2026-08-24 release cn-diff 複核：EN「Origin: Found in world」是完整 tooltip，As1 只剩標籤；複用同 mod DebugSpawnOriginWorld「在世界中发现」；CH 已同步／仍成立，review hash 已登記。",
+  "value": "来源: 在世界中发现"
+ },
+ "Tooltip.json|Tooltip_BurdJournals_OriginZombie": {
+  "as1_value": "来源:",
+  "reason": "2026-08-24 release cn-diff 複核：EN「Origin: Recovered from zombie」是完整 tooltip，As1 只剩標籤；複用 DebugSpawnOriginZombie「从僵尸身上回收」；CH 已同步／仍成立，review hash 已登記。",
+  "value": "来源: 从僵尸身上回收"
+ },
  "Tooltip.json|Tooltip_BurdJournals_SetModeDesc": {
   "as1_value": "阅读会将你的经验值设定为与已记录等级一致 (如果更高) .",
   "reason": "as1 丟掉 EN 結尾的兩個換行 (own/CH 都保留), 該空行是 tooltip 段落間距; 另 as1「(如果更高) .」句號前多一個空格.",
@@ -16659,6 +16674,11 @@
   "reason": "stale review 修正：EN 是「Save them before continuing?」；CN 誤成「錄製前」，把一般繼續流程限縮為錄製。CH 已正確。",
   "value": "你有未保存的日记笔记. 继续前要保存吗?"
  },
+ "UI.json|UI_BurdJournals_CursedMsgTornGear": {
+  "as1_value": "有看不见的东西划过你的衣服, 留下了%1处新裂口.",
+  "reason": "2026-08-24 release cn-diff 複核：EN leaving %1 fresh tears；As1 缺「新」；保留無形之物／衣物詛咒文風，只補「新裂口」，%1 保留；CH 已同步／仍成立，review hash 已登記。",
+  "value": "无形之物划过你的衣物, 留下了%1处新裂口."
+ },
  "UI.json|UI_BurdJournals_CustomizeSubtitle": {
   "as1_value": "在它上面系点什么, 别点什么.",
   "reason": "stale review 修正：EN 後半是「pin something to it」；CN「別點什麼」是斷裂誤譯，既未表達別上／釘上，也讀成「不要點」。CH 已正確。",
@@ -16668,6 +16688,56 @@
   "as1_value": "可选的 #RRGGBB 颜色覆盖, 适用于空白和写满的日记. 此操作会绕过常规的涂色混合.",
   "reason": "stale review 修正：current CN「可65选」含明確誤植數字 65；刪除誤植後即恢復 EN Optional #RRGGBB override 的語意，CH 無誤。",
   "value": "可选的 #RRGGBB 颜色覆盖, 适用于空白和写满的日记. 此操作会绕过常规的涂色混合."
+ },
+ "UI.json|UI_BurdJournals_DebugDiscoveryMagazineSuffix": {
+  "as1_value": "| 杂志: %1",
+  "reason": "2026-08-24 release cn-diff 複核：EN 與正確 suffix 皆為前導空白「 | …」；As1 刪掉前導空白，串在 ID／發現列後會黏字；CH 已同步／仍成立，review hash 已登記。",
+  "value": " | 杂志: %1"
+ },
+ "UI.json|UI_BurdJournals_DebugDiscoveryRecipesDynamic": {
+  "as1_value": "通过运行时配方目录 + BurdJournals.buildMagazineRecipeCache () 动态生成",
+  "reason": "2026-08-24 release cn-diff 複核：As1 在方法名 buildMagazineRecipeCache 與 () 之間插入空格，破壞 EN/CH 識別字；CH 已同步／仍成立，review hash 已登記。",
+  "value": "通过运行时配方目录 + BurdJournals.buildMagazineRecipeCache() 动态生成"
+ },
+ "UI.json|UI_BurdJournals_DebugDiscoverySkillsDynamic": {
+  "as1_value": "通过 BurdJournals.discoverAllSkills () 动态生成",
+  "reason": "2026-08-24 release cn-diff 複核：As1 將 discoverAllSkills() 改成 discoverAllSkills ()，破壞識別字；CH 已同步／仍成立，review hash 已登記。",
+  "value": "通过 BurdJournals.discoverAllSkills() 动态生成"
+ },
+ "UI.json|UI_BurdJournals_DebugDiscoverySkillsDynamicTip": {
+  "as1_value": "显示模组当前可发现的技能. 来源方法: 通过 BurdJournals.discoverAllSkills () 动态发现.",
+  "reason": "2026-08-24 release cn-diff 複核：As1 在 discoverAllSkills () 插入空格，須撤；CH 已同步／仍成立，review hash 已登記。",
+  "value": "显示模组当前可发现的技能. 来源方法: 通过 BurdJournals.discoverAllSkills() 动态发现."
+ },
+ "UI.json|UI_BurdJournals_DebugDiscoverySourceSuffix": {
+  "as1_value": "| 来源: %1",
+  "reason": "2026-08-24 release cn-diff 複核：EN／正確 suffix 皆有前導空格；As1 刪掉會變成 text|；CH 已同步／仍成立，review hash 已登記。",
+  "value": " | 来源: %1"
+ },
+ "UI.json|UI_BurdJournals_DebugDiscoveryTraitsDynamic": {
+  "as1_value": "动态获取: 通过 BurdJournals.discoverTraitMetadata () 和 discoverGrantableTraits (true)",
+  "reason": "2026-08-24 release cn-diff 複核：As1 在 discoverTraitMetadata () 與 discoverGrantableTraits (true) 插空格，破壞識別字；CH 已同步／仍成立，review hash 已登記。",
+  "value": "动态获取: 通过 BurdJournals.discoverTraitMetadata() 和 discoverGrantableTraits(true)"
+ },
+ "UI.json|UI_BurdJournals_DebugDiscoveryTraitsDynamicTip": {
+  "as1_value": "显示模组当前可发现的特质. 来源方: 运行时通过 BurdJournals.discoverTraitMetadata () 发现, 再经 BurdJournals.discoverGrantableTraits (true) 过滤.",
+  "reason": "2026-08-24 release cn-diff 複核：As1 把「来源方法」截成「来源方」，且兩處函式名被插空格；CH 已同步／仍成立，review hash 已登記。",
+  "value": "显示模组当前可发现的特质. 来源方法: 运行时通过 BurdJournals.discoverTraitMetadata() 发现, 再经 BurdJournals.discoverGrantableTraits(true) 过滤."
+ },
+ "UI.json|UI_BurdJournals_DebugDiscoveryTraitsRuntimeFallback": {
+  "as1_value": "运行时备用: 通过 TraitFactory.getTraits ()",
+  "reason": "2026-08-24 release cn-diff 複核：As1 在 TraitFactory.getTraits () 插空格；CH 已同步／仍成立，review hash 已登記。",
+  "value": "运行时备用: 通过 TraitFactory.getTraits()"
+ },
+ "UI.json|UI_BurdJournals_DebugDiscoveryTraitsRuntimeFallbackTip": {
+  "as1_value": "显示模组当前可发现的特质. 来源方式: 通过 TraitFactory.getTraits (). 作为运行时备用",
+  "reason": "2026-08-24 release cn-diff 複核：As1 把「来源方法」改成「来源方式」且語序扭曲；getTraits () 有空格；CH 已同步／仍成立，review hash 已登記。",
+  "value": "显示模组当前可发现的特质. 来源方法: 运行时备用, 通过 TraitFactory.getTraits()."
+ },
+ "UI.json|UI_BurdJournals_DebugReclaimHistoryDisabled": {
+  "as1_value": "日记经验回收衰减已禁用. 开启 恢复已衰减经验 以查看回收历史.",
+  "reason": "2026-08-24 release cn-diff 複核：EN Turn on diminished XP recovery 指沙盒選項「收益递减」；As1「恢复已衰减经验」語意顛倒；CH 已同步／仍成立，review hash 已登記。",
+  "value": "日记经验回收衰减已禁用. 开启收益递减以查看回收历史."
  },
  "UI.json|UI_BurdJournals_DebugSpawnCursedReward": {
   "as1_value": "生成受诅奖赏",
@@ -16688,6 +16758,16 @@
   "as1_value": "看来这本日记只能读最后一次了……",
   "reason": "stale review 修正：EN「was on its last read」是過去式，表示剛才已用掉最後一次閱讀；current CN/CH 都譯成「還能再讀最後一次」，會誤導剩餘次數。",
   "value": "看来刚才已经是那本日记最后一次被阅读了……"
+ },
+ "UI.json|UI_BurdJournals_FlavorModGeneralist": {
+  "as1_value": "一位能人的笔记……",
+  "reason": "2026-08-24 release cn-diff 複核：EN Notes from a capable outsider；As1 只寫「能人」，漏 outsider；補「外来者」並保留……；CH 已同步／仍成立，review hash 已登記。",
+  "value": "一位能干外来者的笔记……"
+ },
+ "UI.json|UI_BurdJournals_InspectWorn": {
+  "as1_value": "一本来自 %1 的破旧日记. 状况: %2. 需要清洁.",
+  "reason": "2026-08-24 release cn-diff 複核：EN worn；同檔 ConditionWorn=磨损、Damaged=破旧；As1「破旧日记」會撞名，應留磨损；CH 已同步／仍成立，review hash 已登記。",
+  "value": "一本来自 %1 的磨损日记. 状况: %2. 需要清洁."
  },
  "UI.json|UI_BurdJournals_JournalCoverPainted": {
   "as1_value": "日记封面已涂色.",
@@ -16714,6 +16794,11 @@
   "reason": "As1 雙重缺陷：段落分隔由 EN 的 \\n\\n 掉成單一 \\n（own 守恆），且「它们比{{noun}}更{{adjective}}的{{noun}}」缺「是」而不成句。",
   "value": "人人都需要 {{noun}}, 所以人人来的时候都 {{adjective}}.{{noun}} 响得 {{adjective}}, 那还在 {{noun}} 之前, 可人们还是不停地 {{verb}} 那 {{noun}}, 好像 {{noun}} 会 {{verb}} 在 {{noun}} 里似的.{{authorName}} 变得 {{adjective}}, 就在 {{noun}} {{verb}} 的时候, 而那 {{noun}} {{verb}} 着, 认定 {{noun}} 就意味着 {{noun}}.\n\n我 {{verb}} 了一些 {{noun}}, 就写在 {{entryNameA}} 和 {{entryNameB}} 上, 因为它们 {{adjective}} 过 {{noun}}, 到了 {{noun}} 的时候更是如此. 要是你看见 {{noun}}, 就在某个 {{noun}} 那儿, 就 {{noun}} 得 {{adjective}} 一点."
  },
+ "UI.json|UI_BurdJournals_LoreTemplate_BloodyNearMiss": {
+  "as1_value": "抱歉纸上沾了血, 因为{{dangerNoun}}正步步紧逼. 不管你是谁, 务必认真读读关于{{traitName}}的那部分, 争取好好活下去, 坚持到世界再次{{adjective}}的那一天.",
+  "reason": "2026-08-24 release cn-diff 複核：EN do better before the world gets {{adjective}} again；As1 把 before 譯成 until「坚持到…那一天」；CH 已同步／仍成立，review hash 已登記。",
+  "value": "抱歉纸上沾了血, 因为{{dangerNoun}}正步步紧逼. 不管你是谁, 务必认真读读关于{{traitName}}的那部分, 争取好好活下去, 在世界再次变得{{adjective}}之前做得更好."
+ },
  "UI.json|UI_BurdJournals_LoreTemplate_BloodySkillOnlyDoor": {
   "as1_value": "有一扇门, 然后是一个错误, 然后是一课. {{skillNameA}}是门打开之前的那一课, {{skillNameB}}是门打开之后的那一课.\n\n如果{{openerName}}此刻面前也有一扇门, 停下来想一想. 死者很有耐心, 但它们并不聪明. 这意味着, 聪明留给你的.",
   "reason": "As1 末句「这意味着, 聪明留给你的.」缺繫詞「是」，定語懸空不成句；own「聪明就留给你了」正確。",
@@ -16728,6 +16813,11 @@
   "as1_value": "{{survivorName}}曾经信誓旦旦地觉得, 这一切都源于一次泄露, 一种武器, 一场测试, 那些人类所能想象到的事物. 我也曾相信这一点, 直到这本日记开始在页边兀自写下回话. 它知道我的职业, 知道{{traitName}}, 也知道七月四号那一天一切灾难的根源.\n\n如果{{openerName}}读到这里时还没有听见纸页下的抓挠声, 务必尽快学习和利用{{skillName}}和{{recipeName}}. 所有那些摆脱禁锢, 为祸人间的存在当中, 丧尸不过是最吵闹的那个罢了.",
   "reason": "stale review 修正：CN/CH 把 EN「which locked doors opened before July Fourth」錯譯成「七月四號那一天一切災難的根源」，並漏掉 smell 與 human enough to blame 的語意；依完整 EN 重譯兩語，所有 6 個模板 token 原樣保留。",
   "value": "{{survivorName}}曾信誓旦旦地说, 那股气味来自一次泄漏、一种武器、一场测试——任何足以归咎于人类的东西. 我一直相信这一点, 直到页边空白处写下了回复. 它知道我的职业, 知道{{traitName}}, 还知道哪些上锁的门在七月四日前就已打开.\n\n如果{{openerName}}读到这里时还没听见纸下的抓挠声, 赶快用上{{skillName}}和{{recipeName}}. 逃出来的东西里, 死者不过是最吵闹的部分."
+ },
+ "UI.json|UI_BurdJournals_LoreTemplate_CursedFollower": {
+  "as1_value": "我是从{{survivorName}}那里找到这个的, 但有个{{omenNoun}}一直紧追不舍. 它就是想要夺走{{recipeName}}. {{exclamation}}.",
+  "reason": "2026-08-24 release cn-diff 複核：EN I hid this from {{survivorName}}；As1「从{{survivorName}}那里找到」把藏→找到顛倒；CH 已同步／仍成立，review hash 已登記。",
+  "value": "我把这个藏起来不让{{survivorName}}发现, 但{{omenNoun}}还是跟来了. 它仍想要{{recipeName}}的笔记. {{exclamation}}."
  },
  "UI.json|UI_BurdJournals_LoreTemplate_CursedGeneral": {
   "as1_value": "{{openerName}}打破了封印, 日记则记下了这笔孽障. 他们称之为感染, 因为感染这个词可以写进报告里, 可以印在围栏上的警示牌上, 也可以透过防毒面具作为命令喊出来. 而诅咒, 是个更古老的表达. 这也解释了为什么丧尸时刻警惕着周围的响动, 哪怕附近一个活人都没有.\n\n{{authorName}}赶在墨迹开始自己修改自己之前写下了这些东西. 如果页边中浮现出的自己向你提出一项交易, 一定要保持清醒, 数数你的手指, 数数你的记忆, 然后问问为什么政府需要用枪来遏制某种它坚称只是疾病的东西.",
@@ -16744,6 +16834,11 @@
   "reason": "As1 段落分隔由 \\n\\n 掉成 \\n（own 守恆），且把 EN 的動詞槽 \"You {{noun}} it best\" 改成「你的{{noun}}听得最清楚」——{{noun}} 由動詞位變領屬名詞並外加原文沒有的「听」。",
   "value": "{{noun}}底下有一个{{noun}}.当{{noun}}都在{{verb}}, {{noun}}又{{adjective}}得没法{{noun}}的时候, 你最能{{noun}}到它. 它会{{verb}}{{noun}}, {{noun}}, 有时还有你昨天{{verb}}过的那个{{noun}}.\n\n{{openerName}}, 趁{{noun}}开始{{noun}}之前, 拿走{{entryNameA}}和{{entryNameB}}.如果它带着你的{{noun}}一起{{verb}}, 就拿一个{{noun}}把那个{{noun}}从{{noun}}上弄掉."
  },
+ "UI.json|UI_BurdJournals_LoreTemplate_CursedMargin": {
+  "as1_value": "{{authorName}}划去了页边中记录的{{recipeName}}, 得到的是 {{omenNoun}}的回应. 当{{noun}} {{verb}}时, 相应的报应已经转移到{{openerName}}身上.",
+  "reason": "2026-08-24 release cn-diff 複核：EN scratched {{recipeName}} in the margin and {{omenNoun}} answered；As1 仍是「划去了页边中记录的」，且用报应替代 the debt；CH 已同步／仍成立，review hash 已登記。",
+  "value": "{{authorName}}在页边写下了{{recipeName}}, {{omenNoun}}便回应了. 当{{noun}} {{verb}}时, 这笔债已经转移到{{openerName}}身上."
+ },
  "UI.json|UI_BurdJournals_LoreTemplate_CursedTaxOffice": {
   "as1_value": "税务局在最初几场暴乱中幸存下来, 因为世界末日时没人想要文书工作. 里面, 每个文件柜都被按罪而非姓氏整理好了. {{traitName}}被盖在的文件夹, 多得不像话.\n\n我在\"欠缴罚金\"下面找到了{{authorName}}. 关于{{entryNameA}}的笔记已通过审计, 关于{{entryNameB}}的笔记已被豁免. {{openerName}}应该避开标着\"延期\"的那个抽屉.",
   "reason": "As1「{{traitName}}被盖在的文件夹, 多得不像话」缺處所賓語（被盖在……上），定語懸空不成句；As1 自己在 CursedLedger 同句譯對成「被盖在太多文件夹上」。",
@@ -16753,6 +16848,11 @@
   "as1_value": "所有人都离开后, 蜡烛厂仍在运转. 蜡在浇铸, 烛芯在拧合, 每张标签都印着同一句警告: 差强人意还不够好. {{authorName}}偷了三根蜡烛, 回来时却带着四个影子.\n\n这本日记在第四根蜡烛里. {{skillName}}清晰可读, {{recipeName}}隐约带着烟味. 如果{{openerName}}要点燃那个地方的任何东西, 请在室外点.",
   "reason": "指稱錯誤：EN 是偷三根蠟燭、帶回四個影子，日記在「第四個影子」裡；As1 寫「这本日记在第四根蜡烛里」，與同段「偷了三根蜡烛」直接矛盾。",
   "value": "所有人都离开后, 蜡烛厂继续工作. 蜡被浇上, 灯芯被扭曲, 每个标签上都印着同样的警告: 足够好并不好.{{authorName}}偷了三根蜡烛, 回来时带着四个影子.\n\n这本日记就在第四个影子里.{{skillName}}清晰可见.{{recipeName}}闻起来有淡淡的烟味. 如果{{openerName}}从那个地方点燃任何东西, 请在室外进行."
+ },
+ "UI.json|UI_BurdJournals_LoreTemplate_KrampusCheckpoints": {
+  "as1_value": "坎卜斯 (反面圣诞老人)先一步找到了检查站. 他喜欢那些名单, 那些标出不同颜色的通道, 那些被划掉的名字以及自以为搞这些表面功夫就可以逃避惩罚的人类. {{authorName}}看到军靴仍矗立在雪地里, 但早已没了主人.\n\n这个包裹交给{{openerName}}, 因为检查站仍在\"运转\", 它仍渴望向幸存者收取过路费. 学会{{entryNameA}}, 然后记得留下{{entryNameB}}, 记住如果无线电中传来你的乳名, 绝对不要回应.",
+  "reason": "2026-08-24 release cn-diff 複核：EN stamped passes、boot prints that did not belong to any soldier、the road still wants payment；As1 仍是顏色通道／軍靴矗立無主；CH 已同步／仍成立，review hash 已登記。",
+  "value": "坎卜斯 (反面圣诞老人)先一步找到了检查站. 他喜欢那些名单、盖了章的通行证, 以及被那些自以为文书就能挡住惩罚的人划掉的名字. {{authorName}}在雪地里看到不属于任何士兵的靴印.\n\n这个包裹是给{{openerName}}的, 因为这条路仍要收费. 学会{{entryNameA}}, 留着{{entryNameB}}, 如果无线电用你的乳名称呼你, 绝对不要回应."
  },
  "UI.json|UI_BurdJournals_LoreTemplate_KrampusGeneral": {
   "as1_value": "那包装毫无节日气氛. 其实是一个伪装成礼物的警告, 好让那些绝望的幸存者无论如何都会打开它. 诺克斯郡现在有了新名单: 感染者, 失踪者, 已清除, 已控制, 可消耗. 坎卜斯 (反面圣诞老人)仍记得那些旧名单, 但已经相当罕见了.\n\n如果{{openerName}}听见本应是警报声的地方传来铃铛声, 赶在雪地记下你的足迹之前立刻远离. 圣诞礼物依然存在, 但有些礼物指望天黑后在人间收账.",
@@ -16779,10 +16879,20 @@
   "reason": "採用 As1 但把「而是直接有人们的耳朵听到」的「有」改為被動標記「被」（原句不成立）。own 該篇整段機翻破碎（「它显示了{{noun}}, 其中{{dangerNoun}}现在是{{verb}}」）。",
   "value": "那张{{adjective}}的县城地图对{{omenNoun}}, {{adjective}}的{{noun}}只字未提, 更别提每当广播宣称\"已得到控制\"时{{supplyNoun}}{{adverb}}{{verb}}的状况. 它标出了{{noun}}, 那里现在有{{dangerNoun}}{{verb}}, 和{{stashNoun}}, 那里曾经存放{{supplyNoun}}, 直到{{noun}} {{verb}}并夺走了一切.\n\n{{authorName}}{{adverb}}{{verb}}, 经过{{noun}}, 试图找到藏有{{supplyNoun}}的{{stashNoun}}. 然而我只发现{{survivorName}}在和{{noun}}争论{{entryNameA}}是否比{{entryNameB}}重要. 我们谁都没注意到{{dangerNoun}}{{verb}}, 直到{{omenNoun}}发出像{{exclamation}}的声音.\n\n{{openerName}}该把{{entryNameA}}藏在{{stashNoun}}里, 只用{{entryNameB}}换{{supplyNoun}}, 道路看起来{{adjective}}时, 千万别信{{traitName}}. 然而现在路总是看起来{{adjective}}. 这不是警告, 这已经成了一种天气. 这里的天气{{adverb}}{{verb}}, {{noun}}跟着{{verb}}, {{dangerNoun}}{{verb}}, 直到{{exclamation}}不再从人们口中说出, 而是直接被人们的耳朵听到."
  },
+ "UI.json|UI_BurdJournals_LoreTemplate_WornPages": {
+  "as1_value": "看来{{openerName}}找到了这个, {{authorName}}觉得或许这些纸页会比我们两个都活得更久. 我把{{entryName}}的笔记藏在{{stashNoun}}后面, 在{{noun}}{{verb}}{{adverb}}后面.",
+  "reason": "2026-08-24 release cn-diff 複核：As1 把 EN 的時間 after 譯成第二個「后面」，填 {{noun}}{{verb}}{{adverb}} 後變成空間用法；改「之后」；CH 已同步／仍成立，review hash 已登記。",
+  "value": "看来{{openerName}}找到了这个, {{authorName}}觉得或许这些纸页会比我们两个都活得更久. 我把{{entryName}}的笔记藏在{{stashNoun}}后面, 在{{noun}}{{verb}}{{adverb}}之后."
+ },
  "UI.json|UI_BurdJournals_LoreTemplate_WornPharmacyLine": {
   "as1_value": "药房门口的队, 天还没亮就把整栋楼绕了一圈. 人们冲着袖子咳嗽, 冲着围巾咳嗽, 冲着自己的手掌心咳嗽. 后来卷帘门迟迟没开, 他们又用那双手去推搡别人. 有个警察说药品会公平分发, 扭头就悄悄塞了一袋给他表亲. 我目睹着公平沦为虚伪的谣言, 因此写下了这些笔记. {{entryNameA}}或许能帮到{{openerName}}, 这比任何一瓶药都管用. 遗憾的是我没能尽早学会{{entryNameB}}, 没能在{{supplyNoun}}变成硬通货之前就学会.",
   "reason": "採用 As1 但在「塞了一袋给他表亲.」之後還原段落分隔（As1 把 EN 的兩段合成一整段，換行數 2→0）。",
   "value": "药房门口的队, 天还没亮就把整栋楼绕了一圈. 人们冲着袖子咳嗽, 冲着围巾咳嗽, 冲着自己的手掌心咳嗽. 后来卷帘门迟迟没开, 他们又用那双手去推搡别人. 有个警察说药品会公平分发, 扭头就悄悄塞了一袋给他表亲.\n\n我目睹着公平沦为虚伪的谣言, 因此写下了这些笔记. {{entryNameA}}或许能帮到{{openerName}}, 这比任何一瓶药都管用. 遗憾的是我没能尽早学会{{entryNameB}}, 没能在{{supplyNoun}}变成硬通货之前就学会."
+ },
+ "UI.json|UI_BurdJournals_LoreTemplate_WornProfession": {
+  "as1_value": "身为一名{{professionName}}教会了我{{skillNameA}}, 但真正在这{{adjective}}的时让我活下来的, 是{{traitName}}. 剩下内容的写在页边空白里.",
+  "reason": "2026-08-24 release cn-diff 複核：As1「的时」缺「候」、「内容的写」語法錯；標點性變更不能背書這兩處破句；CH 已同步／仍成立，review hash 已登記。",
+  "value": "身为一名{{professionName}}教会了我{{skillNameA}}, 但真正在这{{adjective}}的时候让我活下来的, 是{{traitName}}. 剩下内容写在页边空白里."
  },
  "UI.json|UI_BurdJournals_LoreTemplate_WornRadioLog": {
   "as1_value": "直到应急电台开始一遍遍地重复昨天的天气之前, {{authorName}}一直在记录各类电台的播送内容. 应急电台要我们就地避难, 政府电台要我们服从指挥, 也有精疲力竭的记者试图赶在手机信号被拦截之前警告我们, 通往南方的道路已经不复存在.\n\n我尽量简洁地记下了其中一些有用的信息: 用{{entryNameA}}武装你的双手, 用{{entryNameB}}武装你的头脑, 还有记得留意{{supplyNoun}}, 如果你找得到的话. 如果{{openerName}}在电台里听到, 有人用冷静的口吻许诺撤离的到来, 记得留意一下那声音是否还会呼吸.",
