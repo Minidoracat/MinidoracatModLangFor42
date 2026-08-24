@@ -9146,6 +9146,87 @@
     "en": "Not enough space to unload the container here.",
     "ch": "這裡空間不足, 無法卸下貨櫃.",
     "cn": "这里空间不足, 无法卸载集装箱."
+   },
+   "IGUI_OC_ChangeDisplayCategory": {
+    "en": "Change display category...",
+    "ch": "變更顯示分類…",
+    "cn": "更改显示分类…"
+   },
+   "IGUI_OC_ChangeDisplayCategory_apply": {
+    "en": "Apply",
+    "ch": "套用",
+    "cn": "应用"
+   },
+   "IGUI_OC_ChangeDisplayCategory_current": {
+    "en": "Current: %1",
+    "ch": "目前: %1",
+    "cn": "当前: %1"
+   },
+   "IGUI_OC_ChangeDisplayCategory_custom": {
+    "en": "Custom",
+    "ch": "自訂",
+    "cn": "自定义"
+   },
+   "IGUI_OC_ChangeDisplayCategory_delete": {
+    "en": "Delete custom",
+    "ch": "刪除自訂",
+    "cn": "删除自定义"
+   },
+   "IGUI_OC_ChangeDisplayCategory_delete_confirm": {
+    "en": "Delete this override? Items will return to default.",
+    "ch": "要刪除這個覆寫嗎? 物品會回復為預設分類.",
+    "cn": "要删除这个覆盖吗? 物品会恢复为默认分类."
+   },
+   "IGUI_OC_ChangeDisplayCategory_delete_tt": {
+    "en": "Delete the selected custom display category. Items using it return to the organizedCategories default.",
+    "ch": "刪除所選的自訂顯示分類. 使用該分類的物品會回復為 organizedCategories 的預設分類.",
+    "cn": "删除所选的自定义显示分类. 使用该分类的物品会恢复为 organizedCategories 的默认分类."
+   },
+   "IGUI_OC_ChangeDisplayCategory_filter": {
+    "en": "Filter or enter a custom category",
+    "ch": "篩選或輸入自訂分類",
+    "cn": "筛选或输入自定义分类"
+   },
+   "IGUI_OC_ChangeDisplayCategory_item": {
+    "en": "Item: %1",
+    "ch": "物品: %1",
+    "cn": "物品: %1"
+   },
+   "IGUI_OC_ChangeDisplayCategory_reset": {
+    "en": "Reset to default",
+    "ch": "重設為預設值",
+    "cn": "重置为默认值"
+   },
+   "IGUI_OC_ChangeDisplayCategory_thisInstance": {
+    "en": "Change only this item",
+    "ch": "只變更這一件物品",
+    "cn": "只更改这一件物品"
+   },
+   "IGUI_OC_ChangeDisplayCategory_thisInstance_tt": {
+    "en": "When checked, only the selected item is changed. When unchecked, every instance of this item type is changed.",
+    "ch": "勾選時只變更所選的那一件物品. 未勾選時, 這個物品類型的每一件都會一起變更.",
+    "cn": "勾选时只更改所选的那一件物品. 未勾选时, 这个物品类型的每一件都会一起更改."
+   },
+   "IGUI_OC_ChangeDisplayCategory_title": {
+    "en": "Change Display Category",
+    "ch": "變更顯示分類",
+    "cn": "更改显示分类"
+   },
+   "IGUI_perks_Left Side_Description": {
+    "en": "Knowledge of amputations on the left side of the body",
+    "ch": "關於身體左側截肢的知識",
+    "cn": "关于身体左侧截肢的知识",
+    "_note": "鍵名含空白為上游 perk 顯示名, 必須原樣保留; 句式對齊本體 IGUI_perks_Science_Description。"
+   },
+   "IGUI_perks_Prosthesis Familiarity_Description": {
+    "en": "Knowledge of limb prostheses",
+    "ch": "關於肢體假肢的知識",
+    "cn": "关于肢体假肢的知识"
+   },
+   "IGUI_perks_Right Side_Description": {
+    "en": "Knowledge of amputations on the right side of the body",
+    "ch": "關於身體右側截肢的知識",
+    "cn": "关于身体右侧截肢的知识"
    }
   },
   "ItemName.json": {
@@ -115208,6 +115289,23 @@
     "en": "Zagustin Hemostatic Drug Injector",
     "ch": "Zagustin 止血藥注射器",
     "cn": "Zagustin 止血药注射器"
+   },
+   "TikitownPower.BucketLimeSlurryForged": {
+    "en": "Lime Slurry - Forged",
+    "ch": "石灰漿 (鍛造)",
+    "cn": "石灰浆 (锻造)",
+    "_note": "上游把 TikitownPower.BucketCarvedLimeSlurryForged 改名為本鍵（同一物品）, 沿用舊鍵既有譯名; 家族 Forged 後綴一律譯「 (鍛造)」/「 (锻造)」。"
+   },
+   "beaniebabie.bb_seamore": {
+    "en": "Seamore the Seal",
+    "ch": "海豹希摩爾",
+    "cn": "海豹希摩尔",
+    "_note": "家族命名式「<動物>+<名字>」(bb_cheezer 小鼠奇茲); Seamore 取音譯「希摩爾」/「希摩尔」。"
+   },
+   "beaniebabie.bb_seamore_tag": {
+    "en": "Seamore the Seal",
+    "ch": "海豹希摩爾",
+    "cn": "海豹希摩尔"
    }
   },
   "Items.json": {},
@@ -124770,6 +124868,32 @@
     "en": "Convert to Carton of 12ga Slug Rounds",
     "ch": "轉換為12ga獨頭彈 (整箱)",
     "cn": "转换为12ga独头弹 (整箱)"
+   },
+   "TakeTagOffSeamore": {
+    "en": "Take Tag Off Seamore",
+    "ch": "取下海豹希摩爾的標籤",
+    "cn": "取下海豹希摩尔的标签"
+   },
+   "CreateEmptyJarLabeled": {
+    "en": "Place Label On Jar",
+    "ch": "將標籤貼上罐子",
+    "cn": "将标签贴到罐子上"
+   },
+   "MakePemmicanMeat2": {
+    "en": "Make Pemmican In Bulk (4)",
+    "ch": "批次製作乾肉餅 (4)",
+    "cn": "批量制作干肉饼 (4)",
+    "_note": "「乾肉餅」/「干肉饼」對齊 ItemName Base.Pemmican 與 MakeJar6; 同 mod 舊鍵 MakePemmicanMeat 的「肉乾餅」是既有不一致, 本鍵不沿用。"
+   },
+   "OpenSaltJar": {
+    "en": "Open Jar of Salt",
+    "ch": "開啟罐裝鹽",
+    "cn": "打开罐装盐"
+   },
+   "RemoveJarLabel": {
+    "en": "Remove Jar Label From Jar",
+    "ch": "從罐子上撕下標籤",
+    "cn": "从罐子上撕下标签"
    }
   },
   "Sandbox.json": {
@@ -131704,6 +131828,259 @@
     "en": "Outline linked garage doors and gates while hovering a remote or controller, using radial menus, or browsing the manager windows. Turn off and nothing is ever marked.",
     "ch": "將滑鼠懸停在遙控器或控制器上, 使用徑向選單, 或瀏覽管理器視窗時, 會為已連結的車庫門與大門顯示世界高亮. 關閉後就不會再標示任何東西.",
     "cn": "将鼠标悬停在遥控器或控制器上, 使用径向菜单, 或浏览管理器窗口时, 会为已连接的车库门与大门显示世界高亮. 关闭后就不会再标记任何东西."
+   },
+   "Sandbox_NnC_DevPrint": {
+    "en": "Debug Counter Readout.",
+    "ch": "除錯計數器輸出.",
+    "cn": "调试计数器输出."
+   },
+   "Sandbox_NnC_DevPrint_tooltip": {
+    "en": "Prints one group of the mod's internal counters to the console every ten in-game minutes. For troubleshooting; leave Off for normal play.<br>REBOOT NEEDED AFTER CHANGE",
+    "ch": "每十分鐘遊戲時間, 把模組其中一組內部計數器輸出到主控台. 供排查問題用; 正常遊玩請保持關閉.<br>變更後需重新啟動遊戲",
+    "cn": "每十分钟游戏时间, 把模组其中一组内部计数器输出到控制台. 供排查问题用; 正常游玩请保持关闭.<br>更改后需重启游戏"
+   },
+   "Sandbox_NnC_DevPrintValues_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_NnC_DevPrintValues_option2": {
+    "en": "Addiction counters",
+    "ch": "成癮計數器",
+    "cn": "成瘾计数器"
+   },
+   "Sandbox_NnC_DevPrintValues_option3": {
+    "en": "Active effect counters",
+    "ch": "生效中效果計數器",
+    "cn": "生效中效果计数器"
+   },
+   "Sandbox_NnC_DevPrintValues_option4": {
+    "en": "Overdose counters",
+    "ch": "用藥過量計數器",
+    "cn": "用药过量计数器"
+   },
+   "Sandbox_GamestaNoVanillaVehicles": {
+    "en": "No Vanilla Vehicles",
+    "ch": "移除所有原版車輛",
+    "cn": "移除所有原版车辆",
+    "_note": "句式對齊同 mod 既有 Sandbox_GamestaNoGoodCars「移除所有'完好'的車輛」。"
+   },
+   "Sandbox_GamestaNoVanillaVehicles_tooltip": {
+    "en": "Prevents ALL Vanilla Vehicles from Spawning if Enabled (including Jackie Jaye's LBMW Radio Van).",
+    "ch": "啟用後將阻止所有原版車輛生成 (包含傑基·傑伊的 LBMW 衛星廣播車).",
+    "cn": "启用后将阻止所有原版车辆生成 (包括杰基·杰伊的LBMW卫星广播车).",
+    "_note": "車名沿用已出貨的 IGUI_VehicleNameVanRadioJJ。"
+   },
+   "Sandbox_LTP": {
+    "en": "LTP Extended",
+    "ch": "長期保存擴充",
+    "cn": "长期保存扩展",
+    "_note": "沙盒分頁標題; 名稱取 mod_names_zh 的「長期保存擴充」(Long Term Preservation Extended)。"
+   },
+   "Sandbox_LTP_AvocadoSpreadSpoilageMultiplier": {
+    "en": "Spoilage: Avocado Spread",
+    "ch": "變質: 酪梨醬",
+    "cn": "变质: 牛油果酱"
+   },
+   "Sandbox_LTP_AvocadoSpreadSpoilageMultiplier_option1": {
+    "en": "Never Expires",
+    "ch": "永不過期",
+    "cn": "永不过期"
+   },
+   "Sandbox_LTP_AvocadoSpreadSpoilageMultiplier_option2": {
+    "en": "Very Slow (240 Days)",
+    "ch": "極慢 (240 天)",
+    "cn": "极慢 (240 天)"
+   },
+   "Sandbox_LTP_AvocadoSpreadSpoilageMultiplier_option3": {
+    "en": "Slow (120 Days)",
+    "ch": "慢 (120 天)",
+    "cn": "慢 (120 天)"
+   },
+   "Sandbox_LTP_AvocadoSpreadSpoilageMultiplier_option4": {
+    "en": "Normal (60 Days)",
+    "ch": "普通 (60 天)",
+    "cn": "普通 (60 天)"
+   },
+   "Sandbox_LTP_AvocadoSpreadSpoilageMultiplier_option5": {
+    "en": "Fast (30 Days)",
+    "ch": "快 (30 天)",
+    "cn": "快 (30 天)"
+   },
+   "Sandbox_LTP_AvocadoSpreadSpoilageMultiplier_option6": {
+    "en": "Very Fast (12 Days)",
+    "ch": "極快 (12 天)",
+    "cn": "极快 (12 天)"
+   },
+   "Sandbox_LTP_AvocadoSpreadSpoilageMultiplier_tooltip": {
+    "en": "Days till 'Rotten' measured in days.",
+    "ch": "距離'腐爛'的天數.",
+    "cn": "距离'腐烂'的天数."
+   },
+   "Sandbox_LTP_JamSpreadSpoilageMultiplier": {
+    "en": "Spoilage: Jam Spread",
+    "ch": "變質: 果醬",
+    "cn": "变质: 果酱"
+   },
+   "Sandbox_LTP_JamSpreadSpoilageMultiplier_option1": {
+    "en": "Never Expires",
+    "ch": "永不過期",
+    "cn": "永不过期"
+   },
+   "Sandbox_LTP_JamSpreadSpoilageMultiplier_option2": {
+    "en": "Very Slow (1460 Days)",
+    "ch": "極慢 (1460 天)",
+    "cn": "极慢 (1460 天)"
+   },
+   "Sandbox_LTP_JamSpreadSpoilageMultiplier_option3": {
+    "en": "Slow (730 Days)",
+    "ch": "慢 (730 天)",
+    "cn": "慢 (730 天)"
+   },
+   "Sandbox_LTP_JamSpreadSpoilageMultiplier_option4": {
+    "en": "Normal (365 Days)",
+    "ch": "普通 (365 天)",
+    "cn": "普通 (365 天)"
+   },
+   "Sandbox_LTP_JamSpreadSpoilageMultiplier_option5": {
+    "en": "Fast (183 Days)",
+    "ch": "快 (183 天)",
+    "cn": "快 (183 天)"
+   },
+   "Sandbox_LTP_JamSpreadSpoilageMultiplier_option6": {
+    "en": "Very Fast (73 Days)",
+    "ch": "極快 (73 天)",
+    "cn": "极快 (73 天)"
+   },
+   "Sandbox_LTP_JamSpreadSpoilageMultiplier_tooltip": {
+    "en": "Days till 'Rotten' measured in days.",
+    "ch": "距離'腐爛'的天數.",
+    "cn": "距离'腐烂'的天数."
+   },
+   "Sandbox_LTP_MincedGarlicSpoilageMultiplier": {
+    "en": "Spoilage: Minced Garlic",
+    "ch": "變質: 蒜末",
+    "cn": "变质: 蒜蓉"
+   },
+   "Sandbox_LTP_MincedGarlicSpoilageMultiplier_option1": {
+    "en": "Never Expires",
+    "ch": "永不過期",
+    "cn": "永不过期"
+   },
+   "Sandbox_LTP_MincedGarlicSpoilageMultiplier_option2": {
+    "en": "Very Slow (480 Days)",
+    "ch": "極慢 (480 天)",
+    "cn": "极慢 (480 天)"
+   },
+   "Sandbox_LTP_MincedGarlicSpoilageMultiplier_option3": {
+    "en": "Slow (240 Days)",
+    "ch": "慢 (240 天)",
+    "cn": "慢 (240 天)"
+   },
+   "Sandbox_LTP_MincedGarlicSpoilageMultiplier_option4": {
+    "en": "Normal (120 Days)",
+    "ch": "普通 (120 天)",
+    "cn": "普通 (120 天)"
+   },
+   "Sandbox_LTP_MincedGarlicSpoilageMultiplier_option5": {
+    "en": "Fast (60 Days)",
+    "ch": "快 (60 天)",
+    "cn": "快 (60 天)"
+   },
+   "Sandbox_LTP_MincedGarlicSpoilageMultiplier_option6": {
+    "en": "Very Fast (24 Days)",
+    "ch": "極快 (24 天)",
+    "cn": "极快 (24 天)"
+   },
+   "Sandbox_LTP_MincedGarlicSpoilageMultiplier_tooltip": {
+    "en": "Days till 'Rotten' measured in days.",
+    "ch": "距離'腐爛'的天數.",
+    "cn": "距离'腐烂'的天数."
+   },
+   "Sandbox_LTP_NutSpreadSpoilageMultiplier": {
+    "en": "Spoilage: Nut Spread",
+    "ch": "變質: 堅果醬",
+    "cn": "变质: 坚果酱"
+   },
+   "Sandbox_LTP_NutSpreadSpoilageMultiplier_option1": {
+    "en": "Never Expires",
+    "ch": "永不過期",
+    "cn": "永不过期"
+   },
+   "Sandbox_LTP_NutSpreadSpoilageMultiplier_option2": {
+    "en": "Very Slow (1460 Days)",
+    "ch": "極慢 (1460 天)",
+    "cn": "极慢 (1460 天)"
+   },
+   "Sandbox_LTP_NutSpreadSpoilageMultiplier_option3": {
+    "en": "Slow (730 Days)",
+    "ch": "慢 (730 天)",
+    "cn": "慢 (730 天)"
+   },
+   "Sandbox_LTP_NutSpreadSpoilageMultiplier_option4": {
+    "en": "Normal (365 Days)",
+    "ch": "普通 (365 天)",
+    "cn": "普通 (365 天)"
+   },
+   "Sandbox_LTP_NutSpreadSpoilageMultiplier_option5": {
+    "en": "Fast (183 Days)",
+    "ch": "快 (183 天)",
+    "cn": "快 (183 天)"
+   },
+   "Sandbox_LTP_NutSpreadSpoilageMultiplier_option6": {
+    "en": "Very Fast (73 Days)",
+    "ch": "極快 (73 天)",
+    "cn": "极快 (73 天)"
+   },
+   "Sandbox_LTP_NutSpreadSpoilageMultiplier_tooltip": {
+    "en": "Days till 'Rotten' measured in days.",
+    "ch": "距離'腐爛'的天數.",
+    "cn": "距离'腐烂'的天数."
+   },
+   "Sandbox_LTP_CannedPemmicanSpoilageMultiplier": {
+    "en": "Spoilage: Canned Pemmican",
+    "ch": "變質: 罐裝乾肉餅",
+    "cn": "变质: 罐装干肉饼"
+   },
+   "Sandbox_LTP_CuredMeatSpoilageMultiplier": {
+    "en": "Spoilage: Cured Meat",
+    "ch": "變質: 醃肉",
+    "cn": "变质: 腌肉"
+   },
+   "Sandbox_LTP_PemmicanSpoilageMultiplier": {
+    "en": "Spoilage: Pemmican",
+    "ch": "變質: 乾肉餅",
+    "cn": "变质: 干肉饼"
+   },
+   "Sandbox_LTP_Spoilage_option1": {
+    "en": "Never Expires",
+    "ch": "永不過期",
+    "cn": "永不过期"
+   },
+   "Sandbox_LTP_Spoilage_option2": {
+    "en": "Very Slow (2400 Days)",
+    "ch": "極慢 (2400 天)",
+    "cn": "极慢 (2400 天)"
+   },
+   "Sandbox_LTP_Spoilage_option3": {
+    "en": "Slow (1200 Days)",
+    "ch": "慢 (1200 天)",
+    "cn": "慢 (1200 天)"
+   },
+   "Sandbox_LTP_Spoilage_option4": {
+    "en": "Normal (600 Days)",
+    "ch": "普通 (600 天)",
+    "cn": "普通 (600 天)"
+   },
+   "Sandbox_LTP_Spoilage_option5": {
+    "en": "Fast (300 Days)",
+    "ch": "快 (300 天)",
+    "cn": "快 (300 天)"
+   },
+   "Sandbox_LTP_Spoilage_option6": {
+    "en": "Very Fast (120 Days)",
+    "ch": "極快 (120 天)",
+    "cn": "极快 (120 天)"
    }
   },
   "Tooltip.json": {
@@ -142797,6 +143174,197 @@
     "en": "Use Remote",
     "ch": "使用遙控器",
     "cn": "使用遥控器"
+   },
+   "UI_OC_ClearDisplayOverrides": {
+    "en": "Clear all display category overrides",
+    "ch": "清除所有顯示分類覆寫",
+    "cn": "清除所有显示分类覆盖"
+   },
+   "UI_OC_ClearDisplayOverrides_confirm": {
+    "en": "Clear all saved display category overrides and restore organizedCategories defaults?",
+    "ch": "要清除所有已儲存的顯示分類覆寫, 並回復 organizedCategories 的預設值嗎?",
+    "cn": "要清除所有已保存的显示分类覆盖, 并恢复 organizedCategories 的默认值吗?"
+   },
+   "UI_OC_ClearDisplayOverrides_tooltip": {
+    "en": "Removes every saved manual DisplayCategory remap and restores the organizedCategories defaults. Takes effect immediately.",
+    "ch": "移除所有已儲存的手動 DisplayCategory 重新對應, 並回復 organizedCategories 的預設值. 立即生效.",
+    "cn": "移除所有已保存的手动 DisplayCategory 重新映射, 并恢复 organizedCategories 的默认值. 立即生效."
+   },
+   "UI_OC_PerSaveDisplayOverrides": {
+    "en": "Manual overrides: persist only per save",
+    "ch": "手動覆寫: 僅保留於目前存檔",
+    "cn": "手动覆盖: 仅保留于当前存档"
+   },
+   "UI_OC_PerSaveDisplayOverrides_tooltip": {
+    "en": "When enabled, manual display-category overrides are stored with the current save instead of applying to every save.",
+    "ch": "啟用後, 手動的顯示分類覆寫會隨目前存檔一起儲存, 而不會套用到所有存檔.",
+    "cn": "启用后, 手动的显示分类覆盖会随当前存档一起保存, 而不会应用到所有存档."
+   },
+   "UI_OC_SessionOnlyDisplayOverrides": {
+    "en": "Manual overrides: persist only per session",
+    "ch": "手動覆寫: 僅保留於本次遊戲",
+    "cn": "手动覆盖: 仅保留于本次游戏"
+   },
+   "UI_OC_SessionOnlyDisplayOverrides_tooltip": {
+    "en": "When enabled, overrides last only until you load another save or quit. Takes effect after a reload.",
+    "ch": "啟用後, 覆寫只在你讀取其他存檔或離開遊戲之前有效. 重新載入後生效.",
+    "cn": "启用后, 覆盖只在你读取其他存档或退出游戏之前有效. 重新加载后生效."
+   },
+   "UI_OC_AlphabeticalCategorySort_tooltip": {
+    "en": "When enabled, inventory Sort by Category orders groups A-Z by their names (Ammunition, Clothing, Drug...). When disabled, organizedCategories uses its designed order (weapons first, junk last). Takes effect immediately.",
+    "ch": "啟用後, 物品欄的「依分類排序」會照分類名稱 A-Z 排列 (彈藥, 衣物, 藥物…). 停用時 organizedCategories 會採用自己設計的順序 (武器在前, 雜物在後). 立即生效.",
+    "cn": "启用后, 物品栏的“按分类排序”会照分类名称 A-Z 排列 (弹药, 衣物, 药物…). 禁用时 organizedCategories 会采用自己设计的顺序 (武器在前, 杂物在后). 立即生效."
+   },
+   "UI_OC_ModOptions": {
+    "en": "OrganizedCategories",
+    "ch": "organizedCategories",
+    "cn": "organizedCategories",
+    "_note": "EN 就是模組名本身 (Workshop 顯示名 organizedCategories: Core), 屬專有名詞; 同 mod_names_zh 慣例保留拉丁原名, 不另造中文譯名。"
+   },
+   "UI_OC_UseItemNames": {
+    "en": "Use organizedCategories item names",
+    "ch": "使用 organizedCategories 的物品名稱",
+    "cn": "使用 organizedCategories 的物品名称"
+   },
+   "UI_OC_UseItemNames_tooltip": {
+    "en": "When enabled, organizedCategories replaces item display names (Type - Permutation). Turn this off to keep vanilla and other mods' names. Takes effect after a reload.",
+    "ch": "啟用後, organizedCategories 會取代物品的顯示名稱 (類型 - 變體). 關閉此選項可保留原版與其他模組的名稱. 重新載入後生效.",
+    "cn": "启用后, organizedCategories 会替换物品的显示名称 (类型 - 变体). 关闭此选项可保留原版与其他模组的名称. 重新加载后生效."
+   },
+   "UI_UH1B_Attach_Dual_Chopper": {
+    "en": "Attach load (dual hook)",
+    "ch": "掛載貨物 (雙掛鉤)",
+    "cn": "挂载货物 (双挂钩)",
+    "_note": "直升機吊掛作業; 語料既有 hook 一律譯「掛鉤」/「挂钩」(IGUI_VehiclePartFRTrailerHitch 拖車掛鉤)。"
+   },
+   "UI_TABAS_Auto": {
+    "en": "Auto",
+    "ch": "自動",
+    "cn": "自动",
+    "_note": "對齊既有 ContextMenu_TABAS_BathSessionAuto「自動沐浴」/「自动沐浴」。"
+   },
+   "UI_TABAS_Manual": {
+    "en": "Manual",
+    "ch": "手動",
+    "cn": "手动"
+   },
+   "UI_LTP_Age": {
+    "en": "Age: %1",
+    "ch": "存放時間: %1",
+    "cn": "存放时间: %1",
+    "_note": "上游 EN 落在 UI_EN.json (Translator 不載入的死檔名), 譯文落可載入的 UI.json 才會生效。"
+   },
+   "UI_LTP_CheckExpiry": {
+    "en": "Check Expiry Date",
+    "ch": "檢視保存期限",
+    "cn": "查看保质期"
+   },
+   "UI_LTP_FoodExpiry": {
+    "en": "Food Expiry",
+    "ch": "食物保存期限",
+    "cn": "食物保质期",
+    "_note": "對齊既有 UI_eris_food_expiry「食物保存期限」/「食物保质期」。"
+   },
+   "UI_LTP_ModOptions_Title": {
+    "en": "Long Term Preservation Extended",
+    "ch": "長期保存擴充",
+    "cn": "长期保存扩展"
+   },
+   "UI_LTP_PopupDuration": {
+    "en": "Expiry Popup Duration",
+    "ch": "保存期限提示顯示時間",
+    "cn": "保质期提示显示时长"
+   },
+   "UI_LTP_PopupDuration_Tooltip": {
+    "en": "How long the food expiry information popup remains visible.",
+    "ch": "食物保存期限資訊提示視窗會顯示多久.",
+    "cn": "食物保质期信息提示窗口会显示多久."
+   },
+   "UI_LTP_Reached": {
+    "en": "reached",
+    "ch": "已達到",
+    "cn": "已达到"
+   },
+   "UI_LTP_Rotten": {
+    "en": "Rotten: %1",
+    "ch": "腐爛: %1",
+    "cn": "腐烂: %1"
+   },
+   "UI_LTP_RottenIn": {
+    "en": "Rotten in: %1",
+    "ch": "腐爛倒數: %1",
+    "cn": "腐烂倒数: %1"
+   },
+   "UI_LTP_Seconds_3": {
+    "en": "3 seconds",
+    "ch": "3 秒",
+    "cn": "3 秒"
+   },
+   "UI_LTP_Seconds_5": {
+    "en": "5 seconds",
+    "ch": "5 秒",
+    "cn": "5 秒"
+   },
+   "UI_LTP_Seconds_8": {
+    "en": "8 seconds",
+    "ch": "8 秒",
+    "cn": "8 秒"
+   },
+   "UI_LTP_Seconds_10": {
+    "en": "10 seconds",
+    "ch": "10 秒",
+    "cn": "10 秒"
+   },
+   "UI_LTP_Seconds_12": {
+    "en": "12 seconds",
+    "ch": "12 秒",
+    "cn": "12 秒"
+   },
+   "UI_LTP_Seconds_15": {
+    "en": "15 seconds",
+    "ch": "15 秒",
+    "cn": "15 秒"
+   },
+   "UI_LTP_Seconds_20": {
+    "en": "20 seconds",
+    "ch": "20 秒",
+    "cn": "20 秒"
+   },
+   "UI_LTP_Stale": {
+    "en": "Stale: %1",
+    "ch": "不新鮮: %1",
+    "cn": "不新鲜: %1"
+   },
+   "UI_LTP_StaleIn": {
+    "en": "Stale in: %1",
+    "ch": "不新鮮倒數: %1",
+    "cn": "不新鲜倒数: %1",
+    "_note": "對齊既有 UI_mod_eris_food_expiry_stale_label「不新鮮倒數:」/「不新鲜倒数:」。"
+   },
+   "UI_LTP_Status": {
+    "en": "Status: %1",
+    "ch": "狀態: %1",
+    "cn": "状态: %1"
+   },
+   "UI_LTP_StatusFresh": {
+    "en": "FRESH",
+    "ch": "新鮮",
+    "cn": "新鲜"
+   },
+   "UI_LTP_StatusRotten": {
+    "en": "ROTTEN",
+    "ch": "腐爛",
+    "cn": "腐烂"
+   },
+   "UI_LTP_StatusStale": {
+    "en": "STALE",
+    "ch": "不新鮮",
+    "cn": "不新鲜"
+   },
+   "UI_LTP_UnableToReadExpiry": {
+    "en": "Unable to read vanilla food data.",
+    "ch": "無法讀取原版食物資料.",
+    "cn": "无法读取原版食物数据."
    }
   },
   "MakeUp.json": {
@@ -144157,6 +144725,88 @@
     "en": "On the Verge",
     "ch": "瀕臨極限",
     "cn": "濒临极限"
+   },
+   "Moodles_NnCMethadone_Good_desc_lvl1": {
+    "en": "Withdrawal held off. Less than 6 hours left.",
+    "ch": "戒斷反應暫時被壓住了. 剩餘不到 6 小時.",
+    "cn": "戒断反应暂时被压住了. 剩余不到 6 小时."
+   },
+   "Moodles_NnCSteroid_Good_desc_lvl1": {
+    "en": "Less than 6 hours left.",
+    "ch": "剩餘不到 6 小時.",
+    "cn": "剩余不到 6 小时."
+   },
+   "Moodles_NnCMethadone_Good_desc_lvl2": {
+    "en": "Withdrawal held off. 6-12 hours left.",
+    "ch": "戒斷反應暫時被壓住了. 剩餘 6-12 小時.",
+    "cn": "戒断反应暂时被压住了. 剩余 6-12 小时."
+   },
+   "Moodles_NnCSteroid_Good_desc_lvl2": {
+    "en": "6-12 hours left.",
+    "ch": "剩餘 6-12 小時.",
+    "cn": "剩余 6-12 小时."
+   },
+   "Moodles_NnCMethadone_Good_desc_lvl3": {
+    "en": "Withdrawal held off. 12-18 hours left.",
+    "ch": "戒斷反應暫時被壓住了. 剩餘 12-18 小時.",
+    "cn": "戒断反应暂时被压住了. 剩余 12-18 小时."
+   },
+   "Moodles_NnCSteroid_Good_desc_lvl3": {
+    "en": "12-18 hours left.",
+    "ch": "剩餘 12-18 小時.",
+    "cn": "剩余 12-18 小时."
+   },
+   "Moodles_NnCMethadone_Good_desc_lvl4": {
+    "en": "Withdrawal held off. 18-24 hours left.",
+    "ch": "戒斷反應暫時被壓住了. 剩餘 18-24 小時.",
+    "cn": "戒断反应暂时被压住了. 剩余 18-24 小时."
+   },
+   "Moodles_NnCSteroid_Good_desc_lvl4": {
+    "en": "18-24 hours left.",
+    "ch": "剩餘 18-24 小時.",
+    "cn": "剩余 18-24 小时."
+   },
+   "Moodles_NnCMethadone_Good_lvl1": {
+    "en": "Medicated",
+    "ch": "用藥中",
+    "cn": "用药中",
+    "_note": "美沙冬 moodle 四級 EN 同為 Medicated, 譯名一致; 語意取 desc「戒斷反應暫時被壓住」＝正在藥效控制下。"
+   },
+   "Moodles_NnCSteroid_Good_lvl1": {
+    "en": "Juiced",
+    "ch": "類固醇加持",
+    "cn": "类固醇加持",
+    "_note": "EN 俚語 Juiced＝正在用類固醇; 四級同文。中文無對等俚語, 取直白且兩岸通用的「類固醇加持」/「类固醇加持」。"
+   },
+   "Moodles_NnCMethadone_Good_lvl2": {
+    "en": "Medicated",
+    "ch": "用藥中",
+    "cn": "用药中"
+   },
+   "Moodles_NnCSteroid_Good_lvl2": {
+    "en": "Juiced",
+    "ch": "類固醇加持",
+    "cn": "类固醇加持"
+   },
+   "Moodles_NnCMethadone_Good_lvl3": {
+    "en": "Medicated",
+    "ch": "用藥中",
+    "cn": "用药中"
+   },
+   "Moodles_NnCSteroid_Good_lvl3": {
+    "en": "Juiced",
+    "ch": "類固醇加持",
+    "cn": "类固醇加持"
+   },
+   "Moodles_NnCMethadone_Good_lvl4": {
+    "en": "Medicated",
+    "ch": "用藥中",
+    "cn": "用药中"
+   },
+   "Moodles_NnCSteroid_Good_lvl4": {
+    "en": "Juiced",
+    "ch": "類固醇加持",
+    "cn": "类固醇加持"
    }
   },
   "Moveables.json": {},

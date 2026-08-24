@@ -1074,6 +1074,11 @@
   "reason": "As1「先移除%1再移除%2」丟掉 EN 的 before 因果與句末句點, 讀成兩步流程而非前置條件.",
   "value": "请先移除 %1, 才能移除 %2."
  },
+ "IG_UI.json|IGUI_AnimalType_filly": {
+  "as1_value": "小母马",
+  "reason": "上游把本鍵的 EN 由 filly（小母馬）改成 Foal（幼駒, 不分性別）; As1 值「小母马」已與現行 EN 不符。與同家族 IGUI_AnimalType_mare=母马、_stallion=公马 並列取「马驹」。",
+  "value": "马驹"
+ },
  "IG_UI.json|IGUI_Barrels": {
   "as1_value": "燃料桶",
   "reason": "GeneratorPlus 3597471949 獨有鍵，EN 'barrels' 為發電機資訊視窗計數量詞（barrelCount 拼接），mod 自帶 CN「个桶」；計數語境「5 燃料桶」不自然，對齊作者自帶譯法",
@@ -2121,8 +2126,8 @@
  },
  "IG_UI.json|IGUI_HorseMod_MeatballWarning": {
   "as1_value": "警告: 马匹模组未能正常加载! <br>你必须在游戏主菜单启用马匹模组并重启游戏, 否则马匹动画会糊成一团 (即'肉球化 Bug') <br> 遇到此问题请勿报错, 请仔细查阅模组创意工坊页面顶部的警告说明. ",
-  "reason": "As1 加上 EN 沒有的「警告:」開頭, 並把作者刻意保留、模組頁面會引用的術語 'meatballing' 改寫成「糊成一团」; 本鍵是作者原話, 不應加料.",
-  "value": "马匹模组没有正确加载. <br>你必须在主菜单启用马匹模组后重新启动游戏, 否则动画会因为我们称为 'meatballing' 的问题而失效. <br>这个问题的错误回报不会受理. 请见模组页面最上方的警告."
+  "reason": "上游 42.20 改寫本警告並新增 <PUSHRGB:1,0,0>／<POPRGB>／<IMAGECENTRE:…meatball_fix_image_guide.png,900,300> 標記; As1 值既缺這些標記, 又加上 EN 沒有的「警告:」開頭, 並把作者刻意保留、模組頁面會引用的術語 'meatball' 改寫成「糊成一团」。本鍵是作者原話, 標記須逐字保留、術語不加料。",
+  "value": "马匹模组没有正确加载, 马匹会 'meatball' (糊成一团). <br><PUSHRGB:1,0,0>请前往主菜单, 进入“模组”并启用 Horse Mod, 最后重新启动游戏即可正常运行. <POPRGB> <br>此问题的错误报告不会受理, 这是原版游戏的问题. 请见模组页面最上方的警告.<br> <IMAGECENTRE:media/ui/HorseMod/meatball_fix_image_guide.png,900,300>"
  },
  "IG_UI.json|IGUI_HorseMod_MultiplayerWarning": {
   "as1_value": "注意: 马匹模组不支持多人联机!<br>在联机服务器里马匹无法正常工作, 甚至可能导致你的游戏存档出现奇奇怪怪的严重Bug. <br>强烈建议你在联机时关掉这个模组. <br>汉化组和原作者均不接收任何关于多人联机的Bug反馈. ",
@@ -12326,8 +12331,8 @@
  },
  "Sandbox.json|Sandbox_StartingInjuriesMod_EnableBlackoutExplosions_tooltip": {
   "as1_value": "勾选以启用命悬一线 (CDDA) 特质的初始火灾",
-  "reason": "EN 列 Blackout (CDDA) 與 Flaming Wreck 兩個特質, as1 整個漏掉後者且用被否決的「命悬一线」; own 的「断片 (CDDA)」「烈焰残骸」正是 cn_overrides 已登記的 UI_trait_Blackout／UI_trait_FlamingWreckage 出貨值。",
-  "value": "勾选以启用“断片 (CDDA)”与“烈焰残骸”特质的初始火灾."
+  "reason": "EN 現列 Blackout (CDDA), House Fire, Flaming Wreck 三個特質（42.20 新增 House Fire）, As1 只譯到「命悬一线 (CDDA)」一個且用了已被否決的譯名; 三個特質名一律沿用 cn_overrides 已登記的出貨值 UI_trait_Blackout=断片 (CDDA)、UI_trait_HouseFire=住宅起火、UI_trait_FlamingWreckage=烈焰残骸。",
+  "value": "勾选以启用“断片 (CDDA)”, “住宅起火”与“烈焰残骸”特质的初始火灾."
  },
  "Sandbox.json|Sandbox_ThugNotebookDistribution": {
   "as1_value": "暴徒笔记刷新率",
@@ -17768,6 +17773,11 @@
   "as1_value": "在蜜蜂周围保持冷静. 提高蜂巢操作效率和产量.",
   "reason": "同上，物件名應為「蜂箱」而非物品名「蜂巢」。",
   "value": "在蜜蜂旁能保持镇定. 蜂箱作业表现和产出均提升."
+ },
+ "UI.json|UI_trait_HouseFireDesc": {
+  "as1_value": "开局出生在正吞噬你房屋的熊熊大火中(多人游戏不可用)",
+  "reason": "上游 42.20 把括號說明由「Not functional in MP」改成「沙盒關閉火災時改為帶燒傷開局」; As1 值仍是舊的「多人游戏不可用」, 語意已與現行 EN 相反。燒傷用詞對齊 UI_trait_BurnPatient=烧伤未愈。",
+  "value": "开局时你的房子正被熊熊大火吞噬. (若沙盒关闭火灾选项, 则改为带着烧伤开局.)"
  },
  "UI.json|UI_trait_InsectHunterDesc": {
   "as1_value": "有着异于常人的昆虫发现能力, 别人看不到虫子时他也能找到. <br>提高在荒野中发现昆虫的几率. <br>[昆虫与鱼饵的采集加成 +30%%]",
