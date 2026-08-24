@@ -8,7 +8,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **549 個 Workshop 模組**（715 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
+共支援 **548 個 Workshop 模組**（715 個 mod ID）；另 **16 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -211,7 +211,6 @@
 | [[B42.18] Detailed Descriptions for Occupations and Traits](https://steamcommunity.com/sharedfiles/filedetails/?id=3387957272) | 職業與特質詳細描述 | 為職業與特質補充詳細說明，列出搜刮加成與專屬知識配方。 | `DetailedDescriptionsForOccupationsAndTraits` | 18 | ⚠️ ≥104 | — |
 | [[B42] Noir's Rifle Slings](https://steamcommunity.com/sharedfiles/filedetails/?id=3388107363) | Noir 的步槍背帶 | 新增武器背帶，可將槍械揹在右肩、左肩、頸部或背部。 | `noirrsling`, `noirrslingMutiple`, `noirrsling_HideSling` | 22 | — | — |
 | [Auto Tailoring](https://steamcommunity.com/sharedfiles/filedetails/?id=3388183573) | 自動縫紉 | 透過右鍵選單自動練習縫紉，並提示衣物破洞狀態。 | `AutoTailoring` | 4 | — | — |
-| [3388380529](https://steamcommunity.com/sharedfiles/filedetails/?id=3388380529) | Rain 的斧與刃 | 新增多款斧類與長刃武器並附「劍術愛好者」特質；原 Workshop 項目已下架無法存取（作者已退出模組製作）。 | — | 2 | — | — |
 | [RaccoonCityB42](https://steamcommunity.com/sharedfiles/filedetails/?id=3388468313) | RaccoonCityB42 | 以《惡靈古堡》拉昆市為主題的地圖模組，重現拉昆市街區場景。 | `RaccoonCityB42` | 2 | — | — |
 | [Auto Cook](https://steamcommunity.com/sharedfiles/filedetails/?id=3388721641) | 自動烹飪 | 自動製作餐點與烹飪原料，並依營養狀況提示碳水、脂肪攝取警告。 | `AutoCook` | 38 | — | — |
 | [Ammo Converter B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3388844065) | 彈藥轉換器 | 可將彈藥轉換為 .308、.357、.45 ACP 等多種口徑，支援整盒轉換。 | `AmmoConverterB42` | 18 | — | — |
@@ -562,7 +561,7 @@
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1338 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
-## 已下架模組（15 個，翻譯保留）
+## 已下架模組（16 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
@@ -571,6 +570,7 @@
 | [2959472220](https://steamcommunity.com/sharedfiles/filedetails/?id=2959472220) | FR Used Cars (中古車) | 新增中古車輛與大量車輛零件，如輪胎、保險桿、貨斗等改裝部件。 | `FRUsedCarsAlpha` | 384 | — | — | 2026-07-17 |
 | [3387222454](https://steamcommunity.com/sharedfiles/filedetails/?id=3387222454) | Rain 的槍械與槍械配件 | 新增槍械與配件，如消音器、前握把、彈藥帶、戰術手電筒等。 | `B42RainsFirearmsAndGunParts4213`, `B42RainsFirearmsAndGunPartsExpanded4213` | 137 | — | — | 2026-07-17 |
 | [3387474156](https://steamcommunity.com/sharedfiles/filedetails/?id=3387474156) | Logic 職業 | 新增植物學家、屠夫、偵探、獸醫等多種職業，各具專屬知識與配方。 | `LogicProfessions` | 55 | — | — | 2026-07-17 |
+| [3388380529](https://steamcommunity.com/sharedfiles/filedetails/?id=3388380529) | Rain 的斧與刃 | 新增多款斧類與長刃武器並附「劍術愛好者」特質；原 Workshop 項目已下架無法存取（作者已退出模組製作）。 | — | 2 | — | — | 2026-08-24 |
 | [3389805754](https://steamcommunity.com/sharedfiles/filedetails/?id=3389805754) | 武士刀刀鞘 | 新增武士刀與刀具刀鞘，可佩戴於背部、臀部或大腿。 | `TKS42` | 8 | — | — | 2026-07-17 |
 | [3390258342](https://steamcommunity.com/sharedfiles/filedetails/?id=3390258342) | 十年後植被覆蓋 | 提供高、中、低三種等級的植被覆蓋，可清理植被並採集資源。 | `10YL_HIGH_LIGHT_B42`, `10YL_LOW_LIGHT_B42`, `10YL_MEDIUM_LIGHT_B42` | 3 | — | — | 2026-07-17 |
 | [3401825906](https://steamcommunity.com/sharedfiles/filedetails/?id=3401825906) | 必備配方 | 新增實用配方，可製作小蘇打、鹽、糖、酵母、木炭粉與飼料乾草。 | `EssentialRecipes` | 10 | — | — | 2026-07-17 |
