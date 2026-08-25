@@ -73,6 +73,23 @@ MOD_NAMES_ZH_JSON = SOURCES / "mod_names_zh.json"
 MANIFEST_START = "<!-- SUPPORTED_MODS_START -->"
 MANIFEST_END = "<!-- SUPPORTED_MODS_END -->"
 WORKSHOP_URL = "https://steamcommunity.com/sharedfiles/filedetails/?id={}"
+# Steam 描述與 workshop.txt 也是「數字會靜默過期」的生成／半生成物：README 與
+# SUPPORTED_MODS.md 由 manifest 自動改所以一直對，STEAM_DESCRIPTION.md 是手寫的，
+# 42.20.2-1.18.0 同步 As1 v3.7.1（+75 個 MOD）那次就漏更新、同類漏更新發生過兩次。
+# 故納入 manifest 的同步範圍（寫入模式改、`--check` 驗漂移）。
+STEAM_DESCRIPTION_MD = PROJECT_ROOT / "STEAM_DESCRIPTION.md"
+WORKSHOP_TXT = PROJECT_ROOT / "MOD" / "MinidoracatModLangFor42" / "workshop.txt"
+# 「N+ 個 Workshop 模組（M+ 個模組 ID）」——約數規則是**向下取整到十位**，
+# 精確且無歧義（564→560、715→710）。寫成 `>=` 區間會讓「560+」在實際 640 時仍算
+# 成立，數字就會一路失真下去。
+STEAM_COUNT_RE = re.compile(
+    r"^(\[\*\] )(\d+)(\+ 個 Workshop 模組（)(\d+)(\+ 個模組 ID）)", re.MULTILINE
+)
+# workshop.txt 的 `description=` 由 STEAM_DESCRIPTION.md **逐行**生成（空行也轉成
+# `description=`）。檔首 `version=`／`id=`／`title=` 與檔尾 `tags=`／`visibility=` 是
+# 遊戲上傳後回寫的正式格式，**不是生成物**，重生時原樣保留；行尾維持 CRLF。
+WORKSHOP_HEAD_KEYS = ("version=", "id=", "title=")
+WORKSHOP_TAIL_KEYS = ("tags=", "visibility=")
 
 # language.txt：CH 結構照抄 LangFor42，CN 沿用同結構換 text 值
 LANGUAGE_TXT = {
@@ -1560,7 +1577,80 @@ def cmd_manifest(check_only: bool = False) -> int:
             print(f"✅ 已更新 {README.name} 支援清單摘要")
     else:
         print("ℹ️ README 支援清單摘要未變動")
+
+    # --- Steam 描述的模組數 ＋ workshop.txt 的 description 區塊 --------------- #
+    total_mods = len(active_rows) + len(removed_rows)
+    drift += _sync_steam_description(total_mods, len(all_mod_ids), check_only)
     return 1 if drift else 0
+
+
+def _sync_steam_description(total_mods: int, total_ids: int,
+                            check_only: bool) -> list[str]:
+    """同步 STEAM_DESCRIPTION.md 的模組數，並據它重生 workshop.txt 的 description。
+
+    兩者都 **fail-closed**：檔案缺席或形狀不符時回報漂移，而不是「沒驗到就算過」。
+    workshop.txt 的 head／tail 是遊戲上傳後回寫的正式格式（含 Workshop 分配的 `id=`），
+    缺了不能憑空造，只能報錯要人工還原。
+    """
+    drift: list[str] = []
+    want_mods, want_ids = total_mods // 10 * 10, total_ids // 10 * 10
+    if not STEAM_DESCRIPTION_MD.exists():
+        print(f"⚠️ {STEAM_DESCRIPTION_MD.name} 不存在，無法驗證模組數。")
+        return [STEAM_DESCRIPTION_MD.name]
+    desc = STEAM_DESCRIPTION_MD.read_text(encoding="utf-8")
+    m = STEAM_COUNT_RE.search(desc)
+    if not m:
+        print(f"❌ {STEAM_DESCRIPTION_MD.name} 找不到「N+ 個 Workshop 模組（M+ 個模組 ID）」"
+              "那一行，無法同步模組數。", file=sys.stderr)
+        return [STEAM_DESCRIPTION_MD.name]
+    if (int(m.group(2)), int(m.group(4))) != (want_mods, want_ids):
+        new_desc = STEAM_COUNT_RE.sub(
+            lambda mm: f"{mm.group(1)}{want_mods}{mm.group(3)}{want_ids}{mm.group(5)}",
+            desc, count=1)
+        if check_only:
+            drift.append(STEAM_DESCRIPTION_MD.name)
+            print(f"❌ {STEAM_DESCRIPTION_MD.name} 模組數與來源不同步"
+                  f"（宣稱 {m.group(2)}+／{m.group(4)}+，應為 {want_mods}+／{want_ids}+）")
+        else:
+            STEAM_DESCRIPTION_MD.write_text(new_desc, encoding="utf-8", newline="\n")
+            desc = new_desc
+            print(f"✅ 已更新 {STEAM_DESCRIPTION_MD.name} 模組數"
+                  f"（{want_mods}+ 個模組、{want_ids}+ 個 mod ID）")
+    else:
+        print(f"ℹ️ {STEAM_DESCRIPTION_MD.name} 模組數未變動")
+
+    if not WORKSHOP_TXT.exists():
+        print(f"⚠️ {WORKSHOP_TXT.name} 不存在，無法驗證 description 區塊。")
+        return drift + [WORKSHOP_TXT.name]
+    # `Path.read_text(newline=…)` 是 Python 3.13 才有的參數（`write_text` 的自 3.10 就有），
+    # 本檔宣告 requires-python >=3.11，故讀取端用 open() 才相容。
+    with open(WORKSHOP_TXT, encoding="utf-8", newline="") as fh:
+        raw = fh.read()
+    lines = raw.split("\r\n")
+    if lines and lines[-1] == "":
+        lines.pop()
+    head, tail = lines[:3], [l for l in lines if l.startswith(WORKSHOP_TAIL_KEYS)]
+    if not all(h.startswith(k) for h, k in zip(head, WORKSHOP_HEAD_KEYS)) \
+            or len(tail) != len(WORKSHOP_TAIL_KEYS):
+        print(f"❌ {WORKSHOP_TXT.name} 形狀不符（檔首應為 {'／'.join(WORKSHOP_HEAD_KEYS)}、"
+              f"檔尾應有 {'／'.join(WORKSHOP_TAIL_KEYS)}）——那是遊戲回寫的正式格式，"
+              "請自版控還原後重試。", file=sys.stderr)
+        return drift + [WORKSHOP_TXT.name]
+    body = desc.split("\n")
+    if body and body[-1] == "":
+        body.pop()
+    want = "\r\n".join(head + [f"description={l}" for l in body] + tail) + "\r\n"
+    if want != raw:
+        if check_only:
+            drift.append(WORKSHOP_TXT.name)
+            print(f"❌ {WORKSHOP_TXT.name} 的 description 區塊與 "
+                  f"{STEAM_DESCRIPTION_MD.name} 不同步（需重跑 manifest）")
+        else:
+            WORKSHOP_TXT.write_text(want, encoding="utf-8", newline="")
+            print(f"✅ 已重生 {WORKSHOP_TXT.name} 的 description 區塊（{len(body)} 行）")
+    else:
+        print(f"ℹ️ {WORKSHOP_TXT.name} description 區塊未變動")
+    return drift
 
 
 # ============================================================

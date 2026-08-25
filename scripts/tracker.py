@@ -1275,7 +1275,13 @@ def _is_non_fast_forward(stderr: str) -> bool:
 # `_EN.txt` 換成 `.json`，三個撞本體的 `UI_prof_*` 首次進入有效集）錯了一整天而三道 gate
 # 全綠；AGENTS.md 另記載 cfcf3d8 同款前例（鍵數錯一整天）。
 # 故 state commit 前一併重生，並與 state 進**同一個 commit** 保持原子性。
-MANIFEST_OUTPUTS = ("SUPPORTED_MODS.md", "README.md")
+# `STEAM_DESCRIPTION.md`（模組數）與 `MOD/**/workshop.txt`（description 區塊）自
+# 2026-08-25 起也由 manifest 同步——它們同樣會靜默過期（`470+` 停在 458+13 的年代、
+# 實際已 564，1.18.0 同步 As1 v3.7.1 那次漏更新）。**必須一起進 pathspec**：漏了就會
+# 讓排程重生後的變更留在工作區未 commit，下一個操作者看到髒工作區、或被 `git restore`
+# 連帶清掉而永遠同步不上。
+MANIFEST_OUTPUTS = ("SUPPORTED_MODS.md", "README.md", "STEAM_DESCRIPTION.md",
+                    "MOD/MinidoracatModLangFor42/workshop.txt")
 
 
 def refresh_manifest() -> bool:

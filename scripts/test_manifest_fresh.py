@@ -110,4 +110,91 @@ for label, chunk, want in (("在架", head, 7), ("已下架", tail, 8)):
     widths = {_cols(ln) for ln in chunk.splitlines() if ln.startswith("|")}
     assert widths == {want}, f"{label}表欄數不齊：{sorted(widths)}，應全為 {want}"
 
-print("✅ test_manifest_fresh：7 組情境全過")
+# --- 8. STEAM_DESCRIPTION.md 模組數 ＋ workshop.txt description 的同步 --------- #
+# 這兩個是「數字會靜默過期」的既有實證：README／SUPPORTED_MODS 由 manifest 自動改所以
+# 一直對，STEAM_DESCRIPTION.md 是手寫的，42.20.2-1.18.0 同步 As1 v3.7.1（+75 個 MOD）
+# 那次漏更新、同類漏更新發生過兩次（470+ 停在 458+13 的年代，實際已 564）。
+# 全部用 temp 副本，真檔不動。
+SD_LINE = "[*] 560+ 個 Workshop 模組（710+ 個模組 ID）的中文翻譯\n"
+WS_HEAD = "version=1\r\nid=123\r\ntitle=T\r\n"
+WS_TAIL = "tags=\r\nvisibility=public\r\n"
+
+
+def _sync(sd_text: str | None, ws_text: str | None, *, mods=564, ids=715,
+          check_only=True):
+    """在 temp 目錄跑 _sync_steam_description，回傳 (drift, sd 內容, ws 內容)。"""
+    with tempfile.TemporaryDirectory() as td:
+        sd, ws = Path(td) / "STEAM_DESCRIPTION.md", Path(td) / "workshop.txt"
+        if sd_text is not None:
+            sd.write_text(sd_text, encoding="utf-8", newline="\n")
+        if ws_text is not None:
+            with open(ws, "w", encoding="utf-8", newline="") as fh:
+                fh.write(ws_text)
+        o_sd, o_ws = build_mod.STEAM_DESCRIPTION_MD, build_mod.WORKSHOP_TXT
+        build_mod.STEAM_DESCRIPTION_MD, build_mod.WORKSHOP_TXT = sd, ws
+        try:
+            with contextlib.redirect_stdout(io.StringIO()):
+                drift = build_mod._sync_steam_description(mods, ids, check_only)
+        finally:
+            build_mod.STEAM_DESCRIPTION_MD, build_mod.WORKSHOP_TXT = o_sd, o_ws
+        return (drift,
+                sd.read_text(encoding="utf-8") if sd.exists() else None,
+                open(ws, encoding="utf-8", newline="").read() if ws.exists() else None)
+
+
+def _ws_from(sd_text: str) -> str:
+    body = sd_text.split("\n")
+    if body and body[-1] == "":
+        body.pop()
+    return WS_HEAD + "".join(f"description={l}\r\n" for l in body) + WS_TAIL
+
+
+# 8a. 現況同步 → 零漂移
+d, _, _ = _sync(SD_LINE, _ws_from(SD_LINE))
+assert d == [], f"同步狀態不該報漂移：{d}"
+
+# 8b. 模組數過期 → check 抓到（這條是本節的承重點：470+ 那個實際發生過的錯）
+stale = SD_LINE.replace("560+ 個 Workshop 模組（710+", "470+ 個 Workshop 模組（600+")
+d, _, _ = _sync(stale, _ws_from(stale))
+assert "STEAM_DESCRIPTION.md" in d, "模組數過期必須被抓到"
+
+# 8c. 約數規則＝向下取整到十位。寫成 `>=` 區間會讓「560+」在實際 640 時仍算成立，
+#     數字就會一路失真下去——這條釘死那個判準。
+d, _, _ = _sync(SD_LINE, _ws_from(SD_LINE), mods=640, ids=800)
+assert "STEAM_DESCRIPTION.md" in d, "實際值遠高於宣稱時仍須報漂移（約數是取整、不是下限）"
+for actual, want in ((564, 560), (560, 560), (569, 560), (570, 570)):
+    d, sd_new, _ = _sync(SD_LINE, _ws_from(SD_LINE), mods=actual, ids=715,
+                         check_only=False)
+    assert f"{want}+ 個 Workshop 模組" in sd_new, f"{actual} 應取整為 {want}+，實得 {sd_new!r}"
+
+# 8d. write 模式修好後，再 check 必須乾淨（round-trip）
+d, sd_new, _ = _sync(stale, _ws_from(stale), check_only=False)
+assert "560+ 個 Workshop 模組（710+ 個模組 ID）" in sd_new, "write 模式應修好模組數"
+d2, _, ws_new = _sync(sd_new, _ws_from(sd_new))
+assert d2 == [], f"修好後 check 應乾淨：{d2}"
+
+# 8e. workshop.txt 的 description 與 STEAM_DESCRIPTION 不同步 → 抓到
+d, _, _ = _sync(SD_LINE, WS_HEAD + "description=舊內容\r\n" + WS_TAIL)
+assert "workshop.txt" in d, "workshop.txt description 漂移必須被抓到"
+
+# 8f. write 模式重生 workshop.txt：head／tail 原樣保留、行尾維持 CRLF、逐行前綴
+d, _, ws_new = _sync(SD_LINE, WS_HEAD + "description=舊\r\n" + WS_TAIL, check_only=False)
+assert ws_new.startswith(WS_HEAD) and ws_new.endswith(WS_TAIL), \
+    "head／tail 是遊戲回寫的正式格式，重生時必須原樣保留"
+assert "\n" not in ws_new.replace("\r\n", ""), "workshop.txt 必須維持 CRLF"
+assert f"description={SD_LINE.rstrip(chr(10))}\r\n" in ws_new, "description 應逐行前綴"
+
+# 8g. 三種 fail-closed：檔案缺席、找不到數字那一行、workshop.txt 形狀壞損。
+#     「沒驗到」不等於「驗過沒問題」。
+assert "STEAM_DESCRIPTION.md" in _sync(None, _ws_from(SD_LINE))[0], \
+    "STEAM_DESCRIPTION 缺席須 fail-closed"
+assert "STEAM_DESCRIPTION.md" in _sync("[*] 沒有數字那一行\n", None)[0], \
+    "找不到數字那一行須 fail-closed"
+assert "workshop.txt" in _sync(SD_LINE, None)[0], "workshop.txt 缺席須 fail-closed"
+for bad, why in ((f"id=1\r\nversion=1\r\ntitle=T\r\n{WS_TAIL}", "head 順序錯"),
+                 (WS_HEAD + "description=x\r\n", "tail 缺失")):
+    assert "workshop.txt" in _sync(SD_LINE, bad)[0], f"{why} 須 fail-closed"
+
+print("✅ test_manifest_fresh：8 組情境全過"
+      "（含 STEAM_DESCRIPTION 模組數取整判準、workshop.txt CRLF 與 head/tail 保留、"
+      "四種 fail-closed）")
