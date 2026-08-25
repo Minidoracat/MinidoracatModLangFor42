@@ -4,6 +4,55 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.20.2-1.19.0] - 2026-08-25
+
+### 玩家摘要
+
+> 本節為 Workshop 更新註記用的白話版；以下各節為維護者向的技術細節。
+
+- **清償 #275–#282 共 8 張「可能過時」issue，補譯 573 個鍵。** 最大一批是 N&C's Narcotics——這個 MOD 原本幾乎沒有中文（我方只有 1 個鍵），本次以它的上游改值為觸發點做了全 MOD 盤點，補了 422 鍵。
+- **修正 4 組會讓玩家看到錯誤內容的既有翻譯。** 右鍵選單的「注射」原本顯示成模組名稱「注射針劑模組」；RealFirearms 兩個沙盒選項的原版槍械對應互相錯位；物品欄的製作分類漏掉「材料」；SapphCooking 的手沖咖啡漏掉沖煮方式、會與法式濾壓版混淆。
+- **統一 SapphCooking 與大麻類 MOD 的既有譯名。** 燉煮系菜名統一用「燉」（原本部分寫「燴」）、銅湯鍋與平底煎鍋的料理成品標出容器、水菸壺／錫罐菸斗／菸斗／捲菸／夾鏈袋改用與遊戲本體及其他 MOD 一致的名稱。部分既有物品因此改名。
+- **MinimalDisplayBars 確認不用改。** 上游只是移除了遊戲根本不會載入的舊版本資料夾，實際生效的內容沒變。
+- **修正治理報告的來源標註錯誤。** 有兩個 MOD 明明有可用的英文檔卻被標成「死檔」，會讓後續「要不要出貨這個鍵」的判斷誤估代價。
+
+### Added
+
+- **#279 N&C's Narcotics（3404956403）422 鍵**：以本 issue 的 16 筆 Tooltip 改值為觸發點做全 MOD 盤點。含大麻品種（AK-47／北極光／酸柴油／大麻花粉）、吸食器具、毒品與製毒實驗器材、大麻食品、成癮特質與狀態說明。
+- **#276 organizedCategories_core（3370707195）63 鍵**：`IGUI_OC_SortOrder_*` 排序方案管理 UI、`IGUI_OC_ChangeDisplayCategory_*` 對話框、新增分類名。
+- **#280 SapphCooking_B42（3409143790）47 鍵**：乳酪與凝乳製程、銅鍋料理成品、咖啡濾紙族與相關配方。
+- **#281 BurdSurvivalJournals（3639628777）16 鍵**：志向（Ambitions）系統 UI、Lifestyle: Hobbies 相容性沙盒選項、技能重學時間縮放三選項。
+- **#278 bodilyfunctions（3396456841）15 鍵**：擦拭用品家族與生理需求物品。另補 5 個裸 craftRecipe 鍵——上游用 B41 的 `Recipe_<X>` 鍵形，而 B42 的 `Translator.getRecipeName()` 只查裸區塊名，去前綴後 5 個名稱精確對上該 MOD 有效分支的現行區塊名。
+- **#275 RealFirearms（3238830225）3 鍵**：Sten MK II (S) 消音衝鋒槍、其彈匣與沙盒選項。
+- **#282 ImprovisedSilencers（3779164273）2 鍵**：動態消音器與噪音降低 Tooltip。
+
+### Fixed
+
+- **`ContextMenu.json|ContextMenu_Inject`**：As1 CN 把動詞 `Inject` 誤譯成「注射针剂模组」（即 mod 名稱），對 6 個 owner 全不成立，玩家會在右鍵選單看到模組名。CH 改 corpus、CN 走 `cn_overrides` 登記為「注射」。已核對六個 owner 的鍵集，無任何一家另設「標示注射物」的子選單。
+- **`IG_UI.json|IGUI_ItemCat_*_material` 11 鍵**：上游加上 `- Material` 後綴，我方譯文漏「材料」。依同族既有 `survivalTrapping_material`＝「生存 (陷阱, 材料)」的格式補齊。
+- **`Sandbox_RealFirearmsOptions_{556x45_RF_Mini14,762x51_RF_M14}`**：上游把「Vanilla: JS-14 - 」前綴在兩鍵之間搬移，我方譯文停在舊版本、兩鍵前綴錯位互換，沙盒選項顯示錯誤的原版槍械對應。
+- **`SapphCooking Brew Coffee*` 11 鍵**：上游由 `Brew Coffee` 改為 `Brew Pour-Over Coffee`，我方漏「手沖」語意；該 MOD 另有 French Press 與 Thermos 等別的沖煮法配方會混淆。
+- **譯名對齊同 MOD 既有出貨值**（多模型交叉複核後修正）：slow-cook 系 10 類「燴」→「燉」（Stew／Risotto／Feijoada／Stroganoff／Arborio Rice）、Paella→西班牙海鮮飯、Noodle Soup→湯麵、Mac and Cheese→乳酪通心粉、Cheese 族→乳酪；SapphCooking 容器 27 鍵（`SaucepanCopper*` 家族 25/25 統一「裝有X的銅湯鍋」、`FryingPanForged_*` 4 鍵「平底煎鍋 (X)」、`PanForged_Oil` CH/CN 平行化）——既有不變式是「key 名含容器→譯文標容器」，與 en 是否寫容器無關；Bong→水菸壺 41 鍵（對齊 `Greenfire.Bong_*`）、Can Pipe→錫罐菸斗（本體 `Base.CanPipe`）、Pipe→菸斗、Joint→捲菸、Baggie→夾鏈袋／自封袋（對齊 `KD.*`）、Crack CN→快克；anabolic steroids→CH 同化性類固醇／CN 合成代谢类固醇；Opium Seeds→罌粟種子；CN Cured／Curing 族 9 鍵熟成→醇化。
+- **`prep_mod_strings.converge_owner` 的 `src` 優先序**：`src`（抑制後 runtime fallback 來源）原本沿用值層的分支優先序，導致有效版本夾的死檔 `_EN.txt` 覆蓋 `common` 的可載入 `.json`。`3437429771/Injectors` 與 `3650035249/CAExtendedCategories` 因此在 `OWNER_CONFLICTS.md` 被錯標「死檔」，錯告方向是「把有英文底層的說成沒有」，讓維護者以為 unship 後玩家看到字面鍵名、代價被高估。新增 `_src_rank`（可載入 JSON > script > 死檔），只在同等級才沿分支優先序覆寫；`out` 的值覆寫與 `census_signature` 輸入均未變，既有 402 條裁決 signature 不漂移。補 4 個回歸情境。
+
+### 已裁決不跟進
+
+- **#277 MinimalDisplayBarsNutritionsB42（3388844542）零動作**：99 筆「刪除」的 record 路徑全在 `mods/.../42.15/`，而 state 現行 98 筆全在 `42.20/`。依 `ZomboidFileSystem.loadMod()` 只疊加唯一最佳版本夾，`42.20` 早已是有效分支且內容未變、`42.15` 一直失效。prep 有效缺口 0。
+- **`UI_OC_AlphabeticalCategorySort_tooltip`（#276 上游刪鍵）保留**：上游已刪但 own 層仍出貨。本機未訂閱 `3370707195`、無法查證 Lua consumer，故刻意保留並在 `_note` 記錄完整摘除清單與 Lua 搜尋詞——移除有「玩家看到字面鍵名」的退化風險，保留最壞只是出貨死資料（該前綴為 organizedCategories 專屬、撞名風險極低）。
+
+### 驗證
+
+- `build_mod.py build` 通過；`verify_dist.py` **15/15 PASS**（FAIL 0）。
+- 確定性雙跑 **181 個檔案零 diff**。
+- `verify_dist.py --cn-diff v42.20.2-1.18.1`：**602 個 CN 值變動，待複核 0**。
+- 16 支純 repo 回歸測試全過（`test_owner_json_en` 37→42 項，新增 4 個 `src` 優先序情境）。
+- owner decision gate：**402 筆背書、0 blocking**；`OWNER_CONFLICTS.md` 同步。
+- `lint_ch.py` 五類棘輪全零（[A]0 [B]0 [C]0 [E]0 [F]0）。
+- 本機 PZ 本體 **48,718 個 `(檔,鍵)`** 與 dist CH/CN 零交集。
+- `test_serialization.py`：**3,906 個受版控 JSON** 全合規。
+- `manifest --check` 無漂移；內容 commit `13756dd`。
+- 譯文經 Claude／Codex／Grok 三方分工產出後交叉對抗複核，再以 `review-plus` deep／strict 跑三輪多 lane review（共 14 條 finding 全部修正）。
+
 ## [42.20.2-1.18.1] - 2026-08-24
 
 ### 玩家摘要
