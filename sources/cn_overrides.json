@@ -254,6 +254,11 @@
   "reason": "Same 'Industrial' → 大型 substitution as the Refill key, plus As1's 大型丙烷罐是空的 is a full clause where the EN is a status label.",
   "value": "工业丙烷罐已空"
  },
+ "ContextMenu.json|ContextMenu_Inject": {
+  "as1_value": "注射针剂模组",
+  "reason": "2026-08-25 #279 裁決中性譯名「注射」。上游 EN 是右鍵選單的動作詞：2900366269/DrugMod、3404956403/N&C's Narcotics、3437429771/Injectors 三家都是裸 'Inject'，3580511016/SCP Pack 為 'Inject Serum'、3615135168/ZVirusVaccine42BETA 為 'Injecting'、3673979113/XVirus 為 'Inject X-Virus'——六個 owner 都是「把某物注射進體內」這同一個動作，差別只在有無標註注射物，非不同實體。原 As1 CN 值「注射针剂模组」是上游誤譯（把動詞 Inject 當成 mod 名稱翻成「注射針劑模組」），對六個 owner 全部不成立且會讓玩家在右鍵選單看到模組名，故 CH 改寫為「注射」、CN 走 cn_overrides 登記同值。裸動詞對每個 owner 都成立——注射物由玩家實際點選的物品決定；已核對六個 owner 的 sources/en 鍵集，沒有任何一家另設「標示注射物」的子選單鍵（XVirus 另有的 ContextMenu_InjectPlayer='Inject %1' 是對其他玩家注射、語意不同，ZVirus 的 ContextMenu_LabInjectVaccine 是另一個動作）。",
+  "value": "注射"
+ },
  "ContextMenu.json|ContextMenu_InvFoodSynthesizer_Run": {
   "as1_value": "启动合成机 (将消耗 %1 千克)",
   "reason": "EN kg：改判回 own。「千克」雖是大陸法定計量單位名稱，但本包真相層既有 公斤 33 : 千克 9、dist 15 : 5，官方遊戲 CN 全庫也只有 1 處「千克」；單獨把這一條改成「千克」會製造孤例且與本包既有用字相反。公斤/千克 的全庫統一屬獨立批次清理，不在本次裁決範圍。",
@@ -2578,6 +2583,61 @@
   "as1_value": "武器-护具",
   "reason": "EN 是 Weapon - Shield(盾牌); As1「武器-护具」= protective gear, 與批外 ProtectiveGear* 系列(防具-*)撞義, 屬誤譯.",
   "value": "武器-盾牌"
+ },
+ "IG_UI.json|IGUI_ItemCat_craftingCarpentry_material": {
+  "as1_value": "制造 (木工)",
+  "reason": "2026-08-25 #276 上游改值：organizedCategories_core 在此版把 EN 由 'Crafting - Carpentry' 改為 'Crafting - Carpentry - Material'（加上 - Material 後綴），As1 CN 值 '制造 (木工)' 仍是舊文本、漏掉「材料」語意。依同族既有出貨鍵 IGUI_ItemCat_survivalTrapping_material=「生存 (陷阱, 材料)」的格式補齊。",
+  "value": "制造 (木工, 材料)"
+ },
+ "IG_UI.json|IGUI_ItemCat_craftingCarving_material": {
+  "as1_value": "制造 (雕刻)",
+  "reason": "2026-08-25 #276 上游改值：organizedCategories_core 在此版把 EN 由 'Crafting - Carving' 改為 'Crafting - Carving - Material'（加上 - Material 後綴），As1 CN 值 '制造 (雕刻)' 仍是舊文本、漏掉「材料」語意。依同族既有出貨鍵 IGUI_ItemCat_survivalTrapping_material=「生存 (陷阱, 材料)」的格式補齊。",
+  "value": "制造 (雕刻, 材料)"
+ },
+ "IG_UI.json|IGUI_ItemCat_craftingElectrical_material": {
+  "as1_value": "制造 (电工)",
+  "reason": "2026-08-25 #276 上游改值：organizedCategories_core 在此版把 EN 由 'Crafting - Electrical' 改為 'Crafting - Electrical - Material'（加上 - Material 後綴），As1 CN 值 '制造 (电工)' 仍是舊文本、漏掉「材料」語意。依同族既有出貨鍵 IGUI_ItemCat_survivalTrapping_material=「生存 (陷阱, 材料)」的格式補齊。",
+  "value": "制造 (电工, 材料)"
+ },
+ "IG_UI.json|IGUI_ItemCat_craftingGlassmaking_material": {
+  "as1_value": "制造 (玻璃制造)",
+  "reason": "2026-08-25 #276 上游改值：organizedCategories_core 在此版把 EN 由 'Crafting - Glassmaking' 改為 'Crafting - Glassmaking - Material'（加上 - Material 後綴），As1 CN 值 '制造 (玻璃制造)' 仍是舊文本、漏掉「材料」語意。依同族既有出貨鍵 IGUI_ItemCat_survivalTrapping_material=「生存 (陷阱, 材料)」的格式補齊。",
+  "value": "制造 (玻璃制造, 材料)"
+ },
+ "IG_UI.json|IGUI_ItemCat_craftingKnapping_material": {
+  "as1_value": "制造 (打制石器)",
+  "reason": "2026-08-25 #276 上游改值：organizedCategories_core 在此版把 EN 由 'Crafting - Knapping' 改為 'Crafting - Knapping - Material'（加上 - Material 後綴），As1 CN 值 '制造 (打制石器)' 仍是舊文本、漏掉「材料」語意。依同族既有出貨鍵 IGUI_ItemCat_survivalTrapping_material=「生存 (陷阱, 材料)」的格式補齊。",
+  "value": "制造 (打制石器, 材料)"
+ },
+ "IG_UI.json|IGUI_ItemCat_craftingMasonry_material": {
+  "as1_value": "制造 (石工)",
+  "reason": "2026-08-25 #276 上游改值：organizedCategories_core 在此版把 EN 由 'Crafting - Masonry' 改為 'Crafting - Masonry - Material'（加上 - Material 後綴），As1 CN 值 '制造 (石工)' 仍是舊文本、漏掉「材料」語意。依同族既有出貨鍵 IGUI_ItemCat_survivalTrapping_material=「生存 (陷阱, 材料)」的格式補齊。",
+  "value": "制造 (石工, 材料)"
+ },
+ "IG_UI.json|IGUI_ItemCat_craftingMetalworking_material": {
+  "as1_value": "制造 (金属加工)",
+  "reason": "2026-08-25 #276 上游改值：organizedCategories_core 在此版把 EN 由 'Crafting - Metalworking' 改為 'Crafting - Metalworking - Material'（加上 - Material 後綴），As1 CN 值 '制造 (金属加工)' 仍是舊文本、漏掉「材料」語意。依同族既有出貨鍵 IGUI_ItemCat_survivalTrapping_material=「生存 (陷阱, 材料)」的格式補齊。",
+  "value": "制造 (金属加工, 材料)"
+ },
+ "IG_UI.json|IGUI_ItemCat_craftingPottery_material": {
+  "as1_value": "制造 (制陶)",
+  "reason": "2026-08-25 #276 上游改值：organizedCategories_core 在此版把 EN 由 'Crafting - Pottery' 改為 'Crafting - Pottery - Material'（加上 - Material 後綴），As1 CN 值 '制造 (制陶)' 仍是舊文本、漏掉「材料」語意。依同族既有出貨鍵 IGUI_ItemCat_survivalTrapping_material=「生存 (陷阱, 材料)」的格式補齊。",
+  "value": "制造 (制陶, 材料)"
+ },
+ "IG_UI.json|IGUI_ItemCat_craftingWelding_material": {
+  "as1_value": "制造 (焊接)",
+  "reason": "2026-08-25 #276 上游改值：organizedCategories_core 在此版把 EN 由 'Crafting - Welding' 改為 'Crafting - Welding - Material'（加上 - Material 後綴），As1 CN 值 '制造 (焊接)' 仍是舊文本、漏掉「材料」語意。依同族既有出貨鍵 IGUI_ItemCat_survivalTrapping_material=「生存 (陷阱, 材料)」的格式補齊。",
+  "value": "制造 (焊接, 材料)"
+ },
+ "IG_UI.json|IGUI_ItemCat_survivalFishing_material": {
+  "as1_value": "生存 (钓鱼)",
+  "reason": "2026-08-25 #276 上游改值：organizedCategories_core 在此版把 EN 由 'Survival - Fishing' 改為 'Survival - Fishing - Material'（加上 - Material 後綴），As1 CN 值 '生存 (钓鱼)' 仍是舊文本、漏掉「材料」語意。依同族既有出貨鍵 IGUI_ItemCat_survivalTrapping_material=「生存 (陷阱, 材料)」的格式補齊。",
+  "value": "生存 (钓鱼, 材料)"
+ },
+ "IG_UI.json|IGUI_ItemCat_survivalTracking_material": {
+  "as1_value": "生存 (追踪)",
+  "reason": "2026-08-25 #276 上游改值：organizedCategories_core 在此版把 EN 由 'Survival - Tracking' 改為 'Survival - Tracking - Material'（加上 - Material 後綴），As1 CN 值 '生存 (追踪)' 仍是舊文本、漏掉「材料」語意。依同族既有出貨鍵 IGUI_ItemCat_survivalTrapping_material=「生存 (陷阱, 材料)」的格式補齊。",
+  "value": "生存 (追踪, 材料)"
  },
  "IG_UI.json|IGUI_KnoxRelay_MorningShow_Jenna_Day28_S6": {
   "as1_value": "把接线头两两擦火交叉一对, 然后猛踩油门",

@@ -2306,6 +2306,48 @@
    "reason": "2026-08-24 #247：兩 owner 皆為 9x18mm；TEBFP 加 Makarov，PostSoviet 未綁平台。取共同口徑，不把 Makarov 名稱套給另一 owner。",
    "ch": "轉換為9x18mm子彈",
    "cn": "转换为9x18mm子弹"
+  },
+  "ContextMenu|ContextMenu_Inject": {
+   "action": "translate",
+   "signature": "fc7fbdd650d6478b",
+   "reason": "2026-08-25 #279 裁決中性譯名「注射」。上游 EN 是右鍵選單的動作詞：2900366269/DrugMod、3404956403/N&C's Narcotics、3437429771/Injectors 三家都是裸 'Inject'，3580511016/SCP Pack 為 'Inject Serum'、3615135168/ZVirusVaccine42BETA 為 'Injecting'、3673979113/XVirus 為 'Inject X-Virus'——六個 owner 都是「把某物注射進體內」這同一個動作，差別只在有無標註注射物，非不同實體。原 As1 CN 值「注射针剂模组」是上游誤譯（把動詞 Inject 當成 mod 名稱翻成「注射針劑模組」），對六個 owner 全部不成立且會讓玩家在右鍵選單看到模組名，故 CH 改寫為「注射」、CN 走 cn_overrides 登記同值。裸動詞對每個 owner 都成立——注射物由玩家實際點選的物品決定；已核對六個 owner 的 sources/en 鍵集，沒有任何一家另設「標示注射物」的子選單鍵（XVirus 另有的 ContextMenu_InjectPlayer='Inject %1' 是對其他玩家注射、語意不同，ZVirus 的 ContextMenu_LabInjectVaccine 是另一個動作）。",
+   "ch": "注射",
+   "cn": "注射"
+  },
+  "IG_UI|IGUI_ItemCat_AmmoBox": {
+   "action": "translate",
+   "signature": "f2d6e88fb2b290a4",
+   "reason": "2026-08-25 #275 裁決維持現行中性譯名。兩個 owner 都是物品欄的「彈藥盒裝規格」分類：3238830225/RealFirearms 寫 'Ammo Box'、3650035249/CAExtendedCategories 寫 'Ammo - Box'（該 mod 全族採「大類 - 子類」排版）。兩者在**各自的有效分支**都有可載入的 IG_UI.json 定義此鍵——RealFirearms 在 42/、CAExtendedCategories 在 common/（後者另有同值的 legacy IG_UI_EN.txt，B42 不讀）；英文差異純為命名排版（有無分隔破折號），非不同實體。現行「彈藥-盒裝」不宣稱任何 owner 獨有語意，對兩者皆成立，且與同族已出貨的 IGUI_ItemCat_AmmoCarton=「彈藥-箱裝」一致。",
+   "ch": "彈藥-盒裝",
+   "cn": "弹药-盒装"
+  },
+  "IG_UI|IGUI_ItemCat_AmmoCarton": {
+   "action": "translate",
+   "signature": "c581824409ae1cdd",
+   "reason": "2026-08-25 #275 裁決維持現行中性譯名。同 IGUI_ItemCat_AmmoBox 的同族鍵：3238830225/RealFirearms 寫 'Ammo Carton'、3650035249/CAExtendedCategories 寫 'Ammo - Carton'，兩者都指比盒裝更大的整箱彈藥包裝規格，且在各自的有效分支都有可載入的 IG_UI.json 定義（RealFirearms 在 42/、CAExtendedCategories 在 common/），英文差異僅排版。現行「彈藥-箱裝」對兩者皆成立。",
+   "ch": "彈藥-箱裝",
+   "cn": "弹药-箱装"
+  },
+  "IG_UI|IGUI_Empty": {
+   "action": "translate",
+   "signature": "d631f7f44c67ac79",
+   "reason": "2026-08-25 #278 裁決維持現行中性譯名。四個 owner 條目的上游英文只差首字母大小寫：3396456841/PZ_BodilyFunctions 寫 'Empty'（指容器/馬桶已排空），3597471949 的 GeneratorPlus2／GeneratorPlusMultiplayer／GeneratorPlusSingleplayer 三個變體寫 'empty'（指發電機油箱空）。同一個形容詞、同一個語意，非不同實體。單字「空」不綁任何容器類型，對四者皆成立。",
+   "ch": "空",
+   "cn": "空"
+  },
+  "Recipes|MakeBluntWrap": {
+   "action": "translate",
+   "signature": "2839af9faf5a7b3b",
+   "reason": "2026-08-25 #279 裁決維持現行中性譯名。兩個 owner 都是「製作捲大麻用的菸葉包捲皮」這個同一道配方：3404956403/N&C's Narcotics 寫 'Make a Blunt Wrap'（Recipes.json，產出 NnC.BluntWrap）、3414697768/jiggasGreenFire42 寫 'Make Blunt Wrap'。英文差異只有不定冠詞 'a'，非不同實體。現行「製作菸葉捲皮」對兩者皆成立，且與本次補譯的 NnC.BluntWrap=「菸葉捲皮」、NnC.Blunt*=「…菸葉捲」同族一致。",
+   "ch": "製作菸葉捲皮",
+   "cn": "制作烟叶卷皮"
+  },
+  "Recipes|MakeCannaButter": {
+   "action": "translate",
+   "signature": "80761cc276f30bdf",
+   "reason": "2026-08-25 #279 裁決維持現行中性譯名。兩個 owner 都是「以大麻浸製奶油」這個同一道配方：3404956403/N&C's Narcotics 寫 'Make CannaButter'（Recipes.json，產出 NnC.CannaButter）、3414697768/jiggasGreenFire42 寫 'Make Canna Butter'。英文差異只有複合詞是否斷字，非不同實體。現行 CH「製作大麻奶油」／CN「制作大麻黄油」對兩者皆成立（butter 的台灣用語為奶油、大陸用語為黄油，兩欄各自在地化），且與本次補譯的 NnC.CannaButter 同族一致。",
+   "ch": "製作大麻奶油",
+   "cn": "制作大麻黄油"
   }
  }
 }

@@ -166,6 +166,56 @@ out6 = pms.converge_owner(recs_pri, recs_pri, EFF2, vanilla=set(), dn_gap={}, sr
 check(out6[("m", "UI|UI_C")] == "new" and src6[("m", "UI|UI_C")] == "UI.json",
       "分支優先序：src 必須跟著勝出的版本夾那筆，不是先寫入的 common")
 
+# 4f'. **反方向**：`common` 在可載入 json、有效版本夾只有死檔 `_EN.txt`。
+#      `out` 的值仍照分支優先序取版本夾那筆（引擎語意），但 `src` 不得被降級成死檔
+#      ——錯標死檔會讓 OWNER_CONFLICTS.md 渲染 `_(死檔 …)_`、錯告「unship 後看到字面
+#      鍵名」，實際上 common 的可載入 json 仍會顯示該 mod 英文（unship 代價被高估）。
+#      實例：`3437429771/Injectors` 的 ContextMenu_Inject（common/ContextMenu.json
+#      ＋ 42/ContextMenu_EN.txt）曾因此在 OWNER_CONFLICTS.md 被標成死檔。
+#      **兩筆 EN 刻意給不同值**：值相同時測不到「誤把 `_src_rank` 套到 out」——那會讓
+#      out 停在 common 的舊值而測試照樣綠。out 必須仍是版本夾那筆。
+recs_rev = {rid_en("m", "common", "ContextMenu.json", "ContextMenu_Inject"): "Inject",
+            rid_en("m", "42", "ContextMenu_EN.txt", "ContextMenu_Inject"): "Inject Serum"}
+src6b: dict[tuple[str, str], str] = {}
+out6b = pms.converge_owner(recs_rev, recs_rev, EFF2, vanilla=set(), dn_gap={}, src=src6b)
+OK_INJ = ("m", "ContextMenu|ContextMenu_Inject")
+check(out6b[OK_INJ] == "Inject Serum" and src6b[OK_INJ] == "ContextMenu.json",
+      "src 優先序：死檔不得覆蓋同鍵的可載入 json，但 out 仍取版本夾那筆（Injectors 形狀）")
+
+# 4f''. 同一分支內同時有 json 與死檔（`3650035249/CAExtendedCategories` 形狀：
+#       common 下並存 IG_UI.json 與 IG_UI_EN.txt）→ src 必須是 json，與迭代順序無關。
+for order in (("IG_UI.json", "IG_UI_EN.txt"), ("IG_UI_EN.txt", "IG_UI.json")):
+    recs_same = {rid_en("m", "common", order[0], "IGUI_ItemCat_AmmoBox"): "Ammo - Box",
+                 rid_en("m", "common", order[1], "IGUI_ItemCat_AmmoBox"): "Ammo - Box"}
+    s: dict[tuple[str, str], str] = {}
+    pms.converge_owner(recs_same, recs_same, EFF2, vanilla=set(), dn_gap={}, src=s)
+    check(s[("m", "IG_UI|IGUI_ItemCat_AmmoBox")] == "IG_UI.json",
+          f"src 優先序：同分支 json 勝過死檔，與迭代順序無關（{order[0]} 先）")
+
+# 4f'''. script 已寫入 src 後，遇到同鍵的死檔 translate_en。值層 translate_en 勝
+#        （引擎先查 ItemName map），但 src 不得從 script 降級成死檔——script 走
+#        `Item.getDisplayName()` fallback **仍會顯示英文**，死檔則顯示字面鍵名。
+#        兩個構造陷阱，踩到任一個這條就是空轉的假保護：
+#          * `dn_gap` 那條路徑要有 `script_item_dn` rid 才會寫入 script 來源
+#            （`dn_val` 取自 `tracker.winning_dn_text`），只給 translate_en 會讓
+#            script 那筆從未寫入。
+#          * 死檔的 **stem 必須仍在白名單**。裸 fullType 鍵沒有前綴可路由，
+#            `target_file()` 只能靠 stem——`ItemName_EN` 不在白名單會回 None，
+#            那筆 translate_en 直接 `continue`，修正前後 src 都是 script（實測空轉）。
+#            用 `ItemName.txt`：stem 在白名單、副檔名非 json ⇒ 進得了迴圈且仍是死檔。
+rid_dn = "script_item_dn|mods/m/common/media/scripts/items.txt|Base.X"
+rid_dead = rid_en("m", "common", "ItemName.txt", "Base.X")
+check(pms.target_file("ItemName", "Base.X") == "ItemName"
+      and not pms.loadable_json("ItemName.txt"),
+      "構造前提：ItemName.txt 進得了迴圈（stem 在白名單）且仍是死檔（非 json）")
+recs_sc = {rid_dn: "Thing", rid_dead: "Thing"}
+src8: dict[tuple[str, str], str] = {}
+out8 = pms.converge_owner(recs_sc, recs_sc, EFF2, vanilla=set(),
+                          dn_gap={"m": {"Base.X"}}, src=src8)
+OK_DN = ("m", "ItemName|Base.X")
+check(out8.get(OK_DN) == "Thing" and src8.get(OK_DN) == pms.EN_SOURCE_SCRIPT,
+      "src 優先序：死檔不得把 script 來源降級（script 仍顯示英文, 死檔顯示字面鍵名）")
+
 # 4g. `src=None`（既有呼叫端）不得改變行為
 out7 = pms.converge_owner({r_ok: "Hello"}, {r_ok: "Hello"}, EFF,
                           vanilla=set(), dn_gap={})

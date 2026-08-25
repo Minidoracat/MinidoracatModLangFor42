@@ -122,6 +122,34 @@ def loadable_json(basename: str) -> bool:
     return ext == "json" and stem in WHITELIST
 
 
+def _src_rank(base: str) -> int:
+    """`src`（抑制後 runtime fallback 來源）的載入優先序：可載入 JSON > script > 死檔。
+
+    **與值（`out`）的分支優先序正交**——兩者回答的是不同問題：
+      * `out` 是「上游語意值」：`_EN.txt` 的值同樣代表上游怎麼寫，故照引擎的分支
+        優先序（`common` → 版本夾）覆寫，census 比 owner 衝突用的就是它。
+      * `src` 是「抑制這個鍵之後玩家看到什麼」：`_EN.txt` 與非白名單檔名**永不被
+        `Translator` 載入**（`tryFillMapFromFile()` 路徑寫死 `.json`）。
+
+    沿用分支優先序覆寫 `src` 會在「`common` 有可載入 json、有效版本夾只有 `_EN.txt`」
+    時把來源降級成死檔——**錯告的方向是「把有英文底層的說成沒有」**：`annotate` 對死檔
+    basename 判 `has_json_en=False`，`OWNER_CONFLICTS.md` 於是渲染成 `_(死檔 …)_`，
+    讓維護者以為「unship 後玩家看到字面鍵名」，而實際上 `common` 的可載入 json 仍會
+    顯示該 mod 自己的英文，unship 的代價被高估。實例：`3437429771/Injectors` 的
+    `ContextMenu_Inject` 有 `common/…/ContextMenu.json` 與 `42/…/ContextMenu_EN.txt`，
+    後者覆蓋前者後被錯標成死檔。故此處只在**同等級**才沿分支優先序覆寫（後遇到的勝出）。
+
+    **已知界限（未修，動它會改到 census 語意）**：`converge_owner` 的三個撤銷分支
+    （鏡像缺值／首次即空值／純空白）仍無條件 `out.pop` ＋ `src.pop`，與 rank 無關。
+    死檔 rid 不影響執行期，嚴格說它不該觸發撤銷；但 `out` 的撤銷語意牽動 census 的
+    owner 集合（進而是既有裁決的 `census_signature`），故不在此處一併改。需要三個
+    同鍵 rid 的特定組合才會顯性化（可載入 json → 死檔缺值 → 死檔有值），實務罕見。
+    """
+    if base == EN_SOURCE_SCRIPT:
+        return 1
+    return 2 if loadable_json(base) else 0
+
+
 def annotate(owners: dict[str, str], srcs: dict[str, str]) -> dict[str, dict]:
     """把 `{owner: en}` 加註成 `{owner: {en, has_json_en, en_source}}`，供裁決用。
 
@@ -327,7 +355,12 @@ def converge_owner(recs: dict, mirror: dict, eff: dict, *, vanilla: set[str],
             continue
         out[ok] = val
         if src is not None:
-            src[ok] = base
+            # **只在同等級才沿分支優先序覆寫**（見 `_src_rank`）：`out` 的值必須照引擎
+            # 的 common→版本夾覆寫，但 `src` 是「抑制後 runtime 顯示什麼」，死檔不得
+            # 蓋掉同鍵的可載入 json。
+            prev = src.get(ok)
+            if prev is None or _src_rank(base) >= _src_rank(prev):
+                src[ok] = base
         seen_en.add(ok)
     return out
 
