@@ -1,36 +1,8 @@
 {
  "_comment": "已裁決不出貨的 (檔名|鍵)。**真相層照樣保留**——`sources/_unsorted/CN` 是 As1 lane 的忠實鏡像，刪掉會讓 tracker 的 layer-B 把它報成永久差異、每次 As1 更新都開假的『待同步』issue；`sources/ch` 也必須逐鍵鏡像 CN 才過 corpus 鍵集 gate。所以抑制只發生在出貨那一步，語意與 vanilla 出貨抑制相同。",
- "_rule": "登記前先分類。第一類（檔名不可載入／落點不明）：必須先試著指認 mod；Workshop 搜尋端點查『內部 id』 https://steamcommunity.com/workshop/browse/?appid=108600&searchtext=<內部id> ——鍵名前綴多半是內部 id 而非顯示名，語意搜尋常找不到。能指認 mod 就該補正確鍵，不能把本檔當丟棄場（BarrEx／Super Bulldozer／Last Cup Coffee 都曾因此救回，見 744670b、da34211）。第二類（#230 owner 衝突）：須查證為不同實體、無誠實中性譯名，且 JSON 無法依 mod 啟用狀態條件化；與 owner_conflict_decisions.json 的 action=unship 雙向背書，條目必帶 as1_value 與 owner_signature；ItemName 裸鍵若存在 B41 前綴孿生鍵，兩者必須一起抑制。",
  "_recheck": "兩類判準不同。第一類：As1 每次更新後重查一次；as1_value 漂移是重新搜尋 mod／正確落點的訊號。第二類：as1_value 是抑制前有效 CN 值錨點（own lane 也適用），值漂移代表真相層改動；as1_value 缺失／漂移或 owner_signature 漂移代表 owner 增減／上游英文改值，兩者任一漂移都要重審 unship 裁決。",
+ "_rule": "登記前先分類。第一類（檔名不可載入／落點不明）：必須先試著指認 mod；Workshop 搜尋端點查『內部 id』 https://steamcommunity.com/workshop/browse/?appid=108600&searchtext=<內部id> ——鍵名前綴多半是內部 id 而非顯示名，語意搜尋常找不到。能指認 mod 就該補正確鍵，不能把本檔當丟棄場（BarrEx／Super Bulldozer／Last Cup Coffee 都曾因此救回，見 744670b、da34211）。第二類（#230 owner 衝突）：須查證為不同實體、無誠實中性譯名，且 JSON 無法依 mod 啟用狀態條件化；與 owner_conflict_decisions.json 的 action=unship 雙向背書，條目必帶 as1_value 與 owner_signature；ItemName 裸鍵若存在 B41 前綴孿生鍵，兩者必須一起抑制。",
  "entries": {
-  "WolfBondHygieneAttraction.json|ContextMenu_WolfBond_HygieneAttraction": {
-   "as1_value": "口腔卫生 / 魅力加分",
-   "reason": "2026-08-11 裁決不出貨：檔名 WolfBondHygieneAttraction.json 不在 PZ 的 Translator.BY_NAME 白名單，永遠不被載入；鍵應落在 ContextMenu.json，但查不到所屬 mod 故無從確認上游現行鍵名。已試：Workshop 端點搜尋 WolfBond／HygieneAttraction 皆無結果、本機 Steam 訂閱庫全掃無此 mod（只有 As1 包自己與我方發布包命中）、en_corpus_hashes 零紀錄（該 mod 從未被 attribution 歸屬，落在 _unsorted）。As1 42.20 仍保留此鍵，故非上游已刪。"
-  },
-  "WolfBondHygieneAttraction.json|Tooltip_WolfBond_Mouthwash": {
-   "as1_value": "清新口气. 每天一次, 口腔护理更到位.",
-   "reason": "同上，鍵應落在 Tooltip.json。與 ContextMenu_WolfBond_HygieneAttraction 同屬一個未指認的 mod，兩鍵一起裁決。"
-  },
-  "ItemName.json|Base.Glock23": {
-   "as1_value": "格洛克23手枪",
-   "owner_signature": "cb64e0e8ae91b4d1",
-   "reason": "2026-08-20 #230 裁決不出貨：多 owner 以同一 key 表示不同槍。3183820077/Guns93Test 是 Glock 23（script 另寫 Glock 22），3616176188/GaelGunStore 與 3623297453/Legacy 則是 USP-45；廠牌、型號、口徑皆不同，沒有誠實中性譯名，JSON 又無啟用偵測。"
-  },
-  "ItemName.json|ItemName_Base.Glock23": {
-   "as1_value": "格洛克23手枪",
-   "owner_signature": "b0354a6ba155e41d",
-   "reason": "2026-08-20 #230 裁決不出貨：多 owner 以同一 key 表示不同槍。3183820077/Guns93Test 是 Glock 23（script 另寫 Glock 22），3616176188/GaelGunStore 與 3623297453/Legacy 則是 USP-45；廠牌、型號、口徑皆不同，沒有誠實中性譯名，JSON 又無啟用偵測。 同步抑制 B41 前綴鍵，避免裸鍵移除後成為 verify [15] 死鍵。"
-  },
-  "Recipes.json|MakeTortilla": {
-   "as1_value": "制作墨西哥薄饼",
-   "owner_signature": "6e81123984d7f843",
-   "reason": "2026-08-21 裁決不出貨：同一 Recipes|MakeTortilla 在不同 owner 是不同食物。2875059598/Herbalist（與 NoBiofuel 變體）與 3622474939/AbuelitaLindaMexicanFoods 的 EN 是 'Make Tortilla'（墨西哥玉米餅）；3600616323/Todo Caserito 的 EN 是 'Prepare lard biscuits'（阿根廷豬油餅），且該 mod 另有 MakeTortillaCasera，但現行腳本／物品已查證為西班牙煎蛋餅，並不能替代本鍵的阿根廷豬油餅語意。沒有誠實中性譯名，JSON 無啟用偵測。"
-  },
-  "UI.json|UI_trait_BloodlustDesc": {
-   "as1_value": "杀戮僵尸会产生无上的喜悦. <br>击杀僵尸可以变得更加快乐, 并减少压力和恐慌",
-   "owner_signature": "67b26b6fe37581d7",
-   "reason": "2026-08-21 裁決不出貨：三個 owner 用同一鍵描述三種互不相容的機制。2459400130/Dynamic-Traits-main「停不下來的殺意，沒有受害者則心情受影響」（不殺才扣心情）；2914075159/Evolving Traits World「以消滅亡靈為樂，擊殺殭屍獲得幸福感並減少壓力／恐慌」（殺了才加心情）；3657541591/Superheroes「攻速加倍、傷害三倍、近戰擊殺回復耐力、Desensitized」（純戰鬥數值、與心情無關）。三者無交集，任何單一 JSON 值都對至少兩個 owner 不成立；依 AGENTS.md「多 owner 共用鍵…沒有誠實中性值就不出貨」不出貨。**已接受的退化**：2459400130 只出貨 legacy UI_EN.txt（42.0 與 mod root media/），B42 Translator.tryFillMapFromFile 路徑寫死 .json，該 owner 無 EN 底層，故只啟用該 mod 的玩家在特質說明會看到字面鍵名 UI_trait_BloodlustDesc；ETW 與 Superheroes 都有 .json EN，抑制後看到的是自己 mod 的正確英文。先前一版曾以 #232 commit 的『Tooltip 禁止 unship』先例出貨 ETW 文案，但該先例的補救手段（Translator live-map Lua）從未落地，且 AGENTS.md 同一條規則明文禁止 Lua 覆寫，故以現行硬規則為準。日後任一 owner 補上 .json EN 或改鍵名即重新裁決。"
-  },
   "IG_UI.json|IGUI_VehicleNamefhq240SXCabrio": {
    "as1_value": "日产240SX 敞篷版 (S13)",
    "owner_signature": "d610e886b701f77a",
@@ -1180,6 +1152,34 @@
    "as1_value": "日产240SX双门轿跑 (S13) 漂移改装版",
    "owner_signature": "2c06029040f3fd9b",
    "reason": "2026-08-22 #244 批次裁決不出貨：同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體——base「Gosun RC2400 Coupe Drift Custom」（規避商標的虛構品牌）vs Real Names Addon「Nissan 240SX Coupe (S13) Drift Custom」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.2 反編譯 Translator.java:433/:495；consumer 全走 getText：ISVehicleMechanics.lua:1155、ISVehicleMenu.lua:866、ISVehicleAnimalUI.lua:442、BaseVehicle.java:10687 車鑰匙名）。抑制前出貨值採 Real Names Addon 的真名譯文，只啟用 base mod 的玩家看到與該 mod 英文完全不符的車名。"
+  },
+  "ItemName.json|Base.Glock23": {
+   "as1_value": "格洛克23手枪",
+   "owner_signature": "ec8a7d36ce738c07",
+   "reason": "2026-08-20 #230 裁決不出貨：多 owner 以同一 key 表示不同槍。3183820077/Guns93Test 是 Glock 23（script 另寫 Glock 22），3616176188/GaelGunStore 與 3623297453/Legacy 則是 USP-45；廠牌、型號、口徑皆不同，沒有誠實中性譯名，JSON 又無啟用偵測。 2026-08-26 重新錨定並更正事實：GaelGunStore 改用裸鍵後其值為 'Glock 23 Pistol'（與 Guns93Test 一致），已不再是 USP-45；但 3623297453/GaelGunStore_Legacy 的 script DisplayName 仍為 'USP-45'，同一 key 指不同槍的衝突未消失（3 owner 對 1 → 2 對 1），沒有誠實中性譯名，維持不出貨。"
+  },
+  "ItemName.json|ItemName_Base.Glock23": {
+   "as1_value": "格洛克23手枪",
+   "owner_signature": "b0354a6ba155e41d",
+   "reason": "2026-08-20 #230 裁決不出貨：多 owner 以同一 key 表示不同槍。3183820077/Guns93Test 是 Glock 23（script 另寫 Glock 22），3616176188/GaelGunStore 與 3623297453/Legacy 則是 USP-45；廠牌、型號、口徑皆不同，沒有誠實中性譯名，JSON 又無啟用偵測。 同步抑制 B41 前綴鍵，避免裸鍵移除後成為 verify [15] 死鍵。"
+  },
+  "Recipes.json|MakeTortilla": {
+   "as1_value": "制作墨西哥薄饼",
+   "owner_signature": "6e81123984d7f843",
+   "reason": "2026-08-21 裁決不出貨：同一 Recipes|MakeTortilla 在不同 owner 是不同食物。2875059598/Herbalist（與 NoBiofuel 變體）與 3622474939/AbuelitaLindaMexicanFoods 的 EN 是 'Make Tortilla'（墨西哥玉米餅）；3600616323/Todo Caserito 的 EN 是 'Prepare lard biscuits'（阿根廷豬油餅），且該 mod 另有 MakeTortillaCasera，但現行腳本／物品已查證為西班牙煎蛋餅，並不能替代本鍵的阿根廷豬油餅語意。沒有誠實中性譯名，JSON 無啟用偵測。"
+  },
+  "UI.json|UI_trait_BloodlustDesc": {
+   "as1_value": "杀戮僵尸会产生无上的喜悦. <br>击杀僵尸可以变得更加快乐, 并减少压力和恐慌",
+   "owner_signature": "67b26b6fe37581d7",
+   "reason": "2026-08-21 裁決不出貨：三個 owner 用同一鍵描述三種互不相容的機制。2459400130/Dynamic-Traits-main「停不下來的殺意，沒有受害者則心情受影響」（不殺才扣心情）；2914075159/Evolving Traits World「以消滅亡靈為樂，擊殺殭屍獲得幸福感並減少壓力／恐慌」（殺了才加心情）；3657541591/Superheroes「攻速加倍、傷害三倍、近戰擊殺回復耐力、Desensitized」（純戰鬥數值、與心情無關）。三者無交集，任何單一 JSON 值都對至少兩個 owner 不成立；依 AGENTS.md「多 owner 共用鍵…沒有誠實中性值就不出貨」不出貨。**已接受的退化**：2459400130 只出貨 legacy UI_EN.txt（42.0 與 mod root media/），B42 Translator.tryFillMapFromFile 路徑寫死 .json，該 owner 無 EN 底層，故只啟用該 mod 的玩家在特質說明會看到字面鍵名 UI_trait_BloodlustDesc；ETW 與 Superheroes 都有 .json EN，抑制後看到的是自己 mod 的正確英文。先前一版曾以 #232 commit 的『Tooltip 禁止 unship』先例出貨 ETW 文案，但該先例的補救手段（Translator live-map Lua）從未落地，且 AGENTS.md 同一條規則明文禁止 Lua 覆寫，故以現行硬規則為準。日後任一 owner 補上 .json EN 或改鍵名即重新裁決。"
+  },
+  "WolfBondHygieneAttraction.json|ContextMenu_WolfBond_HygieneAttraction": {
+   "as1_value": "口腔卫生 / 魅力加分",
+   "reason": "2026-08-11 裁決不出貨：檔名 WolfBondHygieneAttraction.json 不在 PZ 的 Translator.BY_NAME 白名單，永遠不被載入；鍵應落在 ContextMenu.json，但查不到所屬 mod 故無從確認上游現行鍵名。已試：Workshop 端點搜尋 WolfBond／HygieneAttraction 皆無結果、本機 Steam 訂閱庫全掃無此 mod（只有 As1 包自己與我方發布包命中）、en_corpus_hashes 零紀錄（該 mod 從未被 attribution 歸屬，落在 _unsorted）。As1 42.20 仍保留此鍵，故非上游已刪。"
+  },
+  "WolfBondHygieneAttraction.json|Tooltip_WolfBond_Mouthwash": {
+   "as1_value": "清新口气. 每天一次, 口腔护理更到位.",
+   "reason": "同上，鍵應落在 Tooltip.json。與 ContextMenu_WolfBond_HygieneAttraction 同屬一個未指認的 mod，兩鍵一起裁決。"
   }
  }
 }

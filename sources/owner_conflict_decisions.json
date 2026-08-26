@@ -3,8 +3,8 @@
  "entries": {
   "ItemName|Base.Glock23": {
    "action": "unship",
-   "signature": "cb64e0e8ae91b4d1",
-   "reason": "2026-08-20 #230 裁決不出貨：多 owner 以同一 key 表示不同槍。3183820077/Guns93Test 是 Glock 23（script 另寫 Glock 22），3616176188/GaelGunStore 與 3623297453/Legacy 則是 USP-45；廠牌、型號、口徑皆不同，沒有誠實中性譯名，JSON 又無啟用偵測。"
+   "signature": "ec8a7d36ce738c07",
+   "reason": "2026-08-20 #230 裁決不出貨：多 owner 以同一 key 表示不同槍。3183820077/Guns93Test 是 Glock 23（script 另寫 Glock 22），3616176188/GaelGunStore 與 3623297453/Legacy 則是 USP-45；廠牌、型號、口徑皆不同，沒有誠實中性譯名，JSON 又無啟用偵測。 2026-08-26 重新錨定並更正事實：GaelGunStore 改用裸鍵後其值為 'Glock 23 Pistol'（與 Guns93Test 一致），已不再是 USP-45；但 3623297453/GaelGunStore_Legacy 的 script DisplayName 仍為 'USP-45'，同一 key 指不同槍的衝突未消失（3 owner 對 1 → 2 對 1），沒有誠實中性譯名，維持不出貨。"
   },
   "ItemName|Base.1000Tank1": {
    "action": "translate",
@@ -50,29 +50,29 @@
   },
   "ItemName|Base.AK47": {
    "action": "translate",
-   "signature": "458b1255e32a37d9",
-   "reason": "三個 owner（Firearms / FirearmsBETA 同 wid 兩 root，值相同；VFE）都是 7.62×39 的 AK-47 本體，同型號同口徑。英文差異只是有無後綴類別詞（'AK-47' vs 'AK-47 Assault Rifle'）。VFE 對應彈匣 Base.762Clip='AK-47 Magazine'、Firearms 為 Base.AK_Mag='AK-47 Magazine'，皆同一槍。現行譯名不含任何 owner 專屬型號/廠牌宣稱，與已出貨的 Base.AK47Folded/Unfolded、Base.762Clip、Base.AK_Mag 同族一致，建議維持。",
+   "signature": "59b5e30f8fdb1068",
+   "reason": "三個 owner（Firearms / FirearmsBETA 同 wid 兩 root，值相同；VFE）都是 7.62×39 的 AK-47 本體，同型號同口徑。英文差異只是有無後綴類別詞（'AK-47' vs 'AK-47 Assault Rifle'）。VFE 對應彈匣 Base.762Clip='AK-47 Magazine'、Firearms 為 Base.AK_Mag='AK-47 Magazine'，皆同一槍。現行譯名不含任何 owner 專屬型號/廠牌宣稱，與已出貨的 Base.AK47Folded/Unfolded、Base.762Clip、Base.AK_Mag 同族一致，建議維持。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "AK-47自動步槍",
    "cn": "AK-47自动步枪"
   },
   "ItemName|Base.CZ75": {
    "action": "translate",
-   "signature": "4eff78ba6c3f3e54",
-   "reason": "三個 owner 指的是同一把 9mm CZ 75 手槍，而且巧合的是連自帶英文都收斂到同一字串：GaelGunStore 與其 Legacy 版的 script DisplayName 是 'CZ75 Pistol'，但兩者自家 ItemName 覆寫成 'CZ 75 Pistol'，與 VFE 的 'CZ 75 Pistol' 完全相同（工作包 values 取的是 script 值，故看起來有差）。GGS 的 Base.Clip_CZ75='Clip 9mm 15round' 亦確認為 9mm。「捷克」對應 CZ = Česká zbrojovka，對三 owner 皆成立，無型號/口徑衝突，建議維持。",
+   "signature": "bfaa76ab86d43eda",
+   "reason": "三個 owner 指的是同一把 9mm CZ 75 手槍，而且巧合的是連自帶英文都收斂到同一字串：GaelGunStore 與其 Legacy 版的 script DisplayName 是 'CZ75 Pistol'，但兩者自家 ItemName 覆寫成 'CZ 75 Pistol'，與 VFE 的 'CZ 75 Pistol' 完全相同（工作包 values 取的是 script 值，故看起來有差）。GGS 的 Base.Clip_CZ75='Clip 9mm 15round' 亦確認為 9mm。「捷克」對應 CZ = Česká zbrojovka，對三 owner 皆成立，無型號/口徑衝突，建議維持。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "捷克CZ75手槍",
    "cn": "捷克CZ75手枪"
   },
   "ItemName|Base.FAL": {
    "action": "translate",
-   "signature": "7acdf2e0cdab499e",
-   "reason": "四個 owner 都是 FN FAL 本體（7.62 NATO/.308 級），無型號或口徑分歧：Guns93Test 'FN FAL'（Base.FALMag='FN FAL Magazine (.308 Win)'）、GaelGunStore 與 Legacy 自家 ItemName 'FN FAL Rifle'、VFE 'FAL Battle Rifle'。英文差異只在廠牌前綴與類別詞（Battle Rifle vs 無）。FAL 為 FN（Fabrique Nationale de Herstal）產品，寫「赫斯塔爾」不是偏向某 owner 的宣稱，且與已出貨的 Base.FALClassic、Base.FALClip、Base.FALMag、Base.FAL_CQB 同族用法一致。註：GGS 的 FAL CQB 走獨立 key Base.FAL_CQB，不會混淆。建議維持。",
+   "signature": "d9461902966695b0",
+   "reason": "四個 owner 都是 FN FAL 本體（7.62 NATO/.308 級），無型號或口徑分歧：Guns93Test 'FN FAL'（Base.FALMag='FN FAL Magazine (.308 Win)'）、GaelGunStore 與 Legacy 自家 ItemName 'FN FAL Rifle'、VFE 'FAL Battle Rifle'。英文差異只在廠牌前綴與類別詞（Battle Rifle vs 無）。FAL 為 FN（Fabrique Nationale de Herstal）產品，寫「赫斯塔爾」不是偏向某 owner 的宣稱，且與已出貨的 Base.FALClassic、Base.FALClip、Base.FALMag、Base.FAL_CQB 同族用法一致。註：GGS 的 FAL CQB 走獨立 key Base.FAL_CQB，不會混淆。建議維持。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "赫斯塔爾FAL自動步槍",
    "cn": "赫斯塔尔FAL自动步枪"
   },
   "ItemName|Base.M249": {
    "action": "translate",
-   "signature": "3d11a87a96e93f55",
-   "reason": "兩個 owner 都是 FN M249 5.56/.223 輕機槍：Guns93Test 'FN M249'（彈藥箱 Base.M249Box='M249 Ammo Box (Belted .223)'）、VFES 'M249 Light Machinegun'（彈藥箱 Base.556box100='M249 Box'）。英文差異只是廠牌前綴 vs 類別後綴，同一實體。現行譯名同時保留廠牌與類別，對兩者皆成立；與已出貨的 Base.556box100='赫斯塔爾M249輕機槍彈藥箱'、Base.M249Box='M249彈藥箱 (.223彈鏈)' 一致，建議維持。",
+   "signature": "74c6c84fe5a08a7c",
+   "reason": "兩個 owner 都是 FN M249 5.56/.223 輕機槍：Guns93Test 'FN M249'（彈藥箱 Base.M249Box='M249 Ammo Box (Belted .223)'）、VFES 'M249 Light Machinegun'（彈藥箱 Base.556box100='M249 Box'）。英文差異只是廠牌前綴 vs 類別後綴，同一實體。現行譯名同時保留廠牌與類別，對兩者皆成立；與已出貨的 Base.556box100='赫斯塔爾M249輕機槍彈藥箱'、Base.M249Box='M249彈藥箱 (.223彈鏈)' 一致，建議維持。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "赫斯塔爾M249輕機槍",
    "cn": "赫斯塔尔M249轻机枪"
   },
@@ -85,22 +85,22 @@
   },
   "ItemName|Base.MP7": {
    "action": "translate",
-   "signature": "c4b05661eeef75b0",
-   "reason": "本包最需要交叉檢查的一鍵，但證據支持中性可行。表面上 GaelGunStore 的值是 'MP7 9mm'（機制上改膛 9mm，Base.Clip_MP7='Clip 9mm 15round'）而 VFEP93 是 4.6mm 平台（Base.46Clip40='MP7 Magazine'、Base.46Bullets='4.6mm Round'），像是口徑衝突；但 'MP7 9mm' 只是 GGS 的 script DisplayName，GGS 與 Legacy 自家 ItemName 已覆寫成 'Heckler & Koch MP7 Submachine Gun'，即兩個 owner 實際顯示的都是不帶口徑的 H&K MP7。因此現行不宣稱口徑的譯名對兩者都誠實，也沒有丟掉作者原本要給玩家的資訊。口徑辨識資訊落在彈匣鍵而非槍身鍵（已出貨 Base.Clip_MP7='9mm 15 發彈匣'、Base.46Clip40='黑克勒-科赫MP7衝鋒槍彈匣'、Gunpart.Clip_MP7_cat='MP7 4.6mm 彈匣'），玩家仍能區分。建議維持；若主 agent 要零風險，替代方案是改為不帶類別詞的「黑克勒-科赫MP7」，但沒有必要。",
+   "signature": "096083ff5bf954ee",
+   "reason": "本包最需要交叉檢查的一鍵，但證據支持中性可行。表面上 GaelGunStore 的值是 'MP7 9mm'（機制上改膛 9mm，Base.Clip_MP7='Clip 9mm 15round'）而 VFEP93 是 4.6mm 平台（Base.46Clip40='MP7 Magazine'、Base.46Bullets='4.6mm Round'），像是口徑衝突；但 'MP7 9mm' 只是 GGS 的 script DisplayName，GGS 與 Legacy 自家 ItemName 已覆寫成 'Heckler & Koch MP7 Submachine Gun'，即兩個 owner 實際顯示的都是不帶口徑的 H&K MP7。因此現行不宣稱口徑的譯名對兩者都誠實，也沒有丟掉作者原本要給玩家的資訊。口徑辨識資訊落在彈匣鍵而非槍身鍵（已出貨 Base.Clip_MP7='9mm 15 發彈匣'、Base.46Clip40='黑克勒-科赫MP7衝鋒槍彈匣'、Gunpart.Clip_MP7_cat='MP7 4.6mm 彈匣'），玩家仍能區分。建議維持；若主 agent 要零風險，替代方案是改為不帶類別詞的「黑克勒-科赫MP7」，但沒有必要。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "黑克勒-科赫MP7衝鋒槍",
    "cn": "黑克勒-科赫MP7冲锋枪"
   },
   "ItemName|Base.P90": {
    "action": "translate",
-   "signature": "76b99c0da17685fd",
-   "reason": "與 Base.MP7 同型情境：GaelGunStore script 寫 'P90 9mm'（改膛 9mm，Base.Clip_P90='Clip 9mm 15round'），VFEP93 為 5.7mm 平台（Base.57Clip50='P90 Magazine'、Base.57Bullets='5.7mm Round'）；但 GGS 與 Legacy 自家 ItemName 已覆寫為 'FN P90 Submachine Gun'，兩 owner 實際顯示皆為不帶口徑的 FN P90，同一把槍。現行譯名不宣稱口徑，對兩者皆誠實，口徑辨識落在彈匣鍵（已出貨 Base.Clip_P90='9mm 15 發彈匣'、Base.57Clip50='赫斯塔爾P90衝鋒槍彈匣'）。附帶提醒主 agent：同前綴的 Base.P90Mag 已出貨為「儒格P90手槍彈匣 (.45 Auto)」，那是完全不同的 Ruger P90 手槍，屬另一鍵，勿把兩者混為一族。建議維持本鍵現值。",
+   "signature": "85ef9475cf84947f",
+   "reason": "與 Base.MP7 同型情境：GaelGunStore script 寫 'P90 9mm'（改膛 9mm，Base.Clip_P90='Clip 9mm 15round'），VFEP93 為 5.7mm 平台（Base.57Clip50='P90 Magazine'、Base.57Bullets='5.7mm Round'）；但 GGS 與 Legacy 自家 ItemName 已覆寫為 'FN P90 Submachine Gun'，兩 owner 實際顯示皆為不帶口徑的 FN P90，同一把槍。現行譯名不宣稱口徑，對兩者皆誠實，口徑辨識落在彈匣鍵（已出貨 Base.Clip_P90='9mm 15 發彈匣'、Base.57Clip50='赫斯塔爾P90衝鋒槍彈匣'）。附帶提醒主 agent：同前綴的 Base.P90Mag 已出貨為「儒格P90手槍彈匣 (.45 Auto)」，那是完全不同的 Ruger P90 手槍，屬另一鍵，勿把兩者混為一族。建議維持本鍵現值。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "赫斯塔爾P90衝鋒槍",
    "cn": "赫斯塔尔P90冲锋枪"
   },
   "ItemName|Base.SVD": {
    "action": "translate",
-   "signature": "f35b4dfd04edc202",
-   "reason": "三個 owner 都是 7.62×54R 的 SVD 德拉貢諾夫狙擊步槍：VFES 'Dragunov Sniper Rifle'（Base.762Clip10='Dragunov Magazine'）、GaelGunStore 與 Legacy 的 script 'SVD Rifle' 但自家 ItemName 覆寫為 'Dragunov SVD Sniper Rifle'（Base.Clip_SVD='Clip 762x54r 20 round'）。英文差異只是型號代號與人名的取捨，同一實體。GGS 的其他變體（SVD12/SVDK/SVD_short）都走獨立 key，不會被本鍵影響。現行譯名與已出貨的 Base.762Clip10='德拉貢諾夫狙擊步槍彈匣'、Base.SVD_cat='SVD 德拉貢諾夫狙擊步槍' 一致，建議維持。",
+   "signature": "842c1c11478deb6a",
+   "reason": "三個 owner 都是 7.62×54R 的 SVD 德拉貢諾夫狙擊步槍：VFES 'Dragunov Sniper Rifle'（Base.762Clip10='Dragunov Magazine'）、GaelGunStore 與 Legacy 的 script 'SVD Rifle' 但自家 ItemName 覆寫為 'Dragunov SVD Sniper Rifle'（Base.Clip_SVD='Clip 762x54r 20 round'）。英文差異只是型號代號與人名的取捨，同一實體。GGS 的其他變體（SVD12/SVDK/SVD_short）都走獨立 key，不會被本鍵影響。現行譯名與已出貨的 Base.762Clip10='德拉貢諾夫狙擊步槍彈匣'、Base.SVD_cat='SVD 德拉貢諾夫狙擊步槍' 一致，建議維持。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "德拉貢諾夫狙擊步槍",
    "cn": "德拉贡诺夫狙击步枪"
   },
@@ -113,8 +113,8 @@
   },
   "ItemName|Base.UMP45": {
    "action": "translate",
-   "signature": "a899d26b099594ba",
-   "reason": "三個 owner 都是 H&K UMP .45：VFES 'UMP-45 Submachinegun'（Base.45Clip25='UMP-45 Magazine'）、GaelGunStore 與 Legacy 的 script 'UMP-45' 但自家 ItemName 覆寫為 'Heckler & Koch UMP .45 Submachine Gun'（Base.Clip_UMP45='Clip 45 15round'）。口徑一致（.45 由型號本身承載），無型號分歧。GGS 的長槍管版走獨立 key Base.UMP45_long，不受影響。現行譯名等同 GGS 自家英文，對 VFES 也成立，建議維持。",
+   "signature": "ffaede1aec5469a9",
+   "reason": "三個 owner 都是 H&K UMP .45：VFES 'UMP-45 Submachinegun'（Base.45Clip25='UMP-45 Magazine'）、GaelGunStore 與 Legacy 的 script 'UMP-45' 但自家 ItemName 覆寫為 'Heckler & Koch UMP .45 Submachine Gun'（Base.Clip_UMP45='Clip 45 15round'）。口徑一致（.45 由型號本身承載），無型號分歧。GGS 的長槍管版走獨立 key Base.UMP45_long，不受影響。現行譯名等同 GGS 自家英文，對 VFES 也成立，建議維持。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "黑克勒-科赫UMP45衝鋒槍",
    "cn": "黑克勒-科赫UMP45冲锋枪"
   },
@@ -169,8 +169,8 @@
   },
   "ItemName|Base.AR15": {
    "action": "translate",
-   "signature": "5ddfb30f8a389504",
-   "reason": "五個 owner 全部指 AR-15 平台同一槍（AR-15 / AR15 Assault Rifle），實體相容。但現行「柯爾特AR-15自動步槍」有兩處偏置：(1)「柯爾特」品牌無任何 owner 主張；(2)「自動」與 Firearms/Guns93 的半自動 AR-15 矛盾（Guns93 自帶 Trigger Group (Semi) (AR-15) 配件即證），僅 GaelGunStore 稱 Assault Rifle。去品牌、去射擊模式改「AR-15步槍」對全部 owner 誠實。",
+   "signature": "0556359ba360d0d4",
+   "reason": "五個 owner 全部指 AR-15 平台同一槍（AR-15 / AR15 Assault Rifle），實體相容。但現行「柯爾特AR-15自動步槍」有兩處偏置：(1)「柯爾特」品牌無任何 owner 主張；(2)「自動」與 Firearms/Guns93 的半自動 AR-15 矛盾（Guns93 自帶 Trigger Group (Semi) (AR-15) 配件即證），僅 GaelGunStore 稱 Assault Rifle。去品牌、去射擊模式改「AR-15步槍」對全部 owner 誠實。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "AR-15步槍",
    "cn": "AR-15步枪"
   },
@@ -183,8 +183,8 @@
   },
   "ItemName|Base.Galil": {
    "action": "translate",
-   "signature": "0d63e4f150050f4c",
-   "reason": "「Galil Assault Rifle」與「IMI Galil」同指以色列 IMI Galil 步槍，僅品牌前綴與類別後綴的詳略差。現行「加利爾自動步槍」不綁品牌寫法對兩 owner 皆成立，維持現值。",
+   "signature": "816ee109edd12f36",
+   "reason": "「Galil Assault Rifle」與「IMI Galil」同指以色列 IMI Galil 步槍，僅品牌前綴與類別後綴的詳略差。現行「加利爾自動步槍」不綁品牌寫法對兩 owner 皆成立，維持現值。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "加利爾自動步槍",
    "cn": "加利尔自动步枪"
   },
@@ -197,8 +197,8 @@
   },
   "ItemName|Base.MP5": {
    "action": "translate",
-   "signature": "7efb590593bc579d",
-   "reason": "三家分別稱 MP5A1、HK MP5、MP5 Submachinegun——同為 HK MP5 家族，但「A1」子型號僅 Firearms 一家主張，其餘 owner 未指定變體。現行「黑克勒-科赫MP5A1衝鋒槍」把 A1 硬套到所有 owner 不誠實；去掉 A1 改「黑克勒-科赫MP5衝鋒槍」對全部成立（A1 仍是 MP5），且與倉內既有 ItemName_Base.MP5 譯法完全一致。",
+   "signature": "2bcc672033abe7d9",
+   "reason": "三家分別稱 MP5A1、HK MP5、MP5 Submachinegun——同為 HK MP5 家族，但「A1」子型號僅 Firearms 一家主張，其餘 owner 未指定變體。現行「黑克勒-科赫MP5A1衝鋒槍」把 A1 硬套到所有 owner 不誠實；去掉 A1 改「黑克勒-科赫MP5衝鋒槍」對全部成立（A1 仍是 MP5），且與倉內既有 ItemName_Base.MP5 譯法完全一致。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "黑克勒-科赫MP5衝鋒槍",
    "cn": "黑克勒-科赫MP5冲锋枪"
   },
@@ -211,15 +211,15 @@
   },
   "ItemName|Base.SKS": {
    "action": "translate",
-   "signature": "4028d49a3ee25689",
-   "reason": "「SKS」與「SKS Rifle」同指 SKS 半自動步槍，僅後綴詳略差。SKS 本身即半自動設計（Guns93 的 SKSTrigger 亦標 Semi），「SKS半自動步槍」對全部 owner 成立，維持現值。",
+   "signature": "f450760d9c51dacb",
+   "reason": "「SKS」與「SKS Rifle」同指 SKS 半自動步槍，僅後綴詳略差。SKS 本身即半自動設計（Guns93 的 SKSTrigger 亦標 Semi），「SKS半自動步槍」對全部 owner 成立，維持現值。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "SKS半自動步槍",
    "cn": "SKS半自动步枪"
   },
   "ItemName|Base.Saiga12": {
    "action": "translate",
-   "signature": "59bb9676b66215cb",
-   "reason": "「Saiga-12」與「Saiga-12 Shotgun」同指俄製 Saiga-12 霰彈槍，僅後綴詳略差。現行譯名對兩 owner 皆成立，維持現值。（附帶觀察：倉內 Base.Saiga12_cat 用拉丁「Saiga-12」而此鍵用「賽加-12」，屬風格不一致，非本衝突範疇。）",
+   "signature": "c50861264ae8c233",
+   "reason": "「Saiga-12」與「Saiga-12 Shotgun」同指俄製 Saiga-12 霰彈槍，僅後綴詳略差。現行譯名對兩 owner 皆成立，維持現值。（附帶觀察：倉內 Base.Saiga12_cat 用拉丁「Saiga-12」而此鍵用「賽加-12」，屬風格不一致，非本衝突範疇。） 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "賽加-12霰彈槍",
    "cn": "赛加-12霰弹枪"
   },
@@ -232,8 +232,8 @@
   },
   "ItemName|Base.USP45": {
    "action": "translate",
-   "signature": "e7a607994596c7e2",
-   "reason": "「USP-45 Pistol」與「USP-45」同指 HK USP .45 手槍，僅後綴詳略差。USP 唯一製造商即 Heckler & Koch，品牌前綴屬客觀事實而非 owner 偏置，現行譯名對全部 owner 成立，維持現值。",
+   "signature": "81a57147b70372a5",
+   "reason": "「USP-45 Pistol」與「USP-45」同指 HK USP .45 手槍，僅後綴詳略差。USP 唯一製造商即 Heckler & Koch，品牌前綴屬客觀事實而非 owner 偏置，現行譯名對全部 owner 成立，維持現值。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "黑克勒-科赫USP-45手槍",
    "cn": "黑克勒-科赫USP-45手枪"
   },
@@ -274,8 +274,8 @@
   },
   "ItemName|Base.762x39Box": {
    "action": "translate",
-   "signature": "33e08253fc6e685d",
-   "reason": "同物命名/格式差異。兩個 owner 都是 7.62×39mm 的 Box（整盒）。工作包所列的 GaelGunStore_Legacy 值 \"Box of .762x39 Bullets\" 其實是該 mod 的 script DisplayName（作者打錯小數點，寫成 .762），而其自帶英文 Translate 寫的是 \"Box of 7.62x39mm Rounds (30 Rounds)\"，與 Firearms 的 \"Box of 7.62x39mm Rounds\" 同物，僅多標 30 發容量。現行譯文未寫入發數，正好對容量未明的 Firearms 與標 30 發的 Gael 同時成立；亦未沿用 Gael 的 .762 錯誤寫法。",
+   "signature": "ec3e42969592b1d5",
+   "reason": "同物命名/格式差異。兩個 owner 都是 7.62×39mm 的 Box（整盒）。工作包所列的 GaelGunStore_Legacy 值 \"Box of .762x39 Bullets\" 其實是該 mod 的 script DisplayName（作者打錯小數點，寫成 .762），而其自帶英文 Translate 寫的是 \"Box of 7.62x39mm Rounds (30 Rounds)\"，與 Firearms 的 \"Box of 7.62x39mm Rounds\" 同物，僅多標 30 發容量。現行譯文未寫入發數，正好對容量未明的 Firearms 與標 30 發的 Gael 同時成立；亦未沿用 Gael 的 .762 錯誤寫法。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "7.62x39mm彈藥 (整盒)",
    "cn": "7.62x39mm弹药 (整盒)"
   },
@@ -288,15 +288,15 @@
   },
   "ItemName|Base.Anaconda": {
    "action": "translate",
-   "signature": "52493c1a107c00d2",
-   "reason": "同物命名差異，非撞 key。Guns93Test 直接寫 \"Colt Anaconda\"；GaelGunStore（含 Legacy）script DN 寫 \"Anaconda 44\"，但同 mod 自帶英文 Translate 明寫 \"Colt Anaconda Revolver\"，作者意圖就是柯爾特巨蟒 .44 Magnum。已做撞 key 反查：GaelGunStore 的 Revolvers.txt 全表只有這一支 Anaconda（另有 Base.Python357 \"Python .357\" 為另一支柯爾特），沒有把 Base.Anaconda 挪用成別的槍（對照本批 Base.Glock23 就是挪用案例）。故「柯爾特巨蟒左輪手槍」對所有 owner 成立。",
+   "signature": "b3a2bf0e4126990a",
+   "reason": "同物命名差異，非撞 key。Guns93Test 直接寫 \"Colt Anaconda\"；GaelGunStore（含 Legacy）script DN 寫 \"Anaconda 44\"，但同 mod 自帶英文 Translate 明寫 \"Colt Anaconda Revolver\"，作者意圖就是柯爾特巨蟒 .44 Magnum。已做撞 key 反查：GaelGunStore 的 Revolvers.txt 全表只有這一支 Anaconda（另有 Base.Python357 \"Python .357\" 為另一支柯爾特），沒有把 Base.Anaconda 挪用成別的槍（對照本批 Base.Glock23 就是挪用案例）。故「柯爾特巨蟒左輪手槍」對所有 owner 成立。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "柯爾特巨蟒左輪手槍",
    "cn": "柯尔特巨蟒左轮手枪"
   },
   "ItemName|Base.Clip_Pistol": {
    "action": "translate",
-   "signature": "83fa8474d8c7e756",
-   "reason": "實體具體程度不同，但存在誠實的中性上位詞，故非 incompatible。WAR（ADVANCED WARFARE）的 Base.Clip_Pistol 是其 Base.Pistol（該 mod 把原版 Base.Pistol 覆寫成 \"[IWI] JERICHO\"）配套的彈匣件，故稱 \"IWI JERICHO Clip\"；GaelGunStore（含 Legacy）的 Base.Clip_Pistol 是 GunPartItem/Clip.txt 裡的泛用手槍彈匣 \"Clip Pistol\"。IWI Jericho 941 本身即手槍，其彈匣確實是手槍彈匣，因此「手槍彈匣」對兩個 owner 都是真陳述、且不寫入任一方專屬型號。此結論與 own_translations 既存 _note 的裁決一致（該 _note 已明載同一理由），本次以語料獨立覆核通過。",
+   "signature": "35fb6823291eb165",
+   "reason": "實體具體程度不同，但存在誠實的中性上位詞，故非 incompatible。WAR（ADVANCED WARFARE）的 Base.Clip_Pistol 是其 Base.Pistol（該 mod 把原版 Base.Pistol 覆寫成 \"[IWI] JERICHO\"）配套的彈匣件，故稱 \"IWI JERICHO Clip\"；GaelGunStore（含 Legacy）的 Base.Clip_Pistol 是 GunPartItem/Clip.txt 裡的泛用手槍彈匣 \"Clip Pistol\"。IWI Jericho 941 本身即手槍，其彈匣確實是手槍彈匣，因此「手槍彈匣」對兩個 owner 都是真陳述、且不寫入任一方專屬型號。此結論與 own_translations 既存 _note 的裁決一致（該 _note 已明載同一理由），本次以語料獨立覆核通過。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "手槍彈匣",
    "cn": "手枪弹匣"
   },
@@ -323,8 +323,8 @@
   },
   "ItemName|Base.SPAS12": {
    "action": "translate",
-   "signature": "dfc2f4863729fc3b",
-   "reason": "同槍不同命名詳略，五個 owner 全指 Franchi SPAS-12。Firearms／FirearmsBETA／Guns93Test 皆明寫 \"Franchi SPAS-12\"；GaelGunStore（含 Legacy）script DN 寫 \"SPAS-12\"，其自帶英文 Translate 寫 \"SPAS-12 Shotgun\"。SPAS-12 為 Franchi 獨有型號。已做撞 key 反查：GaelGunStore 的 Escopeta_semi.txt 另有獨立的 Base.SPAS15 \"SPAS-15 Shotgun\"，Base.SPAS12 未被挪用。現行譯文對所有 owner 成立。",
+   "signature": "5e757473f64e86a1",
+   "reason": "同槍不同命名詳略，五個 owner 全指 Franchi SPAS-12。Firearms／FirearmsBETA／Guns93Test 皆明寫 \"Franchi SPAS-12\"；GaelGunStore（含 Legacy）script DN 寫 \"SPAS-12\"，其自帶英文 Translate 寫 \"SPAS-12 Shotgun\"。SPAS-12 為 Franchi 獨有型號。已做撞 key 反查：GaelGunStore 的 Escopeta_semi.txt 另有獨立的 Base.SPAS15 \"SPAS-15 Shotgun\"，Base.SPAS12 未被挪用。現行譯文對所有 owner 成立。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "弗蘭齊SPAS-12霰彈槍",
    "cn": "弗兰齐SPAS-12霰弹枪"
   },
@@ -344,8 +344,8 @@
   },
   "ItemName|Base.UZI": {
    "action": "translate",
-   "signature": "fc47b5032ce78769",
-   "reason": "同槍不同命名，且「衝鋒槍」對兩個 owner 都成立。關鍵反查：Firearms 雖把 Base.UZI 譯為 \"UZI Carbine\"，但該 mod 並無另一支 UZI SMG 品項（全 mod 只有這一支 UZI 及其配件），且其 Sandbox 說明文字直接寫 \"Whether or not UZI SMGs spawn.\"，證明作者自己就把它當衝鋒槍，Carbine 只是命名風格而非另一種半自動卡賓型。GaelGunStore（含 Legacy）script DN \"UZI 9mm\"、自帶英文 \"UZI Submachine Gun\"，並另有獨立的 Base.Micro_UZI，故 Base.UZI 是全尺寸 9mm 烏茲。現行「UZI衝鋒槍」對兩者皆成立。",
+   "signature": "b108f9914171c345",
+   "reason": "同槍不同命名，且「衝鋒槍」對兩個 owner 都成立。關鍵反查：Firearms 雖把 Base.UZI 譯為 \"UZI Carbine\"，但該 mod 並無另一支 UZI SMG 品項（全 mod 只有這一支 UZI 及其配件），且其 Sandbox 說明文字直接寫 \"Whether or not UZI SMGs spawn.\"，證明作者自己就把它當衝鋒槍，Carbine 只是命名風格而非另一種半自動卡賓型。GaelGunStore（含 Legacy）script DN \"UZI 9mm\"、自帶英文 \"UZI Submachine Gun\"，並另有獨立的 Base.Micro_UZI，故 Base.UZI 是全尺寸 9mm 烏茲。現行「UZI衝鋒槍」對兩者皆成立。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "UZI衝鋒槍",
    "cn": "UZI冲锋枪"
   },
@@ -365,8 +365,8 @@
   },
   "ItemName|Base.45Clip25": {
    "action": "translate",
-   "signature": "0f678ade30498894",
-   "reason": "VFES 為 UMP-45 彈匣，GaelGun_Legacy 為通用 .45 ACP 25 發彈匣（其自帶翻譯層即 '.45 ACP Magazine (25 Rounds)'）。UMP-45 彈匣正是 25 發 .45 ACP 彈匣，故中性名對兩邊皆為事實；現行譯名指名 UMP45 偏向 VFES，建議改為中性名。",
+   "signature": "260e0b1de45dfa74",
+   "reason": "VFES 為 UMP-45 彈匣，GaelGun_Legacy 為通用 .45 ACP 25 發彈匣（其自帶翻譯層即 '.45 ACP Magazine (25 Rounds)'）。UMP-45 彈匣正是 25 發 .45 ACP 彈匣，故中性名對兩邊皆為事實；現行譯名指名 UMP45 偏向 VFES，建議改為中性名。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": ".45 ACP彈匣 (25發)",
    "cn": ".45 ACP弹匣 (25发)"
   },
@@ -386,15 +386,15 @@
   },
   "ItemName|Base.762x39Bullets": {
    "action": "translate",
-   "signature": "8950e02686a50b04",
-   "reason": "三 owner 均為 7.62×39mm 子彈，僅命名格式差異（'.762x39 Ammo' 是 GaelGun 的非標準寫法，指同一彈種）。現行譯名完全中性，維持現行。",
+   "signature": "735d9f120c31a8ac",
+   "reason": "三 owner 均為 7.62×39mm 子彈，僅命名格式差異（'.762x39 Ammo' 是 GaelGun 的非標準寫法，指同一彈種）。現行譯名完全中性，維持現行。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "7.62x39mm彈藥",
    "cn": "7.62x39mm弹药"
   },
   "ItemName|Base.AA12": {
    "action": "translate",
-   "signature": "e0c7c799c02b6d86",
-   "reason": "三 owner 均為 Atchisson AA-12 自動霰彈槍，僅連字號/後綴差異。艾奇遜（Atchisson）為該槍設計者，對所有 owner 皆為事實，維持現行。",
+   "signature": "f0e9bfd19caa9d21",
+   "reason": "三 owner 均為 Atchisson AA-12 自動霰彈槍，僅連字號/後綴差異。艾奇遜（Atchisson）為該槍設計者，對所有 owner 皆為事實，維持現行。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "艾奇遜AA12霰彈槍",
    "cn": "艾奇逊AA12霰弹枪"
   },
@@ -407,43 +407,43 @@
   },
   "ItemName|Base.Colt9mm": {
    "action": "translate",
-   "signature": "b375e417f9dcd627",
-   "reason": "兩 owner 均為 Colt 9mm 卡賓槍（Colt 9mm SMG/carbine，AR-15 平台 9mm 版），GaelGun 的 'Colt9mm 9mm' 只是機械式命名。現行譯名對兩邊皆事實，維持現行。",
+   "signature": "9b6da6425dc0b530",
+   "reason": "兩 owner 均為 Colt 9mm 卡賓槍（Colt 9mm SMG/carbine，AR-15 平台 9mm 版），GaelGun 的 'Colt9mm 9mm' 只是機械式命名。現行譯名對兩邊皆事實，維持現行。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "柯爾特AR-15 9mm卡賓槍",
    "cn": "柯尔特AR-15 9mm卡宾枪"
   },
   "ItemName|Base.M16A2": {
    "action": "translate",
-   "signature": "3d6a40e75964c1fd",
-   "reason": "六 owner 中四家均為 M16A2，同一實體；但廠牌互斥——GaelGun 標 Daniel Defense，現行譯名卻寫柯爾特（且其餘三 owner 無廠牌）。中性解法是去掉廠牌，'M16A2自動步槍' 對所有 owner 皆誠實。 2026-08-22 重新錨定：tracker backfill-en 全庫重抽後 census 新增 owner 「Totally's NATO Firearms Pack B42」（EN 'M16A2'），仍指同一實體，既有中性譯名對其同樣成立，故僅更新 signature、裁決不變。",
+   "signature": "77d1394219a6d4fa",
+   "reason": "六 owner 中四家均為 M16A2，同一實體；但廠牌互斥——GaelGun 標 Daniel Defense，現行譯名卻寫柯爾特（且其餘三 owner 無廠牌）。中性解法是去掉廠牌，'M16A2自動步槍' 對所有 owner 皆誠實。 2026-08-22 重新錨定：tracker backfill-en 全庫重抽後 census 新增 owner 「Totally's NATO Firearms Pack B42」（EN 'M16A2'），仍指同一實體，既有中性譯名對其同樣成立，故僅更新 signature、裁決不變。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "M16A2自動步槍",
    "cn": "M16A2自动步枪"
   },
   "ItemName|Base.MAC10": {
    "action": "translate",
-   "signature": "08f779d63878afa5",
-   "reason": "兩組 owner 均指 MAC-10 衝鋒槍（Cobray M-10 即 MAC-10 的 Cobray 製版本，同一槍）。現行 '科布雷M-10' 偏向 Guns93 的廠牌寫法，對 GaelGun 玩家辨識度低；'MAC-10' 是通用名，對兩邊皆誠實且更易辨識，建議改用。",
+   "signature": "82dc25e52e2f92ca",
+   "reason": "兩組 owner 均指 MAC-10 衝鋒槍（Cobray M-10 即 MAC-10 的 Cobray 製版本，同一槍）。現行 '科布雷M-10' 偏向 Guns93 的廠牌寫法，對 GaelGun 玩家辨識度低；'MAC-10' 是通用名，對兩邊皆誠實且更易辨識，建議改用。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "MAC-10衝鋒槍",
    "cn": "MAC-10冲锋枪"
   },
   "ItemName|Base.MP5SD": {
    "action": "translate",
-   "signature": "fc7b28c3d51d1a7e",
-   "reason": "三 owner 均為 H&K MP5SD（整合消音型 MP5），僅後綴差異（Submachinegun vs 9mm）。現行譯名廠牌與型號對所有 owner 皆事實，維持現行。",
+   "signature": "e649ecbe91a443dd",
+   "reason": "三 owner 均為 H&K MP5SD（整合消音型 MP5），僅後綴差異（Submachinegun vs 9mm）。現行譯名廠牌與型號對所有 owner 皆事實，維持現行。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "黑克勒-科赫MP5SD衝鋒槍",
    "cn": "黑克勒-科赫MP5SD冲锋枪"
   },
   "ItemName|Base.Mosin": {
    "action": "translate",
-   "signature": "817362505b9b1569",
-   "reason": "三 owner 均為莫辛-納甘步槍，同一實體。但兩邊英文都未稱 sniper（基本型是栓動步槍非狙擊型），現行 '莫辛-納甘狙擊步槍' 的「狙擊」是過度指定，建議去掉改為 '莫辛-納甘步槍'。",
+   "signature": "124370a28679744a",
+   "reason": "三 owner 均為莫辛-納甘步槍，同一實體。但兩邊英文都未稱 sniper（基本型是栓動步槍非狙擊型），現行 '莫辛-納甘狙擊步槍' 的「狙擊」是過度指定，建議去掉改為 '莫辛-納甘步槍'。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "莫辛-納甘步槍",
    "cn": "莫辛-纳甘步枪"
   },
   "ItemName|Base.SV98": {
    "action": "translate",
-   "signature": "4cd8ca5da8de01f6",
-   "reason": "三 owner 均為 SV-98，該槍本即俄製狙擊步槍，VFES 亦明寫 Sniper Rifle。現行譯名對所有 owner 皆事實，維持現行。",
+   "signature": "ba02f36a381b2c4f",
+   "reason": "三 owner 均為 SV-98，該槍本即俄製狙擊步槍，VFES 亦明寫 Sniper Rifle。現行譯名對所有 owner 皆事實，維持現行。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "SV-98狙擊步槍",
    "cn": "SV-98狙击步枪"
   },
@@ -456,8 +456,8 @@
   },
   "ItemName|Base.TEC9": {
    "action": "translate",
-   "signature": "5a8150050606d36d",
-   "reason": "三 owner 均為 Intratec TEC-9（9mm 半自動手槍），僅命名格式差異。廠牌 Intratec 對所有 owner 皆事實，維持現行。",
+   "signature": "e03a57253530ac84",
+   "reason": "三 owner 均為 Intratec TEC-9（9mm 半自動手槍），僅命名格式差異。廠牌 Intratec 對所有 owner 皆事實，維持現行。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "英特拉泰克TEC-9手槍",
    "cn": "英特拉泰克TEC-9手枪"
   },
@@ -2218,22 +2218,22 @@
   },
   "ItemName|Base.AR10": {
    "action": "translate",
-   "signature": "c837d333e713dc02",
-   "reason": "2026-08-23 #231 多 owner：AI ArmaLite AR-10／AR-10。取共同的 AR-10 步槍，不綁 AI/ArmaLite 前綴。",
+   "signature": "11280fafde41f545",
+   "reason": "2026-08-23 #231 多 owner：AI ArmaLite AR-10／AR-10。取共同的 AR-10 步槍，不綁 AI/ArmaLite 前綴。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "AR-10步槍",
    "cn": "AR-10步枪"
   },
   "ItemName|Base.G3A3": {
    "action": "translate",
-   "signature": "0f88ef359b7e21a1",
-   "reason": "2026-08-23 #231 多 owner：Heckler & Koch G3A3／G3。取涵蓋整個 G3 系列的中性名稱，不綁 A3。",
+   "signature": "2f73ae7779498f32",
+   "reason": "2026-08-23 #231 多 owner：Heckler & Koch G3A3／G3。取涵蓋整個 G3 系列的中性名稱，不綁 A3。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "H&K G3步槍",
    "cn": "H&K G3步枪"
   },
   "ItemName|Base.M4": {
    "action": "translate",
-   "signature": "480a2b115a3cbd5e",
-   "reason": "2026-08-23 #231 多 owner：M4 Carbine／M4 Assault Rifle。M4 的共同實體是卡賓槍，沿用現值。",
+   "signature": "dafe91a66da70301",
+   "reason": "2026-08-23 #231 多 owner：M4 Carbine／M4 Assault Rifle。M4 的共同實體是卡賓槍，沿用現值。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "M4卡賓槍",
    "cn": "M4卡宾枪"
   },
@@ -2330,8 +2330,8 @@
   },
   "IG_UI|IGUI_Empty": {
    "action": "translate",
-   "signature": "d631f7f44c67ac79",
-   "reason": "2026-08-25 #278 裁決維持現行中性譯名。四個 owner 條目的上游英文只差首字母大小寫：3396456841/PZ_BodilyFunctions 寫 'Empty'（指容器/馬桶已排空），3597471949 的 GeneratorPlus2／GeneratorPlusMultiplayer／GeneratorPlusSingleplayer 三個變體寫 'empty'（指發電機油箱空）。同一個形容詞、同一個語意，非不同實體。單字「空」不綁任何容器類型，對四者皆成立。",
+   "signature": "ff63f1ba52140537",
+   "reason": "2026-08-25 #278 裁決維持現行中性譯名。四個 owner 條目的上游英文只差首字母大小寫：3396456841/PZ_BodilyFunctions 寫 'Empty'（指容器/馬桶已排空），3597471949 的 GeneratorPlus2／GeneratorPlusMultiplayer／GeneratorPlusSingleplayer 三個變體寫 'empty'（指發電機油箱空）。同一個形容詞、同一個語意，非不同實體。單字「空」不綁任何容器類型，對四者皆成立。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
    "ch": "空",
    "cn": "空"
   },
