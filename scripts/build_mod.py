@@ -90,6 +90,25 @@ STEAM_COUNT_RE = re.compile(
 # 遊戲上傳後回寫的正式格式，**不是生成物**，重生時原樣保留；行尾維持 CRLF。
 WORKSHOP_HEAD_KEYS = ("version=", "id=", "title=")
 WORKSHOP_TAIL_KEYS = ("tags=", "visibility=")
+# STEAM_CHANGELOG.md：**貼到 Workshop 的更新註記**（覆蓋式，只放當前版本）。內容是
+# 人工為 Workshop 讀者重寫的 BBCode，**不是 CHANGELOG「玩家摘要」的機械轉換**——
+# 兩邊文字實測不同（42.20.2-1.18.1 的第二點在此檔被改寫並補上逐 MOD 鍵數），所以
+# **只驗版號新鮮度、不自動生成內容**，否則會用 CHANGELOG 原文蓋掉潤飾過的文案。
+# 存在理由：它是 release 必改檔，卻長期沒有任何 gate——最近 7 個 tag 裡漏更 3 次
+# （v42.20.2-1.18.0／-1.18.1 停在 1.17.0，v42.20.2-1.19.0 停在 1.18.1），加上
+# 42.20.4-1.20.0 共 4 次；`b055581`「補上 42.20.2-1.17.0 漏更的 STEAM_CHANGELOG」
+# 事後補完的下一版就又漏了，證明靠人記得不管用。
+STEAM_CHANGELOG_MD = PROJECT_ROOT / "STEAM_CHANGELOG.md"
+MOD_INFO = (
+    PROJECT_ROOT / "MOD" / "MinidoracatModLangFor42" / "Contents" / "mods"
+    / "MinidoracatModLangFor42" / "42" / "mod.info"
+)
+# 首行形如 `[h1]<標題> 42.20.4-1.20.0[/h1]`；版號是行尾 `[/h1]` 之前的最後一段。
+STEAM_CHANGELOG_VER_RE = re.compile(r"^\[h1\].*?(\S+)\[/h1\]\s*$")
+# CHANGELOG.md 最新版區塊標題：`## [42.20.4-1.20.0] - 2026-08-26`（`[Unreleased]` 不算）。
+CHANGELOG_MD = PROJECT_ROOT / "CHANGELOG.md"
+CHANGELOG_VER_RE = re.compile(r"^## \[(\d[^\]]*)\]", re.MULTILINE)
+MOD_INFO_VER_RE = re.compile(r"^modversion=(.+)$", re.MULTILINE)
 
 # language.txt：CH 結構照抄 LangFor42，CN 沿用同結構換 text 值
 LANGUAGE_TXT = {
@@ -1581,7 +1600,58 @@ def cmd_manifest(check_only: bool = False) -> int:
     # --- Steam 描述的模組數 ＋ workshop.txt 的 description 區塊 --------------- #
     total_mods = len(active_rows) + len(removed_rows)
     drift += _sync_steam_description(total_mods, len(all_mod_ids), check_only)
+    # --- Workshop 更新註記的版號新鮮度（只驗，內容須人工撰寫） ----------------- #
+    drift += check_release_notes()
     return 1 if drift else 0
+
+
+def check_release_notes() -> list[str]:
+    """驗 `STEAM_CHANGELOG.md` 的版號與 `mod.info`／`CHANGELOG.md` 一致。
+
+    **只驗、不寫**（兩種模式都一樣）：內容是人工為 Workshop 讀者重寫的文案，自動生成
+    會用 CHANGELOG 原文蓋掉潤飾。要擋的只有一件事——release bump 了 `modversion` 卻忘了
+    改這個檔。排程重生 manifest 時 `modversion` 不變，故不會誤報。
+
+    三處版號必須相等，全部 **fail-closed**：檔案缺席、首行形狀不符、抓不到版號一律
+    回報漂移，不走「沒驗到就算過」。
+    """
+    drift: list[str] = []
+    name = STEAM_CHANGELOG_MD.name
+    versions: dict[str, str] = {}
+    for path, regex, label in (
+        (MOD_INFO, MOD_INFO_VER_RE, "mod.info 的 modversion"),
+        (CHANGELOG_MD, CHANGELOG_VER_RE, "CHANGELOG.md 最新版區塊"),
+    ):
+        if not path.exists():
+            print(f"❌ {path.name} 不存在，無法驗證 {name} 版號。", file=sys.stderr)
+            return [name]
+        m = regex.search(path.read_text(encoding="utf-8"))
+        if not m:
+            print(f"❌ {path.name} 抓不到版號（{label}），無法驗證 {name}。", file=sys.stderr)
+            return [name]
+        versions[label] = m.group(1).strip()
+
+    if not STEAM_CHANGELOG_MD.exists():
+        print(f"❌ {name} 不存在——它是 release 必改檔（Workshop 更新註記）。",
+              file=sys.stderr)
+        return [name]
+    first = STEAM_CHANGELOG_MD.read_text(encoding="utf-8").split("\n", 1)[0]
+    m = STEAM_CHANGELOG_VER_RE.match(first)
+    if not m:
+        print(f"❌ {name} 首行不是 `[h1]<標題> <版號>[/h1]` 形狀，無法取版號："
+              f"{first!r}", file=sys.stderr)
+        return [name]
+    versions[name] = m.group(1)
+
+    if len(set(versions.values())) != 1:
+        print(f"❌ {name} 版號與來源不一致——release 時必須同步改這個檔"
+              "（內容是人工撰寫的 Workshop 更新註記，manifest 不會幫你生成）：")
+        for label, ver in versions.items():
+            print(f"    {label} = {ver}")
+        drift.append(name)
+    else:
+        print(f"ℹ️ {name} 版號與 mod.info／CHANGELOG 一致（{versions[name]}）")
+    return drift
 
 
 def _sync_steam_description(total_mods: int, total_ids: int,

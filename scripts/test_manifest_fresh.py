@@ -195,6 +195,73 @@ for bad, why in ((f"id=1\r\nversion=1\r\ntitle=T\r\n{WS_TAIL}", "head 順序錯"
                  (WS_HEAD + "description=x\r\n", "tail 缺失")):
     assert "workshop.txt" in _sync(SD_LINE, bad)[0], f"{why} 須 fail-closed"
 
-print("✅ test_manifest_fresh：8 組情境全過"
+# 9. STEAM_CHANGELOG.md（Workshop 更新註記）的版號新鮮度。
+#    承重點：它是 release 必改檔，卻長期沒有 gate——最近 7 個 tag 裡漏更 3 次
+#    （v42.20.2-1.18.0／-1.18.1 停在 1.17.0、v42.20.2-1.19.0 停在 1.18.1），
+#    連 `b055581`「補上 42.20.2-1.17.0 漏更的 STEAM_CHANGELOG」之後的下一版都又漏了。
+#    **刻意只驗版號、不自動生成內容**：那份 BBCode 是人工為 Workshop 讀者重寫的
+#    （1.18.1 的第二點在該檔被改寫並補上逐 MOD 鍵數，與 CHANGELOG 原文不同），
+#    自動生成等於用 CHANGELOG 原文蓋掉潤飾過的文案。
+H1 = "[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 {}[/h1]\n[i]2026-08-26[/i]\n"
+
+
+def _notes(sc_text: str | None, mod_info: str | None, changelog: str | None):
+    """在 temp 目錄跑 check_release_notes，回傳 drift 清單。"""
+    with tempfile.TemporaryDirectory() as td:
+        paths, originals = {}, (
+            build_mod.STEAM_CHANGELOG_MD, build_mod.MOD_INFO, build_mod.CHANGELOG_MD)
+        for name, text in (("STEAM_CHANGELOG.md", sc_text), ("mod.info", mod_info),
+                           ("CHANGELOG.md", changelog)):
+            p = Path(td) / name
+            if text is not None:
+                p.write_text(text, encoding="utf-8", newline="\n")
+            paths[name] = p
+        (build_mod.STEAM_CHANGELOG_MD, build_mod.MOD_INFO,
+         build_mod.CHANGELOG_MD) = (paths["STEAM_CHANGELOG.md"], paths["mod.info"],
+                                    paths["CHANGELOG.md"])
+        try:
+            with contextlib.redirect_stdout(io.StringIO()):
+                return build_mod.check_release_notes()
+        finally:
+            (build_mod.STEAM_CHANGELOG_MD, build_mod.MOD_INFO,
+             build_mod.CHANGELOG_MD) = originals
+
+
+V, OLD = "42.20.4-1.20.0", "42.20.2-1.18.1"
+MI = f"name=x\nid=y\nmodversion={V}\nversionMin=42.20.4\n"
+CL = f"# Changelog\n\n## [{V}] - 2026-08-26\n\n### Fixed\n\n- x\n\n## [{OLD}] - 2026-08-24\n"
+
+# 9a. 三處一致 → 零漂移
+assert _notes(H1.format(V), MI, CL) == [], "三處版號一致不該報漂移"
+
+# 9b. **實際發生過的錯**：release bump 了 modversion，STEAM_CHANGELOG 停在舊版
+assert _notes(H1.format(OLD), MI, CL) == ["STEAM_CHANGELOG.md"], \
+    "STEAM_CHANGELOG 版號落後未被抓到——這正是漏更 4 次的那個缺口"
+
+# 9c. CHANGELOG 最新版區塊落後（release commit 漏改 CHANGELOG）也要抓
+stale_cl = f"# Changelog\n\n## [{OLD}] - 2026-08-24\n"
+assert _notes(H1.format(V), MI, stale_cl) == ["STEAM_CHANGELOG.md"], \
+    "CHANGELOG 版號不一致須報漂移"
+
+# 9d. `[Unreleased]` 不得被當成版號（正則要求開頭是數字）
+unrel = f"# Changelog\n\n## [Unreleased]\n\n## [{V}] - 2026-08-26\n"
+assert _notes(H1.format(V), MI, unrel) == [], "[Unreleased] 應被跳過、取下一個版本區塊"
+
+# 9e. 四種 fail-closed：三個檔各自缺席、首行形狀不符。「沒驗到」不等於「驗過沒問題」。
+assert _notes(None, MI, CL) == ["STEAM_CHANGELOG.md"], "STEAM_CHANGELOG 缺席須 fail-closed"
+assert _notes(H1.format(V), None, CL) == ["STEAM_CHANGELOG.md"], "mod.info 缺席須 fail-closed"
+assert _notes(H1.format(V), MI, None) == ["STEAM_CHANGELOG.md"], "CHANGELOG 缺席須 fail-closed"
+for bad, why in (("沒有 h1 的第一行\n", "首行非 [h1]"),
+                 ("[h1][/h1]\n", "抓不到版號"),
+                 ("", "空檔")):
+    assert _notes(bad, MI, CL) == ["STEAM_CHANGELOG.md"], f"{why} 須 fail-closed"
+
+# 9f. modversion／CHANGELOG 抓不到版號同樣 fail-closed（不可因「來源壞掉」就放行）
+assert _notes(H1.format(V), "name=x\nid=y\n", CL) == ["STEAM_CHANGELOG.md"], \
+    "mod.info 無 modversion 須 fail-closed"
+assert _notes(H1.format(V), MI, "# Changelog\n\n沒有版本區塊\n") == ["STEAM_CHANGELOG.md"], \
+    "CHANGELOG 無版本區塊須 fail-closed"
+
+print("✅ test_manifest_fresh：9 組情境全過"
       "（含 STEAM_DESCRIPTION 模組數取整判準、workshop.txt CRLF 與 head/tail 保留、"
-      "四種 fail-closed）")
+      "STEAM_CHANGELOG 版號新鮮度與 [Unreleased] 跳過，共十一種 fail-closed）")
