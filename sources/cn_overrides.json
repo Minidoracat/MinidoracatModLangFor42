@@ -2481,8 +2481,8 @@
  },
  "IG_UI.json|IGUI_ItemCat_Light": {
   "as1_value": "配件-手电筒",
-  "reason": "本體 Base.GunLight=战术手电、Base.HandTorch(Flashlight)=手电筒 是兩個不同物品, 此分類指槍掛燈; As1「手电筒」指錯物品, own「战术灯」又非官方名, 取官方「战术手电」+ 本檔 武器配件- 前綴.",
-  "value": "武器配件-战术手电"
+  "reason": "2026-08-27 owner 衝突中性化改寫：Attachment - Flashlight、Weapon Accessories - Lighting 與 Weapon attachment - Light 的共同語意是武器照明配件；改成中性「武器配件-照明」，不限定任一 owner 的燈具形式。",
+  "value": "武器配件-照明"
  },
  "IG_UI.json|IGUI_ItemCat_LitS": {
   "as1_value": "文学-技能",
@@ -18149,5 +18149,35 @@
   "reason": "出貨 own-lane 物品 Base.TinkerersGloves =「修补匠手套」（As1 未收錄）；且 As1 自己在 MoreTraits 的 UI_trait_tinkerer 譯「修补匠」、同 mod 的 UI_prof_tinkerer 譯「发明家」、本特質譯「发明大师」，三處互不一致。",
   "value": "修补匠"
  },
- "_comment": "CN 人工修正層：修 As1 上游錯誤（錯字／疊字等）。build 於 CH 再生前套用，故修正會一併帶到 CH；verify_dist 的 CN parity 對登記值核對而非 As1 原值。schema: {\"<檔名>|<鍵>\": {\"value\": \"...\", \"reason\": \"...\"}}"
+ "_comment": "CN 人工修正層：修 As1 上游錯誤（錯字／疊字等）。build 於 CH 再生前套用，故修正會一併帶到 CH；verify_dist 的 CN parity 對登記值核對而非 As1 原值。schema: {\"<檔名>|<鍵>\": {\"value\": \"...\", \"reason\": \"...\"}}",
+ "IG_UI.json|IGUI_need_barbell": {
+  "as1_value": "我需要杠铃来进行这项锻炼",
+  "reason": "上游 EN 由 'I need a barbell to do this exercise' 改為 'I need a barbell or two dumbbells to do this exercise'；As1 仍停在舊句，漏掉一對啞鈴的替代條件。",
+  "value": "我需要杠铃或一对哑铃来进行这项锻炼"
+ },
+ "IG_UI.json|IGUI_RISKY_REPAIR_NONE": {
+  "as1_value": "从未维修",
+  "reason": "2026-08-27 owner 衝突中性化改寫：推論：依共用鍵 IGUI_RISKY_REPAIR_NONE 的維修狀態語境，Mint condition、Never Repaired 與 No sign of repair 都表示沒有維修痕跡；改成中性譯名後對所有 owner 均成立。",
+  "value": "无维修痕迹"
+ },
+ "IG_UI.json|IGUI_Scope": {
+  "as1_value": "瞄具",
+  "reason": "2026-08-27 owner 衝突中性化改寫：Scope 與 Sight 都是瞄準裝置；改用上位詞「瞄具」可同時涵蓋兩種英文，不把所有 sight 硬限定為 scope。",
+  "value": "瞄具"
+ },
+ "UI.json|UI_optionscreen_binding_OpenWindownCat": {
+  "as1_value": "打开武器面板",
+  "reason": "2026-08-27 owner 衝突中性化改寫：Open AWCWF UI Panel、Open Weapon Console 與 Open Weapon Panel 的共同功能是開啟武器介面；改成中性譯名後對所有 owner 均成立。",
+  "value": "打开武器界面"
+ },
+ "ItemName.json|Base.9mmClip30": {
+  "as1_value": "MP5 冲锋枪弹匣",
+  "reason": "2026-08-27 owner 衝突中性化改寫：推論：共用鍵 Base.9mmClip30 明示 9mm／30 發；MP5 Magazine 與 9mm Magazine (30 Rounds) 可共享中性「9mm彈匣 (30 發)」，不再把 GGS 的泛用名稱綁死為 MP5 專用。",
+  "value": "9mm弹匣 (30 发)"
+ },
+ "ItemName.json|Base.PKM": {
+  "as1_value": "PKM通用机枪",
+  "reason": "2026-08-27 owner 衝突中性化改寫：兩個 owner 都明示 PKM machine gun，但一方標為 Light Machinegun、另一方只寫 Machine gun；改用中性「PKM機槍」，不再擅自限定為通用機槍。",
+  "value": "PKM机枪"
+ }
 }
