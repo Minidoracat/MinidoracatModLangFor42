@@ -4,6 +4,106 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.20.4-1.20.0] - 2026-08-26
+
+### 玩家摘要
+
+> 本節為 Workshop 更新註記用的白話版；以下各節為維護者向的技術細節。
+
+- **修好 Build 42.20.4 之後報紙／傳單／日記頁的圖片不見的問題。** 42.20.4 改了遊戲讀取這類圖文版面的方式，本包 19 筆版面資料還是舊寫法，玩家打開疾管署公告、研究員日記（6 頁）、迪克西加油站與李施德霖傳單、幸運籤文（10 張）時，圖片位置只剩一塊素色方塊。全部改成新寫法後恢復正常。
+- **疾管署公告（CDC）的版面資料本來就是壞的，這次一併補完整。** 上游授權包的這一筆從中間就斷掉了，任何版本都讀不到圖，不是 42.20.4 才壞的。缺少的材質路徑已依上游原始 MOD 的英文原文補回。
+- **最低支援版本提高到 Build 42.20.4。** 新舊寫法互不相容，42.20.3 及更早的版本讀不懂新寫法，所以必須提版；本包一向只支援最新穩定版。
+- 翻譯文字與標題一個字都沒動，只有版面資料的寫法改變。
+
+### Fixed
+
+- **`Print_Media.json` 的 19 個 `*_info` 全數遷移為 42.20.4 契約**（CH／CN 各 19 筆）。
+  42.20.4 的 `PrintMedia.lua` 重寫了 rich-text 解析器：`texture` 直接進
+  `getTexture(value)`、`font` 直接進 `UIFont.FromString(value)`、其餘 key 直接進
+  `tonumber(value)`，**不再 eval Lua 表達式**；同版把 Lua 全域 `loadstring`／`loadstream`
+  移除（反編譯比對：`LuaCompiler.register()` 與 `J2SEPlatform.java:59` 的唯一呼叫點在
+  42.20.3→42.20.4 之間整段消失）。舊值 `texture:getTexture("X")` 於此版被當成材質路徑
+  字面查詢、必然查無，且三條失效路徑全部靜默（`Texture.getSharedTexture` 吃例外回 null、
+  `UIFont.FromString` 未知名稱回 null、`tonumber` 失敗回 nil），故 build／CH parity／lint
+  三道原本全綠。遷移為純機械去殼——只移除 `getTexture(" ")` 外殼，材質路徑、版面數值與
+  As1 原有的空白排版逐字不動。
+  - **As1 lane 7 鍵**（`Print_Media_CDC1_info`、`Print_Media_DiaryPage1..6_info`）：CN 走
+    `cn_overrides.json` 登記（帶 `as1_value` 錨點），CH 改 `sources/ch/Print_Media.json`，
+    並依 registry 背書 gate 於 `ch_review_state.json` 登記 7 筆有效 CN hash
+    （DiaryPage 6 筆為更新、CDC1 為新增）。**未手改 `sources/mods/**`**。
+  - **own lane 12 鍵**（`DixieGasCoke`、`ListerineConvenience`、`Fortune1..10`）：改
+    `own_translations.json` 的 `ch`／`cn`；`en` 欄是「擷取當時上游原文」錨點，上游
+    （`3409143790` 有效分支 `42.20.0`）尚未跟上 42.20.4，故刻意不動並以 `_note` 記錄。
+- **`Print_Media_CDC1_info` 的上游截斷值補完整**。As1 原值在 `texture:getTexture (` 處
+  斷掉、連 `>` 都沒有；斷點正好落在 `getTexture("` 的內嵌雙引號前（研判為上游轉檔未逸出該引號），
+  **任何遊戲版本都取不到材質**——不是 42.20.4 才壞。完整材質路徑
+  `media/textures/printMedia/FlyerPics/CDC1.png` 取自 `sources/en/3403180543.json`
+  （BanditsWeekOne 的 `42.18` 與 `42.20` 兩分支同值），與 As1 截斷值前綴逐字相符。
+
+### Changed
+
+- **`42/mod.info` 的 `versionMin` 42.20.1 → 42.20.4**（相容性必要條件，非政策性提版）：
+  42.20.4 才把解析器由「eval 值裡的 Lua 表達式」改成直接呼叫，兩種格式互不相容——
+  新格式的裸路徑交給舊解析器 eval 會失敗（`media/textures/...` 在 Lua 文法下是連續除法
+  與欄位存取，執行期必然踩 nil operand，不是單純的語法錯誤），舊格式在 42.20.4 則被當成
+  材質路徑字面查詢。README 的「支援版本」與 `STEAM_DESCRIPTION.md` 同步為 Build 42.20.4+，
+  `workshop.txt` 的 `description` 由 `manifest` 重生。`modversion` 未動。
+
+### Added
+
+- **`verify_dist.py` 第 [17] 項「Print Media 42.20.4 契約」**（15→16 項 gate，編號 5 保留空缺）。
+  以 Java 語意重跑一次解析器（`string.split` 是 `String.split(regex)`、`string.trim` 是
+  `String.trim()`，見 `StringLib.java:1405-1421`），對 dist CH／CN 的 `Print_Media.json`
+  逐個 `*_info` 驗：值須以 `<` 開頭、每個元素須有 `>` 收尾、`type` ∈ {parent, text, texture}、
+  每個欄位須恰好一個 `:`（多的會被引擎靜默丟棄）、key 不得重複或為空（後值靜默覆寫）、
+  `type:text` 須有非空正文（`#data[2]` 對 nil 會拋錯）、parent／texture 的 `>` 之後不得有
+  內容（不會被使用）、`texture` 須為非空裸路徑、`font` 須為 34 個 `UIFont` enum 常值之一、
+  其餘 key 須為純十進位**有限**數值常值，並驗 CN／CH 的 `_info` 鍵集對稱。
+  數值規則刻意**比 `tonumber` 嚴格**——PZ 的 `tonumber` 是 `Double.parseDouble` 加 nan／inf
+  fallback（`KahluaUtil.java:290-303`），`1.5f`／`Infinity`／`abcinf`／`1e309` 那類
+  「解析得出來」的值出現在座標欄一律是缺陷。另對 `shadow`／`visible`／`enabled` 出 WARN：
+  消費端是 Java `boolean` 欄位（`AtomUIText.java:23`、`AtomUI.java:22-23`），而本格式只
+  產得出 Double／nil，這些 key 寫什麼都不生效（本體自己就有 20 處 `shadow:true`）。
+  校準證據：對本體 42.20.4 自己的 161 個 `_info`（1,016 個元素）只命中那 20 處
+  `shadow:true`（`tonumber("true")`＝nil ⇒ 陰影無效），其餘全數放行、零 WARN。
+- **`scripts/test_print_media_contract.py`**（回歸測試，已納入 `tests.yml`，16→17 支）。
+  鎖住 Java 字串語意（`"texture:".split(":")` 尾端空欄位被丟棄＝觸發 RICH TEXT ERROR；
+  `String.trim()` **不去**全形空白，用 Python `str.strip()` 會漏放行 `texture:\u3000media/...`）、
+  28 種禁止形式（`getTexture(`、`UIFont.`、`145/255.0`、`12+165`、`960/2`、`true`／`false`、
+  空／截斷 texture、引號殘留、未知 type、未知字型、多重冒號、重複／空 key、text 缺正文、
+  JDK 專屬數值形式、指數溢位…）、5 種合法形式（含本體的 textureless 彩色方塊與負小數
+  pivot／angle）、boolean key 的 WARN-not-FAIL 分級，以及現況出貨檔 19×2 鍵全綠。
+
+### 驗證
+
+- `build_mod.py build` 通過；`verify_dist.py` **16/16 PASS**（新增 [17]，FAIL 0）。
+- 確定性雙跑 `--compare-dist` 零 diff。
+- 17 支純 repo 回歸測試全過（新增 `test_print_media_contract`）。
+- `lint_ch.py` 棘輪全零；`manifest --check` 無漂移；`test_serialization.py` 行尾正規形式全過。
+- 本機 PZ 本體 CH／CN 零覆蓋（`test_vanilla_no_override.py`）。
+- 分析經 Claude／Codex／Grok 三方交叉核實，兩處原始推論被修正：
+  - Grok／Codex 都指出「42.20.4 才移除 `loadstring`」不足以單獨證成版本邊界。補查後
+    確立三層證據：(a) `LuaCompiler.register()` 與其唯一呼叫點 `J2SEPlatform` 在
+    42.20.3→42.20.4 之間整段消失；(b) 本機 mtime——`PrintMedia.lua`、`ISReadABook.lua`
+    與本體 `Translate/EN/Print_Media.json` 三者同為 42.20.4 更新當下的
+    `2026-08-26 19:37:21`，而 `ISPrintMediaTextPanel.lua`／`PrintMediaDefinitions.lua`
+    仍是 2026-04-21；(c) 姊妹專案 `MinidoracatLangFor42` 的 `HARDCODE_REGISTRY.md` 以
+    **Steam depot manifest 42.20.3→42.20.4 逐檔 delta（舊檔 SHA1 由 manifest 驗證）**
+    記載：改值範圍只有 `projectzomboid.jar`、4 份 Lua 與 18 語系的 `Print_Media.json`，
+    官方 EN 162 筆改值全在 `Print_Media.json`、`<type:text>` 內文逐段零變更、只遷移標記，
+    根因即「`PrintMedia.lua` 與 `ISReadABook.lua` 移除翻譯值內的 `loadstring` 執行」。
+  - Codex 指出材質載不到時 `AtomUITexture` 會把 null texture 視為 ready 並畫純色矩形
+    （`AtomUITexture.java:37-63,122-143`），不是「什麼都不畫」；玩家摘要據此改為
+    「圖片位置只剩一塊素色方塊」。同批依 Codex 的 Q5 建議補強 gate（多重冒號、重複／空
+    key、text 正文、`>` 後殘留內容、有限性檢查、boolean key WARN）。
+
+### 尚未執行
+
+- 實機驗證（進遊戲讀報紙／傳單／日記頁確認圖片顯示）。
+- `3403180543`／`3615135168`／`3405131820` 三個上游 MOD 本機未訂閱，材質檔存在性僅由
+  上游 EN 鏡像的路徑一致性佐證（本體 `FlyerPics/` 135 檔中確認無同名檔，故確為 MOD 自帶）；
+  `3409143790` 的 `Fortune1..10.png` 已於本機 workshop 有效分支 `42.20.0` 實體確認存在。
+
 ## [42.20.2-1.19.0] - 2026-08-25
 
 ### 玩家摘要
