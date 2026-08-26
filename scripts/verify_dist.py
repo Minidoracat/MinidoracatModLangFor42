@@ -55,6 +55,7 @@ import argparse
 import glob
 import hashlib
 import json
+import math
 import os
 import re
 import subprocess
@@ -1913,6 +1914,231 @@ def check_recipe_dead_keys(repo: str, dist_ch: str) -> tuple[bool, list[str], li
     return not fail, fail, warn
 
 
+# --------------------------------------------------------------------------- #
+# [17] Print Media 42.20.4 解析契約
+# --------------------------------------------------------------------------- #
+# PZ 42.20.4 改寫了 Print Media 的 rich-text 解析器：值**不再被 eval**。
+#   * `texture` → `getTexture(value)`         ⇒ 必須是裸材質路徑
+#   * `font`    → `UIFont.FromString(value)`  ⇒ 必須是裸字型名
+#   * 其餘 key  → `tonumber(value)`           ⇒ 必須是可解析的數值常值
+# 出處：42.20.4 安裝檔 `media/lua/client/PZAPI/ui/organisms/PrintMedia.lua:57-141`
+# 與 `media/lua/shared/TimedActions/ISReadABook.lua:219-251`（載入材質用同一份語法）。
+# 同版移除了 Lua 全域 `loadstring`／`loadstream`——反編譯比對顯示
+# `LuaCompiler.register()` 連同 `J2SEPlatform.java:59` 的唯一呼叫點在 42.20.3→42.20.4
+# 之間整段消失，故舊格式 `texture:getTexture("X")` 在此版一律取不到材質。
+#
+# 失效是**靜默的**，這正是本 gate 存在的理由：`getTexture` 找不到檔案時
+# `Texture.getSharedTexture` 吃掉例外回 null（`Texture.java:413-424`）、
+# `UIFont.FromString` 未知名稱回 null（`UIFont.java:42-48`）、`tonumber` 失敗回 nil。
+# 三者都不拋錯，玩家只看到空白圖片或錯位版面，而 build／CH parity／lint 全綠。
+PRINT_MEDIA_FILE = "Print_Media.json"
+# `params["type"]` 不在此集合時整個元素被靜默忽略（PrintMedia.lua:89-136 只有三個分支）。
+PRINT_MEDIA_TYPES = frozenset({"parent", "text", "texture"})
+# `UIFont` enum 常值（42.20.4 反編譯 `pz/zombie/ui/UIFont.java:6-36`）。
+# PZ 新增字型時需同步；未知名稱 `FromString` 靜默回 null，故寧可 fail-loud。
+PRINT_MEDIA_FONTS = frozenset({
+    "Small", "Medium", "Large", "Massive", "MainMenu1", "MainMenu2", "Cred1", "Cred2",
+    "NewSmall", "NewMedium", "NewLarge", "Code", "CodeSmall", "CodeMedium", "CodeLarge",
+    "MediumNew", "AutoNormSmall", "AutoNormMedium", "AutoNormLarge", "Dialogue", "Intro",
+    "Handwritten", "DebugConsole", "Title", "SdfRegular", "SdfBold", "SdfItalic",
+    "SdfBoldItalic", "SdfOldRegular", "SdfOldBold", "SdfOldItalic", "SdfOldBoldItalic",
+    "SdfRobertoSans", "SdfCaveat",
+})
+# 消費端是 Java `boolean` 欄位的 key——本格式表達不出 boolean（`font` 外一律 tonumber，
+# 產物只有 Double 或 nil），所以這些 key 寫什麼都不生效。42.20.4 反編譯：
+# `AtomUIText.java:23` `boolean shadow`、`AtomUI.java:22-23` `boolean visible/enabled`。
+# 本體自己就踩到了（`Print_Media.json` 有 20 處 `shadow:true` ⇒ tonumber 回 nil）。
+# 判 WARN 而非 FAIL：那是「這個 key 沒用」的死資料訊號，不是會壞版面的錯值。
+PRINT_MEDIA_BOOL_KEYS = frozenset({"shadow", "visible", "enabled"})
+# 數值常值：刻意**比 tonumber 嚴格**。PZ 的 tonumber 是 `Double.parseDouble` 加上
+# 「結尾是 nan/inf 就回 NaN/Infinity」的 fallback（`KahluaUtil.java:290-303`），因此
+# `1.5f`、`Infinity`、`0x1.8p3`、甚至 `abcinf` 都「解析得出來」——那些不是有意的
+# 版面數值，出現在座標／色彩欄一律是缺陷。只放行純十進位常值（含負號與指數）。
+_PM_NUMBER = re.compile(r"[+-]?(?:[0-9]+(?:\.[0-9]*)?|\.[0-9]+)(?:[eE][+-]?[0-9]+)?\Z")
+# 材質路徑字元集：本體 42.20.4 的 177 個 texture 值全數落在此集合內。
+_PM_TEXPATH = re.compile(r"[A-Za-z0-9_./-]+\Z")
+
+
+def _java_trim(value: str) -> str:
+    """`String.trim()` 語意：只去掉 <= U+0020 的字元。
+
+    不可用 Python `str.strip()`——它連全形空白 U+3000 與 NBSP 一起去掉，於是
+    `texture:\u3000media/...` 會被判成乾淨，而引擎實際拿到的是帶前導全形空白的
+    路徑、材質載不到。
+    """
+    return value.strip("".join(chr(c) for c in range(0x21)))
+
+
+def _java_split(value: str, sep: str) -> list[str]:
+    """`String.split(literal)`（limit=0）語意：無命中回 [原字串]，否則去掉尾端空欄位。
+
+    `string.split` 是 Java 注入的（42.20.4 反編譯
+    `pz/se/krka/kahlua/stdlib/StringLib.java:1410-1421` → `srcTemp.split(srcTemp2)`），
+    **不是 Lua pattern**。`<`／`>`／`,`／`:` 都不是 regex 特殊字元，故按字面切。
+    尾端空欄位會被丟棄，這正是「`texture:` 空值」變成 RICH TEXT ERROR 的原因。
+    """
+    if sep not in value:
+        return [value]
+    parts = value.split(sep)
+    while parts and parts[-1] == "":
+        parts.pop()
+    return parts
+
+
+def _pm_number(raw: str) -> bool:
+    """純十進位有限數值常值。
+
+    `_PM_NUMBER` 擋掉文法外的東西，`math.isfinite` 再擋溢位／下溢——`1e309` 完全
+    符合十進位文法，`Double.parseDouble` 卻回 Infinity，座標吃到它就是壞版面。
+    """
+    if not _PM_NUMBER.fullmatch(raw):
+        return False
+    try:
+        return math.isfinite(float(raw))
+    except ValueError:  # pragma: no cover — 文法已保證可解析
+        return False
+
+
+def _check_print_media_value(value: str) -> tuple[list[str], list[str]]:
+    """逐字重跑 42.20.4 解析器，回傳 (違規, 警告)。違規為空＝合約成立。"""
+    problems: list[str] = []
+    warns: list[str] = []
+    if not value.startswith("<"):
+        # `<` 之前的文字會被當成一個元素、切不出 `key:value` → RICH TEXT ERROR 後
+        # break，該值的所有後續元素全部不生效。
+        problems.append("值未以 `<` 開頭（前導文字會觸發 RICH TEXT ERROR 並中止解析）")
+    for idx, element in enumerate(_java_split(value, "<"), start=1):
+        if element == "":
+            continue
+        if ">" not in element:
+            problems.append(f"元素 {idx} 缺 `>` 收尾（值被截斷）：{element!r}")
+            continue
+        data = _java_split(element, ">")
+        if not data:
+            # `<>`：Lua 的 data[1] 為 nil，`string.split(nil, ",")` 會直接拋錯。
+            problems.append(f"元素 {idx} 參數段為空（`<>` 會讓 string.split(nil) 拋錯）")
+            continue
+        params: dict[str, str] = {}
+        broken = False
+        for field in _java_split(data[0], ","):
+            pair = _java_split(field, ":")
+            if len(pair) < 2:
+                problems.append(
+                    f"元素 {idx} 的 {field!r} 切不出 `key:value`"
+                    "（引擎印 RICH TEXT ERROR 並中止整個值的解析）"
+                )
+                broken = True
+                break
+            if len(pair) > 2:
+                # 引擎只取 temp[1]／temp[2]，第二個 `:` 之後**靜默丟棄**。
+                problems.append(
+                    f"元素 {idx} 的 {field!r} 有多於一個 `:`"
+                    "（引擎只取前兩段，其餘靜默丟棄）"
+                )
+                continue
+            key = _java_trim(pair[0])
+            if not key:
+                problems.append(f"元素 {idx} 的 {field!r} key 為空")
+                continue
+            if key in params:
+                problems.append(f"元素 {idx} 的 key {key!r} 重複（後值靜默覆寫前值）")
+                continue
+            params[key] = _java_trim(pair[1])
+        if broken:
+            break
+        etype = params.get("type")
+        if etype not in PRINT_MEDIA_TYPES:
+            problems.append(
+                f"元素 {idx} 的 type={etype!r} 不在 {sorted(PRINT_MEDIA_TYPES)}"
+                "（引擎靜默忽略整個元素）"
+            )
+            continue
+        body = data[1] if len(data) > 1 else None
+        if etype == "text":
+            # Lua 逐字元跑 `for j = 1, #data[2]`：data[2] 為 nil 直接拋錯，
+            # 且第二個 `>` 之後的內容會被靜默丟棄。
+            if not body:
+                problems.append(f"元素 {idx}（text）缺正文（`#data[2]` 對 nil 會拋錯）")
+            elif len(data) > 2:
+                problems.append(
+                    f"元素 {idx}（text）正文含額外 `>`，第二段之後被靜默丟棄：{data[2]!r}"
+                )
+        elif body:
+            problems.append(f"元素 {idx}（{etype}）`>` 之後的內容不會被使用：{body!r}")
+        if etype == "parent":
+            # parent 只讀 width/height，且值會直進 primitive double setter——
+            # tonumber 失敗時傳 nil 進去是拋錯，不是靜默忽略。
+            for axis in ("width", "height"):
+                if axis not in params:
+                    problems.append(f"元素 {idx}（parent）缺 {axis}")
+                elif not _pm_number(params[axis]):
+                    problems.append(f"元素 {idx}（parent）{axis}={params[axis]!r} 非有限數值常值")
+            continue
+        for key, raw in sorted(params.items()):
+            if key == "type":
+                continue
+            if etype == "texture" and key == "texture":
+                if not raw:
+                    problems.append(f"元素 {idx} 的 texture 為空值")
+                elif not _PM_TEXPATH.fullmatch(raw):
+                    problems.append(
+                        f"元素 {idx} 的 texture 不是裸材質路徑：{raw!r}"
+                        "（42.20.4 直接 getTexture(value)，不接受 getTexture(\"X\")、引號或括號）"
+                    )
+            elif etype == "text" and key == "font":
+                if raw not in PRINT_MEDIA_FONTS:
+                    problems.append(
+                        f"元素 {idx} 的 font 不是裸 UIFont 名稱：{raw!r}"
+                        "（42.20.4 直接 UIFont.FromString(value)，不接受 UIFont.X）"
+                    )
+            elif not _pm_number(raw):
+                problems.append(
+                    f"元素 {idx} 的 {key}={raw!r} 無法由 tonumber 取得有限數值"
+                    "（算式、true/false、空值都會靜默變成 nil）"
+                )
+            elif key in PRINT_MEDIA_BOOL_KEYS:
+                # 數值形式過得了 tonumber，但消費端是 Java boolean 欄位（見常數註解），
+                # 本格式表達不出 boolean ⇒ 這個 key 寫什麼都不生效。
+                warns.append(
+                    f"元素 {idx} 的 {key} 消費端是 Java boolean 欄位，"
+                    "本格式只產得出 Double／nil ⇒ 此值永遠不生效"
+                )
+    return problems, warns
+
+
+def check_print_media(dist_cn: str, dist_ch: str) -> tuple[bool, list[str], list[str]]:
+    """[17] 出貨的 `Print_Media.json` `*_info` 值必須符合 42.20.4 解析契約。"""
+    fail: list[str] = []
+    warn: list[str] = []
+    infos: dict[str, set[str]] = {}
+    for lang, directory in (("CN", dist_cn), ("CH", dist_ch)):
+        path = os.path.join(directory, PRINT_MEDIA_FILE)
+        if not os.path.isfile(path):
+            # 本包一直有出貨這個檔；檔案憑空消失屬回歸，不是「沒有東西要驗」。
+            fail.append(f"{lang}/{PRINT_MEDIA_FILE} 不存在（本包應出貨此檔）")
+            infos[lang] = set()
+            continue
+        data = _read_json(path)
+        keys = {k for k in data if k.endswith("_info")}
+        infos[lang] = keys
+        for key in sorted(keys):
+            value = data[key]
+            if not isinstance(value, str):
+                fail.append(f"{lang}|{key}：值非字串")
+                continue
+            problems, value_warns = _check_print_media_value(value)
+            fail += [f"{lang}|{key}：{p}" for p in problems]
+            warn += [f"{lang}|{key}：{w}" for w in value_warns]
+    # `_info` 鍵集雙向一致（[2] 已對全部檔案把關，這裡明示本檔的對稱性）。
+    only_cn = sorted(infos.get("CN", set()) - infos.get("CH", set()))
+    only_ch = sorted(infos.get("CH", set()) - infos.get("CN", set()))
+    fail += [f"僅 CN 有 `_info` 鍵：{k}" for k in only_cn]
+    fail += [f"僅 CH 有 `_info` 鍵：{k}" for k in only_ch]
+    if not fail and not infos.get("CN"):
+        warn.append(f"{PRINT_MEDIA_FILE} 沒有任何 `*_info` 鍵——本項等於沒驗到東西")
+    return not fail, fail, warn
+
+
 def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
     repo = paths["repo"]
     as1_cn = paths["as1_cn"]
@@ -2034,6 +2260,10 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         ok16, d16, w16 = check_recipe_dead_keys(repo, dist_ch)
     except Exception as exc:  # noqa: BLE001 — 清單檔缺失/壞損直接判 FAIL（gate 資料是受版控真相）
         ok16, d16, w16 = False, [f"Recipes 死鍵檢查失敗（{exc}）"], []
+    try:
+        ok17, d17, w17 = check_print_media(dist_cn, dist_ch)
+    except Exception as exc:  # noqa: BLE001 — 出貨檔壞損直接判 FAIL
+        ok17, d17, w17 = False, [f"Print Media 契約檢查失敗（{exc}）"], []
 
     rows = [
         ("1", "CN 逐檔 parity（As1 缺席時僅降級 As1 比對）" if as1_missing else "CN 逐檔 parity",
@@ -2052,6 +2282,7 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         ("14", "own 層 CN 用字", ok14, d14, w14),
         ("15", "ItemName 死鍵", ok15, d15, w15),
         ("16", "Recipes 死鍵", ok16, d16, w16),
+        ("17", "Print Media 42.20.4 契約", ok17, d17, w17),
     ]
 
     n_pass = sum(1 for _, _, ok, _, _ in rows if ok is True)

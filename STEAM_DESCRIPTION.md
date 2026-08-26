@@ -66,7 +66,7 @@ Project Zomboid 把所有 MOD 的翻譯檔載入[b]同一張全域字串表[/b]�
 [h2]📋 MOD 資訊[/h2]
 [list]
 [*] [b]Mod ID:[/b] CatModLangFor42
-[*] [b]支援版本:[/b] Build 42.20.1+
+[*] [b]支援版本:[/b] Build 42.20.4+
 [*] [b]Mod 版本:[/b] 42.20.2-1.19.0
 [*] [b]Workshop ID:[/b] 3765907717
 [/list]

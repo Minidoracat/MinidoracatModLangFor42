@@ -116902,8 +116902,9 @@
   "Print_Media.json": {
    "Print_Media_DixieGasCoke_info": {
     "en": "<type:parent, width:1240, height:1754><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/FlyerPics/DixieGasCoke.png\"), width:1240, height:1754>",
-    "ch": "<type:parent, width:1240, height:1754><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/FlyerPics/DixieGasCoke.png\"), width:1240, height:1754>",
-    "cn": "<type:parent, width:1240, height:1754><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/FlyerPics/DixieGasCoke.png\"), width:1240, height:1754>"
+    "ch": "<type:parent, width:1240, height:1754><type:texture, x:0, y:0, texture:media/textures/printMedia/FlyerPics/DixieGasCoke.png, width:1240, height:1754>",
+    "cn": "<type:parent, width:1240, height:1754><type:texture, x:0, y:0, texture:media/textures/printMedia/FlyerPics/DixieGasCoke.png, width:1240, height:1754>",
+    "_note": "PZ 42.20.4 契約：PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式，texture 值必須是裸材質路徑。ch/cn 已遷移為裸路徑；en 欄刻意保留上游現行原文（舊 getTexture(\"X\") 形式）當過時比對錨點——上游尚未跟上 42.20.4，兩者形狀不同是預期狀態，勿「修正」成一致。"
    },
    "Print_Media_DixieGasCoke_title": {
     "en": "Dixie Gas Coca Cola Advert",
@@ -116912,8 +116913,9 @@
    },
    "Print_Media_ListerineConvenience_info": {
     "en": "<type:parent, width:1240, height:1754><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/FlyerPics/ListerineConvenience.png\"), width:1240, height:1754>",
-    "ch": "<type:parent, width:1240, height:1754><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/FlyerPics/ListerineConvenience.png\"), width:1240, height:1754>",
-    "cn": "<type:parent, width:1240, height:1754><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/FlyerPics/ListerineConvenience.png\"), width:1240, height:1754>"
+    "ch": "<type:parent, width:1240, height:1754><type:texture, x:0, y:0, texture:media/textures/printMedia/FlyerPics/ListerineConvenience.png, width:1240, height:1754>",
+    "cn": "<type:parent, width:1240, height:1754><type:texture, x:0, y:0, texture:media/textures/printMedia/FlyerPics/ListerineConvenience.png, width:1240, height:1754>",
+    "_note": "PZ 42.20.4 契約：PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式，texture 值必須是裸材質路徑。ch/cn 已遷移為裸路徑；en 欄刻意保留上游現行原文（舊 getTexture(\"X\") 形式）當過時比對錨點——上游尚未跟上 42.20.4，兩者形狀不同是預期狀態，勿「修正」成一致。"
    },
    "Print_Media_ListerineConvenience_title": {
     "en": "Listerine Advert",
@@ -116922,8 +116924,9 @@
    },
    "Print_Media_Fortune10_info": {
     "en": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune10.png\"), width:800, height:200>",
-    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune10.png\"), width:800, height:200>",
-    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune10.png\"), width:800, height:200>"
+    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune10.png, width:800, height:200>",
+    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune10.png, width:800, height:200>",
+    "_note": "PZ 42.20.4 契約：PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式，texture 值必須是裸材質路徑。ch/cn 已遷移為裸路徑；en 欄刻意保留上游現行原文（舊 getTexture(\"X\") 形式）當過時比對錨點——上游尚未跟上 42.20.4，兩者形狀不同是預期狀態，勿「修正」成一致。"
    },
    "Print_Media_Fortune10_title": {
     "en": "Fortune Message",
@@ -116932,8 +116935,9 @@
    },
    "Print_Media_Fortune1_info": {
     "en": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune1.png\"), width:800, height:200>",
-    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune1.png\"), width:800, height:200>",
-    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune1.png\"), width:800, height:200>"
+    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune1.png, width:800, height:200>",
+    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune1.png, width:800, height:200>",
+    "_note": "PZ 42.20.4 契約：PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式，texture 值必須是裸材質路徑。ch/cn 已遷移為裸路徑；en 欄刻意保留上游現行原文（舊 getTexture(\"X\") 形式）當過時比對錨點——上游尚未跟上 42.20.4，兩者形狀不同是預期狀態，勿「修正」成一致。"
    },
    "Print_Media_Fortune1_title": {
     "en": "Fortune Message",
@@ -116942,8 +116946,9 @@
    },
    "Print_Media_Fortune2_info": {
     "en": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune2.png\"), width:800, height:200>",
-    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune2.png\"), width:800, height:200>",
-    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune2.png\"), width:800, height:200>"
+    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune2.png, width:800, height:200>",
+    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune2.png, width:800, height:200>",
+    "_note": "PZ 42.20.4 契約：PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式，texture 值必須是裸材質路徑。ch/cn 已遷移為裸路徑；en 欄刻意保留上游現行原文（舊 getTexture(\"X\") 形式）當過時比對錨點——上游尚未跟上 42.20.4，兩者形狀不同是預期狀態，勿「修正」成一致。"
    },
    "Print_Media_Fortune2_title": {
     "en": "Fortune Message",
@@ -116952,8 +116957,9 @@
    },
    "Print_Media_Fortune3_info": {
     "en": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune3.png\"), width:800, height:200>",
-    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune3.png\"), width:800, height:200>",
-    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune3.png\"), width:800, height:200>"
+    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune3.png, width:800, height:200>",
+    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune3.png, width:800, height:200>",
+    "_note": "PZ 42.20.4 契約：PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式，texture 值必須是裸材質路徑。ch/cn 已遷移為裸路徑；en 欄刻意保留上游現行原文（舊 getTexture(\"X\") 形式）當過時比對錨點——上游尚未跟上 42.20.4，兩者形狀不同是預期狀態，勿「修正」成一致。"
    },
    "Print_Media_Fortune3_title": {
     "en": "Fortune Message",
@@ -116962,8 +116968,9 @@
    },
    "Print_Media_Fortune4_info": {
     "en": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune4.png\"), width:800, height:200>",
-    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune4.png\"), width:800, height:200>",
-    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune4.png\"), width:800, height:200>"
+    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune4.png, width:800, height:200>",
+    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune4.png, width:800, height:200>",
+    "_note": "PZ 42.20.4 契約：PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式，texture 值必須是裸材質路徑。ch/cn 已遷移為裸路徑；en 欄刻意保留上游現行原文（舊 getTexture(\"X\") 形式）當過時比對錨點——上游尚未跟上 42.20.4，兩者形狀不同是預期狀態，勿「修正」成一致。"
    },
    "Print_Media_Fortune4_title": {
     "en": "Fortune Message",
@@ -116972,8 +116979,9 @@
    },
    "Print_Media_Fortune5_info": {
     "en": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune5.png\"), width:800, height:200>",
-    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune5.png\"), width:800, height:200>",
-    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune5.png\"), width:800, height:200>"
+    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune5.png, width:800, height:200>",
+    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune5.png, width:800, height:200>",
+    "_note": "PZ 42.20.4 契約：PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式，texture 值必須是裸材質路徑。ch/cn 已遷移為裸路徑；en 欄刻意保留上游現行原文（舊 getTexture(\"X\") 形式）當過時比對錨點——上游尚未跟上 42.20.4，兩者形狀不同是預期狀態，勿「修正」成一致。"
    },
    "Print_Media_Fortune5_title": {
     "en": "Fortune Message",
@@ -116982,8 +116990,9 @@
    },
    "Print_Media_Fortune6_info": {
     "en": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune6.png\"), width:800, height:200>",
-    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune6.png\"), width:800, height:200>",
-    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune6.png\"), width:800, height:200>"
+    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune6.png, width:800, height:200>",
+    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune6.png, width:800, height:200>",
+    "_note": "PZ 42.20.4 契約：PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式，texture 值必須是裸材質路徑。ch/cn 已遷移為裸路徑；en 欄刻意保留上游現行原文（舊 getTexture(\"X\") 形式）當過時比對錨點——上游尚未跟上 42.20.4，兩者形狀不同是預期狀態，勿「修正」成一致。"
    },
    "Print_Media_Fortune6_title": {
     "en": "Fortune Message",
@@ -116992,8 +117001,9 @@
    },
    "Print_Media_Fortune7_info": {
     "en": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune7.png\"), width:800, height:200>",
-    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune7.png\"), width:800, height:200>",
-    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune7.png\"), width:800, height:200>"
+    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune7.png, width:800, height:200>",
+    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune7.png, width:800, height:200>",
+    "_note": "PZ 42.20.4 契約：PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式，texture 值必須是裸材質路徑。ch/cn 已遷移為裸路徑；en 欄刻意保留上游現行原文（舊 getTexture(\"X\") 形式）當過時比對錨點——上游尚未跟上 42.20.4，兩者形狀不同是預期狀態，勿「修正」成一致。"
    },
    "Print_Media_Fortune7_title": {
     "en": "Fortune Message",
@@ -117002,8 +117012,9 @@
    },
    "Print_Media_Fortune8_info": {
     "en": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune8.png\"), width:800, height:200>",
-    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune8.png\"), width:800, height:200>",
-    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune8.png\"), width:800, height:200>"
+    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune8.png, width:800, height:200>",
+    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune8.png, width:800, height:200>",
+    "_note": "PZ 42.20.4 契約：PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式，texture 值必須是裸材質路徑。ch/cn 已遷移為裸路徑；en 欄刻意保留上游現行原文（舊 getTexture(\"X\") 形式）當過時比對錨點——上游尚未跟上 42.20.4，兩者形狀不同是預期狀態，勿「修正」成一致。"
    },
    "Print_Media_Fortune8_title": {
     "en": "Fortune Message",
@@ -117012,8 +117023,9 @@
    },
    "Print_Media_Fortune9_info": {
     "en": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune9.png\"), width:800, height:200>",
-    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune9.png\"), width:800, height:200>",
-    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture(\"media/textures/printMedia/Fortunes/Fortune9.png\"), width:800, height:200>"
+    "ch": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune9.png, width:800, height:200>",
+    "cn": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/Fortunes/Fortune9.png, width:800, height:200>",
+    "_note": "PZ 42.20.4 契約：PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式，texture 值必須是裸材質路徑。ch/cn 已遷移為裸路徑；en 欄刻意保留上游現行原文（舊 getTexture(\"X\") 形式）當過時比對錨點——上游尚未跟上 42.20.4，兩者形狀不同是預期狀態，勿「修正」成一致。"
    },
    "Print_Media_Fortune9_title": {
     "en": "Fortune Message",

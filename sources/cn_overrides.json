@@ -6639,6 +6639,41 @@
   "reason": "同 WP232_Painting：Gnome=侏儒",
   "value": "侏儒"
  },
+ "Print_Media.json|Print_Media_CDC1_info": {
+  "as1_value": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:getTexture (",
+  "reason": "PZ 42.20.4 改寫 Print Media 解析器（PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式），舊格式 texture:getTexture(\"X\") 一律失效。As1 原值另有上游自身的截斷缺陷——值在 texture:getTexture ( 處斷掉、連 > 都沒有，斷點正好落在 getTexture(\" 的內嵌雙引號前（研判為上游轉檔未逸出該引號而提前終止字串），故**任何遊戲版本都取不到材質**，不是 42.20.4 才壞的。完整材質路徑取自上游 EN 鏡像 sources/en/3403180543.json（BanditsWeekOne 42.18 與 42.20 兩分支同值）：media/textures/printMedia/FlyerPics/CDC1.png。",
+  "value": "<type:parent, width:800, height:1131><type:texture, x:0, y:0, texture:media/textures/printMedia/FlyerPics/CDC1.png, width:800, height:1131>"
+ },
+ "Print_Media.json|Print_Media_DiaryPage1_info": {
+  "as1_value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: getTexture(\"media/textures/printMedia/FlyerPic/DiaryPage1EN.png\"), width: 1024, height: 1536>",
+  "reason": "PZ 42.20.4 改寫 Print Media 解析器（PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式），舊格式 texture:getTexture(\"X\") 一律失效，玩家開啟日記頁只會看到空白。純格式遷移：只去掉 getTexture(\" \") 外殼，材質路徑與版面數值逐字不動（上游 EN 鏡像 sources/en/3615135168.json 同路徑）。",
+  "value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: media/textures/printMedia/FlyerPic/DiaryPage1EN.png, width: 1024, height: 1536>"
+ },
+ "Print_Media.json|Print_Media_DiaryPage2_info": {
+  "as1_value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: getTexture(\"media/textures/printMedia/FlyerPic/DiaryPage2EN.png\"), width: 1024, height: 1536>",
+  "reason": "PZ 42.20.4 改寫 Print Media 解析器（PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式），舊格式 texture:getTexture(\"X\") 一律失效，玩家開啟日記頁只會看到空白。純格式遷移：只去掉 getTexture(\" \") 外殼，材質路徑與版面數值逐字不動（上游 EN 鏡像 sources/en/3615135168.json 同路徑）。",
+  "value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: media/textures/printMedia/FlyerPic/DiaryPage2EN.png, width: 1024, height: 1536>"
+ },
+ "Print_Media.json|Print_Media_DiaryPage3_info": {
+  "as1_value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: getTexture(\"media/textures/printMedia/FlyerPic/DiaryPage3EN.png\"), width: 1024, height: 1536>",
+  "reason": "PZ 42.20.4 改寫 Print Media 解析器（PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式），舊格式 texture:getTexture(\"X\") 一律失效，玩家開啟日記頁只會看到空白。純格式遷移：只去掉 getTexture(\" \") 外殼，材質路徑與版面數值逐字不動（上游 EN 鏡像 sources/en/3615135168.json 同路徑）。",
+  "value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: media/textures/printMedia/FlyerPic/DiaryPage3EN.png, width: 1024, height: 1536>"
+ },
+ "Print_Media.json|Print_Media_DiaryPage4_info": {
+  "as1_value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: getTexture(\"media/textures/printMedia/FlyerPic/DiaryPage4EN.png\"), width: 1024, height: 1536>",
+  "reason": "PZ 42.20.4 改寫 Print Media 解析器（PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式），舊格式 texture:getTexture(\"X\") 一律失效，玩家開啟日記頁只會看到空白。純格式遷移：只去掉 getTexture(\" \") 外殼，材質路徑與版面數值逐字不動（上游 EN 鏡像 sources/en/3615135168.json 同路徑）。",
+  "value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: media/textures/printMedia/FlyerPic/DiaryPage4EN.png, width: 1024, height: 1536>"
+ },
+ "Print_Media.json|Print_Media_DiaryPage5_info": {
+  "as1_value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: getTexture(\"media/textures/printMedia/FlyerPic/DiaryPage5EN.png\"), width: 1024, height: 1536>",
+  "reason": "PZ 42.20.4 改寫 Print Media 解析器（PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式），舊格式 texture:getTexture(\"X\") 一律失效，玩家開啟日記頁只會看到空白。純格式遷移：只去掉 getTexture(\" \") 外殼，材質路徑與版面數值逐字不動（上游 EN 鏡像 sources/en/3615135168.json 同路徑）。",
+  "value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: media/textures/printMedia/FlyerPic/DiaryPage5EN.png, width: 1024, height: 1536>"
+ },
+ "Print_Media.json|Print_Media_DiaryPage6_info": {
+  "as1_value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: getTexture(\"media/textures/printMedia/FlyerPic/DiaryPage6EN.png\"), width: 1024, height: 1536>",
+  "reason": "PZ 42.20.4 改寫 Print Media 解析器（PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式），舊格式 texture:getTexture(\"X\") 一律失效，玩家開啟日記頁只會看到空白。純格式遷移：只去掉 getTexture(\" \") 外殼，材質路徑與版面數值逐字不動（上游 EN 鏡像 sources/en/3615135168.json 同路徑）。",
+  "value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: media/textures/printMedia/FlyerPic/DiaryPage6EN.png, width: 1024, height: 1536>"
+ },
  "RecipeGroups.json|RecipeGroup_CraftTireStack": {
   "as1_value": "制作轮胎堆叠",
   "reason": "批外已出貨的同族 Recipes.CraftTireStack2/3/4 皆作「制作轮胎堆 (N 个)」，As1 的「轮胎堆叠」與之斷鏈",
