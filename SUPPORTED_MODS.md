@@ -395,7 +395,7 @@
 | [[B42.16.3] Ogrim Mod's - My Own Well](https://steamcommunity.com/sharedfiles/filedetails/?id=3549290115) | Ogrim 我的水井 | 可建造自己的水井，含污染機制與木炭淨化，多項參數可自訂。 | `GRM-MyOwnWell`, `GRM-MyOwnWell-50` | 27 | — | — |
 | [Legendary Cap](https://steamcommunity.com/sharedfiles/filedetails/?id=3549294472) | 傳奇棒球帽 | 新增多種顏色的傳奇棒球帽，可正戴或反戴。 | `LCB42` | 89 | ⚠️ ≥3 | — |
 | [Moats](https://steamcommunity.com/sharedfiles/filedetails/?id=3550032314) | 護城河 | 可挖掘護城河，由降雨與相鄰水域補水，填充速度可調。 | `MoatsB42` | 8 | — | — |
-| [HydeCo. Clay! 42.16.3](https://steamcommunity.com/sharedfiles/filedetails/?id=3551124480) | HydeCo. 黏土！ | 新增黏土與陶藝系統，可製作陶瓷器具、武器與裝飾品。 | `HydeCoClay` | 265 | — | — |
+| [HydeCo. Clay! 42.16.3](https://steamcommunity.com/sharedfiles/filedetails/?id=3551124480) | HydeCo. 黏土！ | 新增黏土與陶藝系統，可製作陶瓷器具、武器與裝飾品。 | `HydeCoClay` | 265 | ⚠️ ≥1 | — |
 | [[B42.16.3] Ogrim Mod's - Universal Custom Firearm](https://steamcommunity.com/sharedfiles/filedetails/?id=3551139118) | Ogrim 模組 - 通用自訂槍械 | 新增槍械改裝與零件系統，可拆解、維修槍械並提供多項沙盒設定。 | `GRM-MyCustomFirearm` | 88 | — | — |
 | [Legendary Fanny Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=3552050880) | 傳奇腰包 | 新增多種顏色的傳奇腰包，可配戴於身前或身後。 | `LFB42` | 83 | ⚠️ ≥3 | — |
 | [U.S. M998 Humvee by Papa_Chad](https://steamcommunity.com/sharedfiles/filedetails/?id=3554424111) | U.S. M998 Humvee by Papa_Chad | 新增美軍 M998 Humvee 悍馬軍用車輛，含天線與砲手座位。 | `U.S. M998 Humvee by Papa_Chad` | 3 | — | — |
