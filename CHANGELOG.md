@@ -4,56 +4,65 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
-## [42.20.4-1.21.0] - 2026-08-29
+## [42.20.4-1.21.0] - 2026-08-30
 
 ### 玩家摘要
 
 > 本節為 Workshop 更新註記用的白話版；以下各節為維護者向的技術細節。
 
-- **一次補上 1,846 個新翻譯鍵，並更新 352 筆既有譯文。** 其中 1,740 個新鍵來自 34 張「可能過時」issue，另 106 個來自新收錄的 Puffin's Retro Relics；352 筆更新已包含下一點的 208 筆 Dreams 全文重譯。
+- **一次補上 2,457 個新翻譯鍵，並更新 352 筆既有譯文。** 其中 1,740 個新鍵來自 34 張「可能過時」issue、106 個來自 Puffin's Retro Relics，另有 611 個是本次正式服清查後補上的 JSON 翻譯。
+- **正式服目前啟用但原本未納入本包的 22 個 Workshop MOD，現在都已列入支援。** 新增 610 個繁中／簡中鍵，涵蓋 AllTheInfo、兩款 Ford 車輛、Lawnmower、InspectUI、Campers、Oshkosh M911、Alice's Weapon Sling、Working Gun Rack、Plysken Solar Revolution 等；只處理能由 `Translate/*.json` 生效的文字，沒有新增或修改 Lua 覆寫。
+- **截圖裡的三個英文改裝配方已補齊。** `ATAJeepBumper`、`ATASamaraHoodItem`、`ATAMustangHoodItem` 現在會顯示「切割吉普牧馬人保險桿」、「切割雪佛蘭薩馬拉引擎蓋」、「切割福特野馬引擎蓋」。
 - **Dreams 的 207 篇夢境與 1 句醒來台詞全部重新翻譯。** 上游不是只改標點，而是把整批故事全文重寫；舊中文已對不上情節。本版逐篇依現行英文重譯，保留所有段落、數字與格式標記。
 - **新增 Puffin's Retro Relics 原創繁中／簡中翻譯。** 收錄 101 個懷舊收藏品名稱與 5 個分類／背包掛載名稱，包括瘋狂球、絨毛玩偶、桌遊、球隊三角旗與摔角夥伴玩偶。
-- **進一步避免不同 MOD 共用同一代號時顯示錯名。** owner 衝突裁決由 402 筆增至 983 筆；無法同時對多個 MOD 成立的文字不再出貨，讓各 MOD 顯示自己的英文，而不是把另一個 MOD 的車名、槍名、職業說明或彈藥口徑蓋上去。唯一已知例外是射擊模式選單的 `ContextMenu_FireMode_Safe`：FRAcceptableGunsDemo 的英文只放在 B42 已不載入的 `ContextMenu_EN.txt`，該 MOD 玩家抑制後會看到代號而非英文——已接受此殘留，代價低於向兩方玩家出貨互相矛盾的操作指令。
-- **Workshop 封面更新。** 替換 `poster.png` 與 `preview.png`（各 419,804 → 297,282 bytes）；封面替換不影響翻譯內容（本版新增／更新的譯文見前述各點），安裝方式、Mod ID 與最低支援版本不變。
+- **進一步避免不同 MOD 共用同一代號時顯示錯名。** owner 衝突裁決由 402 筆增至 983 筆；無法同時對多個 MOD 成立的文字不再出貨，讓各 MOD 顯示自己的英文，而不是把另一個 MOD 的車名、槍名、職業說明或彈藥口徑蓋上去。唯一已知例外是 FRAcceptableGunsDemo 的 `ContextMenu_FireMode_Safe`：該 MOD 把英文留在 B42 不載入的舊格式檔，抑制衝突中文後會顯示字面鍵名；這項低影響殘留已接受。
+- **Workshop 封面更新。** 替換 `poster.png` 與 `preview.png`；安裝方式、Mod ID 與最低支援版本不變，仍只支援 Build 42.20.4+。
 
 ### Added
 
-- **相對 `v42.20.4-1.20.0` 新增 1,846 個出貨翻譯鍵**（以 dist CH 鍵集實算）：
+- **相對 `v42.20.4-1.20.0` 新增 2,457 個出貨翻譯鍵**（以 dist CH 鍵集實算）：
   - **#283–#292 共 10 張可能過時 issue**：補齊 403 鍵，最大批為 GaelGunStore 及其彈藥／配方相容內容（329 鍵）；另含 Fitness Overhaul、organizedCategories、bodilyfunctions 等。
-  - **#294–#312、#314–#318 共 24 張可能過時 issue**：補齊 1,337 個直接缺口，包含 HydeCo Clay 1,148 鍵、Guns of 93 56 鍵、More Builds 25 鍵、AmmoConverter 23 鍵、Dreams 11 鍵（第 208／209 篇夢境與夢境日記 UI 9 句），以及多個沙盒、車輛、分類與 UI 更新。
-  - **#313 Puffin's Retro Relics（Workshop 3788360646）106 鍵**：own-mod lane 原創 CH／CN（`ItemName` 101、`IG_UI` 5），As1 未收錄、零 vanilla 碰撞、零 owner 衝突；legacy `IG_UI_EN.txt` 的 4 鍵與現行 JSON 重複，未建立 B42 不載入的死資料。
-- **Puffin's Retro Relics tracker baseline 與 watchlist**：支援清單 548→549 個 Workshop MOD（715→716 個 mod ID），另 16 個已下架仍保留翻譯；watchlist 565→566。原始 MOD 後續改文會由每日排程自動追蹤。
+  - **#294–#312、#314–#318 共 24 張可能過時 issue**：補齊 1,337 個直接缺口，包含 HydeCo Clay 1,148 鍵、Guns of 93 56 鍵、More Builds 25 鍵、AmmoConverter 23 鍵、Dreams 11 鍵，以及多個沙盒、車輛、分類與 UI 更新。
+  - **#313 Puffin's Retro Relics（Workshop 3788360646）106 鍵**：own-mod lane 原創 CH／CN（`ItemName` 101、`IG_UI` 5），As1 未收錄、零 vanilla 碰撞、零 owner 衝突。
+  - **正式服 22 個新支援 Workshop 項目 610 鍵**：AllTheInfo 337、Crown Victoria 37、Elgin Street Sweeper 37、Lawnmower 32、InspectUI 31、Campers 29、Oshkosh M911 24、Refillable Propane Tanks 24、Alice's Weapon Sling 15、Working Gun Rack 9、TheShortcut 8、Plysken Solar Revolution 7，其餘 10 個 MOD 合計 20 鍵。
+  - **Autotsar Tuning Atelier - Fjord Mustard 1 鍵**：補上 B42 `craftRecipe ATAMustangHoodItem` 的配方名稱。
+- **22 個新 own-mod lane 與 tracker baseline**：新增 23 個 mod ID、20 個新 tracker state baseline 與 19 份 EN mirror；UsefulMetal 只有非文字型 script records，依 tracker 契約不建立空 mirror。
+- **支援清單擴充**：相對 1.20.0，在架 Workshop MOD 548→571、mod ID 715→739；另有 16 個已下架項目保留翻譯。watchlist 565→588，所有新收錄 MOD 後續改文都會由每日排程追蹤。
 
 ### Fixed
 
 - **Dreams（1945359259）208 個既有鍵重譯**：`IGUI_Dream1..207` 與 `IGUI_Dream19_Say` 全文依現行 EN 重寫；CN 以 `cn_overrides.json` 錨定 As1 原值，CH 更新 corpus，並逐鍵登記 `ch_review_state.json`。
 - **352 筆既有出貨值更新（含上述 Dreams 208 筆）**：其餘 144 筆為槍械框架與相容清單、車輛零件、陶藝材料與流程、沙盒檢查間隔、Aegis 時間口徑、Bodily Functions 佔位設定、More Builds 模組名稱及其他上游改義文本的修正／同步。
-- **owner 衝突治理**：裁決台帳 402→983；`unshipped_keys` 236→280。新增 581 筆完整 owner census 背書，44 個無誠實中性譯名的鍵登記不出貨——其中 41 鍵原本有出貨、本版起停止出貨，3 鍵（`IG_UI.json|IGUI_VehicleNamefhq365GTB4Daytona`、`…GTB4Daytona_2`、`…GTS4Daytona`）為本輪新查上游、從未出貨；其餘採對所有 owner 都成立的中性譯名。連同上游改名而自然退場的 `Sandbox_SVRPClassicBows_RetroactiveSpawnBows{,_tooltip}`（→ `Sandbox_SVRPClassicBowsLocal_*`），dist CH 本版淨移除 43 鍵。
-- **HydeCo Clay 的 B41 `ItemName_` 死鍵**：36 個前綴鍵已有正確裸 fullType 出貨，依現行 `script_item` 實據登記 allowlist，避免把 As1 鏡像殘留誤判成玩家缺口。
-- **SF2／MK／TMNT／運動球隊與影視專名交叉複核**：Puffin 收藏品 106 鍵經 Opus 5 全量審核，修正海外版《快打旋風 II》Balrog／Vega／M. Bison 對應、EyeXombie 品牌名與 Waldo 簡中定名。
+- **Alice's Weapon Sling 的 4 個快捷欄名稱搬到正確檔案**：上游把 `IGUI_HotbarAttachment_*` 放在 `UI.json`，但 PZ 只會從 `IG_UI.json` 路由 `IGUI_` 鍵；本包已重新歸位，避免譯文存在卻永遠顯示英文。
+- **Plysken Solar Revolution 的 3 個英文殘留**：補上抽水機、氣象站與蓄電池組；另外 4 個相關鍵已由該 MOD 自帶 CH／CN 翻譯，未重複收錄。
+- **owner 衝突治理**：裁決台帳 402→983；`unshipped_keys` 236→280。新增 581 筆完整 owner census 背書，44 個無誠實中性譯名的鍵登記不出貨；連同上游改名自然退場的 2 鍵，dist CH 本版淨移除 43 鍵。
+- **HydeCo Clay 的 B41 `ItemName_` 死鍵**：36 個前綴鍵已有正確裸 fullType 出貨，依現行 `script_item` 實據登記 allowlist。
+- **SF2／MK／TMNT／運動球隊與影視專名交叉複核**：Puffin 收藏品 106 鍵經全量審核，修正海外版《快打旋風 II》Balrog／Vega／M. Bison 對應、EyeXombie 品牌名與 Waldo 簡中定名。
 
 ### Changed
 
 - **封面資產縮小並更新**：`poster.png`／`preview.png` 由 419,804 bytes 更新為 297,282 bytes。
-- **tracker state 跟進 8/27–8/29 上游更新**：只保留 JSON／script 可形成翻譯的語料；純 tracker 狀態變動不影響玩家出貨內容。
+- **Workshop 長期描述與支援清單同步**：公開數字更新為 580+ 個 Workshop MOD、730+ 個 mod ID；SUPPORTED_MODS、README 與 `workshop.txt` 同步重生。
+- **公開 JSON／Lua 邊界說明修正**：README、Steam 長期描述與 `workshop.txt` 現在明確區分「新收錄與後續維護一律 JSON-only」和早期既有、已凍結的 BanditsWeekOne 開日貼圖 Lua 相容層，不再以「完全不掛 Lua」概括實際出貨內容。
+- **tracker state 跟進 8/27–8/30 上游更新**：只保留 JSON／script 可形成翻譯的語料；純 tracker 狀態變動不影響玩家出貨內容。
 
 ### 已裁決不跟進
 
+- **Lua 寫死文字與自有文字系統不複寫**：本次只新增 PZ `Translate/{CH,CN}/*.json` 能處理的文字；沒有為任何 MOD 新增 Lua consumer 相容層。
 - **純格式安全變動不重譯**：上游僅把 `%` 改成 `%%`、大小寫或撇號者，既有 dist 已符合 formatted() 安全契約時維持原譯。
 - **無玩家可見 JSON 文本者零動作**：只新增／刪除 script 區塊識別字、失效版本夾或來源路徑搬移的 issue，不建立死翻譯。
-- **跨 MOD 同鍵新內容不強行套用**：Detailed Descriptions（#316）本輪 89 筆上游改值中，72 筆僅為 `@`→`%%` 逸出修正、14 筆落在本包未出貨的 vanilla `UI_trait_*` 鍵，真正「有新內容且本包有出貨」的只有 `UI_profdesc_fireofficer`、`UI_profdesc_fitnessInstructor`、`UI_profdesc_securityguard` 3 鍵；它們與另一個 CN-only MOD 的同鍵職業描述互斥，缺完整 owner EN census，故保留安全舊值而不把單一 MOD 的內容全域灌給其他玩家（同一 MOD 另有 4 鍵 `UI_profdesc_{chef,farmer,fisherman,veteran}` 因與 Simple Overhaul 衝突、已於上方 owner 治理登記不出貨）。
+- **跨 MOD 同鍵新內容不強行套用**：Detailed Descriptions（#316）的衝突職業描述保留安全舊值或依 owner 裁決不出貨，不把單一 MOD 的內容全域灌給其他玩家。
 
 ### 驗證
 
-- 17 支純 repo 回歸測試全過；`tracker.py self-test` 15 情境全過。
+- 18 支本機 `test_*.py` 全過；CI 所列 17 支純 repo 回歸測試全過；`tracker.py self-test` 15 情境全過。
 - `build_mod.py build` 通過；`verify_dist.py` **16/16 PASS**（FAIL 0）。
 - 確定性雙跑 **181 個檔案零 diff**。
-- `verify_dist.py --cn-diff v42.20.4-1.20.0`：**2,197 個 CN 值變動，待複核 0**。
+- `verify_dist.py --cn-diff v42.20.4-1.20.0`：**2,808 個 CN 值變動，待複核 0**。
 - owner decision gate：**983 筆背書、0 blocking**；`OWNER_CONFLICTS.md` 同步。
 - `lint_ch.py` 五類棘輪全零；本機 PZ 本體 **48,718 個 `(檔,鍵)`** 與 dist CH/CN 零交集。
-- `test_serialization.py`：**3,913 個受版控 JSON** 全合規；`manifest --check` 無漂移。
-- 有效覆蓋率重算：**85,587 / 87,386＝97.9%**，Workshop 長期描述的「約 98%」仍成立。
-- GitHub Actions `tests` workflow 對內容 commit `deda251` 綠燈：<https://github.com/Minidoracat/MinidoracatModLangFor42/actions/runs/33260833366>。
+- `test_serialization.py`：**3,989 個受版控 JSON** 全合規；`manifest --check` 無漂移。
+- 有效覆蓋率重算：**86,480 / 88,213＝98.0%**，Workshop 長期描述的「約 98%」仍成立。
 
 ## [42.20.4-1.20.0] - 2026-08-26
 
