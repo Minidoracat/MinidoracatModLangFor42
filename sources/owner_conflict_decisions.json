@@ -2287,18 +2287,14 @@
    "cn": "Glock 17弹匣"
   },
   "Recipes|ConvertTo762x39": {
-   "action": "translate",
-   "signature": "9ea7fc854f9d03c5",
-   "reason": "2026-08-24 #247：四個 owner 是同一 7.62x39mm 口徑；Gunrunners 上游省略 x39mm 寫 7.62 Round，其他三方與 key ConvertTo762x39 都明確。採精確口徑。",
-   "ch": "轉換為7.62x39mm子彈",
-   "cn": "转换为7.62x39mm子弹"
+   "action": "unship",
+   "signature": "721393c4c354d7ba",
+   "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to 7.62 Round vs Convert to 7.62x39mm Round vs Convert to 7.62x51 Round），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。"
   },
   "Recipes|ConvertTo762x39Box": {
-   "action": "translate",
-   "signature": "f4e233724dbbd5bb",
-   "reason": "2026-08-24 #247：四個 owner 是同一 7.62x39mm 整盒彈藥；Gunrunners 省略 x39mm，其他三方與 key 明確。採精確口徑。",
-   "ch": "轉換為7.62x39mm子彈 (整盒)",
-   "cn": "转换为7.62x39mm子弹 (整盒)"
+   "action": "unship",
+   "signature": "d9968932e8799edb",
+   "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Box of 7.62 Rounds vs Convert to Box of 7.62x39mm Rounds vs Convert to Box of 7.62x51 Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。"
   },
   "Recipes|ConvertTo9x18mm": {
    "action": "translate",
@@ -6187,6 +6183,170 @@
    "reason": "2026-08-27 #283–#292／Codex 複核：40mm HE Grenade 與 Underbarrel Grenade Round 的共同語意是榴彈彈藥；改用中性譯名，不把未明示 underbarrel 的 GGS owner 限定為下掛式。",
    "ch": "榴彈彈藥",
    "cn": "榴弹弹药"
+  },
+  "IG_UI|IGUI_VehicleNamefhq365GTB4Daytona": {
+   "action": "unship",
+   "signature": "66874b4e1a071a5d",
+   "reason": "2026-08-29 #294：同一 workshop 的 base 與 Real Names Addon 以同鍵表示不同車款（Ferrari 365 GTB/4 Daytona vs Impennarsi Miami），品牌與車名互斥，沒有誠實中性譯名。兩方均有可載入 JSON EN，抑制後會顯示各自英文。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq365GTB4Daytona_2": {
+   "action": "unship",
+   "signature": "66874b4e1a071a5d",
+   "reason": "2026-08-29 #294：同一 workshop 的 base 與 Real Names Addon 以同鍵表示不同車款（Ferrari 365 GTB/4 Daytona vs Impennarsi Miami），品牌與車名互斥，沒有誠實中性譯名。兩方均有可載入 JSON EN，抑制後會顯示各自英文。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq365GTS4Daytona": {
+   "action": "unship",
+   "signature": "fa50a296ee280a4d",
+   "reason": "2026-08-29 #294：同一 workshop 的 base 與 Real Names Addon 以同鍵表示不同車款（Ferrari 365 GTS/4 Daytona vs Impennarsi Miami Spyder），品牌與車名互斥，沒有誠實中性譯名。兩方均有可載入 JSON EN，抑制後會顯示各自英文。"
+  },
+  "UI|UI_profdesc_chef": {
+   "action": "unship",
+   "signature": "3f0e6a94496fcfac",
+   "reason": "2026-08-29 #316：Detailed Descriptions 與 Simple Overhaul 以同一職業描述鍵承載完全不同內容（一方為完整知識/搜尋加成，另一方為一句摘要），沒有同時保真且有用的中性譯文。兩方均有可載入 JSON EN，抑制後顯示各自英文。"
+  },
+  "UI|UI_profdesc_farmer": {
+   "action": "unship",
+   "signature": "38ce528c3dce167c",
+   "reason": "2026-08-29 #316：Detailed Descriptions 與 Simple Overhaul 以同一職業描述鍵承載完全不同內容（一方為完整知識/搜尋加成，另一方為一句摘要），沒有同時保真且有用的中性譯文。兩方均有可載入 JSON EN，抑制後顯示各自英文。"
+  },
+  "UI|UI_profdesc_fisherman": {
+   "action": "unship",
+   "signature": "92dd8852c5c0457b",
+   "reason": "2026-08-29 #316：Detailed Descriptions 與 Simple Overhaul 以同一職業描述鍵承載完全不同內容（一方為完整知識/搜尋加成，另一方為一句摘要），沒有同時保真且有用的中性譯文。兩方均有可載入 JSON EN，抑制後顯示各自英文。"
+  },
+  "UI|UI_profdesc_veteran": {
+   "action": "unship",
+   "signature": "dfc9833a65de3623",
+   "reason": "2026-08-29 #316：Detailed Descriptions 與 Simple Overhaul 以同一職業描述鍵承載完全不同內容（一方為完整知識/搜尋加成，另一方為一句摘要），沒有同時保真且有用的中性譯文。兩方均有可載入 JSON EN，抑制後顯示各自英文。"
+  },
+  "ContextMenu|ContextMenu_FireMode_Safe": {
+   "action": "unship",
+   "signature": "df0fcdc7bbf45649",
+   "reason": "2026-08-29 #315：同鍵分別表示 Missing Required Part 與 Safe，功能語意互斥，沒有誠實中性譯名。Guns93 有可載入 JSON EN；FRAcceptableGunsDemo 只有死檔 ContextMenu_EN.txt，抑制後後者會顯示字面鍵名；已接受此殘留，避免向兩方玩家出貨錯誤指令。"
+  },
+  "IG_UI|IGUI_FirearmRadial_FoldStock": {
+   "action": "translate",
+   "signature": "d4ba33a65db169a1",
+   "reason": "2026-08-29 #315：兩個 owner 僅差是否明寫 Gun/As，既有動作譯文對兩方完全成立。",
+   "ch": "摺疊槍托",
+   "cn": "折叠枪托"
+  },
+  "IG_UI|IGUI_FirearmRadial_UnfoldStock": {
+   "action": "translate",
+   "signature": "adf30785aecb2c15",
+   "reason": "2026-08-29 #315：兩個 owner 僅差是否明寫 Gun/As，既有動作譯文對兩方完全成立。",
+   "ch": "展開槍托",
+   "cn": "展开枪托"
+  },
+  "IG_UI|IGUI_FirearmRadial_UseBayonet": {
+   "action": "translate",
+   "signature": "c5c6deb08ea3698c",
+   "reason": "2026-08-29 #315：兩個 owner 僅差是否明寫 Gun/As，既有動作譯文對兩方完全成立。",
+   "ch": "用作刺刀",
+   "cn": "用作刺刀"
+  },
+  "Tooltip|Tooltip_weapon_Light": {
+   "action": "unship",
+   "signature": "74355610668a3b59",
+   "reason": "2026-08-29 #315：同鍵分別表示 Accessory 與 Light，物品屬性語意不同，沒有誠實中性譯名。兩方均有可載入 JSON EN，抑制後顯示各自英文。"
+  },
+  "Recipes|ConvertTo3030": {
+   "action": "unship",
+   "signature": "fa64031814ed7a6a",
+   "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to .30-06 Round vs Convert to .30-30 Round），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。"
+  },
+  "Recipes|ConvertTo3030Box": {
+   "action": "unship",
+   "signature": "d35ac801923525ac",
+   "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Box of .30-06 Rounds vs Convert to Box of .30-30 Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。"
+  },
+  "Recipes|ConvertTo3030Carton": {
+   "action": "unship",
+   "signature": "8f0b1d7758381f43",
+   "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Carton of .30-06 Rounds vs Convert to Carton of .30-30 Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。"
+  },
+  "Recipes|ConvertTo308": {
+   "action": "unship",
+   "signature": "1dceeea85cae079c",
+   "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to .308 Round vs Convert to 7.62x51mm Round），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。 本裁決只把同一口徑的省略寫法視為可中性化；.308 Winchester 與 7.62x51mm NATO 雖高度相近且常互稱, 但膛壓與規格並非完全相同, 屬跨命名體系而非純省略, 不以多數值覆蓋少數 owner。"
+  },
+  "Recipes|ConvertTo308Box": {
+   "action": "unship",
+   "signature": "88d86f1a3918f410",
+   "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Box of .308 Rounds vs Convert to Box of 7.62x51mm Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。 本裁決只把同一口徑的省略寫法視為可中性化；.308 Winchester 與 7.62x51mm NATO 雖高度相近且常互稱, 但膛壓與規格並非完全相同, 屬跨命名體系而非純省略, 不以多數值覆蓋少數 owner。"
+  },
+  "Recipes|ConvertTo308Carton": {
+   "action": "unship",
+   "signature": "116b5719a833a64b",
+   "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Carton of .308 Rounds vs Convert to Carton of 7.62x51mm Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。 本裁決只把同一口徑的省略寫法視為可中性化；.308 Winchester 與 7.62x51mm NATO 雖高度相近且常互稱, 但膛壓與規格並非完全相同, 屬跨命名體系而非純省略, 不以多數值覆蓋少數 owner。"
+  },
+  "Recipes|ConvertTo556": {
+   "action": "translate",
+   "signature": "4f3bddc63df62b88",
+   "reason": "2026-08-29 #303：5.56 在本批槍械語境即 5.56x45mm 的常用簡稱；既有精確口徑譯文對兩方成立。",
+   "ch": "轉換為5.56x45mm子彈",
+   "cn": "转换为5.56x45mm子弹"
+  },
+  "Recipes|ConvertTo556Box": {
+   "action": "translate",
+   "signature": "21246969d63f99bd",
+   "reason": "2026-08-29 #303：5.56 在本批槍械語境即 5.56x45mm 的常用簡稱；既有精確口徑譯文對兩方成立。",
+   "ch": "轉換為5.56x45mm子彈 (整盒)",
+   "cn": "转换为5.56x45mm子弹 (整盒)"
+  },
+  "Recipes|ConvertTo556Carton": {
+   "action": "translate",
+   "signature": "15a9bb0e6f2ae87e",
+   "reason": "2026-08-29 #303：5.56 在本批槍械語境即 5.56x45mm 的常用簡稱；既有精確口徑譯文對兩方成立。",
+   "ch": "轉換為5.56x45mm子彈 (整箱)",
+   "cn": "转换为5.56x45mm子弹 (整箱)"
+  },
+  "Recipes|ConvertTo9mm": {
+   "action": "translate",
+   "signature": "06383e44764cfb65",
+   "reason": "2026-08-29 #303：9mm 在本批槍械語境即 9x19mm 的常用簡稱；既有精確口徑譯文對兩方成立。",
+   "ch": "轉換為9x19mm子彈",
+   "cn": "转换为9x19mm子弹"
+  },
+  "Recipes|ConvertTo9mmBox": {
+   "action": "translate",
+   "signature": "5cf7556749354298",
+   "reason": "2026-08-29 #303：9mm 在本批槍械語境即 9x19mm 的常用簡稱；既有精確口徑譯文對兩方成立。",
+   "ch": "轉換為9x19mm子彈 (整盒)",
+   "cn": "转换为9x19mm子弹 (整盒)"
+  },
+  "Recipes|ConvertTo9mmCarton": {
+   "action": "translate",
+   "signature": "b9dc6f6a32e6cddf",
+   "reason": "2026-08-29 #303：9mm 在本批槍械語境即 9x19mm 的常用簡稱；既有精確口徑譯文對兩方成立。",
+   "ch": "轉換為9x19mm子彈 (整箱)",
+   "cn": "转换为9x19mm子弹 (整箱)"
+  },
+  "Recipes|ConvertTo762Carton": {
+   "action": "unship",
+   "signature": "24d5733e2104ac82",
+   "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Carton of 7.62x39mm Rounds vs Convert to Carton of 7.62x51 Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。"
+  },
+  "Recipes|ConvertTo762x39Bullets": {
+   "action": "translate",
+   "signature": "7bade2c51a0204b2",
+   "reason": "2026-08-29 #303：owner 差異僅為 7.62x39 是否省略 mm；既有 7.62x39mm 譯文對所有 owner 成立。",
+   "ch": "轉換為7.62x39mm子彈",
+   "cn": "转换为7.62x39mm子弹"
+  },
+  "Recipes|ConvertTo762x39Carton": {
+   "action": "translate",
+   "signature": "4c13dc9f6ec7cabe",
+   "reason": "2026-08-29 #303：owner 差異僅為 7.62x39 是否省略 mm；既有 7.62x39mm 譯文對所有 owner 成立。",
+   "ch": "轉換為7.62x39mm子彈 (整箱)",
+   "cn": "转换为7.62x39mm子弹 (整箱)"
+  },
+  "Recipes|ConvertToBase_762x39Box": {
+   "action": "translate",
+   "signature": "0dc0419d24b4d1ad",
+   "reason": "2026-08-29 #303：owner 差異僅為 7.62x39 是否省略 mm；既有 7.62x39mm 譯文對所有 owner 成立。",
+   "ch": "轉換為7.62x39mm子彈 (整盒)",
+   "cn": "转换为7.62x39mm子弹 (整盒)"
   }
  }
 }
