@@ -8,7 +8,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **548 個 Workshop 模組**（715 個 mod ID）；另 **16 個已下架**（翻譯保留，見文末）。
+共支援 **549 個 Workshop 模組**（716 個 mod ID）；另 **16 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -558,6 +558,7 @@
 | [Mirage Wardrobe: Multiplayer Transmog [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3770186452) | 幻裝衣櫥：多人連線幻化 | 以裝備部位為單位的服裝幻化衣櫥，變更角色外觀而不影響實際裝備數值；支援收藏解鎖、款式染色、套裝預設、人物觀察窗與多人連線同步。 | `MirageWardrobe42` | 313 | — | — |
 | [[SVRP] ClassicBows〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3776949545) | 經典弓箭 | 新增複合弓、獵弓、中世紀弓與多款十字弩，搭配木質／金屬／碳製箭矢與弩箭、戰術箭袋及整包打包配方。 | `SVRPClassicBows` | 56 | — | — |
 | [Improvised Silencers (Build 42.20 Compatibility)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3779164273) | 臨時消音器 | 新增可用金屬管、手電筒、水瓶等材料自製的消音器，各自有不同的降噪幅度與射程代價。 | `ImprovisedSilencers` | 10 | — | — |
+| [Puffin's Retro Relics〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3788360646) | Puffin 的復古珍藏 | 新增 1993 年以前的懷舊收藏品，包括瘋狂球、絨毛玩偶、桌遊、球隊三角旗與摔角夥伴玩偶，皆可擺設。 | `PuffinsRetroRelics` | 106 | — | — |
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
