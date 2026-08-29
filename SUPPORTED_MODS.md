@@ -8,7 +8,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **549 個 Workshop 模組**（716 個 mod ID）；另 **16 個已下架**（翻譯保留，見文末）。
+共支援 **571 個 Workshop 模組**（739 個 mod ID）；另 **16 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -33,6 +33,7 @@
 | ['86 Oshkosh P19A + Military Trailers](https://steamcommunity.com/sharedfiles/filedetails/?id=2566953935) | '86 Oshkosh P19A 與軍用拖車 | 新增 1986 年 Oshkosh P19A 消防車、軍用版及 M1082、M1095 軍用拖車。 | `86oshkoshP19A` | 28 | — | — |
 | [Thief Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=2596620950) | 盜賊擴充 | 新增偷竊與潛行相關技能系統，並加入對應技能書籍。 | `P4ThiefExpansion` | 69 | ⚠️ ≥3 | — |
 | [Addicted To Weight](https://steamcommunity.com/sharedfiles/filedetails/?id=2604943386) | 體重成癮 | 體重變化時顯示圖示與提示音通知，觸發間隔與音量可自訂。 | `P4AddictedToWeight` | 16 | — | — |
+| ['82 Oshkosh M911〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=2618213077) | '82 Oshkosh M911 | 新增 1982 年 Oshkosh M911 重型卡車、拖車與相關車輛零件。 | `82oshkoshM911` | 24 | — | — |
 | [Containers!](https://steamcommunity.com/sharedfiles/filedetails/?id=2625625421) | 貨櫃！ | 新增 ISO 標準貨櫃半掛車與燃料罐式半掛車等大容量載具。 | `isoContainers` | 8 | — | — |
 | ['92 AM General M998 + M101A3 Cargo trailer](https://steamcommunity.com/sharedfiles/filedetails/?id=2642541073) | '92 AM General M998 與 M101A3 貨運拖車 | 新增 1992 年 AM General M998 悍馬軍用車與 M101A3 貨運拖車。 | `92amgeneralM998`, `92amgeneralM998extra` | 13 | — | — |
 | [Manage Containers](https://steamcommunity.com/sharedfiles/filedetails/?id=2650547917) | 容器管理 | 可為容器設定物品類別規則，快速將物品放入指定容器。 | `manageContainers` | 9 | — | — |
@@ -113,6 +114,8 @@
 | ['90 Ford F350 Ambulance](https://steamcommunity.com/sharedfiles/filedetails/?id=2952802178) | '90 Ford F350 救護車 | 新增 1990 年 Ford F350 救護車，含多種可製作的車輛部件與裝甲。 | `90fordF350ambulance` | 1 | — | — |
 | [Rain Cleans Blood](https://steamcommunity.com/sharedfiles/filedetails/?id=2956146279) | 雨水清洗血跡 | 讓雨水逐漸清除地面、衣物與車輛上的血跡，含多項清洗範圍沙盒設定。 | `RainCleansBlood` | 19 | — | — |
 | [Vanilla DuffelBag Tweak [Unsupported]](https://steamcommunity.com/sharedfiles/filedetails/?id=2959854619) | 原版行李袋穿戴調整 | 讓原版行李袋可裝備在背部或後腰位置。 | `AlicesMultiWearVanilla` | 2 | — | — |
+| ['92 Ford Crown Victoria Police Interceptor〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=2962175696) | '92 Ford Crown Victoria 警用攔截者 | 新增 1992 年 Ford Crown Victoria 及警用、計程車與特殊塗裝版本。 | `92fordCVPI` | 37 | — | — |
+| ['93 Ford CF8000 Elgin Street Sweeper〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=2969343830) | '93 Ford CF8000 Elgin 街道清掃車 | 新增 1993 年 Ford CF8000 Elgin 街道清掃車及其操作與改裝配方。 | `93fordElgin` | 37 | — | — |
 | [Immersive Solar Arrays [BETA]](https://steamcommunity.com/sharedfiles/filedetails/?id=2969478819) | 沉浸式太陽能發電陣列 (ISA) | 新增太陽能板、深循環電池與逆變器等發電設備，打造離網供電系統。 | `ISA`, `ISA_41` | 132 | — | — |
 | [Surviving the storm [B41 & B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=2971021306) | 風暴求生 | 讓雷聲成為會吸引殭屍的世界音效，作用半徑與音量可調。 | `SurvivingTheStorm` | 2 | — | — |
 | ['99 Ford Crown Victoria Police Interceptor](https://steamcommunity.com/sharedfiles/filedetails/?id=2971246021) | '99 Ford Crown Victoria 警用攔截者 | 新增 1999 年 Ford Crown Victoria 警車，含無標識版與駕駛室隔板。 | `99fordCVPI` | 4 | — | — |
@@ -143,6 +146,7 @@
 | [True Music Radio](https://steamcommunity.com/sharedfiles/filedetails/?id=3100475013) | True Music 廣播電台 | 新增可播放 True Music 音樂庫的廣播電台與 MTV 頻道，支援 RDS 曲目播報。 | `TMRRemoveMumble`, `TrueMusicRadio` | 65 | — | — |
 | ['87 Ford B700/F700 Trucks](https://steamcommunity.com/sharedfiles/filedetails/?id=3110911330) | '87 福特 B700/F700 卡車 | 新增 1987 年福特 B700/F700 卡車，含裝甲車、廂型貨車等版本與改裝。 | `87fordB700` | 98 | — | — |
 | ['90 BMW 3 Series (E30)](https://steamcommunity.com/sharedfiles/filedetails/?id=3110913021) | '90 BMW 3 系列 (E30) | 新增 1990 年 BMW E30 3 系列轎車，含敞篷版與多種裝甲改裝零件。 | `90bmwE30` | 44 | — | — |
+| [UsefulMetal〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3138873849) | 實用金屬 | 加入以金屬廢料製作金屬板與備用引擎零件的配方。 | `usefulMetal` | 2 | — | — |
 | [Bianca Wardrobe [42. Out now]](https://steamcommunity.com/sharedfiles/filedetails/?id=3140453034) | Bianca 衣櫃 | 新增大量服裝內容，外套可透過右鍵選單敞開或扣起。 | `BWardrobe`, `BWardrobeHalfZombieSpawn`, `BWardrobeNoCharacterCreationClothes`, `BWardrobeNoTrait`, `BWardrobeNoZombie` | 2 | — | — |
 | ['93 Chevrolet Suburban / Silverado](https://steamcommunity.com/sharedfiles/filedetails/?id=3152529790) | '93 雪佛蘭 Suburban / Silverado | 新增 1993 年雪佛蘭 Suburban 與 Silverado 車輛，含多種輪胎與零件製作。 | `93chevySuburban`, `93chevySuburbanExpanded` | 88 | — | — |
 | [First Aid VHS Tapes](https://steamcommunity.com/sharedfiles/filedetails/?id=3153010942) | 急救 VHS 錄影帶 | 新增急救教學 VHS 錄影帶，觀看內含傷口處理等教學內容。 | `FirstAidVHSTapes` | 129 | — | — |
@@ -257,6 +261,7 @@
 | [Autotsar Tuning Atelier - Fjord Mustard [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3405178154) | Autotsar 改裝工坊 - Fjord Mustard | 新增可改裝的福特野馬風格車輛，生成率可由沙盒選項調整。 | `ATA_Mustang` | 3 | — | — |
 | [Long Term Preservation [B42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=3406392630) | 長期保存 | 新增肉類與魚類玻璃罐頭、醃肉、乾肉餅、豬油與鹽岩碾製等保存配方。 | `SKITTLE_LongTermPreservation` | 7 | — | — |
 | [MRE XIII (1993) - Meal Ready to Eat MOD Real version for build 42](https://steamcommunity.com/sharedfiles/filedetails/?id=3406930410) | MRE XIII（1993）野戰口糧 | 新增 1993 年版美軍 MRE 野戰口糧，含加熱包、附件包、沖泡飲品與整箱堆放。 | `MREXIII_RealVersion` | 109 | — | — |
+| [Autotsar Tuning Atelier - Jaap Wrungel [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3407042038) | Autotsar 改裝工坊：Jaap Wrungel | 新增可改裝的 Jaap Wrungel 越野車與保險桿等零件。 | `ATA_Jeep` | 1 | — | — |
 | [ArcherLib](https://steamcommunity.com/sharedfiles/filedetails/?id=3408337281) | ArcherLib 弓箭框架 | 提供弓箭技能與彈藥切換轉盤的前置框架，附技能書與範例弓弩。 | `ArcherLib`, `ArcherySampleMod` | 2 | — | — |
 | [Sapph's Cooking [B42+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3409143790) | Sapph 的烹飪 | 新增烹飪相關內容，包含保溫杯、果汁與能量飲料等飲品物品。 | `SapphCooking_B42` | 4 | ⚠️ ≥2 | — |
 | [Dynamic Emergency TV Channel](https://steamcommunity.com/sharedfiles/filedetails/?id=3409272479) | 動態緊急電視頻道 | 新增可自訂的緊急廣播電視頻道，節目內容與時段皆可設定。 | `EmergencyTVChannel` | 1312 | — | ⚠️ 沙盒設定與媒體標題有中文；播報台詞 830 句本包已備妥譯文，但該 MOD 取用的鍵名不在遊戲翻譯機制的路由上，它會落回自己寫死的英文表，播報內容維持英文。 |
@@ -297,6 +302,7 @@
 | [HydeCo. Bees!](https://steamcommunity.com/sharedfiles/filedetails/?id=3430224478) | HydeCo. 養蜂！ | 新增養蜂系統，含蜂箱、熏煙器、養蜂裝備與蜂蠟蠟燭等大量物品。 | `HydeCoBees` | 490 | ⚠️ ≥1 | — |
 | [[B42MP] Frockin Splendor! Vol.3](https://steamcommunity.com/sharedfiles/filedetails/?id=3431256608) | 華麗服飾！Vol.3 | 新增多款華麗服飾與鞋履，支援多種穿法調整選項。 | `GanydeBielovzki's Frockin Splendor! Vol.3` | 61 | ⚠️ ≥3 | — |
 | [[B42.14] Fruits in jars](https://steamcommunity.com/sharedfiles/filedetails/?id=3432006285) | 糖水水果罐頭 | 可把各類水果做成糖水玻璃罐頭長期保存，並隨時開罐食用。 | `Makefruitinjar` | 2 | — | — |
+| [Autotsar Tuning Atelier - Chevalier Samara v.2.00 [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3432014439) | Autotsar 改裝工坊：Chevalier Samara | 新增可改裝的 Chevalier Samara 車輛與引擎蓋等零件。 | `ATA_Samara` | 1 | — | — |
 | [Escape From Tarkov Backpacks [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3432928943) | 逃離塔科夫背包 | 新增《逃離塔科夫》風格的多款戰術背包與突擊背包。 | `EFTBP` | 29 | — | — |
 | [Woodcutting Skill [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3434440605) | 伐木技能 | 新增獨立伐木技能與伐木工特質，涵蓋樹木與灌木的砍伐。 | `WoodcuttingSkill42`, `WoodcuttingSkill42v2` | 6 | — | — |
 | [Howie's Traits [42.16]](https://steamcommunity.com/sharedfiles/filedetails/?id=3434453874) | Howie 的特質 | 新增追蹤類特質，讓角色能讀懂荒野痕跡、追蹤獵物行蹤。 | `Howie's Traits` | 2 | — | — |
@@ -327,6 +333,7 @@
 | ['77 Hayosiko Pace [B41/B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3459200930) | '77 Hayosiko Pace | 新增 1977 年 Hayosiko Pace 廂型車車輛。 | `Van` | 2 | — | — |
 | [Small Town First Responders - Main Mod - B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3459638181) | 小鎮急難救援人員 - 主模組 | 新增肯塔基各地警局、警長辦公室與 SWAT 等執法單位裝備服飾。 | `STFRMain`, `STFRMainSpongie` | 1675 | ⚠️ ≥3 | — |
 | [Washing Menus Improved [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3460812542) | 洗滌選單改進版 | 改進清洗選單，可用污水清潔布料並調整繃帶耗水量。 | `WashFix` | 9 | — | — |
+| [CleanHotBar〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3461263912) | 簡潔快捷欄 | 簡化並整理遊戲快捷欄介面，提供透明度與顯示選項。 | `CleanHotBar` | 1 | — | — |
 | [[B42.15+/MP] Bicycle!](https://steamcommunity.com/sharedfiles/filedetails/?id=3461415167) | 自行車！ | 新增可騎乘的自行車，含車籃、車鈴、車燈等多種零件。 | `BicycleMod` | 118 | — | — |
 | [Functional Car Lift](https://steamcommunity.com/sharedfiles/filedetails/?id=3464551542) | 可用汽車舉升機 | 新增可製作使用的汽車舉升機，含中控台與立柱等組件。 | `FunctionalCarLift` | 5 | — | — |
 | [[B42] HDCP Immersive Vehicle Paint](https://steamcommunity.com/sharedfiles/filedetails/?id=3464606086) | HDCP 沉浸式車輛噴漆 | 新增汽車噴漆與教學雜誌，可為車輛塗上二十餘種顏色。 | `ImmersiveVehiclePaint` | 60 | — | — |
@@ -338,6 +345,7 @@
 | [Cerberus Pack [B41/B42MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3470478700) | Cerberus 裝備包 | 新增地獄犬系列防彈背心、胸掛、背包等戰術裝備服飾。 | `CerberusPack` | 80 | — | — |
 | [Lynx Pack [B41/B42MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3470485566) | Lynx 裝備包 | 新增戰術服飾裝備，支援兜帽、護目鏡、袖口等穿著調整。 | `LynxPack` | 23 | — | — |
 | [Night Vision Googles [B41/B42MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3470491629) | 夜視鏡 | 新增可穿戴的夜視鏡，並可設定軍警物資點的生成機率。 | `PNV` | 10 | — | — |
+| [TheShortcut〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3470659758) | TheShortcut 快捷面板 | 新增可自訂欄列、大小、透明度與快捷鍵的快速操作面板。 | `TheShortcut` | 8 | — | — |
 | [[B42/41] Improved Farming Info Window](https://steamcommunity.com/sharedfiles/filedetails/?id=3470852353) | 改良農耕資訊視窗 | 以色塊標示作物病害、健康、水分與可收成狀態。 | `ImprovedFarmingInfoWindow` | 8 | — | — |
 | [[B42] Farming Wiki](https://steamcommunity.com/sharedfiles/filedetails/?id=3473886171) | 農耕百科 | 遊戲內農業百科介面，可查詢各月份作物與收成資訊。 | `FarmingWiki` | 48 | — | — |
 | [[B42MP] Frockin Splendor! Vol.4](https://steamcommunity.com/sharedfiles/filedetails/?id=3475347500) | 華麗服飾！第四彈 | 新增華麗風格服飾，含漁網、尼龍系列，並提供多種穿搭調整選項。 | `GanydeBielovzki's Frockin Splendor! Vol.4` | 62 | ⚠️ ≥3 | — |
@@ -350,6 +358,7 @@
 | [[B42] Dark/Invisible Weapon Slings](https://steamcommunity.com/sharedfiles/filedetails/?id=3488113291) | 深色／隱形武器背帶 | 新增深色與隱形武器背帶，可製作並調整背負位置。 | `DarkWpnSlings`, `InvisibleWpnSlings` | 13 | — | — |
 | [Grendal P10](https://steamcommunity.com/sharedfiles/filedetails/?id=3489603739) | Grendal P10 | 新增 P10 手槍武器，含粉色版本。 | `NepP10`, `NepP10Pink` | 1 | — | — |
 | [[B42.14] Make Stew in jar](https://steamcommunity.com/sharedfiles/filedetails/?id=3489824979) | 燉肉罐頭 | 可自製燉肉玻璃罐頭長期保存，並隨時開罐食用。 | `B42.13Stewjar` | 2 | — | — |
+| [Project Cook〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3490188370) | Project Cook | 擴充烹飪操作介面與容器互動，讓料理流程更易管理。 | `Project_Cook` | 1 | — | — |
 | ['73 Ford Falcon](https://steamcommunity.com/sharedfiles/filedetails/?id=3490370700) | 1973 Ford Falcon | 新增 1973 年 Ford Falcon XB 車輛，含防撞桿與裝甲等可製作部件。 | `73fordFalcon`, `73fordFalconPS` | 34 | — | — |
 | [Foldable Survival Rifle](https://steamcommunity.com/sharedfiles/filedetails/?id=3491265315) | 摺疊生存步槍 | 新增輕型 .223/5.56mm 摺疊生存步槍。 | `NepSurvivalRifle` | 2 | — | — |
 | [Smart Radial Menu](https://steamcommunity.com/sharedfiles/filedetails/?id=3494108029) | 智慧環形選單 | 新增可自訂的環形快捷選單，依物品欄內容動態顯示選項。 | `SmartRadialMenu` | 36 | — | — |
@@ -537,8 +546,10 @@
 | [Xnertot Farmable Trees B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3663890932) | Xnertot 可種植果樹 | 新增蘋果、香蕉、櫻桃等多種果樹樹苗，可自行種植果樹並調整生長時間。 | `XnerTreeB42` | 59 | — | — |
 | [ERS - Energy Routing System](https://steamcommunity.com/sharedfiles/filedetails/?id=3665315101) | ERS - 能量路由系統 | 新增能量路由系統，可用電纜與控制器連接設備進行電力配送與管理。 | `EnergyRoutingSystem` | 139 | — | — |
 | [Legion Weaponry](https://steamcommunity.com/sharedfiles/filedetails/?id=3665548194) | Legion 軍團武器庫 | 新增武器內容，可調整彈匣與彈藥掉落稀有度等沙盒選項。 | `LEGION18` | 11 | — | — |
+| [Renewable Spare Engine Parts〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3668110789) | 可再生備用引擎零件 | 提供製作備用引擎零件的配方，讓車輛維修資源可再生。 | `SeawhiteRenewableSpareEngineParts` | 1 | — | — |
 | [Forged by Combat](https://steamcommunity.com/sharedfiles/filedetails/?id=3668844554) | 戰鬥淬煉 | 依近戰武器擊殺數累積戰鬥進程，逐級提供傷害、暴擊與攻速加成。 | `ForgedByCombat` | 24 | — | — |
 | [Legendary Professions and Traits](https://steamcommunity.com/sharedfiles/filedetails/?id=3669469283) | 傳奇職業與特質 | 新增刀術大師、鍛刀師等多種職業與傳奇特質供角色創建選擇。 | `LPTB42` | 88 | ⚠️ ≥3 | — |
+| [Campers!〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3670064951) | 露營車！ | 新增多款露營拖車與其車門、車窗、保險桿等零件。 | `KI5campers` | 29 | — | — |
 | [dustinguished bolt cutters](https://steamcommunity.com/sharedfiles/filedetails/?id=3671176591) | Dustinguished 斷線鉗 | 強化斷線鉗功能，可剪開圍欄門、車庫門與捲簾門的鎖，選項可調。 | `dustinguished_bolt_cutters` | 27 | — | — |
 | [Hardwood's FireFighter's Finery](https://steamcommunity.com/sharedfiles/filedetails/?id=3671351750) | Hardwood 消防員裝備 | 新增消防員裝備，包含消防斧、哈利根撬棍、呼吸器與整套消防服。 | `HardwoodsTurnoutGear` | 12 | — | — |
 | [Jeeve's Hordes](https://steamcommunity.com/sharedfiles/filedetails/?id=3672042113) | Jeeve's 屍潮 | 新增屍潮夜事件與相關物品，如殭屍燉菜與吸引用香水。 | `JeevesHordes` | 56 | — | — |
@@ -552,12 +563,23 @@
 | [Solar Floodlight [42.16] [MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3680577450) | 太陽能探照燈 | 新增可組裝的太陽能探照燈，含電池槽與電池健康度顯示。 | `SolarFloodlight` | 55 | — | — |
 | [Dead Magic〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3686883520) | 死靈法術 | 新增完整魔法系統：法術書與魔法書、儀式、附魔、遺物與奧術研究樹。 | `DeadMagic` | 214 | — | — |
 | [Working Knowledge〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3717099183) | 職場知識 | 在檔案櫃、辦公桌等容器中加入 372 種職場文件，閱讀一次可獲得對應技能的一次性經驗。 | `WorkingKnowledge` | 372 | — | — |
+| [Plysken Solar Revolution〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3725311427) | Plysken 太陽能革命 | 加入太陽能板、儲能設備與相關供電系統。 | `PSR` | 7 | — | — |
 | [Gore's SVU4 Core〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3730070661) | Gore 的 SVU4 核心 | 標準化車輛升級 4 核心：車輛裝甲與升級件、車頂架／車頂照明、車輛烤漆；同捆工業流體儲存、備用引擎零件與原版車輛部件製作共 4 個子模組。 | `GoresSVU4Core`, `GoresIndustrialFluidInfrastructure`, `GoresSpareEnginePartsCrafting`, `GoresVanillaVehiclePartsCrafting` | 50 | ⚠️ ≥9 | ⚠️ 本包涵蓋物品名、車頂燈右鍵選單、沙盒設定與製作配方；車輛裝甲改裝介面（車輛輪盤 V →Upgrades）的標籤與按鈕文字由該 MOD 大量寫死於 Lua（僅視窗標題的車輛名走遊戲譯文），未走遊戲翻譯機制，翻譯包無法覆蓋。 |
+| [Big Bottles〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3759421894) | 大型瓶罐 | 新增大型塑膠瓶、水瓶、水壺與軍用水壺。 | `BigBottles` | 4 | — | — |
+| [Dismantle All at Once〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3761218629) | 一次全部拆解 | 可在工作檯一次批次拆解多個符合條件的物品。 | `DismantleAllAtOnce` | 2 | — | — |
 | [MRE Mod [B42.20.2]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3765409550) | 即食口糧 | 新增 1993 與 2026 兩個年份、共 36 種菜色的美軍即食口糧，附整盒包裝、拆封配方與生成率／營養值沙盒設定。 | `bdtmre` | 52 | — | — |
 | [Aegis Panel〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3766508989) | Aegis 管理面板 | 功能完整的多人伺服器管理員與玩家管理工具面板. | `AP` | 1103 | — | ⚠️ 內建說明、更新記錄與導覽刻意寫死 EN/DE，部分建材名稱與操作日誌也走英文；這些文字不經 PZ JSON 翻譯表，任何翻譯包都無法補上。 |
 | [Mirage Wardrobe: Multiplayer Transmog [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3770186452) | 幻裝衣櫥：多人連線幻化 | 以裝備部位為單位的服裝幻化衣櫥，變更角色外觀而不影響實際裝備數值；支援收藏解鎖、款式染色、套裝預設、人物觀察窗與多人連線同步。 | `MirageWardrobe42` | 313 | — | — |
+| [Inventory Item Pinning〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3773092190) | 物品欄項目置頂 | 可將常用物品固定在物品欄頂端，方便快速存取。 | `InventoryItemPins` | 2 | — | — |
+| [Alice's Weapon Sling〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3775549570) | Alice 的武器揹帶 | 新增可裝備的武器揹帶與環形選單附加功能。 | `alicesWeaponSling`, `alicesWeaponSlingRadialMenu` | 15 | — | — |
+| [Lawnmower〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3776694741) | 割草機 | 新增可駕駛割草機及割草、刀片維修與相關製作功能。 | `Lawnmower` | 32 | — | — |
+| [InspectUI〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3776717028) | InspectUI 檢視標籤 | 在世界與物品欄中顯示滑鼠所指物件的名稱標籤與詳細資訊。 | `InspectUI` | 31 | — | — |
 | [[SVRP] ClassicBows〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3776949545) | 經典弓箭 | 新增複合弓、獵弓、中世紀弓與多款十字弩，搭配木質／金屬／碳製箭矢與弩箭、戰術箭袋及整包打包配方。 | `SVRPClassicBows` | 56 | — | — |
 | [Improvised Silencers (Build 42.20 Compatibility)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3779164273) | 臨時消音器 | 新增可用金屬管、手電筒、水瓶等材料自製的消音器，各自有不同的降噪幅度與射程代價。 | `ImprovisedSilencers` | 10 | — | — |
+| [Nested Health Info〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3779405481) | 巢狀健康資訊 | 在健康介面顯示傷勢是否痊癒等巢狀狀態資訊。 | `NestedHealthInfo` | 5 | — | — |
+| [Working Gun Rack〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3779642984) | 可互動槍架 | 讓牆上槍架可實際放置、取下與管理槍械。 | `WorkingGunRack` | 9 | — | — |
+| [AllTheInfo [BETA]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3781129962) | 所有資訊 [BETA] | 在物品、技能、建築、動物與各類介面中顯示更完整的遊戲資訊。 | `AllInfo` | 337 | ⚠️ ≥185 | — |
+| [Refillable Propane Tanks [B42.20] - Beta 1.6〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3786849936) | 可重複填充丙烷罐 | 讓工業丙烷儲罐可儲存與補充燃料，容量與規則可由沙盒設定調整。 | `ArcadiaRefillablePropaneTanks_B42` | 24 | — | — |
 | [Puffin's Retro Relics〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3788360646) | Puffin 的復古珍藏 | 新增 1993 年以前的懷舊收藏品，包括瘋狂球、絨毛玩偶、桌遊、球隊三角旗與摔角夥伴玩偶，皆可擺設。 | `PuffinsRetroRelics` | 106 | — | — |
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |

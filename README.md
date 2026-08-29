@@ -30,13 +30,13 @@
 以下統計由 `uv run scripts/build_mod.py manifest` 自動生成，請勿手動編輯。
 
 <!-- SUPPORTED_MODS_START -->
-共支援 **549 個 Workshop 模組**（716 個 mod ID），另 16 個已下架（翻譯保留），完整清單（含中文名稱與摘要）見 [SUPPORTED_MODS.md](./SUPPORTED_MODS.md)。
+共支援 **571 個 Workshop 模組**（739 個 mod ID），另 16 個已下架（翻譯保留），完整清單（含中文名稱與摘要）見 [SUPPORTED_MODS.md](./SUPPORTED_MODS.md)。
 <!-- SUPPORTED_MODS_END -->
 
 ## 翻譯範圍（權威政策）
 
 - 本包只維護 PZ `Translate/{CH,CN}/*.json` 文本；上游缺少可載入的 JSON key 時，可由本包補譯。
-- 本包不新增、修改、覆寫、監看或維護任何 MOD Lua，也不為特定 MOD 建立 Lua consumer 相容層。
+- 新收錄與後續修補一律不新增、修改或維護 MOD Lua，也不為特定 MOD 建立新的 Lua consumer 相容層；僅保留早期既有的 BanditsWeekOne 開日貼圖 Lua 相容層，該歷史產物已凍結、不再擴充。
 - 若未翻譯根因是 Lua 寫死文字、自有 UI、Lua 未使用正確 JSON key 或其他非 JSON 行為，本包只提供可驗證資訊；由 issue 提交者自行向 MOD 作者回報。提交者不回報或上游不修，本包不處理。
 
 ## 申請新 MOD 翻譯
