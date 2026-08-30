@@ -8,7 +8,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **571 個 Workshop 模組**（739 個 mod ID）；另 **16 個已下架**（翻譯保留，見文末）。
+共支援 **572 個 Workshop 模組**（740 個 mod ID）；另 **16 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -566,6 +566,7 @@
 | [Plysken Solar Revolution〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3725311427) | Plysken 太陽能革命 | 加入太陽能板、儲能設備與相關供電系統。 | `PSR` | 7 | — | — |
 | [Gore's SVU4 Core〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3730070661) | Gore 的 SVU4 核心 | 標準化車輛升級 4 核心：車輛裝甲與升級件、車頂架／車頂照明、車輛烤漆；同捆工業流體儲存、備用引擎零件與原版車輛部件製作共 4 個子模組。 | `GoresSVU4Core`, `GoresIndustrialFluidInfrastructure`, `GoresSpareEnginePartsCrafting`, `GoresVanillaVehiclePartsCrafting` | 50 | ⚠️ ≥9 | ⚠️ 本包涵蓋物品名、車頂燈右鍵選單、沙盒設定與製作配方；車輛裝甲改裝介面（車輛輪盤 V →Upgrades）的標籤與按鈕文字由該 MOD 大量寫死於 Lua（僅視窗標題的車輛名走遊戲譯文），未走遊戲翻譯機制，翻譯包無法覆蓋。 |
 | [Big Bottles〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3759421894) | 大型瓶罐 | 新增大型塑膠瓶、水瓶、水壺與軍用水壺。 | `BigBottles` | 4 | — | — |
+| [NeatUI XP Drop〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3760545452) | NeatUI 經驗值浮窗 | 以 NeatUI 風格顯示技能經驗值進度與獲得提示，支援技能追蹤、配色、縮放與位置設定。 | `NeatUI_XPDrop` | 2 | — | — |
 | [Dismantle All at Once〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3761218629) | 一次全部拆解 | 可在工作檯一次批次拆解多個符合條件的物品。 | `DismantleAllAtOnce` | 2 | — | — |
 | [MRE Mod [B42.20.2]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3765409550) | 即食口糧 | 新增 1993 與 2026 兩個年份、共 36 種菜色的美軍即食口糧，附整盒包裝、拆封配方與生成率／營養值沙盒設定。 | `bdtmre` | 52 | — | — |
 | [Aegis Panel〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3766508989) | Aegis 管理面板 | 功能完整的多人伺服器管理員與玩家管理工具面板. | `AP` | 1103 | — | ⚠️ 內建說明、更新記錄與導覽刻意寫死 EN/DE，部分建材名稱與操作日誌也走英文；這些文字不經 PZ JSON 翻譯表，任何翻譯包都無法補上。 |
