@@ -17609,11 +17609,6 @@
   "reason": "As1 同一鍵內把 leaning 譯成兩個不同詞 (依靠/探身), 且「依靠」是 rely on 用字錯誤 (倚靠 才是 lean); own 全句一致用 倚靠",
   "value": "锁定倚靠时的移动按键, 避免在床铺图块上触发原版的起身动作. <LINE> 如果你卡在倚靠/睡眠姿势中, 可以禁用此选项."
  },
- "UI.json|UI_optionscreen_binding_SlingBindings": {
-  "as1_value": "额外快捷键",
-  "reason": "As1 漏譯 EN 的 mod 名「Authentic Z」(3 個 As1 快照皆作「额外快捷键」); 同類綁定區段標題在出貨面都保留主體名 (own-only UI_optionscreen_binding_Better Flashlights=更好的手电筒 / PanzerKey=坦克按键设置, As1-only KeySetting_AWCWF=高级武器按键设置)",
-  "value": "Authentic Z 额外快捷键"
- },
  "UI.json|UI_prof_tinkerer": {
   "as1_value": "发明家",
   "reason": "Tinkerer=修补匠; As1 的「发明家」是 inventor, 而 发明家 一詞在本包已被 Lifestyle 的發明系統占用 (UI_LSHS_Inventing_1「成为伟大的发明家」), 另 own-only 出貨的 Sandbox_ETW_Tinkerer 同樣把 Tinkerer 譯為 修补匠",
@@ -19454,5 +19449,35 @@
   "value": "%%d分钟",
   "reason": "2026-08-30 #325 終審：上游 EN 以 %% 逸出 printf token，供 Lua string.format 消費；As1 CN 未逸出，改為與 consumer 契約對稱。",
   "as1_value": "%d分钟"
+ },
+ "ItemName.json|Base.ar_10_cat": {
+  "value": "奈特军械 M110 SASS",
+  "reason": "上游 new EN 改為 Knight’s Armament M110 SASS，已移除 Sniper Rifle；Knight’s 是品牌姓氏「奈特」，不是「骑士」。",
+  "as1_value": "骑士军备 M110 SASS 狙击步枪"
+ },
+ "ItemName.json|Base.ar_10_cat_Drum": {
+  "value": "奈特军械 M110 SASS (弹鼓)",
+  "reason": "同 M110 SASS 基礎款：補正品牌並移除 new EN 已不存在的 Sniper Rifle，保留 Drum。",
+  "as1_value": "骑士军备 M110 SASS 狙击步枪 (弹鼓)"
+ },
+ "ItemName.json|Base.mk47_cat": {
+  "value": "CMMG Mk47 Mutant 步枪",
+  "reason": "上游 new EN 將 Hybrid 改為產品專名 CMMG Mk47 Mutant；保留 Mutant 拉丁專名，避免誤作一般「变异」。",
+  "as1_value": "CMMG Mk47 变异步枪"
+ },
+ "ItemName.json|Base.mk47_cat_Drum": {
+  "value": "CMMG Mk47 Mutant 步枪 (弹鼓)",
+  "reason": "同 Mk47 基礎款產品專名，並保留 Drum 後綴。",
+  "as1_value": "CMMG Mk47 变异步枪 (弹鼓)"
+ },
+ "Sandbox.json|Sandbox_ADWWF": {
+  "value": "枪械相关内容",
+  "reason": "三個 owner 分別為 Advanced Weapons、Gael Gun Store、Advanced Firearms；採不宣稱品牌或 Advanced 的中性分類標題。",
+  "as1_value": "高级枪械"
+ },
+ "UI.json|UI_trait_GymRatDesc": {
+  "value": "花了很多时间在健身房锻炼肌肉.<br>锻炼获得的体格与力量经验值翻倍, 且锻炼疲劳的积累默认减半.",
+  "reason": "#321 上游 new EN 新增雙倍 Fitness/Strength XP 與鍛鍊疲勞減半機制；舊 As1 中文只譯第一句，必須同步補齊。",
+  "as1_value": "花了很多时间在健身房锻炼肌肉"
  }
 }

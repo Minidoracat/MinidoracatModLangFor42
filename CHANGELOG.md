@@ -12,6 +12,12 @@
   As1 CN、專案術語與既有定名人工／多模型複核；`ch_review_state.json` 同步登記。
 - **自有 MOD 追蹤 bootstrap**：新增 `sources/mod_registry.json`，watchlist 取 registry active
   與 `sources/mods` metadata 聯集；新 MOD 可先登記 wid、回填 EN，再由 split 自動閉環。
+- **#327 ModernFirearmsSystem 更新**：補齊 39 個現行 JSON／物品名缺口與 14 個新增
+  craftRecipe 顯示名；繁中、簡中逐項獨立翻譯，口徑、型號、發數與 UI 動作方向均經
+  Claude／Grok 雙模型覆核及人工仲裁。
+- **#319–#324、#326 追蹤器 issue 清償**：補齊 743 個現行 JSON 翻譯鍵，涵蓋
+  Authentic Z 背包、Herbalist 製作分類、ETW 新特質與 350 項沙盒設定、RealFirearms、
+  Organized Categories、GaelGunStore 的武器資訊頁與控制介面；#324 現行鍵已全數覆蓋。
 
 ### Changed
 
@@ -27,6 +33,12 @@
   均已納管。
 - **own lane 清理**：22 個已被 As1 納管的 origin:own 目錄退役，1,129 個仍屬原創的鍵遷入
   `own_translations.json`，另移除 6,107 個已由 As1 供值的重複原創鍵。
+- **#327 上游改值複核**：逐項比對 99 個 `translate_en` 改值；82 個現行譯文仍準確，
+  17 個依新 EN 修正（含 7.62×51mm 100 發彈鼓、AK-103／AK-12、AMB-17、M110 SASS、
+  CMMG Mk47 Mutant、VSSM、IPSC 補償器與 .50 BMG 彈藥盒）。
+- **#321／#326 上游改值複核**：逐項比對 48 個 `translate_en` 改值；43 個現行譯文
+  仍準確或屬 vanilla 抑制鍵，5 個依新 EN 修正（Gym Rat 完整機制、M1917 Enfield、
+  Mosin-Nagant M1891、Springfield M1903 與鹿彈彈丸）。
 
 ### Fixed
 
@@ -43,14 +55,20 @@
   CH corpus 缺失與 worklist entry 壞 schema 均改為阻斷；manifest 對 metadata 目錄缺失、
   source mod 子目錄缺 metadata、或 zero-row universe 都不再 no-op 回成功。泛用
   `title`／`description` allowlist 也精確到 `檔名|鍵`。
+- **owner 衝突收斂**：#319 新增的 16 個 owner 衝突以不綁物品類型／MOD 名稱的中性
+  動作與快捷鍵名稱背書；#327 的 `Sandbox_ADWWF` 與 `Base.FedorovAvtomat` 同樣完成
+  中性裁決。owner decision gate 增至 1,000 筆。遠端 tracker merge 另使 Authentic Z
+  68 個歷史 `ItemName_` 前綴失去 DisplayName 實據；已以現行 exact `script_item`＋既有
+  裸鍵對帳後登記，未猜 module。
 
 ### Verification
 
 - `verify_dist.py` 16/16 PASS；確定性雙跑 183 個檔案零 diff。
 - 18 支 repo 回歸測試與 `tracker.py self-test` 16 情境全過；owner decision gate
-  983 筆背書、lint A/B/C/E/F 全零、本機 vanilla 48,718 個 `(檔,鍵)` 零覆寫。
-- 有效覆蓋率重算為 **103,703 / 110,892＝93.5%**；#325 的 22,935 個 As1 差異鍵已全數審查，
-  其餘 7,189 個缺口屬原始 MOD 尚未被 As1 收錄的有效上游文本，不是本次同步漏鍵。
+  1,000 筆背書、lint A/B/C/E/F 全零、本機 vanilla 48,718 個 `(檔,鍵)` 零覆寫。
+- 合併並清償 #319–#327 最新 tracker universe 後，有效覆蓋率為
+  **104,809 / 111,998＝93.6%**；八張 tracker issue 的現行 actionable gap 均為 0，
+  其餘 7,189 個缺口屬其他原始 MOD。
 
 ## [42.20.4-1.21.0] - 2026-08-30
 

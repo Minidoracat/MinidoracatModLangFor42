@@ -2571,8 +2571,8 @@
   },
   "ItemName|Base.FedorovAvtomat": {
    "action": "translate",
-   "signature": "f425ece93faac8a0",
-   "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。",
+   "signature": "8239125d61d97f85",
+   "reason": "2026-08-30 #327 census 更新。兩 owner 分別為 Fedorov Avtomat 與 Fedorov Avtomat Rifle，僅類別後綴粒度不同、同一實體；維持不宣稱 Rifle 的中性專名。",
    "ch": "Fedorov Avtomat",
    "cn": "Fedorov Avtomat"
   },
@@ -6347,6 +6347,125 @@
    "reason": "2026-08-29 #303：owner 差異僅為 7.62x39 是否省略 mm；既有 7.62x39mm 譯文對所有 owner 成立。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
    "ch": "轉換為7.62x39mm子彈 (整盒)",
    "cn": "转换为 7.62x39mm 子弹 (整盒)"
+  },
+  "Sandbox|Sandbox_ADWWF": {
+   "action": "translate",
+   "signature": "71c24655990ce11b",
+   "reason": "三個 owner 的標題雖分別為 Advanced Weapons、Gael Gun Store、Advanced Firearms，但都屬槍械／武器模組設定區。採中性「槍械相關內容／枪械相关内容」，不宣稱 Advanced、品牌或商店名，對每個 owner 都成立。",
+   "ch": "槍械相關內容",
+   "cn": "枪械相关内容"
+  },
+  "ContextMenu|ContextMenu_JacketOpen": {
+   "action": "translate",
+   "signature": "87f034c242214ab0",
+   "reason": "#319 上游新增 owner／文字粒度變化。owner 分「Open Jacket」（Authentic Z ×3、ClothesBOX）與「Open」（KATTAJ1 Clothes Core、Cerberus Pack、Lynx Pack）兩式；現譯僅譯動作、不含「外套」名詞，對兩式皆成立且不宣稱任一 owner 獨有資訊。與同檔 ContextMenu_JacketOpenRolledUpSleeves=敞開, 捲起袖口／敞开, 卷起袖口 一致，CN 亦與上游 mod 自帶 CN「敞开」相符。",
+   "ch": "敞開",
+   "cn": "敞开"
+  },
+  "ContextMenu|ContextMenu_WearLeft": {
+   "action": "translate",
+   "signature": "c2fc8892f0b35889",
+   "reason": "#319 上游新增 owner／文字粒度變化。各 owner 僅英文字面粒度不同，現行左右側佩戴動作不綁物品類型，對所有 owner 成立。",
+   "ch": "左側佩戴",
+   "cn": "左侧佩戴"
+  },
+  "ContextMenu|ContextMenu_WearRight": {
+   "action": "translate",
+   "signature": "2a4b8f67c3495862",
+   "reason": "#319 上游新增 owner／文字粒度變化。各 owner 僅英文字面粒度不同，現行左右側佩戴動作不綁物品類型，對所有 owner 成立。",
+   "ch": "右側佩戴",
+   "cn": "右侧佩戴"
+  },
+  "UI|UI_optionscreen_binding_Hotbar 10": {
+   "action": "translate",
+   "signature": "ef7d84335cb51393",
+   "reason": "#319 上游新增 owner／文字粒度變化。owner 差異僅在「Hotbar 10」與「Hotbar Slot 10」是否含 Slot；現譯不含「槽位」，對兩者皆成立。數字 10 完整保留，無空格寫法與 sources/vanilla_overlap_triage.json 對 Hotbar 6-8 的 style_ok 裁決一致。",
+   "ch": "快捷欄10",
+   "cn": "快捷栏10"
+  },
+  "UI|UI_optionscreen_binding_Hotbar 11": {
+   "action": "translate",
+   "signature": "c9909882fb216eb5",
+   "reason": "#319 上游新增 owner／文字粒度變化。Hotbar 11／Hotbar Slot 11 的中性分母；未增譯 Slot，數字 11 正確對位，未與相鄰快捷欄鍵錯號。",
+   "ch": "快捷欄11",
+   "cn": "快捷栏11"
+  },
+  "UI|UI_optionscreen_binding_Hotbar 12": {
+   "action": "translate",
+   "signature": "53c238530d05170e",
+   "reason": "#319 上游新增 owner／文字粒度變化。Hotbar 12／Hotbar Slot 12 皆成立；數字 12 保留，格式與同組其他快捷欄鍵一致。",
+   "ch": "快捷欄12",
+   "cn": "快捷栏12"
+  },
+  "UI|UI_optionscreen_binding_Hotbar 13": {
+   "action": "translate",
+   "signature": "830abc66534c7c35",
+   "reason": "#319 上游新增 owner／文字粒度變化。Hotbar 13／Hotbar Slot 13 皆成立；數字 13 保留，無 owner 獨有措辭。",
+   "ch": "快捷欄13",
+   "cn": "快捷栏13"
+  },
+  "UI|UI_optionscreen_binding_Hotbar 14": {
+   "action": "translate",
+   "signature": "729604b1065b5666",
+   "reason": "#319 上游新增 owner／文字粒度變化。Hotbar 14／Hotbar Slot 14 皆成立；數字 14 保留。",
+   "ch": "快捷欄14",
+   "cn": "快捷栏14"
+  },
+  "UI|UI_optionscreen_binding_Hotbar 15": {
+   "action": "translate",
+   "signature": "c21a35c5f3a50c2f",
+   "reason": "#319 上游新增 owner／文字粒度變化。Hotbar 15／Hotbar Slot 15 皆成立；數字 15 保留。",
+   "ch": "快捷欄15",
+   "cn": "快捷栏15"
+  },
+  "UI|UI_optionscreen_binding_Hotbar 16": {
+   "action": "translate",
+   "signature": "9a2bf1c8cf69e183",
+   "reason": "#319 上游新增 owner／文字粒度變化。Hotbar 16／Hotbar Slot 16 皆成立；數字 16 保留。",
+   "ch": "快捷欄16",
+   "cn": "快捷栏16"
+  },
+  "UI|UI_optionscreen_binding_Hotbar 17": {
+   "action": "translate",
+   "signature": "d37424c23b39a2e3",
+   "reason": "#319 上游新增 owner／文字粒度變化。Hotbar 17／Hotbar Slot 17 皆成立；數字 17 保留。",
+   "ch": "快捷欄17",
+   "cn": "快捷栏17"
+  },
+  "UI|UI_optionscreen_binding_Hotbar 18": {
+   "action": "translate",
+   "signature": "3f6aa56ff28063c7",
+   "reason": "#319 上游新增 owner／文字粒度變化。Hotbar 18／Hotbar Slot 18 皆成立；數字 18 保留。",
+   "ch": "快捷欄18",
+   "cn": "快捷栏18"
+  },
+  "UI|UI_optionscreen_binding_Hotbar 19": {
+   "action": "translate",
+   "signature": "7c7d495ebead5a48",
+   "reason": "#319 上游新增 owner／文字粒度變化。Hotbar 19／Hotbar Slot 19 皆成立；數字 19 保留。",
+   "ch": "快捷欄19",
+   "cn": "快捷栏19"
+  },
+  "UI|UI_optionscreen_binding_Hotbar 20": {
+   "action": "translate",
+   "signature": "a3a8f200942ba3e8",
+   "reason": "#319 上游新增 owner／文字粒度變化。Hotbar 20／Hotbar Slot 20 皆成立；數字 20 保留，為本組最大號未溢位或截斷。",
+   "ch": "快捷欄20",
+   "cn": "快捷栏20"
+  },
+  "UI|UI_optionscreen_binding_Hotbar 9": {
+   "action": "translate",
+   "signature": "527ef5e8d5b16778",
+   "reason": "#319 上游新增 owner／文字粒度變化。Hotbar 9／Hotbar Slot 9 皆成立；個位數 9 保留，CN 與上游 2335368829/CN/UI.json「快捷栏9」相符。",
+   "ch": "快捷欄9",
+   "cn": "快捷栏9"
+  },
+  "UI|UI_optionscreen_binding_SlingBindings": {
+   "action": "translate",
+   "signature": "d7a125379d823fb6",
+   "reason": "#319 上游新增 owner／文字粒度變化。現值「Authentic Z 額外快捷鍵／Authentic Z 额外快捷键」對 3388107363/NoirRifleSlings、NoirRifleSlings4、3625951765/Simple sling Mod 三個 owner（EN 皆為「Extra Hotkeys」）為不實宣稱，不是中性值。去掉品牌前綴後的「額外快捷鍵／额外快捷键」對 Authentic Z 的 Additional Hotkeys 與 sling 系列的 Extra Hotkeys 同時成立，即三個 sling owner 的字面值、也是 sources/cn_overrides.json 所載 As1 快照原值。該 override 主張的「綁定區段標題保留主體名」慣例，其舉例（Better Flashlights、PanzerKey）皆為單一 owner 鍵，前提在本多 owner 鍵不成立，故採中性值出貨而非 unship。",
+   "ch": "額外快捷鍵",
+   "cn": "额外快捷键"
   }
  }
 }
