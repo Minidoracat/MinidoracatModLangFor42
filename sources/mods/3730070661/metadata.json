@@ -1,12 +1,22 @@
 {
-    "workshop_id": "3730070661",
-    "mod_ids": [
-        "GoresSVU4Core",
-        "GoresIndustrialFluidInfrastructure",
-        "GoresSpareEnginePartsCrafting",
-        "GoresVanillaVehiclePartsCrafting"
-    ],
-    "name": "Gore's SVU4 Core",
-    "origin": "own",
-    "note": "translation-request #77。單一 Workshop 項目含 4 個 mod；上游自帶 CH/CN 檔全為 EN 原文空殼（未翻譯）。ItemName 排除 9 個 vanilla 覆寫鍵（Base.LightBulb* 彩色燈泡，本體已有譯文）、補 9 個上游未建鍵的 script DisplayName 物品（裸 fullType）；IGUI_CraftingCategories_Mechanics 已由他 mod 以「技工」出貨且語意相容，不重複收。Recipes 裸鍵（無 Recipe_ 前綴）經 42.20.2 反編譯確證為活鍵（Translator.getRecipeName→recipe.get(name) 裸鍵查表，CraftRecipe.java:362）。同系列 3760377708（PZK Cars）／3742291546（Vanilla Cars）為純模型掛件包、無文字內容，不收錄。"
+  "attributed_via": {
+    "en_item_dn": 0,
+    "en_translate": 221
+  },
+  "files": [
+    "ContextMenu.json",
+    "IG_UI.json",
+    "ItemName.json",
+    "Recipes.json",
+    "Sandbox.json"
+  ],
+  "key_count": 221,
+  "mod_ids": [
+    "GoresSVU4Core",
+    "GoresIndustrialFluidInfrastructure",
+    "GoresSpareEnginePartsCrafting",
+    "GoresVanillaVehiclePartsCrafting"
+  ],
+  "name": "Gore's SVU4 Core",
+  "workshop_id": "3730070661"
 }

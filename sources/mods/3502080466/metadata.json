@@ -1,9 +1,15 @@
 {
-    "mod_ids": [
-        "Neat_Crafting"
-    ],
-    "name": "Neat Crafting [B42.12]",
-    "note": "原創翻譯（2026-08-03 使用者核准收錄）。此 mod 取代整個製作視窗側欄，其分類名走 UI_CraftCat_<cat> → IGUI_CraftCategory_<cat> → IGUI_perks_<cat> → ContextMenu_<cat> 的 fallback 鏈（NC_CategoryList_Panel.lua:41-44）。CN 直取上游 Translate/CN（作者 Rocco, Afyrmo，modversion 1.6.17）；CH 人工繁中。例外一鍵：`IGUI_NC_ToggleLayoutStyle` 的上游 CN 是未翻譯的英文原文 \"Toggle layout style\"，照抄會把英文塞進簡中出貨，故人工補為「切换布局样式」。上游 70 鍵中 IGUI_XP_NC_SetPanelMinSize_tooltip 已由 sources/mods/3540503606 出貨，本目錄排除該鍵不重複收，實收 69 鍵。全數對 vanilla EN 鍵集比對零交集。　分類名裁決（2026-08-04 review 發現）：本包 CH 的 44 個 UI_CraftCat_* 值一律跟隨 Neat Building (3536052310) 自帶繁中，不採本體 IGUI_perks_*／IGUI_CraftingCategories_* 那套。原因：正式服兩個 Neat mod 並裝，本包載入順序在後會覆蓋 mod 自帶值，若採本體譯名會造成 18 個分類名（護甲→防具、金工→金屬加工、裁縫→縫紉、Survival/Survivalist 兩者對調等）對玩家無預警變動。跟隨後與本包既有 IGUI_CraftCategory_Tailoring=裁縫 亦一致。副作用：Neat 家族日後若自行修訂繁中會被本包壓住，屬 JSON 全量共存模型的固有取捨。",
-    "origin": "own",
-    "workshop_id": "3502080466"
+  "attributed_via": {
+    "en_item_dn": 0,
+    "en_translate": 1
+  },
+  "files": [
+    "IG_UI.json"
+  ],
+  "key_count": 1,
+  "mod_ids": [
+    "Neat_Crafting"
+  ],
+  "name": "Neat Crafting [B42.12]",
+  "workshop_id": "3502080466"
 }

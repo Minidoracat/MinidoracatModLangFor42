@@ -4,23 +4,44 @@
 """
 MinidoracatModLangFor42 拆分管線（PZ B42 如一模組翻譯繁中版）
 
-用途：把 As1 CN 快照（釘定於 sources/snapshot.json）依 helper 歸屬候選鏈，
+用途：把 As1 CN 快照（釘定於 sources/snapshot.json）依 **repo 自有第一手鍵證據**，
       拆成「每 MOD 一目錄」的受版控衍生佈局：
         sources/mods/<workshop_id>/CN/<原檔名>.json + metadata.json
-        sources/_unsorted/CN/<原檔名>.json（用盡候選仍未歸屬）
+        sources/_unsorted/CN/<原檔名>.json（無證據 → 未歸屬）
         sources/attribution_index.json（(檔|鍵) → owner ids 或 "_unsorted"）
         sources/ch_sync_worklist.json（CN 樹新增/變更/移除鍵 → CH 翻譯待辦，翻譯後移除）
 
 真相模型：
-  - As1 CN 快照 = canonical import（唯一事實）。
-  - helper 的 key_source_* 5 檔「只提供候選 owner，非歸屬事實」。
-  - 歸屬 identity = (相對檔名, 鍵, CN值)；多重歸屬 = 複製到全部候選 owner 目錄，
+  - As1 CN 快照 = canonical import（唯一內容事實）。
+  - **歸屬證據只有 `sources/en/<wid>.json`**（追蹤器自上游 MOD 本體抽出的第一手語料）：
+      * runtime-effective `.json` `translate_en|<相對路徑>|<鍵>` → 該 wid 的現行 B42
+        Translate 檔定義此鍵；B41 `.txt`、mod 根 `media/`、舊版／未來分支一律不是證據。
+        一般鍵取 `鍵 → {wid}` 聯集，不依來源檔名（As1 落點與上游檔名並非一對一）。
+        **例外：`SCOPED_GENERIC_KEYS`（`title`/`description`）是檔域限定**——它們是
+        「每個地圖／描述檔各有一份」的泛用鍵名，key-only 聯集會把「定義過任一張地圖
+        title 的 wid」交叉灌給每一張地圖檔，故只認來源 Translate 檔名（去副檔名）與
+        As1 落點檔名相同的證據。
+      * `script_item_dn|<script 路徑>|<fullType>` → 該 wid 的 script 定義過這個物品；
+        **僅對 `ItemName.json` 生效**（引擎只在此以裸 `Module.Item` 查物品名），
+        並精確支援 legacy `ItemName_<fullType>` 去前綴。module 未解出（`?.X`）不算證據。
+  - `sources/mod_registry.json` **不是鍵歸屬證據**，只提供 metadata facts（name/mod_ids）；
+    但它是人工真相，缺檔／壞 schema 一律 fail-closed（`mod_registry.load_mod_registry`
+    raise ValueError，本腳本印訊息後退出 1，不以空名冊繼續）。
+  - `sources/vanilla_keys.json` 的 `scoped_keys` 以 **(檔名, 鍵) 檔域對**優先壓過 owner：
+    命中即遊戲本體鍵，一律落 `_unsorted`，不得掛給任何 mod。
+  - 歸屬 identity = (相對檔名, 鍵, CN值)；多重歸屬 = 複製到全部 owner 目錄，
     去重延後至 build（消除定序敏感性）。
   - 最終 gate 是逐檔 parity（verify_dist.py）；本腳本內建完整性自檢確保
     owner + _unsorted 聯集去重後 == As1 快照，一個不多一個不少、值逐字一致。
 
 演算法確定性且冪等：所有迭代排序後進行、owner 清單排序、序列化以 sort_keys 正規化，
 重跑 byte-identical。
+
+證據面 fail-closed：`sources/en` 缺席、空鏡像、壞 JSON/rid/kind/value，
+`vanilla_keys.json` 完整 schema 壞損、CH corpus 缺／空一律拒跑（無豁免旗標）；
+鏡像檔數低於 EN_FILES_MIN、歸屬 owner 為零、或仍在本次 As1 快照的既有 owner edge
+縮水，須以 `--allow-low-evidence` 明示接受。後者區分「上游真的退場」與「證據靜默消失」；
+沒有閘門時兩者都只會留下看似完整、其實大量落 `_unsorted` 的綠燈產物。
 
 使用方式：uv run scripts/split_sources.py
 """
@@ -30,11 +51,13 @@ import argparse
 import hashlib
 import json
 import shutil
-import subprocess
 import sys
 from collections import Counter, defaultdict
-from datetime import date
 from pathlib import Path
+
+import mod_registry
+from build_mod import _vanilla_basis_problem
+from tracker import is_effective, resolve_effective_branches
 
 # ============================================================
 # 路徑配置
@@ -51,8 +74,23 @@ WORKLIST_COMMENT = (
     "逐條翻譯落 sources/ch 後移除條目；本檔含未處理條目時 build/verify 拒絕出貨。"
 )
 
-# helper 本地 checkout（snapshot.json 只釘 git SHA，不釘本地路徑）。可用 --helper-dir 覆寫。
-DEFAULT_HELPER_DIR = Path("D:/github/pz-mod-translation-helper/translation_utils")
+# 歸屬證據面（repo 自有，非外部 helper）
+EN_DIR = SOURCES / "en"
+VANILLA_KEYS_JSON = SOURCES / "vanilla_keys.json"
+
+# EN 鏡像檔數下限。低於此值＝證據面大規模缺失，須明示放行。
+EN_FILES_MIN = 400
+
+# script_item_dn 證據只作用於這個落點檔（引擎以裸 fullType 查此表）
+ITEMNAME_FILE = "ItemName.json"
+ITEMNAME_PREFIX = "ItemName_"  # B41 遺留前綴形，去前綴後才是 fullType
+
+# **檔域限定鍵**：地圖／mod 描述檔用的裸鍵 `title`／`description` 在上游是「每個
+# Translate 檔各有一份」的泛用鍵名，key-only 聯集會把「定義過任一張地圖 title 的 wid」
+# 交叉灌給**每一張**地圖檔（實測 3781428012「Zero to Chad」只在 Mod.json 定義
+# description，卻被灌進 30+ 個地圖檔而讓 manifest 摘要失真）。故這兩鍵只認
+# 「來源 Translate 檔名（去副檔名）與 As1 落點檔名精確相同」的檔域證據。
+SCOPED_GENERIC_KEYS = frozenset({"title", "description"})
 
 UNSORTED = "_unsorted"  # attribution_index 中未歸屬的標記值
 
@@ -99,67 +137,8 @@ def load_as1_snapshot() -> tuple[dict[str, dict[str, str]], Path]:
 
 
 # ============================================================
-# 快照釘定：helper git SHA 比對 + As1 逐檔 sha256 manifest
+# 快照釘定：As1 逐檔 sha256 manifest
 # ============================================================
-def helper_git_sha(helper_dir: Path) -> str | None:
-    """回傳 helper checkout 的 HEAD commit SHA；取不到（非 git repo / 無 git）回傳 None。"""
-    try:
-        proc = subprocess.run(
-            ["git", "-C", str(helper_dir), "rev-parse", "HEAD"],
-            capture_output=True,
-            text=True,
-            check=True,
-        )
-    except (subprocess.CalledProcessError, FileNotFoundError, OSError):
-        return None
-    return proc.stdout.strip()
-
-
-def check_helper_pin(helper_dir: Path, allow_drift: bool) -> int:
-    """比對 helper HEAD 與 snapshot.json 釘定的 helper.git_sha。
-
-    不符即 fail（回傳 1，未跑拆分）；--allow-drift 則跳過檢查並把 snapshot 的 git_sha/pulled_at
-    更新為現況（回傳 0）。相符或已在 allow_drift 下更新 → 回傳 0。
-    """
-    snap = load_json(SNAPSHOT_JSON)
-    pinned = snap.get("helper", {}).get("git_sha")
-    actual = helper_git_sha(helper_dir)
-
-    if allow_drift:
-        if actual is None:
-            print("  ⚠️ --allow-drift：無法取得 helper HEAD（非 git repo？），snapshot 未更新。")
-        elif actual != pinned:
-            snap.setdefault("helper", {})["git_sha"] = actual
-            snap["helper"]["pulled_at"] = date.today().isoformat()
-            # 保留原鍵序（勿 sort_keys），只就地換值。
-            SNAPSHOT_JSON.write_text(
-                json.dumps(snap, ensure_ascii=False, indent=2) + "\n",
-                encoding="utf-8",
-                newline="\n",
-            )
-            print(f"  ⚠️ --allow-drift：snapshot helper.git_sha {pinned} → {actual}")
-        else:
-            print(f"  helper 釘定相符（{pinned[:12]}…），--allow-drift 無需更新。")
-        return 0
-
-    if actual is None:
-        print(
-            f"❌ 無法取得 helper HEAD（git -C {helper_dir} rev-parse HEAD 失敗）。\n"
-            f"   請確認 helper 為 git checkout；或以 --allow-drift 跳過釘定檢查。",
-            file=sys.stderr,
-        )
-        return 1
-    if actual != pinned:
-        print(
-            f"❌ helper 漂移：snapshot 釘定 {pinned} 但 HEAD 為 {actual}。\n"
-            f"   請將 helper checkout 切回釘定 commit，或以 --allow-drift 更新 snapshot 後重跑。",
-            file=sys.stderr,
-        )
-        return 1
-    print(f"  helper 釘定相符（{pinned[:12]}…）")
-    return 0
-
-
 def write_as1_manifest(cn_dir: Path) -> Path:
     """寫出 sources/as1_manifest.json：As1 CN 來源逐檔 raw sha256（供獨立 oracle 驗 As1 漂移）。"""
     manifest = {
@@ -176,73 +155,175 @@ def write_as1_manifest(cn_dir: Path) -> Path:
 
 
 # ============================================================
-# 讀入 helper 歸屬候選鏈（只提供候選，非事實）
+# 讀入歸屬證據（sources/en 第一手鍵證據 + vanilla 檔域基準）
 # ============================================================
-def load_map_index(helper_dir: Path) -> dict[str, set[str]]:
-    """key_source_map.json（{ws: {翻譯鍵: 類型}}）反轉為 {翻譯鍵: {ws...}}。主候選來源。"""
-    data = load_json(helper_dir / "key_source_map.json")
-    index: dict[str, set[str]] = defaultdict(set)
-    for ws, key_types in data.items():
-        for key in key_types:
-            index[key].add(ws)
-    return index
+def _file_stem(name: str) -> str:
+    """`Brandenburg, KY.json` → `Brandenburg, KY`（去單層副檔名；無副檔名原樣回）。"""
+    return name.rsplit(".", 1)[0] if "." in name else name
 
 
-def load_mod_index(helper_dir: Path) -> dict[str, set[str]]:
-    """key_source_mod.json（{json字串化[鍵,英文值]: [ws...]}）→ {鍵: union(ws...)}。候選補充。"""
-    data = load_json(helper_dir / "key_source_mod.json")
-    index: dict[str, set[str]] = defaultdict(set)
-    for key_str, ids in data.items():
-        bare = json.loads(key_str)[0]  # tuple 首元素 = 翻譯鍵；同鍵多 tuple → union ids
-        index[bare].update(ids)
-    return index
+def load_en_evidence() -> tuple[
+    dict[str, set[str]], dict[str, set[str]], dict[tuple[str, str], set[str]], int
+]:
+    """讀 `sources/en/<wid>.json`，回 (鍵→wids, fullType→wids, (檔名幹,鍵)→wids, 鏡像檔數)。
 
+    三張證據表**互斥**，讓誤用在結構上不可能發生：
+      * 鍵→wids       — runtime-effective `.json` 的 `translate_en`，排除泛用鍵；
+      * (檔名幹,鍵)→wids — 上述 `translate_en` 中只有 `SCOPED_GENERIC_KEYS`；
+      * fullType→wids  — runtime-effective `script_item_dn`（只作用於 `ItemName.json`）。
 
-def load_vanilla_keys(helper_dir: Path) -> set[str]:
-    """key_source_vanilla.json 的鍵集合。命中者屬遊戲本體 → 一律排除歸屬、直接落 _unsorted。"""
-    return set(load_json(helper_dir / "key_source_vanilla.json").keys())
-
-
-def load_manual(helper_dir: Path) -> dict[str, list[str]]:
-    """人工補正（優先級最高）。
-
-    註：helper 的 key_source_map_manual.json 與 key_source_regex_overrides.json
-    實為「鍵→類型/檔名」路由層（KeyPrefix / FileNameReplace / source 改寫），
-    與「鍵→workshop_id 歸屬」是不同維度，且本腳本已逐實體檔案迭代（已知檔名），
-    故其類型路由對歸屬無作用。此處只收「值為 workshop_id 清單」形狀的條目作 ws 歸屬覆寫；
-    helper 現況無此形狀 → 回傳空，manual 貢獻為 0（見拆分報告 NOTE）。
+    fail-closed（無豁免）：目錄缺席、檔名非數字 wid、JSON/頂層壞形、空鏡像、
+    rid 非 `kind|relpath|key`、未知 kind、非字串值一律拒跑。合法無 text-bearing
+    corpus 由 tracker 表達為「沒有鏡像檔」，不是 `{}`。
     """
-    p = helper_dir / "key_source_map_manual.json"
-    if not p.exists():
-        return {}
-    raw = load_json(p)
-    manual: dict[str, list[str]] = {}
-    for key, val in raw.items():
-        if isinstance(val, list) and val and all(
-            isinstance(x, str) and x.isdigit() for x in val
-        ):
-            manual[key] = sorted(set(val))
-    return manual
+    if not EN_DIR.is_dir():
+        raise SystemExit(
+            f"❌ 歸屬證據目錄不存在：{EN_DIR}——先跑 tracker 刷新 sources/en 鏡像"
+        )
+    key_owners: dict[str, set[str]] = defaultdict(set)
+    dn_owners: dict[str, set[str]] = defaultdict(set)
+    pair_owners: dict[tuple[str, str], set[str]] = defaultdict(set)
+    n_files = 0
+    for jf in sorted(EN_DIR.glob("*.json")):
+        wid = jf.stem
+        if not wid.isdigit():
+            raise SystemExit(f"❌ sources/en/{jf.name} 檔名非純數字 wid——證據來源不明")
+        try:
+            recs = load_json(jf)
+        except (OSError, json.JSONDecodeError) as exc:
+            raise SystemExit(f"❌ sources/en/{jf.name} 無法解析：{exc}") from exc
+        if not isinstance(recs, dict) or not recs:
+            raise SystemExit(
+                f"❌ sources/en/{jf.name} 頂層須為非空物件，實得 "
+                f"{type(recs).__name__}（合法空語料不應保留鏡像檔）"
+            )
+        n_files += 1
+        effective = resolve_effective_branches(recs)
+        for rid, value in recs.items():
+            if not isinstance(rid, str):
+                raise SystemExit(f"❌ sources/en/{jf.name} 含非字串 record id：{rid!r}")
+            parts = rid.split("|", 2)
+            if len(parts) != 3 or not all(parts):
+                raise SystemExit(f"❌ sources/en/{jf.name} record id 形狀壞損：{rid!r}")
+            kind, relpath, key = parts
+            if kind not in {"translate_en", "script_item_dn"}:
+                raise SystemExit(f"❌ sources/en/{jf.name} 含未知 kind `{kind}`：{rid!r}")
+            if not isinstance(value, str):
+                raise SystemExit(
+                    f"❌ sources/en/{jf.name} 的 {rid!r} 值須為字串，"
+                    f"實得 {type(value).__name__}"
+                )
+            if not is_effective(rid, effective):
+                continue
+            if kind == "translate_en":
+                if key in SCOPED_GENERIC_KEYS:
+                    stem = _file_stem(relpath.rsplit("/", 1)[-1])
+                    if not stem:
+                        raise SystemExit(f"❌ sources/en/{jf.name} 泛用鍵缺來源檔名：{rid!r}")
+                    pair_owners[(stem, key)].add(wid)
+                else:
+                    key_owners[key].add(wid)
+            elif not key.startswith("?."):
+                # module 未解出不是證據；禁止依 suffix 猜 module。
+                dn_owners[key].add(wid)
+    return dict(key_owners), dict(dn_owners), dict(pair_owners), n_files
 
 
-def load_ws_to_modids(helper_dir: Path) -> dict[str, list[str]]:
-    """workshop_id_to_mod_id_map.json（{ws: [mod_id...]}）。metadata.mod_ids 用。"""
-    p = helper_dir / "workshop_id_to_mod_id_map.json"
-    if not p.exists():
-        return {}
-    return {ws: list(ids) for ws, ids in load_json(p).items()}
+def load_vanilla_scoped() -> set[tuple[str, str]]:
+    """`vanilla_keys.json` 的 `scoped_keys` → {(檔名, 鍵)}。schema 不符即 fail-closed。
+
+    用檔域對而非扁平鍵集：扁平集會把「某 mod 的 Tooltip 鍵與本體某檔同名」誤判成
+    本體鍵而剝奪歸屬。本體鍵不得掛給任何 mod，故它優先於一切 owner 證據。
+    """
+    if not VANILLA_KEYS_JSON.is_file():
+        raise SystemExit(
+            f"❌ vanilla 檔域基準不存在：{VANILLA_KEYS_JSON}"
+            "——先跑 scripts/extract_vanilla_keys.py"
+        )
+    try:
+        doc = load_json(VANILLA_KEYS_JSON)
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SystemExit(f"❌ {VANILLA_KEYS_JSON.name} 無法解析：{exc}") from exc
+    if not isinstance(doc, dict):
+        raise SystemExit(
+            f"❌ {VANILLA_KEYS_JSON.name} 頂層須為物件，實得 {type(doc).__name__}"
+        )
+    if problem := _vanilla_basis_problem(doc):
+        raise SystemExit(
+            f"❌ {VANILLA_KEYS_JSON.name} 基準不可信：{problem}。"
+            "遊戲更新後請跑 scripts/extract_vanilla_keys.py 重生"
+        )
+    scoped = doc["scoped_keys"]
+    pairs: set[tuple[str, str]] = set()
+    for fname in sorted(scoped):
+        pairs.update((fname, key) for key in scoped[fname])
+    return pairs
 
 
-def load_ws_to_name(helper_dir: Path) -> dict[str, str]:
-    """mod_id_name_map.json（{ws: {name, ...}}）→ {ws: name}。metadata.name 用（build manifest 顯示）。"""
-    p = helper_dir / "mod_id_name_map.json"
-    if not p.exists():
-        return {}
-    out: dict[str, str] = {}
-    for ws, meta in load_json(p).items():
-        if isinstance(meta, dict) and meta.get("name"):
-            out[ws] = meta["name"]
-    return out
+def check_evidence_scale(
+    n_en_files: int, n_owners: int, lost_edges: list[tuple[str, str]], allow_low: bool
+) -> list[str]:
+    """證據規模閘門：回傳阻斷原因（空＝放行）。
+
+    壞 JSON/rid/schema 在 loader 已無豁免地炸掉；本函式只處理可由
+    `--allow-low-evidence` 明示接受的規模／既有 owner-edge 縮水。
+    """
+    reasons: list[str] = []
+    if n_en_files < EN_FILES_MIN:
+        reasons.append(
+            f"sources/en 只有 {n_en_files} 檔（下限 {EN_FILES_MIN}）"
+            "——證據面大規模缺失，歸屬結果不可信"
+        )
+    if n_owners == 0:
+        reasons.append("零個 owner 目錄——全樹將落 _unsorted，與「證據全滅」不可區分")
+    if lost_edges:
+        sample = ", ".join(f"{pair}→{wid}" for pair, wid in lost_edges[:5])
+        reasons.append(
+            f"{len(lost_edges)} 條既有 owner edge 將消失（例：{sample}）"
+            "——上游退場或證據縮水都屬 destructive attribution 變更"
+        )
+    if reasons and allow_low:
+        return []
+    return reasons
+
+
+def owner_edge_losses(
+    new_index: dict[str, object],
+    snap: dict[str, dict[str, str]],
+    baseline_path: Path = ATTR_INDEX_JSON,
+    allow_missing: bool = False,
+) -> list[tuple[str, str]]:
+    """比較仍在本次 As1 快照內的既有 `(pair,wid)`；任何縮水需明示接受。"""
+    if not baseline_path.is_file():
+        if allow_missing:
+            return []
+        raise SystemExit(
+            f"❌ 缺少既有 attribution baseline：{baseline_path}——"
+            "無法判斷本次是否會靜默刪除 owner；真正首次拆分才可搭配 --allow-empty-baseline"
+        )
+    old = load_json(baseline_path)
+    if not isinstance(old, dict):
+        raise SystemExit(f"❌ {baseline_path} 頂層須為物件")
+    valid_pairs = {f"{fname}|{key}" for fname, values in snap.items() for key in values}
+
+    def edges(index: dict[str, object]) -> set[tuple[str, str]]:
+        out: set[tuple[str, str]] = set()
+        for pair, owners in index.items():
+            if not isinstance(pair, str) or not all(pair.partition("|")[::2]):
+                raise SystemExit(f"❌ attribution_index 的 pair 形狀壞損：{pair!r}")
+            if owners == UNSORTED:
+                continue
+            if not (
+                isinstance(owners, list) and owners
+                and all(isinstance(w, str) and w.isdigit() for w in owners)
+                and len(set(owners)) == len(owners)
+            ):
+                raise SystemExit(f"❌ attribution_index 的 {pair!r} owner 形狀壞損：{owners!r}")
+            if pair in valid_pairs:
+                out.update((pair, wid) for wid in owners)
+        return out
+
+    return sorted(edges(old) - edges(new_index))
 
 
 # ============================================================
@@ -260,19 +341,37 @@ class Attribution:
         self.unsorted: dict[str, dict[str, str]] = defaultdict(dict)
         # "檔名|鍵" → [ws...] 或 "_unsorted"
         self.index: dict[str, object] = {}
-        # ws → Counter(manual/map/mod_tuple)
+        # ws → Counter(en_translate/en_item_dn)
         self.via: dict[str, Counter] = defaultdict(Counter)
         self.stats: Counter = Counter()
 
 
+def _dn_fulltype(fname: str, key: str) -> str | None:
+    """把 As1 落點 (檔名, 鍵) 還原成 script_item_dn 的 fullType；不適用回 None。
+
+    只有 `ItemName.json` 會被引擎以裸 `Module.Item` 查詢；legacy `ItemName_<fullType>`
+    是 B41 遺留前綴形，去前綴後才對得上證據。兩種形都精確比對，絕不猜 module。
+    """
+    if fname != ITEMNAME_FILE:
+        return None
+    if key.startswith(ITEMNAME_PREFIX):
+        bare = key[len(ITEMNAME_PREFIX):]
+        return bare or None
+    return key
+
+
 def attribute(
     snap: dict[str, dict[str, str]],
-    map_index: dict[str, set[str]],
-    mod_index: dict[str, set[str]],
-    vanilla: set[str],
-    manual: dict[str, list[str]],
+    en_key_owners: dict[str, set[str]],
+    en_dn_owners: dict[str, set[str]],
+    en_pair_owners: dict[tuple[str, str], set[str]],
+    vanilla_pairs: set[tuple[str, str]],
 ) -> Attribution:
-    """對每個 (檔名, 鍵, 值) 決定 owner 集合。排序後迭代，確定性。"""
+    """對每個 (檔名, 鍵, 值) 依第一手 EN 證據決定 owner 集合。排序後迭代，確定性。
+
+    `SCOPED_GENERIC_KEYS`（`title`/`description`）走 `en_pair_owners` 的檔域證據
+    （來源 Translate 檔名去副檔名須與 As1 落點檔名相同）；其餘鍵維持 key-only 聯集。
+    """
     r = Attribution()
     for fname in sorted(snap):
         fmap = snap[fname]
@@ -285,27 +384,21 @@ def attribute(
             idx_key = f"{fname}|{key}"
             r.stats["total"] += 1
 
-            # vanilla 命中 → 不歸屬（即使有候選也強制 _unsorted，避免誤歸屬）
-            if key in vanilla:
+            # vanilla 檔域命中 → 本體鍵，強制 _unsorted（優先於一切 owner 證據）
+            if (fname, key) in vanilla_pairs:
                 r.unsorted[fname][key] = val
                 r.index[idx_key] = UNSORTED
                 r.stats["vanilla_excluded"] += 1
                 continue
 
-            # 候選解析：manual（最高優先、獨佔）→ else map ∪ mod tuple
-            mp: set[str] | None = None
-            if key in manual:
-                cands: set[str] = set(manual[key])
-                kind = "manual"
+            if key in SCOPED_GENERIC_KEYS:
+                # 泛用鍵名：只認同名檔的證據，不吃 key-only 聯集（交叉污染來源）
+                tr = en_pair_owners.get((_file_stem(fname), key)) or set()
             else:
-                mp = map_index.get(key)
-                md = mod_index.get(key)
-                cands = set()
-                if mp:
-                    cands |= mp
-                if md:
-                    cands |= md
-                kind = None
+                tr = en_key_owners.get(key) or set()
+            ft = _dn_fulltype(fname, key)
+            dn = (en_dn_owners.get(ft) or set()) if ft else set()
+            cands = tr | dn
 
             if not cands:
                 r.unsorted[fname][key] = val
@@ -316,35 +409,27 @@ def attribute(
             owner_list = sorted(cands)
             for ws in owner_list:
                 r.owners[ws][fname][key] = val
-                # 逐 ws 分類 attributed_via（該 mod 是經哪個來源成為 owner）
-                if kind == "manual":
-                    r.via[ws]["manual"] += 1
-                elif mp and ws in mp:
-                    r.via[ws]["map"] += 1
-                else:
-                    r.via[ws]["mod_tuple"] += 1
+                # 逐 ws 分類：translate_en 勝過 script_item_dn（引擎先查 ItemName map，
+                # 查不到才退回 Item.getDisplayName()，同 prep_mod_strings 的來源優先序）
+                r.via[ws]["en_translate" if ws in tr else "en_item_dn"] += 1
             r.index[idx_key] = owner_list
             r.stats["attributed"] += 1
             r.stats["copies"] += len(owner_list)
 
-            # filekey 層級來源歸類（報告用；優先序 manual > map > mod_tuple）
-            if kind == "manual":
-                r.stats["fk_manual"] += 1
-            elif mp:
-                r.stats["fk_map"] += 1
-            else:
-                r.stats["fk_mod_tuple"] += 1
+            # filekey 層級來源歸類（報告用；同優先序）
+            r.stats["fk_en_translate" if tr else "fk_en_item_dn"] += 1
     return r
 
 
 # ============================================================
 # 序列化為 {sources 下相對路徑: bytes}（純函式，冪等自檢用）
 # ============================================================
-def serialize(
-    r: Attribution,
-    ws_to_modids: dict[str, list[str]],
-    ws_to_name: dict[str, str],
-) -> dict[str, bytes]:
+def serialize(r: Attribution, registry: dict[str, dict]) -> dict[str, bytes]:
+    """產出 {sources 下相對路徑: bytes}。
+
+    metadata 的 name/mod_ids 取自 mod_registry 的 **active** 條目（純 metadata facts，
+    非歸屬證據）；缺條目／缺欄位安全降級為空，不影響歸屬與 parity。
+    """
     out: dict[str, bytes] = {}
     for ws in sorted(r.owners):
         files = r.owners[ws]
@@ -352,19 +437,21 @@ def serialize(
             rel = f"mods/{ws}/CN/{fname}"
             out[rel] = dumps_canonical(files[fname]).encode("utf-8")
         key_count = sum(len(m) for m in files.values())
+        entry = registry.get(ws) or {}
+        active = entry.get("status") == "active"
+        mod_ids = entry.get("mod_ids") if active else None
         meta = {
             "workshop_id": ws,
-            "mod_ids": ws_to_modids.get(ws, []),
+            "mod_ids": list(mod_ids) if isinstance(mod_ids, list) else [],
             "key_count": key_count,
             "files": sorted(files),
             "attributed_via": {
-                "manual": r.via[ws]["manual"],
-                "map": r.via[ws]["map"],
-                "mod_tuple": r.via[ws]["mod_tuple"],
+                "en_translate": r.via[ws]["en_translate"],
+                "en_item_dn": r.via[ws]["en_item_dn"],
             },
         }
-        name = ws_to_name.get(ws)
-        if name:
+        name = entry.get("name") if active else None
+        if isinstance(name, str) and name:
             meta["name"] = name
         out[f"mods/{ws}/metadata.json"] = dumps_canonical(meta).encode("utf-8")
 
@@ -553,23 +640,60 @@ def _registry_keys() -> set[str]:
 
 
 def _corpus_keysets() -> dict[str, set[str]]:
-    """讀 sources/ch/*.json 的逐檔鍵集（worklist 自動對帳用；corpus 缺失回空）。"""
+    """讀 sources/ch/*.json 的逐檔鍵集；人工真相缺／空／壞形一律 fail-closed。"""
     out: dict[str, set[str]] = {}
     ch_dir = SOURCES / "ch"
-    if ch_dir.is_dir():
-        for jf in sorted(ch_dir.glob("*.json")):
-            out[jf.name] = set(load_json(jf))
+    if not ch_dir.is_dir():
+        raise SystemExit(f"❌ CH corpus 目錄不存在：{ch_dir}")
+    files = sorted(ch_dir.glob("*.json"))
+    if not files:
+        raise SystemExit(f"❌ CH corpus 目錄沒有任何 JSON：{ch_dir}")
+    for jf in files:
+        data = load_json(jf)
+        if not isinstance(data, dict):
+            raise SystemExit(f"❌ CH corpus {jf} 頂層須為物件")
+        out[jf.name] = set(data)
     return out
 
 
-def _entry_satisfied(entry_key: str, spec, corpus_keys: dict[str, set[str]]) -> bool:
-    """added 條目其鍵已落 corpus／removed 條目其鍵已自 corpus 移除 → 已滿足。
+def _parse_worklist_entry(entry_key: str, spec) -> tuple[str, str, str]:
+    """驗證並回 `(kind, fname, key)`；壞真相不得進入自動清除路徑。"""
+    fname, sep, key = entry_key.partition("|")
+    if (
+        not sep or len(fname) <= len(".json") or not fname.endswith(".json")
+        or "/" in fname or "\\" in fname or not key
+    ):
+        raise SystemExit(f"❌ ch_sync_worklist.json entry key 形狀壞損：{entry_key!r}")
+    if not isinstance(spec, dict):
+        raise SystemExit(f"❌ ch_sync_worklist.json 的 {entry_key!r} 規格須為物件")
+    kind = spec.get("kind")
+    required = {
+        "added": ("new_cn",),
+        "removed": ("old_cn",),
+        "changed": ("old_cn", "new_cn"),
+    }
+    if kind not in required:
+        raise SystemExit(
+            f"❌ ch_sync_worklist.json 的 {entry_key!r} kind 非法：{kind!r}"
+        )
+    missing = [field for field in required[kind] if not isinstance(spec.get(field), str)]
+    if missing:
+        raise SystemExit(
+            f"❌ ch_sync_worklist.json 的 {entry_key!r} 缺字串欄位：{missing}"
+        )
+    return kind, fname, key
 
+
+def _entry_satisfied(entry_key: str, spec, corpus_keys: dict[str, set[str]]) -> bool:
+    """added 已落同名 corpus 檔／removed 已自同名 corpus 檔移除才算滿足。
+
+    缺整個 corpus 檔不是「removed 完成」；那是人工真相遺失，必須保留待辦並由 gate 擋下。
     changed 一律未滿足（值層變更無法自動判定已複核，須人工移除條目）。
     """
-    kind = spec.get("kind") if isinstance(spec, dict) else None
-    fname, _, key = entry_key.partition("|")
-    present = key in corpus_keys.get(fname, set())
+    kind, fname, key = _parse_worklist_entry(entry_key, spec)
+    if fname not in corpus_keys:
+        return False
+    present = key in corpus_keys[fname]
     return (kind == "added" and present) or (kind == "removed" and not present)
 
 
@@ -602,7 +726,10 @@ def update_sync_worklist(
     corpus_keys = _corpus_keysets()
     doc: dict = {}
     if WORKLIST_JSON.exists():
-        for k, v in load_json(WORKLIST_JSON).items():
+        existing = load_json(WORKLIST_JSON)
+        if not isinstance(existing, dict):
+            raise SystemExit("❌ ch_sync_worklist.json 頂層須為物件")
+        for k, v in existing.items():
             if "|" not in k:
                 doc[k] = v  # _comment / 人工加註的說明欄保留
             elif not _entry_satisfied(k, v, corpus_keys):
@@ -627,63 +754,54 @@ def update_sync_worklist(
 # 主流程
 # ============================================================
 def main() -> int:
-    parser = argparse.ArgumentParser(description="As1 CN 快照 → per-mod 拆分")
-    parser.add_argument(
-        "--helper-dir",
-        type=Path,
-        default=DEFAULT_HELPER_DIR,
-        help="helper translation_utils 目錄（預設本機 checkout）",
-    )
-    parser.add_argument(
-        "--allow-drift",
-        action="store_true",
-        help="跳過 helper git SHA 釘定檢查，並把 snapshot.json 的 git_sha/pulled_at 更新為現況",
+    parser = argparse.ArgumentParser(
+        description="As1 CN 快照 → per-mod 拆分（sources/en 第一手證據歸屬）"
     )
     parser.add_argument(
         "--allow-empty-baseline",
         action="store_true",
         help="明示允許在無既有 CN 樹時執行（僅限真正首次拆分；changed 差異將無法偵測）",
     )
+    parser.add_argument(
+        "--allow-low-evidence",
+        action="store_true",
+        help="明示放行證據**規模**不足（EN 鏡像檔數低於下限／零 owner）；"
+             "不放行壞 JSON 或 schema 不符",
+    )
     args = parser.parse_args()
-    helper_dir: Path = args.helper_dir
 
     print("=" * 64)
     print("split_sources：As1 CN 快照 → per-mod 佈局 + _unsorted + attribution_index")
     print("=" * 64)
 
-    if not helper_dir.is_dir():
-        print(f"❌ helper 目錄不存在：{helper_dir}", file=sys.stderr)
-        return 1
-
-    # 快照釘定：helper HEAD 須與 snapshot.json 的 helper.git_sha 相符（--allow-drift 跳過並更新）
-    if check_helper_pin(helper_dir, args.allow_drift) != 0:
-        return 1
-
     snap, cn_dir = load_as1_snapshot()
     print(f"As1 CN 來源：{cn_dir}")
     print(f"  讀入 {len(snap)} 檔")
 
-    map_index = load_map_index(helper_dir)
-    mod_index = load_mod_index(helper_dir)
-    vanilla = load_vanilla_keys(helper_dir)
-    manual = load_manual(helper_dir)
-    ws_to_modids = load_ws_to_modids(helper_dir)
-    ws_to_name = load_ws_to_name(helper_dir)
+    en_key_owners, en_dn_owners, en_pair_owners, n_en_files = load_en_evidence()
+    vanilla_pairs = load_vanilla_scoped()
+    try:
+        registry = mod_registry.load_mod_registry()
+    except ValueError as exc:
+        print(f"❌ {exc}", file=sys.stderr)
+        return 1
+    active_wids = {w for w, e in registry.items() if e.get("status") == "active"}
     print(
-        f"  歸屬候選：map 反查 {len(map_index)} 鍵、mod tuple 反查 {len(mod_index)} 鍵、"
-        f"vanilla {len(vanilla)} 鍵、manual {len(manual)} 鍵"
+        f"  歸屬證據：sources/en {n_en_files} 檔、translate 鍵 {len(en_key_owners)}、"
+        f"item_dn fullType {len(en_dn_owners)}、檔域限定 "
+        f"{'/'.join(sorted(SCOPED_GENERIC_KEYS))} 對 {len(en_pair_owners)}；"
+        f"vanilla 檔域對 {len(vanilla_pairs)}"
     )
-    if not manual:
-        print(
-            "  NOTE: helper 的 key_source_map_manual.json / key_source_regex_overrides.json "
-            "為「鍵→類型/檔名」路由層，非 workshop_id 歸屬，對本拆分無作用（manual 貢獻 0）。"
-        )
+    print(
+        f"  mod_registry：active {len(active_wids)} / 全 {len(registry)}"
+        "（僅 metadata facts，不參與歸屬）"
+    )
 
     # 歸屬 + 序列化（跑兩次做冪等自檢：兩次 byte-dict 必須相等）
-    result = attribute(snap, map_index, mod_index, vanilla, manual)
-    out = serialize(result, ws_to_modids, ws_to_name)
-    result2 = attribute(snap, map_index, mod_index, vanilla, manual)
-    out2 = serialize(result2, ws_to_modids, ws_to_name)
+    result = attribute(snap, en_key_owners, en_dn_owners, en_pair_owners, vanilla_pairs)
+    out = serialize(result, registry)
+    result2 = attribute(snap, en_key_owners, en_dn_owners, en_pair_owners, vanilla_pairs)
+    out2 = serialize(result2, registry)
     idempotent = out == out2
 
     # 完整性自檢
@@ -696,6 +814,27 @@ def main() -> int:
         for e in errors:
             print(f"  - {e}")
         return 1
+
+    # destructive 歸屬縮水閘門：仍在 As1 的 pair 若失去既有 owner edge，必須明示接受。
+    lost_edges = owner_edge_losses(
+        result.index, snap, allow_missing=args.allow_empty_baseline
+    )
+    scale_errors = check_evidence_scale(
+        n_en_files, len(result.owners), lost_edges, args.allow_low_evidence
+    )
+    if scale_errors:
+        print("\n❌ 證據規模不足，未寫出任何檔案：", file=sys.stderr)
+        for e in scale_errors:
+            print(f"  - {e}", file=sys.stderr)
+        print(
+            "   確認證據面現況正確（例：上游全數退場）時，以 --allow-low-evidence 明示放行。",
+            file=sys.stderr,
+        )
+        return 1
+    if args.allow_low_evidence:
+        print("  ⚠️ --allow-low-evidence：證據規模／owner-edge 縮水已明示接受。")
+        if lost_edges:
+            print(f"      本次接受移除 {len(lost_edges)} 條既有 owner edge。")
 
     old_cn = load_existing_cn()
     if not old_cn and not args.allow_empty_baseline:
@@ -726,15 +865,24 @@ def main() -> int:
     print("-" * 64)
     print(f"  總 (檔,鍵) 數        : {total}")
     print(f"  已歸屬 (檔,鍵)       : {attributed}（覆蓋率 {coverage:.1f}%）")
-    print(f"  複製總份數           : {st['copies']}（多重歸屬複製到全部候選 owner）")
+    print(f"  複製總份數           : {st['copies']}（多重歸屬複製到全部 owner）")
     print(f"  未歸屬 → _unsorted   : {unsorted_total}")
     print(f"      ├ vanilla 排除   : {vanilla_excluded}")
-    print(f"      └ 用盡候選無歸屬 : {unattributed}")
+    print(f"      └ 無 EN 證據     : {unattributed}")
     print(f"  owner 目錄數         : {len(result.owners)}")
-    print("  各來源貢獻（filekey 層級，優先序 manual>map>mod_tuple）：")
-    print(f"      manual           : {st['fk_manual']}")
-    print(f"      key_source_map   : {st['fk_map']}")
-    print(f"      key_source_mod   : {st['fk_mod_tuple']}")
+    print("  各來源貢獻（filekey 層級，translate_en 勝過 script_item_dn）：")
+    print(f"      en_translate     : {st['fk_en_translate']}")
+    print(f"      en_item_dn       : {st['fk_en_item_dn']}")
+    print(f"  EN 證據面            : {n_en_files} 檔 / translate {len(en_key_owners)} 鍵"
+          f" / item_dn {len(en_dn_owners)} fullType"
+          f" / 檔域限定 {len(en_pair_owners)} 對")
+    zero_attr = sorted(active_wids - set(result.owners), key=int)
+    if zero_attr:
+        print(
+            f"  registry active 但零歸屬 : {len(zero_attr)} 個 wid"
+            "（新收錄尚未進 As1、或上游無我方可歸屬的鍵）"
+        )
+        print(f"      {', '.join(zero_attr[:20])}{' …' if len(zero_attr) > 20 else ''}")
     print(f"  產出檔案數           : {len(out)}（含 metadata.json ×{len(result.owners)} + attribution_index.json）")
     print(f"  產出 sha256          : {outputs_hash(out)}")
     print(f"  As1 逐檔 sha256 manifest : {manifest_path.relative_to(PROJECT_ROOT)}（{len(snap)} 檔）")

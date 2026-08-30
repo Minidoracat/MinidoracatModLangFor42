@@ -38,6 +38,7 @@ with tempfile.TemporaryDirectory() as td:
     src = Path(td)
     split_sources.SOURCES = src
     split_sources.WORKLIST_JSON = src / "ch_sync_worklist.json"
+    wjson(src / "ch" / "Baseline.json", {"sentinel": "存在"})
     old = {("UI.json", "kChanged"): "旧", ("UI.json", "kRemoved"): "走", ("UI.json", "kSame"): "同"}
     new = {("UI.json", "kChanged"): "新", ("UI.json", "kAdded"): "来", ("UI.json", "kSame"): "同"}
     n = split_sources.update_sync_worklist(old, new)
@@ -56,9 +57,10 @@ with tempfile.TemporaryDirectory() as td:
     wjson(src / "ch" / "UI.json", {"kDone": "已翻"})  # 對帳依據
     wjson(split_sources.WORKLIST_JSON, {
         "_note": "human note",
-        "UI.json|kDone": {"kind": "added", "new_cn": "x"},      # 已落 corpus → 清除
-        "UI.json|kGone": {"kind": "removed", "old_cn": "y"},    # corpus 已無 → 清除
-        "UI.json|kPending": {"kind": "changed", "old_cn": "a", "new_cn": "b"},  # 保留
+        "UI.json|kDone": {"kind": "added", "new_cn": "x"},       # 已落 corpus → 清除
+        "UI.json|kGone": {"kind": "removed", "old_cn": "y"},     # 同名 corpus 檔已無 → 清除
+        "Missing.json|kGone": {"kind": "removed", "old_cn": "y"}, # 整檔缺失 → 不得誤判完成
+        "UI.json|kPending": {"kind": "changed", "old_cn": "a", "new_cn": "b"},
     })
     same = {("UI.json", "kSame"): "同"}
     n = split_sources.update_sync_worklist(same, same)
@@ -66,6 +68,7 @@ with tempfile.TemporaryDirectory() as td:
     assert n == 0
     assert doc["_note"] == "human note", "人工說明欄未保留"
     assert "UI.json|kDone" not in doc and "UI.json|kGone" not in doc, "已滿足條目未清除"
+    assert "Missing.json|kGone" in doc, "缺整個 corpus 檔被誤判為 removed 已完成"
     assert "UI.json|kPending" in doc, "changed 條目不得自動清除"
 
 # 3. update_sync_worklist：old 為空跳過且不落檔
@@ -75,6 +78,71 @@ with tempfile.TemporaryDirectory() as td:
     split_sources.WORKLIST_JSON = src / "ch_sync_worklist.json"
     n = split_sources.update_sync_worklist({}, {("UI.json", "k"): "v"})
     assert n == 0 and not split_sources.WORKLIST_JSON.exists()
+
+# 3b. corpus 缺目錄／空目錄一律 fail-closed，不得把 removed 待辦自動清空
+for make_empty in (False, True):
+    with tempfile.TemporaryDirectory() as td:
+        src = Path(td)
+        split_sources.SOURCES = src
+        if make_empty:
+            (src / "ch").mkdir()
+        try:
+            split_sources._corpus_keysets()
+            raise AssertionError("空／缺 CH corpus 未 fail-closed")
+        except SystemExit:
+            pass
+
+# 3c. worklist entry schema 三端都 fail-closed；split 失敗時不得改寫原檔。
+bad_entries = (
+    ("UI.json|", {"kind": "removed", "old_cn": "x"}),
+    ("|K", {"kind": "added", "new_cn": "x"}),
+    ("dir/UI.json|K", {"kind": "changed", "old_cn": "a", "new_cn": "b"}),
+    ("UI.json|K", {"kind": "unknown", "old_cn": "a"}),
+    ("UI.json|K", {"kind": "removed"}),
+    ("UI.json|K", ["not-an-object"]),
+)
+orig_build_wl = build_mod.WORKLIST_JSON
+for entry_key, spec in bad_entries:
+    with tempfile.TemporaryDirectory() as td:
+        src = Path(td) / "sources"
+        split_sources.SOURCES = src
+        split_sources.WORKLIST_JSON = src / "ch_sync_worklist.json"
+        build_mod.WORKLIST_JSON = split_sources.WORKLIST_JSON
+        wjson(src / "ch" / "UI.json", {"other": "值"})
+        wjson(split_sources.WORKLIST_JSON, {"_comment": "x", entry_key: spec})
+        before = split_sources.WORKLIST_JSON.read_bytes()
+        same = {("UI.json", "same"): "值"}
+        try:
+            split_sources.update_sync_worklist(same, same)
+            raise AssertionError(f"split 未擋壞 worklist entry：{entry_key!r} {spec!r}")
+        except SystemExit:
+            pass
+        assert split_sources.WORKLIST_JSON.read_bytes() == before, \
+            "split 遇壞 entry 後改寫了 worklist"
+        try:
+            build_mod.load_sync_worklist()
+            raise AssertionError(f"build 未擋壞 worklist entry：{entry_key!r} {spec!r}")
+        except SystemExit:
+            pass
+        try:
+            verify_dist._load_worklist(td)
+            raise AssertionError(f"verify 未擋壞 worklist entry：{entry_key!r} {spec!r}")
+        except ValueError:
+            pass
+build_mod.WORKLIST_JSON = orig_build_wl
+
+# key 本身可含後續 `|`，空翻譯值也是合法 evidence 字串。
+valid_key = "UI.json|K|Variant"
+valid_spec = {"kind": "changed", "old_cn": "", "new_cn": ""}
+assert split_sources._parse_worklist_entry(valid_key, valid_spec) == (
+    "changed", "UI.json", "K|Variant"
+)
+assert build_mod._parse_sync_worklist_entry(valid_key, valid_spec) == (
+    "changed", "UI.json", "K|Variant"
+)
+assert verify_dist._parse_worklist_entry(valid_key, valid_spec) == (
+    "changed", "UI.json", "K|Variant"
+)
 
 # 4. cn_from_outputs / load_existing_cn：路徑解析、own 排除、metadata 排除
 out = {
@@ -117,6 +185,7 @@ with tempfile.TemporaryDirectory() as td:
     src = Path(td)
     split_sources.SOURCES = src
     split_sources.WORKLIST_JSON = src / "ch_sync_worklist.json"
+    wjson(src / "ch" / "Baseline.json", {"sentinel": "存在"})
     wjson(src / "cn_overrides.json", {"_comment": "x", "UI.json|kOv": {"value": "v"}})
     old = {("UI.json", "kOv"): "旧", ("UI.json", "kPlain"): "旧"}
     new = {("UI.json", "kOv"): "新", ("UI.json", "kPlain"): "新"}
@@ -148,7 +217,10 @@ with tempfile.TemporaryDirectory() as td:
         except SystemExit:
             pass
     # 說明欄（無 |）過濾、條目保留
-    wjson(build_mod.WORKLIST_JSON, {"_comment": "x", "UI.json|k": {"kind": "changed"}})
+    wjson(build_mod.WORKLIST_JSON, {
+        "_comment": "x",
+        "UI.json|k": {"kind": "changed", "old_cn": "a", "new_cn": "b"},
+    })
     assert set(build_mod.load_sync_worklist()) == {"UI.json|k"}
 build_mod.WORKLIST_JSON, build_mod.REVIEW_STATE_JSON = _orig_wl, _orig_rs
 
@@ -197,10 +269,28 @@ with tempfile.TemporaryDirectory() as td:
         "_comment": "c",
         "UI.json|kA": {"kind": "added", "new_cn": "x"},
         "UI.json|kB": {"kind": "removed", "old_cn": "y"},
+        "Missing.json|kGone": {"kind": "removed", "old_cn": "z"},
         "UI.json|kC": {"kind": "changed", "old_cn": "a", "new_cn": "b"},
     })
     ok, details = verify_dist.check_sync_worklist(repo)
-    assert not ok and len(details) == 1 and "kC" in details[0], details
+    assert not ok and len(details) == 2, details
+    assert any("kC" in d for d in details) and any("Missing.json|kGone" in d for d in details)
+
+# 10b. corpus loader 失敗時 [10] 自己必須 FAIL；不能靠 [9] 代報後把 removed 判完成。
+for corpus_case in ("missing", "empty", "bad"):
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        wjson(root / "sources" / "ch_sync_worklist.json", {
+            "UI.json|gone": {"kind": "removed", "old_cn": "x"}
+        })
+        if corpus_case != "missing":
+            (root / "sources" / "ch").mkdir(parents=True)
+        if corpus_case == "bad":
+            (root / "sources" / "ch" / "UI.json").write_text("{", encoding="utf-8")
+        ok, details = verify_dist.check_sync_worklist(str(root))
+        assert not ok and details and "corpus" in details[0].lower(), (
+            corpus_case, details
+        )
 
 # 11. verify check_ch_corpus_parity：值不符/無真相源/未落地/own fallback
 with tempfile.TemporaryDirectory() as td:

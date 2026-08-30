@@ -44,13 +44,22 @@ def sha16(s: str) -> str:
     return hashlib.sha256(s.encode("utf-8")).hexdigest()[:16]
 
 
-def write_vanilla_keys(path: Path, keep: dict | None = None, scoped=VAN_SCOPED) -> None:
+def write_vanilla_keys(
+    path: Path,
+    keep: dict | None = None,
+    scoped=VAN_SCOPED,
+    allow: dict | None = None,
+) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     flat = sorted({k for ks in scoped.values() for k in ks})
     path.write_text(
         json.dumps(
-            {"keys": flat, "scoped_keys": scoped, "allowlist": {}, "keep": keep or {}},
-            ensure_ascii=False,
+            {
+                "keys": flat,
+                "scoped_keys": scoped,
+                "allowlist": allow or {},
+                "keep": keep or {},
+            },
         ),
         encoding="utf-8",
     )
@@ -118,6 +127,7 @@ NO_ITEMNAME = {f: v for f, v in VAN_SCOPED.items() if f != "ItemName.json"}
 BAD_BASES = {
     "量級殘缺": {"ItemName.json": ["Base.Shotgun"]},
     "核心檔整個消失": NO_ITEMNAME,
+    "核心檔空 bucket": {**VAN_SCOPED, "ItemName.json": []},
     "同鍵重複灌水": {**VAN_SCOPED, "ItemName.json": ["Base.Shotgun"] * 10001},
     "檔數過少": {f: ["K"] for f in CORE_FILES},
 }
@@ -220,6 +230,36 @@ with tempfile.TemporaryDirectory() as td:
     except ValueError as exc:
         assert "keep" in str(exc), f"未指出是 keep 問題：{exc}"
 
+# --- 6b. 泛用地圖鍵的 allowlist 必須精確到檔名，不能裸 title 一次放行全地圖 --- #
+with tempfile.TemporaryDirectory() as td:
+    repo = Path(td)
+    scoped = {k: list(v) for k, v in VAN_SCOPED.items()}
+    scoped["MapA.json"] = ["title"]
+    scoped["MapB.json"] = ["title"]
+    a = {"en": "Map A", "ch": "地圖甲", "cn": "地图甲"}
+    b = {"en": "Map B", "ch": "地圖乙", "cn": "地图乙"}
+    write_vanilla_keys(
+        repo / "sources" / "vanilla_keys.json",
+        scoped=scoped,
+        allow={"MapA.json|title": {"own_anchor": sha16("Map A|地圖甲|地图甲")}},
+    )
+    (repo / "sources" / "own_translations.json").write_text(
+        json.dumps({"entries": {"MapA.json": {"title": a}, "MapB.json": {"title": b}}},
+                   ensure_ascii=False),
+        encoding="utf-8",
+    )
+    (repo / "sources" / "mods").mkdir(parents=True)
+    for lang in ("CN", "CH"):
+        d = repo / "dist" / lang
+        d.mkdir(parents=True)
+        (d / "ItemName.json").write_text("{}", encoding="utf-8")
+    ok, details, _ = verify_dist.check_vanilla_collision(
+        str(repo), str(repo / "dist" / "CN"), str(repo / "dist" / "CH")
+    )
+    joined = "\n".join(details)
+    assert not ok and "MapB.json|title" in joined, f"未攔未登記的第二張地圖：{joined}"
+    assert "MapA.json|title" not in joined, f"精確檔域 allowlist 未放行 MapA：{joined}"
+
 # --- 7. verify：suppressed_pairs 涵蓋全部 vanilla 鍵（不再有 keep 例外）------- #
 with tempfile.TemporaryDirectory() as td:
     repo = Path(td)
@@ -235,7 +275,43 @@ with tempfile.TemporaryDirectory() as td:
 with tempfile.TemporaryDirectory() as td:
     repo = Path(td)
     write_vanilla_keys(repo / "sources" / "vanilla_keys.json")
-    (repo / "sources" / "en").mkdir(parents=True)
+    en_dir = repo / "sources" / "en"
+    en_dir.mkdir(parents=True)
+    rid = "translate_en|mods/m/42/media/lua/shared/Translate/EN/UI.json|UI_Sentinel"
+    (en_dir / "1.json").write_text(json.dumps({rid: "x"}), encoding="utf-8")
+    meta_dir = repo / "sources" / "mods" / "1"
+    meta_dir.mkdir(parents=True)
+    (meta_dir / "metadata.json").write_text(
+        json.dumps({"workshop_id": "1", "mod_ids": ["Mod1"]}), encoding="utf-8"
+    )
+    (repo / "sources" / "mod_registry.json").write_text(json.dumps({"mods": {
+        "1": {
+            "status": "active", "source": "test", "verified": "2026-08-30",
+            "mod_ids": ["Mod1"],
+        }
+    }}), encoding="utf-8")
+    state = repo / "tracker-state"
+    state.mkdir()
+    (state / "watchlist.json").write_text(json.dumps({
+        "schema_version": verify_dist.tracker.SCHEMA_VERSION,
+        "count": 2,
+        "items": {
+            "1": {"mod_ids": ["Mod1"], "role": "mod"},
+            verify_dist.tracker.AS1_WORKSHOP_ID: {
+                "mod_ids": [verify_dist.tracker.AS1_MOD_ID], "role": "as1"
+            },
+        },
+    }), encoding="utf-8")
+    (state / "en_corpus_hashes.json").write_text(json.dumps({
+        "extractor_schema": verify_dist.tracker.EXTRACTOR_SCHEMA,
+        "mods": {"1": {
+            "extractor_schema": verify_dist.tracker.EXTRACTOR_SCHEMA,
+            "records": {rid: hashlib.sha256(b"x").hexdigest()[:12]},
+        }},
+    }), encoding="utf-8")
+    (state / "timestamps.json").write_text(
+        json.dumps({"items": {"1": {"removed": False}}}), encoding="utf-8"
+    )
     dist_ch = repo / "dist" / "CH"
     dist_ch.mkdir(parents=True)
     # IG_UI.json 是白名單活檔但已抑制掉 IGUI_Vanilla；死檔 UI_EN.json 仍留著同鍵

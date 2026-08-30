@@ -12,8 +12,9 @@ verify_dist.py — MinidoracatModLangFor42 的獨立 dist 驗證器（oracle）�
   * 純標準函式庫，無第三方相依 → 供 `uv run scripts/verify_dist.py` 直接執行。
 
 驗證項（預設全跑；任一 FAIL → 退出碼 1，全 PASS → 0）：
-  ※ As1 快照樹缺席（Steam 覆蓋了 Workshop 版本目錄）時 [1]/[8] 判 **SKIP**，其餘照跑；
-    SKIP≠PASS，退出碼仍為 1，除非明示 --allow-missing-as1。
+  ※ As1 快照樹缺席（Steam 覆蓋了 Workshop 版本目錄）時只有 [8] 判 **SKIP**；
+    [1] 仍照跑並降級「對 As1 原值」的比對。SKIP≠PASS，退出碼仍為 1，
+    除非明示 --allow-missing-as1。
   [1] CN 逐檔 parity：dist CN/*.json 對 sanitize(As1 快照值) 逐檔逐鍵一致
       （42.20.1 formatted() 安全逸出後的應出貨值；登記例外鍵改為對
       sanitize(cn_safe_value) 核對，見 sources/placeholder_exceptions.json）
@@ -43,6 +44,8 @@ verify_dist.py — MinidoracatModLangFor42 的獨立 dist 驗證器（oracle）�
                       craftRecipe 區塊名（Translator.getRecipeName→recipe.get(name)）；
                       去前綴後對得上上游現行區塊名、卻沒出貨該裸鍵＝玩家看到英文配方名。
                       豁免須登記 recipe_dead_allowlist.json
+  [17] Print Media   ：`Print_Media.json` 的 `*_info` 須符合 42.20.4 rich-text 解析契約。
+  （編號歷史上缺 [5]；實際驗證項數仍為 16。）
 
 冪等子命令（獨立於預設全跑，供「連跑兩次 build 第二次零 diff」驗證）：
   --snapshot-dist <dir>：把 dist 現況（.json + language.txt + client/*.lua 的 sha256）存到 <dir>/dist_hashes.json
@@ -388,14 +391,40 @@ def _load_own_mods(repo: str) -> dict[str, dict]:
 
 
 def _load_ch_corpus(repo: str) -> dict[str, dict]:
-    """讀 sources/ch/*.json（CH 人工真相 corpus）。缺目錄/解析失敗 → 擲例外（呼叫端轉 FAIL）。"""
+    """讀 sources/ch/*.json；缺目錄、零 corpus 檔或解析失敗一律擲例外。"""
     d = os.path.join(repo, "sources", "ch")
     if not os.path.isdir(d):
         raise ValueError("sources/ch 目錄不存在（CH corpus 為人工真相層，必要）")
     out, errors = _load_json_dir(d)
     if errors:
         raise ValueError("; ".join(errors))
+    if not out:
+        raise ValueError("sources/ch 沒有任何 JSON corpus（人工真相層不可為空）")
     return out
+
+
+def _parse_worklist_entry(entry_key: str, spec) -> tuple[str, str, str]:
+    """獨立驗證 worklist entry；壞真相不得進 [10] 自動對帳。"""
+    fname, sep, key = entry_key.partition("|")
+    if (
+        not sep or len(fname) <= len(".json") or not fname.endswith(".json")
+        or "/" in fname or "\\" in fname or not key
+    ):
+        raise ValueError(f"worklist entry key 形狀壞損：{entry_key!r}")
+    if not isinstance(spec, dict):
+        raise ValueError(f"worklist {entry_key!r} 的規格須為物件")
+    kind = spec.get("kind")
+    required = {
+        "added": ("new_cn",),
+        "removed": ("old_cn",),
+        "changed": ("old_cn", "new_cn"),
+    }
+    if kind not in required:
+        raise ValueError(f"worklist {entry_key!r} 的 kind 非法：{kind!r}")
+    missing = [field for field in required[kind] if not isinstance(spec.get(field), str)]
+    if missing:
+        raise ValueError(f"worklist {entry_key!r} 缺字串欄位：{missing}")
+    return kind, fname, key
 
 
 def _load_worklist(repo: str) -> dict[str, object]:
@@ -414,7 +443,13 @@ def _load_worklist(repo: str) -> dict[str, object]:
         data = json.load(f)
     if not isinstance(data, dict):
         raise ValueError("ch_sync_worklist.json 頂層非物件")
-    return {k: v for k, v in data.items() if "|" in k}
+    entries: dict[str, object] = {}
+    for key, spec in data.items():
+        if "|" not in key:
+            continue
+        _parse_worklist_entry(key, spec)
+        entries[key] = spec
+    return entries
 
 
 _HASH16_RE = re.compile(r"^[0-9a-f]{16}$")
@@ -525,8 +560,8 @@ def _load_vanilla_basis(repo: str) -> tuple[dict[str, set[str]], dict[str, dict]
     for fname, ks in scoped.items():
         if not isinstance(fname, str) or not fname:
             raise ValueError(f"vanilla_keys.json scoped_keys 檔名非法：{fname!r}")
-        if not isinstance(ks, list) or not all(isinstance(k, str) and k for k in ks):
-            raise ValueError(f"vanilla_keys.json scoped_keys[{fname}] 非非空字串清單")
+        if not isinstance(ks, list) or not ks or not all(isinstance(k, str) and k for k in ks):
+            raise ValueError(f"vanilla_keys.json scoped_keys[{fname}] 不是非空字串清單")
         if len(set(ks)) != len(ks):
             raise ValueError(f"vanilla_keys.json scoped_keys[{fname}] 有重複鍵")
         union.update(ks)
@@ -925,14 +960,16 @@ def check_sync_worklist(repo: str) -> tuple[bool, list[str]]:
     wl = _load_worklist(repo)
     try:
         corpus = _load_ch_corpus(repo)
-    except Exception:  # noqa: BLE001 — corpus 壞掉由 [9] 報，此處保守全列
-        corpus = {}
+    except Exception as exc:  # noqa: BLE001 — [10] 必須獨立 fail-closed，不能靠 [9] 代報
+        return False, [f"CH corpus 無法載入，worklist 不得自動對帳：{exc}"]
     details: list[str] = []
     for k, v in sorted(wl.items()):
-        kind = v.get("kind") if isinstance(v, dict) else None
-        fname, _, key = k.partition("|")
+        kind, fname, key = _parse_worklist_entry(k, v)
         present = key in corpus.get(fname, {})
-        if (kind == "added" and present) or (kind == "removed" and not present):
+        if (
+            (kind == "added" and present)
+            or (kind == "removed" and fname in corpus and not present)
+        ):
             continue
         details.append(f"未處理條目：{k}（{kind or '?'}）")
     return (not details), details
@@ -1229,17 +1266,16 @@ def check_vanilla_collision(
     Translate 檔 `map.put()` 進同一張全域字串表、後載入者覆寫，故 dist 內任何
     vanilla 同 (檔,鍵) 都會改寫本體譯文——連沒裝任何模組的玩家都受影響
     （2026-08-10 玩家回報：原版霰彈槍被改名為 Remington M870）。build 的
-    `suppress_vanilla()` 應已剔除；本項獨立重掃 dist 確認抑制真的生效，
-    只有登記於 `keep` 者放行。
+    `suppress_vanilla()` 應已剔除；本項獨立重掃 dist 確認抑制真的生效。
+    `keep` 已不是放行通道，非空即代表基準違反零覆寫原則並直接 FAIL。
 
     **副閘門（own 來源面）**：原創鍵一開始就不該撞 vanilla 鍵名；
     比對基準與 no-op 豁免登記於 sources/vanilla_keys.json（獨立重讀，不共用 builder 載入）。
-    own_translations 走裸鍵名比對（跨檔即算撞，對「原創鍵不得撞本體」是刻意保守的網）；
-    origin=own 的 mod 目錄走**檔域**比對——它們帶逐地圖檔泛用鍵（title/description），
-    裸鍵比對會與 vanilla 各地圖檔跨檔假陽性，這也是 2026-08-02 當時暫不納入的原因；
-    `scoped_keys` 落地後該理由消失，改以精確 (檔|鍵) 納入 blocking。
-    allowlist 值可為 {"reason", "own_anchor"}；own_anchor＝登記當時 own 條目
-    sha256(en|ch|cn)[:16]，值變動即豁免失效（同 cn_overrides/lint_exemptions 錨點慣例）。
+    一般 own_translations 鍵走裸鍵名比對（跨檔即算撞，對「原創鍵不得撞本體」是刻意保守的網）；
+    地圖泛用鍵 `title`／`description` 則與 origin=own 目錄相同，必須走精確 (檔,鍵)：
+    PZ 依地圖檔名分表載入，跨地圖裸鍵相同不代表覆寫。對應 allowlist key 也必須寫成
+    `檔名|鍵`，不可用裸 `title`／`description` 一筆放行所有地圖。origin=own 的 mod
+    目錄同樣走檔域比對。allowlist 值為含 `own_anchor` 的物件；值變動即豁免失效。
     """
     with open(os.path.join(repo, "sources", "vanilla_keys.json"), encoding="utf-8-sig") as f:
         data = json.load(f)
@@ -1261,6 +1297,7 @@ def check_vanilla_collision(
     vanilla = set(keys_raw)
     own = _load_own(repo)
     details: list[str] = []
+    generic = {"title", "description"}
 
     # --- 主閘門：dist 不得殘留 vanilla 同 (檔,鍵) ---
     scoped, keep = _load_vanilla_basis(repo)
@@ -1289,12 +1326,15 @@ def check_vanilla_collision(
                         )
     for fname, keys in sorted(own.items()):
         for key in sorted(keys):
-            if key not in vanilla:
+            hit = key in scoped.get(fname, set()) if key in generic else key in vanilla
+            if not hit:
                 continue
-            spec = allow.get(key)
+            allow_key = f"{fname}|{key}" if key in generic else key
+            spec = allow.get(allow_key)
             if spec is None:
                 details.append(
-                    f"  {fname}|{key} 撞 vanilla 鍵（覆寫本體翻譯；確認 no-op 後於 vanilla_keys.json allowlist 登記）"
+                    f"  {fname}|{key} 撞 vanilla 鍵（覆寫本體翻譯；"
+                    f"確認 no-op 後於 vanilla_keys.json allowlist 登記 `{allow_key}`）"
                 )
                 continue
             entry = keys[key]
@@ -1330,7 +1370,6 @@ def check_vanilla_collision(
     warns: list[str] = []
     known = set(known_raw)
     scoped_pairs = set(pairs_raw)
-    generic = {"title", "description"}
     current: set[str] = set()
     for fname, keys in sorted(_load_as1_lane_cn(repo, warns).items()):
         for key in sorted(keys):
@@ -1433,24 +1472,201 @@ def _renamed_successors(key: str) -> tuple[str, ...]:
     return ()
 
 
-def _upstream_keys(repo: str) -> set[str]:
-    """sources/en/ 鏡像裡所有上游 translate_en 鍵名（判斷「這個鍵名還算數嗎」）。"""
-    out: set[str] = set()
+def _oracle_watchlist_items(repo: str) -> dict[str, dict]:
+    """獨立重算 metadata/registry watchlist universe，並驗落盤清單 freshness。"""
+    sources = os.path.join(repo, "sources")
+    mods_dir = os.path.join(sources, "mods")
+    registry_path = os.path.join(sources, "mod_registry.json")
+    watchlist_path = os.path.join(repo, "tracker-state", "watchlist.json")
+    if not os.path.isdir(mods_dir):
+        raise ValueError("sources/mods metadata 目錄不存在")
+    for path in (registry_path, watchlist_path):
+        if not os.path.isfile(path):
+            raise ValueError(f"證據閉環必要檔缺失：{path}")
+    try:
+        with open(registry_path, encoding="utf-8-sig") as f:
+            registry_doc = json.load(f)
+        with open(watchlist_path, encoding="utf-8-sig") as f:
+            watchlist = json.load(f)
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ValueError(f"watchlist/registry 無法解析：{exc}") from exc
+    mods = registry_doc.get("mods") if isinstance(registry_doc, dict) else None
+    if not isinstance(mods, dict) or not mods:
+        raise ValueError("mod_registry.json mods 須為非空物件")
+    active: dict[str, dict] = {}
+    retired: set[str] = set()
+    for wid, spec in mods.items():
+        if not isinstance(wid, str) or not wid.isdigit() or not isinstance(spec, dict):
+            raise ValueError(f"mod_registry entry 形狀壞損：{wid!r}")
+        status = spec.get("status")
+        if status not in {"active", "retired"}:
+            raise ValueError(f"mod_registry {wid} status 非法：{status!r}")
+        if not all(isinstance(spec.get(field), str) and spec[field].strip()
+                   for field in ("source", "verified")):
+            raise ValueError(f"mod_registry {wid} 缺非空 source/verified")
+        reg_ids = spec.get("mod_ids", [])
+        if not isinstance(reg_ids, list) or not all(
+            isinstance(mod_id, str) and mod_id for mod_id in reg_ids
+        ):
+            raise ValueError(f"mod_registry {wid} mod_ids 形狀壞損")
+        if status == "active":
+            active[wid] = spec
+        else:
+            retired.add(wid)
+
+    expected: dict[str, dict] = {}
+    for wid in sorted(os.listdir(mods_dir)):
+        mod_dir = os.path.join(mods_dir, wid)
+        if not os.path.isdir(mod_dir):
+            continue
+        meta_path = os.path.join(mod_dir, "metadata.json")
+        if not os.path.isfile(meta_path):
+            raise ValueError(f"source mod 目錄缺 metadata.json：{mod_dir}")
+        if not wid.isdigit():
+            raise ValueError(f"metadata 目錄名非純數字 wid：{meta_path}")
+        try:
+            with open(meta_path, encoding="utf-8-sig") as f:
+                meta = json.load(f)
+        except (OSError, json.JSONDecodeError) as exc:
+            raise ValueError(f"metadata 無法解析：{meta_path}（{exc}）") from exc
+        if not isinstance(meta, dict):
+            raise ValueError(f"metadata 頂層非物件：{meta_path}")
+        declared = meta.get("workshop_id")
+        if declared is not None and (
+            not isinstance(declared, str) or declared != wid
+        ):
+            raise ValueError(f"metadata workshop_id 與目錄名不一致：{meta_path}")
+        mod_ids = meta.get("mod_ids", [])
+        if not isinstance(mod_ids, list) or not all(
+            isinstance(mod_id, str) and mod_id for mod_id in mod_ids
+        ):
+            raise ValueError(f"metadata mod_ids 形狀壞損：{meta_path}")
+        if wid not in retired:
+            expected[wid] = {"mod_ids": list(mod_ids), "role": "mod"}
+    for wid, spec in sorted(active.items()):
+        if wid == tracker.AS1_WORKSHOP_ID:
+            continue
+        reg_ids = list(spec.get("mod_ids") or [])
+        if wid not in expected:
+            expected[wid] = {"mod_ids": reg_ids, "role": "mod"}
+        elif not expected[wid]["mod_ids"] and reg_ids:
+            expected[wid]["mod_ids"] = reg_ids
+    expected[tracker.AS1_WORKSHOP_ID] = {
+        "mod_ids": [tracker.AS1_MOD_ID], "role": "as1"
+    }
+    if (
+        not isinstance(watchlist, dict)
+        or watchlist.get("schema_version") != tracker.SCHEMA_VERSION
+        or not isinstance(watchlist.get("items"), dict)
+        or watchlist.get("count") != len(watchlist.get("items", {}))
+        or watchlist.get("items") != expected
+    ):
+        raise ValueError("tracker-state/watchlist.json 與 metadata/registry 不同步")
+    return expected
+
+
+_STATE_HASH12_RE = re.compile(r"^[0-9a-f]{12}$")
+_STATE_KINDS = {
+    "translate_en", "script_item_dn", "script_item", "script_recipe",
+    "script_vehicle", "script_fixing", "script_craftRecipe",
+}
+_MIRROR_KINDS = {"translate_en", "script_item_dn"}
+
+
+def _closed_upstream_mirrors(repo: str) -> dict[str, dict[str, str]]:
+    """驗 expected wid ↔ current state ↔ EN mirror exact closure；removed wid 保留歷史鏡像。"""
+    expected_items = _oracle_watchlist_items(repo)
+    expected = set(expected_items) - {tracker.AS1_WORKSHOP_ID}
+    state_path = os.path.join(repo, "tracker-state", "en_corpus_hashes.json")
+    timestamps_path = os.path.join(repo, "tracker-state", "timestamps.json")
     en_dir = os.path.join(repo, "sources", "en")
     if not os.path.isdir(en_dir):
-        return out
-    for name in os.listdir(en_dir):
-        if not name.endswith(".json"):
-            continue
+        raise ValueError(f"sources/en 證據目錄不存在：{en_dir}")
+    try:
+        with open(state_path, encoding="utf-8-sig") as f:
+            state_doc = json.load(f)
+        with open(timestamps_path, encoding="utf-8-sig") as f:
+            timestamps_doc = json.load(f)
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ValueError(f"tracker state 無法解析：{exc}") from exc
+    states = state_doc.get("mods") if isinstance(state_doc, dict) else None
+    ts_items = timestamps_doc.get("items") if isinstance(timestamps_doc, dict) else None
+    if (
+        not isinstance(state_doc, dict)
+        or state_doc.get("extractor_schema") != tracker.EXTRACTOR_SCHEMA
+        or not isinstance(states, dict)
+        or not isinstance(ts_items, dict)
+    ):
+        raise ValueError("en_corpus_hashes/timestamps schema 壞損")
+    removed = {
+        wid for wid in expected
+        if isinstance(ts_items.get(wid), dict) and ts_items[wid].get("removed") is True
+    }
+
+    mirrors: dict[str, dict[str, str]] = {}
+    for name in sorted(n for n in os.listdir(en_dir) if n.endswith(".json")):
+        wid = name[:-5]
+        if not wid.isdigit():
+            raise ValueError(f"sources/en 鏡像檔名非純數字 wid：{name}")
+        path = os.path.join(en_dir, name)
         try:
-            with open(os.path.join(en_dir, name), encoding="utf-8") as f:
+            with open(path, encoding="utf-8") as f:
                 data = json.load(f)
-        except Exception:  # noqa: BLE001 — 單一鏡像壞掉不該讓整項 gate 誤判
+        except (OSError, json.JSONDecodeError) as exc:
+            raise ValueError(f"{path} 無法解析：{exc}") from exc
+        if not isinstance(data, dict) or not data:
+            raise ValueError(f"{path} 頂層須為非空物件")
+        for rid, value in data.items():
+            parts = rid.split("|", 2) if isinstance(rid, str) else ()
+            if len(parts) != 3 or not all(parts):
+                raise ValueError(f"{path} record id 形狀壞損：{rid!r}")
+            if parts[0] not in _MIRROR_KINDS or not isinstance(value, str):
+                raise ValueError(f"{path} 含非法 kind/value：{rid!r}")
+        mirrors[wid] = data
+    unknown = sorted(set(mirrors) - expected)
+    if unknown:
+        raise ValueError(f"sources/en 含不在現行 watchlist 的 wid：{unknown[:10]}")
+
+    for wid in sorted(expected - removed):
+        st = states.get(wid)
+        if not isinstance(st, dict) or st.get("extractor_schema") != tracker.EXTRACTOR_SCHEMA:
+            raise ValueError(f"live wid {wid} 缺 current extractor state")
+        records = st.get("records")
+        if not isinstance(records, dict):
+            raise ValueError(f"live wid {wid} records 非物件")
+        for rid, digest in records.items():
+            parts = rid.split("|", 2) if isinstance(rid, str) else ()
+            if (
+                len(parts) != 3 or not all(parts) or parts[0] not in _STATE_KINDS
+                or not isinstance(digest, str) or not _STATE_HASH12_RE.fullmatch(digest)
+            ):
+                raise ValueError(f"live wid {wid} state record 壞損：{rid!r}")
+        mirror_rids = {rid for rid in records if rid.split("|", 1)[0] in _MIRROR_KINDS}
+        mirror = mirrors.get(wid)
+        if not mirror_rids:
+            if mirror is not None:
+                raise ValueError(f"live wid {wid} 無 text-bearing state 卻殘留 EN mirror")
             continue
+        if mirror is None:
+            raise ValueError(f"live wid {wid} 有 text-bearing state 但缺 EN mirror")
+        if set(mirror) != mirror_rids:
+            raise ValueError(f"live wid {wid} state/mirror rid 集合不一致")
+        for rid in mirror_rids:
+            got = hashlib.sha256(mirror[rid].encode("utf-8")).hexdigest()[:12]
+            if got != records[rid]:
+                raise ValueError(f"live wid {wid} state/mirror 值 hash 不一致：{rid}")
+    return mirrors
+
+
+def _upstream_keys(repo: str) -> set[str]:
+    """只在 expected/state/mirror exact closure 通過後收 runtime-effective translate keys。"""
+    out: set[str] = set()
+    for wid, data in _closed_upstream_mirrors(repo).items():
+        effective = tracker.resolve_effective_branches(data)
         for rid in data:
-            kind, _, rest = rid.partition("|")
-            if kind == "translate_en":
-                out.add(rest.partition("|")[2])
+            kind, _, key = rid.split("|", 2)
+            if kind == "translate_en" and tracker.is_effective(rid, effective):
+                out.add(key)
     return out
 
 
@@ -2155,9 +2371,8 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
 
     # As1 快照樹是 Steam 管理的 Workshop 目錄，Valve 會在上游改版時直接覆蓋版本資料夾
     # （實例：2026-08-05 As1 的 42.19/ 被 42.20/ 取代，舊版 Workshop 不提供重新下載＝
-    # 該快照永久消失）。舊行為是在此硬性 return 1，導致其餘 10 項完全跑不到；
-    # 改為把 [1]/[8] 判 SKIP、其餘照跑，讓「哪些還好、哪些壞了」看得見。
-    # 退出碼預設仍為 1（SKIP 不等於 PASS，不得讓 release gate 靜默放行）。
+    # 該快照永久消失）。快照缺席時只有 [8] 判 SKIP；[1] 仍執行，但降級略過
+    # 「對 As1 原值」的比對。退出碼預設仍為 1（SKIP 不等於 PASS）。
     as1_missing = not os.path.isdir(as1_cn)
     if as1_missing:
         print(f"⚠ As1 快照 CN 目錄不存在：{as1_cn}")

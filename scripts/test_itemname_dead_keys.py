@@ -12,6 +12,7 @@ Run: uv run scripts/test_itemname_dead_keys.py
 
 from __future__ import annotations
 
+import hashlib
 import json
 import sys
 import tempfile
@@ -200,18 +201,117 @@ assert S("Sandbox_Foo") == (), "非 UI_/IGUI_ 前綴不得亂猜後繼者"
 assert S("UI_") == ("IGUI_",) and S("Recipes_X") == (), "邊界"
 
 
-def _g13(dist_ch_files, upstream, repo_sources_en):
-    """組臨時 dist + sources/en，回 [13] 的 (fail, warn)。"""
+def _write_upstream_fixture(
+    root: Path,
+    files: dict[str, str],
+    *,
+    make_dir: bool = True,
+    state_values: dict[str, dict[str, str]] | None = None,
+) -> None:
+    """建立 expected watchlist/state/mirror exact closure fixture。"""
+    parsed: dict[str, dict[str, str]] = {}
+    for name, text in files.items():
+        if not name.endswith(".json") or not name[:-5].isdigit():
+            continue
+        try:
+            data = json.loads(text)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(data, dict) and all(
+            isinstance(k, str) and isinstance(v, str) for k, v in data.items()
+        ):
+            parsed[name[:-5]] = data
+    if state_values is None:
+        state_values = parsed or {
+            "1": {
+                "translate_en|mods/m/42/media/lua/shared/Translate/EN/UI.json|UI_Sentinel": "e"
+            }
+        }
+    expected = sorted(state_values)
+    sources = root / "sources"
+    mods = sources / "mods"
+    registry_mods = {}
+    watch_items = {
+        verify_dist.tracker.AS1_WORKSHOP_ID: {
+            "mod_ids": [verify_dist.tracker.AS1_MOD_ID], "role": "as1"
+        }
+    }
+    states = {}
+    for wid in expected:
+        meta_dir = mods / wid
+        meta_dir.mkdir(parents=True)
+        (meta_dir / "metadata.json").write_text(
+            json.dumps({"workshop_id": wid, "mod_ids": [f"Mod{wid}"]}),
+            encoding="utf-8",
+        )
+        registry_mods[wid] = {
+            "status": "active", "source": "test", "verified": "2026-08-30",
+            "mod_ids": [f"Mod{wid}"],
+        }
+        watch_items[wid] = {"mod_ids": [f"Mod{wid}"], "role": "mod"}
+        values = state_values[wid]
+        states[wid] = {
+            "extractor_schema": verify_dist.tracker.EXTRACTOR_SCHEMA,
+            "records": {
+                rid: hashlib.sha256(value.encode("utf-8")).hexdigest()[:12]
+                for rid, value in values.items()
+            },
+        }
+    (sources / "mod_registry.json").write_text(
+        json.dumps({"mods": registry_mods}), encoding="utf-8"
+    )
+    tracker_state = root / "tracker-state"
+    tracker_state.mkdir()
+    (tracker_state / "watchlist.json").write_text(json.dumps({
+        "schema_version": verify_dist.tracker.SCHEMA_VERSION,
+        "count": len(watch_items),
+        "items": watch_items,
+    }), encoding="utf-8")
+    (tracker_state / "en_corpus_hashes.json").write_text(json.dumps({
+        "extractor_schema": verify_dist.tracker.EXTRACTOR_SCHEMA,
+        "mods": states,
+    }), encoding="utf-8")
+    (tracker_state / "timestamps.json").write_text(json.dumps({
+        "items": {wid: {"removed": False} for wid in expected}
+    }), encoding="utf-8")
+    if make_dir:
+        en = sources / "en"
+        en.mkdir()
+        for name, text in files.items():
+            (en / name).write_text(text, encoding="utf-8")
+
+
+def _upstream_result(
+    files: dict[str, str],
+    make_dir: bool = True,
+    state_values: dict[str, dict[str, str]] | None = None,
+):
     with tempfile.TemporaryDirectory() as td:
-        ch = Path(td) / "CH"
+        _write_upstream_fixture(
+            Path(td), files, make_dir=make_dir, state_values=state_values
+        )
+        try:
+            return verify_dist._upstream_keys(td)
+        except ValueError as exc:
+            return str(exc)
+
+
+def _g13(dist_ch_files, upstream, repo_sources_en):
+    """組完整 closure fixture + dist，回 [13] 的 (fail, warn)。"""
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        ch = root / "CH"
         ch.mkdir()
         for name, data in dist_ch_files.items():
             (ch / name).write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
-        en = Path(td) / "sources" / "en"
-        en.mkdir(parents=True)
-        (en / "1.json").write_text(json.dumps(
-            {f"translate_en|mods/m/42/media/lua/shared/Translate/EN/x.json|{k}": "e"
-             for k in upstream}, ensure_ascii=False), encoding="utf-8")
+        records = {
+            "translate_en|mods/m/42/media/lua/shared/Translate/EN/x.json|UI_Sentinel": "e",
+            **{
+                f"translate_en|mods/m/42/media/lua/shared/Translate/EN/x.json|{k}": "e"
+                for k in upstream
+            },
+        }
+        _write_upstream_fixture(root, {"1.json": json.dumps(records)})
         ok, fail, warn = verify_dist.check_loadable_files(td, str(ch))
         return fail, [w for w in warn if "→" in w]
 
@@ -236,4 +336,69 @@ fail, warn = _g13({"Dead.json": {"UI_X": "舊"}, "UI.json": {"UI_X": "活"}},
                   upstream=["UI_X"], repo_sources_en=None)
 assert not fail and not warn, f"同名鍵已在正確檔卻仍報：{fail} {warn}"
 
-print("✅ test [13] 改名後繼者抑制：5 組情境全過")
+# [13] 證據缺／空／壞不能退化成「所有鍵都已作廢」；有效分支契約與 split 共用 tracker。
+for files, make_dir, needle, why in (
+    ({}, False, "不存在", "目錄缺失"),
+    ({}, True, "缺 EN mirror", "零鏡像但 state 有文本"),
+    ({"1.json": "{}"}, True, "非空物件", "空鏡像"),
+    ({"1.json": "[]"}, True, "非空物件", "頂層非物件"),
+    ({"1.json": "{"}, True, "無法解析", "壞 JSON"),
+    ({"x.json": '{"translate_en|a|K":"v"}'}, True, "wid", "非 wid 檔名"),
+    ({"1.json": '{"broken":"v"}'}, True, "record id", "rid 壞損"),
+    ({"1.json": '{"lua_literal|a|K":"v"}'}, True, "非法 kind", "未知 kind"),
+    ({"1.json": '{"translate_en|a|K":7}'}, True, "非法 kind/value", "非字串值"),
+):
+    got = _upstream_result(files, make_dir)
+    assert isinstance(got, str) and needle in got, f"{why} 未 fail-closed：{got!r}"
+
+# partial set loss：保留合法 wid 1 sentinel，刪掉真正定義目標鍵的 wid 2 mirror。
+sentinel_rid = "translate_en|mods/m/42/media/lua/shared/Translate/EN/UI.json|UI_Sentinel"
+target_rid = "translate_en|mods/n/42/media/lua/shared/Translate/EN/UI.json|UI_Target"
+partial = _upstream_result(
+    {"1.json": json.dumps({sentinel_rid: "s"})},
+    state_values={"1": {sentinel_rid: "s"}, "2": {target_rid: "target"}},
+)
+assert isinstance(partial, str) and "wid 2" in partial and "缺 EN mirror" in partial, partial
+
+# 合法 empty corpus：只有非鏡像 script record，不得被逼著生出 `{}` mirror。
+script_only = "script_item|mods/m/42/media/scripts/items.txt|Base.X"
+assert _upstream_result({}, state_values={"1": {script_only: "Base.X"}}) == set()
+
+# rid 集合相同但值 hash 不符同樣 blocking。
+with tempfile.TemporaryDirectory() as td:
+    root = Path(td)
+    _write_upstream_fixture(root, {"1.json": json.dumps({sentinel_rid: "s"})})
+    state_path = root / "tracker-state" / "en_corpus_hashes.json"
+    state_doc = json.loads(state_path.read_text(encoding="utf-8"))
+    state_doc["mods"]["1"]["records"][sentinel_rid] = "000000000000"
+    state_path.write_text(json.dumps(state_doc), encoding="utf-8")
+    try:
+        verify_dist._upstream_keys(td)
+        raise AssertionError("state/mirror 值 hash 不符未 fail-closed")
+    except ValueError as exc:
+        assert "hash 不一致" in str(exc), exc
+
+# partial source mod 目錄缺 metadata 不得同時從 expected watchlist 與 closure 消失。
+with tempfile.TemporaryDirectory() as td:
+    root = Path(td)
+    _write_upstream_fixture(root, {"1.json": json.dumps({sentinel_rid: "s"})})
+    (root / "sources" / "mods" / "777" / "CN").mkdir(parents=True)
+    try:
+        verify_dist._upstream_keys(td)
+        raise AssertionError("verify 未擋缺 metadata 的 source mod 目錄")
+    except ValueError as exc:
+        assert "缺 metadata.json" in str(exc), exc
+
+effective_records = {
+    "translate_en|mods/m/common/media/lua/shared/Translate/EN/UI.json|UI_Common": "c",
+    "translate_en|mods/m/42.19/media/lua/shared/Translate/EN/UI.json|UI_Old": "o",
+    "translate_en|mods/m/42.20/media/lua/shared/Translate/EN/UI.json|UI_Current": "n",
+    "translate_en|mods/m/42.21/media/lua/shared/Translate/EN/UI.json|UI_Future": "f",
+    "translate_en|mods/m/media/lua/shared/Translate/EN/UI.json|UI_Root": "r",
+    "translate_en|mods/m/42.20/media/lua/shared/Translate/EN/UI_EN.txt|UI_Txt": "t",
+    "script_item_dn|mods/m/42.20/media/scripts/items.txt|Base.Item": "Item",
+}
+got = _upstream_result({"1.json": json.dumps(effective_records)})
+assert got == {"UI_Common", "UI_Current"}, f"[13] 非有效分支／legacy txt 污染 upstream：{got}"
+
+print("✅ test [13] 改名後繼者 5 組＋evidence closure 14 組情境全過")

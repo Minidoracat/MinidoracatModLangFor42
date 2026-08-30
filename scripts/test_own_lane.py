@@ -196,6 +196,17 @@ with tempfile.TemporaryDirectory() as td:
     ok, det, _w = verify_dist.check_vanilla_collision(str(repo), str(dist_cn_dir))
     assert not ok and "own_anchor 失效" in det[0], f"錨點失效未偵測: {det}"
 
+    # 地圖泛用鍵只在同一檔名算碰撞；跨地圖 `title`/`description` 不是全域覆寫。
+    map_keys = big + ["title"]
+    map_scoped = mk_scoped(**{"Muldraugh.json": ["title"]})
+    w_vanilla({"keys": map_keys, "scoped_keys": map_scoped, "allowlist": {}})
+    w_own({"SomeMod.json": {"title": {"en": "e", "ch": "譯", "cn": "译"}}})
+    ok, det, _w = verify_dist.check_vanilla_collision(str(repo), str(dist_cn_dir))
+    assert ok and not det, f"跨地圖 title 被誤判 vanilla 碰撞: {det}"
+    w_own({"Muldraugh.json": {"title": {"en": "e", "ch": "譯", "cn": "译"}}})
+    ok, det, _w = verify_dist.check_vanilla_collision(str(repo), str(dist_cn_dir))
+    assert not ok and "Muldraugh.json|title" in det[0], f"同地圖 title 碰撞未擋: {det}"
+
     # 8b. warn 偵測器（As1 lane provenance）：新碰撞/known 靜默/generic 精確對/
     #     own-mod 排除/_unsorted 納入/stale 條目/新欄位 fail-closed
     def w_src(wid, meta, fname, payload):

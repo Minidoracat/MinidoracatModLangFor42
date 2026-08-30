@@ -6,13 +6,13 @@
 MinidoracatModLangFor42 build 管線（PZ B42 如一模組翻譯繁中版）
 
 用途：把 sources/ 的 canonical import（CN）+ 人工真相層（sources/ch corpus）
-      合併成 MOD/.../Translate/{CH,CN} 成品；並由 metadata 彙整 README 支援清單。
+      合併成 MOD/.../Translate/{CH,CN} 成品；並由 metadata ∪ active registry 彙整支援清單。
 
 使用方式：uv run scripts/build_mod.py [命令]
 
 命令：
   build     - 合併去重 + corpus/worklist/placeholder gate → 寫出成品（預設）
-  manifest  - 由 metadata.json + mod_names_zh.json 生成 SUPPORTED_MODS.md，並更新 README 統計摘要
+  manifest  - 由 metadata.json + mod_registry.json + mod_names_zh.json 生成四份支援清單／統計
               （--check：只驗不寫，生成物與來源不同步即退出 1）
 
 真相模型：CN 為衍生佈局的 canonical import；CH 為 sources/ch/ 人工真相 corpus
@@ -32,6 +32,7 @@ import shutil
 import sys
 from collections import Counter
 from pathlib import Path
+import mod_registry
 
 # ============================================================
 # 路徑配置
@@ -50,6 +51,7 @@ PLACEHOLDER_EXCEPTIONS_JSON = SOURCES / "placeholder_exceptions.json"
 OWN_TRANSLATIONS_JSON = SOURCES / "own_translations.json"
 VANILLA_KEYS_JSON = SOURCES / "vanilla_keys.json"
 UNSHIPPED_KEYS_JSON = SOURCES / "unshipped_keys.json"
+MOD_REGISTRY_JSON = SOURCES / "mod_registry.json"
 
 MOD_MEDIA = (
     PROJECT_ROOT
@@ -341,6 +343,30 @@ def load_ch_corpus() -> dict[str, dict]:
     return corpus
 
 
+def _parse_sync_worklist_entry(entry_key: str, spec) -> tuple[str, str, str]:
+    """驗證 worklist entry；key 內後續 `|` 合法，只切第一個 separator。"""
+    fname, sep, key = entry_key.partition("|")
+    if (
+        not sep or len(fname) <= len(".json") or not fname.endswith(".json")
+        or "/" in fname or "\\" in fname or not key
+    ):
+        raise ValueError(f"entry key 形狀壞損：{entry_key!r}")
+    if not isinstance(spec, dict):
+        raise ValueError(f"{entry_key!r} 的規格須為物件")
+    kind = spec.get("kind")
+    required = {
+        "added": ("new_cn",),
+        "removed": ("old_cn",),
+        "changed": ("old_cn", "new_cn"),
+    }
+    if kind not in required:
+        raise ValueError(f"{entry_key!r} 的 kind 非法：{kind!r}")
+    missing = [field for field in required[kind] if not isinstance(spec.get(field), str)]
+    if missing:
+        raise ValueError(f"{entry_key!r} 缺字串欄位：{missing}")
+    return kind, fname, key
+
+
 def load_sync_worklist() -> dict[str, dict]:
     """讀 ch_sync_worklist.json 的待辦條目（不含 | 的鍵為 _comment 等說明欄）。
 
@@ -352,10 +378,18 @@ def load_sync_worklist() -> dict[str, dict]:
     _require_truth_file(WORKLIST_JSON, "As1 同步 worklist")
     try:
         data = load_json(WORKLIST_JSON)
-    except json.JSONDecodeError as exc:
-        print(f"❌ ch_sync_worklist.json 格式錯誤：{exc}", file=sys.stderr)
+        if not isinstance(data, dict):
+            raise ValueError("頂層須為物件")
+        entries: dict[str, dict] = {}
+        for key, spec in data.items():
+            if "|" not in key:
+                continue
+            _parse_sync_worklist_entry(key, spec)
+            entries[key] = spec
+        return entries
+    except (json.JSONDecodeError, ValueError) as exc:
+        print(f"❌ ch_sync_worklist.json 格式／schema 錯誤：{exc}", file=sys.stderr)
         sys.exit(1)
-    return {k: v for k, v in data.items() if "|" in k}
 
 
 def load_review_state() -> dict[str, str]:
@@ -485,7 +519,7 @@ def _vanilla_basis_problem(data: dict) -> str | None:
     for fname, ks in scoped.items():
         if not isinstance(fname, str) or not fname:
             return f"檔名非法：{fname!r}"
-        if not isinstance(ks, list) or not all(isinstance(k, str) and k for k in ks):
+        if not isinstance(ks, list) or not ks or not all(isinstance(k, str) and k for k in ks):
             return f"{fname} 的鍵清單非法（須為非空字串清單）"
         if len(set(ks)) != len(ks):
             return f"{fname} 內有重複鍵（灌水會讓量級檢查失真）"
@@ -1146,7 +1180,10 @@ def cmd_build() -> int:
         kind = spec.get("kind") if isinstance(spec, dict) else None
         wf, _, wk = wkey.partition("|")
         in_corpus = wk in corpus.get(wf, {})
-        if (kind == "added" and in_corpus) or (kind == "removed" and not in_corpus):
+        if (
+            (kind == "added" and in_corpus)
+            or (kind == "removed" and wf in corpus and not in_corpus)
+        ):
             continue
         worklist_errors.append(f"  {wkey}（{kind or '?'}）")
     corpus_errors = corpus_gate(merged_cn, corpus)
@@ -1389,14 +1426,18 @@ def vanilla_override_counts() -> dict[str, int | None]:
 
     vk = load_json(VANILLA_KEYS_JSON)
     scoped = {f: set(ks) for f, ks in (vk.get("scoped_keys") or {}).items()}
+    registry = mod_registry.load_mod_registry(MOD_REGISTRY_JSON)
+    active = {wid for wid, spec in registry.items() if spec["status"] == "active"}
+    retired = {wid for wid, spec in registry.items() if spec["status"] == "retired"}
+    metadata_wids = {p.name for p in MODS_DIR.iterdir() if p.is_dir()}
+    universe = sorted((metadata_wids - retired) | active)
     out: dict[str, int | None] = {}
-    for mod_dir in sorted(MODS_DIR.iterdir()):
-        if not mod_dir.is_dir():
-            continue
+    for wid in universe:
+        mod_dir = MODS_DIR / wid
         hits: set[tuple[str, str]] = set()
         seen_any = False
 
-        mirror = SOURCES / "en" / f"{mod_dir.name}.json"
+        mirror = SOURCES / "en" / f"{wid}.json"
         if mirror.is_file():
             seen_any = True
             recs = load_json(mirror)
@@ -1404,7 +1445,7 @@ def vanilla_override_counts() -> dict[str, int | None]:
             for rid in recs:
                 if not rid.startswith("translate_en|") or not tracker.is_effective(rid, eff):
                     continue
-                _, relpath, key = rid.split("|", 2)   # record id ＝ kind|relpath|key
+                _, relpath, key = rid.split("|", 2)
                 fname = relpath.rsplit("/", 1)[-1]
                 if key in scoped.get(fname, ()):
                     hits.add((fname, key))
@@ -1417,50 +1458,86 @@ def vanilla_override_counts() -> dict[str, int | None]:
                     if key in scoped.get(jf.name, ()):
                         hits.add((jf.name, key))
 
-        out[mod_dir.name] = len(hits) if seen_any else None
+        out[wid] = len(hits) if seen_any else None
     return out
 
 
-def cmd_manifest(check_only: bool = False) -> int:
-    """check_only=True：不寫檔，產物與來源不同步即回傳 1。
 
-    存在理由：SUPPORTED_MODS.md／README 摘要是生成物，但**沒有任何 gate 攔得到漂移**——
-    改了 sources 卻沒重跑 manifest，文件就靜默停留在舊數字。實例：`cfcf3d8` 給
-    3628922658 補了 18 個裸 ItemName 鍵（總數 628→646），文件卻一直寫 628，
-    直到隔天有人剛好重生才發現。回歸測試 `scripts/test_manifest_fresh.py`。
+def _collect_manifest_rows() -> list[tuple[str, str, list[str], int | None]]:
+    """metadata owner 目錄 ∪ registry active；registry retired 明示否決 metadata。
+
+    registry-only 項目仍是「受支援且持續追蹤」的一員，但因缺 owner 閉環，鍵數回 `None`
+    而非誤寫 0。來源目錄不在 registry 的 origin=own 翻譯照常保留。
     """
-    print("=" * 60)
-    print("manifest：由 metadata.json 彙整 README 支援清單")
-    print("=" * 60)
-
-    if not MODS_DIR.is_dir():
-        # check 模式 fail-closed：來源缺席＝「無法驗證」，不是「驗過沒問題」。
-        print("⚠️ 找不到 sources/mods/，README 未更新。")
-        return 1 if check_only else 0
-
-    rows: list[tuple[str, str, list[str], int]] = []
+    registry = mod_registry.load_mod_registry(MOD_REGISTRY_JSON)
+    active = {wid for wid, spec in registry.items() if spec["status"] == "active"}
+    retired = {wid for wid, spec in registry.items() if spec["status"] == "retired"}
+    metadata: dict[str, tuple[dict, Path]] = {}
     for mod_dir in sorted(MODS_DIR.iterdir()):
         if not mod_dir.is_dir():
             continue
         ws_id = mod_dir.name
+        if not ws_id.isdigit():
+            raise ValueError(f"{mod_dir} 目錄名須為純數字 workshop id")
         meta_path = mod_dir / "metadata.json"
-        meta = load_json(meta_path) if meta_path.exists() else {}
-        mod_ids = meta.get("mod_ids")
+        if not meta_path.is_file():
+            raise ValueError(f"{mod_dir} 缺 metadata.json（partial source tree）")
+        meta = load_json(meta_path)
+        if not isinstance(meta, dict):
+            raise ValueError(f"{meta_path} 頂層須為物件")
+        declared = meta.get("workshop_id")
+        if declared is not None and (
+            not isinstance(declared, str) or declared != ws_id
+        ):
+            raise ValueError(f"{meta_path} 的 workshop_id 與目錄名 {ws_id!r} 不一致")
+        metadata[ws_id] = (meta, mod_dir)
+
+    rows: list[tuple[str, str, list[str], int | None]] = []
+    for ws_id in sorted((set(metadata) - retired) | active):
+        meta, mod_dir = metadata.get(ws_id, ({}, MODS_DIR / ws_id))
+        reg = registry.get(ws_id, {})
+        mod_ids = meta.get("mod_ids") or reg.get("mod_ids") or []
         if not mod_ids:
-            mod_ids = [meta["mod_id"]] if meta.get("mod_id") else []
-        name = meta.get("name") or meta.get("title") or ws_id
+            legacy = meta.get("mod_id")
+            mod_ids = [legacy] if legacy else []
+        if not isinstance(mod_ids, list) or not all(
+            isinstance(mod_id, str) and mod_id for mod_id in mod_ids
+        ):
+            raise ValueError(f"{ws_id} 的 mod_ids 須為字串陣列（元素不得空白）")
+        name = meta.get("name") or meta.get("title") or reg.get("name") or ws_id
         if meta.get("origin") == "own":
             name = f"{name}〔原創翻譯〕"
         cn = mod_dir / "CN"
-        key_count = 0
+        key_count: int | None = None
         if cn.is_dir():
-            for jf in cn.glob("*.json"):
-                key_count += len(load_json(jf))
-        rows.append((ws_id, name, mod_ids, key_count))
+            key_count = sum(len(load_json(jf)) for jf in cn.glob("*.json"))
+        rows.append((ws_id, name, list(mod_ids), key_count))
+    return rows
+
+
+def cmd_manifest(check_only: bool = False) -> int:
+    """由 metadata owner 目錄與 active registry 聯集重生四份玩家可見生成物。
+
+    `check_only=True` 不寫檔；任何來源／registry schema 壞損或產物漂移皆回傳 1。
+    registry-only 項目保留支援與追蹤身分，鍵數顯示 `?`，直到 EN→owner 閉環完成。
+    """
+    print("=" * 60)
+    print("manifest：由 metadata.json ∪ mod_registry active 彙整支援清單")
+    print("=" * 60)
+
+    if not MODS_DIR.is_dir():
+        print("❌ 找不到 sources/mods/；metadata 來源缺失，manifest 未更新。", file=sys.stderr)
+        return 1
+
+    try:
+        rows = _collect_manifest_rows()
+    except (ValueError, OSError, json.JSONDecodeError) as exc:
+        print(f"❌ manifest 來源不可用：{exc}", file=sys.stderr)
+        return 1
 
     if not rows:
-        print("⚠️ sources/mods/ 無任何 MOD 目錄，未更新。")
-        return 1 if check_only else 0
+        print("❌ metadata ∪ active registry 為空，manifest 未更新。", file=sys.stderr)
+        return 1
 
     names_zh: dict = load_json(MOD_NAMES_ZH_JSON) if MOD_NAMES_ZH_JSON.exists() else {}
 
@@ -1484,7 +1561,7 @@ def cmd_manifest(check_only: bool = False) -> int:
     def override_cell(ws_id: str) -> str:
         n = overrides.get(ws_id)
         if n is None:
-            return "?"          # 兩個來源都沒有（多為已下架、無法重新下載）＝無法判定
+            return "?"          # EN/CN owner 來源都沒有（registry-only／已下架）＝無法判定
         return f"⚠️ ≥{n}" if n else "—"
 
     def row_line(ws_id, name, mod_ids, key_count, extra: str = "") -> str:
@@ -1500,7 +1577,7 @@ def cmd_manifest(check_only: bool = False) -> int:
             cell(zh.get("name_zh", "")),
             cell(zh.get("summary", "")),
             ids,
-            str(key_count),
+            str(key_count) if key_count is not None else "?",
             override_cell(ws_id),
             cell(zh.get("note", "")),
         ]
@@ -1538,6 +1615,8 @@ def cmd_manifest(check_only: bool = False) -> int:
         "# 支援 MOD 清單\n\n"
         "> 本檔由 `uv run scripts/build_mod.py manifest` 自動生成，請勿手動編輯。\n"
         "> 中文名稱與摘要維護於 `sources/mod_names_zh.json`，修改後重跑 manifest。\n"
+        "> 「鍵數」的 `?` 代表該項已納入 active registry 支援與每日追蹤，但 EN→owner 尚未閉環；"
+        "閉環後會自動顯示可歸屬的實際鍵數。\n"
         "> 「覆寫本體」欄＝**該 MOD 自己改寫了幾個遊戲本體的官方翻譯鍵**。PZ 把所有 MOD 的翻譯檔"
         "併進同一張全域字串表、後載入者勝，所以裝了這類 MOD 之後，被它改寫的官方文字就會跟著變"
         "（例如原版彈匣被改成某槍械 MOD 的專屬名稱，或多人測試歡迎頁被換成模組作者的募款文案）。\n"
@@ -1545,7 +1624,7 @@ def cmd_manifest(check_only: bool = False) -> int:
         "所以本包不會幫任何 MOD 把官方文字改掉；此欄純粹是讓你知道**那個 MOD 本身**會動到哪些官方內容。\n"
         "> 數字取自「該 MOD 自帶的英文翻譯檔（只算引擎會載入的分支）」與「本包收錄的該 MOD 中文譯文」兩個來源的聯集，"
         "**是下限故標成 `≥`**——MOD 自帶的中文檔本包沒有鏡像，只存在於那裡的覆寫數不到。"
-        "`—` 代表在這兩個來源裡沒發現，不等於保證沒有；`?` 代表該 MOD（多為已下架）兩個來源都取不到、無法判定。\n"
+        "`—` 代表在這兩個來源裡沒發現，不等於保證沒有；`?` 代表該 MOD（registry-only 或已下架）兩個來源都取不到、無法判定。\n"
         "> 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制"
         "（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。\n"
         "> 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。\n\n"

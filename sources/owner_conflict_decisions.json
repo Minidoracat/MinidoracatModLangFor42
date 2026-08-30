@@ -44,9 +44,9 @@
   "ItemName|Base.792Box": {
    "action": "translate",
    "signature": "30c8a5b310240b90",
-   "reason": "7.92mm 與 8mm Mauser 是同一彈種（7.92×57mm Mauser）的兩種標註法，不是兩種彈：Guns93Test 的 script 原名就是 'Box of 7.92x57 Mauser Rounds'，自家 ItemName 才改標成 '8mm Mauser'；WarThunderVehicleLibrary 的 7.92mm 用於 IGUI_MainGun792mm『7.92mm Machine Gun』，即德系 7.92×57 機槍彈。功能上一邊是步槍彈盒、一邊是車載機槍彈盒，但同 key 即同一 item（載入時只有一份 script 定義生效），名稱層無誠實性問題。現行值與已出貨同族（Base.792Bullets/792Carton/792BulletsBrass 全用 '8mm Mauser'）一致，另有獨立的 Base.792x57* 家族使用 '7.92x57mm' 寫法，故此鍵維持現值即可，不建議單獨改成 7.92mm 造成家族分裂。",
-   "ch": "8mm Mauser子彈 (整盒)",
-   "cn": "8mm Mauser子弹 (整盒)"
+   "reason": "7.92mm 與 8mm Mauser 是同一彈種（7.92×57mm Mauser）的兩種標註法，不是兩種彈：Guns93Test 的 script 原名就是 'Box of 7.92x57 Mauser Rounds'，自家 ItemName 才改標成 '8mm Mauser'；WarThunderVehicleLibrary 的 7.92mm 用於 IGUI_MainGun792mm『7.92mm Machine Gun』，即德系 7.92×57 機槍彈。功能上一邊是步槍彈盒、一邊是車載機槍彈盒，但同 key 即同一 item（載入時只有一份 script 定義生效），名稱層無誠實性問題。現行值與已出貨同族（Base.792Bullets/792Carton/792BulletsBrass 全用 '8mm Mauser'）一致，另有獨立的 Base.792x57* 家族使用 '7.92x57mm' 寫法，故此鍵維持現值即可，不建議單獨改成 7.92mm 造成家族分裂。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+   "ch": "8mm毛瑟子彈 (整盒)",
+   "cn": "8mm毛瑟子弹 (整盒)"
   },
   "ItemName|Base.AK47": {
    "action": "translate",
@@ -163,9 +163,9 @@
   "ItemName|Base.792Bullets": {
    "action": "translate",
    "signature": "9a52c8a2664a9e95",
-   "reason": "「8mm Mauser Round」與「7.92 Ammo」是同一彈藥：7.92×57mm Mauser 的通稱即 8mm Mauser，兩名指同一 cartridge。現行譯名對兩 owner 皆成立，且與同倉的 Base.792BulletsBrass「空黃銅彈殼 (8mm Mauser)」寫法一致，維持現值。",
-   "ch": "8mm Mauser子彈",
-   "cn": "8mm Mauser子弹"
+   "reason": "「8mm Mauser Round」與「7.92 Ammo」是同一彈藥：7.92×57mm Mauser 的通稱即 8mm Mauser，兩名指同一 cartridge。現行譯名對兩 owner 皆成立，且與同倉的 Base.792BulletsBrass「空黃銅彈殼 (8mm Mauser)」寫法一致，維持現值。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+   "ch": "8mm毛瑟子彈",
+   "cn": "8mm毛瑟子弹"
   },
   "ItemName|Base.AR15": {
    "action": "translate",
@@ -289,9 +289,9 @@
   "ItemName|Base.Anaconda": {
    "action": "translate",
    "signature": "b3a2bf0e4126990a",
-   "reason": "同物命名差異，非撞 key。Guns93Test 直接寫 \"Colt Anaconda\"；GaelGunStore（含 Legacy）script DN 寫 \"Anaconda 44\"，但同 mod 自帶英文 Translate 明寫 \"Colt Anaconda Revolver\"，作者意圖就是柯爾特巨蟒 .44 Magnum。已做撞 key 反查：GaelGunStore 的 Revolvers.txt 全表只有這一支 Anaconda（另有 Base.Python357 \"Python .357\" 為另一支柯爾特），沒有把 Base.Anaconda 挪用成別的槍（對照本批 Base.Glock23 就是挪用案例）。故「柯爾特巨蟒左輪手槍」對所有 owner 成立。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
-   "ch": "柯爾特巨蟒左輪手槍",
-   "cn": "柯尔特巨蟒左轮手枪"
+   "reason": "同物命名差異，非撞 key。Guns93Test 直接寫 \"Colt Anaconda\"；GaelGunStore（含 Legacy）script DN 寫 \"Anaconda 44\"，但同 mod 自帶英文 Translate 明寫 \"Colt Anaconda Revolver\"，作者意圖就是柯爾特巨蟒 .44 Magnum。已做撞 key 反查：GaelGunStore 的 Revolvers.txt 全表只有這一支 Anaconda（另有 Base.Python357 \"Python .357\" 為另一支柯爾特），沒有把 Base.Anaconda 挪用成別的槍（對照本批 Base.Glock23 就是挪用案例）。故「柯爾特巨蟒左輪手槍」對所有 owner 成立。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+   "ch": "柯爾特水蟒左輪手槍",
+   "cn": "柯尔特水蟒转轮手枪"
   },
   "ItemName|Base.Clip_Pistol": {
    "action": "translate",
@@ -408,8 +408,8 @@
   "ItemName|Base.Colt9mm": {
    "action": "translate",
    "signature": "9b6da6425dc0b530",
-   "reason": "兩 owner 均為 Colt 9mm 卡賓槍（Colt 9mm SMG/carbine，AR-15 平台 9mm 版），GaelGun 的 'Colt9mm 9mm' 只是機械式命名。現行譯名對兩邊皆事實，維持現行。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
-   "ch": "柯爾特AR-15 9mm卡賓槍",
+   "reason": "兩 owner 均為 Colt 9mm 卡賓槍（Colt 9mm SMG/carbine，AR-15 平台 9mm 版），GaelGun 的 'Colt9mm 9mm' 只是機械式命名。現行譯名對兩邊皆事實，維持現行。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+   "ch": "柯爾特9mm槍械",
    "cn": "柯尔特AR-15 9mm卡宾枪"
   },
   "ItemName|Base.M16A2": {
@@ -457,16 +457,16 @@
   "ItemName|Base.TEC9": {
    "action": "translate",
    "signature": "e03a57253530ac84",
-   "reason": "三 owner 均為 Intratec TEC-9（9mm 半自動手槍），僅命名格式差異。廠牌 Intratec 對所有 owner 皆事實，維持現行。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。",
-   "ch": "英特拉泰克TEC-9手槍",
-   "cn": "英特拉泰克TEC-9手枪"
+   "reason": "三 owner 均為 Intratec TEC-9（9mm 半自動手槍），僅命名格式差異。廠牌 Intratec 對所有 owner 皆事實，維持現行。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+   "ch": "英特拉泰克 TEC-9",
+   "cn": "英特拉泰克 TEC-9"
   },
   "ItemName|Gunpart.bayonet1_cat": {
    "action": "translate",
    "signature": "2a7a9d75767c317a",
-   "reason": "兩 owner 屬同一 workshop 項目（3633421539）下的兩個 mod root，值差異僅是有無空格（M9 Military Bayonet vs M9MilitaryBayonet），必然同一實體。現行譯名維持。",
-   "ch": "M9軍用刺刀",
-   "cn": "M9军用刺刀"
+   "reason": "兩 owner 屬同一 workshop 項目（3633421539）下的兩個 mod root，值差異僅是有無空格（M9 Military Bayonet vs M9MilitaryBayonet），必然同一實體。現行譯名維持。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+   "ch": "M9 軍用刺刀",
+   "cn": "M9 军用刺刀"
   },
   "ItemName|Base.ShotgunShells_Casing": {
    "action": "translate",
@@ -2212,7 +2212,7 @@
   "ItemName|Base.HK91": {
    "action": "translate",
    "signature": "2f55b9d31ed07b37",
-   "reason": "2026-08-23 #231 多 owner：HK91／Heckler and Koch HK91。取不加廠牌與武器模式的中性名稱。",
+   "reason": "2026-08-23 #231 多 owner：HK91／Heckler and Koch HK91。取不加廠牌與武器模式的中性名稱。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
    "ch": "HK91步槍",
    "cn": "HK91步枪"
   },
@@ -2299,7 +2299,7 @@
   "Recipes|ConvertTo9x18mm": {
    "action": "translate",
    "signature": "2151e081dafa9a02",
-   "reason": "2026-08-24 #247：兩 owner 皆為 9x18mm；TEBFP 加 Makarov，PostSoviet 未綁平台。取共同口徑，不把 Makarov 名稱套給另一 owner。",
+   "reason": "2026-08-24 #247：兩 owner 皆為 9x18mm；TEBFP 加 Makarov，PostSoviet 未綁平台。取共同口徑，不把 Makarov 名稱套給另一 owner。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
    "ch": "轉換為9x18mm子彈",
    "cn": "转换为9x18mm子弹"
   },
@@ -2425,16 +2425,16 @@
   "ItemName|Base.P228": {
    "action": "translate",
    "signature": "12458130d012633d",
-   "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。",
-   "ch": "西格P228手槍",
+   "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+   "ch": "西格-紹爾P228手槍",
    "cn": "西格P228手枪"
   },
   "ItemName|Base.M24": {
    "action": "translate",
    "signature": "89f83488869f2dda",
-   "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。",
-   "ch": "雷明頓M24 SWS狙擊槍",
-   "cn": "雷明顿M24 SWS狙击枪"
+   "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+   "ch": "雷明頓M24狙擊步槍",
+   "cn": "雷明顿M24狙击步枪"
   },
   "IG_UI|IGUI_VehicleNamepzkChevalierCerise93PoliceLouisvillePD": {
    "action": "translate",
@@ -3762,9 +3762,9 @@
   "ItemName|Base.AMD65": {
    "action": "translate",
    "signature": "b735b493a6469b36",
-   "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。",
-   "ch": "AMD-65步槍",
-   "cn": "AMD-65步枪"
+   "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+   "ch": "AMD-65自動步槍",
+   "cn": "AMD-65自动步枪"
   },
   "ItemName|Base.ar15_adar_stock": {
    "action": "translate",
@@ -4112,7 +4112,7 @@
   "ItemName|Base.VZ58": {
    "action": "translate",
    "signature": "374cbadc22e370a8",
-   "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。",
+   "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
    "ch": "vz. 58步槍",
    "cn": "vz. 58步枪"
   },
@@ -4756,9 +4756,9 @@
   "ItemName|Base.545x39Box": {
    "action": "translate",
    "signature": "87e324064a26ca53",
-   "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。",
-   "ch": "盒裝5.45x39mm子彈 (30 發)",
-   "cn": "盒装5.45x39mm子弹 (30 发)"
+   "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+   "ch": "5.45x39mm子彈 (整盒)",
+   "cn": "5.45x39mm子弹 (整盒)"
   },
   "ItemName|Base.545x39Clip60": {
    "action": "translate",
@@ -4833,16 +4833,16 @@
   "ItemName|Base.Bullets32Box": {
    "action": "translate",
    "signature": "e362bf0c1219b6a4",
-   "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。",
-   "ch": "盒裝.32 ACP子彈 (50 發)",
-   "cn": "盒装.32 ACP子弹 (50 发)"
+   "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+   "ch": ".32口徑子彈 (整盒)",
+   "cn": ".32口径子弹 (整盒)"
   },
   "ItemName|Base.Bullets50": {
    "action": "translate",
    "signature": "be401204ed78fb9c",
-   "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。",
-   "ch": ".50 BMG彈藥",
-   "cn": ".50 BMG弹药"
+   "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+   "ch": ".50 BMG 子彈",
+   "cn": ".50 BMG 子弹"
   },
   "Sandbox|Sandbox_GGSGS": {
    "action": "translate",
@@ -6159,9 +6159,9 @@
   "ItemName|Base.Bullets50Box": {
    "action": "translate",
    "signature": "105d52a56f652664",
-   "reason": "2026-08-27 #283–#292／Codex 複核：兩個 owner 都明示盒裝 .50 BMG 彈藥，只有 GGS 補充 20 rounds；現譯省略容量而保留共同口徑與包裝，對兩個 owner 均成立。",
-   "ch": "盒裝.50 BMG彈藥",
-   "cn": "盒装.50 BMG弹药"
+   "reason": "2026-08-27 #283–#292／Codex 複核：兩個 owner 都明示盒裝 .50 BMG 彈藥，只有 GGS 補充 20 rounds；現譯省略容量而保留共同口徑與包裝，對兩個 owner 均成立。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+   "ch": ".50 BMG 子彈 (整盒)",
+   "cn": ".50 BMG 子弹 (整盒)"
   },
   "ItemName|Base.Bullets50Magnum": {
    "action": "translate",
@@ -6180,7 +6180,7 @@
   "ItemName|Base.GrenadeAmmo": {
    "action": "translate",
    "signature": "67c200135405cd15",
-   "reason": "2026-08-27 #283–#292／Codex 複核：40mm HE Grenade 與 Underbarrel Grenade Round 的共同語意是榴彈彈藥；改用中性譯名，不把未明示 underbarrel 的 GGS owner 限定為下掛式。",
+   "reason": "2026-08-27 #283–#292／Codex 複核：40mm HE Grenade 與 Underbarrel Grenade Round 的共同語意是榴彈彈藥；改用中性譯名，不把未明示 underbarrel 的 GGS owner 限定為下掛式。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
    "ch": "榴彈彈藥",
    "cn": "榴弹弹药"
   },
@@ -6330,23 +6330,23 @@
   "Recipes|ConvertTo762x39Bullets": {
    "action": "translate",
    "signature": "7bade2c51a0204b2",
-   "reason": "2026-08-29 #303：owner 差異僅為 7.62x39 是否省略 mm；既有 7.62x39mm 譯文對所有 owner 成立。",
-   "ch": "轉換為7.62x39mm子彈",
-   "cn": "转换为7.62x39mm子弹"
+   "reason": "2026-08-29 #303：owner 差異僅為 7.62x39 是否省略 mm；既有 7.62x39mm 譯文對所有 owner 成立。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+   "ch": "轉換為 7.62x39mm 子彈",
+   "cn": "转换为 7.62x39mm 子弹"
   },
   "Recipes|ConvertTo762x39Carton": {
    "action": "translate",
    "signature": "4c13dc9f6ec7cabe",
-   "reason": "2026-08-29 #303：owner 差異僅為 7.62x39 是否省略 mm；既有 7.62x39mm 譯文對所有 owner 成立。",
-   "ch": "轉換為7.62x39mm子彈 (整箱)",
-   "cn": "转换为7.62x39mm子弹 (整箱)"
+   "reason": "2026-08-29 #303：owner 差異僅為 7.62x39 是否省略 mm；既有 7.62x39mm 譯文對所有 owner 成立。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+   "ch": "轉換為 7.62x39mm 子彈 (整箱)",
+   "cn": "转换为 7.62x39mm 子弹 (整箱)"
   },
   "Recipes|ConvertToBase_762x39Box": {
    "action": "translate",
    "signature": "0dc0419d24b4d1ad",
-   "reason": "2026-08-29 #303：owner 差異僅為 7.62x39 是否省略 mm；既有 7.62x39mm 譯文對所有 owner 成立。",
+   "reason": "2026-08-29 #303：owner 差異僅為 7.62x39 是否省略 mm；既有 7.62x39mm 譯文對所有 owner 成立。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
    "ch": "轉換為7.62x39mm子彈 (整盒)",
-   "cn": "转换为7.62x39mm子弹 (整盒)"
+   "cn": "转换为 7.62x39mm 子弹 (整盒)"
   }
  }
 }

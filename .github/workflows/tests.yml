@@ -64,6 +64,7 @@ jobs:
             test_print_media_contract
             test_recipe_dead_keys
             test_serialization
+            test_split_attribution
             test_unshipped_keys
             test_untranslatable_keys
             test_vanilla_suppress
@@ -95,7 +96,7 @@ jobs:
           uv run scripts/prep_mod_strings.py --check-decisions --owner-report-check \
             --out /tmp/owner-decisions.json
 
-      # tracker 自身的十五情境 mock 測試（純記憶體，不碰網路與 git 遠端）
+      # tracker 自身的十六情境 mock 測試（純記憶體，不碰網路與 git 遠端）
       - name: tracker self-test
         run: uv run scripts/tracker.py self-test
 

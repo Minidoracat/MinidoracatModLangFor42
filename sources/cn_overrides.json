@@ -17184,6 +17184,11 @@
   "reason": "查表決定性: 本 mod 出貨語料把 蜂巢 鎖定為 Honeycomb 物品名 (own ItemName HydeCoBees.Honeycomb=蜂巢, HoneycombOpened=蜂巢 (已开封), Beehive=野生蜂巢), 人工蜂箱工作站是 Farming_BeeHiveApiary=蜂箱; 已登記的 cn_overrides UI_trait_HCB_ApiphobiaDesc/BeekeeperDesc 就是為此把 As1 的「蜂巢」改成「蜂箱」. As1 本鍵把 hive 譯成 蜂巢 直接與物品名撞名",
   "value": "你离那个蜂箱太远了."
  },
+ "UI.json|UI_HomeInventory_DeleteAllAdminOnly": {
+  "as1_value": "只有服务器管理员才能删除所有家庭库存数据. 如果你是主机, 可以使用命令 /grantadmin <用户名> 使自己成为管理员.",
+  "reason": "上游 EN 的 /grantadmin 參數是 literal <username>；翻譯參數會讓玩家複製出無效指令，並破壞 CH/CN placeholder 對稱",
+  "value": "只有服务器管理员才能删除所有家庭库存数据. 如果你是主机, 可以使用命令 /grantadmin <username> 使自己成为管理员."
+ },
  "UI.json|UI_ImmersiveBlackouts_LightFlickeringMode_option2": {
   "as1_value": "仅在建筑物内",
   "reason": "兄弟鍵型式: 同族 own-only 出貨鍵 option1=关闭 / option3=玩家周围 (As1 無此 mod 的 UI.json), As1 本鍵加「仅」破壞三選項的並列型式",
@@ -19394,5 +19399,60 @@
   "value": "制作86款雪佛兰CUCV储物舱盖 (多个)",
   "reason": "2026-08-29 #307：Opus 5 最終複核指出同族唯一全形括號，改為專案既定 ASCII 物品結構。",
   "as1_value": "制作86款雪佛兰CUCV储物舱盖（多个）"
+ },
+ "ItemName.json|Base.TEC9": {
+  "value": "英特拉泰克 TEC-9",
+  "reason": "2026-08-30 #325：多 owner 英文語意分歧，採對全部 owner 均成立的中性值；避免 As1 v3.8.0 新值綁定單一武器類型／口徑／平台。",
+  "as1_value": "Intratec TEC-9冲锋枪"
+ },
+ "ItemName.json|Base.HK91": {
+  "value": "HK91步枪",
+  "reason": "2026-08-30 #325：多 owner 英文語意分歧，採對全部 owner 均成立的中性值；避免 As1 v3.8.0 新值綁定單一武器類型／口徑／平台。",
+  "as1_value": "黑克勒-科赫HK91自动步枪"
+ },
+ "Recipes.json|ConvertTo9x18mm": {
+  "value": "转换为9x18mm子弹",
+  "reason": "2026-08-30 #325：多 owner 英文語意分歧，採對全部 owner 均成立的中性值；避免 As1 v3.8.0 新值綁定單一武器類型／口徑／平台。",
+  "as1_value": "转换为 9x18mm 马卡洛夫子弹"
+ },
+ "ItemName.json|Base.VZ58": {
+  "value": "vz. 58步枪",
+  "reason": "2026-08-30 #325：多 owner 英文語意分歧，採對全部 owner 均成立的中性值；避免 As1 v3.8.0 新值綁定單一武器類型／口徑／平台。",
+  "as1_value": "vz.58自动步枪"
+ },
+ "ItemName.json|Base.Bullets32Box": {
+  "value": ".32口径子弹 (整盒)",
+  "reason": "2026-08-30 #325：多 owner 英文語意分歧，採對全部 owner 均成立的中性值；避免 As1 v3.8.0 新值綁定單一武器類型／口徑／平台。",
+  "as1_value": ".32 ACP子弹 (整盒)"
+ },
+ "ItemName.json|Base.GrenadeAmmo": {
+  "value": "榴弹弹药",
+  "reason": "2026-08-30 #325：多 owner 英文語意分歧，採對全部 owner 均成立的中性值；避免 As1 v3.8.0 新值綁定單一武器類型／口徑／平台。",
+  "as1_value": "下挂式榴弹"
+ },
+ "IG_UI.json|IGUI_BookTracker_Faction_hours": {
+  "value": "%%.1f 小时",
+  "reason": "2026-08-30 #325 終審：上游 EN 以 %% 逸出 printf token，供 Lua string.format 消費；As1 CN 未逸出，改為與 consumer 契約對稱。",
+  "as1_value": "%.1f 小时"
+ },
+ "IG_UI.json|IGUI_BookTracker_Faction_agoHours": {
+  "value": "%%.1f 小时前",
+  "reason": "2026-08-30 #325 終審：上游 EN 以 %% 逸出 printf token，供 Lua string.format 消費；As1 CN 未逸出，改為與 consumer 契約對稱。",
+  "as1_value": "%.1f 小时前"
+ },
+ "IG_UI.json|IGUI_BookTracker_Faction_daysHours": {
+  "value": "%%d 天, %%d 小时",
+  "reason": "2026-08-30 #325 終審：上游 EN 以 %% 逸出 printf token，供 Lua string.format 消費；As1 CN 未逸出，改為與 consumer 契約對稱。",
+  "as1_value": "%d 天, %d 小时"
+ },
+ "UI.json|UI_ST_FuelHrs": {
+  "value": "%%.1f小时",
+  "reason": "2026-08-30 #325 終審：上游 EN 以 %% 逸出 printf token，供 Lua string.format 消費；As1 CN 未逸出，改為與 consumer 契約對稱。",
+  "as1_value": "%.1f小时"
+ },
+ "UI.json|UI_ST_FuelMin": {
+  "value": "%%d分钟",
+  "reason": "2026-08-30 #325 終審：上游 EN 以 %% 逸出 printf token，供 Lua string.format 消費；As1 CN 未逸出，改為與 consumer 契約對稱。",
+  "as1_value": "%d分钟"
  }
 }

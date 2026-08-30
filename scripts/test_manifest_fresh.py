@@ -18,6 +18,7 @@ SUPPORTED_MODS.md 卻一直寫 628，隔天有人剛好重生才發現，等於�
 from __future__ import annotations
 
 import contextlib
+import json
 import io
 import re
 import sys
@@ -46,6 +47,104 @@ before = real.read_text(encoding="utf-8")
 _check()
 assert real.read_text(encoding="utf-8") == before, "check_only 不該寫檔"
 
+# 2b. support universe = metadata ∪ active registry；retired veto；registry-only 鍵數未知。
+with tempfile.TemporaryDirectory() as td:
+    root = Path(td)
+    mods = root / "sources" / "mods"
+    mods.mkdir(parents=True)
+    registry_path = root / "sources" / "mod_registry.json"
+    registry_path.write_text(json.dumps({"mods": {
+        "111": {"status": "active", "source": "test", "verified": "2026-08-30",
+                "name": "Registry Alpha", "mod_ids": ["RegA"]},
+        "222": {"status": "active", "source": "test", "verified": "2026-08-30",
+                "name": "Registry Only", "mod_ids": ["RegOnly"]},
+        "333": {"status": "retired", "source": "test", "verified": "2026-08-30",
+                "name": "Retired", "mod_ids": ["Retired"]},
+    }}), encoding="utf-8")
+    fixtures = {
+        "111": ({"workshop_id": "111", "name": "Metadata Alpha", "mod_ids": ["MetaA"]},
+                {"A": "甲", "B": "乙"}),
+        "333": ({"workshop_id": "333", "name": "Should Disappear", "mod_ids": ["Old"]},
+                {"K": "舊"}),
+        "444": ({"workshop_id": "444", "name": "Own Mod", "mod_ids": ["Own"],
+                 "origin": "own"}, {"K": "自有"}),
+    }
+    for wid, (meta, cn) in fixtures.items():
+        d = mods / wid
+        (d / "CN").mkdir(parents=True)
+        (d / "metadata.json").write_text(json.dumps(meta), encoding="utf-8")
+        (d / "CN" / "UI.json").write_text(json.dumps(cn), encoding="utf-8")
+    old_mods, old_registry = build_mod.MODS_DIR, build_mod.MOD_REGISTRY_JSON
+    old_sources, old_vanilla = build_mod.SOURCES, build_mod.VANILLA_KEYS_JSON
+    registry_original = registry_path.read_text(encoding="utf-8")
+    try:
+        build_mod.MODS_DIR, build_mod.MOD_REGISTRY_JSON = mods, registry_path
+        rows = build_mod._collect_manifest_rows()
+        by_id = {row[0]: row for row in rows}
+        assert set(by_id) == {"111", "222", "444"}, (
+            f"metadata∪active/retired veto 錯誤：{sorted(by_id)}"
+        )
+        assert by_id["111"][1:4] == ("Metadata Alpha", ["MetaA"], 2), by_id["111"]
+        assert by_id["222"][1:4] == ("Registry Only", ["RegOnly"], None), by_id["222"]
+        meta111 = mods / "111" / "metadata.json"
+        bad_meta = json.loads(meta111.read_text(encoding="utf-8"))
+        bad_meta["workshop_id"] = "999"
+        meta111.write_text(json.dumps(bad_meta), encoding="utf-8")
+        try:
+            build_mod._collect_manifest_rows()
+            raise AssertionError("manifest 未擋 metadata workshop_id/目錄名不一致")
+        except ValueError:
+            pass
+        bad_meta["workshop_id"] = "111"
+        meta111.write_text(json.dumps(bad_meta), encoding="utf-8")
+        assert by_id["444"][1].endswith("〔原創翻譯〕") and by_id["444"][3] == 1
+        orphan_cn = mods / "777" / "CN"
+        orphan_cn.mkdir(parents=True)
+        try:
+            build_mod._collect_manifest_rows()
+            raise AssertionError("manifest 未擋缺 metadata 的 partial source mod 目錄")
+        except ValueError:
+            pass
+        orphan_cn.rmdir()
+        orphan_cn.parent.rmdir()
+
+        # registry-only 仍應用 sources/en 算「覆寫本體」，不能因沒有 metadata 一律顯示 ?。
+        vanilla_path = root / "sources" / "vanilla_keys.json"
+        vanilla_path.write_text(json.dumps({
+            "scoped_keys": {"UI.json": ["UI_Vanilla"]}
+        }), encoding="utf-8")
+        en = root / "sources" / "en"
+        en.mkdir()
+        (en / "222.json").write_text(json.dumps({
+            "translate_en|mods/R/42.20/media/lua/shared/Translate/EN/UI.json|UI_Vanilla": "V"
+        }), encoding="utf-8")
+        build_mod.SOURCES, build_mod.VANILLA_KEYS_JSON = root / "sources", vanilla_path
+        counts = build_mod.vanilla_override_counts()
+        assert counts["222"] == 1 and "333" not in counts, counts
+
+        # metadata 完全為零仍須能由 active registry 建立支援宇宙。
+        empty_mods = root / "empty-mods"
+        empty_mods.mkdir()
+        build_mod.MODS_DIR = empty_mods
+        zero_rows = build_mod._collect_manifest_rows()
+        assert {r[0] for r in zero_rows} == {"111", "222"} and all(
+            r[3] is None for r in zero_rows
+        ), zero_rows
+
+        registry_path.write_text(json.dumps({"mods": {
+            "333": {
+                "status": "retired", "source": "test", "verified": "2026-08-30"
+            }
+        }}), encoding="utf-8")
+        assert build_mod._collect_manifest_rows() == [], "全 retired/零 metadata 應為 zero rows"
+        with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+            assert build_mod.cmd_manifest(check_only=True) == 1
+            assert build_mod.cmd_manifest(check_only=False) == 1
+        registry_path.write_text(registry_original, encoding="utf-8")
+    finally:
+        build_mod.MODS_DIR, build_mod.MOD_REGISTRY_JSON = old_mods, old_registry
+        build_mod.SOURCES, build_mod.VANILLA_KEYS_JSON = old_sources, old_vanilla
+
 # 3. 真的漂移時要抓得到——否則第 1 條是永遠為真的假綠燈。
 #    把常數指向 temp 副本再擾動，**真檔全程不動**：測試中斷也不會留下髒生成物。
 with tempfile.TemporaryDirectory() as td:
@@ -58,14 +157,16 @@ with tempfile.TemporaryDirectory() as td:
         build_mod.SUPPORTED_MODS_MD = real
 assert real.read_text(encoding="utf-8") == before, "測試不該動到真的生成物"
 
-# 4. 來源缺席時 check 模式必須 fail-closed——「無法驗證」不等於「驗過沒問題」。
-#    寫入模式維持原本的寬鬆行為（回 0），兩者不得混為一談。
+# 4. metadata 來源目錄缺席時，check/write 都必須 fail-closed 且不可改寫生成物。
+#    目錄存在但 metadata 為零可由 active registry bootstrap（2b 已驗）；整個目錄消失
+#    無法區分合法空集合與來源被刪除，不能把 no-op 當成功。
 orig_mods = build_mod.MODS_DIR
 try:
     build_mod.MODS_DIR = Path(__file__).resolve().parent / "__no_such_dir__"
     assert _check() == 1, "sources/mods 缺席時 check 仍回報通過——假的 fail-closed"
     with contextlib.redirect_stdout(io.StringIO()):
-        assert build_mod.cmd_manifest(check_only=False) == 0, "寫入模式的既有寬鬆行為不該被改掉"
+        assert build_mod.cmd_manifest(check_only=False) == 1, \
+            "sources/mods 缺席時 write no-op 卻回成功"
 finally:
     build_mod.MODS_DIR = orig_mods
 

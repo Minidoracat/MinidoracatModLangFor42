@@ -4,6 +4,54 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **#325 As1 v3.8.0 同步**：逐鍵審核 22,919 個新增鍵與 16 個改值鍵，CH 全數依現行 EN、
+  As1 CN、專案術語與既有定名人工／多模型複核；`ch_review_state.json` 同步登記。
+- **自有 MOD 追蹤 bootstrap**：新增 `sources/mod_registry.json`，watchlist 取 registry active
+  與 `sources/mods` metadata 聯集；新 MOD 可先登記 wid、回填 EN，再由 split 自動閉環。
+
+### Changed
+
+- **歸屬改為 evidence-first**：`split_sources.py` 不再依賴停更的外部 helper，改以
+  `sources/en/<wid>.json` 中 runtime-effective `.json` `translate_en` 與
+  `script_item_dn` 證據重建 516 個 As1 owner 目錄；6,161 條只來自 B41 `.txt`、
+  mod 根目錄或已被新版覆蓋分支的舊 owner edge 經全量稽核後移除（有效 edge 誤刪 0）。
+  地圖 `title`／`description` 僅按同檔名歸屬，避免跨地圖交叉污染。
+- **支援清單與上游追蹤擴充**：相較同步前新增 86 個受支援 Workshop 項目；
+  77 個已有 runtime-effective owner metadata，9 個先以 registry-only 保留追蹤身分。
+  metadata 與 active registry 聯集目前共 674 項，watchlist 675 項；registry-only 鍵數
+  顯示 `?`，直到 EN→owner 閉環。新收 MOD 的 EN mirror、hash baseline、繁中名稱與摘要
+  均已納管。
+- **own lane 清理**：22 個已被 As1 納管的 origin:own 目錄退役，1,129 個仍屬原創的鍵遷入
+  `own_translations.json`，另移除 6,107 個已由 As1 供值的重複原創鍵。
+
+### Fixed
+
+- 補正本批 37 個 `ItemName_` 與 7 個 `Recipe_` B41 前綴死鍵：有現行 script 實據者補裸鍵，
+  無法精確確認 module 者依「禁止 suffix 猜測」原則登記 allowlist。
+- own map 的 `title`／`description` vanilla collision 改採檔域判定；一般 own 鍵仍維持
+  跨檔裸鍵防線。本機 PZ 的 48,718 個本體 `(檔,鍵)` 仍維持零覆寫。
+- `lint_ch.py` 的 A/B/E 棘輪重新清零；藥物「交互作用」、技術「用戶端／登錄檔」、
+  餐飲「菜單」等台灣合法語境以附值錨點的 lint exemption 固化。
+- 補齊證據鏈 fail-closed：tracker runtime 會逐次重算 metadata／registry expected universe，
+  stale watchlist 在 API／下載前即阻斷；verify [13] 獨立驗 expected wid ↔ current state ↔
+  EN mirror 的 rid/hash exact closure，部分鏡像遺失不再被降級成 WARN。
+- EN 空檔／壞 rid／非有效分支、上游 Translate 壞 JSON、vanilla 基準空 bucket、
+  CH corpus 缺失與 worklist entry 壞 schema 均改為阻斷；manifest 對 metadata 目錄缺失、
+  source mod 子目錄缺 metadata、或 zero-row universe 都不再 no-op 回成功。泛用
+  `title`／`description` allowlist 也精確到 `檔名|鍵`。
+
+### Verification
+
+- `verify_dist.py` 16/16 PASS；確定性雙跑 183 個檔案零 diff。
+- 18 支 repo 回歸測試與 `tracker.py self-test` 16 情境全過；owner decision gate
+  983 筆背書、lint A/B/C/E/F 全零、本機 vanilla 48,718 個 `(檔,鍵)` 零覆寫。
+- 有效覆蓋率重算為 **103,703 / 110,892＝93.5%**；#325 的 22,935 個 As1 差異鍵已全數審查，
+  其餘 7,189 個缺口屬原始 MOD 尚未被 As1 收錄的有效上游文本，不是本次同步漏鍵。
+
 ## [42.20.4-1.21.0] - 2026-08-30
 
 ### 玩家摘要

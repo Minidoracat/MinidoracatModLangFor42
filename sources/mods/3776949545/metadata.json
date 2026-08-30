@@ -1,9 +1,16 @@
 {
-    "workshop_id": "3776949545",
-    "mod_ids": [
-        "SVRPClassicBows"
-    ],
-    "name": "[SVRP] ClassicBows",
-    "origin": "own",
-    "note": "translation-request #124。上游只出 EN／ES（無中文），有效分支 42/。52 鍵零 vanilla 碰撞、零既有出貨碰撞。上游 EN 的 JSON 檔 85 個鍵全是死鍵、一個都不收（數字可由 sources/en/3776949545.json 重算；另有 legacy Sandbox_EN.txt 11 鍵，B42 完全不讀 .txt 故不計）：ItemName.json 48 鍵＝ItemName_Base.* 24＋ItemName_* 24，皆為 B41 前綴形（B42 只讀裸 fullType）；Recipes.json 37 鍵＝Recipe_* 25（B41 配方鍵形）＋craftRecipe_* 12（B42 端多加了 script 類型名當前綴，B42 查裸區塊名）。實收＝script DisplayName 推得的 27 個 Base.SVRP_CB_*，＋25 個 craftRecipe 裸區塊名（其中 13 個含空格，如 'Craft Medieval Bow'、'Craft Metal Arrows from Plank'，ScriptBucket 只 trim 不去空格）。24 個物品名與另一弓箭 MOD GaelGunStore(3616176188) 的 own_translations 條目 EN 全同，逐字沿用避免玩家看到兩套名稱；Bow String Silencer／Arrow／Bolt 三鍵為新譯。mod 另有 4 處 getText 取本體鍵（ContextMenu_Add/Remove_Weapon_Upgrade、IGUI_JobType_Load/UnloadBulletsIntoFirearm），本體 CH/CN 皆已有官方譯文，依 vanilla 鐵律不收。**coverage_survey.py 對本 mod 恆報 0%**——該工具不做 ItemName_ 前綴正規化（tracker.py 的 _canon_key 有做，self-test 情境 12），81 個死鍵全被算成缺口；權威口徑是 tracker.py coverage 的 lua_gap=0。**四個 from Plank 鍵曾誤以上游 EN 的 `Recipe_*_from_Plank` 鍵形收錄**（B41 形，B42 永不讀取；2026-08-16 review 攔下後改為裸區塊名）——同類前綴死鍵已由 scripts/test_recipe_dead_keys.py 把關。"
+  "attributed_via": {
+    "en_item_dn": 0,
+    "en_translate": 81
+  },
+  "files": [
+    "ItemName.json",
+    "Recipes.json"
+  ],
+  "key_count": 81,
+  "mod_ids": [
+    "SVRPClassicBows"
+  ],
+  "name": "[SVRP] ClassicBows",
+  "workshop_id": "3776949545"
 }

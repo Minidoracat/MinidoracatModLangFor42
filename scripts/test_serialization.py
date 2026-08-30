@@ -51,11 +51,12 @@ ROOT = Path(__file__).resolve().parent.parent
 # (標籤, glob, 檔數下限) —— 第三欄是**棘輪下限**：擋 glob 退化與目錄搬遷造成的覆蓋崩塌。
 # 只驗 n > 0 擋不住 `sources/**/*.json` 被寫成 `sources/*.json`（仍命中十餘個頂層檔
 # 而全綠，卻漏掉 sources/ch/*.json——正是 2026-08-19 出事的那批）。
-# sources 與 dist 的下限留有餘裕（約數十個 mod／九組檔名家族）；`tracker-state` 的 3
-# **刻意零餘裕**——那三個是永久狀態檔（timestamps／en_corpus_hashes／watchlist），
-# 少一個就該紅。只有 intentional 的大量刪除才調低下限，否則要修的是 glob 或佈局。
+# sources 與 dist 下限留有餘裕；`tracker-state` 的 3 **刻意零餘裕**。2026-08-30
+# evidence-first effective-branch cutover 移除 112 個只靠 B41 `.txt`／死分支成立的 owner
+# 目錄，sources JSON 現況降至 2,914，故棘輪由 3,000 明示調為 2,800；這是 intentional
+# 大量衍生檔刪除，不是放寬序列化規則。只有同類 intentional 變更才可再調。
 TREES: tuple[tuple[str, str, int], ...] = (
-    ("sources", "sources/**/*.json", 3000),
+    ("sources", "sources/**/*.json", 2800),
     ("tracker-state", "tracker-state/*.json", 3),
     ("dist", "MOD/**/Translate/**/*.json", 150),
 )

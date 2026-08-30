@@ -1,9 +1,20 @@
 {
-    "workshop_id": "3686883520",
-    "mod_ids": [
-        "DeadMagic"
-    ],
-    "name": "Dead Magic",
-    "origin": "own",
-    "note": "translation-request #154。上游只出 EN（無任何中文），有效分支 common ＋ 42。**As1 其實已收 97 個鍵，但 attribution helper 歸不了屬、全落在 sources/_unsorted，因此該 mod 從未有自己的目錄、也從未被 gen-watchlist 監看**；本次建 own lane 目錄一併解除該盲區，那 97 鍵留在 _unsorted 不動（split 不變式）。實收 383 鍵＝上游 translate_en 缺口 369（IG_UI 215／ItemName 59／Tooltip 57／Sandbox 30／UI 5／Recipes 3）＋14 個上游未建 ItemName 鍵的附魔標記物品（script DisplayName，module 為 Base 故鍵形是 Base.DM_Enchant*Token，已對 vanilla_keys 核實零碰撞）。Mod.json 的 name／description 2 鍵不收——Translator.readModTranslation() 只讀該 mod 自己的檔，我方出貨對其零作用（AGENTS.md 真相模型第 5 條）。lua_gettext 19 個鍵中 ContextMenu_Read 與 IGUI_ZombiePopulation_TeleportHere 為本體鍵，依 vanilla 鐵律不收。術語沿用 As1 既有 97 鍵的譯法：relic＝遺物、enchant＝附魔、ritual＝儀式、spell＝法術。**Grimoire 與 Spellbook 本版起分流**——上游是兩種物品（Grimoire 可收錄法術、分學徒／中階／大師三階，Spellbook 記載單一法術且可銘刻進前者），原本都作「法術書」會產生「可以銘刻進法術書的法術書」，故定為 Grimoire＝魔法書、Spellbook＝法術書，兩個既有 As1 鍵（AddSpellToGrimoire／ReviewGrimoire）已一併調整。"
+  "attributed_via": {
+    "en_item_dn": 0,
+    "en_translate": 466
+  },
+  "files": [
+    "IG_UI.json",
+    "ItemName.json",
+    "Recipes.json",
+    "Sandbox.json",
+    "Tooltip.json",
+    "UI.json"
+  ],
+  "key_count": 466,
+  "mod_ids": [
+    "DeadMagic"
+  ],
+  "name": "Dead Magic",
+  "workshop_id": "3686883520"
 }

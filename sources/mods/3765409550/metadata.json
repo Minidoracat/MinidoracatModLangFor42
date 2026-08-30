@@ -1,9 +1,16 @@
 {
-    "workshop_id": "3765409550",
-    "mod_ids": [
-        "bdtmre"
-    ],
-    "name": "MRE Mod [B42.20.2]",
-    "origin": "own",
-    "note": "translation-request #123。上游只出 EN（無任何中文），有效分支 42/。112 鍵零 vanilla 碰撞、零既有出貨碰撞。ItemName 43 鍵的上游沒有 EN ItemName.json，鍵取自 media/scripts 的 item DisplayName、以裸 fullType bdtmre.<item> 落地（module bdtmre，B42 只讀裸 fullType）。Recipes 7 鍵上游同樣沒有 EN Recipes.json，鍵＝craftRecipe 裸區塊名（Translator.getRecipeName 直查、無 Recipe_ 前綴），譯名依 outputs 產出物定名。MRE 一律譯「即食口糧／即食口粮」，沿用本包 SapphCooking 既有譯法。"
+  "attributed_via": {
+    "en_item_dn": 0,
+    "en_translate": 60
+  },
+  "files": [
+    "Sandbox.json",
+    "Tooltip.json"
+  ],
+  "key_count": 60,
+  "mod_ids": [
+    "bdtmre"
+  ],
+  "name": "MRE Mod [B42.20.2]",
+  "workshop_id": "3765409550"
 }

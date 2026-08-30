@@ -51,11 +51,25 @@ def run_backfill(*, boom_at: str | None = None, boom_mirror: bool = False,
     with tempfile.TemporaryDirectory() as td:
         root = Path(td)
         (root / "sources" / "en").mkdir(parents=True)
+        mods_root = root / "sources" / "mods"
+        for wid in CORPUS:
+            tracker.write_json(
+                mods_root / wid / "metadata.json",
+                {"workshop_id": wid, "mod_ids": [f"Mod{wid}"]},
+            )
+        registry = root / "sources" / "mod_registry.json"
+        tracker.write_json(registry, {"mods": {
+            wid: {
+                "status": "active", "source": "test", "verified": "2026-08-30",
+                "mod_ids": [f"Mod{wid}"],
+            }
+            for wid in CORPUS
+        }})
         (root / "tracker-state").mkdir()
+        watchlist = root / "tracker-state" / "watchlist.json"
+        assert tracker.gen_watchlist(mods_root, registry, watchlist) == 0
         state_p = root / "tracker-state" / "en_corpus_hashes.json"
         io.open(state_p, "w", encoding="utf-8").write(json.dumps({"mods": seed_state or {}}))
-        io.open(root / "tracker-state" / "watchlist.json", "w", encoding="utf-8").write(
-            json.dumps({"items": {w: {"mod_ids": [f"Mod{w}"]} for w in CORPUS}}))
 
         saved = {k: getattr(tracker, k) for k in
                  ("EN_CORPUS_HASHES_JSON", "EN_TEXT_DIR", "WATCHLIST_JSON", "SOURCES",
@@ -68,7 +82,7 @@ def run_backfill(*, boom_at: str | None = None, boom_mirror: bool = False,
         try:
             tracker.EN_CORPUS_HASHES_JSON = state_p
             tracker.EN_TEXT_DIR = root / "sources" / "en"
-            tracker.WATCHLIST_JSON = root / "tracker-state" / "watchlist.json"
+            tracker.WATCHLIST_JSON = watchlist
             tracker.SOURCES = root / "sources"
             tracker.BACKFILL_PLANS_JSON = plans_p
             tracker.resolve_install_dir = lambda _: root / "_dl"
