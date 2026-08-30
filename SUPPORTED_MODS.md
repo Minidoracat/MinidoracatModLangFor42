@@ -527,7 +527,7 @@
 | [Automatic Refueling [B42][SP][MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3632134603) | 自動加油 | 讓油泵自動為車輛加油，油泵流速、損壞與修復皆可調整。 | `AutomaticRefuelingB42` | 26 | — | — |
 | [My Spatial Refuge [B42] [MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3632195933) | 我的空間避難所 | 新增個人空間避難所系統，含經驗精華與多階升級物資。 | `myspatialrefuge` | 246 | — | — |
 | [[B42.13+] Pumps Have Propane (Standalone MP/SP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3632444452) | 油泵供應丙烷（獨立版） | 可從加油泵充裝丙烷罐、丙烷噴燈與丙烷罐車。 | `PumpsHavePropaneMP` | ? | — | — |
-| [ModernFirearmsSystem 42.19 (SP/MP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3633421539) | 現代槍械系統 | 新增現代槍械系統，含多種口徑彈藥、彈匣與彈藥背帶。 | `ModernFirearmsSystem` | 1058 | ⚠️ ≥37 | — |
+| [ModernFirearmsSystem 42.19 (SP/MP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3633421539) | 現代槍械系統 | 新增現代槍械系統，含多種口徑彈藥、彈匣與彈藥背帶。 | `ModernFirearmsSystem` | 1058 | ⚠️ ≥65 | — |
 | [Craft Propane〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3634065654) | 丙烷填充 | 新增以木炭與水填充丙烷罐的配方。 | `CraftPropane` | 3 | — | — |
 | [Better Safehouse [B42.20- MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3634569678) | 更好的安全屋 | 強化多人連線的安全屋管理：副屋主權限、擴建範圍、主重生點與側邊面板等。 | `BetterSafehouse` | 114 | — | — |
 | [Challenge Traits - Headshots, CDDA, and More [42.19 + 42.18]](https://steamcommunity.com/sharedfiles/filedetails/?id=3634630898) | 挑戰特質：爆頭、CDDA 等 | 新增爆頭限定、CDDA 等多種挑戰型特質玩法。 | `OCsChallengeTraits` | 35 | — | — |
