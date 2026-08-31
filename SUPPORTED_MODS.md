@@ -9,7 +9,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **658 個 Workshop 模組**（834 個 mod ID）；另 **16 個已下架**（翻譯保留，見文末）。
+共支援 **657 個 Workshop 模組**（833 個 mod ID）；另 **17 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -342,7 +342,6 @@
 | ['66 Pontiac LeMans / GTO](https://steamcommunity.com/sharedfiles/filedetails/?id=3447272250) | '66 Pontiac LeMans / GTO | 新增 1966 年 Pontiac LeMans 與 GTO 車輛，含敞篷版與可拆卸車頂。 | `66pontiacLeMans` | ? | — | — |
 | [Drink Smart [B42.12 - 42.19]](https://steamcommunity.com/sharedfiles/filedetails/?id=3447775367) | 智慧飲水 | 改善飲水行為，可設定不口渴時也能從選單飲水。 | `Drink_Smart` | 9 | — | — |
 | [Reaper's Hair & Beard](https://steamcommunity.com/sharedfiles/filedetails/?id=3450583954) | Reaper 髮型與鬍型 | 新增多種鬍型與髮型造型選擇，如巴爾博鬍與絡腮鬍茬。 | `ReaperHairBeard`, `ReaperHairBeard42` | 29 | — | — |
-| [3452171674](https://steamcommunity.com/sharedfiles/filedetails/?id=3452171674) | FR Operator 幹員裝備 | 新增胸掛槍套、三角洲槍套、FR 槍械背心等可掛載裝備，並可透過右鍵選單調整槍套左右位置。 | `FR_Operator` | ? | — | — |
 | [Cheat Menu Phoenix [B42] [B41 Re-Up]](https://steamcommunity.com/sharedfiles/filedetails/?id=3453422228) | 作弊選單 Phoenix | 功能完整的作弊選單，含上帝模式、無碰撞、瞬間建造等選項。 | `CheatMenuPX` | 640 | — | — |
 | [[B42MP] Frockin Shirts & Ties!](https://steamcommunity.com/sharedfiles/filedetails/?id=3453676250) | 華麗襯衫與領帶 | 新增襯衫與領帶服飾，可挽起衣袖或調整穿著方式。 | `GanydeBielovzki's Frockin Shirts n Ties` | 278 | — | — |
 | [Eat Smart](https://steamcommunity.com/sharedfiles/filedetails/?id=3456212729) | 智慧進食 | 依卡路里與飢餓度目標自動精確進食，支援營養管理設定。 | `EatSmart`, `EatSmartInt` | 26 | — | — |
@@ -672,7 +671,7 @@
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
-## 已下架模組（16 個，翻譯保留）
+## 已下架模組（17 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
@@ -686,6 +685,7 @@
 | [3390258342](https://steamcommunity.com/sharedfiles/filedetails/?id=3390258342) | 十年後植被覆蓋 | 提供高、中、低三種等級的植被覆蓋，可清理植被並採集資源。 | `10YL_HIGH_LIGHT_B42`, `10YL_LOW_LIGHT_B42`, `10YL_MEDIUM_LIGHT_B42` | ? | ? | — | 2026-07-17 |
 | [3401825906](https://steamcommunity.com/sharedfiles/filedetails/?id=3401825906) | 必備配方 | 新增實用配方，可製作小蘇打、鹽、糖、酵母、木炭粉與飼料乾草。 | `EssentialRecipes` | ? | ? | — | 2026-07-17 |
 | [3418366499](https://steamcommunity.com/sharedfiles/filedetails/?id=3418366499) | 傳奇武士刀與脇差 | 新增傳奇武士刀與脇差武器，可製作多種顏色的武士刀刀鞘。 | `LKB42` | ? | ? | — | 2026-07-17 |
+| [3452171674](https://steamcommunity.com/sharedfiles/filedetails/?id=3452171674) | FR Operator 幹員裝備 | 新增胸掛槍套、三角洲槍套、FR 槍械背心等可掛載裝備，並可透過右鍵選單調整槍套左右位置。 | `FR_Operator` | ? | — | — | 2026-08-31 |
 | [[Federal Rangers] CHIMERA V11 [B42.13.1+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3564110652) | [Federal Rangers] CHIMERA V11 | 新增大量戰術服裝與裝備，如背包、頭盔耳機與護具。 | `Federal_Rangers_Chimera`, `Federal_Rangers_Chimera_PatchN1` | ? | ? | — | 2026-07-18 |
 | [3575320927](https://steamcommunity.com/sharedfiles/filedetails/?id=3575320927) | LTKB42 | 新增可佩戴於背部或大腿的刀鞘，並支援快捷欄掛載。 | `LTKB42` | ? | ? | — | 2026-07-17 |
 | [3609353662](https://steamcommunity.com/sharedfiles/filedetails/?id=3609353662) | Pumps Have Propane | 可在加油泵充裝丙烷罐與丙烷噴燈。 | `PumpsHavePropane42` | ? | ? | — | 2026-07-17 |
