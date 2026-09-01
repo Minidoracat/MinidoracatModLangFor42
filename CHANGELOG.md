@@ -4,7 +4,41 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
-## [Unreleased]
+## [42.20.4-1.22.1] - 2026-09-01
+
+### 玩家摘要
+
+> 本節為 Workshop 更新註記用的白話版；以下各節為維護者向的技術細節。
+
+- **補上「原版食物擴充」屠宰肉品的中文名稱（6 種）。** 牛胸肉、牛腱子肉、牛小排、
+  小牛排、豬五花肉、豬肋排在屠宰後會標示品質等級（上等／中等／劣質肉塊）。這 6 個名稱
+  是**本包先前的收錄缺口**（上游 8/30 才新增這個檔案，本次補齊），未收錄時繁中玩家會
+  看到上游自帶的冗長描述式名稱。
+- **多人伺服器請一併更新本體翻譯包。** 在伺服器上屠宰取得的肉品，名稱是由伺服器端組好
+  後才送給玩家的——**這是遊戲本體在多人環境的行為，不是本包也不是那些模組造成的**；
+  官方尚未修復，由本體翻譯包 42.20.4-1.23.0 以客戶端還原處理。兩包一併更新才會完整
+  顯示中文。
+
+### Added
+
+- **VFE 屠宰品質基底名 6 鍵**（`IG_UI.json` 的 `IGUI_AnimalMeat_BeefBrisket`／
+  `BeefShank`／`BeefShortRibs`／`VealCutlet`／`PorkBelly`／`PorkRibs`）。官方
+  `ButcheringUtil.lua:394` 以 `getText("IGUI_AnimalMeat", getText(baseName),
+  getText(extraName))` 組屠宰肉品名，`baseName` 走這六鍵；上游 8/30「Added quality
+  cuts」隨附新增 `Translate/EN/IG_UI.json`，我方 EN 鏡像未涵蓋該檔故從未收錄。
+  譯名與 dist `ItemName` 的 `VFX.*` 逐字對齊（同一物品的屠宰基底名）；CN 逐鍵對照
+  en 直寫大陸用語，未用轉換器。走 `own_translations.json`（As1 未收錄 VFE 的
+  `IG_UI.json`）。
+  > 技術要點：`tracker.py backfill-en --force` 偵測上游新增 271 鍵——6 個
+  > `translate_en`（即本批）＋265 個 `script_item`（`vfx_recipetags*.txt`／
+  > `vfx_recipetagsbase.txt` 對既有 item 加 Tags 的區塊名記錄，234 個已有譯文、
+  > 31 個全是 `Base.*` 且 31/31 命中 `vanilla_keys.json` 基準，依「vanilla 出貨抑制」
+  > 硬原則一個都不出貨）。baseline 遷移交排程處理（`tracker.py issue` 會自動 commit
+  > state，不在本次發版範圍）。
+  > 技術要點（跨包）：本批只修單機。MP 下 `ButcheringUtil` 在 server 端組名，而
+  > server 的翻譯 map 永遠不含 mod 鍵（`GameServer.java:597` `Translator.loadFiles()`
+  > 在 `:1400` `loadMods` 之前），故英文名會被烘進 `InventoryItem.name` 同步給 client。
+  > 該路徑由本體翻譯包的登記簿 A33 分支處理，需 42.20.4-1.23.0 搭配。
 
 ## [42.20.4-1.22.0] - 2026-08-31
 
