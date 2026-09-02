@@ -4,6 +4,65 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.20.4-1.24.0] - 2026-09-02
+
+### 玩家摘要
+
+> 本節為 Workshop 更新註記用的白話版；以下各節為維護者向的技術細節。
+
+- **有效覆蓋率達到 100%。** 補上 40 個模組共 3,435 個字串，現行有效上游翻譯鍵
+  111,978 個已全數覆蓋（唯一例外是已下架、抓不到上游的 FR Operator）。量最大的是
+  「諾克斯建築工坊」1,812 個建造物名稱（家具、屋頂、牆面構件），術語已與先前譯好的
+  2,400 多筆對齊。上游每天都在更新，之後新增的文本由追蹤器偵測後持續補譯。
+- **新收錄 8 個模組的原創翻譯。** RPG 技能樹（多人）、我可能需要打火機、Pawject
+  Meowboid 貓咪、ArcherLib、檢視武器、負重能力調整 42、RPG 技能樹（單人）、拾荒技能。
+  這些如一漢化組未收錄，由本包自行翻譯（支援清單標「〔原創翻譯〕」）。
+- **修正 RPG 技能樹多人版的數值提示。** 單人版與多人版共用同一組提示代號但數值不同
+  （例如飢餓 -5% vs -2.5%、經驗 +25% vs +5%），原譯照單人版寫，多人版玩家看到的數字
+  一直是錯的。遊戲字串表無法依模組切換，改為只寫效果方向（「降低飢餓消耗」）對兩版都
+  正確；3 個連稀有度標籤都不同的飾品提示則不出貨。
+- **修正「酒癮」特質描述。** 兩個特質模組共用同一代號但機制不同，原譯照其中一個寫，
+  改為兩者皆真的描述。
+- **支援版本與安裝方式不變。** 仍僅支援 Build 42.20.4+；Mod ID 與 Workshop ID 不變。
+
+### Added
+
+- **B 類補譯 3,180 鍵／2,859 條相異字串**（32 個已收錄 mod，走 `own_translations`）。
+  KnoxBuildworks(3772269882) 1,812 鍵；各批術語以 dist 既有 2,415 筆 KBW 譯文為準統一
+  （Valley=斜溝、Slope=坡面、Shingles=木瓦、Cinderblock=水泥磚/煤渣砖、Classic Brick=
+  經典磚、Panel=鑲板、Clapboard=雨淋板、Roof End=屋頂端牆；既有無先例者取一版：
+  Pyramid=尖頂、Shallow Roof=緩坡屋頂、Sheet=板片、Cap=封蓋），ch 856／cn 825 筆經
+  正規化。合併端對 21 組 `(in, out)` 做 index-aligned en 位元組比對，21/21 相符。
+- **A 類 own lane 開案 8 個 mod／255 鍵**（使用者 2026-09-02 核准）。沿用 2026-08-30
+  批次的 metadata 格式（`origin:"own"`＋note），CN 直寫 `sources/mods/<wid>/CN/`、CH 直寫
+  `sources/ch/`、翻譯＝已審登記 `ch_review_state`。FR Operator(3452171674) 已下架排除。
+- `itemname_dead_allowlist.json` 登記 6 條 `SVRP_CB_*_broken`：上游 B41 鍵形漏寫 module
+  （script 的 fullType 是 `Base.SVRP_CB_…`），裸鍵已出貨，前綴鍵為隨上游帶入的死資料。
+
+### Changed
+
+- **owner 衝突裁決 49 筆**：
+  - RPGSkillTree 單人版(3621388762) vs MP 版(3628753926) 39 筆——As1 收的是單人版數值，
+    MP 玩家一直被誤導。25 筆刪數值只留效果方向；11 筆 `UI_RPG_Status_*` 只差大小寫沿用；
+    3 筆稀有度標籤本身分歧（`[Legendary]` vs `[Rare]`、`[Rare]` vs `[Normal]`）無誠實交集，
+    unship 並與 `unshipped_keys.json` 雙向背書。
+  - `UI_trait_alcoholicdesc`：SOTO 全文對 jiggasGreenFire42 錯，改交集。
+  - `Sandbox_XPGain_tooltip`：兩個 Scavenging mod 預設值 2 vs 5，刪預設值。
+  - `ContextMenu_Back/Low/Open`：NATO Firearms 的槍套位置／服裝狀態與服裝 mod 語意相近，
+    現值對所有 owner 皆真，沿用。`IGUI_Breed_*`、`Sandbox_Efficiency_*` 沿用。
+- lint 清償：[A]/[B]/[E] 14 鍵機械替換；`文件夾`→`資料夾`、「通過這道關卡」改寫避開
+  regex；[C] 3 鍵登記已審。
+
+### Fixed
+
+- `coverage_survey.py` 兩處口徑缺陷，讓它與 `prep_mod_strings` 對同一筆人工裁決給出
+  相反結論：(1) `unshipped_keys.json`（已裁決不出貨）與 `untranslatable_keys.json`
+  （已裁決不補譯）未扣出分母——前者 280 鍵（同鍵多 owner 各計後 668）卡住上限 99.75%；
+  (2) `target_file` 把 `Mod` 當一般白名單檔路由，但 `readModTranslation()` 只對該 mod
+  自己的目錄讀、本包出貨只會改到本包自己在清單上的名字——本批因此漏出
+  `Mod_ChainsawB42Dev_*` 兩鍵、dist 多出 `Mod.json`，build／verify／lint 三道全綠
+  （verify [13] 白名單本來就含 `Mod`），靠 `git status` 看到新檔才發現。已改回 None。
+
 ## [42.20.4-1.23.0] - 2026-09-02
 
 ### 玩家摘要
