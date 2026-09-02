@@ -12046,8 +12046,8 @@
  },
  "Sandbox.json|Sandbox_ImmersiveBlackouts_ElectricityCooldown_tooltip": {
   "as1_value": "电力可能中断或恢复的判定间隔 (小时).",
-  "reason": "上游由單一 Cooldown 改為 min-max 區間並新增格式與範例三行",
-  "value": "电力可能中断或恢复之间的时间范围 (小时).\n格式: 最小值 - 最大值\n示例: 0-0 = 无冷却, 1-3 = 1 至 3 小时的随机冷却, 1-1 = 固定 1 小时冷却."
+  "reason": "上游改為「恢復後|中斷後」雙段格式（Format: after restoration|after shutoff），舊譯的「最小值 - 最大值」單段說明已不符現行輸入格式",
+  "value": "电力状态再次变更前的冷却时间 (以游戏内小时计).\n格式: 恢复后|关闭后\n2-2 = 恢复后与关闭后均为 2 小时冷却\n1-3|12-24 = 恢复后随机冷却 1 至 3 小时, 关闭后随机冷却 12 至 24 小时\n0-0|2-2 = 恢复后无冷却, 关闭后固定 2 小时冷却."
  },
  "Sandbox.json|Sandbox_ImmersiveBlackouts_ElectricityShutoffDayRange_tooltip": {
   "as1_value": "设置随机停电的日期范围. \n格式: 最小天数 - 最大天数 (例如: 0-30). \n这将改变原版的停电日期设置.",
@@ -12066,8 +12066,8 @@
  },
  "Sandbox.json|Sandbox_ImmersiveBlackouts_WaterCooldown_tooltip": {
   "as1_value": "供水可能中断或恢复的判定间隔 (小时).",
-  "reason": "同上",
-  "value": "供水可能中断或恢复之间的时间范围 (小时).\n格式: 最小值 - 最大值\n示例: 0-0 = 无冷却, 1-3 = 1 至 3 小时的随机冷却, 1-1 = 固定 1 小时冷却."
+  "reason": "同 ElectricityCooldown：上游改為「恢復後|中斷後」雙段格式，舊譯單段說明已過時",
+  "value": "供水状态再次变更前的冷却时间 (以游戏内小时计).\n格式: 恢复后|关闭后\n2-2 = 恢复后与关闭后均为 2 小时冷却\n1-3|12-24 = 恢复后随机冷却 1 至 3 小时, 关闭后随机冷却 12 至 24 小时\n0-0|2-2 = 恢复后无冷却, 关闭后固定 2 小时冷却."
  },
  "Sandbox.json|Sandbox_ImmersiveBlackouts_WaterShutoffDayRange_tooltip": {
   "as1_value": "设置随机停水的日期范围. \n格式: 最小天数 - 最大天数 (例如: 0-30). \n这将改变原版的停水日期设置.",
@@ -19479,5 +19479,125 @@
   "value": "花了很多时间在健身房锻炼肌肉.<br>锻炼获得的体格与力量经验值翻倍, 且锻炼疲劳的积累默认减半.",
   "reason": "#321 上游 new EN 新增雙倍 Fitness/Strength XP 與鍛鍊疲勞減半機制；舊 As1 中文只譯第一句，必須同步補齊。",
   "as1_value": "花了很多时间在健身房锻炼肌肉"
+ },
+ "ContextMenu.json|ContextMenu_P4HasBeenRead_ToDoAutoMark": {
+  "as1_value": "启用自动标记",
+  "reason": "上游 EN 由 enable 改為 Resume Auto-Marking（暫停/恢復語意，非啟用/停用）",
+  "value": "恢复自动标记"
+ },
+ "ContextMenu.json|ContextMenu_P4HasBeenRead_ToDoNotAutoMark": {
+  "as1_value": "禁用自动标记",
+  "reason": "上游 EN 由 disable 改為 Pause Auto-Marking（暫停/恢復語意，非啟用/停用）",
+  "value": "暂停自动标记"
+ },
+ "IG_UI.json|IGUI_ExtractionMode_Quest_creature_comforts_Description": {
+  "as1_value": "提交波本威士忌、盒装香烟、一块金表和珠宝.",
+  "reason": "上游把 bourbon 改為一般 whisky，舊譯「波本威士忌」過度具體",
+  "value": "提交威士忌、盒装香烟、一块金表和珠宝."
+ },
+ "IG_UI.json|IGUI_ExtractionMode_Quest_creature_comforts_Requirement_1": {
+  "as1_value": "波本威士忌",
+  "reason": "上游 EN 現為 Whisky，舊譯「波本威士忌」過度具體",
+  "value": "威士忌"
+ },
+ "IG_UI.json|IGUI_ExtractionMode_Quest_cross_reference_Requirement_2": {
+  "as1_value": "空白笔记本",
+  "reason": "上游 EN 現為 Empty Notepads or Notebooks，舊譯漏掉記事本一項",
+  "value": "空白记事本或笔记本"
+ },
+ "IG_UI.json|IGUI_ExtractionMode_Quest_ghost_in_the_static_Description": {
+  "as1_value": "提交 1 个防毒面具或呼吸器、2 个空白笔记本和 2 支笔.",
+  "reason": "上游 EN 現為 empty notepads or notebooks，舊譯漏掉記事本一項",
+  "value": "提交 1 个防毒面具或呼吸器、2 本空白记事本或笔记本和 2 支笔."
+ },
+ "IG_UI.json|IGUI_ExtractionMode_Quest_ghost_in_the_static_Requirement_2": {
+  "as1_value": "空白笔记本",
+  "reason": "上游 EN 現為 Empty Notepads or Notebooks，舊譯漏掉記事本一項",
+  "value": "空白记事本或笔记本"
+ },
+ "IG_UI.json|IGUI_ExtractionMode_Upgrade_security_Description": {
+  "as1_value": "加固藏身点并解锁受保护的后勤交付.",
+  "reason": "上游 EN 改為 unlock daily logistics deliveries，舊譯「受保護的後勤配送」已非現行語意",
+  "value": "加固藏身点的防御, 并解锁每日后勤交付."
+ },
+ "Sandbox.json|Sandbox_ExtractionMode_RaidDeathHandling": {
+  "as1_value": "突袭死亡处理",
+  "reason": "上游 EN 由 Raid Death Handling 改為 Death Handling，且 tooltip 明示「適用於所有地點, 包含藏身點」，舊譯「突襲死亡處理」的限定語已錯",
+  "value": "死亡处理"
+ },
+ "Sandbox.json|Sandbox_ExtractionMode_RaidDeathHandling_tooltip": {
+  "as1_value": "原版死亡: 死亡和尸体生成与原本一致.\n\n保留角色 - 失去全部装备: 致命伤害改为将幸存者送回藏身点, 技能与经验值保留, 但随身携带、装备和穿戴的所有物品都留在战场地点.\n\n保留角色 - 失去 50%%: 致命伤害改为将幸存者送回藏身点, 技能与经验值保留, 但会随机选取剩余合格装备中正好一半的物品作为损失.手持物品必定额外损失. 基础衣物受到保护.",
+  "reason": "上游新增首句「適用於所有地點, 包含藏身點, 也適用於管理員擊殺按鈕」；另 half ... (rounded up) 舊譯誤為「正好一半」、death location 舊譯誤為「戰場地點」",
+  "value": "适用于所有地点, 包含藏身点, 也适用于管理员的击杀玩家按钮.\n\n原版死亡: 死亡和尸体生成与原本一致.\n\n保留角色 - 失去全部装备: 致命伤害改为将幸存者送回藏身点, 技能与经验值保留, 但随身携带、装备和穿戴的所有物品都留在死亡地点.\n\n保留角色 - 失去 50%%: 致命伤害改为将幸存者送回藏身点, 技能与经验值保留, 但会从剩余的合格装备中随机选出一半 (向上取整) 作为损失. 手持物品必定额外损失. 基础衣物受到保护."
+ },
+ "Sandbox.json|Sandbox_UsefulBarrelsFunnelSpeedUpFillModifier_tooltip": {
+  "as1_value": "如果你的身边或者身上有漏斗, 将加速抽取汽油的过程<br>例如: 1.25 意味着速度将提升为原先的1.25倍<br>设置为 1 则取消加速 <br> 无论是否启用了'是否需要漏斗' 这一选项",
+  "reason": "舊譯末句「無論是否啟用了'是否需要漏斗'」與上游 Does not work if 'Require Funnel' disabled 語意相反",
+  "value": "附近有漏斗时, 按此倍率加快油罐的装填速度.<br>例如: 1.25 表示加成 25%%, 即操作速度为原先的 1.25 倍.<br>设置为 1 则取消加速加成. <br> 若禁用'是否需要漏斗' 则此项无效."
+ },
+ "Tooltip.json|Tooltip_CmpSyringeWithPlainVaccine": {
+  "as1_value": "简易疫苗. 减缓感染进程. 健康时请勿使用.",
+  "reason": "owner 衝突中性化：「健康時請勿使用」「自體感染風險高」只有 3615135168 ZVirusVaccine42BETA 有，3643703198 zReVaccin 3 的同鍵是一次性針筒疫苗（降感染至 5%%、低白蛋白反應），保留單側警語會誤導另一 owner 的玩家，改留兩邊皆真的交集",
+  "value": "简易疫苗. 可减缓感染."
+ },
+ "Tooltip.json|Tooltip_CmpSyringeWithQualityVaccine": {
+  "as1_value": "优质疫苗. 减缓感染的时间更长, 并有小几率治愈.",
+  "reason": "owner 衝突中性化：「小機率治癒」只有 3615135168 ZVirusVaccine42BETA 有，3643703198 zReVaccin 3 的同鍵是「未感染時給一天免疫」，兩者互不涵蓋；保留兩邊皆真的交集——效果強於簡易疫苗",
+  "value": "优质疫苗. 抗感染效果比简易疫苗更强."
+ },
+ "UI.json|UI_P4HasBeenRead_Messages_ToDoAutoMark": {
+  "as1_value": "已启用拾取书籍时自动标记.",
+  "reason": "上游 EN 現為 Auto-marking resumed.，舊譯的「拾取書籍時」限定語已非現行語意",
+  "value": "已恢复自动标记."
+ },
+ "UI.json|UI_P4HasBeenRead_Messages_ToDoNotAutoMark": {
+  "as1_value": "已禁用拾取书籍时自动标记.",
+  "reason": "上游 EN 現為 Auto-marking paused.，舊譯的「拾取書籍時」限定語已非現行語意",
+  "value": "已暂停自动标记."
+ },
+ "UI.json|UI_P4HasBeenRead_Options_AutoMark_Name": {
+  "as1_value": "自动标记",
+  "reason": "上游 EN 現為 Auto-Mark Items（適用對象已擴及一般物品，非僅書籍）",
+  "value": "自动标记物品"
+ },
+ "UI.json|UI_P4HasBeenRead_Options_AutoMark_Tooltip": {
+  "as1_value": "开启时, 书籍在拾取时会被自动标记.<br>也可以在菜单中临时启用或禁用.",
+  "reason": "上游 EN 改為「支援的物品移入物品欄或攜帶的包包時自動加上物品標記」，舊譯限定書籍拾取且多出上游沒有的 <br> 附加句",
+  "value": "当支持的物品移入你的物品栏或你携带的背包时, 自动加上物品标记."
+ },
+ "UI.json|UI_P4HasBeenRead_Options_EnableTargets_Name": {
+  "as1_value": "标记对象",
+  "reason": "上游 EN 現為 Items for Status and Current Target Marks，舊譯「標記物件」過於籠統",
+  "value": "应用状态标记与当前目标标记的物品"
+ },
+ "UI.json|UI_P4HasBeenRead_Options_EnableTargets_Tooltip": {
+  "as1_value": "可选择哪些类型的物品显示标记 <br>带 * 的物品只有在启用本模组后阅读, 才会被记录为已读",
+  "reason": "上游 EN 改為「選擇可顯示狀態標記與當前目標標記的物品類型；不影響物品標記與自動標記」，舊譯的 * 號說明已不存在於上游",
+  "value": "选择哪些物品类型可以显示状态标记与当前目标标记. 此设置不影响物品标记与自动标记."
+ },
+ "UI.json|UI_P4HasBeenRead_Options_ShowCT_Tooltip": {
+  "as1_value": "勾选后显示玩家在需要阅读的技能书上的标记.",
+  "reason": "上游 EN 新增 CD/VHS 錄影帶適用範圍，舊譯只提技能書",
+  "value": "在符合你当前技能等级的技能书, 以及可提供经验值或配方的 CD 与 VHS 录像带上显示当前目标标记."
+ },
+ "UI.json|UI_P4HasBeenRead_Options_ShowMarks_Name": {
+  "as1_value": "显示标记",
+  "reason": "上游 EN 現為 Show Status Marks，舊譯「顯示標記」未區分標記種類",
+  "value": "显示状态标记"
+ },
+ "UI.json|UI_P4HasBeenRead_Options_ShowMarks_Tooltip": {
+  "as1_value": "可选择需要显示的标记类型",
+  "reason": "上游 EN 現為「依各物品的閱讀或觀看進度選擇要顯示哪些狀態標記」，舊譯漏掉判準",
+  "value": "按各物品的阅读或观看进度, 选择要显示哪些状态标记."
+ },
+ "UI.json|UI_P4HasBeenRead_Options_ShowSM_Name": {
+  "as1_value": "显示",
+  "reason": "上游 EN 現為 Show Item Marks (/)，舊譯只剩「顯示」二字",
+  "value": "显示物品标记 (/)"
+ },
+ "UI.json|UI_P4HasBeenRead_Options_ShowSM_Tooltip": {
+  "as1_value": "勾选后显示玩家手动添加的标记",
+  "reason": "上游 EN 改為「選擇有/無物品標記的物品各自顯示的標記；兩者都關閉也會停用新增、移除與自動標記」，舊譯只描述手動標記",
+  "value": "选择有物品标记与没有物品标记的物品各自显示的标记.<br>两者都关闭时, 也会禁用添加、移除与自动加上物品标记的功能."
  }
 }

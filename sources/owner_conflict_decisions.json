@@ -949,15 +949,15 @@
   },
   "UI|UI_trait_PluviophileDesc": {
    "action": "translate",
-   "signature": "08942fa9e6b6c890",
-   "reason": "兩個 owner 都是「喜歡下雨，淋雨心情變好」：2459400130/Dynamic-Traits-main 全文即此；2914075159/Evolving Traits World 另有「外出雨天緩慢減少不高興／壓力／無聊、打傘效果減半」與完整 Rihanna Umbrella 歌詞。照 #232 Tooltip 先例刪去單側機制與歌詞，保留兩邊皆真的交集。",
+   "signature": "a50dae80f178e74e",
+   "reason": "兩個 owner 都是「喜歡下雨，淋雨心情變好」：2459400130/Dynamic-Traits-main 全文即此；2914075159/Evolving Traits World 另有「外出雨天緩慢減少不高興／壓力／無聊、打傘效果減半」與完整 Rihanna Umbrella 歌詞。照 #232 Tooltip 先例刪去單側機制與歌詞，保留兩邊皆真的交集。 2026-09-02 上游 2914075159 改寫該鍵英文（新增「打傘效果減半」並移除 Umbrella 歌詞），交集結論不變，僅重新背書 signature。",
    "ch": "你熱愛下雨, 淋雨時心情會變好.",
    "cn": "你热爱下雨, 淋雨时心情会变好."
   },
   "UI|UI_trait_PluviophobiaDesc": {
    "action": "translate",
-   "signature": "70e2e2692510080c",
-   "reason": "兩個 owner 都是「討厭下雨，淋雨心情變差」：2459400130/Dynamic-Traits-main 全文即此；2914075159/Evolving Traits World 另有「外出雨天緩慢增加不高興／壓力／無聊、打傘效果減半」與同一段 Umbrella 歌詞。照 #232 Tooltip 先例刪去單側機制與歌詞，保留兩邊皆真的交集。",
+   "signature": "fedbdc619759351d",
+   "reason": "兩個 owner 都是「討厭下雨，淋雨心情變差」：2459400130/Dynamic-Traits-main 全文即此；2914075159/Evolving Traits World 另有「外出雨天緩慢增加不高興／壓力／無聊、打傘效果減半」與同一段 Umbrella 歌詞。照 #232 Tooltip 先例刪去單側機制與歌詞，保留兩邊皆真的交集。 2026-09-02 上游 2914075159 改寫該鍵英文（新增「打傘效果減半」並移除 Umbrella 歌詞），交集結論不變，僅重新背書 signature。",
    "ch": "你討厭下雨, 淋雨時心情會變差.",
    "cn": "你讨厌下雨, 淋雨时心情会变差."
   },
@@ -6466,6 +6466,62 @@
    "reason": "#319 上游新增 owner／文字粒度變化。現值「Authentic Z 額外快捷鍵／Authentic Z 额外快捷键」對 3388107363/NoirRifleSlings、NoirRifleSlings4、3625951765/Simple sling Mod 三個 owner（EN 皆為「Extra Hotkeys」）為不實宣稱，不是中性值。去掉品牌前綴後的「額外快捷鍵／额外快捷键」對 Authentic Z 的 Additional Hotkeys 與 sling 系列的 Extra Hotkeys 同時成立，即三個 sling owner 的字面值、也是 sources/cn_overrides.json 所載 As1 快照原值。該 override 主張的「綁定區段標題保留主體名」慣例，其舉例（Better Flashlights、PanzerKey）皆為單一 owner 鍵，前提在本多 owner 鍵不成立，故採中性值出貨而非 unship。",
    "ch": "額外快捷鍵",
    "cn": "额外快捷键"
+  },
+  "IG_UI|IGUI_ContainerTitle_freezer_off": {
+   "action": "translate",
+   "ch": "冰櫃 (關閉)",
+   "cn": "冰柜 (关闭)",
+   "reason": "同一實體（冷凍櫃已斷電關閉）的兩種寫法：2853974107 Fridges Off! 為 'Freezer Off'、3725311427 Plysken Solar Revolution 為 'Freezer (OFF)'。現值「冰櫃 (關閉)」對兩者皆真。",
+   "signature": "e77e183fccf9e7e5"
+  },
+  "IG_UI|IGUI_ContainerTitle_fridge_off": {
+   "action": "translate",
+   "ch": "冰箱 (關閉)",
+   "cn": "冰箱 (关闭)",
+   "reason": "同一實體（冰箱已斷電關閉）的兩種寫法：2853974107 Fridges Off! 為 'Fridge Off'、3725311427 Plysken Solar Revolution 為 'Fridge (OFF)'。現值「冰箱 (關閉)」對兩者皆真。",
+   "signature": "1c1bbe234f09575b"
+  },
+  "Sandbox|Sandbox_MarzGuns_Enable_TacticalReload_tooltip": {
+   "action": "translate",
+   "ch": "啟用戰術換彈功能.",
+   "cn": "启用战术换弹功能.",
+   "reason": "同一 wid 3722134990 的兩個變體 mod（GunsOfMarz 與 GunsOfMarzPreviousVersion）共用鍵：新版補述「丟下彈匣快速更換」、舊版補述「勿在多人啟用」。現值只留兩邊共同的首句「啟用戰術換彈功能.」，單側補述一律不出貨。",
+   "signature": "511026df70f744b2"
+  },
+  "Tooltip|Tooltip_CmpSyringeWithPlainVaccine": {
+   "action": "translate",
+   "ch": "簡易疫苗. 可減緩感染.",
+   "cn": "简易疫苗. 可减缓感染.",
+   "reason": "owner 衝突中性化：「健康時請勿使用」「自體感染風險高」只有 3615135168 ZVirusVaccine42BETA 有，3643703198 zReVaccin 3 的同鍵是一次性針筒疫苗（降感染至 5%%、低白蛋白反應），保留單側警語會誤導另一 owner 的玩家，改留兩邊皆真的交集",
+   "signature": "39febd3bbab94e6f"
+  },
+  "Tooltip|Tooltip_CmpSyringeWithQualityVaccine": {
+   "action": "translate",
+   "ch": "優質疫苗. 抗感染效果比簡易疫苗更強.",
+   "cn": "优质疫苗. 抗感染效果比简易疫苗更强.",
+   "reason": "owner 衝突中性化：「小機率治癒」只有 3615135168 ZVirusVaccine42BETA 有，3643703198 zReVaccin 3 的同鍵是「未感染時給一天免疫」，兩者互不涵蓋；保留兩邊皆真的交集——效果強於簡易疫苗",
+   "signature": "00a49a03f5dedfdb"
+  },
+  "UI|UI_MM_opt_boozeSip": {
+   "action": "translate",
+   "ch": "每口飲用量",
+   "cn": "每口饮用量",
+   "reason": "3775968752 MuscleManager 為 'Sip size (%%)'、3777237134 AutoAll 為 'Sip size'——同一設定項，只差 MuscleManager 標了百分比單位。現值「每口飲用量」不寫單位，對兩者皆真。",
+   "signature": "01f00b416a27f231"
+  },
+  "UI|UI_MM_opt_restAt": {
+   "action": "translate",
+   "ch": "耐力降至該值時休息",
+   "cn": "耐力降至该值时休息",
+   "reason": "3775968752 MuscleManager 為 'Rest when endurance reaches (%%)'、3777237134 AutoAll 無單位。現值「耐力降至該值時休息」以「該值」代替單位，對兩者皆真。",
+   "signature": "f2db6b91ee1bfee5"
+  },
+  "UI|UI_MM_opt_resumeAt": {
+   "action": "translate",
+   "ch": "耐力恢復至該值時繼續",
+   "cn": "耐力恢复至该值时继续",
+   "reason": "3775968752 MuscleManager 為 'Resume when endurance reaches (%%)'、3777237134 AutoAll 無單位。現值「耐力恢復至該值時繼續」以「該值」代替單位，對兩者皆真。",
+   "signature": "4cb1bcd395887cef"
   }
  }
 }
