@@ -96,6 +96,15 @@ def main() -> int:
                for k in _jload(DIST_CH / p)}
     vraw = set(_jload(ROOT / "sources/vanilla_keys.json")["keys"])
     vanilla = vraw | {k.split("_", 1)[1] for k in vraw if "_" in k}
+    # 已裁決不出貨（owner 衝突無誠實中性譯名等，見 unshipped_keys.json）與 vanilla 抑制
+    # 同性質：是刻意決定、不是積壓。不扣會讓 100% 在數學上永遠達不到——2026-09-02 實測
+    # 280 鍵卡住上限 99.75%，其中 233 鍵是 Motorious Zone 兩個可獨立啟用的 mod 用同鍵
+    # 指向不同車名，那是本包不出貨的裁決結果，報成缺口只會讓數字永遠不誠實。
+    unshipped = {f"{f[:-5] if f.endswith('.json') else f}|{k}"
+                 for fk in _jload(ROOT / "sources/unshipped_keys.json")["entries"]
+                 if not fk.startswith("_")
+                 for f, _, k in (fk.partition("|"),)}
+    n_unshipped = 0
 
     state = _jload(ROOT / "tracker-state/en_corpus_hashes.json")["mods"]
     rows, tot_up, tot_cov = [], 0, 0
@@ -129,7 +138,11 @@ def main() -> int:
             if tgt is None:
                 unroutable += 1
                 continue
-            need.add(f"{tgt}|{key}")
+            pair = f"{tgt}|{key}"
+            if pair in unshipped:       # 已裁決不出貨，非積壓
+                n_unshipped += 1
+                continue
+            need.add(pair)
         if not need:
             continue
         covered = len(need & shipped)
@@ -142,7 +155,8 @@ def main() -> int:
 
     print(f"有效鍵合計 {tot_up}　已覆蓋 {tot_cov}（{tot_cov / tot_up * 100:.1f}%）　"
           f"缺口 {tot_up - tot_cov}　涵蓋 {len(rows)} 個 mod")
-    print(f"（另有 {n_blank} 個鍵上游值為空字串，無可翻內容，不計入分母）")
+    print(f"（另有 {n_blank} 個鍵上游值為空字串無可翻內容、{n_unshipped} 個鍵已裁決不出貨，"
+          "皆不計入分母）")
     zero = [r for r in rows if r["covered"] == 0 and r["upstream"] >= args.min_keys]
     print(f"\n★ 零覆蓋 mod（有效鍵 ≥{args.min_keys}）：{len(zero)} 個、"
           f"合計 {sum(r['upstream'] for r in zero)} 鍵——玩家全看英文")
