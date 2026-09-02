@@ -106,6 +106,19 @@ check(run_gate({**OK, "_unchecked": ["1：無 tracker 基準"]}) == 1, "4. 非�
 check(run_gate({**OK, "_owner_conflicts": {"ItemName|Base.X": {"1": "A", "2": "B"}}}) == 1,
       "4. 非空 `_owner_conflicts` 未被拒絕")
 
+# 5. 陸用語預篩的 guard 必須與 `sources/terminology.json` 的 `match.value` 對齊。
+#    帶 guard 的三個詞（默認／內存／視頻）少了 negative lookahead，就會把台灣正當語境
+#    判成陸用語而拒掉整批——實際發生過：語料慣用的「你必須在藏身點內存活」被判命中
+#    「內存」，譯者只能改寫措辭繞過 gate（TrBatch01 回報）。兩個方向都要釘：合法語境
+#    放行、真陸用語照擋，否則「拿掉整條規則」也會讓這個案例綠。
+for legit in ("你必須在藏身點內存活才能領取", "屋內存放大量物資",
+              "沉默認同了這件事", "檢視頻率設定"):
+    check(run_gate(OK, [{"en": "Red Dress", "ch": legit, "cn": "红裙"}]) == 0,
+          f"5. 台灣正當語境被誤判為陸用語：{legit}")
+for bad_ch in ("運行內存不足", "使用默認設定", "視頻教學", "信息面板"):
+    check(run_gate(OK, [{"en": "Red Dress", "ch": bad_ch, "cn": "红裙"}]) == 1,
+          f"5. 陸用語未被擋下：{bad_ch}")
+
 # 6. `apply_translations` 不得覆寫 `_note`：那是多 owner 中性譯法／型號依據的人工裁決
 #    記錄，覆寫成三欄會把裁決依據靜默清掉。
 with tempfile.TemporaryDirectory() as td:
