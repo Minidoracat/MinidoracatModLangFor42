@@ -1400,6 +1400,21 @@
    "as1_value": "转换为 7.62x39mm 子弹 (整盒)",
    "owner_signature": "d9968932e8799edb",
    "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Box of 7.62 Rounds vs Convert to Box of 7.62x39mm Rounds vs Convert to Box of 7.62x51 Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。"
+  },
+  "Tooltip.json|Tooltip_RPGSkillTree_Dew_Beaded_Ring_Legendary": {
+   "as1_value": "[Rare]<br>This artifact is beaded with dew.<br>Thirst - 10%",
+   "owner_signature": "d45e7449d2bed637",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。 且單人版 [Legendary]、MP 版 [Rare]，稀有度標籤本身就分歧，刪掉會讓 <br> 段落開頭留空，無誠實交集。兩版皆為 _EN.txt 死檔，抑制後顯示字面鍵名（已接受的殘留）。"
+  },
+  "Tooltip.json|Tooltip_RPGSkillTree_Necklace_of_Memories_Rare": {
+   "as1_value": "[稀有]<br>这条项链充满了智慧.<br>经验 +15%%",
+   "owner_signature": "d45ad76d270ad8c6",
+   "reason": "單人版 [Rare] vs MP 版 [Normal]，數值同為 XP +15%% 但稀有度標籤分歧；刪標籤會讓 <br> 段落開頭留空，無誠實交集。兩版皆為 _EN.txt 死檔，抑制後顯示字面鍵名（已接受的殘留）。"
+  },
+  "Tooltip.json|Tooltip_RPGSkillTree_Necklace_of_Strength_Rare": {
+   "as1_value": "[Normal]<br>This necklace overflows with strength.<br>Weight + 15%",
+   "owner_signature": "bdc233134fac60ab",
+   "reason": "單人版 [Rare] vs MP 版 [Normal]，數值同為 Weight +15%% 但稀有度標籤分歧；刪標籤會讓 <br> 段落開頭留空，無誠實交集。兩版皆為 _EN.txt 死檔，抑制後顯示字面鍵名（已接受的殘留）。"
   }
  }
 }

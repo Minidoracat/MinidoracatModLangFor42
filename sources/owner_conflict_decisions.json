@@ -6522,6 +6522,343 @@
    "cn": "耐力恢复至该值时继续",
    "reason": "3775968752 MuscleManager 為 'Resume when endurance reaches (%%)'、3777237134 AutoAll 無單位。現值「耐力恢復至該值時繼續」以「該值」代替單位，對兩者皆真。",
    "signature": "4cb1bcd395887cef"
+  },
+  "ContextMenu|ContextMenu_Back": {
+   "action": "translate",
+   "signature": "d5d0da4ea896478a",
+   "reason": "NATO Firearms(3243805556) 'Back' 是槍套位置（同組另有 Head／Attach To Belt），RandomClothing(3397182976) 'Wear on Back' 是穿在背上；現值「戴在後方」對兩者皆真。NATO 側為 _EN.txt 死檔，unship 會顯示字面鍵名，故不 unship。",
+   "ch": "戴在後方",
+   "cn": "戴在后方"
+  },
+  "ContextMenu|ContextMenu_Low": {
+   "action": "translate",
+   "signature": "41a927b839f453c7",
+   "reason": "NATO 'Low Fit' 與 Tomb's Wardrobe(3616536783) 'Wear Low' 皆為低位／低腰穿著（NATO 同組有 Tight Fit／Loosen 等合身度選項）；現值「低腰穿著」對兩者皆真。",
+   "ch": "低腰穿著",
+   "cn": "低腰穿着"
+  },
+  "ContextMenu|ContextMenu_Open": {
+   "action": "translate",
+   "signature": "5eb1696a7c3706cb",
+   "reason": "NATO 'Open'（與 Closed 對應的服裝敞開）、Frockin 三包 'Open Jacket'、Tomb's 'Wear Open'、MedievalZ 'Open'，七個 owner 全是「敞開／打開」動作；現值「開啟」是最小交集，對所有 owner 皆不誤導。",
+   "ch": "開啟",
+   "cn": "打开"
+  },
+  "IG_UI|IGUI_Breed_orange": {
+   "action": "translate",
+   "signature": "8c610501d67dcc51",
+   "reason": "KittyMod(3640592525) 'Orange' vs Cats Mod(3779907776) 'Orange cat'，同一品種；現值「橘貓」對兩者皆真。",
+   "ch": "橘貓",
+   "cn": "橘猫"
+  },
+  "IG_UI|IGUI_Breed_shorthair": {
+   "action": "translate",
+   "signature": "742036b8a1b410ce",
+   "reason": "同上，'Shorthair' vs 'Shorthair cat'；現值「短毛貓」對兩者皆真。",
+   "ch": "短毛貓",
+   "cn": "短毛猫"
+  },
+  "IG_UI|IGUI_Breed_siamese": {
+   "action": "translate",
+   "signature": "10648316fac7720c",
+   "reason": "同上，'Siamese' vs 'Siamese cat'；現值「暹羅貓」對兩者皆真。",
+   "ch": "暹羅貓",
+   "cn": "暹罗猫"
+  },
+  "Sandbox|Sandbox_Efficiency_DefaultTimeLimit_tooltip": {
+   "action": "translate",
+   "signature": "3a2387a618743b24",
+   "reason": "同 wid 3374408921 兩個變體 mod，只差 'BREAK actions' vs 'BREAK some actions' 與一個空格；現值已寫「某些動作」，對兩版皆真。",
+   "ch": "警告! <br>將此值設定得太低可能會導致某些動作出錯. 這是動作受模組影響所需的最短時間. 例如: 吸菸需要 460 個時間單位. 如果將此值設定為 470, 則吸菸及更快的動作將不受效率技能影響.",
+   "cn": "警告! <br>将此值设置得太低可能会导致某些动作出错. 这是动作受模组影响所需的最短时间. 例如: 吸烟需要 460 个时间单位. 如果将此值设置为 470, 则吸烟及更快的动作将不受效率技能影响."
+  },
+  "Sandbox|Sandbox_XPGain_tooltip": {
+   "action": "translate",
+   "signature": "e9ed8a54f2d5105e",
+   "reason": "ScavengingSkill(3407792640) 預設值 2、B42 Scavenging Skill(3645462965) 預設值 5；舊譯寫死「預設值5」對前者是錯的。刪預設值只留換算，對兩者皆真。",
+   "ch": "經驗值獲取倍率. 1 = 0.25 經驗值",
+   "cn": "经验值获取倍率. 1 = 0.25 经验值"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Dew_Beaded_Ring_Legendary": {
+   "action": "unship",
+   "signature": "d45e7449d2bed637",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。 且單人版 [Legendary]、MP 版 [Rare]，稀有度標籤本身就分歧，刪掉會讓 <br> 段落開頭留空，無誠實交集。兩版皆為 _EN.txt 死檔，抑制後顯示字面鍵名（已接受的殘留）。"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Dew_Beaded_Ring_Rare": {
+   "action": "translate",
+   "signature": "bfd32b7546d65954",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。 兩版稀有度同為 [Rare]，只數值差（-20%% vs -3%%）。",
+   "ch": "[稀有]<br>這件飾品綴滿露珠.<br>降低口渴",
+   "cn": "[稀有]<br>这件饰品缀满露珠.<br>降低口渴"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Forest_Earrings_Legendary": {
+   "action": "translate",
+   "signature": "5c944eb4cf815a85",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。 兩版稀有度同為 [Legendary]，只數值差（-50%% vs -10%%）。",
+   "ch": "[傳說]<br>這對耳環散發著森林的氣息.<br>降低飢餓",
+   "cn": "[传说]<br>这对耳环散发着森林的气息.<br>降低饥饿"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Forest_Earrings_Rare": {
+   "action": "translate",
+   "signature": "35b5b9a394985f4a",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。 兩版稀有度同為 [Rare]，只數值差（-20%% vs -3%%）。",
+   "ch": "[稀有]<br>這對耳環散發著森林的氣息.<br>降低飢餓",
+   "cn": "[稀有]<br>这对耳环散发着森林的气息.<br>降低饥饿"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_GravityAdaptation_2": {
+   "action": "translate",
+   "signature": "9fadb690a722dbfb",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "增加負重",
+   "cn": "增加负重"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Hunger1": {
+   "action": "translate",
+   "signature": "3a6f9d7a303a2bec",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "降低飢餓消耗",
+   "cn": "降低饥饿消耗"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Hunger2": {
+   "action": "translate",
+   "signature": "3a6f9d7a303a2bec",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "降低飢餓消耗",
+   "cn": "降低饥饿消耗"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Hunger3": {
+   "action": "translate",
+   "signature": "3a6f9d7a303a2bec",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "降低飢餓消耗",
+   "cn": "降低饥饿消耗"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Hunger4": {
+   "action": "translate",
+   "signature": "3a6f9d7a303a2bec",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "降低飢餓消耗",
+   "cn": "降低饥饿消耗"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Necklace_of_Memories_Rare": {
+   "action": "unship",
+   "signature": "d45ad76d270ad8c6",
+   "reason": "單人版 [Rare] vs MP 版 [Normal]，數值同為 XP +15%% 但稀有度標籤分歧；刪標籤會讓 <br> 段落開頭留空，無誠實交集。兩版皆為 _EN.txt 死檔，抑制後顯示字面鍵名（已接受的殘留）。"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Necklace_of_Strength_Rare": {
+   "action": "unship",
+   "signature": "bdc233134fac60ab",
+   "reason": "單人版 [Rare] vs MP 版 [Normal]，數值同為 Weight +15%% 但稀有度標籤分歧；刪標籤會讓 <br> 段落開頭留空，無誠實交集。兩版皆為 _EN.txt 死檔，抑制後顯示字面鍵名（已接受的殘留）。"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Panic1": {
+   "action": "translate",
+   "signature": "9db43bf63e22cc8c",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "降低恐慌",
+   "cn": "降低恐慌"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Panic2": {
+   "action": "translate",
+   "signature": "9db43bf63e22cc8c",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "降低恐慌",
+   "cn": "降低恐慌"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Panic3": {
+   "action": "translate",
+   "signature": "9db43bf63e22cc8c",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "降低恐慌",
+   "cn": "降低恐慌"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Panic4": {
+   "action": "translate",
+   "signature": "9db43bf63e22cc8c",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "降低恐慌",
+   "cn": "降低恐慌"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Stamina1": {
+   "action": "translate",
+   "signature": "043e0ddee4fd7961",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "降低體力消耗",
+   "cn": "降低体力消耗"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Stamina2": {
+   "action": "translate",
+   "signature": "043e0ddee4fd7961",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "降低體力消耗",
+   "cn": "降低体力消耗"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Stamina3": {
+   "action": "translate",
+   "signature": "043e0ddee4fd7961",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "降低體力消耗",
+   "cn": "降低体力消耗"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Stamina4": {
+   "action": "translate",
+   "signature": "043e0ddee4fd7961",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "降低體力消耗",
+   "cn": "降低体力消耗"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Stress1": {
+   "action": "translate",
+   "signature": "6dc6f78bbf84254e",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "降低壓力",
+   "cn": "降低压力"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Stress2": {
+   "action": "translate",
+   "signature": "6dc6f78bbf84254e",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "降低壓力",
+   "cn": "降低压力"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Stress3": {
+   "action": "translate",
+   "signature": "6dc6f78bbf84254e",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "降低壓力",
+   "cn": "降低压力"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_Stress4": {
+   "action": "translate",
+   "signature": "6dc6f78bbf84254e",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "降低壓力",
+   "cn": "降低压力"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_XPVer21": {
+   "action": "translate",
+   "signature": "03b29399c0c38432",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。 倍數（*25 vs *5）亦刪。",
+   "ch": "有機率獲得額外經驗值 (1%% 機率)",
+   "cn": "有几率获得额外经验值 (1%% 几率)"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_XPVer22": {
+   "action": "translate",
+   "signature": "03b29399c0c38432",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。 倍數（*25 vs *5）亦刪。",
+   "ch": "有機率獲得額外經驗值 (1%% 機率)",
+   "cn": "有几率获得额外经验值 (1%% 几率)"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_XPgain1": {
+   "action": "translate",
+   "signature": "cc2756e34563eead",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "增加經驗值獲取",
+   "cn": "增加经验值获取"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_XPgain2": {
+   "action": "translate",
+   "signature": "cc2756e34563eead",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "增加經驗值獲取",
+   "cn": "增加经验值获取"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_XPgain3": {
+   "action": "translate",
+   "signature": "cc2756e34563eead",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "增加經驗值獲取",
+   "cn": "增加经验值获取"
+  },
+  "Tooltip|Tooltip_RPGSkillTree_XPgain4": {
+   "action": "translate",
+   "signature": "cc2756e34563eead",
+   "reason": "RPGSkillTree 單人版(3621388762)與 MP 版(3628753926)同鍵不同數值；As1 收的是單人版的值，MP 玩家看到的數字是錯的。刪去數值只留效果方向，對兩版皆真。",
+   "ch": "增加經驗值獲取",
+   "cn": "增加经验值获取"
+  },
+  "UI|UI_RPG_Status_AccumulatedRemain": {
+   "action": "translate",
+   "signature": "31a3b9e31fa9b55c",
+   "reason": "單人版 'Accumulated: %.1fhour' vs MP 'Accumulated : %.1fh'，只差空格與單位縮寫；現值「蓄力: %.1f 小時」對兩版皆真，token %.1f 一致。",
+   "ch": "蓄力: %.1f 小時",
+   "cn": "蓄力: %.1f 小时"
+  },
+  "UI|UI_RPG_Status_BoxRareChance": {
+   "action": "translate",
+   "signature": "e4550792180e5913",
+   "reason": "兩版只差大小寫（rare chance / Rare Chance），現值對兩版皆真。",
+   "ch": "隨機箱稀有機率",
+   "cn": "随机箱稀有几率"
+  },
+  "UI|UI_RPG_Status_CarryWeight": {
+   "action": "translate",
+   "signature": "7f33eda5d111eb02",
+   "reason": "單人 'Weight' vs MP 'Carry Weight'，同一實體；現值「負重」對兩版皆真。",
+   "ch": "負重",
+   "cn": "负重"
+  },
+  "UI|UI_RPG_Status_ExtraLootChance": {
+   "action": "translate",
+   "signature": "5db40215f2322286",
+   "reason": "兩版只差大小寫，現值對兩版皆真。",
+   "ch": "額外搜尋機率",
+   "cn": "额外搜索几率"
+  },
+  "UI|UI_RPG_Status_InfectionImmune": {
+   "action": "translate",
+   "signature": "d63f09fe96068c70",
+   "reason": "兩版只差大小寫，現值對兩版皆真。",
+   "ch": "殭屍感染免疫",
+   "cn": "僵尸感染免疫"
+  },
+  "UI|UI_RPG_Status_LootChance": {
+   "action": "translate",
+   "signature": "21f4d46742d3074f",
+   "reason": "兩版只差大小寫，現值對兩版皆真。",
+   "ch": "搜尋機率",
+   "cn": "搜索几率"
+  },
+  "UI|UI_RPG_Status_SprintKnockdown": {
+   "action": "translate",
+   "signature": "148e265e676679e4",
+   "reason": "單人 'knock down' vs MP 'Knockdown'，同一實體；現值對兩版皆真。",
+   "ch": "衝刺擊倒 : 就緒",
+   "cn": "冲刺击倒 : 就绪"
+  },
+  "UI|UI_RPG_Status_StaminaDrain": {
+   "action": "translate",
+   "signature": "7a33d16d1299798c",
+   "reason": "兩版只差大小寫，現值對兩版皆真。",
+   "ch": "體力消耗",
+   "cn": "体力消耗"
+  },
+  "UI|UI_RPG_Status_StaminaRegen": {
+   "action": "translate",
+   "signature": "869c9777dcbc047b",
+   "reason": "單人 'regen' vs MP 'Regeneration'，同一實體；現值「體力恢復」對兩版皆真。",
+   "ch": "體力恢復",
+   "cn": "体力恢复"
+  },
+  "UI|UI_RPG_Status_XPBonus2": {
+   "action": "translate",
+   "signature": "97778e1017967d26",
+   "reason": "單人 'XP bonus' vs MP 'XP'，皆在經驗加成區塊；現值「經驗加成」對兩版皆不誤導。",
+   "ch": "經驗加成",
+   "cn": "经验加成"
+  },
+  "UI|UI_RPG_Status_XPGain": {
+   "action": "translate",
+   "signature": "b751d16c93ec7931",
+   "reason": "單人 'XP' vs MP 'XP Gain'，同一實體；現值「經驗」對兩版皆真。",
+   "ch": "經驗",
+   "cn": "经验"
+  },
+  "UI|UI_trait_alcoholicdesc": {
+   "action": "translate",
+   "signature": "0f9cc0ed6f13ff92",
+   "reason": "SimpleOverhaulTraitsAndOccupations(2840805724) 是戒酒增無聊／不快樂／口渴、長期增疲勞等，jiggasGreenFire42(3414697768) 是缺酒壓力、酒精耐受高；舊譯是 SOTO 全文，對 GreenFire 錯。只留兩者皆真的交集。",
+   "ch": "有酒癮. 長時間不喝酒會感到不適.",
+   "cn": "有酒瘾. 长时间不喝酒会感到不适."
   }
  }
 }

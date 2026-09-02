@@ -93,7 +93,7 @@
 | [My So-Called Snack](https://steamcommunity.com/sharedfiles/filedetails/?id=2877535263) | 我的零食人生（My So-Called Snack） | 新增大量零食點心類物品，如動物餅乾、徽章等收藏小物。 | `P4MySoCalledSnack` | 224 | — | — |
 | [Keep Inventory & Respawn [B42 NOT WORKING]](https://steamcommunity.com/sharedfiles/filedetails/?id=2879960829) | 保留物品並重生 | 角色死亡後可重生並保留物品、經驗、書籍與存活時數；作者標示 B42 已不可用。 | `Respawn` | 64 | — | — |
 | [Players On Map [B42 DEV BUILD]](https://steamcommunity.com/sharedfiles/filedetails/?id=2879960936) | 地圖顯示玩家（B42 開發版） | 提供沙盒設定，可啟用在地圖上顯示玩家位置。 | `POM` | 15 | — | — |
-| [I Might Need A Lighter 42.12](https://steamcommunity.com/sharedfiles/filedetails/?id=2883633728) | 我可能需要打火機 | 新增可裝在車上的點菸器，並可用爐具、營火、壁爐、微波爐等火源點菸。 | `IMightNeedALighter` | ? | — | — |
+| [I Might Need A Lighter 42.12〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=2883633728) | 我可能需要打火機 | 新增可裝在車上的點菸器，並可用爐具、營火、壁爐、微波爐等火源點菸。 | `IMightNeedALighter` | 28 | — | — |
 | ['82 Jeep J10](https://steamcommunity.com/sharedfiles/filedetails/?id=2886832257) | '82 Jeep J10 | 新增 1982 年 Jeep J10 皮卡車輛，含貨廂蓋等可製作配件。 | `82jeepJ10`, `82jeepJ10t` | 25 | — | — |
 | ['88 Chevrolet S10](https://steamcommunity.com/sharedfiles/filedetails/?id=2886832936) | '88 Chevrolet S10 | 新增 1988 年 Chevrolet S10 皮卡車輛，含後斗蓋等可製作配件。 | `88chevyS10` | 19 | — | — |
 | ['89 Ford Bronco](https://steamcommunity.com/sharedfiles/filedetails/?id=2886833398) | '89 Ford Bronco | 新增 1989 年 Ford Bronco 越野車輛，含車窗、保險桿等可製作配件。 | `89fordBronco` | 31 | — | — |
@@ -112,7 +112,7 @@
 | ['69 Mini Mk2](https://steamcommunity.com/sharedfiles/filedetails/?id=2937786633) | '69 Mini Mk2 | 新增 1969 年 Mini Mk2 小車，含義大利任務、憨豆先生等多種特別塗裝版本。 | `69mini`, `69mini_ItalianJob`, `69mini_MrBean`, `69mini_PitbullSpecial` | ? | — | — |
 | [Fitness & Workout Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=2940354599) | 健身鍛鍊大改造 (FWO) | 健身系統改造，新增可用的跑步機與臥推架，並提供經驗倍率等沙盒設定。 | `FWOBenchPress&Treadmill`, `FWOFitnessWorkoutOverhaul` | 68 | — | — |
 | ['90 Pierce Arrow Pumper](https://steamcommunity.com/sharedfiles/filedetails/?id=2942793445) | '90 Pierce Arrow 消防車 | 新增 1990 年 Pierce Arrow 消防泵浦車，含多種可製作的車輛部件與裝甲。 | `90pierceArrow` | 2 | — | — |
-| [Inspect Weapon](https://steamcommunity.com/sharedfiles/filedetails/?id=2948824747) | 檢視武器 | 新增武器檢視介面，可查看耐久度、彈藥、配件與維修記錄。 | `RiskyInspectWeapon` | ? | — | — |
+| [Inspect Weapon〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=2948824747) | 檢視武器 | 新增武器檢視介面，可查看耐久度、彈藥、配件與維修記錄。 | `RiskyInspectWeapon` | 17 | — | — |
 | [Equipment UI - Paper Doll Equipment Interface [B42/41]](https://steamcommunity.com/sharedfiles/filedetails/?id=2950902979) | Equipment UI 紙娃娃裝備介面 | 新增紙娃娃式裝備介面，直觀顯示各部位穿戴物品，支援手柄操作。 | `EQUIPMENT_UI` | ? | — | — |
 | [Trees Have Loot](https://steamcommunity.com/sharedfiles/filedetails/?id=2951270166) | 樹上有東西 | 可搜索樹木取得物資，也能直接從樹上砍下樹枝。 | `TreesHaveLoot` | 2 | — | — |
 | ['90 Ford F350 Ambulance](https://steamcommunity.com/sharedfiles/filedetails/?id=2952802178) | '90 Ford F350 救護車 | 新增 1990 年 Ford F350 救護車，含多種可製作的車輛部件與裝甲。 | `90fordF350ambulance` | 1 | — | — |
@@ -274,8 +274,8 @@
 | [Long Term Preservation [B42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=3406392630) | 長期保存 | 新增肉類與魚類玻璃罐頭、醃肉、乾肉餅、豬油與鹽岩碾製等保存配方。 | `SKITTLE_LongTermPreservation` | ? | — | — |
 | [MRE XIII (1993) - Meal Ready to Eat MOD Real version for build 42](https://steamcommunity.com/sharedfiles/filedetails/?id=3406930410) | MRE XIII（1993）野戰口糧 | 新增 1993 年版美軍 MRE 野戰口糧，含加熱包、附件包、沖泡飲品與整箱堆放。 | `MREXIII_RealVersion` | 69 | — | — |
 | [Autotsar Tuning Atelier - Jaap Wrungel [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3407042038) | Autotsar 改裝工坊：Jaap Wrungel | 新增可改裝的 Jaap Wrungel 越野車與保險桿等零件。 | `ATA_Jeep` | 6 | — | — |
-| [Scavenger Skill [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3407792640) | 拾荒技能 [B42] | 新增「拾荒」技能，搜刮容器時有機率發現額外物品；含各等級機率與額外戰利品的沙盒設定，並新增「禿鷲」特質。 | `ScavengingSkill` | ? | — | — |
-| [ArcherLib](https://steamcommunity.com/sharedfiles/filedetails/?id=3408337281) | ArcherLib 弓箭框架 | 提供弓箭技能與彈藥切換轉盤的前置框架，附技能書與範例弓弩。 | `ArcherLib`, `ArcherySampleMod` | ? | — | — |
+| [Scavenger Skill [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3407792640) | 拾荒技能 [B42] | 新增「拾荒」技能，搜刮容器時有機率發現額外物品；含各等級機率與額外戰利品的沙盒設定，並新增「禿鷲」特質。 | `ScavengingSkill` | 2 | — | — |
+| [ArcherLib〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3408337281) | ArcherLib 弓箭框架 | 提供弓箭技能與彈藥切換轉盤的前置框架，附技能書與範例弓弩。 | `ArcherLib`, `ArcherySampleMod` | 19 | — | — |
 | [Sapph's Cooking [B42+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3409143790) | Sapph 的烹飪 | 新增烹飪相關內容，包含保溫杯、果汁與能量飲料等飲品物品。 | `SapphCooking_B42` | 4 | ⚠️ ≥2 | — |
 | [Dynamic Emergency TV Channel](https://steamcommunity.com/sharedfiles/filedetails/?id=3409272479) | 動態緊急電視頻道 | 新增可自訂的緊急廣播電視頻道，節目內容與時段皆可設定。 | `EmergencyTVChannel` | 1312 | — | ⚠️ 沙盒設定與媒體標題有中文；播報台詞 830 句本包已備妥譯文，但該 MOD 取用的鍵名不在遊戲翻譯機制的路由上，它會落回自己寫死的英文表，播報內容維持英文。 |
 | ['84 Jeep XJ Cherokee](https://steamcommunity.com/sharedfiles/filedetails/?id=3409287192) | '84 Jeep XJ Cherokee | 新增 1984 年 Jeep Cherokee XJ 車輛，含警用、護林員等多種版本。 | `84jeepXJ` | 31 | — | — |
@@ -286,7 +286,7 @@
 | [Guitar Wall Hanger [b42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3410972667) | 吉他壁掛架 | 可將木吉他、電吉他、貝斯等樂器掛上牆面展示。 | `GWH` | 23 | — | — |
 | [Hanksie's Musical Wonders - More Guitars [b42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3410974338) | 更多吉他 | 新增多種外觀各異的原聲與電吉他可供彈奏收藏。 | `HMW` | 475 | — | — |
 | [[B42MP] Frockin Splendor! Vol.2](https://steamcommunity.com/sharedfiles/filedetails/?id=3411888105) | 華麗服飾！Vol.2 | 新增多系列服裝，包含棉質、牛仔、皮質、正裝與鞋履等款式。 | `GanydeBielovzki's Frockin Splendor! Vol.2` | 115 | ⚠️ ≥2 | — |
-| [CarryingCapacityTweak42](https://steamcommunity.com/sharedfiles/filedetails/?id=3412255197) | 負重能力調整 42 | 提供調整角色負重能力的沙盒設定（B42 版）。 | `CarryingCapacityTweak42` | ? | — | — |
+| [CarryingCapacityTweak42〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3412255197) | 負重能力調整 42 | 提供調整角色負重能力的沙盒設定（B42 版）。 | `CarryingCapacityTweak42` | 4 | — | — |
 | [Bandits Extra Options](https://steamcommunity.com/sharedfiles/filedetails/?id=3412682512) | Bandits 額外選項 | 為 Bandits 匪徒模組新增生成頻率、隊伍規模、夜間行為等設定。 | `BanditsAddOptions`, `BanditsAddOptionsDay1`, `BanditsAddOptionsWeek1` | ? | — | — |
 | [3412969115](https://steamcommunity.com/sharedfiles/filedetails/?id=3412969115) | 舌尖上的中國 | 新增中國各地美食內容，並含白酒、啤酒、果酒發酵與釀造技能書。 | — | ? | — | — |
 | [[ABANDONED][B42] Better Sorting](https://steamcommunity.com/sharedfiles/filedetails/?id=3413005308) | 更好的分類 | 重新整理物品顯示類別，讓物品欄分類與篩選更精細。 | `BetterSortCC42` | ? | — | — |
@@ -509,7 +509,7 @@
 | [Archery Nexus](https://steamcommunity.com/sharedfiles/filedetails/?id=3617854007) | Archery Nexus 弓箭整合 | 新增原始獵弓、箭矢、箭袋與箭羽等可製作的弓箭裝備。 | `ArcheryNexus` | ? | — | — |
 | [Here Goes the Sun [B42MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3618557184) | Here Goes the Sun | 新增以 1993 年俄羅斯為背景的地圖與出生點選項。 | `HereGoesTheSun` | ? | — | — |
 | [Zomboid Storylines](https://steamcommunity.com/sharedfiles/filedetails/?id=3620552991) | Zomboid 劇情任務 | 新增劇情任務內容，包含樣本容器、注射器與增強血清等任務物品。 | `storylines`, `storylinesfw`, `vlmainquest1`, `vlmainquest1_legacy_42_12`, `vlquestfw`, `vlquestfw_legacy_42_12` | 469 | — | — |
-| [RPGSkillTree[42.13][SP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3621388762) | RPG 技能樹（單人） | 新增 RPG 式技能樹、狀態面板與隨機寶箱，可加點強化負重、恢復與搜刮等屬性。 | `RPGSkillTree` | ? | — | — |
+| [RPGSkillTree[42.13][SP]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3621388762) | RPG 技能樹（單人） | 新增 RPG 式技能樹、狀態面板與隨機寶箱，可加點強化負重、恢復與搜刮等屬性。 | `RPGSkillTree` | 2 | — | — |
 | [Abuelita Linda: Mexican Foods](https://steamcommunity.com/sharedfiles/filedetails/?id=3622474939) | Abuelita Linda：墨西哥料理 | 新增墨西哥風味食物，可製作玉米餅等料理。 | `AbuelitaLinda` | 241 | — | ⚠️ 有一項配方名稱（代號 MakeTortilla）與 Todo Caserito 家常料理撞名、卻是不同的食物——本 MOD 的是墨西哥玉米餅，那邊的同一代號是阿根廷豬油餅。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故此鍵不出貨、遊戲內顯示該 MOD 自己的英文原文。 |
 | [Zed's Better FPS](https://steamcommunity.com/sharedfiles/filedetails/?id=3622986450) | Zed 的更佳 FPS | 效能優化模組，提供降低 CPU 佔用、3D 模型優化與效能指標日誌等選項。 | `ZBBetterFPS` | 29 | — | — |
 | [GaelGunStore - Firearms pack B42.12-Legacy](https://steamcommunity.com/sharedfiles/filedetails/?id=3623297453) | GaelGunStore 槍械包（舊版） | 新增槍械商店相關內容的槍械擴充包。 | `GaelGunStore_Leagacy` | 742 | — | ⚠️ 有一項手槍名稱（代號 Base.Glock23）與 Guns of 93 撞名、卻是不同的槍——本 MOD 的是 USP-45，那邊的同一代號是 Glock 23。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故此鍵不出貨、遊戲內顯示該 MOD 自己的英文原文。 |
@@ -517,7 +517,7 @@
 | [[UNOFFICIAL][B42.13 SP/MP] Proximity Inventory](https://steamcommunity.com/sharedfiles/filedetails/?id=3624308198) | 鄰近物品欄（非官方版） | 可直接檢視並拿取附近容器與屍體的物品，支援僅限屍體模式。 | `ProximityInventory4213` | ? | — | — |
 | [[B42.13] Simple Slings Mod - Rifle Slings Only](https://steamcommunity.com/sharedfiles/filedetails/?id=3625951765) | 簡易背帶模組（僅步槍背帶） | 新增武器背帶，可將步槍揹在肩上或背部快捷欄位。 | `OmniSimplesling` | ? | — | — |
 | [Hoarder's Delight - Box & Carton Bulk Packing [42.19 + 42.18]](https://steamcommunity.com/sharedfiles/filedetails/?id=3626823538) | 囤積者之樂：整盒整箱打包 | 可將大量物品打包成整盒或整箱，方便囤積與搬運。 | `OCsPacking` | 321 | — | — |
-| [RPGSkillTree[42][MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3628753926) | RPG 技能樹（多人） | RPG 技能樹的多人連線版本，另含記憶石存讀與邪血強化武器等機制。 | `RPGSkillTree MP` | ? | — | — |
+| [RPGSkillTree[42][MP]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3628753926) | RPG 技能樹（多人） | RPG 技能樹的多人連線版本，另含記憶石存讀與邪血強化武器等機制。 | `RPGSkillTree MP` | 162 | — | — |
 | [PhunCure](https://steamcommunity.com/sharedfiles/filedetails/?id=3628843367) | PhunCure 趣味解藥 | 新增可治癒咬傷、殭屍病毒與傷口感染的解藥系統，選項可調。 | `phuncure` | ? | — | — |
 | [Printer3D: Manufacturing & Recycling System](https://steamcommunity.com/sharedfiles/filedetails/?id=3628922658) | 3D 列印：製造與回收系統 | 新增 3D 列印機與塑膠回收系統，可掃描並列印多種物品。 | `3DPrinter` | 628 | — | — |
 | [Architect](https://steamcommunity.com/sharedfiles/filedetails/?id=3629755641) | 建築師 | 可把建好的建築存成藍圖並在別處整棟放置，含清除區域與管理員清檔功能。 | `Architect` | 35 | — | — |
@@ -537,7 +537,7 @@
 | [Show Weapon Stats Plus](https://steamcommunity.com/sharedfiles/filedetails/?id=3635921724) | 顯示武器數值增強版 | 在提示中顯示武器傷害、狀況、精度、噪音等詳細數值，項目可自訂。 | `showweaponstatsplus4213` | 43 | — | — |
 | [Extensive Health Rework B42 (no longer supported)](https://steamcommunity.com/sharedfiles/filedetails/?id=3638633196) | 大規模健康系統重製（已停止支援） | 大幅重製健康系統，新增失血、昏厥、真菌感染等擬真疾病機制。 | `EHR` | 57 | — | — |
 | [Burd's Survival Journals (B41/42)](https://steamcommunity.com/sharedfiles/filedetails/?id=3639628777) | 伯德的生存日誌 | 可將技能、配方與特質記錄成日誌，供之後的角色閱讀繼承。 | `BurdSurvivalJournals` | 1978 | — | — |
-| [[BETA] Pawject Meowboid [MP] [B42.14]](https://steamcommunity.com/sharedfiles/filedetails/?id=3640592525) | [測試版] Pawject Meowboid 貓咪 [MP] [B42.14] | 新增橘貓、短毛貓、暹羅貓等貓咪品種。 | `KITTYOWO` | ? | — | — |
+| [[BETA] Pawject Meowboid [MP] [B42.14]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3640592525) | [測試版] Pawject Meowboid 貓咪 [MP] [B42.14] | 新增橘貓、短毛貓、暹羅貓等貓咪品種。 | `KITTYOWO` | 21 | — | — |
 | ['70 Plymouth Road Runner](https://steamcommunity.com/sharedfiles/filedetails/?id=3642935062) | 1970 年 Plymouth Road Runner | 新增 1970 年 Plymouth Road Runner 車輛，可製作車門、保險桿等零件。 | `70roadRunner` | 25 | — | — |
 | [zRe Vaccine 3.0 [b42.13+ MP] ReMod by kERHUS](https://steamcommunity.com/sharedfiles/filedetails/?id=3643703198) | zRe 疫苗 3.0 ReMod by kERHUS | 新增疫苗與抗病毒藥物研製系統，包含化學試劑、實驗室設備與病毒學書籍。 | `zReModVaccin30bykERHUS`, `zReModVaccin30bykERHUS_Addon` | ? | — | — |
 | [Extensive Power Rework B42 (no longer supported)](https://steamcommunity.com/sharedfiles/filedetails/?id=3643765614) | 深度電力重製（已停止支援） | 重製電力系統，設施會隨時間衰減，需評估損壞、維修與校準來維持供電。 | `EPR_B42` | ? | — | — |
