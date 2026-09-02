@@ -76,6 +76,14 @@ def _branch_ok(rid: str, eff: dict[str, set[str]]) -> bool:
 
 def target_file(src_stem: str, key: str) -> str | None:
     """這個鍵要生效，必須落在哪個檔？None＝前綴無路由，放哪都取不到。"""
+    if src_stem == "Mod":
+        # `Mod.json` 在 Translator.BY_NAME 裡，但機制與其他 30 檔不同：`readModTranslation()`
+        # （42.20.2 Translator.java:402）只對**該 mod 自己**的 getCommonDir()／getVersionDir()
+        # 讀它，填進每次 clear() 的 per-mod tempMap 後 setName()／setDescription()——不是
+        # 全域表。本包出貨 Mod.json 只會把**本包自己**在 mod 清單上的名字改成別人的，對任何
+        # 其他 mod 零作用（AGENTS.md 人工真相清單第 5 條、issue #126）。2026-09-02 補譯批
+        # 因此漏出 Mod_ChainsawB42Dev_name 兩鍵，本包 dist 多了一份 Mod.json。
+        return None
     if src_stem in WHITELIST:
         return src_stem
     for prefix, tgt in PREFIX_ROUTE:
@@ -105,6 +113,12 @@ def main() -> int:
                  if not fk.startswith("_")
                  for f, _, k in (fk.partition("|"),)}
     n_unshipped = 0
+    # 已裁決不補譯（untranslatable_keys.json：render carrier／HEADER_ 檔頭註記等內部鍵）同樣不是
+    # 積壓。與 prep_mod_strings／tracker.py coverage 共用 tracker.load_untranslatable() 的身分，
+    # 三支工具對同一筆人工裁決不得給出相反結論。
+    untr_pairs, _ = tracker.load_untranslatable()
+    untranslatable = {f"{stem}|{key}" for stem, key in untr_pairs}
+    n_untranslatable = 0
 
     state = _jload(ROOT / "tracker-state/en_corpus_hashes.json")["mods"]
     rows, tot_up, tot_cov = [], 0, 0
@@ -142,6 +156,9 @@ def main() -> int:
             if pair in unshipped:       # 已裁決不出貨，非積壓
                 n_unshipped += 1
                 continue
+            if pair in untranslatable:  # 已裁決不補譯，非積壓
+                n_untranslatable += 1
+                continue
             need.add(pair)
         if not need:
             continue
@@ -155,8 +172,8 @@ def main() -> int:
 
     print(f"有效鍵合計 {tot_up}　已覆蓋 {tot_cov}（{tot_cov / tot_up * 100:.1f}%）　"
           f"缺口 {tot_up - tot_cov}　涵蓋 {len(rows)} 個 mod")
-    print(f"（另有 {n_blank} 個鍵上游值為空字串無可翻內容、{n_unshipped} 個鍵已裁決不出貨，"
-          "皆不計入分母）")
+    print(f"（另有 {n_blank} 個鍵上游值為空字串無可翻內容、{n_unshipped} 個鍵已裁決不出貨、"
+          f"{n_untranslatable} 個鍵已裁決不補譯，皆不計入分母）")
     zero = [r for r in rows if r["covered"] == 0 and r["upstream"] >= args.min_keys]
     print(f"\n★ 零覆蓋 mod（有效鍵 ≥{args.min_keys}）：{len(zero)} 個、"
           f"合計 {sum(r['upstream'] for r in zero)} 鍵——玩家全看英文")
