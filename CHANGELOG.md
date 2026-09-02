@@ -4,6 +4,100 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.20.4-1.23.0] - 2026-09-02
+
+### 玩家摘要
+
+> 本節為 Workshop 更新註記用的白話版；以下各節為維護者向的技術細節。
+
+- **補上 34 個模組的新增文字，共 3,779 個字串。** 上游作者這段時間新增或改寫的內容
+  （任務、對話、交易商、沙盒設定、物品名等）先前顯示英文，本次全部補齊繁中與簡中。
+  量最大的是「Knox Chronicles」任務系統、「Extraction Mode」撤離模式與
+  「Puffin's Retro Relics」。
+- **修正 27 處「上游改了說明、中文還停在舊版」的譯文。** 其中兩處原本會誤導玩家：
+  「有用的油桶」的漏斗加速說明寫成「無論是否啟用『是否需要漏斗』」，上游原文其實是
+  **停用該選項時此加成無效**（語意相反）；「Extraction Mode」的死亡處理設定原譯寫
+  「突襲死亡處理」，上游已改為適用**所有地點含藏身點**，且「失去 50%」的算法是
+  向上取整而非「正好一半」。
+- **兩則疫苗提示改為中立描述。** `ZVirusVaccine` 與 `zReVaccin 3` 共用同一組提示代號
+  但機制不同，原譯照著其中一個 MOD 寫（「健康時請勿使用」「小機率治癒」），裝另一個
+  MOD 的玩家會被誤導。遊戲的字串表是全域單一映射、無法依啟用狀態切換，故只保留兩邊
+  都成立的敘述。
+- **有效覆蓋率 94% → 97%。** 現行有效上游翻譯鍵 112,290 個中已覆蓋 108,534 個。
+- **支援版本與安裝方式不變。** 仍僅支援 Build 42.20.4+；Mod ID 與 Workshop ID 不變。
+
+### Added
+
+- **34 個 MOD 的上游新增鍵補譯：3,779 個出貨鍵、3,004 條相異字串**（清償 tracker
+  issue #330-#364 全部 34 張「可能過時」）。缺口以 `prep_mod_strings.py` 重算，已濾掉
+  死版本分支、`vanilla_keys.json` 本體同名鍵、前綴不在 `Translator.getTextInternal()`
+  路由表上的死鍵，以及 `untranslatable_keys.json` 登記項，故數字與 issue body 的原始
+  record 數不同。落點：`UI` 3,097／`IG_UI` 347／`Sandbox` 210／`Recipes` 74／
+  `ItemName` 30／`ContextMenu` 16／`Tooltip` 4／`DynamicRadio` 1。
+  ch/cn 逐條各自撰寫，未用簡繁轉換器。
+  > 技術要點：切 20 批平行翻譯後，合併端對 20 組 `(in, out)` 做 index-aligned 的
+  > `en` 位元組比對（20/20 相符）——共享 kernel 會在批次間覆寫全域變數，多個 agent
+  > 實測踩過，`en` 被別批汙染時下游只會報「漏譯」而看不出成因。
+  > 另做跨批正規化：同一組並列顯示的字串被切到不同批時各批各自選詞，玩家會在同一份
+  > 任務清單裡看到混用。已統一 KnoxChronicles 派系名（Knox Workforce 兩種譯法）、
+  > Tier 1-5 說明句式（分裂在兩批）、20 組任務標題核心，並確立交易商 NPC 人名一律
+  > 保留拉丁原文（翻譯集內沒有任何 NPC 姓名鍵，音譯會與頭頂顯示名對不起來）。
+
+### Changed
+
+- **27 筆上游改值鍵重譯**（逐鍵取上游現行 EN 與現行譯文比對；另 56 筆語意仍相符維持
+  原譯、34 筆變動落在 PZ 不載入的版本分支、4 筆原先未收錄已併入補譯）：
+  - `Sandbox_ImmersiveBlackouts_{Electricity,Water}Cooldown_tooltip`：上游改為
+    「恢復後|中斷後」雙段格式，舊譯仍在講單段 min-max。
+  - `Sandbox_ExtractionMode_RaidDeathHandling`(+`_tooltip`)：上游改名為 Death
+    Handling 且 tooltip 明示適用所有地點含藏身點；tooltip 另補上游新增首句、修正
+    `half ... (rounded up)` 誤譯為「正好一半」與 death location 誤譯為「戰場地點」。
+  - `UI_Aegis_CarryWeight{Hint,Prompt,Tooltip}`：上游改為「固定值、力量與特質不再
+    計入」，舊譯只講範圍；CN 原值 `范围 5 到 1000.0 恢复游戏默认值.` 是漏字壞句。
+  - `UI_P4HasBeenRead_*`／`ContextMenu_P4HasBeenRead_*` 12 鍵：上游把 enable/disable
+    改成 Resume/Pause（暫停語意）、適用對象由書籍擴及一般物品、新增 CD/VHS 範圍。
+  - `IGUI_ExtractionMode_Quest_*` 6 鍵：bourbon→whisky、漏掉的 notepads、
+    `daily logistics deliveries`。
+  - `Sandbox_ConditionalSpeechAllowClientModOptions_tooltip`：上游由 non-admin
+    改為 `players (including the host)`。
+  As1 衍生層的 CN 偏離一律登記 `cn_overrides.json`（帶 `as1_value` 錨點），CH 改
+  `sources/ch/` 並登記 `ch_review_state.json` 背書。
+- **owner 衝突裁決 10 筆**（`owner_conflict_decisions.json`）。其中
+  `Tooltip_CmpSyringeWith{Plain,Quality}Vaccine` 兩鍵改值中性化：3615135168
+  ZVirusVaccine42BETA 與 3643703198 zReVaccin 3 對同鍵給的英文是不同實作，保留單側
+  才有的機制會誤導另一 owner 的玩家。其餘 6 筆現行譯文已是中性交集（冷凍櫃／冰箱
+  關閉、MarzGuns 戰術換彈、MuscleManager 三個不寫單位的設定項）登記背書沿用；
+  `UI_trait_Pluviophile/PluviophobiaDesc` 因上游改寫英文而簽名過時，交集結論不變、
+  只重新背書 signature。
+- `STEAM_DESCRIPTION.md` 有效覆蓋率 94% → 97%（`coverage_survey.py` 重算：有效鍵
+  112,290、已覆蓋 108,534、缺口 3,756）。GitHub repo 的 About description 同步為
+  `670+ 個 Workshop 模組（830+ 個模組 ID）`（原停在 `460+`；該處不在版控內，
+  `manifest --check` 與 CI 都看不到，已補記進 AGENTS.md 發布步驟 3b）。
+- CI action 更新：`actions/checkout` 7.0.0→7.0.1、`astral-sh/setup-uv` 8.3.2→10.0.1
+  （v9 的 `prune-cache` 預設改 false 與 v10 的 `enable-cache: auto` 敏感事件停用快取
+  兩項 breaking 對本 repo 皆無影響——5 個呼叫點全部顯式 `enable-cache: false`）。
+
+### Fixed
+
+- `apply_wf_result.py` 的陸用語預篩對「內存」「默認」「視頻」寫成裸字串，未帶
+  `sources/terminology.json` 那三條規則的 guard，於是把台灣正當語境判成陸用語而拒掉
+  整批——語料慣用的「你必須在藏身點內存活」會命中「內存」。已對齊 guard，並在
+  `test_apply_gates.py` 情境 5 雙向釘住（4 個正當語境放行、4 個真陸用語擋下）。
+
+### Notes
+
+- **刪除鍵不清理**：34 張 issue 列出的 172 個 removed 條目中，65 筆上游現行仍有同名鍵
+  （換檔案或分支、非真作廢）、74 筆我方未出貨或前綴無路由、33 筆確為殘留死鍵。殘留鍵
+  刻意保留：`split_sources` 有「As1 衍生層與快照逐鍵相等」的不變式，刪了下次重拆會
+  再生；出貨死鍵引擎不會查到（玩家零影響），移除需連動 corpus 與審查台帳。
+- **issue #365 Show Weapon Stats MP 不收錄**：steamcmd 逐檔查證該 MOD 完全沒有
+  `Translate/` 目錄，43 個介面標題全是 Lua 字面常值，唯一查翻譯表的 `getText` 是查
+  本體既有鍵。撞上 JSON-only 邊界，已附可複驗資訊請提交者轉交作者。
+- **issue #348 FR_Operator（已下架）關閉**：Steam API 複查仍 `result=9`；翻譯保留
+  不清理。關閉是安全的——`build_removed_plans()` 只吃 `newly_removed`，而
+  `classify_changes()` 的 gate 是 `if not prev.get("removed")`，state 已標記過的 wid
+  不會再產生 plan（self-test 情境 9 釘住此行為）。
+
 ## [42.20.4-1.22.1] - 2026-09-01
 
 ### 玩家摘要
