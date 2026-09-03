@@ -1415,6 +1415,21 @@
    "as1_value": "[Normal]<br>This necklace overflows with strength.<br>Weight + 15%",
    "owner_signature": "bdc233134fac60ab",
    "reason": "單人版 [Rare] vs MP 版 [Normal]，數值同為 Weight +15%% 但稀有度標籤分歧；刪標籤會讓 <br> 段落開頭留空，無誠實交集。兩版皆為 _EN.txt 死檔，抑制後顯示字面鍵名（已接受的殘留）。"
+  },
+  "IG_UI.json|IGUI_VehicleNamefhq85Vanagon": {
+   "as1_value": "",
+   "owner_signature": "9e6c175f5aff65e0",
+   "reason": "2026-09-03 #367 裁決不出貨：上游 2026-09 新增 1985 Vanagon（T3）車系三鍵，情形與 #244 批次的 230 條完全同型——同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體：base「Krichten Minibus III」（規避商標的虛構品牌）vs Real Names Addon「Volkswagen Vanagon (T3)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.4 反編譯確證）。As1 尚未收錄此鍵、我方亦不補譯，故 as1_value 為空字串（抑制前無有效 CN 值）。"
+  },
+  "IG_UI.json|IGUI_VehicleNamefhq85Vanagon_C": {
+   "as1_value": "",
+   "owner_signature": "9e6c175f5aff65e0",
+   "reason": "2026-09-03 #367 裁決不出貨：上游 2026-09 新增 1985 Vanagon（T3）車系三鍵，情形與 #244 批次的 230 條完全同型——同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體：base「Krichten Minibus III」（規避商標的虛構品牌）vs Real Names Addon「Volkswagen Vanagon (T3)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.4 反編譯確證）。As1 尚未收錄此鍵、我方亦不補譯，故 as1_value 為空字串（抑制前無有效 CN 值）。"
+  },
+  "IG_UI.json|IGUI_VehicleNamefhq85Vanagon_Westfalia": {
+   "as1_value": "",
+   "owner_signature": "a729443a2bc3c056",
+   "reason": "2026-09-03 #367 裁決不出貨：上游 2026-09 新增 1985 Vanagon（T3）車系三鍵，情形與 #244 批次的 230 條完全同型——同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體：base「Krichten Minibus III Camper」（規避商標的虛構品牌）vs Real Names Addon「Volkswagen Vanagon Westfalia (T3)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.4 反編譯確證）。As1 尚未收錄此鍵、我方亦不補譯，故 as1_value 為空字串（抑制前無有效 CN 值）。"
   }
  }
 }

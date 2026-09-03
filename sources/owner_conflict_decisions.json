@@ -6859,6 +6859,28 @@
    "reason": "SimpleOverhaulTraitsAndOccupations(2840805724) 是戒酒增無聊／不快樂／口渴、長期增疲勞等，jiggasGreenFire42(3414697768) 是缺酒壓力、酒精耐受高；舊譯是 SOTO 全文，對 GreenFire 錯。只留兩者皆真的交集。",
    "ch": "有酒癮. 長時間不喝酒會感到不適.",
    "cn": "有酒瘾. 长时间不喝酒会感到不适."
+  },
+  "IG_UI|IGUI_VehicleNamefhq85Vanagon": {
+   "action": "unship",
+   "signature": "9e6c175f5aff65e0",
+   "reason": "2026-09-03 #367 裁決不出貨：上游 2026-09 新增 1985 Vanagon（T3）車系三鍵，情形與 #244 批次的 230 條完全同型——同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體：base「Krichten Minibus III」（規避商標的虛構品牌）vs Real Names Addon「Volkswagen Vanagon (T3)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.4 反編譯確證）。As1 尚未收錄此鍵、我方亦不補譯，故 as1_value 為空字串（抑制前無有效 CN 值）。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq85Vanagon_C": {
+   "action": "unship",
+   "signature": "9e6c175f5aff65e0",
+   "reason": "2026-09-03 #367 裁決不出貨：上游 2026-09 新增 1985 Vanagon（T3）車系三鍵，情形與 #244 批次的 230 條完全同型——同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體：base「Krichten Minibus III」（規避商標的虛構品牌）vs Real Names Addon「Volkswagen Vanagon (T3)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.4 反編譯確證）。As1 尚未收錄此鍵、我方亦不補譯，故 as1_value 為空字串（抑制前無有效 CN 值）。"
+  },
+  "IG_UI|IGUI_VehicleNamefhq85Vanagon_Westfalia": {
+   "action": "unship",
+   "signature": "a729443a2bc3c056",
+   "reason": "2026-09-03 #367 裁決不出貨：上游 2026-09 新增 1985 Vanagon（T3）車系三鍵，情形與 #244 批次的 230 條完全同型——同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體：base「Krichten Minibus III Camper」（規避商標的虛構品牌）vs Real Names Addon「Volkswagen Vanagon Westfalia (T3)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.4 反編譯確證）。As1 尚未收錄此鍵、我方亦不補譯，故 as1_value 為空字串（抑制前無有效 CN 值）。"
+  },
+  "UI|UI_trait_BrokenLegDesc": {
+   "action": "translate",
+   "signature": "23bb3b696bb753bd",
+   "reason": "2026-09-03 #368：ETW（2914075159）本次新增此鍵，與既有 owner OCsChallengeTraits（3634630898）撞鍵。兩者同為「開局腿部骨折」特質描述，非不同實體：ETW 寫 'You were recovering from recent accident when everything started. You start with a broken leg, a severely debilitating injury.<br>Your leg will be splinted and bandaged.'，OCs 寫 'Start with a fractured leg.'。差異只在詳略（ETW 多敘背景與「已上夾板包紮」），核心事實一致。現行出貨值就是兩者的共同核心，未宣稱任何一方獨有的細節，對兩個 owner 都成立，故維持現值不改。",
+   "ch": "開局時腿部骨折.",
+   "cn": "开局时腿部骨折."
   }
  }
 }

@@ -1947,6 +1947,26 @@
     "ch": "放下",
     "cn": "放下",
     "en": "Unrolled"
+   },
+   "ContextMenu_Distillation_AgeUnknown": {
+    "en": "Aging",
+    "ch": "陳釀中",
+    "cn": "陈酿中"
+   },
+   "ContextMenu_Distillation_SourReady": {
+    "en": "Crock: soured, vinegar ready",
+    "ch": "陶罐: 已發酸, 醋可取用",
+    "cn": "陶罐: 已发酸, 醋可取用"
+   },
+   "ContextMenu_Distillation_SourRemaining": {
+    "en": "Crock: souring (%1 h remaining)",
+    "ch": "陶罐: 發酸中 (剩餘 %1 小時)",
+    "cn": "陶罐: 发酸中 (剩余 %1 小时)"
+   },
+   "ContextMenu_Distillation_SourUnknown": {
+    "en": "Crock: souring",
+    "ch": "陶罐: 發酸中",
+    "cn": "陶罐: 发酸中"
    }
   },
   "Fluids.json": {
@@ -13473,9 +13493,9 @@
     "en": "VEHICLE INSERTION  |  READY %1/%2  |  FUEL %3/%4 L"
    },
    "IGUI_ExtractionMode_VehicleTutorialBody": {
-    "ch": "以車輛進場會更快引來屍潮! 請注意, 你在突襲中的安全時間會稍微變短.",
-    "cn": "驾车进场会更快引来尸潮! 请注意, 你在突袭中的安全时间会稍微变短.",
-    "en": "Deploying in a vehicle will draw in a horde quicker! Keep in mind that you'll have a bit less safe time in raid."
+    "en": "Deploying in a vehicle will draw in a horde quicker! Keep in mind that you'll have a bit less safe time in raid before it gets dangerous.",
+    "ch": "以車輛進場會更快引來屍潮! 請注意, 突襲中變危險前的安全時間會稍微變短.",
+    "cn": "驾车进场会更快引来尸潮! 请注意, 突袭中变危险前的安全时间会稍微变短."
    },
    "IGUI_ExtractionMode_VehicleTutorialGotIt": {
     "ch": "了解",
@@ -24046,6 +24066,131 @@
     "ch": "開啟經驗值浮窗設定",
     "cn": "打开经验值浮窗设置",
     "en": "Open the XP Drop settings"
+   },
+   "IGUI_PJCK_TabInitFailed": {
+    "en": "The %1 tab failed to initialise. Check console.txt for details.",
+    "ch": "%1 頁籤初始化失敗. 詳情請檢視 console.txt.",
+    "cn": "%1 标签页初始化失败. 详情请查看 console.txt."
+   },
+   "IGUI_PJCK_TabLoadFailed": {
+    "en": "This tab could not be loaded.",
+    "ch": "無法載入此頁籤.",
+    "cn": "无法加载此标签页."
+   },
+   "IGUI_PJCK_TabUnavailable": {
+    "en": "The %1 tab is unavailable in this setup.",
+    "ch": "%1 頁籤在目前設定下無法使用.",
+    "cn": "%1 标签页在当前配置下不可用."
+   },
+   "IGUI_PJCK_Title": {
+    "en": "Project Cook",
+    "ch": "Project Cook",
+    "cn": "Project Cook"
+   },
+   "IGUI_PJCK_WorkSurfaceAvailable": {
+    "en": "Work surface available",
+    "ch": "有可用的工作檯面",
+    "cn": "有可用的操作台面"
+   },
+   "IGUI_CM_FurnitureDropRedirect": {
+    "en": "3D placement — pick a spot (GLB model, not icon).",
+    "ch": "3D 擺放 — 選擇位置 (GLB 模型, 非圖示).",
+    "cn": "3D 摆放 — 选择位置 (GLB 模型, 非图标)."
+   },
+   "IGUI_CM_FurniturePlaceHint": {
+    "en": "Place 3D furniture",
+    "ch": "擺放 3D 家具",
+    "cn": "摆放 3D 家具"
+   },
+   "IGUI_CM_FurniturePlaceHintDesc": {
+    "en": "Opens the 3D cursor (GLB mesh). Do not floor-drop — that was the flat 2D icon. The scratcher should tower over the bed. Your cat sleeps on the bed and scratches the pole.",
+    "ch": "開啟 3D 游標 (GLB 網格). 請勿直接丟到地上 — 那是舊的平面 2D 圖示. 貓抓柱應該高聳於貓床之上. 你的貓會睡在床上並抓柱子.",
+    "cn": "打开 3D 光标 (GLB 网格). 请勿直接丢到地上 — 那是旧的平面 2D 图标. 猫抓柱应该高耸于猫床之上. 你的猫会睡在床上并抓柱子."
+   },
+   "IGUI_CM_TestNapApplied": {
+    "en": "Cat reached the bed — rendering client applied the pose (animation state: %1).",
+    "ch": "貓已抵達貓床 — 渲染端已套用姿勢 (動畫狀態: %1).",
+    "cn": "猫已抵达猫床 — 渲染端已应用姿势 (动画状态: %1)."
+   },
+   "IGUI_CM_TestNapBed": {
+    "en": "Test nap on cat bed",
+    "ch": "測試在貓床上小睡",
+    "cn": "测试在猫床上小睡"
+   },
+   "IGUI_CM_TestNapGoing": {
+    "en": "Cat is going to the cat bed.",
+    "ch": "貓正前往貓床.",
+    "cn": "猫正前往猫床."
+   },
+   "IGUI_CM_TestNapNone": {
+    "en": "No cat bed nearby.",
+    "ch": "附近沒有貓床.",
+    "cn": "附近没有猫床."
+   },
+   "IGUI_CM_TestNapOk": {
+    "en": "Cat reached the bed — nap pose requested on the rendering client.",
+    "ch": "貓已抵達貓床 — 已向渲染端請求小睡姿勢.",
+    "cn": "猫已抵达猫床 — 已向渲染端请求小睡姿势."
+   },
+   "IGUI_CM_TestNapPending": {
+    "en": "Cat reached the bed — pose request received; waiting for the cat on the rendering client.",
+    "ch": "貓已抵達貓床 — 已收到姿勢請求; 正在渲染端等待貓咪.",
+    "cn": "猫已抵达猫床 — 已收到姿势请求; 正在渲染端等待猫咪."
+   },
+   "IGUI_CM_TestScratch": {
+    "en": "Test use scratcher",
+    "ch": "測試使用貓抓柱",
+    "cn": "测试使用猫抓柱"
+   },
+   "IGUI_CM_TestScratchGoing": {
+    "en": "Cat is going to the scratcher.",
+    "ch": "貓正前往貓抓柱.",
+    "cn": "猫正前往猫抓柱."
+   },
+   "IGUI_CM_TestScratchNone": {
+    "en": "No cat scratcher nearby (or no free tile beside it).",
+    "ch": "附近沒有貓抓柱 (或旁邊沒有空格子).",
+    "cn": "附近没有猫抓柱 (或旁边没有空格子)."
+   },
+   "IGUI_CM_TestScratchOk": {
+    "en": "Cat reached the scratcher — scratch pose requested on the rendering client.",
+    "ch": "貓已抵達貓抓柱 — 已向渲染端請求抓撓姿勢.",
+    "cn": "猫已抵达猫抓柱 — 已向渲染端请求抓挠姿势."
+   },
+   "IGUI_CM_UnstuckCat": {
+    "en": "Unstuck Cat",
+    "ch": "解救卡住的貓",
+    "cn": "解救卡住的猫"
+   },
+   "IGUI_CM_UnstuckFail": {
+    "en": "Could not rescue that cat right now.",
+    "ch": "目前無法解救那隻貓.",
+    "cn": "目前无法解救那只猫."
+   },
+   "IGUI_CM_UnstuckOk": {
+    "en": "Your cat was rescued and placed nearby.",
+    "ch": "你的貓已被解救並安置在附近.",
+    "cn": "你的猫已被解救并安置在附近."
+   },
+   "IGUI_CM_ZombieWake": {
+    "en": "Your cat woke you — zombies nearby!",
+    "ch": "你的貓把你叫醒了 — 附近有殭屍!",
+    "cn": "你的猫把你叫醒了 — 附近有僵尸!"
+   },
+   "IGUI_ExtractionMode_RaidBoundaryVehicleUnavailable": {
+    "en": "RAID BOUNDARY [VEHICLE EXTRACT UNAVAILABLE]",
+    "ch": "突襲邊界 [車輛無法撤離]",
+    "cn": "突袭边界 [车辆无法撤离]"
+   },
+   "IGUI_ExtractionMode_RaidRoadsBlockedPersistent": {
+    "en": "[ROADS BLOCKED] VEHICLES CANNOT BE EXTRACTED",
+    "ch": "[道路封鎖] 車輛無法撤離",
+    "cn": "[道路封锁] 车辆无法撤离"
+   },
+   "IGUI_ExtractionMode_RoadsBlockedVehicleApproach": {
+    "en": "SURVIVORS ONLY! THIS VEHICLE AND ALL CARGO WILL BE ABANDONED.",
+    "ch": "僅倖存者可撤離! 此車輛與所有貨物將被遺留.",
+    "cn": "仅幸存者可撤离! 此车辆与所有货物将被遗留."
    }
   },
   "ItemName.json": {
@@ -119170,6 +119315,106 @@
     "ch": "GenMaster 4000 發電機控制器",
     "cn": "GenMaster 4000 发电机控制器",
     "en": "GenMaster 4000 Generator Controller"
+   },
+   "BreakBigRocks.AluminumIngot": {
+    "en": "Aluminum Ingot",
+    "ch": "鋁錠",
+    "cn": "铝锭"
+   },
+   "BreakBigRocks.AluminumRod": {
+    "en": "Aluminum Rod",
+    "ch": "鋁棒",
+    "cn": "铝棒"
+   },
+   "BreakBigRocks.CeramicCrucibleSmall_Aluminum": {
+    "en": "Small Crucible with Molten Aluminum",
+    "ch": "小坩堝 (熔融鋁)",
+    "cn": "小坩埚 (熔融铝)"
+   },
+   "BreakBigRocks.CeramicCrucibleSmall_Copper": {
+    "en": "Small Crucible with Molten Copper",
+    "ch": "小坩堝 (熔融銅)",
+    "cn": "小坩埚 (熔融铜)"
+   },
+   "BreakBigRocks.CeramicCrucibleSmall_Gold": {
+    "en": "Small Crucible with Molten Gold",
+    "ch": "小坩堝 (熔融金)",
+    "cn": "小坩埚 (熔融金)"
+   },
+   "BreakBigRocks.CeramicCrucibleSmall_Metal": {
+    "en": "Small Crucible with Molten Metal",
+    "ch": "小坩堝 (熔融金屬)",
+    "cn": "小坩埚 (熔融金属)"
+   },
+   "BreakBigRocks.CeramicCrucibleSmall_Silver": {
+    "en": "Small Crucible with Molten Silver",
+    "ch": "小坩堝 (熔融銀)",
+    "cn": "小坩埚 (熔融银)"
+   },
+   "BreakBigRocks.CeramicCrucible_Aluminum": {
+    "en": "Crucible with Molten Aluminum",
+    "ch": "坩堝 (熔融鋁)",
+    "cn": "坩埚 (熔融铝)"
+   },
+   "BreakBigRocks.CeramicCrucible_Copper": {
+    "en": "Crucible with Molten Copper",
+    "ch": "坩堝 (熔融銅)",
+    "cn": "坩埚 (熔融铜)"
+   },
+   "BreakBigRocks.CeramicCrucible_Gold": {
+    "en": "Crucible with Molten Gold",
+    "ch": "坩堝 (熔融金)",
+    "cn": "坩埚 (熔融金)"
+   },
+   "BreakBigRocks.CeramicCrucible_Metal": {
+    "en": "Crucible with Molten Metal",
+    "ch": "坩堝 (熔融金屬)",
+    "cn": "坩埚 (熔融金属)"
+   },
+   "BreakBigRocks.CeramicCrucible_Silver": {
+    "en": "Crucible with Molten Silver",
+    "ch": "坩堝 (熔融銀)",
+    "cn": "坩埚 (熔融银)"
+   },
+   "BreakBigRocks.CopperRod": {
+    "en": "Copper Rod",
+    "ch": "銅棒",
+    "cn": "铜棒"
+   },
+   "BreakBigRocks.GoldRod": {
+    "en": "Gold Rod",
+    "ch": "金棒",
+    "cn": "金棒"
+   },
+   "BreakBigRocks.MetalIngot": {
+    "en": "Metal Ingot",
+    "ch": "金屬錠",
+    "cn": "金属锭"
+   },
+   "BreakBigRocks.SilverRod": {
+    "en": "Silver Rod",
+    "ch": "銀棒",
+    "cn": "银棒"
+   },
+   "ItemName_Base.CatScratcher": {
+    "en": "Cat scratcher",
+    "ch": "貓抓柱",
+    "cn": "猫抓柱"
+   },
+   "Distillation.MotherOfVinegar": {
+    "en": "Mother of Vinegar",
+    "ch": "醋母",
+    "cn": "醋母"
+   },
+   "Distillation.SouringCrock": {
+    "en": "Souring Crock",
+    "ch": "釀醋陶罐",
+    "cn": "酿醋陶罐"
+   },
+   "Base.CatScratcher": {
+    "en": "Cat scratcher",
+    "ch": "貓抓柱",
+    "cn": "猫抓柱"
    }
   },
   "Print_Media.json": {
@@ -130070,6 +130315,251 @@
     "ch": "將控制器升級為 GenMaster 4000",
     "cn": "将控制器升级为 GenMaster 4000",
     "en": "Upgrade Controller to GenMaster 4000"
+   },
+   "BBR_Cast_Aluminum_Ingot": {
+    "en": "Cast Aluminum Ingot",
+    "ch": "鑄造鋁錠",
+    "cn": "铸造铝锭"
+   },
+   "BBR_Cast_Aluminum_Rod": {
+    "en": "Cast Aluminum Rod",
+    "ch": "鑄造鋁棒",
+    "cn": "铸造铝棒"
+   },
+   "BBR_Cast_Copper_Ingot": {
+    "en": "Cast Copper Ingot",
+    "ch": "鑄造銅錠",
+    "cn": "铸造铜锭"
+   },
+   "BBR_Cast_Copper_Rod": {
+    "en": "Cast Copper Rod",
+    "ch": "鑄造銅棒",
+    "cn": "铸造铜棒"
+   },
+   "BBR_Cast_Gold_Ingot": {
+    "en": "Cast Gold Ingot",
+    "ch": "鑄造金錠",
+    "cn": "铸造金锭"
+   },
+   "BBR_Cast_Gold_Rod": {
+    "en": "Cast Gold Rod",
+    "ch": "鑄造金棒",
+    "cn": "铸造金棒"
+   },
+   "BBR_Cast_Iron_Bar": {
+    "en": "Cast Iron Bar from Molten Iron",
+    "ch": "以熔融鐵鑄造鐵條",
+    "cn": "以熔融铁铸造铁条"
+   },
+   "BBR_Cast_Iron_Ingot": {
+    "en": "Cast Iron Ingot from Molten Iron",
+    "ch": "以熔融鐵鑄造鐵錠",
+    "cn": "以熔融铁铸造铁锭"
+   },
+   "BBR_Cast_Metal_Bar": {
+    "en": "Cast Metal Bar from Molten Metal",
+    "ch": "以熔融金屬鑄造金屬條",
+    "cn": "以熔融金属铸造金属条"
+   },
+   "BBR_Cast_Metal_Ingot": {
+    "en": "Cast Metal Ingot from Molten Metal",
+    "ch": "以熔融金屬鑄造金屬錠",
+    "cn": "以熔融金属铸造金属锭"
+   },
+   "BBR_Cast_Silver_Ingot": {
+    "en": "Cast Silver Ingot",
+    "ch": "鑄造銀錠",
+    "cn": "铸造银锭"
+   },
+   "BBR_Cast_Silver_Rod": {
+    "en": "Cast Silver Rod",
+    "ch": "鑄造銀棒",
+    "cn": "铸造银棒"
+   },
+   "BBR_Cast_Small_Gold_Ingot": {
+    "en": "Cast Small Gold Ingot",
+    "ch": "鑄造小金錠",
+    "cn": "铸造小金锭"
+   },
+   "BBR_Cast_Small_Silver_Ingot": {
+    "en": "Cast Small Silver Ingot",
+    "ch": "鑄造小銀錠",
+    "cn": "铸造小银锭"
+   },
+   "BBR_Cast_Steel_Bar": {
+    "en": "Cast Steel Bar from Molten Steel",
+    "ch": "以熔融鋼鑄造鋼條",
+    "cn": "以熔融钢铸造钢条"
+   },
+   "BBR_Cast_Steel_Ingot": {
+    "en": "Cast Steel Ingot from Molten Steel",
+    "ch": "以熔融鋼鑄造鋼錠",
+    "cn": "以熔融钢铸造钢锭"
+   },
+   "BBR_Forge_Metal_Bar_Mold": {
+    "en": "Forge a Metal Bar Mold",
+    "ch": "鍛造金屬條模具",
+    "cn": "锻造金属条模具"
+   },
+   "BBR_Forge_Metal_Ingot_Mold": {
+    "en": "Forge a Metal Ingot Mold",
+    "ch": "鍛造金屬錠模具",
+    "cn": "锻造金属锭模具"
+   },
+   "BBR_Smelt_Aluminum": {
+    "en": "Smelt Aluminum in a Crucible",
+    "ch": "在坩堝中熔鍊鋁",
+    "cn": "在坩埚中熔炼铝"
+   },
+   "BBR_Smelt_Copper": {
+    "en": "Smelt Copper in a Crucible",
+    "ch": "在坩堝中熔鍊銅",
+    "cn": "在坩埚中熔炼铜"
+   },
+   "BBR_Smelt_Gold": {
+    "en": "Smelt Gold in a Crucible",
+    "ch": "在坩堝中熔鍊金",
+    "cn": "在坩埚中熔炼金"
+   },
+   "BBR_Smelt_Iron": {
+    "en": "Smelt Iron in a Crucible",
+    "ch": "在坩堝中熔鍊鐵",
+    "cn": "在坩埚中熔炼铁"
+   },
+   "BBR_Smelt_Iron_Ingot": {
+    "en": "Remelt an Iron Ingot",
+    "ch": "重熔鐵錠",
+    "cn": "重熔铁锭"
+   },
+   "BBR_Smelt_Iron_Large": {
+    "en": "Smelt a Large Iron Item",
+    "ch": "熔鍊大型鐵製品",
+    "cn": "熔炼大型铁制品"
+   },
+   "BBR_Smelt_Iron_Medium": {
+    "en": "Smelt an Iron Item",
+    "ch": "熔鍊鐵製品",
+    "cn": "熔炼铁制品"
+   },
+   "BBR_Smelt_Iron_Medium_Plus": {
+    "en": "Smelt a Medium Iron Item",
+    "ch": "熔鍊中型鐵製品",
+    "cn": "熔炼中型铁制品"
+   },
+   "BBR_Smelt_Iron_Small": {
+    "en": "Smelt a Small Iron Item",
+    "ch": "熔鍊小型鐵製品",
+    "cn": "熔炼小型铁制品"
+   },
+   "BBR_Smelt_Iron_Small_Parts": {
+    "en": "Smelt Small Iron Parts",
+    "ch": "熔鍊小型鐵零件",
+    "cn": "熔炼小型铁零件"
+   },
+   "BBR_Smelt_Metal": {
+    "en": "Smelt Metal in a Crucible",
+    "ch": "在坩堝中熔鍊金屬",
+    "cn": "在坩埚中熔炼金属"
+   },
+   "BBR_Smelt_Metal_Ingot": {
+    "en": "Remelt a Metal Ingot",
+    "ch": "重熔金屬錠",
+    "cn": "重熔金属锭"
+   },
+   "BBR_Smelt_Metal_Large": {
+    "en": "Smelt a Large Metal Item",
+    "ch": "熔鍊大型金屬製品",
+    "cn": "熔炼大型金属制品"
+   },
+   "BBR_Smelt_Metal_Small": {
+    "en": "Smelt a Small Metal Item",
+    "ch": "熔鍊小型金屬製品",
+    "cn": "熔炼小型金属制品"
+   },
+   "BBR_Smelt_Silver": {
+    "en": "Smelt Silver in a Crucible",
+    "ch": "在坩堝中熔鍊銀",
+    "cn": "在坩埚中熔炼银"
+   },
+   "BBR_Smelt_Steel": {
+    "en": "Smelt Steel in a Crucible",
+    "ch": "在坩堝中熔鍊鋼",
+    "cn": "在坩埚中熔炼钢"
+   },
+   "BBR_Smelt_Steel_Ingot": {
+    "en": "Remelt a Steel Ingot",
+    "ch": "重熔鋼錠",
+    "cn": "重熔钢锭"
+   },
+   "BBR_Smelt_Steel_Large": {
+    "en": "Smelt a Large Steel Item",
+    "ch": "熔鍊大型鋼製品",
+    "cn": "熔炼大型钢制品"
+   },
+   "BBR_Smelt_Steel_Medium": {
+    "en": "Smelt a Steel Item",
+    "ch": "熔鍊鋼製品",
+    "cn": "熔炼钢制品"
+   },
+   "BBR_Smelt_Steel_Medium_Plus": {
+    "en": "Smelt a Medium Steel Item",
+    "ch": "熔鍊中型鋼製品",
+    "cn": "熔炼中型钢制品"
+   },
+   "BBR_Smelt_Steel_Small": {
+    "en": "Smelt a Small Steel Item",
+    "ch": "熔鍊小型鋼製品",
+    "cn": "熔炼小型钢制品"
+   },
+   "BBR_Smelt_Steel_Small_Parts": {
+    "en": "Smelt Small Steel Parts",
+    "ch": "熔鍊小型鋼零件",
+    "cn": "熔炼小型钢零件"
+   },
+   "DismantleCatScratcher": {
+    "en": "Dismantle cat scratcher",
+    "ch": "拆解貓抓柱",
+    "cn": "拆解猫抓柱"
+   },
+   "MakeCatScratcher": {
+    "en": "Make cat scratcher",
+    "ch": "製作貓抓柱",
+    "cn": "制作猫抓柱"
+   },
+   "Recipe_DismantleCatScratcher": {
+    "en": "Dismantle cat scratcher",
+    "ch": "拆解貓抓柱",
+    "cn": "拆解猫抓柱"
+   },
+   "Recipe_MakeCatScratcher": {
+    "en": "Make cat scratcher",
+    "ch": "製作貓抓柱",
+    "cn": "制作猫抓柱"
+   },
+   "PD_CaskSourScraps": {
+    "en": "Sour Fruit Scraps - Full Cask (Vinegar)",
+    "ch": "果渣發酸 - 整桶 (醋)",
+    "cn": "果渣发酸 - 整桶 (醋)"
+   },
+   "PD_GrowMother": {
+    "en": "Grow a Mother of Vinegar",
+    "ch": "培養醋母",
+    "cn": "培养醋母"
+   },
+   "PD_GrowMotherWine": {
+    "en": "Grow a Mother of Vinegar (Looted Wine)",
+    "ch": "培養醋母 (拾獲的葡萄酒)",
+    "cn": "培养醋母 (搜刮到的葡萄酒)"
+   },
+   "PD_SourDrink": {
+    "en": "Set a Batch to Sour (Vinegar)",
+    "ch": "將一批酒轉為發酸 (醋)",
+    "cn": "将一批酒转为发酸 (醋)"
+   },
+   "PD_SourFruitScraps": {
+    "en": "Sour Fruit Scraps (Vinegar)",
+    "ch": "果渣發酸 (醋)",
+    "cn": "果渣发酸 (醋)"
    }
   },
   "Sandbox.json": {
@@ -142296,6 +142786,356 @@
     "ch": "木柴搬運袋的生成倍率",
     "cn": "木柴搬运袋的生成倍率",
     "en": "Spawn multiplier for the wood carrier"
+   },
+   "Sandbox_ETWTS_BrokenLegEnabled": {
+    "en": "Enable Broken Leg",
+    "ch": "啟用腿部骨折",
+    "cn": "启用一瘸一拐"
+   },
+   "Sandbox_ETWTS_BrokenLegEnabled_tooltip": {
+    "en": "Controls character-creation availability.",
+    "ch": "控制此特質在角色建立時是否可選.",
+    "cn": "控制角色创建时是否可用."
+   },
+   "Sandbox_ETWTS_BrokenLegPointValue": {
+    "en": "Broken Leg point value",
+    "ch": "腿部骨折點數值",
+    "cn": "一瘸一拐点数价值"
+   },
+   "Sandbox_ETWTS_BrokenLegPointValue_tooltip": {
+    "en": "Character-creation point adjustment: negative values cost points; positive values grant points.",
+    "ch": "角色建立的點數調整: 負值消耗點數, 正值給予點數.",
+    "cn": "角色创建点数调整: 负值消耗点数; 正值给予点数."
+   },
+   "Sandbox_ETWTS_DeprivedEnabled": {
+    "en": "Enable Deprived",
+    "ch": "啟用一無所有",
+    "cn": "启用一无所有"
+   },
+   "Sandbox_ETWTS_DeprivedEnabled_tooltip": {
+    "en": "Controls character-creation availability.",
+    "ch": "控制此特質在角色建立時是否可選.",
+    "cn": "控制角色创建时是否可用."
+   },
+   "Sandbox_ETWTS_DeprivedPointValue": {
+    "en": "Deprived point value",
+    "ch": "一無所有點數值",
+    "cn": "一无所有点数价值"
+   },
+   "Sandbox_ETWTS_DeprivedPointValue_tooltip": {
+    "en": "Character-creation point adjustment: negative values cost points; positive values grant points.",
+    "ch": "角色建立的點數調整: 負值消耗點數, 正值給予點數.",
+    "cn": "角色创建点数调整: 负值消耗点数; 正值给予点数."
+   },
+   "Sandbox_ETWTS_InjuredEnabled": {
+    "en": "Enable Injured",
+    "ch": "啟用受傷",
+    "cn": "启用受伤"
+   },
+   "Sandbox_ETWTS_InjuredEnabled_tooltip": {
+    "en": "Controls character-creation availability.",
+    "ch": "控制此特質在角色建立時是否可選.",
+    "cn": "控制角色创建时是否可用."
+   },
+   "Sandbox_ETWTS_InjuredPointValue": {
+    "en": "Injured point value",
+    "ch": "受傷點數值",
+    "cn": "受伤点数价值"
+   },
+   "Sandbox_ETWTS_InjuredPointValue_tooltip": {
+    "en": "Character-creation point adjustment: negative values cost points; positive values grant points.",
+    "ch": "角色建立的點數調整: 負值消耗點數, 正值給予點數.",
+    "cn": "角色创建点数调整: 负值消耗点数; 正值给予点数."
+   },
+   "Sandbox_ETW_InjuredBurns": {
+    "en": "Injured Burns",
+    "ch": "受傷特質含燒傷",
+    "cn": "受伤特质含烧伤"
+   },
+   "Sandbox_ETW_InjuredBurns_tooltip": {
+    "en": "Allow characters with the Injured trait to receive burns among their random starting injuries.<br>Burns can be extremely debilitating, especially on the legs.",
+    "ch": "允許帶有受傷特質的角色在隨機初始傷勢中出現燒傷. <br>燒傷可能造成極嚴重的行動障礙, 尤其是在腿部.",
+    "cn": "允许带有受伤特质的角色在随机初始伤势中出现烧伤. <br>烧伤可能造成极严重的行动障碍, 尤其是在腿部."
+   },
+   "Sandbox_CatsMod_ZombieWakeRadius": {
+    "en": "Wake owner zombie radius",
+    "ch": "喚醒主人殭屍半徑",
+    "cn": "唤醒主人僵尸半径"
+   },
+   "Sandbox_CatsMod_ZombieWakeRadius_tooltip": {
+    "en": "Tiles. While the owner is asleep, companion cats use this shorter radius to meow and wake you when zombies get close. Only applies when Meow when zombies nearby is ON. Default 10.",
+    "ch": "格數. 主人睡覺時, 夥伴貓會改用這個較短的半徑, 在殭屍靠近時叫喚並把你喚醒. 僅在「附近有殭屍時叫喚」為開啟時生效. 預設 10.",
+    "cn": "格数. 主人睡觉时, 伙伴猫会改用这个较短的半径, 在僵尸靠近时叫唤并把你唤醒. 仅在 “附近有僵尸时叫唤” 为开启时生效. 默认 10."
+   },
+   "Sandbox_SimpleSuppressors_AdapterCraftLevel": {
+    "en": "ADAPTERS | Caliber Adapter Craft Level",
+    "ch": "轉接器 | 口徑轉接器製作等級",
+    "cn": "转接器 | 口径转接器制作等级"
+   },
+   "Sandbox_SimpleSuppressors_AdapterCraftLevel_tooltip": {
+    "en": "Required Metalworking level for all caliber adapters. The default is level 3.",
+    "ch": "製作所有口徑轉接器所需的金屬加工等級. 預設為 3 級.",
+    "cn": "制作所有口径转接器所需的金属加工等级. 默认为 3 级."
+   },
+   "Sandbox_SimpleSuppressors_Machined12GaugeCraftLevel": {
+    "en": "MACHINED | 12 Gauge Craft Level",
+    "ch": "機加工 | 12號製作等級",
+    "cn": "机加工 | 12号制作等级"
+   },
+   "Sandbox_SimpleSuppressors_Machined12GaugeCraftLevel_tooltip": {
+    "en": "Required Metalworking level to craft the 12 gauge machined suppressor. The default is level 8.",
+    "ch": "製作 12號機加工消音器所需的金屬加工等級. 預設為 8 級.",
+    "cn": "制作 12号机加工消音器所需的金属加工等级. 默认为 8 级."
+   },
+   "Sandbox_SimpleSuppressors_Machined3030CraftLevel": {
+    "en": "MACHINED | .30-30 Craft Level",
+    "ch": "機加工 | .30-30 製作等級",
+    "cn": "机加工 | .30-30 制作等级"
+   },
+   "Sandbox_SimpleSuppressors_Machined3030CraftLevel_tooltip": {
+    "en": "Required Metalworking level to craft the .30-30 machined suppressor. The default is level 5.",
+    "ch": "製作 .30-30 機加工消音器所需的金屬加工等級. 預設為 5 級.",
+    "cn": "制作 .30-30 机加工消音器所需的金属加工等级. 默认为 5 级."
+   },
+   "Sandbox_SimpleSuppressors_Machined308CraftLevel": {
+    "en": "MACHINED | .308 Craft Level",
+    "ch": "機加工 | .308 製作等級",
+    "cn": "机加工 | .308 制作等级"
+   },
+   "Sandbox_SimpleSuppressors_Machined308CraftLevel_tooltip": {
+    "en": "Required Metalworking level to craft the .308 machined suppressor. The default is level 7.",
+    "ch": "製作 .308 機加工消音器所需的金屬加工等級. 預設為 7 級.",
+    "cn": "制作 .308 机加工消音器所需的金属加工等级. 默认为 7 级."
+   },
+   "Sandbox_SimpleSuppressors_Machined357CraftLevel": {
+    "en": "MACHINED | .357 Craft Level",
+    "ch": "機加工 | .357 製作等級",
+    "cn": "机加工 | .357 制作等级"
+   },
+   "Sandbox_SimpleSuppressors_Machined357CraftLevel_tooltip": {
+    "en": "Required Metalworking level to craft the .357 machined suppressor. The default is level 5.",
+    "ch": "製作 .357 機加工消音器所需的金屬加工等級. 預設為 5 級.",
+    "cn": "制作 .357 机加工消音器所需的金属加工等级. 默认为 5 级."
+   },
+   "Sandbox_SimpleSuppressors_Machined44CraftLevel": {
+    "en": "MACHINED | .44 Craft Level",
+    "ch": "機加工 | .44 製作等級",
+    "cn": "机加工 | .44 制作等级"
+   },
+   "Sandbox_SimpleSuppressors_Machined44CraftLevel_tooltip": {
+    "en": "Required Metalworking level to craft the .44 machined suppressor. The default is level 5.",
+    "ch": "製作 .44 機加工消音器所需的金屬加工等級. 預設為 5 級.",
+    "cn": "制作 .44 机加工消音器所需的金属加工等级. 默认为 5 级."
+   },
+   "Sandbox_SimpleSuppressors_Machined45ACPCraftLevel": {
+    "en": "MACHINED | .45 ACP Craft Level",
+    "ch": "機加工 | .45 ACP 製作等級",
+    "cn": "机加工 | .45 ACP 制作等级"
+   },
+   "Sandbox_SimpleSuppressors_Machined45ACPCraftLevel_tooltip": {
+    "en": "Required Metalworking level to craft the .45 ACP machined suppressor. The default is level 4.",
+    "ch": "製作 .45 ACP 機加工消音器所需的金屬加工等級. 預設為 4 級.",
+    "cn": "制作 .45 ACP 机加工消音器所需的金属加工等级. 默认为 4 级."
+   },
+   "Sandbox_SimpleSuppressors_Machined556CraftLevel": {
+    "en": "MACHINED | 5.56 Craft Level",
+    "ch": "機加工 | 5.56 製作等級",
+    "cn": "机加工 | 5.56 制作等级"
+   },
+   "Sandbox_SimpleSuppressors_Machined556CraftLevel_tooltip": {
+    "en": "Required Metalworking level to craft the 5.56 machined suppressor. The default is level 7.",
+    "ch": "製作 5.56 機加工消音器所需的金屬加工等級. 預設為 7 級.",
+    "cn": "制作 5.56 机加工消音器所需的金属加工等级. 默认为 7 级."
+   },
+   "Sandbox_SimpleSuppressors_Machined9mmCraftLevel": {
+    "en": "MACHINED | 9mm Craft Level",
+    "ch": "機加工 | 9mm 製作等級",
+    "cn": "机加工 | 9mm 制作等级"
+   },
+   "Sandbox_SimpleSuppressors_Machined9mmCraftLevel_tooltip": {
+    "en": "Required Metalworking level to craft the 9mm machined suppressor. The default is level 4.",
+    "ch": "製作 9mm 機加工消音器所需的金屬加工等級. 預設為 4 級.",
+    "cn": "制作 9mm 机加工消音器所需的金属加工等级. 默认为 4 级."
+   },
+   "Sandbox_SimpleSuppressors_OilFilterCraftLevel": {
+    "en": "OIL FILTERS | Crafting Metalworking Level",
+    "ch": "機油濾清器 | 製作金屬加工等級",
+    "cn": "机油滤清器 | 制作金属加工等级"
+   },
+   "Sandbox_SimpleSuppressors_OilFilterCraftLevel_tooltip": {
+    "en": "Required Metalworking level for all oil filter suppressors (not adapters). The default is level 3.",
+    "ch": "製作所有機油濾清器消音器 (不含轉接器) 所需的金屬加工等級. 預設為 3 級.",
+    "cn": "制作所有机油滤清器消音器 (不含转接器) 所需的金属加工等级. 默认为 3 级."
+   },
+   "Sandbox_SimpleSuppressors_SuppressorDurability": {
+    "en": "SUPPRESSORS | Durability",
+    "ch": "消音器 | 耐久度",
+    "cn": "消音器 | 耐久度"
+   },
+   "Sandbox_SimpleSuppressors_SuppressorDurability_option1": {
+    "en": "Low (10,000 shots)",
+    "ch": "低 (10,000 發)",
+    "cn": "低 (10,000 发)"
+   },
+   "Sandbox_SimpleSuppressors_SuppressorDurability_option2": {
+    "en": "Medium (20,000 shots)",
+    "ch": "中 (20,000 發)",
+    "cn": "中 (20,000 发)"
+   },
+   "Sandbox_SimpleSuppressors_SuppressorDurability_option3": {
+    "en": "High (30,000 shots)",
+    "ch": "高 (30,000 發)",
+    "cn": "高 (30,000 发)"
+   },
+   "Sandbox_SimpleSuppressors_SuppressorDurability_option4": {
+    "en": "Indestructible",
+    "ch": "永不損壞",
+    "cn": "永不损坏"
+   },
+   "Sandbox_SimpleSuppressors_SuppressorDurability_tooltip": {
+    "en": "How many shots an attached suppressor lasts before breaking. Low: 10,000 shots. Medium: 20,000 shots. High: 30,000 shots. Indestructible disables durability loss. The default is Indestructible.",
+    "ch": "已裝上的消音器可以射擊多少發才會損壞. 低: 10,000 發. 中: 20,000 發. 高: 30,000 發. 永不損壞則停用耐久度損耗. 預設為永不損壞.",
+    "cn": "已装上的消音器可以射击多少发才会损坏. 低: 10,000 发. 中: 20,000 发. 高: 30,000 发. 永不损坏则禁用耐久度损耗. 默认为永不损坏."
+   },
+   "Sandbox_Distillation": {
+    "en": "Peachey's Distillation",
+    "ch": "Peachey 蒸餾",
+    "cn": "Peachey 蒸馏"
+   },
+   "Sandbox_Distillation_AgeTimeMultiplier": {
+    "en": "Ageing Time",
+    "ch": "陳釀時間",
+    "cn": "陈酿时间"
+   },
+   "Sandbox_Distillation_AgeTimeMultiplier_tooltip": {
+    "en": "How long casked spirits and wine take to mature.<br>100 is the mod's designed balance: five days for whiskey, ten for scotch, seven for country wine to become aged wine.<br>Higher is slower.",
+    "ch": "入桶的烈酒與葡萄酒需要多久才會成熟. <br>100 是本模組設計的平衡值: 威士忌五天, 蘇格蘭威士忌十天, 鄉村葡萄酒七天變成陳年葡萄酒. <br>數值越高越慢.",
+    "cn": "入桶的烈酒与葡萄酒需要多久才会成熟. <br>100 是本模组设计的平衡值: 威士忌五天, 苏格兰威士忌十天, 乡村葡萄酒七天变成陈酿葡萄酒. <br>数值越高越慢."
+   },
+   "Sandbox_Distillation_CultureTimePercent": {
+    "en": "Yeast and Culture Speed",
+    "ch": "酵母與菌種速度",
+    "cn": "酵母与菌种速度"
+   },
+   "Sandbox_Distillation_CultureTimePercent_tooltip": {
+    "en": "How long a batch made with yeast, or a crock pitched with a mother of vinegar, takes compared to the same batch made with plain sugar.<br>33 means a third of the time. Set to 100 to remove the advantage entirely.",
+    "ch": "使用酵母的一批酒, 或投入醋母的陶罐, 相較於單純加糖的同一批需要多久. <br>33 表示只需三分之一的時間. 設為 100 可完全取消這項優勢.",
+    "cn": "使用酵母的一批酒, 或投入醋母的陶罐, 相较于单纯加糖的同一批需要多久. <br>33 表示只需三分之一的时间. 设为 100 可完全取消这项优势."
+   },
+   "Sandbox_Distillation_FermentRadius": {
+    "en": "Fermentation Range",
+    "ch": "發酵範圍",
+    "cn": "发酵范围"
+   },
+   "Sandbox_Distillation_FermentRadius_tooltip": {
+    "en": "How far from a player, in tiles, containers are checked each hour for batches that are ready.<br>Anything you are carrying always counts. Raise this if you want a cellar to keep working while you stand at the far end of the building; large values cost performance.",
+    "ch": "每小時檢查容器內是否有已完成批次時, 容器與玩家的最大距離, 單位為格. <br>你隨身攜帶的物品一律計入. 若你希望人站在建築另一端時酒窖仍能繼續運作, 可以提高此值; 數值過大會影響效能.",
+    "cn": "每小时检查容器内是否有已完成批次时, 容器与玩家的最大距离, 单位为格. <br>你随身携带的物品一律计入. 若你希望人站在建筑另一端时酒窖仍能继续运作, 可以提高此值; 数值过大会影响性能."
+   },
+   "Sandbox_Distillation_FermentTimeMultiplier": {
+    "en": "Fermentation Time",
+    "ch": "發酵時間",
+    "cn": "发酵时间"
+   },
+   "Sandbox_Distillation_FermentTimeMultiplier_tooltip": {
+    "en": "How long mash, wort, must and honey must take to ferment.<br>100 is the mod's designed balance: one day for mash, a day and a half for ale, two days for wine, three for mead.<br>Higher is slower.",
+    "ch": "醪, 麥汁, 葡萄原漿與蜂蜜原漿需要多久才會發酵完成. <br>100 是本模組設計的平衡值: 醪一天, 愛爾啤酒一天半, 葡萄酒兩天, 蜂蜜酒三天. <br>數值越高越慢.",
+    "cn": "醪, 麦汁, 葡萄原浆与蜂蜜原浆需要多久才会发酵完成. <br>100 是本模组设计的平衡值: 醪一天, 麦酒一天半, 葡萄酒两天, 蜂蜜酒三天. <br>数值越高越慢."
+   },
+   "Sandbox_Distillation_IntoxicationMultiplier": {
+    "en": "Alcohol Strength",
+    "ch": "酒精強度",
+    "cn": "酒精强度"
+   },
+   "Sandbox_Distillation_IntoxicationMultiplier_tooltip": {
+    "en": "How drunk these drinks get you. Affects only the intoxication they cause, not their mood, pain or healing effects.<br>Set to 0 for no intoxication at all.",
+    "ch": "這些飲品會讓你醉到什麼程度. 只影響它們造成的醉意, 不影響心情, 疼痛或治療效果. <br>設為 0 則完全不會醉.",
+    "cn": "这些饮品会让你醉到什么程度. 只影响它们造成的醉意, 不影响心情, 疼痛或治疗效果. <br>设为 0 则完全不会醉."
+   },
+   "Sandbox_Distillation_LootEquipment": {
+    "en": "Distilling Gear in Loot",
+    "ch": "蒸餾器材出現在戰利品中",
+    "cn": "蒸馏器材出现在战利品中"
+   },
+   "Sandbox_Distillation_LootEquipment_tooltip": {
+    "en": "Whether the Still Kit and the Mother of Vinegar turn up in the world: drug shacks, barns, garages, camping lockers and survivor food stores.<br>Off by default, since the still is the gate on the whole spirits line.",
+    "ch": "蒸餾套件與醋母是否會出現在世界中: 製毒棚屋, 穀倉, 車庫, 露營置物櫃與倖存者的食物儲藏處. <br>預設關閉, 因為蒸餾器是整條烈酒產線的關鍵門檻.",
+    "cn": "蒸馏套件与醋母是否会出现在世界中: 制毒棚屋, 谷仓, 车库, 露营储物柜与幸存者的食物储藏处. <br>默认关闭, 因为蒸馏器是整条烈酒产线的关键门槛."
+   },
+   "Sandbox_Distillation_LootFineSpirits": {
+    "en": "Aged Spirits in Loot",
+    "ch": "陳年烈酒出現在戰利品中",
+    "cn": "陈酿烈酒出现在战利品中"
+   },
+   "Sandbox_Distillation_LootFineSpirits_tooltip": {
+    "en": "Whether vodka, brandy, vermouth, absinthe, aged wine, whiskey and scotch turn up in the world.<br>Off by default: these cost days of waiting to make, and finding them hands you the back half of the mod. Malort never spawns at any setting.",
+    "ch": "伏特加, 白蘭地, 苦艾酒, 苦艾烈酒, 陳年葡萄酒, 威士忌與蘇格蘭威士忌是否會出現在世界中. <br>預設關閉: 這些酒要等上好幾天才做得出來, 直接撿到等於跳過本模組的後半段內容. 苦味利口酒在任何設定下都不會生成.",
+    "cn": "伏特加, 白兰地, 苦艾酒, 苦艾烈酒, 陈酿葡萄酒, 威士忌与苏格兰威士忌是否会出现在世界中. <br>默认关闭: 这些酒要等上好几天才做得出来, 直接捡到等于跳过本模组的后半段内容. 苦味利口酒在任何设置下都不会生成."
+   },
+   "Sandbox_Distillation_LootHomebrew": {
+    "en": "Homebrew in Loot",
+    "ch": "自釀酒出現在戰利品中",
+    "cn": "自酿酒出现在战利品中"
+   },
+   "Sandbox_Distillation_LootHomebrew_tooltip": {
+    "en": "Whether ale, country wine, mead and moonshine turn up in the world: survivor safehouses, squats, trailer parks, farm and garage fridges, drug shacks and hidden stashes.<br>Someone else was brewing before you got here. A found bottle of country wine still ages into aged wine on its own.",
+    "ch": "愛爾啤酒, 鄉村葡萄酒, 蜂蜜酒與私釀烈酒是否會出現在世界中: 倖存者安全屋, 違占空屋, 拖車營地, 農場與車庫的冰箱, 製毒棚屋以及隱藏藏匿點. <br>在你抵達之前, 已經有人在釀酒了. 撿到的鄉村葡萄酒仍會自行陳釀成陳年葡萄酒.",
+    "cn": "麦酒, 乡村葡萄酒, 蜂蜜酒与私酿烈酒是否会出现在世界中: 幸存者安全屋, 违占空屋, 拖车营地, 农场与车库的冰箱, 制毒棚屋以及隐藏藏匿点. <br>在你抵达之前, 已经有人在酿酒了. 捡到的乡村葡萄酒仍会自行陈酿成陈酿葡萄酒."
+   },
+   "Sandbox_Distillation_LootTier_option1": {
+    "en": "None",
+    "ch": "無",
+    "cn": "无"
+   },
+   "Sandbox_Distillation_LootTier_option2": {
+    "en": "Very Rare",
+    "ch": "非常稀有",
+    "cn": "非常稀有"
+   },
+   "Sandbox_Distillation_LootTier_option3": {
+    "en": "Rare",
+    "ch": "稀有",
+    "cn": "稀有"
+   },
+   "Sandbox_Distillation_LootTier_option4": {
+    "en": "Normal",
+    "ch": "正常",
+    "cn": "正常"
+   },
+   "Sandbox_Distillation_LootTier_option5": {
+    "en": "Common",
+    "ch": "常見",
+    "cn": "常见"
+   },
+   "Sandbox_Distillation_RequireHeatSource": {
+    "en": "Still Kit Needs a Fire",
+    "ch": "蒸餾套件需要火源",
+    "cn": "蒸馏套件需要火源"
+   },
+   "Sandbox_Distillation_RequireHeatSource_tooltip": {
+    "en": "The portable Still Kit only works next to live heat: a lit campfire, barbecue or fireplace, or a powered oven or antique stove.<br>Turn off to distil anywhere. The Moonshine Still workstation has its own firebox and is unaffected either way.",
+    "ch": "可攜式蒸餾套件只能在有火的熱源旁運作: 點燃的營火, 燒烤架或壁爐, 或是通電的烤箱與古典火爐. <br>關閉後即可在任何地方蒸餾. 私釀蒸餾器工作站自帶火箱, 不受此設定影響.",
+    "cn": "便携式蒸馏套件只能在有火的热源旁运作: 点燃的营火, 烧烤架或壁炉, 或是通电的烤箱与旧式壁炉. <br>关闭后即可在任何地方蒸馏. 私酿蒸馏器工作站自带火箱, 不受此设置影响."
+   },
+   "Sandbox_Distillation_SourTimeMultiplier": {
+    "en": "Souring Time",
+    "ch": "發酸時間",
+    "cn": "发酸时间"
+   },
+   "Sandbox_Distillation_SourTimeMultiplier_tooltip": {
+    "en": "How long a souring crock takes to become vinegar.<br>100 is the mod's designed balance: three days on a wild ferment, one day with a mother of vinegar pitched in.<br>Higher is slower.",
+    "ch": "釀醋陶罐需要多久才會變成醋. <br>100 是本模組設計的平衡值: 自然發酵三天, 投入醋母則一天. <br>數值越高越慢.",
+    "cn": "酿醋陶罐需要多久才会变成醋. <br>100 是本模组设计的平衡值: 自然发酵三天, 投入醋母则一天. <br>数值越高越慢."
+   },
+   "Sandbox_ExtractionMode_GrantStarterFlashlight": {
+    "en": "Grant Starter Flashlight",
+    "ch": "發放初始手電筒",
+    "cn": "发放初始手电筒"
+   },
+   "Sandbox_ExtractionMode_GrantStarterFlashlight_tooltip": {
+    "en": "Enabled by default. Each new survivor receives one fully charged flashlight.",
+    "ch": "預設啟用. 每位新倖存者會收到一支充滿電的手電筒.",
+    "cn": "默认启用. 每位新幸存者会收到一支充满电的手电筒."
    }
   },
   "Tooltip.json": {
@@ -146515,6 +147355,41 @@
     "ch": "紀念 Cricket, sewerrabbit 最愛的馬.",
     "cn": "纪念 Cricket, sewerrabbit 最爱的马.",
     "en": "In memory of Cricket, sewerrabbit's beloved horse."
+   },
+   "Tooltip_Distillation_MotherOfVinegar": {
+    "en": "Optional culture. Sours a crock 3x faster.",
+    "ch": "選用的菌種. 讓陶罐發酸速度加快 3 倍.",
+    "cn": "可选菌种. 让陶罐发酸速度加快 3 倍."
+   },
+   "Tooltip_Distillation_RecipeCaskSour": {
+    "en": "Full cask: 6 vinegar. Sugar or a mother. 6 jars.",
+    "ch": "整桶: 6 份醋. 需糖或醋母. 需 6 個玻璃罐.",
+    "cn": "整桶: 6 份醋. 需糖或醋母. 需 6 个玻璃罐."
+   },
+   "Tooltip_Distillation_RecipeGrowMother": {
+    "en": "Brew your own mother with vinegar and wine.",
+    "ch": "用醋與葡萄酒培養自己的醋母.",
+    "cn": "用醋与葡萄酒培养自己的醋母."
+   },
+   "Tooltip_Distillation_RecipeGrowMotherWine": {
+    "en": "Vinegar and half a bottle. Keeps the bottle.",
+    "ch": "需要醋和半瓶酒. 會保留酒瓶.",
+    "cn": "需要醋和半瓶酒. 会保留酒瓶."
+   },
+   "Tooltip_Distillation_RecipeSourDrink": {
+    "en": "Wine, ale or mead. 72h on sugar, 24h on a mother.",
+    "ch": "葡萄酒, 愛爾啤酒或蜂蜜酒. 加糖 72 小時, 加醋母 24 小時.",
+    "cn": "葡萄酒, 麦酒或蜂蜜酒. 加糖 72 小时, 加醋母 24 小时."
+   },
+   "Tooltip_Distillation_RecipeSourScraps": {
+    "en": "Windfall and citrus. 72h on sugar, 24h on a mother.",
+    "ch": "落果與柑橘類. 加糖 72 小時, 加醋母 24 小時.",
+    "cn": "落果与柑橘类. 加糖 72 小时, 加醋母 24 小时."
+   },
+   "Tooltip_Distillation_SouringCrock": {
+    "en": "Turning to vinegar. Right-click to check.",
+    "ch": "正在變成醋. 右鍵點選可檢視.",
+    "cn": "正在变成醋. 右键点击可查看."
    }
   },
   "UI.json": {
@@ -168919,6 +169794,36 @@
     "ch": "你既懶散又遲緩.<br>-2 效率",
     "cn": "你既懒散又迟缓.<br>-2 效率",
     "en": "You are lazy and slow.<br>-2 Efficiency"
+   },
+   "UI_trait_Deprived": {
+    "en": "Deprived",
+    "ch": "一無所有",
+    "cn": "一无所有"
+   },
+   "UI_trait_DeprivedDesc": {
+    "en": "You didn't have much in the way of possessions before the apocalypse. You begin only with underwear, a T-shirt, sneakers, a garbage bag, and a key ring.",
+    "ch": "末日之前你的家當本來就不多. 開局時你只有內衣, 一件 T 恤, 一雙運動鞋, 一個垃圾袋和一個鑰匙圈.",
+    "cn": "末日之前你的家当本来就不多. 开局时你只有内衣, 一件 T 恤, 一双运动鞋, 一个垃圾袋和一个钥匙环."
+   },
+   "UI_trait_Injured": {
+    "en": "Injured",
+    "ch": "受傷",
+    "cn": "受伤"
+   },
+   "UI_trait_InjuredDesc": {
+    "en": "You were recently injured. You begin the game with moderate injuries and your wounds are bandaged.",
+    "ch": "你最近受了傷. 開局時帶有中度傷勢, 傷口已包紮.",
+    "cn": "你最近受了伤. 开局时带有中度伤势, 伤口已包扎."
+   },
+   "UI_OC_DisableLootSafety": {
+    "en": "Let categories affect loot spawn rates",
+    "ch": "讓分類影響戰利品生成率",
+    "cn": "让分类影响战利品生成率"
+   },
+   "UI_OC_DisableLootSafety_tooltip": {
+    "en": "Build 42 picks an item's loot multiplier from its DisplayCategory, so moving an item off Tool, Material, Cooking, Gardening, FirstAid, Ammo, SkillBook and similar makes it roll against Other Loot instead. organizedCategories normally keeps those items in their original loot bucket and only changes the category you see. Enable this to let the categories reach the loot roll again, as in older versions. Takes effect immediately.",
+    "ch": "Build 42 會依物品的顯示分類決定其戰利品倍率, 因此把物品移出工具, 材料, 烹飪, 園藝, 急救, 彈藥, 技能書等分類後, 它會改用「其他戰利品」的機率判定. organizedCategories 預設會讓這些物品留在原本的戰利品類別中, 只改變你看到的分類. 啟用此項可讓分類再次影響戰利品判定, 與舊版行為相同. 立即生效.",
+    "cn": "Build 42 会依物品的显示分类决定其战利品倍率, 因此把物品移出工具, 材料, 烹饪, 园艺, 急救, 弹药, 技能书等分类后, 它会改用 “其他战利品” 的概率判定. organizedCategories 默认会让这些物品留在原本的战利品类别中, 只改变你看到的分类. 启用此项可让分类再次影响战利品判定, 与旧版行为相同. 立即生效."
    }
   },
   "MakeUp.json": {
