@@ -650,7 +650,7 @@
 | [Cyes Push Doors](https://steamcommunity.com/sharedfiles/filedetails/?id=3780683663) | Cyes 推門 | 推門可撞擊殭屍造成傷害與眩暈（可設定是否影響爬行殭屍），並提供撞擊音效與視覺受擊回饋。 | `CyesPushDoors` | 37 | — | — |
 | [Weapon Loadout](https://steamcommunity.com/sharedfiles/filedetails/?id=3780702752) | 武器配裝 | 提供武器介面顯示彈藥數量，並可切換射擊模式與開火設定。 | `WeaponLoadout` | 131 | — | — |
 | [Leons Project Gunsmith](https://steamcommunity.com/sharedfiles/filedetails/?id=3781102421) | Leon's Project Gunsmith | 槍械配件介面，顯示精度、瞄準時間等進階屬性數值。 | `GunAttachment3DPreview` | 209 | — | — |
-| [AllTheInfo [BETA]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3781129962) | 所有資訊 [BETA] | 在物品、技能、建築、動物與各類介面中顯示更完整的遊戲資訊。 | `AllInfo` | 337 | ⚠️ ≥185 | — |
+| [AllTheInfo [BETA]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3781129962) | 所有資訊 [BETA] | 在物品、技能、建築、動物與各類介面中顯示更完整的遊戲資訊。 | `AllInfo` | 383 | ⚠️ ≥185 | — |
 | [Zero to Chad](https://steamcommunity.com/sharedfiles/filedetails/?id=3781428012) | Zero to Chad | 依擊殺殭屍數逐步降低恐慌，並可移除笨拙特質、取得勇敢或不受恐慌影響等特質。 | `ZeroToChad` | 27 | — | — |
 | [Where I Was](https://steamcommunity.com/sharedfiles/filedetails/?id=3782021029) | 事發當時我在哪 | 為開局提供可選的初始情景沙盒設定，也可選擇不套用任何情景。 | `WhereIWasWhenItHappened` | 17 | — | — |
 | [Simple Suppressors](https://steamcommunity.com/sharedfiles/filedetails/?id=3782565181) | 簡易消音器 | 以機油濾清器作為滅音器，可安裝與取下，並提供 .30-30、.308、.357 等多種口徑的轉接器。 | `SimpleSuppressors` | 105 | — | — |
