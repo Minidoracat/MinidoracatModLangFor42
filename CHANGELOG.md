@@ -4,6 +4,84 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.20.4-1.24.1] - 2026-09-03
+
+### 玩家摘要
+
+> 本節為 Workshop 更新註記用的白話版；以下各節為維護者向的技術細節。
+
+- **補上 9 個模組共 226 個新增字串。** 量較大的是「敲碎大石頭」56 鍵、
+  All The Info 46 鍵、Peachey 蒸餾 44 鍵、簡易消音器 26 鍵與 Cats Mod 24 鍵；
+  另包含 ETW 新特質 18 鍵、Extraction Mode 與 Project Cook 各 5 鍵，以及
+  organizedCategories 的 2 個新設定文字。
+- **修正 13 個已跟不上上游的說明。** All The Info 的 11 個特質效果依 9/2 新原文
+  重譯；Extraction Mode 的車輛進場提示補回「變危險前」的安全時間語意，M9 初始裝備
+  說明則刪除已被獨立手電筒選項取代的舊註記。
+- **修正 Cats Mod 貓抓柱名稱。** 上游沿用 B41 的舊式翻譯代號，B42 不會讀取；
+  本包補上引擎實際查詢的 `Base.CatScratcher`，物品欄不再退回英文／內部名稱。
+- **避免錯誤車名覆蓋。** Motorious Zone 的虛構品牌與 Real Names Addon 的
+  Volkswagen Vanagon 共用三個代號、卻代表不同命名模式；單一 JSON 無法依啟用模組切換，
+  故不出貨這三鍵，各版本玩家會看到自己模組的英文車名。
+- **有效覆蓋率維持 100.0%。** 現行有效上游翻譯鍵 112,222 個中已覆蓋 112,216 個；
+  餘 6 鍵只存在於已下架、無法重新下載的 FR Operator。
+- **支援版本與安裝方式不變。** 仍僅支援 Build 42.20.4+；Mod ID 與 Workshop ID 不變。
+
+### Added
+
+- **tracker issue #367–#374、#376–#379 補譯 180 鍵／174 條相異字串**（8 個 mod）：
+  `Sandbox` 70、`Recipes` 49、`IG_UI` 25、`ItemName` 19、`Tooltip` 7、`UI` 6、
+  `ContextMenu` 4。CH／CN 逐鍵對照 EN 分別直寫，未用簡繁轉換器。
+  - BreakBigRocks 56 鍵：坩堝／熔鍊／錠／熔融金屬命名對齊本體。
+  - Peachey Distillation 44 鍵：醋母／陳釀／醪／愛爾啤酒（CN 麦酒）沿用同 mod 既有值。
+  - SimpleSuppressors 26 鍵、CatsMod 24 鍵、ETW 18 鍵、ExtractionMode 5 鍵、
+    Project Cook 5 鍵、organizedCategories 2 鍵。
+- **All The Info（3781129962）新增 46 鍵**（issue #375）：42 個
+  `UI_AllInfo_perk_*` 技能等級效果與 4 個特質效果。
+
+### Changed
+
+- **owner 衝突新增 4 筆裁決**：
+  - Motorious Zone 三個 `IGUI_VehicleNamefhq85Vanagon*`：base 虛構車名
+    `Krichten Minibus III` vs Real Names Addon 真實車名 `Volkswagen Vanagon (T3)`，
+    無誠實中性譯名，依 #244 同型先例 `unship`；兩個 owner 都有可載入 EN JSON，
+    抑制後會顯示各自英文車名。
+  - `UI_trait_BrokenLegDesc`：ETW 與 OCsChallengeTraits 詳略不同但同為開局腿部骨折，
+    現行譯文即共同核心，登記 `translate` 背書後維持不改。
+- **All The Info 74 鍵 `<br>` 改為 `\n`**：42.20.0+ 的
+  `Translator.getTextInternal()` 本就把 `<br>` 轉成換行，出貨顯示等價；直寫換行也避免
+  42.19 以前 `ISRichTextPanel` 吃掉標籤前文字。
+- Workshop 長期描述新增 Ko-fi／GitHub「支持作者」區塊，並由 manifest 同步
+  `workshop.txt`。
+
+### Fixed
+
+- **13 個上游改寫鍵重譯**：All The Info 11 鍵（特質機制與數值修正）；
+  Extraction Mode 2 鍵（車輛進場安全時間補回 `before it gets dangerous`，
+  M9 初始裝備 tooltip 移除已不存在的手電筒耦合敘述）。
+- **Cats Mod `ItemName_Base.CatScratcher` 死鍵補洞**：上游 item 位於
+  `module Base`、且缺 `DisplayName`；補引擎實際查詢的裸鍵 `Base.CatScratcher`，
+  module 取自 schema 10 `script_item` 第一手證據，非 suffix 猜測。
+- `build_mod.suppress_unshipped()` 不再把未命中的 owner 衝突登記誤報為「可退役」。
+  第二類登記的退役判準在 prep census；誤刪會讓 owner 衝突恢復 blocking。
+
+### 已裁決不跟進
+
+- **AnthroTraits（issue #369）19 鍵零動作**：上游只把 `%1%` 改為 `%1%%`
+  （42.20.1 `formatted()` 安全逸出），英文內容逐字未變；本包譯文早已符合 `%%` 契約。
+- **Long Term Preservation Extended 270 個刪除 record 零動作**：全部位於
+  `42.12/` 或已移除的 UI 子 mod 分支，非 B42.20.4 有效分支。
+- Motorious Zone 三個 Vanagon 車名鍵不補中性譯名，理由與 fallback 結果已公開於
+  `OWNER_CONFLICTS.md`。
+
+### 驗證
+
+- build 綠、verify 16/16、確定性冪等雙跑零 diff（183 檔）。
+- owner decision gate／`OWNER_CONFLICTS.md` 同步、lint 棘輪全零。
+- dist CH/CN 對本機本體 48,718 個現有 `(檔,鍵)` 零覆蓋；serialization 全綠。
+- CI 18 支純 repo 回歸測試全過；12 個 tracker wid 重跑 prep 有效缺口 0。
+- `coverage_survey.py`：112,222 個有效鍵中覆蓋 112,216（100.0%），唯一缺口為
+  已下架、無法重新下載的 FR Operator 6 鍵。
+
 ## [42.20.4-1.24.0] - 2026-09-02
 
 ### 玩家摘要
