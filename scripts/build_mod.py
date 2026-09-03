@@ -551,7 +551,7 @@ def suppress_unshipped(
     `Recipes.json|MakeTortilla`），不可因「檔名可載入」就當成可退役的垃圾條目。
 
     `as1_value` 錨點對**抑制前的合併 CN 值**比對：上游動過該鍵就是重新查 mod 的訊號
-    （見該檔 `_recheck`）。回傳 (剔除數, 錨點漂移訊息, 登記但未命中的條目)。
+    （見該檔 `_recheck`）。回傳 (剔除數, 錨點漂移訊息, 登記但未命中的**第一類**條目)。
     """
     if not UNSHIPPED_KEYS_JSON.is_file():
         return 0, [], []
@@ -563,7 +563,15 @@ def suppress_unshipped(
         fname, _, key = pair.partition("|")
         cn_map = merged_cn.get(fname)
         if cn_map is None or key not in cn_map:
-            unused.append(pair)
+            # **未命中只對第一類（檔名不可載入／落點不明）才是「可退役」的訊號**。
+            # 第二類（owner 衝突，帶 owner_signature）未命中是常態：As1 未收錄該鍵時
+            # 真相層本來就沒有值，抑制是 no-op，但裁決仍**必須保留**——
+            # `owner_conflict_decisions.json` 的 `action:"unship"` 以 `owner_signature`
+            # 與本檔雙向背書，刪掉會讓 `prep_mod_strings` 對該 owner 立刻恢復 blocking。
+            # 它的退役判準在 prep 的 unship gate（「裁決鍵已不在 census」），不在這裡，
+            # 故不報，以免「登記可退役」的建議把承重登記勸退。
+            if not isinstance(spec, dict) or "owner_signature" not in spec:
+                unused.append(pair)
             continue
         anchor = spec.get("as1_value")
         if isinstance(anchor, str) and cn_map[key] != anchor:

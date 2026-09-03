@@ -75,6 +75,14 @@ n, drift, unused, _, _ = run(
 assert n == 1, f"其他條目不該被未命中條目影響：{n}"
 assert unused == ["Nope.json|Gone"], f"未命中未報：{unused}"
 
+# 4b. **第二類（owner 衝突）未命中不得報「可退役」**：As1 未收錄該鍵時真相層本來就沒
+#     有值，抑制是 no-op，但裁決由 owner_conflict_decisions 的 owner_signature 雙向
+#     背書，刪掉會讓 prep 立刻恢復 blocking。判定退役是 prep unship gate 的職責。
+n, drift, unused, _, _ = run(
+    {"Nope.json|Gone": {**A, "owner_signature": "deadbeefdeadbeef"}},
+    {"Dead.json": {"K": "原值"}}, {"Dead.json": {"K": "x"}})
+assert unused == [], f"owner 衝突登記未命中不該報可退役：{unused}"
+
 # 5. 無 as1_value 錨點者仍剔除、不報漂移（錨點為選用欄）
 n, drift, _, cn, _ = run({"Dead.json|K": {"reason": "無錨點"}},
                          {"Dead.json": {"K": "任意值"}}, {"Dead.json": {"K": "x"}})
@@ -117,4 +125,4 @@ with tempfile.TemporaryDirectory() as td:
         "", str(dist), {}, {"Dead.json": {"K": {"cn": "原創值"}}},
         as1_available=False, suppressed={"Dead.json|K"}, unshipped=set())
     assert "vanilla 出貨抑制" in "\n".join(vanilla_warn), vanilla_warn
-print("✅ test_unshipped_keys：8 組情境全過")
+print("✅ test_unshipped_keys：9 組情境全過")
