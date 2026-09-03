@@ -47,6 +47,12 @@
 - 收錄順序將參考需求熱度（👍 反應數）、文本量與上游更新活躍度綜合評估。
 - 上游「[B42]統一模組漢化」（As1）已涵蓋的 MOD 會隨同步自動加入，不需申請。
 
+## ☕ 支持作者
+
+MOD 永遠免費。喜歡的話可以請我喝杯咖啡，贊助會用在伺服器與 MOD 開發上。
+
+[![Ko-fi](https://raw.githubusercontent.com/Minidoracat/workshop-resources/refs/heads/main/badges/badge_kofi.png)](https://ko-fi.com/minidoracat)
+
 ## 開發
 
 生成物（`MOD/` 與 `sources/mods/`）勿手改（例外：`sources/mods/` 下 `metadata.json` 標 `origin: "own"` 的原創翻譯目錄為人工真相），請改人工真相層（`sources/ch/` 繁中 corpus、`sources/cn_overrides.json`、`sources/placeholder_exceptions.json`）後重跑管線。`sources/lua/` 為凍結歷史產物，不新增、不修改、不維護。繁中已斷絕 OpenCC 機轉，逐鍵人工維護。
