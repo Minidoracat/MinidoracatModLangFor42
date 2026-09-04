@@ -4,13 +4,27 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
-## [Unreleased]
+## [42.20.4-1.24.3] - 2026-09-05
+
+### 玩家摘要
+
+- **修正 SOTO 沙盒設定的特質名稱。** 簡中「替笨如牛」修正為遊戲本體的「体笨如牛」；繁中同步使用本體特質名「笨拙」。
+- **統一 Plysken 系列沙盒標題。** 冷凍革命與附件系統重製版統一使用「普利斯肯」，與太陽能革命、灌溉管道的既有沙盒名稱一致。
+- **僅修正文案，功能與安裝方式不變。** 本次未新增支援 MOD、未修改遊戲機制；仍支援 Build 42.20.4+，Mod ID 與 Workshop ID 不變。
 
 ### Fixed
 
 - **修正沙盒設定錯字與同系列譯名不一致**（[#391](https://github.com/Minidoracat/MinidoracatModLangFor42/issues/391)）：
   - `Sandbox_SOTO_ClumsyRemovable`：修正 As1 簡中原值的「替笨如牛」為本體特質名「体笨如牛」；繁中同步對齊本體的「笨拙」。
   - `Sandbox_PFR`／`Sandbox_PAR`：繁簡兩側的沙盒標題統一使用「普利斯肯」，與既有 `Sandbox_PSR`／`Sandbox_PIP` 一致；保留「附件系統重製版」的既有用詞。
+
+### 驗證
+
+- build 綠、`verify_dist` 16/16 PASS（含 As1 來源漂移檢查）、冪等雙跑 183 檔零 diff、
+  owner decision gate 綠、`lint_ch` 棘輪全零；相對 `v42.20.4-1.24.2` 的 CN 改值 3 鍵、
+  待複核 0 鍵。
+- 18 支純 repo 回歸測試與 tracker self-test 全過；對本機本體 48,718 個 (檔,鍵)
+  零覆蓋、`test_serialization` 3,120 檔合規。
 
 ## [42.20.4-1.24.2] - 2026-09-05
 
