@@ -2754,6 +2754,11 @@
   "reason": "vanilla 是/否對話框否定鈕誤譯「取消」，影響面極大；唯一同鍵 mod EN 實檔='No' 無重定義依據，官方值回填",
   "value": "否"
  },
+ "IG_UI.json|IGUI_PSR_PowerBank_IndoorsOnly": {
+  "as1_value": "蓄电池组必须放置在密闭的房间内!",
+  "reason": "上游 42.1 分支已把訊息從 'Battery Bank must be placed in an enclosed room!' 改寫成診斷式長句（'The game does not count this spot as a room yet - the Battery Bank needs walls all the way around. In a base you built, look for a gap or a missing corner.'）；As1 CN 仍是舊短句，玩家看不到「四周要完整封閉」與「檢查缺口」這兩個關鍵指引（tracker issue #384）。",
+  "value": "游戏还没把这个位置算作房间 - 蓄电池组四周必须完全被墙包围. 如果是你自己盖的基地, 找找有没有缺口或漏掉的角落."
+ },
  "IG_UI.json|IGUI_PZLinux_ATM_ContractRefill": {
   "as1_value": "合约补款",
   "reason": "As1「补款」＝補繳款項，方向與 ATM 補充鈔票相反；且 As1 自己在 Contracts_AtmRefill_Intro 寫「补充现金」，家族內同一概念兩種譯法。沿用 As1 的「合约」，動詞改回「补钞」。",
@@ -17283,6 +17288,16 @@
   "as1_value": "在裁缝操作中启用重新装备功能.",
   "reason": "Tailoring 遊戲技能依本體官方 CN `IGUI_perks_Tailoring=缝纫`；「裁缝」是職業，放在技能/操作分類會錯義。",
   "value": "在缝纫操作中启用重新装备功能."
+ },
+ "UI.json|UI_RPT_NoTargets": {
+  "as1_value": "请携带一个半空的游戏原版丙烷储罐或喷灯.",
+  "reason": "上游本版把可填充目標由本體丙烷罐／噴燈擴充到「受支持的容器與工具」（EN 'Carry a supported partially empty propane container or tool.'，同版新增 EnableCompatiblePropaneItems 等 5 個 Sandbox 開關）；As1 CN 的「游戏原版丙烷储罐或喷灯」已與實際可填充範圍相反（tracker issue #388）。",
+  "value": "请携带一个半空的受支持丙烷容器或工具."
+ },
+ "UI.json|UI_RPT_Refill": {
+  "as1_value": "加注丙烷储罐或喷灯",
+  "reason": "與同批 UI_RPT_NoTargets 同因：上游 EN 由 'Refill propane tank or blowtorch' 改為 'Refill propane container or tool'，右鍵選單不再只限本體丙烷罐與噴燈（tracker issue #388）。動詞沿用 As1 既有的「加注」。",
+  "value": "加注丙烷容器或工具"
  },
  "UI.json|UI_RefugeUpgrade_Category_ecology": {
   "as1_value": "生态学",

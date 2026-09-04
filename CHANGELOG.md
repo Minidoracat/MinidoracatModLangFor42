@@ -4,6 +4,70 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### 玩家摘要
+
+> 本節為 Workshop 更新註記用的白話版；以下各節為維護者向的技術細節。
+
+- **補上 7 個模組共 117 個新增字串。** 量較大的是 AEGIS 伺服器管理面板的
+  「規則區域」新功能 52 鍵、CD: Cats 貓同伴的新指令與心情 29 鍵、公車站快速旅行
+  的單向站設定 12 鍵、Arcadia 可填充丙烷罐的 5 組新開關 10 鍵，以及
+  76 雪佛蘭 C/K 系列新增的 10 款車身塗裝名。
+- **修正 3 個已跟不上上游的說明。** Plysken 太陽能革命的蓄電池組錯誤訊息改成
+  上游新版的診斷式說明（會告訴你要檢查牆面缺口）；Arcadia 可填充丙烷罐的
+  兩則提示不再寫「原版丙烷罐或噴燈」——該版起支援的容器與工具已擴大。
+- **修掉 4 個永遠不會顯示的翻譯。** Alice 武器揹帶的熱鍵欄名稱原本跟著上游放在
+  錯誤的檔案裡，上游本次已修正落點，本包同步移除失效的那一份。
+- **車輛塗裝名沿用官方譯名。** 福索石油、麥考伊、卡洛威園藝、三月嶺工程車
+  四個 Knox 郡商號都採用遊戲本體既有的中文名稱。
+- **有效覆蓋率維持 100.0%。** 現行有效上游翻譯鍵 112,358 個中已覆蓋 112,352 個；
+  餘 6 鍵只存在於已下架、無法重新下載的 FR Operator。
+- **支援版本與安裝方式不變。** 仍僅支援 Build 42.20.4+；Mod ID 與 Workshop ID 不變。
+
+### Added
+
+- **tracker issue #380–#383、#385、#387–#389 補譯 117 鍵／110 條相異字串**（7 個 mod）：
+  `UI` 52、`IG_UI` 48、`Sandbox` 16、`ItemName` 1。CH／CN 逐鍵對照 EN 分別直寫，
+  未用簡繁轉換器。三個翻譯 lane（Claude／Grok）分工後互相對抗式複核。
+  - AEGIS Panel（3766508989）52 鍵：`UI_Aegis_Rz*` 規則區域全套（區域清單、
+    地圖選區工具、PvP／電力／供水三態、徽章與範本）。術語錨定既有 881 條
+    `UI_Aegis_*`；**CN 沿用該 mod 既有的「丧尸」而非全庫多數的「僵尸」**。
+  - CD: Cats（3791294616）29 鍵：`IGUI_PD_*_cat` 新增的四種指令（分散注意、
+    尋回、前往、嗅聞）與心情說明。句型取自同族狗版既有 `IGUI_PD_*`，
+    狗版「吠叫」在貓版改為「嘶叫」；`saddlebags` 沿用既有「馱袋／驮袋」。
+  - BusStopFastTravel（3711522956）12 鍵：單向（僅抵達）站點與「全部清除」。
+  - Arcadia 可填充丙烷罐（3786849936）10 鍵：Fossoil／Gas2Go 大型儲罐、
+    模組相容品、提燈氣瓶與 The Workshop 容器共 5 組開關。
+    `drainable` 依本體官方 `IGUI_ItemType_Drainable` 譯「可清空」。
+  - 76chevyKseries（3161951724）10 鍵：`76chevyKseriesExpanded` 子 mod 新增的
+    車身塗裝名，Fossoil／McCoy／Calloway Landscaping／March Ridge Construction
+    四個採本體官方譯名。
+  - Cats Mod（3779907776）2 鍵、WayMoreCars（3520758551）2 鍵的新 Sandbox 選項。
+
+### Changed
+
+- **3 個真過時鍵重譯**（issue #384、#388），CN 走 `cn_overrides`（帶 `as1_value`
+  錨點）＋CH corpus＋`ch_review_state` 三處背書：
+  - `IGUI_PSR_PowerBank_IndoorsOnly`：上游把 "Battery Bank must be placed in an
+    enclosed room!" 改寫成診斷式長句（要玩家找牆面缺口與漏掉的角落）。
+  - `UI_RPT_NoTargets`／`UI_RPT_Refill`：上游同版把可填充目標由本體丙烷罐／噴燈
+    擴大到「受支持的容器與工具」，As1 CN 的「游戏原版丙烷储罐或喷灯」已與實際相反。
+
+### Removed
+
+- **退役 `UI.json` 的 4 個 `IGUI_HotbarAttachment_AliceSling*` 死鍵**（issue #386）：
+  `IGUI_` 前綴由 `getTextInternal()` 硬路由到 `igui` map，放在 `UI.json` 永不被查。
+  上游本次已把這批鍵從 `UI.json` 搬到 `IG_UI.json`；本包 `IG_UI.json` 早有同值
+  正確落點，故移除 own 層失效的那一份。
+
+### 驗證
+
+- build 綠、`verify_dist` 16/16 PASS、冪等雙跑零 diff、owner decision gate 綠、
+  `OWNER_CONFLICTS.md` 同步、vanilla 對本機本體 48,718 鍵零覆蓋、
+  `test_serialization` 3,120 檔合規、`lint_ch` 棘輪全零、manifest 四生成物零漂移、
+  CI 18 支回歸測試全過、7 個 wid 重跑 prep 缺口 0、有效覆蓋率 100.0%。
+
 ## [42.20.4-1.24.1] - 2026-09-03
 
 ### 玩家摘要
