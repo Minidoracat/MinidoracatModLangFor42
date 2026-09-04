@@ -4,6 +4,14 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Fixed
+
+- **修正沙盒設定錯字與同系列譯名不一致**（[#391](https://github.com/Minidoracat/MinidoracatModLangFor42/issues/391)）：
+  - `Sandbox_SOTO_ClumsyRemovable`：修正 As1 簡中原值的「替笨如牛」為本體特質名「体笨如牛」；繁中同步對齊本體的「笨拙」。
+  - `Sandbox_PFR`／`Sandbox_PAR`：繁簡兩側的沙盒標題統一使用「普利斯肯」，與既有 `Sandbox_PSR`／`Sandbox_PIP` 一致；保留「附件系統重製版」的既有用詞。
+
 ## [42.20.4-1.24.2] - 2026-09-05
 
 ### 玩家摘要

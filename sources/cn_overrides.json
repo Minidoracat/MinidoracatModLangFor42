@@ -19744,5 +19744,20 @@
   "as1_value": "默认启用. 每位新幸存者会收到一把 M9手枪和两个装满弹药的 9mm 弹匣. 初始手电筒不受影响.",
   "reason": "2026-09-03 #378：上游 2026-09 從 EN 移除句尾 'The starter flashlight is unaffected.'（同版新增獨立的 Sandbox_ExtractionMode_GrantStarterFlashlight 選項後，該註記已無意義）。As1 仍留著「初始手电筒不受影响.」＝描述一個已不存在的耦合關係，會讓玩家以為手電筒仍綁在 M9 選項上。依上游現行 EN 刪除該句，其餘逐字保留。",
   "value": "默认启用. 每位新幸存者会收到一把 M9手枪和两个装满弹药的 9mm 弹匣."
+ },
+ "Sandbox.json|Sandbox_SOTO_ClumsyRemovable": {
+  "as1_value": "可移除的'替笨如牛'",
+  "reason": "EN 'Clumsy trait can be removed:' names the vanilla Clumsy trait, whose official CN is 体笨如牛 (vanilla UI.json|UI_trait_clumsy); As1's 替笨如牛 is a 替/体 typo and contradicts As1's own 体笨如牛 for the same trait in Sandbox_BCR_allow_CLUMSY and Sandbox_ETW_Clumsy. Reported in MinidoracatModLangFor42 issue #391; not filed upstream to As1.",
+  "value": "可移除的'体笨如牛'"
+ },
+ "Sandbox.json|Sandbox_PFR": {
+  "as1_value": "普利森冷冻革命",
+  "reason": "Upstream mod is Plysken Frost Revolution (workshop 3732755978, mod.info name verified); As1 transliterates the author as 普利森 here but 普利斯肯 in Sandbox_PSR and Sandbox_PIP. Unified to 普利斯肯 per MinidoracatModLangFor42 issue #391; not filed upstream to As1.",
+  "value": "普利斯肯冷冻革命"
+ },
+ "Sandbox.json|Sandbox_PAR": {
+  "as1_value": "Plysken附件系统重制版",
+  "reason": "Upstream mod is Plysken Attachments Reborn (workshop 3749848348, mod.info name verified); As1 leaves the author name in Latin script here while using 普利斯肯 in Sandbox_PSR and Sandbox_PIP. Unified to 普利斯肯 per MinidoracatModLangFor42 issue #391 (not filed upstream to As1); 附件系统重制版 kept as As1 wrote it (upstream's own CN reads Plysken 挂载系统重制版).",
+  "value": "普利斯肯附件系统重制版"
  }
 }
