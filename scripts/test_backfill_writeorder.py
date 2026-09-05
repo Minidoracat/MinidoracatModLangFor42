@@ -68,11 +68,11 @@ def run_backfill(*, boom_at: str | None = None, boom_mirror: bool = False,
         (root / "tracker-state").mkdir()
         watchlist = root / "tracker-state" / "watchlist.json"
         assert tracker.gen_watchlist(mods_root, registry, watchlist) == 0
-        state_p = root / "tracker-state" / "en_corpus_hashes.json"
-        io.open(state_p, "w", encoding="utf-8").write(json.dumps({"mods": seed_state or {}}))
+        state_p = root / "tracker-state" / "en_corpus_hashes"
+        tracker.write_corpus_hashes({"mods": seed_state or {}}, state_p)
 
         saved = {k: getattr(tracker, k) for k in
-                 ("EN_CORPUS_HASHES_JSON", "EN_TEXT_DIR", "WATCHLIST_JSON", "SOURCES",
+                 ("EN_CORPUS_HASHES_DIR", "EN_TEXT_DIR", "WATCHLIST_JSON", "SOURCES",
                   "BACKFILL_PLANS_JSON", "steamcmd_download", "extract_corpus",
                   "resolve_install_dir", "load_attribution_keys", "_within_scratch",
                   "load_timestamps", "write_json")}
@@ -80,7 +80,7 @@ def run_backfill(*, boom_at: str | None = None, boom_mirror: bool = False,
         hits: list[str] = []
         plans_p = root / "_dl" / "backfill_plans.json"
         try:
-            tracker.EN_CORPUS_HASHES_JSON = state_p
+            tracker.EN_CORPUS_HASHES_DIR = state_p
             tracker.EN_TEXT_DIR = root / "sources" / "en"
             tracker.WATCHLIST_JSON = watchlist
             tracker.SOURCES = root / "sources"
@@ -108,7 +108,10 @@ def run_backfill(*, boom_at: str | None = None, boom_mirror: bool = False,
             tracker.cmd_backfill_en(types.SimpleNamespace(
                 steamcmd=str(root / "steamcmd"), install_dir=None, force=True,
                 limit=None, only=None))
-            result = json.loads(io.open(state_p, encoding="utf-8").read())
+            result = tracker.load_corpus_hashes(state_p)
+            # 頂層標記要讀磁碟原文：loader 會補預設 EXTRACTOR_SCHEMA，讀它等於恆真
+            result["extractor_schema"] = json.loads(
+                (state_p / tracker.EN_CORPUS_META).read_text(encoding="utf-8")).get("extractor_schema")
             pending = json.loads(plans_p.read_text(encoding="utf-8")) if plans_p.is_file() else None
         finally:
             for k, v in saved.items():

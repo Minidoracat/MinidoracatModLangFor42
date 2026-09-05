@@ -105,8 +105,7 @@ def run(*, records: dict, mirror: dict, dist_items: dict, vanilla: list[str],
             mods = {"1": mk(records, mirror)}
         if second_wid:
             mods[second_wid] = mk(second_records or {}, second_mirror or {})
-        (root / "tracker-state" / "en_corpus_hashes.json").write_text(
-            json.dumps({"mods": mods}, ensure_ascii=False), encoding="utf-8")
+        tracker.write_corpus_hashes({"mods": mods}, root / "tracker-state" / "en_corpus_hashes")
         if write_mirror:
             (root / "sources" / "en" / "1.json").write_text(
                 "{ this is not json" if bad_json

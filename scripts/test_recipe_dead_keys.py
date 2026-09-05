@@ -80,8 +80,7 @@ def run(dist_recipes: dict, blocks: list[str], vanilla: list[str], allow: dict,
             # 一條 WARN，把「預期零 WARN」的情境全部打壞。
             state = {"mods": {"1": {"extractor_schema": schema,
                                     "records": _records(blocks, relpath, filler)}}}
-        (st / "en_corpus_hashes.json").write_text(json.dumps(state, ensure_ascii=False),
-                                                 encoding="utf-8")
+        verify_dist.tracker.write_corpus_hashes(state, st / "en_corpus_hashes")
         ch = Path(td) / "CH"
         ch.mkdir()
         (ch / "Recipes.json").write_text(json.dumps(dist_recipes, ensure_ascii=False),

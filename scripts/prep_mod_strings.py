@@ -415,7 +415,8 @@ def main() -> int:
     # `_load_vanilla_basis`／lint_ch／build_mod 皆然）：靜默退化成空集合會讓本體鍵
     # 被當成缺口送進補譯管線，違反「不得覆寫本體」鐵律的第一道防線。
     vanilla_items = set(vjson["scoped_keys"]["ItemName.json"])
-    state = _jload(ROOT / "tracker-state/en_corpus_hashes.json")["mods"]
+    state = tracker.load_corpus_hashes(ROOT / "tracker-state" / "en_corpus_hashes",
+                                       missing_ok=False)["mods"]
 
     unchecked: list[str] = []                 # 整個 wid 沒被檢查（≠ 零缺口）
     undecidable: dict[str, dict] = {}         # wid → 部分鍵不可判定的成因

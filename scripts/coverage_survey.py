@@ -120,7 +120,8 @@ def main() -> int:
     untranslatable = {f"{stem}|{key}" for stem, key in untr_pairs}
     n_untranslatable = 0
 
-    state = _jload(ROOT / "tracker-state/en_corpus_hashes.json")["mods"]
+    state = tracker.load_corpus_hashes(ROOT / "tracker-state" / "en_corpus_hashes",
+                                       missing_ok=False)["mods"]
     rows, tot_up, tot_cov = [], 0, 0
     n_blank = 0
     for wid in sorted(state):

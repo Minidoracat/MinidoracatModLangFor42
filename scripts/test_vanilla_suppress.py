@@ -302,13 +302,13 @@ with tempfile.TemporaryDirectory() as td:
             },
         },
     }), encoding="utf-8")
-    (state / "en_corpus_hashes.json").write_text(json.dumps({
+    verify_dist.tracker.write_corpus_hashes({
         "extractor_schema": verify_dist.tracker.EXTRACTOR_SCHEMA,
         "mods": {"1": {
             "extractor_schema": verify_dist.tracker.EXTRACTOR_SCHEMA,
             "records": {rid: hashlib.sha256(b"x").hexdigest()[:12]},
         }},
-    }), encoding="utf-8")
+    }, state / "en_corpus_hashes")
     (state / "timestamps.json").write_text(
         json.dumps({"items": {"1": {"removed": False}}}), encoding="utf-8"
     )

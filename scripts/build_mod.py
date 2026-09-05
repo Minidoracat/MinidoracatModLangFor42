@@ -696,7 +696,7 @@ def load_own_translations() -> dict[str, dict[str, dict]]:
 
 
 def report_own_anchor_gaps(own: dict[str, dict[str, dict]]) -> None:
-    """report-only：own_translations 鍵於 tracker-state/en_corpus_hashes.json 查無上游錨點者。
+    """report-only：own_translations 鍵於 tracker-state/en_corpus_hashes/ 查無上游錨點者。
 
     此類鍵不在 layer-A 全語料 hash 內，上游此後的變動永遠不會觸發「可能過時」issue——
     顯性化偵測盲區供人工留意。缺 state 檔或壞損時靜默跳過（本檢查非 gate）。
@@ -705,12 +705,12 @@ def report_own_anchor_gaps(own: dict[str, dict[str, dict]]) -> None:
     時會誤判「有錨點」而漏報——本報告偏鬆，報出的是盲區下限而非全集。
     """
     try:
-        state_path = PROJECT_ROOT / "tracker-state" / "en_corpus_hashes.json"
-        if not state_path.is_file():
+        import tracker  # state 目錄佈局的單一實作來源
+        if not tracker.EN_CORPUS_HASHES_DIR.is_dir():
             return
         try:
-            mods = json.loads(state_path.read_text(encoding="utf-8")).get("mods", {})
-        except (OSError, json.JSONDecodeError):
+            mods = tracker.load_corpus_hashes().get("mods", {})
+        except (OSError, ValueError):
             return
         # 錨點＝值感知記錄限定：translate_*（值=英文原文）與 script_item_dn（值=DisplayName）。
         # script_item/recipe/vehicle 名稱記錄的 value=區塊 id，DisplayName 漂移無感，不算錨點

@@ -15,6 +15,7 @@
 
 ### Changed
 
+- **tracker layer-A 基準拆成每 wid 一檔**：`tracker-state/en_corpus_hashes.json`（50.8 MB，已觸 GitHub 單檔 50 MB 警告、每次 backfill 全檔重寫）拆為 `tracker-state/en_corpus_hashes/_meta.json`＋`<wid>.json`（669 檔）。記憶體形狀不變，所有 consumer 統一走 `tracker.load_corpus_hashes()`／`write_corpus_hashes()`；backfill 逐 mod 只寫該 mod 一檔。不影響翻譯內容。
 - **依上游改文修訂既有譯文**：
   - VorpallySauced：Pastor Mike Reeves 併入 R.L. Morrison、日誌改名「持刃者戰地秘錄」（物品名／配方／日誌標題／`Open Journal`→「翻開秘錄」）、`CompIntro_I/II/IV/V/VI` 與 `JournalIntro_Manifestations` 對應段落改寫（`cn_overrides.json`＋corpus）。
   - VorpallySauced：統一 The Stir 譯名——`CompIntro_I/II/V/VI/VIII` 五段長文殘留的「異動／异动」全部改為「悸動／悸动」，與同 mod 其餘 UI 鍵及新增講道字幕一致。

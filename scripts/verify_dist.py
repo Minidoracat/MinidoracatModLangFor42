@@ -64,6 +64,7 @@ import re
 import subprocess
 import sys
 from collections import Counter
+from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 # [16] 的有效版本分支判定沿用 tracker 的實作，不另寫第二套（AGENTS.md 明載勿分岔）。
@@ -1577,17 +1578,16 @@ def _closed_upstream_mirrors(repo: str) -> dict[str, dict[str, str]]:
     """驗 expected wid ↔ current state ↔ EN mirror exact closure；removed wid 保留歷史鏡像。"""
     expected_items = _oracle_watchlist_items(repo)
     expected = set(expected_items) - {tracker.AS1_WORKSHOP_ID}
-    state_path = os.path.join(repo, "tracker-state", "en_corpus_hashes.json")
+    state_dir = Path(repo) / "tracker-state" / "en_corpus_hashes"
     timestamps_path = os.path.join(repo, "tracker-state", "timestamps.json")
     en_dir = os.path.join(repo, "sources", "en")
     if not os.path.isdir(en_dir):
         raise ValueError(f"sources/en 證據目錄不存在：{en_dir}")
     try:
-        with open(state_path, encoding="utf-8-sig") as f:
-            state_doc = json.load(f)
+        state_doc = tracker.load_corpus_hashes(state_dir, missing_ok=False)
         with open(timestamps_path, encoding="utf-8-sig") as f:
             timestamps_doc = json.load(f)
-    except (OSError, json.JSONDecodeError) as exc:
+    except (OSError, ValueError) as exc:
         raise ValueError(f"tracker state 無法解析：{exc}") from exc
     states = state_doc.get("mods") if isinstance(state_doc, dict) else None
     ts_items = timestamps_doc.get("items") if isinstance(timestamps_doc, dict) else None
@@ -1802,14 +1802,11 @@ def _upstream_item_fulltypes(repo: str) -> set[str]:
     and prevents a missing module from being "repaired" to whichever suffix
     happens to be unique in today's incomplete tracker universe.
     """
-    path = os.path.join(repo, "tracker-state", "en_corpus_hashes.json")
-    with open(path, encoding="utf-8-sig") as fh:
-        state = json.load(fh)
-    if not isinstance(state, dict):
-        raise ValueError("en_corpus_hashes.json 頂層形狀壞損（須為 dict）")
+    state = tracker.load_corpus_hashes(Path(repo) / "tracker-state" / "en_corpus_hashes",
+                                       missing_ok=False)
     mods = state.get("mods")
     if not isinstance(mods, dict) or not mods:
-        raise ValueError("en_corpus_hashes.json 的 mods 形狀壞損（須為非空 dict）")
+        raise ValueError("en_corpus_hashes 的 mods 形狀壞損（須為非空 dict）")
     out: set[str] = set()
     corrupt: list[str] = []
     for wid, info in mods.items():
@@ -1855,11 +1852,11 @@ def _upstream_item_fulltypes(repo: str) -> set[str]:
                 out.add(full)
     if corrupt:
         raise ValueError(
-            f"en_corpus_hashes.json 有 {len(corrupt)} 處 ItemName 上游實據壞損"
+            f"en_corpus_hashes 有 {len(corrupt)} 處 ItemName 上游實據壞損"
             f"（{'; '.join(corrupt[:5])}）")
     if len(out) < ITEM_FULLTYPES_MIN:
         raise ValueError(
-            f"en_corpus_hashes.json 只取得 {len(out)} 個有效分支 script_item_dn fullType"
+            f"en_corpus_hashes 只取得 {len(out)} 個有效分支 script_item_dn fullType"
             f"（現況量級 15300+，下限 {ITEM_FULLTYPES_MIN}）——不得以零缺口放行")
     return out
 
@@ -1982,12 +1979,11 @@ def _upstream_craft_blocks(repo: str) -> tuple[set[str], list[str]]:
     42.12–42.13，現行有效分支 42.16 已改名 `ToggleStock`）。判定沿用 `tracker.py` 的
     `resolve_effective_branches()`／`is_effective()`，**不得另寫第二套**。
     """
-    path = os.path.join(repo, "tracker-state", "en_corpus_hashes.json")
-    with open(path, encoding="utf-8-sig") as fh:
-        state = json.load(fh)
+    state = tracker.load_corpus_hashes(Path(repo) / "tracker-state" / "en_corpus_hashes",
+                                       missing_ok=False)
     mods = state.get("mods")
     if not isinstance(mods, dict) or not mods:
-        raise ValueError("en_corpus_hashes.json 的 mods 形狀壞損（須為非空 dict）")
+        raise ValueError("en_corpus_hashes 的 mods 形狀壞損（須為非空 dict）")
     out: set[str] = set()
     corrupt: list[str] = []
     stale: list[str] = []
@@ -2006,11 +2002,11 @@ def _upstream_craft_blocks(repo: str) -> tuple[set[str], list[str]]:
                 out.add(rest.rpartition("|")[2])
     if corrupt:
         raise ValueError(
-            f"en_corpus_hashes.json 有 {len(corrupt)} 個 mod 的 records 形狀壞損"
+            f"en_corpus_hashes 有 {len(corrupt)} 個 mod 的 records 形狀壞損"
             f"（{', '.join(corrupt[:5])}…）——上游實據殘缺，不得以「零死鍵」放行")
     if len(out) < RECIPE_BLOCKS_MIN:
         raise ValueError(
-            f"en_corpus_hashes.json 只取得 {len(out)} 個有效分支 script_craftRecipe 區塊名"
+            f"en_corpus_hashes 只取得 {len(out)} 個有效分支 script_craftRecipe 區塊名"
             f"（現況量級 6900+，下限 {RECIPE_BLOCKS_MIN}）——上游實據殘缺或 extractor schema"
             " 已改版，不得以「零死鍵」放行")
     return out, sorted(stale)

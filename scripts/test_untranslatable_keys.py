@@ -115,8 +115,7 @@ def run_coverage(mirrors: dict[str, dict], *, registry: dict | None = None):
         mods = {wid: {"extractor_schema": tracker.ITEM_MODULE_SCHEMA,
                       "records": {r: tracker.value_hash(v) for r, v in m.items()}}
                 for wid, m in mirrors.items()}
-        (state_dir / "en_corpus_hashes.json").write_text(
-            json.dumps({"mods": mods}), encoding="utf-8", newline="\n")
+        tracker.write_corpus_hashes({"mods": mods}, state_dir / "en_corpus_hashes")
         for wid, m in mirrors.items():
             (en_dir / f"{wid}.json").write_text(json.dumps(m), encoding="utf-8", newline="\n")
         (src / "vanilla_keys.json").write_text(
@@ -126,17 +125,17 @@ def run_coverage(mirrors: dict[str, dict], *, registry: dict | None = None):
             (src / "untranslatable_keys.json").write_text(
                 json.dumps({"entries": registry}, ensure_ascii=False),
                 encoding="utf-8", newline="\n")
-        old = (tracker.SOURCES, tracker.EN_TEXT_DIR, tracker.EN_CORPUS_HASHES_JSON)
+        old = (tracker.SOURCES, tracker.EN_TEXT_DIR, tracker.EN_CORPUS_HASHES_DIR)
         buf = io.StringIO()
         try:
             tracker.SOURCES, tracker.EN_TEXT_DIR = src, en_dir
-            tracker.EN_CORPUS_HASHES_JSON = state_dir / "en_corpus_hashes.json"
+            tracker.EN_CORPUS_HASHES_DIR = state_dir / "en_corpus_hashes"
             out = t / "coverage.json"
             with contextlib.redirect_stdout(buf):
                 rc = tracker.cmd_coverage(SimpleNamespace(limit=1, out=str(out)))
             return rc, json.loads(out.read_text(encoding="utf-8")), buf.getvalue()
         finally:
-            tracker.SOURCES, tracker.EN_TEXT_DIR, tracker.EN_CORPUS_HASHES_JSON = old
+            tracker.SOURCES, tracker.EN_TEXT_DIR, tracker.EN_CORPUS_HASHES_DIR = old
 
 
 # 兩個 consumer 不能只「共用 loader」卻沒真的使用結果：直接跑 coverage 的最小臨時 state，

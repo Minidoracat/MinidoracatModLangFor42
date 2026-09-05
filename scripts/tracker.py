@@ -56,7 +56,10 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 TRACKER_STATE = PROJECT_ROOT / "tracker-state"
 WATCHLIST_JSON = TRACKER_STATE / "watchlist.json"
 TIMESTAMPS_JSON = TRACKER_STATE / "timestamps.json"
-EN_CORPUS_HASHES_JSON = TRACKER_STATE / "en_corpus_hashes.json"
+# 每 wid 一檔：`_meta.json`（schema_version／extractor_schema）＋ `<wid>.json`（該 mod state）。
+# 單檔時代 50 MB＋、每次 backfill 都全檔重寫；拆檔後只有變動的 mod 進 diff，且避開 GitHub 單檔上限。
+EN_CORPUS_HASHES_DIR = TRACKER_STATE / "en_corpus_hashes"
+EN_CORPUS_META = "_meta.json"
 EN_TEXT_DIR = PROJECT_ROOT / "sources" / "en"  # EN 全文落地（大同步翻譯對照；rid 與 hash 檔一致）
 BACKFILL_PLANS_JSON = PROJECT_ROOT / ".omc" / "tmp" / "backfill_plans.json"
 
@@ -315,9 +318,9 @@ def load_upstream_json(path: Path) -> tuple[dict, bool]:
 def write_json(path: Path, data: dict) -> None:
     """原子寫出：先寫同目錄暫存檔再 os.replace。
 
-    en_corpus_hashes.json 是 30MB+ 的受版控真相，且 backfill 期間**每個 mod** 都重寫一次
+    tracker state 是受版控真相，backfill 期間**每個 mod** 的 state 檔都會重寫
     （state-first 落盤是關住「非鏡像 kind record 永久遺失」的唯一防線，見 `cmd_backfill_en`）；
-    直接覆寫時若中途中斷會留下截斷的 JSON＝基準毀損、整輪重跑。同目錄暫存確保 replace
+    直接覆寫時若中途中斷會留下截斷的 JSON＝該 mod 基準毀損。同目錄暫存確保 replace
     是同一檔案系統上的原子操作。
     """
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -447,7 +450,7 @@ def ci_baseline_guard(bootstrap: bool) -> None:
         return
     if os.environ.get("TRACKER_CI") != "1":
         return
-    missing = [p for p in (TIMESTAMPS_JSON, EN_CORPUS_HASHES_JSON) if not p.exists()]
+    missing = [p for p in (TIMESTAMPS_JSON, EN_CORPUS_HASHES_DIR / EN_CORPUS_META) if not p.exists()]
     if missing:
         names = "、".join(p.relative_to(PROJECT_ROOT).as_posix() for p in missing)
         print(
@@ -459,7 +462,7 @@ def ci_baseline_guard(bootstrap: bool) -> None:
 
 
 # ============================================================
-# 狀態讀寫（timestamps.json / en_corpus_hashes.json）
+# 狀態讀寫（timestamps.json / en_corpus_hashes/<wid>.json）
 # ============================================================
 def load_timestamps() -> dict:
     if TIMESTAMPS_JSON.exists():
@@ -470,14 +473,71 @@ def load_timestamps() -> dict:
     return {"schema_version": SCHEMA_VERSION, "items": {}}
 
 
-def load_corpus_hashes() -> dict:
-    if EN_CORPUS_HASHES_JSON.exists():
-        data = load_json(EN_CORPUS_HASHES_JSON)
-        data.setdefault("schema_version", SCHEMA_VERSION)
-        data.setdefault("extractor_schema", EXTRACTOR_SCHEMA)
-        data.setdefault("mods", {})
-        return data
-    return {"schema_version": SCHEMA_VERSION, "extractor_schema": EXTRACTOR_SCHEMA, "mods": {}}
+def load_corpus_hashes(state_dir: Path | None = None, *, missing_ok: bool = True) -> dict:
+    """組回 `{schema_version, extractor_schema, mods}`（記憶體形狀與單檔時代相同）。
+
+    目錄不存在＝首跑無基準（`missing_ok=False` 時改擲 FileNotFoundError，供 verify／prep／
+    coverage 這類「基準缺席不得以零缺口放行」的 consumer）。目錄存在但缺 `_meta.json`、
+    或有非 `<數字>.json` 的檔，一律擲 ValueError——那是半套 state，不得靜默當成部分基準。
+    """
+    d = state_dir or EN_CORPUS_HASHES_DIR
+    if not d.is_dir():
+        if not missing_ok:
+            raise FileNotFoundError(f"tracker state 目錄不存在：{d}")
+        return {"schema_version": SCHEMA_VERSION, "extractor_schema": EXTRACTOR_SCHEMA, "mods": {}}
+    meta_path = d / EN_CORPUS_META
+    if not meta_path.is_file():
+        raise ValueError(f"{d} 缺 {EN_CORPUS_META}（state 目錄不完整）")
+    meta = load_json(meta_path)
+    if not isinstance(meta, dict):
+        raise ValueError(f"{meta_path} 頂層須為物件")
+    mods: dict[str, dict] = {}
+    for p in sorted(d.glob("*.json")):
+        if p.name == EN_CORPUS_META:
+            continue
+        if not p.stem.isdigit():
+            raise ValueError(f"{p} 不是 <workshop_id>.json（state 目錄混入未知檔）")
+        # mod 級壞形狀不在這裡擋：backfill 要能把壞 state 重抽修好、prep 要列 `_unchecked`，
+        # 各 consumer 對它已有自己的 fail-closed 路徑。
+        mods[p.stem] = load_json(p)
+    return {
+        "schema_version": meta.get("schema_version", SCHEMA_VERSION),
+        "extractor_schema": meta.get("extractor_schema", EXTRACTOR_SCHEMA),
+        "mods": mods,
+    }
+
+
+def write_corpus_hashes(state: dict, state_dir: Path | None = None,
+                        wids: list[str] | None = None) -> None:
+    """落盤 `_meta.json` ＋ per-wid 檔。
+
+    `wids=None`＝全量同步（另刪 state 中已不存在的 wid 檔）；指定 `wids` 只寫那幾個
+    （backfill 逐 mod state-first 落盤用，避免每個 mod 都重寫全庫 668 檔）。每檔仍走
+    `write_json` 原子 replace；`_meta.json` 先寫，中斷時最多缺幾個 wid 檔、不會留半截 JSON。
+    """
+    # 拆檔佈局表達不了「mods 是 list／None」這種壞形狀，寫檔端就要拒絕——否則壞 state 會被
+    # 靜默寫成「零 mod」的合法目錄，下游以空基準放行。訊息沿用 verify 的措辭。
+    # mod 級壞形狀刻意放行：backfill 要能把壞 state 重抽修好、prep 要列 `_unchecked`。
+    if not isinstance(state, dict):
+        raise ValueError(f"tracker state 頂層形狀壞損（須為 dict，實得 {type(state).__name__}）")
+    if not isinstance(state.get("mods"), dict):
+        raise ValueError("en_corpus_hashes 的 mods 形狀壞損（須為非空 dict）")
+    d = state_dir or EN_CORPUS_HASHES_DIR
+    d.mkdir(parents=True, exist_ok=True)
+    # 只寫 state 真的帶的欄位：頂層 extractor_schema 是「本輪有 mod 以新 schema 重抽過」的
+    # 標記，寫檔時補預設值會把「全部失敗、零推進」偽裝成已推進（test_backfill_writeorder 4）。
+    write_json(d / EN_CORPUS_META, {k: state[k] for k in ("schema_version", "extractor_schema")
+                                    if k in state})
+    mods = state["mods"]
+    for wid in (mods.keys() if wids is None else wids):
+        if wid in mods:
+            write_json(d / f"{wid}.json", mods[wid])
+        else:
+            (d / f"{wid}.json").unlink(missing_ok=True)
+    if wids is None:
+        for p in d.glob("*.json"):
+            if p.name != EN_CORPUS_META and p.stem not in mods:
+                p.unlink()
 
 
 def expected_watchlist_items(
@@ -1407,7 +1467,7 @@ def state_add_paths() -> list[str]:
     """
     return [
         str(TIMESTAMPS_JSON.relative_to(PROJECT_ROOT)),
-        str(EN_CORPUS_HASHES_JSON.relative_to(PROJECT_ROOT)),
+        str(EN_CORPUS_HASHES_DIR.relative_to(PROJECT_ROOT)),
         str(EN_TEXT_DIR.relative_to(PROJECT_ROOT)),
         *MANIFEST_OUTPUTS,
     ]
@@ -1892,7 +1952,7 @@ def _persist_state(ts, meta, ok_ids, removed, corpus_state, corpus_updates, en_t
         corpus_state.setdefault("mods", {})[wid] = state
     corpus_state["schema_version"] = SCHEMA_VERSION
     corpus_state["extractor_schema"] = EXTRACTOR_SCHEMA
-    write_json(EN_CORPUS_HASHES_JSON, corpus_state)
+    write_corpus_hashes(corpus_state, wids=list(corpus_updates))
     # EN 全文落受版控正式目錄（非 _dl 暫存）；只寫成功處理的 wid，逐 mod 一檔。
     # 語料變空 → 刪殘檔，與 hash state 保持同步（缺其一即兩個真相來源脫鉤）。
     for wid, texts in (en_texts or {}).items():
@@ -2319,7 +2379,7 @@ def cmd_coverage(args) -> int:
         if not isinstance(recs, dict):
             raise ValueError(
                 f"{wid}：tracker state 的 records 形狀壞損（{type(recs).__name__}），"
-                "缺口統計無法信任——修 `tracker-state/en_corpus_hashes.json` 或重跑 backfill-en")
+                "缺口統計無法信任——修 `tracker-state/en_corpus_hashes/<wid>.json` 或重跑 backfill-en")
         eff = resolve_effective_branches(recs)
         for rid in recs:
             if not is_effective(rid, eff):
@@ -2643,7 +2703,7 @@ def cmd_backfill_en(args) -> int:
             corpus_state.setdefault("mods", {})[wid] = new_state
             corpus_state["schema_version"] = SCHEMA_VERSION
             corpus_state["extractor_schema"] = EXTRACTOR_SCHEMA
-            write_json(EN_CORPUS_HASHES_JSON, corpus_state)
+            write_corpus_hashes(corpus_state, wids=[wid])
             if texts:
                 write_json(EN_TEXT_DIR / f"{wid}.json", texts)
             else:

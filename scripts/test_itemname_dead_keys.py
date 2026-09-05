@@ -56,8 +56,7 @@ def run(
         payload = {"mods": {"1": {"extractor_schema": schema, "records": records}}}
         if state_override is not None:
             payload = state_override
-        (state / "en_corpus_hashes.json").write_text(
-            json.dumps(payload), encoding="utf-8")
+        verify_dist.tracker.write_corpus_hashes(payload, state / "en_corpus_hashes")
         ch = Path(td) / "CH"
         ch.mkdir()
         (ch / "ItemName.json").write_text(json.dumps(dist_itemname, ensure_ascii=False),
@@ -267,10 +266,10 @@ def _write_upstream_fixture(
         "count": len(watch_items),
         "items": watch_items,
     }), encoding="utf-8")
-    (tracker_state / "en_corpus_hashes.json").write_text(json.dumps({
+    verify_dist.tracker.write_corpus_hashes({
         "extractor_schema": verify_dist.tracker.EXTRACTOR_SCHEMA,
         "mods": states,
-    }), encoding="utf-8")
+    }, tracker_state / "en_corpus_hashes")
     (tracker_state / "timestamps.json").write_text(json.dumps({
         "items": {wid: {"removed": False} for wid in expected}
     }), encoding="utf-8")
@@ -368,10 +367,10 @@ assert _upstream_result({}, state_values={"1": {script_only: "Base.X"}}) == set(
 with tempfile.TemporaryDirectory() as td:
     root = Path(td)
     _write_upstream_fixture(root, {"1.json": json.dumps({sentinel_rid: "s"})})
-    state_path = root / "tracker-state" / "en_corpus_hashes.json"
-    state_doc = json.loads(state_path.read_text(encoding="utf-8"))
+    state_path = root / "tracker-state" / "en_corpus_hashes"
+    state_doc = verify_dist.tracker.load_corpus_hashes(state_path)
     state_doc["mods"]["1"]["records"][sentinel_rid] = "000000000000"
-    state_path.write_text(json.dumps(state_doc), encoding="utf-8")
+    verify_dist.tracker.write_corpus_hashes(state_doc, state_path)
     try:
         verify_dist._upstream_keys(td)
         raise AssertionError("state/mirror 值 hash 不符未 fail-closed")

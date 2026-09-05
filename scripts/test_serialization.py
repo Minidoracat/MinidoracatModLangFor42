@@ -30,7 +30,7 @@ deletions**——review 在那個規模下等於無法進行。是人眼看 diff
 正規化回 LF，寫進去什麼就 commit 什麼（本機 `core.autocrlf=true` 也被 `-text` 蓋掉）。
 在維持該政策的前提下，這道「看產出、不看誰寫」的下游 gate 是能攔住的位置。
 
-檢查對象刻意涵蓋三棵樹：`sources/`（人工真相＋split 衍生）、`tracker-state/*.json`
+檢查對象刻意涵蓋三棵樹：`sources/`（人工真相＋split 衍生）、`tracker-state/**/*.json`
 （CI 寫入）、`MOD/**/Translate/`（build 產出，受版控故新 clone 未跑 build 也存在）。
 `tracker-state/_dl` 是 steamcmd 下載的上游內容、已 gitignore，明確排除。
 
@@ -51,13 +51,15 @@ ROOT = Path(__file__).resolve().parent.parent
 # (標籤, glob, 檔數下限) —— 第三欄是**棘輪下限**：擋 glob 退化與目錄搬遷造成的覆蓋崩塌。
 # 只驗 n > 0 擋不住 `sources/**/*.json` 被寫成 `sources/*.json`（仍命中十餘個頂層檔
 # 而全綠，卻漏掉 sources/ch/*.json——正是 2026-08-19 出事的那批）。
-# sources 與 dist 下限留有餘裕；`tracker-state` 的 3 **刻意零餘裕**。2026-08-30
+# sources 與 dist 下限留有餘裕；`tracker-state` 的 3 是拆檔前（timestamps／watchlist／
+# en_corpus_hashes 單檔）的零餘裕值，2026-09-05 state 拆成 en_corpus_hashes/<wid>.json 後
+# 現況 670+，下限刻意不隨之抬高：它守的是「glob 沒退化」，不是 mod 數。2026-08-30
 # evidence-first effective-branch cutover 移除 112 個只靠 B41 `.txt`／死分支成立的 owner
 # 目錄，sources JSON 現況降至 2,914，故棘輪由 3,000 明示調為 2,800；這是 intentional
 # 大量衍生檔刪除，不是放寬序列化規則。只有同類 intentional 變更才可再調。
 TREES: tuple[tuple[str, str, int], ...] = (
     ("sources", "sources/**/*.json", 2800),
-    ("tracker-state", "tracker-state/*.json", 3),
+    ("tracker-state", "tracker-state/**/*.json", 3),
     ("dist", "MOD/**/Translate/**/*.json", 150),
 )
 BOM = b"\xef\xbb\xbf"
@@ -158,8 +160,8 @@ with tempfile.TemporaryDirectory() as td:
 
 # 3. scan() → 違規清單這條**串接**也要驗：只驗 violations() 這個述詞的話，
 #    收集端（`if v := violations(p)`）被改壞時 CASES 與第 1 條會同時保持全綠。
-#    同時驗 `_dl` 排除確實生效——用遞迴 pattern 才測得到（正式 TREES 的
-#    tracker-state 是單層 glob，本來就進不去 _dl，直接斷言等於恆真）。
+#    同時驗 `_dl` 排除確實生效——正式 TREES 的 tracker-state 已是遞迴 glob，
+#    `_dl` 若沒被排除會把 steamcmd 下載的上游 JSON 一併掃進來。
 with tempfile.TemporaryDirectory() as td:
     tmp = Path(td)
     (tmp / "good").mkdir()
