@@ -685,6 +685,387 @@
      "note": "UI select=選取（使用者 2026-08-02 裁決）；74 處/71 鍵全量分類。收斂準則：人被挑中＝獲選義保留「選中」（被選中參加/選中一名玩家/可被選中執行，ch_overrides 釘選）；物件被系統抽選＝選取（外觀被選取機率/車輛被選取頻率/隨機選取曲目）；checkbox 語境改「勾選」（本體慣例 9 處實證）（本體 CH 已凍結，勿移植）"
     }
    ]
+  },
+  {
+   "category": "本體特質名",
+   "description": "#409：本體 UI_trait_* 特質名的 CH 官方譯名 ≠ CN 官方譯名換字形（OpenCC 機轉殘留）。只在「整值＝特質名／引號包住／後接特質·特性／特質雜誌-」語境命中；一般敘述（焊工面罩、伐木工襯衫、JOJO 星塵鬥士）不報。mod 自訂同名特質（Calloused、SQ 夜貓子等）以 lint_exemptions 逐鍵豁免。",
+   "rules": [
+    {
+     "pattern": "^業餘技工$|['「]業餘技工['」]|業餘技工特[質性]|特質雜誌-業餘技工",
+     "replacement": "業餘機工",
+     "note": "Vehicle Knowledge（UI_trait_Mechanics）：本體 CH「業餘機工」，CN「业余技工」"
+    },
+    {
+     "pattern": "^伐木工$|['「]伐木工['」]|伐木工特[質性]|特質雜誌-伐木工",
+     "replacement": "斧頭人",
+     "note": "Ax-pert（UI_trait_axeman）：本體 CH「斧頭人」，CN「伐木工」"
+    },
+    {
+     "pattern": "^焊工$|['「]焊工['」]|焊工特[質性]|特質雜誌-焊工",
+     "replacement": "金工",
+     "note": "Welder（UI_trait_Metalworker）：本體 CH「金工」，CN「焊工」"
+    },
+    {
+     "pattern": "^雕刻工$|['「]雕刻工['」]|雕刻工特[質性]|特質雜誌-雕刻工",
+     "replacement": "削刻師",
+     "note": "Whittler（UI_trait_Whittler）：本體 CH「削刻師」，CN「雕刻工」"
+    },
+    {
+     "pattern": "^巧手良工$|['「]巧手良工['」]|巧手良工特[質性]|特質雜誌-巧手良工",
+     "replacement": "巧手",
+     "note": "Handy（UI_trait_handy）：本體 CH「巧手」，CN「巧手良工」"
+    },
+    {
+     "pattern": "^皮糙肉厚$|['「]皮糙肉厚['」]|皮糙肉厚特[質性]|特質雜誌-皮糙肉厚",
+     "replacement": "皮厚",
+     "note": "Thick-skinned（UI_trait_thickskinned）：本體 CH「皮厚」，CN「皮糙肉厚」"
+    },
+    {
+     "pattern": "^無所畏懼$|['「]無所畏懼['」]|無所畏懼特[質性]|特質雜誌-無所畏懼",
+     "replacement": "勇敢",
+     "note": "Brave（UI_trait_brave）：本體 CH「勇敢」，CN「无所畏惧」"
+    },
+    {
+     "pattern": "^超速狂魔$|['「]超速狂魔['」]|超速狂魔特[質性]|特質雜誌-超速狂魔",
+     "replacement": "飆仔",
+     "note": "Speed Demon（UI_trait_SpeedDemon）：本體 CH「飆仔」，CN「超速狂魔」"
+    },
+    {
+     "pattern": "^新手司機$|['「]新手司機['」]|新手司機特[質性]|特質雜誌-新手司機",
+     "replacement": "新手上路",
+     "note": "Sunday Driver（UI_trait_SundayDriver）：本體 CH「新手上路」，CN「新手司机」"
+    },
+    {
+     "pattern": "^畏首畏尾$|['「]畏首畏尾['」]|畏首畏尾特[質性]|特質雜誌-畏首畏尾",
+     "replacement": "懦弱",
+     "note": "Cowardly（UI_trait_cowardly）：本體 CH「懦弱」，CN「畏首畏尾」"
+    },
+    {
+     "pattern": "^體笨如牛$|['「]體笨如牛['」]|體笨如牛特[質性]|特質雜誌-體笨如牛",
+     "replacement": "笨拙",
+     "note": "Clumsy（UI_trait_clumsy）：本體 CH「笨拙」，CN「体笨如牛」"
+    },
+    {
+     "pattern": "^身輕如燕$|['「]身輕如燕['」]|身輕如燕特[質性]|特質雜誌-身輕如燕",
+     "replacement": "優雅",
+     "note": "Graceful（UI_trait_graceful）：本體 CH「優雅」，CN「身轻如燕」"
+    },
+    {
+     "pattern": "^視力障礙$|['「]視力障礙['」]|視力障礙特[質性]|特質雜誌-視力障礙",
+     "replacement": "近視",
+     "note": "Short Sighted（UI_trait_shortsigh）：本體 CH「近視」，CN「视力障碍」"
+    },
+    {
+     "pattern": "^聽力障礙$|['「]聽力障礙['」]|聽力障礙特[質性]|特質雜誌-聽力障礙",
+     "replacement": "聽力較差",
+     "note": "Hard of Hearing（UI_trait_hardhear）：本體 CH「聽力較差」，CN「听力障碍」"
+    },
+    {
+     "pattern": "^聽覺靈敏$|['「]聽覺靈敏['」]|聽覺靈敏特[質性]|特質雜誌-聽覺靈敏",
+     "replacement": "聽覺敏銳",
+     "note": "Keen Hearing（UI_trait_keenhearing）：本體 CH「聽覺敏銳」，CN「听觉灵敏」"
+    },
+    {
+     "pattern": "^目光銳利$|['「]目光銳利['」]|目光銳利特[質性]|特質雜誌-目光銳利",
+     "replacement": "鷹眼",
+     "note": "Eagle Eyed（UI_trait_eagleeyed）：本體 CH「鷹眼」，CN「目光锐利」"
+    },
+    {
+     "pattern": "^食慾旺盛$|['「]食慾旺盛['」]|食慾旺盛特[質性]|特質雜誌-食慾旺盛",
+     "replacement": "食量大",
+     "note": "Hearty Appetite（UI_trait_heartyappetite）：本體 CH「食量大」，CN「食欲旺盛」"
+    },
+    {
+     "pattern": "^輕食簡餐$|['「]輕食簡餐['」]|輕食簡餐特[質性]|特質雜誌-輕食簡餐",
+     "replacement": "食量小",
+     "note": "Light Eater（UI_trait_lighteater）：本體 CH「食量小」，CN「轻食简餐」"
+    },
+    {
+     "pattern": "^緩慢代謝$|['「]緩慢代謝['」]|緩慢代謝特[質性]|特質雜誌-緩慢代謝",
+     "replacement": "代謝緩慢",
+     "note": "Slow Metabolism（UI_trait_weightgain）：本體 CH「代謝緩慢」，CN「缓慢代谢」"
+    },
+    {
+     "pattern": "^快速代謝$|['「]快速代謝['」]|快速代謝特[質性]|特質雜誌-快速代謝",
+     "replacement": "代謝快速",
+     "note": "Fast Metabolism（UI_trait_weightloss）：本體 CH「代謝快速」，CN「快速代谢」"
+    },
+    {
+     "pattern": "^身形消瘦$|['「]身形消瘦['」]|身形消瘦特[質性]|特質雜誌-身形消瘦",
+     "replacement": "嚴重過輕",
+     "note": "Very Low Weight（UI_trait_veryunderweight）：本體 CH「嚴重過輕」，CN「身形消瘦」"
+    },
+    {
+     "pattern": "^瘦骨嶙峋$|['「]瘦骨嶙峋['」]|瘦骨嶙峋特[質性]|特質雜誌-瘦骨嶙峋",
+     "replacement": "骨瘦如柴",
+     "note": "Emaciated（UI_trait_emaciated）：本體 CH「骨瘦如柴」，CN「瘦骨嶙峋」"
+    },
+    {
+     "pattern": "^身體不好$|['「]身體不好['」]|身體不好特[質性]|特質雜誌-身體不好",
+     "replacement": "身材不理想",
+     "note": "Out of Shape（UI_trait_outofshape）：本體 CH「身材不理想」，CN「身体不好」"
+    },
+    {
+     "pattern": "^身體很差$|['「]身體很差['」]|身體很差特[質性]|特質雜誌-身體很差",
+     "replacement": "體態不佳",
+     "note": "Unfit（UI_trait_unfit）：本體 CH「體態不佳」，CN「身体很差」"
+    },
+    {
+     "pattern": "^營養學家$|['「]營養學家['」]|營養學家特[質性]|特質雜誌-營養學家",
+     "replacement": "營養師",
+     "note": "Nutritionist（UI_trait_nutritionist）：本體 CH「營養師」，CN「营养学家」"
+    },
+    {
+     "pattern": "^身強力壯$|['「]身強力壯['」]|身強力壯特[質性]|特質雜誌-身強力壯",
+     "replacement": "強壯",
+     "note": "Strong（UI_trait_strong）：本體 CH「強壯」，CN「身强力壮」"
+    },
+    {
+     "pattern": "^身體壯碩$|['「]身體壯碩['」]|身體壯碩特[質性]|特質雜誌-身體壯碩",
+     "replacement": "壯碩",
+     "note": "Stout（UI_trait_stout）：本體 CH「壯碩」，CN「身体壮硕」"
+    },
+    {
+     "pattern": "^弱不禁風$|['「]弱不禁風['」]|弱不禁風特[質性]|特質雜誌-弱不禁風",
+     "replacement": "虛弱",
+     "note": "Puny（UI_trait_weak）：本體 CH「虛弱」，CN「弱不禁风」"
+    },
+    {
+     "pattern": "^身體虛弱$|['「]身體虛弱['」]|身體虛弱特[質性]|特質雜誌-身體虛弱",
+     "replacement": "軟弱",
+     "note": "Weak（UI_trait_feeble）：本體 CH「軟弱」，CN「身体虚弱」"
+    },
+    {
+     "pattern": "^生命強韌$|['「]生命強韌['」]|生命強韌特[質性]|特質雜誌-生命強韌",
+     "replacement": "堅強韌性",
+     "note": "Resilient（UI_trait_resilient）：本體 CH「堅強韌性」，CN「生命强韧」"
+    },
+    {
+     "pattern": "^易患疾病$|['「]易患疾病['」]|易患疾病特[質性]|特質雜誌-易患疾病",
+     "replacement": "體弱多病",
+     "note": "Prone to Illness（UI_trait_pronetoillness）：本體 CH「體弱多病」，CN「易患疾病」"
+    },
+    {
+     "pattern": "^開闊恐懼$|['「]開闊恐懼['」]|開闊恐懼特[質性]|特質雜誌-開闊恐懼",
+     "replacement": "廣場恐懼症",
+     "note": "Agoraphobic（UI_trait_agoraphobic）：本體 CH「廣場恐懼症」，CN「开阔恐惧」"
+    },
+    {
+     "pattern": "^幽閉恐懼$|['「]幽閉恐懼['」]|幽閉恐懼特[質性]|特質雜誌-幽閉恐懼",
+     "replacement": "幽閉恐懼症",
+     "note": "Claustrophobic（UI_trait_claustro）：本體 CH「幽閉恐懼症」，CN「幽闭恐惧」"
+    },
+    {
+     "pattern": "^神槍手$|['「]神槍手['」]|神槍手特[質性]|特質雜誌-神槍手",
+     "replacement": "神射手",
+     "note": "Marksman（UI_trait_marksman）：本體 CH「神射手」，CN「神枪手」"
+    },
+    {
+     "pattern": "^夜貓子$|['「]夜貓子['」]|夜貓子特[質性]|特質雜誌-夜貓子",
+     "replacement": "夜貓族",
+     "note": "Night Owl（UI_trait_nightowl）：本體 CH「夜貓族」，CN「夜猫子」"
+    },
+    {
+     "pattern": "^戶外專家$|['「]戶外專家['」]|戶外專家特[質性]|特質雜誌-戶外專家",
+     "replacement": "喜好戶外",
+     "note": "Outdoorsy（UI_trait_outdoorsman）：本體 CH「喜好戶外」，CN「户外专家」"
+    },
+    {
+     "pattern": "^雙耳失聰$|['「]雙耳失聰['」]|雙耳失聰特[質性]|特質雜誌-雙耳失聰",
+     "replacement": "耳聾",
+     "note": "Deaf（UI_trait_deaf）：本體 CH「耳聾」，CN「双耳失聪」"
+    },
+    {
+     "pattern": "^身體健康$|['「]身體健康['」]|身體健康特[質性]|特質雜誌-身體健康",
+     "replacement": "體態優良",
+     "note": "Fit（UI_trait_fit）：本體 CH「體態優良」，CN「身体健康」"
+    },
+    {
+     "pattern": "^身肥體胖$|['「]身肥體胖['」]|身肥體胖特[質性]|特質雜誌-身肥體胖",
+     "replacement": "肥胖",
+     "note": "Very High Weight（UI_trait_obese）：本體 CH「肥胖」，CN「身肥体胖」"
+    },
+    {
+     "pattern": "^快速恢復$|['「]快速恢復['」]|快速恢復特[質性]|特質雜誌-快速恢復",
+     "replacement": "恢復快",
+     "note": "Fast Healer（UI_trait_FastHealer）：本體 CH「恢復快」，CN「快速恢复」"
+    },
+    {
+     "pattern": "^學習神速$|['「]學習神速['」]|學習神速特[質性]|特質雜誌-學習神速",
+     "replacement": "學習高手",
+     "note": "Fast Learner（UI_trait_FastLearner）：本體 CH「學習高手」，CN「学习神速」"
+    },
+    {
+     "pattern": "^閱讀神速$|['「]閱讀神速['」]|閱讀神速特[質性]|特質雜誌-閱讀神速",
+     "replacement": "閱讀快",
+     "note": "Fast Reader（UI_trait_FastReader）：本體 CH「閱讀快」，CN「阅读神速」"
+    },
+    {
+     "pattern": "^心驚肉跳$|['「]心驚肉跳['」]|心驚肉跳特[質性]|特質雜誌-心驚肉跳",
+     "replacement": "腎上腺素成癮",
+     "note": "Adrenaline Junkie（UI_trait_AdrenalineJunkie）：本體 CH「腎上腺素成癮」，CN「心惊肉跳」"
+    },
+    {
+     "pattern": "^毫不起眼$|['「]毫不起眼['」]|毫不起眼特[質性]|特質雜誌-毫不起眼",
+     "replacement": "不起眼",
+     "note": "Inconspicuous（UI_trait_Inconspicuous）：本體 CH「不起眼」，CN「毫不起眼」"
+    },
+    {
+     "pattern": "^精神抖擻$|['「]精神抖擻['」]|精神抖擻特[質性]|特質雜誌-精神抖擻",
+     "replacement": "有活力",
+     "note": "Wakeful（UI_trait_LessSleep）：本體 CH「有活力」，CN「精神抖擞」"
+    },
+    {
+     "pattern": "^視夜如明$|['「]視夜如明['」]|視夜如明特[質性]|特質雜誌-視夜如明",
+     "replacement": "貓眼",
+     "note": "Cat's Eyes（UI_trait_NightVision）：本體 CH「貓眼」，CN「视夜如明」"
+    },
+    {
+     "pattern": "^井井有條$|['「]井井有條['」]|井井有條特[質性]|特質雜誌-井井有條",
+     "replacement": "有條理",
+     "note": "Organized（UI_trait_Packmule）：本體 CH「有條理」，CN「井井有条」"
+    },
+    {
+     "pattern": "^自衛班$|['「]自衛班['」]|自衛班特[質性]|特質雜誌-自衛班",
+     "replacement": "自衛",
+     "note": "Self Defense Class（UI_trait_SelfDefenseClass）：本體 CH「自衛」，CN「自卫班」"
+    },
+    {
+     "pattern": "^垂釣者$|['「]垂釣者['」]|垂釣者特[質性]|特質雜誌-垂釣者",
+     "replacement": "釣手",
+     "note": "Angler（UI_trait_Fishing）：本體 CH「釣手」，CN「垂钓者」"
+    },
+    {
+     "pattern": "^跑步愛好者$|['「]跑步愛好者['」]|跑步愛好者特[質性]|特質雜誌-跑步愛好者",
+     "replacement": "跑者",
+     "note": "Runner（UI_trait_Jogger）：本體 CH「跑者」，CN「跑步爱好者」"
+    },
+    {
+     "pattern": "^緩慢恢復$|['「]緩慢恢復['」]|緩慢恢復特[質性]|特質雜誌-緩慢恢復",
+     "replacement": "恢復慢",
+     "note": "Slow Healer（UI_trait_SlowHealer）：本體 CH「恢復慢」，CN「缓慢恢复」"
+    },
+    {
+     "pattern": "^學習緩慢$|['「]學習緩慢['」]|學習緩慢特[質性]|特質雜誌-學習緩慢",
+     "replacement": "腦筋慢",
+     "note": "Slow Learner（UI_trait_SlowLearner）：本體 CH「腦筋慢」，CN「学习缓慢」"
+    },
+    {
+     "pattern": "^閱讀緩慢$|['「]閱讀緩慢['」]|閱讀緩慢特[質性]|特質雜誌-閱讀緩慢",
+     "replacement": "閱讀慢",
+     "note": "Slow Reader（UI_trait_SlowReader）：本體 CH「閱讀慢」，CN「阅读缓慢」"
+    },
+    {
+     "pattern": "^昏昏欲睡$|['「]昏昏欲睡['」]|昏昏欲睡特[質性]|特質雜誌-昏昏欲睡",
+     "replacement": "貪睡",
+     "note": "Sleepyhead（UI_trait_MoreSleep）：本體 CH「貪睡」，CN「昏昏欲睡」"
+    },
+    {
+     "pattern": "^萬眾矚目$|['「]萬眾矚目['」]|萬眾矚目特[質性]|特質雜誌-萬眾矚目",
+     "replacement": "引人注目",
+     "note": "Conspicuous（UI_trait_Conspicuous）：本體 CH「引人注目」，CN「万众瞩目」"
+    },
+    {
+     "pattern": "^雜亂無章$|['「]雜亂無章['」]|雜亂無章特[質性]|特質雜誌-雜亂無章",
+     "replacement": "毫無條理",
+     "note": "Disorganized（UI_trait_Disorganized）：本體 CH「毫無條理」，CN「杂乱无章」"
+    },
+    {
+     "pattern": "^容易口渴$|['「]容易口渴['」]|容易口渴特[質性]|特質雜誌-容易口渴",
+     "replacement": "口乾",
+     "note": "High Thirst（UI_trait_HighThirst）：本體 CH「口乾」，CN「容易口渴」"
+    },
+    {
+     "pattern": "^目不識丁$|['「]目不識丁['」]|目不識丁特[質性]|特質雜誌-目不識丁",
+     "replacement": "文盲",
+     "note": "Illiterate（UI_trait_Illiterate）：本體 CH「文盲」，CN「目不识丁」"
+    },
+    {
+     "pattern": "^輾轉難眠$|['「]輾轉難眠['」]|輾轉難眠特[質性]|特質雜誌-輾轉難眠",
+     "replacement": "失眠",
+     "note": "Restless Sleeper（UI_trait_Insomniac）：本體 CH「失眠」，CN「辗转难眠」"
+    },
+    {
+     "pattern": "^愛好和平$|['「]愛好和平['」]|愛好和平特[質性]|特質雜誌-愛好和平",
+     "replacement": "和平主義者",
+     "note": "Reluctant Fighter（UI_trait_Pacifist）：本體 CH「和平主義者」，CN「爱好和平」"
+    },
+    {
+     "pattern": "^細皮嫩肉$|['「]細皮嫩肉['」]|細皮嫩肉特[質性]|特質雜誌-細皮嫩肉",
+     "replacement": "薄皮",
+     "note": "Thin-skinned（UI_trait_ThinSkinned）：本體 CH「薄皮」，CN「细皮嫩肉」"
+    },
+    {
+     "pattern": "^眼疾手快$|['「]眼疾手快['」]|眼疾手快特[質性]|特質雜誌-眼疾手快",
+     "replacement": "靈巧",
+     "note": "Dextrous（UI_trait_Dexterous）：本體 CH「靈巧」，CN「眼疾手快」"
+    },
+    {
+     "pattern": "^笨手笨腳$|['「]笨手笨腳['」]|笨手笨腳特[質性]|特質雜誌-笨手笨腳",
+     "replacement": "手指不靈",
+     "note": "All Thumbs（UI_trait_AllThumbs）：本體 CH「手指不靈」，CN「笨手笨脚」"
+    },
+    {
+     "pattern": "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁",
+     "replacement": "麻木",
+     "note": "Desensitized（UI_trait_Desensitized）：本體 CH「麻木」，CN「麻木不仁」"
+    },
+    {
+     "pattern": "街頭鬥士",
+     "replacement": "打手",
+     "note": "Brawler（UI_trait_BarFighter）：本體 CH「打手」，CN「斗士」"
+    },
+    {
+     "pattern": "^棒球選手$|['「]棒球選手['」]|棒球選手特[質性]|特質雜誌-棒球選手",
+     "replacement": "棒球員",
+     "note": "Baseball Player（UI_trait_PlaysBaseball）：本體 CH「棒球員」，CN「棒球选手」"
+    },
+    {
+     "pattern": "^遠足者$|['「]遠足者['」]|遠足者特[質性]|特質雜誌-遠足者",
+     "replacement": "遠行者",
+     "note": "Hiker（UI_trait_Hiker）：本體 CH「遠行者」，CN「远足者」"
+    },
+    {
+     "pattern": "^體操運動員$|['「]體操運動員['」]|體操運動員特[質性]|特質雜誌-體操運動員",
+     "replacement": "體操選手",
+     "note": "Gymnast（UI_trait_Gymnast）：本體 CH「體操選手」，CN「体操运动员」"
+    },
+    {
+     "pattern": "^脾胃虛弱$|['「]脾胃虛弱['」]|脾胃虛弱特[質性]|特質雜誌-脾胃虛弱",
+     "replacement": "胃虛",
+     "note": "Weak Stomach（UI_trait_WeakStomach）：本體 CH「胃虛」，CN「脾胃虚弱」"
+    },
+    {
+     "pattern": "^鋼腸鐵胃$|['「]鋼腸鐵胃['」]|鋼腸鐵胃特[質性]|特質雜誌-鋼腸鐵胃",
+     "replacement": "鐵胃",
+     "note": "Iron Gut（UI_trait_IronGut）：本體 CH「鐵胃」，CN「钢肠铁胃」"
+    },
+    {
+     "pattern": "^恐懼血液$|['「]恐懼血液['」]|恐懼血液特[質性]|特質雜誌-恐懼血液",
+     "replacement": "怕血",
+     "note": "Fear of Blood（UI_trait_Hemophobic）：本體 CH「怕血」，CN「恐惧血液」"
+    },
+    {
+     "pattern": "^哮喘患者$|['「]哮喘患者['」]|哮喘患者特[質性]|特質雜誌-哮喘患者",
+     "replacement": "氣喘",
+     "note": "Short of Breath（UI_trait_Asthmatic）：本體 CH「氣喘」，CN「哮喘患者」"
+    },
+    {
+     "pattern": "^草藥醫生$|['「]草藥醫生['」]|草藥醫生特[質性]|特質雜誌-草藥醫生",
+     "replacement": "草藥師",
+     "note": "Herbalist（UI_trait_Herbalist）：本體 CH「草藥師」，CN「草药医生」"
+    },
+    {
+     "pattern": "^叢林專家$|['「]叢林專家['」]|叢林專家特[質性]|特質雜誌-叢林專家",
+     "replacement": "荒野知識",
+     "note": "Bushcrafter（UI_trait_WildernessKnowledge）：本體 CH「荒野知識」，CN「丛林专家」"
+    },
+    {
+     "pattern": "^嗜煙如命$|['「]嗜煙如命['」]|嗜煙如命特[質性]|特質雜誌-嗜煙如命|^嗜菸如命$|['「]嗜菸如命['」]|嗜菸如命特[質性]|特質雜誌-嗜菸如命",
+     "replacement": "老菸槍",
+     "note": "Smoker（UI_trait_Smoker）：本體 CH「老菸槍」，CN「嗜烟如命」"
+    }
+   ]
   }
  ],
  "suspicious_patterns": [
@@ -1968,6 +2349,188 @@
    ],
    "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
    "ch_value": "43c65c70a83ec26d"
+  },
+  "IG_UI.json|IGUI_bikinitools_O_Context_Lumberjack": {
+   "patterns": [
+    "^伐木工$|['「]伐木工['」]|伐木工特[質性]|特質雜誌-伐木工"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「伐木工」，非本體 Ax-pert（本體 CH「斧頭人」）。",
+   "ch_value": "09d3c7fbc29ee514"
+  },
+  "UI.json|UI_BurdJournals_ProfLumberjack": {
+   "patterns": [
+    "^伐木工$|['「]伐木工['」]|伐木工特[質性]|特質雜誌-伐木工"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「伐木工」，非本體 Ax-pert（本體 CH「斧頭人」）。",
+   "ch_value": "09d3c7fbc29ee514"
+  },
+  "UI.json|UI_trait_woodcutter": {
+   "patterns": [
+    "^伐木工$|['「]伐木工['」]|伐木工特[質性]|特質雜誌-伐木工"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「伐木工」，非本體 Ax-pert（本體 CH「斧頭人」）。",
+   "ch_value": "09d3c7fbc29ee514"
+  },
+  "UI.json|UI_trait_Lumberjack": {
+   "patterns": [
+    "^伐木工$|['「]伐木工['」]|伐木工特[質性]|特質雜誌-伐木工"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「伐木工」，非本體 Ax-pert（本體 CH「斧頭人」）。",
+   "ch_value": "09d3c7fbc29ee514"
+  },
+  "UI.json|UI_trait_SWFlimsy": {
+   "patterns": [
+    "^弱不禁風$|['「]弱不禁風['」]|弱不禁風特[質性]|特質雜誌-弱不禁風"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「弱不禁風」，非本體 Puny（本體 CH「虛弱」）。",
+   "ch_value": "f0aca96f9733e7f3"
+  },
+  "UI.json|UI_trait_glassbody": {
+   "patterns": [
+    "^弱不禁風$|['「]弱不禁風['」]|弱不禁風特[質性]|特質雜誌-弱不禁風"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「弱不禁風」，非本體 Puny（本體 CH「虛弱」）。",
+   "ch_value": "f0aca96f9733e7f3"
+  },
+  "UI.json|UI_trait_Aim3": {
+   "patterns": [
+    "^神槍手$|['「]神槍手['」]|神槍手特[質性]|特質雜誌-神槍手"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「神槍手」，非本體 Marksman（本體 CH「神射手」）。",
+   "ch_value": "8d97b36c332c5a2c"
+  },
+  "UI.json|UI_prof_sharpshooter": {
+   "patterns": [
+    "^神槍手$|['「]神槍手['」]|神槍手特[質性]|特質雜誌-神槍手"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「神槍手」，非本體 Marksman（本體 CH「神射手」）。",
+   "ch_value": "8d97b36c332c5a2c"
+  },
+  "Sandbox.json|Sandbox_SurvivorQuirks_CostNightOwl_tooltip": {
+   "patterns": [
+    "^夜貓子$|['「]夜貓子['」]|夜貓子特[質性]|特質雜誌-夜貓子"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「夜貓子」，非本體 Night Owl（本體 CH「夜貓族」）。",
+   "ch_value": "a6060554e976c9d4"
+  },
+  "Sandbox.json|Sandbox_SurvivorQuirks_EnableNightOwl": {
+   "patterns": [
+    "^夜貓子$|['「]夜貓子['」]|夜貓子特[質性]|特質雜誌-夜貓子"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「夜貓子」，非本體 Night Owl（本體 CH「夜貓族」）。",
+   "ch_value": "ba173cc4e4979077"
+  },
+  "UI.json|UI_trait_owlperson": {
+   "patterns": [
+    "^夜貓子$|['「]夜貓子['」]|夜貓子特[質性]|特質雜誌-夜貓子"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「夜貓子」，非本體 Night Owl（本體 CH「夜貓族」）。",
+   "ch_value": "ba173cc4e4979077"
+  },
+  "UI.json|UI_trait_SQnightowl": {
+   "patterns": [
+    "^夜貓子$|['「]夜貓子['」]|夜貓子特[質性]|特質雜誌-夜貓子"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「夜貓子」，非本體 Night Owl（本體 CH「夜貓族」）。",
+   "ch_value": "ba173cc4e4979077"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedKillsRequired": {
+   "patterns": [
+    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+   "ch_value": "5cde63ba862c9597"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedKillsRequired_tooltip": {
+   "patterns": [
+    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+   "ch_value": "99a6c85bc30edba0"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxBoredomAllowed": {
+   "patterns": [
+    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+   "ch_value": "e260b864fffe79c5"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxBoredomAllowed_tooltip": {
+   "patterns": [
+    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+   "ch_value": "1c20dc4f09eb91f6"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxStressAllowed": {
+   "patterns": [
+    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+   "ch_value": "e25918ae941a67ed"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxStressAllowed_tooltip": {
+   "patterns": [
+    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+   "ch_value": "adb597bae45beb47"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxUnhappinessAllowed": {
+   "patterns": [
+    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+   "ch_value": "e12651eb55c37fac"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxUnhappinessAllowed_tooltip": {
+   "patterns": [
+    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+   "ch_value": "b143d8f033bbde95"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_DisableCalloused": {
+   "patterns": [
+    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+   "ch_value": "7458c545e4bdba9b"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_DisableCalloused_tooltip": {
+   "patterns": [
+    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+   "ch_value": "6d3929a7ae976015"
+  },
+  "UI.json|UI_trait_Calloused": {
+   "patterns": [
+    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+   "ch_value": "ca5b75f0b21a3de6"
+  },
+  "UI.json|UI_trait_softstomach": {
+   "patterns": [
+    "^脾胃虛弱$|['「]脾胃虛弱['」]|脾胃虛弱特[質性]|特質雜誌-脾胃虛弱"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「脾胃虛弱」，非本體 Weak Stomach（本體 CH「胃虛」）。",
+   "ch_value": "7221046461971d70"
+  },
+  "UI.json|UI_trait_Frail": {
+   "patterns": [
+    "^弱不禁風$|['「]弱不禁風['」]|弱不禁風特[質性]|特質雜誌-弱不禁風"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「弱不禁風」，非本體 Puny（本體 CH「虛弱」）。",
+   "ch_value": "f0aca96f9733e7f3"
+  },
+  "Moodles.json|Moodles_KDNodding_Good_lvl2": {
+   "patterns": [
+    "^昏昏欲睡$|['「]昏昏欲睡['」]|昏昏欲睡特[質性]|特質雜誌-昏昏欲睡"
+   ],
+   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「昏昏欲睡」，非本體 Sleepyhead（本體 CH「貪睡」）。",
+   "ch_value": "2cd95ed3ef59bdda"
   }
  }
 }

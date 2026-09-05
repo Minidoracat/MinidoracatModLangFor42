@@ -15,6 +15,7 @@
 
 ### Changed
 
+- **CH 本體特質名對齊本體官方繁中（#409）**：corpus 與 own 層共 **340 處**把「As1 簡中特質名換字形」改為本體 CH 玩家實際看到的名字——無所畏懼→勇敢、畏首畏尾→懦弱、伐木工→斧頭人、麻木不仁→麻木、眼疾手快→靈巧、笨手笨腳→手指不靈、快速恢復→恢復快、學習神速→學習高手、井井有條→有條理、視夜如明→貓眼、嗜菸如命→老菸槍 等 62 個特質（ETW／SOTO／Hepha／BCR／GydeTraitMags／ZeroToChad／XVirus／InventoryTetris／NumbTrait 等 mod 的沙盒與配方文案）。逐鍵對照上游 EN 判定「是否在指本體特質」，一般敘述（焊工面罩、伐木工襯衫、JOJO 星塵鬥士）與 mod 自訂同名特質（Calloused、Frail、SQ 夜貓子）不動。NumbTrait 的 mod 自訂 Numb 階級改譯「無感」，避免與本體 Desensitized「麻木」撞名。`lint_ch [A]` 新增「本體特質名」75 條規則當棘輪。
 - **tracker layer-A 基準拆成每 wid 一檔**：`tracker-state/en_corpus_hashes.json`（50.8 MB，已觸 GitHub 單檔 50 MB 警告、每次 backfill 全檔重寫）拆為 `tracker-state/en_corpus_hashes/_meta.json`＋`<wid>.json`（669 檔）。記憶體形狀不變，所有 consumer 統一走 `tracker.load_corpus_hashes()`／`write_corpus_hashes()`；backfill 逐 mod 只寫該 mod 一檔。不影響翻譯內容。
 - **依上游改文修訂既有譯文**：
   - VorpallySauced：Pastor Mike Reeves 併入 R.L. Morrison、日誌改名「持刃者戰地秘錄」（物品名／配方／日誌標題／`Open Journal`→「翻開秘錄」）、`CompIntro_I/II/IV/V/VI` 與 `JournalIntro_Manifestations` 對應段落改寫（`cn_overrides.json`＋corpus）。
