@@ -467,8 +467,8 @@
 
 > 本節為 Workshop 更新註記用的白話版；以下各節為維護者向的技術細節。
 
-- **一次補上 2,457 個新翻譯鍵，並更新 352 筆既有譯文。** 其中 1,740 個新鍵來自 34 張「可能過時」issue、106 個來自 Puffin's Retro Relics，另有 611 個是本次正式服清查後補上的 JSON 翻譯。
-- **正式服目前啟用但原本未納入本包的 22 個 Workshop MOD，現在都已列入支援。** 新增 610 個繁中／簡中鍵，涵蓋 AllTheInfo、兩款 Ford 車輛、Lawnmower、InspectUI、Campers、Oshkosh M911、Alice's Weapon Sling、Working Gun Rack、Plysken Solar Revolution 等；只處理能由 `Translate/*.json` 生效的文字，沒有新增或修改 Lua 覆寫。
+- **一次補上 2,457 個新翻譯鍵，並更新 352 筆既有譯文。** 其中 1,740 個新鍵來自 34 張「可能過時」issue、106 個來自 Puffin's Retro Relics，另有 611 個是本次清查常用 MOD 後補上的 JSON 翻譯。
+- **22 個常見但原本未納入本包的 Workshop MOD，現在都已列入支援。** 新增 610 個繁中／簡中鍵，涵蓋 AllTheInfo、兩款 Ford 車輛、Lawnmower、InspectUI、Campers、Oshkosh M911、Alice's Weapon Sling、Working Gun Rack、Plysken Solar Revolution 等；只處理能由 `Translate/*.json` 生效的文字，沒有新增或修改 Lua 覆寫。
 - **截圖裡的三個英文改裝配方已補齊。** `ATAJeepBumper`、`ATASamaraHoodItem`、`ATAMustangHoodItem` 現在會顯示「切割吉普牧馬人保險桿」、「切割雪佛蘭薩馬拉引擎蓋」、「切割福特野馬引擎蓋」。
 - **Dreams 的 207 篇夢境與 1 句醒來台詞全部重新翻譯。** 上游不是只改標點，而是把整批故事全文重寫；舊中文已對不上情節。本版逐篇依現行英文重譯，保留所有段落、數字與格式標記。
 - **新增 Puffin's Retro Relics 原創繁中／簡中翻譯。** 收錄 101 個懷舊收藏品名稱與 5 個分類／背包掛載名稱，包括瘋狂球、絨毛玩偶、桌遊、球隊三角旗與摔角夥伴玩偶。
@@ -481,7 +481,7 @@
   - **#283–#292 共 10 張可能過時 issue**：補齊 403 鍵，最大批為 GaelGunStore 及其彈藥／配方相容內容（329 鍵）；另含 Fitness Overhaul、organizedCategories、bodilyfunctions 等。
   - **#294–#312、#314–#318 共 24 張可能過時 issue**：補齊 1,337 個直接缺口，包含 HydeCo Clay 1,148 鍵、Guns of 93 56 鍵、More Builds 25 鍵、AmmoConverter 23 鍵、Dreams 11 鍵，以及多個沙盒、車輛、分類與 UI 更新。
   - **#313 Puffin's Retro Relics（Workshop 3788360646）106 鍵**：own-mod lane 原創 CH／CN（`ItemName` 101、`IG_UI` 5），As1 未收錄、零 vanilla 碰撞、零 owner 衝突。
-  - **正式服 22 個新支援 Workshop 項目 610 鍵**：AllTheInfo 337、Crown Victoria 37、Elgin Street Sweeper 37、Lawnmower 32、InspectUI 31、Campers 29、Oshkosh M911 24、Refillable Propane Tanks 24、Alice's Weapon Sling 15、Working Gun Rack 9、TheShortcut 8、Plysken Solar Revolution 7，其餘 10 個 MOD 合計 20 鍵。
+  - **22 個新支援 Workshop 項目 610 鍵**：AllTheInfo 337、Crown Victoria 37、Elgin Street Sweeper 37、Lawnmower 32、InspectUI 31、Campers 29、Oshkosh M911 24、Refillable Propane Tanks 24、Alice's Weapon Sling 15、Working Gun Rack 9、TheShortcut 8、Plysken Solar Revolution 7，其餘 10 個 MOD 合計 20 鍵。
   - **Autotsar Tuning Atelier - Fjord Mustard 1 鍵**：補上 B42 `craftRecipe ATAMustangHoodItem` 的配方名稱。
 - **22 個新 own-mod lane 與 tracker baseline**：新增 23 個 mod ID、20 個新 tracker state baseline 與 19 份 EN mirror；UsefulMetal 只有非文字型 script records，依 tracker 契約不建立空 mirror。
 - **支援清單擴充**：相對 1.20.0，在架 Workshop MOD 548→571、mod ID 715→739；另有 16 個已下架項目保留翻譯。watchlist 565→588，所有新收錄 MOD 後續改文都會由每日排程追蹤。
@@ -901,7 +901,7 @@
 > 本節為 Workshop 更新註記用的白話版；以下各節為維護者向的技術細節。
 
 - **修掉 26 個「連沒裝任何模組也會被改掉」的原版官方文字——本版最重要的修正。** PZ 把所有模組的翻譯檔併進同一張表、後載入者勝，所以某些模組改寫原版譯文之後，本包跟著出貨就等於全域改掉官方文字。實際被改掉的包括：多人測試的歡迎與警告畫面被換成某模組作者的募款文案、原版「MSR700 彈匣」被改成特定槍械模組的專屬名稱（吊帶、機械瞄具、.223 彈藥等 7 項同類）、職業「竊賊」的說明被加上原版沒有的偷竊潛行能力、特質「體態優良」的說明被清空成一個空白。這類鍵現在一律不出貨，交還給遊戲本體。
-- **製作頁面補上 164 個配方名。** 起因是玩家回報 More Traits 的製作頁面全是英文，查出來是一整類系統性漏收——模組定義了配方，但沒附英文配方檔（或上游自己也漏建鍵），我們的收錄流程就整組跳過，而且既有的覆蓋率統計完全看不出來。這一版先補完**正式伺服器實際啟用的所有模組**，另加 Jigga's Green Fire（大麻模組）68 個與 Pomp's Items（小馬模組）26 個。
+- **製作頁面補上 164 個配方名。** 起因是玩家回報 More Traits 的製作頁面全是英文，查出來是一整類系統性漏收——模組定義了配方，但沒附英文配方檔（或上游自己也漏建鍵），我們的收錄流程就整組跳過，而且既有的覆蓋率統計完全看不出來。這一版先補完**一批常用模組**，另加 Jigga's Green Fire（大麻模組）68 個與 Pomp's Items（小馬模組）26 個。
 - **Pomp's Items 的 8 隻小馬有中文名了**，連帶 24 個絨毛玩具與服裝的物品名。其中 Fancy Pants 採官方配音譯名「花俏公子」。
 - **PompsItems 有 1,766 個文字先前完全沒被追蹤到。** 該模組的翻譯檔有多餘的逗號，PZ 自己讀得下去、我們的追蹤器讀不下去，於是整個檔案在我們眼中等於不存在——而所有檢查都是綠的。修好後其中 104 個玩家看得到、我們沒出貨的文字才浮現。
 - **清償 14 張「可能過時」issue：新譯 81 鍵、修正 16 條過時譯文。** 比較有感的：Stealth 模組的「透明度」其實是不透明度（原譯讓 0 與 10 的刻度整個反過來）、竊賊→盜賊、隱身技能→潛行技能。
@@ -912,7 +912,7 @@
 - **`RECIPE_COVERAGE_AUDIT.md`（新檔）**：`craftRecipe` 配方顯示名的全庫覆蓋率稽核。B42 的配方顯示名鍵＝`craftRecipe` 原名（**含空格、無 `Recipe_` 前綴**，`Recipe_X_Y` 是 B41 形、在 B42 完全失效）：`ISRecipeScrollingListBox.lua:351` → `CraftRecipe.Load():362` → `Translator.getRecipeName():676` 的 `recipe.get(name)` 直查。`en_corpus_hashes`（schema 8）已記 `script_craftRecipe`，全庫可從版控資料直接算、不必下載 483 個 mod；方法以 8 個實際下載的 MOD 交叉驗證，逐一相符。**數字為上限**——MOD 可能自帶活的 `Translate/CH/Recipes.json`（追蹤器只記 EN，看不到），已實證 More Guitars 自帶 166 個活繁中配方名；反之只有 legacy `Recipes_CH.txt` 者仍算缺口（B42 只讀 `.json`）。
 - **配方顯示名 164 鍵**，分三批：
   - **issue #125 More Traits（`1299328280`）16 鍵**。上游只附韓文 `Recipes.json`、沒有 EN 檔，As1 的 EN 驅動擷取整組漏收；該 MOD 五個 EN 檔都是 100%，覆蓋率統計完全看不出這個缺口。上游韓文檔用的是 B41 的 `Recipe_` 前綴形，在 B42 失效，未照抄其鍵名。
-  - **正式服啟用中的 51 個 runtime 鍵**（拉 `pzserver.ini` 的 `WorkshopItems` 交叉比對）。44 鍵沿用既有譯文——Beetle 23、M998 19 經 recipe body 逐一比對確認為上游把點號拿掉的真改名；M101A2 2 鍵**不是改名**，是上游 common EN JSON 的無點號鍵與實際 recipe 名不符、那個舊鍵本就取不到。7 鍵新譯，全部依 `outputs` 的產出物 DisplayName 定名。
+  - **51 個 runtime 鍵**（依一批實際啟用的模組清單交叉比對）。44 鍵沿用既有譯文——Beetle 23、M998 19 經 recipe body 逐一比對確認為上游把點號拿掉的真改名；M101A2 2 鍵**不是改名**，是上游 common EN JSON 的無點號鍵與實際 recipe 名不符、那個舊鍵本就取不到。7 鍵新譯，全部依 `outputs` 的產出物 DisplayName 定名。
   - **Jigga's Green Fire 68 鍵**，術語全部錨定本包既有的 240 個 `Greenfire.*` 物品名。語意不明者一律查 script 實證：`CutCannabis`（剪刀）／`TearCannabis`（徒手）／`GrindCannabis`（研磨器）產出同一個 `CannabisShake`，分別作剪碎／撕碎／研磨；`MakeFlyCure` 產出 `Base.GardeningSprayCigarettes` ＝本體「除蟲噴霧」。
   - **Pomp's Items 26 鍵**（見下）。
 - **Pomp's Items 8 隻小馬定名 ＋ 24 個物品名**。本包既有 420 個小馬 Plushie 譯名中僅 3% 保留拉丁字母且多為縮寫，預設意譯。`Fancy Pants`→花俏公子／范西潘為**官方配音譯名**（兩地維基百科《彩虹小馬》角色列表次要角色節載明並附配音員資料）；`Sixer`→六號／六号 沿用同 mod 既有 `PINumberNine*`→九號／九号 的完全同型先例；`Mulberry Merlot`→桑椹梅洛／桑葚梅洛（Merlot 錨 `Fluid_Name_VFX_Merlot`「梅洛紅葡萄酒」，mulberry 為台灣桑椹／大陸桑葚的詞級分歧）。句型全部沿用既有 `PINumberNine*` 與 `PIVeenSundown*` 的物品／配方格式，未自創。
@@ -1186,7 +1186,7 @@
 
 ### Added
 
-- **新增 6 個 MOD 的翻譯支援，合計 224 鍵**（玩家於正式服回報未翻譯字串後逐案核准收錄）：
+- **新增 6 個 MOD 的翻譯支援，合計 224 鍵**（玩家回報未翻譯字串後逐案核准收錄）：
   - **CleanUI**（3437629766）53 鍵〔原創翻譯〕：取代原版物品欄／戰利品面板的 UI mod，玩家回報的「Equipped Items」即出自此包。上游打包六個版本分支（鍵數 49/50/50/53/53/53），PZ 42.20 只載入 42.19，舊三分支僅有 legacy `UI_EN.txt` 不生效。
   - **Neat Crafting**（3502080466）69 鍵〔原創翻譯〕：取代整個製作視窗側欄，開製作介面即全螢幕英文。排除已由 As1 出貨的 `IGUI_XP_NC_SetPanelMinSize_tooltip` 不重複收。
   - **Mysterious Vehicle Claim Key**（3643840023）87 鍵〔原創翻譯〕：多人服車輛認領系統。claim/unclaim 定名「認領／取消認領」（收錄前 corpus 認領 72 : 登記 32，AVCS 為孤例；MVCK 實際建立所有權，「認領」較精確）。
@@ -1207,7 +1207,7 @@
 
 ### Notes
 
-- 玩家回報以正式服伺服器設定檔的 `WorkshopItems` 為查證基準（本地訂閱清單含大量未上服 mod），相關 runbook 已補入 AGENTS.md。
+- 玩家回報以其伺服器設定檔的 `WorkshopItems` 為查證基準（本地訂閱清單含大量未上服 mod），相關 runbook 已補入 AGENTS.md。
 - 回報中的鑰匙圈英文（`IGUI_KeyRingName`）為遊戲本體鍵，受 vanilla 覆寫鐵律限制不由本包處理，已於本體翻譯包解決。
 - gate 全綠：build 冪等雙跑零 diff、verify_dist 11/11 PASS、lint_ch 0/0/0、cn-diff 對 v42.19.0-1.6.0 待複核 0。
 - Claude 與 codex 雙邊 review-plus 獨立審查；codex 四輪複核後 APPROVE（期間修正 provenance lane 分流 1 處、metadata 事實記載 5 處）。
