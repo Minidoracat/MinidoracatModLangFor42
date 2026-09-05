@@ -4,6 +4,29 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.20.4-1.24.4] - 2026-09-05
+
+### 玩家摘要
+
+- **模組清單新增專屬圖標。** 遊戲的 Mods 管理清單中，本包現在會顯示自己的「CH」圖標，一眼就能從一長串模組裡找到。
+- **更新封面圖。** Workshop 與遊戲內的封面（poster／preview）換上新版視覺。
+- **純外觀更新，文案與功能皆未變動。** 本次未新增支援 MOD、未修改任何翻譯字串與遊戲機制；仍支援 Build 42.20.4+，Mod ID 與 Workshop ID 不變。
+
+### Added
+
+- **模組清單圖標**：新增 `MOD/.../42/CH.png`（32×32）並於 `mod.info` 登記 `icon=CH.png`。
+
+### Changed
+
+- **更新封面**：`MOD/.../42/poster.png` 與 `MOD/MinidoracatModLangFor42/preview.png`（兩者同圖）。
+
+### 驗證
+
+- build 綠、`verify_dist` 16/16 PASS（未帶 `--allow-missing-as1`，含 As1 來源漂移檢查）、
+  冪等雙跑 183 檔零 diff、`lint_ch` 棘輪全零；相對 `v42.20.4-1.24.3` 的 CN 改值 0 鍵、
+  待複核 0 鍵；`manifest --check` 四個生成物零漂移。
+- 本輪未動真相層與任何文本，`STEAM_DESCRIPTION.md` 的覆蓋率／模組數宣稱沿用上一版事實，無需重算。
+
 ## [42.20.4-1.24.3] - 2026-09-05
 
 ### 玩家摘要
