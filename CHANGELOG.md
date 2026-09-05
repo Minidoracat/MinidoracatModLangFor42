@@ -4,6 +4,29 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **跟上 14 個原始 MOD 的上游文本更新，補譯 494 個新鍵**（#395–#408 可能過時 issue；`own_translations.json`）：
+  - VorpallySauced（3645781559）：新增三卷講道錄音帶「血債未償 I／II／III」共 311 鍵逐句字幕（`Recorded_Media.json`）、錄音帶物品名，以及戰地秘錄／沙盒成長模式等 UI 與 Sandbox 新鍵。講道經文採和合本，術語沿用悸動／銘印／羈絆／血契。
+  - FruitTreeChop（75）、AlicesMultiWear（`*_LB` 下背背包）、guns93（柯爾特單動陸軍左輪與握把）、AmmoMaker（回收配方、《彈藥世界》1–5 月刊、沙盒）、Evolving Traits World（腿部骨折／一無所有／受傷沙盒）、Authentic Z（警用／SWAT／警長背包 Tier 1–3、製作分類）、Detailed Skill Tooltips（焊接數值）、KnoxChronicles（內容更新通知）、AP（Aegis 區域訊息）、TwisTonFire QoL、HMW（Hello Kitty 吉他）、AllInfo。
+
+### Changed
+
+- **依上游改文修訂既有譯文**：
+  - VorpallySauced：Pastor Mike Reeves 併入 R.L. Morrison、日誌改名「持刃者戰地秘錄」（物品名／配方／日誌標題／`Open Journal`→「翻開秘錄」）、`CompIntro_I/II/IV/V/VI` 與 `JournalIntro_Manifestations` 對應段落改寫（`cn_overrides.json`＋corpus）。
+  - VorpallySauced：統一 The Stir 譯名——`CompIntro_I/II/V/VI/VIII` 五段長文殘留的「異動／异动」全部改為「悸動／悸动」，與同 mod 其餘 UI 鍵及新增講道字幕一致。
+  - AllInfo：Ax-pert／體重系列特質效果依 B42.20 新機制更新（擒抱效果、撲窗絆倒），繁中體重特質名對齊本體官方（肥胖／嚴重過輕／骨瘦如柴）；`ThreadPick` 改為芳綸線。
+  - Evolving Traits World：`UI_trait_DeprivedDesc`／`UI_trait_InjuredDesc` 補上新增的機制說明；`UI_trait_QuietDesc`／`UI_trait_ScrapperDesc` 移除上游已刪除的技能加成句。
+  - AmmoMaker `Sandbox_ammomaker_BirdExYield_tooltip` 補上 0.02g 口徑；guns93 `IGUI_ContextMenu_ForParts` 補上「(銷毀)」。
+- **owner 衝突裁決**：`ContextMenu_LowerBack`／`ContextMenu_OnBack`（Alice 兩個 mod vs LegendaryDuffelbag）登記 translate，維持現值「裝備在後腰」／「裝備在背部」。
+
+### 驗證
+
+- 翻譯由 5 個平行 lane 逐鍵直寫 ch／cn，再由 3 條 Grok 複核 lane 對抗審查；採納 15 項修正（AmmoMaker 藥筒／榴彈殼句型對齊、FruitTreeChop 果名對齊本體、講道跨鍵語意反轉 2 處等），駁回 4 項（`UI_trait_BrokenLegDesc` 為多 owner 中性裁決、體重特質名以本體 CH 為準）。
+- build 綠、`verify_dist` 16/16 PASS、冪等雙跑 183 檔零 diff、owner decision gate 綠、`test_vanilla_no_override` 零覆蓋、`test_serialization` 全合規、`lint_ch` 棘輪全零、`manifest --check` 零漂移；`--cn-diff v42.20.4-1.24.4` CN 改值 517 鍵、待複核 0。
+
 ## [42.20.4-1.24.4] - 2026-09-05
 
 ### 玩家摘要
