@@ -2518,7 +2518,8 @@
  },
  "3722134990": {
   "name_zh": "Guns of Marz 槍械包",
-  "summary": "新增大量槍械彈藥內容，如 AA-12 彈鼓與彈匣、整盒 12 號鹿彈，並含彈藥拆盒與並聯彈匣等配方。"
+  "summary": "新增大量槍械彈藥內容，如 AA-12 彈鼓與彈匣、整盒 12 號鹿彈，並含彈藥拆盒與並聯彈匣等配方。",
+  "note": "⚠️ 物品 tooltip 的補充說明（「Uses .223/5.56x45mm NATO rounds.」「Removes Muzzle Flash」「Needs Wrench to install or remove.」等，185 個物品共 410 行）寫死在 `media/lua/client/MarzWeapons/ItemTooltipsTable.lua`，由 `CustomItemTooltips.lua` 直接畫進 tooltip、完全不走 getText，任何翻譯包都補不了；物品名／配方／沙盒／右鍵選單等 JSON 鍵已全數涵蓋。"
  },
  "3743082626": {
   "name_zh": "復古數位儀表板",
