@@ -6,6 +6,15 @@
 
 ## [Unreleased]
 
+## [42.20.4-1.25.0] - 2026-09-05
+
+### 玩家摘要
+
+- **新收錄 2 個服裝 MOD。** Vanilla Gear Expanded（執法單位制服與戰術裝備）與 Vanilla Outfits Expanded（急救員制服、阿拉伯頭巾、骷髏包巾、冬季外套等）共 88 個物品名，繁簡皆有。
+- **跟上 14 個 MOD 的上游更新，補譯 494 個新字串。** 含 VorpallySauced 三卷講道錄音帶逐句字幕、AmmoMaker《彈藥世界》月刊、Authentic Z 警用背包、Evolving Traits World 新特質說明等。
+- **繁中特質名全面對齊遊戲本體。** 各 MOD 沙盒設定與配方裡提到的本體特質，改成你在角色特質列表實際看到的名字（無所畏懼→勇敢、畏首畏尾→懦弱、伐木工→斧頭人、麻木不仁→麻木、眼疾手快→靈巧、學習神速→學習高手、嗜菸如命→老菸槍……），共 340 處。
+- **修訂 26 個上游改文的既有譯文**，統一 VorpallySauced「悸動」譯名。
+
 ### Added
 
 - **收錄 #393 Vanilla Gear Expanded（3401134276）與 #394 Vanilla Outfits Expanded（3783094058）原創翻譯，共 88 個物品名**（own lane，`sources/mods/<wid>/`）：兩個 mod 皆無 `Translate/EN`，文本只有 `42/media/scripts` 的 item DisplayName（module `VGE`／`VOE`），零 vanilla 碰撞、零跨 mod 衝突。CH/CN 逐鍵對照 EN 人工直寫，參照本體官方服裝譯名（防彈背心、阿拉伯頭巾、包巾、獄警、胸掛等）。VGE `Shirt_PrisonGuardRiot` 上游 DisplayName 漏尾逗號屬上游 script 格式錯誤，不補、已於支援清單註記。
