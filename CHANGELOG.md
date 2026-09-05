@@ -8,6 +8,7 @@
 
 ### Added
 
+- **收錄 #393 Vanilla Gear Expanded（3401134276）與 #394 Vanilla Outfits Expanded（3783094058）原創翻譯，共 88 個物品名**（own lane，`sources/mods/<wid>/`）：兩個 mod 皆無 `Translate/EN`，文本只有 `42/media/scripts` 的 item DisplayName（module `VGE`／`VOE`），零 vanilla 碰撞、零跨 mod 衝突。CH/CN 逐鍵對照 EN 人工直寫，參照本體官方服裝譯名（防彈背心、阿拉伯頭巾、包巾、獄警、胸掛等）。VGE `Shirt_PrisonGuardRiot` 上游 DisplayName 漏尾逗號屬上游 script 格式錯誤，不補、已於支援清單註記。
 - **跟上 14 個原始 MOD 的上游文本更新，補譯 494 個新鍵**（#395–#408 可能過時 issue；`own_translations.json`）：
   - VorpallySauced（3645781559）：新增三卷講道錄音帶「血債未償 I／II／III」共 311 鍵逐句字幕（`Recorded_Media.json`）、錄音帶物品名，以及戰地秘錄／沙盒成長模式等 UI 與 Sandbox 新鍵。講道經文採和合本，術語沿用悸動／銘印／羈絆／血契。
   - FruitTreeChop（75）、AlicesMultiWear（`*_LB` 下背背包）、guns93（柯爾特單動陸軍左輪與握把）、AmmoMaker（回收配方、《彈藥世界》1–5 月刊、沙盒）、Evolving Traits World（腿部骨折／一無所有／受傷沙盒）、Authentic Z（警用／SWAT／警長背包 Tier 1–3、製作分類）、Detailed Skill Tooltips（焊接數值）、KnoxChronicles（內容更新通知）、AP（Aegis 區域訊息）、TwisTonFire QoL、HMW（Hello Kitty 吉他）、AllInfo。

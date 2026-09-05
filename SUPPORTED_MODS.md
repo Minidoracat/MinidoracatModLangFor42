@@ -9,7 +9,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **657 個 Workshop 模組**（833 個 mod ID）；另 **17 個已下架**（翻譯保留，見文末）。
+共支援 **659 個 Workshop 模組**（835 個 mod ID）；另 **17 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -255,6 +255,7 @@
 | [[B42] Small Towns Spawn Locations](https://steamcommunity.com/sharedfiles/filedetails/?id=3399505732) | 小鎮出生點 | 新增多種出生點選項，包含隨機地點、小鎮與特殊劇本出生設定。 | `SmallTownsSpawnLocations` | ? | ⚠️ ≥6 | — |
 | [[B42] WarThunderVehicleLibrary](https://steamcommunity.com/sharedfiles/filedetails/?id=3399660368) | WarThunderVehicleLibrary | War Thunder 主題車輛的前置函式庫模組。 | `WarThunderVehicleLibrary` | 2 | — | — |
 | [[B42]Pallontras Crossbows](https://steamcommunity.com/sharedfiles/filedetails/?id=3400528439) | Pallontras 十字弓 | 新增可製作的粗製、手持與改良十字弓，以及木製與金屬弩矢。 | `PWPNXB` | 109 | — | — |
+| [Vanilla Gear Expanded〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3401134276) | 原版裝備擴充 | 新增 ATF、FBI、媒體、獄警防暴與戰術小隊等執法單位的制服與裝備。 | `VanillaGearExpanded` | 50 | — | ⚠️ 上游 VGE.Shirt_PrisonGuardRiot（Shirt - Riot Guard）的 script DisplayName 漏尾逗號，引擎會把下一欄名稱吃進顯示名，屬上游格式錯誤，翻譯包無法修補。 |
 | [[B41/B42] Nik's Hairstyles](https://steamcommunity.com/sharedfiles/filedetails/?id=3401996053) | Nik 的髮型 | 新增多款髮型，包含各式馬尾、雙馬尾與短髮造型。 | `NiksHairstyles` | 33 | — | — |
 | [Barricades, Doors, Windows, and Vehicles Hurt Zombies [B42.17+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3402208866) | 路障、門窗與車輛傷害殭屍 | 殭屍攻擊路障、門窗或車輛時會受傷，傷害與血液效果可調整。 | `BarricadesHurtZombiesB42` | 38 | — | — |
 | [Tsar's Common Library B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3402491515) | Tsar 通用函式庫 | Tsar 系列模組的共用函式庫，含車輛改裝零件等大量基礎內容。 | `tsarslib` | 694 | — | — |
@@ -656,6 +657,7 @@
 | [Simple Suppressors](https://steamcommunity.com/sharedfiles/filedetails/?id=3782565181) | 簡易消音器 | 以機油濾清器作為滅音器，可安裝與取下，並提供 .30-30、.308、.357 等多種口徑的轉接器。 | `SimpleSuppressors` | 105 | — | — |
 | [Home Brewing](https://steamcommunity.com/sharedfiles/filedetails/?id=3782769048) | 居家釀造 | 使用酒桶發酵釀造果酒、米酒、蜂蜜酒與水果利口酒等酒類，可持續添加原料並裝瓶。 | `HomeBrewing` | 112 | — | — |
 | [Bandits Tactical Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3782988545) | Bandits：戰術擴充 | 擴充強盜行為：受傷、換彈或隊友倒下時會喊話、可能偷走車輛電池，上尉會掉落埋藏軍火庫座標，並含動態無線電內容。 | `BanditsExpansionPVC` | 194 | — | — |
+| [Vanilla Outfits Expanded〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3783094058) | 原版服裝擴充 | 新增急救員制服、阿拉伯頭巾、骷髏包巾、運動服、野戰夾克、冬季外套等多款日常與戶外服裝。 | `VanillaOutfitsExpanded` | 38 | — | — |
 | [Neat Lockpicking](https://steamcommunity.com/sharedfiles/filedetails/?id=3783535220) | Neat Lockpicking | 可用撬棍撬開門、對門開鎖與短接啟動車輛，並提供多卷開鎖技能書。 | `NeatLockpicking` | 84 | — | — |
 | [Livestock Panel Plus](https://steamcommunity.com/sharedfiles/filedetails/?id=3783623999) | 牲畜面板增強 | 強化牲畜資訊面板，可顯示飢餓、地面壓力、缺少雞舍等狀態指標。 | `LivestockPanelPlus` | 67 | — | — |
 | [Horse Utility Add-on](https://steamcommunity.com/sharedfiles/filedetails/?id=3784003967) | 馬匹實用附加模組 | 為馬鞍加裝步槍鞘與步槍袋，並加入羈絆系統：騎乘、餵食與撫摸可提升羈絆，影響呼喚主坐騎的範圍與馬匹在殭屍附近的冷靜程度。 | `HorseUtilityAddon` | 47 | — | — |
