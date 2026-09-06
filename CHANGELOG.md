@@ -6,6 +6,33 @@
 
 ## [Unreleased]
 
+### 玩家摘要
+
+- **跟上 15 個 MOD 的上游更新，補譯 215 個新字串。** 含 Break Big Rocks 全套鍛造／鑄造工具配方、HydeCo Clay 金屬條／錠的瓷模具鑄造與重鑄配方、Evolving Traits World 七個動態特質（控槍人士／樂天派／理想體重／奧運選手／靜如處子／拆解專家／街頭混混）的沙盒選項、AutoAll 自動烹飪取水與治療／錄影帶新選項、P4 My So-Called Toy 的「斯皮福電子雞」玩具與傳單、Take A Bath 汙垢清洗沙盒、NeatUI XP Drop 新選項、Knox Chronicles 日誌 NPC 頁等。
+- **修訂 30 個上游改文的既有譯文。** FNVG 夜視儀支架去掉「頭戴式」並替零件加「(零件)」標示、沙盒說明改為「決定此物品的稀有度」；HydeCo Clay 鋁／黃銅／銅的鑄造配方由「條」改為「錠」；TT PowerPlant 右鍵動作「注射興奮劑」→「服用藥物」；ETW 精神狀態說明「憤怒」→「無聊」；AutoAll 劣質食材門檻說明改由「避免變質和燒焦的食物」選項獨立控管；Lean And Lie 按鍵鎖定說明補上睡袋／帳篷與分割畫面不套用一段。
+
+### Added
+
+- **跟上 15 個原始 MOD 的上游文本更新，補譯 215 個新鍵**（#411–#425 可能過時 issue；`own_translations.json`）：Break Big Rocks（48：組裝／鍛造／鑄造／製作／熔鑄全套工具配方名與「BBR 鍛造」分類，工具名逐一對齊本體官方物品名）、HydeCo Clay（46：瓷模具鑄造鐵／鋼條與錠、條↔錠重鑄、簡易臺鉗零件、臺砧／方砧模具、取出各金屬錠、木棧板堆疊）、Evolving Traits World（38：七個特質的沙盒標題／需求欄／tooltip，特質名沿用既有 `UI_trait_*` 譯名、技能名對齊本體）、AutoAll（34：自動烹飪先取水、受汙染水、治療缺工具／缺乾淨繃帶、夾板、錄影帶只看已讀技能書、健康下限、忽略非敵對 NPC、休息時閱讀）、TT PowerPlant（14：Proxima 醫療線 ImmunoStasis 系列物品／配方／tooltip）、P4 My So-Called Toy（13：Spiffotchi 統一譯「斯皮福電子雞／斯皮福电子鸡」，含 42.20.4 新格式傳單版面資料）、Take A Bath And Shower（8：入浴劑效果時限、汙垢清洗）、NeatUI XP Drop（8）、Knox Chronicles（5：日誌 NPC 頁、遺體名）、Vanilla Outfits Expanded（1：工裝短褲）。
+
+### Changed
+
+- **依上游改文修訂既有譯文（22 個 As1 lane 鍵走 `cn_overrides.json`＋corpus，8 個 own 鍵直改）**：
+  - FNVG（#413，17 鍵）：`Night Vision Head Mount`→`Night Vision Mount`——夜視儀支架去「頭戴式」（物品名、快捷欄附件名、配重安裝／拆下配方、沙盒選項名）；四款夜視儀與支架的 `_PART` 物品補「(零件)」以區分整件；沙盒 tooltip 由「百分比生成機率」改為「決定此物品的稀有度」，Rhino 支架補「設定為0可禁止生成」。6 個 `spawn chance`→`spawn probability` 語意未變、譯文維持。
+  - HydeCo Clay（#418）：`Cast Aluminium/Brass/Copper Bar`→`… Ingot`，配方名「鑄造X條」→「鑄造X錠」（含 `Recipe_` 孿生鍵共 6 鍵）；既有 `SmashClay*` 6 鍵一併對齊本體物品名（檯式鐵砧→臺砧、塊狀鐵砧→方砧、臺鉗→簡易臺鉗）。
+  - Evolving Traits World（#411）：`UI_ETW_Vitals_Mental_tooltip` 取樣項目 anger→boredom（憤怒→無聊）；`UI_trait_NoodleLegsDesc` 上游把技能名 Sprinting 改為本體現行 EN 名 Running，本體 CH／CN 仍是「衝刺／冲刺」故譯文不動、只更新 `en` 錨點；`UI_trait_PetTherapyDesc` 僅上游錯字修正，不動。
+  - TT PowerPlant（#412）：`ContextMenu_Tikitown_Inject` `Inject Stim`→`Take Medicine`，「注射興奮劑」→「服用藥物」。上游把 `ImmunoStasis3`／`NeuroCline7R` 物品名改由 `Translate/EN/ItemName.json` 供給，既有 own 譯文照樣生效、不退役。
+  - Project Cook（#415）：`IGUI_PJCK_CookingTooltip` `Open Cooking Panel`→`Cooking`，「開啟烹飪面板」→「烹飪」。
+  - Lean And Lie（#421）：`UI_optionscreen_TchAL_KeyLock_tooltip` 補譯新增的「地面（睡袋、帳篷）與分割畫面不套用」一段。
+  - AutoAll（#423）：`UI_AA_opt_cookBadFromLevel_tt` 變質食材移出等級門檻、改由「避免變質和燒焦的食物」選項獨立控管。
+  - Knox Chronicles（#424）：`UI_KCMAIN_REPAIR_WORKBENCH` `Repair workbench`→`Repair`，「維修工作檯」→「維修」。
+- 未進缺口的新增鍵皆有明確原因：`script_item`／`script_craftRecipe` 區塊名屬純變更偵測（TT 8、HydeCo 34、P4 2、VOE 3、RotatorsLib 1）；Break Big Rocks 的 47 個 `Recipe_BBR …` 落在 PZ 不載入的 `Recipes_EN.json`（B41 死檔，B42 只查 `Recipes.json` 裸區塊名）；twistdwimc 6 鍵與 TT 3 鍵此前已出貨。
+
+### 驗證
+
+- 翻譯由 4 個平行 lane 逐鍵直寫 ch／cn，再由 Grok＋Codex 兩條唯讀複核 lane 對抗審查；採納 2 項修正（AutoAll `ripped sheet` 對齊本體 `Base.RippedSheets`「碎布／碎布条」、`always watched`「一律照看」→「一律照常觀看」），另依 lint 棘輪修 3 處（`對象`→「患者」、`查看`→「檢視」×2）。
+- build 綠、`verify_dist` 16/16 PASS、冪等雙跑 183 檔零 diff、owner decision gate 綠、`test_vanilla_no_override` 零覆蓋、`test_serialization` 全合規、`lint_ch` 棘輪全零、`manifest --check` 零漂移、CI 18 支回歸測試＋tracker self-test 全過；`--cn-diff v42.20.4-1.25.0` CN 改值 250 鍵、待複核 0。`test_print_media_contract` 的出貨 `_info` 數量棘輪 19→20（P4 傳單）。
+
 ## [42.20.4-1.25.0] - 2026-09-05
 
 ### 玩家摘要

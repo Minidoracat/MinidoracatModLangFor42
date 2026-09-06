@@ -192,7 +192,8 @@ assert ok and not fail and warn, f"零 _info 未出 WARN：{fail} {warn}"
 cases += 1
 
 # --------------------------------------------------------------------------- #
-# 5. 現況出貨檔：19 個 _info 已遷移完成（把人工檢查變成可執行斷言）
+# 5. 現況出貨檔：20 個 _info 已遷移完成（把人工檢查變成可執行斷言）
+#    2026-09-06 #417：P4 My So-Called Toy 新增 Spiffotchi 傳單（19→20），上游即為 42.20.4 新格式
 # --------------------------------------------------------------------------- #
 translate = REPO / ("MOD/MinidoracatModLangFor42/Contents/mods/MinidoracatModLangFor42"
                     "/42/media/lua/shared/Translate")
@@ -204,7 +205,7 @@ assert ok, f"現況出貨檔不符 42.20.4 契約：{fail}"
 for lang, directory in (("CN", dist_cn), ("CH", dist_ch)):
     data = json.loads((directory / "Print_Media.json").read_text(encoding="utf-8"))
     infos = {k: v for k, v in data.items() if k.endswith("_info")}
-    assert len(infos) == 19, f"{lang} 的 _info 數量變了（{len(infos)}），請確認是刻意的"
+    assert len(infos) == 20, f"{lang} 的 _info 數量變了（{len(infos)}），請確認是刻意的"
     for key, value in infos.items():
         assert "getTexture" not in value, f"{lang}|{key} 仍有 getTexture"
         assert "UIFont." not in value, f"{lang}|{key} 仍有 UIFont."
@@ -214,4 +215,4 @@ for lang, directory in (("CN", dist_cn), ("CH", dist_ch)):
 cases += 1
 
 print(f"✅ test_print_media_contract：{cases} 組情境全過"
-      f"（合法 {len(OK)} 種、禁止 {len(BAD)} 種、出貨 19×2 鍵）")
+      f"（合法 {len(OK)} 種、禁止 {len(BAD)} 種、出貨 20×2 鍵）")
