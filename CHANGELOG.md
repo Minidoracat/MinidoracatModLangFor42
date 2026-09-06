@@ -8,11 +8,13 @@
 
 ### 玩家摘要
 
+- **新收錄 1 個 MOD：Pixel Strike Indicator & Health Bar（像素打擊指示與血條）。** 打中目標跳出傷害數字、爆擊／爆頭／秒殺／落空／升級特效、殭屍與動物血條、韌性條與血量百分比——模組選項頁全部選項與說明、沙盒 20 項伺服器上限設定與長篇說明共 161 個字串，繁簡皆有。兩個模組選項頁的頁名是作者寫死在程式裡的英文，翻譯包補不了。
 - **跟上 15 個 MOD 的上游更新，補譯 215 個新字串。** 含 Break Big Rocks 全套鍛造／鑄造工具配方、HydeCo Clay 金屬條／錠的瓷模具鑄造與重鑄配方、Evolving Traits World 七個動態特質（控槍人士／樂天派／理想體重／奧運選手／靜如處子／拆解專家／街頭混混）的沙盒選項、AutoAll 自動烹飪取水與治療／錄影帶新選項、P4 My So-Called Toy 的「斯皮福電子雞」玩具與傳單、Take A Bath 汙垢清洗沙盒、NeatUI XP Drop 新選項、Knox Chronicles 日誌 NPC 頁等。
 - **修訂 30 個上游改文的既有譯文。** FNVG 夜視儀支架去掉「頭戴式」並替零件加「(零件)」標示、沙盒說明改為「決定此物品的稀有度」；HydeCo Clay 鋁／黃銅／銅的鑄造配方由「條」改為「錠」；TT PowerPlant 右鍵動作「注射興奮劑」→「服用藥物」；ETW 精神狀態說明「憤怒」→「無聊」；AutoAll 劣質食材門檻說明改由「避免變質和燒焦的食物」選項獨立控管；Lean And Lie 按鍵鎖定說明補上睡袋／帳篷與分割畫面不套用一段。
 
 ### Added
 
+- **收錄 #410 Pixel Strike Indicator & Health Bar（3793657917）原創翻譯，共 161 鍵**（own lane，`sources/mods/3793657917/`；registry／watchlist／`sources/en` 鏡像同步落地）：上游自帶可載入的 `Translate/EN/UI.json`（114 鍵：模組選項頁的選項名、選項值、tooltip）與 `Sandbox.json`（47 鍵：20 項伺服器上限設定與多段 `<RGB:>` 分色長說明），有效分支僅 `42/`，零 vanilla 碰撞、零跨 mod 衝突。CH/CN 逐鍵對照 EN 人工直寫；術語對齊本體官方（韌性／韧性、殭屍故事／僵尸设置、末日／启示录、加固板、滑鼠右鍵／鼠标右键），圖片字 CRITICAL!!／HEADSHOT!!／INSTAKILL!!／MISS／LEVEL UP!! 與字型名保留英文；Sandbox 長說明保留段落與 `<RGB:>` 標記、依中文每行 16–20 字重新斷行。`PSI_Options.lua:44`／`:115` 的兩個選項頁名為 Lua 寫死字面，不走翻譯表、不處理，已於 `mod_names_zh.note`／SUPPORTED_MODS 公開並請申請者向作者回報。
 - **跟上 15 個原始 MOD 的上游文本更新，補譯 215 個新鍵**（#411–#425 可能過時 issue；`own_translations.json`）：Break Big Rocks（48：組裝／鍛造／鑄造／製作／熔鑄全套工具配方名與「BBR 鍛造」分類，工具名逐一對齊本體官方物品名）、HydeCo Clay（46：瓷模具鑄造鐵／鋼條與錠、條↔錠重鑄、簡易臺鉗零件、臺砧／方砧模具、取出各金屬錠、木棧板堆疊）、Evolving Traits World（38：七個特質的沙盒標題／需求欄／tooltip，特質名沿用既有 `UI_trait_*` 譯名、技能名對齊本體）、AutoAll（34：自動烹飪先取水、受汙染水、治療缺工具／缺乾淨繃帶、夾板、錄影帶只看已讀技能書、健康下限、忽略非敵對 NPC、休息時閱讀）、TT PowerPlant（14：Proxima 醫療線 ImmunoStasis 系列物品／配方／tooltip）、P4 My So-Called Toy（13：Spiffotchi 統一譯「斯皮福電子雞／斯皮福电子鸡」，含 42.20.4 新格式傳單版面資料）、Take A Bath And Shower（8：入浴劑效果時限、汙垢清洗）、NeatUI XP Drop（8）、Knox Chronicles（5：日誌 NPC 頁、遺體名）、Vanilla Outfits Expanded（1：工裝短褲）。
 
 ### Changed
