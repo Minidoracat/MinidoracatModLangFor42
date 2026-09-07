@@ -1,14 +1,12 @@
-[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.20.4-1.26.0[/h1]
-[i]2026-09-06[/i]
+[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.20.4-1.27.0[/h1]
+[i]2026-09-07[/i]
 [list]
-[*] [b]新收錄 Pixel Strike Indicator & Health Bar（像素打擊指示與血條）。[/b] 打中目標跳出的傷害數字、爆擊／爆頭／秒殺／落空／升級特效、殭屍與動物血條、韌性條與血量百分比——模組選項頁的全部選項與說明、沙盒 20 項伺服器上限設定與長篇說明共 161 個字串，繁中／簡中皆有。
-[*] [b]Break Big Rocks 全套工具配方有中文了。[/b] 組裝／鍛造／鑄造／製作／熔鑄共 48 條配方名，工具名稱與遊戲本體物品名一致（羊角鎚、石工鎚、十字鎬、園藝鋸、臺砧、鐵砧……），製作選單不再一排英文。
-[*] [b]HydeCo Clay 金屬鑄造更新。[/b] 瓷模具鑄造鐵條／鐵錠／鋼條／鋼錠、金屬條與錠互相重鑄、簡易臺鉗零件、臺砧／方砧模具、取出各種金屬錠、木棧板堆疊等 46 個新字串；鋁／黃銅／銅的鑄造配方依上游改為「鑄造X錠」。
-[*] [b]Evolving Traits World 七個動態特質的沙盒設定。[/b] 控槍人士、樂天派、理想體重、奧運選手、靜如處子、拆解專家、街頭混混的獲得／失去條件與說明共 38 個字串；精神狀態說明依上游把「憤怒」改為「無聊」。
-[*] [b]AutoAll 新選項。[/b] 自動烹飪先取水、受汙染水提示、治療缺工具／缺乾淨繃帶的說明、骨折上夾板、錄影帶只看已讀技能書、負重超載健康下限、忽略非敵對 NPC、休息時閱讀等 34 個字串；「劣質食材門檻」說明依上游改為由「避免變質和燒焦的食物」選項獨立控管。
-[*] [b]其他跟上上游更新的 MOD。[/b] TT PowerPlant 的 Proxima 醫療線（ImmunoStasis 系列物品、配方與說明，右鍵「注射興奮劑」依上游改為「服用藥物」）、P4 My So-Called Toy 的「斯皮福電子雞」玩具與傳單、Take A Bath 汙垢清洗與入浴劑時限沙盒、NeatUI XP Drop 新選項、Knox Chronicles 日誌 NPC 頁、Vanilla Outfits Expanded 工裝短褲。
-[*] [b]FNVG 夜視儀命名跟上上游。[/b] 支架去掉「頭戴式」、零件物品加上「(零件)」與整件區分、沙盒說明改為「決定此物品的稀有度」。
-[*] [b]Lean And Lie／Project Cook 說明修訂。[/b] 按鍵鎖定說明補上「睡袋、帳篷與分割畫面不套用」一段；烹飪面板按鈕提示依上游簡化為「烹飪」。
-[*] [b]已知限制：[/b] Pixel Strike Indicator 的兩個模組選項頁「頁名」（Pixel Strike Indicator／Pixel Health Bars）是作者寫死在程式裡的英文，任何翻譯包都補不了；頁內所有選項與說明皆已翻譯，已於支援清單標註。
+[*] [b]跟上 19 個 MOD 的上游更新，補譯 1,143 個新字串、修訂 129 個改文字串。[/b] 繁中／簡中皆逐鍵對照原文人工翻譯。
+[*] [b]Global Storage SiK 大改版全面中文化（603 個新字串）。[/b] 整套物品分類階層（食物與飲料 > 易腐壞 > …、服裝與防護 > 裝備 > 彈藥揹帶……）、終端機／區域／網路／權限管理介面、群組與成員術語改名、程式設計流程、除錯分類與 DETAIL 子日誌沙盒選項；「開啟狀態分頁檢視容器問題」等提示依上游修訂。
+[*] [b]Pixel Strike Indicator 更新（170 個新字串、91 段說明重譯）。[/b] 新增載具狀況條、環境傷害、爆炸 BOOM!! 效果、預設組合（全部顯示／只顯示基本項）與即時預覽；上游整段改寫的沙盒與選項說明全部重譯。
+[*] [b]Gun Attachment 3D Preview（120 個新字串）。[/b] 配件槽名（霰彈固定器、兩腳架、彈殼托……）、戰術連動手錶解鎖迷你 HUD、彈匣目錄、預設組合、配件數值圖例改為「有利變化／不利變化」。
+[*] [b]Mathebas Infinite Ammo（79）、Cye's Push Doors（56）、Knox Chronicles（47）。[/b] 無限彈藥沙盒選項；推門的強制開啟按鍵、可推開的殭屍數量、PvP 判定與 15 段沙盒說明修訂；諾克斯編年史的信用點、日誌與設施文字。
+[*] [b]其他跟上上游的 MOD。[/b] alice's Weapon Sling（18，舊減重零件改標「舊版物品 - 請勿使用」）、blackout predators（17）、Modern Firearms System（12，新增 QBU-203 精確射手步槍）、Immersive Blackouts、Vanilla Outfits Expanded、AutoTailoring、guns93（柯爾特單動陸軍左輪手槍）、LPTB42、Livestock Panel Plus、Cheat Menu PX、PSR、AutoAll。
+[*] [b]用詞修正。[/b] 依複核統一 Masonry→石工、Maintenance→維修、Literature→書刊、Produce→蔬果、Bags→袋子等分類名，並修正「查看／點擊／算法」等非台灣用語。
 [*] 仍支援 Project Zomboid Build 42.20.4+，Mod ID 與 Workshop ID 不變，無須重開存檔。
 [/list]

@@ -6,6 +6,8 @@
 
 ## [Unreleased]
 
+## [42.20.4-1.27.0] - 2026-09-07
+
 ### 玩家摘要
 
 - **跟上 19 個 MOD 的上游更新，補譯 1,143 個新字串。** 最大宗是 Global Storage SiK 大改版（603：整套物品分類階層「食物與飲料 > 易腐壞 > …」、終端機／區域／網路管理介面、除錯分類與 DETAIL 子日誌沙盒）、Pixel Strike Indicator（170：載具狀況條、環境傷害、爆炸 BOOM!! 效果、預設組合與即時預覽）、Gun Attachment 3D Preview（120：配件槽名、戰術連動手錶迷你 HUD、彈匣目錄、預設組合）、Mathebas Infinite Ammo（79）、Cye's Push Doors（56：強制開啟、屍群推開數量、PvP）、Knox Chronicles（47：信用點、日誌、設施）等。
