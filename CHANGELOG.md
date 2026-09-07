@@ -6,6 +6,25 @@
 
 ## [Unreleased]
 
+### 玩家摘要
+
+- **跟上 19 個 MOD 的上游更新，補譯 1,143 個新字串。** 最大宗是 Global Storage SiK 大改版（603：整套物品分類階層「食物與飲料 > 易腐壞 > …」、終端機／區域／網路管理介面、除錯分類與 DETAIL 子日誌沙盒）、Pixel Strike Indicator（170：載具狀況條、環境傷害、爆炸 BOOM!! 效果、預設組合與即時預覽）、Gun Attachment 3D Preview（120：配件槽名、戰術連動手錶迷你 HUD、彈匣目錄、預設組合）、Mathebas Infinite Ammo（79）、Cye's Push Doors（56：強制開啟、屍群推開數量、PvP）、Knox Chronicles（47：信用點、日誌、設施）等。
+- **修訂 129 個上游改文的既有譯文。** Pixel Strike Indicator 的 91 段沙盒／選項說明依上游整段改寫重譯；Global Storage SiK 21 個（成員／群組術語改名、程式設計流程改文）；Cye's Push Doors 15 個沙盒說明；Alice's Weapon Sling 的舊減重零件改標「舊版物品 - 請勿使用」。
+
+### Added
+
+- **跟上 19 個原始 MOD 的上游文本更新，補譯 1,143 個新鍵**（#426–#444 可能過時 issue）：Global Storage SiK 3750612158（603，`own_translations`）、Pixel Strike Indicator 3793657917（170，own lane 目錄 `sources/mods/3793657917/`）、Gun Attachment 3D Preview 3781102421（120）、Mathebas Infinite Ammo 3495695428（79）、Cye's Push Doors 3780683663（56）、Knox Chronicles 3778350501（47）、alice's Weapon Sling 3775549570（18）、blackout predators 3766513120（17）、Modern Firearms System 3633421539（12：QBU-203 精確射手步槍等）、Immersive Blackouts（5）、Vanilla Outfits Expanded（4：連帽衫 (運動套裝)／長褲 (迷彩) 等沿用括號屬性格式）、AutoTailoring（3）、guns93（2：柯爾特單動陸軍左輪手槍）、LPTB42／Livestock Panel Plus（各 2）、Cheat Menu PX／PSR／AutoAll（各 1）。
+
+### Changed
+
+- **依上游改文修訂既有譯文 129 鍵**：Pixel Strike Indicator 91 鍵直改 own 目錄 CN＋corpus（上游整段改寫沙盒／選項 tooltip，重譯並補齊中英數間距；27 鍵僅同義改寫維持原譯）；As1 lane 35 鍵走 `cn_overrides.json`（帶 `as1_value` 錨點）＋corpus＋`ch_review_state`——Global Storage SiK 19（`Family`→`Group` 群組改名、`Programming` 系列改文與 `%1` 佔位符、分隔符 `·`→`|`、Relay／Addons tooltip 全改寫）、Cye's Push Doors 15（沙盒說明改寫）、Gun Attachment 3D Preview 1（`Toggle Loadout` On/Off 格式）；own 層 3 鍵（GS `DebugCatSiKUI` 2、Alice `WeightReductionPart`→`Legacy Item - Do Not Use`「舊版物品 - 請勿使用」）。
+- Pixel Strike Indicator 上游移除 `UI_PSI_Reset`／`_tooltip` 2 鍵，自 own 目錄與 corpus 同步退役。其餘上游移除鍵（GS 23、Immersive Blackouts 4、MIA 1）屬 As1 衍生層或 own 層錨點缺口，維持 report-only 不動。
+
+### 驗證
+
+- 翻譯由 5 個平行 lane 逐鍵直寫 ch／cn，再由 Codex（gpt-6-astra，ultra）＋Grok 兩條唯讀 lane 對抗複核：Codex 50 項採納 49（`SHELL HOLDER`「彈殼托」→「霰彈固定器」、配件圖例「提升／下降」→「有利變化／不利變化」、`Crowd Opening Capacity`→「開門可推開的殭屍數量」、傷口提示「咬傷是否已感染」→「玩家是否因咬傷而感染」、Masonry 對齊本體「石工」、PSI 名稱對齊既有「像素打擊指示」、31 處中英數間距；拒絕 `QBU203` 保留裸型號——沿用同 MOD `QBU-191 精確射手步槍` 格式）；Grok 25 項採納 19（`Open Red`→狀態分頁、cn「物件」→「物体」×5、Ingredient→食材、Produce→蔬果／果蔬、Clothing 衣物→服裝對齊路徑鍵、Literature→書刊、Bags→袋子、`uses`→次；拒絕 Tactical Link 連動→連結與含亂碼的 5 項）。lint 棘輪另修 12 處（查看→檢視×5、點擊→點選×3、算法→演算法、登錄→登記／合格／選取）、裁決 15 鍵 keep 登記 `ch_review_state`。
+- build 綠、`verify_dist` 16/16 PASS、冪等雙跑 183 檔零 diff、owner decision gate 綠、`test_vanilla_no_override` 零覆蓋、`test_serialization` 全合規、`lint_ch` 棘輪全零、`manifest` 重生（PSI 161→329 鍵）＋`--check` 零漂移、CI 18 支回歸測試＋tracker self-test 全過；`--cn-diff v42.20.4-1.26.0` CN 改值 1,272 鍵、待複核 0。
+
 ## [42.20.4-1.26.0] - 2026-09-06
 
 ### 玩家摘要

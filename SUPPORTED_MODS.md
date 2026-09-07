@@ -670,7 +670,7 @@
 | [Puffin's Retro Relics〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3788360646) | Puffin 的復古珍藏 | 新增 1993 年以前的懷舊收藏品，包括瘋狂球、絨毛玩偶、桌遊、球隊三角旗與摔角夥伴玩偶，皆可擺設。 | `PuffinsRetroRelics` | 106 | — | — |
 | [Long Term Preservation Extended](https://steamcommunity.com/sharedfiles/filedetails/?id=3789287166) | 長期保存擴充 | 擴充食物保存玩法，可製作罐裝食品（如罐裝酪梨醬）、果汁與罐子標籤，並加入造紙製作分類與造紙模具。 | `LongTermPreservationExtended`, `LongTermPreservationExtendedSE`, `LongTermPreservationExtendedSEUI`, `LongTermPreservationExtendedUI` | 304 | ⚠️ ≥7 | — |
 | [CD: Cats](https://steamcommunity.com/sharedfiles/filedetails/?id=3791294616) | CD：貓咪 | 加入公母與幼貓等貓類同伴，可設定流浪貓在住宅、商店與寵物店的生成倍率，且該設定獨立於狗的生成。 | `CompanionCat` | 24 | — | — |
-| [Pixel Strike Indicator & Health Bar〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3793657917) | 像素打擊指示與血條 | 打中目標時跳出傷害數字，爆擊／爆頭／秒殺／落空／升級特效，殭屍與動物血條、韌性條與血量百分比；沙盒可設伺服器上限，玩家再自行調整。 | `PixelStrikeIndicator` | 161 | — | ⚠️ 兩個模組選項頁的頁名（Pixel Strike Indicator／Pixel Health Bars）是 PSI_Options.lua 寫死的英文字面，不走翻譯表，任何翻譯包都補不了；頁內所有選項與說明皆已翻譯。 |
+| [Pixel Strike Indicator & Health Bar〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3793657917) | 像素打擊指示與血條 | 打中目標時跳出傷害數字，爆擊／爆頭／秒殺／落空／升級特效，殭屍與動物血條、韌性條與血量百分比；沙盒可設伺服器上限，玩家再自行調整。 | `PixelStrikeIndicator` | 329 | — | ⚠️ 兩個模組選項頁的頁名（Pixel Strike Indicator／Pixel Health Bars）是 PSI_Options.lua 寫死的英文字面，不走翻譯表，任何翻譯包都補不了；頁內所有選項與說明皆已翻譯。 |
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 

@@ -19919,5 +19919,180 @@
   "as1_value": "达到此烹饪等级后, 模组将不再避开变质和影响心情的食材. 设为0则永远不允许使用. 有毒物品始终会被拒绝.",
   "reason": "2026-09-06 #423：上游 EN 把變質食材移出此等級門檻，改由「避免變質和燒焦的食物」選項獨立控管，譯文跟上。",
   "value": "达到此烹饪等级后, 模组将不再避开影响心情的食材. 设为0则永远不允许使用. 变质, 烧焦和受污染的食物还需要取消勾选“避免变质和烧焦的食物”才会使用, 有毒物品始终会被拒绝."
+ },
+ "IG_UI.json|IGUI_CyesPushDoors_ImpactFeedback": {
+  "as1_value": "撞击反馈",
+  "reason": "2026-09-07 #426–#444 上游改文：選項由「撞擊回饋」改成涵蓋全部回饋的總開關.",
+  "value": "启用所有反馈"
+ },
+ "IG_UI.json|IGUI_CyesPushDoors_ImpactFeedback_Tooltip": {
+  "as1_value": "播放撞击音效并显示视觉受击反应.",
+  "reason": "2026-09-07 #426–#444 上游改文：說明改寫為總開關: 涵蓋訊息/動畫/音效, 並新增個別選項被鎖定的行為.",
+  "value": "启用所有消息、自定义动画与音效. 启用时, 三个单独的反馈选项会保持开启并锁定."
+ },
+ "IG_UI.json|IGUI_GS_AddonBayHint": {
+  "as1_value": "M: 已阅读手册 · +: 已安装模块 · 边框显示就绪状态.",
+  "reason": "2026-09-07 #426–#444 上游改文：分隔符改為 |, 並修正 cn 誤把 = 譯成 :.",
+  "value": "M = 已阅读手册 | + = 已安装模块 | 边框显示就绪状态."
+ },
+ "IG_UI.json|IGUI_GS_AdminDashboardTitle": {
+  "as1_value": "网络支持面板 (工作人员)",
+  "reason": "2026-09-07 #426–#444 上游改文：面板改名為 QA / Diagnostics, 原「網路支援面板」已不符.",
+  "value": "QA / 诊断面板 (工作人员)"
+ },
+ "IG_UI.json|IGUI_GS_AdminNetworkCounts": {
+  "as1_value": "{1} 名成员, {2} 台终端",
+  "reason": "2026-09-07 #426–#444 上游改文：分隔符改為 |, 且原 cn 漏掉歷史紀錄與 {3} 佔位符.",
+  "value": "{1} 名活跃成员 | {2} 条历史记录 | {3} 台终端"
+ },
+ "IG_UI.json|IGUI_GS_CategoryTooltipMain": {
+  "as1_value": "分类: {1}",
+  "reason": "2026-09-07 #426–#444 上游改文：術語由 Category 改為 Family, 與子層 Group 區分.",
+  "value": "大类: {1}"
+ },
+ "IG_UI.json|IGUI_GS_DistNetworkReach": {
+  "as1_value": "网络覆盖范围: {1} 格 (容器和终端关联)",
+  "reason": "2026-09-07 #426–#444 上游改文：原文精簡為 Network, 刪去括號說明.",
+  "value": "网络: {1} 格"
+ },
+ "IG_UI.json|IGUI_GS_DistTerminalUse": {
+  "as1_value": "终端使用范围: {1} 格",
+  "reason": "2026-09-07 #426–#444 上游改文：原文精簡為 Use, 不再提終端機使用範圍.",
+  "value": "使用: {1} 格"
+ },
+ "IG_UI.json|IGUI_GS_NodeCategoryMainLabel": {
+  "as1_value": "分类:",
+  "reason": "2026-09-07 #426–#444 上游改文：標籤由 Category 改為 Family.",
+  "value": "大类:"
+ },
+ "IG_UI.json|IGUI_GS_NodeCategorySubLabel": {
+  "as1_value": "子分类:",
+  "reason": "2026-09-07 #426–#444 上游改文：標籤由 Subcategory 改為 Group.",
+  "value": "分组:"
+ },
+ "IG_UI.json|IGUI_GS_ProgramDiskSuccess": {
+  "as1_value": "磁盘写入程序成功.",
+  "reason": "2026-09-07 #426–#444 上游改文：訊息改為說明磁碟已在物品欄中產生, 而非寫入成功.",
+  "value": "磁盘已创建在你的物品栏中."
+ },
+ "IG_UI.json|IGUI_GS_ProgrammingBlankDiskCount": {
+  "as1_value": "可用空白磁盘: {1}/{2}",
+  "reason": "2026-09-07 #426–#444 上游改文：格式與佔位符改為 Blank disk | %1 available.",
+  "value": "空白磁盘 | 可用 %1"
+ },
+ "IG_UI.json|IGUI_GS_ProgrammingButton": {
+  "as1_value": "写入",
+  "reason": "2026-09-07 #426–#444 上游改文：按鈕文字新增 %1 佔位符.",
+  "value": "写入 %1"
+ },
+ "IG_UI.json|IGUI_GS_ProgrammingNeedsBlankDisk": {
+  "as1_value": "你需要有一张空白磁盘.",
+  "reason": "2026-09-07 #426–#444 上游改文：改為狀態標題式短句, 不再是完整句.",
+  "value": "需要空白磁盘"
+ },
+ "IG_UI.json|IGUI_GS_ProgrammingReaderInstalled": {
+  "as1_value": "软驱已安装到该网络.",
+  "reason": "2026-09-07 #426–#444 上游改文：原文精簡, 不再提及此網路.",
+  "value": "软驱已安装"
+ },
+ "IG_UI.json|IGUI_GS_RecoveryHelp": {
+  "as1_value": "1) 准备迁移 · 2) 拾起终端 (右键 / 移动) · 3) 重新放置. 不先做准备就放置新终端会创建一个独立网络.",
+  "reason": "2026-09-07 #426–#444 上游改文：步驟分隔符由 · 改為 |.",
+  "value": "1) 准备迁移 | 2) 拾起终端 (右键 / 移动) | 3) 重新放置. 不先做准备就放置新终端会创建一个独立网络."
+ },
+ "IG_UI.json|IGUI_GS_TerminalEditorDeleteBtn": {
+  "as1_value": "永久删除",
+  "reason": "2026-09-07 #426–#444 上游改文：按鈕文字去掉 permanently.",
+  "value": "删除"
+ },
+ "IG_UI.json|IGUI_GS_TerminalEditorStatus": {
+  "as1_value": "状态: {1} · 角色: {2}",
+  "reason": "2026-09-07 #426–#444 上游改文：分隔符由 · 改為 |.",
+  "value": "状态: {1} | 角色: {2}"
+ },
+ "Sandbox.json|Sandbox_CyesPushDoors_ArmStrainGainMultiplier_tooltip": {
+  "as1_value": "调整成功撞击后双臂增加的疲劳值.\n此设置在车库门特定疲劳计算之前应用.",
+  "reason": "2026-09-07 #426–#444 上游改文：新增強制開啟只作用於所選手臂的說明.",
+  "value": "调整常规成功撞击为双臂增加的疲劳值, 以及强制开启时为所选手臂增加的疲劳值.\n此设置在车库门特定疲劳计算之前应用."
+ },
+ "Sandbox.json|Sandbox_CyesPushDoors_ArmStrainRecoveryMultiplier": {
+  "as1_value": "手臂疲劳恢复",
+  "reason": "2026-09-07 #426–#444 上游改文：選項名由「手臂勞損恢復」改為撞擊之間的恢復時間.",
+  "value": "撞击恢复时长"
+ },
+ "Sandbox.json|Sandbox_CyesPushDoors_ArmStrainRecoveryMultiplier_tooltip": {
+  "as1_value": "调整推门撞击间隔期间的疲劳恢复速度: 无恢复需1.60秒, 轻度恢复需2.00秒, 中度恢复需2.50秒.\n普通开门操作不受影响. 默认值: 1.0.",
+  "reason": "2026-09-07 #426–#444 上游改文：門檻改以手臂勞損數值劃分並新增耐力影響, 原譯把秒數誤讀為恢復條件.",
+  "value": "调整推门撞击之间的防连点恢复时间: 手臂疲劳 0-4.99 时为 1.60 秒, 轻度为 2.00 秒, 中度/高度为 2.50 秒.\n耐力偏低可能会增加额外的恢复时间. 默认值: 1.0."
+ },
+ "Sandbox.json|Sandbox_CyesPushDoors_DamagePlayers_tooltip": {
+  "as1_value": "允许推门撞击对其他玩家造成伤害.",
+  "reason": "2026-09-07 #426–#444 上游改文：新增有效 PvP 目標、強制開啟可命中, 以及滑動門與車庫門例外.",
+  "value": "允许撞击对其他有效 PvP 玩家造成伤害. 在普通门、围栏门与双开入口上, 力量更强的目标会挡下常规互动, 但可通过强制开启命中. 滑动门与车库门不采用玩家力量阻挡机制."
+ },
+ "Sandbox.json|Sandbox_CyesPushDoors_DoorWearMultiplier_tooltip": {
+  "as1_value": "调整所有支持门的撞击损耗.\n设为0将禁用由 '推门!' 导致的耐久度损失.",
+  "reason": "2026-09-07 #426–#444 上游改文：範圍擴大到強制與車庫門損耗及隨機故障, 並新增預設值.",
+  "value": "调整由 '推门!' 导致的所有耐久度损失.\n设为 0 将禁用常规、强制与车库门的损耗, 包含随机车库门故障. 默认值: 1.0."
+ },
+ "Sandbox.json|Sandbox_CyesPushDoors_GarageFailureChanceMultiplier_tooltip": {
+  "as1_value": "调整基于力量和现有损伤的车库门故障概率.\n设为0将禁用随机故障, 但不会禁用正常损耗. 默认值: 1.0.",
+  "reason": "2026-09-07 #426–#444 上游改文：新增需「門損耗」大於 0 才生效的前提.",
+  "value": "在 '门损耗' 大于 0 时, 调整基于力量和现有损伤的车库门故障概率.\n设为 0 将禁用随机故障, 但不会禁用正常损耗. 默认值: 1.0."
+ },
+ "Sandbox.json|Sandbox_CyesPushDoors_GlobalImpactFeedback_tooltip": {
+  "as1_value": "当个人选项被隐藏时, 控制所有人的撞击音效和视觉反应.",
+  "reason": "2026-09-07 #426–#444 上游改文：條件由「隱藏個人選項」改為「鎖定」, 控制對象改為訊息/動畫/音效.",
+  "value": "当个人反馈控制被锁定时, 为所有人控制消息、自定义动画与音效."
+ },
+ "Sandbox.json|Sandbox_CyesPushDoors_HideIndividualOptions": {
+  "as1_value": "隐藏个人选项",
+  "reason": "2026-09-07 #426–#444 上游改文：選項名由「隱藏個人選項」改為鎖定個人回饋控制.",
+  "value": "锁定个人反馈控制"
+ },
+ "Sandbox.json|Sandbox_CyesPushDoors_HideIndividualOptions_tooltip": {
+  "as1_value": "在多人游戏中, 隐藏每位玩家的个人反馈设置.\n此时将强制使用全局撞击反馈设置.",
+  "reason": "2026-09-07 #426–#444 上游改文：行為由隱藏改為鎖定, 並新增強制開啟快捷鍵不受限制.",
+  "value": "在多人游戏中, 锁定每位玩家的个人反馈控制, 并强制使用全局撞击反馈.\n强制开启快捷键仍可使用."
+ },
+ "Sandbox.json|Sandbox_CyesPushDoors_KnockDownPlayers_tooltip": {
+  "as1_value": "允许符合条件的推门撞击击倒其他玩家.",
+  "reason": "2026-09-07 #426–#444 上游改文：新增有效 PvP 目標, 以及一般撞擊與強制開啟的擊倒機率差異.",
+  "value": "允许符合条件的推门撞击击倒其他有效 PvP 玩家. 常规撞击采用 “玩家击倒概率”; 强制开启在其两格宽的撞击带内击倒概率为 100%%."
+ },
+ "Sandbox.json|Sandbox_CyesPushDoors_PlayerKnockdownChance_tooltip": {
+  "as1_value": "比较力量和体格后的最大击倒概率.\n若一项属性占优则概率减半; 若两项均劣势则概率为0. 默认值: 25%%.",
+  "reason": "2026-09-07 #426–#444 上游改文：限定一般撞擊, 條件由「兩項均劣勢」修正為「兩項都未佔優」, 並新增強制開啟 100%%.",
+  "value": "常规撞击在比较力量和体格后的最大击倒概率.\n有一项属性占优则概率减半; 两项均未占优则概率为 0. 启用 “击倒玩家” 时, 强制开启一律采用 100%%. 默认值: 25%%."
+ },
+ "Sandbox.json|Sandbox_CyesPushDoors_ZombieKnockdownChance_tooltip": {
+  "as1_value": "符合条件的僵尸被击倒的概率; 否则仅会踉跄.\n手臂疲劳会降低此概率. 默认值: 35%%.",
+  "reason": "2026-09-07 #426–#444 上游改文：新增適用的撞擊類型與滑動玻璃門不擊倒的例外.",
+  "value": "在常规、关门或强制撞击时, 被选中的符合条件僵尸倒地的概率; 否则仅会踉跄.\n手臂疲劳会降低此概率. 滑动玻璃门永远不会击倒僵尸. 默认值: 35%%."
+ },
+ "Sandbox.json|Sandbox_CyesPushDoors_ZombiesAffectedMultiplier_tooltip": {
+  "as1_value": "调整每次撞击影响的目标数量 (适用于所有支持的门).\n滑动玻璃门的上限仍保持为3.",
+  "reason": "2026-09-07 #426–#444 上游改文：限定一般撞擊, 並新增強制開啟影響全部符合條件目標.",
+  "value": "调整每次常规撞击影响的目标数量 (适用于所有支持的门).\n强制开启一律影响其整群符合条件的僵尸; 滑动玻璃门的上限仍保持为 3."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_DebugCatAddons_tooltip": {
+  "as1_value": "需要开启调试模式. 记录安装附加组件时从物品栏搜索/移除的确切物品, 以及卸载时该物品是否实际生成.",
+  "reason": "2026-09-07 #426–#444 上游改文：記錄內容大幅擴增為目錄、ID/ModID、註冊與掛載等項目.",
+  "value": "需要开启调试模式. 记录附加组件目录、ID 与 ModID、注册尝试、可用性、原因与界面挂载; 还会记录安装或移除过程中实际消耗或返还的确切物品."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_DebugRelayToClients": {
+  "as1_value": "   >> 将专用服务器日志转发给客户端",
+  "reason": "2026-09-07 #426–#444 上游改文：對象由客戶端改為管理員, 且原文已移除 >> 縮排前綴.",
+  "value": "将专用服务器日志转发给管理员"
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_DebugRelayToClients_tooltip": {
+  "as1_value": "默认启用. 以有界批次将专用服务器上已启用的核心/附加组件日志行发送到已订阅的客户端控制台. 日志行保留 [SRV]/[CLI] 来源标记. 禁用后仅在服务器上保留诊断信息.",
+  "reason": "2026-09-07 #426–#444 上游改文：預設值由啟用改為停用, 收件對象改為管理員並新增權限檢查說明.",
+  "value": "默认禁用. 仅以有界批次将已启用的诊断信息发送给已订阅的管理员. 服务器在订阅时以及每次投递时检查权限; 失去权限或断开连接都会移除订阅."
+ },
+ "UI.json|UI_optionscreen_binding_Toggle Loadout": {
+  "as1_value": "切换配装",
+  "reason": "2026-09-07 #426–#444 上游改文：上游把切換式標籤改為 On / Off 前綴格式, 譯文跟上新格式",
+  "value": "开 / 关: 配装"
  }
 }
