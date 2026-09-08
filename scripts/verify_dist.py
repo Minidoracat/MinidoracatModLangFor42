@@ -1794,11 +1794,13 @@ def _is_item_fulltype(value: str) -> bool:
 
 
 def _upstream_item_fulltypes(repo: str) -> set[str]:
-    """Return effective-branch `script_item_dn` fullTypes, fail-closed.
+    """Return effective-branch item fullTypes, fail-closed.
 
     Module names are never inferred from suffixes. The only evidence accepted
     by [15] is the exact `Module.Item` extracted by tracker schema 9+ from the
-    currently loadable branch. This keeps `Foo.Bar` distinct from `Other.Bar`
+    currently loadable branch. Both item declarations and DisplayName records
+    carry that same parsed identity, even when names move to translation JSON.
+    This keeps `Foo.Bar` distinct from `Other.Bar`
     and prevents a missing module from being "repaired" to whichever suffix
     happens to be unique in today's incomplete tracker universe.
     """
@@ -1839,14 +1841,14 @@ def _upstream_item_fulltypes(repo: str) -> set[str]:
             continue
         eff = tracker.resolve_effective_branches(records)
         for rid, kind, full in parsed:
-            if kind != "script_item_dn":
+            if kind not in ("script_item", "script_item_dn"):
                 continue
             # Legacy/stale state can contain module-less item names even after a
             # wid-level schema bump. They are undecidable, never exact evidence.
             if "." not in full[1:-1] or full.startswith(f"{tracker.UNKNOWN_MODULE}."):
                 continue
             if not _is_item_fulltype(full):
-                corrupt.append(f"{wid}: 壞損 script_item_dn fullType `{full}`")
+                corrupt.append(f"{wid}: 壞損 {kind} fullType `{full}`")
                 continue
             if tracker.is_effective(rid, eff):
                 out.add(full)
@@ -1856,7 +1858,7 @@ def _upstream_item_fulltypes(repo: str) -> set[str]:
             f"（{'; '.join(corrupt[:5])}）")
     if len(out) < ITEM_FULLTYPES_MIN:
         raise ValueError(
-            f"en_corpus_hashes 只取得 {len(out)} 個有效分支 script_item_dn fullType"
+            f"en_corpus_hashes 只取得 {len(out)} 個有效分支 item fullType"
             f"（現況量級 15300+，下限 {ITEM_FULLTYPES_MIN}）——不得以零缺口放行")
     return out
 
@@ -1909,7 +1911,7 @@ def check_itemname_dead_keys(repo: str, dist_ch: str) -> tuple[bool, list[str], 
         else:
             fail.append(
                 f"{pref[body]} 的 prefix body `{body}` 無法精確對上 effective "
-                f"script_item_dn fullType；禁止依 suffix 猜 module。請查 owner/mod script "
+                f"item 宣告 fullType；禁止依 suffix 猜 module。請查 owner/mod script "
                 f"後補正確裸鍵，或登記 sources/{ITEMNAME_DEAD_ALLOWLIST}")
     # A non-exact allowlist entry is an intentional unresolved-module deferral.
     # It becomes stale only when its prefix disappears or independent evidence

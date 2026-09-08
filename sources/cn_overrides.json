@@ -9816,8 +9816,8 @@
  },
  "Sandbox.json|Sandbox_BurdJournals_DiminishingTrackingMode_tooltip": {
   "as1_value": "启用收益递减时, 干净日记技能领取的递减如何追踪.",
-  "reason": "As1 整句偏離 EN：漏掉第二句「Different journal UUIDs keep independent histories.」，又憑空加入 EN 沒有的「干净日记」限定（EN 說的是 within each physical journal，涵蓋所有日記）。own 兩句俱全且未加限定。",
-  "value": "收益递减在每本实体日记内各自追踪的方式. 不同日记 (UUID) 各自保有独立记录."
+  "value": "选择磨损是按每次技能领取, 按每次阅读会话, 还是按每项已记录技能各自累加.",
+  "reason": "EN 整句改寫為「wear 依技能領取/閱讀期間/每項技能各自累加」, 舊譯講的是 UUID 獨立歷史, 已與新 EN 不符; 措辭對齊既有三個 option 譯名."
  },
  "Sandbox.json|Sandbox_BurdJournals_EnableCursedJournalInsight_tooltip": {
   "as1_value": "允许敏锐的幸存者察觉被伪装的诅咒日记, 并通过夜猫眼、搜寻、草药学家和野外生存背景读取逐步升级的提示、警觉和精确诅咒警告.",
@@ -13271,8 +13271,8 @@
  },
  "Tooltip.json|Tooltip_BurdJournals_ConvertToCleanDesc": {
   "as1_value": "将这本破旧日记重新装订为个人使用的干净空白生存日记. 需要裁缝用品.",
-  "reason": "取 as1 句式 (該檔語域以 as1 為主), 只把被 cn_overrides 否決的「裁缝用品」改成缝纫 — ContextMenu_BurdJournals_BindAsSurvivalJournal_NoTailoring 已登記「需要缝纫技能1级」.",
-  "value": "将这本破旧日记重新装订为个人使用的干净空白生存日记. 需要缝纫用品."
+  "value": "销毁这本日记中的所有技能, 配方, 特质, 地图与其他奖励. 产出一本干净的空白个人日记. 需要制作材料.",
+  "reason": "EN 改寫為「銷燬所有技能/配方/特質/地圖與其他獎勵」＋crafting supplies, 舊譯只講重新裝訂且材料寫成縫紉用品; 新 EN 已非 tailoring, 一併解掉舊 cn_override 的裁縫/縫紉爭點. Main 複核：材料名稱依本機42.20.4官方CH/CN ItemName對齊（碎布/碎布条、丹寧條/牛仔布条、針/针、縫線/线）；stable survivor 指固定角色身分，不是狀態穩定。"
  },
  "Tooltip.json|Tooltip_BurdJournals_CursedJournalName": {
   "as1_value": "被诅咒的日记",
@@ -19807,8 +19807,8 @@
  },
  "Sandbox.json|Sandbox_ammomaker_BirdExYield_tooltip": {
   "as1_value": "每颗种子产生的鸟粪量 (鸟类喂食器)",
-  "reason": "2026-09-05 #396：上游 EN 改為 \"Bird excrement yield per 0.02g of 'is seed' items (bird feeder)\"，原譯漏掉 0.02g 口徑。",
-  "value": "每 0.02g '种子类' 物品产生的鸟粪量 (鸟类喂食器)"
+  "value": "每 20g '种子类' 物品产生的鸟粪量 (鸟类喂食器)",
+  "reason": "上游把口徑基準由 0.02g 改為 20g，是實質數值變更 (現譯的 0.02g 會誤導 1000 倍)。僅換數字，其餘句式/單引號/括號空格全部沿用現譯。attribution 僅 2788256295 單一 owner，且 cn_override 現值 (2026-09-05 #396 為補 0.02g 口徑而設) 需同步改為 20g 版本。"
  },
  "IG_UI.json|IGUI_ContextMenu_ForParts": {
   "as1_value": "作为零件",
@@ -20094,5 +20094,470 @@
   "as1_value": "切换配装",
   "reason": "2026-09-07 #426–#444 上游改文：上游把切換式標籤改為 On / Off 前綴格式, 譯文跟上新格式",
   "value": "开 / 关: 配装"
+ },
+ "ItemName.json|LWBetterElectronics.AdvancedNoiseMakerRemoteV3": {
+  "as1_value": "噪音发生器 (超远程, 带遥控)",
+  "value": "便携式家用警报器 (带遥控接收器)",
+  "reason": "#449 上游將名稱由 script DisplayName 移至 ItemName.json；核對完整同鍵遷移與 EN 原文，修正簡中舊雜誌/超遠程噪音器名稱，繁中符合原文者保留。"
+ },
+ "ItemName.json|LWBetterElectronics.AdvancedNoiseMakerSensorV3": {
+  "as1_value": "噪音发生器 (超远程, 带传感器)",
+  "value": "便携式家用警报器 (带传感器)",
+  "reason": "#449 上游將名稱由 script DisplayName 移至 ItemName.json；核對完整同鍵遷移與 EN 原文，修正簡中舊雜誌/超遠程噪音器名稱，繁中符合原文者保留。"
+ },
+ "ItemName.json|LWBetterElectronics.AdvancedNoiseMakerV3": {
+  "as1_value": "噪音发生器 (超远程)",
+  "value": "便携式家用警报器",
+  "reason": "#449 上游將名稱由 script DisplayName 移至 ItemName.json；核對完整同鍵遷移與 EN 原文，修正簡中舊雜誌/超遠程噪音器名稱，繁中符合原文者保留。"
+ },
+ "ItemName.json|LWBetterElectronics.ElectronicsDismantleMagazine": {
+  "as1_value": "杂志: 业余电子月刊 - 回收旧项目",
+  "value": "如何对电器设备进行逆向工程",
+  "reason": "#449 上游將名稱由 script DisplayName 移至 ItemName.json；核對完整同鍵遷移與 EN 原文，修正簡中舊雜誌/超遠程噪音器名稱，繁中符合原文者保留。"
+ },
+ "ItemName.json|LWBetterElectronics.ManualANoisemakerV1": {
+  "as1_value": "杂志: 业余电子月刊 - 放大器电路特辑",
+  "value": "放大器及其在电路中的应用",
+  "reason": "#449 上游將名稱由 script DisplayName 移至 ItemName.json；核對完整同鍵遷移與 EN 原文，修正簡中舊雜誌/超遠程噪音器名稱，繁中符合原文者保留。"
+ },
+ "ItemName.json|LWBetterElectronics.ManualANoisemakerV2": {
+  "as1_value": "杂志: 业余电子月刊 - 低压报警器",
+  "value": "防盗警报器安装与接线图",
+  "reason": "#449 上游將名稱由 script DisplayName 移至 ItemName.json；核對完整同鍵遷移與 EN 原文，修正簡中舊雜誌/超遠程噪音器名稱，繁中符合原文者保留。"
+ },
+ "ItemName.json|LWBetterElectronics.ManualMotionSensor": {
+  "as1_value": "杂志: 业余电子月刊 - 用电线擒拿坏蛋",
+  "value": "运动传感器 - 附接线图手册",
+  "reason": "#449 上游將名稱由 script DisplayName 移至 ItemName.json；核對完整同鍵遷移與 EN 原文，修正簡中舊雜誌/超遠程噪音器名稱，繁中符合原文者保留。"
+ },
+ "ItemName.json|LWBetterElectronics.ManualRemote": {
+  "as1_value": "杂志: 业余电子月刊 - 遥控器里有什么?",
+  "value": "遥控器 - 附接线图手册",
+  "reason": "#449 上游將名稱由 script DisplayName 移至 ItemName.json；核對完整同鍵遷移與 EN 原文，修正簡中舊雜誌/超遠程噪音器名稱，繁中符合原文者保留。"
+ },
+ "ItemName.json|LWBetterElectronics.ManualTV": {
+  "as1_value": "杂志: 业余电子月刊 - 显像管电视内部",
+  "value": "电视 - 手册与接线图",
+  "reason": "#449 上游將名稱由 script DisplayName 移至 ItemName.json；核對完整同鍵遷移與 EN 原文，修正簡中舊雜誌/超遠程噪音器名稱，繁中符合原文者保留。"
+ },
+ "ItemName.json|LWBetterElectronics.RadioUpgradeMag1": {
+  "as1_value": "杂志: 业余电子月刊 - 商店收音机剖析",
+  "value": "收音机 - 说明书与电路",
+  "reason": "#449 上游將名稱由 script DisplayName 移至 ItemName.json；核對完整同鍵遷移與 EN 原文，修正簡中舊雜誌/超遠程噪音器名稱，繁中符合原文者保留。"
+ },
+ "ItemName.json|LWBetterElectronics.RadioUpgradeMag2": {
+  "as1_value": "杂志: 业余电子月刊 - 对讲机特辑",
+  "value": "对讲机 - 说明书与电路",
+  "reason": "#449 上游將名稱由 script DisplayName 移至 ItemName.json；核對完整同鍵遷移與 EN 原文，修正簡中舊雜誌/超遠程噪音器名稱，繁中符合原文者保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanAlbum": {
+  "as1_value": "僵尸男孩贴纸合集",
+  "value": "小浣熊男孩贴纸合集",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanBox": {
+  "as1_value": "盒装僵尸男孩巧克力",
+  "value": "盒装小浣熊男孩巧克力",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanChoco1": {
+  "as1_value": "僵尸男孩巧克力",
+  "value": "小浣熊男孩巧克力",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanChoco2": {
+  "as1_value": "打开的盒装僵尸男孩巧克力",
+  "value": "打开的小浣熊男孩巧克力",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 另修原譯「打開的盒裝…」誤加的「盒裝/盒装」：本鍵 EN 自始至終為 Opened SPIFFOMAN Chocolate（單條裝），(Box) 只屬 P4ZomboidmanBox；因本鍵值本次必須重寫，順手修正該既有錯譯而非重新固化。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker01": {
+  "as1_value": "僵尸男孩贴纸 (No.01)",
+  "value": "小浣熊男孩贴纸 (No.01)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.01 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker02": {
+  "as1_value": "僵尸男孩贴纸 (No.02)",
+  "value": "小浣熊男孩贴纸 (No.02)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.02 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker03": {
+  "as1_value": "僵尸男孩贴纸 (No.03)",
+  "value": "小浣熊男孩贴纸 (No.03)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.03 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker04": {
+  "as1_value": "僵尸男孩贴纸 (No.04)",
+  "value": "小浣熊男孩贴纸 (No.04)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.04 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker05": {
+  "as1_value": "僵尸男孩贴纸 (No.05)",
+  "value": "小浣熊男孩贴纸 (No.05)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.05 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker06": {
+  "as1_value": "僵尸男孩贴纸 (No.06)",
+  "value": "小浣熊男孩贴纸 (No.06)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.06 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker07": {
+  "as1_value": "僵尸男孩贴纸 (No.07)",
+  "value": "小浣熊男孩贴纸 (No.07)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.07 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker08": {
+  "as1_value": "僵尸男孩贴纸 (No.08)",
+  "value": "小浣熊男孩贴纸 (No.08)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.08 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker09": {
+  "as1_value": "僵尸男孩贴纸 (No.09)",
+  "value": "小浣熊男孩贴纸 (No.09)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.09 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker10": {
+  "as1_value": "僵尸男孩贴纸 (No.10)",
+  "value": "小浣熊男孩贴纸 (No.10)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.10 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker11": {
+  "as1_value": "僵尸男孩贴纸 (No.11)",
+  "value": "小浣熊男孩贴纸 (No.11)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.11 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker12": {
+  "as1_value": "僵尸男孩贴纸 (No.12)",
+  "value": "小浣熊男孩贴纸 (No.12)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.12 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker13": {
+  "as1_value": "僵尸男孩贴纸 (No.13)",
+  "value": "小浣熊男孩贴纸 (No.13)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.13 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker14": {
+  "as1_value": "僵尸男孩贴纸 (No.14)",
+  "value": "小浣熊男孩贴纸 (No.14)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.14 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker15": {
+  "as1_value": "僵尸男孩贴纸 (No.15)",
+  "value": "小浣熊男孩贴纸 (No.15)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.15 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker16": {
+  "as1_value": "僵尸男孩贴纸 (No.16)",
+  "value": "小浣熊男孩贴纸 (No.16)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.16 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker17": {
+  "as1_value": "僵尸男孩贴纸 (No.17)",
+  "value": "小浣熊男孩贴纸 (No.17)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.17 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker18": {
+  "as1_value": "僵尸男孩贴纸 (No.18)",
+  "value": "小浣熊男孩贴纸 (No.18)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.18 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker19": {
+  "as1_value": "僵尸男孩贴纸 (No.19)",
+  "value": "小浣熊男孩贴纸 (No.19)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.19 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker20": {
+  "as1_value": "僵尸男孩贴纸 (No.20)",
+  "value": "小浣熊男孩贴纸 (No.20)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.20 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker21": {
+  "as1_value": "僵尸男孩贴纸 (No.21)",
+  "value": "小浣熊男孩贴纸 (No.21)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.21 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker22": {
+  "as1_value": "僵尸男孩贴纸 (No.22)",
+  "value": "小浣熊男孩贴纸 (No.22)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.22 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker23": {
+  "as1_value": "僵尸男孩贴纸 (No.23)",
+  "value": "小浣熊男孩贴纸 (No.23)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.23 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker24": {
+  "as1_value": "僵尸男孩贴纸 (No.24)",
+  "value": "小浣熊男孩贴纸 (No.24)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.24 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker25": {
+  "as1_value": "僵尸男孩贴纸 (No.25)",
+  "value": "小浣熊男孩贴纸 (No.25)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.25 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker26": {
+  "as1_value": "僵尸男孩贴纸 (No.26)",
+  "value": "小浣熊男孩贴纸 (No.26)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.26 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker27": {
+  "as1_value": "僵尸男孩贴纸 (No.27)",
+  "value": "小浣熊男孩贴纸 (No.27)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.27 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker28": {
+  "as1_value": "僵尸男孩贴纸 (No.28)",
+  "value": "小浣熊男孩贴纸 (No.28)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.28 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker29": {
+  "as1_value": "僵尸男孩贴纸 (No.29)",
+  "value": "小浣熊男孩贴纸 (No.29)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.29 與半形括號原樣保留。"
+ },
+ "ItemName.json|P4MySoCalledSnack.P4ZomboidmanSticker30": {
+  "as1_value": "僵尸男孩贴纸 (No.30)",
+  "value": "小浣熊男孩贴纸 (No.30)",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 編號標記 No.30 與半形括號原樣保留。"
+ },
+ "Recipes.json|P4OpenZomboidman": {
+  "as1_value": "打开僵尸男孩巧克力",
+  "value": "打开小浣熊男孩巧克力",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 動詞維持原譯（CH 開啟／CN 打开），只換品牌詞。"
+ },
+ "Recipes.json|P4OpenZomboidmanBox": {
+  "as1_value": "打开盒装僵尸男孩巧克力",
+  "value": "打开盒装小浣熊男孩巧克力",
+  "reason": "上游把虛構零食品牌 ZOMBOIDMAN 改名為 SPIFFOMAN（吉祥物由殭屍改為 PZ 浣熊 Spiffo），原譯「殭屍男孩/僵尸男孩」語意已錯。Spiffo 在本 MOD 內既有固定譯法為「小浣熊」（P4SpiffoAlarmClock=小浣熊鬧鐘、P4SpiffoBat=小浣熊球棒、貼紙 No.01 \"小浣熊\"），故只把品牌前段替換為「小浣熊」、保留原譯既有的「男孩」後綴與其餘字句，改動範圍限於上游實際變動處。 動詞與「盒裝/盒装」維持原譯，只換品牌詞。"
+ },
+ "Tooltip.json|Tooltip_item_P4ZomboidmanSticker24": {
+  "as1_value": "No.24 \\\"RAKOTTE\\\"",
+  "value": "No.24 \"雷克特-S\"",
+  "reason": "上游把貼紙名 RAKOTTE-S 改拼為 RACOTTE-S，而現譯值仍直留已作廢的拉丁原拼「RAKOTTE」，且遺失了 EN 前後版都有的 -S 變體標記。改為與同組 No.17 一致的音譯「雷克特」並補回 -S；沿用該組 30 個兄弟鍵的 No.NN \\\"名稱\\\" 轉義引號格式（值內為字面反斜線加引號）。 Main複核：JSON字串值用正常引號，不把As1歷史多餘反斜線再當成文字寫入。"
+ },
+ "ContextMenu.json|ContextMenu_BurdJournals_ConvertToClean": {
+  "as1_value": "重新装订为个人日记",
+  "value": "重新装订为空白个人日记 (销毁内容)",
+  "reason": "EN 由 Rebind as Personal Journal 改為 Rebind as Blank Personal Journal (Destroys Contents)：新增 Blank 與銷燬內容警語, 舊譯漏掉破壞性語意. Main 複核：材料名稱依本機42.20.4官方CH/CN ItemName對齊（碎布/碎布条、丹寧條/牛仔布条、針/针、縫線/线）；stable survivor 指固定角色身分，不是狀態穩定。"
+ },
+ "ContextMenu.json|ContextMenu_BurdJournals_ConvertViaCrafting": {
+  "as1_value": "转换为个人日记 (制作)",
+  "value": "转换为空白个人日记 (销毁内容)",
+  "reason": "EN 由 Convert to Personal Journal (Crafting) 改為 Convert to Blank Personal Journal (Destroys Contents)：(Crafting) 標註被銷燬內容警語取代, 舊譯的「(製作)」已不存在於原文. Main 複核：材料名稱依本機42.20.4官方CH/CN ItemName對齊（碎布/碎布条、丹寧條/牛仔布条、針/针、縫線/线）；stable survivor 指固定角色身分，不是狀態穩定。"
+ },
+ "Recipes.json|Recipe_RestoreJournal_Adhesive_AnyCover": {
+  "as1_value": "修复日记 (粘合剂 + 布料)",
+  "value": "重新装订为空白日记 - 销毁内容 (粘合剂 + 布料)",
+  "reason": "EN 由 Restore Journal 改為 Rebind as Blank Journal - Destroys Contents：語意反轉 (不是修復內容, 而是清空重訂), 舊譯「修復日記」會誤導玩家. Main 複核：材料名稱依本機42.20.4官方CH/CN ItemName對齊（碎布/碎布条、丹寧條/牛仔布条、針/针、縫線/线）；stable survivor 指固定角色身分，不是狀態穩定。"
+ },
+ "Recipes.json|Recipe_RestoreJournal_Thread_AnyCover": {
+  "as1_value": "修复日记 (线 + 布料)",
+  "value": "重新装订为空白日记 - 销毁内容 (线 + 布料)",
+  "reason": "EN 由 Restore Journal (Thread + Fabric) 改為 Rebind as Blank Journal - Destroys Contents (Thread + Fabric)：語意反轉, 材料詞沿用既有「線團 + 布料」. Main 複核：材料名稱依本機42.20.4官方CH/CN ItemName對齊（碎布/碎布条、丹寧條/牛仔布条、針/针、縫線/线）；stable survivor 指固定角色身分，不是狀態穩定。"
+ },
+ "Recipes.json|RestoreJournal_Adhesive_AnyCover": {
+  "as1_value": "修复日记 (粘合剂 + 布料)",
+  "value": "重新装订为空白日记 - 销毁内容 (粘合剂 + 布料)",
+  "reason": "同 Recipe_RestoreJournal_Adhesive_AnyCover 的配方名鍵 (無 Recipe_ 前綴變體), EN 同步改寫, 需同值更新以免兩處不一致. Main 複核：材料名稱依本機42.20.4官方CH/CN ItemName對齊（碎布/碎布条、丹寧條/牛仔布条、針/针、縫線/线）；stable survivor 指固定角色身分，不是狀態穩定。"
+ },
+ "Recipes.json|RestoreJournal_Thread_AnyCover": {
+  "as1_value": "修复日记 (线 + 布料)",
+  "value": "重新装订为空白日记 - 销毁内容 (线 + 布料)",
+  "reason": "同 Recipe_RestoreJournal_Thread_AnyCover 的配方名鍵變體, EN 同步改寫, 需同值更新. Main 複核：材料名稱依本機42.20.4官方CH/CN ItemName對齊（碎布/碎布条、丹寧條/牛仔布条、針/针、縫線/线）；stable survivor 指固定角色身分，不是狀態穩定。"
+ },
+ "Sandbox.json|Sandbox_BurdJournals_EnableLimitedClaimLootJournals_tooltip": {
+  "as1_value": "启用后, 破旧、血迹斑斑和诅咒奖励日记在成功领取达到有限次数后消散. 已掌握或被阻止的领取不消耗次数.",
+  "value": "启用后, 破旧, 血迹斑斑, 诅咒与圣诞日记只允许有限次数的成功奖励. 已掌握或被阻止的领取不消耗该次数上限. 若启用每位玩家独立的战利品日记领取, 该上限会对每位幸存者分别计算, 且日记不会消散.",
+  "reason": "EN 新增 Yuletide 日記與 per-player 分支, 且不再一律消失, 舊譯只有破舊/血跡/詛咒三類且斷言會消失."
+ },
+ "Sandbox.json|Sandbox_BurdJournals_LootJournalMaxClaimsBeforeDissolve_tooltip": {
+  "as1_value": "玩家从单本破旧、血迹斑斑或诅咒奖励日记中成功领取奖励后、日记消散前的全局上限. 仅在启用有限领取次数的战利品日记时生效. 默认: 1",
+  "value": "单个幸存者可从一本符合条件的战利品日记中成功领取的奖励上限. 达到上限后日记通常会消散. 若启用每位玩家独立的战利品日记领取, 则只锁住该位幸存者剩余的奖励, 日记会保留. 仅在启用有限领取次数的战利品日记时生效. 默认: 1",
+  "reason": "EN 由「全域上限」改為「單一倖存者上限」並新增 per-player 時日記保留的分支, 舊譯的「全域上限」語意已錯; 保留 Default: 1."
+ },
+ "UI.json|UI_BurdJournals_LimitedLootClaimsSpent": {
+  "as1_value": "这本日记没有剩余领取次数了.",
+  "value": "你在这本日记上已没有剩余的领取次数.",
+  "reason": "EN 主詞由日記改為玩家 (This journal has no claims left → You have no claims left for this journal), 對應 per-player 領取; 舊譯仍是日記層級, 在 per-player 下會誤導."
+ },
+ "IG_UI.json|IGUI_GS_AddonReaderTitle": {
+  "as1_value": "读取器",
+  "value": "GS软驱",
+  "reason": "上游把 Reader 正名為 GS Floppy Drive: CH 依 sources/ch/ItemName.json 真相層「GS軟碟機」(本檔 GS 名稱慣例加空格), CN 依上游 CN/ItemName.json「GS软驱」."
+ },
+ "IG_UI.json|IGUI_GS_AddonReqReader": {
+  "as1_value": "本网络或物品栏中装有SiK读取器",
+  "value": "本终端或主物品栏中装有GS软驱",
+  "reason": "上游同時改名 (SiK Reader→GS Floppy Drive) 與改條件 (this network→this terminal, inventory→main inventory), 三處都需重譯."
+ },
+ "IG_UI.json|IGUI_GS_BlockedApproachReader": {
+  "as1_value": "新方法: 携带GS软驱 (主物品栏) 和系统磁盘走近地图上任意一台台式电脑, 然后右键磁盘进行安装.",
+  "value": "将GS软驱放在主物品栏中并携带系统磁盘. 走近地图上的台式电脑, 然后右键点击磁盘进行安装.",
+  "reason": "上游改寫全文: 刪去「New method:」前綴與「any … already on the map」強調, 改成兩句祈使句. 依新原文重譯全文."
+ },
+ "IG_UI.json|IGUI_GS_DepositFailGeneric": {
+  "as1_value": "无法转移该物品. 请确认它仍在你的物品栏中, 然后重试.",
+  "value": "无法完成转移. 请先确认物品的位置, 以及来源容器是否可访问, 然后再重试.",
+  "reason": "上游改寫: 由「確認仍在物品欄」改為「確認物品位置＋來源容器是否可存取」, 語意已變, 全文重譯. source container 沿用既有 IGUI_GS_TransferSourceUnavailable「來源容器/来源容器」."
+ },
+ "IG_UI.json|IGUI_GS_DepositFailNoMatch": {
+  "as1_value": "未找到匹配的容器 (物品留在你的物品栏中). 请为这种物品配置分类, 或在沙盒选项中禁用«无匹配容器时拒绝存入».",
+  "value": "未找到匹配的容器 (未转移的物品会留在其来源容器中). 请为这种物品配置分类, 或在沙盒选项中禁用«无匹配容器时拒绝存入».",
+  "reason": "上游把括號內的「kept in your inventory」改為「items not transferred remain in their source container」, 僅重譯括號那句, 其餘沿用原譯與 « » 引號慣例."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_BulkDepositEnabled_tooltip": {
+  "as1_value": "启用'全部存入' 按钮, 可一键将玩家物品栏清空存入网络. 关闭后需要手动逐件转移.",
+  "value": "启用'全部存入'按钮, 会尝试一次性把玩家物品栏中符合条件的物品存入. 被保护机制跳过或无法存入的物品会留在其来源容器中.",
+  "reason": "上游改寫全文: 由「清空物品欄」改為「嘗試存入符合條件的物品」, 刪去「關閉後需手動逐件轉移」, 新增保護機制略過與來源容器保留. 依新原文重譯."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_DebugCatLiteratureRead_tooltip": {
+  "as1_value": "需要开启调试模式. 针对仓库中显示的每行书刊, 记录配方探测是否成功及其返回结果, 以便用真实数据而非猜测来验证已读勾选标记.",
+  "value": "需要开启调试模式. 记录客户端的已学会配方缓存/探测, 以及每一条仓库书刊阅读路径: 实例标题、杂志页数、网络状态和客户端名称. 这有助于用真实数据验证已读勾选标记.",
+  "reason": "上游改寫全文: 記錄範圍由「每列書刊的配方探測」擴大為「客戶端已學會配方快取/探測＋所有書刊閱讀路徑」並明列四項欄位. 依新原文重譯; client 沿用既有 own「客戶端/客户端」."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_DebugSkipContainerRange_tooltip": {
+  "as1_value": "开启后, 容器无论距离最近的激活终端多远都能加入网络, 新终端也能在无距离限制的情况下关联任何现有网络. 不建议在测试之外使用: 这会让实体终端失去意义. 默认关闭: 与正常游戏一样强制执行 '网络覆盖范围'.",
+  "value": "开启后, 全局回退规则不再要求区域扫描到的容器必须位于最近激活终端的范围内. 个别网络仍可覆盖此设置. 这不会改变终端关联网络的距离. 默认关闭: 强制执行全局的容器范围回退规则.",
+  "reason": "上游改寫全文: 作用範圍縮小為「僅容器範圍的全域後備」, 新增「網路可自行覆寫」與「不影響終端連結網路距離」, 刪去「不建議測試外使用」. 依新原文重譯; override 沿用既有「覆寫/覆盖」, global 沿用「全域/全局」."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_Recipe_DriveDisk_Enable": {
+  "as1_value": "启用配方: GS软驱网络磁盘",
+  "value": "启用配方: GS驱动器安装磁盘",
+  "reason": "上游將物品顯示名改為「GS Drive Disk」: CH 依 sources/ch/ItemName.json 真相層「GS 磁碟機磁碟」(沿用本檔 Recipe_Soldering* 既有 \"GS \" 空格慣例), CN 依上游 CN/ItemName.json 真相層「GS驱动器安装磁盘」. 句框沿用原譯不動."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_Recipe_DriveDisk_Enable_tooltip": {
+  "as1_value": "开启后, 该物品可通过其配方制作. 关闭后, 配方不存在, GS软驱网络磁盘只能在世界中作为战利品找到.",
+  "value": "开启后, 该物品可通过其配方制作. 关闭后, 配方不存在, GS驱动器安装磁盘只能在世界中作为战利品找到.",
+  "reason": "上游將物品顯示名改為「GS Drive Disk」: CH 依 sources/ch/ItemName.json 真相層「GS 磁碟機磁碟」(沿用本檔 Recipe_Soldering* 既有 \"GS \" 空格慣例), CN 依上游 CN/ItemName.json 真相層「GS驱动器安装磁盘」. 句框沿用原譯不動."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_Recipe_DriveDisk_RequireBook": {
+  "as1_value": "需要书籍: GS软驱网络磁盘",
+  "value": "需要书籍: GS驱动器安装磁盘",
+  "reason": "上游將物品顯示名改為「GS Drive Disk」: CH 依 sources/ch/ItemName.json 真相層「GS 磁碟機磁碟」(沿用本檔 Recipe_Soldering* 既有 \"GS \" 空格慣例), CN 依上游 CN/ItemName.json 真相層「GS驱动器安装磁盘」. 句框沿用原譯不動."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_Recipe_DriveDisk_RequireBook_tooltip": {
+  "as1_value": "开启后, 必须先通过其专属杂志/手册学会GS软驱网络磁盘的配方才能制作. 关闭后, 一开始就会该配方. 若上方配方已禁用则无效果.",
+  "value": "开启后, 必须先通过其专属杂志/手册学会GS驱动器安装磁盘的配方才能制作. 关闭后, 一开始就会该配方. 若上方配方已禁用则无效果.",
+  "reason": "上游將物品顯示名改為「GS Drive Disk」: CH 依 sources/ch/ItemName.json 真相層「GS 磁碟機磁碟」(沿用本檔 Recipe_Soldering* 既有 \"GS \" 空格慣例), CN 依上游 CN/ItemName.json 真相層「GS驱动器安装磁盘」. 句框沿用原譯不動."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_Recipe_PCTower_Enable": {
+  "as1_value": "启用配方: GS电脑机箱",
+  "value": "启用配方: GS PC机箱",
+  "reason": "上游將物品顯示名改為「GS PC Tower」: CH 依 sources/ch/ItemName.json 真相層「GS PC 機殼」(沿用本檔 Recipe_Soldering* 既有 \"GS \" 空格慣例), CN 依上游 CN/ItemName.json 真相層「GS PC机箱」. 句框沿用原譯不動."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_Recipe_PCTower_Enable_tooltip": {
+  "as1_value": "开启后, 该物品可通过其配方制作. 关闭后, 配方不存在, GS电脑机箱只能在世界中作为战利品找到.",
+  "value": "开启后, 该物品可通过其配方制作. 关闭后, 配方不存在, GS PC机箱只能在世界中作为战利品找到.",
+  "reason": "上游將物品顯示名改為「GS PC Tower」: CH 依 sources/ch/ItemName.json 真相層「GS PC 機殼」(沿用本檔 Recipe_Soldering* 既有 \"GS \" 空格慣例), CN 依上游 CN/ItemName.json 真相層「GS PC机箱」. 句框沿用原譯不動."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_Recipe_PCTower_RequireBook": {
+  "as1_value": "需要书籍: GS电脑机箱",
+  "value": "需要书籍: GS PC机箱",
+  "reason": "上游將物品顯示名改為「GS PC Tower」: CH 依 sources/ch/ItemName.json 真相層「GS PC 機殼」(沿用本檔 Recipe_Soldering* 既有 \"GS \" 空格慣例), CN 依上游 CN/ItemName.json 真相層「GS PC机箱」. 句框沿用原譯不動."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_Recipe_PCTower_RequireBook_tooltip": {
+  "as1_value": "开启后, 必须先通过其专属杂志/手册学会GS电脑机箱的配方才能制作. 关闭后, 一开始就会该配方. 若上方配方已禁用则无效果.",
+  "value": "开启后, 必须先通过其专属杂志/手册学会GS PC机箱的配方才能制作. 关闭后, 一开始就会该配方. 若上方配方已禁用则无效果.",
+  "reason": "上游將物品顯示名改為「GS PC Tower」: CH 依 sources/ch/ItemName.json 真相層「GS PC 機殼」(沿用本檔 Recipe_Soldering* 既有 \"GS \" 空格慣例), CN 依上游 CN/ItemName.json 真相層「GS PC机箱」. 句框沿用原譯不動."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_Recipe_SolderingIron_RequireBook": {
+  "as1_value": "需要书籍: GS电烙铁",
+  "value": "需要书籍: GS电子电烙铁",
+  "reason": "上游將物品顯示名改為「GS Electronics Soldering Iron」: CH 依 sources/ch/ItemName.json 真相層「GS 電子電烙鐵」(沿用本檔 Recipe_Soldering* 既有 \"GS \" 空格慣例), CN 依上游 CN/ItemName.json 真相層「GS电子电烙铁」. 句框沿用原譯不動."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_Recipe_SolderingIron_RequireBook_tooltip": {
+  "as1_value": "开启后, 必须先通过其专属杂志/手册学会GS电烙铁的配方才能制作. 关闭后, 一开始就会该配方. 若上方配方已禁用则无效果.",
+  "value": "开启后, 必须先通过其专属杂志/手册学会GS电子电烙铁的配方才能制作. 关闭后, 一开始就会该配方. 若上方配方已禁用则无效果.",
+  "reason": "上游將物品顯示名改為「GS Electronics Soldering Iron」: CH 依 sources/ch/ItemName.json 真相層「GS 電子電烙鐵」(沿用本檔 Recipe_Soldering* 既有 \"GS \" 空格慣例), CN 依上游 CN/ItemName.json 真相層「GS电子电烙铁」. 句框沿用原譯不動."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_Recipe_TerminalReader_Enable": {
+  "as1_value": "启用配方: GS终端读取器",
+  "value": "启用配方: GS软驱",
+  "reason": "上游將物品顯示名改為「GS Floppy Drive」: CH 依 sources/ch/ItemName.json 真相層「GS 軟碟機」(沿用本檔 Recipe_Soldering* 既有 \"GS \" 空格慣例), CN 依上游 CN/ItemName.json 真相層「GS软驱」. 句框沿用原譯不動."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_Recipe_TerminalReader_Enable_tooltip": {
+  "as1_value": "开启后, 该物品可通过其配方制作. 关闭后, 配方不存在, GS终端读取器只能在世界中作为战利品找到.",
+  "value": "开启后, 该物品可通过其配方制作. 关闭后, 配方不存在, GS软驱只能在世界中作为战利品找到.",
+  "reason": "上游將物品顯示名改為「GS Floppy Drive」: CH 依 sources/ch/ItemName.json 真相層「GS 軟碟機」(沿用本檔 Recipe_Soldering* 既有 \"GS \" 空格慣例), CN 依上游 CN/ItemName.json 真相層「GS软驱」. 句框沿用原譯不動."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_Recipe_TerminalReader_RequireBook": {
+  "as1_value": "需要书籍: GS终端读取器",
+  "value": "需要书籍: GS软驱",
+  "reason": "上游將物品顯示名改為「GS Floppy Drive」: CH 依 sources/ch/ItemName.json 真相層「GS 軟碟機」(沿用本檔 Recipe_Soldering* 既有 \"GS \" 空格慣例), CN 依上游 CN/ItemName.json 真相層「GS软驱」. 句框沿用原譯不動."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_Recipe_TerminalReader_RequireBook_tooltip": {
+  "as1_value": "开启后, 必须先通过其专属杂志/手册学会GS终端读取器的配方才能制作. 关闭后, 一开始就会该配方. 若上方配方已禁用则无效果.",
+  "value": "开启后, 必须先通过其专属杂志/手册学会GS软驱的配方才能制作. 关闭后, 一开始就会该配方. 若上方配方已禁用则无效果.",
+  "reason": "上游將物品顯示名改為「GS Floppy Drive」: CH 依 sources/ch/ItemName.json 真相層「GS 軟碟機」(沿用本檔 Recipe_Soldering* 既有 \"GS \" 空格慣例), CN 依上游 CN/ItemName.json 真相層「GS软驱」. 句框沿用原譯不動."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_RejectDepositIfNoMatch_tooltip": {
+  "as1_value": "若某物品没有匹配的分类/过滤器、指定物品亲和性或规范分类亲和性, 则将其保留在玩家物品栏中, 而非丢入第一个可用的任何容器. 默认关闭 (与之前一样, 通用容器仍然可用).",
+  "value": "若某物品没有匹配的分类/过滤器、指定物品亲和性或规范分类亲和性, 则将其保留在其来源容器中, 而非丢入第一个可用的任何容器. 默认关闭 (与之前一样, 通用容器仍然可用).",
+  "reason": "上游只把「keep it in the player's inventory」改為「keep it in its source container」(引號改用 ‘ ’ 屬排版), 僅重譯該子句, 其餘沿用原譯."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_RespectEquippedItems_tooltip": {
+  "as1_value": "已穿戴的衣物, 手持的武器和携带的背包绝不会被 '全部存入' 移动. 建议开启.",
+  "value": "启用后, '全部存入' 会跳过已穿戴的衣物, 手持的武器和携带的背包. 建议开启.",
+  "reason": "上游由無條件敘述 (never moved) 改為條件句 (When enabled … skips), 語意變成依此選項而定, 重譯全文."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_TerminalContainerMaxDistance": {
+  "as1_value": "网络覆盖范围 (格)",
+  "value": "容器范围 (格)",
+  "reason": "上游把設定名由 Network reach 改為 Container range: 語意由「網路可及範圍」窄化為「容器納入範圍」, 標籤重譯."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_TerminalContainerMaxDistance_tooltip": {
+  "as1_value": "以最近的激活终端为基准的最大格数距离, 在此范围内容器可以加入网络, 新终端也可以关联到现有网络 (两者使用同一个数值). 仅当 '要求网络覆盖范围' 开启时生效. 40 格足以覆盖大多数独栋房屋.",
+  "value": "以最近的激活终端为基准, 区域扫描会纳入此格数距离内的容器. 40 格足以覆盖大多数独栋房屋.",
+  "reason": "上游改寫全文並刪除「同時決定新終端連結距離」與「僅當 Require network reach 開啟時生效」兩項, 現在只管區域掃描納入容器. 依新原文重譯, 保留 40 格數字."
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_TerminalProximityRange_tooltip": {
+  "as1_value": "玩家在无平板的情况下, 必须站到距 GS终端家具多近才能打开网络 (以格为单位). 仅当 '需要终端' 开启时生效.",
+  "value": "玩家在无平板的情况下, 必须站到距GS终端多近才能打开网络 (以格为单位).",
+  "reason": "上游刪掉 furniture 與「僅當 Require terminal 開啟時生效」整句, 依新原文刪去對應譯文, 其餘沿用原譯."
+ },
+ "Tooltip.json|Tooltip_GS_FloppyDisk_Blank": {
+  "as1_value": "未格式化, 未贴标签, 却充满无限可能. 它最终会被写入什么, 完全取决于你.",
+  "value": "未格式化, 未贴标签, 却充满无限可能. <LINE> 它最终会被写入什么, 完全取决于你.",
+  "reason": "上游在句間加入 <LINE> 換行標記 (文字本身未改): 依 EN 對應位置補上同一標記, 否則提示會擠成一行, 與上游排版意圖不符. 譯文其餘沿用原譯."
+ },
+ "Tooltip.json|Tooltip_GS_FloppyDisk_DriveInstall": {
+  "as1_value": "一个程序, 一个用途: 教会终端自己保留一台软驱, 这样它就不必再待在你的口袋里了.",
+  "value": "一个程序, 一个用途: <LINE> 教会终端自己保留一台软驱, <LINE> 这样它就不必再待在你的口袋里了.",
+  "reason": "上游加入兩個 <LINE> 換行標記 (文字本身未改): 依 EN 對應位置補上, 譯文其餘沿用原譯."
+ },
+ "Tooltip.json|Tooltip_GS_FloppyDisk_Uninstall": {
+  "as1_value": "一个程序, 一个用途: 礼貌地把 SiK终端从它所在的地方请出去.",
+  "value": "一个程序, 一个用途: <LINE> 礼貌地把 SiK终端从它所在的地方请出去.",
+  "reason": "上游加入一個 <LINE> 換行標記 (文字本身未改): 依 EN 對應位置補上, 譯文其餘沿用原譯."
+ },
+ "Tooltip.json|Tooltip_GS_Manual_DiskPrograms": {
+  "as1_value": "《GS磁盘工具》: 逐步指导如何把程序写入空白磁盘. 需要站得足够靠近终端才值得一试.",
+  "value": "《GS磁盘工具》: <LINE> 逐步指导 <LINE> 如何把程序写入空白磁盘. <LINE> 需要站得足够靠近终端才值得一试.",
+  "reason": "上游加入三個 <LINE> 換行標記 (文字本身未改): 依 EN 對應斷句位置補上, 譯文其餘沿用原譯."
+ },
+ "Tooltip.json|Tooltip_GS_Manual_DriveInstall_DiskProgram": {
+  "as1_value": "《GS磁盘工具》: 逐步指导如何写入将软驱安装到终端网络的磁盘. 需要站得足够靠近终端才值得一试.",
+  "value": "《GS磁盘工具》: <LINE> 逐步指导 <LINE> 如何写入 <LINE> 将软驱安装到终端上的磁盘. <LINE> 需要站得足够靠近终端才值得一试.",
+  "reason": "上游除了加入四個 <LINE> 換行標記, 還把「installs the Floppy Drive into a terminal's network」改為「in a terminal」: 原譯「安裝至終端機網路」已錯, 改為「安裝到終端機上」."
+ },
+ "Tooltip.json|Tooltip_GS_Manual_NetworkDisk_DiskProgram": {
+  "as1_value": "《GS磁盘工具》: 逐步指导如何写入携带GS网络自身操作系统的磁盘. 需要站得足够靠近终端才值得一试.",
+  "value": "《GS磁盘工具》: <LINE> 逐步指导 <LINE> 如何写入 <LINE> 携带GS网络自身操作系统的磁盘. <LINE> 需要站得足够靠近终端才值得一试.",
+  "reason": "上游加入四個 <LINE> 換行標記 (文字本身未改): 依 EN 對應斷句位置補上, 譯文其餘沿用原譯."
+ },
+ "Tooltip.json|Tooltip_GS_Manual_SolderingIron": {
+  "as1_value": "一份拼拼凑凑的自制指南, 教你用捡来的零件打造自己的电烙铁. 光读它可不会让你一步登天 - 得先有人允许这个捷径才行.",
+  "value": "一份拼拼凑凑的自制指南, 教你用捡来的零件打造自己的电烙铁. <LINE> 光读它可不会让你一步登天 - <LINE> 得先有人允许这个捷径才行.",
+  "reason": "上游加入兩個 <LINE> 換行標記 (文字本身未改): 依 EN 對應位置補上, 譯文其餘沿用原譯; 半形連字號 - 原樣保留."
+ },
+ "Sandbox.json|Sandbox_SimpleSuppressors_Enable44Suppressors_tooltip": {
+  "as1_value": "允许在沙漠之鹰和马格南上安装.44消音器.",
+  "value": "允许在沙漠之鹰上安装.44消音器. 不支持.44马格南左轮手枪.",
+  "reason": "真實語意反轉: 舊 EN 說馬格南可裝，新 EN 明確改為「僅沙漠之鷹，.44 馬格南左輪不支援」。現譯「允許在沙漠之鷹和馬格南上安裝」已成錯誤資訊，必須改。第二句採本模組既有的「不支援XX」句式 (參 Enable12GaugeSuppressors_tooltip「不支援雙管和鋸短的JS-2000霰彈槍.」)，CN 用既有的「不支持」；沙漠之鷹/馬格南 沿用原譯與 Base.Deagle 的既有譯名，口徑前不加空格亦沿用原樣。"
+ },
+ "Tooltip.json|Tooltip_item_P4ZomboidmanSticker17": {
+  "as1_value": "No.17 \\\"雷克特\\\"",
+  "value": "No.17 \"雷克特\"",
+  "reason": "#448 上游 RAKOTTE 改為 RACOTTE，既有音譯仍適用；獨立複核確認兩側 JSON 值殘留字面反斜線，改用正常引號，與同批 No.24 一致。"
  }
 }

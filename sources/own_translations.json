@@ -2437,6 +2437,16 @@
     "en": "Show Sling Texture",
     "ch": "顯示揹帶外觀",
     "cn": "显示背带外观"
+   },
+   "ContextMenu_BurdJournals_MaintainJournal": {
+    "en": "Maintain Journal",
+    "ch": "維護日記",
+    "cn": "维护日记"
+   },
+   "ContextMenu_BurdJournals_MaintainSkill": {
+    "en": "%1 (%2%% wear)",
+    "ch": "%1 (磨損 %2%%)",
+    "cn": "%1 (磨损 %2%%)"
    }
   },
   "Fluids.json": {
@@ -26122,11 +26132,6 @@
     "ch": "{1} 個容器 | {2} 種類型",
     "cn": "{1} 个容器 | {2} 种类型"
    },
-   "IGUI_GS_NetSelected": {
-    "en": "Selected network",
-    "ch": "已選取的網路",
-    "cn": "已选择的网络"
-   },
    "IGUI_GS_NetworkIncidentTip": {
     "en": "{1} container issue(s) in Network. Open Red to review them.",
     "ch": "網路中有 {1} 個容器問題. 請開啟狀態分頁檢視.",
@@ -26257,11 +26262,6 @@
     "ch": "復原 | 離線",
     "cn": "恢复 | 离线"
    },
-   "IGUI_GS_NodeRemoveConfirm": {
-    "en": "Remove '{1}' from this network? Its rules and category reservations will be released; the physical container and its items stay unchanged.",
-    "ch": "將 '{1}' 從此網路移除? 它的規則與分類保留會被釋放; 實體容器及其中的物品不會改變.",
-    "cn": "将 '{1}' 从此网络移除? 其规则和分类占用会被释放; 实体容器及其中的物品不会改变."
-   },
    "IGUI_GS_NodeRemoveConsequences": {
     "en": "This removes the network record and configuration for the container. The physical container and its objects remain intact.",
     "ch": "這會移除該容器的網路紀錄與設定. 實體容器及其中的物件保持完好.",
@@ -26276,11 +26276,6 @@
     "en": "Remove container '{1}' from the network?",
     "ch": "將容器 '{1}' 從網路移除?",
     "cn": "将容器 '{1}' 从网络移除?"
-   },
-   "IGUI_GS_NodeRemoveTooltip": {
-    "en": "Removes only this logical network entry. The physical container and its items stay in the world.",
-    "ch": "只會移除這筆邏輯網路紀錄. 實體容器及其中的物品仍留在遊戲世界中.",
-    "cn": "只会移除这条逻辑网络记录. 实体容器及其中的物品仍留在世界中."
    },
    "IGUI_GS_NodeRemovedMsg": {
     "en": "Removed '{1}' from the network. It can be rediscovered as a new container.",
@@ -26401,16 +26396,6 @@
     "en": "Members",
     "ch": "成員",
     "cn": "成员"
-   },
-   "IGUI_GS_OptionsNetworkCurrent": {
-    "en": "Current network",
-    "ch": "目前的網路",
-    "cn": "当前网络"
-   },
-   "IGUI_GS_OptionsNetworkHelp": {
-    "en": "Select the network available from this terminal. The closed selector is reserved for future compatible uses.",
-    "ch": "選擇這台終端機可用的網路. 已鎖定的選擇器保留給未來的相容用途.",
-    "cn": "选择这台终端可用的网络. 已锁定的选择器保留给未来的兼容用途."
    },
    "IGUI_GS_OptionsPaletteHelp": {
     "en": "Local visual preference for this character.",
@@ -26793,9 +26778,9 @@
     "cn": "{1} 个案例 | {2} 个适用 | {3} 个不存在 | {4} 个跳过 | {5} 个通过 | {6} 个失败"
    },
    "IGUI_GS_TaxonomyCorpusFailureKindsLine": {
-    "en": "Failures: {1} classification | {2} evidence | {3} facet/attribute | {4} required-missing",
-    "ch": "失敗: {1} 分類 | {2} 證據 | {3} 面向/屬性 | {4} 必填缺漏",
-    "cn": "失败: {1} 分类 | {2} 证据 | {3} 面/属性 | {4} 必填缺失"
+    "en": "Failures: {1} classification | {2} evidence | {3} facet/attribute | {4} required types missing",
+    "ch": "失敗: {1} 分類 | {2} 證據 | {3} 面向/屬性 | {4} 缺少必要類型",
+    "cn": "失败: {1} 分类 | {2} 证据 | {3} 面/属性 | {4} 缺少必要类型"
    },
    "IGUI_GS_TaxonomyCorpusTitle": {
     "en": "Ground-truth corpus",
@@ -26868,9 +26853,9 @@
     "cn": "{1} 种类型 | {2} 个待处理 | {3} 个未分类 | {4} 个内部排除 | {5} 个无效路径 | {6} 个分类器错误 | {7} 毫秒"
    },
    "IGUI_GS_TaxonomyTierVariantLine": {
-    "en": "tier/variant probe: {1}/{2} match",
-    "ch": "層級/變體探測: {1}/{2} 相符",
-    "cn": "层级/变体探测: {1}/{2} 匹配"
+    "en": "Tier/variant check: {1}/{2} matches",
+    "ch": "層級/變體檢查: {1}/{2} 相符",
+    "cn": "层级/变体检查: {1}/{2} 匹配"
    },
    "IGUI_GS_TaxonomyVersionLine": {
     "en": "Effective version: {1}",
@@ -28121,6 +28106,226 @@
     "en": "Fatigue",
     "ch": "疲勞",
     "cn": "疲劳"
+   },
+   "IGUI_CraftingCategories_AmmoCrafting": {
+    "en": "Ammunition Crafting",
+    "ch": "彈藥製作",
+    "cn": "弹药制作"
+   },
+   "IGUI_ItemCat_AmmoCrafting": {
+    "en": "Ammunition Crafting",
+    "ch": "彈藥製作",
+    "cn": "弹药制作"
+   },
+   "IGUI_GS_AccessUnconfirmed": {
+    "en": "Access could not be confirmed. Reopen the terminal.",
+    "ch": "無法確認存取權限. 請重新開啟終端機.",
+    "cn": "无法确认访问权限. 请重新打开终端."
+   },
+   "IGUI_GS_AdminCatalogAuditHelp": {
+    "en": "Classify the catalog and separate excluded internal types. Hover over the summary for details.",
+    "ch": "將目錄分類, 並區分出被排除的內部類型. 將滑鼠移到摘要上可檢視詳細資訊.",
+    "cn": "对目录进行分类, 并区分出被排除的内部类型. 将鼠标悬停在汇总上可查看详细信息."
+   },
+   "IGUI_GS_AdminCatalogAuditTitle": {
+    "en": "Catalog audit",
+    "ch": "目錄稽核",
+    "cn": "目录审核"
+   },
+   "IGUI_GS_AdminContractCorpusHelp": {
+    "en": "Validate the corpus in an independent run. Hover over the summary for detailed results.",
+    "ch": "在獨立的執行中驗證語料庫. 將滑鼠移到摘要上可檢視詳細結果.",
+    "cn": "在独立的运行中验证语料库. 将鼠标悬停在汇总上可查看详细结果."
+   },
+   "IGUI_GS_AdminContractCorpusTitle": {
+    "en": "Contract corpus",
+    "ch": "合約語料庫",
+    "cn": "合约语料库"
+   },
+   "IGUI_GS_AdminInternalTestsHelp": {
+    "en": "Open game tools registered by Core or its addons.",
+    "ch": "開啟由 Core 或其附加元件註冊的遊戲工具.",
+    "cn": "打开由 Core 或其附加组件注册的游戏工具."
+   },
+   "IGUI_GS_AdminMembersHelp": {
+    "en": "Select a member to view their identity and manage their access.",
+    "ch": "選擇一名成員即可檢視其識別資訊並管理存取權限.",
+    "cn": "选择一名成员即可查看其标识信息并管理访问权限."
+   },
+   "IGUI_GS_AdminNetworkActionsHelp": {
+    "en": "Releasing ownership leaves the network vacant. Deleting removes its logical record, never physical objects.",
+    "ch": "解除所有權會讓網路變成無主狀態. 刪除只會移除它的邏輯紀錄, 絕不會移除實體物件.",
+    "cn": "解除所有权会让网络变成无主状态. 删除只会移除其逻辑记录, 绝不会移除实体物体."
+   },
+   "IGUI_GS_AdminNetworkActionsTitle": {
+    "en": "Network actions",
+    "ch": "網路操作",
+    "cn": "网络操作"
+   },
+   "IGUI_GS_AdminSelectedNetworkHelp": {
+    "en": "Select a network; the selection is preserved when data refreshes.",
+    "ch": "選擇一個網路; 資料重新整理時會保留目前的選擇.",
+    "cn": "选择一个网络; 数据刷新时会保留当前的选择."
+   },
+   "IGUI_GS_AdminSelectedNetworkTitle": {
+    "en": "Selected network",
+    "ch": "已選取的網路",
+    "cn": "已选择的网络"
+   },
+   "IGUI_GS_Drop": {
+    "en": "Drop",
+    "ch": "丟棄",
+    "cn": "丢弃"
+   },
+   "IGUI_GS_DropSelection": {
+    "en": "Drop selection",
+    "ch": "丟棄所選物品",
+    "cn": "丢弃所选物品"
+   },
+   "IGUI_GS_SuccessionBody": {
+    "en": "If you die, the network becomes ownerless. A member with access can claim it.",
+    "ch": "若你死亡, 此網路會變成無主狀態. 具有存取權限的成員可以認領它.",
+    "cn": "若你死亡, 该网络会变成无主状态. 拥有访问权限的成员可以认领它."
+   },
+   "IGUI_GS_SuccessionHeaderHelp": {
+    "en": "Succession preserves a way to recover the network if its current owner dies.",
+    "ch": "繼承機制會保留一條途徑, 讓目前的所有者死亡後仍能取回此網路.",
+    "cn": "继承机制会保留一条途径, 让当前所有者死亡后仍能收回该网络."
+   },
+   "IGUI_GS_SuccessionNoBackupHelp": {
+    "en": "No other member can claim the network if its owner dies.",
+    "ch": "若所有者死亡, 沒有其他成員能認領此網路.",
+    "cn": "若所有者死亡, 没有其他成员能认领该网络."
+   },
+   "IGUI_GS_SuccessionNoBackupTooltip": {
+    "en": "No other members: if you die, this network will remain ownerless until an authorized identity can recover it.",
+    "ch": "沒有其他成員: 若你死亡, 此網路會一直處於無主狀態, 直到有獲得授權的身分能將它取回.",
+    "cn": "没有其他成员: 若你死亡, 该网络会一直处于无主状态, 直到有获得授权的身份能将它收回."
+   },
+   "IGUI_GS_SuccessionTitle": {
+    "en": "Network succession",
+    "ch": "網路繼承",
+    "cn": "网络继承"
+   },
+   "IGUI_GS_SuccessionTooltip": {
+    "en": "If you die, the network becomes ownerless. A successor with access can claim it; your own account retains priority to recover access.",
+    "ch": "若你死亡, 此網路會變成無主狀態. 具有存取權限的繼承者可以認領它; 你自己的帳號保有優先取回存取權限的權利.",
+    "cn": "若你死亡, 该网络会变成无主状态. 拥有访问权限的继承者可以认领它; 你自己的账号保有优先收回访问权限的权利."
+   },
+   "IGUI_GS_TransferUncertain": {
+    "en": "Transfer stopped: the result could not be confirmed. Check where the items are before another action.",
+    "ch": "轉移已中止: 無法確認結果. 請先確認物品的位置, 再進行其他操作.",
+    "cn": "转移已中止: 无法确认结果. 请先确认物品的位置, 再进行其他操作."
+   },
+   "IGUI_GS_WorldTax_Apply": {
+    "en": "Apply correction",
+    "ch": "套用修正",
+    "cn": "应用修正"
+   },
+   "IGUI_GS_WorldTax_Automatic": {
+    "en": "Automatic",
+    "ch": "自動",
+    "cn": "自动"
+   },
+   "IGUI_GS_WorldTax_Choice": {
+    "en": "New classification",
+    "ch": "新的分類",
+    "cn": "新的分类"
+   },
+   "IGUI_GS_WorldTax_Consult": {
+    "en": "Look up",
+    "ch": "查詢",
+    "cn": "查询"
+   },
+   "IGUI_GS_WorldTax_ConsultFirst": {
+    "en": "Look up an item type before modifying it.",
+    "ch": "修改前請先查詢該物品類型.",
+    "cn": "修改前请先查询该物品类型."
+   },
+   "IGUI_GS_WorldTax_Current": {
+    "en": "Current: %1 · %2",
+    "ch": "目前: %1 · %2",
+    "cn": "当前: %1 · %2"
+   },
+   "IGUI_GS_WorldTax_Failed": {
+    "en": "Could not confirm the correction (%1). Look up the current state before trying again.",
+    "ch": "無法確認此修正 (%1). 請先查詢目前狀態再重試.",
+    "cn": "无法确认此修正 (%1). 请先查询当前状态再重试."
+   },
+   "IGUI_GS_WorldTax_Help": {
+    "en": "Corrects classification in this world only. Restore returns automatic classification. The reason is kept in the private Staff record.",
+    "ch": "只會修正這個世界內的分類. 「還原自動」會恢復為自動分類. 原因會保留在工作人員專屬的私有紀錄中.",
+    "cn": "仅修正这个世界内的分类. '恢复自动'会还原为自动分类. 原因会保存在工作人员专属的私有记录中."
+   },
+   "IGUI_GS_WorldTax_Idle": {
+    "en": "No changes pending.",
+    "ch": "沒有待處理的變更.",
+    "cn": "没有待处理的更改."
+   },
+   "IGUI_GS_WorldTax_InvalidType": {
+    "en": "The item type does not exist in the current catalogue.",
+    "ch": "目前的目錄中不存在該物品類型.",
+    "cn": "当前目录中不存在该物品类型."
+   },
+   "IGUI_GS_WorldTax_Pending": {
+    "en": "Waiting for confirmation from the server…",
+    "ch": "正在等待伺服器確認…",
+    "cn": "正在等待服务器确认…"
+   },
+   "IGUI_GS_WorldTax_Reason": {
+    "en": "Reason",
+    "ch": "原因",
+    "cn": "原因"
+   },
+   "IGUI_GS_WorldTax_Restore": {
+    "en": "Restore automatic",
+    "ch": "還原自動",
+    "cn": "恢复自动"
+   },
+   "IGUI_GS_WorldTax_Success": {
+    "en": "Change confirmed. Look it up again to see the current classification.",
+    "ch": "變更已確認. 請再次查詢以檢視目前的分類.",
+    "cn": "更改已确认. 请再次查询以查看当前的分类."
+   },
+   "IGUI_GS_WorldTax_Sync": {
+    "en": "Synchronizing classification. Look it up again when it finishes.",
+    "ch": "正在同步分類. 完成後請再次查詢.",
+    "cn": "正在同步分类. 完成后请再次查询."
+   },
+   "IGUI_GS_WorldTax_Title": {
+    "en": "Corrections for this world",
+    "ch": "本世界的修正",
+    "cn": "本世界的修正"
+   },
+   "IGUI_GS_WorldTax_Type": {
+    "en": "Item type",
+    "ch": "物品類型",
+    "cn": "物品类型"
+   },
+   "IGUI_GS_WorldTax_Uncertain": {
+    "en": "Unconfirmed result. No write has been repeated. Wait for the server response or reconnect and look it up again.",
+    "ch": "結果未確認. 沒有重複執行任何寫入. 請等待伺服器回應, 或重新連線後再次查詢.",
+    "cn": "结果未确认. 没有重复执行任何写入. 请等待服务器响应, 或重新连接后再次查询."
+   },
+   "IGUI_GS_WorldTax_World": {
+    "en": "World correction",
+    "ch": "世界修正",
+    "cn": "世界修正"
+   },
+   "IGUI_ItemCat_WeaponMagazine": {
+    "en": "Weapon Magazine",
+    "ch": "武器-彈匣",
+    "cn": "武器-弹匣"
+   },
+   "IGUI_CM_Moodle_Sleep": {
+    "en": "Cat sleepy",
+    "ch": "貓睏了",
+    "cn": "猫困了"
+   },
+   "IGUI_CM_Moodle_Sleep_desc": {
+    "en": "Your companion is tired and needs rest.",
+    "ch": "你的夥伴貓累了, 需要休息.",
+    "cn": "你的伙伴猫累了, 需要休息."
    }
   },
   "ItemName.json": {
@@ -106884,7 +107089,7 @@
     "cn": "遥控门电机"
    },
    "LWBetterElectronics.YeenBeans": {
-    "en": "Yeen Beans",
+    "en": "Yeen Bean",
     "ch": "Yeen 豆子",
     "cn": "Yeen 豆子"
    },
@@ -123576,6 +123781,231 @@
     "en": "Hoodie - Tracksuit",
     "ch": "連帽衫 (運動套裝)",
     "cn": "连帽衫 (运动套装)"
+   },
+   "LWBetterElectronics.Otternoses": {
+    "en": "Otternoses",
+    "ch": "水獺鼻",
+    "cn": "水獭鼻"
+   },
+   "HBAC.223_Projectile": {
+    "en": ".223 Remington Projectile",
+    "ch": ".223 Remington 彈頭",
+    "cn": ".223 Remington弹头"
+   },
+   "HBAC.22_Projectile": {
+    "en": ".22 Projectile",
+    "ch": ".22 彈頭",
+    "cn": ".22弹头"
+   },
+   "HBAC.3030_Projectile": {
+    "en": ".30-30 Projectile",
+    "ch": ".30-30 彈頭",
+    "cn": ".30-30弹头"
+   },
+   "HBAC.308_Projectile": {
+    "en": ".308 Projectile",
+    "ch": ".308 彈頭",
+    "cn": ".308弹头"
+   },
+   "HBAC.357_Projectile": {
+    "en": ".357 Projectile",
+    "ch": ".357 彈頭",
+    "cn": ".357弹头"
+   },
+   "HBAC.38_Projectile": {
+    "en": ".38 Special Projectile",
+    "ch": ".38 特種彈頭",
+    "cn": ".38特种弹头"
+   },
+   "HBAC.44_Projectile": {
+    "en": ".44 Magnum Projectile",
+    "ch": ".44 馬格南彈頭",
+    "cn": ".44马格南弹头"
+   },
+   "HBAC.45_Projectile": {
+    "en": ".45 ACP Projectile",
+    "ch": ".45 ACP 彈頭",
+    "cn": ".45 ACP弹头"
+   },
+   "HBAC.46x30_Projectile": {
+    "en": "4.6x30mm Projectile",
+    "ch": "4.6x30mm彈頭",
+    "cn": "4.6x30mm弹头"
+   },
+   "HBAC.545x39_Projectile": {
+    "en": "5.45x39mm Projectile",
+    "ch": "5.45x39mm彈頭",
+    "cn": "5.45x39mm弹头"
+   },
+   "HBAC.556x45_Projectile": {
+    "en": "5.56x45mm Projectile",
+    "ch": "5.56x45mm彈頭",
+    "cn": "5.56x45mm弹头"
+   },
+   "HBAC.57x28_Projectile": {
+    "en": "5.7x28mm Projectile",
+    "ch": "5.7x28mm彈頭",
+    "cn": "5.7x28mm弹头"
+   },
+   "HBAC.762x39_Projectile": {
+    "en": "7.62x39mm Projectile",
+    "ch": "7.62x39mm彈頭",
+    "cn": "7.62x39mm弹头"
+   },
+   "HBAC.762x54_Projectile": {
+    "en": "7.62x54Rmm Projectile",
+    "ch": "7.62x54Rmm彈頭",
+    "cn": "7.62x54Rmm弹头"
+   },
+   "HBAC.9x19_Projectile": {
+    "en": "9x19mm Projectile",
+    "ch": "9x19mm彈頭",
+    "cn": "9x19mm弹头"
+   },
+   "HBAC.223_ProjectileBox": {
+    "en": "Box of .223 Remington Projectiles",
+    "ch": ".223 Remington 彈頭 (整盒)",
+    "cn": ".223 Remington弹头 (整盒)"
+   },
+   "HBAC.22_ProjectileBox": {
+    "en": "Box of .22 Projectiles",
+    "ch": ".22 彈頭 (整盒)",
+    "cn": ".22弹头 (整盒)"
+   },
+   "HBAC.3030_ProjectileBox": {
+    "en": "Box of .30-30 Projectiles",
+    "ch": ".30-30 彈頭 (整盒)",
+    "cn": ".30-30弹头 (整盒)"
+   },
+   "HBAC.308_ProjectileBox": {
+    "en": "Box of .308 Projectiles",
+    "ch": ".308 彈頭 (整盒)",
+    "cn": ".308弹头 (整盒)"
+   },
+   "HBAC.357_ProjectileBox": {
+    "en": "Box of .357 Projectiles",
+    "ch": ".357 彈頭 (整盒)",
+    "cn": ".357弹头 (整盒)"
+   },
+   "HBAC.38_ProjectileBox": {
+    "en": "Box of .38 Special Projectiles",
+    "ch": ".38 特種彈頭 (整盒)",
+    "cn": ".38特种弹头 (整盒)"
+   },
+   "HBAC.44_ProjectileBox": {
+    "en": "Box of .44 Magnum Projectiles",
+    "ch": ".44 馬格南彈頭 (整盒)",
+    "cn": ".44马格南弹头 (整盒)"
+   },
+   "HBAC.45_ProjectileBox": {
+    "en": "Box of .45 ACP Projectiles",
+    "ch": ".45 ACP 彈頭 (整盒)",
+    "cn": ".45 ACP弹头 (整盒)"
+   },
+   "HBAC.46x30_ProjectileBox": {
+    "en": "Box of 4.6x30mm Projectiles",
+    "ch": "4.6x30mm彈頭 (整盒)",
+    "cn": "4.6x30mm弹头 (整盒)"
+   },
+   "HBAC.545x39_ProjectileBox": {
+    "en": "Box of 5.45x39mm Projectiles",
+    "ch": "5.45x39mm彈頭 (整盒)",
+    "cn": "5.45x39mm弹头 (整盒)"
+   },
+   "HBAC.556x45_ProjectileBox": {
+    "en": "Box of 5.56x45mm Projectiles",
+    "ch": "5.56x45mm彈頭 (整盒)",
+    "cn": "5.56x45mm弹头 (整盒)"
+   },
+   "HBAC.57x28_ProjectileBox": {
+    "en": "Box of 5.7x28mm Projectiles",
+    "ch": "5.7x28mm彈頭 (整盒)",
+    "cn": "5.7x28mm弹头 (整盒)"
+   },
+   "HBAC.762x39_ProjectileBox": {
+    "en": "Box of 7.62x39mm Projectiles",
+    "ch": "7.62x39mm彈頭 (整盒)",
+    "cn": "7.62x39mm弹头 (整盒)"
+   },
+   "HBAC.762x54_ProjectileBox": {
+    "en": "Box of 7.62x54Rmm Projectiles",
+    "ch": "7.62x54Rmm彈頭 (整盒)",
+    "cn": "7.62x54Rmm弹头 (整盒)"
+   },
+   "HBAC.9x19_ProjectileBox": {
+    "en": "Box of 9x19mm Projectiles",
+    "ch": "9x19mm彈頭 (整盒)",
+    "cn": "9x19mm弹头 (整盒)"
+   },
+   "HBAC.Primer_Pistol": {
+    "en": "Pistol Primer",
+    "ch": "手槍底火",
+    "cn": "手枪底火"
+   },
+   "HBAC.Primer_Rifle": {
+    "en": "Rifle Primer",
+    "ch": "步槍底火",
+    "cn": "步枪底火"
+   },
+   "HBAC.Primer_Shotshell": {
+    "en": "Shotshell Primer",
+    "ch": "霰彈底火",
+    "cn": "霰弹底火"
+   },
+   "HBAC.Primer_Box_Pistol": {
+    "en": "Box of Pistol Primers",
+    "ch": "手槍底火盒",
+    "cn": "手枪底火盒"
+   },
+   "HBAC.Primer_Box_Rifle": {
+    "en": "Box of Rifle Primers",
+    "ch": "步槍底火盒",
+    "cn": "步枪底火盒"
+   },
+   "HBAC.Primer_Box_Shotshell": {
+    "en": "Box of Shotshell Primers",
+    "ch": "霰彈底火盒",
+    "cn": "霰弹底火盒"
+   },
+   "HBAC.12Gauge_Pellet": {
+    "en": "12 Gauge Pellet",
+    "ch": "12號彈丸",
+    "cn": "12号弹丸"
+   },
+   "HBAC.12Gauge_PelletsBox": {
+    "en": "Box of 12 Gauge Pellets",
+    "ch": "12號彈丸 (整盒)",
+    "cn": "12号弹丸 (整盒)"
+   },
+   "Base.HotBrassReloadingBench": {
+    "en": "Reloading Bench",
+    "ch": "裝填工作檯",
+    "cn": "装填工作台"
+   },
+   "HBVCEF.40mm_Casing": {
+    "en": "40mm Casing",
+    "ch": "40mm彈殼",
+    "cn": "40mm弹壳"
+   },
+   "AuthenticZClothing.Hat_Dixie_Cup": {
+    "en": "Dixie Cup",
+    "ch": "水兵帽",
+    "cn": "水兵帽"
+   },
+   "AuthenticZLite.Hat_Dixie_Cup": {
+    "en": "Dixie Cup",
+    "ch": "水兵帽",
+    "cn": "水兵帽"
+   },
+   "Base.9mmMAG30Beretta": {
+    "en": "Beretta M1938/49 Magazine",
+    "ch": "貝瑞塔MAB 1938/49衝鋒槍彈匣",
+    "cn": "贝雷塔MAB 1938/49冲锋枪弹匣"
+   },
+   "OCP.CharcoalCraftedCarton": {
+    "en": "Carton of Wood Charcoal",
+    "ch": "自製木炭 (整箱)",
+    "cn": "自制木炭 (整箱)"
    }
   },
   "Print_Media.json": {
@@ -135186,6 +135616,226 @@
     "en": "Build Tactical Link Watch",
     "ch": "製作戰術連動手錶",
     "cn": "制作战术联动手表"
+   },
+   "Make_12Gauge_Shell": {
+    "en": "Assemble 12 Gauge Shell",
+    "ch": "組裝12號霰彈",
+    "cn": "组装12号霰弹"
+   },
+   "Make_223_Bullet_VFE": {
+    "en": "Assemble .223 Remington Round",
+    "ch": "組裝 .223 Remington 子彈",
+    "cn": "组装 .223 Remington 子弹"
+   },
+   "Make_22_Bullet_VFE": {
+    "en": "Assemble .22 Round",
+    "ch": "組裝 .22 子彈",
+    "cn": "组装 .22 子弹"
+   },
+   "Make_3030_Bullet": {
+    "en": "Assemble 30-30 Winchester Round",
+    "ch": "組裝 30-30 Winchester 子彈",
+    "cn": "组装 30-30 Winchester 子弹"
+   },
+   "Make_308_Bullet": {
+    "en": "Assemble .308 Winchester Round",
+    "ch": "組裝 .308 Winchester 子彈",
+    "cn": "组装 .308 Winchester 子弹"
+   },
+   "Make_357_Bullet": {
+    "en": "Assemble .357 Magnum Round",
+    "ch": "組裝 .357 馬格南子彈",
+    "cn": "组装 .357 马格南子弹"
+   },
+   "Make_38_Bullet": {
+    "en": "Assemble .38 Special Round",
+    "ch": "組裝 .38 特種子彈",
+    "cn": "组装 .38 特种子弹"
+   },
+   "Make_44_Bullet": {
+    "en": "Assemble .44 Magnum Round",
+    "ch": "組裝 .44 馬格南子彈",
+    "cn": "组装 .44 马格南子弹"
+   },
+   "Make_45_Bullet": {
+    "en": "Assemble .45 ACP Bullet",
+    "ch": "組裝 .45 ACP 子彈",
+    "cn": "组装 .45 ACP 子弹"
+   },
+   "Make_46x30_Bullet_VFE": {
+    "en": "Assemble 4.6x30mm Round",
+    "ch": "組裝 4.6x30mm 子彈",
+    "cn": "组装 4.6x30mm 子弹"
+   },
+   "Make_545x39_Bullet_VFE": {
+    "en": "Assemble 5.45x39mm Round",
+    "ch": "組裝 5.45x39mm 子彈",
+    "cn": "组装 5.45x39mm 子弹"
+   },
+   "Make_556x45_Bullet": {
+    "en": "Assemble 5.56x45mm Bullet",
+    "ch": "組裝 5.56x45mm 子彈",
+    "cn": "组装 5.56x45mm 子弹"
+   },
+   "Make_57x28_Bullet_VFE": {
+    "en": "Assemble 5.7x28mm Round",
+    "ch": "組裝 5.7x28mm 子彈",
+    "cn": "组装 5.7x28mm 子弹"
+   },
+   "Make_762x39_Bullet_VFE": {
+    "en": "Assemble 7.62x39mm Round",
+    "ch": "組裝 7.62x39mm 子彈",
+    "cn": "组装 7.62x39mm 子弹"
+   },
+   "Make_762x39_Bullet_VWP": {
+    "en": "Assemble 7.62x39mm Round",
+    "ch": "組裝 7.62x39mm 子彈",
+    "cn": "组装 7.62x39mm 子弹"
+   },
+   "Make_762x54_Bullet_VFE": {
+    "en": "Assemble 7.62x54Rmm Round",
+    "ch": "組裝 7.62x54Rmm 子彈",
+    "cn": "组装 7.62x54Rmm 子弹"
+   },
+   "Make_9x19_Bullet": {
+    "en": "Assemble 9x19mm Bullet",
+    "ch": "組裝 9x19mm 子彈",
+    "cn": "组装 9x19mm 子弹"
+   },
+   "Disassemble_12Gauge_Shell": {
+    "en": "Disassemble 12 Gauge Shell",
+    "ch": "拆解12號霰彈",
+    "cn": "拆解12号霰弹"
+   },
+   "Disassemble_223_Bullet_VFE": {
+    "en": "Disassemble .223 Remington Round",
+    "ch": "拆解 .223 Remington 子彈",
+    "cn": "拆解 .223 Remington 子弹"
+   },
+   "Disassemble_22_Bullet_VFE": {
+    "en": "Disassemble .22 Round",
+    "ch": "拆解 .22 子彈",
+    "cn": "拆解 .22 子弹"
+   },
+   "Disassemble_3030_Bullet": {
+    "en": "Disassemble 30-30 Winchester Round",
+    "ch": "拆解 30-30 Winchester 子彈",
+    "cn": "拆解 30-30 Winchester 子弹"
+   },
+   "Disassemble_308_Bullet": {
+    "en": "Disassemble .308 Winchester Round",
+    "ch": "拆解 .308 Winchester 子彈",
+    "cn": "拆解 .308 Winchester 子弹"
+   },
+   "Disassemble_357_Bullet": {
+    "en": "Disassemble .357 Magnum Round",
+    "ch": "拆解 .357 馬格南子彈",
+    "cn": "拆解 .357 马格南子弹"
+   },
+   "Disassemble_38_Bullet": {
+    "en": "Disassemble .38 Special Round",
+    "ch": "拆解 .38 特種子彈",
+    "cn": "拆解 .38 特种子弹"
+   },
+   "Disassemble_44_Bullet": {
+    "en": "Disassemble .44 Magnum Round",
+    "ch": "拆解 .44 馬格南子彈",
+    "cn": "拆解 .44 马格南子弹"
+   },
+   "Disassemble_45_Bullet": {
+    "en": "Disassemble .45 ACP Bullet",
+    "ch": "拆解 .45 ACP 子彈",
+    "cn": "拆解 .45 ACP 子弹"
+   },
+   "Disassemble_46x30_Bullet_VFE": {
+    "en": "Disassemble 4.6x30mm Round",
+    "ch": "拆解 4.6x30mm 子彈",
+    "cn": "拆解 4.6x30mm 子弹"
+   },
+   "Disassemble_545x39_Bullet_VFE": {
+    "en": "Disassemble 5.45x39mm Round",
+    "ch": "拆解 5.45x39mm 子彈",
+    "cn": "拆解 5.45x39mm 子弹"
+   },
+   "Disassemble_556x45_Bullet": {
+    "en": "Disassemble 5.56x45mm Bullet",
+    "ch": "拆解 5.56x45mm 子彈",
+    "cn": "拆解 5.56x45mm 子弹"
+   },
+   "Disassemble_57x28_Bullet_VFE": {
+    "en": "Disassemble 5.7x28mm Round",
+    "ch": "拆解 5.7x28mm 子彈",
+    "cn": "拆解 5.7x28mm 子弹"
+   },
+   "Disassemble_762x39_Bullet_VFE": {
+    "en": "Disassemble 7.62x39mm Round",
+    "ch": "拆解 7.62x39mm 子彈",
+    "cn": "拆解 7.62x39mm 子弹"
+   },
+   "Disassemble_762x39_Bullet_VWP": {
+    "en": "Disassemble 7.62x39mm Round",
+    "ch": "拆解 7.62x39mm 子彈",
+    "cn": "拆解 7.62x39mm 子弹"
+   },
+   "Disassemble_762x54_Bullet_VFE": {
+    "en": "Disassemble 7.62x54Rmm Round",
+    "ch": "拆解 7.62x54Rmm 子彈",
+    "cn": "拆解 7.62x54Rmm 子弹"
+   },
+   "Disassemble_9x19_Bullet": {
+    "en": "Disassemble 9x19mm Bullet",
+    "ch": "拆解 9x19mm 子彈",
+    "cn": "拆解 9x19mm 子弹"
+   },
+   "OpenBoxOf100Projectiles": {
+    "en": "Open Box of 100 Projectiles",
+    "ch": "彈頭拆盒 (100 發)",
+    "cn": "弹头拆盒 (100 发)"
+   },
+   "OpenBoxOf50Projectiles": {
+    "en": "Open Box of 50 Projectiles",
+    "ch": "彈頭拆盒 (50 發)",
+    "cn": "弹头拆盒 (50 发)"
+   },
+   "OpenBoxOfPrimers": {
+    "en": "Open Box of Primers",
+    "ch": "底火拆盒",
+    "cn": "底火拆盒"
+   },
+   "OpenBoxOfShotgunPellets": {
+    "en": "Open Box of Shotgun Pellets",
+    "ch": "霰彈槍彈丸拆盒",
+    "cn": "霰弹枪弹丸拆盒"
+   },
+   "place100ProjectilesInBox": {
+    "en": "Place 100 Projectiles in Box",
+    "ch": "彈頭裝盒 (100 發)",
+    "cn": "弹头装盒 (100 发)"
+   },
+   "place50ProjectilesInBox": {
+    "en": "Place 50 Projectiles in Box",
+    "ch": "彈頭裝盒 (50 發)",
+    "cn": "弹头装盒 (50 发)"
+   },
+   "placePrimersInBox": {
+    "en": "Place Primers in Box",
+    "ch": "底火裝盒",
+    "cn": "底火装盒"
+   },
+   "placeShotgunPelletsInBox": {
+    "en": "Place Shotgun Pellets in Box",
+    "ch": "霰彈槍彈丸裝盒",
+    "cn": "霰弹枪弹丸装盒"
+   },
+   "Make46x30": {
+    "en": "Make 4.6x30mm",
+    "ch": "製作4.6x30mm子彈",
+    "cn": "制作4.6x30mm子弹"
+   },
+   "Produce46x30": {
+    "en": "Produce 4.6x30mm",
+    "ch": "生產4.6x30mm子彈",
+    "cn": "生产4.6x30mm子弹"
    }
   },
   "Sandbox.json": {
@@ -146020,9 +146670,9 @@
     "en": "Requires Debug mode ON. Traces the side tab rail and the Core/add-on tab-registration contract: panel creation/reuse, visibility toggles, and tab click activation/cancellation."
    },
    "Sandbox_GlobalStorageSiK_DebugCatSiKUI_tooltip": {
-    "ch": "需要開啟除錯模式. 記錄 Global Storage 與 SiK UI 之間的整合. 框架內部的診斷請從它自己的沙盒頁面啟用.",
-    "cn": "需要开启调试模式. 记录 Global Storage 与 SiK UI 之间的集成. 框架内部的诊断请从它自己的沙盒页面启用.",
-    "en": "Requires Debug mode ON. Logs the integration between Global Storage and SiK UI. Framework-internal diagnostics are enabled from its own Sandbox page.",
+    "ch": "需要除錯模式. 記錄轉送到其記錄器的 Global Storage 整合與框架事件 (掛載、幾何與互動). 框架仍保有自己獨立的診斷開關.",
+    "cn": "需要调试模式. 记录转发到其日志记录器的 Global Storage 集成与框架事件 (挂载、几何与交互). 框架仍保留自己独立的诊断开关.",
+    "en": "Requires Debug mode. Records Global Storage integration and framework events routed to its logger (mounting, geometry and interaction). The framework retains its independent diagnostics switch.",
     "_note": "2026-09-07 #426–#444 上游改文：內容整體改寫: 只記錄整合, 框架內部診斷移到其自身沙盒頁."
    },
    "Sandbox_Greenfire": {
@@ -147871,9 +148521,9 @@
     "cn": "生成弹药部件"
    },
    "Sandbox_ammomaker_SpawnAmmoParts_tooltip": {
-    "en": "Adds all active types of ammo parts to the Ammo Maker loot distribution (doesn't affect base game loot in any way!)",
-    "ch": "將所有已啟用的彈藥部件類型加入彈藥製作的戰利品分布 (完全不會影響原版遊戲的戰利品!)",
-    "cn": "将所有已启用的弹药部件类型加入弹药制作的战利品分布 (完全不会影响原版游戏的战利品!)"
+    "en": "Adds all active types of ammo parts to the Ammo Maker loot distribution (doesn't affect base game loot)",
+    "ch": "將所有已啟用的彈藥部件類型加入彈藥製作的戰利品分布 (不會影響原版遊戲的戰利品)",
+    "cn": "将所有已启用的弹药部件类型加入弹药制作的战利品分布 (不会影响原版游戏的战利品)"
    },
    "Sandbox_ammomaker_SpawnRecipeMagazines": {
     "en": "Spawn Recipe Magazines",
@@ -147881,9 +148531,9 @@
     "cn": "生成配方杂志"
    },
    "Sandbox_ammomaker_SpawnRecipeMagazines_tooltip": {
-    "en": "Adds recipe magazines to the Ammo Maker loot distribution (doesn't affect base game loot in any way!)",
-    "ch": "將配方雜誌加入彈藥製作的戰利品分布 (完全不會影響原版遊戲的戰利品!)",
-    "cn": "将配方杂志加入弹药制作的战利品分布 (完全不会影响原版游戏的战利品!)"
+    "en": "Adds recipe magazines to the Ammo Maker loot distribution (doesn't affect base game loot)",
+    "ch": "將配方雜誌加入彈藥製作的戰利品分布 (不會影響原版遊戲的戰利品)",
+    "cn": "将配方杂志加入弹药制作的战利品分布 (不会影响原版游戏的战利品)"
    },
    "Sandbox_ETW_BrokenLegFractureTimeMultiplier": {
     "en": "Broken Leg repeat fracture severity multiplier",
@@ -148619,6 +149269,171 @@
     "en": "Scales the normal chance of fracturing one healthy part of the selected arm: hand, forearm, or upper arm.\nAt critical endurance, with both arms already at the strain limit, or when the selected arm reaches the limit after the action, fracture risk is always 100%%. Default: 1.0.",
     "ch": "調整所選手臂的一個健康部位 (手部、前臂或上臂) 發生骨折的一般機率.\n當耐力處於危急狀態、雙臂皆已達到勞損上限, 或所選手臂在動作後達到上限時, 骨折風險一律為 100%%. 預設值: 1.0.",
     "cn": "调整所选手臂的一个健康部位 (手部、前臂或上臂) 发生骨折的常规概率.\n当耐力处于危急状态、双臂均已达到疲劳上限, 或所选手臂在动作后达到上限时, 骨折风险一律为 100%%. 默认值: 1.0."
+   },
+   "Sandbox_BurdJournals_DiminishingMaintenancePercent": {
+    "en": "DR Readiness Restored Per Maintenance %%",
+    "ch": "每次維護恢復的收益遞減就緒度 %%",
+    "cn": "每次维护恢复的收益递减就绪度 %%"
+   },
+   "Sandbox_BurdJournals_DiminishingMaintenancePercent_tooltip": {
+    "en": "Only applies with Diminishing Returns and journal maintenance enabled. Percentage points of journal XP readiness restored by one completed Maintain Journal action.",
+    "ch": "僅在啟用收益遞減與日記維護時適用. 完成一次維護日記動作可恢復的日記 XP 就緒度百分點.",
+    "cn": "仅在启用收益递减与日记维护时生效. 完成一次维护日记操作可恢复的日记经验值就绪度百分点."
+   },
+   "Sandbox_BurdJournals_DiminishingRecoveryHoursPerPercent": {
+    "en": "Hours Per 1%% DR Recovery",
+    "ch": "收益遞減每恢復 1%% 所需小時數",
+    "cn": "收益递减每恢复 1%% 所需小时数"
+   },
+   "Sandbox_BurdJournals_DiminishingRecoveryHoursPerPercent_tooltip": {
+    "en": "Only applies with Diminishing Returns and passive recovery enabled. Connected in-game hours required to restore one percentage point of journal XP readiness. Sleep and normal time acceleration count.",
+    "ch": "僅在啟用收益遞減與被動恢復時適用. 恢復一個百分點的日記 XP 就緒度所需的連線遊戲小時數. 睡眠與一般加速時間也計入.",
+    "cn": "仅在启用收益递减与被动恢复时生效. 恢复一个百分点的日记经验值就绪度所需的在线游戏小时数. 睡眠与普通加速时间也计入."
+   },
+   "Sandbox_BurdJournals_DiminishingScope": {
+    "en": "Diminishing History Scope",
+    "ch": "收益遞減歷史範圍",
+    "cn": "收益递减历史范围"
+   },
+   "Sandbox_BurdJournals_DiminishingScope_option1": {
+    "en": "Per Journal",
+    "ch": "每本日記",
+    "cn": "每本日记"
+   },
+   "Sandbox_BurdJournals_DiminishingScope_option2": {
+    "en": "Per Author Survivor",
+    "ch": "每位作者倖存者",
+    "cn": "每位作者幸存者"
+   },
+   "Sandbox_BurdJournals_DiminishingScope_option3": {
+    "en": "Per Author Account",
+    "ch": "每個作者帳號",
+    "cn": "每个作者账号"
+   },
+   "Sandbox_BurdJournals_DiminishingScope_tooltip": {
+    "en": "Player journals only. Per Journal keeps each physical volume independent. Per Author Survivor links journals written by the same stable survivor. Per Author Account links every player journal written by that Steam/account identity. Loot journals are never linked.",
+    "ch": "僅適用於玩家日記. 每本日記讓每本實體日記各自獨立. 每位作者倖存者會連結同一個倖存者角色所寫的日記. 每個作者帳號會連結該 Steam/帳號身分所寫的每一本玩家日記. 戰利品日記永遠不會被連結.",
+    "cn": "仅适用于玩家日记. 每本日记让每本实体日记各自独立. 每位作者幸存者会关联同一个幸存者角色所写的日记. 每个作者账号会关联该 Steam/账号身份所写的每一本玩家日记. 战利品日记永远不会被关联."
+   },
+   "Sandbox_BurdJournals_EnableManualDiminishingRecovery": {
+    "en": "Enable DR Journal Maintenance",
+    "ch": "啟用收益遞減日記維護",
+    "cn": "启用收益递减日记维护"
+   },
+   "Sandbox_BurdJournals_EnableManualDiminishingRecovery_tooltip": {
+    "en": "Only applies when Journal XP Mode is Diminishing Returns. Adds Maintain Journal for player-journal entries with reduced readiness. Requires a reusable needle, one thread use, and one ripped sheet, denim strip, or leather strip. Maintenance restores the linked diminishing-returns history, not only the selected physical copy.",
+    "ch": "僅在日記 XP 模式為收益遞減時適用. 為就緒度下降的玩家日記條目加入維護日記選項. 需要可重複使用的針, 消耗一次縫線, 以及一份碎布, 丹寧條或皮革條. 維護會恢復整條相連的收益遞減紀錄, 不只是所選的那本實體日記.",
+    "cn": "仅在日记经验值模式为收益递减时生效. 为就绪度下降的玩家日记条目添加维护日记选项. 需要可重复使用的针, 消耗一次线, 以及一份碎布条, 牛仔布条或皮革条. 维护会恢复整条关联的收益递减记录, 而不只是所选的那本实体日记."
+   },
+   "Sandbox_BurdJournals_EnablePassiveDiminishingRecovery": {
+    "en": "Enable Diminishing Returns Recovery",
+    "ch": "啟用收益遞減恢復",
+    "cn": "启用收益递减恢复"
+   },
+   "Sandbox_BurdJournals_EnablePassiveDiminishingRecovery_tooltip": {
+    "en": "Only applies when Journal XP Mode is Diminishing Returns. Gradually restores one percentage point of journal XP readiness after the configured connected in-game time. Only living, connected play counts. Offline server time and paused solo time do not count. Time is not banked while fully ready.",
+    "ch": "僅在日記 XP 模式為收益遞減時適用. 在經過設定的連線遊戲時間後, 逐步恢復一個百分點的日記 XP 就緒度. 只有存活且連線的遊玩時間才計入. 離線的伺服器時間與單人暫停時間不計入. 就緒度已滿時不會累積時間.",
+    "cn": "仅在日记经验值模式为收益递减时生效. 在经过设定的在线游戏时间后, 逐步恢复一个百分点的日记经验值就绪度. 只有存活且在线的游玩时间才计入. 离线的服务器时间与单人暂停时间不计入. 就绪度已满时不会累积时间."
+   },
+   "Sandbox_BurdJournals_EnablePerPlayerLootJournalClaims": {
+    "en": "Enable Per-Player Loot Journal Claims",
+    "ch": "啟用每位玩家獨立的戰利品日記領取",
+    "cn": "启用每位玩家独立的战利品日记领取"
+   },
+   "Sandbox_BurdJournals_EnablePerPlayerLootJournalClaims_tooltip": {
+    "en": "When enabled, each survivor gets a separate claim history for worn, bloody, cursed, and Yuletide journals. If limited claims are also enabled, the limit applies separately to each survivor and locks only that survivor's remaining rewards. The journal never dissolves from claims while this setting is active. Default: Off",
+    "ch": "啟用後, 每位倖存者對破舊, 血跡斑斑, 詛咒與聖誕日記都有各自獨立的領取紀錄. 若同時啟用有限領取, 該上限會對每位倖存者分別計算, 且只鎖住該位倖存者剩餘的獎勵. 此設定啟用期間, 日記不會因領取而消失. 預設: 關閉",
+    "cn": "启用后, 每位幸存者对破旧, 血迹斑斑, 诅咒与圣诞日记都有各自独立的领取记录. 若同时启用有限领取, 该上限会对每位幸存者分别计算, 且只锁住该位幸存者剩余的奖励. 此设置启用期间, 日记不会因领取而消散. 默认: 关闭"
+   },
+   "Sandbox_ammomaker_OldCasingsPercentage": {
+    "en": "Old Casings Percentage",
+    "ch": "舊彈殼百分比",
+    "cn": "旧弹壳百分比"
+   },
+   "Sandbox_ammomaker_OldCasingsPercentage_tooltip": {
+    "en": "Percentage of old casings returned when firing regular firearms or reloading revolvers and break-action firearms",
+    "ch": "使用一般槍械開火, 或重新裝填左輪手槍與中折式槍械時, 返還舊彈殼的百分比",
+    "cn": "使用一般枪械开火, 或重新装填左轮手枪与中折式枪械时, 返还旧弹壳的百分比"
+   },
+   "Sandbox_CatsMod_AutoPlayEnabled": {
+    "en": "Autonomous play with toy",
+    "ch": "自主與玩具玩耍",
+    "cn": "自主与玩具玩耍"
+   },
+   "Sandbox_CatsMod_AutoPlayEnabled_tooltip": {
+    "en": "When ON (default), companion cats play with nearby ground toys on their own while you are still — in Stay, Free will, or Follow when parked. Requires a toy within 12 tiles. Disabled near zombies and while you are walking. Manual Play with toy menu is always available.",
+    "ch": "設為開啟 (預設) 時, 夥伴貓會在你靜止不動時自行與附近地面上的玩具玩耍 — 處於停留, 自由意志, 或跟隨且已停駐的狀態. 需要 12 格內有玩具. 附近有殭屍或你正在走動時會停用. 手動的「一起玩」選單始終可用.",
+    "cn": "设为开启 (默认) 时, 伙伴猫会在你静止不动时自行与附近地面上的玩具玩耍 — 处于停留、自由意志, 或跟随且已停驻的状态. 需要 12 格内有玩具. 附近有僵尸或你正在走动时会禁用. 手动的“一起玩”菜单始终可用."
+   },
+   "Sandbox_CatsMod_AutoPlayMaxPerDay": {
+    "en": "Toy play sessions per day (max)",
+    "ch": "每日與玩具玩耍次數 (上限)",
+    "cn": "每日与玩具玩耍次数 (上限)"
+   },
+   "Sandbox_CatsMod_AutoPlayMaxPerDay_tooltip": {
+    "en": "Maximum autonomous toy-play sessions per in-game day (1–5, default 3). The cat picks a daily target between 2 and this cap when the cap is at least 3. Cooldown between sessions is 45–90 in-game minutes.",
+    "ch": "每個遊戲日自主與玩具玩耍的最大次數 (1–5, 預設 3). 上限至少為 3 時, 貓咪會在 2 到此上限之間挑選當日目標次數. 兩次之間的冷卻時間為 45–90 遊戲內分鐘.",
+    "cn": "每个游戏日自主与玩具玩耍的最大次数 (1–5, 默认 3). 上限至少为 3 时, 猫咪会在 2 到该上限之间挑选当日目标次数. 两次之间的冷却时间为 45–90 游戏内分钟."
+   },
+   "Sandbox_CatsMod_AutoScratchMaxPerDay": {
+    "en": "Scratches per day (max)",
+    "ch": "每日抓撓次數 (上限)",
+    "cn": "每日抓挠次数 (上限)"
+   },
+   "Sandbox_CatsMod_AutoScratchMaxPerDay_tooltip": {
+    "en": "Maximum autonomous scratcher sessions per in-game day (1–5, default 3). Requires cat stress ≥ 20%. Cooldown between sessions is 90–180 in-game minutes. Stretch gets priority when the daily stretch quota is not met.",
+    "ch": "每個遊戲日自主使用貓抓柱的最大次數 (1–5, 預設 3). 需要貓咪壓力達 20%% 以上. 兩次之間的冷卻時間為 90–180 遊戲內分鐘. 當日伸展次數尚未達標時, 伸展會優先.",
+    "cn": "每个游戏日自主使用猫抓柱的最大次数 (1–5, 默认 3). 需要猫咪压力达 20%% 以上. 两次之间的冷却时间为 90–180 游戏内分钟. 当日伸展次数尚未达标时, 伸展会优先."
+   },
+   "Sandbox_CatsMod_AutoShoulderEnabled": {
+    "en": "Autonomous shoulder mount",
+    "ch": "自主肩頭騎乘",
+    "cn": "自主肩头骑行"
+   },
+   "Sandbox_CatsMod_AutoShoulderEnabled_tooltip": {
+    "en": "When ON (default), companion cats climb onto your shoulder on their own while Following you, or while in Stay if you are within 5 tiles. They want affection or pets. Disabled near zombies and while another cat is already on your shoulder. Manual Ride shoulder menu is always available.",
+    "ch": "設為開啟 (預設) 時, 夥伴貓會在跟隨你時自行爬上你的肩膀, 或在停留狀態下且你位於 5 格內時爬上肩膀. 牠們是想要關注或撫摸. 附近有殭屍, 或已有另一隻貓在你肩膀上時會停用. 手動的「趴在肩膀上」選單始終可用.",
+    "cn": "设为开启 (默认) 时, 伙伴猫会在跟随你时自行爬上你的肩膀, 或在停留状态下且你位于 5 格内时爬上肩膀. 它们是想要关注或抚摸. 附近有僵尸、或已有另一只猫在你肩膀上时会禁用. 手动的“趴在肩膀上”菜单始终可用."
+   },
+   "Sandbox_CatsMod_AutoShoulderMaxPerDay": {
+    "en": "Shoulder mounts per day (max)",
+    "ch": "每日肩頭騎乘次數 (上限)",
+    "cn": "每日肩头骑行次数 (上限)"
+   },
+   "Sandbox_CatsMod_AutoShoulderMaxPerDay_tooltip": {
+    "en": "Maximum autonomous shoulder mounts per in-game day (1–5, default 3). The cat picks a daily target between 2 and this cap when the cap is at least 3. Cooldown between mounts is 60–120 in-game minutes.",
+    "ch": "每個遊戲日自主肩頭騎乘的最大次數 (1–5, 預設 3). 上限至少為 3 時, 貓咪會在 2 到此上限之間挑選當日目標次數. 兩次騎乘之間的冷卻時間為 60–120 遊戲內分鐘.",
+    "cn": "每个游戏日自主肩头骑行的最大次数 (1–5, 默认 3). 上限至少为 3 时, 猫咪会在 2 到该上限之间挑选当日目标次数. 两次骑行之间的冷却时间为 60–120 游戏内分钟."
+   },
+   "Sandbox_CatsMod_AutoStretchEnabled": {
+    "en": "Autonomous stretch",
+    "ch": "自主伸展",
+    "cn": "自主伸展"
+   },
+   "Sandbox_CatsMod_AutoStretchEnabled_tooltip": {
+    "en": "When ON (default), companion cats stretch on their own while in Stay or Free will — not while actively following you. Stretching reduces cat stress. Disabled near zombies.",
+    "ch": "設為開啟 (預設) 時, 夥伴貓會在停留或自由意志狀態下自行伸展 — 正在跟隨你時不會. 伸展可降低貓咪壓力. 附近有殭屍時會停用.",
+    "cn": "设为开启 (默认) 时, 伙伴猫会在停留或自由意志状态下自行伸展 — 正在跟随你时不会. 伸展可降低猫咪压力. 附近有僵尸时会禁用."
+   },
+   "Sandbox_CatsMod_AutoStretchMaxPerDay": {
+    "en": "Stretch times per day (max)",
+    "ch": "每日伸展次數 (上限)",
+    "cn": "每日伸展次数 (上限)"
+   },
+   "Sandbox_CatsMod_AutoStretchMaxPerDay_tooltip": {
+    "en": "Maximum autonomous stretches per in-game day (1–5, default 4). The cat picks a daily target between 3 and this cap when the cap is at least 3.",
+    "ch": "每個遊戲日自主伸展的最大次數 (1–5, 預設 4). 上限至少為 3 時, 貓咪會在 3 到此上限之間挑選當日目標次數.",
+    "cn": "每个游戏日自主伸展的最大次数 (1–5, 默认 4). 上限至少为 3 时, 猫咪会在 3 到该上限之间挑选当日目标次数."
+   },
+   "Sandbox_ArcadiaRefillablePropaneTanks_EnableSmallPropaneTankDepots": {
+    "en": "Enable small propane-tank refill sources",
+    "ch": "啟用小型丙烷罐填充來源",
+    "cn": "启用小型丙烷罐加注来源"
+   },
+   "Sandbox_ArcadiaRefillablePropaneTanks_EnableSmallPropaneTankDepots_tooltip": {
+    "en": "Allows the eight movable industry_03 propane-tank sprites, including industry_03_114, to act as independent refill sources. Default: On.",
+    "ch": "允許 8 個可搬動的 industry_03 丙烷罐貼圖 (包含 industry_03_114) 各自作為獨立的填充來源. 預設值: 開啟.",
+    "cn": "允许 8 个可搬动的 industry_03 丙烷罐贴图 (包含 industry_03_114) 各自作为独立的加注来源. 默认: 开启."
    }
   },
   "Tooltip.json": {
@@ -152651,11 +153466,6 @@
     "cn": "效率",
     "en": "Efficiency"
    },
-   "Tooltip_GS_SolderingIron": {
-    "ch": "一把用得很舊的烙鐵, 顯然出自懂行的人之手.",
-    "cn": "一把用得很旧的电烙铁, 显然出自懂行的人之手.",
-    "en": "A well-worn soldering iron, put together by someone who clearly knew what they were doing."
-   },
    "Tooltip_KBWVE_Buildable_RoofTrim": {
     "ch": "用於屋頂收邊的裝飾條 - 包含簷板、轉角、屋脊與落水管.",
     "cn": "用于屋顶收边的装饰条 - 包含檐板、转角、屋脊与落水管.",
@@ -152943,6 +153753,61 @@
     "en": "Unlock firearm Mini HUD",
     "ch": "解鎖槍械迷你 HUD",
     "cn": "解锁枪械迷你 HUD"
+   },
+   "Tooltip_craft_reloadingBenchDesc": {
+    "en": "Table set up with Reloading tool to manufacture bullets.",
+    "ch": "配備裝填工具, 用來製造子彈的桌子.",
+    "cn": "配备装填工具, 用来制造子弹的桌子."
+   },
+   "Tooltip_BurdJournals_MaintainJournal": {
+    "en": "Maintain Journal",
+    "ch": "維護日記",
+    "cn": "维护日记"
+   },
+   "Tooltip_BurdJournals_MaintenanceChooseSkill": {
+    "en": "Choose a worn skill to revise.",
+    "ch": "選擇一項已磨損的技能來修訂.",
+    "cn": "选择一项已磨损的技能进行修订."
+   },
+   "Tooltip_BurdJournals_MaintenanceDisabled": {
+    "en": "Journal maintenance is disabled in Sandbox settings.",
+    "ch": "沙盒設定中已停用日記維護.",
+    "cn": "沙盒设置中已禁用日记维护."
+   },
+   "Tooltip_BurdJournals_MaintenanceNeedsNeedle": {
+    "en": "Requires a needle.",
+    "ch": "需要針.",
+    "cn": "需要针."
+   },
+   "Tooltip_BurdJournals_MaintenanceNeedsPatch": {
+    "en": "Requires a ripped sheet, denim strip, or leather strip.",
+    "ch": "需要碎布, 丹寧條或皮革條.",
+    "cn": "需要碎布条, 牛仔布条或皮革条."
+   },
+   "Tooltip_BurdJournals_MaintenanceNeedsThread": {
+    "en": "Requires thread.",
+    "ch": "需要縫線.",
+    "cn": "需要线."
+   },
+   "Tooltip_BurdJournals_MaintenanceReady": {
+    "en": "These notes are already fully ready.",
+    "ch": "這些筆記已完全就緒.",
+    "cn": "这些笔记已完全就绪."
+   },
+   "Tooltip_BurdJournals_MaintenanceRefresh": {
+    "en": "Open the journal to refresh its authoritative wear status.",
+    "ch": "開啟日記以重新整理其權威磨損狀態.",
+    "cn": "打开日记以刷新其权威磨损状态."
+   },
+   "Tooltip_BurdJournals_MaintenanceUnavailable": {
+    "en": "Journal maintenance is unavailable.",
+    "ch": "日記維護不可用.",
+    "cn": "日记维护不可用."
+   },
+   "Tooltip_BurdJournals_MaintenanceWear": {
+    "en": "Current wear: %1%%.",
+    "ch": "目前磨損: %1%%.",
+    "cn": "当前磨损: %1%%."
    }
   },
   "UI.json": {
@@ -158562,30 +159427,10 @@
     "ch": "對同化性類固醇成癮. <br>戒斷症狀會在第1天(中度)、第5天(嚴重)、第10天(輕度)出現. <br>若18至20天未服用類固醇, 將失去此特質. <br>服用時+耐力, 停藥時-耐力.",
     "cn": "对合成代谢类固醇成瘾. <br>戒断症状会在第1天(中等)、第5天(严重)、第10天(轻微)出现. <br>连续18至20天未服用类固醇后, 将移除此特质. <br>使用期间+耐力, 停用后-耐力."
    },
-   "UI_BurdJournals_AmbitionMemorialHint": {
-    "en": "Recorded as history only. Relearning never changes Lifestyle Ambitions or rewards.",
-    "ch": "僅作為歷史記錄. 重學絕不會改變 Lifestyle 志向或獎勵.",
-    "cn": "仅作为历史记录. 重学绝不会改变 Lifestyle 志向或奖励."
-   },
-   "UI_BurdJournals_AmbitionMemorialStatus": {
-    "en": "Completed - memorial only",
-    "ch": "已完成 - 僅作紀念",
-    "cn": "已完成 - 仅作纪念"
-   },
-   "UI_BurdJournals_AmbitionRecorded": {
-    "en": "Recorded memorial",
-    "ch": "已記錄的紀念",
-    "cn": "已记录的纪念"
-   },
    "UI_BurdJournals_FitnessXPBlocked": {
     "en": "Your current nutrition state prevents Fitness XP gain. Improve your nutrition, then try again.",
     "ch": "你目前的營養狀態無法獲得體格經驗值. 改善營養後再試一次.",
     "cn": "你当前的营养状态无法获得体格经验值. 改善营养后再试一次."
-   },
-   "UI_BurdJournals_NoAmbitionsRecorded": {
-    "en": "No Ambition memorials recorded",
-    "ch": "沒有已記錄的志向紀念",
-    "cn": "没有已记录的志向纪念"
    },
    "UI_BurdJournals_NoAmbitionsToRecord": {
     "en": "No completed Ambitions to record",
@@ -177247,6 +178092,146 @@
     "en": "Walk there",
     "ch": "走過去",
     "cn": "走过去"
+   },
+   "UI_BurdJournals_AmbitionAlreadyRestored": {
+    "en": "Already completed",
+    "ch": "已經完成",
+    "cn": "已经完成"
+   },
+   "UI_BurdJournals_AmbitionCannotRestore": {
+    "en": "That Ambition cannot be restored for this survivor.",
+    "ch": "該志向無法為這位倖存者還原.",
+    "cn": "该志向无法为这位幸存者还原."
+   },
+   "UI_BurdJournals_AmbitionCompletedStatus": {
+    "en": "Completed",
+    "ch": "已完成",
+    "cn": "已完成"
+   },
+   "UI_BurdJournals_AmbitionReadyToRestore": {
+    "en": "Ready to restore",
+    "ch": "可還原",
+    "cn": "可还原"
+   },
+   "UI_BurdJournals_AmbitionRecordHint": {
+    "en": "Records this completed Lifestyle Ambition so a future survivor can restore it.",
+    "ch": "記錄這個已完成的 Lifestyle 志向, 讓未來的倖存者可以還原它.",
+    "cn": "记录这个已完成的 Lifestyle 志向, 让未来的幸存者可以还原它."
+   },
+   "UI_BurdJournals_AmbitionRecordedStatus": {
+    "en": "Recorded",
+    "ch": "已記錄",
+    "cn": "已记录"
+   },
+   "UI_BurdJournals_AmbitionRestoreHint": {
+    "en": "Restores completion and finished goals. If this Ambition uses an active slot, activate it through Lifestyle.",
+    "ch": "還原完成狀態與已達成的目標. 若這個志向需要佔用啟用槽位, 請透過 Lifestyle 啟用它.",
+    "cn": "还原完成状态与已达成的目标. 若这个志向需要占用激活槽位, 请通过 Lifestyle 激活它."
+   },
+   "UI_BurdJournals_AmbitionRestored": {
+    "en": "Ambition restored: %1",
+    "ch": "志向已還原: %1",
+    "cn": "志向已还原: %1"
+   },
+   "UI_BurdJournals_AmbitionUnavailable": {
+    "en": "Unavailable for this survivor",
+    "ch": "這位倖存者無法使用",
+    "cn": "这位幸存者无法使用"
+   },
+   "UI_BurdJournals_DiminishingScopeAccount": {
+    "en": "linked author account journals",
+    "ch": "相連的作者帳號日記",
+    "cn": "关联的作者账号日记"
+   },
+   "UI_BurdJournals_DiminishingScopeJournal": {
+    "en": "this journal",
+    "ch": "這本日記",
+    "cn": "这本日记"
+   },
+   "UI_BurdJournals_DiminishingScopeSurvivor": {
+    "en": "linked author survivor journals",
+    "ch": "相連的作者倖存者日記",
+    "cn": "关联的作者幸存者日记"
+   },
+   "UI_BurdJournals_EstimatedStartingXP": {
+    "en": "Estimated starting: %1 XP",
+    "ch": "估計起始: %1 經驗",
+    "cn": "估计初始: %1 经验值"
+   },
+   "UI_BurdJournals_InstallationXP": {
+    "en": "At BSJ installation: %1 XP",
+    "ch": "安裝 BSJ 時: %1 經驗",
+    "cn": "安装 BSJ 时: %1 经验值"
+   },
+   "UI_BurdJournals_JournalKeptFavorite": {
+    "en": "Favorited journal kept in your inventory.",
+    "ch": "已收藏的日記保留在你的物品欄中.",
+    "cn": "已收藏的日记保留在你的物品栏中."
+   },
+   "UI_BurdJournals_JournalKeptPending": {
+    "en": "Journal kept in your inventory while its records finish updating.",
+    "ch": "日記記錄更新完成前, 會保留在你的物品欄中.",
+    "cn": "日记记录更新完成前, 会保留在你的物品栏中."
+   },
+   "UI_BurdJournals_LimitedLootClaimBlocked": {
+    "en": "Claim limit reached",
+    "ch": "已達領取次數上限",
+    "cn": "已达领取次数上限"
+   },
+   "UI_BurdJournals_MaintenanceComplete": {
+    "en": "Journal notes revised: %1%% restored.",
+    "ch": "日記筆記已修訂: 恢復 %1%%.",
+    "cn": "日记笔记已修订: 恢复 %1%%."
+   },
+   "UI_BurdJournals_NoLifestyleAmbitionsRecorded": {
+    "en": "No Ambitions recorded",
+    "ch": "沒有已記錄的志向",
+    "cn": "没有已记录的志向"
+   },
+   "UI_BurdJournals_PassiveBaselineUncertain": {
+    "en": "Original passive starting levels are unknown. An admin can correct this baseline.",
+    "ch": "無法得知被動技能的原始起始等級. 管理員可以修正這份基準資料.",
+    "cn": "无法得知被动技能的原始初始等级. 管理员可以修正这份基准数据."
+   },
+   "UI_BurdJournals_PerPlayerLootClaimsLeft": {
+    "en": "Your claims left: %1",
+    "ch": "你的剩餘領取次數: %1",
+    "cn": "你的剩余领取次数: %1"
+   },
+   "UI_BurdJournals_SkillDetailEarnedRecovery": {
+    "en": "Earned XP: %1 of %2",
+    "ch": "已賺取經驗: %1 / %2",
+    "cn": "已赚取经验值: %1 / %2"
+   },
+   "UI_BurdJournals_SkillDetailNextRecovery": {
+    "en": "Next 1%% recovery in %1 in-game hour(s).",
+    "ch": "距離下次恢復 1%% 還需 %1 個遊戲小時.",
+    "cn": "距离下次恢复 1%% 还需 %1 个游戏小时."
+   },
+   "UI_BurdJournals_SkillDetailPenalty": {
+    "en": "Next read: %1%% | Wear: %2 points | Scope: %3",
+    "ch": "下次閱讀: %1%% | 磨損: %2 點 | 範圍: %3",
+    "cn": "下次阅读: %1%% | 磨损: %2 点 | 范围: %3"
+   },
+   "UI_BurdJournals_SkillDetailStartingRemaining": {
+    "en": "Starting XP remaining: %1 of %2",
+    "ch": "剩餘起始經驗: %1 / %2",
+    "cn": "剩余初始经验值: %1 / %2"
+   },
+   "UI_BurdJournals_XPWithEstimatedBaseline": {
+    "en": "%1 XP (+%2 estimated start)",
+    "ch": "%1 經驗 (+%2 估計起始)",
+    "cn": "%1 经验值 (+%2 估计初始)"
+   },
+   "UI_AutoLoot_SkipUnwanted": {
+    "en": "Skip Unwanted Items",
+    "ch": "跳過不需要的物品",
+    "cn": "跳过不需要的物品"
+   },
+   "UI_AutoLoot_Tooltip_SkipUnwanted": {
+    "en": "Never loot items marked Unwanted (More > Set Unwanted in the item's right-click menu).",
+    "ch": "永不拾取已標記為「不需要」的物品 (物品右鍵選單的「更多 > 設為不需要」).",
+    "cn": "永不拾取已标记为“不需要”的物品 (物品右键菜单的“更多 > 设为不需要”)."
    }
   },
   "MakeUp.json": {

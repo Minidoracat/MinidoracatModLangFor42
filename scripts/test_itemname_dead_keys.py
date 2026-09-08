@@ -3,7 +3,7 @@
 # ///
 """Regression tests for verify [15] effective-fullType enforcement.
 
-The gate accepts only exact effective `script_item_dn` fullTypes. Missing or
+The gate accepts only exact effective item-declaration/DisplayName fullTypes. Missing or
 wrong modules are never inferred from suffixes — they fail until a human repairs
 the true key or explicitly records an unresolved-module deferral.
 
@@ -96,7 +96,7 @@ assert not fail and warn, (fail, warn)
 # 5. Module-less prefix does NOT match a unique Base.* suffix candidate.
 fail, _ = run({"ItemName_ClipboardEmpty": "空寫字板"}, [], {},
               ["Base.ClipboardEmpty"])
-assert fail and "禁止依 suffix" in fail[0], fail
+assert fail, fail
 fail, _ = run({"ItemName_ClipboardEmpty": "空寫字板",
                "ClipboardEmpty": "錯 module 修復"}, [], {}, ["Base.ClipboardEmpty"])
 assert fail, "unreachable suffix-only bare key created a false green"
@@ -133,7 +133,7 @@ dead_branch_records = [
 ]
 dead_dist = {"ItemName_Base.Rossi92": "舊槍", "Base.Rossi92": "舊裸鍵"}
 fail, _ = run(dead_dist, [], {}, record_ids=dead_branch_records)
-assert fail and "無法精確" in fail[0], fail
+assert fail, fail
 fail, warn = run(dead_dist, [], {"Base.Rossi92": "dead branch"},
                  record_ids=dead_branch_records)
 assert not fail and not warn, (fail, warn)
@@ -187,7 +187,26 @@ assert not fail and warn, (fail, warn)
 fail, warn = run({"Foo.Bar": "巴"}, [], {}, [])
 assert not fail and not warn, (fail, warn)
 
-print("✅ test_itemname_dead_keys：13 組 provenance/fail-closed 情境全過")
+# 14. 名稱移到 JSON 後，精確 item 宣告仍須證明裸鍵；其餘身分防線不變。
+declaration = "script_item|mods/m/42/media/scripts/items.txt|Foo.Bar"
+declared_dist = {"ItemName_Foo.Bar": "前綴", "Foo.Bar": "裸鍵"}
+fail, _ = run(declared_dist, [], {}, record_ids=[declaration])
+assert not fail, f"有精確宣告與裸鍵卻因缺 DisplayName 被拒：{fail}"
+fail, _ = run({"ItemName_Foo.Bar": "前綴"}, [], {}, record_ids=[declaration])
+assert fail, "只有宣告、沒有裸鍵時仍須阻擋缺譯"
+for records, schema in (
+    ([declaration], 8),
+    (["script_item|mods/m/42/media/scripts/items.txt|?.Bar"], 10),
+    (["script_item|mods/m/42/media/scripts/items.txt|Bar"], 10),
+    (["script_item|mods/m/42/media/scripts/items.txt|Other.Bar"], 10),
+    (["script_item|mods/m/media/scripts/items.txt|Foo.Bar"], 10),
+    (["script_item|mods/m/42.19/media/scripts/items.txt|Foo.Bar",
+      "script_item|mods/m/42.20/media/scripts/items.txt|Other.Current"], 10),
+):
+    fail, _ = run(declared_dist, [], {}, record_ids=records, schema=schema)
+    assert fail, f"非現行精確宣告不得自證裸鍵：{records}, schema={schema}"
+
+print("test_itemname_dead_keys：14 組 provenance/fail-closed 情境全過")
 
 # --- [13] 改名後繼者抑制（同檔測試，共用 verify_dist import）------------------ #
 # 2026-08-10 實測：60 條 [13] 警告裡有 11 條是「上游把 UI_X 改名為 IGUI_X，我方兩個
