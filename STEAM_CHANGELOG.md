@@ -1,12 +1,13 @@
-[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.20.4-1.27.0[/h1]
-[i]2026-09-07[/i]
+[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.20.4-1.27.1[/h1]
+[i]2026-09-08[/i]
 [list]
-[*] [b]跟上 19 個 MOD 的上游更新，補譯 1,143 個新字串、修訂 129 個改文字串。[/b] 繁中／簡中皆逐鍵對照原文人工翻譯。
-[*] [b]Global Storage SiK 大改版全面中文化（603 個新字串）。[/b] 整套物品分類階層（食物與飲料 > 易腐壞 > …、服裝與防護 > 裝備 > 彈藥揹帶……）、終端機／區域／網路／權限管理介面、群組與成員術語改名、程式設計流程、除錯分類與 DETAIL 子日誌沙盒選項；「開啟狀態分頁檢視容器問題」等提示依上游修訂。
-[*] [b]Pixel Strike Indicator 更新（170 個新字串、91 段說明重譯）。[/b] 新增載具狀況條、環境傷害、爆炸 BOOM!! 效果、預設組合（全部顯示／只顯示基本項）與即時預覽；上游整段改寫的沙盒與選項說明全部重譯。
-[*] [b]Gun Attachment 3D Preview（120 個新字串）。[/b] 配件槽名（霰彈固定器、兩腳架、彈殼托……）、戰術連動手錶解鎖迷你 HUD、彈匣目錄、預設組合、配件數值圖例改為「有利變化／不利變化」。
-[*] [b]Mathebas Infinite Ammo（79）、Cye's Push Doors（56）、Knox Chronicles（47）。[/b] 無限彈藥沙盒選項；推門的強制開啟按鍵、可推開的殭屍數量、PvP 判定與 15 段沙盒說明修訂；諾克斯編年史的信用點、日誌與設施文字。
-[*] [b]其他跟上上游的 MOD。[/b] alice's Weapon Sling（18，舊減重零件改標「舊版物品 - 請勿使用」）、blackout predators（17）、Modern Firearms System（12，新增 QBU-203 精確射手步槍）、Immersive Blackouts、Vanilla Outfits Expanded、AutoTailoring、guns93（柯爾特單動陸軍左輪手槍）、LPTB42、Livestock Panel Plus、Cheat Menu PX、PSR、AutoAll。
-[*] [b]用詞修正。[/b] 依複核統一 Masonry→石工、Maintenance→維修、Literature→書刊、Produce→蔬果、Bags→袋子等分類名，並修正「查看／點擊／算法」等非台灣用語。
-[*] 仍支援 Project Zomboid Build 42.20.4+，Mod ID 與 Workshop ID 不變，無須重開存檔。
+[*] [b]跟上 14 個 MOD 的上游更新，補譯 207 個新字串、修訂 133 個既有字串。[/b] 繁中與簡中皆逐鍵對照原文維護。
+[*] [b]Hot Brass Ammo Crafting 補上 85 個字串。[/b] 彈頭、底火、整盒材料、裝填工作檯，以及組裝、拆解與裝盒配方都有中文。
+[*] [b]Burd's Survival Journals 補上 53 個新字串並修訂 11 個說明。[/b] 涵蓋日記維護、收益遞減恢復、每位玩家獨立領取與 Lifestyle 志向還原；材料名稱與遊戲物品欄一致。
+[*] [b]Global Storage SiK 補上 39 個新字串並修訂 69 個說明。[/b] 分類修正、無主網路繼承、管理員選項與物品轉移狀態皆跟上新版；容器範圍與終端連結距離的說明分開呈現。
+[*] [b]Cats Mod 的自動活動設定補齊中文。[/b] 睡意、玩耍、抓癢、趴肩與伸展等 16 個狀態或設定文字，保留各自的距離、次數與冷卻條件。
+[*] [b]食品與電子物品名稱跟上原文。[/b] P4 My So-Called Snack 的巧克力、貼紙改用 SPIFFOMAN 新名稱；Better Electronics 的簡中警報器與手冊名稱不再沿用過時標題，並補上水獺鼻。
+[*] [b]修正容易誤解的說明。[/b] AmmoMaker 的產量單位由舊文 0.02g 更新為 20g；Simple Suppressors 明確說明 .44 消音器可裝在沙漠之鷹，但不支援 .44 馬格南左輪手槍；兩則貼紙名稱移除多餘反斜線。
+[*] [b]其他更新。[/b] Authentic Z 水兵帽、TNFP 彈匣、OC's Packing 木炭整箱、AutoLoot 排除不需要物品、Guns of Marz 彈匣分類，以及 Arcadia 小型丙烷儲存站設定文字。
+[*] [b]安裝方式與支援版本不變。[/b] 仍支援 Build 42.20.4+，Mod ID 與 Workshop ID 不變；重新啟動遊戲即可載入新翻譯，無須重開存檔。
 [/list]
