@@ -6923,6 +6923,20 @@
    "reason": "2026-09-09 #466：三個 Frockin owner 的 Wear Lower 與 SCP Pack 的 Lower Visor，共同保有往下調整的方向。「調低／调低」不限定穿戴動作或衣物／面罩受詞，對完整四個 owner 都成立；舊「穿低一點」不適合面罩。",
    "ch": "調低",
    "cn": "调低"
+  },
+  "ContextMenu|ContextMenu_Left": {
+   "action": "translate",
+   "signature": "460f1e5e216c994a",
+   "reason": "2026-09-10 #466：靜態查證後保留 v42.20.4-1.27.2 的「戴在左側／戴在左侧」，不改 Lua 或出貨文字。關鍵是 3411888105/Frockin Splendor! Vol.2 只在 42/media/lua/shared/Translate/EN/ContextMenu.json:38 定義 Switch Side；有效 42 層 7 份 scripts、5 份 Lua 沒有 Left/Right 的直接、ExtraOption、ExtraSubmenu 或動態消費，common 無此類程式，因此不是正在使用的換邊選單。其他三個 owner 的 13 個 Left 切換均指向左側目的物品；兩個 Support Corps 雖只有 legacy TXT，實際選項仍可讀本包 JSON，不應刪掉現譯。此結論限本次原包；signature 錨定 owner/EN 而非 consumer，日後若新增或改變用途，即使 EN 不變仍須重審。詳細證據：3397182976/RandomClothing 的 common/media/scripts/clothing/RandomClothing.txt 有 9 個 Left 目的選項及 6 個 Left 自身位置選項；MikuFumoR 的 Left 對應 MikuFumoL（448–449 行），目的 BodyLocation=RandomClothing:LeftBackPlush（462 行）。Herta、Hanabi 頭飾同樣指向左側；FlowerLeft/Right 共用 Hat 槽，但 clothingItems XML 分別指定 MF_FlowerLeft/Right 模型。3409836763 與 3512993822/Support Corps 分別驗證，各有 2 個 Left 選項，42/media/scripts/clothing/SupportCorpsClothing.txt:40–41、74–75 將右臂章換成左臂章，目的 BodyLocation=MALeftArm（56、90 行）。遊戲 ISInventoryPaneContextMenu.lua:4392–4397 以同一索引配對選項與目的物品，ISClothingExtraAction.lua:121–136 建立並穿上目的物品。原包 manifest：3411888105=9010995043724212747、3397182976=4801751439426554935、3409836763=5710081324226703725、3512993822=7442337685954902241。",
+   "ch": "戴在左側",
+   "cn": "戴在左侧"
+  },
+  "ContextMenu|ContextMenu_Right": {
+   "action": "translate",
+   "signature": "eaae969d1c16f5fb",
+   "reason": "2026-09-10 #466：靜態查證後保留 v42.20.4-1.27.2 的「戴在右側／戴在右侧」，不改 Lua 或出貨文字。3411888105/Frockin Splendor! Vol.2 的 42/media/lua/shared/Translate/EN/ContextMenu.json:39 雖定義 Switch Side，但有效 scripts/Lua 沒有此鍵的直接、ExtraOption、ExtraSubmenu 或動態消費，無自身選單需要改譯。其他三個 owner 的 13 個 Right 切換均指向右側目的物品；Support Corps 的 Right Arm 是較具體的右側，改成「右臂」反而會誤導頭飾與背包玩偶的使用者。此結論限本次原包；signature 錨定 owner/EN 而非 consumer，日後若新增或改變用途，即使 EN 不變仍須重審。詳細證據：3397182976/RandomClothing 的 common/media/scripts/clothing/RandomClothing.txt 有 9 個 Right 目的選項及 6 個 Right 自身位置選項；MikuFumoL 的 Right 對應 MikuFumoR（465–466 行），目的 BodyLocation=RandomClothing:RightBackPlush（445 行）。Herta、Hanabi 的 Right 同樣指向右側物品，FrontRight 是另一個 key；FlowerRight 仍在 Hat 槽，但 XML 指定 MF_FlowerRight，與 MF_FlowerLeft 分開。3409836763 與 3512993822/Support Corps 分別驗證，各有 2 個 Right 選項，42/media/scripts/clothing/SupportCorpsClothing.txt:57–58、91–92 將左臂章換成右臂章，目的 BodyLocation=MARightArm（39、73 行）。遊戲 ISInventoryPaneContextMenu.lua:4392–4397 與 ISClothingExtraAction.lua:121–136 證明選項依序換成並穿上目的物品。原包 manifest：3411888105=9010995043724212747、3397182976=4801751439426554935、3409836763=5710081324226703725、3512993822=7442337685954902241。",
+   "ch": "戴在右側",
+   "cn": "戴在右侧"
   }
  }
 }
