@@ -2447,6 +2447,81 @@
     "en": "%1 (%2%% wear)",
     "ch": "%1 (磨損 %2%%)",
     "cn": "%1 (磨损 %2%%)"
+   },
+   "ContextMenu_ST_OpenCerealBox": {
+    "en": "Open Cereal Box",
+    "ch": "開啟麥片盒",
+    "cn": "打开麦片盒"
+   },
+   "ContextMenu_ST_ViewCard": {
+    "en": "View Card",
+    "ch": "檢視卡片",
+    "cn": "查看卡片"
+   },
+   "ContextMenu_SimpleSuppressors_Attach": {
+    "en": "Attach %1",
+    "ch": "安裝 %1",
+    "cn": "安装 %1"
+   },
+   "ContextMenu_SimpleSuppressors_Attaching": {
+    "en": "Attaching suppressor",
+    "ch": "正在安裝消音器",
+    "cn": "正在安装消音器"
+   },
+   "ContextMenu_SimpleSuppressors_DrainOil": {
+    "en": "Drain engine oil onto ground",
+    "ch": "把機油排到地上",
+    "cn": "把机油排到地上"
+   },
+   "ContextMenu_SimpleSuppressors_EngineOil": {
+    "en": "Engine oil: %1%% full / %2%% condition",
+    "ch": "機油: 存量 %1%% / 品質 %2%%",
+    "cn": "机油: 存量 %1%% / 品质 %2%%"
+   },
+   "ContextMenu_SimpleSuppressors_FitFilterFirst": {
+    "en": "Install an oil filter before refilling",
+    "ch": "補充機油前請先安裝機油濾清器",
+    "cn": "补充机油前请先安装机油滤清器"
+   },
+   "ContextMenu_SimpleSuppressors_Menu": {
+    "en": "Suppressor",
+    "ch": "消音器",
+    "cn": "消音器"
+   },
+   "ContextMenu_SimpleSuppressors_Remove": {
+    "en": "Remove %1",
+    "ch": "取下 %1",
+    "cn": "取下 %1"
+   },
+   "ContextMenu_SimpleSuppressors_Removing": {
+    "en": "Removing suppressor",
+    "ch": "正在取下消音器",
+    "cn": "正在取下消音器"
+   },
+   "ContextMenu_SimpleSuppressors_Replace": {
+    "en": "Attach %1 (replaces %2)",
+    "ch": "安裝 %1 (取代 %2)",
+    "cn": "安装 %1 (替换 %2)"
+   },
+   "ContextMenu_SimpleSuppressors_StopEngine": {
+    "en": "Turn off the engine before servicing",
+    "ch": "保養前請先關閉引擎",
+    "cn": "保养前请先关闭发动机"
+   },
+   "ContextMenu_SimpleSuppressors_TopUpOil": {
+    "en": "Add engine oil (uses 1 can; fills up to 50%%)",
+    "ch": "補充機油 (消耗 1 罐; 最多補充 50%%)",
+    "cn": "补充机油 (消耗 1 罐; 最多补充 50%%)"
+   },
+   "ContextMenu_VehicleRunningRemoveBattery": {
+    "en": "Uninstall Live Battery",
+    "ch": "拆除通電中的電池",
+    "cn": "拆除通电中的电池"
+   },
+   "ContextMenu_VehicleWeatherEffectsInGameDisable": {
+    "en": "Vehicle's Windshield is Missing. Vision is Impaired / Vulnerable to Rain and Snow.",
+    "ch": "車輛缺少擋風玻璃. 視線受阻 / 容易受到雨雪影響.",
+    "cn": "车辆缺少挡风玻璃. 视线受阻 / 容易受到雨雪影响."
    }
   },
   "Fluids.json": {
@@ -25003,9 +25078,9 @@
     "cn": "交易已禁用"
    },
    "IGUI_PSR_Struct_Truncated": {
-    "en": "Area too large to connect - stand closer to the appliances and try again",
-    "ch": "區域太大無法連接 - 請靠近電器後再試一次",
-    "cn": "区域太大无法连接 - 请靠近电器后再试一次"
+    "en": "Area too large to connect - this space needs its own Battery Bank",
+    "ch": "區域太大無法連接 - 這個空間需要自己的蓄電池組",
+    "cn": "区域太大无法连接 - 这个空间需要自己的蓄电池组"
    },
    "IGUI_GS_Acknowledge": {
     "en": "Acknowledge",
@@ -28326,6 +28401,41 @@
     "en": "Your companion is tired and needs rest.",
     "ch": "你的夥伴貓累了, 需要休息.",
     "cn": "你的伙伴猫累了, 需要休息."
+   },
+   "IGUI_ItemCat_FrockinLATEX": {
+    "en": "Frockin LATEX",
+    "ch": "華麗乳膠服飾",
+    "cn": "华丽乳胶服饰"
+   },
+   "IGUI_ItemCat_FrockinLogistics": {
+    "en": "Frockin Logistics",
+    "ch": "華麗後勤系列",
+    "cn": "华丽后勤系列"
+   },
+   "IGUI_SimpleSuppressors_OilDrained": {
+    "en": "Oil drained. Refill before starting the engine.",
+    "ch": "機油已排出. 發動引擎前請先補充.",
+    "cn": "机油已排出. 启动发动机前请先补充."
+   },
+   "IGUI_SimpleSuppressors_OilRefilled": {
+    "en": "Engine oil topped up.",
+    "ch": "機油已補充.",
+    "cn": "机油已补充."
+   },
+   "IGUI_SimpleSuppressors_OilServiceFailed": {
+    "en": "Oil service could not finish. Check the filter, oil supply, and engine.",
+    "ch": "機油保養無法完成. 請檢查濾清器、機油存量與引擎.",
+    "cn": "机油保养无法完成. 请检查滤清器, 机油存量和发动机."
+   },
+   "IGUI_SimpleSuppressors_SuppressorCondition": {
+    "en": "Suppressor: %1%% condition",
+    "ch": "消音器: 耐久度 %1%%",
+    "cn": "消音器: 耐久度 %1%%"
+   },
+   "IGUI_SimpleSuppressors_SuppressorWornOut": {
+    "en": "Suppressor: worn out (no sound reduction)",
+    "ch": "消音器: 已磨損報廢 (無消音效果)",
+    "cn": "消音器: 已磨损报废 (无消音效果)"
    }
   },
   "ItemName.json": {
@@ -124006,6 +124116,1056 @@
     "en": "Carton of Wood Charcoal",
     "ch": "自製木炭 (整箱)",
     "cn": "自制木炭 (整箱)"
+   },
+   "SnackTime89.ST_BooBerry_Closed": {
+    "en": "General Mills Boo Berry",
+    "ch": "通用磨坊藍莓鬼麥片",
+    "cn": "通用磨坊蓝莓鬼麦片"
+   },
+   "SnackTime89.ST_CapnCrunchB_Closed": {
+    "en": "Cap'n Crunch Berries",
+    "ch": "脆脆船長莓果麥片",
+    "cn": "脆脆船长莓果麦片"
+   },
+   "SnackTime89.ST_CapnCrunchCard_01": {
+    "en": "1989 Cap'n Crunch Baseball Card #01 - Jose Canseco",
+    "ch": "1989 脆脆船長棒球卡 #01 - Jose Canseco",
+    "cn": "1989 脆脆船长棒球卡 #01 - Jose Canseco"
+   },
+   "SnackTime89.ST_CapnCrunchCard_02": {
+    "en": "1989 Cap'n Crunch Baseball Card #02 - Kirk Gibson",
+    "ch": "1989 脆脆船長棒球卡 #02 - Kirk Gibson",
+    "cn": "1989 脆脆船长棒球卡 #02 - Kirk Gibson"
+   },
+   "SnackTime89.ST_CapnCrunchCard_03": {
+    "en": "1989 Cap'n Crunch Baseball Card #03 - Orel Hershiser",
+    "ch": "1989 脆脆船長棒球卡 #03 - Orel Hershiser",
+    "cn": "1989 脆脆船长棒球卡 #03 - Orel Hershiser"
+   },
+   "SnackTime89.ST_CapnCrunchCard_04": {
+    "en": "1989 Cap'n Crunch Baseball Card #04 - Frank Viola",
+    "ch": "1989 脆脆船長棒球卡 #04 - Frank Viola",
+    "cn": "1989 脆脆船长棒球卡 #04 - Frank Viola"
+   },
+   "SnackTime89.ST_CapnCrunchCard_05": {
+    "en": "1989 Cap'n Crunch Baseball Card #05 - Tony Gwynn",
+    "ch": "1989 脆脆船長棒球卡 #05 - Tony Gwynn",
+    "cn": "1989 脆脆船长棒球卡 #05 - Tony Gwynn"
+   },
+   "SnackTime89.ST_CapnCrunchCard_06": {
+    "en": "1989 Cap'n Crunch Baseball Card #06 - Cal Ripken Jr.",
+    "ch": "1989 脆脆船長棒球卡 #06 - Cal Ripken Jr.",
+    "cn": "1989 脆脆船长棒球卡 #06 - Cal Ripken Jr."
+   },
+   "SnackTime89.ST_CapnCrunchCard_07": {
+    "en": "1989 Cap'n Crunch Baseball Card #07 - Darryl Strawberry",
+    "ch": "1989 脆脆船長棒球卡 #07 - Darryl Strawberry",
+    "cn": "1989 脆脆船长棒球卡 #07 - Darryl Strawberry"
+   },
+   "SnackTime89.ST_CapnCrunchCard_08": {
+    "en": "1989 Cap'n Crunch Baseball Card #08 - Don Mattingly",
+    "ch": "1989 脆脆船長棒球卡 #08 - Don Mattingly",
+    "cn": "1989 脆脆船长棒球卡 #08 - Don Mattingly"
+   },
+   "SnackTime89.ST_CapnCrunchCard_09": {
+    "en": "1989 Cap'n Crunch Baseball Card #09 - George Brett",
+    "ch": "1989 脆脆船長棒球卡 #09 - George Brett",
+    "cn": "1989 脆脆船长棒球卡 #09 - George Brett"
+   },
+   "SnackTime89.ST_CapnCrunchCard_10": {
+    "en": "1989 Cap'n Crunch Baseball Card #10 - Andre Dawson",
+    "ch": "1989 脆脆船長棒球卡 #10 - Andre Dawson",
+    "cn": "1989 脆脆船长棒球卡 #10 - Andre Dawson"
+   },
+   "SnackTime89.ST_CapnCrunchCard_11": {
+    "en": "1989 Cap'n Crunch Baseball Card #11 - Dale Murphy",
+    "ch": "1989 脆脆船長棒球卡 #11 - Dale Murphy",
+    "cn": "1989 脆脆船长棒球卡 #11 - Dale Murphy"
+   },
+   "SnackTime89.ST_CapnCrunchCard_12": {
+    "en": "1989 Cap'n Crunch Baseball Card #12 - Alan Trammell",
+    "ch": "1989 脆脆船長棒球卡 #12 - Alan Trammell",
+    "cn": "1989 脆脆船长棒球卡 #12 - Alan Trammell"
+   },
+   "SnackTime89.ST_CapnCrunchCard_13": {
+    "en": "1989 Cap'n Crunch Baseball Card #13 - Eric Davis",
+    "ch": "1989 脆脆船長棒球卡 #13 - Eric Davis",
+    "cn": "1989 脆脆船长棒球卡 #13 - Eric Davis"
+   },
+   "SnackTime89.ST_CapnCrunchCard_14": {
+    "en": "1989 Cap'n Crunch Baseball Card #14 - Jack Clark",
+    "ch": "1989 脆脆船長棒球卡 #14 - Jack Clark",
+    "cn": "1989 脆脆船长棒球卡 #14 - Jack Clark"
+   },
+   "SnackTime89.ST_CapnCrunchCard_15": {
+    "en": "1989 Cap'n Crunch Baseball Card #15 - Eddie Murray",
+    "ch": "1989 脆脆船長棒球卡 #15 - Eddie Murray",
+    "cn": "1989 脆脆船长棒球卡 #15 - Eddie Murray"
+   },
+   "SnackTime89.ST_CapnCrunchCard_16": {
+    "en": "1989 Cap'n Crunch Baseball Card #16 - Mike Schmidt",
+    "ch": "1989 脆脆船長棒球卡 #16 - Mike Schmidt",
+    "cn": "1989 脆脆船长棒球卡 #16 - Mike Schmidt"
+   },
+   "SnackTime89.ST_CapnCrunchCard_17": {
+    "en": "1989 Cap'n Crunch Baseball Card #17 - Doc Gooden",
+    "ch": "1989 脆脆船長棒球卡 #17 - Doc Gooden",
+    "cn": "1989 脆脆船长棒球卡 #17 - Doc Gooden"
+   },
+   "SnackTime89.ST_CapnCrunchCard_18": {
+    "en": "1989 Cap'n Crunch Baseball Card #18 - Roger Clemens",
+    "ch": "1989 脆脆船長棒球卡 #18 - Roger Clemens",
+    "cn": "1989 脆脆船长棒球卡 #18 - Roger Clemens"
+   },
+   "SnackTime89.ST_CapnCrunchCard_19": {
+    "en": "1989 Cap'n Crunch Baseball Card #19 - Will Clark",
+    "ch": "1989 脆脆船長棒球卡 #19 - Will Clark",
+    "cn": "1989 脆脆船长棒球卡 #19 - Will Clark"
+   },
+   "SnackTime89.ST_CapnCrunchCard_20": {
+    "en": "1989 Cap'n Crunch Baseball Card #20 - Kirby Puckett",
+    "ch": "1989 脆脆船長棒球卡 #20 - Kirby Puckett",
+    "cn": "1989 脆脆船长棒球卡 #20 - Kirby Puckett"
+   },
+   "SnackTime89.ST_CapnCrunchCard_21": {
+    "en": "1989 Cap'n Crunch Baseball Card #21 - Robin Yount",
+    "ch": "1989 脆脆船長棒球卡 #21 - Robin Yount",
+    "cn": "1989 脆脆船长棒球卡 #21 - Robin Yount"
+   },
+   "SnackTime89.ST_CapnCrunchCard_22": {
+    "en": "1989 Cap'n Crunch Baseball Card #22 - Mark McGwire",
+    "ch": "1989 脆脆船長棒球卡 #22 - Mark McGwire",
+    "cn": "1989 脆脆船长棒球卡 #22 - Mark McGwire"
+   },
+   "SnackTime89.ST_CapnCrunchComic_Identicals": {
+    "en": "1992 Cap'n Crunch Magic Cartoon - The Land of the Identicals",
+    "ch": "1992 脆脆船長魔術漫畫 - The Land of the Identicals",
+    "cn": "1992 脆脆船长魔术漫画 - The Land of the Identicals"
+   },
+   "SnackTime89.ST_CapnCrunchComic_Shushman": {
+    "en": "1992 Cap'n Crunch Magic Cartoon - The Valley of the Shushman",
+    "ch": "1992 脆脆船長魔術漫畫 - The Valley of the Shushman",
+    "cn": "1992 脆脆船长魔术漫画 - The Valley of the Shushman"
+   },
+   "SnackTime89.ST_CapnCrunchComic_TopsyTurvy": {
+    "en": "1992 Cap'n Crunch Magic Cartoon - The Island of Topsy Turvy",
+    "ch": "1992 脆脆船長魔術漫畫 - The Island of Topsy Turvy",
+    "cn": "1992 脆脆船长魔术漫画 - The Island of Topsy Turvy"
+   },
+   "SnackTime89.ST_CapnCrunchPB_Closed": {
+    "en": "Cap'n Crunch Peanut Butter Crunch",
+    "ch": "脆脆船長花生醬麥片",
+    "cn": "脆脆船长花生酱麦片"
+   },
+   "SnackTime89.ST_CapnCrunch_Closed": {
+    "en": "Cap'n Crunch",
+    "ch": "脆脆船長麥片",
+    "cn": "脆脆船长麦片"
+   },
+   "SnackTime89.ST_CookieCrispC_Closed": {
+    "en": "Cookie Crisp Chocolate",
+    "ch": "餅乾脆麥片 (巧克力味)",
+    "cn": "曲奇脆麦片 (巧克力味)"
+   },
+   "SnackTime89.ST_CookieCrispO_Closed": {
+    "en": "Cookie Crisp Original",
+    "ch": "餅乾脆麥片 (原味)",
+    "cn": "曲奇脆麦片 (原味)"
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_01": {
+    "en": "1990 Cookie Crisp TMNT Card #01 - April is chased in the subway.",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #01 - April 在地鐵中被追逐.",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #01 - April 在地铁中被追逐."
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_02": {
+    "en": "1990 Cookie Crisp TMNT Card #02 - \"Awesome!\"",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #02 - \"讚啦!\"",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #02 - \"太棒了!\""
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_03": {
+    "en": "1990 Cookie Crisp TMNT Card #03 - \"Cowabunga!\"",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #03 - \"Cowabunga!\"",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #03 - \"Cowabunga!\""
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_04": {
+    "en": "1990 Cookie Crisp TMNT Card #04 - Donatello ... the fountain!",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #04 - Donatello … 噴泉!",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #04 - Donatello … 喷泉!"
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_05": {
+    "en": "1990 Cookie Crisp TMNT Card #05 - Donatello and Michaelangelo are groovin'.",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #05 - Donatello 與 Michaelangelo 玩得正嗨.",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #05 - Donatello 和 Michaelangelo 玩得正嗨."
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_06": {
+    "en": "1990 Cookie Crisp TMNT Card #06 - Donatello faces the Foot Clan.",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #06 - Donatello 對上 Foot Clan.",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #06 - Donatello 对上 Foot Clan."
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_07": {
+    "en": "1990 Cookie Crisp TMNT Card #07 - \"Excellent!\"",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #07 - \"太棒了!\"",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #07 - \"棒极了!\""
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_08": {
+    "en": "1990 Cookie Crisp TMNT Card #08 - Finding the spy in the cupboard.",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #08 - 在櫥櫃裡發現間諜.",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #08 - 在橱柜里发现间谍."
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_09": {
+    "en": "1990 Cookie Crisp TMNT Card #09 - Foot Clan sandwich.",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #09 - Foot Clan 三明治.",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #09 - Foot Clan 三明治."
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_10": {
+    "en": "1990 Cookie Crisp TMNT Card #10 - The Foot Clan attacks!",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #10 - Foot Clan 發動攻擊!",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #10 - Foot Clan 发动攻击!"
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_11": {
+    "en": "1990 Cookie Crisp TMNT Card #11 - The guys and April protect Raphael.",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #11 - 夥伴們與 April 保護 Raphael.",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #11 - 伙伴们和 April 保护 Raphael."
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_12": {
+    "en": "1990 Cookie Crisp TMNT Card #12 - \"I love being a turtle!\"",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #12 - \"我愛當一隻烏龜!\"",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #12 - \"我爱当一只乌龟!\""
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_13": {
+    "en": "1990 Cookie Crisp TMNT Card #13 - Michaelangelo, Raphael and Donatello",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #13 - Michaelangelo, Raphael 與 Donatello",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #13 - Michaelangelo, Raphael 和 Donatello"
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_14": {
+    "en": "1990 Cookie Crisp TMNT Card #14 - Michaelangelo shows his stuff.",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #14 - Michaelangelo 大展身手.",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #14 - Michaelangelo 大展身手."
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_15": {
+    "en": "1990 Cookie Crisp TMNT Card #15 - Ninja Turtle Power!",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #15 - 忍者龜的力量!",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #15 - 忍者神龟的力量!"
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_16": {
+    "en": "1990 Cookie Crisp TMNT Card #16 - \"Now you face - The Shredder!\"",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #16 - \"現在你要面對 - The Shredder!\"",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #16 - \"现在你要面对 - The Shredder!\""
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_17": {
+    "en": "1990 Cookie Crisp TMNT Card #17 - Raphael defends April in the subway.",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #17 - Raphael 在地鐵中護衛 April.",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #17 - Raphael 在地铁中护卫 April."
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_18": {
+    "en": "1990 Cookie Crisp TMNT Card #18 - The rooftop battle is on!",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #18 - 屋頂大戰開打!",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #18 - 屋顶大战开打!"
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_19": {
+    "en": "1990 Cookie Crisp TMNT Card #19 - The Shredder",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #19 - The Shredder",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #19 - The Shredder"
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_20": {
+    "en": "1990 Cookie Crisp TMNT Card #20 - The Shredder is the final hurdle to victory.",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #20 - The Shredder 是通往勝利的最後關卡.",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #20 - The Shredder 是通往胜利的最后关卡."
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_21": {
+    "en": "1990 Cookie Crisp TMNT Card #21 - Shredder's boys at work.",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #21 - Shredder 的手下正在行動.",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #21 - Shredder 的手下正在行动."
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_22": {
+    "en": "1990 Cookie Crisp TMNT Card #22 - Tatsu approaches Master Shredder.",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #22 - Tatsu 走向 Shredder 大師.",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #22 - Tatsu 走向 Shredder 大师."
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_23": {
+    "en": "1990 Cookie Crisp TMNT Card #23 - Tatsu orders the attack.",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #23 - Tatsu 下令進攻.",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #23 - Tatsu 下令进攻."
+   },
+   "SnackTime89.ST_CookieCrispTMNTCard_24": {
+    "en": "1990 Cookie Crisp TMNT Card #24 - \"Together we will punish these turtles.\"",
+    "ch": "1990 餅乾脆麥片 TMNT 卡 #24 - \"我們要一起懲罰這些烏龜.\"",
+    "cn": "1990 曲奇脆麦片 TMNT 卡 #24 - \"我们要一起惩罚这些乌龟.\""
+   },
+   "SnackTime89.ST_CountChocula_Closed": {
+    "en": "General Mills Count Chocula",
+    "ch": "通用磨坊朱古拉伯爵巧克力麥片",
+    "cn": "通用磨坊朱古拉伯爵巧克力麦片"
+   },
+   "SnackTime89.ST_FrankenBerry_Closed": {
+    "en": "General Mills Franken Berry",
+    "ch": "通用磨坊草莓科學怪人麥片",
+    "cn": "通用磨坊草莓科学怪人麦片"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_01": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #01 - Super Mario Land",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #01 - Super Mario Land",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #01 - Super Mario Land"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_02": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #02 - Super Mario Land",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #02 - Super Mario Land",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #02 - Super Mario Land"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_03": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #03 - Super Mario Land 2",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #03 - Super Mario Land 2",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #03 - Super Mario Land 2"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_04": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #04 - Super Mario Land 2",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #04 - Super Mario Land 2",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #04 - Super Mario Land 2"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_05": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #05 - Metroid II",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #05 - Metroid II",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #05 - Metroid II"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_06": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #06 - Metroid II",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #06 - Metroid II",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #06 - Metroid II"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_07": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #07 - Castlevania",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #07 - Castlevania",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #07 - Castlevania"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_08": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #08 - Castlevania",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #08 - Castlevania",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #08 - Castlevania"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_09": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #09 - Track Meet",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #09 - Track Meet",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #09 - Track Meet"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_10": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #10 - Track Meet",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #10 - Track Meet",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #10 - Track Meet"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_11": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #11 - Tennis",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #11 - Tennis",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #11 - Tennis"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_12": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #12 - Golf",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #12 - Golf",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #12 - Golf"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_13": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #13 - Gauntlet II",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #13 - Gauntlet II",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #13 - Gauntlet II"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_14": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #14 - Paperboy",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #14 - Paperboy",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #14 - Paperboy"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_15": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #15 - Dr Mario",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #15 - Dr Mario",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #15 - Dr Mario"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_16": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #16 - Dr Mario",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #16 - Dr Mario",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #16 - Dr Mario"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_17": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #17 - Parodius",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #17 - Parodius",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #17 - Parodius"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_18": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #18 - Solar Striker",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #18 - Solar Striker",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #18 - Solar Striker"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_19": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #19 - RC Pro-Am",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #19 - RC Pro-Am",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #19 - RC Pro-Am"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_20": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #20 - RC Pro-Am",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #20 - RC Pro-Am",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #20 - RC Pro-Am"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_21": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #21 - Tony & Mario",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #21 - Tony & Mario",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #21 - Tony & Mario"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_22": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #22 - Tony & Mario",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #22 - Tony & Mario",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #22 - Tony & Mario"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_23": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #23 - Tony in Nintendo Land",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #23 - Tony in Nintendo Land",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #23 - Tony in Nintendo Land"
+   },
+   "SnackTime89.ST_FrostiesGameBoyCard_24": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy Card #24 - Tony in Nintendo Land",
+    "ch": "1993 家樂氏香甜玉米片任天堂 Game Boy 卡 #24 - Tony in Nintendo Land",
+    "cn": "1993 家乐氏香甜玉米片任天堂 Game Boy 卡 #24 - Tony in Nintendo Land"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_01": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker A (60) - Franco Baresi",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 A (60) - Franco Baresi",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 A (60) - Franco Baresi"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_02": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker B (360) - Emilio Butragueño",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 B (360) - Emilio Butragueño",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 B (360) - Emilio Butragueño"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_03": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker C (207) - Careca",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 C (207) - Careca",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 C (207) - Careca"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_04": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker D (340) - Jan Ceulemans",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 D (340) - Jan Ceulemans",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 D (340) - Jan Ceulemans"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_05": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker E (406) - Ronald Koeman",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 E (406) - Ronald Koeman",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 E (406) - Ronald Koeman"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_06": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker F (211) - Jim Leighton",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 F (211) - Jim Leighton",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 F (211) - Jim Leighton"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_07": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker G (399) - Gary Lineker",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 G (399) - Gary Lineker",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 G (399) - Gary Lineker"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_08": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker H (128) - Diego Maradona",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 H (128) - Diego Maradona",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 H (128) - Diego Maradona"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_09": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker I (259) - Lothar Matthäus",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 I (259) - Lothar Matthäus",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 I (259) - Lothar Matthäus"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_10": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker J (395) - Bryan Robson",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 J (395) - Bryan Robson",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 J (395) - Bryan Robson"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_11": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker K (361) - Julio Salinas",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 K (361) - Julio Salinas",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 K (361) - Julio Salinas"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_12": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker L (380) - Ruben Sosa",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 L (380) - Ruben Sosa",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 L (380) - Ruben Sosa"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_13": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker M (279) - Dragan Stojkovic",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 M (279) - Dragan Stojkovic",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 M (279) - Dragan Stojkovic"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_14": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker N (300) - Carlos Alberto Valderrama",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 N (300) - Carlos Alberto Valderrama",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 N (300) - Carlos Alberto Valderrama"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_15": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker O (413) - Gerald Vanenburg",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 O (413) - Gerald Vanenburg",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 O (413) - Gerald Vanenburg"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_16": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker P (54) - Gianluca Vialli",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 P (54) - Gianluca Vialli",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 P (54) - Gianluca Vialli"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_17": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker Q (264) - Rudi Völler",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 Q (264) - Rudi Völler",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 Q (264) - Rudi Völler"
+   },
+   "SnackTime89.ST_FrostiesItalia90Sticker_18": {
+    "en": "Panini FIFA World Cup Italia ’90 - Sticker R (147) - Aleksandr Zavarov",
+    "ch": "Panini FIFA 世界盃 Italia ’90 貼紙 R (147) - Aleksandr Zavarov",
+    "cn": "Panini FIFA 世界杯 Italia ’90 贴纸 R (147) - Aleksandr Zavarov"
+   },
+   "SnackTime89.ST_GoldenGrahams_Closed": {
+    "en": "General Mills Golden Grahams",
+    "ch": "通用磨坊蜂蜜格雷厄姆麥片",
+    "cn": "通用磨坊蜂蜜格雷厄姆麦片"
+   },
+   "SnackTime89.ST_KelloggsAllStarsCard_01": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars Card #01 - Willie Stargell",
+    "ch": "1992 家樂氏玉米片全明星卡 #01 - Willie Stargell",
+    "cn": "1992 家乐氏玉米片全明星卡 #01 - Willie Stargell"
+   },
+   "SnackTime89.ST_KelloggsAllStarsCard_02": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars Card #02 - Tony Perez",
+    "ch": "1992 家樂氏玉米片全明星卡 #02 - Tony Perez",
+    "cn": "1992 家乐氏玉米片全明星卡 #02 - Tony Perez"
+   },
+   "SnackTime89.ST_KelloggsAllStarsCard_03": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars Card #03 - Jim Palmer",
+    "ch": "1992 家樂氏玉米片全明星卡 #03 - Jim Palmer",
+    "cn": "1992 家乐氏玉米片全明星卡 #03 - Jim Palmer"
+   },
+   "SnackTime89.ST_KelloggsAllStarsCard_04": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars Card #04 - Rod Carew",
+    "ch": "1992 家樂氏玉米片全明星卡 #04 - Rod Carew",
+    "cn": "1992 家乐氏玉米片全明星卡 #04 - Rod Carew"
+   },
+   "SnackTime89.ST_KelloggsAllStarsCard_05": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars Card #05 - Tom Seaver",
+    "ch": "1992 家樂氏玉米片全明星卡 #05 - Tom Seaver",
+    "cn": "1992 家乐氏玉米片全明星卡 #05 - Tom Seaver"
+   },
+   "SnackTime89.ST_KelloggsAllStarsCard_06": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars Card #06 - Phil Niekro",
+    "ch": "1992 家樂氏玉米片全明星卡 #06 - Phil Niekro",
+    "cn": "1992 家乐氏玉米片全明星卡 #06 - Phil Niekro"
+   },
+   "SnackTime89.ST_KelloggsAllStarsCard_07": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars Card #07 - Bill Madlock",
+    "ch": "1992 家樂氏玉米片全明星卡 #07 - Bill Madlock",
+    "cn": "1992 家乐氏玉米片全明星卡 #07 - Bill Madlock"
+   },
+   "SnackTime89.ST_KelloggsAllStarsCard_08": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars Card #08 - Jim Rice",
+    "ch": "1992 家樂氏玉米片全明星卡 #08 - Jim Rice",
+    "cn": "1992 家乐氏玉米片全明星卡 #08 - Jim Rice"
+   },
+   "SnackTime89.ST_KelloggsAllStarsCard_09": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars Card #09 - Dan Quisenberry",
+    "ch": "1992 家樂氏玉米片全明星卡 #09 - Dan Quisenberry",
+    "cn": "1992 家乐氏玉米片全明星卡 #09 - Dan Quisenberry"
+   },
+   "SnackTime89.ST_KelloggsAllStarsCard_10": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars Card #10 - Mike Schmidt",
+    "ch": "1992 家樂氏玉米片全明星卡 #10 - Mike Schmidt",
+    "cn": "1992 家乐氏玉米片全明星卡 #10 - Mike Schmidt"
+   },
+   "SnackTime89.ST_KelloggsBaseballGreatsCard_01": {
+    "en": "1991 Kellogg's Baseball Greats Card #01 - Gaylord Perry",
+    "ch": "1991 家樂氏棒球傳奇卡 #01 - Gaylord Perry",
+    "cn": "1991 家乐氏棒球传奇卡 #01 - Gaylord Perry"
+   },
+   "SnackTime89.ST_KelloggsBaseballGreatsCard_02": {
+    "en": "1991 Kellogg's Baseball Greats Card #02 - Hank Aaron",
+    "ch": "1991 家樂氏棒球傳奇卡 #02 - Hank Aaron",
+    "cn": "1991 家乐氏棒球传奇卡 #02 - Hank Aaron"
+   },
+   "SnackTime89.ST_KelloggsBaseballGreatsCard_03": {
+    "en": "1991 Kellogg's Baseball Greats Card #03 - Willie Mays",
+    "ch": "1991 家樂氏棒球傳奇卡 #03 - Willie Mays",
+    "cn": "1991 家乐氏棒球传奇卡 #03 - Willie Mays"
+   },
+   "SnackTime89.ST_KelloggsBaseballGreatsCard_04": {
+    "en": "1991 Kellogg's Baseball Greats Card #04 - Ernie Banks",
+    "ch": "1991 家樂氏棒球傳奇卡 #04 - Ernie Banks",
+    "cn": "1991 家乐氏棒球传奇卡 #04 - Ernie Banks"
+   },
+   "SnackTime89.ST_KelloggsBaseballGreatsCard_05": {
+    "en": "1991 Kellogg's Baseball Greats Card #05 - Bob Gibson",
+    "ch": "1991 家樂氏棒球傳奇卡 #05 - Bob Gibson",
+    "cn": "1991 家乐氏棒球传奇卡 #05 - Bob Gibson"
+   },
+   "SnackTime89.ST_KelloggsBaseballGreatsCard_06": {
+    "en": "1991 Kellogg's Baseball Greats Card #06 - Harmon Killebrew",
+    "ch": "1991 家樂氏棒球傳奇卡 #06 - Harmon Killebrew",
+    "cn": "1991 家乐氏棒球传奇卡 #06 - Harmon Killebrew"
+   },
+   "SnackTime89.ST_KelloggsBaseballGreatsCard_07": {
+    "en": "1991 Kellogg's Baseball Greats Card #07 - Rollie Fingers",
+    "ch": "1991 家樂氏棒球傳奇卡 #07 - Rollie Fingers",
+    "cn": "1991 家乐氏棒球传奇卡 #07 - Rollie Fingers"
+   },
+   "SnackTime89.ST_KelloggsBaseballGreatsCard_08": {
+    "en": "1991 Kellogg's Baseball Greats Card #08 - Steve Carlton",
+    "ch": "1991 家樂氏棒球傳奇卡 #08 - Steve Carlton",
+    "cn": "1991 家乐氏棒球传奇卡 #08 - Steve Carlton"
+   },
+   "SnackTime89.ST_KelloggsBaseballGreatsCard_09": {
+    "en": "1991 Kellogg's Baseball Greats Card #09 - Billy Williams",
+    "ch": "1991 家樂氏棒球傳奇卡 #09 - Billy Williams",
+    "cn": "1991 家乐氏棒球传奇卡 #09 - Billy Williams"
+   },
+   "SnackTime89.ST_KelloggsBaseballGreatsCard_10": {
+    "en": "1991 Kellogg's Baseball Greats Card #10 - Lou Brock",
+    "ch": "1991 家樂氏棒球傳奇卡 #10 - Lou Brock",
+    "cn": "1991 家乐氏棒球传奇卡 #10 - Lou Brock"
+   },
+   "SnackTime89.ST_KelloggsBaseballGreatsCard_11": {
+    "en": "1991 Kellogg's Baseball Greats Card #11 - Yogi Berra",
+    "ch": "1991 家樂氏棒球傳奇卡 #11 - Yogi Berra",
+    "cn": "1991 家乐氏棒球传奇卡 #11 - Yogi Berra"
+   },
+   "SnackTime89.ST_KelloggsBaseballGreatsCard_12": {
+    "en": "1991 Kellogg's Baseball Greats Card #12 - Warren Spahn",
+    "ch": "1991 家樂氏棒球傳奇卡 #12 - Warren Spahn",
+    "cn": "1991 家乐氏棒球传奇卡 #12 - Warren Spahn"
+   },
+   "SnackTime89.ST_KelloggsBaseballGreatsCard_13": {
+    "en": "1991 Kellogg's Baseball Greats Card #13 - Boog Powell",
+    "ch": "1991 家樂氏棒球傳奇卡 #13 - Boog Powell",
+    "cn": "1991 家乐氏棒球传奇卡 #13 - Boog Powell"
+   },
+   "SnackTime89.ST_KelloggsBaseballGreatsCard_14": {
+    "en": "1991 Kellogg's Baseball Greats Card #14 - Don Baylor",
+    "ch": "1991 家樂氏棒球傳奇卡 #14 - Don Baylor",
+    "cn": "1991 家乐氏棒球传奇卡 #14 - Don Baylor"
+   },
+   "SnackTime89.ST_KelloggsBaseballGreatsCard_15": {
+    "en": "1991 Kellogg's Baseball Greats Card #15 - Ralph Kiner",
+    "ch": "1991 家樂氏棒球傳奇卡 #15 - Ralph Kiner",
+    "cn": "1991 家乐氏棒球传奇卡 #15 - Ralph Kiner"
+   },
+   "SnackTime89.ST_KelloggsChocoKrisp_Closed": {
+    "en": "Kellogg's Choco Krispies",
+    "ch": "家樂氏巧克力米脆片",
+    "cn": "家乐氏巧克力米脆片"
+   },
+   "SnackTime89.ST_KelloggsCornFlakes_Closed": {
+    "en": "Kellogg's Corn Flakes",
+    "ch": "家樂氏玉米片",
+    "cn": "家乐氏玉米片"
+   },
+   "SnackTime89.ST_KelloggsFrostedFlakes_Closed": {
+    "en": "Kellogg's Frosted Flakes",
+    "ch": "家樂氏香甜玉米片",
+    "cn": "家乐氏香甜玉米片"
+   },
+   "SnackTime89.ST_KelloggsHoneyLoops_Closed": {
+    "en": "Kellogg's Honey Loops",
+    "ch": "家樂氏蜂蜜圈",
+    "cn": "家乐氏蜂蜜圈"
+   },
+   "SnackTime89.ST_KelloggsHoneyPops_Closed": {
+    "en": "Kellogg's Honey Pops",
+    "ch": "家樂氏蜂蜜波波",
+    "cn": "家乐氏蜂蜜波波"
+   },
+   "SnackTime89.ST_KelloggsHoneySmacks_Closed": {
+    "en": "Kellogg's Honey Smacks",
+    "ch": "家樂氏蜂蜜脆米",
+    "cn": "家乐氏蜂蜜脆米"
+   },
+   "SnackTime89.ST_KelloggsRiceKrispies_Closed": {
+    "en": "Kellogg's Rice Krispies",
+    "ch": "家樂氏米脆片",
+    "cn": "家乐氏米脆片"
+   },
+   "SnackTime89.ST_KelloggsSpecialK_Closed": {
+    "en": "Kellogg's Special K",
+    "ch": "家樂氏香脆麥米片",
+    "cn": "家乐氏香脆麦米片"
+   },
+   "SnackTime89.ST_LuckyCharms_Closed": {
+    "en": "General Mills Lucky Charms",
+    "ch": "通用磨坊幸運符棉花糖麥片",
+    "cn": "通用磨坊幸运符棉花糖麦片"
+   },
+   "SnackTime89.ST_NestleChocapic_Closed": {
+    "en": "Nestlé Chocapic",
+    "ch": "雀巢可可片",
+    "cn": "雀巢可可片"
+   },
+   "SnackTime89.ST_NestleNesquikCereal_Closed": {
+    "en": "Nestlé Nesquik Cereal",
+    "ch": "雀巢脆穀樂",
+    "cn": "雀巢脆谷乐"
+   },
+   "SnackTime89.ST_RalstonBaseballCard_01": {
+    "en": "1987 Ralston Purina Baseball Card #01 - Nolan Ryan",
+    "ch": "1987 Ralston Purina 棒球卡 #01 - Nolan Ryan",
+    "cn": "1987 Ralston Purina 棒球卡 #01 - Nolan Ryan"
+   },
+   "SnackTime89.ST_RalstonBaseballCard_02": {
+    "en": "1987 Ralston Purina Baseball Card #02 - Steve Garvey",
+    "ch": "1987 Ralston Purina 棒球卡 #02 - Steve Garvey",
+    "cn": "1987 Ralston Purina 棒球卡 #02 - Steve Garvey"
+   },
+   "SnackTime89.ST_RalstonBaseballCard_03": {
+    "en": "1987 Ralston Purina Baseball Card #03 - Wade Boggs",
+    "ch": "1987 Ralston Purina 棒球卡 #03 - Wade Boggs",
+    "cn": "1987 Ralston Purina 棒球卡 #03 - Wade Boggs"
+   },
+   "SnackTime89.ST_RalstonBaseballCard_04": {
+    "en": "1987 Ralston Purina Baseball Card #04 - Dave Winfield",
+    "ch": "1987 Ralston Purina 棒球卡 #04 - Dave Winfield",
+    "cn": "1987 Ralston Purina 棒球卡 #04 - Dave Winfield"
+   },
+   "SnackTime89.ST_RalstonBaseballCard_05": {
+    "en": "1987 Ralston Purina Baseball Card #05 - Don Mattingly",
+    "ch": "1987 Ralston Purina 棒球卡 #05 - Don Mattingly",
+    "cn": "1987 Ralston Purina 棒球卡 #05 - Don Mattingly"
+   },
+   "SnackTime89.ST_RalstonBaseballCard_06": {
+    "en": "1987 Ralston Purina Baseball Card #06 - Don Sutton",
+    "ch": "1987 Ralston Purina 棒球卡 #06 - Don Sutton",
+    "cn": "1987 Ralston Purina 棒球卡 #06 - Don Sutton"
+   },
+   "SnackTime89.ST_RalstonBaseballCard_07": {
+    "en": "1987 Ralston Purina Baseball Card #07 - Dave Parker",
+    "ch": "1987 Ralston Purina 棒球卡 #07 - Dave Parker",
+    "cn": "1987 Ralston Purina 棒球卡 #07 - Dave Parker"
+   },
+   "SnackTime89.ST_RalstonBaseballCard_08": {
+    "en": "1987 Ralston Purina Baseball Card #08 - Eddie Murray",
+    "ch": "1987 Ralston Purina 棒球卡 #08 - Eddie Murray",
+    "cn": "1987 Ralston Purina 棒球卡 #08 - Eddie Murray"
+   },
+   "SnackTime89.ST_RalstonBaseballCard_09": {
+    "en": "1987 Ralston Purina Baseball Card #09 - Gary Carter",
+    "ch": "1987 Ralston Purina 棒球卡 #09 - Gary Carter",
+    "cn": "1987 Ralston Purina 棒球卡 #09 - Gary Carter"
+   },
+   "SnackTime89.ST_RalstonBaseballCard_10": {
+    "en": "1987 Ralston Purina Baseball Card #10 - Roger Clemens",
+    "ch": "1987 Ralston Purina 棒球卡 #10 - Roger Clemens",
+    "cn": "1987 Ralston Purina 棒球卡 #10 - Roger Clemens"
+   },
+   "SnackTime89.ST_RalstonBaseballCard_11": {
+    "en": "1987 Ralston Purina Baseball Card #11 - Fernando Valenzuela",
+    "ch": "1987 Ralston Purina 棒球卡 #11 - Fernando Valenzuela",
+    "cn": "1987 Ralston Purina 棒球卡 #11 - Fernando Valenzuela"
+   },
+   "SnackTime89.ST_RalstonBaseballCard_12": {
+    "en": "1987 Ralston Purina Baseball Card #12 - Cal Ripken Jr",
+    "ch": "1987 Ralston Purina 棒球卡 #12 - Cal Ripken Jr",
+    "cn": "1987 Ralston Purina 棒球卡 #12 - Cal Ripken Jr"
+   },
+   "SnackTime89.ST_RalstonBaseballCard_13": {
+    "en": "1987 Ralston Purina Baseball Card #13 - Ozzie Smith",
+    "ch": "1987 Ralston Purina 棒球卡 #13 - Ozzie Smith",
+    "cn": "1987 Ralston Purina 棒球卡 #13 - Ozzie Smith"
+   },
+   "SnackTime89.ST_RalstonBaseballCard_14": {
+    "en": "1987 Ralston Purina Baseball Card #14 - Mike Schmidt",
+    "ch": "1987 Ralston Purina 棒球卡 #14 - Mike Schmidt",
+    "cn": "1987 Ralston Purina 棒球卡 #14 - Mike Schmidt"
+   },
+   "SnackTime89.ST_RalstonBaseballCard_15": {
+    "en": "1987 Ralston Purina Baseball Card #15 - Ryne Sandberg",
+    "ch": "1987 Ralston Purina 棒球卡 #15 - Ryne Sandberg",
+    "cn": "1987 Ralston Purina 棒球卡 #15 - Ryne Sandberg"
+   },
+   "SnackTime89.ST_RiceKrispiesAircraftCard_01": {
+    "en": "Card Kellogg's Rice Krispies British Military Aircraft 1963 #01 - Bristol Boxkite",
+    "ch": "1963 家樂氏米脆片英國軍機卡 #01 - Bristol Boxkite",
+    "cn": "1963 家乐氏米脆片英国军机卡 #01 - Bristol Boxkite"
+   },
+   "SnackTime89.ST_RiceKrispiesAircraftCard_02": {
+    "en": "Card Kellogg's Rice Krispies British Military Aircraft 1963 #02 - Handley Page V/1500 Bomber",
+    "ch": "1963 家樂氏米脆片英國軍機卡 #02 - Handley Page V/1500 Bomber",
+    "cn": "1963 家乐氏米脆片英国军机卡 #02 - Handley Page V/1500 Bomber"
+   },
+   "SnackTime89.ST_RiceKrispiesAircraftCard_03": {
+    "en": "Card Kellogg's Rice Krispies British Military Aircraft 1963 #03 - Short Seaplane Type 184",
+    "ch": "1963 家樂氏米脆片英國軍機卡 #03 - Short Seaplane Type 184",
+    "cn": "1963 家乐氏米脆片英国军机卡 #03 - Short Seaplane Type 184"
+   },
+   "SnackTime89.ST_RiceKrispiesAircraftCard_04": {
+    "en": "Card Kellogg's Rice Krispies British Military Aircraft 1963 #04 - Bristol F.2.B Fighter",
+    "ch": "1963 家樂氏米脆片英國軍機卡 #04 - Bristol F.2.B Fighter",
+    "cn": "1963 家乐氏米脆片英国军机卡 #04 - Bristol F.2.B Fighter"
+   },
+   "SnackTime89.ST_RiceKrispiesAircraftCard_05": {
+    "en": "Card Kellogg's Rice Krispies British Military Aircraft 1963 #05 - Gloster Gladiator",
+    "ch": "1963 家樂氏米脆片英國軍機卡 #05 - Gloster Gladiator",
+    "cn": "1963 家乐氏米脆片英国军机卡 #05 - Gloster Gladiator"
+   },
+   "SnackTime89.ST_RiceKrispiesAircraftCard_06": {
+    "en": "Card Kellogg's Rice Krispies British Military Aircraft 1963 #06 - Vickers Supermarine Spitfire",
+    "ch": "1963 家樂氏米脆片英國軍機卡 #06 - Vickers Supermarine Spitfire",
+    "cn": "1963 家乐氏米脆片英国军机卡 #06 - Vickers Supermarine Spitfire"
+   },
+   "SnackTime89.ST_RiceKrispiesAircraftCard_07": {
+    "en": "Card Kellogg's Rice Krispies British Military Aircraft 1963 #07 - Avro Lancaster",
+    "ch": "1963 家樂氏米脆片英國軍機卡 #07 - Avro Lancaster",
+    "cn": "1963 家乐氏米脆片英国军机卡 #07 - Avro Lancaster"
+   },
+   "SnackTime89.ST_RiceKrispiesAircraftCard_08": {
+    "en": "Card Kellogg's Rice Krispies British Military Aircraft 1963 #08 - Short Sunderland Mk.I",
+    "ch": "1963 家樂氏米脆片英國軍機卡 #08 - Short Sunderland Mk.I",
+    "cn": "1963 家乐氏米脆片英国军机卡 #08 - Short Sunderland Mk.I"
+   },
+   "SnackTime89.ST_RiceKrispiesAircraftCard_09": {
+    "en": "Card Kellogg's Rice Krispies British Military Aircraft 1963 #09 - de Havilland Mk.2",
+    "ch": "1963 家樂氏米脆片英國軍機卡 #09 - de Havilland Mk.2",
+    "cn": "1963 家乐氏米脆片英国军机卡 #09 - de Havilland Mk.2"
+   },
+   "SnackTime89.ST_RiceKrispiesAircraftCard_10": {
+    "en": "Card Kellogg's Rice Krispies British Military Aircraft 1963 #10 - Gloster Meteor F.3",
+    "ch": "1963 家樂氏米脆片英國軍機卡 #10 - Gloster Meteor F.3",
+    "cn": "1963 家乐氏米脆片英国军机卡 #10 - Gloster Meteor F.3"
+   },
+   "SnackTime89.ST_RiceKrispiesAircraftCard_11": {
+    "en": "Card Kellogg's Rice Krispies British Military Aircraft 1963 #11 - Westland Wessex Mk.I",
+    "ch": "1963 家樂氏米脆片英國軍機卡 #11 - Westland Wessex Mk.I",
+    "cn": "1963 家乐氏米脆片英国军机卡 #11 - Westland Wessex Mk.I"
+   },
+   "SnackTime89.ST_RiceKrispiesAircraftCard_12": {
+    "en": "Card Kellogg's Rice Krispies British Military Aircraft 1963 #12 - English Electric Lightning",
+    "ch": "1963 家樂氏米脆片英國軍機卡 #12 - English Electric Lightning",
+    "cn": "1963 家乐氏米脆片英国军机卡 #12 - English Electric Lightning"
+   },
+   "SnackTime89.ST_RiceKrispiesAircraftCard_13": {
+    "en": "Card Kellogg's Rice Krispies British Military Aircraft 1963 #13 - Gloster Javelin F(AW) Mk.9",
+    "ch": "1963 家樂氏米脆片英國軍機卡 #13 - Gloster Javelin F(AW) Mk.9",
+    "cn": "1963 家乐氏米脆片英国军机卡 #13 - Gloster Javelin F(AW) Mk.9"
+   },
+   "SnackTime89.ST_RiceKrispiesAircraftCard_14": {
+    "en": "Card Kellogg's Rice Krispies British Military Aircraft 1963 #14 - Handley Page Victor B.2",
+    "ch": "1963 家樂氏米脆片英國軍機卡 #14 - Handley Page Victor B.2",
+    "cn": "1963 家乐氏米脆片英国军机卡 #14 - Handley Page Victor B.2"
+   },
+   "SnackTime89.ST_RiceKrispiesAircraftCard_15": {
+    "en": "Card Kellogg's Rice Krispies British Military Aircraft 1963 #15 - Blackburn Buccaneer S Mk.I",
+    "ch": "1963 家樂氏米脆片英國軍機卡 #15 - Blackburn Buccaneer S Mk.I",
+    "cn": "1963 家乐氏米脆片英国军机卡 #15 - Blackburn Buccaneer S Mk.I"
+   },
+   "SnackTime89.ST_RiceKrispiesAircraftCard_16": {
+    "en": "Card Kellogg's Rice Krispies British Military Aircraft 1963 #16 - Hawker P.1127",
+    "ch": "1963 家樂氏米脆片英國軍機卡 #16 - Hawker P.1127",
+    "cn": "1963 家乐氏米脆片英国军机卡 #16 - Hawker P.1127"
+   },
+   "SnackTime89.ST_RiceKrispiesNHLTrophyCard_01": {
+    "en": "Card Kellogg's Rice Krispies NHL Trophies 1992 #01 - Stanley Cup",
+    "ch": "1992 家樂氏米脆片 NHL 獎盃卡 #01 - Stanley Cup",
+    "cn": "1992 家乐氏米脆片 NHL 奖杯卡 #01 - Stanley Cup"
+   },
+   "SnackTime89.ST_RiceKrispiesNHLTrophyCard_02": {
+    "en": "Card Kellogg's Rice Krispies NHL Trophies 1992 #02 - Presidents' Trophy",
+    "ch": "1992 家樂氏米脆片 NHL 獎盃卡 #02 - Presidents' Trophy",
+    "cn": "1992 家乐氏米脆片 NHL 奖杯卡 #02 - Presidents' Trophy"
+   },
+   "SnackTime89.ST_RiceKrispiesNHLTrophyCard_03": {
+    "en": "Card Kellogg's Rice Krispies NHL Trophies 1992 #03 - Hart Memorial Trophy",
+    "ch": "1992 家樂氏米脆片 NHL 獎盃卡 #03 - Hart Memorial Trophy",
+    "cn": "1992 家乐氏米脆片 NHL 奖杯卡 #03 - Hart Memorial Trophy"
+   },
+   "SnackTime89.ST_RiceKrispiesNHLTrophyCard_04": {
+    "en": "Card Kellogg's Rice Krispies NHL Trophies 1992 #04 - Conn Smythe Trophy",
+    "ch": "1992 家樂氏米脆片 NHL 獎盃卡 #04 - Conn Smythe Trophy",
+    "cn": "1992 家乐氏米脆片 NHL 奖杯卡 #04 - Conn Smythe Trophy"
+   },
+   "SnackTime89.ST_RiceKrispiesNHLTrophyCard_05": {
+    "en": "Card Kellogg's Rice Krispies NHL Trophies 1992 #05 - Vezina Trophy",
+    "ch": "1992 家樂氏米脆片 NHL 獎盃卡 #05 - Vezina Trophy",
+    "cn": "1992 家乐氏米脆片 NHL 奖杯卡 #05 - Vezina Trophy"
+   },
+   "SnackTime89.ST_RiceKrispiesNHLTrophyCard_06": {
+    "en": "Card Kellogg's Rice Krispies NHL Trophies 1992 #06 - James Norris Memorial Trophy",
+    "ch": "1992 家樂氏米脆片 NHL 獎盃卡 #06 - James Norris Memorial Trophy",
+    "cn": "1992 家乐氏米脆片 NHL 奖杯卡 #06 - James Norris Memorial Trophy"
+   },
+   "SnackTime89.ST_RiceKrispiesNHLTrophyCard_07": {
+    "en": "Card Kellogg's Rice Krispies NHL Trophies 1992 #07 - Calder Memorial Trophy",
+    "ch": "1992 家樂氏米脆片 NHL 獎盃卡 #07 - Calder Memorial Trophy",
+    "cn": "1992 家乐氏米脆片 NHL 奖杯卡 #07 - Calder Memorial Trophy"
+   },
+   "SnackTime89.ST_RiceKrispiesNHLTrophyCard_08": {
+    "en": "Card Kellogg's Rice Krispies NHL Trophies 1992 #08 - Frank J. Selke Trophy",
+    "ch": "1992 家樂氏米脆片 NHL 獎盃卡 #08 - Frank J. Selke Trophy",
+    "cn": "1992 家乐氏米脆片 NHL 奖杯卡 #08 - Frank J. Selke Trophy"
+   },
+   "SnackTime89.ST_RiceKrispiesNHLTrophyCard_09": {
+    "en": "Card Kellogg's Rice Krispies NHL Trophies 1992 #09 - Lady Byng Memorial Trophy",
+    "ch": "1992 家樂氏米脆片 NHL 獎盃卡 #09 - Lady Byng Memorial Trophy",
+    "cn": "1992 家乐氏米脆片 NHL 奖杯卡 #09 - Lady Byng Memorial Trophy"
+   },
+   "SnackTime89.ST_RiceKrispiesNHLTrophyCard_10": {
+    "en": "Card Kellogg's Rice Krispies NHL Trophies 1992 #10 - Art Ross Trophy",
+    "ch": "1992 家樂氏米脆片 NHL 獎盃卡 #10 - Art Ross Trophy",
+    "cn": "1992 家乐氏米脆片 NHL 奖杯卡 #10 - Art Ross Trophy"
+   },
+   "SnackTime89.ST_RiceKrispiesNHLTrophyCard_11": {
+    "en": "Card Kellogg's Rice Krispies NHL Trophies 1992 #11 - Jack Adams Award",
+    "ch": "1992 家樂氏米脆片 NHL 獎盃卡 #11 - Jack Adams Award",
+    "cn": "1992 家乐氏米脆片 NHL 奖杯卡 #11 - Jack Adams Award"
+   },
+   "SnackTime89.ST_StarWarsSticker_01": {
+    "en": "1977 General Mills Star Wars Sticker #01 - Ben (Obi-Wan) Kenobi",
+    "ch": "1977 通用磨坊星際大戰貼紙 #01 - Ben (Obi-Wan) Kenobi",
+    "cn": "1977 通用磨坊星球大战贴纸 #01 - Ben (Obi-Wan) Kenobi"
+   },
+   "SnackTime89.ST_StarWarsSticker_02": {
+    "en": "1977 General Mills Star Wars Sticker #02 - Luke Skywalker",
+    "ch": "1977 通用磨坊星際大戰貼紙 #02 - Luke Skywalker",
+    "cn": "1977 通用磨坊星球大战贴纸 #02 - Luke Skywalker"
+   },
+   "SnackTime89.ST_StarWarsSticker_03": {
+    "en": "1977 General Mills Star Wars Sticker #03 - Han Solo",
+    "ch": "1977 通用磨坊星際大戰貼紙 #03 - Han Solo",
+    "cn": "1977 通用磨坊星球大战贴纸 #03 - Han Solo"
+   },
+   "SnackTime89.ST_StarWarsSticker_04": {
+    "en": "1977 General Mills Star Wars Sticker #04 - Stormtroopers",
+    "ch": "1977 通用磨坊星際大戰貼紙 #04 - Stormtroopers",
+    "cn": "1977 通用磨坊星球大战贴纸 #04 - Stormtroopers"
+   },
+   "SnackTime89.ST_StarWarsSticker_05": {
+    "en": "1977 General Mills Star Wars Sticker #05 - Princess Leia Organa",
+    "ch": "1977 通用磨坊星際大戰貼紙 #05 - Princess Leia Organa",
+    "cn": "1977 通用磨坊星球大战贴纸 #05 - Princess Leia Organa"
+   },
+   "SnackTime89.ST_StarWarsSticker_06": {
+    "en": "1977 General Mills Star Wars Sticker #06 - Darth Vader",
+    "ch": "1977 通用磨坊星際大戰貼紙 #06 - Darth Vader",
+    "cn": "1977 通用磨坊星球大战贴纸 #06 - Darth Vader"
+   },
+   "SnackTime89.ST_StarWarsSticker_07": {
+    "en": "1977 General Mills Star Wars Sticker #07 - R2-D2",
+    "ch": "1977 通用磨坊星際大戰貼紙 #07 - R2-D2",
+    "cn": "1977 通用磨坊星球大战贴纸 #07 - R2-D2"
+   },
+   "SnackTime89.ST_StarWarsSticker_08": {
+    "en": "1977 General Mills Star Wars Sticker #08 - Ben Cuts off the Tractor Beam",
+    "ch": "1977 通用磨坊星際大戰貼紙 #08 - Ben 切斷牽引光束",
+    "cn": "1977 通用磨坊星球大战贴纸 #08 - Ben 切断牵引光束"
+   },
+   "SnackTime89.ST_StarWarsSticker_09": {
+    "en": "1977 General Mills Star Wars Sticker #09 - C-3PO",
+    "ch": "1977 通用磨坊星際大戰貼紙 #09 - C-3PO",
+    "cn": "1977 通用磨坊星球大战贴纸 #09 - C-3PO"
+   },
+   "SnackTime89.ST_StarWarsSticker_10": {
+    "en": "1977 General Mills Star Wars Sticker #10 - Chewbacca",
+    "ch": "1977 通用磨坊星際大戰貼紙 #10 - Chewbacca",
+    "cn": "1977 通用磨坊星球大战贴纸 #10 - Chewbacca"
+   },
+   "SnackTime89.ST_StarWarsSticker_11": {
+    "en": "1977 General Mills Star Wars Sticker #11 - Jawas",
+    "ch": "1977 通用磨坊星際大戰貼紙 #11 - Jawas",
+    "cn": "1977 通用磨坊星球大战贴纸 #11 - Jawas"
+   },
+   "SnackTime89.ST_StarWarsSticker_12": {
+    "en": "1977 General Mills Star Wars Sticker #12 - Luke Repairs C-3PO",
+    "ch": "1977 通用磨坊星際大戰貼紙 #12 - Luke 修理 C-3PO",
+    "cn": "1977 通用磨坊星球大战贴纸 #12 - Luke 修理 C-3PO"
+   },
+   "SnackTime89.ST_StarWarsSticker_13": {
+    "en": "1977 General Mills Star Wars Sticker #13 - C-3PO and R2-D2",
+    "ch": "1977 通用磨坊星際大戰貼紙 #13 - C-3PO 與 R2-D2",
+    "cn": "1977 通用磨坊星球大战贴纸 #13 - C-3PO 和 R2-D2"
+   },
+   "SnackTime89.ST_StarWarsSticker_14": {
+    "en": "1977 General Mills Star Wars Sticker #14 - Cockpit of the Millenium Falcon",
+    "ch": "1977 通用磨坊星際大戰貼紙 #14 - Millenium Falcon 的駕駛艙",
+    "cn": "1977 通用磨坊星球大战贴纸 #14 - Millenium Falcon 的驾驶舱"
+   },
+   "SnackTime89.ST_StarWarsSticker_15": {
+    "en": "1977 General Mills Star Wars Sticker #15 - Han Solo, Princess Leia and Luke",
+    "ch": "1977 通用磨坊星際大戰貼紙 #15 - Han Solo, Princess Leia 與 Luke",
+    "cn": "1977 通用磨坊星球大战贴纸 #15 - Han Solo, Princess Leia 和 Luke"
+   },
+   "SnackTime89.ST_StarWarsSticker_16": {
+    "en": "1977 General Mills Star Wars Sticker #16 - Attack on Darth Vader's Ship",
+    "ch": "1977 通用磨坊星際大戰貼紙 #16 - 突擊 Darth Vader 的戰艦",
+    "cn": "1977 通用磨坊星球大战贴纸 #16 - 突袭 Darth Vader 的战舰"
+   },
+   "SnackTime89.ST_TeddyGrahamsC_Closed": {
+    "en": "Teddy Grahams Chocolate",
+    "ch": "泰迪小熊餅乾 (巧克力味)",
+    "cn": "泰迪小熊饼干 (巧克力味)"
+   },
+   "SnackTime89.ST_TeddyGrahamsH_Closed": {
+    "en": "Teddy Grahams Honey",
+    "ch": "泰迪小熊餅乾 (蜂蜜味)",
+    "cn": "泰迪小熊饼干 (蜂蜜味)"
+   },
+   "SnackTime89.ST_Trix_Closed": {
+    "en": "General Mills Trix",
+    "ch": "通用磨坊繽紛果味麥片",
+    "cn": "通用磨坊缤纷果味麦片"
+   },
+   "P4MySoCalledSnack.P4ZomboidmanSticker31": {
+    "en": "SPIFFOMAN Sticker (No.31)",
+    "ch": "小浣熊男孩貼紙 (No.31)",
+    "cn": "小浣熊男孩贴纸 (No.31)"
+   },
+   "P4MySoCalledSnack.P4ZomboidmanSticker32": {
+    "en": "SPIFFOMAN Sticker (No.32)",
+    "ch": "小浣熊男孩貼紙 (No.32)",
+    "cn": "小浣熊男孩贴纸 (No.32)"
+   },
+   "P4MySoCalledSnack.P4ZomboidmanSticker33": {
+    "en": "SPIFFOMAN Sticker (No.33)",
+    "ch": "小浣熊男孩貼紙 (No.33)",
+    "cn": "小浣熊男孩贴纸 (No.33)"
+   },
+   "P4MySoCalledSnack.P4ZomboidmanSticker34": {
+    "en": "SPIFFOMAN Sticker (No.34)",
+    "ch": "小浣熊男孩貼紙 (No.34)",
+    "cn": "小浣熊男孩贴纸 (No.34)"
+   },
+   "P4MySoCalledSnack.P4ZomboidmanSticker35": {
+    "en": "SPIFFOMAN Sticker (No.35)",
+    "ch": "小浣熊男孩貼紙 (No.35)",
+    "cn": "小浣熊男孩贴纸 (No.35)"
+   },
+   "P4MySoCalledSnack.P4ZomboidmanSticker36": {
+    "en": "SPIFFOMAN Sticker (No.36)",
+    "ch": "小浣熊男孩貼紙 (No.36)",
+    "cn": "小浣熊男孩贴纸 (No.36)"
+   },
+   "P4MySoCalledSnack.P4ZomboidmanSticker37": {
+    "en": "SPIFFOMAN Sticker (No.37)",
+    "ch": "小浣熊男孩貼紙 (No.37)",
+    "cn": "小浣熊男孩贴纸 (No.37)"
+   },
+   "P4MySoCalledSnack.P4ZomboidmanSticker38": {
+    "en": "SPIFFOMAN Sticker (No.38)",
+    "ch": "小浣熊男孩貼紙 (No.38)",
+    "cn": "小浣熊男孩贴纸 (No.38)"
+   },
+   "P4MySoCalledSnack.P4ZomboidmanSticker39": {
+    "en": "SPIFFOMAN Sticker (No.39)",
+    "ch": "小浣熊男孩貼紙 (No.39)",
+    "cn": "小浣熊男孩贴纸 (No.39)"
+   },
+   "P4MySoCalledSnack.P4ZomboidmanSticker40": {
+    "en": "SPIFFOMAN Sticker (No.40)",
+    "ch": "小浣熊男孩貼紙 (No.40)",
+    "cn": "小浣熊男孩贴纸 (No.40)"
+   },
+   "P4MySoCalledSnack.P4ZomboidmanSticker41": {
+    "en": "SPIFFOMAN Sticker (No.41)",
+    "ch": "小浣熊男孩貼紙 (No.41)",
+    "cn": "小浣熊男孩贴纸 (No.41)"
+   },
+   "P4MySoCalledSnack.P4ZomboidmanSticker42": {
+    "en": "SPIFFOMAN Sticker (No.42)",
+    "ch": "小浣熊男孩貼紙 (No.42)",
+    "cn": "小浣熊男孩贴纸 (No.42)"
+   },
+   "SimpleSuppressors.EngineOil": {
+    "en": "Engine Oil",
+    "ch": "機油",
+    "cn": "机油"
    }
   },
   "Print_Media.json": {
@@ -135836,6 +136996,46 @@
     "en": "Produce 4.6x30mm",
     "ch": "生產4.6x30mm子彈",
     "cn": "生产4.6x30mm子弹"
+   },
+   "RepairSuppressor12Gauge": {
+    "en": "Repair 12 Gauge Machined Suppressor",
+    "ch": "修理 12 號機加工消音器",
+    "cn": "修理12号机加工消音器"
+   },
+   "RepairSuppressor3030": {
+    "en": "Repair .30-30 Machined Suppressor",
+    "ch": "修理 .30-30 機加工消音器",
+    "cn": "修理.30-30机加工消音器"
+   },
+   "RepairSuppressor308": {
+    "en": "Repair .308 Machined Suppressor",
+    "ch": "修理 .308 機加工消音器",
+    "cn": "修理.308机加工消音器"
+   },
+   "RepairSuppressor357": {
+    "en": "Repair .357 Machined Suppressor",
+    "ch": "修理 .357 機加工消音器",
+    "cn": "修理.357机加工消音器"
+   },
+   "RepairSuppressor44": {
+    "en": "Repair .44 Machined Suppressor",
+    "ch": "修理 .44 機加工消音器",
+    "cn": "修理.44机加工消音器"
+   },
+   "RepairSuppressor45ACP": {
+    "en": "Repair .45 ACP Machined Suppressor",
+    "ch": "修理 .45 ACP 機加工消音器",
+    "cn": "修理.45 ACP机加工消音器"
+   },
+   "RepairSuppressor556": {
+    "en": "Repair 5.56 Machined Suppressor",
+    "ch": "修理 5.56mm 機加工消音器",
+    "cn": "修理5.56mm机加工消音器"
+   },
+   "RepairSuppressor9mm": {
+    "en": "Repair 9mm Machined Suppressor",
+    "ch": "修理 9mm 機加工消音器",
+    "cn": "修理9mm机加工消音器"
    }
   },
   "Sandbox.json": {
@@ -148146,134 +149346,134 @@
     "cn": "格数. 主人睡觉时, 伙伴猫会改用这个较短的半径, 在僵尸靠近时叫唤并把你唤醒. 仅在 “附近有僵尸时叫唤” 为开启时生效. 默认 10."
    },
    "Sandbox_SimpleSuppressors_AdapterCraftLevel": {
-    "en": "ADAPTERS | Caliber Adapter Craft Level",
-    "ch": "轉接器 | 口徑轉接器製作等級",
-    "cn": "转接器 | 口径转接器制作等级"
+    "en": "Caliber adapters: Metalworking",
+    "ch": "口徑轉接器: 金屬加工",
+    "cn": "口径转接器: 金属加工"
    },
    "Sandbox_SimpleSuppressors_AdapterCraftLevel_tooltip": {
-    "en": "Required Metalworking level for all caliber adapters. The default is level 3.",
-    "ch": "製作所有口徑轉接器所需的金屬加工等級. 預設為 3 級.",
-    "cn": "制作所有口径转接器所需的金属加工等级. 默认为 3 级."
+    "en": "Metalworking level needed to craft any caliber adapter. Default: 3. The manual is still required.",
+    "ch": "製作任何口徑轉接器所需的金屬加工等級. 預設: 3. 仍然需要手冊.",
+    "cn": "制作任何口径转接器所需的金属加工等级. 默认: 3. 仍然需要手册."
    },
    "Sandbox_SimpleSuppressors_Machined12GaugeCraftLevel": {
-    "en": "MACHINED | 12 Gauge Craft Level",
-    "ch": "機加工 | 12號製作等級",
-    "cn": "机加工 | 12号制作等级"
+    "en": "12 Gauge machined: Metalworking",
+    "ch": "12號機加工消音器: 金屬加工",
+    "cn": "12号机加工消音器: 金属加工"
    },
    "Sandbox_SimpleSuppressors_Machined12GaugeCraftLevel_tooltip": {
-    "en": "Required Metalworking level to craft the 12 gauge machined suppressor. The default is level 8.",
-    "ch": "製作 12號機加工消音器所需的金屬加工等級. 預設為 8 級.",
-    "cn": "制作 12号机加工消音器所需的金属加工等级. 默认为 8 级."
+    "en": "Metalworking level needed to craft the 12 Gauge machined suppressor. Default: 8. The manual and recipe materials are still required.",
+    "ch": "製作 12號機加工消音器所需的金屬加工等級. 預設: 8. 仍然需要手冊與配方材料.",
+    "cn": "制作 12号机加工消音器所需的金属加工等级. 默认: 8. 仍然需要手册和配方材料."
    },
    "Sandbox_SimpleSuppressors_Machined3030CraftLevel": {
-    "en": "MACHINED | .30-30 Craft Level",
-    "ch": "機加工 | .30-30 製作等級",
-    "cn": "机加工 | .30-30 制作等级"
+    "en": ".30-30 machined: Metalworking",
+    "ch": ".30-30 機加工消音器: 金屬加工",
+    "cn": ".30-30 机加工消音器: 金属加工"
    },
    "Sandbox_SimpleSuppressors_Machined3030CraftLevel_tooltip": {
-    "en": "Required Metalworking level to craft the .30-30 machined suppressor. The default is level 5.",
-    "ch": "製作 .30-30 機加工消音器所需的金屬加工等級. 預設為 5 級.",
-    "cn": "制作 .30-30 机加工消音器所需的金属加工等级. 默认为 5 级."
+    "en": "Metalworking level needed to craft the .30-30 machined suppressor. Default: 5. The manual and recipe materials are still required.",
+    "ch": "製作 .30-30 機加工消音器所需的金屬加工等級. 預設: 5. 仍然需要手冊與配方材料.",
+    "cn": "制作 .30-30 机加工消音器所需的金属加工等级. 默认: 5. 仍然需要手册和配方材料."
    },
    "Sandbox_SimpleSuppressors_Machined308CraftLevel": {
-    "en": "MACHINED | .308 Craft Level",
-    "ch": "機加工 | .308 製作等級",
-    "cn": "机加工 | .308 制作等级"
+    "en": ".308 machined: Metalworking",
+    "ch": ".308 機加工消音器: 金屬加工",
+    "cn": ".308 机加工消音器: 金属加工"
    },
    "Sandbox_SimpleSuppressors_Machined308CraftLevel_tooltip": {
-    "en": "Required Metalworking level to craft the .308 machined suppressor. The default is level 7.",
-    "ch": "製作 .308 機加工消音器所需的金屬加工等級. 預設為 7 級.",
-    "cn": "制作 .308 机加工消音器所需的金属加工等级. 默认为 7 级."
+    "en": "Metalworking level needed to craft the .308 machined suppressor. Default: 7. The manual and recipe materials are still required.",
+    "ch": "製作 .308 機加工消音器所需的金屬加工等級. 預設: 7. 仍然需要手冊與配方材料.",
+    "cn": "制作 .308 机加工消音器所需的金属加工等级. 默认: 7. 仍然需要手册和配方材料."
    },
    "Sandbox_SimpleSuppressors_Machined357CraftLevel": {
-    "en": "MACHINED | .357 Craft Level",
-    "ch": "機加工 | .357 製作等級",
-    "cn": "机加工 | .357 制作等级"
+    "en": ".357 machined: Metalworking",
+    "ch": ".357 機加工消音器: 金屬加工",
+    "cn": ".357 机加工消音器: 金属加工"
    },
    "Sandbox_SimpleSuppressors_Machined357CraftLevel_tooltip": {
-    "en": "Required Metalworking level to craft the .357 machined suppressor. The default is level 5.",
-    "ch": "製作 .357 機加工消音器所需的金屬加工等級. 預設為 5 級.",
-    "cn": "制作 .357 机加工消音器所需的金属加工等级. 默认为 5 级."
+    "en": "Metalworking level needed to craft the .357 machined suppressor. Default: 5. The manual and recipe materials are still required.",
+    "ch": "製作 .357 機加工消音器所需的金屬加工等級. 預設: 5. 仍然需要手冊與配方材料.",
+    "cn": "制作 .357 机加工消音器所需的金属加工等级. 默认: 5. 仍然需要手册和配方材料."
    },
    "Sandbox_SimpleSuppressors_Machined44CraftLevel": {
-    "en": "MACHINED | .44 Craft Level",
-    "ch": "機加工 | .44 製作等級",
-    "cn": "机加工 | .44 制作等级"
+    "en": ".44 machined: Metalworking",
+    "ch": ".44 機加工消音器: 金屬加工",
+    "cn": ".44 机加工消音器: 金属加工"
    },
    "Sandbox_SimpleSuppressors_Machined44CraftLevel_tooltip": {
-    "en": "Required Metalworking level to craft the .44 machined suppressor. The default is level 5.",
-    "ch": "製作 .44 機加工消音器所需的金屬加工等級. 預設為 5 級.",
-    "cn": "制作 .44 机加工消音器所需的金属加工等级. 默认为 5 级."
+    "en": "Metalworking level needed to craft the .44 machined suppressor. Default: 5. The manual and recipe materials are still required.",
+    "ch": "製作 .44 機加工消音器所需的金屬加工等級. 預設: 5. 仍然需要手冊與配方材料.",
+    "cn": "制作 .44 机加工消音器所需的金属加工等级. 默认: 5. 仍然需要手册和配方材料."
    },
    "Sandbox_SimpleSuppressors_Machined45ACPCraftLevel": {
-    "en": "MACHINED | .45 ACP Craft Level",
-    "ch": "機加工 | .45 ACP 製作等級",
-    "cn": "机加工 | .45 ACP 制作等级"
+    "en": ".45 ACP machined: Metalworking",
+    "ch": ".45 ACP 機加工消音器: 金屬加工",
+    "cn": ".45 ACP 机加工消音器: 金属加工"
    },
    "Sandbox_SimpleSuppressors_Machined45ACPCraftLevel_tooltip": {
-    "en": "Required Metalworking level to craft the .45 ACP machined suppressor. The default is level 4.",
-    "ch": "製作 .45 ACP 機加工消音器所需的金屬加工等級. 預設為 4 級.",
-    "cn": "制作 .45 ACP 机加工消音器所需的金属加工等级. 默认为 4 级."
+    "en": "Metalworking level needed to craft the .45 ACP machined suppressor. Default: 4. The manual and recipe materials are still required.",
+    "ch": "製作 .45 ACP 機加工消音器所需的金屬加工等級. 預設: 4. 仍然需要手冊與配方材料.",
+    "cn": "制作 .45 ACP 机加工消音器所需的金属加工等级. 默认: 4. 仍然需要手册和配方材料."
    },
    "Sandbox_SimpleSuppressors_Machined556CraftLevel": {
-    "en": "MACHINED | 5.56 Craft Level",
-    "ch": "機加工 | 5.56 製作等級",
-    "cn": "机加工 | 5.56 制作等级"
+    "en": "5.56 machined: Metalworking",
+    "ch": "5.56 機加工消音器: 金屬加工",
+    "cn": "5.56 机加工消音器: 金属加工"
    },
    "Sandbox_SimpleSuppressors_Machined556CraftLevel_tooltip": {
-    "en": "Required Metalworking level to craft the 5.56 machined suppressor. The default is level 7.",
-    "ch": "製作 5.56 機加工消音器所需的金屬加工等級. 預設為 7 級.",
-    "cn": "制作 5.56 机加工消音器所需的金属加工等级. 默认为 7 级."
+    "en": "Metalworking level needed to craft the 5.56 machined suppressor. Default: 7. The manual and recipe materials are still required.",
+    "ch": "製作 5.56 機加工消音器所需的金屬加工等級. 預設: 7. 仍然需要手冊與配方材料.",
+    "cn": "制作 5.56 机加工消音器所需的金属加工等级. 默认: 7. 仍然需要手册和配方材料."
    },
    "Sandbox_SimpleSuppressors_Machined9mmCraftLevel": {
-    "en": "MACHINED | 9mm Craft Level",
-    "ch": "機加工 | 9mm 製作等級",
-    "cn": "机加工 | 9mm 制作等级"
+    "en": "9mm machined: Metalworking",
+    "ch": "9mm 機加工消音器: 金屬加工",
+    "cn": "9mm 机加工消音器: 金属加工"
    },
    "Sandbox_SimpleSuppressors_Machined9mmCraftLevel_tooltip": {
-    "en": "Required Metalworking level to craft the 9mm machined suppressor. The default is level 4.",
-    "ch": "製作 9mm 機加工消音器所需的金屬加工等級. 預設為 4 級.",
-    "cn": "制作 9mm 机加工消音器所需的金属加工等级. 默认为 4 级."
+    "en": "Metalworking level needed to craft the 9mm machined suppressor. Default: 4. The manual and recipe materials are still required.",
+    "ch": "製作 9mm 機加工消音器所需的金屬加工等級. 預設: 4. 仍然需要手冊與配方材料.",
+    "cn": "制作 9mm 机加工消音器所需的金属加工等级. 默认: 4. 仍然需要手册和配方材料."
    },
    "Sandbox_SimpleSuppressors_OilFilterCraftLevel": {
-    "en": "OIL FILTERS | Crafting Metalworking Level",
-    "ch": "機油濾清器 | 製作金屬加工等級",
-    "cn": "机油滤清器 | 制作金属加工等级"
+    "en": "Oil-filter suppressors: Metalworking",
+    "ch": "機油濾清器消音器: 金屬加工",
+    "cn": "机油滤清器消音器: 金属加工"
    },
    "Sandbox_SimpleSuppressors_OilFilterCraftLevel_tooltip": {
-    "en": "Required Metalworking level for all oil filter suppressors (not adapters). The default is level 3.",
-    "ch": "製作所有機油濾清器消音器 (不含轉接器) 所需的金屬加工等級. 預設為 3 級.",
-    "cn": "制作所有机油滤清器消音器 (不含转接器) 所需的金属加工等级. 默认为 3 级."
+    "en": "Metalworking level needed to craft any oil-filter suppressor. Default: 3. Adapter requirements are set separately; the manual is still required.",
+    "ch": "製作任何機油濾清器消音器所需的金屬加工等級. 預設: 3. 轉接器的需求另行設定; 仍然需要手冊.",
+    "cn": "制作任何机油滤清器消音器所需的金属加工等级. 默认: 3. 转接器的需求单独设定; 仍然需要手册."
    },
    "Sandbox_SimpleSuppressors_SuppressorDurability": {
-    "en": "SUPPRESSORS | Durability",
-    "ch": "消音器 | 耐久度",
-    "cn": "消音器 | 耐久度"
+    "en": "Suppressor lifespan",
+    "ch": "消音器壽命",
+    "cn": "消音器寿命"
    },
    "Sandbox_SimpleSuppressors_SuppressorDurability_option1": {
-    "en": "Low (10,000 shots)",
-    "ch": "低 (10,000 發)",
-    "cn": "低 (10,000 发)"
+    "en": "Short (5,000 shots)",
+    "ch": "短 (5,000 發)",
+    "cn": "短 (5,000 发)"
    },
    "Sandbox_SimpleSuppressors_SuppressorDurability_option2": {
-    "en": "Medium (20,000 shots)",
-    "ch": "中 (20,000 發)",
-    "cn": "中 (20,000 发)"
+    "en": "Standard (10,000 shots)",
+    "ch": "標準 (10,000 發)",
+    "cn": "标准 (10,000 发)"
    },
    "Sandbox_SimpleSuppressors_SuppressorDurability_option3": {
-    "en": "High (30,000 shots)",
-    "ch": "高 (30,000 發)",
-    "cn": "高 (30,000 发)"
+    "en": "Long (15,000 shots)",
+    "ch": "長 (15,000 發)",
+    "cn": "长 (15,000 发)"
    },
    "Sandbox_SimpleSuppressors_SuppressorDurability_option4": {
-    "en": "Indestructible",
-    "ch": "永不損壞",
-    "cn": "永不损坏"
+    "en": "No wear",
+    "ch": "不會磨損",
+    "cn": "不会磨损"
    },
    "Sandbox_SimpleSuppressors_SuppressorDurability_tooltip": {
-    "en": "How many shots an attached suppressor lasts before breaking. Low: 10,000 shots. Medium: 20,000 shots. High: 30,000 shots. Indestructible disables durability loss. The default is Indestructible.",
-    "ch": "已裝上的消音器可以射擊多少發才會損壞. 低: 10,000 發. 中: 20,000 發. 高: 30,000 發. 永不損壞則停用耐久度損耗. 預設為永不損壞.",
-    "cn": "已装上的消音器可以射击多少发才会损坏. 低: 10,000 发. 中: 20,000 发. 高: 30,000 发. 永不损坏则禁用耐久度损耗. 默认为永不损坏."
+    "en": "Shots from full condition to worn out. Applies to both suppressor types. At 0 condition, suppression stops. Machined suppressors can be repaired; oil-filter suppressors must be replaced.",
+    "ch": "從全新狀態到磨損報廢所需的射擊發數. 兩種消音器都適用. 耐久度為 0 時就不再消音. 機加工消音器可以修理; 機油濾清器消音器只能更換.",
+    "cn": "从全新状态到磨损报废所需的射击发数. 两种消音器都适用. 耐久度为 0 时就不再消音. 机加工消音器可以修理; 机油滤清器消音器只能更换."
    },
    "Sandbox_Distillation": {
     "en": "Peachey's Distillation",
@@ -149434,6 +150634,186 @@
     "en": "Allows the eight movable industry_03 propane-tank sprites, including industry_03_114, to act as independent refill sources. Default: On.",
     "ch": "允許 8 個可搬動的 industry_03 丙烷罐貼圖 (包含 industry_03_114) 各自作為獨立的填充來源. 預設值: 開啟.",
     "cn": "允许 8 个可搬动的 industry_03 丙烷罐贴图 (包含 industry_03_114) 各自作为独立的加注来源. 默认: 开启."
+   },
+   "Sandbox_ETW_AsthmaticColdTemperatureThreshold": {
+    "en": "Asthmatic cold temperature threshold",
+    "ch": "哮喘低溫門檻",
+    "cn": "哮喘低温阈值"
+   },
+   "Sandbox_ETW_AsthmaticColdTemperatureThreshold_tooltip": {
+    "en": "Running or sprinting at or below this air temperature in degrees Celsius causes progress toward developing Asthmatic. Smokers can still make this progress above the threshold.",
+    "ch": "在氣溫等於或低於此攝氏溫度時跑步或衝刺, 會累積獲得哮喘的進度. 吸菸者在高於此門檻時一樣會累積這項進度.",
+    "cn": "在气温等于或低于该摄氏温度时跑步或冲刺, 会累积获得哮喘的进度. 烟瘾患者在高于该阈值时同样会累积这项进度."
+   },
+   "Sandbox_ETW_AsthmaticProgressGainMultiplier": {
+    "en": "Asthmatic progress gain multiplier",
+    "ch": "哮喘進度增加倍率",
+    "cn": "哮喘进度增加倍率"
+   },
+   "Sandbox_ETW_AsthmaticProgressGainMultiplier_tooltip": {
+    "en": "Multiplies counter progress toward overcoming and losing the Asthmatic trait. Set to 0 to disable this progress.",
+    "ch": "調整朝克服並失去哮喘特質方向累積的計數器進度倍率. 設為 0 可停用這項進度.",
+    "cn": "调整朝克服并失去哮喘特质方向累积的计数器进度倍率. 设为 0 可禁用这项进度."
+   },
+   "Sandbox_ETW_AsthmaticProgressLossMultiplier": {
+    "en": "Asthmatic progress loss multiplier",
+    "ch": "哮喘進度減少倍率",
+    "cn": "哮喘进度减少倍率"
+   },
+   "Sandbox_ETW_AsthmaticProgressLossMultiplier_tooltip": {
+    "en": "Multiplies counter progress toward developing and gaining the Asthmatic trait. Set to 0 to disable this progress.",
+    "ch": "調整朝發展並獲得哮喘特質方向累積的計數器進度倍率. 設為 0 可停用這項進度.",
+    "cn": "调整朝发展并获得哮喘特质方向累积的计数器进度倍率. 设为 0 可禁用这项进度."
+   },
+   "Sandbox_ETW_AsthmaticRecoveryTemperatureThreshold": {
+    "en": "Asthmatic recovery temperature threshold",
+    "ch": "哮喘恢復溫度門檻",
+    "cn": "哮喘恢复温度阈值"
+   },
+   "Sandbox_ETW_AsthmaticRecoveryTemperatureThreshold_tooltip": {
+    "en": "Counter progress toward overcoming Asthmatic is possible while neither running nor sprinting at or above this air temperature in degrees Celsius.",
+    "ch": "只要不在跑步或衝刺, 且氣溫等於或高於此攝氏溫度, 就能累積克服哮喘的計數器進度.",
+    "cn": "只要不在跑步或冲刺, 且气温等于或高于该摄氏温度, 就能累积克服哮喘的计数器进度."
+   },
+   "Sandbox_ETW_BraverySystemFirearmKillValue": {
+    "en": "Bravery System Firearm Kill Value",
+    "ch": "勇氣系統槍械擊殺值",
+    "cn": "勇气系统枪械击杀值"
+   },
+   "Sandbox_ETW_BraverySystemFirearmKillValue_tooltip": {
+    "en": "The amount of Bravery System progress awarded for each firearm kill.",
+    "ch": "每次槍械擊殺可獲得的勇氣系統進度量.",
+    "cn": "每次枪械击杀可获得的勇气系统进度量."
+   },
+   "Sandbox_ETW_BraverySystemMeleeKillValue": {
+    "en": "Bravery System Melee Kill Value",
+    "ch": "勇氣系統近戰擊殺值",
+    "cn": "勇气系统近战击杀值"
+   },
+   "Sandbox_ETW_BraverySystemMeleeKillValue_tooltip": {
+    "en": "The amount of Bravery System progress awarded for each melee kill.",
+    "ch": "每次近戰擊殺可獲得的勇氣系統進度量.",
+    "cn": "每次近战击杀可获得的勇气系统进度量."
+   },
+   "Sandbox_ETW_BraverySystemOtherKillValue": {
+    "en": "Bravery System Other Kill Value",
+    "ch": "勇氣系統其他擊殺值",
+    "cn": "勇气系统其他击杀值"
+   },
+   "Sandbox_ETW_BraverySystemOtherKillValue_tooltip": {
+    "en": "The amount of Bravery System progress awarded for each fire, vehicle, or explosive kill.",
+    "ch": "每次火焰, 車輛或爆炸擊殺可獲得的勇氣系統進度量.",
+    "cn": "每次火焰, 车辆或爆炸击杀可获得的勇气系统进度量."
+   },
+   "Sandbox_ETW_NaturalEaterFoodsEaten": {
+    "en": "Natural Eater raw foods eaten requirement",
+    "ch": "食本自然生食進食次數需求",
+    "cn": "食本自然生食进食次数需求"
+   },
+   "Sandbox_ETW_NaturalEaterFoodsEaten_tooltip": {
+    "en": "Number of qualifying uncooked, unpackaged foods that must be eaten to gain Natural Eater.",
+    "ch": "獲得食本自然所需食用的符合條件未烹煮, 未包裝食物數量.",
+    "cn": "获得食本自然所需食用的符合条件未烹饪, 未包装食物数量."
+   },
+   "Sandbox_ExerciseWithCorpses_haloTextBool": {
+    "en": "Show XP gain halo text above player",
+    "ch": "在玩家頭上顯示經驗值獲得的浮動文字",
+    "cn": "在玩家头顶显示经验值获得的浮动文字"
+   },
+   "Sandbox_ExerciseWithCorpses_haloTextBool_tooltip": {
+    "en": "Check to enable, uncheck to disable",
+    "ch": "勾選以啟用, 取消勾選以停用",
+    "cn": "勾选以启用, 取消勾选以禁用"
+   },
+   "Sandbox_FunctionalAppliances_FAExhaustVentFunctionality": {
+    "en": "Allow Exhaust Hoods To Clear Toxicity",
+    "ch": "允許抽油煙機清除有毒氣體",
+    "cn": "允许抽油烟机清除有毒气体"
+   },
+   "Sandbox_FunctionalAppliances_FAExhaustVentFunctionality_tooltip": {
+    "en": "This setting allows the kitchen exhaust hoods to clear toxicity from generators in the same square.",
+    "ch": "此設定讓廚房抽油煙機清除同一格內發電機產生的有毒氣體.",
+    "cn": "此设置让厨房抽油烟机清除同一格内发电机产生的有毒气体."
+   },
+   "Sandbox_FunctionalAppliances_FAExhaustVentTickCycle": {
+    "en": "Allow Exhaust Hoods To Run On A Tick Cycle",
+    "ch": "允許抽油煙機依遊戲刻週期運作",
+    "cn": "允许抽油烟机依游戏刻周期运行"
+   },
+   "Sandbox_FunctionalAppliances_FAExhaustVentTickCycle_tooltip": {
+    "en": "This setting allows a second cycle to run based on tick count. May be needed if default game speed is changed. (Note: Adds more processing overhead.)",
+    "ch": "此設定會依遊戲刻計數啟用第二套循環. 若更改了預設遊戲速度, 可能會需要它. (注意: 會增加額外的運算負擔.)",
+    "cn": "此设置会依游戏刻计数启用第二套循环. 若更改了默认游戏速度, 可能会需要它. (注意: 会增加额外的运算负担.)"
+   },
+   "Sandbox_FunctionalAppliances_FAExhaustVentTiming": {
+    "en": "Ticks Between Exhaust Hood Toxicity Checks",
+    "ch": "抽油煙機毒氣檢查間隔 (遊戲刻)",
+    "cn": "抽油烟机毒气检查间隔 (游戏刻)"
+   },
+   "Sandbox_FunctionalAppliances_FAExhaustVentTiming_tooltip": {
+    "en": "The number of ticks between the checks for generator toxicity removal. Lower numbers reduce timing between checks. (default: 100 ticks)",
+    "ch": "兩次發電機毒氣清除檢查之間相隔的遊戲刻數. 數值越低, 檢查間隔越短. (預設: 100 遊戲刻)",
+    "cn": "两次发电机毒气清除检查之间相隔的游戏刻数. 数值越低, 检查间隔越短. (默认: 100 游戏刻)"
+   },
+   "Sandbox_SimpleSuppressorsCalibers": {
+    "en": "Simple Suppressors: Calibers",
+    "ch": "簡易消音器: 口徑",
+    "cn": "简易消音器: 口径"
+   },
+   "Sandbox_SimpleSuppressorsCrafting": {
+    "en": "Simple Suppressors: Crafting",
+    "ch": "簡易消音器: 製作",
+    "cn": "简易消音器: 制作"
+   },
+   "Sandbox_SimpleSuppressorsTesting": {
+    "en": "Simple Suppressors: Testing",
+    "ch": "簡易消音器: 測試",
+    "cn": "简易消音器: 测试"
+   },
+   "Sandbox_SimpleSuppressorsVehicles": {
+    "en": "Simple Suppressors: Vehicles",
+    "ch": "簡易消音器: 車輛",
+    "cn": "简易消音器: 车辆"
+   },
+   "Sandbox_SimpleSuppressors_EnableSuppressorHeat": {
+    "en": "Heat glow and smoke",
+    "ch": "受熱發光與冒煙",
+    "cn": "受热发光与冒烟"
+   },
+   "Sandbox_SimpleSuppressors_EnableSuppressorHeat_tooltip": {
+    "en": "Sustained fire heats the suppressor until its surface glows. Smoke rises while aiming; both fade as it cools. Visual only: heat does not affect accuracy, damage, sound reduction, or wear.",
+    "ch": "持續射擊會讓消音器升溫, 直到表面開始發光. 瞄準時會冒煙; 兩者都會隨著冷卻而消退. 僅為視覺效果: 熱度不影響精準度、傷害、消音效果或磨損.",
+    "cn": "持续射击会让消音器升温, 直到表面开始发光. 瞄准时会冒烟; 两者都会随着冷却而消退. 仅为视觉效果: 热度不影响精准度, 伤害, 消音效果或磨损."
+   },
+   "Sandbox_SimpleSuppressors_EnableSuppressorRepairs": {
+    "en": "Allow machined suppressor repairs",
+    "ch": "允許修理機加工消音器",
+    "cn": "允许修理机加工消音器"
+   },
+   "Sandbox_SimpleSuppressors_EnableSuppressorRepairs_tooltip": {
+    "en": "Adds welding recipes to restore worn machined suppressors to full condition. Requires tools and materials. Oil-filter suppressors cannot be repaired.",
+    "ch": "新增焊接配方, 可把磨損的機加工消音器修復到全新狀態. 需要工具與材料. 機油濾清器消音器無法修理.",
+    "cn": "新增焊接配方, 可把磨损的机加工消音器修复到全新状态. 需要工具和材料. 机油滤清器消音器无法修理."
+   },
+   "Sandbox_SimpleSuppressors_EnableVehicleOil": {
+    "en": "Engine oil and spills",
+    "ch": "機油與漏油",
+    "cn": "机油和漏油"
+   },
+   "Sandbox_SimpleSuppressors_EnableVehicleOil_tooltip": {
+    "en": "Tracks oil level and condition. A missing filter drips even with the engine off; running the engine drains oil faster. Parked leaks grow into a puddle, while moving leaks leave a trail. Installing a filter stops the leak but does not refill the engine. Low or worn-out oil causes wear while running. Turn off for the original filter-only mechanic.",
+    "ch": "追蹤機油的存量與品質. 缺少濾清器時, 即使引擎關閉也會滴油; 引擎運轉會讓機油流失得更快. 停放時漏出的油會積成一片油漬, 行駛中漏出的油則會留下一路痕跡. 安裝濾清器可以止漏, 但不會把機油補回引擎裡. 機油過少或品質耗盡時, 運轉中會造成磨損. 關閉後恢復成只有濾清器的原始機制.",
+    "cn": "追踪机油的存量和品质. 缺少滤清器时, 即使发动机关闭也会滴油; 发动机运转会让机油流失得更快. 停放时漏出的油会积成一片油渍, 行驶中漏出的油则会留下一路痕迹. 安装滤清器可以止漏, 但不会把机油补回发动机里. 机油过少或品质耗尽时, 运转中会造成磨损. 关闭后恢复成只有滤清器的原始机制."
+   },
+   "Sandbox_SimpleSuppressors_OilChangeHours": {
+    "en": "Oil change interval (engine hours)",
+    "ch": "換油週期 (引擎運轉小時)",
+    "cn": "换油周期 (发动机运转小时)"
+   },
+   "Sandbox_SimpleSuppressors_OilChangeHours_tooltip": {
+    "en": "In-game hours of engine running time before fresh oil wears out. Default: 100. Drain old oil, then refill with engine oil. Topping up mixes fresh oil with what remains. Requires Engine oil and spills.",
+    "ch": "新機油品質耗盡前, 引擎可運轉的遊戲內小時數. 預設: 100. 先排掉舊機油, 再加入新的機油. 直接補充會讓新機油和殘留的舊機油混合. 需要啟用「機油與漏油」.",
+    "cn": "新机油品质耗尽前, 发动机可运转的游戏内小时数. 默认: 100. 先排掉旧机油, 再加入新的机油. 直接补充会让新机油和残留的旧机油混合. 需要启用“机油和漏油”."
    }
   },
   "Tooltip.json": {
@@ -153808,6 +155188,936 @@
     "en": "Current wear: %1%%.",
     "ch": "目前磨損: %1%%.",
     "cn": "当前磨损: %1%%."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_01": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_02": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_03": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_04": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_05": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_06": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_07": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_08": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_09": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_10": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_11": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_12": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_13": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_14": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_15": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_16": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_17": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_18": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_19": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_20": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_21": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchCard_22": {
+    "en": "Baseball card from the 1989 Topps Cap'n Crunch set.",
+    "ch": "出自 1989 年 Topps 脆脆船長系列的棒球卡.",
+    "cn": "出自 1989 年 Topps 脆脆船长系列的棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchComic_Identicals": {
+    "en": "Promotional Cap'n Crunch mini comic from 1992.",
+    "ch": "1992 年的脆脆船長宣傳迷你漫畫.",
+    "cn": "1992 年的脆脆船长宣传迷你漫画."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchComic_Shushman": {
+    "en": "Promotional Cap'n Crunch mini comic from 1992.",
+    "ch": "1992 年的脆脆船長宣傳迷你漫畫.",
+    "cn": "1992 年的脆脆船长宣传迷你漫画."
+   },
+   "Tooltip_SnackTime89_ST_CapnCrunchComic_TopsyTurvy": {
+    "en": "Promotional Cap'n Crunch mini comic from 1992.",
+    "ch": "1992 年的脆脆船長宣傳迷你漫畫.",
+    "cn": "1992 年的脆脆船长宣传迷你漫画."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_01": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_02": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_03": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_04": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_05": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_06": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_07": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_08": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_09": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_10": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_11": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_12": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_13": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_14": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_15": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_16": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_17": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_18": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_19": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_20": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_21": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_22": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_23": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_CookieCrispTMNTCard_24": {
+    "en": "1990 Cookie Crisp TMNT promotional card.",
+    "ch": "1990 年餅乾脆麥片的 TMNT 宣傳卡.",
+    "cn": "1990 年曲奇脆麦片的 TMNT 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_01": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_02": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_03": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_04": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_05": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_06": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_07": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_08": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_09": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_10": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_11": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_12": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_13": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_14": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_15": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_16": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_17": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_18": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_19": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_20": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_21": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_22": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_23": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesGameBoyCard_24": {
+    "en": "1993 Kellogg's Frosties Nintendo Game Boy promotional card.",
+    "ch": "1993 年家樂氏香甜玉米片的任天堂 Game Boy 宣傳卡.",
+    "cn": "1993 年家乐氏香甜玉米片的任天堂 Game Boy 宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_01": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_02": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_03": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_04": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_05": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_06": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_07": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_08": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_09": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_10": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_11": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_12": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_13": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_14": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_15": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_16": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_17": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_FrostiesItalia90Sticker_18": {
+    "en": "1990 Panini FIFA World Cup Italia ’90 promotional sticker.",
+    "ch": "1990 年 Panini FIFA 世界盃 Italia ’90 的宣傳貼紙.",
+    "cn": "1990 年 Panini FIFA 世界杯 Italia ’90 的宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsAllStarsCard_01": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars promotional card.",
+    "ch": "1992 年家樂氏玉米片全明星宣傳卡.",
+    "cn": "1992 年家乐氏玉米片全明星宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsAllStarsCard_02": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars promotional card.",
+    "ch": "1992 年家樂氏玉米片全明星宣傳卡.",
+    "cn": "1992 年家乐氏玉米片全明星宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsAllStarsCard_03": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars promotional card.",
+    "ch": "1992 年家樂氏玉米片全明星宣傳卡.",
+    "cn": "1992 年家乐氏玉米片全明星宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsAllStarsCard_04": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars promotional card.",
+    "ch": "1992 年家樂氏玉米片全明星宣傳卡.",
+    "cn": "1992 年家乐氏玉米片全明星宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsAllStarsCard_05": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars promotional card.",
+    "ch": "1992 年家樂氏玉米片全明星宣傳卡.",
+    "cn": "1992 年家乐氏玉米片全明星宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsAllStarsCard_06": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars promotional card.",
+    "ch": "1992 年家樂氏玉米片全明星宣傳卡.",
+    "cn": "1992 年家乐氏玉米片全明星宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsAllStarsCard_07": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars promotional card.",
+    "ch": "1992 年家樂氏玉米片全明星宣傳卡.",
+    "cn": "1992 年家乐氏玉米片全明星宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsAllStarsCard_08": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars promotional card.",
+    "ch": "1992 年家樂氏玉米片全明星宣傳卡.",
+    "cn": "1992 年家乐氏玉米片全明星宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsAllStarsCard_09": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars promotional card.",
+    "ch": "1992 年家樂氏玉米片全明星宣傳卡.",
+    "cn": "1992 年家乐氏玉米片全明星宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsAllStarsCard_10": {
+    "en": "1992 Kellogg's Corn Flakes All-Stars promotional card.",
+    "ch": "1992 年家樂氏玉米片全明星宣傳卡.",
+    "cn": "1992 年家乐氏玉米片全明星宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsBaseballGreatsCard_01": {
+    "en": "1991 Kellogg's Corn Flakes Baseball Greats promotional card.",
+    "ch": "1991 年家樂氏玉米片棒球傳奇宣傳卡.",
+    "cn": "1991 年家乐氏玉米片棒球传奇宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsBaseballGreatsCard_02": {
+    "en": "1991 Kellogg's Corn Flakes Baseball Greats promotional card.",
+    "ch": "1991 年家樂氏玉米片棒球傳奇宣傳卡.",
+    "cn": "1991 年家乐氏玉米片棒球传奇宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsBaseballGreatsCard_03": {
+    "en": "1991 Kellogg's Corn Flakes Baseball Greats promotional card.",
+    "ch": "1991 年家樂氏玉米片棒球傳奇宣傳卡.",
+    "cn": "1991 年家乐氏玉米片棒球传奇宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsBaseballGreatsCard_04": {
+    "en": "1991 Kellogg's Corn Flakes Baseball Greats promotional card.",
+    "ch": "1991 年家樂氏玉米片棒球傳奇宣傳卡.",
+    "cn": "1991 年家乐氏玉米片棒球传奇宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsBaseballGreatsCard_05": {
+    "en": "1991 Kellogg's Corn Flakes Baseball Greats promotional card.",
+    "ch": "1991 年家樂氏玉米片棒球傳奇宣傳卡.",
+    "cn": "1991 年家乐氏玉米片棒球传奇宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsBaseballGreatsCard_06": {
+    "en": "1991 Kellogg's Corn Flakes Baseball Greats promotional card.",
+    "ch": "1991 年家樂氏玉米片棒球傳奇宣傳卡.",
+    "cn": "1991 年家乐氏玉米片棒球传奇宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsBaseballGreatsCard_07": {
+    "en": "1991 Kellogg's Corn Flakes Baseball Greats promotional card.",
+    "ch": "1991 年家樂氏玉米片棒球傳奇宣傳卡.",
+    "cn": "1991 年家乐氏玉米片棒球传奇宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsBaseballGreatsCard_08": {
+    "en": "1991 Kellogg's Corn Flakes Baseball Greats promotional card.",
+    "ch": "1991 年家樂氏玉米片棒球傳奇宣傳卡.",
+    "cn": "1991 年家乐氏玉米片棒球传奇宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsBaseballGreatsCard_09": {
+    "en": "1991 Kellogg's Corn Flakes Baseball Greats promotional card.",
+    "ch": "1991 年家樂氏玉米片棒球傳奇宣傳卡.",
+    "cn": "1991 年家乐氏玉米片棒球传奇宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsBaseballGreatsCard_10": {
+    "en": "1991 Kellogg's Corn Flakes Baseball Greats promotional card.",
+    "ch": "1991 年家樂氏玉米片棒球傳奇宣傳卡.",
+    "cn": "1991 年家乐氏玉米片棒球传奇宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsBaseballGreatsCard_11": {
+    "en": "1991 Kellogg's Corn Flakes Baseball Greats promotional card.",
+    "ch": "1991 年家樂氏玉米片棒球傳奇宣傳卡.",
+    "cn": "1991 年家乐氏玉米片棒球传奇宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsBaseballGreatsCard_12": {
+    "en": "1991 Kellogg's Corn Flakes Baseball Greats promotional card.",
+    "ch": "1991 年家樂氏玉米片棒球傳奇宣傳卡.",
+    "cn": "1991 年家乐氏玉米片棒球传奇宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsBaseballGreatsCard_13": {
+    "en": "1991 Kellogg's Corn Flakes Baseball Greats promotional card.",
+    "ch": "1991 年家樂氏玉米片棒球傳奇宣傳卡.",
+    "cn": "1991 年家乐氏玉米片棒球传奇宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsBaseballGreatsCard_14": {
+    "en": "1991 Kellogg's Corn Flakes Baseball Greats promotional card.",
+    "ch": "1991 年家樂氏玉米片棒球傳奇宣傳卡.",
+    "cn": "1991 年家乐氏玉米片棒球传奇宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_KelloggsBaseballGreatsCard_15": {
+    "en": "1991 Kellogg's Corn Flakes Baseball Greats promotional card.",
+    "ch": "1991 年家樂氏玉米片棒球傳奇宣傳卡.",
+    "cn": "1991 年家乐氏玉米片棒球传奇宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RalstonBaseballCard_01": {
+    "en": "1987 Ralston Purina promotional baseball card.",
+    "ch": "1987 年 Ralston Purina 的宣傳棒球卡.",
+    "cn": "1987 年 Ralston Purina 的宣传棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_RalstonBaseballCard_02": {
+    "en": "1987 Ralston Purina promotional baseball card.",
+    "ch": "1987 年 Ralston Purina 的宣傳棒球卡.",
+    "cn": "1987 年 Ralston Purina 的宣传棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_RalstonBaseballCard_03": {
+    "en": "1987 Ralston Purina promotional baseball card.",
+    "ch": "1987 年 Ralston Purina 的宣傳棒球卡.",
+    "cn": "1987 年 Ralston Purina 的宣传棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_RalstonBaseballCard_04": {
+    "en": "1987 Ralston Purina promotional baseball card.",
+    "ch": "1987 年 Ralston Purina 的宣傳棒球卡.",
+    "cn": "1987 年 Ralston Purina 的宣传棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_RalstonBaseballCard_05": {
+    "en": "1987 Ralston Purina promotional baseball card.",
+    "ch": "1987 年 Ralston Purina 的宣傳棒球卡.",
+    "cn": "1987 年 Ralston Purina 的宣传棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_RalstonBaseballCard_06": {
+    "en": "1987 Ralston Purina promotional baseball card.",
+    "ch": "1987 年 Ralston Purina 的宣傳棒球卡.",
+    "cn": "1987 年 Ralston Purina 的宣传棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_RalstonBaseballCard_07": {
+    "en": "1987 Ralston Purina promotional baseball card.",
+    "ch": "1987 年 Ralston Purina 的宣傳棒球卡.",
+    "cn": "1987 年 Ralston Purina 的宣传棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_RalstonBaseballCard_08": {
+    "en": "1987 Ralston Purina promotional baseball card.",
+    "ch": "1987 年 Ralston Purina 的宣傳棒球卡.",
+    "cn": "1987 年 Ralston Purina 的宣传棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_RalstonBaseballCard_09": {
+    "en": "1987 Ralston Purina promotional baseball card.",
+    "ch": "1987 年 Ralston Purina 的宣傳棒球卡.",
+    "cn": "1987 年 Ralston Purina 的宣传棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_RalstonBaseballCard_10": {
+    "en": "1987 Ralston Purina promotional baseball card.",
+    "ch": "1987 年 Ralston Purina 的宣傳棒球卡.",
+    "cn": "1987 年 Ralston Purina 的宣传棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_RalstonBaseballCard_11": {
+    "en": "1987 Ralston Purina promotional baseball card.",
+    "ch": "1987 年 Ralston Purina 的宣傳棒球卡.",
+    "cn": "1987 年 Ralston Purina 的宣传棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_RalstonBaseballCard_12": {
+    "en": "1987 Ralston Purina promotional baseball card.",
+    "ch": "1987 年 Ralston Purina 的宣傳棒球卡.",
+    "cn": "1987 年 Ralston Purina 的宣传棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_RalstonBaseballCard_13": {
+    "en": "1987 Ralston Purina promotional baseball card.",
+    "ch": "1987 年 Ralston Purina 的宣傳棒球卡.",
+    "cn": "1987 年 Ralston Purina 的宣传棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_RalstonBaseballCard_14": {
+    "en": "1987 Ralston Purina promotional baseball card.",
+    "ch": "1987 年 Ralston Purina 的宣傳棒球卡.",
+    "cn": "1987 年 Ralston Purina 的宣传棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_RalstonBaseballCard_15": {
+    "en": "1987 Ralston Purina promotional baseball card.",
+    "ch": "1987 年 Ralston Purina 的宣傳棒球卡.",
+    "cn": "1987 年 Ralston Purina 的宣传棒球卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesAircraftCard_01": {
+    "en": "1963 Kellogg's Rice Krispies A History of British Military Aircraft promotional card.",
+    "ch": "1963 年家樂氏米脆片英國軍機史宣傳卡.",
+    "cn": "1963 年家乐氏米脆片英国军机史宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesAircraftCard_02": {
+    "en": "1963 Kellogg's Rice Krispies A History of British Military Aircraft promotional card.",
+    "ch": "1963 年家樂氏米脆片英國軍機史宣傳卡.",
+    "cn": "1963 年家乐氏米脆片英国军机史宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesAircraftCard_03": {
+    "en": "1963 Kellogg's Rice Krispies A History of British Military Aircraft promotional card.",
+    "ch": "1963 年家樂氏米脆片英國軍機史宣傳卡.",
+    "cn": "1963 年家乐氏米脆片英国军机史宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesAircraftCard_04": {
+    "en": "1963 Kellogg's Rice Krispies A History of British Military Aircraft promotional card.",
+    "ch": "1963 年家樂氏米脆片英國軍機史宣傳卡.",
+    "cn": "1963 年家乐氏米脆片英国军机史宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesAircraftCard_05": {
+    "en": "1963 Kellogg's Rice Krispies A History of British Military Aircraft promotional card.",
+    "ch": "1963 年家樂氏米脆片英國軍機史宣傳卡.",
+    "cn": "1963 年家乐氏米脆片英国军机史宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesAircraftCard_06": {
+    "en": "1963 Kellogg's Rice Krispies A History of British Military Aircraft promotional card.",
+    "ch": "1963 年家樂氏米脆片英國軍機史宣傳卡.",
+    "cn": "1963 年家乐氏米脆片英国军机史宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesAircraftCard_07": {
+    "en": "1963 Kellogg's Rice Krispies A History of British Military Aircraft promotional card.",
+    "ch": "1963 年家樂氏米脆片英國軍機史宣傳卡.",
+    "cn": "1963 年家乐氏米脆片英国军机史宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesAircraftCard_08": {
+    "en": "1963 Kellogg's Rice Krispies A History of British Military Aircraft promotional card.",
+    "ch": "1963 年家樂氏米脆片英國軍機史宣傳卡.",
+    "cn": "1963 年家乐氏米脆片英国军机史宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesAircraftCard_09": {
+    "en": "1963 Kellogg's Rice Krispies A History of British Military Aircraft promotional card.",
+    "ch": "1963 年家樂氏米脆片英國軍機史宣傳卡.",
+    "cn": "1963 年家乐氏米脆片英国军机史宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesAircraftCard_10": {
+    "en": "1963 Kellogg's Rice Krispies A History of British Military Aircraft promotional card.",
+    "ch": "1963 年家樂氏米脆片英國軍機史宣傳卡.",
+    "cn": "1963 年家乐氏米脆片英国军机史宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesAircraftCard_11": {
+    "en": "1963 Kellogg's Rice Krispies A History of British Military Aircraft promotional card.",
+    "ch": "1963 年家樂氏米脆片英國軍機史宣傳卡.",
+    "cn": "1963 年家乐氏米脆片英国军机史宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesAircraftCard_12": {
+    "en": "1963 Kellogg's Rice Krispies A History of British Military Aircraft promotional card.",
+    "ch": "1963 年家樂氏米脆片英國軍機史宣傳卡.",
+    "cn": "1963 年家乐氏米脆片英国军机史宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesAircraftCard_13": {
+    "en": "1963 Kellogg's Rice Krispies A History of British Military Aircraft promotional card.",
+    "ch": "1963 年家樂氏米脆片英國軍機史宣傳卡.",
+    "cn": "1963 年家乐氏米脆片英国军机史宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesAircraftCard_14": {
+    "en": "1963 Kellogg's Rice Krispies A History of British Military Aircraft promotional card.",
+    "ch": "1963 年家樂氏米脆片英國軍機史宣傳卡.",
+    "cn": "1963 年家乐氏米脆片英国军机史宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesAircraftCard_15": {
+    "en": "1963 Kellogg's Rice Krispies A History of British Military Aircraft promotional card.",
+    "ch": "1963 年家樂氏米脆片英國軍機史宣傳卡.",
+    "cn": "1963 年家乐氏米脆片英国军机史宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesAircraftCard_16": {
+    "en": "1963 Kellogg's Rice Krispies A History of British Military Aircraft promotional card.",
+    "ch": "1963 年家樂氏米脆片英國軍機史宣傳卡.",
+    "cn": "1963 年家乐氏米脆片英国军机史宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesNHLTrophyCard_01": {
+    "en": "1992 Kellogg's Rice Krispies NHL Trophies promotional card.",
+    "ch": "1992 年家樂氏米脆片 NHL 獎盃宣傳卡.",
+    "cn": "1992 年家乐氏米脆片 NHL 奖杯宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesNHLTrophyCard_02": {
+    "en": "1992 Kellogg's Rice Krispies NHL Trophies promotional card.",
+    "ch": "1992 年家樂氏米脆片 NHL 獎盃宣傳卡.",
+    "cn": "1992 年家乐氏米脆片 NHL 奖杯宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesNHLTrophyCard_03": {
+    "en": "1992 Kellogg's Rice Krispies NHL Trophies promotional card.",
+    "ch": "1992 年家樂氏米脆片 NHL 獎盃宣傳卡.",
+    "cn": "1992 年家乐氏米脆片 NHL 奖杯宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesNHLTrophyCard_04": {
+    "en": "1992 Kellogg's Rice Krispies NHL Trophies promotional card.",
+    "ch": "1992 年家樂氏米脆片 NHL 獎盃宣傳卡.",
+    "cn": "1992 年家乐氏米脆片 NHL 奖杯宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesNHLTrophyCard_05": {
+    "en": "1992 Kellogg's Rice Krispies NHL Trophies promotional card.",
+    "ch": "1992 年家樂氏米脆片 NHL 獎盃宣傳卡.",
+    "cn": "1992 年家乐氏米脆片 NHL 奖杯宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesNHLTrophyCard_06": {
+    "en": "1992 Kellogg's Rice Krispies NHL Trophies promotional card.",
+    "ch": "1992 年家樂氏米脆片 NHL 獎盃宣傳卡.",
+    "cn": "1992 年家乐氏米脆片 NHL 奖杯宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesNHLTrophyCard_07": {
+    "en": "1992 Kellogg's Rice Krispies NHL Trophies promotional card.",
+    "ch": "1992 年家樂氏米脆片 NHL 獎盃宣傳卡.",
+    "cn": "1992 年家乐氏米脆片 NHL 奖杯宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesNHLTrophyCard_08": {
+    "en": "1992 Kellogg's Rice Krispies NHL Trophies promotional card.",
+    "ch": "1992 年家樂氏米脆片 NHL 獎盃宣傳卡.",
+    "cn": "1992 年家乐氏米脆片 NHL 奖杯宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesNHLTrophyCard_09": {
+    "en": "1992 Kellogg's Rice Krispies NHL Trophies promotional card.",
+    "ch": "1992 年家樂氏米脆片 NHL 獎盃宣傳卡.",
+    "cn": "1992 年家乐氏米脆片 NHL 奖杯宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesNHLTrophyCard_10": {
+    "en": "1992 Kellogg's Rice Krispies NHL Trophies promotional card.",
+    "ch": "1992 年家樂氏米脆片 NHL 獎盃宣傳卡.",
+    "cn": "1992 年家乐氏米脆片 NHL 奖杯宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_RiceKrispiesNHLTrophyCard_11": {
+    "en": "1992 Kellogg's Rice Krispies NHL Trophies promotional card.",
+    "ch": "1992 年家樂氏米脆片 NHL 獎盃宣傳卡.",
+    "cn": "1992 年家乐氏米脆片 NHL 奖杯宣传卡."
+   },
+   "Tooltip_SnackTime89_ST_StarWarsSticker_01": {
+    "en": "1977 General Mills Star Wars promotional sticker.",
+    "ch": "1977 年通用磨坊星際大戰宣傳貼紙.",
+    "cn": "1977 年通用磨坊星球大战宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_StarWarsSticker_02": {
+    "en": "1977 General Mills Star Wars promotional sticker.",
+    "ch": "1977 年通用磨坊星際大戰宣傳貼紙.",
+    "cn": "1977 年通用磨坊星球大战宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_StarWarsSticker_03": {
+    "en": "1977 General Mills Star Wars promotional sticker.",
+    "ch": "1977 年通用磨坊星際大戰宣傳貼紙.",
+    "cn": "1977 年通用磨坊星球大战宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_StarWarsSticker_04": {
+    "en": "1977 General Mills Star Wars promotional sticker.",
+    "ch": "1977 年通用磨坊星際大戰宣傳貼紙.",
+    "cn": "1977 年通用磨坊星球大战宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_StarWarsSticker_05": {
+    "en": "1977 General Mills Star Wars promotional sticker.",
+    "ch": "1977 年通用磨坊星際大戰宣傳貼紙.",
+    "cn": "1977 年通用磨坊星球大战宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_StarWarsSticker_06": {
+    "en": "1977 General Mills Star Wars promotional sticker.",
+    "ch": "1977 年通用磨坊星際大戰宣傳貼紙.",
+    "cn": "1977 年通用磨坊星球大战宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_StarWarsSticker_07": {
+    "en": "1977 General Mills Star Wars promotional sticker.",
+    "ch": "1977 年通用磨坊星際大戰宣傳貼紙.",
+    "cn": "1977 年通用磨坊星球大战宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_StarWarsSticker_08": {
+    "en": "1977 General Mills Star Wars promotional sticker.",
+    "ch": "1977 年通用磨坊星際大戰宣傳貼紙.",
+    "cn": "1977 年通用磨坊星球大战宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_StarWarsSticker_09": {
+    "en": "1977 General Mills Star Wars promotional sticker.",
+    "ch": "1977 年通用磨坊星際大戰宣傳貼紙.",
+    "cn": "1977 年通用磨坊星球大战宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_StarWarsSticker_10": {
+    "en": "1977 General Mills Star Wars promotional sticker.",
+    "ch": "1977 年通用磨坊星際大戰宣傳貼紙.",
+    "cn": "1977 年通用磨坊星球大战宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_StarWarsSticker_11": {
+    "en": "1977 General Mills Star Wars promotional sticker.",
+    "ch": "1977 年通用磨坊星際大戰宣傳貼紙.",
+    "cn": "1977 年通用磨坊星球大战宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_StarWarsSticker_12": {
+    "en": "1977 General Mills Star Wars promotional sticker.",
+    "ch": "1977 年通用磨坊星際大戰宣傳貼紙.",
+    "cn": "1977 年通用磨坊星球大战宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_StarWarsSticker_13": {
+    "en": "1977 General Mills Star Wars promotional sticker.",
+    "ch": "1977 年通用磨坊星際大戰宣傳貼紙.",
+    "cn": "1977 年通用磨坊星球大战宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_StarWarsSticker_14": {
+    "en": "1977 General Mills Star Wars promotional sticker.",
+    "ch": "1977 年通用磨坊星際大戰宣傳貼紙.",
+    "cn": "1977 年通用磨坊星球大战宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_StarWarsSticker_15": {
+    "en": "1977 General Mills Star Wars promotional sticker.",
+    "ch": "1977 年通用磨坊星際大戰宣傳貼紙.",
+    "cn": "1977 年通用磨坊星球大战宣传贴纸."
+   },
+   "Tooltip_SnackTime89_ST_StarWarsSticker_16": {
+    "en": "1977 General Mills Star Wars promotional sticker.",
+    "ch": "1977 年通用磨坊星際大戰宣傳貼紙.",
+    "cn": "1977 年通用磨坊星球大战宣传贴纸."
+   },
+   "Tooltip_item_P4ZomboidmanSticker31": {
+    "en": "No.31 \"AXE\"",
+    "ch": "No.31 \"斧頭\"",
+    "cn": "No.31 \"斧头\""
+   },
+   "Tooltip_item_P4ZomboidmanSticker32": {
+    "en": "No.32 \"AXE++\"",
+    "ch": "No.32 \"斧頭++\"",
+    "cn": "No.32 \"斧头++\""
+   },
+   "Tooltip_item_P4ZomboidmanSticker33": {
+    "en": "No.33 \"BLADE\"",
+    "ch": "No.33 \"刀刃\"",
+    "cn": "No.33 \"刀刃\""
+   },
+   "Tooltip_item_P4ZomboidmanSticker34": {
+    "en": "No.34 \"BLADE++\"",
+    "ch": "No.34 \"刀刃++\"",
+    "cn": "No.34 \"刀刃++\""
+   },
+   "Tooltip_item_P4ZomboidmanSticker35": {
+    "en": "No.35 \"BLUNT\"",
+    "ch": "No.35 \"鈍器\"",
+    "cn": "No.35 \"钝器\""
+   },
+   "Tooltip_item_P4ZomboidmanSticker36": {
+    "en": "No.36 \"BLUNT++\"",
+    "ch": "No.36 \"鈍器++\"",
+    "cn": "No.36 \"钝器++\""
+   },
+   "Tooltip_item_P4ZomboidmanSticker37": {
+    "en": "No.37 \"SPEAR\"",
+    "ch": "No.37 \"長矛\"",
+    "cn": "No.37 \"长矛\""
+   },
+   "Tooltip_item_P4ZomboidmanSticker38": {
+    "en": "No.38 \"SPEAR++\"",
+    "ch": "No.38 \"長矛++\"",
+    "cn": "No.38 \"长矛++\""
+   },
+   "Tooltip_item_P4ZomboidmanSticker39": {
+    "en": "No.39 \"FIREARM\"",
+    "ch": "No.39 \"槍械\"",
+    "cn": "No.39 \"枪械\""
+   },
+   "Tooltip_item_P4ZomboidmanSticker40": {
+    "en": "No.40 \"FIREARM++\"",
+    "ch": "No.40 \"槍械++\"",
+    "cn": "No.40 \"枪械++\""
+   },
+   "Tooltip_item_P4ZomboidmanSticker41": {
+    "en": "No.41 \"KATANA\"",
+    "ch": "No.41 \"武士刀\"",
+    "cn": "No.41 \"武士刀\""
+   },
+   "Tooltip_item_P4ZomboidmanSticker42": {
+    "en": "No.42 \"EXCALIBAR\"",
+    "ch": "No.42 \"EXCALIBAR\"",
+    "cn": "No.42 \"EXCALIBAR\""
    }
   },
   "UI.json": {
@@ -159991,9 +162301,9 @@
     "cn": "食本自然"
    },
    "UI_trait_NaturalEaterDesc": {
-    "en": "You prefer natural foods over heavily preserved food.<br>Eating uncooked beans, berries, citrus, fruit, greens, mushrooms, nuts, or vegetables restores mental stats based on the portion's hunger value, up to 5%%.",
-    "ch": "比起重度加工保存的食品, 你更偏好天然食物.<br>食用未烹煮的豆類, 莓果, 柑橘, 水果, 綠葉菜, 菇類, 堅果或蔬菜時, 會依該份食物的飢餓值恢復精神狀態數值, 最多 5%%.",
-    "cn": "比起重度加工保存的食品, 你更偏好天然食物.<br>食用未烹饪的豆类, 浆果, 柑橘, 水果, 绿叶菜, 蘑菇, 坚果或蔬菜时, 会依该份食物的饥饿值恢复精神状态数值, 最多 5%%.",
+    "en": "You prefer natural foods over heavily preserved food.<br>Eating uncooked, unpackaged berries, citrus, fruit, greens, herbs, hot peppers, mushrooms, nuts, or vegetables restores mental stats based on the portion's hunger value, up to 5%%.",
+    "ch": "比起重度加工保存的食品, 你更偏好天然食物.<br>食用未烹煮且未包裝的莓果, 柑橘, 水果, 綠葉菜, 香草, 辣椒, 菇類, 堅果或蔬菜時, 會依該份食物的飢餓值恢復精神狀態數值, 最多 5%%.",
+    "cn": "比起重度加工保存的食品, 你更偏好天然食物.<br>食用未烹饪且未包装的浆果, 柑橘, 水果, 绿叶菜, 香草, 辣椒, 蘑菇, 坚果或蔬菜时, 会依该份食物的饥饿值恢复精神状态数值, 最多 5%%.",
     "_note": "#321: 保留 5%% 雙百分號 escape 不可寫成 5%。八類食材逐項不漏(beans/berries/citrus/fruit/greens/mushrooms/nuts/vegetables)。CN 獨立選詞: berries=浆果、mushrooms=蘑菇、uncooked=未烹饪; CH 用 莓果/菇類/未烹煮，非由 CH 機轉。hunger value=飢餓值/饥饿值, mental stats 指心情類數值故譯精神狀態數值。"
    },
    "UI_trait_NoodleLegs": {
@@ -177054,14 +179364,14 @@
     "cn": "标记为收藏的物品不会被动到. 关闭时, 一只标记收藏的手表就会让整批作业停下, 而不是跳过它."
    },
    "UI_AA_opt_healthFloor": {
-    "en": "Stop below this health when overloaded",
-    "ch": "負重超載時低於此健康值就停止",
-    "cn": "负重超载时低于此健康值就停止"
+    "en": "Auto Mechanics: stop below this health when heavily loaded",
+    "ch": "自動技工: 負重過重時低於此健康值就停止",
+    "cn": "自动技工: 负重过重时低于此健康值就停止"
    },
    "UI_AA_opt_healthFloor_tt": {
-    "en": "A job stops when your health is below this AND you are over your carry limit. Both, never one on its own, which is why it can fire on a character who feels fine. Needs “Stop when taking damage” ticked. Set to 0 to switch this rule off and keep the rest of the damage stopping.",
-    "ch": "當你的健康值低於此數值, 而且同時超過負重上限時, 作業就會停止. 兩個條件都要成立, 缺一不觸發, 所以它有時會在角色感覺良好時就啟動. 需要勾選「受到傷害時停止」. 設為0可關閉這條規則, 其餘的傷害停止行為仍然保留.",
-    "cn": "当你的健康值低于此数值, 而且同时超过负重上限时, 作业就会停止. 两个条件都要成立, 缺一不触发, 所以它有时会在角色感觉良好时就启动. 需要勾选“受到伤害时停止”. 设为0可关闭这条规则, 其余的伤害停止行为仍然保留."
+    "en": "Auto Mechanics is the one job that keeps working while you take damage, because a mechanic carrying a tyre and four tools strains constantly and that is the job rather than a wound. This is the bottom under that: below this health AND carrying a heavy load, it stops anyway. No other job is ever stopped for weight. Needs “Stop when taking damage” ticked. Set to 0 to switch this rule off.",
+    "ch": "自動技工是唯一在你受到傷害時仍會繼續的作業, 因為技工扛著一條輪胎和四樣工具本來就會持續耗損, 那是工作本身造成的, 不是傷口. 這個設定是它的底線: 健康值低於此數值, 而且同時處於負重過重狀態時, 它還是會停下. 其他作業一律不會因為負重而停止. 需要勾選「受到傷害時停止」. 設為0可關閉這條規則.",
+    "cn": "自动技工是唯一在你受到伤害时仍会继续的作业, 因为技工扛着一条轮胎和四样工具本来就会持续消耗, 那是工作本身造成的, 不是伤口. 这个设置是它的底线: 健康值低于此数值, 而且同时处于负重过重状态时, 它还是会停下. 其他作业一律不会因为负重而停止. 需要勾选“受到伤害时停止”. 设为0可关闭这条规则."
    },
    "UI_AA_opt_ignoreNpcs": {
     "en": "Ignore NPCs that are not hunting you",
@@ -177084,14 +179394,14 @@
     "cn": "在包扎前, 先用夹板, 或木板加碎布条固定断掉的四肢 - 规则和健康窗口一样. 绝不处理头部或躯干."
    },
    "UI_AA_opt_vhsBooksOnly": {
-    "en": "Only tapes whose skill book I have read",
-    "ch": "只看已讀過對應技能書的錄影帶",
-    "cn": "只看已读过对应技能书的录像带"
+    "en": "Only tapes with enough skill-book XP bonus",
+    "ch": "只看技能書經驗加成足夠的錄影帶",
+    "cn": "只看技能书经验加成足够的录像带"
    },
    "UI_AA_opt_vhsBooksOnly_tt": {
-    "en": "A tape’s XP is multiplied by the skill book’s bonus, and its lines are spent whether or not you had read the book. With this on, a tape is only watched while that skill’s book bonus is active. Skills with no book in the game are always watched.",
-    "ch": "錄影帶的經驗值會乘上技能書的加成, 而且不管你有沒有讀過那本書, 錄影帶的內容都一樣會被消耗掉. 啟用時, 只會在該技能的書本加成生效期間才觀看錄影帶. 遊戲裡沒有對應書本的技能一律照常觀看.",
-    "cn": "录像带的经验值会乘上技能书的加成, 而且不管你有没有读过那本书, 录像带的内容都一样会被消耗掉. 启用时, 只会在该技能的书本加成生效期间才观看录像带. 游戏里没有对应书本的技能一律照常观看."
+    "en": "A tape’s XP is multiplied by the skill book’s bonus, and its lines are spent whether or not the book bonus is ready. Turn this on to use the minimum bonus below. Skills with no book in the game are always watched.",
+    "ch": "錄影帶的經驗值會乘上技能書的加成, 而且不管書本加成是否就緒, 錄影帶的內容都一樣會被消耗掉. 啟用後會改用下方的最低加成門檻. 遊戲裡沒有對應書本的技能一律照常觀看.",
+    "cn": "录像带的经验值会乘上技能书的加成, 而且不管书本加成是否就绪, 录像带的内容都一样会被消耗掉. 启用后会改用下方的最低加成门槛. 游戏里没有对应书本的技能一律照常观看."
    },
    "UI_AA_repair_nomatch": {
     "en": "%1 hole(s) need a material you do not have.",
@@ -177109,9 +179419,9 @@
     "cn": "已完成: 看完%1卷录像带, %2卷看到一半就中断."
    },
    "UI_AA_vhs_nobook": {
-    "en": "No tape within reach matches a skill book you have read.",
-    "ch": "伸手範圍內沒有錄影帶對應到你讀過的技能書.",
-    "cn": "伸手范围内没有录像带对应到你读过的技能书."
+    "en": "No tape within reach meets the skill-book XP threshold.",
+    "ch": "伸手範圍內沒有錄影帶達到技能書經驗門檻.",
+    "cn": "伸手范围内没有录像带达到技能书经验门槛."
    },
    "UI_MM_opt_autoRead": {
     "en": "Read while resting",
@@ -177284,14 +179594,14 @@
     "cn": "回到工作上."
    },
    "UI_KCMAIN_STORIES_CLEAR": {
-    "en": "Clear the circle around the generator: {count} zombies remain. Killing them or luring them outside both count.",
-    "ch": "清空發電機周圍的範圍: 還剩 {count} 隻殭屍. 殺死牠們或把牠們引到外面都算.",
-    "cn": "清空发电机周围的范围: 还剩 {count} 只僵尸. 杀死它们或把它们引到外面都算."
+    "en": "Clear the ground around the generator.\n\nZombies in the area: {count}.\nKill them or lure them outside the perimeter.",
+    "ch": "清空發電機周圍的地面.\n\n這一帶的殭屍: {count} 隻.\n殺死牠們, 或把牠們引到警戒範圍外.",
+    "cn": "清空发电机周围的地面.\n\n这一带的僵尸: {count} 只.\n杀死它们, 或把它们引到警戒范围外."
    },
    "UI_KCMAIN_STORIES_GATHER": {
-    "en": "Gather the pump recipe's consumables, then go directly to repair it. Keep your own tools ready.",
-    "ch": "收集水泵配方所需的消耗品, 然後直接去修好它. 自己的工具要備妥.",
-    "cn": "收集水泵配方所需的消耗品, 然后直接去修好它. 自己的工具要备好."
+    "en": "Gather the materials to repair the pump.\n\nOnce you have everything, take your tools straight to the installation.",
+    "ch": "收集修好水泵所需的材料.\n\n東西湊齊之後, 直接帶著你的工具去那座設施.",
+    "cn": "收集修好水泵所需的材料.\n\n东西凑齐之后, 直接带上你的工具去那座设施."
    },
    "UI_KCMAIN_STORIES_GENERATOR": {
     "en": "Water installation generator",
@@ -177314,14 +179624,14 @@
     "cn": "河畔镇水泵 (临时外观)"
    },
    "UI_KCMAIN_STORIES_PUMP_OFF": {
-    "en": "The pump is off. Repair the generator first.",
-    "ch": "水泵沒有運轉. 請先修好發電機.",
-    "cn": "水泵没有运转. 请先修好发电机."
+    "en": "The pump doesn't respond. Without power, the motor can't start.\n\nRepair the generator first.",
+    "ch": "水泵沒有反應. 沒有電力, 馬達無法啟動.\n\n請先修好發電機.",
+    "cn": "水泵没有反应. 没有电力, 马达无法启动.\n\n请先修好发电机."
    },
    "UI_KCMAIN_STORIES_PUMP_ON": {
-    "en": "The pump is running. Report back to Mae.",
-    "ch": "水泵正在運轉. 回去向梅報告.",
-    "cn": "水泵正在运转. 回去向梅汇报."
+    "en": "The pump is running. The generator is supplying power again.\n\nReturn to Mae and tell her what you've checked.",
+    "ch": "水泵正在運轉. 發電機再次開始供電.\n\n回去找梅, 告訴她你檢查到的狀況.",
+    "cn": "水泵正在运转. 发电机再次开始供电.\n\n回去找梅, 告诉她你检查到的情况."
    },
    "UI_KCMAIN_STORIES_REFERRAL_ACCEPTED": {
     "en": "Tell Mae I sent you. She will explain what needs doing.",
@@ -177339,9 +179649,9 @@
     "cn": "有什么基础设施的工作要做吗?"
    },
    "UI_KCMAIN_STORIES_REFERRAL_TEXT": {
-    "en": "Mae Turner coordinates the repairs. Speak with her about the water installation by the W Main St bridge in Riverside.",
-    "ch": "梅·特納負責統籌維修工作. 去找她談談河濱鎮 W Main St 橋邊的供水設施.",
-    "cn": "梅·特纳负责统筹维修工作. 去找她谈谈河畔镇 W Main St 桥边的供水设施."
+    "en": "Mae Turner coordinates the repairs. She needs help with the water installation by the W Main St bridge in Riverside.\n\nTalk to her; she can explain the problem.",
+    "ch": "梅·特納負責統籌維修工作. 河濱鎮 W Main St 橋邊的供水設施需要人幫忙.\n\n去找她談談; 她可以說明是什麼問題.",
+    "cn": "梅·特纳负责统筹维修工作. 河畔镇 W Main St 桥边的供水设施需要人帮忙.\n\n去找她谈谈; 她可以说明是什么问题."
    },
    "UI_KCMAIN_STORIES_REFERRAL_TITLE": {
     "en": "Speak with Mae Turner",
@@ -177374,9 +179684,9 @@
     "cn": "工作完成了. 这是我的报告."
    },
    "UI_KCMAIN_STORIES_RETURN_MAE": {
-    "en": "Return to Mae Turner and report through the blue dialogue.",
-    "ch": "回到梅·特納那裡, 透過藍色對話選項回報.",
-    "cn": "回到梅·特纳那里, 通过蓝色对话选项汇报."
+    "en": "Return to Mae and tell her how the work went.",
+    "ch": "回去找梅, 告訴她工作進行得如何.",
+    "cn": "回去找梅, 告诉她工作进行得如何."
    },
    "UI_KCMAIN_STORIES_SKILL_REQUIREMENT": {
     "en": "{skill}: level {level}",
@@ -177399,29 +179709,29 @@
     "cn": "检查水泵运转状况"
    },
    "UI_KCMAIN_STORIES_WATER_GENERATOR_ACTIVE": {
-    "en": "Clear the site first, repair the generator, then use the pump's check action. Your journal tracks the work. Have you finished?",
-    "ch": "先清空現場, 修好發電機, 然後對水泵使用檢查動作. 你的日誌會追蹤這項工作. 你完成了嗎?",
-    "cn": "先清空现场, 修好发电机, 然后对水泵使用检查动作. 你的日志会追踪这项工作. 你完成了吗?"
+    "en": "How is the work at the bridge going?\n\nI need to know whether the generator is repaired and you've checked the pump. If you're missing anything, we can go over what you need.",
+    "ch": "橋邊的工作進行得怎麼樣?\n\n我需要知道發電機修好了沒有, 以及你有沒有檢查過水泵. 如果你還缺什麼, 我們可以再確認一次你需要的東西.",
+    "cn": "桥边的工作进行得怎么样?\n\n我需要知道发电机修好了没有, 以及你有没有检查过水泵. 如果你还缺什么, 我们可以再确认一次你需要的东西."
    },
    "UI_KCMAIN_STORIES_WATER_GENERATOR_BRIEFING": {
-    "en": "The generator by the W Main St bridge has failed. It powers a water pump serving much of Riverside. Clear the zombies within fifteen tiles, then repair it and check the pump. You can kill them or lure them away. I'll provide the recipe's consumables; bring your own tools and the required skills. Come back for your payment when the pump is running.",
-    "ch": "W Main St 橋邊的發電機故障了. 它為一台供應河濱鎮大部分地區的水泵提供電力. 請清除十五格範圍內的殭屍, 然後修好發電機並檢查水泵. 你可以殺死牠們, 也可以把牠們引開. 配方所需的消耗品由我提供; 工具和所需技能要靠你自己. 水泵運轉之後, 回來領取報酬.",
-    "cn": "W Main St 桥边的发电机坏了. 它为一台供应河畔镇大部分地区的水泵供电. 请清除十五格范围内的僵尸, 然后修好发电机并检查水泵. 你可以杀死它们, 也可以把它们引开. 配方所需的消耗品由我提供; 工具和所需技能要靠你自己. 水泵运转之后, 回来领取报酬."
+    "en": "The generator by the W Main St bridge has stopped working. Without power, the pump can't move water.\n\nWe need to restore power before we can tell whether anything else is broken.",
+    "ch": "W Main St 橋邊的發電機停止運作了. 沒有電力, 水泵就無法抽水.\n\n我們得先恢復供電, 才能判斷還有什麼壞掉.",
+    "cn": "W Main St 桥边的发电机停止运作了. 没有电力, 水泵就无法抽水.\n\n我们得先恢复供电, 才能判断还有什么坏掉."
    },
    "UI_KCMAIN_STORIES_WATER_GENERATOR_CONTACT": {
-    "en": "Mae is coordinating the generator job. The installation is by the W Main St bridge in Riverside; check your journal for the current objective.",
-    "ch": "梅正在統籌發電機的工作. 那座設施位於河濱鎮 W Main St 橋邊; 請檢視日誌了解目前的目標.",
-    "cn": "梅正在统筹发电机的工作. 那座设施位于河畔镇 W Main St 桥边; 请查看日志了解当前目标."
+    "en": "Mae is coordinating repairs to the generator by the W Main St bridge in Riverside.\n\nTalk to her to find out what's needed.",
+    "ch": "梅正在統籌河濱鎮 W Main St 橋邊那台發電機的維修工作.\n\n去找她談談, 了解需要什麼.",
+    "cn": "梅正在统筹河畔镇 W Main St 桥边那台发电机的维修工作.\n\n去找她谈谈, 了解需要什么."
    },
    "UI_KCMAIN_STORIES_WATER_GENERATOR_DESCRIPTION": {
-    "en": "Clear the generator site by the W Main St bridge in Riverside, repair it, check the pump and report to Mae. Reward: 2,500 credits, one hammer, two wrenches and ten rolls of duct tape.",
-    "ch": "清空河濱鎮 W Main St 橋邊的發電機現場, 修好發電機, 檢查水泵, 然後向梅回報. 獎勵: 2,500 信用點、一把錘子、兩把扳手和十捲膠帶.",
-    "cn": "清空河畔镇 W Main St 桥边的发电机现场, 修好发电机, 检查水泵, 然后向梅汇报. 奖励: 2,500 信用点、一把锤子、两把扳手和十卷胶带."
+    "en": "The generator by the W Main St bridge has failed, leaving Riverside's pump without power. Mae needs you to restore the installation.\n\n- Clear the generator area.\n- Repair the generator.\n- Check that the pump works.\n- Return to Mae and report the result.\n\nReward:\n- 2500 credits.\n- 1 hammer.\n- 2 wrenches.\n- 10 rolls of duct tape.",
+    "ch": "W Main St 橋邊的發電機故障了, 讓河濱鎮的水泵失去電力. 梅需要你恢復這座設施.\n\n- 清空發電機周圍區域.\n- 修好發電機.\n- 檢查水泵能否運轉.\n- 回去向梅回報結果.\n\n獎勵:\n- 2,500 信用點.\n- 一把錘子.\n- 兩把扳手.\n- 十捲膠帶.",
+    "cn": "W Main St 桥边的发电机坏了, 让河畔镇的水泵失去电力. 梅需要你恢复这座设施.\n\n- 清空发电机周围区域.\n- 修好发电机.\n- 检查水泵能否运转.\n- 回去向梅汇报结果.\n\n奖励:\n- 2,500 信用点.\n- 一把锤子.\n- 两把扳手.\n- 十卷胶带."
    },
    "UI_KCMAIN_STORIES_WATER_GENERATOR_FACT": {
-    "en": "That generator is dedicated to the water pump, not the clinic. Restoring power starts the pump, but does not repair its worn piping or guarantee enough pressure.",
-    "ch": "那台發電機專供水泵使用, 不是供診所用的. 恢復供電能讓水泵啟動, 但不會修好它磨損的管線, 也不保證水壓足夠.",
-    "cn": "那台发电机专供水泵使用, 不是给诊所用的. 恢复供电能让水泵启动, 但不会修好它磨损的管道, 也不保证水压足够."
+    "en": "That generator powers the water pump. Without it, we don't even have a chance of restoring the supply.\n\nStarting it will let us check the pump, but electricity won't fix pipes or worn parts. We'll have to see how it responds.",
+    "ch": "那台發電機為水泵供電. 少了它, 我們連恢復供水的機會都沒有.\n\n把它啟動起來, 我們就能檢查水泵, 但電力不會修好管線或磨損的零件. 只能看它反應如何.",
+    "cn": "那台发电机为水泵供电. 少了它, 我们连恢复供水的机会都没有.\n\n把它启动起来, 我们就能检查水泵, 但电力不会修好管道或磨损的零件. 只能看它反应如何."
    },
    "UI_KCMAIN_STORIES_WATER_GENERATOR_OFFER": {
     "en": "About Riverside's water supply...",
@@ -177429,9 +179739,9 @@
     "cn": "关于河畔镇的供水…"
    },
    "UI_KCMAIN_STORIES_WATER_GENERATOR_THANKS": {
-    "en": "Thank you. Here are 2,500 credits, one hammer, two wrenches and ten rolls of duct tape, all together. The pump runs, but it is worn and the water flow is still too weak. Speak with me again about repairing it.",
-    "ch": "謝謝你. 這是 2,500 信用點、一把錘子、兩把扳手和十捲膠帶, 全都在這裡. 水泵能運轉了, 但它已經磨損, 水流仍然太弱. 再來找我談談修理它的事.",
-    "cn": "谢谢你. 这是 2,500 信用点、一把锤子、两把扳手和十卷胶带, 全都在这里. 水泵能运转了, 但它已经磨损, 水流依然太弱. 再来找我谈谈修理它的事."
+    "en": "Then we have power again and the pump starts. Thank you for taking care of it. Here's what I promised:\n\n- 2500 credits.\n- 1 hammer.\n- 2 wrenches.\n- 10 rolls of duct tape.\n\nBut the water is still coming through weakly. The pump is worn out; getting it running wasn't enough. We need to repair that part too.",
+    "ch": "這樣我們就重新有電, 水泵也啟動了. 謝謝你處理這件事. 這是我答應給你的東西:\n\n- 2,500 信用點.\n- 一把錘子.\n- 兩把扳手.\n- 十捲膠帶.\n\n不過水流還是很弱. 水泵已經磨損, 光是讓它運轉還不夠. 那個部分我們也得修好.",
+    "cn": "这样我们就重新有电, 水泵也启动了. 谢谢你处理这件事. 这是我答应给你的东西:\n\n- 2,500 信用点.\n- 一把锤子.\n- 两把扳手.\n- 十卷胶带.\n\n不过水流还是很弱. 水泵已经磨损, 光是让它运转还不够. 那个部分我们也得修好."
    },
    "UI_KCMAIN_STORIES_WATER_GENERATOR_TITLE": {
     "en": "Water for Riverside: power",
@@ -177439,29 +179749,29 @@
     "cn": "河畔镇的用水: 电力"
    },
    "UI_KCMAIN_STORIES_WATER_PUMP_ACTIVE": {
-    "en": "Find the recipe's materials, repair the pump and return. Gathering the materials does not consume them; they are used only when the repair succeeds.",
-    "ch": "找到配方所需的材料, 修好水泵, 然後回來. 收集材料不會消耗它們; 只有修復成功時才會用掉.",
-    "cn": "找到配方所需的材料, 修好水泵, 然后回来. 收集材料不会消耗它们; 只有修复成功时才会用掉."
+    "en": "What do you still need to finish the pump?\n\nIf you're still looking for parts, we can go over what you need. Once you have everything, go straight to repair it, then come back and tell me the result.",
+    "ch": "要修好水泵, 你還缺什麼?\n\n如果你還在找零件, 我們可以再確認一次你需要的東西. 東西湊齊之後就直接去修, 然後回來告訴我結果.",
+    "cn": "要修好水泵, 你还缺什么?\n\n如果你还在找零件, 我们可以再确认一次你需要的东西. 东西凑齐之后就直接去修, 然后回来告诉我结果."
    },
    "UI_KCMAIN_STORIES_WATER_PUMP_BRIEFING": {
-    "en": "Now we need to repair the pump itself. I don't have its materials: obtain the consumables required by its repair recipe however you can. Once you have them, go straight to the pump; there is no need to come back first. Bring your own tools and the required skills. Repair it and then return for your reward.",
-    "ch": "現在我們得修好水泵本身. 我沒有它需要的材料: 想辦法取得它的修復配方所需的消耗品. 拿到之後直接去水泵那裡; 不必先回來一趟. 工具和所需技能要自己帶. 修好它, 然後回來領取獎勵.",
-    "cn": "现在我们得修好水泵本身. 我没有它需要的材料: 想办法弄到它的修复配方所需的消耗品. 拿到之后直接去水泵那里; 不必先回来一趟. 工具和所需技能要自己带. 修好它, 然后回来领取奖励."
+    "en": "The pump runs, but its parts are worn and the connections are losing pressure. That's why so little water is getting through.\n\nIt needs repairing where it stands. The problem is that I have no materials left for that work; you'll have to find them.",
+    "ch": "水泵能運轉了, 但它的零件已經磨損, 接頭也在漏失水壓. 這就是出水量這麼少的原因.\n\n它得就地修理. 問題是那項工作我已經沒有材料了; 得由你去找.",
+    "cn": "水泵能运转了, 但它的零件已经磨损, 接头也在漏失水压. 这就是出水量这么少的原因.\n\n它得就地修理. 问题是那项工作我已经没有材料了; 得由你去找."
    },
    "UI_KCMAIN_STORIES_WATER_PUMP_CONTACT": {
-    "en": "The power is restored, but the pump still needs repairs. Obtain the materials and go straight to the installation; Mae will pay you after the work.",
-    "ch": "電力已經恢復, 但水泵仍需要修理. 取得材料後直接前往那座設施; 完工後梅會付錢給你.",
-    "cn": "电力已经恢复, 但水泵仍需要修理. 弄到材料后直接前往那座设施; 完工后梅会付钱给你."
+    "en": "The generator is running, but the pump still needs repairs.\n\nTalk to Mae about the missing parts before returning to the installation.",
+    "ch": "發電機正在運轉, 但水泵仍需要修理.\n\n回到那座設施之前, 先找梅談談缺少的零件.",
+    "cn": "发电机正在运转, 但水泵仍需要修理.\n\n回到那座设施之前, 先找梅谈谈缺少的零件."
    },
    "UI_KCMAIN_STORIES_WATER_PUMP_DESCRIPTION": {
-    "en": "Find the consumables required by the water pump recipe, go directly to repair the pump, then return to Mae. Reward: 2,500 credits, one pipe wrench, six metal pipes and one blowtorch. Repair restores clean water to piped fixtures within fifty tiles on every floor.",
-    "ch": "找到水泵配方所需的消耗品, 直接去修好水泵, 然後回到梅那裡. 獎勵: 2,500 信用點、一把管鉗、六根金屬管和一把噴燈. 修復後, 五十格範圍內各樓層的管線設施都會恢復乾淨水源.",
-    "cn": "找到水泵配方所需的消耗品, 直接去修好水泵, 然后回到梅那里. 奖励: 2,500 信用点、一把管钳、六根金属管和一个喷灯. 修复后, 五十格范围内各楼层的管道设施都会恢复干净水源."
+    "en": "The pump starts, but wear prevents it from maintaining pressure. Mae needs you to repair it; this time you must find the materials.\n\n- Gather the repair materials.\n- Take your tools straight to the pump and repair it.\n- Return to Mae and report the result.\n\nThe repair restores drinking water to plumbed fixtures within fifty tiles, on all floors.\n\nReward:\n- 2500 credits.\n- 1 pipe wrench.\n- 6 metal pipes.\n- 1 blowtorch.",
+    "ch": "水泵能啟動了, 但磨損讓它無法維持水壓. 梅需要你修好它; 這次材料得由你自己找.\n\n- 收集修理所需的材料.\n- 直接帶著工具到水泵那裡修好它.\n- 回去向梅回報結果.\n\n修復後, 五十格範圍內各樓層的管線設施都會恢復飲用水.\n\n獎勵:\n- 2,500 信用點.\n- 一把管鉗.\n- 六根金屬管.\n- 一把噴燈.",
+    "cn": "水泵能启动了, 但磨损让它无法维持水压. 梅需要你修好它; 这次材料得由你自己找.\n\n- 收集修理所需的材料.\n- 直接带上工具到水泵那里修好它.\n- 回去向梅汇报结果.\n\n修复后, 五十格范围内各楼层的管道设施都会恢复饮用水.\n\n奖励:\n- 2,500 信用点.\n- 一把管钳.\n- 六根金属管.\n- 一个喷灯."
    },
    "UI_KCMAIN_STORIES_WATER_PUMP_FACT": {
-    "en": "The damaged connections lose pressure. Repairing them restores a permanent local clean-water supply within fifty tiles, including upstairs and basement plumbing. It does not restore water throughout Riverside.",
-    "ch": "受損的接頭會漏失水壓. 修好它們就能在五十格範圍內永久恢復當地的乾淨供水, 包含樓上與地下室的管線. 這不會讓整個河濱鎮恢復供水.",
-    "cn": "受损的接头会漏失水压. 修好它们就能在五十格范围内永久恢复当地的干净供水, 包括楼上与地下室的管道. 这不会让整个河畔镇恢复供水."
+    "en": "Restoring pressure will bring drinking water to the fixtures connected to these pipes, including those on upper floors and in basements.\n\nThe reach is local: about fifty paces around the pump. It won't fix all of Riverside's network, but those nearby will have water again.",
+    "ch": "恢復水壓之後, 接在這些管線上的設施就會有飲用水, 包含樓上和地下室的那些.\n\n影響範圍是局部的: 水泵周圍約五十步. 這不會修好整個河濱鎮的管網, 但附近的人又會有水用了.",
+    "cn": "恢复水压之后, 接在这些管道上的设施就会有饮用水, 包括楼上和地下室的那些.\n\n影响范围是局部的: 水泵周围约五十步. 这不会修好整个河畔镇的管网, 但附近的人又会有水用了."
    },
    "UI_KCMAIN_STORIES_WATER_PUMP_OFFER": {
     "en": "About repairing the worn pump...",
@@ -177469,9 +179779,9 @@
     "cn": "关于修理那台磨损的水泵…"
    },
    "UI_KCMAIN_STORIES_WATER_PUMP_THANKS": {
-    "en": "Thank you. The local water supply is restored. Here are 2,500 credits, one pipe wrench, six metal pipes and one blowtorch. I'll have another job for you later.",
-    "ch": "謝謝你. 當地的供水恢復了. 這是 2,500 信用點、一把管鉗、六根金屬管和一把噴燈. 之後我還會有工作要交給你.",
-    "cn": "谢谢你. 当地的供水恢复了. 这是 2,500 信用点、一把管钳、六根金属管和一个喷灯. 之后我还会有活儿交给你."
+    "en": "That's what we needed. With the pump repaired, the nearby fixtures can supply water again.\n\nHere's your pay:\n\n- 2500 credits.\n- 1 pipe wrench.\n- 6 metal pipes.\n- 1 blowtorch.\n\nWe haven't fixed all of Riverside, but we've brought back something people need every day. Thank you for finishing the work.",
+    "ch": "這就是我們需要的結果. 水泵修好之後, 附近的設施又能供水了.\n\n這是你的報酬:\n\n- 2,500 信用點.\n- 一把管鉗.\n- 六根金屬管.\n- 一把噴燈.\n\n我們沒有修好整個河濱鎮, 但把大家每天都需要的東西找回來了. 謝謝你完成這項工作.",
+    "cn": "这就是我们需要的结果. 水泵修好之后, 附近的设施又能供水了.\n\n这是你的报酬:\n\n- 2,500 信用点.\n- 一把管钳.\n- 六根金属管.\n- 一个喷灯.\n\n我们没有修好整个河畔镇, 但把大家每天都需要的东西找回来了. 谢谢你完成这项工作."
    },
    "UI_KCMAIN_STORIES_WATER_PUMP_TITLE": {
     "en": "Water for Riverside: pressure",
@@ -178232,6 +180542,376 @@
     "en": "Never loot items marked Unwanted (More > Set Unwanted in the item's right-click menu).",
     "ch": "永不拾取已標記為「不需要」的物品 (物品右鍵選單的「更多 > 設為不需要」).",
     "cn": "永不拾取已标记为“不需要”的物品 (物品右键菜单的“更多 > 设为不需要”)."
+   },
+   "UI_SnackTime_CardBack": {
+    "en": "Back 2/2",
+    "ch": "背面 2/2",
+    "cn": "背面 2/2"
+   },
+   "UI_SnackTime_CardFront": {
+    "en": "Front 1/2",
+    "ch": "正面 1/2",
+    "cn": "正面 1/2"
+   },
+   "UI_SnackTime_CloseAllCards": {
+    "en": "Close all cards",
+    "ch": "關閉所有卡片",
+    "cn": "关闭所有卡片"
+   },
+   "UI_AA_openbox_blocked": {
+    "en": "Found boxes, but none of them can be opened right now. Try again in a moment.",
+    "ch": "找到了盒裝物品, 但目前都無法開啟. 稍後再試一次.",
+    "cn": "找到了盒装物品, 但目前都无法打开. 稍后再试一次."
+   },
+   "UI_AA_openbox_done": {
+    "en": "Finished: %1 opened.",
+    "ch": "完成: 已開啟 %1.",
+    "cn": "完成: 已打开 %1."
+   },
+   "UI_AA_openbox_label_all": {
+    "en": "boxes",
+    "ch": "盒裝物品",
+    "cn": "盒装物品"
+   },
+   "UI_AA_openbox_nothing": {
+    "en": "Nothing here is still boxed.",
+    "ch": "這裡沒有任何還裝在盒子裡的東西.",
+    "cn": "这里没有任何还装在盒子里的东西."
+   },
+   "UI_AA_openbox_option": {
+    "en": "Open Every %1",
+    "ch": "開啟所有 %1",
+    "cn": "打开所有 %1"
+   },
+   "UI_AA_openbox_option_all": {
+    "en": "Open Every Box Within Reach",
+    "ch": "開啟伸手範圍內所有盒裝物品",
+    "cn": "打开伸手范围内所有盒装物品"
+   },
+   "UI_AA_openbox_option_tt": {
+    "en": "Opens %1 of the %2 within reach, one after another. Any sitting in a container are fetched, and what comes out goes back where the box came from. Loose rounds weigh more than the box they came in.",
+    "ch": "依序開啟伸手範圍內 %2 當中的 %1 個. 放在容器裡的會自動取出, 開出來的內容物會放回盒子原本所在的位置. 散裝子彈比原本的盒裝更重.",
+    "cn": "依次打开伸手范围内 %2 当中的 %1 个. 放在容器里的会自动取出, 开出来的内容物会放回盒子原本所在的位置. 散装子弹比原本的盒装更重."
+   },
+   "UI_AA_openbox_started": {
+    "en": "Opening %1 x %2.",
+    "ch": "正在開啟 %1 x %2.",
+    "cn": "正在打开 %1 x %2."
+   },
+   "UI_AA_openbox_stop": {
+    "en": "Stop Opening",
+    "ch": "停止開啟",
+    "cn": "停止打开"
+   },
+   "UI_AA_openbox_working": {
+    "en": "Opening...",
+    "ch": "開啟中…",
+    "cn": "打开中…"
+   },
+   "UI_AA_opt_vhsBookXpThreshold": {
+    "en": "Minimum skill-book bonus (%%)",
+    "ch": "最低技能書加成 (%%)",
+    "cn": "最低技能书加成 (%%)"
+   },
+   "UI_AA_opt_vhsBookXpThreshold_tt": {
+    "en": "When the book gate is on, a skill tape is watched only when its active book bonus reaches this percentage of the current book’s full XP multiplier. 100%% requires the whole book. Skills with no skill book and tapes that teach an unknown recipe are still watched.",
+    "ch": "啟用書本限制時, 只有當該技能目前生效的書本加成達到這本書完整經驗倍率的這個百分比, 才會觀看對應的錄影帶. 設為100%%就必須讀完整本書. 沒有技能書的技能, 以及會教你未知配方的錄影帶, 一樣會照常觀看.",
+    "cn": "启用书本限制时, 只有当该技能当前生效的书本加成达到这本书完整经验倍率的这个百分比, 才会观看对应的录像带. 设为100%%就必须读完整本书. 没有技能书的技能, 以及会教你未知配方的录像带, 一样会照常观看."
+   },
+   "UI_AA_unpack_blocked": {
+    "en": "Found cartons, but none of them can be unpacked right now. Try again in a moment.",
+    "ch": "找到了紙箱, 但目前都無法拆開. 稍後再試一次.",
+    "cn": "找到了纸箱, 但目前都无法拆开. 稍后再试一次."
+   },
+   "UI_AA_unpack_done": {
+    "en": "Finished: %1 unpacked.",
+    "ch": "完成: 已拆開 %1.",
+    "cn": "完成: 已拆开 %1."
+   },
+   "UI_AA_unpack_label_all": {
+    "en": "cartons",
+    "ch": "紙箱",
+    "cn": "纸箱"
+   },
+   "UI_AA_unpack_nothing": {
+    "en": "Nothing here is still packed.",
+    "ch": "這裡沒有任何還整箱未拆的東西.",
+    "cn": "这里没有任何还整箱未拆的东西."
+   },
+   "UI_AA_unpack_option": {
+    "en": "Unpack Every %1",
+    "ch": "拆開所有 %1",
+    "cn": "拆开所有 %1"
+   },
+   "UI_AA_unpack_option_all": {
+    "en": "Unpack Every Carton Within Reach",
+    "ch": "拆開伸手範圍內所有紙箱",
+    "cn": "拆开伸手范围内所有纸箱"
+   },
+   "UI_AA_unpack_option_tt": {
+    "en": "Unpacks %1 of the %2 within reach into boxes of twelve, one after another. Any sitting in a container are fetched, and the boxes go back where the carton came from.",
+    "ch": "依序把伸手範圍內 %2 當中的 %1 個拆成 12 個盒裝物品. 放在容器裡的會自動取出, 拆出的盒子會放回紙箱原本所在的位置.",
+    "cn": "依次把伸手范围内 %2 当中的 %1 个拆成 12 个盒装物品. 放在容器里的会自动取出, 拆出的盒子会放回纸箱原本所在的位置."
+   },
+   "UI_AA_unpack_started": {
+    "en": "Unpacking %1 x %2.",
+    "ch": "正在拆開 %1 x %2.",
+    "cn": "正在拆开 %1 x %2."
+   },
+   "UI_AA_unpack_stop": {
+    "en": "Stop Unpacking",
+    "ch": "停止拆開",
+    "cn": "停止拆开"
+   },
+   "UI_AA_unpack_working": {
+    "en": "Unpacking...",
+    "ch": "拆開中…",
+    "cn": "拆开中…"
+   },
+   "UI_ClothingType_FcknSpldr:Belt_Low": {
+    "en": "Belt* - Low",
+    "ch": "腰帶*-低腰",
+    "cn": "腰带* - 低腰"
+   },
+   "UI_ClothingType_FcknSpldr:Reserved1": {
+    "en": "Z-1 Reserved Slot",
+    "ch": "Z-1 預留槽位",
+    "cn": "Z-1 保留槽位"
+   },
+   "UI_ClothingType_FcknSpldr:Reserved2": {
+    "en": "Z-2 Reserved Slot",
+    "ch": "Z-2 預留槽位",
+    "cn": "Z-2 保留槽位"
+   },
+   "UI_ClothingType_FcknSpldr:Reserved3": {
+    "en": "Z-3 Reserved Slot",
+    "ch": "Z-3 預留槽位",
+    "cn": "Z-3 保留槽位"
+   },
+   "UI_ClothingType_FcknSpldr:Reserved4": {
+    "en": "Z-4 Reserved Slot",
+    "ch": "Z-4 預留槽位",
+    "cn": "Z-4 保留槽位"
+   },
+   "UI_ClothingType_FcknSpldr:Reserved5": {
+    "en": "Z-5 Reserved Slot",
+    "ch": "Z-5 預留槽位",
+    "cn": "Z-5 保留槽位"
+   },
+   "UI_ClothingType_FcknSpldr:Reserved6": {
+    "en": "Z-6 Reserved Slot",
+    "ch": "Z-6 預留槽位",
+    "cn": "Z-6 保留槽位"
+   },
+   "UI_ClothingType_FcknSpldr:Reserved7": {
+    "en": "Z-7 Reserved Slot",
+    "ch": "Z-7 預留槽位",
+    "cn": "Z-7 保留槽位"
+   },
+   "UI_ClothingType_FcknSpldr:SweaterHatShort": {
+    "en": "Sweater Hood Up* - Short",
+    "ch": "毛衣 (戴帽)*-短款",
+    "cn": "毛衣 (戴帽)* - 短款"
+   },
+   "UI_ClothingType_FcknSpldr:SweaterShort": {
+    "en": "Sweater* - Short",
+    "ch": "毛衣*-短款",
+    "cn": "毛衣* - 短款"
+   },
+   "UI_KCMAIN_STORIES_BRIEFING_ACCEPT": {
+    "en": "All right. I'll take care of it.",
+    "ch": "好. 這件事我來處理.",
+    "cn": "好. 这件事我来处理."
+   },
+   "UI_KCMAIN_STORIES_BRIEFING_DEPART": {
+    "en": "I'll get going.",
+    "ch": "我出發了.",
+    "cn": "我出发了."
+   },
+   "UI_KCMAIN_STORIES_BRIEFING_LATER": {
+    "en": "I need to think about it.",
+    "ch": "我需要再考慮一下.",
+    "cn": "我需要再考虑一下."
+   },
+   "UI_KCMAIN_STORIES_BRIEFING_LOCATION": {
+    "en": "Remind me where it is.",
+    "ch": "再跟我說一次那在哪裡.",
+    "cn": "再跟我说一次那在哪儿."
+   },
+   "UI_KCMAIN_STORIES_BRIEFING_NONE": {
+    "en": "nothing yet",
+    "ch": "目前還沒有",
+    "cn": "目前还没有"
+   },
+   "UI_KCMAIN_STORIES_BRIEFING_PROBLEM": {
+    "en": "What happened?",
+    "ch": "發生了什麼事?",
+    "cn": "发生了什么事?"
+   },
+   "UI_KCMAIN_STORIES_BRIEFING_QUANTITY": {
+    "en": "{count} × {item}",
+    "ch": "{count} × {item}",
+    "cn": "{count} × {item}"
+   },
+   "UI_KCMAIN_STORIES_BRIEFING_REQUIREMENTS": {
+    "en": "What will I need?",
+    "ch": "我會需要什麼?",
+    "cn": "我会需要什么?"
+   },
+   "UI_KCMAIN_STORIES_BRIEFING_REVIEW": {
+    "en": "Let's go over the job again.",
+    "ch": "我們再確認一次這項工作.",
+    "cn": "我们再确认一次这项工作."
+   },
+   "UI_KCMAIN_STORIES_BRIEFING_STEPS": {
+    "en": "What do you need me to do?",
+    "ch": "你需要我做什麼?",
+    "cn": "你需要我做什么?"
+   },
+   "UI_KCMAIN_STORIES_MATERIAL_NEEDED": {
+    "en": "{item}: {count} uses",
+    "ch": "{item}: {count} 次",
+    "cn": "{item}: {count} 次"
+   },
+   "UI_KCMAIN_STORIES_READY_TO_REPORT": {
+    "en": "Did you finish the work? Tell me how it turned out.",
+    "ch": "工作完成了嗎? 告訴我結果如何.",
+    "cn": "工作完成了吗? 告诉我结果如何."
+   },
+   "UI_KCMAIN_STORIES_TRACKER_CLEAR": {
+    "en": "Clear the area: {count} zombies",
+    "ch": "清空區域: {count} 隻殭屍",
+    "cn": "清空区域: {count} 只僵尸"
+   },
+   "UI_KCMAIN_STORIES_TRACKER_GATHER": {
+    "en": "Gather pump repair materials",
+    "ch": "收集水泵修理材料",
+    "cn": "收集水泵修理材料"
+   },
+   "UI_KCMAIN_STORIES_TRACKER_REPAIR_GENERATOR": {
+    "en": "Repair the generator",
+    "ch": "修復發電機",
+    "cn": "修复发电机"
+   },
+   "UI_KCMAIN_STORIES_TRACKER_REPAIR_PUMP": {
+    "en": "Repair the pump",
+    "ch": "修復水泵",
+    "cn": "修复水泵"
+   },
+   "UI_KCMAIN_STORIES_TRACKER_RETURN_MAE": {
+    "en": "Return to Mae",
+    "ch": "回去找梅",
+    "cn": "回去找梅"
+   },
+   "UI_KCMAIN_STORIES_TRACKER_VERIFY": {
+    "en": "Check the pump",
+    "ch": "檢查水泵",
+    "cn": "检查水泵"
+   },
+   "UI_KCMAIN_STORIES_WATER_GENERATOR_ACCEPTED": {
+    "en": "Thank you. Here are the materials:\n\n{supplies}\n\nSave them for the generator. I'll be here when you've checked the pump.",
+    "ch": "謝謝你. 材料在這裡:\n\n{supplies}\n\n留給發電機用. 你檢查完水泵之後, 我都在這裡.",
+    "cn": "谢谢你. 材料在这里:\n\n{supplies}\n\n留给发电机用. 你检查完水泵之后, 我都在这里."
+   },
+   "UI_KCMAIN_STORIES_WATER_GENERATOR_DANGERS_ANSWER": {
+    "en": "Find a way out before approaching, and don't let yourself get trapped between the machines.\n\nIf you lure them away, circle around before returning so they don't follow you back to the generator.",
+    "ch": "靠近之前先找好退路, 別讓自己被夾在機器之間.\n\n如果你把牠們引開, 回來前先繞一圈, 免得牠們跟著你回到發電機那裡.",
+    "cn": "靠近之前先找好退路, 别让自己被夹在机器之间.\n\n如果你把它们引开, 回来前先绕一圈, 免得它们跟着你回到发电机那里."
+   },
+   "UI_KCMAIN_STORIES_WATER_GENERATOR_DANGERS_ASK": {
+    "en": "How do I approach the bridge without getting cornered?",
+    "ch": "我要怎麼靠近那座橋才不會被逼到死角?",
+    "cn": "我要怎么靠近那座桥才不会被逼到死角?"
+   },
+   "UI_KCMAIN_STORIES_WATER_GENERATOR_INSTRUCTIONS_ANSWER": {
+    "en": "First clear the ground around the generator. There are zombies in the area; kill them or lure them away so you can work.\n\nThen repair the generator and check whether the pump starts. Don't dismantle it yet.\n\nOnce you've checked it, come back and tell me the result.",
+    "ch": "先清空發電機周圍的地面. 那一帶有殭屍; 殺死牠們或把牠們引開, 你才有辦法工作.\n\n然後修好發電機, 檢查水泵能不能啟動. 先不要拆解它.\n\n檢查完之後, 回來告訴我結果.",
+    "cn": "先清空发电机周围的地面. 那一带有僵尸; 杀死它们或把它们引开, 你才有办法工作.\n\n然后修好发电机, 检查水泵能不能启动. 先不要拆解它.\n\n检查完之后, 回来告诉我结果."
+   },
+   "UI_KCMAIN_STORIES_WATER_GENERATOR_INSTRUCTIONS_ASK": {
+    "en": "Walk me through the job. What should I take?",
+    "ch": "跟我說一下這項工作. 我該帶什麼?",
+    "cn": "跟我说一下这项工作. 我该带什么?"
+   },
+   "UI_KCMAIN_STORIES_WATER_GENERATOR_INTRO": {
+    "en": "We have a problem with Riverside's water supply, and I could use your help.\n\nCan you check the installation by the bridge?",
+    "ch": "河濱鎮的供水出了問題, 我需要你幫忙.\n\n你能去檢查橋邊那座設施嗎?",
+    "cn": "河畔镇的供水出了问题, 我需要你帮忙.\n\n你能去检查桥边那座设施吗?"
+   },
+   "UI_KCMAIN_STORIES_WATER_GENERATOR_LOCATION": {
+    "en": "By the W Main St bridge in Riverside. The generator and pump are close to each other.\n\nThe location is marked in your logbook. Once you get the generator running, check the pump before coming back.",
+    "ch": "在河濱鎮 W Main St 橋邊. 發電機和水泵離得很近.\n\n位置已經標在你的日誌裡. 把發電機發動之後, 先檢查水泵再回來.",
+    "cn": "在河畔镇 W Main St 桥边. 发电机和水泵离得很近.\n\n位置已经标在你的日志里. 把发电机启动之后, 先检查水泵再回来."
+   },
+   "UI_KCMAIN_STORIES_WATER_GENERATOR_REPORT": {
+    "en": "The generator and pump are working.",
+    "ch": "發電機和水泵都能運轉了.",
+    "cn": "发电机和水泵都能运转了."
+   },
+   "UI_KCMAIN_STORIES_WATER_GENERATOR_REQUIREMENTS": {
+    "en": "Before you leave, let's go over what you'll need:\n\n{requirements}\n\nI'll provide the materials used up in the repair when you accept. You'll need to bring your own tools and know how to use them.\n\nOnce you've repaired the generator, checked the pump and come back to tell me the result, I'll give you:\n\n- 2500 credits.\n- 1 hammer.\n- 2 wrenches.\n- 10 rolls of duct tape.",
+    "ch": "你出發之前, 我們先確認你會需要什麼:\n\n{requirements}\n\n你接下這項工作時, 修理過程中會消耗的材料由我提供. 工具要自己帶, 也要懂得怎麼用.\n\n等你修好發電機、檢查過水泵, 回來告訴我結果之後, 我會給你:\n\n- 2,500 信用點.\n- 一把錘子.\n- 兩把扳手.\n- 十捲膠帶.",
+    "cn": "你出发之前, 我们先确认你会需要什么:\n\n{requirements}\n\n你接下这项工作时, 修理过程中会消耗的材料由我提供. 工具要自己带, 也要懂得怎么用.\n\n等你修好发电机, 检查过水泵, 回来告诉我结果之后, 我会给你:\n\n- 2,500 信用点.\n- 一把锤子.\n- 两把扳手.\n- 十卷胶带."
+   },
+   "UI_KCMAIN_STORIES_WATER_PUMP_ACCEPTED": {
+    "en": "Thank you for seeing this through.\n\nGather the parts and take everything straight to the pump. You don't need to bring the materials to me; you'll need them there for the work.\n\nOnce the repair is finished, come back and tell me the result. I'll have your pay ready.",
+    "ch": "謝謝你把這件事做到底.\n\n收集好零件, 然後把東西全部直接帶到水泵那裡. 材料不用拿來給我; 你在那裡工作時會用到.\n\n修好之後, 回來告訴我結果. 我會把報酬準備好.",
+    "cn": "谢谢你把这件事做到底.\n\n收集好零件, 然后把东西全部直接带到水泵那里. 材料不用拿来给我; 你在那里干活时会用到.\n\n修好之后, 回来告诉我结果. 我会把报酬准备好."
+   },
+   "UI_KCMAIN_STORIES_WATER_PUMP_INSTRUCTIONS_ANSWER": {
+    "en": "Gather the materials first. Once you have everything, take your tools to the pump and repair it there; you don't need to stop here beforehand.\n\nEven though you've cleared the place before, look around carefully before starting. Then come back and tell me how it turned out.",
+    "ch": "先收集材料. 東西湊齊之後, 把工具帶到水泵那裡就地修理; 不必先繞回我這裡.\n\n雖然你之前已經清空過那裡, 開工前還是先仔細看看四周. 之後回來告訴我結果如何.",
+    "cn": "先收集材料. 东西凑齐之后, 把工具带到水泵那里就地修理; 不必先绕回我这里.\n\n虽然你之前已经清空过那里, 开工前还是先仔细看看四周. 之后回来告诉我结果如何."
+   },
+   "UI_KCMAIN_STORIES_WATER_PUMP_INSTRUCTIONS_ASK": {
+    "en": "What is different about repairing the pump?",
+    "ch": "修理水泵有什麼不一樣?",
+    "cn": "修理水泵有什么不一样?"
+   },
+   "UI_KCMAIN_STORIES_WATER_PUMP_INTRO": {
+    "en": "About that second repair: we need the pump to deliver enough pressure again.\n\nCan you take care of it too? This time we'll have to find the parts before starting.",
+    "ch": "關於第二次維修: 我們得讓水泵重新輸出足夠的水壓.\n\n這件事也能交給你嗎? 這次得先找到零件才能開工.",
+    "cn": "关于第二次维修: 我们得让水泵重新输出足够的水压.\n\n这件事也能交给你吗? 这次得先找到零件才能开工."
+   },
+   "UI_KCMAIN_STORIES_WATER_PUMP_LOCATION": {
+    "en": "It's the same pump by the W Main St bridge in Riverside, near the generator you repaired.\n\nIt's marked in your logbook. Take the parts there and come back to me after repairing it.",
+    "ch": "就是河濱鎮 W Main St 橋邊那台水泵, 在你修好的發電機旁邊.\n\n它已經標在你的日誌裡. 把零件帶過去, 修好之後回來找我.",
+    "cn": "就是河畔镇 W Main St 桥边那台水泵, 在你修好的发电机旁边.\n\n它已经标在你的日志里. 把零件带过去, 修好之后回来找我."
+   },
+   "UI_KCMAIN_STORIES_WATER_PUMP_REPORT": {
+    "en": "The pump is repaired.",
+    "ch": "水泵修好了.",
+    "cn": "水泵修好了."
+   },
+   "UI_KCMAIN_STORIES_WATER_PUMP_REQUIREMENTS": {
+    "en": "To repair the pump, you'll need:\n\n{requirements}\n\nThis time I have no materials to give you. You'll have to gather them and bring your tools; make sure you have the skills for the work too.\n\nOnce you've repaired it and come back to report, I'll give you:\n\n- 2500 credits.\n- 1 pipe wrench.\n- 6 metal pipes.\n- 1 blowtorch.",
+    "ch": "要修好水泵, 你會需要:\n\n{requirements}\n\n這次我沒有材料可以給你. 材料得由你自己收集, 工具也要自己帶; 也要確認你具備這項工作所需的技能.\n\n等你修好它並回來回報之後, 我會給你:\n\n- 2,500 信用點.\n- 一把管鉗.\n- 六根金屬管.\n- 一把噴燈.",
+    "cn": "要修好水泵, 你会需要:\n\n{requirements}\n\n这次我没有材料可以给你. 材料得由你自己收集, 工具也要自己带; 也要确认你具备这项工作所需的技能.\n\n等你修好它并回来汇报之后, 我会给你:\n\n- 2,500 信用点.\n- 一把管钳.\n- 六根金属管.\n- 一个喷灯."
+   },
+   "UI_KCMain_ModOptions_EnableMainMenuLightning": {
+    "en": "Enable main-menu lightning effects",
+    "ch": "啟用主選單閃電效果",
+    "cn": "启用主菜单闪电效果"
+   },
+   "UI_KCMain_ModOptions_EnableMainMenuLightning_Tooltip": {
+    "en": "Adds repeated bright flashes to the main-menu background. Disabled by default. Leave disabled if you are sensitive to flashing lights.",
+    "ch": "在主選單背景加入反覆出現的強烈閃光. 預設為關閉. 如果你對閃爍光線敏感, 請保持關閉.",
+    "cn": "在主菜单背景加入反复出现的强烈闪光. 默认为关闭. 如果你对闪烁光线敏感, 请保持关闭."
+   },
+   "UI_KCSTORIES_OBJECT_ACTION_UNAVAILABLE": {
+    "en": "Action unavailable",
+    "ch": "動作無法使用",
+    "cn": "操作无法使用"
+   },
+   "UI_MM_opt_stopInjury": {
+    "en": "Stop for untreated injuries",
+    "ch": "有未處理的傷勢時停止",
+    "cn": "有未处理的伤势时停止"
+   },
+   "UI_MM_opt_stopInjury_tt": {
+    "en": "Stops for active bleeding, unbandaged deep wounds and unsplinted arm or leg fractures. Splinted fractures, bandaged wounds and fractures that cannot be splinted do not stop training.",
+    "ch": "出血中, 未包紮的深傷口, 以及未上夾板的手臂或腿部骨折都會讓訓練停止. 已上夾板的骨折, 已包紮的傷口, 以及無法上夾板的骨折則不會停止訓練.",
+    "cn": "出血中, 未包扎的深伤口, 以及未上夹板的手臂或腿部骨折都会让训练停止. 已上夹板的骨折, 已包扎的伤口, 以及无法上夹板的骨折则不会停止训练."
    }
   },
   "MakeUp.json": {
