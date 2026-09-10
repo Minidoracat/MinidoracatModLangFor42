@@ -9,7 +9,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **660 個 Workshop 模組**（836 個 mod ID）；另 **17 個已下架**（翻譯保留，見文末）。
+共支援 **659 個 Workshop 模組**（835 個 mod ID）；另 **18 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -662,7 +662,6 @@
 | [Livestock Panel Plus](https://steamcommunity.com/sharedfiles/filedetails/?id=3783623999) | 牲畜面板增強 | 強化牲畜資訊面板，可顯示飢餓、地面壓力、缺少雞舍等狀態指標。 | `LivestockPanelPlus` | 67 | — | — |
 | [Horse Utility Add-on](https://steamcommunity.com/sharedfiles/filedetails/?id=3784003967) | 馬匹實用附加模組 | 為馬鞍加裝步槍鞘與步槍袋，並加入羈絆系統：騎乘、餵食與撫摸可提升羈絆，影響呼喚主坐騎的範圍與馬匹在殭屍附近的冷靜程度。 | `HorseUtilityAddon` | 47 | — | — |
 | [Whose Key Is This](https://steamcommunity.com/sharedfiles/filedetails/?id=3784348098) | 這是誰的鑰匙 | 標示鑰匙所屬建築類型（酒吧、教堂等），可在附近地面鑰匙上方顯示名稱與指示器，並含伺服器端開關設定。 | `WhoseKeyIsThis` | 150 | — | — |
-| [Peachey Distillation](https://steamcommunity.com/sharedfiles/filedetails/?id=3784741776) | Peachey 蒸餾 | 加入發酵醪、蒸餾器與陳釀流程，可釀製苦艾烈酒、陳釀葡萄酒等酒品，並提供專屬蒸餾製作分類。 | `peacheysdistillation` | 122 | — | — |
 | [J93 Running Blood Pools](https://steamcommunity.com/sharedfiles/filedetails/?id=3784951301) | J93 血泊與血腳印 | 血泊具濕潤度與視覺老化，走過濕潤血泊會沾血並留下血腳印；多人模式由伺服器決定沾污時機與腳印位置。 | `J93RunningBloodPools` | 97 | — | — |
 | [Extraction Mode](https://steamcommunity.com/sharedfiles/filedetails/?id=3785397275) | 撤離模式 | 加入撤離玩法：為撤離直升機添加汽油、發射信號彈並登機撤離，另有實驗性感染治療劑與撤離紀錄、帳本等文件。 | `ExtractionMode` | 931 | — | — |
 | [Fence Sheets](https://steamcommunity.com/sharedfiles/filedetails/?id=3785740658) | 圍籬布簾 | 可在圍欄上掛上布簾並指定方向（北側、西側等）。 | `FenceSheets` | 26 | — | — |
@@ -674,7 +673,7 @@
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
-## 已下架模組（17 個，翻譯保留）
+## 已下架模組（18 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
@@ -697,3 +696,4 @@
 | [3625348470](https://steamcommunity.com/sharedfiles/filedetails/?id=3625348470) | Sourdough 酸種麵包 | 新增酸種麵包相關內容與容器，支援單人與伺服器環境。 | `SourdoughHost42.13`, `SourdoughSP&Dedicated42.13` | ? | — | — | 2026-07-17 |
 | [Better Towing / Harrys Tow Truck [B42.13.1]](https://steamcommunity.com/sharedfiles/filedetails/?id=3633899582) | 更好的拖車／Harry 的拖吊車 | 改良車輛拖吊系統，可用拖車槓或掛鉤牽引並調整高度，附拖吊車。 | `BetterTowing`, `DisableDefaultTowing`, `HarrysTowTruck` | ? | ? | — | 2026-07-30 |
 | [3651494414](https://steamcommunity.com/sharedfiles/filedetails/?id=3651494414) | DayZ 槍械 | 新增 DayZ 風格槍械相關內容。 | `DayZ_Guns_B42` | ? | — | — | 2026-07-17 |
+| [Peachey Distillation](https://steamcommunity.com/sharedfiles/filedetails/?id=3784741776) | Peachey 蒸餾 | 加入發酵醪、蒸餾器與陳釀流程，可釀製苦艾烈酒、陳釀葡萄酒等酒品，並提供專屬蒸餾製作分類。 | `peacheysdistillation` | 122 | — | — | 2026-09-10 |
