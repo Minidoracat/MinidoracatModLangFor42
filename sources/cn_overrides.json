@@ -20702,8 +20702,8 @@
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_Debug": {
   "as1_value": "开发者 | 调试模式",
-  "value": "详细日志",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='开发者 | 调试模式'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '開發者 | 除錯模式'"
+  "value": "开发者 | 详细日志",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。英文僅新增沙盒選單分類前綴、本體字未變；中文沿用原譯並加上對應前綴"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_Debug_tooltip": {
   "as1_value": "启用详细的诊断日志. 向控制台输出详细的系统和功能事件.",
@@ -20712,8 +20712,8 @@
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_DevStartingKit": {
   "as1_value": "开发者 | 开发者起始套装",
-  "value": "给新角色一套测试装备",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='开发者 | 开发者起始套装'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '開發者 | 開發者起始套裝'"
+  "value": "开发者 | 给新角色一套测试装备",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。英文僅新增沙盒選單分類前綴、本體字未變；中文沿用原譯並加上對應前綴"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_DevStartingKit_tooltip": {
   "as1_value": "用于测试. 新角色将携带枪械, 消音器, 弹药以及制作更多消音器所需工具开局.",
@@ -20722,8 +20722,8 @@
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_FindSuppressorsNaturally": {
   "as1_value": "物资 | 消音器可在物资中生成",
-  "value": "可找到成品消音器",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='物资 | 消音器可在物资中生成'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '戰利品 | 消音器可在戰利品中生成'"
+  "value": "物资 | 可找到成品消音器",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。英文僅新增沙盒選單分類前綴、本體字未變；中文沿用原譯並加上對應前綴"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_FindSuppressorsNaturally_tooltip": {
   "as1_value": "关闭后, 消音器及其部件永远不会在容器中生成, 必须通过制作获得.",
@@ -20732,8 +20732,8 @@
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_LootRarity": {
   "as1_value": "物资 | 消音器物资稀有度倍数 (%%)",
-  "value": "物资丰富度 (%%)",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='物资 | 消音器物资稀有度倍数 (%%)'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '戰利品 | 消音器戰利品稀有度倍率 (%%)'"
+  "value": "物资 | 总体物资丰富度 (%%)",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。英文由 'Loot abundance' 改為 'Overall loot abundance'（涵蓋範圍改成整體）；同時把 loot 統一為本體繁中慣用的「物資」（本體 Sandbox_LootRarity＝物資稀有率），CN 依英文寫「总体物资丰富度」"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_LootRarity_tooltip": {
   "as1_value": "按比例调整消音器及其部件的程序化物资生成几率. 100为基准值; 数值越低或越高, 相应条目出现得越少或越多.",
@@ -20742,18 +20742,18 @@
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_OilFilterEngineDamage": {
   "as1_value": "机油滤清器 | 缺失机油滤清器发动机损伤",
-  "value": "每个间隔损失的发动机耐久",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='机油滤清器 | 缺失机油滤清器发动机损伤'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '機油濾清器 | 缺少機油濾清器時的引擎損傷'"
+  "value": "车辆 | 每个间隔损失的发动机耐久度",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。英文僅新增沙盒選單分類前綴、本體字未變；中文沿用原譯並加上對應前綴"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_OilFilterEngineDamage_tooltip": {
   "as1_value": "每个缺失机油滤清器磨损间隔所损失的发动机耐久.",
-  "value": "没有滤清器时, 每经过一次磨损间隔所损失的发动机耐久. 默认: 1. 需搭配“发动机磨损间隔”使用.",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='每个缺失机油滤清器磨损间隔所损失的发动机耐久.'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '每次達到缺少機油濾清器的磨損間隔時, 引擎損失的耐久度.'"
+  "value": "每经过一次机油过低间隔所损失的耐久度. 机油在5%%及以下时, 损失量翻倍. 默认: 2.",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。語意改變：觸發條件由「沒有濾清器」改為「機油過低」，新增 5%% 以下加倍規則，預設值 1→2，並刪除舊的「需搭配引擎磨損間隔」說明"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_OilFilterRemovalSeconds": {
   "as1_value": "机油滤清器 | 机油滤清器拆卸时间 (秒)",
-  "value": "滤清器拆卸时间 (秒)",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='机油滤清器 | 机油滤清器拆卸时间 (秒)'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '機油濾清器 | 機油濾清器拆卸時間 (秒)'"
+  "value": "车辆 | 滤清器拆卸时间 (秒)",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。英文僅新增沙盒選單分類前綴、本體字未變；中文沿用原譯並加上對應前綴"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_OilFilterRemovalSeconds_tooltip": {
   "as1_value": "从车辆发动机上取下机油滤清器并将其回收用于制作消音器所需的时间.",
@@ -20762,18 +20762,18 @@
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_OilFilterWearMinutes": {
   "as1_value": "机油滤清器 | 缺失机油滤清器磨损间隔",
-  "value": "发动机磨损间隔 (游戏分钟)",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='机油滤清器 | 缺失机油滤清器磨损间隔'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '機油濾清器 | 缺少機油濾清器時的磨損間隔'"
+  "value": "车辆 | 机油过低损伤间隔 (游戏分钟)",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。語意改變：由 'Engine wear interval' 改為 'Low-oil damage interval'，觸發條件改成機油過低，另加 VEHICLES 前綴"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_OilFilterWearMinutes_tooltip": {
   "as1_value": "取下机油滤清器行驶时, 每隔这么多游戏分钟发动机受损一次. 默认是逐渐磨损: 每10分钟损失1点耐久.",
-  "value": "发动机在没有滤清器的情况下运转时, 每隔多久损失一次耐久. 启用“机油和漏油”后, 机油低于25%%或机油品质为0%%时同样适用. 默认: 每10游戏分钟一次.",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='取下机油滤清器行驶时, 每隔这么多游戏分钟发动机受损一次. 默认是逐渐磨损: 每10分钟损失1点耐久.'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '取下機油濾清器行駛時, 每隔這麼多遊戲分鐘, 引擎就會受損一次. 預設為逐漸磨損: 每10分鐘損失1點耐久度.'"
+  "value": "发动机运转时, 机油低于25%%的情况下每隔多久损失一次耐久度. 机油在5%%及以下时损伤翻倍. 缺少滤清器只会漏油, 直到机油变少才会损伤发动机. 默认: 每5游戏分钟一次.",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。語意改變：損傷條件由「沒有濾清器」改成「機油低於25%%」，明示缺濾清器本身不傷引擎，新增 5%% 以下加倍，預設 10→5 分鐘"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_SoundRadiusReduction": {
   "as1_value": "声音 | 消音后枪声传播距离 (%%)",
-  "value": "僵尸听觉范围 (%%)",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='声音 | 消音后枪声传播距离 (%%)'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '聲音 | 消音後槍聲傳播距離 (%%)'"
+  "value": "消音 | 僵尸听觉范围 (%%)",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。英文僅新增沙盒選單分類前綴、本體字未變；中文沿用原譯並加上對應前綴"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_SoundRadiusReduction_tooltip": {
   "as1_value": "僵尸能听到消音枪声的距离, 以未消音范围的百分比表示. 20表示消音枪声的传播距离仅为五分之一. 100表示禁用此效果.",
@@ -20782,8 +20782,8 @@
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_SoundVolumeReduction": {
   "as1_value": "声音 | 消音后枪声音量 (%%)",
-  "value": "枪声音量 (%%)",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='声音 | 消音后枪声音量 (%%)'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '聲音 | 消音後槍聲音量 (%%)'"
+  "value": "消音 | 枪声音量 (%%)",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。英文僅新增沙盒選單分類前綴、本體字未變；中文沿用原譯並加上對應前綴"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_SoundVolumeReduction_tooltip": {
   "as1_value": "消音枪声的响度, 以未消音音量的百分比表示. 55表示消音枪声约为一半多一点响. 100表示禁用此效果.",
@@ -20792,43 +20792,43 @@
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_Enable12GaugeSuppressors": {
   "as1_value": "兼容性 | 启用12号消音器",
-  "value": "12号消音器",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='兼容性 | 启用12号消音器'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '相容性 | 啟用12號消音器'"
+  "value": "口径 | 启用12号消音器",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。英文新增 CALIBERS 前綴並補上 Enable；中文沿用原口徑寫法並補「啟用／启用」"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_Enable3030Suppressors": {
   "as1_value": "兼容性 | 启用.30-30消音器",
-  "value": ".30-30消音器",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='兼容性 | 启用.30-30消音器'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '相容性 | 啟用.30-30消音器'"
+  "value": "口径 | 启用.30-30消音器",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。英文新增 CALIBERS 前綴並補上 Enable；中文沿用原口徑寫法並補「啟用／启用」"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_Enable308Suppressors": {
   "as1_value": "兼容性 | 启用.308消音器",
-  "value": ".308消音器",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='兼容性 | 启用.308消音器'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '相容性 | 啟用.308消音器'"
+  "value": "口径 | 启用.308消音器",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。英文新增 CALIBERS 前綴並補上 Enable；中文沿用原口徑寫法並補「啟用／启用」"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_Enable357Suppressors": {
   "as1_value": "兼容性 | 启用.357消音器",
-  "value": ".357消音器",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='兼容性 | 启用.357消音器'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '相容性 | 啟用.357消音器'"
+  "value": "口径 | 启用.357消音器",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。英文新增 CALIBERS 前綴並補上 Enable；中文沿用原口徑寫法並補「啟用／启用」"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_Enable44Suppressors": {
   "as1_value": "兼容性 | 启用.44消音器",
-  "value": ".44消音器",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='兼容性 | 启用.44消音器'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '相容性 | 啟用.44消音器'"
+  "value": "口径 | 启用.44消音器",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。英文新增 CALIBERS 前綴並補上 Enable；中文沿用原口徑寫法並補「啟用／启用」"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_Enable45ACPSuppressors": {
   "as1_value": "兼容性 | 启用.45消音器",
-  "value": ".45 ACP消音器",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='兼容性 | 启用.45消音器'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '相容性 | 啟用.45消音器'"
+  "value": "口径 | 启用.45 ACP消音器",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。英文新增 CALIBERS 前綴並補上 Enable；中文沿用原口徑寫法並補「啟用／启用」"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_Enable556Suppressors": {
   "as1_value": "兼容性 | 启用5.56mm消音器",
-  "value": "5.56mm消音器",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='兼容性 | 启用5.56mm消音器'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '相容性 | 啟用5.56mm消音器'"
+  "value": "口径 | 启用5.56mm消音器",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。英文新增 CALIBERS 前綴並補上 Enable；中文沿用原口徑寫法並補「啟用／启用」"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_Enable9mmSuppressors": {
   "as1_value": "兼容性 | 启用9mm消音器",
-  "value": "9mm消音器",
-  "reason": "2026-09-09 #472 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane: CH corpus 更新 + 提案 cn_overrides (as1_value 錨點='兼容性 | 启用9mm消音器'). 舊 CN 對應舊 EN, 新 EN 改了標籤/新增條件與預設值即屬過時, 依本輪裁決一併用簡中直譯補齊到與 CH 同資訊量 (不經任何簡繁轉換, 逐鍵對照 EN 直寫大陸用語: 发动机/物资/日志/默认/耐久). CH 舊值: '相容性 | 啟用9mm消音器'"
+  "value": "口径 | 启用9mm消音器",
+  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。英文新增 CALIBERS 前綴並補上 Enable；中文沿用原口徑寫法並補「啟用／启用」"
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_Enable12GaugeSuppressors_tooltip": {
   "as1_value": "允许在泵动式和JS-3T霰弹枪上安装12号消音器. 关闭以禁用霰弹枪消音器及其物资. 不支持双管和锯短的JS-2000霰弹枪.",
@@ -20889,5 +20889,15 @@
   "as1_value": "穿低一点",
   "value": "调低",
   "reason": "2026-09-09 #466 上游 EN 語意變更（tracker stale），CN 跟進新 EN；owner 衝突改值（census signature cb8f26ae88153819；owner：3307376332/Frockin Splendor!='Wear Lower'；3411888105/Frockin Splendor! Vol.2='Wear Lower'；3453676250/Frockin Shirts n Ties='Wear Lower'；3580511016/SCP Pack='Lower Visor'）。現值「穿低一點／穿低一点」對 3580511016/SCP Pack 明確不成立：該 mod 的 ContextMenu.json 只有三個鍵 Inject Serum／Lower Visor／Raise Visor，\"Lower Visor\" 是把頭盔面罩放下（其孿生鍵 ContextMenu_Raise 現值即「抬起面罩」），不是把衣物穿低；出貨現值會給 SCP 玩家一個錯的動作說明。改為裸動詞「調低／调低」：對 Frockin 三包的 \"Wear Lower\"（把衣物穿低）與 SCP 的 \"Lower Visor\"（把面罩調低）皆為真，且不含任何 owner 獨有的受詞——與 ContextMenu_Inject 的既有裁決同一把尺（同樣含 SCP Pack owner，六個 owner 英文從 \"Inject\" 到 \"Inject X-Virus\"，裁決取裸動詞「注射」）。未採 unship：四個 owner 都有可載入 JSON EN，但泛義只是丟掉受詞、兩側語意並不互斥（同一個「往下」動作施於不同受詞），符合既有裸動詞裁決先例，unship 只會讓所有 owner 退回英文而無實質收益。落地：CH 改 sources/ch/ContextMenu.json；CN 偏離 As1（4 個鏡像一致為「穿低一点」）須走 cn_overrides.json 帶 as1_value=\"穿低一点\"＋reason，同步更新 ch_review_state.json（現行 hash 74271ccf217eda1c）。副作用已評估：Frockin 家族的 ContextMenu_Higher／Longer／Shorter（穿高一點／穿長一點／穿短一點）不在衝突 census 內、維持不動，故該 mod 選單會出現「穿高一點」與「調低」並列的不對稱，這是共用鍵的必然代價，優先序取「不對任何 owner 說錯話」。"
+ },
+ "IG_UI.json|IGUI_ExtractionMode_Quest_the_original_case_Description": {
+  "as1_value": "达到急救3级, 并从圣佩里格林医院取回零号病人样本.",
+  "value": "达到急救3级, 并从路易斯维尔总医院取回零号病人样本.",
+  "reason": "2026-09-10 #477：上游將零號病人樣本目的地由 St. Peregrin Hospital 改為 Louisville General Hospital；繁簡同步更正醫院，其餘任務內容不變。"
+ },
+ "IG_UI.json|IGUI_ExtractionMode_Quest_the_original_case_Flavor": {
+  "as1_value": "万斯一直专注于那个感染进展异常缓慢的囚犯, 但我们还需要一个可以用来对照的病例. 撤离记录提到, 一名最早确诊病人的保存样本被送往了圣佩里格林医院. 如果那份标本还在, 它也许能让我们看到在任何人开始尝试治疗之前, 感染最初是什么样子. 我打赌样本在停尸区. 你现在掌握的医学知识足够让你认出要找的东西. 找到样本, 保持密封, 直接带回来给我.",
+  "value": "万斯一直专注于那个感染进展异常缓慢的囚犯, 但我们还需要一个可以用来对照的病例. 撤离记录提到, 一名最早确诊病人的保存样本被送往了路易斯维尔总医院. 如果那份标本还在, 它也许能让我们看到在任何人开始尝试治疗之前, 感染最初是什么样子. 我打赌样本在停尸区. 你现在掌握的医学知识足够让你认出要找的东西. 找到样本, 保持密封, 直接带回来给我.",
+  "reason": "2026-09-10 #477：上游將零號病人樣本目的地由 St. Peregrin Hospital 改為 Louisville General Hospital；繁簡同步更正醫院，其餘任務內容不變。"
  }
 }

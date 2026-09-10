@@ -1430,6 +1430,11 @@
    "as1_value": "",
    "owner_signature": "a729443a2bc3c056",
    "reason": "2026-09-03 #367 裁決不出貨：上游 2026-09 新增 1985 Vanagon（T3）車系三鍵，情形與 #244 批次的 230 條完全同型——同一 workshop 項目底下兩個可獨立啟用的 mod 用同鍵表示不同車輛實體：base「Krichten Minibus III Camper」（規避商標的虛構品牌）vs Real Names Addon「Volkswagen Vanagon Westfalia (T3)」（真實車名）。兩者為不同品牌／車系命名，沒有誠實中性譯名，JSON 全域字串表無法依 mod 啟用狀態條件化。兩個 owner 都在有效分支 42.15 的 Translate/EN/IG_UI.json 定義此鍵（has_json_en 皆為 true），故抑制後各自玩家看到自己 mod 的英文車名，不會出現字面鍵名（Translator.getTextInternal 對 IGUI_ 前綴查無即回傳 desc 本身，42.20.4 反編譯確證）。As1 尚未收錄此鍵、我方亦不補譯，故 as1_value 為空字串（抑制前無有效 CN 值）。"
+  },
+  "IG_UI.json|IGUI_VehicleNamefhqLegacyBD": {
+   "as1_value": "",
+   "owner_signature": "4696b269fb4e22fb",
+   "reason": "2026-09-10 #473：沿用 #244/#367 車名裁決。上游作品頁明示 lore-friendly names 與 optional real names 是玩家可選的命名方式；有效分支 42.15 中，主 MOD 的同一 fhqLegacyBD 車系名為 Pleiades Leredita，Real Names Addon 改為 Subaru Legacy (BD)。兩個 owner 的 IG_UI.json 均可載入，script_vehicle 同時新增 fhqLegacyBD，不是無引用的孤立字串。全域 JSON 若固定採任何一方品牌就會改掉另一方選擇；泛稱轎車又抹去車系身分，無忠實共用譯名，因此不新增中文，讓各自保留上游英文車名。As1 尚未收錄、我方真相層也無此鍵，as1_value 空字串沿用未收錄新鍵的既有契約，不假造翻譯。來源：https://steamcommunity.com/sharedfiles/filedetails/?id=2791656602；sources/en/2791656602.json；tracker-state/en_corpus_hashes/2791656602.json。"
   }
  }
 }

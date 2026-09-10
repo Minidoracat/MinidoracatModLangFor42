@@ -6937,6 +6937,11 @@
    "reason": "2026-09-10 #466：靜態查證後保留 v42.20.4-1.27.2 的「戴在右側／戴在右侧」，不改 Lua 或出貨文字。3411888105/Frockin Splendor! Vol.2 的 42/media/lua/shared/Translate/EN/ContextMenu.json:39 雖定義 Switch Side，但有效 scripts/Lua 沒有此鍵的直接、ExtraOption、ExtraSubmenu 或動態消費，無自身選單需要改譯。其他三個 owner 的 13 個 Right 切換均指向右側目的物品；Support Corps 的 Right Arm 是較具體的右側，改成「右臂」反而會誤導頭飾與背包玩偶的使用者。此結論限本次原包；signature 錨定 owner/EN 而非 consumer，日後若新增或改變用途，即使 EN 不變仍須重審。詳細證據：3397182976/RandomClothing 的 common/media/scripts/clothing/RandomClothing.txt 有 9 個 Right 目的選項及 6 個 Right 自身位置選項；MikuFumoL 的 Right 對應 MikuFumoR（465–466 行），目的 BodyLocation=RandomClothing:RightBackPlush（445 行）。Herta、Hanabi 的 Right 同樣指向右側物品，FrontRight 是另一個 key；FlowerRight 仍在 Hat 槽，但 XML 指定 MF_FlowerRight，與 MF_FlowerLeft 分開。3409836763 與 3512993822/Support Corps 分別驗證，各有 2 個 Right 選項，42/media/scripts/clothing/SupportCorpsClothing.txt:57–58、91–92 將左臂章換成右臂章，目的 BodyLocation=MARightArm（39、73 行）。遊戲 ISInventoryPaneContextMenu.lua:4392–4397 與 ISClothingExtraAction.lua:121–136 證明選項依序換成並穿上目的物品。原包 manifest：3411888105=9010995043724212747、3397182976=4801751439426554935、3409836763=5710081324226703725、3512993822=7442337685954902241。",
    "ch": "戴在右側",
    "cn": "戴在右侧"
+  },
+  "IG_UI|IGUI_VehicleNamefhqLegacyBD": {
+   "action": "unship",
+   "signature": "4696b269fb4e22fb",
+   "reason": "2026-09-10 #473：沿用 #244/#367 車名裁決。上游作品頁明示 lore-friendly names 與 optional real names 是玩家可選的命名方式；有效分支 42.15 中，主 MOD 的同一 fhqLegacyBD 車系名為 Pleiades Leredita，Real Names Addon 改為 Subaru Legacy (BD)。兩個 owner 的 IG_UI.json 均可載入，script_vehicle 同時新增 fhqLegacyBD，不是無引用的孤立字串。全域 JSON 若固定採任何一方品牌就會改掉另一方選擇；泛稱轎車又抹去車系身分，無忠實共用譯名，因此不新增中文，讓各自保留上游英文車名。As1 尚未收錄、我方真相層也無此鍵，as1_value 空字串沿用未收錄新鍵的既有契約，不假造翻譯。來源：https://steamcommunity.com/sharedfiles/filedetails/?id=2791656602；sources/en/2791656602.json；tracker-state/en_corpus_hashes/2791656602.json。"
   }
  }
 }
