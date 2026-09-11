@@ -568,7 +568,7 @@
 | [[42.13] Science, Bitch!](https://steamcommunity.com/sharedfiles/filedetails/?id=3659195975) | Science, Bitch! | 新增科學技能與系列技能書，可研究物品累積科學知識。 | `ZScienceSkill` | 47 | — | — |
 | [Body Count Rewards](https://steamcommunity.com/sharedfiles/filedetails/?id=3660382016) | 擊殺數獎勵 | 累積殭屍擊殺數達里程碑即可獲得正面特質或移除負面特質，獎勵池與門檻可調。 | `BCR` | 66 | — | — |
 | [Jeeve's Integration](https://steamcommunity.com/sharedfiles/filedetails/?id=3660924327) | Jeeve's 整合 | 伺服器管理輔助模組，在重啟或模組更新前播放警告提示音。 | `JeevesIntegration` | 32 | — | — |
-| [[B42.15+] Medieval Z [Beta]](https://steamcommunity.com/sharedfiles/filedetails/?id=3661164291) | 中世紀 Z | 新增中世紀武器與盔甲，如裝甲劍與各式頭盔等裝備。 | `MedievalZ` | 220 | — | — |
+| [[B42.15+] Medieval Z [Beta]](https://steamcommunity.com/sharedfiles/filedetails/?id=3661164291) | 中世紀 Z | 新增中世紀武器與盔甲，如裝甲劍與各式頭盔等裝備。 | `MedievalZ` | 220 | ⚠️ ≥1 | — |
 | [Horse Mod [B42.14+/MP SOON]](https://steamcommunity.com/sharedfiles/filedetails/?id=3661336777) | 馬匹模組 | 為遊戲新增馬匹相關內容。 | `Horse` | 214 | — | — |
 | [R.U. BTR-80 by Papa_Chad](https://steamcommunity.com/sharedfiles/filedetails/?id=3661387277) | R.U. BTR-80 by Papa_Chad | 新增俄系 BTR-80 裝甲運兵車，配備 2A42 30mm 機砲。 | `R.U. BTR-80 by Papa_Chad` | ? | — | — |
 | [Xnertot Farmable Trees B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3663890932) | Xnertot 可種植果樹 | 新增蘋果、香蕉、櫻桃等多種果樹樹苗，可自行種植果樹並調整生長時間。 | `XnerTreeB42` | 59 | — | — |
