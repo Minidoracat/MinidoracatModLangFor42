@@ -6942,6 +6942,27 @@
    "action": "unship",
    "signature": "4696b269fb4e22fb",
    "reason": "2026-09-10 #473：沿用 #244/#367 車名裁決。上游作品頁明示 lore-friendly names 與 optional real names 是玩家可選的命名方式；有效分支 42.15 中，主 MOD 的同一 fhqLegacyBD 車系名為 Pleiades Leredita，Real Names Addon 改為 Subaru Legacy (BD)。兩個 owner 的 IG_UI.json 均可載入，script_vehicle 同時新增 fhqLegacyBD，不是無引用的孤立字串。全域 JSON 若固定採任何一方品牌就會改掉另一方選擇；泛稱轎車又抹去車系身分，無忠實共用譯名，因此不新增中文，讓各自保留上游英文車名。As1 尚未收錄、我方真相層也無此鍵，as1_value 空字串沿用未收錄新鍵的既有契約，不假造翻譯。來源：https://steamcommunity.com/sharedfiles/filedetails/?id=2791656602；sources/en/2791656602.json；tracker-state/en_corpus_hashes/2791656602.json。"
+  },
+  "IG_UI|IGUI_PhunCure_CureDropRate_Tooltip": {
+   "action": "translate",
+   "signature": "a8553de05bbaad83",
+   "ch": "殭屍隨機掉落解藥的機率, 0=停用.<br>PhunCure (phuncure): 萬分比, 100=1%%<br>PhunCure 2 (phuncure2): 百分比, 10=10%%, 1.5=1.5%%",
+   "cn": "僵尸随机掉落解药的几率, 0=禁用.<br>PhunCure (phuncure): 万分比, 100=1%%<br>PhunCure 2 (phuncure2): 百分比, 10=10%%, 1.5=1.5%%",
+   "reason": "跨 mod 共用鍵（3628843367/PhunCure 萬分比 vs 3676251425/PhunCure2 百分比，皆經上游 Lua 證實仍在用）——As1 值偏向 PhunCure2 一方，只裝 PhunCure 的玩家會拿到 100 倍誤差的填值指示；改用兩邊皆成立的並列文案。 已唯讀核對兩個有效分支的 PhunZones 欄位與掉落率換算，PhunCure 欄位為萬分比、PhunCure 2 為百分比；並列兩者單位以避免誤導。"
+  },
+  "IG_UI|IGUI_PhunCure_DropRateSprinters_Tooltip": {
+   "action": "translate",
+   "signature": "c2cf4ee2a495ab91",
+   "ch": "跑屍隨機掉落解藥的機率, 0=停用.<br>PhunCure (phuncure): 萬分比, 100=1%%<br>PhunCure 2 (phuncure2): 百分比, 10=10%%, 1.5=1.5%%",
+   "cn": "跑尸随机掉落解药的几率, 0=禁用.<br>PhunCure (phuncure): 万分比, 100=1%%<br>PhunCure 2 (phuncure2): 百分比, 10=10%%, 1.5=1.5%%",
+   "reason": "同 IGUI_PhunCure_CureDropRate_Tooltip：跨 mod 共用鍵、分母不同，As1 值偏向 PhunCure2 一方；改用兩邊皆成立的並列文案。 已唯讀核對兩個有效分支的 PhunZones 欄位與掉落率換算，PhunCure 欄位為萬分比、PhunCure 2 為百分比；並列兩者單位以避免誤導。"
+  },
+  "Sandbox|Sandbox_PhunCure_ExpiredChance_tooltip": {
+   "action": "translate",
+   "signature": "e9f3a0ba408d645b",
+   "ch": "解藥被發現時已失效的機率<br>數值=0-100, 設為0代表解藥永遠保持新鮮; 設為50則表示找到的解藥有一半已無法使用<br>如果你在下方停用了有效期(設為0), 則此設定無效.",
+   "cn": "解药被发现时已失效的概率<br>数值=0-100, 设为0代表解药永远保持新鲜; 设为50则表示找到的解药有一半已无法使用<br>如果你在下方禁用了有效期(设为0), 则此设置无效.",
+   "reason": "兩個 owner 的上游英文只差 allready→already、unusuable→unusable 兩個錯字，數值語意（out of 100、0=永遠新鮮、50=一半不可用、Days to Rot=0 時失效）逐項相同，程式端同為 integer 選項 + ZombRand(1,101) 判定；現行譯文對兩者皆成立，維持不變。"
   }
  }
 }

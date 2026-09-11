@@ -12056,8 +12056,8 @@
  },
  "Sandbox.json|Sandbox_ImmersiveBlackouts_ElectricityShutoffDayRange_tooltip": {
   "as1_value": "设置随机停电的日期范围. \n格式: 最小天数 - 最大天数 (例如: 0-30). \n这将改变原版的停电日期设置.",
-  "reason": "as1 漏掉 EN 的「30-30 = fixed day」範例並把「格式／示例」併行; 同 mod 已登記的 override Sandbox_ImmersiveBlackouts_ElectricityCooldown_tooltip 正是 own 這種「格式:…\\n示例: A = …, B = …」三行體例。",
-  "value": "设定随机永久停电发生的日期范围.\n格式: 最小天数 - 最大天数\n示例: 0-30 = 随机日期, 30-30 = 固定日期.\n此设定会变更原版的“停电时间”设定."
+  "reason": "As1 遺漏固定日期範例；#485 上游再新增格式驗證拒絕後欄位會清空的說明，保留原值錨點並同步補齊。",
+  "value": "设定随机永久停电发生的日期范围.\n格式: 最小天数 - 最大天数\n示例: 0-30 = 随机日期, 30-30 = 固定日期.\n此设定会变更原版的“停电时间”设定.\n若字段变为空白，表示输入格式无效，已被拒绝."
  },
  "Sandbox.json|Sandbox_ImmersiveBlackouts_ElectricityStartDay_tooltip": {
   "value": "在预定永久停电前多少天开始随机停电.\n原版停电日: 30, 随机停电提前天数: 5 = 随机停电从第 25 天开始.\n原版停电日: 禁用, 随机停电提前天数: 2147483647 = 随机停电从第 0 天开始.",
@@ -12076,8 +12076,8 @@
  },
  "Sandbox.json|Sandbox_ImmersiveBlackouts_WaterShutoffDayRange_tooltip": {
   "as1_value": "设置随机停水的日期范围. \n格式: 最小天数 - 最大天数 (例如: 0-30). \n这将改变原版的停水日期设置.",
-  "reason": "as1 漏掉 EN 的「30-30 = fixed day」範例並把「格式／示例」併行; 同 mod 已登記的 override Sandbox_ImmersiveBlackouts_ElectricityCooldown_tooltip 正是 own 這種「格式:…\\n示例: A = …, B = …」三行體例。",
-  "value": "设定随机永久停水发生的日期范围.\n格式: 最小天数 - 最大天数\n示例: 0-30 = 随机日期, 30-30 = 固定日期.\n此设定会变更原版的“停水时间”设定."
+  "reason": "As1 遺漏固定日期範例；#485 上游再新增格式驗證拒絕後欄位會清空的說明，保留原值錨點並同步補齊。",
+  "value": "设定随机永久停水发生的日期范围.\n格式: 最小天数 - 最大天数\n示例: 0-30 = 随机日期, 30-30 = 固定日期.\n此设定会变更原版的“停水时间”设定.\n若字段变为空白，表示输入格式无效，已被拒绝."
  },
  "Sandbox.json|Sandbox_ImmersiveBlackouts_WaterStartDay_tooltip": {
   "value": "在预定永久停水前多少天开始随机停水.\n原版停水日: 30, 随机停水提前天数: 5 = 随机停水从第 25 天开始.\n原版停水日: 禁用, 随机停水提前天数: 2147483647 = 随机停水从第 0 天开始.",
@@ -12108,6 +12108,16 @@
   "as1_value": "<IMAGE:media/textures/Item_Military_Helmet_Patriot- WhitePlain.pngIMAGE:media/textures/Item_Military_Helmet_Patriot- White.png><LINE>",
   "reason": "As1 上游標記損壞：兩個 <IMAGE:> 黏成一個（缺 \"><\"），遊戲內圖片無法顯示。同族 EnablePressGearLoot_tooltip 為正確形式可對照。",
   "value": "<IMAGE:media/textures/Item_Military_Helmet_Patriot- WhitePlain.png><IMAGE:media/textures/Item_Military_Helmet_Patriot- White.png><LINE>"
+ },
+ "Sandbox.json|Sandbox_KillCount_includePostDeathUI_tooltip": {
+  "as1_value": "将死亡后的所有击杀计入最终值的死亡漂浮文字中.",
+  "reason": "#480 新有效分支 EN 指死亡畫面納入所有擊殺，而非只納入死亡後的擊殺。",
+  "value": "死亡后显示的浮动文字会将所有击杀计入最终数值."
+ },
+ "Sandbox.json|Sandbox_KillCount_keepTrackOfDead_tooltip": {
+  "as1_value": "死亡角色会被保留并计入服务器击杀数.适用于从不重置的服务器.",
+  "reason": "#480 EN 明示 Deactivate for server that never wipe；既有 As1/CH 誤譯為適用於不重置的伺服器，遺漏停用指示。",
+  "value": "保留死亡角色的统计，并将其击杀数计入服务器总数. 不重置的服务器请禁用."
  },
  "Sandbox.json|Sandbox_LS_Art_GeneralBeautyMultiplier": {
   "as1_value": "美观评分-倍率",
@@ -20899,5 +20909,15 @@
   "as1_value": "万斯一直专注于那个感染进展异常缓慢的囚犯, 但我们还需要一个可以用来对照的病例. 撤离记录提到, 一名最早确诊病人的保存样本被送往了圣佩里格林医院. 如果那份标本还在, 它也许能让我们看到在任何人开始尝试治疗之前, 感染最初是什么样子. 我打赌样本在停尸区. 你现在掌握的医学知识足够让你认出要找的东西. 找到样本, 保持密封, 直接带回来给我.",
   "value": "万斯一直专注于那个感染进展异常缓慢的囚犯, 但我们还需要一个可以用来对照的病例. 撤离记录提到, 一名最早确诊病人的保存样本被送往了路易斯维尔总医院. 如果那份标本还在, 它也许能让我们看到在任何人开始尝试治疗之前, 感染最初是什么样子. 我打赌样本在停尸区. 你现在掌握的医学知识足够让你认出要找的东西. 找到样本, 保持密封, 直接带回来给我.",
   "reason": "2026-09-10 #477：上游將零號病人樣本目的地由 St. Peregrin Hospital 改為 Louisville General Hospital；繁簡同步更正醫院，其餘任務內容不變。"
+ },
+ "IG_UI.json|IGUI_PhunCure_CureDropRate_Tooltip": {
+  "as1_value": "僵尸掉落解药几率 (每100僵尸携带解药僵尸数量)<br>数值=0-100, 0=禁用, 10=10%%, 1.5=1.5%%",
+  "reason": "跨 mod 共用鍵（3628843367/PhunCure 萬分比 vs 3676251425/PhunCure2 百分比，皆經上游 Lua 證實仍在用）——As1 值偏向 PhunCure2 一方，只裝 PhunCure 的玩家會拿到 100 倍誤差的填值指示；改用兩邊皆成立的並列文案。",
+  "value": "僵尸随机掉落解药的几率, 0=禁用.<br>PhunCure (phuncure): 万分比, 100=1%%<br>PhunCure 2 (phuncure2): 百分比, 10=10%%, 1.5=1.5%%"
+ },
+ "IG_UI.json|IGUI_PhunCure_DropRateSprinters_Tooltip": {
+  "as1_value": "跑尸随机掉落解药的几率(每100僵尸携带解药僵尸数量)<br>数值=0-100, 0=禁用, 10=10%%, 1.5=1.5%%",
+  "reason": "同 IGUI_PhunCure_CureDropRate_Tooltip：跨 mod 共用鍵、分母不同，As1 值偏向 PhunCure2 一方；改用兩邊皆成立的並列文案。",
+  "value": "跑尸随机掉落解药的几率, 0=禁用.<br>PhunCure (phuncure): 万分比, 100=1%%<br>PhunCure 2 (phuncure2): 百分比, 10=10%%, 1.5=1.5%%"
  }
 }
