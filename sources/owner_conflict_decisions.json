@@ -944,20 +944,20 @@
   },
   "UI|UI_trait_BloodlustDesc": {
    "action": "unship",
-   "signature": "67b26b6fe37581d7",
-   "reason": "2026-08-21 裁決不出貨：三個 owner 用同一鍵描述三種互不相容的機制。2459400130/Dynamic-Traits-main「停不下來的殺意，沒有受害者則心情受影響」（不殺才扣心情）；2914075159/Evolving Traits World「以消滅亡靈為樂，擊殺殭屍獲得幸福感並減少壓力／恐慌」（殺了才加心情）；3657541591/Superheroes「攻速加倍、傷害三倍、近戰擊殺回復耐力、Desensitized」（純戰鬥數值、與心情無關）。三者無交集，任何單一 JSON 值都對至少兩個 owner 不成立；依 AGENTS.md「多 owner 共用鍵…沒有誠實中性值就不出貨」不出貨。**已接受的退化**：2459400130 只出貨 legacy UI_EN.txt（42.0 與 mod root media/），B42 Translator.tryFillMapFromFile 路徑寫死 .json，該 owner 無 EN 底層，故只啟用該 mod 的玩家在特質說明會看到字面鍵名 UI_trait_BloodlustDesc；ETW 與 Superheroes 都有 .json EN，抑制後看到的是自己 mod 的正確英文。先前一版曾以 #232 commit 的『Tooltip 禁止 unship』先例出貨 ETW 文案，但該先例的補救手段（Translator live-map Lua）從未落地，且 AGENTS.md 同一條規則明文禁止 Lua 覆寫，故以現行硬規則為準。日後任一 owner 補上 .json EN 或改鍵名即重新裁決。"
+   "signature": "35975e050dddc754",
+   "reason": "維持既有不出貨裁決. 本次不僅 owner 由 2459400130/Dynamic-Traits-main 改為 2459400130/DynamicTraits, 上游 EN 也由 Your mood will be affected if you don't get victims. 改寫為 Your mood suffers when you go without victims.; 不殺生會影響心情的語意不變. 完整三個 owner 仍分別描述不殺生的心情懲罰 (DynamicTraits)、擊殺殭屍帶來快樂並減少壓力與恐慌 (Evolving Traits World)、攻擊速度與傷害加成及近戰擊殺恢復耐力和 Desensitized (Superheroes), 無誠實中性說明可同時適用, 故維持 unship. DynamicTraits 已由 42.0 的 UI_EN.txt 遷至 42.15 的 UI.json, 現在三個 owner 都有可載入 JSON EN; 不出貨後顯示各 mod 的英文, 舊有顯示字面鍵名的退化已不再適用. 以目前完整 owners/raw_en 重算 signature 為 35975e050dddc754, 並同步更新 unshipped_keys.json 的 owner_signature 與本段理由; as1_value 保留既有抑制前有效 CN 值."
   },
   "UI|UI_trait_PluviophileDesc": {
    "action": "translate",
-   "signature": "a50dae80f178e74e",
-   "reason": "兩個 owner 都是「喜歡下雨，淋雨心情變好」：2459400130/Dynamic-Traits-main 全文即此；2914075159/Evolving Traits World 另有「外出雨天緩慢減少不高興／壓力／無聊、打傘效果減半」與完整 Rihanna Umbrella 歌詞。照 #232 Tooltip 先例刪去單側機制與歌詞，保留兩邊皆真的交集。 2026-09-02 上游 2914075159 改寫該鍵英文（新增「打傘效果減半」並移除 Umbrella 歌詞），交集結論不變，僅重新背書 signature。",
+   "signature": "d1ac94597f489b55",
+   "reason": "維持既有中性譯文. 本次 owner 由 Dynamic-Traits-main 改為 DynamicTraits, 且英文由 You love the rain. Your mood improves by being under it. 改為 You love the rain. Being out in the rain improves your mood.; 原始英文有改寫, 喜歡下雨且淋雨心情變好的語意不變. Evolving Traits World 的完整英文另有降低不快樂、壓力與無聊及打傘效果減半的單側機制, 不加入共用譯文. 現有 CH/CN 對兩個 owner 都成立; 以目前完整 owners/raw_en 重新背書 signature d1ac94597f489b55.",
    "ch": "你熱愛下雨, 淋雨時心情會變好.",
    "cn": "你热爱下雨, 淋雨时心情会变好."
   },
   "UI|UI_trait_PluviophobiaDesc": {
    "action": "translate",
-   "signature": "fedbdc619759351d",
-   "reason": "兩個 owner 都是「討厭下雨，淋雨心情變差」：2459400130/Dynamic-Traits-main 全文即此；2914075159/Evolving Traits World 另有「外出雨天緩慢增加不高興／壓力／無聊、打傘效果減半」與同一段 Umbrella 歌詞。照 #232 Tooltip 先例刪去單側機制與歌詞，保留兩邊皆真的交集。 2026-09-02 上游 2914075159 改寫該鍵英文（新增「打傘效果減半」並移除 Umbrella 歌詞），交集結論不變，僅重新背書 signature。",
+   "signature": "f23e2a45094e5ac0",
+   "reason": "維持既有中性譯文. 本次 owner 由 Dynamic-Traits-main 改為 DynamicTraits, 且英文由 You hate the rain. Your mood worsens by being under it. 改為 You hate the rain. Being out in the rain worsens your mood.; 原始英文有改寫, 討厭下雨且淋雨心情變差的語意不變. Evolving Traits World 的完整英文另有增加不快樂、壓力與無聊及打傘效果減半的單側機制, 不加入共用譯文. 現有 CH/CN 對兩個 owner 都成立; 以目前完整 owners/raw_en 重新背書 signature f23e2a45094e5ac0.",
    "ch": "你討厭下雨, 淋雨時心情會變差.",
    "cn": "你讨厌下雨, 淋雨时心情会变差."
   },
@@ -6364,15 +6364,15 @@
   },
   "ContextMenu|ContextMenu_WearLeft": {
    "action": "translate",
-   "signature": "c2fc8892f0b35889",
-   "reason": "#319 上游新增 owner／文字粒度變化。各 owner 僅英文字面粒度不同，現行左右側佩戴動作不綁物品類型，對所有 owner 成立。",
+   "signature": "5fa432a2e672936e",
+   "reason": "#494 wid 3616536783 於 42.20 把泛用鍵改名為 ContextMenu_TW… 後, 本 wid 兩個 owner （3616536783/Tomb's Wardrobe - Alternative、3616536783/Tomb's Wardrobe - Alternative - Vanilla，舊值皆 \"Wear Left\"）自本鍵 census 退場, 造成裁決簽名漂移。已用 prep_mod_strings.census_signature 攤平 {owner: raw_en} 重算, 並以 _owner_conflicts_resolved 未過時的 1065 筆自檢 100% 相符驗證方法正確；把兩個 owner 加回即可還原台帳現值 c2fc8892f0b35889（實測相符）, 證明漂移完全由本 wid 造成、與其他 owner 無關。本鍵譯文來源 lane 為 As1 衍生層 sources/mods/*/CN（own_translations 無此鍵）, 依契約凍結保留、不因本 wid 退場刪除全域譯文。剩餘 4 個 owner 仍有 2 種上游英文, 本鍵維持 owner 衝突, action 續為 translate。現值「左側佩戴／左侧佩戴」對每個剩餘 owner 仍成立, 只需換簽名。 [簽名證據] 台帳現值 signature=c2fc8892f0b35889；本 wid 退場後以 census_signature(sorted({owner: raw_en})) 重算 = 5fa432a2e672936e。退場前的完整 census（把本 wid 兩個 owner 加回）= {\"2335368829/Authentic Z - Backpacks+\": \"Wear on Left Side\", \"2335368829/Authentic Z - Current\": \"Wear on Left Side\", \"2335368829/Authentic Z - Lite\": \"Wear on Left Side\", \"3541678579/REMOD\": \"The left side\", \"3616536783/Tomb's Wardrobe - Alternative\": \"Wear Left\", \"3616536783/Tomb's Wardrobe - Alternative - Vanilla\": \"Wear Left\"}，其簽名重算結果與台帳現值 c2fc8892f0b35889 相符, 故本鍵漂移可完全歸因於本 wid。owners 欄為**現行**完整 owner→上游原始英文對映, 供主 agent 計算新簽名。",
    "ch": "左側佩戴",
    "cn": "左侧佩戴"
   },
   "ContextMenu|ContextMenu_WearRight": {
    "action": "translate",
-   "signature": "2a4b8f67c3495862",
-   "reason": "#319 上游新增 owner／文字粒度變化。各 owner 僅英文字面粒度不同，現行左右側佩戴動作不綁物品類型，對所有 owner 成立。",
+   "signature": "e272d10a2a4f68e7",
+   "reason": "#494 wid 3616536783 於 42.20 把泛用鍵改名為 ContextMenu_TW… 後, 本 wid 兩個 owner （3616536783/Tomb's Wardrobe - Alternative、3616536783/Tomb's Wardrobe - Alternative - Vanilla，舊值皆 \"Wear Right\"）自本鍵 census 退場, 造成裁決簽名漂移。已用 prep_mod_strings.census_signature 攤平 {owner: raw_en} 重算, 並以 _owner_conflicts_resolved 未過時的 1065 筆自檢 100% 相符驗證方法正確；把兩個 owner 加回即可還原台帳現值 2a4b8f67c3495862（實測相符）, 證明漂移完全由本 wid 造成、與其他 owner 無關。本鍵譯文來源 lane 為 As1 衍生層 sources/mods/*/CN（own_translations 無此鍵）, 依契約凍結保留、不因本 wid 退場刪除全域譯文。剩餘 4 個 owner 仍有 2 種上游英文, 本鍵維持 owner 衝突, action 續為 translate。現值「右側佩戴／右侧佩戴」對每個剩餘 owner 仍成立, 只需換簽名。 [簽名證據] 台帳現值 signature=2a4b8f67c3495862；本 wid 退場後以 census_signature(sorted({owner: raw_en})) 重算 = e272d10a2a4f68e7。退場前的完整 census（把本 wid 兩個 owner 加回）= {\"2335368829/Authentic Z - Backpacks+\": \"Wear on Right Side\", \"2335368829/Authentic Z - Current\": \"Wear on Right Side\", \"2335368829/Authentic Z - Lite\": \"Wear on Right Side\", \"3541678579/REMOD\": \"The right side\", \"3616536783/Tomb's Wardrobe - Alternative\": \"Wear Right\", \"3616536783/Tomb's Wardrobe - Alternative - Vanilla\": \"Wear Right\"}，其簽名重算結果與台帳現值 2a4b8f67c3495862 相符, 故本鍵漂移可完全歸因於本 wid。owners 欄為**現行**完整 owner→上游原始英文對映, 供主 agent 計算新簽名。",
    "ch": "右側佩戴",
    "cn": "右侧佩戴"
   },
@@ -6530,17 +6530,10 @@
    "ch": "戴在後方",
    "cn": "戴在后方"
   },
-  "ContextMenu|ContextMenu_Low": {
-   "action": "translate",
-   "signature": "41a927b839f453c7",
-   "reason": "NATO 'Low Fit' 與 Tomb's Wardrobe(3616536783) 'Wear Low' 皆為低位／低腰穿著（NATO 同組有 Tight Fit／Loosen 等合身度選項）；現值「低腰穿著」對兩者皆真。",
-   "ch": "低腰穿著",
-   "cn": "低腰穿着"
-  },
   "ContextMenu|ContextMenu_Open": {
    "action": "translate",
-   "signature": "5eb1696a7c3706cb",
-   "reason": "NATO 'Open'（與 Closed 對應的服裝敞開）、Frockin 三包 'Open Jacket'、Tomb's 'Wear Open'、MedievalZ 'Open'，七個 owner 全是「敞開／打開」動作；現值「開啟」是最小交集，對所有 owner 皆不誤導。",
+   "signature": "a4d618d787970ee2",
+   "reason": "#494 wid 3616536783 於 42.20 把泛用鍵改名為 ContextMenu_TW… 後, 本 wid 兩個 owner （3616536783/Tomb's Wardrobe - Alternative、3616536783/Tomb's Wardrobe - Alternative - Vanilla，舊值皆 \"Wear Open\"）自本鍵 census 退場, 造成裁決簽名漂移。已用 prep_mod_strings.census_signature 攤平 {owner: raw_en} 重算, 並以 _owner_conflicts_resolved 未過時的 1065 筆自檢 100% 相符驗證方法正確；把兩個 owner 加回即可還原台帳現值 5eb1696a7c3706cb（實測相符）, 證明漂移完全由本 wid 造成、與其他 owner 無關。本鍵譯文來源 lane 為 As1 衍生層 sources/mods/*/CN（own_translations 無此鍵）, 依契約凍結保留、不因本 wid 退場刪除全域譯文。剩餘 5 個 owner 仍有 2 種上游英文, 本鍵維持 owner 衝突, action 續為 translate。現值「開啟／打开」對每個剩餘 owner 仍成立, 只需換簽名。台帳 reason 需一併移除已不存在的 \"Tomb's 'Wear Open'\" 舉例——本 mod 已改用 ContextMenu_TWOpen, 該鍵在本批以精確譯「敞開穿著／敞开穿着」落地, 不再受此折衷約束。 [簽名證據] 台帳現值 signature=5eb1696a7c3706cb；本 wid 退場後以 census_signature(sorted({owner: raw_en})) 重算 = a4d618d787970ee2。退場前的完整 census（把本 wid 兩個 owner 加回）= {\"3243805556/Totally's NATO Firearms Pack\": \"Open\", \"3307376332/Frockin Splendor!\": \"Open Jacket\", \"3411888105/Frockin Splendor! Vol.2\": \"Open Jacket\", \"3453676250/Frockin Shirts n Ties\": \"Open Jacket\", \"3616536783/Tomb's Wardrobe - Alternative\": \"Wear Open\", \"3616536783/Tomb's Wardrobe - Alternative - Vanilla\": \"Wear Open\", \"3661164291/MedievalZ\": \"Open\"}，其簽名重算結果與台帳現值 5eb1696a7c3706cb 相符, 故本鍵漂移可完全歸因於本 wid。owners 欄為**現行**完整 owner→上游原始英文對映, 供主 agent 計算新簽名。",
    "ch": "開啟",
    "cn": "打开"
   },
@@ -6910,13 +6903,6 @@
    "ch": "挽起衣袖",
    "cn": "卷起袖口"
   },
-  "ContextMenu|ContextMenu_Close": {
-   "action": "translate",
-   "signature": "9ec99c788ba58a3c",
-   "reason": "2026-09-09 #466：三個 Frockin owner 的 Close Jacket 與兩個 Tomb Wardrobe owner 的 Wear Closed，共同語意是讓衣物閉合穿著。「閉合穿著／闭合穿着」不限定夾克、鈕扣或其他扣合方式，對完整五個 owner 都成立；舊「扣上夾克」過度限定。",
-   "ch": "閉合穿著",
-   "cn": "闭合穿着"
-  },
   "ContextMenu|ContextMenu_Lower": {
    "action": "translate",
    "signature": "cb8f26ae88153819",
@@ -6963,6 +6949,41 @@
    "ch": "解藥被發現時已失效的機率<br>數值=0-100, 設為0代表解藥永遠保持新鮮; 設為50則表示找到的解藥有一半已無法使用<br>如果你在下方停用了有效期(設為0), 則此設定無效.",
    "cn": "解药被发现时已失效的概率<br>数值=0-100, 设为0代表解药永远保持新鲜; 设为50则表示找到的解药有一半已无法使用<br>如果你在下方禁用了有效期(设为0), 则此设置无效.",
    "reason": "兩個 owner 的上游英文只差 allready→already、unusuable→unusable 兩個錯字，數值語意（out of 100、0=永遠新鮮、50=一半不可用、Days to Rot=0 時失效）逐項相同，程式端同為 integer 選項 + ZombRand(1,101) 判定；現行譯文對兩者皆成立，維持不變。"
+  },
+  "Tooltip|Tooltip_weapon_Muzzle": {
+   "action": "translate",
+   "signature": "53439fd081d7fc29",
+   "reason": "兩個原包完整corpus與tracker零差異。FR有效42分支的items_weapons_fr_attachments_common_muzzle.txt:15/43/71/99/122/145均PartType=Muzzle, 包含消音器與補償器; fr_weapons.lua:346/1029等以Muzzle槽存取。SimpleSuppressors有效42分支Tooltip.json:5-8列Muzzle與Suppressor, Suppressors.txt的16個消音器均PartType=Suppressor, 未發現Lua把Muzzle標籤另用於不同實體。沿用槍口裝置/枪口作槍口配件欄通稱, 不把共用欄位限定為消音器; FR雖僅legacy Tooltip_EN.txt仍保留該owner的語意。",
+   "ch": "槍口裝置",
+   "cn": "枪口"
+  },
+  "UI|UI_trait_luckydesc": {
+   "action": "translate",
+   "signature": "39f2199a5764ce0b",
+   "reason": "首次裁決. 兩個 owner 的英文只差一個逗號: 1299328280/More Traits 'Sometimes things just go your way.' 與 2459400130/DynamicTraits 'Sometimes, things just go your way.'——同一句話、同一語意, 不存在實體或機制分歧, 屬 norm_en 只因標點而未收斂的排版級差異. 現行值『好運常在, 你期望的事情經常發生』未宣稱任何 owner 專屬的數值或機制, 對兩者皆成立, 維持現值即可. 附帶觀察 (不在本鍵裁決範圍內, 亦不建議在本批順手改): 現值用的是全形逗號「，」且句尾缺句點, 與倉內半形標點慣例不一致; 該值屬 As1 lane, 若要正規化須另走 cn_overrides 並同步 sources/ch, 與 owner 衝突無關, 本裁決不動它, 以免把排版改動混進 owner 背書.",
+   "ch": "好運常在，你期望的事情經常發生",
+   "cn": "好运常在，你期望的事情经常发生"
+  },
+  "UI|UI_trait_metalwelder": {
+   "action": "translate",
+   "signature": "481adecb6450d825",
+   "reason": "首次裁決. 2459400130/DynamicTraits 'Metalwelder' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Metal Welder' 是同一個金屬焊接特質的兩種拼寫 (連寫 vs 分寫), 無實體分歧. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_ammetalworker (own_translations 既有 en 錨點 'Metalwelder', 譯『金屬焊工／金属焊工』) 改名成與 SOTO 同名的 UI_trait_metalwelder, 亦即上游是刻意向 SOTO 鍵名靠攏、而非另立一個不同特質. 現行值『金屬焊工／金属焊工』正是我方對 DynamicTraits 舊鍵早已採用的同一譯名, 對兩個 owner 都成立, 維持現值.",
+   "ch": "金屬焊工",
+   "cn": "金属焊工"
+  },
+  "UI|UI_trait_spearman": {
+   "action": "translate",
+   "signature": "6da14645133b8338",
+   "reason": "首次裁決. 2459400130/DynamicTraits 'Lancer' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Spearman' 指同一個長矛系武器專精特質: 鍵名本身即 spearman, DynamicTraits 只是把顯示名取成較有風味的 Lancer. 現行值『長矛專精／长矛专精』描述的是武器類別專精, 既不綁 Lancer 的騎兵意象、也不綁 Spearman 的兵種字面, 對兩個 owner 都成立, 維持現值.",
+   "ch": "長矛專精",
+   "cn": "长矛专精"
+  },
+  "UI|UI_trait_woodworker": {
+   "action": "translate",
+   "signature": "17392a9c629adc8a",
+   "reason": "首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/ch/UI.json, 才能讓本裁決的 ch／cn 出貨錨點成立.",
+   "ch": "木工",
+   "cn": "木工"
   }
  }
 }

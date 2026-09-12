@@ -1170,8 +1170,8 @@
   },
   "UI.json|UI_trait_BloodlustDesc": {
    "as1_value": "杀戮僵尸会产生无上的喜悦. <br>击杀僵尸可以变得更加快乐, 并减少压力和恐慌",
-   "owner_signature": "67b26b6fe37581d7",
-   "reason": "2026-08-21 裁決不出貨：三個 owner 用同一鍵描述三種互不相容的機制。2459400130/Dynamic-Traits-main「停不下來的殺意，沒有受害者則心情受影響」（不殺才扣心情）；2914075159/Evolving Traits World「以消滅亡靈為樂，擊殺殭屍獲得幸福感並減少壓力／恐慌」（殺了才加心情）；3657541591/Superheroes「攻速加倍、傷害三倍、近戰擊殺回復耐力、Desensitized」（純戰鬥數值、與心情無關）。三者無交集，任何單一 JSON 值都對至少兩個 owner 不成立；依 AGENTS.md「多 owner 共用鍵…沒有誠實中性值就不出貨」不出貨。**已接受的退化**：2459400130 只出貨 legacy UI_EN.txt（42.0 與 mod root media/），B42 Translator.tryFillMapFromFile 路徑寫死 .json，該 owner 無 EN 底層，故只啟用該 mod 的玩家在特質說明會看到字面鍵名 UI_trait_BloodlustDesc；ETW 與 Superheroes 都有 .json EN，抑制後看到的是自己 mod 的正確英文。先前一版曾以 #232 commit 的『Tooltip 禁止 unship』先例出貨 ETW 文案，但該先例的補救手段（Translator live-map Lua）從未落地，且 AGENTS.md 同一條規則明文禁止 Lua 覆寫，故以現行硬規則為準。日後任一 owner 補上 .json EN 或改鍵名即重新裁決。"
+   "owner_signature": "35975e050dddc754",
+   "reason": "維持既有不出貨裁決. 本次不僅 owner 由 2459400130/Dynamic-Traits-main 改為 2459400130/DynamicTraits, 上游 EN 也由 Your mood will be affected if you don't get victims. 改寫為 Your mood suffers when you go without victims.; 不殺生會影響心情的語意不變. 完整三個 owner 仍分別描述不殺生的心情懲罰 (DynamicTraits)、擊殺殭屍帶來快樂並減少壓力與恐慌 (Evolving Traits World)、攻擊速度與傷害加成及近戰擊殺恢復耐力和 Desensitized (Superheroes), 無誠實中性說明可同時適用, 故維持 unship. DynamicTraits 已由 42.0 的 UI_EN.txt 遷至 42.15 的 UI.json, 現在三個 owner 都有可載入 JSON EN; 不出貨後顯示各 mod 的英文, 舊有顯示字面鍵名的退化已不再適用. 以目前完整 owners/raw_en 重算 signature 為 35975e050dddc754, 並同步更新 unshipped_keys.json 的 owner_signature 與本段理由; as1_value 保留既有抑制前有效 CN 值."
   },
   "WolfBondHygieneAttraction.json|ContextMenu_WolfBond_HygieneAttraction": {
    "as1_value": "口腔卫生 / 魅力加分",

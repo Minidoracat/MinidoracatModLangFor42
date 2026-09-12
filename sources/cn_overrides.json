@@ -19552,8 +19552,8 @@
  },
  "Sandbox.json|Sandbox_ExtractionMode_RaidDeathHandling_tooltip": {
   "as1_value": "原版死亡: 死亡和尸体生成与原本一致.\n\n保留角色 - 失去全部装备: 致命伤害改为将幸存者送回藏身点, 技能与经验值保留, 但随身携带、装备和穿戴的所有物品都留在战场地点.\n\n保留角色 - 失去 50%%: 致命伤害改为将幸存者送回藏身点, 技能与经验值保留, 但会随机选取剩余合格装备中正好一半的物品作为损失.手持物品必定额外损失. 基础衣物受到保护.",
-  "reason": "上游新增首句「適用於所有地點, 包含藏身點, 也適用於管理員擊殺按鈕」；另 half ... (rounded up) 舊譯誤為「正好一半」、death location 舊譯誤為「戰場地點」",
-  "value": "适用于所有地点, 包含藏身点, 也适用于管理员的击杀玩家按钮.\n\n原版死亡: 死亡和尸体生成与原本一致.\n\n保留角色 - 失去全部装备: 致命伤害改为将幸存者送回藏身点, 技能与经验值保留, 但随身携带、装备和穿戴的所有物品都留在死亡地点.\n\n保留角色 - 失去 50%%: 致命伤害改为将幸存者送回藏身点, 技能与经验值保留, 但会从剩余的合格装备中随机选出一半 (向上取整) 作为损失. 手持物品必定额外损失. 基础衣物受到保护."
+  "value": "适用于所有地点, 包括藏身点, 也适用于管理员的击杀玩家按钮.\n\n原版死亡: 死亡和尸体生成与原本一致.\n\n保留角色 - 失去全部装备: 致命伤害改为将幸存者送回藏身点, 技能与经验值保留, 但随身携带、装备和穿戴的所有物品都留在死亡地点.\n\n保留角色 - 失去 50%%: 致命伤害改为将幸存者送回藏身点, 技能与经验值保留, 但会从剩余的合格装备中随机选出一半 (向上取整) 作为损失. 手持物品必定额外损失. 基础衣物受到保护.\n\n保留角色 - 保留全部装备: 致命伤害会将幸存者送回藏身点, 技能、经验值与所有装备都保留. 死亡地点会留下一具空的回收尸体.",
+  "reason": "2026-09-12 #498 原始MOD有效EN更新: 新增保留全部裝備的死亡處理選項; CH/CN完整對照全部EN段落, 同步保留藏身點與管理員擊殺的適用範圍、死亡地點、隨機損失一半向上取整與手持物品額外損失的規則. 不沿用As1缺段或錯誤取整說明."
  },
  "Sandbox.json|Sandbox_UsefulBarrelsFunnelSpeedUpFillModifier_tooltip": {
   "as1_value": "如果你的身边或者身上有漏斗, 将加速抽取汽油的过程<br>例如: 1.25 意味着速度将提升为原先的1.25倍<br>设置为 1 则取消加速 <br> 无论是否启用了'是否需要漏斗' 这一选项",
@@ -19982,8 +19982,8 @@
  },
  "IG_UI.json|IGUI_GS_ProgramDiskSuccess": {
   "as1_value": "磁盘写入程序成功.",
-  "reason": "2026-09-07 #426–#444 上游改文：訊息改為說明磁碟已在物品欄中產生, 而非寫入成功.",
-  "value": "磁盘已创建在你的物品栏中."
+  "value": "磁盘已写入, 并放进你的物品栏.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游由 created 改為 recorded and placed, 強調是寫入內容而非產生新磁碟. 注意此鍵 CN 已有 cn_overrides 條目 (現值「磁盘已创建在你的物品栏中.」、as1_value「磁盘写入程序成功.」且錨點未漂移), 落地時只需更新 value、保留原 as1_value."
  },
  "IG_UI.json|IGUI_GS_ProgrammingBlankDiskCount": {
   "as1_value": "可用空白磁盘: {1}/{2}",
@@ -20757,8 +20757,8 @@
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_OilFilterEngineDamage_tooltip": {
   "as1_value": "每个缺失机油滤清器磨损间隔所损失的发动机耐久.",
-  "value": "每经过一次机油过低间隔所损失的耐久度. 机油在5%%及以下时, 损失量翻倍. 默认: 2.",
-  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。語意改變：觸發條件由「沒有濾清器」改為「機油過低」，新增 5%% 以下加倍規則，預設值 1→2，並刪除舊的「需搭配引擎磨損間隔」說明"
+  "value": "每经过一次机油过低间隔所损失的耐久度. 油底壳完全无油时, 损失量增至三倍, 发动机会在行驶数分钟内卡死. 默认: 4.",
+  "reason": "2026-09-12 #497 對照原包與tracker一致的有效JSON: 完全無油時損傷增至三倍, 行駛數分鐘即卡死, 每個間隔預設損失4點耐久; CH同步修訂並登記有效CN hash."
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_OilFilterRemovalSeconds": {
   "as1_value": "机油滤清器 | 机油滤清器拆卸时间 (秒)",
@@ -20777,8 +20777,8 @@
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_OilFilterWearMinutes_tooltip": {
   "as1_value": "取下机油滤清器行驶时, 每隔这么多游戏分钟发动机受损一次. 默认是逐渐磨损: 每10分钟损失1点耐久.",
-  "value": "发动机运转时, 机油低于25%%的情况下每隔多久损失一次耐久度. 机油在5%%及以下时损伤翻倍. 缺少滤清器只会漏油, 直到机油变少才会损伤发动机. 默认: 每5游戏分钟一次.",
-  "reason": "2026-09-10 #476 上游有效 JSON 更新；繁簡跟進分類前綴與機油機制。語意改變：損傷條件由「沒有濾清器」改成「機油低於25%%」，明示缺濾清器本身不傷引擎，新增 5%% 以下加倍，預設 10→5 分鐘"
+  "value": "发动机运转时, 机油低于25%%的情况下每隔多久损失一次耐久度. 油底壳完全无油时, 损伤增至三倍. 缺少滤清器只会漏油, 直到机油存量过低才会损伤发动机. 默认: 每1游戏分钟一次.",
+  "reason": "2026-09-12 #497 對照原包與tracker一致的有效JSON: 機油低於25%%才損傷, 完全無油時三倍損傷, 預設間隔改為1遊戲分鐘; 缺少濾清器本身只漏油, 不立即損傷引擎. CH同步修訂並登記有效CN hash."
  },
  "Sandbox.json|Sandbox_SimpleSuppressors_SoundRadiusReduction": {
   "as1_value": "声音 | 消音后枪声传播距离 (%%)",
@@ -20919,5 +20919,140 @@
   "as1_value": "跑尸随机掉落解药的几率(每100僵尸携带解药僵尸数量)<br>数值=0-100, 0=禁用, 10=10%%, 1.5=1.5%%",
   "reason": "同 IGUI_PhunCure_CureDropRate_Tooltip：跨 mod 共用鍵、分母不同，As1 值偏向 PhunCure2 一方；改用兩邊皆成立的並列文案。",
   "value": "跑尸随机掉落解药的几率, 0=禁用.<br>PhunCure (phuncure): 万分比, 100=1%%<br>PhunCure 2 (phuncure2): 百分比, 10=10%%, 1.5=1.5%%"
+ },
+ "IG_UI.json|IGUI_GS_CraftCancelled": {
+  "as1_value": "安装已取消 (被打断). 请重试.",
+  "value": "操作已中断. 请重试.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游由「安裝已取消 (被打斷)」泛化為任何動作被打斷, 舊譯把它綁死在安裝上, 且 cancelled→interrupted 語意由「取消」變「中斷」. 保留「請重試」不遺漏."
+ },
+ "IG_UI.json|IGUI_GS_MemberEditorLeaveConfirm": {
+  "as1_value": "离开此网络? 如果你是所有者, 所有权会自动移交给另一位管理员或成员, 与死亡时相同.",
+  "value": "离开该网络? 如果你是所有者, 所有权会移交给另一位符合资格的管理员或成员 (若有的话).",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游刪去「自動」與「與死亡時相同」, 改為附條件: eligible (符合資格) 與 if available (若有的話). 這兩個限制不可遺漏——沒有合格接手者時所有權不會轉移. 半形問號沿用."
+ },
+ "IG_UI.json|IGUI_GS_NeedReaderNetworkOrInventoryMsg": {
+  "as1_value": "你需要SiK终端读取器, 已安装到网络或放在物品栏中",
+  "value": "该终端必须已安装 GS 软驱, 或你的主物品栏中必须有一台.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新; 獨立review要求保留兩條替代條件: 這台終端機已安裝GS軟碟機, 或主物品欄持有該裝置. 不能把已安裝狀態僅譯為裝置位置."
+ },
+ "IG_UI.json|IGUI_GS_NetworkNameHint": {
+  "as1_value": "每台放置的终端都会创建一个网络. 可见名称可以更改; ID 不能.",
+  "value": "终端可以创建一个网络, 也可以加入已有的网络. 网络名称可以更改; 它的 ID 不能.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游語意反轉: 舊文是「每台放置的終端機都會建立一個網路」, 新文允許加入既有網路. 後半「名稱可改、ID 不可改」維持既有譯法."
+ },
+ "IG_UI.json|IGUI_GS_NetworkSingleHint": {
+  "as1_value": "每台终端都会创建一个独立的网络. 一名玩家或一个阵营可以运营多个网络.",
+  "value": "每个网络都有唯一的 ID, 并且可以有多台终端. 一名玩家或一个阵营可以拥有多个网络.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游主體由「終端機建立網路」改為「網路有唯一 ID 且可掛多台終端機」, 與 NetworkNameHint 的一終端多網路模型一致, 舊譯已相反. faction 沿用 CH 陣營 / CN 阵营."
+ },
+ "IG_UI.json|IGUI_GS_NoZonesYet": {
+  "as1_value": "还没有任何区域. 使用上方的按钮创建一个.",
+  "value": "还没有任何区域.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游刪去「請用上方的按鈕建立一個」這句操作指引, 譯文同步刪除, 避免指向已不存在的按鈕說明."
+ },
+ "IG_UI.json|IGUI_GS_NodeConfigCopyTooltip": {
+  "as1_value": "仅复制分类、自定义过滤器和容器优先级.",
+  "value": "复制该容器的 OR、AND 与 NOT 规则及优先级.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游由「分類、自訂篩選器與容器優先順序」改為新規則模型的 OR/AND/NOT 規則＋優先順序, 舊譯的「分類/自訂篩選器」術語已退役. 原文已無 only, 故不再譯「只會」. priority 沿用 CH 優先順序 / CN 优先级."
+ },
+ "IG_UI.json|IGUI_GS_NodeConfigPasteTooltip": {
+  "as1_value": "替换此容器的分类、自定义过滤器和优先级. 其标识与名称保持不变.",
+  "value": "用复制的配置替换该容器的规则与优先级. 名称、备注与标识都会保留.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游術語同步改為 rules, 且保留清單由「識別與名稱」擴為「名稱、備註與識別」三項, notes (備註 / 备注) 為新增項不可漏. settings 沿用 CH 設定 / CN 配置."
+ },
+ "IG_UI.json|IGUI_GS_NodePriorityHint": {
+  "as1_value": "1: 最高优先级, 100: 最低优先级",
+  "value": "在同样具体的目标之间, 区域优先级先于容器优先级. 1 = 最先, 100 = 最后; 默认 = 50. 区域优先级相同时, 改由容器优先级决定. 对于没有规则的容器, 剩余的平局由亲和性打破.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游整段重寫: 舊文說「維持 50 時所有容器平等、此規則不生效」, 新文改為「區域優先於容器、同分再比容器、只有無規則容器才輪到親和性」. 1/100/50 三個數字與 default 語意完整保留; 原 CN 只有殘缺的一行「1: 最高优先级, 100: 最低优先级」, 一併補齊. 與 IGUI_GS_ZonePriorityHint 上游現為同一段英文, 兩鍵給相同譯文."
+ },
+ "IG_UI.json|IGUI_GS_NodesHelpShort": {
+  "as1_value": "点击区域的+ 号展开/折叠. 右键区域标题可高亮. 名称和分类: 在游戏世界中右键容器.",
+  "value": "点击区域标题上的箭头可展开或折叠.\n右键点击区域标题可在游戏世界中高亮显示.\n点击容器行可打开它的编辑器.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游把展開控制項由 '+' 改為箭頭, CH 僅需改該詞; 兩個 \\n 換行原樣保留三行結構. 原 CN 是壓成一行且末句錯成「名称和分类: 在游戏世界中右键容器」, 一併依現行英文重寫為三行."
+ },
+ "IG_UI.json|IGUI_GS_NodesPriorityHelp": {
+  "as1_value": "目标顺序:\n1) 自定义过滤器.\n2) 分类 (子分类或主分类, 取匹配者).\n3) 优先级: 先按区域优先级, 再按容器优先级作为平局决断. 当两个或多个容器条件相同时生效 (相同过滤器、相同分类, 或均未配置).\n4) 全局: 任何未配置过滤器或分类的容器.\n5) 亲和性: 在全局范围内, 已装有同种物品 (或同族物品) 的箱子优先. 区域与容器优先级仍首先决定顺序 - 亲和性仅在同优先级的箱子之间打破平局.\n若无有效目标有空间, 物品将留在你的物品栏中.",
+  "value": "目标顺序:\n1) 物品必须先通过区域与容器的规则.\n2) 更具体的匹配规则, 优先于更宽泛的规则以及未设限的容器.\n3) 具体程度相同时, 先看区域优先级, 再看容器优先级 (1 = 最先, 100 = 最后).\n4) 只有未设限的容器, 才会用匹配的内容物或同族物品打破剩余的平局.\n若没有任何有效目标还有空间, 物品会留在你的物品栏中.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游由 4 段改寫為新的 4 段規則階梯 (規則通過→明確度優先→同明確度比區域再比容器→只有未設限容器用親和性), 舊 CH 的「全域容器」與舊 CN 的「自訂篩選器/分類/全局」五段模型都已退役. 1/100 數字、四段編號與最後的「留在你的物品欄」保底句完整保留; 全部 \\n 換行位置與上游一致."
+ },
+ "IG_UI.json|IGUI_GS_ProgramDiskFailBook": {
+  "as1_value": "你需要先阅读编程杂志.",
+  "value": "你需要先从杂志中学会这个程序.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游由「先閱讀程式設計雜誌」改為「先從雜誌學會該程式」——讀過不等於學會, 條件已改變. program 沿用 CH 程式 / CN 程序 (IGUI_GS_ProgramDiskMenu)."
+ },
+ "IG_UI.json|IGUI_GS_ProgramDiskFailTerminal": {
+  "as1_value": "写入磁盘需要靠近一台终端.",
+  "value": "请靠近一台兼容的电脑, 或一台你能访问的终端.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游新增了「相容的電腦」這個替代選項, 且終端機加上「你能存取的」限定, 舊譯只提終端機會漏掉一半可用途徑. compatible 沿用 CH 相容 / CN 兼容."
+ },
+ "IG_UI.json|IGUI_GS_ProgramDriveInstallDiskDesc": {
+  "as1_value": "为该网络中的终端添加GS软驱外设.",
+  "value": "用于在终端上安装 GS 软驱的磁盘.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游由「為此網路中的終端機加裝周邊」改為描述磁碟本身的用途, 且不再限定「此網路」. 主詞改為磁碟, 與同組三個 *DiskDesc 一致."
+ },
+ "IG_UI.json|IGUI_GS_ProgramDriveInstallDiskMenu": {
+  "as1_value": "写入驱动器磁盘",
+  "value": "写入软驱磁盘",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 只改 CN: Write→Record 在中文同為「寫入」, CH 既有值已完全對應故原字保留; CN 原譯「写入驱动器磁盘」的「驱动器」與本 MOD 既有 floppy drive 對照 (软驱) 不一致, 且新原文明示 floppy, 故改為「写入软驱磁盘」."
+ },
+ "IG_UI.json|IGUI_GS_ProgramNetworkDiskDesc": {
+  "as1_value": "在任何电脑上为该网络安装新终端.",
+  "value": "用于在兼容的电脑上安装终端, 并创建或加入网络的磁盘.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游由「在任何電腦上為此網路安裝新終端機」改為「相容的電腦」＋「建立或加入網路」. 兩處都是實質限制/選項變更: 電腦不再是任何一台, 而且此磁碟也能開新網路, 舊譯兩點皆漏."
+ },
+ "IG_UI.json|IGUI_GS_ProgramUninstallDiskDesc": {
+  "as1_value": "从终端移除全局仓库SiK, 不删除网络.",
+  "value": "用于从终端卸载全局仓库 SiK 而不删除网络的磁盘.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游改為描述磁碟用途, 動詞由 remove 改為 uninstall, 沿用 CH 解除安裝 / CN 卸载. 「不刪除網路」這個保證必須保留. CN 順帶把「全局仓库SiK」補上空格, 與 own lane 既有 15 處「全局仓库 SiK」寫法統一."
+ },
+ "IG_UI.json|IGUI_GS_ProgrammingHint": {
+  "as1_value": "无需携带软驱即可为该网络写入磁盘.",
+  "value": "将程序写入磁盘, 并直接送到你的物品栏.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游由「不必攜帶軟碟機即可為此網路寫入磁碟」改為描述產出去向 (寫好的磁碟直接進物品欄), 舊譯強調的「不必攜帶軟碟機」已不在原文."
+ },
+ "IG_UI.json|IGUI_GS_RedistributeHint": {
+  "as1_value": "将放错位置的物品移到整个网络中优先级最高且匹配的容器; 溢出的物品会进入 «任何» 箱子. 该操作会在后台自动运行直至完成, 点击一次即可.",
+  "value": "注意! 这是给大型网络使用的实验性工具. 它会按照规则、优先级与亲和性, 把放错位置的物品移到兼容的容器. 扫描与移动会分成小步骤在后台执行, 可能需要数分钟; 请在服务器负载较低时使用.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游把去向依據由「優先順序最高且符合的容器」改為「依規則、優先順序與親和性移到相容容器」, 並刪去 now. CH 僅需改中段並拿掉「現在」; 原 CN 仍停在更早的版本 (缺 CAUTION/實驗性/背景分步/伺服器負載提醒, 還留有已退役的「«任何» 箱子」), 整段重寫. 成本與時間警語 (數分鐘、低負載時使用) 完整保留."
+ },
+ "IG_UI.json|IGUI_GS_ZonePriorityHint": {
+  "as1_value": "1 = 第一个区域, 100 = 最后一个. 当没有容器配置分类时, 在亲和性之前决定; 在同一分类内, 与容器优先级一起打破平局.",
+  "value": "在同样具体的目标之间, 区域优先级先于容器优先级. 1 = 最先, 100 = 最后; 默认 = 50. 区域优先级相同时, 改由容器优先级决定. 对于没有规则的容器, 剩余的平局由亲和性打破.",
+  "reason": "2026-09-12 #495 原始MOD有效EN更新: As1 lane 改值 (CH 改 sources/ch corpus; CN 屬 As1 canonical import, 落地時需於 cn_overrides.json 登記並帶 as1_value 錨點). 上游將本鍵與 IGUI_GS_NodePriorityHint 統一為同一段英文, 故兩鍵給完全相同的譯文. 舊 CH 的「維持 50 時一視同仁、此規則不生效」與舊 CN 的「當沒有容器配置分类时…」都已與現行規則不符. 三個數字 1/100/50 保留."
+ },
+ "IG_UI.json|IGUI_ExtractionMode_Barter_mercer_bourbon_for_sledgehammer_Offered_1": {
+  "as1_value": "瓶装波本威士忌",
+  "value": "威士忌 (整瓶)",
+  "reason": "2026-09-12 #498 原始MOD有效EN更新: 交易顯示名由 Bottles of Bourbon 改為 Full Bottle of Whiskey; 雙語改為威士忌 (整瓶), 不再限定波本."
+ },
+ "IG_UI.json|IGUI_ExtractionMode_Barter_mercer_cigarettes_for_45_Offered_1": {
+  "as1_value": "盒装香烟",
+  "value": "火柴或盒装火柴 (可用)",
+  "reason": "2026-09-12 #498 原始MOD有效EN更新: 交易物由香菸改為 Usable Matches or Matchboxes; 雙語改為可用的火柴或盒裝火柴."
+ },
+ "IG_UI.json|IGUI_ExtractionMode_Barter_mercer_vodka_for_1911_Offered_1": {
+  "as1_value": "瓶装伏特加",
+  "value": "扑克牌",
+  "reason": "2026-09-12 #498 原始MOD有效EN更新: 交易物由伏特加改為 Decks of Playing Cards, 沿用本體撲克牌品名."
+ },
+ "IG_UI.json|IGUI_ExtractionMode_Barter_mercer_vodka_for_1911_magazine_Offered_1": {
+  "as1_value": "瓶装伏特加",
+  "value": "卷烟纸",
+  "reason": "2026-09-12 #498 原始MOD有效EN更新: 交易物由伏特加改為 Cigarette Rolling Papers, 沿用本體CH捲菸紙與CN卷烟纸."
+ },
+ "IG_UI.json|IGUI_ExtractionMode_Barter_mercer_whiskey_for_sn38_Offered_1": {
+  "as1_value": "瓶装威士忌",
+  "value": "打火机 (可用)",
+  "reason": "2026-09-12 #498 原始MOD有效EN更新: 交易物由威士忌改為 Usable Lighters, 雙語保留可用的限制."
+ },
+ "IG_UI.json|IGUI_ExtractionMode_Barter_porch_propane_for_msr788_Received_1": {
+  "as1_value": "MSR788 狙击步枪",
+  "value": "MSR788 狩猎步枪",
+  "reason": "2026-09-12 #498 原始MOD有效EN更新: 上游明確改為 MSR788 Hunting Rifle; 保留型號, 槍種由狙擊步槍修正為狩獵步槍."
+ },
+ "UI.json|UI_trait_woodworker": {
+  "as1_value": "伐木工人",
+  "value": "木工",
+  "reason": "2026-09-12 #493 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/ch/UI.json, 才能讓本裁決的 ch／cn 出貨錨點成立."
  }
 }
