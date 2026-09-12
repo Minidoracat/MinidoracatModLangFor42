@@ -9,7 +9,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **659 個 Workshop 模組**（835 個 mod ID）；另 **18 個已下架**（翻譯保留，見文末）。
+共支援 **657 個 Workshop 模組**（831 個 mod ID）；另 **20 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -129,7 +129,6 @@
 | ['69 Chevrolet Camaro](https://steamcommunity.com/sharedfiles/filedetails/?id=2991201484) | '69 Chevrolet Camaro | 新增 1969 年雪佛蘭 Camaro 跑車，含多種可製作的車輛部件與裝甲。 | `69camaro` | 28 | — | — |
 | [Dynamic Backpack Upgrades [ B41-B42.15 ]](https://steamcommunity.com/sharedfiles/filedetails/?id=2996978365) | 動態背包升級 | 為背包新增可升級槽位，提升容量或減輕負重，含多項沙盒設定。 | `LazoloDynamicBackpackUpgrades` | 93 | — | — |
 | [Better Electronics](https://steamcommunity.com/sharedfiles/filedetails/?id=2999183635) | 更好的電子學 | 新增遙控器、噪音發生器、感應器與遙控門馬達等自製電子裝置。 | `LWBetterElectronics` | 46 | — | — |
-| [Wallpapers and More Paint Options](https://steamcommunity.com/sharedfiles/filedetails/?id=2999595757) | 壁紙與更多油漆選項 | 新增壁紙、瓷磚、外牆板、木材染色等多種室內外裝潢選項。 | `Wallpapers`, `WallpapersB42`, `WallpapersBM` | 151 | ⚠️ ≥4 | — |
 | [Custom Gamepad UI [42.19]](https://steamcommunity.com/sharedfiles/filedetails/?id=3001154607) | 自訂手柄 UI | 改善手柄操作介面，可自訂 UI 版面配置與各項操作行為。 | `CustomGamepadUI` | 42 | — | — |
 | ['93 Ford Mustang](https://steamcommunity.com/sharedfiles/filedetails/?id=3001592312) | '93 Ford Mustang | 新增 1993 年 Ford Mustang 跑車，含 GT 版與多種可製作部件。 | `93mustangSSP` | 36 | — | — |
 | ['63 Volkswagen 1300 Beetle](https://steamcommunity.com/sharedfiles/filedetails/?id=3005903549) | '63 Volkswagen 1300 金龜車 | 新增 1963 年福斯 1300 金龜車，含沙灘車與高性能等版本。 | `63beetle` | ? | — | — |
@@ -489,7 +488,6 @@
 | [Pain Sense - Injury Feedback System](https://steamcommunity.com/sharedfiles/filedetails/?id=3599368309) | 疼痛感知 - 受傷回饋系統 | 受傷與治癒時彈出部位提示視窗，強化傷勢回饋體驗。 | `PainSense` | 34 | — | — |
 | [Better Dressed - Transmog](https://steamcommunity.com/sharedfiles/filedetails/?id=3599514194) | 穿出風格 - 幻化系統 | 新增服裝幻化系統，可改變外觀、調色與隱藏裝備，支援沉浸模式。 | `EURY_TRANSMOG`, `TransmogDE` | 79 | — | — |
 | [Realistic Temperature Mod [B42.18+ MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3600401184) | 真實溫度模組 | 模擬寒冷透過門窗破洞入侵室內，並新增電暖器等取暖設備。 | `RC_RealisticColdMod` | 106 | — | — |
-| [Todo Caserito [Build 42/42.19 SP/MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3600616323) | Todo Caserito 家常料理 | 新增拉美風家常料理與配方，如薯條、塔可、玉米餅與布丁等。 | `Todo Caserito` | 410 | — | ⚠️ 有一項配方名稱（代號 MakeTortilla）與草藥師、Abuelita Linda 兩個 MOD 撞名、卻是不同的食物——本 MOD 的是阿根廷豬油餅（tortillas de grasa），那兩邊的同一代號是墨西哥玉米餅。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故此鍵不出貨、遊戲內顯示該 MOD 自己的英文原文。本 MOD 另有專門表示玉米餅的配方（MakeTortillaCasera），該項不受影響。 |
 | ['84 Oldsmobile 98 Regency](https://steamcommunity.com/sharedfiles/filedetails/?id=3601417745) | '84 Oldsmobile 98 Regency | 新增 1984 年 Oldsmobile 98 Regency 車輛，含雙門與四門版本。 | `84oldsmobile98` | ? | — | — |
 | [Teto Plushies - B41/B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3603577358) | Teto 絨毛玩偶 | 新增多款重音 Teto 絨毛玩偶裝飾物品。 | `TetoPlushies` | 10 | — | — |
 | [Better Clothing Info](https://steamcommunity.com/sharedfiles/filedetails/?id=3604080281) | 更好的服裝資訊 | 以進度條與對比方式顯示服裝防護、材質等詳細資訊。 | `EURY_CLOTHINGINFO` | 53 | — | — |
@@ -673,13 +671,14 @@
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
-## 已下架模組（18 個，翻譯保留）
+## 已下架模組（20 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 | 下架偵測 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | [2959472220](https://steamcommunity.com/sharedfiles/filedetails/?id=2959472220) | FR Used Cars (中古車) | 新增中古車輛與大量車輛零件，如輪胎、保險桿、貨斗等改裝部件。 | `FRUsedCarsAlpha` | ? | — | — | 2026-07-17 |
+| [Wallpapers and More Paint Options](https://steamcommunity.com/sharedfiles/filedetails/?id=2999595757) | 壁紙與更多油漆選項 | 新增壁紙、瓷磚、外牆板、木材染色等多種室內外裝潢選項。 | `Wallpapers`, `WallpapersB42`, `WallpapersBM` | 151 | ⚠️ ≥4 | — | 2026-09-12 |
 | [3387222454](https://steamcommunity.com/sharedfiles/filedetails/?id=3387222454) | Rain 的槍械與槍械配件 | 新增槍械與配件，如消音器、前握把、彈藥帶、戰術手電筒等。 | `B42RainsFirearmsAndGunParts4213`, `B42RainsFirearmsAndGunPartsExpanded4213` | ? | ? | — | 2026-07-17 |
 | [3387474156](https://steamcommunity.com/sharedfiles/filedetails/?id=3387474156) | Logic 職業 | 新增植物學家、屠夫、偵探、獸醫等多種職業，各具專屬知識與配方。 | `LogicProfessions` | ? | ? | — | 2026-07-17 |
 | [3388380529](https://steamcommunity.com/sharedfiles/filedetails/?id=3388380529) | Rain 的斧與刃 | 新增多款斧類與長刃武器並附「劍術愛好者」特質；原 Workshop 項目已下架無法存取（作者已退出模組製作）。 | — | ? | ? | — | 2026-08-24 |
@@ -690,6 +689,7 @@
 | [3452171674](https://steamcommunity.com/sharedfiles/filedetails/?id=3452171674) | FR Operator 幹員裝備 | 新增胸掛槍套、三角洲槍套、FR 槍械背心等可掛載裝備，並可透過右鍵選單調整槍套左右位置。 | `FR_Operator` | ? | — | — | 2026-08-31 |
 | [[Federal Rangers] CHIMERA V11 [B42.13.1+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3564110652) | [Federal Rangers] CHIMERA V11 | 新增大量戰術服裝與裝備，如背包、頭盔耳機與護具。 | `Federal_Rangers_Chimera`, `Federal_Rangers_Chimera_PatchN1` | ? | ? | — | 2026-07-18 |
 | [3575320927](https://steamcommunity.com/sharedfiles/filedetails/?id=3575320927) | LTKB42 | 新增可佩戴於背部或大腿的刀鞘，並支援快捷欄掛載。 | `LTKB42` | ? | ? | — | 2026-07-17 |
+| [Todo Caserito [Build 42/42.19 SP/MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3600616323) | Todo Caserito 家常料理 | 新增拉美風家常料理與配方，如薯條、塔可、玉米餅與布丁等。 | `Todo Caserito` | 410 | — | ⚠️ 有一項配方名稱（代號 MakeTortilla）與草藥師、Abuelita Linda 兩個 MOD 撞名、卻是不同的食物——本 MOD 的是阿根廷豬油餅（tortillas de grasa），那兩邊的同一代號是墨西哥玉米餅。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故此鍵不出貨、遊戲內顯示該 MOD 自己的英文原文。本 MOD 另有專門表示玉米餅的配方（MakeTortillaCasera），該項不受影響。 | 2026-09-12 |
 | [3609353662](https://steamcommunity.com/sharedfiles/filedetails/?id=3609353662) | Pumps Have Propane | 可在加油泵充裝丙烷罐與丙烷噴燈。 | `PumpsHavePropane42` | ? | ? | — | 2026-07-17 |
 | [[42] Vanilla Firearms Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3611718925) | 原版槍械擴充 | 擴充原版風格槍械與彈藥，新增多款步槍、霰彈槍與各式彈匣。 | `VFExpansion2Reduxb42`, `VFExpansion3Reduxb42`, `VFExpansionReduxb42` | 457 | ⚠️ ≥24 | — | 2026-08-01 |
 | [3623609320](https://steamcommunity.com/sharedfiles/filedetails/?id=3623609320) | CSB42MP | 新增清洗物品的右鍵選單選項，可只洗已裝備、未裝備或武器。 | `CSB42MP` | ? | — | — | 2026-07-17 |
