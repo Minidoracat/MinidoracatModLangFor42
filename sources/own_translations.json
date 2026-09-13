@@ -29886,6 +29886,21 @@
     "en": "Materials are taken from your inventory first, then loaded hideout furniture containers.",
     "ch": "材料會先從你的物品欄取用, 再從已載入的藏身點家具容器中取用.",
     "cn": "材料会先从你的物品栏取用, 再从已加载的藏身点家具容器中取用."
+   },
+   "IGUI_ExtractionMode_ExtractionSignaledNearby": {
+    "en": "Extraction was signaled nearby.",
+    "ch": "附近有人發出了撤離訊號.",
+    "cn": "附近有人发出了撤离信号."
+   },
+   "IGUI_CM_CatScare": {
+    "en": "Something jumps at you — it's %1!",
+    "ch": "有東西朝你撲來 — 原來是 %1!",
+    "cn": "有什么东西朝你扑来 — 原来是 %1!"
+   },
+   "IGUI_CM_CatScare_Generic": {
+    "en": "Something jumps at you — it's your cat!",
+    "ch": "有東西朝你撲來 — 原來是你的貓!",
+    "cn": "有什么东西朝你扑来 — 原来是你的猫!"
    }
   },
   "ItemName.json": {
@@ -114468,12 +114483,6 @@
     "ch": "Zagustin 止血藥注射器",
     "cn": "Zagustin 止血药注射器"
    },
-   "TikitownPower.BucketLimeSlurryForged": {
-    "en": "Lime Slurry - Forged",
-    "ch": "石灰漿 (鍛造)",
-    "cn": "石灰浆 (锻造)",
-    "_note": "上游把 TikitownPower.BucketCarvedLimeSlurryForged 改名為本鍵（同一物品）, 沿用舊鍵既有譯名; 家族 Forged 後綴一律譯「 (鍛造)」/「 (锻造)」。"
-   },
    "Base.RF_StenMKIIS": {
     "en": "Sten MK II (S) Silenced Submachine Gun",
     "ch": "斯登MK II (S)消音衝鋒槍",
@@ -122989,11 +122998,6 @@
     "ch": "自訂安全屋地契",
     "cn": "自定义安全屋地契"
    },
-   "DeadMagic.DM_EnchantQuickToken": {
-    "en": "Quick Enchanted Weapon",
-    "ch": "迅疾附魔武器",
-    "cn": "迅疾附魔武器"
-   },
    "DeadMagic.DM_Relic_FlashingClaw": {
     "en": "Relic: Flashing Claw",
     "ch": "遺物: 閃爍之爪",
@@ -124226,76 +124230,6 @@
     "ch": "小型引擎維修與保養",
     "cn": "小型发动机维修与保养",
     "en": "Small Engine Repair & Maintenance"
-   },
-   "DeadMagic.DM_EnchantCarryToken": {
-    "ch": "附魔飾品",
-    "cn": "附魔饰品",
-    "en": "Enchanted Jewelry"
-   },
-   "DeadMagic.DM_EnchantConcussiveToken": {
-    "ch": "震盪附魔武器",
-    "cn": "震荡附魔武器",
-    "en": "Concussive Enchanted Weapon"
-   },
-   "DeadMagic.DM_EnchantFeatherToken": {
-    "ch": "羽輕附魔容器",
-    "cn": "羽轻附魔容器",
-    "en": "Feather Enchanted Container"
-   },
-   "DeadMagic.DM_EnchantFlameToken": {
-    "ch": "烈焰附魔武器",
-    "cn": "烈焰附魔武器",
-    "en": "Flame Enchanted Weapon"
-   },
-   "DeadMagic.DM_EnchantFortifiedToken": {
-    "ch": "強固附魔衣物",
-    "cn": "强固附魔衣物",
-    "en": "Fortified Enchanted Clothing"
-   },
-   "DeadMagic.DM_EnchantHasteToken": {
-    "ch": "疾行附魔鞋履",
-    "cn": "疾行附魔鞋履",
-    "en": "Haste Enchanted Footwear"
-   },
-   "DeadMagic.DM_EnchantHoldingToken": {
-    "ch": "容納附魔容器",
-    "cn": "容纳附魔容器",
-    "en": "Holding Enchanted Container"
-   },
-   "DeadMagic.DM_EnchantImpactToken": {
-    "ch": "衝擊附魔武器",
-    "cn": "冲击附魔武器",
-    "en": "Impact Enchanted Weapon"
-   },
-   "DeadMagic.DM_EnchantLightToken": {
-    "ch": "光明附魔物品",
-    "cn": "光明附魔物品",
-    "en": "Light Enchanted Item"
-   },
-   "DeadMagic.DM_EnchantQuicksilverToken": {
-    "ch": "迅捷附魔手套",
-    "cn": "迅捷附魔手套",
-    "en": "Quicksilver Enchanted Gloves"
-   },
-   "DeadMagic.DM_EnchantShadowedToken": {
-    "ch": "暗影附魔衣物",
-    "cn": "暗影附魔衣物",
-    "en": "Shadowed Enchanted Clothing"
-   },
-   "DeadMagic.DM_EnchantSilentToken": {
-    "ch": "靜謐附魔鞋履",
-    "cn": "静谧附魔鞋履",
-    "en": "Silent Enchanted Footwear"
-   },
-   "DeadMagic.DM_EnchantSureshotToken": {
-    "ch": "準射附魔手套",
-    "cn": "准射附魔手套",
-    "en": "Sureshot Enchanted Gloves"
-   },
-   "DeadMagic.DM_EnchantWardToken": {
-    "ch": "守護飾品",
-    "cn": "守护饰品",
-    "en": "Warded Jewelry"
    },
    "HorseMod.CricketHorse": {
     "ch": "馬匹 Cricket",
@@ -126881,6 +126815,11 @@
     "en": "Goth Fanny Pack",
     "ch": "哥特式腰包",
     "cn": "哥特式腰包"
+   },
+   "Tikitown.MedicalDummy": {
+    "en": "First Aid Practice Dummy",
+    "ch": "急救練習假人",
+    "cn": "急救练习假人"
    }
   },
   "Print_Media.json": {
@@ -139056,6 +138995,36 @@
     "en": "Unhappiness management volume 5",
     "ch": "不快樂管理 第5冊",
     "cn": "不快乐管理 第5册"
+   },
+   "PracticeBandaging": {
+    "en": "Practice Bandaging on Dummy",
+    "ch": "在假人上練習包紮",
+    "cn": "在假人上练习包扎"
+   },
+   "PracticeDebrisRemoval": {
+    "en": "Practice Debris Removal on Dummy",
+    "ch": "在假人上練習取出異物",
+    "cn": "在假人上练习取出异物"
+   },
+   "PracticeDisinfecting": {
+    "en": "Practice Disinfecting on Dummy",
+    "ch": "在假人上練習消毒",
+    "cn": "在假人上练习消毒"
+   },
+   "PracticeFullTrauma": {
+    "en": "Practice Trauma treatment on Dummy",
+    "ch": "在假人上練習創傷處置",
+    "cn": "在假人上练习创伤处理"
+   },
+   "PracticeSplinting": {
+    "en": "Practice Splinting on Dummy",
+    "ch": "在假人上練習夾板固定",
+    "cn": "在假人上练习夹板固定"
+   },
+   "PracticeStitching": {
+    "en": "Practice Stitching on Dummy",
+    "ch": "在假人上練習縫合",
+    "cn": "在假人上练习缝合"
    }
   },
   "Sandbox.json": {
@@ -153459,6 +153428,56 @@
     "en": "This checkbox does nothing but separate categories.",
     "ch": "此核取方塊沒有任何作用, 僅用於分隔分類.",
     "cn": "此复选框没有任何作用, 仅用于分隔分类."
+   },
+   "Sandbox_ExtractionMode_GameMode": {
+    "en": "Game Mode",
+    "ch": "遊戲模式",
+    "cn": "游戏模式"
+   },
+   "Sandbox_ExtractionMode_GameMode_option1": {
+    "en": "Cooperative",
+    "ch": "合作模式",
+    "cn": "合作模式"
+   },
+   "Sandbox_ExtractionMode_GameMode_option2": {
+    "en": "Extraction PvP",
+    "ch": "撤離 PvP",
+    "cn": "撤离 PvP"
+   },
+   "Sandbox_ExtractionMode_GameMode_tooltip": {
+    "en": "Cooperative: all players share one hideout. Extraction PvP: personal hideouts, factions, and competing raid groups. Requires \"Extraction Mode PvP Map\" on the Steam Workshop.",
+    "ch": "合作模式: 所有玩家共用一個藏身點. 撤離 PvP: 個人藏身點、陣營與互相競爭的突襲隊伍. 需要 Steam 創意工坊的 \"Extraction Mode PvP Map\".",
+    "cn": "合作模式: 所有玩家共用一个藏身点. 撤离 PvP: 个人藏身点、阵营和相互竞争的突袭小队. 需要 Steam 创意工坊中的 \"Extraction Mode PvP Map\"."
+   },
+   "Sandbox_ExtractionMode_PvPRaidRotationMinutes": {
+    "en": "PvP Raid Rotation (Real Minutes)",
+    "ch": "PvP 突襲輪換間隔 (現實分鐘)",
+    "cn": "PvP 突袭轮换间隔 (现实分钟)"
+   },
+   "Sandbox_ExtractionMode_PvPRaidRotationMinutes_tooltip": {
+    "en": "Time between rotating raids in Extraction PvP. Default: 5 real minutes. Changes apply to new cycles and admin destination resets. Does not change Cooperative gameplay or special-deployment ready countdowns.",
+    "ch": "撤離 PvP 的突襲輪換間隔. 預設: 現實時間 5 分鐘. 變更會套用至新的輪換週期, 以及管理員重設目的地時. 不影響合作模式玩法或特殊部署的準備倒數.",
+    "cn": "撤离 PvP 的突袭轮换间隔. 默认: 现实时间 5 分钟. 修改会应用于新的轮换周期, 以及管理员重置目的地时. 不影响合作模式玩法或特殊部署的准备倒计时."
+   },
+   "Sandbox_CatsMod_Key_option20": {
+    "en": "Numpad asterisk (*)",
+    "ch": "數字鍵盤星號 (*)",
+    "cn": "小键盘星号 (*)"
+   },
+   "Sandbox_CatsMod_Key_option21": {
+    "en": "Accent key (´)",
+    "ch": "重音符號鍵 (´)",
+    "cn": "重音符号键 (´)"
+   },
+   "Sandbox_CatsMod_ShoulderKey": {
+    "en": "Shoulder mount key",
+    "ch": "趴上肩膀按鍵",
+    "cn": "趴上肩膀按键"
+   },
+   "Sandbox_CatsMod_ShoulderKey_tooltip": {
+    "en": "Keyboard key to mount the nearest owned companion on your shoulder within 10 tiles (default: accent/dead key ´ above Ñ on Spanish keyboards; numpad * is an alternative). Same as ground Cats Mod → Ride on shoulder. If a cat is already on your shoulder, this key dismounts it. No numpad? Use right-click → Cats Mod → Ride on shoulder. Remappable. Chat/text focus ignores this key.",
+    "ch": "讓 10 格內距離最近、屬於你的夥伴趴上肩膀的鍵盤按鍵 (預設: 西班牙文鍵盤上 Ñ 上方的重音符號/組字鍵 ´; 也可使用數字鍵盤的 *). 與在地面開啟 Cats Mod → 趴在肩膀上相同. 若貓已在肩膀上, 按此鍵會讓牠下來. 沒有數字鍵盤? 使用滑鼠右鍵 → Cats Mod → 趴在肩膀上. 可重新指定按鍵. 聊天或文字輸入欄位取得焦點時不會觸發此鍵.",
+    "cn": "让 10 格内距离最近、属于你的伙伴趴上肩膀的键盘按键 (默认: 西班牙语键盘上 Ñ 上方的重音符号死键 ´; 也可使用小键盘的 *). 与在地面打开 Cats Mod → 趴在肩膀上相同. 如果猫已在肩膀上, 按此键会让它下来. 没有小键盘? 使用鼠标右键 → Cats Mod → 趴在肩膀上. 可重新绑定按键. 聊天或文本输入框获得焦点时不会触发此键."
    }
   },
   "Tooltip.json": {
@@ -158808,6 +158827,11 @@
     "en": "Who's idea was this?",
     "ch": "這到底是誰的主意?",
     "cn": "这到底是谁的主意?"
+   },
+   "Tooltip_item_medicaldummyv1": {
+    "en": "This Proxima branded medical dummy can be used to train first aid.",
+    "ch": "Proxima品牌的醫療假人, 可以用來練習急救.",
+    "cn": "Proxima品牌的医疗假人, 可以用来练习急救."
    }
   },
   "UI.json": {
@@ -165667,16 +165691,6 @@
     "ch": "把這個區域及其所有部分移交給另一位玩家",
     "cn": "把这个区域及其所有部分移交给另一位玩家",
     "en": "Hands the zone and all its parts to another player"
-   },
-   "UI_AllInfo_opt_Container": {
-    "ch": "背包: 會拖慢你多少",
-    "cn": "背包: 会拖慢你多少",
-    "en": "Bags: how much they slow you down"
-   },
-   "UI_AllInfo_opt_Container_tip": {
-    "ch": "背包讓你付出的奔跑與戰鬥速度代價, 遊戲會實際套用卻從不顯示. 奔跑數值是你此刻正在承受的: 背包的懲罰會隨著裝滿而再增加一半, 所以同一個背包會從空著時的 -3%% 變成裝滿時的 -4.5%%. 拿在手上和背在背上的計算方式相同.",
-    "cn": "背包让你付出的奔跑与战斗速度代价, 游戏会实际应用却从不显示. 奔跑数值是你此刻正在承受的: 背包的惩罚会随着装满而再增加一半, 所以同一个背包会从空着时的 -3%% 变成装满时的 -4.5%%. 拿在手上和背在背上的计算方式相同.",
-    "en": "The run and combat speed a bag costs you, which the game applies and never shows. The run figure is the one you are paying right now: a bag's penalty grows by half again as it fills up, so the same pack goes from -3%% empty to -4.5%% full. It counts the same in your hands as on your back."
    },
    "UI_CleanUI_ContainerButtonScaleDefault": {
     "ch": "1x (預設)",
@@ -184627,6 +184641,36 @@
     "en": "Scullion",
     "ch": "廚房幫工",
     "cn": "厨房帮工"
+   },
+   "UI_TABAS_AutoClothesChangeExcludedFullTypes": {
+    "en": "Keep Items During ACC",
+    "ch": "自動更換衣物時保留的物品",
+    "cn": "自动更换衣物时保留的物品"
+   },
+   "UI_TABAS_AutoClothesChangeExcludedFullTypes_tooltip": {
+    "en": "Enter item FullTypes (Module.ItemName) to keep equipped when automatically changing clothes. Separate multiple entries with commas. <LINE> Case-sensitive; spaces around entries are ignored. <LINE> Example: Base.Shirt_Denim, Base.Trousers_Denim <LINE> Leave empty to use only the existing exclusions. <LINE> Note: Clothing worn while bathing will still get wet, including items listed here. Wearing too many clothes will reduce bathing benefits.",
+    "ch": "輸入自動更換衣物時要保持裝備的物品完整類型 (Module.ItemName). 多個項目以逗號分隔. <LINE> 區分大小寫; 忽略項目前後的空格. <LINE> 範例: Base.Shirt_Denim, Base.Trousers_Denim <LINE> 留空時僅使用既有的排除項目. <LINE> 注意: 沐浴時穿著的衣物仍會弄溼, 包括此處列出的物品. 穿著過多衣物會降低沐浴效果.",
+    "cn": "输入自动更换衣物时要保持装备的物品完整类型 (Module.ItemName). 多个条目用逗号分隔. <LINE> 区分大小写; 忽略条目前后的空格. <LINE> 示例: Base.Shirt_Denim, Base.Trousers_Denim <LINE> 留空时仅使用现有的排除项. <LINE> 注意: 洗澡时穿着的衣物仍会被打湿, 包括此处列出的物品. 穿着过多衣物会降低洗澡效果."
+   },
+   "UI_ModOptions_SRM_ShowCustomModsMenu": {
+    "en": "Show Custom Mods Menu",
+    "ch": "顯示自訂模組選單",
+    "cn": "显示自定义模组菜单"
+   },
+   "UI_ModOptions_SRM_ShowCustomModsMenu_Tooltip": {
+    "en": "If enabled (default), show the Custom Mods Menu when another mod adds custom slices to the radial menu.\nIf disabled, the Custom Mods Menu will not be displayed.",
+    "ch": "啟用時 (預設開啟), 若其他模組在環形選單中加入自訂區塊, 便會顯示自訂模組選單.\n停用時, 不會顯示自訂模組選單.",
+    "cn": "启用时 (默认开启), 如果其他模组在环形菜单中添加自定义选项, 就会显示自定义模组菜单.\n关闭时, 不会显示自定义模组菜单."
+   },
+   "UI_ModOptions_SRM_ShowSRMAfterVanilla": {
+    "en": "Show SRM After Vanilla Menus",
+    "ch": "在原版選單之後顯示 SRM",
+    "cn": "在原版菜单之后显示 SRM"
+   },
+   "UI_ModOptions_SRM_ShowSRMAfterVanilla_Tooltip": {
+    "en": "If enabled (default), the vanilla radial menus (vehicle, animal menu) will be displayed before the Smart Radial Menu.\nIf disabled, SRM is displayed first before the vanilla radial menus.",
+    "ch": "啟用時 (預設開啟), 原版環形選單 (載具、動物選單) 會顯示在智慧環形選單 (SRM) 之前.\n停用時, 智慧環形選單 (SRM) 會先於原版環形選單顯示.",
+    "cn": "启用时 (默认开启), 原版环形菜单 (载具、动物菜单) 会显示在智能环形菜单 (SRM) 之前.\n关闭时, 智能环形菜单 (SRM) 会先于原版环形菜单显示."
    }
   },
   "MakeUp.json": {
@@ -186548,6 +186592,121 @@
     "en": "The Blood Remembers",
     "ch": "血債未償",
     "cn": "血债未偿"
+   },
+   "RM_Tikitown_ProximaVHS_Extra": {
+    "en": "Property of Proxima Medical. For internal training use only. Do not duplicate.",
+    "ch": "Proxima醫療財產. 僅供內部訓練使用. 不得複製.",
+    "cn": "Proxima医疗财产. 仅供内部培训使用. 不得复制."
+   },
+   "RM_Tikitown_ProximaVHS_Name": {
+    "en": "VHS - Proxima Medical: First Aid Certification",
+    "ch": "VHS: Proxima醫療 - 急救認證",
+    "cn": "VHS: Proxima医疗 - 急救认证"
+   },
+   "RM_Tikitown_ProximaVHS_Title": {
+    "en": "Proxima Medical Associate Training",
+    "ch": "Proxima醫療員工訓練",
+    "cn": "Proxima医疗员工培训"
+   },
+   "RM_Tikitown_Proxima_L01": {
+    "en": "Welcome to Proxima Medical, and congratulations on joining the team.",
+    "ch": "歡迎加入Proxima醫療, 也恭喜你成為團隊的一員.",
+    "cn": "欢迎来到Proxima医疗, 恭喜你加入这个团队."
+   },
+   "RM_Tikitown_Proxima_L02": {
+    "en": "This tape covers your First Aid certification. Every associate completes it before working the floor.",
+    "ch": "這卷帶子是你的急救認證課程. 每位員工正式上工前都必須完成這門課程.",
+    "cn": "这盒录像带是你的急救认证课程. 每位员工上岗前都必须完成这门课程."
+   },
+   "RM_Tikitown_Proxima_L03": {
+    "en": "Keep your handbook open to section four and follow along at your own pace.",
+    "ch": "把手冊翻到第四節放在旁邊, 照自己的步調跟著做.",
+    "cn": "把手册翻到第四节放在旁边, 按自己的节奏跟着做."
+   },
+   "RM_Tikitown_Proxima_L04": {
+    "en": "Safety comes first here. The techniques on this tape have saved lives, including some of our own.",
+    "ch": "在這裡安全第一. 這卷帶子裡的技術救過人命, 其中也包括我們自己的同事.",
+    "cn": "在这里安全第一. 这盒录像带里的技术救过人命, 其中也包括我们自己的同事."
+   },
+   "RM_Tikitown_Proxima_L05": {
+    "en": "Retrieve the training dummy at your station. Module one: wound dressing. Wrap firm and even, and follow along.",
+    "ch": "去拿你工作站上的練習假人. 第一單元: 傷口包紮. 纏得紮實均勻, 跟著做.",
+    "cn": "去取你工位上的练习假人. 第一单元: 伤口包扎. 缠得紧实均匀, 跟着做."
+   },
+   "RM_Tikitown_Proxima_L06": {
+    "en": "Take your time with each drill. Slow is smooth, and smooth is fast.",
+    "ch": "每個演練都慢慢來. 慢就是穩, 穩就是快.",
+    "cn": "每个练习都慢慢来. 慢就是稳, 稳就是快."
+   },
+   "RM_Tikitown_Proxima_L07": {
+    "en": "When you finish, your supervisor will have a sign-off sheet to confirm your certification.",
+    "ch": "做完之後, 你的主管手上有一張簽核表, 用來確認你的認證.",
+    "cn": "完成之后, 你的主管手上有一张签字确认表, 用来确认你的认证."
+   },
+   "RM_Tikitown_Proxima_L08": {
+    "en": "Module two: the sterile field. Always disinfect before you dress a wound. A clean wound heals faster.",
+    "ch": "第二單元: 無菌區. 包紮傷口前一定要先消毒. 乾淨的傷口好得更快.",
+    "cn": "第二单元: 无菌区. 包扎伤口前一定要先消毒. 干净的伤口愈合更快."
+   },
+   "RM_Tikitown_Proxima_L09": {
+    "en": "Excellent, all clean. Proxima was founded on a simple idea: good medicine should reach the people who need it.",
+    "ch": "很好, 都乾淨了. Proxima創立的理念很簡單: 好的醫療應該送到需要的人手上.",
+    "cn": "很好, 都干净了. Proxima创立的理念很简单: 好的医疗应该送到需要的人手里."
+   },
+   "RM_Tikitown_Proxima_L10": {
+    "en": "Module three: foreign body removal. Use tweezers, keep your hands steady, and clear the site before closing.",
+    "ch": "第三單元: 取出異物. 用鑷子, 手要穩, 縫合前先把傷口清乾淨.",
+    "cn": "第三单元: 取出异物. 用镊子, 手要稳, 缝合前先把伤口清理干净."
+   },
+   "RM_Tikitown_Proxima_L11": {
+    "en": "If a step doesn't click the first time, rewind and run it again. Repetition is how this becomes second nature.",
+    "ch": "某個步驟第一次沒抓到訣竅, 就倒帶重看一次. 反覆練習才能變成本能.",
+    "cn": "某个步骤第一次没掌握, 就倒带重看一遍. 反复练习才能变成本能."
+   },
+   "RM_Tikitown_Proxima_L12": {
+    "en": "You're doing well. Most associates find the second half easier once the basics settle in.",
+    "ch": "你表現得很好. 多數員工把基礎練熟之後, 都覺得後半段輕鬆多了.",
+    "cn": "你表现得很好. 多数员工把基础掌握牢之后, 都觉得后半段轻松多了."
+   },
+   "RM_Tikitown_Proxima_L13": {
+    "en": "Module four: immobilization. A proper splint keeps an injured limb stable until you can get help.",
+    "ch": "第四單元: 固定. 正確的夾板能讓受傷的肢體保持穩定, 撐到你找到援助.",
+    "cn": "第四单元: 固定. 正确的夹板能让受伤的肢体保持稳定, 撑到你找到救援."
+   },
+   "RM_Tikitown_Proxima_L14": {
+    "en": "Our associates take real pride in looking out for one another. That starts with knowing this material.",
+    "ch": "我們的員工很自豪能彼此照應. 而這要從熟悉這些內容開始.",
+    "cn": "我们的员工很自豪能互相照应. 而这要从熟悉这些内容开始."
+   },
+   "RM_Tikitown_Proxima_L15": {
+    "en": "Module five: suturing. Even spacing, steady tension, and a clean close. Practice until it feels routine.",
+    "ch": "第五單元: 縫合. 針距均勻, 張力穩定, 收口乾淨. 練到變成習慣動作為止.",
+    "cn": "第五单元: 缝合. 针距均匀, 张力稳定, 收口干净. 练到成为习惯动作为止."
+   },
+   "RM_Tikitown_Proxima_L16": {
+    "en": "Almost there. One more module, and it's the one that ties everything together.",
+    "ch": "快到了. 還剩一個單元, 而它會把前面全部串起來.",
+    "cn": "快到了. 还剩一个单元, 而它会把前面所有内容串起来."
+   },
+   "RM_Tikitown_Proxima_L17": {
+    "en": "Keep your skills sharp, this will be an annual re-training requirement for continued employment at Proxima.",
+    "ch": "保持技術純熟, 這門課是在Proxima繼續任職的年度複訓要求.",
+    "cn": "保持技术熟练, 这门课是在Proxima继续任职的年度复训要求."
+   },
+   "RM_Tikitown_Proxima_L18": {
+    "en": "Module six: full trauma response. Every technique in sequence, performed perfectly now and under pressure. This is what it all builds toward.",
+    "ch": "第六單元: 完整創傷處置. 所有技術依序操作, 現在要做到完美, 壓力下也要做到. 前面所有課程都是為了這一關.",
+    "cn": "第六单元: 完整创伤处理. 所有技术按顺序操作, 现在要做到完美, 有压力时也一样. 前面所有课程都是为了这一关."
+   },
+   "RM_Tikitown_Proxima_L19": {
+    "en": "That completes the practical portion. Please turn your supervisor signed certification with Human Resources on the second floor.",
+    "ch": "實作部分到此結束. 請把主管簽好的認證繳交到二樓的人力資源部.",
+    "cn": "实操部分到此结束. 请把主管签好的认证交到二楼的人力资源部."
+   },
+   "RM_Tikitown_Proxima_L20": {
+    "en": "Welcome to Proxima Medical. We're glad to have you. See your supervisor for your floor assignment.",
+    "ch": "歡迎加入Proxima醫療. 很高興有你加入. 去找你的主管確認你的樓層工作分配.",
+    "cn": "欢迎来到Proxima医疗. 很高兴你能加入. 去找你的主管确认你的楼层岗位分配."
    }
   },
   "Farming.json": {
