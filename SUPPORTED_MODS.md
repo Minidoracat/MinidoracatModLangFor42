@@ -9,7 +9,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **657 個 Workshop 模組**（831 個 mod ID）；另 **20 個已下架**（翻譯保留，見文末）。
+共支援 **658 個 Workshop 模組**（834 個 mod ID）；另 **19 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -129,6 +129,7 @@
 | ['69 Chevrolet Camaro](https://steamcommunity.com/sharedfiles/filedetails/?id=2991201484) | '69 Chevrolet Camaro | 新增 1969 年雪佛蘭 Camaro 跑車，含多種可製作的車輛部件與裝甲。 | `69camaro` | 28 | — | — |
 | [Dynamic Backpack Upgrades [ B41-B42.15 ]](https://steamcommunity.com/sharedfiles/filedetails/?id=2996978365) | 動態背包升級 | 為背包新增可升級槽位，提升容量或減輕負重，含多項沙盒設定。 | `LazoloDynamicBackpackUpgrades` | 93 | — | — |
 | [Better Electronics](https://steamcommunity.com/sharedfiles/filedetails/?id=2999183635) | 更好的電子學 | 新增遙控器、噪音發生器、感應器與遙控門馬達等自製電子裝置。 | `LWBetterElectronics` | 46 | — | — |
+| [Wallpapers and More Paint Options](https://steamcommunity.com/sharedfiles/filedetails/?id=2999595757) | 壁紙與更多油漆選項 | 新增壁紙、瓷磚、外牆板、木材染色等多種室內外裝潢選項。 | `Wallpapers`, `WallpapersB42`, `WallpapersBM` | 151 | ⚠️ ≥4 | — |
 | [Custom Gamepad UI [42.19]](https://steamcommunity.com/sharedfiles/filedetails/?id=3001154607) | 自訂手柄 UI | 改善手柄操作介面，可自訂 UI 版面配置與各項操作行為。 | `CustomGamepadUI` | 42 | — | — |
 | ['93 Ford Mustang](https://steamcommunity.com/sharedfiles/filedetails/?id=3001592312) | '93 Ford Mustang | 新增 1993 年 Ford Mustang 跑車，含 GT 版與多種可製作部件。 | `93mustangSSP` | 36 | — | — |
 | ['63 Volkswagen 1300 Beetle](https://steamcommunity.com/sharedfiles/filedetails/?id=3005903549) | '63 Volkswagen 1300 金龜車 | 新增 1963 年福斯 1300 金龜車，含沙灘車與高性能等版本。 | `63beetle` | ? | — | — |
@@ -671,14 +672,13 @@
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
-## 已下架模組（20 個，翻譯保留）
+## 已下架模組（19 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 | 下架偵測 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | [2959472220](https://steamcommunity.com/sharedfiles/filedetails/?id=2959472220) | FR Used Cars (中古車) | 新增中古車輛與大量車輛零件，如輪胎、保險桿、貨斗等改裝部件。 | `FRUsedCarsAlpha` | ? | — | — | 2026-07-17 |
-| [Wallpapers and More Paint Options](https://steamcommunity.com/sharedfiles/filedetails/?id=2999595757) | 壁紙與更多油漆選項 | 新增壁紙、瓷磚、外牆板、木材染色等多種室內外裝潢選項。 | `Wallpapers`, `WallpapersB42`, `WallpapersBM` | 151 | ⚠️ ≥4 | — | 2026-09-12 |
 | [3387222454](https://steamcommunity.com/sharedfiles/filedetails/?id=3387222454) | Rain 的槍械與槍械配件 | 新增槍械與配件，如消音器、前握把、彈藥帶、戰術手電筒等。 | `B42RainsFirearmsAndGunParts4213`, `B42RainsFirearmsAndGunPartsExpanded4213` | ? | ? | — | 2026-07-17 |
 | [3387474156](https://steamcommunity.com/sharedfiles/filedetails/?id=3387474156) | Logic 職業 | 新增植物學家、屠夫、偵探、獸醫等多種職業，各具專屬知識與配方。 | `LogicProfessions` | ? | ? | — | 2026-07-17 |
 | [3388380529](https://steamcommunity.com/sharedfiles/filedetails/?id=3388380529) | Rain 的斧與刃 | 新增多款斧類與長刃武器並附「劍術愛好者」特質；原 Workshop 項目已下架無法存取（作者已退出模組製作）。 | — | ? | ? | — | 2026-08-24 |
