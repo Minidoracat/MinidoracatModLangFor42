@@ -29901,6 +29901,41 @@
     "en": "Something jumps at you — it's your cat!",
     "ch": "有東西朝你撲來 — 原來是你的貓!",
     "cn": "有什么东西朝你扑来 — 原来是你的猫!"
+   },
+   "IGUI_GS_RoutingSaved": {
+    "en": "Configuration saved and confirmed.",
+    "ch": "設定已儲存並確認.",
+    "cn": "配置已保存并确认."
+   },
+   "IGUI_GS_RoutingRejected": {
+    "en": "Configuration rejected: %1. Your draft is preserved.",
+    "ch": "設定被拒絕: %1. 你的草稿會保留.",
+    "cn": "配置被拒绝: %1. 你的草稿会保留."
+   },
+   "IGUI_GS_RoutingSortStopped": {
+    "en": "Auto Sort stopped: configuration changed. Start it again to use the confirmed rules.",
+    "ch": "自動分類已停止: 設定已變更. 請重新啟動, 才會套用已確認的規則.",
+    "cn": "自动分类已停止: 配置已变更. 请重新启动, 才会应用已确认的规则."
+   },
+   "IGUI_GS_FoodMixed": {
+    "en": "mixed states",
+    "ch": "多種狀態",
+    "cn": "多种状态"
+   },
+   "IGUI_GS_RoutingTimeout": {
+    "en": "No confirmation received. Your draft is kept; you can retry.",
+    "ch": "未收到確認. 你的草稿會保留; 你可以重試.",
+    "cn": "未收到确认. 你的草稿会保留; 你可以重试."
+   },
+   "IGUI_GS_RemoteGroupExpand": {
+    "en": "Expand to inspect a specific item.",
+    "ch": "展開即可檢視特定物品.",
+    "cn": "展开即可查看特定物品."
+   },
+   "IGUI_perks_ProstFamiliarity": {
+    "en": "Prosthesis Familiarity",
+    "ch": "假肢熟悉度",
+    "cn": "假肢熟悉度"
    }
   },
   "ItemName.json": {
@@ -132562,16 +132597,6 @@
     "ch": "製作萬能膠帶",
     "cn": "制作万能胶带"
    },
-   "Craft Prosthetic Arm": {
-    "en": "Craft Prosthetic Arm",
-    "ch": "製作手臂假肢",
-    "cn": "制作手臂假肢"
-   },
-   "Craft Prosthetic Hook": {
-    "en": "Craft Prosthetic Hook",
-    "ch": "製作鉤狀手臂",
-    "cn": "制作钩状手臂"
-   },
    "Create Battery Bank": {
     "en": "Create Battery Bank",
     "ch": "製作蓄電池組",
@@ -139025,6 +139050,21 @@
     "en": "Practice Stitching on Dummy",
     "ch": "在假人上練習縫合",
     "cn": "在假人上练习缝合"
+   },
+   "Craft_Prosthetic_Arm": {
+    "en": "Craft Prosthetic Arm",
+    "ch": "製作手臂假肢",
+    "cn": "制作手臂假肢"
+   },
+   "Craft_Prosthetic_Hook": {
+    "en": "Craft Prosthetic Hook",
+    "ch": "製作鉤狀手臂",
+    "cn": "制作钩状手臂"
+   },
+   "Upgrade Rucksack (Tier 1)": {
+    "en": "Upgrade Rucksack (Tier 1)",
+    "ch": "升級背包 (一階)",
+    "cn": "升级背包 (一阶)"
    }
   },
   "Sandbox.json": {
@@ -153478,6 +153518,41 @@
     "en": "Keyboard key to mount the nearest owned companion on your shoulder within 10 tiles (default: accent/dead key ´ above Ñ on Spanish keyboards; numpad * is an alternative). Same as ground Cats Mod → Ride on shoulder. If a cat is already on your shoulder, this key dismounts it. No numpad? Use right-click → Cats Mod → Ride on shoulder. Remappable. Chat/text focus ignores this key.",
     "ch": "讓 10 格內距離最近、屬於你的夥伴趴上肩膀的鍵盤按鍵 (預設: 西班牙文鍵盤上 Ñ 上方的重音符號/組字鍵 ´; 也可使用數字鍵盤的 *). 與在地面開啟 Cats Mod → 趴在肩膀上相同. 若貓已在肩膀上, 按此鍵會讓牠下來. 沒有數字鍵盤? 使用滑鼠右鍵 → Cats Mod → 趴在肩膀上. 可重新指定按鍵. 聊天或文字輸入欄位取得焦點時不會觸發此鍵.",
     "cn": "让 10 格内距离最近、属于你的伙伴趴上肩膀的键盘按键 (默认: 西班牙语键盘上 Ñ 上方的重音符号死键 ´; 也可使用小键盘的 *). 与在地面打开 Cats Mod → 趴在肩膀上相同. 如果猫已在肩膀上, 按此键会让它下来. 没有小键盘? 使用鼠标右键 → Cats Mod → 趴在肩膀上. 可重新绑定按键. 聊天或文本输入框获得焦点时不会触发此键."
+   },
+   "Sandbox_BurdJournals_AllowDynamicTraitsManagedTraitRecording": {
+    "en": "Record Dynamic Traits managed traits",
+    "ch": "記錄 Dynamic Traits 管理的特質",
+    "cn": "记录 Dynamic Traits 管理的特质"
+   },
+   "Sandbox_BurdJournals_AllowDynamicTraitsManagedTraitRecording_tooltip": {
+    "en": "Allow player journals to record traits managed by Dynamic Traits and Expanded Moodles. Claims use the mod server hooks. Dynamic progression counters are not restored. Build 42.15+ only.",
+    "ch": "允許玩家日記記錄由動態特質與擴充情緒 (Dynamic Traits and Expanded Moodles) 管理的特質. 領取時會使用該模組的伺服器掛鉤. 不會還原動態進度計數器. 僅支援 Build 42.15 以上版本.",
+    "cn": "允许玩家日记记录由动态特质与扩充情绪 (Dynamic Traits and Expanded Moodles) 管理的特质. 领取时会使用该模组的服务器挂钩. 不会恢复动态进度计数器. 仅支持 Build 42.15 及以上版本."
+   },
+   "Sandbox_BurdJournals_AllowMoreTraitsDynamicManagedTraitRecording": {
+    "en": "Record legacy More Traits Dynamic traits",
+    "ch": "記錄舊版 More Traits Dynamic 的特質",
+    "cn": "记录旧版 More Traits Dynamic 的特质"
+   },
+   "Sandbox_BurdJournals_AllowMoreTraitsDynamicManagedTraitRecording_tooltip": {
+    "en": "Allow player journals to record traits managed by the legacy More Traits Dynamic submod. Progression counters are not restored. Prepared starting-item rewards remain excluded.",
+    "ch": "允許玩家日記記錄由舊版更多特質 - 動態 (More Traits Dynamic) 子模組管理的特質. 不會還原進度計數器. 充分準備 (Prepared) 系列特質的起始物品獎勵仍不予恢復.",
+    "cn": "允许玩家日记记录由旧版更多特质 - 动态 (More Traits Dynamic) 子模组管理的特质. 不会恢复进度计数器. 充分准备 (Prepared) 系列特质的初始物品奖励仍不予恢复."
+   },
+   "Sandbox_TOC_XPMultiplierSide_L": {
+    "en": "Left Side XP Multiplier",
+    "ch": "左側經驗倍率",
+    "cn": "左侧经验倍率"
+   },
+   "Sandbox_TOC_XPMultiplierSide_R": {
+    "en": "Right Side XP Multiplier",
+    "ch": "右側經驗倍率",
+    "cn": "右侧经验倍率"
+   },
+   "Sandbox_TOC_XPMultiplierProstFamiliarity": {
+    "en": "Prosthesis Familiarity XP Multiplier",
+    "ch": "假肢熟悉度經驗倍率",
+    "cn": "假肢熟悉度经验倍率"
    }
   },
   "Tooltip.json": {
@@ -160081,9 +160156,9 @@
     "cn": "%1%% 丧尸化速度"
    },
    "UI_trait_unluckydesc": {
-    "en": "What could go wrong for you, often does.",
-    "ch": "會出錯的事, 往往真的會發生在你身上.",
-    "cn": "会出错的事, 往往真的会发生在你身上."
+    "en": "Affects the odds of certain DTEM random events against you.",
+    "ch": "影響某些 DTEM 隨機事件的機率, 對你不利.",
+    "cn": "影响某些 DTEM 随机事件的几率, 对你不利."
    },
    "UI_trait_nimble": {
     "en": "Nimble",
@@ -160096,9 +160171,9 @@
     "cn": "咖啡因成瘾"
    },
    "UI_trait_AddictedToCaffeineDesc": {
-    "en": "Irritability, stress and fatigue when not consuming caffeine.",
-    "ch": "沒攝取咖啡因時會焦躁, 有壓力且疲勞.",
-    "cn": "没摄取咖啡因时会焦躁, 有压力且疲劳."
+    "en": "Caffeine relieves withdrawal; going without it causes stress, irritability, fatigue and headaches.",
+    "ch": "咖啡因可緩解戒斷症狀; 不攝取則會造成壓力、焦躁、疲勞與頭痛.",
+    "cn": "咖啡因可缓解戒断症状; 不摄取则会造成压力、焦躁、疲劳和头痛."
    },
    "UI_trait_Alcoholic": {
     "en": "Alcoholic",
@@ -160106,17 +160181,17 @@
     "cn": "酗酒成性"
    },
    "UI_trait_AlcoholicDesc": {
-    "en": "You need alcohol flowing through your veins to feel good.",
-    "ch": "血管裡得流著酒精, 你才覺得舒坦.",
-    "cn": "血管里得流着酒精, 你才觉得舒坦."
+    "en": "Alcohol dependence. Going without alcohol causes increasingly severe withdrawal.",
+    "ch": "酒精依賴. 不喝酒時, 戒斷症狀會越來越嚴重.",
+    "cn": "酒精依赖. 不喝酒时, 戒断症状会越来越严重."
    },
    "UI_trait_AmateurElectrician": {
-    "en": "Amateur electrician",
+    "en": "Amateur Electrician",
     "ch": "業餘電工",
     "cn": "业余电工"
    },
    "UI_trait_AmateurElectricianDesc": {
-    "en": "You have practiced enough and are ready to connect generators.",
+    "en": "You have practiced enough to connect generators.",
     "ch": "你練習得夠久了, 已經可以接發電機.",
     "cn": "你练习得够久了, 已经可以接发电机."
    },
@@ -160136,7 +160211,7 @@
     "cn": "身形松垮"
    },
    "UI_trait_FlabbyDesc": {
-    "en": "Your body condition is poor. Optional sandbox rules can reduce Fitness.",
+    "en": "Your body condition is poor. Optional Sandbox rules can reduce Fitness.",
     "ch": "你的身體狀況不佳. 可選的沙盒規則會降低體格.",
     "cn": "你的身体状况不佳. 可选的沙盒规则会降低体格."
    },
@@ -160146,7 +160221,7 @@
     "cn": "膝盖脆弱"
    },
    "UI_trait_BrittleKneesDesc": {
-    "en": "Your body condition is terrible. Optional sandbox rules can greatly reduce Fitness.",
+    "en": "Your body condition is terrible. Optional Sandbox rules can greatly reduce Fitness.",
     "ch": "你的身體狀況很糟. 可選的沙盒規則會大幅降低體格.",
     "cn": "你的身体状况很糟. 可选的沙盒规则会大幅降低体格."
    },
@@ -160156,7 +160231,7 @@
     "cn": "气力不足"
    },
    "UI_trait_FlimsyDesc": {
-    "en": "Your body condition is poor. Optional sandbox rules can reduce Strength.",
+    "en": "Your body condition is poor. Optional Sandbox rules can reduce Strength.",
     "ch": "你的身體狀況不佳. 可選的沙盒規則會降低力量.",
     "cn": "你的身体状况不佳. 可选的沙盒规则会降低力量."
    },
@@ -160166,7 +160241,7 @@
     "cn": "弱不禁风"
    },
    "UI_trait_FrailDesc": {
-    "en": "Your body condition is terrible. Optional sandbox rules can greatly reduce Strength.",
+    "en": "Your body condition is terrible. Optional Sandbox rules can greatly reduce Strength.",
     "ch": "你的身體狀況很糟. 可選的沙盒規則會大幅降低力量.",
     "cn": "你的身体状况很糟. 可选的沙盒规则会大幅降低力量."
    },
@@ -160176,9 +160251,9 @@
     "cn": "郁郁寡欢"
    },
    "UI_trait_MelancholicDesc": {
-    "en": "Feelings of hopelessness are constant. Sad situations affect you more strongly.",
-    "ch": "絕望感揮之不去. 悲傷的處境對你影響更大.",
-    "cn": "绝望感挥之不去. 悲伤的处境对你影响更大."
+    "en": "Unhappiness builds up over time. Antidepressants can help suppress the condition.",
+    "ch": "憂鬱會隨時間累積. 抗憂鬱藥可以幫助壓制這個狀況.",
+    "cn": "忧郁会随时间累积. 抗抑郁药可以帮助压制这个状况."
    },
    "UI_trait_NervousWreck": {
     "en": "Nervous Wreck",
@@ -160186,9 +160261,9 @@
     "cn": "神经紧绷"
    },
    "UI_trait_NervousWreckDesc": {
-    "en": "You are anxious by nature. Stressful situations affect you more strongly.",
-    "ch": "你天生容易焦慮. 高壓的處境對你影響更大.",
-    "cn": "你天生容易焦虑. 高压的处境对你影响更大."
+    "en": "Stress builds up over time. Beta blockers can help suppress the condition.",
+    "ch": "壓力會隨時間累積. 乙型阻斷劑可以幫助壓制這個狀況.",
+    "cn": "压力会随时间累积. β-阻断剂可以帮助压制这个状况."
    },
    "UI_trait_Nightmares": {
     "en": "Nightmares",
@@ -160206,9 +160281,9 @@
     "cn": "活力充沛"
    },
    "UI_trait_PhysicallyActiveDesc": {
-    "en": "Energetic person. Spending energy makes you feel good.",
-    "ch": "精力旺盛的人. 消耗體力讓你感覺良好.",
-    "cn": "精力旺盛的人. 消耗体力让你感觉良好."
+    "en": "Physical activity reduces stress, boredom, unhappiness and anger.",
+    "ch": "體能活動可減少壓力、無聊、憂鬱與憤怒.",
+    "cn": "体能活动可减少压力、无聊、忧郁和愤怒."
    },
    "UI_trait_PillsAllergy": {
     "en": "Allergic to pills",
@@ -160216,9 +160291,9 @@
     "cn": "药物过敏"
    },
    "UI_trait_PillsAllergyDesc": {
-    "en": "Pills don't agree with you. Perhaps books are a safer alternative.",
-    "ch": "吃藥對你不合. 或許書本是比較安全的替代方案.",
-    "cn": "吃药对你不合适. 或许书本是更安全的替代方案."
+    "en": "Taking certain medications can trigger allergic reactions of varying severity.",
+    "ch": "服用某些藥物可能引發輕重不一的過敏反應.",
+    "cn": "服用某些药物可能引发轻重不一的过敏反应."
    },
    "UI_trait_Prodigy": {
     "en": "Prodigy",
@@ -160226,9 +160301,9 @@
     "cn": "天赋异禀"
    },
    "UI_trait_ProdigyDesc": {
-    "en": "You train Strength and Fitness faster than other people.",
-    "ch": "你的力量與體格練得比別人快.",
-    "cn": "你的力量与体格练得比别人快."
+    "en": "Gain extra Strength and Fitness XP from physical activity.",
+    "ch": "從體能活動中獲得額外的力量與體格經驗.",
+    "cn": "从体能活动中获得额外的力量与体格经验."
    },
    "UI_trait_Sedentary": {
     "en": "Sedentary",
@@ -160236,9 +160311,9 @@
     "cn": "久坐不动"
    },
    "UI_trait_SedentaryDesc": {
-    "en": "Inactive lifestyle. You don't like spending energy.",
-    "ch": "缺乏活動的生活方式. 你不喜歡消耗體力.",
-    "cn": "缺乏活动的生活方式. 你不喜欢消耗体力."
+    "en": "Strenuous physical activity can cause additional muscle pain.",
+    "ch": "劇烈的體能活動可能造成額外的肌肉疼痛.",
+    "cn": "剧烈的体能活动可能造成额外的肌肉疼痛."
    },
    "UI_trait_WildPlantsAllergy": {
     "en": "Allergic to wild plants",
@@ -160246,9 +160321,9 @@
     "cn": "野生植物过敏"
    },
    "UI_trait_WildPlantsAllergyDesc": {
-    "en": "Wild plants trigger allergies of varying severity. It is better to avoid them.",
-    "ch": "野生植物會引起過敏, 有的嚴重有的輕微. 最好避開.",
-    "cn": "野生植物会引起过敏, 有的严重有的轻微. 最好避开."
+    "en": "Certain wild plants can trigger allergic reactions of varying severity.",
+    "ch": "某些野生植物可能引發輕重不一的過敏反應.",
+    "cn": "某些野生植物可能引发轻重不一的过敏反应."
    },
    "UI_trait_durabile": {
     "en": "Durability",
@@ -184633,7 +184708,7 @@
     "cn": "流血造成的健康损失加倍."
    },
    "UI_trait_electricaltechnician": {
-    "en": "Electrical-technician",
+    "en": "Electrical Technician",
     "ch": "電氣技師",
     "cn": "电气技师"
    },
@@ -184671,6 +184746,26 @@
     "en": "If enabled (default), the vanilla radial menus (vehicle, animal menu) will be displayed before the Smart Radial Menu.\nIf disabled, SRM is displayed first before the vanilla radial menus.",
     "ch": "啟用時 (預設開啟), 原版環形選單 (載具、動物選單) 會顯示在智慧環形選單 (SRM) 之前.\n停用時, 智慧環形選單 (SRM) 會先於原版環形選單顯示.",
     "cn": "启用时 (默认开启), 原版环形菜单 (载具、动物菜单) 会显示在智能环形菜单 (SRM) 之前.\n关闭时, 智能环形菜单 (SRM) 会先于原版环形菜单显示."
+   },
+   "UI_ApplyChangesPrompt": {
+    "en": "Apply Changes?",
+    "ch": "要套用變更嗎?",
+    "cn": "要应用更改吗?"
+   },
+   "UI_ResetConfigurationPrompt": {
+    "en": "Are you sure you want to reset this container's configuration?",
+    "ch": "確定要重設這個容器的配置嗎?",
+    "cn": "确定要重置这个容器的配置吗?"
+   },
+   "UI_btn_ResetConfig": {
+    "en": "RESET",
+    "ch": "重設",
+    "cn": "重置"
+   },
+   "UI_btn_Discard": {
+    "en": "DISCARD",
+    "ch": "捨棄",
+    "cn": "舍弃"
    }
   },
   "MakeUp.json": {
