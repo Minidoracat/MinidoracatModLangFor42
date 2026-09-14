@@ -4,6 +4,39 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.20.4-1.27.7] - 2026-09-14
+
+### 玩家摘要
+
+- **跟上 7 個原已支援模組，補上 21 個字串並修訂 18 個說明。** 繁中與簡中皆對照新版原文維護。
+- **Dynamic Traits 的特質說明跟上新版。** 咖啡因與酒精戒斷、藥物與植物過敏、情緒變化、運動及汽車維修經驗不再沿用過時描述。
+- **The Only Cure 的假肢製作配方恢復中文。** 新增假肢熟悉度與左右側經驗倍率說明；Authentic Z 也補上新的一階背包升級配方。
+- **Manage Containers 的套用、捨棄與重設確認補齊中文。** 容器配置變更前的提示更清楚。
+- **Burd's Survival Journals 補上動態特質相容選項。** 清楚說明日記不會恢復進度計數器，也不會重發「充分準備」特質的起始物品。
+- **Global Storage SiK 的設定確認與分類提示補齊中文。** 儲存被拒、未收到確認及自動分類停止時，會說明草稿保留與後續操作。
+- **Jeeves 的聊天名稱顏色說明補上適用條件。** 只有 Discord 機器人未提供顏色時，才使用這些設定。
+- **支援版本與安裝方式不變。** 仍支援 Build 42.20.4+；重新啟動遊戲即可載入新翻譯，無須重開存檔。
+
+### Added
+
+- 新增 21 個雙語字串：The Only Cure 6、Authentic Z 1、Manage Containers 4、Burd's Survival Journals 4、Global Storage SiK 6。
+
+### Changed
+
+- 修訂 18 個既有說明：Dynamic Traits 11、Jeeves 6、Global Storage SiK 1。
+- 跟進 The Only Cure 的兩個假肢配方改名，移除已由新名稱承接的舊翻譯。
+
+### Fixed
+
+- 區分日記可恢復的特質與不會恢復的進度、起始物品獎勵。
+- 共用特質名稱保留適用各模組的中性譯名；效果互不相同的共用說明仍交由各模組顯示原文。
+
+### Notes
+
+- 本次僅維護原已支援模組；未同步 As1 快照，未新增或維護 Lua 相容層。
+- FamilyZ Advanced Medicine 的檔名與配方鍵調整已有對應翻譯；Nested Health Info 已移除的兩個文字不再被使用，保留既有來源資料、不另造翻譯。
+- 遊戲本體翻譯保護、最低支援版本、Mod ID 與 Workshop ID 維持不變。
+
 ## [42.20.4-1.27.6] - 2026-09-13
 
 ### 玩家摘要
