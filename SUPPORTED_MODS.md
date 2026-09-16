@@ -9,7 +9,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **658 個 Workshop 模組**（834 個 mod ID）；另 **19 個已下架**（翻譯保留，見文末）。
+共支援 **657 個 Workshop 模組**（833 個 mod ID）；另 **20 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -395,7 +395,6 @@
 | [Street Smarts](https://steamcommunity.com/sharedfiles/filedetails/?id=3511535258) | 街頭智慧 | 讓新角色初始知曉出生點周邊與道路資訊，範圍可調整。 | `NepLocalKnowledge` | 9 | — | — |
 | [[BROKEN] Support Goods Mega Mod [B42.10] - PREDATOR](https://steamcommunity.com/sharedfiles/filedetails/?id=3512993822) | 支援物資超級模組 - PREDATOR | 新增可穿戴的支援物資裝備，可選擇配戴左右側。 | `SUPPORTGOODS2` | ? | — | — |
 | [Seesaw Game](https://steamcommunity.com/sharedfiles/filedetails/?id=3515515643) | 蹺蹺板機制 | 新增技能總等級上限系統，超過上限時技能會降級平衡。 | `P4SeesawGame` | 10 | — | — |
-| [JM3 archery](https://steamcommunity.com/sharedfiles/filedetails/?id=3518662691) | JM3 弓箭 | 新增弓弩武器與箭矢系統，含瞄準鏡配件與箭矢製作材料。 | `JM3_archery` | 62 | — | — |
 | [Zombaroid [42, No Multiplayer]](https://steamcommunity.com/sharedfiles/filedetails/?id=3519916139) | 殭屍拍立得 | 新增拍立得相機與相紙，可在遊戲中拍攝照片。 | `Zombaroid` | 37 | ⚠️ ≥2 | — |
 | [More Car Features + Spawn Zones Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3520758551) | 更多車輛功能＋生成區擴充 | 擴充車輛功能與生成設定，含自動加油、攀爬車輛與部件品質調整。 | `WayMoreCars` | 157 | — | — |
 | [[J&G] Firefighter Uniform [B42/41]](https://steamcommunity.com/sharedfiles/filedetails/?id=3521263771) | J&G 消防員制服 | 新增消防員制服、頭盔與氣瓶背包，並附多款斧頭與雪佛蘭 Suburban 消防車。 | `[J&G] Firefighter Uniform` | 63 | — | — |
@@ -672,7 +671,7 @@
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
-## 已下架模組（19 個，翻譯保留）
+## 已下架模組（20 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
@@ -687,6 +686,7 @@
 | [3401825906](https://steamcommunity.com/sharedfiles/filedetails/?id=3401825906) | 必備配方 | 新增實用配方，可製作小蘇打、鹽、糖、酵母、木炭粉與飼料乾草。 | `EssentialRecipes` | ? | ? | — | 2026-07-17 |
 | [3418366499](https://steamcommunity.com/sharedfiles/filedetails/?id=3418366499) | 傳奇武士刀與脇差 | 新增傳奇武士刀與脇差武器，可製作多種顏色的武士刀刀鞘。 | `LKB42` | ? | ? | — | 2026-07-17 |
 | [3452171674](https://steamcommunity.com/sharedfiles/filedetails/?id=3452171674) | FR Operator 幹員裝備 | 新增胸掛槍套、三角洲槍套、FR 槍械背心等可掛載裝備，並可透過右鍵選單調整槍套左右位置。 | `FR_Operator` | ? | — | — | 2026-08-31 |
+| [JM3 archery](https://steamcommunity.com/sharedfiles/filedetails/?id=3518662691) | JM3 弓箭 | 新增弓弩武器與箭矢系統，含瞄準鏡配件與箭矢製作材料。 | `JM3_archery` | 62 | — | — | 2026-09-16 |
 | [[Federal Rangers] CHIMERA V11 [B42.13.1+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3564110652) | [Federal Rangers] CHIMERA V11 | 新增大量戰術服裝與裝備，如背包、頭盔耳機與護具。 | `Federal_Rangers_Chimera`, `Federal_Rangers_Chimera_PatchN1` | ? | ? | — | 2026-07-18 |
 | [3575320927](https://steamcommunity.com/sharedfiles/filedetails/?id=3575320927) | LTKB42 | 新增可佩戴於背部或大腿的刀鞘，並支援快捷欄掛載。 | `LTKB42` | ? | ? | — | 2026-07-17 |
 | [Todo Caserito [Build 42/42.19 SP/MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3600616323) | Todo Caserito 家常料理 | 新增拉美風家常料理與配方，如薯條、塔可、玉米餅與布丁等。 | `Todo Caserito` | 410 | — | ⚠️ 有一項配方名稱（代號 MakeTortilla）與草藥師、Abuelita Linda 兩個 MOD 撞名、卻是不同的食物——本 MOD 的是阿根廷豬油餅（tortillas de grasa），那兩邊的同一代號是墨西哥玉米餅。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故此鍵不出貨、遊戲內顯示該 MOD 自己的英文原文。本 MOD 另有專門表示玉米餅的配方（MakeTortillaCasera），該項不受影響。 | 2026-09-12 |
