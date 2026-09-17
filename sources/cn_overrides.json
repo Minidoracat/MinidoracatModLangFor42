@@ -3039,6 +3039,16 @@
   "value": "MSR788 狩猎步枪",
   "reason": "2026-09-12 #498 原始MOD有效EN更新: 上游明確改為 MSR788 Hunting Rifle; 保留型號, 槍種由狙擊步槍修正為狩獵步槍."
  },
+ "IG_UI.json|IGUI_ExtractionMode_HoldMallRoof": {
+  "as1_value": "疫苗携带者必须留在停机坪上, 直到飞行员到达.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 The vaccine carrier must be on the helipad when the pilot arrives.",
+  "value": "飞行员抵达时, 疫苗携带者必须在停机坪上."
+ },
+ "IG_UI.json|IGUI_ExtractionMode_Message_CampaignHandoffStarted": {
+  "as1_value": "%1 向疫苗直升机发信号了. 疫苗样本携带者必须在停机坪上停留三分钟.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 %1 signaled the vaccine helicopter. The vaccine carrier must be on the helipad when the pilot arrives.",
+  "value": "%1 向疫苗直升机发信号了. 飞行员抵达时, 疫苗携带者必须在停机坪上."
+ },
  "IG_UI.json|IGUI_ExtractionMode_Quest_creature_comforts_Description": {
   "as1_value": "提交波本威士忌、盒装香烟、一块金表和珠宝.",
   "reason": "上游把 bourbon 改為一般 whisky，舊譯「波本威士忌」過度具體",
@@ -4703,6 +4713,51 @@
   "as1_value": "跑尸随机掉落解药的几率(每100僵尸携带解药僵尸数量)<br>数值=0-100, 0=禁用, 10=10%%, 1.5=1.5%%",
   "reason": "同 IGUI_PhunCure_CureDropRate_Tooltip：跨 mod 共用鍵、分母不同，As1 值偏向 PhunCure2 一方；改用兩邊皆成立的並列文案。",
   "value": "跑尸随机掉落解药的几率, 0=禁用.<br>PhunCure (phuncure): 万分比, 100=1%%<br>PhunCure 2 (phuncure2): 百分比, 10=10%%, 1.5=1.5%%"
+ },
+ "IG_UI.json|IGUI_PlayableMinigames_ActionNew1": {
+  "as1_value": "发1张新牌",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 New Deal (Draw 1)",
+  "value": "重新发牌 (翻 1 张)"
+ },
+ "IG_UI.json|IGUI_PlayableMinigames_ActionNew3": {
+  "as1_value": "发3张新牌",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 New Deal (Draw 3)",
+  "value": "重新发牌 (翻 3 张)"
+ },
+ "IG_UI.json|IGUI_PlayableMinigames_BlackjackHintBet": {
+  "as1_value": "准备好后发牌.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Choose your bet, then deal.",
+  "value": "选择下注金额, 然后发牌."
+ },
+ "IG_UI.json|IGUI_PlayableMinigames_BlackjackHintOther": {
+  "as1_value": "正在玩二十一点.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 %1 is playing a blackjack hand.",
+  "value": "%1 正在玩二十一点."
+ },
+ "IG_UI.json|IGUI_PlayableMinigames_DartsFinishDouble": {
+  "as1_value": "收镖: 双倍区",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Finish: D%1",
+  "value": "收镖: 双倍 %1"
+ },
+ "IG_UI.json|IGUI_PlayableMinigames_DartsHintWait": {
+  "as1_value": "等待 ",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Waiting for %1",
+  "value": "等待 %1"
+ },
+ "IG_UI.json|IGUI_PlayableMinigames_HoldemHintWait": {
+  "as1_value": "等待 ",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Waiting on %1.",
+  "value": "等待 %1."
+ },
+ "IG_UI.json|IGUI_PlayableMinigames_InCheckHint": {
+  "as1_value": "被将军.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 %1 is in check.",
+  "value": "%1 被将军."
+ },
+ "IG_UI.json|IGUI_PlayableMinigames_NeedThreeDarts": {
+  "as1_value": "在飞镖盘旁放置三支飞镖.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 You need three darts: carry them or place them by the dartboard.",
+  "value": "你需要三支飞镖: 随身携带或放在飞镖盘旁."
  },
  "IG_UI.json|IGUI_RISKY_ATTACHMENTS": {
   "as1_value": "配件",
@@ -13359,10 +13414,35 @@
   "reason": "上游改寫：明列三個進度分頁並說明停用時仍保留說明/翻譯狀態分頁。分頁名沿用 UI_ETW_SubTab_* 既有譯法",
   "value": "在 ETW 角色页面启用生命体征, 永久性特质与非永久性特质进度选项卡. 禁用时说明与翻译状态选项卡仍可使用."
  },
+ "Sandbox.json|Sandbox_ExtractionMode_BanditAttackWindowChancePercent_tooltip": {
+  "as1_value": "突袭期间每过一个循环攻击窗口, 就有概率生成一队敌对匪徒. 每次判定后都会安排新的窗口.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Requires the Bandits mod and Enable Optional Bandits NPC Integration.\n\nChance of a bandit attack each time the attack timer ends during a raid. A failed roll st",
+  "value": "需要 Bandits 模组, 并开启“启用可选的匪徒 NPC 集成”.\n\n突袭期间每次攻击计时结束时, 发生匪徒攻击的概率. 判定未通过则重新开始计时.\n\n设为 0 可禁用这类攻击. 若已启用匪徒替换尸潮的选项, 匪徒仍可能替换僵尸尸潮."
+ },
+ "Sandbox.json|Sandbox_ExtractionMode_BanditHordeReplacementChancePercent_tooltip": {
+  "as1_value": "尸潮到来时, 有机会将僵尸尸潮替换为一支规模更大、装备轻便的敌对匪徒小队, 混合使用近战武器和枪械.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Requires the Bandits mod and Enable Optional Bandits NPC Integration.\n\nChance that an incoming raid horde is replaced by armed bandits. Escalating Horde Waves i",
+  "value": "需要 Bandits 模组, 并开启“启用可选的匪徒 NPC 集成”.\n\n来袭的突袭尸潮被武装匪徒替换的概率. 启用“递增尸潮波次”时, 越靠后的波次该概率越高."
+ },
+ "Sandbox.json|Sandbox_ExtractionMode_EasierExtractions_tooltip": {
+  "as1_value": "默认禁用. 启用后, 发射撤离信号弹不会引来最初的响应僵尸, 信号枪也不会产生吸引僵尸的环境音效. 突袭尸潮和直升机的行为保持不变.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Extraction flares do not spawn extra zombies or attract nearby zombies with their sound. Regular raid hordes and the helicopter still behave normally.",
+  "value": "撤离信号弹不会额外刷新僵尸, 也不会用声响吸引附近的僵尸. 普通突袭尸潮与直升机的行为保持不变."
+ },
+ "Sandbox.json|Sandbox_ExtractionMode_ExtractionHealing_tooltip": {
+  "as1_value": "禁用: 撤离不会改变伤势.\n\n治疗重伤: 治疗流血、骨折、深层伤口、烧伤以及嵌入的子弹或玻璃碎片. 抓伤、割伤、咬伤、伤口感染和诺克斯感染仍会保留.\n\n完全治疗: 完全恢复幸存者, 包括清除诺克斯感染.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Disabled: keep your injuries after extracting.\n\nHeal Major Wounds: treats bleeding, fractures, deep wounds, burns, and lodged bullets or glass. Scratches, cuts,",
+  "value": "禁用: 撤离后伤势保持不变.\n\n治疗重伤: 治疗流血、骨折、深层伤口、烧伤以及嵌入的子弹或玻璃碎片. 抓伤、割伤、咬伤与各种感染仍会保留.\n\n完全治疗: 完全恢复生命值, 并清除所有伤势与感染, 包括诺克斯感染."
+ },
+ "Sandbox.json|Sandbox_ExtractionMode_ExtractionHordePerPlayer_tooltip": {
+  "as1_value": "为每位参与突袭的存活且在线玩家在撤离点刷新的僵尸数量.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Only applies when Easier Extractions is off.\n\nExtra zombies summoned by an extraction flare for each living player currently in the raid. Set to 0 to spawn none",
+  "value": "仅在禁用“更简单的撤离”时生效.\n\n撤离信号弹为突袭中每位存活玩家额外引来的僵尸数量. 设为 0 则不刷新."
+ },
  "Sandbox.json|Sandbox_ExtractionMode_GrantStarterM9Kit_tooltip": {
   "as1_value": "默认启用. 每位新幸存者会收到一把 M9手枪和两个装满弹药的 9mm 弹匣. 初始手电筒不受影响.",
-  "reason": "2026-09-03 #378：上游 2026-09 從 EN 移除句尾 'The starter flashlight is unaffected.'（同版新增獨立的 Sandbox_ExtractionMode_GrantStarterFlashlight 選項後，該註記已無意義）。As1 仍留著「初始手电筒不受影响.」＝描述一個已不存在的耦合關係，會讓玩家以為手電筒仍綁在 M9 選項上。依上游現行 EN 刪除該句，其餘逐字保留。",
-  "value": "默认启用. 每位新幸存者会收到一把 M9手枪和两个装满弹药的 9mm 弹匣."
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Gives each new survivor an M9 pistol and two loaded 9mm magazines.",
+  "value": "每位新幸存者都会获得一把 M9手枪和两个装满弹药的 9mm 弹匣."
  },
  "Sandbox.json|Sandbox_ExtractionMode_RaidDeathHandling": {
   "as1_value": "突袭死亡处理",
@@ -13371,8 +13451,13 @@
  },
  "Sandbox.json|Sandbox_ExtractionMode_RaidDeathHandling_tooltip": {
   "as1_value": "原版死亡: 死亡和尸体生成与原本一致.\n\n保留角色 - 失去全部装备: 致命伤害改为将幸存者送回藏身点, 技能与经验值保留, 但随身携带、装备和穿戴的所有物品都留在战场地点.\n\n保留角色 - 失去 50%%: 致命伤害改为将幸存者送回藏身点, 技能与经验值保留, 但会随机选取剩余合格装备中正好一半的物品作为损失.手持物品必定额外损失. 基础衣物受到保护.",
-  "value": "适用于所有地点, 包括藏身点, 也适用于管理员的击杀玩家按钮.\n\n原版死亡: 死亡和尸体生成与原本一致.\n\n保留角色 - 失去全部装备: 致命伤害改为将幸存者送回藏身点, 技能与经验值保留, 但随身携带、装备和穿戴的所有物品都留在死亡地点.\n\n保留角色 - 失去 50%%: 致命伤害改为将幸存者送回藏身点, 技能与经验值保留, 但会从剩余的合格装备中随机选出一半 (向上取整) 作为损失. 手持物品必定额外损失. 基础衣物受到保护.\n\n保留角色 - 保留全部装备: 致命伤害会将幸存者送回藏身点, 技能、经验值与所有装备都保留. 死亡地点会留下一具空的回收尸体.",
-  "reason": "2026-09-12 #498 原始MOD有效EN更新: 新增保留全部裝備的死亡處理選項; CH/CN完整對照全部EN段落, 同步保留藏身點與管理員擊殺的適用範圍、死亡地點、隨機損失一半向上取整與手持物品額外損失的規則. 不沿用As1缺段或錯誤取整說明."
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Applies everywhere, including inside hideouts.\n\nVanilla Death: die normally and create a new survivor.\n\nKeep Character - Lose All Equipment: return home with yo",
+  "value": "适用于所有地点, 包括藏身点内.\n\n原版死亡: 照常死亡并创建新的幸存者.\n\n保留角色 - 失去全部装备: 带着技能与经验值返回藏身点, 随身携带与穿戴的所有物品都留在原地.\n\n保留角色 - 失去一半: 带着技能与经验值返回藏身点. 手持物品必定损失, 并从剩余的合格装备中随机损失一半. 基础衣物会保留.\n\n保留角色 - 保留全部装备: 带着技能、经验值与所有物品返回藏身点."
+ },
+ "Sandbox.json|Sandbox_ExtractionMode_SkillBooksGrantXP_tooltip": {
+  "as1_value": "默认启用. 每个角色每读完一卷技能书即可直接获得技能经验, 但升到的等级不超过该卷的最高训练等级.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Finishing a skill book awards skill XP, up to the highest level covered by that volume. Each character can receive this reward once per volume.",
+  "value": "读完一卷技能书可获得技能经验值, 上限为该卷所涵盖的最高等级. 每个角色每一卷只能获得一次."
  },
  "Sandbox.json|Sandbox_FNVG_Options.AN_PVS14SpawnChance_tooltip": {
   "as1_value": "百分比生成几率, 设置为0可禁止生成",
@@ -14768,6 +14853,31 @@
   "as1_value": "普利森冷冻革命",
   "reason": "Upstream mod is Plysken Frost Revolution (workshop 3732755978, mod.info name verified); As1 transliterates the author as 普利森 here but 普利斯肯 in Sandbox_PSR and Sandbox_PIP. Unified to 普利斯肯 per MinidoracatModLangFor42 issue #391; not filed upstream to As1.",
   "value": "普利斯肯冷冻革命"
+ },
+ "Sandbox.json|Sandbox_PlayablePool_AbandonedSessionMinutes_tooltip": {
+  "as1_value": "台球会话若被弃置且超过此时长, 将自动清理.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Clear an abandoned game after this many minutes. A fully parked table has its own shorter hold. A solo game is kept while its living owner remains nearby. Live ",
+  "value": "对局被弃置达到该分钟数后会被清除. 全员离席的游戏桌另有更短的保留时长. 单人游戏只要其存活的拥有者仍在附近就会保留. 进行中的对局永远不会写入存档."
+ },
+ "Sandbox.json|Sandbox_PlayablePool_AllowAdminSoloPractice_tooltip": {
+  "as1_value": "允许调试/管理员玩家添加本地调试机器人进行单人测试.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Allow administrators to start solo pool practice for testing, even when ordinary solo practice is disabled.",
+  "value": "允许管理员为了测试而开始单人台球练习, 即使普通的单人练习已禁用."
+ },
+ "Sandbox.json|Sandbox_PlayablePool_AllowSpectators_tooltip": {
+  "as1_value": "允许第三名玩家观看已被占用的球桌而不加入游戏.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Allows a player to watch an occupied minigame without taking a seat. Governs every Playable Pool minigame, not only pool.",
+  "value": "允许玩家在不占用座位的情况下观看已有人进行的小游戏. 该设置管辖可玩的台球内的所有小游戏, 不只是台球."
+ },
+ "Sandbox.json|Sandbox_PlayablePool_EnableBetaMinigames_tooltip": {
+  "as1_value": "显示飞镖, 纸牌游戏, 国际象棋和跳棋. 这些游戏仍在活跃开发中, 可能无法正常运行.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Enable Balatroid, the poker roguelike in active development. All other games have their own switches. Singleplayer also has a local beta option in Minigame Sett",
+  "value": "启用 Balatroid, 这款仍在活跃开发中的扑克 Roguelike. 其他所有游戏都有各自的开关. 单人模式在小游戏设置中另有本地测试版选项; 多人游戏一律采用服务器设置."
+ },
+ "Sandbox.json|Sandbox_PlayablePool_MaxPlayDistance_tooltip": {
+  "as1_value": "玩家距台球桌的最大格子距离. 超过该距离后, 玩家将无法使用台球桌, 也无法保持台球窗口开启.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Maximum distance in tiles for using a table or keeping its window open. Walking farther away closes the window and parks the seat. Returning within range reopen",
+  "value": "使用游戏桌或保持其窗口开启的最大格子距离. 走得更远会关闭窗口并让座位转为离席. 回到范围内时, 因距离而关闭的窗口会重新打开."
  },
  "Sandbox.json|Sandbox_SOTO_ClumsyRemovable": {
   "as1_value": "可移除的'替笨如牛'",
@@ -19988,6 +20098,511 @@
   "as1_value": "仅在建筑物内",
   "reason": "兄弟鍵型式: 同族 own-only 出貨鍵 option1=关闭 / option3=玩家周围 (As1 無此 mod 的 UI.json), As1 本鍵加「仅」破壞三選項的並列型式",
   "value": "建筑物内"
+ },
+ "UI.json|UI_KCMAIN_DIALOG_ELAINE_FOSTER_SITUATION": {
+  "as1_value": "不只是药品的问题. 我们缺床位、缺能轮休的人手, 也缺既能隔离病人又不至于把他们丢下不管的地方. 每收治一名患者, 都会改变我们明天能治疗的范围.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 It is not only medicine. We lack beds, rested hands, and places to isolate someone without condemning them to abandonment. Every admission forces us to decide w",
+  "value": "不只是药品的问题. 我们缺床位、缺能轮休的人手, 也缺既能隔离病人又不至于把他们丢下不管的地方. 每收治一名患者, 都迫使我们决定明天能治疗的范围."
+ },
+ "UI.json|UI_KCMAIN_DIALOG_HAROLD_KEENE_OPTION_WARNING": {
+  "as1_value": "你为什么要扣留信息?",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Why are you withholding some of the information?",
+  "value": "你为什么要扣留部分信息?"
+ },
+ "UI.json|UI_KCMAIN_DIALOG_MARTIN_WEBB_PRINCIPLE": {
+  "as1_value": "因为当作战略筹码扣下的警报, 传到需要它的人那里时就已经太晚了. 我会尽己所能去核实, 但我不会埋葬有用的消息.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Because a warning kept as a strategic advantage reaches those who were supposed to survive thanks to it too late. I verify what I can, but I do not bury useful ",
+  "value": "因为被当作战略优势扣下的警报, 传到那些本该靠它活下来的人那里时就已经太晚了. 我会尽己所能去核实, 但我不会埋葬有用的消息."
+ },
+ "UI.json|UI_KCMAIN_DIALOG_NINA_COLE_PRINCIPLE": {
+  "as1_value": "因为他们把专长误当作局限. 然后, 当设备需要改造, 或样本不符合他们手册的时候, 他们又会来求助.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Because they confuse specialty with limitation. Then they call me when they need to adapt equipment or interpret a sample that does not fit their manuals.",
+  "value": "因为他们把专长误当作局限. 等到他们需要改造设备, 或需要解读不符合他们手册的样本时, 就会来找我."
+ },
+ "UI.json|UI_KCMAIN_DIALOG_OWEN_WHO_ARE_YOU": {
+  "as1_value": "我维护中继器、天线和电源. 一个网络更多地依赖众多拒绝陷入黑暗的小节点, 而非一座大型电台.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 I maintain relays, antennas, and power sources. A network depends less on one great station than on many points that refuse to go dark.",
+  "value": "我维护中继器、天线和电源. 一个网络更多地依赖众多拒绝陷入黑暗的节点, 而非一座大型电台."
+ },
+ "UI.json|UI_KCMAIN_FACTION_DRIFTERS_DESCRIPTION": {
+  "as1_value": "漂泊者不是一个单一的组织, 而是对以流动为生的商队、难民、侦察员和商人的统称. 他们共享道路的见闻、对边界的怀疑, 以及没有庇护所是永久的共识. 每支商队自行选择领导方式: 有些跟随经验丰富的侦察员, 有些由议事会决定, 而暴力的团体则服从掌控食物、车辆或武器的人. 他们寻找燃料、消息、畅通的路线、安全的营地, 以及便于交易的轻便货物. 非正式的传统保护营地、信使和水源, 但没有任何权威能够强制推行. 他们之中有救援者、投机者和掠夺者. 对一个定居点而言, 一支漂泊者队伍可能带来外部世界的第一条消息, 也可能成为黎明前降临的威胁.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 The Drifters are not a single organization, but the name given to caravans, refugees, scouts, and traders who live in motion. They share knowledge of the roads,",
+  "value": "漂泊者不是一个单一的组织, 而是对以流动为生的商队、难民、侦察员和商人的统称. 他们共享道路的见闻、对边界的怀疑, 以及没有庇护所是永久的共识. 每支商队自行选择领导方式: 有些跟随经验丰富的侦察员, 有些由议事会决定, 而最暴力的团体则服从掌控食物、车辆或武器的人. 他们寻找燃料、消息、畅通的路线、可供休息的地方, 以及便于交易的轻便货物. 非正式的传统保护营地、信使和水源, 但没有任何权威能够强制推行. 他们之中有救援者、投机者和掠夺者. 对一个定居点而言, 一支漂泊者队伍可能带来外部世界的第一条消息, 也可能成为黎明前降临的威胁."
+ },
+ "UI.json|UI_KCMAIN_FACTION_KNOX_AUTHORITY_DESCRIPTION": {
+  "as1_value": "诺克斯当局意图重建一个能在灾难中存续的民政政府. 它的优先事项包括登记幸存者、保护档案、统筹车队、调解纠纷, 以及恢复基本服务. 由前官员和地方代表组成的临时委员会领导它; 各部门各司其职, 而紧急决策则交由执行理事会. 它的权力更多依赖于地图、许可、仓库, 以及债务和财产记录, 而非武器. 它用稳定换取合作、税收和对共同规则的服从. 当局内部既有决心维护公民权利的理想主义者, 也有坚信没有中央控制、诺克斯就会分裂为地方强人割据之地的行政官员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 The Knox Authority intends to rebuild a civil government capable of surviving the disaster. Its priorities are registering survivors, protecting archives, coord",
+  "value": "诺克斯当局意图重建一个能在灾难中存续的民政政府. 它的优先事项包括登记幸存者、保护档案、统筹车队、调解纠纷, 以及恢复各定居点的基本服务. 由前官员和地方代表组成的临时委员会领导它; 各部门各司其职, 而紧急决策则交由执行理事会. 它的权力更多依赖于地图、许可、仓库, 以及债务和财产记录, 而非武器. 它用稳定换取合作、税收和对共同规则的服从. 当局内部既有决心维护公民权利的理想主义者, 也有坚信没有中央控制、诺克斯就会分裂为地方强人割据之地的行政官员."
+ },
+ "UI.json|UI_KCMAIN_FACTION_NEW_KNOX_COMMUNITY_DESCRIPTION": {
+  "as1_value": "新诺克斯社区是一个由农场、设防街区和乡村避难所组成的联盟, 选择互助而不建立中央政权. 它致力于保障食物、种子、水、庇护所和本地防御, 同时保留每个定居点的自治. 共同决策由代表议事会协商; 发言人协调协议, 但未经受影响家庭同意, 不得强制执行. 指挥随需要而变化: 播种时是农民, 路上是侦察员, 遇袭时则是防御领袖. 成员通过主要靠信誉约束的承诺交换盈余、劳动和庇护. 联盟内部不断争论: 更紧密的合作是否必要, 还是说每一个遥远的权威都只是又一场暴政的开端.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 New Knox Community is an alliance of farms, fortified neighborhoods, and rural shelters that chose mutual aid without creating a central government. It seeks to",
+  "value": "新诺克斯社区是一个由农场、设防街区和乡村避难所组成的联盟, 选择互助而不建立中央政权. 它致力于保障食物、种子、水、庇护所和本地防御, 同时保留每个定居点的自治. 共同决策由代表议事会协商; 发言人协调协议, 但未经受影响家庭同意, 不得强制执行. 指挥随需要而变化: 播种时是农民, 路上是侦察员, 遇袭时则是防御领袖. 成员通过取决于信誉的承诺交换盈余、劳动和庇护. 联盟始终在两派之间拉扯: 一派希望加强合作, 另一派则认为任何遥远的权威都是一场新暴政的开端."
+ },
+ "UI.json|UI_KCMAIN_FACTION_OLD_GUARD_DESCRIPTION": {
+  "as1_value": "老卫队是由士兵、预备役军人、警察、消防员和受过训练的平民组成的防御力量. 它宣称的使命是保持道路畅通、疏散人口、保护避难所, 并迅速应对任何社区都无法独自面对的威胁. 它保留着军队式指挥链: 指挥官设定目标, 军官指挥分区, 班组执行作战命令, 尽管资深老兵议事会可以质疑浪费生命的决定. 它掌控武器、检查站、战术车辆和纪律严明的人员. 这种能力使它既是盾牌, 也是事实上的潜在政府. 一些成员希望向重建的民政当局负责; 另一些则认为紧急状况证明了戒严、征用和永久控制的合理性. 它核心的挣扎在于, 判断纪律何时是在保护人民, 何时开始统治人民.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 The Old Guard is a defensive force formed by soldiers, reservists, police officers, firefighters, and trained civilians. Its stated mission is keeping routes op",
+  "value": "老卫队是由士兵、预备役军人、警察、消防员和受过训练的平民组成的防御力量. 它宣称的使命是保持道路畅通、疏散人口、保护避难所, 并迅速应对任何社区都无法独自面对的威胁. 它保留着军队式指挥链: 指挥官设定目标, 军官指挥分区, 班组执行作战命令, 尽管资深老兵议事会可以质疑浪费生命的决定. 它掌控武器、观察哨、战术车辆和纪律严明的人员. 这种能力使它既是盾牌, 也是事实上的潜在政府. 一些成员希望向重建的民政当局负责; 另一些则认为紧急状况证明了戒严、征用和永久控制的合理性. 它核心的挣扎在于, 判断纪律何时是在保护人民, 何时开始统治人民."
+ },
+ "UI.json|UI_KCMAIN_NPC_DESCRIPTION_NORA_SHAW": {
+  "as1_value": "漂泊者流动商人兼临时护士",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Drifter traveling merchant and nurse",
+  "value": "漂泊者流动商人兼护士"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_AARON_MILLS_ROLE": {
+  "as1_value": "亚伦·米尔斯是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 armed defense",
+  "value": "武装防卫"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_AARON_PATEL_ROLE": {
+  "as1_value": "亚伦·帕特尔是研究院的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 pharmacy work",
+  "value": "药房工作"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_ABIGAIL_BOONE_ROLE": {
+  "as1_value": "阿比盖尔·布恩是漂泊者的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 itinerant trade",
+  "value": "流动贸易"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_ADRIAN_VALE_ROLE": {
+  "as1_value": "阿德里安·维尔是辛迪加的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 courier work",
+  "value": "信使工作"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_ALAN_MORSE_ROLE": {
+  "as1_value": "艾伦·莫尔斯是诺克斯网络的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 radio maintenance",
+  "value": "无线电设备维护"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_ALICE_HARPER_ROLE": {
+  "as1_value": "爱丽丝·哈珀是新诺克斯社区的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 community cooking",
+  "value": "社区伙食"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_BETH_DAWSON_ROLE": {
+  "as1_value": "贝丝·道森是诺克斯网络的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 communications coordination",
+  "value": "通信协调"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_BIANCA_FROST_ROLE": {
+  "as1_value": "比安卡·弗罗斯特是辛迪加的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 trade brokerage",
+  "value": "贸易中介"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_BRENDA_KNOX_ROLE": {
+  "as1_value": "布伦达·诺克斯是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 medical care",
+  "value": "医疗护理"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_BRIAN_FIELDS_ROLE": {
+  "as1_value": "布莱恩·菲尔兹是新诺克斯社区的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 farm work",
+  "value": "农场工作"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_CALEB_RAINES_ROLE": {
+  "as1_value": "漂泊者侦察员",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Scout and guide to rural routes.",
+  "value": "侦察员, 也是乡间路线的向导."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_CALVIN_DORSEY_ROLE": {
+  "as1_value": "新诺克斯社区的自治派领袖",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Community leader and defender of local autonomy.",
+  "value": "社区领袖, 地方自治的捍卫者."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_CAMILLE_HARRIS_ROLE": {
+  "as1_value": "卡米尔·哈里斯是研究院的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 nursing",
+  "value": "护理工作"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_CARL_JENSEN_ROLE": {
+  "as1_value": "卡尔·詹森是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 quartermaster duties",
+  "value": "军需勤务"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_CARMEN_RUIZ_ROLE": {
+  "as1_value": "卡门·鲁伊斯是新诺克斯社区的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 settlement coordination",
+  "value": "定居点协调"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_COLIN_REEVES_ROLE": {
+  "as1_value": "科林·里夫斯是诺克斯网络的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 relay maintenance",
+  "value": "中继站维护"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_CURTIS_BELL_ROLE": {
+  "as1_value": "柯蒂斯·贝尔是诺克斯劳工联盟的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 carpentry",
+  "value": "木工"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_CURTIS_LEDGER_KANE_ROLE": {
+  "as1_value": "柯蒂斯·凯恩是辛迪加的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 clandestine accounting",
+  "value": "秘密账务"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_CYNTHIA_ROWE_ROLE": {
+  "as1_value": "辛西娅·罗是诺克斯当局的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 records management",
+  "value": "记录管理"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_DALE_MURPHY_ROLE": {
+  "as1_value": "戴尔·墨菲是诺克斯劳工联盟的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 mechanical work",
+  "value": "机械工作"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_DANIEL_BROOKS_ROLE": {
+  "as1_value": "老卫队上尉",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Old Guard captain and defensive commander.",
+  "value": "老卫队上尉, 防御作战指挥官."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_DEAN_HOLLOWAY_ROLE": {
+  "as1_value": "迪恩·霍洛威是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 armory security",
+  "value": "军械库警戒"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_DENISE_CARTER_ROLE": {
+  "as1_value": "诺克斯网络前应急调度员",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Relay coordinator and report verifier.",
+  "value": "中继站协调人, 通报核实者."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_DIANA_ROURKE_ROLE": {
+  "as1_value": "戴安娜·罗克是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 scouting",
+  "value": "侦察"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_DOUGLAS_KENT_ROLE": {
+  "as1_value": "道格拉斯·肯特是诺克斯网络的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 relay operation",
+  "value": "中继站操作"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_EDDIE_SLOAN_ROLE": {
+  "as1_value": "诺克斯劳工联盟市场组织者",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Organizer of markets, trade routes, and agreements.",
+  "value": "市场、贸易路线与协议的组织者."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_ELAINE_FOSTER_ROLE": {
+  "as1_value": "急诊医生, 研究院诊所主任",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Emergency physician, clinic director, and supplies coordinator.",
+  "value": "急诊医生, 诊所主任, 物资协调人."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_ELI_MERCER_ROLE": {
+  "as1_value": "伊莱·默瑟是漂泊者的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 scouting",
+  "value": "侦察"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_EMILY_VARGAS_ROLE": {
+  "as1_value": "艾米丽·瓦尔加斯是诺克斯网络的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 radio repair",
+  "value": "无线电维修"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_ETHAN_COLE_ROLE": {
+  "as1_value": "伊桑·科尔是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 driving and transport",
+  "value": "驾驶与运输"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_EVELYN_MERCER_ROLE": {
+  "as1_value": "诺克斯当局应急管理副主任",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Political administrator and emergency coordinator.",
+  "value": "政务行政官, 应急协调人."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_FIONA_BRIGGS_ROLE": {
+  "as1_value": "菲奥娜·布里格斯是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 radio operation",
+  "value": "无线电操作"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_FRANK_DELANEY_ROLE": {
+  "as1_value": "弗兰克·德拉尼是诺克斯劳工联盟的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 mechanical work",
+  "value": "机械工作"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_GEORGE_TANNER_ROLE": {
+  "as1_value": "乔治·坦纳是诺克斯劳工联盟的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 warehouse work",
+  "value": "仓储工作"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_GERALD_HAINES_ROLE": {
+  "as1_value": "诺克斯当局前法院书记员",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Legal affairs coordinator and keeper of official records.",
+  "value": "法务协调人, 官方记录的保管人."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_GRACE_HOLLOWAY_ROLE": {
+  "as1_value": "格蕾丝·霍洛威是漂泊者的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 foraging",
+  "value": "采集"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_GRANT_MERCER_ROLE": {
+  "as1_value": "格兰特·默瑟是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 security watch",
+  "value": "警戒值守"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_HANNAH_WHITAKER_ROLE": {
+  "as1_value": "汉娜·惠特克是新诺克斯社区的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 farming",
+  "value": "农耕"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_HAROLD_KEENE_ROLE": {
+  "as1_value": "研究院传染病研究员",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Researcher of infectious diseases and pre-outbreak studies.",
+  "value": "传染病研究员, 专攻疫情爆发前的研究."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_HELEN_WARD_ROLE": {
+  "as1_value": "海伦·沃德是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 logistics records",
+  "value": "后勤记录"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_HOLLIS_ROLE": {
+  "as1_value": "辛迪加情报买家",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Buyer, verifier, and distributor of information.",
+  "value": "情报的买家、核实者与散布者."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_HOWARD_FINCH_ROLE": {
+  "as1_value": "霍华德·芬奇是诺克斯网络的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 radio operation",
+  "value": "无线电操作"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_IAN_FOSTER_ROLE": {
+  "as1_value": "伊恩·福斯特是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 field engineering",
+  "value": "野战工程"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_IRENE_CASTILLO_ROLE": {
+  "as1_value": "艾琳·卡斯蒂略是诺克斯劳工联盟的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 welding",
+  "value": "焊接"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_ISAIAH_FREEMAN_ROLE": {
+  "as1_value": "以赛亚·弗里曼是新诺克斯社区的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 rural courier work",
+  "value": "乡间信使工作"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_JESSE_CROWE_ROLE": {
+  "as1_value": "辛迪加军火和物资贩子",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Trafficker in weapons and restricted supplies.",
+  "value": "军火与管制物资的贩子."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_JOEL_MADDOX_ROLE": {
+  "as1_value": "乔尔·马多克斯是新诺克斯社区的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 shelter maintenance",
+  "value": "避难所维护"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_JONAH_BURKE_ROLE": {
+  "as1_value": "约拿·伯克是漂泊者的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 caravan security",
+  "value": "商队警戒"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_JULIA_REYES_ROLE": {
+  "as1_value": "朱莉娅·雷耶斯是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 armed defense",
+  "value": "武装防卫"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_JUNE_WALKER_ROLE": {
+  "as1_value": "新诺克斯社区教师和信使",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Messenger and liaison between settlements.",
+  "value": "信使, 也是各定居点之间的联络人."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_KEITH_MORGAN_ROLE": {
+  "as1_value": "基思·摩根是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 patrol command",
+  "value": "巡逻指挥"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_LAURA_KIM_ROLE": {
+  "as1_value": "劳拉·金是研究院的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 clinical medicine",
+  "value": "临床医疗"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_LENA_ORTIZ_ROLE": {
+  "as1_value": "老卫队救援与疏散中士",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Sergeant responsible for security, rescues, and evacuations.",
+  "value": "负责安保、救援与疏散的中士."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_LEONARD_PRICE_ROLE": {
+  "as1_value": "伦纳德·普赖斯是诺克斯当局的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 archives and courier work",
+  "value": "档案与信使工作"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_LILLIAN_VOSS_ROLE": {
+  "as1_value": "莉莲·沃斯是辛迪加的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 smuggling",
+  "value": "走私"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_LINDA_HAYES_ROLE": {
+  "as1_value": "琳达·海耶斯是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 armory work and maintenance",
+  "value": "军械库作业与维护"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_MAE_TURNER_ROLE": {
+  "as1_value": "诺克斯劳工联盟木匠兼电工",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Carpenter, electrician, and infrastructure coordinator.",
+  "value": "木匠, 电工, 基础设施协调人."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_MALCOLM_REED_ROLE": {
+  "as1_value": "诺克斯当局后勤协调员",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Coordinator of logistics and continuity procedures.",
+  "value": "后勤与业务连续性程序的协调人."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_MARA_BELL_ROLE": {
+  "as1_value": "辛迪加中间人与谈判者",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Broker of clandestine deals and goods.",
+  "value": "秘密交易与货物的中间人."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_MARCUS_WEBB_ROLE": {
+  "as1_value": "马库斯·韦伯是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 perimeter security",
+  "value": "周界警戒"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_MARTIN_WEBB_ROLE": {
+  "as1_value": "诺克斯网络电台技师",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Radio technician and builder of communications links.",
+  "value": "无线电技师, 通信链路的建设者."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_MASON_REED_ROLE": {
+  "as1_value": "梅森·里德是漂泊者的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 route scouting",
+  "value": "路线侦察"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_MEGAN_PIERCE_ROLE": {
+  "as1_value": "梅根·皮尔斯是研究院的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 laboratory assistance",
+  "value": "实验室协助"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_MONICA_HALE_ROLE": {
+  "as1_value": "莫妮卡·黑尔是诺克斯当局的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 settlement inspection",
+  "value": "定居点稽查"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_NAOMI_FLETCHER_ROLE": {
+  "as1_value": "娜奥米·弗莱彻是诺克斯劳工联盟的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 market management",
+  "value": "市场管理"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_NATHAN_CROSS_ROLE": {
+  "as1_value": "内森·克罗斯是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 security watch",
+  "value": "警戒值守"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_NINA_COLE_ROLE": {
+  "as1_value": "研究院兽医与微生物学专家",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Veterinarian and applied microbiology specialist.",
+  "value": "兽医, 应用微生物学专家."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_NOLAN_DRAKE_ROLE": {
+  "as1_value": "诺兰·德雷克是辛迪加的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 security and intimidation",
+  "value": "安保与威慑"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_NORA_SHAW_ROLE": {
+  "as1_value": "漂泊者流动商人兼临时护士",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Traveling merchant and makeshift nurse.",
+  "value": "流动商人, 也是临时护士."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_OLIVIA_BENTON_ROLE": {
+  "as1_value": "奥利维亚·本顿是诺克斯当局的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 supply records",
+  "value": "补给记录"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_OWEN_PRICE_ROLE": {
+  "as1_value": "诺克斯网络中继站技师",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 KnoxNet broadcaster and communicator.",
+  "value": "诺克斯网络的播报员与通信员."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_PATRICIA_DOYLE_ROLE": {
+  "as1_value": "帕特里夏·多伊尔是诺克斯当局的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 administrative secretarial work",
+  "value": "行政秘书工作"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_PETER_WALSH_ROLE": {
+  "as1_value": "彼得·沃尔什是研究院的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 technical laboratory work",
+  "value": "实验室技术工作"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_RACHEL_MATCH_DUNN_ROLE": {
+  "as1_value": "雷切尔·邓恩是辛迪加的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 hidden-depot management",
+  "value": "隐藏物资点管理"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_RAYMOND_ELLIS_ROLE": {
+  "as1_value": "雷蒙德·埃利斯是诺克斯当局的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 requisition management",
+  "value": "征用管理"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_REBECCA_SLOAN_ROLE": {
+  "as1_value": "丽贝卡·斯隆是漂泊者的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 cartography",
+  "value": "制图"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_ROSA_MENDEZ_ROLE": {
+  "as1_value": "罗莎·门德斯是诺克斯劳工联盟的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 electrical work",
+  "value": "电工工作"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_RUTH_COLLINS_ROLE": {
+  "as1_value": "新诺克斯社区农民兼调解人",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Community mediator and agricultural representative.",
+  "value": "社区调解人, 农业代表."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_RUTH_COLLINS_SUMMARY": {
+  "as1_value": "新诺克斯社区农民兼调解人",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Farmer and the alliance's principal mediator. She supports cooperation but knows some communities use the name New Knox Community without honoring their commitm",
+  "value": "农民, 也是联盟的首席调解人. 她支持合作, 但知道有些社区只是打着新诺克斯社区的名号, 却不履行承诺. 她在新诺克斯社区内代表农民与各个家庭, 调解关于食物、住所与互助的争端. 她了解许多定居点的真实能力, 能迅速分辨真正的困境与空头承诺. 她支持自愿参与、去中心化的联盟, 但要求使用其名号的人履行自己许下的承诺."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_SAMUEL_REED_ROLE": {
+  "as1_value": "研究院药剂师与药品专家",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Pharmacist and producer of basic medicines.",
+  "value": "药剂师, 基础药品的生产者."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_SHANNON_PIERCE_ROLE": {
+  "as1_value": "香农·皮尔斯是诺克斯网络的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 report verification",
+  "value": "核实通报"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_SILAS_ASHFORD_ROLE": {
+  "as1_value": "暴力漂泊者商队领袖",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Leader of a caravan devoted to looting and ambushes.",
+  "value": "一支专事掠夺与埋伏的商队领袖."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_TERESA_BOYD_ROLE": {
+  "as1_value": "特蕾莎·博伊德是新诺克斯社区的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 ration management",
+  "value": "配给管理"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_TESSA_MONROE_ROLE": {
+  "as1_value": "泰莎·门罗是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 tactical radio operations",
+  "value": "战术无线电作业"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_THOMAS_GRANT_ROLE": {
+  "as1_value": "托马斯·格兰特是诺克斯当局的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 civil security",
+  "value": "民间治安"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_TRAVIS_COLE_ROLE": {
+  "as1_value": "特拉维斯·科尔是漂泊者的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 caravan escort duty",
+  "value": "商队护卫任务"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_VICTOR_CHEN_ROLE": {
+  "as1_value": "维克多·陈是研究院的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 clinical assistance",
+  "value": "临床协助"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_VICTOR_SALAZAR_ROLE": {
+  "as1_value": "维克多·萨拉查是老卫队的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 patrol driving",
+  "value": "巡逻驾驶"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_VINCENT_CROSS_ROLE": {
+  "as1_value": "文森特·克罗斯是辛迪加的成员.",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 brokerage",
+  "value": "中介工作"
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_WALTER_BRIGGS_ROLE": {
+  "as1_value": "诺克斯劳工联盟机械师",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Mechanic responsible for vehicles, engines, and spare parts.",
+  "value": "负责车辆、发动机与备用零件的机械师."
+ },
+ "UI.json|UI_KCMAIN_NPC_LORE_WARREN_PIKE_ROLE": {
+  "as1_value": "老卫队分遣队指挥官",
+  "reason": "原始 MOD stale 維護（2026-09-17 批次）：依上游現行 EN 跟進 Commander of a detachment with strict discipline.",
+  "value": "纪律严明的分遣队指挥官."
  },
  "UI.json|UI_LSHS_Inventing_1": {
   "as1_value": "欢迎来到废物利用的世界! 囤积废料废品, 制造各种玩具、服饰、随机物件、精巧装置乃至复杂机器 不断实验, 直到成为一名伟大的发明家, 或不幸在发明事故中悲惨丧命 总之, 祝你好运!  <LINE> o 解锁了失败事件 <LINE>",

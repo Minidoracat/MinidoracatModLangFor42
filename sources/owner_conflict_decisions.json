@@ -6991,6 +6991,25 @@
    "reason": "Dynamic Traits 的 Amateur Mechanic 與 SOTO 的 Auto Mechanic 都是汽車維修特質，維持「汽車技工／汽车技工」中性名稱，不將單方的業餘限定套到另一方。",
    "ch": "汽車技工",
    "cn": "汽车技工"
+  },
+  "IG_UI|IGUI_VehiclePartTrunkDoor2": {
+   "action": "translate",
+   "signature": "8e1ad09ed94c4bcc",
+   "reason": "2026-09-17 #528 批次裁決 translate、維持現值：三個 owner 指的是同一類實體——車輛貨箱／置物箱的第 2 號蓋板，只是標示方式不同。3171167894/damnlib 與 2566953935/86oshkoshP19A（同作者家族，P19A 依賴 damnlib）成對定義 IGUI_VehiclePartTrunkDoor1=\"Right Storage Lid\"／TrunkDoor2=\"Left Storage Lid\"，以左右標示同一組兩片置物蓋；2618213077/82oshkoshM911 則以編號標示 TrunkDoor2=\"Trunk Lid 2\"／TrunkDoor3=\"Trunk Lid 3\"，對應其 script 的 Base.M911TrunkDoor2=\"82 Oshkosh M911 Trunk Lid\"、Base.IsoContainerTrunkDoor2=\"ISO Container Door\"、Base.M127/M128/M129/M967TrunkDoor2 等半拖車貨箱蓋零件。編號「2」內建於鍵名本身，對三個 owner 都成立（damnlib／P19A 的「左側」正是這組的第 2 片）；反向若把譯名寫成「左側」則對 M911 與整批半拖車不成立，那才是偏向單一 owner。故現行出貨值「貨箱蓋2／货箱盖2」是誠實的中性譯名，不宣稱任何一方獨有的方位資訊，維持不改（既有正確譯文不重寫）。P19A 本身雖只有 legacy _EN.txt，但其必需相依 damnlib 已在 common/media/lua/shared/Translate/EN/IG_UI.json 提供此鍵（P19A/42.13/mod.info 的 require=\\damnlib；Translator 把所有啟用 mod 的 EN 載入同一張表），抑制本包譯文時仍有可載入的英文 fallback；本次維持 translate 的依據是現行中性譯名對三個 owner 均成立，而不是缺少英文 fallback。附註（非本裁決範圍、未一併改動）：同族 TrunkDoor1 因只有 damnlib／P19A 一種語意而出貨為「右側儲物蓋」，與本鍵的編號式命名不同調，屬既有值。",
+   "ch": "貨箱蓋2",
+   "cn": "货箱盖2"
+  },
+  "Recipes|ISOMakeContainerDoor": {
+   "action": "translate",
+   "signature": "ad982adf2e8a551c",
+   "reason": "2026-09-17 #528 批次裁決 translate、維持現值：兩個 owner 指同一個配方——製作 ISO 海運貨櫃（拖車）的門板。3171167894/damnlib 本身就是 ISO 貨櫃拖車的提供者：其 common/IG_UI.json 定義 IGUI_VehicleNameisoContainer2=\"ISO Container with one door\"、isoContainer4=\"…with two doors\"、isoContainer5=\"ISO Container wrecked\"、isoContainer3tanker=\"ISO Fuel Tank\"、IGUI_VehiclePartISOTrunk1~4，Recipes.json 同段另有 ISOMakeContainerDoubleDoor=\"Make Container Double Door\"、ISOMakeContainerTankerLid=\"Make Container Tanker Lid\"，可見該 mod 在這一段一律省略 \"ISO\" 前綴（段落另以 HEADER_Recipes_EN_isoContainers=2625625421 標示來源），差異純屬標籤詳略而非不同實體；2618213077/82oshkoshM911 的同鍵寫 \"Make ISO Container Door\"，其 script 產物 Base.IsoContainerTrunkDoor2=\"ISO Container Door\" 亦為 ISO 貨櫃門。鍵名本身即 ISO*，保留 ISO 對兩個 owner 都是真陳述（damnlib 的 container 就是 ISO container），不偏向任一方，維持現行出貨值不改。兩個 owner 的 en_source 皆為可載入的 Recipes.json（has_json_en 皆 true），但既有中性譯名成立，無須走 unship。",
+   "ch": "製作ISO貨櫃門",
+   "cn": "制作ISO集装箱门"
+  },
+  "ItemName|MarzGuns.FakeItem": {
+   "action": "unship",
+   "signature": "b8ae8e76719471ea",
+   "reason": "2026-09-17 #530 裁決不出貨：同一 Workshop 項目（3722134990）底下兩個**互斥**的 mod 把同一鍵當成語意無關的兩種標籤，沒有對雙方都成立的中文值。mod.info 實據：GunsOfMarz（id=GunsOfMarz、incompatible=…,MarzGuns）與 GunsOfMarzPreviousVersion（id=MarzGuns、name=\"Guns of Marz (Old Version)\"、incompatible=…,GunsOfMarz），兩者互斥但都是有效可訂閱啟用的 mod root（有效分支皆 42.16+common）。玩家可見性已查證：MarzGuns.FakeItem 的 script 沒有 DisplayName（scripts/MarzWeapons/items/generic.txt 的 item FakeItem { DisplayCategory = Junk, ItemType = base:normal }），顯示名完全由 ItemName.json 提供，而它是所有武器零件的 MountOn 錨點，其顯示名會經 zombie/inventory/types/WeaponPart.java:65（42.20.4 反編譯）以 Translator.getText(\"Tooltip_weapon_CanBeMountOn\")（本體 CH=「可以裝在」）＋mountOnDisplayName 印在零件 tooltip，故**確證玩家可見**、不屬 untranslatable_keys 的內部佔位物類別。衝突本體：現行版把 FakeItem 的顯示名改成分類標籤 \"Rifles and Shotguns\"；舊版的同鍵仍是內部佔位名 \"Fake Item\"，而 \"Rifles and Shotguns\" 在舊版是**另一個鍵** MarzGuns.FakeItemRifles（另有 FakeItemPistols=\"Pistols and Revolvers\"、FakeItemRails=\"Picatinny Rails, AK Mounts, and Integrated Rails\"）。因此任一單值都會出錯：填「步槍和霰彈槍」會在舊版把 FakeItem 與仍在出貨的 FakeItemRifles 壓成同一字串，且舊版該錨點同時掛 Slide（手槍滑套）、Cylinder／Hammer（左輪零件）與刺刀等非長槍零件；沿用現行的「虛擬物品」則與現行版上游刻意改成的分類標籤相違，等於把上游已淘汰的內部名字固定給玩家看。JSON 全域字串表無法依 mod 啟用狀態條件化。抑制成本已查證為最低：兩個 owner 的 en_source 皆為可載入的 ItemName.json（has_json_en 皆 true），抑制後各版玩家看到自己 mod 的英文而非字面鍵名。B41 前綴孿生鍵 ItemName_MarzGuns.FakeItem 不存在於 census、dist、sources/ch 或 As1 CN 樹，故 unshipped_keys 只需登記裸鍵一條，verify [15] 不受影響。as1_value 取抑制前有效 CN 值「虚拟物品」（sources/mods/3722134990/CN/ItemName.json）；真相層（As1 CN 與 sources/ch 的「虛擬物品」）依分層原則原樣保留。"
   }
  }
 }

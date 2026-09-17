@@ -2524,6 +2524,13 @@
    ],
    "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「昏昏欲睡」，非本體 Sleepyhead（本體 CH「貪睡」）。",
    "ch_value": "2cd95ed3ef59bdda"
+  },
+  "UI.json|UI_KCMAIN_NPC_LORE_NINA_COLE_ROLE": {
+   "patterns": [
+    "應(\\s*)用(?!\\s*程)"
+   ],
+   "reason": "2026-09-17 #524 裁決 keep：上游 EN 為 \"Veterinarian and applied microbiology specialist.\"，「應用微生物學」是學科名稱（application 名詞義），非 apply 套用語意；台灣同樣使用此學科名（如中興大學課程）。同族前例：IGUI_Inspect_Mat_Copper_Base、Tooltip_InvWorkbench_Research_a2。",
+   "ch_value": "35a4d9cc723722de"
   }
  }
 }
