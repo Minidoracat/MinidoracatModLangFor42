@@ -1,12 +1,11 @@
-[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.20.4-1.27.7[/h1]
-[i]2026-09-14[/i]
+[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.20.4-1.27.8[/h1]
+[i]2026-09-17[/i]
 [list]
-[*] [b]跟上 7 個原已支援模組，補上 21 個字串並修訂 18 個說明。[/b] 繁中與簡中皆對照新版原文維護。
-[*] [b]Dynamic Traits 的特質說明跟上新版。[/b] 咖啡因與酒精戒斷、藥物與植物過敏、情緒變化、運動及汽車維修經驗不再沿用過時描述。
-[*] [b]The Only Cure 的假肢製作配方恢復中文。[/b] 新增假肢熟悉度與左右側經驗倍率說明；Authentic Z 也補上新的一階背包升級配方。
-[*] [b]Manage Containers 的套用、捨棄與重設確認補齊中文。[/b] 容器配置變更前的提示更清楚。
-[*] [b]Burd's Survival Journals 補上動態特質相容選項。[/b] 清楚說明日記不會恢復進度計數器，也不會重發「充分準備」特質的起始物品。
-[*] [b]Global Storage SiK 的設定確認與分類提示補齊中文。[/b] 儲存被拒、未收到確認及自動分類停止時，會說明草稿保留與後續操作。
-[*] [b]Jeeves 的聊天名稱顏色說明補上適用條件。[/b] 只有 Discord 機器人未提供顏色時，才使用這些設定。
+[*] [b]跟上 20 個原已支援模組，補上 1,386 個新字串並修訂 678 個既有說明。[/b] 繁中與簡中皆逐鍵對照新版原文維護，不使用機器轉換。
+[*] [b]Playable Pool 新增的撞球、撲克、二十一點、飛鏢、國際象棋、跳棋、紙牌接龍、四子棋、Wordle 與 Balatroid 小遊戲介面全部補齊中文。[/b] 規則教學、拒絕提示、機器人對話、戰績與伺服器設定約 1,100 句一次到位。
+[*] [b]Knox Chronicles 的任務信件、商人對話、NPC 職能與資金管理介面跟上新版。[/b] 新增錢包／卡片轉帳、餘額與提領介面；任務描述與交付對話依新版原文重新校對。
+[*] [b]Extraction Mode 的屍潮波次改為五波遞增機制，設定說明與警示訊息已同步。[/b] 百分比、間隔分鐘與土匪替換條件逐一對照新版原文。
+[*] [b]Long Term Preservation Extended 與 Vanilla Foods Expanded 補上新的罐裝、鹹漬、臘製肉品與配方名稱。[/b] 沿用既有「罐裝／罐装」「臘／腊」命名格式。
+[*] [b]Evolving Traits World、Cye's Push Doors、Livestock Panel Plus、Arcadia Refillable Propane Tanks、TwisTonFire、Project Cook、Vanilla Outfits Expanded、OC's Packing、MoreBuilds、Global Storage SiK、damnlib、SWMG、Guns of Marz、Motorious Zone、Tikitown Power Plant 的新選項、物品與說明補齊中文。[/b]
 [*] [b]支援版本與安裝方式不變。[/b] 仍支援 Build 42.20.4+；重新啟動遊戲即可載入新翻譯，無須重開存檔。
 [/list]
