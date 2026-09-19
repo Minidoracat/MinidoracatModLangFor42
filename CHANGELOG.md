@@ -4,37 +4,13 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
-## [42.20.4-1.27.8] - 2026-09-17
-
-### 玩家摘要
-
-- **跟上 20 個原已支援模組，補上 1,386 個新字串並修訂 678 個既有說明。** 繁中與簡中皆逐鍵對照新版原文維護，不使用機器轉換。
-- **Playable Pool 新增的撞球、撲克、二十一點、飛鏢、國際象棋、跳棋、紙牌接龍、四子棋、Wordle 與 Balatroid 小遊戲介面全部補齊中文。** 規則教學、拒絕提示、機器人對話、戰績與伺服器設定約 1,100 句一次到位。
-- **Knox Chronicles 的任務信件、商人對話、NPC 職能與資金管理介面跟上新版。** 新增錢包／卡片轉帳、餘額與提領介面；任務描述與交付對話依新版原文重新校對。
-- **Extraction Mode 的屍潮波次改為五波遞增機制，設定說明與警示訊息已同步。** 百分比、間隔分鐘與土匪替換條件逐一對照新版原文。
-- **Long Term Preservation Extended 與 Vanilla Foods Expanded 補上新的罐裝、鹹漬、臘製肉品與配方名稱。** 沿用既有「罐裝／罐装」「臘／腊」命名格式。
-- **Evolving Traits World、Cye's Push Doors、Livestock Panel Plus、Arcadia Refillable Propane Tanks、TwisTonFire、Project Cook、Vanilla Outfits Expanded、OC's Packing、MoreBuilds、Global Storage SiK、damnlib、SWMG、Guns of Marz、Motorious Zone、Tikitown Power Plant 的新選項、物品與說明補齊中文。**
-- **支援版本與安裝方式不變。** 仍支援 Build 42.20.4+；重新啟動遊戲即可載入新翻譯，無須重開存檔。
-
-### Added
-
-- 新增 1,386 個雙語字串：Playable Pool 1,103、Long Term Preservation Extended 90、Extraction Mode 61、Knox Chronicles 39、OC's Packing 20、Evolving Traits World 16、Arcadia Refillable Propane Tanks 15、Livestock Panel Plus 9、MoreBuilds 7、Vanilla Outfits Expanded 6、Cye's Push Doors 4、TwisTonFire 4、Vanilla Foods Expanded 4、Project Cook 3，以及 Global Storage SiK、damnlib、SWMG、Guns of Marz、Motorious Zone 各 1。
-
-### Changed
-
-- 修訂 678 個既有說明：Knox Chronicles 622、Extraction Mode 36、Playable Pool 14、Cye's Push Doors 2、Vanilla Outfits Expanded 1、Tikitown Power Plant 1；另有 160 個 Knox Chronicles 字串僅更新英文對照、譯文不變。
-- 跟進 Evolving Traits World 將樂天派門檻選項併入「精神狀態系統」的改名，移除 6 個上游已移除的舊選項翻譯。
-- 依台灣用語修訂 13 處既有譯文（列表→清單、通過→過關、查看→檢視、聯繫→聯絡等）。
+## [Unreleased]
 
 ### Fixed
 
-- 共用鍵 `IGUI_VehiclePartTrunkDoor2` 與 `ISOMakeContainerDoor` 重新核對三個與兩個模組的原文後維持中性譯名；`MarzGuns.FakeItem` 在 Guns of Marz 新舊版本中語意不同，改為不出貨。
-
-### Notes
-
-- 本次僅維護原已支援模組；未同步 As1 快照，未新增或維護 Lua 相容層。
-- As1 上游包（Workshop 3556540080）已於 2026-09-15 更新而尚未同步（#519），本版經使用者授權以 As1 缺席的降級驗證發布：`verify_dist` 的 [8] 判 SKIP、[1] 只跳過對 As1 原值的比對，其餘 15 項 PASS。
-- 遊戲本體翻譯保護、最低支援版本、Mod ID 與 Workshop ID 維持不變。
+- 修正解剖提示中乾燥義的「幹」誤字。
+- 修正車輛部件分類將「機械系統」誤譯為「醫療系統」的繁簡中文名稱。
+- 修正 More Traits 一本限量版雜誌的繁簡中文說明：內容應為收集分解氣體並轉化為丙烷，而非食人食譜。
 
 ## [42.20.4-1.27.7] - 2026-09-14
 

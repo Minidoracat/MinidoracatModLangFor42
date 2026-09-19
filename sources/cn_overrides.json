@@ -5364,6 +5364,11 @@
   "reason": "EN 是 Trunk Storage; As1 譯「后备箱」與本體車體部件 Base.NormalTrunk*/BigTrunk*「后备箱」撞名——同一台車的載具面板會出現兩個「后备箱」; own「后备箱储物柜」保住區分.",
   "value": "后备箱储物柜"
  },
+ "IG_UI.json|IGUI_VehiclePartCatMechanicalSystem": {
+  "as1_value": "医疗系统",
+  "reason": "EN 為 Mechanical System（兩個 owner 3402491515 tsarslib / 3403314193 ATA_Petyarbuilt 現行有效分支的 EN 完全相同），As1 誤譯成「医疗系统」（Medical），車輛部件面板的分類名與同族 IGUI_VehiclePartCatElecticalSystem=电力系统 / HouseholdSystem=生活系统 對照可見是誤植；改「机械系统」對兩個 owner 同時成立。",
+  "value": "机械系统"
+ },
  "IG_UI.json|IGUI_VehiclePartDAMNHubcapFrontLeft": {
   "as1_value": "左前轮毂罩",
   "reason": "Hubcap 在本包 ItemName 層一律「轮毂盖」(As1 自己也出貨 轮毂盖-帝威/轮毂盖-骑士/轮毂盖-经典 與 damnCraft.HubcapApoc=末日轮毂盖, 共 12 鍵), 全 As1 快照裡「轮毂罩」出現 0 次; As1 v3.7.1 在此改寫會讓部件名與物品名對不上.",
@@ -17068,6 +17073,11 @@
   "as1_value": "米兰萨是一种裹上面包屑的肉排, 通常由牛肉制成, 可油炸或烘烤.",
   "reason": "live 出貨名是米兰炸肉排系 (ItemName Milanesa=米兰炸小牛肉排, SandwichMilanesa=米兰炸肉排三明治, cn_overrides MilaConPure=米兰炸肉排配土豆泥): as1「米兰萨」是另造音譯, own「米兰式炸肉排」多一個式且把 breadcrumbs 寫成面包糠 (live ItemName PanRalladoCasero=自制面包屑).",
   "value": "米兰炸肉排是裹上面包屑的肉排, 通常用牛肉制作, 可以油炸或烘烤."
+ },
+ "Tooltip.json|Tooltip_MoreTraits_AntiqueMag3": {
+  "as1_value": "一本限制级杂志, <br>该版介绍了一些巴布亚新几内亚部落的同类相食菜谱.",
+  "reason": "EN 為 A limited edition magazine.<br>This edition teaches how the gases produced during decomposition can be harvested and converted into usable propane.（owner 1299328280 More Traits，現行有效分支 42.20 Tooltip.json）。As1 譯文是完全無關的內容（巴布亚新几内亚食人菜谱），與本鍵 EN 毫無對應；另 limited edition 是「限量版」不是「限制级」。",
+  "value": "一本限量版杂志.<br>该版介绍了如何收集腐败分解过程中产生的气体, 并将其转化为可用的丙烷."
  },
  "Tooltip.json|Tooltip_MuscleRelaxants": {
   "as1_value": "非处方肌肉松弛剂. <LINE> 缓解破伤风或寄生虫引起的肌肉痉挛. <LINE> 40%%痉挛减轻. 不能治愈.",
