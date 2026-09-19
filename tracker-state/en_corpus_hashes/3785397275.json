@@ -1,5 +1,5 @@
 {
-  "corpus_hash": "0e870567c8f07a1b8cf039456c9024ccd21202f06d069a85968e15c2e5556ded",
+  "corpus_hash": "7a9f173e687ecb65a5de98688959fc2bed4646b354563b1a79ed5c872b2672c9",
   "extractor_schema": 10,
   "records": {
     "script_item|mods/ExtractionMode/42/media/scripts/ExtractionMode_Items.txt|ExtractionMode.BodyBag": "32ab9d7959ef",
@@ -463,6 +463,7 @@
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_ExtractionMode_LineDeployed": "fb95430b7f43",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_ExtractionMode_Materials": "7b79ae7dc0b7",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_ExtractionMode_Message_AutoOptedOut": "3340d97d76f8",
+    "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_ExtractionMode_Message_BanditExtraction": "dcc908fc058a",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_ExtractionMode_Message_BanditForceArrived": "e4c4d4a9e533",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_ExtractionMode_Message_BanditWaveArrived": "adc817eb00d3",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_ExtractionMode_Message_BarterCompleted": "24509dd76843",
@@ -535,6 +536,7 @@
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_ExtractionMode_Message_RaidClosed": "7c874822205f",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_ExtractionMode_Message_RaidRoadsClosed": "68ca5a1812e5",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_ExtractionMode_Message_RaidStarted": "76511bef0606",
+    "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_ExtractionMode_Message_RaiderExtraction": "06ca7fe965a1",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_ExtractionMode_Message_RejoinedRaid": "a33d9f960122",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_ExtractionMode_Message_RejoinedRaidInPlace": "4dfce02e9bec",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_ExtractionMode_Message_StudyComplete": "a7271b8c0625",
@@ -1288,6 +1290,8 @@
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditAttackWindowMinimumHours_tooltip": "259c62d0df01",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditCivilianWindowChancePercent": "8748fdd0f406",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditCivilianWindowChancePercent_tooltip": "1c2493ec6580",
+    "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditDespawnQuietMinutes": "5d6cfe2cfe9e",
+    "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditDespawnQuietMinutes_tooltip": "c1dff1bdcbdb",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditFriendlyWindowChancePercent": "90e441a82eb6",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditFriendlyWindowChancePercent_tooltip": "d034e5829402",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditGroupMaximum": "b7f87858dbe1",
@@ -1300,8 +1304,16 @@
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditHordeGroupMinimum_tooltip": "021faf54d9ef",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditHordeReplacementChancePercent": "ccf72ef881a5",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditHordeReplacementChancePercent_tooltip": "9d42af0efa66",
+    "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditMetaChancePercent": "06c85d562e85",
+    "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditMetaChancePercent_tooltip": "957496896792",
+    "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditMetaExtractionChancePercent": "5e34c24cd63d",
+    "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditMetaExtractionChancePercent_tooltip": "c0c7e3afac8b",
+    "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditMetaIntervalHours": "880fdb664f21",
+    "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditMetaIntervalHours_tooltip": "6075c9ade2af",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditSpawnRadius": "326f843edcb3",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditSpawnRadius_tooltip": "d0d0b6d2a5d8",
+    "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditWithdrawMinutes": "df694945a8c7",
+    "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BanditWithdrawMinutes_tooltip": "82e3f961c7aa",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BaseDailyTownChoices": "c15029fd43d2",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BaseDailyTownChoices_tooltip": "99c02875598c",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_BlockedRoadFootLootLossMaximumPercent": "52233082c54f",
@@ -1321,6 +1333,8 @@
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_DisableRaidLocationAfterDeath_tooltip": "e1ffefb0c328",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_EasierExtractions": "a9860d59a836",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_EasierExtractions_tooltip": "c7e6520d897b",
+    "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_EnableBanditMetaEvents": "33cd768012dd",
+    "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_EnableBanditMetaEvents_tooltip": "4e5da2837261",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_EnableBanditsIntegration": "2225bdec83c0",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_EnableBanditsIntegration_tooltip": "2e8175c374c4",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_ExtractionMode_EnableLocationRefresh": "e358a2396586",
@@ -1448,5 +1462,5 @@
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/UI.json|UI_ExtractionMode_ShowAdminSingleplayer": "387315fc9de8",
     "translate_en|mods/ExtractionMode/42/media/lua/shared/Translate/EN/UI.json|UI_ExtractionMode_ShowAdminSingleplayerTooltip": "8002b4764ef0"
   },
-  "updated_at": "2026-09-18T09:05:43Z"
+  "updated_at": "2026-09-19T08:50:13Z"
 }
