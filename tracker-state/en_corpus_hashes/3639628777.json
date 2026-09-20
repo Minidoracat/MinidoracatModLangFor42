@@ -1,5 +1,5 @@
 {
-  "corpus_hash": "afa0f2407a0bf5e0a3c36249dd76c94a5939466ea5b53c81b5798f5bc07f37fc",
+  "corpus_hash": "1525f985d29e461f5595aee1567f8d5d0904801bdf186687b463f1a969be9d94",
   "extractor_schema": 10,
   "records": {
     "script_craftRecipe|mods/BurdSurvivalJournals/42.15/media/scripts/recipes_burdJournals.txt|Bind_Adhesive_AnyCover": "c994ae42547f",
@@ -399,6 +399,8 @@
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BurdJournals_EnableJournals_tooltip": "9393ca2123d3",
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BurdJournals_EnableLimitedClaimLootJournals": "d574c76d9aaa",
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BurdJournals_EnableLimitedClaimLootJournals_tooltip": "a3d49456967f",
+    "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BurdJournals_EnableLootJournalExpiration": "4eff1f78b14a",
+    "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BurdJournals_EnableLootJournalExpiration_tooltip": "560c4096d3bf",
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BurdJournals_EnableLootJournalNotes": "04e12655f8e6",
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BurdJournals_EnableLootJournalNotes_tooltip": "d37d92785e19",
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BurdJournals_EnableLootJournalsFun": "429f419f905f",
@@ -467,6 +469,8 @@
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BurdJournals_LearningTimePerTrait_tooltip": "f30f071aabf9",
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BurdJournals_Loot": "57c82fc5cadd",
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BurdJournals_LootFun": "c72f518a9360",
+    "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BurdJournals_LootJournalExpirationDays": "f7673c3d4fe2",
+    "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BurdJournals_LootJournalExpirationDays_tooltip": "18615d22ec9b",
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BurdJournals_LootJournalMaxClaimsBeforeDissolve": "ccf1bf82a137",
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BurdJournals_LootJournalMaxClaimsBeforeDissolve_tooltip": "98c5bb4bec95",
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BurdJournals_MaxRecipesPerJournal": "3a51c317cf46",
@@ -1473,6 +1477,7 @@
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/UI.json|UI_BurdJournals_LimitedLootClaimsNoQueue": "c133d5b17e20",
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/UI.json|UI_BurdJournals_LimitedLootClaimsSpent": "517d65cbe1bb",
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/UI.json|UI_BurdJournals_Log": "3f891e31082c",
+    "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/UI.json|UI_BurdJournals_LootJournalExpired": "7f9f04eb0e0b",
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/UI.json|UI_BurdJournals_LorePool_Adjective": "e770276db7dd",
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/UI.json|UI_BurdJournals_LorePool_Adverb": "1d6082c64e7c",
     "translate_en|mods/BurdSurvivalJournals/42.15/media/lua/shared/Translate/EN/UI.json|UI_BurdJournals_LorePool_DangerNoun": "7ac462f94659",
@@ -2270,7 +2275,7 @@
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_AllowLifestyleMusicPreferenceTraitRecording": "ab9d4f2c1c8b",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_AllowLifestyleMusicPreferenceTraitRecording_tooltip": "694f41106f0a",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_AllowMoreTraitsDynamicManagedTraitRecording": "f91b223a745e",
-    "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_AllowMoreTraitsDynamicManagedTraitRecording_tooltip": "e5ae6790f715",
+    "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_AllowMoreTraitsDynamicManagedTraitRecording_tooltip": "3fe6bb40e15a",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_AllowMutualExclusionCancellation": "1a905b8f30c6",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_AllowMutualExclusionCancellation_tooltip": "861bd4cc8a6b",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_AllowNegativeTraits": "07e783712b05",
@@ -2446,6 +2451,7 @@
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_EnableJournals_tooltip": "9393ca2123d3",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_EnableLimitedClaimLootJournals": "d574c76d9aaa",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_EnableLimitedClaimLootJournals_tooltip": "a3d49456967f",
+    "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_EnableLootJournalExpiration_tooltip": "560c4096d3bf",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_EnableLootJournalNotes": "04e12655f8e6",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_EnableLootJournalNotes_tooltip": "d37d92785e19",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_EnableLootJournalsFun": "429f419f905f",
@@ -2514,6 +2520,8 @@
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_LearningTimePerTrait_tooltip": "f30f071aabf9",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_Loot": "57c82fc5cadd",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_LootFun": "c72f518a9360",
+    "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_LootJournalExpirationDays": "f7673c3d4fe2",
+    "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_LootJournalExpirationDays_tooltip": "18615d22ec9b",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_LootJournalMaxClaimsBeforeDissolve": "ccf1bf82a137",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_LootJournalMaxClaimsBeforeDissolve_tooltip": "98c5bb4bec95",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/Sandbox_EN.txt|Sandbox_BurdJournals_MaxRecipesPerJournal": "3a51c317cf46",
@@ -4018,7 +4026,7 @@
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/UI_EN.txt|UI_BurdJournals_SkillDetailEarnedRecovery": "77895baa57a0",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/UI_EN.txt|UI_BurdJournals_SkillDetailMedia": "2db23a41ff7e",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/UI_EN.txt|UI_BurdJournals_SkillDetailMore": "842e13b2e9f3",
-    "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/UI_EN.txt|UI_BurdJournals_SkillDetailNextRecovery": "9cc7ce7bd94a",
+    "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/UI_EN.txt|UI_BurdJournals_SkillDetailNextRecovery": "6d70d2be3b68",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/UI_EN.txt|UI_BurdJournals_SkillDetailPenalty": "74f6d3a386fc",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/UI_EN.txt|UI_BurdJournals_SkillDetailRawVhs": "c8fba4a67993",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/UI_EN.txt|UI_BurdJournals_SkillDetailRecorded": "588d9443f10c",
@@ -4143,5 +4151,5 @@
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/UI_EN.txt|UI_BurdJournals_YuletideUnwrapCancelled": "0bfd1bb13ace",
     "translate_en|mods/BurdSurvivalJournals/media/lua/shared/Translate/EN/UI_EN.txt|UI_BurdJournals_YuletideUnwrapStart": "27f10ca37a43"
   },
-  "updated_at": "2026-09-14T09:53:29Z"
+  "updated_at": "2026-09-20T09:19:41Z"
 }
