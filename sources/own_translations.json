@@ -2312,6 +2312,12 @@
         "en": "Zip up",
         "ch": "拉上拉鍊",
         "cn": "拉上拉链"
+      },
+      "ContextMenu_SimpleSuppressors_CollectOil": {
+        "en": "Drain engine oil into %1 (%2 free)",
+        "ch": "把機油排入 %1 (剩餘空間 %2)",
+        "cn": "把机油排入 %1 (剩余空间 %2)",
+        "_note": "新增鍵：EN 'Drain engine oil into %1 (%2 free)'，As1 與 repo 皆未收錄。沿用同檔既有句式 ContextMenu_SimpleSuppressors_DrainOil「把機油排到地上」/「把机油排到地上」與 TopUpOil「補充機油 (可用: %1)」的括號補述體例；%1=容器名、%2=可用空間，兩個 placeholder 原序守恆，無 %%。CH 用台灣用語機油，CN 獨立直譯大陸用語机油（不經簡繁轉換）。"
       }
     },
     "Fluids.json": {
@@ -4320,6 +4326,12 @@
         "en": "Engine Oil",
         "ch": "機油",
         "cn": "机油"
+      },
+      "Fluid_Container_EngineOilBottle": {
+        "en": "Bottle",
+        "ch": "瓶",
+        "cn": "瓶",
+        "_note": "新增鍵：EN 'Bottle'，為本 MOD 物品 SimpleSuppressors.EngineOil（Tooltip: 'A 1 L bottle of engine oil.'，既有譯名機油/机油）的流體容器標籤。EN 刻意只給容器型別而非品名，故照既有容器體例逐鍵直譯（sources/ch/Fluids.json 的 Fluid_Container_Barrel「桶」同體例），不自行補成「機油瓶」以免與流體名 Fluid_Name_SimpleSuppressors_EngineOil「機油」在流體 UI 疊字。單字容器型別 CH/CN 同形（瓶），無 placeholder。"
       }
     },
     "IG_UI.json": {
@@ -28694,6 +28706,24 @@
         "ch": "已在 E%1 撤離點發出撤離訊號. 直升機正在接近. 突襲者正在接近該接應點.",
         "cn": "已在 E%1 撤离点发出撤离信号. 直升机正在接近. 突袭者正在接近该接应点.",
         "_note": "新增鍵：敵對突襲者靠近撤離點的廣播訊息，As1 未收錄。保留 E%1；Helicopter inbound 沿用既有 Message_DebugExtraction「直升機正在接近/直升机正在接近」，raiders 依本模組 raid→突襲語境譯「突襲者/突袭者」。"
+      },
+      "IGUI_DST_Agriculture_val_CropProblems": {
+        "en": "Inspect shows Crop Problems",
+        "ch": "檢查時顯示作物問題",
+        "cn": "检查时显示作物问题",
+        "_note": "新增鍵（EN: Inspect shows Crop Problems）；上游 CN（sources/mods/3572846242/CN/IG_UI.json）與 As1 CH（sources/ch/IG_UI.json）皆無此鍵，故 old_ch/old_cn = null。Inspect 沿用香草 ContextMenu_Inspect「檢查/检查」；Crop Problems 採概括譯「作物問題/作物问题」，不用「病蟲害」以免窄化（B42 作物問題涵蓋蚜蟲、腐蠅、黴粉病等多種狀況）。CH 依 terminology 規則避開「查看」。與同族 IGUI_DST_Agriculture_val_* 的「…可見/顯示…」敘述句式一致；無 placeholder、無百分比、無標記。"
+      },
+      "IGUI_DST_Agriculture_val_CropProblemsMagnifier": {
+        "en": "Inspect shows Crop Problems (Magnifier equipped)",
+        "ch": "檢查時顯示作物問題 (已裝備放大鏡)",
+        "cn": "检查时显示作物问题 (已装备放大镜)",
+        "_note": "新增鍵（EN: Inspect shows Crop Problems (Magnifier equipped)）；上游 CN 與 As1 CH 皆無此鍵，old_ch/old_cn = null。主句與 IGUI_DST_Agriculture_val_CropProblems 完全對齊，括號補條件「已裝備放大鏡/已装备放大镜」（Magnifier 沿用語料既有「放大鏡/放大镜」）。括號格式沿用同 MOD 既有 IGUI_DST_AnimalCare_val_Udder「乳房狀態警告 (產奶動物)」的半形括號前置空格慣例；CN 為獨立直譯非 ch 機轉；無 placeholder、無百分比、無標記。"
+      },
+      "IGUI_SimpleSuppressors_OilCollected": {
+        "en": "Engine oil collected.",
+        "ch": "機油已收集.",
+        "cn": "机油已收集.",
+        "_note": "新增鍵：EN 'Engine oil collected.'，為 CollectOil 動作完成後的提示。沿用同組既有句式 IGUI_SimpleSuppressors_OilDrained「機油已排出. …」/「机油已排出. …」與 OilRefilled「機油已補充.」/「机油已补充.」的「機油已+動作」＋半形句點體例；無 placeholder。CH 繁中台灣用語、CN 獨立簡中直譯。"
       }
     },
     "ItemName.json": {
@@ -163800,6 +163830,102 @@
         "ch": "我需要糖!",
         "cn": "我需要糖!",
         "_note": "As1 v3.9.1將此鍵放在不載入的UI_EN.json；依UI_/IGUI_前綴歸位，EN來自3629659534 RealisticDiseases/42對應翻譯record。"
+      },
+      "UI_AA_fill_blocked": {
+        "en": "Found magazines, but none of them can be filled right now. Try again in a moment.",
+        "ch": "找到了彈匣, 但目前都無法裝填. 稍後再試一次.",
+        "cn": "找到了弹匣, 但目前都无法装填. 稍后再试一次.",
+        "_note": "新增鍵：批次裝填被擋下的提示。沿用同族 UI_AA_openbox_blocked「找到了盒裝物品, 但目前都無法開啟. 稍後再試一次.」句式，magazine→彈匣/弹匣、fill→裝填/装填。"
+      },
+      "UI_AA_fill_done": {
+        "en": "Finished: %1 filled.",
+        "ch": "完成: 已裝填 %1.",
+        "cn": "完成: 已装填 %1.",
+        "_note": "新增鍵：完成訊息。沿用同族 UI_AA_open_done/UI_AA_unpack_done「完成: 已…%1.」句式；保留 %1。"
+      },
+      "UI_AA_fill_label_all": {
+        "en": "magazines",
+        "ch": "彈匣",
+        "cn": "弹匣",
+        "_note": "新增鍵：選單用的集合名詞（複數 magazines），對應同族 label_all（罐頭與玻璃罐／盒裝物品／紙箱）；中文不標複數。"
+      },
+      "UI_AA_fill_noammo": {
+        "en": "No loose rounds within reach for any of them.",
+        "ch": "伸手範圍內沒有適用於它們的散裝子彈.",
+        "cn": "伸手范围内没有适用于它们的散装子弹.",
+        "_note": "新增鍵：缺散裝子彈提示。within reach→伸手範圍內/伸手范围内、loose rounds→散裝子彈/散装子弹（同族 UI_AA_openbox_option_tt 既有用法）；for any of them 譯為「適用於它們的」。"
+      },
+      "UI_AA_fill_nothing": {
+        "en": "Nothing within reach needs filling.",
+        "ch": "伸手範圍內沒有需要裝填的東西.",
+        "cn": "伸手范围内没有需要装填的东西.",
+        "_note": "新增鍵：無可處理目標提示。對應同族 UI_AA_open_nothing/UI_AA_unpack_nothing 句式，改用 within reach→伸手範圍內/伸手范围内。"
+      },
+      "UI_AA_fill_option": {
+        "en": "Fill Every %1",
+        "ch": "裝填所有 %1",
+        "cn": "装填所有 %1",
+        "_note": "新增鍵：右鍵選單項。沿用同族 UI_AA_open_option「開啟所有 %1」/UI_AA_unpack_option「拆開所有 %1」句式；保留 %1。"
+      },
+      "UI_AA_fill_option_all": {
+        "en": "Fill Every Magazine Within Reach",
+        "ch": "裝填伸手範圍內所有彈匣",
+        "cn": "装填伸手范围内所有弹匣",
+        "_note": "新增鍵：右鍵選單項（全部）。沿用同族 UI_AA_open_option_all「開啟伸手範圍內所有罐頭與玻璃罐」句式。"
+      },
+      "UI_AA_fill_option_tt": {
+        "en": "Fills %1 of the %2 within reach from the loose rounds you have, one after another. Any sitting in a container are fetched, and each goes back where it came from.",
+        "ch": "用你手上的散裝子彈, 依序裝填伸手範圍內 %2 當中的 %1 個. 放在容器裡的會自動取出, 裝完後各自放回原本所在的位置.",
+        "cn": "用你手上的散装子弹, 依次装填伸手范围内 %2 当中的 %1 个. 放在容器里的会自动取出, 装完后各自放回原本所在的位置.",
+        "_note": "新增鍵：選單 tooltip。沿用同族 UI_AA_openbox_option_tt/UI_AA_unpack_option_tt 的「依序/依次…伸手範圍內 %2 當中的 %1 個. 放在容器裡的會自動取出…」句式；保留 %1 %2 順序。"
+      },
+      "UI_AA_fill_partial": {
+        "en": "Finished: %1 filled, %2 left short on ammunition.",
+        "ch": "完成: 已裝填 %1, 另有 %2 因子彈不足未裝滿.",
+        "cn": "完成: 已装填 %1, 另有 %2 因子弹不足未装满.",
+        "_note": "新增鍵：部分完成訊息。延續 _done 句式並補 left short on ammunition→因子彈不足未裝滿；保留 %1 %2 順序。"
+      },
+      "UI_AA_fill_started": {
+        "en": "Filling %1 x %2.",
+        "ch": "正在裝填 %1 x %2.",
+        "cn": "正在装填 %1 x %2.",
+        "_note": "新增鍵：開始作業訊息。沿用同族 UI_AA_open_started「正在開啟 %1 x %2.」句式，保留 %1 x %2 原樣。"
+      },
+      "UI_AA_fill_stop": {
+        "en": "Stop Filling",
+        "ch": "停止裝填",
+        "cn": "停止装填",
+        "_note": "新增鍵：中止選單項。沿用同族 UI_AA_open_stop「停止開啟」/UI_AA_pack_stop「停止打包」。"
+      },
+      "UI_AA_fill_working": {
+        "en": "Filling...",
+        "ch": "裝填中…",
+        "cn": "装填中…",
+        "_note": "新增鍵：進行中狀態。沿用同族 UI_AA_open_working「開啟中…」/UI_AA_pack_working「打包中…」，含省略號寫法。"
+      },
+      "UI_AA_opt_fillReturnItems": {
+        "en": "Put each magazine back where it came from",
+        "ch": "把每個彈匣放回原本的位置",
+        "cn": "把每个弹匣放回原本的位置",
+        "_note": "新增鍵：沙盒／模組選項標籤。對應同族 UI_AA_opt_openReturnItems「結束後把開罐器放回去」的語氣，直譯 put back where it came from。"
+      },
+      "UI_AA_opt_fillReturnItems_tt": {
+        "en": "Magazines fetched out of a bag or a crate are returned to it once they are full. Turn this off to keep them on the character.",
+        "ch": "從背包或板條箱裡取出的彈匣, 裝滿後會放回原處. 關閉這個選項就留在角色身上.",
+        "cn": "从背包或板条箱里取出的弹匣, 装满后会放回原处. 关闭这个选项就留在角色身上.",
+        "_note": "新增鍵：選項 tooltip。crate→板條箱/板条箱（同族 UI_AA_opt_cookReach_tt 既有用法）；Turn this off to… 沿用 UI_AA_opt_openReturnItems_tt「關閉這個選項就…」句式。"
+      },
+      "UI_AA_opt_fillWeapons": {
+        "en": "Also fill guns that take loose rounds",
+        "ch": "一併裝填使用散裝子彈的槍械",
+        "cn": "一并装填使用散装子弹的枪械",
+        "_note": "新增鍵：選項標籤。guns that take loose rounds→使用散裝子彈的槍械/使用散装子弹的枪械，also→一併/一并。"
+      },
+      "UI_AA_opt_fillWeapons_tt": {
+        "en": "Revolvers, shotguns and bolt actions are filled round by round as well as magazines. Off by default: a gun you are carrying is usually loaded the way you want it.",
+        "ch": "除了彈匣之外, 左輪, 霰彈槍與栓動步槍也會一發一發裝填. 預設關閉: 你隨身攜帶的槍通常已經照你的想法裝好了.",
+        "cn": "除了弹匣之外, 左轮, 霰弹枪与栓动步枪也会一发一发装填. 默认关闭: 你随身携带的枪通常已经照你的想法装好了.",
+        "_note": "新增鍵：選項 tooltip。槍械名詞沿用 As1 ItemName（左輪手槍/霰彈槍/栓動步槍 → 左轮/霰弹枪/栓动步枪）；Off by default 沿用 UI_AA_opt_medPoultices_tt「預設關閉」/「默认关闭」。"
       }
     },
     "MakeUp.json": {
