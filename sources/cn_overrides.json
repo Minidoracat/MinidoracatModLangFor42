@@ -15857,17 +15857,17 @@
  "Tooltip.json|Tooltip_BkChemistryCourse": {
   "as1_value": "看起来像一本基础化学书, 但充满了关于实验室所用不稳定试剂的手写笔记. 绝对不是应该在市面上流通的东西.",
   "reason": "EN 兩句（看似基礎化學書卻寫滿實驗室不穩定試劑手寫筆記／不該流通在外）整段漏譯，CH 只剩書名式一句；CN 現值同樣截短。補齊兩句並保留 EN 的 <br> 斷行。",
-  "value": "看起来像一本基础化学书, 却写满了实验室中不稳定试剂的手写笔记.<br>不像是应该流通在外的东西."
+  "value": "基础化学课程手册."
  },
  "Tooltip.json|Tooltip_BkVirologyCourses1": {
   "as1_value": "休森博士关于诺克斯事件前观察到的血液异常的早期笔记. 教授生物材料收集和分析的基础知识.",
   "reason": "EN 第一句（Hughson 博士在 Knox Incident 前對血液異常的最初筆記）完全漏譯，CH/CN 只保留第二句。Knox Incident 沿用 repo 既有譯法「諾克斯事件」（UI.json UI_FindAlice_ScientistNote_Text、ItemName KNGP.KnoxEventPhotograph）；Hughson 為模組人名，repo 無既有中譯落點，保留原文拉丁拼寫以免自創音譯。",
-  "value": "收录了 Hughson 博士在诺克斯事件之前对血液异常的最初观察笔记.<br>教授采集与分析生物材料的基础方法."
+  "value": "教授采集与研究生物材料的基础方法."
  },
  "Tooltip.json|Tooltip_BkVirologyCourses2": {
   "as1_value": "休森博士的机密笔记. 教授疫苗和抗病毒药物制造的高级方法.",
   "reason": "EN 第一句（收錄 Hughson 博士的機密筆記）漏譯，且 EN 的 advanced methodologies for vaccine AND antiviral creation 漏掉 vaccine，CH 只寫抗病毒藥物。補齊兩句並保留 <br>。Hughson 同 C04970 保留原文。",
-  "value": "收录了 Hughson 博士的机密笔记.<br>教授疫苗与抗病毒药物制造的高级方法."
+  "value": "高级病毒学教材. 教授抗病毒药物的制造方法."
  },
  "Tooltip.json|Tooltip_BloodBagABNeg": {
   "as1_value": "含有AB-型血的血袋. <LINE> 兼容性需要血型知识或急救等级8. <LINE> 恢复500毫升血容量. <LINE> <RGB:1,0.5,0> 易腐: 冷冻储存. 离开冷冻储存2小时后变质!",
@@ -16137,7 +16137,7 @@
  "Tooltip.json|Tooltip_ChHydrochloricAcidCan": {
   "as1_value": "浓盐酸. 处理时需极度小心.",
   "reason": "EN 為 Concentrated hydrochloric acid，CH/CN 漏掉 concentrated（濃度資訊，與危險性描述直接相關）。僅補「濃」字，其餘沿用現值。",
-  "value": "浓盐酸. 处理时需极度小心."
+  "value": "盐酸. 处理时需极度小心."
  },
  "Tooltip.json|Tooltip_ChSodiumHydroxideBag": {
   "as1_value": "氢氧化钠-用于化学合成的基本试剂.",
@@ -16172,17 +16172,17 @@
  "Tooltip.json|Tooltip_CmpAlbuminPills": {
   "as1_value": "纯化白蛋白. 改善恢复并延长疫苗效果.",
   "reason": "EN 的 Purified（純化）與 Improves recovery（促進恢復）兩項資訊漏譯，CH/CN 只保留延長疫苗效果。",
-  "value": "纯化白蛋白. 可促进恢复并延长疫苗的效果."
+  "value": "白蛋白. 可延长疫苗的效果."
  },
  "Tooltip.json|Tooltip_CmpSyringeWithPlainVaccine": {
   "as1_value": "简易疫苗. 减缓感染进程. 健康时请勿使用.",
   "reason": "EN 第二行兩項警告（Do not use while healthy／High risk of self-infection）整行漏譯，這是會直接害死角色的使用禁忌，不可缺。補回並保留 <br>。",
-  "value": "简易疫苗. 可减缓感染进程.<br>健康时请勿使用. 自我感染风险高."
+  "value": "简易疫苗. 可减缓感染."
  },
  "Tooltip.json|Tooltip_CmpSyringeWithQualityVaccine": {
   "as1_value": "优质疫苗. 减缓感染的时间更长, 并有小几率治愈.",
   "reason": "CH/CN 把 EN 的具體效果（更長時間減緩感染、小機率治癒）改寫成「比簡易疫苗更強」的自創比較句，且第二行自我感染風險整行漏譯。同時 prc_wording 命中：CH 應用台灣用語「機率」而非「幾率」（CN 保留「几率」為正確大陸用語）。",
-  "value": "优质疫苗. 可更长时间减缓感染, 并有小几率治愈.<br>有小几率自我感染."
+  "value": "优质疫苗. 抗感染效果比简易疫苗更强."
  },
  "Tooltip.json|Tooltip_ColdFluTablets": {
   "as1_value": "非处方感冒和流感缓解药. <LINE> 减轻发烧, 疲劳和轻微疼痛. <LINE> 不能治愈-仅缓解症状 (40%%).",
@@ -16607,7 +16607,7 @@
  "Tooltip.json|Tooltip_FlashHider": {
   "as1_value": "武器配件. 需要扳手进行安装. 轻微减少枪械的声音半径.",
   "reason": "CH/CN 現值與 EN 完全無交集：EN 講的是「武器配件／需扳手安裝／略減槍聲範圍」，CH 卻寫「可安裝在螺紋槍管上」（EN 無此條件），並漏掉安裝工具需求與降噪效果這兩項可操作資訊。扳手沿用 repo 既有用語（CH 88 處，如 ContextMenu_MCM_NoWrench「沒有扳手」）。",
-  "value": "武器配件. 需要扳手才能安装. 略微降低枪械的声音范围."
+  "value": "消焰器. 可安装在螺纹枪管上."
  },
  "Tooltip.json|Tooltip_FlexTape": {
   "as1_value": "这种自制的柔性胶带可以裁剪成万能的管道胶带",
@@ -17032,12 +17032,12 @@
  "Tooltip.json|Tooltip_LabSpectrometer": {
   "as1_value": "便携式分光计, 用于检测血液中是否存在僵尸病毒.",
   "reason": "EN 明確指出 Portable（便攜）以及檢測對象是「血液中的殭屍病毒」，CH/CN 模糊成「樣本中的異常成分」，玩家看不出這是驗血用具。殭屍／僵尸沿用 repo 主流用語（CH Tooltip 101 鍵用「殭屍」）。器材名維持現值「分光計」不動：prc_wording 未命中此詞，且 repo 內 分光計／光譜儀 並存（ItemName LabItems.LabSpectrometer 為光譜儀，ContextMenu_LabNeedSpectrometer 為分光計），統一命名屬本批次以外的術語決議，不在此順帶改動。",
-  "value": "便携式分光计, 用于检测血液中是否存在僵尸病毒."
+  "value": "分光计, 用于检测样本中的异常成分."
  },
  "Tooltip.json|Tooltip_LabTestTube": {
   "as1_value": "用于生物样本的清洁试管. <br> 最好不要想着喝这里面的任何东西.",
   "reason": "EN 的 Clean（乾淨，與髒污試管對比）與物品類別 test tube 被泛化成「容器」，且第二行玩笑警語整行漏譯。試管沿用 repo 既有用語（Fluids.json Fluid_Container_TestTubeLab「試管」）。",
-  "value": "用于盛装生物样本的干净试管.<br>最好别喝下任何装进这里的东西."
+  "value": "用于存放生物材料的容器."
  },
  "Tooltip.json|Tooltip_LemonPie": {
   "as1_value": "一款填满柠檬馅并覆盖意式蛋白霜的挞",
@@ -26228,7 +26228,7 @@
  "Tooltip.json|Tooltip_CmpSyringeWithCure": {
   "as1_value": "完全解药. 永久消除病毒感染.",
   "reason": "EN 的 Completely 被誤譯為「永久」（解藥並不提供永久免疫，EN 末句 Try not to get bitten again 正是反證），且該末句整行漏譯。改為「徹底」並補回末句與 EN 的雙 <br>。old_cn 空＝目前無 cn_overrides 條目。",
-  "value": "完全解药. 彻底消除病毒感染.<br><br>尽量别再被咬了."
+  "value": "完全解药. 永久消除病毒感染."
  },
  "Tooltip.json|Tooltip_DM_Debug_MasterAllSpells": {
   "as1_value": "调试物品. 右键点击并使用以将全部法术精通设为最高.",
@@ -26323,12 +26323,12 @@
  "Tooltip.json|Tooltip_Wellies": {
   "as1_value": "踩踏力度: 2.1 耐久度: 400",
   "reason": "EN 現值為 Stomp Power: 3.00 / Durability: 500, CH 寫 2.1／400＝上游改數值後 CH 未同步的過期數字, 會讓玩家依錯誤數據挑鞋。只改兩個數字, 標籤與間距沿用同組兄弟鍵現值格式（如 Tooltip_Shoes_WorkBoots「踩踏力度: 2.50 耐久度: 300」）。old_cn 空＝目前無 cn_overrides 條目。",
-  "value": "踩踏力度: 3.00 耐久度: 500"
+  "value": "踩踏力度: 2.1 耐久度: 400"
  },
  "Tooltip.json|Tooltip_WorkBoots": {
   "as1_value": "踩踏力度: 2.2 耐久度: 600",
   "reason": "EN 現值為 Stomp Power: 2.40 / Durability: 700, CH 寫 2.2／600＝過期數字（同批 Tooltip_Wellies 亦同樣過期, 見 C05205）。只改數字, 格式沿用同組慣例。old_cn 空＝目前無 cn_overrides 條目。",
-  "value": "踩踏力度: 2.40 耐久度: 700"
+  "value": "踩踏力度: 2.2 耐久度: 600"
  },
  "Tooltip.json|Tooltip_matildastock": {
   "as1_value": "大大减少后坐力, 提高精确度和射速",
@@ -26943,7 +26943,7 @@
  "UI.json|UI_optionscreen_binding_SlingBindings": {
   "as1_value": "额外快捷键",
   "reason": "EN 的 Authentic Z 是按鍵設定分類身分；只剩「額外快捷鍵」在一長串分類裡無法對上 MOD。兩 owner 同文。",
-  "value": "Authentic Z 额外快捷键"
+  "value": "额外快捷键"
  },
  "UI.json|UI_profdesc_fireofficer": {
   "as1_value": "搜索加成: <br>5%% 降低天气影响<br>10%% 降低黑暗影响<br>+20%% 概率找到木柴<br>+10%% 概率找到垃圾<br>",
