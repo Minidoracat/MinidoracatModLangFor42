@@ -52,6 +52,7 @@ import tracker  # noqa: E402 — 有效分支／owner／script DN 勝出值同�
 # norm_en＝跨 owner 衝突比對的保守正規化；loadable_json＝Translator 白名單死檔判準
 from prep_mod_strings import loadable_json, norm_en  # noqa: E402
 from split_sources import SCOPED_GENERIC_KEYS, _file_stem  # noqa: E402 — 檔域限定鍵
+from coverage_survey import target_file  # noqa: E402 — 與有效覆蓋率共用前綴路由
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CH_DIR = PROJECT_ROOT / "sources" / "ch"
@@ -136,11 +137,13 @@ def load_json(path: Path) -> dict:
 
 
 def _index_key(stem: str, key: str):
-    """索引鍵：一般鍵用裸鍵，`title`／`description` 用 `(檔名幹, 鍵)` 檔域對。
-
-    `stem` 是**去副檔名的檔名**——上游 Translate 檔名或我方 corpus 檔名，兩側同一把尺。
-    """
-    return (stem, key) if key in SCOPED_GENERIC_KEYS else key
+    """索引鍵：按有效檔域路由，避免不同翻譯表共享裸 key 互相污染。"""
+    target = target_file(stem, key) or stem
+    if key in SCOPED_GENERIC_KEYS:
+        return (target, key)
+    if target in {"ItemName", "EvolvedRecipeName"}:
+        return (target, key)
+    return key
 
 
 def _runtime_loadable(base: str, key: str) -> bool:
@@ -227,15 +230,14 @@ def build_en_index() -> tuple[dict, dict[str, int]]:
             print(f"  ⚠️ {wid}：{len(bad)} 筆 record 的鏡像與 state 不一致（中斷殘跡）",
                   file=sys.stderr)
             continue
-
         eff = tracker.resolve_effective_branches(recs)
         owners: dict = {
-            (rid.rpartition("|")[2], tracker.owner_of(rid)): None
+            (_index_key("ItemName", rid.rpartition("|")[2]), tracker.owner_of(rid)): None
             for rid in recs
             if rid.startswith("script_item_dn|") and tracker.is_effective(rid, eff)
         }
         for (owner, full_type), text in tracker.winning_dn_text(recs, mirror, eff).items():
-            owners[(full_type, owner)] = text
+            owners[(_index_key("ItemName", full_type), owner)] = text
         seen: set = set()
         rids = [r for r in recs
                 if r.startswith("translate_en|") and tracker.is_effective(r, eff)]

@@ -215,11 +215,13 @@ def test_en_index_matching() -> None:
     assert index["UI_Overridden"] == "Version text"
     assert index["UI_Kept"] == "Kept text"
     # 同 owner 內 JSON EN 勝出；JSON 留空＝執行期顯示空白，script DisplayName 一併抑制
-    assert index["Base.Axe"] == "Json Axe"
-    assert "Base.Ghost" not in index
-    # 死 JSON（`UI_EN.json`，引擎不讀）：不自成錨點，也不得抑制同鍵的 script DisplayName
+    assert index[("ItemName", "Base.Axe")] == "Json Axe"
+    # 同 owner 內 JSON 空值會抑制 script fallback
+    assert ("ItemName", "Base.Ghost") not in index
+    # 死 JSON（`UI_EN.json`，引擎不讀）不得抑制同鍵的 script DisplayName
+    assert index[("ItemName", "Base.Saw")] == "Script Saw", \
+        "死 JSON 的空值不得抑制 script DisplayName"
     assert "UI_Dead_Json" not in index
-    assert index["Base.Saw"] == "Script Saw", "死 JSON 的空值不得抑制 script DisplayName"
     # 跨 owner：全等（含彎引號正規化後全等）可合併，英文不同整鍵跳過並計數
     assert index["UI_Agree"] == "Shared text"
     assert index["UI_Quote"] in ("Don\u2019t panic", "Don't panic")
@@ -236,6 +238,14 @@ def test_en_index_matching() -> None:
     assert ("UI.json", "UI_Clash") not in paired
     # UI_Clash／UI_BlankHere（歧義）＋UI_AllBlank＋四個死分支／死檔鍵＋Base.Ghost＝8 鍵無錨點
     assert stats["no_en"] == 8 and stats["en_owner_conflicts"] == 2
+
+
+def test_file_domain_index_separates_recipe_labels() -> None:
+    assert jev_scan._index_key("ItemName", "VFX.CheeseSausage") == (
+        "ItemName", "VFX.CheeseSausage")
+    assert jev_scan._index_key("EvolvedRecipeName", "VFX.CheeseSausage") == (
+        "EvolvedRecipeName", "VFX.CheeseSausage")
+    assert jev_scan._index_key("UI", "UI_Close") == "UI_Close"
 
 
 def test_state_is_the_branch_universe() -> None:
@@ -288,6 +298,7 @@ def main() -> int:
     test_sidecar_keeps_timestamp()
     test_backfill_en_filtered()
     test_en_index_matching()
+    test_file_domain_index_separates_recipe_labels()
     test_state_is_the_branch_universe()
     print("OK — jev_scan 回歸測試全數通過")
     return 0
