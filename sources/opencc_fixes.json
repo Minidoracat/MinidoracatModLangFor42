@@ -2525,12 +2525,75 @@
    "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「昏昏欲睡」，非本體 Sleepyhead（本體 CH「貪睡」）。",
    "ch_value": "2cd95ed3ef59bdda"
   },
-  "UI.json|UI_KCMAIN_NPC_LORE_NINA_COLE_ROLE": {
+  "IG_UI.json|IGUI_RSSUIV3_ModOptionsDesc1": {
+   "patterns": [
+    "用(\\s*)戶"
+   ],
+   "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
+   "ch_value": "6fb8e837af473f52"
+  },
+  "IG_UI.json|IGUI_RSSUIV3_ModOptionsEnableTooltip": {
+   "patterns": [
+    "用(\\s*)戶"
+   ],
+   "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
+   "ch_value": "8ceb66230a849681"
+  },
+  "ItemName.json|LWBetterElectronics.anualANoisemakerV1": {
    "patterns": [
     "應(\\s*)用(?!\\s*程)"
    ],
-   "reason": "2026-09-17 #524 裁決 keep：上游 EN 為 \"Veterinarian and applied microbiology specialist.\"，「應用微生物學」是學科名稱（application 名詞義），非 apply 套用語意；台灣同樣使用此學科名（如中興大學課程）。同族前例：IGUI_Inspect_Mat_Copper_Base、Tooltip_InvWorkbench_Research_a2。",
-   "ch_value": "35a4d9cc723722de"
+   "reason": "書名中的應用為學術application／applied（電路用途、應用偽裝），不是UI套用動作。",
+   "ch_value": "6969f205837fb197"
+  },
+  "ItemName.json|MissingSkillBooks.BookSneaking5": {
+   "patterns": [
+    "應(\\s*)用(?!\\s*程)"
+   ],
+   "reason": "書名中的應用為學術application／applied（電路用途、應用偽裝），不是UI套用動作。",
+   "ch_value": "2bcb14b4c456d4a3"
+  },
+  "Sandbox.json|Sandbox_NightSprintersDyn_debugLogging_tooltip": {
+   "patterns": [
+    "用(\\s*)戶"
+   ],
+   "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
+   "ch_value": "7570bf4e9b16a577"
+  },
+  "Sandbox.json|Sandbox_RegionManager_DecisionCacheSweepEveryEpochs_tooltip": {
+   "patterns": [
+    "用(\\s*)戶"
+   ],
+   "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
+   "ch_value": "922a3c8add17fbb0"
+  },
+  "Sandbox.json|Sandbox_RegionManager_DecisionCacheTtlEpochs_tooltip": {
+   "patterns": [
+    "用(\\s*)戶"
+   ],
+   "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
+   "ch_value": "eeb0d5c371bedf2b"
+  },
+  "Sandbox.json|Sandbox_RegionManager_PendingConfirmSweepEveryEpochs_tooltip": {
+   "patterns": [
+    "用(\\s*)戶"
+   ],
+   "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
+   "ch_value": "f196e1c2cce885b3"
+  },
+  "UI.json|UI_SS_ModOptionsDesc1": {
+   "patterns": [
+    "用(\\s*)戶"
+   ],
+   "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
+   "ch_value": "6fb8e837af473f52"
+  },
+  "UI.json|UI_SS_ModOptionsEnableTooltip": {
+   "patterns": [
+    "用(\\s*)戶"
+   ],
+   "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
+   "ch_value": "8ceb66230a849681"
   }
  }
 }

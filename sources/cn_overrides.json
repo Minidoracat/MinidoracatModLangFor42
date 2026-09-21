@@ -21719,5 +21719,2710 @@
   "value": "木工",
   "reason": "2026-09-12 #493 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/ch/UI.json, 才能讓本裁決的 ch／cn 出貨錨點成立."
  },
- "_comment": "CN 人工修正層：修 As1 上游錯誤（錯字／疊字等）。build 於 CH 再生前套用，故修正會一併帶到 CH；verify_dist 的 CN parity 對登記值核對而非 As1 原值。schema: {\"<檔名>|<鍵>\": {\"value\": \"...\", \"reason\": \"...\"}}"
+ "_comment": "CN 人工修正層：修 As1 上游錯誤（錯字／疊字等）。build 於 CH 再生前套用，故修正會一併帶到 CH；verify_dist 的 CN parity 對登記值核對而非 As1 原值。schema: {\"<檔名>|<鍵>\": {\"value\": \"...\", \"reason\": \"...\"}}",
+ "IG_UI.json|IGUI_GS_NodeConfigExtendToZone": {
+  "as1_value": "扩展到区域",
+  "value": "将规则扩展至区域 {1}",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 'Extend rules to zone {1}' 帶區域名 placeholder, As1 CN「扩展到区域」整個漏掉 {1}, 會讓按鈕顯示不出目標區域, 也使 CN/CH placeholder multiset 不一致; 補回 {1}."
+ },
+ "IG_UI.json|IGUI_GS_NodeExcludeTooltip": {
+  "as1_value": "将此容器从网络中排除 (仅你的客户端). 被排除后, 从终端存入和取出时不可见.",
+  "value": "将此容器从网络中排除. 它的配置会保留, 但在重新纳入之前, 它无法接收或提供物品.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 過時: 現行 EN 為『Exclude this container from the network. Its configuration is kept, but it cannot receive or provide items until it is included again.』, 而 CN 仍是舊版內容『(仅你的客户端). 被排除后, 从终端存入和取出时不可见.』——既多出已不存在的『僅客戶端』限定, 也漏掉『設定會保留』整句. CH 已依現行 EN 譯對故原值保留, 但依規範須同時補完整 CN override."
+ },
+ "IG_UI.json|IGUI_GS_NodeInheritedEditZoneBtn": {
+  "as1_value": "编辑区域 →",
+  "value": "编辑区域规则",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 過時: 現行 EN 為『Edit zone rules』, CN 仍是舊版『编辑区域 →』(漏掉 rules 且殘留舊 UI 的箭頭). CH 正確, 補 CN override."
+ },
+ "IG_UI.json|IGUI_GS_NodeInheritedFromZone": {
+  "as1_value": "继承自你的区域'{1}':",
+  "value": "区域'{1}'的规则",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 過時: 現行 EN 為『Rules for zone '{1}'』(區塊標題), CN 仍是舊版『继承自你的区域'{1}':』(講繼承並帶冒號, 對象與語氣皆不同). CH 已對齊現行 EN, 補 CN override; {1} placeholder 保持 1 個."
+ },
+ "IG_UI.json|IGUI_GS_NodeRulesHint": {
+  "as1_value": "组合OR、AND和NOT规则, 以精确定义此容器接受什么.",
+  "value": "一般分拣时选一个大分类就够了. 需要更精细时再使用OR、AND和NOT.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 過時: 現行 EN 為『A broad category is enough for general sorting. Use OR, AND and NOT when you need more detail.』, CN 仍是舊版的『组合OR、AND和NOT规则, 以精确定义此容器接受什么.』(完全不同的建議語意, 漏掉「大分類就夠」的主句). CH 正確保留, 補 CN override."
+ },
+ "IG_UI.json|IGUI_PSR_Struct_Truncated": {
+  "as1_value": "区域过大, 无法连接. 请靠近电器后再重试",
+  "value": "区域太大无法连接 - 这个空间需要自己的蓄电池组",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 給出與已核實 EN 相反的處置建議: EN 說該空間需要自己的蓄電池組, CN 卻寫「請靠近電器後再重試」, 會誤導玩家; 依 EN 語意重寫安全簡中."
+ },
+ "IG_UI.json|IGUI_VehicleName76chevyK20kimblesCon": {
+  "as1_value": "76款雪佛兰金布尔斯‌建筑版",
+  "value": "76款雪佛兰金布尔斯建筑版",
+  "reason": "As1 v3.9.1 同步逐鍵審定：沿用既有人工譯文；另 CN 含零寬不連字 U+200C，給出去除該字元的安全 CN"
+ },
+ "IG_UI.json|IGUI_WAT_NameTheWaypointFirst": {
+  "as1_value": "请先命路径点",
+  "value": "请先命名路径点",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏字：原值『请先命路径点』不成句，键名 NameTheWaypointFirst 证明应为『请先命名路径点』"
+ },
+ "Recipes.json|scrapsmith_assemble_zweihander": {
+  "as1_value": "组装备式双手剑",
+  "value": "组装德式双手剑",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 「组装备式双手剑」中的「备式」非詞, 與同族 scrapsmith_forge_zweihander_blade/guard 的「德式双手剑」不符, 應為「组装德式双手剑」(zweihander=德式雙手劍)."
+ },
+ "Sandbox.json|Sandbox_ETW_AsthmaticColdTemperatureThreshold_tooltip": {
+  "as1_value": "气温达到或低于此摄氏值时, 跑步或冲刺会导致哮喘恶化进度. 烟瘾患者在阈值以上仍可产生此进度.",
+  "value": "气温达到或低于此摄氏值时, 跑步或冲刺会累积获得哮喘特质的进度. 烟瘾患者在阈值以上仍可累积此进度.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：sources/en/2914075159.json 同鍵明示 developing Asthmatic，即朝獲得特質發展；CN 的哮喘惡化進度錯指已有病情加重，CH 已正確，保留並補完整 CN。"
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_DebugCatSiKUI": {
+  "as1_value": "   >> SiK界面: 点击与控件",
+  "value": "   >> SiK界面整合",
+  "reason": "As1 v3.9.1 同步逐鍵審定：sources/en/3750612158.json 同鍵已改為 SiK UI integration；現 CN/CH 仍是舊版點擊與控制項，不是風格差異。"
+ },
+ "Sandbox.json|Sandbox_GlobalStorageSiK_DebugCatSiKUI_tooltip": {
+  "as1_value": "需要开启调试模式. 记录每次按钮点击和终端窗口生命周期事件 (打开/复用/刷新), 并将屏幕上的控件树连同位置与重叠情况以[GS_UI]前缀输出到console.txt. 这是我们自己界面框架(SiK界面)的通用/主追踪 - 更细的分类请见下方其他\"SiK界面:\"条目 (表格几何, 滚动, 选项卡, 搜索).",
+  "value": "需要开启调试模式. 记录Global Storage集成事件, 以及传送至其日志记录器的框架事件 (挂载, 几何和交互). 框架保留独立的诊断开关.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：sources/en/3750612158.json 同鍵已改成整合與框架事件的日誌轉送，並新增框架獨立診斷開關；CN/CH 全段仍沿用舊版逐按鈕及控制項樹記錄說明，兩側均須更新。"
+ },
+ "Sandbox.json|Sandbox_ImmersiveBlackouts_WaterOffset": {
+  "as1_value": "随机停电提前量",
+  "value": "随机停供提前量",
+  "reason": "As1 v3.9.1 同步逐鍵審定：sources/en/3607686447.json 的 WaterOffset 家族位於供水設定，EN 使用不限定電力的 outage；CN 卻將選項名寫成停電。CH 已用中斷正確涵蓋，保留 CH 並修正 CN 對象。"
+ },
+ "Sandbox.json|Sandbox_ImmersiveBlackouts_WaterOffset_tooltip": {
+  "as1_value": "在计划永久停供之前, 开始随机停供的天数.\n原版停供: 30, 随机停电提前量: 5 = 随机停供从第25天开始.\n原版停供: 禁用, 随机停电提前量: 2147483647 = 随机停供从第0天开始.",
+  "value": "在计划永久停供之前, 开始随机停供的天数.\n原版停供: 30, 随机停供提前量: 5 = 随机停供从第25天开始.\n原版停供: 禁用, 随机停供提前量: 2147483647 = 随机停供从第0天开始.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：sources/en/3607686447.json 的 WaterOffset 家族位於供水設定，EN 使用不限定電力的 outage；CN 卻將選項名寫成停電。CH 已用中斷正確涵蓋，保留 CH 並修正 CN 對象。"
+ },
+ "Sandbox.json|Sandbox_KnoxChroniclesTraders_MerchantItemVarietyMultiplier": {
+  "as1_value": "每个商人的物品种类",
+  "value": "每个商人的物品种类数量倍率",
+  "reason": "As1 v3.9.1 同步逐鍵審定：sources/en/3778350501.json 此鍵是 Item variety multiplier per trader；CN/CH 都漏掉倍率，錯把比例參數描述成直接設定種類數。"
+ },
+ "Sandbox.json|Sandbox_KnoxChroniclesTraders_NestedPackagePriceMultiplier_tooltip": {
+  "as1_value": "乘以另一个包裹内部包含的箱子或包裹.",
+  "value": "将另一个包裹内所含箱子或包裹的价值乘以此倍率.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：sources/en/3778350501.json 明示乘算的是所含箱子／包裹的 value；CN 漏了價值而變成乘算物品，CH 另將乘算誤說成保證增加的倍增。"
+ },
+ "Sandbox.json|Sandbox_RD_ASTHMATICDISEASECHANCE": {
+  "as1_value": "哮喘患病几率增量",
+  "value": "哮喘患者患病几率增量",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN『Asthmatic chance increase』+ tooltip『Increase the chance for cold or flu with this value / This applies when the character has the Asthmatic trait』＝『有氣喘特質者的感冒/流感機率增量』, 不是『得到氣喘的機率』. 原 CH/CN『氣喘患病機率增量/哮喘患病几率增量』把受影響的疾病搞反成氣喘本身, 屬實質語意錯誤, 故 CH、CN 同修."
+ },
+ "Sandbox.json|Sandbox_RD_INSULINCONSUMEHIGH": {
+  "as1_value": "胰岛素高消耗",
+  "value": "胰岛素消耗 (高血糖时)",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 標籤『Insulin consumption high』的 high 指條件(血糖高), tooltip 明寫『when it's high (BS > 100)』. 原『胰島素高消耗/胰岛素高消耗』被讀成『消耗量很高』, 與相鄰的 INSULINCONSUMENORMAL『胰島素消耗』無法區分條件. 條件描述取自同鍵 tooltip, 未新增機制知識."
+ },
+ "Sandbox.json|Sandbox_RD_INSULINDECREASEFACTORHIGH": {
+  "as1_value": "胰岛素高速衰减",
+  "value": "胰岛素衰减 (高值时)",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN『Insulin decrease high』+ tooltip『decreases your insulin, when its high (>20)』＝胰島素數值高時套用的衰減係數. 原『胰島素高速衰減/胰岛素高速衰减』把條件誤譯成速率, 而該係數值由玩家自訂, 調小即與『高速』字面相反, 屬會被設定值推翻的錯述."
+ },
+ "Sandbox.json|Sandbox_RD_INSULINDECREASEFACTORLOW": {
+  "as1_value": "胰岛素低速衰减",
+  "value": "胰岛素衰减 (低值时)",
+  "reason": "As1 v3.9.1 同步逐鍵審定：同上配對鍵: EN『Insulin decrease low』指胰島素低/正常時套用的衰減係數, 非『低速衰減』. CH、CN 同修以與 HIGH 成對."
+ },
+ "UI.json|UI_Aegis_ClimateWinter": {
+  "as1_value": "寒冬 (-12°C)",
+  "value": "降雪寒冬 (-12°C)",
+  "reason": "As1 v3.9.1 同步逐鍵審定：b20。CH「降雪寒冬 (-12°C)」忠於目前 EN='Snowy winter (-12°C)' 且正確，保留不動；但 As1 CN「寒冬 (-12°C)」漏掉 snowy，而此選項實際會啟動降雪，CN 側資訊缺失須補齊，故僅提供完整 cn_override。（姊妹鍵 ClimateHeat EN='Extreme summer'、CN「酷暑」已含極端義，不另提 override。）"
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_INSTITUTE_DECONTAMINATION_DESCRIPTION": {
+  "as1_value": "一间暴露过的房间必须先清理才能重新使用. 收集消毒剂和防护装备. 每一份都很重要: 库存处于最低水平, 医疗队已经开始只为最严重的病例预留物资. 完成这一批将恢复诊所的安全余量.",
+  "value": "一间暴露过的房间必须先清理才能重新使用. 收集消毒剂和防护装备. 每一份都很重要: 库存已低于最低水平, 医疗队已经开始只为最严重的病例预留物资. 完成这一批将恢复诊所的安全余量.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已由 \"the stores are at minimum levels\" 改為 \"below minimum levels\"; 我方 CH「低於最低水位」已跟上, 但 As1 CN 仍是「处于最低水平」(等同舊 EN), 屬過時需同步。"
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_INSTITUTE_FIELD_SURGERY_DESCRIPTION": {
+  "as1_value": "我们将在研究所外准备一个手术点. 收集稳定伤员用的器械和材料. 每一份都很重要: 库存处于最低水平, 医疗队已经开始只为最严重的病例预留物资. 完成这一批将恢复诊所的安全余量.",
+  "value": "我们将在研究所外准备一个手术点. 收集稳定伤员用的器械和材料. 每一份都很重要: 库存已低于最低水平, 医疗队已经开始只为最严重的病例预留物资. 完成这一批将恢复诊所的安全余量.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已由 \"the stores are at minimum levels\" 改為 \"below minimum levels\"; 我方 CH「低於最低水位」已跟上, 但 As1 CN 仍是「处于最低水平」(等同舊 EN), 屬過時需同步。（同時修正專名 研究所→研究院）"
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_INSTITUTE_QUARANTINE_STOCK_DESCRIPTION": {
+  "as1_value": "隔离区必须独立运转几天. 为它供应物资, 不依赖中央仓库. 每一份都很重要: 库存处于最低水平, 医疗队已经开始只为最严重的病例预留物资. 完成这一批将恢复诊所的安全余量.",
+  "value": "隔离区必须独立运转几天. 为它供应物资, 不依赖中央仓库. 每一份都很重要: 库存已低于最低水平, 医疗队已经开始只为最严重的病例预留物资. 完成这一批将恢复诊所的安全余量.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已由 \"the stores are at minimum levels\" 改為 \"below minimum levels\"; 我方 CH「低於最低水位」已跟上, 但 As1 CN 仍是「处于最低水平」(等同舊 EN), 屬過時需同步。"
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_INSTITUTE_SCIENTIFIC_RESERVE_DESCRIPTION": {
+  "as1_value": "实验室需要单独的储备, 让它的试验不会消耗诊所的资源. 每一份都很重要: 库存处于最低水平, 医疗队已经开始只为最严重的病例预留物资. 完成这一批将恢复诊所的安全余量.",
+  "value": "实验室需要单独的储备, 让它的试验不会消耗诊所的资源. 每一份都很重要: 库存已低于最低水平, 医疗队已经开始只为最严重的病例预留物资. 完成这一批将恢复诊所的安全余量.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已由 \"the stores are at minimum levels\" 改為 \"below minimum levels\"; 我方 CH「低於最低水位」已跟上, 但 As1 CN 仍是「处于最低水平」(等同舊 EN), 屬過時需同步。"
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_KNOX_WORKFORCE_HEAVY_REPAIR_DESCRIPTION": {
+  "as1_value": "当前优先事项: 重型修理. 每天都有新的东西要修, 仓库已经跟不上. 带来这些材料. 维护队已经从其他设施上拆取零件, 浪费了太多时间. 有了完整的订单, 他们就能好好完成工作, 恢复服务, 而不在另一个区域制造故障.",
+  "value": "当前优先事项: 重型修理. 每天都有新的东西要修, 仓库已经跟不上. 带来这些材料. 维护队已经从其他设施上拆取零件, 浪费了太多时间. 有了完整的订单, 他们就能一次把工作彻底做完, 恢复服务, 而不在另一个区域制造故障.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 由 \"finish the job properly\" 改為 \"finish the job once and for all\"; 本鍵 CH/CN 仍停在舊 EN 的「好好做完」, 而同段落的三個姊妹鍵 (PENDING_REPAIRS / ROOF_REPAIRS / WATERWORKS, 批次27) 已改為「一次把工程徹底做完」+ CN「一次把工作彻底做完」, 需同步否則同段共用句不一致."
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_KNOX_WORKFORCE_MAINTENANCE_STOCK_DESCRIPTION": {
+  "as1_value": "当前优先事项: 维护储备. 工头留下了一份具体的清单, 一支工队正在等待. 把清单上的东西都送来. 共享基础设施依赖的是那些在缺少备用零件时会迅速堆积起来的小活. 这批送达将直接进入工坊, 分配给下一个可用的班次.",
+  "value": "当前优先事项: 维修仓库. 工头留下了一份具体的清单, 一支工队正在等待. 把清单上的东西都送来. 共享基础设施依赖的是那些在缺少备用零件时会迅速堆积起来的小活. 这批送达将直接进入工坊, 分配给下一个可用的班次.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 由 \"Maintenance stock\" 改為 \"Maintenance depot\"; 同名 TITLE 鍵 (批次27) 已改 CH「維修倉庫」/CN「维修仓库」, 本 DESCRIPTION 仍是舊譯「維修備料」/「维护储备」, 委託標題與內文首句必須同字."
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_KNOX_WORKFORCE_MAINTENANCE_STOCK_TITLE": {
+  "as1_value": "维护储备",
+  "value": "维修仓库",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN=Maintenance depot(倉庫/補給站), As1 CN「维护储备」為過時譯法, 對象不同; 依 EN 改為維修倉庫."
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_KNOX_WORKFORCE_PENDING_REPAIRS_DESCRIPTION": {
+  "as1_value": "当前优先事项: 待修理. 每天都有新的东西要修, 仓库已经跟不上. 带来这些材料. 维护队已经从其他设施上拆取零件, 浪费了太多时间. 有了完整的订单, 他们就能好好完成工作, 恢复服务, 而不在另一个区域制造故障.",
+  "value": "当前优先事项: 待修理. 每天都有新的东西要修, 仓库已经跟不上. 带来这些材料. 维护队已经从其他设施上拆取零件, 浪费了太多时间. 有了完整的订单, 他们就能一次把工作彻底做完, 恢复服务, 而不在另一个区域制造故障.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 已改寫而 As1 CN 未同步, 依已核實 EN 修訂 CH 並同步回正簡中. EN 由 finish the job properly 改為 once and for all(一次徹底做完), CN 仍寫「好好完成工作」."
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_KNOX_WORKFORCE_ROOF_REPAIRS_DESCRIPTION": {
+  "as1_value": "当前优先事项: 屋顶修理. 每天都有新的东西要修, 仓库已经跟不上. 带来这些材料. 维护队已经从其他设施上拆取零件, 浪费了太多时间. 有了完整的订单, 他们就能好好完成工作, 恢复服务, 而不在另一个区域制造故障.",
+  "value": "当前优先事项: 屋顶修理. 每天都有新的东西要修, 仓库已经跟不上. 带来这些材料. 维护队已经从其他设施上拆取零件, 浪费了太多时间. 有了完整的订单, 他们就能一次把工作彻底做完, 恢复服务, 而不在另一个区域制造故障.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 已改寫而 As1 CN 未同步, 依已核實 EN 修訂 CH 並同步回正簡中. EN 改為 once and for all, CN 未跟進."
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_KNOX_WORKFORCE_TOOL_CABINET_DESCRIPTION": {
+  "as1_value": "当前优先事项: 工具箱. 工队因缺少工具和耗材而停工. 完成这份订单, 让工作得以恢复. 工队已经准备好了工地, 但继续安全作业所需的合适耗材和工具却缺失. 每件所请求的物品都对应着修理报告上的具体任务.",
+  "value": "当前优先事项: 工具柜. 工队因缺少工具和耗材而停工. 完成这份订单, 让工作得以恢复. 工队已经准备好了工地, 但继续安全作业所需的合适耗材和工具却缺失. 每件所请求的物品都对应着修理报告上的具体任务.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：標題行 EN=Tool cabinet 而 CN 寫「工具箱」, 對象不同; 依 EN 回正為工具櫃/工具柜."
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_KNOX_WORKFORCE_TOOL_CABINET_TITLE": {
+  "as1_value": "工具箱",
+  "value": "工具柜",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN=Tool cabinet(櫃), As1 CN「工具箱」對象不同; CH 沿用工具櫃並回正 CN."
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_KNOX_WORKFORCE_WATERWORKS_DESCRIPTION": {
+  "as1_value": "当前优先事项: 供水设施. 每天都有新的东西要修, 仓库已经跟不上. 带来这些材料. 维护队已经从其他设施上拆取零件, 浪费了太多时间. 有了完整的订单, 他们就能好好完成工作, 恢复服务, 而不在另一个区域制造故障.",
+  "value": "当前优先事项: 供水设施. 每天都有新的东西要修, 仓库已经跟不上. 带来这些材料. 维护队已经从其他设施上拆取零件, 浪费了太多时间. 有了完整的订单, 他们就能一次把工作彻底做完, 恢复服务, 而不在另一个区域制造故障.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 已改寫而 As1 CN 未同步, 依已核實 EN 修訂 CH 並同步回正簡中. EN 改為 once and for all, CN 未跟進."
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_OLD_GUARD_BARRACKS_STOCK_DESCRIPTION": {
+  "as1_value": "当前优先事项: 兵营储备. 上一次防御之后, 军械库的一部分已无法使用. 我们需要可用的替代品. 这不是在收集废品: 每件所请求的物品都对应着检查时记录的短缺. 有用的装备将被清洁, 登记, 并立即送到必须使用它的人手中.",
+  "value": "当前优先事项: 营房仓库. 上一次防御之后, 军械库的一部分已无法使用. 我们需要可用的替代品. 这不是在收集废品: 每件所请求的物品都对应着检查时记录的短缺. 有用的装备将被清洁, 登记, 并立即送到必须使用它的人手中.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：標題行 EN=Barracks depot 而 CN 仍寫「兵营储备」; 依 EN 修訂標題行, 其餘內文一致未動."
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_OLD_GUARD_BARRACKS_STOCK_TITLE": {
+  "as1_value": "兵营储备",
+  "value": "营房仓库",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN=Barracks depot(倉庫), As1 CN「兵营储备」未跟進 EN 改寫; 依 EN 修訂."
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_OLD_GUARD_RANGE_SUPPLIES_DESCRIPTION": {
+  "as1_value": "当前优先事项: 靶场物资. 库存低于最低水平, 而我们不想在遭到攻击时才意识到这一点. 取得清单上列出的物资. 最近的出击让装备付出了代价, 几项规定储备跌破作战最低水平. 这份订单将为卫队重新配装, 而不必扒下仍在哨位上执勤人员身上的装备.",
+  "value": "当前优先事项: 射击训练. 库存低于最低水平, 而我们不想在遭到攻击时才意识到这一点. 取得清单上列出的物资. 最近的出击让装备付出了代价, 几项规定储备跌破作战最低水平. 这份订单将为卫队重新配装, 而不必扒下仍在哨位上执勤人员身上的装备.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：標題行 EN 已改 Shooting practice 而 CN 仍為「靶场物资」; 依 EN 修訂標題行, 其餘內文一致未動."
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_OLD_GUARD_RANGE_SUPPLIES_TITLE": {
+  "as1_value": "靶场物资",
+  "value": "射击训练",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN=Shooting practice(射擊訓練), As1 CN「靶场物资」為舊 EN(Range supplies)殘留, 對象不同; 依 EN 修訂."
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_OLD_GUARD_READY_RACK_DESCRIPTION": {
+  "as1_value": "当前优先事项: 待发架. 纪律从库存充足的仓库开始. 把这些物资交给军械官. 应急储备在上一次行动中的消耗超出预期. 现在补足它们, 将让下一支巡逻队不必在机动性, 防护和火力之间做出取舍.",
+  "value": "当前优先事项: 武器待命. 纪律从库存充足的仓库开始. 把这些物资交给军械官. 应急储备在上一次行动中的消耗超出预期. 现在补足它们, 将让下一支巡逻队不必在机动性, 防护和火力之间做出取舍.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：首句標題詞隨 EN(Current priority: Weapons ready) 更新, 與 TITLE 一致; 其餘本文 CN 與 EN 相符未動."
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_OLD_GUARD_READY_RACK_TITLE": {
+  "as1_value": "待发架",
+  "value": "武器待命",
+  "reason": "As1 v3.9.1 同步逐鍵審定：本版 EN 已由 Ready rack 改寫為 Weapons ready(武器整備完畢), 標題指涉對象由「架子」變成「武器狀態」; As1 CN「待发架」仍沿用舊版標題, 屬過時翻譯. CH 改為「武器待命」, CN 同步."
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_SYNDICATE_SEALED_DEAL_DESCRIPTION": {
+  "as1_value": "当前优先事项: 密封的交易. 仓库里出现了严肃的生意绝不该有的缺口. 处理好这份清单. 这份委托对应着秘密市场上的一个具体需求, 而不是例行补货. 一次干净的送达将加强联络, 这些联络在其他资源变得稀缺时可能派上用场.",
+  "value": "当前优先事项: 谈定的交易. 仓库里出现了严肃的生意绝不该有的缺口. 处理好这份清单. 这份委托对应着秘密市场上的一个具体需求, 而不是例行补货. 一次干净的送达将加强联络, 这些联络在其他资源变得稀缺时可能派上用场.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：首句標題詞與 TITLE 同步修正(密封的交易→谈定的交易); 其餘本文未動."
+ },
+ "UI.json|UI_KCQUESTS_COMMISSION_SYNDICATE_SEALED_DEAL_TITLE": {
+  "as1_value": "密封的交易",
+  "value": "谈定的交易",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN Sealed deal 是「談定/敲定的交易」慣用語; As1 CN「密封的交易」把 sealed 誤作物理封緘, 語意錯置. CH 沿用正確譯法, CN 同步修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_CONTEXT_CLOSING_NEW_KNOX_COMMUNITY": {
+  "as1_value": "我们已经为任何必须前来的人留出了位置和一份配给. 让{recipientColleagueName}知道, 我们不会不提供自己的帮助就开口求助.",
+  "value": "我们已经为任何必须前来的人留出了一张桌子和一份配给. 让{recipientColleagueName}知道, 我们不会不提供自己的帮助就开口求助.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 由 \"set aside a place\" 改為 \"set aside a table\"(具體邀人同桌用餐的意象); CH/CN 仍是舊 EN 的「位置/位置」, 屬 EN 內容更新未跟上, 非風格差異."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_CONTEXT_CLOSING_SYNDICATE": {
+  "as1_value": "如果你对安排感兴趣, 只告诉{recipientColleagueName}. 当旁观者永远不知道存在一笔交易时, 辛迪加运转得最好.",
+  "value": "如果你对安排感兴趣, 只告诉{recipientColleagueName}. 当好奇的人从头到尾不知道有过交易时, 辛迪加最能履行自己的承诺.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：The Syndicate 在 CH 真相層定名「辛迪加」(UI_KCMAIN_FACTION_SYNDICATE_NAME 等 10+ 處), 且 As1 CN 本句即用「辛迪加」;「集團」會與 {senderFactionName} 佔位符實際顯示的派系名不一致."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_AMMUNITION_AUDIT_TURN_IN_DIALOGUE": {
+  "as1_value": "我们会在关起门来之后清点. 答复将包含总数, 而不是完整的库存清单. 我会带上它, 在路上检验这套说法.",
+  "value": "我们会在关起门来之后重新清点. 答复将包含总数, 而不是完整的库存清单. 我会带上它, 在路上检验这套说法.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 由 \"We will count\" 改為 \"We will recount\"(重新清點, 呼應前句要求誠實總數的稽核語境); CH/CN 皆只譯「清點」, 漏掉 re-."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_BROKEN_RELAY_TURN_IN_DIALOGUE": {
+  "as1_value": "我会找一支小队. 在排除破坏的可能之前, 谁也不能在那里发射信号. 我会带上它, 在路上检验这套说法.",
+  "value": "我会找一支小队. 在我们判定那是故障还是人为破坏之前, 谁也不能在那里发射信号. 我会带上它, 在路上检验这套说法.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN until we determine whether it was a failure or sabotage(判定是故障還是破壞); As1 CN「在排除破坏的可能之前」只剩排除破壞一面, 漏掉故障這一支. CH/CN 皆補正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_CHILDREN_SUPPLIES_OFFER_DIALOGUE": {
+  "as1_value": "小小的需求最先被遗忘, 却会在日后惩罚所有人. 轻装上路, 永远别让一张纸变得比你的命更值钱.",
+  "value": "小小的需求是大家最先忘掉的, 之后却造成最多的痛苦. 轻装上路, 永远别让一张纸变得比你的命更值钱.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 由 \"forgotten first and punish everyone later\" 改寫為 \"the first everyone forgets and the ones that cause the most suffering later\": 施受對象與程度都變了(大家遺忘 / 造成最多痛苦), CH/CN 仍是舊句的「讓所有人付代價/惩罚所有人」."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_DEBT_AND_FAVOR_OFFER_DIALOGUE": {
+  "as1_value": "带着这封信, 不要附加威胁. 收信人知道这笔债务. 轻装上路, 永远别让一张纸变得比你的命更值钱.",
+  "value": "带着这封信, 不要附加威胁. 收信人比我们更清楚这笔债. 轻装上路, 永远别让一张纸变得比你的命更值钱.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN The recipient knows the debt better than we do; As1 CN 漏掉 better than we do 這一層比較. CH/CN 皆補足."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_DEBT_AND_FAVOR_TITLE": {
+  "as1_value": "债务与人情",
+  "value": "未了的人情",
+  "reason": "As1 v3.9.1 同步逐鍵審定：本版 EN 由 Debt and favor 改為 Outstanding favor, 指涉對象是「尚未回報的人情」而非並列的債與人情; As1 CN「债务与人情」為舊版. CH/CN 同步更新."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_DEBT_AND_FAVOR_TURN_IN_DIALOGUE": {
+  "as1_value": "我明白这意味着什么. 答复不会立刻给出, 但我没有忘记. 我会带上它, 在路上检验这套说法.",
+  "value": "我明白这意味着什么. 答复不会立刻给出, 但我也不会假装自己忘了. 我会带上它, 在路上检验这套说法.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN but I will not pretend I have forgotten either(不會假裝忘了), As1 CN 作「但我没有忘记」, 漏掉「假裝」這層語氣. CH/CN 皆補正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_FUEL_EXCHANGE_LETTER": {
+  "as1_value": "我们可以匀出燃料, 交换安全的容器, 一条清理过的路线, 以及指定的车辆不会被挪用改道的保证. 考虑小路和沿途收集的消息.",
+  "value": "我们可以匀出燃料, 交换安全的容器, 一条清理过的路线, 以及指定的车辆不会被调去执行别的任务的保证. 考虑小路和沿途收集的消息.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 新增 \"diverted to another job\"(被調去做別的工作), CH 只說「挪用」語焉不詳, CN 的「挪用改道」更把重點誤成改變路線(與前句已要求的 cleared route 混淆)."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_FUEL_EXCHANGE_OFFER_DIALOGUE": {
+  "as1_value": "这份协议也许能阻止两个团体为同一罐油争斗. 轻装上路, 永远别让一张纸变得比你的命更值钱.",
+  "value": "这份协议能避免两个团体最终为同一罐油争斗. 轻装上路, 永远别让一张纸变得比你的命更值钱.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 由 \"may stop\" 改為 \"prevents ... from ending up fighting\": 語氣由可能變確定, CH/CN 都還留著「或許/也许」."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_FUEL_EXCHANGE_TURN_IN_DIALOGUE": {
+  "as1_value": "条款苛刻但可行. 我会准备一个诚实的数字. 我会带上它, 在路上检验这套说法.",
+  "value": "条款苛刻但可行. 我会在答复之前准备一个准确的数字. 我会带上它, 在路上检验这套说法.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN I will prepare an accurate figure before replying; As1 CN「诚实的数字」漏掉 accurate 與 before replying. CH/CN 皆依 EN 補正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_HARVEST_REQUEST_LETTER": {
+  "as1_value": "下一次收成因缺少工具, 容器和经验丰富的人手而面临风险. 现在帮忙一天, 也许能避免数周的饥饿. 考虑小路和沿途收集的消息.",
+  "value": "下一次收成因缺少工具, 容器和经验丰富的人手而面临风险. 现在帮忙一天, 就能避免日后数周的饥饿. 考虑小路和沿途收集的消息.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 由 \"may prevent weeks of hunger\" 改為 \"would prevent weeks of hunger later\": 語氣確定化並加上 later; CH/CN 仍是「或許/也许」且缺「日後」."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_INFECTED_SIGHTING_TURN_IN_DIALOGUE": {
+  "as1_value": "我会派一名观察者到高处, 并警告他们路上的人. 我会带上它, 在路上检验这套说法.",
+  "value": "我会派一名观察员到高处. 如果这股移动持续, 我们会警告其路径上的人. 我会带上它, 在路上检验这套说法.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為附條件示警 (If the movement continues), As1 CN 仍是舊版無條件警告, 整個條件子句缺失."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_MECHANICAL_FAILURE_TURN_IN_DIALOGUE": {
+  "as1_value": "测量数据足够了. 我能准备工具, 但谁也不能先碰它. 我会带上它, 在路上检验这套说法.",
+  "value": "测量数据足够了. 我能准备工具, 但在我到场之前, 谁也不能碰那台设备. 我会带上它, 在路上检验这套说法.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 明示 until I arrive 的時限與受詞 the equipment; CN 只寫「谁也不能先碰它」, 到場時限整句缺失."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_PERSONAL_KEEPSAKE_TITLE": {
+  "as1_value": "私人纪念物",
+  "value": "私人专送",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 標題已由 Personal keepsake 改為 Personal delivery (紀念物→專送), CN 仍是舊標題「私人纪念物」, 指涉對象不同."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_PERSONAL_KEEPSAKE_TURN_IN_DIALOGUE": {
+  "as1_value": "我以为它和其他一切一起丢失了. 谢谢你没有把它变成商品. 我会带上它, 在路上检验这套说法.",
+  "value": "我以为它和其他一切一起丢失了. 谢谢你把它送来, 而且没有把它变成商品. 我会带上它, 在路上检验这套说法.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 加入 \"Thank you for bringing it without...\"(多了「把它帶來」這一層謝意); 譯文只謝「沒變成商品」, 漏了一句."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_RADIO_WINDOW_TURN_IN_DIALOGUE": {
+  "as1_value": "我会更换呼号, 只允许一名操作员应答. 我会带上它, 在路上检验这套说法.",
+  "value": "我会更换呼号, 并把应答限制为一个人的声音. 其他人不需要知道. 我会带上它, 在路上检验这套说法.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 新增整句 Nobody else needs to know it.; CN 仍是舊版兩句, 該句整句漏譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_SEALED_EVIDENCE_LETTER": {
+  "as1_value": "信封里装着一些观察记录, 单独阅读时可能冤枉好人. 它必须密封送达, 并在会面之前保持密封. 考虑小路和沿途收集的消息.",
+  "value": "信封里装着一些观察记录, 若脱离上下文阅读, 可能指向错误的人. 它必须密封送达, 并在会面之前保持密封. 考虑小路和沿途收集的消息.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 改為 \"could point to the wrong person if read out of context\"(條件由「單獨閱讀」變成「脫離上下文」, 結果由「冤枉好人」變成「指向錯的人」); 譯文仍停在舊 EN."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_SEALED_EVIDENCE_TITLE": {
+  "as1_value": "密封的证据",
+  "value": "密封的文件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 標題已由 Sealed evidence 改為 Documents under seal (證據→文件), CN 仍是舊標題「密封的证据」, 指涉對象不同."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_SEALED_EVIDENCE_TURN_IN_DIALOGUE": {
+  "as1_value": "封口完好无损. 在所有相关人到齐之前, 我会保管它. 我会带上它, 在路上检验这套说法.",
+  "value": "封口完好无损. 在必须为其中内容负责的人到场之前, 我会保管它. 我会带上它, 在路上检验这套说法.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 由 \"everyone concerned\" 改為 \"those who must answer for its contents\"; CH 已改為「該為內容負責的人」, CN 仍是「所有相关人」."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_STOLEN_TOOLS_LETTER": {
+  "as1_value": "专用工具不见了. 询问近期的修理和反常的报价, 但在确认记号或序列号之前不要指责任何人. 考虑小路和沿途收集的消息.",
+  "value": "几件不是谁都用得上的专用工具不见了. 询问近期的修理和反常的报价, 但在确认记号或序列号之前不要指责任何人. 考虑小路和沿途收集的消息.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 新增限定子句 that are not useful to just anyone; CN 仍是舊版「专用工具不见了」, 該子句整段缺失."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_STOLEN_TOOLS_OFFER_DIALOGUE": {
+  "as1_value": "窃贼也许会归还一件工具; 被冤枉的邻居却不会归还信任. 轻装上路, 永远别让一张纸变得比你的命更值钱.",
+  "value": "窃贼也许会归还一件工具; 被冤枉的人却不会归还信任. 轻装上路, 永远别让一张纸变得比你的命更值钱.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已把 \"falsely accused neighbor\" 改為 \"falsely accused person\"; 譯文仍寫「鄰居」, 憑空指定 EN 沒有的關係."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_STORM_PREPARATION_LETTER": {
+  "as1_value": "种种迹象表明将有大风和持续的降雨. 在它来临之前, 固定遮盖物, 把储备垫离地面, 并疏通排水沟. 考虑小路和沿途收集的消息.",
+  "value": "种种迹象表明将有大风和持续的降雨. 在它来临之前, 固定遮盖物, 把储备垫离地面, 并检查排水沟. 考虑小路和沿途收集的消息.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 由 \"clear drains\" 改為 \"check drains\"(動作從疏通改為檢查); 譯文仍寫成疏通/清通."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_STORM_PREPARATION_OFFER_DIALOGUE": {
+  "as1_value": "一旦雨下起来, 再发现哪座屋顶需要加固就太迟了. 轻装上路, 永远别让一张纸变得比你的命更值钱.",
+  "value": "一旦雨下起来, 再发现哪座屋顶已经求救了好几周就太迟了. 轻装上路, 永远别让一张纸变得比你的命更值钱.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 由 \"which roof needed help\" 改為 \"had been crying out for help for weeks\"; CH 已加「求救了好幾週」, CN 仍寫「需要加固」且漏掉時間長度."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_SUSPICIOUS_MOVEMENTS_TURN_IN_DIALOGUE": {
+  "as1_value": "我会谨慎观察. 如果他们的行动规律改变, 我们会最先知道. 我会带上它, 在路上检验这套说法.",
+  "value": "我会谨慎观察. 如果他们的行动规律改变, 我们会在他们察觉我们在监视之前就知道. 我会带上它, 在路上检验这套说法.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為 before they realize we are watching; CN 仍是舊版「我们会最先知道」, 整個時間子句缺失."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_TARGET_DEFAULT": {
+  "as1_value": "把这份信息视为机密, 并通过可靠的信使答复.",
+  "value": "如果这些消息送到时还派得上用场, 就替下一个旅人留点食物.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改寫為流浪者結語; CN 仍是舊版收件人守則 (視為機密/透過可信信差回覆), 整句不同源. 同組 TARGET_INSTITUTE/TARGET_KNOX_WORKFORCE 的 CN 已更新, 可證此鍵漏更新."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_TARGET_DRIFTERS": {
+  "as1_value": "把这与你路上所见进行比对, 并精确标记日期和路线.",
+  "value": "这条路线只告诉尊重那些记号的人. 记号一旦消失, 我们全都得再次摸黑赶路.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 全句改寫; CN 仍是舊版 (與路上所見比對並標註日期路線), 與新 EN 無一句對應."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_TARGET_KNOXNET": {
+  "as1_value": "不要在公开无线电上提及姓名和确切位置, 并通过可靠的频道确认.",
+  "value": "我在三个不同的地方听到那个信号, 也记下了时间. 或许你们能告诉我, 现在还有谁在通话.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 全句改寫為信使自述; CN 仍是舊版無線電守則 (不要提姓名與確切位置), 整句不同源."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_TARGET_KNOX_AUTHORITY": {
+  "as1_value": "只动用控制问题所需的权限; 避免不必要的搜查或没收.",
+  "value": "我没有证件, 也不打算久留. 情报你们拿去用, 送这封信的人请放行.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 全句改寫為信使自述; CN 仍是舊版給當局的用權守則, 整句不同源."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_TARGET_NEW_KNOX_COMMUNITY": {
+  "as1_value": "保护平民, 公平分担负担, 并避免引发恐慌.",
+  "value": "只要你们准备两张床和一点热的东西, 我可以把还在路上流浪的人带过来.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 全句改寫為信使提議; CN 仍是舊版社群守則 (保護平民/公平分擔/避免恐慌), 整句不同源."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_TARGET_OLD_GUARD": {
+  "as1_value": "在移动人员或物资之前, 协调哨兵和安全接近路线.",
+  "value": "你们的地图上有道路, 却没有破掉的围栏和干掉的溪流. 调动人手之前, 先听侦察兵怎么说.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 全句改寫為信使建言; CN 仍是舊版哨位協調守則, 整句不同源."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_TARGET_SYNDICATE": {
+  "as1_value": "期望谨慎行事; 吸引目击者或武装注意对任何一方都没有好处.",
+  "value": "出事时丢不掉的东西, 我一概不带. 谈报酬之前, 先把风险讲清楚.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 全句改寫為信使自述條件; CN 仍是舊版謹慎守則, 整句不同源."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_DRIFTERS_UNSAFE_WATER_OFFER_DIALOGUE": {
+  "as1_value": "如果这事上了无线电, 半个县的人都会放弃可能仍然干净的水. 轻装上路, 永远别让一张纸变得比你的命更值钱.",
+  "value": "如果这事上了无线电, 半个地区的人都会放弃可能仍然干净的储水罐. 轻装上路, 永远别让一张纸变得比你的命更值钱.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為 \"half the region will abandon tanks\"(郡→地區, 水→儲水槽); 譯文仍是半個縣/郡與「水」."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_BROKEN_RELAY_TURN_IN_DIALOGUE": {
+  "as1_value": "我会找一支小队. 在排除破坏的可能之前, 谁也不能在那里发射信号. 我会在行动前先记录这份信息.",
+  "value": "我会找一支小队. 在我们判定那是故障还是人为破坏之前, 谁也不能在那里发射信号. 我会在行动前先记录这份信息.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為判定 failure or sabotage 二者; CN 仍是舊版「排除破坏的可能」, 漏掉故障這一半語意."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_DEBT_AND_FAVOR_OFFER_DIALOGUE": {
+  "as1_value": "带着这封信, 不要附加威胁. 收信人知道这笔债务. 这需要判断力, 而不只是速度.",
+  "value": "带着这封信, 不要附加威胁. 收信人比我们更清楚这笔债务. 这需要判断力, 而不只是速度.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 加了 \"better than we do\"(收信人比我們更清楚這筆債); 譯文漏掉比較語."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_DEBT_AND_FAVOR_TITLE": {
+  "as1_value": "债务与人情",
+  "value": "未了的人情",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 標題已由 Debt and favor 改為 Outstanding favor (債與人情→未償還的人情), CN 仍是舊標題「债务与人情」, 指涉對象不同."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_FUEL_EXCHANGE_TURN_IN_DIALOGUE": {
+  "as1_value": "条款苛刻但可行. 我会准备一个诚实的数字. 我会在行动前先记录这份信息.",
+  "value": "条款苛刻但可行. 我会在答复之前准备一个准确的数字. 我会在行动前先记录这份信息.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 由 \"an honest figure\" 改為 \"an accurate figure before replying\"; CH 已改, CN 仍是「诚实的数字」且漏掉「回覆之前」."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_INFECTED_SIGHTING_TURN_IN_DIALOGUE": {
+  "as1_value": "我会派一名观察者到高处, 并警告他们路上的人. 我会在行动前先记录这份信息.",
+  "value": "我会派一名观察员到高处. 如果这股移动持续, 我们会警告其路径上的人. 我会在行动前先记录这份信息.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：同 DRIFTERS 版: EN 的條件子句 (If the movement continues) 在 CN 中整句缺失."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_MECHANICAL_FAILURE_TURN_IN_DIALOGUE": {
+  "as1_value": "测量数据足够了. 我能准备工具, 但谁也不能先碰它. 我会在行动前先记录这份信息.",
+  "value": "测量数据足够了. 我能准备工具, 但在我到场之前, 谁也不能碰那台设备. 我会在行动前先记录这份信息.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：同 DRIFTERS 版: EN 的 until I arrive 時限在 CN 缺失."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_PERSONAL_KEEPSAKE_TITLE": {
+  "as1_value": "私人纪念物",
+  "value": "私人递送",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為 Personal delivery；As1 CN 仍是舊標題「私人纪念物」(keepsake)，依 EN 改為遞送。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_PERSONAL_KEEPSAKE_TURN_IN_DIALOGUE": {
+  "as1_value": "我以为它和其他一切一起丢失了. 谢谢你没有把它变成商品. 我会在行动前先记录这份信息.",
+  "value": "我以为它和其他一切一起丢失了. 谢谢你把它送来, 而且没有把它变成商品. 我会在行动前先记录这份信息.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 加入 \"Thank you for bringing it without...\"(多了「把它帶來」這一層謝意); 譯文只謝「沒變成商品」, 漏了一句."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_RADIO_WINDOW_TURN_IN_DIALOGUE": {
+  "as1_value": "我会更换呼号, 只允许一名操作员应答. 我会在行动前先记录这份信息.",
+  "value": "我会更换呼号, 只允许一名操作员应答. 其他人不需要知道. 我会在行动前先记录这份信息.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 漏譯 EN 整句「Nobody else needs to know it.」。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_SEALED_EVIDENCE_LETTER": {
+  "as1_value": "信封里装着一些观察记录, 单独阅读时可能冤枉好人. 它必须密封送达, 并在会面之前保持密封. 评估临床风险, 并保存可核实的数据.",
+  "value": "信封里装着一些观察记录, 若脱离上下文阅读, 可能指向错误的人. 它必须密封送达, 并在会面之前保持密封. 评估临床风险, 并保存可核实的数据.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 改為 \"could point to the wrong person if read out of context\"(條件由「單獨閱讀」變成「脫離上下文」, 結果由「冤枉好人」變成「指向錯的人」); 譯文仍停在舊 EN."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_SEALED_EVIDENCE_TITLE": {
+  "as1_value": "密封的证据",
+  "value": "封缄文件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為 Documents under seal；As1 CN 仍是舊標題「密封的证据」(Sealed evidence)。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_SEALED_EVIDENCE_TURN_IN_DIALOGUE": {
+  "as1_value": "封口完好无损. 在所有相关人到齐之前, 我会保管它. 我会在行动前先记录这份信息.",
+  "value": "封口完好无损. 我会保管它, 直到必须为其中内容负责的人到场. 我会在行动前先记录这份信息.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 沿用舊 EN「everyone concerned」譯成「所有相关人」；新 EN 為「those who must answer for its contents」。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_STOLEN_TOOLS_LETTER": {
+  "as1_value": "专用工具不见了. 询问近期的修理和反常的报价, 但在确认记号或序列号之前不要指责任何人. 评估临床风险, 并保存可核实的数据.",
+  "value": "不是谁都用得上的专用工具不见了. 询问近期的修理和反常的报价, 但在确认记号或序列号之前不要指责任何人. 评估临床风险, 并保存可核实的数据.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 漏譯 EN 限定子句「that are not useful to just anyone」。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_STOLEN_TOOLS_OFFER_DIALOGUE": {
+  "as1_value": "窃贼也许会归还一件工具; 被冤枉的邻居却不会归还信任. 这需要判断力, 而不只是速度.",
+  "value": "窃贼也许会归还一件工具; 被冤枉的人却不会归还信任. 这需要判断力, 而不只是速度.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已把 \"falsely accused neighbor\" 改為 \"falsely accused person\"; 譯文仍寫「鄰居」, 憑空指定 EN 沒有的關係."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_STORM_PREPARATION_LETTER": {
+  "as1_value": "种种迹象表明将有大风和持续的降雨. 在它来临之前, 固定遮盖物, 把储备垫离地面, 并疏通排水沟. 评估临床风险, 并保存可核实的数据.",
+  "value": "种种迹象表明将有大风和持续的降雨. 在它来临之前, 固定遮盖物, 把储备垫离地面, 并检查排水沟. 评估临床风险, 并保存可核实的数据.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 指示 check drains，CN 沿用舊版 clear drains 譯為疏通，依 EN 修正為檢查。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_STORM_PREPARATION_OFFER_DIALOGUE": {
+  "as1_value": "一旦雨下起来, 再发现哪座屋顶需要加固就太迟了. 这需要判断力, 而不只是速度.",
+  "value": "一旦雨下起来, 再发现哪座屋顶已经求救了好几周就太迟了. 这需要判断力, 而不只是速度.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 把 EN「had been crying out for help for weeks」簡化成「需要加固」，漏掉已求救數週的資訊。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_SUSPICIOUS_MOVEMENTS_TURN_IN_DIALOGUE": {
+  "as1_value": "我会谨慎观察. 如果他们的行动规律改变, 我们会最先知道. 我会在行动前先记录这份信息.",
+  "value": "我会谨慎观察. 如果他们的行动规律改变, 我们会在他们察觉我们在监视之前就先知道. 我会在行动前先记录这份信息.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 把 EN「before they realize we are watching」簡化成「最先知道」，漏掉條件。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_TARGET_DEFAULT": {
+  "as1_value": "把这份信息视为机密, 并通过可靠的信使答复.",
+  "value": "把这份信息视为机密, 并且只通过可靠的信使答复.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 漏譯 only，未保留僅能透過可信信使回覆的限制。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_TARGET_DRIFTERS": {
+  "as1_value": "把这与你路上所见进行比对, 并精确标记日期和路线.",
+  "value": "他们的路线也许能告诉我们, 这个问题是不是也在其他聚落出现过. 打听的时候不要透露我们为什么关心.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 仍是舊版通用句，與本次 EN 完全不同源，依 EN 重寫 CH 並補正 CN。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_TARGET_INSTITUTE": {
+  "as1_value": "把医学影响留给合格的人员, 并提交一份书面评估.",
+  "value": "这件事只能让研究所里有资格的人员知道; 资料抄录完之后就把这张纸销毁.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 仍是舊版通用句，與本次 EN 完全不同源，依 EN 重寫 CH 並補正 CN。（Institute 依專案既有譯名「研究所」。）"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_TARGET_KNOXNET": {
+  "as1_value": "不要在公开无线电上提及姓名和确切位置, 并通过可靠的频道确认.",
+  "value": "不要在公开无线电上传送姓名或症状. 等频道安全时, 再通过同一个频道确认.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 仍是舊版通用句，與本次 EN 完全不同源，依 EN 重寫 CH 並補正 CN。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_TARGET_KNOX_AUTHORITY": {
+  "as1_value": "只动用控制问题所需的权限; 避免不必要的搜查或没收.",
+  "value": "我们需要的是公共卫生上的决定, 不是没收行动; 只通知那位能让该区维持封锁的官员.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 仍是舊版通用句，與本次 EN 完全不同源，依 EN 重寫 CH 並補正 CN。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_TARGET_KNOX_WORKFORCE": {
+  "as1_value": "在接下这项工作之前, 确认工具, 测量数据, 人力和运输.",
+  "value": "他们的工班熟悉管线和发电机; 我们需要在医疗监督下作业的技术人手.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 仍是舊版通用句，與本次 EN 完全不同源，依 EN 重寫 CH 並補正 CN。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_TARGET_OLD_GUARD": {
+  "as1_value": "在移动人员或物资之前, 协调哨兵和安全接近路线.",
+  "value": "你们的哨兵比我们更能把那个地方隔离起来, 前提是他们明白任何一个小瓶都不能打开.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 舊通用句與 EN 不符；依 EN 補出哨兵隔離地點及禁止打開任何小瓶的條件，不臆測瓶中內容。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_TARGET_SYNDICATE": {
+  "as1_value": "期望谨慎行事; 吸引目击者或武装注意对任何一方都没有好处.",
+  "value": "我知道你们弄得到那些已经不在任何清册上的东西. 这一次, 我们不会过问它是从哪里来的.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 仍是舊版通用句，與本次 EN 完全不同源，依 EN 重寫 CH 並補正 CN。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_INSTITUTE_UNSAFE_WATER_OFFER_DIALOGUE": {
+  "as1_value": "如果这事上了无线电, 半个县的人都会放弃可能仍然干净的水. 这需要判断力, 而不只是速度.",
+  "value": "如果这事上了无线电, 半个地区的人都会放弃可能仍然干净的水罐. 这需要判断力, 而不只是速度.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 為 region 與 tanks；CN 沿用舊版 county 與 water，補正地理範圍及放棄的受詞。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_BROKEN_RELAY_TURN_IN_DIALOGUE": {
+  "as1_value": "我会找一支小队. 在排除破坏的可能之前, 谁也不能在那里发射信号. 我会更换密钥, 并把信息限制给当值操作员.",
+  "value": "我会找一支小队. 在我们判定那是故障还是人为破坏之前, 谁也不能在那里发射信号. 我会更换密钥, 并把信息限制给当值操作员.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 沿用舊 EN「rule out sabotage」；新 EN 為「determine whether it was a failure or sabotage」。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_DEBT_AND_FAVOR_OFFER_DIALOGUE": {
+  "as1_value": "带着这封信, 不要附加威胁. 收信人知道这笔债务. 如果被问起, 这次谈话从未通过无线电发生过.",
+  "value": "带着这封信, 不要附加威胁. 收信人比我们更清楚这笔债务. 如果被问起, 这次谈话从未通过无线电发生过.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 漏譯 EN 的比較句「knows the debt better than we do」。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_DEBT_AND_FAVOR_TITLE": {
+  "as1_value": "债务与人情",
+  "value": "未了的人情",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為 Outstanding favor；As1 CN 仍是舊標題「债务与人情」。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_DEBT_AND_FAVOR_TURN_IN_DIALOGUE": {
+  "as1_value": "我明白这意味着什么. 答复不会立刻给出, 但我没有忘记. 我会更换密钥, 并把信息限制给当值操作员.",
+  "value": "我明白这意味着什么. 答复不会立刻给出, 但我也不会假装自己忘了. 我会更换密钥, 并把信息限制给当值操作员.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 沿用舊 EN「I have not forgotten」；新 EN 為「I will not pretend I have forgotten either」。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_FUEL_EXCHANGE_TURN_IN_DIALOGUE": {
+  "as1_value": "条款苛刻但可行. 我会准备一个诚实的数字. 我会更换密钥, 并把信息限制给当值操作员.",
+  "value": "条款苛刻但可行. 在答复之前, 我会准备一个准确的数字. 我会更换密钥, 并把信息限制给当值操作员.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 沿用舊 EN「honest figure」且漏「before replying」；新 EN 為「an accurate figure before replying」。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_INFECTED_SIGHTING_TURN_IN_DIALOGUE": {
+  "as1_value": "我会派一名观察者到高处, 并警告他们路上的人. 我会更换密钥, 并把信息限制给当值操作员.",
+  "value": "我会派一名观察者到高处. 如果他们继续移动, 我们会警告所有在其行进路线上的人. 我会更换密钥, 并把信息限制给当值操作员.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 漏譯 EN 條件子句「If the movement continues」。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_MECHANICAL_FAILURE_TURN_IN_DIALOGUE": {
+  "as1_value": "测量数据足够了. 我能准备工具, 但谁也不能先碰它. 我会更换密钥, 并把信息限制给当值操作员.",
+  "value": "测量数据足够了. 我能准备工具, 但在我到场之前谁也不能碰那台设备. 我会更换密钥, 并把信息限制给当值操作员.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 漏譯 EN「until I arrive」，變成無條件的「谁也不能先碰它」。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_PERSONAL_KEEPSAKE_TITLE": {
+  "as1_value": "私人纪念物",
+  "value": "私人递送",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為 Personal delivery；As1 CN 仍是舊標題「私人纪念物」(keepsake)，依 EN 改為遞送。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_PERSONAL_KEEPSAKE_TURN_IN_DIALOGUE": {
+  "as1_value": "我以为它和其他一切一起丢失了. 谢谢你没有把它变成商品. 我会更换密钥, 并把信息限制给当值操作员.",
+  "value": "我以为它和其他一切一起丢失了. 谢谢你把它送来, 而且没有把它变成商品. 我会更换密钥, 并把信息限制给当值操作员.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 加入 \"Thank you for bringing it without...\"(多了「把它帶來」這一層謝意); 譯文只謝「沒變成商品」, 漏了一句."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_RADIO_WINDOW_TURN_IN_DIALOGUE": {
+  "as1_value": "我会更换呼号, 只允许一名操作员应答. 我会更换密钥, 并把信息限制给当值操作员.",
+  "value": "我会更换呼号, 只允许一名操作员应答. 其他人不需要知道. 我会更换密钥, 并把信息限制给当值操作员.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 漏譯 EN 整句「Nobody else needs to know it.」。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_SEALED_EVIDENCE_LETTER": {
+  "as1_value": "信封里装着一些观察记录, 单独阅读时可能冤枉好人. 它必须密封送达, 并在会面之前保持密封. 不要在公开频道上发射姓名, 地点或时间表.",
+  "value": "信封里装着一些观察记录, 若脱离上下文阅读, 可能指向错误的人. 它必须密封送达, 并在会面之前保持密封. 不要在公开频道上发射姓名, 地点或时间表.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 改為 \"could point to the wrong person if read out of context\"(條件由「單獨閱讀」變成「脫離上下文」, 結果由「冤枉好人」變成「指向錯的人」); 譯文仍停在舊 EN."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_SEALED_EVIDENCE_TITLE": {
+  "as1_value": "密封的证据",
+  "value": "封缄文件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為 Documents under seal；As1 CN 仍是舊標題「密封的证据」(Sealed evidence)。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_SEALED_EVIDENCE_TURN_IN_DIALOGUE": {
+  "as1_value": "封口完好无损. 在所有相关人到齐之前, 我会保管它. 我会更换密钥, 并把信息限制给当值操作员.",
+  "value": "封口完好无损. 我会保管它, 直到必须为其中内容负责的人到场. 我会更换密钥, 并把信息限制给当值操作员.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 沿用舊 EN「everyone concerned」譯成「所有相关人」；新 EN 為「those who must answer for its contents」。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_STOLEN_TOOLS_LETTER": {
+  "as1_value": "专用工具不见了. 询问近期的修理和反常的报价, 但在确认记号或序列号之前不要指责任何人. 不要在公开频道上发射姓名, 地点或时间表.",
+  "value": "不是谁都用得上的专用工具不见了. 询问近期的修理和反常的报价, 但在确认记号或序列号之前不要指责任何人. 不要在公开频道上发射姓名, 地点或时间表.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 漏譯 EN 限定子句「that are not useful to just anyone」。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_STOLEN_TOOLS_OFFER_DIALOGUE": {
+  "as1_value": "窃贼也许会归还一件工具; 被冤枉的邻居却不会归还信任. 如果被问起, 这次谈话从未通过无线电发生过.",
+  "value": "窃贼也许会归还一件工具; 被冤枉的人却不会归还信任. 如果被问起, 这次谈话从未通过无线电发生过.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已把 \"falsely accused neighbor\" 改為 \"falsely accused person\"; 譯文仍寫「鄰居」, 憑空指定 EN 沒有的關係."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_STORM_PREPARATION_LETTER": {
+  "as1_value": "种种迹象表明将有大风和持续的降雨. 在它来临之前, 固定遮盖物, 把储备垫离地面, 并疏通排水沟. 不要在公开频道上发射姓名, 地点或时间表.",
+  "value": "种种迹象表明将有大风和持续的降雨. 在它来临之前, 固定遮盖物, 把储备垫离地面, 并检查排水沟. 不要在公开频道上传送姓名, 地点或时间表.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 指示 check drains，CN 沿用舊版 clear drains 譯為疏通，依 EN 修正為檢查。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_STORM_PREPARATION_OFFER_DIALOGUE": {
+  "as1_value": "一旦雨下起来, 再发现哪座屋顶需要加固就太迟了. 如果被问起, 这次谈话从未通过无线电发生过.",
+  "value": "一旦雨下起来, 再发现哪座屋顶已经求救了好几周就太迟了. 如果被问起, 这次谈话从未通过无线电发生过.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 把 EN「had been crying out for help for weeks」簡化成「需要加固」，漏掉已求救數週的資訊。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_SUSPICIOUS_MOVEMENTS_TURN_IN_DIALOGUE": {
+  "as1_value": "我会谨慎观察. 如果他们的行动规律改变, 我们会最先知道. 我会更换密钥, 并把信息限制给当值操作员.",
+  "value": "我会谨慎观察. 如果他们的行动规律改变, 我们会在他们察觉我们在监视之前就先知道. 我会更换密钥, 并把信息限制给当值操作员.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 把 EN「before they realize we are watching」簡化成「最先知道」，漏掉條件。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_TARGET_DEFAULT": {
+  "as1_value": "把这份信息视为机密, 并通过可靠的信使答复.",
+  "value": "不要把这些信息抄进任何放在无线电旁边的记录里.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 仍是舊版通用句，與本次 EN 完全不同源，依 EN 重寫 CH 並補正 CN。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_TARGET_DRIFTERS": {
+  "as1_value": "把这与你路上所见进行比对, 并精确标记日期和路线.",
+  "value": "记下你在哪里听到每一道信号、当时身处多高; 你的路线也许能补全我们的覆盖范围图.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 仍是舊版通用句，與本次 EN 完全不同源，依 EN 重寫 CH 並補正 CN。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_TARGET_INSTITUTE": {
+  "as1_value": "把医学影响留给合格的人员, 并提交一份书面评估.",
+  "value": "使用约定好的临床术语, 并把姓名去掉; 偷听的人在找的就是听得出来的字眼.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 仍是舊版通用句，與本次 EN 完全不同源，依 EN 重寫 CH 並補正 CN。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_TARGET_KNOXNET": {
+  "as1_value": "不要在公开无线电上提及姓名和确切位置, 并通过可靠的频道确认.",
+  "value": "依照技术表更换晶体与代码. 只要缺少任何一个部件, 就取消整个通讯时段.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 仍是舊版通用句，與本次 EN 完全不同源，依 EN 重寫 CH 並補正 CN。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_TARGET_KNOX_AUTHORITY": {
+  "as1_value": "只动用控制问题所需的权限; 避免不必要的搜查或没收.",
+  "value": "不要用一堆流程规定占满频道. 一句清楚的确认, 胜过五个军阶与代号.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 仍是舊版通用句，與本次 EN 完全不同源，依 EN 重寫 CH 並補正 CN。"
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_TARGET_KNOX_WORKFORCE": {
+  "as1_value": "在接下这项工作之前, 确认工具, 测量数据, 人力和运输.",
+  "value": "我们需要人手把天线架起来, 还需要发报前的稳定发电机读数.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN v3.9.1 已把此鍵改寫為寄件方×收件方專屬文本, 授權 CN 仍是舊版通用句 (整句不同源); 依已核實 EN 重譯 CH 並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_TARGET_NEW_KNOX_COMMUNITY": {
+  "as1_value": "保护平民, 公平分担负担, 并避免引发恐慌.",
+  "value": "指定一个人负责回话, 并且别让孩子提到能被认出来的地点.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN v3.9.1 已把此鍵改寫為寄件方×收件方專屬文本, 授權 CN 仍是舊版通用句 (整句不同源); 依已核實 EN 重譯 CH 並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_TARGET_OLD_GUARD": {
+  "as1_value": "在移动人员或物资之前, 协调哨兵和安全接近路线.",
+  "value": "你们的通信员懂无线电纪律; 提醒他们, 旧的呼号已经外泄了.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN v3.9.1 已把此鍵改寫為寄件方×收件方專屬文本, 授權 CN 仍是舊版通用句 (整句不同源); 依已核實 EN 重譯 CH 並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_TARGET_SYNDICATE": {
+  "as1_value": "期望谨慎行事; 吸引目击者或武装注意对任何一方都没有好处.",
+  "value": "我们知道你们听到的比承认的多. 只要把能查证的那一段分享出来, 我们也可以照做.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN v3.9.1 已把此鍵改寫為寄件方×收件方專屬文本, 授權 CN 仍是舊版通用句 (整句不同源); 依已核實 EN 重譯 CH 並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOXNET_UNSAFE_WATER_OFFER_DIALOGUE": {
+  "as1_value": "如果这事上了无线电, 半个县的人都会放弃可能仍然干净的水. 如果被问起, 这次谈话从未通过无线电发生过.",
+  "value": "这事要是通过无线电传出去, 这一带有一半的人都会弃用可能其实干净的储水罐. 如果有人问起, 这段对话从未在无线电上发生过.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 為 region 與 tanks, 原 CN 錯限為縣且將棄用對象寫成水, 依 EN 修正範圍與對象."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_AMMUNITION_AUDIT_TURN_IN_DIALOGUE": {
+  "as1_value": "我们会在关起门来之后清点. 答复将包含总数, 而不是完整的库存清单. 它会被记录并分配下去.",
+  "value": "我们会在关起门来之后清点. 答复将包含总数, 而不是完整的库存清单. 它会被记录, 并指定专人负责.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 尾句已從 \"It will be logged and assigned.\" 改為 \"logged and someone will be assigned responsibility.\"; 現行 CN \"它会被记录并分配下去\" 仍是舊義, 未表達指定專人負責. CH 已正確, 只補 CN."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_BROKEN_RELAY_TURN_IN_DIALOGUE": {
+  "as1_value": "我会找一支小队. 在排除破坏的可能之前, 谁也不能在那里发射信号. 它会被记录并分配下去.",
+  "value": "我会找一支小队. 在我们确定是故障还是人为破坏之前, 谁也不能在那里发射信号. 它会被记录并分配下去.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：授權 CN 相對已核實 EN 漏掉實質語句/限定, 依 EN 補回並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_CHILDREN_SUPPLIES_TURN_IN_DIALOGUE": {
+  "as1_value": "我会列出我们不必清空自己仓库就能匀出的东西. 它会被记录并分配下去.",
+  "value": "我会列出我们不必清空自己仓库就能匀出的东西. 它会被记录, 并指定专人负责.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 尾句已從 \"It will be logged and assigned.\" 改為 \"logged and someone will be assigned responsibility.\"; 現行 CN \"它会被记录并分配下去\" 仍是舊義, 未表達指定專人負責. CH 已正確, 只補 CN."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_DEBT_AND_FAVOR_OFFER_DIALOGUE": {
+  "as1_value": "带着这封信, 不要附加威胁. 收信人知道这笔债务. 我需要一次没有中间人的正式送达.",
+  "value": "把这封信送去, 不要多加威胁. 收信人比我们更清楚这笔债务. 我需要一次没有中间人的正式送达.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：授權 CN 相對已核實 EN 漏掉實質語句/限定, 依 EN 補回並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_DEBT_AND_FAVOR_TITLE": {
+  "as1_value": "债务与人情",
+  "value": "未偿的人情",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 標題指稱對象已改變, 授權 CN 仍指舊對象; 依已核實 EN 重譯 CH 並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_DEBT_AND_FAVOR_TURN_IN_DIALOGUE": {
+  "as1_value": "我明白这意味着什么. 答复不会立刻给出, 但我没有忘记. 它会被记录并分配下去.",
+  "value": "我明白这意味着什么. 答复不会立刻给出, 但我也不会装作自己忘了. 它会被记录并分配下去.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：授權 CN 相對已核實 EN 漏掉實質語句/限定, 依 EN 補回並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_EVACUATION_ROUTE_TURN_IN_DIALOGUE": {
+  "as1_value": "我会标出集合点, 不用永久的标志. 这条路线留作紧急之用. 它会被记录并分配下去.",
+  "value": "我会标出集合点, 不用永久的标志. 这条路线留作紧急之用. 它会被记录, 并指定专人负责.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 尾句已從 \"It will be logged and assigned.\" 改為 \"logged and someone will be assigned responsibility.\"; 現行 CN \"它会被记录并分配下去\" 仍是舊義, 未表達指定專人負責. CH 已正確, 只補 CN."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_FUEL_EXCHANGE_TURN_IN_DIALOGUE": {
+  "as1_value": "条款苛刻但可行. 我会准备一个诚实的数字. 它会被记录并分配下去.",
+  "value": "条款苛刻但可行. 我会在回复之前准备好一个准确的数字. 它会被记录并分配下去.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：授權 CN 相對已核實 EN 漏掉實質語句/限定, 依 EN 補回並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_MECHANICAL_FAILURE_TURN_IN_DIALOGUE": {
+  "as1_value": "测量数据足够了. 我能准备工具, 但谁也不能先碰它. 它会被记录并分配下去.",
+  "value": "测量数据足够了. 我能准备工具, 但在我到场之前谁都不能动那台设备. 它会被记录并分配下去.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：授權 CN 相對已核實 EN 漏掉實質語句/限定, 依 EN 補回並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_MEDICAL_SHORTAGE_TURN_IN_DIALOGUE": {
+  "as1_value": "我现在就审阅. 如果还有物资, 它们会在下一班值勤前出发. 它会被记录并分配下去.",
+  "value": "我现在就审阅. 如果还有物资, 它们会在下一班值勤前出发. 它会被记录, 并指定专人负责.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 尾句已從 \"It will be logged and assigned.\" 改為 \"logged and someone will be assigned responsibility.\"; 現行 CN \"它会被记录并分配下去\" 仍是舊義, 未表達指定專人負責. CH 已正確, 只補 CN."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_MEDICINE_FOR_STRANGER_TURN_IN_DIALOGUE": {
+  "as1_value": "我会先评估需求. 如果治疗可行, 我们会找到公平的报酬. 它会被记录并分配下去.",
+  "value": "我会先评估需求. 如果治疗可行, 我们会找到公平的报酬. 它会被记录, 并指定专人负责.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 尾句已從 \"It will be logged and assigned.\" 改為 \"logged and someone will be assigned responsibility.\"; 現行 CN \"它会被记录并分配下去\" 仍是舊義, 未表達指定專人負責. CH 已正確, 只補 CN."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_MISSING_PERSON_TURN_IN_DIALOGUE": {
+  "as1_value": "这份描述有一部分似曾相识. 给我几个小时去询问, 不引发谣言. 它会被记录并分配下去.",
+  "value": "这份描述有一部分似曾相识. 给我几个小时去询问, 不引发谣言. 它会被记录, 并指定专人负责.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 尾句已從 \"It will be logged and assigned.\" 改為 \"logged and someone will be assigned responsibility.\"; 現行 CN \"它会被记录并分配下去\" 仍是舊義, 未表達指定專人負責. CH 已正確, 只補 CN."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_NEUTRAL_MEETING_TURN_IN_DIALOGUE": {
+  "as1_value": "我接受这些条款. 如果地点或人数改变, 我会毫无争辩地离开. 它会被记录并分配下去.",
+  "value": "我接受这些条款. 如果地点或人数改变, 我会毫无争辩地离开. 它会被记录, 并指定专人负责.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 尾句已從 \"It will be logged and assigned.\" 改為 \"logged and someone will be assigned responsibility.\"; 現行 CN \"它会被记录并分配下去\" 仍是舊義, 未表達指定專人負責. CH 已正確, 只補 CN."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_PERSONAL_KEEPSAKE_TITLE": {
+  "as1_value": "私人纪念物",
+  "value": "私人投递",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 標題指稱對象已改變, 授權 CN 仍指舊對象; 依已核實 EN 重譯 CH 並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_PERSONAL_KEEPSAKE_TURN_IN_DIALOGUE": {
+  "as1_value": "我以为它和其他一切一起丢失了. 谢谢你没有把它变成商品. 它会被记录并分配下去.",
+  "value": "我以为它和其他一切一起丢失了. 谢谢你把它送来, 而且没有把它变成商品. 它会被记录, 并指定专人负责.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 加入 \"Thank you for bringing it without...\"(多了「把它帶來」這一層謝意); 譯文只謝「沒變成商品」, 漏了一句. 另外同句尾 EN \"logged and someone will be assigned responsibility\" 的 CN 仍是舊義「分配下去」; 兩處一併修."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_RADIO_WINDOW_TURN_IN_DIALOGUE": {
+  "as1_value": "我会更换呼号, 只允许一名操作员应答. 它会被记录并分配下去.",
+  "value": "我会更换呼号, 并把应答限制在一个人身上. 其他人不需要知道. 它会被记录并分配下去.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：授權 CN 相對已核實 EN 漏掉實質語句/限定, 依 EN 補回並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_SEALED_EVIDENCE_LETTER": {
+  "as1_value": "信封里装着一些观察记录, 单独阅读时可能冤枉好人. 它必须密封送达, 并在会面之前保持密封. 记录时间, 责任方和结果.",
+  "value": "信封里装着一些观察记录, 若脱离上下文阅读, 可能指向错误的人. 它必须密封送达, 并在会面之前保持密封. 记录时间, 责任方和结果.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 改為 \"could point to the wrong person if read out of context\"(條件由「單獨閱讀」變成「脫離上下文」, 結果由「冤枉好人」變成「指向錯的人」); 譯文仍停在舊 EN. 此鍵 CH 亦未跟進."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_SEALED_EVIDENCE_TITLE": {
+  "as1_value": "密封的证据",
+  "value": "封缄文件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 標題指稱對象已改變, 授權 CN 仍指舊對象; 依已核實 EN 重譯 CH 並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_SEALED_EVIDENCE_TURN_IN_DIALOGUE": {
+  "as1_value": "封口完好无损. 在所有相关人到齐之前, 我会保管它. 它会被记录并分配下去.",
+  "value": "封口完好无损. 在必须为内容负责的人到齐之前, 我会保管它. 它会被记录并分配下去.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：授權 CN 相對已核實 EN 漏掉實質語句/限定, 依 EN 補回並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_STOLEN_TOOLS_LETTER": {
+  "as1_value": "专用工具不见了. 询问近期的修理和反常的报价, 但在确认记号或序列号之前不要指责任何人. 记录时间, 责任方和结果.",
+  "value": "一些不是随便什么人都用得上的专用工具不见了. 询问近期的维修和反常的报价, 但在确认记号或序列号之前不要指责任何人. 记录时间, 责任方和结果.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 漏掉 not useful to just anyone 對工具使用者的限制, 依 EN 補回."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_STOLEN_TOOLS_OFFER_DIALOGUE": {
+  "as1_value": "窃贼也许会归还一件工具; 被冤枉的邻居却不会归还信任. 我需要一次没有中间人的正式送达.",
+  "value": "窃贼也许会归还一件工具; 被冤枉的人却不会归还信任. 我需要一次没有中间人的正式送达.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已把 \"falsely accused neighbor\" 改為 \"falsely accused person\"; 譯文仍寫「鄰居」, 憑空指定 EN 沒有的關係. 此鍵 CH 亦未跟進."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_STORM_PREPARATION_LETTER": {
+  "as1_value": "种种迹象表明将有大风和持续的降雨. 在它来临之前, 固定遮盖物, 把储备垫离地面, 并疏通排水沟. 记录时间, 责任方和结果.",
+  "value": "种种迹象表明将有大风和持续的降雨. 在它来临之前, 固定遮盖物, 把储备垫离地面, 并检查排水沟. 记录时间, 责任方和结果.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 由 \"clear drains\" 改為 \"check drains\"(動作從疏通改為檢查); 譯文仍寫成疏通/清通. 此鍵 CH 亦未跟進."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_STORM_PREPARATION_OFFER_DIALOGUE": {
+  "as1_value": "一旦雨下起来, 再发现哪座屋顶需要加固就太迟了. 我需要一次没有中间人的正式送达.",
+  "value": "等雨下起来, 才发现哪片屋顶已经求救了好几周, 就太迟了. 我需要一次没有中间人的正式送达.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：授權 CN 相對已核實 EN 漏掉實質語句/限定, 依 EN 補回並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_STORM_PREPARATION_TURN_IN_DIALOGUE": {
+  "as1_value": "我会按区域组织检查, 从诊所, 食物和发电机开始. 它会被记录并分配下去.",
+  "value": "我会按区域组织检查, 从诊所, 食物和发电机开始. 它会被记录, 并指定专人负责.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 尾句已從 \"It will be logged and assigned.\" 改為 \"logged and someone will be assigned responsibility.\"; 現行 CN \"它会被记录并分配下去\" 仍是舊義, 未表達指定專人負責. CH 已正確, 只補 CN."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_SUSPICIOUS_MOVEMENTS_TURN_IN_DIALOGUE": {
+  "as1_value": "我会谨慎观察. 如果他们的行动规律改变, 我们会最先知道. 它会被记录并分配下去.",
+  "value": "我会低调观察. 如果他们的行动模式变了, 我们会在他们发现我们在盯之前就先知道. 它会被记录并分配下去.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：授權 CN 相對已核實 EN 漏掉實質語句/限定, 依 EN 補回並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_TARGET_DEFAULT": {
+  "as1_value": "把这份信息视为机密, 并通过可靠的信使答复.",
+  "value": "通过送件人回复确认收到, 并在接到进一步命令前保管好这份文件.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN v3.9.1 已把此鍵改寫為寄件方×收件方專屬文本, 授權 CN 仍是舊版通用句 (整句不同源); 依已核實 EN 重譯 CH 並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_TARGET_DRIFTERS": {
+  "as1_value": "把这与你路上所见进行比对, 并精确标记日期和路线.",
+  "value": "我们不会向提供可查证情报的人查验证件. 请精确标注路线与日期.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN v3.9.1 已把此鍵改寫為寄件方×收件方專屬文本, 授權 CN 仍是舊版通用句 (整句不同源); 依已核實 EN 重譯 CH 並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_TARGET_INSTITUTE": {
+  "as1_value": "把医学影响留给合格的人员, 并提交一份书面评估.",
+  "value": "如果你发现伤者或传染的迹象, 优先让医护人员处理, 并保留姓名以供报告使用.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN v3.9.1 已把此鍵改寫為寄件方×收件方專屬文本, 授權 CN 仍是舊版通用句 (整句不同源); 依已核實 EN 重譯 CH 並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_TARGET_KNOXNET": {
+  "as1_value": "不要在公开无线电上提及姓名和确切位置, 并通过可靠的频道确认.",
+  "value": "预留一个频率, 并记录每一次通信. 任何无法辨识身份的发话者, 都必须视为存在安全风险.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 指預留頻率、記錄通訊並將不明發話者視為 compromised; 原 CN 是另一段保密指示, 依 EN 全句重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_TARGET_KNOX_AUTHORITY": {
+  "as1_value": "只动用控制问题所需的权限; 避免不必要的搜查或没收.",
+  "value": "把报告交给值班的上级, 封存一份副本, 不要和不在班的人员讨论.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN v3.9.1 已把此鍵改寫為寄件方×收件方專屬文本, 授權 CN 仍是舊版通用句 (整句不同源); 依已核實 EN 重譯 CH 並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_TARGET_NEW_KNOX_COMMUNITY": {
+  "as1_value": "保护平民, 公平分担负担, 并避免引发恐慌.",
+  "value": "我们无意征用你们的储备. 我们需要平民的配合, 以及一份可靠的居民名册.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN v3.9.1 已把此鍵改寫為寄件方×收件方專屬文本, 授權 CN 仍是舊版通用句 (整句不同源); 依已核實 EN 重譯 CH 並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_TARGET_OLD_GUARD": {
+  "as1_value": "在移动人员或物资之前, 协调哨兵和安全接近路线.",
+  "value": "我们可以接受武装观察员, 但不接受军事纵队. 在调动任何人之前, 先协调出明确的界限.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN v3.9.1 已把此鍵改寫為寄件方×收件方專屬文本, 授權 CN 仍是舊版通用句 (整句不同源); 依已核實 EN 重譯 CH 並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_TARGET_SYNDICATE": {
+  "as1_value": "期望谨慎行事; 吸引目击者或武装注意对任何一方都没有好处.",
+  "value": "这次联络并不代表既往不咎. 但一个有用的回复, 能避免一次让双方都受害的行动.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN v3.9.1 已把此鍵改寫為寄件方×收件方專屬文本, 授權 CN 仍是舊版通用句 (整句不同源); 依已核實 EN 重譯 CH 並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_UNSAFE_WATER_OFFER_DIALOGUE": {
+  "as1_value": "如果这事上了无线电, 半个县的人都会放弃可能仍然干净的水. 我需要一次没有中间人的正式送达.",
+  "value": "这事要是通过无线电传出去, 这一带有一半的人都会弃用可能仍然干净的储水罐. 我需要一次没有中间人的正式送达.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 為 region 與 tanks, 原 CN 錯限為縣且將棄用對象寫成水, 依 EN 修正範圍與對象."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_AUTHORITY_UNSAFE_WATER_TURN_IN_DIALOGUE": {
+  "as1_value": "我会悄悄关闭通道, 等有了合适的容器再送一份样本. 它会被记录并分配下去.",
+  "value": "我会悄悄关闭通道, 等有了合适的容器再送一份样本. 它会被记录, 并指定专人负责.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 尾句已從 \"It will be logged and assigned.\" 改為 \"logged and someone will be assigned responsibility.\"; 現行 CN \"它会被记录并分配下去\" 仍是舊義, 未表達指定專人負責. CH 已正確, 只補 CN."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_AMMUNITION_AUDIT_OFFER_DIALOGUE": {
+  "as1_value": "如果每个哨位都夸大自己的库存, 下一个计划会在我们之前夭折. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "如果每个哨位都夸大自己的库存, 下一个计划会在我们之前夭折. 确保送达的内容准确无误: 一条抄错的信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 要求資訊傳遞準確, 非副本保持乾淨; miscopied information 不限數字, 依 EN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_AMMUNITION_AUDIT_TURN_IN_DIALOGUE": {
+  "as1_value": "我们会在关起门来之后清点. 答复将包含总数, 而不是完整的库存清单. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "我们会关起门来重新清点. 回复只会包含总数, 而不是完整的库存清单. 在作出承诺之前, 我会检查材料和工时.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 為 recount 與 work hours, 依 EN 補回重新清點並將人力修正為工時."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_BROKEN_RELAY_OFFER_DIALOGUE": {
+  "as1_value": "没有它, 定居点已经好几天在对着寂静说话. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "没有它, 各个聚落已经对着一片死寂喊了好几天. 确保送达的内容准确无误: 一条抄错的信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 要求資訊傳遞準確, 非副本保持乾淨; miscopied information 不限數字, 依 EN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_BROKEN_RELAY_TURN_IN_DIALOGUE": {
+  "as1_value": "我会找一支小队. 在排除破坏的可能之前, 谁也不能在那里发射信号. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "我会找一支小队. 在我们确定是故障还是人为破坏之前, 谁也不能在那里发射信号. 在作出承诺之前, 我会检查材料和工时.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 要求判斷故障或破壞, 非排除破壞才准通訊; work hours 為工時而非人力."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_CHILDREN_SUPPLIES_OFFER_DIALOGUE": {
+  "as1_value": "小小的需求最先被遗忘, 却会在日后惩罚所有人. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "小小的需求总是最先被遗忘, 日后却会造成最大的痛苦. 确保送达的内容准确无误: 一条抄错的信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 要求資訊傳遞準確, 非副本保持乾淨; 同步保留 most suffering 與 miscopied information 的語意."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_CHILDREN_SUPPLIES_TURN_IN_DIALOGUE": {
+  "as1_value": "我会列出我们不必清空自己仓库就能匀出的东西. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "我会列出我们不必清空自己仓库就能匀出的东西. 在作出承诺之前, 我会检查材料和工时.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN work hours 為工時, 與原 CN 人力不同, 依 EN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_DEBT_AND_FAVOR_OFFER_DIALOGUE": {
+  "as1_value": "带着这封信, 不要附加威胁. 收信人知道这笔债务. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "送这封信时不要多加威胁. 收信的人比我们更清楚这笔账. 确保送达的内容准确无误: 一条抄错的信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 漏掉 better than we do, 且把傳遞準確誤作副本乾淨, information 錯限為數字, 依 EN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_DEBT_AND_FAVOR_TITLE": {
+  "as1_value": "债务与人情",
+  "value": "未偿的人情",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 標題指稱對象已改變, 授權 CN 仍指舊對象; 依已核實 EN 重譯 CH 並同步提出 CN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_DEBT_AND_FAVOR_TURN_IN_DIALOGUE": {
+  "as1_value": "我明白这意味着什么. 答复不会立刻给出, 但我没有忘记. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "我明白这意味着什么. 答复不会立刻给出, 但我也不会装作自己忘了. 在作出承诺之前, 我会检查材料和工时.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：CN 漏掉不假裝忘記的語意, 且將 work hours 誤作人力, 依 EN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_EVACUATION_ROUTE_OFFER_DIALOGUE": {
+  "as1_value": "一份保管不周的副本会把安全的出口变成埋伏. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "一份保管不周的副本会把安全的出口变成埋伏. 确保送达的内容准确无误: 一条抄错的信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 要求資訊傳遞準確, 非副本保持乾淨; miscopied information 不限數字, 依 EN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_EVACUATION_ROUTE_TURN_IN_DIALOGUE": {
+  "as1_value": "我会标出集合点, 不用永久的标志. 这条路线留作紧急之用. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "我会标出集合点, 不用永久的标志. 这条路线留作紧急之用. 在作出承诺之前, 我会检查材料和工时.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN work hours 為工時, 與原 CN 人力不同, 依 EN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_FUEL_EXCHANGE_LETTER": {
+  "as1_value": "我们可以匀出燃料, 交换安全的容器, 一条清理过的路线, 以及指定的车辆不会被挪用改道的保证. 记录测量数据, 数量和所需工具.",
+  "value": "我们可以让出燃料, 换取安全的容器, 一条清空的路线, 以及指定车辆不会被挪去别的工作的保证. 记录测量数据, 数量和所需工具.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 未跟進, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_FUEL_EXCHANGE_OFFER_DIALOGUE": {
+  "as1_value": "这份协议也许能阻止两个团体为同一罐油争斗. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "这份协议能让两群人不至于为同一桶油大打出手. 务必确保送达时内容无误: 抄错一项信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改寫為 Make sure it arrives accurate: a miscopied piece of information breaks more than just a machine., 舊 CN/CH「保持副本乾淨; 一個錯誤的數字」為過時譯文, 依 EN 重譯. 現行 EN 語氣已由 may(也許) 改為斷言(would/prevents), 舊 CN/CH 仍作「也許」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_FUEL_EXCHANGE_TURN_IN_DIALOGUE": {
+  "as1_value": "条款苛刻但可行. 我会准备一个诚实的数字. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "条件很硬, 但办得到. 我会在回复之前备好准确的数字. 我会先确认材料与工时, 再做承诺.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改為 work hours(工時), 舊 CN/CH 作「人力」為過時譯文, 依 EN 重譯. 另主體依現行 EN 補回/修正遺漏語意."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_HARVEST_REQUEST_LETTER": {
+  "as1_value": "下一次收成因缺少工具, 容器和经验丰富的人手而面临风险. 现在帮忙一天, 也许能避免数周的饥饿. 记录测量数据, 数量和所需工具.",
+  "value": "缺工具, 缺容器, 缺有经验的人手, 下一季收成有危险. 现在帮上一天, 就能免去日后好几周的饥饿. 记录测量数据, 数量和所需工具.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 語氣已由 may(也許) 改為斷言(would/prevents), 舊 CN/CH 仍作「也許」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_HARVEST_REQUEST_OFFER_DIALOGUE": {
+  "as1_value": "修理栅栏毫无荣耀可言, 但冬天里人人都记得这份劳作. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "修理栅栏毫无荣耀可言, 但冬天里人人都记得这份劳作. 务必确保送达时内容无误: 抄错一项信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改寫為 Make sure it arrives accurate: a miscopied piece of information breaks more than just a machine., 舊 CN/CH「保持副本乾淨; 一個錯誤的數字」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_INFECTED_SIGHTING_LETTER": {
+  "as1_value": "有人看到一群感染者在向不寻常的方向移动. 在断定意图之前, 先检查障碍物, 近期的噪音和人类活动. 记录测量数据, 数量和所需工具.",
+  "value": "有人看到一群感染者朝着不寻常的方向移动. 在断定它们有什么意图之前, 先检视障碍物, 近期的噪音, 以及可能的人为活动. 记录测量数据, 数量和所需工具.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 未跟進, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_INFECTED_SIGHTING_OFFER_DIALOGUE": {
+  "as1_value": "把这封信交给一个先观察再编造解释的人. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "把这封信交给一个先观察再编造解释的人. 务必确保送达时内容无误: 抄错一项信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改寫為 Make sure it arrives accurate: a miscopied piece of information breaks more than just a machine., 舊 CN/CH「保持副本乾淨; 一個錯誤的數字」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_INFECTED_SIGHTING_TURN_IN_DIALOGUE": {
+  "as1_value": "我会派一名观察者到高处, 并警告他们路上的人. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "我会派一名观察员上高处. 如果它们继续移动, 我们会警告所有在它们行进路线上的人. 我会先确认材料与工时, 再做承诺.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改為 work hours(工時), 舊 CN/CH 作「人力」為過時譯文, 依 EN 重譯. 另主體依現行 EN 補回/修正遺漏語意."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_MECHANICAL_FAILURE_OFFER_DIALOGUE": {
+  "as1_value": "收信人会知道这台机器能否救回, 或者我们是否在浪费零件. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "收信人会知道这台机器能否救回, 或者我们是否在浪费零件. 务必确保送达时内容无误: 抄错一项信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改寫為 Make sure it arrives accurate: a miscopied piece of information breaks more than just a machine., 舊 CN/CH「保持副本乾淨; 一個錯誤的數字」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_MECHANICAL_FAILURE_TURN_IN_DIALOGUE": {
+  "as1_value": "测量数据足够了. 我能准备工具, 但谁也不能先碰它. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "这些尺寸够用了. 我可以先备好工具, 但在我到场之前, 谁都不准碰那台设备. 我会先确认材料与工时, 再做承诺.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改為 work hours(工時), 舊 CN/CH 作「人力」為過時譯文, 依 EN 重譯. 另主體依現行 EN 補回/修正遺漏語意."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_MEDICAL_SHORTAGE_OFFER_DIALOGUE": {
+  "as1_value": "在有人不得不选择谁接受治疗之前, 把信送到. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "在有人不得不选择谁接受治疗之前, 把信送到. 务必确保送达时内容无误: 抄错一项信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改寫為 Make sure it arrives accurate: a miscopied piece of information breaks more than just a machine., 舊 CN/CH「保持副本乾淨; 一個錯誤的數字」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_MEDICAL_SHORTAGE_TURN_IN_DIALOGUE": {
+  "as1_value": "我现在就审阅. 如果还有物资, 它们会在下一班值勤前出发. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "我现在就审阅. 如果还有物资, 它们会在下一班值勤前出发. 我会先确认材料与工时, 再做承诺.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改為 work hours(工時), 舊 CN/CH 作「人力」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_MEDICINE_FOR_STRANGER_OFFER_DIALOGUE": {
+  "as1_value": "我不索取信任, 只要求收信人依据全部事实做出决定. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "我不索取信任, 只要求收信人依据全部事实做出决定. 务必确保送达时内容无误: 抄错一项信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改寫為 Make sure it arrives accurate: a miscopied piece of information breaks more than just a machine., 舊 CN/CH「保持副本乾淨; 一個錯誤的數字」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_MEDICINE_FOR_STRANGER_TURN_IN_DIALOGUE": {
+  "as1_value": "我会先评估需求. 如果治疗可行, 我们会找到公平的报酬. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "我会先评估需求. 如果治疗可行, 我们会找出公道的补偿方式. 我会先确认材料与工时, 再做承诺.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改為 work hours(工時), 舊 CN/CH 作「人力」為過時譯文, 依 EN 重譯. 另主體依現行 EN 補回/修正遺漏語意."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_MISSING_PERSON_LETTER": {
+  "as1_value": "我们在寻找一位上次出行后再也没回来的人. 信里附有体貌描述, 计划路线, 以及只有至亲好友才知道的记号. 记录测量数据, 数量和所需工具.",
+  "value": "我们在找一个上次出门就没再回来的人. 随函附上外貌描述, 预定路线, 以及只有与他亲近的人才认得出的记号. 记录测量数据, 数量和所需工具.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 未跟進, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_MISSING_PERSON_OFFER_DIALOGUE": {
+  "as1_value": "我无法承诺好消息, 但家人理应得到一个答复. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "我无法承诺好消息, 但家人理应得到一个答复. 务必确保送达时内容无误: 抄错一项信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改寫為 Make sure it arrives accurate: a miscopied piece of information breaks more than just a machine., 舊 CN/CH「保持副本乾淨; 一個錯誤的數字」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_MISSING_PERSON_TURN_IN_DIALOGUE": {
+  "as1_value": "这份描述有一部分似曾相识. 给我几个小时去询问, 不引发谣言. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "这份描述有一部分似曾相识. 给我几个小时去询问, 不引发谣言. 我会先确认材料与工时, 再做承诺.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改為 work hours(工時), 舊 CN/CH 作「人力」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_NEUTRAL_MEETING_LETTER": {
+  "as1_value": "提议在开阔地带举行一次简短会面, 双方各出两名代表, 不得携带可见的长枪. 它只涉及一个问题, 与结盟无关. 记录测量数据, 数量和所需工具.",
+  "value": "提议在开阔地进行一场短会, 双方各派两名代表, 不得露出长枪. 目的是解决一个具体的问题, 不是要谈结盟. 记录测量数据, 数量和所需工具.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 未跟進, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_NEUTRAL_MEETING_OFFER_DIALOGUE": {
+  "as1_value": "如果这封信先于谣言到达, 它或许能阻止一场打斗. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "如果这封信先于谣言到达, 它或许能阻止一场打斗. 务必确保送达时内容无误: 抄错一项信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改寫為 Make sure it arrives accurate: a miscopied piece of information breaks more than just a machine., 舊 CN/CH「保持副本乾淨; 一個錯誤的數字」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_NEUTRAL_MEETING_TURN_IN_DIALOGUE": {
+  "as1_value": "我接受这些条款. 如果地点或人数改变, 我会毫无争辩地离开. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "我接受这些条款. 如果地点或人数改变, 我会毫无争辩地离开. 我会先确认材料与工时, 再做承诺.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改為 work hours(工時), 舊 CN/CH 作「人力」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_PERSONAL_KEEPSAKE_OFFER_DIALOGUE": {
+  "as1_value": "它既不是物资也不是命令. 正因如此, 它需要谨慎的人手. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "它既不是物资也不是命令. 正因如此, 它需要谨慎的人手. 务必确保送达时内容无误: 抄错一项信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改寫為 Make sure it arrives accurate: a miscopied piece of information breaks more than just a machine., 舊 CN/CH「保持副本乾淨; 一個錯誤的數字」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_PERSONAL_KEEPSAKE_TITLE": {
+  "as1_value": "私人纪念物",
+  "value": "私人递送",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 標題為 Personal delivery(遞送), 非舊版 Personal keepsake; 舊 CN「私人纪念物」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_PERSONAL_KEEPSAKE_TURN_IN_DIALOGUE": {
+  "as1_value": "我以为它和其他一切一起丢失了. 谢谢你没有把它变成商品. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "我以为它跟其他东西一起没了. 谢谢你把它送来, 而且没把它变成商品. 我会先确认材料与工时, 再做承诺.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改為 work hours(工時), 舊 CN/CH 作「人力」為過時譯文, 依 EN 重譯. 另主體依現行 EN 補回/修正遺漏語意."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_RADIO_WINDOW_OFFER_DIALOGUE": {
+  "as1_value": "不要在开着的无线电旁边打开它. 学会偷听的人太多了. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "不要在开着的无线电旁边打开它. 学会偷听的人太多了. 务必确保送达时内容无误: 抄错一项信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改寫為 Make sure it arrives accurate: a miscopied piece of information breaks more than just a machine., 舊 CN/CH「保持副本乾淨; 一個錯誤的數字」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_RADIO_WINDOW_TURN_IN_DIALOGUE": {
+  "as1_value": "我会更换呼号, 只允许一名操作员应答. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "我会换掉呼号, 并且只让一个人回应. 其他人不需要知道. 我会先确认材料与工时, 再做承诺.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改為 work hours(工時), 舊 CN/CH 作「人力」為過時譯文, 依 EN 重譯. 另主體依現行 EN 補回/修正遺漏語意."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_SEALED_EVIDENCE_LETTER": {
+  "as1_value": "信封里装着一些观察记录, 单独阅读时可能冤枉好人. 它必须密封送达, 并在会面之前保持密封. 记录测量数据, 数量和所需工具.",
+  "value": "信封里的观察记录若是断章取义来看, 可能会指向错的人. 它必须密封送达, 并且在会面之前保持密封. 记录测量数据, 数量和所需工具.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 未跟進, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_SEALED_EVIDENCE_OFFER_DIALOGUE": {
+  "as1_value": "不要打开它. 看起来像答案的东西, 可能只是半个故事. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "不要打开它. 看起来像是孤立答案的东西, 也许只是半个故事. 务必确保送达时内容无误: 抄错一项信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改寫為 Make sure it arrives accurate: a miscopied piece of information breaks more than just a machine., 舊 CN/CH「保持副本乾淨; 一個錯誤的數字」為過時譯文, 依 EN 重譯. 另主體依現行 EN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_SEALED_EVIDENCE_TITLE": {
+  "as1_value": "密封的证据",
+  "value": "密封文件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 標題為 Documents under seal(文件), 非舊版 Sealed evidence; 舊 CN「密封的证据」對象錯誤, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_SEALED_EVIDENCE_TURN_IN_DIALOGUE": {
+  "as1_value": "封口完好无损. 在所有相关人到齐之前, 我会保管它. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "封蜡完好. 我会保管它, 直到必须为内容负责的人都到场. 我会先确认材料与工时, 再做承诺.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改為 work hours(工時), 舊 CN/CH 作「人力」為過時譯文, 依 EN 重譯. 另主體依現行 EN 補回/修正遺漏語意."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_STOLEN_TOOLS_LETTER": {
+  "as1_value": "专用工具不见了. 询问近期的修理和反常的报价, 但在确认记号或序列号之前不要指责任何人. 记录测量数据, 数量和所需工具.",
+  "value": "不是谁都用得上的专用工具不见了. 去打听最近的维修与不寻常的交易, 但在辨识出刻印或序号之前, 不要指控任何人. 记录测量数据, 数量和所需工具.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 未跟進, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_STOLEN_TOOLS_OFFER_DIALOGUE": {
+  "as1_value": "窃贼也许会归还一件工具; 被冤枉的邻居却不会归还信任. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "窃贼也许会把工具还回来; 但被冤枉的人, 不会把信任还回来. 务必确保送达时内容无误: 抄错一项信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改寫為 Make sure it arrives accurate: a miscopied piece of information breaks more than just a machine., 舊 CN/CH「保持副本乾淨; 一個錯誤的數字」為過時譯文, 依 EN 重譯. 另主體依現行 EN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_STORM_PREPARATION_LETTER": {
+  "as1_value": "种种迹象表明将有大风和持续的降雨. 在它来临之前, 固定遮盖物, 把储备垫离地面, 并疏通排水沟. 记录测量数据, 数量和所需工具.",
+  "value": "各种迹象都指向强风与连日大雨. 在雨势开始前, 固定好遮盖物, 把储备物资垫高离地, 并检查排水口. 记录测量数据, 数量和所需工具.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 未跟進, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_STORM_PREPARATION_OFFER_DIALOGUE": {
+  "as1_value": "一旦雨下起来, 再发现哪座屋顶需要加固就太迟了. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "等雨下起来, 才发现哪一片屋顶已经求救了好几周, 就太晚了. 务必确保送达时内容无误: 抄错一项信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改寫為 Make sure it arrives accurate: a miscopied piece of information breaks more than just a machine., 舊 CN/CH「保持副本乾淨; 一個錯誤的數字」為過時譯文, 依 EN 重譯. 另主體依現行 EN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_STORM_PREPARATION_TURN_IN_DIALOGUE": {
+  "as1_value": "我会按区域组织检查, 从诊所, 食物和发电机开始. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "我会按区域组织检查, 从诊所, 食物和发电机开始. 我会先确认材料与工时, 再做承诺.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改為 work hours(工時), 舊 CN/CH 作「人力」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_SUSPICIOUS_MOVEMENTS_LETTER": {
+  "as1_value": "在一个本应空无一人的区域看到了协调的灯光和动静. 不要接敌; 记录时间, 人数和逃脱路线. 记录测量数据, 数量和所需工具.",
+  "value": "有人在本该空无一人的区域看到有组织的灯光与动静. 不要交火; 记下时间, 人数与撤离路线. 记录测量数据, 数量和所需工具.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 未跟進, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_SUSPICIOUS_MOVEMENTS_OFFER_DIALOGUE": {
+  "as1_value": "我要的是盯住那个地方的眼睛, 而不是枪声. 把这封信交给懂得二者区别的人. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "我要的是盯住那个地方的眼睛, 而不是枪声. 把这封信交给懂得二者区别的人. 务必确保送达时内容无误: 抄错一项信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改寫為 Make sure it arrives accurate: a miscopied piece of information breaks more than just a machine., 舊 CN/CH「保持副本乾淨; 一個錯誤的數字」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_SUSPICIOUS_MOVEMENTS_TURN_IN_DIALOGUE": {
+  "as1_value": "我会谨慎观察. 如果他们的行动规律改变, 我们会最先知道. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "我会低调观察. 如果他们的行动模式变了, 我们会在他们察觉我们在看之前先知道. 我会先确认材料与工时, 再做承诺.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改為 work hours(工時), 舊 CN/CH 作「人力」為過時譯文, 依 EN 重譯. 另主體依現行 EN 補回/修正遺漏語意."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_TARGET_DEFAULT": {
+  "as1_value": "把这份信息视为机密, 并通过可靠的信使答复.",
+  "value": "请核对尺寸与数量; 在这个世道, 抄错一个数字的代价, 远不只是一句道歉.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 已整句改寫, 與舊 CN/CH 內容完全不同(已由 sources/en 核實非取樣錯位); 依現行 EN 重譯並提供 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_TARGET_DRIFTERS": {
+  "as1_value": "把这与你路上所见进行比对, 并精确标记日期和路线.",
+  "value": "如果你在路上看到废弃的机具, 请画出进入的路线, 并注明会需要哪些工具.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 已整句改寫, 與舊 CN/CH 內容完全不同(已由 sources/en 核實非取樣錯位); 依現行 EN 重譯並提供 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_TARGET_INSTITUTE": {
+  "as1_value": "把医学影响留给合格的人员, 并提交一份书面评估.",
+  "value": "只要你们的人员给我们一份明确的容许范围清单, 我就会优先处理冷藏与干净水源.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 已整句改寫, 與舊 CN/CH 內容完全不同(已由 sources/en 核實非取樣錯位); 依現行 EN 重譯並提供 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_TARGET_KNOXNET": {
+  "as1_value": "不要在公开无线电上提及姓名和确切位置, 并通过可靠的频道确认.",
+  "value": "你们的设备对电压骤降很敏感. 请标明哪一条电路我们不能切断.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 已整句改寫, 與舊 CN/CH 內容完全不同(已由 sources/en 核實非取樣錯位); 依現行 EN 重譯並提供 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_TARGET_KNOX_AUTHORITY": {
+  "as1_value": "只动用控制问题所需的权限; 避免不必要的搜查或没收.",
+  "value": "不要在轮班进行到一半时征用工具或驾驶; 工作内容请先和工头谈妥.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 已整句改寫, 與舊 CN/CH 內容完全不同(已由 sources/en 核實非取樣錯位); 依現行 EN 重譯並提供 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_TARGET_KNOX_WORKFORCE": {
+  "as1_value": "在接下这项工作之前, 确认工具, 测量数据, 人力和运输.",
+  "value": "请把这份工单分派给电工与技师, 并记录每一件从仓库领走的零件.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 已整句改寫, 與舊 CN/CH 內容完全不同(已由 sources/en 核實非取樣錯位); 依現行 EN 重譯並提供 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_TARGET_OLD_GUARD": {
+  "as1_value": "在移动人员或物资之前, 协调哨兵和安全接近路线.",
+  "value": "我们可以加固这个据点, 但在大家腾不出手的时候, 我们需要有人掩护.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 已整句改寫, 與舊 CN/CH 內容完全不同(已由 sources/en 核實非取樣錯位); 依現行 EN 重譯並提供 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_TARGET_SYNDICATE": {
+  "as1_value": "期望谨慎行事; 吸引目击者或武装注意对任何一方都没有好处.",
+  "value": "只要零件规格对得上, 而且后面没有跟着持枪的原主, 我们就照收不问.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 已整句改寫, 與舊 CN/CH 內容完全不同(已由 sources/en 核實非取樣錯位); 依現行 EN 重譯並提供 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_UNSAFE_WATER_OFFER_DIALOGUE": {
+  "as1_value": "如果这事上了无线电, 半个县的人都会放弃可能仍然干净的水. 保持副本干净; 一个坏数字造成的破坏不止一台机器.",
+  "value": "这事要是上了无线电, 半个地区的人都会放弃可能还干净的水塔. 务必确保送达时内容无误: 抄错一项信息, 毁掉的不只是一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改寫為 Make sure it arrives accurate: a miscopied piece of information breaks more than just a machine., 舊 CN/CH「保持副本乾淨; 一個錯誤的數字」為過時譯文, 依 EN 重譯. 另主體依現行 EN 修正."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_KNOX_WORKFORCE_UNSAFE_WATER_TURN_IN_DIALOGUE": {
+  "as1_value": "我会悄悄关闭通道, 等有了合适的容器再送一份样本. 在作出承诺之前, 我会检查材料和人力.",
+  "value": "我会悄悄关闭通道, 等有了合适的容器再送一份样本. 我会先确认材料与工时, 再做承诺.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 尾句已改為 work hours(工時), 舊 CN/CH 作「人力」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_AMMUNITION_AUDIT_TURN_IN_DIALOGUE": {
+  "as1_value": "我们会在关起门来之后清点. 答复将包含总数, 而不是完整的库存清单. 我们会与必须承担决定后果的人商量.",
+  "value": "我们会关起门来重新清点. 回复只会有总数, 不会有完整清册. 我们会和必须承担这个决定的人商议.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 為過時譯文(語意遺漏或對象不同), 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_BROKEN_RELAY_TURN_IN_DIALOGUE": {
+  "as1_value": "我会找一支小队. 在排除破坏的可能之前, 谁也不能在那里发射信号. 我们会与必须承担决定后果的人商量.",
+  "value": "我会找一支小队. 在我们判定那是故障还是人为破坏之前, 谁都不准在那里发讯. 我们会和必须承担这个决定的人商议.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 為過時譯文(語意遺漏或對象不同), 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_CHILDREN_SUPPLIES_OFFER_DIALOGUE": {
+  "as1_value": "小小的需求最先被遗忘, 却会在日后惩罚所有人. 为那些无法走上那条路的人做这件事.",
+  "value": "小小的需求总是每个人最先忘记的, 之后却造成最多的苦. 为了那些走不了这条路的人, 去做吧.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 為過時譯文(語意遺漏或對象不同), 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_DEBT_AND_FAVOR_OFFER_DIALOGUE": {
+  "as1_value": "带着这封信, 不要附加威胁. 收信人知道这笔债务. 为那些无法走上那条路的人做这件事.",
+  "value": "送这封信时不要多加威胁. 收信的人比我们更清楚这笔账. 为了那些走不了这条路的人, 去做吧.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 為過時譯文(語意遺漏或對象不同), 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_DEBT_AND_FAVOR_TITLE": {
+  "as1_value": "债务与人情",
+  "value": "未了的人情",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 標題為 Outstanding favor(未償的人情), 非舊版 Debt and favor; 舊 CN「债务与人情」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_DEBT_AND_FAVOR_TURN_IN_DIALOGUE": {
+  "as1_value": "我明白这意味着什么. 答复不会立刻给出, 但我没有忘记. 我们会与必须承担决定后果的人商量.",
+  "value": "我知道这代表什么. 答复不会马上来, 但我也不会假装自己忘了. 我们会和必须承担这个决定的人商议.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 為過時譯文(語意遺漏或對象不同), 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_FUEL_EXCHANGE_LETTER": {
+  "as1_value": "我们可以匀出燃料, 交换安全的容器, 一条清理过的路线, 以及指定的车辆不会被挪用改道的保证. 保护家庭, 不要让恐惧替所有人做决定.",
+  "value": "我们可以让出燃料, 换取安全的容器, 一条清空的路线, 以及指定车辆不会被挪去别的工作的保证. 保护家人, 别让恐惧替所有人做决定.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 為過時譯文(語意遺漏或對象不同), 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_FUEL_EXCHANGE_OFFER_DIALOGUE": {
+  "as1_value": "这份协议也许能阻止两个团体为同一罐油争斗. 为那些无法走上那条路的人做这件事.",
+  "value": "这份协议能让两群人不至于为同一桶油大打出手. 为了那些走不了这条路的人, 去做吧.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 語氣已由 may(也許) 改為斷言(would/prevents), 舊 CN/CH 仍作「也許」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_FUEL_EXCHANGE_TURN_IN_DIALOGUE": {
+  "as1_value": "条款苛刻但可行. 我会准备一个诚实的数字. 我们会与必须承担决定后果的人商量.",
+  "value": "条件很硬, 但办得到. 我会在回复之前备好准确的数字. 我们会和必须承担这个决定的人商议.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 為過時譯文(語意遺漏或對象不同), 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_HARVEST_REQUEST_LETTER": {
+  "as1_value": "下一次收成因缺少工具, 容器和经验丰富的人手而面临风险. 现在帮忙一天, 也许能避免数周的饥饿. 保护家庭, 不要让恐惧替所有人做决定.",
+  "value": "缺工具, 缺容器, 缺有经验的人手, 下一季收成有危险. 现在帮上一天, 就能免去日后好几周的饥饿. 保护家人, 别让恐惧替所有人做决定.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 語氣已由 may(也許) 改為斷言(would/prevents), 舊 CN/CH 仍作「也許」為過時譯文, 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_HARVEST_REQUEST_TURN_IN_DIALOGUE": {
+  "as1_value": "我们能派人手和工具. 我需要先确定确切的日期. 我们会与必须承担决定后果的人商量.",
+  "value": "我们可以派人手和几件工具. 我需要确切的日期, 免得又留下一件做一半的活. 我们会和必须承担这个决定的人商议.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 為過時譯文(語意遺漏或對象不同), 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_INFECTED_SIGHTING_LETTER": {
+  "as1_value": "有人看到一群感染者在向不寻常的方向移动. 在断定意图之前, 先检查障碍物, 近期的噪音和人类活动. 保护家庭, 不要让恐惧替所有人做决定.",
+  "value": "有人看到一群感染者朝着不寻常的方向移动. 在断定它们有什么意图之前, 先检视障碍物, 近期的噪音, 以及可能的人为活动. 保护家人, 别让恐惧替所有人做决定.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 為過時譯文(語意遺漏或對象不同), 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_INFECTED_SIGHTING_TURN_IN_DIALOGUE": {
+  "as1_value": "我会派一名观察者到高处, 并警告他们路上的人. 我们会与必须承担决定后果的人商量.",
+  "value": "我会派一名观察员上高处. 如果它们继续移动, 我们会警告所有在它们行进路线上的人. 我们会和必须承担这个决定的人商议.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 為過時譯文(語意遺漏或對象不同), 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_MECHANICAL_FAILURE_TURN_IN_DIALOGUE": {
+  "as1_value": "测量数据足够了. 我能准备工具, 但谁也不能先碰它. 我们会与必须承担决定后果的人商量.",
+  "value": "这些尺寸够用了. 我可以先备好工具, 但在我到场之前, 谁都不准碰那台设备. 我们会和必须承担这个决定的人商议.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 為過時譯文(語意遺漏或對象不同), 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_MEDICINE_FOR_STRANGER_TURN_IN_DIALOGUE": {
+  "as1_value": "我会先评估需求. 如果治疗可行, 我们会找到公平的报酬. 我们会与必须承担决定后果的人商量.",
+  "value": "我会先评估需求. 如果治疗可行, 我们会找出公道的补偿方式. 我们会和必须承担这个决定的人商议.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 為過時譯文(語意遺漏或對象不同), 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_MISSING_PERSON_LETTER": {
+  "as1_value": "我们在寻找一位上次出行后再也没回来的人. 信里附有体貌描述, 计划路线, 以及只有至亲好友才知道的记号. 保护家庭, 不要让恐惧替所有人做决定.",
+  "value": "我们在找一个上次出门就没再回来的人. 随函附上外貌描述, 预定路线, 以及只有与他亲近的人才认得出的记号. 保护家人, 别让恐惧替所有人做决定.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：現行 EN 主體已改寫, 舊 CN/CH 為過時譯文(語意遺漏或對象不同), 依 EN 重譯."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_PERSONAL_KEEPSAKE_TITLE": {
+  "as1_value": "私人纪念物",
+  "value": "私人递送",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為「Personal delivery」, As1 CN 仍為舊物件「私人纪念物」屬過時譯; 依 EN 修 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_PERSONAL_KEEPSAKE_TURN_IN_DIALOGUE": {
+  "as1_value": "我以为它和其他一切一起丢失了. 谢谢你没有把它变成商品. 我们会与必须承担决定后果的人商量.",
+  "value": "我以为它和其他一切一起丢失了. 谢谢你把它送来, 而且没有把它变成商品. 我们会与必须承担决定后果的人商量.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「thank you for bringing it (送達這件事本身的致謝)」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_RADIO_WINDOW_TURN_IN_DIALOGUE": {
+  "as1_value": "我会更换呼号, 只允许一名操作员应答. 我们会与必须承担决定后果的人商量.",
+  "value": "我会更换呼号, 并且只让一个人回话. 其他人不需要知道. 我们会与必须承担决定后果的人商量.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「Nobody else needs to know it.」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_SEALED_EVIDENCE_LETTER": {
+  "as1_value": "信封里装着一些观察记录, 单独阅读时可能冤枉好人. 它必须密封送达, 并在会面之前保持密封. 保护家庭, 不要让恐惧替所有人做决定.",
+  "value": "信封里装着一些观察记录, 若脱离上下文阅读, 可能指向错误的人. 它必须密封送达, 并在会面之前保持密封. 保护家庭, 不要让恐惧替所有人做决定.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 改為 \"could point to the wrong person if read out of context\"(條件由「單獨閱讀」變成「脫離上下文」, 結果由「冤枉好人」變成「指向錯的人」); 譯文仍停在舊 EN. 此鍵 CH 亦未跟進."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_SEALED_EVIDENCE_TITLE": {
+  "as1_value": "密封的证据",
+  "value": "密封文件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為「Documents under seal」, As1 CN 仍為舊物件「密封的证据」屬過時譯; 依 EN 修 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_SEALED_EVIDENCE_TURN_IN_DIALOGUE": {
+  "as1_value": "封口完好无损. 在所有相关人到齐之前, 我会保管它. 我们会与必须承担决定后果的人商量.",
+  "value": "封口完好无损. 我会保管它, 直到必须为其内容负责的人都到场. 我们会与必须承担决定后果的人商量.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 與 EN 語意不符 (EN 限定為 those who must answer for its contents, CN 泛化成「所有相关人」); 依 EN 修 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_STOLEN_TOOLS_LETTER": {
+  "as1_value": "专用工具不见了. 询问近期的修理和反常的报价, 但在确认记号或序列号之前不要指责任何人. 保护家庭, 不要让恐惧替所有人做决定.",
+  "value": "一批不是谁都用得上的专用工具不见了. 询问近期的修理和反常的报价, 但在确认记号或序列号之前不要指责任何人. 保护家庭, 不要让恐惧替所有人做决定.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「that are not useful to just anyone」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_STOLEN_TOOLS_OFFER_DIALOGUE": {
+  "as1_value": "窃贼也许会归还一件工具; 被冤枉的邻居却不会归还信任. 为那些无法走上那条路的人做这件事.",
+  "value": "窃贼也许会归还一件工具; 但被冤枉的人不会归还信任. 为那些无法走上那条路的人做这件事.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 與 EN 語意不符 (EN 已由 neighbor 改為 a falsely accused person, CN 仍寫「邻居」); 依 EN 修 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_STOLEN_TOOLS_TURN_IN_DIALOGUE": {
+  "as1_value": "我会安静地检查工坊和近期的交易. 我们会与必须承担决定后果的人商量.",
+  "value": "我会悄悄检查工坊和近期的交易. 如果东西出现了, 我们就会知道可能是谁用过. 我们会与必须承担决定后果的人商量.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「If they turn up, we will know who may have used them.」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_STORM_PREPARATION_LETTER": {
+  "as1_value": "种种迹象表明将有大风和持续的降雨. 在它来临之前, 固定遮盖物, 把储备垫离地面, 并疏通排水沟. 保护家庭, 不要让恐惧替所有人做决定.",
+  "value": "种种迹象表明将有大风和持续的降雨. 在它来临之前, 固定遮盖物, 把储备垫离地面, 并检查排水沟. 保护家庭, 不要让恐惧替所有人做决定.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 與 EN 語意不符 (EN 為 check drains(檢查), CN 作「疏通排水沟」); 依 EN 修 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_STORM_PREPARATION_OFFER_DIALOGUE": {
+  "as1_value": "一旦雨下起来, 再发现哪座屋顶需要加固就太迟了. 为那些无法走上那条路的人做这件事.",
+  "value": "一旦雨下起来, 再发现哪座屋顶已经呼救了好几周就太迟了. 为那些无法走上那条路的人做这件事.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「had been crying out for help for weeks」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_SUSPICIOUS_MOVEMENTS_TURN_IN_DIALOGUE": {
+  "as1_value": "我会谨慎观察. 如果他们的行动规律改变, 我们会最先知道. 我们会与必须承担决定后果的人商量.",
+  "value": "我会谨慎观察. 如果他们的行动规律改变, 我们会在他们发现被监视之前就知道. 我们会与必须承担决定后果的人商量.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「before they realize we are watching」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_TARGET_DEFAULT": {
+  "as1_value": "把这份信息视为机密, 并通过可靠的信使答复.",
+  "value": "请诚实答复, 即使答案是你们帮不上我们的忙.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 已整句改寫, As1 CN 仍是舊句 (與 hints 的舊 EN 一致) 屬過時譯; 依 EN 重譯 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_TARGET_DRIFTERS": {
+  "as1_value": "把这与你路上所见进行比对, 并精确标记日期和路线.",
+  "value": "谁带来诚实的消息, 我们就一定为他留一份饭. 请在你接下来的落脚处打听.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 已整句改寫, As1 CN 仍是舊句 (與 hints 的舊 EN 一致) 屬過時譯; 依 EN 重譯 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_TARGET_INSTITUTE": {
+  "as1_value": "把医学影响留给合格的人员, 并提交一份书面评估.",
+  "value": "如果你们能派一位有医疗经验的人过来, 这里会备好帮手和干净的空间.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 已整句改寫, As1 CN 仍是舊句 (與 hints 的舊 EN 一致) 屬過時譯; 依 EN 重譯 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_TARGET_KNOXNET": {
+  "as1_value": "不要在公开无线电上提及姓名和确切位置, 并通过可靠的频道确认.",
+  "value": "一段简短的通讯也许就能让失散的人重逢. 请避免全名和确切位置.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 已整句改寫, As1 CN 仍是舊句 (與 hints 的舊 EN 一致) 屬過時譯; 依 EN 重譯 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_TARGET_KNOX_WORKFORCE": {
+  "as1_value": "在接下这项工作之前, 确认工具, 测量数据, 人力和运输.",
+  "value": "我们有人手可以出力, 也有几件还没修的东西; 让我们谈一笔公平的交换.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 已整句改寫, As1 CN 仍是舊句 (與 hints 的舊 EN 一致) 屬過時譯; 依 EN 重譯 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_TARGET_NEW_KNOX_COMMUNITY": {
+  "as1_value": "保护平民, 公平分担负担, 并避免引发恐慌.",
+  "value": "请在今晚的会议上公布, 让每个家庭量力而行地出手帮忙.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 已整句改寫, As1 CN 仍是舊句 (與 hints 的舊 EN 一致) 屬過時譯; 依 EN 重譯 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_TARGET_OLD_GUARD": {
+  "as1_value": "在移动人员或物资之前, 协调哨兵和安全接近路线.",
+  "value": "你们的纪律帮得上忙, 但请把武器留在餐厅外, 并先跟我们的协调人谈过.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 已整句改寫, As1 CN 仍是舊句 (與 hints 的舊 EN 一致) 屬過時譯; 依 EN 重譯 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_TARGET_SYNDICATE": {
+  "as1_value": "期望谨慎行事; 吸引目击者或武装注意对任何一方都没有好处.",
+  "value": "只要你们不在我们的收容所里招募人手, 也不在里面收钱, 我们就不会过问外面的生意.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 已整句改寫, As1 CN 仍是舊句 (與 hints 的舊 EN 一致) 屬過時譯; 依 EN 重譯 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_NEW_KNOX_COMMUNITY_UNSAFE_WATER_OFFER_DIALOGUE": {
+  "as1_value": "如果这事上了无线电, 半个县的人都会放弃可能仍然干净的水. 为那些无法走上那条路的人做这件事.",
+  "value": "如果这事上了无线电, 半个地区的人都会放弃可能仍然干净的水罐. 为那些无法走上那条路的人做这件事.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 與 EN 語意不符 (EN 為 half the region 與 tanks(水罐/水塔), CN 作「半个县」「水」); 依 EN 修 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_BROKEN_RELAY_TURN_IN_DIALOGUE": {
+  "as1_value": "我会找一支小队. 在排除破坏的可能之前, 谁也不能在那里发射信号. 明白. 我会准备好人员和一个应急预案.",
+  "value": "我会找一支小队. 在查清那是故障还是人为破坏之前, 谁也不能在那里发射信号. 明白. 我会准备好人员和一个应急预案.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 與 EN 語意不符 (EN 為 determine whether it was a failure or sabotage(判定故障或破壞), CN 只寫「排除破坏的可能」); 依 EN 修 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_DEBT_AND_FAVOR_OFFER_DIALOGUE": {
+  "as1_value": "带着这封信, 不要附加威胁. 收信人知道这笔债务. 沿规定路线行动, 不要临场增加接触.",
+  "value": "带着这封信, 不要附加威胁. 收信人比我们更清楚这笔债. 沿规定路线行动, 不要临场增加接触.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「better than we do」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_DEBT_AND_FAVOR_TITLE": {
+  "as1_value": "债务与人情",
+  "value": "未了的人情",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為「Outstanding favor」, As1 CN 仍為舊物件「债务与人情」屬過時譯; 依 EN 修 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_DEBT_AND_FAVOR_TURN_IN_DIALOGUE": {
+  "as1_value": "我明白这意味着什么. 答复不会立刻给出, 但我没有忘记. 明白. 我会准备好人员和一个应急预案.",
+  "value": "我明白这意味着什么. 答复不会立刻给出, 但我也不会装作自己忘了. 明白. 我会准备好人员和一个应急预案.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「I will not pretend I have forgotten either(不會裝作忘了)」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_FUEL_EXCHANGE_TURN_IN_DIALOGUE": {
+  "as1_value": "条款苛刻但可行. 我会准备一个诚实的数字. 明白. 我会准备好人员和一个应急预案.",
+  "value": "条款苛刻但可行. 我会在答复之前备好精确的数字. 明白. 我会准备好人员和一个应急预案.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「an accurate figure before replying(精確數字, 且在回覆之前)」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_HARVEST_REQUEST_TURN_IN_DIALOGUE": {
+  "as1_value": "我们能派人手和工具. 我需要先确定确切的日期. 明白. 我会准备好人员和一个应急预案.",
+  "value": "我们能派人手和几样工具. 我需要确切的日期, 免得把另一份工作做到一半就丢下. 明白. 我会准备好人员和一个应急预案.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「so as not to leave another job half finished」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_INFECTED_SIGHTING_TURN_IN_DIALOGUE": {
+  "as1_value": "我会派一名观察者到高处, 并警告他们路上的人. 明白. 我会准备好人员和一个应急预案.",
+  "value": "我会派一名观察者到高处. 如果那群感染者继续移动, 我们会警告位在它们路径上的人. 明白. 我会准备好人员和一个应急预案.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「If the movement continues(條件句)」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_MECHANICAL_FAILURE_TURN_IN_DIALOGUE": {
+  "as1_value": "测量数据足够了. 我能准备工具, 但谁也不能先碰它. 明白. 我会准备好人员和一个应急预案.",
+  "value": "测量数据足够了. 我能准备工具, 但在我到达之前谁也不能碰那台设备. 明白. 我会准备好人员和一个应急预案.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「until I arrive(在我到達之前)」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_PARCEL_1": {
+  "as1_value": "野战口粮和绷带",
+  "value": "野战口粮和敷料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 為 dressings(敷料), As1 CN 窄化成「绷带」; 既有 CH 已作敷料, 一併同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_PERSONAL_KEEPSAKE_TITLE": {
+  "as1_value": "私人纪念物",
+  "value": "私人递送",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為「Personal delivery」, As1 CN 仍為舊物件「私人纪念物」屬過時譯; 依 EN 修 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_PERSONAL_KEEPSAKE_TURN_IN_DIALOGUE": {
+  "as1_value": "我以为它和其他一切一起丢失了. 谢谢你没有把它变成商品. 明白. 我会准备好人员和一个应急预案.",
+  "value": "我以为它和其他一切一起丢失了. 谢谢你把它送来, 而且没有把它变成商品. 明白. 我会准备好人员和一个应急预案.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「thank you for bringing it (送達這件事本身的致謝)」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_RADIO_WINDOW_TURN_IN_DIALOGUE": {
+  "as1_value": "我会更换呼号, 只允许一名操作员应答. 明白. 我会准备好人员和一个应急预案.",
+  "value": "我会更换呼号, 只让一个人回话. 其他人不需要知道. 明白. 我会准备好人员和一个应急预案.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「Nobody else needs to know it.」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_SEALED_EVIDENCE_LETTER": {
+  "as1_value": "信封里装着一些观察记录, 单独阅读时可能冤枉好人. 它必须密封送达, 并在会面之前保持密封. 把安全, 纪律和撤退路线放在首位.",
+  "value": "信封里装着一些观察记录, 若脱离上下文阅读, 可能指向错误的人. 它必须密封送达, 并在会面之前保持密封. 把安全, 纪律和撤退路线放在首位.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 改為 \"could point to the wrong person if read out of context\"(條件由「單獨閱讀」變成「脫離上下文」, 結果由「冤枉好人」變成「指向錯的人」); 譯文仍停在舊 EN. 此鍵 CH 亦未跟進."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_SEALED_EVIDENCE_TITLE": {
+  "as1_value": "密封的证据",
+  "value": "密封文件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為「Documents under seal」, As1 CN 仍為舊物件「密封的证据」屬過時譯; 依 EN 修 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_SEALED_EVIDENCE_TURN_IN_DIALOGUE": {
+  "as1_value": "封口完好无损. 在所有相关人到齐之前, 我会保管它. 明白. 我会准备好人员和一个应急预案.",
+  "value": "封口完好无损. 我会保管它, 直到必须为其内容负责的人都到场. 明白. 我会准备好人员和一个应急预案.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 與 EN 語意不符 (EN 限定為 those who must answer for its contents, CN 泛化成「所有相关人」); 依 EN 修 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_STOLEN_TOOLS_LETTER": {
+  "as1_value": "专用工具不见了. 询问近期的修理和反常的报价, 但在确认记号或序列号之前不要指责任何人. 把安全, 纪律和撤退路线放在首位.",
+  "value": "一批不是谁都用得上的专用工具不见了. 询问近期的修理和反常的报价, 但在确认记号或序列号之前不要指责任何人. 把安全, 纪律和撤退路线放在首位.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「that are not useful to just anyone」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_STOLEN_TOOLS_OFFER_DIALOGUE": {
+  "as1_value": "窃贼也许会归还一件工具; 被冤枉的邻居却不会归还信任. 沿规定路线行动, 不要临场增加接触.",
+  "value": "窃贼也许会归还一件工具; 被冤枉的人不会归还信任. 沿规定路线行动, 不要临场增加接触.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 與 EN 語意不符 (EN 已由 neighbor 改為 a falsely accused person, CN 仍寫「邻居」); 依 EN 修 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_STOLEN_TOOLS_TURN_IN_DIALOGUE": {
+  "as1_value": "我会安静地检查工坊和近期的交易. 明白. 我会准备好人员和一个应急预案.",
+  "value": "我会安静地检查工坊和近期的交易. 如果东西出现了, 我们就会知道可能是谁用过. 明白. 我会准备好人员和一个应急预案.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「If they turn up, we will know who may have used them.」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_STORM_PREPARATION_LETTER": {
+  "as1_value": "种种迹象表明将有大风和持续的降雨. 在它来临之前, 固定遮盖物, 把储备垫离地面, 并疏通排水沟. 把安全, 纪律和撤退路线放在首位.",
+  "value": "种种迹象表明将有大风和持续的降雨. 在它来临之前, 固定遮盖物, 把储备垫离地面, 并检查排水沟. 把安全, 纪律和撤退路线放在首位.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 與 EN 語意不符 (EN 為 check drains(檢查), CN 作「疏通排水沟」); 依 EN 修 CH 並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_STORM_PREPARATION_OFFER_DIALOGUE": {
+  "as1_value": "一旦雨下起来, 再发现哪座屋顶需要加固就太迟了. 沿规定路线行动, 不要临场增加接触.",
+  "value": "一旦雨下起来, 再发现哪座屋顶已经呼救了好几周就太迟了. 沿规定路线行动, 不要临场增加接触.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 漏掉 EN 的「had been crying out for help for weeks」; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_SUSPICIOUS_MOVEMENTS_TURN_IN_DIALOGUE": {
+  "as1_value": "我会谨慎观察. 如果他们的行动规律改变, 我们会最先知道. 明白. 我会准备好人员和一个应急预案.",
+  "value": "我会谨慎地监视. 如果他们的模式变了, 我们会在他们察觉有人在看之前就知道. 明白了. 我会安排人手和应急预案.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 作 we will know before they realize we are watching, As1 CN 縮寫成「我们会最先知道」, 漏掉「在對方察覺被監視之前」這層實質語意; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_TARGET_DEFAULT": {
+  "as1_value": "把这份信息视为机密, 并通过可靠的信使答复.",
+  "value": "记熟指示, 回传确认, 然后把纸烧掉.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: Memorize the instruction, return confirmation, and burn the paper."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_TARGET_DRIFTERS": {
+  "as1_value": "把这与你路上所见进行比对, 并精确标记日期和路线.",
+  "value": "你知道一些我们地图上没有的通道. 指出一条走得通的, 你就能用这份情报换到补给.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: You know passages that do not appear on our maps. Point out a passable one and you will receive provisions for the information."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_TARGET_INSTITUTE": {
+  "as1_value": "把医学影响留给合格的人员, 并提交一份书面评估.",
+  "value": "请预留可收治两名重伤者的容量; 若来的人更多, 按医疗判断处置, 不论级别.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: Prepare capacity for two seriously wounded people; if more arrive, use medical judgment, not rank."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_TARGET_KNOXNET": {
+  "as1_value": "不要在公开无线电上提及姓名和确切位置, 并通过可靠的频道确认.",
+  "value": "在约定时间之前保持无线电静默; 时间到后只发一次确认通讯.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: Radio silence until the agreed time; then a single confirmation transmission."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_TARGET_KNOX_AUTHORITY": {
+  "as1_value": "只动用控制问题所需的权限; 避免不必要的搜查或没收.",
+  "value": "你的人负责维持平民秩序, 我们的人负责外围警戒. 别让两边的指挥系统混在一起.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: Your men will maintain civilian control and ours the outer perimeter. Let us not mix chains of command."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_TARGET_KNOX_WORKFORCE": {
+  "as1_value": "在接下这项工作之前, 确认工具, 测量数据, 人力和运输.",
+  "value": "我们需要一辆一次就能发动的车, 还要一个听得懂它发动机每一种声音的人.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: We need a vehicle that starts on the first try and someone who knows every noise its engine makes."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_TARGET_NEW_KNOX_COMMUNITY": {
+  "as1_value": "保护平民, 公平分担负担, 并避免引发恐慌.",
+  "value": "行动期间让平民待在室内, 并指派两个人负责急救.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: Keep civilians indoors during the movement and assign two people to first aid."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_TARGET_OLD_GUARD": {
+  "as1_value": "在移动人员或物资之前, 协调哨兵和安全接近路线.",
+  "value": "把这个交给分队长, 清点弹药, 并用当日口令确认.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: Pass this to the section leader, check ammunition, and confirm with the password of the day."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_TARGET_SYNDICATE": {
+  "as1_value": "期望谨慎行事; 吸引目击者或武装注意对任何一方都没有好处.",
+  "value": "别把这次的协调当成信任. 照时间表走, 就没有人需要查你的意图.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: Do not mistake this coordination for trust. Keep to the schedule and nobody will have to check your intentions."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_OLD_GUARD_UNSAFE_WATER_OFFER_DIALOGUE": {
+  "as1_value": "如果这事上了无线电, 半个县的人都会放弃可能仍然干净的水. 沿规定路线行动, 不要临场增加接触.",
+  "value": "如果这事上了无线电, 半个地区的人都会放弃可能仍然干净的储水罐. 沿规定路线行动, 不要临场增加接触.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為 \"half the region will abandon tanks\"(郡→地區, 水→儲水槽); 譯文仍是半個縣/郡與「水」. 此鍵 CH 亦未跟進."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_BROKEN_RELAY_TURN_IN_DIALOGUE": {
+  "as1_value": "我会找一支小队. 在排除破坏的可能之前, 谁也不能在那里发射信号. 它完好送达. 这让所有人的条款都变得更有利.",
+  "value": "我会找一支小队. 在我们判定那是故障还是蓄意破坏之前, 没有人可以在那里发送信号. 东西完好送到了. 这会让大家的条件都更好谈.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 作 until we determine whether it was a failure or sabotage(判定是故障還是破壞), As1 CN 只寫「在排除破坏的可能之前」, 漏掉「故障」這一半判斷; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_DEBT_AND_FAVOR_OFFER_DIALOGUE": {
+  "as1_value": "带着这封信, 不要附加威胁. 收信人知道这笔债务. 只问必要之事, 谁都不必撒谎.",
+  "value": "带着这封信, 不要附加威胁. 收信人比我们更清楚这笔债务. 只问必要之事, 谁都不必撒谎.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 加了 \"better than we do\"(收信人比我們更清楚這筆債); 譯文漏掉比較語. 此鍵 CH 亦未跟進."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_DEBT_AND_FAVOR_TITLE": {
+  "as1_value": "债务与人情",
+  "value": "未了的人情",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 標題已改為 Outstanding favor(單一概念), As1 CN 仍是舊版 Debt and favor 的「债务与人情」; 依現行 EN 重譯並同步 cn_override 以免標題與正文對不上."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_FUEL_EXCHANGE_TURN_IN_DIALOGUE": {
+  "as1_value": "条款苛刻但可行. 我会准备一个诚实的数字. 它完好送达. 这让所有人的条款都变得更有利.",
+  "value": "条件很硬, 但办得到. 我会在回复之前准备一个准确的数字. 东西完好送到了. 这会让大家的条件都更好谈.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 作 prepare an accurate figure before replying, As1 CN 寫「准备一个诚实的数字」, 既漏掉 before replying 也把 accurate 換成 honest; 依 EN 修正並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_INFECTED_SIGHTING_TURN_IN_DIALOGUE": {
+  "as1_value": "我会派一名观察者到高处, 并警告他们路上的人. 它完好送达. 这让所有人的条款都变得更有利.",
+  "value": "我会派一名观察员上高处. 如果它们继续移动, 我们会警告位在它们路径上的人. 东西完好送到了. 这会让大家的条件都更好谈.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 有條件句 If the movement continues, As1 CN 直接寫成「并警告他们路上的人」, 漏掉整個條件前提; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_MECHANICAL_FAILURE_TURN_IN_DIALOGUE": {
+  "as1_value": "测量数据足够了. 我能准备工具, 但谁也不能先碰它. 它完好送达. 这让所有人的条款都变得更有利.",
+  "value": "测量数据够了. 我可以把工具准备好, 但在我到之前谁都不准动那台设备. 东西完好送到了. 这会让大家的条件都更好谈.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 作 nobody must touch the equipment until I arrive, As1 CN 寫「谁也不能先碰它」, 漏掉「在我抵達之前」這個時間界線; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_PERSONAL_KEEPSAKE_TITLE": {
+  "as1_value": "私人纪念物",
+  "value": "私人递送",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 標題已從舊版 Personal keepsake 改為 Personal delivery(遞送行為), As1 CN 仍是「私人纪念物」(物品); 依現行 EN 重譯並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_PERSONAL_KEEPSAKE_TURN_IN_DIALOGUE": {
+  "as1_value": "我以为它和其他一切一起丢失了. 谢谢你没有把它变成商品. 它完好送达. 这让所有人的条款都变得更有利.",
+  "value": "我以为它和其他一切一起丢失了. 谢谢你把它送来, 而且没有把它变成商品. 它完好送达. 这让所有人的条款都变得更有利.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 加入 \"Thank you for bringing it without...\"(多了「把它帶來」這一層謝意); 譯文只謝「沒變成商品」, 漏了一句. 此鍵 CH 亦未跟進."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_RADIO_WINDOW_TURN_IN_DIALOGUE": {
+  "as1_value": "我会更换呼号, 只允许一名操作员应答. 它完好送达. 这让所有人的条款都变得更有利.",
+  "value": "我会换掉呼号, 并且只让一个人回应. 其他人不需要知道. 东西完好送到了. 这会让大家的条件都更好谈.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 有第三句 Nobody else needs to know it, As1 CN 整句漏譯; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_SEALED_EVIDENCE_LETTER": {
+  "as1_value": "信封里装着一些观察记录, 单独阅读时可能冤枉好人. 它必须密封送达, 并在会面之前保持密封. 谨慎既是报酬的一部分, 也是协议的一部分.",
+  "value": "信封里装着一些观察记录, 若脱离上下文阅读, 可能指向错误的人. 它必须密封送达, 并在会面之前保持密封. 谨慎既是报酬的一部分, 也是协议的一部分.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 改為 \"could point to the wrong person if read out of context\"(條件由「單獨閱讀」變成「脫離上下文」, 結果由「冤枉好人」變成「指向錯的人」); 譯文仍停在舊 EN. 此鍵 CH 亦未跟進."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_SEALED_EVIDENCE_TITLE": {
+  "as1_value": "密封的证据",
+  "value": "密封的文件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 標題已從舊版 Sealed evidence 改為 Documents under seal, As1 CN 仍是「密封的证据」; 依現行 EN 重譯並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_SEALED_EVIDENCE_TURN_IN_DIALOGUE": {
+  "as1_value": "封口完好无损. 在所有相关人到齐之前, 我会保管它. 它完好送达. 这让所有人的条款都变得更有利.",
+  "value": "封条完好. 我会保管它, 直到该为里面的内容负责的人都到场. 东西完好送到了. 这会让大家的条件都更好谈.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 作 those who must answer for its contents(要為內容負責的人), As1 CN 泛化成「所有相关人」, 失去究責語意; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_STOLEN_TOOLS_LETTER": {
+  "as1_value": "专用工具不见了. 询问近期的修理和反常的报价, 但在确认记号或序列号之前不要指责任何人. 谨慎既是报酬的一部分, 也是协议的一部分.",
+  "value": "一批不是人人用得上的专用工具不见了. 去问问近期的修理和不寻常的出价, 但在辨认出刻痕或序号之前不要指控任何人. 守口如瓶既是报酬的一部分, 也是约定的一部分.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 作 Specialized tools that are not useful to just anyone are missing, As1 CN 縮成「专用工具不见了」, 漏掉「不是人人用得上」這個指向竊賊身分的關鍵限定; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_STOLEN_TOOLS_OFFER_DIALOGUE": {
+  "as1_value": "窃贼也许会归还一件工具; 被冤枉的邻居却不会归还信任. 只问必要之事, 谁都不必撒谎.",
+  "value": "窃贼也许会归还一件工具; 被冤枉的人却不会归还信任. 只问必要之事, 谁都不必撒谎.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已把 \"falsely accused neighbor\" 改為 \"falsely accused person\"; 譯文仍寫「鄰居」, 憑空指定 EN 沒有的關係. 此鍵 CH 亦未跟進."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_STORM_PREPARATION_LETTER": {
+  "as1_value": "种种迹象表明将有大风和持续的降雨. 在它来临之前, 固定遮盖物, 把储备垫离地面, 并疏通排水沟. 谨慎既是报酬的一部分, 也是协议的一部分.",
+  "value": "种种迹象表明将有大风和持续的降雨. 在它来临之前, 固定遮盖物, 把储备垫离地面, 并检查排水沟. 谨慎既是报酬的一部分, 也是协议的一部分.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 由 \"clear drains\" 改為 \"check drains\"(動作從疏通改為檢查); 譯文仍寫成疏通/清通. 此鍵 CH 亦未跟進."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_STORM_PREPARATION_OFFER_DIALOGUE": {
+  "as1_value": "一旦雨下起来, 再发现哪座屋顶需要加固就太迟了. 只问必要之事, 谁都不必撒谎.",
+  "value": "雨一下起来, 再去弄清哪个屋顶已经喊救命喊了好几周就太晚了. 别问超出必要的事, 就没有人需要说谎.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 作 which roof had been crying out for help for weeks, As1 CN 換寫成「哪座屋顶需要加固」, 漏掉「已經求救好幾週」的時間與語氣; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_SUSPICIOUS_MOVEMENTS_TURN_IN_DIALOGUE": {
+  "as1_value": "我会谨慎观察. 如果他们的行动规律改变, 我们会最先知道. 它完好送达. 这让所有人的条款都变得更有利.",
+  "value": "我会谨慎地监视. 如果他们的模式变了, 我们会在他们察觉有人在看之前就知道. 东西完好送到了. 这会让大家的条件都更好谈.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：同 OLD_GUARD 版: EN 的 before they realize we are watching 在 As1 CN 被縮成「最先知道」, 實質語意漏失; 依 EN 補回並同步 cn_override."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_TARGET_DEFAULT": {
+  "as1_value": "把这份信息视为机密, 并通过可靠的信使答复.",
+  "value": "如果你拒绝, 把这张纸原样退回, 不要留下任何标注. 沉默同样是可以接受的答复.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: If you refuse, return the sheet unmarked. Silence will also be an acceptable answer."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_TARGET_DRIFTERS": {
+  "as1_value": "把这与你路上所见进行比对, 并精确标记日期和路线.",
+  "value": "你可以把这份提议送到, 也可以转手卖给别人. 记住谁是拿成果付钱的, 谁只会开空头支票.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: You can carry the proposal or sell it to someone else. Remember who pays for results and who only makes promises."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_TARGET_INSTITUTE": {
+  "as1_value": "把医学影响留给合格的人员, 并提交一份书面评估.",
+  "value": "你们想要的是药; 我们想要的是谨慎, 以及有人愿意照顾一个不肯说出姓名的人.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: You are looking for medicine; we are looking for discretion and care for someone who will not give their name."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_TARGET_KNOXNET": {
+  "as1_value": "不要在公开无线电上提及姓名和确切位置, 并通过可靠的频道确认.",
+  "value": "我们要一个小时的守听时间和一条干净的频率. 作为交换, 你们会拿到还没流传出去的消息.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: We want an hour of listening and a clear frequency. In exchange, you will receive information that is not yet circulating."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_TARGET_KNOX_AUTHORITY": {
+  "as1_value": "只动用控制问题所需的权限; 避免不必要的搜查或没收.",
+  "value": "这既不是招供, 也不是威胁. 这是一个不必折损人手就能解决问题的机会.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: This is neither a confession nor a threat. It is an opportunity to solve a problem without expending men."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_TARGET_KNOX_WORKFORCE": {
+  "as1_value": "在接下这项工作之前, 确认工具, 测量数据, 人力和运输.",
+  "value": "零件是真货, 付款前可以先验; 我们不会问你要修的是哪一台机器.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: The parts are genuine and you may inspect them before payment; we will not ask which machine you are repairing."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_TARGET_NEW_KNOX_COMMUNITY": {
+  "as1_value": "保护平民, 公平分担负担, 并避免引发恐慌.",
+  "value": "我们不会在你们的避难所里做买卖. 把清单送过来, 难看的生意就留在外面办.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: We do not trade inside your shelter. Send a list and we will keep the unpleasant business outside."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_TARGET_OLD_GUARD": {
+  "as1_value": "在移动人员或物资之前, 协调哨兵和安全接近路线.",
+  "value": "尊重中立地带, 我们就会尊重你们的防线. 一场带着枪的误会对谁都没好处.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: Respect neutral ground and we will respect your perimeter. Nobody gains from an armed misunderstanding."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_TARGET_SYNDICATE": {
+  "as1_value": "期望谨慎行事; 吸引目击者或武装注意对任何一方都没有好处.",
+  "value": "使用约定好的问候暗语, 查验信差身份, 不要在第三方面前临时谈条件.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：As1 CN 此鍵沿用舊版通用句, 與已核實 EN 內容完全不同(同一句 CN 同時用於 OLD_GUARD 與 SYNDICATE 兩個 sender), 判定為未跟上 EN 擴充的內容錯誤, 依 EN 重譯並同步 cn_override. EN: Use the agreed greeting, verify the messenger, and do not improvise terms in front of third parties."
+ },
+ "UI.json|UI_KCQUESTS_COURIER_SYNDICATE_UNSAFE_WATER_OFFER_DIALOGUE": {
+  "as1_value": "如果这事上了无线电, 半个县的人都会放弃可能仍然干净的水. 只问必要之事, 谁都不必撒谎.",
+  "value": "如果这事上了无线电, 半个地区的人都会放弃可能仍然干净的储水罐. 只问必要之事, 谁都不必撒谎.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為 \"half the region will abandon tanks\"(郡→地區, 水→儲水槽); 譯文仍是半個縣/郡與「水」. 此鍵 CH 亦未跟進."
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_01_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 每一次击杀都会减少常规路线上累积的风险. 击杀可以在任何地方进行. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 每一次击杀都会减少常规路线上累积的风险. 击杀可以在任何地方进行. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_02_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 游荡的感染者数量已增长到难以容忍的水平. 击杀可以在任何地方进行. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 游荡的感染者数量已增长到难以容忍的水平. 击杀可以在任何地方进行. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_03_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 只要计数可核实, 战斗可以在任何地方发生. 击杀可以在任何地方进行. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 只要计数可核实, 战斗可以在任何地方发生. 击杀可以在任何地方进行. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_04_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 持续的削减将在一夜之间给哨位喘息的空间. 击杀可以在任何地方进行. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 持续的削减将在一夜之间给哨位喘息的空间. 击杀可以在任何地方进行. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_05_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 优先事项是在下一次行动之前减轻压力. 击杀可以在任何地方进行. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 优先事项是在下一次行动之前减轻压力. 击杀可以在任何地方进行. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_06_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 账本保持开放, 直到达到商定的数量. 击杀可以在任何地方进行. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 账本保持开放, 直到达到商定的数量. 击杀可以在任何地方进行. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_07_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 需要明确的结果, 而不是估计或谣言. 击杀可以在任何地方进行. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 需要明确的结果, 而不是估计或谣言. 击杀可以在任何地方进行. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_08_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 报告显示标记边界内有一处聚集. 工作集中在标记的范围内. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 报告显示标记边界内有一处聚集. 工作集中在标记的范围内. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_09_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 必须在热点向其他路线扩散之前削减它. 工作集中在标记的范围内. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 必须在热点向其他路线扩散之前削减它. 工作集中在标记的范围内. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_10_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 清扫外围, 不要离开作战范围. 工作集中在标记的范围内. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 清扫外围, 不要离开作战范围. 工作集中在标记的范围内. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_11_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 把战斗控制在圈内, 让结果保持有用. 工作集中在标记的范围内. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 把战斗控制在圈内, 让结果保持有用. 工作集中在标记的范围内. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_12_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 聚集已确认, 并已指定区域. 工作集中在标记的范围内. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 聚集已确认, 并已指定区域. 工作集中在标记的范围内. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_13_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 那片地面分隔了两条必须重新连通的道路. 工作集中在标记的范围内. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 那片地面分隔了两条必须重新连通的道路. 工作集中在标记的范围内. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_14_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 遏制取决于削减标记点内的群体. 工作集中在标记的范围内. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 遏制取决于削减标记点内的群体. 工作集中在标记的范围内. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_15_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 只要感染者还在里面, 这栋建筑就无法使用. 行动覆盖一个行政划定的区域. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 只要感染者还在里面, 这栋建筑就无法使用. 行动覆盖一个行政划定的区域. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_16_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 检查出入口和楼层; 边界外的击杀不计入. 行动覆盖一个行政划定的区域. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 检查出入口和楼层; 边界外的击杀不计入. 行动覆盖一个行政划定的区域. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_17_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 被堵塞的区域妨碍了必要的通行, 必须重新开放. 行动覆盖一个行政划定的区域. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 被堵塞的区域妨碍了必要的通行, 必须重新开放. 行动覆盖一个行政划定的区域. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_18_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 标记的街道需要可衡量的感染者削减. 行动覆盖一个行政划定的区域. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 标记的街道需要可衡量的感染者削减. 行动覆盖一个行政划定的区域. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_19_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 守住出入口, 同时会有群体从外面接近. 行动覆盖一个行政划定的区域. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 守住出入口, 同时会有群体从外面接近. 行动覆盖一个行政划定的区域. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_KILL_OLD_GUARD_20_DESCRIPTION": {
+  "as1_value": "老卫队认为这次行动是一项保护职责, 期望纪律严明的执行. 在回报之前做最后一次巡查并完成计数. 行动覆盖一个行政划定的区域. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "value": "老卫队认为这次行动是一项保护职责, 要求纪律严明的执行. 在回报之前做最后一次巡查并完成计数. 行动覆盖一个行政划定的区域. 确认所需的击杀数, 回到发布人处领取报酬.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：上游 EN 由 \"expects disciplined execution\" 改寫為 \"requires disciplined execution\"（hint en 為舊版佐證），As1 CN 仍作「期望…的执行」未跟進，語氣由期望變成要求，屬過時翻譯；CH 依本次 EN 作「要求執行時嚴守紀律」故不需改，僅補正 CN 該句動詞。"
+ },
+ "UI.json|UI_KCQUESTS_MISSION_DISCOVER_DRIFTERS_03_DESCRIPTION": {
+  "as1_value": "在路上, 坏情报会付出食物, 时间或生命的代价. 我需要知道藏货点是否仍可使用. 最近的报告已经过时, 我不会拿人的性命冒险去相信谣言.",
+  "value": "在路上, 坏情报会付出食物, 时间或生命的代价. 我需要知道藏身处是否仍可使用. 最近的报告已经过时, 我不会拿人的性命冒险去相信谣言.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：第一手 sources/en/3778350501.json 對應 KnoxChroniclesQuests record 已將 cache 改為 hiding place；既有 CH「物資藏點」及 As1 CN「藏货点」仍限定儲藏貨物，落後目前 EN。改為不擅加物資用途的藏身處，並同步完整 CN。"
+ },
+ "UI.json|UI_KCQUESTS_MISSION_DISCOVER_DRIFTERS_03_TITLE": {
+  "as1_value": "确认藏货点",
+  "value": "确认藏身处",
+  "reason": "As1 v3.9.1 同步逐鍵審定：第一手 sources/en/3778350501.json 對應 KnoxChroniclesQuests record 已將 cache 改為 hiding place；既有 CH「物資藏點」及 As1 CN「藏货点」仍限定儲藏貨物，落後目前 EN。改為不擅加物資用途的藏身處，並同步完整 CN。"
+ },
+ "UI.json|UI_KCQUESTS_MISSION_DISCOVER_DRIFTERS_08_DESCRIPTION": {
+  "as1_value": "在路上, 坏情报会付出食物, 时间或生命的代价. 有人报告藏货点附近有动静. 查明那是孤立的感染者, 严重的聚集, 还是别的东西.",
+  "value": "在路上, 坏情报会付出食物, 时间或生命的代价. 有人报告藏身处附近有动静. 查明那是孤立的感染者, 严重的聚集, 还是别的东西.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：第一手 sources/en/3778350501.json 對應 KnoxChroniclesQuests record 已將 cache 改為 hiding place；既有 CH「物資藏點」及 As1 CN「藏货点」仍限定儲藏貨物，落後目前 EN。改為不擅加物資用途的藏身處，並同步完整 CN。"
+ },
+ "UI.json|UI_KCQUESTS_MISSION_DISCOVER_DRIFTERS_08_TITLE": {
+  "as1_value": "藏货点的动静",
+  "value": "藏身处的动静",
+  "reason": "As1 v3.9.1 同步逐鍵審定：第一手 sources/en/3778350501.json 對應 KnoxChroniclesQuests record 已將 cache 改為 hiding place；既有 CH「物資藏點」及 As1 CN「藏货点」仍限定儲藏貨物，落後目前 EN。改為不擅加物資用途的藏身處，並同步完整 CN。"
+ },
+ "UI.json|UI_KCQUESTS_MISSION_DISCOVER_DRIFTERS_13_DESCRIPTION": {
+  "as1_value": "在路上, 坏情报会付出食物, 时间或生命的代价. 我们可能很快需要藏货点, 但没人能确认那里还剩下什么. 我需要观察, 而不是假设.",
+  "value": "在路上, 坏情报会付出食物, 时间或生命的代价. 我们可能很快需要藏身处, 但没人能确认那里还剩下什么. 我需要观察, 而不是假设.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：第一手 sources/en/3778350501.json 對應 KnoxChroniclesQuests record 已將 cache 改為 hiding place；既有 CH「物資藏點」及 As1 CN「藏货点」仍限定儲藏貨物，落後目前 EN。改為不擅加物資用途的藏身處，並同步完整 CN。"
+ },
+ "UI.json|UI_KCQUESTS_MISSION_DISCOVER_DRIFTERS_13_TITLE": {
+  "as1_value": "藏货点的状况",
+  "value": "藏身处的状况",
+  "reason": "As1 v3.9.1 同步逐鍵審定：第一手 sources/en/3778350501.json 對應 KnoxChroniclesQuests record 已將 cache 改為 hiding place；既有 CH「物資藏點」及 As1 CN「藏货点」仍限定儲藏貨物，落後目前 EN。改為不擅加物資用途的藏身處，並同步完整 CN。"
+ },
+ "UI.json|UI_KCQUESTS_MISSION_DISCOVER_DRIFTERS_18_DESCRIPTION": {
+  "as1_value": "在路上, 坏情报会付出食物, 时间或生命的代价. 关于藏货点的两份说法相互矛盾. 到那里去, 判断哪一份更接近真相.",
+  "value": "在路上, 坏情报会付出食物, 时间或生命的代价. 关于藏身处的两份说法相互矛盾. 到那里去, 判断哪一份更接近真相.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：第一手 sources/en/3778350501.json 對應 KnoxChroniclesQuests record 已將 cache 改為 hiding place；既有 CH「物資藏點」及 As1 CN「藏货点」仍限定儲藏貨物，落後目前 EN。改為不擅加物資用途的藏身處，並同步完整 CN。"
+ },
+ "UI.json|UI_KCQUESTS_MISSION_DISCOVER_DRIFTERS_18_TITLE": {
+  "as1_value": "藏货点报告",
+  "value": "藏身处报告",
+  "reason": "As1 v3.9.1 同步逐鍵審定：第一手 sources/en/3778350501.json 對應 KnoxChroniclesQuests record 已將 cache 改為 hiding place；既有 CH「物資藏點」及 As1 CN「藏货点」仍限定儲藏貨物，落後目前 EN。改為不擅加物資用途的藏身處，並同步完整 CN。"
+ },
+ "UI.json|UI_KCQUESTS_MISSION_DISCOVER_SYNDICATE_05_DESCRIPTION": {
+  "as1_value": "谨慎与情报同样重要; 仔细看, 避免不必要的注意. 我需要知道安全屋是否仍可使用. 最近的报告已经过时, 我不会拿人的性命冒险去相信谣言.",
+  "value": "谨慎与情报同样重要; 仔细看, 避免不必要的注意. 我需要知道藏身处是否仍可使用. 最近的报告已经过时, 我不会拿人的性命冒险去相信谣言.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已由 safehouse 改為 hiding place, 且本包 UI_KCQUESTS_UI_MISSIONS_FACTION_SAFEHOUSE_RING(EN: the safehouse ring) 仍佔用「安全屋」, 沿用會與派系安全屋系統詞面衝突; 依 EN 現值改「藏身處」並同步 CN, 與 As1Review08 在批38/exact 的統一提案一致"
+ },
+ "UI.json|UI_KCQUESTS_MISSION_DISCOVER_SYNDICATE_10_DESCRIPTION": {
+  "as1_value": "谨慎与情报同样重要; 仔细看, 避免不必要的注意. 有人报告安全屋附近有动静. 查明那是孤立的感染者, 严重的聚集, 还是别的东西.",
+  "value": "谨慎与情报同样重要; 仔细看, 避免不必要的注意. 有人报告藏身处附近有动静. 查明那是孤立的感染者, 严重的聚集, 还是别的东西.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已由 safehouse 改為 hiding place, 且本包 UI_KCQUESTS_UI_MISSIONS_FACTION_SAFEHOUSE_RING(EN: the safehouse ring) 仍佔用「安全屋」, 沿用會與派系安全屋系統詞面衝突; 依 EN 現值改「藏身處」並同步 CN, 與 As1Review08 在批38/exact 的統一提案一致"
+ },
+ "UI.json|UI_KCQUESTS_MISSION_DISCOVER_SYNDICATE_15_DESCRIPTION": {
+  "as1_value": "谨慎与情报同样重要; 仔细看, 避免不必要的注意. 我们可能很快需要安全屋, 但没人能确认那里还剩下什么. 我需要观察, 而不是假设.",
+  "value": "谨慎与情报同样重要; 仔细看, 避免不必要的注意. 我们可能很快需要藏身处, 但没人能确认那里还剩下什么. 我需要观察, 而不是假设.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已由 safehouse 改為 hiding place, 且本包 UI_KCQUESTS_UI_MISSIONS_FACTION_SAFEHOUSE_RING(EN: the safehouse ring) 仍佔用「安全屋」, 沿用會與派系安全屋系統詞面衝突; 依 EN 現值改「藏身處」並同步 CN, 與 As1Review08 在批38/exact 的統一提案一致"
+ },
+ "UI.json|UI_KCQUESTS_MISSION_DISCOVER_SYNDICATE_15_TITLE": {
+  "as1_value": "安全屋的状况",
+  "value": "藏身处的状况",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已由 safehouse 改為 hiding place, 且本包 UI_KCQUESTS_UI_MISSIONS_FACTION_SAFEHOUSE_RING(EN: the safehouse ring) 仍佔用「安全屋」, 沿用會與派系安全屋系統詞面衝突; 依 EN 現值改「藏身處」並同步 CN, 與 As1Review08 在批38/exact 的統一提案一致"
+ },
+ "UI.json|UI_KCQUESTS_MISSION_DISCOVER_SYNDICATE_20_DESCRIPTION": {
+  "as1_value": "谨慎与情报同样重要; 仔细看, 避免不必要的注意. 关于安全屋的两份说法相互矛盾. 到那里去, 判断哪一份更接近真相.",
+  "value": "谨慎与情报同样重要; 仔细看, 避免不必要的注意. 关于藏身处的两份说法相互矛盾. 到那里去, 判断哪一份更接近真相.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已由 safehouse 改為 hiding place, 且本包 UI_KCQUESTS_UI_MISSIONS_FACTION_SAFEHOUSE_RING(EN: the safehouse ring) 仍佔用「安全屋」, 沿用會與派系安全屋系統詞面衝突; 依 EN 現值改「藏身處」並同步 CN, 與 As1Review08 在批38/exact 的統一提案一致"
+ },
+ "UI.json|UI_KCQUESTS_MISSION_DISCOVER_SYNDICATE_20_TITLE": {
+  "as1_value": "安全屋报告",
+  "value": "藏身处报告",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已由 safehouse 改為 hiding place, 且本包 UI_KCQUESTS_UI_MISSIONS_FACTION_SAFEHOUSE_RING(EN: the safehouse ring) 仍佔用「安全屋」, 沿用會與派系安全屋系統詞面衝突; 依 EN 現值改「藏身處」並同步 CN, 與 As1Review08 在批38/exact 的統一提案一致"
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_AARON_MILLS_RIFLEMAN_BUY": {
+  "as1_value": "亚伦·米尔斯接受的货物.",
+  "value": "步枪、手枪、弹药和防御装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_AARON_MILLS_RIFLEMAN_SELL": {
+  "as1_value": "亚伦·米尔斯提供的货物.",
+  "value": "步枪、手枪、弹药和防御装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_AARON_PATEL_PHARMACIST_BUY": {
+  "as1_value": "亚伦·帕特尔接受的货物.",
+  "value": "药品和制药材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_AARON_PATEL_PHARMACIST_SELL": {
+  "as1_value": "亚伦·帕特尔提供的货物.",
+  "value": "药品和制药材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ABIGAIL_BOONE_TRAVELING_TRADER_BUY": {
+  "as1_value": "阿比盖尔·布恩接受的货物.",
+  "value": "粮食补给、药品和轻便旅行装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ABIGAIL_BOONE_TRAVELING_TRADER_SELL": {
+  "as1_value": "阿比盖尔·布恩提供的货物.",
+  "value": "粮食补给、药品和轻便旅行装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ADRIAN_VALE_COURIER_BUY": {
+  "as1_value": "阿德里安·维尔接受的货物.",
+  "value": "地图、无线电和隐秘送货用的物资",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ADRIAN_VALE_COURIER_SELL": {
+  "as1_value": "阿德里安·维尔提供的货物.",
+  "value": "地图、无线电和隐秘送货用的物资",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ALAN_MORSE_RADIO_TECHNICIAN_BUY": {
+  "as1_value": "艾伦·莫尔斯接受的货物.",
+  "value": "无线电、电池和维修零件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ALAN_MORSE_RADIO_TECHNICIAN_SELL": {
+  "as1_value": "艾伦·莫尔斯提供的货物.",
+  "value": "无线电、电池和维修零件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ALICE_HARPER_COMMUNITY_COOK_BUY": {
+  "as1_value": "艾丽斯·哈珀接受的货物.",
+  "value": "社区厨房用的食物和材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ALICE_HARPER_COMMUNITY_COOK_SELL": {
+  "as1_value": "艾丽斯·哈珀提供的货物.",
+  "value": "社区厨房用的食物和材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_BETH_DAWSON_DISPATCHER_BUY": {
+  "as1_value": "贝丝·道森接受的货物.",
+  "value": "无线电、电池和协调工作用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_BETH_DAWSON_DISPATCHER_SELL": {
+  "as1_value": "贝丝·道森提供的货物.",
+  "value": "无线电、电池和协调工作用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_BIANCA_FROST_BROKER_BUY": {
+  "as1_value": "比安卡·弗罗斯特接受的货物.",
+  "value": "贵重物品和地下交易用的物资",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_BIANCA_FROST_BROKER_SELL": {
+  "as1_value": "比安卡·弗罗斯特提供的货物.",
+  "value": "贵重物品和地下交易用的物资",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_BRENDA_KNOX_MEDIC_BUY": {
+  "as1_value": "布伦达·诺克斯接受的货物.",
+  "value": "急救用品和野战医疗装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_BRENDA_KNOX_MEDIC_SELL": {
+  "as1_value": "布伦达·诺克斯提供的货物.",
+  "value": "急救用品和野战医疗装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_BRIAN_FIELDS_FARMHAND_BUY": {
+  "as1_value": "布莱恩·菲尔兹接受的货物.",
+  "value": "种子和农具",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_BRIAN_FIELDS_FARMHAND_SELL": {
+  "as1_value": "布莱恩·菲尔兹提供的货物.",
+  "value": "种子和农具",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_CALEB_RAINES_SCOUT_BUY": {
+  "as1_value": "卡莱布·雷恩斯接受的货物.",
+  "value": "地图和探索装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_CALEB_RAINES_SCOUT_SELL": {
+  "as1_value": "卡莱布·雷恩斯提供的货物.",
+  "value": "地图和探索装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_CALVIN_DORSEY_SETTLEMENT_BUY": {
+  "as1_value": "卡尔文·多尔西接受的货物.",
+  "value": "对聚落有用的资源",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_CALVIN_DORSEY_SETTLEMENT_SELL": {
+  "as1_value": "卡尔文·多尔西提供的货物.",
+  "value": "工具和社区资源",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_CAMILLE_HARRIS_NURSE_BUY": {
+  "as1_value": "卡米尔·哈里斯接受的货物.",
+  "value": "急救用品和护理器材",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_CAMILLE_HARRIS_NURSE_SELL": {
+  "as1_value": "卡米尔·哈里斯提供的货物.",
+  "value": "急救用品和护理器材",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_CARL_JENSEN_QUARTERMASTER_BUY": {
+  "as1_value": "卡尔·詹森接受的货物.",
+  "value": "容器、燃料和军需物资",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_CARL_JENSEN_QUARTERMASTER_SELL": {
+  "as1_value": "卡尔·詹森提供的货物.",
+  "value": "容器、燃料和军需物资",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_CARMEN_RUIZ_SETTLEMENT_COORDINATOR_BUY": {
+  "as1_value": "卡门·鲁伊斯接受的货物.",
+  "value": "聚落用的工具和资源",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_CARMEN_RUIZ_SETTLEMENT_COORDINATOR_SELL": {
+  "as1_value": "卡门·鲁伊斯提供的货物.",
+  "value": "聚落用的工具和资源",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_COLIN_REEVES_RELAY_MAINTAINER_BUY": {
+  "as1_value": "科林·里夫斯接受的货物.",
+  "value": "中继器用的零件、工具和电源",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_COLIN_REEVES_RELAY_MAINTAINER_SELL": {
+  "as1_value": "科林·里夫斯提供的货物.",
+  "value": "中继器用的零件、工具和电源",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_CURTIS_BELL_CARPENTER_BUY": {
+  "as1_value": "柯蒂斯·贝尔接受的货物.",
+  "value": "木工工具和材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_CURTIS_BELL_CARPENTER_SELL": {
+  "as1_value": "柯蒂斯·贝尔提供的货物.",
+  "value": "木工工具和材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_CURTIS_LEDGER_KANE_CLANDESTINE_ACCOUNTANT_BUY": {
+  "as1_value": "柯蒂斯·凯恩接受的货物.",
+  "value": "文件、地图和秘密记账用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_CURTIS_LEDGER_KANE_CLANDESTINE_ACCOUNTANT_SELL": {
+  "as1_value": "柯蒂斯·凯恩提供的货物.",
+  "value": "文件、地图和秘密记账用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_CYNTHIA_ROWE_RECORDS_CLERK_BUY": {
+  "as1_value": "辛西娅·罗接受的货物.",
+  "value": "文件、地图和记录用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_CYNTHIA_ROWE_RECORDS_CLERK_SELL": {
+  "as1_value": "辛西娅·罗提供的货物.",
+  "value": "文件、地图和记录用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_DALE_MURPHY_MECHANIC_BUY": {
+  "as1_value": "戴尔·墨菲接受的货物.",
+  "value": "工具、备用零件和机械材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_DALE_MURPHY_MECHANIC_SELL": {
+  "as1_value": "戴尔·墨菲提供的货物.",
+  "value": "工具、备用零件和机械材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_DANIEL_BROOKS_DEFENSE_BUY": {
+  "as1_value": "丹尼尔·布鲁克斯接受的货物.",
+  "value": "军备、弹药与防御物资",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_DANIEL_BROOKS_DEFENSE_SELL": {
+  "as1_value": "丹尼尔·布鲁克斯提供的货物.",
+  "value": "军备与防御物资",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_DEAN_HOLLOWAY_ARMORY_KEEPER_BUY": {
+  "as1_value": "迪恩·霍洛韦接受的货物.",
+  "value": "武器、弹药和军械库设备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_DEAN_HOLLOWAY_ARMORY_KEEPER_SELL": {
+  "as1_value": "迪恩·霍洛韦提供的货物.",
+  "value": "武器、弹药和军械库设备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_DENISE_CARTER_NETWORK_BUY": {
+  "as1_value": "丹尼斯·卡特接受的货物.",
+  "value": "无线电、电池和网络零件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_DENISE_CARTER_NETWORK_SELL": {
+  "as1_value": "丹尼斯·卡特提供的货物.",
+  "value": "无线电、电池和网络零件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_DIANA_ROURKE_SCOUT_BUY": {
+  "as1_value": "黛安娜·洛克接受的货物.",
+  "value": "地图、工具和探索装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_DIANA_ROURKE_SCOUT_SELL": {
+  "as1_value": "黛安娜·洛克提供的货物.",
+  "value": "地图、工具和探索装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_DOUGLAS_KENT_REPEATER_OPERATOR_BUY": {
+  "as1_value": "道格拉斯·肯特接受的货物.",
+  "value": "无线电和中继站零件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_DOUGLAS_KENT_REPEATER_OPERATOR_SELL": {
+  "as1_value": "道格拉斯·肯特提供的货物.",
+  "value": "无线电和中继站零件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_EDDIE_SLOAN_MARKET_BUY": {
+  "as1_value": "埃迪·斯隆接受的货物.",
+  "value": "各种各样的物品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_EDDIE_SLOAN_MARKET_SELL": {
+  "as1_value": "埃迪·斯隆提供的货物.",
+  "value": "食物和材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ELAINE_FOSTER_CLINIC_BUY": {
+  "as1_value": "伊莱恩·福斯特接受的货物.",
+  "value": "医疗用品和器材",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ELAINE_FOSTER_CLINIC_SELL": {
+  "as1_value": "伊莱恩·福斯特提供的货物.",
+  "value": "医疗用品和器材",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ELI_MERCER_SCOUT_BUY": {
+  "as1_value": "伊莱·默瑟接受的货物.",
+  "value": "地图、工具和探索装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ELI_MERCER_SCOUT_SELL": {
+  "as1_value": "伊莱·默瑟提供的货物.",
+  "value": "地图、工具和探索装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_EMILY_VARGAS_RADIO_REPAIRER_BUY": {
+  "as1_value": "艾米丽·巴尔加斯接受的货物.",
+  "value": "损坏的无线电、电池和电子备用零件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_EMILY_VARGAS_RADIO_REPAIRER_SELL": {
+  "as1_value": "艾米丽·巴尔加斯提供的货物.",
+  "value": "损坏的无线电、电池和电子备用零件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ETHAN_COLE_DRIVER_BUY": {
+  "as1_value": "伊桑·科尔接受的货物.",
+  "value": "工具、备用零件和车辆用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ETHAN_COLE_DRIVER_SELL": {
+  "as1_value": "伊桑·科尔提供的货物.",
+  "value": "工具、备用零件和车辆用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_EVELYN_MERCER_EMERGENCY_BUY": {
+  "as1_value": "伊芙琳·默瑟接受的货物.",
+  "value": "民用储备和应急物资",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_EVELYN_MERCER_EMERGENCY_SELL": {
+  "as1_value": "伊芙琳·默瑟提供的货物.",
+  "value": "民用储备和应急物资",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_FIONA_BRIGGS_RADIO_OPERATOR_BUY": {
+  "as1_value": "菲奥娜·布里格斯接受的货物.",
+  "value": "无线电、电池和操作设备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_FIONA_BRIGGS_RADIO_OPERATOR_SELL": {
+  "as1_value": "菲奥娜·布里格斯提供的货物.",
+  "value": "无线电、电池和操作设备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_FRANK_DELANEY_MECHANIC_BUY": {
+  "as1_value": "弗兰克·德莱尼接受的货物.",
+  "value": "工具、备用零件和机械材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_FRANK_DELANEY_MECHANIC_SELL": {
+  "as1_value": "弗兰克·德莱尼提供的货物.",
+  "value": "工具、备用零件和机械材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_GEORGE_TANNER_WAREHOUSE_WORKER_BUY": {
+  "as1_value": "乔治·坦纳接受的货物.",
+  "value": "容器和仓库货物",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_GEORGE_TANNER_WAREHOUSE_WORKER_SELL": {
+  "as1_value": "乔治·坦纳提供的货物.",
+  "value": "容器和仓库货物",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_GERALD_HAINES_RECORDS_BUY": {
+  "as1_value": "杰拉德·海恩斯接受的货物.",
+  "value": "地图、文件和办公用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_GERALD_HAINES_RECORDS_SELL": {
+  "as1_value": "杰拉德·海恩斯提供的货物.",
+  "value": "地图、文件和办公用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_GRACE_HOLLOWAY_FORAGER_BUY": {
+  "as1_value": "格蕾丝·霍洛韦接受的货物.",
+  "value": "工具、容器和采集用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_GRACE_HOLLOWAY_FORAGER_SELL": {
+  "as1_value": "格蕾丝·霍洛韦提供的货物.",
+  "value": "工具、容器和采集用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_GRANT_MERCER_SENTRY_BUY": {
+  "as1_value": "格兰特·默瑟接受的货物.",
+  "value": "武器、弹药和监视装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_GRANT_MERCER_SENTRY_SELL": {
+  "as1_value": "格兰特·默瑟提供的货物.",
+  "value": "武器、弹药和监视装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_HANNAH_WHITAKER_FARMER_BUY": {
+  "as1_value": "汉娜·惠特克接受的货物.",
+  "value": "种子、食物和农具",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_HANNAH_WHITAKER_FARMER_SELL": {
+  "as1_value": "汉娜·惠特克提供的货物.",
+  "value": "种子、食物和农具",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_HAROLD_KEENE_RESEARCH_BUY": {
+  "as1_value": "哈罗德·基恩接受的货物.",
+  "value": "医疗材料和科学文献",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_HAROLD_KEENE_RESEARCH_SELL": {
+  "as1_value": "哈罗德·基恩提供的货物.",
+  "value": "医疗材料和科学文献",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_HELEN_WARD_LOGISTICS_CLERK_BUY": {
+  "as1_value": "海伦·沃德接受的货物.",
+  "value": "记录文件、容器和后勤资源",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_HELEN_WARD_LOGISTICS_CLERK_SELL": {
+  "as1_value": "海伦·沃德提供的货物.",
+  "value": "记录文件、容器和后勤资源",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_HOLLIS_INFORMATION_BUY": {
+  "as1_value": "霍利斯接受的货物.",
+  "value": "值得关注的物品和文件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_HOLLIS_INFORMATION_SELL": {
+  "as1_value": "霍利斯提供的货物.",
+  "value": "地图、无线电和情报资料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_HOWARD_FINCH_RADIO_OPERATOR_BUY": {
+  "as1_value": "霍华德·芬奇接受的货物.",
+  "value": "无线电、电池和操作设备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_HOWARD_FINCH_RADIO_OPERATOR_SELL": {
+  "as1_value": "霍华德·芬奇提供的货物.",
+  "value": "无线电、电池和操作设备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_IAN_FOSTER_ENGINEER_BUY": {
+  "as1_value": "伊恩·福斯特接受的货物.",
+  "value": "野外工程用的工具和材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_IAN_FOSTER_ENGINEER_SELL": {
+  "as1_value": "伊恩·福斯特提供的货物.",
+  "value": "野外工程用的工具和材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_IRENE_CASTILLO_WELDER_BUY": {
+  "as1_value": "艾琳·卡斯蒂略接受的货物.",
+  "value": "焊接工具和材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_IRENE_CASTILLO_WELDER_SELL": {
+  "as1_value": "艾琳·卡斯蒂略提供的货物.",
+  "value": "焊接工具和材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ISAIAH_FREEMAN_RURAL_MESSENGER_BUY": {
+  "as1_value": "以赛亚·弗里曼接受的货物.",
+  "value": "地图、粮食补给和轻便信使装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ISAIAH_FREEMAN_RURAL_MESSENGER_SELL": {
+  "as1_value": "以赛亚·弗里曼提供的货物.",
+  "value": "地图、粮食补给和轻便信使装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_JESSE_CROWE_WEAPONS_BUY": {
+  "as1_value": "杰西·克劳接受的货物.",
+  "value": "枪械和弹药",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_JESSE_CROWE_WEAPONS_SELL": {
+  "as1_value": "杰西·克劳提供的货物.",
+  "value": "枪械和弹药",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_JOEL_MADDOX_SHELTER_KEEPER_BUY": {
+  "as1_value": "乔尔·马多克斯接受的货物.",
+  "value": "避难所维护用的工具和材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_JOEL_MADDOX_SHELTER_KEEPER_SELL": {
+  "as1_value": "乔尔·马多克斯提供的货物.",
+  "value": "避难所维护用的工具和材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_JONAH_BURKE_CARAVAN_GUARD_BUY": {
+  "as1_value": "乔纳·伯克接受的货物.",
+  "value": "武器、弹药和护卫商队用的装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_JONAH_BURKE_CARAVAN_GUARD_SELL": {
+  "as1_value": "乔纳·伯克提供的货物.",
+  "value": "武器、弹药和护卫商队用的装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_JULIA_REYES_RIFLEMAN_BUY": {
+  "as1_value": "朱莉娅·雷耶斯接受的货物.",
+  "value": "步枪、手枪、弹药和防御装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_JULIA_REYES_RIFLEMAN_SELL": {
+  "as1_value": "朱莉娅·雷耶斯提供的货物.",
+  "value": "步枪、手枪、弹药和防御装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_JUNE_WALKER_COURIER_BUY": {
+  "as1_value": "琼·沃克接受的货物.",
+  "value": "地图和轻便旅行装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_JUNE_WALKER_COURIER_SELL": {
+  "as1_value": "琼·沃克提供的货物.",
+  "value": "地图和轻便旅行装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_KEITH_MORGAN_PATROL_LEADER_BUY": {
+  "as1_value": "基思·摩根接受的货物.",
+  "value": "武器、弹药和巡逻物资",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_KEITH_MORGAN_PATROL_LEADER_SELL": {
+  "as1_value": "基思·摩根提供的货物.",
+  "value": "武器、弹药和巡逻物资",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_LAURA_KIM_CLINICAL_DOCTOR_BUY": {
+  "as1_value": "劳拉·金接受的货物.",
+  "value": "药品和临床器材",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_LAURA_KIM_CLINICAL_DOCTOR_SELL": {
+  "as1_value": "劳拉·金提供的货物.",
+  "value": "药品和临床器材",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_LENA_ORTIZ_RESCUE_BUY": {
+  "as1_value": "莉娜·奥尔蒂斯接受的货物.",
+  "value": "救援和急救装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_LENA_ORTIZ_RESCUE_SELL": {
+  "as1_value": "莉娜·奥尔蒂斯提供的货物.",
+  "value": "救援和急救装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_LEONARD_PRICE_ARCHIVIST_MESSENGER_BUY": {
+  "as1_value": "伦纳德·普莱斯接受的货物.",
+  "value": "地图、文件和信使装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_LEONARD_PRICE_ARCHIVIST_MESSENGER_SELL": {
+  "as1_value": "伦纳德·普莱斯提供的货物.",
+  "value": "地图、文件和信使装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_LILLIAN_VOSS_SMUGGLER_BUY": {
+  "as1_value": "莉莲·沃斯接受的货物.",
+  "value": "走私的药品、电子产品、弹药和备用零件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_LILLIAN_VOSS_SMUGGLER_SELL": {
+  "as1_value": "莉莲·沃斯提供的货物.",
+  "value": "走私的药品、电子产品、弹药和备用零件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 已改為具體交易品項, CN 與既有 CH 仍是舊版商人收購/出售的通用描述; 依已核實 EN 補回品項."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_LINDA_HAYES_ARMORER_BUY": {
+  "as1_value": "琳达·海斯接受的货物.",
+  "value": "武器、弹药和维护材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_LINDA_HAYES_ARMORER_SELL": {
+  "as1_value": "琳达·海斯提供的货物.",
+  "value": "武器、弹药和维护材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_MAE_TURNER_INFRASTRUCTURE_BUY": {
+  "as1_value": "梅·特纳接受的货物.",
+  "value": "工具和基础设施材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_MAE_TURNER_INFRASTRUCTURE_SELL": {
+  "as1_value": "梅·特纳提供的货物.",
+  "value": "工具和基础设施材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_MALCOLM_REED_LOGISTICS_BUY": {
+  "as1_value": "马尔科姆·里德接受的货物.",
+  "value": "对物流网络有用的货物",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_MALCOLM_REED_LOGISTICS_SELL": {
+  "as1_value": "马尔科姆·里德提供的货物.",
+  "value": "燃料、容器和补给品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_MARA_BELL_CONTRABAND_BUY": {
+  "as1_value": "玛拉·贝尔接受的货物.",
+  "value": "各种物品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_MARA_BELL_CONTRABAND_SELL": {
+  "as1_value": "玛拉·贝尔提供的货物.",
+  "value": "药品、电子产品、弹药和备用零件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_MARCUS_WEBB_PERIMETER_GUARD_BUY": {
+  "as1_value": "马库斯·韦布接受的货物.",
+  "value": "武器、弹药和周界防护装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_MARCUS_WEBB_PERIMETER_GUARD_SELL": {
+  "as1_value": "马库斯·韦布提供的货物.",
+  "value": "武器、弹药和周界防护装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_MARTIN_WEBB_RADIO_BUY": {
+  "as1_value": "马丁·韦布接受的货物.",
+  "value": "无线电和电子元件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_MARTIN_WEBB_RADIO_SELL": {
+  "as1_value": "马丁·韦布提供的货物.",
+  "value": "无线电和电子元件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_MASON_REED_ROAD_SCOUT_BUY": {
+  "as1_value": "梅森·里德接受的货物.",
+  "value": "道路地图和路线侦察装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_MASON_REED_ROAD_SCOUT_SELL": {
+  "as1_value": "梅森·里德提供的货物.",
+  "value": "道路地图和路线侦察装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_MEGAN_PIERCE_LABORATORY_ASSISTANT_BUY": {
+  "as1_value": "梅根·皮尔斯接受的货物.",
+  "value": "医疗材料、样本和科学文献",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_MEGAN_PIERCE_LABORATORY_ASSISTANT_SELL": {
+  "as1_value": "梅根·皮尔斯提供的货物.",
+  "value": "医疗材料、样本和科学文献",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_MONICA_HALE_SETTLEMENT_INSPECTOR_BUY": {
+  "as1_value": "莫妮卡·黑尔接受的货物.",
+  "value": "地图、表格和检查材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_MONICA_HALE_SETTLEMENT_INSPECTOR_SELL": {
+  "as1_value": "莫妮卡·黑尔提供的货物.",
+  "value": "地图、表格和检查材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_NAOMI_FLETCHER_MARKET_MANAGER_BUY": {
+  "as1_value": "娜奥米·弗莱彻接受的货物.",
+  "value": "可供交易的食物和材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_NAOMI_FLETCHER_MARKET_MANAGER_SELL": {
+  "as1_value": "娜奥米·弗莱彻提供的货物.",
+  "value": "可供交易的食物和材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_NATHAN_CROSS_SENTRY_BUY": {
+  "as1_value": "内森·克罗斯接受的货物.",
+  "value": "武器、弹药和监视装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_NATHAN_CROSS_SENTRY_SELL": {
+  "as1_value": "内森·克罗斯提供的货物.",
+  "value": "武器、弹药和监视装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_NINA_COLE_VETERINARY_BUY": {
+  "as1_value": "尼娜·科尔接受的货物.",
+  "value": "兽医用品和动物饲料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_NINA_COLE_VETERINARY_SELL": {
+  "as1_value": "尼娜·科尔提供的货物.",
+  "value": "兽医用品和动物饲料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_NOLAN_DRAKE_ENFORCER_BUY": {
+  "as1_value": "诺兰·德雷克接受的货物.",
+  "value": "枪械、弹药和威慑装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_NOLAN_DRAKE_ENFORCER_SELL": {
+  "as1_value": "诺兰·德雷克提供的货物.",
+  "value": "枪械、弹药和威慑装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_NORA_SHAW_TRAVEL_MEDICAL_BUY": {
+  "as1_value": "诺拉·肖接受的货物.",
+  "value": "医疗和旅行用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_NORA_SHAW_TRAVEL_MEDICAL_SELL": {
+  "as1_value": "诺拉·肖提供的货物.",
+  "value": "医疗和旅行用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_OLIVIA_BENTON_SUPPLY_REGISTRAR_BUY": {
+  "as1_value": "奥利维亚·本顿接受的货物.",
+  "value": "仓库用容器和补给品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_OLIVIA_BENTON_SUPPLY_REGISTRAR_SELL": {
+  "as1_value": "奥利维亚·本顿提供的货物.",
+  "value": "仓库用容器和补给品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_OWEN_PRICE_BROADCAST_BUY": {
+  "as1_value": "欧文·普莱斯接受的货物.",
+  "value": "无线电和广播设备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_OWEN_PRICE_BROADCAST_SELL": {
+  "as1_value": "欧文·普莱斯提供的货物.",
+  "value": "无线电和广播设备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_PATRICIA_DOYLE_ADMINISTRATIVE_SECRETARY_BUY": {
+  "as1_value": "帕特里夏·多伊尔接受的货物.",
+  "value": "文件、归档用品和行政材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_PATRICIA_DOYLE_ADMINISTRATIVE_SECRETARY_SELL": {
+  "as1_value": "帕特里夏·多伊尔提供的货物.",
+  "value": "文件、归档用品和行政材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_PETER_WALSH_LABORATORY_TECHNICIAN_BUY": {
+  "as1_value": "彼得·沃尔什接受的货物.",
+  "value": "仪器、临时调制的试剂和技术材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_PETER_WALSH_LABORATORY_TECHNICIAN_SELL": {
+  "as1_value": "彼得·沃尔什提供的货物.",
+  "value": "仪器、临时调制的试剂和技术材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_RACHEL_MATCH_DUNN_CACHE_MANAGER_BUY": {
+  "as1_value": "蕾切尔·邓恩接受的货物.",
+  "value": "藏在隐蔽仓库中的秘密货物",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_RACHEL_MATCH_DUNN_CACHE_MANAGER_SELL": {
+  "as1_value": "蕾切尔·邓恩提供的货物.",
+  "value": "藏在隐蔽仓库中的秘密货物",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_RAYMOND_ELLIS_REQUISITIONS_OFFICER_BUY": {
+  "as1_value": "雷蒙德·埃利斯接受的货物.",
+  "value": "容器、燃料和征用物资",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_RAYMOND_ELLIS_REQUISITIONS_OFFICER_SELL": {
+  "as1_value": "雷蒙德·埃利斯提供的货物.",
+  "value": "容器、燃料和征用物资",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_REBECCA_SLOAN_CARTOGRAPHER_BUY": {
+  "as1_value": "丽贝卡·斯隆接受的货物.",
+  "value": "地图、书写用品和导航装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_REBECCA_SLOAN_CARTOGRAPHER_SELL": {
+  "as1_value": "丽贝卡·斯隆提供的货物.",
+  "value": "地图、书写用品和导航装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ROSA_MENDEZ_ELECTRICIAN_BUY": {
+  "as1_value": "罗莎·门德斯接受的货物.",
+  "value": "工具、电线和电气元件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_ROSA_MENDEZ_ELECTRICIAN_SELL": {
+  "as1_value": "罗莎·门德斯提供的货物.",
+  "value": "工具、电线和电气元件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_RUTH_COLLINS_AGRICULTURE_BUY": {
+  "as1_value": "露丝·柯林斯接受的货物.",
+  "value": "种子、食物和耕作工具",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_RUTH_COLLINS_AGRICULTURE_SELL": {
+  "as1_value": "露丝·柯林斯提供的货物.",
+  "value": "种子、食物和耕作工具",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_SAMUEL_REED_MEDICAL_BUY": {
+  "as1_value": "塞缪尔·里德接受的货物.",
+  "value": "药品和医疗用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_SAMUEL_REED_MEDICAL_SELL": {
+  "as1_value": "塞缪尔·里德提供的货物.",
+  "value": "药品和医疗用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_SHANNON_PIERCE_REPORT_VERIFIER_BUY": {
+  "as1_value": "香农·皮尔斯接受的货物.",
+  "value": "无线电、电池和核实报告用的材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_SHANNON_PIERCE_REPORT_VERIFIER_SELL": {
+  "as1_value": "香农·皮尔斯提供的货物.",
+  "value": "无线电、电池和核实报告用的材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_SILAS_ASHFORD_RAIDER_BUY": {
+  "as1_value": "塞拉斯·阿什福德接受的货物.",
+  "value": "任何对商队有用的物品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_SILAS_ASHFORD_RAIDER_SELL": {
+  "as1_value": "塞拉斯·阿什福德提供的货物.",
+  "value": "武器、燃料和掠夺来的装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_TERESA_BOYD_RATION_MANAGER_BUY": {
+  "as1_value": "特蕾莎·博伊德接受的货物.",
+  "value": "耐储存食品和制作配给品的材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_TERESA_BOYD_RATION_MANAGER_SELL": {
+  "as1_value": "特蕾莎·博伊德提供的货物.",
+  "value": "耐储存食品和制作配给品的材料",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_TESSA_MONROE_TACTICAL_RADIO_OPERATOR_BUY": {
+  "as1_value": "特莎·门罗接受的货物.",
+  "value": "战术通信用无线电和零件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_TESSA_MONROE_TACTICAL_RADIO_OPERATOR_SELL": {
+  "as1_value": "特莎·门罗提供的货物.",
+  "value": "战术通信用无线电和零件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_THOMAS_GRANT_CIVIL_GUARD_BUY": {
+  "as1_value": "托马斯·格兰特接受的货物.",
+  "value": "武器、弹药和民用安保装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_THOMAS_GRANT_CIVIL_GUARD_SELL": {
+  "as1_value": "托马斯·格兰特提供的货物.",
+  "value": "武器、弹药和民用安保装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_TRAVIS_COLE_CARAVAN_ESCORT_BUY": {
+  "as1_value": "特拉维斯·科尔接受的货物.",
+  "value": "武器、弹药和护送用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_TRAVIS_COLE_CARAVAN_ESCORT_SELL": {
+  "as1_value": "特拉维斯·科尔提供的货物.",
+  "value": "武器、弹药和护送用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_VICTOR_CHEN_CLINICAL_ASSISTANT_BUY": {
+  "as1_value": "维克托·陈接受的货物.",
+  "value": "临床材料和患者用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_VICTOR_CHEN_CLINICAL_ASSISTANT_SELL": {
+  "as1_value": "维克托·陈提供的货物.",
+  "value": "临床材料和患者用品",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_VICTOR_SALAZAR_PATROL_DRIVER_BUY": {
+  "as1_value": "维克托·萨拉萨尔接受的货物.",
+  "value": "巡逻车辆用备用零件和工具",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_VICTOR_SALAZAR_PATROL_DRIVER_SELL": {
+  "as1_value": "维克托·萨拉萨尔提供的货物.",
+  "value": "巡逻车辆用备用零件和工具",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_VINCENT_CROSS_INTERMEDIARY_BUY": {
+  "as1_value": "文森特·克罗斯接受的货物.",
+  "value": "地图、无线电和中介文件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_VINCENT_CROSS_INTERMEDIARY_SELL": {
+  "as1_value": "文森特·克罗斯提供的货物.",
+  "value": "地图、无线电和中介文件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_WALTER_BRIGGS_MECHANICAL_BUY": {
+  "as1_value": "沃尔特·布里格斯接受的货物.",
+  "value": "工具、材料和备用零件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_WALTER_BRIGGS_MECHANICAL_SELL": {
+  "as1_value": "沃尔特·布里格斯提供的货物.",
+  "value": "工具、材料和备用零件",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_WARREN_PIKE_SECURITY_BUY": {
+  "as1_value": "沃伦·派克接受的货物.",
+  "value": "武器、弹药和周界管制装备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_TRADE_DESCRIPTION_WARREN_PIKE_SECURITY_SELL": {
+  "as1_value": "沃伦·派克提供的货物.",
+  "value": "警用装备和周界管制",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN已改為具體商品類別; CN及既有CH仍沿用舊版商人收購/出售貨物的泛稱, 遺漏目前內容."
+ },
+ "UI.json|UI_KCTRADERS_UI_CURRENCY_PACK_LARGE": {
+  "as1_value": "打包10捆钞票",
+  "value": "把10捆钞票打成大捆",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN已明確指出製成大鈔票捆; CN及既有CH只寫打包10捆, 遺漏產出的大捆規格."
+ },
+ "UI.json|UI_KCTRADERS_UI_MONEY_MANAGER_HELP": {
+  "as1_value": "在库存中的卡片和钱包之间转移资金.",
+  "value": "钱包可在任何地方使用. 卡片需要附近有自动取款机或商人.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN已更新為錢包與卡片的使用地點限制; CN及既有CH仍為舊版資金轉移說明."
+ },
+ "UI.json|UI_KCTRADERS_UI_MONEY_MANAGER_TERMINAL_REQUIRED": {
+  "as1_value": "你必须在自动取款机或商人的2格范围内.",
+  "value": "卡片操作需要你位于自动取款机或商人的2格范围内.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN明確限定卡片操作; CN及既有CH漏掉限定, 容易誤以為所有資金操作皆須靠近終端."
+ },
+ "UI.json|UI_KCTRADERS_UI_WALLET_TERMINAL_REQUIRED": {
+  "as1_value": "你必须在自动取款机或商人的1格范围内.",
+  "value": "你必须在自动取款机或商人的2格范围内.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：已核實EN的距離為2格, CN及既有CH仍為舊版1格."
+ },
+ "UI.json|UI_trait_NaturalEaterDesc": {
+  "as1_value": "比起深度加工的食物, 你更喜欢天然食物.<br>食用未烹煮的豆类, 浆果, 柑橘, 水果, 绿叶菜, 蘑菇, 坚果或蔬菜时, 会根据该份食物的饥饿值恢复精神状态, 最多5%%.",
+  "value": "比起重度加工保存的食物, 你更喜欢天然食物.<br>食用未经烹煮且未经包装的浆果, 柑橘, 水果, 绿叶菜, 香草, 辣椒, 蘑菇, 坚果或蔬菜时, 会根据该份食物的饥饿值恢复精神状态, 最多5%%.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 明列 uncooked, unpackaged 且包含 herbs/hot peppers, 不含豆類. As1 遺漏未包裝限制、香草與辣椒並多列豆類; CH 沿用符合 EN 的既有人工譯文, CN 同步修正條件與食物清單."
+ },
+ "UI.json|UI_trait_ThuggishDesc": {
+  "as1_value": "没错, 你年轻时确实敲碎过几个人的膝盖. 那段经历或许能派上用场.",
+  "value": "没错, 你以前确实开枪打碎过几个人的膝盖. 那段经历或许能派上用场.",
+  "reason": "As1 v3.9.1 同步逐鍵審定：EN 的 capped a few knees 指開槍傷害膝蓋, 不是 As1 的敲碎; 保留既有 CH 的槍擊語意並修正 CN."
+ },
+ "UI.json|UI_KCQUESTS_MISSION_DISCOVER_SYNDICATE_05_TITLE": {
+  "as1_value": "确认安全屋",
+  "value": "确认藏身处",
+  "reason": "As1 v3.9.1 同步逐鍵審定：exact-reuse 的 CN/CH 恰好相同不代表可保留：第一手 sources/en/3778350501.json 已由 safehouse 改為 hiding place，現譯「安全屋」仍限定房屋且擅加安全性。與 DRIFTERS 同詞統一藏身處，CN 同步改藏身处。"
+ },
+ "UI.json|UI_KCQUESTS_MISSION_DISCOVER_SYNDICATE_10_TITLE": {
+  "as1_value": "安全屋的动静",
+  "value": "藏身处的动静",
+  "reason": "As1 v3.9.1 同步逐鍵審定：exact-reuse 的 CN/CH 恰好相同不代表可保留：第一手 sources/en/3778350501.json 已由 safehouse 改為 hiding place，現譯「安全屋」仍限定房屋且擅加安全性。與 DRIFTERS 同詞統一藏身處，CN 同步改藏身处。"
+ },
+ "UI.json|UI_KCTRADERS_UI_TRADE_RULES_FIREARMS": {
+  "as1_value": "枪械",
+  "value": "军备",
+  "reason": "As1 v3.9.1 同步逐鍵審定：第一手 sources/en/3778350501.json 的 KnoxChroniclesTraders record 已由 Firearms 改為 Armaments，範圍不再只限槍械；既有 CN/CH 均落後 EN。採 result-44 DANIEL_BROOKS_DEFENSE_BUY/SELL 對 Armaments 的一致譯名軍備，並同步 CN。"
+ },
+ "IG_UI.json|IGUI_AirdropRadio_Distance": {
+  "value": "你距离空投区 %d 个区格 (cell).",
+  "as1_value": "你距离空投区%d个格子.",
+  "reason": "EN明示cells，不是tiles/squares；保留cell單位避免以小格誤解距離，不推算或修改遊戲距離。"
+ },
+ "IG_UI.json|IGUI_AirdropRadio_Outro_Charlie_4": {
+  "value": "查理通话结束. 继续全力完成任务. 完毕.",
+  "as1_value": "查理通话结束. 祝任务成功. 完毕.",
+  "reason": "EN要求Stay committed to mission success，As1原值只剩祝福任務成功，補回持續投入任務的指示。"
+ }
 }
