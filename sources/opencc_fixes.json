@@ -1,2599 +1,2599 @@
 {
- "_comment": "【已降級為 lint 資料】斷絕 OpenCC 後 build 不再讀取本檔；十族 regex 由 scripts/lint_ch.py 以 report-only 方式掃 sources/ch corpus 與 own_translations 的 ch 欄，作為凍結基線殘留錯誤與人工新條目的回歸防護網。",
- "_usage": "在對應 category 的 rules 陣列加入 {pattern, replacement} 供 lint 掃描；pattern 為 regex，replacement 僅供人工參考（lint 不自動改寫）。",
- "_provenance": "七大類移植自本體 MinidoracatLangFor42 scripts/opencc_fixes.json（2026-07-19），依本包語料逐條覆核後調整：不移植「係數→系數」（台灣標準即係數，照搬會退化 72 處）；不移植「^幹$→乾」（本包 UI_Phrases_SWEAR4 值為髒話「幹」）；「髮生」「散髮」加 lookbehind 防護（毛髮生長／披頭散髮為正確用法）。本包自行覆核不收的規則：「數據包→封包」（s2twp 已把 数据包／數據包 一律轉為「資料包」，post_fix 永不命中；network packet 台譯改走 ch_overrides 逐案處理）。",
- "post_fixes": [
-  {
-   "category": "幹→乾",
-   "description": "乾燥、乾貨相關：OpenCC 常把「乾」誤轉為「幹」",
-   "rules": [
+  "_comment": "【已降級為 lint 資料】斷絕 OpenCC 後 build 不再讀取本檔；十族 regex 由 scripts/lint_ch.py 以 report-only 方式掃 sources/ch corpus 與 own_translations 的 ch 欄，作為凍結基線殘留錯誤與人工新條目的回歸防護網。",
+  "_usage": "在對應 category 的 rules 陣列加入 {pattern, replacement} 供 lint 掃描；pattern 為 regex，replacement 僅供人工參考（lint 不自動改寫）。",
+  "_provenance": "七大類移植自本體 MinidoracatLangFor42 scripts/opencc_fixes.json（2026-07-19），依本包語料逐條覆核後調整：不移植「係數→系數」（台灣標準即係數，照搬會退化 72 處）；不移植「^幹$→乾」（本包 UI_Phrases_SWEAR4 值為髒話「幹」）；「髮生」「散髮」加 lookbehind 防護（毛髮生長／披頭散髮為正確用法）。本包自行覆核不收的規則：「數據包→封包」（s2twp 已把 数据包／數據包 一律轉為「資料包」，post_fix 永不命中；network packet 台譯改走 ch_overrides 逐案處理）。",
+  "post_fixes": [
     {
-     "pattern": "幹(大麥捆|羅勒葉|黑鼠尾草|貓糧|洋甘菊|細香蔥|香菜|聚合草|錦葵|狗糧)",
-     "replacement": "乾\\1",
-     "note": "乾燥物品"
+      "category": "幹→乾",
+      "description": "乾燥、乾貨相關：OpenCC 常把「乾」誤轉為「幹」",
+      "rules": [
+        {
+          "pattern": "幹(大麥捆|羅勒葉|黑鼠尾草|貓糧|洋甘菊|細香蔥|香菜|聚合草|錦葵|狗糧)",
+          "replacement": "乾\\1",
+          "note": "乾燥物品"
+        },
+        {
+          "pattern": "幹(黑豆|鷹嘴豆|芸豆|扁豆|豌豆)",
+          "replacement": "乾\\1",
+          "note": "乾燥豆類"
+        },
+        {
+          "pattern": "幹(大麻捆|薰衣草花瓣|萬壽菊|薄荷|牛至|歐芹|車前草|罌粟果|玫瑰花瓣|迷迭香|黑麥捆|鼠尾草|向日葵花盤|百里香|菸草|小麥捆|野蒜)",
+          "replacement": "乾\\1",
+          "note": "乾燥植物"
+        },
+        {
+          "pattern": "幹(哈瓦那辣椒|墨西哥辣椒)",
+          "replacement": "乾\\1",
+          "note": "乾燥辣椒"
+        },
+        {
+          "pattern": "杏幹",
+          "replacement": "杏乾"
+        },
+        {
+          "pattern": "幹拉麵",
+          "replacement": "乾拉麵"
+        },
+        {
+          "pattern": "口有點幹",
+          "replacement": "口有點乾"
+        },
+        {
+          "pattern": "幹\\s*草",
+          "replacement": "乾草",
+          "note": "乾草（飼料），含空格版"
+        },
+        {
+          "pattern": "幹燥",
+          "replacement": "乾燥"
+        },
+        {
+          "pattern": "幹爽",
+          "replacement": "乾爽"
+        },
+        {
+          "pattern": "幹淨",
+          "replacement": "乾淨"
+        },
+        {
+          "pattern": "幹糧",
+          "replacement": "乾糧"
+        },
+        {
+          "pattern": "幹柴",
+          "replacement": "乾柴"
+        },
+        {
+          "pattern": "幹葉",
+          "replacement": "乾葉"
+        },
+        {
+          "pattern": "風幹",
+          "replacement": "風乾"
+        },
+        {
+          "pattern": "晾幹",
+          "replacement": "晾乾"
+        },
+        {
+          "pattern": "烘幹",
+          "replacement": "烘乾"
+        },
+        {
+          "pattern": "曬幹",
+          "replacement": "曬乾"
+        },
+        {
+          "pattern": "吹幹",
+          "replacement": "吹乾"
+        },
+        {
+          "pattern": "擦幹",
+          "replacement": "擦乾"
+        },
+        {
+          "pattern": "幹巷",
+          "replacement": "乾巷",
+          "note": "街道名 Dry Lane"
+        },
+        {
+          "pattern": "弄幹",
+          "replacement": "弄乾"
+        }
+      ]
     },
     {
-     "pattern": "幹(黑豆|鷹嘴豆|芸豆|扁豆|豌豆)",
-     "replacement": "乾\\1",
-     "note": "乾燥豆類"
+      "category": "幹→干",
+      "description": "干擾、干預：「干」不是「乾」也不是「幹」",
+      "rules": [
+        {
+          "pattern": "幹\\s*擾",
+          "replacement": "干擾",
+          "note": "含空格版（傳單排版）"
+        },
+        {
+          "pattern": "幹預",
+          "replacement": "干預"
+        }
+      ]
     },
     {
-     "pattern": "幹(大麻捆|薰衣草花瓣|萬壽菊|薄荷|牛至|歐芹|車前草|罌粟果|玫瑰花瓣|迷迭香|黑麥捆|鼠尾草|向日葵花盤|百里香|菸草|小麥捆|野蒜)",
-     "replacement": "乾\\1",
-     "note": "乾燥植物"
+      "category": "髮→發",
+      "description": "動詞「發」被誤轉為「髮」",
+      "rules": [
+        {
+          "pattern": "(?<![毛頭])髮生",
+          "replacement": "發生",
+          "note": "排除「毛髮生長」「頭髮生長」等正確用法"
+        },
+        {
+          "pattern": "髮現",
+          "replacement": "發現"
+        },
+        {
+          "pattern": "髮射",
+          "replacement": "發射"
+        },
+        {
+          "pattern": "髮動",
+          "replacement": "發動"
+        },
+        {
+          "pattern": "髮出",
+          "replacement": "發出"
+        },
+        {
+          "pattern": "髮展",
+          "replacement": "發展"
+        },
+        {
+          "pattern": "髮送",
+          "replacement": "發送"
+        },
+        {
+          "pattern": "髮佈",
+          "replacement": "發佈"
+        },
+        {
+          "pattern": "髮布",
+          "replacement": "發布"
+        },
+        {
+          "pattern": "髮揮",
+          "replacement": "發揮"
+        },
+        {
+          "pattern": "髮言",
+          "replacement": "發言"
+        },
+        {
+          "pattern": "髮電",
+          "replacement": "發電"
+        },
+        {
+          "pattern": "髮炎",
+          "replacement": "發炎"
+        },
+        {
+          "pattern": "髮燒",
+          "replacement": "發燒"
+        },
+        {
+          "pattern": "髮酵",
+          "replacement": "發酵"
+        },
+        {
+          "pattern": "髮芽",
+          "replacement": "發芽"
+        },
+        {
+          "pattern": "爆髮",
+          "replacement": "爆發"
+        },
+        {
+          "pattern": "開髮",
+          "replacement": "開發"
+        },
+        {
+          "pattern": "觸髮",
+          "replacement": "觸發"
+        },
+        {
+          "pattern": "蒸髮",
+          "replacement": "蒸發"
+        },
+        {
+          "pattern": "揮髮",
+          "replacement": "揮發"
+        },
+        {
+          "pattern": "(?<!頭)散髮",
+          "replacement": "散發",
+          "note": "排除「披頭散髮」"
+        },
+        {
+          "pattern": "啟髮",
+          "replacement": "啟發"
+        },
+        {
+          "pattern": "批髮",
+          "replacement": "批發"
+        },
+        {
+          "pattern": "沙髮",
+          "replacement": "沙發"
+        },
+        {
+          "pattern": "另一頭髮生(?!長)",
+          "replacement": "另一頭發生",
+          "note": "「河的另一頭」+「發生」撞頭髮 lookbehind 防護漏網（2026-07-19 本體遷移實證，同步）"
+        },
+        {
+          "pattern": "街頭髮生",
+          "replacement": "街頭發生",
+          "note": "「街頭」+「發生」同類漏網；無頭髮語境（2026-07-19 同步自本體）"
+        }
+      ]
     },
     {
-     "pattern": "幹(哈瓦那辣椒|墨西哥辣椒)",
-     "replacement": "乾\\1",
-     "note": "乾燥辣椒"
+      "category": "發→髮",
+      "description": "名詞「髮」被誤轉為「發」（髮型名等）",
+      "rules": [
+        {
+          "pattern": "發霧",
+          "replacement": "髮霧"
+        },
+        {
+          "pattern": "胭脂魚發",
+          "replacement": "胭脂魚髮",
+          "note": "髮型名稱"
+        },
+        {
+          "pattern": "掩眼發",
+          "replacement": "掩眼髮",
+          "note": "髮型名稱"
+        }
+      ]
     },
     {
-     "pattern": "杏幹",
-     "replacement": "杏乾"
+      "category": "係→系",
+      "description": "系統：「係」應為「系」（注意：台灣標準寫「係數」，勿加係數規則）",
+      "rules": [
+        {
+          "pattern": "係統",
+          "replacement": "系統"
+        }
+      ]
     },
     {
-     "pattern": "幹拉麵",
-     "replacement": "乾拉麵"
+      "category": "面→麵",
+      "description": "麵食相關",
+      "rules": [
+        {
+          "pattern": "面包",
+          "replacement": "麵包"
+        },
+        {
+          "pattern": "面條",
+          "replacement": "麵條"
+        },
+        {
+          "pattern": "面粉",
+          "replacement": "麵粉"
+        },
+        {
+          "pattern": "拉面",
+          "replacement": "拉麵"
+        },
+        {
+          "pattern": "方便面",
+          "replacement": "方便麵"
+        },
+        {
+          "pattern": "掛面",
+          "replacement": "掛麵"
+        },
+        {
+          "pattern": "炒面",
+          "replacement": "炒麵"
+        },
+        {
+          "pattern": "泡面",
+          "replacement": "泡麵"
+        },
+        {
+          "pattern": "面團",
+          "replacement": "麵團"
+        },
+        {
+          "pattern": "面糊",
+          "replacement": "麵糊"
+        },
+        {
+          "pattern": "和麵(?=\\s*[具部膜罩])",
+          "replacement": "和面",
+          "note": "反向防護：s2twp 詞條「和面→和麵」（揉麵團）誤吃「和+面具/面部」跨詞（2026-08-02 實證 4 處，同句「或面具」對「和麵具」為觸發鐵證，前文「和」是必要條件故收窄）；codex 覆核：裸「麵(?=[具部膜罩])」會誤傷「這種麵具有嚼勁」（麵＋具有跨詞），收窄後僅剩「和麵具有技巧」類極端句殘險，現語料零命中"
+        }
+      ]
     },
     {
-     "pattern": "口有點幹",
-     "replacement": "口有點乾"
+      "category": "里→裡",
+      "description": "「裡面」的「裡」被保留為「里」",
+      "rules": [
+        {
+          "pattern": "(?<!阿)里面",
+          "replacement": "裡面",
+          "note": "lookbehind 防人名「阿里」+「面前」跨詞誤傷（2026-07-30 同步自本體）"
+        },
+        {
+          "pattern": "這里",
+          "replacement": "這裡"
+        },
+        {
+          "pattern": "那里",
+          "replacement": "那裡"
+        },
+        {
+          "pattern": "哪里",
+          "replacement": "哪裡"
+        },
+        {
+          "pattern": "心里",
+          "replacement": "心裡"
+        },
+        {
+          "pattern": "家里",
+          "replacement": "家裡"
+        },
+        {
+          "pattern": "手里",
+          "replacement": "手裡"
+        },
+        {
+          "pattern": "屋里",
+          "replacement": "屋裡"
+        },
+        {
+          "pattern": "東西里",
+          "replacement": "東西裡"
+        },
+        {
+          "pattern": "劇本里",
+          "replacement": "劇本裡"
+        }
+      ]
     },
     {
-     "pattern": "幹\\s*草",
-     "replacement": "乾草",
-     "note": "乾草（飼料），含空格版"
+      "category": "OpenCC 分詞詞條陷阱",
+      "description": "STPhrases 貪婪比對誤吃相鄰字造成的殘留/誤字",
+      "rules": [
+        {
+          "pattern": "干燥",
+          "replacement": "乾燥",
+          "note": "「近日干燥」等：「日干」被當干支詞條吃掉致「干燥」未轉；繁中無任何語境保留「干燥」"
+        },
+        {
+          "pattern": "箇",
+          "replacement": "個",
+          "note": "「个旧→箇舊」（雲南地名）與「个中→箇中」（成語）誤套；「個中」亦為台灣標準寫法，全域替換無誤傷"
+        },
+        {
+          "pattern": "(?<![限機體管編建學])制作",
+          "replacement": "製作",
+          "note": "「在家制作」「無法制作」等分詞漏網；lookbehind 防「限制作用/管制作業」跨詞。已知誤保護：「有限制作價值」（mod 3617732907，走 ch_overrides 修）（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "(龍\\s*)卷(\\s*風)",
+          "replacement": "\\1捲\\2",
+          "note": "龍捲風分詞漏網（本體 Brandenburg 實證；本包「飛馳·龍卷風」車輛名）（2026-07-19 同步自本體）"
+        }
+      ]
     },
     {
-     "pattern": "幹燥",
-     "replacement": "乾燥"
+      "category": "s2twp 過度在地化修正",
+      "rules": [
+        {
+          "pattern": "高階餐廳",
+          "replacement": "高級餐廳",
+          "_note": "TWPhrases 高级→高階 針對技術語境；餐廳語境應為高級（As1 42.19 新鍵 UI_BurdJournals_LorePool_StashNoun）"
+        },
+        {
+          "pattern": "外掛(?!背包|式)",
+          "replacement": "模組",
+          "note": "插件→外掛；台灣遊戲圈「外掛」=作弊程式。暫譯「模組」，終譯（EN item：項目/物件）待裁決後全局統一（2026-07-19 同步自本體）。(?!背包|式) 防車輛外掛式背包等正當用法（模組包 ATA 實證誤傷）"
+        },
+        {
+          "pattern": "擴(\\s*)充(\\s*)套(\\s*)件",
+          "replacement": "擴\\1展",
+          "note": "s2twp 扩展→擴充套件（IT extension 詞條誤套一般 expand/extended 語境）；2026-08-02 全量掃描 24 處（Mirage 視角縮放系列 9 鍵＋車輛/銑床/配方/任務/儲物 15 處）零軟體擴充功能語境；本體語料 0 出現（本體 CH 已凍結，勿移植）"
+        },
+        {
+          "pattern": "全(\\s*)域(\\s*)性",
+          "replacement": "全\\1域",
+          "note": "s2twp 全局→全域性（贅「性」，全域性開關/全域性倍率語法不通）；2026-08-02 全量 20 處全為 global 語境；本體 global 定名「全域」16 處、「全域性」0 處。CN「全局性」→「全域性性」疊字經本規則替換後恰收斂為「全域性」，屬預期正確（本體 CH 已凍結且語料零出現，勿移植）。若日後 As1 帶入「全局性」（→全域性性→本規則收斂為「全域性」），須另立專用規則改「全面性」，勿依賴本條"
+        }
+      ]
     },
     {
-     "pattern": "幹爽",
-     "replacement": "乾爽"
+      "category": "台灣用語統一（2026-07-19 全量掃描）",
+      "description": "字級客觀類：簡繁殘留、量詞、既有主流用字統一；⚠️「手柄」條未同步（本包 handle 把手語境 13 處）",
+      "rules": [
+        {
+          "pattern": "僵(\\s*)屍",
+          "replacement": "殭\\1屍",
+          "note": "台灣標準＋本體主流（246 處殭屍 vs 57 殘留）；含「殭屍毀滅工程」遊戲名；含 CJK 空格版（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "自(\\s*)制(?!\\s*(?:力|能力))",
+          "replacement": "自\\1製",
+          "note": "crafted/makeshift 物品名（自製匕首等 45 處）；(?!力) 防「自制力」；codex 修正：\\s* 防「自 制 力」空格版誤傷（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "鼠(\\s*)標",
+          "replacement": "滑\\1鼠",
+          "note": "s2twp 分詞漏網（移動鼠標/按下鼠標左鍵）；含空格版（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "屏(\\s*)幕",
+          "replacement": "螢\\1幕",
+          "note": "s2twp 分詞漏網；含空格版（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "服(\\s*)務(\\s*)器",
+          "replacement": "伺\\1服\\2器",
+          "note": "s2twp 分詞漏網（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "網(\\s*)絡",
+          "replacement": "網\\1路",
+          "note": "s2twp 分詞漏網（電話網絡等）（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "([一每這那幾兩])(\\s*)只(?=\\s*(?:死\\s*)?(?:家\\s*鼠|殭\\s*屍|僵\\s*屍|母\\s*雞|兔\\s*子|小\\s*狗|野\\s*鴨|狗))",
+          "replacement": "\\1\\2隻",
+          "note": "動物量詞誤轉；lookahead 動物集合，絕不可全域（「這只是/那只是」=just）；codex 修正：CJK 空格版（那 只 殭 屍）（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "一(\\s*)只(?=\\s*需\\s*要\\s*柺\\s*杖\\s*的\\s*野\\s*鴨)",
+          "replacement": "一\\1隻",
+          "note": "動物量詞個案（RM 台詞）（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "(?<!地)(?<!地\\s)圖(\\s*)標",
+          "replacement": "圖\\1示",
+          "note": "icon=圖示（37 處）（2026-07-19 同步自本體）。lookbehind 防「地圖+標記/標籤」跨詞誤傷（2026-07-30 同步自本體）"
+        },
+        {
+          "pattern": "窗(\\s*)口",
+          "replacement": "視\\1窗",
+          "note": "window=視窗（8 處）（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "控(\\s*)件",
+          "replacement": "控\\1制\\1項",
+          "note": "control=控制項（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "滑(\\s*)鼠(\\s*)指(\\s*)針",
+          "replacement": "滑\\1鼠\\2游\\3標",
+          "note": "mouse pointer=滑鼠游標；先於光標規則（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "光(\\s*)標",
+          "replacement": "游\\1標",
+          "note": "cursor=游標；儀表「指針」不受影響（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "搜(\\s*)索",
+          "replacement": "搜\\1尋",
+          "note": "search=搜尋（PZ 全 search 語境，無搜索票法律語境）（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "(?<![縫聚集組整混癒融接結回綜撮])合(\\s*)並",
+          "replacement": "合\\1併",
+          "note": "merge=合併；lookbehind 防「縫合並包扎」（縫合+並，本包實證誤傷）等動詞+並跨詞"
+        },
+        {
+          "pattern": "幸(\\s*)存",
+          "replacement": "倖\\1存",
+          "note": "倖存=台灣標準（30 處）（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "自(\\s*)定(\\s*)義",
+          "replacement": "自\\1訂",
+          "note": "custom=自訂（24 處）（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "調試",
+          "replacement": "除錯",
+          "note": "debug=除錯（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "教(\\s*)程",
+          "replacement": "教\\1學",
+          "note": "tutorial=教學（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "信(\\s*)息",
+          "replacement": "資\\1訊",
+          "note": "information=資訊；message 語境（ServerWelcomeMessage）由 override 改「訊息」（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "界(\\s*)面",
+          "replacement": "介\\1面",
+          "note": "interface=介面（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "交(\\s*)互",
+          "replacement": "互\\1動",
+          "note": "interaction=互動（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "創(\\s*)建",
+          "replacement": "建\\1立",
+          "note": "create=建立（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "兼(\\s*)容",
+          "replacement": "相\\1容",
+          "note": "compatible=相容（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "加(\\s*)載",
+          "replacement": "載\\1入",
+          "note": "load=載入（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "登(\\s*)錄",
+          "replacement": "登\\1入",
+          "note": "login=登入（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "默(\\s*)認",
+          "replacement": "預\\1設",
+          "note": "default=預設（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "用(\\s*)戶",
+          "replacement": "使\\1用\\1者",
+          "note": "user=使用者（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "菜(\\s*)單",
+          "replacement": "選\\1單",
+          "note": "UI menu=選單。⚠️ 2026-07-19 全量掃描 33 處全 UI 語境；未來如出現餐飲菜單語境（RM 烹飪節目）需改窄化前綴版（codex 警示）（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "列(\\s*)表",
+          "replacement": "清\\1單",
+          "note": "list=清單（67 處；與既有「伺服器清單」override 值一致）（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "當(\\s*)前",
+          "replacement": "目\\1前",
+          "note": "current=目前（56 處）（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "通(\\s*)過(?!\\s*[測考審檢])",
+          "replacement": "透\\1過",
+          "note": "via/through=透過（42 處全掃無測驗語境）；lookahead 防「通過測驗」（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "單(\\s*)擊",
+          "replacement": "點\\1擊",
+          "note": "click=點擊（雙擊不受影響）（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "不(\\s*)支(\\s*)持(?=\\s*的\\s*模\\s*組)",
+          "replacement": "不\\1支\\2援",
+          "note": "unsupported mods 窄版（codex 建議，防「支持某人」）（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "(高|低|睡眠|光照|霧氣|水面|水坑|建築|空氣)(\\s*)質(\\s*)量",
+          "replacement": "\\1\\2品\\3質",
+          "note": "quality 正向詞組（codex 窄化案）（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "質(\\s*)量(\\s*)保(\\s*)證",
+          "replacement": "品\\1質\\2保\\3證",
+          "note": "QA 職稱（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "更好的質量",
+          "replacement": "更好的品質",
+          "note": "quality（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "的(\\s*)質(\\s*)量",
+          "replacement": "的\\1品\\2質",
+          "note": "「捕獲物的質量」等 perks 描述；物理 mass 語境現無（note 防範）（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "(肉類|物品)質量",
+          "replacement": "\\1品質",
+          "note": "perks 描述無「的」變體（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "在設置裡",
+          "replacement": "在設定裡",
+          "note": "settings 語境（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "其他設置",
+          "replacement": "其他設定",
+          "note": "settings 語境（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "諮(\\s*)詢(\\s*)前(\\s*)臺",
+          "replacement": "諮\\1詢\\2櫃\\3檯",
+          "note": "旅館語境（1 處）；含 CJK 空格版（2026-07-19 同步自本體）"
+        },
+        {
+          "pattern": "型(\\s*)別",
+          "replacement": "類\\1型",
+          "note": "类型→型別 IT 過度在地化；PZ 語料全為一般類型語境（鋒面類型/音樂類型），無程式資料型別"
+        },
+        {
+          "pattern": "墻",
+          "replacement": "牆",
+          "note": "異體字：官方 CH 用「墻」（陸用），台灣標準為「牆」；語料 牆137/墻0（2026-07-29 42.20 補譯掃描）"
+        },
+        {
+          "pattern": "坐(\\s*)標",
+          "replacement": "座\\1標",
+          "note": "coordinates；語料 座標10/坐標0；含空格版"
+        },
+        {
+          "pattern": "拖(\\s*)動(?!\\s*物)",
+          "replacement": "拖\\1曳",
+          "note": "drag；台灣 UI 標準用語；含空格版。負向前瞻擋「拖|動物」跨詞界誤傷（拖动物尸体→拖曳物屍體），代價是漏轉「拖動物品」（語料 0 筆，漏轉優於轉錯）"
+        },
+        {
+          "pattern": "許可權",
+          "replacement": "權限",
+          "note": "permission=權限。s2twp 把 权限 轉成微軟術語「許可權」；2026-07-30 自本體同步（本包語料 0 筆命中，預防性規則）"
+        },
+        {
+          "pattern": "(?<![關串並])聯(\\s*)機(?!\\s*[構制床])",
+          "replacement": "連\\1線",
+          "note": "online/multiplayer=連線；本體 連線85/聯機0；2026-08-02 全量 6 處全 multiplayer 語境。Mirage 四鍵另以 ch_overrides 採「多人連線/多人遊戲」語境化措辭，本規則為全庫兜底（本體 CH 已凍結且語料零出現，勿移植）。2026-08-02 覆核加固：lookbehind/lookahead 防「關聯機制/串聯機床/並聯機構」跨詞誤傷（現語料 0 命中，預防性）"
+        },
+        {
+          "pattern": "賬",
+          "replacement": "帳",
+          "note": "TW 標準用「帳」、無「賬」正當用途（本體 帳號5/賬號0）；字級規則同時涵蓋 賬號/賬戶/對賬 等（覆核放寬自詞級 賬號；既有 16 條 賬戶 逐鍵覆寫可退役，另案處理）（本體 CH 已凍結且語料零出現，勿移植）"
+        },
+        {
+          "pattern": "只(\\s*)讀(?!\\s*[了過取書完懂])",
+          "replacement": "唯\\1讀",
+          "note": "read-only=唯讀（本體 唯讀1/只讀0；本包既有「唯讀全域剪貼簿」先例）；負向前瞻防「只讀過/只讀了」動詞語境；2026-08-02 全量 4 處全 read-only（Mirage 2＋CSR 面板＋PZLinux 掛載）（本體 CH 已凍結且語料零出現，勿移植）。2026-08-02 覆核加固：擴充否定集防「只讀取/只讀書」（現語料 0 命中，預防性）"
+        },
+        {
+          "pattern": "應(\\s*)用(?!\\s*程)",
+          "replacement": "套\\1用",
+          "note": "動詞 apply=套用（使用者 2026-08-02 裁決全庫整批；ch_overrides 15+ 既往裁決＋本體官方 UI_btn_apply=套用）；(?!程) 防「應用程式」（全庫唯一實戰命中 UI_JeevesPC_BS_OpenFromMenuHalo；語料無「應用程序」形態）；名詞 application（基本電氣應用/研究及應用）以 ch_overrides 釘選；163 處/156 鍵逐處分類＋對抗覆核後落地（本體 CH 已凍結，勿移植）；UI.json|UI_CMRB_Message_AttemptTracing 與 UI_CMRB.json 同鍵原為 cheat→聊天 上游誤譯，2026-08-02 已語意重譯（套用作弊效果的物品）——上游 EN 無法取得（steamcmd 匿名下載當日全面失敗、無公開 repo；已以 en_corpus hash 96c975631f99 反推 51 萬候選未中，鄰鍵 DoorLocked/DoorUnlocked 反推成功確認作者簡單過去式句風），依 CN 句構重譯，日後取得 EN 可覆核"
+        },
+        {
+          "pattern": "丟(\\s*)失",
+          "replacement": "遺\\1失",
+          "note": "lost=遺失（使用者 2026-08-02 裁決）；17 處/17 鍵全量分類：實體物品/資料語境全改；本心→失去、訊號→中斷、血液→流失、NPC 同伴→消失、抽象能力（技能）→失去，以 ch_overrides 語境化（遺失限實體物品/資料，不用於人與抽象）（本體 CH 已凍結，勿移植）"
+        },
+        {
+          "pattern": "選(\\s*)中",
+          "replacement": "選\\1取",
+          "note": "UI select=選取（使用者 2026-08-02 裁決）；74 處/71 鍵全量分類。收斂準則：人被挑中＝獲選義保留「選中」（被選中參加/選中一名玩家/可被選中執行，ch_overrides 釘選）；物件被系統抽選＝選取（外觀被選取機率/車輛被選取頻率/隨機選取曲目）；checkbox 語境改「勾選」（本體慣例 9 處實證）（本體 CH 已凍結，勿移植）"
+        }
+      ]
     },
     {
-     "pattern": "幹淨",
-     "replacement": "乾淨"
-    },
-    {
-     "pattern": "幹糧",
-     "replacement": "乾糧"
-    },
-    {
-     "pattern": "幹柴",
-     "replacement": "乾柴"
-    },
-    {
-     "pattern": "幹葉",
-     "replacement": "乾葉"
-    },
-    {
-     "pattern": "風幹",
-     "replacement": "風乾"
-    },
-    {
-     "pattern": "晾幹",
-     "replacement": "晾乾"
-    },
-    {
-     "pattern": "烘幹",
-     "replacement": "烘乾"
-    },
-    {
-     "pattern": "曬幹",
-     "replacement": "曬乾"
-    },
-    {
-     "pattern": "吹幹",
-     "replacement": "吹乾"
-    },
-    {
-     "pattern": "擦幹",
-     "replacement": "擦乾"
-    },
-    {
-     "pattern": "幹巷",
-     "replacement": "乾巷",
-     "note": "街道名 Dry Lane"
-    },
-    {
-     "pattern": "弄幹",
-     "replacement": "弄乾"
+      "category": "本體特質名",
+      "description": "#409：本體 UI_trait_* 特質名的 CH 官方譯名 ≠ CN 官方譯名換字形（OpenCC 機轉殘留）。只在「整值＝特質名／引號包住／後接特質·特性／特質雜誌-」語境命中；一般敘述（焊工面罩、伐木工襯衫、JOJO 星塵鬥士）不報。mod 自訂同名特質（Calloused、SQ 夜貓子等）以 lint_exemptions 逐鍵豁免。",
+      "rules": [
+        {
+          "pattern": "^業餘技工$|['「]業餘技工['」]|業餘技工特[質性]|特質雜誌-業餘技工",
+          "replacement": "業餘機工",
+          "note": "Vehicle Knowledge（UI_trait_Mechanics）：本體 CH「業餘機工」，CN「业余技工」"
+        },
+        {
+          "pattern": "^伐木工$|['「]伐木工['」]|伐木工特[質性]|特質雜誌-伐木工",
+          "replacement": "斧頭人",
+          "note": "Ax-pert（UI_trait_axeman）：本體 CH「斧頭人」，CN「伐木工」"
+        },
+        {
+          "pattern": "^焊工$|['「]焊工['」]|焊工特[質性]|特質雜誌-焊工",
+          "replacement": "金工",
+          "note": "Welder（UI_trait_Metalworker）：本體 CH「金工」，CN「焊工」"
+        },
+        {
+          "pattern": "^雕刻工$|['「]雕刻工['」]|雕刻工特[質性]|特質雜誌-雕刻工",
+          "replacement": "削刻師",
+          "note": "Whittler（UI_trait_Whittler）：本體 CH「削刻師」，CN「雕刻工」"
+        },
+        {
+          "pattern": "^巧手良工$|['「]巧手良工['」]|巧手良工特[質性]|特質雜誌-巧手良工",
+          "replacement": "巧手",
+          "note": "Handy（UI_trait_handy）：本體 CH「巧手」，CN「巧手良工」"
+        },
+        {
+          "pattern": "^皮糙肉厚$|['「]皮糙肉厚['」]|皮糙肉厚特[質性]|特質雜誌-皮糙肉厚",
+          "replacement": "皮厚",
+          "note": "Thick-skinned（UI_trait_thickskinned）：本體 CH「皮厚」，CN「皮糙肉厚」"
+        },
+        {
+          "pattern": "^無所畏懼$|['「]無所畏懼['」]|無所畏懼特[質性]|特質雜誌-無所畏懼",
+          "replacement": "勇敢",
+          "note": "Brave（UI_trait_brave）：本體 CH「勇敢」，CN「无所畏惧」"
+        },
+        {
+          "pattern": "^超速狂魔$|['「]超速狂魔['」]|超速狂魔特[質性]|特質雜誌-超速狂魔",
+          "replacement": "飆仔",
+          "note": "Speed Demon（UI_trait_SpeedDemon）：本體 CH「飆仔」，CN「超速狂魔」"
+        },
+        {
+          "pattern": "^新手司機$|['「]新手司機['」]|新手司機特[質性]|特質雜誌-新手司機",
+          "replacement": "新手上路",
+          "note": "Sunday Driver（UI_trait_SundayDriver）：本體 CH「新手上路」，CN「新手司机」"
+        },
+        {
+          "pattern": "^畏首畏尾$|['「]畏首畏尾['」]|畏首畏尾特[質性]|特質雜誌-畏首畏尾",
+          "replacement": "懦弱",
+          "note": "Cowardly（UI_trait_cowardly）：本體 CH「懦弱」，CN「畏首畏尾」"
+        },
+        {
+          "pattern": "^體笨如牛$|['「]體笨如牛['」]|體笨如牛特[質性]|特質雜誌-體笨如牛",
+          "replacement": "笨拙",
+          "note": "Clumsy（UI_trait_clumsy）：本體 CH「笨拙」，CN「体笨如牛」"
+        },
+        {
+          "pattern": "^身輕如燕$|['「]身輕如燕['」]|身輕如燕特[質性]|特質雜誌-身輕如燕",
+          "replacement": "優雅",
+          "note": "Graceful（UI_trait_graceful）：本體 CH「優雅」，CN「身轻如燕」"
+        },
+        {
+          "pattern": "^視力障礙$|['「]視力障礙['」]|視力障礙特[質性]|特質雜誌-視力障礙",
+          "replacement": "近視",
+          "note": "Short Sighted（UI_trait_shortsigh）：本體 CH「近視」，CN「视力障碍」"
+        },
+        {
+          "pattern": "^聽力障礙$|['「]聽力障礙['」]|聽力障礙特[質性]|特質雜誌-聽力障礙",
+          "replacement": "聽力較差",
+          "note": "Hard of Hearing（UI_trait_hardhear）：本體 CH「聽力較差」，CN「听力障碍」"
+        },
+        {
+          "pattern": "^聽覺靈敏$|['「]聽覺靈敏['」]|聽覺靈敏特[質性]|特質雜誌-聽覺靈敏",
+          "replacement": "聽覺敏銳",
+          "note": "Keen Hearing（UI_trait_keenhearing）：本體 CH「聽覺敏銳」，CN「听觉灵敏」"
+        },
+        {
+          "pattern": "^目光銳利$|['「]目光銳利['」]|目光銳利特[質性]|特質雜誌-目光銳利",
+          "replacement": "鷹眼",
+          "note": "Eagle Eyed（UI_trait_eagleeyed）：本體 CH「鷹眼」，CN「目光锐利」"
+        },
+        {
+          "pattern": "^食慾旺盛$|['「]食慾旺盛['」]|食慾旺盛特[質性]|特質雜誌-食慾旺盛",
+          "replacement": "食量大",
+          "note": "Hearty Appetite（UI_trait_heartyappetite）：本體 CH「食量大」，CN「食欲旺盛」"
+        },
+        {
+          "pattern": "^輕食簡餐$|['「]輕食簡餐['」]|輕食簡餐特[質性]|特質雜誌-輕食簡餐",
+          "replacement": "食量小",
+          "note": "Light Eater（UI_trait_lighteater）：本體 CH「食量小」，CN「轻食简餐」"
+        },
+        {
+          "pattern": "^緩慢代謝$|['「]緩慢代謝['」]|緩慢代謝特[質性]|特質雜誌-緩慢代謝",
+          "replacement": "代謝緩慢",
+          "note": "Slow Metabolism（UI_trait_weightgain）：本體 CH「代謝緩慢」，CN「缓慢代谢」"
+        },
+        {
+          "pattern": "^快速代謝$|['「]快速代謝['」]|快速代謝特[質性]|特質雜誌-快速代謝",
+          "replacement": "代謝快速",
+          "note": "Fast Metabolism（UI_trait_weightloss）：本體 CH「代謝快速」，CN「快速代谢」"
+        },
+        {
+          "pattern": "^身形消瘦$|['「]身形消瘦['」]|身形消瘦特[質性]|特質雜誌-身形消瘦",
+          "replacement": "嚴重過輕",
+          "note": "Very Low Weight（UI_trait_veryunderweight）：本體 CH「嚴重過輕」，CN「身形消瘦」"
+        },
+        {
+          "pattern": "^瘦骨嶙峋$|['「]瘦骨嶙峋['」]|瘦骨嶙峋特[質性]|特質雜誌-瘦骨嶙峋",
+          "replacement": "骨瘦如柴",
+          "note": "Emaciated（UI_trait_emaciated）：本體 CH「骨瘦如柴」，CN「瘦骨嶙峋」"
+        },
+        {
+          "pattern": "^身體不好$|['「]身體不好['」]|身體不好特[質性]|特質雜誌-身體不好",
+          "replacement": "身材不理想",
+          "note": "Out of Shape（UI_trait_outofshape）：本體 CH「身材不理想」，CN「身体不好」"
+        },
+        {
+          "pattern": "^身體很差$|['「]身體很差['」]|身體很差特[質性]|特質雜誌-身體很差",
+          "replacement": "體態不佳",
+          "note": "Unfit（UI_trait_unfit）：本體 CH「體態不佳」，CN「身体很差」"
+        },
+        {
+          "pattern": "^營養學家$|['「]營養學家['」]|營養學家特[質性]|特質雜誌-營養學家",
+          "replacement": "營養師",
+          "note": "Nutritionist（UI_trait_nutritionist）：本體 CH「營養師」，CN「营养学家」"
+        },
+        {
+          "pattern": "^身強力壯$|['「]身強力壯['」]|身強力壯特[質性]|特質雜誌-身強力壯",
+          "replacement": "強壯",
+          "note": "Strong（UI_trait_strong）：本體 CH「強壯」，CN「身强力壮」"
+        },
+        {
+          "pattern": "^身體壯碩$|['「]身體壯碩['」]|身體壯碩特[質性]|特質雜誌-身體壯碩",
+          "replacement": "壯碩",
+          "note": "Stout（UI_trait_stout）：本體 CH「壯碩」，CN「身体壮硕」"
+        },
+        {
+          "pattern": "^弱不禁風$|['「]弱不禁風['」]|弱不禁風特[質性]|特質雜誌-弱不禁風",
+          "replacement": "虛弱",
+          "note": "Puny（UI_trait_weak）：本體 CH「虛弱」，CN「弱不禁风」"
+        },
+        {
+          "pattern": "^身體虛弱$|['「]身體虛弱['」]|身體虛弱特[質性]|特質雜誌-身體虛弱",
+          "replacement": "軟弱",
+          "note": "Weak（UI_trait_feeble）：本體 CH「軟弱」，CN「身体虚弱」"
+        },
+        {
+          "pattern": "^生命強韌$|['「]生命強韌['」]|生命強韌特[質性]|特質雜誌-生命強韌",
+          "replacement": "堅強韌性",
+          "note": "Resilient（UI_trait_resilient）：本體 CH「堅強韌性」，CN「生命强韧」"
+        },
+        {
+          "pattern": "^易患疾病$|['「]易患疾病['」]|易患疾病特[質性]|特質雜誌-易患疾病",
+          "replacement": "體弱多病",
+          "note": "Prone to Illness（UI_trait_pronetoillness）：本體 CH「體弱多病」，CN「易患疾病」"
+        },
+        {
+          "pattern": "^開闊恐懼$|['「]開闊恐懼['」]|開闊恐懼特[質性]|特質雜誌-開闊恐懼",
+          "replacement": "廣場恐懼症",
+          "note": "Agoraphobic（UI_trait_agoraphobic）：本體 CH「廣場恐懼症」，CN「开阔恐惧」"
+        },
+        {
+          "pattern": "^幽閉恐懼$|['「]幽閉恐懼['」]|幽閉恐懼特[質性]|特質雜誌-幽閉恐懼",
+          "replacement": "幽閉恐懼症",
+          "note": "Claustrophobic（UI_trait_claustro）：本體 CH「幽閉恐懼症」，CN「幽闭恐惧」"
+        },
+        {
+          "pattern": "^神槍手$|['「]神槍手['」]|神槍手特[質性]|特質雜誌-神槍手",
+          "replacement": "神射手",
+          "note": "Marksman（UI_trait_marksman）：本體 CH「神射手」，CN「神枪手」"
+        },
+        {
+          "pattern": "^夜貓子$|['「]夜貓子['」]|夜貓子特[質性]|特質雜誌-夜貓子",
+          "replacement": "夜貓族",
+          "note": "Night Owl（UI_trait_nightowl）：本體 CH「夜貓族」，CN「夜猫子」"
+        },
+        {
+          "pattern": "^戶外專家$|['「]戶外專家['」]|戶外專家特[質性]|特質雜誌-戶外專家",
+          "replacement": "喜好戶外",
+          "note": "Outdoorsy（UI_trait_outdoorsman）：本體 CH「喜好戶外」，CN「户外专家」"
+        },
+        {
+          "pattern": "^雙耳失聰$|['「]雙耳失聰['」]|雙耳失聰特[質性]|特質雜誌-雙耳失聰",
+          "replacement": "耳聾",
+          "note": "Deaf（UI_trait_deaf）：本體 CH「耳聾」，CN「双耳失聪」"
+        },
+        {
+          "pattern": "^身體健康$|['「]身體健康['」]|身體健康特[質性]|特質雜誌-身體健康",
+          "replacement": "體態優良",
+          "note": "Fit（UI_trait_fit）：本體 CH「體態優良」，CN「身体健康」"
+        },
+        {
+          "pattern": "^身肥體胖$|['「]身肥體胖['」]|身肥體胖特[質性]|特質雜誌-身肥體胖",
+          "replacement": "肥胖",
+          "note": "Very High Weight（UI_trait_obese）：本體 CH「肥胖」，CN「身肥体胖」"
+        },
+        {
+          "pattern": "^快速恢復$|['「]快速恢復['」]|快速恢復特[質性]|特質雜誌-快速恢復",
+          "replacement": "恢復快",
+          "note": "Fast Healer（UI_trait_FastHealer）：本體 CH「恢復快」，CN「快速恢复」"
+        },
+        {
+          "pattern": "^學習神速$|['「]學習神速['」]|學習神速特[質性]|特質雜誌-學習神速",
+          "replacement": "學習高手",
+          "note": "Fast Learner（UI_trait_FastLearner）：本體 CH「學習高手」，CN「学习神速」"
+        },
+        {
+          "pattern": "^閱讀神速$|['「]閱讀神速['」]|閱讀神速特[質性]|特質雜誌-閱讀神速",
+          "replacement": "閱讀快",
+          "note": "Fast Reader（UI_trait_FastReader）：本體 CH「閱讀快」，CN「阅读神速」"
+        },
+        {
+          "pattern": "^心驚肉跳$|['「]心驚肉跳['」]|心驚肉跳特[質性]|特質雜誌-心驚肉跳",
+          "replacement": "腎上腺素成癮",
+          "note": "Adrenaline Junkie（UI_trait_AdrenalineJunkie）：本體 CH「腎上腺素成癮」，CN「心惊肉跳」"
+        },
+        {
+          "pattern": "^毫不起眼$|['「]毫不起眼['」]|毫不起眼特[質性]|特質雜誌-毫不起眼",
+          "replacement": "不起眼",
+          "note": "Inconspicuous（UI_trait_Inconspicuous）：本體 CH「不起眼」，CN「毫不起眼」"
+        },
+        {
+          "pattern": "^精神抖擻$|['「]精神抖擻['」]|精神抖擻特[質性]|特質雜誌-精神抖擻",
+          "replacement": "有活力",
+          "note": "Wakeful（UI_trait_LessSleep）：本體 CH「有活力」，CN「精神抖擞」"
+        },
+        {
+          "pattern": "^視夜如明$|['「]視夜如明['」]|視夜如明特[質性]|特質雜誌-視夜如明",
+          "replacement": "貓眼",
+          "note": "Cat's Eyes（UI_trait_NightVision）：本體 CH「貓眼」，CN「视夜如明」"
+        },
+        {
+          "pattern": "^井井有條$|['「]井井有條['」]|井井有條特[質性]|特質雜誌-井井有條",
+          "replacement": "有條理",
+          "note": "Organized（UI_trait_Packmule）：本體 CH「有條理」，CN「井井有条」"
+        },
+        {
+          "pattern": "^自衛班$|['「]自衛班['」]|自衛班特[質性]|特質雜誌-自衛班",
+          "replacement": "自衛",
+          "note": "Self Defense Class（UI_trait_SelfDefenseClass）：本體 CH「自衛」，CN「自卫班」"
+        },
+        {
+          "pattern": "^垂釣者$|['「]垂釣者['」]|垂釣者特[質性]|特質雜誌-垂釣者",
+          "replacement": "釣手",
+          "note": "Angler（UI_trait_Fishing）：本體 CH「釣手」，CN「垂钓者」"
+        },
+        {
+          "pattern": "^跑步愛好者$|['「]跑步愛好者['」]|跑步愛好者特[質性]|特質雜誌-跑步愛好者",
+          "replacement": "跑者",
+          "note": "Runner（UI_trait_Jogger）：本體 CH「跑者」，CN「跑步爱好者」"
+        },
+        {
+          "pattern": "^緩慢恢復$|['「]緩慢恢復['」]|緩慢恢復特[質性]|特質雜誌-緩慢恢復",
+          "replacement": "恢復慢",
+          "note": "Slow Healer（UI_trait_SlowHealer）：本體 CH「恢復慢」，CN「缓慢恢复」"
+        },
+        {
+          "pattern": "^學習緩慢$|['「]學習緩慢['」]|學習緩慢特[質性]|特質雜誌-學習緩慢",
+          "replacement": "腦筋慢",
+          "note": "Slow Learner（UI_trait_SlowLearner）：本體 CH「腦筋慢」，CN「学习缓慢」"
+        },
+        {
+          "pattern": "^閱讀緩慢$|['「]閱讀緩慢['」]|閱讀緩慢特[質性]|特質雜誌-閱讀緩慢",
+          "replacement": "閱讀慢",
+          "note": "Slow Reader（UI_trait_SlowReader）：本體 CH「閱讀慢」，CN「阅读缓慢」"
+        },
+        {
+          "pattern": "^昏昏欲睡$|['「]昏昏欲睡['」]|昏昏欲睡特[質性]|特質雜誌-昏昏欲睡",
+          "replacement": "貪睡",
+          "note": "Sleepyhead（UI_trait_MoreSleep）：本體 CH「貪睡」，CN「昏昏欲睡」"
+        },
+        {
+          "pattern": "^萬眾矚目$|['「]萬眾矚目['」]|萬眾矚目特[質性]|特質雜誌-萬眾矚目",
+          "replacement": "引人注目",
+          "note": "Conspicuous（UI_trait_Conspicuous）：本體 CH「引人注目」，CN「万众瞩目」"
+        },
+        {
+          "pattern": "^雜亂無章$|['「]雜亂無章['」]|雜亂無章特[質性]|特質雜誌-雜亂無章",
+          "replacement": "毫無條理",
+          "note": "Disorganized（UI_trait_Disorganized）：本體 CH「毫無條理」，CN「杂乱无章」"
+        },
+        {
+          "pattern": "^容易口渴$|['「]容易口渴['」]|容易口渴特[質性]|特質雜誌-容易口渴",
+          "replacement": "口乾",
+          "note": "High Thirst（UI_trait_HighThirst）：本體 CH「口乾」，CN「容易口渴」"
+        },
+        {
+          "pattern": "^目不識丁$|['「]目不識丁['」]|目不識丁特[質性]|特質雜誌-目不識丁",
+          "replacement": "文盲",
+          "note": "Illiterate（UI_trait_Illiterate）：本體 CH「文盲」，CN「目不识丁」"
+        },
+        {
+          "pattern": "^輾轉難眠$|['「]輾轉難眠['」]|輾轉難眠特[質性]|特質雜誌-輾轉難眠",
+          "replacement": "失眠",
+          "note": "Restless Sleeper（UI_trait_Insomniac）：本體 CH「失眠」，CN「辗转难眠」"
+        },
+        {
+          "pattern": "^愛好和平$|['「]愛好和平['」]|愛好和平特[質性]|特質雜誌-愛好和平",
+          "replacement": "和平主義者",
+          "note": "Reluctant Fighter（UI_trait_Pacifist）：本體 CH「和平主義者」，CN「爱好和平」"
+        },
+        {
+          "pattern": "^細皮嫩肉$|['「]細皮嫩肉['」]|細皮嫩肉特[質性]|特質雜誌-細皮嫩肉",
+          "replacement": "薄皮",
+          "note": "Thin-skinned（UI_trait_ThinSkinned）：本體 CH「薄皮」，CN「细皮嫩肉」"
+        },
+        {
+          "pattern": "^眼疾手快$|['「]眼疾手快['」]|眼疾手快特[質性]|特質雜誌-眼疾手快",
+          "replacement": "靈巧",
+          "note": "Dextrous（UI_trait_Dexterous）：本體 CH「靈巧」，CN「眼疾手快」"
+        },
+        {
+          "pattern": "^笨手笨腳$|['「]笨手笨腳['」]|笨手笨腳特[質性]|特質雜誌-笨手笨腳",
+          "replacement": "手指不靈",
+          "note": "All Thumbs（UI_trait_AllThumbs）：本體 CH「手指不靈」，CN「笨手笨脚」"
+        },
+        {
+          "pattern": "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁",
+          "replacement": "麻木",
+          "note": "Desensitized（UI_trait_Desensitized）：本體 CH「麻木」，CN「麻木不仁」"
+        },
+        {
+          "pattern": "街頭鬥士",
+          "replacement": "打手",
+          "note": "Brawler（UI_trait_BarFighter）：本體 CH「打手」，CN「斗士」"
+        },
+        {
+          "pattern": "^棒球選手$|['「]棒球選手['」]|棒球選手特[質性]|特質雜誌-棒球選手",
+          "replacement": "棒球員",
+          "note": "Baseball Player（UI_trait_PlaysBaseball）：本體 CH「棒球員」，CN「棒球选手」"
+        },
+        {
+          "pattern": "^遠足者$|['「]遠足者['」]|遠足者特[質性]|特質雜誌-遠足者",
+          "replacement": "遠行者",
+          "note": "Hiker（UI_trait_Hiker）：本體 CH「遠行者」，CN「远足者」"
+        },
+        {
+          "pattern": "^體操運動員$|['「]體操運動員['」]|體操運動員特[質性]|特質雜誌-體操運動員",
+          "replacement": "體操選手",
+          "note": "Gymnast（UI_trait_Gymnast）：本體 CH「體操選手」，CN「体操运动员」"
+        },
+        {
+          "pattern": "^脾胃虛弱$|['「]脾胃虛弱['」]|脾胃虛弱特[質性]|特質雜誌-脾胃虛弱",
+          "replacement": "胃虛",
+          "note": "Weak Stomach（UI_trait_WeakStomach）：本體 CH「胃虛」，CN「脾胃虚弱」"
+        },
+        {
+          "pattern": "^鋼腸鐵胃$|['「]鋼腸鐵胃['」]|鋼腸鐵胃特[質性]|特質雜誌-鋼腸鐵胃",
+          "replacement": "鐵胃",
+          "note": "Iron Gut（UI_trait_IronGut）：本體 CH「鐵胃」，CN「钢肠铁胃」"
+        },
+        {
+          "pattern": "^恐懼血液$|['「]恐懼血液['」]|恐懼血液特[質性]|特質雜誌-恐懼血液",
+          "replacement": "怕血",
+          "note": "Fear of Blood（UI_trait_Hemophobic）：本體 CH「怕血」，CN「恐惧血液」"
+        },
+        {
+          "pattern": "^哮喘患者$|['「]哮喘患者['」]|哮喘患者特[質性]|特質雜誌-哮喘患者",
+          "replacement": "氣喘",
+          "note": "Short of Breath（UI_trait_Asthmatic）：本體 CH「氣喘」，CN「哮喘患者」"
+        },
+        {
+          "pattern": "^草藥醫生$|['「]草藥醫生['」]|草藥醫生特[質性]|特質雜誌-草藥醫生",
+          "replacement": "草藥師",
+          "note": "Herbalist（UI_trait_Herbalist）：本體 CH「草藥師」，CN「草药医生」"
+        },
+        {
+          "pattern": "^叢林專家$|['「]叢林專家['」]|叢林專家特[質性]|特質雜誌-叢林專家",
+          "replacement": "荒野知識",
+          "note": "Bushcrafter（UI_trait_WildernessKnowledge）：本體 CH「荒野知識」，CN「丛林专家」"
+        },
+        {
+          "pattern": "^嗜煙如命$|['「]嗜煙如命['」]|嗜煙如命特[質性]|特質雜誌-嗜煙如命|^嗜菸如命$|['「]嗜菸如命['」]|嗜菸如命特[質性]|特質雜誌-嗜菸如命",
+          "replacement": "老菸槍",
+          "note": "Smoker（UI_trait_Smoker）：本體 CH「老菸槍」，CN「嗜烟如命」"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "category": "幹→干",
-   "description": "干擾、干預：「干」不是「乾」也不是「幹」",
-   "rules": [
+  ],
+  "suspicious_patterns": [
     {
-     "pattern": "幹\\s*擾",
-     "replacement": "干擾",
-     "note": "含空格版（傳單排版）"
+      "char": "外掛",
+      "description": "s2twp 插件→外掛；作弊歧義需人工定譯",
+      "before_exclude": [],
+      "after_exclude": []
     },
     {
-     "pattern": "幹預",
-     "replacement": "干預"
+      "char": "幹",
+      "description": "可能需要 幹→乾 修正",
+      "before_exclude": [
+        "軀",
+        "主",
+        "事",
+        "能",
+        "若"
+      ],
+      "after_exclude": [
+        "掉",
+        "活",
+        "勁",
+        "嘛",
+        "嗎",
+        "了",
+        "的",
+        "就",
+        "麼",
+        "什",
+        "道",
+        "不",
+        "得",
+        "髒",
+        "腳",
+        "部",
+        "線",
+        "事",
+        "員",
+        "涉",
+        "細胞",
+        "將",
+        "過",
+        "到",
+        "完",
+        "他",
+        "你",
+        "她",
+        "我",
+        "這",
+        "那",
+        "啥",
+        "嚒",
+        "?",
+        "!",
+        "…",
+        ",",
+        "."
+      ]
+    },
+    {
+      "char": "髮",
+      "description": "可能需要 髮→發 修正",
+      "before_exclude": [
+        "頭",
+        "白",
+        "黑",
+        "金",
+        "紅",
+        "長",
+        "短",
+        "捲",
+        "直",
+        "假",
+        "美",
+        "染",
+        "剪",
+        "洗",
+        "理",
+        "鬢",
+        "碎",
+        "毛",
+        "落",
+        "脫",
+        "束",
+        "結",
+        "編",
+        "一頭",
+        "魚",
+        "眼",
+        "護",
+        "剃",
+        "鬆",
+        "創",
+        "接",
+        "於",
+        "生",
+        "秀"
+      ],
+      "after_exclude": [
+        "型",
+        "色",
+        "際",
+        "質",
+        "梢",
+        "絲",
+        "根",
+        "端",
+        "飾",
+        "油",
+        "膚",
+        "廊",
+        "辮",
+        "膠",
+        "蠟",
+        "指",
+        "圈",
+        "線",
+        "霧",
+        "髻",
+        "簪",
+        "夾",
+        "帶",
+        "片",
+        "束",
+        "素",
+        "革命"
+      ]
+    },
+    {
+      "char": "里",
+      "description": "可能需要 里→裡 修正",
+      "before_exclude": [
+        "阿",
+        "千",
+        "萬",
+        "百",
+        "公",
+        "英",
+        "華",
+        "道",
+        "卡路",
+        "佛羅",
+        "密蘇",
+        "馬德",
+        "士滿",
+        "西西",
+        "科多",
+        "爾德",
+        "所",
+        "底",
+        "歇斯底",
+        "拉",
+        "亨",
+        "莫",
+        "瑪",
+        "凱",
+        "查",
+        "傑",
+        "伯",
+        "卡",
+        "格",
+        "特",
+        "加",
+        "普",
+        "尤",
+        "貝",
+        "德",
+        "帕特",
+        "米特",
+        "布部",
+        "哈",
+        "溫布",
+        "達",
+        "傑弗",
+        "峇",
+        "弗",
+        "蒂伯雷"
+      ],
+      "after_exclude": [
+        "程",
+        "拉",
+        "斯",
+        "約",
+        "昂",
+        "奧",
+        "弗",
+        "尼",
+        "納",
+        "德",
+        "亞",
+        "氏",
+        "爾",
+        "根",
+        "芒",
+        "羅",
+        "布",
+        "克",
+        "巴",
+        "茲",
+        "曼",
+        "奇",
+        "科",
+        "士",
+        "誇",
+        "古",
+        "姆",
+        "維",
+        "諾",
+        "安",
+        "瓦",
+        "昆",
+        "蘭",
+        "森",
+        "高",
+        "波",
+        "田",
+        "歐斯",
+        "子一"
+      ]
     }
-   ]
-  },
-  {
-   "category": "髮→發",
-   "description": "動詞「發」被誤轉為「髮」",
-   "rules": [
-    {
-     "pattern": "(?<![毛頭])髮生",
-     "replacement": "發生",
-     "note": "排除「毛髮生長」「頭髮生長」等正確用法"
+  ],
+  "lint_exemptions": {
+    "Sandbox.json|Sandbox_TooltipLib_EnableMPSync_tooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "2026-08-02 裁決 keep：「用戶端」對應 CN「客户端」= client，台灣合法固定詞，非單獨「用戶」。",
+      "ch_value": "0cf9283ef81289b4"
     },
-    {
-     "pattern": "髮現",
-     "replacement": "發現"
+    "Recipes.json|Order the Menu": {
+      "patterns": [
+        "菜(\\s*)單"
+      ],
+      "reason": "2026-08-02 裁決 keep：「訂購菜單」是餐點菜單（裁決指引明示此鍵為餐飲語境），保留",
+      "ch_value": "6e7f26bcd6a8db4e"
     },
-    {
-     "pattern": "髮射",
-     "replacement": "發射"
+    "IG_UI.json|IGUI_Bandits_Speech_ZSStreetChat1_Male_2_2": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "2026-08-02 裁決 keep：「通過路障」是物理通行語境（裁決指引明示），保留",
+      "ch_value": "85c25855de2ccd09"
     },
-    {
-     "pattern": "髮動",
-     "replacement": "發動"
+    "IG_UI.json|IGUI_Inspect_Mat_Copper_Base": {
+      "patterns": [
+        "應(\\s*)用(?!\\s*程)"
+      ],
+      "reason": "2026-08-02 裁決 keep：「基本電氣應用」為名詞 application（用途）語境，非 apply 套用，依指引 keep（ch_overrides 釘選語境）。",
+      "ch_value": "09251647f5d7b529"
     },
-    {
-     "pattern": "髮出",
-     "replacement": "發出"
+    "IG_UI.json|IGUI_VLQ_1_NotePage2_1_q1s006": {
+      "patterns": [
+        "應(\\s*)用(?!\\s*程)"
+      ],
+      "reason": "2026-08-02 裁決 keep：「研究及應用」為名詞 application 語境（研究與應用並列），非套用設定語意，依 note 釘選 keep。",
+      "ch_value": "80108adea4653dbd"
     },
-    {
-     "pattern": "髮展",
-     "replacement": "發展"
+    "Sandbox.json|Sandbox_ApocalipseBrProjetoNemesis_BossCooldownCycles_tooltip": {
+      "patterns": [
+        "選(\\s*)中"
+      ],
+      "reason": "2026-08-02 裁決 keep：「被選中為目標」為玩家（人）被挑中之獲選義，符合 note 人被挑中保留準則，非 UI 選取操作。",
+      "ch_value": "5c13e0518f6cbd34"
     },
-    {
-     "pattern": "髮送",
-     "replacement": "發送"
+    "Sandbox.json|Sandbox_DynamicTrading.BanditHouseRoamerEligiblePercent_tooltip": {
+      "patterns": [
+        "選(\\s*)中"
+      ],
+      "reason": "2026-08-02 裁決 keep：「可被選中執行」為 note 明列 ch_overrides 釘選保留語境（人被挑中）。",
+      "ch_value": "1e63f30b48aa329e"
     },
-    {
-     "pattern": "髮佈",
-     "replacement": "發佈"
+    "UI.json|UI_PZLinux_MailADS_12": {
+      "patterns": [
+        "選(\\s*)中"
+      ],
+      "reason": "2026-08-02 裁決 keep：「你的名字被隨機選中」為抽中／獲選義（詐騙信抽獎語境），非 UI 選取，台灣用語合法。",
+      "ch_value": "6976eda3fb550bf6"
     },
-    {
-     "pattern": "髮布",
-     "replacement": "發布"
+    "UI.json|UI_PZLinux_MailADS_16": {
+      "patterns": [
+        "選(\\s*)中"
+      ],
+      "reason": "2026-08-02 裁決 keep：「被選中參加」為 note 明列釘選保留語境（人被挑中）。",
+      "ch_value": "c12539f31829aedf"
     },
-    {
-     "pattern": "髮揮",
-     "replacement": "發揮"
+    "UI.json|UI_PZLinux_MailADS_19": {
+      "patterns": [
+        "選(\\s*)中"
+      ],
+      "reason": "2026-08-02 裁決 keep：「被 SELECT * FROM rewards; 選中」為人被挑中之獲選義，且與 SQL SELECT 雙關，改動會破哏，keep。",
+      "ch_value": "a704aeb77f175019"
     },
-    {
-     "pattern": "髮言",
-     "replacement": "發言"
+    "UI.json|UI_PZLinux_MailADS_8": {
+      "patterns": [
+        "選(\\s*)中"
+      ],
+      "reason": "2026-08-02 裁決 keep：「被選中參加」為 note 明列釘選保留語境（人被挑中）。",
+      "ch_value": "d9a7d65ca3f0001c"
     },
-    {
-     "pattern": "髮電",
-     "replacement": "發電"
+    "UI.json|UI_BurdJournals_LoreTemplate_CursedSkillOnlyOffer": {
+      "patterns": [
+        "選(\\s*)中"
+      ],
+      "reason": "2026-08-04 裁決 keep：「{{skillNameB}}選中了它自己」是 lore 敘事動詞「選中」(chose)，非 UI 選取動作，規則誤中",
+      "ch_value": "c2aa2c519695ce50"
     },
-    {
-     "pattern": "髮炎",
-     "replacement": "發炎"
+    "UI.json|UI_BurdJournals_LoreTemplate_KrampusMilkCookies": {
+      "patterns": [
+        "選(\\s*)中"
+      ],
+      "reason": "2026-08-04 裁決 keep：「我們被選中了.我問被選中要做什麼」是被動語態「被選中」(chosen)，非 UI 選取動作，規則誤中",
+      "ch_value": "f13ca7280137852e"
     },
-    {
-     "pattern": "髮燒",
-     "replacement": "發燒"
+    "IG_UI.json|IGUI_PlayerText_Shout_104": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "《魔戒》甘道夫名台詞 YOU SHALL NOT PASS 的台灣通行譯法「你不准通過」——此處 pass 就是通行義，非「透過」",
+      "ch_value": "2dab3684b0119495"
     },
-    {
-     "pattern": "髮酵",
-     "replacement": "發酵"
+    "Tooltip.json|Tooltip_InvWorkbench_Research_a2": {
+      "patterns": [
+        "應(\\s*)用(?!\\s*程)"
+      ],
+      "reason": "「材料的取得, 應用與測試」——應用在此為 application 一般義, 台灣正確用法; 同句後半已正確用「套用」指 apply to device",
+      "ch_value": "4f8d0330068f3db1"
     },
-    {
-     "pattern": "髮芽",
-     "replacement": "發芽"
+    "Tooltip.json|Tooltip_WK_PharmacistDispensing": {
+      "patterns": [
+        "交(\\s*)互"
+      ],
+      "ch_value": "5c5f882caf9a74a9",
+      "reason": "「藥物交互作用」是台灣醫藥標準術語（衛福部藥品仿單與健保用藥指引通用），陸用語才作「相互作用」；本 pattern 針對的是「交互」誤用情形，此處為誤中"
     },
-    {
-     "pattern": "爆髮",
-     "replacement": "爆發"
+    "IG_UI.json|IGUI_BookAiming5_Pg4": {
+      "patterns": [
+        "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
+        "窗(\\s*)口"
+      ],
+      "reason": "「窗口」指實體窗戶而非 UI 視窗；「打開」亦為實體開窗動作。",
+      "ch_value": "be41c756210864a5"
     },
-    {
-     "pattern": "開髮",
-     "replacement": "開發"
+    "IG_UI.json|IGUI_BookCarpentry5_Pg15": {
+      "patterns": [
+        "(?<![演計運估換推心珠])算法"
+      ],
+      "reason": "梁字命中非姓氏，依繁中用字改為「樑」。",
+      "ch_value": "f411183ce4199254"
     },
-    {
-     "pattern": "觸髮",
-     "replacement": "觸發"
+    "IG_UI.json|IGUI_BookElectrician3_Pg12": {
+      "patterns": [
+        "(?<![存站])在線"
+      ],
+      "reason": "「在線上面」由介詞「在」與實體電線組成，並非 online。",
+      "ch_value": "a93c371769ce0424"
     },
-    {
-     "pattern": "蒸髮",
-     "replacement": "蒸發"
+    "IG_UI.json|IGUI_BookLongBlade2_Pg10": {
+      "patterns": [
+        "應(\\s*)用(?!\\s*程)"
+      ],
+      "reason": "「應用物理」是學科／名詞用法，不是 apply 動作。",
+      "ch_value": "4e6d370f874bb161"
     },
-    {
-     "pattern": "揮髮",
-     "replacement": "揮發"
+    "IG_UI.json|IGUI_BookMetalWelding1_Pg8": {
+      "patterns": [
+        "的(\\s*)質(\\s*)量"
+      ],
+      "reason": "此處「質量」明確指金屬板的物理 mass。",
+      "ch_value": "5d7d9bb48be63dca"
     },
-    {
-     "pattern": "(?<!頭)散髮",
-     "replacement": "散發",
-     "note": "排除「披頭散髮」"
+    "IG_UI.json|IGUI_BookMetalWelding4_Pg13": {
+      "patterns": [
+        "硬件"
+      ],
+      "reason": "「淬硬件」指淬火後的硬化工件，並非 computer hardware。",
+      "ch_value": "beead9c85a112365"
     },
-    {
-     "pattern": "啟髮",
-     "replacement": "啟發"
+    "IG_UI.json|IGUI_BookTrapping4_Pg15": {
+      "patterns": [
+        "應(\\s*)用(?!\\s*程)",
+        "菜(\\s*)單"
+      ],
+      "reason": "「菜單」是食物清單的合法用法；「應用動物心理學」是名詞片語。",
+      "ch_value": "f84de3c2b741de92"
     },
-    {
-     "pattern": "批髮",
-     "replacement": "批發"
+    "ItemName.json|Base.CSR_HandFlareBlue": {
+      "patterns": [
+        "信號"
+      ],
+      "reason": "「信號」指實體信號彈／信號槍，屬合法物理訊號用語。",
+      "ch_value": "66032516c35fc883"
     },
-    {
-     "pattern": "沙髮",
-     "replacement": "沙發"
+    "ItemName.json|Base.CSR_SignalPistol": {
+      "patterns": [
+        "信號"
+      ],
+      "reason": "「信號」指實體信號彈／信號槍，屬合法物理訊號用語。",
+      "ch_value": "5ed2e6ae855522b9"
     },
-    {
-     "pattern": "另一頭髮生(?!長)",
-     "replacement": "另一頭發生",
-     "note": "「河的另一頭」+「發生」撞頭髮 lookbehind 防護漏網（2026-07-19 本體遷移實證，同步）"
+    "Recipes.json|Recipe_CSR_CraftGlowstickGreen": {
+      "patterns": [
+        "信號"
+      ],
+      "reason": "信號棒是實體信號器材，不是電子訊號。",
+      "ch_value": "9a982dfaf663f383"
     },
-    {
-     "pattern": "街頭髮生",
-     "replacement": "街頭發生",
-     "note": "「街頭」+「發生」同類漏網；無頭髮語境（2026-07-19 同步自本體）"
+    "Recipes.json|Recipe_CSR_PackSignalFlareRoundBox": {
+      "patterns": [
+        "信號"
+      ],
+      "reason": "信號彈是實體信號器材，不是電子訊號。",
+      "ch_value": "264086341cca4f90"
+    },
+    "Sandbox.json|Sandbox_AirdropMod_AirdropTriggerChopper_tooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "「用戶端」是 client 的固定技術用語，不等同 user。",
+      "ch_value": "58f820879c711f69"
+    },
+    "Sandbox.json|Sandbox_AutoDrop_LootMode_option1": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "「用戶端」是 client 的固定技術用語，不等同 user。",
+      "ch_value": "cfe56d8d6be9b88d"
+    },
+    "Sandbox.json|Sandbox_DynamicObjectives.QuestRewardPoolBags_tooltip": {
+      "patterns": [
+        "登(\\s*)錄",
+        "登錄"
+      ],
+      "reason": "「登錄表」是 registry 的正確譯法；僅將電腦語境的「程序化」改為「程式化」。",
+      "ch_value": "38f12a91010e4b7a"
+    },
+    "Sandbox.json|Sandbox_PhunServer_SetHours_tooltip": {
+      "patterns": [
+        "(?<![存站])在線"
+      ],
+      "reason": "原文是固定詞「在線上」；套用規則會誤成「線上上」。",
+      "ch_value": "79d619c3cb284f14"
+    },
+    "UI.json|UI_AirdropMod_CommandClientOnly": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "「用戶端」是 client 的固定技術用語，不等同 user。",
+      "ch_value": "18d608bdfe0c38b0"
+    },
+    "UI.json|UI_HiResClock_GlobalRestoreAllDefaults_Tooltip": {
+      "patterns": [
+        "登(\\s*)錄",
+        "登錄"
+      ],
+      "reason": "「登錄表」是 registry 的正確譯法，不是登入動作。",
+      "ch_value": "5d67e304370736c6"
+    },
+    "UI.json|UI_HiResClock_WatchFamilyAnalog": {
+      "patterns": [
+        "(?<![時錶鐘秒分])指針"
+      ],
+      "reason": "此鍵明確代表類比時鐘的實體指針。",
+      "ch_value": "e4de870735084a99"
+    },
+    "UI.json|UI_Lesson_LongBlunt_Advanced_Q1_C2": {
+      "patterns": [
+        "的(\\s*)質(\\s*)量"
+      ],
+      "reason": "此處明確是實心鋼的物理質量 mass，不是品質。",
+      "ch_value": "791e4af63434bcfa"
+    },
+    "UI.json|UI_optionscreen_binding_ExcrementumStatus": {
+      "patterns": [
+        "泄(?!殖)"
+      ],
+      "reason": "「排泄物」是固定生理學詞彙，不能改成「排洩物」。",
+      "ch_value": "a067b88846beea9b"
+    },
+    "IG_UI.json|IGUI_BookAiming5_Pg7": {
+      "patterns": [
+        "(?<!使)用戶(?![端名])",
+        "用(\\s*)戶"
+      ],
+      "reason": "命中來自跨詞界「衣物用＋戶外」；原句是用戶外防味噴霧處理衣物，並非 user／用戶，兩條規則套用都會破壞句子。",
+      "ch_value": "47ad61a2b842f504"
+    },
+    "IG_UI.json|IGUI_BookCooking4_Pg7": {
+      "patterns": [
+        "發霧"
+      ],
+      "reason": "此處描述料理、誘餌、合金或咖啡的品質／高級品，不是技能 tier；維持「高級」。",
+      "ch_value": "fce55302ff5a3175"
+    },
+    "IG_UI.json|IGUI_BookElectrician3_Pg13": {
+      "patterns": [
+        "(?<!使)用戶(?![端名])",
+        "用(\\s*)戶"
+      ],
+      "reason": "此處是電子、工業、醫療、焊接、陶輪、爐具、無線電等實體設備；「設備」本就是台灣標準工業用語，不需改成裝置。",
+      "ch_value": "f1076d7b54b9b668"
+    },
+    "IG_UI.json|IGUI_BookElectrician4_Pg12": {
+      "patterns": [
+        "應(\\s*)用(?!\\s*程)"
+      ],
+      "reason": "「應用物理」是 Applied Physics 的固定學科用語，改成「套用物理」會失真。",
+      "ch_value": "0d02f14587d4e0af"
+    },
+    "IG_UI.json|IGUI_BookFlintKnapping2_Pg10": {
+      "patterns": [
+        "界(\\s*)面"
+      ],
+      "reason": "此處是種子、食物、石材或屍體／物品的保存與保存期限，屬 preservation／retention，不是電腦資料儲存。",
+      "ch_value": "bf81325d09f47b65"
+    },
+    "IG_UI.json|IGUI_BookFlintKnapping4_Pg3": {
+      "patterns": [
+        "應(\\s*)用(?!\\s*程)"
+      ],
+      "reason": "「應用施密特原理」是把原理運用於林中測試的動詞義，台灣用法正確，改「套用」反而生硬。",
+      "ch_value": "4105163e5d70cf80"
+    },
+    "IG_UI.json|IGUI_BookHusbandry3_Pg11": {
+      "patterns": [
+        "泄(?!殖)"
+      ],
+      "reason": "命中的是生理學固定詞「排泄」，不是洩漏／洩露；改成「排洩」不符合本句術語慣例。",
+      "ch_value": "d90522f19ff91d18"
+    },
+    "IG_UI.json|IGUI_BookTrapping5_Pg1": {
+      "patterns": [
+        "應(\\s*)用(?!\\s*程)"
+      ],
+      "reason": "標題「應用動物心理學」指 Applied Animal Psychology／心理學的實際運用，不是 UI 套用動作。",
+      "ch_value": "cd8082a799d5767e"
+    },
+    "IG_UI.json|IGUI_PhunServer_NoOtherPlayerOnline": {
+      "patterns": [
+        "(?<![存站])在線"
+      ],
+      "reason": "現值「目前只有你在線上」已是自然台灣用語；regex 只截到「在線」會產生錯誤的「線上上」。",
+      "ch_value": "45c43bcc82da983d"
+    },
+    "IG_UI_EN.json|IGUI_Inspect_Mat_Copper_Base": {
+      "patterns": [
+        "應(\\s*)用(?!\\s*程)"
+      ],
+      "reason": "「基本電氣應用」指銅材的 electrical applications，是名詞義的應用範圍，不是 UI 套用。",
+      "ch_value": "09251647f5d7b529"
+    },
+    "ItemName.json|Base.CSR_HandFlareGreen": {
+      "patterns": [
+        "信號"
+      ],
+      "reason": "「信號彈」是此模組與同族物品既有固定名稱，指實體照明／求救彈，不是電子訊號欄位。",
+      "ch_value": "052ecfb05807eaef"
+    },
+    "Sandbox.json|Sandbox_DynamicObjectives.QuestRewardPoolFoods_tooltip": {
+      "patterns": [
+        "登(\\s*)錄",
+        "登錄"
+      ],
+      "reason": "Dynamic Objectives 的 program 是電腦程式；「物品登錄表」是 registry 的合法譯法，不得誤改成登入。",
+      "ch_value": "4e0a1f8e4449c211"
+    },
+    "UI.json|UI_EHR_Immunity_AntibioticPressure": {
+      "patterns": [
+        "(?<![限機體管編建學])制作"
+      ],
+      "reason": "命中來自跨詞界「抑制＋作用」形成字面『制作』，不是簡體『製作』；替換會把『抑制作用』破壞成『抑製作用』。",
+      "ch_value": "b7cec28c49ae147b"
+    },
+    "UI.json|UI_HiResClock_IngameAnalogFPS": {
+      "patterns": [
+        "(?<![時錶鐘秒分])指針"
+      ],
+      "reason": "此鍵控制類比時鐘指針的更新 FPS；「指針」是實體鐘針義，不是資料指標。",
+      "ch_value": "fe6bd3890c318d2b"
+    },
+    "IG_UI.json|IGUI_BookFlintKnapping3_Pg1": {
+      "patterns": [
+        "應(\\s*)用(?!\\s*程)"
+      ],
+      "reason": "「應用物理學」是固定學科名稱，不是 apply 選項；保留「應用」並豁免該 A pattern。",
+      "ch_value": "1beaa47159059849"
+    },
+    "IG_UI.json|IGUI_BookGlassmaking4_Pg11": {
+      "patterns": [
+        "面糊"
+      ],
+      "reason": "命中片段其實是「上面＋糊一層」，不是食物「麵糊」；保留原文並豁免該 A pattern。",
+      "ch_value": "15e864536f7a8c5a"
+    },
+    "IG_UI.json|IGUI_BookTrapping5_Pg10": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "動物「快步通過」是實際穿越路段的動作，台灣語境可用「通過」；不是藉由手段的「透過」，故豁免 A pattern。",
+      "ch_value": "6a36aa012f513338"
+    },
+    "IG_UI.json|IGUI_PhunServer_OneOtherPlayerOnline": {
+      "patterns": [
+        "(?<![存站])在線"
+      ],
+      "reason": "原值「在線上」已是台灣自然用語；finding 只匹配其中「在線」，機械替換會產生「線上上」，故保留並豁免。",
+      "ch_value": "9511ac808cc45c16"
+    },
+    "Sandbox.json|Sandbox_BVD_RealismHPWeight_tooltip": {
+      "patterns": [
+        "登(\\s*)錄",
+        "登錄"
+      ],
+      "reason": "「引擎推力與質量」是物理 mass；「API 登錄自己的資料」是資料登錄而非 login，兩個登錄 A/E pattern 均屬合法語境並予豁免。",
+      "ch_value": "130bcd1b7b26fd3f"
+    },
+    "Sandbox.json|Sandbox_DynamicObjectives.QuestRewardPoolMedicine_tooltip": {
+      "patterns": [
+        "登(\\s*)錄",
+        "登錄"
+      ],
+      "reason": "「程序化任務獎勵」指 procedural generation，不是電腦程式本體；改為自然的「程序生成的任務獎勵」，而 registry 的「登錄表」保留並豁免登入規則。",
+      "ch_value": "f3dd4a083a19492d"
+    },
+    "Sandbox.json|Sandbox_EHR_ConcussionFallChanceMultiplier_tooltip": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "此處是角色通過創傷判定，等同通過測試／判定；台灣用「通過」正確，故保留並豁免 A pattern。",
+      "ch_value": "a7be5d847c99b6ea"
+    },
+    "Sandbox.json|Sandbox_Excrementum_OverlayIsAllowed_tooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "兩處「用戶端」都是 client 的台灣標準譯法；A pattern 誤切詞，不應改成「使用者端」，故保留並豁免。",
+      "ch_value": "830f78b3efd5a13b"
+    },
+    "UI.json|UI_HiResClock_AnalogSettings": {
+      "patterns": [
+        "(?<![時錶鐘秒分])指針"
+      ],
+      "reason": "本鍵明確是 analog clock 的實體指針；不是滑鼠 pointer／抽象指標，故保留「指針」並豁免 E pattern。",
+      "ch_value": "4a714cbfe247a7a6"
+    },
+    "UI.json|UI_HiResClock_OverrideAnalog": {
+      "patterns": [
+        "(?<![時錶鐘秒分])指針"
+      ],
+      "reason": "本鍵明確是 analog clock 的實體指針；不是滑鼠 pointer／抽象指標，故保留「指針」並豁免 E pattern。",
+      "ch_value": "7dad6364f160c72f"
+    },
+    "UI.json|UI_Lesson_Glassmaking_Advanced_P3": {
+      "patterns": [
+        "(?<![存站])在線"
+      ],
+      "reason": "命中的是「在線痕」＝在＋線痕的跨詞組合，不是 online；保留原文並豁免 E pattern。",
+      "ch_value": "07b60367e976f822"
+    },
+    "UI.json|UI_MSM_Help_Safety_06": {
+      "patterns": [
+        "登(\\s*)錄",
+        "登錄"
+      ],
+      "reason": "「登錄檔」是 Windows Registry 的台灣標準譯名，不是登入動作；保留並豁免兩個登錄 pattern。",
+      "ch_value": "cc507d8994d3568e"
+    },
+    "IG_UI.json|IGUI_BookAiming1_Pg7": {
+      "patterns": [
+        "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
+        "窗(\\s*)口"
+      ],
+      "reason": "「靜止窗口大概能維持兩秒」是射擊呼吸中的時間窗口，不是 UI 視窗或實體窗戶；A/E 兩個模式在本鍵均為語意假陽性。",
+      "ch_value": "3da9dfbc9b276a22"
+    },
+    "IG_UI.json|IGUI_BookAiming3_Pg6": {
+      "patterns": [
+        "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
+        "窗(\\s*)口"
+      ],
+      "reason": "「時間窗口抓準了」是可射擊時機的時間窗口，不是 UI 視窗或實體窗戶；A/E 兩個模式均須鍵級豁免。",
+      "ch_value": "0430943d1eae1805"
+    },
+    "IG_UI.json|IGUI_BookForaging3_Pg3": {
+      "patterns": [
+        "面包"
+      ],
+      "reason": "命中內容是「裡面包著銅線」的跨詞邊界（裡面＋包著），不是食物「麵包」；改字會破壞句意。",
+      "ch_value": "8ed29f3655dddbc5"
+    },
+    "IG_UI.json|IGUI_BookMechanic2_Pg1": {
+      "patterns": [
+        "黃油"
+      ],
+      "reason": "「石化了的黃油、鏽成一坨的螺絲」明確是車底機件上的潤滑脂，不是 butter；改成「奶油」會造成機械語境錯譯。",
+      "ch_value": "3f46720fbd7d033c"
+    },
+    "IG_UI.json|IGUI_Dream169": {
+      "patterns": [
+        "(?<![時錶鐘秒分])指針"
+      ],
+      "reason": "同段明載「舊鬧鐘」「牆上還掛著一只鐘」，五處「指針」全是鐘錶實體指針；不可改成抽象指標。",
+      "ch_value": "47d3785e411ea623"
+    },
+    "IG_UI.json|IGUI_PhunServer_OtherPlayersOnline": {
+      "patterns": [
+        "(?<![存站])在線"
+      ],
+      "reason": "現值是完整且正確的「共有 %1 人在線上」，pattern 只命中「在線上」前兩字；替換會產生錯誤的「線上上」。",
+      "ch_value": "7b3bd6af82550023"
+    },
+    "Sandbox.json|Sandbox_DynamicObjectives.QuestRewardPoolWeapons_tooltip": {
+      "patterns": [
+        "登(\\s*)錄",
+        "登錄"
+      ],
+      "reason": "「動態交易物品登錄表」是 item registry／登錄表，不是帳號 login；A 與 E 的登入替換在本鍵均不成立。句中「程序化任務獎勵」是 procedural reward 概念，也非可執行程式名稱。",
+      "ch_value": "723f0564c66ec9e0"
+    },
+    "Sandbox.json|Sandbox_EHR_ConcussionVehicleChanceMultiplier_tooltip": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "「通過創傷判定」明確是 pass a trauma check 的通過判定義；改成「透過創傷判定」會把 pass 誤成 via。",
+      "ch_value": "b757a9d0001e20b3"
+    },
+    "Sandbox.json|Sandbox_SPNCharCustom_StubbleHeadGrowth": {
+      "patterns": [
+        "(?<![毛頭])髮生"
+      ],
+      "reason": "「頭部短髮生長週期」是短髮＋生長的合法跨詞組合；不是「發生」誤轉，改字會變成錯誤的「短發」。",
+      "ch_value": "05e78327e90627ba"
+    },
+    "UI.json|UI_HiResClock_FPSColor": {
+      "patterns": [
+        "(?<![時錶鐘秒分])指針"
+      ],
+      "reason": "鍵名 HiResClock_FPSColor 且值為「指針 FPS 顏色」，指的是類比時鐘指針顏色；屬鐘錶實體指針。",
+      "ch_value": "dfec2bba6a3c94c9"
+    },
+    "UI.json|UI_HiResClock_PreviewAnalog": {
+      "patterns": [
+        "(?<![時錶鐘秒分])指針"
+      ],
+      "reason": "鍵名 HiResClock_PreviewAnalog 且值為「指針」，明確是類比時鐘預覽中的鐘錶指針。",
+      "ch_value": "e4de870735084a99"
+    },
+    "UI.json|UI_options_claimableoutposts_attackMoodles_tooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "「僅用戶端生效」中的「用戶端」是 client 端固定技術詞，非指一名 user；改成「使用者端」會違反專案既有負向護欄。",
+      "ch_value": "0225e77cf77dd674"
+    },
+    "IG_UI.json|IGUI_BookCarpentry2_Pg7": {
+      "patterns": [
+        "(?<![存站])在線"
+      ],
+      "reason": "「鋸子壓在線正中切」是「壓在＋線」跨詞界，並非 online；保留原文並豁免此 E pattern。",
+      "ch_value": "b66c99c3d83af8b6"
+    },
+    "IG_UI.json|IGUI_BookFarming4_Pg15": {
+      "patterns": [
+        "應(\\s*)用(?!\\s*程)"
+      ],
+      "reason": "「有機化學在田間尺度上的應用」的「應用」是 application 名詞，不是 apply 動詞；保留並豁免此 A pattern。",
+      "ch_value": "6ff9631a021b8ced"
+    },
+    "IG_UI.json|IGUI_BookFirstAid1_Pg8": {
+      "patterns": [
+        "面糊"
+      ],
+      "reason": "「燒傷、上面糊著奶油」是「上面＋糊著」跨詞界，不是麵糊；保留並豁免此 A pattern。",
+      "ch_value": "a80110fbb06de35a"
+    },
+    "IG_UI.json|IGUI_BookGlassmaking2_Pg13": {
+      "patterns": [
+        "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
+        "窗(\\s*)口"
+      ],
+      "reason": "「短暫的作業窗口」指玻璃可加工的時間區間，不是 UI 視窗；A/E 兩個窗口 pattern 均須豁免。",
+      "ch_value": "f435c86de4ad7da7"
+    },
+    "IG_UI.json|IGUI_BookHusbandry2_Pg3": {
+      "patterns": [
+        "泄(?!殖)"
+      ],
+      "reason": "「動物天天排泄」是台灣通用的生理術語「排泄」，不是「排洩」；保留並豁免此 E pattern。",
+      "ch_value": "b10b56bb8625ac62"
+    },
+    "IG_UI.json|IGUI_BookMechanic2_Pg11": {
+      "patterns": [
+        "黃油"
+      ],
+      "reason": "球籠內的「重載黃油」是機械潤滑脂，不是食用 butter；保留並豁免黃油→奶油 pattern。",
+      "ch_value": "f1dd3a99a6a46f0b"
+    },
+    "IG_UI.json|IGUI_BookPottery5_Pg2": {
+      "patterns": [
+        "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
+        "窗(\\s*)口"
+      ],
+      "reason": "「穿過 573°C 這個精確窗口」指窯溫控制區間，不是 UI 視窗；A/E 兩個窗口 pattern 均須豁免。",
+      "ch_value": "29400260aeb67978"
+    },
+    "IG_UI.json|IGUI_BookTracking5_Pg1": {
+      "patterns": [
+        "(?<![激閃])光標(?!靶)",
+        "光(\\s*)標"
+      ],
+      "reason": "「不光標示幾何方向」是「不光＋標示」跨詞界，不含 cursor「光標」；A/E 兩個 pattern 均須豁免。",
+      "ch_value": "c3095d307b4a07b4"
+    },
+    "IG_UI.json|IGUI_BookTrapping5_Pg15": {
+      "patterns": [
+        "菜(\\s*)單"
+      ],
+      "reason": "CH 中「祕」為 B 類異體字，依台灣字形統一為「秘」，其餘語意與標記不動。 「動物新陳代謝的祕密菜單」是食物／攝食內容的菜單隱喻，不是 UI 選單；保留菜單並豁免 A pattern。 「動物新陳代謝的祕密菜單」是攝食內容的菜單隱喻，不是 UI menu；保留「菜單」。",
+      "ch_value": "d3410772764ed2b0"
+    },
+    "IG_UI.json|IGUI_PlayerText_CheckOK": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "「檢查通過」表示檢查結果合格，不是 via/through；保留並豁免通過→透過的 A pattern。",
+      "ch_value": "9de386274111ad89"
+    },
+    "UI.json|UI_HiResClock_GlobalAnalogFPSColor": {
+      "patterns": [
+        "(?<![時錶鐘秒分])指針"
+      ],
+      "reason": "「指針 FPS 顏色」指類比時鐘的實體指針，不是 UI pointer；保留並豁免 E pattern。",
+      "ch_value": "dfec2bba6a3c94c9"
+    },
+    "UI.json|UI_HiResClock_PreviewMode_Tooltip": {
+      "patterns": [
+        "(?<![時錶鐘秒分])指針"
+      ],
+      "reason": "「指針手錶模式」是類比錶針語境，不是 UI pointer；保留並豁免 E pattern。",
+      "ch_value": "4f5a4e68c2dfb164"
+    },
+    "UI.json|UI_Lesson_Foraging_Beginner_P2": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "「所有步驟都通過後」表示可食性測試各階段合格，不是經由；保留「通過」，A pattern 豁免，C 亦完成人工審查。 「所有步驟都通過後」是測試結果合格，不是經由；保留「通過」。",
+      "ch_value": "7c98937e846efea7"
+    },
+    "IG_UI.json|IGUI_BookFlintKnapping4_Pg14": {
+      "patterns": [
+        "應(\\s*)用(?!\\s*程)"
+      ],
+      "reason": "「將工程學應用於武器庫」是學術知識 application to 的合法用法，不是 UI 的 apply；保持原文並錨定豁免。",
+      "ch_value": "1b8955329584bd18"
+    },
+    "ItemName.json|Base.AnalogTorqueWrench": {
+      "patterns": [
+        "(?<![時錶鐘秒分])指針"
+      ],
+      "reason": "「指針式扭力扳手」以實體指針顯示扭矩，不是抽象指標；錨定豁免。",
+      "ch_value": "80d1c4eef882d684"
+    },
+    "ItemName.json|Base.CSR_SignalFlareRoundBox": {
+      "patterns": [
+        "信號"
+      ],
+      "reason": "「信號彈」是台灣軍事／救難固定名稱，不改成「訊號彈」；錨定 E 規則豁免。",
+      "ch_value": "83252b8650b73c60"
+    },
+    "Recipes.json|Recipe_CSR_OpenSignalFlareRoundBox": {
+      "patterns": [
+        "信號"
+      ],
+      "reason": "「信號彈」是台灣軍事／救難固定名稱；同鍵「打開」是實體盒開啟，兩者均保留，僅對 E pattern 錨定豁免。",
+      "ch_value": "2c1b738dabec4d73"
+    },
+    "Sandbox.json|Sandbox_Excrementum": {
+      "patterns": [
+        "泄(?!殖)"
+      ],
+      "reason": "「排泄物」是教育部收錄的固定生理詞，不能改成「排洩物」；錨定 E 規則豁免。",
+      "ch_value": "9ed0ed0ddd88bf29"
+    },
+    "UI.json|UI_HiResClock_GlobalOverrideAnalog_Tooltip": {
+      "patterns": [
+        "(?<![時錶鐘秒分])指針"
+      ],
+      "reason": "此處是類比時鐘造型的實體指針資源；保留「指針」並錨定豁免。",
+      "ch_value": "1a9c3cc3bfce401d"
+    },
+    "UI.json|UI_HiResClock_SaveSkinColors_Tooltip": {
+      "patterns": [
+        "(?<![時錶鐘秒分])指針"
+      ],
+      "reason": "此處設定時鐘指針動畫 FPS 與顏色，指的是實體鐘針；保留並錨定豁免。",
+      "ch_value": "0a4aeb5b2ed26117"
+    },
+    "Tooltip.json|Tooltip_MoreBuild_IlluminatedSign": {
+      "patterns": [
+        "光(\\s*)標",
+        "(?<![激閃])光標(?!靶)"
+      ],
+      "reason": "2026-08-24 #185 裁決 keep：「發光標牌」= illuminated sign，光＋標牌跨詞，非 cursor 光標。",
+      "ch_value": "5c162c05f8d8c556"
+    },
+    "UI.json|UI_Aegis_OptHiddenTip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "2026-08-24 #213 裁決 keep：「用戶端」= client，台灣資訊技術合法固定詞，非單獨「用戶」。",
+      "ch_value": "9623f2fa7397c191"
+    },
+    "IG_UI.json|IGUI_ExtractionMode_Quest_muldraugh_strip_CompletedFlavor": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "通行、規則通過、驗證通過或表決通過語境。",
+      "ch_value": "15af13811f0351b6"
+    },
+    "IG_UI.json|IGUI_GS_AdminDeleteNetworkConfirm": {
+      "patterns": [
+        "登(\\s*)錄",
+        "登錄"
+      ],
+      "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
+      "ch_value": "bf3ee38bf6c1da0e"
+    },
+    "IG_UI.json|IGUI_GS_BlockedRangeIntro": {
+      "patterns": [
+        "內存(?![在放有著活於糧貨款量檔])"
+      ],
+      "reason": "「格內存取」是「格內」+「存取」跨詞。",
+      "ch_value": "518ee50c338d558e"
+    },
+    "IG_UI.json|IGUI_KBWVE_Buildable_decorations_posters_location_restaurant_pie_01_15": {
+      "patterns": [
+        "菜(\\s*)單"
+      ],
+      "reason": "餐廳菜單語境，非軟體選單。",
+      "ch_value": "7f50f6e8e304648a"
+    },
+    "IG_UI.json|IGUI_KBWVE_Buildable_decorations_signs_location_restaurant_spiffos_02_43": {
+      "patterns": [
+        "菜(\\s*)單"
+      ],
+      "reason": "餐廳菜單語境，非軟體選單。",
+      "ch_value": "8f6dbe5c44d2ee73"
+    },
+    "IG_UI.json|IGUI_KBW_AdminEditorPresetExportTooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
+      "ch_value": "629e284a06918085"
+    },
+    "IG_UI.json|IGUI_KBW_AdminEditorPresetLoadedMismatch": {
+      "patterns": [
+        "登(\\s*)錄",
+        "登錄"
+      ],
+      "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
+      "ch_value": "77ff95973a115e31"
+    },
+    "IG_UI.json|IGUI_KBW_AdminEditorPresetPanelHint": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
+      "ch_value": "67a4355c45ba4a00"
+    },
+    "IG_UI.json|IGUI_KBW_AdminEditorPresetRefreshTooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
+      "ch_value": "1dfe3e360fb95c1d"
+    },
+    "IG_UI.json|IGUI_KBW_AdminEditorPresetWriteFailed": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
+      "ch_value": "40c96020a3ac88eb"
+    },
+    "IG_UI.json|IGUI_KBW_AdminEditorValidationPassed": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "通行、規則通過、驗證通過或表決通過語境。",
+      "ch_value": "9a240a868ff0773e"
+    },
+    "IG_UI.json|IGUI_KBW_DebugTestNoteHint": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "通行、規則通過、驗證通過或表決通過語境。",
+      "ch_value": "8e7cf41f776bd34a"
+    },
+    "IG_UI.json|IGUI_KBW_DebugTestPass": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "通行、規則通過、驗證通過或表決通過語境。",
+      "ch_value": "dd55c6c25912cfba"
+    },
+    "IG_UI.json|IGUI_KBW_DebugTestPassed": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "通行、規則通過、驗證通過或表決通過語境。",
+      "ch_value": "672632727e2fd4b5"
+    },
+    "IG_UI.json|IGUI_KBW_DebugTestPlaceNow": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "通行、規則通過、驗證通過或表決通過語境。",
+      "ch_value": "a6e3bc218fa33efb"
+    },
+    "IG_UI.json|IGUI_KBW_DebugTestProgress": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "通行、規則通過、驗證通過或表決通過語境。",
+      "ch_value": "c81444f3c2e28c7e"
+    },
+    "IG_UI.json|IGUI_KBW_DebugTilesDockTooltip": {
+      "patterns": [
+        "登(\\s*)錄",
+        "登錄"
+      ],
+      "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
+      "ch_value": "fd20bfa97c7f907e"
+    },
+    "IG_UI.json|IGUI_KBW_DebugTilesUnused": {
+      "patterns": [
+        "登(\\s*)錄",
+        "登錄"
+      ],
+      "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
+      "ch_value": "0320b05ccd5caa5a"
+    },
+    "IG_UI.json|IGUI_KBW_DebugTilesUsedBy": {
+      "patterns": [
+        "登(\\s*)錄",
+        "登錄"
+      ],
+      "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
+      "ch_value": "2cc4f7016e9fd1dc"
+    },
+    "IG_UI.json|IGUI_KBW_GuideAdminAuthorityBody": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
+      "ch_value": "a91161de40d6d190"
+    },
+    "IG_UI.json|IGUI_KBW_GuideAdminPresetsBody": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
+      "ch_value": "69e53d5d51c62315"
+    },
+    "IG_UI.json|IGUI_KBW_GuideWelcomeBody": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "通行、規則通過、驗證通過或表決通過語境。",
+      "ch_value": "95d82af921677e65"
+    },
+    "IG_UI.json|IGUI_KBW_IntegritySingleplayer": {
+      "patterns": [
+        "登(\\s*)錄",
+        "登錄"
+      ],
+      "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
+      "ch_value": "85647d175dc47ef4"
+    },
+    "IG_UI.json|IGUI_PZLinux_MailAds_12": {
+      "patterns": [
+        "選(\\s*)中"
+      ],
+      "reason": "人員被選中／獲選語境，依既有裁決保留。",
+      "ch_value": "12480e5bca4bf286"
+    },
+    "IG_UI.json|IGUI_PZLinux_MailAds_16": {
+      "patterns": [
+        "選(\\s*)中"
+      ],
+      "reason": "人員被選中／獲選語境，依既有裁決保留。",
+      "ch_value": "255308029905b8d0"
+    },
+    "IG_UI.json|IGUI_PZLinux_MailAds_19": {
+      "patterns": [
+        "選(\\s*)中"
+      ],
+      "reason": "人員被選中／獲選語境，依既有裁決保留。",
+      "ch_value": "763dd6efdb65b6dc"
+    },
+    "IG_UI.json|IGUI_PZLinux_MailAds_8": {
+      "patterns": [
+        "選(\\s*)中"
+      ],
+      "reason": "人員被選中／獲選語境，依既有裁決保留。",
+      "ch_value": "47594b23f57f7273"
+    },
+    "IG_UI.json|IGUI_WeaponLoadout_Slot_FitsNone": {
+      "patterns": [
+        "登(\\s*)錄",
+        "登錄"
+      ],
+      "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
+      "ch_value": "7c3fe483694afc0f"
+    },
+    "ItemName.json|LWBetterElectronics.ManualANoisemakerV1": {
+      "patterns": [
+        "應(\\s*)用(?!\\s*程)"
+      ],
+      "reason": "電路中的 application 名詞語境。",
+      "ch_value": "6969f205837fb197"
+    },
+    "Moodles.json|Moodles_BodilyFumes_Bad_lvl4": {
+      "patterns": [
+        "泄(?!殖)"
+      ],
+      "reason": "「排泄」為正確固定詞。",
+      "ch_value": "3af43da2c2f00edf"
+    },
+    "Recorded_Media.json|RM_LKP_t2_l09": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "通行、規則通過、驗證通過或表決通過語境。",
+      "ch_value": "e7f79eccebbe7d32"
+    },
+    "Sandbox.json|Sandbox_BFLightState_heartbeatSeconds_tooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
+      "ch_value": "e1f6137ee65e226e"
+    },
+    "Sandbox.json|Sandbox_GlobalStorageSiK_EnableSolderingIronCraft_tooltip": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "通行、規則通過、驗證通過或表決通過語境。",
+      "ch_value": "7c79e09c7d1280eb"
+    },
+    "Tooltip.json|Tooltip_TTF_MapForget_NoSketches": {
+      "patterns": [
+        "(?<!地)(?<!地\\s)圖(\\s*)標"
+      ],
+      "reason": "「草圖標記」是草圖+標記的跨詞合法語境。",
+      "ch_value": "0a435b48bc820052"
+    },
+    "UI.json|UI_BanditsCreator_Client": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
+      "ch_value": "8c663806bdb96bb7"
+    },
+    "UI.json|UI_BodilyFunctions": {
+      "patterns": [
+        "泄(?!殖)"
+      ],
+      "reason": "「排泄」為正確固定詞。",
+      "ch_value": "7b4e329af2913eac"
+    },
+    "UI.json|UI_FamilyZMedicine_AdministerHint": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "通行、規則通過、驗證通過或表決通過語境。",
+      "ch_value": "eed8765330bcf2e2"
+    },
+    "UI.json|UI_FamilyZMedicine_CriticalDrugInteraction": {
+      "patterns": [
+        "交(\\s*)互"
+      ],
+      "reason": "醫療語境的「藥物交互作用」為台灣專業用語。",
+      "ch_value": "ebb5a37fc8b586f5"
+    },
+    "UI.json|UI_FamilyZMedicine_Interaction": {
+      "patterns": [
+        "交(\\s*)互"
+      ],
+      "reason": "醫療語境的「藥物交互作用」為台灣專業用語。",
+      "ch_value": "0f1f9768e0a9c6af"
+    },
+    "UI.json|UI_FamilyZMedicine_InteractionWarnings": {
+      "patterns": [
+        "交(\\s*)互"
+      ],
+      "reason": "醫療語境的「藥物交互作用」為台灣專業用語。",
+      "ch_value": "85ac46f097f1288c"
+    },
+    "UI.json|UI_FamilyZMedicine_Interactions": {
+      "patterns": [
+        "交(\\s*)互"
+      ],
+      "reason": "醫療語境的「藥物交互作用」為台灣專業用語。",
+      "ch_value": "0f1f9768e0a9c6af"
+    },
+    "UI.json|UI_FamilyZMedicine_Intervention_ReviewAllergyInteraction": {
+      "patterns": [
+        "交(\\s*)互"
+      ],
+      "reason": "醫療語境的「藥物交互作用」為台灣專業用語。",
+      "ch_value": "1ddbce18c825459b"
+    },
+    "UI.json|UI_FamilyZMedicine_NoInteractions": {
+      "patterns": [
+        "交(\\s*)互"
+      ],
+      "reason": "醫療語境的「藥物交互作用」為台灣專業用語。",
+      "ch_value": "d331f8f4c980dca8"
+    },
+    "UI.json|UI_J93RunningBloodPools_Description": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
+      "ch_value": "cf59e993d09c7004"
+    },
+    "UI.json|UI_KCMAIN_DIALOG_SILAS_ASHFORD_OPTION_WARNING": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "通行、規則通過、驗證通過或表決通過語境。",
+      "ch_value": "fefa05ba26580015"
+    },
+    "UI.json|UI_KCMAIN_DIALOG_SILAS_ASHFORD_WARNING": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "通行、規則通過、驗證通過或表決通過語境。",
+      "ch_value": "2956ad6e35a36cdc"
+    },
+    "UI.json|UI_KCMain_ModOptions_LogbookKey_Tooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
+      "ch_value": "14b29ad72d312dcf"
+    },
+    "UI.json|UI_KCMain_ModOptions_TalkKey_Tooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
+      "ch_value": "512e32b7574603b2"
+    },
+    "UI.json|UI_KCMain_ModOptions_TrackerKey_Tooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
+      "ch_value": "6e20ae6dca4f45fe"
+    },
+    "UI.json|UI_options_blackoutpredators_soundEffectsVolume_tooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
+      "ch_value": "a7034ee9a77d56bd"
+    },
+    "UI.json|UI_optionscreen_KBW_Debug_Tooltip": {
+      "patterns": [
+        "登(\\s*)錄",
+        "登錄"
+      ],
+      "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
+      "ch_value": "43c65c70a83ec26d"
+    },
+    "IG_UI.json|IGUI_bikinitools_O_Context_Lumberjack": {
+      "patterns": [
+        "^伐木工$|['「]伐木工['」]|伐木工特[質性]|特質雜誌-伐木工"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「伐木工」，非本體 Ax-pert（本體 CH「斧頭人」）。",
+      "ch_value": "09d3c7fbc29ee514"
+    },
+    "UI.json|UI_BurdJournals_ProfLumberjack": {
+      "patterns": [
+        "^伐木工$|['「]伐木工['」]|伐木工特[質性]|特質雜誌-伐木工"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「伐木工」，非本體 Ax-pert（本體 CH「斧頭人」）。",
+      "ch_value": "09d3c7fbc29ee514"
+    },
+    "UI.json|UI_trait_woodcutter": {
+      "patterns": [
+        "^伐木工$|['「]伐木工['」]|伐木工特[質性]|特質雜誌-伐木工"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「伐木工」，非本體 Ax-pert（本體 CH「斧頭人」）。",
+      "ch_value": "09d3c7fbc29ee514"
+    },
+    "UI.json|UI_trait_Lumberjack": {
+      "patterns": [
+        "^伐木工$|['「]伐木工['」]|伐木工特[質性]|特質雜誌-伐木工"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「伐木工」，非本體 Ax-pert（本體 CH「斧頭人」）。",
+      "ch_value": "09d3c7fbc29ee514"
+    },
+    "UI.json|UI_trait_SWFlimsy": {
+      "patterns": [
+        "^弱不禁風$|['「]弱不禁風['」]|弱不禁風特[質性]|特質雜誌-弱不禁風"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「弱不禁風」，非本體 Puny（本體 CH「虛弱」）。",
+      "ch_value": "f0aca96f9733e7f3"
+    },
+    "UI.json|UI_trait_glassbody": {
+      "patterns": [
+        "^弱不禁風$|['「]弱不禁風['」]|弱不禁風特[質性]|特質雜誌-弱不禁風"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「弱不禁風」，非本體 Puny（本體 CH「虛弱」）。",
+      "ch_value": "f0aca96f9733e7f3"
+    },
+    "UI.json|UI_trait_Aim3": {
+      "patterns": [
+        "^神槍手$|['「]神槍手['」]|神槍手特[質性]|特質雜誌-神槍手"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「神槍手」，非本體 Marksman（本體 CH「神射手」）。",
+      "ch_value": "8d97b36c332c5a2c"
+    },
+    "UI.json|UI_prof_sharpshooter": {
+      "patterns": [
+        "^神槍手$|['「]神槍手['」]|神槍手特[質性]|特質雜誌-神槍手"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「神槍手」，非本體 Marksman（本體 CH「神射手」）。",
+      "ch_value": "8d97b36c332c5a2c"
+    },
+    "Sandbox.json|Sandbox_SurvivorQuirks_CostNightOwl_tooltip": {
+      "patterns": [
+        "^夜貓子$|['「]夜貓子['」]|夜貓子特[質性]|特質雜誌-夜貓子"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「夜貓子」，非本體 Night Owl（本體 CH「夜貓族」）。",
+      "ch_value": "a6060554e976c9d4"
+    },
+    "Sandbox.json|Sandbox_SurvivorQuirks_EnableNightOwl": {
+      "patterns": [
+        "^夜貓子$|['「]夜貓子['」]|夜貓子特[質性]|特質雜誌-夜貓子"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「夜貓子」，非本體 Night Owl（本體 CH「夜貓族」）。",
+      "ch_value": "ba173cc4e4979077"
+    },
+    "UI.json|UI_trait_owlperson": {
+      "patterns": [
+        "^夜貓子$|['「]夜貓子['」]|夜貓子特[質性]|特質雜誌-夜貓子"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「夜貓子」，非本體 Night Owl（本體 CH「夜貓族」）。",
+      "ch_value": "ba173cc4e4979077"
+    },
+    "UI.json|UI_trait_SQnightowl": {
+      "patterns": [
+        "^夜貓子$|['「]夜貓子['」]|夜貓子特[質性]|特質雜誌-夜貓子"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「夜貓子」，非本體 Night Owl（本體 CH「夜貓族」）。",
+      "ch_value": "ba173cc4e4979077"
+    },
+    "Sandbox.json|Sandbox_NumbTrait_B42_CallousedKillsRequired": {
+      "patterns": [
+        "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+      "ch_value": "5cde63ba862c9597"
+    },
+    "Sandbox.json|Sandbox_NumbTrait_B42_CallousedKillsRequired_tooltip": {
+      "patterns": [
+        "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+      "ch_value": "99a6c85bc30edba0"
+    },
+    "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxBoredomAllowed": {
+      "patterns": [
+        "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+      "ch_value": "e260b864fffe79c5"
+    },
+    "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxBoredomAllowed_tooltip": {
+      "patterns": [
+        "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+      "ch_value": "1c20dc4f09eb91f6"
+    },
+    "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxStressAllowed": {
+      "patterns": [
+        "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+      "ch_value": "e25918ae941a67ed"
+    },
+    "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxStressAllowed_tooltip": {
+      "patterns": [
+        "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+      "ch_value": "adb597bae45beb47"
+    },
+    "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxUnhappinessAllowed": {
+      "patterns": [
+        "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+      "ch_value": "e12651eb55c37fac"
+    },
+    "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxUnhappinessAllowed_tooltip": {
+      "patterns": [
+        "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+      "ch_value": "b143d8f033bbde95"
+    },
+    "Sandbox.json|Sandbox_NumbTrait_B42_DisableCalloused": {
+      "patterns": [
+        "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+      "ch_value": "7458c545e4bdba9b"
+    },
+    "Sandbox.json|Sandbox_NumbTrait_B42_DisableCalloused_tooltip": {
+      "patterns": [
+        "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+      "ch_value": "6d3929a7ae976015"
+    },
+    "UI.json|UI_trait_Calloused": {
+      "patterns": [
+        "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
+      "ch_value": "ca5b75f0b21a3de6"
+    },
+    "UI.json|UI_trait_softstomach": {
+      "patterns": [
+        "^脾胃虛弱$|['「]脾胃虛弱['」]|脾胃虛弱特[質性]|特質雜誌-脾胃虛弱"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「脾胃虛弱」，非本體 Weak Stomach（本體 CH「胃虛」）。",
+      "ch_value": "7221046461971d70"
+    },
+    "UI.json|UI_trait_Frail": {
+      "patterns": [
+        "^弱不禁風$|['「]弱不禁風['」]|弱不禁風特[質性]|特質雜誌-弱不禁風"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「弱不禁風」，非本體 Puny（本體 CH「虛弱」）。",
+      "ch_value": "f0aca96f9733e7f3"
+    },
+    "Moodles.json|Moodles_KDNodding_Good_lvl2": {
+      "patterns": [
+        "^昏昏欲睡$|['「]昏昏欲睡['」]|昏昏欲睡特[質性]|特質雜誌-昏昏欲睡"
+      ],
+      "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「昏昏欲睡」，非本體 Sleepyhead（本體 CH「貪睡」）。",
+      "ch_value": "2cd95ed3ef59bdda"
+    },
+    "IG_UI.json|IGUI_RSSUIV3_ModOptionsDesc1": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
+      "ch_value": "6fb8e837af473f52"
+    },
+    "IG_UI.json|IGUI_RSSUIV3_ModOptionsEnableTooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
+      "ch_value": "8ceb66230a849681"
+    },
+    "ItemName.json|LWBetterElectronics.anualANoisemakerV1": {
+      "patterns": [
+        "應(\\s*)用(?!\\s*程)"
+      ],
+      "reason": "書名中的應用為學術application／applied（電路用途、應用偽裝），不是UI套用動作。",
+      "ch_value": "6969f205837fb197"
+    },
+    "ItemName.json|MissingSkillBooks.BookSneaking5": {
+      "patterns": [
+        "應(\\s*)用(?!\\s*程)"
+      ],
+      "reason": "書名中的應用為學術application／applied（電路用途、應用偽裝），不是UI套用動作。",
+      "ch_value": "2bcb14b4c456d4a3"
+    },
+    "Sandbox.json|Sandbox_NightSprintersDyn_debugLogging_tooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
+      "ch_value": "7570bf4e9b16a577"
+    },
+    "Sandbox.json|Sandbox_RegionManager_DecisionCacheSweepEveryEpochs_tooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
+      "ch_value": "922a3c8add17fbb0"
+    },
+    "Sandbox.json|Sandbox_RegionManager_DecisionCacheTtlEpochs_tooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
+      "ch_value": "eeb0d5c371bedf2b"
+    },
+    "Sandbox.json|Sandbox_RegionManager_PendingConfirmSweepEveryEpochs_tooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
+      "ch_value": "f196e1c2cce885b3"
+    },
+    "UI.json|UI_SS_ModOptionsDesc1": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
+      "ch_value": "6fb8e837af473f52"
+    },
+    "UI.json|UI_SS_ModOptionsEnableTooltip": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
+      "ch_value": "8ceb66230a849681"
     }
-   ]
-  },
-  {
-   "category": "發→髮",
-   "description": "名詞「髮」被誤轉為「發」（髮型名等）",
-   "rules": [
-    {
-     "pattern": "發霧",
-     "replacement": "髮霧"
-    },
-    {
-     "pattern": "胭脂魚發",
-     "replacement": "胭脂魚髮",
-     "note": "髮型名稱"
-    },
-    {
-     "pattern": "掩眼發",
-     "replacement": "掩眼髮",
-     "note": "髮型名稱"
-    }
-   ]
-  },
-  {
-   "category": "係→系",
-   "description": "系統：「係」應為「系」（注意：台灣標準寫「係數」，勿加係數規則）",
-   "rules": [
-    {
-     "pattern": "係統",
-     "replacement": "系統"
-    }
-   ]
-  },
-  {
-   "category": "面→麵",
-   "description": "麵食相關",
-   "rules": [
-    {
-     "pattern": "面包",
-     "replacement": "麵包"
-    },
-    {
-     "pattern": "面條",
-     "replacement": "麵條"
-    },
-    {
-     "pattern": "面粉",
-     "replacement": "麵粉"
-    },
-    {
-     "pattern": "拉面",
-     "replacement": "拉麵"
-    },
-    {
-     "pattern": "方便面",
-     "replacement": "方便麵"
-    },
-    {
-     "pattern": "掛面",
-     "replacement": "掛麵"
-    },
-    {
-     "pattern": "炒面",
-     "replacement": "炒麵"
-    },
-    {
-     "pattern": "泡面",
-     "replacement": "泡麵"
-    },
-    {
-     "pattern": "面團",
-     "replacement": "麵團"
-    },
-    {
-     "pattern": "面糊",
-     "replacement": "麵糊"
-    },
-    {
-     "pattern": "和麵(?=\\s*[具部膜罩])",
-     "replacement": "和面",
-     "note": "反向防護：s2twp 詞條「和面→和麵」（揉麵團）誤吃「和+面具/面部」跨詞（2026-08-02 實證 4 處，同句「或面具」對「和麵具」為觸發鐵證，前文「和」是必要條件故收窄）；codex 覆核：裸「麵(?=[具部膜罩])」會誤傷「這種麵具有嚼勁」（麵＋具有跨詞），收窄後僅剩「和麵具有技巧」類極端句殘險，現語料零命中"
-    }
-   ]
-  },
-  {
-   "category": "里→裡",
-   "description": "「裡面」的「裡」被保留為「里」",
-   "rules": [
-    {
-     "pattern": "(?<!阿)里面",
-     "replacement": "裡面",
-     "note": "lookbehind 防人名「阿里」+「面前」跨詞誤傷（2026-07-30 同步自本體）"
-    },
-    {
-     "pattern": "這里",
-     "replacement": "這裡"
-    },
-    {
-     "pattern": "那里",
-     "replacement": "那裡"
-    },
-    {
-     "pattern": "哪里",
-     "replacement": "哪裡"
-    },
-    {
-     "pattern": "心里",
-     "replacement": "心裡"
-    },
-    {
-     "pattern": "家里",
-     "replacement": "家裡"
-    },
-    {
-     "pattern": "手里",
-     "replacement": "手裡"
-    },
-    {
-     "pattern": "屋里",
-     "replacement": "屋裡"
-    },
-    {
-     "pattern": "東西里",
-     "replacement": "東西裡"
-    },
-    {
-     "pattern": "劇本里",
-     "replacement": "劇本裡"
-    }
-   ]
-  },
-  {
-   "category": "OpenCC 分詞詞條陷阱",
-   "description": "STPhrases 貪婪比對誤吃相鄰字造成的殘留/誤字",
-   "rules": [
-    {
-     "pattern": "干燥",
-     "replacement": "乾燥",
-     "note": "「近日干燥」等：「日干」被當干支詞條吃掉致「干燥」未轉；繁中無任何語境保留「干燥」"
-    },
-    {
-     "pattern": "箇",
-     "replacement": "個",
-     "note": "「个旧→箇舊」（雲南地名）與「个中→箇中」（成語）誤套；「個中」亦為台灣標準寫法，全域替換無誤傷"
-    },
-    {
-     "pattern": "(?<![限機體管編建學])制作",
-     "replacement": "製作",
-     "note": "「在家制作」「無法制作」等分詞漏網；lookbehind 防「限制作用/管制作業」跨詞。已知誤保護：「有限制作價值」（mod 3617732907，走 ch_overrides 修）（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "(龍\\s*)卷(\\s*風)",
-     "replacement": "\\1捲\\2",
-     "note": "龍捲風分詞漏網（本體 Brandenburg 實證；本包「飛馳·龍卷風」車輛名）（2026-07-19 同步自本體）"
-    }
-   ]
-  },
-  {
-   "category": "s2twp 過度在地化修正",
-   "rules": [
-    {
-     "pattern": "高階餐廳",
-     "replacement": "高級餐廳",
-     "_note": "TWPhrases 高级→高階 針對技術語境；餐廳語境應為高級（As1 42.19 新鍵 UI_BurdJournals_LorePool_StashNoun）"
-    },
-    {
-     "pattern": "外掛(?!背包|式)",
-     "replacement": "模組",
-     "note": "插件→外掛；台灣遊戲圈「外掛」=作弊程式。暫譯「模組」，終譯（EN item：項目/物件）待裁決後全局統一（2026-07-19 同步自本體）。(?!背包|式) 防車輛外掛式背包等正當用法（模組包 ATA 實證誤傷）"
-    },
-    {
-     "pattern": "擴(\\s*)充(\\s*)套(\\s*)件",
-     "replacement": "擴\\1展",
-     "note": "s2twp 扩展→擴充套件（IT extension 詞條誤套一般 expand/extended 語境）；2026-08-02 全量掃描 24 處（Mirage 視角縮放系列 9 鍵＋車輛/銑床/配方/任務/儲物 15 處）零軟體擴充功能語境；本體語料 0 出現（本體 CH 已凍結，勿移植）"
-    },
-    {
-     "pattern": "全(\\s*)域(\\s*)性",
-     "replacement": "全\\1域",
-     "note": "s2twp 全局→全域性（贅「性」，全域性開關/全域性倍率語法不通）；2026-08-02 全量 20 處全為 global 語境；本體 global 定名「全域」16 處、「全域性」0 處。CN「全局性」→「全域性性」疊字經本規則替換後恰收斂為「全域性」，屬預期正確（本體 CH 已凍結且語料零出現，勿移植）。若日後 As1 帶入「全局性」（→全域性性→本規則收斂為「全域性」），須另立專用規則改「全面性」，勿依賴本條"
-    }
-   ]
-  },
-  {
-   "category": "台灣用語統一（2026-07-19 全量掃描）",
-   "description": "字級客觀類：簡繁殘留、量詞、既有主流用字統一；⚠️「手柄」條未同步（本包 handle 把手語境 13 處）",
-   "rules": [
-    {
-     "pattern": "僵(\\s*)屍",
-     "replacement": "殭\\1屍",
-     "note": "台灣標準＋本體主流（246 處殭屍 vs 57 殘留）；含「殭屍毀滅工程」遊戲名；含 CJK 空格版（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "自(\\s*)制(?!\\s*(?:力|能力))",
-     "replacement": "自\\1製",
-     "note": "crafted/makeshift 物品名（自製匕首等 45 處）；(?!力) 防「自制力」；codex 修正：\\s* 防「自 制 力」空格版誤傷（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "鼠(\\s*)標",
-     "replacement": "滑\\1鼠",
-     "note": "s2twp 分詞漏網（移動鼠標/按下鼠標左鍵）；含空格版（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "屏(\\s*)幕",
-     "replacement": "螢\\1幕",
-     "note": "s2twp 分詞漏網；含空格版（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "服(\\s*)務(\\s*)器",
-     "replacement": "伺\\1服\\2器",
-     "note": "s2twp 分詞漏網（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "網(\\s*)絡",
-     "replacement": "網\\1路",
-     "note": "s2twp 分詞漏網（電話網絡等）（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "([一每這那幾兩])(\\s*)只(?=\\s*(?:死\\s*)?(?:家\\s*鼠|殭\\s*屍|僵\\s*屍|母\\s*雞|兔\\s*子|小\\s*狗|野\\s*鴨|狗))",
-     "replacement": "\\1\\2隻",
-     "note": "動物量詞誤轉；lookahead 動物集合，絕不可全域（「這只是/那只是」=just）；codex 修正：CJK 空格版（那 只 殭 屍）（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "一(\\s*)只(?=\\s*需\\s*要\\s*柺\\s*杖\\s*的\\s*野\\s*鴨)",
-     "replacement": "一\\1隻",
-     "note": "動物量詞個案（RM 台詞）（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "(?<!地)(?<!地\\s)圖(\\s*)標",
-     "replacement": "圖\\1示",
-     "note": "icon=圖示（37 處）（2026-07-19 同步自本體）。lookbehind 防「地圖+標記/標籤」跨詞誤傷（2026-07-30 同步自本體）"
-    },
-    {
-     "pattern": "窗(\\s*)口",
-     "replacement": "視\\1窗",
-     "note": "window=視窗（8 處）（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "控(\\s*)件",
-     "replacement": "控\\1制\\1項",
-     "note": "control=控制項（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "滑(\\s*)鼠(\\s*)指(\\s*)針",
-     "replacement": "滑\\1鼠\\2游\\3標",
-     "note": "mouse pointer=滑鼠游標；先於光標規則（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "光(\\s*)標",
-     "replacement": "游\\1標",
-     "note": "cursor=游標；儀表「指針」不受影響（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "搜(\\s*)索",
-     "replacement": "搜\\1尋",
-     "note": "search=搜尋（PZ 全 search 語境，無搜索票法律語境）（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "(?<![縫聚集組整混癒融接結回綜撮])合(\\s*)並",
-     "replacement": "合\\1併",
-     "note": "merge=合併；lookbehind 防「縫合並包扎」（縫合+並，本包實證誤傷）等動詞+並跨詞"
-    },
-    {
-     "pattern": "幸(\\s*)存",
-     "replacement": "倖\\1存",
-     "note": "倖存=台灣標準（30 處）（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "自(\\s*)定(\\s*)義",
-     "replacement": "自\\1訂",
-     "note": "custom=自訂（24 處）（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "調試",
-     "replacement": "除錯",
-     "note": "debug=除錯（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "教(\\s*)程",
-     "replacement": "教\\1學",
-     "note": "tutorial=教學（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "信(\\s*)息",
-     "replacement": "資\\1訊",
-     "note": "information=資訊；message 語境（ServerWelcomeMessage）由 override 改「訊息」（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "界(\\s*)面",
-     "replacement": "介\\1面",
-     "note": "interface=介面（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "交(\\s*)互",
-     "replacement": "互\\1動",
-     "note": "interaction=互動（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "創(\\s*)建",
-     "replacement": "建\\1立",
-     "note": "create=建立（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "兼(\\s*)容",
-     "replacement": "相\\1容",
-     "note": "compatible=相容（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "加(\\s*)載",
-     "replacement": "載\\1入",
-     "note": "load=載入（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "登(\\s*)錄",
-     "replacement": "登\\1入",
-     "note": "login=登入（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "默(\\s*)認",
-     "replacement": "預\\1設",
-     "note": "default=預設（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "用(\\s*)戶",
-     "replacement": "使\\1用\\1者",
-     "note": "user=使用者（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "菜(\\s*)單",
-     "replacement": "選\\1單",
-     "note": "UI menu=選單。⚠️ 2026-07-19 全量掃描 33 處全 UI 語境；未來如出現餐飲菜單語境（RM 烹飪節目）需改窄化前綴版（codex 警示）（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "列(\\s*)表",
-     "replacement": "清\\1單",
-     "note": "list=清單（67 處；與既有「伺服器清單」override 值一致）（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "當(\\s*)前",
-     "replacement": "目\\1前",
-     "note": "current=目前（56 處）（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "通(\\s*)過(?!\\s*[測考審檢])",
-     "replacement": "透\\1過",
-     "note": "via/through=透過（42 處全掃無測驗語境）；lookahead 防「通過測驗」（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "單(\\s*)擊",
-     "replacement": "點\\1擊",
-     "note": "click=點擊（雙擊不受影響）（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "不(\\s*)支(\\s*)持(?=\\s*的\\s*模\\s*組)",
-     "replacement": "不\\1支\\2援",
-     "note": "unsupported mods 窄版（codex 建議，防「支持某人」）（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "(高|低|睡眠|光照|霧氣|水面|水坑|建築|空氣)(\\s*)質(\\s*)量",
-     "replacement": "\\1\\2品\\3質",
-     "note": "quality 正向詞組（codex 窄化案）（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "質(\\s*)量(\\s*)保(\\s*)證",
-     "replacement": "品\\1質\\2保\\3證",
-     "note": "QA 職稱（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "更好的質量",
-     "replacement": "更好的品質",
-     "note": "quality（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "的(\\s*)質(\\s*)量",
-     "replacement": "的\\1品\\2質",
-     "note": "「捕獲物的質量」等 perks 描述；物理 mass 語境現無（note 防範）（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "(肉類|物品)質量",
-     "replacement": "\\1品質",
-     "note": "perks 描述無「的」變體（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "在設置裡",
-     "replacement": "在設定裡",
-     "note": "settings 語境（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "其他設置",
-     "replacement": "其他設定",
-     "note": "settings 語境（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "諮(\\s*)詢(\\s*)前(\\s*)臺",
-     "replacement": "諮\\1詢\\2櫃\\3檯",
-     "note": "旅館語境（1 處）；含 CJK 空格版（2026-07-19 同步自本體）"
-    },
-    {
-     "pattern": "型(\\s*)別",
-     "replacement": "類\\1型",
-     "note": "类型→型別 IT 過度在地化；PZ 語料全為一般類型語境（鋒面類型/音樂類型），無程式資料型別"
-    },
-    {
-     "pattern": "墻",
-     "replacement": "牆",
-     "note": "異體字：官方 CH 用「墻」（陸用），台灣標準為「牆」；語料 牆137/墻0（2026-07-29 42.20 補譯掃描）"
-    },
-    {
-     "pattern": "坐(\\s*)標",
-     "replacement": "座\\1標",
-     "note": "coordinates；語料 座標10/坐標0；含空格版"
-    },
-    {
-     "pattern": "拖(\\s*)動(?!\\s*物)",
-     "replacement": "拖\\1曳",
-     "note": "drag；台灣 UI 標準用語；含空格版。負向前瞻擋「拖|動物」跨詞界誤傷（拖动物尸体→拖曳物屍體），代價是漏轉「拖動物品」（語料 0 筆，漏轉優於轉錯）"
-    },
-    {
-     "pattern": "許可權",
-     "replacement": "權限",
-     "note": "permission=權限。s2twp 把 权限 轉成微軟術語「許可權」；2026-07-30 自本體同步（本包語料 0 筆命中，預防性規則）"
-    },
-    {
-     "pattern": "(?<![關串並])聯(\\s*)機(?!\\s*[構制床])",
-     "replacement": "連\\1線",
-     "note": "online/multiplayer=連線；本體 連線85/聯機0；2026-08-02 全量 6 處全 multiplayer 語境。Mirage 四鍵另以 ch_overrides 採「多人連線/多人遊戲」語境化措辭，本規則為全庫兜底（本體 CH 已凍結且語料零出現，勿移植）。2026-08-02 覆核加固：lookbehind/lookahead 防「關聯機制/串聯機床/並聯機構」跨詞誤傷（現語料 0 命中，預防性）"
-    },
-    {
-     "pattern": "賬",
-     "replacement": "帳",
-     "note": "TW 標準用「帳」、無「賬」正當用途（本體 帳號5/賬號0）；字級規則同時涵蓋 賬號/賬戶/對賬 等（覆核放寬自詞級 賬號；既有 16 條 賬戶 逐鍵覆寫可退役，另案處理）（本體 CH 已凍結且語料零出現，勿移植）"
-    },
-    {
-     "pattern": "只(\\s*)讀(?!\\s*[了過取書完懂])",
-     "replacement": "唯\\1讀",
-     "note": "read-only=唯讀（本體 唯讀1/只讀0；本包既有「唯讀全域剪貼簿」先例）；負向前瞻防「只讀過/只讀了」動詞語境；2026-08-02 全量 4 處全 read-only（Mirage 2＋CSR 面板＋PZLinux 掛載）（本體 CH 已凍結且語料零出現，勿移植）。2026-08-02 覆核加固：擴充否定集防「只讀取/只讀書」（現語料 0 命中，預防性）"
-    },
-    {
-     "pattern": "應(\\s*)用(?!\\s*程)",
-     "replacement": "套\\1用",
-     "note": "動詞 apply=套用（使用者 2026-08-02 裁決全庫整批；ch_overrides 15+ 既往裁決＋本體官方 UI_btn_apply=套用）；(?!程) 防「應用程式」（全庫唯一實戰命中 UI_JeevesPC_BS_OpenFromMenuHalo；語料無「應用程序」形態）；名詞 application（基本電氣應用/研究及應用）以 ch_overrides 釘選；163 處/156 鍵逐處分類＋對抗覆核後落地（本體 CH 已凍結，勿移植）；UI.json|UI_CMRB_Message_AttemptTracing 與 UI_CMRB.json 同鍵原為 cheat→聊天 上游誤譯，2026-08-02 已語意重譯（套用作弊效果的物品）——上游 EN 無法取得（steamcmd 匿名下載當日全面失敗、無公開 repo；已以 en_corpus hash 96c975631f99 反推 51 萬候選未中，鄰鍵 DoorLocked/DoorUnlocked 反推成功確認作者簡單過去式句風），依 CN 句構重譯，日後取得 EN 可覆核"
-    },
-    {
-     "pattern": "丟(\\s*)失",
-     "replacement": "遺\\1失",
-     "note": "lost=遺失（使用者 2026-08-02 裁決）；17 處/17 鍵全量分類：實體物品/資料語境全改；本心→失去、訊號→中斷、血液→流失、NPC 同伴→消失、抽象能力（技能）→失去，以 ch_overrides 語境化（遺失限實體物品/資料，不用於人與抽象）（本體 CH 已凍結，勿移植）"
-    },
-    {
-     "pattern": "選(\\s*)中",
-     "replacement": "選\\1取",
-     "note": "UI select=選取（使用者 2026-08-02 裁決）；74 處/71 鍵全量分類。收斂準則：人被挑中＝獲選義保留「選中」（被選中參加/選中一名玩家/可被選中執行，ch_overrides 釘選）；物件被系統抽選＝選取（外觀被選取機率/車輛被選取頻率/隨機選取曲目）；checkbox 語境改「勾選」（本體慣例 9 處實證）（本體 CH 已凍結，勿移植）"
-    }
-   ]
-  },
-  {
-   "category": "本體特質名",
-   "description": "#409：本體 UI_trait_* 特質名的 CH 官方譯名 ≠ CN 官方譯名換字形（OpenCC 機轉殘留）。只在「整值＝特質名／引號包住／後接特質·特性／特質雜誌-」語境命中；一般敘述（焊工面罩、伐木工襯衫、JOJO 星塵鬥士）不報。mod 自訂同名特質（Calloused、SQ 夜貓子等）以 lint_exemptions 逐鍵豁免。",
-   "rules": [
-    {
-     "pattern": "^業餘技工$|['「]業餘技工['」]|業餘技工特[質性]|特質雜誌-業餘技工",
-     "replacement": "業餘機工",
-     "note": "Vehicle Knowledge（UI_trait_Mechanics）：本體 CH「業餘機工」，CN「业余技工」"
-    },
-    {
-     "pattern": "^伐木工$|['「]伐木工['」]|伐木工特[質性]|特質雜誌-伐木工",
-     "replacement": "斧頭人",
-     "note": "Ax-pert（UI_trait_axeman）：本體 CH「斧頭人」，CN「伐木工」"
-    },
-    {
-     "pattern": "^焊工$|['「]焊工['」]|焊工特[質性]|特質雜誌-焊工",
-     "replacement": "金工",
-     "note": "Welder（UI_trait_Metalworker）：本體 CH「金工」，CN「焊工」"
-    },
-    {
-     "pattern": "^雕刻工$|['「]雕刻工['」]|雕刻工特[質性]|特質雜誌-雕刻工",
-     "replacement": "削刻師",
-     "note": "Whittler（UI_trait_Whittler）：本體 CH「削刻師」，CN「雕刻工」"
-    },
-    {
-     "pattern": "^巧手良工$|['「]巧手良工['」]|巧手良工特[質性]|特質雜誌-巧手良工",
-     "replacement": "巧手",
-     "note": "Handy（UI_trait_handy）：本體 CH「巧手」，CN「巧手良工」"
-    },
-    {
-     "pattern": "^皮糙肉厚$|['「]皮糙肉厚['」]|皮糙肉厚特[質性]|特質雜誌-皮糙肉厚",
-     "replacement": "皮厚",
-     "note": "Thick-skinned（UI_trait_thickskinned）：本體 CH「皮厚」，CN「皮糙肉厚」"
-    },
-    {
-     "pattern": "^無所畏懼$|['「]無所畏懼['」]|無所畏懼特[質性]|特質雜誌-無所畏懼",
-     "replacement": "勇敢",
-     "note": "Brave（UI_trait_brave）：本體 CH「勇敢」，CN「无所畏惧」"
-    },
-    {
-     "pattern": "^超速狂魔$|['「]超速狂魔['」]|超速狂魔特[質性]|特質雜誌-超速狂魔",
-     "replacement": "飆仔",
-     "note": "Speed Demon（UI_trait_SpeedDemon）：本體 CH「飆仔」，CN「超速狂魔」"
-    },
-    {
-     "pattern": "^新手司機$|['「]新手司機['」]|新手司機特[質性]|特質雜誌-新手司機",
-     "replacement": "新手上路",
-     "note": "Sunday Driver（UI_trait_SundayDriver）：本體 CH「新手上路」，CN「新手司机」"
-    },
-    {
-     "pattern": "^畏首畏尾$|['「]畏首畏尾['」]|畏首畏尾特[質性]|特質雜誌-畏首畏尾",
-     "replacement": "懦弱",
-     "note": "Cowardly（UI_trait_cowardly）：本體 CH「懦弱」，CN「畏首畏尾」"
-    },
-    {
-     "pattern": "^體笨如牛$|['「]體笨如牛['」]|體笨如牛特[質性]|特質雜誌-體笨如牛",
-     "replacement": "笨拙",
-     "note": "Clumsy（UI_trait_clumsy）：本體 CH「笨拙」，CN「体笨如牛」"
-    },
-    {
-     "pattern": "^身輕如燕$|['「]身輕如燕['」]|身輕如燕特[質性]|特質雜誌-身輕如燕",
-     "replacement": "優雅",
-     "note": "Graceful（UI_trait_graceful）：本體 CH「優雅」，CN「身轻如燕」"
-    },
-    {
-     "pattern": "^視力障礙$|['「]視力障礙['」]|視力障礙特[質性]|特質雜誌-視力障礙",
-     "replacement": "近視",
-     "note": "Short Sighted（UI_trait_shortsigh）：本體 CH「近視」，CN「视力障碍」"
-    },
-    {
-     "pattern": "^聽力障礙$|['「]聽力障礙['」]|聽力障礙特[質性]|特質雜誌-聽力障礙",
-     "replacement": "聽力較差",
-     "note": "Hard of Hearing（UI_trait_hardhear）：本體 CH「聽力較差」，CN「听力障碍」"
-    },
-    {
-     "pattern": "^聽覺靈敏$|['「]聽覺靈敏['」]|聽覺靈敏特[質性]|特質雜誌-聽覺靈敏",
-     "replacement": "聽覺敏銳",
-     "note": "Keen Hearing（UI_trait_keenhearing）：本體 CH「聽覺敏銳」，CN「听觉灵敏」"
-    },
-    {
-     "pattern": "^目光銳利$|['「]目光銳利['」]|目光銳利特[質性]|特質雜誌-目光銳利",
-     "replacement": "鷹眼",
-     "note": "Eagle Eyed（UI_trait_eagleeyed）：本體 CH「鷹眼」，CN「目光锐利」"
-    },
-    {
-     "pattern": "^食慾旺盛$|['「]食慾旺盛['」]|食慾旺盛特[質性]|特質雜誌-食慾旺盛",
-     "replacement": "食量大",
-     "note": "Hearty Appetite（UI_trait_heartyappetite）：本體 CH「食量大」，CN「食欲旺盛」"
-    },
-    {
-     "pattern": "^輕食簡餐$|['「]輕食簡餐['」]|輕食簡餐特[質性]|特質雜誌-輕食簡餐",
-     "replacement": "食量小",
-     "note": "Light Eater（UI_trait_lighteater）：本體 CH「食量小」，CN「轻食简餐」"
-    },
-    {
-     "pattern": "^緩慢代謝$|['「]緩慢代謝['」]|緩慢代謝特[質性]|特質雜誌-緩慢代謝",
-     "replacement": "代謝緩慢",
-     "note": "Slow Metabolism（UI_trait_weightgain）：本體 CH「代謝緩慢」，CN「缓慢代谢」"
-    },
-    {
-     "pattern": "^快速代謝$|['「]快速代謝['」]|快速代謝特[質性]|特質雜誌-快速代謝",
-     "replacement": "代謝快速",
-     "note": "Fast Metabolism（UI_trait_weightloss）：本體 CH「代謝快速」，CN「快速代谢」"
-    },
-    {
-     "pattern": "^身形消瘦$|['「]身形消瘦['」]|身形消瘦特[質性]|特質雜誌-身形消瘦",
-     "replacement": "嚴重過輕",
-     "note": "Very Low Weight（UI_trait_veryunderweight）：本體 CH「嚴重過輕」，CN「身形消瘦」"
-    },
-    {
-     "pattern": "^瘦骨嶙峋$|['「]瘦骨嶙峋['」]|瘦骨嶙峋特[質性]|特質雜誌-瘦骨嶙峋",
-     "replacement": "骨瘦如柴",
-     "note": "Emaciated（UI_trait_emaciated）：本體 CH「骨瘦如柴」，CN「瘦骨嶙峋」"
-    },
-    {
-     "pattern": "^身體不好$|['「]身體不好['」]|身體不好特[質性]|特質雜誌-身體不好",
-     "replacement": "身材不理想",
-     "note": "Out of Shape（UI_trait_outofshape）：本體 CH「身材不理想」，CN「身体不好」"
-    },
-    {
-     "pattern": "^身體很差$|['「]身體很差['」]|身體很差特[質性]|特質雜誌-身體很差",
-     "replacement": "體態不佳",
-     "note": "Unfit（UI_trait_unfit）：本體 CH「體態不佳」，CN「身体很差」"
-    },
-    {
-     "pattern": "^營養學家$|['「]營養學家['」]|營養學家特[質性]|特質雜誌-營養學家",
-     "replacement": "營養師",
-     "note": "Nutritionist（UI_trait_nutritionist）：本體 CH「營養師」，CN「营养学家」"
-    },
-    {
-     "pattern": "^身強力壯$|['「]身強力壯['」]|身強力壯特[質性]|特質雜誌-身強力壯",
-     "replacement": "強壯",
-     "note": "Strong（UI_trait_strong）：本體 CH「強壯」，CN「身强力壮」"
-    },
-    {
-     "pattern": "^身體壯碩$|['「]身體壯碩['」]|身體壯碩特[質性]|特質雜誌-身體壯碩",
-     "replacement": "壯碩",
-     "note": "Stout（UI_trait_stout）：本體 CH「壯碩」，CN「身体壮硕」"
-    },
-    {
-     "pattern": "^弱不禁風$|['「]弱不禁風['」]|弱不禁風特[質性]|特質雜誌-弱不禁風",
-     "replacement": "虛弱",
-     "note": "Puny（UI_trait_weak）：本體 CH「虛弱」，CN「弱不禁风」"
-    },
-    {
-     "pattern": "^身體虛弱$|['「]身體虛弱['」]|身體虛弱特[質性]|特質雜誌-身體虛弱",
-     "replacement": "軟弱",
-     "note": "Weak（UI_trait_feeble）：本體 CH「軟弱」，CN「身体虚弱」"
-    },
-    {
-     "pattern": "^生命強韌$|['「]生命強韌['」]|生命強韌特[質性]|特質雜誌-生命強韌",
-     "replacement": "堅強韌性",
-     "note": "Resilient（UI_trait_resilient）：本體 CH「堅強韌性」，CN「生命强韧」"
-    },
-    {
-     "pattern": "^易患疾病$|['「]易患疾病['」]|易患疾病特[質性]|特質雜誌-易患疾病",
-     "replacement": "體弱多病",
-     "note": "Prone to Illness（UI_trait_pronetoillness）：本體 CH「體弱多病」，CN「易患疾病」"
-    },
-    {
-     "pattern": "^開闊恐懼$|['「]開闊恐懼['」]|開闊恐懼特[質性]|特質雜誌-開闊恐懼",
-     "replacement": "廣場恐懼症",
-     "note": "Agoraphobic（UI_trait_agoraphobic）：本體 CH「廣場恐懼症」，CN「开阔恐惧」"
-    },
-    {
-     "pattern": "^幽閉恐懼$|['「]幽閉恐懼['」]|幽閉恐懼特[質性]|特質雜誌-幽閉恐懼",
-     "replacement": "幽閉恐懼症",
-     "note": "Claustrophobic（UI_trait_claustro）：本體 CH「幽閉恐懼症」，CN「幽闭恐惧」"
-    },
-    {
-     "pattern": "^神槍手$|['「]神槍手['」]|神槍手特[質性]|特質雜誌-神槍手",
-     "replacement": "神射手",
-     "note": "Marksman（UI_trait_marksman）：本體 CH「神射手」，CN「神枪手」"
-    },
-    {
-     "pattern": "^夜貓子$|['「]夜貓子['」]|夜貓子特[質性]|特質雜誌-夜貓子",
-     "replacement": "夜貓族",
-     "note": "Night Owl（UI_trait_nightowl）：本體 CH「夜貓族」，CN「夜猫子」"
-    },
-    {
-     "pattern": "^戶外專家$|['「]戶外專家['」]|戶外專家特[質性]|特質雜誌-戶外專家",
-     "replacement": "喜好戶外",
-     "note": "Outdoorsy（UI_trait_outdoorsman）：本體 CH「喜好戶外」，CN「户外专家」"
-    },
-    {
-     "pattern": "^雙耳失聰$|['「]雙耳失聰['」]|雙耳失聰特[質性]|特質雜誌-雙耳失聰",
-     "replacement": "耳聾",
-     "note": "Deaf（UI_trait_deaf）：本體 CH「耳聾」，CN「双耳失聪」"
-    },
-    {
-     "pattern": "^身體健康$|['「]身體健康['」]|身體健康特[質性]|特質雜誌-身體健康",
-     "replacement": "體態優良",
-     "note": "Fit（UI_trait_fit）：本體 CH「體態優良」，CN「身体健康」"
-    },
-    {
-     "pattern": "^身肥體胖$|['「]身肥體胖['」]|身肥體胖特[質性]|特質雜誌-身肥體胖",
-     "replacement": "肥胖",
-     "note": "Very High Weight（UI_trait_obese）：本體 CH「肥胖」，CN「身肥体胖」"
-    },
-    {
-     "pattern": "^快速恢復$|['「]快速恢復['」]|快速恢復特[質性]|特質雜誌-快速恢復",
-     "replacement": "恢復快",
-     "note": "Fast Healer（UI_trait_FastHealer）：本體 CH「恢復快」，CN「快速恢复」"
-    },
-    {
-     "pattern": "^學習神速$|['「]學習神速['」]|學習神速特[質性]|特質雜誌-學習神速",
-     "replacement": "學習高手",
-     "note": "Fast Learner（UI_trait_FastLearner）：本體 CH「學習高手」，CN「学习神速」"
-    },
-    {
-     "pattern": "^閱讀神速$|['「]閱讀神速['」]|閱讀神速特[質性]|特質雜誌-閱讀神速",
-     "replacement": "閱讀快",
-     "note": "Fast Reader（UI_trait_FastReader）：本體 CH「閱讀快」，CN「阅读神速」"
-    },
-    {
-     "pattern": "^心驚肉跳$|['「]心驚肉跳['」]|心驚肉跳特[質性]|特質雜誌-心驚肉跳",
-     "replacement": "腎上腺素成癮",
-     "note": "Adrenaline Junkie（UI_trait_AdrenalineJunkie）：本體 CH「腎上腺素成癮」，CN「心惊肉跳」"
-    },
-    {
-     "pattern": "^毫不起眼$|['「]毫不起眼['」]|毫不起眼特[質性]|特質雜誌-毫不起眼",
-     "replacement": "不起眼",
-     "note": "Inconspicuous（UI_trait_Inconspicuous）：本體 CH「不起眼」，CN「毫不起眼」"
-    },
-    {
-     "pattern": "^精神抖擻$|['「]精神抖擻['」]|精神抖擻特[質性]|特質雜誌-精神抖擻",
-     "replacement": "有活力",
-     "note": "Wakeful（UI_trait_LessSleep）：本體 CH「有活力」，CN「精神抖擞」"
-    },
-    {
-     "pattern": "^視夜如明$|['「]視夜如明['」]|視夜如明特[質性]|特質雜誌-視夜如明",
-     "replacement": "貓眼",
-     "note": "Cat's Eyes（UI_trait_NightVision）：本體 CH「貓眼」，CN「视夜如明」"
-    },
-    {
-     "pattern": "^井井有條$|['「]井井有條['」]|井井有條特[質性]|特質雜誌-井井有條",
-     "replacement": "有條理",
-     "note": "Organized（UI_trait_Packmule）：本體 CH「有條理」，CN「井井有条」"
-    },
-    {
-     "pattern": "^自衛班$|['「]自衛班['」]|自衛班特[質性]|特質雜誌-自衛班",
-     "replacement": "自衛",
-     "note": "Self Defense Class（UI_trait_SelfDefenseClass）：本體 CH「自衛」，CN「自卫班」"
-    },
-    {
-     "pattern": "^垂釣者$|['「]垂釣者['」]|垂釣者特[質性]|特質雜誌-垂釣者",
-     "replacement": "釣手",
-     "note": "Angler（UI_trait_Fishing）：本體 CH「釣手」，CN「垂钓者」"
-    },
-    {
-     "pattern": "^跑步愛好者$|['「]跑步愛好者['」]|跑步愛好者特[質性]|特質雜誌-跑步愛好者",
-     "replacement": "跑者",
-     "note": "Runner（UI_trait_Jogger）：本體 CH「跑者」，CN「跑步爱好者」"
-    },
-    {
-     "pattern": "^緩慢恢復$|['「]緩慢恢復['」]|緩慢恢復特[質性]|特質雜誌-緩慢恢復",
-     "replacement": "恢復慢",
-     "note": "Slow Healer（UI_trait_SlowHealer）：本體 CH「恢復慢」，CN「缓慢恢复」"
-    },
-    {
-     "pattern": "^學習緩慢$|['「]學習緩慢['」]|學習緩慢特[質性]|特質雜誌-學習緩慢",
-     "replacement": "腦筋慢",
-     "note": "Slow Learner（UI_trait_SlowLearner）：本體 CH「腦筋慢」，CN「学习缓慢」"
-    },
-    {
-     "pattern": "^閱讀緩慢$|['「]閱讀緩慢['」]|閱讀緩慢特[質性]|特質雜誌-閱讀緩慢",
-     "replacement": "閱讀慢",
-     "note": "Slow Reader（UI_trait_SlowReader）：本體 CH「閱讀慢」，CN「阅读缓慢」"
-    },
-    {
-     "pattern": "^昏昏欲睡$|['「]昏昏欲睡['」]|昏昏欲睡特[質性]|特質雜誌-昏昏欲睡",
-     "replacement": "貪睡",
-     "note": "Sleepyhead（UI_trait_MoreSleep）：本體 CH「貪睡」，CN「昏昏欲睡」"
-    },
-    {
-     "pattern": "^萬眾矚目$|['「]萬眾矚目['」]|萬眾矚目特[質性]|特質雜誌-萬眾矚目",
-     "replacement": "引人注目",
-     "note": "Conspicuous（UI_trait_Conspicuous）：本體 CH「引人注目」，CN「万众瞩目」"
-    },
-    {
-     "pattern": "^雜亂無章$|['「]雜亂無章['」]|雜亂無章特[質性]|特質雜誌-雜亂無章",
-     "replacement": "毫無條理",
-     "note": "Disorganized（UI_trait_Disorganized）：本體 CH「毫無條理」，CN「杂乱无章」"
-    },
-    {
-     "pattern": "^容易口渴$|['「]容易口渴['」]|容易口渴特[質性]|特質雜誌-容易口渴",
-     "replacement": "口乾",
-     "note": "High Thirst（UI_trait_HighThirst）：本體 CH「口乾」，CN「容易口渴」"
-    },
-    {
-     "pattern": "^目不識丁$|['「]目不識丁['」]|目不識丁特[質性]|特質雜誌-目不識丁",
-     "replacement": "文盲",
-     "note": "Illiterate（UI_trait_Illiterate）：本體 CH「文盲」，CN「目不识丁」"
-    },
-    {
-     "pattern": "^輾轉難眠$|['「]輾轉難眠['」]|輾轉難眠特[質性]|特質雜誌-輾轉難眠",
-     "replacement": "失眠",
-     "note": "Restless Sleeper（UI_trait_Insomniac）：本體 CH「失眠」，CN「辗转难眠」"
-    },
-    {
-     "pattern": "^愛好和平$|['「]愛好和平['」]|愛好和平特[質性]|特質雜誌-愛好和平",
-     "replacement": "和平主義者",
-     "note": "Reluctant Fighter（UI_trait_Pacifist）：本體 CH「和平主義者」，CN「爱好和平」"
-    },
-    {
-     "pattern": "^細皮嫩肉$|['「]細皮嫩肉['」]|細皮嫩肉特[質性]|特質雜誌-細皮嫩肉",
-     "replacement": "薄皮",
-     "note": "Thin-skinned（UI_trait_ThinSkinned）：本體 CH「薄皮」，CN「细皮嫩肉」"
-    },
-    {
-     "pattern": "^眼疾手快$|['「]眼疾手快['」]|眼疾手快特[質性]|特質雜誌-眼疾手快",
-     "replacement": "靈巧",
-     "note": "Dextrous（UI_trait_Dexterous）：本體 CH「靈巧」，CN「眼疾手快」"
-    },
-    {
-     "pattern": "^笨手笨腳$|['「]笨手笨腳['」]|笨手笨腳特[質性]|特質雜誌-笨手笨腳",
-     "replacement": "手指不靈",
-     "note": "All Thumbs（UI_trait_AllThumbs）：本體 CH「手指不靈」，CN「笨手笨脚」"
-    },
-    {
-     "pattern": "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁",
-     "replacement": "麻木",
-     "note": "Desensitized（UI_trait_Desensitized）：本體 CH「麻木」，CN「麻木不仁」"
-    },
-    {
-     "pattern": "街頭鬥士",
-     "replacement": "打手",
-     "note": "Brawler（UI_trait_BarFighter）：本體 CH「打手」，CN「斗士」"
-    },
-    {
-     "pattern": "^棒球選手$|['「]棒球選手['」]|棒球選手特[質性]|特質雜誌-棒球選手",
-     "replacement": "棒球員",
-     "note": "Baseball Player（UI_trait_PlaysBaseball）：本體 CH「棒球員」，CN「棒球选手」"
-    },
-    {
-     "pattern": "^遠足者$|['「]遠足者['」]|遠足者特[質性]|特質雜誌-遠足者",
-     "replacement": "遠行者",
-     "note": "Hiker（UI_trait_Hiker）：本體 CH「遠行者」，CN「远足者」"
-    },
-    {
-     "pattern": "^體操運動員$|['「]體操運動員['」]|體操運動員特[質性]|特質雜誌-體操運動員",
-     "replacement": "體操選手",
-     "note": "Gymnast（UI_trait_Gymnast）：本體 CH「體操選手」，CN「体操运动员」"
-    },
-    {
-     "pattern": "^脾胃虛弱$|['「]脾胃虛弱['」]|脾胃虛弱特[質性]|特質雜誌-脾胃虛弱",
-     "replacement": "胃虛",
-     "note": "Weak Stomach（UI_trait_WeakStomach）：本體 CH「胃虛」，CN「脾胃虚弱」"
-    },
-    {
-     "pattern": "^鋼腸鐵胃$|['「]鋼腸鐵胃['」]|鋼腸鐵胃特[質性]|特質雜誌-鋼腸鐵胃",
-     "replacement": "鐵胃",
-     "note": "Iron Gut（UI_trait_IronGut）：本體 CH「鐵胃」，CN「钢肠铁胃」"
-    },
-    {
-     "pattern": "^恐懼血液$|['「]恐懼血液['」]|恐懼血液特[質性]|特質雜誌-恐懼血液",
-     "replacement": "怕血",
-     "note": "Fear of Blood（UI_trait_Hemophobic）：本體 CH「怕血」，CN「恐惧血液」"
-    },
-    {
-     "pattern": "^哮喘患者$|['「]哮喘患者['」]|哮喘患者特[質性]|特質雜誌-哮喘患者",
-     "replacement": "氣喘",
-     "note": "Short of Breath（UI_trait_Asthmatic）：本體 CH「氣喘」，CN「哮喘患者」"
-    },
-    {
-     "pattern": "^草藥醫生$|['「]草藥醫生['」]|草藥醫生特[質性]|特質雜誌-草藥醫生",
-     "replacement": "草藥師",
-     "note": "Herbalist（UI_trait_Herbalist）：本體 CH「草藥師」，CN「草药医生」"
-    },
-    {
-     "pattern": "^叢林專家$|['「]叢林專家['」]|叢林專家特[質性]|特質雜誌-叢林專家",
-     "replacement": "荒野知識",
-     "note": "Bushcrafter（UI_trait_WildernessKnowledge）：本體 CH「荒野知識」，CN「丛林专家」"
-    },
-    {
-     "pattern": "^嗜煙如命$|['「]嗜煙如命['」]|嗜煙如命特[質性]|特質雜誌-嗜煙如命|^嗜菸如命$|['「]嗜菸如命['」]|嗜菸如命特[質性]|特質雜誌-嗜菸如命",
-     "replacement": "老菸槍",
-     "note": "Smoker（UI_trait_Smoker）：本體 CH「老菸槍」，CN「嗜烟如命」"
-    }
-   ]
   }
- ],
- "suspicious_patterns": [
-  {
-   "char": "外掛",
-   "description": "s2twp 插件→外掛；作弊歧義需人工定譯",
-   "before_exclude": [],
-   "after_exclude": []
-  },
-  {
-   "char": "幹",
-   "description": "可能需要 幹→乾 修正",
-   "before_exclude": [
-    "軀",
-    "主",
-    "事",
-    "能",
-    "若"
-   ],
-   "after_exclude": [
-    "掉",
-    "活",
-    "勁",
-    "嘛",
-    "嗎",
-    "了",
-    "的",
-    "就",
-    "麼",
-    "什",
-    "道",
-    "不",
-    "得",
-    "髒",
-    "腳",
-    "部",
-    "線",
-    "事",
-    "員",
-    "涉",
-    "細胞",
-    "將",
-    "過",
-    "到",
-    "完",
-    "他",
-    "你",
-    "她",
-    "我",
-    "這",
-    "那",
-    "啥",
-    "嚒",
-    "?",
-    "!",
-    "…",
-    ",",
-    "."
-   ]
-  },
-  {
-   "char": "髮",
-   "description": "可能需要 髮→發 修正",
-   "before_exclude": [
-    "頭",
-    "白",
-    "黑",
-    "金",
-    "紅",
-    "長",
-    "短",
-    "捲",
-    "直",
-    "假",
-    "美",
-    "染",
-    "剪",
-    "洗",
-    "理",
-    "鬢",
-    "碎",
-    "毛",
-    "落",
-    "脫",
-    "束",
-    "結",
-    "編",
-    "一頭",
-    "魚",
-    "眼",
-    "護",
-    "剃",
-    "鬆",
-    "創",
-    "接",
-    "於",
-    "生",
-    "秀"
-   ],
-   "after_exclude": [
-    "型",
-    "色",
-    "際",
-    "質",
-    "梢",
-    "絲",
-    "根",
-    "端",
-    "飾",
-    "油",
-    "膚",
-    "廊",
-    "辮",
-    "膠",
-    "蠟",
-    "指",
-    "圈",
-    "線",
-    "霧",
-    "髻",
-    "簪",
-    "夾",
-    "帶",
-    "片",
-    "束",
-    "素",
-    "革命"
-   ]
-  },
-  {
-   "char": "里",
-   "description": "可能需要 里→裡 修正",
-   "before_exclude": [
-    "阿",
-    "千",
-    "萬",
-    "百",
-    "公",
-    "英",
-    "華",
-    "道",
-    "卡路",
-    "佛羅",
-    "密蘇",
-    "馬德",
-    "士滿",
-    "西西",
-    "科多",
-    "爾德",
-    "所",
-    "底",
-    "歇斯底",
-    "拉",
-    "亨",
-    "莫",
-    "瑪",
-    "凱",
-    "查",
-    "傑",
-    "伯",
-    "卡",
-    "格",
-    "特",
-    "加",
-    "普",
-    "尤",
-    "貝",
-    "德",
-    "帕特",
-    "米特",
-    "布部",
-    "哈",
-    "溫布",
-    "達",
-    "傑弗",
-    "峇",
-    "弗",
-    "蒂伯雷"
-   ],
-   "after_exclude": [
-    "程",
-    "拉",
-    "斯",
-    "約",
-    "昂",
-    "奧",
-    "弗",
-    "尼",
-    "納",
-    "德",
-    "亞",
-    "氏",
-    "爾",
-    "根",
-    "芒",
-    "羅",
-    "布",
-    "克",
-    "巴",
-    "茲",
-    "曼",
-    "奇",
-    "科",
-    "士",
-    "誇",
-    "古",
-    "姆",
-    "維",
-    "諾",
-    "安",
-    "瓦",
-    "昆",
-    "蘭",
-    "森",
-    "高",
-    "波",
-    "田",
-    "歐斯",
-    "子一"
-   ]
-  }
- ],
- "lint_exemptions": {
-  "Sandbox.json|Sandbox_TooltipLib_EnableMPSync_tooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "2026-08-02 裁決 keep：「用戶端」對應 CN「客户端」= client，台灣合法固定詞，非單獨「用戶」。",
-   "ch_value": "0cf9283ef81289b4"
-  },
-  "Recipes.json|Order the Menu": {
-   "patterns": [
-    "菜(\\s*)單"
-   ],
-   "reason": "2026-08-02 裁決 keep：「訂購菜單」是餐點菜單（裁決指引明示此鍵為餐飲語境），保留",
-   "ch_value": "6e7f26bcd6a8db4e"
-  },
-  "IG_UI.json|IGUI_Bandits_Speech_ZSStreetChat1_Male_2_2": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "2026-08-02 裁決 keep：「通過路障」是物理通行語境（裁決指引明示），保留",
-   "ch_value": "85c25855de2ccd09"
-  },
-  "IG_UI.json|IGUI_Inspect_Mat_Copper_Base": {
-   "patterns": [
-    "應(\\s*)用(?!\\s*程)"
-   ],
-   "reason": "2026-08-02 裁決 keep：「基本電氣應用」為名詞 application（用途）語境，非 apply 套用，依指引 keep（ch_overrides 釘選語境）。",
-   "ch_value": "09251647f5d7b529"
-  },
-  "IG_UI.json|IGUI_VLQ_1_NotePage2_1_q1s006": {
-   "patterns": [
-    "應(\\s*)用(?!\\s*程)"
-   ],
-   "reason": "2026-08-02 裁決 keep：「研究及應用」為名詞 application 語境（研究與應用並列），非套用設定語意，依 note 釘選 keep。",
-   "ch_value": "80108adea4653dbd"
-  },
-  "Sandbox.json|Sandbox_ApocalipseBrProjetoNemesis_BossCooldownCycles_tooltip": {
-   "patterns": [
-    "選(\\s*)中"
-   ],
-   "reason": "2026-08-02 裁決 keep：「被選中為目標」為玩家（人）被挑中之獲選義，符合 note 人被挑中保留準則，非 UI 選取操作。",
-   "ch_value": "5c13e0518f6cbd34"
-  },
-  "Sandbox.json|Sandbox_DynamicTrading.BanditHouseRoamerEligiblePercent_tooltip": {
-   "patterns": [
-    "選(\\s*)中"
-   ],
-   "reason": "2026-08-02 裁決 keep：「可被選中執行」為 note 明列 ch_overrides 釘選保留語境（人被挑中）。",
-   "ch_value": "1e63f30b48aa329e"
-  },
-  "UI.json|UI_PZLinux_MailADS_12": {
-   "patterns": [
-    "選(\\s*)中"
-   ],
-   "reason": "2026-08-02 裁決 keep：「你的名字被隨機選中」為抽中／獲選義（詐騙信抽獎語境），非 UI 選取，台灣用語合法。",
-   "ch_value": "6976eda3fb550bf6"
-  },
-  "UI.json|UI_PZLinux_MailADS_16": {
-   "patterns": [
-    "選(\\s*)中"
-   ],
-   "reason": "2026-08-02 裁決 keep：「被選中參加」為 note 明列釘選保留語境（人被挑中）。",
-   "ch_value": "c12539f31829aedf"
-  },
-  "UI.json|UI_PZLinux_MailADS_19": {
-   "patterns": [
-    "選(\\s*)中"
-   ],
-   "reason": "2026-08-02 裁決 keep：「被 SELECT * FROM rewards; 選中」為人被挑中之獲選義，且與 SQL SELECT 雙關，改動會破哏，keep。",
-   "ch_value": "a704aeb77f175019"
-  },
-  "UI.json|UI_PZLinux_MailADS_8": {
-   "patterns": [
-    "選(\\s*)中"
-   ],
-   "reason": "2026-08-02 裁決 keep：「被選中參加」為 note 明列釘選保留語境（人被挑中）。",
-   "ch_value": "d9a7d65ca3f0001c"
-  },
-  "UI.json|UI_BurdJournals_LoreTemplate_CursedSkillOnlyOffer": {
-   "patterns": [
-    "選(\\s*)中"
-   ],
-   "reason": "2026-08-04 裁決 keep：「{{skillNameB}}選中了它自己」是 lore 敘事動詞「選中」(chose)，非 UI 選取動作，規則誤中",
-   "ch_value": "c2aa2c519695ce50"
-  },
-  "UI.json|UI_BurdJournals_LoreTemplate_KrampusMilkCookies": {
-   "patterns": [
-    "選(\\s*)中"
-   ],
-   "reason": "2026-08-04 裁決 keep：「我們被選中了.我問被選中要做什麼」是被動語態「被選中」(chosen)，非 UI 選取動作，規則誤中",
-   "ch_value": "f13ca7280137852e"
-  },
-  "IG_UI.json|IGUI_PlayerText_Shout_104": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "《魔戒》甘道夫名台詞 YOU SHALL NOT PASS 的台灣通行譯法「你不准通過」——此處 pass 就是通行義，非「透過」",
-   "ch_value": "2dab3684b0119495"
-  },
-  "Tooltip.json|Tooltip_InvWorkbench_Research_a2": {
-   "patterns": [
-    "應(\\s*)用(?!\\s*程)"
-   ],
-   "reason": "「材料的取得, 應用與測試」——應用在此為 application 一般義, 台灣正確用法; 同句後半已正確用「套用」指 apply to device",
-   "ch_value": "4f8d0330068f3db1"
-  },
-  "Tooltip.json|Tooltip_WK_PharmacistDispensing": {
-   "patterns": [
-    "交(\\s*)互"
-   ],
-   "ch_value": "5c5f882caf9a74a9",
-   "reason": "「藥物交互作用」是台灣醫藥標準術語（衛福部藥品仿單與健保用藥指引通用），陸用語才作「相互作用」；本 pattern 針對的是「交互」誤用情形，此處為誤中"
-  },
-  "IG_UI.json|IGUI_BookAiming5_Pg4": {
-   "patterns": [
-    "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
-    "窗(\\s*)口"
-   ],
-   "reason": "「窗口」指實體窗戶而非 UI 視窗；「打開」亦為實體開窗動作。",
-   "ch_value": "be41c756210864a5"
-  },
-  "IG_UI.json|IGUI_BookCarpentry5_Pg15": {
-   "patterns": [
-    "(?<![演計運估換推心珠])算法"
-   ],
-   "reason": "梁字命中非姓氏，依繁中用字改為「樑」。",
-   "ch_value": "f411183ce4199254"
-  },
-  "IG_UI.json|IGUI_BookElectrician3_Pg12": {
-   "patterns": [
-    "(?<![存站])在線"
-   ],
-   "reason": "「在線上面」由介詞「在」與實體電線組成，並非 online。",
-   "ch_value": "a93c371769ce0424"
-  },
-  "IG_UI.json|IGUI_BookLongBlade2_Pg10": {
-   "patterns": [
-    "應(\\s*)用(?!\\s*程)"
-   ],
-   "reason": "「應用物理」是學科／名詞用法，不是 apply 動作。",
-   "ch_value": "4e6d370f874bb161"
-  },
-  "IG_UI.json|IGUI_BookMetalWelding1_Pg8": {
-   "patterns": [
-    "的(\\s*)質(\\s*)量"
-   ],
-   "reason": "此處「質量」明確指金屬板的物理 mass。",
-   "ch_value": "5d7d9bb48be63dca"
-  },
-  "IG_UI.json|IGUI_BookMetalWelding4_Pg13": {
-   "patterns": [
-    "硬件"
-   ],
-   "reason": "「淬硬件」指淬火後的硬化工件，並非 computer hardware。",
-   "ch_value": "beead9c85a112365"
-  },
-  "IG_UI.json|IGUI_BookTrapping4_Pg15": {
-   "patterns": [
-    "應(\\s*)用(?!\\s*程)",
-    "菜(\\s*)單"
-   ],
-   "reason": "「菜單」是食物清單的合法用法；「應用動物心理學」是名詞片語。",
-   "ch_value": "f84de3c2b741de92"
-  },
-  "ItemName.json|Base.CSR_HandFlareBlue": {
-   "patterns": [
-    "信號"
-   ],
-   "reason": "「信號」指實體信號彈／信號槍，屬合法物理訊號用語。",
-   "ch_value": "66032516c35fc883"
-  },
-  "ItemName.json|Base.CSR_SignalPistol": {
-   "patterns": [
-    "信號"
-   ],
-   "reason": "「信號」指實體信號彈／信號槍，屬合法物理訊號用語。",
-   "ch_value": "5ed2e6ae855522b9"
-  },
-  "Recipes.json|Recipe_CSR_CraftGlowstickGreen": {
-   "patterns": [
-    "信號"
-   ],
-   "reason": "信號棒是實體信號器材，不是電子訊號。",
-   "ch_value": "9a982dfaf663f383"
-  },
-  "Recipes.json|Recipe_CSR_PackSignalFlareRoundBox": {
-   "patterns": [
-    "信號"
-   ],
-   "reason": "信號彈是實體信號器材，不是電子訊號。",
-   "ch_value": "264086341cca4f90"
-  },
-  "Sandbox.json|Sandbox_AirdropMod_AirdropTriggerChopper_tooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "「用戶端」是 client 的固定技術用語，不等同 user。",
-   "ch_value": "58f820879c711f69"
-  },
-  "Sandbox.json|Sandbox_AutoDrop_LootMode_option1": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "「用戶端」是 client 的固定技術用語，不等同 user。",
-   "ch_value": "cfe56d8d6be9b88d"
-  },
-  "Sandbox.json|Sandbox_DynamicObjectives.QuestRewardPoolBags_tooltip": {
-   "patterns": [
-    "登(\\s*)錄",
-    "登錄"
-   ],
-   "reason": "「登錄表」是 registry 的正確譯法；僅將電腦語境的「程序化」改為「程式化」。",
-   "ch_value": "38f12a91010e4b7a"
-  },
-  "Sandbox.json|Sandbox_PhunServer_SetHours_tooltip": {
-   "patterns": [
-    "(?<![存站])在線"
-   ],
-   "reason": "原文是固定詞「在線上」；套用規則會誤成「線上上」。",
-   "ch_value": "79d619c3cb284f14"
-  },
-  "UI.json|UI_AirdropMod_CommandClientOnly": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "「用戶端」是 client 的固定技術用語，不等同 user。",
-   "ch_value": "18d608bdfe0c38b0"
-  },
-  "UI.json|UI_HiResClock_GlobalRestoreAllDefaults_Tooltip": {
-   "patterns": [
-    "登(\\s*)錄",
-    "登錄"
-   ],
-   "reason": "「登錄表」是 registry 的正確譯法，不是登入動作。",
-   "ch_value": "5d67e304370736c6"
-  },
-  "UI.json|UI_HiResClock_WatchFamilyAnalog": {
-   "patterns": [
-    "(?<![時錶鐘秒分])指針"
-   ],
-   "reason": "此鍵明確代表類比時鐘的實體指針。",
-   "ch_value": "e4de870735084a99"
-  },
-  "UI.json|UI_Lesson_LongBlunt_Advanced_Q1_C2": {
-   "patterns": [
-    "的(\\s*)質(\\s*)量"
-   ],
-   "reason": "此處明確是實心鋼的物理質量 mass，不是品質。",
-   "ch_value": "791e4af63434bcfa"
-  },
-  "UI.json|UI_optionscreen_binding_ExcrementumStatus": {
-   "patterns": [
-    "泄(?!殖)"
-   ],
-   "reason": "「排泄物」是固定生理學詞彙，不能改成「排洩物」。",
-   "ch_value": "a067b88846beea9b"
-  },
-  "IG_UI.json|IGUI_BookAiming5_Pg7": {
-   "patterns": [
-    "(?<!使)用戶(?![端名])",
-    "用(\\s*)戶"
-   ],
-   "reason": "命中來自跨詞界「衣物用＋戶外」；原句是用戶外防味噴霧處理衣物，並非 user／用戶，兩條規則套用都會破壞句子。",
-   "ch_value": "47ad61a2b842f504"
-  },
-  "IG_UI.json|IGUI_BookCooking4_Pg7": {
-   "patterns": [
-    "發霧"
-   ],
-   "reason": "此處描述料理、誘餌、合金或咖啡的品質／高級品，不是技能 tier；維持「高級」。",
-   "ch_value": "fce55302ff5a3175"
-  },
-  "IG_UI.json|IGUI_BookElectrician3_Pg13": {
-   "patterns": [
-    "(?<!使)用戶(?![端名])",
-    "用(\\s*)戶"
-   ],
-   "reason": "此處是電子、工業、醫療、焊接、陶輪、爐具、無線電等實體設備；「設備」本就是台灣標準工業用語，不需改成裝置。",
-   "ch_value": "f1076d7b54b9b668"
-  },
-  "IG_UI.json|IGUI_BookElectrician4_Pg12": {
-   "patterns": [
-    "應(\\s*)用(?!\\s*程)"
-   ],
-   "reason": "「應用物理」是 Applied Physics 的固定學科用語，改成「套用物理」會失真。",
-   "ch_value": "0d02f14587d4e0af"
-  },
-  "IG_UI.json|IGUI_BookFlintKnapping2_Pg10": {
-   "patterns": [
-    "界(\\s*)面"
-   ],
-   "reason": "此處是種子、食物、石材或屍體／物品的保存與保存期限，屬 preservation／retention，不是電腦資料儲存。",
-   "ch_value": "bf81325d09f47b65"
-  },
-  "IG_UI.json|IGUI_BookFlintKnapping4_Pg3": {
-   "patterns": [
-    "應(\\s*)用(?!\\s*程)"
-   ],
-   "reason": "「應用施密特原理」是把原理運用於林中測試的動詞義，台灣用法正確，改「套用」反而生硬。",
-   "ch_value": "4105163e5d70cf80"
-  },
-  "IG_UI.json|IGUI_BookHusbandry3_Pg11": {
-   "patterns": [
-    "泄(?!殖)"
-   ],
-   "reason": "命中的是生理學固定詞「排泄」，不是洩漏／洩露；改成「排洩」不符合本句術語慣例。",
-   "ch_value": "d90522f19ff91d18"
-  },
-  "IG_UI.json|IGUI_BookTrapping5_Pg1": {
-   "patterns": [
-    "應(\\s*)用(?!\\s*程)"
-   ],
-   "reason": "標題「應用動物心理學」指 Applied Animal Psychology／心理學的實際運用，不是 UI 套用動作。",
-   "ch_value": "cd8082a799d5767e"
-  },
-  "IG_UI.json|IGUI_PhunServer_NoOtherPlayerOnline": {
-   "patterns": [
-    "(?<![存站])在線"
-   ],
-   "reason": "現值「目前只有你在線上」已是自然台灣用語；regex 只截到「在線」會產生錯誤的「線上上」。",
-   "ch_value": "45c43bcc82da983d"
-  },
-  "IG_UI_EN.json|IGUI_Inspect_Mat_Copper_Base": {
-   "patterns": [
-    "應(\\s*)用(?!\\s*程)"
-   ],
-   "reason": "「基本電氣應用」指銅材的 electrical applications，是名詞義的應用範圍，不是 UI 套用。",
-   "ch_value": "09251647f5d7b529"
-  },
-  "ItemName.json|Base.CSR_HandFlareGreen": {
-   "patterns": [
-    "信號"
-   ],
-   "reason": "「信號彈」是此模組與同族物品既有固定名稱，指實體照明／求救彈，不是電子訊號欄位。",
-   "ch_value": "052ecfb05807eaef"
-  },
-  "Sandbox.json|Sandbox_DynamicObjectives.QuestRewardPoolFoods_tooltip": {
-   "patterns": [
-    "登(\\s*)錄",
-    "登錄"
-   ],
-   "reason": "Dynamic Objectives 的 program 是電腦程式；「物品登錄表」是 registry 的合法譯法，不得誤改成登入。",
-   "ch_value": "4e0a1f8e4449c211"
-  },
-  "UI.json|UI_EHR_Immunity_AntibioticPressure": {
-   "patterns": [
-    "(?<![限機體管編建學])制作"
-   ],
-   "reason": "命中來自跨詞界「抑制＋作用」形成字面『制作』，不是簡體『製作』；替換會把『抑制作用』破壞成『抑製作用』。",
-   "ch_value": "b7cec28c49ae147b"
-  },
-  "UI.json|UI_HiResClock_IngameAnalogFPS": {
-   "patterns": [
-    "(?<![時錶鐘秒分])指針"
-   ],
-   "reason": "此鍵控制類比時鐘指針的更新 FPS；「指針」是實體鐘針義，不是資料指標。",
-   "ch_value": "fe6bd3890c318d2b"
-  },
-  "IG_UI.json|IGUI_BookFlintKnapping3_Pg1": {
-   "patterns": [
-    "應(\\s*)用(?!\\s*程)"
-   ],
-   "reason": "「應用物理學」是固定學科名稱，不是 apply 選項；保留「應用」並豁免該 A pattern。",
-   "ch_value": "1beaa47159059849"
-  },
-  "IG_UI.json|IGUI_BookGlassmaking4_Pg11": {
-   "patterns": [
-    "面糊"
-   ],
-   "reason": "命中片段其實是「上面＋糊一層」，不是食物「麵糊」；保留原文並豁免該 A pattern。",
-   "ch_value": "15e864536f7a8c5a"
-  },
-  "IG_UI.json|IGUI_BookTrapping5_Pg10": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "動物「快步通過」是實際穿越路段的動作，台灣語境可用「通過」；不是藉由手段的「透過」，故豁免 A pattern。",
-   "ch_value": "6a36aa012f513338"
-  },
-  "IG_UI.json|IGUI_PhunServer_OneOtherPlayerOnline": {
-   "patterns": [
-    "(?<![存站])在線"
-   ],
-   "reason": "原值「在線上」已是台灣自然用語；finding 只匹配其中「在線」，機械替換會產生「線上上」，故保留並豁免。",
-   "ch_value": "9511ac808cc45c16"
-  },
-  "Sandbox.json|Sandbox_BVD_RealismHPWeight_tooltip": {
-   "patterns": [
-    "登(\\s*)錄",
-    "登錄"
-   ],
-   "reason": "「引擎推力與質量」是物理 mass；「API 登錄自己的資料」是資料登錄而非 login，兩個登錄 A/E pattern 均屬合法語境並予豁免。",
-   "ch_value": "130bcd1b7b26fd3f"
-  },
-  "Sandbox.json|Sandbox_DynamicObjectives.QuestRewardPoolMedicine_tooltip": {
-   "patterns": [
-    "登(\\s*)錄",
-    "登錄"
-   ],
-   "reason": "「程序化任務獎勵」指 procedural generation，不是電腦程式本體；改為自然的「程序生成的任務獎勵」，而 registry 的「登錄表」保留並豁免登入規則。",
-   "ch_value": "f3dd4a083a19492d"
-  },
-  "Sandbox.json|Sandbox_EHR_ConcussionFallChanceMultiplier_tooltip": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "此處是角色通過創傷判定，等同通過測試／判定；台灣用「通過」正確，故保留並豁免 A pattern。",
-   "ch_value": "a7be5d847c99b6ea"
-  },
-  "Sandbox.json|Sandbox_Excrementum_OverlayIsAllowed_tooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "兩處「用戶端」都是 client 的台灣標準譯法；A pattern 誤切詞，不應改成「使用者端」，故保留並豁免。",
-   "ch_value": "830f78b3efd5a13b"
-  },
-  "UI.json|UI_HiResClock_AnalogSettings": {
-   "patterns": [
-    "(?<![時錶鐘秒分])指針"
-   ],
-   "reason": "本鍵明確是 analog clock 的實體指針；不是滑鼠 pointer／抽象指標，故保留「指針」並豁免 E pattern。",
-   "ch_value": "4a714cbfe247a7a6"
-  },
-  "UI.json|UI_HiResClock_OverrideAnalog": {
-   "patterns": [
-    "(?<![時錶鐘秒分])指針"
-   ],
-   "reason": "本鍵明確是 analog clock 的實體指針；不是滑鼠 pointer／抽象指標，故保留「指針」並豁免 E pattern。",
-   "ch_value": "7dad6364f160c72f"
-  },
-  "UI.json|UI_Lesson_Glassmaking_Advanced_P3": {
-   "patterns": [
-    "(?<![存站])在線"
-   ],
-   "reason": "命中的是「在線痕」＝在＋線痕的跨詞組合，不是 online；保留原文並豁免 E pattern。",
-   "ch_value": "07b60367e976f822"
-  },
-  "UI.json|UI_MSM_Help_Safety_06": {
-   "patterns": [
-    "登(\\s*)錄",
-    "登錄"
-   ],
-   "reason": "「登錄檔」是 Windows Registry 的台灣標準譯名，不是登入動作；保留並豁免兩個登錄 pattern。",
-   "ch_value": "cc507d8994d3568e"
-  },
-  "IG_UI.json|IGUI_BookAiming1_Pg7": {
-   "patterns": [
-    "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
-    "窗(\\s*)口"
-   ],
-   "reason": "「靜止窗口大概能維持兩秒」是射擊呼吸中的時間窗口，不是 UI 視窗或實體窗戶；A/E 兩個模式在本鍵均為語意假陽性。",
-   "ch_value": "3da9dfbc9b276a22"
-  },
-  "IG_UI.json|IGUI_BookAiming3_Pg6": {
-   "patterns": [
-    "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
-    "窗(\\s*)口"
-   ],
-   "reason": "「時間窗口抓準了」是可射擊時機的時間窗口，不是 UI 視窗或實體窗戶；A/E 兩個模式均須鍵級豁免。",
-   "ch_value": "0430943d1eae1805"
-  },
-  "IG_UI.json|IGUI_BookForaging3_Pg3": {
-   "patterns": [
-    "面包"
-   ],
-   "reason": "命中內容是「裡面包著銅線」的跨詞邊界（裡面＋包著），不是食物「麵包」；改字會破壞句意。",
-   "ch_value": "8ed29f3655dddbc5"
-  },
-  "IG_UI.json|IGUI_BookMechanic2_Pg1": {
-   "patterns": [
-    "黃油"
-   ],
-   "reason": "「石化了的黃油、鏽成一坨的螺絲」明確是車底機件上的潤滑脂，不是 butter；改成「奶油」會造成機械語境錯譯。",
-   "ch_value": "3f46720fbd7d033c"
-  },
-  "IG_UI.json|IGUI_Dream169": {
-   "patterns": [
-    "(?<![時錶鐘秒分])指針"
-   ],
-   "reason": "同段明載「舊鬧鐘」「牆上還掛著一只鐘」，五處「指針」全是鐘錶實體指針；不可改成抽象指標。",
-   "ch_value": "47d3785e411ea623"
-  },
-  "IG_UI.json|IGUI_PhunServer_OtherPlayersOnline": {
-   "patterns": [
-    "(?<![存站])在線"
-   ],
-   "reason": "現值是完整且正確的「共有 %1 人在線上」，pattern 只命中「在線上」前兩字；替換會產生錯誤的「線上上」。",
-   "ch_value": "7b3bd6af82550023"
-  },
-  "Sandbox.json|Sandbox_DynamicObjectives.QuestRewardPoolWeapons_tooltip": {
-   "patterns": [
-    "登(\\s*)錄",
-    "登錄"
-   ],
-   "reason": "「動態交易物品登錄表」是 item registry／登錄表，不是帳號 login；A 與 E 的登入替換在本鍵均不成立。句中「程序化任務獎勵」是 procedural reward 概念，也非可執行程式名稱。",
-   "ch_value": "723f0564c66ec9e0"
-  },
-  "Sandbox.json|Sandbox_EHR_ConcussionVehicleChanceMultiplier_tooltip": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "「通過創傷判定」明確是 pass a trauma check 的通過判定義；改成「透過創傷判定」會把 pass 誤成 via。",
-   "ch_value": "b757a9d0001e20b3"
-  },
-  "Sandbox.json|Sandbox_SPNCharCustom_StubbleHeadGrowth": {
-   "patterns": [
-    "(?<![毛頭])髮生"
-   ],
-   "reason": "「頭部短髮生長週期」是短髮＋生長的合法跨詞組合；不是「發生」誤轉，改字會變成錯誤的「短發」。",
-   "ch_value": "05e78327e90627ba"
-  },
-  "UI.json|UI_HiResClock_FPSColor": {
-   "patterns": [
-    "(?<![時錶鐘秒分])指針"
-   ],
-   "reason": "鍵名 HiResClock_FPSColor 且值為「指針 FPS 顏色」，指的是類比時鐘指針顏色；屬鐘錶實體指針。",
-   "ch_value": "dfec2bba6a3c94c9"
-  },
-  "UI.json|UI_HiResClock_PreviewAnalog": {
-   "patterns": [
-    "(?<![時錶鐘秒分])指針"
-   ],
-   "reason": "鍵名 HiResClock_PreviewAnalog 且值為「指針」，明確是類比時鐘預覽中的鐘錶指針。",
-   "ch_value": "e4de870735084a99"
-  },
-  "UI.json|UI_options_claimableoutposts_attackMoodles_tooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "「僅用戶端生效」中的「用戶端」是 client 端固定技術詞，非指一名 user；改成「使用者端」會違反專案既有負向護欄。",
-   "ch_value": "0225e77cf77dd674"
-  },
-  "IG_UI.json|IGUI_BookCarpentry2_Pg7": {
-   "patterns": [
-    "(?<![存站])在線"
-   ],
-   "reason": "「鋸子壓在線正中切」是「壓在＋線」跨詞界，並非 online；保留原文並豁免此 E pattern。",
-   "ch_value": "b66c99c3d83af8b6"
-  },
-  "IG_UI.json|IGUI_BookFarming4_Pg15": {
-   "patterns": [
-    "應(\\s*)用(?!\\s*程)"
-   ],
-   "reason": "「有機化學在田間尺度上的應用」的「應用」是 application 名詞，不是 apply 動詞；保留並豁免此 A pattern。",
-   "ch_value": "6ff9631a021b8ced"
-  },
-  "IG_UI.json|IGUI_BookFirstAid1_Pg8": {
-   "patterns": [
-    "面糊"
-   ],
-   "reason": "「燒傷、上面糊著奶油」是「上面＋糊著」跨詞界，不是麵糊；保留並豁免此 A pattern。",
-   "ch_value": "a80110fbb06de35a"
-  },
-  "IG_UI.json|IGUI_BookGlassmaking2_Pg13": {
-   "patterns": [
-    "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
-    "窗(\\s*)口"
-   ],
-   "reason": "「短暫的作業窗口」指玻璃可加工的時間區間，不是 UI 視窗；A/E 兩個窗口 pattern 均須豁免。",
-   "ch_value": "f435c86de4ad7da7"
-  },
-  "IG_UI.json|IGUI_BookHusbandry2_Pg3": {
-   "patterns": [
-    "泄(?!殖)"
-   ],
-   "reason": "「動物天天排泄」是台灣通用的生理術語「排泄」，不是「排洩」；保留並豁免此 E pattern。",
-   "ch_value": "b10b56bb8625ac62"
-  },
-  "IG_UI.json|IGUI_BookMechanic2_Pg11": {
-   "patterns": [
-    "黃油"
-   ],
-   "reason": "球籠內的「重載黃油」是機械潤滑脂，不是食用 butter；保留並豁免黃油→奶油 pattern。",
-   "ch_value": "f1dd3a99a6a46f0b"
-  },
-  "IG_UI.json|IGUI_BookPottery5_Pg2": {
-   "patterns": [
-    "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
-    "窗(\\s*)口"
-   ],
-   "reason": "「穿過 573°C 這個精確窗口」指窯溫控制區間，不是 UI 視窗；A/E 兩個窗口 pattern 均須豁免。",
-   "ch_value": "29400260aeb67978"
-  },
-  "IG_UI.json|IGUI_BookTracking5_Pg1": {
-   "patterns": [
-    "(?<![激閃])光標(?!靶)",
-    "光(\\s*)標"
-   ],
-   "reason": "「不光標示幾何方向」是「不光＋標示」跨詞界，不含 cursor「光標」；A/E 兩個 pattern 均須豁免。",
-   "ch_value": "c3095d307b4a07b4"
-  },
-  "IG_UI.json|IGUI_BookTrapping5_Pg15": {
-   "patterns": [
-    "菜(\\s*)單"
-   ],
-   "reason": "CH 中「祕」為 B 類異體字，依台灣字形統一為「秘」，其餘語意與標記不動。 「動物新陳代謝的祕密菜單」是食物／攝食內容的菜單隱喻，不是 UI 選單；保留菜單並豁免 A pattern。 「動物新陳代謝的祕密菜單」是攝食內容的菜單隱喻，不是 UI menu；保留「菜單」。",
-   "ch_value": "d3410772764ed2b0"
-  },
-  "IG_UI.json|IGUI_PlayerText_CheckOK": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "「檢查通過」表示檢查結果合格，不是 via/through；保留並豁免通過→透過的 A pattern。",
-   "ch_value": "9de386274111ad89"
-  },
-  "UI.json|UI_HiResClock_GlobalAnalogFPSColor": {
-   "patterns": [
-    "(?<![時錶鐘秒分])指針"
-   ],
-   "reason": "「指針 FPS 顏色」指類比時鐘的實體指針，不是 UI pointer；保留並豁免 E pattern。",
-   "ch_value": "dfec2bba6a3c94c9"
-  },
-  "UI.json|UI_HiResClock_PreviewMode_Tooltip": {
-   "patterns": [
-    "(?<![時錶鐘秒分])指針"
-   ],
-   "reason": "「指針手錶模式」是類比錶針語境，不是 UI pointer；保留並豁免 E pattern。",
-   "ch_value": "4f5a4e68c2dfb164"
-  },
-  "UI.json|UI_Lesson_Foraging_Beginner_P2": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "「所有步驟都通過後」表示可食性測試各階段合格，不是經由；保留「通過」，A pattern 豁免，C 亦完成人工審查。 「所有步驟都通過後」是測試結果合格，不是經由；保留「通過」。",
-   "ch_value": "7c98937e846efea7"
-  },
-  "IG_UI.json|IGUI_BookFlintKnapping4_Pg14": {
-   "patterns": [
-    "應(\\s*)用(?!\\s*程)"
-   ],
-   "reason": "「將工程學應用於武器庫」是學術知識 application to 的合法用法，不是 UI 的 apply；保持原文並錨定豁免。",
-   "ch_value": "1b8955329584bd18"
-  },
-  "ItemName.json|Base.AnalogTorqueWrench": {
-   "patterns": [
-    "(?<![時錶鐘秒分])指針"
-   ],
-   "reason": "「指針式扭力扳手」以實體指針顯示扭矩，不是抽象指標；錨定豁免。",
-   "ch_value": "80d1c4eef882d684"
-  },
-  "ItemName.json|Base.CSR_SignalFlareRoundBox": {
-   "patterns": [
-    "信號"
-   ],
-   "reason": "「信號彈」是台灣軍事／救難固定名稱，不改成「訊號彈」；錨定 E 規則豁免。",
-   "ch_value": "83252b8650b73c60"
-  },
-  "Recipes.json|Recipe_CSR_OpenSignalFlareRoundBox": {
-   "patterns": [
-    "信號"
-   ],
-   "reason": "「信號彈」是台灣軍事／救難固定名稱；同鍵「打開」是實體盒開啟，兩者均保留，僅對 E pattern 錨定豁免。",
-   "ch_value": "2c1b738dabec4d73"
-  },
-  "Sandbox.json|Sandbox_Excrementum": {
-   "patterns": [
-    "泄(?!殖)"
-   ],
-   "reason": "「排泄物」是教育部收錄的固定生理詞，不能改成「排洩物」；錨定 E 規則豁免。",
-   "ch_value": "9ed0ed0ddd88bf29"
-  },
-  "UI.json|UI_HiResClock_GlobalOverrideAnalog_Tooltip": {
-   "patterns": [
-    "(?<![時錶鐘秒分])指針"
-   ],
-   "reason": "此處是類比時鐘造型的實體指針資源；保留「指針」並錨定豁免。",
-   "ch_value": "1a9c3cc3bfce401d"
-  },
-  "UI.json|UI_HiResClock_SaveSkinColors_Tooltip": {
-   "patterns": [
-    "(?<![時錶鐘秒分])指針"
-   ],
-   "reason": "此處設定時鐘指針動畫 FPS 與顏色，指的是實體鐘針；保留並錨定豁免。",
-   "ch_value": "0a4aeb5b2ed26117"
-  },
-  "Tooltip.json|Tooltip_MoreBuild_IlluminatedSign": {
-   "patterns": [
-    "光(\\s*)標",
-    "(?<![激閃])光標(?!靶)"
-   ],
-   "reason": "2026-08-24 #185 裁決 keep：「發光標牌」= illuminated sign，光＋標牌跨詞，非 cursor 光標。",
-   "ch_value": "5c162c05f8d8c556"
-  },
-  "UI.json|UI_Aegis_OptHiddenTip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "2026-08-24 #213 裁決 keep：「用戶端」= client，台灣資訊技術合法固定詞，非單獨「用戶」。",
-   "ch_value": "9623f2fa7397c191"
-  },
-  "IG_UI.json|IGUI_ExtractionMode_Quest_muldraugh_strip_CompletedFlavor": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "通行、規則通過、驗證通過或表決通過語境。",
-   "ch_value": "15af13811f0351b6"
-  },
-  "IG_UI.json|IGUI_GS_AdminDeleteNetworkConfirm": {
-   "patterns": [
-    "登(\\s*)錄",
-    "登錄"
-   ],
-   "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
-   "ch_value": "bf3ee38bf6c1da0e"
-  },
-  "IG_UI.json|IGUI_GS_BlockedRangeIntro": {
-   "patterns": [
-    "內存(?![在放有著活於糧貨款量檔])"
-   ],
-   "reason": "「格內存取」是「格內」+「存取」跨詞。",
-   "ch_value": "518ee50c338d558e"
-  },
-  "IG_UI.json|IGUI_KBWVE_Buildable_decorations_posters_location_restaurant_pie_01_15": {
-   "patterns": [
-    "菜(\\s*)單"
-   ],
-   "reason": "餐廳菜單語境，非軟體選單。",
-   "ch_value": "7f50f6e8e304648a"
-  },
-  "IG_UI.json|IGUI_KBWVE_Buildable_decorations_signs_location_restaurant_spiffos_02_43": {
-   "patterns": [
-    "菜(\\s*)單"
-   ],
-   "reason": "餐廳菜單語境，非軟體選單。",
-   "ch_value": "8f6dbe5c44d2ee73"
-  },
-  "IG_UI.json|IGUI_KBW_AdminEditorPresetExportTooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
-   "ch_value": "629e284a06918085"
-  },
-  "IG_UI.json|IGUI_KBW_AdminEditorPresetLoadedMismatch": {
-   "patterns": [
-    "登(\\s*)錄",
-    "登錄"
-   ],
-   "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
-   "ch_value": "77ff95973a115e31"
-  },
-  "IG_UI.json|IGUI_KBW_AdminEditorPresetPanelHint": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
-   "ch_value": "67a4355c45ba4a00"
-  },
-  "IG_UI.json|IGUI_KBW_AdminEditorPresetRefreshTooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
-   "ch_value": "1dfe3e360fb95c1d"
-  },
-  "IG_UI.json|IGUI_KBW_AdminEditorPresetWriteFailed": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
-   "ch_value": "40c96020a3ac88eb"
-  },
-  "IG_UI.json|IGUI_KBW_AdminEditorValidationPassed": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "通行、規則通過、驗證通過或表決通過語境。",
-   "ch_value": "9a240a868ff0773e"
-  },
-  "IG_UI.json|IGUI_KBW_DebugTestNoteHint": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "通行、規則通過、驗證通過或表決通過語境。",
-   "ch_value": "8e7cf41f776bd34a"
-  },
-  "IG_UI.json|IGUI_KBW_DebugTestPass": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "通行、規則通過、驗證通過或表決通過語境。",
-   "ch_value": "dd55c6c25912cfba"
-  },
-  "IG_UI.json|IGUI_KBW_DebugTestPassed": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "通行、規則通過、驗證通過或表決通過語境。",
-   "ch_value": "672632727e2fd4b5"
-  },
-  "IG_UI.json|IGUI_KBW_DebugTestPlaceNow": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "通行、規則通過、驗證通過或表決通過語境。",
-   "ch_value": "a6e3bc218fa33efb"
-  },
-  "IG_UI.json|IGUI_KBW_DebugTestProgress": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "通行、規則通過、驗證通過或表決通過語境。",
-   "ch_value": "c81444f3c2e28c7e"
-  },
-  "IG_UI.json|IGUI_KBW_DebugTilesDockTooltip": {
-   "patterns": [
-    "登(\\s*)錄",
-    "登錄"
-   ],
-   "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
-   "ch_value": "fd20bfa97c7f907e"
-  },
-  "IG_UI.json|IGUI_KBW_DebugTilesUnused": {
-   "patterns": [
-    "登(\\s*)錄",
-    "登錄"
-   ],
-   "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
-   "ch_value": "0320b05ccd5caa5a"
-  },
-  "IG_UI.json|IGUI_KBW_DebugTilesUsedBy": {
-   "patterns": [
-    "登(\\s*)錄",
-    "登錄"
-   ],
-   "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
-   "ch_value": "2cc4f7016e9fd1dc"
-  },
-  "IG_UI.json|IGUI_KBW_GuideAdminAuthorityBody": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
-   "ch_value": "a91161de40d6d190"
-  },
-  "IG_UI.json|IGUI_KBW_GuideAdminPresetsBody": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
-   "ch_value": "69e53d5d51c62315"
-  },
-  "IG_UI.json|IGUI_KBW_GuideWelcomeBody": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "通行、規則通過、驗證通過或表決通過語境。",
-   "ch_value": "95d82af921677e65"
-  },
-  "IG_UI.json|IGUI_KBW_IntegritySingleplayer": {
-   "patterns": [
-    "登(\\s*)錄",
-    "登錄"
-   ],
-   "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
-   "ch_value": "85647d175dc47ef4"
-  },
-  "IG_UI.json|IGUI_PZLinux_MailAds_12": {
-   "patterns": [
-    "選(\\s*)中"
-   ],
-   "reason": "人員被選中／獲選語境，依既有裁決保留。",
-   "ch_value": "12480e5bca4bf286"
-  },
-  "IG_UI.json|IGUI_PZLinux_MailAds_16": {
-   "patterns": [
-    "選(\\s*)中"
-   ],
-   "reason": "人員被選中／獲選語境，依既有裁決保留。",
-   "ch_value": "255308029905b8d0"
-  },
-  "IG_UI.json|IGUI_PZLinux_MailAds_19": {
-   "patterns": [
-    "選(\\s*)中"
-   ],
-   "reason": "人員被選中／獲選語境，依既有裁決保留。",
-   "ch_value": "763dd6efdb65b6dc"
-  },
-  "IG_UI.json|IGUI_PZLinux_MailAds_8": {
-   "patterns": [
-    "選(\\s*)中"
-   ],
-   "reason": "人員被選中／獲選語境，依既有裁決保留。",
-   "ch_value": "47594b23f57f7273"
-  },
-  "IG_UI.json|IGUI_WeaponLoadout_Slot_FitsNone": {
-   "patterns": [
-    "登(\\s*)錄",
-    "登錄"
-   ],
-   "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
-   "ch_value": "7c3fe483694afc0f"
-  },
-  "ItemName.json|LWBetterElectronics.ManualANoisemakerV1": {
-   "patterns": [
-    "應(\\s*)用(?!\\s*程)"
-   ],
-   "reason": "電路中的 application 名詞語境。",
-   "ch_value": "6969f205837fb197"
-  },
-  "Moodles.json|Moodles_BodilyFumes_Bad_lvl4": {
-   "patterns": [
-    "泄(?!殖)"
-   ],
-   "reason": "「排泄」為正確固定詞。",
-   "ch_value": "3af43da2c2f00edf"
-  },
-  "Recorded_Media.json|RM_LKP_t2_l09": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "通行、規則通過、驗證通過或表決通過語境。",
-   "ch_value": "e7f79eccebbe7d32"
-  },
-  "Sandbox.json|Sandbox_BFLightState_heartbeatSeconds_tooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
-   "ch_value": "e1f6137ee65e226e"
-  },
-  "Sandbox.json|Sandbox_GlobalStorageSiK_EnableSolderingIronCraft_tooltip": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "通行、規則通過、驗證通過或表決通過語境。",
-   "ch_value": "7c79e09c7d1280eb"
-  },
-  "Tooltip.json|Tooltip_TTF_MapForget_NoSketches": {
-   "patterns": [
-    "(?<!地)(?<!地\\s)圖(\\s*)標"
-   ],
-   "reason": "「草圖標記」是草圖+標記的跨詞合法語境。",
-   "ch_value": "0a435b48bc820052"
-  },
-  "UI.json|UI_BanditsCreator_Client": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
-   "ch_value": "8c663806bdb96bb7"
-  },
-  "UI.json|UI_BodilyFunctions": {
-   "patterns": [
-    "泄(?!殖)"
-   ],
-   "reason": "「排泄」為正確固定詞。",
-   "ch_value": "7b4e329af2913eac"
-  },
-  "UI.json|UI_FamilyZMedicine_AdministerHint": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "通行、規則通過、驗證通過或表決通過語境。",
-   "ch_value": "eed8765330bcf2e2"
-  },
-  "UI.json|UI_FamilyZMedicine_CriticalDrugInteraction": {
-   "patterns": [
-    "交(\\s*)互"
-   ],
-   "reason": "醫療語境的「藥物交互作用」為台灣專業用語。",
-   "ch_value": "ebb5a37fc8b586f5"
-  },
-  "UI.json|UI_FamilyZMedicine_Interaction": {
-   "patterns": [
-    "交(\\s*)互"
-   ],
-   "reason": "醫療語境的「藥物交互作用」為台灣專業用語。",
-   "ch_value": "0f1f9768e0a9c6af"
-  },
-  "UI.json|UI_FamilyZMedicine_InteractionWarnings": {
-   "patterns": [
-    "交(\\s*)互"
-   ],
-   "reason": "醫療語境的「藥物交互作用」為台灣專業用語。",
-   "ch_value": "85ac46f097f1288c"
-  },
-  "UI.json|UI_FamilyZMedicine_Interactions": {
-   "patterns": [
-    "交(\\s*)互"
-   ],
-   "reason": "醫療語境的「藥物交互作用」為台灣專業用語。",
-   "ch_value": "0f1f9768e0a9c6af"
-  },
-  "UI.json|UI_FamilyZMedicine_Intervention_ReviewAllergyInteraction": {
-   "patterns": [
-    "交(\\s*)互"
-   ],
-   "reason": "醫療語境的「藥物交互作用」為台灣專業用語。",
-   "ch_value": "1ddbce18c825459b"
-  },
-  "UI.json|UI_FamilyZMedicine_NoInteractions": {
-   "patterns": [
-    "交(\\s*)互"
-   ],
-   "reason": "醫療語境的「藥物交互作用」為台灣專業用語。",
-   "ch_value": "d331f8f4c980dca8"
-  },
-  "UI.json|UI_J93RunningBloodPools_Description": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
-   "ch_value": "cf59e993d09c7004"
-  },
-  "UI.json|UI_KCMAIN_DIALOG_SILAS_ASHFORD_OPTION_WARNING": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "通行、規則通過、驗證通過或表決通過語境。",
-   "ch_value": "fefa05ba26580015"
-  },
-  "UI.json|UI_KCMAIN_DIALOG_SILAS_ASHFORD_WARNING": {
-   "patterns": [
-    "通(\\s*)過(?!\\s*[測考審檢])"
-   ],
-   "reason": "通行、規則通過、驗證通過或表決通過語境。",
-   "ch_value": "2956ad6e35a36cdc"
-  },
-  "UI.json|UI_KCMain_ModOptions_LogbookKey_Tooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
-   "ch_value": "14b29ad72d312dcf"
-  },
-  "UI.json|UI_KCMain_ModOptions_TalkKey_Tooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
-   "ch_value": "512e32b7574603b2"
-  },
-  "UI.json|UI_KCMain_ModOptions_TrackerKey_Tooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
-   "ch_value": "6e20ae6dca4f45fe"
-  },
-  "UI.json|UI_options_blackoutpredators_soundEffectsVolume_tooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "技術 client 語境的「用戶端」為台灣慣用詞。",
-   "ch_value": "a7034ee9a77d56bd"
-  },
-  "UI.json|UI_optionscreen_KBW_Debug_Tooltip": {
-   "patterns": [
-    "登(\\s*)錄",
-    "登錄"
-   ],
-   "reason": "registry／registered 語境使用登錄檔、登錄表或未登錄，非登入。；registry／registered 語境，非登入。",
-   "ch_value": "43c65c70a83ec26d"
-  },
-  "IG_UI.json|IGUI_bikinitools_O_Context_Lumberjack": {
-   "patterns": [
-    "^伐木工$|['「]伐木工['」]|伐木工特[質性]|特質雜誌-伐木工"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「伐木工」，非本體 Ax-pert（本體 CH「斧頭人」）。",
-   "ch_value": "09d3c7fbc29ee514"
-  },
-  "UI.json|UI_BurdJournals_ProfLumberjack": {
-   "patterns": [
-    "^伐木工$|['「]伐木工['」]|伐木工特[質性]|特質雜誌-伐木工"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「伐木工」，非本體 Ax-pert（本體 CH「斧頭人」）。",
-   "ch_value": "09d3c7fbc29ee514"
-  },
-  "UI.json|UI_trait_woodcutter": {
-   "patterns": [
-    "^伐木工$|['「]伐木工['」]|伐木工特[質性]|特質雜誌-伐木工"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「伐木工」，非本體 Ax-pert（本體 CH「斧頭人」）。",
-   "ch_value": "09d3c7fbc29ee514"
-  },
-  "UI.json|UI_trait_Lumberjack": {
-   "patterns": [
-    "^伐木工$|['「]伐木工['」]|伐木工特[質性]|特質雜誌-伐木工"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「伐木工」，非本體 Ax-pert（本體 CH「斧頭人」）。",
-   "ch_value": "09d3c7fbc29ee514"
-  },
-  "UI.json|UI_trait_SWFlimsy": {
-   "patterns": [
-    "^弱不禁風$|['「]弱不禁風['」]|弱不禁風特[質性]|特質雜誌-弱不禁風"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「弱不禁風」，非本體 Puny（本體 CH「虛弱」）。",
-   "ch_value": "f0aca96f9733e7f3"
-  },
-  "UI.json|UI_trait_glassbody": {
-   "patterns": [
-    "^弱不禁風$|['「]弱不禁風['」]|弱不禁風特[質性]|特質雜誌-弱不禁風"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「弱不禁風」，非本體 Puny（本體 CH「虛弱」）。",
-   "ch_value": "f0aca96f9733e7f3"
-  },
-  "UI.json|UI_trait_Aim3": {
-   "patterns": [
-    "^神槍手$|['「]神槍手['」]|神槍手特[質性]|特質雜誌-神槍手"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「神槍手」，非本體 Marksman（本體 CH「神射手」）。",
-   "ch_value": "8d97b36c332c5a2c"
-  },
-  "UI.json|UI_prof_sharpshooter": {
-   "patterns": [
-    "^神槍手$|['「]神槍手['」]|神槍手特[質性]|特質雜誌-神槍手"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「神槍手」，非本體 Marksman（本體 CH「神射手」）。",
-   "ch_value": "8d97b36c332c5a2c"
-  },
-  "Sandbox.json|Sandbox_SurvivorQuirks_CostNightOwl_tooltip": {
-   "patterns": [
-    "^夜貓子$|['「]夜貓子['」]|夜貓子特[質性]|特質雜誌-夜貓子"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「夜貓子」，非本體 Night Owl（本體 CH「夜貓族」）。",
-   "ch_value": "a6060554e976c9d4"
-  },
-  "Sandbox.json|Sandbox_SurvivorQuirks_EnableNightOwl": {
-   "patterns": [
-    "^夜貓子$|['「]夜貓子['」]|夜貓子特[質性]|特質雜誌-夜貓子"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「夜貓子」，非本體 Night Owl（本體 CH「夜貓族」）。",
-   "ch_value": "ba173cc4e4979077"
-  },
-  "UI.json|UI_trait_owlperson": {
-   "patterns": [
-    "^夜貓子$|['「]夜貓子['」]|夜貓子特[質性]|特質雜誌-夜貓子"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「夜貓子」，非本體 Night Owl（本體 CH「夜貓族」）。",
-   "ch_value": "ba173cc4e4979077"
-  },
-  "UI.json|UI_trait_SQnightowl": {
-   "patterns": [
-    "^夜貓子$|['「]夜貓子['」]|夜貓子特[質性]|特質雜誌-夜貓子"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「夜貓子」，非本體 Night Owl（本體 CH「夜貓族」）。",
-   "ch_value": "ba173cc4e4979077"
-  },
-  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedKillsRequired": {
-   "patterns": [
-    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
-   "ch_value": "5cde63ba862c9597"
-  },
-  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedKillsRequired_tooltip": {
-   "patterns": [
-    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
-   "ch_value": "99a6c85bc30edba0"
-  },
-  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxBoredomAllowed": {
-   "patterns": [
-    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
-   "ch_value": "e260b864fffe79c5"
-  },
-  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxBoredomAllowed_tooltip": {
-   "patterns": [
-    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
-   "ch_value": "1c20dc4f09eb91f6"
-  },
-  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxStressAllowed": {
-   "patterns": [
-    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
-   "ch_value": "e25918ae941a67ed"
-  },
-  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxStressAllowed_tooltip": {
-   "patterns": [
-    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
-   "ch_value": "adb597bae45beb47"
-  },
-  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxUnhappinessAllowed": {
-   "patterns": [
-    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
-   "ch_value": "e12651eb55c37fac"
-  },
-  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxUnhappinessAllowed_tooltip": {
-   "patterns": [
-    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
-   "ch_value": "b143d8f033bbde95"
-  },
-  "Sandbox.json|Sandbox_NumbTrait_B42_DisableCalloused": {
-   "patterns": [
-    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
-   "ch_value": "7458c545e4bdba9b"
-  },
-  "Sandbox.json|Sandbox_NumbTrait_B42_DisableCalloused_tooltip": {
-   "patterns": [
-    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
-   "ch_value": "6d3929a7ae976015"
-  },
-  "UI.json|UI_trait_Calloused": {
-   "patterns": [
-    "^麻木不仁$|['「]麻木不仁['」]|麻木不仁特[質性]|特質雜誌-麻木不仁"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「麻木不仁」，非本體 Desensitized（本體 CH「麻木」）。",
-   "ch_value": "ca5b75f0b21a3de6"
-  },
-  "UI.json|UI_trait_softstomach": {
-   "patterns": [
-    "^脾胃虛弱$|['「]脾胃虛弱['」]|脾胃虛弱特[質性]|特質雜誌-脾胃虛弱"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「脾胃虛弱」，非本體 Weak Stomach（本體 CH「胃虛」）。",
-   "ch_value": "7221046461971d70"
-  },
-  "UI.json|UI_trait_Frail": {
-   "patterns": [
-    "^弱不禁風$|['「]弱不禁風['」]|弱不禁風特[質性]|特質雜誌-弱不禁風"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「弱不禁風」，非本體 Puny（本體 CH「虛弱」）。",
-   "ch_value": "f0aca96f9733e7f3"
-  },
-  "Moodles.json|Moodles_KDNodding_Good_lvl2": {
-   "patterns": [
-    "^昏昏欲睡$|['「]昏昏欲睡['」]|昏昏欲睡特[質性]|特質雜誌-昏昏欲睡"
-   ],
-   "reason": "2026-09-05 #409 裁決 keep：mod 自訂特質／職業／一般敘述沿用「昏昏欲睡」，非本體 Sleepyhead（本體 CH「貪睡」）。",
-   "ch_value": "2cd95ed3ef59bdda"
-  },
-  "IG_UI.json|IGUI_RSSUIV3_ModOptionsDesc1": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
-   "ch_value": "6fb8e837af473f52"
-  },
-  "IG_UI.json|IGUI_RSSUIV3_ModOptionsEnableTooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
-   "ch_value": "8ceb66230a849681"
-  },
-  "ItemName.json|LWBetterElectronics.anualANoisemakerV1": {
-   "patterns": [
-    "應(\\s*)用(?!\\s*程)"
-   ],
-   "reason": "書名中的應用為學術application／applied（電路用途、應用偽裝），不是UI套用動作。",
-   "ch_value": "6969f205837fb197"
-  },
-  "ItemName.json|MissingSkillBooks.BookSneaking5": {
-   "patterns": [
-    "應(\\s*)用(?!\\s*程)"
-   ],
-   "reason": "書名中的應用為學術application／applied（電路用途、應用偽裝），不是UI套用動作。",
-   "ch_value": "2bcb14b4c456d4a3"
-  },
-  "Sandbox.json|Sandbox_NightSprintersDyn_debugLogging_tooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
-   "ch_value": "7570bf4e9b16a577"
-  },
-  "Sandbox.json|Sandbox_RegionManager_DecisionCacheSweepEveryEpochs_tooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
-   "ch_value": "922a3c8add17fbb0"
-  },
-  "Sandbox.json|Sandbox_RegionManager_DecisionCacheTtlEpochs_tooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
-   "ch_value": "eeb0d5c371bedf2b"
-  },
-  "Sandbox.json|Sandbox_RegionManager_PendingConfirmSweepEveryEpochs_tooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
-   "ch_value": "f196e1c2cce885b3"
-  },
-  "UI.json|UI_SS_ModOptionsDesc1": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
-   "ch_value": "6fb8e837af473f52"
-  },
-  "UI.json|UI_SS_ModOptionsEnableTooltip": {
-   "patterns": [
-    "用(\\s*)戶"
-   ],
-   "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
-   "ch_value": "8ceb66230a849681"
-  }
- }
 }
