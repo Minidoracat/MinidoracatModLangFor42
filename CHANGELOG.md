@@ -4,6 +4,26 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- 新增 Outbreak Smokers 的繁簡中文，涵蓋煙燻爐介面、沙盒設定與食物名稱，共 168 項（#445）。
+- 新增 Frockin Splendor! Vol.6 的 519 項繁簡中文服裝、配件與收納用品名稱（#491）。
+- 新增 Snake's ModPack Build 42 的 4,529 項繁簡中文，涵蓋料理、農漁業、彈藥製作、汽車維修、物品與操作說明（#501）。
+- 新增 HEF 直升機事件框架的 171 項繁簡中文，涵蓋事件提示、音效選項與沙盒設定（#552）。
+- 補齊 Playable Minigames（原 Playable Pool）的 1,085 項繁簡中文，涵蓋撞球、飛鏢、棋牌與文字小遊戲的介面、規則及設定。
+- 補齊 Evolving Traits World 的 14 項精神狀態與腿腳不靈設定、Hoarder's Delight 的 20 項食品盒打包配方，以及 Gunworks-gang 的 1 項物品名稱。
+
+### Changed
+
+- 更新 Playable Minigames 的支援資訊，統一新舊介面的電腦玩家與棋類名稱，並釐清重新擺球操作的說明。
+- 整理上游改名、合併及刪除文字後的模組對應資料，保留既有翻譯內容。
+
+### Fixed
+
+- 修正小遊戲快捷鍵名稱的翻譯落點，避免譯文存在卻無法顯示。
+
 ## [42.20.4-1.27.9] - 2026-09-22
 
 ### Added

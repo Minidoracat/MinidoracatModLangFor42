@@ -36,7 +36,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DIST_CH = (ROOT / "MOD/MinidoracatModLangFor42/Contents/mods/MinidoracatModLangFor42/42"
            "/media/lua/shared/Translate/CH")
 
-# Translator.BY_NAME（31 檔）——上游若已用這些檔名，該檔名就是落點
+# Translator.BY_NAME（31 檔）：檔名可載入不代表鍵落點正確。
 WHITELIST = frozenset({
     "Tooltip", "IG_UI", "Recipes", "RecipeGroups", "Farming", "ContextMenu", "SurvivalGuide",
     "UI", "Items", "ItemName", "Moodles", "Sandbox", "Challenge", "Stash", "Moveables",
@@ -56,6 +56,8 @@ PREFIX_ROUTE = (
     ("Fluid_", "Fluids"), ("IGUI_", "IG_UI"), ("MakeUp", "MakeUp"), ("EC_", "Entity"),
     ("RD_", "RadioData"), ("RM_", "Recorded_Media"), ("UI_", "UI"),
 )
+# 專用 getter 直接查識別字；物品 module 或配方名即使像 UI_ 也不能跨檔搬移。
+DIRECT_LOOKUP = WHITELIST - {target for _, target in PREFIX_ROUTE} - {"Mod"}
 
 
 def _jload(p):
@@ -75,7 +77,7 @@ def _branch_ok(rid: str, eff: dict[str, set[str]]) -> bool:
 
 
 def target_file(src_stem: str, key: str) -> str | None:
-    """這個鍵要生效，必須落在哪個檔？None＝前綴無路由，放哪都取不到。"""
+    """回傳譯文落點：專用查表保留檔域，其餘優先按 getText 前綴路由。"""
     if src_stem == "Mod":
         # `Mod.json` 在 Translator.BY_NAME 裡，但機制與其他 30 檔不同：`readModTranslation()`
         # （42.20.2 Translator.java:402）只對**該 mod 自己**的 getCommonDir()／getVersionDir()
@@ -84,12 +86,12 @@ def target_file(src_stem: str, key: str) -> str | None:
         # 其他 mod 零作用（AGENTS.md 人工真相清單第 5 條、issue #126）。2026-09-02 補譯批
         # 因此漏出 Mod_ChainsawB42Dev_name 兩鍵，本包 dist 多了一份 Mod.json。
         return None
-    if src_stem in WHITELIST:
+    if src_stem in DIRECT_LOOKUP:
         return src_stem
     for prefix, tgt in PREFIX_ROUTE:
         if key.startswith(prefix):
             return tgt
-    return None
+    return src_stem if src_stem in WHITELIST else None
 
 
 def main() -> int:

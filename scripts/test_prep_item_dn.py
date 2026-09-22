@@ -922,4 +922,28 @@ for bad in ({"keys": []}, {"scoped_keys": {}}, {"keys": [], "scoped_keys": {"UI.
                                    vanilla_json=b))
     assert "KeyError" in msg, f"6. vanilla 基準殘缺應炸，實得：{msg}"
 
+# 白名單檔名不保證 getText 鍵落點正確；直接查表的物品與配方識別字不能跟著搬。
+misfiled = {
+    "translate_en|mods/M/42.20/media/lua/shared/Translate/EN/IG_UI.json|UI_TestBinding":
+        "Test binding",
+    "translate_en|mods/M/42.20/media/lua/shared/Translate/EN/UI.json|IGUI_TestStatus":
+        "Test status",
+    "translate_en|mods/M/42.20/media/lua/shared/Translate/EN/ItemName.json|UI_Module.Widget":
+        "Test widget",
+    "translate_en|mods/M/42.20/media/lua/shared/Translate/EN/Recipes.json|UI_TestRecipe":
+        "Test recipe",
+    "translate_en|mods/M/42.20/media/lua/shared/Translate/EN/SurvivorNames.json|Angelo":
+        "Angelo",
+    "translate_en|mods/M/42.20/media/lua/shared/Translate/EN/Mod.json|UI_TestModName":
+        "Not a global title",
+}
+rc, art = run(records=misfiled, mirror=misfiled, dist_items={}, vanilla=[])
+assert rc == 0 and art["_gap"] == {
+    "UI|UI_TestBinding": "Test binding",
+    "IG_UI|IGUI_TestStatus": "Test status",
+    "ItemName|UI_Module.Widget": "Test widget",
+    "Recipes|UI_TestRecipe": "Test recipe",
+    "SurvivorNames|Angelo": "Angelo",
+}, f"翻譯落點必須符合各查表方式：{art['_gap']}"
+
 print(f"PASS: prep_mod_strings 物品名缺口 {CASES} 個情境通過")

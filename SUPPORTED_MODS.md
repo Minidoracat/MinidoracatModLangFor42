@@ -9,7 +9,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **659 個 Workshop 模組**（833 個 mod ID）；另 **20 個已下架**（翻譯保留，見文末）。
+共支援 **663 個 Workshop 模組**（857 個 mod ID）；另 **20 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -36,7 +36,7 @@
 | [Thief Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=2596620950) | 盜賊擴充 | 新增偷竊與潛行相關技能系統，並加入對應技能書籍。 | `P4ThiefExpansion` | 69 | ⚠️ ≥3 | — |
 | [Addicted To Weight](https://steamcommunity.com/sharedfiles/filedetails/?id=2604943386) | 體重成癮 | 體重變化時顯示圖示與提示音通知，觸發間隔與音量可自訂。 | `P4AddictedToWeight` | 16 | — | — |
 | ['82 Oshkosh M911](https://steamcommunity.com/sharedfiles/filedetails/?id=2618213077) | '82 Oshkosh M911 | 新增 1982 年 Oshkosh M911 重型卡車、拖車與相關車輛零件。 | `82oshkoshM911` | 45 | — | — |
-| [Containers!](https://steamcommunity.com/sharedfiles/filedetails/?id=2625625421) | 貨櫃！ | 新增 ISO 標準貨櫃半掛車與燃料罐式半掛車等大容量載具。 | `isoContainers` | ? | — | — |
+| [Containers!](https://steamcommunity.com/sharedfiles/filedetails/?id=2625625421) | 貨櫃！ | 新增 ISO 標準貨櫃半掛車與燃料罐式半掛車等大容量載具。 | `isoContainers` | 13 | — | — |
 | ['92 AM General M998 + M101A3 Cargo trailer](https://steamcommunity.com/sharedfiles/filedetails/?id=2642541073) | '92 AM General M998 與 M101A3 貨運拖車 | 新增 1992 年 AM General M998 悍馬軍用車與 M101A3 貨運拖車。 | `92amgeneralM998`, `92amgeneralM998extra` | ? | — | — |
 | [Manage Containers](https://steamcommunity.com/sharedfiles/filedetails/?id=2650547917) | 容器管理 | 可為容器設定物品類別規則，快速將物品放入指定容器。 | `manageContainers` | 9 | — | — |
 | [Character Save](https://steamcommunity.com/sharedfiles/filedetails/?id=2673317083) | 角色存檔 | 提供角色資料的保存與讀取功能。 | `CharacterSave` | 2 | — | — |
@@ -58,7 +58,7 @@
 | [Stealth Camo](https://steamcommunity.com/sharedfiles/filedetails/?id=2762398967) | 隱形迷彩 | 新增可製作、升級的隱形迷彩裝置，需電池驅動並可研究藍圖。 | `P4StealthCamo` | 62 | — | — |
 | [Tidy Up Meister](https://steamcommunity.com/sharedfiles/filedetails/?id=2769706949) | Tidy Up Meister | 在進食、釣魚、健身等動作完成後自動重新裝備武器與物品。 | `P4TidyUpMeister` | 8 | — | — |
 | ['59 Cadillac Miller-Meteor + ECTO-1](https://steamcommunity.com/sharedfiles/filedetails/?id=2772575623) | '59 Cadillac Miller-Meteor + ECTO-1 | 新增 1959 年 Cadillac Miller-Meteor 車輛與 ECTO-1，可製作車身部件。 | `59meteor`, `ECTO1` | 30 | — | — |
-| [Ammo Maker](https://steamcommunity.com/sharedfiles/filedetails/?id=2788256295) | 彈藥製作 | 新增完整彈藥製作系統，可加工彈頭、彈殼並組裝各式彈藥。 | `2788256295/ammomaker`, `ammomaker` | 623 | — | — |
+| [Ammo Maker](https://steamcommunity.com/sharedfiles/filedetails/?id=2788256295) | 彈藥製作 | 新增完整彈藥製作系統，可加工彈頭、彈殼並組裝各式彈藥。 | `2788256295/ammomaker`, `ammomaker` | 579 | — | — |
 | [Liel's Drinks](https://steamcommunity.com/sharedfiles/filedetails/?id=2790211934) | Liel 的飲品 | 新增大量巴西風味飲品，包括啤酒、汽水、通寧水與蘭姆酒等。 | `LDK` | 378 | — | — |
 | [[B42/B41] The Motorious Zone Vehicle Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=2791656602) | The Motorious Zone 車輛包 | 新增多款經典與進口名車，如 Ferrari 250 GTO、Nissan Skyline 等。 | `fhqMotoriousZone`, `fhqMotoriousZoneExotics`, `fhqMotoriousZoneImports`, `fhqMotoriousZoneRealNames`, `fhqMotoriousZoneUSDM`, `fhqMotoriusZone`, `fhqMotoriusZoneExotics`, `fhqMotoriusZoneImports`, `fhqMotoriusZoneRealNames`, `fhqMotoriusZoneUSDM` | 240 | — | ⚠️ 本項目底下的兩個 MOD（車輛包本體、Real Names Addon 真名擴充）可各自獨立啟用，而它們用同一組代號指向不同的車名——本體是規避商標的虛構品牌（例：Gosun RC2400），真名擴充則是真實車名（例：Nissan 240SX）。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故這 235 個車名不出貨；機械技師介面、車輛右鍵選單與車鑰匙會顯示各自 MOD 的英文車名（不會顯示代號）。兩邊上游英文本來就相同的 5 個車名（OvalChamp、Econoline PAYDAY、Christine、E36 Lime、Fiero General Lee）不受影響。 |
 | [Pomp's Items - Just the Food](https://steamcommunity.com/sharedfiles/filedetails/?id=2792348686) | Pomp 的物品 - 純食物版 | 新增大量零食、巧克力與飲料等食物物品，附對應空包裝。 | `PompsItemsFood` | 669 | — | — |
@@ -105,7 +105,7 @@
 | ['49 Dodge Power Wagon Crew Cab](https://steamcommunity.com/sharedfiles/filedetails/?id=2900580391) | '49 Dodge Power Wagon 雙排座 | 新增 1949 年 Dodge Power Wagon 雙排座卡車及警用、憲兵等版本。 | `49powerWagon` | ? | — | — |
 | [Christmas Time [B41\|42\|42.13.1]](https://steamcommunity.com/sharedfiles/filedetails/?id=2903870217) | 聖誕時光 | 新增聖誕樹、花環、聖誕玩具、禮物盒與聖誕帽等可製作的節慶物品。 | `ChristmasTime`, `ChristmasTime4213` | 97 | — | — |
 | ['70 Plymouth Barracuda](https://steamcommunity.com/sharedfiles/filedetails/?id=2913633066) | '70 Plymouth Barracuda | 新增 1970 年 Plymouth Barracuda 車輛，含保險桿、裝甲等可製作配件。 | `70barracuda` | 29 | — | — |
-| [Evolving Traits World (ETW) [B41/B42] - alternative to "Dynamic Traits"](https://steamcommunity.com/sharedfiles/filedetails/?id=2914075159) | Evolving Traits World (ETW) 動態特質演化 | 讓特質隨遊玩行為動態演化，含親和機制與豐富沙盒設定。 | `2914075159/EvolvingTraitsWorldMarkDynamicTraits`, `EvolvingTraitsWorld`, `EvolvingTraitsWorldMarkDynamicTraits` | 1092 | — | ⚠️ 嗜血特質的說明文字（代號 UI_trait_BloodlustDesc）與動態特質、超級英雄兩個 MOD 撞名，三者描述的機制完全不同——本 MOD 是「殺殭屍加心情並減壓」、動態特質是「不殺人就影響心情」、超級英雄是純戰鬥數值加成。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故此鍵不出貨、遊戲內顯示該 MOD 自己的英文原文。 |
+| [Evolving Traits World (ETW) [B41/B42] - alternative to "Dynamic Traits"](https://steamcommunity.com/sharedfiles/filedetails/?id=2914075159) | Evolving Traits World (ETW) 動態特質演化 | 讓特質隨遊玩行為動態演化，含親和機制與豐富沙盒設定。 | `2914075159/EvolvingTraitsWorldMarkDynamicTraits`, `EvolvingTraitsWorld`, `EvolvingTraitsWorldMarkDynamicTraits` | 1089 | — | ⚠️ 嗜血特質的說明文字（代號 UI_trait_BloodlustDesc）與動態特質、超級英雄兩個 MOD 撞名，三者描述的機制完全不同——本 MOD 是「殺殭屍加心情並減壓」、動態特質是「不殺人就影響心情」、超級英雄是純戰鬥數值加成。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故此鍵不出貨、遊戲內顯示該 MOD 自己的英文原文。 |
 | [[B41 / B42] Load All Magazines](https://steamcommunity.com/sharedfiles/filedetails/?id=2920899878) | 一鍵裝填所有彈匣 | 新增右鍵選單，可一次為所有同型彈匣裝滿或取出彈藥。 | `ReloadAllMagazines` | 2 | — | — |
 | ['93 Lincoln Town Car + Limo](https://steamcommunity.com/sharedfiles/filedetails/?id=2932547723) | '93 Lincoln Town Car 與加長禮車 | 新增 1993 年 Lincoln Town Car 轎車與加長禮車，含迷你吧台等車輛部件。 | `93townCar` | 34 | — | — |
 | ['89 Isuzu Trooper](https://steamcommunity.com/sharedfiles/filedetails/?id=2932549988) | '89 Isuzu Trooper | 新增 1989 年 Isuzu Trooper 休旅車，含越野版與 RS 等多種版本。 | `89trooper` | ? | — | — |
@@ -264,7 +264,7 @@
 | [Autotsar Tuning Atelier - Petyarbuilt 379 [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3403314193) | Autotsar 改裝工坊 - Petyarbuilt 379 | 新增 Petyarbuilt 379 大型卡車，含防撞槓、保險槓等豐富改裝件。 | `ATA_Petyarbuilt` | 491 | ⚠️ ≥1 | — |
 | [Standardized Vehicle Upgrades 3 - Core - B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3403490889) | 標準化車輛升級 3 - 核心 | 標準化車輛升級系統核心模組，提供防撞槓等升級件與油耗損耗設定。 | `StandardizedVehicleUpgrades3Core` | 371 | — | — |
 | [Nepenthe's Slower Discomfort](https://steamcommunity.com/sharedfiles/filedetails/?id=3403721633) | Nepenthe 的緩慢不適感 | 調整不適感增減速度，提供係數與檢查間隔等沙盒選項可自訂。 | `NepSlowedDiscomfort` | 9 | — | — |
-| [Lifestyle: Hobbies](https://steamcommunity.com/sharedfiles/filedetails/?id=3403870858) | 生活方式：興趣愛好 | 新增舞蹈、音樂、清潔等生活技能與大量物品、技能書和食物。 | `LifestyleHobbies` | 4683 | ⚠️ ≥7 | — |
+| [Lifestyle: Hobbies](https://steamcommunity.com/sharedfiles/filedetails/?id=3403870858) | 生活方式：興趣愛好 | 新增舞蹈、音樂、清潔等生活技能與大量物品、技能書和食物。 | `LifestyleHobbies` | 4678 | ⚠️ ≥7 | — |
 | [[B42] Skizot's zRe Fix Floor Extended](https://steamcommunity.com/sharedfiles/filedetails/?id=3403911096) | [B42] Skizot 的 zRe 修復地板擴充 | 新增「修復地板」右鍵選單選項。 | `zReFixFloor41`, `zReFixFloor42` | 1 | — | — |
 | [[B42.14+] Exercise With Corpses (SP/MP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3404074048) | 拖屍健身 | 拖動屍體可獲得健身與力量經驗值，經驗比例可透過沙盒選項調整。 | `ExerciseWithCorpses` | 7 | — | — |
 | [[B42] School's Out: Anime-Style Student Uniforms](https://steamcommunity.com/sharedfiles/filedetails/?id=3404301631) | 放學啦：動漫風學生制服 | 新增動漫風格學生制服服裝，可自訂學生殭屍外套顏色與樣式。 | `seifuku`, `seifukuBodies` | 114 | — | — |
@@ -493,10 +493,10 @@
 | [Teto Plushies - B41/B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3603577358) | Teto 絨毛玩偶 | 新增多款重音 Teto 絨毛玩偶裝飾物品。 | `TetoPlushies` | 10 | — | — |
 | [Better Clothing Info](https://steamcommunity.com/sharedfiles/filedetails/?id=3604080281) | 更好的服裝資訊 | 以進度條與對比方式顯示服裝防護、材質等詳細資訊。 | `EURY_CLOTHINGINFO` | 53 | — | — |
 | [Immersive autoHIDE HUD](https://steamcommunity.com/sharedfiles/filedetails/?id=3606878738) | 沉浸式自動隱藏介面 | 讓快捷欄、側欄、時鐘、物品欄等介面自動淡出隱藏，並可顯示真實 FPS。 | `SIMBAautoHIDEhud` | 50 | — | — |
-| [Immersive Blackouts [B42MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3607686447) | 沉浸式停電 | 讓水電隨機中斷與恢復，停電前燈光閃爍，提升生存氛圍。 | `ImmersiveBlackouts`, `ImmersiveBlackoutsRandomSupply` | 88 | — | — |
+| [Immersive Blackouts [B42MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3607686447) | 沉浸式停電 | 讓水電隨機中斷與恢復，停電前燈光閃爍，提升生存氛圍。 | `ImmersiveBlackouts`, `ImmersiveBlackoutsRandomSupply` | 87 | — | — |
 | [U.S. M41 Walker Bulldog by Papa_Chad](https://steamcommunity.com/sharedfiles/filedetails/?id=3608725379) | 美軍 M41 Walker Bulldog 坦克 by Papa_Chad | 新增美軍 M41 Walker Bulldog 輕型坦克，配備 76mm 砲與同軸機槍。 | `U.S. M41 Walker Bulldog by Papa_Chad` | ? | — | — |
 | [ALICE Gear [B41/B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3610005735) | ALICE 裝備 | 新增 ALICE 系列軍用裝備，如野戰背包、水壺與戰術攜行具。 | `AliceGear` | 54 | — | — |
-| [[41/42 + MP] Hot Brass - Visible Casing Ejection Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3610677934) | Hot Brass - 可見彈殼拋殼框架 | 射擊時拋出可見彈殼，涵蓋多種口徑的彈殼物品。 | `HBVCEFb42`, `zHBVCEF` | 38 | — | — |
+| [[41/42 + MP] Hot Brass - Visible Casing Ejection Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3610677934) | Hot Brass - 可見彈殼拋殼框架 | 射擊時拋出可見彈殼，涵蓋多種口徑的彈殼物品。 | `HBVCEFb42`, `zHBVCEF` | 36 | — | — |
 | [Outfit Control](https://steamcommunity.com/sharedfiles/filedetails/?id=3610760744) | Outfit Control（套裝管理） | 可儲存與切換整套服裝，支援切換前先脫下衣物或直接存入衣櫃，並提供刪除套裝、晾乾衣物等介面功能。 | `OutfitControl` | 15 | — | — |
 | [Rick Grimes - King County Sheriff Uniform from The Walking Dead Build 42.13+ Updated](https://steamcommunity.com/sharedfiles/filedetails/?id=3613433733) | Rick Grimes - King County 警長制服（陰屍路） | 新增陰屍路 Rick Grimes 警長制服，外套可開合。 | `Rick Grimes - King County Sheriff Uniform (TWD)Build 42` | ? | — | — |
 | ['85 Chevrolet Step-Van](https://steamcommunity.com/sharedfiles/filedetails/?id=3614034284) | '85 Chevrolet Step-Van | 新增 1985 年雪佛蘭 Step-Van 廂型貨車，含多種商用塗裝版本。 | `85chevyStepVan`, `85chevyStepVanexpanded` | ? | — | — |
@@ -516,7 +516,7 @@
 | [More Description For Traits [42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=3623919908) | 更詳細的特質說明 | 為職業與特質補充詳細說明，列出各職業可用的配方知識。 | `MoreDescriptionForTraits4213` | ? | — | — |
 | [[UNOFFICIAL][B42.13 SP/MP] Proximity Inventory](https://steamcommunity.com/sharedfiles/filedetails/?id=3624308198) | 鄰近物品欄（非官方版） | 可直接檢視並拿取附近容器與屍體的物品，支援僅限屍體模式。 | `ProximityInventory4213` | ? | — | — |
 | [[B42.13] Simple Slings Mod - Rifle Slings Only](https://steamcommunity.com/sharedfiles/filedetails/?id=3625951765) | 簡易背帶模組（僅步槍背帶） | 新增武器背帶，可將步槍揹在肩上或背部快捷欄位。 | `OmniSimplesling` | ? | — | — |
-| [Hoarder's Delight - Box & Carton Bulk Packing [42.19 + 42.18]](https://steamcommunity.com/sharedfiles/filedetails/?id=3626823538) | 囤積者之樂：整盒整箱打包 | 可將大量物品打包成整盒或整箱，方便囤積與搬運。 | `OCsPacking` | 321 | — | — |
+| [Hoarder's Delight - Box & Carton Bulk Packing [42.19 + 42.18]](https://steamcommunity.com/sharedfiles/filedetails/?id=3626823538) | 囤積者之樂：整盒整箱打包 | 可將大量物品打包成整盒或整箱，方便囤積與搬運。 | `OCsPacking` | 319 | — | — |
 | [RPGSkillTree[42][MP]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3628753926) | RPG 技能樹（多人） | RPG 技能樹的多人連線版本，另含記憶石存讀與邪血強化武器等機制。 | `RPGSkillTree MP` | 162 | — | — |
 | [PhunCure](https://steamcommunity.com/sharedfiles/filedetails/?id=3628843367) | PhunCure 趣味解藥 | 新增可治癒咬傷、殭屍病毒與傷口感染的解藥系統，選項可調。 | `phuncure` | ? | — | — |
 | [Printer3D: Manufacturing & Recycling System](https://steamcommunity.com/sharedfiles/filedetails/?id=3628922658) | 3D 列印：製造與回收系統 | 新增 3D 列印機與塑膠回收系統，可掃描並列印多種物品。 | `3DPrinter` | 628 | — | — |
@@ -582,6 +582,7 @@
 | [Hardwood's FireFighter's Finery](https://steamcommunity.com/sharedfiles/filedetails/?id=3671351750) | Hardwood 消防員裝備 | 新增消防員裝備，包含消防斧、哈利根撬棍、呼吸器與整套消防服。 | `HardwoodsTurnoutGear` | 12 | — | — |
 | [Jeeve's Hordes](https://steamcommunity.com/sharedfiles/filedetails/?id=3672042113) | Jeeve's 屍潮 | 新增屍潮夜事件與相關物品，如殭屍燉菜與吸引用香水。 | `JeevesHordes` | 56 | — | — |
 | [Spawn Horse](https://steamcommunity.com/sharedfiles/filedetails/?id=3672339774) | 開局生成馬匹 | 開局可獲得一匹初始馬，並提供生成機率（百分比）、冷卻時間與每名玩家/每個世界限制等沙盒設定。 | `SpawnHorseOnStart` | 71 | — | — |
+| [HEF - Helicopter Event Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3672792485) | HEF 直升機事件框架 | 擴充直升機事件，加入毒氣、空中支援、敵襲、煙幕及其他可調整的次要事件。 | `HelicopterEventExpansionFramework` | ? | — | — |
 | [X-Virus [B42][MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3673979113) | X-Virus | 新增病毒相關內容，可透過右鍵選單注射針劑。 | `XVirus` | 1 | — | — |
 | [Knox Drugs](https://steamcommunity.com/sharedfiles/filedetails/?id=3674663295) | Knox 藥物 | 新增藥物相關內容，包含氨水等流體物品。 | `KnoxDrugs` | 1 | ⚠️ ≥10 | — |
 | [Dead Man's Dossier [B42][MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3675740871) | 死者檔案 | 新增消防、醫療、軍隊、警局等各類檔案文件，可蒐集拼湊完整檔案。 | `DeadMansDossier` | 107 | — | — |
@@ -596,16 +597,17 @@
 | [Sauce Tooltips](https://steamcommunity.com/sharedfiles/filedetails/?id=3694158509) | Sauce Tooltips | 在物品提示中加入額外資訊，例如可加入的料理與每級瞄準加成等數值。 | `SauceTooltips` | 187 | — | — |
 | [Natures Call](https://steamcommunity.com/sharedfiles/filedetails/?id=3709126801) | Nature's Call（生理需求） | 新增如廁需求系統：尿意/便祕等情緒圖示、尿液液體、成人紙尿褲，以及清洗污穢衣物功能。 | `NC_NaturesCall` | 346 | ⚠️ ≥2 | — |
 | [Bus Stop Fast Travel](https://steamcommunity.com/sharedfiles/filedetails/?id=3711522956) | 公車站快速旅行 | 透過公車站與公車票進行快速旅行，含管理介面，並可設定與銀行模組 API 整合的付款方式。 | `BusStopFastTravel` | 120 | — | — |
-| [Playable Pool](https://steamcommunity.com/sharedfiles/filedetails/?id=3716934959) | 可玩的撞球 | 新增可實際遊玩的撞球，可加入不同難度的機器人對手，並含撞球技巧書籍與棄局自動清理等沙盒設定。 | `playable_pool` | 216 | — | — |
+| [Playable Minigames (Previously Playable Pool)](https://steamcommunity.com/sharedfiles/filedetails/?id=3716934959) | 互動小遊戲（原 Playable Pool） | 新增可多人同步遊玩的撞球、飛鏢、文字、撲克與棋盤小遊戲，支援不同難度的電腦玩家及遊戲規則設定。 | `playable_pool` | 186 | — | — |
 | [Unbreakable Fence](https://steamcommunity.com/sharedfiles/filedetails/?id=3716983113) | 不可破壞的圍籬 | 新增不可破壞的鐵絲網圍籬，並提供雙開門焊接所需金屬加工等級等沙盒設定。 | `UnbreakableFence_Build42` | 11 | — | — |
 | [Working Knowledge](https://steamcommunity.com/sharedfiles/filedetails/?id=3717099183) | 職場知識 | 在檔案櫃、辦公桌等容器中加入 372 種職場文件，閱讀一次可獲得對應技能的一次性經驗。 | `WorkingKnowledge` | 382 | — | — |
 | [Icons Inventory](https://steamcommunity.com/sharedfiles/filedetails/?id=3718412967) | 圖示物品欄（Icons Inventory） | 以圖示手勢操作物品欄：點擊搜刮、長按多選、滾動切換容器，含新手引導並可在選項中自訂或恢復傳統操作。 | `IconsInventory` | 28 | — | — |
-| [Gunworks-gang](https://steamcommunity.com/sharedfiles/filedetails/?id=3722064198) | Gunworks-gang 槍械工坊 | 新增槍械與彈藥（12 號鹿彈、獨頭彈、.223 等），支援單發/三連發/全自動射擊模式切換，並提供拖放式彈藥裝填器介面。 | `SWMG` | 79 | — | — |
+| [Gunworks-gang](https://steamcommunity.com/sharedfiles/filedetails/?id=3722064198) | Gunworks-gang 槍械工坊 | 新增槍械與彈藥（12 號鹿彈、獨頭彈、.223 等），支援單發/三連發/全自動射擊模式切換，並提供拖放式彈藥裝填器介面。 | `SWMG` | 76 | — | — |
 | [Guns of Marz](https://steamcommunity.com/sharedfiles/filedetails/?id=3722134990) | Guns of Marz 槍械包 | 新增大量槍械彈藥內容，如 AA-12 彈鼓與彈匣、整盒 12 號鹿彈，並含彈藥拆盒與並聯彈匣等配方。 | `GunsOfMarz`, `MarzGuns` | 710 | ⚠️ ≥33 | ⚠️ 物品 tooltip 的補充說明（「Uses .223/5.56x45mm NATO rounds.」「Removes Muzzle Flash」「Needs Wrench to install or remove.」等，185 個物品共 410 行）寫死在 `media/lua/client/MarzWeapons/ItemTooltipsTable.lua`，由 `CustomItemTooltips.lua` 直接畫進 tooltip、完全不走 getText，任何翻譯包都補不了；物品名／配方／沙盒／右鍵選單等 JSON 鍵已全數涵蓋。 |
 | [Plysken Solar Revolution](https://steamcommunity.com/sharedfiles/filedetails/?id=3725311427) | Plysken 太陽能革命 | 加入太陽能板、儲能設備與相關供電系統。 | `PSR` | 214 | — | — |
 | [Gore's SVU4 Core](https://steamcommunity.com/sharedfiles/filedetails/?id=3730070661) | Gore 的 SVU4 核心 | 標準化車輛升級 4 核心：車輛裝甲與升級件、車頂架／車頂照明、車輛烤漆；同捆工業流體儲存、備用引擎零件與原版車輛部件製作共 4 個子模組。 | `GoresSVU4Core`, `GoresIndustrialFluidInfrastructure`, `GoresSpareEnginePartsCrafting`, `GoresVanillaVehiclePartsCrafting` | 221 | ⚠️ ≥9 | ⚠️ 本包涵蓋物品名、車頂燈右鍵選單、沙盒設定與製作配方；車輛裝甲改裝介面（車輛輪盤 V →Upgrades）的標籤與按鈕文字由該 MOD 大量寫死於 Lua（僅視窗標題的車輛名走遊戲譯文），未走遊戲翻譯機制，翻譯包無法覆蓋。 |
 | [Retro Dashboard](https://steamcommunity.com/sharedfiles/filedetails/?id=3743082626) | 復古數位儀表板 | 為載具加入復古數位儀表板，顯示電池、電量、容量等資訊，可用右鍵選單調整縮放與樣式，並提供停用遊戲內樣式切換等沙盒設定。 | `RetroDashboardDigital`, `RetroDashboardDigital_NMPatch` | 82 | — | — |
 | [Tools of the Trade B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3745630569) | 行家工具 B42（Tools of the Trade B42） | B42 版行業工具：新增扁斧、軍用開罐器等多用途工具與武器，並可透過沙盒設定自訂生成倍率。 | `ToolsOfTheTrade42` | 117 | — | — |
+| [Outbreak Smokers](https://steamcommunity.com/sharedfiles/filedetails/?id=3747865552) | Outbreak 桶式煙燻爐 | 將桶子改造成煙燻爐，煙燻肉類、魚類及蔬果並乾燥香草，附室內煙霧危害與沙盒設定。 | `BadSadsOutbreakSmokers` | ? | — | — |
 | [Global Storage SiK](https://steamcommunity.com/sharedfiles/filedetails/?id=3750612158) | Global Storage SiK | 新增 GS 儲存網路相關內容：終端機、存取/建造/製作平板、網路磁碟片，以及桌上型電腦與 I/O 控制器等製作配方。 | `GlobalStorageSiK` | 1213 | — | — |
 | [Custom Backpack System](https://steamcommunity.com/sharedfiles/filedetails/?id=3754600309) | 自訂背包系統 | 模組化背包系統：主包可安裝不同材質（天然芳綸、牛仔布等）的儲物袋與儲水袋，組成多種背包組合。 | `AdvancedMultiBackpackB42` | 545 | — | — |
 | [Big Bottles〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3759421894) | 大型瓶罐 | 新增大型塑膠瓶、水瓶、水壺與軍用水壺。 | `BigBottles` | 4 | — | — |
@@ -670,6 +672,8 @@
 | [Long Term Preservation Extended](https://steamcommunity.com/sharedfiles/filedetails/?id=3789287166) | 長期保存擴充 | 擴充食物保存玩法，可製作罐裝食品（如罐裝酪梨醬）、果汁與罐子標籤，並加入造紙製作分類與造紙模具。 | `LongTermPreservationExtended`, `LongTermPreservationExtendedSE`, `LongTermPreservationExtendedSEUI`, `LongTermPreservationExtendedUI` | 320 | ⚠️ ≥7 | — |
 | [CD: Cats](https://steamcommunity.com/sharedfiles/filedetails/?id=3791294616) | CD：貓咪 | 加入公母與幼貓等貓類同伴，可設定流浪貓在住宅、商店與寵物店的生成倍率，且該設定獨立於狗的生成。 | `CompanionCat` | 24 | — | — |
 | [Pixel Strike Indicator & Health Bar〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3793657917) | 像素打擊指示與血條 | 打中目標時跳出傷害數字，爆擊／爆頭／秒殺／落空／升級特效，殭屍與動物血條、韌性條與血量百分比；沙盒可設伺服器上限，玩家再自行調整。 | `PixelStrikeIndicator` | 328 | — | ⚠️ 兩個模組選項頁的頁名（Pixel Strike Indicator／Pixel Health Bars）是 PSI_Options.lua 寫死的英文字面，不走翻譯表，任何翻譯包都補不了；頁內所有選項與說明皆已翻譯。 |
+| [Frockin Splendor! Vol.6](https://steamcommunity.com/sharedfiles/filedetails/?id=3798149669) | Frockin Splendor! 華麗服飾 Vol.6 | 第六輯服飾擴充，新增外套、大衣、裙裝、褲裝、毛衣、腰帶與衣物收納用品。 | `GanydeBielovzki's Frockin Splendor! Vol.6` | 6 | — | — |
+| [Snake's ModPack Build 42](https://steamcommunity.com/sharedfiles/filedetails/?id=3800233932) | Snake 模組包 Build 42 | 整合料理、農漁業、彈藥製作、汽車維修、服飾、工具與多張地圖的模組包。 | `SMP_AmmoMaker`, `SMP_AquaFarm`, `SMP_AquaFarmResources`, `SMP_BarcoAbandonado`, `SMP_BatesMetalicos`, `SMP_CustomMapBridge`, `SMP_Factory`, `SMP_LeGourmetUltimate`, `SMP_LootZetaEnhancedEdition`, `SMP_MilitaryComplex`, `SMP_NumarkComplex`, `SMP_ROxygenTank`, `SMP_RPropaneTank`, `SMP_SkillsMag`, `SMP_SnakeMechanicalOverhaul`, `SMP_SnakeUtilsPack`, `SMP_SnakeClothingMod`, `SMP_SnakeMansion`, `SMP_SnakeVille`, `SMP_TableSaw`, `SMP_ZStreamersCars` | 5 | ⚠️ ≥20 | — |
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 

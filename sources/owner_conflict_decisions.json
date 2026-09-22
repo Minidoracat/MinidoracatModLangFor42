@@ -1,6 +1,62 @@
 {
   "_comment": "owner 衝突人工裁決台帳。translate：signature/reason/ch/cn 四項全符且已出貨才放行；unship：action=unship、signature/reason 全符，且 unshipped_keys.json 的對應條目owner_signature 相符、ItemName 前綴孿生鍵已同步登記（其 owner_signature 錨孿生鍵自身 census）、dist 已重建移除該鍵才放行。owner 增減、上游改值或錨點漂移一律重新 blocking。",
   "entries": {
+    "IG_UI|IGUI_CraftingCategories_Ammunition": {
+      "action": "translate",
+      "signature": "58b679b8fda92483",
+      "reason": "2026-09-22 #501: Ammmunition 是 Ammunition 的拼字誤植；三方皆指彈藥分類，保留現有中性譯名。",
+      "ch": "彈藥",
+      "cn": "弹药"
+    },
+    "IG_UI|IGUI_ItemCat_Dye": {
+      "action": "translate",
+      "signature": "2148a9b738052d37",
+      "reason": "2026-09-22 #501: 一般染料與天然染料皆屬染料分類；不把天然限定套到其他 owner，保留現有中性譯名。",
+      "ch": "染料",
+      "cn": "染料"
+    },
+    "ContextMenu|ContextMenu_LoadedAmmo": {
+      "action": "translate",
+      "signature": "c3823bcce09d437a",
+      "reason": "2026-09-22 #501: Loaded Ammo 與 Load Ammo 均以冒號引出裝填彈藥資訊；採不限定完成狀態的中性用語，保留尾端空白。",
+      "ch": "裝填彈藥:    ",
+      "cn": "装填弹药:    "
+    },
+    "ContextMenu|ContextMenu_LoadedMixed": {
+      "action": "translate",
+      "signature": "093e72233da06024",
+      "reason": "2026-09-22 #501: Loaded Ammo 與 Load Ammo 共用混合彈藥文字；採不限定完成狀態的中性用語並保留間距。",
+      "ch": "裝填彈藥:    混合",
+      "cn": "装填弹药:    混合"
+    },
+    "Tooltip|Tooltip_LeadFishingbox": {
+      "action": "translate",
+      "signature": "182ed170ccd14fb5",
+      "reason": "2026-09-22 #501: 兩個 owner 均描述盒內裝有釣魚用途的鉛，僅英文措辭不同。",
+      "ch": "內裝釣魚用鉛.",
+      "cn": "内装钓鱼用铅."
+    },
+    "Tooltip|Tooltip_alreadyknownrecipe": {
+      "action": "translate",
+      "signature": "eb23b80fc8e52dd4",
+      "reason": "2026-09-22 #501: 已知與已學習在配方提示皆表示已學會，保留前導空白與括號。",
+      "ch": " (已學會)",
+      "cn": " (已学会)"
+    },
+    "Tooltip|Tooltip_needknownrecipe": {
+      "action": "translate",
+      "signature": "47e2c4373b3bb598",
+      "reason": "2026-09-22 #501: 兩個 owner 僅大小寫不同，皆表示所需配方。",
+      "ch": "所需配方: ",
+      "cn": "所需配方: "
+    },
+    "Tooltip|Tooltip_needrecipe": {
+      "action": "translate",
+      "signature": "f614b48c513add53",
+      "reason": "2026-09-22 #501: 兩個 owner 僅大小寫不同，皆表示所需配方。",
+      "ch": "所需配方: ",
+      "cn": "所需配方: "
+    },
     "ItemName|Base.Glock23": {
       "action": "unship",
       "signature": "ec8a7d36ce738c07",
