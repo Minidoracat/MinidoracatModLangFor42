@@ -14,6 +14,9 @@
 - 新增 HEF 直升機事件框架的 171 項繁簡中文，涵蓋事件提示、音效選項與沙盒設定（#552）。
 - 補齊 Playable Minigames（原 Playable Pool）的 1,085 項繁簡中文，涵蓋撞球、飛鏢、棋牌與文字小遊戲的介面、規則及設定。
 - 補齊 Evolving Traits World 的 14 項精神狀態與腿腳不靈設定、Hoarder's Delight 的 20 項食品盒打包配方，以及 Gunworks-gang 的 1 項物品名稱。
+- 補齊 P4Decoholic 的 16 項模型檢視器操作、預覽限制與設定說明（#570）。
+- 補齊 AllInfo 的 212 項伺服器隱藏資訊設定、磨利與修復提示，以及特質變動說明（#571）。
+- 補齊 HomeBrewing 的 3 項木桶架說明與上下移動選單，清楚說明三層擺放方式與容量（#572）。
 
 ### Changed
 
