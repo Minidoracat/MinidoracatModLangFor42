@@ -148250,7 +148250,7 @@
       },
       "Sandbox_ExtractionMode_BanditBehavior_tooltip": {
         "en": "Controls regular hostile bandit groups. Seeks out players: head to a snapshot of a player's location. Sometimes seek out players: each group has a 40% chance to seek a player and a 60% chance to pass through. Do their own thing: cross an area beside the player's original location, then continue toward the far side of the raid area. Bandits can still detect and fight players normally. Friendly encounters, horde replacements, and scripted meta events keep their own behavior.",
-        "ch": "控制一般的敵對匪徒小隊. 主動尋找玩家: 前往某位玩家位置的快照點. 有時尋找玩家: 每支小隊有 40%% 機率前往尋找玩家, 60%% 機率直接經過. 各行其是: 橫越玩家原始位置旁的區域, 然後繼續朝突襲區域的另一側前進. 匪徒仍會照常偵測並與玩家交戰. 友善遭遇, 匪徒替換屍潮以及腳本化的 meta 事件維持各自原有的行為.",
+        "ch": "控制一般的敵對匪徒小隊. 主動尋找玩家: 前往某位玩家位置的快照點. 有時尋找玩家: 每支小隊有 40%% 機率前往尋找玩家, 60%% 機率直接經過. 各行其是: 橫越玩家原始位置旁的區域, 然後繼續朝突襲區域的另一側前進. 匪徒仍會照常偵測並與玩家交戰. 友善遭遇, 匪徒替換屍潮以及劇情式 meta 事件維持各自原有的行為.",
         "cn": "控制普通的敌对匪徒小队. 主动寻找玩家: 前往某位玩家位置的快照点. 有时寻找玩家: 每支小队有 40%% 概率前往寻找玩家, 60%% 概率直接经过. 各行其是: 横穿玩家原始位置旁的区域, 然后继续朝突袭区域的另一侧前进. 匪徒仍会照常侦测并与玩家交战. 友好遭遇, 匪徒替换尸潮以及脚本化的 meta 事件保持各自原有的行为.",
         "_note": "新增鍵：選項 tooltip，As1 未收錄。上游 EN 的 40%/60% 為裸 %（formatted() 會炸），CH/CN 依本包規則直寫 %%；屍潮替換沿用既有「匪徒替換屍潮/匪徒替换尸潮」、突襲區域沿用 IGUI_ExtractionMode_RaidZone。三個選項名與 option1-3 逐字對齊。"
       },
@@ -148286,7 +148286,7 @@
       },
       "Sandbox_ExtractionMode_BanditFriendlyWindowChancePercent_tooltip": {
         "en": "Requires Bandits integration.\n\nChance of another friendly clan after the civilian encounter roll misses. Eligible clans and their weights follow personal or shared faction quest progress. Uses the separate friendly encounter timer; never replaces an attack or horde. No friendly encounters at Military Checkpoint. Set to 0 to disable.",
-        "ch": "需啟用匪徒 NPC 整合.\n\n平民遭遇判定未通過後, 出現其他友善幫派的機率. 可出現的幫派及其權重取決於個人或派系共享的任務進度. 使用另一個友善遭遇計時器; 永遠不會取代攻擊或屍潮. 軍事檢查站不會出現友善遭遇. 設為 0 可停用.",
+        "ch": "需啟用匪徒 NPC 整合.\n\n平民遭遇判定未命中後, 出現其他友善幫派的機率. 可出現的幫派及其權重取決於個人或派系共享的任務進度. 使用另一個友善遭遇計時器; 永遠不會取代攻擊或屍潮. 軍事檢查站不會出現友善遭遇. 設為 0 可停用.",
         "cn": "需启用匪徒 NPC 集成.\n\n平民遭遇判定未通过后, 出现其他友善帮派的概率. 可出现的帮派及其权重取决于个人或派系共享的任务进度. 使用另一个友善遭遇计时器; 永远不会取代攻击或尸潮. 军事检查站不会出现友善遭遇. 设为 0 可禁用.",
         "_note": "新增鍵：Sandbox tooltip，As1 未收錄。保留 \\n\\n；clan 譯「幫派/帮派」（Bandits 模組的匪徒團體，與 faction 「派系」區分），faction quest progress 沿用既有 Sandbox_ExtractionMode_ShareFactionQuestProgress 的派系/任務進度用詞。"
       },
