@@ -46,6 +46,10 @@ jobs:
 
       # 逐支跑並收集結果，讓一支失敗不遮蔽其餘（CI 一次看完所有紅燈）。
       # 清單用陣列，計數一律由 ${#tests[@]} 派生——寫死支數的話，加測試時漏改就會
+
+      - name: 生成物同步預檢
+        run: uv run scripts/build_mod.py manifest --check
+
       # 輸出騙人的「N 支全過」（本 repo 已有 manifest 數字過期一整天的前例）。
       - name: 回歸測試（純 repo gate）
         run: |
