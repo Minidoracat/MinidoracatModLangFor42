@@ -1,7 +1,7 @@
 {
  "_comment": "已裁決不出貨的 (檔名|鍵)。**真相層照樣保留**——`sources/_unsorted/CN` 是 As1 lane 的忠實鏡像，刪掉會讓 tracker 的 layer-B 把它報成永久差異、每次 As1 更新都開假的『待同步』issue；`sources/ch` 也必須逐鍵鏡像 CN 才過 corpus 鍵集 gate。所以抑制只發生在出貨那一步，語意與 vanilla 出貨抑制相同。",
  "_recheck": "兩類判準不同。第一類：As1 每次更新後重查一次；as1_value 漂移是重新搜尋 mod／正確落點的訊號。第二類：as1_value 是抑制前有效 CN 值錨點（own lane 也適用），值漂移代表真相層改動；as1_value 缺失／漂移或 owner_signature 漂移代表 owner 增減／上游英文改值，兩者任一漂移都要重審 unship 裁決。",
- "_rule": "登記前先分類。第一類（檔名不可載入／落點不明）：必須先試著指認 mod；Workshop 搜尋端點查『內部 id』 https://steamcommunity.com/workshop/browse/?appid=108600&searchtext=<內部id> ——鍵名前綴多半是內部 id 而非顯示名，語意搜尋常找不到。能指認 mod 就該補正確鍵，不能把本檔當丟棄場（BarrEx／Super Bulldozer／Last Cup Coffee 都曾因此救回，見 744670b、da34211）。第二類（#230 owner 衝突）：須查證為不同實體、無誠實中性譯名，且 JSON 無法依 mod 啟用狀態條件化；與 owner_conflict_decisions.json 的 action=unship 雙向背書，條目必帶 as1_value 與 owner_signature；ItemName 裸鍵若存在 B41 前綴孿生鍵，兩者必須一起抑制。",
+ "_rule": "登記前先分類。第一類（檔名不可載入／落點不明）：必須先試著指認 mod；Workshop 搜尋端點查『內部 id』 https://steamcommunity.com/workshop/browse/?appid=108600&searchtext=<內部id> ——鍵名前綴多半是內部 id 而非顯示名，語意搜尋常找不到。能指認 mod 就該補正確鍵，不能把本檔當丟棄場（BarrEx／Super Bulldozer／Last Cup Coffee 都曾因此救回，見 744670b、da34211）。第二類（#230 owner 衝突）：須查證為不同實體、無誠實中性譯名，且 JSON 無法依 mod 啟用狀態條件化；與 owner_conflict_decisions.json 的 action=unship 雙向背書，條目必帶 as1_value 與 owner_signature；ItemName 裸鍵若存在 B41 前綴孿生鍵，兩者必須一起抑制。 第三類（原版選項鍵歸本體翻譯包）：原版 Lua 查表、原版未定義、由 CatLangFor42 負責譯名的鍵；不需 owner 背書，條目帶 as1_value 錨點與使用者裁決日期。",
  "entries": {
   "IG_UI.json|IGUI_VehicleNamefhq240SXCabrio": {
    "as1_value": "日产240SX 敞篷版 (S13)",
@@ -1440,6 +1440,30 @@
    "as1_value": "虚拟物品",
    "owner_signature": "b8ae8e76719471ea",
    "reason": "2026-09-17 #530 裁決不出貨：同一 Workshop 項目（3722134990）底下兩個**互斥**的 mod 把同一鍵當成語意無關的兩種標籤，沒有對雙方都成立的中文值。mod.info 實據：GunsOfMarz（id=GunsOfMarz、incompatible=…,MarzGuns）與 GunsOfMarzPreviousVersion（id=MarzGuns、name=\"Guns of Marz (Old Version)\"、incompatible=…,GunsOfMarz），兩者互斥但都是有效可訂閱啟用的 mod root（有效分支皆 42.16+common）。玩家可見性已查證：MarzGuns.FakeItem 的 script 沒有 DisplayName（scripts/MarzWeapons/items/generic.txt 的 item FakeItem { DisplayCategory = Junk, ItemType = base:normal }），顯示名完全由 ItemName.json 提供，而它是所有武器零件的 MountOn 錨點，其顯示名會經 zombie/inventory/types/WeaponPart.java:65（42.20.4 反編譯）以 Translator.getText(\"Tooltip_weapon_CanBeMountOn\")（本體 CH=「可以裝在」）＋mountOnDisplayName 印在零件 tooltip，故**確證玩家可見**、不屬 untranslatable_keys 的內部佔位物類別。衝突本體：現行版把 FakeItem 的顯示名改成分類標籤 \"Rifles and Shotguns\"；舊版的同鍵仍是內部佔位名 \"Fake Item\"，而 \"Rifles and Shotguns\" 在舊版是**另一個鍵** MarzGuns.FakeItemRifles（另有 FakeItemPistols=\"Pistols and Revolvers\"、FakeItemRails=\"Picatinny Rails, AK Mounts, and Integrated Rails\"）。因此任一單值都會出錯：填「步槍和霰彈槍」會在舊版把 FakeItem 與仍在出貨的 FakeItemRifles 壓成同一字串，且舊版該錨點同時掛 Slide（手槍滑套）、Cylinder／Hammer（左輪零件）與刺刀等非長槍零件；沿用現行的「虛擬物品」則與現行版上游刻意改成的分類標籤相違，等於把上游已淘汰的內部名字固定給玩家看。JSON 全域字串表無法依 mod 啟用狀態條件化。抑制成本已查證為最低：兩個 owner 的 en_source 皆為可載入的 ItemName.json（has_json_en 皆 true），抑制後各版玩家看到自己 mod 的英文而非字面鍵名。B41 前綴孿生鍵 ItemName_MarzGuns.FakeItem 不存在於 census、dist、sources/ch 或 As1 CN 樹，故 unshipped_keys 只需登記裸鍵一條，verify [15] 不受影響。as1_value 取抑制前有效 CN 值「虚拟物品」（sources/mods/3722134990/CN/ItemName.json）；真相層（As1 CN 與 sources/ch 的「虛擬物品」）依分層原則原樣保留。"
+  },
+  "IG_UI.json|IGUI_MapOption_Buildings": {
+   "as1_value": "建筑",
+   "reason": "2026-09-24 使用者裁決不出貨（第三類：原版選項鍵歸本體翻譯包）：`IGUI_MapOption_<選項>` 由原版 ISMiniMap.lua:50／ISWorldMap.lua:70 以 getTextOrNull 查、原版本身未定義；來源 Minimap Style Options（3526517370）只是替原版選項補譯，並非該 MOD 自有文字。譯名統一由 CatLangFor42（本體翻譯包）負責，MiniMap 自身備援與之同字；本包不再出貨，避免三包互蓋與「等距縮放」誤譯。"
+  },
+  "IG_UI.json|IGUI_MapOption_DetailedSymbols": {
+   "as1_value": "扩展标记",
+   "reason": "2026-09-24 使用者裁決不出貨（第三類：原版選項鍵歸本體翻譯包）：`IGUI_MapOption_<選項>` 由原版 ISMiniMap.lua:50／ISWorldMap.lua:70 以 getTextOrNull 查、原版本身未定義；來源 Minimap Style Options（3526517370）只是替原版選項補譯，並非該 MOD 自有文字。譯名統一由 CatLangFor42（本體翻譯包）負責，MiniMap 自身備援與之同字；本包不再出貨，避免三包互蓋與「等距縮放」誤譯。"
+  },
+  "IG_UI.json|IGUI_MapOption_InfiniteZoom": {
+   "as1_value": "无限缩放",
+   "reason": "2026-09-24 使用者裁決不出貨（第三類：原版選項鍵歸本體翻譯包）：`IGUI_MapOption_<選項>` 由原版 ISMiniMap.lua:50／ISWorldMap.lua:70 以 getTextOrNull 查、原版本身未定義；來源 Minimap Style Options（3526517370）只是替原版選項補譯，並非該 MOD 自有文字。譯名統一由 CatLangFor42（本體翻譯包）負責，MiniMap 自身備援與之同字；本包不再出貨，避免三包互蓋與「等距縮放」誤譯。"
+  },
+  "IG_UI.json|IGUI_MapOption_Isometric": {
+   "as1_value": "等距缩放",
+   "reason": "2026-09-24 使用者裁決不出貨（第三類：原版選項鍵歸本體翻譯包）：`IGUI_MapOption_<選項>` 由原版 ISMiniMap.lua:50／ISWorldMap.lua:70 以 getTextOrNull 查、原版本身未定義；來源 Minimap Style Options（3526517370）只是替原版選項補譯，並非該 MOD 自有文字。譯名統一由 CatLangFor42（本體翻譯包）負責，MiniMap 自身備援與之同字；本包不再出貨，避免三包互蓋與「等距縮放」誤譯。"
+  },
+  "IG_UI.json|IGUI_MapOption_MiniMapSymbols": {
+   "as1_value": "简化标记",
+   "reason": "2026-09-24 使用者裁決不出貨（第三類：原版選項鍵歸本體翻譯包）：`IGUI_MapOption_<選項>` 由原版 ISMiniMap.lua:50／ISWorldMap.lua:70 以 getTextOrNull 查、原版本身未定義；來源 Minimap Style Options（3526517370）只是替原版選項補譯，並非該 MOD 自有文字。譯名統一由 CatLangFor42（本體翻譯包）負責，MiniMap 自身備援與之同字；本包不再出貨，避免三包互蓋與「等距縮放」誤譯。"
+  },
+  "IG_UI.json|IGUI_MapOption_RemoteSymbols": {
+   "as1_value": "远程标记",
+   "reason": "2026-09-24 使用者裁決不出貨（第三類：原版選項鍵歸本體翻譯包）：`IGUI_MapOption_<選項>` 由原版 ISMiniMap.lua:50／ISWorldMap.lua:70 以 getTextOrNull 查、原版本身未定義；來源 Minimap Style Options（3526517370）只是替原版選項補譯，並非該 MOD 自有文字。譯名統一由 CatLangFor42（本體翻譯包）負責，MiniMap 自身備援與之同字；本包不再出貨，避免三包互蓋與「等距縮放」誤譯。"
   }
  }
 }
