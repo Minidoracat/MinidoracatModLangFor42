@@ -4,6 +4,25 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- 補齊 6 個 MOD 新增或缺漏的繁簡中文，共 285 項：Modern Firearms System（#578）、TT_PowerPlant 電廠（#576）、ExtractionMode（#574）、Helicopter Event Expansion Framework（#579）、ExactMinuteClock（#573）、AbuelitaLinda（#577）。
+
+### Changed
+
+- 依上游英文改值重譯 157 項，主要是 Modern Firearms System 的交易介面（上游對調了買賣按鈕）、14.5mm 彈藥、槍械與配件名稱、生成機率選項，另含 Helicopter Event Expansion Framework 7 項與 ExtractionMode 1 項。
+  > 技術要點：As1 衍生層 142 鍵改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點），own 層 15 鍵連同 `en` 錨點更新；皆登記 `ch_review_state`。
+
+### Removed
+
+- 移除 Modern Firearms System 上游已刪除的 15 個介面／沙盒／提示翻譯鍵。
+
+### Fixed
+
+- 追蹤器不再把「原本有語料、這次抽出 0 筆」當成上游全刪：自動排程改判為下載殘缺、不推進狀態（#575 Frockin Splendor! Vol.6 的 1,050 筆曾因此被清空，已還原）。
+
 ## [42.20.4-1.28.1] - 2026-09-24
 
 ### Changed

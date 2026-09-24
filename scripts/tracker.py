@@ -13,7 +13,7 @@ tracker.py — MinidoracatModLangFor42 雙上游追蹤器（PZ B42 如一模組�
   * 純標準函式庫（urllib / subprocess / hashlib）→ 供 `uv run scripts/tracker.py` 直接執行，CI 免裝依賴。
   * API client 免 key 為主（研究實證端點無 key 參數）；STEAM_API_KEY 為設定選項、非 429 解藥（附加而已）。
   * 交易順序：取數 → diff → 開/更 issue → 最後 commit 成功子集 state；--dry-run 保證零 issue 零 commit。
-  * 核心邏輯（diff / issue 冪等 / git 重試）皆以可注入依賴實作，供內建 self-test 十六情境 mock 驗證。
+  * 核心邏輯（diff / issue 冪等 / git 重試）皆以可注入依賴實作，供內建 self-test 十七情境 mock 驗證。
 
 命令（uv run scripts/tracker.py <命令>）：
   gen-watchlist  由 sources/mods/*/metadata.json ∪ sources/mod_registry.json active 生成 tracker-state/watchlist.json（固定含 As1；支持清單或 registry 變動後重跑）
@@ -22,7 +22,7 @@ tracker.py — MinidoracatModLangFor42 雙上游追蹤器（PZ B42 如一模組�
   check          僅打 API 查時間戳，寫 changed 清單 artifact（workflow check job；無寫權限）
   diff           讀 changed，下載+裁剪+抽取+diff，寫 diffs artifact（workflow download job；無 GitHub 權限）
   issue          讀 diffs，列 open issue 冪等開/更，commit 成功子集 state（workflow issue+state job）
-  self-test      內建十六情境 mock 測試
+  self-test      內建十七情境 mock 測試
 """
 from __future__ import annotations
 
@@ -1908,6 +1908,14 @@ def _diff_changed(changed, watchlist, steamcmd, install_dir, corpus_state, attri
             else:
                 new_records = extract_corpus(item_dir, "EN")
                 mod_ids = items.get(wid, {}).get("mod_ids", [])
+                old_recs = (corpus_state.get("mods", {}).get(wid) or {}).get("records")
+                if not new_records and isinstance(old_recs, dict) and old_recs:
+                    # 非空→空＝幾乎必是下載殘缺（#575：200MB 的 mod 抽出 0 筆、隔日重抽 1050 筆一字不差）。
+                    # 自動排程不推進；上游真的全刪時由人工 `backfill-en --only <wid> --force` 確認後落地。
+                    print(f"  ⚠️ 既有 {len(old_recs)} 筆語料這次抽取為空，疑下載殘缺，跳過（不推進狀態）：{wid}",
+                          file=sys.stderr)
+                    failed_ids.append(wid)
+                    continue
                 plan, new_state = build_layer_a_plan(wid, mod_ids, new_records, corpus_state, attribution)
                 if not new_records:
                     # 下載成功但無可抽取文本（如僅 B41 .txt 格式的模組）＝合法空語料：
@@ -2742,11 +2750,11 @@ def cmd_backfill_en(args) -> int:
 
 
 # ============================================================
-# 命令：self-test（十六情境 mock 測試，assert-based）
+# 命令：self-test（十七情境 mock 測試，assert-based）
 # ============================================================
 def cmd_self_test() -> int:
     print("=" * 60)
-    print("self-test：十六情境 mock 測試")
+    print("self-test：十七情境 mock 測試")
     print("=" * 60)
 
     def rec(kind, rel, key, val):
@@ -3488,7 +3496,24 @@ def cmd_self_test() -> int:
         assert not out3.exists(), "情境16：非法 registry 竟寫出了 watchlist"
     print("  ✅ 情境16 watchlist canonical union＋runtime freshness（active/retired/identity 漂移皆 fail-closed）")
 
-    print("\n✅ self-test 十六情境全通過。")
+    # 情境 17：既有非空語料抽取為空＝疑下載殘缺，不得推進（#575：1050 筆被一輪空下載清成空 baseline）
+    g = globals()
+    saved = {n: g[n] for n in ("steamcmd_download", "trim_download", "extract_corpus")}
+    try:
+        g["steamcmd_download"] = lambda *a, **k: Path(".")
+        g["trim_download"] = lambda *a, **k: None
+        g["extract_corpus"] = lambda *a, **k: []
+        st17 = {"mods": {"555": {"extractor_schema": EXTRACTOR_SCHEMA, "records": {"r": "h"}},
+                         "556": {"extractor_schema": EXTRACTOR_SCHEMA, "records": {}, "empty_corpus": True}}}
+        wl17 = {"items": {"555": {"mod_ids": ["M"]}, "556": {"mod_ids": ["N"]}}}
+        p17, ok17, cu17, f17, _ = _diff_changed(["555", "556"], wl17, None, None, st17, set())
+        assert f17 == ["555"] and "555" not in cu17 and not p17, "情境17：非空→空竟被當合法空語料推進"
+        assert ok17 == ["556"] and cu17["556"].get("empty_corpus"), "情境17：既有空 baseline 應照常推進"
+    finally:
+        g.update(saved)
+    print("  ✅ 情境17 既有非空語料抽取為空 → 視為下載殘缺、不推進")
+
+    print("\n✅ self-test 十七情境全通過。")
     return 0
 
 
@@ -3503,7 +3528,7 @@ def main() -> None:
 使用範例：
   uv run scripts/tracker.py gen-watchlist          # 由 sources/mods ∪ mod_registry active 生成 watchlist.json（含 As1）
   uv run scripts/tracker.py --dry-run --limit 5    # 真打 API 查 5 個時間戳，不下載/不開 issue
-  uv run scripts/tracker.py self-test              # 十六情境 mock 測試
+  uv run scripts/tracker.py self-test              # 十七情境 mock 測試
   uv run scripts/tracker.py check  --out c.json    # workflow check job
   uv run scripts/tracker.py diff   --in c.json --out d.json --steamcmd <path>
   uv run scripts/tracker.py issue  --in d.json     # workflow issue+state job

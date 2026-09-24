@@ -26824,5 +26824,715 @@
     "as1_value": "拥抱弗恩之道! <br>弗恩厌恶枪械以及与之相关的一切.",
     "value": "拥抱弗恩之道! <br>弗恩厌恶枪械以及与之相关的一切. <br>[无法获得瞄准与装填经验]",
     "reason": "上游改文：EN 在句尾新增 '<br>[Cannot gain experience in Aiming or Reloading]'，前半字句與舊版逐字相同，故只補譯新增段、保留既有譯文（CH 的人名沿用既有「維恩」、CN 沿用 As1 的「弗恩」，本次不動人名以免與同 mod 的 UI_trait_Vern 名稱鍵分歧）。Aiming/Reloading 依本體官方 IGUI_perks_Aiming「瞄準/瞄准」、IGUI_perks_Reloading「裝填/装填」。本鍵為 As1 lane（attribution_index=['3256482412']，sources/mods/3256482412/CN/UI.json 有值）：CH 改 sources/ch/UI.json；CN 走 cn_overrides.json，as1_value 錨點＝\"拥抱弗恩之道! <br>弗恩厌恶枪械以及与之相关的一切.\"；另因 registry 背書 gate，須於 ch_review_state.json 新增 UI.json|UI_trait_VernDesc＝3a7a4bfda3d314eb（新有效 CN 值 sha256[:16]）。同 wid 兩個子模組（HephasOccupationsAndTraits 與 _WithVanillaProfessions）EN 完全相同，單一鍵即涵蓋兩者。"
+  },
+  "ItemName.json|Base.minigun_cat": {
+    "as1_value": "M134 火神炮",
+    "value": "M134 火神炮 (9mm)",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "ItemName.json|Base.145Carton": {
+    "as1_value": ".145 子弹 (整箱)",
+    "value": "14.5mm 子弹 (整箱)",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "ItemName.json|Base.Bullets145": {
+    "as1_value": ".145 重型子弹",
+    "value": "14.5mm 重型子弹",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "ItemName.json|Base.Bullets145Box": {
+    "as1_value": ".145 子弹 (整盒)",
+    "value": "14.5mm 子弹 (整盒)",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "ItemName.json|Base.Bullets145Clip": {
+    "as1_value": ".145 5 发弹匣",
+    "value": "14.5mm 5 发弹匣",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "ItemName.json|Base.GrenadeAmmoClip": {
+    "as1_value": "5 发榴弹弹匣",
+    "value": "5 发 40mm 榴弹弹匣",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "ItemName.json|Base.M500_cat": {
+    "as1_value": "史密斯-韦森 M500 左轮手枪",
+    "value": "史密斯-韦森 M500 超级左轮手枪",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "ItemName.json|Base.Requiem_cat": {
+    "as1_value": "安魂曲反器材步枪",
+    "value": "安魂曲重型左轮手枪",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "ItemName.json|Gunpart.ar15Stock": {
+    "as1_value": "R15 枪托",
+    "value": "Magpul MOE 枪托 (FDE)",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Recipes.json|MFS_Adapt_RedDot_To_ACOG_RU": {
+    "as1_value": "将红点瞄准镜改装为 ACOG RU",
+    "value": "将红点瞄准镜改装为 552 全息战斗瞄具",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Recipes.json|MFS_Restore_ACOG_RU_To_RedDot": {
+    "as1_value": "将 ACOG RU 还原为红点瞄准镜",
+    "value": "将 552 全息战斗瞄具还原为红点瞄准镜",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Recipes.json|OpenBoxOf145": {
+    "as1_value": "打开 .145 弹药盒 (20 发)",
+    "value": "打开 14.5mm 弹药盒 (20 发)",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_56S_cat_Spawn": {
+    "as1_value": "56 式半自动刷新几率",
+    "value": "56 式半自动刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_98k_cat_Spawn": {
+    "as1_value": "Kar98k 刷新几率",
+    "value": "Kar98k 刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_AA12_cat_Spawn": {
+    "as1_value": "AA12 全自动霰弹枪刷新几率",
+    "value": "AA12 全自动霰弹枪刷新几率 [12 号]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_AEK971_cat_Spawn": {
+    "as1_value": "AEK-971 刷新几率",
+    "value": "AEK-971 刷新几率 [5.45mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_AK103_cat_Spawn": {
+    "as1_value": "AK-103 刷新几率",
+    "value": "AK-103 刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_AK12_cat_Spawn": {
+    "as1_value": "AK-12 刷新几率",
+    "value": "AK-12 刷新几率 [5.45mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_AKS74U_cat_Spawn": {
+    "as1_value": "AKS-74U 刷新几率",
+    "value": "AKS-74U 刷新几率 [5.45mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_AMB17_cat_Spawn": {
+    "as1_value": "AMB-17 噩梦刷新几率",
+    "value": "AMB-17 噩梦刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_AN94_cat_Spawn": {
+    "as1_value": "AN-94 刷新几率",
+    "value": "AN-94 刷新几率 [5.45mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_ARX200_cat_Spawn": {
+    "as1_value": "伯莱塔 ARX200 刷新几率",
+    "value": "伯莱塔 ARX200 刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_AS_VAL_MOD4_cat_Spawn": {
+    "as1_value": "AS Val MOD4 刷新几率",
+    "value": "AS Val MOD4 刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_AS_VAL_cat_Spawn": {
+    "as1_value": "AS Val 消音步枪刷新几率",
+    "value": "AS Val 消音步枪刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_AWM_cat_Spawn": {
+    "as1_value": "AWM 马格南狙击刷新几率",
+    "value": "AWM 马格南狙击刷新几率 [.44 马格南]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_AX50_cat_Spawn": {
+    "as1_value": "精密国际 AX50 刷新几率",
+    "value": "精密国际 AX50 刷新几率 [.50 BMG]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Anaconda_cat_Spawn": {
+    "as1_value": "柯尔特蟒蛇刷新几率",
+    "value": "柯尔特蟒蛇刷新几率 [.44 马格南]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_AssaultRifle2_Spawn": {
+    "as1_value": "M14 战斗步枪刷新几率",
+    "value": "M14 战斗步枪刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_AssaultRifle_Spawn": {
+    "as1_value": "M16 自动步枪刷新几率",
+    "value": "原版 M16 自动步枪刷新几率 [5.56mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_BAR_cat_Spawn": {
+    "as1_value": "勃朗宁自动步枪刷新几率",
+    "value": "勃朗宁自动步枪刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_BRAuto5_cat_Spawn": {
+    "as1_value": "BRAuto5 半自动霰弹枪刷新几率",
+    "value": "BRAuto5 半自动霰弹枪刷新几率 [12 号]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_BerettaM93R_cat_Spawn": {
+    "as1_value": "伯莱塔 M93R 全自动手枪刷新几率",
+    "value": "伯莱塔 M93R 全自动手枪刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Berthier_cat_Spawn": {
+    "as1_value": "贝蒂埃步兵步枪刷新几率",
+    "value": "贝蒂埃步兵步枪刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_C96_cat_Spawn": {
+    "as1_value": "毛瑟 C96 手枪刷新几率",
+    "value": "毛瑟 C96 手枪刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_ChiappaTripleThreat_cat_Spawn": {
+    "as1_value": "三管霰弹枪刷新几率",
+    "value": "三管霰弹枪刷新几率 [12 号]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Christine45_cat_Spawn": {
+    "as1_value": "克里斯汀 .45-70 精准射手刷新几率",
+    "value": "克里斯汀 .45-70 精准射手刷新几率 [.45 ACP]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_DP12_cat_Spawn": {
+    "as1_value": "DP-12 泵动霰弹枪刷新几率",
+    "value": "DP-12 泵动霰弹枪刷新几率 [12 号]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_DoubleBarrelShotgun_Spawn": {
+    "as1_value": "原版双管霰弹枪刷新几率",
+    "value": "原版双管霰弹枪刷新几率 [12 号]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_EMP_cat_Spawn": {
+    "as1_value": "埃尔玛 EMP 冲锋枪刷新几率",
+    "value": "埃尔玛 EMP 冲锋枪刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_FAL_cat_Spawn": {
+    "as1_value": "赫斯塔尔 FAL 精准射手刷新几率",
+    "value": "赫斯塔尔 FAL 精准射手刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_FN57_cat_Spawn": {
+    "as1_value": "赫斯塔尔 Five-seveN 刷新几率",
+    "value": "赫斯塔尔 Five-seveN 刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_FN_Evolys_cat_Spawn": {
+    "as1_value": "赫斯塔尔 Evolys 轻机枪刷新几率",
+    "value": "赫斯塔尔 Evolys 轻机枪刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_G17_cat_Spawn": {
+    "as1_value": "格洛克 17 刷新几率",
+    "value": "格洛克 17 刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_G18_cat_Spawn": {
+    "as1_value": "格洛克 18 全自动刷新几率",
+    "value": "格洛克 18 全自动刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_G19_cat_Spawn": {
+    "as1_value": "格洛克 19 刷新几率",
+    "value": "格洛克 19 刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_G34_cat_Spawn": {
+    "as1_value": "格洛克 34 竞赛刷新几率",
+    "value": "格洛克 34 竞赛刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_GM6_cat_Spawn": {
+    "as1_value": "GM6 反器材刷新几率",
+    "value": "GM6 反器材刷新几率 [.50 BMG]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Groza_cat_Spawn": {
+    "as1_value": "雷暴刷新几率",
+    "value": "雷暴刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_HK416_cat_Spawn": {
+    "as1_value": "HK416 刷新几率",
+    "value": "HK416 刷新几率 [5.56mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_HK51_cat_Spawn": {
+    "as1_value": "HK51 冲锋枪刷新几率",
+    "value": "HK51 冲锋枪刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_HoneyBadger_cat_Spawn": {
+    "as1_value": "蜜獾步枪刷新几率",
+    "value": "蜜獾步枪刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_HuntingRifle_Spawn": {
+    "as1_value": "原版狩猎步枪刷新几率",
+    "value": "雷明顿 MSR 刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_JS14_Rifle_Spawn": {
+    "as1_value": "原版 JS-14 步枪刷新几率",
+    "value": "原版 JS-14 步枪刷新几率 [5.56mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_JS3T_Shotgun_Spawn": {
+    "as1_value": "原版 JS-3T 霰弹枪刷新几率",
+    "value": "原版 JS-3T 霰弹枪刷新几率 [12 号]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_KS1_KAC_cat_Spawn": {
+    "as1_value": "KS1-KAC 定制自动步枪刷新几率",
+    "value": "KS1-KAC 定制自动步枪刷新几率 [5.56mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_KrissVector_cat_Spawn": {
+    "as1_value": "Kriss Vector 冲锋枪刷新几率",
+    "value": "Kriss Vector 冲锋枪刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_L92_Carbine_Spawn": {
+    "as1_value": "原版 L-92 卡宾枪刷新几率",
+    "value": "原版 L-92 卡宾枪刷新几率 [.357]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_L94_Rifle_Spawn": {
+    "as1_value": "原版 L-94 步枪刷新几率",
+    "value": "原版 L-94 步枪刷新几率 [.30-30]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_LWMMG_cat_Spawn": {
+    "as1_value": "LWMMG 中型机枪刷新几率",
+    "value": "LWMMG 中型机枪刷新几率 [8.6mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_LebelM1886_cat_Spawn": {
+    "as1_value": "勒贝尔 M1886 刷新几率",
+    "value": "勒贝尔 M1886 刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M14_Albedo_Spawn": {
+    "as1_value": "M14 阿尔贝多半自动刷新几率",
+    "value": "M14 阿尔贝多半自动刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M1866_cat_Spawn": {
+    "as1_value": "M1866 杠杆步枪刷新几率",
+    "value": "M1866 杠杆步枪刷新几率 [.44 马格南]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M1873_cat_Spawn": {
+    "as1_value": "柯尔特和平缔造者 M1873 刷新几率",
+    "value": "柯尔特和平缔造者 M1873 刷新几率 [.45 ACP]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M1887_cat_Spawn": {
+    "as1_value": "M1887 杠杆霰弹枪刷新几率",
+    "value": "M1887 杠杆霰弹枪刷新几率 [12 号]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M1918_cat_Spawn": {
+    "as1_value": "现代化 M1918 勃朗宁自动步枪刷新几率",
+    "value": "现代化 M1918 勃朗宁自动步枪刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M1919a6_cat_Spawn": {
+    "as1_value": "M1919A6 机枪刷新几率",
+    "value": "M1919A6 机枪刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M1Garand_cat_Spawn": {
+    "as1_value": "M1 加兰德刷新几率",
+    "value": "M1 加兰德刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M200_cat_Spawn": {
+    "as1_value": "夏伊泰克 M200 刷新几率",
+    "value": "夏伊泰克 M200 刷新几率 [.44 马格南]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M240_cat_Spawn": {
+    "as1_value": "M240 通用机枪刷新几率",
+    "value": "M240 通用机枪刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M4A1S_cat_Spawn": {
+    "as1_value": "M4A1-S 刷新几率",
+    "value": "M4A1-S 刷新几率 [5.56mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M4Mk18_cat_Spawn": {
+    "as1_value": "M4 MK18 刷新几率",
+    "value": "M4 MK18 刷新几率 [5.56mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M500_cat_Spawn": {
+    "as1_value": "莫斯伯格 500 左轮手枪刷新几率",
+    "value": "莫斯伯格 500 左轮手枪刷新几率 [.44 马格南]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M7_cat_Spawn": {
+    "as1_value": "M7 自动步枪刷新几率",
+    "value": "M7 自动步枪刷新几率 [.38]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M82_cat_Spawn": {
+    "as1_value": "巴雷特 M82 刷新几率",
+    "value": "巴雷特 M82 刷新几率 [.50 BMG]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M870_cat_Spawn": {
+    "as1_value": "雷明顿 870 刷新几率",
+    "value": "雷明顿 870 刷新几率 [12 号]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M91_cat_Spawn": {
+    "as1_value": "HK121 通用机枪刷新几率",
+    "value": "HK121 通用机枪刷新几率 [5.56mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_M9A4_cat_Spawn": {
+    "as1_value": "伯莱塔 M9A4 刷新几率",
+    "value": "伯莱塔 M9A4 刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_MCX_cat_Spawn": {
+    "as1_value": "西格 MCX 刷新几率",
+    "value": "西格 MCX 刷新几率 [5.56mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_MK12_cat_Spawn": {
+    "as1_value": "MK12 特种用途步枪刷新几率",
+    "value": "MK12 特种用途步枪刷新几率 [5.56mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_MK18_cat_Spawn": {
+    "as1_value": "MK18 雷神之锤刷新几率",
+    "value": "MK18 雷神之锤刷新几率 [8.6mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_MP7_cat_Spawn": {
+    "as1_value": "黑克勒-科赫 MP7 个人防卫武器刷新几率",
+    "value": "黑克勒-科赫 MP7 个人防卫武器刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_MSR7T_Rifle_Spawn": {
+    "as1_value": "原版 MSR7T 步枪刷新几率",
+    "value": "原版 MSR-7T 战术步枪刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Marlin1894_Spawn": {
+    "as1_value": "马林 1894 杠杆步枪刷新几率",
+    "value": "马林 1894 杠杆步枪刷新几率 [.44 马格南]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Minigun_cat_Spawn": {
+    "as1_value": "转管火神炮刷新几率",
+    "value": "转管火神炮刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Mosin_Nagant_cat_Spawn": {
+    "as1_value": "莫辛-纳甘刷新几率",
+    "value": "莫辛-纳甘刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_NoveskeN4_cat_Spawn": {
+    "as1_value": "诺维斯克 N4 刷新几率",
+    "value": "诺维斯克 N4 刷新几率 [5.56mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_PKM_cat_Spawn": {
+    "as1_value": "PKM 通用机枪刷新几率",
+    "value": "PKM 通用机枪刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Pistol2_Spawn": {
+    "as1_value": "M1911 手枪刷新几率",
+    "value": "M1911 手枪刷新几率 [.45 ACP]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Pistol3_Spawn": {
+    "as1_value": "沙漠之鹰刷新几率",
+    "value": "沙漠之鹰刷新几率 [.44 马格南]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Pistol_Spawn": {
+    "as1_value": "M9 手枪刷新几率",
+    "value": "M9 手枪刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_QBU191_cat_Spawn": {
+    "as1_value": "QBU-191 精准射手刷新几率",
+    "value": "QBU-191 精准射手刷新几率 [5.8mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_QBZ191_cat_Spawn": {
+    "as1_value": "QBZ-191 刷新几率",
+    "value": "QBZ-191 刷新几率 [5.8mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_QBZ192_cat_Spawn": {
+    "as1_value": "QBZ-192 紧凑型刷新几率",
+    "value": "QBZ-192 紧凑型刷新几率 [5.8mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_QJY201_cat_Spawn": {
+    "as1_value": "QJY201 机枪刷新几率",
+    "value": "QJY201 机枪刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_QSZ_92G_Spawn": {
+    "as1_value": "QSZ-92G 手枪刷新几率",
+    "value": "QSZ-92G 手枪刷新几率 [5.8mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_REAPR_cat_Spawn": {
+    "as1_value": "REAPR 通用机枪刷新几率",
+    "value": "REAPR 通用机枪刷新几率 [8.6mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_ROSE_cat_Spawn": {
+    "as1_value": "玫瑰狙击步枪刷新几率",
+    "value": "玫瑰狙击步枪刷新几率 [.44 马格南]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_RPK16_cat_Spawn": {
+    "as1_value": "RPK-16 轻机枪刷新几率",
+    "value": "RPK-16 轻机枪刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_RSC_cat_Spawn": {
+    "as1_value": "RSC 步兵步枪刷新几率",
+    "value": "RSC 步兵步枪刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Requiem_cat_Spawn": {
+    "as1_value": "安魂曲大口径手枪刷新几率",
+    "value": "安魂曲大口径手枪刷新几率 [.50 BMG]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Revolver_Long_Spawn": {
+    "as1_value": "原版长管左轮手枪刷新几率",
+    "value": "原版长管左轮手枪刷新几率 [.44 马格南]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Revolver_Spawn": {
+    "as1_value": "原版左轮手枪刷新几率",
+    "value": "原版左轮手枪刷新几率 [.44 马格南]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_SAI_GRY_cat_Spawn": {
+    "as1_value": "SAI-GRY 刷新几率",
+    "value": "SAI-GRY 刷新几率 [5.56mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_SG553_cat_Spawn": {
+    "as1_value": "SG553 刷新几率",
+    "value": "SG553 刷新几率 [5.56mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_SIGP226_cat_Spawn": {
+    "as1_value": "西格-绍尔 P226 刷新几率",
+    "value": "西格-绍尔 P226 刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_SRM3_cat_Spawn": {
+    "as1_value": "SRM3 刷新几率",
+    "value": "SRM3 刷新几率 [.45 ACP]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_SVD_cat_Spawn": {
+    "as1_value": "SVD 德拉贡诺夫刷新几率",
+    "value": "SVD 德拉贡诺夫刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_SVT40_cat_Spawn": {
+    "as1_value": "SVT-40 刷新几率",
+    "value": "SVT-40 刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Saiga12_cat_Spawn": {
+    "as1_value": "赛加-12 刷新几率",
+    "value": "赛加-12 刷新几率 [12 号]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_ScarH_cat_Spawn": {
+    "as1_value": "SCAR-H 刷新几率",
+    "value": "SCAR-H 刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_ShotgunSawnoff_Spawn": {
+    "as1_value": "原版锯短双管霰弹枪刷新几率",
+    "value": "原版锯短双管霰弹枪刷新几率 [12 号]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Shotgun_Spawn": {
+    "as1_value": "原版泵动霰弹枪刷新几率",
+    "value": "原版泵动霰弹枪刷新几率 [12 号]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_SnipeX_T_Rex_cat_Spawn": {
+    "as1_value": "暴龙反器材刷新几率",
+    "value": "暴龙反器材刷新几率 [14.5mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Striker12_cat_Spawn": {
+    "as1_value": "Striker 12 刷新几率",
+    "value": "Striker 12 刷新几率 [12 号]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_TTI_Benelli_M4_cat_Spawn": {
+    "as1_value": "TTI 伯奈利 M4 刷新几率",
+    "value": "TTI 伯奈利 M4 刷新几率 [12 号]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Taran2011_cat_Spawn": {
+    "as1_value": "塔兰战术 2011 刷新几率",
+    "value": "塔兰战术 2011 刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Taurus_cat_Spawn": {
+    "as1_value": "陶鲁斯左轮手枪刷新几率",
+    "value": "陶鲁斯左轮手枪刷新几率 [.44 马格南]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Thompson_cat_Spawn": {
+    "as1_value": "汤普森冲锋枪刷新几率",
+    "value": "汤普森冲锋枪刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Thoridal_Spawn": {
+    "as1_value": "索利达尔刷新几率",
+    "value": "索利达尔刷新几率 [.50 BMG]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_TrapperCarbine_Spawn": {
+    "as1_value": "原版捕猎卡宾枪刷新几率",
+    "value": "原版捕猎卡宾枪刷新几率 [.45 ACP]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Type81_cat_Spawn": {
+    "as1_value": "81 式刷新几率",
+    "value": "81 式刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_UMP45_cat_Spawn": {
+    "as1_value": "UMP45 冲锋枪刷新几率",
+    "value": "UMP45 冲锋枪刷新几率 [.45 ACP]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_URG_S_cat_Spawn": {
+    "as1_value": "URG-S 刷新几率",
+    "value": "URG-S 刷新几率 [5.56mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_UTS15_cat_Spawn": {
+    "as1_value": "UTS-15 无托霰弹枪刷新几率",
+    "value": "UTS-15 无托霰弹枪刷新几率 [12 号]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_VSSM_cat_Spawn": {
+    "as1_value": "VSSM 消音狙击刷新几率",
+    "value": "VSSM 消音狙击刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_VarmintRifle_Spawn": {
+    "as1_value": "原版灭害步枪刷新几率",
+    "value": "原版 MSR700 步枪刷新几率 [5.56mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_XM109_cat_Spawn": {
+    "as1_value": "XM109 反器材刷新几率",
+    "value": "XM109 反器材刷新几率 [.50 BMG]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_ar_10_cat_Spawn": {
+    "as1_value": "骑士军备 M110 狙击刷新几率",
+    "value": "骑士军备 M110 狙击刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_interceptor_cat_Spawn": {
+    "as1_value": "拦截者战术弩刷新几率",
+    "value": "拦截者战术弩刷新几率 [弩箭]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_lewis_cat_Spawn": {
+    "as1_value": "刘易斯轻机枪刷新几率",
+    "value": "刘易斯轻机枪刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_lugerP08_cat_Spawn": {
+    "as1_value": "鲁格 P08 手枪刷新几率",
+    "value": "鲁格 P08 手枪刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_m1903_cat_Spawn": {
+    "as1_value": "春田 M1903 刷新几率",
+    "value": "春田 M1903 刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_mg338_cat_Spawn": {
+    "as1_value": ".338 MG338 刷新几率",
+    "value": ".338 MG338 刷新几率 [8.6mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_minigun_cat_Spawn": {
+    "as1_value": "火神炮刷新几率",
+    "value": "火神炮刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_mk47_cat_Spawn": {
+    "as1_value": "MK47 刷新几率",
+    "value": "MK47 刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_mp5_cat_Spawn": {
+    "as1_value": "MP5 冲锋枪刷新几率",
+    "value": "MP5 冲锋枪刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_origin12_cat_Spawn": {
+    "as1_value": "Origin-12 霰弹枪刷新几率",
+    "value": "Origin-12 霰弹枪刷新几率 [12 号]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_usp45_cat_Spawn": {
+    "as1_value": "USP .45 手枪刷新几率",
+    "value": "USP .45 手枪刷新几率 [.45 ACP]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_uzi_cat_Spawn": {
+    "as1_value": "乌兹冲锋枪刷新几率",
+    "value": "乌兹冲锋枪刷新几率 [9mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandbox_Gun": {
+    "as1_value": "枪械刷新率设置",
+    "value": "MFS 1 - 枪械刷新开关 (关闭即从新生成的战利品中移除该类型)",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_MagpulStock": {
+    "as1_value": "枪托<br>暴击率 +16",
+    "value": "[Gunpart.MagpulStock] 枪托<br>瞄准时间 -3<br>暴击率 +8",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_ar15Stock": {
+    "as1_value": "枪托<br>瞄准时间 -2<br>后坐力 -1<br>暴击率 +8",
+    "value": "枪托<br>瞄准时间 -2<br>后坐力 -1<br>后坐力 -2",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
   }
 }
