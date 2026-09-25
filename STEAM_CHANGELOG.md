@@ -1,15 +1,19 @@
-[h1][B42]繁體簡體模組翻譯 42.20.4-1.29.0[/h1]
-[i]2026-09-24[/i]
+[h1][B42]繁體簡體模組翻譯 42.20.4-1.30.0[/h1]
+[i]2026-09-25[/i]
 
 [h3]新增[/h3]
 [list]
-[*] 補上 6 個模組更新後新出現的中文，共 285 項：Modern Firearms System（新槍械、配件、交易與生成設定）、TT_PowerPlant 電廠介面、ExtractionMode 沙盒設定與訊息、Helicopter Event Expansion Framework、ExactMinuteClock、AbuelitaLinda。
+[*] 補上 5 個模組更新後新出現的中文，共 109 項。
+[*] Evolving Traits World：新特質「骨質脆弱」「骨骼強健」「畏寒」「喜寒」「怕熱」「喜熱」「電視迷」的名稱、說明與沙盒設定，以及戰鬥／非戰鬥特質分頁。
+[*] organizedCategories：物品釘選至頂端、重新命名物品，以及對應的模組選項。
+[*] Take A Bath And Shower：身體汙垢造成不適的三個階段設定，以及六種浴鹽的功效說明。
+[*] JeevesHordes：屍潮殭屍的服裝類型權重（平民、敵對、軍事、戶外、警察保全、生存專家）。
+[*] Simple Suppressors：消音器手冊配方的學習方式與手冊出沒地點。
 [/list]
 
 [h3]變更[/h3]
 [list]
-[*] 跟上模組作者改過的英文，重新翻譯 157 項。主要是 Modern Firearms System：14.5mm 彈藥、多把槍械與配件改名，以及各口徑的生成機率選項。
-[*] Modern Firearms System 的交易介面：作者把「買」「賣」兩顆按鈕的意思對調了，中文已跟著改，看到按鈕和以前相反是正常的。
-[*] 移除 Modern Firearms System 已經不再使用的 15 條舊介面文字。
+[*] 跟上模組作者改過的英文：Evolving Traits World 的嗜血機制改成「擊殺殭屍直接累積進度」，相關說明已重新翻譯；奔跑掉落手持物品的判定頻率說明也已更新。
+[*] Simple Suppressors 口徑轉接器的預設製作等級說明由 4 更新為 2。
 [*] 更新下載完成後，請重新啟動遊戲載入新翻譯；不需要重開存檔。
 [/list]
