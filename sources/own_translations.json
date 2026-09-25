@@ -9743,14 +9743,16 @@
     "cn": "附挂物已显示 (%1)"
    },
    "IGUI_TransmogDE_Tooltip_AttachmentHidden": {
-    "en": "Transmog: <Hidden> (while attached)",
+    "en": "Transmog: <Hidden> when Attached",
     "ch": "幻化: <已隱藏> (附掛時)",
-    "cn": "幻化: <已隐藏> (附挂时)"
+    "cn": "幻化: <已隐藏> (附挂时)",
+    "_note": "2026-09-25 #580–#586 上游改文：上游措辭微調, 語意不變"
    },
    "IGUI_TransmogDE_Tooltip_AttachmentHiddenValue": {
-    "en": "<Hidden> (while attached)",
+    "en": "<Hidden> when Attached",
     "ch": "<已隱藏> (附掛時)",
-    "cn": "<已隐藏> (附挂时)"
+    "cn": "<已隐藏> (附挂时)",
+    "_note": "2026-09-25 #580–#586 上游改文：上游措辭微調, 語意不變"
    },
    "IGUI_TransmogDE_Tooltip_Label": {
     "en": "Transmog:",
@@ -40354,6 +40356,36 @@
     "en": "YOUR HIDEOUT",
     "ch": "你的藏身點",
     "cn": "你的藏身点"
+   },
+   "IGUI_OC_PinToTop": {
+    "en": "Pin to top",
+    "ch": "釘選至頂端",
+    "cn": "置顶"
+   },
+   "IGUI_OC_RenameItem": {
+    "en": "Rename...",
+    "ch": "重新命名…",
+    "cn": "重命名…"
+   },
+   "IGUI_OC_RenameItem_hint": {
+    "en": "Leave empty to restore the original name.",
+    "ch": "留空即可還原原始名稱.",
+    "cn": "留空即可恢复原始名称."
+   },
+   "IGUI_OC_RenameItem_title": {
+    "en": "Rename item",
+    "ch": "重新命名物品",
+    "cn": "重命名物品"
+   },
+   "IGUI_OC_RenameItems_title": {
+    "en": "Rename items",
+    "ch": "重新命名物品 (多件)",
+    "cn": "重命名物品 (多件)"
+   },
+   "IGUI_OC_Unpin": {
+    "en": "Unpin",
+    "ch": "取消釘選",
+    "cn": "取消置顶"
    }
   },
   "ItemName.json": {
@@ -169915,9 +169947,10 @@
     "cn": "制作 | 口径转接器: 金属加工"
    },
    "Sandbox_SimpleSuppressors_AdapterCraftLevel_tooltip": {
-    "en": "Metalworking level needed to craft caliber adapters. Default: 4. The manual and recipe materials are still required.",
-    "ch": "製作口徑轉接器所需的金屬加工等級. 預設: 4. 仍然需要手冊與配方材料.",
-    "cn": "制作口径转接器所需的金属加工等级. 默认: 4. 仍然需要手册和配方材料."
+    "en": "Metalworking level needed to craft caliber adapters. Default: 2. The manual and recipe materials are still required.",
+    "ch": "製作口徑轉接器所需的金屬加工等級. 預設: 2. 仍然需要手冊與配方材料.",
+    "cn": "制作口径转接器所需的金属加工等级. 默认: 2. 仍然需要手册和配方材料.",
+    "_note": "2026-09-25 #580–#586 上游改文：預設等級 4→2"
    },
    "Sandbox_SimpleSuppressors_Machined12GaugeCraftLevel": {
     "en": "CRAFTING | Machined 12 Gauge: Metalworking",
@@ -171983,18 +172016,6 @@
     "ch": "負重系統",
     "cn": "负重系统",
     "_note": "上游新增沙盒選項（Sandbox_ 前綴路由至 Sandbox.json；As1 未收錄、非 vanilla、attribution_index 無其他 owner）。取代上游移除的 Sandbox_ETW_Hoarder 系列, 命名沿用既有 Sandbox_ETW_SleepSystem「睡眠系統」, Sandbox_ETW_MentalStateSystem「精神狀態系統」的 <名詞>系統 格式。"
-   },
-   "Sandbox_ETW_CarryWeightCounter": {
-    "en": "Carry Weight Progress Target",
-    "ch": "負重進度目標",
-    "cn": "负重进度目标",
-    "_note": "上游新增沙盒選項（Sandbox_ 前綴路由至 Sandbox.json；As1 未收錄、非 vanilla、attribution_index 無其他 owner）。EN 由舊 Hoarder Counter Target 改為 Carry Weight Progress Target; 沿用既有 Sandbox_ETW_IdealWeightCounter「計數器上限」同族的進度/目標用語。"
-   },
-   "Sandbox_ETW_CarryWeightCounter_tooltip": {
-    "en": "Determines the maximum Carry Weight System progress. Progress is added every in-game minute based on carried weight divided by maximum carry weight: a full inventory adds 1 point, while a half-full inventory adds 0.5 points. Lose Pack Mouse at 33%%, gain Hoarder at 66%%, and gain Pack Mule at 100%%.",
-    "ch": "決定負重系統的最大進度. 進度每個遊戲分鐘依攜帶重量除以最大負重累加: 物品欄全滿加 1 點, 半滿則加 0.5 點. 進度達 33%% 時失去背包小鼠, 66%% 時獲得倉鼠成性, 100%% 時獲得背包騾子.",
-    "cn": "决定负重系统的最大进度. 进度每个游戏分钟依携带重量除以最大负重累加: 物品栏全满加 1 点, 半满则加 0.5 点. 进度达 33%% 时失去背包小鼠, 66%% 时获得仓鼠成性, 100%% 时获得背包骡子.",
-    "_note": "上游新增沙盒選項（Sandbox_ 前綴路由至 Sandbox.json；As1 未收錄、非 vanilla、attribution_index 無其他 owner）。前兩句沿用舊 Sandbox_ETW_HoarderCounter_tooltip 的既有 CH 譯法（該鍵本批被上游移除、語意被本鍵承接）; 三個特質名採其顯示名: Pack Mouse=背包小鼠(own UI_trait_PackMouse), Hoarder=倉鼠成性/仓鼠成性(As1 UI_trait_Hoarder), Pack Mule=背包騾子/背包骡子(own UI_trait_PackMule). %% 雙百分號原樣保留。"
    },
    "Sandbox_ETW_FireTraitsEffectMultiplier": {
     "en": "Fire traits effect multiplier",
@@ -175228,6 +175249,366 @@
     "en": "Requires the Ventilation hideout upgrade.\n\nExtra tiredness recovered while sleeping in the hideout. Higher values let players recover from tiredness faster.",
     "ch": "需要通風藏身點升級.\n\n在藏身點睡覺時額外恢復的疲勞. 數值越高, 玩家從疲勞中恢復越快.",
     "cn": "需要通风藏身点升级.\n\n在藏身点睡觉时额外恢复的疲劳. 数值越高, 玩家从疲劳中恢复越快."
+   },
+   "Sandbox_ETWTS_BrittleBonesEnabled": {
+    "en": "Enable Brittle Bones",
+    "ch": "啟用骨質脆弱",
+    "cn": "启用骨质脆弱"
+   },
+   "Sandbox_ETWTS_BrittleBonesEnabled_tooltip": {
+    "en": "Controls character-creation availability.",
+    "ch": "控制此特質在角色建立時是否可選.",
+    "cn": "控制角色创建时是否可用."
+   },
+   "Sandbox_ETWTS_BrittleBonesPointValue": {
+    "en": "Brittle Bones point value",
+    "ch": "骨質脆弱點數值",
+    "cn": "骨质脆弱点数价值"
+   },
+   "Sandbox_ETWTS_BrittleBonesPointValue_tooltip": {
+    "en": "Character-creation point adjustment: negative values cost points; positive values grant points.",
+    "ch": "角色建立的點數調整: 負值消耗點數, 正值給予點數.",
+    "cn": "角色创建点数调整: 负值消耗点数; 正值给予点数."
+   },
+   "Sandbox_ETWTS_ColdAverseEnabled": {
+    "en": "Enable Cold-Averse",
+    "ch": "啟用畏寒",
+    "cn": "启用畏寒"
+   },
+   "Sandbox_ETWTS_ColdAverseEnabled_tooltip": {
+    "en": "Controls character-creation availability.",
+    "ch": "控制此特質在角色建立時是否可選.",
+    "cn": "控制角色创建时是否可用."
+   },
+   "Sandbox_ETWTS_ColdAversePointValue": {
+    "en": "Cold-Averse point value",
+    "ch": "畏寒點數值",
+    "cn": "畏寒点数价值"
+   },
+   "Sandbox_ETWTS_ColdAversePointValue_tooltip": {
+    "en": "Character-creation point adjustment: negative values cost points; positive values grant points.",
+    "ch": "角色建立的點數調整: 負值消耗點數, 正值給予點數.",
+    "cn": "角色创建点数调整: 负值消耗点数; 正值给予点数."
+   },
+   "Sandbox_ETWTS_ColdLovingEnabled": {
+    "en": "Enable Cold-Loving",
+    "ch": "啟用喜寒",
+    "cn": "启用喜寒"
+   },
+   "Sandbox_ETWTS_ColdLovingEnabled_tooltip": {
+    "en": "Controls character-creation availability.",
+    "ch": "控制此特質在角色建立時是否可選.",
+    "cn": "控制角色创建时是否可用."
+   },
+   "Sandbox_ETWTS_ColdLovingPointValue": {
+    "en": "Cold-Loving point value",
+    "ch": "喜寒點數值",
+    "cn": "喜寒点数价值"
+   },
+   "Sandbox_ETWTS_ColdLovingPointValue_tooltip": {
+    "en": "Character-creation point adjustment: negative values cost points; positive values grant points.",
+    "ch": "角色建立的點數調整: 負值消耗點數, 正值給予點數.",
+    "cn": "角色创建点数调整: 负值消耗点数; 正值给予点数."
+   },
+   "Sandbox_ETWTS_HeatAverseEnabled": {
+    "en": "Enable Heat-Averse",
+    "ch": "啟用怕熱",
+    "cn": "启用怕热"
+   },
+   "Sandbox_ETWTS_HeatAverseEnabled_tooltip": {
+    "en": "Controls character-creation availability.",
+    "ch": "控制此特質在角色建立時是否可選.",
+    "cn": "控制角色创建时是否可用."
+   },
+   "Sandbox_ETWTS_HeatAversePointValue": {
+    "en": "Heat-Averse point value",
+    "ch": "怕熱點數值",
+    "cn": "怕热点数价值"
+   },
+   "Sandbox_ETWTS_HeatAversePointValue_tooltip": {
+    "en": "Character-creation point adjustment: negative values cost points; positive values grant points.",
+    "ch": "角色建立的點數調整: 負值消耗點數, 正值給予點數.",
+    "cn": "角色创建点数调整: 负值消耗点数; 正值给予点数."
+   },
+   "Sandbox_ETWTS_HeatLovingEnabled": {
+    "en": "Enable Heat-Loving",
+    "ch": "啟用喜熱",
+    "cn": "启用喜热"
+   },
+   "Sandbox_ETWTS_HeatLovingEnabled_tooltip": {
+    "en": "Controls character-creation availability.",
+    "ch": "控制此特質在角色建立時是否可選.",
+    "cn": "控制角色创建时是否可用."
+   },
+   "Sandbox_ETWTS_HeatLovingPointValue": {
+    "en": "Heat-Loving point value",
+    "ch": "喜熱點數值",
+    "cn": "喜热点数价值"
+   },
+   "Sandbox_ETWTS_HeatLovingPointValue_tooltip": {
+    "en": "Character-creation point adjustment: negative values cost points; positive values grant points.",
+    "ch": "角色建立的點數調整: 負值消耗點數, 正值給予點數.",
+    "cn": "角色创建点数调整: 负值消耗点数; 正值给予点数."
+   },
+   "Sandbox_ETWTS_StrongBonesEnabled": {
+    "en": "Enable Strong Bones",
+    "ch": "啟用骨骼強健",
+    "cn": "启用骨骼强健"
+   },
+   "Sandbox_ETWTS_StrongBonesEnabled_tooltip": {
+    "en": "Controls character-creation availability.",
+    "ch": "控制此特質在角色建立時是否可選.",
+    "cn": "控制角色创建时是否可用."
+   },
+   "Sandbox_ETWTS_StrongBonesPointValue": {
+    "en": "Strong Bones point value",
+    "ch": "骨骼強健點數值",
+    "cn": "骨骼强健点数价值"
+   },
+   "Sandbox_ETWTS_StrongBonesPointValue_tooltip": {
+    "en": "Character-creation point adjustment: negative values cost points; positive values grant points.",
+    "ch": "角色建立的點數調整: 負值消耗點數, 正值給予點數.",
+    "cn": "角色创建点数调整: 负值消耗点数; 正值给予点数."
+   },
+   "Sandbox_ETWTS_TVJunkieEnabled": {
+    "en": "Enable TV Junkie",
+    "ch": "啟用電視迷",
+    "cn": "启用电视迷"
+   },
+   "Sandbox_ETWTS_TVJunkieEnabled_tooltip": {
+    "en": "Controls character-creation availability.",
+    "ch": "控制此特質在角色建立時是否可選.",
+    "cn": "控制角色创建时是否可用."
+   },
+   "Sandbox_ETWTS_TVJunkiePointValue": {
+    "en": "TV Junkie point value",
+    "ch": "電視迷點數值",
+    "cn": "电视迷点数价值"
+   },
+   "Sandbox_ETWTS_TVJunkiePointValue_tooltip": {
+    "en": "Character-creation point adjustment: negative values cost points; positive values grant points.",
+    "ch": "角色建立的點數調整: 負值消耗點數, 正值給予點數.",
+    "cn": "角色创建点数调整: 负值消耗点数; 正值给予点数."
+   },
+   "Sandbox_ETWSingularPerks": {
+    "en": "Evolving Traits World - Singular Perks",
+    "ch": "ETW-個別特質設定",
+    "cn": "ETW-单项特质设置"
+   },
+   "Sandbox_ETW_BloodlustDecayMultiplier": {
+    "en": "Bloodlust Progress Decay Multiplier",
+    "ch": "嗜血進度衰減倍率",
+    "cn": "饮鸩止渴进度衰减倍率"
+   },
+   "Sandbox_ETW_BloodlustDecayMultiplier_tooltip": {
+    "en": "Multiplies hourly Bloodlust progress decay. Set to 0 to disable passive decay",
+    "ch": "每小時嗜血進度衰減的倍率. 設為0可停用自然衰減",
+    "cn": "每小时饮鸩止渴进度衰减的倍率. 设为0可禁用自然衰减"
+   },
+   "Sandbox_ETW_BloodlustGainMultiplier": {
+    "en": "Bloodlust Progress Gain Multiplier",
+    "ch": "嗜血進度獲取倍率",
+    "cn": "饮鸩止渴进度获取倍率"
+   },
+   "Sandbox_ETW_BloodlustGainMultiplier_tooltip": {
+    "en": "Multiplies Bloodlust progress gained from kills and animal actions. Set to 0 to disable progress gain",
+    "ch": "擊殺與動物相關行為所獲得嗜血進度的倍率. 設為0可停用進度獲取",
+    "cn": "击杀和动物相关行为所获得饮鸩止渴进度的倍率. 设为0可禁用进度获取"
+   },
+   "Sandbox_ETW_BrittleBonesFractureTimeMultiplier": {
+    "en": "Brittle Bones fracture duration multiplier",
+    "ch": "骨質脆弱骨折持續時間倍率",
+    "cn": "骨质脆弱骨折持续时间倍率"
+   },
+   "Sandbox_ETW_BrittleBonesFractureTimeMultiplier_tooltip": {
+    "en": "Multiplies the duration of newly detected fractures on any body part. This stacks with applicable Injured and Broken Leg multipliers.",
+    "ch": "任何身體部位新發生骨折的持續時間倍率. 可與適用的身受重傷及腿部骨折倍率疊加.",
+    "cn": "任何身体部位新出现骨折的持续时间倍率. 可与适用的带伤开局和一瘸一拐倍率叠加."
+   },
+   "Sandbox_ETW_CarryWeightSystemCounter": {
+    "en": "Carry Weight Progress Target",
+    "ch": "負重進度目標",
+    "cn": "负重进度目标"
+   },
+   "Sandbox_ETW_CarryWeightSystemCounter_tooltip": {
+    "en": "Determines the maximum Carry Weight System progress. Progress is added every in-game minute based on carried weight divided by maximum carry weight: a full inventory adds 1 point, while a half-full inventory adds 0.5 points. Lose Pack Mouse at 33%%, gain Hoarder at 66%%, and gain Pack Mule at 100%%.",
+    "ch": "決定負重系統的最大進度. 進度每個遊戲分鐘依攜帶重量除以最大負重累加: 物品欄全滿加 1 點, 半滿則加 0.5 點. 進度達 33%% 時失去背包小鼠, 66%% 時獲得倉鼠成性, 100%% 時獲得背包騾子.",
+    "cn": "决定负重系统的最大进度. 进度每个游戏分钟依携带重量除以最大负重累加: 物品栏全满加 1 点, 半满则加 0.5 点. 进度达 33%% 时失去背包小鼠, 66%% 时获得仓鼠成性, 100%% 时获得背包骡子."
+   },
+   "Sandbox_ETW_ColdTraitsTemperatureThreshold": {
+    "en": "Cold traits temperature threshold (°C)",
+    "ch": "寒冷類特質體溫門檻 (°C)",
+    "cn": "寒冷类特质体温阈值 (°C)"
+   },
+   "Sandbox_ETW_ColdTraitsTemperatureThreshold_tooltip": {
+    "en": "Below this core body temperature, Cold-Loving and Cold-Averse alter stress and discomfort once per minute.",
+    "ch": "核心體溫低於此值時, 喜寒與畏寒每分鐘調整一次壓力與不適.",
+    "cn": "核心体温低于此值时, 喜寒和畏寒每分钟调整一次压力和不适."
+   },
+   "Sandbox_ETW_HeatTraitsTemperatureThreshold": {
+    "en": "Heat traits temperature threshold (°C)",
+    "ch": "炎熱類特質體溫門檻 (°C)",
+    "cn": "炎热类特质体温阈值 (°C)"
+   },
+   "Sandbox_ETW_HeatTraitsTemperatureThreshold_tooltip": {
+    "en": "Above this core body temperature, Heat-Loving and Heat-Averse alter stress and discomfort once per minute.",
+    "ch": "核心體溫高於此值時, 喜熱與怕熱每分鐘調整一次壓力與不適.",
+    "cn": "核心体温高于此值时, 喜热和怕热每分钟调整一次压力和不适."
+   },
+   "Sandbox_ETW_NaturalEater": {
+    "en": "Natural Eater",
+    "ch": "食本自然",
+    "cn": "自然食客"
+   },
+   "Sandbox_ETW_StrongBonesFractureTimeMultiplier": {
+    "en": "Strong Bones fracture duration multiplier",
+    "ch": "骨骼強健骨折持續時間倍率",
+    "cn": "骨骼强健骨折持续时间倍率"
+   },
+   "Sandbox_ETW_StrongBonesFractureTimeMultiplier_tooltip": {
+    "en": "Multiplies the duration of newly detected fractures on any body part. Lower values shorten recovery; this stacks with applicable Injured and Broken Leg multipliers.",
+    "ch": "任何身體部位新發生骨折的持續時間倍率. 數值越低恢復越快; 可與適用的身受重傷及腿部骨折倍率疊加.",
+    "cn": "任何身体部位新出现骨折的持续时间倍率. 数值越低恢复越快; 可与适用的带伤开局和一瘸一拐倍率叠加."
+   },
+   "Sandbox_ETW_TVJunkieBoredomPerMinute": {
+    "en": "TV Junkie boredom per missed minute (%%)",
+    "ch": "電視迷每分鐘缺看無聊值 (%%)",
+    "cn": "电视迷每分钟缺看无聊值 (%%)"
+   },
+   "Sandbox_ETW_TVJunkieBoredomPerMinute_tooltip": {
+    "en": "Percentage of the full boredom scale added each in-game minute after the television grace period expires.",
+    "ch": "電視寬限期結束後, 每個遊戲分鐘增加的無聊值 (佔無聊總量的百分比).",
+    "cn": "电视宽限期结束后, 每个游戏分钟增加的无聊值 (占无聊总量的百分比)."
+   },
+   "Sandbox_ETW_TVJunkieHoursWithoutTelevision": {
+    "en": "TV Junkie hours without television",
+    "ch": "電視迷不看電視的容許時數",
+    "cn": "电视迷不看电视的容许时数"
+   },
+   "Sandbox_ETW_TVJunkieHoursWithoutTelevision_tooltip": {
+    "en": "Active in-game hours allowed since the last qualifying television watch before boredom and unhappiness begin increasing. Time while the character is offline does not count.",
+    "ch": "自上次有效收看電視起, 在無聊與不快開始增加前容許經過的遊戲內活躍時數. 角色離線期間不列入計算.",
+    "cn": "自上次有效收看电视起, 在无聊和不开心开始增加前允许经过的游戏内活跃时数. 角色离线期间不计入."
+   },
+   "Sandbox_ETW_TVJunkieRequiredCommands": {
+    "en": "TV Junkie required television commands",
+    "ch": "電視迷所需電視指令數",
+    "cn": "电视迷所需电视指令数"
+   },
+   "Sandbox_ETW_TVJunkieRequiredCommands_tooltip": {
+    "en": "Valid television interaction commands that must be received within the configured rolling active-time window for the character to count as having watched television.",
+    "ch": "角色須在設定的滾動活躍時段內收到的有效電視互動指令數, 才算有看過電視.",
+    "cn": "角色须在设定的滚动活跃时段内收到的有效电视互动指令数, 才算看过电视."
+   },
+   "Sandbox_ETW_TVJunkieUnhappinessPerMinute": {
+    "en": "TV Junkie unhappiness per missed minute (%%)",
+    "ch": "電視迷每分鐘缺看不快值 (%%)",
+    "cn": "电视迷每分钟缺看不开心值 (%%)"
+   },
+   "Sandbox_ETW_TVJunkieUnhappinessPerMinute_tooltip": {
+    "en": "Percentage of the full unhappiness scale added each in-game minute after the television grace period expires.",
+    "ch": "電視寬限期結束後, 每個遊戲分鐘增加的不快值 (佔不快總量的百分比).",
+    "cn": "电视宽限期结束后, 每个游戏分钟增加的不开心值 (占不开心总量的百分比)."
+   },
+   "Sandbox_ETW_TemperatureTraitsEffectMultiplier": {
+    "en": "Temperature traits effect multiplier",
+    "ch": "溫度類特質效果倍率",
+    "cn": "温度类特质效果倍率"
+   },
+   "Sandbox_ETW_TemperatureTraitsEffectMultiplier_tooltip": {
+    "en": "Multiplies stress and discomfort changes from Heat-Loving, Heat-Averse, Cold-Loving, and Cold-Averse. 1 keeps the default effects; 0 disables them.",
+    "ch": "喜熱, 怕熱, 喜寒與畏寒對壓力與不適變化的倍率. 1 維持預設效果; 0 則停用.",
+    "cn": "喜热, 怕热, 喜寒和畏寒对压力和不适变化的倍率. 1 保持默认效果; 0 则禁用."
+   },
+   "Sandbox_TakeABathAndShower_GrimeDiscomfort1": {
+    "en": "Grime Discomfort - Stage 1",
+    "ch": "汙垢不適 - 第1階段",
+    "cn": "污垢不适 - 第1阶段"
+   },
+   "Sandbox_TakeABathAndShower_GrimeDiscomfort1_tooltip": {
+    "en": "Discomfort modifier when grime is 60 or more but below 75. <LINE> 0 disables discomfort for this stage.",
+    "ch": "汙垢達 60 以上但低於 75 時的不適修正值. <LINE> 設為 0 則停用此階段的不適.",
+    "cn": "污垢达到 60 以上但低于 75 时的不适修正值. <LINE> 设为 0 则禁用此阶段的不适."
+   },
+   "Sandbox_TakeABathAndShower_GrimeDiscomfort2": {
+    "en": "Grime Discomfort - Stage 2",
+    "ch": "汙垢不適 - 第2階段",
+    "cn": "污垢不适 - 第2阶段"
+   },
+   "Sandbox_TakeABathAndShower_GrimeDiscomfort2_tooltip": {
+    "en": "Discomfort modifier when grime is 75 or more but below 90. <LINE> 0 disables discomfort for this stage.",
+    "ch": "汙垢達 75 以上但低於 90 時的不適修正值. <LINE> 設為 0 則停用此階段的不適.",
+    "cn": "污垢达到 75 以上但低于 90 时的不适修正值. <LINE> 设为 0 则禁用此阶段的不适."
+   },
+   "Sandbox_TakeABathAndShower_GrimeDiscomfort3": {
+    "en": "Grime Discomfort - Stage 3",
+    "ch": "汙垢不適 - 第3階段",
+    "cn": "污垢不适 - 第3阶段"
+   },
+   "Sandbox_TakeABathAndShower_GrimeDiscomfort3_tooltip": {
+    "en": "Discomfort modifier when grime is 90 or more. <LINE> 0 disables discomfort for this stage.",
+    "ch": "汙垢達 90 以上時的不適修正值. <LINE> 設為 0 則停用此階段的不適.",
+    "cn": "污垢达到 90 以上时的不适修正值. <LINE> 设为 0 则禁用此阶段的不适."
+   },
+   "Sandbox_JH_ZombieWeightCivilian": {
+    "en": "Zombie Type: Civilian Weight",
+    "ch": "殭屍類型: 平民權重",
+    "cn": "僵尸类型: 平民权重"
+   },
+   "Sandbox_JH_ZombieWeightCivilian_tooltip": {
+    "en": "Relative chance a horde zombie wears a civilian outfit (medical, trades, generic, inmate, etc.). Low-value loot. Raise it to make horde corpses less rewarding. 0 disables the category. Default 60. Setting all five weights to 0 does not stop the horde - zombies spawn in vanilla's own random clothing instead.",
+    "ch": "屍潮殭屍穿著平民服裝 (醫護, 技工, 一般, 囚犯等) 的相對機率. 戰利品價值低. 調高可讓屍潮殭屍的屍體較沒油水. 0 表示停用此類別. 預設 60. 五項權重全設為 0 並不會停止屍潮 - 殭屍改穿原版的隨機服裝生成.",
+    "cn": "尸潮僵尸穿着平民服装 (医护, 技工, 普通, 囚犯等) 的相对几率. 战利品价值低. 调高可让尸潮僵尸的尸体收益更少. 0 表示禁用此类别. 默认 60. 五项权重全设为 0 并不会停止尸潮 - 僵尸改穿原版的随机服装生成."
+   },
+   "Sandbox_JH_ZombieWeightHostile": {
+    "en": "Zombie Type: Hostile/Raider Weight",
+    "ch": "殭屍類型: 敵對/掠奪者權重",
+    "cn": "僵尸类型: 敌对/掠夺者权重"
+   },
+   "Sandbox_JH_ZombieWeightHostile_tooltip": {
+    "en": "Relative chance a horde zombie wears a bandit, raider, biker, thug, or punk outfit. 0 disables the category. Default 10.",
+    "ch": "屍潮殭屍穿著強盜, 掠奪者, 機車騎士, 流氓或龐克服裝的相對機率. 0 表示停用此類別. 預設 10.",
+    "cn": "尸潮僵尸穿着强盗, 掠夺者, 摩托车手, 暴徒或朋克服装的相对几率. 0 表示禁用此类别. 默认 10."
+   },
+   "Sandbox_JH_ZombieWeightMilitary": {
+    "en": "Zombie Type: Military Weight",
+    "ch": "殭屍類型: 軍事權重",
+    "cn": "僵尸类型: 军事权重"
+   },
+   "Sandbox_JH_ZombieWeightMilitary_tooltip": {
+    "en": "Relative chance a horde zombie wears a military outfit (Army camo, service uniform, instructor, Veteran, Ghillie). These carry the most valuable lootable gear. Lower it to stop horde night paying better than it costs. 0 disables the category. Default 10.",
+    "ch": "屍潮殭屍穿著軍事服裝 (陸軍迷彩, 常服, 教官, 退伍軍人, 吉利服) 的相對機率. 這類殭屍身上的可搜刮裝備價值最高. 調低可避免屍潮夜的收穫大於代價. 0 表示停用此類別. 預設 10.",
+    "cn": "尸潮僵尸穿着军事服装 (陆军迷彩, 常服, 教官, 退伍军人, 吉利服) 的相对几率. 这类僵尸身上的可搜刮装备价值最高. 调低可避免尸潮夜的收获大于代价. 0 表示禁用此类别. 默认 10."
+   },
+   "Sandbox_JH_ZombieWeightOutdoorsman": {
+    "en": "Zombie Type: Outdoorsman Weight",
+    "ch": "殭屍類型: 戶外人士權重",
+    "cn": "僵尸类型: 户外人士权重"
+   },
+   "Sandbox_JH_ZombieWeightOutdoorsman_tooltip": {
+    "en": "Relative chance a horde zombie wears a ranger, hunter, or private-militia outfit. Was part of the old combined Tactical weight. 0 disables the category. Default 5.",
+    "ch": "屍潮殭屍穿著護林員, 獵人或民兵服裝的相對機率. 原屬舊版合併的戰術權重. 0 表示停用此類別. 預設 5.",
+    "cn": "尸潮僵尸穿着护林员, 猎人或民兵服装的相对几率. 原属旧版合并的战术权重. 0 表示禁用此类别. 默认 5."
+   },
+   "Sandbox_JH_ZombieWeightPoliceSecurity": {
+    "en": "Zombie Type: Police/Security Weight",
+    "ch": "殭屍類型: 警察/保全權重",
+    "cn": "僵尸类型: 警察/保安权重"
+   },
+   "Sandbox_JH_ZombieWeightPoliceSecurity_tooltip": {
+    "en": "Relative chance a horde zombie wears a police, state trooper, riot, SWAT, sheriff's deputy, mall security, prison-guard, or fireman outfit. Also high-value loot. 0 disables the category. Default 5.",
+    "ch": "屍潮殭屍穿著警察, 州警, 鎮暴警察, SWAT, 副警長, 商場保全, 獄警或消防員服裝的相對機率. 同樣是高價值戰利品. 0 表示停用此類別. 預設 5.",
+    "cn": "尸潮僵尸穿着警察, 州警, 防暴警察, SWAT, 副警长, 商场保安, 狱警或消防员服装的相对几率. 同样是高价值战利品. 0 表示禁用此类别. 默认 5."
+   },
+   "Sandbox_JH_ZombieWeightSurvivalist": {
+    "en": "Zombie Type: Survivalist Weight",
+    "ch": "殭屍類型: 生存專家權重",
+    "cn": "僵尸类型: 生存专家权重"
+   },
+   "Sandbox_JH_ZombieWeightSurvivalist_tooltip": {
+    "en": "Relative chance a horde zombie wears one of the five Survivalist outfits - the survivor look. These carry practical survival gear (packs, tools, boots) and are separate from Outdoorsman so you can weight survivors on their own. 0 disables the category. Default 10.",
+    "ch": "屍潮殭屍穿著五套生存專家服裝之一 (倖存者造型) 的相對機率. 這類殭屍攜帶實用的求生裝備 (背包, 工具, 靴子), 且與戶外人士分開, 讓你能單獨調整倖存者的權重. 0 表示停用此類別. 預設 10.",
+    "cn": "尸潮僵尸穿着五套生存专家服装之一 (幸存者造型) 的相对几率. 这类僵尸携带实用的求生装备 (背包, 工具, 靴子), 且与户外人士分开, 让你能单独调整幸存者的权重. 0 表示禁用此类别. 默认 10."
    }
   },
   "Tooltip.json": {
@@ -186239,6 +186620,41 @@
     "en": "Projectile Spread",
     "ch": "彈丸散布",
     "cn": "弹丸散布"
+   },
+   "Tooltip_TABAS_BathSalt_Citrus": {
+    "en": "For a better bathing experience.<br>Benefits: Sober Up, Cold Guard, Stress Relief, Muscle Relief",
+    "ch": "讓洗澡體驗更好.<br>功效: 解酒醒神, 預防感冒, 緩解壓力, 舒緩肌肉",
+    "cn": "让洗澡体验更好.<br>功效: 解酒醒神, 预防感冒, 缓解压力, 舒缓肌肉"
+   },
+   "Tooltip_TABAS_BathSalt_Floral": {
+    "en": "For a better bathing experience.<br>Benefits: Happy, Burn Care, Calm",
+    "ch": "讓洗澡體驗更好.<br>功效: 心情愉悅, 燒傷治療, 寧神靜心",
+    "cn": "让洗澡体验更好.<br>功效: 心情愉悦, 烧伤治疗, 宁神静心"
+   },
+   "Tooltip_TABAS_BathSalt_Forest": {
+    "en": "For a better bathing experience.<br>Benefits: Fracture Care, Pain Relief, Muscle Relief",
+    "ch": "讓洗澡體驗更好.<br>功效: 骨折恢復, 緩解疼痛, 舒緩肌肉",
+    "cn": "让洗澡体验更好.<br>功效: 骨折恢复, 缓解疼痛, 舒缓肌肉"
+   },
+   "Tooltip_TABAS_BathSalt_Herb": {
+    "en": "For a better bathing experience.<br>Benefits: Wound Care, Cold Guard",
+    "ch": "讓洗澡體驗更好.<br>功效: 傷口治療, 預防感冒",
+    "cn": "让洗澡体验更好.<br>功效: 伤口治疗, 预防感冒"
+   },
+   "Tooltip_TABAS_BathSalt_Lavender": {
+    "en": "For a better bathing experience.<br>Benefits: Sleep Well, Calm, Stress Relief, Pain Relief",
+    "ch": "讓洗澡體驗更好.<br>功效: 助眠安神, 寧神靜心, 緩解壓力, 緩解疼痛",
+    "cn": "让洗澡体验更好.<br>功效: 助眠安神, 宁神静心, 缓解压力, 缓解疼痛"
+   },
+   "Tooltip_TABAS_BathSalt_Rose": {
+    "en": "For a better bathing experience.<br>Benefits: Calm, Restore, Cold Guard",
+    "ch": "讓洗澡體驗更好.<br>功效: 寧神靜心, 緩解疲勞, 預防感冒",
+    "cn": "让洗澡体验更好.<br>功效: 宁神静心, 缓解疲劳, 预防感冒"
+   },
+   "Tooltip_Recipe_SimpleSuppressorsManual": {
+    "en": "Learned once from the Improvised Suppressors Manual; characters who already read it keep this recipe. Also requires the Metalworking level, tools, and materials shown here. The manual can be found in bookstores, libraries, gun stores, tool stores, and garages.",
+    "ch": "閱讀簡易消音器手冊一次即可學會; 已讀過的角色會保留此配方. 另需此處所示的金屬加工等級, 工具與材料. 手冊可在書店, 圖書館, 槍械店, 五金行與車庫中找到.",
+    "cn": "阅读简易消音器手册一次即可学会; 已读过的角色会保留此配方. 另需此处所示的金属加工等级, 工具和材料. 手册可在书店, 图书馆, 枪械店, 五金店和车库中找到."
    }
   },
   "UI.json": {
@@ -198323,6 +198739,126 @@
     "en": "When Allow Players to Choose Vanilla Death is enabled in the sandbox settings, die normally and create a new survivor instead of being rescued. Unchecked: follow the world's Death Handling setting. Changes take effect in the hideout before you ready up; choices made during a raid wait until you return. This preference is saved on this computer and applies only in worlds that allow it.",
     "ch": "當沙盒設定中啟用「允許玩家選擇原版死亡」時, 你會正常死亡並建立新的倖存者, 而不是被救回. 未勾選時: 依照世界的「死亡處理」設定. 變更須在你就緒前於藏身點內才會生效; 突襲期間所做的選擇會等到你返回後才生效. 此偏好儲存在這台電腦上, 且只在允許此選項的世界中生效.",
     "cn": "当沙盒设置中启用“允许玩家选择原版死亡”时, 你会正常死亡并创建新的幸存者, 而不是被救回. 未勾选时: 遵循世界的“死亡处理”设置. 更改需在你就绪前于藏身点内才会生效; 突袭期间所做的选择会等到你返回后才生效. 此偏好保存在这台电脑上, 且只在允许此选项的世界中生效."
+   },
+   "UI_ETW_SubTab_CombatTraits": {
+    "en": "Combat Traits",
+    "ch": "戰鬥特質",
+    "cn": "战斗特质"
+   },
+   "UI_ETW_SubTab_NonCombatTraits": {
+    "en": "Non-Combat Traits",
+    "ch": "非戰鬥特質",
+    "cn": "非战斗特质"
+   },
+   "UI_ETW_TranslationsStatus_Language_FR": {
+    "en": "Français",
+    "ch": "法語",
+    "cn": "法语"
+   },
+   "UI_trait_BrittleBones": {
+    "en": "Brittle Bones",
+    "ch": "骨質脆弱",
+    "cn": "骨质脆弱"
+   },
+   "UI_trait_BrittleBonesDesc": {
+    "en": "Your bones fracture more severely and take longer to heal (default: 2x fracture duration).",
+    "ch": "你的骨折更嚴重, 癒合也更久 (預設: 骨折持續時間2倍).",
+    "cn": "你的骨折更严重, 愈合也更久 (默认: 骨折持续时间2倍)."
+   },
+   "UI_trait_ColdAverse": {
+    "en": "Cold-Averse",
+    "ch": "畏寒",
+    "cn": "畏寒"
+   },
+   "UI_trait_ColdAverseDesc": {
+    "en": "Cold bothers you more than most. Below the configured core body temperature threshold (default: 36.5°C), stress and discomfort increase once per minute. The colder you become, the stronger the effect.",
+    "ch": "你比多數人更怕冷. 核心體溫低於設定門檻 (預設: 36.5°C) 時, 壓力與不適每分鐘增加一次. 體溫越低, 效果越強.",
+    "cn": "你比大多数人更怕冷. 核心体温低于设定阈值 (默认: 36.5°C) 时, 压力和不适每分钟增加一次. 体温越低, 效果越强."
+   },
+   "UI_trait_ColdLoving": {
+    "en": "Cold-Loving",
+    "ch": "喜寒",
+    "cn": "喜寒"
+   },
+   "UI_trait_ColdLovingDesc": {
+    "en": "You feel at home in the cold. Below the configured core body temperature threshold (default: 36.5°C), stress and discomfort decrease once per minute. The colder you become, the stronger the effect.",
+    "ch": "你在寒冷中自在如家. 核心體溫低於設定門檻 (預設: 36.5°C) 時, 壓力與不適每分鐘減少一次. 體溫越低, 效果越強.",
+    "cn": "你在寒冷中如鱼得水. 核心体温低于设定阈值 (默认: 36.5°C) 时, 压力和不适每分钟减少一次. 体温越低, 效果越强."
+   },
+   "UI_trait_HeatAverse": {
+    "en": "Heat-Averse",
+    "ch": "怕熱",
+    "cn": "怕热"
+   },
+   "UI_trait_HeatAverseDesc": {
+    "en": "Heat bothers you more than most. Above the configured core body temperature threshold (default: 37.5°C), stress and discomfort increase once per minute. The hotter you become, the stronger the effect.",
+    "ch": "你比多數人更怕熱. 核心體溫高於設定門檻 (預設: 37.5°C) 時, 壓力與不適每分鐘增加一次. 體溫越高, 效果越強.",
+    "cn": "你比大多数人更怕热. 核心体温高于设定阈值 (默认: 37.5°C) 时, 压力和不适每分钟增加一次. 体温越高, 效果越强."
+   },
+   "UI_trait_HeatLoving": {
+    "en": "Heat-Loving",
+    "ch": "喜熱",
+    "cn": "喜热"
+   },
+   "UI_trait_HeatLovingDesc": {
+    "en": "You feel at home in the heat. Above the configured core body temperature threshold (default: 37.5°C), stress and discomfort decrease once per minute. The hotter you become, the stronger the effect.",
+    "ch": "你在炎熱中自在如家. 核心體溫高於設定門檻 (預設: 37.5°C) 時, 壓力與不適每分鐘減少一次. 體溫越高, 效果越強.",
+    "cn": "你在炎热中如鱼得水. 核心体温高于设定阈值 (默认: 37.5°C) 时, 压力和不适每分钟减少一次. 体温越高, 效果越强."
+   },
+   "UI_trait_StrongBones": {
+    "en": "Strong Bones",
+    "ch": "骨骼強健",
+    "cn": "骨骼强健"
+   },
+   "UI_trait_StrongBonesDesc": {
+    "en": "Your bones fracture less severely and heal sooner (default: 0.5x fracture duration).",
+    "ch": "你的骨折較輕, 癒合也較快 (預設: 骨折持續時間0.5倍).",
+    "cn": "你的骨折较轻, 愈合也较快 (默认: 骨折持续时间0.5倍)."
+   },
+   "UI_trait_TVJunkie": {
+    "en": "TV Junkie",
+    "ch": "電視迷",
+    "cn": "电视迷"
+   },
+   "UI_trait_TVJunkieDesc": {
+    "en": "You need your daily television fix.<br>By default, receive at least four television interaction commands (Boredom/Unhappiness/etc. increase) within 24 active in-game hours to count as having watched. Once the configured online time passes without a qualifying watch, boredom and unhappiness increase every minute. Time while offline does not count.",
+    "ch": "你每天都得看電視過過癮.<br>預設須在24個遊戲內活躍小時內收到至少四次電視互動指令 (無聊/不快等增減) 才算有看過. 超過設定的上線時間仍未有效收看, 無聊與不快會每分鐘增加. 離線期間不列入計算.",
+    "cn": "你每天都得看电视过过瘾.<br>默认须在24个游戏内活跃小时内收到至少四次电视互动指令 (无聊/不开心等增减) 才算看过. 超过设定的在线时间仍未有效收看, 无聊和不开心会每分钟增加. 离线期间不计入."
+   },
+   "UI_OC_ClearDisplayOverrides_confirm_vanilla": {
+    "en": "Clear all saved display category overrides and restore vanilla defaults?",
+    "ch": "要清除所有已儲存的顯示分類覆寫, 並回復原版預設值嗎?",
+    "cn": "要清除所有已保存的显示分类覆盖, 并恢复原版默认值吗?"
+   },
+   "UI_OC_DisableItemPinning": {
+    "en": "Disable inventory item pinning",
+    "ch": "停用物品欄物品釘選",
+    "cn": "禁用物品栏物品置顶"
+   },
+   "UI_OC_DisableItemPinning_tooltip": {
+    "en": "When enabled, the pin button is hidden and pinned items sort back into their normal place. Your pins are kept and return if you turn this back off. Takes effect immediately.",
+    "ch": "啟用後會隱藏釘選按鈕, 已釘選的物品回到原本的排序位置. 你的釘選會保留, 關閉此選項後即恢復. 立即生效.",
+    "cn": "启用后会隐藏置顶按钮, 已置顶的物品回到原本的排序位置. 你的置顶会保留, 关闭此选项后即恢复. 立即生效."
+   },
+   "UI_OC_DisableItemRenaming": {
+    "en": "Disable item renaming",
+    "ch": "停用物品重新命名",
+    "cn": "禁用物品重命名"
+   },
+   "UI_OC_DisableItemRenaming_tooltip": {
+    "en": "When enabled, the rename button is hidden. Names you already gave items are kept. Takes effect immediately.",
+    "ch": "啟用後會隱藏重新命名按鈕. 已替物品取的名稱會保留. 立即生效.",
+    "cn": "启用后会隐藏重命名按钮. 已给物品取的名称会保留. 立即生效."
+   },
+   "UI_OC_UseVanillaDefaults": {
+    "en": "Use vanilla display categories as defaults",
+    "ch": "以原版顯示分類作為預設",
+    "cn": "以原版显示分类作为默认"
+   },
+   "UI_OC_UseVanillaDefaults_tooltip": {
+    "en": "When enabled, items start in the display categories vanilla (and other mods' scripts) give them instead of the organizedCategories ones. Your manual overrides, renamed categories, colors and the Sort... window keep working; the custom sort order is saved separately for each mode. Takes effect from the main menu: apply it there, or return to the main menu, then load a save.",
+    "ch": "啟用後, 物品一開始會使用原版 (及其他模組指令碼) 指定的顯示分類, 而非 organizedCategories 的分類. 你的手動覆寫, 重新命名的分類, 顏色與「排序…」視窗照常運作; 自訂排序會依模式分別儲存. 於主選單生效: 在主選單套用, 或返回主選單後再讀取存檔.",
+    "cn": "启用后, 物品一开始会使用原版 (及其他模组脚本) 指定的显示分类, 而非 organizedCategories 的分类. 你的手动覆盖, 重命名的分类, 颜色和“排序…”窗口照常工作; 自定义排序会按模式分别保存. 于主菜单生效: 在主菜单应用, 或返回主菜单后再读取存档."
    }
   },
   "MakeUp.json": {

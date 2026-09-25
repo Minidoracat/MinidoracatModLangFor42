@@ -4,6 +4,21 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- 補齊 5 個 MOD 新增的繁簡中文，共 109 項：Evolving Traits World（#580，新特質骨質脆弱／骨骼強健／畏寒／喜寒／怕熱／喜熱／電視迷、對應沙盒設定與戰鬥／非戰鬥特質分頁）、organizedCategories（#581，物品釘選與重新命名）、Take A Bath And Shower（#583，汙垢不適階段與浴鹽說明）、JeevesHordes（#585，屍潮殭屍服裝類型權重）、Simple Suppressors（#586，消音器手冊配方說明）。RotatorsLib（#582）新增的 Oshkosh M911 車名既有譯文已涵蓋。
+
+### Changed
+
+- 依上游英文改值重譯 7 項：Evolving Traits World 的嗜血機制說明 4 項（改為擊殺直接累積進度）、Simple Suppressors 口徑轉接器預設等級（4→2），Better Dressed 2 項措辭微調僅更新英文錨點。
+  > 技術要點：As1 衍生層 4 鍵改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點），own 層 3 鍵連同 `en` 錨點更新；已審鍵同步 `ch_review_state`。
+
+### Removed
+
+- 移除 Evolving Traits World 上游已改名的 2 個 own 沙盒鍵（`Sandbox_ETW_CarryWeightCounter*` → `Sandbox_ETW_CarryWeightSystemCounter*`，譯文沿用）。
+
 ## [42.20.4-1.29.0] - 2026-09-24
 
 ### Added
