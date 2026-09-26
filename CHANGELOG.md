@@ -4,6 +4,23 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- 補齊 8 個 MOD 新增的繁簡中文，共 199 項：CAExtendedCategories（#595，彈藥／材料的盒裝、箱裝、彈匣、彈鼓分類與金工工具分類 95 項，另含記錄等級沙盒設定）、Vanilla Foods Expanded（#594，雞翅、調味粉、備料配方與自製乳酪熟成名稱 56 項）、CleanUI（#591，容器按鈕欄數、還原預設值、附近轉移含地面等 12 項）、organizedCategories（#589，物品固定功能 7 項）、Neat Crafting（#592，清單／網格佈局與記住篩選等 5 項）、Refillable Propane Tanks（#598，Filibuster 丙烷車輸送）、PixelStrikeIndicator（#599，秒殺數字）、Dead Magic（#596，魔法護盾總上限）。
+
+### Changed
+
+- 依上游英文改值重譯 16 項：PixelStrikeIndicator 10 項說明改指向新的「顯示○○特效」選項名稱，「改用實際失去的血量」補上近戰數字會變小的說明；CleanUI 容器按鈕位置 2 項；Plysken Solar Revolution 電池老化改為百分比速率（#597）；Rain Cleans Blood 改為在每位玩家附近清洗（#587）。
+  > 技術要點：As1 衍生層 2 鍵改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點）；own lane 目錄與 own 層鍵直接改 CN／CH，已審鍵同步 `ch_review_state`。
+
+### Removed
+
+- 移除 CleanUI 上游已刪除的計時動作保護 3 鍵（`UI_CleanUI_TimedActionFix*`）。
+
+其餘追蹤單無需變更：Neat Crafting & Neat Building – XP & Mod Display（#593）新增 13 鍵既有譯文已涵蓋、措辭微調不影響譯意；Decoholic（#588）新增鍵全在遊戲不載入的舊版本分支；Grab and Drop（#590）移除的 2 鍵屬 As1 衍生層，依同步流程保留。
+
 ## [42.20.4-1.30.0] - 2026-09-25
 
 ### Added

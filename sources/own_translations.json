@@ -5580,6 +5580,11 @@
     "en": "Rack the barrel higher",
     "ch": "上移木桶",
     "cn": "上移木桶"
+   },
+   "ContextMenu_VFX_AddNoteToFoodContainer": {
+    "en": "Add Note to Food Container",
+    "ch": "為食物容器加上註記",
+    "cn": "给食品容器添加备注"
    }
   },
   "Fluids.json": {
@@ -40386,6 +40391,541 @@
     "en": "Unpin",
     "ch": "取消釘選",
     "cn": "取消置顶"
+   },
+   "IGUI_OC_StickToInventory": {
+    "en": "Stick to this inventory",
+    "ch": "固定在此物品欄",
+    "cn": "固定在此物品栏"
+   },
+   "IGUI_OC_Unstick": {
+    "en": "Unstick",
+    "ch": "取消固定",
+    "cn": "取消固定"
+   },
+   "IGUI_NC_Settings_ListGridLayout": {
+    "en": "List / Grid layout",
+    "ch": "清單／網格佈局",
+    "cn": "列表／网格布局"
+   },
+   "IGUI_NC_Settings_RefreshWhileMoving": {
+    "en": "Refresh nearby containers while moving",
+    "ch": "移動時重新整理附近容器",
+    "cn": "移动时刷新附近容器"
+   },
+   "IGUI_NC_Settings_RefreshWhileMovingTooltip": {
+    "en": "Refreshes nearby containers while the character moves. If disabled, nearby containers are still refreshed when the character stops moving.",
+    "ch": "角色移動時持續重新整理附近容器. 停用時, 仍會在角色停止移動後重新整理附近容器.",
+    "cn": "角色移动时持续刷新附近容器. 禁用时, 仍会在角色停止移动后刷新附近容器."
+   },
+   "IGUI_NC_Settings_RememberFilters": {
+    "en": "Remember filter states",
+    "ch": "記住篩選狀態",
+    "cn": "记住筛选状态"
+   },
+   "IGUI_NC_Settings_RememberRecipeView": {
+    "en": "Remember recipe view",
+    "ch": "記住配方檢視",
+    "cn": "记住配方视图"
+   },
+   "IGUI_VFX_CheeseName_Blue_Aged": {
+    "en": "Blue Cheese Wheel - Homemade (Aged)",
+    "ch": "自製藍紋乳酪輪 (已熟成)",
+    "cn": "蓝纹奶酪轮 (自制, 已熟成)"
+   },
+   "IGUI_VFX_CheeseName_Brie_Aged": {
+    "en": "Brie Cheese - Homemade (Aged)",
+    "ch": "自製布里乳酪 (已熟成)",
+    "cn": "布里奶酪 (自制, 已熟成)"
+   },
+   "IGUI_VFX_CheeseName_Camembert_Aged": {
+    "en": "Camembert Cheese - Homemade (Aged)",
+    "ch": "自製卡蒙貝爾乳酪 (已熟成)",
+    "cn": "卡蒙贝尔奶酪 (自制, 已熟成)"
+   },
+   "IGUI_VFX_CheeseName_Cheddar_ExtraSharp": {
+    "en": "Cheddar Cheese Wheel - Homemade (Extra Sharp)",
+    "ch": "自製切達乳酪輪 (特濃)",
+    "cn": "切达奶酪轮 (自制, 特浓)"
+   },
+   "IGUI_VFX_CheeseName_Cheddar_Medium": {
+    "en": "Cheddar Cheese Wheel - Homemade (Medium)",
+    "ch": "自製切達乳酪輪 (中等)",
+    "cn": "切达奶酪轮 (自制, 中等)"
+   },
+   "IGUI_VFX_CheeseName_Cheddar_Mild": {
+    "en": "Cheddar Cheese Wheel - Homemade (Mild)",
+    "ch": "自製切達乳酪輪 (溫和)",
+    "cn": "切达奶酪轮 (自制, 温和)"
+   },
+   "IGUI_VFX_CheeseName_Cheddar_Sharp": {
+    "en": "Cheddar Cheese Wheel - Homemade (Sharp)",
+    "ch": "自製切達乳酪輪 (濃烈)",
+    "cn": "切达奶酪轮 (自制, 浓烈)"
+   },
+   "IGUI_VFX_CheeseName_Feta_Firm": {
+    "en": "Feta Cheese - Homemade (Firm)",
+    "ch": "自製費達乳酪 (硬質)",
+    "cn": "菲达奶酪 (自制, 硬质)"
+   },
+   "IGUI_VFX_CheeseName_Feta_Soft": {
+    "en": "Feta Cheese - Homemade (Soft)",
+    "ch": "自製費達乳酪 (軟質)",
+    "cn": "菲达奶酪 (自制, 软质)"
+   },
+   "IGUI_VFX_CheeseName_Parmesan_Aged": {
+    "en": "Parmesan Cheese Wheel - Homemade (Aged)",
+    "ch": "自製帕瑪森乳酪輪 (已熟成)",
+    "cn": "帕玛森奶酪轮 (自制, 已熟成)"
+   },
+   "IGUI_VFX_CheeseName_Swiss_Aged": {
+    "en": "Swiss Cheese Wheel - Homemade (Aged)",
+    "ch": "自製瑞士乳酪輪 (已熟成)",
+    "cn": "瑞士奶酪轮 (自制, 已熟成)"
+   },
+   "IGUI_ItemCat_AmmoBow": {
+    "en": "Ammo - Bow",
+    "ch": "彈藥-弓",
+    "cn": "弹药-弓"
+   },
+   "IGUI_ItemCat_AmmoBowBox": {
+    "en": "Ammo - Bow - Box",
+    "ch": "彈藥-弓-盒裝",
+    "cn": "弹药-弓-盒装"
+   },
+   "IGUI_ItemCat_AmmoBowCarton": {
+    "en": "Ammo - Bow - Carton",
+    "ch": "彈藥-弓-箱裝",
+    "cn": "弹药-弓-箱装"
+   },
+   "IGUI_ItemCat_AmmoBowMag": {
+    "en": "Ammo - Bow - Magazine",
+    "ch": "彈藥-弓-彈匣",
+    "cn": "弹药-弓-弹匣"
+   },
+   "IGUI_ItemCat_AmmoDrum": {
+    "en": "Ammo - Drum",
+    "ch": "彈藥-彈鼓",
+    "cn": "弹药-弹鼓"
+   },
+   "IGUI_ItemCat_AmmoExplosive": {
+    "en": "Ammo - Explosive",
+    "ch": "彈藥-爆裂物",
+    "cn": "弹药-爆炸物"
+   },
+   "IGUI_ItemCat_AmmoExplosiveBox": {
+    "en": "Ammo - Explosive - Box",
+    "ch": "彈藥-爆裂物-盒裝",
+    "cn": "弹药-爆炸物-盒装"
+   },
+   "IGUI_ItemCat_AmmoExplosiveCarton": {
+    "en": "Ammo - Explosive - Carton",
+    "ch": "彈藥-爆裂物-箱裝",
+    "cn": "弹药-爆炸物-箱装"
+   },
+   "IGUI_ItemCat_AmmoExplosiveMag": {
+    "en": "Ammo - Explosive - Magazine",
+    "ch": "彈藥-爆裂物-彈匣",
+    "cn": "弹药-爆炸物-弹匣"
+   },
+   "IGUI_ItemCat_AmmoHandgun": {
+    "en": "Ammo - Handgun",
+    "ch": "彈藥-手槍",
+    "cn": "弹药-手枪"
+   },
+   "IGUI_ItemCat_AmmoHandgunBox": {
+    "en": "Ammo - Handgun - Box",
+    "ch": "彈藥-手槍-盒裝",
+    "cn": "弹药-手枪-盒装"
+   },
+   "IGUI_ItemCat_AmmoHandgunCarton": {
+    "en": "Ammo - Handgun - Carton",
+    "ch": "彈藥-手槍-箱裝",
+    "cn": "弹药-手枪-箱装"
+   },
+   "IGUI_ItemCat_AmmoHandgunMag": {
+    "en": "Ammo - Handgun - Magazine",
+    "ch": "彈藥-手槍-彈匣",
+    "cn": "弹药-手枪-弹匣"
+   },
+   "IGUI_ItemCat_AmmoRifle": {
+    "en": "Ammo - Rifle",
+    "ch": "彈藥-步槍",
+    "cn": "弹药-步枪"
+   },
+   "IGUI_ItemCat_AmmoRifleBox": {
+    "en": "Ammo - Rifle - Box",
+    "ch": "彈藥-步槍-盒裝",
+    "cn": "弹药-步枪-盒装"
+   },
+   "IGUI_ItemCat_AmmoRifleCarton": {
+    "en": "Ammo - Rifle - Carton",
+    "ch": "彈藥-步槍-箱裝",
+    "cn": "弹药-步枪-箱装"
+   },
+   "IGUI_ItemCat_AmmoRifleDrum": {
+    "en": "Ammo - Rifle - Drum",
+    "ch": "彈藥-步槍-彈鼓",
+    "cn": "弹药-步枪-弹鼓"
+   },
+   "IGUI_ItemCat_AmmoRifleMag": {
+    "en": "Ammo - Rifle - Magazine",
+    "ch": "彈藥-步槍-彈匣",
+    "cn": "弹药-步枪-弹匣"
+   },
+   "IGUI_ItemCat_AmmoShotgun": {
+    "en": "Ammo - Shotgun",
+    "ch": "彈藥-霰彈槍",
+    "cn": "弹药-霰弹枪"
+   },
+   "IGUI_ItemCat_AmmoShotgunBox": {
+    "en": "Ammo - Shotgun - Box",
+    "ch": "彈藥-霰彈槍-盒裝",
+    "cn": "弹药-霰弹枪-盒装"
+   },
+   "IGUI_ItemCat_AmmoShotgunCarton": {
+    "en": "Ammo - Shotgun - Carton",
+    "ch": "彈藥-霰彈槍-箱裝",
+    "cn": "弹药-霰弹枪-箱装"
+   },
+   "IGUI_ItemCat_AmmoShotgunDrum": {
+    "en": "Ammo - Shotgun - Drum",
+    "ch": "彈藥-霰彈槍-彈鼓",
+    "cn": "弹药-霰弹枪-弹鼓"
+   },
+   "IGUI_ItemCat_AmmoShotgunMag": {
+    "en": "Ammo - Shotgun - Magazine",
+    "ch": "彈藥-霰彈槍-彈匣",
+    "cn": "弹药-霰弹枪-弹匣"
+   },
+   "IGUI_ItemCat_AmmoToy": {
+    "en": "Ammo - Toy",
+    "ch": "彈藥-玩具",
+    "cn": "弹药-玩具"
+   },
+   "IGUI_ItemCat_AmmoToyBox": {
+    "en": "Ammo - Toy - Box",
+    "ch": "彈藥-玩具-盒裝",
+    "cn": "弹药-玩具-盒装"
+   },
+   "IGUI_ItemCat_AmmoToyCarton": {
+    "en": "Ammo - Toy - Carton",
+    "ch": "彈藥-玩具-箱裝",
+    "cn": "弹药-玩具-箱装"
+   },
+   "IGUI_ItemCat_AmmoToyMag": {
+    "en": "Ammo - Toy - Magazine",
+    "ch": "彈藥-玩具-彈匣",
+    "cn": "弹药-玩具-弹匣"
+   },
+   "IGUI_ItemCat_FirearmToy": {
+    "en": "Firearm - Toy",
+    "ch": "槍械-玩具",
+    "cn": "枪械-玩具"
+   },
+   "IGUI_ItemCat_MaterialAmmo": {
+    "en": "Material - Ammo",
+    "ch": "材料-彈藥",
+    "cn": "材料-弹药"
+   },
+   "IGUI_ItemCat_MaterialAmmoBow": {
+    "en": "Material - Ammo - Bow",
+    "ch": "材料-彈藥-弓",
+    "cn": "材料-弹药-弓"
+   },
+   "IGUI_ItemCat_MaterialAmmoBowBox": {
+    "en": "Material - Ammo - Bow - Box",
+    "ch": "材料-彈藥-弓-盒裝",
+    "cn": "材料-弹药-弓-盒装"
+   },
+   "IGUI_ItemCat_MaterialAmmoBowCarton": {
+    "en": "Material - Ammo - Bow - Carton",
+    "ch": "材料-彈藥-弓-箱裝",
+    "cn": "材料-弹药-弓-箱装"
+   },
+   "IGUI_ItemCat_MaterialAmmoBowMag": {
+    "en": "Material - Ammo - Bow - Magazine",
+    "ch": "材料-彈藥-弓-彈匣",
+    "cn": "材料-弹药-弓-弹匣"
+   },
+   "IGUI_ItemCat_MaterialAmmoBox": {
+    "en": "Material - Ammo - Box",
+    "ch": "材料-彈藥-盒裝",
+    "cn": "材料-弹药-盒装"
+   },
+   "IGUI_ItemCat_MaterialAmmoCarton": {
+    "en": "Material - Ammo - Carton",
+    "ch": "材料-彈藥-箱裝",
+    "cn": "材料-弹药-箱装"
+   },
+   "IGUI_ItemCat_MaterialAmmoExplosive": {
+    "en": "Material - Ammo - Explosive",
+    "ch": "材料-彈藥-爆裂物",
+    "cn": "材料-弹药-爆炸物"
+   },
+   "IGUI_ItemCat_MaterialAmmoExplosiveBox": {
+    "en": "Material - Ammo - Explosive - Box",
+    "ch": "材料-彈藥-爆裂物-盒裝",
+    "cn": "材料-弹药-爆炸物-盒装"
+   },
+   "IGUI_ItemCat_MaterialAmmoExplosiveCarton": {
+    "en": "Material - Ammo - Explosive - Carton",
+    "ch": "材料-彈藥-爆裂物-箱裝",
+    "cn": "材料-弹药-爆炸物-箱装"
+   },
+   "IGUI_ItemCat_MaterialAmmoExplosiveMag": {
+    "en": "Material - Ammo - Explosive - Magazine",
+    "ch": "材料-彈藥-爆裂物-彈匣",
+    "cn": "材料-弹药-爆炸物-弹匣"
+   },
+   "IGUI_ItemCat_MaterialAmmoHandgun": {
+    "en": "Material - Ammo - Handgun",
+    "ch": "材料-彈藥-手槍",
+    "cn": "材料-弹药-手枪"
+   },
+   "IGUI_ItemCat_MaterialAmmoHandgunBox": {
+    "en": "Material - Ammo - Handgun - Box",
+    "ch": "材料-彈藥-手槍-盒裝",
+    "cn": "材料-弹药-手枪-盒装"
+   },
+   "IGUI_ItemCat_MaterialAmmoHandgunCarton": {
+    "en": "Material - Ammo - Handgun - Carton",
+    "ch": "材料-彈藥-手槍-箱裝",
+    "cn": "材料-弹药-手枪-箱装"
+   },
+   "IGUI_ItemCat_MaterialAmmoHandgunMag": {
+    "en": "Material - Ammo - Handgun - Magazine",
+    "ch": "材料-彈藥-手槍-彈匣",
+    "cn": "材料-弹药-手枪-弹匣"
+   },
+   "IGUI_ItemCat_MaterialAmmoRifle": {
+    "en": "Material - Ammo - Rifle",
+    "ch": "材料-彈藥-步槍",
+    "cn": "材料-弹药-步枪"
+   },
+   "IGUI_ItemCat_MaterialAmmoRifleBox": {
+    "en": "Material - Ammo - Rifle - Box",
+    "ch": "材料-彈藥-步槍-盒裝",
+    "cn": "材料-弹药-步枪-盒装"
+   },
+   "IGUI_ItemCat_MaterialAmmoRifleCarton": {
+    "en": "Material - Ammo - Rifle - Carton",
+    "ch": "材料-彈藥-步槍-箱裝",
+    "cn": "材料-弹药-步枪-箱装"
+   },
+   "IGUI_ItemCat_MaterialAmmoRifleMag": {
+    "en": "Material - Ammo - Rifle - Magazine",
+    "ch": "材料-彈藥-步槍-彈匣",
+    "cn": "材料-弹药-步枪-弹匣"
+   },
+   "IGUI_ItemCat_MaterialAmmoShotgun": {
+    "en": "Material - Ammo - Shotgun",
+    "ch": "材料-彈藥-霰彈槍",
+    "cn": "材料-弹药-霰弹枪"
+   },
+   "IGUI_ItemCat_MaterialAmmoShotgunBox": {
+    "en": "Material - Ammo - Shotgun - Box",
+    "ch": "材料-彈藥-霰彈槍-盒裝",
+    "cn": "材料-弹药-霰弹枪-盒装"
+   },
+   "IGUI_ItemCat_MaterialAmmoShotgunCarton": {
+    "en": "Material - Ammo - Shotgun - Carton",
+    "ch": "材料-彈藥-霰彈槍-箱裝",
+    "cn": "材料-弹药-霰弹枪-箱装"
+   },
+   "IGUI_ItemCat_MaterialAmmoShotgunMag": {
+    "en": "Material - Ammo - Shotgun - Magazine",
+    "ch": "材料-彈藥-霰彈槍-彈匣",
+    "cn": "材料-弹药-霰弹枪-弹匣"
+   },
+   "IGUI_ItemCat_MaterialAmmoToy": {
+    "en": "Material - Ammo - Toy",
+    "ch": "材料-彈藥-玩具",
+    "cn": "材料-弹药-玩具"
+   },
+   "IGUI_ItemCat_MaterialAmmoToyBox": {
+    "en": "Material - Ammo - Toy - Box",
+    "ch": "材料-彈藥-玩具-盒裝",
+    "cn": "材料-弹药-玩具-盒装"
+   },
+   "IGUI_ItemCat_MaterialAmmoToyCarton": {
+    "en": "Material - Ammo - Toy - Carton",
+    "ch": "材料-彈藥-玩具-箱裝",
+    "cn": "材料-弹药-玩具-箱装"
+   },
+   "IGUI_ItemCat_MaterialAmmoToyMag": {
+    "en": "Material - Ammo - Toy - Magazine",
+    "ch": "材料-彈藥-玩具-彈匣",
+    "cn": "材料-弹药-玩具-弹匣"
+   },
+   "IGUI_ItemCat_MaterialButcheringBox": {
+    "en": "Material - Butchering - Box",
+    "ch": "材料-屠宰-盒裝",
+    "cn": "材料-屠宰-盒装"
+   },
+   "IGUI_ItemCat_MaterialButcheringBundled": {
+    "en": "Material - Butchering - Bundled",
+    "ch": "材料-屠宰-捆裝",
+    "cn": "材料-屠宰-捆装"
+   },
+   "IGUI_ItemCat_MaterialButcheringCarton": {
+    "en": "Material - Butchering - Carton",
+    "ch": "材料-屠宰-箱裝",
+    "cn": "材料-屠宰-箱装"
+   },
+   "IGUI_ItemCat_MaterialCarpentryBox": {
+    "en": "Material - Carpentry - Box",
+    "ch": "材料-木工-盒裝",
+    "cn": "材料-木工-盒装"
+   },
+   "IGUI_ItemCat_MaterialCarpentryBundled": {
+    "en": "Material - Carpentry - Bundled",
+    "ch": "材料-木工-捆裝",
+    "cn": "材料-木工-捆装"
+   },
+   "IGUI_ItemCat_MaterialCarpentryCarton": {
+    "en": "Material - Carpentry - Carton",
+    "ch": "材料-木工-箱裝",
+    "cn": "材料-木工-箱装"
+   },
+   "IGUI_ItemCat_MaterialElectricalBox": {
+    "en": "Material - Electrical - Box",
+    "ch": "材料-電工-盒裝",
+    "cn": "材料-电工-盒装"
+   },
+   "IGUI_ItemCat_MaterialElectricalBundled": {
+    "en": "Material - Electrical - Bundled",
+    "ch": "材料-電工-捆裝",
+    "cn": "材料-电工-捆装"
+   },
+   "IGUI_ItemCat_MaterialElectricalCarton": {
+    "en": "Material - Electrical - Carton",
+    "ch": "材料-電工-箱裝",
+    "cn": "材料-电工-箱装"
+   },
+   "IGUI_ItemCat_MaterialMaintenanceBox": {
+    "en": "Material - Maintenance - Box",
+    "ch": "材料-維護-盒裝",
+    "cn": "材料-维护-盒装"
+   },
+   "IGUI_ItemCat_MaterialMaintenanceBundled": {
+    "en": "Material - Maintenance - Bundled",
+    "ch": "材料-維護-捆裝",
+    "cn": "材料-维护-捆装"
+   },
+   "IGUI_ItemCat_MaterialMaintenanceCarton": {
+    "en": "Material - Maintenance - Carton",
+    "ch": "材料-維護-箱裝",
+    "cn": "材料-维护-箱装"
+   },
+   "IGUI_ItemCat_MaterialMetalworkingBox": {
+    "en": "Material - Metalworking - Box",
+    "ch": "材料-金工-盒裝",
+    "cn": "材料-金工-盒装"
+   },
+   "IGUI_ItemCat_MaterialMetalworkingBundled": {
+    "en": "Material - Metalworking - Bundled",
+    "ch": "材料-金工-捆裝",
+    "cn": "材料-金工-捆装"
+   },
+   "IGUI_ItemCat_MaterialMetalworkingCarton": {
+    "en": "Material - Metalworking - Carton",
+    "ch": "材料-金工-箱裝",
+    "cn": "材料-金工-箱装"
+   },
+   "IGUI_ItemCat_MaterialPotteryBox": {
+    "en": "Material - Pottery - Box",
+    "ch": "材料-陶藝-盒裝",
+    "cn": "材料-陶艺-盒装"
+   },
+   "IGUI_ItemCat_MaterialPotteryBundled": {
+    "en": "Material - Pottery - Bundled",
+    "ch": "材料-陶藝-捆裝",
+    "cn": "材料-陶艺-捆装"
+   },
+   "IGUI_ItemCat_MaterialPotteryCarton": {
+    "en": "Material - Pottery - Carton",
+    "ch": "材料-陶藝-箱裝",
+    "cn": "材料-陶艺-箱装"
+   },
+   "IGUI_ItemCat_MaterialTailoringBox": {
+    "en": "Material - Tailoring - Box",
+    "ch": "材料-縫紉-盒裝",
+    "cn": "材料-缝纫-盒装"
+   },
+   "IGUI_ItemCat_MaterialTailoringBundled": {
+    "en": "Material - Tailoring - Bundled",
+    "ch": "材料-縫紉-捆裝",
+    "cn": "材料-缝纫-捆装"
+   },
+   "IGUI_ItemCat_MaterialTailoringCarton": {
+    "en": "Material - Tailoring - Carton",
+    "ch": "材料-縫紉-箱裝",
+    "cn": "材料-缝纫-箱装"
+   },
+   "IGUI_ItemCat_ToolMetalworking": {
+    "en": "Tool - Metalworking",
+    "ch": "工具-金工",
+    "cn": "工具-金工"
+   },
+   "IGUI_ItemCat_ToolMetalworkingOrWeaponAxe": {
+    "en": "Tool - Metalworking / Weapon - Axe",
+    "ch": "工具-金工/武器-斧頭",
+    "cn": "工具-金工/武器-斧头"
+   },
+   "IGUI_ItemCat_ToolMetalworkingOrWeaponBlunt": {
+    "en": "Tool - Metalworking / Weapon - Long Blunt",
+    "ch": "工具-金工/武器-長棍",
+    "cn": "工具-金工/武器-长棍"
+   },
+   "IGUI_ItemCat_ToolMetalworkingOrWeaponCrafted": {
+    "en": "Tool - Metalworking / Weapon - Crafted",
+    "ch": "工具-金工/武器-自製",
+    "cn": "工具-金工/武器-自制"
+   },
+   "IGUI_ItemCat_ToolMetalworkingOrWeaponLongBlade": {
+    "en": "Tool - Metalworking / Weapon - Long Blade",
+    "ch": "工具-金工/武器-長刀",
+    "cn": "工具-金工/武器-长刀"
+   },
+   "IGUI_ItemCat_ToolMetalworkingOrWeaponSmallBlade": {
+    "en": "Tool - Metalworking / Weapon - Short Blade",
+    "ch": "工具-金工/武器-短刀",
+    "cn": "工具-金工/武器-短刀"
+   },
+   "IGUI_ItemCat_ToolMetalworkingOrWeaponSmallBlunt": {
+    "en": "Tool - Metalworking / Weapon - Short Blunt",
+    "ch": "工具-金工/武器-短棍",
+    "cn": "工具-金工/武器-短棍"
+   },
+   "IGUI_ItemCat_ToolMetalworkingOrWeaponSpear": {
+    "en": "Tool - Metalworking / Weapon - Spear",
+    "ch": "工具-金工/武器-長矛",
+    "cn": "工具-金工/武器-长矛"
+   },
+   "IGUI_ItemCat_WeaponBow": {
+    "en": "Weapon - Bow",
+    "ch": "武器-弓",
+    "cn": "武器-弓"
+   },
+   "IGUI_ItemCat_WeaponExplosive": {
+    "en": "Weapon - Explosive",
+    "ch": "武器-爆裂物",
+    "cn": "武器-爆炸物"
+   },
+   "IGUI_ItemCat_WeaponPartOrWeaponLongBlade": {
+    "en": "Weapon Part / Weapon - Long Blade",
+    "ch": "武器零件/武器-長刀",
+    "cn": "武器部件/武器-长刀"
+   },
+   "IGUI_ItemCat_WeaponPartOrWeaponSmallBlade": {
+    "en": "Weapon Part / Weapon - Short Blade",
+    "ch": "武器零件/武器-短刀",
+    "cn": "武器部件/武器-短刀"
+   },
+   "IGUI_DeadMagic_EnchantWard_TotalCap": {
+    "en": "Arcane Ward total cap (any body part): %1%%",
+    "ch": "魔法護盾總上限 (任一身體部位): %1%%",
+    "cn": "魔法护盾总上限 (任一身体部位): %1%%"
    }
   },
   "ItemName.json": {
@@ -145650,6 +146190,146 @@
     "en": "Romeo5 low mount red dot",
     "ch": "Romeo5 低架紅點瞄準鏡",
     "cn": "Romeo5 低位红点瞄准镜"
+   },
+   "VFX.BagWingsBBQ": {
+    "en": "Bag of Wings - BBQ",
+    "ch": "袋裝雞翅 (燒烤)",
+    "cn": "袋装鸡翅 (烧烤)"
+   },
+   "VFX.BagWingsBuffalo": {
+    "en": "Bag of Wings - Buffalo",
+    "ch": "袋裝雞翅 (水牛城)",
+    "cn": "袋装鸡翅 (布法罗)"
+   },
+   "VFX.BagWingsCaribbeanJerk": {
+    "en": "Bag of Wings - Caribbean Jerk",
+    "ch": "袋裝雞翅 (加勒比辣烤)",
+    "cn": "袋装鸡翅 (加勒比辣烤)"
+   },
+   "VFX.BagWingsCrispy": {
+    "en": "Bag of Wings - Crispy",
+    "ch": "袋裝雞翅 (酥脆)",
+    "cn": "袋装鸡翅 (酥脆)"
+   },
+   "VFX.BagWingsGarlicParmesan": {
+    "en": "Bag of Wings - Garlic Parmesan",
+    "ch": "袋裝雞翅 (蒜香帕瑪森)",
+    "cn": "袋装鸡翅 (蒜香帕玛森)"
+   },
+   "VFX.BagWingsHoneyBBQ": {
+    "en": "Bag of Wings - Honey BBQ",
+    "ch": "袋裝雞翅 (蜂蜜燒烤)",
+    "cn": "袋装鸡翅 (蜂蜜烧烤)"
+   },
+   "VFX.BagWingsHot": {
+    "en": "Bag of Wings - Hot",
+    "ch": "袋裝雞翅 (香辣)",
+    "cn": "袋装鸡翅 (香辣)"
+   },
+   "VFX.BagWingsNatural": {
+    "en": "Bag of Wings - Natural",
+    "ch": "袋裝雞翅 (原味)",
+    "cn": "袋装鸡翅 (原味)"
+   },
+   "VFX.BagWingsRanch": {
+    "en": "Bag of Wings - Ranch",
+    "ch": "袋裝雞翅 (牧場)",
+    "cn": "袋装鸡翅 (牧场)"
+   },
+   "VFX.BagWingsSpicyCajun": {
+    "en": "Bag of Wings - Spicy Cajun",
+    "ch": "袋裝雞翅 (香辣卡真)",
+    "cn": "袋装鸡翅 (香辣卡真)"
+   },
+   "VFX.SeasoningMixWingsBBQ": {
+    "en": "Seasoning Mix - BBQ Wings",
+    "ch": "燒烤雞翅調味粉",
+    "cn": "烧烤鸡翅调味粉"
+   },
+   "VFX.SeasoningMixWingsBuffalo": {
+    "en": "Seasoning Mix - Buffalo Wings",
+    "ch": "水牛城雞翅調味粉",
+    "cn": "布法罗鸡翅调味粉"
+   },
+   "VFX.SeasoningMixWingsCaribbeanJerk": {
+    "en": "Seasoning Mix - Caribbean Jerk Wings",
+    "ch": "加勒比辣烤雞翅調味粉",
+    "cn": "加勒比辣烤鸡翅调味粉"
+   },
+   "VFX.SeasoningMixWingsCrispy": {
+    "en": "Seasoning Mix - Crispy Wings",
+    "ch": "酥脆雞翅調味粉",
+    "cn": "酥脆鸡翅调味粉"
+   },
+   "VFX.SeasoningMixWingsGarlicParmesan": {
+    "en": "Seasoning Mix - Garlic Parmesan Wings",
+    "ch": "蒜香帕瑪森雞翅調味粉",
+    "cn": "蒜香帕玛森鸡翅调味粉"
+   },
+   "VFX.SeasoningMixWingsHoneyBBQ": {
+    "en": "Seasoning Mix - Honey BBQ Wings",
+    "ch": "蜂蜜燒烤雞翅調味粉",
+    "cn": "蜂蜜烧烤鸡翅调味粉"
+   },
+   "VFX.SeasoningMixWingsHot": {
+    "en": "Seasoning Mix - Hot Wings",
+    "ch": "香辣雞翅調味粉",
+    "cn": "香辣鸡翅调味粉"
+   },
+   "VFX.SeasoningMixWingsRanch": {
+    "en": "Seasoning Mix - Ranch Wings",
+    "ch": "牧場雞翅調味粉",
+    "cn": "牧场鸡翅调味粉"
+   },
+   "VFX.SeasoningMixWingsSpicyCajun": {
+    "en": "Seasoning Mix - Spicy Cajun Wings",
+    "ch": "香辣卡真雞翅調味粉",
+    "cn": "香辣卡真鸡翅调味粉"
+   },
+   "VFX.WingBBQ": {
+    "en": "BBQ Wing",
+    "ch": "燒烤雞翅",
+    "cn": "烧烤鸡翅"
+   },
+   "VFX.WingBuffalo": {
+    "en": "Buffalo Wing",
+    "ch": "水牛城雞翅",
+    "cn": "布法罗鸡翅"
+   },
+   "VFX.WingCaribbeanJerk": {
+    "en": "Caribbean Jerk Wing",
+    "ch": "加勒比辣烤雞翅",
+    "cn": "加勒比辣烤鸡翅"
+   },
+   "VFX.WingCrispy": {
+    "en": "Crispy Wing",
+    "ch": "酥脆雞翅",
+    "cn": "酥脆鸡翅"
+   },
+   "VFX.WingGarlicParmesan": {
+    "en": "Garlic Parmesan Wing",
+    "ch": "蒜香帕瑪森雞翅",
+    "cn": "蒜香帕玛森鸡翅"
+   },
+   "VFX.WingHoneyBBQ": {
+    "en": "Honey BBQ Wing",
+    "ch": "蜂蜜燒烤雞翅",
+    "cn": "蜂蜜烧烤鸡翅"
+   },
+   "VFX.WingHot": {
+    "en": "Hot Wing",
+    "ch": "香辣雞翅",
+    "cn": "香辣鸡翅"
+   },
+   "VFX.WingRanch": {
+    "en": "Ranch Wing",
+    "ch": "牧場雞翅",
+    "cn": "牧场鸡翅"
+   },
+   "VFX.WingSpicyCajun": {
+    "en": "Spicy Cajun Wing",
+    "ch": "香辣卡真雞翅",
+    "cn": "香辣卡真鸡翅"
    }
   },
   "Print_Media.json": {
@@ -160365,6 +161045,101 @@
     "en": "Craft Shotgun Drum Magazine",
     "ch": "製作霰彈槍彈鼓",
     "cn": "制作霰弹枪弹鼓"
+   },
+   "VFX_MakeFriedFoodChicken": {
+    "en": "Prepare Fried Food",
+    "ch": "準備炸物",
+    "cn": "准备油炸食品"
+   },
+   "VFX_MakeFriedFoodFish": {
+    "en": "Prepare Fried Food",
+    "ch": "準備炸物",
+    "cn": "准备油炸食品"
+   },
+   "VFX_MakeFriedFoodOyster": {
+    "en": "Prepare Fried Food",
+    "ch": "準備炸物",
+    "cn": "准备油炸食品"
+   },
+   "VFX_MakeFriedFoodTofu": {
+    "en": "Prepare Fried Food",
+    "ch": "準備炸物",
+    "cn": "准备油炸食品"
+   },
+   "VFX_OpenBagofWings": {
+    "en": "Open Bag of Wings",
+    "ch": "打開袋裝雞翅",
+    "cn": "打开袋装鸡翅"
+   },
+   "VFX_PrepareBBQWings": {
+    "en": "Prepare BBQ Wings",
+    "ch": "準備燒烤雞翅",
+    "cn": "准备烧烤鸡翅"
+   },
+   "VFX_PrepareBuffaloWings": {
+    "en": "Prepare Buffalo Wings",
+    "ch": "準備水牛城雞翅",
+    "cn": "准备布法罗鸡翅"
+   },
+   "VFX_PrepareBuffaloWingsSauce": {
+    "en": "Prepare Buffalo Wings",
+    "ch": "準備水牛城雞翅",
+    "cn": "准备布法罗鸡翅"
+   },
+   "VFX_PrepareCajunWings": {
+    "en": "Prepare Cajun Wings",
+    "ch": "準備卡真雞翅",
+    "cn": "准备卡真鸡翅"
+   },
+   "VFX_PrepareCaribbeanWings": {
+    "en": "Prepare Caribbean Wings",
+    "ch": "準備加勒比雞翅",
+    "cn": "准备加勒比鸡翅"
+   },
+   "VFX_PrepareCrispyWings": {
+    "en": "Prepare Crispy Wings",
+    "ch": "準備酥脆雞翅",
+    "cn": "准备酥脆鸡翅"
+   },
+   "VFX_PrepareGarlicParmesanWings": {
+    "en": "Prepare Garlic Parmesan Wings",
+    "ch": "準備蒜香帕瑪森雞翅",
+    "cn": "准备蒜香帕玛森鸡翅"
+   },
+   "VFX_PrepareHoneyBBQWings": {
+    "en": "Prepare Honey BBQ Wings",
+    "ch": "準備蜂蜜燒烤雞翅",
+    "cn": "准备蜂蜜烧烤鸡翅"
+   },
+   "VFX_PrepareHoneyBBQWingsSeasoning": {
+    "en": "Prepare Honey BBQ Wings",
+    "ch": "準備蜂蜜燒烤雞翅",
+    "cn": "准备蜂蜜烧烤鸡翅"
+   },
+   "VFX_PrepareHotWings": {
+    "en": "Prepare Hot Wings",
+    "ch": "準備香辣雞翅",
+    "cn": "准备香辣鸡翅"
+   },
+   "VFX_PrepareRanchWings": {
+    "en": "Prepare Ranch Wings",
+    "ch": "準備牧場雞翅",
+    "cn": "准备牧场鸡翅"
+   },
+   "VFX_PrepareWingsSauce": {
+    "en": "Prepare Wings with Sauce",
+    "ch": "準備醬汁雞翅",
+    "cn": "准备酱汁鸡翅"
+   },
+   "VFX_PrepareWingsSeasoning": {
+    "en": "Prepare Wings with Seasonings",
+    "ch": "以調味料準備雞翅",
+    "cn": "用调料准备鸡翅"
+   },
+   "VFX_PrepareWingsSeasoningMix": {
+    "en": "Prepare Wings with Seasoning Mix",
+    "ch": "以調味粉準備雞翅",
+    "cn": "用调味粉准备鸡翅"
    }
   },
   "Sandbox.json": {
@@ -175609,6 +176384,66 @@
     "en": "Relative chance a horde zombie wears one of the five Survivalist outfits - the survivor look. These carry practical survival gear (packs, tools, boots) and are separate from Outdoorsman so you can weight survivors on their own. 0 disables the category. Default 10.",
     "ch": "屍潮殭屍穿著五套生存專家服裝之一 (倖存者造型) 的相對機率. 這類殭屍攜帶實用的求生裝備 (背包, 工具, 靴子), 且與戶外人士分開, 讓你能單獨調整倖存者的權重. 0 表示停用此類別. 預設 10.",
     "cn": "尸潮僵尸穿着五套生存专家服装之一 (幸存者造型) 的相对几率. 这类僵尸携带实用的求生装备 (背包, 工具, 靴子), 且与户外人士分开, 让你能单独调整幸存者的权重. 0 表示禁用此类别. 默认 10."
+   },
+   "Sandbox_organizedCategories": {
+    "en": "Organized Categories",
+    "ch": "Organized Categories",
+    "cn": "Organized Categories"
+   },
+   "Sandbox_organizedCategories_DisableItemSticking": {
+    "en": "Disable item sticking",
+    "ch": "停用物品固定",
+    "cn": "禁用物品固定"
+   },
+   "Sandbox_organizedCategories_DisableItemSticking_tooltip": {
+    "en": "Turns item sticking off for everyone on this server or save: stuck items move like any other item, and the stick button and anchor markers are hidden. Items keep their flag, so turning this back off restores them.",
+    "ch": "為此伺服器或存檔中的所有人關閉物品固定: 已固定的物品會像其他物品一樣被移動, 固定按鈕與錨點標記也會隱藏. 物品仍保留固定標記, 因此關閉此選項後即恢復.",
+    "cn": "为此服务器或存档中的所有人关闭物品固定: 已固定的物品会像其他物品一样被移动, 固定按钮与锚点标记也会隐藏. 物品仍保留固定标记, 因此关闭此选项后即恢复."
+   },
+   "Sandbox_CAExtendedCategories": {
+    "en": "Extended Categories",
+    "ch": "擴充分類",
+    "cn": "扩展分类"
+   },
+   "Sandbox_CAExtendedCategories_LogVerbosity": {
+    "en": "Logging verbosity",
+    "ch": "記錄詳細程度",
+    "cn": "日志详细程度"
+   },
+   "Sandbox_CAExtendedCategories_LogVerbosity_option1": {
+    "en": "Debug",
+    "ch": "除錯",
+    "cn": "调试"
+   },
+   "Sandbox_CAExtendedCategories_LogVerbosity_option2": {
+    "en": "Info",
+    "ch": "資訊",
+    "cn": "信息"
+   },
+   "Sandbox_CAExtendedCategories_LogVerbosity_option3": {
+    "en": "Warning",
+    "ch": "警告",
+    "cn": "警告"
+   },
+   "Sandbox_CAExtendedCategories_LogVerbosity_option4": {
+    "en": "Error",
+    "ch": "錯誤",
+    "cn": "错误"
+   },
+   "Sandbox_CAExtendedCategories_LogVerbosity_tooltip": {
+    "en": "Controls how much information is logged to the console. Setting this to Debug is helpful if you want to report a bug or ask for compatibility with another mod.",
+    "ch": "控制輸出到主控台的記錄資訊量. 若想回報錯誤或請求與其他模組相容, 設為「除錯」會有幫助.",
+    "cn": "控制输出到控制台的日志信息量. 若想反馈错误或请求与其他模组兼容, 设为“调试”会有帮助."
+   },
+   "Sandbox_ArcadiaRefillablePropaneTanks_EnableFilibusterPropaneTruck": {
+    "en": "Enable Filibuster propane truck transfers",
+    "ch": "啟用 Filibuster 丙烷車輸送",
+    "cn": "启用 Filibuster 丙烷车输送"
+   },
+   "Sandbox_ArcadiaRefillablePropaneTanks_EnableFilibusterPropaneTruck_tooltip": {
+    "en": "Allows Base.fr_fo_f700_90_propane part FRPropaneTank from Filibuster Rhymes' Certified Used Cars B42 to exchange propane with supported carried items and nearby depots. The vehicle mod remains optional. Default: On.",
+    "ch": "允許 Filibuster Rhymes' Certified Used Cars B42 的 Base.fr_fo_f700_90_propane 零件 FRPropaneTank 與受支援的攜帶物品及附近儲罐互相輸送丙烷. 該載具模組仍為選用. 預設值: 開啟.",
+    "cn": "允许 Filibuster Rhymes' Certified Used Cars B42 的 Base.fr_fo_f700_90_propane 部件 FRPropaneTank 与受支持的携带物品及附近储罐互相输送丙烷. 该载具模组仍为可选. 默认: 开启."
    }
   },
   "Tooltip.json": {
@@ -196381,9 +197216,9 @@
     "cn": "改用实际失去的血量"
    },
    "UI_PSI_TrueDamage_tooltip": {
-    "en": "Shows health actually lost by a zombie or animal instead of the weapon damage roll. A killing hit shows only the health the target had left. The displayed damage multiplier still applies. This changes the reading, not the damage you deal.",
-    "ch": "顯示殭屍或動物實際失去的血量, 而不是武器擲出的傷害值. 致命的一擊只會顯示目標剩下的血量. 顯示傷害倍率仍然有效. 這只改變你看到的數字, 不會改變你造成的傷害.",
-    "cn": "显示僵尸或动物实际失去的血量, 而不是武器掷出的伤害值. 致命的一击只会显示目标剩下的血量. 显示伤害倍率仍然有效. 这只改变你看到的数字, 不会改变你造成的伤害."
+    "en": "Shows health actually lost by a zombie or animal instead of the weapon damage roll. Before any health comes off, the game scales the roll by your weapon skill and distance and cuts every melee hit hard, so with this on a melee number reads several times smaller, about a tenth for a new character. The displayed damage multiplier applies the same way to both, so raise it if the numbers look small. A killing hit shows only the health the target had left. This changes the reading, not the damage you deal.",
+    "ch": "顯示殭屍或動物實際失去的血量, 而不是武器擲出的傷害值. 在扣除血量之前, 遊戲會依你的武器技能與距離調整擲出的傷害值, 並大幅削減每一次近戰命中, 所以開啟此項後近戰數字看起來會小好幾倍, 新角色約只有十分之一. 顯示傷害倍率對兩種讀數的作用相同, 若覺得數字太小就調高它. 致命的一擊只會顯示目標剩下的血量. 這只改變你看到的數字, 不會改變你造成的傷害.",
+    "cn": "显示僵尸或动物实际失去的血量, 而不是武器掷出的伤害值. 在扣除血量之前, 游戏会根据你的武器技能和距离调整掷出的伤害值, 并大幅削减每一次近战命中, 所以开启此项后近战数字看起来会小好几倍, 新角色大约只有十分之一. 显示伤害倍率对两种读数的作用相同, 如果觉得数字太小就调高它. 致命的一击只会显示目标剩下的血量. 这只改变你看到的数字, 不会改变你造成的伤害."
    },
    "UI_PSI_UseColours": {
     "en": "Load palette",
@@ -198859,6 +199694,166 @@
     "en": "When enabled, items start in the display categories vanilla (and other mods' scripts) give them instead of the organizedCategories ones. Your manual overrides, renamed categories, colors and the Sort... window keep working; the custom sort order is saved separately for each mode. Takes effect from the main menu: apply it there, or return to the main menu, then load a save.",
     "ch": "啟用後, 物品一開始會使用原版 (及其他模組指令碼) 指定的顯示分類, 而非 organizedCategories 的分類. 你的手動覆寫, 重新命名的分類, 顏色與「排序…」視窗照常運作; 自訂排序會依模式分別儲存. 於主選單生效: 在主選單套用, 或返回主選單後再讀取存檔.",
     "cn": "启用后, 物品一开始会使用原版 (及其他模组脚本) 指定的显示分类, 而非 organizedCategories 的分类. 你的手动覆盖, 重命名的分类, 颜色和“排序…”窗口照常工作; 自定义排序会按模式分别保存. 于主菜单生效: 在主菜单应用, 或返回主菜单后再读取存档."
+   },
+   "UI_OC_DisableItemSticking": {
+    "en": "Disable item sticking",
+    "ch": "停用物品固定",
+    "cn": "禁用物品固定"
+   },
+   "UI_OC_DisableItemSticking_tooltip": {
+    "en": "When enabled, stuck items move like any other item and the stick button and anchor markers are hidden. Stuck items keep their flag and resist mass moves again if you turn this back off. Takes effect immediately.",
+    "ch": "啟用後, 已固定的物品會像其他物品一樣被移動, 固定按鈕與錨點標記也會隱藏. 已固定的物品仍保留固定標記, 關閉此選項後會再次免於被批次移動. 立即生效.",
+    "cn": "启用后, 已固定的物品会像其他物品一样被移动, 固定按钮与锚点标记也会隐藏. 已固定的物品仍保留固定标记, 关闭此选项后会再次免于被批量移动. 立即生效."
+   },
+   "UI_CleanUI_AllowFloorNearbyTransfers": {
+    "en": "Allow Floor in Nearby Transfers",
+    "ch": "允許附近轉移包含地面",
+    "cn": "允许附近转移包含地板"
+   },
+   "UI_CleanUI_AllowFloorNearbyTransfers_Tooltip": {
+    "en": "Allow Transfer by Name and Transfer by Category to use Floor as a destination when the transfer method is Nearby Containers. Does not affect Single Container transfers or Move To Floor.",
+    "ch": "轉移方式為附近容器時, 允許「按名稱轉移」與「按類別轉移」以地面作為目的地. 不影響單一容器轉移或「移到地面」.",
+    "cn": "转移方式为附近容器时, 允许“按名称转移”与“按类型转移”以地板作为目的地. 不影响单个容器转移或“移到地板”."
+   },
+   "UI_CleanUI_ContainerColumnsOne": {
+    "en": "1 Column",
+    "ch": "1 欄",
+    "cn": "1 列"
+   },
+   "UI_CleanUI_ContainerColumnsTwo": {
+    "en": "2 Columns",
+    "ch": "2 欄",
+    "cn": "2 列"
+   },
+   "UI_CleanUI_LootContainerColumns": {
+    "en": "Loot Container Button Columns",
+    "ch": "戰利品容器按鈕欄數",
+    "cn": "战利品容器按钮列数"
+   },
+   "UI_CleanUI_PlayerContainerColumns": {
+    "en": "Inventory Container Button Columns",
+    "ch": "物品欄容器按鈕欄數",
+    "cn": "物品栏容器按钮列数"
+   },
+   "UI_CleanUI_RestoreDefaults": {
+    "en": "Restore CleanUI Defaults",
+    "ch": "還原 CleanUI 預設值",
+    "cn": "恢复 CleanUI 默认值"
+   },
+   "UI_CleanUI_RestoreDefaults_Tooltip": {
+    "en": "Restore all CleanUI Mod Options to their default values. This does not delete saved window layouts or CleanUI configuration files.",
+    "ch": "將所有 CleanUI 模組選項還原為預設值. 不會刪除已儲存的視窗佈局或 CleanUI 設定檔.",
+    "cn": "将所有 CleanUI 模组选项恢复为默认值. 不会删除已保存的窗口布局或 CleanUI 配置文件."
+   },
+   "UI_CleanUI_TextSize": {
+    "en": "Text Size",
+    "ch": "文字大小",
+    "cn": "文字大小"
+   },
+   "UI_CleanUI_TitleBarHeight": {
+    "en": "Title Bar Height",
+    "ch": "標題列高度",
+    "cn": "标题栏高度"
+   },
+   "UI_CleanUI_TransferMethodNearbyFloorExcludedTooltip": {
+    "en": "Transfer method: Nearby Containers <LINE> Floor excluded <LINE> Click to change method",
+    "ch": "轉移方式: 附近容器 <LINE> 不含地面 <LINE> 點選以更改方式",
+    "cn": "转移方式：附近容器 <LINE> 不含地板 <LINE> 点击更改方式"
+   },
+   "UI_CleanUI_UIScale": {
+    "en": "UI Scale",
+    "ch": "介面縮放",
+    "cn": "界面缩放"
+   },
+   "UI_VFX_AddNoteToFoodContainer": {
+    "en": "Add Note to Food Container",
+    "ch": "為食物容器加上註記",
+    "cn": "给食品容器添加备注"
+   },
+   "UI_RPT_FilibusterTankOne": {
+    "en": "Tank 1",
+    "ch": "儲罐 1",
+    "cn": "储罐 1"
+   },
+   "UI_RPT_FilibusterTankTwo": {
+    "en": "Tank 2",
+    "ch": "儲罐 2",
+    "cn": "储罐 2"
+   },
+   "UI_RPT_FilibusterTruck": {
+    "en": "Filibuster propane truck",
+    "ch": "Filibuster 丙烷車",
+    "cn": "Filibuster 丙烷车"
+   },
+   "UI_RPT_FillVehicleFromItem": {
+    "en": "Transfer carried propane into truck",
+    "ch": "將攜帶的丙烷輸送到車上",
+    "cn": "将携带的丙烷输送到车上"
+   },
+   "UI_RPT_ItemEmpty": {
+    "en": "That propane container is empty.",
+    "ch": "那個丙烷容器是空的.",
+    "cn": "那个丙烷容器是空的."
+   },
+   "UI_RPT_NoNearbyVehicle": {
+    "en": "Park a supported Filibuster propane truck beside this depot.",
+    "ch": "請把受支援的 Filibuster 丙烷車停在這座儲罐旁邊.",
+    "cn": "请把受支持的 Filibuster 丙烷车停在这座储罐旁边."
+   },
+   "UI_RPT_NoVehicleSources": {
+    "en": "Carry a supported propane container that still contains propane.",
+    "ch": "請攜帶一個仍裝有丙烷的受支援丙烷容器.",
+    "cn": "请携带一个仍装有丙烷的受支持丙烷容器."
+   },
+   "UI_RPT_RefillFromVehicle": {
+    "en": "Refill propane container or tool from truck",
+    "ch": "從車上填充丙烷容器或工具",
+    "cn": "从车上加注丙烷容器或工具"
+   },
+   "UI_RPT_RefillVehicleFromDepot": {
+    "en": "Refill nearby Filibuster propane truck",
+    "ch": "填充附近的 Filibuster 丙烷車",
+    "cn": "加注附近的 Filibuster 丙烷车"
+   },
+   "UI_RPT_VehicleAlreadyFull": {
+    "en": "The Filibuster propane truck is already full.",
+    "ch": "Filibuster 丙烷車已經滿了.",
+    "cn": "Filibuster 丙烷车已经满了."
+   },
+   "UI_RPT_VehicleEmpty": {
+    "en": "The Filibuster propane truck is empty.",
+    "ch": "Filibuster 丙烷車是空的.",
+    "cn": "Filibuster 丙烷车是空的."
+   },
+   "UI_RPT_VehicleNotReady": {
+    "en": "The supported Filibuster propane truck is not available.",
+    "ch": "受支援的 Filibuster 丙烷車目前無法使用.",
+    "cn": "受支持的 Filibuster 丙烷车当前不可用."
+   },
+   "UI_RPT_VehicleTooFar": {
+    "en": "Move next to the truck's propane tank.",
+    "ch": "請移動到車輛的丙烷罐旁邊.",
+    "cn": "请靠近车辆的丙烷罐."
+   },
+   "UI_RPT_VehicleTransferAction": {
+    "en": "Transferring propane with vehicle tank",
+    "ch": "正與車輛儲罐輸送丙烷",
+    "cn": "正在与车辆储罐输送丙烷"
+   },
+   "UI_RPT_VehicleUpdated": {
+    "en": "Propane truck updated",
+    "ch": "丙烷車已更新",
+    "cn": "丙烷车已更新"
+   },
+   "UI_PSI_InstakillNumber": {
+    "en": "Show instant kill number",
+    "ch": "顯示秒殺數字",
+    "cn": "显示秒杀数字"
+   },
+   "UI_PSI_InstakillNumber_tooltip": {
+    "en": "The number under the word. Requires Show instant kill effects. A knife in the jaw kills whatever health the zombie had, so the number says nothing about the kill. Turn it off to keep the word and the star without it.",
+    "ch": "字樣下方的數字. 需要開啟「顯示秒殺特效」. 刀刺下顎會直接殺死殭屍, 不論它還剩多少血量, 所以這個數字對這次擊殺沒有任何意義. 關掉它就只保留字樣與星芒.",
+    "cn": "字样下方的数字. 需要开启“显示秒杀特效”. 刀刺下颌会直接杀死僵尸, 不论它还剩多少血量, 所以这个数字对这次击杀没有任何意义. 关掉它就只保留字样与星芒."
    }
   },
   "MakeUp.json": {

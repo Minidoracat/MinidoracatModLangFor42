@@ -329,7 +329,7 @@
 | [Vehicle Military Zones](https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337) | 軍事區域車輛 | 在軍事區域生成軍用車輛，可調整生成率、鑰匙與損壞機率。 | `VMZNEW` | 15 | — | — |
 | [[B42] Useful Barrels](https://steamcommunity.com/sharedfiles/filedetails/?id=3436537035) | 有用的汽油桶 | 讓汽油桶可儲存燃料、酒類、飲料與染料等多種液體，可沙盒調整。 | `UsefulBarrels`, `UsefulBarrelsMP` | 80 | — | — |
 | [[B41/B42.18] Injectors [Distribution Update]](https://steamcommunity.com/sharedfiles/filedetails/?id=3437429771) | 注射針劑 | 新增腎上腺素、嗎啡等多種注射針劑，提供各類增益效果。 | `Injectors` | 26 | — | — |
-| [CleanUI [B42.12]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3437629766) | 簡潔介面 | 以更精簡快速的版面取代原版物品欄、戰利品與右鍵選單介面。 | `CleanUI` | 53 | — | — |
+| [CleanUI [B42.12]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3437629766) | 簡潔介面 | 以更精簡快速的版面取代原版物品欄、戰利品與右鍵選單介面。 | `CleanUI` | 50 | — | — |
 | [Nepenthe's High Beams](https://steamcommunity.com/sharedfiles/filedetails/?id=3438126404) | Nepenthe 的遠光燈 | 為車輛新增遠光燈控制，支援快捷鍵、徑向選單與常亮模式。 | `NepHighBeams` | 21 | — | — |
 | [HydeCo. Unlimited Cars 42.16.3](https://steamcommunity.com/sharedfiles/filedetails/?id=3438759949) | HydeCo. 無限車輛 | 調整車輛生成機制，可自訂燒毀、鑰匙、零件損壞機率與拖車生成。 | `hydecounlimitedcars` | 51 | — | — |
 | [Military Ponchos: RELOADED](https://steamcommunity.com/sharedfiles/filedetails/?id=3439247001) | 軍用雨披：重製版 | 新增多國迷彩軍用雨披，兼具雨具與偽裝用途。 | `MilitaryPonchosRELOADED` | ? | — | — |
