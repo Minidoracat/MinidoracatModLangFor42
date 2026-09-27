@@ -9,7 +9,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **664 個 Workshop 模組**（858 個 mod ID）；另 **20 個已下架**（翻譯保留，見文末）。
+共支援 **666 個 Workshop 模組**（860 個 mod ID）；另 **20 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -675,6 +675,8 @@
 | [Pixel Strike Indicator & Health Bar〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3793657917) | 像素打擊指示與血條 | 打中目標時跳出傷害數字，爆擊／爆頭／秒殺／落空／升級特效，殭屍與動物血條、韌性條與血量百分比；沙盒可設伺服器上限，玩家再自行調整。 | `PixelStrikeIndicator` | 328 | — | ⚠️ 兩個模組選項頁的頁名（Pixel Strike Indicator／Pixel Health Bars）是 PSI_Options.lua 寫死的英文字面，不走翻譯表，任何翻譯包都補不了；頁內所有選項與說明皆已翻譯。 |
 | [Frockin Splendor! Vol.6](https://steamcommunity.com/sharedfiles/filedetails/?id=3798149669) | Frockin Splendor! 華麗服飾 Vol.6 | 第六輯服飾擴充，新增外套、大衣、裙裝、褲裝、毛衣、腰帶與衣物收納用品。 | `GanydeBielovzki's Frockin Splendor! Vol.6` | 6 | — | — |
 | [Snake's ModPack Build 42](https://steamcommunity.com/sharedfiles/filedetails/?id=3800233932) | Snake 模組包 Build 42 | 整合料理、農漁業、彈藥製作、汽車維修、服飾、工具與多張地圖的模組包。 | `SMP_AmmoMaker`, `SMP_AquaFarm`, `SMP_AquaFarmResources`, `SMP_BarcoAbandonado`, `SMP_BatesMetalicos`, `SMP_CustomMapBridge`, `SMP_Factory`, `SMP_LeGourmetUltimate`, `SMP_LootZetaEnhancedEdition`, `SMP_MilitaryComplex`, `SMP_NumarkComplex`, `SMP_ROxygenTank`, `SMP_RPropaneTank`, `SMP_SkillsMag`, `SMP_SnakeMechanicalOverhaul`, `SMP_SnakeUtilsPack`, `SMP_SnakeClothingMod`, `SMP_SnakeMansion`, `SMP_SnakeVille`, `SMP_TableSaw`, `SMP_ZStreamersCars` | 5 | ⚠️ ≥20 | — |
+| [末日镇尸录\|Tales of Taoist Exorcism〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3806373669) | 末日鎮屍錄 | 以道士身分在末日中修煉道術，使用桃木劍、八卦鏡、五雷令牌、萬魂幡等法器鎮屍驅邪，另有玄門法市、收鬼罈役鬼與殭屍王等首領。 | `TalesOfTaoistExorcism` | 243 | — | ⚠️ 簡中為作者原文（本包逐字沿用），本包只翻繁中。作者在 Lua 裡寫死了幾段簡體字：服用糯米缸時的「感染度」浮字、五雷令牌畫面上的「五雷敕令」、四個「生成飛僵／鬼新娘／白僵／黑僵（測試）」右鍵選項。這些不走翻譯表，任何翻譯包都補不了。 |
+| [Smart Animal Waste [B42+]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3808507911) | 智慧動物糞便處理 | 把木箱改造成回收箱，自動收集動物區域的糞便、餵給附近堆肥箱、用空麻袋裝好堆肥並送到指定貨架；羽毛也能轉成堆肥。 | `SmartAnimalWaste` | 502 | — | — |
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 

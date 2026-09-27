@@ -10,6 +10,10 @@
 
 - **補齊 Area Tasks（區域任務，3793163745）的繁簡中文，共 153 項。** As1 已收錄舊版的 110 項，這次補上新版新增的 43 項：門窗防護選單（關窗、窗簾、木板／金屬片／鐵棒加固、拆除加固）、拆解家具、丟屍出窗、所有石材／木材，以及時間速度、搬運負重上限、拆解上限、木板加固方式等沙盒設定。
   > 技術要點：`mod_registry` 登記後 `backfill-en` 落地 `sources/en` 鏡像；重跑 split 把原本落在 `_unsorted` 的 110 鍵歸屬到 `sources/mods/3793163745/`（同時接受 3633421539 上游退場造成的 37 條 owner edge 移除，另有 2914075159／3395614151 隨現行證據重新歸屬）。新增 43 鍵走 `own_translations.json`。
+- **新收錄 1 個 MOD：Smart Animal Waste（智慧動物糞便處理，3808507911）。** 回收箱的右鍵選單、流程管理視窗（流程地圖、堆肥箱與儲物分頁、各種狀態與提示）、模組選項、27 項沙盒設定與通知訊息，共 502 項，繁簡皆有。作者雖附簡中，但這裡的繁中、簡中都是逐項重新翻譯。
+  > 技術要點：own lane（`sources/mods/3808507911/`，`origin: own`）；上游有效分支僅 `42/`，自帶 `Translate/EN` 的 ContextMenu／IG_UI／Sandbox／Tooltip 共 502 鍵，`Mod.json` 2 鍵不收；零 vanilla 碰撞，Lua UI 全走 `getText`。registry／watchlist／`sources/en` 鏡像同步落地，`ch_review_state` +502。
+- **新收錄 1 個 MOD：末日鎮屍錄（Tales of Taoist Exorcism，3806373669），補上繁中 243 項。** 道士職業與特質、道術境界與法術說明、玄門法市、收鬼罈與役鬼指令、32 件法器與材料名稱、3 個畫符配方。這是中國作者的 MOD，簡中維持作者原文，只新增繁中。作者寫死在程式裡的幾段簡體字（「感染度」浮字、「五雷敕令」、測試用右鍵選項）翻譯包補不了。
+  > 技術要點：own lane（`sources/mods/3806373669/`，metadata `cn_source: "upstream"`）：CN 逐字照抄上游 `Translate/CN`，CH 以作者簡中為主、EN 為輔人工直寫；有效分支僅 `42/`，零 vanilla 碰撞。`AGENTS.md` 新增 `cn_source` 規則，讓日後上游更新時只重譯 CH。
 
 ### Changed
 
