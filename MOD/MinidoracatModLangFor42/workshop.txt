@@ -8,7 +8,7 @@ description=[hr][/hr]
 description=
 description=[h2]✨ 功能特色[/h2]
 description=[list]
-description=[*] 680+ 個 Workshop 模組（860+ 個模組 ID）的中文翻譯
+description=[*] 700+ 個 Workshop 模組（880+ 個模組 ID）的中文翻譯
 description=[*] 有效覆蓋率約 99.8%（截至 2026-09-27）——現行有效上游翻譯鍵 124,344 個中已覆蓋 124,149 個；此統計只涵蓋上游翻譯表，不代表所有物品名稱或寫死文字皆已翻譯。上游每天更新，新增文本由追蹤器偵測後持續補譯，故數字會隨上游浮動。另有少數模組把文字寫死在程式碼裡，任何翻譯包都補不了（已於支援清單逐一標註）
 description=[*] 不覆蓋遊戲本體的官方翻譯——撞到本體代號的鍵一律不出貨（詳見下方說明）
 description=[*] 繁體中文（台灣用語）/ 簡體中文 雙語支援
@@ -46,7 +46,7 @@ description=[*] 英文只放在 Build 42 已不再讀取的舊格式檔（[i]*_E
 description=[*] 兩個模組用同一個代號指向不同的東西，沒有對雙方都成立的譯名
 description=[/list]
 description=遇到這類情況，我們會把可驗證的檔名、鍵名、上游原文與機制原因查清楚並公開記錄，讓你能直接拿去跟作者溝通：
-description=[url=https://github.com/Minidoracat/MinidoracatModLangFor42/blob/main/OWNER_CONFLICTS.md]⚖️ 模組間代號衝突裁決紀錄（哪些鍵不出貨中文、各模組抑制後會顯示英文還是代號）[/url]
+description=[url=https://github.com/Minidoracat/MinidoracatModLangFor42/blob/main/OWNER_CONFLICTS.md]⚖️ 模組間代號衝突紀錄（哪些鍵不出貨中文、哪些還沒裁決而譯名可能只符合其中一個模組；可用 Workshop ID 搜尋）[/url]
 description=
 description=[b]但責任歸屬要講清楚：本包不代為向模組作者回報，也不代為追蹤上游是否修復。[/b]需要該模組中文化的玩家——實際使用者或翻譯申請者——請自行拿上述資訊向原作者反映；本包負責的是把成因查清楚並記錄，不負責催上游。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前這些文字會維持英文或顯示代號。
 description=

@@ -7066,6 +7066,1342 @@
       "action": "unship",
       "signature": "b8ae8e76719471ea",
       "reason": "2026-09-17 #530 裁決不出貨：同一 Workshop 項目（3722134990）底下兩個**互斥**的 mod 把同一鍵當成語意無關的兩種標籤，沒有對雙方都成立的中文值。mod.info 實據：GunsOfMarz（id=GunsOfMarz、incompatible=…,MarzGuns）與 GunsOfMarzPreviousVersion（id=MarzGuns、name=\"Guns of Marz (Old Version)\"、incompatible=…,GunsOfMarz），兩者互斥但都是有效可訂閱啟用的 mod root（有效分支皆 42.16+common）。玩家可見性已查證：MarzGuns.FakeItem 的 script 沒有 DisplayName（scripts/MarzWeapons/items/generic.txt 的 item FakeItem { DisplayCategory = Junk, ItemType = base:normal }），顯示名完全由 ItemName.json 提供，而它是所有武器零件的 MountOn 錨點，其顯示名會經 zombie/inventory/types/WeaponPart.java:65（42.20.4 反編譯）以 Translator.getText(\"Tooltip_weapon_CanBeMountOn\")（本體 CH=「可以裝在」）＋mountOnDisplayName 印在零件 tooltip，故**確證玩家可見**、不屬 untranslatable_keys 的內部佔位物類別。衝突本體：現行版把 FakeItem 的顯示名改成分類標籤 \"Rifles and Shotguns\"；舊版的同鍵仍是內部佔位名 \"Fake Item\"，而 \"Rifles and Shotguns\" 在舊版是**另一個鍵** MarzGuns.FakeItemRifles（另有 FakeItemPistols=\"Pistols and Revolvers\"、FakeItemRails=\"Picatinny Rails, AK Mounts, and Integrated Rails\"）。因此任一單值都會出錯：填「步槍和霰彈槍」會在舊版把 FakeItem 與仍在出貨的 FakeItemRifles 壓成同一字串，且舊版該錨點同時掛 Slide（手槍滑套）、Cylinder／Hammer（左輪零件）與刺刀等非長槍零件；沿用現行的「虛擬物品」則與現行版上游刻意改成的分類標籤相違，等於把上游已淘汰的內部名字固定給玩家看。JSON 全域字串表無法依 mod 啟用狀態條件化。抑制成本已查證為最低：兩個 owner 的 en_source 皆為可載入的 ItemName.json（has_json_en 皆 true），抑制後各版玩家看到自己 mod 的英文而非字面鍵名。B41 前綴孿生鍵 ItemName_MarzGuns.FakeItem 不存在於 census、dist、sources/ch 或 As1 CN 樹，故 unshipped_keys 只需登記裸鍵一條，verify [15] 不受影響。as1_value 取抑制前有效 CN 值「虚拟物品」（sources/mods/3722134990/CN/ItemName.json）；真相層（As1 CN 與 sources/ch 的「虛擬物品」）依分層原則原樣保留。"
+    },
+    "ItemName|Autotsar.ATADodgeTuningMag": {
+      "action": "translate",
+      "signature": "cb696d0e6bff1708",
+      "reason": "2026-09-27 收錄 ATA Dadge：tsarslib 以 ItemName.json 定義正式雜誌名，ATA_Dadge 的 script DisplayName 只是未翻譯的占位名；Dadge 依賴 tsarslib，執行期恆由 tsarslib 的 JSON 勝出，譯名對兩者都成立。",
+      "ch": "雜誌: 《沙皇改裝車-道奇隱形者RT》",
+      "cn": "杂志: 《沙皇改装车-道奇隐形者RT》"
+    },
+    "Recipes|ForgeKatanaBlade": {
+      "action": "translate",
+      "signature": "5eff1d6826dfa450",
+      "reason": "2026-09-27 收錄 Nihontō：兩者都是鍛造武士刀刀身，Nihontō 只多標日文「Tōshin（刀身）」；現有中性譯名對兩個 owner 都成立。",
+      "ch": "鍛造武士刀刀身",
+      "cn": "锻造刀身 (武士刀)"
+    },
+    "ContextMenu|ContextMenu_AttachTacPouchToHipRight": {
+      "action": "translate",
+      "signature": "64d759c7c32a0e04",
+      "reason": "2026-09-27 裁決：FR Operator 寫 Attach To Right Side, 其後繼 Chimera 同鍵改寫為 Attach To Opposite Side, 都是把 KyDex 腿掛側包移到另一側大腿的同一操作 (Operator 版從預設側移到右側). 「裝到對側」對兩者皆成立, 且不會對 Chimera 的雙向切換誤標為右側, 沿用現值.",
+      "ch": "裝到對側",
+      "cn": "装到对侧"
+    },
+    "ContextMenu|ContextMenu_CloseJacket": {
+      "action": "translate",
+      "signature": "aabc89067849280b",
+      "reason": "2026-09-27 裁決：Spongie 敞開外套寫 Close, Bianca 衣櫃與 Rick Grimes 制服寫 Close Jacket, 都是把外套扣上的同一操作, 只差詳略. 沿用現值.",
+      "ch": "扣起衣服",
+      "cn": "扣起衣服"
+    },
+    "ContextMenu|ContextMenu_KnifeSheath_WearBack": {
+      "action": "translate",
+      "signature": "f6253f558a86b4b4",
+      "reason": "2026-09-27 裁決：TKS42 與 Tactical Sheaths Reborn 是把刀鞘佩戴到背部 (Wear (Back)), Simple Slings 則借用同鍵當背帶換位選項並寫 Gear on the waist (腰部), 部位不同. 但 TKS42 與 Simple Slings 都是死檔 ContextMenu_EN.txt, 不出貨會讓兩者顯示字面鍵名, 因此改用對三者都成立的「佩戴」, 去掉只屬其中一方的部位. 代價是選單中需靠其他 (大腿)/(左腿) 選項排除判斷此項位置.",
+      "ch": "佩戴",
+      "cn": "佩戴"
+    },
+    "ContextMenu|ContextMenu_OpenJacket": {
+      "action": "translate",
+      "signature": "6006ee33b9c958e9",
+      "reason": "2026-09-27 裁決：Spongie 敞開外套寫 Open, Bianca 衣櫃與 Rick Grimes 制服寫 Open Jacket, 都是敞開外套的同一操作, 只差詳略. 沿用現值.",
+      "ch": "敞開衣服",
+      "cn": "敞开衣服"
+    },
+    "ContextMenu|ContextMenu_SlingStyle1": {
+      "action": "translate",
+      "signature": "efe7d2b3f83162c5",
+      "reason": "2026-09-27 裁決：Dark/Invisible Weapon Slings 是 Noir's Rifle Slings 的衍生 (本機 script 仍用 BodyLocation noirrsling:sling 與同名 SlingA 系列物品), Simple Slings 亦沿用同一套鍵; SlingStyle1 在 Noir/Simple 寫成示意符號 Front \\, Dark 版改寫為 on Right Shoulder, 指同一個背法. 沿用現值「到右肩」.",
+      "ch": "到右肩",
+      "cn": "到右肩"
+    },
+    "ContextMenu|ContextMenu_SlingStyle2": {
+      "action": "translate",
+      "signature": "fa5146651d64e538",
+      "reason": "2026-09-27 裁決：同 SlingStyle1: Noir/Simple 的 Front / 與 Dark/Invisible 的 on Left Shoulder 是同一套衍生背帶的同一背法 (script 共用 noirrsling:sling 與 SlingAalt). 沿用現值「到左肩」.",
+      "ch": "到左肩",
+      "cn": "到左肩"
+    },
+    "ContextMenu|ContextMenu_SlingStyle3": {
+      "action": "translate",
+      "signature": "3af933caa7b2b8d8",
+      "reason": "2026-09-27 裁決：同 SlingStyle1: Noir/Simple 的 Front -- (胸前水平) 與 Dark/Invisible 的 on Neck 是同一套衍生背帶的同一背法 (SlingAalt2). 沿用現值「到頸部」.",
+      "ch": "到頸部",
+      "cn": "到颈部"
+    },
+    "ContextMenu|ContextMenu_SlingStyle4": {
+      "action": "translate",
+      "signature": "01b796540460ffa3",
+      "reason": "2026-09-27 裁決：Noir/Simple 寫 Back, Dark/Invisible 寫 on Back, 同一背法 (SlingAalt3), 只差措辭. 沿用現值.",
+      "ch": "到背部",
+      "cn": "到背部"
+    },
+    "ContextMenu|ContextMenu_VehicleUnhotwireSkill": {
+      "action": "translate",
+      "signature": "194fbaad2c59fcef",
+      "reason": "2026-09-27 裁決：Harder Hotwire 要求電工 6, 技工 8, 金工 4, The Best Lockpicking 要求電工 1, 技工 2, 同一個解除短接的技能不足提示但數值互相矛盾. Harder Hotwire 是死檔 ContextMenu_EN.txt, 不出貨會顯示鍵名, 故改寫為不寫死等級的中性說法, 對兩者都成立; 技能名改用官方譯名電工/技工/金工, <br> 數量維持 4 個.",
+      "ch": "你需要 <br> 足夠等級的電工 <br> 與技工技能 <br> (可能另需金工) <br> 才能解除短接",
+      "cn": "你需要 <br> 足够等级的电工 <br> 与技工技能 <br> (可能另需金工) <br> 才能解除短接"
+    },
+    "IG_UI|IGUI_HGR_APPLIED": {
+      "action": "translate",
+      "signature": "4d4e5d664c50ff2a",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; APPLIED - / Applied - 只差大小寫. 沿用現值.",
+      "ch": "已套用-",
+      "cn": "已应用-"
+    },
+    "IG_UI|IGUI_HGR_APPLY": {
+      "action": "translate",
+      "signature": "d17481e8b8b636c8",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; APPLY / Apply 只差大小寫. 沿用現值.",
+      "ch": "套用",
+      "cn": "应用"
+    },
+    "IG_UI|IGUI_HGR_CLEAN_FAILED": {
+      "action": "translate",
+      "signature": "f9066990c0219503",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串. 舊版 Could not clean it enough, v2 Cleaning failed., 同一個清潔失敗訊息. 現值「清理得不夠徹底」偏向舊版措辭 (cn 另有「的/得」誤用), 改為雙方皆成立的「清潔失敗」, 並與其他 HGR 字串的「清潔」用詞一致.",
+      "ch": "清潔失敗",
+      "cn": "清洁失败"
+    },
+    "IG_UI|IGUI_HGR_CLEAN_PART": {
+      "action": "translate",
+      "signature": "d0f3cfb448872ce3",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串. 舊版 [HGR] Clean Part, v2 去掉標籤只寫 Clean Part. 現值保留只屬舊版的 [HGR] 標籤, 改為中性的「清潔零件」.",
+      "ch": "清潔零件",
+      "cn": "清洁部件"
+    },
+    "IG_UI|IGUI_HGR_CLEAN_SUCCESS_FMT": {
+      "action": "translate",
+      "signature": "a4d635190066fabd",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; Clean success / Cleaning successful 只差措辭, 格式記號一致. 沿用現值.",
+      "ch": "清潔成功: +%d%% (上限 %d%%)",
+      "cn": "清洁成功: +%d%% (上限 %d%%)"
+    },
+    "IG_UI|IGUI_HGR_ERR_NEED_2SCRAP_AND_SCREW": {
+      "action": "translate",
+      "signature": "15e59d4bde62f2e2",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; Scrap Metal / Metal Scrap 只差語序與句點. 沿用現值.",
+      "ch": "缺少2個廢金屬和螺絲起子",
+      "cn": "缺少2个废金属和螺丝刀"
+    },
+    "IG_UI|IGUI_HGR_ERR_NEED_TOOL_AND_CLOTH": {
+      "action": "translate",
+      "signature": "5f248a4fc4f621e8",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 都是缺少工具和布料的提示, 只差措辭. 沿用現值.",
+      "ch": "沒有工具和布料我無法操作",
+      "cn": "没有工具和布料我无法操作"
+    },
+    "IG_UI|IGUI_HGR_ERR_PART_DATA_MISSING": {
+      "action": "translate",
+      "signature": "57f4a4320d4e90f8",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串. 舊版 No parts found, v2 Error: missing part data., 同一個找不到零件資料的錯誤. 現值「錯誤: 缺少零件資料.」照抄 v2 的前綴與句點, 改為雙方都成立的「找不到零件資料」.",
+      "ch": "找不到零件資料",
+      "cn": "未找到部件数据"
+    },
+    "IG_UI|IGUI_HGR_ERR_TOO_CLEAN_FMT": {
+      "action": "translate",
+      "signature": "c466b26124cfde16",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差結尾句點. 沿用現值.",
+      "ch": "%s過於乾淨 (上限 %d%%)",
+      "cn": "%s过于干净 (上限 %d%%)"
+    },
+    "IG_UI|IGUI_HGR_HGR_VIEW_PARTS": {
+      "action": "translate",
+      "signature": "d3e06270e0a85838",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差標籤後空格. 沿用現值.",
+      "ch": "[HGR] 檢視零件",
+      "cn": "[HGR] 查看部件"
+    },
+    "IG_UI|IGUI_HGR_NO_SPARES_FOUND": {
+      "action": "translate",
+      "signature": "8d2f253e9450904c",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; No Spares Found / No spare parts found 只差詳略與大小寫. 沿用現值.",
+      "ch": "找不到備用零件",
+      "cn": "未找到备件"
+    },
+    "IG_UI|IGUI_HGR_Part_LargeStock": {
+      "action": "translate",
+      "signature": "cdae82adfc11e01f",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; Large Stock / Long Stock 是同一個 LargeStock 零件 (script 物品 HGR.GunPart_LargeStock) 的措辭修正, 「大尺寸槍托」對兩者都成立. 沿用現值.",
+      "ch": "大尺寸槍托",
+      "cn": "大尺寸枪托"
+    },
+    "IG_UI|IGUI_HGR_Part_Slider": {
+      "action": "translate",
+      "signature": "d95c5fb0b4f46d10",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; Slider / Slide 是同一零件, v2 修正拼法, 「滑套」為正確名稱. 沿用現值.",
+      "ch": "滑套",
+      "cn": "滑套"
+    },
+    "IG_UI|IGUI_HGR_REPAIR_FAILED": {
+      "action": "translate",
+      "signature": "db693bd7defb478b",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差大小寫. 沿用現值.",
+      "ch": "修理失敗!",
+      "cn": "修理失败!"
+    },
+    "IG_UI|IGUI_HGR_REPLACE_WITH_THIS_PART": {
+      "action": "translate",
+      "signature": "b8e76ee9cd240b92",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串. 舊版為獨立整句 Replace with this part, v2 改為後接零件名的前綴 Replace with (結尾留空格). 現值「更換為 」在舊版會是沒有受詞的半句; 改為「更換為此零件: 」, 單獨顯示時是完整語意, 後接零件名時讀作「更換為此零件: <零件名>」, 對兩個變體都成立, 並保留結尾空格.",
+      "ch": "更換為此零件: ",
+      "cn": "更换为此部件: "
+    },
+    "IG_UI|IGUI_HGR_REVERT": {
+      "action": "translate",
+      "signature": "bfe4405c1cb5f1e2",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; REVERT / Revert 只差大小寫. 沿用現值.",
+      "ch": "還原",
+      "cn": "还原"
+    },
+    "IG_UI|IGUI_HGR_SUCCESSFU_REPAIR": {
+      "action": "translate",
+      "signature": "b9fac3ebfd8c173c",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 舊版 Successfu Repair! (拼錯) 與 v2 Successful! 都是修理成功訊息. 沿用現值.",
+      "ch": "修理成功!",
+      "cn": "修理成功!"
+    },
+    "IG_UI|IGUI_HGR_TIP_CLEAN_KIT_FMT": {
+      "action": "translate",
+      "signature": "c473d05adf4dd37f",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差 Improve / Improvement 措辭. 沿用現值.",
+      "ch": "使用清潔套件: \\n成功率: 必定成功\\n提升: +%d%%\\n最大: %d%%",
+      "cn": "使用清洁套装: \\n成功率: 保证\\n提升: +%d%%\\n最大: %d%%"
+    },
+    "IG_UI|IGUI_HGR_TIP_CLEAN_TCS_FMT": {
+      "action": "translate",
+      "signature": "3c219e9dd18cfe58",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; v2 省略開頭 Use 與 Improve/Improvement, 內容相同. 沿用現值.",
+      "ch": "使用工具+布+溶劑: \\n成功率: %d%%\\n提升: +%d%%\\n最大: %d%%",
+      "cn": "使用工具+布+溶剂: \\n成功率: %d%%\\n提升: +%d%%\\n最大: %d%%"
+    },
+    "IG_UI|IGUI_HGR_TIP_CLEAN_TC_FMT": {
+      "action": "translate",
+      "signature": "51590abc7461812e",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; v2 省略開頭 Use 與 Improve/Improvement, 內容相同. 沿用現值.",
+      "ch": "使用工具+布: \\n成功率: %d%%\\n提升: +%d%%\\n最大: %d%%",
+      "cn": "使用工具+布: \\n成功率: %d%%\\n提升: +%d%%\\n最大: %d%%"
+    },
+    "IG_UI|IGUI_HGR_TIP_DESTROY_FMT": {
+      "action": "translate",
+      "signature": "5ad8157263813d60",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; Scrap Metal / Scrap 只差詳略. 沿用現值.",
+      "ch": "銷毀可獲得約%d個廢金屬",
+      "cn": "销毁可获得约%d个废金属"
+    },
+    "IG_UI|IGUI_HGR_TIP_NEED_CLEAN_MATS": {
+      "action": "translate",
+      "signature": "44a051d383e71a9f",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; Lacks cleaning supplies / Missing cleaning materials. 同義. 沿用現值.",
+      "ch": "缺少清潔用品",
+      "cn": "缺少清洁用品"
+    },
+    "IG_UI|IGUI_HGR_TIP_NEED_KIT_OR_SCREW": {
+      "action": "translate",
+      "signature": "def643af8e58237e",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; Lacks / Missing 同義. 沿用現值.",
+      "ch": "缺少修理套件或螺絲起子",
+      "cn": "缺少修理套装或螺丝刀"
+    },
+    "IG_UI|IGUI_HGR_TIP_REASM_USE_KIT": {
+      "action": "translate",
+      "signature": "53a516d47eff6cff",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差大小寫與句點. 沿用現值.",
+      "ch": "使用修理套裝, \\n無懲罰",
+      "cn": "使用修理套装, \\n无惩罚"
+    },
+    "IG_UI|IGUI_HGR_TIP_REASM_USE_SCREW_FMT": {
+      "action": "translate",
+      "signature": "43a6e016c17e82be",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差大小寫. 沿用現值.",
+      "ch": "使用螺絲起子: \\n最大懲罰: %d%%",
+      "cn": "使用螺丝刀: \\n最大惩罚: %d%%"
+    },
+    "IG_UI|IGUI_HGR_TIP_REPAIR_KIT_FMT": {
+      "action": "translate",
+      "signature": "8236d3fad1f3de72",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差 Improve / Improvement 措辭. 沿用現值.",
+      "ch": "使用修理套裝: \\n成功率: 必定成功\\n提升: +%d%%",
+      "cn": "使用修理套装: \\n成功率: 保证\\n提升: +%d%%"
+    },
+    "IG_UI|IGUI_HGR_TIP_REPAIR_SCREW_FMT": {
+      "action": "translate",
+      "signature": "46b2b1da6cf69756",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差 Improve / Improvement 措辭. 沿用現值.",
+      "ch": "使用螺絲起子: \\n成功率: %d%%\\n提升: +%d%%",
+      "cn": "使用螺丝刀: \\n成功率: %d%%\\n提升: +%d%%"
+    },
+    "IG_UI|IGUI_HGR_Title_PartsPanel": {
+      "action": "translate",
+      "signature": "893c4b73d0d19653",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; Weapon Parts / Parts 只差詳略, 「武器零件」對兩者都成立. 沿用現值.",
+      "ch": "武器零件",
+      "cn": "武器部件"
+    },
+    "IG_UI|IGUI_HGR_USED_CLEANING_KIT": {
+      "action": "translate",
+      "signature": "4eb0bbe017ba9b9b",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差句點. 沿用現值.",
+      "ch": "已使用清潔套件",
+      "cn": "已使用清洁套装"
+    },
+    "IG_UI|IGUI_HGR_USED_REPAIR_KIT": {
+      "action": "translate",
+      "signature": "0f4d39158119382b",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差句點. 沿用現值.",
+      "ch": "已使用修理套裝",
+      "cn": "已使用修理套装"
+    },
+    "IG_UI|IGUI_HGR_USED_SOLVENT": {
+      "action": "translate",
+      "signature": "c9e6af4cf4c6ca9b",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差句點. 沿用現值.",
+      "ch": "已使用溶劑",
+      "cn": "已使用溶剂"
+    },
+    "IG_UI|IGUI_HGR_Upg_Barrel_Lightweight": {
+      "action": "translate",
+      "signature": "6348159b4821ac62",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Hybrid Gun Repair 的舊版 (HybridGunRepair, Lightened Barrel) 與 v2 (Lightweight Barrel) 指同一個槍管升級, 只是措辭不同; 「輕量化槍管」對兩版都成立, 沿用現值.",
+      "ch": "輕量化槍管",
+      "cn": "轻量化枪管"
+    },
+    "IG_UI|IGUI_HGR_Upg_TriggerUpgrade": {
+      "action": "translate",
+      "signature": "d942ae69bf4487c0",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Hybrid Gun Repair 的舊版 (Trigger Job) 與 v2 (Trigger Upgrade) 指同一個扳機升級項目; 「扳機改進」對兩版都成立, 沿用現值.",
+      "ch": "扳機改進",
+      "cn": "扳机改进"
+    },
+    "IG_UI|IGUI_HMR_TotalCondFmt": {
+      "action": "translate",
+      "signature": "38c79a9577c77129",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Hybrid Melee Repair 的兩個變體: 舊版 HybridMeleeRepair 的 IG_UI_EN.txt 是死檔且內容誤放西班牙文 (Condición general: %d%%), B42.12 版 IG_UI.json 為 Weapon Condition: %1%. 兩者都是武器整體耐久度顯示, 屬同一實體; 沿用與現行 JSON 版 %1 記號一致的現值「整體狀況: %1%%」. 舊版若仍以 string.format 搭配 %d 使用此鍵, 記號不相容屬舊版既有問題, 現行版本不受影響.",
+      "ch": "整體狀況: %1%%",
+      "cn": "总体状况: %1%%"
+    },
+    "IG_UI|IGUI_HotbarAttachment_ChestMountDT": {
+      "action": "translate",
+      "signature": "75d62d06288b6ecc",
+      "reason": "2026-09-27 裁決：FR Operator 的 TacOp Chest Holster 與 Federal Rangers Chimera 的 Delta Chest Holster 都是胸前槍套掛點, 差別只在各自的品牌前綴. 原 cn「三角洲胸前枪套」帶有只屬 Chimera 的「三角洲」, 改為中性的「胸挂枪套」與 ch「胸掛槍套」一致, 對兩個 MOD 都成立 (Operator 的 EN 是死檔, unship 會顯示鍵名, 故不採).",
+      "ch": "胸掛槍套",
+      "cn": "胸挂枪套"
+    },
+    "IG_UI|IGUI_HotbarAttachment_KatanaSheath": {
+      "action": "translate",
+      "signature": "a0b94091048bbdeb",
+      "reason": "2026-09-27 裁決：TKS42 與 Tactical Sheaths Reborn 同為 Sheath Katana (Back); Simple Slings Mod 的 KatanaSheath 是未翻譯的鍵名式占位文字 (死檔), 指的是同一個背部武士刀刀鞘掛點. 沿用現值「武士刀刀鞘 (背部)」.",
+      "ch": "武士刀刀鞘 (背部)",
+      "cn": "武士刀刀鞘 (背部)"
+    },
+    "IG_UI|IGUI_HotbarAttachment_KnifeSheathBack": {
+      "action": "translate",
+      "signature": "998db18f7f0ac561",
+      "reason": "2026-09-27 裁決：TKS42 與 Tactical Sheaths Reborn 同為 Sheath (Back); Simple Slings Mod 的 KnifeSheathBack 是鍵名式占位文字 (死檔), 同為背部刀鞘掛點. 沿用現值「刀鞘 (背部)」.",
+      "ch": "刀鞘 (背部)",
+      "cn": "刀鞘 (背部)"
+    },
+    "IG_UI|IGUI_HotbarAttachment_Sling": {
+      "action": "translate",
+      "signature": "ca24606f09d22d15",
+      "reason": "2026-09-27 裁決：Dark/Invisible Weapon Slings 四個揹帶掛點 (Sling/SlingAlt/SlingAlt2/SlingAlt3) 一律叫 Weapon Sling (揹法另由右肩/左肩/頸前/背後選單區分); Simple Slings Mod 則用 Front \\ 標示揹帶位置, 但其 IG_UI_EN.txt 是死檔, unship 會讓它顯示鍵名. 兩者都是武器揹帶掛點, 「武器揹帶」對雙方都誠實成立 (Simple Slings 僅失去位置細節), 故 translate. 沿用現值.",
+      "ch": "武器揹帶",
+      "cn": "武器背带"
+    },
+    "IG_UI|IGUI_HotbarAttachment_SlingAlt": {
+      "action": "translate",
+      "signature": "4316d8b565044dd1",
+      "reason": "2026-09-27 裁決：Dark/Invisible Weapon Slings 四個揹帶掛點 (Sling/SlingAlt/SlingAlt2/SlingAlt3) 一律叫 Weapon Sling (揹法另由右肩/左肩/頸前/背後選單區分); Simple Slings Mod 則用 Front / 標示揹帶位置, 但其 IG_UI_EN.txt 是死檔, unship 會讓它顯示鍵名. 兩者都是武器揹帶掛點, 「武器揹帶」對雙方都誠實成立 (Simple Slings 僅失去位置細節), 故 translate. 沿用現值.",
+      "ch": "武器揹帶",
+      "cn": "武器背带"
+    },
+    "IG_UI|IGUI_HotbarAttachment_SlingAlt2": {
+      "action": "translate",
+      "signature": "36c76b8373e1b597",
+      "reason": "2026-09-27 裁決：Dark/Invisible Weapon Slings 四個揹帶掛點 (Sling/SlingAlt/SlingAlt2/SlingAlt3) 一律叫 Weapon Sling (揹法另由右肩/左肩/頸前/背後選單區分); Simple Slings Mod 則用 Front -- 標示揹帶位置, 但其 IG_UI_EN.txt 是死檔, unship 會讓它顯示鍵名. 兩者都是武器揹帶掛點, 「武器揹帶」對雙方都誠實成立 (Simple Slings 僅失去位置細節), 故 translate. 沿用現值.",
+      "ch": "武器揹帶",
+      "cn": "武器背带"
+    },
+    "IG_UI|IGUI_HotbarAttachment_SlingAlt3": {
+      "action": "translate",
+      "signature": "54e55dabd771f05c",
+      "reason": "2026-09-27 裁決：Dark/Invisible Weapon Slings 四個揹帶掛點 (Sling/SlingAlt/SlingAlt2/SlingAlt3) 一律叫 Weapon Sling (揹法另由右肩/左肩/頸前/背後選單區分); Simple Slings Mod 則用 Rear Sling 標示揹帶位置, 但其 IG_UI_EN.txt 是死檔, unship 會讓它顯示鍵名. 兩者都是武器揹帶掛點, 「武器揹帶」對雙方都誠實成立 (Simple Slings 僅失去位置細節), 故 translate. ch 由「武器背帶」統一為與同組三鍵及官方掛點用字一致的「武器揹帶」.",
+      "ch": "武器揹帶",
+      "cn": "武器背带"
+    },
+    "IG_UI|IGUI_PlayerText_CanNotOpen": {
+      "action": "unship",
+      "signature": "aa3921dad764be1c",
+      "reason": "2026-09-27 裁決：RaccoonCityB42 用於「你已經打開過窗戶了!」, Table Saw 用於「檯鋸正在使用中…」, 兩者是完全不同的提示, 找不到誠實的中性譯名. 兩個 MOD 都有 IG_UI.json 英文, unship 後各自顯示自己的英文原文."
+    },
+    "IG_UI|IGUI_PlayerText_NoPower": {
+      "action": "translate",
+      "signature": "f62d6d6519addad3",
+      "reason": "2026-09-27 裁決：Tsar's Common Library 與 ATA Petyarbuilt 的 There is no power. (其官方 CN 為「没有电源」, IT/PTBR/RU 皆譯為電能/供電) 與 SecretZ 的 No power (ES 譯 No hay electricidad) 都是指沒有電力供應, 同一語意. 原「沒有動力」誤解為動力, 改為「沒有電力」, 對三個 MOD 都成立.",
+      "ch": "沒有電力",
+      "cn": "没有电力"
+    },
+    "IG_UI|IGUI_VLQ_1_Desc_q1s001": {
+      "action": "translate",
+      "signature": "059c7280bdc70a54",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "你猛地驚醒, 頭痛如裂.愣了許久才反應過來, 你曾熟悉的世界, 已然崩塌.周遭萬物都變成了沒有靈魂的軀殼, 在街道上蹣跚遊蕩. 其中一些飢腸轆轆, 正對著新鮮血肉大快朵頤…<LINE><LINE>無論如何, 你得先活下去.<LINE><LINE>生存最關鍵的是水. 趕緊找點水, 為接下來的求生之路做好準備.",
+      "cn": "你猛地惊醒, 头痛如裂.愣了许久才反应过来, 你曾熟悉的世界, 已然崩塌.周遭万物都变成了没有灵魂的躯壳, 在街道上蹒跚游荡. 其中一些饥肠辘辘, 正对着新鲜血肉大快朵颐...<LINE><LINE>无论如何, 你得先活下去.<LINE><LINE>生存最关键的是水. 赶紧找点水, 为接下来的求生之路做好准备."
+    },
+    "IG_UI|IGUI_VLQ_1_Desc_q1s003": {
+      "action": "translate",
+      "signature": "b50da96fa8b8de6c",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "你想起了弟弟- 唯一在乎你的人, 正在河畔鎮讀高中. 儘管你都不知道自己能否活下去, 但仍然決定去那所學校找他. 你小聲自言自語道…弟弟, 千萬要活著.",
+      "cn": "你想起了弟弟 - 唯一在乎你的人, 正在河畔镇读高中. 尽管你都不知道自己能否活下去, 但仍然决定去那所学校找他. 你自言自语小声说道...弟弟, 千万要活着."
+    },
+    "IG_UI|IGUI_VLQ_1_Desc_q1s004": {
+      "action": "translate",
+      "signature": "3488c0910d930c0e",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…透過交談得知, 這個女人是學校的副校長.她說記得你弟弟.因為就在疫情爆發的5天前, 市裡的警察和一群陌生人來學校給所有學生採集了血樣, 然後就帶走了你弟弟和其他4名學生.她知道的只有這些.<LINE><LINE>要查詢更多線索, 看來你得去趟河畔鎮警局.",
+      "cn": "...通过交谈得知, 这个女人是学校的副校长. 她说记得你弟弟. 因为就在疫情爆发的5天前, 市里的警察和一群陌生人来学校给所有学生采集了血样, 然后就带走了你弟弟和其他4名学生.她知道的只有这些.<LINE><LINE>要查找更多线索, 看来你得去趟河畔镇警局."
+    },
+    "IG_UI|IGUI_VLQ_1_Desc_q1s005": {
+      "action": "translate",
+      "signature": "d05d4c841e09c44d",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…你問這位警官關於疫情爆發前5天的那件事.他說只有警察局長知道細節;像他這樣的警員只是服從上級命令而已.<LINE><LINE>你又問到局長的情況, 他說疫情爆發時局長並不在警局, 然後把局長的家庭住址給了你.",
+      "cn": "...你问这位警官关于疫情爆发前5天的那件事.他说只有警察局长知道细节;像他这样的警员只是服从上级命令而已.<LINE><LINE>你又问到局长的情况, 他说疫情爆发时局长并不在警局, 然后把局长的家庭住址给了你."
+    },
+    "IG_UI|IGUI_VLQ_1_Desc_q1s008": {
+      "action": "translate",
+      "signature": "cf75f084464bbb59",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…透過交談得知, 她是該設施的研究科學家.她聲稱從你提到的那段時間到現在, 沒有任何機構或實驗對象來過這裡.<LINE><LINE>去路易斯維爾市警察局尋找更多線索.",
+      "cn": "...通过交谈得知, 她是该设施的研究科学家.她声称在你提到的那段时间至今, 没有任何机构或实验对象来过这里.<LINE><LINE>去路易斯维尔市警察局寻找更多线索."
+    },
+    "IG_UI|IGUI_VLQ_1_Desc_q1s009": {
+      "action": "translate",
+      "signature": "9402f5ed134822bd",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…透過交談得知, 他是該警局的一名中尉.他知道軍事研究設施的轉移任務, 但派遣的小隊遭到一幫陌生人的伏擊.警局隨即派出增援, 但因為疫情爆發, 他們無法抵達伏擊現場, 所以沒有任何訊息傳回.伏擊的具體地點他也不知道.<LINE><LINE>提示: 你可以沿著從軍事研究設施到芬尼根研究小組的公路搜尋.",
+      "cn": "...通过交谈得知, 他是该警局的一名中尉.他知道军事研究设施的转移任务, 但派遣的小队遭到一帮陌生人的伏击.警局随即派出增援, 但因为疫情爆发, 他们无法抵达伏击现场, 所以没有任何消息传回.伏击的具体地点他也不知道.<LINE><LINE>提示: 你可以沿着从军事研究设施到芬尼根研究小组的公路搜寻."
+    },
+    "IG_UI|IGUI_VLQ_1_Desc_q1s010": {
+      "action": "translate",
+      "signature": "a716e82d6ec66638",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "透過地上屍體所穿的制服, 以及轉移文件中記載的相符車牌, 你找到了要員保護小隊遭到伏擊的地點.在看到地上的小隊成員早已沒了動靜, 你心頭一陣緊張和擔憂.",
+      "cn": "通过地上的尸体制服以及转移文件中列出的相符车牌, 你找到了要员保护小队遭到伏击的地点.在看到地上的小队成员早已没了动静, 你心头一阵紧张和担忧."
+    },
+    "IG_UI|IGUI_VLQ_1_NPCTalk_q1s003": {
+      "action": "translate",
+      "signature": "3488c0910d930c0e",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…透過交談得知, 這個女人是學校的副校長. 她說記得你弟弟. 因為就在疫情爆發的5天前, 市裡的警察和一群陌生人來學校給所有學生採集了血樣, 然後就帶走了你弟弟和其他4名學生.她知道的只有這些.<LINE><LINE>要查詢更多線索, 看來你得去趟河畔鎮警局.",
+      "cn": "...通过交谈得知, 这个女人是学校的副校长. 她说记得你弟弟. 因为就在疫情爆发的5天前, 市里的警察和一群陌生人来学校给所有学生采集了血样, 然后就带走了你弟弟和其他4名学生.她知道的只有这些.<LINE><LINE>要查找更多线索, 看来你得去趟河畔镇警局."
+    },
+    "IG_UI|IGUI_VLQ_1_NPCTalk_q1s004": {
+      "action": "translate",
+      "signature": "d05d4c841e09c44d",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…你問這位警官關於疫情爆發前5天的那件事.他說只有警察局長知道細節;像他這樣的警員只是服從上級命令而已.<LINE><LINE>你又問到局長的情況, 他說疫情爆發時局長並不在警局, 然後把局長的家庭住址給了你.",
+      "cn": "...你问这位警官关于疫情爆发前5天的那件事.他说只有警察局长知道细节;像他这样的警员只是服从上级命令而已.<LINE><LINE>你又问到局长的情况, 他说疫情爆发时局长并不在警局, 然后把局长的家庭住址给了你."
+    },
+    "IG_UI|IGUI_VLQ_1_NPCTalk_q1s005": {
+      "action": "translate",
+      "signature": "ab6b84f603f4447f",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…那個穿著警服的男人行為顯得非常怪異, 而且沒有任何回應…",
+      "cn": "...那个穿着警服的男人行为显得非常怪异, 而且没有任何回应..."
+    },
+    "IG_UI|IGUI_VLQ_1_NPCTalk_q1s007": {
+      "action": "translate",
+      "signature": "cf75f084464bbb59",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…透過交談得知, 她是該設施的研究科學家.她聲稱從你提到的那段時間到現在, 沒有任何機構或實驗對象來過這裡.<LINE><LINE>去路易斯維爾市警察局尋找更多線索.",
+      "cn": "...通过交谈得知, 她是该设施的研究科学家.她声称在你提到的那段时间至今, 没有任何机构或实验对象来过这里.<LINE><LINE>去路易斯维尔市警察局寻找更多线索."
+    },
+    "IG_UI|IGUI_VLQ_1_NPCTalk_q1s008": {
+      "action": "translate",
+      "signature": "9402f5ed134822bd",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…透過交談得知, 他是該警局的一名中尉.他知道軍事研究設施的轉移任務, 但派遣的小隊遭到一幫陌生人的伏擊.警局隨即派出增援, 但因為疫情爆發, 他們無法抵達伏擊現場, 所以沒有任何訊息傳回.伏擊的具體地點他也不知道.<LINE><LINE>提示: 你可以沿著從軍事研究設施到芬尼根研究小組的公路搜尋.",
+      "cn": "...通过交谈得知, 他是该警局的一名中尉.他知道军事研究设施的转移任务, 但派遣的小队遭到一帮陌生人的伏击.警局随即派出增援, 但因为疫情爆发, 他们无法抵达伏击现场, 所以没有任何消息传回.伏击的具体地点他也不知道.<LINE><LINE>提示: 你可以沿着从军事研究设施到芬尼根研究小组的公路搜寻."
+    },
+    "IG_UI|IGUI_VLQ_1_NotePage3_1_q1s006": {
+      "action": "translate",
+      "signature": "ddc494660f584eba",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…裡面是一份關於增強人體力量與體能的研究報告, 目前正處於人類活體測試階段.",
+      "cn": "...里面是一份关于增强人体力量与体能的研究报告, 目前正处于人类活体测试阶段."
+    },
+    "IG_UI|IGUI_VLQ_1_NotePage4_1_q1s006": {
+      "action": "translate",
+      "signature": "548a7c4b202a8809",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…裡面提到了弟弟的名字, 標記為'實驗體2508號'.<LINE>結論指出, 實驗體2508號是特殊個體, 適用於多個研究專案, 包括: 超級士兵1號, 2號和4號.",
+      "cn": "...里面提到了弟弟的名字, 标记为'实验体2508号'.<LINE>结论指出, 实验体2508号是特殊个体, 适用于多个研究项目, 包括: 超级士兵1号, 2号和4号."
+    },
+    "IG_UI|IGUI_VLQ_2_Desc_q1s013": {
+      "action": "translate",
+      "signature": "2222f1ad8726c35f",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…透過交談得知, 這個男人是文特博士, 該實驗室的主人.<LINE><LINE>你問到弟弟的情況, 但他搖搖頭, 說根本沒見過你說的人.相反, 由於他助手一天多前出去搜尋食物, 至今未歸, 讓他憂心忡忡- 她通常一天內就會回來.所以他希望你能幫忙找到她.文特博士認為她很可能還在城鎮的食物店附近, 因為她提到那附近某處還有很多食物.",
+      "cn": "...通过交谈得知, 这个男人是Venter博士, 该实验室的主人.<LINE><LINE>你问到弟弟的情况, 但他摇摇头, 说根本没见过你说的人.相反, 由于他助手一天多前出去搜寻食物, 至今未归, 让他忧心忡忡- 她通常一天内就会回来.所以他希望你能帮忙找到她.Venter博士认为她很可能还在城镇的食物店附近, 因为她提到那附近某处还有很多食物."
+    },
+    "IG_UI|IGUI_VLQ_2_Desc_q1s014": {
+      "action": "translate",
+      "signature": "72ada8ce0c71af1b",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…透過交談得知, 她是巴斯勒博士, 文特博士的助手.她之所以被迫躲在這裡, 是因為之前尋找食物時, 不小心弄出了很大聲響, 引來了太多殭屍.現在只能等那些殭屍離開.<LINE><LINE>你向巴斯勒博士問起弟弟的情況, 她說根本沒有任何線索.離開前, 她向你表示感謝, 因為這裡已經安全多了- 並表示她會立即回到實驗室.",
+      "cn": "...通过交谈得知, 她是Bassler博士, Venter博士的助手.她之所以被迫躲在这里, 是因为之前寻找食物时, 不小心弄出了很大声响, 引来了太多丧尸.现在只能等那些丧尸离开.<LINE><LINE>你向Bassler博士问起弟弟的情况, 她说根本没有任何线索.离开前, 她向你表示感谢, 因为这里已经安全多了- 并表示她会立即回到实验室."
+    },
+    "IG_UI|IGUI_VLQ_2_Desc_q1s015": {
+      "action": "translate",
+      "signature": "8294e15d9e4fa357",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…文特博士和巴斯勒博士向你表達了謝意.看來他們現在把你當成了朋友, 所以透露了更多的資訊.<LINE><LINE>他們都隸屬於一個研究增強人體機能的生物技術組織, 這個實驗室就是該組織提供的.疫情爆發後, 總部的所有支援都中斷了, 而且總部那邊似乎也出了事.文特博士和他的助手必須自己動手處理一切;許多過去依賴總部的事情現在變得非常困難, 尤其還是個女助手.<LINE><LINE>自城市被殭屍佔領以來, 你是他們遇到的第一個倖存者, 文特博士覺得你值得信賴.他希望你能在這段時期提供一些幫助, 並承諾會有豐厚回報, 對生存大有幫助的回報.<LINE><LINE>如果你同意, 再和他談談.",
+      "cn": "...Venter博士和Bassler博士向你表达了谢意.看来他们现在把你当成了朋友, 所以透漏了更多的信息.<LINE><LINE>他们都隶属于一个研究增强人体机能的生物技术组织, 这个实验室就是该组织提供的.疫情爆发后, 总部的所有支持都中断了, 而且总部那边似乎也出了事.Venter博士和他的助手必须自己动手处理一切;许多过去依赖总部的事情现在变得非常困难, 尤其还是个女助手.<LINE><LINE>自城市被丧尸占领以来, 你是他们遇到的第一个幸存者, Venter博士觉得你值得信赖.他希望你能在这段时期提供一些帮助, 并承诺会有丰厚回报, 对生存大有帮助的回报.<LINE><LINE>如果你同意, 再和他谈谈."
+    },
+    "IG_UI|IGUI_VLQ_2_Desc_q1s018": {
+      "action": "translate",
+      "signature": "c362d25462aab496",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…你帶來了飲用水, 文特博士向你表示感謝.現在, 食物和水足夠維持很長時間了.他請求你協助進行與殭屍相關的研究.<LINE><LINE>文特博士需要你收集15份殭屍的血液樣本.並給了你工具和詳細的採血說明.<LINE><LINE>提示: 你需要一個空注射器來從殭屍屍體上採集血液樣本.每隻殭屍只能取樣一次.",
+      "cn": "...你带来了饮用水, Venter博士向你表示感谢.现在, 食物和水足够维持很长时间了.他请求你协助进行与丧尸相关的研究.<LINE><LINE>Venter博士需要你收集15份丧尸的血液样本.并给了你工具和详细的采血说明.<LINE><LINE>提示: 你需要一个空注射器来从丧尸尸体上采集血液样本.每只丧尸只能采样一次."
+    },
+    "IG_UI|IGUI_VLQ_2_Desc_q1s022": {
+      "action": "translate",
+      "signature": "ae61ce3ae70bb40d",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…收到樣本後, Venter博士的語氣也不再客套.他直接給了你一小瓶血清, 說這個東西能增強身體力量, 是之前一個研究專案的成果.幾乎沒有任何副作用.<LINE><LINE>博士希望這能幫到他的朋友- 你.然後繼續埋頭於研究之中.",
+      "cn": "...收到样本后, Venter博士的语气也不再客套.他直接给了你一小瓶血清, 说这个东西能增强身体力量, 是之前一个研究项目的成果.几乎没有任何副作用.<LINE><LINE>博士希望这能帮到他的朋友- 你.然后继续埋头于研究之中."
+    },
+    "IG_UI|IGUI_VLQ_2_Desc_q1s023": {
+      "action": "translate",
+      "signature": "218826b1ed7bff56",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…在尋找弟弟的旅途中, 你感到已經迷失.世界已經改變, 記憶支離破碎, 無名悲傷與孤獨感愈發強烈.<LINE><LINE>你想找個朋友喝上幾杯.你想到了文特博士, 那位白髮蒼蒼的朋友…現在你只需要2瓶酒.",
+      "cn": "...在寻找弟弟的旅途中, 你感到已经迷失.世界已经改变, 记忆支离破碎, 无名悲伤与孤独感愈发强烈.<LINE><LINE>你想找个朋友喝上几杯.你想到了Venter博士, 那位白发苍苍的朋友...现在你只需要2瓶酒."
+    },
+    "IG_UI|IGUI_VLQ_2_Desc_q1s029": {
+      "action": "translate",
+      "signature": "97f2da74545634ba",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…文特博士收下了你帶回的水蛭.然後繼續埋頭於研究之中.",
+      "cn": "...Venter博士收下了你带回的水蛭.然后继续埋头于研究之中."
+    },
+    "IG_UI|IGUI_VLQ_2_Desc_q1s031": {
+      "action": "translate",
+      "signature": "3ad3cd56b6fd223f",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…文特博士說食物儲備又不夠了.他需要你再去尋找一些食物 (總計降低1500點飢餓值).",
+      "cn": "...Venter博士说食物储备又不够了.他需要你再去寻找一些食物 (总计降低1500点饥饿值)."
+    },
+    "IG_UI|IGUI_VLQ_2_Desc_q1s032": {
+      "action": "translate",
+      "signature": "e9c87d052a25f555",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…文特博士說他需要一個活體組織樣本, 該樣本需採集於某個正處於屍變過程的人.他給了你工具和採集標本的說明.<LINE><LINE>提示: 你可能會在城市裡隨機遇到倖存者.其中一些人可能已被感染…另一些人則沒有.",
+      "cn": "...Venter博士说他需要一个活体组织样本, 该样本需采集于某个正处于尸变过程的人.他给了你工具和采集标本的说明.<LINE><LINE>提示: 你可能会在城市里随机遇到幸存者.其中一些人可能已被感染...另一些人则没有."
+    },
+    "IG_UI|IGUI_VLQ_2_Desc_q1s035": {
+      "action": "translate",
+      "signature": "0c68f0492f00abc5",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…文特博士說你來得正是時候. 他剛剛創造了一個非常有趣的東西. 他滔滔不絕地說出一連串你完全不懂的技術術語.<LINE><LINE>你看向他指的東西 - 一個高爾夫球大小, 正在移動的團塊, 它似乎在吸收旁邊的一小塊肉.<LINE><LINE>在海量的科學術語中, 你捕捉到一個資訊: 這個有機體對博士最近從殭屍體內提取的病毒極具吸引力. 你很震驚, 同時問道, 它會不會把全城的殭屍都吸引過來.<LINE><LINE>博士和他的助手都僵住了. 他無意識地小聲說道…有機體長得越大, 吸引範圍就越廣…而它現在的體積已經遠超剛形成的時候了…<LINE><LINE>你意識到必須立刻摧毀這個有機體. 催促文特博士摧毀這個有機體.",
+      "cn": "...Venter博士说你来得正是时候.他刚刚创造了一个非常有趣的东西.他滔滔不绝地说出一连串你完全不懂的技术术语.<LINE><LINE>你看向他指的东西- 一个高尔夫球大小, 正在移动的团块, 它似乎在吸收旁边的一小块肉.<LINE><LINE>在海量的科学术语中, 你捕捉到一个信息: 这个有机体对博士最近从丧尸体内提取的病毒极具吸引力.你很震惊, 同时问道, 它会不会把全城的丧尸都吸引过来.<LINE><LINE>博士和他的助手都僵住了.他无意识地小声说道...有机体长得越大, 吸引范围就越广...而它现在的体积已经远超刚形成的时候了...<LINE><LINE>你意识到必须立刻摧毁这个有机体.催促Venter博士摧毁这个有机体."
+    },
+    "IG_UI|IGUI_VLQ_2_Desc_q1s040": {
+      "action": "translate",
+      "signature": "4d54c8d164c97205",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines: 舊版 vlmainquest1 / vlmainquest1_legacy_42_12 劇情只到 q1s040, 此鍵是「將依回饋追加任務」的結尾占位文字 (死檔 IG_UI_EN.txt); 新版 storylines 把該占位移到 q1s040_FIXME_willDelete, 此鍵改為文特博士留字條轉移地點的正式劇情並延續到後續任務. 舊版文字屬舊版占位, 依新版正式劇情翻譯, 沿用現值. 已接受殘留: 舊版玩家在最後一步會看到新版劇情描述而非「待續」提示 (unship 則會看到鍵名, 更差).",
+      "ch": "…從文特博士留下的字條得知, 他和助手已轉移到另一處更安全的地點. 他仔細標出了位置, 讓你能輕易找到.",
+      "cn": "...从Venter博士留下的字条得知, 他和助手已转移到另一处更安全的地点. 他仔细标出了位置, 让你能轻易找到."
+    },
+    "IG_UI|IGUI_VLQ_2_NPCTalk_q1s012": {
+      "action": "translate",
+      "signature": "2222f1ad8726c35f",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…透過交談得知, 這個男人是文特博士, 該實驗室的主人.<LINE><LINE>你問到弟弟的情況, 但他搖搖頭, 說根本沒見過你說的人.相反, 由於他助手一天多前出去搜尋食物, 至今未歸, 讓他憂心忡忡- 她通常一天內就會回來.所以他希望你能幫忙找到她.文特博士認為她很可能還在城鎮的食物店附近, 因為她提到那附近某處還有很多食物.",
+      "cn": "...通过交谈得知, 这个男人是Venter博士, 该实验室的主人.<LINE><LINE>你问到弟弟的情况, 但他摇摇头, 说根本没见过你说的人.相反, 由于他助手一天多前出去搜寻食物, 至今未归, 让他忧心忡忡- 她通常一天内就会回来.所以他希望你能帮忙找到她.Venter博士认为她很可能还在城镇的食物店附近, 因为她提到那附近某处还有很多食物."
+    },
+    "IG_UI|IGUI_VLQ_2_NPCTalk_q1s013": {
+      "action": "translate",
+      "signature": "4623430a52a632a7",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…透過交談得知, 她是巴斯勒博士, 文特博士的助手.她之所以被迫躲在這裡, 是因為之前尋找食物時, 不小心弄出了很大聲響, 引來了太多殭屍.現在只能等那些殭屍離開.<LINE><LINE>你向巴斯勒博士問起弟弟的情況, 她說根本沒有任何線索.離開前, 她向你表示感謝, 因為這裡已經安全多了- 並表示她會立即回到實驗室.",
+      "cn": "...通过交谈得知, 她是Bassler博士, Venter博士的助手.她之所以被迫躲在这里, 是因为之前寻找食物时, 不小心弄出了很大声响, 引来了太多丧尸.现在只能等那些丧尸离开.<LINE><LINE>你向Bassler博士问起弟弟的情况, 她说根本没有任何线索.离开前, 她向你表示感谢, 因为这里已经安全多了- 并表示她会立即回到实验室."
+    },
+    "IG_UI|IGUI_VLQ_2_NPCTalk_q1s014": {
+      "action": "translate",
+      "signature": "8294e15d9e4fa357",
+      "reason": "2026-09-27 裁決：同一 Workshop 項目 Zomboid Storylines 的新版 storylines 與舊版 vlmainquest1 / vlmainquest1_legacy_42_12 的同一段劇情文字, 只有措辭、數字寫法或標點的差異, 語意相同; 沿用現值.",
+      "ch": "…文特博士和巴斯勒博士向你表達了謝意.看來他們現在把你當成了朋友, 所以透露了更多的資訊.<LINE><LINE>他們都隸屬於一個研究增強人體機能的生物技術組織, 這個實驗室就是該組織提供的.疫情爆發後, 總部的所有支援都中斷了, 而且總部那邊似乎也出了事.文特博士和他的助手必須自己動手處理一切;許多過去依賴總部的事情現在變得非常困難, 尤其還是個女助手.<LINE><LINE>自城市被殭屍佔領以來, 你是他們遇到的第一個倖存者, 文特博士覺得你值得信賴.他希望你能在這段時期提供一些幫助, 並承諾會有豐厚回報, 對生存大有幫助的回報.<LINE><LINE>如果你同意, 再和他談談.",
+      "cn": "...Venter博士和Bassler博士向你表达了谢意.看来他们现在把你当成了朋友, 所以透漏了更多的信息.<LINE><LINE>他们都隶属于一个研究增强人体机能的生物技术组织, 这个实验室就是该组织提供的.疫情爆发后, 总部的所有支持都中断了, 而且总部那边似乎也出了事.Venter博士和他的助手必须自己动手处理一切;许多过去依赖总部的事情现在变得非常困难, 尤其还是个女助手.<LINE><LINE>自城市被丧尸占领以来, 你是他们遇到的第一个幸存者, Venter博士觉得你值得信赖.他希望你能在这段时期提供一些帮助, 并承诺会有丰厚回报, 对生存大有帮助的回报.<LINE><LINE>如果你同意, 再和他谈谈."
+    },
+    "IG_UI|IGUI_VLQ_2_NPCTalk_q1s017": {
+      "action": "translate",
+      "signature": "c362d25462aab496",
+      "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本，差異只在 \"a long time\" 與 \"a long period\" 的措辭。現行譯文對各版本都成立，沿用現值；翻譯後舊版（_EN.txt 死檔）玩家也能看到中文而非鍵名。",
+      "ch": "…你帶來了飲用水, 文特博士向你表示感謝.現在, 食物和水足夠維持很長時間了.他請求你協助進行與殭屍相關的研究.<LINE><LINE>文特博士需要你收集15份殭屍的血液樣本.並給了你工具和詳細的採血說明.<LINE><LINE>提示: 你需要一個空注射器來從殭屍屍體上採集血液樣本.每隻殭屍只能取樣一次.",
+      "cn": "...你带来了饮用水, Venter博士向你表示感谢.现在, 食物和水足够维持很长时间了.他请求你协助进行与丧尸相关的研究.<LINE><LINE>Venter博士需要你收集15份丧尸的血液样本.并给了你工具和详细的采血说明.<LINE><LINE>提示: 你需要一个空注射器来从丧尸尸体上采集血液样本.每只丧尸只能采样一次."
+    },
+    "IG_UI|IGUI_VLQ_2_NPCTalk_q1s021": {
+      "action": "translate",
+      "signature": "ae61ce3ae70bb40d",
+      "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本，差異只在 \"maintains\" 與 \"keeps\" 的措辭。現行譯文對各版本都成立，沿用現值；翻譯後舊版（_EN.txt 死檔）玩家也能看到中文而非鍵名。",
+      "ch": "…收到樣本後, 文特博士的語氣也不再客套.他直接給了你一小瓶血清, 說這個東西能增強身體力量, 是之前一個研究專案的成果.幾乎沒有任何副作用.<LINE><LINE>博士希望這能幫到他的朋友- 你.然後繼續埋頭於研究之中.",
+      "cn": "...收到样本后, Venter博士的语气也不再客套.他直接给了你一小瓶血清, 说这个东西能增强身体力量, 是之前一个研究项目的成果.几乎没有任何副作用.<LINE><LINE>博士希望这能帮到他的朋友- 你.然后继续埋头于研究之中."
+    },
+    "IG_UI|IGUI_VLQ_2_NPCTalk_q1s023": {
+      "action": "translate",
+      "signature": "3d9db88c8a9f5891",
+      "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本，差異只是個別措辭，情節完全相同。現行譯文對各版本都成立，沿用現值；翻譯後舊版（_EN.txt 死檔）玩家也能看到中文而非鍵名。",
+      "ch": "…文特博士毫不猶豫, 立刻同意了.確實是酒後吐真言.<LINE><LINE>你說了自己的煩惱, 博士也聊了他的情況.<LINE><LINE>他曾是第20號NMB研究所的首席研究員.由於和同事意見不合, 他便離開了.剛離開不久, 有個男人就邀請他加入HGA組織, 並承諾提供一間私人實驗室, 同時提供他所需的所有實驗設備.他只關心研究, 所以就答應了, 並和他視如己出的女助手一起被帶到了這裡.<LINE><LINE>在這裡, 他幾乎成功創造了一種能全面增強人類體能的血清.但由於該血清為合成血清, 所以附帶多種嚴重的副作用, 因此需要一個能抵抗所有副作用的合適實驗體才能完成研究.由於一直沒找到合適的實驗體, 該專案被迫中止.<LINE><LINE>直到殭屍出現, 讓他看到了全新的契機…",
+      "cn": "...Venter博士毫不犹豫, 立刻同意了.确实是酒后吐真言.<LINE><LINE>你说了自己的烦恼, 博士也聊了他的情况.<LINE><LINE>他曾是第20号NMB研究所的首席研究员.由于和同事意见不合, 他便离开了.刚离开不久, 有个男人就邀请他加入HGA组织, 并承诺提供一间私人实验室, 同时提供他所需的所有实验设备.他只关心研究, 所以就答应了, 并和他视如己出的女助手一起被带到了这里.<LINE><LINE>在这里, 他几乎成功创造了一种能全面增强人类体能的血清.但由于该血清为合成血清, 所以附带多种严重的副作用, 因此需要一个能抵抗所有副作用的合适实验体才能完成研究.由于一直没找到合适的实验体, 该项目被迫中止.<LINE><LINE>直到丧尸出现, 让他看到了全新的契机..."
+    },
+    "IG_UI|IGUI_VLQ_2_NPCTalk_q1s028": {
+      "action": "translate",
+      "signature": "97f2da74545634ba",
+      "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本，差異只在有無 \"his\"。現行譯文對各版本都成立，沿用現值；翻譯後舊版（_EN.txt 死檔）玩家也能看到中文而非鍵名。",
+      "ch": "…文特博士收下了你帶回的水蛭.然後繼續埋頭於研究之中.",
+      "cn": "...Venter博士收下了你带回的水蛭.然后继续埋头于研究之中."
+    },
+    "IG_UI|IGUI_VLQ_2_NPCTalk_q1s030": {
+      "action": "translate",
+      "signature": "3ad3cd56b6fd223f",
+      "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本，差異只在 \"total reduction\" 與 \"total reduces\" 的文法。現行譯文對各版本都成立，沿用現值；翻譯後舊版（_EN.txt 死檔）玩家也能看到中文而非鍵名。",
+      "ch": "…文特博士說食物儲備又不夠了.他需要你再去尋找一些食物 (總計降低1500點飢餓值).",
+      "cn": "...Venter博士说食物储备又不够了.他需要你再去寻找一些食物 (总计降低1500点饥饿值)."
+    },
+    "IG_UI|IGUI_VLQ_2_NPCTalk_q1s031": {
+      "action": "translate",
+      "signature": "add382d302f7525c",
+      "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本，差異只在單複數（people／someone）。現行譯文對各版本都成立，沿用現值；翻譯後舊版（_EN.txt 死檔）玩家也能看到中文而非鍵名。",
+      "ch": "…文特博士感謝你帶來的食物. 他說他需要一個活體組織樣本, 該樣本需採集於某個正處於屍變過程的人.他給了你工具和採集標本的說明.<LINE><LINE>提示: 你可能會在城市裡隨機遇到倖存者.其中一些人可能已被感染…另一些人則沒有.",
+      "cn": "...Venter博士感谢你带来的食物. 他说他需要一个活体组织样本, 该样本需采集于某个正处于尸变过程的人.他给了你工具和采集标本的说明.<LINE><LINE>提示: 你可能会在城市里随机遇到幸存者.其中一些人可能已被感染...另一些人则没有."
+    },
+    "IG_UI|IGUI_VLQ_2_NPCTalk_q1s034": {
+      "action": "translate",
+      "signature": "0c68f0492f00abc5",
+      "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本，差異只在標點與 \"absentmindedly\"／\"unconsciously\" 的同義措辭。現行譯文對各版本都成立，沿用現值；翻譯後舊版（_EN.txt 死檔）玩家也能看到中文而非鍵名。",
+      "ch": "…文特博士說你來得正是時候.他剛剛創造了一個非常有趣的東西.他滔滔不絕地說出一連串你完全不懂的技術術語.<LINE><LINE>你看向他指的東西- 一個高爾夫球大小, 正在移動的團塊, 它似乎在吸收旁邊的一小塊肉.<LINE><LINE>在海量的科學術語中, 你捕捉到一個資訊: 這個有機體對博士最近從殭屍體內提取的病毒極具吸引力.你很震驚, 同時問道, 它會不會把全城的殭屍都吸引過來.<LINE><LINE>博士和他的助手都僵住了.他無意識地小聲說道…有機體長得越大, 吸引範圍就越廣…而它現在的體積已經遠超剛形成的時候了…<LINE><LINE>你意識到必須立刻摧毀這個有機體.催促文特博士摧毀這個有機體.",
+      "cn": "...Venter博士说你来得正是时候.他刚刚创造了一个非常有趣的东西.他滔滔不绝地说出一连串你完全不懂的技术术语.<LINE><LINE>你看向他指的东西- 一个高尔夫球大小, 正在移动的团块, 它似乎在吸收旁边的一小块肉.<LINE><LINE>在海量的科学术语中, 你捕捉到一个信息: 这个有机体对博士最近从丧尸体内提取的病毒极具吸引力.你很震惊, 同时问道, 它会不会把全城的丧尸都吸引过来.<LINE><LINE>博士和他的助手都僵住了.他无意识地小声说道...有机体长得越大, 吸引范围就越广...而它现在的体积已经远超刚形成的时候了...<LINE><LINE>你意识到必须立刻摧毁这个有机体.催促Venter博士摧毁这个有机体."
+    },
+    "IG_UI|IGUI_VLQ_2_NotePage1_1_q1s039": {
+      "action": "translate",
+      "signature": "57f3d9e64286ffc6",
+      "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本。storylines 寫 \"at the marked location\"，舊版寫 \"in xxx city (To be updated)\"，是作者尚未定稿的占位文字，同一封信的同一段。現行「到標記的地點找他」依正式版翻譯，對舊版也不構成錯誤資訊，沿用現值；unship 反而會讓舊版（_EN.txt 死檔）顯示鍵名。",
+      "ch": "…在信中, 文特博士說總部已派人護送他前往一個更安全的地點.由於事發緊急, 無法等你, 他不得不先行出發.他留了一瓶在打包時發現的體能增強血清.<LINE>博士透露道 (似乎有著些許興奮), 總部已經為之前的研究找到了合適的實驗體.他希望你能到標記的地點找他, 那裡現在完全由組織控制… (接第二頁)",
+      "cn": "...在信中, Venter博士说总部已派人护送他前往一个更安全的地点.由于事发紧急, 无法等你, 他不得不先行出发.他留了一瓶在打包时发现的体能增强血清.<LINE>博士透露道 (似乎有着些许兴奋), 总部已经为之前的研究找到了合适的实验体.他希望你能到标记的地点找他, 那里现在完全由组织控制... (接第二页)"
+    },
+    "IG_UI|IGUI_VLQ_2_NotePage1_2_q1s039": {
+      "action": "translate",
+      "signature": "62e58155f641eedb",
+      "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本。storylines 寫 \"once you get to that location\"（前一頁改為標記地點），舊版寫 \"arrive in the city\"；現行「到達那座城市」只符合舊版，改成中性的「到達那裡」，對兩版都成立。其餘文字不變。",
+      "ch": "…出於友誼和感激之情, 他希望你能來. 作為他向組織報告的第二助手的你, 一旦到達那裡, 找到他應該不難.<LINE>博士還說, 他會請求組織幫你尋找你的弟弟, 畢竟, 多一個人就多一份機會.",
+      "cn": "...出于友谊和感激之情, 他希望你能来. 作为他向组织报告的第二助手的你, 一旦到达那里, 找到他应该不难.<LINE>博士还说, 他会请求组织帮你寻找你的弟弟, 毕竟, 多一个人就多一份机会."
+    },
+    "IG_UI|IGUI_VLQ_2_Notification1_q1s019": {
+      "action": "translate",
+      "signature": "389a33177f3677a3",
+      "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本，差異只在標點（句號與逗號）。現行譯文對各版本都成立，沿用現值；翻譯後舊版（_EN.txt 死檔）玩家也能看到中文而非鍵名。",
+      "ch": "文特博士似乎正忙於研究, 晚點再來吧.",
+      "cn": "Venter博士似乎正忙于研究, 晚点再来吧."
+    },
+    "IG_UI|IGUI_VLQ_2_Notification1_q1s023": {
+      "action": "translate",
+      "signature": "a457af02478878cc",
+      "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本，差異只在 \"two\" 與 \"2\" 的寫法。現行譯文對各版本都成立，沿用現值；翻譯後舊版（_EN.txt 死檔）玩家也能看到中文而非鍵名。",
+      "ch": "你需要2瓶/罐酒精飲料和文特博士共飲.",
+      "cn": "你需要2瓶/罐酒精饮料和Venter博士共饮."
+    },
+    "IG_UI|IGUI_VLQ_2_Notification1_q1s035": {
+      "action": "translate",
+      "signature": "09c62d7c417f5f09",
+      "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本，差異只在語序（above the laboratory 的位置），意思相同。現行譯文對各版本都成立，沿用現值；翻譯後舊版（_EN.txt 死檔）玩家也能看到中文而非鍵名。",
+      "ch": "Venter博士需要你殺死或引走實驗室上方的殭屍.<LINE><LINE>注意: 如果你在完成任務前退出遊戲, 必須再次與NPC對話來重新啟用此任務.",
+      "cn": "Venter博士需要你杀死或引走实验室上方的丧尸.<LINE><LINE>注意: 如果你在完成任务前退出游戏, 必须再次与NPC对话来重新激活此任务."
+    },
+    "IG_UI|IGUI_VLQ_2_Notification2_q1s019": {
+      "action": "translate",
+      "signature": "aaae8d257fd7e9aa",
+      "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本，差異只在標點。現行譯文對各版本都成立，沿用現值；翻譯後舊版（_EN.txt 死檔）玩家也能看到中文而非鍵名。",
+      "ch": "博士正在等你, 再和他談談.",
+      "cn": "博士正在等你, 再和他谈谈."
+    },
+    "IG_UI|IGUI_VLQ_2_Task_q1s032": {
+      "action": "translate",
+      "signature": "e956e4f09a8dbfbd",
+      "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本，差異只在 specimen 單複數。現行譯文對各版本都成立，沿用現值；翻譯後舊版（_EN.txt 死檔）玩家也能看到中文而非鍵名。",
+      "ch": "目標: 從被感染者身上採集樣本",
+      "cn": "目标: 从被感染者身上采集样本"
+    },
+    "IG_UI|IGUI_VLQ_2_Task_q1s037": {
+      "action": "translate",
+      "signature": "9e567fdb155e09f6",
+      "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本，差異只是舊版多了一個重複的 \"to\"（筆誤）。現行譯文對各版本都成立，沿用現值；翻譯後舊版（_EN.txt 死檔）玩家也能看到中文而非鍵名。",
+      "ch": "目標: 等待文特博士進行研究",
+      "cn": "目标: 等待Venter博士进行研究"
+    },
+    "IG_UI|IGUI_VLQ_2_Task_q1s040": {
+      "action": "translate",
+      "signature": "a4e970efb9e1801a",
+      "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本。舊版的 \"Task: (UPDATING)\" 是尚未完成的占位文字，以正式版 storylines 的 \"Find Dr. Venter at the marked location\" 為準，沿用現值；unship 會讓舊版（_EN.txt 死檔）顯示鍵名。",
+      "ch": "目標: 前往標記地點尋找文特博士",
+      "cn": "目标: 前往标记地点寻找Venter博士"
+    },
+    "IG_UI|IGUI_VehicleNameisoContainer2": {
+      "action": "translate",
+      "signature": "a74d54f614c3eb37",
+      "reason": "2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer2，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 \"Legacy\" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。",
+      "ch": "ISO標準貨櫃半拖車 (單開門)",
+      "cn": "ISO标准集装箱半挂车 (单开门)"
+    },
+    "IG_UI|IGUI_VehicleNameisoContainer3tanker": {
+      "action": "translate",
+      "signature": "0c5ac583e2b8a885",
+      "reason": "2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer3tanker，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 \"Legacy\" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。",
+      "ch": "ISO標準燃料罐半拖車",
+      "cn": "ISO标准燃料罐式半挂车"
+    },
+    "IG_UI|IGUI_VehicleNameisoContainer4": {
+      "action": "translate",
+      "signature": "065d51d49601988d",
+      "reason": "2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer4，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 \"Legacy\" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。",
+      "ch": "ISO標準貨櫃半拖車 (雙開門)",
+      "cn": "ISO标准集装箱半挂车 (双开门)"
+    },
+    "IG_UI|IGUI_VehicleNameisoContainer5": {
+      "action": "translate",
+      "signature": "d0dbe95bc5a7d6ae",
+      "reason": "2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer5，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 \"Legacy\" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。",
+      "ch": "ISO標準貨櫃半拖車殘骸",
+      "cn": "ISO标准集装箱半挂车残骸"
+    },
+    "IG_UI|IGUI_VehiclePartATA2InteractiveTrunkFront": {
+      "action": "translate",
+      "signature": "765555bc299efbd2",
+      "reason": "2026-09-27 裁決（使用者優先伺服器實際使用的 ATA）：tsarslib／ATA_Petyarbuilt 以可載入的 IG_UI.json 定義此車輛部件，譯名照 ATA 語意出貨。另一方 DaihatsuHijetTruck／CorvetteC6 用同代號指不同部件，但其英文只在 B42 不讀的 IG_UI_EN.txt；已接受殘留：這兩個 MOD 的玩家會看到 ATA 語意的中文而非自己的部件名（不出貨時則會顯示字面鍵名）。",
+      "ch": "前備箱",
+      "cn": "前备箱"
+    },
+    "IG_UI|IGUI_VehiclePartATA2VisualSkirtsSide": {
+      "action": "translate",
+      "signature": "05edfdc797ebe409",
+      "reason": "2026-09-27 裁決（使用者優先伺服器實際使用的 ATA）：tsarslib／ATA_Petyarbuilt 以可載入的 IG_UI.json 定義此車輛部件，譯名照 ATA 語意出貨。另一方 DaihatsuHijetTruck／CorvetteC6 用同代號指不同部件，但其英文只在 B42 不讀的 IG_UI_EN.txt；已接受殘留：這兩個 MOD 的玩家會看到 ATA 語意的中文而非自己的部件名（不出貨時則會顯示字面鍵名）。",
+      "ch": "側裙",
+      "cn": "侧裙"
+    },
+    "IG_UI|IGUI_VehiclePartATA2VisualSnorkel": {
+      "action": "translate",
+      "signature": "ba7d22aca0f87a79",
+      "reason": "2026-09-27 裁決（使用者優先伺服器實際使用的 ATA）：tsarslib／ATA_Petyarbuilt 以可載入的 IG_UI.json 定義此車輛部件，譯名照 ATA 語意出貨。另一方 DaihatsuHijetTruck／CorvetteC6 用同代號指不同部件，但其英文只在 B42 不讀的 IG_UI_EN.txt；已接受殘留：這兩個 MOD 的玩家會看到 ATA 語意的中文而非自己的部件名（不出貨時則會顯示字面鍵名）。",
+      "ch": "涉水喉",
+      "cn": "涉水喉"
+    },
+    "IG_UI|IGUI_VehiclePartATA2VisualSpoilerFront": {
+      "action": "translate",
+      "signature": "8b8c6b5750c8d7af",
+      "reason": "2026-09-27 裁決（使用者優先伺服器實際使用的 ATA）：tsarslib／ATA_Petyarbuilt 以可載入的 IG_UI.json 定義此車輛部件，譯名照 ATA 語意出貨。另一方 DaihatsuHijetTruck／CorvetteC6 用同代號指不同部件，但其英文只在 B42 不讀的 IG_UI_EN.txt；已接受殘留：這兩個 MOD 的玩家會看到 ATA 語意的中文而非自己的部件名（不出貨時則會顯示字面鍵名）。",
+      "ch": "前翼",
+      "cn": "前翼"
+    },
+    "IG_UI|IGUI_VehiclePartATA2VisualSpoilerRear": {
+      "action": "translate",
+      "signature": "0b8686199b2c93df",
+      "reason": "2026-09-27 裁決（使用者優先伺服器實際使用的 ATA）：tsarslib／ATA_Petyarbuilt 以可載入的 IG_UI.json 定義此車輛部件，譯名照 ATA 語意出貨。另一方 DaihatsuHijetTruck／CorvetteC6 用同代號指不同部件，但其英文只在 B42 不讀的 IG_UI_EN.txt；已接受殘留：這兩個 MOD 的玩家會看到 ATA 語意的中文而非自己的部件名（不出貨時則會顯示字面鍵名）。",
+      "ch": "尾翼",
+      "cn": "尾翼"
+    },
+    "IG_UI|IGUI_VehiclePartATA2VisualWires": {
+      "action": "unship",
+      "signature": "2113964ba56350a8",
+      "reason": "2026-09-27 裁決：Chevrolet Corvette C6 用這個鍵表示 \"Convertible Roof\"（敞篷車頂），Daihatsu Hijet 表示 \"Spare Tire2\"（備胎），是不同部件，找不到誠實的中性譯名；現值「敞篷車頂」會讓 Hijet 玩家看到錯誤部件名。已接受殘留：3566330206/CorvetteC6 與 3583266047/DaihatsuHijetTruck 都會顯示鍵名（兩者的 IG_UI_EN.txt 都是死檔）。"
+    },
+    "IG_UI|IGUI_VehiclePartATAVisualLadder": {
+      "action": "translate",
+      "signature": "94d38abd61e3f627",
+      "reason": "2026-09-27 裁決（使用者優先伺服器實際使用的 ATA）：tsarslib／ATA_Petyarbuilt 以可載入的 IG_UI.json 定義此車輛部件，譯名照 ATA 語意出貨。另一方 DaihatsuHijetTruck／CorvetteC6 用同代號指不同部件，但其英文只在 B42 不讀的 IG_UI_EN.txt；已接受殘留：這兩個 MOD 的玩家會看到 ATA 語意的中文而非自己的部件名（不出貨時則會顯示字面鍵名）。",
+      "ch": "梯子",
+      "cn": "梯子"
+    },
+    "IG_UI|IGUI_VehiclePartSeatGunner": {
+      "action": "translate",
+      "signature": "20da5f91bbc8be70",
+      "reason": "2026-09-27 裁決：Military Tool Kit 的 \"Gunner's Seat\" 與 Papa_Chad 的 M113、M998 的 \"Gunner Seat\" 只差所有格寫法，都是砲塔射手的座位，同一部件。「炮手座位」對三方都成立，沿用現值；翻譯也讓兩台 Papa_Chad 車（_EN.txt 死檔）不會顯示鍵名。",
+      "ch": "炮手座位",
+      "cn": "炮手座位"
+    },
+    "IG_UI|IGUI_VehiclePartTrunkDoorArmor": {
+      "action": "translate",
+      "signature": "af4f5fafdd395b73",
+      "reason": "2026-09-27 裁決：鍵名本身就是 TrunkDoor（後車門）部件的裝甲：Military Tool Kit 稱 \"Rear Armor\"、Ford Excursion 稱 \"Trunk Door Armor\"，都是裝在車尾門上的同一類裝甲，只是詳略不同。「後部裝甲」對雙方都誠實，沿用現值；翻譯也讓 Ford Excursion（_EN.txt 死檔）不會顯示鍵名。",
+      "ch": "後部裝甲",
+      "cn": "后部装甲"
+    },
+    "ItemName|Autotsar.ATASamaraHood2Item3": {
+      "action": "translate",
+      "signature": "e318cfe634475723",
+      "reason": "2026-09-27 裁決：ATA_Samara 的 \"ATASamaraHood2Item\" 是 script 占位名（等於物品代號），Tsar 通用函式庫的 JSON 正式名是 \"Samara - Ram Air Hood\"，同一物品。依正式名沿用現值。",
+      "ch": "雪佛蘭薩馬拉衝壓進氣引擎蓋",
+      "cn": "雪佛兰萨马拉冲压进气发动机盖"
+    },
+    "ItemName|Autotsar.ATASamaraHood3Item3": {
+      "action": "translate",
+      "signature": "63930ee431115eae",
+      "reason": "2026-09-27 裁決：ATA_Samara 的 \"ATASamaraHood3Item\" 是 script 占位名（等於物品代號），Tsar 通用函式庫的 JSON 正式名是 \"Samara - Mongoose Hood\"，同一物品。依正式名沿用現值。",
+      "ch": "雪佛蘭薩馬拉貓鼬引擎蓋",
+      "cn": "雪佛兰萨马拉猫鼬发动机盖"
+    },
+    "ItemName|Autotsar.ATATuningChevalierSamara": {
+      "action": "translate",
+      "signature": "bf84af382a6f3a05",
+      "reason": "2026-09-27 裁決：同一本改裝雜誌物品（ATA_Samara 的 script 定義 Autotsar.ATATuningChevalierSamara）：script DisplayName \"Autotsar Tuning - Chevalier Samara\" 是簡略舊名，Tsar 通用函式庫 JSON 為正式名 \"Magazine «Autotsar Tuning Atelier - Chevalier Samara»\"。現值對兩者都成立，沿用。",
+      "ch": "雜誌: 《沙皇改裝車-雪佛蘭薩馬拉》",
+      "cn": "杂志: 《沙皇改装车-雪佛兰萨马拉》"
+    },
+    "ItemName|Autotsar.AtTuningMagJeep": {
+      "action": "translate",
+      "signature": "f7f62e6e34e92fff",
+      "reason": "2026-09-27 裁決：同一本改裝雜誌物品（ATA_Jeep 的 script 定義 Autotsar.AtTuningMagJeep）：script DisplayName \"Autotsar Tuning Universe\" 是通用舊名，Tsar 通用函式庫 JSON 為正式名 \"Magazine «Autotsar Tuning Atelier - Jaap Wrungel»\"。以 JSON 正式名為準，沿用現值。",
+      "ch": "雜誌: 《沙皇改裝車-吉普牧馬人》",
+      "cn": "杂志: 《沙皇改装车-吉普牧马人》"
+    },
+    "Sandbox|Sandbox_ActionTimeMultiplier_tooltip": {
+      "action": "translate",
+      "signature": "f8c19c6d97cf246f",
+      "reason": "2026-09-27 裁決：Ogrim 的兩個模組共用這個沙盒選項鍵：Universal Custom Firearm 指拆解／修理／升級槍械的操作時間，Machine Utils（含 Legacy 變體）指使用機器的操作時間。兩者都是「該模組操作耗時的倍率」，現值「使用機器」只符合 Machine Utils，改成中性的「相關操作」；選項出現在各模組自己的沙盒頁面，玩家能從上下文知道是哪種操作。",
+      "ch": "調整相關操作所需時間的倍率.",
+      "cn": "调整相关操作所需时间的倍率."
+    },
+    "Sandbox|Sandbox_Bandits.BaseSpawnHourlyChance": {
+      "action": "translate",
+      "signature": "eedc9690b5570b5e",
+      "reason": "2026-09-27 裁決：Bandits Extra Options（3412682512）是 Bandits NPC（3268487204）的附加選項模組，這個鍵是同一個沙盒選項；附加模組只是把 \"Bandit\" 寫成 \"NPC\" 並省略 \"(if location allows)\" 的說明，機制相同。現值對兩者都成立，沿用；翻譯也讓附加模組（Sandbox_EN.txt 死檔）不會顯示鍵名。",
+      "ch": "匪徒基地/營地每小時生成機率 (視位置而定) [%%]",
+      "cn": "匪徒基地/营地每小时刷新概率 (视位置而定) [%%]"
+    },
+    "Sandbox|Sandbox_Bandits.CarryTorches": {
+      "action": "translate",
+      "signature": "bc4a4078c090ad36",
+      "reason": "2026-09-27 裁決：Bandits Extra Options（3412682512）是 Bandits NPC（3268487204）的附加選項模組，這個鍵是同一個沙盒選項，差異只在拼字（flashflights 為筆誤）與 night-time／night。沿用現值；翻譯也讓附加模組（Sandbox_EN.txt 死檔）不會顯示鍵名。",
+      "ch": "暴徒是否在夜間攜帶手電筒",
+      "cn": "匪徒在夜间携带手电筒"
+    },
+    "Sandbox|Sandbox_Bandits.DensityScore": {
+      "action": "translate",
+      "signature": "d1b2464d9fe31927",
+      "reason": "2026-09-27 裁決：Bandits Extra Options（3412682512）是 Bandits NPC（3268487204）的附加選項模組，這個鍵是同一個沙盒選項，附加模組的 \"Bandits spawn more in towns\" 是本體說明的簡略版。現值對兩者都成立，沿用。",
+      "ch": "城鎮中匪徒生成率提高, 偏僻地區生成率降低",
+      "cn": "城镇中匪徒生成率提高, 偏僻地区生成率降低"
+    },
+    "Sandbox|Sandbox_Bandits.DestroyThumpable": {
+      "action": "translate",
+      "signature": "fd63f5020f5b9da6",
+      "reason": "2026-09-27 裁決：Bandits Extra Options（3412682512）是 Bandits NPC（3268487204）的附加選項模組，這個鍵是同一個沙盒選項，兩者都指匪徒摧毀玩家建造物的開關，只是措辭不同。沿用現值。",
+      "ch": "暴徒是否可以摧毀玩家製造的建築物",
+      "cn": "匪徒可能摧毁玩家建造的结构"
+    },
+    "Sandbox|Sandbox_Bandits.GroupSize": {
+      "action": "translate",
+      "signature": "76dde271d7d723f5",
+      "reason": "2026-09-27 裁決：Bandits Extra Options（3412682512）是 Bandits NPC（3268487204）的附加選項模組，這個鍵是同一個沙盒選項；附加模組加了隨機隊伍規模開關，因此把此項稱為 \"Fixed Group Size\"，仍是同一個數值選項。「隊伍規模」對兩者都成立，沿用現值。",
+      "ch": "隊伍規模",
+      "cn": "队伍规模"
+    },
+    "Sandbox|Sandbox_Bandits.GroupSize_tooltip": {
+      "action": "translate",
+      "signature": "19b352b2eed6c88a",
+      "reason": "2026-09-27 裁決：Bandits Extra Options（3412682512）是 Bandits NPC（3268487204）的附加選項模組，這個鍵是同一個沙盒選項；附加模組多了「未啟用隨機隊伍規模時」的條件說明，本體沒有該開關，所以不加條件的「刷新的匪徒數量」對兩者都成立，沿用現值。",
+      "ch": "刷新的匪徒數量",
+      "cn": "刷新的匪徒数量"
+    },
+    "Sandbox|Sandbox_Bandits.RemoveBarricade": {
+      "action": "translate",
+      "signature": "cbcccb9aa737f787",
+      "reason": "2026-09-27 裁決：Bandits 本體與 Bandits Extra Options 都是「強盜會拆除門窗上的木板或金屬板」這個選項, 只是 Extra Options 措辭較短, 同一設定. 沿用現值, 對兩方都成立.",
+      "ch": "匪徒可能會移除門窗上的木板或金屬板",
+      "cn": "匪徒可能会移除门窗上的木板或金属板"
+    },
+    "Sandbox|Sandbox_Bandits.SabotageVehicles": {
+      "action": "translate",
+      "signature": "624e28dcb5f61860",
+      "reason": "2026-09-27 裁決：兩方都是「強盜會讓玩家車輛無法行駛」, Extra Options 多了作者備註 [BUGGY] 屬開發註記, 同一設定. 沿用現值.",
+      "ch": "匪徒可能使玩家的車輛癱瘓",
+      "cn": "匪徒可能使玩家的车辆瘫痪"
+    },
+    "Sandbox|Sandbox_Bandits.SneakAtNight": {
+      "action": "translate",
+      "signature": "5f280537a86dd70d",
+      "reason": "2026-09-27 裁決：兩方都是「強盜在夜間潛行」, 僅 night-time/night 措辭差異, 同一設定. 沿用現值.",
+      "ch": "匪徒在夜間潛行",
+      "cn": "匪徒在夜间潜行"
+    },
+    "Sandbox|Sandbox_BanditsWeekOne.StartRide": {
+      "action": "translate",
+      "signature": "65a04153c69e4969",
+      "reason": "2026-09-27 裁決：Week One 本體與 Bandits Extra Options 都是「開局附一輛車, 是否獲得看出生地點」, 僅措辭詳略不同, 同一設定. 譯意沿用, 僅把全形括號改為半形並前置空格以符合格式規則.",
+      "ch": "開局擁有一輛車 (能否獲得取決於出生地點)",
+      "cn": "开局拥有一辆车 (能否获得取决于出生地点)"
+    },
+    "Sandbox|Sandbox_DynamicTradingNPC": {
+      "action": "translate",
+      "signature": "d30059bc79d5bfc4",
+      "reason": "2026-09-27 裁決：同一 workshop 的 DynamicTradingCommon 與 DynamicTradingV2 共用這個沙盒分頁鍵, Common 放 NPC 交易設定 (交易停留/往返時間等) 稱 NPC Trading, V2 放 NPC 事件設定 (強盜伏擊, NPC 戰鬥等) 稱 NPC Events; 兩者同時啟用時選項會併入同一頁. 現值 ch「NPC交易」cn「NPC 事件」各偏一方且互不一致, 改為中性的「動態交易: NPC」, 對兩個變體都成立.",
+      "ch": "動態交易: NPC",
+      "cn": "动态交易: NPC"
+    },
+    "Sandbox|Sandbox_EatSmart": {
+      "action": "translate",
+      "signature": "ce52826704db2977",
+      "reason": "2026-09-27 裁決：同一 workshop 的兩個變體: EatSmart (標準子選單) 與 EatSmartInt (整合進右鍵選單), 這是各自的沙盒分頁標題. 現值「智慧進食-標準」只對標準版成立, 改為中性的模組名「智慧進食」, 兩個變體都適用.",
+      "ch": "智慧進食",
+      "cn": "智能进食"
+    },
+    "Sandbox|Sandbox_Firearms_SpawnMP5": {
+      "action": "translate",
+      "signature": "d74f67a235f5eab5",
+      "reason": "2026-09-27 裁決：Firearms 與 FirearmsBETA 為同一 workshop 變體, 都是 MP5 衝鋒槍的生成開關, 僅是否標註 9mm 口徑的差異, 同一實體. 沿用現值.",
+      "ch": "黑克勒-科赫MP5衝鋒槍",
+      "cn": "黑克勒-科赫MP5冲锋枪"
+    },
+    "Sandbox|Sandbox_Firearms_SpawnMP5_tooltip": {
+      "action": "translate",
+      "signature": "ecd45ea7ede19f58",
+      "reason": "2026-09-27 裁決：Firearms 與 FirearmsBETA 為同一 workshop 變體, 都說明 MP5 衝鋒槍是否生成, 僅是否標註 9mm 的差異. 沿用現值.",
+      "ch": "黑克勒-科赫MP5衝鋒槍是否生成",
+      "cn": "黑克勒-科赫MP5冲锋枪是否生成"
+    },
+    "Sandbox|Sandbox_KATTAJ1": {
+      "action": "translate",
+      "signature": "96fcdb0c4d9c8896",
+      "reason": "2026-09-27 裁決：KATTAJ1 的兩個 MOD (Military Pack 軍事裝備包, Night Vision Goggles 夜視鏡) 共用同一個沙盒分頁「KATTAJ1」, 同時啟用時選項併在同一頁. 現值「軍事裝備包」只對 Military Pack 成立; 夜視鏡同樣是軍用裝備 (其選項是軍方/警方儲藏處的夜視鏡生成率), 改為「KATTAJ1 軍事裝備」對兩個 MOD 都成立.",
+      "ch": "KATTAJ1 軍事裝備",
+      "cn": "KATTAJ1 军事装备"
+    },
+    "Sandbox|Sandbox_MaintenanceXpMultiplier_tooltip": {
+      "action": "translate",
+      "signature": "c145456192f7d856",
+      "reason": "2026-09-27 裁決：Universal Custom Firearm 指拆解/修理/升級槍械獲得的維護經驗, Machine Utils (含 Legacy) 指機器操作獲得的維護經驗; 兩者都是「調整本模組操作給的維護經驗倍率」, 只是經驗來源不同. 現值「從調整機器操作中獲得的維護經驗」只對 Machine Utils 成立且語序錯誤, 改為不指明來源的「此模組相關操作」, 對兩方都成立. 維護沿用官方技能譯名.",
+      "ch": "按比例調整此模組相關操作所獲得的維護經驗.",
+      "cn": "按比例调整此模组相关操作所获得的维护经验."
+    },
+    "Sandbox|Sandbox_MultiplierConfig_Lockpicking_tooltip": {
+      "action": "translate",
+      "signature": "7df82f71f7f09bb5",
+      "reason": "2026-09-27 裁決：The Best Lockpicking 與 Neat Lockpicking 都是「開鎖技能升級速度倍率」這個設定; 前者附註「僅在全域倍率關閉時生效」, 後者附註「預設 1, 範圍 0 至 1000」, 附註只屬各自一方. 現值帶有前者專屬附註 (且引號不成對), 改為只保留雙方共同的主句.",
+      "ch": "開鎖技能升級速度的倍率.",
+      "cn": "开锁技能升级速度的倍率."
+    },
+    "Sandbox|Sandbox_PompsItems_ZombieLoot_tooltip": {
+      "action": "translate",
+      "signature": "e37fcc9bbd7d2c42",
+      "reason": "2026-09-27 裁決：Pomp's Items 與 Just the Food 版都含 PIMysteryFoodIcon (Something Edible?) 神秘食物物品, 這個選項在兩者都是讓殭屍掉落可打開得到隨機低階食物的神秘食物; Pomp's Items 新版英文只是簡寫. 同一設定, 沿用現值.",
+      "ch": "啟用神秘食物物品, 從殭屍身上獲取並開啟後可隨機獲得低階食物.",
+      "cn": "启用神秘食物物品, 从僵尸身上获取并打开后可随机获得低阶食物."
+    },
+    "Sandbox|Sandbox_SpawnClothes": {
+      "action": "translate",
+      "signature": "ece993da9e79683a",
+      "reason": "2026-09-27 裁決：Support Corps (3409836763) 是「衣物生成率」, Support Goods Mega Mod (3512993822, 同一 Support Corps 系列的後續整合版) 是「迷彩服與生產工具生成率」, 同一系列同一設定但涵蓋範圍不同. 兩方英文都是死檔 Sandbox_EN.txt, unship 會讓兩邊都顯示鍵名, 故找中性譯名: 以衣物為主並註明部分版本含生產工具, 對兩方都成立.",
+      "ch": "衣物 (部分版本含生產工具) 生成率 (1 = 正常, 0 = 不生成)",
+      "cn": "衣物 (部分版本含生产工具) 生成率 (1 = 正常, 0 = 不生成)"
+    },
+    "Sandbox|Sandbox_StarvingZombies_BodyAgeMultiplier_tooltip": {
+      "action": "translate",
+      "signature": "2603b72f1c50c1d0",
+      "reason": "2026-09-27 裁決：Starving Zombies 同一 workshop 的 wip 與正式版變體, 指同一個設定; wip 以「氣味距離」描述, 正式版以「起始距離/目標選取」描述, 兩者是同一機制的不同講法 (氣味距離即由起始距離加上各倍率構成). 沿用現值.",
+      "ch": "屍體的年齡 (世界小時數) 會乘以此值, 並加到起始距離上. <br>任何在此距離內的屍體會被殭屍選擇為目標.",
+      "cn": "尸体的年龄 (世界小时数) 会乘以此值, 并加到起始距离上. <br>任何在此距离内的尸体会被僵尸选择为目标."
+    },
+    "Sandbox|Sandbox_StarvingZombies_BodyDispersionAngle_tooltip": {
+      "action": "translate",
+      "signature": "5e96272129c7be5a",
+      "reason": "2026-09-27 裁決：Starving Zombies 同一 workshop 的 wip 與正式版變體, 指同一個設定; wip 以「氣味距離」描述, 正式版以「起始距離/目標選取」描述, 兩者是同一機制的不同講法 (氣味距離即由起始距離加上各倍率構成). 沿用現值.",
+      "ch": "用於判定殭屍是否處於屍體逆風方向的扇形區域內<br>區域最大距離=[起始距離+腐爛時間係數+風速係數]<br>設為0則停用風向影響",
+      "cn": "用于判定僵尸是否处于尸体逆风方向的扇形区域内<br>区域最大距离=[起始距离+腐烂时间系数+风速系数]<br>设为0则禁用风向影响"
+    },
+    "Sandbox|Sandbox_StarvingZombies_BodyMaxDistance_tooltip": {
+      "action": "translate",
+      "signature": "a568b4214de841f2",
+      "reason": "2026-09-27 裁決：Starving Zombies 同一 workshop 的 wip 與正式版變體, 指同一個設定; wip 以「氣味距離」描述, 正式版以「起始距離/目標選取」描述, 兩者是同一機制的不同講法 (氣味距離即由起始距離加上各倍率構成). 沿用現值.",
+      "ch": "超過此距離的屍體永遠不會被選為目標",
+      "cn": "超过此距离的尸体永远不会被选为目标"
+    },
+    "Sandbox|Sandbox_StarvingZombies_BodyStartDistance_tooltip": {
+      "action": "translate",
+      "signature": "f841f27e1012acab",
+      "reason": "2026-09-27 裁決：Starving Zombies 同一 workshop 的 wip 與正式版變體, 指同一個設定; wip 以「氣味距離」描述, 正式版以「起始距離/目標選取」描述, 兩者是同一機制的不同講法 (氣味距離即由起始距離加上各倍率構成). 沿用現值.",
+      "ch": "在此距離內的屍體必定會被選為目標",
+      "cn": "在此距离内的尸体必定会被选为目标"
+    },
+    "Sandbox|Sandbox_StarvingZombies_BodyWindSpeedMultiplier_tooltip": {
+      "action": "translate",
+      "signature": "d9491ce4fedac0ca",
+      "reason": "2026-09-27 裁決：Starving Zombies 同一 workshop 的 wip 與正式版變體, 指同一個設定; wip 以「氣味距離」描述, 正式版以「起始距離/目標選取」描述, 兩者是同一機制的不同講法 (氣味距離即由起始距離加上各倍率構成). 沿用現值.",
+      "ch": "目前風速 (km/h) 會乘以此值, 並加到 [起始距離+屍體年齡倍數] 的結果上.",
+      "cn": "当前风速 (km/h) 会乘以此值, 并加到 [起始距离+尸体年龄倍数] 的结果上."
+    },
+    "Sandbox|Sandbox_StarvingZombies_PlayerBloodMultiplier_tooltip": {
+      "action": "translate",
+      "signature": "f979c17f38551bcf",
+      "reason": "2026-09-27 裁決：Starving Zombies 同一 workshop 的 wip 與正式版變體, 指同一個設定; wip 以「氣味距離」描述, 正式版以「起始距離/目標選取」描述, 兩者是同一機制的不同講法 (氣味距離即由起始距離加上各倍率構成). 沿用現值.",
+      "ch": "玩家身上的血跡及其物品欄中的血跡會乘以此值, 並加到起始距離上.",
+      "cn": "玩家身上的血迹及其物品栏中的血迹会乘以此值, 并加到起始距离上."
+    },
+    "Sandbox|Sandbox_StarvingZombies_PlayerDispersionAngle_tooltip": {
+      "action": "translate",
+      "signature": "2951a0c513012b0b",
+      "reason": "2026-09-27 裁決：Starving Zombies 同一 workshop 的 wip 與正式版變體, 指同一個設定; wip 以「氣味距離」描述, 正式版以「起始距離/目標選取」描述, 兩者是同一機制的不同講法 (氣味距離即由起始距離加上各倍率構成). 沿用現值.",
+      "ch": "用於判定殭屍是否處於玩家逆風方向的扇形區域內<br>區域最大距離=[起始距離+血跡係數+風速係數]<br>設為0則停用風向影響",
+      "cn": "用于判定僵尸是否处于玩家逆风方向的扇形区域内<br>区域最大距离=[起始距离+血迹系数+风速系数]<br>设为0则禁用风向影响"
+    },
+    "Sandbox|Sandbox_StarvingZombies_PlayerMaxDistance_tooltip": {
+      "action": "translate",
+      "signature": "e1c18927a4c16b7f",
+      "reason": "2026-09-27 裁決：Starving Zombies 同一 workshop 的 wip 與正式版變體, 指同一個設定; wip 以「氣味距離」描述, 正式版以「起始距離/目標選取」描述, 兩者是同一機制的不同講法 (氣味距離即由起始距離加上各倍率構成). 沿用現值.",
+      "ch": "超過此距離的玩家永遠不會被鎖定",
+      "cn": "超过此距离的玩家永远不会被锁定"
+    },
+    "Sandbox|Sandbox_StarvingZombies_PlayerStartDistance_tooltip": {
+      "action": "translate",
+      "signature": "4674f1f915601f0e",
+      "reason": "2026-09-27 裁決：Starving Zombies 同一 workshop 的 wip 與正式版變體, 指同一個設定; wip 以「氣味距離」描述, 正式版以「起始距離/目標選取」描述, 兩者是同一機制的不同講法 (氣味距離即由起始距離加上各倍率構成). 沿用現值.",
+      "ch": "在此距離內的玩家必定會被鎖定",
+      "cn": "在此距离内的玩家必定会被锁定"
+    },
+    "Sandbox|Sandbox_StarvingZombies_PlayerWindSpeedMultiplier_tooltip": {
+      "action": "translate",
+      "signature": "1c02324cd03b91fc",
+      "reason": "2026-09-27 裁決：Starving Zombies 同一 workshop 的 wip 與正式版變體, 指同一個設定; wip 以「氣味距離」描述, 正式版以「起始距離/目標選取」描述, 兩者是同一機制的不同講法 (氣味距離即由起始距離加上各倍率構成). 沿用現值.",
+      "ch": "目前風速 (km/h) 會乘以此值, 並加到 [起始距離+血跡係數] 的結果上.",
+      "cn": "当前风速 (km/h) 会乘以此值, 并加到 [起始距离+血液倍数] 的结果上."
+    },
+    "Sandbox|Sandbox_WanderingZombies": {
+      "action": "translate",
+      "signature": "dc514d2da16d64f8",
+      "reason": "2026-09-27 裁決：wandering-zombies-wip 與 wandering-zombies 為同一 workshop 變體, 分頁標題「Wandering Zombies」與「Wandering Zombies: Lone Zombies」都是本模組設定頁. 現值「遊蕩殭屍」不帶副標, 對兩方都成立, 沿用.",
+      "ch": "遊蕩殭屍",
+      "cn": "游荡僵尸"
+    },
+    "Sandbox|Sandbox_WanderingZombies_Destructive_option3": {
+      "action": "unship",
+      "signature": "0a3c942820777db4",
+      "reason": "2026-09-27 裁決：兩個變體的選項順序不同: wip 為 Always/Indoors/Never/Random, 正式版為 Always/Indoors/Random/Never, 所以 option3 在 wip 是「從不」、在正式版是「隨機」, 語意相反, 無中性譯名. 不出貨中文, 兩方都有 JSON 英文, 各顯示自己的 Never/Random."
+    },
+    "Sandbox|Sandbox_WanderingZombies_Destructive_option4": {
+      "action": "unship",
+      "signature": "81dd61598b711d1c",
+      "reason": "2026-09-27 裁決：兩個變體的選項順序不同: option4 在 wip 是「隨機」、在正式版是「從不」, 語意相反, 無中性譯名. 不出貨中文, 兩方都有 JSON 英文, 各顯示自己的 Random/Never."
+    },
+    "Sandbox|Sandbox_WanderingZombies_Destructive_tooltip": {
+      "action": "unship",
+      "signature": "5abe35fc5207ace8",
+      "reason": "2026-09-27 裁決：wip 版說明四種模式 (總是/室內/從不/隨機) 並表示不受原版破壞設定影響、推薦設為總是; 正式版說明的是「啟用後單獨殭屍改用 pathToSound 而攻擊路上物體, 搭配可破壞柵欄會大量攻擊柵欄」. 兩份說明機制與內容都不同, 且選項順序也不同 (option3/4 已不出貨), 現值只對正式版成立; 泛化成一句「是否攻擊路上物體」會丟掉說明的全部重點. 不出貨中文, 兩方都有 JSON 英文, 各顯示自己的說明."
+    },
+    "Sandbox|Sandbox_WanderingZombies_MaxTravel": {
+      "action": "translate",
+      "signature": "c176df47451ddcd1",
+      "reason": "2026-09-27 裁決：兩個變體都是「最大移動距離」設定, 僅 Max Travel/Max Travel Distance 詳略差異. 沿用現值.",
+      "ch": "最大移動距離",
+      "cn": "最大移动距离"
+    },
+    "Sandbox|Sandbox_WanderingZombies_MaxTravel_tooltip": {
+      "action": "translate",
+      "signature": "de637fb41f08e021",
+      "reason": "2026-09-27 裁決：兩個變體描述同一設定: wip 說是隨機選點的最大距離、適用遊蕩/追蹤/逃離、繞路時實際路徑可能更長; 正式版說殭屍盡量不走超過此距離、不計入繞過牆壁等物體. 現值含「0 到最大距離隨機選點」「適用遊蕩, 追蹤和逃離」等只屬 wip 的內容, 改寫為雙方共同成立的「尋路最大距離 + 未計繞路, 實際路徑可能更長」, <br> 數量維持 2 個.",
+      "ch": "殭屍尋路的最大距離. <br>此值未計入繞過牆壁, 柵欄等障礙物的路程, <br>實際路徑可能因此更長.",
+      "cn": "僵尸寻路的最大距离. <br>此值未计入绕过墙壁, 栅栏等障碍物的路程, <br>实际路径可能因此更长."
+    },
+    "Tooltip|Tooltip_Converse": {
+      "action": "translate",
+      "signature": "6aa1a9034ae782e6",
+      "reason": "2026-09-27 裁決：Boots Expanded 與 Boots Expanded Vanilla 為同一 workshop 的兩個數值版本, 指同一雙鞋, 但數值不同; Vanilla 版英文是死檔 Tooltip_EN.txt, unship 會讓 Vanilla 版玩家看到鍵名. 改寫為涵蓋兩版的範圍 (小值在前, 小數位照各自英文), 對兩版都成立. Vanilla 版踩踏 1.8, 另一版 2.20, 耐久度兩版都是 400.",
+      "ch": "踩踏力度: 1.8 - 2.20 耐久度: 400",
+      "cn": "踩踏力度: 1.8 - 2.20 耐久度: 400"
+    },
+    "Tooltip|Tooltip_CowboyBoots": {
+      "action": "translate",
+      "signature": "1f29d0dd8c5ef6e2",
+      "reason": "2026-09-27 裁決：Boots Expanded 與 Boots Expanded Vanilla 為同一 workshop 的兩個數值版本, 指同一雙鞋, 但數值不同; Vanilla 版英文是死檔 Tooltip_EN.txt, unship 會讓 Vanilla 版玩家看到鍵名. 改寫為涵蓋兩版的範圍 (小值在前, 小數位照各自英文), 對兩版都成立. Vanilla 版 2.7/600, 另一版 3.50/500.",
+      "ch": "踩踏力度: 2.7 - 3.50 耐久度: 500 - 600",
+      "cn": "踩踏力度: 2.7 - 3.50 耐久度: 500 - 600"
+    },
+    "Tooltip|Tooltip_Fancy": {
+      "action": "translate",
+      "signature": "0c6119b6cc57e61e",
+      "reason": "2026-09-27 裁決：Boots Expanded 與 Boots Expanded Vanilla 為同一 workshop 的兩個數值版本, 指同一雙鞋, 但數值不同; Vanilla 版英文是死檔 Tooltip_EN.txt, unship 會讓 Vanilla 版玩家看到鍵名. 改寫為涵蓋兩版的範圍 (小值在前, 小數位照各自英文), 對兩版都成立. Vanilla 版 1.8/300, 另一版 2.20/150.",
+      "ch": "踩踏力度: 1.8 - 2.20 耐久度: 150 - 300",
+      "cn": "踩踏力度: 1.8 - 2.20 耐久度: 150 - 300"
+    },
+    "Tooltip|Tooltip_SWSP_BreakChance": {
+      "action": "translate",
+      "signature": "fa48c41eb88302bb",
+      "reason": "2026-09-27 裁決：Show Weapon Stats Plus 舊版 (3391710239, 死檔 Tooltip_EN.txt) 與新版 (3635921724) 是同一 MOD 的兩個 workshop 項目, 文字相同, 只差佔位符寫法 (舊版 %d/%s, 新版 %1/%2). 同一實體, 沿用現值 (佔位符形式不動).",
+      "ch": "損壞機率: 1/ (%s + %s)",
+      "cn": "损坏几率: 1/ (%s + %s)"
+    },
+    "Tooltip|Tooltip_SWSP_Condition": {
+      "action": "translate",
+      "signature": "33c3da8cb3f86592",
+      "reason": "2026-09-27 裁決：Show Weapon Stats Plus 舊版 (3391710239, 死檔 Tooltip_EN.txt) 與新版 (3635921724) 是同一 MOD 的兩個 workshop 項目, 文字相同, 只差佔位符寫法 (舊版 %d/%s, 新版 %1/%2). 同一實體, 沿用現值 (佔位符形式不動).",
+      "ch": "耐久: %s/%s",
+      "cn": "耐久: %s/%s"
+    },
+    "Tooltip|Tooltip_SWSP_EnduranceMod": {
+      "action": "translate",
+      "signature": "bcdd1a4677192595",
+      "reason": "2026-09-27 裁決：Show Weapon Stats Plus 舊版 (3391710239, 死檔 Tooltip_EN.txt) 與新版 (3635921724) 是同一 MOD 的兩個 workshop 項目, 文字相同, 只差佔位符寫法 (舊版 %d/%s, 新版 %1/%2). 同一實體, 沿用現值 (佔位符形式不動).",
+      "ch": "耐力消耗: %s",
+      "cn": "耐力消耗: %s"
+    },
+    "Tooltip|Tooltip_SWSP_GunAccuracy": {
+      "action": "translate",
+      "signature": "470e31463dcb5364",
+      "reason": "2026-09-27 裁決：Show Weapon Stats Plus 舊版 (3391710239, 死檔 Tooltip_EN.txt) 與新版 (3635921724) 是同一 MOD 的兩個 workshop 項目, 文字相同, 只差佔位符寫法 (舊版 %d/%s, 新版 %1/%2). 同一實體, 沿用現值 (佔位符形式不動).",
+      "ch": "精度: %1%% (+%2%%)",
+      "cn": "精度: %1%% (+%2%%)"
+    },
+    "Tooltip|Tooltip_SWSP_GunMisc": {
+      "action": "translate",
+      "signature": "12b8f8421e70a8d7",
+      "reason": "2026-09-27 裁決：Show Weapon Stats Plus 舊版 (3391710239, 死檔 Tooltip_EN.txt) 與新版 (3635921724) 是同一 MOD 的兩個 workshop 項目, 文字相同, 只差佔位符寫法 (舊版 %d/%s, 新版 %1/%2). 同一實體, 沿用現值 (佔位符形式不動).",
+      "ch": "瞄準/裝填/後坐力時間: %s/%s/%s",
+      "cn": "瞄准/装填/后坐力时间: %s/%s/%s"
+    },
+    "Tooltip|Tooltip_SWSP_GunNoise": {
+      "action": "translate",
+      "signature": "20fe8188e6793220",
+      "reason": "2026-09-27 裁決：Show Weapon Stats Plus 舊版 (3391710239, 死檔 Tooltip_EN.txt) 與新版 (3635921724) 是同一 MOD 的兩個 workshop 項目, 文字相同, 只差佔位符寫法 (舊版 %d/%s, 新版 %1/%2). 同一實體, 沿用現值 (佔位符形式不動).",
+      "ch": "噪音半徑/音量: %s/%s",
+      "cn": "噪音半径/音量: %s/%s"
+    },
+    "Tooltip|Tooltip_SWSP_GunRange": {
+      "action": "translate",
+      "signature": "c684c1ff47bdf943",
+      "reason": "2026-09-27 裁決：Show Weapon Stats Plus 舊版 (3391710239, 死檔 Tooltip_EN.txt) 與新版 (3635921724) 是同一 MOD 的兩個 workshop 項目, 文字相同, 只差佔位符寫法 (舊版 %d/%s, 新版 %1/%2). 同一實體, 沿用現值 (佔位符形式不動).",
+      "ch": "射程: %s - %s (+%s%%)",
+      "cn": "射程: %s - %s (+%s%%)"
+    },
+    "Tooltip|Tooltip_SWSP_HeadCondition": {
+      "action": "translate",
+      "signature": "2b07c9fb8976277e",
+      "reason": "2026-09-27 裁決：Show Weapon Stats Plus 舊版 (3391710239, 死檔 Tooltip_EN.txt) 與新版 (3635921724) 是同一 MOD 的兩個 workshop 項目, 文字相同, 只差佔位符寫法 (舊版 %d/%s, 新版 %1/%2). 同一實體, 沿用現值 (佔位符形式不動).",
+      "ch": "頭部耐久: %s/%s",
+      "cn": "头部耐久: %s/%s"
+    },
+    "Tooltip|Tooltip_SWSP_MaxHit": {
+      "action": "translate",
+      "signature": "576fbb27e43098c7",
+      "reason": "2026-09-27 裁決：兩個 owner 都是 Show Weapon Stats Plus（3391710239 為舊版 [B42] 上架、3635921724 為新版上架），同一 MOD 的同一武器數值欄位，英文只差佔位符寫法（舊版 %d/%s、新版 %1/%2），語意相同，沿用現值。舊版 EN 是死檔 Tooltip_EN.txt，不出貨會顯示鍵名，故不宜 unship。",
+      "ch": "最大命中: %s",
+      "cn": "最大命中: %s"
+    },
+    "Tooltip|Tooltip_SWSP_Range": {
+      "action": "translate",
+      "signature": "59051cc9cf9dfd24",
+      "reason": "2026-09-27 裁決：兩個 owner 都是 Show Weapon Stats Plus（3391710239 為舊版 [B42] 上架、3635921724 為新版上架），同一 MOD 的同一武器數值欄位，英文只差佔位符寫法（舊版 %d/%s、新版 %1/%2），語意相同，沿用現值。舊版 EN 是死檔 Tooltip_EN.txt，不出貨會顯示鍵名，故不宜 unship。",
+      "ch": "攻擊範圍: %s - %s",
+      "cn": "攻击范围: %s - %s"
+    },
+    "Tooltip|Tooltip_SWSP_SwingTime": {
+      "action": "translate",
+      "signature": "9528f61a43029681",
+      "reason": "2026-09-27 裁決：兩個 owner 都是 Show Weapon Stats Plus（3391710239 為舊版 [B42] 上架、3635921724 為新版上架），同一 MOD 的同一武器數值欄位，英文只差佔位符寫法（舊版 %d/%s、新版 %1/%2），語意相同，沿用現值。舊版 EN 是死檔 Tooltip_EN.txt，不出貨會顯示鍵名，故不宜 unship。",
+      "ch": "攻擊速度: %s",
+      "cn": "攻击速度: %s"
+    },
+    "Tooltip|Tooltip_SWSP_TreeBreakChance": {
+      "action": "translate",
+      "signature": "4b51063f11469702",
+      "reason": "2026-09-27 裁決：兩個 owner 都是 Show Weapon Stats Plus（3391710239 為舊版 [B42] 上架、3635921724 為新版上架），同一 MOD 的同一武器數值欄位，英文只差佔位符寫法（舊版 %d/%s、新版 %1/%2），語意相同，沿用現值。舊版 EN 是死檔 Tooltip_EN.txt，不出貨會顯示鍵名，故不宜 unship。",
+      "ch": "砍倒樹木機率: 1/%s",
+      "cn": "砍倒树木几率: 1/%s"
+    },
+    "Tooltip|Tooltip_Shoes": {
+      "action": "translate",
+      "signature": "204638597bdf387a",
+      "reason": "2026-09-27 裁決：兩個 owner 都是 Boots Expanded 11（同一 workshop 項目）的變體：Boots Expanded Vanilla 寫 Stomp Power 1.8 / Durability 300，Boots Expanded 寫 2.20 / 350，是同一雙鞋在兩種平衡版本下的數值。原值只寫 Vanilla 版數字，對完整版玩家是錯的；Vanilla 版 EN 是死檔 Tooltip_EN.txt，unship 會讓它顯示鍵名。改寫成涵蓋兩版的數值範圍，兩邊玩家看到的範圍都包含自己版本的實際值。",
+      "ch": "踩踏力度: 1.8 - 2.20 耐久度: 300 - 350",
+      "cn": "踩踏力度: 1.8 - 2.20 耐久度: 300 - 350"
+    },
+    "UI|UI_InjuryIndicator_HealSpeech0": {
+      "action": "translate",
+      "signature": "a48582a0981a25aa",
+      "reason": "2026-09-27 裁決：3565698092 Injury Indicator 是傷勢痊癒時的隨機台詞「<部位> is healed / is feeling fine」，3599368309 Pain Sense 由它分支而來，同一鍵改成「<部位> can remove bandage」。兩者在同一時機（傷口痊癒）觸發，痊癒即代表可以拆繃帶，改成「已癒合, 可以拆繃帶了」同時涵蓋「已痊癒」與「可拆繃帶」，對兩邊都成立；原值「已痊癒」漏掉 Pain Sense 要傳達的拆繃帶提示。",
+      "ch": "已癒合",
+      "cn": "已愈合"
+    },
+    "UI|UI_InjuryIndicator_HealSpeech3": {
+      "action": "translate",
+      "signature": "c3af412066ac36c7",
+      "reason": "2026-09-27 裁決：3565698092 Injury Indicator 是傷勢痊癒時的隨機台詞「<部位> is healed / is feeling fine」，3599368309 Pain Sense 由它分支而來，同一鍵改成「<部位> can remove bandage」。兩者在同一時機（傷口痊癒）觸發，痊癒即代表可以拆繃帶，改成「沒事了, 可以拆繃帶了」同時涵蓋「恢復良好」與「可拆繃帶」，對兩邊都成立；原值「恢復良好」漏掉 Pain Sense 要傳達的拆繃帶提示。",
+      "ch": "已經沒事了",
+      "cn": "已经没事了"
+    },
+    "UI|UI_Saying_1": {
+      "action": "unship",
+      "signature": "18abb46c36038dc2",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_10": {
+      "action": "unship",
+      "signature": "1126917b09596e1a",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_11": {
+      "action": "unship",
+      "signature": "5dba35499aab19e8",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_12": {
+      "action": "unship",
+      "signature": "969d98b13d43c977",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_13": {
+      "action": "unship",
+      "signature": "f88ca9ef9ae561e2",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_14": {
+      "action": "unship",
+      "signature": "90529a6100e91d89",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_15": {
+      "action": "unship",
+      "signature": "74a7b03003224764",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_16": {
+      "action": "unship",
+      "signature": "217c804fadf598a4",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_17": {
+      "action": "unship",
+      "signature": "6d941a52f3a67033",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_18": {
+      "action": "unship",
+      "signature": "6bbf966073647b51",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_19": {
+      "action": "unship",
+      "signature": "e26f516717ab1e40",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_2": {
+      "action": "unship",
+      "signature": "53ac03fbfb6fd26c",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_20": {
+      "action": "unship",
+      "signature": "973c4bbcfcff3a0a",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_3": {
+      "action": "unship",
+      "signature": "09e2eed2976ef462",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_4": {
+      "action": "unship",
+      "signature": "72da116d14ea135f",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_5": {
+      "action": "unship",
+      "signature": "f46db9c40cf2b5e7",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_6": {
+      "action": "unship",
+      "signature": "47642cab1f06be51",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_7": {
+      "action": "unship",
+      "signature": "0614fc3e2f0b876c",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_8": {
+      "action": "unship",
+      "signature": "4f1e4c9688c2fda1",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Saying_9": {
+      "action": "unship",
+      "signature": "d746a6039ceee6a0",
+      "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+    },
+    "UI|UI_Tooltip_Verbose": {
+      "action": "translate",
+      "signature": "fc0ac4267485bb7a",
+      "reason": "2026-09-27 裁決：AutoMechanics、eris food expiry、Auto Loot 三個 MOD 都用這鍵說明「詳細記錄」選項：對除錯有用、會拖累效能；AutoMechanics 多一句「不確定就保持停用」，是前兩句的自然建議，對另兩個 MOD 也成立，屬詳略差異，沿用現值。eris food expiry 的 EN 是死檔 UI_EN.txt，unship 會顯示鍵名，故不宜 unship。",
+      "ch": "這對除錯很有用.<LINE> 但會導致效能下降.<LINE> 如果不確定, 請保持停用狀態.",
+      "cn": "此功能对调试很有用.<LINE> 会导致性能下降.<LINE> 如有疑虑, 请保持禁用."
+    },
+    "UI|UI_prof_soldier": {
+      "action": "translate",
+      "signature": "b3fc1c6eed2facfd",
+      "reason": "2026-09-27 裁決：SOTO（簡易大修：特質與職業）叫 Soldier，Expanded Professions 叫 National Guard，都是軍方職業。原值「國民警衛隊」只對 Expanded Professions 成立，且是組織名不是職業名；改成「軍人」，國民警衛隊成員也是軍人，對兩邊都成立。",
+      "ch": "軍人",
+      "cn": "军人"
+    },
+    "UI|UI_trait_Apathetic_Desc": {
+      "action": "translate",
+      "signature": "58547ce96941facf",
+      "reason": "2026-09-27 裁決：兩個 owner 是 Numb Trait B42 同一 workshop 項目的 V1 與 V2 版本，描述同一個特質，V2 把「恐慌被抑制」改寫成恐慌上限的說法、並在部分等級加上「處理屍體不再影響情緒」，屬版本詳略差異。「恐慌被抑制」對兩版都成立，現值未寫 V2 的屍體句，V1 此等級沒有這項描述，故不補，沿用現值。",
+      "ch": "恐慌被抑制. 壓力, 不快樂, 無聊, 不適感被大幅限制.",
+      "cn": "恐慌被抑制. 压力, 不悦, 无聊, 不适感被大幅限制."
+    },
+    "UI|UI_trait_Calloused_Desc": {
+      "action": "translate",
+      "signature": "b861c4df0a7b9b00",
+      "reason": "2026-09-27 裁決：兩個 owner 是 Numb Trait B42 同一 workshop 項目的 V1 與 V2 版本，描述同一個特質，V2 把「恐慌被抑制」改寫成恐慌上限的說法、並在部分等級加上「處理屍體不再影響情緒」，屬版本詳略差異。「恐慌被抑制」對兩版都成立，現值未寫 V2 的屍體句，V1 此等級沒有這項描述，故不補，沿用現值。",
+      "ch": "恐慌被抑制. 壓力, 不快樂, 無聊, 不適感被中等程度限制.",
+      "cn": "恐慌被抑制. 压力, 不悦, 无聊, 不适感被中等程度限制."
+    },
+    "UI|UI_trait_Detached_Desc": {
+      "action": "translate",
+      "signature": "5d70ce3fe0422a02",
+      "reason": "2026-09-27 裁決：兩個 owner 是 Numb Trait B42 同一 workshop 項目的 V1 與 V2 版本，描述同一個特質，V2 把「恐慌被抑制」改寫成恐慌上限的說法、並在部分等級加上「處理屍體不再影響情緒」，屬版本詳略差異。「恐慌被抑制」對兩版都成立，現值未寫 V2 的屍體句，V1 此等級沒有這項描述，故不補，沿用現值。",
+      "ch": "恐慌被抑制. 壓力, 不快樂, 無聊, 不適感被限制.",
+      "cn": "恐慌被抑制. 压力, 不悦, 无聊, 不适感被限制."
+    },
+    "UI|UI_trait_Hardened_Desc": {
+      "action": "translate",
+      "signature": "e9605f99015c71de",
+      "reason": "2026-09-27 裁決：兩個 owner 是 Numb Trait B42 同一 workshop 項目的 V1 與 V2 版本，描述同一個特質，V2 把「恐慌被抑制」改寫成恐慌上限的說法、並在部分等級加上「處理屍體不再影響情緒」，屬版本詳略差異。「恐慌被抑制」對兩版都成立，兩版都有屍體句，現值已含，沿用現值。",
+      "ch": "恐慌被抑制. 壓力, 不快樂, 無聊, 不適感被輕度限制. 處理屍體不再影響情緒.",
+      "cn": "恐慌被抑制. 压力, 不悦, 无聊, 不适感被轻度限制. 处理尸体不再影响情绪."
+    },
+    "UI|UI_trait_depressivedesc": {
+      "action": "translate",
+      "signature": "450fc66692df53cd",
+      "reason": "2026-09-27 裁決：More Traits 與 SOTO 都用這鍵描述「憂鬱」特質：容易悲傷、會突然陷入憂鬱、情緒低落會累積。細部機制不同（More Traits：憂鬱時悲傷疊加到移除為止；SOTO：每隔幾天可能突發憂鬱、依不快樂程度最多 -10% 經驗）。原值照抄 More Traits 的機制，改成兩邊共有的說法，不寫各自獨有的數值與機制。",
+      "ch": "你很容易悲傷. <br>有時會無緣無故陷入憂鬱, 悲傷情緒會逐漸累積.",
+      "cn": "你很容易悲伤. <br>有时会无缘无故陷入忧郁, 悲伤情绪会逐渐累积."
+    },
+    "UI|UI_trait_thickblood": {
+      "action": "translate",
+      "signature": "ea1f77b7bb39300c",
+      "reason": "2026-09-27 裁決：More Traits 寫 Thick Blooded，SOTO 寫 Thick-blooded，只差連字號與大小寫，是同一特質，沿用現值。",
+      "ch": "血稠如漿",
+      "cn": "血稠如浆"
+    },
+    "UI|UI_trait_thickblooddesc": {
+      "action": "translate",
+      "signature": "c564878f9b77cf0f",
+      "reason": "2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。",
+      "ch": "你的傷口流血更慢.",
+      "cn": "你的伤口流血更慢."
     }
   }
 }

@@ -4,6 +4,24 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **新收錄 11 個 MOD，共 534 項繁簡中文。** Fishing Overhaul BR（巴西漁獲擴充，202 項：巴西淡水魚與傳說大魚、魚類圖鑑說明、標本與串魚繩）、Prawns Pry Open（撬開上鎖門窗與車輛，83 項）、Constown（康斯鎮地圖，140 項家具與招牌名稱＋地圖標題說明）、Kentucky Workstation Salvage（工作站拆解回收，37 項，工作站名沿用官方譯名）、Faster Cloth Ripping（快速撕扯衣物，19 項）、Reading Reworked（閱讀機制重做，17 項沙盒設定）、Elevators（可運作的電梯，13 項）、ReloadAllAmmo（一鍵裝填所有彈匣，7 項）、Camden County（卡姆登郡地圖，7 項物件名稱＋地圖標題說明）、Cisterns（石砌蓄水池，3 項）、Raven Creek（渡鴉溪地圖，標題與說明）。
+  > 技術要點：own lane（`sources/mods/<wid>/`，`origin: own`），CH／CN 逐鍵對照 EN 直寫。Constown 另依 `pinevilletiles.tiles` 的 GroupName＋CustomName 補 22 個作者 EN 鍵名大小寫不符而失效的 Moveables 鍵；Camden County 自 `SpoonDefinitions.tiles` 取 7 個；三張地圖的選單標題／說明取自 `map.info`，落 `<地圖資料夾>.json`。Cisterns 的翻譯資料夾是小寫 `translate`（tracker 抽不到），建造名走 xuiSkin DisplayName→`Recipes.json` 去空格鍵。
+- **登記追蹤 8 個 As1 已翻、先前未登記的 MOD，並補齊缺鍵。** Food Drying（補 91 項：乾燥漿果、VFE 聯動食材、晾乾架、配方與沙盒）、Nihontō 正宗日本刀大修（補 65 項：大太刀／短刀刀鞘、丁子油、山茶花、背刀快捷欄槽位）、NeatUI Equipment（補 28 項）、Better Cooking（補 10 項，含 8 個 Lua 有呼叫但作者沒寫英文的設定鍵）、Vanilla Fishing Fix（補坐著釣魚 3 項）、ST Additions - Better Hutches、Total Weight Rebalance、ATA Dadge RT Turbo。
+  > 技術要點：`mod_registry` 登記 → `backfill-en` → 重跑 split，把原本落在 `_unsorted` 的 728 鍵歸屬到各自 `sources/mods/<wid>/`；缺鍵走 `own_translations.json`。`owner_conflict_decisions.json` 新增 2 筆 translate 裁決（`Autotsar.ATADodgeTuningMag`、`ForgeKatanaBlade`，沿用既有中性譯名）。
+- **補上已支援 MOD 玩家看得到但先前漏掉的文字，共 46 項。** Vehicle Repair Overhaul 的 20 個車輛拆解回收配方名、Zombie Virus Vaccine 7 個實驗室設備的建造名稱、Livestock Panel Plus 新版 11 項設定、Improved Soundoptions 主選單音效 4 項、Pack Mule 背心左右快捷欄、ATA 零件製作分類（原本顯示成 `IGUI_CraftingCategories_Autotsar` 代號）、DAMN 露營車床位三。
+  > 技術要點：VRO 上游 EN 用底線鍵（`Salvage_Vehicle_*`）而配方區塊名含空格，原譯永不命中；ZVV／Food Drying／Cisterns 的建造名走 `XuiSkinScript` 以去空格 DisplayName 查 `Recipes.json`；快捷欄走 `IGUI_HotbarAttachment_<type>`；Nihontō 沙盒 `WakizashConditionMax` 拼字與 JSON 鍵不符另補。這幾類 tracker／coverage 都抽不到，全部落 `own_translations.json` 並附 `_note`。
+- **`OWNER_CONFLICTS.md` 公開列出尚未裁決的 MOD 共用鍵衝突。** 兩個 MOD 用同一個代號指向不同東西、本包還沒查證出共通譯名時，也會列出各 MOD 的英文與目前出貨的中文，遇到譯名對不上可以在頁面上用 Workshop ID 搜尋。
+  > 技術要點：`render_owner_report()` 新增待裁決節（census 中未登記台帳的衝突＋目前出貨繁中）；因這節隨上游變動，`tracker.refresh_manifest()` 排程時一併重生，`OWNER_CONFLICTS.md` 列入 `MANIFEST_OUTPUTS`。
+
+### Changed
+
+- **裁決全部 196 個 MOD 共用鍵衝突，待裁決清單歸零。** 171 個採中性譯名或照主要 MOD 語意出貨（其中 31 個改寫：去掉只屬其中一個 MOD 的限定詞，例如 ISO 貨櫃拖車的「舊版」、Hybrid Gun Repair 新舊版措辭、Boots Expanded 兩版鞋子數值改寫成範圍、「沒有動力」改為「沒有電力」）；ATA 系列 6 個車輛部件（前備箱、側裙、涉水喉、前翼、尾翼、梯子）維持照 ATA 語意的中文。25 個判定為不同東西、改為不出貨中文，各 MOD 顯示自己的英文：Hephas Vitamins 與 SCP 包的 20 句台詞、Wandering Zombies 新舊版相反的 3 個選項、Raccoon City 與 Table Saw 的「無法開啟」提示、Corvette C6 與 Daihatsu Hijet 撞名的車輛部件。
+  > 技術要點：`owner_conflict_decisions.json` +196（translate 171／unship 25），`unshipped_keys.json` +25（帶 `owner_signature`／`as1_value`）；As1 衍生鍵改寫走 `sources/ch` 29 鍵＋`cn_overrides.json` 29 鍵，own 層 2 鍵直接改；所有 translate 鍵的有效 CN hash 登記 `ch_review_state`。ATA 那 6 鍵的另一方（DaihatsuHijetTruck、CorvetteC6）英文只在 B42 不讀的 `IG_UI_EN.txt`，已記為接受殘留：這兩個 MOD 會看到 ATA 語意的中文。
+
 ## [42.20.4-1.32.0] - 2026-09-27
 
 ### Added

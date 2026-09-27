@@ -426,8 +426,8 @@
   },
   "ContextMenu.json|ContextMenu_VehicleUnhotwireSkill": {
     "as1_value": "你需要 <br> 电工技能 1 级和 <br> 技工技能 2 级 <br> 才能解除短接",
-    "reason": "As1 上游數值錯誤：上游 EN 為 Electrical 6 / Mechanics 8 / Metalworking 4，CN 誤植為 1/2 且整條金屬加工需求漏譯。玩家依此判斷會誤以為低技能即可解除短接。",
-    "value": "你需要 <br> 电工技能 6 级和 <br> 技工技能 8 级和 <br> 金属加工技能 4 级 <br> 才能解除短接"
+    "reason": "As1 上游數值錯誤：上游 EN 為 Electrical 6 / Mechanics 8 / Metalworking 4，CN 誤植為 1/2 且整條金屬加工需求漏譯。玩家依此判斷會誤以為低技能即可解除短接。 ｜2026-09-27 裁決：Harder Hotwire 要求電工 6, 技工 8, 金工 4, The Best Lockpicking 要求電工 1, 技工 2, 同一個解除短接的技能不足提示但數值互相矛盾. Harder Hotwire 是死檔 ContextMenu_EN.txt, 不出貨會顯示鍵名, 故改寫為不寫死等級的中性說法, 對兩者都成立; 技能名改用官方譯名電工/技工/金工, <br> 數量維持 4 個.",
+    "value": "你需要 <br> 足够等级的电工 <br> 与技工技能 <br> (可能另需金工) <br> 才能解除短接"
   },
   "ContextMenu.json|ContextMenu_WearDown": {
     "as1_value": "脱下",
@@ -24767,13 +24767,13 @@
   },
   "IG_UI.json|IGUI_HGR_ERR_PART_DATA_MISSING": {
     "as1_value": "未找到部件",
-    "reason": "EN 'Error: missing part data.' 是缺少零件『資料』的程式錯誤，原譯改成玩家缺實體零件且丟掉『錯誤:』前綴。同模組 IGUI_HGR_ERR_NO_FRAME 已用『錯誤: 無法建立框架.』體例；CN 沿用該 mod 既有『部件』用字。",
-    "value": "错误: 缺少部件数据."
+    "reason": "EN 'Error: missing part data.' 是缺少零件『資料』的程式錯誤，原譯改成玩家缺實體零件且丟掉『錯誤:』前綴。同模組 IGUI_HGR_ERR_NO_FRAME 已用『錯誤: 無法建立框架.』體例；CN 沿用該 mod 既有『部件』用字。 ｜2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串. 舊版 No parts found, v2 Error: missing part data., 同一個找不到零件資料的錯誤. 現值「錯誤: 缺少零件資料.」照抄 v2 的前綴與句點, 改為雙方都成立的「找不到零件資料」.",
+    "value": "未找到部件数据"
   },
   "IG_UI.json|IGUI_HGR_REPLACE_WITH_THIS_PART": {
     "as1_value": "用此部件更换",
-    "reason": "EN 現值為 'Replace with ' —— 結尾留空格、已刪 this part，同檔另有獨立 IGUI_HGR_REPLACE='Replace'，可證本鍵已改為待接零件名的前綴。原整句譯文串接後會顯示『更換為此零件<零件名>』。比照 EN 保留結尾空格、不新增標點。",
-    "value": "更换为 "
+    "reason": "EN 現值為 'Replace with ' —— 結尾留空格、已刪 this part，同檔另有獨立 IGUI_HGR_REPLACE='Replace'，可證本鍵已改為待接零件名的前綴。原整句譯文串接後會顯示『更換為此零件<零件名>』。比照 EN 保留結尾空格、不新增標點。 ｜2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串. 舊版為獨立整句 Replace with this part, v2 改為後接零件名的前綴 Replace with (結尾留空格). 現值「更換為 」在舊版會是沒有受詞的半句; 改為「更換為此零件: 」, 單獨顯示時是完整語意, 後接零件名時讀作「更換為此零件: <零件名>」, 對兩個變體都成立, 並保留結尾空格.",
+    "value": "更换为此部件: "
   },
   "IG_UI.json|IGUI_Inventions_standardization_desc": {
     "as1_value": "对尺寸进行记录整理, 并研究可负担的材料, 有助于减少制造和维修机器所需的时间和成本.",
@@ -26772,23 +26772,23 @@
   },
   "IG_UI.json|IGUI_VehicleNameisoContainer2": {
     "as1_value": "ISO标准集装箱半挂车(单开门)",
-    "value": "旧版ISO标准集装箱半挂车(单开门)",
-    "reason": "上游 isoContainers 42.20 自行把這批舊車改標 Legacy（本鍵 owner 之一），同時新增 TrailerISOcontainerM1/M2/M3tanker/M4damaged 沿用原車名（M 系列分別以 ISO2_body／ISO4_Body／ISO3_Body／ISO5_body 重製同一批車）。不加「舊版／旧版」前綴，玩家車輛清單會出現兩組同名項目。As1 原值＝「ISO标准集装箱半挂车(单开门)」，CN 偏離需登記 cn_overrides（as1_value 即該值）；ch 為 corpus 人工真相。與 decisions 的同鍵裁決錨點一致，須一併套用。"
+    "value": "ISO标准集装箱半挂车 (单开门)",
+    "reason": "上游 isoContainers 42.20 自行把這批舊車改標 Legacy（本鍵 owner 之一），同時新增 TrailerISOcontainerM1/M2/M3tanker/M4damaged 沿用原車名（M 系列分別以 ISO2_body／ISO4_Body／ISO3_Body／ISO5_body 重製同一批車）。不加「舊版／旧版」前綴，玩家車輛清單會出現兩組同名項目。As1 原值＝「ISO标准集装箱半挂车(单开门)」，CN 偏離需登記 cn_overrides（as1_value 即該值）；ch 為 corpus 人工真相。與 decisions 的同鍵裁決錨點一致，須一併套用。 ｜2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer2，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 \"Legacy\" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。"
   },
   "IG_UI.json|IGUI_VehicleNameisoContainer3tanker": {
     "as1_value": "ISO标准燃料罐式半挂车",
-    "value": "旧版ISO标准燃料罐式半挂车",
-    "reason": "上游 isoContainers 42.20 自行把這批舊車改標 Legacy（本鍵 owner 之一），同時新增 TrailerISOcontainerM1/M2/M3tanker/M4damaged 沿用原車名（M 系列分別以 ISO2_body／ISO4_Body／ISO3_Body／ISO5_body 重製同一批車）。不加「舊版／旧版」前綴，玩家車輛清單會出現兩組同名項目。As1 原值＝「ISO标准燃料罐式半挂车」，CN 偏離需登記 cn_overrides（as1_value 即該值）；ch 為 corpus 人工真相。與 decisions 的同鍵裁決錨點一致，須一併套用。"
+    "value": "ISO标准燃料罐式半挂车",
+    "reason": "上游 isoContainers 42.20 自行把這批舊車改標 Legacy（本鍵 owner 之一），同時新增 TrailerISOcontainerM1/M2/M3tanker/M4damaged 沿用原車名（M 系列分別以 ISO2_body／ISO4_Body／ISO3_Body／ISO5_body 重製同一批車）。不加「舊版／旧版」前綴，玩家車輛清單會出現兩組同名項目。As1 原值＝「ISO标准燃料罐式半挂车」，CN 偏離需登記 cn_overrides（as1_value 即該值）；ch 為 corpus 人工真相。與 decisions 的同鍵裁決錨點一致，須一併套用。 ｜2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer3tanker，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 \"Legacy\" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。"
   },
   "IG_UI.json|IGUI_VehicleNameisoContainer4": {
     "as1_value": "ISO标准集装箱半挂车(双开门)",
-    "value": "旧版ISO标准集装箱半挂车(双开门)",
-    "reason": "上游 isoContainers 42.20 自行把這批舊車改標 Legacy（本鍵 owner 之一），同時新增 TrailerISOcontainerM1/M2/M3tanker/M4damaged 沿用原車名（M 系列分別以 ISO2_body／ISO4_Body／ISO3_Body／ISO5_body 重製同一批車）。不加「舊版／旧版」前綴，玩家車輛清單會出現兩組同名項目。As1 原值＝「ISO标准集装箱半挂车(双开门)」，CN 偏離需登記 cn_overrides（as1_value 即該值）；ch 為 corpus 人工真相。與 decisions 的同鍵裁決錨點一致，須一併套用。"
+    "value": "ISO标准集装箱半挂车 (双开门)",
+    "reason": "上游 isoContainers 42.20 自行把這批舊車改標 Legacy（本鍵 owner 之一），同時新增 TrailerISOcontainerM1/M2/M3tanker/M4damaged 沿用原車名（M 系列分別以 ISO2_body／ISO4_Body／ISO3_Body／ISO5_body 重製同一批車）。不加「舊版／旧版」前綴，玩家車輛清單會出現兩組同名項目。As1 原值＝「ISO标准集装箱半挂车(双开门)」，CN 偏離需登記 cn_overrides（as1_value 即該值）；ch 為 corpus 人工真相。與 decisions 的同鍵裁決錨點一致，須一併套用。 ｜2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer4，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 \"Legacy\" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。"
   },
   "IG_UI.json|IGUI_VehicleNameisoContainer5": {
     "as1_value": "ISO标准集装箱半挂车残骸",
-    "value": "旧版ISO标准集装箱半挂车残骸",
-    "reason": "上游 isoContainers 42.20 自行把這批舊車改標 Legacy（本鍵 owner 之一），同時新增 TrailerISOcontainerM1/M2/M3tanker/M4damaged 沿用原車名（M 系列分別以 ISO2_body／ISO4_Body／ISO3_Body／ISO5_body 重製同一批車）。不加「舊版／旧版」前綴，玩家車輛清單會出現兩組同名項目。As1 原值＝「ISO标准集装箱半挂车残骸」，CN 偏離需登記 cn_overrides（as1_value 即該值）；ch 為 corpus 人工真相。與 decisions 的同鍵裁決錨點一致，須一併套用。"
+    "value": "ISO标准集装箱半挂车残骸",
+    "reason": "上游 isoContainers 42.20 自行把這批舊車改標 Legacy（本鍵 owner 之一），同時新增 TrailerISOcontainerM1/M2/M3tanker/M4damaged 沿用原車名（M 系列分別以 ISO2_body／ISO4_Body／ISO3_Body／ISO5_body 重製同一批車）。不加「舊版／旧版」前綴，玩家車輛清單會出現兩組同名項目。As1 原值＝「ISO标准集装箱半挂车残骸」，CN 偏離需登記 cn_overrides（as1_value 即該值）；ch 為 corpus 人工真相。與 decisions 的同鍵裁決錨點一致，須一併套用。 ｜2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer5，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 \"Legacy\" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。"
   },
   "IG_UI.json|IGUI_perks_Art_Description": {
     "as1_value": "提高雕刻和绘画行为的效率. <LINE> 3 级时可以绘制中等尺寸的画布. <LINE> 6 级时可以绘制大尺寸的画布. <LINE> 解锁新类型的雕塑.",
@@ -27644,5 +27644,115 @@
     "as1_value": "直接将零散物品收集到随身背包中, 直到装不下为止. 忽略不想要的物品.",
     "value": "将零散物品直接收进随身背包, 直到装不下为止. 标记为“不想要”的物品会留在原地.",
     "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：Unwanted 是本體物品標記（Tooltip_Unwanted「不想要」）"
+  },
+  "ContextMenu.json|ContextMenu_KnifeSheath_WearBack": {
+    "value": "佩戴",
+    "reason": "2026-09-27 裁決：TKS42 與 Tactical Sheaths Reborn 是把刀鞘佩戴到背部 (Wear (Back)), Simple Slings 則借用同鍵當背帶換位選項並寫 Gear on the waist (腰部), 部位不同. 但 TKS42 與 Simple Slings 都是死檔 ContextMenu_EN.txt, 不出貨會讓兩者顯示字面鍵名, 因此改用對三者都成立的「佩戴」, 去掉只屬其中一方的部位. 代價是選單中需靠其他 (大腿)/(左腿) 選項排除判斷此項位置.",
+    "as1_value": "佩戴 (背部)"
+  },
+  "IG_UI.json|IGUI_HGR_CLEAN_FAILED": {
+    "value": "清洁失败",
+    "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串. 舊版 Could not clean it enough, v2 Cleaning failed., 同一個清潔失敗訊息. 現值「清理得不夠徹底」偏向舊版措辭 (cn 另有「的/得」誤用), 改為雙方皆成立的「清潔失敗」, 並與其他 HGR 字串的「清潔」用詞一致.",
+    "as1_value": "清理的不够彻底"
+  },
+  "IG_UI.json|IGUI_HGR_CLEAN_PART": {
+    "value": "清洁部件",
+    "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串. 舊版 [HGR] Clean Part, v2 去掉標籤只寫 Clean Part. 現值保留只屬舊版的 [HGR] 標籤, 改為中性的「清潔零件」.",
+    "as1_value": "[HGR] 清洁部件"
+  },
+  "IG_UI.json|IGUI_HotbarAttachment_ChestMountDT": {
+    "value": "胸挂枪套",
+    "reason": "2026-09-27 裁決：FR Operator 的 TacOp Chest Holster 與 Federal Rangers Chimera 的 Delta Chest Holster 都是胸前槍套掛點, 差別只在各自的品牌前綴. 原 cn「三角洲胸前枪套」帶有只屬 Chimera 的「三角洲」, 改為中性的「胸挂枪套」與 ch「胸掛槍套」一致, 對兩個 MOD 都成立 (Operator 的 EN 是死檔, unship 會顯示鍵名, 故不採).",
+    "as1_value": "三角洲胸前枪套"
+  },
+  "IG_UI.json|IGUI_PlayerText_NoPower": {
+    "value": "没有电力",
+    "reason": "2026-09-27 裁決：Tsar's Common Library 與 ATA Petyarbuilt 的 There is no power. (其官方 CN 為「没有电源」, IT/PTBR/RU 皆譯為電能/供電) 與 SecretZ 的 No power (ES 譯 No hay electricidad) 都是指沒有電力供應, 同一語意. 原「沒有動力」誤解為動力, 改為「沒有電力」, 對三個 MOD 都成立.",
+    "as1_value": "没有动力"
+  },
+  "IG_UI.json|IGUI_VLQ_2_NotePage1_2_q1s039": {
+    "value": "...出于友谊和感激之情, 他希望你能来. 作为他向组织报告的第二助手的你, 一旦到达那里, 找到他应该不难.<LINE>博士还说, 他会请求组织帮你寻找你的弟弟, 毕竟, 多一个人就多一份机会.",
+    "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本。storylines 寫 \"once you get to that location\"（前一頁改為標記地點），舊版寫 \"arrive in the city\"；現行「到達那座城市」只符合舊版，改成中性的「到達那裡」，對兩版都成立。其餘文字不變。",
+    "as1_value": "...出于友谊和感激之情, 他希望你能来.作为他向组织报告的第二助手的你, 一旦到达那座城市, 找到他应该不难.<LINE>博士还说, 他会请求组织帮你寻找你的弟弟, 毕竟, 多一个人就多一份机会."
+  },
+  "Sandbox.json|Sandbox_ActionTimeMultiplier_tooltip": {
+    "value": "调整相关操作所需时间的倍率.",
+    "reason": "2026-09-27 裁決：Ogrim 的兩個模組共用這個沙盒選項鍵：Universal Custom Firearm 指拆解／修理／升級槍械的操作時間，Machine Utils（含 Legacy 變體）指使用機器的操作時間。兩者都是「該模組操作耗時的倍率」，現值「使用機器」只符合 Machine Utils，改成中性的「相關操作」；選項出現在各模組自己的沙盒頁面，玩家能從上下文知道是哪種操作。",
+    "as1_value": "调整使用机器执行操作所需的时间."
+  },
+  "Sandbox.json|Sandbox_BanditsWeekOne.StartRide": {
+    "value": "开局拥有一辆车 (能否获得取决于出生地点)",
+    "reason": "2026-09-27 裁決：Week One 本體與 Bandits Extra Options 都是「開局附一輛車, 是否獲得看出生地點」, 僅措辭詳略不同, 同一設定. 譯意沿用, 僅把全形括號改為半形並前置空格以符合格式規則.",
+    "as1_value": "开局拥有一辆车（能否获得取决于出生地点）"
+  },
+  "Sandbox.json|Sandbox_DynamicTradingNPC": {
+    "value": "动态交易: NPC",
+    "reason": "2026-09-27 裁決：同一 workshop 的 DynamicTradingCommon 與 DynamicTradingV2 共用這個沙盒分頁鍵, Common 放 NPC 交易設定 (交易停留/往返時間等) 稱 NPC Trading, V2 放 NPC 事件設定 (強盜伏擊, NPC 戰鬥等) 稱 NPC Events; 兩者同時啟用時選項會併入同一頁. 現值 ch「NPC交易」cn「NPC 事件」各偏一方且互不一致, 改為中性的「動態交易: NPC」, 對兩個變體都成立.",
+    "as1_value": "动态交易: NPC 事件"
+  },
+  "Sandbox.json|Sandbox_EatSmart": {
+    "value": "智能进食",
+    "reason": "2026-09-27 裁決：同一 workshop 的兩個變體: EatSmart (標準子選單) 與 EatSmartInt (整合進右鍵選單), 這是各自的沙盒分頁標題. 現值「智慧進食-標準」只對標準版成立, 改為中性的模組名「智慧進食」, 兩個變體都適用.",
+    "as1_value": "智能进食-标准"
+  },
+  "Sandbox.json|Sandbox_KATTAJ1": {
+    "value": "KATTAJ1 军事装备",
+    "reason": "2026-09-27 裁決：KATTAJ1 的兩個 MOD (Military Pack 軍事裝備包, Night Vision Goggles 夜視鏡) 共用同一個沙盒分頁「KATTAJ1」, 同時啟用時選項併在同一頁. 現值「軍事裝備包」只對 Military Pack 成立; 夜視鏡同樣是軍用裝備 (其選項是軍方/警方儲藏處的夜視鏡生成率), 改為「KATTAJ1 軍事裝備」對兩個 MOD 都成立.",
+    "as1_value": "KATTAJ1军事装备包"
+  },
+  "Sandbox.json|Sandbox_MaintenanceXpMultiplier_tooltip": {
+    "value": "按比例调整此模组相关操作所获得的维护经验.",
+    "reason": "2026-09-27 裁決：Universal Custom Firearm 指拆解/修理/升級槍械獲得的維護經驗, Machine Utils (含 Legacy) 指機器操作獲得的維護經驗; 兩者都是「調整本模組操作給的維護經驗倍率」, 只是經驗來源不同. 現值「從調整機器操作中獲得的維護經驗」只對 Machine Utils 成立且語序錯誤, 改為不指明來源的「此模組相關操作」, 對兩方都成立. 維護沿用官方技能譯名.",
+    "as1_value": "从调整机器操作中获得的维护经验."
+  },
+  "Sandbox.json|Sandbox_MultiplierConfig_Lockpicking_tooltip": {
+    "value": "开锁技能升级速度的倍率.",
+    "reason": "2026-09-27 裁決：The Best Lockpicking 與 Neat Lockpicking 都是「開鎖技能升級速度倍率」這個設定; 前者附註「僅在全域倍率關閉時生效」, 後者附註「預設 1, 範圍 0 至 1000」, 附註只屬各自一方. 現值帶有前者專屬附註 (且引號不成對), 改為只保留雙方共同的主句.",
+    "as1_value": "开锁技能升级速度的倍率. (仅在使用全局倍率\"关闭时生效)"
+  },
+  "Sandbox.json|Sandbox_WanderingZombies_MaxTravel_tooltip": {
+    "value": "僵尸寻路的最大距离. <br>此值未计入绕过墙壁, 栅栏等障碍物的路程, <br>实际路径可能因此更长.",
+    "reason": "2026-09-27 裁決：兩個變體描述同一設定: wip 說是隨機選點的最大距離、適用遊蕩/追蹤/逃離、繞路時實際路徑可能更長; 正式版說殭屍盡量不走超過此距離、不計入繞過牆壁等物體. 現值含「0 到最大距離隨機選點」「適用遊蕩, 追蹤和逃離」等只屬 wip 的內容, 改寫為雙方共同成立的「尋路最大距離 + 未計繞路, 實際路徑可能更長」, <br> 數量維持 2 個.",
+    "as1_value": "系统会随机选择0到最大距离 (含) 之间的位置进行寻路. <br>由于使用游戏默认寻路系统, 实际路径可能因绕行建筑/栅栏等障碍而更长. <br>适用于游荡, 追踪和逃离行为."
+  },
+  "Tooltip.json|Tooltip_Converse": {
+    "value": "踩踏力度: 1.8 - 2.20 耐久度: 400",
+    "reason": "2026-09-27 裁決：Boots Expanded 與 Boots Expanded Vanilla 為同一 workshop 的兩個數值版本, 指同一雙鞋, 但數值不同; Vanilla 版英文是死檔 Tooltip_EN.txt, unship 會讓 Vanilla 版玩家看到鍵名. 改寫為涵蓋兩版的範圍 (小值在前, 小數位照各自英文), 對兩版都成立. Vanilla 版踩踏 1.8, 另一版 2.20, 耐久度兩版都是 400.",
+    "as1_value": "踩踏力度: 1.8 耐久度: 400"
+  },
+  "Tooltip.json|Tooltip_CowboyBoots": {
+    "value": "踩踏力度: 2.7 - 3.50 耐久度: 500 - 600",
+    "reason": "2026-09-27 裁決：Boots Expanded 與 Boots Expanded Vanilla 為同一 workshop 的兩個數值版本, 指同一雙鞋, 但數值不同; Vanilla 版英文是死檔 Tooltip_EN.txt, unship 會讓 Vanilla 版玩家看到鍵名. 改寫為涵蓋兩版的範圍 (小值在前, 小數位照各自英文), 對兩版都成立. Vanilla 版 2.7/600, 另一版 3.50/500.",
+    "as1_value": "踩踏力度: 2.7 耐久度: 600"
+  },
+  "Tooltip.json|Tooltip_Fancy": {
+    "value": "踩踏力度: 1.8 - 2.20 耐久度: 150 - 300",
+    "reason": "2026-09-27 裁決：Boots Expanded 與 Boots Expanded Vanilla 為同一 workshop 的兩個數值版本, 指同一雙鞋, 但數值不同; Vanilla 版英文是死檔 Tooltip_EN.txt, unship 會讓 Vanilla 版玩家看到鍵名. 改寫為涵蓋兩版的範圍 (小值在前, 小數位照各自英文), 對兩版都成立. Vanilla 版 1.8/300, 另一版 2.20/150.",
+    "as1_value": "踩踏力度: 1.8 耐久度: 300"
+  },
+  "Tooltip.json|Tooltip_Shoes": {
+    "value": "踩踏力度: 1.8 - 2.20 耐久度: 300 - 350",
+    "reason": "2026-09-27 裁決：兩個 owner 都是 Boots Expanded 11（同一 workshop 項目）的變體：Boots Expanded Vanilla 寫 Stomp Power 1.8 / Durability 300，Boots Expanded 寫 2.20 / 350，是同一雙鞋在兩種平衡版本下的數值。原值只寫 Vanilla 版數字，對完整版玩家是錯的；Vanilla 版 EN 是死檔 Tooltip_EN.txt，unship 會讓它顯示鍵名。改寫成涵蓋兩版的數值範圍，兩邊玩家看到的範圍都包含自己版本的實際值。",
+    "as1_value": "踩踏力度: 1.8 耐久度: 300"
+  },
+  "UI.json|UI_InjuryIndicator_HealSpeech0": {
+    "value": "已愈合",
+    "reason": "2026-09-27 裁決：3565698092 Injury Indicator 是傷勢痊癒時的隨機台詞「<部位> is healed / is feeling fine」，3599368309 Pain Sense 由它分支而來，同一鍵改成「<部位> can remove bandage」。兩者在同一時機（傷口痊癒）觸發，痊癒即代表可以拆繃帶，改成「已癒合, 可以拆繃帶了」同時涵蓋「已痊癒」與「可拆繃帶」，對兩邊都成立；原值「已痊癒」漏掉 Pain Sense 要傳達的拆繃帶提示。",
+    "as1_value": "已痊愈"
+  },
+  "UI.json|UI_InjuryIndicator_HealSpeech3": {
+    "value": "已经没事了",
+    "reason": "2026-09-27 裁決：3565698092 Injury Indicator 是傷勢痊癒時的隨機台詞「<部位> is healed / is feeling fine」，3599368309 Pain Sense 由它分支而來，同一鍵改成「<部位> can remove bandage」。兩者在同一時機（傷口痊癒）觸發，痊癒即代表可以拆繃帶，改成「沒事了, 可以拆繃帶了」同時涵蓋「恢復良好」與「可拆繃帶」，對兩邊都成立；原值「恢復良好」漏掉 Pain Sense 要傳達的拆繃帶提示。",
+    "as1_value": "恢复良好"
+  },
+  "UI.json|UI_prof_soldier": {
+    "value": "军人",
+    "reason": "2026-09-27 裁決：SOTO（簡易大修：特質與職業）叫 Soldier，Expanded Professions 叫 National Guard，都是軍方職業。原值「國民警衛隊」只對 Expanded Professions 成立，且是組織名不是職業名；改成「軍人」，國民警衛隊成員也是軍人，對兩邊都成立。",
+    "as1_value": "国民警卫队"
+  },
+  "UI.json|UI_trait_depressivedesc": {
+    "value": "你很容易悲伤. <br>有时会无缘无故陷入忧郁, 悲伤情绪会逐渐累积.",
+    "reason": "2026-09-27 裁決：More Traits 與 SOTO 都用這鍵描述「憂鬱」特質：容易悲傷、會突然陷入憂鬱、情緒低落會累積。細部機制不同（More Traits：憂鬱時悲傷疊加到移除為止；SOTO：每隔幾天可能突發憂鬱、依不快樂程度最多 -10% 經驗）。原值照抄 More Traits 的機制，改成兩邊共有的說法，不寫各自獨有的數值與機制。",
+    "as1_value": "你很容易悲伤. <br>你有时会突然悲伤, 当忧郁时, 悲伤会叠加直到被移除."
   }
 }

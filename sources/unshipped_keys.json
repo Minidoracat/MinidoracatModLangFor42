@@ -1464,6 +1464,131 @@
   "IG_UI.json|IGUI_MapOption_RemoteSymbols": {
    "as1_value": "远程标记",
    "reason": "2026-09-24 使用者裁決不出貨（第三類：原版選項鍵歸本體翻譯包）：`IGUI_MapOption_<選項>` 由原版 ISMiniMap.lua:50／ISWorldMap.lua:70 以 getTextOrNull 查、原版本身未定義；來源 Minimap Style Options（3526517370）只是替原版選項補譯，並非該 MOD 自有文字。譯名統一由 CatLangFor42（本體翻譯包）負責，MiniMap 自身備援與之同字；本包不再出貨，避免三包互蓋與「等距縮放」誤譯。"
+  },
+  "IG_UI.json|IGUI_PlayerText_CanNotOpen": {
+   "as1_value": "台锯正在使用中…",
+   "owner_signature": "aa3921dad764be1c",
+   "reason": "2026-09-27 裁決：RaccoonCityB42 用於「你已經打開過窗戶了!」, Table Saw 用於「檯鋸正在使用中…」, 兩者是完全不同的提示, 找不到誠實的中性譯名. 兩個 MOD 都有 IG_UI.json 英文, unship 後各自顯示自己的英文原文."
+  },
+  "IG_UI.json|IGUI_VehiclePartATA2VisualWires": {
+   "as1_value": "敞篷车顶",
+   "owner_signature": "2113964ba56350a8",
+   "reason": "2026-09-27 裁決：Chevrolet Corvette C6 用這個鍵表示 \"Convertible Roof\"（敞篷車頂），Daihatsu Hijet 表示 \"Spare Tire2\"（備胎），是不同部件，找不到誠實的中性譯名；現值「敞篷車頂」會讓 Hijet 玩家看到錯誤部件名。已接受殘留：3566330206/CorvetteC6 與 3583266047/DaihatsuHijetTruck 都會顯示鍵名（兩者的 IG_UI_EN.txt 都是死檔）。"
+  },
+  "Sandbox.json|Sandbox_WanderingZombies_Destructive_option3": {
+   "as1_value": "从不",
+   "owner_signature": "0a3c942820777db4",
+   "reason": "2026-09-27 裁決：兩個變體的選項順序不同: wip 為 Always/Indoors/Never/Random, 正式版為 Always/Indoors/Random/Never, 所以 option3 在 wip 是「從不」、在正式版是「隨機」, 語意相反, 無中性譯名. 不出貨中文, 兩方都有 JSON 英文, 各顯示自己的 Never/Random."
+  },
+  "Sandbox.json|Sandbox_WanderingZombies_Destructive_option4": {
+   "as1_value": "随机",
+   "owner_signature": "81dd61598b711d1c",
+   "reason": "2026-09-27 裁決：兩個變體的選項順序不同: option4 在 wip 是「隨機」、在正式版是「從不」, 語意相反, 無中性譯名. 不出貨中文, 兩方都有 JSON 英文, 各顯示自己的 Random/Never."
+  },
+  "Sandbox.json|Sandbox_WanderingZombies_Destructive_tooltip": {
+   "as1_value": "启用后, 单独行动的僵尸会使用路径音效判定, 导致它们攻击行进路线上的物体<br>如果在'可破坏世界栅栏'模式下选择'总是', 会发现大量僵尸攻击栅栏, 这会让生存暂时变得容易些.",
+   "owner_signature": "5abe35fc5207ace8",
+   "reason": "2026-09-27 裁決：wip 版說明四種模式 (總是/室內/從不/隨機) 並表示不受原版破壞設定影響、推薦設為總是; 正式版說明的是「啟用後單獨殭屍改用 pathToSound 而攻擊路上物體, 搭配可破壞柵欄會大量攻擊柵欄」. 兩份說明機制與內容都不同, 且選項順序也不同 (option3/4 已不出貨), 現值只對正式版成立; 泛化成一句「是否攻擊路上物體」會丟掉說明的全部重點. 不出貨中文, 兩方都有 JSON 英文, 各顯示自己的說明."
+  },
+  "UI.json|UI_Saying_1": {
+   "as1_value": "我已经能感觉到维生素开始起作用了.",
+   "owner_signature": "18abb46c36038dc2",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_10": {
+   "as1_value": "维生素来救场了!",
+   "owner_signature": "1126917b09596e1a",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_11": {
+   "as1_value": "要是这些是绿色草药就好了…",
+   "owner_signature": "5dba35499aab19e8",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_12": {
+   "as1_value": "这不是解药, 但总比没有强.",
+   "owner_signature": "969d98b13d43c977",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_13": {
+   "as1_value": "希望这不只是安慰剂.",
+   "owner_signature": "f88ca9ef9ae561e2",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_14": {
+   "as1_value": "就像妈妈以前给我的一样——除了现在是末日.",
+   "owner_signature": "90529a6100e91d89",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_15": {
+   "as1_value": "要是弗兰克·韦斯特在商场里有这个就好了.",
+   "owner_signature": "74a7b03003224764",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_16": {
+   "as1_value": "这可比浣熊市里的医疗包强多了.",
+   "owner_signature": "217c804fadf598a4",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_17": {
+   "as1_value": "尝起来像活下去的味道.",
+   "owner_signature": "6d941a52f3a67033",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_18": {
+   "as1_value": "虽然不是急救喷雾, 但也能凑合用着.",
+   "owner_signature": "6bbf966073647b51",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_19": {
+   "as1_value": "也许我该试试生命药水.",
+   "owner_signature": "e26f516717ab1e40",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_2": {
+   "as1_value": "这应该能帮我恢复一点.",
+   "owner_signature": "53ac03fbfb6fd26c",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_20": {
+   "as1_value": "要是这玩意把我变成丧尸, 我一定要投诉!",
+   "owner_signature": "973c4bbcfcff3a0a",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_3": {
+   "as1_value": "一点小小的提升, 足够让我继续撑下去.",
+   "owner_signature": "09e2eed2976ef462",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_4": {
+   "as1_value": "我现在感觉稍微强壮了一些.",
+   "owner_signature": "72da116d14ea135f",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_5": {
+   "as1_value": "希望这能帮我恢复伤势.",
+   "owner_signature": "f46db9c40cf2b5e7",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_6": {
+   "as1_value": "在这种地方, 必须得保持健康.",
+   "owner_signature": "47642cab1f06be51",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_7": {
+   "as1_value": "这些应该能帮我的伤口恢复.",
+   "owner_signature": "0614fc3e2f0b876c",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_8": {
+   "as1_value": "我觉得自己开始好起来了.",
+   "owner_signature": "4f1e4c9688c2fda1",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "UI.json|UI_Saying_9": {
+   "as1_value": "每一丝健康都很重要.",
+   "owner_signature": "d746a6039ceee6a0",
+   "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
   }
  }
 }

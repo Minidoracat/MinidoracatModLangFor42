@@ -197,17 +197,33 @@ def _md_cell(s: str, limit: int = 600) -> str:
     return s if len(s) <= limit else s[:limit - 1] + "…"
 
 
+def _owner_cell(owners: dict[str, str], srcs: dict[str, str]) -> str:
+    """owner 欄：各 owner 的上游英文＋「抑制後看得到什麼」標記（json／script／死檔）。"""
+    ann = annotate(owners, srcs)
+    parts = []
+    for o in sorted(ann):
+        a = ann[o]
+        tag = ("json" if a["has_json_en"]
+               else "script" if a["en_source"] == EN_SOURCE_SCRIPT
+               else f"死檔 {a['en_source']}" if a["en_source"] else "來源未知")
+        parts.append(f"`{_md_pipe(o)}` = {_md_cell(a['en'], 60)} _({tag})_")
+    return "<br>".join(parts) or "_census 查無 owner_"
+
+
 def render_owner_report(decided: dict, census: dict[str, dict[str, str]],
-                        en_src: dict[str, dict[str, str]]) -> str:
-    """把裁決台帳渲染成公開紀錄 `OWNER_CONFLICTS.md`。
+                        en_src: dict[str, dict[str, str]],
+                        pending: dict[str, dict[str, str]] | None = None,
+                        shipped_ch: dict[str, str] | None = None) -> str:
+    """把裁決台帳與未裁決衝突渲染成公開紀錄 `OWNER_CONFLICTS.md`。
 
     **為什麼放在本檔而不是 `build_mod.py`**（#245 項目 2 原本建議比照 `manifest`）：
     表格要的「owner 清單與各自上游英文」只存在於 census（tracker state ＋
     `sources/en` 鏡像），`owner_conflict_decisions.json` 只有 `signature` hash。
     讓 build 去算 census 就是把本檔的收斂邏輯複製第二份，違反「不要另寫第二套」。
 
-    只列**已裁決**條目——這是對外的「為什麼這個鍵沒有中文／為什麼是這個譯名」紀錄，
-    未裁決的待辦留在 artifact 的 `_owner_conflicts_other`，不對玩家公開。
+    `pending` 是全庫**尚未裁決**的衝突（台帳沒有條目者；已登記但過時的仍列在原裁決節）。
+    它們同樣公開：譯文可能只符合其中一個 MOD，玩家要能查到「為什麼這裡怪怪的」
+    （2026-09-27 使用者裁決）。該節附目前出貨的繁中（`shipped_ch`，缺＝未出貨）。
     """
     rows = {"unship": [], "translate": []}
     for fk, d in sorted(decided.items()):
@@ -216,22 +232,16 @@ def render_owner_report(decided: dict, census: dict[str, dict[str, str]],
         action = d.get("action", "translate")
         if action not in rows:
             continue
-        owners = census.get(fk) or {}
-        srcs = en_src.get(fk) or {}
-        ann = annotate(owners, srcs)
-        # owner 欄同時給「抑制後看得到什麼」——那是這份文件對 MOD 作者最有用的一格。
-        parts = []
-        for o in sorted(ann):
-            a = ann[o]
-            tag = ("json" if a["has_json_en"]
-                   else "script" if a["en_source"] == EN_SOURCE_SCRIPT
-                   else f"死檔 {a['en_source']}" if a["en_source"] else "來源未知")
-            parts.append(f"`{_md_pipe(o)}` = {_md_cell(a['en'], 60)} _({tag})_")
         up = d.get("upstream_report")
         up_cell = _md_cell(str(up), 60) if up else "—"
         rows[action].append(
-            f"| `{_md_pipe(fk)}` | {'<br>'.join(parts) or '_census 查無 owner_'} | "
+            f"| `{_md_pipe(fk)}` | {_owner_cell(census.get(fk) or {}, en_src.get(fk) or {})} | "
             f"{_md_cell(d.get('reason') or '')} | {up_cell} |")
+    pend = {fk: o for fk, o in (pending or {}).items() if fk not in decided}
+    pend_rows = [
+        f"| `{_md_pipe(fk)}` | {_owner_cell(o, en_src.get(fk) or {})} | "
+        f"{_md_cell((shipped_ch or {}).get(fk) or '（未出貨）', 60)} |"
+        for fk, o in sorted(pend.items())]
 
     n_uns, n_tr = len(rows["unship"]), len(rows["translate"])
     tally: collections.Counter = collections.Counter()
@@ -247,12 +257,16 @@ def render_owner_report(decided: dict, census: dict[str, dict[str, str]],
         "",
         "PZ 的 `Translator` 把每個 mod 的翻譯檔載入**同一張全域字串表**，沒有「只在某個",
         "mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指向不同的東西時，任一譯名",
-        "都會讓另一批玩家看到錯的內容。本檔記錄這些衝突各自怎麼處理，以及為什麼。",
+        "都會讓另一批玩家看到錯的內容。本檔記錄這些衝突各自怎麼處理，以及為什麼；"
+        "**尚未處理的衝突也列在最後一節**，遇到譯名跟自己的 MOD 對不上時，"
+        "可用 MOD 的 Workshop ID 在本頁搜尋。",
         "",
         "| 處理方式 | 說明 |",
         "|---|---|",
         "| `translate` | 找到對每個 MOD 都成立的中性譯名，照常出貨中文。 |",
         "| `unship` | 不同實體、沒有誠實的中性譯名，該鍵不出貨中文。 |",
+        "| 尚未裁決 | 還沒查證。若已有中文，那是照其中一個 MOD 的英文翻的，"
+        "另一個 MOD 的玩家可能看到對不上的譯名。 |",
         "",
         "`unship` 之後玩家看到什麼，取決於該 MOD 自己有沒有 B42 讀得到的英文：",
         "",
@@ -271,7 +285,8 @@ def render_owner_report(decided: dict, census: dict[str, dict[str, str]],
         "",
         f"現況：已裁決 **{n_uns + n_tr}** 個鍵（`unship` {n_uns}、`translate` {n_tr}）。"
         f"這些鍵的 owner 條目共 {sum(tally.values())} 筆："
-        f"可載入 `.json` {tally['json']}、script {tally['script']}、死檔 {tally['dead']}。",
+        f"可載入 `.json` {tally['json']}、script {tally['script']}、死檔 {tally['dead']}。"
+        f"另有 **{len(pend_rows)}** 個鍵尚未裁決。",
     ]
     for action, title, lead in [
         ("unship", "不出貨的鍵", "這些鍵沒有中文。上游英文與各 MOD 的顯示行為如下。"),
@@ -280,6 +295,11 @@ def render_owner_report(decided: dict, census: dict[str, dict[str, str]],
         out += ["", f"## {title}（{len(rows[action])}）", "", lead, "",
                 "| 鍵 | owner 與上游英文 | 裁決摘要 | 已回報上游 |",
                 "|---|---|---|---|"] + rows[action]
+    out += ["", f"## 尚未裁決的衝突（{len(pend_rows)}）", "",
+            "這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。"
+            "「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。", "",
+            "| 鍵 | owner 與上游英文 | 目前出貨的繁中 |",
+            "|---|---|---|"] + pend_rows
     return "\n".join(out) + "\n"
 
 
@@ -964,7 +984,9 @@ def main() -> int:
     if want_report:
         # **報告在退出碼判定之前產生**：它的來源是裁決台帳＋census，與 `conflicts`
         # 是否為空無關；擺在 `return 1` 之後會讓「有待裁決衝突」順帶讓報告永遠不更新。
-        page = render_owner_report(decided, census, en_src)
+        page = render_owner_report(decided, census, en_src,
+                                   pending={**conflicts_other, **conflicts},
+                                   shipped_ch=shipped_ch)
         old = (OWNER_CONFLICTS_MD.read_text(encoding="utf-8")
                if OWNER_CONFLICTS_MD.exists() else None)
         if page == old:

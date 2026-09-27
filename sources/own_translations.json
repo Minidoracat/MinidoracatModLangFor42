@@ -5670,6 +5670,16 @@
     "en": "All Wood",
     "ch": "所有木材",
     "cn": "所有木材"
+   },
+   "ContextMenu_EvolvedRecipe_Brine": {
+    "en": "Make Brine",
+    "ch": "調製鹽水",
+    "cn": "调制盐水"
+   },
+   "ContextMenu_FD_HarvestSaltLick": {
+    "en": "Harvest Salt Shavings",
+    "ch": "刮取鹽屑",
+    "cn": "刮取盐屑"
    }
   },
   "Fluids.json": {
@@ -7744,6 +7754,11 @@
     "en": "Turpentine",
     "ch": "松節油",
     "cn": "松节油"
+   },
+   "Fluid_Name_ChojiOilFluid": {
+    "en": "Choji Oil",
+    "ch": "丁子油",
+    "cn": "丁子油"
    }
   },
   "IG_UI.json": {
@@ -41066,6 +41081,65 @@
     "en": "Drags each selected corpse to the chosen open, unbarricaded window, then uses the native throw action.",
     "ch": "把選取範圍內的每具屍體拖到指定的已開啟且未加固的窗戶, 再用原版動作丟出去.",
     "cn": "将选定区域内的每具尸体拖到指定的已打开且未加固的窗户, 再用原版动作扔出去."
+   },
+   "IGUI_VFF_SeatFaceWater": {
+    "en": "The seat must face the water.",
+    "ch": "座位必須面向水面.",
+    "cn": "座位必须面朝水面."
+   },
+   "IGUI_HotbarAttachment_Vest_Left": {
+    "en": "Vest Left",
+    "ch": "背心左側",
+    "cn": "背心左侧",
+    "_note": "Pack Mule 新增的快捷欄槽位 type；ISHotbar 以 IGUI_HotbarAttachment_<type> 查名，查不到才退回英文 name。"
+   },
+   "IGUI_HotbarAttachment_Vest_Right": {
+    "en": "Vest Right",
+    "ch": "背心右側",
+    "cn": "背心右侧",
+    "_note": "Pack Mule 新增的快捷欄槽位 type；ISHotbar 以 IGUI_HotbarAttachment_<type> 查名，查不到才退回英文 name。"
+   },
+   "IGUI_HotbarAttachment_KatanaScabbardBack": {
+    "en": "Katana Scabbard Back",
+    "ch": "武士刀刀鞘 (背部)",
+    "cn": "武士刀刀鞘 (背部)",
+    "_note": "Nihontō 新增的快捷欄槽位 type；ISHotbar 以 IGUI_HotbarAttachment_<type> 查名。"
+   },
+   "IGUI_HotbarAttachment_WakizashiScabbardBack": {
+    "en": "Wakizashi Scabbard Back",
+    "ch": "脅差刀鞘 (背部)",
+    "cn": "胁差刀鞘 (背部)",
+    "_note": "Nihontō 新增的快捷欄槽位 type；ISHotbar 以 IGUI_HotbarAttachment_<type> 查名。"
+   },
+   "IGUI_HotbarAttachment_OdachiScabbardBack": {
+    "en": "Odachi Scabbard Back",
+    "ch": "大太刀刀鞘 (背部)",
+    "cn": "大太刀刀鞘 (背部)",
+    "_note": "Nihontō 新增的快捷欄槽位 type；ISHotbar 以 IGUI_HotbarAttachment_<type> 查名。"
+   },
+   "IGUI_HotbarAttachment_TantoScabbardHip": {
+    "en": "Tanto Scabbard",
+    "ch": "短刀刀鞘",
+    "cn": "短刀刀鞘",
+    "_note": "Nihontō 新增的快捷欄槽位 type；ISHotbar 以 IGUI_HotbarAttachment_<type> 查名。"
+   },
+   "IGUI_CraftingCategories_Autotsar": {
+    "en": "Autotsar",
+    "ch": "沙皇改裝車",
+    "cn": "沙皇改装车",
+    "_note": "ATA 零件 craftRecipe 的 category=Autotsar；製作選單以 IGUI_CraftingCategories_<分類> 查名，上游未定義（任何語言都顯示代號）。"
+   },
+   "IGUI_VehiclePartDAMNBedThree": {
+    "en": "Bed Three",
+    "ch": "床位三",
+    "cn": "床位三",
+    "_note": "DAMN 露營車睡床部件第三段（同系列 Bed One/Two 已出貨）。"
+   },
+   "IGUI_BCUi_OpenRecipeUI": {
+    "en": "Open Recipe UI",
+    "ch": "開啟配方介面",
+    "cn": "打开配方界面",
+    "_note": "Better Cooking Lua 以 getTextOrNull 呼叫、上游 EN 未定義的鍵；英文取自 Lua 後備字串。"
    }
   },
   "ItemName.json": {
@@ -146470,6 +146544,381 @@
     "en": "Spicy Cajun Wing",
     "ch": "香辣卡真雞翅",
     "cn": "香辣卡真鸡翅"
+   },
+   "Nihonto.CamelliaPlant": {
+    "en": "Camellia Cutting",
+    "ch": "山茶花插枝",
+    "cn": "山茶花插条"
+   },
+   "Nihonto.CamelliaSeeds": {
+    "en": "Camellia Seeds",
+    "ch": "山茶花種子",
+    "cn": "山茶花种子"
+   },
+   "Nihonto.ChojiOil": {
+    "en": "Choji Oil",
+    "ch": "丁子油",
+    "cn": "丁子油"
+   },
+   "Nihonto.ChojiOilSmall": {
+    "en": "Choji Oil (Small Bottle)",
+    "ch": "丁子油 (小瓶)",
+    "cn": "丁子油 (小瓶)"
+   },
+   "Nihonto.OdachiSayaBlack": {
+    "en": "Authentic Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 正宗)",
+    "cn": "刀鞘 (大太刀, 正宗)"
+   },
+   "Nihonto.OdachiSayaBlue": {
+    "en": "Authentic Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 正宗)",
+    "cn": "刀鞘 (大太刀, 正宗)"
+   },
+   "Nihonto.OdachiSayaBrown": {
+    "en": "Authentic Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 正宗)",
+    "cn": "刀鞘 (大太刀, 正宗)"
+   },
+   "Nihonto.OdachiSayaChestnut": {
+    "en": "Authentic Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 正宗)",
+    "cn": "刀鞘 (大太刀, 正宗)"
+   },
+   "Nihonto.OdachiSayaEbony": {
+    "en": "Authentic Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 正宗)",
+    "cn": "刀鞘 (大太刀, 正宗)"
+   },
+   "Nihonto.OdachiSayaGold": {
+    "en": "Authentic Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 正宗)",
+    "cn": "刀鞘 (大太刀, 正宗)"
+   },
+   "Nihonto.OdachiSayaGreen": {
+    "en": "Authentic Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 正宗)",
+    "cn": "刀鞘 (大太刀, 正宗)"
+   },
+   "Nihonto.OdachiSayaLightBlue": {
+    "en": "Authentic Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 正宗)",
+    "cn": "刀鞘 (大太刀, 正宗)"
+   },
+   "Nihonto.OdachiSayaMagnolia": {
+    "en": "Authentic Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 正宗)",
+    "cn": "刀鞘 (大太刀, 正宗)"
+   },
+   "Nihonto.OdachiSayaNavy": {
+    "en": "Authentic Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 正宗)",
+    "cn": "刀鞘 (大太刀, 正宗)"
+   },
+   "Nihonto.OdachiSayaPersimmon": {
+    "en": "Authentic Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 正宗)",
+    "cn": "刀鞘 (大太刀, 正宗)"
+   },
+   "Nihonto.OdachiSayaPurple": {
+    "en": "Authentic Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 正宗)",
+    "cn": "刀鞘 (大太刀, 正宗)"
+   },
+   "Nihonto.OdachiSayaRed": {
+    "en": "Authentic Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 正宗)",
+    "cn": "刀鞘 (大太刀, 正宗)"
+   },
+   "Nihonto.OdachiSayaWhite": {
+    "en": "Authentic Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 正宗)",
+    "cn": "刀鞘 (大太刀, 正宗)"
+   },
+   "Nihonto.OdachiSayaYellowGreen": {
+    "en": "Authentic Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 正宗)",
+    "cn": "刀鞘 (大太刀, 正宗)"
+   },
+   "Nihonto.OdachiScabbard": {
+    "en": "Replica Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 仿製)",
+    "cn": "刀鞘 (大太刀, 仿制)"
+   },
+   "Nihonto.OdachiScabbardWood": {
+    "en": "Replica Odachi Scabbard (Saya)",
+    "ch": "刀鞘 (大太刀, 仿製)",
+    "cn": "刀鞘 (大太刀, 仿制)"
+   },
+   "Nihonto.TantoScabbard": {
+    "en": "Replica Tantō Scabbard (Saya)",
+    "ch": "刀鞘 (短刀, 仿製)",
+    "cn": "刀鞘 (短刀, 仿制)"
+   },
+   "Nihonto.TantoScabbardWood": {
+    "en": "Replica Tantō Scabbard (Saya)",
+    "ch": "刀鞘 (短刀, 仿製)",
+    "cn": "刀鞘 (短刀, 仿制)"
+   },
+   "FoodDrying.BeautyBerryDried": {
+    "en": "Dried Beautyberries",
+    "ch": "風乾紫珠",
+    "cn": "风干紫珠浆果"
+   },
+   "FoodDrying.BerryBlackDried": {
+    "en": "Dried Blackberries",
+    "ch": "風乾黑莓",
+    "cn": "风干黑莓"
+   },
+   "FoodDrying.BerryBlueDried": {
+    "en": "Dried Blueberries",
+    "ch": "風乾藍莓",
+    "cn": "风干蓝莓"
+   },
+   "FoodDrying.BerryGeneric1Dried": {
+    "en": "Dried Wild Berries",
+    "ch": "風乾野生漿果",
+    "cn": "风干野生浆果"
+   },
+   "FoodDrying.BerryGeneric2Dried": {
+    "en": "Dried Forest Berries",
+    "ch": "風乾森林漿果",
+    "cn": "风干森林浆果"
+   },
+   "FoodDrying.BerryGeneric3Dried": {
+    "en": "Dried Bramble Berries",
+    "ch": "風乾荊棘漿果",
+    "cn": "风干荆棘浆果"
+   },
+   "FoodDrying.BerryGeneric4Dried": {
+    "en": "Dried Hedge Berries",
+    "ch": "風乾樹籬漿果",
+    "cn": "风干树篱浆果"
+   },
+   "FoodDrying.BerryGeneric5Dried": {
+    "en": "Dried Bush Berries",
+    "ch": "風乾灌木漿果",
+    "cn": "风干灌木浆果"
+   },
+   "FoodDrying.BerryPoisonIvyDried": {
+    "en": "Dried Poison Ivy Berries",
+    "ch": "風乾毒葛漿果",
+    "cn": "风干毒葛浆果"
+   },
+   "FoodDrying.HollyBerryDried": {
+    "en": "Dried Holly Berries",
+    "ch": "風乾冬青漿果",
+    "cn": "风干冬青浆果"
+   },
+   "FoodDrying.PotOfBrine": {
+    "en": "Pot of Brine",
+    "ch": "鍋 (鹽水)",
+    "cn": "锅 (盐水)"
+   },
+   "FoodDrying.PotOfBrineCooked": {
+    "en": "Pot of Boiled Brine",
+    "ch": "鍋 (煮沸的鹽水)",
+    "cn": "锅 (煮沸的盐水)"
+   },
+   "FoodDrying.SaltLickShavings": {
+    "en": "Salt Lick Shavings",
+    "ch": "鹽磚刮屑",
+    "cn": "盐砖碎屑"
+   },
+   "FoodDrying.StrewberrieDried": {
+    "en": "Dried Strawberries",
+    "ch": "風乾草莓",
+    "cn": "风干草莓"
+   },
+   "FoodDrying.WinterBerryDried": {
+    "en": "Dried Winterberries",
+    "ch": "風乾冬青",
+    "cn": "风干冬季浆果"
+   },
+   "FoodDryingVFEPatch.VFX_ApricotDried": {
+    "en": "Dried Apricot",
+    "ch": "風乾杏桃",
+    "cn": "风干杏子"
+   },
+   "FoodDryingVFEPatch.VFX_AsparagusDried": {
+    "en": "Dried Asparagus",
+    "ch": "風乾蘆筍",
+    "cn": "风干芦笋"
+   },
+   "FoodDryingVFEPatch.VFX_BeefBrisketDried": {
+    "en": "Dried Beef Brisket",
+    "ch": "風乾牛胸肉",
+    "cn": "风干牛胸肉"
+   },
+   "FoodDryingVFEPatch.VFX_BeefBrisketSalted": {
+    "en": "Salted Beef Brisket",
+    "ch": "醃製牛胸肉",
+    "cn": "腌制牛胸肉"
+   },
+   "FoodDryingVFEPatch.VFX_BeefShankDried": {
+    "en": "Dried Beef Shank",
+    "ch": "風乾牛腱子肉",
+    "cn": "风干牛腱子肉"
+   },
+   "FoodDryingVFEPatch.VFX_BeefShankSalted": {
+    "en": "Salted Beef Shank",
+    "ch": "醃製牛腱子肉",
+    "cn": "腌制牛腱子肉"
+   },
+   "FoodDryingVFEPatch.VFX_BeefShortRibsDried": {
+    "en": "Dried Beef Short Ribs",
+    "ch": "風乾牛小排",
+    "cn": "风干牛小排"
+   },
+   "FoodDryingVFEPatch.VFX_BeefShortRibsSalted": {
+    "en": "Salted Beef Short Ribs",
+    "ch": "醃製牛小排",
+    "cn": "腌制牛小排"
+   },
+   "FoodDryingVFEPatch.VFX_BeetrootDried": {
+    "en": "Dried Beetroot",
+    "ch": "風乾甜菜根",
+    "cn": "风干甜菜根"
+   },
+   "FoodDryingVFEPatch.VFX_BokChoyDried": {
+    "en": "Dried Bok Choy",
+    "ch": "風乾小白菜",
+    "cn": "风干小白菜"
+   },
+   "FoodDryingVFEPatch.VFX_ChickenDrumsticksDried": {
+    "en": "Dried Chicken Drumsticks",
+    "ch": "風乾雞腿",
+    "cn": "风干鸡腿"
+   },
+   "FoodDryingVFEPatch.VFX_ChickenDrumsticksSalted": {
+    "en": "Salted Chicken Drumsticks",
+    "ch": "醃製雞腿",
+    "cn": "腌制鸡腿"
+   },
+   "FoodDryingVFEPatch.VFX_ChickenThighsDried": {
+    "en": "Dried Chicken Thighs",
+    "ch": "風乾雞大腿",
+    "cn": "风干鸡大腿"
+   },
+   "FoodDryingVFEPatch.VFX_ChickenThighsSalted": {
+    "en": "Salted Chicken Thighs",
+    "ch": "醃製雞大腿",
+    "cn": "腌制鸡大腿"
+   },
+   "FoodDryingVFEPatch.VFX_CranberriesDried": {
+    "en": "Dried Cranberries",
+    "ch": "風乾蔓越莓",
+    "cn": "风干蔓越莓"
+   },
+   "FoodDryingVFEPatch.VFX_DuckBreastDried": {
+    "en": "Dried Duck Breast",
+    "ch": "風乾鴨胸肉",
+    "cn": "风干鸭胸肉"
+   },
+   "FoodDryingVFEPatch.VFX_DuckBreastSalted": {
+    "en": "Salted Duck Breast",
+    "ch": "醃製鴨胸肉",
+    "cn": "腌制鸭胸肉"
+   },
+   "FoodDryingVFEPatch.VFX_FigsDried": {
+    "en": "Dried Figs",
+    "ch": "風乾無花果",
+    "cn": "风干无花果"
+   },
+   "FoodDryingVFEPatch.VFX_GoldKiwiDried": {
+    "en": "Dried Gold Kiwi",
+    "ch": "風乾金奇異果",
+    "cn": "风干金奇异果"
+   },
+   "FoodDryingVFEPatch.VFX_GreenKiwiDried": {
+    "en": "Dried Green Kiwi",
+    "ch": "風乾綠奇異果",
+    "cn": "风干绿奇异果"
+   },
+   "FoodDryingVFEPatch.VFX_LambLegDried": {
+    "en": "Dried Lamb Leg",
+    "ch": "風乾羊腿",
+    "cn": "风干羊腿"
+   },
+   "FoodDryingVFEPatch.VFX_LambLegSalted": {
+    "en": "Salted Lamb Leg",
+    "ch": "醃製羊腿",
+    "cn": "腌制羊腿"
+   },
+   "FoodDryingVFEPatch.VFX_NectarinesDried": {
+    "en": "Dried Nectarine",
+    "ch": "風乾油桃",
+    "cn": "风干油桃"
+   },
+   "FoodDryingVFEPatch.VFX_PapayaDried": {
+    "en": "Dried Papaya",
+    "ch": "風乾木瓜",
+    "cn": "风干木瓜"
+   },
+   "FoodDryingVFEPatch.VFX_PlumDried": {
+    "en": "Dried Plum",
+    "ch": "風乾李子",
+    "cn": "风干李子"
+   },
+   "FoodDryingVFEPatch.VFX_PomegranateDried": {
+    "en": "Dried Pomegranate",
+    "ch": "風乾石榴",
+    "cn": "风干石榴"
+   },
+   "FoodDryingVFEPatch.VFX_PorkBellyDried": {
+    "en": "Dried Pork Belly",
+    "ch": "風乾豬五花肉",
+    "cn": "风干猪五花肉"
+   },
+   "FoodDryingVFEPatch.VFX_PorkBellySalted": {
+    "en": "Salted Pork Belly",
+    "ch": "醃製豬五花肉",
+    "cn": "腌制猪五花肉"
+   },
+   "FoodDryingVFEPatch.VFX_PorkRibsDried": {
+    "en": "Dried Pork Ribs",
+    "ch": "風乾豬肋排",
+    "cn": "风干猪肋排"
+   },
+   "FoodDryingVFEPatch.VFX_PorkRibsSalted": {
+    "en": "Salted Pork Ribs",
+    "ch": "醃製豬肋排",
+    "cn": "腌制猪肋排"
+   },
+   "FoodDryingVFEPatch.VFX_PunnetBlackberriesDried": {
+    "en": "Dried Blackberries",
+    "ch": "風乾黑莓",
+    "cn": "风干黑莓"
+   },
+   "FoodDryingVFEPatch.VFX_PunnetBlueberriesDried": {
+    "en": "Dried Blueberries",
+    "ch": "風乾藍莓",
+    "cn": "风干蓝莓"
+   },
+   "FoodDryingVFEPatch.VFX_PunnetRaspberriesDried": {
+    "en": "Dried Raspberries",
+    "ch": "風乾覆盆子",
+    "cn": "风干覆盆子"
+   },
+   "FoodDryingVFEPatch.VFX_RedCabbageDried": {
+    "en": "Dried Red Cabbage",
+    "ch": "風乾紫甘藍",
+    "cn": "风干紫甘蓝"
+   },
+   "FoodDryingVFEPatch.VFX_TangerinesDried": {
+    "en": "Dried Tangerine",
+    "ch": "風乾橘子",
+    "cn": "风干橘子"
+   },
+   "FoodDryingVFEPatch.VFX_VealCutletDried": {
+    "en": "Dried Veal Cutlet",
+    "ch": "風乾小牛排",
+    "cn": "风干小牛排"
+   },
+   "FoodDryingVFEPatch.VFX_VealCutletSalted": {
+    "en": "Salted Veal Cutlet",
+    "ch": "醃製小牛排",
+    "cn": "腌制小牛排"
    }
   },
   "Print_Media.json": {
@@ -161280,6 +161729,304 @@
     "en": "Prepare Wings with Seasoning Mix",
     "ch": "以調味粉準備雞翅",
     "cn": "用调味粉准备鸡翅"
+   },
+   "ApplyChojiOil": {
+    "en": "Apply Choji Oil",
+    "ch": "塗抹丁子油",
+    "cn": "涂抹丁子油"
+   },
+   "CraftOdachiSaya": {
+    "en": "Craft Odachi Scabbard (Saya)",
+    "ch": "製作刀鞘 (大太刀)",
+    "cn": "制作刀鞘 (大太刀)"
+   },
+   "CraftReplicaOdachiScabbard": {
+    "en": "Craft Replica Odachi Scabbard",
+    "ch": "製作刀鞘 (大太刀, 仿製)",
+    "cn": "制作刀鞘 (大太刀, 仿制)"
+   },
+   "CraftReplicaTantoScabbard": {
+    "en": "Craft Replica Tantō Scabbard",
+    "ch": "製作刀鞘 (短刀, 仿製)",
+    "cn": "制作刀鞘 (短刀, 仿制)"
+   },
+   "ExtractCamelliaSeeds": {
+    "en": "Extract Camellia Seeds",
+    "ch": "取出山茶花種子",
+    "cn": "取出山茶花种子"
+   },
+   "LacquerOdachiSaya": {
+    "en": "Lacquer Odachi Scabbard",
+    "ch": "為大太刀刀鞘上漆",
+    "cn": "为大太刀刀鞘涂漆"
+   },
+   "PressChojiOil": {
+    "en": "Press Choji Oil",
+    "ch": "榨取丁子油",
+    "cn": "压榨丁子油"
+   },
+   "StainOdachiSaya": {
+    "en": "Stain Odachi Scabbard",
+    "ch": "為大太刀刀鞘染色",
+    "cn": "为大太刀刀鞘染色"
+   },
+   "WipeBlade": {
+    "en": "Wipe Blade Clean",
+    "ch": "擦拭刀身",
+    "cn": "擦拭刀身"
+   },
+   "FoodDrying.DryBerries": {
+    "en": "Dry Berries",
+    "ch": "風乾漿果",
+    "cn": "风干浆果"
+   },
+   "FoodDrying.DryFish": {
+    "en": "Dry Fish",
+    "ch": "風乾魚肉",
+    "cn": "风干鱼肉"
+   },
+   "FoodDrying.DryFruit": {
+    "en": "Dry Fruit",
+    "ch": "風乾水果",
+    "cn": "风干水果"
+   },
+   "FoodDrying.DryMeat": {
+    "en": "Dry Meat",
+    "ch": "風乾肉",
+    "cn": "风干肉"
+   },
+   "FoodDrying.DryMushrooms": {
+    "en": "Dry Mushrooms",
+    "ch": "風乾蘑菇",
+    "cn": "风干蘑菇"
+   },
+   "FoodDrying.DryVegetables": {
+    "en": "Dry Vegetables",
+    "ch": "風乾蔬菜",
+    "cn": "风干蔬菜"
+   },
+   "filterBrineThroughCheesecloth": {
+    "en": "Filter Brine Through Cheesecloth",
+    "ch": "用乳酪布過濾鹽水",
+    "cn": "用奶酪布过滤盐水"
+   },
+   "filterBrineThroughFilters": {
+    "en": "Filter Brine Through Respirator Filter",
+    "ch": "用呼吸器濾芯過濾鹽水",
+    "cn": "用呼吸器滤芯过滤盐水"
+   },
+   "DryBerriesVFE": {
+    "en": "Dry Berries (VFE)",
+    "ch": "風乾漿果 (VFE)",
+    "cn": "风干浆果 (VFE)"
+   },
+   "DryFruitVFE": {
+    "en": "Dry Fruit (VFE)",
+    "ch": "風乾水果 (VFE)",
+    "cn": "风干水果 (VFE)"
+   },
+   "DryMeatVFE": {
+    "en": "Dry Meat (VFE)",
+    "ch": "風乾肉 (VFE)",
+    "cn": "风干肉 (VFE)"
+   },
+   "DryVegetablesVFE": {
+    "en": "Dry Vegetables (VFE)",
+    "ch": "風乾蔬菜 (VFE)",
+    "cn": "风干蔬菜 (VFE)"
+   },
+   "FoodDryingVFEPatch.DryBerriesVFE": {
+    "en": "Dry Berries (VFE)",
+    "ch": "風乾漿果 (VFE)",
+    "cn": "风干浆果 (VFE)"
+   },
+   "FoodDryingVFEPatch.DryFruitVFE": {
+    "en": "Dry Fruit (VFE)",
+    "ch": "風乾水果 (VFE)",
+    "cn": "风干水果 (VFE)"
+   },
+   "FoodDryingVFEPatch.DryMeatVFE": {
+    "en": "Dry Meat (VFE)",
+    "ch": "風乾肉 (VFE)",
+    "cn": "风干肉 (VFE)"
+   },
+   "FoodDryingVFEPatch.DryVegetablesVFE": {
+    "en": "Dry Vegetables (VFE)",
+    "ch": "風乾蔬菜 (VFE)",
+    "cn": "风干蔬菜 (VFE)"
+   },
+   "SaltMeatAndFishVFE": {
+    "en": "Salt Meat and Fish (VFE)",
+    "ch": "醃製肉和魚 (VFE)",
+    "cn": "腌制肉和鱼 (VFE)"
+   },
+   "LabCentrifuge": {
+    "en": "Lab Centrifuge",
+    "ch": "離心機",
+    "cn": "离心机",
+    "_note": "ZVV 實驗室設備的 xuiSkin DisplayName；XuiSkinScript 以去空格後的名稱查 Recipes.json（建造選單與工作台視窗標題），英文取自 DisplayName。"
+   },
+   "LabChemistrySet": {
+    "en": "Lab Chemistry Set",
+    "ch": "化學實驗臺",
+    "cn": "化学实验台",
+    "_note": "ZVV 實驗室設備的 xuiSkin DisplayName；XuiSkinScript 以去空格後的名稱查 Recipes.json（建造選單與工作台視窗標題），英文取自 DisplayName。"
+   },
+   "LabChromatograph": {
+    "en": "Lab Chromatograph",
+    "ch": "色譜儀",
+    "cn": "色谱仪",
+    "_note": "ZVV 實驗室設備的 xuiSkin DisplayName；XuiSkinScript 以去空格後的名稱查 Recipes.json（建造選單與工作台視窗標題），英文取自 DisplayName。"
+   },
+   "LabEasel": {
+    "en": "Lab Easel",
+    "ch": "畫架",
+    "cn": "画架",
+    "_note": "ZVV 實驗室設備的 xuiSkin DisplayName；XuiSkinScript 以去空格後的名稱查 Recipes.json（建造選單與工作台視窗標題），英文取自 DisplayName。"
+   },
+   "LabMicroscope": {
+    "en": "Lab Microscope",
+    "ch": "顯微鏡",
+    "cn": "显微镜",
+    "_note": "ZVV 實驗室設備的 xuiSkin DisplayName；XuiSkinScript 以去空格後的名稱查 Recipes.json（建造選單與工作台視窗標題），英文取自 DisplayName。"
+   },
+   "LabMuffleFurnace": {
+    "en": "Lab Muffle Furnace",
+    "ch": "馬弗爐",
+    "cn": "马弗炉",
+    "_note": "ZVV 實驗室設備的 xuiSkin DisplayName；XuiSkinScript 以去空格後的名稱查 Recipes.json（建造選單與工作台視窗標題），英文取自 DisplayName。"
+   },
+   "LabSpectrometer": {
+    "en": "Lab Spectrometer",
+    "ch": "光譜儀",
+    "cn": "光谱仪",
+    "_note": "ZVV 實驗室設備的 xuiSkin DisplayName；XuiSkinScript 以去空格後的名稱查 Recipes.json（建造選單與工作台視窗標題），英文取自 DisplayName。"
+   },
+   "FoodDryingRack": {
+    "en": "Food Drying Rack",
+    "ch": "食物晾乾架",
+    "cn": "食物晾干架",
+    "_note": "Food Drying 晾乾架的 xuiSkin DisplayName；XuiSkinScript 以去空格名稱查 Recipes.json。"
+   },
+   "Salvage Hard Vehicle Saddlebags": {
+    "en": "Salvage Hard Vehicle Saddlebags",
+    "ch": "拆解回收硬邊箱",
+    "cn": "拆解回收硬边箱",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Large Container Tanks": {
+    "en": "Salvage Large Container Tanks",
+    "ch": "拆解回收大型儲料罐",
+    "cn": "拆解回收大型储料罐",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Military Vehicle Hoods or Armor": {
+    "en": "Salvage Military Vehicle Hoods or Armor",
+    "ch": "拆解回收軍用車引擎蓋或裝甲",
+    "cn": "拆解回收军用车引擎盖或装甲",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Military or Large Vehicle Doors": {
+    "en": "Salvage Military or Large Vehicle Doors",
+    "ch": "拆解回收軍用或大型車車門",
+    "cn": "拆解回收军用或大型车车门",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Small Misc Vehicle Panels": {
+    "en": "Salvage Small Misc Vehicle Panels",
+    "ch": "拆解回收小型雜項車身面板",
+    "cn": "拆解回收小型杂项车身面板",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Small Vehicle Gas Tanks": {
+    "en": "Salvage Small Vehicle Gas Tanks",
+    "ch": "拆解回收小型車油箱",
+    "cn": "拆解回收小型车油箱",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Vehicle Bars": {
+    "en": "Salvage Vehicle Bars",
+    "ch": "拆解回收保險桿",
+    "cn": "拆解回收保险杠",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Vehicle Brakes": {
+    "en": "Salvage Vehicle Brakes",
+    "ch": "拆解回收煞車",
+    "cn": "拆解回收制动器",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Vehicle Doors": {
+    "en": "Salvage Vehicle Doors",
+    "ch": "拆解回收車門",
+    "cn": "拆解回收车门",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Vehicle Electronics": {
+    "en": "Salvage Vehicle Electronics",
+    "ch": "拆解回收車輛電子部件",
+    "cn": "拆解回收车辆电子部件",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Vehicle Gas Tanks": {
+    "en": "Salvage Vehicle Gas Tanks",
+    "ch": "拆解回收油箱",
+    "cn": "拆解回收油箱",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Vehicle Hoods or Metal Covers": {
+    "en": "Salvage Vehicle Hoods or Metal Covers",
+    "ch": "拆解回收引擎蓋或金屬蓋板",
+    "cn": "拆解回收引擎盖或金属盖板",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Vehicle Mufflers": {
+    "en": "Salvage Vehicle Mufflers",
+    "ch": "拆解回收消音器",
+    "cn": "拆解回收消声器",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Vehicle Saddlebags or Misc Fabrics": {
+    "en": "Salvage Vehicle Saddlebags or Misc Fabrics",
+    "ch": "拆解回收側邊儲物箱或雜項布料",
+    "cn": "拆解回收侧边储物箱或杂项布料",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Vehicle Seats": {
+    "en": "Salvage Vehicle Seats",
+    "ch": "拆解回收座椅",
+    "cn": "拆解回收座椅",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Vehicle Soft-tops": {
+    "en": "Salvage Vehicle Soft-tops",
+    "ch": "拆解回收車頂棚",
+    "cn": "拆解回收车顶棚",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Vehicle Suspension": {
+    "en": "Salvage Vehicle Suspension",
+    "ch": "拆解回收懸吊系統",
+    "cn": "拆解回收悬挂",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Vehicle Tires": {
+    "en": "Salvage Vehicle Tires",
+    "ch": "拆解回收輪胎",
+    "cn": "拆解回收轮胎",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Vehicle Trunk Doors": {
+    "en": "Salvage Vehicle Trunk Doors",
+    "ch": "拆解回收後車廂門",
+    "cn": "拆解回收后备箱门",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "Salvage Wooden Vehicle Parts": {
+    "en": "Salvage Wooden Vehicle Parts",
+    "ch": "拆解回收木製車輛零件",
+    "cn": "拆解回收木制车辆零件",
+    "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
    }
   },
   "Sandbox.json": {
@@ -165515,8 +166262,8 @@
    },
    "Sandbox_SpawnClothes": {
     "en": "Clothes Spawn Rate (1 = Normal, 0 = None)",
-    "ch": "衣物生成率 (1 = 正常, 0 = 不生成)",
-    "cn": "衣物生成率 (1 = 正常, 0 = 不生成)"
+    "ch": "衣物 (部分版本含生產工具) 生成率 (1 = 正常, 0 = 不生成)",
+    "cn": "衣物 (部分版本含生产工具) 生成率 (1 = 正常, 0 = 不生成)"
    },
    "Sandbox_SpawnDrugs": {
     "en": "Drugs Spawn Rate (1 = Normal, 0 = None)",
@@ -176659,6 +177406,118 @@
     "en": "Fully Plank Windows",
     "ch": "完全釘滿窗戶",
     "cn": "完全钉满窗户"
+   },
+   "Sandbox_NihontoOptions_CareProtectionChance": {
+    "en": "Choji Oil Protection Chance (%%)",
+    "ch": "丁子油保護機率 (%%)",
+    "cn": "丁子油保护几率 (%%)"
+   },
+   "Sandbox_NihontoOptions_CareProtectionChance_tooltip": {
+    "en": "Chance for a properly oiled blade (Choji oil ritual) to fully prevent condition loss on a hit, at no cost to sharpness. Checked before the sharpness protection roll.",
+    "ch": "妥善上油 (丁子油保養) 的刀身在命中時完全免於耐久損耗的機率, 且不會消耗鋒利度. 此判定會在鋒利度保護判定之前進行.",
+    "cn": "妥善上油 (丁子油保养) 的刀身在命中时完全免于耐久损耗的几率, 且不会消耗锋利度. 此判定会在锋利度保护判定之前进行."
+   },
+   "Sandbox_NihontoOptions_ChojiOilProtectionHits": {
+    "en": "Choji Oil Protection Duration (Hits)",
+    "ch": "丁子油保護持續次數 (命中)",
+    "cn": "丁子油保护持续次数 (命中)"
+   },
+   "Sandbox_NihontoOptions_ChojiOilProtectionHits_tooltip": {
+    "en": "How many weapon hits the Choji oil protection lasts for before needing to be reapplied.",
+    "ch": "丁子油保護在需要重新塗抹前可維持的武器命中次數.",
+    "cn": "丁子油保护在需要重新涂抹前可维持的武器命中次数."
+   },
+   "Sandbox_FoodDryingOptions_DryingRackDaysBerries": {
+    "en": "Drying Rack: Days for Berries",
+    "ch": "晾乾架: 漿果所需天數",
+    "cn": "晾干架: 浆果所需天数"
+   },
+   "Sandbox_FoodDryingOptions_DryingRackDaysBerries_tooltip": {
+    "en": "7 by default. How many days berries take to dry on the physical Drying Rack. Only affects the Drying Rack, not oven drying.",
+    "ch": "預設值為 7. 漿果在實體晾乾架上風乾所需的天數. 僅影響晾乾架, 不影響烤箱烘乾.",
+    "cn": "默认值为 7. 浆果在实体晾干架上风干所需的天数. 仅影响晾干架, 不影响烤箱烘干."
+   },
+   "Sandbox_FoodDryingOptions_DryingRackDaysFish": {
+    "en": "Drying Rack: Days for Salted Fish",
+    "ch": "晾乾架: 醃魚所需天數",
+    "cn": "晾干架: 腌鱼所需天数"
+   },
+   "Sandbox_FoodDryingOptions_DryingRackDaysFish_tooltip": {
+    "en": "14 by default. How many days salted fish takes to dry on the physical Drying Rack. Only affects the Drying Rack, not oven drying.",
+    "ch": "預設值為 14. 醃魚在實體晾乾架上風乾所需的天數. 僅影響晾乾架, 不影響烤箱烘乾.",
+    "cn": "默认值为 14. 腌鱼在实体晾干架上风干所需的天数. 仅影响晾干架, 不影响烤箱烘干."
+   },
+   "Sandbox_FoodDryingOptions_DryingRackDaysFruit": {
+    "en": "Drying Rack: Days for Fruit",
+    "ch": "晾乾架: 水果所需天數",
+    "cn": "晾干架: 水果所需天数"
+   },
+   "Sandbox_FoodDryingOptions_DryingRackDaysFruit_tooltip": {
+    "en": "5 by default. How many days fruit takes to dry on the physical Drying Rack. Only affects the Drying Rack, not oven drying.",
+    "ch": "預設值為 5. 水果在實體晾乾架上風乾所需的天數. 僅影響晾乾架, 不影響烤箱烘乾.",
+    "cn": "默认值为 5. 水果在实体晾干架上风干所需的天数. 仅影响晾干架, 不影响烤箱烘干."
+   },
+   "Sandbox_FoodDryingOptions_DryingRackDaysMeat": {
+    "en": "Drying Rack: Days for Salted Meat",
+    "ch": "晾乾架: 醃肉所需天數",
+    "cn": "晾干架: 腌肉所需天数"
+   },
+   "Sandbox_FoodDryingOptions_DryingRackDaysMeat_tooltip": {
+    "en": "21 by default. How many days salted meat takes to dry on the physical Drying Rack. Only affects the Drying Rack, not oven drying.",
+    "ch": "預設值為 21. 醃肉在實體晾乾架上風乾所需的天數. 僅影響晾乾架, 不影響烤箱烘乾.",
+    "cn": "默认值为 21. 腌肉在实体晾干架上风干所需的天数. 仅影响晾干架, 不影响烤箱烘干."
+   },
+   "Sandbox_FoodDryingOptions_DryingRackDaysMushrooms": {
+    "en": "Drying Rack: Days for Mushrooms",
+    "ch": "晾乾架: 蘑菇所需天數",
+    "cn": "晾干架: 蘑菇所需天数"
+   },
+   "Sandbox_FoodDryingOptions_DryingRackDaysMushrooms_tooltip": {
+    "en": "3 by default. How many days mushrooms take to dry on the physical Drying Rack. Only affects the Drying Rack, not oven drying.",
+    "ch": "預設值為 3. 蘑菇在實體晾乾架上風乾所需的天數. 僅影響晾乾架, 不影響烤箱烘乾.",
+    "cn": "默认值为 3. 蘑菇在实体晾干架上风干所需的天数. 仅影响晾干架, 不影响烤箱烘干."
+   },
+   "Sandbox_FoodDryingOptions_DryingRackDaysVegetables": {
+    "en": "Drying Rack: Days for Vegetables",
+    "ch": "晾乾架: 蔬菜所需天數",
+    "cn": "晾干架: 蔬菜所需天数"
+   },
+   "Sandbox_FoodDryingOptions_DryingRackDaysVegetables_tooltip": {
+    "en": "7 by default. How many days vegetables take to dry on the physical Drying Rack. Only affects the Drying Rack, not oven drying.",
+    "ch": "預設值為 7. 蔬菜在實體晾乾架上風乾所需的天數. 僅影響晾乾架, 不影響烤箱烘乾.",
+    "cn": "默认值为 7. 蔬菜在实体晾干架上风干所需的天数. 仅影响晾干架, 不影响烤箱烘干."
+   },
+   "Sandbox_FoodDryingOptions_ShelfLifeMultiplier": {
+    "en": "Dried Food Shelf Life Multiplier",
+    "ch": "風乾食品保存期限倍率",
+    "cn": "风干食品保质期倍率"
+   },
+   "Sandbox_FoodDryingOptions_ShelfLifeMultiplier_tooltip": {
+    "en": "1 by default. Multiplies how long dried/preserved foods from this mod stay fresh/edible before spoiling. At the default 1x: dried meat stays good for about 3-8 months, dried fish 4-9 months, dried fruit/berries/mushrooms 6-12 months, dried vegetables 5-10 months. 2x doubles those, 0.5x halves them.",
+    "ch": "預設值為 1. 調整本模組風乾與醃製食品在腐壞前保持新鮮、可食用的時間倍率. 預設 1x 時: 風乾肉約可保存 3-8 個月, 風乾魚 4-9 個月, 風乾水果/漿果/蘑菇 6-12 個月, 風乾蔬菜 5-10 個月. 2x 會使上述時間加倍, 0.5x 則減半.",
+    "cn": "默认值为 1. 调整本模组风干与腌制食品在变质前保持新鲜、可食用的时间倍率. 默认 1x 时: 风干肉约可保存 3-8 个月, 风干鱼 4-9 个月, 风干水果/浆果/蘑菇 6-12 个月, 风干蔬菜 5-10 个月. 2x 会使上述时间翻倍, 0.5x 则减半."
+   },
+   "Sandbox_VanillaFishingFix_EnableSeatedFishing": {
+    "en": "Fishing while seated",
+    "ch": "坐著釣魚",
+    "cn": "坐着钓鱼"
+   },
+   "Sandbox_VanillaFishingFix_EnableSeatedFishing_tooltip": {
+    "en": "Allows fishing from the ground and from recognized chairs or furniture. Furniture must face the water.",
+    "ch": "允許坐在地上, 或坐在可辨識的椅子、家具上釣魚. 家具必須面向水面.",
+    "cn": "允许坐在地上, 或坐在可识别的椅子、家具上钓鱼. 家具必须面朝水面."
+   },
+   "Sandbox_NihontoOptions_WakizashConditionMax": {
+    "en": "Wakizashi Max Condition",
+    "ch": "脇差最大耐久",
+    "cn": "胁差最大耐久",
+    "_note": "Nihontō sandbox-options.txt 的 translation 拼成 WakizashConditionMax，上游 JSON 鍵拼 Wakizashi 而失效；補執行期實際查的鍵，英文取自拼對的鍵。"
+   },
+   "Sandbox_NihontoOptions_WakizashConditionMax_tooltip": {
+    "en": "Sets the maximum durability of the Wakizashi.",
+    "ch": "設定脇差的最大耐久度.",
+    "cn": "设置胁差的最大耐久度.",
+    "_note": "Nihontō sandbox-options.txt 的 translation 拼成 WakizashConditionMax，上游 JSON 鍵拼 Wakizashi 而失效；補執行期實際查的鍵，英文取自拼對的鍵。"
    }
   },
   "Tooltip.json": {
@@ -187705,6 +188564,141 @@
     "en": "Learned once from the Improvised Suppressors Manual; characters who already read it keep this recipe. Also requires the Metalworking level, tools, and materials shown here. The manual can be found in bookstores, libraries, gun stores, tool stores, and garages.",
     "ch": "閱讀簡易消音器手冊一次即可學會; 已讀過的角色會保留此配方. 另需此處所示的金屬加工等級, 工具與材料. 手冊可在書店, 圖書館, 槍械店, 五金行與車庫中找到.",
     "cn": "阅读简易消音器手册一次即可学会; 已读过的角色会保留此配方. 另需此处所示的金属加工等级, 工具和材料. 手册可在书店, 图书馆, 枪械店, 五金店和车库中找到."
+   },
+   "Tooltip_CamelliaPlant": {
+    "en": "A cutting from a Camellia japonica shrub, prized for its ornamental flowers.",
+    "ch": "取自日本山茶灌木的插枝, 因觀賞用的花朵而備受珍視.",
+    "cn": "取自山茶灌木的插条, 因观赏用的花朵而备受珍视."
+   },
+   "Tooltip_CamelliaSeeds": {
+    "en": "Seeds from a Camellia japonica shrub, ready to be pressed for a fine, slow-oxidizing oil traditionally used to protect sword blades.",
+    "ch": "日本山茶灌木的種子, 可榨出細緻且氧化緩慢的油, 傳統上用來保護刀身.",
+    "cn": "山茶灌木的种子, 可榨出细腻且氧化缓慢的油, 传统上用来保护刀身."
+   },
+   "Tooltip_ChojiOil": {
+    "en": "A fine, slow-oxidizing oil pressed from Camellia seeds, traditionally used to protect sword blades from rust.",
+    "ch": "以山茶花種子榨出的細緻油品, 氧化緩慢, 傳統上用來保護刀身免於生鏽.",
+    "cn": "以山茶花种子榨出的细腻油品, 氧化缓慢, 传统上用来保护刀身免于生锈."
+   },
+   "Tooltip_OdachiSayaBlack": {
+    "en": "Black Odachi Scabbard (Kuroro Saya)",
+    "ch": "黑色大太刀刀鞘 (黑呂鞘)",
+    "cn": "黑色大太刀刀鞘 (黑吕鞘)"
+   },
+   "Tooltip_OdachiSayaBlue": {
+    "en": "Blue Odachi Scabbard (Aonuri Saya)",
+    "ch": "藍色大太刀刀鞘 (青塗鞘)",
+    "cn": "蓝色大太刀刀鞘 (青涂鞘)"
+   },
+   "Tooltip_OdachiSayaBrown": {
+    "en": "Brown Odachi Scabbard (Tamenuri Saya)",
+    "ch": "棕色大太刀刀鞘 (溜塗鞘)",
+    "cn": "棕色大太刀刀鞘 (溜涂鞘)"
+   },
+   "Tooltip_OdachiSayaChestnut": {
+    "en": "Chestnut Odachi Scabbard (Kuroki Shirasaya)",
+    "ch": "栗色大太刀刀鞘 (黑木白鞘)",
+    "cn": "栗色大太刀刀鞘 (黑木白鞘)"
+   },
+   "Tooltip_OdachiSayaEbony": {
+    "en": "Ebony Odachi Scabbard (Kokutan Shirasaya)",
+    "ch": "烏木大太刀刀鞘 (黑檀白鞘)",
+    "cn": "乌木大太刀刀鞘 (黑檀白鞘)"
+   },
+   "Tooltip_OdachiSayaGold": {
+    "en": "Golden Odachi Scabbard (Kinnuri Saya)",
+    "ch": "金色大太刀刀鞘 (金塗鞘)",
+    "cn": "金色大太刀刀鞘 (金涂鞘)"
+   },
+   "Tooltip_OdachiSayaGreen": {
+    "en": "Green Odachi Scabbard (Midorinuri Saya)",
+    "ch": "綠色大太刀刀鞘 (綠塗鞘)",
+    "cn": "绿色大太刀刀鞘 (绿涂鞘)"
+   },
+   "Tooltip_OdachiSayaLightBlue": {
+    "en": "Light Blue Odachi Scabbard (Asagi Saya)",
+    "ch": "淺藍色大太刀刀鞘 (淺蔥鞘)",
+    "cn": "浅蓝色大太刀刀鞘 (浅葱鞘)"
+   },
+   "Tooltip_OdachiSayaMagnolia": {
+    "en": "Magnolia Odachi Scabbard (Honoki Shirasaya)",
+    "ch": "木蘭大太刀刀鞘 (朴白鞘)",
+    "cn": "木兰大太刀刀鞘 (朴白鞘)"
+   },
+   "Tooltip_OdachiSayaNavy": {
+    "en": "Navy Blue Odachi Scabbard (Kon-iro Saya)",
+    "ch": "藏青色大太刀刀鞘 (紺色鞘)",
+    "cn": "藏青色大太刀刀鞘 (绀色鞘)"
+   },
+   "Tooltip_OdachiSayaPersimmon": {
+    "en": "Persimmon Odachi Scabbard (Kakishibu Saya)",
+    "ch": "柿色大太刀刀鞘 (柿澀鞘)",
+    "cn": "柿色大太刀刀鞘 (柿涩鞘)"
+   },
+   "Tooltip_OdachiSayaPurple": {
+    "en": "Purple Odachi Scabbard (Murasakinuri Saya)",
+    "ch": "紫色大太刀刀鞘 (紫塗鞘)",
+    "cn": "紫色大太刀刀鞘 (紫涂鞘)"
+   },
+   "Tooltip_OdachiSayaRed": {
+    "en": "Red Odachi Scabbard (Shunuri Saya)",
+    "ch": "紅色大太刀刀鞘 (朱塗鞘)",
+    "cn": "红色大太刀刀鞘 (朱涂鞘)"
+   },
+   "Tooltip_OdachiSayaWhite": {
+    "en": "White Odachi Scabbard (Shironuri Saya)",
+    "ch": "白色大太刀刀鞘 (白塗鞘)",
+    "cn": "白色大太刀刀鞘 (白涂鞘)"
+   },
+   "Tooltip_OdachiSayaYellowGreen": {
+    "en": "Yellow-Green Odachi Scabbard (Moegi Saya)",
+    "ch": "黃綠色大太刀刀鞘 (萌黃鞘)",
+    "cn": "黄绿色大太刀刀鞘 (萌黄鞘)"
+   },
+   "Tooltip_OdachiScabbard": {
+    "en": "Odachi Scabbard",
+    "ch": "大太刀刀鞘",
+    "cn": "大太刀刀鞘"
+   },
+   "Tooltip_OdachiScabbardWood": {
+    "en": "Wooden Odachi Scabbard",
+    "ch": "木製大太刀刀鞘",
+    "cn": "木制大太刀刀鞘"
+   },
+   "Tooltip_TantoScabbard": {
+    "en": "Tantō Scabbard",
+    "ch": "短刀刀鞘",
+    "cn": "短刀刀鞘"
+   },
+   "Tooltip_TantoScabbardWood": {
+    "en": "Wooden Tantō Scabbard",
+    "ch": "木製短刀刀鞘",
+    "cn": "木制短刀刀鞘"
+   },
+   "Tooltip_FD_HarvestSaltLick_NoTool": {
+    "en": "Requires a hammer, sledgehammer, stone maul or pickaxe.",
+    "ch": "需要鎚子、大鎚、石質重錘或十字鎬.",
+    "cn": "需要锤子、大锤、石质重锤或丁字镐."
+   },
+   "Tooltip_PotOfBrine": {
+    "en": "Salt lick shavings dissolved in water. Needs to be boiled before the brine can be filtered into usable salt.",
+    "ch": "溶於水中的鹽磚刮屑. 必須先煮沸, 才能將鹽水過濾成可用的鹽.",
+    "cn": "溶于水中的盐砖碎屑. 必须先煮沸, 才能把盐水过滤成可用的盐."
+   },
+   "Tooltip_PotOfBrineCooked": {
+    "en": "Boiled salt brine. Filter it through cheesecloth or a respirator filter to extract usable salt.",
+    "ch": "煮沸過的鹽水. 用乳酪布或呼吸器濾芯過濾, 即可提取可用的鹽.",
+    "cn": "煮沸过的盐水. 用奶酪布或呼吸器滤芯过滤, 即可提取可用的盐."
+   },
+   "Tooltip_SaltLickShavings": {
+    "en": "Coarse, mineral-rich shavings scraped from a salt lick. Not safe to eat directly - dissolve in water and boil it down before filtering out the trace metals.",
+    "ch": "從鹽磚上刮下、富含礦物質的粗糙刮屑. 不宜直接食用 - 請先溶於水中煮沸濃縮, 再過濾掉其中的微量金屬.",
+    "cn": "从盐砖上刮下、富含矿物质的粗糙碎屑. 不宜直接食用 - 请先溶于水中熬煮浓缩, 再滤除其中的微量金属."
+   },
+   "Tooltip_craft_dryFoodRackDesc": {
+    "en": "A simple wooden rack for air-drying mushrooms, berries, fruit, vegetables, salted meat and salted fish. Slower than an oven, but needs no fuel.",
+    "ch": "簡易的木製架子, 可用來風乾蘑菇、漿果、水果、蔬菜、醃肉和醃魚. 比烤箱慢, 但不需要燃料.",
+    "cn": "简易的木制架子, 可用来风干蘑菇、浆果、水果、蔬菜、腌肉和腌鱼. 比烤箱慢, 但不需要燃料."
    }
   },
   "UI.json": {
@@ -200069,6 +201063,275 @@
     "en": "The number under the word. Requires Show instant kill effects. A knife in the jaw kills whatever health the zombie had, so the number says nothing about the kill. Turn it off to keep the word and the star without it.",
     "ch": "字樣下方的數字. 需要開啟「顯示秒殺特效」. 刀刺下顎會直接殺死殭屍, 不論它還剩多少血量, 所以這個數字對這次擊殺沒有任何意義. 關掉它就只保留字樣與星芒.",
     "cn": "字样下方的数字. 需要开启“显示秒杀特效”. 刀刺下颌会直接杀死僵尸, 不论它还剩多少血量, 所以这个数字对这次击杀没有任何意义. 关掉它就只保留字样与星芒."
+   },
+   "UI_TTF_Sounds_MainMenuDescription": {
+    "en": "Mute the main menu ambience and music.",
+    "ch": "將主選單的環境音與音樂靜音.",
+    "cn": "将主菜单的环境音和音乐静音."
+   },
+   "UI_TTF_Sounds_MainMenuMusic": {
+    "en": "Mute main menu ambience and music",
+    "ch": "主選單環境音與音樂靜音",
+    "cn": "主菜单环境音和音乐静音"
+   },
+   "UI_TTF_Sounds_MainMenuTab": {
+    "en": "Main Menu",
+    "ch": "主選單",
+    "cn": "主菜单"
+   },
+   "UI_TTF_Sounds_MainMenuTitle": {
+    "en": "Main Menu Audio",
+    "ch": "主選單音訊",
+    "cn": "主菜单音频"
+   },
+   "UI_BetterCooking_HideRandomEntries": {
+    "en": "Hide 'Add Random' Entries",
+    "ch": "隱藏「加入隨機」選項",
+    "cn": "隐藏“添加随机”选项"
+   },
+   "UI_BetterCooking_HideRandomEntries_tooltip": {
+    "en": "Hides vanilla Add Random entries in evolved recipe menus.",
+    "ch": "在料理選單中隱藏原版的「加入隨機」選項.",
+    "cn": "在料理菜单中隐藏原版的“添加随机”选项."
+   },
+   "UI_LPP_FertilizedEggs": {
+    "en": "%1 fertilized",
+    "ch": "其中 %1 顆已受精",
+    "cn": "其中 %1 枚已受精"
+   },
+   "UI_LPP_Frozen": {
+    "en": "(as of when you left the zone)",
+    "ch": "(離開區域時的狀態)",
+    "cn": "(离开区域时的状态)"
+   },
+   "UI_LPP_Opt_EggMarkers": {
+    "en": "Mark fertilized and unfertilized eggs in the inventory",
+    "ch": "在物品欄中標示已受精與未受精的蛋",
+    "cn": "在物品栏中标记已受精和未受精的蛋"
+   },
+   "UI_LPP_Opt_EggMarkers_TT": {
+    "en": "A yellow dot for fertilized eggs and a dark dot for unfertilized ones, on the item icon. Shown only once the egg is old enough for vanilla to tell (a quarter of the hatching time); younger eggs get no dot.",
+    "ch": "在物品圖示上以黃點標示已受精的蛋, 以深色點標示未受精的蛋. 只有當蛋放到原版能分辨的時間 (孵化時間的四分之一) 後才會顯示; 較新的蛋不會顯示圓點.",
+    "cn": "在物品图标上用黄点标记已受精的蛋, 用深色点标记未受精的蛋. 只有当蛋放到原版能分辨的时间 (孵化时间的四分之一) 后才会显示; 较新的蛋不会显示圆点."
+   },
+   "UI_LPP_Opt_HandsOn": {
+    "en": "Show an animal's condition only after checking it",
+    "ch": "檢視過動物後才顯示其狀態",
+    "cn": "查看过动物后才显示其状态"
+   },
+   "UI_LPP_Opt_HandsOnExpiry": {
+    "en": "Forget the herd's condition after being away from the zone for",
+    "ch": "離開區域超過此時間後忘記畜群狀態",
+    "cn": "离开区域超过此时间后忘记畜群状态"
+   },
+   "UI_LPP_Opt_HandsOnExpiry_Item": {
+    "en": "%1 hours",
+    "ch": "%1 小時",
+    "cn": "%1 小时"
+   },
+   "UI_LPP_Opt_HandsOn_TT": {
+    "en": "Each animal's condition stays blank until you tend to it (pet, milk, shear, feed, water, pick up, lead, take from a hutch) or open its info window. The species, sex and age columns stay visible. While you are inside the zone the values are live; after you leave they are shown faded as of that moment, and once you have been away for the time set below the herd is forgotten and must be checked again. Loading a save while away from the zone also blanks the faded values.",
+    "ch": "每隻動物的狀態在你照料牠 (撫摸、擠奶、剪毛、餵食、餵水、抱起、牽引、從雞舍取出) 或開啟其資訊視窗之前都會保持空白. 物種、性別與年齡欄位仍會顯示. 你在區域內時數值會即時更新; 離開後會以淡化方式顯示離開當下的數值, 離開超過下方設定的時間後就會忘記畜群狀態, 必須重新檢視. 在區域外讀取存檔時, 淡化的數值也會清空.",
+    "cn": "每只动物的状态在你照料它 (抚摸、挤奶、剪毛、喂食、喂水、抱起、牵引、从鸡舍取出) 或打开其信息窗口之前都会保持空白. 物种、性别和年龄列仍会显示. 你在区域内时数值会实时更新; 离开后会以淡化方式显示离开当时的数值, 离开超过下方设置的时间后就会忘记畜群状态, 必须重新查看. 在区域外读取存档时, 淡化的数值也会清空."
+   },
+   "UI_LPP_Unknown": {
+    "en": "Not checked yet",
+    "ch": "尚未檢視",
+    "cn": "尚未查看"
+   },
+   "UI_NEQ_options_dock_right": {
+    "en": "Attached: on the right of the inventory",
+    "ch": "吸附模式: 位於物品欄右側",
+    "cn": "吸附模式: 位于物品栏右侧"
+   },
+   "UI_NEQ_options_dock_right_tooltip": {
+    "en": "The attached panel hangs off the right edge of the inventory window instead of the left, and the figure button moves to the right with it.",
+    "ch": "吸附的面板改掛在物品欄視窗的右側邊緣而非左側, 人物按鈕也會一起移到右側.",
+    "cn": "吸附的面板改为挂在物品栏窗口的右侧边缘而非左侧, 人物按钮也会一起移到右侧."
+   },
+   "UI_NEQ_options_no_hotbar": {
+    "en": "Leave the hotbar out of outfits",
+    "ch": "套裝不包含快捷欄",
+    "cn": "套装不包含快捷栏"
+   },
+   "UI_NEQ_options_no_hotbar_tooltip": {
+    "en": "Every outfit ignores the hotbar, including those already saved: what is attached to it, and the belts and holsters that hold it, are never saved, put on, taken off or moved.",
+    "ch": "所有套裝 (包括已儲存的) 都會忽略快捷欄: 掛在快捷欄上的物品, 以及承載它們的腰帶與槍套, 一律不會被儲存、穿上、卸下或移動.",
+    "cn": "所有套装 (包括已保存的) 都会忽略快捷栏: 挂在快捷栏上的物品, 以及承载它们的腰带和枪套, 一律不会被保存、穿上、卸下或移动."
+   },
+   "UI_NEQ_options_swap_containers": {
+    "en": "Swap outfits through containers",
+    "ch": "透過容器更換套裝",
+    "cn": "通过容器更换套装"
+   },
+   "UI_NEQ_options_swap_containers_tooltip": {
+    "en": "When you put on an outfit, each piece you take off goes into a nearby container that already holds something of the same kind, the one its replacement came from first. A piece with no such container stays in your inventory. Nothing is dropped on the floor, and bags are never moved.",
+    "ch": "穿上套裝時, 每件換下的物品都會放進附近已存放同類物品的容器, 優先放回替換物品原本所在的那個容器. 找不到這種容器的物品會留在你的物品欄中. 不會有任何東西掉到地上, 背包也絕不會被移動.",
+    "cn": "穿上套装时, 每件换下的物品都会放进附近已存放同类物品的容器, 优先放回替换物品原本所在的那个容器. 找不到这种容器的物品会留在你的物品栏中. 不会有任何东西掉到地上, 背包也绝不会被移动."
+   },
+   "UI_NEQ_symbols_animals": {
+    "en": "Animals",
+    "ch": "動物",
+    "cn": "动物"
+   },
+   "UI_NEQ_symbols_hazard": {
+    "en": "Hazards",
+    "ch": "危險",
+    "cn": "危险"
+   },
+   "UI_NEQ_symbols_home": {
+    "en": "Furniture",
+    "ch": "家具",
+    "cn": "家具"
+   },
+   "UI_NEQ_symbols_loot": {
+    "en": "Loot",
+    "ch": "戰利品",
+    "cn": "战利品"
+   },
+   "UI_NEQ_symbols_marks": {
+    "en": "Marks",
+    "ch": "標記",
+    "cn": "标记"
+   },
+   "UI_NEQ_symbols_places": {
+    "en": "Places",
+    "ch": "地點",
+    "cn": "地点"
+   },
+   "UI_NEQ_symbols_road": {
+    "en": "Road",
+    "ch": "道路",
+    "cn": "道路"
+   },
+   "UI_NEQ_symbols_tools": {
+    "en": "Tools",
+    "ch": "工具",
+    "cn": "工具"
+   },
+   "UI_NEQ_symbols_weapons": {
+    "en": "Weapons",
+    "ch": "武器",
+    "cn": "武器"
+   },
+   "UI_NEQ_wardrobe_bags": {
+    "en": "Bags",
+    "ch": "背包",
+    "cn": "背包"
+   },
+   "UI_NEQ_wardrobe_bags_tip": {
+    "en": "Save backpacks and bags with the outfit",
+    "ch": "與套裝一併儲存背包和提袋",
+    "cn": "随套装一起保存背包和提包"
+   },
+   "UI_NEQ_wardrobe_collapse": {
+    "en": "Roll up to the header when the pointer leaves",
+    "ch": "滑鼠移開時收合至標題列",
+    "cn": "鼠标移开时收起至标题栏"
+   },
+   "UI_NEQ_wardrobe_hotbar": {
+    "en": "Belt",
+    "ch": "腰帶",
+    "cn": "腰带"
+   },
+   "UI_NEQ_wardrobe_hotbar_locked": {
+    "en": "Left out of every outfit in Mod Options",
+    "ch": "已在「模組選項」中從所有套裝排除",
+    "cn": "已在“模组选项”中从所有套装排除"
+   },
+   "UI_NEQ_wardrobe_hotbar_tip": {
+    "en": "Save the belt, holsters and hotbar items with the outfit",
+    "ch": "與套裝一併儲存腰帶、槍套和快捷欄物品",
+    "cn": "随套装一起保存腰带、枪套和快捷栏物品"
+   },
+   "UI_NEQ_wardrobe_pin": {
+    "en": "Keep open",
+    "ch": "保持開啟",
+    "cn": "保持打开"
+   },
+   "UI_NEQ_wardrobe_replace": {
+    "en": "Replace with what you have on",
+    "ch": "以目前穿戴的裝備取代",
+    "cn": "替换为当前穿戴的装备"
+   },
+   "UI_NEQ_wardrobe_replace_confirm": {
+    "en": "Click again to replace",
+    "ch": "再點選一次以取代",
+    "cn": "再次点击以替换"
+   },
+   "UI_NEQ_wardrobe_replaced": {
+    "en": "Outfit updated",
+    "ch": "套裝已更新",
+    "cn": "套装已更新"
+   },
+   "UI_NEQ_wardrobe_symbol": {
+    "en": "Choose a symbol",
+    "ch": "選擇圖示",
+    "cn": "选择图标"
+   },
+   "UI_NEQ_wardrobe_symbol_none": {
+    "en": "No symbol",
+    "ch": "無圖示",
+    "cn": "无图标"
+   },
+   "UI_NEQ_wardrobe_wear": {
+    "en": "Wear",
+    "ch": "穿上",
+    "cn": "穿上"
+   },
+   "UI_BetterCooking_Options_Title": {
+    "en": "Better Cooking",
+    "ch": "改良料理",
+    "cn": "改良烹饪",
+    "_note": "Better Cooking Lua 以 getTextOrNull 呼叫、上游 EN 未定義的鍵；英文取自 Lua 後備字串。"
+   },
+   "UI_BetterCooking_Rotten_Info": {
+    "en": "Choose how to handle Rotten entries in the menu",
+    "ch": "選擇選單中腐爛項目的處理方式",
+    "cn": "选择菜单中变质项目的处理方式",
+    "_note": "Better Cooking Lua 以 getTextOrNull 呼叫、上游 EN 未定義的鍵；英文取自 Lua 後備字串。"
+   },
+   "UI_BetterCooking_Ingredients_ShowRotten": {
+    "en": "Show Rotten Ingredients",
+    "ch": "顯示腐爛食材",
+    "cn": "显示变质食材",
+    "_note": "Better Cooking Lua 以 getTextOrNull 呼叫、上游 EN 未定義的鍵；英文取自 Lua 後備字串。"
+   },
+   "UI_BetterCooking_Ingredients_ShowRotten_tooltip": {
+    "en": "Adds an entry to the ingredients list that will show rotten items.",
+    "ch": "在食材清單中新增一個項目, 用來顯示腐爛的物品.",
+    "cn": "在食材列表中添加一个条目, 用于显示变质的物品.",
+    "_note": "Better Cooking Lua 以 getTextOrNull 呼叫、上游 EN 未定義的鍵；英文取自 Lua 後備字串。"
+   },
+   "UI_BetterCooking_Seasonings_ShowRotten": {
+    "en": "Show Rotten Seasonings",
+    "ch": "顯示腐爛調味料",
+    "cn": "显示变质调味料",
+    "_note": "Better Cooking Lua 以 getTextOrNull 呼叫、上游 EN 未定義的鍵；英文取自 Lua 後備字串。"
+   },
+   "UI_BetterCooking_Seasonings_ShowRotten_tooltip": {
+    "en": "Adds an entry to the seasonings list that will show rotten items.",
+    "ch": "在調味料清單中新增一個項目, 用來顯示腐爛的物品.",
+    "cn": "在调味料列表中添加一个条目, 用于显示变质的物品.",
+    "_note": "Better Cooking Lua 以 getTextOrNull 呼叫、上游 EN 未定義的鍵；英文取自 Lua 後備字串。"
+   },
+   "UI_BetterCooking_Ingredients_SubMenu_tooltips": {
+    "en": "Puts all Ingredients into an Ingredients Sub-menu.",
+    "ch": "將所有食材歸入「食材」子選單.",
+    "cn": "将所有食材归入“食材”子菜单.",
+    "_note": "Better Cooking Lua 以 getTextOrNull 呼叫、上游 EN 未定義的鍵；英文取自 Lua 後備字串。"
+   },
+   "UI_LPP_Opt_RoosterCrow": {
+    "en": "Roosters crow",
+    "ch": "公雞啼叫",
+    "cn": "公鸡打鸣",
+    "_note": "Livestock Panel Plus 2026-09-27 新版新增鍵（tracker 基準尚未推進，英文取自本機上游副本）。"
+   },
+   "UI_LPP_Opt_RoosterCrow_TT": {
+    "en": "Roosters crow before dawn, following the seasonal sunrise, and now and then during the day. A rooster standing still outside the hutch flaps its wings as it crows; one inside the hutch is heard from the hutch.\nZombies react only if the sandbox option \"Animals Attract Zombies\" is on. If the standalone Rooster Crow mod is enabled, this setting is hidden and that mod takes over.",
+    "ch": "公雞會在黎明前依季節日出時間啼叫, 白天也會偶爾啼叫. 站在雞舍外不動的公雞會邊拍翅膀邊啼叫; 待在雞舍裡的公雞則會從雞舍傳出啼聲.\n只有在沙盒選項「動物吸引殭屍」開啟時, 殭屍才會有反應. 若啟用了獨立的 Rooster Crow 模組, 此設定會隱藏並改由該模組接手.",
+    "cn": "公鸡会在黎明前按季节日出时间打鸣, 白天也会偶尔打鸣. 站在鸡舍外不动的公鸡会边拍翅膀边打鸣; 待在鸡舍里的公鸡则会从鸡舍传出啼声.\n只有在沙盒选项“动物吸引僵尸”开启时, 僵尸才会有反应. 若启用了独立的 Rooster Crow 模组, 此设置会隐藏并改由该模组接管.",
+    "_note": "Livestock Panel Plus 2026-09-27 新版新增鍵（tracker 基準尚未推進，英文取自本機上游副本）。"
    }
   },
   "MakeUp.json": {

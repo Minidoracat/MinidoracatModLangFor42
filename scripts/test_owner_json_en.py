@@ -274,6 +274,24 @@ check(page.endswith("\n") and "\r" not in page, "輸出為 LF ＋尾端換行（
 # 5c. 確定性：同輸入必須同輸出（否則 --owner-report-check 會恆紅）
 check(pms.render_owner_report(DEC, CEN, SRC) == page, "渲染具確定性")
 
+# 5d. 尚未裁決的衝突必須公開（2026-09-27 使用者裁決）：列出 owner 英文與目前出貨繁中，
+#     已有台帳條目的鍵不得重複出現在待裁決節，未出貨者要標明。
+PEND = {"IG_UI|IGUI_A|B": {"5/E": "Front Trunk", "6/F": "Tool Box"},
+        "UI|UI_trait_X": {"3/C": "Desc", "4/D": "Other"},
+        "ItemName|Base.Nope": {"7/G": "One", "8/H": "Two"}}
+page2 = pms.render_owner_report(DEC, CEN, SRC, pending=PEND,
+                                shipped_ch={"IG_UI|IGUI_A|B": "前備箱"})
+sec = page2.split("## 尚未裁決的衝突（2）", 1)
+check(len(sec) == 2, "待裁決節存在且數量排除已登記鍵（3 → 2）")
+rows2 = [ln for ln in (sec[1] if len(sec) == 2 else "").split("\n")
+         if ln.startswith("| ") and not ln.startswith(("| 鍵 |", "|---"))]
+check(len(rows2) == 2 and all(ln.replace("\\|", "").count("|") == 4 for ln in rows2),
+      "待裁決節每列 3 欄、鍵內 | 已轉義")
+check("前備箱" in sec[-1] and "Tool Box" in sec[-1] and "（未出貨）" in sec[-1],
+      "待裁決節列出各 owner 英文、目前繁中，未出貨者標明")
+check("另有 **2** 個鍵尚未裁決" in page2, "檔頭統計含待裁決數")
+check("## 尚未裁決的衝突（0）" in page, "未給 pending 時仍渲染空節（向後相容）")
+
 if FAIL:
     print(f"\n❌ test_owner_json_en：{FAIL}/{CHECKS} 項失敗", file=sys.stderr)
     sys.exit(1)

@@ -1439,25 +1439,37 @@ def _is_non_fast_forward(stderr: str) -> bool:
 # 實際已 564，1.18.0 同步 As1 v3.7.1 那次漏更新）。**必須一起進 pathspec**：漏了就會
 # 讓排程重生後的變更留在工作區未 commit，下一個操作者看到髒工作區、或被 `git restore`
 # 連帶清掉而永遠同步不上。
+# `OWNER_CONFLICTS.md` 自 2026-09-27 起公開列出**尚未裁決**的衝突，而那一節由 census
+# （tracker state＋`sources/en`）算出，每次上游更新都可能變動；不隨 state 重生，
+# CI 的 `--owner-report-check` 就會在排程 commit 後轉紅。
 MANIFEST_OUTPUTS = ("SUPPORTED_MODS.md", "README.md", "STEAM_DESCRIPTION.md",
-                    "MOD/MinidoracatModLangFor42/workshop.txt")
+                    "MOD/MinidoracatModLangFor42/workshop.txt", "OWNER_CONFLICTS.md")
 
 
 def refresh_manifest() -> bool:
-    """重生 SUPPORTED_MODS.md／README 支援清單摘要。回傳是否成功。
+    """重生 manifest 生成物與 `OWNER_CONFLICTS.md`。回傳是否成功。
 
     失敗**不阻斷** state commit——追蹤器停止推進的代價（issue 不再開、上游變更漏偵測）
     遠大於生成物晚一輪同步，且 state 推進本身是自癒的。呼叫端改以非零退出碼讓 CI 轉紅。
+    owner 報告在裁決過時／wid 盲區時非零退出，但報告本身已先寫出；照樣回報失敗，
+    讓排程把「有裁決需要重做」顯示出來。
     """
-    proc = subprocess.run(
-        [sys.executable, str(PROJECT_ROOT / "scripts" / "build_mod.py"), "manifest"],
-        capture_output=True, text=True, cwd=str(PROJECT_ROOT),
-    )
-    if proc.returncode != 0:
-        detail = (proc.stderr or proc.stdout or "").strip()[:500]
-        print(f"  ⚠️ manifest 重生失敗（rc={proc.returncode}）：{detail}", file=sys.stderr)
-        return False
-    return True
+    scripts = PROJECT_ROOT / "scripts"
+    with tempfile.TemporaryDirectory() as tmp:
+        cmds = [
+            [sys.executable, str(scripts / "build_mod.py"), "manifest"],
+            [sys.executable, str(scripts / "prep_mod_strings.py"), "--owner-report",
+             "--out", str(Path(tmp) / "owner-report.json")],
+        ]
+        ok = True
+        for cmd in cmds:
+            proc = subprocess.run(cmd, capture_output=True, text=True, cwd=str(PROJECT_ROOT))
+            if proc.returncode != 0:
+                detail = (proc.stderr or proc.stdout or "").strip()[-500:]
+                print(f"  ⚠️ {Path(cmd[1]).name} 重生失敗（rc={proc.returncode}）：{detail}",
+                      file=sys.stderr)
+                ok = False
+    return ok
 
 
 def state_add_paths() -> list[str]:
