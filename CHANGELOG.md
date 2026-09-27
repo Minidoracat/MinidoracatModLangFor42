@@ -4,6 +4,24 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 6 個 MOD 新增的繁簡中文，共 216 項。** Evolving Traits World（#600，新特質沙發馬鈴薯／厚衣派／薄衣派、健身特質系統、腿部骨折／燒傷病房患者／身受重傷的動態移除設定、心理／身體特質分頁，58 項）、SnackTime 89（#601，Kix／Chocos／香果圈／Trio／Weetos 麥片與碗裝、瑪拉巴泡泡糖、皮奇布里歐、聖米歇爾與露怡的餅乾蛋糕，63 項）、ZoneTools（#603，耕作分類的收穫／播種／澆灌工具、分類選單與對應的區域上限設定，35 項）、Puffin's Retro Relics（#606，收藏系列選單與 9 個系列名、三角旗與復古遺物的 3D 放置、背包絨毛玩偶裝飾，28 項）、Extraction Mode（#605，車庫升降機顯示切換、8 個任務的委託與完成對話、「候選疫苗」任務新需求，26 項）、CAExtendedCategories（#602，手槍彈鼓／弓／彈鼓／冷凍食物／防具配飾分類，6 項）。
+  > 技術要點：全數落 `own_translations.json`，CH／CN 逐鍵對照 EN 直寫並經兩個外部模型對抗複核。ETW 的 `Sandbox_ETW_FearOfLocationsSystemExclusiveFears*` 是 As1 已譯鍵的改名：選項名沿用舊譯，tooltip 修正舊譯「只會同時擁有」與「互斥」矛盾的寫法。
+
+### Changed
+
+- **依上游英文改值重譯 23 項。** Evolving Traits World 戈登風格加成新增揮擊速度、健身狂的經驗值加倍改為限定等級進度 5%–95%（#600，3 項）；ZoneTools 圖示提示的快捷鍵不再寫死 F8（#603）；Extraction Mode 19 項沙盒說明：遊戲模式改名為「合作 | 單一藏身點」「合作/PvP | 多藏身點」、屍潮改為五波遞增、救援會一併清除中毒／食物中毒／肌肉拉傷／疲勞，以及道路封鎖、燃料、車庫閒置、升級技能、供暖、起始裝備等說明改寫（#605）。
+  > 技術要點：As1 衍生層 4 鍵改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點）；own 層 19 鍵更新 `en` 錨點與 CH／CN，其中 17 鍵是更早一輪上游改寫時 `en` 錨點就沒跟上（tracker 只比對相鄰兩次基準，這次改以 own 錨點對上游現值全量比對才抓出）；已審鍵同步 `ch_review_state`。
+
+### Removed
+
+- 移除 SnackTime 89 上游已刪除的「SnackTime麥片碗」（`SnackTime89.ST_CerealBowl`，上游改為各品牌碗裝）。
+
+其餘追蹤單無需變更：Livestock Panel Plus（#604）新增的公雞啼叫 2 項已於 1.33.0 收錄；ETW 移除的 4 個沙盒鍵屬 As1 衍生層，依同步流程保留；Puffin's Retro Relics 移除的 4 鍵只是從遊戲不讀的 `IG_UI_EN.txt` 拿掉，`IG_UI.json` 仍有同鍵。
+
 ## [42.20.4-1.33.0] - 2026-09-27
 
 ### Added
