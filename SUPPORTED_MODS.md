@@ -9,7 +9,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **663 個 Workshop 模組**（857 個 mod ID）；另 **20 個已下架**（翻譯保留，見文末）。
+共支援 **664 個 Workshop 模組**（858 個 mod ID）；另 **20 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -105,7 +105,7 @@
 | ['49 Dodge Power Wagon Crew Cab](https://steamcommunity.com/sharedfiles/filedetails/?id=2900580391) | '49 Dodge Power Wagon 雙排座 | 新增 1949 年 Dodge Power Wagon 雙排座卡車及警用、憲兵等版本。 | `49powerWagon` | ? | — | — |
 | [Christmas Time [B41\|42\|42.13.1]](https://steamcommunity.com/sharedfiles/filedetails/?id=2903870217) | 聖誕時光 | 新增聖誕樹、花環、聖誕玩具、禮物盒與聖誕帽等可製作的節慶物品。 | `ChristmasTime`, `ChristmasTime4213` | 97 | — | — |
 | ['70 Plymouth Barracuda](https://steamcommunity.com/sharedfiles/filedetails/?id=2913633066) | '70 Plymouth Barracuda | 新增 1970 年 Plymouth Barracuda 車輛，含保險桿、裝甲等可製作配件。 | `70barracuda` | 29 | — | — |
-| [Evolving Traits World (ETW) [B41/B42] - alternative to "Dynamic Traits"](https://steamcommunity.com/sharedfiles/filedetails/?id=2914075159) | Evolving Traits World (ETW) 動態特質演化 | 讓特質隨遊玩行為動態演化，含親和機制與豐富沙盒設定。 | `2914075159/EvolvingTraitsWorldMarkDynamicTraits`, `EvolvingTraitsWorld`, `EvolvingTraitsWorldMarkDynamicTraits` | 1089 | — | ⚠️ 嗜血特質的說明文字（代號 UI_trait_BloodlustDesc）與動態特質、超級英雄兩個 MOD 撞名，三者描述的機制完全不同——本 MOD 是「殺殭屍加心情並減壓」、動態特質是「不殺人就影響心情」、超級英雄是純戰鬥數值加成。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故此鍵不出貨、遊戲內顯示該 MOD 自己的英文原文。 |
+| [Evolving Traits World (ETW) [B41/B42] - alternative to "Dynamic Traits"](https://steamcommunity.com/sharedfiles/filedetails/?id=2914075159) | Evolving Traits World (ETW) 動態特質演化 | 讓特質隨遊玩行為動態演化，含親和機制與豐富沙盒設定。 | `2914075159/EvolvingTraitsWorldMarkDynamicTraits`, `EvolvingTraitsWorld`, `EvolvingTraitsWorldMarkDynamicTraits` | 1068 | — | ⚠️ 嗜血特質的說明文字（代號 UI_trait_BloodlustDesc）與動態特質、超級英雄兩個 MOD 撞名，三者描述的機制完全不同——本 MOD 是「殺殭屍加心情並減壓」、動態特質是「不殺人就影響心情」、超級英雄是純戰鬥數值加成。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故此鍵不出貨、遊戲內顯示該 MOD 自己的英文原文。 |
 | [[B41 / B42] Load All Magazines](https://steamcommunity.com/sharedfiles/filedetails/?id=2920899878) | 一鍵裝填所有彈匣 | 新增右鍵選單，可一次為所有同型彈匣裝滿或取出彈藥。 | `ReloadAllMagazines` | 2 | — | — |
 | ['93 Lincoln Town Car + Limo](https://steamcommunity.com/sharedfiles/filedetails/?id=2932547723) | '93 Lincoln Town Car 與加長禮車 | 新增 1993 年 Lincoln Town Car 轎車與加長禮車，含迷你吧台等車輛部件。 | `93townCar` | 34 | — | — |
 | ['89 Isuzu Trooper](https://steamcommunity.com/sharedfiles/filedetails/?id=2932549988) | '89 Isuzu Trooper | 新增 1989 年 Isuzu Trooper 休旅車，含越野版與 RS 等多種版本。 | `89trooper` | ? | — | — |
@@ -242,7 +242,7 @@
 | [[B42] eris food expiry](https://steamcommunity.com/sharedfiles/filedetails/?id=3392259028) | eris 食物保存期限 | 顯示食物保存期限相關資訊，並提供詳細資訊除錯選項。 | `eris_food_expiry` | ? | — | — |
 | [Auto Loot](https://steamcommunity.com/sharedfiles/filedetails/?id=3392699932) | 自動拾取 | 新增自動拾取系統，可用右鍵選單設定背包收納分類、優先順序與容器排除。 | `AutoLoot` | 79 | — | — |
 | [Arizona Iced Tea B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3393409283) | Arizona 冰茶 B42 | 新增 Arizona 茶罐、茶壺等飲品與混合裝拆封配方，並可透過沙盒設定調整茶罐生成機率（設 0 則不生成）。 | `TLK_ArizonaTea_B42` | 12 | — | — |
-| [[B42.18] Grab and Drop](https://steamcommunity.com/sharedfiles/filedetails/?id=3395614151) | 抓取與放下 | 一鍵抓取或放下手中物品，支援自動穿戴、自動收槍與滑鼠操作。 | `BION_DropBags` | 35 | — | — |
+| [[B42.18] Grab and Drop](https://steamcommunity.com/sharedfiles/filedetails/?id=3395614151) | 抓取與放下 | 一鍵抓取或放下手中物品，支援自動穿戴、自動收槍與滑鼠操作。 | `BION_DropBags` | 33 | — | — |
 | [Moodle Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3396446795) | Moodle 狀態圖示框架 | 提供狀態圖示（Moodle）框架，讓模組自訂背景、邊框與顏色顯示。 | `MoodleFramework` | 9 | — | — |
 | [[B42.13] Bodily Functions [v0.13.1]](https://steamcommunity.com/sharedfiles/filedetails/?id=3396456841) | 生理機能 | 為角色新增生理機能系統，加入尿液等相關液體與互動。 | `bodilyfunctions` | 303 | — | — |
 | [Starving Zombies [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3396867685) | 飢餓殭屍 | 殭屍會循氣味啃食屍體，屍體腐爛與風向影響偵測，設定豐富可調。 | `StarvingZombies`, `StarvingZombiesWIP` | 55 | — | — |
@@ -527,7 +527,7 @@
 | [Automatic Refueling [B42][SP][MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3632134603) | 自動加油 | 讓油泵自動為車輛加油，油泵流速、損壞與修復皆可調整。 | `AutomaticRefuelingB42` | 26 | — | — |
 | [My Spatial Refuge [B42] [MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3632195933) | 我的空間避難所 | 新增個人空間避難所系統，含經驗精華與多階升級物資。 | `myspatialrefuge` | 246 | — | — |
 | [[B42.13+] Pumps Have Propane (Standalone MP/SP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3632444452) | 油泵供應丙烷（獨立版） | 可從加油泵充裝丙烷罐、丙烷噴燈與丙烷罐車。 | `PumpsHavePropaneMP` | ? | — | — |
-| [ModernFirearmsSystem 42.19 (SP/MP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3633421539) | 現代槍械系統 | 新增現代槍械系統，含多種口徑彈藥、彈匣與彈藥背帶。 | `ModernFirearmsSystem` | 1290 | ⚠️ ≥65 | — |
+| [ModernFirearmsSystem 42.19 (SP/MP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3633421539) | 現代槍械系統 | 新增現代槍械系統，含多種口徑彈藥、彈匣與彈藥背帶。 | `ModernFirearmsSystem` | 1322 | ⚠️ ≥65 | — |
 | [Craft Propane〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3634065654) | 丙烷填充 | 新增以木炭與水填充丙烷罐的配方。 | `CraftPropane` | 3 | — | — |
 | [Better Safehouse [B42.20- MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3634569678) | 更好的安全屋 | 強化多人連線的安全屋管理：副屋主權限、擴建範圍、主重生點與側邊面板等。 | `BetterSafehouse` | 114 | — | — |
 | [Challenge Traits - Headshots, CDDA, and More [42.19 + 42.18]](https://steamcommunity.com/sharedfiles/filedetails/?id=3634630898) | 挑戰特質：爆頭、CDDA 等 | 新增爆頭限定、CDDA 等多種挑戰型特質玩法。 | `OCsChallengeTraits` | 35 | — | — |
@@ -671,6 +671,7 @@
 | [Puffin's Retro Relics〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3788360646) | Puffin 的復古珍藏 | 新增 1993 年以前的懷舊收藏品，包括瘋狂球、絨毛玩偶、桌遊、球隊三角旗與摔角夥伴玩偶，皆可擺設。 | `PuffinsRetroRelics` | 106 | — | — |
 | [Long Term Preservation Extended](https://steamcommunity.com/sharedfiles/filedetails/?id=3789287166) | 長期保存擴充 | 擴充食物保存玩法，可製作罐裝食品（如罐裝酪梨醬）、果汁與罐子標籤，並加入造紙製作分類與造紙模具。 | `LongTermPreservationExtended`, `LongTermPreservationExtendedSE`, `LongTermPreservationExtendedSEUI`, `LongTermPreservationExtendedUI` | 320 | ⚠️ ≥7 | — |
 | [CD: Cats](https://steamcommunity.com/sharedfiles/filedetails/?id=3791294616) | CD：貓咪 | 加入公母與幼貓等貓類同伴，可設定流浪貓在住宅、商店與寵物店的生成倍率，且該設定獨立於狗的生成。 | `CompanionCat` | 24 | — | — |
+| [Area Tasks - Select an area for vanilla tasks [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3793163745) | 區域任務 | 框選一塊區域，讓角色用原版動作批次割草、翻土、播種、澆水、收成、封窗、拆家具、搬屍體與收拾地上物品，不瞬移、不直接改動地圖。 | `AreaTasks` | 110 | — | — |
 | [Pixel Strike Indicator & Health Bar〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3793657917) | 像素打擊指示與血條 | 打中目標時跳出傷害數字，爆擊／爆頭／秒殺／落空／升級特效，殭屍與動物血條、韌性條與血量百分比；沙盒可設伺服器上限，玩家再自行調整。 | `PixelStrikeIndicator` | 328 | — | ⚠️ 兩個模組選項頁的頁名（Pixel Strike Indicator／Pixel Health Bars）是 PSI_Options.lua 寫死的英文字面，不走翻譯表，任何翻譯包都補不了；頁內所有選項與說明皆已翻譯。 |
 | [Frockin Splendor! Vol.6](https://steamcommunity.com/sharedfiles/filedetails/?id=3798149669) | Frockin Splendor! 華麗服飾 Vol.6 | 第六輯服飾擴充，新增外套、大衣、裙裝、褲裝、毛衣、腰帶與衣物收納用品。 | `GanydeBielovzki's Frockin Splendor! Vol.6` | 6 | — | — |
 | [Snake's ModPack Build 42](https://steamcommunity.com/sharedfiles/filedetails/?id=3800233932) | Snake 模組包 Build 42 | 整合料理、農漁業、彈藥製作、汽車維修、服飾、工具與多張地圖的模組包。 | `SMP_AmmoMaker`, `SMP_AquaFarm`, `SMP_AquaFarmResources`, `SMP_BarcoAbandonado`, `SMP_BatesMetalicos`, `SMP_CustomMapBridge`, `SMP_Factory`, `SMP_LeGourmetUltimate`, `SMP_LootZetaEnhancedEdition`, `SMP_MilitaryComplex`, `SMP_NumarkComplex`, `SMP_ROxygenTank`, `SMP_RPropaneTank`, `SMP_SkillsMag`, `SMP_SnakeMechanicalOverhaul`, `SMP_SnakeUtilsPack`, `SMP_SnakeClothingMod`, `SMP_SnakeMansion`, `SMP_SnakeVille`, `SMP_TableSaw`, `SMP_ZStreamersCars` | 5 | ⚠️ ≥20 | — |

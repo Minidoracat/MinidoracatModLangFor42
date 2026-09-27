@@ -27564,5 +27564,85 @@
     "as1_value": "游戏中的每分钟将随机清洗多少个区块.",
     "reason": "2026-09-26 #587／#597 上游改文：改為每位玩家附近檢查並清洗",
     "value": "游戏中每分钟在每位玩家附近随机检查并清洗多少个区块."
+  },
+  "ContextMenu.json|ContextMenu_AreaTasks_NoTasks": {
+    "as1_value": "未注册任务",
+    "value": "没有已注册的任务",
+    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：原譯「未注册任务」易讀成「未註冊的任務」；EN 為「沒有任何已註冊任務」"
+  },
+  "ContextMenu.json|ContextMenu_AreaTasks_Clay": {
+    "as1_value": "粘土",
+    "value": "黏土",
+    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：對齊本體 Base.Clay 官方簡中「黏土」"
+  },
+  "IG_UI.json|IGUI_AreaTasks_ScytheGrassDescription": {
+    "as1_value": "在选定区域内使用原版割草功能, 优先使用完整镰刀. 不会收割选定区域外的地块.",
+    "value": "在选定区域内使用原版割草动作, 优先使用长柄镰刀 (而非单手镰). 不会割到选定区域外的格子.",
+    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：full scythe 指長柄鐮刀（相對於單手鐮），原譯「完整镰刀」誤解；「地块」改「格子」"
+  },
+  "IG_UI.json|IGUI_AreaTasks_DigFurrowDescription": {
+    "as1_value": "使用随身携带的挖掘工具 (如抹刀、铁锹、锄头或园艺叉) 进行原版翻土操作.",
+    "value": "使用随身携带的挖掘工具 (如园艺铲、铁锹、园艺锄或园艺叉) 执行原版翻土动作.",
+    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：trowel 為園藝鏟（本體 Base.HandShovel「园艺铲」），原譯「抹刀」誤譯；hoe 對齊本體「园艺锄」"
+  },
+  "IG_UI.json|IGUI_AreaTasks_TreatMildewDescription": {
+    "as1_value": "使用随身携带的霉菌喷雾治疗每株患霉病的存活作物. 仅使用足以清除每次感染的剂量.",
+    "value": "使用随身携带的霉菌喷雾处理每株患白粉病的存活作物. 仅使用足以清除每处感染的剂量.",
+    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：Mildew 對齊本體 Farming_Mildew「白粉病」；「治疗」改「处理」與同系列一致"
+  },
+  "IG_UI.json|IGUI_AreaTasks_RequiresPlotRemovalTool": {
+    "as1_value": "需要随身携带一把可用的挖掘工具, 如抹刀、铁锹、锄头或园艺叉.",
+    "value": "需要随身携带一把可用的挖掘工具, 如园艺铲、铁锹、园艺锄或园艺叉.",
+    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：trowel 為園藝鏟，原譯「抹刀」誤譯；hoe 對齊本體「园艺锄」"
+  },
+  "IG_UI.json|IGUI_AreaTasks_RemoveDescription": {
+    "as1_value": "使用随身携带的挖掘工具 (如抹刀、铁锹、锄头或园艺叉) 移除选定区域内的所有作物和空耕地, 使每个格子恢复为普通泥土.",
+    "value": "使用随身携带的挖掘工具 (如园艺铲、铁锹、园艺锄或园艺叉) 移除选定区域内的所有作物和空耕地, 使每个格子恢复为普通泥土.",
+    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：trowel 為園藝鏟，原譯「抹刀」誤譯；hoe 對齊本體「园艺锄」"
+  },
+  "IG_UI.json|IGUI_AreaTasks_RemoveStumpDescription": {
+    "as1_value": "使用装备中的合适随身工具进行原版移除小树桩操作. 移除后的小树桩会留废木材.",
+    "value": "装备随身携带的合适工具执行原版移除小树桩动作. 移除小树桩后会留下无法使用的木材.",
+    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：原譯「会留废木材」漏字且語序不順"
+  },
+  "IG_UI.json|IGUI_AreaTasks_RemoveGroundStoneDescription": {
+    "as1_value": "徒手拾取零散的石块. 混有树枝的石块也会返还树枝.",
+    "value": "徒手拾取零散的石块. 混有小树枝的石块也会一并拾回小树枝.",
+    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：twigs 對齊本體 Base.Twigs「小树枝」（原譯「树枝」與 Tree Branch 混淆）"
+  },
+  "IG_UI.json|IGUI_AreaTasks_RemoveGroundLargeStoneDescription": {
+    "as1_value": "徒手拾取零散的大石块. 混有树枝的大石块也会返还树枝.",
+    "value": "徒手拾取零散的大石块. 混有小树枝的大石块也会一并拾回小树枝.",
+    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：twigs 對齊本體 Base.Twigs「小树枝」（原譯「树枝」與 Tree Branch 混淆）"
+  },
+  "IG_UI.json|IGUI_AreaTasks_RemoveGroundTwigsDescription": {
+    "as1_value": "徒手拾取零散的成捆树枝.",
+    "value": "徒手拾取零散的成捆小树枝.",
+    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：twigs 對齊本體 Base.Twigs「小树枝」（原譯「树枝」與 Tree Branch 混淆）"
+  },
+  "IG_UI.json|IGUI_AreaTasks_RequiresShears": {
+    "as1_value": "需要随身携带可用的剪刀.",
+    "value": "需要随身携带可用的羊毛剪.",
+    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：shears 對齊本體 Base.SheepShears「羊毛剪」，原譯「剪刀」"
+  },
+  "IG_UI.json|IGUI_AreaTasks_ShearDescription": {
+    "as1_value": "使用随身携带的可用剪刀为每只准备就绪的动物剪毛, 优先使用电量充足的电动羊毛剪. 未加工的羊毛将留在地上.",
+    "value": "使用随身携带的可用羊毛剪为每只可剪毛的动物剪毛, 优先使用有电的电动羊毛剪. 剪下的未加工羊毛会留在地上.",
+    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：shears 對齊本體 Base.SheepShears「羊毛剪」，原譯「剪刀」"
+  },
+  "IG_UI.json|IGUI_AreaTasks_MoveGroundItemsDescription": {
+    "as1_value": "收集零散物品并将其丢弃在指定地点. 忽略不需要的物品.",
+    "value": "收集零散物品并放到选定的地点. 标记为“不想要”的物品会留在原地.",
+    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：Unwanted 是本體物品標記（Tooltip_Unwanted「不想要」），原譯「忽略不需要的物品」看不出是標記"
+  },
+  "IG_UI.json|IGUI_AreaTasks_ToStorageDescription": {
+    "as1_value": "将零散物品收集到选定的储物容器中. 如果在收集过程中容器已满, 多余物品将丢在旁边. 忽略不想要的物品.",
+    "value": "将零散物品收进选定的储物容器. 收集途中若容器已满, 多余物品会放在容器旁. 标记为“不想要”的物品会留在原地.",
+    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：Unwanted 是本體物品標記（Tooltip_Unwanted「不想要」）"
+  },
+  "IG_UI.json|IGUI_AreaTasks_IntoBagDescription": {
+    "as1_value": "直接将零散物品收集到随身背包中, 直到装不下为止. 忽略不想要的物品.",
+    "value": "将零散物品直接收进随身背包, 直到装不下为止. 标记为“不想要”的物品会留在原地.",
+    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：Unwanted 是本體物品標記（Tooltip_Unwanted「不想要」）"
   }
 }

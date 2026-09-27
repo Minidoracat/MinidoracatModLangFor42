@@ -4,6 +4,18 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 Area Tasks（區域任務，3793163745）的繁簡中文，共 153 項。** As1 已收錄舊版的 110 項，這次補上新版新增的 43 項：門窗防護選單（關窗、窗簾、木板／金屬片／鐵棒加固、拆除加固）、拆解家具、丟屍出窗、所有石材／木材，以及時間速度、搬運負重上限、拆解上限、木板加固方式等沙盒設定。
+  > 技術要點：`mod_registry` 登記後 `backfill-en` 落地 `sources/en` 鏡像；重跑 split 把原本落在 `_unsorted` 的 110 鍵歸屬到 `sources/mods/3793163745/`（同時接受 3633421539 上游退場造成的 37 條 owner edge 移除，另有 2914075159／3395614151 隨現行證據重新歸屬）。新增 43 鍵走 `own_translations.json`。
+
+### Changed
+
+- **重新校對 Area Tasks 全部 153 項繁中，並修正 16 項簡中。** 簡中修正包括把 trowel 誤譯的「抹刀」改為園藝鏟、shears 誤譯的「剪刀」改為羊毛剪、「完整镰刀」改為長柄鐮刀、黏土／小樹枝／白粉病對齊本體譯名，並讓「不想要」清楚表示本體物品標記。
+  > 技術要點：簡中修正寫入 `cn_overrides.json`（帶 `as1_value` 錨點）；153 項繁中改寫 `sources/ch`，有效 CN hash 已登記 `ch_review_state.json`。
+
 ## [42.20.4-1.31.0] - 2026-09-27
 
 ### Added

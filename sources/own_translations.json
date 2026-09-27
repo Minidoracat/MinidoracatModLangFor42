@@ -5585,6 +5585,91 @@
     "en": "Add Note to Food Container",
     "ch": "為食物容器加上註記",
     "cn": "给食品容器添加备注"
+   },
+   "ContextMenu_AreaTasks_Secure": {
+    "en": "Secure",
+    "ch": "門窗防護",
+    "cn": "门窗防护"
+   },
+   "ContextMenu_AreaTasks_Curtains": {
+    "en": "Curtains",
+    "ch": "窗簾",
+    "cn": "窗帘"
+   },
+   "ContextMenu_AreaTasks_CloseWindows": {
+    "en": "Close Windows",
+    "ch": "關上窗戶",
+    "cn": "关闭窗户"
+   },
+   "ContextMenu_AreaTasks_AddSheets": {
+    "en": "Add Sheets",
+    "ch": "加上床單",
+    "cn": "挂上窗帘布"
+   },
+   "ContextMenu_AreaTasks_CloseCurtains": {
+    "en": "Close Curtains",
+    "ch": "關上窗簾",
+    "cn": "关闭窗帘"
+   },
+   "ContextMenu_AreaTasks_RemoveCurtains": {
+    "en": "Remove Curtains",
+    "ch": "移除窗簾",
+    "cn": "移除窗帘"
+   },
+   "ContextMenu_AreaTasks_PickupCurtains": {
+    "en": "Pickup Curtains",
+    "ch": "搬走窗簾",
+    "cn": "搬走窗帘"
+   },
+   "ContextMenu_AreaTasks_BarricadePlanks": {
+    "en": "Barricade Planks",
+    "ch": "加固 (木板)",
+    "cn": "加固 (木板)"
+   },
+   "ContextMenu_AreaTasks_BarricadeSheet": {
+    "en": "Barricade Metal Sheet",
+    "ch": "加固 (金屬片)",
+    "cn": "加固 (金属板)"
+   },
+   "ContextMenu_AreaTasks_BarricadeBars": {
+    "en": "Barricade Metal Bars",
+    "ch": "加固 (鐵棒)",
+    "cn": "加固 (金属棒)"
+   },
+   "ContextMenu_AreaTasks_RemoveBarricades": {
+    "en": "Remove Barricades",
+    "ch": "拆除加固",
+    "cn": "取消加固"
+   },
+   "ContextMenu_AreaTasks_Inside": {
+    "en": "Inside",
+    "ch": "內側",
+    "cn": "内侧"
+   },
+   "ContextMenu_AreaTasks_Outside": {
+    "en": "Outside",
+    "ch": "外側",
+    "cn": "外侧"
+   },
+   "ContextMenu_AreaTasks_Both": {
+    "en": "Both",
+    "ch": "兩側",
+    "cn": "两侧"
+   },
+   "ContextMenu_AreaTasks_ThrowCorpsesThroughWindow": {
+    "en": "Throw Corpse Through Window",
+    "ch": "將屍體丟出窗戶",
+    "cn": "将尸体丢出窗户"
+   },
+   "ContextMenu_AreaTasks_AllStones": {
+    "en": "All Stones",
+    "ch": "所有石材",
+    "cn": "所有石材"
+   },
+   "ContextMenu_AreaTasks_AllWood": {
+    "en": "All Wood",
+    "ch": "所有木材",
+    "cn": "所有木材"
    }
   },
   "Fluids.json": {
@@ -40926,6 +41011,61 @@
     "en": "Arcane Ward total cap (any body part): %1%%",
     "ch": "魔法護盾總上限 (任一身體部位): %1%%",
     "cn": "魔法护盾总上限 (任一身体部位): %1%%"
+   },
+   "IGUI_AreaTasks_RemoveGroundAllStonesDescription": {
+    "en": "Picks up loose stones, large stones, flat stones, and limestone by hand. Mineral deposits are not included.",
+    "ch": "徒手撿起散落的石塊、大石塊、大扁平石板與石灰石. 不包括礦物沉積.",
+    "cn": "徒手拾取零散的石块、大石块、大扁平石板和石灰石. 不包括矿物沉积."
+   },
+   "IGUI_AreaTasks_RemoveGroundAllWoodDescription": {
+    "en": "Picks up loose twigs, tree branches, and logs by hand.",
+    "ch": "徒手撿起散落的嫩枝、樹枝與原木.",
+    "cn": "徒手拾取零散的小树枝、树枝和原木."
+   },
+   "IGUI_AreaTasks_GroundItemCarryLimit": {
+    "en": "Your carried weight is already at or above the Move Ground Items carry limit.",
+    "ch": "你目前的負重已達到或超過「移動地面物品」的負重上限.",
+    "cn": "你当前的负重已达到或超过“移动地面物品”的负重上限."
+   },
+   "IGUI_AreaTasks_DisassembleDescription": {
+    "en": "Disassembles eligible furniture, up to the sandbox limit, nearest first. Requires all native tools and empty containers with no furniture on top. Furniture blocked at selection time needs another sweep. Loose placed items follow vanilla behavior.",
+    "ch": "由近而遠拆解符合條件的家具, 數量以沙盒上限為準. 需要原版要求的所有工具, 容器必須清空, 且上方不能疊放其他家具. 框選當下受阻的家具需要再框選一次. 擺在上面的零散物品依原版行為處理.",
+    "cn": "从最近的开始拆解符合条件的家具, 数量以沙盒上限为准. 需要原版要求的全部工具, 容器必须清空, 且上方不能叠放其他家具. 框选时受阻的家具需要再框选一次. 摆在上面的零散物品按原版行为处理."
+   },
+   "IGUI_AreaTasks_DisassembleDisabled": {
+    "en": "Disassemble is disabled or its task limit has been reached.",
+    "ch": "拆解已停用, 或已達任務數量上限.",
+    "cn": "拆解已禁用, 或已达到任务数量上限."
+   },
+   "IGUI_AreaTasks_SecureRequirements": {
+    "en": "Required supplies, tools, skill, light or carrying capacity are unavailable.",
+    "ch": "缺少所需的材料、工具、技能、光線或負重空間.",
+    "cn": "缺少所需的材料、工具、技能、光线或负重空间."
+   },
+   "IGUI_AreaTasks_SecureUnconfirmed": {
+    "en": "The requested change could not be confirmed. Work stopped.",
+    "ch": "無法確認變更已完成. 任務已停止.",
+    "cn": "无法确认更改已完成. 任务已停止."
+   },
+   "IGUI_AreaTasks_OnePlank": {
+    "en": "Follows the Plank Behavior sandbox setting: add one plank per selected side, or fill each selected side to four (default). Both applies to both sides. Existing metal barricades are skipped.",
+    "ch": "依沙盒設定「木板加固方式」處理: 每個選定面加一塊木板, 或將每個選定面補滿到四塊 (預設). 選「兩側」時內外兩側都處理. 已有金屬加固的會跳過.",
+    "cn": "按沙盒设置“木板加固方式”处理: 每个选定面加一块木板, 或将每个选定面补满到四块 (默认). 选择“两侧”时内外两侧都处理. 已有金属加固的会跳过."
+   },
+   "IGUI_AreaTasks_RemoveCurtainsDescription": {
+    "en": "Removes curtains or applied sheets and returns sheets.",
+    "ch": "移除窗簾或掛上的床單, 並收回床單.",
+    "cn": "移除窗帘或挂上的窗帘布, 并收回窗帘布."
+   },
+   "IGUI_AreaTasks_PickupCurtainsDescription": {
+    "en": "Picks up native moveable curtains as furniture. Applied sheets are excluded.",
+    "ch": "把原版可搬動的窗簾當作家具搬走. 不包括掛上的床單.",
+    "cn": "将原版可搬动的窗帘当作家具搬走. 不包括挂上的窗帘布."
+   },
+   "IGUI_AreaTasks_ThrowCorpsesThroughWindowDescription": {
+    "en": "Drags each selected corpse to the chosen open, unbarricaded window, then uses the native throw action.",
+    "ch": "把選取範圍內的每具屍體拖到指定的已開啟且未加固的窗戶, 再用原版動作丟出去.",
+    "cn": "将选定区域内的每具尸体拖到指定的已打开且未加固的窗户, 再用原版动作扔出去."
    }
   },
   "ItemName.json": {
@@ -176444,6 +176584,81 @@
     "en": "Allows Base.fr_fo_f700_90_propane part FRPropaneTank from Filibuster Rhymes' Certified Used Cars B42 to exchange propane with supported carried items and nearby depots. The vehicle mod remains optional. Default: On.",
     "ch": "允許 Filibuster Rhymes' Certified Used Cars B42 的 Base.fr_fo_f700_90_propane 零件 FRPropaneTank 與受支援的攜帶物品及附近儲罐互相輸送丙烷. 該載具模組仍為選用. 預設值: 開啟.",
     "cn": "允许 Filibuster Rhymes' Certified Used Cars B42 的 Base.fr_fo_f700_90_propane 部件 FRPropaneTank 与受支持的携带物品及附近储罐互相输送丙烷. 该载具模组仍为可选. 默认: 开启."
+   },
+   "Sandbox_AreaTasksTimeSpeedMode": {
+    "en": "Time speed during area tasks (single-player)",
+    "ch": "區域任務期間的時間速度 (單人)",
+    "cn": "区域任务期间的时间速度 (单人)"
+   },
+   "Sandbox_AreaTasksTimeSpeedMode_tooltip": {
+    "en": "Normal rules follows the Accessibility option to resume normal speed when timed actions complete. The other modes prevent speed resets between actions in the same job. Choose whether to return to normal speed when the job ends, including cancellation or failure, or keep the current speed. Manual speed changes, pause, and other game-triggered speed changes still apply. Captured when a job starts. No effect in multiplayer.",
+    "ch": "「正常變速規則」依照選項「當動作完成時恢復遊戲速度」, 在計時動作結束時恢復正常速度. 其他模式會避免在同一項任務的動作之間重設速度, 並可選擇任務結束時 (含取消或失敗) 恢復正常速度, 或維持目前速度. 手動變速、暫停以及遊戲觸發的其他變速仍會生效. 設定在任務開始時讀取. 多人模式下無效.",
+    "cn": "“正常变速规则”遵循选项“当读条动作完成后恢复正常速度”, 在读条动作完成时恢复正常速度. 其他模式会避免在同一任务的动作之间重置速度, 并可选择任务结束时 (包括取消或失败) 恢复正常速度, 或保持当前速度. 手动变速、暂停以及游戏触发的其他变速仍然生效. 该设置在任务开始时读取. 多人游戏中无效."
+   },
+   "Sandbox_AreaTasksTimeSpeedMode_option1": {
+    "en": "Normal speed change rules",
+    "ch": "正常變速規則",
+    "cn": "正常变速规则"
+   },
+   "Sandbox_AreaTasksTimeSpeedMode_option2": {
+    "en": "Maintain speed during job; normal at end",
+    "ch": "任務期間維持速度, 結束時恢復正常",
+    "cn": "任务期间保持速度, 结束时恢复正常"
+   },
+   "Sandbox_AreaTasksTimeSpeedMode_option3": {
+    "en": "Maintain speed during and after job",
+    "ch": "任務期間及結束後都維持速度",
+    "cn": "任务期间及结束后均保持速度"
+   },
+   "Sandbox_AreaTasksGroundItemCarryMode": {
+    "en": "Move Ground Items carry limit",
+    "ch": "移動地面物品的負重上限",
+    "cn": "移动地面物品的负重上限"
+   },
+   "Sandbox_AreaTasksGroundItemCarryMode_tooltip": {
+    "en": "Applies to To Ground and To Storage, not Into a Bag. Maximum Carry uses the normal inventory limit. Avoid Overburden uses the character's current unburdened capacity, including existing carried weight, and may require more trips. Items that cannot fit under the limit are left behind.",
+    "ch": "適用於「放到地面」與「存入容器」, 不適用於「裝進背包」. 「最大負重」使用一般的物品欄上限. 「避免超重」使用角色目前不超重時的負重容量 (會計入身上已有的重量), 可能需要多跑幾趟. 超出上限而帶不走的物品會留在原地.",
+    "cn": "适用于“丢到地面”和“存入容器”, 不适用于“装入背包”. “最大负重”使用正常的物品栏上限. “避免超重”使用角色当前不超重时的负重容量 (计入已携带的重量), 可能需要多跑几趟. 超出上限而无法携带的物品会留在原地."
+   },
+   "Sandbox_AreaTasksGroundItemCarryMode_option1": {
+    "en": "Maximum Carry",
+    "ch": "最大負重",
+    "cn": "最大负重"
+   },
+   "Sandbox_AreaTasksGroundItemCarryMode_option2": {
+    "en": "Avoid Overburden",
+    "ch": "避免超重",
+    "cn": "避免超重"
+   },
+   "Sandbox_AreaTasksDisassembleLimit": {
+    "en": "Maximum furniture per Disassemble task",
+    "ch": "每次拆解任務的家具上限",
+    "cn": "每次拆解任务的家具上限"
+   },
+   "Sandbox_AreaTasksDisassembleLimit_tooltip": {
+    "en": "Maximum furniture objects selected per task. Default: 10. Range: 0 to 100. Set to 0 to hide and disable Disassemble. Multi-tile furniture counts once and must fit entirely inside the area.",
+    "ch": "每次任務最多選取的家具數量. 預設值: 10. 允許範圍: 0到100. 設為0會隱藏並停用拆解. 占多格的家具只算一件, 且必須完整位於區域內.",
+    "cn": "每次任务最多选取的家具数量. 默认值: 10. 允许范围: 0到100. 设为0会隐藏并禁用拆解. 占多格的家具只计一件, 且必须完全位于区域内."
+   },
+   "Sandbox_AreaTasksPlankBehavior": {
+    "en": "Plank Behavior",
+    "ch": "木板加固方式",
+    "cn": "木板加固方式"
+   },
+   "Sandbox_AreaTasksPlankBehavior_tooltip": {
+    "en": "Choose how Barricade Planks works on each selected window side. One Plank Per Window adds one plank per run. Fully Plank Windows adds planks until each selected side has four. Both applies the behavior to both sides. Existing metal barricades are skipped. Requires available materials and tools.",
+    "ch": "選擇「加固 (木板)」對每個選定窗戶面的處理方式. 「每扇窗一塊木板」每次執行只加一塊. 「完全釘滿窗戶」會持續加木板, 直到每個選定面都有四塊. 選「兩側」時內外兩側都處理. 已有金屬加固的會跳過. 需要有可用的材料與工具.",
+    "cn": "选择“加固 (木板)”对每个选定窗户面的处理方式. “每扇窗一块木板”每次执行只加一块. “完全钉满窗户”会持续加木板, 直到每个选定面都有四块. 选择“两侧”时内外两侧都处理. 已有金属加固的会跳过. 需要有可用的材料和工具."
+   },
+   "Sandbox_AreaTasksPlankBehavior_option1": {
+    "en": "One Plank Per Window",
+    "ch": "每扇窗一塊木板",
+    "cn": "每扇窗一块木板"
+   },
+   "Sandbox_AreaTasksPlankBehavior_option2": {
+    "en": "Fully Plank Windows",
+    "ch": "完全釘滿窗戶",
+    "cn": "完全钉满窗户"
    }
   },
   "Tooltip.json": {
