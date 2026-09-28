@@ -2865,8 +2865,8 @@
     },
     "IG_UI|IGUI_WeaponUI_DamegeMax": {
       "action": "translate",
-      "signature": "686da77dd4cbcfbf",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。",
+      "signature": "0dad09723c9ac4bf",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 2026-09-29 #613：GaelGunStore 標籤改為 'Damage'，但其 risky_inspect_core.lua 仍以 getMaxDamage() 取值、同表另列 IGUI_WeaponUI_DamegeMin，「最大傷害」對全部 owner 仍成立，維持現值。",
       "ch": "最大傷害",
       "cn": "最大伤害"
     },
@@ -2935,15 +2935,15 @@
     },
     "UI|UI_optionscreen_binding_GunLineDown": {
       "action": "translate",
-      "signature": "9109820f8b7245d9",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。",
+      "signature": "627bec04386a4d64",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 2026-09-29 #613：GaelGunStore 移除此按鍵（owner 減少），其餘 owner 英文不變，維持現值。",
       "ch": "切換戰術姿勢",
       "cn": "切换战术姿态"
     },
     "UI|UI_optionscreen_binding_SwtichLightSet": {
       "action": "translate",
-      "signature": "ec19f25175b6d1f4",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。",
+      "signature": "70aeb3ca2caf2b71",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 2026-09-29 #613：GaelGunStore 移除此按鍵（owner 減少），其餘 owner 英文不變，維持現值。",
       "ch": "切換燈光模式",
       "cn": "切换灯光模式"
     },
@@ -5020,20 +5020,20 @@
     },
     "UI|UI_optionscreen_binding_KeySetting_AWCWF": {
       "action": "unship",
-      "signature": "ffd808ff40d4183f",
-      "reason": "2026-08-27 #283–#292／Codex 複核：三組 owner 分別把此鍵當作 AWCWF、Advanced Weapons 與 Escape From Kentucky 的按鍵分類名，指向不同模組身分；泛化成「按鍵設定」會抹除必要分類，沒有誠實中性譯名。 2026-09-24 #578：Escape from Kentucky 改為 'Modern Firearm System Key Settings'，仍是不同模組身分，維持不出貨。"
+      "signature": "708b0290d20614bf",
+      "reason": "2026-08-27 #283–#292／Codex 複核：三組 owner 分別把此鍵當作 AWCWF、Advanced Weapons 與 Escape From Kentucky 的按鍵分類名，指向不同模組身分；泛化成「按鍵設定」會抹除必要分類，沒有誠實中性譯名。 2026-09-24 #578：Escape from Kentucky 改為 'Modern Firearm System Key Settings'，仍是不同模組身分，維持不出貨。 2026-09-29 #613：GaelGunStore 移除此按鍵（owner 減少），其餘三組模組身分不變，維持不出貨。"
     },
     "UI|UI_optionscreen_binding_LauchGrenadelauncherat": {
       "action": "translate",
-      "signature": "54c4eed62336954c",
-      "reason": "2026-08-27 #283–#292／Codex 複核：AWCWF: UB Attachment Trigger 與 Launch Attached Device 都指觸發下掛／附掛裝置；現譯「發射附掛裝置」保留共同動作，對全部 owner 均成立。",
+      "signature": "c24a2ed94673fe30",
+      "reason": "2026-08-27 #283–#292／Codex 複核：AWCWF: UB Attachment Trigger 與 Launch Attached Device 都指觸發下掛／附掛裝置；現譯「發射附掛裝置」保留共同動作，對全部 owner 均成立。 2026-09-29 #613：GaelGunStore 移除此按鍵（owner 減少），其餘 owner 英文不變，維持現值。",
       "ch": "發射附掛裝置",
       "cn": "发射下挂装置"
     },
     "UI|UI_optionscreen_binding_OpenWindownCat": {
       "action": "translate",
-      "signature": "061ee2f2a0e302b6",
-      "reason": "2026-08-27 #283–#292／Codex 複核：Open AWCWF UI Panel、Open Weapon Console 與 Open Weapon Panel 的共同功能是開啟武器介面；改成中性譯名後對所有 owner 均成立。",
+      "signature": "7901ac41744a46ba",
+      "reason": "2026-08-27 #283–#292／Codex 複核：Open AWCWF UI Panel、Open Weapon Console 與 Open Weapon Panel 的共同功能是開啟武器介面；改成中性譯名後對所有 owner 均成立。 2026-09-29 #613：GaelGunStore 移除此按鍵（owner 減少），其餘 owner 英文不變，維持現值。",
       "ch": "開啟武器介面",
       "cn": "打开武器界面"
     },
@@ -8402,6 +8402,13 @@
       "reason": "2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。",
       "ch": "你的傷口流血更慢.",
       "cn": "你的伤口流血更慢."
+    },
+    "Sandbox|Sandbox_GGSLO_prob_ammo_mags": {
+      "action": "translate",
+      "signature": "3c4593dc920755d4",
+      "reason": "2026-09-29 #613：GaelGunStore 把彈藥與彈匣拆成兩個選項，此鍵改為 'Magazines spawn probability'（另有 _tooltip 'Magazines, drums and clips.'；子彈改由 Sandbox_GGSLO_prob_ammo 控制）。WAR（3630196063）仍寫 'Ammo and mags spawn probability'，但只存在 B42 不讀的 Sandbox_EN.txt；不出貨會讓 WAR 玩家看到字面鍵名、GaelGunStore 玩家看到英文。採 GaelGunStore 現行語意出貨；已接受殘留：WAR 玩家看到的中文少了「彈藥」。",
+      "ch": "彈匣生成機率",
+      "cn": "弹匣生成几率"
     }
   }
 }

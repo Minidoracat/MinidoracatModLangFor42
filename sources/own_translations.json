@@ -5726,6 +5726,21 @@
     "en": "Replace %1 with %2",
     "ch": "將 %1 換成 %2",
     "cn": "将 %1 换成 %2"
+   },
+   "ContextMenu_P4MySoCalledToy_ViewCapsuleToy": {
+    "en": "View Capsule Toy",
+    "ch": "檢視扭蛋機",
+    "cn": "查看扭蛋机"
+   },
+   "ContextMenu_P4MySoCalledToy_ViewMiniBook": {
+    "en": "View Mini Book",
+    "ch": "檢視迷你書",
+    "cn": "查看迷你书"
+   },
+   "ContextMenu_P4MySoCalledToy_ViewModelKit": {
+    "en": "View Package",
+    "ch": "檢視包裝盒",
+    "cn": "查看包装盒"
    }
   },
   "Fluids.json": {
@@ -14964,10 +14979,10 @@
     "_note": "#326: 對齊出貨面 UI_optionscreen_binding_LauchGrenadelauncherat＝發射附掛裝置／发射下挂装置，與 Gunworks_UnderbarrelUse 的 下掛／下挂；CN 為避免同句重複「下挂」，attached 取「附加」、under-barrel 取「枪管下挂」，語意仍分明。"
    },
    "IGUI_GGS_InfoKeybindLight": {
-    "en": "Cycle the operating mode of compatible weapon lights and lasers: off, light, laser, or both.",
-    "ch": "循環切換相容武器燈與雷射的運作模式: 關閉, 燈光, 雷射, 或兩者同時.",
-    "cn": "循环切换兼容武器灯和激光的工作模式: 关闭, 灯光, 激光, 或两者同时.",
-    "_note": "#326: 四段模式列舉 off/light/laser/both 一項不漏；laser 依語域 CH 雷射／CN 激光（IGUI_ContextMenu_NoBatLaser＝雷射瞄準鏡／激光瞄准镜），禁止互串。"
+    "en": "Turn an equipped weapon flashlight on or off.",
+    "ch": "開啟或關閉已裝備武器上的手電筒.",
+    "cn": "打开或关闭已装备武器上的手电筒.",
+    "_note": "#613: 上游改為只切換武器手電筒（雷射另由 IGUI_GGS_InfoKeybindLaser 說明），依新英文改譯，句式與 InfoKeybindLaser 一致。"
    },
    "IGUI_GGS_InfoKeybindReload": {
     "en": "Tap to reload. Hold to open the firearm radial with magazine, ammunition and installed accessory actions.",
@@ -40508,11 +40523,6 @@
     "ch": "你的藏身點",
     "cn": "你的藏身点"
    },
-   "IGUI_OC_PinToTop": {
-    "en": "Pin to top",
-    "ch": "釘選至頂端",
-    "cn": "置顶"
-   },
    "IGUI_OC_RenameItem": {
     "en": "Rename...",
     "ch": "重新命名…",
@@ -40537,11 +40547,6 @@
     "en": "Unpin",
     "ch": "取消釘選",
     "cn": "取消置顶"
-   },
-   "IGUI_OC_StickToInventory": {
-    "en": "Stick to this inventory",
-    "ch": "固定在此物品欄",
-    "cn": "固定在此物品栏"
    },
    "IGUI_OC_Unstick": {
     "en": "Unstick",
@@ -41588,6 +41593,276 @@
     "en": "Series 1",
     "ch": "第 1 系列",
     "cn": "第 1 系列"
+   },
+   "IGUI_ItemCat_entertainmentAudio_cd_experience": {
+    "en": "Entertainment - Audio - CD - Experience",
+    "ch": "娛樂 - 音訊 - CD - 經驗",
+    "cn": "娱乐 (音频, CD, 经验)"
+   },
+   "IGUI_ItemCat_entertainmentAudio_cd_recipe": {
+    "en": "Entertainment - Audio - CD - Recipe",
+    "ch": "娛樂 - 音訊 - CD - 配方",
+    "cn": "娱乐 (音频, CD, 配方)"
+   },
+   "IGUI_ItemCat_entertainmentVideo_experience": {
+    "en": "Entertainment - Video - Experience",
+    "ch": "娛樂 - 影視 - 經驗",
+    "cn": "娱乐 (影视, 经验)"
+   },
+   "IGUI_ItemCat_entertainmentVideo_recipe": {
+    "en": "Entertainment - Video - Recipe",
+    "ch": "娛樂 - 影視 - 配方",
+    "cn": "娱乐 (影视, 配方)"
+   },
+   "IGUI_OC_Pin": {
+    "en": "Pin",
+    "ch": "釘選",
+    "cn": "置顶"
+   },
+   "IGUI_OC_Stick": {
+    "en": "Stick",
+    "ch": "固定",
+    "cn": "固定"
+   },
+   "IGUI_PlayerBuiltLightSwitchRequired": {
+    "en": "Install a light switch within %1 tiles of the generator",
+    "ch": "請在發電機 %1 格範圍內安裝電燈開關",
+    "cn": "请在发电机 %1 格范围内安装电灯开关"
+   },
+   "IGUI_GGS_CrosshairArcs": {
+    "en": "Wide arcs",
+    "ch": "寬弧線",
+    "cn": "宽弧线"
+   },
+   "IGUI_GGS_CrosshairCircle": {
+    "en": "Circle",
+    "ch": "圓圈",
+    "cn": "圆圈"
+   },
+   "IGUI_GGS_CrosshairClassic": {
+    "en": "Cross",
+    "ch": "十字",
+    "cn": "十字"
+   },
+   "IGUI_GGS_CrosshairLayout": {
+    "en": "Crosshair layout",
+    "ch": "準星樣式",
+    "cn": "准星样式"
+   },
+   "IGUI_GGS_CrosshairVanilla": {
+    "en": "Vanilla",
+    "ch": "原版",
+    "cn": "原版"
+   },
+   "IGUI_GGS_DynamicAimSwitch": {
+    "en": "New aiming and recoil system",
+    "ch": "新版瞄準與後座力系統",
+    "cn": "新版瞄准与后坐力系统"
+   },
+   "IGUI_GGS_DynamicAimSwitchTooltip": {
+    "en": "Enables GGS aim-point sway and dynamic recoil. Does not change rate of fire.",
+    "ch": "啟用 GGS 瞄準點晃動與動態後座力. 不會改變射速.",
+    "cn": "启用 GGS 瞄准点晃动与动态后坐力. 不会改变射速."
+   },
+   "IGUI_GGS_Flashlight": {
+    "en": "Flashlight",
+    "ch": "手電筒",
+    "cn": "手电筒"
+   },
+   "IGUI_GGS_InfoKeybindLaser": {
+    "en": "Turn an equipped weapon laser on or off.",
+    "ch": "開啟或關閉已裝備武器上的雷射.",
+    "cn": "打开或关闭已装备武器上的激光."
+   },
+   "IGUI_GGS_InfoKeybindUnderbarrelSwitch": {
+    "en": "Switch the equipped rifle between rifle fire and the attached under-barrel launcher.",
+    "ch": "讓已裝備的步槍在步槍射擊與已安裝的槍管下掛發射器之間切換.",
+    "cn": "让已装备的步枪在步枪射击与已安装的枪管下挂发射器之间切换."
+   },
+   "IGUI_GGS_Key_Info": {
+    "en": "GGS information",
+    "ch": "GGS 資訊",
+    "cn": "GGS 信息"
+   },
+   "IGUI_GGS_Key_Info_Tooltip": {
+    "en": "Opens or closes the GGS information library.",
+    "ch": "開啟或關閉 GGS 資訊庫.",
+    "cn": "打开或关闭 GGS 信息库."
+   },
+   "IGUI_GGS_Key_Inspect": {
+    "en": "Open weapon panel",
+    "ch": "開啟武器面板",
+    "cn": "打开武器面板"
+   },
+   "IGUI_GGS_Key_Inspect_Tooltip": {
+    "en": "Opens or closes the GGS weapon panel for the equipped firearm.",
+    "ch": "開啟或關閉已裝備槍械的 GGS 武器面板.",
+    "cn": "打开或关闭已装备枪械的 GGS 武器面板."
+   },
+   "IGUI_GGS_Key_UnderbarrelFire": {
+    "en": "Quick fire under-barrel launcher",
+    "ch": "快速發射下掛榴彈",
+    "cn": "快速发射下挂榴弹"
+   },
+   "IGUI_GGS_Key_UnderbarrelFire_Tooltip": {
+    "en": "Fires the under-barrel grenade launcher. While a rifle with a launcher is equipped, this key does not toggle the vanilla PvP safety.",
+    "ch": "使用槍管下掛榴彈發射器射擊. 裝備附有發射器的步槍時, 此按鍵不會切換原版的 PvP 安全模式.",
+    "cn": "使用枪管下挂榴弹发射器射击. 装备带有发射器的步枪时, 此按键不会切换原版的 PvP 模式."
+   },
+   "IGUI_GGS_Key_UnderbarrelSwitch": {
+    "en": "Switch rifle / under-barrel",
+    "ch": "切換步槍 / 下掛發射器",
+    "cn": "切换步枪 / 下挂发射器"
+   },
+   "IGUI_GGS_Key_UnderbarrelSwitch_Tooltip": {
+    "en": "Switches the equipped rifle between rifle fire and the under-barrel launcher.",
+    "ch": "讓已裝備的步槍在步槍射擊與槍管下掛發射器之間切換.",
+    "cn": "让已装备的步枪在步枪射击与枪管下挂发射器之间切换."
+   },
+   "IGUI_GGS_Key_WeaponLaser": {
+    "en": "Weapon laser on/off",
+    "ch": "武器雷射開/關",
+    "cn": "武器激光开/关"
+   },
+   "IGUI_GGS_Key_WeaponLaser_Tooltip": {
+    "en": "Turns the laser mounted on the equipped weapon on or off.",
+    "ch": "開啟或關閉目前裝備武器上安裝的雷射.",
+    "cn": "打开或关闭当前装备武器上安装的激光."
+   },
+   "IGUI_GGS_Key_WeaponLight": {
+    "en": "Weapon flashlight on/off",
+    "ch": "武器手電筒開/關",
+    "cn": "武器手电筒开/关"
+   },
+   "IGUI_GGS_Key_WeaponLight_Tooltip": {
+    "en": "Turns the flashlight mounted on the equipped weapon on or off.",
+    "ch": "開啟或關閉目前裝備武器上安裝的手電筒.",
+    "cn": "打开或关闭当前装备武器上安装的手电筒."
+   },
+   "IGUI_GGS_KeybindsTitle": {
+    "en": "Keybinds",
+    "ch": "按鍵綁定",
+    "cn": "按键绑定"
+   },
+   "IGUI_GGS_Laser": {
+    "en": "Laser",
+    "ch": "雷射",
+    "cn": "激光"
+   },
+   "IGUI_GGS_ManualRackSwitch": {
+    "en": "Manual rack",
+    "ch": "手動上膛",
+    "cn": "手动上膛"
+   },
+   "IGUI_GGS_ManualRackSwitchTooltip": {
+    "en": "You must rack the firearm yourself after each shot or reload. The server can force it for everyone.",
+    "ch": "每次射擊或裝填後都必須自行上膛. 伺服器可對所有人強制啟用.",
+    "cn": "每次射击或装填后都必须自行上膛. 服务器可以对所有人强制启用."
+   },
+   "IGUI_GGS_ModOptionsTitle": {
+    "en": "Gael Gun Store",
+    "ch": "Gael Gun Store",
+    "cn": "Gael Gun Store"
+   },
+   "IGUI_GGS_Off": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "IGUI_GGS_On": {
+    "en": "On",
+    "ch": "開啟",
+    "cn": "开启"
+   },
+   "IGUI_GGS_RecoilOptions": {
+    "en": "GGS: aiming and recoil",
+    "ch": "GGS: 瞄準與後座力",
+    "cn": "GGS: 瞄准与后坐力"
+   },
+   "IGUI_GGS_ScopeOverlaySwitch": {
+    "en": "Scope overlay",
+    "ch": "瞄準鏡疊加畫面",
+    "cn": "瞄准镜叠加画面"
+   },
+   "IGUI_GGS_ScopeOverlaySwitchTooltip": {
+    "en": "Shows the scope image and marks when aiming with a scope. Visual only; no aiming bonus.",
+    "ch": "使用瞄準鏡瞄準時, 顯示瞄準鏡影像與標記. 僅為視覺效果; 不提供瞄準加成.",
+    "cn": "使用瞄准镜瞄准时, 显示瞄准镜图像与标记. 仅为视觉效果; 不提供瞄准加成."
+   },
+   "IGUI_GGS_TurnFlashlightOff": {
+    "en": "Turn flashlight off",
+    "ch": "關閉手電筒",
+    "cn": "关闭手电筒"
+   },
+   "IGUI_GGS_TurnFlashlightOn": {
+    "en": "Turn flashlight on",
+    "ch": "開啟手電筒",
+    "cn": "打开手电筒"
+   },
+   "IGUI_GGS_TurnLaserOff": {
+    "en": "Turn laser off",
+    "ch": "關閉雷射",
+    "cn": "关闭激光"
+   },
+   "IGUI_GGS_TurnLaserOn": {
+    "en": "Turn laser on",
+    "ch": "開啟雷射",
+    "cn": "打开激光"
+   },
+   "IGUI_GGS_UB_Empty": {
+    "en": "Underbarrel empty: reload",
+    "ch": "下掛發射器已空: 請裝填",
+    "cn": "下挂发射器已空: 请装填"
+   },
+   "IGUI_GGS_UB_Load": {
+    "en": "Load underbarrel",
+    "ch": "裝填下掛發射器",
+    "cn": "装填下挂发射器"
+   },
+   "IGUI_GGS_UB_Loaded": {
+    "en": "Loaded",
+    "ch": "已裝填",
+    "cn": "已装填"
+   },
+   "IGUI_GGS_UB_Mode": {
+    "en": "Underbarrel mode",
+    "ch": "下掛發射器模式",
+    "cn": "下挂发射器模式"
+   },
+   "IGUI_GGS_UB_NoAmmo": {
+    "en": "No compatible grenades",
+    "ch": "沒有相容的榴彈",
+    "cn": "没有兼容的榴弹"
+   },
+   "IGUI_GGS_UB_Rifle": {
+    "en": "Rifle mode",
+    "ch": "步槍模式",
+    "cn": "步枪模式"
+   },
+   "IGUI_GGS_UB_ToLauncher": {
+    "en": "Switch to underbarrel",
+    "ch": "切換至下掛發射器",
+    "cn": "切换到下挂发射器"
+   },
+   "IGUI_GGS_UB_ToRifle": {
+    "en": "Switch to rifle",
+    "ch": "切換至步槍",
+    "cn": "切换到步枪"
+   },
+   "IGUI_GGS_XpBonusSwitch": {
+    "en": "Aiming XP bonus for hard systems",
+    "ch": "高難度系統瞄準經驗加成",
+    "cn": "高难度系统瞄准经验加成"
+   },
+   "IGUI_GGS_XpBonusSwitchTooltip": {
+    "en": "Each hard system enabled (new recoil, manual rack) adds +50%% Aiming XP. Both enabled: double XP.",
+    "ch": "每啟用一項高難度系統 (新版後座力, 手動上膛), 瞄準經驗 +50%%. 兩者皆啟用: 經驗加倍.",
+    "cn": "每启用一项高难度系统 (新版后坐力, 手动上膛), 瞄准经验 +50%%. 两者都启用: 经验翻倍."
+   },
+   "IGUI_WeaponUI_Recoil": {
+    "en": "Recoil",
+    "ch": "後座力",
+    "cn": "后坐力"
    }
   },
   "ItemName.json": {
@@ -146748,16 +147023,6 @@
     "ch": "40mm 榴彈復裝筆記",
     "cn": "40mm 榴弹复装笔记"
    },
-   "Base.GrenadeAmmo40": {
-    "en": "40mmHE Grenade Round (New)",
-    "ch": "40mm 高爆榴彈 (新版)",
-    "cn": "40mm 高爆榴弹 (新版)"
-   },
-   "Base.GrenadeAmmo40Clip": {
-    "en": "5-Round 40mm Grenade Magazine (New)",
-    "ch": "40mm 5 發榴彈彈匣 (新版)",
-    "cn": "40mm 5 发榴弹弹匣 (新版)"
-   },
    "Base.M16D_cat": {
     "en": "M16D Assault Rifle",
     "ch": "M16D 突擊步槍",
@@ -147533,6 +147798,276 @@
     "en": "St Michel Butter Galettes",
     "ch": "聖米歇爾奶油酥餅",
     "cn": "圣米歇尔黄油酥饼"
+   },
+   "P4MySoCalledToy.P4ModelPolice": {
+    "en": "Scale Model (Police Car)",
+    "ch": "比例模型 (警車)",
+    "cn": "比例模型 (警车)"
+   },
+   "P4MySoCalledToy.P4ModelKitEmptyDart": {
+    "en": "Scale Model Kit (Empty)(Dart)",
+    "ch": "比例模型套件 (空盒)(飛鏢)",
+    "cn": "比例模型套件 (空盒)(飞镖)"
+   },
+   "P4MySoCalledToy.P4ModelPaintYellow": {
+    "en": "Model Paint (Yellow)",
+    "ch": "模型漆 (黃色)",
+    "cn": "模型漆 (黄色)"
+   },
+   "P4MySoCalledToy.P4ModelKitDart": {
+    "en": "Scale Model Kit (Dart)",
+    "ch": "比例模型套件 (飛鏢)",
+    "cn": "比例模型套件 (飞镖)"
+   },
+   "P4MySoCalledToy.P4ModelD6": {
+    "en": "Scale Model (D6)",
+    "ch": "比例模型 (D6)",
+    "cn": "比例模型 (D6)"
+   },
+   "P4MySoCalledToy.P4ModelKitEmptyDelorean": {
+    "en": "Scale Model Kit (Empty)(Delorean)",
+    "ch": "比例模型套件 (空盒)(德羅寧)",
+    "cn": "比例模型套件 (空盒)(德罗宁)"
+   },
+   "P4MySoCalledToy.P4ModelKitDelorean": {
+    "en": "Scale Model Kit (Delorean)",
+    "ch": "比例模型套件 (德羅寧)",
+    "cn": "比例模型套件 (德罗宁)"
+   },
+   "P4MySoCalledToy.P4ModelValuline": {
+    "en": "Scale Model (Valuline)",
+    "ch": "比例模型 (瓦盧林)",
+    "cn": "比例模型 (瓦卢林)"
+   },
+   "P4MySoCalledToy.P4ModelKitEmptyAngelus": {
+    "en": "Scale Model Kit (Empty)(Angelus)",
+    "ch": "比例模型套件 (空盒)(安傑拉斯)",
+    "cn": "比例模型套件 (空盒)(安杰拉斯)"
+   },
+   "P4MySoCalledToy.P4ModelKitEmptyValuline": {
+    "en": "Scale Model Kit (Empty)(Valuline)",
+    "ch": "比例模型套件 (空盒)(瓦盧林)",
+    "cn": "比例模型套件 (空盒)(瓦卢林)"
+   },
+   "P4MySoCalledToy.P4ModelKitEmptyRaceCar": {
+    "en": "Scale Model Kit (Empty)(Race Car)",
+    "ch": "比例模型套件 (空盒)(賽車)",
+    "cn": "比例模型套件 (空盒)(赛车)"
+   },
+   "P4MySoCalledToy.P4ModelFireTruck": {
+    "en": "Scale Model (Fire Truck)",
+    "ch": "比例模型 (消防車)",
+    "cn": "比例模型 (消防车)"
+   },
+   "P4MySoCalledToy.P4ModelCement": {
+    "en": "Model Cement",
+    "ch": "模型膠水",
+    "cn": "模型胶水"
+   },
+   "P4MySoCalledToy.P4ModelPaintBlack": {
+    "en": "Model Paint (Black)",
+    "ch": "模型漆 (黑色)",
+    "cn": "模型漆 (黑色)"
+   },
+   "P4MySoCalledToy.P4ModelAngelus": {
+    "en": "Scale Model (Angelus)",
+    "ch": "比例模型 (安傑拉斯)",
+    "cn": "比例模型 (安杰拉斯)"
+   },
+   "P4MySoCalledToy.P4ModelPaintGold": {
+    "en": "Model Paint (Gold)",
+    "ch": "模型漆 (金色)",
+    "cn": "模型漆 (金色)"
+   },
+   "P4MySoCalledToy.P4ModelPaintRed": {
+    "en": "Model Paint (Red)",
+    "ch": "模型漆 (紅色)",
+    "cn": "模型漆 (红色)"
+   },
+   "P4MySoCalledToy.P4ModelKitD6": {
+    "en": "Scale Model Kit (D6)",
+    "ch": "比例模型套件 (D6)",
+    "cn": "比例模型套件 (D6)"
+   },
+   "P4MySoCalledToy.P4ModelAllTerrain": {
+    "en": "Scale Model (All-Terrain)",
+    "ch": "比例模型 (全地形)",
+    "cn": "比例模型 (全地形)"
+   },
+   "P4MySoCalledToy.P4ModelKitFireTruck": {
+    "en": "Scale Model Kit (Fire Truck)",
+    "ch": "比例模型套件 (消防車)",
+    "cn": "比例模型套件 (消防车)"
+   },
+   "P4MySoCalledToy.P4ModelKitAllTerrain": {
+    "en": "Scale Model Kit (All-Terrain)",
+    "ch": "比例模型套件 (全地形)",
+    "cn": "比例模型套件 (全地形)"
+   },
+   "P4MySoCalledToy.P4ModelPaintWhite": {
+    "en": "Model Paint (White)",
+    "ch": "模型漆 (白色)",
+    "cn": "模型漆 (白色)"
+   },
+   "P4MySoCalledToy.P4ModelKitCossette": {
+    "en": "Scale Model Kit (Cossette)",
+    "ch": "比例模型套件 (珂賽特)",
+    "cn": "比例模型套件 (珂赛特)"
+   },
+   "P4MySoCalledToy.P4ModelCossette": {
+    "en": "Scale Model (Cossette)",
+    "ch": "比例模型 (珂賽特)",
+    "cn": "比例模型 (珂赛特)"
+   },
+   "P4MySoCalledToy.P4ModelKitEmptyAllTerrain": {
+    "en": "Scale Model Kit (Empty)(All-Terrain)",
+    "ch": "比例模型套件 (空盒)(全地形)",
+    "cn": "比例模型套件 (空盒)(全地形)"
+   },
+   "P4MySoCalledToy.P4ModelNippers": {
+    "en": "Model Nippers",
+    "ch": "模型斜口鉗",
+    "cn": "模型水口钳"
+   },
+   "P4MySoCalledToy.P4ModelKitEmptyPolice": {
+    "en": "Scale Model Kit (Empty)(Police Car)",
+    "ch": "比例模型套件 (空盒)(警車)",
+    "cn": "比例模型套件 (空盒)(警车)"
+   },
+   "P4MySoCalledToy.P4ModelDelorean": {
+    "en": "Scale Model (Delorean)",
+    "ch": "比例模型 (德羅寧)",
+    "cn": "比例模型 (德罗宁)"
+   },
+   "P4MySoCalledToy.P4ModelKitValuline": {
+    "en": "Scale Model Kit (Valuline)",
+    "ch": "比例模型套件 (瓦盧林)",
+    "cn": "比例模型套件 (瓦卢林)"
+   },
+   "P4MySoCalledToy.P4ModelPaintGreen": {
+    "en": "Model Paint (Green)",
+    "ch": "模型漆 (綠色)",
+    "cn": "模型漆 (绿色)"
+   },
+   "P4MySoCalledToy.P4ModelKitPolice": {
+    "en": "Scale Model Kit (Police Car)",
+    "ch": "比例模型套件 (警車)",
+    "cn": "比例模型套件 (警车)"
+   },
+   "P4MySoCalledToy.P4ModelKitEmptyFireTruck": {
+    "en": "Scale Model Kit (Empty)(Fire Truck)",
+    "ch": "比例模型套件 (空盒)(消防車)",
+    "cn": "比例模型套件 (空盒)(消防车)"
+   },
+   "P4MySoCalledToy.P4ModelRaceCar": {
+    "en": "Scale Model (Race Car)",
+    "ch": "比例模型 (賽車)",
+    "cn": "比例模型 (赛车)"
+   },
+   "P4MySoCalledToy.P4ModelKitEmptyD6": {
+    "en": "Scale Model Kit (Empty)(D6)",
+    "ch": "比例模型套件 (空盒)(D6)",
+    "cn": "比例模型套件 (空盒)(D6)"
+   },
+   "P4MySoCalledToy.P4ModelKitEmptyAmbulance": {
+    "en": "Scale Model Kit (Empty)(Ambulance)",
+    "ch": "比例模型套件 (空盒)(救護車)",
+    "cn": "比例模型套件 (空盒)(救护车)"
+   },
+   "P4MySoCalledToy.P4ModelKitAmbulance": {
+    "en": "Scale Model Kit (Ambulance)",
+    "ch": "比例模型套件 (救護車)",
+    "cn": "比例模型套件 (救护车)"
+   },
+   "P4MySoCalledToy.P4ModelPaintbrush": {
+    "en": "Model Paintbrush",
+    "ch": "模型塗裝筆",
+    "cn": "模型涂装笔"
+   },
+   "P4MySoCalledToy.P4ModelDart": {
+    "en": "Scale Model (Dart)",
+    "ch": "比例模型 (飛鏢)",
+    "cn": "比例模型 (飞镖)"
+   },
+   "P4MySoCalledToy.P4ModelPaintBlue": {
+    "en": "Model Paint (Blue)",
+    "ch": "模型漆 (藍色)",
+    "cn": "模型漆 (蓝色)"
+   },
+   "P4MySoCalledToy.P4ModelKitAngelus": {
+    "en": "Scale Model Kit (Angelus)",
+    "ch": "比例模型套件 (安傑拉斯)",
+    "cn": "比例模型套件 (安杰拉斯)"
+   },
+   "P4MySoCalledToy.P4ModelDecalSheet": {
+    "en": "Model Decal Sheet",
+    "ch": "模型水貼紙",
+    "cn": "模型水贴纸"
+   },
+   "P4MySoCalledToy.P4ModelPaintSilver": {
+    "en": "Model Paint (Silver)",
+    "ch": "模型漆 (銀色)",
+    "cn": "模型漆 (银色)"
+   },
+   "P4MySoCalledToy.P4ModelKitRaceCar": {
+    "en": "Scale Model Kit (Race Car)",
+    "ch": "比例模型套件 (賽車)",
+    "cn": "比例模型套件 (赛车)"
+   },
+   "P4MySoCalledToy.P4ModelAmbulance": {
+    "en": "Scale Model (Ambulance)",
+    "ch": "比例模型 (救護車)",
+    "cn": "比例模型 (救护车)"
+   },
+   "P4MySoCalledToy.P4ModelKitEmptyCossette": {
+    "en": "Scale Model Kit (Empty)(Cossette)",
+    "ch": "比例模型套件 (空盒)(珂賽特)",
+    "cn": "比例模型套件 (空盒)(珂赛特)"
+   },
+   "Base.bolt_wood_broken": {
+    "en": "Broken Wooden Bolt",
+    "ch": "折斷的木質弩箭",
+    "cn": "折断的木质弩箭"
+   },
+   "Base.GGS_UB_Incendiary": {
+    "en": "40mm incendiary payload",
+    "ch": "40mm 燃燒彈頭",
+    "cn": "40mm 燃烧弹头"
+   },
+   "Base.bolt_metal_broken": {
+    "en": "Broken Metal Bolt",
+    "ch": "折斷的金屬弩箭",
+    "cn": "折断的金属弩箭"
+   },
+   "Base.bolt_carbon_broken": {
+    "en": "Broken Carbon Bolt",
+    "ch": "折斷的碳製弩箭",
+    "cn": "折断的碳制弩箭"
+   },
+   "Base.GGS_UB_OpenModels": {
+    "en": "Underbarrel model definitions",
+    "ch": "下掛發射器模型定義",
+    "cn": "下挂发射器模型定义"
+   },
+   "Base.arrow_carbon_broken": {
+    "en": "Broken Carbon Arrow",
+    "ch": "折斷的碳製箭矢",
+    "cn": "折断的碳制箭矢"
+   },
+   "Base.GGS_UB_HE": {
+    "en": "40mm HE payload",
+    "ch": "40mm 高爆彈頭",
+    "cn": "40mm 高爆弹头"
+   },
+   "Base.arrow_metal_broken": {
+    "en": "Broken Metal Arrow",
+    "ch": "折斷的金屬箭矢",
+    "cn": "折断的金属箭矢"
+   },
+   "Base.arrow_wood_broken": {
+    "en": "Broken Wooden Arrow",
+    "ch": "折斷的木質箭矢",
+    "cn": "折断的木质箭矢"
    }
   },
   "Print_Media.json": {
@@ -162154,11 +162689,6 @@
     "ch": "製作弩箭彈匣",
     "cn": "制作弩箭弹匣"
    },
-   "GrenadeAmmo40": {
-    "en": "Craft 40mm HE Grenade Round",
-    "ch": "製作 40mm 高爆榴彈",
-    "cn": "制作 40mm 高爆榴弹"
-   },
    "M240BeltBox": {
     "en": "Craft M240 Belt Box",
     "ch": "製作 M240 彈鏈盒",
@@ -162641,6 +163171,301 @@
     "ch": "拆解回收木製車輛零件",
     "cn": "拆解回收木制车辆零件",
     "_note": "Vehicle Salvage Overhaul 的 craftRecipe 區塊名含空格；上游 EN Recipes.json 用底線鍵（Salvage_Vehicle_*）而永不命中，執行期實際查這個空格鍵。英文取自配方區塊名。"
+   },
+   "P4AssembleAllTerrain": {
+    "en": "Assemble All-Terrain Model (Resume)",
+    "ch": "組裝全地形模型 (接續進度)",
+    "cn": "组装全地形模型 (接续进度)"
+   },
+   "P4AssembleAmbulance": {
+    "en": "Assemble Ambulance Model (Resume)",
+    "ch": "組裝救護車模型 (接續進度)",
+    "cn": "组装救护车模型 (接续进度)"
+   },
+   "P4AssembleAngelus": {
+    "en": "Assemble Angelus Model (Resume)",
+    "ch": "組裝安傑拉斯模型 (接續進度)",
+    "cn": "组装安杰拉斯模型 (接续进度)"
+   },
+   "P4AssembleCossette": {
+    "en": "Assemble Cossette Model (Resume)",
+    "ch": "組裝珂賽特模型 (接續進度)",
+    "cn": "组装珂赛特模型 (接续进度)"
+   },
+   "P4AssembleD6": {
+    "en": "Assemble D6 Model (Resume)",
+    "ch": "組裝 D6 模型 (接續進度)",
+    "cn": "组装 D6 模型 (接续进度)"
+   },
+   "P4AssembleDart": {
+    "en": "Assemble Dart Model (Resume)",
+    "ch": "組裝飛鏢模型 (接續進度)",
+    "cn": "组装飞镖模型 (接续进度)"
+   },
+   "P4AssembleDelorean": {
+    "en": "Assemble Delorean Model (Resume)",
+    "ch": "組裝德羅寧模型 (接續進度)",
+    "cn": "组装德罗宁模型 (接续进度)"
+   },
+   "P4AssembleFireTruck": {
+    "en": "Assemble Fire Truck Model (Resume)",
+    "ch": "組裝消防車模型 (接續進度)",
+    "cn": "组装消防车模型 (接续进度)"
+   },
+   "P4AssemblePolice": {
+    "en": "Assemble Police Car Model (Resume)",
+    "ch": "組裝警車模型 (接續進度)",
+    "cn": "组装警车模型 (接续进度)"
+   },
+   "P4AssembleRaceCar": {
+    "en": "Assemble Race Car Model (Resume)",
+    "ch": "組裝賽車模型 (接續進度)",
+    "cn": "组装赛车模型 (接续进度)"
+   },
+   "P4AssembleValuline": {
+    "en": "Assemble Valuline Model (Resume)",
+    "ch": "組裝瓦盧林模型 (接續進度)",
+    "cn": "组装瓦卢林模型 (接续进度)"
+   },
+   "P4PaintAllTerrainC1": {
+    "en": "Paint All-Terrain: Green",
+    "ch": "塗裝全地形: 綠色",
+    "cn": "涂装全地形: 绿色"
+   },
+   "P4PaintAllTerrainC2": {
+    "en": "Paint All-Terrain: Blue",
+    "ch": "塗裝全地形: 藍色",
+    "cn": "涂装全地形: 蓝色"
+   },
+   "P4PaintAllTerrainC3": {
+    "en": "Paint All-Terrain: Red",
+    "ch": "塗裝全地形: 紅色",
+    "cn": "涂装全地形: 红色"
+   },
+   "P4PaintAllTerrainC4": {
+    "en": "Paint All-Terrain: Italian Colors",
+    "ch": "塗裝全地形: 義大利配色",
+    "cn": "涂装全地形: 意大利配色"
+   },
+   "P4PaintAmbulanceC1": {
+    "en": "Paint Ambulance: Yellow",
+    "ch": "塗裝救護車: 黃色",
+    "cn": "涂装救护车: 黄色"
+   },
+   "P4PaintAmbulanceC2": {
+    "en": "Paint Ambulance: Blue",
+    "ch": "塗裝救護車: 藍色",
+    "cn": "涂装救护车: 蓝色"
+   },
+   "P4PaintAmbulanceC3": {
+    "en": "Paint Ambulance: Green",
+    "ch": "塗裝救護車: 綠色",
+    "cn": "涂装救护车: 绿色"
+   },
+   "P4PaintAmbulanceC4": {
+    "en": "Paint Ambulance: Korean Colors",
+    "ch": "塗裝救護車: 韓國配色",
+    "cn": "涂装救护车: 韩国配色"
+   },
+   "P4PaintAngelusC1": {
+    "en": "Paint Angelus: Red and White",
+    "ch": "塗裝安傑拉斯: 紅白雙色",
+    "cn": "涂装安杰拉斯: 红白双色"
+   },
+   "P4PaintAngelusC2": {
+    "en": "Paint Angelus: Yellow and Green",
+    "ch": "塗裝安傑拉斯: 黃綠雙色",
+    "cn": "涂装安杰拉斯: 黄绿双色"
+   },
+   "P4PaintAngelusC3": {
+    "en": "Paint Angelus: White and Red",
+    "ch": "塗裝安傑拉斯: 白紅雙色",
+    "cn": "涂装安杰拉斯: 白红双色"
+   },
+   "P4PaintAngelusC4": {
+    "en": "Paint Angelus: Black and Yellow",
+    "ch": "塗裝安傑拉斯: 黑黃雙色",
+    "cn": "涂装安杰拉斯: 黑黄双色"
+   },
+   "P4PaintCossetteC1": {
+    "en": "Paint Cossette: Red",
+    "ch": "塗裝珂賽特: 紅色",
+    "cn": "涂装珂赛特: 红色"
+   },
+   "P4PaintCossetteC2": {
+    "en": "Paint Cossette: Yellow",
+    "ch": "塗裝珂賽特: 黃色",
+    "cn": "涂装珂赛特: 黄色"
+   },
+   "P4PaintCossetteC3": {
+    "en": "Paint Cossette: Black",
+    "ch": "塗裝珂賽特: 黑色",
+    "cn": "涂装珂赛特: 黑色"
+   },
+   "P4PaintCossetteC4": {
+    "en": "Paint Cossette: American Colors",
+    "ch": "塗裝珂賽特: 美國配色",
+    "cn": "涂装珂赛特: 美国配色"
+   },
+   "P4PaintD6C1": {
+    "en": "Paint D6: Black",
+    "ch": "塗裝 D6: 黑色",
+    "cn": "涂装 D6: 黑色"
+   },
+   "P4PaintD6C2": {
+    "en": "Paint D6: White",
+    "ch": "塗裝 D6: 白色",
+    "cn": "涂装 D6: 白色"
+   },
+   "P4PaintD6C3": {
+    "en": "Paint D6: Red",
+    "ch": "塗裝 D6: 紅色",
+    "cn": "涂装 D6: 红色"
+   },
+   "P4PaintD6C4": {
+    "en": "Paint D6: Swedish Colors",
+    "ch": "塗裝 D6: 瑞典配色",
+    "cn": "涂装 D6: 瑞典配色"
+   },
+   "P4PaintDartC1": {
+    "en": "Paint Dart: Silver",
+    "ch": "塗裝飛鏢: 銀色",
+    "cn": "涂装飞镖: 银色"
+   },
+   "P4PaintDartC2": {
+    "en": "Paint Dart: Red",
+    "ch": "塗裝飛鏢: 紅色",
+    "cn": "涂装飞镖: 红色"
+   },
+   "P4PaintDartC3": {
+    "en": "Paint Dart: Black",
+    "ch": "塗裝飛鏢: 黑色",
+    "cn": "涂装飞镖: 黑色"
+   },
+   "P4PaintDartC4": {
+    "en": "Paint Dart: French Colors",
+    "ch": "塗裝飛鏢: 法國配色",
+    "cn": "涂装飞镖: 法国配色"
+   },
+   "P4PaintDeloreanC1": {
+    "en": "Paint Delorean: Red",
+    "ch": "塗裝德羅寧: 紅色",
+    "cn": "涂装德罗宁: 红色"
+   },
+   "P4PaintDeloreanC2": {
+    "en": "Paint Delorean: Yellow",
+    "ch": "塗裝德羅寧: 黃色",
+    "cn": "涂装德罗宁: 黄色"
+   },
+   "P4PaintDeloreanC3": {
+    "en": "Paint Delorean: Green",
+    "ch": "塗裝德羅寧: 綠色",
+    "cn": "涂装德罗宁: 绿色"
+   },
+   "P4PaintDeloreanC4": {
+    "en": "Paint Delorean: Gold",
+    "ch": "塗裝德羅寧: 金色",
+    "cn": "涂装德罗宁: 金色"
+   },
+   "P4PaintFireTruckC1": {
+    "en": "Paint Fire Truck: Red",
+    "ch": "塗裝消防車: 紅色",
+    "cn": "涂装消防车: 红色"
+   },
+   "P4PaintFireTruckC2": {
+    "en": "Paint Fire Truck: Yellow",
+    "ch": "塗裝消防車: 黃色",
+    "cn": "涂装消防车: 黄色"
+   },
+   "P4PaintFireTruckC3": {
+    "en": "Paint Fire Truck: Black",
+    "ch": "塗裝消防車: 黑色",
+    "cn": "涂装消防车: 黑色"
+   },
+   "P4PaintFireTruckC4": {
+    "en": "Paint Fire Truck: Chinese Colors",
+    "ch": "塗裝消防車: 中國配色",
+    "cn": "涂装消防车: 中国配色"
+   },
+   "P4PaintPoliceC1": {
+    "en": "Paint Police Car: Black",
+    "ch": "塗裝警車: 黑色",
+    "cn": "涂装警车: 黑色"
+   },
+   "P4PaintPoliceC2": {
+    "en": "Paint Police Car: White",
+    "ch": "塗裝警車: 白色",
+    "cn": "涂装警车: 白色"
+   },
+   "P4PaintPoliceC3": {
+    "en": "Paint Police Car: Blue",
+    "ch": "塗裝警車: 藍色",
+    "cn": "涂装警车: 蓝色"
+   },
+   "P4PaintPoliceC4": {
+    "en": "Paint Police Car: Japanese Colors",
+    "ch": "塗裝警車: 日本配色",
+    "cn": "涂装警车: 日本配色"
+   },
+   "P4PaintRaceCarC1": {
+    "en": "Paint Race Car: Yellow",
+    "ch": "塗裝賽車: 黃色",
+    "cn": "涂装赛车: 黄色"
+   },
+   "P4PaintRaceCarC2": {
+    "en": "Paint Race Car: Blue",
+    "ch": "塗裝賽車: 藍色",
+    "cn": "涂装赛车: 蓝色"
+   },
+   "P4PaintRaceCarC3": {
+    "en": "Paint Race Car: Silver",
+    "ch": "塗裝賽車: 銀色",
+    "cn": "涂装赛车: 银色"
+   },
+   "P4PaintRaceCarC4": {
+    "en": "Paint Race Car: Brazilian Colors",
+    "ch": "塗裝賽車: 巴西配色",
+    "cn": "涂装赛车: 巴西配色"
+   },
+   "P4PaintRaceCarC5": {
+    "en": "Paint Race Car: NASCAR No. 12 (EGENEREX)",
+    "ch": "塗裝賽車: NASCAR 12 號 (EGENEREX)",
+    "cn": "涂装赛车: NASCAR 12 号 (EGENEREX)"
+   },
+   "P4PaintRaceCarC6": {
+    "en": "Paint Race Car: NASCAR No. 34 (LBMW)",
+    "ch": "塗裝賽車: NASCAR 34 號 (LBMW)",
+    "cn": "涂装赛车: NASCAR 34 号 (LBMW)"
+   },
+   "P4PaintRaceCarC7": {
+    "en": "Paint Race Car: NASCAR No. 58 (Spiffo's)",
+    "ch": "塗裝賽車: NASCAR 58 號 (斯皮福)",
+    "cn": "涂装赛车: NASCAR 58 号 (斯皮福)"
+   },
+   "P4PaintValulineC1": {
+    "en": "Paint Valuline: Blue",
+    "ch": "塗裝瓦盧林: 藍色",
+    "cn": "涂装瓦卢林: 蓝色"
+   },
+   "P4PaintValulineC2": {
+    "en": "Paint Valuline: Green",
+    "ch": "塗裝瓦盧林: 綠色",
+    "cn": "涂装瓦卢林: 绿色"
+   },
+   "P4PaintValulineC3": {
+    "en": "Paint Valuline: White",
+    "ch": "塗裝瓦盧林: 白色",
+    "cn": "涂装瓦卢林: 白色"
+   },
+   "P4PaintValulineC4": {
+    "en": "Paint Valuline: German Colors",
+    "ch": "塗裝瓦盧林: 德國配色",
+    "cn": "涂装瓦卢林: 德国配色"
+   },
+   "P4PaintValulineC5": {
+    "en": "Paint Valuline: Spiffo Van",
+    "ch": "塗裝瓦盧林: 斯皮福貨車",
+    "cn": "涂装瓦卢林: 斯皮福货车"
    }
   },
   "Sandbox.json": {
@@ -178416,6 +179241,341 @@
     "en": "Maximum selectable area for the Water Crops tool. Used ONLY when 'Use one limit for all tools' above is unticked.",
     "ch": "澆灌作物工具的最大可選區域. 僅當上方的所有工具共用一個上限未被勾選時生效.",
     "cn": "浇灌作物工具的最大可选区域. 仅当上方的所有工具共用一个上限未被勾选时生效."
+   },
+   "Sandbox_FNVG_Options.AN_PVS14Lifetime": {
+    "en": "AN/PVS-14 lifetime",
+    "ch": "AN/PVS-14 夜視儀使用壽命",
+    "cn": "AN/PVS-14 夜视仪使用寿命"
+   },
+   "Sandbox_FNVG_Options.AN_PVS14Lifetime_tooltip": {
+    "en": "How many hours of use it takes to wear down this item from full condition until it breaks",
+    "ch": "此物品從耐久度全滿使用到損壞需要幾小時",
+    "cn": "此物品从耐久度全满使用到损坏需要几小时"
+   },
+   "Sandbox_FNVG_Options.AN_PVS15Lifetime": {
+    "en": "AN/PVS-15 lifetime",
+    "ch": "AN/PVS-15 夜視儀使用壽命",
+    "cn": "AN/PVS-15 夜视仪使用寿命"
+   },
+   "Sandbox_FNVG_Options.AN_PVS15Lifetime_tooltip": {
+    "en": "How many hours of use it takes to wear down this item from full condition until it breaks",
+    "ch": "此物品從耐久度全滿使用到損壞需要幾小時",
+    "cn": "此物品从耐久度全满使用到损坏需要几小时"
+   },
+   "Sandbox_FNVG_Options.AN_PVS7Lifetime": {
+    "en": "AN/PVS-7 lifetime",
+    "ch": "AN/PVS-7 夜視儀使用壽命",
+    "cn": "AN/PVS-7 夜视仪使用寿命"
+   },
+   "Sandbox_FNVG_Options.AN_PVS7Lifetime_tooltip": {
+    "en": "How many hours of use it takes to wear down this item from full condition until it breaks",
+    "ch": "此物品從耐久度全滿使用到損壞需要幾小時",
+    "cn": "此物品从耐久度全满使用到损坏需要几小时"
+   },
+   "Sandbox_FNVG_Options.GPNVG_18Lifetime": {
+    "en": "GPNVG-18 lifetime",
+    "ch": "GPNVG-18 夜視儀使用壽命",
+    "cn": "GPNVG-18 夜视仪使用寿命"
+   },
+   "Sandbox_FNVG_Options.GPNVG_18Lifetime_tooltip": {
+    "en": "How many hours of use it takes to wear down this item from full condition until it breaks",
+    "ch": "此物品從耐久度全滿使用到損壞需要幾小時",
+    "cn": "此物品从耐久度全满使用到损坏需要几小时"
+   },
+   "Sandbox_GeneratorPoweredBuildings_DebugB106Baseline": {
+    "en": "Debug: B106 Baseline",
+    "ch": "除錯: B106 基準",
+    "cn": "调试: B106 基准"
+   },
+   "Sandbox_GeneratorPoweredBuildings_DebugB106Baseline_tooltip": {
+    "en": "Enable baseline strain/condition telemetry for B-106 analysis. Default: Disabled",
+    "ch": "啟用 B-106 分析用的基準負載/狀態遙測資料. 預設: 停用",
+    "cn": "启用用于 B-106 分析的基准负载/状态遥测数据. 默认: 禁用"
+   },
+   "Sandbox_GeneratorPoweredBuildings_DebugBuildingDetection": {
+    "en": "Debug: Building Detection",
+    "ch": "除錯: 建築偵測",
+    "cn": "调试: 建筑检测"
+   },
+   "Sandbox_GeneratorPoweredBuildings_DebugBuildingDetection_tooltip": {
+    "en": "Enable building scan and detection debug logs. Default: Disabled",
+    "ch": "啟用建築掃描與偵測的除錯記錄. 預設: 停用",
+    "cn": "启用建筑扫描与检测的调试日志. 默认: 禁用"
+   },
+   "Sandbox_GeneratorPoweredBuildings_DebugFuelConsumption": {
+    "en": "Debug: Fuel Consumption",
+    "ch": "除錯: 燃料消耗",
+    "cn": "调试: 燃料消耗"
+   },
+   "Sandbox_GeneratorPoweredBuildings_DebugFuelConsumption_tooltip": {
+    "en": "Enable detailed fuel consumption debug logs. Default: Disabled",
+    "ch": "啟用詳細的燃料消耗除錯記錄. 預設: 停用",
+    "cn": "启用详细的燃料消耗调试日志. 默认: 禁用"
+   },
+   "Sandbox_GeneratorPoweredBuildings_DebugFuelManager": {
+    "en": "Debug: Fuel Manager",
+    "ch": "除錯: 燃料管理器",
+    "cn": "调试: 燃料管理器"
+   },
+   "Sandbox_GeneratorPoweredBuildings_DebugFuelManager_tooltip": {
+    "en": "Enable detailed fuel manager runtime logs (including cached path traces). Default: Disabled",
+    "ch": "啟用詳細的燃料管理器執行記錄 (包含快取的路徑追蹤). 預設: 停用",
+    "cn": "启用详细的燃料管理器运行日志 (包含缓存的路径跟踪). 默认: 禁用"
+   },
+   "Sandbox_GeneratorPoweredBuildings_DebugHeatSync": {
+    "en": "Debug: Heat Sync",
+    "ch": "除錯: 熱源同步",
+    "cn": "调试: 热源同步"
+   },
+   "Sandbox_GeneratorPoweredBuildings_DebugHeatSync_tooltip": {
+    "en": "Enable heating source synchronization debug logs. Default: Disabled",
+    "ch": "啟用熱源同步的除錯記錄. 預設: 停用",
+    "cn": "启用热源同步的调试日志. 默认: 禁用"
+   },
+   "Sandbox_GeneratorPoweredBuildings_DebugMode": {
+    "en": "Debug Mode",
+    "ch": "除錯模式",
+    "cn": "调试模式"
+   },
+   "Sandbox_GeneratorPoweredBuildings_DebugMode_tooltip": {
+    "en": "Master switch for PoweredBuildings debug logging. Keep disabled for normal gameplay/server use. Default: Disabled",
+    "ch": "PoweredBuildings 除錯記錄的總開關. 一般遊玩或伺服器運作時請保持停用. 預設: 停用",
+    "cn": "PoweredBuildings 调试日志的总开关. 正常游戏或服务器运行时请保持禁用. 默认: 禁用"
+   },
+   "Sandbox_GeneratorPoweredBuildings_DebugNetworkSync": {
+    "en": "Debug: Network Sync",
+    "ch": "除錯: 網路同步",
+    "cn": "调试: 网络同步"
+   },
+   "Sandbox_GeneratorPoweredBuildings_DebugNetworkSync_tooltip": {
+    "en": "Enable network/state synchronization debug logs. Default: Disabled",
+    "ch": "啟用網路/狀態同步的除錯記錄. 預設: 停用",
+    "cn": "启用网络/状态同步的调试日志. 默认: 禁用"
+   },
+   "Sandbox_GeneratorPoweredBuildings_DebugUIUpdates": {
+    "en": "Debug: UI Updates",
+    "ch": "除錯: 介面更新",
+    "cn": "调试: 界面更新"
+   },
+   "Sandbox_GeneratorPoweredBuildings_DebugUIUpdates_tooltip": {
+    "en": "Enable generator info window/UI refresh debug logs. Default: Disabled",
+    "ch": "啟用發電機資訊視窗/介面重新整理的除錯記錄. 預設: 停用",
+    "cn": "启用发电机信息窗口/界面刷新的调试日志. 默认: 禁用"
+   },
+   "Sandbox_GeneratorPoweredBuildings_line": {
+    "en": "__________________________________________________________________________________________________________________",
+    "ch": "__________________________________________________________________________________________________________________",
+    "cn": "__________________________________________________________________________________________________________________"
+   },
+   "Sandbox_GGSGS_AimingPeripheralVision": {
+    "en": "Peripheral aiming effect",
+    "ch": "瞄準周邊視野效果",
+    "cn": "瞄准周边视野效果"
+   },
+   "Sandbox_GGSGS_AimingPeripheralVision_tooltip": {
+    "en": "Narrows and softens peripheral vision while aiming through an optic. Long-range scopes use the narrowest cone, ACOG-style optics use a medium-small cone, and red dots or mini sights use a medium cone.",
+    "ch": "透過光學瞄具瞄準時, 會縮窄並柔化周邊視野. 長距離瞄準鏡使用最窄的視錐, ACOG 類光學瞄具使用中偏小的視錐, 紅點或迷你瞄具則使用中等視錐.",
+    "cn": "通过光学瞄具瞄准时, 会收窄并柔化周边视野. 远距离瞄准镜使用最窄的视锥, ACOG 类光学瞄具使用中偏小的视锥, 红点或迷你瞄具则使用中等视锥."
+   },
+   "Sandbox_GGSGS_CustomScopeCrosshair": {
+    "en": "Custom magnified-scope crosshair",
+    "ch": "自訂倍率瞄準鏡準星",
+    "cn": "自定义倍率瞄准镜准星"
+   },
+   "Sandbox_GGSGS_CustomScopeCrosshair_tooltip": {
+    "en": "Shows the GGS reticle while aiming through compatible magnified scopes. The reticle follows the real mouse or gamepad aiming position and scales with the player viewport.",
+    "ch": "透過相容的倍率瞄準鏡瞄準時, 顯示 GGS 準星. 準星會跟隨滑鼠或手把的實際瞄準位置, 並隨玩家畫面區域縮放.",
+    "cn": "通过兼容的倍率瞄准镜瞄准时, 显示 GGS 准星. 准星会跟随鼠标或手柄的实际瞄准位置, 并随玩家视口缩放."
+   },
+   "Sandbox_GGSGS_DynamicAimRecoil": {
+    "en": "Dynamic aim and recoil",
+    "ch": "動態瞄準與後座力",
+    "cn": "动态瞄准与后坐力"
+   },
+   "Sandbox_GGSGS_DynamicAimRecoil_tooltip": {
+    "en": "Replaces the center aiming mark with a moving red point. Weapon sway moves it inside the vanilla crosshair; each shot kicks it sharply, and single-projectile rounds follow its position.",
+    "ch": "以移動的紅點取代中央瞄準標記. 武器晃動會讓它在原版準星內移動; 每次射擊都會讓它猛然跳動, 單彈頭彈藥會跟隨其位置.",
+    "cn": "用移动的红点取代中央瞄准标记. 武器晃动会让它在原版准星内移动; 每次射击都会让它猛然跳动, 单弹头弹药会跟随其位置."
+   },
+   "Sandbox_GGSGS_RandomMagazineAmmo": {
+    "en": "Random rounds in found magazines",
+    "ch": "尋獲的彈匣內子彈數隨機",
+    "cn": "找到的弹匣内子弹数随机"
+   },
+   "Sandbox_GGSGS_RandomWeaponAmmo": {
+    "en": "Random rounds in found guns",
+    "ch": "尋獲的槍械內子彈數隨機",
+    "cn": "找到的枪械内子弹数随机"
+   },
+   "Sandbox_GGSGS_RealSingleShot": {
+    "en": "Real Single Shot",
+    "ch": "真實單發射擊",
+    "cn": "真实单发射击"
+   },
+   "Sandbox_GGSGS_RealSingleShot_tooltip": {
+    "en": "When enabled, firearms in semi-automatic mode fire only once per trigger press. Release and press the attack control again for the next shot. Automatic fire modes keep their normal behavior.",
+    "ch": "啟用後, 半自動模式下的槍械每按一次扳機只會射擊一次. 放開後再次按下攻擊鍵才能射出下一發. 自動射擊模式維持原本行為.",
+    "cn": "启用后, 半自动模式下的枪械每扣一次扳机只会射击一次. 松开后再次按下攻击键才能射出下一发. 自动射击模式保持原有行为."
+   },
+   "Sandbox_GGSGS_Upgrade_Barrel_Shroud": {
+    "en": "Bipod on spawned guns (%%)",
+    "ch": "生成槍械附帶兩腳架機率 (%%)",
+    "cn": "生成枪械附带两脚架几率 (%%)"
+   },
+   "Sandbox_GGSGS_Upgrade_Canon": {
+    "en": "Muzzle device / silencer on spawned guns (%%)",
+    "ch": "生成槍械附帶槍口裝置/消音器機率 (%%)",
+    "cn": "生成枪械附带枪口装置/消音器几率 (%%)"
+   },
+   "Sandbox_GGSGS_Upgrade_Grip": {
+    "en": "Foregrip on spawned guns (%%)",
+    "ch": "生成槍械附帶前握把機率 (%%)",
+    "cn": "生成枪械附带前握把几率 (%%)"
+   },
+   "Sandbox_GGSGS_Upgrade_Laser": {
+    "en": "Laser on spawned guns (%%)",
+    "ch": "生成槍械附帶雷射瞄準鏡機率 (%%)",
+    "cn": "生成枪械附带激光瞄准镜几率 (%%)"
+   },
+   "Sandbox_GGSGS_Upgrade_Light": {
+    "en": "Weapon light on spawned guns (%%)",
+    "ch": "生成槍械附帶手電筒機率 (%%)",
+    "cn": "生成枪械附带手电筒几率 (%%)"
+   },
+   "Sandbox_GGSGS_Upgrade_Misc": {
+    "en": "Camo wrap on spawned guns (%%)",
+    "ch": "生成槍械附帶迷彩纏帶機率 (%%)",
+    "cn": "生成枪械附带迷彩缠带几率 (%%)"
+   },
+   "Sandbox_GGSGS_Upgrade_Optic": {
+    "en": "Optic (scope/red dot) on spawned guns (%%)",
+    "ch": "生成槍械附帶光學瞄具 (瞄準鏡/紅點) 機率 (%%)",
+    "cn": "生成枪械附带光学瞄具 (瞄准镜/红点) 几率 (%%)"
+   },
+   "Sandbox_GGSGS_Upgrade_Sling": {
+    "en": "Sling on spawned guns (%%)",
+    "ch": "生成槍械附帶槍背帶機率 (%%)",
+    "cn": "生成枪械附带枪背带几率 (%%)"
+   },
+   "Sandbox_GGSGS_Upgrade_Stool": {
+    "en": "Grenade launcher on spawned guns (%%)",
+    "ch": "生成槍械附帶榴彈發射器機率 (%%)",
+    "cn": "生成枪械附带榴弹发射器几率 (%%)"
+   },
+   "Sandbox_GGSGS_WeaponFurnitureMode": {
+    "en": "Weapon furniture on found guns",
+    "ch": "尋獲槍械的護木與槍托",
+    "cn": "找到枪械的护木与枪托"
+   },
+   "Sandbox_GGSGS_WeaponFurnitureMode_option1": {
+    "en": "Fully random",
+    "ch": "完全隨機",
+    "cn": "完全随机"
+   },
+   "Sandbox_GGSGS_WeaponFurnitureMode_option2": {
+    "en": "Factory preset",
+    "ch": "原廠預設",
+    "cn": "出厂默认"
+   },
+   "Sandbox_GGSGS_WeaponMagazineChance": {
+    "en": "Chance for a found gun to contain a magazine (%%)",
+    "ch": "尋獲槍械內含彈匣的機率 (%%)",
+    "cn": "找到的枪械带有弹匣的几率 (%%)"
+   },
+   "Sandbox_GGSLO_DuplicateGunKeepChance": {
+    "en": "Keep repeated gun in same container (%%)",
+    "ch": "同一容器內保留重複槍械 (%%)",
+    "cn": "同一容器内保留重复枪械 (%%)"
+   },
+   "Sandbox_GGSLO_DuplicateGunKeepChance_tooltip": {
+    "en": "When the same GGS gun spawns more than once in one container, chance to keep each extra copy.",
+    "ch": "當同一款 GGS 槍械在同一個容器中生成超過一次時, 保留每個額外副本的機率.",
+    "cn": "当同一款 GGS 枪械在同一个容器中生成多次时, 保留每个额外副本的几率."
+   },
+   "Sandbox_GGSLO_LooseAmmoMax": {
+    "en": "Loose rounds per stack (max)",
+    "ch": "每堆散裝子彈數 (最大)",
+    "cn": "每堆散装子弹数 (最大)"
+   },
+   "Sandbox_GGSLO_LooseAmmoMax_tooltip": {
+    "en": "Upper limit of the random stack size for loose rounds.",
+    "ch": "散裝子彈隨機堆疊數量的上限.",
+    "cn": "散装子弹随机堆叠数量的上限."
+   },
+   "Sandbox_GGSLO_LooseAmmoMin": {
+    "en": "Loose rounds per stack (min)",
+    "ch": "每堆散裝子彈數 (最小)",
+    "cn": "每堆散装子弹数 (最小)"
+   },
+   "Sandbox_GGSLO_LooseAmmoMin_tooltip": {
+    "en": "When a loose round spawns, it becomes a stack of this many rounds or more.",
+    "ch": "散裝子彈生成時, 每堆至少會有此數量的子彈.",
+    "cn": "散装子弹生成时, 每堆至少会有这个数量的子弹."
+   },
+   "Sandbox_GGSLO_MaxLooseRoundsPerContainer": {
+    "en": "Max loose rounds per container",
+    "ch": "每個容器的散裝子彈上限",
+    "cn": "每个容器的散装子弹上限"
+   },
+   "Sandbox_GGSLO_MaxLooseRoundsPerContainer_tooltip": {
+    "en": "Total limit of loose rounds added to one container when it spawns (each round is a separate item). 0 = no limit.",
+    "ch": "容器生成時加入的散裝子彈總數上限 (每發子彈都是獨立物品). 0 = 無上限.",
+    "cn": "容器生成时加入的散装子弹总数上限 (每发子弹都是独立物品). 0 = 无上限."
+   },
+   "Sandbox_GGSLO_prob_ammo_mags_tooltip": {
+    "en": "Magazines, drums and clips.",
+    "ch": "彈匣, 彈鼓與彈夾.",
+    "cn": "弹匣, 弹鼓和弹夹."
+   },
+   "Sandbox_GGSLO_prob_ammo_tooltip": {
+    "en": "Loose rounds and ammo boxes/cartons. Magazines have their own option.",
+    "ch": "散裝子彈與彈藥盒/彈藥箱. 彈匣另有獨立選項.",
+    "cn": "散装子弹与弹药盒/弹药箱. 弹匣另有独立选项."
+   },
+   "Sandbox_GGSLO_prob_attbipod": {
+    "en": "Bipod spawn probability",
+    "ch": "兩腳架生成機率",
+    "cn": "两脚架生成几率"
+   },
+   "Sandbox_GGSLO_prob_attgrenadelauncher": {
+    "en": "Underbarrel grenade launcher spawn probability",
+    "ch": "槍管下掛榴彈發射器生成機率",
+    "cn": "枪管下挂榴弹发射器生成几率"
+   },
+   "Sandbox_ItemSpawnBlocker": {
+    "en": "Item Spawn Blocker",
+    "ch": "物品生成封鎖器",
+    "cn": "物品生成屏蔽器"
+   },
+   "Sandbox_ItemSpawnBlocker_BlockList": {
+    "en": "Blocked Items",
+    "ch": "封鎖物品",
+    "cn": "屏蔽物品"
+   },
+   "Sandbox_ItemSpawnBlocker_BlockList_tooltip": {
+    "en": "Items to remove from newly generated loot, separated by ';' or ','. Each entry is matched case-insensitively and partially against the internal item ID (e.g. Base.Axe, HuntingKnife, gun, ammo).",
+    "ch": "要從新生成的物資中移除的物品, 以 ';' 或 ',' 分隔. 每一筆都會以不分大小寫的部分比對方式對照物品的內部 ID (例如 Base.Axe, HuntingKnife, gun, ammo).",
+    "cn": "要从新生成的物资中移除的物品, 以 ';' 或 ',' 分隔. 每个条目都会以不区分大小写的部分匹配方式对照物品的内部 ID (例如 Base.Axe, HuntingKnife, gun, ammo)."
+   },
+   "Sandbox_ItemSpawnBlocker_Enabled": {
+    "en": "Enable Blocker",
+    "ch": "啟用封鎖器",
+    "cn": "启用屏蔽器"
+   },
+   "Sandbox_ItemSpawnBlocker_Enabled_tooltip": {
+    "en": "Master switch. When off, no items are blocked.",
+    "ch": "總開關. 關閉時不會封鎖任何物品.",
+    "cn": "总开关. 关闭时不会屏蔽任何物品."
+   },
+   "Sandbox_ItemSpawnBlocker_FilterContainers": {
+    "en": "Strip Filled Containers",
+    "ch": "移除容器內被封鎖的物品",
+    "cn": "移除容器内被屏蔽的物品"
+   },
+   "Sandbox_ItemSpawnBlocker_FilterContainers_tooltip": {
+    "en": "Also remove blocked items from containers filled after world generation (zombie corpses, etc.). Server-side; leave off unless needed.",
+    "ch": "也從世界生成後才填充的容器 (殭屍屍體等) 中移除被封鎖的物品. 僅在伺服器端執行; 非必要請保持關閉.",
+    "cn": "同时从世界生成后才填充的容器 (僵尸尸体等) 中移除被屏蔽的物品. 仅在服务器端运行; 如非必要请保持关闭."
    }
   },
   "Tooltip.json": {
@@ -195667,11 +196827,6 @@
     "cn": "启用后, 物品栏在按分类排序时, 不再在主要显示分类之间 (例如“工具”与“机械”) 绘制细分隔线. 立即生效.",
     "_note": "#323: UI_OC_DisableCategorySeparators_tooltip。比照既有 UI_OC_AlphabeticalCategorySort_tooltip 的句式：CH「啟用後…物品欄的「依分類排序」…立即生效.」/ CN「启用后…物品栏的“按分类排序”…立即生效.」，引號形式也依各語別慣例（CH 用「」、CN 用“”）。display categories 沿用該組既定的「顯示分類/显示分类」，Tool/Mechanics 為原版分類名，譯為工具/機械。"
    },
-   "UI_optionscreen_binding_OpenGGSInfo": {
-    "en": "Open GGS Information",
-    "ch": "開啟 GGS 資訊",
-    "cn": "打开 GGS 信息"
-   },
    "UI_AA_cook_ui_forget": {
     "ch": "忘記",
     "cn": "忘记",
@@ -202418,6 +203573,36 @@
     "en": "You feel most comfortable in light clothing. Wearing fewer than the configured neutral range of clothing items decreases stress and discomfort each minute; wearing more increases them. The farther you are from that range, the stronger the effect.",
     "ch": "你穿得輕便才最自在. 穿著的衣物件數少於設定的中性範圍時, 每分鐘都會降低壓力與不適; 穿得比範圍多則會增加. 離該範圍越遠, 效果越強.",
     "cn": "你穿得轻便才最自在. 穿着的衣物件数少于设定的中性范围时, 每分钟都会降低压力和不适; 穿得比范围多则会增加. 离该范围越远, 效果越强."
+   },
+   "UI_P4ModelKit_AssemblyStage0": {
+    "en": "Unassembled",
+    "ch": "未組裝",
+    "cn": "未组装"
+   },
+   "UI_P4ModelKit_AssemblyStage1": {
+    "en": "Assembling chassis",
+    "ch": "組裝底盤中",
+    "cn": "组装底盘中"
+   },
+   "UI_P4ModelKit_AssemblyStage2": {
+    "en": "Assembling interior",
+    "ch": "組裝內裝中",
+    "cn": "组装内饰中"
+   },
+   "UI_P4ModelKit_AssemblyStage3": {
+    "en": "Assembling body",
+    "ch": "組裝車身中",
+    "cn": "组装车身中"
+   },
+   "UI_P4ModelKit_AssemblyStage4": {
+    "en": "Finishing assembly",
+    "ch": "組裝收尾中",
+    "cn": "组装收尾中"
+   },
+   "UI_P4ModelKit_AssemblyStatus": {
+    "en": "Status: %1",
+    "ch": "狀態: %1",
+    "cn": "状态: %1"
    }
   },
   "MakeUp.json": {

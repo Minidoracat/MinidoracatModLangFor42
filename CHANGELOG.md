@@ -6,15 +6,28 @@
 
 ## [Unreleased]
 
+### Added
+
+- **補齊 6 個 MOD 新增的繁簡中文，共 243 項。** My So-Called Toy（#611，11 款車輛比例模型與套件、模型漆與工具、組裝進度與塗裝配方，113 項）、GaelGunStore（#613，武器手電筒／雷射開關、槍管下掛榴彈發射器、準星樣式、新版瞄準與後座力系統、手動上膛、生成槍械附帶配件機率與散裝子彈設定、折斷的箭矢與弩箭，91 項）、Generator Powered Buildings（#612，除錯記錄設定與「需在發電機附近安裝電燈開關」提示，18 項）、Fred's Night Vision Goggles（#608，4 款夜視儀的使用壽命設定，8 項）、Modern Firearms System（#614，物品生成封鎖器設定，7 項）、organizedCategories（#609，CD／影視的經驗與配方分類、釘選與固定，6 項）。
+  > 技術要點：全數落 `own_translations.json`，CH／CN 逐鍵對照 EN 直寫並經兩個外部模型（Codex、Grok）對抗複核，採納 5 條修正。My So-Called Toy 的車款名沿用本體官方譯名（全地形、瓦盧林、珂賽特、飛鏢）。
+
+### Changed
+
+- **依上游英文改值重譯 4 項。** GaelGunStore 把彈藥與彈匣拆成兩個生成選項（「子彈生成機率」「彈匣生成機率」），武器燈快捷鍵說明改為只切換手電筒（#613）；Modern Firearms System 的榴彈配方改名為「製作 40mm 高爆榴彈」（#614）。
+  > 技術要點：As1 衍生層 3 鍵改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點），own 層 1 鍵連同 `en` 錨點更新；皆登記 `ch_review_state`。`Sandbox_GGSLO_prob_ammo_mags` 新增 owner 衝突裁決：WAR（3630196063）的英文只在 B42 不讀的 `Sandbox_EN.txt`，採 GaelGunStore 語意出貨，已接受殘留。GaelGunStore 移除 5 個按鍵、把武器面板的 `IGUI_WeaponUI_DamegeMax` 改標為 Damage（仍以 `getMaxDamage()` 取值），造成 6 筆既有裁決簽名過時，逐筆複核後維持原譯並重新背書。
+- **已對照 Build 42.21 檢查：本包照常運作，最低支援版本維持 Build 42.20.4。** 42.21 沒有改變模組翻譯的載入方式，報紙／傳單的版面格式也與 42.20.4 相同。
+  > 技術要點：42.21.0 反編譯比對 `Translator` 只新增 `getMoveableDisplayName(IsoObject)`（沿用同一套 Moveables 鍵，本包的 MOD 家具名稱也會出現在製作視窗標題）；前綴路由、formatFixer、版本夾選擇與 script 解析未變。`PrintMedia.lua` 未改，42.21 恢復的 `loadstring` 不影響解析，verify [17] 契約照舊。追蹤器的遊戲版本預設值改為 42021，讓 MOD 的 `42.21/` 版本夾被當成有效分支（對版時 3 個監看 MOD 已帶此資料夾，內容與原有效分支相同）。
+
+### Removed
+
+- 移除上游已刪除的 6 個原創翻譯鍵：organizedCategories 的「釘選至頂端」「固定在此物品欄」（上游改用新的「釘選」「固定」）、GaelGunStore 的「開啟 GGS 資訊」按鍵，以及 Modern Firearms System 已刪除的新版 40mm 高爆榴彈、5 發榴彈彈匣與其製作配方。
+
 ### Fixed
 
 - **遊戲 42.21 新增的原版家具名稱「Cooking Pit」不再被本包改寫。** 本包原本附帶的「石砌火坑 (石磚)」會蓋過官方名稱；現在改由遊戲本體與本體中文翻譯包顯示（沒裝本體中文翻譯包時會是官方英文）。
   > 技術要點：`sources/vanilla_keys.json` 以本機 42.21.0 安裝重新擷取（EN∪CH∪CN），新增 73 個（檔,鍵）：Recipes 50、IG_UI 9、Credits 7、UI 5、Moveables 1、ContextMenu 1。出貨抑制自 CH／CN 剔除 `Moveables.json|Cooking_Pit`（As1 `_unsorted` 來源，未歸屬特定 MOD）；其餘 72 個本包原本就沒有出貨。
 
-### Changed
-
-- **已對照 Build 42.21 檢查：本包照常運作，最低支援版本維持 Build 42.20.4。** 42.21 沒有改變模組翻譯的載入方式，報紙／傳單的版面格式也與 42.20.4 相同。
-  > 技術要點：42.21.0 反編譯比對 `Translator` 只新增 `getMoveableDisplayName(IsoObject)`（沿用同一套 Moveables 鍵，本包的 MOD 家具名稱也會出現在製作視窗標題）；前綴路由、formatFixer、版本夾選擇與 script 解析未變。`PrintMedia.lua` 未改，42.21 恢復的 `loadstring` 不影響解析，verify [17] 契約照舊。追蹤器的遊戲版本預設值改為 42021，讓 MOD 的 `42.21/` 版本夾被當成有效分支（對版時 3 個監看 MOD 已帶此資料夾，內容與原有效分支相同）。
+其餘追蹤單無需變更：TreesHaveLoot（#607）只把翻譯檔搬到 42.15 版本夾，鍵與英文不變；RotatorsLib（#610）新增的 5 款半掛拖車，車名本包已有中文；GaelGunStore 刪除的 38 個舊配件生成設定與 5 個按鍵、My So-Called Toy 改名的 2 個右鍵選項屬 As1 衍生層，依同步流程保留。
 
 ## [42.20.4-1.34.0] - 2026-09-27
 

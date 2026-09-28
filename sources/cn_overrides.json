@@ -13851,8 +13851,8 @@
   },
   "Sandbox.json|Sandbox_GGSLO_prob_ammo": {
     "as1_value": "弹匣和子弹生成概率",
-    "reason": "cn_overrides 已為同 mod 的 54 個 Sandbox_GGSGS_* 鍵鎖定「生成几率」以及 mount=支架／light=手电筒／laser=激光瞄准镜／stool=榴弹发射器、槍族前綴不加「系」；as1 全組寫「生成概率」與該 54 鍵不一致。",
-    "value": "弹匣与子弹生成几率"
+    "reason": "cn_overrides 已為同 mod 的 54 個 Sandbox_GGSGS_* 鍵鎖定「生成几率」以及 mount=支架／light=手电筒／laser=激光瞄准镜／stool=榴弹发射器、槍族前綴不加「系」；as1 全組寫「生成概率」與該 54 鍵不一致。 2026-09-29 #613 上游改文：GaelGunStore 把彈匣拆成獨立選項，此鍵由 'Mags and bullets spawn probability' 改為 'Bullets spawn probability'，依新英文改譯。",
+    "value": "子弹生成几率"
   },
   "Sandbox.json|Sandbox_GGSLO_prob_ammo_crafts": {
     "as1_value": "子弹制作物品生成概率",
@@ -13861,8 +13861,8 @@
   },
   "Sandbox.json|Sandbox_GGSLO_prob_ammo_mags": {
     "as1_value": "弹药和弹匣生成概率",
-    "reason": "cn_overrides 已為同 mod 的 54 個 Sandbox_GGSGS_* 鍵鎖定「生成几率」以及 mount=支架／light=手电筒／laser=激光瞄准镜／stool=榴弹发射器、槍族前綴不加「系」；as1 全組寫「生成概率」與該 54 鍵不一致。",
-    "value": "弹药与弹匣生成几率"
+    "reason": "cn_overrides 已為同 mod 的 54 個 Sandbox_GGSGS_* 鍵鎖定「生成几率」以及 mount=支架／light=手电筒／laser=激光瞄准镜／stool=榴弹发射器、槍族前綴不加「系」；as1 全組寫「生成概率」與該 54 鍵不一致。 2026-09-29 #613 上游改文：此鍵由 'Ammo and mags spawn probability' 改為 'Magazines spawn probability'（子彈改由 Sandbox_GGSLO_prob_ammo 控制），依新英文改譯；owner 衝突裁決見 owner_conflict_decisions.json。",
+    "value": "弹匣生成几率"
   },
   "Sandbox.json|Sandbox_GGSLO_prob_ar": {
     "as1_value": "自动步枪生成概率",
@@ -27769,5 +27769,10 @@
     "as1_value": "区域工具 (F8)",
     "reason": "2026-09-27 #603 上游改文：快捷鍵不再寫死 F8，改由 %1 帶入目前綁定的按鍵。",
     "value": "区域工具 (%1)"
+  },
+  "Recipes.json|GrenadeAmmo": {
+    "as1_value": "制作下挂式榴弹",
+    "reason": "2026-09-29 #614 上游改文：配方名由 'Craft Underbarrel Grenade Round' 改為 'Craft 40mm HE Grenade Round'（原 GrenadeAmmo40 配方已刪除），依新英文改譯，沿用已退役 GrenadeAmmo40 的譯法。",
+    "value": "制作 40mm 高爆榴弹"
   }
 }
