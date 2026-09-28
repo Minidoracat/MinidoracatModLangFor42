@@ -3,75 +3,46 @@
 
 [hr][/hr]
 
-[h2]✨ 功能特色[/h2]
+為其他 Workshop 模組提供繁體與簡體中文翻譯，繁中採台灣用語；遊戲本體的翻譯由姊妹作負責。
+
+[h2]📦 需要安裝[/h2]
 [list]
-[*] 700+ 個 Workshop 模組（880+ 個模組 ID）的中文翻譯
-[*] 有效覆蓋率約 99.9%（截至 2026-09-27）——現行有效上游翻譯鍵 126,029 個中已覆蓋 125,848 個；此統計只涵蓋上游翻譯表，不代表所有物品名稱或寫死文字皆已翻譯。上游每天更新，新增文本由追蹤器偵測後持續補譯，故數字會隨上游浮動。另有少數模組把文字寫死在程式碼裡，任何翻譯包都補不了（已於支援清單逐一標註）
-[*] 不覆蓋遊戲本體的官方翻譯——撞到本體代號的鍵一律不出貨（詳見下方說明）
-[*] 繁體中文（台灣用語）/ 簡體中文 雙語支援
-[*] 每日自動追蹤各模組文本更新，持續維護校對
-[*] 新收錄與後續維護採 JSON-only——不新增 Lua 覆寫、不改動任何 MOD 檔案；僅保留早期既有的 BanditsWeekOne 開日貼圖 Lua 相容層（凍結，不再擴充）
+[*] 遊戲版本 Build 42.20.4 以上
+[*] 姊妹作：遊戲本體的中文由[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3386633401]本體完全翻譯[/url]負責，兩者搭配才是完整中文體驗
 [/list]
 
-[hr][/hr]
+[h2]🚀 快速上手[/h2]
+[olist]
+[*] 訂閱本包＋本體完全翻譯；本包已含「統一模組漢化」的內容，不必另訂
+[*] 在「模組順序」把翻譯包排到最後：本包倒數第二、本體翻譯最後
+[*] 多人遊戲要由服主把翻譯包加進伺服器，自己訂閱不會帶進伺服器
+[*] 想知道某個 MOD 有沒有支援：[url=https://github.com/Minidoracat/MinidoracatModLangFor42/blob/main/SUPPORTED_MODS.md]完整支援 MOD 清單[/url]
+[/olist]
+📖 [b]安裝、排序與多人設定：[/b][url=https://steamcommunity.com/workshop/filedetails/discussion/3386633401/586187095760095821/]安裝、排序與常見問題（本體＋模組翻譯）[/url]
+📋 [b]支援清單、許願與譯錯回報：[/b][url=https://steamcommunity.com/workshop/filedetails/discussion/3765907717/586187095760095861/]支援清單＆翻譯許願／錯誤回報[/url]
 
-[h2]🛡️ 不覆蓋遊戲本體的翻譯[/h2]
-Project Zomboid 把所有 MOD 的翻譯檔載入[b]同一張全域字串表[/b]、後載入者勝——所以翻譯包只要出貨一個與本體同名的代號，就會全域改寫官方譯文，[b]連沒裝那個 MOD 的玩家都會被改到[/b]。
-
-本包的硬性原則：[b]每次建置都掃描 MOD 的代號有沒有撞到遊戲本體（英文／繁中／簡中三語聯集），撞到就不出貨那個代號，一個都不例外。[/b]那些文字一律交由遊戲本體自己的官方譯文顯示。
-
-[b]代價要講清楚：[/b]如果你裝的 MOD 重製了原版物品（例如把原版霰彈槍換成真實槍型），那個物品在物品欄會顯示[b]本體的官方名稱[/b]，而不是該 MOD 的重製名稱——這不是漏翻，是刻意的取捨。JSON 全域字串表做不到「只在某個 MOD 啟用時生效」；若為了裝了該 MOD 的玩家出貨那個代號，所有沒裝的玩家都會看到被改掉的官方文字。哪個 MOD 會動到多少官方鍵，可在支援清單的「覆寫本體」欄查到。
-
-[hr][/hr]
-
-[h2]📋 支援清單與問題回報[/h2]
-[url=https://github.com/Minidoracat/MinidoracatModLangFor42/blob/main/SUPPORTED_MODS.md]👉 完整支援 MOD 清單（含中文名稱與摘要）[/url]
-[url=https://github.com/Minidoracat/MinidoracatModLangFor42/blob/main/RECIPE_COVERAGE_AUDIT.md]📐 配方名覆蓋率稽核（製作選單還缺哪些配方中文、成因分類與清償進度）[/url]
-[url=https://github.com/Minidoracat/MinidoracatModLangFor42/issues]🐛 GitHub 問題回報[/url]
-[url=https://github.com/Minidoracat/MinidoracatModLangFor42/issues/new?template=translation-request.yml]🙋 申請新 MOD 翻譯（附 Workshop 連結與理由即可）[/url]
-[url=https://discord.gg/Gur2V67]💬 Discord 交流與回報[/url]
-想要的 MOD 還沒中文？歡迎透過上方連結申請，收錄順序將參考需求熱度、文本量與上游活躍度；「統一模組漢化」已涵蓋的 MOD 會隨同步自動加入，不需申請。
-
-[hr][/hr]
-
-[h2]🔍 翻譯邊界與上游回報責任[/h2]
-本包只維護 Project Zomboid 的 JSON 翻譯檔（[i]Translate/CH[/i]、[i]Translate/CN[/i]）。有些文字在技術上任何翻譯包都碰不到：
+[h2]✨ 主要功能[/h2]
 [list]
-[*] 模組把文字寫死在 Lua 程式碼裡，不經遊戲的翻譯機制
-[*] 模組自建文字系統，不讀遊戲的字串表
-[*] 英文只放在 Build 42 已不再讀取的舊格式檔（[i]*_EN.txt[/i]），或鍵名前綴不在引擎的路由表上
-[*] 兩個模組用同一個代號指向不同的東西，沒有對雙方都成立的譯名
+[*] 700+ 個 Workshop 模組（880+ 個模組 ID）中文翻譯
+[*] [b]持續補譯[/b]：有效覆蓋率約 99.9%，每日追蹤模組更新
+[*] [b]繁簡雙語[/b]：繁體中文（台灣用語）與簡體中文
+[*] [b]不動本體[/b]：不覆蓋遊戲本體的官方翻譯
+[*] [b]只含翻譯[/b]：只提供翻譯檔，不改動任何 MOD 檔案
 [/list]
-遇到這類情況，我們會把可驗證的檔名、鍵名、上游原文與機制原因查清楚並公開記錄，讓你能直接拿去跟作者溝通：
-[url=https://github.com/Minidoracat/MinidoracatModLangFor42/blob/main/OWNER_CONFLICTS.md]⚖️ 模組間代號衝突紀錄（哪些鍵不出貨中文、哪些還沒裁決而譯名可能只符合其中一個模組；可用 Workshop ID 搜尋）[/url]
-
-[b]但責任歸屬要講清楚：本包不代為向模組作者回報，也不代為追蹤上游是否修復。[/b]需要該模組中文化的玩家——實際使用者或翻譯申請者——請自行拿上述資訊向原作者反映；本包負責的是把成因查清楚並記錄，不負責催上游。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前這些文字會維持英文或顯示代號。
-
-[hr][/hr]
-
-[h2]🧩 姊妹作：本體完全翻譯[/h2]
-本包涵蓋其他 Workshop 模組的文本；遊戲本體的完整翻譯請搭配訂閱：
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3386633401]👉 [B42]繁體簡體中文完全翻譯 By Minidoracat 如一漢化組[/url]
-兩者搭配即為完整中文體驗。
-
-[hr][/hr]
 
 [h2]🤝 授權與致謝[/h2]
 本 MOD 為如一漢化組（As1）[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3556540080]「[B42]統一模組漢化」[/url]的授權繁體中文版，掛名如一漢化組。
-授權範圍內的簡體文本逐字保留原包內容；原創翻譯的模組則由本包逐鍵自撰簡體。繁體文本全部逐鍵人工維護——對照英文原文與術語表校訂，不使用自動簡繁轉換。
+授權範圍內的簡體文本逐字保留原包內容；原創翻譯的模組則由本包逐鍵自撰簡體。繁體文本全部逐鍵人工維護，不使用自動簡繁轉換。
 感謝如一漢化組授權與長期維護的翻譯成果。
 
-[hr][/hr]
+[h2]🔗 Minidoracat 全系列[/h2]
+其他作品都在[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3809297109]Minidoracat 全系列收藏[/url]，依需求自選訂閱。
 
-[h2]📋 MOD 資訊[/h2]
+[h2]💬 回報與交流[/h2]
 [list]
-[*] [b]Mod ID:[/b] CatModLangFor42
-[*] [b]支援版本:[/b] Build 42.20.4+
-[*] [b]Mod 版本:[/b] 42.20.4-1.34.0
-[*] [b]Workshop ID:[/b] 3765907717
+[*] [url=https://github.com/Minidoracat/MinidoracatModLangFor42/issues]GitHub Issues[/url]
+[*] [url=https://discord.gg/Gur2V67]Discord[/url]
 [/list]
-
-[hr][/hr]
 
 [h2]☕ 支持作者[/h2]
 覺得有幫助的話，請在這頁按個 👍 讚、到 GitHub 給個 ⭐ 星星，讓更多玩家找得到它。
@@ -80,4 +51,5 @@ MOD 永遠免費。喜歡的話可以請我喝杯咖啡，贊助會用在伺服�
 
 [b]#Build42 #繁體中文 #簡體中文 #漢化 #翻譯 #Minidoracat #如一漢化組[/b]
 
-Tags: Build 42;Language/Translation;Multiplayer
+Workshop ID: 3765907717
+Mod ID: CatModLangFor42
