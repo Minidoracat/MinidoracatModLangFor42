@@ -205,7 +205,7 @@ EFFECTIVE_MIRROR = {
     rid_tr("UI_Common", "mods/E/common/media/lua/shared/Translate/EN/UI.json"): "C",
     rid_tr("UI_Old", "mods/E/42.19/media/lua/shared/Translate/EN/UI.json"): "O",
     rid_tr("UI_Current", "mods/E/42.20/media/lua/shared/Translate/EN/UI.json"): "N",
-    rid_tr("UI_Future", "mods/E/42.21/media/lua/shared/Translate/EN/UI.json"): "F",
+    rid_tr("UI_Future", "mods/E/42.22/media/lua/shared/Translate/EN/UI.json"): "F",  # 須高於 tracker.GAME_VERSION_INT
     rid_tr("UI_Root", "mods/E/media/lua/shared/Translate/EN/UI.json"): "R",
     rid_tr("UI_Txt", "mods/E/42.20/media/lua/shared/Translate/EN/UI_EN.txt"): "T",
 }

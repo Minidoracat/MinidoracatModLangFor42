@@ -4,6 +4,18 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Fixed
+
+- **遊戲 42.21 新增的原版家具名稱「Cooking Pit」不再被本包改寫。** 本包原本附帶的「石砌火坑 (石磚)」會蓋過官方名稱；現在改由遊戲本體與本體中文翻譯包顯示（沒裝本體中文翻譯包時會是官方英文）。
+  > 技術要點：`sources/vanilla_keys.json` 以本機 42.21.0 安裝重新擷取（EN∪CH∪CN），新增 73 個（檔,鍵）：Recipes 50、IG_UI 9、Credits 7、UI 5、Moveables 1、ContextMenu 1。出貨抑制自 CH／CN 剔除 `Moveables.json|Cooking_Pit`（As1 `_unsorted` 來源，未歸屬特定 MOD）；其餘 72 個本包原本就沒有出貨。
+
+### Changed
+
+- **已對照 Build 42.21 檢查：本包照常運作，最低支援版本維持 Build 42.20.4。** 42.21 沒有改變模組翻譯的載入方式，報紙／傳單的版面格式也與 42.20.4 相同。
+  > 技術要點：42.21.0 反編譯比對 `Translator` 只新增 `getMoveableDisplayName(IsoObject)`（沿用同一套 Moveables 鍵，本包的 MOD 家具名稱也會出現在製作視窗標題）；前綴路由、formatFixer、版本夾選擇與 script 解析未變。`PrintMedia.lua` 未改，42.21 恢復的 `loadstring` 不影響解析，verify [17] 契約照舊。追蹤器的遊戲版本預設值改為 42021，讓 MOD 的 `42.21/` 版本夾被當成有效分支（對版時 3 個監看 MOD 已帶此資料夾，內容與原有效分支相同）。
+
 ## [42.20.4-1.34.0] - 2026-09-27
 
 ### Added

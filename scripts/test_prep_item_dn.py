@@ -35,7 +35,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import prep_mod_strings  # noqa: E402
 import tracker  # noqa: E402
 
-# fixture 路徑落在有效版本分支（`tracker._version_int` 只取前兩段，門檻 42000..42020）。
+# fixture 路徑落在有效版本分支（`tracker._version_int` 只取前兩段，門檻 42000..`tracker.GAME_VERSION_INT`）。
 EFF = "mods/M/42.20/media/scripts/items.txt"
 DEAD = "mods/M/42.12/media/scripts/items.txt"  # 低於 EFF，同 sub_mod 下不入選
 

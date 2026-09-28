@@ -42,7 +42,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import verify_dist  # noqa: E402
 
 # fixture 路徑必須落在**有效版本分支**。`tracker._version_int()` 只取前兩段
-# （`major*1000+minor`），門檻是 `42000 <= v <= PZ_GAME_VERSION_INT`（預設 42020），
+# （`major*1000+minor`），門檻是 `42000 <= v <= tracker.GAME_VERSION_INT`（玩家實跑版本），
 # 而有效版本夾＝合格者中的**最大值**。所以 `42.12`(42012) 會勝過 `42`(42000)——死分支
 # fixture 必須讓活分支的版本夾更高（這裡 `42.20`＝42020），否則會測反。
 # mod 根 `media/` 是 B41 遺留、引擎不載入，`tracker.is_effective()` 一律判 False。

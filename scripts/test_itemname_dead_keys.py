@@ -411,7 +411,7 @@ effective_records = {
     "translate_en|mods/m/common/media/lua/shared/Translate/EN/UI.json|UI_Common": "c",
     "translate_en|mods/m/42.19/media/lua/shared/Translate/EN/UI.json|UI_Old": "o",
     "translate_en|mods/m/42.20/media/lua/shared/Translate/EN/UI.json|UI_Current": "n",
-    "translate_en|mods/m/42.21/media/lua/shared/Translate/EN/UI.json|UI_Future": "f",
+    "translate_en|mods/m/42.22/media/lua/shared/Translate/EN/UI.json|UI_Future": "f",  # 須高於 tracker.GAME_VERSION_INT
     "translate_en|mods/m/media/lua/shared/Translate/EN/UI.json|UI_Root": "r",
     "translate_en|mods/m/42.20/media/lua/shared/Translate/EN/UI_EN.txt|UI_Txt": "t",
     "script_item_dn|mods/m/42.20/media/scripts/items.txt|Base.Item": "Item",
