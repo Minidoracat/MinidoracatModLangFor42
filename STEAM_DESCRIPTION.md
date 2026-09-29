@@ -8,7 +8,8 @@
 [h2]📦 需要安裝[/h2]
 [list]
 [*] 遊戲版本 Build 42.20.4 以上
-[*] 姊妹作：遊戲本體的中文由[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3386633401]本體完全翻譯[/url]負責，兩者搭配才是完整中文體驗
+[*] 姊妹作[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3386633401]本體完全翻譯[/url]（已設為必需物品）：負責遊戲本體的中文，並附完整中文字型，兩者搭配才是完整中文體驗
+[*] [b]簡體中文玩家必裝本體完全翻譯[/b]：原版字型缺近千個簡體字，只裝本包會缺字、看起來像亂碼
 [/list]
 
 [h2]🚀 快速上手[/h2]
