@@ -21204,6 +21204,11 @@
     "reason": "同 mod As1-only 出貨鍵 UI_modinfopanel_WorkshopID =「创意工坊ID」已鎖定 创意工坊, own 保留英文 Workshop 會斷鏈; 但 As1 用敬語「您」是該 mod 105 鍵中唯一一處 (其餘皆用你), 且段末留多餘空格. 取 As1 術語＋修正該兩點",
     "value": "此模组不会在客户端下载.\n\n原因: 未找到创意工坊 ID (本地模组).\n\n如果你是此模组的作者, 需要将其发布到创意工坊并订阅."
   },
+  "UI.json|UI_moodle_LCC_Happy_time": {
+    "as1_value": "剩余时间: %d 分钟",
+    "reason": "2026-09-29 Steam 玩家回報主控台持續報錯：Last Cup Coffee（3740865682）以 getText(key, minutes) 帶參呼叫，上游 EN／CN 皆為 %1；As1 的 printf %d 遇到被轉成字串的分鐘數必定格式化失敗（42.20.2+ 每次 OnPlayerUpdate 記一行 WARN，畫面顯示字面 %d）。改回 %1。",
+    "value": "剩余时间: %1 分钟"
+  },
   "UI.json|UI_optionscreen_TchAL_KeyLock_tooltip": {
     "as1_value": "依靠时锁住移动键, 防止在床位上误触发原版的起身. <LINE> 如果卡在探身或睡眠姿势里, 可以关闭这个功能.",
     "reason": "As1 同一鍵內把 leaning 譯成兩個不同詞 (依靠/探身), 且「依靠」是 rely on 用字錯誤 (倚靠 才是 lean); own 全句一致用 倚靠 ｜ 2026-09-06 #421：上游 EN 新增「地面睡袋／帳篷與分割畫面不套用」一段，補譯。",

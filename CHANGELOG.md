@@ -4,6 +4,13 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Fixed
+
+- **Last Cup Coffee 的「開心」狀態提示改為正確顯示剩餘分鐘數，主控台也不再持續報錯。** 上游譯文把帶入分鐘數的格式寫錯，提示只會顯示「剩餘時間: %d 分鐘」，而且遊戲每次更新這個提示，主控台都會記一行格式錯誤；繁中與簡中都受影響（Steam 玩家回報）。
+  > 技術要點：`UI_moodle_LCC_Happy_time` 屬 As1 衍生層（`_unsorted`），As1 譯成 printf `%d`；Last Cup Coffee（3740865682）以 `getText(key, minutes)` 帶參呼叫，上游 EN／CN 皆為 `%1`。引擎先把數字參數轉成字串，`%d` 必定格式化失敗（42.20.2 起被攔下，每次記一行 WARN 並回傳原文）。改走 `cn_overrides`＋`sources/ch` 改回 `%1`，已登記 `ch_review_state`。
+
 ## [42.21.0-1.35.0] - 2026-09-29
 
 ### Added
