@@ -8409,6 +8409,20 @@
       "reason": "2026-09-29 #613：GaelGunStore 把彈藥與彈匣拆成兩個選項，此鍵改為 'Magazines spawn probability'（另有 _tooltip 'Magazines, drums and clips.'；子彈改由 Sandbox_GGSLO_prob_ammo 控制）。WAR（3630196063）仍寫 'Ammo and mags spawn probability'，但只存在 B42 不讀的 Sandbox_EN.txt；不出貨會讓 WAR 玩家看到字面鍵名、GaelGunStore 玩家看到英文。採 GaelGunStore 現行語意出貨；已接受殘留：WAR 玩家看到的中文少了「彈藥」。",
       "ch": "彈匣生成機率",
       "cn": "弹匣生成几率"
+    },
+    "Recipes|MakeJar4": {
+      "action": "translate",
+      "signature": "e111acc512dc249f",
+      "reason": "2026-09-29 #619: LongTermPreservationExtended 把此配方改成香料罐（Spices，同時涵蓋新加入的胡椒），LongTermPreservationExtendedSE 仍是鹽罐（Salt）；鹽與香料都屬調味料，取兩方皆成立的「調味料」。",
+      "ch": "製作罐裝醃製食品 (調味料)",
+      "cn": "制作罐装食品 (调味料)"
+    },
+    "Tooltip|Tooltip_item_UseForRefill": {
+      "action": "translate",
+      "signature": "f8a53cf58747ba31",
+      "reason": "2026-09-29 #619: LongTermPreservationExtended 指空的調味罐（Shaker，鹽與胡椒共用），LongTermPreservationExtendedSE 指空的鹽容器；兩者都是裝調味料的容器，取「調味料容器」。",
+      "ch": "用於補充空的調味料容器.",
+      "cn": "用于补充空的调味料容器."
     }
   }
 }

@@ -4,6 +4,28 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 6 個 MOD 新增或缺漏的繁簡中文，共 438 項。** Ammo Maker（#616，彈藥部件拆成一般／盒裝／袋裝／舊／軍用五類後，各地點的生成機率、數量上限與擲骰次數設定，以及用坩堝批量鑄造彈頭、批次拆解彈藥，215 項）、Long Term Preservation Extended（#619，新增的罐裝胡椒粉、碎胡椒、胡椒袋與調味罐，以及馬肉與 VFX 聯動子模組的罐裝／鹹／臘肉品和對應配方，105 項）、Snake's ModPack（#622，Le Gourmet Ultimate 的甘蔗種植、紅糖與甘蔗牆／門框／窗框建造，訊號干擾器、SnakeVille 地圖與《無線電訊號》雜誌等，72 項）、Tikitown & Powerplant（#618，新子模組 ScrapWorks 的廢料工坊配方與 5 本回收文摘，26 項）、Evolving Traits World（#617，鍛鍊寬限期、鍛鍊判定次數與超級免疫的諾克斯感染存活條件，10 項）、Extraction Mode（#621，NPC 來源模組選項與 A-Life 襲擊訊息，10 項）。
+  > 技術要點：全數落 `own_translations.json`，CH／CN 逐鍵對照 EN 直寫並經 Codex、Grok 對抗複核，採納 11 條修正（牛腱子肉沿用同 MOD 既有譯名、「空調味罐」易誤讀成冷氣、CN 的 faction 統一為「派系」、三個 CN 配方名把 Preserved 誤譯成「已保存」等）；Grok 認為「調味料」不含鹽而建議刪掉括號，未採納。Long Term Preservation Extended 的 90 項馬肉／VFX 鍵原屬 As1 `_unsorted`，As1 v3.9.1 同步（4dfe389）時被上游移除後一直缺譯，這次補回。ETW 新增的 `UI_ETW_AAA_TranslationVersion` 是給翻譯者的版本註記，ETW 以 `getModFileReader` 直接讀自己的語言檔比對版本、不經 `getText`，登記 `untranslatable_keys.json` 不出貨。
+
+### Changed
+
+- **依上游英文改值重譯 39 項。** Ammo Maker 的彈頭鑄造說明補上原料「小型鐵製／鋼製物品」、拋光劑改為用於小型金屬物品（#616）；Evolving Traits World 的免疫系統改為百分比門檻並加入超級免疫、睡眠系統新增一小時寬限期、「吃苦耐勞」補上耐力儲備的數值說明、健身規律度加上計算範例（#617）；Dead Magic「最後神盾」改為清除一般傷口感染、不治癒諾克斯感染（#620）；Extraction Mode 的匪徒設定改為可選 NPC 來源模組（Bandits／A-Life）（#621）；Le Gourmet Ultimate 甘蔗堆說明改為取出甘蔗放上乾燥架（#622）。
+  > 技術要點：As1 衍生層 20 鍵改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點）並登記 `ch_review_state`；own 層 19 鍵連同 `en` 錨點更新。另 5 個 own 鍵上游只改大小寫、動詞形或 `%`→`%%`，只更新 `en` 錨點；Ammo Maker 7 個 As1 段落註解鍵只把 ITEMS 改成 ITEMs，譯文不變。
+- **Long Term Preservation Extended 與其 SE 版共用的 2 個鍵改用兩邊都成立的譯名。** 主版的「製作罐裝保存食品」改成香料（Spices），SE 版仍是鹽（Salt），統一為「(調味料)」；補充說明改為「空的調味料容器」（主版是調味罐、SE 版是鹽罐）。
+  > 技術要點：`owner_conflict_decisions.json` 新增 `Recipes|MakeJar4`、`Tooltip|Tooltip_item_UseForRefill` 兩筆 translate 裁決；census 簽名先以既有 1,286 筆已裁決鍵自檢全數相符才寫入，`OWNER_CONFLICTS.md` 重生。
+- **Long Term Preservation Extended 5 個既有配方名與這次新增的同名配方統一。** 「製作肉乾餅」改為「製作乾肉餅」（與物品名一致）、「熬製脂油」改為「熬製牛脂」；簡中「打开食品罐装盒 (已保存)」等 3 項把 Preserved 誤譯成「已保存」，改為「腌制食品」「整盒罐装食品」。
+  > 技術要點：As1 衍生層；CH 改 `sources/ch`、CN 改 `cn_overrides`，皆登記 `ch_review_state`。
+
+### Removed
+
+- 移除上游已刪除的 3 個原創翻譯鍵：Ammo Maker 的「生成彈藥部件」選項與說明（上游拆成五類部件各自的開關），以及 Snake Mechanical Overhaul 的 `Read_Tire`（上游改為 `ReadTire`／`ReadTire2` 兩個配方，沿用原譯名「檢視汽車輪胎」）。
+
+其餘追蹤單無需另外變更：Long Term Preservation Extended 移除的 `Base.SaltEmpty`（SE 版仍在用）與 ETW 改名前的 `UI_ETW_aaa_TranslationVersion` 屬 As1 衍生層，依同步流程保留。
+
 ## [42.21.0-1.35.1] - 2026-09-29
 
 ### Fixed

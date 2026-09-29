@@ -13828,9 +13828,9 @@
     "cn": "暂时隐蔽你的存在."
    },
    "IGUI_DeadMagic_SpellDesc_last_aegis": {
-    "en": "Emergency cleansing ward with strong temporary damage mitigation.",
-    "ch": "緊急淨化結界, 短暫大幅減輕傷害.",
-    "cn": "紧急净化结界, 短暂大幅减轻伤害."
+    "en": "Emergency ward that clears ordinary wound infections and mitigates damage. Does not cure Knox infection.",
+    "ch": "緊急結界, 可清除一般傷口感染並減輕傷害. 無法治癒諾克斯感染.",
+    "cn": "紧急结界, 可清除普通伤口感染并减轻伤害. 无法治愈诺克斯感染."
    },
    "IGUI_DeadMagic_SpellDesc_light": {
     "en": "Creates a temporary light source at target point.",
@@ -41863,6 +41863,36 @@
     "en": "Recoil",
     "ch": "後座力",
     "cn": "后坐力"
+   },
+   "IGUI_CraftingCategories_ScrapWorks": {
+    "en": "Scrap Works",
+    "ch": "廢料工坊",
+    "cn": "废料工坊"
+   },
+   "IGUI_ExtractionMode_ALifeForceActive": {
+    "en": "A-LIFE RAIDERS: ACTIVE",
+    "ch": "A-Life 襲擊者: 活動中",
+    "cn": "A-Life 袭击者: 已激活"
+   },
+   "IGUI_ExtractionMode_GaragePreviewUnavailable": {
+    "en": "Vehicle preview unavailable",
+    "ch": "無法預覽車輛",
+    "cn": "无法预览车辆"
+   },
+   "IGUI_ExtractionMode_Message_ALifeExtraction": {
+    "en": "NPCs have signaled extraction at E%1. Helicopter arriving in 30 seconds. You can use this pickup.",
+    "ch": "NPC 在 E%1 發出了撤離訊號. 直升機將在 30 秒後抵達. 你可以搭這班撤離.",
+    "cn": "NPC 在 E%1 发出了撤离信号. 直升机将在 30 秒后抵达. 你可以搭这班撤离."
+   },
+   "IGUI_ExtractionMode_Message_ALifeForceArrived": {
+    "en": "An A-Life raiding force has arrived. Move now.",
+    "ch": "一支 A-Life 襲擊部隊已經到達. 快行動.",
+    "cn": "一支 A-Life 袭击部队已经到达. 快行动."
+   },
+   "IGUI_ExtractionMode_Message_ALifeWaveArrived": {
+    "en": "An A-Life attack wave approaches! Move now!",
+    "ch": "一波 A-Life 攻勢正在接近! 快行動!",
+    "cn": "一波 A-Life 攻势正在接近! 快行动!"
    }
   },
   "ItemName.json": {
@@ -144757,7 +144787,7 @@
     "cn": "圆形蜜蜂运输笼"
    },
    "LGULiterature.LGU_CookingMag1": {
-    "en": "Revista 'Le Gourmet Ultimate Nº1'",
+    "en": "'Le Gourmet Ultimate Nº1' Magazine",
     "ch": "雜誌: 《Le Gourmet Ultimate 第1期》",
     "cn": "杂志: 《Le Gourmet Ultimate 第1期》"
    },
@@ -148068,6 +148098,486 @@
     "en": "Broken Wooden Arrow",
     "ch": "折斷的木質箭矢",
     "cn": "折断的木质箭矢"
+   },
+   "TikitownScrapWorks.KnoxSalvageDigest1": {
+    "en": "Knox Salvage Digest Vol. 1: Cans and Kitchen Scrap",
+    "ch": "諾克斯回收文摘第1卷: 罐頭與廚房廢料",
+    "cn": "诺克斯回收文摘第1卷: 罐头与厨房废料"
+   },
+   "TikitownScrapWorks.KnoxSalvageDigest2": {
+    "en": "Knox Salvage Digest Vol. 2: Cookware and Heavy Salvage",
+    "ch": "諾克斯回收文摘第2卷: 炊具與重型回收物",
+    "cn": "诺克斯回收文摘第2卷: 炊具与重型回收物"
+   },
+   "TikitownScrapWorks.KnoxSalvageDigest3": {
+    "en": "Knox Salvage Digest Vol. 3: Sorting and Consolidation",
+    "ch": "諾克斯回收文摘第3卷: 分類與整併",
+    "cn": "诺克斯回收文摘第3卷: 分类与整合"
+   },
+   "TikitownScrapWorks.KnoxSalvageDigest4": {
+    "en": "Knox Salvage Digest Vol. 4: Sheet Work",
+    "ch": "諾克斯回收文摘第4卷: 板材加工",
+    "cn": "诺克斯回收文摘第4卷: 板材加工"
+   },
+   "TikitownScrapWorks.KnoxSalvageDigest5": {
+    "en": "Knox Salvage Digest Vol. 5: Pipe Work",
+    "ch": "諾克斯回收文摘第5卷: 管材加工",
+    "cn": "诺克斯回收文摘第5卷: 管材加工"
+   },
+   "Base.CannedPepper": {
+    "en": "Jar of Pepper",
+    "ch": "罐裝胡椒粉",
+    "cn": "罐装胡椒粉"
+   },
+   "Base.CannedPepper_Box": {
+    "en": "Box Of Pepper Jars",
+    "ch": "盒裝胡椒粉玻璃罐",
+    "cn": "罐装胡椒粉 (整箱)"
+   },
+   "Base.CannedPepper_Open": {
+    "en": "Jar of Pepper (Open)",
+    "ch": "罐裝胡椒粉 (已開啟)",
+    "cn": "罐装胡椒粉 (已打开)"
+   },
+   "Base.CrushedPepper": {
+    "en": "Crushed Pepper",
+    "ch": "碎胡椒",
+    "cn": "碎胡椒"
+   },
+   "Base.HomasPepperBag": {
+    "en": "Homas Pepper Bag",
+    "ch": "霍馬斯胡椒袋",
+    "cn": "霍马斯胡椒袋"
+   },
+   "Base.PepperShaker_Box": {
+    "en": "Box Of Pepper Shakers",
+    "ch": "盒裝胡椒罐",
+    "cn": "胡椒罐 (整盒)"
+   },
+   "Base.SaltShaker_Box": {
+    "en": "Box Of Salt Shakers",
+    "ch": "盒裝鹽罐",
+    "cn": "盐罐 (整盒)"
+   },
+   "Base.ShakerEmpty": {
+    "en": "Shaker (Empty)",
+    "ch": "調味罐 (空)",
+    "cn": "调味罐 (空)"
+   },
+   "Base.ShakerEmpty_Box": {
+    "en": "Box Of Empty Shakers",
+    "ch": "盒裝調味罐 (空)",
+    "cn": "调味罐 (空, 整盒)"
+   },
+   "Base.CannedHorse": {
+    "en": "Jar of Horse Meat",
+    "ch": "罐裝馬肉",
+    "cn": "罐装马肉"
+   },
+   "Base.CannedHorse_Box": {
+    "en": "Box Of Horse Meat Jars",
+    "ch": "盒裝馬肉玻璃罐",
+    "cn": "罐装马肉 (整箱)"
+   },
+   "Base.CannedHorse_Open": {
+    "en": "Jar of Horse Meat (Open)",
+    "ch": "罐裝馬肉 (已開啟)",
+    "cn": "罐装马肉 (已打开)"
+   },
+   "Base.CornedHorse": {
+    "en": "Jar of Corned Horse Meat",
+    "ch": "罐裝鹹馬肉",
+    "cn": "罐装咸马肉"
+   },
+   "Base.CornedHorse_Box": {
+    "en": "Box Of Corned Horse Meat Jars",
+    "ch": "盒裝鹹馬肉玻璃罐",
+    "cn": "罐装咸马肉 (整箱)"
+   },
+   "Base.CornedHorse_Open": {
+    "en": "Jar of Corned Horse (Open)",
+    "ch": "罐裝鹹馬肉 (已開啟)",
+    "cn": "罐装咸马肉 (已打开)"
+   },
+   "Base.CuredHorse_Loin": {
+    "en": "Cured Horse Loin",
+    "ch": "臘馬里肌",
+    "cn": "腊马里脊"
+   },
+   "Base.CuredHorse_Steak": {
+    "en": "Cured Horse Steak",
+    "ch": "臘馬肉排",
+    "cn": "腊马肉排"
+   },
+   "Base.CannedBeefBrisket": {
+    "en": "Canned Beef Brisket",
+    "ch": "罐裝牛胸肉",
+    "cn": "罐装牛胸肉"
+   },
+   "Base.CannedBeefBrisket_Box": {
+    "en": "Box Of Beef Brisket Jars",
+    "ch": "盒裝牛胸肉玻璃罐",
+    "cn": "罐装牛胸肉 (整箱)"
+   },
+   "Base.CannedBeefBrisket_Open": {
+    "en": "Jar of Beef Brisket (Open)",
+    "ch": "罐裝牛胸肉 (已開啟)",
+    "cn": "罐装牛胸肉 (已打开)"
+   },
+   "Base.CannedBeefShank": {
+    "en": "Canned Beef Shank",
+    "ch": "罐裝牛腱子肉",
+    "cn": "罐装牛腱子肉"
+   },
+   "Base.CannedBeefShank_Box": {
+    "en": "Box Of Beef Shank Jars",
+    "ch": "盒裝牛腱子肉玻璃罐",
+    "cn": "罐装牛腱子肉 (整箱)"
+   },
+   "Base.CannedBeefShank_Open": {
+    "en": "Jar of Beef Shank (Open)",
+    "ch": "罐裝牛腱子肉 (已開啟)",
+    "cn": "罐装牛腱子肉 (已打开)"
+   },
+   "Base.CannedBeefShortRibs": {
+    "en": "Canned Beef Short Ribs",
+    "ch": "罐裝牛小排",
+    "cn": "罐装牛小排"
+   },
+   "Base.CannedBeefShortRibs_Box": {
+    "en": "Box Of Beef Short Ribs Jars",
+    "ch": "盒裝牛小排玻璃罐",
+    "cn": "罐装牛小排 (整箱)"
+   },
+   "Base.CannedBeefShortRibs_Open": {
+    "en": "Jar of Beef Short Ribs (Open)",
+    "ch": "罐裝牛小排 (已開啟)",
+    "cn": "罐装牛小排 (已打开)"
+   },
+   "Base.CannedDuckBreast": {
+    "en": "Canned Duck Breast",
+    "ch": "罐裝鴨胸肉",
+    "cn": "罐装鸭胸肉"
+   },
+   "Base.CannedDuckBreast_Box": {
+    "en": "Box Of Duck Breast Jars",
+    "ch": "盒裝鴨胸肉玻璃罐",
+    "cn": "罐装鸭胸肉 (整箱)"
+   },
+   "Base.CannedDuckBreast_Open": {
+    "en": "Jar of Duck Breast (Open)",
+    "ch": "罐裝鴨胸肉 (已開啟)",
+    "cn": "罐装鸭胸肉 (已打开)"
+   },
+   "Base.CannedLambLeg": {
+    "en": "Canned Lamb Leg",
+    "ch": "罐裝羊腿",
+    "cn": "罐装羊腿"
+   },
+   "Base.CannedLambLeg_Box": {
+    "en": "Box Of Lamb Leg Jars",
+    "ch": "盒裝羊腿玻璃罐",
+    "cn": "罐装羊腿 (整箱)"
+   },
+   "Base.CannedLambLeg_Open": {
+    "en": "Jar of Lamb Leg (Open)",
+    "ch": "罐裝羊腿 (已開啟)",
+    "cn": "罐装羊腿 (已打开)"
+   },
+   "Base.CannedPorkBelly": {
+    "en": "Canned Pork Belly",
+    "ch": "罐裝豬五花肉",
+    "cn": "罐装猪五花肉"
+   },
+   "Base.CannedPorkBelly_Box": {
+    "en": "Box Of Pork Belly Jars",
+    "ch": "盒裝豬五花肉玻璃罐",
+    "cn": "罐装猪五花肉 (整箱)"
+   },
+   "Base.CannedPorkBelly_Open": {
+    "en": "Jar of Pork Belly (Open)",
+    "ch": "罐裝豬五花肉 (已開啟)",
+    "cn": "罐装猪五花肉 (已打开)"
+   },
+   "Base.CannedPorkRibs": {
+    "en": "Canned Pork Ribs",
+    "ch": "罐裝豬肋排",
+    "cn": "罐装猪肋排"
+   },
+   "Base.CannedPorkRibs_Box": {
+    "en": "Box Of Pork Rib Jars",
+    "ch": "盒裝豬肋排玻璃罐",
+    "cn": "罐装猪肋排 (整箱)"
+   },
+   "Base.CannedPorkRibs_Open": {
+    "en": "Jar of Pork Ribs (Open)",
+    "ch": "罐裝豬肋排 (已開啟)",
+    "cn": "罐装猪肋排 (已打开)"
+   },
+   "Base.CannedVealCutlet": {
+    "en": "Canned Veal Cutlet",
+    "ch": "罐裝小牛排",
+    "cn": "罐装小牛排"
+   },
+   "Base.CannedVealCutlet_Box": {
+    "en": "Box Of Veal Cutlet Jars",
+    "ch": "盒裝小牛排玻璃罐",
+    "cn": "罐装小牛排 (整箱)"
+   },
+   "Base.CannedVealCutlet_Open": {
+    "en": "Jar of Veal Cutlet (Open)",
+    "ch": "罐裝小牛排 (已開啟)",
+    "cn": "罐装小牛排 (已打开)"
+   },
+   "Base.CornedBeefBrisket": {
+    "en": "Corned Beef Brisket",
+    "ch": "罐裝鹹牛胸肉",
+    "cn": "罐装咸牛胸肉"
+   },
+   "Base.CornedBeefBrisket_Box": {
+    "en": "Box Of Corned Beef Brisket Jars",
+    "ch": "盒裝鹹牛胸肉玻璃罐",
+    "cn": "罐装咸牛胸肉 (整箱)"
+   },
+   "Base.CornedBeefBrisket_Open": {
+    "en": "Jar of Corned Beef Brisket (Open)",
+    "ch": "罐裝鹹牛胸肉 (已開啟)",
+    "cn": "罐装咸牛胸肉 (已打开)"
+   },
+   "Base.CornedBeefShank": {
+    "en": "Corned Beef Shank",
+    "ch": "罐裝鹹牛腱子肉",
+    "cn": "罐装咸牛腱子肉"
+   },
+   "Base.CornedBeefShank_Box": {
+    "en": "Box Of Corned Beef Shank Jars",
+    "ch": "盒裝鹹牛腱子肉玻璃罐",
+    "cn": "罐装咸牛腱子肉 (整箱)"
+   },
+   "Base.CornedBeefShank_Open": {
+    "en": "Jar of Corned Beef Shank (Open)",
+    "ch": "罐裝鹹牛腱子肉 (已開啟)",
+    "cn": "罐装咸牛腱子肉 (已打开)"
+   },
+   "Base.CornedBeefShortRibs": {
+    "en": "Corned Beef Short Ribs",
+    "ch": "罐裝鹹牛小排",
+    "cn": "罐装咸牛小排"
+   },
+   "Base.CornedBeefShortRibs_Box": {
+    "en": "Box Of Corned Beef Short Ribs Jars",
+    "ch": "盒裝鹹牛小排玻璃罐",
+    "cn": "罐装咸牛小排 (整箱)"
+   },
+   "Base.CornedBeefShortRibs_Open": {
+    "en": "Jar of Corned Beef Short Ribs (Open)",
+    "ch": "罐裝鹹牛小排 (已開啟)",
+    "cn": "罐装咸牛小排 (已打开)"
+   },
+   "Base.CornedDuckBreast": {
+    "en": "Corned Duck Breast",
+    "ch": "罐裝鹹鴨胸肉",
+    "cn": "罐装咸鸭胸肉"
+   },
+   "Base.CornedDuckBreast_Box": {
+    "en": "Box Of Corned Duck Breast Jars",
+    "ch": "盒裝鹹鴨胸肉玻璃罐",
+    "cn": "罐装咸鸭胸肉 (整箱)"
+   },
+   "Base.CornedDuckBreast_Open": {
+    "en": "Jar of Corned Duck Breast (Open)",
+    "ch": "罐裝鹹鴨胸肉 (已開啟)",
+    "cn": "罐装咸鸭胸肉 (已打开)"
+   },
+   "Base.CornedLambLeg": {
+    "en": "Corned Lamb Leg",
+    "ch": "罐裝鹹羊腿",
+    "cn": "罐装咸羊腿"
+   },
+   "Base.CornedLambLeg_Box": {
+    "en": "Box Of Corned Lamb Leg Jars",
+    "ch": "盒裝鹹羊腿玻璃罐",
+    "cn": "罐装咸羊腿 (整箱)"
+   },
+   "Base.CornedLambLeg_Open": {
+    "en": "Jar of Corned Lamb Leg (Open)",
+    "ch": "罐裝鹹羊腿 (已開啟)",
+    "cn": "罐装咸羊腿 (已打开)"
+   },
+   "Base.CornedPorkBelly": {
+    "en": "Corned Pork Belly",
+    "ch": "罐裝鹹豬五花肉",
+    "cn": "罐装咸猪五花肉"
+   },
+   "Base.CornedPorkBelly_Box": {
+    "en": "Box Of Corned Pork Belly Jars",
+    "ch": "盒裝鹹豬五花肉玻璃罐",
+    "cn": "罐装咸猪五花肉 (整箱)"
+   },
+   "Base.CornedPorkBelly_Open": {
+    "en": "Jar of Corned Pork Belly (Open)",
+    "ch": "罐裝鹹豬五花肉 (已開啟)",
+    "cn": "罐装咸猪五花肉 (已打开)"
+   },
+   "Base.CornedPorkRibs": {
+    "en": "Corned Pork Ribs",
+    "ch": "罐裝鹹豬肋排",
+    "cn": "罐装咸猪肋排"
+   },
+   "Base.CornedPorkRibs_Box": {
+    "en": "Box Of Corned Pork Rib Jars",
+    "ch": "盒裝鹹豬肋排玻璃罐",
+    "cn": "罐装咸猪肋排 (整箱)"
+   },
+   "Base.CornedPorkRibs_Open": {
+    "en": "Jar of Corned Pork Ribs (Open)",
+    "ch": "罐裝鹹豬肋排 (已開啟)",
+    "cn": "罐装咸猪肋排 (已打开)"
+   },
+   "Base.CornedVealCutlet": {
+    "en": "Corned Veal Cutlet",
+    "ch": "罐裝鹹小牛排",
+    "cn": "罐装咸小牛排"
+   },
+   "Base.CornedVealCutlet_Box": {
+    "en": "Box Of Corned Veal Cutlet Jars",
+    "ch": "盒裝鹹小牛排玻璃罐",
+    "cn": "罐装咸小牛排 (整箱)"
+   },
+   "Base.CornedVealCutlet_Open": {
+    "en": "Jar of Corned Veal Cutlet (Open)",
+    "ch": "罐裝鹹小牛排 (已開啟)",
+    "cn": "罐装咸小牛排 (已打开)"
+   },
+   "Base.CuredBeefBrisket": {
+    "en": "Cured Beef Brisket",
+    "ch": "臘牛胸肉",
+    "cn": "腊牛胸肉"
+   },
+   "Base.CuredBeefShank": {
+    "en": "Cured Beef Shank",
+    "ch": "臘牛腱子肉",
+    "cn": "腊牛腱子肉"
+   },
+   "Base.CuredBeefShortRibs": {
+    "en": "Cured Beef Short Ribs",
+    "ch": "臘牛小排",
+    "cn": "腊牛小排"
+   },
+   "Base.CuredDuckBreast": {
+    "en": "Cured Duck Breast",
+    "ch": "臘鴨胸肉",
+    "cn": "腊鸭胸肉"
+   },
+   "Base.CuredLambLeg": {
+    "en": "Cured Lamb Leg",
+    "ch": "臘羊腿",
+    "cn": "腊羊腿"
+   },
+   "Base.CuredPorkBelly": {
+    "en": "Cured Pork Belly",
+    "ch": "臘豬五花肉",
+    "cn": "腊猪五花肉"
+   },
+   "Base.CuredPorkRibs": {
+    "en": "Cured Pork Ribs",
+    "ch": "臘豬肋排",
+    "cn": "腊猪肋排"
+   },
+   "Base.CuredVealCutlet": {
+    "en": "Cured Veal Cutlet",
+    "ch": "臘小牛排",
+    "cn": "腊小牛排"
+   },
+   "LGUFood.SugarBrownEmpty": {
+    "en": "Sugar Brown Empty",
+    "ch": "紅糖 (空)",
+    "cn": "红糖 (空)"
+   },
+   "LGUFarming.SugarcaneSeed": {
+    "en": "Sugarcane Seeds",
+    "ch": "甘蔗種子",
+    "cn": "甘蔗种子"
+   },
+   "LGUFarming.SugarcaneBagSeed": {
+    "en": "Seed Packet - Sugarcane",
+    "ch": "甘蔗種子包",
+    "cn": "甘蔗种子包"
+   },
+   "LGUFood.SugarCaneChunks": {
+    "en": "Sugarcane Chunks",
+    "ch": "甘蔗塊",
+    "cn": "甘蔗块"
+   },
+   "LGUFood.NaturalSugarBrown": {
+    "en": "Natural Sugar Brown",
+    "ch": "天然紅糖",
+    "cn": "天然红糖"
+   },
+   "LGUFarming.SugarcaneBagSeed_Empty": {
+    "en": "Empty Seed Packet - Sugarcane",
+    "ch": "甘蔗種子包 (空)",
+    "cn": "甘蔗种子包 (空)"
+   },
+   "AmmoMaker.AM_MagazineElectrical1": {
+    "en": "'Radio Signals' Magazine N.01",
+    "ch": "《無線電訊號》雜誌 第01期",
+    "cn": "《无线电信号》杂志 第01期"
+   },
+   "Base.Mov_SignalInhibitor": {
+    "en": "Signal Inhibitor",
+    "ch": "訊號干擾器",
+    "cn": "信号干扰器"
+   },
+   "LGUFood.SaucepanCSugarcane": {
+    "en": "Sugarcane Saucepan",
+    "ch": "平底煮鍋 (甘蔗)",
+    "cn": "平底煮锅 (甘蔗)"
+   },
+   "LGUFood.SaucepanSugarcane": {
+    "en": "Sugarcane Saucepan",
+    "ch": "平底煮鍋 (甘蔗)",
+    "cn": "平底煮锅 (甘蔗)"
+   },
+   "LGUFood.Sugarcane": {
+    "en": "Sugarcane",
+    "ch": "甘蔗",
+    "cn": "甘蔗"
+   },
+   "LGUFood.SugarcaneDried": {
+    "en": "Sugarcane Dried",
+    "ch": "甘蔗 (乾燥)",
+    "cn": "甘蔗 (干燥)"
+   },
+   "LGULiterature.LGU_CookingMag2": {
+    "en": "'Le Gourmet Ultimate Nº2' Magazine",
+    "ch": "雜誌: 《Le Gourmet Ultimate 第2期》",
+    "cn": "杂志: 《Le Gourmet Ultimate 第2期》"
+   },
+   "LGULiterature.SurvivalistMag2": {
+    "en": "'The Survivalist Nº2' Magazine",
+    "ch": "雜誌: 《生存專家 第2期》",
+    "cn": "杂志: 《生存专家 第2期》"
+   },
+   "LGULiterature.SurvivalistMag3": {
+    "en": "'The Survivalist Nº3' Magazine",
+    "ch": "雜誌: 《生存專家 第3期》",
+    "cn": "杂志: 《生存专家 第3期》"
+   },
+   "LGUMaterials.SugarcanePile": {
+    "en": "Sugarcane Pile",
+    "ch": "甘蔗堆",
+    "cn": "甘蔗堆"
+   },
+   "LGUMaterials.SugarcanePileDried": {
+    "en": "Dried Sugarcane Pile",
+    "ch": "甘蔗堆 (乾燥)",
+    "cn": "甘蔗堆 (干燥)"
+   },
+   "Base.SnakeVilleMap": {
+    "en": "SnakeVille Map",
+    "ch": "SnakeVille 地圖",
+    "cn": "SnakeVille 地图"
    }
   },
   "Print_Media.json": {
@@ -162164,11 +162674,6 @@
     "ch": "將懸吊零件裝入袋中",
     "cn": "将悬挂零件装入袋中"
    },
-   "Read_Tire": {
-    "en": "Read Car Tire",
-    "ch": "檢視汽車輪胎",
-    "cn": "查看汽车轮胎"
-   },
    "SawDismountedTire": {
     "en": "Dismantle Dismounted Tire",
     "ch": "拆解已拆下的輪胎",
@@ -163466,6 +163971,496 @@
     "en": "Paint Valuline: Spiffo Van",
     "ch": "塗裝瓦盧林: 斯皮福貨車",
     "cn": "涂装瓦卢林: 斯皮福货车"
+   },
+   "DisassembleAmmoBulk": {
+    "en": "Disassemble Ammo Bulk",
+    "ch": "批次拆解彈藥",
+    "cn": "批量拆解弹药"
+   },
+   "ProduceBalls00": {
+    "en": "Produce Balls 00",
+    "ch": "生產鹿彈彈丸",
+    "cn": "生产鹿弹弹丸"
+   },
+   "ProduceBulletsHandgunL": {
+    "en": "Produce Bullets Handgun L",
+    "ch": "生產手槍大口徑彈頭",
+    "cn": "生产手枪大口径弹头"
+   },
+   "ProduceBulletsHandgunLAP": {
+    "en": "Produce Bullets Handgun L AP",
+    "ch": "生產手槍大口徑穿甲彈頭",
+    "cn": "生产手枪大口径穿甲弹头"
+   },
+   "ProduceBulletsHandgunM": {
+    "en": "Produce Bullets Handgun M",
+    "ch": "生產手槍中口徑彈頭",
+    "cn": "生产手枪中口径弹头"
+   },
+   "ProduceBulletsHandgunMAP": {
+    "en": "Produce Bullets Handgun M AP",
+    "ch": "生產手槍中口徑穿甲彈頭",
+    "cn": "生产手枪中口径穿甲弹头"
+   },
+   "ProduceBulletsHandgunS": {
+    "en": "Produce Bullets Handgun S",
+    "ch": "生產手槍小口徑彈頭",
+    "cn": "生产手枪小口径弹头"
+   },
+   "ProduceBulletsHandgunSAP": {
+    "en": "Produce Bullets Handgun S AP",
+    "ch": "生產手槍小口徑穿甲彈頭",
+    "cn": "生产手枪小口径穿甲弹头"
+   },
+   "ProduceBulletsRifleL": {
+    "en": "Produce Bullets Rifle L",
+    "ch": "生產步槍大口徑彈頭",
+    "cn": "生产步枪大口径弹头"
+   },
+   "ProduceBulletsRifleLAP": {
+    "en": "Produce Bullets Rifle L AP",
+    "ch": "生產步槍大口徑穿甲彈頭",
+    "cn": "生产步枪大口径穿甲弹头"
+   },
+   "ProduceBulletsRifleM": {
+    "en": "Produce Bullets Rifle M",
+    "ch": "生產步槍中口徑彈頭",
+    "cn": "生产步枪中口径弹头"
+   },
+   "ProduceBulletsRifleMAP": {
+    "en": "Produce Bullets Rifle M AP",
+    "ch": "生產步槍中口徑穿甲彈頭",
+    "cn": "生产步枪中口径穿甲弹头"
+   },
+   "ProduceBulletsRifleS": {
+    "en": "Produce Bullets Rifle S",
+    "ch": "生產步槍小口徑彈頭",
+    "cn": "生产步枪小口径弹头"
+   },
+   "ProduceBulletsRifleSAP": {
+    "en": "Produce Bullets Rifle S AP",
+    "ch": "生產步槍小口徑穿甲彈頭",
+    "cn": "生产步枪小口径穿甲弹头"
+   },
+   "ProduceSlugs12": {
+    "en": "Produce Slugs 12",
+    "ch": "生產12號獨頭彈",
+    "cn": "生产12号独头弹"
+   },
+   "ScrapWorks_Break_Down_Metal_Pipe": {
+    "en": "Break Down Metal Pipe",
+    "ch": "拆解鐵管",
+    "cn": "拆解金属管"
+   },
+   "ScrapWorks_Break_Down_Small_Sheet": {
+    "en": "Break Down Small Steel Sheet",
+    "ch": "拆解小鋼板",
+    "cn": "拆解小金属板"
+   },
+   "ScrapWorks_Bundle_Small_Scrap": {
+    "en": "Bundle Small Scrap",
+    "ch": "合併小塊廢料",
+    "cn": "合并小块废料"
+   },
+   "ScrapWorks_Compact_Aluminum_Fragments": {
+    "en": "Compact Aluminum Fragments",
+    "ch": "壓實鋁碎片",
+    "cn": "压实铝碎片"
+   },
+   "ScrapWorks_Compact_Iron_Pieces": {
+    "en": "Compact Iron Pieces",
+    "ch": "壓實鐵片",
+    "cn": "压实铁片"
+   },
+   "ScrapWorks_Compact_Steel_Pieces": {
+    "en": "Compact Steel Pieces",
+    "ch": "壓實鋼片",
+    "cn": "压实钢片"
+   },
+   "ScrapWorks_Crush_Aluminum_Cans": {
+    "en": "Crush Aluminum Cans",
+    "ch": "壓扁鋁罐",
+    "cn": "压扁铝罐"
+   },
+   "ScrapWorks_Crush_Tin_Cans": {
+    "en": "Crush Tin Cans",
+    "ch": "壓扁錫罐",
+    "cn": "压扁锡罐"
+   },
+   "ScrapWorks_Cut_Nails": {
+    "en": "Cut Nails",
+    "ch": "切製釘子",
+    "cn": "切制钉子"
+   },
+   "ScrapWorks_Hammer_Out_Small_Sheet": {
+    "en": "Hammer Out Small Steel Sheet",
+    "ch": "捶打成小鋼板",
+    "cn": "捶打成小金属板"
+   },
+   "ScrapWorks_Reclaim_Sheet_Metal_Scrap": {
+    "en": "Reclaim Sheet Metal Scrap",
+    "ch": "回收廢金屬",
+    "cn": "回收废金属"
+   },
+   "ScrapWorks_Roll_Metal_Pipe": {
+    "en": "Roll Metal Pipe",
+    "ch": "捲製鐵管",
+    "cn": "卷制金属管"
+   },
+   "ScrapWorks_Scrap_Can_Pipe": {
+    "en": "Scrap Can Pipe",
+    "ch": "拆解錫罐菸斗",
+    "cn": "拆解锡罐烟斗"
+   },
+   "ScrapWorks_Scrap_Extinguisher": {
+    "en": "Scrap Empty Extinguisher",
+    "ch": "拆解空滅火器",
+    "cn": "拆解空灭火器"
+   },
+   "ScrapWorks_Scrap_Large_Metal": {
+    "en": "Scrap Metal Cookware",
+    "ch": "拆解金屬炊具",
+    "cn": "拆解金属炊具"
+   },
+   "ScrapWorks_Scrap_Medium_Metal": {
+    "en": "Scrap Metal Utensils",
+    "ch": "拆解金屬器具",
+    "cn": "拆解金属器具"
+   },
+   "ScrapWorks_Scrap_Small_Metal": {
+    "en": "Scrap Small Metal Items",
+    "ch": "拆解小型金屬物品",
+    "cn": "拆解小型金属物品"
+   },
+   "ScrapWorks_Scrap_Tiny_Metal": {
+    "en": "Scrap Metal Bits",
+    "ch": "拆解金屬零碎物",
+    "cn": "拆解金属零碎物"
+   },
+   "ScrapWorks_Scrap_Umbrella": {
+    "en": "Scrap Umbrella",
+    "ch": "拆解雨傘",
+    "cn": "拆解雨伞"
+   },
+   "ScrapWorks_Scrap_Weights": {
+    "en": "Scrap Weights and Clubs",
+    "ch": "拆解重訓器材與球桿",
+    "cn": "拆解健身器材与球杆"
+   },
+   "CrushPeppercorn": {
+    "en": "Crush Peppercorn",
+    "ch": "碾碎胡椒粒",
+    "cn": "碾碎胡椒粒"
+   },
+   "OpenPepperJar": {
+    "en": "Open Jar of Pepper",
+    "ch": "打開罐裝胡椒粉",
+    "cn": "打开罐装胡椒粉"
+   },
+   "RefillPepper": {
+    "en": "Refill Pepper",
+    "ch": "補充胡椒粉",
+    "cn": "补充胡椒粉"
+   },
+   "UnpackHomasPepperBag": {
+    "en": "Unpack Bag of Pepper",
+    "ch": "拆開袋裝胡椒粉",
+    "cn": "打开袋装胡椒粉"
+   },
+   "UnpackPepperJar": {
+    "en": "Unpack Jar of Pepper",
+    "ch": "倒出罐裝胡椒粉",
+    "cn": "倒出罐装胡椒粉"
+   },
+   "MakeCuredMeat2Horse": {
+    "en": "Make Cured Meat",
+    "ch": "製作醃肉",
+    "cn": "制作腌肉"
+   },
+   "MakeCuredMeatHorse": {
+    "en": "Make Cured Meat",
+    "ch": "製作醃肉",
+    "cn": "制作腌肉"
+   },
+   "MakeJar2Horse": {
+    "en": "Make Jar of Preserved Food (Meats)",
+    "ch": "製作罐裝醃製食品 (肉類)",
+    "cn": "制作罐装食品 (肉类)"
+   },
+   "MakeJar3Horse": {
+    "en": "Make Jar of Preserved Food (Corned)",
+    "ch": "製作罐裝食品 (鹹肉)",
+    "cn": "制作罐装食品 (咸肉)"
+   },
+   "MakePemmicanMeatHorse": {
+    "en": "Make Pemmican",
+    "ch": "製作乾肉餅",
+    "cn": "制作干肉饼"
+   },
+   "OpenBoxOfPreservedJarsHorse": {
+    "en": "Open Box of Food Jars (Preserved)",
+    "ch": "開啟整盒罐裝醃製食品",
+    "cn": "打开整盒罐装腌制食品"
+   },
+   "OpenBoxOfUncookedJarsHorse": {
+    "en": "Open Box of Food Jars (Uncooked)",
+    "ch": "打開整盒罐裝食品 (未烹飪)",
+    "cn": "打开整盒罐装食品 (未烹饪)"
+   },
+   "OpenJarOfFood2Horse": {
+    "en": "Open Jar of Preserved Food (Meats)",
+    "ch": "開啟罐裝醃製食品 (肉類)",
+    "cn": "打开罐装食品 (肉类)"
+   },
+   "OpenJarOfFood3Horse": {
+    "en": "Open Jar of Preserved Food (Corned)",
+    "ch": "打開罐裝食品 (鹹肉)",
+    "cn": "打开罐装食品 (咸肉)"
+   },
+   "PackJarsFoodHorse": {
+    "en": "Pack 6 Jars of Uncooked Food in Box",
+    "ch": "將 6 罐未烹飪食品裝箱",
+    "cn": "将 6 罐未烹饪食品装箱"
+   },
+   "PackPreservedJarsFoodHorse": {
+    "en": "Pack 6 Jars of Preserved Food in Box",
+    "ch": "將 6 罐醃製食品裝箱",
+    "cn": "将 6 罐腌制食品装箱"
+   },
+   "ReduceFatHorse": {
+    "en": "Reduce Animal Fat",
+    "ch": "提煉動物脂肪",
+    "cn": "提炼动物脂肪"
+   },
+   "MakeCuredMeat2VFX": {
+    "en": "Make Cured Meat",
+    "ch": "製作醃肉",
+    "cn": "制作腌肉"
+   },
+   "MakeCuredMeatVFX": {
+    "en": "Make Cured Meat",
+    "ch": "製作醃肉",
+    "cn": "制作腌肉"
+   },
+   "MakeJar2VFX": {
+    "en": "Make Jar of Preserved Food (Meats)",
+    "ch": "製作罐裝醃製食品 (肉類)",
+    "cn": "制作罐装食品 (肉类)"
+   },
+   "MakeJar3VFX": {
+    "en": "Make Jar of Preserved Food (Corned)",
+    "ch": "製作罐裝食品 (鹹肉)",
+    "cn": "制作罐装食品 (咸肉)"
+   },
+   "MakePemmicanMeatVFX": {
+    "en": "Make Pemmican",
+    "ch": "製作乾肉餅",
+    "cn": "制作干肉饼"
+   },
+   "OpenBoxOfPreservedJarsVFX": {
+    "en": "Open Box of Food Jars (Preserved)",
+    "ch": "開啟整盒罐裝醃製食品",
+    "cn": "打开整盒罐装腌制食品"
+   },
+   "OpenBoxOfUncookedJarsVFX": {
+    "en": "Open Box of Food Jars (Uncooked)",
+    "ch": "打開整盒罐裝食品 (未烹飪)",
+    "cn": "打开整盒罐装食品 (未烹饪)"
+   },
+   "OpenJarOfFood2VFX": {
+    "en": "Open Jar of Preserved Food (Meats)",
+    "ch": "開啟罐裝醃製食品 (肉類)",
+    "cn": "打开罐装食品 (肉类)"
+   },
+   "OpenJarOfFood3VFX": {
+    "en": "Open Jar of Preserved Food (Corned)",
+    "ch": "打開罐裝食品 (鹹肉)",
+    "cn": "打开罐装食品 (咸肉)"
+   },
+   "PackJarsFoodVFX": {
+    "en": "Pack 6 Jars of Uncooked Food in Box",
+    "ch": "將 6 罐未烹飪食品裝箱",
+    "cn": "将 6 罐未烹饪食品装箱"
+   },
+   "PackPreservedJarsFoodVFX": {
+    "en": "Pack 6 Jars of Preserved Food in Box",
+    "ch": "將 6 罐醃製食品裝箱",
+    "cn": "将 6 罐腌制食品装箱"
+   },
+   "ReduceMeatLardVFX": {
+    "en": "Reduce Pork Fat for Lard",
+    "ch": "熬製豬油",
+    "cn": "熬制猪油"
+   },
+   "ReduceSchmaltzVFX": {
+    "en": "Reduce Poultry Fat for Schmaltz",
+    "ch": "熬製禽脂",
+    "cn": "熬制禽脂"
+   },
+   "ReduceTallowVFX": {
+    "en": "Reduce Animal Fat for Tallow",
+    "ch": "熬製牛脂",
+    "cn": "熬制牛羊油"
+   },
+   "MakeSignalInhibitor": {
+    "en": "Make Signal Inhibitor",
+    "ch": "製作訊號干擾器",
+    "cn": "制作信号干扰器"
+   },
+   "AdvancedWoodDoorFrame": {
+    "en": "Advanced Wood Door Frame",
+    "ch": "進階木製門框",
+    "cn": "高级木制门框"
+   },
+   "AdvancedWoodWallFrame": {
+    "en": "Advanced Wood Wall Frame",
+    "ch": "進階木製牆體框架",
+    "cn": "高级木制墙体框架"
+   },
+   "AdvancedWoodWindowFrame": {
+    "en": "Advanced Wood Window Frame",
+    "ch": "進階木製窗框",
+    "cn": "高级木制窗框"
+   },
+   "CaneDoorExteriorLvl1": {
+    "en": "Exterior Cane Door Frame Lvl 1",
+    "ch": "甘蔗外牆門框 (等級 1)",
+    "cn": "甘蔗外墙门框 (等级 1)"
+   },
+   "CaneDoorExteriorLvl2": {
+    "en": "Exterior Cane Door Frame Lvl 2",
+    "ch": "甘蔗外牆門框 (等級 2)",
+    "cn": "甘蔗外墙门框 (等级 2)"
+   },
+   "CaneDoorExteriorLvl3": {
+    "en": "Exterior Cane Door Frame Lvl 3",
+    "ch": "甘蔗外牆門框 (等級 3)",
+    "cn": "甘蔗外墙门框 (等级 3)"
+   },
+   "CaneDoorInteriorLvl1": {
+    "en": "Interior Cane Door Frame Lvl 1",
+    "ch": "甘蔗內牆門框 (等級 1)",
+    "cn": "甘蔗内墙门框 (等级 1)"
+   },
+   "CaneDoorInteriorLvl2": {
+    "en": "Interior Cane Door Frame Lvl 2",
+    "ch": "甘蔗內牆門框 (等級 2)",
+    "cn": "甘蔗内墙门框 (等级 2)"
+   },
+   "CaneDoorInteriorLvl3": {
+    "en": "Interior Cane Door Frame Lvl 3",
+    "ch": "甘蔗內牆門框 (等級 3)",
+    "cn": "甘蔗内墙门框 (等级 3)"
+   },
+   "CaneWallExteriorLvl1": {
+    "en": "Exterior Cane Wall Lvl 1",
+    "ch": "甘蔗外牆 (等級 1)",
+    "cn": "甘蔗外墙 (等级 1)"
+   },
+   "CaneWallExteriorLvl2": {
+    "en": "Exterior Cane Wall Lvl 2",
+    "ch": "甘蔗外牆 (等級 2)",
+    "cn": "甘蔗外墙 (等级 2)"
+   },
+   "CaneWallExteriorLvl3": {
+    "en": "Exterior Cane Wall Lvl 3",
+    "ch": "甘蔗外牆 (等級 3)",
+    "cn": "甘蔗外墙 (等级 3)"
+   },
+   "CaneWallInteriorLvl1": {
+    "en": "Interior Cane Wall Lvl 1",
+    "ch": "甘蔗內牆 (等級 1)",
+    "cn": "甘蔗内墙 (等级 1)"
+   },
+   "CaneWallInteriorLvl2": {
+    "en": "Interior Cane Wall Lvl 2",
+    "ch": "甘蔗內牆 (等級 2)",
+    "cn": "甘蔗内墙 (等级 2)"
+   },
+   "CaneWallInteriorLvl3": {
+    "en": "Interior Cane Wall Lvl 3",
+    "ch": "甘蔗內牆 (等級 3)",
+    "cn": "甘蔗内墙 (等级 3)"
+   },
+   "CaneWindowExteriorLvl1": {
+    "en": "Exterior Cane Window Frame Lvl 1",
+    "ch": "甘蔗外牆窗框 (等級 1)",
+    "cn": "甘蔗外墙窗框 (等级 1)"
+   },
+   "CaneWindowExteriorLvl2": {
+    "en": "Exterior Cane Window Frame Lvl 2",
+    "ch": "甘蔗外牆窗框 (等級 2)",
+    "cn": "甘蔗外墙窗框 (等级 2)"
+   },
+   "CaneWindowExteriorLvl3": {
+    "en": "Exterior Cane Window Frame Lvl 3",
+    "ch": "甘蔗外牆窗框 (等級 3)",
+    "cn": "甘蔗外墙窗框 (等级 3)"
+   },
+   "CaneWindowInteriorLvl1": {
+    "en": "Interior Cane Window Frame Lvl 1",
+    "ch": "甘蔗內牆窗框 (等級 1)",
+    "cn": "甘蔗内墙窗框 (等级 1)"
+   },
+   "CaneWindowInteriorLvl2": {
+    "en": "Interior Cane Window Frame Lvl 2",
+    "ch": "甘蔗內牆窗框 (等級 2)",
+    "cn": "甘蔗内墙窗框 (等级 2)"
+   },
+   "CaneWindowInteriorLvl3": {
+    "en": "Interior Cane Window Frame Lvl 3",
+    "ch": "甘蔗內牆窗框 (等級 3)",
+    "cn": "甘蔗内墙窗框 (等级 3)"
+   },
+   "CutSugarcane": {
+    "en": "Cut Sugarcane",
+    "ch": "切甘蔗",
+    "cn": "切甘蔗"
+   },
+   "DrySugarcane": {
+    "en": "Dry Sugarcane",
+    "ch": "乾燥甘蔗",
+    "cn": "干燥甘蔗"
+   },
+   "FillEmptyBrownSugar": {
+    "en": "Fill With Brown Sugar",
+    "ch": "裝入紅糖",
+    "cn": "装入红糖"
+   },
+   "MakeCanePile": {
+    "en": "Make Sugarcane Pile",
+    "ch": "製作甘蔗堆",
+    "cn": "制作甘蔗堆"
+   },
+   "MakeSugarcaneJuice": {
+    "en": "Make Sugarcane Juice",
+    "ch": "製作甘蔗汁",
+    "cn": "制作甘蔗汁"
+   },
+   "Sugarcane Growing Season": {
+    "en": "Sugarcane Growing Season",
+    "ch": "甘蔗生長季",
+    "cn": "甘蔗生长季"
+   },
+   "TakeCanesfromPile": {
+    "en": "Unstack Sugarcane Pile",
+    "ch": "拆散甘蔗堆",
+    "cn": "拆散甘蔗堆"
+   },
+   "TakeNaturalSugarBrown": {
+    "en": "Take Natural Sugar Brown",
+    "ch": "取出天然紅糖",
+    "cn": "取出天然红糖"
+   },
+   "ReadTire": {
+    "en": "Read Car Tire",
+    "ch": "檢視汽車輪胎",
+    "cn": "查看汽车轮胎"
+   },
+   "ReadTire2": {
+    "en": "Read Car Tire",
+    "ch": "檢視汽車輪胎",
+    "cn": "查看汽车轮胎"
    }
   },
   "Sandbox.json": {
@@ -169471,9 +170466,9 @@
     "en": "Escalating Horde Waves"
    },
    "Sandbox_ExtractionMode_EscalatingHordeWaves_tooltip": {
-    "ch": "將週期性的完整屍潮改為五波逐次升級的威脅: 每一波分別為屍潮規模的 20%%, 50%%, 100%%, 150%%, 200%%. 預設間隔 20 分鐘, 從第一波到最後一波共需 80 遊戲內分鐘. 可用「屍潮波次間隔」調整間隔. 最後一波之後, 100%% 規模的殭屍波次會每 20 遊戲內分鐘持續出現, 直到所有突襲參與者撤離或死亡.\n\n越後面的波次衝刺者越多. 啟用匪徒 NPC 整合時, 替換小隊會使用其設定規模的相同百分比, 且出現機率提高.",
-    "cn": "将周期性的完整尸潮改为五波逐次升级的威胁: 每一波分别为尸潮规模的 20%%, 50%%, 100%%, 150%%, 200%%. 默认间隔 20 分钟, 从第一波到最后一波共需 80 游戏内分钟. 可用“尸潮波次间隔”调整间隔. 最后一波之后, 100%% 规模的僵尸波次会每 20 游戏内分钟持续出现, 直到所有突袭参与者撤离或死亡.\n\n越靠后的波次冲刺者越多. 启用匪徒 NPC 集成时, 替换小队会使用其设定规模的相同百分比, 且出现概率提高.",
-    "en": "Replaces repeating full hordes with five increasingly dangerous waves: 20%%, 50%%, 100%%, 150%%, then 200%% of Horde Size per wave. The default 20-minute spacing takes 80 in-game minutes from the first wave to the last. Use Horde Wave Interval to change their spacing. After the final wave, 100%% zombie waves continue every 20 in-game minutes until all raid participants extract or die.\n\nLater waves have more sprinters. With Bandits integration enabled, replacements use the same percentages of their configured size and become more likely.",
+    "ch": "將週期性的完整屍潮改為五波逐次升級的威脅: 每一波分別為屍潮規模的 20%%, 50%%, 100%%, 150%%, 200%%. 預設間隔 20 分鐘, 從第一波到最後一波共需 80 遊戲內分鐘. 可用「屍潮波次間隔」調整間隔. 最後一波之後, 100%% 規模的殭屍波次會每 20 遊戲內分鐘持續出現, 直到所有突襲參與者撤離或死亡.\n\n越後面的波次衝刺者越多. NPC 替換小隊使用所選的來源模組, 同樣依其設定規模的百分比縮放, 且出現機率提高.",
+    "cn": "将周期性的完整尸潮改为五波逐次升级的威胁: 每一波分别为尸潮规模的 20%%, 50%%, 100%%, 150%%, 200%%. 默认间隔 20 分钟, 从第一波到最后一波共需 80 游戏内分钟. 可用“尸潮波次间隔”调整间隔. 最后一波之后, 100%% 规模的僵尸波次会每 20 游戏内分钟持续出现, 直到所有突袭参与者撤离或死亡.\n\n越靠后的波次冲刺者越多. NPC 替换小队使用所选的来源模组, 同样按其设定规模的百分比缩放, 且出现概率提高.",
+    "en": "Replaces repeating full hordes with five increasingly dangerous waves: 20%%, 50%%, 100%%, 150%%, then 200%% of Horde Size per wave. The default 20-minute spacing takes 80 in-game minutes from the first wave to the last. Use Horde Wave Interval to change their spacing. After the final wave, 100%% zombie waves continue every 20 in-game minutes until all raid participants extract or die.\n\nLater waves have more sprinters. NPC replacements use the selected provider, follow the same percentages of their configured size and become more likely.",
     "_note": "修改鍵：上游把三波 20/30/50 改寫為五波 20/50/100/150/200%%、加入 80 分鐘總時長與最後一波之後每 20 分鐘重複的說明，並新增 \\n\\n 第二段。沿現有譯文的屍潮/衝刺者/替換小隊用詞改寫，六個字面百分號維持 %% 形式（與 EN 相同數量），並保留 \\n\\n。"
    },
    "Sandbox_ExtractionMode_GrantStarterNightstick": {
@@ -173393,23 +174388,13 @@
     "ch": "退殼時使用該口徑專屬的世界模型, 而非口徑類別的通用模型",
     "cn": "退壳时使用该口径专属的世界模型, 而非口径类别的通用模型"
    },
-   "Sandbox_ammomaker_SpawnAmmoParts": {
-    "en": "Spawn Ammo Parts",
-    "ch": "生成彈藥部件",
-    "cn": "生成弹药部件"
-   },
-   "Sandbox_ammomaker_SpawnAmmoParts_tooltip": {
-    "en": "Adds all active types of ammo parts to the Ammo Maker loot distribution (doesn't affect base game loot)",
-    "ch": "將所有已啟用的彈藥部件類型加入彈藥製作的戰利品分布 (不會影響原版遊戲的戰利品)",
-    "cn": "将所有已启用的弹药部件类型加入弹药制作的战利品分布 (不会影响原版游戏的战利品)"
-   },
    "Sandbox_ammomaker_SpawnRecipeMagazines": {
     "en": "Spawn Recipe Magazines",
     "ch": "生成配方雜誌",
     "cn": "生成配方杂志"
    },
    "Sandbox_ammomaker_SpawnRecipeMagazines_tooltip": {
-    "en": "Adds recipe magazines to the Ammo Maker loot distribution (doesn't affect base game loot)",
+    "en": "Add recipe magazines to the Ammo Maker loot distribution (doesn't affect base game loot)",
     "ch": "將配方雜誌加入彈藥製作的戰利品分布 (不會影響原版遊戲的戰利品)",
     "cn": "将配方杂志加入弹药制作的战利品分布 (不会影响原版游戏的战利品)"
    },
@@ -174733,7 +175718,7 @@
     "_note": "新增鍵：選項值 Do their own thing，As1 未收錄。CH/CN 均採成語「各行其是」（兩地同形同用，非機轉產物）。"
    },
    "Sandbox_ExtractionMode_BanditBehavior_tooltip": {
-    "en": "Controls regular hostile bandit groups. Seeks out players: head to a snapshot of a player's location. Sometimes seek out players: each group has a 40% chance to seek a player and a 60% chance to pass through. Do their own thing: cross an area beside the player's original location, then continue toward the far side of the raid area. Bandits can still detect and fight players normally. Friendly encounters, horde replacements, and scripted meta events keep their own behavior.",
+    "en": "Controls regular hostile bandit groups. Seeks out players: head to a snapshot of a player's location. Sometimes seek out players: each group has a 40%% chance to seek a player and a 60%% chance to pass through. Do their own thing: cross an area beside the player's original location, then continue toward the far side of the raid area. Bandits can still detect and fight players normally. Friendly encounters, horde replacements, and scripted meta events keep their own behavior.",
     "ch": "控制一般的敵對匪徒小隊. 主動尋找玩家: 前往某位玩家位置的快照點. 有時尋找玩家: 每支小隊有 40%% 機率前往尋找玩家, 60%% 機率直接經過. 各行其是: 橫越玩家原始位置旁的區域, 然後繼續朝突襲區域的另一側前進. 匪徒仍會照常偵測並與玩家交戰. 友善遭遇, 匪徒替換屍潮以及劇情式 meta 事件維持各自原有的行為.",
     "cn": "控制普通的敌对匪徒小队. 主动寻找玩家: 前往某位玩家位置的快照点. 有时寻找玩家: 每支小队有 40%% 概率前往寻找玩家, 60%% 概率直接经过. 各行其是: 横穿玩家原始位置旁的区域, 然后继续朝突袭区域的另一侧前进. 匪徒仍会照常侦测并与玩家交战. 友好遭遇, 匪徒替换尸潮以及脚本化的 meta 事件保持各自原有的行为.",
     "_note": "新增鍵：選項 tooltip，As1 未收錄。上游 EN 的 40%/60% 為裸 %（formatted() 會炸），CH/CN 依本包規則直寫 %%；屍潮替換沿用既有「匪徒替換屍潮/匪徒替换尸潮」、突襲區域沿用 IGUI_ExtractionMode_RaidZone。三個選項名與 option1-3 逐字對齊。"
@@ -174775,33 +175760,33 @@
     "_note": "新增。clan 全庫無既有譯法, 採幫派/帮派（Bandits 模組社群通用）; faction 沿用 own Sandbox_ExtractionMode_ShareFactionQuestProgress「派系內共享任務進度」。"
    },
    "Sandbox_ExtractionMode_BanditMetaChancePercent": {
-    "en": "Bandits Meta Event Chance (%)",
-    "ch": "匪徒場景事件機率 (%%)",
-    "cn": "匪徒场景事件概率 (%%)",
+    "en": "NPC Meta Event Chance (%%)",
+    "ch": "NPC 場景事件機率 (%%)",
+    "cn": "NPC 场景事件概率 (%%)",
     "_note": "新增。上游 EN 為單一 % 字面（非 token）, 依 formatted() 安全形式寫成 %%。Meta Event 依其 tooltip 自述「create one nearby random Bandits scene」譯為場景事件, 與 scene 用字一致。"
    },
    "Sandbox_ExtractionMode_BanditMetaChancePercent_tooltip": {
-    "en": "Chance per interval to create one nearby random Bandits scene. Scenes require loaded, unoccupied tiles away from players; building defense requires a nearby building.",
-    "ch": "每個間隔生成一個附近隨機匪徒場景的機率. 場景需要已載入、無人佔用且遠離玩家的地面; 建築防守場景還需要附近有建築物.",
-    "cn": "每个间隔生成一个附近随机匪徒场景的概率. 场景需要已加载、无人占用且远离玩家的地面; 建筑防守场景还需要附近有建筑物.",
+    "en": "Chance per interval to create one nearby scene using the selected NPC provider. Scenes require loaded, unoccupied tiles away from players; building defense requires a nearby building.",
+    "ch": "每個間隔使用所選 NPC 來源模組在附近生成一個場景的機率. 場景需要已載入、無人佔用且遠離玩家的地面; 建築防守場景還需要附近有建築物.",
+    "cn": "每个间隔使用所选 NPC 来源模组在附近生成一个场景的概率. 场景需要已加载、无人占用且远离玩家的地面; 建筑防守场景还需要附近有建筑物.",
     "_note": "新增。tiles→格（own BanditSpawnRadius_tooltip「單位為格」）; loaded→已載入/已加载。"
    },
    "Sandbox_ExtractionMode_BanditMetaExtractionChancePercent": {
-    "en": "Bandits Already Extracting Chance (%)",
-    "ch": "匪徒已在撤離的機率 (%%)",
-    "cn": "匪徒已在撤离的概率 (%%)",
+    "en": "NPCs Already Extracting Chance (%%)",
+    "ch": "NPC 已在撤離的機率 (%%)",
+    "cn": "NPC 已在撤离的概率 (%%)",
     "_note": "新增。對應 BanditMetaEvents 的 extraction 場景（匪徒自行叫了撤離直升機）; 字面 % 寫成 %%。"
    },
    "Sandbox_ExtractionMode_BanditMetaExtractionChancePercent_tooltip": {
-    "en": "One chance per extraction site per raid when a living participant approaches within 65 tiles. Bandits wait nearby with 30 real seconds remaining before the helicopter arrives. Players can board normally.",
-    "ch": "每場突襲的每個撤離點各判定一次, 條件是有存活的參與者接近到 65 格以內. 匪徒會在附近等待, 此時距離直升機抵達還剩 30 現實秒. 玩家仍可正常登機.",
-    "cn": "每场突袭的每个撤离点各判定一次, 条件是有存活的参与者接近到 65 格以内. 匪徒会在附近等待, 此时距离直升机抵达还剩 30 现实秒. 玩家仍可正常登机.",
+    "en": "One chance per extraction site per raid when a living participant approaches within 65 tiles. NPCs wait nearby and call a helicopter with a 30-second approach. Players can board normally.",
+    "ch": "每場突襲的每個撤離點各判定一次, 條件是有存活的參與者接近到 65 格以內. NPC 會在附近等待並呼叫直升機, 直升機將在 30 秒後抵達. 玩家仍可正常登機.",
+    "cn": "每场突袭的每个撤离点各判定一次, 条件是有存活的参与者接近到 65 格以内. NPC 会在附近等待并呼叫直升机, 直升机将在 30 秒后抵达. 玩家仍可正常登机.",
     "_note": "新增。65 tiles 與 BanditMetaEvents.lua:122「approach an existing extraction site (within 65 tiles)」一致; real seconds→現實秒/现实秒（own BoardingWindowSeconds_tooltip）。"
    },
    "Sandbox_ExtractionMode_BanditMetaIntervalHours": {
-    "en": "Bandits Meta Event Interval",
-    "ch": "匪徒場景事件間隔",
-    "cn": "匪徒场景事件间隔",
+    "en": "NPC Meta Event Interval",
+    "ch": "NPC 場景事件間隔",
+    "cn": "NPC 场景事件间隔",
     "_note": "新增。與 BanditMetaChancePercent 同術語。"
    },
    "Sandbox_ExtractionMode_BanditMetaIntervalHours_tooltip": {
@@ -174847,21 +175832,21 @@
     "_note": "新增鍵：選項值，As1 未收錄。與 option2 僅差否定，維持同句式以利選單對照。"
    },
    "Sandbox_ExtractionMode_DeathRescueHealing_tooltip": {
-    "en": "Applies when Vanilla Death is disabled. All rescue options clear poison, food sickness, muscle strain, and fatigue. Full Healing restores health, removes injuries, and cures Knox infection. Both Bandaged options restore health to 75% while keeping injuries and their healing times, disinfecting and bandaging all wounds. Choose whether Bandaged also cures Knox infection or leaves it in place. Removes embedded bullets and glass, sutures deep wounds, and cleans burns. With Wounds Overhaul, also stabilizes systemic conditions, secures sutures, and splints fractured limbs.",
+    "en": "Applies when Vanilla Death is disabled. All rescue options clear poison, food sickness, muscle strain, and fatigue. Full Healing restores health, removes injuries, and cures Knox infection. Both Bandaged options restore health to 75%% while keeping injuries and their healing times, disinfecting and bandaging all wounds. Choose whether Bandaged also cures Knox infection or leaves it in place. Removes embedded bullets and glass, sutures deep wounds, and cleans burns. With Wounds Overhaul, also stabilizes systemic conditions, secures sutures, and splints fractured limbs.",
     "ch": "在原版死亡停用時適用. 所有救援選項都會清除中毒、食物中毒、肌肉拉傷與疲勞. 完全治療: 恢復健康, 清除傷勢並治癒諾克斯感染. 兩種已包紮選項都會把健康恢復到 75%%, 但保留傷勢與其治療時間, 並為所有傷口消毒與包紮. 你可以選擇已包紮是否一併清除諾克斯感染, 或是讓它留著. 會移除嵌入的子彈與玻璃碎片, 縫合深層傷口並清理燒傷. 搭配 Wounds Overhaul 時, 還會穩定全身性狀況, 固定縫線並為骨折的肢體上夾板.",
     "cn": "在原版死亡禁用时适用. 所有救援选项都会清除中毒、食物中毒、肌肉拉伤和疲劳. 完全治疗: 恢复健康, 清除伤势并治愈诺克斯感染. 两种已包扎选项都会把健康恢复到 75%%, 但保留伤势与其治疗时间, 并为所有伤口消毒与包扎. 你可以选择已包扎是否一并清除诺克斯感染, 或是让它留着. 会移除嵌入的子弹与玻璃碎片, 缝合深层伤口并清理烧伤. 搭配 Wounds Overhaul 时, 还会稳定全身性状况, 固定缝线并为骨折的肢体上夹板.",
     "_note": "新增鍵：選項 tooltip，As1 未收錄。上游 EN 的 75% 為裸 %，CH/CN 直寫 %%；Vanilla Death 沿用既有 Sandbox_ExtractionMode_RaidDeathHandling_option1「原版死亡」，Wounds Overhaul 為外部 MOD 名稱，比照既有「需安裝 Bandits 模組」慣例保留英文原名。"
    },
    "Sandbox_ExtractionMode_EnableBanditMetaEvents": {
-    "en": "Random Bandits Meta Events",
-    "ch": "隨機匪徒場景事件",
-    "cn": "随机匪徒场景事件",
+    "en": "Random NPC Meta Events",
+    "ch": "隨機 NPC 場景事件",
+    "cn": "随机 NPC 场景事件",
     "_note": "新增。"
    },
    "Sandbox_ExtractionMode_EnableBanditMetaEvents_tooltip": {
-    "en": "Enable rival clan fights, injured fleeing bandits, building defenders, sprinter ambushes, and bandits already extracting. Requires Bandits integration. Authorized debug tools can still force events when this setting is off.",
-    "ch": "啟用敵對幫派互鬥、受傷逃跑的匪徒、建築防守者、衝刺殭屍伏擊, 以及已在撤離的匪徒. 需要匪徒整合. 即使關閉此設定, 經授權的除錯工具仍可強制觸發事件.",
-    "cn": "启用敌对帮派互斗、受伤逃跑的匪徒、建筑防守者、跑者伏击, 以及已在撤离的匪徒. 需要匪徒集成. 即使关闭此设置, 经授权的调试工具仍可强制触发事件.",
+    "en": "Enable rival group fights, injured fleeing NPCs, building defenders, sprinter ambushes, and NPCs already extracting. Uses the selected NPC provider. Authorized debug tools can still force events when this setting is off.",
+    "ch": "啟用敵對團體互鬥、受傷逃跑的 NPC、建築防守者、衝刺殭屍伏擊, 以及已在撤離的 NPC. 使用所選的 NPC 來源模組. 即使關閉此設定, 經授權的除錯工具仍可強制觸發事件.",
+    "cn": "启用敌对团体互斗、受伤逃跑的 NPC、建筑防守者、跑者伏击, 以及已在撤离的 NPC. 使用所选的 NPC 来源模组. 即使关闭此设置, 经授权的调试工具仍可强制触发事件.",
     "_note": "新增。sprinter 沿用同 mod own Sandbox_ExtractionMode_HordeSprinterPercent_tooltip（ch 衝刺殭屍／cn 跑者）; 場景清單與 BanditMetaEvents.lua:15-16 的 scene id 對應。"
    },
    "Sandbox_ExtractionMode_BanditAttackWindowMaximumHours_tooltip": {
@@ -178099,14 +179084,14 @@
     "cn": "需要匪徒集成, 且“匪徒攻击窗口概率”大于 0.\n\n普通匪徒攻击派出的最小小队规模. 替换尸潮的匪徒使用单独的规模设置."
    },
    "Sandbox_ExtractionMode_BanditHordeGroupMaximum_tooltip": {
-    "en": "Requires Bandits integration and bandit horde replacements.\n\nLargest bandit group that replaces a zombie horde. Escalating Horde Waves uses smaller groups for the earlier waves.",
-    "ch": "需要匪徒整合並啟用匪徒替換屍潮.\n\n替換殭屍屍潮的最大匪徒小隊規模. 「遞增屍潮波次」在較早的波次會使用較小的小隊.",
-    "cn": "需要匪徒集成并启用匪徒替换尸潮.\n\n替换僵尸尸潮的最大匪徒小队规模. “递增尸潮波次”在较早的波次会使用较小的小队."
+    "en": "Largest base NPC group that replaces a zombie horde, using the selected provider. Escalating Horde Waves scales this size from 20%% to 200%%. A-Life respects native population capacity, can reuse faction profiles, and caps each replacement at 32 NPCs.",
+    "ch": "使用所選來源模組替換殭屍屍潮時的最大基礎 NPC 小隊規模. 「遞增屍潮波次」會把此規模從 20%% 縮放到 200%%. A-Life 會遵守原生人口容量, 可重複使用派系設定檔, 且每次替換最多 32 名 NPC.",
+    "cn": "使用所选来源模组替换僵尸尸潮时的最大基础 NPC 小队规模. “递增尸潮波次”会把此规模从 20%% 缩放到 200%%. A-Life 会遵守原生人口容量, 可重复使用派系配置, 且每次替换最多 32 名 NPC."
    },
    "Sandbox_ExtractionMode_BanditHordeGroupMinimum_tooltip": {
-    "en": "Requires Bandits integration and bandit horde replacements.\n\nSmallest bandit group that replaces a zombie horde. Escalating Horde Waves uses smaller groups for the earlier waves.",
-    "ch": "需要匪徒整合並啟用匪徒替換屍潮.\n\n替換殭屍屍潮的最小匪徒小隊規模. 「遞增屍潮波次」在較早的波次會使用較小的小隊.",
-    "cn": "需要匪徒集成并启用匪徒替换尸潮.\n\n替换僵尸尸潮的最小匪徒小队规模. “递增尸潮波次”在较早的波次会使用较小的小队."
+    "en": "Smallest base NPC group that replaces a zombie horde, using the selected provider. Escalating Horde Waves scales this size from 20%% to 200%%. A-Life respects native population capacity, can reuse faction profiles, and caps each replacement at 32 NPCs.",
+    "ch": "使用所選來源模組替換殭屍屍潮時的最小基礎 NPC 小隊規模. 「遞增屍潮波次」會把此規模從 20%% 縮放到 200%%. A-Life 會遵守原生人口容量, 可重複使用派系設定檔, 且每次替換最多 32 名 NPC.",
+    "cn": "使用所选来源模组替换僵尸尸潮时的最小基础 NPC 小队规模. “递增尸潮波次”会把此规模从 20%% 缩放到 200%%. A-Life 会遵守原生人口容量, 可重复使用派系配置, 且每次替换最多 32 名 NPC."
    },
    "Sandbox_ExtractionMode_BaseDailyTownChoices_tooltip": {
     "en": "Only applies to Coop | Single Hideout before the Comm Array upgrade is installed.\n\nNumber of regular raid destinations offered each game day.",
@@ -179183,9 +180168,9 @@
     "cn": "健身特质系统规律度中点 (%%)"
    },
    "Sandbox_ETW_GymTraitsSystemRegularityMidpoint_tooltip": {
-    "en": "Average exercise regularity that leaves progress unchanged. Regularity above this value moves progress toward Gym Rat; regularity below it moves progress toward Couch Potato. Exercises not yet performed count as 0%% regularity.",
-    "ch": "讓進度維持不變的平均鍛鍊規律度. 規律度高於此值時, 進度朝健身狂推進; 低於此值時, 則朝沙發馬鈴薯推進. 尚未做過的鍛鍊以 0%% 規律度計算.",
-    "cn": "使进度保持不变的平均锻炼规律度. 规律度高于该值时, 进度朝健身达人推进; 低于该值时, 则朝沙发土豆推进. 尚未进行过的锻炼按 0%% 规律度计算."
+    "en": "Average exercise regularity that leaves progress unchanged. Regularity above this value moves progress toward Gym Rat; regularity below it moves progress toward Couch Potato. Exercises not yet performed count as 0%% regularity. Which means, that, for example, if you max Burpees to 100%% but don't do any other exercises (there are 7 in vanilla game), your average regularity will be 14.3%% (100%% / 7).",
+    "ch": "讓進度維持不變的平均鍛鍊規律度. 規律度高於此值時, 進度朝健身狂推進; 低於此值時, 則朝沙發馬鈴薯推進. 尚未做過的鍛鍊以 0%% 規律度計算. 舉例來說, 如果你把波比跳的規律度練到 100%%, 但完全沒做其他鍛鍊 (原版遊戲共有 7 種), 你的平均規律度就會是 14.3%% (100%% / 7).",
+    "cn": "使进度保持不变的平均锻炼规律度. 规律度高于该值时, 进度朝健身达人推进; 低于该值时, 则朝沙发土豆推进. 尚未进行过的锻炼按 0%% 规律度计算. 举例来说, 如果你把波比跳的规律度练到 100%%, 但完全没做其他锻炼 (原版游戏共有 7 种), 你的平均规律度就会是 14.3%% (100%% / 7)."
    },
    "Sandbox_ETW_GymTraitsSystem_tooltip": {
     "en": "Allows gaining and losing Couch Potato and Gym Rat from average exercise regularity. Progress updates once per in-game hour by the distance from the configured midpoint. Couch Potato is gained at -75%% and lost at -25%% of the counter maximum; Gym Rat is lost at 25%% and gained at 75%%.",
@@ -179576,6 +180561,996 @@
     "en": "Also remove blocked items from containers filled after world generation (zombie corpses, etc.). Server-side; leave off unless needed.",
     "ch": "也從世界生成後才填充的容器 (殭屍屍體等) 中移除被封鎖的物品. 僅在伺服器端執行; 非必要請保持關閉.",
     "cn": "同时从世界生成后才填充的容器 (僵尸尸体等) 中移除被屏蔽的物品. 仅在服务器端运行; 如非必要请保持关闭."
+   },
+   "Sandbox_ammomaker_ChanceBagGunstorage": {
+    "en": "Gun Storage Bags Chance",
+    "ch": "槍械庫袋裝部件機率",
+    "cn": "枪械库袋装部件概率"
+   },
+   "Sandbox_ammomaker_ChanceBagGunstorage_tooltip": {
+    "en": "Probability for bagged ammo parts to spawn on each dice roll in gun storage",
+    "ch": "每次擲骰時, 槍械庫生成袋裝彈藥部件的機率",
+    "cn": "每次掷骰时, 枪械库生成袋装弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceBagGunstorestorage": {
+    "en": "Gunstore Storage Bags Chance",
+    "ch": "槍店倉庫袋裝部件機率",
+    "cn": "枪店仓库袋装部件概率"
+   },
+   "Sandbox_ammomaker_ChanceBagGunstorestorage_tooltip": {
+    "en": "Probability for bagged ammo parts to spawn on each dice roll in gunstore storage",
+    "ch": "每次擲骰時, 槍店倉庫生成袋裝彈藥部件的機率",
+    "cn": "每次掷骰时, 枪店仓库生成袋装弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceBagPolicearchive": {
+    "en": "Police Archive Bags Chance",
+    "ch": "警局檔案室袋裝部件機率",
+    "cn": "警局档案室袋装部件概率"
+   },
+   "Sandbox_ammomaker_ChanceBagPolicearchive_tooltip": {
+    "en": "Probability for bagged ammo parts to spawn on each dice roll in police archive",
+    "ch": "每次擲骰時, 警局檔案室生成袋裝彈藥部件的機率",
+    "cn": "每次掷骰时, 警局档案室生成袋装弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceBagPolicegunstorage": {
+    "en": "Police Gun Storage Bags Chance",
+    "ch": "警局槍械庫袋裝部件機率",
+    "cn": "警局枪械库袋装部件概率"
+   },
+   "Sandbox_ammomaker_ChanceBagPolicegunstorage_tooltip": {
+    "en": "Probability for bagged ammo parts to spawn on each dice roll in police gun storage",
+    "ch": "每次擲骰時, 警局槍械庫生成袋裝彈藥部件的機率",
+    "cn": "每次掷骰时, 警局枪械库生成袋装弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceBoxGunstorage": {
+    "en": "Gun Storage Boxes Chance",
+    "ch": "槍械庫盒裝部件機率",
+    "cn": "枪械库盒装部件概率"
+   },
+   "Sandbox_ammomaker_ChanceBoxGunstorage_tooltip": {
+    "en": "Probability for boxed ammo parts to spawn on each dice roll in gun storage",
+    "ch": "每次擲骰時, 槍械庫生成盒裝彈藥部件的機率",
+    "cn": "每次掷骰时, 枪械库生成盒装弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceBoxGunstore": {
+    "en": "Gunstore Boxes Chance",
+    "ch": "槍店盒裝部件機率",
+    "cn": "枪店盒装部件概率"
+   },
+   "Sandbox_ammomaker_ChanceBoxGunstore_tooltip": {
+    "en": "Probability for boxed ammo parts to spawn on each dice roll in gunstore",
+    "ch": "每次擲骰時, 槍店生成盒裝彈藥部件的機率",
+    "cn": "每次掷骰时, 枪店生成盒装弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceBoxGunstorestorage": {
+    "en": "Gunstore Storage Boxes Chance",
+    "ch": "槍店倉庫盒裝部件機率",
+    "cn": "枪店仓库盒装部件概率"
+   },
+   "Sandbox_ammomaker_ChanceBoxGunstorestorage_tooltip": {
+    "en": "Probability for boxed ammo parts to spawn on each dice roll in gunstore storage",
+    "ch": "每次擲骰時, 槍店倉庫生成盒裝彈藥部件的機率",
+    "cn": "每次掷骰时, 枪店仓库生成盒装弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceBoxOutdoorsupply": {
+    "en": "Outdoor Supply Boxes Chance",
+    "ch": "戶外用品店盒裝部件機率",
+    "cn": "户外用品店盒装部件概率"
+   },
+   "Sandbox_ammomaker_ChanceBoxOutdoorsupply_tooltip": {
+    "en": "Probability for boxed ammo parts to spawn on each dice roll in outdoor supply (shotgun only)",
+    "ch": "每次擲骰時, 戶外用品店生成盒裝彈藥部件的機率 (僅限霰彈槍)",
+    "cn": "每次掷骰时, 户外用品店生成盒装弹药部件的概率 (仅限霰弹枪)"
+   },
+   "Sandbox_ammomaker_ChanceMilitaryArmystorage": {
+    "en": "Army Storage Military Chance",
+    "ch": "軍方倉庫軍用部件機率",
+    "cn": "军方仓库军用部件概率"
+   },
+   "Sandbox_ammomaker_ChanceMilitaryArmystorage_tooltip": {
+    "en": "Probability for military ammo parts to spawn on each dice roll in army storage",
+    "ch": "每次擲骰時, 軍方倉庫生成軍用彈藥部件的機率",
+    "cn": "每次掷骰时, 军方仓库生成军用弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceMilitaryArmysurplus": {
+    "en": "Army Surplus Military Chance",
+    "ch": "軍用品店軍用部件機率",
+    "cn": "军用品店军用部件概率"
+   },
+   "Sandbox_ammomaker_ChanceMilitaryArmysurplus_tooltip": {
+    "en": "Probability for military ammo parts to spawn on each dice roll in army surplus",
+    "ch": "每次擲骰時, 軍用品店生成軍用彈藥部件的機率",
+    "cn": "每次掷骰时, 军用品店生成军用弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceOldArmytent": {
+    "en": "Army Tent Old Chance",
+    "ch": "軍用帳篷舊部件機率",
+    "cn": "军用帐篷旧部件概率"
+   },
+   "Sandbox_ammomaker_ChanceOldArmytent_tooltip": {
+    "en": "Probability for old ammo parts to spawn on each dice roll in army tent",
+    "ch": "每次擲骰時, 軍用帳篷生成舊彈藥部件的機率",
+    "cn": "每次掷骰时, 军用帐篷生成旧弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceOldGunstorage": {
+    "en": "Gun Storage Old Chance",
+    "ch": "槍械庫舊部件機率",
+    "cn": "枪械库旧部件概率"
+   },
+   "Sandbox_ammomaker_ChanceOldGunstorage_tooltip": {
+    "en": "Probability for old ammo parts to spawn on each dice roll in gun storage",
+    "ch": "每次擲骰時, 槍械庫生成舊彈藥部件的機率",
+    "cn": "每次掷骰时, 枪械库生成旧弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceOldGunstorestorage": {
+    "en": "Gunstore Storage Old Chance",
+    "ch": "槍店倉庫舊部件機率",
+    "cn": "枪店仓库旧部件概率"
+   },
+   "Sandbox_ammomaker_ChanceOldGunstorestorage_tooltip": {
+    "en": "Probability for old ammo parts to spawn on each dice roll in gunstore storage",
+    "ch": "每次擲骰時, 槍店倉庫生成舊彈藥部件的機率",
+    "cn": "每次掷骰时, 枪店仓库生成旧弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceOldPolicearchive": {
+    "en": "Police Archive Old Chance",
+    "ch": "警局檔案室舊部件機率",
+    "cn": "警局档案室旧部件概率"
+   },
+   "Sandbox_ammomaker_ChanceOldPolicearchive_tooltip": {
+    "en": "Probability for old ammo parts to spawn on each dice roll in police archive",
+    "ch": "每次擲骰時, 警局檔案室生成舊彈藥部件的機率",
+    "cn": "每次掷骰时, 警局档案室生成旧弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceOldPolicegunstorage": {
+    "en": "Police Gun Storage Old Chance",
+    "ch": "警局槍械庫舊部件機率",
+    "cn": "警局枪械库旧部件概率"
+   },
+   "Sandbox_ammomaker_ChanceOldPolicegunstorage_tooltip": {
+    "en": "Probability for old ammo parts to spawn on each dice roll in police gun storage",
+    "ch": "每次擲骰時, 警局槍械庫生成舊彈藥部件的機率",
+    "cn": "每次掷骰时, 警局枪械库生成旧弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularGunstorage": {
+    "en": "Gun Storage Regular Chance",
+    "ch": "槍械庫一般部件機率",
+    "cn": "枪械库普通部件概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularGunstorage_tooltip": {
+    "en": "Probability for regular ammo parts to spawn on each dice roll in gun storage",
+    "ch": "每次擲骰時, 槍械庫生成一般彈藥部件的機率",
+    "cn": "每次掷骰时, 枪械库生成普通弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularGunstore": {
+    "en": "Gunstore Regular Chance",
+    "ch": "槍店一般部件機率",
+    "cn": "枪店普通部件概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularGunstore_tooltip": {
+    "en": "Probability for regular ammo parts to spawn on each dice roll in gunstore",
+    "ch": "每次擲骰時, 槍店生成一般彈藥部件的機率",
+    "cn": "每次掷骰时, 枪店生成普通弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularGunstorestorage": {
+    "en": "Gunstore Storage Regular Chance",
+    "ch": "槍店倉庫一般部件機率",
+    "cn": "枪店仓库普通部件概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularGunstorestorage_tooltip": {
+    "en": "Probability for regular ammo parts to spawn on each dice roll in gunstore storage",
+    "ch": "每次擲骰時, 槍店倉庫生成一般彈藥部件的機率",
+    "cn": "每次掷骰时, 枪店仓库生成普通弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularOutdoorsupply": {
+    "en": "Outdoor Supply Regular Chance",
+    "ch": "戶外用品店一般部件機率",
+    "cn": "户外用品店普通部件概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularOutdoorsupply_tooltip": {
+    "en": "Probability for regular ammo parts to spawn on each dice roll in outdoor supply (shotgun only)",
+    "ch": "每次擲骰時, 戶外用品店生成一般彈藥部件的機率 (僅限霰彈槍)",
+    "cn": "每次掷骰时, 户外用品店生成普通弹药部件的概率 (仅限霰弹枪)"
+   },
+   "Sandbox_ammomaker_ChanceRegularPolicearchive": {
+    "en": "Police Archive Regular Chance",
+    "ch": "警局檔案室一般部件機率",
+    "cn": "警局档案室普通部件概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularPolicearchive_tooltip": {
+    "en": "Probability for regular ammo parts to spawn on each dice roll in police archive",
+    "ch": "每次擲骰時, 警局檔案室生成一般彈藥部件的機率",
+    "cn": "每次掷骰时, 警局档案室生成普通弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularPolicegunstorage": {
+    "en": "Police Gun Storage Storage Regular Chance",
+    "ch": "警局槍械庫一般部件機率",
+    "cn": "警局枪械库普通部件概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularPolicegunstorage_tooltip": {
+    "en": "Probability for regular ammo parts to spawn on each dice roll in police gun storage",
+    "ch": "每次擲骰時, 警局槍械庫生成一般彈藥部件的機率",
+    "cn": "每次掷骰时, 警局枪械库生成普通弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularSafehouseLoot": {
+    "en": "Safehouse Regular Chance",
+    "ch": "安全屋一般部件機率",
+    "cn": "安全屋普通部件概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularSafehouseLootLate": {
+    "en": "Safehouse Late Regular Chance",
+    "ch": "後期安全屋一般部件機率",
+    "cn": "后期安全屋普通部件概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularSafehouseLootLate_tooltip": {
+    "en": "Probability for regular ammo parts to spawn on each dice roll in safehouse late",
+    "ch": "每次擲骰時, 後期安全屋生成一般彈藥部件的機率",
+    "cn": "每次掷骰时, 后期安全屋生成普通弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularSafehouseLootMid": {
+    "en": "Safehouse Mid Regular Chance",
+    "ch": "中期安全屋一般部件機率",
+    "cn": "中期安全屋普通部件概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularSafehouseLootMid_tooltip": {
+    "en": "Probability for regular ammo parts to spawn on each dice roll in safehouse mid",
+    "ch": "每次擲骰時, 中期安全屋生成一般彈藥部件的機率",
+    "cn": "每次掷骰时, 中期安全屋生成普通弹药部件的概率"
+   },
+   "Sandbox_ammomaker_ChanceRegularSafehouseLoot_tooltip": {
+    "en": "Probability for regular ammo parts to spawn on each dice roll in safehouse",
+    "ch": "每次擲骰時, 安全屋生成一般彈藥部件的機率",
+    "cn": "每次掷骰时, 安全屋生成普通弹药部件的概率"
+   },
+   "Sandbox_ammomaker_DisassembleAmmoBulkSize": {
+    "en": "Disassemble Ammo Bulk Size",
+    "ch": "批次拆解彈藥數量",
+    "cn": "批量拆解弹药数量"
+   },
+   "Sandbox_ammomaker_DisassembleAmmoBulkSize_tooltip": {
+    "en": "Bulk size for disassemble ammo bulk recipe (reloading press)",
+    "ch": "批次拆解彈藥配方的每批數量 (子彈壓床)",
+    "cn": "批量拆解弹药配方的每批数量 (子弹压床)"
+   },
+   "Sandbox_ammomaker_MaxBagGunstorage": {
+    "en": "Gun Storage Bags Max",
+    "ch": "槍械庫袋裝部件最大數量",
+    "cn": "枪械库袋装部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxBagGunstorage_tooltip": {
+    "en": "Maximum count of bagged ammo parts items that get added on each dice roll in gun storage",
+    "ch": "每次擲骰時, 槍械庫最多加入的袋裝彈藥部件物品數量",
+    "cn": "每次掷骰时, 枪械库最多加入的袋装弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxBagGunstorestorage": {
+    "en": "Gunstore Storage Bags Max",
+    "ch": "槍店倉庫袋裝部件最大數量",
+    "cn": "枪店仓库袋装部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxBagGunstorestorage_tooltip": {
+    "en": "Maximum count of bagged ammo parts items that get added on each dice roll in gunstore storage",
+    "ch": "每次擲骰時, 槍店倉庫最多加入的袋裝彈藥部件物品數量",
+    "cn": "每次掷骰时, 枪店仓库最多加入的袋装弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxBagPolicearchive": {
+    "en": "Police Archive Bags Max",
+    "ch": "警局檔案室袋裝部件最大數量",
+    "cn": "警局档案室袋装部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxBagPolicearchive_tooltip": {
+    "en": "Maximum count of bagged ammo parts items that get added on each dice roll in police archive",
+    "ch": "每次擲骰時, 警局檔案室最多加入的袋裝彈藥部件物品數量",
+    "cn": "每次掷骰时, 警局档案室最多加入的袋装弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxBagPolicegunstorage": {
+    "en": "Police Gun Storage Bags Max",
+    "ch": "警局槍械庫袋裝部件最大數量",
+    "cn": "警局枪械库袋装部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxBagPolicegunstorage_tooltip": {
+    "en": "Maximum count of bagged ammo parts items that get added on each dice roll in police gun storage",
+    "ch": "每次擲骰時, 警局槍械庫最多加入的袋裝彈藥部件物品數量",
+    "cn": "每次掷骰时, 警局枪械库最多加入的袋装弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxBoxGunstorage": {
+    "en": "Gun Storage Boxes Max",
+    "ch": "槍械庫盒裝部件最大數量",
+    "cn": "枪械库盒装部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxBoxGunstorage_tooltip": {
+    "en": "Maximum count of boxed ammo parts items that get added on each dice roll in gun storage",
+    "ch": "每次擲骰時, 槍械庫最多加入的盒裝彈藥部件物品數量",
+    "cn": "每次掷骰时, 枪械库最多加入的盒装弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxBoxGunstore": {
+    "en": "Gunstore Boxes Max",
+    "ch": "槍店盒裝部件最大數量",
+    "cn": "枪店盒装部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxBoxGunstore_tooltip": {
+    "en": "Maximum count of boxed ammo parts items that get added on each dice roll in gunstore",
+    "ch": "每次擲骰時, 槍店最多加入的盒裝彈藥部件物品數量",
+    "cn": "每次掷骰时, 枪店最多加入的盒装弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxBoxGunstorestorage": {
+    "en": "Gunstore Storage Boxes Max",
+    "ch": "槍店倉庫盒裝部件最大數量",
+    "cn": "枪店仓库盒装部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxBoxGunstorestorage_tooltip": {
+    "en": "Maximum count of boxed ammo parts items that get added on each dice roll in gunstore storage",
+    "ch": "每次擲骰時, 槍店倉庫最多加入的盒裝彈藥部件物品數量",
+    "cn": "每次掷骰时, 枪店仓库最多加入的盒装弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxBoxOutdoorsupply": {
+    "en": "Outdoor Supply Boxes Max",
+    "ch": "戶外用品店盒裝部件最大數量",
+    "cn": "户外用品店盒装部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxBoxOutdoorsupply_tooltip": {
+    "en": "Maximum count of boxed ammo parts items that get added on each dice roll in outdoor supply (shotgun only)",
+    "ch": "每次擲骰時, 戶外用品店最多加入的盒裝彈藥部件物品數量 (僅限霰彈槍)",
+    "cn": "每次掷骰时, 户外用品店最多加入的盒装弹药部件物品数量 (仅限霰弹枪)"
+   },
+   "Sandbox_ammomaker_MaxMilitaryArmystorage": {
+    "en": "Army Storage Military Max",
+    "ch": "軍方倉庫軍用部件最大數量",
+    "cn": "军方仓库军用部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxMilitaryArmystorage_tooltip": {
+    "en": "Maximum count of military ammo parts items that get added on each dice roll in army storage",
+    "ch": "每次擲骰時, 軍方倉庫最多加入的軍用彈藥部件物品數量",
+    "cn": "每次掷骰时, 军方仓库最多加入的军用弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxMilitaryArmysurplus": {
+    "en": "Army Surplus Military Max",
+    "ch": "軍用品店軍用部件最大數量",
+    "cn": "军用品店军用部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxMilitaryArmysurplus_tooltip": {
+    "en": "Maximum count of military ammo parts items that get added on each dice roll in army surplus",
+    "ch": "每次擲骰時, 軍用品店最多加入的軍用彈藥部件物品數量",
+    "cn": "每次掷骰时, 军用品店最多加入的军用弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxOldArmytent": {
+    "en": "Army Tent Old Max",
+    "ch": "軍用帳篷舊部件最大數量",
+    "cn": "军用帐篷旧部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxOldArmytent_tooltip": {
+    "en": "Maximum count of old ammo parts items that get added on each dice roll in army tent",
+    "ch": "每次擲骰時, 軍用帳篷最多加入的舊彈藥部件物品數量",
+    "cn": "每次掷骰时, 军用帐篷最多加入的旧弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxOldGunstorage": {
+    "en": "Gun Storage Old Max",
+    "ch": "槍械庫舊部件最大數量",
+    "cn": "枪械库旧部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxOldGunstorage_tooltip": {
+    "en": "Maximum count of old ammo parts items that get added on each dice roll in gun storage",
+    "ch": "每次擲骰時, 槍械庫最多加入的舊彈藥部件物品數量",
+    "cn": "每次掷骰时, 枪械库最多加入的旧弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxOldGunstorestorage": {
+    "en": "Gunstore Storage Old Max",
+    "ch": "槍店倉庫舊部件最大數量",
+    "cn": "枪店仓库旧部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxOldGunstorestorage_tooltip": {
+    "en": "Maximum count of old ammo parts items that get added on each dice roll in gunstore storage",
+    "ch": "每次擲骰時, 槍店倉庫最多加入的舊彈藥部件物品數量",
+    "cn": "每次掷骰时, 枪店仓库最多加入的旧弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxOldPolicearchive": {
+    "en": "Police Archive Old Max",
+    "ch": "警局檔案室舊部件最大數量",
+    "cn": "警局档案室旧部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxOldPolicearchive_tooltip": {
+    "en": "Maximum count of old ammo parts items that get added on each dice roll in police archive",
+    "ch": "每次擲骰時, 警局檔案室最多加入的舊彈藥部件物品數量",
+    "cn": "每次掷骰时, 警局档案室最多加入的旧弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxOldPolicegunstorage": {
+    "en": "Police Gun Storage Old Max",
+    "ch": "警局槍械庫舊部件最大數量",
+    "cn": "警局枪械库旧部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxOldPolicegunstorage_tooltip": {
+    "en": "Maximum count of old ammo parts items that get added on each dice roll in police gun storage",
+    "ch": "每次擲骰時, 警局槍械庫最多加入的舊彈藥部件物品數量",
+    "cn": "每次掷骰时, 警局枪械库最多加入的旧弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxRegularGunstorage": {
+    "en": "Gun Storage Regular Max",
+    "ch": "槍械庫一般部件最大數量",
+    "cn": "枪械库普通部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxRegularGunstorage_tooltip": {
+    "en": "Maximum count of regular ammo parts items that get added on each dice roll in gun storage",
+    "ch": "每次擲骰時, 槍械庫最多加入的一般彈藥部件物品數量",
+    "cn": "每次掷骰时, 枪械库最多加入的普通弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxRegularGunstore": {
+    "en": "Gunstore Regular Max",
+    "ch": "槍店一般部件最大數量",
+    "cn": "枪店普通部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxRegularGunstore_tooltip": {
+    "en": "Maximum count of regular ammo parts items that get added on each dice roll in gunstore",
+    "ch": "每次擲骰時, 槍店最多加入的一般彈藥部件物品數量",
+    "cn": "每次掷骰时, 枪店最多加入的普通弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxRegularGunstorestorage": {
+    "en": "Gunstore Storage Regular Max",
+    "ch": "槍店倉庫一般部件最大數量",
+    "cn": "枪店仓库普通部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxRegularGunstorestorage_tooltip": {
+    "en": "Maximum count of regular ammo parts items that get added on each dice roll in gunstore storage",
+    "ch": "每次擲骰時, 槍店倉庫最多加入的一般彈藥部件物品數量",
+    "cn": "每次掷骰时, 枪店仓库最多加入的普通弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxRegularOutdoorsupply": {
+    "en": "Outdoor Supply Regular Max",
+    "ch": "戶外用品店一般部件最大數量",
+    "cn": "户外用品店普通部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxRegularOutdoorsupply_tooltip": {
+    "en": "Maximum count of regular ammo parts items that get added on each dice roll in outdoor supply (shotgun only)",
+    "ch": "每次擲骰時, 戶外用品店最多加入的一般彈藥部件物品數量 (僅限霰彈槍)",
+    "cn": "每次掷骰时, 户外用品店最多加入的普通弹药部件物品数量 (仅限霰弹枪)"
+   },
+   "Sandbox_ammomaker_MaxRegularPolicearchive": {
+    "en": "Police Archive Regular Max",
+    "ch": "警局檔案室一般部件最大數量",
+    "cn": "警局档案室普通部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxRegularPolicearchive_tooltip": {
+    "en": "Maximum count of regular ammo parts items that get added on each dice roll in police archive",
+    "ch": "每次擲骰時, 警局檔案室最多加入的一般彈藥部件物品數量",
+    "cn": "每次掷骰时, 警局档案室最多加入的普通弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxRegularPolicegunstorage": {
+    "en": "Police Gun Storage Storage Regular Max",
+    "ch": "警局槍械庫一般部件最大數量",
+    "cn": "警局枪械库普通部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxRegularPolicegunstorage_tooltip": {
+    "en": "Maximum count of regular ammo parts items that get added on each dice roll in police gun storage",
+    "ch": "每次擲骰時, 警局槍械庫最多加入的一般彈藥部件物品數量",
+    "cn": "每次掷骰时, 警局枪械库最多加入的普通弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxRegularSafehouseLoot": {
+    "en": "Safehouse Regular Max",
+    "ch": "安全屋一般部件最大數量",
+    "cn": "安全屋普通部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxRegularSafehouseLootLate": {
+    "en": "Safehouse Late Regular Max",
+    "ch": "後期安全屋一般部件最大數量",
+    "cn": "后期安全屋普通部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxRegularSafehouseLootLate_tooltip": {
+    "en": "Maximum count of regular ammo parts items that get added on each dice roll in safehouse late",
+    "ch": "每次擲骰時, 後期安全屋最多加入的一般彈藥部件物品數量",
+    "cn": "每次掷骰时, 后期安全屋最多加入的普通弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxRegularSafehouseLootMid": {
+    "en": "Safehouse Mid Regular Max",
+    "ch": "中期安全屋一般部件最大數量",
+    "cn": "中期安全屋普通部件最大数量"
+   },
+   "Sandbox_ammomaker_MaxRegularSafehouseLootMid_tooltip": {
+    "en": "Maximum count of regular ammo parts items that get added on each dice roll in safehouse mid",
+    "ch": "每次擲骰時, 中期安全屋最多加入的一般彈藥部件物品數量",
+    "cn": "每次掷骰时, 中期安全屋最多加入的普通弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_MaxRegularSafehouseLoot_tooltip": {
+    "en": "Maximum count of regular ammo parts items that get added on each dice roll in safehouse",
+    "ch": "每次擲骰時, 安全屋最多加入的一般彈藥部件物品數量",
+    "cn": "每次掷骰时, 安全屋最多加入的普通弹药部件物品数量"
+   },
+   "Sandbox_ammomaker_RollsBagGunstorage": {
+    "en": "Gun Storage Bags Rolls",
+    "ch": "槍械庫袋裝部件擲骰次數",
+    "cn": "枪械库袋装部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsBagGunstorage_tooltip": {
+    "en": "Number of times the system rolls the dice for bagged ammo parts in gun storage",
+    "ch": "系統為槍械庫的袋裝彈藥部件擲骰的次數",
+    "cn": "系统为枪械库的袋装弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsBagGunstorestorage": {
+    "en": "Gunstore Storage Bags Rolls",
+    "ch": "槍店倉庫袋裝部件擲骰次數",
+    "cn": "枪店仓库袋装部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsBagGunstorestorage_tooltip": {
+    "en": "Number of times the system rolls the dice for bagged ammo parts in gunstore storage",
+    "ch": "系統為槍店倉庫的袋裝彈藥部件擲骰的次數",
+    "cn": "系统为枪店仓库的袋装弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsBagPolicearchive": {
+    "en": "Police Archive Bags Rolls",
+    "ch": "警局檔案室袋裝部件擲骰次數",
+    "cn": "警局档案室袋装部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsBagPolicearchive_tooltip": {
+    "en": "Number of times the system rolls the dice for bagged ammo parts in police archive",
+    "ch": "系統為警局檔案室的袋裝彈藥部件擲骰的次數",
+    "cn": "系统为警局档案室的袋装弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsBagPolicegunstorage": {
+    "en": "Police Gun Storage Bags Rolls",
+    "ch": "警局槍械庫袋裝部件擲骰次數",
+    "cn": "警局枪械库袋装部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsBagPolicegunstorage_tooltip": {
+    "en": "Number of times the system rolls the dice for bagged ammo parts in police gun storage",
+    "ch": "系統為警局槍械庫的袋裝彈藥部件擲骰的次數",
+    "cn": "系统为警局枪械库的袋装弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsBoxGunstorage": {
+    "en": "Gun Storage Boxes Rolls",
+    "ch": "槍械庫盒裝部件擲骰次數",
+    "cn": "枪械库盒装部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsBoxGunstorage_tooltip": {
+    "en": "Number of times the system rolls the dice for boxed ammo parts in gun storage",
+    "ch": "系統為槍械庫的盒裝彈藥部件擲骰的次數",
+    "cn": "系统为枪械库的盒装弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsBoxGunstore": {
+    "en": "Gunstore Boxes Rolls",
+    "ch": "槍店盒裝部件擲骰次數",
+    "cn": "枪店盒装部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsBoxGunstore_tooltip": {
+    "en": "Number of times the system rolls the dice for boxed ammo parts in gunstore",
+    "ch": "系統為槍店的盒裝彈藥部件擲骰的次數",
+    "cn": "系统为枪店的盒装弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsBoxGunstorestorage": {
+    "en": "Gunstore Storage Boxes Rolls",
+    "ch": "槍店倉庫盒裝部件擲骰次數",
+    "cn": "枪店仓库盒装部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsBoxGunstorestorage_tooltip": {
+    "en": "Number of times the system rolls the dice for boxed ammo parts in gunstore storage",
+    "ch": "系統為槍店倉庫的盒裝彈藥部件擲骰的次數",
+    "cn": "系统为枪店仓库的盒装弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsBoxOutdoorsupply": {
+    "en": "Outdoor Supply Boxes Rolls",
+    "ch": "戶外用品店盒裝部件擲骰次數",
+    "cn": "户外用品店盒装部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsBoxOutdoorsupply_tooltip": {
+    "en": "Number of times the system rolls the dice for boxed ammo parts in outdoor supply (shotgun only)",
+    "ch": "系統為戶外用品店的盒裝彈藥部件擲骰的次數 (僅限霰彈槍)",
+    "cn": "系统为户外用品店的盒装弹药部件掷骰的次数 (仅限霰弹枪)"
+   },
+   "Sandbox_ammomaker_RollsMilitaryArmystorage": {
+    "en": "Army Storage Military Rolls",
+    "ch": "軍方倉庫軍用部件擲骰次數",
+    "cn": "军方仓库军用部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsMilitaryArmystorage_tooltip": {
+    "en": "Number of times the system rolls the dice for military ammo parts in army storage",
+    "ch": "系統為軍方倉庫的軍用彈藥部件擲骰的次數",
+    "cn": "系统为军方仓库的军用弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsMilitaryArmysurplus": {
+    "en": "Army Surplus Military Rolls",
+    "ch": "軍用品店軍用部件擲骰次數",
+    "cn": "军用品店军用部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsMilitaryArmysurplus_tooltip": {
+    "en": "Number of times the system rolls the dice for military ammo parts in army surplus",
+    "ch": "系統為軍用品店的軍用彈藥部件擲骰的次數",
+    "cn": "系统为军用品店的军用弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsOldArmytent": {
+    "en": "Army Tent Old Rolls",
+    "ch": "軍用帳篷舊部件擲骰次數",
+    "cn": "军用帐篷旧部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsOldArmytent_tooltip": {
+    "en": "Number of times the system rolls the dice for old ammo parts in army tent",
+    "ch": "系統為軍用帳篷的舊彈藥部件擲骰的次數",
+    "cn": "系统为军用帐篷的旧弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsOldGunstorage": {
+    "en": "Gun Storage Old Rolls",
+    "ch": "槍械庫舊部件擲骰次數",
+    "cn": "枪械库旧部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsOldGunstorage_tooltip": {
+    "en": "Number of times the system rolls the dice for old ammo parts in gun storage",
+    "ch": "系統為槍械庫的舊彈藥部件擲骰的次數",
+    "cn": "系统为枪械库的旧弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsOldGunstorestorage": {
+    "en": "Gunstore Storage Old Rolls",
+    "ch": "槍店倉庫舊部件擲骰次數",
+    "cn": "枪店仓库旧部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsOldGunstorestorage_tooltip": {
+    "en": "Number of times the system rolls the dice for old ammo parts in gunstore storage",
+    "ch": "系統為槍店倉庫的舊彈藥部件擲骰的次數",
+    "cn": "系统为枪店仓库的旧弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsOldPolicearchive": {
+    "en": "Police Archive Old Rolls",
+    "ch": "警局檔案室舊部件擲骰次數",
+    "cn": "警局档案室旧部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsOldPolicearchive_tooltip": {
+    "en": "Number of times the system rolls the dice for old ammo parts in police archive",
+    "ch": "系統為警局檔案室的舊彈藥部件擲骰的次數",
+    "cn": "系统为警局档案室的旧弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsOldPolicegunstorage": {
+    "en": "Police Gun Storage Old Rolls",
+    "ch": "警局槍械庫舊部件擲骰次數",
+    "cn": "警局枪械库旧部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsOldPolicegunstorage_tooltip": {
+    "en": "Number of times the system rolls the dice for old ammo parts in police gun storage",
+    "ch": "系統為警局槍械庫的舊彈藥部件擲骰的次數",
+    "cn": "系统为警局枪械库的旧弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsRegularGunstorage": {
+    "en": "Gun Storage Regular Rolls",
+    "ch": "槍械庫一般部件擲骰次數",
+    "cn": "枪械库普通部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsRegularGunstorage_tooltip": {
+    "en": "Number of times the system rolls the dice for regular ammo parts in gun storage",
+    "ch": "系統為槍械庫的一般彈藥部件擲骰的次數",
+    "cn": "系统为枪械库的普通弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsRegularGunstore": {
+    "en": "Gunstore Regular Rolls",
+    "ch": "槍店一般部件擲骰次數",
+    "cn": "枪店普通部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsRegularGunstore_tooltip": {
+    "en": "Number of times the system rolls the dice for regular ammo parts in gunstore",
+    "ch": "系統為槍店的一般彈藥部件擲骰的次數",
+    "cn": "系统为枪店的普通弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsRegularGunstorestorage": {
+    "en": "Gunstore Storage Regular Rolls",
+    "ch": "槍店倉庫一般部件擲骰次數",
+    "cn": "枪店仓库普通部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsRegularGunstorestorage_tooltip": {
+    "en": "Number of times the system rolls the dice for regular ammo parts in gunstore storage",
+    "ch": "系統為槍店倉庫的一般彈藥部件擲骰的次數",
+    "cn": "系统为枪店仓库的普通弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsRegularOutdoorsupply": {
+    "en": "Outdoor Supply Regular Rolls",
+    "ch": "戶外用品店一般部件擲骰次數",
+    "cn": "户外用品店普通部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsRegularOutdoorsupply_tooltip": {
+    "en": "Number of times the system rolls the dice for regular ammo parts in outdoor supply (shotgun only)",
+    "ch": "系統為戶外用品店的一般彈藥部件擲骰的次數 (僅限霰彈槍)",
+    "cn": "系统为户外用品店的普通弹药部件掷骰的次数 (仅限霰弹枪)"
+   },
+   "Sandbox_ammomaker_RollsRegularPolicearchive": {
+    "en": "Police Archive Regular Rolls",
+    "ch": "警局檔案室一般部件擲骰次數",
+    "cn": "警局档案室普通部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsRegularPolicearchive_tooltip": {
+    "en": "Number of times the system rolls the dice for regular ammo parts in police archive",
+    "ch": "系統為警局檔案室的一般彈藥部件擲骰的次數",
+    "cn": "系统为警局档案室的普通弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsRegularPolicegunstorage": {
+    "en": "Police Gun Storage Regular Rolls",
+    "ch": "警局槍械庫一般部件擲骰次數",
+    "cn": "警局枪械库普通部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsRegularPolicegunstorage_tooltip": {
+    "en": "Number of times the system rolls the dice for regular ammo parts in police gun storage",
+    "ch": "系統為警局槍械庫的一般彈藥部件擲骰的次數",
+    "cn": "系统为警局枪械库的普通弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsRegularSafehouseLoot": {
+    "en": "Safehouse Regular Rolls",
+    "ch": "安全屋一般部件擲骰次數",
+    "cn": "安全屋普通部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsRegularSafehouseLootLate": {
+    "en": "Safehouse Late Regular Rolls",
+    "ch": "後期安全屋一般部件擲骰次數",
+    "cn": "后期安全屋普通部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsRegularSafehouseLootLate_tooltip": {
+    "en": "Number of times the system rolls the dice for regular ammo parts in safehouse late",
+    "ch": "系統為後期安全屋的一般彈藥部件擲骰的次數",
+    "cn": "系统为后期安全屋的普通弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsRegularSafehouseLootMid": {
+    "en": "Safehouse Mid Regular Rolls",
+    "ch": "中期安全屋一般部件擲骰次數",
+    "cn": "中期安全屋普通部件掷骰次数"
+   },
+   "Sandbox_ammomaker_RollsRegularSafehouseLootMid_tooltip": {
+    "en": "Number of times the system rolls the dice for regular ammo parts in safehouse mid",
+    "ch": "系統為中期安全屋的一般彈藥部件擲骰的次數",
+    "cn": "系统为中期安全屋的普通弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_RollsRegularSafehouseLoot_tooltip": {
+    "en": "Number of times the system rolls the dice for regular ammo parts in safehouse",
+    "ch": "系統為安全屋的一般彈藥部件擲骰的次數",
+    "cn": "系统为安全屋的普通弹药部件掷骰的次数"
+   },
+   "Sandbox_ammomaker_SpawnBaggedAmmoParts": {
+    "en": "Spawn Bagged Ammo Parts",
+    "ch": "生成袋裝彈藥部件",
+    "cn": "生成袋装弹药部件"
+   },
+   "Sandbox_ammomaker_SpawnBaggedAmmoParts_tooltip": {
+    "en": "Add bagged ammo parts to the Ammo Maker loot distribution (doesn't affect base game loot)",
+    "ch": "將袋裝彈藥部件加入彈藥製作的戰利品分布 (不會影響原版遊戲的戰利品)",
+    "cn": "将袋装弹药部件加入弹药制作的战利品分布 (不会影响原版游戏的战利品)"
+   },
+   "Sandbox_ammomaker_SpawnBoxedAmmoParts": {
+    "en": "Spawn Boxed Ammo Parts",
+    "ch": "生成盒裝彈藥部件",
+    "cn": "生成盒装弹药部件"
+   },
+   "Sandbox_ammomaker_SpawnBoxedAmmoParts_tooltip": {
+    "en": "Add boxed ammo parts to the Ammo Maker loot distribution (doesn't affect base game loot)",
+    "ch": "將盒裝彈藥部件加入彈藥製作的戰利品分布 (不會影響原版遊戲的戰利品)",
+    "cn": "将盒装弹药部件加入弹药制作的战利品分布 (不会影响原版游戏的战利品)"
+   },
+   "Sandbox_ammomaker_SpawnMilitaryAmmoParts": {
+    "en": "Spawn Military Ammo Parts",
+    "ch": "生成軍用彈藥部件",
+    "cn": "生成军用弹药部件"
+   },
+   "Sandbox_ammomaker_SpawnMilitaryAmmoParts_tooltip": {
+    "en": "Add military ammo parts to the Ammo Maker loot distribution (doesn't affect base game loot)",
+    "ch": "將軍用彈藥部件加入彈藥製作的戰利品分布 (不會影響原版遊戲的戰利品)",
+    "cn": "将军用弹药部件加入弹药制作的战利品分布 (不会影响原版游戏的战利品)"
+   },
+   "Sandbox_ammomaker_SpawnOldAmmoParts": {
+    "en": "Spawn Old Ammo Parts",
+    "ch": "生成舊彈藥部件",
+    "cn": "生成旧弹药部件"
+   },
+   "Sandbox_ammomaker_SpawnOldAmmoParts_tooltip": {
+    "en": "Add old ammo parts to the Ammo Maker loot distribution (doesn't affect base game loot)",
+    "ch": "將舊彈藥部件加入彈藥製作的戰利品分布 (不會影響原版遊戲的戰利品)",
+    "cn": "将旧弹药部件加入弹药制作的战利品分布 (不会影响原版游戏的战利品)"
+   },
+   "Sandbox_ammomaker_SpawnRegularAmmoParts": {
+    "en": "Spawn Regular Ammo Parts",
+    "ch": "生成一般彈藥部件",
+    "cn": "生成普通弹药部件"
+   },
+   "Sandbox_ammomaker_SpawnRegularAmmoParts_tooltip": {
+    "en": "Add regular ammo parts to the Ammo Maker loot distribution (doesn't affect base game loot)",
+    "ch": "將一般彈藥部件加入彈藥製作的戰利品分布 (不會影響原版遊戲的戰利品)",
+    "cn": "将普通弹药部件加入弹药制作的战利品分布 (不会影响原版游戏的战利品)"
+   },
+   "_AM_Sandbox_comment_10": {
+    "en": "GUNSTORAGE REGULAR AMMO PARTS",
+    "ch": "槍械庫一般彈藥部件",
+    "cn": "枪械库普通弹药部件"
+   },
+   "_AM_Sandbox_comment_11": {
+    "en": "GUNSTORAGE BOXED AMMO PARTS",
+    "ch": "槍械庫盒裝彈藥部件",
+    "cn": "枪械库盒装弹药部件"
+   },
+   "_AM_Sandbox_comment_12": {
+    "en": "GUNSTORAGE OLD AMMO PARTS",
+    "ch": "槍械庫舊彈藥部件",
+    "cn": "枪械库旧弹药部件"
+   },
+   "_AM_Sandbox_comment_13": {
+    "en": "GUNSTORAGE BAGGED AMMO PARTS",
+    "ch": "槍械庫袋裝彈藥部件",
+    "cn": "枪械库袋装弹药部件"
+   },
+   "_AM_Sandbox_comment_14": {
+    "en": "GUNSTORE REGULAR AMMO PARTS",
+    "ch": "槍店一般彈藥部件",
+    "cn": "枪店普通弹药部件"
+   },
+   "_AM_Sandbox_comment_15": {
+    "en": "GUNSTORE BOXED AMMO PARTS",
+    "ch": "槍店盒裝彈藥部件",
+    "cn": "枪店盒装弹药部件"
+   },
+   "_AM_Sandbox_comment_16": {
+    "en": "GUNSTORESTORAGE REGULAR AMMO PARTS",
+    "ch": "槍店倉庫一般彈藥部件",
+    "cn": "枪店仓库普通弹药部件"
+   },
+   "_AM_Sandbox_comment_17": {
+    "en": "GUNSTORESTORAGE BOXED AMMO PARTS",
+    "ch": "槍店倉庫盒裝彈藥部件",
+    "cn": "枪店仓库盒装弹药部件"
+   },
+   "_AM_Sandbox_comment_18": {
+    "en": "GUNSTORESTORAGE OLD AMMO PARTS",
+    "ch": "槍店倉庫舊彈藥部件",
+    "cn": "枪店仓库旧弹药部件"
+   },
+   "_AM_Sandbox_comment_19": {
+    "en": "GUNSTORESTORAGE BAGGED AMMO PARTS",
+    "ch": "槍店倉庫袋裝彈藥部件",
+    "cn": "枪店仓库袋装弹药部件"
+   },
+   "_AM_Sandbox_comment_2": {
+    "en": "BIRD FEEDER OPTIONS",
+    "ch": "鳥類餵食器選項",
+    "cn": "鸟类喂食器选项"
+   },
+   "_AM_Sandbox_comment_20": {
+    "en": "OUTDOOR SUPPLY REGULAR AMMO PARTS",
+    "ch": "戶外用品店一般彈藥部件",
+    "cn": "户外用品店普通弹药部件"
+   },
+   "_AM_Sandbox_comment_21": {
+    "en": "OUTDOOR SUPPLY BOXED AMMO PARTS",
+    "ch": "戶外用品店盒裝彈藥部件",
+    "cn": "户外用品店盒装弹药部件"
+   },
+   "_AM_Sandbox_comment_22": {
+    "en": "POLICEARCHIVE REGULAR AMMO PARTS",
+    "ch": "警局檔案室一般彈藥部件",
+    "cn": "警局档案室普通弹药部件"
+   },
+   "_AM_Sandbox_comment_23": {
+    "en": "POLICEARCHIVE OLD AMMO PARTS",
+    "ch": "警局檔案室舊彈藥部件",
+    "cn": "警局档案室旧弹药部件"
+   },
+   "_AM_Sandbox_comment_24": {
+    "en": "POLICEARCHIVE BAGGED AMMO PARTS",
+    "ch": "警局檔案室袋裝彈藥部件",
+    "cn": "警局档案室袋装弹药部件"
+   },
+   "_AM_Sandbox_comment_25": {
+    "en": "POLICEGUNSTORAGE REGULAR AMMO PARTS",
+    "ch": "警局槍械庫一般彈藥部件",
+    "cn": "警局枪械库普通弹药部件"
+   },
+   "_AM_Sandbox_comment_26": {
+    "en": "POLICEGUNSTORAGE OLD AMMO PARTS",
+    "ch": "警局槍械庫舊彈藥部件",
+    "cn": "警局枪械库旧弹药部件"
+   },
+   "_AM_Sandbox_comment_27": {
+    "en": "POLICEGUNSTORAGE BAG AMMO PARTS",
+    "ch": "警局槍械庫袋裝彈藥部件",
+    "cn": "警局枪械库袋装弹药部件"
+   },
+   "_AM_Sandbox_comment_28": {
+    "en": "SAFEHOUSE LOOT REGULAR AMMO PARTS",
+    "ch": "安全屋一般彈藥部件",
+    "cn": "安全屋普通弹药部件"
+   },
+   "_AM_Sandbox_comment_29": {
+    "en": "SAFEHOUSE LOOT LATE REGULAR AMMO PARTS",
+    "ch": "後期安全屋一般彈藥部件",
+    "cn": "后期安全屋普通弹药部件"
+   },
+   "_AM_Sandbox_comment_3": {
+    "en": "FORAGING OPTIONS",
+    "ch": "搜尋選項",
+    "cn": "搜寻选项"
+   },
+   "_AM_Sandbox_comment_30": {
+    "en": "SAFEHOUSE LOOT MID REGULAR AMMO PARTS",
+    "ch": "中期安全屋一般彈藥部件",
+    "cn": "中期安全屋普通弹药部件"
+   },
+   "_AM_Sandbox_comment_4": {
+    "en": "CASINGS OPTIONS",
+    "ch": "彈殼選項",
+    "cn": "弹壳选项"
+   },
+   "_AM_Sandbox_comment_5": {
+    "en": "TWEAKS OPTIONS",
+    "ch": "微調選項",
+    "cn": "微调选项"
+   },
+   "_AM_Sandbox_comment_6": {
+    "en": "LOOT",
+    "ch": "戰利品",
+    "cn": "战利品"
+   },
+   "_AM_Sandbox_comment_7": {
+    "en": "ARMYSTORAGE MILITARY AMMO PARTS",
+    "ch": "軍方倉庫軍用彈藥部件",
+    "cn": "军方仓库军用弹药部件"
+   },
+   "_AM_Sandbox_comment_8": {
+    "en": "ARMYSURPLUS MILITARY AMMO PARTS",
+    "ch": "軍用品店軍用彈藥部件",
+    "cn": "军用品店军用弹药部件"
+   },
+   "_AM_Sandbox_comment_9": {
+    "en": "ARMYTENT OLD AMMO PARTS",
+    "ch": "軍用帳篷舊彈藥部件",
+    "cn": "军用帐篷旧弹药部件"
+   },
+   "Sandbox_ETW_GymTraitsSystemWorkoutGracePeriodHours": {
+    "en": "Workout grace period (hours)",
+    "ch": "鍛鍊寬限期 (小時)",
+    "cn": "锻炼宽限期 (小时)"
+   },
+   "Sandbox_ETW_GymTraitsSystemWorkoutGracePeriodHours_tooltip": {
+    "en": "Stops hourly progress toward Couch Potato for this many in-game hours after a qualifying workout. Set to 0 to disable the grace period.",
+    "ch": "完成一次符合條件的鍛鍊後, 在這麼多遊戲內小時內停止每小時朝沙發馬鈴薯累積的進度. 設為 0 可停用寬限期.",
+    "cn": "完成一次符合条件的锻炼后, 在这么多游戏内小时内停止每小时朝沙发土豆累积的进度. 设为 0 可禁用宽限期."
+   },
+   "Sandbox_ETW_GymTraitsSystemWorkoutLoopThreshold": {
+    "en": "Exercise repeats required for a workout",
+    "ch": "一次鍛鍊所需的運動重複次數",
+    "cn": "一次锻炼所需的运动重复次数"
+   },
+   "Sandbox_ETW_GymTraitsSystemWorkoutLoopThreshold_tooltip": {
+    "en": "Number of completed exercise repeats required within a rolling in-game hour to count as a workout.",
+    "ch": "在滾動計算的一個遊戲內小時內, 需要完成多少次運動重複才算一次鍛鍊.",
+    "cn": "在滚动计算的一个游戏内小时内, 需要完成多少次运动重复才算一次锻炼."
+   },
+   "Sandbox_ETW_ImmunitySystemExcludeSuperImmune": {
+    "en": "Exclude Super-Immune from Immunity System",
+    "ch": "免疫系統排除超級免疫",
+    "cn": "免疫系统排除超级免疫"
+   },
+   "Sandbox_ETW_ImmunitySystemExcludeSuperImmune_tooltip": {
+    "en": "Prevents the Immunity System from granting Super-Immune. Resilient becomes the final stage instead.",
+    "ch": "免疫系統不會授予超級免疫, 改以生命強韌作為最終階段.",
+    "cn": "免疫系统不会授予超级免疫, 改以生命强韧作为最终阶段."
+   },
+   "Sandbox_ETW_ImmunitySystemSuperImmuneInfectionsSurvived": {
+    "en": "Knox infections survived for Super-Immune",
+    "ch": "獲得超級免疫所需的諾克斯感染存活次數",
+    "cn": "获得超级免疫所需的诺克斯感染存活次数"
+   },
+   "Sandbox_ETW_ImmunitySystemSuperImmuneInfectionsSurvived_tooltip": {
+    "en": "Number of Knox infections a character must survive before the Immunity System can grant Super-Immune. Set to 0 to disable this requirement. Setting this above 0 is recommended when using mods such as Antibodies that allow players to survive Knox Infection.",
+    "ch": "角色必須從諾克斯感染中存活多少次, 免疫系統才能授予超級免疫. 設為 0 可停用此條件. 使用 Antibodies 等能讓玩家從諾克斯感染中存活的模組時, 建議設為大於 0.",
+    "cn": "角色必须从诺克斯感染中存活多少次, 免疫系统才能授予超级免疫. 设为 0 可禁用此条件. 使用 Antibodies 等能让玩家从诺克斯感染中存活的模组时, 建议设为大于 0."
+   },
+   "Sandbox_ExtractionMode_NPCProvider": {
+    "en": "NPC Provider",
+    "ch": "NPC 來源模組",
+    "cn": "NPC 来源模组"
+   },
+   "Sandbox_ExtractionMode_NPCProvider_option1": {
+    "en": "Automatic (prefer A-Life)",
+    "ch": "自動 (優先使用 A-Life)",
+    "cn": "自动 (优先使用 A-Life)"
+   },
+   "Sandbox_ExtractionMode_NPCProvider_option2": {
+    "en": "Bandits",
+    "ch": "Bandits",
+    "cn": "Bandits"
+   },
+   "Sandbox_ExtractionMode_NPCProvider_option3": {
+    "en": "A-Life",
+    "ch": "A-Life",
+    "cn": "A-Life"
+   },
+   "Sandbox_ExtractionMode_NPCProvider_tooltip": {
+    "en": "Choose the mod used for NPC debug controls, meta events and late-raid horde replacements. Automatic uses A-Life when enabled, otherwise Bandits. Restart the session after changing this option. A-Life uses native faction eligibility, reputation and equipment. Regular timed attacks and friendly encounter schedules remain Bandits features.",
+    "ch": "選擇用於 NPC 除錯控制、場景事件與突襲後期屍潮替換的模組. 「自動」會在已啟用 A-Life 時使用 A-Life, 否則使用 Bandits. 變更此選項後需重新載入遊戲. A-Life 會使用其原生的派系資格、聲望與裝備. 一般的定時攻擊與友善遭遇排程仍屬於 Bandits 的功能.",
+    "cn": "选择用于 NPC 调试控制、场景事件与突袭后期尸潮替换的模组. “自动”会在已启用 A-Life 时使用 A-Life, 否则使用 Bandits. 更改此选项后需重新加载游戏. A-Life 会使用其原生的派系资格、声望与装备. 普通的定时攻击与友好遭遇排程仍属于 Bandits 的功能."
    }
   },
   "Tooltip.json": {
@@ -181055,9 +183030,9 @@
     "cn": "组装5.56x45mm北约亚音速弹-1980"
    },
    "Tooltip_Recipe_MakeBulletsRifleSAP": {
-    "en": "Cast small size armour piercing rifle bullets",
-    "ch": "鑄造步槍小口徑穿甲彈頭",
-    "cn": "铸造步枪小口径穿甲弹头"
+    "en": "Cast small size armour piercing rifle bullets from small steel items",
+    "ch": "用小型鋼製物品鑄造步槍小口徑穿甲彈頭",
+    "cn": "用小型钢制物品铸造步枪小口径穿甲弹头"
    },
    "Tooltip_Recipe_MakeHollowPointBullet": {
     "en": "Craft hollow point bullet from standard bullet",
@@ -182470,29 +184445,29 @@
     "cn": "组装9x39mm曳光弹 - 1980"
    },
    "Tooltip_Recipe_MakeBulletsHandgunLAP": {
-    "en": "Cast large size armour piercing handgun bullets",
-    "ch": "鑄造大口徑手槍穿甲彈頭",
-    "cn": "铸造大口径手枪穿甲弹头"
+    "en": "Cast large size armour piercing handgun bullets from small steel items",
+    "ch": "用小型鋼製物品鑄造手槍大口徑穿甲彈頭",
+    "cn": "用小型钢制物品铸造手枪大口径穿甲弹头"
    },
    "Tooltip_Recipe_MakeBulletsHandgunMAP": {
-    "en": "Cast medium size armour piercing handgun bullets",
-    "ch": "鑄造中口徑手槍穿甲彈頭",
-    "cn": "铸造中口径手枪穿甲弹头"
+    "en": "Cast medium size armour piercing handgun bullets from small steel items",
+    "ch": "用小型鋼製物品鑄造手槍中口徑穿甲彈頭",
+    "cn": "用小型钢制物品铸造手枪中口径穿甲弹头"
    },
    "Tooltip_Recipe_MakeBulletsHandgunSAP": {
-    "en": "Cast small size armour piercing handgun bullets",
-    "ch": "鑄造小口徑手槍穿甲彈頭",
-    "cn": "铸造小口径手枪穿甲弹头"
+    "en": "Cast small size armour piercing handgun bullets from small steel items",
+    "ch": "用小型鋼製物品鑄造手槍小口徑穿甲彈頭",
+    "cn": "用小型钢制物品铸造手枪小口径穿甲弹头"
    },
    "Tooltip_Recipe_MakeBulletsRifleLAP": {
-    "en": "Cast large size armour piercing rifle bullets",
-    "ch": "鑄造大口徑步槍穿甲彈頭",
-    "cn": "铸造大口径步枪穿甲弹头"
+    "en": "Cast large size armour piercing rifle bullets from small steel items",
+    "ch": "用小型鋼製物品鑄造步槍大口徑穿甲彈頭",
+    "cn": "用小型钢制物品铸造步枪大口径穿甲弹头"
    },
    "Tooltip_Recipe_MakeBulletsRifleMAP": {
-    "en": "Cast medium size armour piercing rifle bullets",
-    "ch": "鑄造中口徑步槍穿甲彈頭",
-    "cn": "铸造中口径步枪穿甲弹头"
+    "en": "Cast medium size armour piercing rifle bullets from small steel items",
+    "ch": "用小型鋼製物品鑄造步槍中口徑穿甲彈頭",
+    "cn": "用小型钢制物品铸造步枪中口径穿甲弹头"
    },
    "Tooltip_Recipe_MakeCasingRar": {
     "en": "Forge rocket-assisted-recoilless expelling charge casing",
@@ -182716,7 +184691,7 @@
     "cn": "回收火箭助推无后座抛射药筒"
    },
    "_AM_ItemName_comment_5": {
-    "en": "LITERATURE ITEMS",
+    "en": "LITERATURE ITEMs",
     "ch": "文獻物品",
     "cn": "文献物品"
    },
@@ -189509,9 +191484,9 @@
     "cn": "可用于多种配方."
    },
    "Tooltip_SugarcanePile": {
-    "en": "You can put this stack on a support to dry.",
-    "ch": "你可以把這捆甘蔗稈放到乾燥架上乾燥.",
-    "cn": "你可以把这捆甘蔗秆放到干燥架上干燥."
+    "en": "You can take sugarcane and put on a Drying Rack.",
+    "ch": "你可以取出甘蔗, 放到乾燥架上.",
+    "cn": "你可以取出甘蔗, 放到干燥架上."
    },
    "Tooltip_Sunny": {
     "en": "Sunny",
@@ -190902,6 +192877,186 @@
     "en": "Chocolate, crunch, and a morning that starts strong!",
     "ch": "巧克力, 酥脆口感, 還有活力十足的早晨!",
     "cn": "巧克力, 酥脆口感, 还有活力满满的早晨!"
+   },
+   "Tooltip_Recipe_DisassembleAmmoBulk": {
+    "en": "Get ammo parts for given ammo type with reloading press",
+    "ch": "使用子彈壓床從指定彈藥類型中取得彈藥部件",
+    "cn": "使用子弹压床从指定弹药类型中获取弹药部件"
+   },
+   "Tooltip_Recipe_ProduceBalls00": {
+    "en": "Cast 00 buckshot balls from iron in crucible",
+    "ch": "用坩堝中的鐵水鑄造鹿彈彈丸",
+    "cn": "用坩埚中的铁水铸造鹿弹弹丸"
+   },
+   "Tooltip_Recipe_ProduceBulletsHandgunL": {
+    "en": "Cast large size handgun bullets from iron in crucible",
+    "ch": "用坩堝中的鐵水鑄造手槍大口徑彈頭",
+    "cn": "用坩埚中的铁水铸造手枪大口径弹头"
+   },
+   "Tooltip_Recipe_ProduceBulletsHandgunLAP": {
+    "en": "Cast large size armour piercing handgun bullets from steel in crucible",
+    "ch": "用坩堝中的鋼水鑄造手槍大口徑穿甲彈頭",
+    "cn": "用坩埚中的钢水铸造手枪大口径穿甲弹头"
+   },
+   "Tooltip_Recipe_ProduceBulletsHandgunM": {
+    "en": "Cast medium size handgun bullets from iron in crucible",
+    "ch": "用坩堝中的鐵水鑄造手槍中口徑彈頭",
+    "cn": "用坩埚中的铁水铸造手枪中口径弹头"
+   },
+   "Tooltip_Recipe_ProduceBulletsHandgunMAP": {
+    "en": "Cast medium size armour piercing handgun bullets from steel in crucible",
+    "ch": "用坩堝中的鋼水鑄造手槍中口徑穿甲彈頭",
+    "cn": "用坩埚中的钢水铸造手枪中口径穿甲弹头"
+   },
+   "Tooltip_Recipe_ProduceBulletsHandgunS": {
+    "en": "Cast small size handgun bullets from iron in crucible",
+    "ch": "用坩堝中的鐵水鑄造手槍小口徑彈頭",
+    "cn": "用坩埚中的铁水铸造手枪小口径弹头"
+   },
+   "Tooltip_Recipe_ProduceBulletsHandgunSAP": {
+    "en": "Cast small size armour piercing handgun bullets from steel in crucible",
+    "ch": "用坩堝中的鋼水鑄造手槍小口徑穿甲彈頭",
+    "cn": "用坩埚中的钢水铸造手枪小口径穿甲弹头"
+   },
+   "Tooltip_Recipe_ProduceBulletsRifleL": {
+    "en": "Cast large size rifle bullets from iron in crucible",
+    "ch": "用坩堝中的鐵水鑄造步槍大口徑彈頭",
+    "cn": "用坩埚中的铁水铸造步枪大口径弹头"
+   },
+   "Tooltip_Recipe_ProduceBulletsRifleLAP": {
+    "en": "Cast large size armour piercing rifle bullets from steel in crucible",
+    "ch": "用坩堝中的鋼水鑄造步槍大口徑穿甲彈頭",
+    "cn": "用坩埚中的钢水铸造步枪大口径穿甲弹头"
+   },
+   "Tooltip_Recipe_ProduceBulletsRifleM": {
+    "en": "Cast medium size rifle bullets from iron in crucible",
+    "ch": "用坩堝中的鐵水鑄造步槍中口徑彈頭",
+    "cn": "用坩埚中的铁水铸造步枪中口径弹头"
+   },
+   "Tooltip_Recipe_ProduceBulletsRifleMAP": {
+    "en": "Cast medium size armour piercing rifle bullets from steel in crucible",
+    "ch": "用坩堝中的鋼水鑄造步槍中口徑穿甲彈頭",
+    "cn": "用坩埚中的钢水铸造步枪中口径穿甲弹头"
+   },
+   "Tooltip_Recipe_ProduceBulletsRifleS": {
+    "en": "Cast small size rifle bullets from iron in crucible",
+    "ch": "用坩堝中的鐵水鑄造步槍小口徑彈頭",
+    "cn": "用坩埚中的铁水铸造步枪小口径弹头"
+   },
+   "Tooltip_Recipe_ProduceBulletsRifleSAP": {
+    "en": "Cast small size armour piercing rifle bullets from steel in crucible",
+    "ch": "用坩堝中的鋼水鑄造步槍小口徑穿甲彈頭",
+    "cn": "用坩埚中的钢水铸造步枪小口径穿甲弹头"
+   },
+   "Tooltip_Recipe_ProduceSlugs12": {
+    "en": "Cast 12 bore slugs from iron in crucible",
+    "ch": "用坩堝中的鐵水鑄造12號獨頭彈",
+    "cn": "用坩埚中的铁水铸造12号独头弹"
+   },
+   "Tooltip_item_Peppercorn": {
+    "en": "Crush in a mortar and pestle to make pepper",
+    "ch": "在研缽中搗碎以製作胡椒粉",
+    "cn": "在研钵中捣碎以制作胡椒粉"
+   },
+   "Tooltip_SignalInhibitor": {
+    "en": "A radio signal jammer for C4 detonators.",
+    "ch": "用於干擾 C4 起爆器的無線電訊號干擾器.",
+    "cn": "用于干扰 C4 起爆器的无线电信号干扰器."
+   },
+   "Tooltip_DriedSugarcane": {
+    "en": "It can be used as a building material.",
+    "ch": "可用作建築材料.",
+    "cn": "可用作建筑材料."
+   },
+   "Tooltip_craft_NeedsAdvDoorframeDesc": {
+    "en": "Must be built on a advanced door frame.",
+    "ch": "必須建造在進階門框上.",
+    "cn": "必须建造在高级门框上."
+   },
+   "Tooltip_craft_NeedsAdvWallframeDesc": {
+    "en": "Must be built on a advanced wall frame.",
+    "ch": "必須建造在進階牆體框架上.",
+    "cn": "必须建造在高级墙体框架上."
+   },
+   "Tooltip_craft_NeedsAdvWindowframeDesc": {
+    "en": "Must be built on a advanced window frame.",
+    "ch": "必須建造在進階窗框上.",
+    "cn": "必须建造在高级窗框上."
+   },
+   "Tooltip_craft_NeedsCaneDoorExteriorLvl1Desc": {
+    "en": "Must be built on a cane door frame exterior lvl 1.",
+    "ch": "必須建造在甘蔗外牆門框 (等級 1) 上.",
+    "cn": "必须建造在甘蔗外墙门框 (等级 1) 上."
+   },
+   "Tooltip_craft_NeedsCaneDoorExteriorLvl2Desc": {
+    "en": "Must be built on a cane door frame exterior lvl 2.",
+    "ch": "必須建造在甘蔗外牆門框 (等級 2) 上.",
+    "cn": "必须建造在甘蔗外墙门框 (等级 2) 上."
+   },
+   "Tooltip_craft_NeedsCaneDoorInteriorLvl1Desc": {
+    "en": "Must be built on a cane door frame interior lvl 1.",
+    "ch": "必須建造在甘蔗內牆門框 (等級 1) 上.",
+    "cn": "必须建造在甘蔗内墙门框 (等级 1) 上."
+   },
+   "Tooltip_craft_NeedsCaneDoorInteriorLvl2Desc": {
+    "en": "Must be built on a cane door frame interior lvl 2.",
+    "ch": "必須建造在甘蔗內牆門框 (等級 2) 上.",
+    "cn": "必须建造在甘蔗内墙门框 (等级 2) 上."
+   },
+   "Tooltip_craft_NeedsCaneWallExteriorLvl1Desc": {
+    "en": "Must be built on a cane wall exterior lvl 1.",
+    "ch": "必須建造在甘蔗外牆 (等級 1) 上.",
+    "cn": "必须建造在甘蔗外墙 (等级 1) 上."
+   },
+   "Tooltip_craft_NeedsCaneWallExteriorLvl2Desc": {
+    "en": "Must be built on a cane wall exterior lvl 2.",
+    "ch": "必須建造在甘蔗外牆 (等級 2) 上.",
+    "cn": "必须建造在甘蔗外墙 (等级 2) 上."
+   },
+   "Tooltip_craft_NeedsCaneWallInteriorLvl1Desc": {
+    "en": "Must be built on a cane wall interior lvl 1.",
+    "ch": "必須建造在甘蔗內牆 (等級 1) 上.",
+    "cn": "必须建造在甘蔗内墙 (等级 1) 上."
+   },
+   "Tooltip_craft_NeedsCaneWallInteriorLvl2Desc": {
+    "en": "Must be built on a cane wall interior lvl 2.",
+    "ch": "必須建造在甘蔗內牆 (等級 2) 上.",
+    "cn": "必须建造在甘蔗内墙 (等级 2) 上."
+   },
+   "Tooltip_craft_NeedsCaneWindowExteriorLvl1Desc": {
+    "en": "Must be built on a cane window frame exterior lvl 1.",
+    "ch": "必須建造在甘蔗外牆窗框 (等級 1) 上.",
+    "cn": "必须建造在甘蔗外墙窗框 (等级 1) 上."
+   },
+   "Tooltip_craft_NeedsCaneWindowExteriorLvl2Desc": {
+    "en": "Must be built on a cane window frame exterior lvl 2.",
+    "ch": "必須建造在甘蔗外牆窗框 (等級 2) 上.",
+    "cn": "必须建造在甘蔗外墙窗框 (等级 2) 上."
+   },
+   "Tooltip_craft_NeedsCaneWindowInteriorLvl1Desc": {
+    "en": "Must be built on a cane window frame interior lvl 1.",
+    "ch": "必須建造在甘蔗內牆窗框 (等級 1) 上.",
+    "cn": "必须建造在甘蔗内墙窗框 (等级 1) 上."
+   },
+   "Tooltip_craft_NeedsCaneWindowInteriorLvl2Desc": {
+    "en": "Must be built on a cane window frame interior lvl 2.",
+    "ch": "必須建造在甘蔗內牆窗框 (等級 2) 上.",
+    "cn": "必须建造在甘蔗内墙窗框 (等级 2) 上."
+   },
+   "Tooltip_craft_advancedwoodenDoorFrameDesc": {
+    "en": "Advanced base for doors.",
+    "ch": "用於安裝門的進階底座.",
+    "cn": "用于安装门的高级底座."
+   },
+   "Tooltip_craft_advancedwoodenWallFrameDesc": {
+    "en": "Advanced base for walls.",
+    "ch": "用於建造牆面的進階底座.",
+    "cn": "用于建造墙面的高级底座."
+   },
+   "Tooltip_craft_advancedwoodenWindowFrameDesc": {
+    "en": "Advanced base for windows.",
+    "ch": "用於安裝窗戶的進階底座.",
+    "cn": "用于安装窗户的高级底座."
    }
   },
   "UI.json": {
@@ -203603,6 +205758,16 @@
     "en": "Status: %1",
     "ch": "狀態: %1",
     "cn": "状态: %1"
+   },
+   "UI_ETW_GymTraitsSystemWorkoutProtection": {
+    "en": "Due to a recent workout, progress will not deteriorate toward Couch Potato for another %1 hours.",
+    "ch": "由於最近有鍛鍊, 接下來 %1 小時內進度不會朝沙發馬鈴薯倒退.",
+    "cn": "由于最近有锻炼, 接下来 %1 小时内进度不会朝沙发土豆倒退."
+   },
+   "UI_ETW_KnoxInfectionsSurvived": {
+    "en": "Knox infections survived",
+    "ch": "諾克斯感染存活次數",
+    "cn": "诺克斯感染存活次数"
    }
   },
   "MakeUp.json": {
@@ -206536,6 +208701,11 @@
     "en": "Yerba Mate Plant",
     "ch": "馬黛茶樹",
     "cn": "马黛茶树"
+   },
+   "Farming_Sugarcane": {
+    "en": "Sugarcane Plant",
+    "ch": "甘蔗植株",
+    "cn": "甘蔗植株"
    }
   },
   "Moodles.json": {
@@ -209678,6 +211848,11 @@
     "en": "Wall Key Holder",
     "ch": "壁掛鑰匙架",
     "cn": "壁挂钥匙架"
+   },
+   "RadioFrequency_Inhibitor": {
+    "en": "Signal Inhibitor",
+    "ch": "訊號干擾器",
+    "cn": "信号干扰器"
    }
   },
   "Stash.json": {

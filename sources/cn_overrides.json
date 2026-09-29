@@ -13486,8 +13486,8 @@
   },
   "Sandbox.json|Sandbox_ExtractionMode_BanditHordeReplacementChancePercent_tooltip": {
     "as1_value": "尸潮到来时, 有机会将僵尸尸潮替换为一支规模更大、装备轻便的敌对匪徒小队, 混合使用近战武器和枪械.",
-    "reason": "現值漏掉前置需求與『Escalating Horde Waves 會在後期波次提高此機率』，又添加 EN 沒有的隊伍規模／裝備／武器描述。Sandbox_ExtractionMode_EscalatingHordeWaves 在 CH/CN 尚未翻譯（UI 顯示英文原名），故此處保留英文原名以對得上玩家實際看到的選項。",
-    "value": "需安装 Bandits 模组并启用'启用可选的匪徒 NPC 集成'. 来袭的突袭尸潮有概率被武装匪徒取代. 启用 Escalating Horde Waves 时, 后期波次的概率会提高."
+    "reason": "現值漏掉前置需求與『Escalating Horde Waves 會在後期波次提高此機率』，又添加 EN 沒有的隊伍規模／裝備／武器描述。Sandbox_ExtractionMode_EscalatingHordeWaves 在 CH/CN 尚未翻譯（UI 顯示英文原名），故此處保留英文原名以對得上玩家實際看到的選項。 2026-09-29 #621 上游改文：依新英文改譯（Base chance that an incoming raid horde is replaced by the s…）。",
+    "value": "来袭的突袭尸潮被所选 NPC 来源模组取代的基础概率. 使用 Bandits 时需启用“启用可选的匪徒 NPC 集成”. 使用 A-Life 时需要有符合资格的敌对派系; 生成失败时改回僵尸. 设为 0 可在经典模式下禁用替换. “递增尸潮波次”在之后的每一波都会增加 15 个百分点, 即使基础概率为 0 也一样; 第五波之后持续出现的波次仍为僵尸."
   },
   "Sandbox.json|Sandbox_ExtractionMode_EasierExtractions_tooltip": {
     "as1_value": "默认禁用. 启用后, 发射撤离信号弹不会引来最初的响应僵尸, 信号枪也不会产生吸引僵尸的环境音效. 突袭尸潮和直升机的行为保持不变.",
@@ -15766,13 +15766,13 @@
   },
   "Sandbox.json|_AM_Sandbox_comment_0": {
     "as1_value": "常规",
-    "reason": "2026-08-21 #222 有效分支 42.20 改為 OPTIONS。",
-    "value": "选项"
+    "reason": "2026-08-21 #222 有效分支 42.20 改為 OPTIONS。 2026-09-29 #616 上游改文：依新英文改譯（PAGES）。",
+    "value": "页面"
   },
   "Sandbox.json|_AM_Sandbox_comment_1": {
     "as1_value": "物品分布",
-    "reason": "2026-08-21 #222 有效分支 42.20 改為 LOOT。",
-    "value": "战利品"
+    "reason": "2026-08-21 #222 有效分支 42.20 改為 LOOT。 2026-09-29 #616 上游改文：依新英文改譯（CRAFTING OPTIONS）。",
+    "value": "制作选项"
   },
   "Stash.json|Stash_P4StealthCamoMap1_Text3": {
     "as1_value": "当我抵达并命令他放弃抵抗时, 他无视了我的命令并将手伸向了了腰带.",
@@ -16571,8 +16571,8 @@
   },
   "Tooltip.json|Tooltip_DM_Spellbook_LastAegis": {
     "as1_value": "触发应急净化结界和临时护盾.",
-    "reason": "鎖定 SpellDesc_last_aegis=紧急净化结界, 短暂大幅减轻伤害 用「紧急／短暂」, own 同字; as1「应急／临时」分歧.",
-    "value": "触发一道紧急净化结界与短暂的护盾."
+    "reason": "鎖定 SpellDesc_last_aegis=紧急净化结界, 短暂大幅减轻伤害 用「紧急／短暂」, own 同字; as1「应急／临时」分歧. 2026-09-29 #620 上游改文：依新英文改譯（Clear ordinary wound infections and raise a temporary aegis.…）。",
+    "value": "清除普通伤口感染并升起一道短暂的护盾. 无法治愈诺克斯感染."
   },
   "Tooltip.json|Tooltip_DM_Spellbook_Light": {
     "as1_value": "创建一个临时光源.",
@@ -26822,8 +26822,8 @@
   },
   "Sandbox.json|Sandbox_ETW_SleepSystem_tooltip": {
     "as1_value": "启用获得/失去与睡眠相关的特质: 清醒和嗜睡.<br>---概述---<br>模组会追踪你喜欢在哪些时段睡觉, 只要你在这些时段附近睡觉, 就会强化你健康的睡眠作息. 如果你在作息外睡觉, 会损失一些作息完整性. 超过24小时不睡觉也会开始损害你的睡眠作息. 模组通过检查你上次睡眠的中点来追踪你喜欢的睡眠时段, 因此可以将作息调整到不同时段. <br>---技术描述, 不想了解细节可跳过---<br>每次你睡觉, 模组会追踪睡眠中点.例如, 如果你在23:00到05:30之间睡觉, 中点为03:45, 这将是你的最佳睡眠时间.如果你在此时间+-6小时内睡觉, 你会获得睡眠健康度进度, 范围-200到200.每10分钟检查一次, 如果在正确作息内睡觉则加+0.167, 基本上每小时正确睡眠加+1. 在作息外睡觉每10分钟减0.167. 超过24小时不睡觉后, 每10分钟开始减0.167. 如果你的进度条低于-100, 你获得嗜睡. 高于100获得清醒. 开局带有任一特质会将进度条设为最大或最小值: 清醒+200, 嗜睡-200",
-    "value": "启用获得/失去与睡眠相关的特质: 清醒和嗜睡.<br>---概述---<br>模组会追踪你喜欢在哪些时段睡觉, 只要你在这些时段附近睡觉, 就会强化你健康的睡眠作息. 如果你在作息外睡觉, 会损失一些作息完整性. 超过24小时不睡觉也会开始损害你的睡眠作息. 模组通过检查你上次睡眠的中点来追踪你喜欢的睡眠时段, 因此可以将作息调整到不同时段. <br>---技术描述, 不想了解细节可跳过---<br>每次你睡觉, 模组会追踪睡眠中点.例如, 如果你在23:00到05:30之间睡觉, 中点为03:45, 这将是你的最佳睡眠时间.如果你在此时间+-6小时内睡觉, 你会获得睡眠健康度进度, 范围介于所设定的正负上限之间.每10分钟检查一次, 如果在正确作息内睡觉则加+0.167, 基本上每小时正确睡眠加+1. 在作息外睡觉每10分钟减0.167. 超过24小时不睡觉后, 每10分钟开始减0.167. 进度达-66%%时获得嗜睡, -33%%时失去嗜睡; +33%%时失去清醒, +66%%时获得清醒. 开局带有任一特质会将进度条设为对应的负值或正值上限",
-    "reason": "上游把固定的 ±100/±200 門檻改成可設定上限的百分比門檻（新增 Sandbox_ETW_SleepSystemCounter 正是這個上限）。既有 As1 CN/CH 仍寫「範圍-200到200」「低於-100…高於100」「清醒+200, 嗜睡-200」, 全是過時數值。只改這三處, 前段概述與技術描述其餘文字, 標點與 <br> 全部逐字保留。%% 雙百分號依 format 安全規則書寫。CN 需登記 cn_overrides 並同步 ch_review_state。"
+    "value": "启用获得/失去与睡眠相关的特质: 清醒和嗜睡.<br>---概述---<br>模组会追踪你喜欢在哪些时段睡觉, 只要你在这些时段附近睡觉, 就会强化你健康的睡眠作息. 如果你在作息外睡觉, 会损失一些作息完整性. 超过24小时不睡觉也会开始损害你的睡眠作息. 模组通过检查你上次睡眠的中点来追踪你喜欢的睡眠时段, 因此可以将作息调整到不同时段. 短暂醒来不会把一晚的睡眠拆成不同阶段: 你有一小时的宽限期可以重新入睡. <br>---技术描述, 不想了解细节可跳过---<br>每次你睡觉, 模组会追踪睡眠中点.例如, 如果你在23:00到05:30之间睡觉, 中点为03:45, 这将是你的最佳睡眠时间. 新的中点要在你保持清醒满一个游戏内小时后才会确定. 如果你在宽限期内重新入睡, 这段睡眠会从原本的就寝时间延续, 并以最后醒来的时间为准. 如果你保持清醒满一小时, 中点仍以你最初醒来的时间计算, 而不是宽限期结束的时间.如果你在此时间+-6小时内睡觉, 你会获得睡眠健康度进度, 范围介于所设定的正负上限之间.每10分钟检查一次, 如果在正确作息内睡觉则加+0.167, 基本上每小时正确睡眠加+1. 在作息外睡觉每10分钟减0.167. 超过24小时不睡觉后, 每10分钟开始减0.167. 进度达-66%%时获得嗜睡, -33%%时失去嗜睡; +33%%时失去清醒, +66%%时获得清醒. 开局带有任一特质会将进度条设为对应的负值或正值上限",
+    "reason": "上游把固定的 ±100/±200 門檻改成可設定上限的百分比門檻（新增 Sandbox_ETW_SleepSystemCounter 正是這個上限）。既有 As1 CN/CH 仍寫「範圍-200到200」「低於-100…高於100」「清醒+200, 嗜睡-200」, 全是過時數值。只改這三處, 前段概述與技術描述其餘文字, 標點與 <br> 全部逐字保留。%% 雙百分號依 format 安全規則書寫。CN 需登記 cn_overrides 並同步 ch_review_state。 2026-09-29 #617 上游改文：依新英文改譯（Enables obtaining/losing sleep-related traits, Wakeful and S…）。"
   },
   "UI.json|UI_trait_VernDesc": {
     "as1_value": "拥抱弗恩之道! <br>弗恩厌恶枪械以及与之相关的一切.",
@@ -27779,5 +27779,105 @@
     "as1_value": "制作下挂式榴弹",
     "reason": "2026-09-29 #614 上游改文：配方名由 'Craft Underbarrel Grenade Round' 改為 'Craft 40mm HE Grenade Round'（原 GrenadeAmmo40 配方已刪除），依新英文改譯，沿用已退役 GrenadeAmmo40 的譯法。",
     "value": "制作 40mm 高爆榴弹"
+  },
+  "Recipes.json|MakeJar4": {
+    "as1_value": "制作罐装食品 (香料)",
+    "value": "制作罐装食品 (调味料)",
+    "reason": "2026-09-29 #619 owner 衝突中性譯名：LongTermPreservationExtended 改為 Spices／Shaker、LongTermPreservationExtendedSE 仍為 Salt，取兩方皆成立的「調味料」；裁決見 owner_conflict_decisions.json。"
+  },
+  "Sandbox.json|Sandbox_ETW_ImmunitySystemCounter_tooltip": {
+    "as1_value": "达到计数器一半值时失去易生病, 达到计数器值时获得强韧. 每分钟当前感冒强度被加入计数器. 感染诺克斯病毒也有贡献(所以如果你运行可以帮助对抗感染的模组, 如抗体, 它会对免疫系统有帮助)",
+    "value": "免疫系统进度的上限. 进度达 12.5%% 时失去易患疾病, 25%% 时失去免疫缺陷, 37.5%% 时获得生命强韧, 100%% 时获得超级免疫. 已禁用的自定义特质会被跳过. 每分钟会把当前的感冒强度加入进度. 诺克斯感染也会按其倍率计入进度.",
+    "reason": "2026-09-29 #617 上游改文：依新英文改譯（Maximum Immunity System progress. Lose Prone to Illness at 1…）。"
+  },
+  "Sandbox.json|Sandbox_ExtractionMode_BanditHordeGroupMaximum": {
+    "as1_value": "匪徒替换尸潮最大规模",
+    "value": "NPC 替换尸潮最大规模",
+    "reason": "2026-09-29 #621 上游改文：依新英文改譯（Maximum NPC Horde Replacement Size）。"
+  },
+  "Sandbox.json|Sandbox_ExtractionMode_BanditHordeGroupMinimum": {
+    "as1_value": "匪徒替换尸潮最小规模",
+    "value": "NPC 替换尸潮最小规模",
+    "reason": "2026-09-29 #621 上游改文：依新英文改譯（Minimum NPC Horde Replacement Size）。"
+  },
+  "Sandbox.json|Sandbox_ExtractionMode_BanditHordeReplacementChancePercent": {
+    "as1_value": "匪徒替换尸潮概率 (百分比)",
+    "value": "NPC 替换尸潮概率 (百分比)",
+    "reason": "2026-09-29 #621 上游改文：依新英文改譯（NPC Horde Replacement Chance (Percent)）。"
+  },
+  "Tooltip.json|Tooltip_Item_PolishingCompound": {
+    "as1_value": "用于去除金属物体氧化层和污垢的抛光剂",
+    "value": "用于去除小型金属物品氧化层和污垢的抛光剂",
+    "reason": "2026-09-29 #616 上游改文：依新英文改譯（Polishing compound to remove oxidation and dirt from  smallm…）。"
+  },
+  "Tooltip.json|Tooltip_Recipe_MakeBalls00": {
+    "as1_value": "铸造鹿弹弹丸",
+    "value": "用小型铁制物品铸造鹿弹弹丸",
+    "reason": "2026-09-29 #616 上游改文：依新英文改譯（Cast 00 buckshot balls from small iron items）。"
+  },
+  "Tooltip.json|Tooltip_Recipe_MakeBulletsHandgunL": {
+    "as1_value": "铸造手枪大口径弹头",
+    "value": "用小型铁制物品铸造手枪大口径弹头",
+    "reason": "2026-09-29 #616 上游改文：依新英文改譯（Cast large size handgun bullets from small iron items）。"
+  },
+  "Tooltip.json|Tooltip_Recipe_MakeBulletsHandgunM": {
+    "as1_value": "铸造手枪中口径弹头",
+    "value": "用小型铁制物品铸造手枪中口径弹头",
+    "reason": "2026-09-29 #616 上游改文：依新英文改譯（Cast medium size handgun bullets from small iron items）。"
+  },
+  "Tooltip.json|Tooltip_Recipe_MakeBulletsHandgunS": {
+    "as1_value": "铸造手枪小口径弹头",
+    "value": "用小型铁制物品铸造手枪小口径弹头",
+    "reason": "2026-09-29 #616 上游改文：依新英文改譯（Cast small size handgun bullets from small iron items）。"
+  },
+  "Tooltip.json|Tooltip_Recipe_MakeBulletsRifleL": {
+    "as1_value": "铸造步枪大口径弹头",
+    "value": "用小型铁制物品铸造步枪大口径弹头",
+    "reason": "2026-09-29 #616 上游改文：依新英文改譯（Cast large size rifle bullets from small iron items）。"
+  },
+  "Tooltip.json|Tooltip_Recipe_MakeBulletsRifleM": {
+    "as1_value": "铸造步枪中口径弹头",
+    "value": "用小型铁制物品铸造步枪中口径弹头",
+    "reason": "2026-09-29 #616 上游改文：依新英文改譯（Cast medium size rifle bullets from small iron items）。"
+  },
+  "Tooltip.json|Tooltip_Recipe_MakeBulletsRifleS": {
+    "as1_value": "铸造步枪小口径弹头",
+    "value": "用小型铁制物品铸造步枪小口径弹头",
+    "reason": "2026-09-29 #616 上游改文：依新英文改譯（Cast small size rifle bullets from small iron items）。"
+  },
+  "Tooltip.json|Tooltip_Recipe_MakeSlugs12": {
+    "as1_value": "铸造12号独头弹",
+    "value": "用小型铁制物品铸造12号独头弹",
+    "reason": "2026-09-29 #616 上游改文：依新英文改譯（Cast 12 bore slugs from small iron items）。"
+  },
+  "Tooltip.json|Tooltip_item_UseForRefill": {
+    "as1_value": "用于重新填充空的盐容器.",
+    "value": "用于补充空的调味料容器.",
+    "reason": "2026-09-29 #619 owner 衝突中性譯名：LongTermPreservationExtended 改為 Spices／Shaker、LongTermPreservationExtendedSE 仍為 Salt，取兩方皆成立的「調味料」；裁決見 owner_conflict_decisions.json。"
+  },
+  "UI.json|UI_ETW_Options_EnableSleepHealthMoodle_tooltip": {
+    "as1_value": "显示你是否在最佳时段内睡觉. 仅在角色睡觉时激活",
+    "value": "显示你是否在最佳时段内睡觉. 仅在角色睡觉时生效. 在你清醒满一个游戏内小时之前, 最佳时段不会更新, 因此短暂中断仍算同一段睡眠.",
+    "reason": "2026-09-29 #617 上游改文：依新英文改譯（Shows if you're sleeping within your optimal hours or not. O…）。"
+  },
+  "UI.json|UI_trait_HardyDesc": {
+    "as1_value": "你拥有超出正常极限的耐力储备.",
+    "value": "你拥有超出正常极限的耐力储备.<br>耐力高于 99%% 时, 会把最大耐力的 5%% 存入储备 (默认最多为最大耐力的 25%%). 耐力降到 85%% 以下时, 会从储备恢复最大耐力的 5%%.",
+    "reason": "2026-09-29 #617 上游改文：依新英文改譯（You have a reserve of endurance beyond your normal limits.<b…）。"
+  },
+  "Recipes.json|OpenBoxOfPreservedJars": {
+    "as1_value": "打开食品罐装盒 (已保存)",
+    "value": "打开整盒罐装腌制食品",
+    "reason": "2026-09-29 #619 與新增的 VFX／HM 同名配方統一譯名：Preserved 指醃製保存的食品；「已保存」「食品罐装盒」皆誤譯。"
+  },
+  "Recipes.json|OpenBoxOfUncookedJars": {
+    "as1_value": "打开食品罐装盒 (未烹饪)",
+    "value": "打开整盒罐装食品 (未烹饪)",
+    "reason": "2026-09-29 #619 與新增的 VFX／HM 同名配方統一譯名：打開的是整盒食品罐，不是罐裝用的盒子。"
+  },
+  "Recipes.json|PackPreservedJarsFood": {
+    "as1_value": "将 6 罐已保存食品装箱",
+    "value": "将 6 罐腌制食品装箱",
+    "reason": "2026-09-29 #619 與新增的 VFX／HM 同名配方統一譯名：Preserved Food 是醃製保存的食品，不是「已保存」。"
   }
 }

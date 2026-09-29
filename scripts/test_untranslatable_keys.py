@@ -38,11 +38,8 @@ pairs, items = tracker.load_untranslatable(p)
 data = json.loads(p.read_text(encoding="utf-8"))
 entries = data["entries"]
 
-check(len(entries) == 398, f"registry 應有 398 條人工裁決，實得 {len(entries)}")
-# 其餘兩項一律**相對 `entries` 表述**：登記是漸進成長的，寫死三份數字會讓每次新增都得改三處。
+# 登記是漸進成長的，不寫死條數；只驗正規化不讓檔域身分互相塌縮。
 check(len(pairs) == len(entries), "檔域身分不得因正規化互相塌縮")
-check(len(entries) - len(items) == 2,
-      f"非 ItemName 的登記只應有 2 條（IG_UI 1、Recipes 1），實得 {len(entries) - len(items)}")
 check(("ItemName", "MirageWardrobeRender.JacketBulky01") in pairs,
       "幻裝衣櫥渲染載體有登記")
 check("MirageWardrobeRender.JacketBulky01" in items, "ItemName fullType 正確抽取")

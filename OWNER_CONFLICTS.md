@@ -23,7 +23,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1287** 個鍵（`unship` 300、`translate` 987）。這些鍵的 owner 條目共 3444 筆：可載入 `.json` 2127、script 534、死檔 783。另有 **2** 個鍵尚未裁決。
+現況：已裁決 **1289** 個鍵（`unship` 300、`translate` 989）。這些鍵的 owner 條目共 3448 筆：可載入 `.json` 2131、script 534、死檔 783。另有 **0** 個鍵尚未裁決。
 
 ## 不出貨的鍵（300）
 
@@ -332,7 +332,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_profdesc_veteran` | `2840805724/SimpleOverhaulTraitsAndOccupations` = War. War never changes... _(json)_<br>`3387957272/Detailed Descriptions for Occupations and Traits` = Foraging Bonuses:&lt;br&gt;+1.75 vision radius&lt;br&gt;33%… _(json)_ | 2026-08-29 #316：Detailed Descriptions 與 Simple Overhaul 以同一職業描述鍵承載完全不同內容（一方為完整知識/搜尋加成，另一方為一句摘要），沒有同時保真且有用的中性譯文。兩方均有可載入 JSON EN，抑制後顯示各自英文。 | — |
 | `UI\|UI_trait_BloodlustDesc` | `2459400130/DynamicTraits` = An uncontrollable urge to kill zombies. Going too long with… _(json)_<br>`2914075159/Evolving Traits World` = You find great joy in culling the undead.&lt;br&gt;You gain… _(json)_<br>`3657541591/Superheroes` = Double the speed. Triple the damage.&lt;br&gt;Recover endur… _(json)_ | 三個模組共用同鍵但效果不同：Dynamic Traits 是長時間不殺殭屍會惡化心情，ETW 是擊殺後降低壓力與恐慌，Superheroes 是速度與傷害加成、近戰擊殺恢復耐力及麻木。沒有完整且適用三方的單一說明，維持不出貨；三方皆有可載入 JSON 英文，玩家改讀各自模組的原文。 | — |
 
-## 採中性譯名的鍵（987）
+## 採中性譯名的鍵（989）
 
 這些鍵有中文，且該譯名對每個 MOD 都成立。
 
@@ -1119,6 +1119,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `Recipes\|ISOMakeContainerDoor` | `2618213077/82oshkoshM911` = Make ISO Container Door _(json)_<br>`2625625421/isoContainers` = Make Container Door _(json)_<br>`3171167894/damnlib` = Make Container Door _(json)_ | 2026-09-21 #541 重新裁決 translate、維持現值（owner 由 2 增為 3，簽名重簽；舊簽名 ad982adf2e8a551c 已過時）：新 owner 2625625421/isoContainers 是這個配方的本主。逐字比對 42.20 上游 script——isoContainers/isoContainer_recipes.txt 與 82oshkoshM911/82oshkoshM911_recipes.txt 的 craftRecipe ISOMakeContainerDoor 區塊在收斂空白後完全相同（timedAction=Welding、time=150、同一份 inputs、outputs 皆為 item 1 Base.IsoContainerTrunkDoor2），三方指同一個「ISO 貨櫃門」配方，英文差異只是 oshkosh 多標 ISO 前綴；3171167894/damnlib 該段是 isoContainers 的舊快照拷貝（段首 HEADER_Recipes_EN_isoContainers=2625625421），全樹無 isoContainer 配方 script。產物 Base.IsoContainerTrunkDoor2 在 42.20 的 DisplayName 也已改為 "ISO Container Doo… | — |
 | `Recipes\|MakeBluntWrap` | `3404956403/N&C's Narcotics` = Make a Blunt Wrap _(json)_<br>`3414697768/jiggasGreenFire42` = Make Blunt Wrap _(json)_ | 2026-08-25 #279 裁決維持現行中性譯名。兩個 owner 都是「製作捲大麻用的菸葉包捲皮」這個同一道配方：3404956403/N&C's Narcotics 寫 'Make a Blunt Wrap'（Recipes.json，產出 NnC.BluntWrap）、3414697768/jiggasGreenFire42 寫 'Make Blunt Wrap'。英文差異只有不定冠詞 'a'，非不同實體。現行「製作菸葉捲皮」對兩者皆成立，且與本次補譯的 NnC.BluntWrap=「菸葉捲皮」、NnC.Blunt*=「…菸葉捲」同族一致。 | — |
 | `Recipes\|MakeCannaButter` | `3404956403/N&C's Narcotics` = Make CannaButter _(json)_<br>`3414697768/jiggasGreenFire42` = Make Canna Butter _(json)_ | 2026-08-25 #279 裁決維持現行中性譯名。兩個 owner 都是「以大麻浸製奶油」這個同一道配方：3404956403/N&C's Narcotics 寫 'Make CannaButter'（Recipes.json，產出 NnC.CannaButter）、3414697768/jiggasGreenFire42 寫 'Make Canna Butter'。英文差異只有複合詞是否斷字，非不同實體。現行 CH「製作大麻奶油」／CN「制作大麻黄油」對兩者皆成立（butter 的台灣用語為奶油、大陸用語為黄油，兩欄各自在地化），且與本次補譯的 NnC.CannaButter 同族一致。 | — |
+| `Recipes\|MakeJar4` | `3597673472/LongTermPreservationExtended` = Make Jar of Preserved Food (Spices) _(json)_<br>`3789287166/LongTermPreservationExtendedSE` = Make Jar of Preserved Food (Salt) _(json)_ | 2026-09-29 #619: LongTermPreservationExtended 把此配方改成香料罐（Spices，同時涵蓋新加入的胡椒），LongTermPreservationExtendedSE 仍是鹽罐（Salt）；鹽與香料都屬調味料，取兩方皆成立的「調味料」。 | — |
 | `Recipes\|MakePanDulce` | `3600616323/Todo Caserito` = Prepare christmas sweet bread _(json)_<br>`3622474939/AbuelitaLindaMexicanFoods` = Make Sweet Bread _(json)_ | 兩個 owner 都是拉丁甜麵包 pan dulce：3600616323/Todo Caserito 的 Recipes 寫 'Prepare christmas sweet bread'，但其物品 TodoCaserito.PanDulce 本身是 'Sweet bread'；3622474939/AbuelitaLindaMexicanFoods 的 Recipes 與物品皆為 'Make Sweet Bread'／'Sweet Bread'。聖誕是 Todo Caserito 單側的配方名修飾，不是另一種食物。中性譯名「製作甜麵包」對兩者皆成立，與已出貨的 MakePanDulceRosa='製作粉紅甜麵包' 同族一致。 | — |
 | `Recipes\|MakeTacoShell` | `2875059598/Herbalist` = Make Taco Shell _(json)_<br>`2875059598/Herbalist_NoBiofuel` = Make Taco Shell _(json)_<br>`3600616323/Todo Caserito` = Prepare taco shell _(json)_ | 三個 owner 都是製作塔可餅皮：2875059598/Herbalist 與 Herbalist_NoBiofuel 寫 'Make Taco Shell'，3600616323/Todo Caserito 寫 'Prepare taco shell'。同一食物、動詞 Make／Prepare 的風格差，不是不同食譜。現行「製作塔可餅皮」對三者皆成立。 | — |
 | `Recipes\|MakeYeast` | `2875059598/Herbalist` = Make Yeast _(json)_<br>`2875059598/Herbalist_NoBiofuel` = Make Yeast _(json)_<br>`3600616323/Todo Caserito` = Obtain yeast _(json)_ | 三個 owner 都是取得酵母：2875059598/Herbalist 與 Herbalist_NoBiofuel 寫 'Make Yeast'，3600616323/Todo Caserito 寫 'Obtain yeast'（該 mod 另有 MakeLevaduraCaseraJar='Prepare brewer's yeast' 專指自製啤酒酵母罐）。Make／Obtain 是取得途徑的措辭差，產物都是酵母本身。現行「製作酵母」未宣稱任何特定菌種或容器，對三者皆成立。 | — |
@@ -1269,6 +1270,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `Tooltip\|Tooltip_WinterBoots` | `2850935956/Boots Expanded` = Stomp Power: 3.20 Durability: 800 _(json)_<br>`2850935956/Boots Expanded Vanilla` = Stomp Power: 3.0 Durability: 800 _(死檔 Tooltip_EN.txt)_ | liveness：**SINGLE:FULL，不是衝突**。只有 Boots Expanded（id SM4BootsExpandedB42）的 item Shoes_LongWinterBoots 綁 Tooltip_WinterBoots；Boots Expanded Vanilla 側無任何 item 綁本鍵（死鍵）。故應忽實翻譯活 owner（FULL）的字串 'Stomp Power: 3.20 Durability: 800'；現行出貨值 3.0/800 的踩踏力度來自**死 owner（VAN）**，必須改。改完對 VAN-only 玩家零影響（本鍵在它那邊永不渲染）。**已知上游失準（殘留，不代上游修）**：活 item Shoes_LongWinterBoots 實際 StompPower=3.0、ConditionMax=47，與它自己 tooltip 寫的 3.20/800 不符（整個 Boots 家族的 Durability 那一欄是 B41 舊尺度，B42 ConditionMax 差約 20 倍）。我採「忽實翻譯活 owner 字串、不代上游修數字」：若因為 3.0 碰巧符合實際 StompPower 而維持現值，实质上是拿另一個 mod 的字串套到活 owner 身上（正是本次稽核要消除的錯誤類型），且上游日後修正數值時我方反而錯；此規則已與 Aud… | — |
 | `Tooltip\|Tooltip_WorkBoots` | `2850935956/Boots Expanded` = Stomp Power: 2.40 Durability: 700 _(json)_<br>`2850935956/Boots Expanded Vanilla` = Stomp Power: 2.2 Durability: 600 _(死檔 Tooltip_EN.txt)_ | 只有 Boots Expanded Vanilla B42 root 活用本鍵，現值 2.2/600 正確；full root 同名值是死鍵。 | — |
 | `Tooltip\|Tooltip_alreadyknownrecipe` | `3800233932/AmmoMakerUnderfire` = (Already known) _(json)_<br>`3800233932/LeGourmetUltimate` = (Already learned) _(json)_ | 2026-09-22 #501: 已知與已學習在配方提示皆表示已學會，保留前導空白與括號。 | — |
+| `Tooltip\|Tooltip_item_UseForRefill` | `3597673472/LongTermPreservationExtended` = Used to refill empty Shaker containers. _(json)_<br>`3789287166/LongTermPreservationExtendedSE` = Used to refill empty salt containers. _(json)_ | 2026-09-29 #619: LongTermPreservationExtended 指空的調味罐（Shaker，鹽與胡椒共用），LongTermPreservationExtendedSE 指空的鹽容器；兩者都是裝調味料的容器，取「調味料容器」。 | — |
 | `Tooltip\|Tooltip_needknownrecipe` | `3800233932/AmmoMakerUnderfire` = Recipe Needed: _(json)_<br>`3800233932/LeGourmetUltimate` = Recipe needed: _(json)_ | 2026-09-22 #501: 兩個 owner 僅大小寫不同，皆表示所需配方。 | — |
 | `Tooltip\|Tooltip_needrecipe` | `3800233932/AmmoMakerUnderfire` = Recipe needed: _(json)_<br>`3800233932/TableSaw` = Recipe Needed: _(json)_ | 2026-09-22 #501: 兩個 owner 僅大小寫不同，皆表示所需配方。 | — |
 | `Tooltip\|Tooltip_weapon_GunLight` | `2256623447/Firearms` = Gun Light _(json)_<br>`2256623447/FirearmsBETA` = Gun Light _(json)_<br>`3388468313/RaccoonCityB42` = GunLight _(json)_ | Firearms／BETA／RaccoonCity 都是 Gun Light，同物無數值差異；現行槍燈／戰術電筒各語區均可辨識。 | — |
@@ -1326,11 +1328,9 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_thickblooddesc` | `1299328280/More Traits` = You bleed more slowly from wounds. _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Wounds bleeds less.&lt;br&gt;(-50% damage from bleeding.) _(json)_ | 2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。 | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（2）
+## 尚未裁決的衝突（0）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
 | 鍵 | owner 與上游英文 | 目前出貨的繁中 |
 |---|---|---|
-| `Recipes\|MakeJar4` | `3597673472/LongTermPreservationExtended` = Make Jar of Preserved Food (Spices) _(json)_<br>`3789287166/LongTermPreservationExtendedSE` = Make Jar of Preserved Food (Salt) _(json)_ | 製作罐裝醃製食品 (鹽) |
-| `Tooltip\|Tooltip_item_UseForRefill` | `3597673472/LongTermPreservationExtended` = Used to refill empty Shaker containers. _(json)_<br>`3789287166/LongTermPreservationExtendedSE` = Used to refill empty salt containers. _(json)_ | 用於重新填充空的鹽容器. |
