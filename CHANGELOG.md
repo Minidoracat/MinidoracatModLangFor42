@@ -30,6 +30,14 @@
 - **依上游英文改值重譯 22 項，另 11 項只更新英文錨點。** Extraction Mode 11 項沙盒說明加入新的「自由漫遊」模式規則（屍潮間隔與情報中心加成、乘車撤離燃料、道路封鎖），死亡救援改為骨折盡量上夾板（#629）；Dynamic Traits 兩個致病頻率設定補上「設為 0 停用」（#632）；The Best Lockpicking 的沙盒頁名、經驗倍率與開鎖小遊戲選項改為「舊版 (簡易)／新版 (彈子鎖芯)」（#635）；Drink Smart 的低口渴飲水設定與「可飲用的量不足」提示（#636）；Livestock Panel Plus 的公雞啼叫補上只對單人遊戲有效（#641）；TT_PowerPlant 的解藥說明改為只能遏止感染、無法治癒（#623）。Ammo Maker 2 項只是上游修正疊字（#633），SMP AmmoMaker、Neat Crafting 等 9 項只是大小寫或措辭微調，譯文不變。
   > 技術要點：own 層 24 鍵連同 `en` 錨點更新；As1 衍生層 9 鍵改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點），皆登記 `ch_review_state`。其中 10 鍵是更早幾輪上游改寫時 `en` 錨點沒跟上，這次以 own 錨點對 issue 所屬 MOD 的上游現值全量比對才抓出。The Best Lockpicking 的 6 個沙盒鍵另由舊版 The Best Lockpicking [B42.20]、Lockpicking Skill、Neat Lockpicking 共用，改取對每個 owner 都成立的中性譯名（「最佳開鎖」→「開鎖」，「可能存在錯誤」只屬舊版而移除），新增 6 筆 `owner_conflict_decisions.json` translate 裁決。DTEM 兩鍵順帶把 Day Length 對齊本體「每日長度／一天长度」。經 Codex、Grok 對抗複核採納 4 條修正。
 - **CAExtendedCategories 類別名統一**（#640）：上游把分類鍵由 `XOrY` 改名為 `X__Y`，新鍵沿用舊譯；同時把 7 項「家用工具/…」統一為同 MOD 其他類別使用的「家用物品/…」，「工具/廢品」改為「工具/雜物」。
+- **全面比對原創翻譯與上游現行英文：451 筆過時的英文錨點全部更新，其中 293 筆譯文跟著修正。**
+  - Survivor Journals 等 116 段日記與說明：上游已把換行改成真正的換行，譯文原本存的是字面「\n」，一併改正（若 MOD 不再自行轉換，舊譯文會直接顯示「\n」）。
+  - Mr Brollow's Skyblock 69 個配方名改為上游現行寫法（直接顯示產物名稱），並對齊本體物品譯名，例如鐵條、鋼條、大鐵塊、布膠帶、手鋸條、鉚頭工具。
+  - Till Death Do Us Part 48 項沙盒說明依上游精簡後的英文重譯。
+  - GaelGunStore、Modern Firearms System 的槍械、彈藥與配件名稱跟上新英文（.303 British 彈藥、M16 提把瞄準鏡、SnipeX 消音器、Cyclone AK 突擊步槍、槍械清潔套件等）；Modern Firearms System 早期 EN 檔裡的中文與代號已換成正式英文名。
+  - Legendary Katana 的 9 個上色配方由「製作傳奇武士刀」改為「為傳奇武士刀上色」；Global Storage SiK 的武器分類改用本體技能名「長刀／短刀／長棍／短棍」。
+  - 其餘：Ogrim 縫紉台的布捲改為「布捲 (材質)」結構、Common Sense 的開罐受傷說明、Cyes Push Doors 的按鍵說明等。
+  > 技術要點：own 錨點對上游有效分支勝出值逐筆比對（owner＝`wid/root`，同 workshop 多個 MOD 分開算），分四類：換行表示法 116、只差大小寫或標點 57、語意變動 267、多 owner 11。語意類分 5 批由翻譯代理判斷保留或重譯（重譯 160），再經 Codex、Grok 兩線複核；Skyblock 配方以 script 的產物比對本體 `ItemName`，41 筆改用本體譯名。多 owner 類中 GaelGunStore Legacy 的「英文」其實是物品 ID，不算衝突；G36 與 `cat_AutoReload` 的現譯對各 owner 都成立，新增 2 筆 translate 裁決。所有更動的鍵都以有效 CN 值登記 `ch_review_state`。
 
 ### Removed
 

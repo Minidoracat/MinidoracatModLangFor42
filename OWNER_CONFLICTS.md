@@ -23,7 +23,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1306** 個鍵（`unship` 302、`translate` 1004）。這些鍵的 owner 條目共 3813 筆：可載入 `.json` 2451、script 576、死檔 786。另有 **514** 個鍵尚未裁決。
+現況：已裁決 **1308** 個鍵（`unship` 302、`translate` 1006）。這些鍵的 owner 條目共 3817 筆：可載入 `.json` 2453、script 578、死檔 786。另有 **512** 個鍵尚未裁決。
 
 ## 不出貨的鍵（302）
 
@@ -334,7 +334,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_profdesc_veteran` | `2840805724/SimpleOverhaulTraitsAndOccupations` = War. War never changes... _(json)_<br>`3387957272/Detailed Descriptions for Occupations and Traits` = Foraging Bonuses:&lt;br&gt;+1.75 vision radius&lt;br&gt;33%… _(json)_ | 2026-08-29 #316：Detailed Descriptions 與 Simple Overhaul 以同一職業描述鍵承載完全不同內容（一方為完整知識/搜尋加成，另一方為一句摘要），沒有同時保真且有用的中性譯文。兩方均有可載入 JSON EN，抑制後顯示各自英文。 | — |
 | `UI\|UI_trait_BloodlustDesc` | `2459400130/DynamicTraits` = An uncontrollable urge to kill zombies. Going too long with… _(json)_<br>`2914075159/Evolving Traits World` = You find great joy in culling the undead.&lt;br&gt;You gain… _(json)_<br>`3657541591/Superheroes` = Double the speed. Triple the damage.&lt;br&gt;Recover endur… _(json)_ | 三個模組共用同鍵但效果不同：Dynamic Traits 是長時間不殺殭屍會惡化心情，ETW 是擊殺後降低壓力與恐慌，Superheroes 是速度與傷害加成、近戰擊殺恢復耐力及麻木。沒有完整且適用三方的單一說明，維持不出貨；三方皆有可載入 JSON 英文，玩家改讀各自模組的原文。 | — |
 
-## 採中性譯名的鍵（1004）
+## 採中性譯名的鍵（1006）
 
 這些鍵有中文，且該譯名對每個 MOD 都成立。
 
@@ -763,6 +763,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|Base.G18` | `3616176188/GaelGunStore` = Glock 18 Pistol _(json)_<br>`3623297453/GaelGunStore_Legacy` = Glock-18 _(script)_<br>`3777433827/BritaCombinedB42` = Glock 18 Pistol _(script)_ | 2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Glock 18 Pistol」與「Glock-18」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「格洛克18手槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 owner 3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 | — |
 | `ItemName\|Base.G2` | `3616176188/GaelGunStore` = Taurus G2C Pistol _(json)_<br>`3623297453/GaelGunStore_Legacy` = G2 Pistol _(script)_ | 2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 | — |
 | `ItemName\|Base.G27` | `3616176188/GaelGunStore` = G27 Rifle _(json)_<br>`3623297453/GaelGunStore_Legacy` = Heckler & Koch HK417 _(script)_ | 2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「G27 Rifle」與「Heckler & Koch HK417」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「G27步槍」採現行名稱，對兩個 owner 均成立。 | — |
+| `ItemName\|Base.G36` | `3616176188/GaelGunStore` = Heckler & Koch G36 Rifle _(json)_<br>`3777433827/BritaCombinedB42` = H&K G36 Rifle w/Extended Stock _(script)_ | 2026-10-02 錨點全量比對：GaelGunStore 為 Heckler & Koch G36 Rifle、Brita 為 H&K G36 Rifle w/Extended Stock，是同一款步槍；Brita 多標延長槍托，現譯不宣稱槍托型式，對兩方皆成立。 | — |
 | `ItemName\|Base.G3A3` | `3243805556/Totally's NATO Firearms Pack B42` = Heckler and Koch G3A3 _(json)_<br>`3616176188/GaelGunStore` = Heckler & Koch G3A3 Rifle _(json)_<br>`3623297453/GaelGunStore_Legacy` = Heckler & Koch G3 _(script)_ | 2026-08-23 #231 多 owner：Heckler & Koch G3A3／G3。取涵蓋整個 G3 系列的中性名稱，不綁 A3。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 | — |
 | `ItemName\|Base.G43` | `3616176188/GaelGunStore` = G43 Rifle _(json)_<br>`3623297453/GaelGunStore_Legacy` = Gewehr 43 _(script)_<br>`3777433827/BritaCombinedB42` = Glock 43 Pistol _(script)_ | 2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「G43 Rifle」與「Gewehr 43」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「G43步槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42 寫 Glock 43 Pistol（GLOCK.txt，與 G17/G42 同列），與 Gael 的 G43 Rifle／Gewehr 43 步槍是不同槍種，「G43步槍」對其不實；改為兩者字面共有、不宣稱槍種的「G43」。 | — |
 | `ItemName\|Base.GOL` | `3616176188/GaelGunStore` = GOL Magnum Sniper Rifle _(json)_<br>`3623297453/GaelGunStore_Legacy` = GOL Sniper Magnum _(script)_ | 2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 | — |
@@ -1064,6 +1065,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|Base.ax_base_pad` | `3616176188/GaelGunStore` = AX Base Pad Extension _(json)_<br>`3623297453/GaelGunStore_Legacy` = Ax Base Pad _(script)_ | 2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 | — |
 | `ItemName\|Base.bipod_harris` | `3616176188/GaelGunStore` = Harris Bipod _(json)_<br>`3623297453/GaelGunStore_Legacy` = Bipod Harris _(script)_ | 2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 | — |
 | `ItemName\|Base.bipod_harris_open` | `3616176188/GaelGunStore` = Harris Bipod (Deployed) _(json)_<br>`3623297453/GaelGunStore_Legacy` = Bipod Harris Open _(script)_ | 2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 | — |
+| `ItemName\|Base.cat_AutoReload` | `3633421539/Escape from Kentucky4215` = 自动装弹机构(加速装填) _(script)_<br>`3780151182/MFS_community_fix` = Auto-Loading Mechanism (Fast Magazine Loading) _(json)_ | 2026-10-02 錨點全量比對：Modern Firearms System 原版的 EN 檔直接寫成中文「自动装弹机构(加速装填)」，社群修正版為 Auto-Loading Mechanism (Fast Magazine Loading)，是同一個配件；現譯對兩方皆成立。 | — |
 | `ItemName\|Base.cobra_tactical` | `3616176188/GaelGunStore` = Cobra Tactical Grip _(json)_<br>`3623297453/GaelGunStore_Legacy` = Cobra Tactical _(script)_ | 2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 | — |
 | `ItemName\|Base.fortis_shift` | `3616176188/GaelGunStore` = Fortis Shift Grip _(json)_<br>`3623297453/GaelGunStore_Legacy` = Fortis Shift _(script)_ | 2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 | — |
 | `ItemName\|Base.hera_arms` | `3616176188/GaelGunStore` = Hera Arms Grip _(json)_<br>`3623297453/GaelGunStore_Legacy` = Hera Arms _(script)_ | 2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 | — |
@@ -1345,7 +1347,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_thickblooddesc` | `1299328280/More Traits` = You bleed more slowly from wounds. _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Wounds bleeds less.&lt;br&gt;(-50% damage from bleeding.) _(json)_ | 2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。 | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（514）
+## 尚未裁決的衝突（512）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
@@ -1533,7 +1535,6 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|Base.FantasyKnightSword` | `3633421539/BladesmithSystem` = 幻想骑士剑FantasyKnightSword _(script)_<br>`3780151182/MFS_BladesmithSystem_fix` = Fantasy Knight Sword _(json)_ | 幻想騎士劍 |
 | `ItemName\|Base.FantasyKnightSwordScabbard` | `3633421539/BladesmithSystem` = 幻想骑士剑剑鞘FantasyKnightSwordScabbard _(script)_<br>`3780151182/MFS_BladesmithSystem_fix` = Fantasy Knight Sword Scabbard _(json)_ | 幻想騎士劍劍鞘 |
 | `ItemName\|Base.G3` | `2256623447/Firearms` = H&K G3 _(script)_<br>`2256623447/FirearmsBETA` = H&K G3 _(script)_<br>`3773858287/B42 Rain's Firearms & Gun Parts` = H&K G3 _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = H&K G3 _(json)_<br>`3777433827/BritaCombinedB42` = H&K G3 Rifle _(script)_ | H&K G3自動步槍 |
-| `ItemName\|Base.G36` | `3616176188/GaelGunStore` = Heckler & Koch G36 Rifle _(json)_<br>`3777433827/BritaCombinedB42` = H&K G36 Rifle w/Extended Stock _(script)_ | Heckler & Koch G36 步槍 |
 | `ItemName\|Base.G36C` | `3616176188/GaelGunStore` = Heckler & Koch G36C Carbine _(json)_<br>`3777433827/BritaCombinedB42` = H&K G36-C Rifle w/Extended Stock _(script)_ | 黑克勒-科赫G36C卡賓槍 |
 | `ItemName\|Base.Glock17Mag` | `2256623447/Firearms` = Glock 17 Magazine _(json)_<br>`2256623447/FirearmsBETA` = Glock 17 Magazine _(json)_<br>`3779417912/Totally's Cops and Robbers Firearms` = Glock 17rnd Magazine _(script)_ | 格洛克17手槍彈匣 |
 | `ItemName\|Base.GunCleaningKit` | `3183820077/Guns93Test` = Gun Cleaning Supplies _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts` = Gun Cleaning Kit _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = Gun Cleaning Kit _(json)_ | 槍械清潔用品 |
@@ -1597,7 +1598,6 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|Base.YanlingSwordScabbard` | `3633421539/BladesmithSystem` = 雁翎刀鞘YanlingSwordScabbard _(script)_<br>`3780151182/MFS_BladesmithSystem_fix` = Yanling Sword Scabbard _(json)_ | 雁翎刀刀鞘 |
 | `ItemName\|Base.YulinSword` | `3633421539/BladesmithSystem` = 御林长刀YulinSword _(script)_<br>`3780151182/MFS_BladesmithSystem_fix` = Yulin Sword _(json)_ | 御林長刀 |
 | `ItemName\|Base.YulinSwordS` | `3633421539/BladesmithSystem` = 御林长刀鞘YulinSwordS _(script)_<br>`3780151182/MFS_BladesmithSystem_fix` = Yulin Sword Sling _(json)_ | 御林長刀刀鞘 |
-| `ItemName\|Base.cat_AutoReload` | `3633421539/Escape from Kentucky4215` = 自动装弹机构(加速装填) _(script)_<br>`3780151182/MFS_community_fix` = Auto-Loading Mechanism (Fast Magazine Loading) _(json)_ | 自動裝彈機構 (加速裝填) |
 | `ItemName\|Gunpart.Misc_13` | `3633421539/Escape from Kentucky4215` = 十三 _(script)_<br>`3780151182/MFS_community_fix` = 13 _(json)_ | 十三 |
 | `ItemName\|Gunpart.Misc_baizhi` | `3633421539/Escape from Kentucky4215` = 白芷 _(script)_<br>`3780151182/MFS_community_fix` = baizhi _(json)_ | 白芷 |
 | `ItemName\|Gunpart.Misc_cat` | `3633421539/Escape from Kentucky4215` = 旧猫 _(script)_<br>`3780151182/MFS_community_fix` = cat _(json)_ | 舊貓 |
