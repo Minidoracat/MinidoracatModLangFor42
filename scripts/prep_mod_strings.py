@@ -707,7 +707,10 @@ def main() -> int:
         # `local` 已扣過 shipped（它走本批 stats），故 `batch_keys` 不從這裡累加——見下方
         # 由 census 反推的版本。
         for (owner, fk), en in local.items():
-            if fk in shipped:
+            # B41 `ItemName_<fullType>` 鍵 B42 不讀（只查裸 fullType），補了只是死鍵、
+            # 還會被 verify [15] 擋下；真物品名由 script_item_dn 口徑的裸鍵負責。
+            # 只在出缺口時跳過——census 仍需這些前綴孿生鍵做 unship 雙抑制判定。
+            if fk in shipped or fk.startswith("ItemName|ItemName_"):
                 continue
             gap.setdefault(fk, (en, wid))
 

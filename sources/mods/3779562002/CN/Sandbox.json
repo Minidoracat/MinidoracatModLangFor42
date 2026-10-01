@@ -1,0 +1,23 @@
+{
+  "Sandbox_LGExtendedElectricity": "扩展电力",
+  "Sandbox_LGExtendedElectricity_Breaker": "断路器",
+  "Sandbox_LGExtendedElectricity_BreakerWattsPerPoint": "断路器每品质点数对应瓦数",
+  "Sandbox_LGExtendedElectricity_BreakerWattsPerPoint_tooltip": "发电机可同时运行的最大功率. 品质越高的发电机功率越大: 在数值为225时, 功率范围为5400至8100瓦. 一盏灯20瓦, 电视300瓦, 冰箱800瓦, 炉灶900瓦. 降低此数值可增加游戏难度, 提高则降低难度.",
+  "Sandbox_LGExtendedElectricity_Breaker_tooltip": "若发电机负载过高, 其断路器将跳闸, 导致同一建筑上的所有发电机停机. 请重新启动所有发电机, 然后右键点击其中一台进行重置. 为防止跳闸, 请增加发电机数量或关闭部分电器. 需要将 '发电机油耗' 设置为大于零.",
+  "Sandbox_LGExtendedElectricity_ChargeFuel": "额外房间消耗燃料",
+  "Sandbox_LGExtendedElectricity_ChargeFuel_tooltip": "开启: 额外房间将消耗燃料, 因此大型建筑耗油更多. 关闭: 额外房间免费供电. 若要调整基础燃油率, 请使用游戏自带的 '发电机油耗' 设置.",
+  "Sandbox_LGExtendedElectricity_Debug": "记录电力决策日志",
+  "Sandbox_LGExtendedElectricity_Debug_tooltip": "将每次电力变更写入日志文件. 仅用于排查问题.",
+  "Sandbox_LGExtendedElectricity_Enabled": "启用扩展电力",
+  "Sandbox_LGExtendedElectricity_Enabled_tooltip": "发电机将为其所覆盖的整个建筑供电, 而不仅仅是周围的格子. 包括所有楼层、屋顶和地下室. 关闭此项以恢复原版发电机机制.",
+  "Sandbox_LGExtendedElectricity_ExtendByDefault": "自动连接电路",
+  "Sandbox_LGExtendedElectricity_ExtendByDefault_tooltip": "开启: 放置发电机后立即为建筑供电. 关闭: 需右键点击发电机并选择 '连接建筑电路'. 无论哪种方式, 你都可以随时更改任意发电机的设置.",
+  "Sandbox_LGExtendedElectricity_ExteriorReach": "墙外供电范围",
+  "Sandbox_LGExtendedElectricity_ExteriorReach_tooltip": "电力穿过墙壁后的覆盖范围, 使门廊灯或室外冰柜等工作. 设置为0则仅室内供电. 某些格子的实际覆盖范围可能略大于此值, 因此请将其视为最小范围.",
+  "Sandbox_LGExtendedElectricity_FuelFromPumps": "加油泵燃料管道",
+  "Sandbox_LGExtendedElectricity_FuelFromPumps_tooltip": "允许将加油站油泵通过管道连接至旁边的发电机, 使其直接使用地下储油罐的燃料. 关闭: 仅支持油桶供油.",
+  "Sandbox_LGExtendedElectricity_FuelLine": "发电机燃料管道",
+  "Sandbox_LGExtendedElectricity_FuelLine_tooltip": "允许使用管钳将汽油通过管道输送至发电机. 旁边的油桶可直接供油. 若安装了 'LG扩展管道' 模组, 发电机还可从整个基地的汽油桶中抽取燃料. 关闭: 无法连接任何管道.",
+  "Sandbox_LGExtendedElectricity_ShareLoad": "发电机分担负载",
+  "Sandbox_LGExtendedElectricity_ShareLoad_tooltip": "开启: 同一建筑上的两台发电机会分担燃料消耗, 而非各自全额消耗. 关闭: 每台发电机均全额消耗燃料."
+}

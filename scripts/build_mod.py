@@ -1434,11 +1434,8 @@ def vanilla_override_counts() -> dict[str, int | None]:
 
     vk = load_json(VANILLA_KEYS_JSON)
     scoped = {f: set(ks) for f, ks in (vk.get("scoped_keys") or {}).items()}
-    registry = mod_registry.load_mod_registry(MOD_REGISTRY_JSON)
-    active = {wid for wid, spec in registry.items() if spec["status"] == "active"}
-    retired = {wid for wid, spec in registry.items() if spec["status"] == "retired"}
     metadata_wids = {p.name for p in MODS_DIR.iterdir() if p.is_dir()}
-    universe = sorted((metadata_wids - retired) | active)
+    _, universe = _manifest_universe(metadata_wids)
     out: dict[str, int | None] = {}
     for wid in universe:
         mod_dir = MODS_DIR / wid
@@ -1470,16 +1467,29 @@ def vanilla_override_counts() -> dict[str, int | None]:
     return out
 
 
+def _manifest_universe(metadata_wids: set[str]) -> tuple[dict, list[str]]:
+    """manifest 宇宙＝(metadata ∪ registry active) − retired − As1 本身。
 
-def _collect_manifest_rows() -> list[tuple[str, str, list[str], int | None]]:
-    """metadata owner 目錄 ∪ registry active；registry retired 明示否決 metadata。
-
-    registry-only 項目仍是「受支援且持續追蹤」的一員，但因缺 owner 閉環，鍵數回 `None`
-    而非誤寫 0。來源目錄不在 registry 的 origin=own 翻譯照常保留。
+    與 tracker watchlist 同口徑（受支援＝持續追蹤）；回 (registry, 排序後 wid)。
     """
+    import tracker  # AS1_WORKSHOP_ID 的單一來源
+
     registry = mod_registry.load_mod_registry(MOD_REGISTRY_JSON)
     active = {wid for wid, spec in registry.items() if spec["status"] == "active"}
     retired = {wid for wid, spec in registry.items() if spec["status"] == "retired"}
+    universe = (metadata_wids | active) - retired - {tracker.AS1_WORKSHOP_ID}
+    return registry, sorted(universe)
+
+
+def _collect_manifest_rows() -> list[tuple[str, str, list[str], int | None]]:
+    """metadata owner 目錄 ∪ registry active；registry retired 明示否決。
+
+    尚無 metadata 的項目（registry 新進）仍是「受支援且持續追蹤」的一員，但因缺 owner
+    閉環，鍵數回 `None` 而非誤寫 0。顯示名依 metadata → registry 取值；mod ID 依
+    metadata → registry → 追蹤器自 mod.info 取得者（per-wid state）。
+    """
+    import tracker
+
     metadata: dict[str, tuple[dict, Path]] = {}
     for mod_dir in sorted(MODS_DIR.iterdir()):
         if not mod_dir.is_dir():
@@ -1500,11 +1510,13 @@ def _collect_manifest_rows() -> list[tuple[str, str, list[str], int | None]]:
             raise ValueError(f"{meta_path} 的 workshop_id 與目錄名 {ws_id!r} 不一致")
         metadata[ws_id] = (meta, mod_dir)
 
+    registry, universe = _manifest_universe(set(metadata))
+    state_ids = tracker.state_mod_ids(universe)
     rows: list[tuple[str, str, list[str], int | None]] = []
-    for ws_id in sorted((set(metadata) - retired) | active):
+    for ws_id in universe:
         meta, mod_dir = metadata.get(ws_id, ({}, MODS_DIR / ws_id))
         reg = registry.get(ws_id, {})
-        mod_ids = meta.get("mod_ids") or reg.get("mod_ids") or []
+        mod_ids = meta.get("mod_ids") or reg.get("mod_ids") or state_ids.get(ws_id) or []
         if not mod_ids:
             legacy = meta.get("mod_id")
             mod_ids = [legacy] if legacy else []
@@ -1512,7 +1524,7 @@ def _collect_manifest_rows() -> list[tuple[str, str, list[str], int | None]]:
             isinstance(mod_id, str) and mod_id for mod_id in mod_ids
         ):
             raise ValueError(f"{ws_id} 的 mod_ids 須為字串陣列（元素不得空白）")
-        name = meta.get("name") or meta.get("title") or reg.get("name") or ws_id
+        name = (meta.get("name") or meta.get("title") or reg.get("name") or ws_id)
         if meta.get("origin") == "own":
             name = f"{name}〔原創翻譯〕"
         cn = mod_dir / "CN"
@@ -1526,8 +1538,8 @@ def _collect_manifest_rows() -> list[tuple[str, str, list[str], int | None]]:
 def cmd_manifest(check_only: bool = False) -> int:
     """由 metadata owner 目錄與 active registry 聯集重生四份玩家可見生成物。
 
-    `check_only=True` 不寫檔；任何來源／registry schema 壞損或產物漂移皆回傳 1。
-    registry-only 項目保留支援與追蹤身分，鍵數顯示 `?`，直到 EN→owner 閉環完成。
+    `check_only=True` 不寫檔；任何來源／名冊 schema 壞損或產物漂移皆回傳 1。
+    尚無 metadata 的項目保留支援與追蹤身分，鍵數顯示 `?`，直到 EN→owner 閉環完成。
     """
     print("=" * 60)
     print("manifest：由 metadata.json ∪ mod_registry active 彙整支援清單")
@@ -1622,9 +1634,12 @@ def cmd_manifest(check_only: bool = False) -> int:
     page = (
         "# 支援 MOD 清單\n\n"
         "> 本檔由 `uv run scripts/build_mod.py manifest` 自動生成，請勿手動編輯。\n"
-        "> 中文名稱與摘要維護於 `sources/mod_names_zh.json`，修改後重跑 manifest。\n"
-        "> 「鍵數」的 `?` 代表該項已納入 active registry 支援與每日追蹤，但 EN→owner 尚未閉環；"
-        "閉環後會自動顯示可歸屬的實際鍵數。\n"
+        "> 收錄範圍＝如一汉化網站標「正常」的 MOD（As1 收錄且仍維護）、As1 包內譯文可歸屬到的其他 MOD，"
+        "以及本包原創翻譯與翻譯申請收錄的 MOD。\n"
+        "> 中文名稱與摘要維護於 `sources/mod_names_zh.json`，修改後重跑 manifest；"
+        "未登記者顯示名冊登記的英文名稱。\n"
+        "> 「鍵數」的 `?` 代表該項已納入支援與每日追蹤，但上游英文鍵還沒對上 As1 譯文"
+        "（EN→owner 尚未閉環）；閉環後會自動顯示可歸屬的實際鍵數。\n"
         "> 「覆寫本體」欄＝**該 MOD 自己改寫了幾個遊戲本體的官方翻譯鍵**。PZ 把所有 MOD 的翻譯檔"
         "併進同一張全域字串表、後載入者勝，所以裝了這類 MOD 之後，被它改寫的官方文字就會跟著變"
         "（例如原版彈匣被改成某槍械 MOD 的專屬名稱，或多人測試歡迎頁被換成模組作者的募款文案）。\n"
@@ -1632,7 +1647,7 @@ def cmd_manifest(check_only: bool = False) -> int:
         "所以本包不會幫任何 MOD 把官方文字改掉；此欄純粹是讓你知道**那個 MOD 本身**會動到哪些官方內容。\n"
         "> 數字取自「該 MOD 自帶的英文翻譯檔（只算引擎會載入的分支）」與「本包收錄的該 MOD 中文譯文」兩個來源的聯集，"
         "**是下限故標成 `≥`**——MOD 自帶的中文檔本包沒有鏡像，只存在於那裡的覆寫數不到。"
-        "`—` 代表在這兩個來源裡沒發現，不等於保證沒有；`?` 代表該 MOD（registry-only 或已下架）兩個來源都取不到、無法判定。\n"
+        "`—` 代表在這兩個來源裡沒發現，不等於保證沒有；`?` 代表該 MOD（尚未閉環或已下架）兩個來源都取不到、無法判定。\n"
         "> 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制"
         "（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。\n"
         "> 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。\n\n"

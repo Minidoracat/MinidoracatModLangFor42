@@ -100,7 +100,7 @@ jobs:
           uv run scripts/prep_mod_strings.py --check-decisions --owner-report-check \
             --out /tmp/owner-decisions.json
 
-      # tracker 自身的十六情境 mock 測試（純記憶體，不碰網路與 git 遠端）
+      # tracker 自身的十八情境 mock 測試（純記憶體，不碰網路與 git 遠端）
       - name: tracker self-test
         run: uv run scripts/tracker.py self-test
 

@@ -1,0 +1,17 @@
+{
+  "Sandbox_JZ_AutoEngagePvP": "在玩家对战区域自动进入玩家对战模式",
+  "Sandbox_JZ_AutoEngagePvP_tooltip": "当此选项开启时, 进入玩家对战区域会自动降低玩家的安全值 (无需点击玩家对战切换按钮); 离开玩家对战区域则会自动恢复安全值. 服务器的内置安全延迟仍然适用. 此选项需要服务器的玩家对战和安全系统选项都开启. 默认设置为关闭.",
+  "Sandbox_JZ_AutoRestoreOnWipe": "地图清空时自动恢复区域",
+  "Sandbox_JZ_AutoRestoreOnWipe_tooltip": "在未保存任何区域的新启动状态下, 若您之前放置了保存的配置文件, 则会自动导入名为 JeevesZones_autoload.lua的配置文件; 若未放置, 则导入由 '导出配置' 按钮生成的JeevesZones_config.txt 文件.",
+  "Sandbox_JZ_CorpseRecovery": "让玩家在一个区域内自行恢复体力",
+  "Sandbox_JZ_CorpseRecovery_tooltip": "开启 (默认): 在保护区内死亡的玩家可以拾取自己的尸体, 并从地上捡起掉落的武器, 即使容器访问被阻止. 丧尸尸体保持锁定状态, 因此引诱一群丧尸进来让交易者守卫杀死并掠夺其物品仍然行不通. 关闭: 旧行为 - 在无容器访问权限的区域内, 包括你自己的死亡物品在内, 任何东西都不能被拾取.",
+  "Sandbox_JZ_DefaultPvP": "默认地图为玩家对战 (划出安全区)",
+  "Sandbox_JZ_DefaultPvP_tooltip": "关闭 (推荐): 默认情况下, 整个地图为非玩家对战区域, 启用玩家对战的区域是例外; 该模组会自动维护安全覆盖范围, 因此您永远不会划定全图区域. 开启: 默认情况下, 地图为热区, 只划出安全区域. 无论哪种方式, 需要服务器玩家对战选项处于开启状态.",
+  "Sandbox_JZ_Enabled": "启动Jeeve的区域",
+  "Sandbox_JZ_Enabled_tooltip": "区域系统的主开关. 禁用时, 所有区域效果均处于非活动状态.",
+  "Sandbox_JZ_SafeBlanketBounds": "安全毯边界 (高级)",
+  "Sandbox_JZ_SafeBlanketBounds_tooltip": "仅在默认玩家对战功能关闭时使用. 自动模式会自动根据地图大小调整非玩家对战区域的覆盖范围 (推荐使用). 在特殊的模组地图中, 您可以将精确的世界图块边界设置为x1, y1, x2, y2.",
+  "Sandbox_JZ_ShowZoneMessages": "显示区域进入 / 退出消息",
+  "Sandbox_JZ_ShowZoneMessages_tooltip": "玩家在进入某个区域时会看到一条通知. 每个区域的横幅也可以单独切换.",
+  "Sandbox_JeevesZones": "Jeeve的区域"
+}

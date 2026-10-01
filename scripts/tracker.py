@@ -13,16 +13,20 @@ tracker.py — MinidoracatModLangFor42 雙上游追蹤器（PZ B42 如一模組�
   * 純標準函式庫（urllib / subprocess / hashlib）→ 供 `uv run scripts/tracker.py` 直接執行，CI 免裝依賴。
   * API client 免 key 為主（研究實證端點無 key 參數）；STEAM_API_KEY 為設定選項、非 429 解藥（附加而已）。
   * 交易順序：取數 → diff → 開/更 issue → 最後 commit 成功子集 state；--dry-run 保證零 issue 零 commit。
-  * 核心邏輯（diff / issue 冪等 / git 重試）皆以可注入依賴實作，供內建 self-test 十七情境 mock 驗證。
+  * 核心邏輯（diff / issue 冪等 / git 重試）皆以可注入依賴實作，供內建 self-test 十八情境 mock 驗證。
 
 命令（uv run scripts/tracker.py <命令>）：
-  gen-watchlist  由 sources/mods/*/metadata.json ∪ sources/mod_registry.json active 生成 tracker-state/watchlist.json（固定含 As1；支持清單或 registry 變動後重跑）
-                 registry 是正式人工真相，**缺檔或壞形即中止且不改寫 watchlist**——缺檔當空集合放行會讓追蹤面靜默縮水
+  as1-list       擷取 As1 網站模組清單 → sources/as1_modlist.json（參考快照），並把標「正常」與 split 已歸屬、
+                 名冊還沒有的 wid 補登進 sources/mod_registry.json（只增不減；As1 改標或移除只列出供裁決）
+                 API 形狀不符、條目壞形或「正常」少於下限一律中止，快照與名冊都不改寫
+  gen-watchlist  由 sources/mods/*/metadata.json ∪ sources/mod_registry.json active 生成
+                 tracker-state/watchlist.json（固定含 As1；名冊或 split 歸屬變動後重跑）
+                 名冊缺檔或壞形即中止且不改寫 watchlist——缺檔當空集合放行會讓追蹤面靜默縮水
   run            預設：check → diff → issue → commit 全流程（--dry-run 只印計畫）
   check          僅打 API 查時間戳，寫 changed 清單 artifact（workflow check job；無寫權限）
   diff           讀 changed，下載+裁剪+抽取+diff，寫 diffs artifact（workflow download job；無 GitHub 權限）
   issue          讀 diffs，列 open issue 冪等開/更，commit 成功子集 state（workflow issue+state job）
-  self-test      內建十七情境 mock 測試
+  self-test      內建十八情境 mock 測試
 """
 from __future__ import annotations
 
@@ -46,7 +50,15 @@ from typing import Callable
 from urllib.parse import urlencode
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from mod_registry import REGISTRY_JSON, load_mod_registry  # noqa: E402
+from mod_registry import (  # noqa: E402
+    AS1_MODLIST_URL,
+    AS1_MOD_TYPES,
+    REGISTRY_JSON,
+    as1_supported,
+    load_mod_registry,
+    parse_as1_api,
+    write_mod_registry,
+)
 
 # ============================================================
 # 路徑與常數配置
@@ -546,11 +558,13 @@ def write_corpus_hashes(state: dict, state_dir: Path | None = None,
 
 def expected_watchlist_items(
     mods_root: Path, registry_path: Path
-) -> tuple[dict[str, dict], int, int, list[str]]:
-    """計算 canonical watchlist universe；不寫檔。
+) -> tuple[dict[str, dict], dict[str, list[str]]]:
+    """計算 canonical watchlist universe；不寫檔。回 (items, 來源分組)。
 
-    identity 一律取數字目錄名；metadata 若帶 `workshop_id` 必須逐字一致。`retired`
-    明示否決殘留 metadata，active registry 可在零 metadata 時 bootstrap。
+    universe＝(metadata − retired) ∪ registry active ∪ As1。identity 一律取數字目錄名；
+    metadata 若帶 `workshop_id` 必須逐字一致。`retired` 明示否決殘留 metadata；active
+    registry 能在零 metadata 時 bootstrap。mod_ids 依 metadata → registry 補值。
+    As1 名單不直接參與：它只經 `as1-list` 補登進名冊（名冊才是我方的支援名單）。
     """
     if not mods_root.is_dir():
         raise ValueError(f"metadata 目錄不存在：{mods_root}")
@@ -584,7 +598,7 @@ def expected_watchlist_items(
         if wid not in retired:
             items[wid] = {"mod_ids": list(mod_ids), "role": "mod"}
 
-    registry_only: list[str] = []
+    metadata_wids = set(items)
     for wid in sorted(active):
         if wid == AS1_WORKSHOP_ID:
             continue
@@ -592,11 +606,14 @@ def expected_watchlist_items(
         current = items.get(wid)
         if current is None:
             items[wid] = {"mod_ids": reg_ids, "role": "mod"}
-            registry_only.append(wid)
         elif not current["mod_ids"] and reg_ids:
             current["mod_ids"] = reg_ids
     items[AS1_WORKSHOP_ID] = {"mod_ids": [AS1_MOD_ID], "role": "as1"}
-    return items, len(mod_dirs), len(active), registry_only
+    groups = {
+        "metadata": sorted(metadata_wids),
+        "registry_only": sorted(set(active) - metadata_wids - {AS1_WORKSHOP_ID}),
+    }
+    return items, groups
 
 
 def load_watchlist(
@@ -614,7 +631,7 @@ def load_watchlist(
         sys.exit(1)
     try:
         current = load_json(path)
-        expected, _, _, _ = expected_watchlist_items(mods, registry)
+        expected, _ = expected_watchlist_items(mods, registry)
     except (ValueError, OSError, json.JSONDecodeError) as exc:
         print(f"❌ watchlist 來源不可用：{exc}", file=sys.stderr)
         sys.exit(1)
@@ -1060,6 +1077,47 @@ def extract_corpus(mod_dir: Path, lang: str = "EN") -> list[tuple[str, str, str,
     return _iter_translate_records(mod_dir, lang) + _iter_script_records(mod_dir)
 
 
+def extract_mod_ids(mod_dir: Path) -> list[str]:
+    """下載內容中引擎可見的 mod ID（`mods/<root>/<分支>/mod.info` 的 `id=`）。
+
+    分支取法同語料：`common` 與唯一最佳版本夾（`resolve_effective_branches`）；mod 根的
+    `mod.info` 是 B41 遺留，B42 不認。名冊自動補登的項目不帶 mod ID，新進 MOD 只能從
+    這裡取得，寫進 per-wid state 供 manifest 顯示。
+    """
+    infos = {
+        f"mod_info|{p.relative_to(mod_dir).as_posix()}|id": p
+        for p in mod_dir.rglob("mod.info") if p.is_file() and not p.is_symlink()
+    }
+    eff = resolve_effective_branches(infos)
+    ids: set[str] = set()
+    for rid, path in infos.items():
+        parts = rid.split("|")[1].split("/")
+        if len(parts) != 4 or parts[0] != "mods" or parts[2] not in eff.get(parts[1], set()):
+            continue
+        for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
+            key, sep, value = line.partition("=")
+            if sep and key.strip() == "id" and value.strip():
+                ids.add(value.strip())
+    return sorted(ids)
+
+
+def state_mod_ids(wids, state_dir: Path | None = None) -> dict[str, list[str]]:
+    """只讀指定 wid 的 per-wid state 取 `mod_ids`（manifest 補顯示用，不載入全庫 records）。
+
+    缺檔、壞檔或沒有該欄的 wid 一律略過：這只是顯示用的補值，不是任何 gate 的依據。
+    """
+    d = state_dir or EN_CORPUS_HASHES_DIR
+    out: dict[str, list[str]] = {}
+    for wid in wids:
+        try:
+            ids = load_json(d / f"{wid}.json").get("mod_ids")
+        except (OSError, ValueError, AttributeError):
+            continue
+        if isinstance(ids, list) and ids and all(isinstance(i, str) and i for i in ids):
+            out[wid] = ids
+    return out
+
+
 def records_to_map(records: list[tuple[str, str, str, str]]) -> dict[str, str]:
     """record 清單 → {record_id: value_hash}；record_id = kind|relpath|key。重複 ID 報錯不覆寫。"""
     out: dict[str, str] = {}
@@ -1278,10 +1336,10 @@ def steamcmd_download(
 
 
 def trim_download(item_dir: Path) -> None:
-    """裁剪：保留 Translate、media/scripts 與既有 Lua 路徑，其餘刪除。
+    """裁剪：保留 Translate、media/scripts、mod.info 與既有 Lua 路徑，其餘刪除。
 
     schema 10 不抽取 Lua；保留 `*.lua` 只是沿用下載裁剪行為，不形成持久取證、
-    corpus record 或變更訊號。
+    corpus record 或變更訊號。`mod.info` 供 `extract_mod_ids` 取 mod ID。
     """
 
     def keep(path: Path) -> bool:
@@ -1290,6 +1348,7 @@ def trim_download(item_dir: Path) -> None:
             "Translate" in parts
             or ("media" in parts and "scripts" in parts)
             or path.suffix.lower() == ".lua"
+            or path.name == "mod.info"
         )
 
     for f in list(item_dir.rglob("*")):
@@ -1772,19 +1831,102 @@ def build_layer_b_plan(
 
 
 # ============================================================
-# 命令：gen-watchlist（支持清單或 registry 變動後重跑）
+# 命令：as1-list（擷取 As1 網站模組清單快照，並把 As1 支援的 MOD 補登進名冊）
 # ============================================================
-# watchlist 的來源必須是 **sources/mods metadata ∪ registry active ∪ As1** 三者聯集。
-# 只認 metadata 會鎖成 bootstrap 死結：新 MOD 要進 sources/mods，split 得先有 sources/en
-# 的第一手鍵證據；而 sources/en 是追蹤器照 watchlist 抓下來的——沒進 watchlist 就永遠
-# 沒有 EN，沒有 EN 就永遠進不了 sources/mods。registry 是唯一能在 EN 落地前把 wid 排進
-# 追蹤面的入口（它只承載 metadata facts 與 bootstrap 追蹤，**不是**鍵歸屬證據）。
+def fetch_as1_api(url: str = AS1_MODLIST_URL, timeout: float = 60.0):
+    """GET As1 網站的模組清單 API，回傳解析後 JSON。網路錯誤交由呼叫端處理。"""
+    req = urllib.request.Request(url, headers={"User-Agent": "modlangfor42-tracker/1"})
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def cmd_as1_list(fetch: Callable[[], object] = fetch_as1_api,
+                 out_path: Path | None = None,
+                 registry_path: Path | None = None,
+                 mods_root: Path | None = None) -> int:
+    """擷取 → 驗形狀 → 名冊補登 → 寫參考快照；任一步失敗都不改寫快照與名冊。
+
+    補登對象＝As1 標「正常」∪ split 已歸屬（As1 包裡有譯文）、但名冊還沒有的 wid。
+    名冊**只增不減**：As1 改標或移除已登記的 MOD 時只列出，退役與否由人工裁決——
+    名冊是我方的支援名單，不隨 As1 的收錄狀態縮水。
+    """
+    out_path = out_path or (SOURCES / "as1_modlist.json")
+    registry_path = registry_path or REGISTRY_JSON
+    mods_root = mods_root or (SOURCES / "mods")
+    print("=" * 60)
+    print(f"as1-list：擷取 {AS1_MODLIST_URL} → {out_path.name}，補登 {registry_path.name}")
+    print("=" * 60)
+    try:
+        mods = parse_as1_api(fetch())
+        registry = load_mod_registry(registry_path)
+        _, groups = expected_watchlist_items(mods_root, registry_path)
+        reg_doc = load_json(registry_path)
+        own = {wid for wid in groups["metadata"]
+               if load_json(mods_root / wid / "metadata.json").get("origin") == "own"}
+    except (OSError, ValueError) as exc:  # URLError/HTTPError/逾時屬 OSError，壞 JSON 屬 ValueError
+        print(f"❌ As1 名單擷取或名冊讀取失敗，快照與名冊皆未改寫：{exc}", file=sys.stderr)
+        return 1
+    today = now_iso()[:10]
+    listed = as1_supported(mods)
+    add: dict[str, dict] = {}
+    for wid in sorted(listed - set(registry) - {AS1_WORKSHOP_ID}):
+        add[wid] = {"status": "active", "source": "as1-modlist", "verified": today,
+                    "name": mods[wid]["name"]}
+    for wid in sorted(set(groups["metadata"]) - set(registry) - set(add) - own
+                      - {AS1_WORKSHOP_ID}):
+        add[wid] = {"status": "active", "source": "as1-split", "verified": today}
+        if wid in mods:
+            add[wid]["name"] = mods[wid]["name"]
+    if add:
+        reg_doc["mods"].update(add)
+        try:
+            write_mod_registry(registry_path, reg_doc)
+        except ValueError as exc:
+            print(f"❌ 補登後名冊驗證失敗，快照與名冊皆未改寫：{exc}", file=sys.stderr)
+            return 1
+    write_json(out_path, {
+        "_comment": (
+            "As1「如一汉化」網站模組清單快照，僅供參考：as1-list 據此把 As1 支援的 MOD 補登進"
+            " sources/mod_registry.json，監看與支援清單只讀名冊。"
+            "由 `uv run scripts/tracker.py as1-list` 擷取重生，勿手改。"
+            "type＝收錄狀態（3 正常）、state＝翻譯進度，列舉見 scripts/mod_registry.py。"
+        ),
+        "source": AS1_MODLIST_URL,
+        "fetched_at": now_iso(),
+        "mods": mods,
+    })
+    by_type: dict[int, int] = {}
+    for entry in mods.values():
+        by_type[entry["type"]] = by_type.get(entry["type"], 0) + 1
+    print(f"  共 {len(mods)} 項：" + "、".join(
+        f"{AS1_MOD_TYPES[t]} {n}" for t, n in sorted(by_type.items())))
+    from_list = sum(1 for e in add.values() if e["source"] == "as1-modlist")
+    print(f"  名冊補登 {len(add)} 個（As1「正常」{from_list}、split 已歸屬 {len(add) - from_list}）")
+    dropped = sorted(wid for wid, spec in registry.items()
+                     if spec["status"] == "active" and spec["source"] == "as1-modlist"
+                     and wid not in listed)
+    if dropped:
+        print(f"  ⚠️ {len(dropped)} 個經 As1 名單登記的 MOD 已不再標「正常」（名冊不動，請人工裁決）：")
+        for wid in dropped[:20]:
+            entry = mods.get(wid)
+            state = AS1_MOD_TYPES[entry["type"]] if entry else "已自名單移除"
+            print(f"     {wid} {registry[wid].get('name', '')}：{state}")
+    if add:
+        print("  ↳ 接著跑 gen-watchlist，新 MOD 再以 backfill-en 補 EN 證據")
+    return 0
+
+
+# ============================================================
+# 命令：gen-watchlist（名冊或 split 歸屬變動後重跑）
+# ============================================================
+# watchlist 的來源是 **sources/mods metadata ∪ registry active ∪ As1**。只認 metadata 會鎖成
+# bootstrap 死結：新 MOD 要進 sources/mods，split 得先有 sources/en 的第一手鍵證據；而
+# sources/en 是追蹤器照 watchlist 抓下來的——沒進 watchlist 就永遠沒有 EN，沒有 EN 就永遠
+# 進不了 sources/mods。名冊是能在 EN 落地前把 wid 排進追蹤面的入口（**不是**鍵歸屬證據）。
 def gen_watchlist(mods_root: Path, registry_path: Path, out_path: Path) -> int:
     """組 watchlist 並寫出。路徑全部由呼叫端注入（self-test 情境 16 用隔離 fixture 驗）。"""
     try:
-        items, meta_count, active_count, registry_only = expected_watchlist_items(
-            mods_root, registry_path
-        )
+        items, groups = expected_watchlist_items(mods_root, registry_path)
     except (ValueError, OSError, json.JSONDecodeError) as exc:
         print(
             "❌ watchlist 來源不可用，已中止且未改寫舊清單："
@@ -1800,19 +1942,19 @@ def gen_watchlist(mods_root: Path, registry_path: Path, out_path: Path) -> int:
         "items": items,
     }
     write_json(out_path, watchlist)
-    print(f"  sources/mods {meta_count} 個 + registry active {active_count} 個"
-          f"（registry-only {len(registry_only)} 個）+ As1 = {len(items)} 個 workshop_id")
-    if registry_only:
-        shown = registry_only[:20]
-        print(f"  ⚠️ registry-only {len(registry_only)} 個：尚無 sources/mods metadata，"
-              "即 EN 第一手鍵證據未閉環（待追蹤器落地 sources/en 後由 split 歸屬）")
-        print("     " + " ".join(shown) + (" …" if len(registry_only) > len(shown) else ""))
+    pending = groups["registry_only"]
+    print(f"  sources/mods {len(groups['metadata'])} 個、registry-only {len(pending)} 個"
+          f" → 共 {len(items)} 個 workshop_id（含 As1）")
+    if pending:
+        print(f"  ⚠️ {len(pending)} 個尚無 sources/mods metadata：EN 第一手鍵證據未閉環，"
+              "待 sources/en 落地後由 split 歸屬")
+        print("     " + " ".join(pending[:20]) + (" …" if len(pending) > 20 else ""))
     return 0
 
 
 def cmd_gen_watchlist() -> int:
     print("=" * 60)
-    print("gen-watchlist：由 sources/mods ∪ mod_registry active ∪ As1 生成 tracker-state/watchlist.json")
+    print("gen-watchlist：由 sources/mods ∪ registry active ∪ As1 生成 tracker-state/watchlist.json")
     print("=" * 60)
     rc = gen_watchlist(SOURCES / "mods", REGISTRY_JSON, WATCHLIST_JSON)
     if rc == 0:
@@ -1933,6 +2075,9 @@ def _diff_changed(changed, watchlist, steamcmd, install_dir, corpus_state, attri
                     failed_ids.append(wid)
                     continue
                 plan, new_state = build_layer_a_plan(wid, mod_ids, new_records, corpus_state, attribution)
+                found_ids = extract_mod_ids(item_dir)
+                if found_ids:
+                    new_state["mod_ids"] = found_ids
                 if not new_records:
                     # 下載成功但無可抽取文本（如僅 B41 .txt 格式的模組）＝合法空語料：
                     # 建帶標記的空 baseline 推進時間戳，止住每日重抓；未來若新增 JSON 文本，
@@ -2703,6 +2848,9 @@ def cmd_backfill_en(args) -> int:
             records = extract_corpus(item_dir)
             plan, new_state = build_layer_a_plan(
                 wid, mod_ids, records, corpus_state, attribution)
+            found_ids = extract_mod_ids(item_dir)
+            if found_ids:
+                new_state["mod_ids"] = found_ids
             if not records:
                 new_state["empty_corpus"] = True
             texts = {
@@ -2766,11 +2914,11 @@ def cmd_backfill_en(args) -> int:
 
 
 # ============================================================
-# 命令：self-test（十七情境 mock 測試，assert-based）
+# 命令：self-test（十八情境 mock 測試，assert-based）
 # ============================================================
 def cmd_self_test() -> int:
     print("=" * 60)
-    print("self-test：十七情境 mock 測試")
+    print("self-test：十八情境 mock 測試")
     print("=" * 60)
 
     def rec(kind, rel, key, val):
@@ -3414,7 +3562,7 @@ def cmd_self_test() -> int:
 
     # 情境 16：gen-watchlist 的 registry 併入。新 MOD 在 EN 落地前沒有任何 metadata，
     # 只認 sources/mods 就鎖成 bootstrap 死結（沒進 watchlist → 不抓 EN → split 無第一手
-    # 鍵證據 → 永遠進不了 sources/mods）。此處**刻意用隔離 fixture**：真 repo registry 是
+    # 鍵證據 → 永遠進不了 sources/mods）。此處**刻意用隔離 fixture**：真 repo 的名冊是
     # 會天天長大的資料，測試綁上去就會隨資料變紅／變綠，等於沒有測。
     with tempfile.TemporaryDirectory() as td:
         root = Path(td)
@@ -3435,7 +3583,7 @@ def cmd_self_test() -> int:
         wl = load_json(out)["items"]
         # registry-only active → 進 watchlist（bootstrap 入口；沒有這條新 MOD 永遠追不到）
         assert wl["900"] == {"mod_ids": ["ModNew"], "role": "mod"}, "情境16：registry-only active 未進 watchlist"
-        # retired 即使仍有 split metadata 也必須排除
+        # retired 即使仍有 split metadata，也必須排除
         assert "901" not in wl, "情境16：retired metadata 仍進了 watchlist"
         # 重複 wid 冪等：metadata mod_ids 為主，registry 不得覆蓋、不得長成兩筆
         assert wl["700"] == {"mod_ids": ["ModMeta"], "role": "mod"}, "情境16：registry 蓋掉 metadata mod_ids"
@@ -3443,7 +3591,8 @@ def cmd_self_test() -> int:
         assert wl["800"] == {"mod_ids": ["ModFill"], "role": "mod"}, "情境16：metadata 空未由 registry 補"
         # As1 固定項的 role 不可被 registry 降級成 mod（layer-B 主力靠 role=as1 辨識）
         assert wl[AS1_WORKSHOP_ID] == {"mod_ids": [AS1_MOD_ID], "role": "as1"}, "情境16：As1 固定項被 registry 覆蓋"
-        assert sorted(wl) == sorted(["700", "800", "900", AS1_WORKSHOP_ID]), f"情境16：items 集合不符（{sorted(wl)}）"
+        assert sorted(wl) == sorted(["700", "800", "900", AS1_WORKSHOP_ID]), \
+            f"情境16：items 集合不符（{sorted(wl)}）"
         assert load_json(out)["count"] == len(wl), "情境16：count 與 items 不一致"
         assert load_watchlist(out, mods_root, reg)["items"] == wl, \
             "情境16：來源未變卻被 freshness gate 誤擋"
@@ -3493,10 +3642,10 @@ def cmd_self_test() -> int:
         # 純 registry bootstrap：尚無任何 metadata 時也必須能建立 watchlist。
         empty_root, out0 = root / "empty-mods", root / "wl0.json"
         empty_root.mkdir()
-        assert gen_watchlist(empty_root, reg, out0) == 0, "情境16：零 metadata 無法由 registry bootstrap"
+        assert gen_watchlist(empty_root, reg, out0) == 0, "情境16：零 metadata 無法由名冊 bootstrap"
         wl0 = load_json(out0)["items"]
         assert sorted(wl0) == sorted(["700", "800", "900", AS1_WORKSHOP_ID]), \
-            f"情境16：純 registry watchlist 集合不符（{sorted(wl0)}）"
+            f"情境16：純名冊 watchlist 集合不符（{sorted(wl0)}）"
         # 缺 registry 檔 → 非零退出且**不得寫出** out。registry 是正式人工真相，缺檔當空
         # 集合放行會把「名冊還沒建／被誤刪」偽裝成「沒有待 bootstrap 的 wid」，而舊
         # watchlist 還在，追蹤面就靜默縮水（這正是本情境唯一不可回退的邊界）。
@@ -3514,11 +3663,13 @@ def cmd_self_test() -> int:
 
     # 情境 17：既有非空語料抽取為空＝疑下載殘缺，不得推進（#575：1050 筆被一輪空下載清成空 baseline）
     g = globals()
-    saved = {n: g[n] for n in ("steamcmd_download", "trim_download", "extract_corpus")}
+    saved = {n: g[n] for n in ("steamcmd_download", "trim_download", "extract_corpus",
+                               "extract_mod_ids")}
     try:
         g["steamcmd_download"] = lambda *a, **k: Path(".")
         g["trim_download"] = lambda *a, **k: None
         g["extract_corpus"] = lambda *a, **k: []
+        g["extract_mod_ids"] = lambda *a, **k: []
         st17 = {"mods": {"555": {"extractor_schema": EXTRACTOR_SCHEMA, "records": {"r": "h"}},
                          "556": {"extractor_schema": EXTRACTOR_SCHEMA, "records": {}, "empty_corpus": True}}}
         wl17 = {"items": {"555": {"mod_ids": ["M"]}, "556": {"mod_ids": ["N"]}}}
@@ -3529,7 +3680,85 @@ def cmd_self_test() -> int:
         g.update(saved)
     print("  ✅ 情境17 既有非空語料抽取為空 → 視為下載殘缺、不推進")
 
-    print("\n✅ self-test 十七情境全通過。")
+    # 情境 18：As1 名單擷取→名冊補登＋mod.info 取 mod ID。名冊是我方唯一的支援名單：
+    # As1 支援的 MOD 由 as1-list 補登（只增不減，retired 不復活、原創 lane 不歸 As1）；
+    # 回應或名冊一壞就整批拒寫（快照與名冊都不動）；mod ID 只認引擎會讀的分支。
+    def as1_api(n_ok: int, **extra) -> dict:
+        data = [{"ModId": 10_000 + i, "ModName": f" M{i} ", "ModType": 3, "ModStatesType": 5}
+                for i in range(n_ok)]
+        data.append({"ModId": 9, "ModName": "Gone", "ModType": 7, "ModStatesType": 1})
+        return {"code": 200, "message": "ok", "data": data, **extra}
+
+    ok = parse_as1_api(as1_api(500))
+    assert len(ok) == 501 and ok["10000"] == {"name": "M0", "type": 3, "state": 5}, "情境18：名單解析錯誤"
+    assert as1_supported(ok) == {str(10_000 + i) for i in range(500)}, "情境18：正常集合錯誤"
+    bad_docs = {
+        "低於下限": as1_api(499),
+        "code 非 200": as1_api(500, code=500),
+        "列舉外的 ModType": {**as1_api(500), "data": as1_api(500)["data"] + [
+            {"ModId": 1, "ModName": "X", "ModType": 8, "ModStatesType": 5}]},
+        "bool 冒充列舉": {**as1_api(500), "data": as1_api(500)["data"] + [
+            {"ModId": 1, "ModName": "X", "ModType": True, "ModStatesType": 5}]},
+        "ModId 重複": {**as1_api(500), "data": as1_api(500)["data"] + [
+            {"ModId": 10_000, "ModName": "Dup", "ModType": 3, "ModStatesType": 5}]},
+    }
+    for label, doc in bad_docs.items():
+        try:
+            parse_as1_api(doc)
+            raise AssertionError(f"情境18：{label} 未 raise")
+        except ValueError:
+            pass
+    with tempfile.TemporaryDirectory() as td:
+        snap, reg = Path(td) / "as1_modlist.json", Path(td) / "reg.json"
+        mods_root = Path(td) / "mods"
+        for wid, meta in (("500", {"workshop_id": "500"}), ("501", {"origin": "own"}),
+                          ("10003", {"workshop_id": "10003"})):
+            (mods_root / wid).mkdir(parents=True)
+            write_json(mods_root / wid / "metadata.json", meta)
+        write_json(reg, {"_comment": "fixture", "mods": {
+            "10001": {"status": "active", "source": "manual", "verified": "2026-09-01"},
+            "10002": {"status": "retired", "source": "manual", "verified": "2026-09-01"},
+            "77": {"status": "active", "source": "as1-modlist", "verified": "2026-09-01"},
+        }})
+        assert cmd_as1_list(fetch=lambda: as1_api(500), out_path=snap, registry_path=reg,
+                            mods_root=mods_root) == 0, "情境18：合法擷取失敗"
+        assert set(load_json(snap)["mods"]) == set(ok), "情境18：快照與解析結果不符"
+        r18 = load_json(reg)["mods"]
+        listed = {str(10_000 + i) for i in range(500)}
+        assert listed - {"10002"} <= {w for w, s in r18.items() if s["status"] == "active"}, \
+            "情境18：As1「正常」未全數補登"
+        assert r18["10000"]["source"] == "as1-modlist" and r18["10000"]["name"] == "M0", "情境18：補登欄位錯誤"
+        assert r18["10001"]["source"] == "manual", "情境18：既有登記被覆寫"
+        assert r18["10002"]["status"] == "retired", "情境18：retired 被 As1 名單復活"
+        assert r18["500"]["source"] == "as1-split", "情境18：split 已歸屬者未補登"
+        assert "501" not in r18, "情境18：原創 lane 被當成 As1 支援"
+        assert "9" not in r18, "情境18：非「正常」項被補登"
+        assert r18["77"]["status"] == "active", "情境18：名冊被 As1 名單縮水（應只增不減）"
+        before = (snap.read_bytes(), reg.read_bytes())
+        assert cmd_as1_list(fetch=lambda: as1_api(500), out_path=snap, registry_path=reg,
+                            mods_root=mods_root) == 0
+        assert reg.read_bytes() == before[1], "情境18：重跑不冪等（名冊被改寫）"
+        before = (snap.read_bytes(), reg.read_bytes())
+
+        def boom():
+            raise urllib.error.URLError("offline")
+        for label, fetch, reg_path in (("網路錯誤", boom, reg),
+                                       ("截斷回應", lambda: as1_api(10), reg),
+                                       ("名冊缺檔", lambda: as1_api(500), Path(td) / "missing.json")):
+            assert cmd_as1_list(fetch=fetch, out_path=snap, registry_path=reg_path,
+                                mods_root=mods_root) == 1, f"情境18：{label}未 fail"
+            assert (snap.read_bytes(), reg.read_bytes()) == before, f"情境18：{label}時改寫了快照或名冊"
+
+        item = Path(td) / "item"
+        for rel, mod_id in (("mods/A/common/mod.info", "A"), ("mods/A/42.21/mod.info", "A"),
+                            ("mods/A/42.99/mod.info", "Future"), ("mods/B/mod.info", "B41Only"),
+                            ("mods/C/42/mod.info", "C")):
+            (item / rel).parent.mkdir(parents=True, exist_ok=True)
+            (item / rel).write_text(f"name=x\nid={mod_id}\nposter=p.png\n", encoding="utf-8")
+        assert extract_mod_ids(item) == ["A", "C"], f"情境18：mod ID 抽取錯誤（{extract_mod_ids(item)}）"
+    print("  ✅ 情境18 As1 名單→名冊補登（只增不減、fail-closed）＋mod.info 只認有效分支")
+
+    print("\n✅ self-test 十八情境全通過。")
     return 0
 
 
@@ -3542,9 +3771,10 @@ def main() -> None:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 使用範例：
-  uv run scripts/tracker.py gen-watchlist          # 由 sources/mods ∪ mod_registry active 生成 watchlist.json（含 As1）
+  uv run scripts/tracker.py as1-list               # 擷取 As1 網站名單（參考快照），As1 支援的 MOD 補登進名冊
+  uv run scripts/tracker.py gen-watchlist          # metadata ∪ registry active → watchlist.json（含 As1）
   uv run scripts/tracker.py --dry-run --limit 5    # 真打 API 查 5 個時間戳，不下載/不開 issue
-  uv run scripts/tracker.py self-test              # 十七情境 mock 測試
+  uv run scripts/tracker.py self-test              # 十八情境 mock 測試
   uv run scripts/tracker.py check  --out c.json    # workflow check job
   uv run scripts/tracker.py diff   --in c.json --out d.json --steamcmd <path>
   uv run scripts/tracker.py issue  --in d.json     # workflow issue+state job
@@ -3552,7 +3782,8 @@ def main() -> None:
     )
     parser.add_argument(
         "command", nargs="?", default="run",
-        choices=["gen-watchlist", "run", "check", "diff", "issue", "self-test", "backfill-en", "coverage"],
+        choices=["as1-list", "gen-watchlist", "run", "check", "diff", "issue", "self-test",
+                 "backfill-en", "coverage"],
         help="執行的命令（預設：run）",
     )
     parser.add_argument(
@@ -3576,7 +3807,9 @@ def main() -> None:
     parser.add_argument("--out", default=None, help="輸出 artifact 路徑（check/diff）")
     args = parser.parse_args()
 
-    if args.command == "gen-watchlist":
+    if args.command == "as1-list":
+        sys.exit(cmd_as1_list())
+    elif args.command == "gen-watchlist":
         sys.exit(cmd_gen_watchlist())
     elif args.command == "run":
         sys.exit(cmd_run(args))

@@ -1,12 +1,14 @@
 {
-  "_comment": "受支援／待 bootstrap 的 Workshop MOD 名冊。人工只登記已查證 wid 與 metadata facts；key→owner 歸屬只認 sources/en 第一手證據。active 進 tracker watchlist，retired 保留審計但不追蹤。",
+  "_comment": "我方的支援／監看名冊（唯一名冊）：As1 支援的 MOD 由 `tracker.py as1-list` 自動補登（source as1-modlist／as1-split，只增不減），原創翻譯、翻譯申請、作者換 ID 重新上傳等其他 MOD 由人工登記（source 填 Workshop 網址）。登記後由我方自行偵測上游更新、補鍵；As1 只是「該支援哪些 MOD」與簡中用語的參考。active 進 tracker watchlist 與支援清單，retired 保留審計（note 記退役原因與查證方式）。key→owner 歸屬只認 sources/en 第一手證據，本檔不是歸屬證據。",
   "mods": {
     "3798149669": {
       "status": "active",
       "source": "https://steamcommunity.com/sharedfiles/filedetails/?id=3798149669",
       "verified": "2026-09-22",
       "name": "Frockin Splendor! Vol.6",
-      "mod_ids": ["GanydeBielovzki's Frockin Splendor! Vol.6"],
+      "mod_ids": [
+        "GanydeBielovzki's Frockin Splendor! Vol.6"
+      ],
       "note": "translation-request #491，依使用者本次授權收錄 JSON 翻譯。"
     },
     "3800233932": {
@@ -14,7 +16,29 @@
       "source": "https://steamcommunity.com/sharedfiles/filedetails/?id=3800233932",
       "verified": "2026-09-22",
       "name": "Snake's ModPack Build 42",
-      "mod_ids": ["SMP_AmmoMaker", "SMP_AquaFarm", "SMP_AquaFarmResources", "SMP_BarcoAbandonado", "SMP_BatesMetalicos", "SMP_CustomMapBridge", "SMP_Factory", "SMP_LeGourmetUltimate", "SMP_LootZetaEnhancedEdition", "SMP_MilitaryComplex", "SMP_NumarkComplex", "SMP_ROxygenTank", "SMP_RPropaneTank", "SMP_SkillsMag", "SMP_SnakeMechanicalOverhaul", "SMP_SnakeUtilsPack", "SMP_SnakeClothingMod", "SMP_SnakeMansion", "SMP_SnakeVille", "SMP_TableSaw", "SMP_ZStreamersCars"],
+      "mod_ids": [
+        "SMP_AmmoMaker",
+        "SMP_AquaFarm",
+        "SMP_AquaFarmResources",
+        "SMP_BarcoAbandonado",
+        "SMP_BatesMetalicos",
+        "SMP_CustomMapBridge",
+        "SMP_Factory",
+        "SMP_LeGourmetUltimate",
+        "SMP_LootZetaEnhancedEdition",
+        "SMP_MilitaryComplex",
+        "SMP_NumarkComplex",
+        "SMP_ROxygenTank",
+        "SMP_RPropaneTank",
+        "SMP_SkillsMag",
+        "SMP_SnakeMechanicalOverhaul",
+        "SMP_SnakeUtilsPack",
+        "SMP_SnakeClothingMod",
+        "SMP_SnakeMansion",
+        "SMP_SnakeVille",
+        "SMP_TableSaw",
+        "SMP_ZStreamersCars"
+      ],
       "note": "translation-request #501，依使用者本次授權收錄 JSON 翻譯。"
     },
     "3672792485": {
@@ -22,7 +46,9 @@
       "source": "https://steamcommunity.com/sharedfiles/filedetails/?id=3672792485",
       "verified": "2026-09-22",
       "name": "HEF - Helicopter Event Framework",
-      "mod_ids": ["HelicopterEventExpansionFramework"],
+      "mod_ids": [
+        "HelicopterEventExpansionFramework"
+      ],
       "note": "translation-request #552，依使用者本次授權收錄 JSON 翻譯。"
     },
     "3747865552": {
@@ -30,7 +56,9 @@
       "source": "https://steamcommunity.com/sharedfiles/filedetails/?id=3747865552",
       "verified": "2026-09-22",
       "name": "Outbreak Smokers",
-      "mod_ids": ["BadSadsOutbreakSmokers"],
+      "mod_ids": [
+        "BadSadsOutbreakSmokers"
+      ],
       "note": "translation-request #445，依使用者本次授權收錄 JSON 翻譯。"
     },
     "1299328280": {
@@ -47,15 +75,6 @@
         "ToadTraitsDisablePrepared",
         "ToadTraitsDisableSpec",
         "ToadTraitsDynamic"
-      ]
-    },
-    "1436878551": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "Defecation v3.57 (Build 42.18mp+)",
-      "mod_ids": [
-        "Defecation"
       ]
     },
     "1945359259": {
@@ -324,16 +343,6 @@
         "SpnCloth"
       ]
     },
-    "2685168362": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "More Description for Traits [b41]",
-      "mod_ids": [
-        "MoreDescriptionForTraits4166",
-        "MoreDescriptionForTraits42"
-      ]
-    },
     "2695471997": {
       "status": "active",
       "source": "legacy-helper-migration",
@@ -543,16 +552,6 @@
         "84merc"
       ]
     },
-    "2810471370": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "Yaki's BarberShop",
-      "mod_ids": [
-        "YakiBS",
-        "YakiBSB42"
-      ]
-    },
     "2811383142": {
       "status": "active",
       "source": "legacy-helper-migration",
@@ -570,15 +569,6 @@
       "name": "Spongie's Open Jackets",
       "mod_ids": [
         "SpnOpenCloth"
-      ]
-    },
-    "2818577583": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "Random Zombies",
-      "mod_ids": [
-        "BLTRandomZombies"
       ]
     },
     "2823166698": {
@@ -655,16 +645,6 @@
       "name": "Fridges Off!",
       "mod_ids": [
         "fridgesoff"
-      ]
-    },
-    "2859296947": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "Moodle Framework B41",
-      "mod_ids": [
-        "MoodleFramework",
-        "MoodleFrameworkOBSOLETE"
       ]
     },
     "2859304462": {
@@ -763,15 +743,6 @@
       "mod_ids": [
         "herbalist",
         "herbalist_nobiofuel"
-      ]
-    },
-    "2875848298": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "Common Sense",
-      "mod_ids": [
-        "BB_CommonSense"
       ]
     },
     "2876897619": {
@@ -997,15 +968,6 @@
         "RiskyInspectWeapon"
       ]
     },
-    "2950902979": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "Equipment UI - Paper Doll Equipment Interface [B42/41]",
-      "mod_ids": [
-        "EQUIPMENT_UI"
-      ]
-    },
     "2951270166": {
       "status": "active",
       "source": "legacy-helper-migration",
@@ -1031,14 +993,6 @@
       "name": "Rain Cleans Blood",
       "mod_ids": [
         "RainCleansBlood"
-      ]
-    },
-    "2959472220": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "mod_ids": [
-        "FRUsedCarsAlpha"
       ]
     },
     "2959854619": {
@@ -1461,15 +1415,6 @@
         "[J&G] Flecktarn Uniform"
       ]
     },
-    "3211693903": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "Traits Purchase System",
-      "mod_ids": [
-        "TraitsPurchaseSystem"
-      ]
-    },
     "3213391371": {
       "status": "active",
       "source": "legacy-helper-migration",
@@ -1821,21 +1766,6 @@
         "UseBeltAsWeapon"
       ]
     },
-    "3340255334": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "Spongie's Character Retexture",
-      "mod_ids": [
-        "SPNRetexture",
-        "SPNRetextureCustom",
-        "SPNRetextureUnderwear",
-        "SPNRetextureZombie",
-        "SPNRetextureZombieUnderwear",
-        "SPNRetextureZombies",
-        "SPNRetextureZombiesUnder"
-      ]
-    },
     "3342191739": {
       "status": "active",
       "source": "legacy-helper-migration",
@@ -1974,15 +1904,6 @@
         "SandboxSettings"
       ]
     },
-    "3387222454": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "mod_ids": [
-        "B42RainsFirearmsAndGunParts4213",
-        "B42RainsFirearmsAndGunPartsExpanded4213"
-      ]
-    },
     "3387382165": {
       "status": "active",
       "source": "legacy-helper-migration",
@@ -1990,14 +1911,6 @@
       "name": "Functional Clipboard [B41/B42]",
       "mod_ids": [
         "FunctionalClipboard"
-      ]
-    },
-    "3387474156": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "mod_ids": [
-        "LogicProfessions"
       ]
     },
     "3387539308": {
@@ -2038,11 +1951,6 @@
         "AutoTailoring"
       ]
     },
-    "3388380529": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30"
-    },
     "3388468313": {
       "status": "active",
       "source": "legacy-helper-migration",
@@ -2077,15 +1985,6 @@
       "name": "Minimal Display Bars + Nutritions + Discomfort [B41/B42]",
       "mod_ids": [
         "MinimalDisplayBarsNutritionsB42"
-      ]
-    },
-    "3388867450": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "PhunZones",
-      "mod_ids": [
-        "phunzones"
       ]
     },
     "3389050623": {
@@ -2141,16 +2040,6 @@
       "verified": "2026-08-30",
       "mod_ids": [
         "TKS42"
-      ]
-    },
-    "3390258342": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "mod_ids": [
-        "10YL_HIGH_LIGHT_B42",
-        "10YL_LOW_LIGHT_B42",
-        "10YL_MEDIUM_LIGHT_B42"
       ]
     },
     "3391149570": {
@@ -2281,15 +2170,6 @@
         "truemusic"
       ]
     },
-    "3397561666": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "Inventory Tetris - Grid Based Inventory Overhaul [B42]",
-      "mod_ids": [
-        "INVENTORY_TETRIS"
-      ]
-    },
     "3398874593": {
       "status": "active",
       "source": "legacy-helper-migration",
@@ -2343,14 +2223,6 @@
       "name": "[B42]Pallontras Crossbows",
       "mod_ids": [
         "PWPNXB"
-      ]
-    },
-    "3401825906": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "mod_ids": [
-        "EssentialRecipes"
       ]
     },
     "3401996053": {
@@ -2494,15 +2366,6 @@
       "name": "Autotsar Tuning Atelier - Fjord Mustard [B42]",
       "mod_ids": [
         "ATA_Mustang"
-      ]
-    },
-    "3406392630": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "Long Term Preservation [B42.13]",
-      "mod_ids": [
-        "SKITTLE_LongTermPreservation"
       ]
     },
     "3406930410": {
@@ -2785,14 +2648,6 @@
         "85oldsmobileDelta88"
       ]
     },
-    "3418366499": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "mod_ids": [
-        "LKB42"
-      ]
-    },
     "3420478458": {
       "status": "active",
       "source": "legacy-helper-migration",
@@ -2845,15 +2700,6 @@
       "name": "True Smoking [B42MP]",
       "mod_ids": [
         "TrueSmoking"
-      ]
-    },
-    "3424497614": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "U.S. M548 Cargo Carrier by Papa_Chad",
-      "mod_ids": [
-        "U.S. M548 Cargo Carrier by Papa_Chad"
       ]
     },
     "3426448380": {
@@ -2946,15 +2792,6 @@
       "mod_ids": [
         "WoodcuttingSkill42",
         "WoodcuttingSkill42v2"
-      ]
-    },
-    "3434453874": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "Howie's Traits [42.16]",
-      "mod_ids": [
-        "Howie's Traits"
       ]
     },
     "3434653631": {
@@ -3113,15 +2950,6 @@
         "STowTruck_SVUPatch_B42"
       ]
     },
-    "3446253876": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "[B42]说话描述情绪(B42.12)",
-      "mod_ids": [
-        "qingxushuohuamiaoshu"
-      ]
-    },
     "3447272250": {
       "status": "active",
       "source": "legacy-helper-migration",
@@ -3267,15 +3095,6 @@
       "name": "Open All Containers [42MP]",
       "mod_ids": [
         "OpenAllContainers"
-      ]
-    },
-    "3465865657": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "Imperial Chops! (Garf’s Beards)",
-      "mod_ids": [
-        "ImpChops"
       ]
     },
     "3469292499": {
@@ -3665,15 +3484,6 @@
         "[J&G] Firefighter Uniform"
       ]
     },
-    "3522009163": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "[B42] Home Inventory Improved",
-      "mod_ids": [
-        "cf_home"
-      ]
-    },
     "3522142755": {
       "status": "active",
       "source": "legacy-helper-migration",
@@ -3885,15 +3695,6 @@
       "name": "[B42] Water Pipes",
       "mod_ids": [
         "Waterpipes"
-      ]
-    },
-    "3547360242": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "Armor Wearing Skill",
-      "mod_ids": [
-        "ARMOR_WEARING_SKILL"
       ]
     },
     "3547444619": {
@@ -4210,14 +4011,6 @@
         "twisttrappingvanilla"
       ]
     },
-    "3575320927": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "mod_ids": [
-        "LTKB42"
-      ]
-    },
     "3575778063": {
       "status": "active",
       "source": "legacy-helper-migration",
@@ -4470,15 +4263,6 @@
         "RETetris"
       ]
     },
-    "3598575779": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "U.S. M163 VADS by Papa_Chad",
-      "mod_ids": [
-        "U.S. M163 VADS by Papa_Chad by Papa_Chad"
-      ]
-    },
     "3599339646": {
       "status": "active",
       "source": "legacy-helper-migration",
@@ -4569,23 +4353,6 @@
       "mod_ids": [
         "ImmersiveBlackouts",
         "ImmersiveBlackoutsRandomSupply"
-      ]
-    },
-    "3608725379": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "U.S. M41 Walker Bulldog by Papa_Chad",
-      "mod_ids": [
-        "U.S. M41 Walker Bulldog by Papa_Chad"
-      ]
-    },
-    "3609353662": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "mod_ids": [
-        "PumpsHavePropane42"
       ]
     },
     "3610005735": {
@@ -4771,41 +4538,6 @@
         "GaelGunStore_Leagacy"
       ]
     },
-    "3623609320": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "mod_ids": [
-        "CSB42MP"
-      ]
-    },
-    "3623919908": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "More Description For Traits [42.13]",
-      "mod_ids": [
-        "MoreDescriptionForTraits4213"
-      ]
-    },
-    "3624308198": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "[UNOFFICIAL][B42.13 SP/MP] Proximity Inventory",
-      "mod_ids": [
-        "ProximityInventory4213"
-      ]
-    },
-    "3625348470": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "mod_ids": [
-        "SourdoughHost42.13",
-        "SourdoughSP&Dedicated42.13"
-      ]
-    },
     "3625951765": {
       "status": "active",
       "source": "legacy-helper-migration",
@@ -4905,15 +4637,6 @@
         "myspatialrefuge"
       ]
     },
-    "3632444452": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "[B42.13+] Pumps Have Propane (Standalone MP/SP)",
-      "mod_ids": [
-        "PumpsHavePropaneMP"
-      ]
-    },
     "3633421539": {
       "status": "active",
       "source": "legacy-helper-migration",
@@ -4921,17 +4644,6 @@
       "name": "ModernFirearmsSystem 42.19 (SP/MP)",
       "mod_ids": [
         "ModernFirearmsSystem"
-      ]
-    },
-    "3633899582": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "Better Towing / Harrys Tow Truck [B42.13.1]",
-      "mod_ids": [
-        "BetterTowing",
-        "DisableDefaultTowing",
-        "HarrysTowTruck"
       ]
     },
     "3634569678": {
@@ -4981,15 +4693,6 @@
       "name": "[B42MP] Frockin Splendor! Vol.5",
       "mod_ids": [
         "GanydeBielovzki's Frockin Splendor! Vol.5"
-      ]
-    },
-    "3635550823": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "R.U. BMP-2 by Papa_Chad",
-      "mod_ids": [
-        "R.U. BMP-2 by Papa_Chad"
       ]
     },
     "3635921724": {
@@ -5045,15 +4748,6 @@
       "mod_ids": [
         "zReModVaccin30bykERHUS",
         "zReModVaccin30bykERHUS_Addon"
-      ]
-    },
-    "3643765614": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "Extensive Power Rework B42 (no longer supported)",
-      "mod_ids": [
-        "EPR_B42"
       ]
     },
     "3645462965": {
@@ -5309,15 +5003,6 @@
       "name": "Horse Mod [B42.14+/MP SOON]",
       "mod_ids": [
         "Horse"
-      ]
-    },
-    "3661387277": {
-      "status": "active",
-      "source": "legacy-helper-migration",
-      "verified": "2026-08-30",
-      "name": "R.U. BTR-80 by Papa_Chad",
-      "mod_ids": [
-        "R.U. BTR-80 by Papa_Chad"
       ]
     },
     "3663890932": {
@@ -6436,6 +6121,3713 @@
         "CamdenCountyB42"
       ],
       "note": "使用者 2026-09-27 核准 own lane 收錄。地圖 MOD，上游無 Translate；只收地圖選單標題／說明（map.info）與自訂物件名稱。"
+    },
+    "3791219108": {
+      "status": "active",
+      "source": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791219108",
+      "verified": "2026-10-02",
+      "name": "World Decay [B42] [Stable]",
+      "note": "作者把 World Decay 改用新 ID 重新上傳：As1 名單仍列舊 ID 3725803503（已下架）。As1 包已收 87 個鍵，其餘由我方補鍵。同作者另有 [Legacy] 3782424006、[Beta] 3780553759，未追蹤。"
+    },
+    "3725803503": {
+      "status": "retired",
+      "source": "as1-modlist",
+      "verified": "2026-10-02",
+      "name": "World Decay [B42.18]",
+      "note": "Workshop 已下架：Steam API result 9、steamcmd File Not Found、登入開頁顯示「存取物品時發生問題」（2026-10-02 實測）。As1 包內既有譯文照常出貨（落 _unsorted）。 新版改用 3791219108。"
+    },
+    "3729663486": {
+      "status": "retired",
+      "source": "as1-modlist",
+      "verified": "2026-10-02",
+      "name": "Fitness & Workout Overhaul 42.18",
+      "note": "Workshop 已下架：Steam API result 9、steamcmd Access Denied（改為私人）、登入開頁顯示「存取物品時發生問題」（2026-10-02 實測）。As1 包內既有譯文照常出貨（落 _unsorted）。"
+    },
+    "3756131291": {
+      "status": "retired",
+      "source": "as1-modlist",
+      "verified": "2026-10-02",
+      "name": "Personal Recovery Journal [B42.20]",
+      "note": "Workshop 已下架：Steam API result 9、steamcmd File Not Found、登入開頁顯示「存取物品時發生問題」（2026-10-02 實測）。As1 包內既有譯文照常出貨（落 _unsorted）。"
+    },
+    "3776795836": {
+      "status": "retired",
+      "source": "as1-modlist",
+      "verified": "2026-10-02",
+      "name": "[B42] Railroader MP (Community Edition)",
+      "note": "Workshop 已下架：Steam API result 9、steamcmd File Not Found、登入開頁顯示「存取物品時發生問題」（2026-10-02 實測）。As1 包內既有譯文照常出貨（落 _unsorted）。"
+    },
+    "1902435140": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Realistic Army Zombies"
+    },
+    "1910606509": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Soul Filcher's Cooking Time"
+    },
+    "1926311864": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Soul Filcher's Clearing Time"
+    },
+    "2432621382": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Bushcraft Gear - Rare Weapons [B41/B42]"
+    },
+    "2634426926": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B41 / B42.12+] bikinitools - independent vehicle spawner, skin changer and automations!"
+    },
+    "2689863681": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Vac's Drinks [B41/B42]"
+    },
+    "2710167561": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Map Legend UI [B42\\41]"
+    },
+    "2730784492": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42 Stable] ScrapSmith Medieval Weapons and Armor (3.1.5)"
+    },
+    "2732294885": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Named skill VHS tapes"
+    },
+    "2732407704": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "*WIP* [Reworked] Madax Weapon Pack - B42"
+    },
+    "2793385743": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "SSR: Quest System"
+    },
+    "2831786301": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Video Game Consoles"
+    },
+    "2851584592": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B41/B42/B42.16] Read Your Manga [Latest Patch]"
+    },
+    "2859508566": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Extra Books (Updated, B42 + B41)"
+    },
+    "2881764317": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Known And Collected"
+    },
+    "2887274097": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "SSAULAVI(SP/MP)"
+    },
+    "2915656059": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Cedar Hill B41 & B42 Alpha"
+    },
+    "2925657627": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Biofuels"
+    },
+    "2930762705": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "KeyBlank"
+    },
+    "2946364542": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Search Containers"
+    },
+    "2946812728": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B41/B42] Responsive Pivoting: Configurable Turn Speed"
+    },
+    "2957935793": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Another Vehicle Claim System"
+    },
+    "2961450523": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20 SP/MP] Totally's Eastern Bloc Firearms Pack"
+    },
+    "3000924731": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Immersive Lore"
+    },
+    "3002666175": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B41&B42] Show Wall Health"
+    },
+    "3006882690": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B41&B42] Repair Wall"
+    },
+    "3020323164": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Add More Map Symbols (AMMS)"
+    },
+    "3054341059": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Craftable Mannequins UPDATED [B42+/41]"
+    },
+    "3155647614": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Game Night: D&D"
+    },
+    "3156717975": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Skill Recovery Journal Reminder"
+    },
+    "3171184800": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "'84 Cadillac Gage LAV-300"
+    },
+    "3286593534": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42/B41] Mercedes-Benz 300SE/S320"
+    },
+    "3290232938": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Smarter Storage"
+    },
+    "3323320610": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42/41] Remove Hair Change Restrictions"
+    },
+    "3342110208": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42/41] WorldMap Name Symbols"
+    },
+    "3348466117": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42 Stable] More Workout Supplements"
+    },
+    "3356049753": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Jeans With Some Flare [B41/B42.12/13+]"
+    },
+    "3389003300": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Moodle Descriptions Expanded"
+    },
+    "3391325510": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Homemade Things"
+    },
+    "3391537655": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "ModTag"
+    },
+    "3391877435": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Brandenburg, Ekron and Irvington Spawn Locations"
+    },
+    "3394044313": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Buttstroke / Gun Stock Attack [B42]"
+    },
+    "3399432867": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.13+] SimpleStatus-Fixed"
+    },
+    "3400131934": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Industrial Revolution 42"
+    },
+    "3402493701": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Autotsar Trailers B42"
+    },
+    "3404737883": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Autotsar Motor Club B42"
+    },
+    "3404791450": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Super Bulldozer B42"
+    },
+    "3407970450": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Vehicle Tuner [42.18]"
+    },
+    "3408186716": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Video Game Consoles Addon - More SNES Games"
+    },
+    "3409946507": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "1970 White Freightliner COE [B42]"
+    },
+    "3413237147": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Video Game Consoles Addon - More NES Games B42 Reupload"
+    },
+    "3415021115": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Different number of fillets based on weight"
+    },
+    "3416525606": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Recut"
+    },
+    "3416833689": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.19] Jarred and dried mushroom"
+    },
+    "3416873508": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.19] Make sugar"
+    },
+    "3418061837": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.19] Make Dried Vegetables"
+    },
+    "3418352842": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Video Game Consoles Addon - More Game Boy Games Reupload for B42"
+    },
+    "3423725989": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Video Game Consoles Addon - More SEGA Games"
+    },
+    "3426711866": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Fallout Food Mod B42"
+    },
+    "3432399223": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Butchering Animals Plus [B42.19]"
+    },
+    "3454414190": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Immersive Camos"
+    },
+    "3459633953": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Small Town First Responders - Core - B42"
+    },
+    "3462962143": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Functional Escalators"
+    },
+    "3463564121": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] KR FriOS Redux - Portable Cooler/Fridge/Freezer/Stove & Custom StepVan"
+    },
+    "3470205514": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42]Recycling of waste"
+    },
+    "3470345531": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Flat Stone From Big Stone"
+    },
+    "3475536311": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42MP] Lawn Care: Scythe & Rake"
+    },
+    "3478924012": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Auto Forage"
+    },
+    "3479108127": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B41/B42] Hephas Stalker PDA"
+    },
+    "3481148861": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[MT] Tactical Bags"
+    },
+    "3486247131": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "JM3 chop"
+    },
+    "3487128902": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Dry That Food!"
+    },
+    "3487450124": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Feed That Animal!"
+    },
+    "3488600400": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "TwisTonFire - Better Character Info"
+    },
+    "3495594275": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42MP] Lantern Fix"
+    },
+    "3496263414": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Craftable Welding Rods"
+    },
+    "3523472206": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "No more wiggly vehicle"
+    },
+    "3524273533": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42/41] Real Tent!"
+    },
+    "3536881320": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Slow Burn: Infected Survivor [B42]"
+    },
+    "3540610462": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Break Mineral Limestone"
+    },
+    "3541349730": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "GAZ-3937 Vodnik [B41/B42]"
+    },
+    "3543328573": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Instant Tea"
+    },
+    "3550304290": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Survivor Journals"
+    },
+    "3553635874": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "RV Life"
+    },
+    "3557652317": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Stairs East&South [B42MP]"
+    },
+    "3564989150": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Working Cooler FG"
+    },
+    "3570485296": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "TwisTonFire - Better Fishing"
+    },
+    "3577100076": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Cold Winters"
+    },
+    "3586216562": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Better Containers"
+    },
+    "3591562181": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42/41] Safe Indoor Campfire"
+    },
+    "3609311749": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "SMB They SEE You"
+    },
+    "3623897097": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "PhunServer Tools"
+    },
+    "3626717602": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Let's Get Naked 3 (while exercising and favourites tracking)"
+    },
+    "3627539752": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "TwisTonFire - Map Improvements"
+    },
+    "3628452306": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "ST Additions - Engine Rebuild"
+    },
+    "3629835761": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Ladders?! B42.20 SP/MP (Unofficial)"
+    },
+    "3630494926": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Bandits Improved AI & Radio Expansion 42.19 MP (Unofficial addon)"
+    },
+    "3631306028": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Paranormal Z"
+    },
+    "3631390083": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Apocalypse Car Engineer Workshop"
+    },
+    "3632610172": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "True Moozic B42+  The Music System for Project Zomboid (SP/MP)"
+    },
+    "3635856965": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Better Auto Mechanics [B42.20+ MP+SP]"
+    },
+    "3636241120": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Upgradeable Storage"
+    },
+    "3637364024": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[42.20MP] Hot Brass - Ammo Craft"
+    },
+    "3637951074": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Pro Mover Trait - Easy Tile Pick-Up Actions"
+    },
+    "3640172314": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "The Mission  B42.18"
+    },
+    "3640448510": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Fluffy's Key Blank (42.13+)"
+    },
+    "3641187488": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "PZ Marketplace - Global Economic System"
+    },
+    "3642741039": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Useful Trash Bag[SP/MP][42.20]"
+    },
+    "3646414716": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Aquatsar Yacht Club B42"
+    },
+    "3647117173": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "ImmersiveSolarArrays [42.16+]"
+    },
+    "3649587333": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Makeshift Raft"
+    },
+    "3649632887": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Ford Transcontinental"
+    },
+    "3654513156": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Swim Skill"
+    },
+    "3654864424": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Spare Engine Parts Crafting"
+    },
+    "3657325209": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "StorageWorks"
+    },
+    "3659137034": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Cone Vision Outline"
+    },
+    "3659585445": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Project Thiccener - PZ realistic body shapes"
+    },
+    "3659605156": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Goose's Kentucky National Guard Professions [B42.19.0] [MP]"
+    },
+    "3661252602": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Makeshift Crossbow"
+    },
+    "3662405609": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Infoteo Refill Propane Tanks"
+    },
+    "3662567682": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Yet Another Rest Mod"
+    },
+    "3662976494": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20] 1 Click Toogle Mask UI"
+    },
+    "3663132395": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "HDs Food Recipes"
+    },
+    "3665657529": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Not Random Sprinters [42.17]"
+    },
+    "3665928226": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Ash's King County Sheriff's Deputy Cavalry Hat [Redux] B42.20"
+    },
+    "3666938579": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Buildable Water Pump"
+    },
+    "3668370011": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Legendary Katana Wakizashi"
+    },
+    "3669145719": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Realistic Environmental Vehicle Decay [B41/B42][SP/MP]"
+    },
+    "3669286020": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20] Bag Upgrade Plus Realistic"
+    },
+    "3669368320": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "URIETA SHOP"
+    },
+    "3669550831": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[FIXED] Proximity Inventory B42.19+ [SP/MP]"
+    },
+    "3670220111": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Container Tags [B42]"
+    },
+    "3672451284": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Jeeve's Drops"
+    },
+    "3673271351": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.15] M250 (XM250)"
+    },
+    "3674013419": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Jeeve's Claims"
+    },
+    "3674399753": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "AHS - Advanced Health System"
+    },
+    "3676250472": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "PhunLewt 2.1"
+    },
+    "3676252110": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "PhunSprinters 2"
+    },
+    "3676252660": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "PhunZones 2"
+    },
+    "3676283016": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Hi Res Clock 2.0 - Modern Watch UI"
+    },
+    "3676347667": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Tanks Have Propane (B42) .14 & .15"
+    },
+    "3676456221": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Lua Digital Watch Framework"
+    },
+    "3676814360": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "DEZ - Dynamic Evolution Z"
+    },
+    "3677430162": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Armor Makes Sense [2.0]"
+    },
+    "3677588446": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Player Dog Tags [42]"
+    },
+    "3677858792": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Toxic Sky"
+    },
+    "3679425994": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Find Alice"
+    },
+    "3680810727": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Second Dawn Weaponry"
+    },
+    "3682045254": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Unified Carry Weight Framework (UCWF)"
+    },
+    "3682702613": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Sunshi's Cooler System | (SP)"
+    },
+    "3682936016": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Equipment UI – STABLE +"
+    },
+    "3683154388": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Zombie Penetration [B42.15]"
+    },
+    "3683878228": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.19] Filibuster Rhymes' Certified Used Cars"
+    },
+    "3683898699": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "PALSJ's Customization Options [B42 Only]"
+    },
+    "3683918273": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Cheat Menu: Reloaded [B42 Fixed]"
+    },
+    "3684225110": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "PH's Self Care"
+    },
+    "3684254299": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "'84 Chevrolet Corvette"
+    },
+    "3685136499": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[RE9] Hatchet"
+    },
+    "3686046560": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Hybrid Combat Overhaul [B42]"
+    },
+    "3686068158": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "True Dualwield Z | Traits + Melee Expansion (B42+ ~ BETA)"
+    },
+    "3686093952": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Oxygen Refill"
+    },
+    "3686402161": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] CounterStrike 2 Firearms"
+    },
+    "3686776454": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Necroa Mod [B42 Stable]"
+    },
+    "3687298477": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[Rebar Axe]"
+    },
+    "3687353319": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "(B42) Hardwood's Swat Pack"
+    },
+    "3687394815": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Taillights and Stoplights"
+    },
+    "3687487317": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Jeeve's QoL"
+    },
+    "3688537535": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "EZRoof [B42.20]"
+    },
+    "3688814370": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Bag Bottom Weapon Attach [B42.17]"
+    },
+    "3689006725": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "PhunMart 2"
+    },
+    "3689190333": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Pseudo reflected light [B42.15]"
+    },
+    "3689524052": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Legendary Tactical Weapons"
+    },
+    "3690404044": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Nutrition Makes Sense"
+    },
+    "3691730760": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Connected Generators B42 (Open Beta)"
+    },
+    "3692342845": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Smart Book Read B42.20+ [SP/MP]"
+    },
+    "3693138161": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Better Walk To"
+    },
+    "3693258802": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Tactical Hold Complete"
+    },
+    "3693338586": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[Smersh Pack]"
+    },
+    "3693405389": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Chainmail Crafting"
+    },
+    "3693550188": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Jeeve's PC"
+    },
+    "3693805407": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Excrementum"
+    },
+    "3693854821": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Gas Mask Attach [B42.20]"
+    },
+    "3694031031": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "ERS - Network Extend Pack"
+    },
+    "3694097672": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Tooltiplib - Tooltip Framework for Modders"
+    },
+    "3695166848": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Gone in 60 Seconds"
+    },
+    "3695167770": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Multiple Generators"
+    },
+    "3695670830": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "ZedColonies - Dynamic Trading Addon"
+    },
+    "3695675339": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Currency Expanded - Dynamic Trading Addon"
+    },
+    "3696291148": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "TwisTonFire - Better Pause"
+    },
+    "3696528833": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Don't Open New One [B42.19]"
+    },
+    "3696841989": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42MP] Dear, Safehouse"
+    },
+    "3698101965": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Functional Nail Gun [SP|MP]"
+    },
+    "3698139680": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "City Standpipes"
+    },
+    "3698236735": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[MP42.19] El Eternauta: Whiteout v1.3"
+    },
+    "3698401476": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Skullys Lowerback Dufflebags, Chest Rigs + Fannypack, Container Rebalance [42.20]"
+    },
+    "3698715963": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Cheval de Frise Fix (Unofficial)"
+    },
+    "3699222911": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Repair Floor Cracks [B42 SP/MP]"
+    },
+    "3699451356": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Trader Vending Machines [42]"
+    },
+    "3699585531": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Call of Duty MWII Firearms"
+    },
+    "3700009701": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Yumi's Meat Expansion 2.0 w/ Hunting"
+    },
+    "3700283070": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "AWS - Adaptative Wear System"
+    },
+    "3700371875": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "PZLinux B42.17"
+    },
+    "3700643615": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Yumi's Fishing Expansion"
+    },
+    "3700831155": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Yumi's Advanced Trapping Overhaul"
+    },
+    "3701066084": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[OC] Ellie's Outfits [Tomb Body/B42.16+]"
+    },
+    "3701972216": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[PZCh] Growing Up - Kid mod challenge"
+    },
+    "3702905123": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Loot Sense"
+    },
+    "3703948448": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "'79 Chevrolet Camaro"
+    },
+    "3705029261": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Red Library"
+    },
+    "3706462687": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "ApocalipseBR Regioes"
+    },
+    "3706463588": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "ApocalipseBR Projeto Nemesis"
+    },
+    "3706760910": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Animal Tracker"
+    },
+    "3707424872": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Brazilian Clay Water Filter"
+    },
+    "3707475814": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "The Ark"
+    },
+    "3707624971": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Bubby's Traits: Combat Buffs"
+    },
+    "3707655803": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "OVAGT-27 SYSTEM UPGRADE"
+    },
+    "3708816224": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Navigator | Navigation Mod for Project Zomboid B42"
+    },
+    "3709109042": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "SpawnPoint Overhaul"
+    },
+    "3710053075": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Zeer"
+    },
+    "3710116647": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Better Vanilla Filters and UI"
+    },
+    "3710281407": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Peek a View"
+    },
+    "3711695385": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "MissionsEvents B42.17+"
+    },
+    "3712230793": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Metro 2033 - Universal Charger [B42]"
+    },
+    "3712739345": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Project RV Interior Rebase"
+    },
+    "3713005182": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Hark's Horde Night Revamped [B42 Stable]"
+    },
+    "3713018764": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Mercedes-Benz AMG Vision Gran Turismo"
+    },
+    "3713038671": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "JSling"
+    },
+    "3713082522": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Tamagotchi - Pocket Cow Virtual Pet"
+    },
+    "3713292849": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "SeeTarget B42.19"
+    },
+    "3713657908": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Random Zombies FIX (42.17)"
+    },
+    "3714025041": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "EBF Chainsaw"
+    },
+    "3714335263": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "CommonSense FIX (42.19)"
+    },
+    "3714511611": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "A Second Chance"
+    },
+    "3715220670": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Vehicle Skin Changer - SP/MP B42"
+    },
+    "3715741925": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Objectives - Dynamic Trading Addon"
+    },
+    "3715977706": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[42.18] Better Vanilla Firearms (Fixes, Improvements, and Additions)"
+    },
+    "3716405632": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Dynamic Horde Events B42"
+    },
+    "3716904170": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "The Ark Professions!"
+    },
+    "3717223708": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Ted Food Expansion"
+    },
+    "3717902500": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "JB's Bugs In Lights [B42]"
+    },
+    "3717968421": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Common Sense B42.18"
+    },
+    "3718387000": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "The ARK Female Character Patch"
+    },
+    "3718616260": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "EBFModPack"
+    },
+    "3718884098": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Military Tents [B42.17+ MP]"
+    },
+    "3719531113": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[J&G] ODST [B42/41]"
+    },
+    "3719538235": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Anomalies"
+    },
+    "3719603024": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "AutoOpenDoorsWhileDriving"
+    },
+    "3720305815": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "The Director"
+    },
+    "3720484992": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Vanilla Firearms Rework"
+    },
+    "3721068590": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "IDBFS - Industrial Distillery & Biofuel System"
+    },
+    "3721602150": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Manual Save & Slot Manager [B42]"
+    },
+    "3721980333": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Basement Builder"
+    },
+    "3722192974": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Auto Gate Motor [B42.20]"
+    },
+    "3722240318": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Cobb Motor Company M540"
+    },
+    "3722348177": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Buildable Fuel Pump"
+    },
+    "3722475598": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Upgradeable Storage Plus"
+    },
+    "3722530128": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "GhostSightB42"
+    },
+    "3722974110": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "UmaBoid B42 [ UNOFFICIAL PORT]"
+    },
+    "3723726293": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Neat Rocco's UI [B42]"
+    },
+    "3723942896": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Till Death Do Us Part - Marriage Companion"
+    },
+    "3723961714": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Infoteo's Solar Arrays"
+    },
+    "3724525696": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.17+] Water Pipes - Fully fixed"
+    },
+    "3725497089": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Computer Mod"
+    },
+    "3726233497": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] OG Homestead Dairy"
+    },
+    "3726328119": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Extensive Health Rework Evolved"
+    },
+    "3726526329": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "'78 Lamborghini Countach"
+    },
+    "3726591479": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Toxic Sky Anomalies"
+    },
+    "3727387302": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Barrels Expanded [MP + SP]"
+    },
+    "3727395976": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] OG Cooking Expanded"
+    },
+    "3727602756": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Chopped Vehicle Salvage"
+    },
+    "3727753275": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Buildable Garage Doors"
+    },
+    "3727930438": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Radiation Zones by JustBlueb"
+    },
+    "3728140314": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Last Stand Professions"
+    },
+    "3728301676": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Mailbox Stories"
+    },
+    "3728477819": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Stackable Chairs [SP&MP]"
+    },
+    "3728582856": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Read and Recall [SP-Only]"
+    },
+    "3728775267": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Better Vehicle Dynamics"
+    },
+    "3728823512": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Bring Radio Back to Life: Aftermath Radio [EN/RU/ZH]"
+    },
+    "3728891451": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Automatic Lights"
+    },
+    "3729331367": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Infoteo's Military Ponchos"
+    },
+    "3729408022": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Medieval Makeshiftery (WIP) [B42.13+]"
+    },
+    "3729411754": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Hold Crouch to Sit"
+    },
+    "3729942997": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Zen Animals [B42.18]"
+    },
+    "3730833846": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "'76 Chrysler New Yorker"
+    },
+    "3731451178": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "FARP: Tactical Survival Relaxation"
+    },
+    "3731516424": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "JB's Zombies Can't Hide [B42 SP/MP]"
+    },
+    "3731771123": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Slow Gas Mask Filters [B42]"
+    },
+    "3732272546": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Hunting Mod Enhanced"
+    },
+    "3732496045": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Traits Extended"
+    },
+    "3732507384": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[Scrap/Survival] Recycle"
+    },
+    "3732623224": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Zombie Butcher - Harvest the Dead [B42.18+]"
+    },
+    "3732755978": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Plysken Frost Revolution"
+    },
+    "3732843201": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Amperage - Realistic Power Grid"
+    },
+    "3732872896": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Noir's Rifle Slings +Multiple Slings PATCH (42.18)"
+    },
+    "3732929505": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Sabor Venezolano"
+    },
+    "3733167464": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] SecretZ Pandemic [MODULAR]"
+    },
+    "3733603053": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Extensive Power Rework (Community fork)"
+    },
+    "3733936432": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Zombie Penetration GOM Addon [B42.18]"
+    },
+    "3734003498": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Yumi's Moonlight Mayhem"
+    },
+    "3734334068": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "PR BETA DEMO 42b"
+    },
+    "3734639991": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Seed Season Indicator [B42]"
+    },
+    "3735535520": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "CraftingBook – Your Ultimate Recipe Guide"
+    },
+    "3736576212": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "The Butcher's Table 42.19"
+    },
+    "3736629791": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Tempo - A Performance & FPS Optimizer"
+    },
+    "3736813592": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42MP] Frockin Stompers!"
+    },
+    "3737412008": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Jeeve's Solar Arrays"
+    },
+    "3737772445": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "TwisTonFire - DuffleBag"
+    },
+    "3738109511": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Symbiosis"
+    },
+    "3738115503": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "MRE XIII (1993) - Meal Ready to Eat MOD Real version [Rework]"
+    },
+    "3738362476": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Project Remnants"
+    },
+    "3738819163": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Airdrop (SP/MP)"
+    },
+    "3739173520": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Plysken Irrigation Pipes"
+    },
+    "3739256725": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "New Music [42+]"
+    },
+    "3739382095": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Playable UNO: The Card Game"
+    },
+    "3739427877": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Undead Survivor"
+    },
+    "3739595559": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Water Pipes"
+    },
+    "3739612285": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Braven's Camouflage Reworked"
+    },
+    "3739941052": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Jeeve's Zones"
+    },
+    "3740052292": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Companion Dogs [ALPHA]"
+    },
+    "3740552108": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Private bunker"
+    },
+    "3740745510": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Signature Weapons"
+    },
+    "3740865682": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Last Cup Coffee"
+    },
+    "3741747172": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Counter Strike 2 93's Definitive Edition"
+    },
+    "3741967116": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Yumi's Furry Traits for Furry Lovers ;)"
+    },
+    "3742168608": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "EventHordeSpawner + NPC TRADER B42.19 MP"
+    },
+    "3742442233": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B41/B42] Trample Steam - Spring Launcher Trap From Black Ops 2"
+    },
+    "3742518185": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Zombie Camouflage - Build 42"
+    },
+    "3742598696": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "No Skill Loss [B42.19+ - MP COMPATIBLE]"
+    },
+    "3742599937": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Plysken Survival Concept"
+    },
+    "3742961627": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Vanilla Trapping Fix"
+    },
+    "3743371090": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "'73 NISSAN Skyline GT-R"
+    },
+    "3743911767": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Infoteo's Vehicle Armor"
+    },
+    "3744455714": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Functional Pager - Immersive Map-Wide Communication [B41/B42+]"
+    },
+    "3744666572": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] NEW PROFESSIONS AND TRAITS"
+    },
+    "3744726476": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Ted's More Cigarettes"
+    },
+    "3744840515": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Linterna B42 (Electric & Gas Lantern)"
+    },
+    "3744846617": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "SimpleBows"
+    },
+    "3745391359": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Params Tab"
+    },
+    "3745620322": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Claimable Outposts B42.20"
+    },
+    "3745718141": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "US Military Grenades [B42]"
+    },
+    "3745815281": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "The Best Lockpicking [B42.20]"
+    },
+    "3746173075": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "SoapZ"
+    },
+    "3746603021": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B41/B42] Tripping Zombies: Reborn"
+    },
+    "3746632343": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Bundle Up! - A Packing Mod"
+    },
+    "3747202678": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Madax Weapons Pack - Fixed 4.20.2"
+    },
+    "3747641501": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "TwisTonFire - WANTED"
+    },
+    "3747745835": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Moodle Effects Explained [B42]"
+    },
+    "3748041053": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Wess Admin Tools"
+    },
+    "3748395562": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Lanterns on the Floor Fix"
+    },
+    "3749674001": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] True Reading [SP|MP]"
+    },
+    "3749727604": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.18+42.19] Knox Survivors"
+    },
+    "3749847175": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[MP] Wess Admin Tools: Server"
+    },
+    "3749848348": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Plysken Attachments Reborn"
+    },
+    "3750253491": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Common Sense [B42.19+]"
+    },
+    "3750591494": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Detailed Wound Tooltips"
+    },
+    "3750861914": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Football & Shoving [SP & MP]"
+    },
+    "3751048117": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Wess Animal Companions"
+    },
+    "3751199292": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] True Companions - Experimental"
+    },
+    "3751370563": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Vanilla Agriculture Fix"
+    },
+    "3751612935": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Cheat Menu Reborn [B42+MP]"
+    },
+    "3751987076": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Arsenal Upgrades"
+    },
+    "3753045346": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "BlowCo Fan Heater"
+    },
+    "3753313963": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Dotol's Water Tank Trucks [Build 42]"
+    },
+    "3753700423": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "PZ Pulse"
+    },
+    "3753983294": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Blobs Wonderful Tool Expansion!"
+    },
+    "3755881065": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Vac & Pack"
+    },
+    "3755993986": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Gas Pump Indicator"
+    },
+    "3756132327": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "New Music - Metal Gear Rising Revengeance ost"
+    },
+    "3756446993": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Mr Brollow's Skyblock"
+    },
+    "3756879598": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Wess Quartermaster - Self-Organizing Storage"
+    },
+    "3756938756": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "'69 Ford Mustang"
+    },
+    "3758561559": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Awesome Lockpicking"
+    },
+    "3758880254": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "PZ Simple Crossbows [B42.19 MP]"
+    },
+    "3758971325": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Better Item Info"
+    },
+    "3759277273": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Survivor Quirks"
+    },
+    "3759676725": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Fists of Survival"
+    },
+    "3759920384": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Wandering Hordes: Dynamic Zombie Migration & Hordes System [Hordes Hordes Hordes]"
+    },
+    "3760442018": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Magic Accessories"
+    },
+    "3760450908": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Immersive Searching [B42.18-42.20][MP]"
+    },
+    "3760962710": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20] Not Useless Things"
+    },
+    "3761020074": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Play Dead Weapon Mod"
+    },
+    "3761077099": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Vanilla Firearms Expansion [CLASSIC]"
+    },
+    "3761145498": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Random Gear Modifiers RGM 42.20 [SP&MP] [Alpha version]"
+    },
+    "3761216758": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Quartermaster - Auto-Sort & Store Loot"
+    },
+    "3761284354": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Vanilla Firearms Expansion - STALKER pack [CLASSIC]"
+    },
+    "3761652742": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "New Music - Kesha - Animal"
+    },
+    "3762188883": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Lock Every Door [B41] [B42]"
+    },
+    "3762296152": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "CD: Rottweiler"
+    },
+    "3762319745": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20] The Long Dark Guns"
+    },
+    "3762355926": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Vanilla Firearms Expansion - Post '93 [CLASSIC]"
+    },
+    "3762749124": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Ergonomic UI [B42.20]"
+    },
+    "3763444466": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "StartWithDog for CD"
+    },
+    "3763470184": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Propane Exchange Cabinets"
+    },
+    "3763651059": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Raining Zombies"
+    },
+    "3763931962": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Vanilla Tracking Fix"
+    },
+    "3764265933": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Nuclear Protocol B42.19"
+    },
+    "3764947570": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "World Item Removal List [SP]"
+    },
+    "3765241705": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Beyond Ten - Level 15 Skills [B41/B42]"
+    },
+    "3765795716": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Practice Crafting Skills"
+    },
+    "3766140920": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Black Powder Gunsmithing"
+    },
+    "3766508989": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Aegis Panel"
+    },
+    "3766525060": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Ammo Reloading Bench"
+    },
+    "3766571591": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "'70 Chevrolet Chevelle / El Camino"
+    },
+    "3766863828": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Quick Animal Areas & Improved Elevation Stress + Sandbox Enclosure Options"
+    },
+    "3766943005": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20 MP & SP] Terminal logistic"
+    },
+    "3767344996": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "AnomaliesMP - Artifact Update"
+    },
+    "3767935128": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Bleeding Zombies [B42.20 Stable / B41]"
+    },
+    "3768207575": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Fishing Panel Plus"
+    },
+    "3768214171": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Accessory Skill Bonuses"
+    },
+    "3768369505": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42]Yet Another Instant Item Transfer"
+    },
+    "3768669395": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "True Weight"
+    },
+    "3768743814": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Hemp Roll"
+    },
+    "3769195673": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20] Bianca Boxes"
+    },
+    "3769773293": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Inventory Tetris MP FIX 42.20 (DISCONTINUED)"
+    },
+    "3769855058": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Cye's Crafted Melee Rebalance"
+    },
+    "3769979122": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "CD: Shiba Inu [ALPHA]"
+    },
+    "3770009696": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Gemstone Key Chains [B42]"
+    },
+    "3770795385": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "CD: Doberman"
+    },
+    "3770890864": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "'91 Lexus LS400"
+    },
+    "3771088405": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "CD: Survivor Breed Pack (12 Dogs) [ALPHA]"
+    },
+    "3771638611": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Fancy Handwork B42.20"
+    },
+    "3771709541": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] KR SolarOS - Portable Solar Panel Generator, Solar Panel Charger & Custom Flashlights/Batteries"
+    },
+    "3772302032": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Water Pump"
+    },
+    "3772549209": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Indoor Climate"
+    },
+    "3772609548": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Knox Immersivity B42"
+    },
+    "3772779441": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Companion Dogs - Chihuahua"
+    },
+    "3773340822": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "AutoLoot (B42)"
+    },
+    "3773702789": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "NoobTeam Mod by HiuThuHigh"
+    },
+    "3773834525": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[42.20MP] Vanilla Weapons PLUS - Gunworks Edition"
+    },
+    "3773858287": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "B42 Rain's Firearms & Gun Parts"
+    },
+    "3773911887": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "This Is Your Life [B42 Stable] WIP"
+    },
+    "3773972040": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Arcadia RV Interiors [B42.20]"
+    },
+    "3773985930": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "O.C.D. Inventory"
+    },
+    "3774213378": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "B42 Rain's Axes & Blades"
+    },
+    "3774251699": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Survival Planner List (TO DO List)"
+    },
+    "3774328761": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Girlie Glasses [B42.20]"
+    },
+    "3774351457": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Dark Presence [WIP]"
+    },
+    "3774360904": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Railroader — Railway Transport & Profession [B42]"
+    },
+    "3774467540": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Lockpicking Skill"
+    },
+    "3774523641": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Better Sorting Reborn"
+    },
+    "3774699319": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Massive Military Containers [B42]"
+    },
+    "3774776279": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Climb Ladders"
+    },
+    "3774826484": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Jumbo Tree Indoor Fix"
+    },
+    "3774841057": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Weight Reduction - Building Materials & Tools"
+    },
+    "3774898489": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "TTRP Hairstyles"
+    },
+    "3775026731": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Wounds Overhaul [B42]"
+    },
+    "3775055964": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "PZTrainer [B42.20]"
+    },
+    "3775191731": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Peri's Random Scenarios 42.20 (Pillow Fork)"
+    },
+    "3775310237": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "JB's Work Orders [B42] Task Automation"
+    },
+    "3775338780": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Z-llegro Trading (Economy Mod)"
+    },
+    "3775366853": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "42] Ultimate Marksman v0.5 | Bows and Crossbows | WIP"
+    },
+    "3775407541": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "RadArchery"
+    },
+    "3775513231": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20 - STABLE] Inventory Tetris MP/SP Fix"
+    },
+    "3775657408": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Companion Dogs - Pomeranian"
+    },
+    "3775776605": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "ahz clothing b42FIX"
+    },
+    "3776014508": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Armor Wearing Skill"
+    },
+    "3776034993": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Weight Thresholds +10 B42"
+    },
+    "3776086831": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "inu's Simple Horde Mod [B42]"
+    },
+    "3776175202": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Excrementum [42.20 Fix - Unofficial]"
+    },
+    "3776182375": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "CH Status HUD"
+    },
+    "3776262249": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Ping Items! Friends! 42.20 MP Official"
+    },
+    "3776279483": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Plysken Underground Revolution"
+    },
+    "3776289474": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Special Ops Squad"
+    },
+    "3776518022": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[42.20 SP/MP] Rip All Clothing"
+    },
+    "3776527328": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Tarkov Combat Stims"
+    },
+    "3776531193": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Palm Pilot"
+    },
+    "3776561019": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Skill Legacy - Keep Your Skills Through Death"
+    },
+    "3776616321": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "GPS Route 42.20"
+    },
+    "3776641628": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Skill Journal"
+    },
+    "3776728851": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Show Weapon Stats Plus [B42.20 fix]"
+    },
+    "3776848101": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Dry & Cure"
+    },
+    "3777087042": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Waterpipes (NG_Fixed)"
+    },
+    "3777241403": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "True Cable TV [B42.20] SP|MP"
+    },
+    "3777402784": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Pinoy Survival Foods [B42+MP]"
+    },
+    "3777433827": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Brita Weapon and Armor B42 Unified Compatibility Port"
+    },
+    "3777681298": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Dildo GTA Weapon [B42]"
+    },
+    "3777752751": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20] Bandits Fix Plus - Loot, Radar, Companions and Stealth"
+    },
+    "3777800131": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Nick's Book Tracker"
+    },
+    "3777915284": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[42.20] Night Sprinters - Dusk and Dawn"
+    },
+    "3777949201": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "ZombieCureSyringe (Build 42.20)"
+    },
+    "3778010429": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Cigarettes Expanded"
+    },
+    "3778038193": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Brutal Handwork Build 42 Patch"
+    },
+    "3778128807": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "SimpleAnimalFat"
+    },
+    "3778185992": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "KILLING FLOOR WEAPON PACK FRESH 42 EDITION"
+    },
+    "3778284920": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Propane Refuelling at Gas Pumps"
+    },
+    "3778319798": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20] Two Weapons on Back"
+    },
+    "3778403871": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "The Zims - Sims Style Mod [ML]"
+    },
+    "3778411996": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Build Ladders[B42]"
+    },
+    "3778621107": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Ambient City Lights SP & MP [B42.20]"
+    },
+    "3778919873": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Infoteo's Biomedical Research"
+    },
+    "3779251515": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "LG Connect To Water Supply"
+    },
+    "3779315249": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "'87 Toyota Corolla AE92"
+    },
+    "3779327129": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "CD: Labrador"
+    },
+    "3779405481": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Nested Health Info"
+    },
+    "3779417912": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Totally's Long (Fire)Arm of the Law - Guns of Kentucky and Police"
+    },
+    "3779480850": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20] Lockpicking Skill"
+    },
+    "3779551393": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Ammo Loot Drop · Guns of Marz B42 · Zombies Drop Ammo"
+    },
+    "3779561845": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "LG Extended Plumbing"
+    },
+    "3779562002": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "LG Extended Electricity"
+    },
+    "3779768844": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Massive Fridge Containers [B42]"
+    },
+    "3779890822": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "The Zims - Menu Style DLC [ML]"
+    },
+    "3780151182": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[On hold] Modern Firearms System Community Fix Patch [On hold]"
+    },
+    "3780639614": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20+ MP] - Push Vehicle"
+    },
+    "3780682550": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Equipment UI - Paper Doll Equipment Interface SP/MP [B42.20+]"
+    },
+    "3780688809": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Context Menu Cleanup"
+    },
+    "3780868604": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[42.20] Slayer's Week One - You are not the main character AI Overhaul"
+    },
+    "3781012462": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "QoL Compendium"
+    },
+    "3781129962": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "AllTheInfo"
+    },
+    "3781319724": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20+ MP] - Furniture Push & Pull"
+    },
+    "3781547420": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "V's Judo Takedowns [Now with Reliable Branch! SP/MP]"
+    },
+    "3781571720": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Undead Wildlife [B42 Stable]"
+    },
+    "3781590169": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Plysken Weather Station"
+    },
+    "3781608503": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Forever Harvestable Crops"
+    },
+    "3781692448": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20] XM-556 Hurricane"
+    },
+    "3781818628": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Dynamic Snow for Vanilla Vehicles [B42 MP]"
+    },
+    "3781883471": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Fruity Farmer Fruit Trees"
+    },
+    "3781941980": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20] Auto All Official (Stable Beta)"
+    },
+    "3781966719": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Weapon Modifiers B42 Update"
+    },
+    "3781982804": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "CD: Pembroke Welsh Corgi [ALPHA]"
+    },
+    "3782313362": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] GridInventory - Tarkov-Style Inventory System"
+    },
+    "3782332412": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Automark - Automatic Map Marking and Sharing [MP]"
+    },
+    "3782393792": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "The MRE Chronicles"
+    },
+    "3782516436": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Vanilla Appliances Extended [B42]"
+    },
+    "3782524328": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Paint My KI5"
+    },
+    "3782615002": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Horde Nights"
+    },
+    "3782670683": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Wind Sway"
+    },
+    "3782735637": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Nick's Moveable Workstations"
+    },
+    "3782929173": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Project Dirtroad - Create your own dirt roads/paths through use [B42]"
+    },
+    "3783567014": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Kitsune's Crossbow Mod"
+    },
+    "3783707431": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Flash to Open Gate"
+    },
+    "3783794171": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] The Darkness Is Coming 2"
+    },
+    "3783799144": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "No Stress Buddy"
+    },
+    "3783989538": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Project Parkour"
+    },
+    "3784237869": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Kentucky Cleanup"
+    },
+    "3784677588": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "3D Gun Racks"
+    },
+    "3784847437": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Traits As Skills"
+    },
+    "3784875732": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42/MP] Irish's Dinosaurs"
+    },
+    "3785033563": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "N3WO Map Overhaul [B42]"
+    },
+    "3785238102": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "KnoxGPS - Road GPS"
+    },
+    "3785483068": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Kentucky Cellar"
+    },
+    "3785653708": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Cigarette Smoke"
+    },
+    "3785948334": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "NotAlone NPC Mod + Simple Romance Addon [Build 42 Standalone Conversion]"
+    },
+    "3786155157": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "VHS Collector's Rack"
+    },
+    "3786253696": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Traits As Skills - More Traits Addon"
+    },
+    "3786332184": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Logistics Zones - Craft From Any Container In The Zone"
+    },
+    "3786352314": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Bloodlust Overwhelming"
+    },
+    "3786502002": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "LG Extended Safehouses"
+    },
+    "3786918614": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Hands: Stow, Equip, Place [B42]"
+    },
+    "3786970737": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Exhaustive Power Rework [EPR Fork]"
+    },
+    "3787424546": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Better Inventory UI - Grid View For Inventory And Loot"
+    },
+    "3787445252": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Dan's OP Weapons (B42)"
+    },
+    "3787481250": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Project Zomboid Optimiser"
+    },
+    "3787530735": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "'62 Daimler Ferret"
+    },
+    "3787603803": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Sun Is Gone [SP/MP]"
+    },
+    "3788067801": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Door, Fence & Furniture Health Display"
+    },
+    "3789069683": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42] Carlton's Better Banks"
+    },
+    "3789122186": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Knoxbound: Survivors [B42.20] [BETA]"
+    },
+    "3789329475": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Sentient Zeds [Climbing / Vaulting Zombies]"
+    },
+    "3789425624": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Off-Grid: Solar Power"
+    },
+    "3789544907": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "IRON MAN MARK XI - Powered Armor [B42+MP Beta]"
+    },
+    "3789689438": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Simple Suppressors - Gunworks Patch | Build 42"
+    },
+    "3789816709": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Project Remnants - Logistics, AI & UI Patch"
+    },
+    "3789891801": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "V'isible Speed Reload"
+    },
+    "3789934624": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "MaD's Awesome Zombie Loot [Build 42]"
+    },
+    "3790021065": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[Ki5]AM General Tanker Functionality"
+    },
+    "3790153201": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Whennyago Initiative"
+    },
+    "3790160840": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Maskarad's Summer Car"
+    },
+    "3790162708": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Lockpicking Master (Fallout & Neat UI)"
+    },
+    "3790259769": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Project Exile [B42]"
+    },
+    "3790452346": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Nick's Rideable Elevators"
+    },
+    "3790662607": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20+] Item Merge Ultimate"
+    },
+    "3790887868": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "'88 Volvo 740 Sedan (744)"
+    },
+    "3791086306": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42.20+MP] Nik's Military Stuff"
+    },
+    "3791228868": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Sprint Through Windows"
+    },
+    "3791279212": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "I Am Bruce Lee Now"
+    },
+    "3791392735": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Missing Skill Books (42+)"
+    },
+    "3791948588": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Cool Sit: Immersive Leaning/Sitting [B42]"
+    },
+    "3792142238": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Airdrop Manager [42.20+]"
+    },
+    "3792733238": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "ZED+ - A Zombie Evolution Overhaul [W.I.P]"
+    },
+    "3792740760": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[42.20.+] True Line of Sight [SP/MP]"
+    },
+    "3793403177": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "3D Equipment Lockers"
+    },
+    "3793775546": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Barricades: cheval de frise improved"
+    },
+    "3793857644": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Seasonal Cicadas [B42.20+]"
+    },
+    "3794209234": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Gun Repair Kit"
+    },
+    "3794429489": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Skill & Recipe Collector's Shelf"
+    },
+    "3795071786": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Realistic Suppressor System B42"
+    },
+    "3795521454": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Realistic Recipes"
+    },
+    "3796483217": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "NPC Bases (Bandits Settlements)"
+    },
+    "3796500904": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Coca-Cola Freezer ICE [B42]"
+    },
+    "3796649124": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Shin's Guitar Case & Amplifier Vol.1"
+    },
+    "3796669056": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "The Mutants"
+    },
+    "3796922453": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Central Heating Boilers [B42.20+]"
+    },
+    "3797252119": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Backcountry ATV - Utility Quad [B42.20]"
+    },
+    "3797252771": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Companion Dogs: Squad (up to 8 dogs at once)"
+    },
+    "3797292945": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Locksmith - Padlocks, Lockpicking, & Re-pinning [B42]"
+    },
+    "3797297857": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Military Backpack [B42.20]"
+    },
+    "3797356103": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Knox Aquarium - Live Fish Tanks, Pet Rats & Fishing Overhaul BR Support [B42] (Beta) s/mp okay servers need work still"
+    },
+    "3797492691": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Try Before You Wear"
+    },
+    "3797779872": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Mattnetic's Hide Anywhere"
+    },
+    "3797874733": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Roaming Survivors"
+    },
+    "3798112588": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "CD: Rats"
+    },
+    "3798146388": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[B42MP] Frockin Backstage!"
+    },
+    "3799685526": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "ProjectHoomans WIP"
+    },
+    "3799732653": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "'83 GMC G-Series Vans"
+    },
+    "3800660445": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "RPG Inventory - NeatUI [SP/MP]"
+    },
+    "3800671550": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "ShadowZ"
+    },
+    "3800989007": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Stay With Me - Companion NPC [B42]"
+    },
+    "3802070967": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "[42.20.4MP] Gunworks Heavy Ordnance"
+    },
+    "3802372726": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "True Swimming"
+    },
+    "3803984183": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Project A-Life [ALIFE NPCS]"
+    },
+    "3805748433": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "Casualties Undead (Build 42)"
+    },
+    "3806020504": {
+      "status": "active",
+      "source": "as1-modlist",
+      "verified": "2026-10-01",
+      "name": "This Is Me - More Character Traits"
     }
   }
 }

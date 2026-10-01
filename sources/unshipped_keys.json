@@ -1165,7 +1165,7 @@
   },
   "Recipes.json|MakeTortilla": {
    "as1_value": "制作墨西哥薄饼",
-   "owner_signature": "6e81123984d7f843",
+   "owner_signature": "a7d1acf4264a751c",
    "reason": "2026-08-21 裁決不出貨：同一 Recipes|MakeTortilla 在不同 owner 是不同食物。2875059598/Herbalist（與 NoBiofuel 變體）與 3622474939/AbuelitaLindaMexicanFoods 的 EN 是 'Make Tortilla'（墨西哥玉米餅）；3600616323/Todo Caserito 的 EN 是 'Prepare lard biscuits'（阿根廷豬油餅），且該 mod 另有 MakeTortillaCasera，但現行腳本／物品已查證為西班牙煎蛋餅，並不能替代本鍵的阿根廷豬油餅語意。沒有誠實中性譯名，JSON 無啟用偵測。"
   },
   "UI.json|UI_trait_BloodlustDesc": {
@@ -1193,17 +1193,17 @@
   },
   "IG_UI.json|IGUI_Barrel_Shroud": {
    "as1_value": "两脚架",
-   "owner_signature": "42afa87320777dde",
+   "owner_signature": "e41af12414704086",
    "reason": "2026-08-27 #283–#292 owner 衝突無誠實中性譯名：推論標記只支持 Barrel Shroud／Barrel shroud 為大小寫不同的同名槍管護罩；Bipod 仍是另一種兩腳架配件，現譯無法同時對所有 owner 成立，沒有誠實中性譯名。"
   },
   "IG_UI.json|IGUI_Stool": {
    "as1_value": "榴弹发射器",
-   "owner_signature": "01c3e8660d56e8df",
+   "owner_signature": "ad68c79067a495c0",
    "reason": "2026-08-27 #283–#292 owner 衝突無誠實中性譯名：Bipod 是兩腳架，Grenade Launcher 是榴彈發射器，屬不同配件；現譯只對其中一組 owner 成立，沒有誠實中性譯名。"
   },
   "UI.json|UI_optionscreen_binding_KeySetting_AWCWF": {
    "as1_value": "高级武器按键设置",
-   "owner_signature": "708b0290d20614bf",
+   "owner_signature": "e98eebcae0115a65",
    "reason": "2026-08-27 #283–#292 owner 衝突無誠實中性譯名：三組 owner 分別把此鍵當作 AWCWF、Advanced Weapons 與 Escape From Kentucky 的按鍵分類名，指向不同模組身分；泛化成「按鍵設定」會抹除必要分類，沒有誠實中性譯名。 2026-09-29 #613：GaelGunStore 移除此按鍵（owner 減少），其餘三組模組身分不變，維持不出貨。"
   },
   "Sandbox.json|Sandbox_GGS": {
@@ -1303,12 +1303,12 @@
   },
   "ItemName.json|Base.Bullets32": {
    "as1_value": ".32 ACP子弹",
-   "owner_signature": "a8dba7db133e1baf",
+   "owner_signature": "a8ffa5cd8566fbbd",
    "reason": "2026-08-27 #283–#292 owner 衝突無誠實中性譯名：current 是 .32 ACP Rounds，Legacy 是 .32 Special Bullets，兩者是不同彈藥規格；現譯只對 .32 ACP 成立，沒有誠實中性譯名。"
   },
   "ItemName.json|ItemName_Base.Bullets32": {
    "as1_value": ".32 ACP子弹",
-   "owner_signature": "a8dba7db133e1baf",
+   "owner_signature": "a8ffa5cd8566fbbd",
    "reason": "與 ItemName.json|Base.Bullets32 同步抑制的 B41 前綴孿生鍵。"
   },
   "IG_UI.json|IGUI_VehicleNamefhq365GTB4Daytona": {
@@ -1353,7 +1353,7 @@
   },
   "Tooltip.json|Tooltip_weapon_Light": {
    "as1_value": "配件",
-   "owner_signature": "74355610668a3b59",
+   "owner_signature": "3f6fa45384d89338",
    "reason": "2026-08-29 #315：同鍵分別表示 Accessory 與 Light，物品屬性語意不同，沒有誠實中性譯名。兩方均有可載入 JSON EN，抑制後顯示各自英文。"
   },
   "Recipes.json|ConvertTo3030": {
@@ -1589,6 +1589,21 @@
    "as1_value": "每一丝健康都很重要.",
    "owner_signature": "d746a6039ceee6a0",
    "reason": "2026-09-27 裁決：3494803855 Hephas Vitamins 的這句是服用維生素時的輕鬆台詞，3580511016 SCP 基金會包的同鍵是使用異常物品後身體不對勁的陰暗台詞，兩句內容完全無關，找不到中性譯名。兩邊 EN 都是 UI.json，不出貨後各自顯示自己的英文台詞。"
+  },
+  "ItemName.json|Base.MP9": {
+   "as1_value": "布鲁格-托梅MP9冲锋枪",
+   "owner_signature": "119c6827b739de4a",
+   "reason": "2026-10-01 owner 衝突無誠實中性譯名：新增 3777433827/BritaCombinedB42，其 Base.MP9 是 'S&W M&P-9'（史密斯威森 M&P9 警用手槍，script 位於 POLICE_PISTOLS.txt），與 GaelGunStore 'Brügger & Thomet MP9 Submachine Gun'（布魯格-托梅 MP9 衝鋒槍）是不同廠牌、不同槍種、不同型號名（M&P9≠MP9），找不到同時誠實的中性譯名，改不出貨讓各 MOD 顯示自帶英文。"
+  },
+  "ItemName.json|ItemName_Base.MP9": {
+   "as1_value": "布鲁加-托梅MP9冲锋枪",
+   "owner_signature": "119c6827b739de4a",
+   "reason": "與 ItemName.json|Base.MP9 同步抑制的 B41 前綴孿生鍵。"
+  },
+  "Tooltip.json|Tooltip_LabSyringe": {
+   "as1_value": "无菌一次性注射器. 用于注射和采血.",
+   "owner_signature": "dd6e3929a9939a08",
+   "reason": "2026-10-01 owner 衝突無誠實中性譯名：新增 3707475814/BanditsWeekOneTheArk，英文 'Syringe with unknown substance.'（其 Bandits.LabSyringe 是裝有不明物質的注射器）；與 ZVirusVaccine42BETA／zReVaccin 3 的「無菌一次性空注射器、用於注射和採血」互相矛盾（已裝不明物質 vs 無菌空針），除了「注射器」三字外無共同語意，找不到誠實中性說明，改不出貨。"
   }
  }
 }

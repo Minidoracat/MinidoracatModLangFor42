@@ -4,6 +4,32 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **同步如一漢化組 v3.10.1，新增約 7,000 項繁中翻譯。** As1 這版新收錄大批 MOD（Knoxbound、Project Exile、Project A-Life、Industrial Revolution、Jeeves Claims、Super Zed Plus、Companion Dogs Squad、Pinoy Survival Foods、MWP Weapons 等），簡中逐字沿用 As1，繁中逐鍵對照上游英文直譯（#638）。
+  > 技術要點：`sources/snapshot.json` 重釘 v3.10.1（Change Notes `<p id>` 1790847334、`source_tree` 42.21）；split 後 CN 唯一鍵 149,121、證據歸屬 95.4%。worklist 7,004 鍵由 29 批翻譯落 `sources/ch` 並登記 `ch_review_state`，token 不符的 100 鍵重譯；再經 12 路 Codex／Grok 對抗複核採納 298 條修正（對齊本體物品名如瓦斯噴槍、鐵撬、湯鍋、電子零件，以及同 MOD 術語統一），另依 lint 棘輪統一點選／檢視／拖曳等用語。As1 已收錄的 4 個原創翻譯目錄退役，1,038 項原創 CH 直接沿用為 corpus。
+- **補齊 318 個 MOD 共 38,337 項原本顯示英文的翻譯。** 涵蓋上游 `Translate/EN` 有、我方未收的鍵，以及 script 定義的物品名；World Decay（新 ID 3791219108）一併收錄。全庫可補的物品名缺口與 JSON 缺口皆清為零。
+  > 技術要點：`prep_mod_strings` 全庫抽出 34,371 條相異字串，201 批 ch／cn 逐鍵直譯（cn 不經簡繁轉換）落 `own_translations.json`，並以有效 CN 值登記 `ch_review_state`。65 路對抗複核提出 1,600 條修正；Grok 線的 797 條再經 Codex 逐條二次驗證（採納 541、改寫 94、退回 162），最後採用 1,430 條。同一英文在不同 MOD 語意不同者逐鍵分譯（`IGUI_RPGInventory_Grid` 格狀 vs `UI_CHB_PowerGrid` 電網、NPC 陣營 `Post` 崗哨）。另有 11 個尚未出貨的 owner 衝突鍵裁出中性譯名並登記 `owner_conflict_decisions.json`（斷線鉗、The Ark 的巴比／孩子／凱勒）。
+
+### Changed
+
+- **支援／監看名冊獨立化：所有支援的 MOD 都由本包自行登記、追蹤更新與補鍵，As1 只作為支援範圍與簡中用語的參考。**
+  > 技術要點：`sources/mod_registry.json` 成為唯一名冊（1,263 筆：active 1,259、retired 4），watchlist＝`(metadata − retired) ∪ active`，tracker／manifest／verify 都不再讀 As1 名單。`tracker.py as1-list` 改為「把 As1 名單（type 3）與 split 已歸屬、但名冊尚無的 wid 補登為 active」，只增不減；As1 改標或移除只列出，退役需人工查證。本次補登 612 筆，watchlist 1,278 個。
+- **舊譯「諾克斯郡」統一改為「諾克斯縣」**（繁中 28 鍵），與本體 Knox County 譯名一致。
+- **Pinoy Survival Foods 的 Alfonso Light 簡中改為「阿方索淡味白兰地」**：它是白蘭地，As1 原譯「淡啤」有誤，經 `cn_overrides.json` 修正（物品名與液體名兩鍵）。
+- **4 個已從 Workshop 下架的 MOD 改列 retired**（3725803503、3729663486、3756131291、3776795836；Steam API result 9、steamcmd 無法下載）。其中 World Decay 已換新 ID 3791219108 重新上架，改追蹤新 ID。
+- **owner 衝突重新裁決 238 項**：上游改值後簽名過時者重簽 226 項、改譯 10 項（Base.50Clip、G43、M39、MK18、SVDK、Thompson 等），2 項（`Base.MP9`、`Tooltip_LabSyringe`）找不到對所有 MOD 都成立的譯名，改為不出貨。
+  > 技術要點：`owner_conflict_decisions.json`／`unshipped_keys.json` 同步更新，`OWNER_CONFLICTS.md` 重生。
+- **632 項原本放錯檔或用舊鍵形而不會生效的翻譯歸位。** verify [13] 受困鍵與 [16] Recipes 死鍵共 632 項改以現行鍵名寫入 `own_translations.json`（附 `_note`）；`itemname_dead_allowlist.json` 由 4,580 條修剪為 1,558 條（補鍵後又有 114 條的裸鍵已補上）。
+- `prep_mod_strings` 不再把 B41 舊式 `ItemName_<fullType>` 鍵列為缺口：B42 只查裸 fullType，補了也是死鍵（census 仍保留它們供 unship 雙抑制判定）。
+- `cn_overrides.json`：As1 已自行修正的 4 筆退役，上游改值的 2 筆重錨 `as1_value`。
+
+### Removed
+
+- 自 `mod_registry.json` 移除 38 個舊 helper 遷移時代、既不在 As1 名單也無任何歸屬或裁決依據的 wid（連同其 `sources/en` 鏡像與 tracker state）；仍出現在 owner 衝突裁決中的 16 個保留。
+
 ## [42.21.0-1.36.0] - 2026-09-29
 
 ### Added

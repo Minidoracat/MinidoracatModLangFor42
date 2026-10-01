@@ -425,9 +425,9 @@
     "value": "从轮胎堆切下 %1 个轮胎碎片"
   },
   "ContextMenu.json|ContextMenu_VehicleUnhotwireSkill": {
-    "as1_value": "你需要 <br> 电工技能 1 级和 <br> 技工技能 2 级 <br> 才能解除短接",
-    "reason": "As1 上游數值錯誤：上游 EN 為 Electrical 6 / Mechanics 8 / Metalworking 4，CN 誤植為 1/2 且整條金屬加工需求漏譯。玩家依此判斷會誤以為低技能即可解除短接。 ｜2026-09-27 裁決：Harder Hotwire 要求電工 6, 技工 8, 金工 4, The Best Lockpicking 要求電工 1, 技工 2, 同一個解除短接的技能不足提示但數值互相矛盾. Harder Hotwire 是死檔 ContextMenu_EN.txt, 不出貨會顯示鍵名, 故改寫為不寫死等級的中性說法, 對兩者都成立; 技能名改用官方譯名電工/技工/金工, <br> 數量維持 4 個.",
-    "value": "你需要 <br> 足够等级的电工 <br> 与技工技能 <br> (可能另需金工) <br> 才能解除短接"
+    "value": "你需要 <br> 足够等级的 <br> 电工、技工 <br> 等相关技能 <br> 才能解除短接",
+    "reason": "2026-10-01 owner 衝突複核：新增 3640448510/Fluffy's Key Blank 寫 higher level Electrical or Mechanics（電工或技工擇一），原譯「電工與技工技能」暗示兩者皆需，對它不實；另增 2930762705/KeyBlank（%1/%2 等級參數）與 3745815281 TBL B4219（同 TBL 1/2）。改為不寫連接詞與等級的「電工、技工等相關技能」，涵蓋 Harder Hotwire 的金工需求；<br> 維持 4 個、無佔位符（KeyBlank 的 %1/%2 參數不顯示，避免寫死數值）。",
+    "as1_value": "你需要 <br> 电工技能 1 级和 <br> 技工技能 2 级 <br> 才能解除短接"
   },
   "ContextMenu.json|ContextMenu_WearDown": {
     "as1_value": "脱下",
@@ -14525,7 +14525,7 @@
     "as1_value": "在计划停电日期之前多少天开始随机停电."
   },
   "Sandbox.json|Sandbox_ImmersiveBlackouts_Radio_tooltip": {
-    "as1_value": "启用来自诺克斯区域基础设施紧急服务在 89.2 MHz 频段的自动紧急无线电广播.\n无线电将提供有关即将到来的停水和停电, 当前基础设施状态以及其他紧急事件的信息.",
+    "as1_value": "启用来自诺克斯区域基础设施紧急服务在 89.2 MHz 频段的自动紧急无线电广播. 无线电将提供有关即将到来的停水和停电, 当前基础设施状态以及其他紧急事件的信息.",
     "value": "启用来自诺克斯区域基础设施紧急服务的自动紧急无线电广播.\n无线电将提供有关即将到来的停水和停电, 当前基础设施状态以及其他紧急事件的信息.",
     "reason": "上游移除寫死的 'on 89.2 MHz'（頻率改由新的 RadioFrequency 選項設定），我方 CH 現值與 cn_overrides 登記值都還寫著 89.2 MHz＝錯誤資訊。僅刪去頻率片語，其餘措辭與兩行 \\n 結構（cn_overrides 當初特地還原的換行）原樣保留。CN 需更新既有 cn_overrides 條目的 value，並重登 ch_review_state hash。"
   },
@@ -20680,7 +20680,7 @@
     "value": "欢迎来到捣鼓与拾荒的世界! 囤积各式各样的废料和物品, 用来制作玩具, 服装, 随机奇物, 巧妙的装置, 甚至复杂的机器. 不断实验, 直到你成为伟大的发明家, 或是在离奇意外中死得凄惨. 祝你好运! <LINE> o 解锁失败事件 <LINE>"
   },
   "UI.json|UI_LSHS_Inventing_10": {
-    "as1_value": "o 发现新物品的平均成本永久降低 50%% <LINE>",
+    "as1_value": "o 发现新物品的平均消耗降低 50%% <LINE>",
     "value": "o 发现新物品的平均消耗降低 50%% <LINE> o 可将 1 个稀有部件拆解成 2 个同类型的普通部件 <LINE>",
     "reason": "上游在原句後追加一條效果（Can dismantle one rare part for two common versions of the same type），與本批新增的 ConvertPartsRare* 配方互相佐證。既有第一句詞面原樣保留、只追加第二條；零件/部件用詞各依該語言既有同組譯法（CH 零件、CN 部件）。%% 雙百分號原樣保留。"
   },
@@ -25790,16 +25790,6 @@
     "reason": "EN No Embarrassment From Others 搭配 tooltip（Characters won't mind having others around）主體是玩家自己不尷尬；現值「無視他人尷尬」主客體顛倒，而同鍵 tooltip 已譯對。",
     "value": "卫生 - 不因他人在场而尴尬"
   },
-  "Sandbox.json|Sandbox_MVCK_RequireTicket_help": {
-    "as1_value": "认领载具时需要消耗认领钥匙",
-    "reason": "EN 為 Require Claim Ticket to Claim，未提消耗；同模組 ReturnTicket 可在取消認領時返還，寫死「消耗」會與該選項矛盾。只刪「消耗」，鑰匙／票券譯法暫不動（證據不足）。",
-    "value": "认领载具时需要认领钥匙"
-  },
-  "Sandbox.json|Sandbox_MVCK_RequireTicket_tooltip": {
-    "as1_value": "认领载具时需要消耗认领钥匙",
-    "reason": "同 C04551：外加的「消耗」與可返還的 ReturnTicket 設定衝突。",
-    "value": "认领载具时需要认领钥匙"
-  },
   "Sandbox.json|Sandbox_Moats_FloodingSpeed_tooltip": {
     "as1_value": "启用以提高护城河从降雨和相邻水域补充水量的速度.",
     "reason": "EN 為 Gain to apply if you wanna change the speed…（可快可慢的數值增益，標籤亦為 Filling speed）；現值「啟用以提高」把數值參數說成開關且限定只能提高。",
@@ -26354,16 +26344,6 @@
     "as1_value": "5倍",
     "reason": "EN 為 Fast forward (40x)，CH「5倍」倍率錯且漏「快轉」。",
     "value": "快进 (40倍)"
-  },
-  "UI.json|UI_AllInfo_perk_AnimalStress": {
-    "as1_value": "紧张的动物在挤奶或剪毛时挣脱的几率 %1 点",
-    "reason": "EN points off the chance 是往下扣；CH 缺增減方向。補「降低」後 %1 佔位維持一個。",
-    "value": "紧张的动物在挤奶或剪毛时挣脱的几率降低 %1 点"
-  },
-  "UI.json|UI_AllInfo_perk_CropCursed": {
-    "as1_value": "不在适合月份种植时 %1%% 几率作物变异",
-    "reason": "EN cursed 是作物狀態名，本包他處已用「受詛咒」；「變異」非此機制。%1%% 原樣保留。",
-    "value": "不在适合月份种植时 %1%% 几率作物受诅咒"
   },
   "UI.json|UI_AutoCookSmartSpices": {
     "as1_value": "智能菜谱",
@@ -27879,5 +27859,30 @@
     "as1_value": "将 6 罐已保存食品装箱",
     "value": "将 6 罐腌制食品装箱",
     "reason": "2026-09-29 #619 與新增的 VFX／HM 同名配方統一譯名：Preserved Food 是醃製保存的食品，不是「已保存」。"
+  },
+  "ContextMenu.json|ContextMenu_SlingStyle2": {
+    "value": "第二种背法",
+    "reason": "2026-10-01 owner 衝突複核：新增 3781012462/QoLCompendium 寫 Back（背後），與 Noir/Simple 的 Front /、Dark/Invisible 的 on Left Shoulder（胸前左肩）部位互斥，「到左肩」對 QoL 不實；Noir/Simple 為死檔 ContextMenu_EN.txt，unship 會顯示鍵名，故改用對所有 owner 都成立的序數名「第二種背法」，去掉部位。",
+    "as1_value": "到左肩"
+  },
+  "ItemName.json|Base.Thompson": {
+    "value": "汤普森冲锋枪",
+    "reason": "2026-10-01 owner 衝突複核：新增 3773858287/B42 Rain's Firearms & Gun Parts（含 Expanded）'M1A1 Thompson' 與 3777433827/BritaCombinedB42 'Thompson M1'；Brita 是 M1 型（另有獨立的 Base.Thompson_1928），現譯 ch「湯普森M1A1衝鋒槍」/cn「M1A1汤普森冲锋枪」的 M1A1 對 Brita 不實，改為不帶子型號的「湯普森衝鋒槍」，對 GaelGunStore M1A1、Legacy 'Thompson 45'、Rain's M1A1、Brita M1 皆成立。",
+    "as1_value": "M1A1汤普森冲锋枪"
+  },
+  "ItemName.json|Tsarcraft.TCWalkman": {
+    "value": "随身听",
+    "reason": "2026-10-01 owner 衝突複核：新增 3743911767/IVA（英文同 tsarslib \"Portable player 'Sany Wutman'\"）與 3632610172/True Moozic B42+，後者自帶 ItemName 與 script 皆為 'Walkman (Blue)'，沒有 Sany Wutman 品牌，現譯「隨身聽'Sany Wutman'」對它不實；改為各 owner 共同的「隨身聽」，比照 TCWalkmanBlack 等變體已捨棄虛構品牌的譯法。",
+    "as1_value": "随身听'Sany Wutman'"
+  },
+  "ItemName.json|PinoySurvivalFoods.AlfonsoLight": {
+    "as1_value": "阿方索淡啤",
+    "value": "阿方索淡味白兰地",
+    "reason": "2026-10-02：Alfonso Light 是菲律賓的低度白蘭地（商品頁：amber-colored brandy），MOD 腳本酒精度 0.25（同 MOD 紅馬啤酒 0.069）、飲用動作同烈酒；As1 譯成淡啤有誤。"
+  },
+  "Fluids.json|Fluid_Name_PinoyFoods_AlfonsoLight": {
+    "as1_value": "阿方索淡啤",
+    "value": "阿方索淡味白兰地",
+    "reason": "2026-10-02：Alfonso Light 是菲律賓的低度白蘭地（商品頁：amber-colored brandy），MOD 腳本酒精度 0.25（同 MOD 紅馬啤酒 0.069）、飲用動作同烈酒；As1 譯成淡啤有誤。"
   }
 }

@@ -1,0 +1,21 @@
+{
+  "Sandbox_DynamicVehicleSnow": "载具动态积雪",
+  "Sandbox_DynamicVehicleSnow_AccumulationMaxTemperature": "最大积雪温度 (×0.1°C)",
+  "Sandbox_DynamicVehicleSnow_AccumulationMaxTemperature_tooltip": "开始积雪的温度. 以1/10度为单位存储: 0=0°C、-20=-2°C、15=+1.5°C.",
+  "Sandbox_DynamicVehicleSnow_EnableEngineWarmup": "发动机融雪",
+  "Sandbox_DynamicVehicleSnow_EnableEngineWarmup_tooltip": "允许运行中的发动机在预热后将积雪3降低为积雪2.",
+  "Sandbox_DynamicVehicleSnow_EngineWarmupMinutes": "发动机预热时间 (游戏分钟)",
+  "Sandbox_DynamicVehicleSnow_EngineWarmupMinutes_tooltip": "发动机必须在积雪3状态下连续运行的游戏分钟数, 之后积雪3→积雪2.",
+  "Sandbox_DynamicVehicleSnow_MeltingMinutesPerStage": "融雪: 每阶段分钟数",
+  "Sandbox_DynamicVehicleSnow_MeltingMinutesPerStage_tooltip": "默认情况下融化时间加倍. 基础设置: 每阶段180分钟. 积雪3→完全融化的温度曲线: +1°C≈540分钟, +5°C≈420分钟, +10°C≈270分钟, +15°C≈140分钟, +25°C≈120分钟. 保持积雪3→积雪2→积雪1→完全融化的顺序进行.",
+  "Sandbox_DynamicVehicleSnow_MeltingStartTemperature": "开始融化的温度 (×0.1°C)",
+  "Sandbox_DynamicVehicleSnow_MeltingStartTemperature_tooltip": "开始融雪的温度. 以1/10度为单位存储: 10=+1°C. 默认: 1°C.",
+  "Sandbox_DynamicVehicleSnow_Snow1Minutes": "积雪1: 进度第一阶段所需时间 (游戏分钟)",
+  "Sandbox_DynamicVehicleSnow_Snow1Minutes_tooltip": "以最大降雪量从开始到进入积雪1所需的时间. 默认: 60分钟.",
+  "Sandbox_DynamicVehicleSnow_Snow2TotalMinutes": "积雪2: 进入第二阶段所需的总时间 (游戏分钟)",
+  "Sandbox_DynamicVehicleSnow_Snow2TotalMinutes_tooltip": "以最大降雪量从开始到进入积雪2所需的总时间. 默认: 180分钟 (3小时).",
+  "Sandbox_DynamicVehicleSnow_Snow3TotalMinutes": "积雪3: 进入第三阶段所需的总时间 (游戏分钟)",
+  "Sandbox_DynamicVehicleSnow_Snow3TotalMinutes_tooltip": "以最大降雪量从开始到进入积雪3所需的总时间. 默认: 360分钟 (6小时).",
+  "Sandbox_DynamicVehicleSnow_UseSnowfallIntensity": "使用降雪强度",
+  "Sandbox_DynamicVehicleSnow_UseSnowfallIntensity_tooltip": "启用: 配置的积雪1/积雪2/积雪3时间适用于最大降雪量; 较小的降雪积累更慢. 禁用: 使用配置的时间, 不考虑强度减慢."
+}

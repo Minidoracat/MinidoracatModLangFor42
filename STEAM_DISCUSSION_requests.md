@@ -6,7 +6,7 @@
 
 [h2]📋 支援清單在哪？[/h2]
 [list]
-[*] [url=https://github.com/Minidoracat/MinidoracatModLangFor42/blob/main/SUPPORTED_MODS.md]完整支援 MOD 清單[/url]：每個模組的中文名稱與摘要，用瀏覽器的搜尋（Ctrl+F）找模組的英文名稱即可。
+[*] [url=https://github.com/Minidoracat/MinidoracatModLangFor42/blob/main/SUPPORTED_MODS.md]完整支援 MOD 清單[/url]：各模組的中文名稱與摘要（新收錄、尚未補上中文名的先顯示英文名稱），用瀏覽器的搜尋（Ctrl+F）找模組的英文名稱即可。
 [*] 清單的「覆寫本體」欄：那個模組自己改寫了多少遊戲本體的官方文字（說明見下方「不覆蓋遊戲本體的翻譯」）。
 [*] 清單的「涵蓋範圍」欄出現 ⚠️：該模組有部分文字沒走遊戲的翻譯機制，那部分會維持英文。
 [*] [b]有效覆蓋率[/b]：截至 2026-09-27 約 99.9%，指已支援模組的文字在遊戲裡實際顯示成中文的比例；本包每天自動追蹤各模組文本更新並持續補譯。
@@ -36,7 +36,7 @@ MOD 名稱：
 [b]收錄順序怎麼決定？[/b]
 [list]
 [*] 綜合需求熱度（GitHub 申請的 👍 數）、文本量與上游更新活躍度評估。
-[*] 「[B42]統一模組漢化」已涵蓋的模組會隨同步自動加入，不需申請。
+[*] 「[B42]統一模組漢化」已涵蓋的模組（以如一汉化網站標「正常」的清單為準）會隨同步自動加入支援清單，之後由本包自行追蹤更新、補譯，不需申請。
 [*] 排隊中的申請：[url=https://github.com/Minidoracat/MinidoracatModLangFor42/issues?q=is%3Aissue+label%3Atranslation-request]translation-request 標籤[/url]。
 [/list]
 

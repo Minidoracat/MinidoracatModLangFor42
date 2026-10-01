@@ -1,0 +1,19 @@
+{
+  "UI_CVO_Options_ConeOutlineAlpha": "视野锥轮廓强度",
+  "UI_CVO_Options_ConeOutlineAlpha_Tooltip": "轮廓的不透明度 (0=几乎不可见, 1=最大亮度). 与游戏选项中的 '视图椎体不透明度' 原理相同.",
+  "UI_CVO_Options_ConeOutlineColor": "视野锥轮廓颜色",
+  "UI_CVO_Options_ConeOutlineColor_Tooltip": "瞄准时 (右键) 视野锥内僵尸和动物的轮廓颜色. 近战目标的绿色轮廓不受影响.",
+  "UI_CVO_Options_LegacyOutlineMode": "旧版轮廓模式",
+  "UI_CVO_Options_LegacyOutlineMode_Tooltip": "默认关闭. 模组现在会直接读取游戏已决定绘制的僵尸和动物, 而不是根据方块可见性和模组自身的视野锥算法来估算. 如果新版默认模式显示异常, 可开启此项以恢复旧的估算方式.",
+  "UI_CVO_Options_OutlineAlwaysOn": "始终显示轮廓",
+  "UI_CVO_Options_OutlineAlwaysOn_Tooltip": "默认关闭. 开启后, 无论是否瞄准 (右键), 也无论步行还是乘车, 轮廓都会一直显示. 开启此项会覆盖下方的 '乘车时始终显示轮廓' 选项; 若保持此项关闭, 下方的乘车选项仍可正常独立生效.",
+  "UI_CVO_Options_OutlineAnimals": "显示动物轮廓",
+  "UI_CVO_Options_OutlineAnimals_Tooltip": "开启后, 视野锥内的动物会和僵尸一样显示轮廓. 关闭则仅显示僵尸轮廓. 默认开启.",
+  "UI_CVO_Options_ScaleOutlineByFog": "根据雾气缩放轮廓",
+  "UI_CVO_Options_ScaleOutlineByFog_Tooltip": "默认关闭. 由于游戏不会逐地块追踪雾气, 而是全图统一厚度, 因此本选项采用近似处理: 轮廓会向你当前清晰视野半径 (与游戏自身使用的相同) 的边缘逐渐淡出, 并根据当前雾气的厚度进行缩放. 在雾外完全无效. 在旧版和新版轮廓模式下均有效. 极少数情况下, 在某些特定场景几何体 (如细柱子/横梁) 上, 受此或光照缩放的轮廓可能会渲染在物体后方而非穿透显示, 这是游戏自带渲染器的局限性.",
+  "UI_CVO_Options_ScaleOutlineByLight": "根据光照缩放轮廓",
+  "UI_CVO_Options_ScaleOutlineByLight_Tooltip": "默认关闭. 开启后, 轮廓的不透明度会乘以当前地块的光照等级 (越暗轮廓越淡, 全黑则无轮廓). 在旧版和新版轮廓模式下均有效. 极少数情况下, 在某些特定场景几何体 (如细柱子/横梁) 上, 受此或雾气缩放的轮廓可能会渲染在物体后方而非穿透显示, 这是游戏自带渲染器的局限性.",
+  "UI_CVO_Options_Title": "视野锥轮廓",
+  "UI_CVO_Options_VehicleOutlineAlwaysOn": "乘车时: 始终显示轮廓",
+  "UI_CVO_Options_VehicleOutlineAlwaysOn_Tooltip": "开启后, 在载具中无需按住右键 (瞄准/观察) 即可显示轮廓. 关闭时则与原版一致: 需按住右键才能看到轮廓."
+}

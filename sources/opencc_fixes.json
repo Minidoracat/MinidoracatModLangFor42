@@ -1580,8 +1580,8 @@
       "patterns": [
         "界(\\s*)面"
       ],
-      "reason": "此處是種子、食物、石材或屍體／物品的保存與保存期限，屬 preservation／retention，不是電腦資料儲存。",
-      "ch_value": "bf81325d09f47b65"
+      "reason": "「全世界面積」跨詞誤中，並非介面語境。",
+      "ch_value": "1c2244b71fc2b343"
     },
     "IG_UI.json|IGUI_BookFlintKnapping4_Pg3": {
       "patterns": [
@@ -2165,7 +2165,7 @@
         "選(\\s*)中"
       ],
       "reason": "人員被選中／獲選語境，依既有裁決保留。",
-      "ch_value": "763dd6efdb65b6dc"
+      "ch_value": "17400bee7bb69d93"
     },
     "IG_UI.json|IGUI_PZLinux_MailAds_8": {
       "patterns": [
@@ -2595,6 +2595,27 @@
       ],
       "reason": "用戶端是client的台灣固定技術詞，不是單獨的user；依既有合法語境裁決保留。",
       "ch_value": "8ceb66230a849681"
+    },
+    "UI.json|UI_Knoxbound_Role_Lumberjack": {
+      "patterns": [
+        "^伐木工$|['「]伐木工['」]|伐木工特[質性]|特質雜誌-伐木工"
+      ],
+      "reason": "2026-10-02 As1 v3.10.1 同步裁決 keep：Knoxbound 倖存者職務 Lumberjack，對應本體職業 UI_prof_Lumberjack「伐木工」，非 Ax-pert 特質。",
+      "ch_value": "09d3c7fbc29ee514"
+    },
+    "UI.json|UI_Knoxbound_Bravery_Fearless": {
+      "patterns": [
+        "^無所畏懼$|['「]無所畏懼['」]|無所畏懼特[質性]|特質雜誌-無所畏懼"
+      ],
+      "reason": "2026-10-02 As1 v3.10.1 同步裁決 keep：Knoxbound 膽量分級 Fearless，與同組 Bravery_Brave「勇敢」並列，改成「勇敢」會撞名。",
+      "ch_value": "b5f45b0c56119fc0"
+    },
+    "IG_UI.json|IGUI_Hair_F_TTRP_ValentinaOpen": {
+      "patterns": [
+        "(?<!頭)散髮"
+      ],
+      "reason": "2026-10-02 As1 v3.10.1 同步裁決 keep：髮型名 Valentina (Open)＝放下頭髮的「散髮」，非「散發」誤字。",
+      "ch_value": "d0df9c34eb6f0e00"
     }
   }
 }

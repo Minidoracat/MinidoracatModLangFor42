@@ -1474,7 +1474,7 @@ def _renamed_successors(key: str) -> tuple[str, ...]:
 
 
 def _oracle_watchlist_items(repo: str) -> dict[str, dict]:
-    """獨立重算 metadata/registry watchlist universe，並驗落盤清單 freshness。"""
+    """獨立重算 metadata／registry watchlist universe，並驗落盤清單 freshness。"""
     sources = os.path.join(repo, "sources")
     mods_dir = os.path.join(sources, "mods")
     registry_path = os.path.join(sources, "mod_registry.json")

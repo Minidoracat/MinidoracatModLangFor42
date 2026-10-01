@@ -27,6 +27,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import build_mod  # noqa: E402
+import tracker  # noqa: E402
 
 
 def _check() -> int:
@@ -47,7 +48,8 @@ before = real.read_text(encoding="utf-8")
 _check()
 assert real.read_text(encoding="utf-8") == before, "check_only 不該寫檔"
 
-# 2b. support universe = metadata ∪ active registry；retired veto；registry-only 鍵數未知。
+# 2b. support universe = metadata ∪ active registry；retired veto；尚無 metadata 者
+#     鍵數未知；名冊只補顯示名，mod ID 由追蹤器 state 補。
 with tempfile.TemporaryDirectory() as td:
     root = Path(td)
     mods = root / "sources" / "mods"
@@ -60,6 +62,8 @@ with tempfile.TemporaryDirectory() as td:
                 "name": "Registry Only", "mod_ids": ["RegOnly"]},
         "333": {"status": "retired", "source": "test", "verified": "2026-08-30",
                 "name": "Retired", "mod_ids": ["Retired"]},
+        "555": {"status": "active", "source": "as1-modlist", "verified": "2026-10-02",
+                "name": "As1 Listed"},
     }}), encoding="utf-8")
     fixtures = {
         "111": ({"workshop_id": "111", "name": "Metadata Alpha", "mod_ids": ["MetaA"]},
@@ -74,18 +78,24 @@ with tempfile.TemporaryDirectory() as td:
         (d / "CN").mkdir(parents=True)
         (d / "metadata.json").write_text(json.dumps(meta), encoding="utf-8")
         (d / "CN" / "UI.json").write_text(json.dumps(cn), encoding="utf-8")
+    state_dir = root / "tracker-state" / "en_corpus_hashes"
+    state_dir.mkdir(parents=True)
+    (state_dir / "555.json").write_text(json.dumps({"mod_ids": ["StateId"]}), encoding="utf-8")
     old_mods, old_registry = build_mod.MODS_DIR, build_mod.MOD_REGISTRY_JSON
     old_sources, old_vanilla = build_mod.SOURCES, build_mod.VANILLA_KEYS_JSON
+    old_state = tracker.EN_CORPUS_HASHES_DIR
     registry_original = registry_path.read_text(encoding="utf-8")
     try:
         build_mod.MODS_DIR, build_mod.MOD_REGISTRY_JSON = mods, registry_path
+        tracker.EN_CORPUS_HASHES_DIR = state_dir
         rows = build_mod._collect_manifest_rows()
         by_id = {row[0]: row for row in rows}
-        assert set(by_id) == {"111", "222", "444"}, (
+        assert set(by_id) == {"111", "222", "444", "555"}, (
             f"metadata∪active/retired veto 錯誤：{sorted(by_id)}"
         )
         assert by_id["111"][1:4] == ("Metadata Alpha", ["MetaA"], 2), by_id["111"]
         assert by_id["222"][1:4] == ("Registry Only", ["RegOnly"], None), by_id["222"]
+        assert by_id["555"][1:4] == ("As1 Listed", ["StateId"], None), by_id["555"]
         meta111 = mods / "111" / "metadata.json"
         bad_meta = json.loads(meta111.read_text(encoding="utf-8"))
         bad_meta["workshop_id"] = "999"
@@ -121,13 +131,14 @@ with tempfile.TemporaryDirectory() as td:
         build_mod.SOURCES, build_mod.VANILLA_KEYS_JSON = root / "sources", vanilla_path
         counts = build_mod.vanilla_override_counts()
         assert counts["222"] == 1 and "333" not in counts, counts
+        assert counts["555"] is None and "666" not in counts, counts
 
         # metadata 完全為零仍須能由 active registry 建立支援宇宙。
         empty_mods = root / "empty-mods"
         empty_mods.mkdir()
         build_mod.MODS_DIR = empty_mods
         zero_rows = build_mod._collect_manifest_rows()
-        assert {r[0] for r in zero_rows} == {"111", "222"} and all(
+        assert {r[0] for r in zero_rows} == {"111", "222", "555"} and all(
             r[3] is None for r in zero_rows
         ), zero_rows
 
@@ -144,6 +155,7 @@ with tempfile.TemporaryDirectory() as td:
     finally:
         build_mod.MODS_DIR, build_mod.MOD_REGISTRY_JSON = old_mods, old_registry
         build_mod.SOURCES, build_mod.VANILLA_KEYS_JSON = old_sources, old_vanilla
+        tracker.EN_CORPUS_HASHES_DIR = old_state
 
 # 3. 真的漂移時要抓得到——否則第 1 條是永遠為真的假綠燈。
 #    把常數指向 temp 副本再擾動，**真檔全程不動**：測試中斷也不會留下髒生成物。
