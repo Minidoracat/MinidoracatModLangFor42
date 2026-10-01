@@ -2,7 +2,7 @@
 
 **By Minidoracat × 如一漢化組（As1）**
 
-為 Project Zomboid Build 42 的其他 MOD 提供**繁體中文 + 簡體中文**翻譯支援。內容源自如一漢化組「[B42]統一模組漢化」，經授權移植為繁中版並保留簡中雙語。
+為 Project Zomboid Build 42 的其他 MOD 提供**繁體中文 + 簡體中文**翻譯支援。內容源自如一漢化組「[B42]統一模組漢化」，經授權移植為繁中版並保留簡中雙語；支援的 MOD 由本包自行追蹤更新並補譯。
 
 ## MOD 資訊
 
@@ -15,7 +15,9 @@
 
 ## 合作與授權
 
-本 MOD 為如一漢化組（As1）「[B42]統一模組漢化」（[Workshop 3556540080](https://steamcommunity.com/sharedfiles/filedetails/?id=3556540080)）的**授權繁體中文版**，掛名如一漢化組。As1 授權範圍內的簡中文本逐字保留原文（少數上游錯字另立登記修正）；原創翻譯的模組則由本包逐鍵自撰簡中。繁中文本全部為逐鍵人工維護的台灣用語譯文（對照英文原文與術語表校訂，不使用自動簡繁轉換）。追蹤器每日監看上游包與各支援 MOD 的文本變更並同步更新。
+本 MOD 為如一漢化組（As1）「[B42]統一模組漢化」（[Workshop 3556540080](https://steamcommunity.com/sharedfiles/filedetails/?id=3556540080)）的**授權繁體中文版**，掛名如一漢化組。As1 已翻譯的文字，簡中以 As1 原文為基礎（少數錯誤另立登記修正）；As1 未收錄的模組與新增文字由本包逐鍵自撰簡中。繁中文本全部為逐鍵人工維護的台灣用語譯文（對照英文原文與術語表校訂，不使用自動簡繁轉換）。
+
+支援的 MOD 由本包自行登記與追蹤：追蹤器每日監看各 MOD 與 As1 包的文本變更，新增或改動的文字由本包直接補譯，不必等 As1 同步。
 
 ## 安裝方式
 
@@ -23,7 +25,7 @@
 
 ## Load Order 說明
 
-本 MOD 與 As1 原簡中包內容**一致（源自同一版本快照）、無衝突**。若同時訂閱兩者，PZ 對重複翻譯鍵採「**後載入者生效**」，因文本相同故顯示結果一致，不會互相破壞。單獨訂閱本 MOD 即可獲得完整繁中 + 簡中。
+本 MOD 已包含 As1 原簡中包的內容，另外補齊缺漏的文字並修正錯誤；單獨訂閱本 MOD 即可獲得完整繁中 + 簡中，不需另訂 As1 原包。若同時訂閱兩者，PZ 對重複翻譯鍵採「**後載入者生效**」：把本 MOD 排在 As1 原包之後（本 MOD 倒數第二、本體翻譯最後），就會以本 MOD 的版本為準。
 
 ## 支援 MOD 清單
 
@@ -45,7 +47,7 @@
 
 - 佇列與進度：見 [translation-request 標籤的 issues](../../issues?q=is%3Aissue+label%3Atranslation-request)。
 - 收錄順序將參考需求熱度（👍 反應數）、文本量與上游更新活躍度綜合評估。
-- 上游「[B42]統一模組漢化」（As1）已涵蓋的 MOD 會隨同步自動加入，不需申請。
+- 如一漢化組（As1）已涵蓋的 MOD 會由本包自行登記並追蹤，不需申請。
 
 ## ☕ 支持作者
 
@@ -55,7 +57,7 @@ MOD 永遠免費。喜歡的話可以請我喝杯咖啡，贊助會用在伺服�
 
 ## 開發
 
-生成物（`MOD/` 與 `sources/mods/`）勿手改（例外：`sources/mods/` 下 `metadata.json` 標 `origin: "own"` 的原創翻譯目錄為人工真相），請改人工真相層（`sources/ch/` 繁中 corpus、`sources/cn_overrides.json`、`sources/placeholder_exceptions.json`）後重跑管線。`sources/lua/` 為凍結歷史產物，不新增、不修改、不維護。繁中已斷絕 OpenCC 機轉，逐鍵人工維護。
+生成物（`MOD/` 與 `sources/mods/`）勿手改（例外：`sources/mods/` 下 `metadata.json` 標 `origin: "own"` 的原創翻譯目錄為人工真相），請改人工真相層（`sources/ch/` 繁中 corpus、`sources/own_translations.json`、`sources/cn_overrides.json`、`sources/placeholder_exceptions.json`、`sources/mod_registry.json` 支援名冊）後重跑管線。`sources/lua/` 為凍結歷史產物，不新增、不修改、不維護。繁中已斷絕 OpenCC 機轉，逐鍵人工維護。
 
 ### 發布到 Workshop
 

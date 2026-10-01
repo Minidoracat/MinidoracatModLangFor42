@@ -916,6 +916,16 @@ rc, art = run(records={f"script_item_dn|{EFF}|Base.Dress": "h1"},
 assert set(art["_gap"]) == {"ItemName|Base.Dress"}, \
     f"5. 只出貨前綴死鍵被誤判為已覆蓋：{art['_gap']}"
 
+# 5b. 上游 `Translate/EN` 自帶的 B41 前綴鍵（`ItemName_<fullType>`）不得列為缺口：B42 只查裸
+#     fullType，補了也是死鍵，落地後 verify [15] 會擋下（2026-10-02 全庫補鍵實際補進 192 個）。
+rc, art = run(records={f"translate_en|{EN_ITEMNAME}|ItemName_Base.Legacy": "hP1",
+                       f"script_item_dn|{EFF}|Base.Fresh": "hP2"},
+              mirror={f"translate_en|{EN_ITEMNAME}|ItemName_Base.Legacy": "Legacy Name",
+                      f"script_item_dn|{EFF}|Base.Fresh": "Fresh Name"},
+              dist_items={}, vanilla=[])
+assert set(art["_gap"]) == {"ItemName|Base.Fresh"}, \
+    f"5b. B41 前綴死鍵被列為缺口：{art['_gap']}"
+
 # 6. vanilla 基準欄位缺失一律炸（不得靜默退化成空集合而把本體鍵當缺口）
 for bad in ({"keys": []}, {"scoped_keys": {}}, {"keys": [], "scoped_keys": {"UI.json": []}}):
     msg = raises(lambda b=bad: run(records=recs, mirror=mir, dist_items={}, vanilla=[],

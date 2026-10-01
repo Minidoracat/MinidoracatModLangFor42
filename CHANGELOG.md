@@ -12,11 +12,13 @@
   > 技術要點：`sources/snapshot.json` 重釘 v3.10.1（Change Notes `<p id>` 1790847334、`source_tree` 42.21）；split 後 CN 唯一鍵 149,121、證據歸屬 95.4%。worklist 7,004 鍵由 29 批翻譯落 `sources/ch` 並登記 `ch_review_state`，token 不符的 100 鍵重譯；再經 12 路 Codex／Grok 對抗複核採納 298 條修正（對齊本體物品名如瓦斯噴槍、鐵撬、湯鍋、電子零件，以及同 MOD 術語統一），另依 lint 棘輪統一點選／檢視／拖曳等用語。As1 已收錄的 4 個原創翻譯目錄退役，1,038 項原創 CH 直接沿用為 corpus。
 - **補齊 318 個 MOD 共 38,337 項原本顯示英文的翻譯。** 涵蓋上游 `Translate/EN` 有、我方未收的鍵，以及 script 定義的物品名；World Decay（新 ID 3791219108）一併收錄。全庫可補的物品名缺口與 JSON 缺口皆清為零。
   > 技術要點：`prep_mod_strings` 全庫抽出 34,371 條相異字串，201 批 ch／cn 逐鍵直譯（cn 不經簡繁轉換）落 `own_translations.json`，並以有效 CN 值登記 `ch_review_state`。65 路對抗複核提出 1,600 條修正；Grok 線的 797 條再經 Codex 逐條二次驗證（採納 541、改寫 94、退回 162），最後採用 1,430 條。同一英文在不同 MOD 語意不同者逐鍵分譯（`IGUI_RPGInventory_Grid` 格狀 vs `UI_CHB_PowerGrid` 電網、NPC 陣營 `Post` 崗哨）。另有 11 個尚未出貨的 owner 衝突鍵裁出中性譯名並登記 `owner_conflict_decisions.json`（斷線鉗、The Ark 的巴比／孩子／凱勒）。
+- **補上 Long Term Preservation Extended 5 個新配方的中文名稱**：製作瓶裝醋、製作醋壺、製作瓶裝清潔劑（含醋款）與製作玻璃調味罐 (空)。上游這幾個配方沒有翻譯鍵，原本直接顯示英文配方代號（#627、#630）。
+  > 技術要點：`Translator.getRecipeName()` 查不到時回傳區塊名本身（42.21.0 `Translator.java:691`），故以區塊名原樣（含空格）作為 `Recipes.json` 鍵寫入 `own_translations.json` 並附 `_note`，主版與 SE 版共用。18 張「可能過時」追蹤單（#623–#637、#639–#641）新增的 1,632 項文字，1,542 項已由上面的全庫補鍵補齊，其餘 90 項 As1 v3.10.1 已收錄。
 
 ### Changed
 
 - **支援／監看名冊獨立化：所有支援的 MOD 都由本包自行登記、追蹤更新與補鍵，As1 只作為支援範圍與簡中用語的參考。**
-  > 技術要點：`sources/mod_registry.json` 成為唯一名冊（1,263 筆：active 1,259、retired 4），watchlist＝`(metadata − retired) ∪ active`，tracker／manifest／verify 都不再讀 As1 名單。`tracker.py as1-list` 改為「把 As1 名單（type 3）與 split 已歸屬、但名冊尚無的 wid 補登為 active」，只增不減；As1 改標或移除只列出，退役需人工查證。本次補登 612 筆，watchlist 1,278 個。
+  > 技術要點：`sources/mod_registry.json` 成為唯一名冊（1,263 筆：active 1,259、retired 4），watchlist＝`(metadata − retired) ∪ active`，tracker／manifest／verify 都不再讀 As1 名單。`tracker.py as1-list` 改為「把 As1 名單（type 3）與 split 已歸屬、但名冊尚無的 wid 補登為 active」，只增不減；As1 改標或移除只列出，退役需人工查證。本次補登 612 筆，watchlist 1,278 個。README、Workshop 簡介、討論串稿與 GitHub About 的說明與模組數同步改寫（1270+ 個模組、1600+ 個模組 ID）。
 - **舊譯「諾克斯郡」統一改為「諾克斯縣」**（繁中 28 鍵），與本體 Knox County 譯名一致。
 - **Pinoy Survival Foods 的 Alfonso Light 簡中改為「阿方索淡味白兰地」**：它是白蘭地，As1 原譯「淡啤」有誤，經 `cn_overrides.json` 修正（物品名與液體名兩鍵）。
 - **4 個已從 Workshop 下架的 MOD 改列 retired**（3725803503、3729663486、3756131291、3776795836；Steam API result 9、steamcmd 無法下載）。其中 World Decay 已換新 ID 3791219108 重新上架，改追蹤新 ID。
@@ -25,10 +27,16 @@
 - **632 項原本放錯檔或用舊鍵形而不會生效的翻譯歸位。** verify [13] 受困鍵與 [16] Recipes 死鍵共 632 項改以現行鍵名寫入 `own_translations.json`（附 `_note`）；`itemname_dead_allowlist.json` 由 4,580 條修剪為 1,558 條（補鍵後又有 114 條的裸鍵已補上）。
 - `prep_mod_strings` 不再把 B41 舊式 `ItemName_<fullType>` 鍵列為缺口：B42 只查裸 fullType，補了也是死鍵（census 仍保留它們供 unship 雙抑制判定）。
 - `cn_overrides.json`：As1 已自行修正的 4 筆退役，上游改值的 2 筆重錨 `as1_value`。
+- **依上游英文改值重譯 22 項，另 11 項只更新英文錨點。** Extraction Mode 11 項沙盒說明加入新的「自由漫遊」模式規則（屍潮間隔與情報中心加成、乘車撤離燃料、道路封鎖），死亡救援改為骨折盡量上夾板（#629）；Dynamic Traits 兩個致病頻率設定補上「設為 0 停用」（#632）；The Best Lockpicking 的沙盒頁名、經驗倍率與開鎖小遊戲選項改為「舊版 (簡易)／新版 (彈子鎖芯)」（#635）；Drink Smart 的低口渴飲水設定與「可飲用的量不足」提示（#636）；Livestock Panel Plus 的公雞啼叫補上只對單人遊戲有效（#641）；TT_PowerPlant 的解藥說明改為只能遏止感染、無法治癒（#623）。Ammo Maker 2 項只是上游修正疊字（#633），SMP AmmoMaker、Neat Crafting 等 9 項只是大小寫或措辭微調，譯文不變。
+  > 技術要點：own 層 24 鍵連同 `en` 錨點更新；As1 衍生層 9 鍵改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點），皆登記 `ch_review_state`。其中 10 鍵是更早幾輪上游改寫時 `en` 錨點沒跟上，這次以 own 錨點對 issue 所屬 MOD 的上游現值全量比對才抓出。The Best Lockpicking 的 6 個沙盒鍵另由舊版 The Best Lockpicking [B42.20]、Lockpicking Skill、Neat Lockpicking 共用，改取對每個 owner 都成立的中性譯名（「最佳開鎖」→「開鎖」，「可能存在錯誤」只屬舊版而移除），新增 6 筆 `owner_conflict_decisions.json` translate 裁決。DTEM 兩鍵順帶把 Day Length 對齊本體「每日長度／一天长度」。經 Codex、Grok 對抗複核採納 4 條修正。
+- **CAExtendedCategories 類別名統一**（#640）：上游把分類鍵由 `XOrY` 改名為 `X__Y`，新鍵沿用舊譯；同時把 7 項「家用工具/…」統一為同 MOD 其他類別使用的「家用物品/…」，「工具/廢品」改為「工具/雜物」。
 
 ### Removed
 
 - 自 `mod_registry.json` 移除 38 個舊 helper 遷移時代、既不在 As1 名單也無任何歸屬或裁決依據的 wid（連同其 `sources/en` 鏡像與 tracker state）；仍出現在 owner 衝突裁決中的 16 個保留。
+- 移除 CAExtendedCategories 上游已刪除的 9 個原創翻譯鍵（金工工具與武器零件的組合分類，#640）。
+
+其餘追蹤單無需另外變更：ReloadAllAmmo（#628）只把翻譯檔從 42.20.3 版本夾搬到 42.21，鍵與英文不變；Long Term Preservation Extended 的 `MakeJar4`、`Tooltip_item_UseForRefill` 兩版英文已一致，原中性譯名照樣成立（#630）。上游刪除或改名的 As1 衍生層鍵（CAExtendedCategories 239、The Best Lockpicking 23、LBB42 7、Drink Smart 5、Long Term Preservation Extended 1）依同步流程保留。
 
 ## [42.21.0-1.36.0] - 2026-09-29
 
