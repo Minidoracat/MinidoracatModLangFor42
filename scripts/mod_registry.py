@@ -4,7 +4,7 @@
 """wid 級 MOD 名冊：`sources/mod_registry.json`（我方名冊）的 loader／writer，以及 As1
 網站名單（`sources/as1_modlist.json`）的解析。
 
-**我方名冊是支援與監看的唯一名冊**（2026-10-02 使用者裁決）：As1 支援的 MOD 一律獨立
+**我方名冊是支援與監看的唯一名冊**（2026-10-01 使用者裁決）：As1 支援的 MOD 一律獨立
 登記在這裡，登記後由我方自行偵測更新、補鍵；As1 只作為「該支援哪些 MOD」與簡中用語的
 參考。監看面＝名冊 active ∪ split 歸屬結果（`tracker.expected_watchlist_items`），As1 名單
 不直接進監看面——As1 改標狀態、移除或網站停擺都不會讓我方追蹤面跟著縮水。

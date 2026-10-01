@@ -62,7 +62,7 @@ with tempfile.TemporaryDirectory() as td:
                 "name": "Registry Only", "mod_ids": ["RegOnly"]},
         "333": {"status": "retired", "source": "test", "verified": "2026-08-30",
                 "name": "Retired", "mod_ids": ["Retired"]},
-        "555": {"status": "active", "source": "as1-modlist", "verified": "2026-10-02",
+        "555": {"status": "active", "source": "as1-modlist", "verified": "2026-10-01",
                 "name": "As1 Listed"},
     }}), encoding="utf-8")
     fixtures = {
