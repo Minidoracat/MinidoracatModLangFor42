@@ -18,7 +18,7 @@
 ### Changed
 
 - **支援／監看名冊獨立化：所有支援的 MOD 都由本包自行登記、追蹤更新與補鍵，As1 只作為支援範圍與簡中用語的參考。**
-  > 技術要點：`sources/mod_registry.json` 成為唯一名冊（1,263 筆：active 1,259、retired 4），watchlist＝`(metadata − retired) ∪ active`，tracker／manifest／verify 都不再讀 As1 名單。`tracker.py as1-list` 改為「把 As1 名單（type 3）與 split 已歸屬、但名冊尚無的 wid 補登為 active」，只增不減；As1 改標或移除只列出，退役需人工查證。本次補登 612 筆，watchlist 1,278 個。README、Workshop 簡介、討論串稿與 GitHub About 的說明與模組數同步改寫（1270+ 個模組、1600+ 個模組 ID）。
+  > 技術要點：`sources/mod_registry.json` 成為唯一名冊（1,271 筆：active 1,266、retired 5），watchlist＝`(metadata − retired) ∪ active`，tracker／manifest／verify 都不再讀 As1 名單。`tracker.py as1-list` 改為「把 As1 名單（type 3）與 split 已歸屬、但名冊尚無的 wid 補登為 active」，只增不減；As1 改標或移除只列出，退役需人工查證。本次補登 612 筆，watchlist 1,285 個。README、Workshop 簡介、討論串稿與 GitHub About 的說明與模組數同步改寫（1280+ 個模組、1600+ 個模組 ID）。
 - **舊譯「諾克斯郡」統一改為「諾克斯縣」**（繁中 28 鍵），與本體 Knox County 譯名一致。
 - **Pinoy Survival Foods 的 Alfonso Light 簡中改為「阿方索淡味白兰地」**：它是白蘭地，As1 原譯「淡啤」有誤，經 `cn_overrides.json` 修正（物品名與液體名兩鍵）。
 - **4 個已從 Workshop 下架的 MOD 改列 retired**（3725803503、3729663486、3756131291、3776795836；Steam API result 9、steamcmd 無法下載）。其中 World Decay 已換新 ID 3791219108 重新上架，改追蹤新 ID。
@@ -38,10 +38,14 @@
   - Legendary Katana 的 9 個上色配方由「製作傳奇武士刀」改為「為傳奇武士刀上色」；Global Storage SiK 的武器分類改用本體技能名「長刀／短刀／長棍／短棍」。
   - 其餘：Ogrim 縫紉台的布捲改為「布捲 (材質)」結構、Common Sense 的開罐受傷說明、Cyes Push Doors 的按鍵說明等。
   > 技術要點：own 錨點對上游有效分支勝出值逐筆比對（owner＝`wid/root`，同 workshop 多個 MOD 分開算），分四類：換行表示法 116、只差大小寫或標點 57、語意變動 267、多 owner 11。語意類分 5 批由翻譯代理判斷保留或重譯（重譯 160），再經 Codex、Grok 兩線複核；Skyblock 配方以 script 的產物比對本體 `ItemName`，41 筆改用本體譯名。多 owner 類中 GaelGunStore Legacy 的「英文」其實是物品 ID，不算衝突；G36 與 `cat_AutoReload` 的現譯對各 owner 都成立，新增 2 筆 translate 裁決。所有更動的鍵都以有效 CN 值登記 `ch_review_state`。
+- **再補 2 筆上游改字的英文錨點，原創翻譯的過時檢查也會比對 `.txt` 英文。** More Description For Traits 的「撞到殭屍或倖存者時跌倒」改為上游現行的「機率略為提高」。
+  > 技術要點：先前 451 筆的比對沿用 `tracker.is_effective`，它把 B42 不讀的 `*_EN.txt` 一律排除；但這些鍵的上游英文只寫在 `.txt`，本包 `.json` 譯文是唯一能載入的文字，上游改字時一樣要跟。補比後另有 24 筆只需更新錨點（Gore's 沙盒 18、SVRP ClassicBows 沙盒 4、Mixology 傳單版面 2：上游 `.txt` 只剩空白版面，但 42 版材質仍在，維持現有圖片版面）。`build_mod.py` 新增 `own_anchor_drift`，build 時列出 own `en` 與上游有效分支英文（含 `.txt`）不符的鍵（report-only），回歸測試 `scripts/test_own_anchor_drift.py`。
 
 ### Removed
 
-- 自 `mod_registry.json` 移除 38 個舊 helper 遷移時代、既不在 As1 名單也無任何歸屬或裁決依據的 wid（連同其 `sources/en` 鏡像與 tracker state）；仍出現在 owner 衝突裁決中的 16 個保留。
+- 自 `mod_registry.json` 移除 31 個舊 helper 遷移時代、既不在 As1 名單也無任何歸屬或裁決依據的 wid（連同其 `sources/en` 鏡像與 tracker state）；仍出現在 owner 衝突裁決中的 16 個保留。同批原本移除 38 個，其中 7 個後來查出本包仍出貨它們的原創譯文，已補回：More Description For Traits、PhunZones、Proximity Inventory、Imperial Chops!、Extensive Power Rework B42、Yaki's BarberShop 改回 active，已下架的 3625348470 改列 retired。另補登從未登記的 Bag Upgrade Plus（3668094025）。名冊現為 1,271 筆（active 1,266、retired 5）。
+- **刪除 191 筆已失效的原創翻譯。** 這些鍵遊戲不會查，或對應的 MOD 內容已不存在，留著只會在全域字串表裡和別的 MOD 撞名。
+  > 技術要點：own 層 3,130 筆找不到上游英文的條目逐類查證，刪除者連同 `ch_review_state` 登記一併移除。B41 前綴鍵 7（裸鍵已出貨）；放錯檔且正確檔已有同鍵 4；只存在於死分支的 script 區塊 53、英文 17；舊 VFE（3611718925，已下架）底線鍵形與其他區塊名對不上的 Recipes 77 中，經比對現行 craftRecipe 區塊名後刪 71（新版 VFE 3761077099 的 22 個區塊都已出貨；`Place20BulletsInBox` 實際區塊為小寫開頭）；`IGUI_CraftCategory_` 8（Neat Crafting 依 `UI_CraftCat_`→`IGUI_CraftingCategories_`→`IGUI_CraftCategory_` 順序查名，這 8 個分類的 `IGUI_CraftingCategories_` 都已出貨，查不到這一層）；全 Workshop 與下載快取 23,051 個 lua／txt 有效分支檔都查無引用 8（如上游實為 `Base.762x39Drum73` 的 Drum75）。先前因本機沒有上游檔案而刻意保留的 23 筆，這次下載現行版查證後也刪除：Aegis Panel 21 筆事件與導演面板鍵（事件名稱已改寫死在 `Aegis_EventStudio.lua`）、organizedCategories 的 `UI_OC_AlphabeticalCategorySort_tooltip`（現行 Lua 主動移除這個舊選項）、Better Sorting 的 `IGUI_ItemCat_CookBrew`（已無此分類）。有引用的 8 筆保留並在 `_note` 記下引用處（Bag Upgrade Plus 的液體容器與分類、SRJ／tsarslib 分類、W900 的 `IGUI_MSW_VehicleBlacklisted`、'89 Defender 的車頂架提示）。
 - 移除 CAExtendedCategories 上游已刪除的 9 個原創翻譯鍵（金工工具與武器零件的組合分類，#640）。
 
 其餘追蹤單無需另外變更：ReloadAllAmmo（#628）只把翻譯檔從 42.20.3 版本夾搬到 42.21，鍵與英文不變；Long Term Preservation Extended 的 `MakeJar4`、`Tooltip_item_UseForRefill` 兩版英文已一致，原中性譯名照樣成立（#630）。上游刪除或改名的 As1 衍生層鍵（CAExtendedCategories 239、The Best Lockpicking 23、LBB42 7、Drink Smart 5、Long Term Preservation Extended 1）依同步流程保留。

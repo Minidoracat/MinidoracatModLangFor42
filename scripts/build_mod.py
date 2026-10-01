@@ -695,6 +695,42 @@ def load_own_translations() -> dict[str, dict[str, dict]]:
     return entries
 
 
+def own_anchor_drift(own: dict[str, dict[str, dict]], mods: dict) -> list[str]:
+    """own `en` 錨點與上游現行英文不符的鍵（`檔名|鍵`）。
+
+    上游現行英文取 tracker 記錄的值雜湊，只看 MOD 會載入的分支（common＋最佳版本夾），
+    **但不濾 `*_EN.txt`**：B42 不讀 .txt，這類鍵上游的英文只寫在 .txt，本包的 .json 譯文
+    是遊戲唯一能載入的文字，上游改字時一樣要跟。`tracker.is_effective` 會把 .txt 判成
+    不載入，只靠它比對會整批漏掉（2026-10-02 全量比對抓到 24 筆）。同鍵有多個來源時
+    任一相符即算最新；上游完全沒有該鍵（配方區塊名、引擎推導鍵）不在本函式範圍。
+    """
+    import tracker
+
+    upstream: dict[str, set[str]] = {}
+    for mod in mods.values():
+        records = mod.get("records") if isinstance(mod, dict) else None
+        if not isinstance(records, dict):
+            continue
+        eff = tracker.resolve_effective_branches(records)
+        for rid, h in records.items():
+            parts = rid.split("|", 2)
+            if len(parts) < 3 or parts[0] not in ("translate_en", "script_item_dn"):
+                continue
+            path = parts[1].split("/")
+            if len(path) >= 3 and path[0] == "mods" and path[2] not in eff.get(path[1], set()):
+                continue
+            upstream.setdefault(parts[2], set()).add(h)
+            if parts[2].startswith("ItemName_"):
+                upstream.setdefault(parts[2][len("ItemName_"):], set()).add(h)
+    return [
+        f"{fname}|{key}"
+        for fname, keys in sorted(own.items())
+        for key, entry in sorted(keys.items())
+        if upstream.get(key) and isinstance(entry, dict) and isinstance(entry.get("en"), str)
+        and tracker.value_hash(entry["en"]) not in upstream[key]
+    ]
+
+
 def report_own_anchor_gaps(own: dict[str, dict[str, dict]]) -> None:
     """report-only：own_translations 鍵於 tracker-state/en_corpus_hashes/ 查無上游錨點者。
 
@@ -703,6 +739,8 @@ def report_own_anchor_gaps(own: dict[str, dict[str, dict]]) -> None:
 
     已知限制：錨點集合為全 mod 裸鍵名扁平聯集（不分 mod/檔），同名鍵存在於不相干 mod
     時會誤判「有錨點」而漏報——本報告偏鬆，報出的是盲區下限而非全集。
+
+    有錨點的鍵另以 `own_anchor_drift` 比對英文內容，列出上游已改字、`en` 沒跟上的鍵。
     """
     try:
         import tracker  # state 目錄佈局的單一實作來源
@@ -749,6 +787,14 @@ def report_own_anchor_gaps(own: dict[str, dict[str, dict]]) -> None:
                 print(f"    {g}")
             if len(gaps) > 20:
                 print(f"    ...（還有 {len(gaps) - 20} 條）")
+        drift = own_anchor_drift(own, mods)
+        if drift:
+            print(f"  ⚠️ 原創翻譯層 {len(drift)} 鍵的英文錨點與上游現行英文不符（含 B42 不讀的 .txt），"
+                  "譯文可能已過時，請對照上游改譯或更新 en：")
+            for d in drift[:20]:
+                print(f"    {d}")
+            if len(drift) > 20:
+                print(f"    ...（還有 {len(drift) - 20} 條）")
     except Exception as exc:  # noqa: BLE001 — report-only：state 形狀壞損不得阻斷 build
         print(f"  ⚠️ 錨點缺口報告略過（state 形狀異常：{exc}）")
 

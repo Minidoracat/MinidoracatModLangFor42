@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1266 個 Workshop 模組**（1602 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
+共支援 **1273 個 Workshop 模組**（1609 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -75,6 +75,7 @@
 | [SSR: Quest System](https://steamcommunity.com/sharedfiles/filedetails/?id=2793385743) | — | — | `ssr-quests`, `ssr-quests-e1`, `ssr-quests-e2`, `ssr-quests-e3` | 74 | — | — |
 | ['78 AM General M35 Series Trucks](https://steamcommunity.com/sharedfiles/filedetails/?id=2799152995) | '78 AM General M35 系列卡車 | 新增 1978 年 AM General M35 系列軍用卡車，含油罐車與水罐車等衍生型。 | `78amgeneralM35A2`, `78amgeneralM35A2extra`, `78amgeneralM49A2C`, `78amgeneralM50A3`, `78amgeneralM62` | 1 | — | — |
 | ['84 Mercedes Benz W460](https://steamcommunity.com/sharedfiles/filedetails/?id=2805630347) | '84 Mercedes-Benz W460 | 新增 1984 年 Mercedes-Benz W460 越野車，含軍用版與多種外觀配件。 | `84merc` | 41 | — | — |
+| [Yaki's BarberShop](https://steamcommunity.com/sharedfiles/filedetails/?id=2810471370) | — | — | `YakiBSB42` | ? | — | — |
 | ['83 AM General M923](https://steamcommunity.com/sharedfiles/filedetails/?id=2811383142) | '83 AM General M923 | 新增 1983 年 AM General M923 軍用卡車，含裝甲與儲物配件。 | `83amgeneralM923`, `83amgeneralM923extra` | 26 | — | — |
 | [Spongie's Open Jackets](https://steamcommunity.com/sharedfiles/filedetails/?id=2812326159) | Spongie 的敞開外套 | 可敞開或扣起外套、捲起衣袖、把上衣紮入等服裝穿法調整。 | `SpnOpenCloth` | 262 | ⚠️ ≥2 | — |
 | [My So-Called Bag](https://steamcommunity.com/sharedfiles/filedetails/?id=2823166698) | My So-Called Bag | 新增多種樣式的行李包，可製作與改造成不同顏色版本。 | `P4MySoCalledBag` | 23 | — | — |
@@ -257,6 +258,7 @@
 | [Auto Cook](https://steamcommunity.com/sharedfiles/filedetails/?id=3388721641) | 自動烹飪 | 自動製作餐點與烹飪原料，並依營養狀況提示碳水、脂肪攝取警告。 | `AutoCook` | 38 | — | — |
 | [Ammo Converter B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3388844065) | 彈藥轉換器 | 可將彈藥轉換為 .308、.357、.45 ACP 等多種口徑，支援整盒轉換。 | `AmmoConverterB42` | 431 | — | — |
 | [Minimal Display Bars + Nutritions + Discomfort [B41/B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3388844542) | 極簡狀態列＋營養＋不適 | 新增可自訂的極簡狀態列，顯示角色數值與營養資訊，支援預設檔匯入。 | `MinimalDisplayBarsNutritionsB42` | 50 | — | — |
+| [PhunZones](https://steamcommunity.com/sharedfiles/filedetails/?id=3388867450) | — | — | `phunzones` | ? | — | — |
 | [[B42] Moodle Descriptions Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=3389003300) | — | — | `B42MoodleDescriptionsExpanded` | ? | ⚠️ ≥190 | — |
 | [Ammo Loot Drop · Zombies Drop Ammo & Ammo Box B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3389050623) | 彈藥掉落 · 殭屍掉落彈藥與彈藥盒 | 讓殭屍掉落散裝、整盒或整箱彈藥，掉落率可調整。 | `AmmoLootDropB42`, `AmmoLootDropBox`, `AmmoLootDropCarton` | 69 | — | — |
 | [Auto Reload](https://steamcommunity.com/sharedfiles/filedetails/?id=3389448389) | 自動裝填 | 透過右鍵選單自動練習武器裝填技能。 | `AutoReload` | 1 | — | — |
@@ -406,6 +408,7 @@
 | [Functional Car Lift](https://steamcommunity.com/sharedfiles/filedetails/?id=3464551542) | 可用汽車舉升機 | 新增可製作使用的汽車舉升機，含中控台與立柱等組件。 | `FunctionalCarLift` | 9 | — | — |
 | [[B42] HDCP Immersive Vehicle Paint](https://steamcommunity.com/sharedfiles/filedetails/?id=3464606086) | HDCP 沉浸式車輛噴漆 | 新增汽車噴漆與教學雜誌，可為車輛塗上二十餘種顏色。 | `ImmersiveVehiclePaint` | 94 | — | — |
 | [Open All Containers [42MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3465040406) | 打開所有容器 | 看向容器時自動開關容器欄位，並支援多種櫃體與快捷鍵設定。 | `OpenAllContainers` | 118 | — | — |
+| [Imperial Chops! (Garf’s Beards)](https://steamcommunity.com/sharedfiles/filedetails/?id=3465865657) | — | — | `ImpChops` | ? | — | — |
 | [[B42] Bandits Creator](https://steamcommunity.com/sharedfiles/filedetails/?id=3469292499) | 土匪創建器 | 自訂土匪 NPC 的生成方式與 AI 行為，如突擊、守衛、路障等。 | `BanditsCreator` | 128 | — | — |
 | [[B42]Recycling of waste](https://steamcommunity.com/sharedfiles/filedetails/?id=3470205514) | — | — | `WasteConversion` | 28 | — | — |
 | [Flat Stone From Big Stone](https://steamcommunity.com/sharedfiles/filedetails/?id=3470345531) | — | — | `FlatStoneFromBigStone` | 1 | — | — |
@@ -591,6 +594,8 @@
 | [Zed's Better FPS](https://steamcommunity.com/sharedfiles/filedetails/?id=3622986450) | Zed 的更佳 FPS | 效能優化模組，提供降低 CPU 佔用、3D 模型優化與效能指標日誌等選項。 | `ZBBetterFPS` | 29 | — | — |
 | [GaelGunStore - Firearms pack B42.12-Legacy](https://steamcommunity.com/sharedfiles/filedetails/?id=3623297453) | GaelGunStore 槍械包（舊版） | 新增槍械商店相關內容的槍械擴充包。 | `GaelGunStore_Leagacy` | 742 | — | ⚠️ 有一項手槍名稱（代號 Base.Glock23）與 Guns of 93 撞名、卻是不同的槍——本 MOD 的是 USP-45，那邊的同一代號是 Glock 23。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故此鍵不出貨、遊戲內顯示該 MOD 自己的英文原文。 |
 | [PhunServer Tools](https://steamcommunity.com/sharedfiles/filedetails/?id=3623897097) | — | — | `phunserver` | 137 | — | — |
+| [More Description For Traits [42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=3623919908) | — | — | `MoreDescriptionForTraits4213` | ? | — | — |
+| [[UNOFFICIAL][B42.13 SP/MP] Proximity Inventory](https://steamcommunity.com/sharedfiles/filedetails/?id=3624308198) | — | — | `ProximityInventory4213` | ? | — | — |
 | [[B42.13] Simple Slings Mod - Rifle Slings Only](https://steamcommunity.com/sharedfiles/filedetails/?id=3625951765) | 簡易背帶模組（僅步槍背帶） | 新增武器背帶，可將步槍揹在肩上或背部快捷欄位。 | `OmniSimplesling` | ? | — | — |
 | [Let's Get Naked 3 (while exercising and favourites tracking)](https://steamcommunity.com/sharedfiles/filedetails/?id=3626717602) | — | — | `LGN3` | 550 | ⚠️ ≥2 | — |
 | [Hoarder's Delight - Box & Carton Bulk Packing [42.19 + 42.18]](https://steamcommunity.com/sharedfiles/filedetails/?id=3626823538) | 囤積者之樂：整盒整箱打包 | 可將大量物品打包成整盒或整箱，方便囤積與搬運。 | `OCsPacking` | 319 | — | — |
@@ -631,6 +636,7 @@
 | [Useful Trash Bag[SP/MP][42.20]](https://steamcommunity.com/sharedfiles/filedetails/?id=3642741039) | — | — | `vac_mod_b42_16` | 3 | — | — |
 | ['70 Plymouth Road Runner](https://steamcommunity.com/sharedfiles/filedetails/?id=3642935062) | 1970 年 Plymouth Road Runner | 新增 1970 年 Plymouth Road Runner 車輛，可製作車門、保險桿等零件。 | `70roadRunner` | 25 | — | — |
 | [zRe Vaccine 3.0 [b42.13+ MP] ReMod by kERHUS](https://steamcommunity.com/sharedfiles/filedetails/?id=3643703198) | zRe 疫苗 3.0 ReMod by kERHUS | 新增疫苗與抗病毒藥物研製系統，包含化學試劑、實驗室設備與病毒學書籍。 | `zReModVaccin30bykERHUS`, `zReModVaccin30bykERHUS_Addon` | ? | — | — |
+| [Extensive Power Rework B42 (no longer supported)](https://steamcommunity.com/sharedfiles/filedetails/?id=3643765614) | — | — | `EPR_B42` | ? | — | — |
 | [Mysterious Vehicle Claim Key〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3643840023) | 神秘車輛認領鑰匙 | 多人伺服器車輛認領系統，可綁定車輛擁有者並設定共享權限。 | `Mysterious Vehicle Claim Key` | 87 | — | — |
 | [B42 Scavenging Skill](https://steamcommunity.com/sharedfiles/filedetails/?id=3645462965) | 拾荒技能 | 新增拾荒技能，搜刮容器時有機率找到額外戰利品，附五本技能書與禿鷲特質，各級機率與經驗皆可調。 | `B4213ScavengingSkill` | 56 | — | — |
 | [VorpallySauced - Weapon Mastery System](https://steamcommunity.com/sharedfiles/filedetails/?id=3645781559) | VorpallySauced - 武器精通系統 | 新增武器精通系統，武器隨擊殺累積成長升級，並可獲得各式詞綴強化。 | `VorpallySauced` | 721 | — | — |
@@ -680,6 +686,7 @@
 | [Not Random Sprinters [42.17]](https://steamcommunity.com/sharedfiles/filedetails/?id=3665657529) | — | — | `NotRandomSprinters` | 27 | — | — |
 | [Ash's King County Sheriff's Deputy Cavalry Hat [Redux] B42.20](https://steamcommunity.com/sharedfiles/filedetails/?id=3665928226) | — | — | `KingCountyCavalryHatRedux1KTexture`, `KingCountyCavalryHatReduxTwo` | 3 | — | — |
 | [Buildable Water Pump](https://steamcommunity.com/sharedfiles/filedetails/?id=3666938579) | — | — | `BuildablePump` | 24 | — | — |
+| [[B42.20] Bag Upgrade Plus](https://steamcommunity.com/sharedfiles/filedetails/?id=3668094025) | — | — | `BagUpgradePlusUpdated` | 55 | — | — |
 | [Renewable Spare Engine Parts](https://steamcommunity.com/sharedfiles/filedetails/?id=3668110789) | 可再生備用引擎零件 | 提供製作備用引擎零件的配方，讓車輛維修資源可再生。 | `SeawhiteRenewableSpareEngineParts` | ? | — | — |
 | [Legendary Katana Wakizashi](https://steamcommunity.com/sharedfiles/filedetails/?id=3668370011) | — | — | `LKB42` | 108 | — | — |
 | [Forged by Combat](https://steamcommunity.com/sharedfiles/filedetails/?id=3668844554) | 戰鬥淬煉 | 依近戰武器擊殺數累積戰鬥進程，逐級提供傷害、暴擊與攻速加成。 | `ForgedByCombat` | 24 | — | — |
