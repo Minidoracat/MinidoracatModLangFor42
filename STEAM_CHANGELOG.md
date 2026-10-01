@@ -1,22 +1,24 @@
-[h1][B42]繁體簡體模組翻譯 42.21.0-1.36.0[/h1]
-[i]2026-09-29[/i]
+[h1][B42]繁體簡體模組翻譯 42.21.0-1.37.0[/h1]
+[i]2026-10-02[/i]
 
 [h3]新增[/h3]
-6 個已支援模組補上新版新增或先前缺漏的繁簡中文，共 438 項：
 [list]
-[*] Ammo Maker：彈藥部件改成一般、盒裝、袋裝、舊、軍用五類後，各地點（槍店、警局、軍方倉庫、安全屋等）的生成機率、數量上限與擲骰次數設定；用坩堝批量鑄造彈頭、批次拆解彈藥。
-[*] Long Term Preservation Extended：罐裝胡椒粉、碎胡椒、胡椒袋與調味罐；馬肉與 VFX 聯動的罐裝、鹹肉、臘肉和相關配方（先前一直顯示英文）。
-[*] Snake's ModPack：甘蔗種植、紅糖、甘蔗牆與門框窗框建造、訊號干擾器、SnakeVille 地圖、新雜誌。
-[*] Tikitown & Powerplant：新子模組 ScrapWorks 的廢料工坊配方與 5 本回收文摘。
-[*] Evolving Traits World：鍛鍊寬限期、鍛鍊判定次數、超級免疫的諾克斯感染存活條件。
-[*] Extraction Mode：NPC 來源模組選項（Bandits／A-Life）與 A-Life 襲擊訊息。
+[*] 同步如一漢化組 v3.10.1：新收錄 Knoxbound、Project Exile、Project A-Life、Industrial Revolution、Jeeves Claims、Super Zed Plus、Companion Dogs Squad、Pinoy Survival Foods、MWP Weapons 等模組，新增約 7,000 項繁中翻譯。
+[*] 318 個已支援模組補上原本顯示英文的文字，共 38,337 項，包括大量物品名稱、選單、提示與沙盒設定；World Decay 重新上架後的新版本也一併支援。
+[*] Long Term Preservation Extended 的 5 個新配方（製作瓶裝醋、醋壺、瓶裝清潔劑與玻璃調味罐）不再顯示英文代號。
+[*] 支援清單增加到 1280+ 個模組。
 [/list]
 
 [h3]更新[/h3]
 [list]
-[*] 跟上模組作者改寫的說明，共 39 項：Ammo Maker 的鑄造說明、Evolving Traits World 的免疫系統、睡眠系統與「吃苦耐勞」、Dead Magic「最後神盾」、Extraction Mode 的 NPC 相關設定、Le Gourmet Ultimate 甘蔗堆說明。
-[*] Long Term Preservation Extended 與其 SE 版共用的配方名與說明改用兩邊都正確的「調味料」。
-[*] 統一 Long Term Preservation Extended 同名配方的譯名，例如「製作乾肉餅」「熬製牛脂」；並修正簡中把醃製食品誤譯成「已保存」的配方名。
-[*] 移除模組已刪除的舊文字（Ammo Maker 舊的「生成彈藥部件」選項）。
+[*] 跟上模組作者改寫的英文，重譯約 300 項：Extraction Mode 新的「自由漫遊」模式規則、Dynamic Traits 的致病頻率設定、The Best Lockpicking 的新版開鎖小遊戲選項、Drink Smart 的低口渴飲水設定、Livestock Panel Plus 的公雞啼叫說明、Till Death Do Us Part 的沙盒說明等。
+[*] Survivor Journals 等模組的日記與說明，修正可能直接顯示「\n」而不換行的問題。
+[*] Mr Brollow's Skyblock 的配方名改成直接顯示產物名稱，並與遊戲本體的物品譯名一致（鐵條、鋼條、布膠帶等）。
+[*] GaelGunStore、Modern Firearms System 的槍械、彈藥與配件名稱跟上新英文。
+[*] 約 630 項原本放錯位置、遊戲讀不到的翻譯改放到正確位置，現在會顯示中文。
+[*] Legendary Katana 的上色配方改為「為傳奇武士刀上色」；CAExtendedCategories 的分類名稱統一。
+[*] 舊譯「諾克斯郡」統一為與本體一致的「諾克斯縣」；Pinoy Survival Foods 的 Alfonso Light 簡中更正為白蘭地。
+[*] 少數同名文字在不同模組裡意思不同，改用對每個模組都正確的譯名；找不到共通譯名的 2 項改顯示原文，避免把一個模組的名稱套到另一個模組。
+[*] 移除約 200 項模組已刪除、遊戲不會再用到的舊翻譯。
 [*] 更新下載完成後，請重新啟動遊戲載入新翻譯；不需要重開存檔。
 [/list]
