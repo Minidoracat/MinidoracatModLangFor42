@@ -4,6 +4,31 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 16 個 MOD 新增的繁簡中文，共 496 項。** RPG Inventory（#660，外觀設定、分頁、容器規則與控制器操作說明，114 項）、Auto All（#655，自動農耕／釣魚選項、停止原因與沙盒設定，108 項）、Roaming Survivors（#659，上游整批改寫的 NPC 對話與陣營介紹，60 項）、Casualties Undead（#661，截肢者用牙齒啃下廢木材、再用布膠帶綁出簡易義肢的小遊戲與對應物品、配方，49 項）、Legendary Professions and Traits（#648，各職業與特質的點數花費設定，39 項）、Guns of 93（#644，左輪手槍握把、扳機零件、消音器與雷明頓 7400 步槍等，38 項）、PhunMart 2（#651，20 項）、Military Backpack（#658，四色軍用露營背包與配方，12 項）、PhunZones 2（#649，A-Life NPC、地圖邊框／填色與殭屍生成處理選項，11 項）、Legendary Cap（#645，10 項）、Arcadia Refillable Propane Tanks（#656，9 項）、Knox Survivors（#652，8 項）、Legendary Duffelbag（#646，8 項）、Dead Magic（#650，4 項）、Take A Bath And Shower（#647，3 項）、'70 Chevelle（#653，側儲物箱，3 項）。
+  > 技術要點：全數落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫（cn 不經簡繁轉換），新鍵皆以有效 CN 值登記 `ch_review_state`。7 路翻譯後經 Codex、Grok 4 路對抗複核採納 26 條修正：RPG Inventory 的 Context 統一為本體「右鍵選單」、Roaming Survivors 時間詞 `%3` 移到句首、Ruger Security-Six 的簡中零件名對齊主物品「鲁格治安六」、Legendary Cap 的 Flashlight 不再譯成頭燈、'70 Chevelle 的 Side Storage 對齊同系列「側儲物箱」等（Grok 有 2 條的繁中誤用「幸存者」，改回「倖存者」後採納）。Arcadia 的 `UI.json` 與 `UI_EN.txt` 不同步，依 census 取 `.txt` 新文，與 Lua 現行同時支援 Filibuster 與 F700 卡車一致。
+
+### Changed
+
+- **依上游英文改值重譯 24 項。** Casualties Undead 四肢截肢特質說明補上新玩法（#661）；RPG Inventory 5 項容器規則說明（#660）；Knox Survivors 9 項沙盒設定：同伴與命令頁、配偶繼承、實驗性 NPC 駕駛、右鍵命令選單、舊版工具櫃（#652）；RadArchery 的存檔破壞警告改為「此版停止更新、新版另開 Workshop 項目」公告（#654）；PhunZones 2 的 PVP 說明補上關閉時爆裂物與火焰失效（#649）；Arcadia 丙烷罐提示不再限定 Filibuster 卡車（#656）；Military Backpack 沙盒的容量與減重標題加上背包名（#658）；Project Exile 衣物祝福改為只減少戰鬥速度懲罰（#657）；PhunMart 2 的管理按鈕與遊玩時間里程碑說明（#651）。Guns of 93 的鹿角握把只是上游修正拼字，譯文不變（#644）。
+  > 技術要點：own 層 19 鍵連同 `en` 錨點更新（`Base.ColtStagGrip` 只更新錨點）；As1 衍生層 5 鍵改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點），皆登記 `ch_review_state`。build 的 `own_anchor_drift` 由 18 筆歸零。
+- **36 個與其他 MOD 共用的鍵完成裁決：29 項採用（或確認沿用）對每個 MOD 都成立的譯名，7 項改為不出貨中文。**
+  - Guns of 93 與 Brita、Rain's、Totally's、Better Vanilla Firearms 共用的槍彈名：柯爾特 9mm 衝鋒槍彈匣不再寫死 635 型與 32 發，彈藥袋說明拿掉只屬 Guns of 93 的「需要螺絲起子」，其餘 12 項確認現譯成立。.223／.308 彈鏈（Brita 同代號是盒式彈匣）與刺刀說明（Guns of 93 可按 Z 切換，Brita 不支援刺擊模式）改為不出貨，兩邊各自顯示自己的英文。
+  - PhunZones 舊版與 PhunZones 2 共用的區域設定：殭屍、土匪欄位標籤改為「殭屍」「土匪」（舊版是勾選允許、2 代是下拉選單），區域檢查間隔與小工具說明改為兩版共通的寫法。「不提示」開關與其說明（兩版勾選方向相反）、殭屍與土匪設定的說明（2 代改成下拉選單後已無共通說法）改為不出貨：PhunZones 2 顯示上游英文，舊版的這 4 個鍵會顯示代號。
+  - 射箭技能說明拿掉只屬 RadArchery 的「延長有效射程」；Auto All 的負重受傷停止訊息拿掉 BETA 版沒有的「健康值下限」提示。
+  > 技術要點：`owner_conflict_decisions.json` 新增 36 筆（translate 29、unship 7），unship 的 7 鍵同步登記 `unshipped_keys.json`（`owner_signature` 雙向背書）；census 簽名寫入前以既有 1,305 筆已裁決鍵自檢全數相符。改值的 9 鍵屬 As1 衍生層，CH 改 `sources/ch`、CN 改 `cn_overrides`（`UI_AA_stop_hurt` 回到 As1 原值，移除舊 override），皆登記 `ch_review_state`；`OWNER_CONFLICTS.md` 重生。
+- **Casualties Undead 繁中的「假肢」統一為台灣用語「義肢」**（36 項，含物品、技能與特質名），與這次新增的簡易義肢字串一致。
+- **Knox Survivors 沙盒分頁標題的分隔符號統一**：繁中 5 個舊標題的「－」改為「諾克斯倖存者 - …」，與新增的 3 個分頁一致；簡中 2 項改回 As1 的「诺克斯幸存者-…」寫法。
+
+### Removed
+
+- **移除上游已刪除的 63 個原創翻譯鍵**：Roaming Survivors 改寫對話後失效的 61 個舊台詞鍵（#659），以及 Knox Survivors 移除的自動化 QA 測試選項與說明（#652）。全庫已無其他 MOD 定義這些鍵，`ch_review_state` 登記一併移除。
+
+其餘追蹤單無需另外變更：93 款雪佛蘭薩博班（#643）與 '67 Commando（#642）只是把檔案移到 42.20 版本夾，內容不變，車名與配方都已有中文。Legendary Duffelbag、Legendary Cap 改名前的沙盒鍵（17 項）與 Guns of 93 移除的 5 個鍵屬 As1 衍生層，依同步流程保留。
+
 ## [42.21.0-1.37.0] - 2026-10-02
 
 ### Added

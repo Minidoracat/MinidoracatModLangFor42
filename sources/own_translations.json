@@ -8916,6 +8916,61 @@
     "en": "Remove Rust",
     "ch": "除鏽",
     "cn": "除锈"
+   },
+   "ContextMenu_TABAS_MissingWaterData": {
+    "en": "Bath water data is missing or has not loaded yet. If the two halves are incomplete or do not match, use Remove Leftover Bath Water.",
+    "ch": "洗澡水資料遺失或尚未載入. 若浴缸的兩半不完整或不一致, 請使用「移除殘留洗澡水」.",
+    "cn": "洗澡水数据丢失或尚未加载. 若浴缸的两半不完整或不一致, 请使用“移除残留洗澡水”."
+   },
+   "ContextMenu_TABAS_RecoverWater": {
+    "en": "Remove Leftover Bath Water",
+    "ch": "移除殘留洗澡水",
+    "cn": "移除残留洗澡水"
+   },
+   "ContextMenu_TABAS_RecoverWaterHint": {
+    "en": "Discards leftover water when one half is missing or the two halves do not match, and resets the water data. Keeps the bathtub. Put the stopper in again to refill.",
+    "ch": "當浴缸其中一半遺失或兩半不一致時, 捨棄殘留的水並重設水量資料. 浴缸本身會保留. 重新放置浴缸塞即可再次注水.",
+    "cn": "当浴缸其中一半缺失或两半不一致时, 舍弃残留的水并重置水量数据. 浴缸本身会保留. 重新放置浴缸塞即可再次注水."
+   },
+   "ContextMenu_CU_CraftCrude": {
+    "en": "Make a crude prosthetic %1",
+    "ch": "製作簡易義肢 %1",
+    "cn": "制作简易假肢 %1"
+   },
+   "ContextMenu_CU_CraftCrudeArm": {
+    "en": "(arm)",
+    "ch": "(手臂)",
+    "cn": "(手臂)"
+   },
+   "ContextMenu_CU_CraftCrudeLeg": {
+    "en": "(leg)",
+    "ch": "(腿部)",
+    "cn": "(腿部)"
+   },
+   "ContextMenu_CU_CraftCrude_Need": {
+    "en": "You need %1 pieces of scrap wood and some duct tape. With no hands, gnaw wood off a wooden wall, door or crate.",
+    "ch": "你需要 %1 塊廢木材和一些布膠帶. 沒有手的話, 可以從木牆、木門或木箱上啃下木頭.",
+    "cn": "你需要 %1 块废木材和一些管道胶带. 没有手的话, 可以从木墙、木门或木箱上啃下木头."
+   },
+   "ContextMenu_CU_CraftCrude_Tip": {
+    "en": "Lash five pieces of scrap wood together with duct tape. It is slow, cannot climb, and breaks easily, but it is something.",
+    "ch": "用布膠帶把五塊廢木材綁在一起. 它很慢、無法攀爬, 又容易壞, 但總比沒有好.",
+    "cn": "用管道胶带把五块废木材绑在一起. 它很慢、无法攀爬, 又容易坏, 但总比没有强."
+   },
+   "ContextMenu_CU_Gnaw": {
+    "en": "Gnaw off scrap wood",
+    "ch": "啃下廢木材",
+    "cn": "啃下废木材"
+   },
+   "ContextMenu_CU_GnawEmpty": {
+    "en": "There is nothing left of it to bite off.",
+    "ch": "上面已經沒有東西可以咬下來了.",
+    "cn": "上面已经没有东西可以咬下来了."
+   },
+   "ContextMenu_CU_Gnaw_Tip": {
+    "en": "With no hands left, you can still bite splinters of wood off a wooden object. It hurts, and it wears the object down. Five pieces and some duct tape make a crude prosthetic.",
+    "ch": "就算沒有手, 你仍然可以從木製物件上咬下木片. 這很痛, 也會損耗那個物件. 五塊廢木材加上一些布膠帶, 就能做成簡易義肢.",
+    "cn": "就算没有手, 你仍然可以从木制物件上咬下木片. 这很痛, 也会损耗那个物件. 五块废木材加上一些管道胶带, 就能做成简易假肢."
    }
   },
   "Fluids.json": {
@@ -47910,9 +47965,9 @@
     "cn": "PVP"
    },
    "IGUI_PhunZones_Pvp_tooltip": {
-    "en": "Whether players can hurt each other here. Off makes this a safe zone. Leave it unset unless you mean it - as soon as any zone is set to on, everywhere else on the map becomes safe. Needs the server option PVP to be on, and applies to staff too: the check is on the tile, not the player",
-    "ch": "玩家在此是否能互相傷害. 關閉則此處成為安全區. 除非確定需要, 否則請保持未設定 - 只要任何區域設為開啟, 地圖上其他所有地方都會變成安全區. 需要伺服器選項 PVP 為開啟, 且對管理人員同樣適用: 檢查的是地格, 而非玩家",
-    "cn": "玩家在此是否能互相伤害. 关闭则此处成为安全区. 除非确定需要, 否则请保持未设置 - 只要任何区域设为开启, 地图上其他所有地方都会变成安全区. 需要服务器选项 PVP 为开启, 且对管理人员同样适用: 检查的是地块, 而非玩家"
+    "en": "Whether players can hurt each other here. Off makes this a safe zone. Leave it unset unless you mean it - as soon as any zone is set to on, everywhere else on the map becomes safe. Needs the server option PVP to be on, and applies to staff too: the check is on the tile, not the player. Off also stops explosives and fire working here, on zombies as well as players - that is the game's own rule for safe zones, not ours",
+    "ch": "玩家在此是否能互相傷害. 關閉則此處成為安全區. 除非確定需要, 否則請保持未設定 - 只要任何區域設為開啟, 地圖上其他所有地方都會變成安全區. 需要伺服器選項 PVP 為開啟, 且對管理人員同樣適用: 檢查的是地格, 而非玩家. 關閉時, 爆裂物與火焰在此處也會失效, 對殭屍和玩家皆然 - 這是遊戲本身對安全區的規則, 並非本模組所訂",
+    "cn": "玩家在此是否能互相伤害. 关闭则此处成为安全区. 除非确定需要, 否则请保持未设置 - 只要任何区域设为开启, 地图上其他所有地方都会变成安全区. 需要服务器选项 PVP 为开启, 且对管理人员同样适用: 检查的是地块, 而非玩家. 关闭时, 爆炸物和火焰在此处也会失效, 对僵尸和玩家都是如此 - 这是游戏本身对安全区的规则, 并非本模组所定"
    },
    "IGUI_perks_AmbidextrousSkill_Description": {
     "en": "Your effectiveness at using both hands",
@@ -81825,9 +81880,9 @@
     "cn": "修理"
    },
    "IGUI_RadArchery_SaveBreakNotice": {
-    "en": "<H2> RadArchery is taking SAVE-BREAKING changes <LINE> <LINE> <TEXT> Starting from version %1 (split %2), the main RadArchery mod may change item data in ways an existing save cannot safely follow. <LINE> <LINE> When %1 arrives, saves started before it may not survive the update. To keep playing one, switch it to \"%3\" (Steam Workshop id %4) BEFORE updating -- never run the two together, they define the same items. A save started on %1 or later is fine to keep on the main RadArchery mod, and it will keep getting every future update.",
-    "ch": "<H2> RadArchery 即將進行會破壞存檔的變更 <LINE> <LINE> <TEXT> 從版本 %1 (分支 %2) 起, RadArchery 主模組可能會以現有存檔無法安全承接的方式變更物品資料. <LINE> <LINE> 當 %1 推出時, 在此之前開始的存檔可能無法撐過這次更新. 若要繼續玩這類存檔, 請務必在更新「之前」將其切換至「%3」(Steam 工作坊 ID %4) -- 絕對不要同時啟用兩者, 它們定義了相同的物品. 在 %1 或之後開始的存檔可以繼續使用 RadArchery 主模組, 並會持續獲得所有後續更新.",
-    "cn": "<H2> RadArchery 即将进行会破坏存档的变更 <LINE> <LINE> <TEXT> 从版本 %1 (分支 %2) 起, RadArchery 主模组可能会以现有存档无法安全承接的方式更改物品数据. <LINE> <LINE> 当 %1 推出时, 在此之前开始的存档可能无法挺过这次更新. 若要继续玩这类存档, 请务必在更新“之前”将其切换至“%3”(Steam 创意工坊 ID %4) -- 绝对不要同时启用两者, 它们定义了相同的物品. 在 %1 或之后开始的存档可以继续使用 RadArchery 主模组, 并会持续获得所有后续更新."
+    "en": "<H2> RadArchery will not be getting more updates <LINE> <LINE> <TEXT> Sorry for the confusion caused by the last notice. <LINE> <LINE> This RadArchery mod is now frozen at version 1.9. You do not need to switch mods, unsubscribe or do anything -- your saves and servers keep working exactly as they are. <LINE> <LINE> When version %1 is ready, it will be released as a SEPARATE Steam Workshop mod. If you want to keep receiving updates, you can subscribe to it then -- watch this mod's Workshop page or the Discord for the link. Never run the two together: they define the same items.",
+    "ch": "<H2> RadArchery 將不再更新 <LINE> <LINE> <TEXT> 上一則公告造成了困惑, 在此致歉. <LINE> <LINE> 這個 RadArchery 模組現已凍結在 1.9 版. 你不需要更換模組、取消訂閱或做任何事 -- 你的存檔和伺服器都會一如往常地運作. <LINE> <LINE> 當版本 %1 準備就緒時, 它將以「另一個獨立的」Steam 工作坊模組發布. 如果你想繼續獲得更新, 屆時可以訂閱它 -- 連結請留意本模組的工作坊頁面或 Discord. 絕對不要同時啟用兩者: 它們定義了相同的物品.",
+    "cn": "<H2> RadArchery 将不再更新 <LINE> <LINE> <TEXT> 上一则公告造成了困惑, 在此致歉. <LINE> <LINE> 这个 RadArchery 模组现已冻结在 1.9 版. 你不需要更换模组、取消订阅或做任何事 -- 你的存档和服务器都会一如既往地运行. <LINE> <LINE> 当版本 %1 准备就绪时, 它将作为“另一个独立的” Steam 创意工坊模组发布. 如果你想继续获得更新, 届时可以订阅它 -- 链接请关注本模组的创意工坊页面或 Discord. 绝对不要同时启用两者: 它们定义了相同的物品."
    },
    "IGUI_RadArchery_SaveBreakNoticeDontShowAgain": {
     "en": "Don't show this again",
@@ -81835,9 +81890,9 @@
     "cn": "不再显示"
    },
    "IGUI_RadArchery_SaveBreakNoticeMP": {
-    "en": "On a multiplayer server, the HOST decides which version everyone plays on -- if this matters to you, talk to your server admin.",
-    "ch": "在多人伺服器上, 由主機決定所有人使用哪個版本 -- 如果你在意這點, 請與伺服器管理員溝通.",
-    "cn": "在多人服务器上, 由主机决定所有人使用哪个版本 -- 如果你在意这一点, 请与服务器管理员沟通."
+    "en": "On a multiplayer server nothing needs to change, for the host or for anyone else.",
+    "ch": "在多人伺服器上, 不論是主機還是其他任何人, 都不需要做任何變更.",
+    "cn": "在多人服务器上, 无论是主机还是其他任何人, 都不需要做任何更改."
    },
    "IGUI_perks_Fletching": {
     "en": "Fletching",
@@ -86274,11 +86329,6 @@
     "ch": "拉到附近 (修正小屋生成點)",
     "cn": "拉到附近 (修复小屋生成点)"
    },
-   "IGUI_RNPC_07ec6484": {
-    "en": "Take what they want from anyone who can't stop them.",
-    "ch": "從任何阻止不了他們的人手中奪走想要的東西.",
-    "cn": "从任何阻止不了他们的人手中夺走想要的东西."
-   },
    "IGUI_RNPC_0840c3ab": {
     "en": "Somebody new swore in with us %1.",
     "ch": "%1 有新人宣誓加入了我們.",
@@ -86333,11 +86383,6 @@
     "en": "You looked. Go back and tell them.",
     "ch": "你看過了. 回去告訴他們吧.",
     "cn": "你看过了. 回去告诉他们吧."
-   },
-   "IGUI_RNPC_10650913": {
-    "en": "There's a pack of the dead near %1. Put down %2 of them and we'll call it square.",
-    "ch": "%1 附近有一群死人. 解決掉其中 %2 隻, 我們就算扯平.",
-    "cn": "%1 附近有一群死人. 干掉其中 %2 只, 我们就算扯平."
    },
    "IGUI_RNPC_117ae60e": {
     "en": "You are one of us.",
@@ -86394,21 +86439,6 @@
     "ch": "錢是我們的. 其他東西也是.",
     "cn": "钱是我们的. 其他东西也是."
    },
-   "IGUI_RNPC_16e95140": {
-    "en": "Keeping it together. Mostly.",
-    "ch": "還撐得住. 大致上.",
-    "cn": "还撑得住. 大体上."
-   },
-   "IGUI_RNPC_1750b7f8": {
-    "en": "Nobody walks with you. Recruit someone first.",
-    "ch": "沒有人跟著你. 先招募一個人吧.",
-    "cn": "没有人跟着你. 先招募一个人吧."
-   },
-   "IGUI_RNPC_19b4b052": {
-    "en": "The %1 are short of %2. Take this lot to any of theirs. Don't get ideas.",
-    "ch": "%1 缺 %2. 把這批東西帶給他們任何一人. 別打歪主意.",
-    "cn": "%1 缺 %2. 把这批东西带给他们任何一人. 别打歪主意."
-   },
    "IGUI_RNPC_1a34302d": {
     "en": "Wrong street, dipshit.",
     "ch": "走錯街了, 蠢貨.",
@@ -86443,11 +86473,6 @@
     "en": "%1 got bit near %2 and turned, %3. We had to leave them.",
     "ch": "%1 在 %2 附近被咬後屍變了, %3. 我們只能丟下對方.",
     "cn": "%1 在 %2 附近被咬后尸变了, %3. 我们只能丢下对方."
-   },
-   "IGUI_RNPC_1e8b27e8": {
-    "en": "It's nothing. Mostly.",
-    "ch": "沒什麼. 大致上.",
-    "cn": "没什么. 大体上."
    },
    "IGUI_RNPC_1f9a9ee5": {
     "en": "Hey, it's you. Get in here.",
@@ -86489,11 +86514,6 @@
     "ch": "你能撐到現在. 這代表了些什麼.",
     "cn": "你能撑到现在. 这说明了些什么."
    },
-   "IGUI_RNPC_24f31320": {
-    "en": "Grow food out past the towns. Want to be left alone to do it.",
-    "ch": "在城鎮外頭種糧食. 只想做這件事時別被人打擾.",
-    "cn": "在城镇外头种粮食. 只想安安静静地干这件事."
-   },
    "IGUI_RNPC_2616c0bf": {
     "en": "They're coming.",
     "ch": "他們來了.",
@@ -86509,11 +86529,6 @@
     "ch": "幾天前",
     "cn": "几天前"
    },
-   "IGUI_RNPC_2805a2b6": {
-    "en": "I'm done. I'm out.",
-    "ch": "我受夠了. 我不幹了.",
-    "cn": "我受够了. 我不干了."
-   },
    "IGUI_RNPC_28ace7dd": {
     "en": "Get your ass down!",
     "ch": "給我趴下!",
@@ -86523,11 +86538,6 @@
     "en": "We are still waiting.",
     "ch": "我們還在等.",
     "cn": "我们还在等."
-   },
-   "IGUI_RNPC_29c078b1": {
-    "en": "Not yet. Walk beside us a while longer.",
-    "ch": "還不行. 再跟我們走一段時間吧.",
-    "cn": "还不行. 再跟我们走一段时间吧."
    },
    "IGUI_RNPC_29c22099": {
     "en": "Reputation",
@@ -86548,11 +86558,6 @@
     "en": "Need anything, just holler.",
     "ch": "需要什麼就喊一聲.",
     "cn": "需要什么就喊一声."
-   },
-   "IGUI_RNPC_2b686585": {
-    "en": "One of our own turned on us %1. We don't forget.",
-    "ch": "%1 我們自己人背叛了我們. 我們不會忘記.",
-    "cn": "%1 我们自己人背叛了我们. 我们不会忘记."
    },
    "IGUI_RNPC_2be21308": {
     "en": "Changes apply to people who join from now on.",
@@ -86619,11 +86624,6 @@
     "ch": "噓. 安靜一下.",
     "cn": "嘘. 安静一下."
    },
-   "IGUI_RNPC_31839d90": {
-    "en": "Banged up, but on their feet.",
-    "ch": "傷痕累累, 但還站得起來.",
-    "cn": "伤痕累累, 但还站得起来."
-   },
    "IGUI_RNPC_31c29f6c": {
     "en": "Wipe your feet.",
     "ch": "把腳擦乾淨.",
@@ -86658,16 +86658,6 @@
     "en": "Not today.",
     "ch": "今天不行.",
     "cn": "今天不行."
-   },
-   "IGUI_RNPC_338ac90f": {
-    "en": "You're one of them. Trusted.",
-    "ch": "你是他們的一份子. 值得信任.",
-    "cn": "你是他们的一员. 值得信任."
-   },
-   "IGUI_RNPC_33b55d32": {
-    "en": "Go in peace. The door will not open again soon.",
-    "ch": "平安地走吧. 這扇門短時間內不會再開了.",
-    "cn": "平安地走吧. 这扇门短时间内不会再开了."
    },
    "IGUI_RNPC_33cfb59f": {
     "en": "Clean that cut before it goes bad.",
@@ -86724,20 +86714,10 @@
     "ch": "你對我們很夠意思. 哪天想加入, 說一聲就行.",
     "cn": "你对我们很够意思. 哪天想加入, 说一声就行."
    },
-   "IGUI_RNPC_3b900bb1": {
-    "en": "That's it. That's theirs. Thank you. Here.",
-    "ch": "就是這個. 這是他們的. 謝謝你. 拿著.",
-    "cn": "就是这个. 这是他们的. 谢谢你. 拿着."
-   },
    "IGUI_RNPC_3bfdb20d": {
     "en": "The hell was that?",
     "ch": "剛剛那是什麼鬼?",
     "cn": "刚才那是什么鬼?"
-   },
-   "IGUI_RNPC_3c823c01": {
-    "en": "Grey in the face and sweating. Not good.",
-    "ch": "臉色發灰還在冒汗. 不太妙.",
-    "cn": "脸色发灰还在冒汗. 不太妙."
    },
    "IGUI_RNPC_3c9f2307": {
     "en": "Not through here with that out.",
@@ -86768,21 +86748,6 @@
     "en": "Better than mine.",
     "ch": "比我的好.",
     "cn": "比我的好."
-   },
-   "IGUI_RNPC_3ed0622a": {
-    "en": "Armed locals who decided the roads are theirs to keep.",
-    "ch": "一群武裝的當地人, 認定這些道路歸他們所有.",
-    "cn": "一群武装的当地人, 认定这些道路归他们所有."
-   },
-   "IGUI_RNPC_400a3234": {
-    "en": "Their place got hit lately. Everyone's on edge.",
-    "ch": "他們的地方最近遭到襲擊. 大家都很緊張.",
-    "cn": "他们的地方最近遭到袭击. 大家都很紧张."
-   },
-   "IGUI_RNPC_4083a59d": {
-    "en": "Kept the station running. They'll help if they can.",
-    "ch": "一直維持著站點運作. 能幫的話他們會幫.",
-    "cn": "一直维持着站点运转. 能帮的话他们会帮."
    },
    "IGUI_RNPC_4150198e": {
     "en": "Their table (what they can spare)",
@@ -86853,11 +86818,6 @@
     "en": "You are one of us already. Leaving has a price.",
     "ch": "你已經是我們的一份子了. 離開是要付出代價的.",
     "cn": "你已经是我们的一员了. 离开是要付出代价的."
-   },
-   "IGUI_RNPC_4599216d": {
-    "en": "%1 of the %2 led the raid on us. There must be an answer.",
-    "ch": "%2 的 %1 帶頭襲擊了我們. 必須有所回應.",
-    "cn": "%2 的 %1 带头袭击了我们. 必须有所回应."
    },
    "IGUI_RNPC_46c4a0ee": {
     "en": "Recruit %1",
@@ -86974,11 +86934,6 @@
     "ch": "可惡. 謝了.",
     "cn": "靠. 谢了."
    },
-   "IGUI_RNPC_55363299": {
-    "en": "%1 didn't come back from near %2. Their %3 is still out there on them. Bring it home.",
-    "ch": "%1 沒能從 %2 附近回來. 那人的 %3 還在身上. 把它帶回家.",
-    "cn": "%1 没能从 %2 附近回来. 那人的 %3 还在身上. 把它带回家."
-   },
    "IGUI_RNPC_56330271": {
     "en": "Spawn 2 %1 here",
     "ch": "在此生成 2 名 %1",
@@ -86993,11 +86948,6 @@
     "en": "Thanks. Now hold still.",
     "ch": "謝了. 現在別亂動.",
     "cn": "谢了. 现在别乱动."
-   },
-   "IGUI_RNPC_56f11821": {
-    "en": "I could eat. I could really eat.",
-    "ch": "我想吃點東西. 真的好想吃.",
-    "cn": "我想吃点东西. 真的好想吃."
    },
    "IGUI_RNPC_5703652a": {
     "en": "(tracking)",
@@ -87119,11 +87069,6 @@
     "ch": "沒有.",
     "cn": "没有."
    },
-   "IGUI_RNPC_6318e8d6": {
-    "en": "You turned from us. Not yet.",
-    "ch": "你背棄過我們. 還不行.",
-    "cn": "你背弃过我们. 还不行."
-   },
    "IGUI_RNPC_642b87c0": {
     "en": "Weapons and ammo",
     "ch": "武器與彈藥",
@@ -87134,11 +87079,6 @@
     "ch": "我們上次吃東西是什麼時候?",
     "cn": "我们上次吃东西是什么时候?"
    },
-   "IGUI_RNPC_647c4399": {
-    "en": "Our people do not come back from near %1. Go and see, and come back to us.",
-    "ch": "我們的人從 %1 附近都沒回來. 去看看, 然後回到我們這裡.",
-    "cn": "我们的人从 %1 附近都没回来. 去看看, 然后回到我们这里."
-   },
    "IGUI_RNPC_65652611": {
     "en": "Picked this block clean already, sorry.",
     "ch": "這個街區已經被我搜刮光了, 抱歉.",
@@ -87148,11 +87088,6 @@
     "en": "So be it.",
     "ch": "那就這樣吧.",
     "cn": "那就这样吧."
-   },
-   "IGUI_RNPC_68cbe2d7": {
-    "en": "Nothing taken on. Ask around for work.",
-    "ch": "目前沒有接下任何任務. 四處問問有沒有工作.",
-    "cn": "目前没有接下任何任务. 四处问问有没有活儿干."
    },
    "IGUI_RNPC_697435af": {
     "en": "Can I join you?",
@@ -87219,16 +87154,6 @@
     "ch": "先標出東西要放哪: 食物、醫療、武器、工具.",
     "cn": "先标出东西要放哪: 食物、医疗、武器、工具."
    },
-   "IGUI_RNPC_6ed66b2a": {
-    "en": "Tired, like everyone.",
-    "ch": "很累, 跟大家一樣.",
-    "cn": "很累, 跟大家一样."
-   },
-   "IGUI_RNPC_6f92bdb5": {
-    "en": "Watching you like they watch everyone.",
-    "ch": "像盯著所有人一樣盯著你.",
-    "cn": "像盯着所有人一样盯着你."
-   },
    "IGUI_RNPC_6fb726af": {
     "en": "Got it.",
     "ch": "知道了.",
@@ -87248,11 +87173,6 @@
     "en": "Their own",
     "ch": "自己人",
     "cn": "自己人"
-   },
-   "IGUI_RNPC_727f49e3": {
-    "en": "Hit camps and caravans. Anyone with food is a target.",
-    "ch": "襲擊營地和車隊. 有食物的人都是目標.",
-    "cn": "袭击营地和车队. 有食物的人都是目标."
    },
    "IGUI_RNPC_72ac45c2": {
     "en": "You got batteries? I'll trade you for batteries.",
@@ -87289,20 +87209,10 @@
     "ch": "%1 死了. 回去告訴他們.",
     "cn": "%1 死了. 回去告诉他们."
    },
-   "IGUI_RNPC_7684eb85": {
-    "en": "Just a scratch. Mostly.",
-    "ch": "只是擦傷. 大概吧.",
-    "cn": "只是擦伤. 大概吧."
-   },
    "IGUI_RNPC_769dc107": {
     "en": "Biter!",
     "ch": "有咬人的!",
     "cn": "有咬人的!"
-   },
-   "IGUI_RNPC_77768692": {
-    "en": "%1 fell near %2. Their %3 lies with them. Bring it back to us.",
-    "ch": "%1 倒在 %2 附近. 那人的 %3 就在身邊. 把它帶回來給我們.",
-    "cn": "%1 倒在 %2 附近. 那人的 %3 就在身边. 把它带回来给我们."
    },
    "IGUI_RNPC_778494b6": {
     "en": "You're not welcome here. Fuck off.",
@@ -87334,11 +87244,6 @@
     "ch": "進來後把大門關上.",
     "cn": "进来后把大门关上."
    },
-   "IGUI_RNPC_7a398948": {
-    "en": "Travel alone or in pairs. Trust nobody for long.",
-    "ch": "獨自或兩人結伴行動. 別長久信任任何人.",
-    "cn": "独自或两人结伴行动. 别长久信任任何人."
-   },
    "IGUI_RNPC_7a5ef626": {
     "en": "Piss off.",
     "ch": "滾開.",
@@ -87368,11 +87273,6 @@
     "en": "You're one of them.",
     "ch": "你是他們的人.",
     "cn": "你是他们的人."
-   },
-   "IGUI_RNPC_7c856b13": {
-    "en": "Hurt, and not hiding it well.",
-    "ch": "受傷了, 而且藏不太住.",
-    "cn": "受伤了, 而且藏不太住."
    },
    "IGUI_RNPC_7cb45c33": {
     "en": "%1 patrols",
@@ -87444,11 +87344,6 @@
     "ch": "使用中",
     "cn": "使用中"
    },
-   "IGUI_RNPC_8384f820": {
-    "en": "Still bleeding. Just so you know.",
-    "ch": "還在流血. 跟你說一聲.",
-    "cn": "还在流血. 跟你说一声."
-   },
    "IGUI_RNPC_83e5b431": {
     "en": "Can add",
     "ch": "可加入",
@@ -87484,11 +87379,6 @@
     "ch": " 物資與戰利品",
     "cn": " 物资与战利品"
    },
-   "IGUI_RNPC_882594f4": {
-    "en": "The %1 are in need of %2. Carry these to any of them, and keep faith.",
-    "ch": "%1 需要 %2. 把這些帶給他們任何一人, 並保持信念.",
-    "cn": "%1 需要 %2. 把这些带给他们任何一人, 并保持信念."
-   },
    "IGUI_RNPC_8afba468": {
     "en": "Just passing through. Don't make it weird.",
     "ch": "只是路過. 別搞得很尷尬.",
@@ -87498,11 +87388,6 @@
     "en": "Raiders: always hostile, standing does not apply.",
     "ch": "掠奪者: 永遠敵對, 不受聲望影響.",
     "cn": "掠夺者: 永远敌对, 不受声望影响."
-   },
-   "IGUI_RNPC_8cb79a02": {
-    "en": "What's left of the county police. They still think there's a law.",
-    "ch": "縣警察的殘部. 他們還以為法律存在.",
-    "cn": "县警察的残部. 他们还以为法律存在."
    },
    "IGUI_RNPC_8d444f05": {
     "en": "Orders",
@@ -87528,11 +87413,6 @@
     "en": "Shit. Nothing.",
     "ch": "可惡. 什麼都沒有.",
     "cn": "可恶. 什么都没有."
-   },
-   "IGUI_RNPC_8fcd317b": {
-    "en": "Is it hot? It's hot.",
-    "ch": "很熱嗎? 真熱.",
-    "cn": "很热吗? 真热."
    },
    "IGUI_RNPC_90da8c9a": {
     "en": "Quiet.",
@@ -87564,11 +87444,6 @@
     "ch": "不是這裡. 不是這樣.",
     "cn": "不是这里. 不是这样."
    },
-   "IGUI_RNPC_94faadea": {
-    "en": "Think this is the end they were promised. Polite, until they aren't.",
-    "ch": "認為這就是他們被應許的末日. 很有禮貌, 直到他們不再有禮貌.",
-    "cn": "认为这就是他们被应许的末日. 很有礼貌, 直到他们不再有礼貌."
-   },
    "IGUI_RNPC_95443248": {
     "en": "Running dry here.",
     "ch": "我的子彈快用完了.",
@@ -87594,20 +87469,10 @@
     "ch": "我這樣撐不了多久.",
     "cn": "我这样撑不了多久."
    },
-   "IGUI_RNPC_97442fd4": {
-    "en": "You are one of us, and trusted.",
-    "ch": "你是我們的一員, 並且受到信任.",
-    "cn": "你是我们的一员, 并且受到信任."
-   },
    "IGUI_RNPC_976bc25d": {
     "en": "sorting the stores",
     "ch": "正在整理物資",
     "cn": "正在整理物资"
-   },
-   "IGUI_RNPC_97f5f64a": {
-    "en": "They walk with you.",
-    "ch": "對方與你同行.",
-    "cn": "对方与你同行."
    },
    "IGUI_RNPC_9912036b": {
     "en": "Default standing",
@@ -87659,11 +87524,6 @@
     "ch": "解散 %1",
     "cn": "解散 %1"
    },
-   "IGUI_RNPC_9dd49cb7": {
-    "en": "Thin. Their people are short of food.",
-    "ch": "消瘦. 他們的人缺糧.",
-    "cn": "消瘦. 他们的人缺粮."
-   },
    "IGUI_RNPC_9e36dce1": {
     "en": "Changing mag!",
     "ch": "換彈匣!",
@@ -87704,11 +87564,6 @@
     "ch": "等等. 正在裝填.",
     "cn": "等等. 正在装填."
    },
-   "IGUI_RNPC_a234c91d": {
-    "en": "Not something they'll do here.",
-    "ch": "他們不會在這裡這麼做.",
-    "cn": "他们不会在这里这么做."
-   },
    "IGUI_RNPC_a275686d": {
     "en": "%1 follows you",
     "ch": "%1 跟隨你",
@@ -87739,20 +87594,10 @@
     "ch": "跟我來",
     "cn": "跟我来"
    },
-   "IGUI_RNPC_a54c4d46": {
-    "en": "Still breathing? Me too. Barely.",
-    "ch": "還有氣嗎? 我也是. 勉強而已.",
-    "cn": "还有气吗? 我也是. 勉强而已."
-   },
    "IGUI_RNPC_a551bb98": {
     "en": "Empty your pockets. Slow.",
     "ch": "把口袋掏空. 慢慢來.",
     "cn": "把口袋掏空. 慢慢来."
-   },
-   "IGUI_RNPC_a58792e0": {
-    "en": "Gone. For now.",
-    "ch": "走了. 暫時.",
-    "cn": "走了. 暂时."
    },
    "IGUI_RNPC_a5e84e8b": {
     "en": "Walker!",
@@ -87808,11 +87653,6 @@
     "en": "%1 goes looting for you",
     "ch": "%1 去為你搜刮",
     "cn": "%1 去为你搜刮"
-   },
-   "IGUI_RNPC_abb02679": {
-    "en": "You kept your word. Here is ours.",
-    "ch": "你信守了承諾. 這是我們的回報.",
-    "cn": "你信守了承诺. 这是我们的回报."
    },
    "IGUI_RNPC_ace12ace": {
     "en": "Health: %1",
@@ -87874,11 +87714,6 @@
     "ch": "你已經是我們的人了. 想退出? 得付出代價.",
     "cn": "你已经是我们的人了. 想退出? 得付出代价."
    },
-   "IGUI_RNPC_b4040ee8": {
-    "en": "Doctors and nurses who never stopped working. Always short of supplies.",
-    "ch": "從未停止工作的醫生和護士. 總是缺乏物資.",
-    "cn": "从未停止工作的医生和护士. 总是缺乏物资."
-   },
    "IGUI_RNPC_b43e8c7e": {
     "en": "Who did this?",
     "ch": "這是誰幹的?",
@@ -87898,11 +87733,6 @@
     "en": "Tools and fuel",
     "ch": "工具與燃料",
     "cn": "工具与燃料"
-   },
-   "IGUI_RNPC_b9ef3689": {
-    "en": "Welcome. We keep faith with our own, and so will you.",
-    "ch": "歡迎. 我們對自己人守信, 你也一樣.",
-    "cn": "欢迎. 我们对自己人守信, 你也一样."
    },
    "IGUI_RNPC_bc93fb7a": {
     "en": "Only in a house you claimed.",
@@ -87934,11 +87764,6 @@
     "ch": "一棟房屋的標記已經夠多了.",
     "cn": "一栋房屋的标记已经够多了."
    },
-   "IGUI_RNPC_c0eee240": {
-    "en": "Soldiers cut off from their units. Well armed, short on patience.",
-    "ch": "與部隊失聯的士兵. 武裝精良, 缺乏耐心.",
-    "cn": "与部队失联的士兵. 武装精良, 缺乏耐心."
-   },
    "IGUI_RNPC_c1f13bb1": {
     "en": "Pull a group toward you",
     "ch": "把一群人拉到你身邊",
@@ -87953,11 +87778,6 @@
     "en": "Keep it that way. Go.",
     "ch": "保持這樣. 走吧.",
     "cn": "保持这样. 走吧."
-   },
-   "IGUI_RNPC_c2fceab1": {
-    "en": "Ordinary people who lived through it. Heads down, trading what they can.",
-    "ch": "撐過來的普通人. 低調行事, 能換什麼就換什麼.",
-    "cn": "撑过来的普通人. 低调行事, 能换什么就换什么."
    },
    "IGUI_RNPC_c3389765": {
     "en": "The %1 hit our place %2. We held.",
@@ -87979,11 +87799,6 @@
     "ch": "等等, 等等, 換彈中!",
     "cn": "等等, 等等, 换弹中!"
    },
-   "IGUI_RNPC_c43a98bb": {
-    "en": "The %1 sold us out %2. Won't happen twice.",
-    "ch": "%1 %2 出賣了我們. 不會有第二次.",
-    "cn": "%1 %2 出卖了我们. 不会有第二次."
-   },
    "IGUI_RNPC_c480635f": {
     "en": "New members: ",
     "ch": "新成員: ",
@@ -88003,11 +87818,6 @@
     "en": "Easy. Easy now.",
     "ch": "放輕鬆. 放輕鬆.",
     "cn": "放轻松. 放轻松."
-   },
-   "IGUI_RNPC_c6d45db7": {
-    "en": "Back from hitting the %1.",
-    "ch": "剛襲擊完 %1 回來.",
-    "cn": "刚袭击完 %1 回来."
    },
    "IGUI_RNPC_c732b89a": {
     "en": "Shit, shit, shit. Okay. Okay.",
@@ -88094,11 +87904,6 @@
     "ch": "把槍收進槍套, 不然就掉頭.",
     "cn": "把枪收进枪套, 不然就掉头."
    },
-   "IGUI_RNPC_d53cb0a5": {
-    "en": "You brought them home. Bless you.",
-    "ch": "你帶他們回家了. 願主保佑你.",
-    "cn": "你带他们回家了. 愿主保佑你."
-   },
    "IGUI_RNPC_d569e551": {
     "en": "I need to sit down a minute.",
     "ch": "我需要坐下來歇一會兒.",
@@ -88139,11 +87944,6 @@
     "ch": "你有聽到嗎?",
     "cn": "你听到了吗?"
    },
-   "IGUI_RNPC_d835e180": {
-    "en": "Fine. Go on, then. Don't come crawling back.",
-    "ch": "好. 那就走吧. 別再爬回來求我們.",
-    "cn": "好. 那就走吧. 别再爬回来求我们."
-   },
    "IGUI_RNPC_d83dcd02": {
     "en": "I spoke to them this morning.",
     "ch": "我今天早上還跟他們說過話.",
@@ -88159,11 +87959,6 @@
     "ch": "願意的話, 和我們一起禱告. 不願意也行.",
     "cn": "愿意的话, 和我们一起祷告. 不愿意也行."
    },
-   "IGUI_RNPC_d9e81f78": {
-    "en": "Pick the towns clean and sell what they find.",
-    "ch": "把城鎮搜刮一空, 再賣掉找到的東西.",
-    "cn": "把城镇搜刮一空, 再卖掉找到的东西."
-   },
    "IGUI_RNPC_d9f6cddc": {
     "en": "Somebody's gonna pay for this.",
     "ch": "總得有人為此付出代價.",
@@ -88174,11 +87969,6 @@
     "ch": "帶來 %1 %2.",
     "cn": "带来 %1 %2."
    },
-   "IGUI_RNPC_dbb48d5d": {
-    "en": "From the %1? A kindness. Tell them we are grateful.",
-    "ch": "來自 %1? 真是好意. 替我們轉達感謝.",
-    "cn": "来自 %1? 真是好意. 替我们转达感谢."
-   },
    "IGUI_RNPC_dc65bed9": {
     "en": "Nothing yet.",
     "ch": "還沒有.",
@@ -88188,11 +87978,6 @@
     "en": "Take them.",
     "ch": "拿去吧.",
     "cn": "拿去吧."
-   },
-   "IGUI_RNPC_ddc8a341": {
-    "en": "Stomach's been at me for a mile.",
-    "ch": "肚子已經叫了一路了.",
-    "cn": "肚子已经叫了一路了."
    },
    "IGUI_RNPC_de7ec073": {
     "en": "somewhere",
@@ -88248,11 +88033,6 @@
     "en": "Put it down. You don't want this on you.",
     "ch": "放下. 你不會想帶著這東西的.",
     "cn": "放下. 你不会想带着这东西的."
-   },
-   "IGUI_RNPC_e851b689": {
-    "en": "The dead gather near %1. Lay %2 of them to rest.",
-    "ch": "死者聚集在%1附近. 讓其中%2個安息.",
-    "cn": "死者聚集在%1附近. 让其中%2个安息."
    },
    "IGUI_RNPC_e852fe06": {
     "en": "Eyes open.",
@@ -88329,20 +88109,10 @@
     "ch": "真大方. 可惜了.",
     "cn": "真大方. 可惜了."
    },
-   "IGUI_RNPC_ed818fdc": {
-    "en": "%1 of the %2 led the raid on us. Find them. Make it right.",
-    "ch": "%2的%1帶頭襲擊了我們. 找到他們. 討回公道.",
-    "cn": "%2的%1带头袭击了我们. 找到他们. 讨回公道."
-   },
    "IGUI_RNPC_ee0914f8": {
     "en": "Checkpoint: put your weapon away to go through.",
     "ch": "檢查哨: 收起武器才能放行.",
     "cn": "检查站: 收起武器才能通过."
-   },
-   "IGUI_RNPC_ee6e13d7": {
-    "en": "If you find ammo, it's mine.",
-    "ch": "你找到彈藥的話, 歸我.",
-    "cn": "你找到弹药的话, 归我."
    },
    "IGUI_RNPC_ee7acd1a": {
     "en": "From the %1? Hell, that'll help. Tell them thanks.",
@@ -88384,11 +88154,6 @@
     "ch": "蠢蛋.",
     "cn": "傻瓜."
    },
-   "IGUI_RNPC_f3f7693e": {
-    "en": "On your map.",
-    "ch": "在你的地圖上.",
-    "cn": "在你的地图上."
-   },
    "IGUI_RNPC_f53938ab": {
     "en": "Watch where you're stepping, that's beans.",
     "ch": "走路看著點, 那是豆子.",
@@ -88398,11 +88163,6 @@
     "en": "You hear that?",
     "ch": "你聽到了嗎?",
     "cn": "你听到了吗?"
-   },
-   "IGUI_RNPC_f6ebcdb3": {
-    "en": "Swear in",
-    "ch": "宣誓加入",
-    "cn": "宣誓加入"
    },
    "IGUI_RNPC_f73845ed": {
     "en": "Found you.",
@@ -88464,20 +88224,10 @@
     "ch": "給我躺好.",
     "cn": "给我躺着."
    },
-   "IGUI_RNPC_fcd685ca": {
-    "en": "%1 starved out near %2, %3.",
-    "ch": "%1在%2附近餓死了, %3.",
-    "cn": "%1在%2附近饿死了, %3."
-   },
    "IGUI_RNPC_fda7cba0": {
     "en": "You again. Good.",
     "ch": "又是你. 很好.",
     "cn": "又是你. 很好."
-   },
-   "IGUI_RNPC_fde522d6": {
-    "en": "Then swear it, and you are one of us. We keep faith with our own.",
-    "ch": "那就宣誓吧, 你就是我們的一員. 我們對自己人守信.",
-    "cn": "那就宣誓吧, 你就是我们的一员. 我们对自己人守信."
    },
    "IGUI_RNPC_fde873ed": {
     "en": "We went after the %1 %2. Didn't go our way.",
@@ -88865,9 +88615,9 @@
     "cn": "强制"
    },
    "IGUI_RPGInventory_ForceTip": {
-    "en": "Keep Proximity Inventory open and at the top.",
-    "ch": "讓鄰近物品欄保持開啟並置頂.",
-    "cn": "让附近物品栏保持打开并置顶."
+    "en": "Keep Proximity Inventory open and at the top of the container list.",
+    "ch": "讓鄰近物品欄保持開啟, 並置於容器清單頂端.",
+    "cn": "让附近物品栏保持打开, 并置于容器列表顶部."
    },
    "IGUI_RPGInventory_FreeHands": {
     "en": "Empty hands",
@@ -89150,7 +88900,7 @@
     "cn": "所有符合条件的物品"
    },
    "IGUI_RPGInventory_RuleAllTip": {
-    "en": "Transfer all eligible items, respecting native protections and capacity.",
+    "en": "Transfer all eligible items, respecting the game's protections and capacity limits.",
     "ch": "轉移所有符合條件的物品, 遵守原版保護機制與容量限制.",
     "cn": "转移所有符合条件的物品, 遵守原版保护机制与容量限制."
    },
@@ -89160,9 +88910,9 @@
     "cn": "相同类别"
    },
    "IGUI_RPGInventory_RuleCategoryTip": {
-    "en": "Transfer categories already present in this destination.",
-    "ch": "轉移目的地中已有的類別.",
-    "cn": "转移目的地中已有的类别."
+    "en": "Transfer items from categories already present at this destination.",
+    "ch": "轉移目的地中已有類別的物品.",
+    "cn": "转移目的地中已有类别的物品."
    },
    "IGUI_RPGInventory_RuleCustom": {
     "en": "Custom",
@@ -89180,9 +88930,9 @@
     "cn": "相同物品"
    },
    "IGUI_RPGInventory_RuleSameTip": {
-    "en": "Transfer types already present in this destination.",
-    "ch": "轉移目的地中已有的物品種類.",
-    "cn": "转移目的地中已有的物品种类."
+    "en": "Transfer items of types already present at this destination.",
+    "ch": "轉移目的地中已有種類的物品.",
+    "cn": "转移目的地中已有种类的物品."
    },
    "IGUI_RPGInventory_RulesAll": {
     "en": "All",
@@ -89205,9 +88955,9 @@
     "cn": "应用至 %1 个可用容器. 将跳过 %2 个无法使用的容器; 将鼠标悬停在“应用”上查看详情."
    },
    "IGUI_RPGInventory_RulesBatch": {
-    "en": "Apply to %1 real containers · partial states may differ",
-    "ch": "套用至 %1 個實際容器 · 部分狀態可能不同",
-    "cn": "应用至 %1 个实际容器 · 部分状态可能不同"
+    "en": "Apply to %1 containers · their rules may differ",
+    "ch": "套用至 %1 個容器 · 各容器的規則可能不同",
+    "cn": "应用至 %1 个容器 · 各容器的规则可能不同"
    },
    "IGUI_RPGInventory_RulesCancel": {
     "en": "Cancel",
@@ -100851,7 +100601,7 @@
    },
    "IGUI_CU_Howto_Prosthetic_Title": {
     "en": "Fitting a prosthetic",
-    "ch": "裝上假肢",
+    "ch": "裝上義肢",
     "cn": "装上假肢"
    },
    "IGUI_CU_Howto_Prosthetic_Watch": {
@@ -101386,7 +101136,7 @@
    },
    "IGUI_CU_MG_Action_CUFitProstheticAction": {
     "en": "Prosthetic",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "IGUI_CU_MG_Action_CUProcedureAction": {
@@ -101396,7 +101146,7 @@
    },
    "IGUI_CU_MG_Action_CURemoveProstheticAction": {
     "en": "Prosthetic",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "IGUI_CU_MG_Action_CUSelfHarmAction": {
@@ -102131,7 +101881,7 @@
    },
    "IGUI_CU_MG_Common_Prosthetic": {
     "en": "Prosthetic",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "IGUI_CU_MG_Common_Quality": {
@@ -102771,7 +102521,7 @@
    },
    "IGUI_CU_MG_Prosthetic_FitTheProsthetic": {
     "en": "Fit the prosthetic.",
-    "ch": "裝上假肢.",
+    "ch": "裝上義肢.",
     "cn": "装上假肢."
    },
    "IGUI_CU_MG_Prosthetic_HoldTheSocketAndDrawItOff": {
@@ -102836,7 +102586,7 @@
    },
    "IGUI_CU_MG_Prosthetic_TakeTheProstheticOff": {
     "en": "Take the prosthetic off.",
-    "ch": "取下假肢.",
+    "ch": "取下義肢.",
     "cn": "取下假肢."
    },
    "IGUI_CU_MG_Prosthetic_ThenDrawTheSocketOffTheStump": {
@@ -103901,7 +103651,7 @@
    },
    "IGUI_CU_Stump_Prosthetic": {
     "en": "Amputated %1: prosthetic fitted",
-    "ch": "%1已截肢: 已裝上假肢",
+    "ch": "%1已截肢: 已裝上義肢",
     "cn": "%1已截肢: 已装上假肢"
    },
    "IGUI_CU_Stump_Sealed": {
@@ -104076,8 +103826,1163 @@
    },
    "IGUI_perks_Prosthetics": {
     "en": "Prosthetics",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
+   },
+   "IGUI_PhunZones_ALife": {
+    "en": "A-Life NPCs",
+    "ch": "A-Life NPC",
+    "cn": "A-Life NPC"
+   },
+   "IGUI_PhunZones_ALife_tooltip": {
+    "en": "Requires the Project A-Life NPCs mod. Block Spawns stops A-Life NPCs spawning in this zone; any that walk in, such as friendly ones, are left alone. A-Life NPCs are never moved or removed by the Zeds setting",
+    "ch": "需要 Project A-Life NPCs 模組. 「阻止生成」會讓 A-Life NPC 不在此區域生成; 自行走進來的 NPC (例如友善的 NPC) 則不受影響. 「殭屍」設定永遠不會移出或移除 A-Life NPC",
+    "cn": "需要 Project A-Life NPCs 模组. “阻止生成”会阻止 A-Life NPC 在此区域生成; 自行走进来的 NPC (例如友好的 NPC) 则不受影响. “僵尸”设置永远不会移出或移除 A-Life NPC"
+   },
+   "IGUI_PhunZones_MapBorder": {
+    "en": "Map Border",
+    "ch": "地圖邊框",
+    "cn": "地图边框"
+   },
+   "IGUI_PhunZones_MapBorder_tooltip": {
+    "en": "Colour of this zone's outline on the player's map and minimap, e.g. #FF8000 or 255,128,0. Leave empty for no outline",
+    "ch": "此區域在玩家地圖與小地圖上的外框顏色, 例如 #FF8000 或 255,128,0. 留空則不顯示外框",
+    "cn": "此区域在玩家地图和小地图上的轮廓颜色, 例如 #FF8000 或 255,128,0. 留空则不显示轮廓"
+   },
+   "IGUI_PhunZones_MapFill": {
+    "en": "Map Fill",
+    "ch": "地圖填色",
+    "cn": "地图填充"
+   },
+   "IGUI_PhunZones_MapFill_tooltip": {
+    "en": "Colour this zone is shaded with on the player's map and minimap, e.g. #FF8000 or 255,128,0. Leave empty for no shading",
+    "ch": "此區域在玩家地圖與小地圖上的填充顏色, 例如 #FF8000 或 255,128,0. 留空則不填色",
+    "cn": "此区域在玩家地图和小地图上的填充颜色, 例如 #FF8000 或 255,128,0. 留空则不填充"
+   },
+   "IGUI_PhunZones_MapOpacity": {
+    "en": "Map Fill Opacity",
+    "ch": "地圖填色不透明度",
+    "cn": "地图填充不透明度"
+   },
+   "IGUI_PhunZones_MapOpacity_tooltip": {
+    "en": "How opaque the map fill is, from 0 (invisible) to 100 (solid). Defaults to 30 when a fill colour is set",
+    "ch": "地圖填色的不透明程度, 從 0 (完全透明) 到 100 (完全不透明). 設定填充顏色時預設為 30",
+    "cn": "地图填充的不透明程度, 从 0 (完全透明) 到 100 (完全不透明). 设置填充颜色时默认为 30"
+   },
+   "IGUI_PhunZones_ZedAction_MoveSpawn": {
+    "en": "Move Spawns Out (allow wandering)",
+    "ch": "生成時移出 (允許遊蕩進入)",
+    "cn": "生成时移出 (允许游荡进入)"
+   },
+   "IGUI_PhunZones_ZedAction_NoSpawn": {
+    "en": "Block Spawns",
+    "ch": "阻止生成",
+    "cn": "阻止生成"
+   },
+   "IGUI_PhunZones_ZedAction_RemoveSpawn": {
+    "en": "Remove Spawns (allow wandering)",
+    "ch": "生成時移除 (允許遊蕩進入)",
+    "cn": "生成时移除 (允许游荡进入)"
+   },
+   "IGUI_DeadMagic_Review_Locations": {
+    "en": "Saved Locations",
+    "ch": "已儲存的地點",
+    "cn": "已保存的地点"
+   },
+   "IGUI_DeadMagic_Review_LocationsHint": {
+    "en": "Manage saved marks. Equip this grimoire and set Recall active to travel.",
+    "ch": "管理已儲存的標記. 裝備這本魔法書並將「召回」設為啟用即可傳送.",
+    "cn": "管理已保存的标记. 装备这本魔法书并将“召回”设为激活即可传送."
+   },
+   "IGUI_PhunMart_Btn_SpawnItem": {
+    "en": "Spawn Shop",
+    "ch": "生成商店",
+    "cn": "生成商店"
+   },
+   "IGUI_PhunMart_Col_Obtained": {
+    "en": "Obtained",
+    "ch": "取得方式",
+    "cn": "获取方式"
+   },
+   "IGUI_PhunMart_Hint_Destructible": {
+    "en": "Whether players can destroy this shop's machines with a sledgehammer. Server default follows the sandbox option. Admins can always destroy them",
+    "ch": "玩家能否用大鎚破壞此商店的機台. 伺服器預設值依照沙盒選項. 管理員一律可以破壞",
+    "cn": "玩家能否用大锤破坏此商店的机器. 服务器默认值遵循沙盒选项. 管理员始终可以破坏"
+   },
+   "IGUI_PhunMart_Hint_Moveable": {
+    "en": "Whether players can pick up this shop's machines and place them elsewhere. Server default follows the sandbox option. Admins can always move them",
+    "ch": "玩家能否拾起此商店的機台並放到其他地方. 伺服器預設值依照沙盒選項. 管理員一律可以移動",
+    "cn": "玩家能否拿起此商店的机器并放到其他地方. 服务器默认值遵循沙盒选项. 管理员始终可以移动"
+   },
+   "IGUI_PhunMart_Lbl_Destructible": {
+    "en": "Players Can Destroy:",
+    "ch": "玩家可破壞: ",
+    "cn": "玩家可破坏: "
+   },
+   "IGUI_PhunMart_Lbl_Moveable": {
+    "en": "Players Can Move:",
+    "ch": "玩家可移動: ",
+    "cn": "玩家可移动: "
+   },
+   "IGUI_PhunMart_Msg_NoItemForShop": {
+    "en": "%1 has no machine item, so it cannot be installed by hand",
+    "ch": "%1 沒有機台物品, 因此無法手動安裝",
+    "cn": "%1 没有机器物品, 因此无法手动安装"
+   },
+   "IGUI_PhunMart_Msg_ShopDisabled": {
+    "en": "%1 is disabled. Enable it before placing one",
+    "ch": "%1 已停用. 請先啟用再放置",
+    "cn": "%1 已禁用. 请先启用再放置"
+   },
+   "IGUI_PhunMart_Msg_SpawnedShopItem": {
+    "en": "%1 added to your inventory. Right-click it to install",
+    "ch": "%1 已加入你的物品欄. 對它按右鍵即可安裝",
+    "cn": "%1 已添加到你的物品栏. 右键点击它即可安装"
+   },
+   "IGUI_PhunMart_Obtain_Craft": {
+    "en": "Craft",
+    "ch": "製作",
+    "cn": "制作"
+   },
+   "IGUI_PhunMart_Obtain_Forage": {
+    "en": "Forage",
+    "ch": "採集",
+    "cn": "搜寻"
+   },
+   "IGUI_PhunMart_Obtain_Loot": {
+    "en": "Loot",
+    "ch": "搜刮",
+    "cn": "搜刮"
+   },
+   "IGUI_PhunMart_Obtain_None": {
+    "en": "None",
+    "ch": "無",
+    "cn": "无"
+   },
+   "IGUI_PhunMart_Opt_No": {
+    "en": "No",
+    "ch": "否",
+    "cn": "否"
+   },
+   "IGUI_PhunMart_Opt_ServerDefault": {
+    "en": "Server default (%1)",
+    "ch": "伺服器預設 (%1)",
+    "cn": "服务器默认 (%1)"
+   },
+   "IGUI_PhunMart_Opt_Yes": {
+    "en": "Yes",
+    "ch": "是",
+    "cn": "是"
+   },
+   "IGUI_VehiclePartCHE70SideStorage": {
+    "en": "Side Storage",
+    "ch": "側儲物箱",
+    "cn": "侧储物箱"
+   },
+   "IGUI_RNPC_06a04b96": {
+    "en": "You don't have any recruits yet.",
+    "ch": "你還沒有任何隊員.",
+    "cn": "你还没有任何队员."
+   },
+   "IGUI_RNPC_0784bfc5": {
+    "en": "Armed locals. They patrol the back roads and set up checkpoints.",
+    "ch": "武裝的當地人. 他們在鄉間小路巡邏, 還設了檢查哨.",
+    "cn": "武装的当地人. 他们在乡间小路巡逻, 还设了检查站."
+   },
+   "IGUI_RNPC_1471b212": {
+    "en": "Regular people trying to get by. They scavenge, board up and trade.",
+    "ch": "努力活下去的普通人. 他們搜刮物資、封堵門窗, 也做交易.",
+    "cn": "努力活下去的普通人. 他们搜刮物资、封堵门窗, 也做交易."
+   },
+   "IGUI_RNPC_15fa3ccb": {
+    "en": "On their own. They camp out, scavenge and keep to themselves.",
+    "ch": "獨來獨往. 他們在野外紮營、搜刮物資, 不跟別人打交道.",
+    "cn": "独来独往. 他们在野外扎营、搜刮物资, 不跟别人打交道."
+   },
+   "IGUI_RNPC_172f270d": {
+    "en": "No jobs yet. Ask a faction for work.",
+    "ch": "還沒有任何委託. 去找派系要工作吧.",
+    "cn": "还没有任何委托. 去找派系要活儿干吧."
+   },
+   "IGUI_RNPC_1cedd073": {
+    "en": "Hostile. They hold a base and rob whoever they can.",
+    "ch": "敵對. 他們佔據一處據點, 能搶誰就搶誰.",
+    "cn": "敌对. 他们占据一处据点, 能抢谁就抢谁."
+   },
+   "IGUI_RNPC_33097578": {
+    "en": "Not yet. We need to know you better first.",
+    "ch": "還不行. 我們得先多了解你一點.",
+    "cn": "还不行. 我们得先多了解你一点."
+   },
+   "IGUI_RNPC_35d61d62": {
+    "en": "I need something to eat.",
+    "ch": "我需要吃點東西.",
+    "cn": "我需要吃点东西."
+   },
+   "IGUI_RNPC_37dbf6d9": {
+    "en": "Their base got raided a day or two ago.",
+    "ch": "他們的據點一兩天前被襲擊了.",
+    "cn": "他们的据点一两天前被袭击了."
+   },
+   "IGUI_RNPC_3cceb325": {
+    "en": "Then swear to it, and you are one of us. We look after our own.",
+    "ch": "那就發誓吧, 你就是我們的一份子了. 我們會照顧自己人.",
+    "cn": "那就发誓吧, 你就是我们的一员了. 我们会照顾自己人."
+   },
+   "IGUI_RNPC_4045b1ef": {
+    "en": "Go in peace. You cannot come back for a while.",
+    "ch": "平安地走吧. 你暫時不能回來.",
+    "cn": "平安地走吧. 你暂时不能回来."
+   },
+   "IGUI_RNPC_47df69e3": {
+    "en": "I could use some ammo.",
+    "ch": "我需要一些彈藥.",
+    "cn": "我需要一些弹药."
+   },
+   "IGUI_RNPC_4e907395": {
+    "en": "I'm burning up.",
+    "ch": "我全身發燙.",
+    "cn": "我浑身发烫."
+   },
+   "IGUI_RNPC_4ff2d227": {
+    "en": "Just back from a raid on %1.",
+    "ch": "剛襲擊完 %1 回來.",
+    "cn": "刚袭击完 %1 回来."
+   },
+   "IGUI_RNPC_549fdec8": {
+    "en": "One of our own turned on us %1. We threw them out.",
+    "ch": "%1 我們自己人背叛了我們. 我們把那人趕出去了.",
+    "cn": "%1 我们自己人背叛了我们. 我们把那人赶出去了."
+   },
+   "IGUI_RNPC_5656a0de": {
+    "en": "A cult out in the country. They think the world was judged.",
+    "ch": "鄉下的一個邪教. 他們認為世界已經受了審判.",
+    "cn": "乡下的一个邪教. 他们认为世界已经受到了审判."
+   },
+   "IGUI_RNPC_56872b32": {
+    "en": "Join them",
+    "ch": "加入派系",
+    "cn": "加入派系"
+   },
+   "IGUI_RNPC_5984de80": {
+    "en": "You left us. It is too soon to come back.",
+    "ch": "你離開了我們. 現在回來還太早.",
+    "cn": "你离开了我们. 现在回来还太早."
+   },
+   "IGUI_RNPC_6282ff8f": {
+    "en": "Well armed soldiers. They clear buildings and set up checkpoints.",
+    "ch": "武裝精良的士兵. 他們清理建築, 還設了檢查哨.",
+    "cn": "武装精良的士兵. 他们清理建筑, 还设了检查站."
+   },
+   "IGUI_RNPC_65ba6f5d": {
+    "en": "The %1 need %2. Take these to any of their people. Do not sell them.",
+    "ch": "%1 需要 %2. 把這些交給他們任何一個人. 不准賣掉.",
+    "cn": "%1 需要 %2. 把这些交给他们任何一个人. 不许卖掉."
+   },
+   "IGUI_RNPC_66259fb7": {
+    "en": "That order is switched off on this server.",
+    "ch": "此伺服器已停用這項命令.",
+    "cn": "此服务器已禁用这项命令."
+   },
+   "IGUI_RNPC_69a87f65": {
+    "en": "You kept your word. Here is your pay.",
+    "ch": "你信守了承諾. 這是你的報酬.",
+    "cn": "你信守了承诺. 这是你的报酬."
+   },
+   "IGUI_RNPC_6ada7f5d": {
+    "en": "I'm still bleeding.",
+    "ch": "我還在流血.",
+    "cn": "我还在流血."
+   },
+   "IGUI_RNPC_6fe449dd": {
+    "en": "Your recruit.",
+    "ch": "你的隊員.",
+    "cn": "你的队员."
+   },
+   "IGUI_RNPC_70f59191": {
+    "en": "Doing okay.",
+    "ch": "還過得去.",
+    "cn": "还过得去."
+   },
+   "IGUI_RNPC_716278e7": {
+    "en": "Just a scratch.",
+    "ch": "只是擦傷.",
+    "cn": "只是擦伤."
+   },
+   "IGUI_RNPC_7e175935": {
+    "en": "Our people keep dying near %1. Go and look, then come back and tell us what you saw.",
+    "ch": "我們的人一直在 %1 附近送命. 去看看, 然後回來告訴我們你看到了什麼.",
+    "cn": "我们的人一直在 %1 附近送命. 去看看, 然后回来告诉我们你看到了什么."
+   },
+   "IGUI_RNPC_7e7f3ef7": {
+    "en": "There's a big group of the dead near %1. Put down %2 of them and come back.",
+    "ch": "%1 附近有一大群死人. 解決掉其中 %2 隻再回來.",
+    "cn": "%1 附近有一大群死人. 干掉其中 %2 只再回来."
+   },
+   "IGUI_RNPC_8cc76863": {
+    "en": "Welcome. We look after our own.",
+    "ch": "歡迎. 我們會照顧自己人.",
+    "cn": "欢迎. 我们会照顾自己人."
+   },
+   "IGUI_RNPC_903c284b": {
+    "en": "Hungry. Their group is low on food.",
+    "ch": "餓著肚子. 他們的團體糧食不足.",
+    "cn": "饿着肚子. 他们的团体粮食不足."
+   },
+   "IGUI_RNPC_9085f622": {
+    "en": "Bitten. Looks sick.",
+    "ch": "被咬了. 看起來病了.",
+    "cn": "被咬了. 看起来病了."
+   },
+   "IGUI_RNPC_9f36a33f": {
+    "en": "I'm starving.",
+    "ch": "我快餓死了.",
+    "cn": "我快饿死了."
+   },
+   "IGUI_RNPC_a7bccf3c": {
+    "en": "The dead are gathering near %1. Put down %2 of them, then come back to us.",
+    "ch": "死者正在 %1 附近聚集. 解決其中 %2 個, 然後回來找我們.",
+    "cn": "死者正在 %1 附近聚集. 解决其中 %2 个, 然后回来找我们."
+   },
+   "IGUI_RNPC_ae8a1357": {
+    "en": "They set ambushes where the traffic is and make you pay to pass.",
+    "ch": "他們在人來人往的地方設埋伏, 要你付錢才放行.",
+    "cn": "他们在人来人往的地方设埋伏, 要你付钱才能通过."
+   },
+   "IGUI_RNPC_b07eac92": {
+    "en": "That's theirs. Thank you. Here's your pay.",
+    "ch": "這是那人的東西. 謝謝你. 這是你的報酬.",
+    "cn": "这是那人的东西. 谢谢你. 这是你的报酬."
+   },
+   "IGUI_RNPC_b4636fd8": {
+    "en": "From the %1? Thank you. Tell them we are grateful.",
+    "ch": "%1 送來的? 謝謝你. 替我們轉達感謝.",
+    "cn": "%1 送来的? 谢谢你. 替我们转达感谢."
+   },
+   "IGUI_RNPC_b92a2ad4": {
+    "en": "What's left of the county police. They patrol and run checkpoints.",
+    "ch": "縣警察的殘部. 他們負責巡邏, 也管檢查哨.",
+    "cn": "县警察的残部. 他们负责巡逻, 也管检查站."
+   },
+   "IGUI_RNPC_c5189dac": {
+    "en": "You are one of us, and we trust you.",
+    "ch": "你是我們的一份子, 我們信任你.",
+    "cn": "你是我们的一员, 我们信任你."
+   },
+   "IGUI_RNPC_c62b4e4a": {
+    "en": "Banged up.",
+    "ch": "受了點傷.",
+    "cn": "受了点伤."
+   },
+   "IGUI_RNPC_c95d7f99": {
+    "en": "I want out.",
+    "ch": "我想離開.",
+    "cn": "我想离开."
+   },
+   "IGUI_RNPC_cd3d2441": {
+    "en": "You brought it back to us. Bless you.",
+    "ch": "你把它帶回來給我們了. 願主保佑你.",
+    "cn": "你把它带回来给我们了. 愿主保佑你."
+   },
+   "IGUI_RNPC_cd9b5020": {
+    "en": "Keeps an eye on you.",
+    "ch": "一直盯著你.",
+    "cn": "一直盯着你."
+   },
+   "IGUI_RNPC_cf36c1be": {
+    "en": "Looks tired.",
+    "ch": "看起來很累.",
+    "cn": "看起来很累."
+   },
+   "IGUI_RNPC_d2b0c84a": {
+    "en": "It's nothing.",
+    "ch": "沒什麼.",
+    "cn": "没什么."
+   },
+   "IGUI_RNPC_d83c7f70": {
+    "en": "They loot the towns and trade what they find, mostly tools and parts.",
+    "ch": "他們搜刮城鎮, 拿找到的東西去交易, 大多是工具和零件.",
+    "cn": "他们搜刮城镇, 拿找到的东西去交易, 大多是工具和零件."
+   },
+   "IGUI_RNPC_d8d8ace1": {
+    "en": "The %1 are short on %2. Take these to any of their people, and don't sell them.",
+    "ch": "%1 缺 %2. 把這些交給他們任何一個人, 別拿去賣.",
+    "cn": "%1 缺 %2. 把这些交给他们任何一个人, 别拿去卖."
+   },
+   "IGUI_RNPC_da3ed49a": {
+    "en": "%1 died out near %2. Their %3 should still be on the body. Bring it back to us.",
+    "ch": "%1 死在 %2 附近. 那人的 %3 應該還在屍體上. 把它帶回來給我們.",
+    "cn": "%1 死在 %2 附近. 那人的 %3 应该还在尸体上. 把它带回来给我们."
+   },
+   "IGUI_RNPC_dcb1e8c7": {
+    "en": "%1 died near %2. Their %3 is still with the body. Please bring it back to us.",
+    "ch": "%1 死在 %2 附近. 那人的 %3 還在遺體身邊. 請把它帶回來給我們.",
+    "cn": "%1 死在 %2 附近. 那人的 %3 还在遗体身边. 请把它带回来给我们."
+   },
+   "IGUI_RNPC_e04e55a6": {
+    "en": "Still breathing? Good.",
+    "ch": "還活著? 很好.",
+    "cn": "还活着? 很好."
+   },
+   "IGUI_RNPC_e3173147": {
+    "en": "Farmers out in the country. They grow food and patrol the back roads.",
+    "ch": "鄉下的農夫. 他們種糧食, 也在鄉間小路巡邏.",
+    "cn": "乡下的农民. 他们种粮食, 也在乡间小路巡逻."
+   },
+   "IGUI_RNPC_e8cdf1ab": {
+    "en": "Doctors and nurses. They treat people and are always low on medicine.",
+    "ch": "醫生和護士. 他們替人治療, 藥品總是不夠用.",
+    "cn": "医生和护士. 他们给人治病, 药品总是不够用."
+   },
+   "IGUI_RNPC_ede1c891": {
+    "en": "Badly hurt.",
+    "ch": "傷得很重.",
+    "cn": "伤得很重."
+   },
+   "IGUI_RNPC_ef28e8f3": {
+    "en": "The %1 sold us out %2. We don't trust them anymore.",
+    "ch": "%1 %2 出賣了我們. 我們不再信任他們了.",
+    "cn": "%1 %2 出卖了我们. 我们不再信任他们了."
+   },
+   "IGUI_RNPC_f1f307ae": {
+    "en": "Fine. Go on, then. Don't come back for a while.",
+    "ch": "好. 那就走吧. 這陣子別回來.",
+    "cn": "好. 那就走吧. 这阵子别回来."
+   },
+   "IGUI_RNPC_f3e34072": {
+    "en": "Marked on your map.",
+    "ch": "已標記在你的地圖上.",
+    "cn": "已标记在你的地图上."
+   },
+   "IGUI_RNPC_f5693aa4": {
+    "en": "%1 of the %2 led the raid on us. Find them and kill them.",
+    "ch": "%2 的 %1 帶頭襲擊了我們. 找到那傢伙, 殺了他.",
+    "cn": "%2 的 %1 带头袭击了我们. 找到那家伙, 杀了他."
+   },
+   "IGUI_RNPC_f7d3e48c": {
+    "en": "You're one of them, and they trust you.",
+    "ch": "你是他們的一份子, 他們信任你.",
+    "cn": "你是他们的一员, 他们信任你."
+   },
+   "IGUI_RNPC_f7edca19": {
+    "en": "%1 of the %2 led the raid on us. We want them dead. Find them.",
+    "ch": "%2 的 %1 帶頭襲擊了我們. 我們要那傢伙的命. 把人找出來.",
+    "cn": "%2 的 %1 带头袭击了我们. 我们要那家伙的命. 把人找出来."
+   },
+   "IGUI_RNPC_f83931e7": {
+    "en": "%1 starved to death near %2, %3.",
+    "ch": "%3, %1 在 %2 附近餓死了.",
+    "cn": "%3, %1 在 %2 附近饿死了."
+   },
+   "IGUI_RNPC_ff3998e6": {
+    "en": "Firefighters still working out of their station. They help people out.",
+    "ch": "仍以消防隊為據點工作的消防員. 他們會幫人一把.",
+    "cn": "仍以消防站为据点工作的消防员. 他们会帮人一把."
+   },
+   "IGUI_RPGInventory_AppearanceAllCategories": {
+    "en": "All categories",
+    "ch": "所有類別",
+    "cn": "所有类别"
+   },
+   "IGUI_RPGInventory_AppearanceApplyTabTip": {
+    "en": "Save only the active tab and close Setup. Unsaved changes in the other tab are discarded; Cancel discards both drafts.",
+    "ch": "只儲存目前分頁並關閉設定. 另一個分頁中未儲存的變更會被捨棄; 按「取消」則會捨棄兩份草稿.",
+    "cn": "仅保存当前标签页并关闭设置. 另一个标签页中未保存的更改将被丢弃; 点击“取消”则会丢弃两份草稿."
+   },
+   "IGUI_RPGInventory_AppearanceClearIcon": {
+    "en": "Remove item badge",
+    "ch": "移除物品徽章",
+    "cn": "移除物品徽章"
+   },
+   "IGUI_RPGInventory_AppearanceClipboardEmpty": {
+    "en": "Copy an appearance first.",
+    "ch": "請先複製一個外觀.",
+    "cn": "请先复制一个外观."
+   },
+   "IGUI_RPGInventory_AppearanceColorblue": {
+    "en": "Muted blue",
+    "ch": "霧藍",
+    "cn": "雾蓝"
+   },
+   "IGUI_RPGInventory_AppearanceColorbrown": {
+    "en": "Brown",
+    "ch": "棕色",
+    "cn": "棕色"
+   },
+   "IGUI_RPGInventory_AppearanceColorgraphite": {
+    "en": "Graphite",
+    "ch": "石墨色",
+    "cn": "石墨色"
+   },
+   "IGUI_RPGInventory_AppearanceColorgray": {
+    "en": "Gray",
+    "ch": "灰色",
+    "cn": "灰色"
+   },
+   "IGUI_RPGInventory_AppearanceColorolive": {
+    "en": "Olive",
+    "ch": "橄欖綠",
+    "cn": "橄榄绿"
+   },
+   "IGUI_RPGInventory_AppearanceColorplum": {
+    "en": "Plum",
+    "ch": "梅紫",
+    "cn": "梅紫"
+   },
+   "IGUI_RPGInventory_AppearanceColorrose": {
+    "en": "Muted rose",
+    "ch": "霧玫瑰",
+    "cn": "雾玫瑰"
+   },
+   "IGUI_RPGInventory_AppearanceColorrust": {
+    "en": "Rust",
+    "ch": "鐵鏽色",
+    "cn": "铁锈色"
+   },
+   "IGUI_RPGInventory_AppearanceColorsage": {
+    "en": "Sage",
+    "ch": "鼠尾草綠",
+    "cn": "鼠尾草绿"
+   },
+   "IGUI_RPGInventory_AppearanceColorsand": {
+    "en": "Sand",
+    "ch": "沙色",
+    "cn": "沙色"
+   },
+   "IGUI_RPGInventory_AppearanceColorslate": {
+    "en": "Slate",
+    "ch": "石板灰",
+    "cn": "石板灰"
+   },
+   "IGUI_RPGInventory_AppearanceColorteal": {
+    "en": "Muted teal",
+    "ch": "霧青",
+    "cn": "雾青"
+   },
+   "IGUI_RPGInventory_AppearanceCopied": {
+    "en": "Appearance copied.",
+    "ch": "已複製外觀.",
+    "cn": "已复制外观."
+   },
+   "IGUI_RPGInventory_AppearanceCopyTip": {
+    "en": "Copy appearance only. Uses a separate clipboard from rules.",
+    "ch": "只複製外觀. 與規則使用不同的剪貼簿.",
+    "cn": "仅复制外观. 与规则使用不同的剪贴板."
+   },
+   "IGUI_RPGInventory_AppearanceDefaultColor": {
+    "en": "Native background",
+    "ch": "原版背景",
+    "cn": "原版背景"
+   },
+   "IGUI_RPGInventory_AppearanceInvalid": {
+    "en": "Invalid appearance. Check the name, color and item badge.",
+    "ch": "外觀無效. 請檢查名稱、顏色與物品徽章.",
+    "cn": "外观无效. 请检查名称、颜色和物品徽章."
+   },
+   "IGUI_RPGInventory_AppearanceMixed": {
+    "en": "Selected containers have different appearances.",
+    "ch": "選取的容器外觀不一致.",
+    "cn": "选中的容器外观不一致."
+   },
+   "IGUI_RPGInventory_AppearanceNameTip": {
+    "en": "Display name, up to 28 characters. Empty restores the original name.",
+    "ch": "顯示名稱, 最多 28 個字元. 留空則還原原始名稱.",
+    "cn": "显示名称, 最多 28 个字符. 留空则恢复原始名称."
+   },
+   "IGUI_RPGInventory_AppearancePasteTip": {
+    "en": "Paste appearance into this draft. Apply saves it.",
+    "ch": "將外觀貼上到此草稿. 按「套用」後才會儲存.",
+    "cn": "将外观粘贴到此草稿. 点击“应用”后才会保存."
+   },
+   "IGUI_RPGInventory_AppearancePreview": {
+    "en": "Container preview",
+    "ch": "容器預覽",
+    "cn": "容器预览"
+   },
+   "IGUI_RPGInventory_AppearanceReset": {
+    "en": "Restore",
+    "ch": "還原",
+    "cn": "恢复"
+   },
+   "IGUI_RPGInventory_AppearanceResetTip": {
+    "en": "Restore the original name and background, and remove the item badge when you click Apply.",
+    "ch": "按下「套用」時, 還原原始名稱與背景, 並移除物品徽章.",
+    "cn": "点击“应用”时, 恢复原始名称和背景, 并移除物品徽章."
+   },
+   "IGUI_RPGInventory_ControllerAction": {
+    "en": "Action",
+    "ch": "動作",
+    "cn": "操作"
+   },
+   "IGUI_RPGInventory_ControllerActions": {
+    "en": "Container actions",
+    "ch": "容器動作",
+    "cn": "容器动作"
+   },
+   "IGUI_RPGInventory_ControllerActivate": {
+    "en": "Open / activate",
+    "ch": "開啟 / 啟動",
+    "cn": "打开 / 激活"
+   },
+   "IGUI_RPGInventory_ControllerBack": {
+    "en": "Back",
+    "ch": "返回",
+    "cn": "返回"
+   },
+   "IGUI_RPGInventory_ControllerCancel": {
+    "en": "Cancel action / expand stack",
+    "ch": "取消動作 / 展開堆疊",
+    "cn": "取消动作 / 展开堆叠"
+   },
+   "IGUI_RPGInventory_ControllerChooseContainer": {
+    "en": "Choose container",
+    "ch": "選擇容器",
+    "cn": "选择容器"
+   },
+   "IGUI_RPGInventory_ControllerClearSearch": {
+    "en": "Clear search",
+    "ch": "清除搜尋",
+    "cn": "清除搜索"
+   },
+   "IGUI_RPGInventory_ControllerClearSelection": {
+    "en": "Clear selection",
+    "ch": "清除選取",
+    "cn": "清除选择"
+   },
+   "IGUI_RPGInventory_ControllerCombine": {
+    "en": "Combine container selection",
+    "ch": "合併選取的容器",
+    "cn": "合并选中的容器"
+   },
+   "IGUI_RPGInventory_ControllerCommands": {
+    "en": "Commands",
+    "ch": "指令",
+    "cn": "命令"
+   },
+   "IGUI_RPGInventory_ControllerConfirm": {
+    "en": "Confirm",
+    "ch": "確認",
+    "cn": "确认"
+   },
+   "IGUI_RPGInventory_ControllerContainerContext": {
+    "en": "Container context",
+    "ch": "容器右鍵選單",
+    "cn": "容器右键菜单"
+   },
+   "IGUI_RPGInventory_ControllerContext": {
+    "en": "Context",
+    "ch": "右鍵選單",
+    "cn": "右键菜单"
+   },
+   "IGUI_RPGInventory_ControllerDestination": {
+    "en": "Transfer destination",
+    "ch": "轉移目的地",
+    "cn": "转移目标"
+   },
+   "IGUI_RPGInventory_ControllerEquipmentPanel": {
+    "en": "Show / hide equipment panel",
+    "ch": "顯示 / 隱藏裝備面板",
+    "cn": "显示 / 隐藏装备面板"
+   },
+   "IGUI_RPGInventory_ControllerExit": {
+    "en": "Close inventory",
+    "ch": "關閉物品欄",
+    "cn": "关闭物品栏"
+   },
+   "IGUI_RPGInventory_ControllerExpandCollapse": {
+    "en": "Expand / collapse",
+    "ch": "展開 / 收合",
+    "cn": "展开 / 折叠"
+   },
+   "IGUI_RPGInventory_ControllerHelp": {
+    "en": "Controller help",
+    "ch": "控制器說明",
+    "cn": "手柄帮助"
+   },
+   "IGUI_RPGInventory_ControllerLayout": {
+    "en": "Window layout",
+    "ch": "視窗版面配置",
+    "cn": "窗口布局"
+   },
+   "IGUI_RPGInventory_ControllerLayoutHint": {
+    "en": "D-pad: adjust | A: confirm | B: cancel",
+    "ch": "方向鍵: 調整 | A: 確認 | B: 取消",
+    "cn": "方向键: 调整 | A: 确认 | B: 取消"
+   },
+   "IGUI_RPGInventory_ControllerLeftModifier": {
+    "en": "Hold: container / column",
+    "ch": "按住: 容器 / 欄",
+    "cn": "按住: 容器 / 列"
+   },
+   "IGUI_RPGInventory_ControllerLeftModifierHelp": {
+    "en": "Hold L1 + Up/Down: container; Left/Right: column",
+    "ch": "按住 L1 + 上/下: 容器; 左/右: 欄",
+    "cn": "按住 L1 + 上/下: 容器; 左/右: 列"
+   },
+   "IGUI_RPGInventory_ControllerLock": {
+    "en": "Lock/unlock container selection",
+    "ch": "鎖定/解鎖容器選取",
+    "cn": "锁定/解锁容器选择"
+   },
+   "IGUI_RPGInventory_ControllerMove": {
+    "en": "Move window",
+    "ch": "移動視窗",
+    "cn": "移动窗口"
+   },
+   "IGUI_RPGInventory_ControllerRange": {
+    "en": "Select range from anchor",
+    "ch": "從錨點選取範圍",
+    "cn": "从锚点选择范围"
+   },
+   "IGUI_RPGInventory_ControllerRegions": {
+    "en": "Panels",
+    "ch": "面板",
+    "cn": "面板"
+   },
+   "IGUI_RPGInventory_ControllerReorderDown": {
+    "en": "Move container down",
+    "ch": "容器下移",
+    "cn": "容器下移"
+   },
+   "IGUI_RPGInventory_ControllerReorderUp": {
+    "en": "Move container up",
+    "ch": "容器上移",
+    "cn": "容器上移"
+   },
+   "IGUI_RPGInventory_ControllerResize": {
+    "en": "Resize window",
+    "ch": "調整視窗大小",
+    "cn": "调整窗口大小"
+   },
+   "IGUI_RPGInventory_ControllerRightModifier": {
+    "en": "Hold: select range",
+    "ch": "按住: 選取範圍",
+    "cn": "按住: 选择范围"
+   },
+   "IGUI_RPGInventory_ControllerRulesMenu": {
+    "en": "Copy / paste rules",
+    "ch": "複製 / 貼上規則",
+    "cn": "复制 / 粘贴规则"
+   },
+   "IGUI_RPGInventory_ControllerSearch": {
+    "en": "Search",
+    "ch": "搜尋",
+    "cn": "搜索"
+   },
+   "IGUI_RPGInventory_ControllerSelect": {
+    "en": "Toggle selection",
+    "ch": "切換選取",
+    "cn": "切换选择"
+   },
+   "IGUI_RPGInventory_ControllerSelectAll": {
+    "en": "Select all",
+    "ch": "全選",
+    "cn": "全选"
+   },
+   "IGUI_RPGInventory_ControllerSelectionAllGesture": {
+    "en": "Hold R1 + A: select all",
+    "ch": "按住 R1 + A: 全選",
+    "cn": "按住 R1 + A: 全选"
+   },
+   "IGUI_RPGInventory_ControllerSelectionClearGesture": {
+    "en": "Hold R1 + B: clear selection",
+    "ch": "按住 R1 + B: 清除選取",
+    "cn": "按住 R1 + B: 清除选择"
+   },
+   "IGUI_RPGInventory_ControllerSelectionRangeGesture": {
+    "en": "Hold R1 + D-pad: select range",
+    "ch": "按住 R1 + 方向鍵: 選取範圍",
+    "cn": "按住 R1 + 方向键: 选择范围"
+   },
+   "IGUI_RPGInventory_ControllerSort": {
+    "en": "Sort",
+    "ch": "排序",
+    "cn": "排序"
+   },
+   "IGUI_RPGInventory_ControllerStacks": {
+    "en": "Expand/collapse stacks",
+    "ch": "展開/收合堆疊",
+    "cn": "展开/折叠堆叠"
+   },
+   "IGUI_RPGInventory_ControllerStopAction": {
+    "en": "Cancel action",
+    "ch": "取消動作",
+    "cn": "取消动作"
+   },
+   "IGUI_RPGInventory_ControllerTransfer": {
+    "en": "Transfer",
+    "ch": "轉移",
+    "cn": "转移"
+   },
+   "IGUI_RPGInventory_ControllerTransferAll": {
+    "en": "Transfer all",
+    "ch": "全部轉移",
+    "cn": "全部转移"
+   },
+   "IGUI_RPGInventory_DistanceFar": {
+    "en": "Distance: farthest first",
+    "ch": "距離: 由遠到近",
+    "cn": "距离: 从远到近"
+   },
+   "IGUI_RPGInventory_DistanceNear": {
+    "en": "Distance: nearest first",
+    "ch": "距離: 由近到遠",
+    "cn": "距离: 从近到远"
+   },
+   "IGUI_RPGInventory_DropZoneOpacity": {
+    "en": "Drop Zone background opacity",
+    "ch": "放置區背景不透明度",
+    "cn": "放置区背景不透明度"
+   },
+   "IGUI_RPGInventory_HelpActions": {
+    "en": "Act on items and containers",
+    "ch": "操作物品與容器",
+    "cn": "操作物品和容器"
+   },
+   "IGUI_RPGInventory_HelpActivate": {
+    "en": "Press: open item context or activate the focused control, heading, container, nested arrow or lock.",
+    "ch": "按下: 開啟物品右鍵選單, 或啟動目前焦點所在的控制項、標題、容器、子容器箭頭或鎖定鈕.",
+    "cn": "按下: 打开物品右键菜单, 或激活当前焦点所在的控件、标题、容器、子容器箭头或锁定按钮."
+   },
+   "IGUI_RPGInventory_HelpAll": {
+    "en": "Hold the right shoulder + confirm: select all items in the current view.",
+    "ch": "按住右肩鍵 + 確認鍵: 選取目前畫面中的所有物品.",
+    "cn": "按住右肩键 + 确认键: 选择当前视图中的所有物品."
+   },
+   "IGUI_RPGInventory_HelpCancel": {
+    "en": "Press: cancel an ongoing action; otherwise expand/collapse a stack or heading, or clear selection.",
+    "ch": "按下: 取消進行中的動作; 若無動作, 則展開/收合堆疊或標題, 或清除選取.",
+    "cn": "按下: 取消进行中的动作; 若无动作, 则展开/折叠堆叠或标题, 或清除选择."
+   },
+   "IGUI_RPGInventory_HelpClear": {
+    "en": "Hold the right shoulder + cancel: clear selection.",
+    "ch": "按住右肩鍵 + 取消鍵: 清除選取.",
+    "cn": "按住右肩键 + 取消键: 清除选择."
+   },
+   "IGUI_RPGInventory_HelpClose": {
+    "en": "Close help",
+    "ch": "關閉說明",
+    "cn": "关闭帮助"
+   },
+   "IGUI_RPGInventory_HelpColumns": {
+    "en": "Hold the left shoulder + D-pad left/right: previous/next column.",
+    "ch": "按住左肩鍵 + 方向鍵左/右: 上一欄/下一欄.",
+    "cn": "按住左肩键 + 方向键左/右: 上一列/下一列."
+   },
+   "IGUI_RPGInventory_HelpCommandList": {
+    "en": "Commands also contains destinations, container selection/combination, locks, reordering, all/range selection, transfer all, search, sorting, grid/list, stacks, container actions, equipment, rules and layout.",
+    "ch": "「指令」中還有: 目的地、容器選取/合併、鎖定、重新排序、全選/範圍選取、全部轉移、搜尋、排序、格狀/清單、堆疊、容器動作、裝備、規則與版面配置.",
+    "cn": "“命令”中还包含: 目标、容器选择/合并、锁定、重新排序、全选/范围选择、全部转移、搜索、排序、网格/列表、堆叠、容器动作、装备、规则和布局."
+   },
+   "IGUI_RPGInventory_HelpCommands": {
+    "en": "Click and release the right stick: open Commands, including this help.",
+    "ch": "按下並放開右搖桿: 開啟「指令」 (包含本說明).",
+    "cn": "按下并松开右摇杆: 打开“命令” (包括本帮助)."
+   },
+   "IGUI_RPGInventory_HelpContainers": {
+    "en": "Hold the left shoulder + D-pad up/down: previous/next container.",
+    "ch": "按住左肩鍵 + 方向鍵上/下: 上一個/下一個容器.",
+    "cn": "按住左肩键 + 方向键上/下: 上一个/下一个容器."
+   },
+   "IGUI_RPGInventory_HelpEdit": {
+    "en": "Confirm: activate button, toggle checkbox or edit text using the native controller keyboard.",
+    "ch": "確認鍵: 按下按鈕、切換核取方塊, 或用遊戲內建的控制器鍵盤編輯文字.",
+    "cn": "确认键: 按下按钮、切换复选框, 或用游戏自带的手柄键盘编辑文本."
+   },
+   "IGUI_RPGInventory_HelpExit": {
+    "en": "Press: close the inventory and return to the game.",
+    "ch": "按下: 關閉物品欄並回到遊戲.",
+    "cn": "按下: 关闭物品栏并返回游戏."
+   },
+   "IGUI_RPGInventory_HelpFooter": {
+    "en": "Left/right: page  |  Up/down: scroll  |  Cancel: close",
+    "ch": "左/右: 換頁  |  上/下: 捲動  |  取消: 關閉",
+    "cn": "左/右: 翻页  |  上/下: 滚动  |  取消: 关闭"
+   },
+   "IGUI_RPGInventory_HelpHelpClose": {
+    "en": "Cancel or the X at the top right closes help and restores the previous game speed.",
+    "ch": "按取消鍵或右上角的 X 會關閉說明, 並恢復先前的遊戲速度.",
+    "cn": "按取消键或右上角的 X 会关闭帮助, 并恢复之前的游戏速度."
+   },
+   "IGUI_RPGInventory_HelpHelpPages": {
+    "en": "In this help: D-pad left/right or either shoulder changes page. Mouse: use the bottom arrows.",
+    "ch": "在本說明中: 方向鍵左/右或任一肩鍵可換頁. 滑鼠: 使用底部的箭頭.",
+    "cn": "在本帮助中: 方向键左/右或任一肩键可翻页. 鼠标: 使用底部的箭头."
+   },
+   "IGUI_RPGInventory_HelpHelpScroll": {
+    "en": "D-pad up/down or mouse wheel scrolls when the page does not fit.",
+    "ch": "頁面無法完整顯示時, 可用方向鍵上/下或滑鼠滾輪捲動.",
+    "cn": "页面显示不全时, 可用方向键上/下或鼠标滚轮滚动."
+   },
+   "IGUI_RPGInventory_HelpLayout": {
+    "en": "Adjust windows",
+    "ch": "調整視窗",
+    "cn": "调整窗口"
+   },
+   "IGUI_RPGInventory_HelpLayoutAdjust": {
+    "en": "In Move / Resize: D-pad adjusts the window position or size.",
+    "ch": "在「移動」/「調整大小」中: 方向鍵可調整視窗位置或大小.",
+    "cn": "在“移动”/“调整大小”中: 方向键可调整窗口位置或大小."
+   },
+   "IGUI_RPGInventory_HelpLayoutCancel": {
+    "en": "Cancel: undo the current layout adjustment.",
+    "ch": "取消鍵: 復原目前的版面調整.",
+    "cn": "取消键: 撤销当前的布局调整."
+   },
+   "IGUI_RPGInventory_HelpLayoutConfirm": {
+    "en": "Confirm: keep the layout adjustment.",
+    "ch": "確認鍵: 保留版面調整.",
+    "cn": "确认键: 保留布局调整."
+   },
+   "IGUI_RPGInventory_HelpLayoutOpen": {
+    "en": "Commands > Window layout: pin/unpin, move, resize or reset layout.",
+    "ch": "指令 > 視窗版面配置: 釘選/取消釘選、移動、調整大小或重設版面配置.",
+    "cn": "命令 > 窗口布局: 固定/取消固定、移动、调整大小或重置布局."
+   },
+   "IGUI_RPGInventory_HelpMenuBack": {
+    "en": "Cancel or D-pad left: return from a submenu; cancel at the root closes the menu.",
+    "ch": "取消鍵或方向鍵左: 從子選單返回; 在最上層按取消會關閉選單.",
+    "cn": "取消键或方向键左: 从子菜单返回; 在顶层菜单按取消会关闭菜单."
+   },
+   "IGUI_RPGInventory_HelpMenuRows": {
+    "en": "D-pad up/down: choose an option in a context menu or Commands.",
+    "ch": "方向鍵上/下: 在右鍵選單或「指令」中選擇選項.",
+    "cn": "方向键上/下: 在右键菜单或“命令”中选择选项."
+   },
+   "IGUI_RPGInventory_HelpMenus": {
+    "en": "Use menus and settings",
+    "ch": "使用選單與設定",
+    "cn": "使用菜单和设置"
+   },
+   "IGUI_RPGInventory_HelpModalBack": {
+    "en": "Cancel: close Settings / Smart Transfer Setup and return to inventory.",
+    "ch": "取消鍵: 關閉「設定」/「智慧轉移設定」並回到物品欄.",
+    "cn": "取消键: 关闭“设置”/“智能转移设置”并返回物品栏."
+   },
+   "IGUI_RPGInventory_HelpMultiplayer": {
+    "en": "Multiplayer: the server keeps running",
+    "ch": "多人遊戲: 伺服器仍持續運作",
+    "cn": "多人游戏: 服务器仍在运行"
+   },
+   "IGUI_RPGInventory_HelpNative": {
+    "en": "Menu/Start and View/Back retain the game commands outside this help.",
+    "ch": "在本說明以外, Menu/Start 與 View/Back 鍵維持遊戲原本的功能.",
+    "cn": "在本帮助之外, Menu/Start 和 View/Back 键保留游戏原有功能."
+   },
+   "IGUI_RPGInventory_HelpNavigate": {
+    "en": "D-pad: move through items. At an edge, move to the next panel or column; vertically, pass through headings.",
+    "ch": "方向鍵: 在物品間移動. 到達邊緣時移至下一個面板或欄; 垂直移動時會經過標題.",
+    "cn": "方向键: 在物品间移动. 到达边缘时移到下一个面板或列; 纵向移动时会经过标题."
+   },
+   "IGUI_RPGInventory_HelpNavigation": {
+    "en": "Navigate the inventory",
+    "ch": "瀏覽物品欄",
+    "cn": "浏览物品栏"
+   },
+   "IGUI_RPGInventory_HelpNext": {
+    "en": "Next page",
+    "ch": "下一頁",
+    "cn": "下一页"
+   },
+   "IGUI_RPGInventory_HelpPaused": {
+    "en": "Game paused",
+    "ch": "遊戲已暫停",
+    "cn": "游戏已暂停"
+   },
+   "IGUI_RPGInventory_HelpPrevious": {
+    "en": "Previous page",
+    "ch": "上一頁",
+    "cn": "上一页"
+   },
+   "IGUI_RPGInventory_HelpRange": {
+    "en": "Hold the right shoulder + D-pad: extend or shrink a selection range, preserving the earlier selection.",
+    "ch": "按住右肩鍵 + 方向鍵: 擴大或縮小選取範圍, 並保留先前的選取.",
+    "cn": "按住右肩键 + 方向键: 扩大或缩小选择范围, 并保留之前的选择."
+   },
+   "IGUI_RPGInventory_HelpSelect": {
+    "en": "Short click of the left stick: toggle selection of the focused item on release.",
+    "ch": "短按左搖桿: 放開時切換目前焦點物品的選取狀態.",
+    "cn": "短按左摇杆: 松开时切换当前焦点物品的选择状态."
+   },
+   "IGUI_RPGInventory_HelpSelection": {
+    "en": "Select items",
+    "ch": "選取物品",
+    "cn": "选择物品"
+   },
+   "IGUI_RPGInventory_HelpSettings": {
+    "en": "Settings / Smart Transfer Setup: up/down moves between controls. Left/right adjusts a slider or changes a list choice.",
+    "ch": "「設定」/「智慧轉移設定」: 上/下在控制項之間移動. 左/右可調整滑桿或變更清單選項.",
+    "cn": "“设置”/“智能转移设置”: 上/下在控件之间移动. 左/右可调整滑块或更改列表选项."
+   },
+   "IGUI_RPGInventory_HelpShoulders": {
+    "en": "A shoulder button alone does not switch containers or skip panels. The right shoulder is the selection modifier.",
+    "ch": "單按肩鍵不會切換容器或跳過面板. 右肩鍵是選取用的組合鍵.",
+    "cn": "单按肩键不会切换容器或跳过面板. 右肩键是选择用的组合键."
+   },
+   "IGUI_RPGInventory_HelpSubmenu": {
+    "en": "Confirm activates the option; D-pad right opens its submenu. Repeat for deeper submenus.",
+    "ch": "確認鍵啟動選項; 方向鍵右開啟其子選單. 更深層的子選單依此類推.",
+    "cn": "确认键激活选项; 方向键右打开其子菜单. 更深层的子菜单依此类推."
+   },
+   "IGUI_RPGInventory_HelpTitle": {
+    "en": "Controller help",
+    "ch": "控制器說明",
+    "cn": "手柄帮助"
+   },
+   "IGUI_RPGInventory_HelpTransfer": {
+    "en": "Press: transfer the selected items, or the focused item.",
+    "ch": "按下: 轉移選取的物品, 或目前焦點所在的物品.",
+    "cn": "按下: 转移选中的物品, 或当前焦点所在的物品."
+   },
+   "IGUI_RPGInventory_HelpUsingHelp": {
+    "en": "Use this help",
+    "ch": "使用本說明",
+    "cn": "使用本帮助"
+   },
+   "IGUI_RPGInventory_TabAppearance": {
+    "en": "Appearance",
+    "ch": "外觀",
+    "cn": "外观"
+   },
+   "IGUI_RPGInventory_TabRules": {
+    "en": "Rules",
+    "ch": "規則",
+    "cn": "规则"
+   },
+   "IGUI_CU_Howto_Crude_Goal": {
+    "en": "Set five pieces of scrap wood along the frame, then bind every joint with duct tape.",
+    "ch": "把五塊廢木材沿著框架擺好, 再用布膠帶纏緊每個接合處.",
+    "cn": "把五块废木材沿着框架摆好, 再用管道胶带缠紧每个接合处."
+   },
+   "IGUI_CU_Howto_Crude_Step1": {
+    "en": "Take hold of a piece and drag it onto its place on the frame. It snaps in when it is close.",
+    "ch": "抓住一塊木材, 拖曳到框架上對應的位置. 靠得夠近時就會自動卡上.",
+    "cn": "抓住一块木材, 拖到框架上对应的位置. 靠得够近时就会自动卡上."
+   },
+   "IGUI_CU_Howto_Crude_Step2": {
+    "en": "Once all five are in, hold on a joint and work the mouse up and down over it to wind the tape on.",
+    "ch": "五塊都放好後, 在接合處按住滑鼠並上下來回移動, 把膠帶纏上去.",
+    "cn": "五块都放好后, 在接合处按住鼠标并上下来回移动, 把胶带缠上去."
+   },
+   "IGUI_CU_Howto_Crude_Step3": {
+    "en": "Every joint takes about the same: wind until it is done, then the next.",
+    "ch": "每個接合處所需的工夫都差不多: 纏到好為止, 再換下一個.",
+    "cn": "每个接合处所需的功夫都差不多: 缠到好为止, 再换下一个."
+   },
+   "IGUI_CU_Howto_Crude_Title": {
+    "en": "Lashing a prosthetic together",
+    "ch": "綁製簡易義肢",
+    "cn": "绑制简易假肢"
+   },
+   "IGUI_CU_Howto_Crude_Watch": {
+    "en": "Yanking tears the tape and loses what was wound; straying off the joint sticks it to nothing. A sloppy job starts the prosthetic part worn.",
+    "ch": "猛拉會扯破膠帶, 已纏好的部分也會白費; 偏離接合處, 膠帶就黏不到東西. 做得馬虎, 義肢一開始就會帶有磨損.",
+    "cn": "猛拉会扯破胶带, 已缠好的部分也会白费; 偏离接合处, 胶带就粘不到东西. 做得马虎, 假肢一开始就会带有磨损."
+   },
+   "IGUI_CU_MG_Action_CUCraftProstheticAction": {
+    "en": "Crude prosthetic",
+    "ch": "簡易義肢",
+    "cn": "简易假肢"
+   },
+   "IGUI_CU_MG_Crude_Barely": {
+    "en": "Barely holding together.",
+    "ch": "勉強還沒散掉.",
+    "cn": "勉强还没散架."
+   },
+   "IGUI_CU_MG_Crude_FallsApart": {
+    "en": "It falls apart in your hands.",
+    "ch": "它在你手中散掉了.",
+    "cn": "它在你手里散架了."
+   },
+   "IGUI_CU_MG_Crude_Fits": {
+    "en": "That fits.",
+    "ch": "剛好吻合.",
+    "cn": "刚好吻合."
+   },
+   "IGUI_CU_MG_Crude_Hint": {
+    "en": "Drag each piece of scrap wood onto its place along the frame.",
+    "ch": "把每塊廢木材拖曳到框架上對應的位置.",
+    "cn": "把每块废木材拖到框架上对应的位置."
+   },
+   "IGUI_CU_MG_Crude_Hint2": {
+    "en": "Then wind tape round every joint: hold, and work up and down over it.",
+    "ch": "然後在每個接合處纏上膠帶: 按住, 並在上面上下來回移動.",
+    "cn": "然后在每个接合处缠上胶带: 按住, 并在上面上下来回移动."
+   },
+   "IGUI_CU_MG_Crude_HoldOnAJoint": {
+    "en": "Hold on a joint, and work up and down.",
+    "ch": "按住一個接合處, 上下來回移動.",
+    "cn": "按住一个接合处, 上下来回移动."
+   },
+   "IGUI_CU_MG_Crude_Holds": {
+    "en": "It holds.",
+    "ch": "撐住了.",
+    "cn": "撑住了."
+   },
+   "IGUI_CU_MG_Crude_Joints": {
+    "en": "Joints: %1 of %2",
+    "ch": "接合處: %1/%2",
+    "cn": "接合处: %1/%2"
+   },
+   "IGUI_CU_MG_Crude_NextPiece": {
+    "en": "NEXT",
+    "ch": "下一塊",
+    "cn": "下一块"
+   },
+   "IGUI_CU_MG_Crude_NotThere": {
+    "en": "That is not where it goes.",
+    "ch": "不是放在這裡.",
+    "cn": "不是放在这里."
+   },
+   "IGUI_CU_MG_Crude_NowTheTape": {
+    "en": "All the pieces are in. Now the tape.",
+    "ch": "木材都放好了. 接下來纏膠帶.",
+    "cn": "木材都放好了. 接下来缠胶带."
+   },
+   "IGUI_CU_MG_Crude_OffTheJoint": {
+    "en": "Keep it on the joint.",
+    "ch": "保持在接合處上.",
+    "cn": "保持在接合处上."
+   },
+   "IGUI_CU_MG_Crude_Pieces": {
+    "en": "Pieces: %1 of %2",
+    "ch": "木材: %1/%2",
+    "cn": "木材: %1/%2"
+   },
+   "IGUI_CU_MG_Crude_SCRAP": {
+    "en": "SCRAP",
+    "ch": "廢木材",
+    "cn": "废木材"
+   },
+   "IGUI_CU_MG_Crude_TAPE": {
+    "en": "TAPE",
+    "ch": "膠帶",
+    "cn": "胶带"
+   },
+   "IGUI_CU_MG_Crude_TakeAPiece": {
+    "en": "Take hold of a piece of wood.",
+    "ch": "抓住一塊木材.",
+    "cn": "抓住一块木材."
+   },
+   "IGUI_CU_MG_Crude_Title": {
+    "en": "Lash a prosthetic together.",
+    "ch": "綁出一副義肢.",
+    "cn": "绑出一副假肢."
+   },
+   "IGUI_CU_MG_Crude_Torn": {
+    "en": "Easy - the tape tore.",
+    "ch": "輕一點 - 膠帶扯破了.",
+    "cn": "轻一点 - 胶带扯破了."
+   },
+   "IGUI_CU_MG_Crude_Wound": {
+    "en": "Wound tight.",
+    "ch": "纏緊了.",
+    "cn": "缠紧了."
+   },
+   "IGUI_CU_Stump_Crude": {
+    "en": "Amputated %1: wooden prosthetic fitted (%2%% left)",
+    "ch": "%1已截肢: 已裝上木製義肢 (剩餘 %2%%)",
+    "cn": "%1已截肢: 已装上木制假肢 (剩余 %2%%)"
    }
   },
   "ItemName.json": {
@@ -198507,7 +199412,7 @@
     "cn": "硬橡胶握把 (柯尔特单动陆军)"
    },
    "Base.ColtStagGrip": {
-    "en": "Anlter Grips (Colt Single Action Army)",
+    "en": "Antler Grips (Colt Single Action Army)",
     "ch": "鹿角握把 (柯爾特單動陸軍)",
     "cn": "鹿角握把 (柯尔特单动陆军)"
    },
@@ -267480,72 +268385,72 @@
    },
    "CasualtiesUndead.Prosthesis_ArmL1": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.Prosthesis_ArmL2": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.Prosthesis_ArmL3": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.Prosthesis_ArmR1": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.Prosthesis_ArmR2": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.Prosthesis_ArmR3": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.Prosthesis_LegL1": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.Prosthesis_LegL2": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.Prosthesis_LegL3": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.Prosthesis_LegR1": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.Prosthesis_LegR2": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.Prosthesis_LegR3": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.ProstheticArm": {
     "en": "Prosthetic Arm",
-    "ch": "手臂假肢",
+    "ch": "手臂義肢",
     "cn": "手臂假肢"
    },
    "CasualtiesUndead.ProstheticLeg": {
     "en": "Prosthetic Leg",
-    "ch": "腿部假肢",
+    "ch": "腿部義肢",
     "cn": "腿部假肢"
    },
    "CasualtiesUndead.SalineBag": {
@@ -267785,62 +268690,62 @@
    },
    "CasualtiesUndead.TombProsthesis_ArmL1": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.TombProsthesis_ArmL2": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.TombProsthesis_ArmL3": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.TombProsthesis_ArmR1": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.TombProsthesis_ArmR2": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.TombProsthesis_ArmR3": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.TombProsthesis_LegL1": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.TombProsthesis_LegL2": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.TombProsthesis_LegL3": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.TombProsthesis_LegR1": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.TombProsthesis_LegR2": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.TombProsthesis_LegR3": {
     "en": "Prosthesis",
-    "ch": "假肢",
+    "ch": "義肢",
     "cn": "假肢"
    },
    "CasualtiesUndead.TombStumpSkin_ArmL": {
@@ -268067,6 +268972,216 @@
     "en": "Sandpaper",
     "ch": "砂紙",
     "cn": "砂纸"
+   },
+   "Base.GP100HogueRubber": {
+    "en": "Rubber Overmold Grips (GP100)",
+    "ch": "橡膠包覆成型握把 (儒格GP100)",
+    "cn": "橡胶包覆成型握把 (鲁格GP100)"
+   },
+   "Base.S6Trigger": {
+    "en": "Trigger Parts For Ruger Security-Six",
+    "ch": "扳機零件 (儒格安全六型)",
+    "cn": "扳机零件 (鲁格治安六)"
+   },
+   "Base.LargeOilFilter2Use": {
+    "en": "Large Oil Filter",
+    "ch": "大型機油濾清器",
+    "cn": "大型机油滤清器"
+   },
+   "Base.S6StagGrips": {
+    "en": "Antler Serivce Grip (Security-Six)",
+    "ch": "鹿角軍勤握把 (儒格安全六型)",
+    "cn": "鹿角军勤握把 (鲁格治安六)"
+   },
+   "Base.Rem30067400": {
+    "en": "Remington Model 7400",
+    "ch": "雷明頓7400型步槍",
+    "cn": "雷明顿7400型步枪"
+   },
+   "Base.GP100Trigger": {
+    "en": "Trigger Parts For Ruger GP100",
+    "ch": "扳機零件 (儒格GP100)",
+    "cn": "扳机零件 (鲁格GP100)"
+   },
+   "Base.S6ServiceGrips": {
+    "en": "Wood Service Grip (Security-Six)",
+    "ch": "木質軍勤握把 (儒格安全六型)",
+    "cn": "木质军勤握把 (鲁格治安六)"
+   },
+   "Base.GP100CompGripBlack": {
+    "en": "Compact Black Panel Rubber Grip (GP100)",
+    "ch": "小型黑色嵌板橡膠握把 (儒格GP100)",
+    "cn": "小型黑色嵌板橡胶握把 (鲁格GP100)"
+   },
+   "Base.LargeOilFilter2": {
+    "en": "Large Oil Filter",
+    "ch": "大型機油濾清器",
+    "cn": "大型机油滤清器"
+   },
+   "Base.S6IvoryGrips": {
+    "en": "Ivory Serivce Grip (Security-Six)",
+    "ch": "象牙軍勤握把 (儒格安全六型)",
+    "cn": "象牙军勤握把 (鲁格治安六)"
+   },
+   "Base.GP100GripBlack": {
+    "en": "Black Panel Rubber Grip (GP100)",
+    "ch": "黑色嵌板橡膠握把 (儒格GP100)",
+    "cn": "黑色嵌板橡胶握把 (鲁格GP100)"
+   },
+   "Base.GP100WoodGrip": {
+    "en": "Walnut Grip (GP100)",
+    "ch": "胡桃木握把 (儒格GP100)",
+    "cn": "胡桃木握把 (鲁格GP100)"
+   },
+   "Base.SP101_Alt": {
+    "en": "Ruger SP101",
+    "ch": "儒格 SP101 左輪手槍",
+    "cn": "鲁格SP101转轮手枪"
+   },
+   "Base.GP100RubberGrip": {
+    "en": "Rubber Gripper Grip",
+    "ch": "Gripper橡膠握把",
+    "cn": "Gripper橡胶握把"
+   },
+   "Base.SP101MonogripWood": {
+    "en": "Wood Monogrip (SP101)",
+    "ch": "木質一體式握把 (儒格SP101)",
+    "cn": "木质一体式握把 (鲁格SP101)"
+   },
+   "Base.GP100HogueCheck": {
+    "en": "Hardwood Checkerd Grips (GP100)",
+    "ch": "格紋硬木握把 (儒格GP100)",
+    "cn": "格纹硬木握把 (鲁格GP100)"
+   },
+   "Base.GP100CompGripWood": {
+    "en": "Compact Wood Panel Rubber Grip (GP100)",
+    "ch": "小型木質嵌板橡膠握把 (儒格GP100)",
+    "cn": "小型木质嵌板橡胶握把 (鲁格GP100)"
+   },
+   "Base.OilFilter2": {
+    "en": "Oil Filter",
+    "ch": "機油濾清器",
+    "cn": "机油滤清器"
+   },
+   "Base.GP100FingerSmooth": {
+    "en": "Finger Grooved Grips (GP100)",
+    "ch": "指槽握把 (儒格GP100)",
+    "cn": "指槽握把 (鲁格GP100)"
+   },
+   "Base.Rem3087400": {
+    "en": "Remington Model 7400",
+    "ch": "雷明頓7400型步槍",
+    "cn": "雷明顿7400型步枪"
+   },
+   "Base.S6TargetGrips": {
+    "en": "Wood Target Grip (Security-Six)",
+    "ch": "木質標靶握把 (儒格安全六型)",
+    "cn": "木质标靶握把 (鲁格治安六)"
+   },
+   "Base.GP100GripWood": {
+    "en": "Wood Panel Rubber Grip (GP100)",
+    "ch": "木質嵌板橡膠握把 (儒格GP100)",
+    "cn": "木质嵌板橡胶握把 (鲁格GP100)"
+   },
+   "Base.GP100HogueSmooth": {
+    "en": "Hardwood Grips (GP100)",
+    "ch": "硬木握把 (儒格GP100)",
+    "cn": "硬木握把 (鲁格GP100)"
+   },
+   "Base.GP100FingerRubber": {
+    "en": " Rubber Finger Grooved Overmold Grips (GP100)",
+    "ch": "橡膠包覆成型指槽握把 (儒格GP100)",
+    "cn": "橡胶包覆成型指槽握把 (鲁格GP100)"
+   },
+   "Base.SP101GripBlack": {
+    "en": "Black Panel Rubber Grip (SP101)",
+    "ch": "黑色嵌板橡膠握把 (儒格SP101)",
+    "cn": "黑色嵌板橡胶握把 (鲁格SP101)"
+   },
+   "Base.GP100FingerCheck": {
+    "en": "Finger Grooved Checkerd Grips (GP100)",
+    "ch": "格紋指槽握把 (儒格GP100)",
+    "cn": "格纹指槽握把 (鲁格GP100)"
+   },
+   "Base.S6RubberGrips": {
+    "en": "Wood Target Grip (Security-Six)",
+    "ch": "木質標靶握把 (儒格安全六型)",
+    "cn": "木质标靶握把 (鲁格治安六)"
+   },
+   "Base.SP101": {
+    "en": "Ruger SP101",
+    "ch": "儒格 SP101 左輪手槍",
+    "cn": "鲁格SP101转轮手枪"
+   },
+   "Base.SP101Trigger": {
+    "en": "Trigger Parts For Ruger SP101",
+    "ch": "扳機零件 (儒格SP101)",
+    "cn": "扳机零件 (鲁格SP101)"
+   },
+   "Base.SP101GripWood": {
+    "en": "Wood Panel Rubber Grip (SP101)",
+    "ch": "木質嵌板橡膠握把 (儒格SP101)",
+    "cn": "木质嵌板橡胶握把 (鲁格SP101)"
+   },
+   "Base.OilFilter2Use": {
+    "en": "Oil Filter",
+    "ch": "機油濾清器",
+    "cn": "机油滤清器"
+   },
+   "Base.SP101MonogripRubber": {
+    "en": "Rubber Monogrip (SP101)",
+    "ch": "橡膠一體式握把 (儒格SP101)",
+    "cn": "橡胶一体式握把 (鲁格SP101)"
+   },
+   "Base.SP101RubberGrip": {
+    "en": "Compac Rubber Grip (SP101)",
+    "ch": "橡膠小型握把 (儒格SP101)",
+    "cn": "橡胶小型握把 (鲁格SP101)"
+   },
+   "Base.LargeOilFilter2Silencer": {
+    "en": "Large Oil Filter Silencer",
+    "ch": "大型機油濾清器消音器",
+    "cn": "大型机油滤清器消音器"
+   },
+   "Base.OilFilter2Silencer": {
+    "en": "Oil Filter Silencer",
+    "ch": "機油濾清器消音器",
+    "cn": "机油滤清器消音器"
+   },
+   "Base.70chevelleSideStorage2": {
+    "en": "70 Chevrolet Chevelle Wagon Side Storage",
+    "ch": "70款雪佛蘭Chevelle旅行版側儲物箱",
+    "cn": "70款雪佛兰Chevelle旅行版侧储物箱"
+   },
+   "Base.Bag_MilitaryCampingBackpack_Black": {
+    "en": "Military Camping Backpack (Black)",
+    "ch": "軍用露營背包 (黑)",
+    "cn": "军用露营背包 (黑)"
+   },
+   "Base.Bag_MilitaryCampingBackpack_Green": {
+    "en": "Military Camping Backpack (Green)",
+    "ch": "軍用露營背包 (綠)",
+    "cn": "军用露营背包 (绿)"
+   },
+   "Base.Bag_MilitaryCampingBackpack_GreenCamo": {
+    "en": "Military Camping Backpack (Green Camo)",
+    "ch": "軍用露營背包 (綠色迷彩)",
+    "cn": "军用露营背包 (绿色迷彩)"
+   },
+   "Base.Bag_MilitaryCampingBackpack_Khaki": {
+    "en": "Military Camping Backpack (Khaki)",
+    "ch": "軍用露營背包 (卡其)",
+    "cn": "军用露营背包 (卡其)"
+   },
+   "CasualtiesUndead.WoodenProstheticArm": {
+    "en": "Wooden Prosthetic Arm",
+    "ch": "木製手臂義肢",
+    "cn": "木制手臂假肢"
+   },
+   "CasualtiesUndead.WoodenProstheticLeg": {
+    "en": "Wooden Prosthetic Leg",
+    "ch": "木製腿部義肢",
+    "cn": "木制腿部假肢"
    }
   },
   "Print_Media.json": {
@@ -288882,6 +289997,41 @@
     "ch": "製作玻璃調味罐 (空)",
     "cn": "制作玻璃调味罐 (空)",
     "_note": "上游無對應 EN 翻譯鍵（Long Term Preservation Extended 主版與 SE 版 42.20 新增的 craftRecipe），Translator.getRecipeName() 查不到時直接顯示區塊名；en 欄即區塊名。"
+   },
+   "70chevelleWagonMakeSideStorage": {
+    "en": "Make 70 Chevrolet Chevelle Wagon Nomad Side Storage",
+    "ch": "製作70款雪佛蘭Chevelle旅行版Nomad側儲物箱",
+    "cn": "制作70款雪佛兰Chevelle旅行版Nomad侧储物箱"
+   },
+   "CraftMilitaryCampingBackpack_Black": {
+    "en": "Make Black Military Camping Backpack",
+    "ch": "製作軍用露營背包 (黑)",
+    "cn": "制作军用露营背包 (黑)"
+   },
+   "CraftMilitaryCampingBackpack_Green": {
+    "en": "Make Green Military Camping Backpack",
+    "ch": "製作軍用露營背包 (綠)",
+    "cn": "制作军用露营背包 (绿)"
+   },
+   "CraftMilitaryCampingBackpack_GreenCamo": {
+    "en": "Make Green Camo Military Camping Backpack",
+    "ch": "製作軍用露營背包 (綠色迷彩)",
+    "cn": "制作军用露营背包 (绿色迷彩)"
+   },
+   "CraftMilitaryCampingBackpack_Khaki": {
+    "en": "Make Khaki Military Camping Backpack",
+    "ch": "製作軍用露營背包 (卡其)",
+    "cn": "制作军用露营背包 (卡其)"
+   },
+   "MakeProstheticArm": {
+    "en": "Make Prosthetic Arm",
+    "ch": "製作手臂義肢",
+    "cn": "制作手臂假肢"
+   },
+   "MakeProstheticLeg": {
+    "en": "Make Prosthetic Leg",
+    "ch": "製作腿部義肢",
+    "cn": "制作腿部假肢"
    }
   },
   "Sandbox.json": {
@@ -317540,16 +318690,6 @@
     "ch": "讓自主 NPC 派系在自己的基地建立實用的守衛、巡邏、耕作、木材、屍體與儲物區. 玩家基地的區域仍由手動控制.",
     "cn": "让自主 NPC 派系在自己的基地建立实用的守卫、巡逻、耕作、木材、尸体与储物区. 玩家基地的区域仍由手动控制."
    },
-   "Sandbox_KnoxSurvivors_AutomatedQAMode": {
-    "en": "Run Automated Knox QA",
-    "ch": "執行 Knox 自動化 QA",
-    "cn": "运行 Knox 自动化 QA"
-   },
-   "Sandbox_KnoxSurvivors_AutomatedQAMode_tooltip": {
-    "en": "Runs the opt-in unattended engine test suite when this save loads. Use only in a disposable QA save: it creates test survivors, items, zombies, and temporary world changes, then writes PASS, FAIL, and BLOCKED results to the game log. The player is not protected during the run and can be injured or killed. Requires Enable Developer Tools.",
-    "ch": "載入此存檔時執行需手動選用、無需人員操作的引擎測試套件. 只能在可丟棄的 QA 存檔中使用: 它會建立測試用倖存者、物品、殭屍和暫時性的世界變更, 並將 PASS、FAIL 與 BLOCKED 結果寫入遊戲日誌. 執行期間玩家不受保護, 可能受傷或死亡. 需要啟用「啟用開發者工具」.",
-    "cn": "加载此存档时运行需手动选用的无人值守引擎测试套件. 只能在可丢弃的 QA 存档中使用: 它会创建测试用幸存者、物品、僵尸和临时的世界变更, 并将 PASS、FAIL 与 BLOCKED 结果写入游戏日志. 运行期间玩家不受保护, 可能受伤或死亡. 需要开启“启用开发者工具”."
-   },
    "Sandbox_KnoxSurvivors_BaseCooking": {
     "en": "Survivors Cook at Base",
     "ch": "倖存者在基地烹飪",
@@ -317591,9 +318731,9 @@
     "cn": "每位本地玩家可招募的现役同伴数量上限."
    },
    "Sandbox_KnoxSurvivors_Companions": {
-    "en": "Knox Survivors - Companions",
-    "ch": "諾克斯倖存者－同伴",
-    "cn": "诺克斯幸存者-同伴"
+    "en": "Knox Survivors - Companions & Orders",
+    "ch": "諾克斯倖存者 - 同伴與命令",
+    "cn": "诺克斯幸存者-同伴与命令"
    },
    "Sandbox_KnoxSurvivors_ContinueSurvivorsAfterPlayerDeath": {
     "en": "Survivors Continue After Player Death",
@@ -317601,13 +318741,13 @@
     "cn": "玩家死亡后幸存者延续"
    },
    "Sandbox_KnoxSurvivors_ContinueSurvivorsAfterPlayerDeath_tooltip": {
-    "en": "When enabled, your base and living companions continue under your next character and companions become base residents. When disabled, the old player ownership remains unchanged.",
-    "ch": "啟用時, 你的基地與存活的同伴會延續到你的下一個角色, 同伴會成為基地居民. 停用時, 基地與同伴仍歸屬原玩家.",
-    "cn": "启用时, 你的基地与存活的同伴会延续到你的下一个角色, 同伴会成为基地居民. 禁用时, 基地与同伴仍归属原玩家."
+    "en": "When enabled, your base and living companions continue under your next character and companions become base residents. The existing spouse stays with that household; the successor does not get a second spouse. When disabled, old player ownership remains unchanged.",
+    "ch": "啟用時, 你的基地與存活的同伴會延續到你的下一個角色, 同伴會成為基地居民. 原有的配偶會留在該家庭中; 繼任角色不會再獲得第二位配偶. 停用時, 基地與同伴仍歸屬原玩家.",
+    "cn": "启用时, 你的基地与存活的同伴会延续到你的下一个角色, 同伴会成为基地居民. 原有的配偶会留在该家庭中; 继任角色不会再获得第二位配偶. 禁用时, 基地与同伴仍归属原玩家."
    },
    "Sandbox_KnoxSurvivors_Developer": {
     "en": "Knox Survivors - Developer Tools",
-    "ch": "諾克斯倖存者－開發者工具",
+    "ch": "諾克斯倖存者 - 開發者工具",
     "cn": "诺克斯幸存者-开发者工具"
    },
    "Sandbox_KnoxSurvivors_DeveloperScenario": {
@@ -317681,14 +318821,14 @@
     "cn": "在诺克斯幸存者的世界右键菜单中加入测试指令. 默认禁用, 不适用于正常游玩."
    },
    "Sandbox_KnoxSurvivors_EnableExperimentalNpcDriving": {
-    "en": "Allow NPC Driving",
-    "ch": "允許 NPC 駕駛",
-    "cn": "允许 NPC 驾驶"
+    "en": "Allow NPC Driving (Experimental)",
+    "ch": "允許 NPC 駕駛 (實驗性)",
+    "cn": "允许 NPC 驾驶 (实验性)"
    },
    "Sandbox_KnoxSurvivors_EnableExperimentalNpcDriving_tooltip": {
-    "en": "Enables Drive Ahead and right-click map driving orders while you are a passenger. Requires a running vehicle and a free driver seat or your companion already driving. Routes use nearby loaded outdoor ground (up to 160 tiles), with speed limits and obstacle braking. Towing is not supported. Off by default until enabled for your save.",
-    "ch": "當你是乘客時, 啟用「往前開」與右鍵地圖駕駛命令. 需要一輛發動中的車輛, 以及空的駕駛座或你的同伴已在駕駛. 路線使用附近已載入的戶外地面 (最多 160 格), 並有速限與障礙物煞車. 不支援拖車. 預設關閉, 需在你的存檔中啟用.",
-    "cn": "当你是乘客时, 启用“向前开”与右键地图驾驶命令. 需要一辆发动中的车辆, 以及空的驾驶座或你的同伴已在驾驶. 路线使用附近已加载的户外地面 (最多 160 格), 并有限速与障碍物刹车. 不支持拖车. 默认关闭, 需在你的存档中启用."
+    "en": "Enables experimental Drive Ahead and right-click map driving orders while you are a passenger. Requires a running vehicle and a free driver seat or your companion already driving. Routes use nearby loaded outdoor ground (up to 160 tiles), with speed limits and obstacle braking. Towing is not supported. Off by default; native Build 42 driving acceptance is still pending.",
+    "ch": "當你是乘客時, 啟用實驗性的「往前開」與右鍵地圖駕駛命令. 需要一輛發動中的車輛, 以及空的駕駛座或你的同伴已在駕駛. 路線使用附近已載入的戶外地面 (最多 160 格), 並有速限與障礙物煞車. 不支援拖車. 預設關閉; 原生 Build 42 駕駛功能仍待驗收.",
+    "cn": "当你是乘客时, 启用实验性的“向前开”与右键地图驾驶命令. 需要一辆发动中的车辆, 以及空的驾驶座或你的同伴已在驾驶. 路线使用附近已加载的户外地面 (最多 160 格), 并有限速与障碍物刹车. 不支持拖车. 默认关闭; 原生 Build 42 驾驶功能仍待验收."
    },
    "Sandbox_KnoxSurvivors_EnableKnoxEvents": {
     "en": "Enable Knox Events",
@@ -317762,7 +318902,7 @@
    },
    "Sandbox_KnoxSurvivors_General": {
     "en": "Knox Survivors - General",
-    "ch": "諾克斯倖存者－一般",
+    "ch": "諾克斯倖存者 - 一般",
     "cn": "诺克斯幸存者-常规"
    },
    "Sandbox_KnoxSurvivors_IgnoreJobResourceRequirements": {
@@ -317906,14 +319046,14 @@
     "cn": "将详细的测试状态写入游戏控制台与 Knox 日志. 默认禁用, 因为只在专门测试时才有用."
    },
    "Sandbox_KnoxSurvivors_ShowLegacyContextCommands": {
-    "en": "Show Classic Right-Click Orders",
-    "ch": "顯示傳統右鍵命令",
-    "cn": "显示传统右键命令"
+    "en": "Show Knox Orders in Right-Click Menus",
+    "ch": "在右鍵選單中顯示諾克斯命令",
+    "cn": "在右键菜单中显示诺克斯命令"
    },
    "Sandbox_KnoxSurvivors_ShowLegacyContextCommands_tooltip": {
-    "en": "Restores Follow, Hold, Relax and Auto-Loot entries in the survivor right-click menu alongside the emote radial wheel. Off by default: the radial is the primary way to command. The classic entries always return automatically when no radial UI is available.",
-    "ch": "在倖存者右鍵選單中恢復「跟隨」、「待命」、「放鬆」與「自動搜刮」項目, 與表情輪盤並存. 預設關閉: 輪盤是主要的指揮方式. 沒有可用的輪盤介面時, 傳統項目一律會自動恢復.",
-    "cn": "在幸存者右键菜单中恢复“跟随”、“待命”、“放松”与“自动搜刮”项目, 与表情轮盘并存. 默认关闭: 轮盘是主要的指挥方式. 没有可用的轮盘界面时, 传统项目一律会自动恢复."
+    "en": "When enabled, adds Knox survivor, party, resident, and location order menus to right-click. When disabled, those right-click order menus are hidden; use the emote radial if it is enabled. Default off; the radial is enabled by default.",
+    "ch": "啟用時, 會在右鍵選單中加入諾克斯的倖存者、小隊、居民與地點命令選單. 停用時會隱藏這些右鍵命令選單; 若已啟用表情輪盤, 請改用輪盤. 預設關閉; 輪盤預設為開啟.",
+    "cn": "启用时, 会在右键菜单中加入诺克斯的幸存者、小队、居民与地点命令菜单. 禁用时会隐藏这些右键命令菜单; 若已启用表情轮盘, 请改用轮盘. 默认关闭; 轮盘默认开启."
    },
    "Sandbox_KnoxSurvivors_ShowSurvivorNameplates": {
     "en": "Show Survivor Names",
@@ -317941,9 +319081,9 @@
     "cn": "开局带着配偶"
    },
    "Sandbox_KnoxSurvivors_SpawnWithSpouse_tooltip": {
-    "en": "New characters begin with one trusted spouse companion nearby. They use ordinary survivor needs, injuries and permanent death. No replacement is created after death or dismissal. Enable before starting the character.",
-    "ch": "新角色開局時附近會有一名值得信任的配偶同伴. 對方使用一般的倖存者需求、傷勢與永久死亡規則. 死亡或解散後不會產生替代者. 請在開始角色前啟用.",
-    "cn": "新角色开局时附近会有一名值得信任的配偶同伴. 对方使用一般的幸存者需求、伤势与永久死亡规则. 死亡或解散后不会生成替代者. 请在开始角色前启用."
+    "en": "A new character starts with one uniquely generated spouse companion nearby. Their identity and personality remain stable in that save. If your next character inherits your household, the existing spouse stays with it and no second spouse is created. Enable before starting a new character.",
+    "ch": "新角色開局時附近會有一名獨特生成的配偶同伴. 對方的身分與個性在該存檔中保持不變. 若你的下一個角色繼承了你的家庭, 原有的配偶會留在其中, 不會再產生第二位配偶. 請在開始新角色前啟用.",
+    "cn": "新角色开局时附近会有一名独特生成的配偶同伴. 对方的身份与性格在该存档中保持不变. 若你的下一个角色继承了你的家庭, 原有的配偶会留在其中, 不会再生成第二位配偶. 请在开始新角色前启用."
    },
    "Sandbox_KnoxSurvivors_SurvivorAimingAssist": {
     "en": "Survivor Aiming Assistance",
@@ -317991,14 +319131,14 @@
     "cn": "显示幸存者名称的最大距离 (单位: 格). 仍需要在视线范围内."
    },
    "Sandbox_KnoxSurvivors_ToolCupboardCapacity": {
-    "en": "Base Tool Cupboard Capacity",
-    "ch": "基地工具櫃容量",
-    "cn": "基地工具柜容量"
+    "en": "Legacy Tool Cupboard Capacity",
+    "ch": "舊版工具櫃容量",
+    "cn": "旧版工具柜容量"
    },
    "Sandbox_KnoxSurvivors_ToolCupboardCapacity_tooltip": {
-    "en": "Requested capacity of one designated dry-storage container per base. Build 42 limits ordinary world containers to 100 items, so larger values are capped safely. Residents deposit and withdraw real supplies here. Right-click a container in your base to designate it. NPC bases select one automatically. Lowering capacity never deletes contents.",
-    "ch": "每個基地一個指定乾燥儲物容器的要求容量. Build 42 將一般世界容器限制為 100 件物品, 因此較大的數值會被安全地限制. 居民會在這裡存取真實物資. 在你的基地中右鍵點選容器即可指定. NPC 基地會自動選擇一個. 調低容量絕不會刪除內容物.",
-    "cn": "每个基地一个指定干燥储物容器的请求容量. Build 42 将一般世界容器限制为 100 件物品, 因此较大的数值会被安全地限制. 居民会在这里存取真实物资. 在你的基地中右键点击容器即可指定. NPC 基地会自动选择一个. 调低容量绝不会删除内容物."
+    "en": "Compatibility setting for older saves that still contain a legacy Tool Cupboard policy. Current typed storage assignments use Build 42 native container capacity; this setting does not apply to them. Values are capped to each container's native limit, and changing capacity never deletes contents.",
+    "ch": "供仍保有舊版工具櫃規則的舊存檔使用的相容性設定. 目前的分類儲物指派使用 Build 42 原生容器容量; 此設定對其不適用. 數值會限制在各容器的原生上限內, 且變更容量絕不會刪除內容物.",
+    "cn": "供仍保留旧版工具柜规则的旧存档使用的兼容性设置. 当前的分类储物指派使用 Build 42 原生容器容量; 此设置对其不适用. 数值会限制在各容器的原生上限内, 且更改容量绝不会删除内容物."
    },
    "Sandbox_KnoxSurvivors_UseReputation": {
     "en": "Use Reputation for Recruiting",
@@ -318013,7 +319153,7 @@
    "Sandbox_KnoxSurvivors_World": {
     "en": "Knox Survivors - World & Factions",
     "ch": "諾克斯倖存者 - 世界與派系",
-    "cn": "诺克斯幸存者 - 世界与派系"
+    "cn": "诺克斯幸存者-世界与派系"
    },
    "Sandbox_KnoxSurvivors_WorldPopulation": {
     "en": "World Survivor Population",
@@ -333164,6 +334304,406 @@
     "en": "The percentage of a Sandpaper sheet's maximum condition lost per treatment.",
     "ch": "每次處理砂紙損失的耐久度, 以其最大耐久度的百分比計.",
     "cn": "每次处理砂纸损失的耐久度, 以其最大耐久度的百分比计."
+   },
+   "Sandbox_LCO_CapCommon": {
+    "en": "Cap spawn (Common: houses, shops, etc.)",
+    "ch": "棒球帽生成 (常見: 住宅, 商店等)",
+    "cn": "棒球帽生成 (常见: 住宅, 商店等)"
+   },
+   "Sandbox_LCO_CapCommon_tooltip": {
+    "en": "<RGB:0,1,0>How often legendary caps appear in houses, hat shops and baseball places. Each color appears in places that fit it.\n0 = never, 1 = extremely rare, 5 = default, 10 = 3 times the default.",
+    "ch": "<RGB:0,1,0>傳奇棒球帽在住宅, 帽子店與棒球相關場所中出現的頻率. 每種顏色會出現在與其相符的地點.\n0 = 從不, 1 = 極為稀有, 5 = 預設, 10 = 預設的 3 倍.",
+    "cn": "<RGB:0,1,0>传奇棒球帽在住宅, 帽子店和棒球相关场所中出现的频率. 每种颜色会出现在与其相符的地点.\n0 = 从不, 1 = 极其稀有, 5 = 默认, 10 = 默认的 3 倍."
+   },
+   "Sandbox_LCO_CapRare": {
+    "en": "Cap spawn (Rare: police, military, survivor houses, etc.)",
+    "ch": "棒球帽生成 (稀有: 警察局, 軍事地點, 倖存者住宅等)",
+    "cn": "棒球帽生成 (稀有: 警察局, 军事地点, 幸存者住宅等)"
+   },
+   "Sandbox_LCO_CapRare_tooltip": {
+    "en": "<RGB:0,1,0>How often legendary caps appear in police stations, military sites, fire stations, antique stores and survivor houses.\n0 = never, 1 = extremely rare, 5 = default, 10 = 3 times the default.",
+    "ch": "<RGB:0,1,0>傳奇棒球帽在警察局, 軍事地點, 消防局, 古董店與倖存者住宅中出現的頻率.\n0 = 從不, 1 = 極為稀有, 5 = 預設, 10 = 預設的 3 倍.",
+    "cn": "<RGB:0,1,0>传奇棒球帽在警察局, 军事地点, 消防站, 古董店和幸存者住宅中出现的频率.\n0 = 从不, 1 = 极其稀有, 5 = 默认, 10 = 默认的 3 倍."
+   },
+   "Sandbox_LCO_CapZombies": {
+    "en": "Cap spawn (Zombies)",
+    "ch": "棒球帽生成 (殭屍)",
+    "cn": "棒球帽生成 (僵尸)"
+   },
+   "Sandbox_LCO_CapZombies_tooltip": {
+    "en": "<RGB:0,1,0>How often zombies carry a legendary cap.\n0 = never, 1 = extremely rare, 5 = default, 10 = 3 times the default.",
+    "ch": "<RGB:0,1,0>殭屍攜帶傳奇棒球帽的頻率.\n0 = 從不, 1 = 極為稀有, 5 = 預設, 10 = 預設的 3 倍.",
+    "cn": "<RGB:0,1,0>僵尸携带传奇棒球帽的频率.\n0 = 从不, 1 = 极其稀有, 5 = 默认, 10 = 默认的 3 倍."
+   },
+   "Sandbox_LCO_Flashlight": {
+    "en": "Flashlight spawn",
+    "ch": "手電筒生成",
+    "cn": "手电筒生成"
+   },
+   "Sandbox_LCO_Flashlight_tooltip": {
+    "en": "<RGB:0,1,0>How often the legendary cap flashlight appears (houses, fire stations, work vehicles, survivor houses, zombies...).\n0 = never, 1 = extremely rare, 5 = default, 10 = 3 times the default.",
+    "ch": "<RGB:0,1,0>傳奇手電筒出現的頻率 (住宅, 消防局, 工作車輛, 倖存者住宅, 殭屍…).\n0 = 從不, 1 = 極為稀有, 5 = 預設, 10 = 預設的 3 倍.",
+    "cn": "<RGB:0,1,0>传奇手电筒出现的频率 (住宅, 消防站, 工作车辆, 幸存者住宅, 僵尸…).\n0 = 从不, 1 = 极其稀有, 5 = 默认, 10 = 默认的 3 倍."
+   },
+   "Sandbox_LCO_Magazine": {
+    "en": "Magazine spawn",
+    "ch": "雜誌生成",
+    "cn": "杂志生成"
+   },
+   "Sandbox_LCO_Magazine_tooltip": {
+    "en": "<RGB:0,1,0>How often the magazine that teaches the recipes appears (bookshelves, magazine racks, survivor houses, zombies...).\n0 = never, 1 = extremely rare, 5 = default, 10 = 3 times the default.",
+    "ch": "<RGB:0,1,0>教授這些配方的雜誌出現的頻率 (書架, 雜誌架, 倖存者住宅, 殭屍…).\n0 = 從不, 1 = 極為稀有, 5 = 預設, 10 = 預設的 3 倍.",
+    "cn": "<RGB:0,1,0>教授这些配方的杂志出现的频率 (书架, 杂志架, 幸存者住宅, 僵尸…).\n0 = 从不, 1 = 极其稀有, 5 = 默认, 10 = 默认的 3 倍."
+   },
+   "Sandbox_LDO_DuffelbagCommon": {
+    "en": "Duffel Bag spawn (Common: houses, shops, etc.)",
+    "ch": "帆布包生成 (常見: 住宅, 商店等)",
+    "cn": "帆布包生成 (常见: 住宅, 商店等)"
+   },
+   "Sandbox_LDO_DuffelbagCommon_tooltip": {
+    "en": "<RGB:0,1,0>How often legendary duffel bags appear in houses and shops. Each color appears in places that fit it.\n0 = never, 1 = extremely rare, 5 = default, 10 = 3 times the default.",
+    "ch": "<RGB:0,1,0>傳奇帆布包在住宅與商店中出現的頻率. 每種顏色會出現在與其相符的地點.\n0 = 從不, 1 = 極為稀有, 5 = 預設, 10 = 預設的 3 倍.",
+    "cn": "<RGB:0,1,0>传奇帆布包在住宅和商店中出现的频率. 每种颜色会出现在与其相符的地点.\n0 = 从不, 1 = 极其稀有, 5 = 默认, 10 = 默认的 3 倍."
+   },
+   "Sandbox_LDO_DuffelbagRare": {
+    "en": "Duffel Bag spawn (Rare: police, military, survivor houses, etc.)",
+    "ch": "帆布包生成 (稀有: 警察局, 軍事地點, 倖存者住宅等)",
+    "cn": "帆布包生成 (稀有: 警察局, 军事地点, 幸存者住宅等)"
+   },
+   "Sandbox_LDO_DuffelbagRare_tooltip": {
+    "en": "<RGB:0,1,0>How often legendary duffel bags appear in police stations, military sites, fire stations, antique stores and survivor houses.\n0 = never, 1 = extremely rare, 5 = default, 10 = 3 times the default.",
+    "ch": "<RGB:0,1,0>傳奇帆布包在警察局, 軍事地點, 消防局, 古董店與倖存者住宅中出現的頻率.\n0 = 從不, 1 = 極為稀有, 5 = 預設, 10 = 預設的 3 倍.",
+    "cn": "<RGB:0,1,0>传奇帆布包在警察局, 军事地点, 消防站, 古董店和幸存者住宅中出现的频率.\n0 = 从不, 1 = 极其稀有, 5 = 默认, 10 = 默认的 3 倍."
+   },
+   "Sandbox_LDO_DuffelbagZombies": {
+    "en": "Duffel Bag spawn (Zombies)",
+    "ch": "帆布包生成 (殭屍)",
+    "cn": "帆布包生成 (僵尸)"
+   },
+   "Sandbox_LDO_DuffelbagZombies_tooltip": {
+    "en": "<RGB:0,1,0>How often zombies carry a legendary duffel bag.\n0 = never, 1 = extremely rare, 5 = default, 10 = 3 times the default.",
+    "ch": "<RGB:0,1,0>殭屍攜帶傳奇帆布包的頻率.\n0 = 從不, 1 = 極為稀有, 5 = 預設, 10 = 預設的 3 倍.",
+    "cn": "<RGB:0,1,0>僵尸携带传奇帆布包的频率.\n0 = 从不, 1 = 极其稀有, 5 = 默认, 10 = 默认的 3 倍."
+   },
+   "Sandbox_LDO_Magazine": {
+    "en": "Magazine spawn",
+    "ch": "雜誌生成",
+    "cn": "杂志生成"
+   },
+   "Sandbox_LDO_Magazine_tooltip": {
+    "en": "<RGB:0,1,0>How often the magazine that teaches the recipes appears (bookshelves, magazine racks, survivor houses, zombies...).\n0 = never, 1 = extremely rare, 5 = default, 10 = 3 times the default.",
+    "ch": "<RGB:0,1,0>教授這些配方的雜誌出現的頻率 (書架, 雜誌架, 倖存者住宅, 殭屍…).\n0 = 從不, 1 = 極為稀有, 5 = 預設, 10 = 預設的 3 倍.",
+    "cn": "<RGB:0,1,0>教授这些配方的杂志出现的频率 (书架, 杂志架, 幸存者住宅, 僵尸…).\n0 = 从不, 1 = 极其稀有, 5 = 默认, 10 = 默认的 3 倍."
+   },
+   "Sandbox_LPT": {
+    "en": "Legendary Professions and Traits",
+    "ch": "傳奇職業與特質",
+    "cn": "传奇职业与特质"
+   },
+   "Sandbox_LPT_BladeSensei": {
+    "en": "Cost: Blade Sensei",
+    "ch": "點數花費: 刀術大師",
+    "cn": "点数花费: 刀术大师"
+   },
+   "Sandbox_LPT_BladeSensei_tooltip": {
+    "en": "<RGB:0,1,0>Points this profession costs when creating a character. More negative = more expensive (0 = free). Default: -7.",
+    "ch": "<RGB:0,1,0>建立角色時選擇此職業所需花費的點數. 數值越負 = 花費越高 (0 = 免費). 預設: -7.",
+    "cn": "<RGB:0,1,0>创建角色时选择此职业所需花费的点数. 数值越负 = 花费越高 (0 = 免费). 默认: -7."
+   },
+   "Sandbox_LPT_EllensDesignChallengeContestant": {
+    "en": "Cost: Ellen's Design Challenge Contestant",
+    "ch": "點數花費: 《艾倫設計挑戰賽》參賽者",
+    "cn": "点数花费: 《艾伦设计挑战赛》参赛者"
+   },
+   "Sandbox_LPT_EllensDesignChallengeContestant_tooltip": {
+    "en": "<RGB:0,1,0>Points this profession costs when creating a character. More negative = more expensive (0 = free). Default: -3.",
+    "ch": "<RGB:0,1,0>建立角色時選擇此職業所需花費的點數. 數值越負 = 花費越高 (0 = 免費). 預設: -3.",
+    "cn": "<RGB:0,1,0>创建角色时选择此职业所需花费的点数. 数值越负 = 花费越高 (0 = 免费). 默认: -3."
+   },
+   "Sandbox_LPT_F1PitCrewChief": {
+    "en": "Cost: F1 Pit Crew Chief",
+    "ch": "點數花費: F1維修站首席技師",
+    "cn": "点数花费: F1维修站首席技师"
+   },
+   "Sandbox_LPT_F1PitCrewChief_tooltip": {
+    "en": "<RGB:0,1,0>Points this profession costs when creating a character. More negative = more expensive (0 = free). Default: -7.",
+    "ch": "<RGB:0,1,0>建立角色時選擇此職業所需花費的點數. 數值越負 = 花費越高 (0 = 免費). 預設: -7.",
+    "cn": "<RGB:0,1,0>创建角色时选择此职业所需花费的点数. 数值越负 = 花费越高 (0 = 免费). 默认: -7."
+   },
+   "Sandbox_LPT_FieldMedic": {
+    "en": "Cost: Field Medic",
+    "ch": "點數花費: 戰地醫護兵",
+    "cn": "点数花费: 战地医护兵"
+   },
+   "Sandbox_LPT_FieldMedic_tooltip": {
+    "en": "<RGB:0,1,0>Points this profession costs when creating a character. More negative = more expensive (0 = free). Default: -6.",
+    "ch": "<RGB:0,1,0>建立角色時選擇此職業所需花費的點數. 數值越負 = 花費越高 (0 = 免費). 預設: -6.",
+    "cn": "<RGB:0,1,0>创建角色时选择此职业所需花费的点数. 数值越负 = 花费越高 (0 = 免费). 默认: -6."
+   },
+   "Sandbox_LPT_ForgedInFire": {
+    "en": "Cost: Forged in Fire Contestant",
+    "ch": "點數花費: 《鍛刀大賽》參賽者",
+    "cn": "点数花费: 《锻刀大赛》参赛者"
+   },
+   "Sandbox_LPT_ForgedInFire_tooltip": {
+    "en": "<RGB:0,1,0>Points this profession costs when creating a character. More negative = more expensive (0 = free). Default: -4.",
+    "ch": "<RGB:0,1,0>建立角色時選擇此職業所需花費的點數. 數值越負 = 花費越高 (0 = 免費). 預設: -4.",
+    "cn": "<RGB:0,1,0>创建角色时选择此职业所需花费的点数. 数值越负 = 花费越高 (0 = 免费). 默认: -4."
+   },
+   "Sandbox_LPT_HarpoonFisher": {
+    "en": "Cost: Harpoon Fisher",
+    "ch": "點數花費: 魚叉漁夫",
+    "cn": "点数花费: 鱼叉渔夫"
+   },
+   "Sandbox_LPT_HarpoonFisher_tooltip": {
+    "en": "<RGB:0,1,0>Points this profession costs when creating a character. More negative = more expensive (0 = free). Default: -6.",
+    "ch": "<RGB:0,1,0>建立角色時選擇此職業所需花費的點數. 數值越負 = 花費越高 (0 = 免費). 預設: -6.",
+    "cn": "<RGB:0,1,0>创建角色时选择此职业所需花费的点数. 数值越负 = 花费越高 (0 = 免费). 默认: -6."
+   },
+   "Sandbox_LPT_MarathonRunner": {
+    "en": "Cost: Marathon Runner",
+    "ch": "點數花費: 馬拉松跑者",
+    "cn": "点数花费: 马拉松跑者"
+   },
+   "Sandbox_LPT_MarathonRunner_tooltip": {
+    "en": "<RGB:0,1,0>Points this profession costs when creating a character. More negative = more expensive (0 = free). Default: -5.",
+    "ch": "<RGB:0,1,0>建立角色時選擇此職業所需花費的點數. 數值越負 = 花費越高 (0 = 免費). 預設: -5.",
+    "cn": "<RGB:0,1,0>创建角色时选择此职业所需花费的点数. 数值越负 = 花费越高 (0 = 免费). 默认: -5."
+   },
+   "Sandbox_LPT_MasterEngineer": {
+    "en": "Cost: Master Engineer",
+    "ch": "點數花費: 工程大師",
+    "cn": "点数花费: 工程大师"
+   },
+   "Sandbox_LPT_MasterEngineer_tooltip": {
+    "en": "<RGB:0,1,0>Points this profession costs when creating a character. More negative = more expensive (0 = free). Default: -10.",
+    "ch": "<RGB:0,1,0>建立角色時選擇此職業所需花費的點數. 數值越負 = 花費越高 (0 = 免費). 預設: -10.",
+    "cn": "<RGB:0,1,0>创建角色时选择此职业所需花费的点数. 数值越负 = 花费越高 (0 = 免费). 默认: -10."
+   },
+   "Sandbox_LPT_MilitaryCombatTrainer": {
+    "en": "Cost: Military Combat Trainer",
+    "ch": "點數花費: 軍事戰鬥教官",
+    "cn": "点数花费: 军队战斗教官"
+   },
+   "Sandbox_LPT_MilitaryCombatTrainer_tooltip": {
+    "en": "<RGB:0,1,0>Points this profession costs when creating a character. More negative = more expensive (0 = free). Default: -5.",
+    "ch": "<RGB:0,1,0>建立角色時選擇此職業所需花費的點數. 數值越負 = 花費越高 (0 = 免費). 預設: -5.",
+    "cn": "<RGB:0,1,0>创建角色时选择此职业所需花费的点数. 数值越负 = 花费越高 (0 = 免费). 默认: -5."
+   },
+   "Sandbox_LPT_ProBaseballPlayer": {
+    "en": "Cost: Pro Baseball Player",
+    "ch": "點數花費: 職業棒球選手",
+    "cn": "点数花费: 职业棒球运动员"
+   },
+   "Sandbox_LPT_ProBaseballPlayer_tooltip": {
+    "en": "<RGB:0,1,0>Points this profession costs when creating a character. More negative = more expensive (0 = free). Default: -6.",
+    "ch": "<RGB:0,1,0>建立角色時選擇此職業所需花費的點數. 數值越負 = 花費越高 (0 = 免費). 預設: -6.",
+    "cn": "<RGB:0,1,0>创建角色时选择此职业所需花费的点数. 数值越负 = 花费越高 (0 = 免费). 默认: -6."
+   },
+   "Sandbox_LPT_ProjectRunwayContestant": {
+    "en": "Cost: Project Runway Contestant",
+    "ch": "點數花費: 《決戰時裝伸展台》參賽者",
+    "cn": "点数花费: 《天桥骄子》参赛者"
+   },
+   "Sandbox_LPT_ProjectRunwayContestant_tooltip": {
+    "en": "<RGB:0,1,0>Points this profession costs when creating a character. More negative = more expensive (0 = free). Default: -4.",
+    "ch": "<RGB:0,1,0>建立角色時選擇此職業所需花費的點數. 數值越負 = 花費越高 (0 = 免費). 預設: -4.",
+    "cn": "<RGB:0,1,0>创建角色时选择此职业所需花费的点数. 数值越负 = 花费越高 (0 = 免费). 默认: -4."
+   },
+   "Sandbox_LPT_SWATMarksman": {
+    "en": "Cost: SWAT Marksman",
+    "ch": "點數花費: 特警狙擊手",
+    "cn": "点数花费: 特警狙击手"
+   },
+   "Sandbox_LPT_SWATMarksman_tooltip": {
+    "en": "<RGB:0,1,0>Points this profession costs when creating a character. More negative = more expensive (0 = free). Default: -7.",
+    "ch": "<RGB:0,1,0>建立角色時選擇此職業所需花費的點數. 數值越負 = 花費越高 (0 = 免費). 預設: -7.",
+    "cn": "<RGB:0,1,0>创建角色时选择此职业所需花费的点数. 数值越负 = 花费越高 (0 = 免费). 默认: -7."
+   },
+   "Sandbox_LPT_TimbersportsCompetitor": {
+    "en": "Cost: Timbersports Competitor",
+    "ch": "點數花費: 伐木運動選手",
+    "cn": "点数花费: 伐木运动选手"
+   },
+   "Sandbox_LPT_TimbersportsCompetitor_tooltip": {
+    "en": "<RGB:0,1,0>Points this profession costs when creating a character. More negative = more expensive (0 = free). Default: -6.",
+    "ch": "<RGB:0,1,0>建立角色時選擇此職業所需花費的點數. 數值越負 = 花費越高 (0 = 免費). 預設: -6.",
+    "cn": "<RGB:0,1,0>创建角色时选择此职业所需花费的点数. 数值越负 = 花费越高 (0 = 免费). 默认: -6."
+   },
+   "Sandbox_LPT_TraitApprentice": {
+    "en": "Apprentice trait cost",
+    "ch": "學徒特質點數花費",
+    "cn": "学徒特质点数花费"
+   },
+   "Sandbox_LPT_TraitApprentice_tooltip": {
+    "en": "<RGB:0,1,0>Cost of every Legendary Apprentice trait (+1 to its skill). More negative = more expensive. Default: -1.",
+    "ch": "<RGB:0,1,0>每個傳奇學徒特質的點數花費 (對應技能 +1). 數值越負 = 花費越高. 預設: -1.",
+    "cn": "<RGB:0,1,0>每个传奇学徒特质的点数花费 (对应技能 +1). 数值越负 = 花费越高. 默认: -1."
+   },
+   "Sandbox_LPT_TraitExpert": {
+    "en": "Expert trait cost",
+    "ch": "專家特質點數花費",
+    "cn": "专家特质点数花费"
+   },
+   "Sandbox_LPT_TraitExpert_tooltip": {
+    "en": "<RGB:0,1,0>Cost of every Legendary Expert trait (+2 to its skill). More negative = more expensive. Default: -2.",
+    "ch": "<RGB:0,1,0>每個傳奇專家特質的點數花費 (對應技能 +2). 數值越負 = 花費越高. 預設: -2.",
+    "cn": "<RGB:0,1,0>每个传奇专家特质的点数花费 (对应技能 +2). 数值越负 = 花费越高. 默认: -2."
+   },
+   "Sandbox_LPT_TraitMaster": {
+    "en": "Master trait cost",
+    "ch": "大師特質點數花費",
+    "cn": "大师特质点数花费"
+   },
+   "Sandbox_LPT_TraitMaster_tooltip": {
+    "en": "<RGB:0,1,0>Cost of every Legendary Master trait (+3 to its skill). More negative = more expensive. Default: -3.",
+    "ch": "<RGB:0,1,0>每個傳奇大師特質的點數花費 (對應技能 +3). 數值越負 = 花費越高. 預設: -3.",
+    "cn": "<RGB:0,1,0>每个传奇大师特质的点数花费 (对应技能 +3). 数值越负 = 花费越高. 默认: -3."
+   },
+   "Sandbox_DeadMagic_PreventItemHasteStacking": {
+    "en": "Prevent Item Haste Stacking",
+    "ch": "防止物品疾行疊加",
+    "cn": "防止物品疾行叠加"
+   },
+   "Sandbox_DeadMagic_PreventItemHasteStacking_tooltip": {
+    "en": "Only the strongest haste boost from a single worn item applies, including enchantment and relic haste. Equal boosts do not stack. Disabled by default to keep existing item haste behavior. Other item effects and non-item haste are unchanged.",
+    "ch": "只套用單件穿戴物品提供的最強疾行加成, 包含附魔與遺物的疾行. 相同的加成不會疊加. 預設停用, 以保留現有的物品疾行行為. 其他物品效果與非物品來源的疾行不受影響.",
+    "cn": "只应用单件穿戴物品提供的最强疾行加成, 包括附魔与遗物的疾行. 相同的加成不会叠加. 默认禁用, 以保留现有的物品疾行行为. 其他物品效果与非物品来源的疾行不受影响."
+   },
+   "Sandbox_PhunMart_ShopsDestructible": {
+    "en": "Players can destroy machines",
+    "ch": "玩家可破壞機台",
+    "cn": "玩家可破坏机器"
+   },
+   "Sandbox_PhunMart_ShopsDestructible_tooltip": {
+    "en": "If enabled, players can destroy shop machines with a sledgehammer. A shop can override this in its Basics tab. Admins can always destroy machines.",
+    "ch": "啟用後, 玩家可以用大鎚破壞商店機台. 個別商店可在其「基本」分頁中覆寫此設定. 管理員一律可以破壞機台.",
+    "cn": "启用后, 玩家可以用大锤破坏商店机器. 单个商店可在其“基本”标签页中覆盖此设置. 管理员始终可以破坏机器."
+   },
+   "Sandbox_PhunMart_ShopsMoveable": {
+    "en": "Players can pick up machines",
+    "ch": "玩家可拾起機台",
+    "cn": "玩家可拿起机器"
+   },
+   "Sandbox_PhunMart_ShopsMoveable_tooltip": {
+    "en": "If enabled, players can pick up and move shop machines like any other furniture. A shop can override this in its Basics tab. Admins can always move machines.",
+    "ch": "啟用後, 玩家可以像其他家具一樣拾起並移動商店機台. 個別商店可在其「基本」分頁中覆寫此設定. 管理員一律可以移動機台.",
+    "cn": "启用后, 玩家可以像其他家具一样拿起并移动商店机器. 单个商店可在其“基本”标签页中覆盖此设置. 管理员始终可以移动机器."
+   },
+   "Sandbox_KnoxSurvivors_AllowAutonomousRetreat": {
+    "en": "Allow Autonomous Survivor Retreat",
+    "ch": "允許自主倖存者撤退",
+    "cn": "允许自主幸存者撤退"
+   },
+   "Sandbox_KnoxSurvivors_AllowAutonomousRetreat_tooltip": {
+    "en": "Allows autonomous survivors, including travelling groups and base/faction residents, to use the normal bounded retreat decision when danger and a safe escape lane justify it. Player-owned companions remain governed by their orders. Turning this off does not disable combat, threat detection, group formation, traversal, or explicit player orders. Default on.",
+    "ch": "允許自主倖存者 (包括旅行群體與基地/派系居民) 在危險情勢與安全撤離路線皆足以支持時, 採用一般的有限撤退判斷. 屬於玩家的同伴仍依其命令行動. 關閉此選項不會停用戰鬥、威脅偵測、群體編隊、翻越或玩家明確下達的命令. 預設開啟.",
+    "cn": "允许自主幸存者 (包括旅行群体与基地/派系居民) 在危险情势与安全撤离路线都足以支持时, 采用常规的有限撤退判断. 属于玩家的同伴仍按其命令行动. 关闭此选项不会禁用战斗、威胁检测、群体编队、翻越或玩家明确下达的命令. 默认开启."
+   },
+   "Sandbox_KnoxSurvivors_Bases": {
+    "en": "Knox Survivors - Bases & Work",
+    "ch": "諾克斯倖存者 - 基地與工作",
+    "cn": "诺克斯幸存者-基地与工作"
+   },
+   "Sandbox_KnoxSurvivors_Interface": {
+    "en": "Knox Survivors - Interface",
+    "ch": "諾克斯倖存者 - 介面",
+    "cn": "诺克斯幸存者-界面"
+   },
+   "Sandbox_KnoxSurvivors_Population": {
+    "en": "Knox Survivors - Population",
+    "ch": "諾克斯倖存者 - 人口",
+    "cn": "诺克斯幸存者-人口"
+   },
+   "Sandbox_KnoxSurvivors_ShowRadialOrders": {
+    "en": "Show Knox Orders in Emote Radial",
+    "ch": "在表情輪盤中顯示諾克斯命令",
+    "cn": "在表情轮盘中显示诺克斯命令"
+   },
+   "Sandbox_KnoxSurvivors_ShowRadialOrders_tooltip": {
+    "en": "Adds Knox companion, resident, and nearby-survivor actions to the vanilla emote radial. Turning this off leaves vanilla radial actions intact. Default on.",
+    "ch": "將諾克斯的同伴、居民與附近倖存者動作加入原版表情輪盤. 關閉此選項時, 原版輪盤動作不受影響. 預設開啟.",
+    "cn": "将诺克斯的同伴、居民与附近幸存者动作加入原版表情轮盘. 关闭此选项时, 原版轮盘动作不受影响. 默认开启."
+   },
+   "Sandbox_AutoAll_EnableFarming": {
+    "en": "Auto Farming",
+    "ch": "自動農耕",
+    "cn": "自动农耕"
+   },
+   "Sandbox_AutoAll_EnableFarming_tooltip": {
+    "en": "-1 leaves it to each player, 0 forces it off for everyone, 1 forces it on. Default is -1, which changes nothing.",
+    "ch": "數值 -1 交由每位玩家自行決定, 0 為所有人強制關閉, 1 為所有人強制開啟. 預設值為 -1, 即不做任何變更.",
+    "cn": "数值-1交由每位玩家自行决定, 0为所有人强制关闭, 1为所有人强制开启. 默认值为-1, 即不做任何更改."
+   },
+   "Sandbox_AutoAll_EnableFishing": {
+    "en": "Auto Fishing",
+    "ch": "自動釣魚",
+    "cn": "自动钓鱼"
+   },
+   "Sandbox_AutoAll_EnableFishing_tooltip": {
+    "en": "-1 leaves it to each player, 0 forces it off for everyone, 1 forces it on. Default is -1, which changes nothing.",
+    "ch": "數值 -1 交由每位玩家自行決定, 0 為所有人強制關閉, 1 為所有人強制開啟. 預設值為 -1, 即不做任何變更.",
+    "cn": "数值-1交由每位玩家自行决定, 0为所有人强制关闭, 1为所有人强制开启. 默认值为-1, 即不做任何更改."
+   },
+   "Sandbox_AutoAll_EnableGenerator": {
+    "en": "Auto Fix Generator",
+    "ch": "自動修理發電機",
+    "cn": "自动修理发电机"
+   },
+   "Sandbox_AutoAll_EnableGenerator_tooltip": {
+    "en": "-1 leaves it to each player, 0 forces it off for everyone, 1 forces it on. Default is -1, which changes nothing.",
+    "ch": "數值 -1 交由每位玩家自行決定, 0 為所有人強制關閉, 1 為所有人強制開啟. 預設值為 -1, 即不做任何變更.",
+    "cn": "数值-1交由每位玩家自行决定, 0为所有人强制关闭, 1为所有人强制开启. 默认值为-1, 即不做任何更改."
+   },
+   "Sandbox_AutoAll_EnableLogs": {
+    "en": "Haul Logs",
+    "ch": "搬運原木",
+    "cn": "搬运原木"
+   },
+   "Sandbox_AutoAll_EnableLogs_tooltip": {
+    "en": "-1 leaves it to each player, 0 forces it off for everyone, 1 forces it on. Default is -1, which changes nothing.",
+    "ch": "數值 -1 交由每位玩家自行決定, 0 為所有人強制關閉, 1 為所有人強制開啟. 預設值為 -1, 即不做任何變更.",
+    "cn": "数值-1交由每位玩家自行决定, 0为所有人强制关闭, 1为所有人强制开启. 默认值为-1, 即不做任何更改."
+   },
+   "Sandbox_MilitaryCampingBackpack_CapacityAll": {
+    "en": "Military Camping Backpack Capacity",
+    "ch": "軍用露營背包容量",
+    "cn": "军用露营背包容量"
+   },
+   "Sandbox_MilitaryCampingBackpack_CapacityAll_tooltip": {
+    "en": "Applies to all newly created military camping backpack colors. Restart the game or server after changing this setting.",
+    "ch": "套用至所有新建立的各色軍用露營背包. 變更此設定後, 請重新啟動遊戲或伺服器.",
+    "cn": "适用于所有新创建的各色军用露营背包. 更改此设置后, 请重新启动游戏或服务器."
+   },
+   "Sandbox_MilitaryCampingBackpack_WeightReductionAll": {
+    "en": "Military Camping Backpack Weight Reduction (percent)",
+    "ch": "軍用露營背包減重 (百分比)",
+    "cn": "军用露营背包减重 (百分比)"
+   },
+   "Sandbox_MilitaryCampingBackpack_WeightReductionAll_tooltip": {
+    "en": "Applies to all newly created military camping backpack colors. Restart the game or server after changing this setting.",
+    "ch": "套用至所有新建立的各色軍用露營背包. 變更此設定後, 請重新啟動遊戲或伺服器.",
+    "cn": "适用于所有新创建的各色军用露营背包. 更改此设置后, 请重新启动游戏或服务器."
+   },
+   "Sandbox_CU_CrudeProstheticLife": {
+    "en": "Wooden prosthetic lifespan (hours)",
+    "ch": "木製義肢耐用時間 (小時)",
+    "cn": "木制假肢耐用时间 (小时)"
+   },
+   "Sandbox_CU_CrudeProstheticLife_tooltip": {
+    "en": "Game hours of wear a crude wooden prosthetic lasts before it splinters apart. A badly made one starts partly worn.",
+    "ch": "簡易木製義肢在碎裂解體前可承受的遊戲內磨損時數. 做工差的義肢一開始就帶有部分磨損.",
+    "cn": "简易木制假肢在碎裂散架前可承受的游戏内磨损时数. 做工差的假肢一开始就带有部分磨损."
+   },
+   "Sandbox_CU_MouthWork": {
+    "en": "Teeth and gnawing",
+    "ch": "牙齒與啃咬",
+    "cn": "牙齿与啃咬"
+   },
+   "Sandbox_CU_MouthWork_tooltip": {
+    "en": "A character with no usable arm can lift light things in their teeth, and gnaw scrap wood off wooden objects to make a crude prosthetic. Off: with no arms they can do none of it.",
+    "ch": "沒有可用手臂的角色可以用牙齒叼起輕的東西, 也能從木製物件上啃下廢木材來製作簡易義肢. 關閉: 沒有手臂時這些都做不到.",
+    "cn": "没有可用手臂的角色可以用牙齿叼起轻的东西, 也能从木制物件上啃下废木材来制作简易假肢. 关闭: 没有手臂时这些都做不到."
    }
   },
   "Tooltip.json": {
@@ -351655,6 +353195,16 @@
     "en": "Sit in it to get about without legs, much faster than crawling, and fight from it. It cannot take stairs or climb; get out of it first.",
     "ch": "坐上去就能在沒有腿的情況下移動, 比爬行快得多, 還能坐著戰鬥. 它無法上下樓梯或攀爬; 請先下輪椅.",
     "cn": "坐上去就能在没有腿的情况下移动, 比爬行快得多, 还能坐着战斗. 它无法上下楼梯或攀爬; 请先下轮椅."
+   },
+   "Tooltip_CU_WoodenProstheticArm": {
+    "en": "Scrap wood and duct tape. Fits any arm amputation once the stump is cauterized, but it is slow, it cannot climb, and it wears out and breaks.",
+    "ch": "廢木材加布膠帶. 殘肢燒灼止血後, 可裝在任何手臂截肢處, 但速度慢、無法攀爬, 還會磨損壞掉.",
+    "cn": "废木材加管道胶带. 残肢烧灼止血后, 可装在任何手臂截肢处, 但速度慢、无法攀爬, 还会磨损坏掉."
+   },
+   "Tooltip_CU_WoodenProstheticLeg": {
+    "en": "Scrap wood and duct tape. Fits any leg amputation once the stump is cauterized, but you will limp on it and never run, it cannot climb, and it wears out and breaks.",
+    "ch": "廢木材加布膠帶. 殘肢燒灼止血後, 可裝在任何腿部截肢處, 但使用它時只能跛行、無法奔跑, 也無法攀爬, 還會磨損壞掉.",
+    "cn": "废木材加管道胶带. 残肢烧灼止血后, 可装在任何腿部截肢处, 但使用它时只能跛行、无法奔跑, 也无法攀爬, 还会磨损坏掉."
    }
   },
   "UI.json": {
@@ -362238,9 +363788,9 @@
     "cn": "那个丙烷容器是空的."
    },
    "UI_RPT_NoNearbyVehicle": {
-    "en": "Park a supported Filibuster propane truck beside this depot.",
-    "ch": "請把受支援的 Filibuster 丙烷車停在這座儲罐旁邊.",
-    "cn": "请把受支持的 Filibuster 丙烷车停在这座储罐旁边."
+    "en": "Park a supported propane truck beside this depot.",
+    "ch": "請把受支援的丙烷車停在這座儲罐旁邊.",
+    "cn": "请把受支持的丙烷车停在这座储罐旁边."
    },
    "UI_RPT_NoVehicleSources": {
     "en": "Carry a supported propane container that still contains propane.",
@@ -391952,7 +393502,7 @@
    },
    "UI_trait_CU_ProsArm": {
     "en": "Prosthetic Arm",
-    "ch": "手臂假肢",
+    "ch": "手臂義肢",
     "cn": "手臂假肢"
    },
    "UI_trait_CU_ProsArmDesc": {
@@ -391962,7 +393512,7 @@
    },
    "UI_trait_CU_ProsLeg": {
     "en": "Prosthetic Leg",
-    "ch": "腿部假肢",
+    "ch": "腿部義肢",
     "cn": "腿部假肢"
    },
    "UI_trait_CU_ProsLegDesc": {
@@ -391986,9 +393536,9 @@
     "cn": "四肢瘫痪"
    },
    "UI_trait_CU_QuadriplegicDesc": {
-    "en": "You have no arms and no legs. You cannot hold, carry or climb anything, and you can only roll a few metres before you are too exhausted to move.",
-    "ch": "你沒有手臂也沒有腿. 你無法拿取、搬運或攀爬任何東西, 而且只能滾動幾公尺就會累到動不了.",
-    "cn": "你没有手臂也没有腿. 你无法拿取、搬运或攀爬任何东西, 而且只能滚动几米就会累到动不了."
+    "en": "You have no arms and no legs. You can only roll a few metres before you are too exhausted to move, and you cannot hold or climb anything. You can lift light things in your teeth, gnaw scrap wood off wooden objects (it hurts), and lash the wood together with duct tape into a crude prosthetic.",
+    "ch": "你沒有手臂也沒有腿. 你只能滾動幾公尺就會累到動不了, 而且無法手持或攀爬任何東西. 你可以用牙齒叼起輕的東西, 從木製物件上啃下廢木材 (會痛), 再用布膠帶把木頭綁成簡易義肢.",
+    "cn": "你没有手臂也没有腿. 你只能滚动几米就会累到动不了, 而且无法手持或攀爬任何东西. 你可以用牙齿叼起轻的东西, 从木制物件上啃下废木材 (会痛), 再用管道胶带把木头绑成简易假肢."
    },
    "UI_trait_CU_Slug": {
     "en": "Slug",
@@ -392729,6 +394279,621 @@
     "en": "Sociability",
     "ch": "社交性",
     "cn": "社交性"
+   },
+   "UI_optionscreen_binding_FireMode_Toggle": {
+    "en": "Toggle Firearm Fire Modes",
+    "ch": "切換槍械射擊模式",
+    "cn": "切换枪械射击模式"
+   },
+   "UI_optionscreen_binding_Gun93Keys": {
+    "en": "Guns of 93 Keybinds",
+    "ch": "Guns of 93 快捷鍵",
+    "cn": "Guns of 93 快捷键"
+   },
+   "UI_optionscreen_binding_UseLaser_Toggle": {
+    "en": "Toggle Firearm Laser Sight On/Off",
+    "ch": "切換槍械雷射瞄準器開關",
+    "cn": "切换枪械激光瞄准器开关"
+   },
+   "UI_trait_LegendaryWelderApprentice": {
+    "en": "Legendary Welder Apprentice",
+    "ch": "傳奇焊工學徒",
+    "cn": "传奇焊工学徒"
+   },
+   "UI_trait_LegendaryWelderApprenticeDesc": {
+    "en": "Apprentice in the art of welding.",
+    "ch": "焊接技藝的學徒.",
+    "cn": "焊接技艺的学徒."
+   },
+   "UI_trait_LegendaryWelderExpert": {
+    "en": "Legendary Welder Expert",
+    "ch": "傳奇焊工專家",
+    "cn": "传奇焊工专家"
+   },
+   "UI_trait_LegendaryWelderExpertDesc": {
+    "en": "Expert in the art of welding.",
+    "ch": "焊接技藝的專家.",
+    "cn": "焊接技艺的专家."
+   },
+   "UI_trait_LegendaryWelderMaster": {
+    "en": "Legendary Welder Master",
+    "ch": "傳奇焊工大師",
+    "cn": "传奇焊工大师"
+   },
+   "UI_trait_LegendaryWelderMasterDesc": {
+    "en": "Legendary master in the art of welding.",
+    "ch": "焊接技藝的傳奇大師.",
+    "cn": "焊接技艺的传奇大师."
+   },
+   "UI_optionscreen_binding_KnoxSurvivorInteract": {
+    "en": "Talk to Nearby Survivor",
+    "ch": "與附近倖存者交談",
+    "cn": "与附近幸存者交谈"
+   },
+   "UI_AA_farm_done": {
+    "en": "Farming done: %1 harvested, %2 watered, %3 treated, %4 sown.",
+    "ch": "農耕完成: 收穫%1, 澆水%2, 治療%3, 播種%4.",
+    "cn": "农耕完成: 收获%1, 浇水%2, 治疗%3, 播种%4."
+   },
+   "UI_AA_farm_heavy": {
+    "en": "Stopped: the harvest is getting too heavy.",
+    "ch": "已停止: 收成太重了.",
+    "cn": "已停止: 收成太重了."
+   },
+   "UI_AA_farm_noseed": {
+    "en": "Out of seeds.",
+    "ch": "種子用完了.",
+    "cn": "种子用完了."
+   },
+   "UI_AA_farm_nothing": {
+    "en": "Nothing to do on these crops right now.",
+    "ch": "這些作物目前沒有需要處理的事.",
+    "cn": "这些作物目前没有需要处理的事."
+   },
+   "UI_AA_farm_nowater": {
+    "en": "Stopped: out of water and no source in reach.",
+    "ch": "已停止: 水用完了, 附近也沒有水源.",
+    "cn": "已停止: 水用完了, 附近也没有水源."
+   },
+   "UI_AA_farm_option": {
+    "en": "Auto Farming",
+    "ch": "自動農耕",
+    "cn": "自动农耕"
+   },
+   "UI_AA_farm_outofseason": {
+    "en": "Out of season this month.",
+    "ch": "這個月不是播種季節.",
+    "cn": "这个月不是播种季节."
+   },
+   "UI_AA_farm_refilling": {
+    "en": "Refilling water",
+    "ch": "正在補水",
+    "cn": "正在补水"
+   },
+   "UI_AA_farm_sow": {
+    "en": "Sow empty furrows with %1 (%2)",
+    "ch": "在空的種植地播種%1 (%2)",
+    "cn": "在空犁沟中播种%1 (%2)"
+   },
+   "UI_AA_farm_started": {
+    "en": "Tending the crops.",
+    "ch": "正在照料作物.",
+    "cn": "正在照料作物."
+   },
+   "UI_AA_farm_stop": {
+    "en": "Stop Farming",
+    "ch": "停止農耕",
+    "cn": "停止农耕"
+   },
+   "UI_AA_farm_tend": {
+    "en": "Tend crops nearby",
+    "ch": "照料附近的作物",
+    "cn": "照料附近的作物"
+   },
+   "UI_AA_farm_tend_tt": {
+    "en": "Harvests, treats and waters every crop within %1 tiles, nearest first. What it does is set in Mod Options.",
+    "ch": "由近到遠, 收穫、治療並澆灌%1格內的所有作物. 具體執行哪些工作可在模組選項中設定.",
+    "cn": "由近及远, 收获、治疗并浇灌%1格内的所有作物. 具体执行哪些工作可在模组选项中设置."
+   },
+   "UI_AA_fish_nets_done": {
+    "en": "Nets checked: %1. Nets baited: %2.",
+    "ch": "已檢查漁網: %1. 已補餌漁網: %2.",
+    "cn": "已检查渔网: %1. 已补饵渔网: %2."
+   },
+   "UI_AA_fish_nets_nothing": {
+    "en": "No net needs checking yet.",
+    "ch": "目前還沒有需要檢查的漁網.",
+    "cn": "目前还没有需要检查的渔网."
+   },
+   "UI_AA_fish_nets_option": {
+    "en": "Check fishing nets nearby (%1)",
+    "ch": "檢查附近的漁網 (%1)",
+    "cn": "检查附近的渔网 (%1)"
+   },
+   "UI_AA_fish_nets_started": {
+    "en": "Checking the fishing nets.",
+    "ch": "正在檢查漁網.",
+    "cn": "正在检查渔网."
+   },
+   "UI_AA_fish_nets_tt": {
+    "en": "Checks every net that has waited at least an hour and re-baits empty ones with Chum.",
+    "ch": "檢查每張已放置至少一小時的漁網, 並用散餌為空漁網補餌.",
+    "cn": "检查每张已放置至少一小时的渔网, 并用散饵为空渔网补饵."
+   },
+   "UI_AA_fish_nohook": {
+    "en": "The rod has no hook - fish will not bite without one.",
+    "ch": "釣竿沒有魚鉤 - 沒有魚鉤, 魚不會上鉤.",
+    "cn": "鱼竿没有鱼钩 - 没有鱼钩, 鱼不会上钩."
+   },
+   "UI_AA_fish_nolure": {
+    "en": "Out of bait. %1 caught.",
+    "ch": "魚餌用完了. 釣到%1條.",
+    "cn": "鱼饵用完了. 钓到%1条."
+   },
+   "UI_AA_fish_norod": {
+    "en": "You need a fishing rod.",
+    "ch": "你需要一根釣竿.",
+    "cn": "你需要一根鱼竿."
+   },
+   "UI_AA_fish_nowater": {
+    "en": "No water to cast at between 4 and 14 tiles away.",
+    "ch": "4到14格範圍內沒有可以拋竿的水域.",
+    "cn": "4到14格范围内没有可以抛竿的水域."
+   },
+   "UI_AA_fish_rod_done": {
+    "en": "Fishing done: %1 caught.",
+    "ch": "釣魚完成: 釣到%1條.",
+    "cn": "钓鱼完成: 钓到%1条."
+   },
+   "UI_AA_fish_rod_lost": {
+    "en": "Fishing stopped: the rod is gone (did the line snap?). %1 caught.",
+    "ch": "釣魚停止: 釣竿不見了 (可能是斷線了). 釣到%1條.",
+    "cn": "钓鱼停止: 鱼竿不见了 (可能是断线了). 钓到%1条."
+   },
+   "UI_AA_fish_rod_option": {
+    "en": "Fish here automatically (experimental)",
+    "ch": "在此自動釣魚 (實驗性)",
+    "cn": "在此自动钓鱼 (实验性)"
+   },
+   "UI_AA_fish_rod_started": {
+    "en": "Fishing.",
+    "ch": "正在釣魚.",
+    "cn": "正在钓鱼."
+   },
+   "UI_AA_fish_rod_tt": {
+    "en": "Casts, waits for a bite, reels in carefully and re-baits the hook between casts. Moving or pressing ESC stops it.",
+    "ch": "拋竿、等待魚上鉤、小心收線, 並在每次拋竿之間重新掛餌. 移動或按 ESC 鍵即可停止.",
+    "cn": "抛竿、等待鱼上钩、小心收线, 并在每次抛竿之间重新挂饵. 移动或按 ESC 键即可停止."
+   },
+   "UI_AA_fish_stop": {
+    "en": "Stop Fishing",
+    "ch": "停止釣魚",
+    "cn": "停止钓鱼"
+   },
+   "UI_AA_fish_unsupported": {
+    "en": "The game's fishing code was not found - rod fishing is unavailable.",
+    "ch": "找不到遊戲的釣魚程式碼 - 無法使用釣竿釣魚.",
+    "cn": "找不到游戏的钓鱼代码 - 无法使用鱼竿钓鱼."
+   },
+   "UI_AA_gen_done": {
+    "en": "Generators repaired: %1. Electronics Scrap used: %2.",
+    "ch": "已修理發電機: %1. 已使用電子零件: %2.",
+    "cn": "已修理发电机: %1. 已使用电子废料: %2."
+   },
+   "UI_AA_gen_fixing": {
+    "en": "Repairing the generator (%1%)",
+    "ch": "正在修理發電機 (%1%%)",
+    "cn": "正在修理发电机 (%1%%)"
+   },
+   "UI_AA_gen_noscrap": {
+    "en": "Out of Electronics Scrap. Generators repaired: %1.",
+    "ch": "電子零件用完了. 已修理發電機: %1.",
+    "cn": "电子废料用完了. 已修理发电机: %1."
+   },
+   "UI_AA_gen_nothing": {
+    "en": "No damaged generator within reach.",
+    "ch": "附近沒有受損的發電機.",
+    "cn": "附近没有受损的发电机."
+   },
+   "UI_AA_gen_option": {
+    "en": "Auto Fix Generator",
+    "ch": "自動修理發電機",
+    "cn": "自动修理发电机"
+   },
+   "UI_AA_gen_running": {
+    "en": "A running generator cannot be repaired - switch it off first.",
+    "ch": "運轉中的發電機無法修理 - 請先關閉它.",
+    "cn": "运行中的发电机无法修理 - 请先关闭它."
+   },
+   "UI_AA_gen_started": {
+    "en": "Repairing %1 generator(s).",
+    "ch": "正在修理%1台發電機.",
+    "cn": "正在修理%1台发电机."
+   },
+   "UI_AA_gen_stop": {
+    "en": "Stop Fixing Generators",
+    "ch": "停止修理發電機",
+    "cn": "停止修理发电机"
+   },
+   "UI_AA_gen_tt_condition": {
+    "en": "Condition: %1%",
+    "ch": "狀態: %1%%",
+    "cn": "状态: %1%%"
+   },
+   "UI_AA_gen_tt_count": {
+    "en": "Damaged generators in reach: %1",
+    "ch": "附近受損的發電機: %1",
+    "cn": "附近受损的发电机: %1"
+   },
+   "UI_AA_gen_tt_scrap": {
+    "en": "Electronics Scrap in reach: %1",
+    "ch": "附近的電子零件: %1",
+    "cn": "附近的电子废料: %1"
+   },
+   "UI_AA_gen_tt_toggle": {
+    "en": "It is running: it will be switched off for the repair and back on afterwards.",
+    "ch": "發電機正在運轉: 修理時會先關閉, 修好後再重新開啟.",
+    "cn": "发电机正在运行: 修理时会先关闭, 修好后再重新开启."
+   },
+   "UI_AA_logs_done": {
+    "en": "Logs hauled: %1.",
+    "ch": "已搬運原木: %1.",
+    "cn": "已搬运原木: %1."
+   },
+   "UI_AA_logs_full": {
+    "en": "The container is full. Logs hauled: %1.",
+    "ch": "容器已滿. 已搬運原木: %1.",
+    "cn": "容器已满. 已搬运原木: %1."
+   },
+   "UI_AA_logs_kind_firewood": {
+    "en": "Logs, planks and firewood",
+    "ch": "原木、木板和木柴",
+    "cn": "原木、木板和木柴"
+   },
+   "UI_AA_logs_kind_logs": {
+    "en": "Logs",
+    "ch": "原木",
+    "cn": "原木"
+   },
+   "UI_AA_logs_kind_planks": {
+    "en": "Logs and planks",
+    "ch": "原木和木板",
+    "cn": "原木和木板"
+   },
+   "UI_AA_logs_notallowed": {
+    "en": "This container does not take logs.",
+    "ch": "這個容器放不了原木.",
+    "cn": "这个容器放不了原木."
+   },
+   "UI_AA_logs_nothing": {
+    "en": "No logs within reach.",
+    "ch": "附近沒有原木.",
+    "cn": "附近没有原木."
+   },
+   "UI_AA_logs_option": {
+    "en": "Haul logs into this container (%1)",
+    "ch": "把原木搬進這個容器 (%1)",
+    "cn": "把原木搬进这个容器 (%1)"
+   },
+   "UI_AA_logs_picking": {
+    "en": "Picking up logs",
+    "ch": "正在撿起原木",
+    "cn": "正在捡起原木"
+   },
+   "UI_AA_logs_started": {
+    "en": "Hauling logs.",
+    "ch": "正在搬運原木.",
+    "cn": "正在搬运原木."
+   },
+   "UI_AA_logs_stop": {
+    "en": "Stop Hauling Logs",
+    "ch": "停止搬運原木",
+    "cn": "停止搬运原木"
+   },
+   "UI_AA_logs_tt": {
+    "en": "Carries the logs lying within %1 tiles into this container, as many per trip as you can carry.",
+    "ch": "把%1格內散落的原木搬進這個容器, 每趟都搬你拿得動的最大量.",
+    "cn": "把%1格内散落的原木搬进这个容器, 每趟都搬你拿得动的最大量."
+   },
+   "UI_AA_logs_unreachable": {
+    "en": "Could not reach the container. Logs hauled: %1.",
+    "ch": "無法抵達容器. 已搬運原木: %1.",
+    "cn": "无法到达容器. 已搬运原木: %1."
+   },
+   "UI_AA_opt_enableFarming": {
+    "en": "Auto Farming",
+    "ch": "自動農耕",
+    "cn": "自动农耕"
+   },
+   "UI_AA_opt_enableFishing": {
+    "en": "Auto Fishing",
+    "ch": "自動釣魚",
+    "cn": "自动钓鱼"
+   },
+   "UI_AA_opt_enableGenerator": {
+    "en": "Auto Fix Generator",
+    "ch": "自動修理發電機",
+    "cn": "自动修理发电机"
+   },
+   "UI_AA_opt_enableLogs": {
+    "en": "Haul Logs",
+    "ch": "搬運原木",
+    "cn": "搬运原木"
+   },
+   "UI_AA_opt_farmCure": {
+    "en": "Treat diseases and pests",
+    "ch": "治療病蟲害",
+    "cn": "治疗病虫害"
+   },
+   "UI_AA_opt_farmCure_tt": {
+    "en": "Sprays mildew, flies, aphids and slugs with the matching treatment, when you carry one.",
+    "ch": "身上帶有對應的防治藥劑時, 會對白粉病、蒼蠅、蚜蟲和蛞蝓噴灑.",
+    "cn": "身上带有对应的防治药剂时, 会对白粉病、苍蝇、蚜虫和蛞蝓喷洒."
+   },
+   "UI_AA_opt_farmHarvest": {
+    "en": "Harvest ripe crops",
+    "ch": "收穫成熟作物",
+    "cn": "收获成熟作物"
+   },
+   "UI_AA_opt_farmHarvest_tt": {
+    "en": "Harvests every crop that is ready. The job stops when the produce gets too heavy, so you decide where it goes.",
+    "ch": "收穫所有可收成的作物. 收成太重時作業會停止, 讓你自己決定要放到哪裡.",
+    "cn": "收获所有可收获的作物. 收成太重时作业会停止, 让你自己决定要放到哪里."
+   },
+   "UI_AA_opt_farmReach": {
+    "en": "Farm radius (tiles)",
+    "ch": "農耕半徑 (格)",
+    "cn": "农耕半径 (格)"
+   },
+   "UI_AA_opt_farmReach_tt": {
+    "en": "How far from the clicked crop the job works. Every plot inside it is tended, nearest first.",
+    "ch": "以點選的作物為中心的作業範圍. 範圍內的每塊田地都會由近到遠照料.",
+    "cn": "以点击的作物为中心的作业范围. 范围内的每块田地都会由近及远照料."
+   },
+   "UI_AA_opt_farmRefill": {
+    "en": "Refill water at a nearby source",
+    "ch": "在附近水源補水",
+    "cn": "在附近水源补水"
+   },
+   "UI_AA_opt_farmRefill_tt": {
+    "en": "When the watering can runs dry it is refilled at the nearest rain barrel, sink or well inside the farm radius.",
+    "ch": "澆水壺中的水用完時, 會到農耕半徑內最近的集雨桶、洗手台或水井補水.",
+    "cn": "洒水壶里的水用完时, 会到农耕半径内最近的雨水收集桶、水池或水井补水."
+   },
+   "UI_AA_opt_farmSow": {
+    "en": "Offer sowing in the menu",
+    "ch": "在選單中提供播種",
+    "cn": "在菜单中提供播种"
+   },
+   "UI_AA_opt_farmSowSeason": {
+    "en": "Only sow seeds that are in season",
+    "ch": "只播種當季的種子",
+    "cn": "只播种当季的种子"
+   },
+   "UI_AA_opt_farmSowSeason_tt": {
+    "en": "When the server plays with growing seasons, seeds out of season are greyed out in the menu.",
+    "ch": "伺服器啟用生長季節時, 非當季的種子在選單中會顯示為灰色.",
+    "cn": "服务器启用生长季节时, 非当季的种子在菜单中会显示为灰色."
+   },
+   "UI_AA_opt_farmSow_tt": {
+    "en": "Adds 'Sow empty furrows with...' entries for the seeds you carry. The plain 'Tend crops' entry never sows.",
+    "ch": "為你攜帶的種子加入「在空的種植地播種…」選項. 一般的「照料附近的作物」選項永遠不會播種.",
+    "cn": "为你携带的种子添加“在空犁沟中播种…”选项. 普通的“照料附近的作物”选项永远不会播种."
+   },
+   "UI_AA_opt_farmWater": {
+    "en": "Water crops that need it",
+    "ch": "為需要的作物澆水",
+    "cn": "为需要的作物浇水"
+   },
+   "UI_AA_opt_farmWater_tt": {
+    "en": "Waters a plant when it is below its own water need, and never above its own maximum - overwatering hurts plants in the base game too.",
+    "ch": "植物水分低於自身需求時才澆水, 而且絕不超過其上限 - 在原版遊戲中澆太多水同樣會傷害植物.",
+    "cn": "植物水分低于自身需求时才浇水, 而且绝不超过其上限 - 在原版游戏中浇水过多同样会伤害植物."
+   },
+   "UI_AA_opt_fishMax": {
+    "en": "Stop after this many catches",
+    "ch": "釣到這麼多條後停止",
+    "cn": "钓到这么多条后停止"
+   },
+   "UI_AA_opt_fishMax_tt": {
+    "en": "0 keeps fishing until the bait runs out or you stop it.",
+    "ch": "設為0則會一直釣, 直到魚餌用完或你手動停止.",
+    "cn": "设为0则会一直钓, 直到鱼饵用完或你手动停止."
+   },
+   "UI_AA_opt_fishNetBait": {
+    "en": "Re-bait empty nets with Chum",
+    "ch": "用散餌為空漁網補餌",
+    "cn": "用散饵为空渔网补饵"
+   },
+   "UI_AA_opt_fishNetBait_tt": {
+    "en": "A net whose bait has run out gets Chum from your inventory - the only bait a net takes.",
+    "ch": "魚餌用完的漁網會從你的物品欄補上散餌 - 這是漁網唯一能用的魚餌.",
+    "cn": "鱼饵用完的渔网会从你的物品栏补上散饵 - 这是渔网唯一能用的鱼饵."
+   },
+   "UI_AA_opt_fishReach": {
+    "en": "Fishing net radius (tiles)",
+    "ch": "漁網搜尋半徑 (格)",
+    "cn": "渔网搜索半径 (格)"
+   },
+   "UI_AA_opt_fishReach_tt": {
+    "en": "How far from where you click placed fishing nets are looked for.",
+    "ch": "以點選位置為中心, 搜尋已放置漁網的範圍.",
+    "cn": "以点击位置为中心, 搜索已放置渔网的范围."
+   },
+   "UI_AA_opt_fishRod": {
+    "en": "Offer rod fishing (experimental)",
+    "ch": "提供釣竿釣魚 (實驗性)",
+    "cn": "提供鱼竿钓鱼 (实验性)"
+   },
+   "UI_AA_opt_fishRod_tt": {
+    "en": "Fishes with your rod: casts, waits for a bite, reels in and re-baits the hook between casts. It plays the game's own fishing minigame, carefully - a fish can still get away.",
+    "ch": "用你的釣竿釣魚: 拋竿、等待魚上鉤、收線, 並在每次拋竿之間重新掛餌. 它會謹慎地玩遊戲本身的釣魚小遊戲 - 魚還是有可能跑掉.",
+    "cn": "用你的鱼竿钓鱼: 抛竿、等待鱼上钩、收线, 并在每次抛竿之间重新挂饵. 它会谨慎地玩游戏自带的钓鱼小游戏 - 鱼还是有可能跑掉."
+   },
+   "UI_AA_opt_genFixAll": {
+    "en": "Repair every damaged generator nearby",
+    "ch": "修理附近所有受損的發電機",
+    "cn": "修理附近所有受损的发电机"
+   },
+   "UI_AA_opt_genFixAll_tt": {
+    "en": "One click repairs every generator below 100% within reach, nearest first. Off: only the generator you clicked.",
+    "ch": "點一下就由近到遠修理附近所有低於100%%的發電機. 關閉: 只修理你點選的發電機.",
+    "cn": "点一下就由近及远修理附近所有低于100%%的发电机. 关闭: 只修理你点击的发电机."
+   },
+   "UI_AA_opt_genReach": {
+    "en": "Generator search radius (tiles)",
+    "ch": "發電機搜尋半徑 (格)",
+    "cn": "发电机搜索半径 (格)"
+   },
+   "UI_AA_opt_genReach_tt": {
+    "en": "How far from the clicked generator other damaged generators are looked for.",
+    "ch": "以點選的發電機為中心, 搜尋其他受損發電機的範圍.",
+    "cn": "以点击的发电机为中心, 搜索其他受损发电机的范围."
+   },
+   "UI_AA_opt_genReturnItems": {
+    "en": "Put unused scrap back",
+    "ch": "把未用完的電子零件放回去",
+    "cn": "把未用完的电子废料放回去"
+   },
+   "UI_AA_opt_genReturnItems_tt": {
+    "en": "Electronics Scrap fetched from crates or the floor and not used goes back where it came from.",
+    "ch": "從箱子或地上拿來但沒用到的電子零件會放回原處.",
+    "cn": "从箱子或地上拿来但没用到的电子废料会放回原处."
+   },
+   "UI_AA_opt_genToggle": {
+    "en": "Switch a running generator off for the repair",
+    "ch": "修理時關閉運轉中的發電機",
+    "cn": "修理时关闭运行中的发电机"
+   },
+   "UI_AA_opt_genToggle_tt": {
+    "en": "The game will not repair a running generator. With this on it is switched off, repaired and switched back on - even if the job is stopped early. Off: running generators are skipped.",
+    "ch": "遊戲不允許修理運轉中的發電機. 開啟後會先關閉發電機, 進行修理, 再重新開啟 - 即使作業提前停止, 仍會重新開啟. 關閉: 跳過運轉中的發電機.",
+    "cn": "游戏不允许修理运行中的发电机. 开启后会先关闭发电机, 进行修理, 再重新开启 - 即使作业提前停止, 仍会重新开启. 关闭: 跳过运行中的发电机."
+   },
+   "UI_AA_opt_logsFromContainers": {
+    "en": "Also take logs out of other containers",
+    "ch": "也從其他容器中取出原木",
+    "cn": "也从其他容器中取出原木"
+   },
+   "UI_AA_opt_logsFromContainers_tt": {
+    "en": "Off by default: logs already stored somewhere else are your storage, not a mess to tidy.",
+    "ch": "預設關閉: 已經存放在其他地方的原木是你的庫存, 不是要收拾的雜物.",
+    "cn": "默认关闭: 已经存放在其他地方的原木是你的库存, 不是要收拾的杂物."
+   },
+   "UI_AA_opt_logsKind": {
+    "en": "What to haul",
+    "ch": "搬運項目",
+    "cn": "搬运项目"
+   },
+   "UI_AA_opt_logsKind_tt": {
+    "en": "Logs only, logs and planks, or logs, planks and firewood.",
+    "ch": "只搬原木, 原木和木板, 或原木、木板和木柴.",
+    "cn": "只搬原木, 原木和木板, 或原木、木板和木柴."
+   },
+   "UI_AA_opt_logsReach": {
+    "en": "Search radius around the container (tiles)",
+    "ch": "容器周圍搜尋半徑 (格)",
+    "cn": "容器周围搜索半径 (格)"
+   },
+   "UI_AA_opt_logsReach_tt": {
+    "en": "Logs lying within this distance of the container you clicked are carried to it.",
+    "ch": "距離你點選的容器在此範圍內散落的原木, 都會被搬進該容器.",
+    "cn": "距离你点击的容器在此范围内散落的原木, 都会被搬进该容器."
+   },
+   "UI_AA_opt_titleFarm": {
+    "en": "Auto Farming",
+    "ch": "自動農耕",
+    "cn": "自动农耕"
+   },
+   "UI_AA_opt_titleFish": {
+    "en": "Auto Fishing",
+    "ch": "自動釣魚",
+    "cn": "自动钓鱼"
+   },
+   "UI_AA_opt_titleGen": {
+    "en": "Auto Fix Generator",
+    "ch": "自動修理發電機",
+    "cn": "自动修理发电机"
+   },
+   "UI_AA_opt_titleLogs": {
+    "en": "Haul Logs",
+    "ch": "搬運原木",
+    "cn": "搬运原木"
+   },
+   "UI_MM_stop_conflict": {
+    "en": "Auto training stopped: another mod refused to start this exercise. The details are in console.txt.",
+    "ch": "自動練習已停止: 其他模組拒絕開始這項鍛鍊. 詳情請檢視 console.txt.",
+    "cn": "自动练习已停止: 其他模组拒绝开始这项锻炼. 详情请查看console.txt."
+   },
+   "UI_MM_stop_needpanel": {
+    "en": "Auto training stopped: this exercise comes from another mod - keep the Fitness panel open while it trains.",
+    "ch": "自動練習已停止: 這項鍛鍊來自其他模組 - 訓練期間請保持鍛鍊面板開啟.",
+    "cn": "自动练习已停止: 这项锻炼来自其他模组 - 训练期间请保持锻炼面板开启."
+   },
+   "UI_RPT_DepotAlreadyFull": {
+    "en": "This propane storage tank is already full.",
+    "ch": "這座丙烷儲罐已經滿了.",
+    "cn": "这座丙烷储罐已经满了."
+   },
+   "UI_RPT_DepotUpdated": {
+    "en": "Propane storage updated",
+    "ch": "丙烷儲量已更新",
+    "cn": "丙烷储存已更新"
+   },
+   "UI_RPT_NoItemSources": {
+    "en": "Carry a supported propane container that contains propane. Torches cannot supply propane.",
+    "ch": "請攜帶一個裝有丙烷的受支援丙烷容器. 瓦斯噴槍無法提供丙烷.",
+    "cn": "请携带一个装有丙烷的受支持丙烷容器. 丙烷喷灯无法提供丙烷."
+   },
+   "UI_RPT_NoNearbyVehicleSources": {
+    "en": "Park a supported propane truck containing propane beside this depot.",
+    "ch": "請把裝有丙烷的受支援丙烷車停在這座儲罐旁邊.",
+    "cn": "请把装有丙烷的受支持丙烷车停在这座储罐旁边."
+   },
+   "UI_RPT_StoreAction": {
+    "en": "Storing propane in industrial tank",
+    "ch": "正將丙烷存入工業儲罐",
+    "cn": "正在将丙烷存入工业储罐"
+   },
+   "UI_RPT_StoreItemInDepot": {
+    "en": "Store carried propane in tank",
+    "ch": "將攜帶的丙烷存入儲罐",
+    "cn": "将携带的丙烷存入储罐"
+   },
+   "UI_RPT_StoreVehicleInDepot": {
+    "en": "Store nearby truck propane in tank",
+    "ch": "將附近丙烷車的丙烷存入儲罐",
+    "cn": "将附近丙烷车的丙烷存入储罐"
+   },
+   "UI_RPT_ArcadiaTruck": {
+    "en": "F700 propane truck",
+    "ch": "F700 丙烷車",
+    "cn": "F700 丙烷车"
+   },
+   "UI_RPT_PropaneTruck": {
+    "en": "Propane truck",
+    "ch": "丙烷車",
+    "cn": "丙烷车"
+   },
+   "UI_CU_CrudeBroke": {
+    "en": "Your wooden prosthetic splinters apart",
+    "ch": "你的木製義肢碎裂解體了",
+    "cn": "你的木制假肢碎裂散架了"
+   },
+   "UI_CU_CrudeWarn": {
+    "en": "Your wooden prosthetic is splintering",
+    "ch": "你的木製義肢正在碎裂",
+    "cn": "你的木制假肢正在开裂"
+   },
+   "UI_CU_MouthAches": {
+    "en": "Your jaw aches",
+    "ch": "你的下巴好痠",
+    "cn": "你的下巴好酸"
+   },
+   "UI_CU_TooHeavyForTeeth": {
+    "en": "Too heavy to lift in your teeth.",
+    "ch": "太重了, 無法用牙齒叼起來.",
+    "cn": "太重了, 没法用牙齿叼起来."
    }
   },
   "MakeUp.json": {

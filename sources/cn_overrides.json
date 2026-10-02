@@ -19679,11 +19679,6 @@
     "reason": "2026-09-06 #423：上游 EN 把變質食材移出此等級門檻，改由「避免變質和燒焦的食物」選項獨立控管，譯文跟上。",
     "value": "达到此烹饪等级后, 模组将不再避开影响心情的食材. 设为0则永远不允许使用. 变质, 烧焦和受污染的食物还需要取消勾选“避免变质和烧焦的食物”才会使用, 有毒物品始终会被拒绝."
   },
-  "UI.json|UI_AA_stop_hurt": {
-    "as1_value": "已停止: 伤势过重, 无法继续负重.",
-    "value": "已停止: 伤势过重, 无法继续负重. 健康值下限可在模组选项中调整.",
-    "reason": "2026-09-09 #470 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane 鍵：上游新增第二句指路（健康值下限在 Mod Options）。CH 改 sources/ch/UI.json；CN 走 sources/cn_overrides.json 登記——{\"value\": \"已停止: 伤势过重, 无法继续负重. 健康值下限可在模组选项中调整.\", \"as1_value\": \"已停止: 伤势过重, 无法继续负重.\", \"reason\": \"上游 EN 語意變更（tracker stale 3777237134），CN 跟進新 EN\"}，沿用同檔既有 P4TakeApollo 等『上游 EN 語意變更，CN 跟進新 EN』的登記慣例。Mod Options 取 own lane 既有 CN 譯法『模组选项』；此鍵尚未列於 ch_review_state.json，CN 有效值改變後整合時一併登記（build registry 背書 gate 對 cn_overrides 命中鍵強制）"
-  },
   "UI.json|UI_BanditsCreator_AI_Assault_Tooltip": {
     "as1_value": "可能作为突击小组生成.",
     "reason": "上游補述生成距離與攻擊目標；強盜/氏族沿用 UI_BanditsCreator_Bandit_Clan 既有譯法",
@@ -27924,5 +27919,70 @@
     "as1_value": "开启后, 即使口渴值低于10%%, 依然会在饮料菜单中显示'饮水' (背包/容器/地面)",
     "value": "开启后, 即使口渴值低于10%%, 水源依然会显示“饮用”选项 (物品栏/容器/地面).",
     "reason": "2026-10-01 #636：上游 EN 改為水源顯示「Drink」選項（原版右鍵選單名「饮用」），不再是飲料選單裡的「饮水」。"
+  },
+  "ItemName.json|Base.ColtSMGMag": {
+    "as1_value": "柯尔特635型冲锋枪弹匣 (32发, 9mm)",
+    "value": "柯尔特9mm冲锋枪弹匣",
+    "reason": "2026-10-02 #644：owner 衝突裁決改為對每個 MOD 都成立的中性譯名（見 owner_conflict_decisions.json）。"
+  },
+  "Tooltip.json|Tooltip_AmmoCarrier": {
+    "as1_value": "武器配件. 需要一把螺丝刀进行安装. 减少枪械装填时间.",
+    "value": "武器配件. 减少枪械装填时间.",
+    "reason": "2026-10-02 #644：owner 衝突裁決改為對每個 MOD 都成立的中性譯名（見 owner_conflict_decisions.json）。"
+  },
+  "IG_UI.json|IGUI_PhunZones_AllZones_tooltip": {
+    "as1_value": "勾选以显示系统中的所有内容, 取消勾选仅显示激活的区域.",
+    "value": "勾选以显示系统中的所有内容, 取消勾选仅显示当前生效的区域.",
+    "reason": "2026-10-02 #649：owner 衝突裁決改為對每個 MOD 都成立的中性譯名（見 owner_conflict_decisions.json）。"
+  },
+  "IG_UI.json|IGUI_PhunZones_Bandits": {
+    "as1_value": "土匪处理",
+    "value": "土匪",
+    "reason": "2026-10-02 #649：owner 衝突裁決改為對每個 MOD 都成立的中性譯名（見 owner_conflict_decisions.json）。"
+  },
+  "IG_UI.json|IGUI_PhunZones_Zeds": {
+    "as1_value": "僵尸处理",
+    "value": "僵尸",
+    "reason": "2026-10-02 #649：owner 衝突裁決改為對每個 MOD 都成立的中性譯名（見 owner_conflict_decisions.json）。"
+  },
+  "Sandbox.json|Sandbox_PhunZones_UpdateInterval_tooltip": {
+    "as1_value": "两次扫描区域变化之间的秒数. 1 秒应该足够了.",
+    "value": "两次扫描区域变化之间的秒数. 数值越高, 服务器负担越低.",
+    "reason": "2026-10-02 #649：owner 衝突裁決改為對每個 MOD 都成立的中性譯名（見 owner_conflict_decisions.json）。"
+  },
+  "Sandbox.json|Sandbox_PhunZones_Widget_tooltip": {
+    "as1_value": "显示一个可移动的小组件, 显示当前区域的标题和副标题. 它还可以显示表示当前区域危险等级的点数.",
+    "value": "显示 PhunZones 小组件, 呈现当前所在区域的信息.",
+    "reason": "2026-10-02 #649：owner 衝突裁決改為對每個 MOD 都成立的中性譯名（見 owner_conflict_decisions.json）。"
+  },
+  "IG_UI.json|IGUI_perks_Archery_Description": {
+    "as1_value": "提高你用弓和弩命中目标以及造成额外伤害的概率, 并延长它们的有效射程.",
+    "value": "提高你用弓和弩命中目标以及造成额外伤害的概率.",
+    "reason": "2026-10-02 #654：owner 衝突裁決改為對每個 MOD 都成立的中性譯名（見 owner_conflict_decisions.json）。"
+  },
+  "Tooltip.json|Tooltip_ProjectExile_Blessing_clothing_flexible_Description": {
+    "as1_value": "减少衣物现有的移动和战斗速度惩罚.",
+    "value": "减少衣物的战斗速度惩罚.",
+    "reason": "2026-10-02 #657：上游 EN 由「Reduces the garment's existing movement and combat-speed penalties.」改為「Reduces the garment's combat-speed penalty.」，As1 原值未跟上，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_MilitaryBackpack_CapacityAll": {
+    "as1_value": "容量",
+    "value": "军用背包容量",
+    "reason": "2026-10-02 #658：上游 EN 由「Capacity」改為「Military Backpack Capacity」，As1 原值未跟上，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_MilitaryBackpack_WeightReductionAll": {
+    "as1_value": "减重 (百分比)",
+    "value": "军用背包减重 (百分比)",
+    "reason": "2026-10-02 #658：上游 EN 由「Weight Reduction (percent)」改為「Military Backpack Weight Reduction (percent)」，As1 原值未跟上，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_PhunMart_Admin_PanelBtn": {
+    "as1_value": "** PhunMart **",
+    "value": "PhunMart",
+    "reason": "2026-10-02 #651：上游 EN 由「** PhunMart **」改為「PhunMart」，As1 原值未跟上，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_PhunMart_Hint_PlaytimeMinutes": {
+    "as1_value": "游戏时长分钟数",
+    "value": "累计游玩分钟数 (游戏内时间, 非现实时间). 留空则忽略此里程碑.",
+    "reason": "2026-10-02 #651：上游 EN 由「Minutes of playtime」改為「Total minutes played (game time, not real world time). Leave blank to ignore this milestone.」，As1 原值未跟上，依新英文重譯。"
   }
 }

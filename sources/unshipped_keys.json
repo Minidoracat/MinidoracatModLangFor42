@@ -1604,6 +1604,41 @@
    "as1_value": "无菌一次性注射器. 用于注射和采血.",
    "owner_signature": "dd6e3929a9939a08",
    "reason": "2026-10-01 owner 衝突無誠實中性譯名：新增 3707475814/BanditsWeekOneTheArk，英文 'Syringe with unknown substance.'（其 Bandits.LabSyringe 是裝有不明物質的注射器）；與 ZVirusVaccine42BETA／zReVaccin 3 的「無菌一次性空注射器、用於注射和採血」互相矛盾（已裝不明物質 vs 無菌空針），除了「注射器」三字外無共同語意，找不到誠實中性說明，改不出貨。"
+  },
+  "ItemName.json|Base.556Belt": {
+   "as1_value": ".223 Rem弹链",
+   "owner_signature": "722050a5b1f10c76",
+   "reason": "2026-10-02 #644 裁決：Guns of 93 的 Base.556Belt 是「Belted .223 Rem Rounds」(上好鏈節的 .223 彈鏈, 該 MOD 另有 M249Box 彈藥箱物品); Brita 的同代號物品是「5.56x45mm Box Magazine」(盒式彈匣). 彈鏈與盒式彈匣是不同的彈藥形態, 找不到對雙方都誠實又有用的上位詞 (現值「.223 Rem彈鏈」對 Brita 是錯的). 抑制後 Guns of 93 顯示自己 ItemName.json 的英文, Brita 顯示 script 英文, 無鍵名殘留."
+  },
+  "ItemName.json|Base.308Belt": {
+   "as1_value": ".308弹链",
+   "owner_signature": "94967f7901a3b6ab",
+   "reason": "2026-10-02 #644 裁決：Guns of 93 的 Base.308Belt 是「Belted .308 Rounds」(.308 彈鏈, 該 MOD 另有 M60Box 彈藥箱); Brita 的同代號物品是「308 Box Magazine」(盒式彈匣). 彈鏈與盒式彈匣是不同彈藥形態, 現值「.308彈鏈」對 Brita 不成立, 也找不到雙方都成立的上位詞. 抑制後 Guns of 93 顯示 ItemName.json 英文, Brita 顯示 script 英文, 無鍵名殘留."
+  },
+  "Tooltip.json|Tooltip_Bayonet": {
+   "as1_value": "按下Z键在刺刀与枪械之间切换.",
+   "owner_signature": "584e474fa540d11a",
+   "reason": "2026-10-02 #644 裁決：Guns of 93 的刺刀說明是「按 Z 在刺刀與槍械用法之間切換」; Brita 則明說「只加上刺刀模型與數值修正, 不支援獨立的刺擊模式」. 兩者語意相反, 現值「按下Z鍵切換」會誤導 Brita 玩家, 也找不到兩方都成立又有用的說法. 抑制後兩方都顯示自己 Tooltip.json 的英文, 無鍵名殘留."
+  },
+  "IG_UI.json|IGUI_PhunZones_Bandits_tooltip": {
+   "as1_value": "如果安装了 Bandits2 模组且此区域内有土匪: 无动作, 将土匪移出区域, 或将其从游戏中移除. ",
+   "owner_signature": "536c810113d71a97",
+   "reason": "2026-10-02 #649 裁決：PhunZones 舊版說明的是核取方塊「取消勾選即禁止土匪在此生成 (需 Bandits 模組且殭屍能生成)」; PhunZones 2 本次改值後說明的是下拉選單的移出/移除/阻止生成/未設定/無動作各選項行為 (需 Bandits2). 兩版控制項與語意不同, 依 2 代新英文寫的說明會對舊版玩家描述不存在的選項, 寫成兩版共通則只剩「設定土匪」等無用內容, 現值也已過時且漏譯. 抑制後 PhunZones 2 顯示 IG_UI.json 的最新英文. 已接受殘留: 3388867450/PhunZones 會顯示鍵名."
+  },
+  "IG_UI.json|IGUI_PhunZones_NoWelcome": {
+   "as1_value": "不提示",
+   "owner_signature": "6ff4859fa76720e4",
+   "reason": "2026-10-02 #649 裁決：同一個核取方塊但兩版語意相反: PhunZones 舊版標籤「Announcement」, 勾選 = 進入區域時顯示區域名稱; PhunZones 2 標籤「No Announce」, 勾選 = 不顯示. 現值「不提示」對舊版剛好說反; 改成「進入公告」之類的中性名稱又會讓 2 代玩家誤判勾選方向, 這個開關的意義全在勾選方向上, 找不到兩版都成立的說法. 抑制後 PhunZones 2 顯示 IG_UI.json 英文. 已接受殘留: 3388867450/PhunZones 會顯示鍵名."
+  },
+  "IG_UI.json|IGUI_PhunZones_NoWelcome_tooltip": {
+   "as1_value": "为真时, 玩家进入区域时不显示区域名称. ",
+   "owner_signature": "2ee44d54a268013e",
+   "reason": "2026-10-02 #649 裁決：與 NoWelcome 標籤一起判斷. PhunZones 舊版「勾選以在玩家進入時於畫面顯示區域名稱」, PhunZones 2「為真時不顯示區域名稱」, 勾選效果相反; 中性寫法「控制是否顯示區域名稱」會拿掉唯一關鍵的勾選方向, 等於沒用. 抑制後 PhunZones 2 顯示 IG_UI.json 英文. 已接受殘留: 3388867450/PhunZones 會顯示鍵名."
+  },
+  "IG_UI.json|IGUI_PhunZones_Zeds_tooltip": {
+   "as1_value": "当僵尸在此区域内时: 无动作, 将僵尸移出区域, 或将其从游戏中移除. 注意: 移除将包括玩家尸体! ",
+   "owner_signature": "a8ae429ab3624524",
+   "reason": "2026-10-02 #649 裁決：PhunZones 舊版說明的是核取方塊「取消勾選則殭屍不會在此區域生成」; PhunZones 2 本次改值後說明的是下拉選單: 區域內殭屍可無動作/移出/移除, 「生成」類選項只處理在此生成的殭屍 (遊蕩進來的不管, 但卸載後重新載入算生成), 跟隨此設定的土匪改為阻止生成, 移除會包含玩家屍體. 兩版控制項與語意不同, 照 2 代新英文寫會向舊版玩家描述不存在的選項, 兩版共通的寫法則只剩「設定殭屍」而沒用, 現值也已過時且漏譯. 抑制後 PhunZones 2 顯示 IG_UI.json 的最新英文. 已接受殘留: 3388867450/PhunZones 會顯示鍵名."
   }
  }
 }
