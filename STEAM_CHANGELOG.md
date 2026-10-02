@@ -1,24 +1,18 @@
-[h1][B42]繁體簡體模組翻譯 42.21.0-1.37.0[/h1]
+[h1][B42]繁體簡體模組翻譯 42.21.0-1.38.0[/h1]
 [i]2026-10-02[/i]
 
 [h3]新增[/h3]
 [list]
-[*] 同步如一漢化組 v3.10.1：新收錄 Knoxbound、Project Exile、Project A-Life、Industrial Revolution、Jeeves Claims、Super Zed Plus、Companion Dogs Squad、Pinoy Survival Foods、MWP Weapons 等模組，新增約 7,000 項繁中翻譯。
-[*] 318 個已支援模組補上原本顯示英文的文字，共 38,337 項，包括大量物品名稱、選單、提示與沙盒設定；World Decay 重新上架後的新版本也一併支援。
-[*] Long Term Preservation Extended 的 5 個新配方（製作瓶裝醋、醋壺、瓶裝清潔劑與玻璃調味罐）不再顯示英文代號。
-[*] 支援清單增加到 1280+ 個模組。
+[*] 16 個模組新增的文字補上繁簡中文，共 496 項：RPG Inventory 的外觀設定、分頁與控制器操作說明，Auto All 的自動農耕／釣魚選項與停止原因，Roaming Survivors 改寫後的 NPC 對話與陣營介紹，Casualties Undead 用牙齒啃木材、再用布膠帶綁出簡易義肢的新玩法，Legendary Professions and Traits 的職業點數設定，Guns of 93 的左輪握把、扳機零件與消音器等。
+[*] 其他補齊的模組：PhunMart 2、Military Backpack 的四色軍用露營背包、PhunZones 2、Legendary Cap、Legendary Duffelbag、Arcadia 丙烷罐、Knox Survivors、Dead Magic、Take A Bath And Shower、'70 Chevelle 的側儲物箱。
 [/list]
 
 [h3]更新[/h3]
 [list]
-[*] 跟上模組作者改寫的英文，重譯約 300 項：Extraction Mode 新的「自由漫遊」模式規則、Dynamic Traits 的致病頻率設定、The Best Lockpicking 的新版開鎖小遊戲選項、Drink Smart 的低口渴飲水設定、Livestock Panel Plus 的公雞啼叫說明、Till Death Do Us Part 的沙盒說明等。
-[*] Survivor Journals 等模組的日記與說明，修正可能直接顯示「\n」而不換行的問題。
-[*] Mr Brollow's Skyblock 的配方名改成直接顯示產物名稱，並與遊戲本體的物品譯名一致（鐵條、鋼條、布膠帶等）。
-[*] GaelGunStore、Modern Firearms System 的槍械、彈藥與配件名稱跟上新英文。
-[*] 約 630 項原本放錯位置、遊戲讀不到的翻譯改放到正確位置，現在會顯示中文。
-[*] Legendary Katana 的上色配方改為「為傳奇武士刀上色」；CAExtendedCategories 的分類名稱統一。
-[*] 舊譯「諾克斯郡」統一為與本體一致的「諾克斯縣」；Pinoy Survival Foods 的 Alfonso Light 簡中更正為白蘭地。
-[*] 少數同名文字在不同模組裡意思不同，改用對每個模組都正確的譯名；找不到共通譯名的 2 項改顯示原文，避免把一個模組的名稱套到另一個模組。
-[*] 移除約 200 項模組已刪除、遊戲不會再用到的舊翻譯。
+[*] 跟上模組作者改寫的英文，重譯 24 項：Knox Survivors 的同伴、配偶與 NPC 駕駛設定，RadArchery 的停更公告，RPG Inventory 的容器規則說明，PhunZones 2 的 PVP 說明，Casualties Undead 的四肢截肢特質說明等。
+[*] 同一個代號被不同模組拿來指不同東西時，改用對每個模組都正確的譯名（例如柯爾特衝鋒槍彈匣不再寫死型號與容量）。
+[*] 找不到共通譯名的 7 項改顯示模組自己的英文，避免把一個模組的說明套到另一個模組：Guns of 93 的 .223／.308 彈鏈與刺刀說明，以及 PhunZones 的「不提示」開關與殭屍、土匪設定說明（使用 PhunZones 舊版的玩家，這 4 項會顯示代號）。
+[*] Casualties Undead 的「假肢」統一為「義肢」；Knox Survivors 沙盒分頁標題格式統一。
+[*] 移除 Roaming Survivors、Knox Survivors 已刪除、遊戲不會再用到的 63 項舊翻譯。
 [*] 更新下載完成後，請重新啟動遊戲載入新翻譯；不需要重開存檔。
 [/list]
