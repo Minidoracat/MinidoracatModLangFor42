@@ -6983,17 +6983,17 @@
     },
     "IG_UI|IGUI_PhunCure_CureDropRate_Tooltip": {
       "action": "translate",
-      "signature": "a8553de05bbaad83",
+      "signature": "04878bdbdb280f85",
       "ch": "殭屍隨機掉落解藥的機率, 0=停用.<br>PhunCure (phuncure): 萬分比, 100=1%%<br>PhunCure 2 (phuncure2): 百分比, 10=10%%, 1.5=1.5%%",
       "cn": "僵尸随机掉落解药的几率, 0=禁用.<br>PhunCure (phuncure): 万分比, 100=1%%<br>PhunCure 2 (phuncure2): 百分比, 10=10%%, 1.5=1.5%%",
-      "reason": "跨 mod 共用鍵（3628843367/PhunCure 萬分比 vs 3676251425/PhunCure2 百分比，皆經上游 Lua 證實仍在用）——As1 值偏向 PhunCure2 一方，只裝 PhunCure 的玩家會拿到 100 倍誤差的填值指示；改用兩邊皆成立的並列文案。 已唯讀核對兩個有效分支的 PhunZones 欄位與掉落率換算，PhunCure 欄位為萬分比、PhunCure 2 為百分比；並列兩者單位以避免誤導。"
+      "reason": "跨 mod 共用鍵（3628843367/PhunCure 萬分比 vs 3676251425/PhunCure2 百分比，皆經上游 Lua 證實仍在用）——As1 值偏向 PhunCure2 一方，只裝 PhunCure 的玩家會拿到 100 倍誤差的填值指示；改用兩邊皆成立的並列文案。 已唯讀核對兩個有效分支的 PhunZones 欄位與掉落率換算，PhunCure 欄位為萬分比、PhunCure 2 為百分比；並列兩者單位以避免誤導。 2026-10-03 PhunCure2 上游把字面 % 改寫成 %%（語意不變），重簽。"
     },
     "IG_UI|IGUI_PhunCure_DropRateSprinters_Tooltip": {
       "action": "translate",
-      "signature": "c2cf4ee2a495ab91",
+      "signature": "73c9feca8e896dbe",
       "ch": "跑屍隨機掉落解藥的機率, 0=停用.<br>PhunCure (phuncure): 萬分比, 100=1%%<br>PhunCure 2 (phuncure2): 百分比, 10=10%%, 1.5=1.5%%",
       "cn": "跑尸随机掉落解药的几率, 0=禁用.<br>PhunCure (phuncure): 万分比, 100=1%%<br>PhunCure 2 (phuncure2): 百分比, 10=10%%, 1.5=1.5%%",
-      "reason": "同 IGUI_PhunCure_CureDropRate_Tooltip：跨 mod 共用鍵、分母不同，As1 值偏向 PhunCure2 一方；改用兩邊皆成立的並列文案。 已唯讀核對兩個有效分支的 PhunZones 欄位與掉落率換算，PhunCure 欄位為萬分比、PhunCure 2 為百分比；並列兩者單位以避免誤導。"
+      "reason": "同 IGUI_PhunCure_CureDropRate_Tooltip：跨 mod 共用鍵、分母不同，As1 值偏向 PhunCure2 一方；改用兩邊皆成立的並列文案。 已唯讀核對兩個有效分支的 PhunZones 欄位與掉落率換算，PhunCure 欄位為萬分比、PhunCure 2 為百分比；並列兩者單位以避免誤導。 2026-10-03 PhunCure2 上游把字面 % 改寫成 %%（語意不變），重簽。"
     },
     "Sandbox|Sandbox_PhunCure_ExpiredChance_tooltip": {
       "action": "translate",
