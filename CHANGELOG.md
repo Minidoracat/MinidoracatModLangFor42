@@ -9,7 +9,7 @@
 ### Added
 
 - **補齊 18 個 MOD 新增的繁簡中文，共 3,384 項。** Read Your Manga（#662，新收錄的 33 部漫畫共 1,848 冊，如《SPY×FAMILY 間諜家家酒》《BLUE LOCK 藍色監獄》《灌籃高手》《第一神拳》《哆啦A夢》，另有 2 個漫畫生成器物品）、Till Death Do Us Part - Marriage Companion（#678，家庭與育兒、嬰兒照護、醫療照護、指甲 Moodle、配偶互動選單與大量沙盒設定，1,080 項）、Dead Magic（#674，每個法術與儀式的開關及耐力／疲勞消耗設定，206 項）、HydeCo. Clay（#668，陶瓷動物擺飾與泥漿鑄模配方，82 項）、Legendary Tactical Weapons（#675，改版後的生成設定與刀劍收納箱，54 項）、Modern Firearms System Community Fix Patch（#680，新彈匣、裝飾彈匣與零件改裝配方，46 項）、W900 Semi-Truck（#665，9 項）、Totally's NATO and Commonwealth Firearms（#663，特種部隊貝雷帽等，9 項）、Legendary Satchel（#670，8 項）、Legendary Fanny Pack（#669，8 項）、HydeCo. Unlimited Cars（#666，8 項）、El Eternauta（#676，Favalli 潛水面罩與服裝說明，5 項）、末日鎮屍錄（#682，強化度化殘魂，4 項）、GaelGunStore（#671，4 項）、Livestock Panel Plus（#681，公雞啼叫音量，3 項）、Extended categories（#672，3 項）、Fred's Night Vision Goggles（#664，3 項）、Hold Crouch to Sit（#679，2 項）。
-  > 技術要點：除末日鎮屍錄外全數落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫（cn 不經簡繁轉換），新鍵皆以有效 CN 值登記 `ch_review_state`。末日鎮屍錄依 `cn_source: upstream` 把簡中逐字照抄上游 `Translate/CN` 進 own 目錄、繁中以作者簡中為主直寫進 `sources/ch`。7 路翻譯後經 Codex、Grok 8 路對抗複核，43 條修正提議採納 34 條（隱私卡片、同伴等 Marriage Companion 用語統一；嬰兒背帶是穿戴物不是提籃；特種部隊群；El Eternauta 的濾芯；瞄具「柔化」視野等）。漫畫書名逐部查證台灣代理與大陸官方譯名，冊名沿用既有的「第 N 卷(大)／(小)」格式；《神樂缽》依 lint 異體字規則用「缽」。Legendary Satchel／Fanny Pack／Tactical Weapons 的新生成設定比照已出貨的 Legendary Backpack／Cap／Duffelbag 句型。
+  > 技術要點：除末日鎮屍錄外全數落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫（cn 不經簡繁轉換），新鍵皆以有效 CN 值登記 `ch_review_state`。末日鎮屍錄依 `cn_source: upstream` 把簡中逐字照抄上游 `Translate/CN` 進 own 目錄、繁中以作者簡中為主直寫進 `sources/ch`。7 路翻譯後經 Codex、Grok 8 路對抗複核，43 條修正提議採納 34 條（隱私卡片、同伴等 Marriage Companion 用語統一；嬰兒背帶是穿戴物不是提籃；特種部隊群；El Eternauta 的濾芯；瞄具「柔化」視野等）。漫畫書名逐部查證台灣代理與大陸官方譯名，冊名格式見下方 Changed；《神樂缽》依 lint 異體字規則用「缽」。Legendary Satchel／Fanny Pack／Tactical Weapons 的新生成設定比照已出貨的 Legendary Backpack／Cap／Duffelbag 句型。
 
 ### Changed
 
@@ -23,6 +23,8 @@
   - Marriage Companion 與其醫療框架子模組共用的 7 個醫療選單與藥品說明，改為兩邊共通的寫法；Extended categories、Global Storage SiK、QoL Compendium 的「食物-易腐爛」分類確認沿用。
   > 技術要點：`owner_conflict_decisions.json` 新增 105 筆（translate 104、unship 1，`unshipped_keys.json` 同步以 `owner_signature` 雙向背書）；census 簽名寫入前以既有 1,341 筆已裁決鍵自檢全數相符。改值的 34 鍵：As1 衍生層改 `sources/ch`＋`cn_overrides`，own 層連 `_note` 更新，皆登記 `ch_review_state`；`OWNER_CONFLICTS.md` 重生。
 - **Read Your Manga 兩部漫畫的繁中書名統一**：《RE：從零開始的異世界生活 第三章：零之真實》有 11 冊殘留半翻英文的舊譯，《銃夢：LAST ORDER 最後的任務》有 13 冊用了另一個書名，改成與同系列其他冊一致。
+- **Read Your Manga 全部 7,622 冊的冊名拿掉「(大)」「(小)」。** 每一冊都有兩個物品：同一本漫畫平放或立放（物品右鍵選單可切換），不是大小兩種版本；原本的標示會在切換擺法時讓書名跟著變，英文原名與作者的簡中翻譯也都不區分。現在兩種擺法都顯示「《書名》第 N 卷」。
+  > 技術要點：`_l`／`_s` 由 `ModelSwapper.lua` 的 Set Sideways／Set Upright 互換物品類型。As1 衍生層 5,774 鍵以 `cn_overrides.json`（帶 `as1_value` 錨點）＋`sources/ch` 拿掉後綴，own 層新收的 1,848 冊直接改 `own_translations.json`，皆登記 `ch_review_state`。
 
 其餘追蹤單無需另外變更：Metro 2033 Universal Charger（#677）只把 MOD 資料夾改名，鍵與英文不變；Drink Smart（#667）只把全形百分號改成 `%%`，現行譯文早已是 `%%`；Read Your Manga 其餘 838 冊只是書名的空白與標點變動。Legendary Tactical Weapons／Satchel／Fanny Pack、El Eternauta、Read Your Manga 上游刪除的舊沙盒與物品鍵屬 As1 衍生層，依同步流程保留。
 
