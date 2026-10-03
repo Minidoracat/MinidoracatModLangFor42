@@ -14,7 +14,9 @@
 ### Changed
 
 - **依上游英文改值重譯 90 項。** Marriage Companion 82 項沙盒設定（對話文字大小改為百分比選項、主控台訊息抑制說明、休閒活動頻率、「家庭與育兒」「關係弧線」分類前綴等，#678）；HydeCo. Unlimited Cars 3 項自訂預設說明補上原版數值對照（#666）；Read Your Manga 的沙盒頁名改為 MOD 名、「符合世界觀」選項拿掉 1993 年前的限定（#662）；Totally's NATO 的兩件 CAF OG 107 綠色衣褲（#663）；GaelGunStore 的瞄具畫面開關說明（#671）。
-  > 技術要點：own 層 85 鍵連同 `en` 錨點更新，As1 衍生層 5 鍵改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點），皆登記 `ch_review_state`；build 的 `own_anchor_drift` 由 81 筆歸零。其中 4 鍵上游 `Sandbox.json` 已改字、同分支的 `Sandbox_EN.txt` 仍是舊文，`own_anchor_drift`「任一來源相符即算最新」因而漏報，改以 census 新舊比對補抓。
+  > 技術要點：own 層 85 鍵連同 `en` 錨點更新，As1 衍生層 5 鍵改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點），皆登記 `ch_review_state`；build 的 `own_anchor_drift` 由 81 筆歸零。其中 4 鍵上游 `Sandbox.json` 已改字、同分支的 `Sandbox_EN.txt` 仍是舊文，舊版 `own_anchor_drift` 因而漏報，當時以 census 新舊比對補抓（檢查本身的修正見下一條）。
+- **原創翻譯的過時檢查改為只比遊戲實際載入的英文。** 同一 MOD 同時有 `.json` 與舊的 `_EN.txt` 時，舊 `.txt` 不再讓上游改過字的鍵被當成最新。修正後再抓出 Marriage Companion 4 項沙盒設定（家庭與育兒、關係弧線分類下的同名選項）依新英文重譯；Helicopter Event Expansion Framework 4 項（上游只把 `%` 寫成 `%%`）與 Arcadia 丙烷罐 3 項只更新英文錨點。Arcadia 的譯文刻意沿用較新的 `UI_EN.txt`（通用丙烷車、噴槍不能供應丙烷），理由記在該鍵 `_note`。
+  > 技術要點：`build_mod.own_anchor_drift` 逐 owner 只取執行期勝出來源：可載入 json > script DisplayName > 死檔（`*_EN.txt`、非白名單檔名、B41 `ItemName_` 前綴鍵），同級時版本夾蓋過 `common`，優先序沿用 `prep_mod_strings._src_rank`；跨 owner 仍是任一相符即算最新。`test_own_anchor_drift.py` 補 4 組情境（舊實作在新情境下失敗）。
 - **105 個與其他 MOD 共用的鍵完成裁決：104 項採用（或確認沿用）對每個 MOD 都成立的譯名，1 項改為不出貨中文。**
   - Modern Firearms System 原版與社群修正版共用的 76 鍵：修正版本批把 M7 改稱 Battle Rifle、308ClipU 改稱 7.62x39 AK 彈匣、56S 改稱 SKS，譯名改為兩版共通的「M7 步槍」「7.62mm 30 發彈匣」「北方工業 56 式半自動步槍」；彈匣／彈鼓模式切換配方註明「部分版本需先卸下所有配件」；原版誤寫成 .338 的 5 發彈匣配方依兩版實際產物改為 .44 馬格南；下掛榴彈配方不再與 40mm 高爆榴彈撞名；背包系列改用原作者的型號與名稱，鋼鞭拿掉兩版互斥的外形詞。御林長刀的攜行件原版稱刀鞘、修正版稱背帶，找不到共通說法，改為不出貨，兩版各自顯示作者的名稱。
   - GaelGunStore 與 Brita、Rain's、Totally's 槍械共用的 21 個槍械與彈藥物品名：拿掉只屬單方的廠牌或細節（AK5C、L85、P90 彈匣），M9A3 依本包「廠牌＋型號＋種類」慣例補上貝瑞塔，其餘確認現譯成立。

@@ -698,13 +698,21 @@ def load_own_translations() -> dict[str, dict[str, dict]]:
 def own_anchor_drift(own: dict[str, dict[str, dict]], mods: dict) -> list[str]:
     """own `en` 錨點與上游現行英文不符的鍵（`檔名|鍵`）。
 
-    上游現行英文取 tracker 記錄的值雜湊，只看 MOD 會載入的分支（common＋最佳版本夾），
-    **但不濾 `*_EN.txt`**：B42 不讀 .txt，這類鍵上游的英文只寫在 .txt，本包的 .json 譯文
-    是遊戲唯一能載入的文字，上游改字時一樣要跟。`tracker.is_effective` 會把 .txt 判成
-    不載入，只靠它比對會整批漏掉（2026-10-02 全量比對抓到 24 筆）。同鍵有多個來源時
-    任一相符即算最新；上游完全沒有該鍵（配方區塊名、引擎推導鍵）不在本函式範圍。
+    上游現行英文取 tracker 記錄的值雜湊，只看 MOD 會載入的分支（common＋最佳版本夾）。
+    **逐 owner（mod root）只比執行期勝出的那個來源**，優先序沿用
+    `prep_mod_strings._src_rank`：可載入 json > script DisplayName > 死檔（`*_EN.txt`、
+    非白名單檔名、B41 `ItemName_` 前綴鍵）；同等級時有效版本夾蓋過 `common`。
+      * 死檔仍要比：英文只寫在 `.txt` 的鍵，本包的 .json 譯文是遊戲唯一能載入的文字，
+        上游改字時一樣要跟（2026-10-02 全量比對抓到 24 筆）。
+      * 但同 owner 有可載入 json 時，死檔與被覆蓋的 `common` 值不算數：舊版「任一來源
+        相符即算最新」讓殘留的舊 `.txt` 蓋掉 json 的改字（2026-10-03 Marriage Companion
+        `Sandbox.json` 已改、`Sandbox_EN.txt` 仍舊，漏報 8 鍵）。
+    刻意依較新的死檔翻譯時，`en` 錨點填執行期勝出值、理由寫進 `_note`。跨 owner 仍是
+    任一相符即算最新（多 owner 共用鍵由 owner 衝突裁決處理）；上游完全沒有該鍵（配方
+    區塊名、引擎推導鍵）不在本函式範圍。
     """
     import tracker
+    from prep_mod_strings import EN_SOURCE_SCRIPT, _src_rank  # 來源優先序的單一實作
 
     upstream: dict[str, set[str]] = {}
     for mod in mods.values():
@@ -712,6 +720,8 @@ def own_anchor_drift(own: dict[str, dict[str, dict]], mods: dict) -> list[str]:
         if not isinstance(records, dict):
             continue
         eff = tracker.resolve_effective_branches(records)
+        # (owner, 鍵) → ((來源等級, 是否版本夾), 勝出值雜湊集)
+        best: dict[tuple[str, str], tuple[tuple[int, bool], set[str]]] = {}
         for rid, h in records.items():
             parts = rid.split("|", 2)
             if len(parts) < 3 or parts[0] not in ("translate_en", "script_item_dn"):
@@ -719,9 +729,21 @@ def own_anchor_drift(own: dict[str, dict[str, dict]], mods: dict) -> list[str]:
             path = parts[1].split("/")
             if len(path) >= 3 and path[0] == "mods" and path[2] not in eff.get(path[1], set()):
                 continue
-            upstream.setdefault(parts[2], set()).add(h)
+            src = EN_SOURCE_SCRIPT if parts[0] == "script_item_dn" else path[-1]
+            versioned = tracker._branch_tag(rid) not in ("common", "")
+            cands = [(parts[2], (_src_rank(src), versioned))]
             if parts[2].startswith("ItemName_"):
-                upstream.setdefault(parts[2][len("ItemName_"):], set()).add(h)
+                # 引擎只查裸 fullType，前綴鍵即使寫在 ItemName.json 也是死鍵
+                cands.append((parts[2][len("ItemName_"):], (0, versioned)))
+            for key, prio in cands:
+                slot = (tracker.owner_of(rid), key)
+                cur = best.get(slot)
+                if cur is None or prio > cur[0]:
+                    best[slot] = (prio, {h})
+                elif prio == cur[0]:
+                    cur[1].add(h)
+        for (_owner, key), (_prio, hashes) in best.items():
+            upstream.setdefault(key, set()).update(hashes)
     return [
         f"{fname}|{key}"
         for fname, keys in sorted(own.items())

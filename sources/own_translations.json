@@ -313186,7 +313186,7 @@
     "cn": "完全暴露时毒气伤害/分钟"
    },
    "Sandbox_ToxicDamagePerMinuteAtFullExposure_tooltip": {
-    "en": "Base player health damage per minute when toxic exposure is at 100%.",
+    "en": "Base player health damage per minute when toxic exposure is at 100%%.",
     "ch": "毒氣暴露量為 100%% 時, 玩家每分鐘受到的基礎生命值傷害.",
     "cn": "毒气暴露量为 100%% 时, 玩家每分钟受到的基础生命值伤害."
    },
@@ -313266,12 +313266,12 @@
     "cn": "毒气额外伤害/分钟 (最大)"
    },
    "Sandbox_ToxicExtraDamagePerMinuteOnMaxExposure_tooltip": {
-    "en": "Small extra per-minute damage when exposure is very high (>= 90%).",
+    "en": "Small extra per-minute damage when exposure is very high (>= 90%%).",
     "ch": "暴露量非常高 (>= 90%%) 時, 每分鐘追加的少量額外傷害.",
     "cn": "暴露量非常高 (>= 90%%) 时, 每分钟追加的少量额外伤害."
    },
    "Sandbox_ToxicFilterMaxWearPercentPerEvent": {
-    "en": "Max Filter Wear per Event (%)",
+    "en": "Max Filter Wear per Event (%%)",
     "ch": "每次事件濾芯最大損耗 (%%)",
     "cn": "每次事件滤芯最大损耗 (%%)"
    },
@@ -313281,7 +313281,7 @@
     "cn": "同一个滤芯在单次毒气事件中的损耗上限. 默认值可避免一个全新滤芯被单一事件耗尽."
    },
    "Sandbox_ToxicFilterWearPercentPerHour": {
-    "en": "Filter Wear per Hour (%)",
+    "en": "Filter Wear per Hour (%%)",
     "ch": "每小時濾芯損耗 (%%)",
     "cn": "每小时滤芯损耗 (%%)"
    },
@@ -321489,9 +321489,9 @@
     "cn": "添加手动救援指令, 用于卡住的配偶."
    },
    "Sandbox_MarriageCompanion_FamilyImmersionEnabled": {
-    "en": "Family memories",
-    "ch": "家庭回憶",
-    "cn": "家庭回忆"
+    "en": "Family & Parenthood: Marriage memorabilia",
+    "ch": "家庭與育兒: 婚姻紀念品",
+    "cn": "家庭与育儿: 婚姻纪念品"
    },
    "Sandbox_MarriageCompanion_FamilyImmersionEnabled_tooltip": {
     "en": "Adds spouse memories, neighbor recognition, aftermath, and bond dialogue.",
@@ -321684,9 +321684,9 @@
     "cn": "可选昵称."
    },
    "Sandbox_MarriageCompanion_TraitRecognitionDialogueEnabled": {
-    "en": "Trait talk",
-    "ch": "特質話題",
-    "cn": "特质话题"
+    "en": "Relationship Arc: Trait-based dialogue",
+    "ch": "關係弧線: 特質相關對話",
+    "cn": "关系弧线: 特质相关对话"
    },
    "Sandbox_MarriageCompanion_TraitRecognitionDialogueEnabled_tooltip": {
     "en": "Enables supportive spouse/player comments about each partner's traits. Turn off if this feature causes trouble.",
@@ -348834,9 +348834,9 @@
     "cn": "关闭"
    },
    "Sandbox_IntimacyDialogueMode_tooltip": {
-    "en": "Choose whether brief private-scene reactions appear in both modes, On Screen only, Implied only, or Off.",
-    "ch": "選擇私密場景的簡短反應要在兩種模式下都顯示、僅畫面呈現、僅暗示帶過, 或關閉.",
-    "cn": "选择私密场景的简短反应要在两种模式下都显示、仅画面呈现、仅暗示带过, 或关闭."
+    "en": "Choose where brief private-scene reactions appear.",
+    "ch": "選擇私密場景的簡短反應要在哪種模式下顯示.",
+    "cn": "选择私密场景的简短反应要在哪种模式下显示."
    },
    "Sandbox_IntimacyPresentationMode": {
     "en": "Intimacy presentation",
@@ -349564,9 +349564,9 @@
     "cn": "关系弧线: 允许无线电联络"
    },
    "Sandbox_MarriageCompanion_RelationshipRequireRadioItem": {
-    "en": "Relationship Arc: Require a radio",
-    "ch": "關係弧線: 需要無線電",
-    "cn": "关系弧线: 需要无线电"
+    "en": "Relationship Arc: Require a radio for contact",
+    "ch": "關係弧線: 聯絡需要無線電",
+    "cn": "关系弧线: 联络需要无线电"
    },
    "Sandbox_MarriageCompanion_RelationshipStartDialogueEnabled": {
     "en": "Relationship Arc: Play introduction dialogue",
@@ -380492,9 +380492,10 @@
     "cn": "那个丙烷容器是空的."
    },
    "UI_RPT_NoNearbyVehicle": {
-    "en": "Park a supported propane truck beside this depot.",
+    "en": "Park a supported Filibuster propane truck beside this depot.",
     "ch": "請把受支援的丙烷車停在這座儲罐旁邊.",
-    "cn": "请把受支持的丙烷车停在这座储罐旁边."
+    "cn": "请把受支持的丙烷车停在这座储罐旁边.",
+    "_note": "2026-10-03：譯文刻意依同分支較新的 UI_EN.txt，不照執行期 UI.json。上游 UI.json 仍是舊文（只寫 Filibuster 卡車、說工具也能供丙烷），UI_EN.txt 已改成通用丙烷車並新增 F700 卡車字串；Lua（ArcadiaRefillablePropane_Shared.lua getPropaneVehicleProfile）同時支援 Filibuster 與 F700，mod.info 寫明噴槍只能被補充。en 錨點填執行期 UI.json 值，供 own_anchor_drift 比對。"
    },
    "UI_RPT_NoVehicleSources": {
     "en": "Carry a supported propane container that still contains propane.",
@@ -411545,14 +411546,16 @@
     "cn": "丙烷储存已更新"
    },
    "UI_RPT_NoItemSources": {
-    "en": "Carry a supported propane container that contains propane. Torches cannot supply propane.",
+    "en": "Carry a supported propane container or tool that contains propane.",
     "ch": "請攜帶一個裝有丙烷的受支援丙烷容器. 瓦斯噴槍無法提供丙烷.",
-    "cn": "请携带一个装有丙烷的受支持丙烷容器. 丙烷喷灯无法提供丙烷."
+    "cn": "请携带一个装有丙烷的受支持丙烷容器. 丙烷喷灯无法提供丙烷.",
+    "_note": "2026-10-03：譯文刻意依同分支較新的 UI_EN.txt，不照執行期 UI.json。上游 UI.json 仍是舊文（只寫 Filibuster 卡車、說工具也能供丙烷），UI_EN.txt 已改成通用丙烷車並新增 F700 卡車字串；Lua（ArcadiaRefillablePropane_Shared.lua getPropaneVehicleProfile）同時支援 Filibuster 與 F700，mod.info 寫明噴槍只能被補充。en 錨點填執行期 UI.json 值，供 own_anchor_drift 比對。"
    },
    "UI_RPT_NoNearbyVehicleSources": {
-    "en": "Park a supported propane truck containing propane beside this depot.",
+    "en": "Park a supported Filibuster propane truck containing propane beside this depot.",
     "ch": "請把裝有丙烷的受支援丙烷車停在這座儲罐旁邊.",
-    "cn": "请把装有丙烷的受支持丙烷车停在这座储罐旁边."
+    "cn": "请把装有丙烷的受支持丙烷车停在这座储罐旁边.",
+    "_note": "2026-10-03：譯文刻意依同分支較新的 UI_EN.txt，不照執行期 UI.json。上游 UI.json 仍是舊文（只寫 Filibuster 卡車、說工具也能供丙烷），UI_EN.txt 已改成通用丙烷車並新增 F700 卡車字串；Lua（ArcadiaRefillablePropane_Shared.lua getPropaneVehicleProfile）同時支援 Filibuster 與 F700，mod.info 寫明噴槍只能被補充。en 錨點填執行期 UI.json 值，供 own_anchor_drift 比對。"
    },
    "UI_RPT_StoreAction": {
     "en": "Storing propane in industrial tank",

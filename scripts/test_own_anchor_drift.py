@@ -8,11 +8,17 @@
 `tracker.is_effective` 會把 .txt 判成不載入。這些鍵恰好是本包 .json 譯文唯一能載入的
 文字，上游改字時一樣要跟，因此比對必須含有效分支裡的 .txt。
 
-要鎖住的四件事：
+要鎖住的事：
   1. 有效分支裡的 .txt 改了英文 → 報出（漏掉就是本測試存在的理由）。
   2. 只在死分支（B41 根目錄、低於 42 的版本夾）的英文不參與比對，不得誤報。
   3. 錨點與上游相符（含另一個 owner 相符）→ 不報。
   4. 上游完全沒有該鍵（配方區塊名等）→ 不報，那是 `report_own_anchor_gaps` 的範圍。
+  5. 同 owner 同分支同時有 .json 與舊 .txt：只比執行期的 .json，舊 .txt 相符不算數
+     （2026-10-03 Marriage Companion 漏報 8 鍵的形狀）。
+  6. 同 owner 的 common 與版本夾都有 .json：版本夾蓋過 common，common 舊值不算數。
+  7. ItemName：同 owner 有 ItemName.json 時 script DisplayName 不算數；只有 B41 前綴鍵
+     （引擎不查）時改比 script DisplayName。
+  8. 錨點跟上執行期勝出值後不報。
 
 執行：uv run scripts/test_own_anchor_drift.py
 不依賴測試框架，assert 失敗即測試失敗（exit code != 0）。
@@ -27,6 +33,7 @@ import build_mod  # noqa: E402
 import tracker  # noqa: E402
 
 EN = "mods/M/{tag}/media/lua/shared/Translate/EN/{file}"
+SCRIPT = "mods/M/42/media/scripts/items.txt"
 h = tracker.value_hash
 mods = {
     "1": {"records": {
@@ -35,22 +42,42 @@ mods = {
         f"translate_en|mods/M/media/lua/shared/Translate/EN/UI_EN.txt|UI_Root": h("B41 root wording"),
         f"translate_en|{EN.format(tag='42', file='UI.json')}|UI_Same": h("Same"),
         f"translate_en|{EN.format(tag='42', file='IG_UI.json')}|IGUI_Shared": h("Owner one"),
+        # 5：同分支 json 已改字、.txt 仍是舊文
+        f"translate_en|{EN.format(tag='42', file='Sandbox.json')}|Sandbox_Both": h("JSON new"),
+        f"translate_en|{EN.format(tag='42', file='Sandbox_EN.txt')}|Sandbox_Both": h("TXT old"),
+        # 6：版本夾蓋過 common
+        f"translate_en|{EN.format(tag='common', file='IG_UI.json')}|IGUI_Layer": h("Common old"),
+        f"translate_en|{EN.format(tag='42', file='IG_UI.json')}|IGUI_Layer": h("Version new"),
+        # 7：ItemName.json 勝過 script DisplayName；只有 B41 前綴鍵時比 script
+        f"translate_en|{EN.format(tag='42', file='ItemName.json')}|Base.Gun": h("Gun JSON"),
+        f"script_item_dn|{SCRIPT}|Base.Gun": h("Gun script"),
+        f"translate_en|{EN.format(tag='42', file='ItemName.json')}|ItemName_Base.Old": h("Prefixed dead"),
+        f"script_item_dn|{SCRIPT}|Base.Old": h("Old script"),
     }},
     "2": {"records": {
         f"translate_en|{EN.format(tag='common', file='IG_UI.json')}|IGUI_Shared": h("Owner two"),
     }},
 }
 own = {
-    "Sandbox.json": {"Sandbox_Txt": {"en": "Old wording"}, "Sandbox_Dead": {"en": "Older wording"}},
+    "Sandbox.json": {"Sandbox_Txt": {"en": "Old wording"}, "Sandbox_Dead": {"en": "Older wording"},
+                     "Sandbox_Both": {"en": "TXT old"}},
     "UI.json": {"UI_Root": {"en": "Anything"}, "UI_Same": {"en": "Same"}},
-    "IG_UI.json": {"IGUI_Shared": {"en": "Owner two"}},
+    "IG_UI.json": {"IGUI_Shared": {"en": "Owner two"}, "IGUI_Layer": {"en": "Common old"}},
+    "ItemName.json": {"Base.Gun": {"en": "Gun script"}, "Base.Old": {"en": "Prefixed dead"}},
     "Recipes.json": {"Make Bottle of Vinegar": {"en": "Make Bottle of Vinegar"}},
 }
 
 drift = build_mod.own_anchor_drift(own, mods)
-assert drift == ["Sandbox.json|Sandbox_Txt"], f"錨點漂移判定錯誤：{drift}"
+assert drift == [
+    "IG_UI.json|IGUI_Layer", "ItemName.json|Base.Gun", "ItemName.json|Base.Old",
+    "Sandbox.json|Sandbox_Both", "Sandbox.json|Sandbox_Txt",
+], f"錨點漂移判定錯誤：{drift}"
 
 own["Sandbox.json"]["Sandbox_Txt"]["en"] = "New wording"
+own["Sandbox.json"]["Sandbox_Both"]["en"] = "JSON new"
+own["IG_UI.json"]["IGUI_Layer"]["en"] = "Version new"
+own["ItemName.json"]["Base.Gun"]["en"] = "Gun JSON"
+own["ItemName.json"]["Base.Old"]["en"] = "Old script"
 assert build_mod.own_anchor_drift(own, mods) == [], "錨點已更新仍被報出"
 
-print("PASS: own_anchor_drift 4 組情境通過")
+print("PASS: own_anchor_drift 8 組情境通過")
