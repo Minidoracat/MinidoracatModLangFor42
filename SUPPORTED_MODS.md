@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1273 個 Workshop 模組**（1609 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
+共支援 **1273 個 Workshop 模組**（1610 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1219,7 +1219,7 @@
 | [Door, Fence & Furniture Health Display](https://steamcommunity.com/sharedfiles/filedetails/?id=3788067801) | — | — | `DoorFenceHealth` | 54 | — | — |
 | [Puffin's Retro Relics〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3788360646) | Puffin 的復古珍藏 | 新增 1993 年以前的懷舊收藏品，包括瘋狂球、絨毛玩偶、桌遊、球隊三角旗與摔角夥伴玩偶，皆可擺設。 | `PuffinsRetroRelics` | 106 | — | — |
 | [[B42] Carlton's Better Banks](https://steamcommunity.com/sharedfiles/filedetails/?id=3789069683) | — | — | `CarltonsBetterBanks` | 10 | — | — |
-| [Knoxbound: Survivors [B42.20] [BETA]](https://steamcommunity.com/sharedfiles/filedetails/?id=3789122186) | — | — | `KnoxboundGunsOfMarzCompatibility`, `KnoxboundInventoryTetrisCompatibility`, `KnoxboundSpongieCharacterCustomisationCompatibility`, `KnoxboundSurvivors` | 1342 | — | — |
+| [Knoxbound: Survivors [B42.20] [BETA]](https://steamcommunity.com/sharedfiles/filedetails/?id=3789122186) | — | — | `KnoxboundGunsOfMarzCompatibility`, `KnoxboundInventoryTetrisCompatibility`, `KnoxboundSpongieCharacterCustomisationCompatibility`, `KnoxboundSurvivors`, `KnoxboundTombPlayerBodyCompatibility` | 1342 | — | — |
 | [Long Term Preservation Extended](https://steamcommunity.com/sharedfiles/filedetails/?id=3789287166) | 長期保存擴充 | 擴充食物保存玩法，可製作罐裝食品（如罐裝酪梨醬）、果汁與罐子標籤，並加入造紙製作分類與造紙模具。 | `LongTermPreservationExtended`, `LongTermPreservationExtendedSE`, `LongTermPreservationExtendedSEUI`, `LongTermPreservationExtendedUI` | 409 | ⚠️ ≥7 | — |
 | [Sentient Zeds [Climbing / Vaulting Zombies]](https://steamcommunity.com/sharedfiles/filedetails/?id=3789329475) | — | — | `SentientZeds` | 11 | — | — |
 | [Off-Grid: Solar Power](https://steamcommunity.com/sharedfiles/filedetails/?id=3789425624) | — | — | `OffGrid` | 246 | — | — |

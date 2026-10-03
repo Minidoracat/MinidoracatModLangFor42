@@ -23,7 +23,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1344** 個鍵（`unship` 309、`translate` 1035）。這些鍵的 owner 條目共 3894 筆：可載入 `.json` 2503、script 588、死檔 803。另有 **492** 個鍵尚未裁決。
+現況：已裁決 **1344** 個鍵（`unship` 309、`translate` 1035）。這些鍵的 owner 條目共 3894 筆：可載入 `.json` 2503、script 588、死檔 803。另有 **505** 個鍵尚未裁決。
 
 ## 不出貨的鍵（309）
 
@@ -1383,7 +1383,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_thickblooddesc` | `1299328280/More Traits` = You bleed more slowly from wounds. _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Wounds bleeds less.&lt;br&gt;(-50% damage from bleeding.) _(json)_ | 2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。 | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（492）
+## 尚未裁決的衝突（505）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
@@ -1399,6 +1399,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ContextMenu\|ContextMenu_TurnOff` | `2853974107/Fridges Off!` = Unplug _(死檔 ContextMenu_EN.txt)_<br>`3753045346/FanHeater` = Turn Off _(json)_ | 關閉 |
 | `ContextMenu\|ContextMenu_VehicleGetKeySkill` | `2930762705/KeyBlank` = You need &lt;br&gt;Mechanics level %1 and&lt;br&gt;Welding … _(json)_<br>`3391549481/harder_hotwire` = You need &lt;br&gt;Electrical level 10 and&lt;br&gt;Mechani… _(死檔 ContextMenu_EN.txt)_<br>`3640448510/Fluffy's Key Blank` = You need a Key Blank&lt;br&gt;or higher skill levels&lt;br&… _(json)_ | 你需要一把鑰匙胚&lt;br&gt;或更高的技能等級&lt;br&gt;才能製作這把車鑰匙 |
 | `ContextMenu\|ContextMenu_VehicleUnhotwire` | `2930762705/KeyBlank` = Un-hotwire Engine _(json)_<br>`3391549481/harder_hotwire` = Un-hotwire Engine _(死檔 ContextMenu_EN.txt)_<br>`3440867775/TheBestLockpicking` = Un-hotwire Engine _(json)_<br>`3640448510/Fluffy's Key Blank` = Unhotwire Engine _(json)_<br>`3745815281/TheBestLockpickingB4219` = Un-hotwire Engine _(json)_ | 解除短接 |
+| `ContextMenu\|ContextMenu_WBHM_TreatPartner` | `3723942896/TDDUPMarriageCompanion` = Medical Care: Treat Partner _(json)_<br>`3723942896/TDDUPMedicalFramework` = Treat Patient _(json)_ | 治療病患 |
 | `Fluids\|Fluid_Container_Thermos` | `3409143790/SapphCookingB42` = Thermos _(json)_<br>`3740865682/Last Cup Coffee` = Portable Thermos _(json)_ | 隨行保溫杯 |
 | `IG_UI\|IGUI_CleanHotBar_AmmoText_Scale` | `3461263912/CleanHotBar` = AmmoText Height _(json)_<br>`3598501350/RE Hotbar [B42]` = AmmoText Height _(json)_<br>`3777433827/BritaCombinedB42` = Ammunition text size _(json)_ | 彈藥文字高度 |
 | `IG_UI\|IGUI_CleanHotBar_DurabilityAlert` | `3461263912/CleanHotBar` = Weapon Durability Warning _(json)_<br>`3598501350/RE Hotbar [B42]` = Weapon Durability Warning _(json)_<br>`3777433827/BritaCombinedB42` = Weapon durability warning _(json)_ | 武器耐久警告 |
@@ -1475,12 +1476,14 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|Base.223Carton` | `3611718925/VFE` = Carton of .223 Rounds _(json)_<br>`3761077099/VFE` = Carton of .223 Boxes _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts` = Carton of .223 Rounds _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = Carton of .223 Rounds _(json)_ | .223彈藥 (整件) |
 | `ItemName\|Base.22Clip` | `2256623447/Firearms` = Colt Ace Magazine _(json)_<br>`2256623447/FirearmsBETA` = Colt Ace Magazine _(json)_<br>`3777433827/BritaCombinedB42` = 22-LR Magazine _(script)_ | 柯爾特王牌左輪手槍彈匣 |
 | `ItemName\|Base.308BulletsLinked` | `3611718925/VFE` = .308 Linked Round _(json)_<br>`3761077099/VFE` = Linked 7.62x51mm Round _(json)_ | 彈鏈連結 7.62x51mm 彈藥 |
+| `ItemName\|Base.308ClipU` | `3633421539/Escape from Kentucky4215` = 7.62×51mm 30-Round Magazine _(json)_<br>`3780151182/MFS_community_fix` = 7.62x39mm AK 30 round Magazine _(json)_ | 7.62×51mm 30 發彈匣 |
 | `ItemName\|Base.45Clip_Attachment` | `3720484992/VanillaFirearmsRework` = Mag Attachment Model _(script)_<br>`3773858287/B42 Rain's Firearms & Gun Parts` = .45 ACP Magazine _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = .45 ACP Magazine _(json)_ | .45 ACP彈匣 |
 | `ItemName\|Base.46Box` | `3611718925/VFEP93` = Box of 4.6mm Rounds _(json)_<br>`3762355926/VFEP93` = Box of 4.6 Rounds _(json)_ | 4.6mm彈藥 (整盒) |
 | `ItemName\|Base.46Bullets` | `3611718925/VFEP93` = 4.6mm Round _(json)_<br>`3762355926/VFEP93` = 4.6 Rounds _(json)_ | 4.6mm彈藥 |
 | `ItemName\|Base.46Carton` | `3611718925/VFEP93` = Carton of 4.6mm Rounds _(json)_<br>`3762355926/VFEP93` = Carton of 4.6 Boxes _(json)_ | 4.6mm彈藥 (整件) |
 | `ItemName\|Base.556BattlePack` | `3611718925/VFE` = 5.56mm Battle Pack _(json)_<br>`3761077099/VFE` = 5.56 Battle Pack _(json)_ | 5.56 戰鬥包 |
 | `ItemName\|Base.556Clip_Attachment` | `2256623447/Firearms` = STANAG Magazine _(json)_<br>`2256623447/FirearmsBETA` = STANAG Magazine _(json)_<br>`3720484992/VanillaFirearmsRework` = Mag Attachment Model _(script)_<br>`3773858287/B42 Rain's Firearms & Gun Parts` = 5.56 STANAG Magazine _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = 5.56 STANAG Magazine _(json)_ | STANAG彈匣 |
+| `ItemName\|Base.56S_cat` | `3633421539/Escape from Kentucky4215` = Norinco Type 56S Rifle _(json)_<br>`3780151182/MFS_community_fix` = Type 56 Semi-Automatic Rifle (SKS) _(json)_ | 北方工業 56 式步槍 |
 | `ItemName\|Base.57Box` | `3611718925/VFEP93` = Box of 5.7mm Rounds _(json)_<br>`3762355926/VFEP93` = Box of 5.7 Rounds _(json)_ | 5.7mm彈藥 (整盒) |
 | `ItemName\|Base.57Bullets` | `3611718925/VFEP93` = 5.7mm Round _(json)_<br>`3762355926/VFEP93` = 5.7 Rounds _(json)_ | 5.7mm彈藥 |
 | `ItemName\|Base.57Carton` | `3611718925/VFEP93` = Carton of 5.7mm Rounds _(json)_<br>`3762355926/VFEP93` = Carton of 5.7 Boxes _(json)_ | 5.7mm彈藥 (整件) |
@@ -1575,6 +1578,8 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|Base.M40` | `3243805556/Totally's NATO Firearms Pack B42` = M40 Sniper Rifle _(json)_<br>`3616176188/GaelGunStore` = M40 Sniper Rifle _(json)_<br>`3777433827/BritaCombinedB42` = Remington M40 Rifle _(script)_ | M40狙擊步槍 |
 | `ItemName\|Base.M40A1` | `3243805556/Totally's NATO Firearms Pack B42` = M40A1 Sniper Rifle _(json)_<br>`3777433827/BritaCombinedB42` = Remington M40A1 Rifle _(script)_ | M40A1狙擊步槍 |
 | `ItemName\|Base.M4A1` | `3611718925/VFEP93` = M4A1 Assault Rifle _(json)_<br>`3762355926/VFEP93` = M4A1 Assault Rifle _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = M4A1 _(json)_<br>`3777433827/BritaCombinedB42` = Colt M4A1 Carbine _(script)_ | 柯爾特M4A1自動步槍 |
+| `ItemName\|Base.M7_cat` | `3633421539/Escape from Kentucky4215` = M7 Assault Rifle _(json)_<br>`3780151182/MFS_community_fix` = M7 Battle Rifle _(json)_ | M7 突擊步槍 |
+| `ItemName\|Base.M7_cat_Drum` | `3633421539/Escape from Kentucky4215` = M7 Assault Rifle (Drum) _(json)_<br>`3780151182/MFS_community_fix` = M7 Battle Rifle (Drum) _(json)_ | M7 突擊步槍 (彈鼓) |
 | `ItemName\|Base.M9A3` | `3616176188/GaelGunStore` = M9A3 Pistol _(json)_<br>`3777433827/BritaCombinedB42` = Beretta M9A3 Pistol _(script)_ | M9A3 手槍 |
 | `ItemName\|Base.MAC10Folded` | `3611718925/VFE` = M10 Submachinegun _(json)_<br>`3761077099/VFE` = M10 Submachinegun _(json)_<br>`3779417912/Totally's Cops and Robbers Firearms` = MAC-10 Submachinegun _(json)_ | M10 衝鋒槍 |
 | `ItemName\|Base.MK2SD` | `3611718925/VFE` = MK2SD Pistol _(json)_<br>`3761077099/VFE` = MK2-SD Pistol _(json)_ | 儒格MK2SD手槍 |
@@ -1768,6 +1773,8 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `Sandbox\|Sandbox_InventoryTetris_PreventTardisStacking` | `3598501350/RE Tetris [B42]` = Prevent Infinite Container Stacking _(json)_<br>`3769773293/INVENTORY_TETRISP_MP` = Prevent Infinite Container Stacking _(json)_<br>`3775513231/InventoryTetris` = Prevent TARDIS Stacking _(json)_ | 防止無限容器堆疊 |
 | `Sandbox\|Sandbox_InventoryTetris_UseItemTransferTime` | `3598501350/RE Tetris [B42]` = Item Transfer Time _(json)_<br>`3769773293/INVENTORY_TETRISP_MP` = Item Transfer Time _(json)_<br>`3775513231/InventoryTetris` = Use Item Transfer Time _(json)_ | 物品轉移時間 |
 | `Sandbox\|Sandbox_MWPWeapons` | `2732407704/MWPWeapons` = MWP Weapons Loot _(死檔 Sandbox_EN.txt)_<br>`3747202678/MWPWeapons42` = MWP Weapons _(json)_ | MWP 武器 |
+| `Sandbox\|Sandbox_ModernFirearmsSystemSandboxGun_56S_cat_Spawn` | `3633421539/Escape from Kentucky4215` = Model 56 Semi-Auto Spawn Chance [7.62mm] _(json)_<br>`3780151182/MFS_community_fix` = Type 56 Semi-Automatic Rifle (SKS) Spawn Chance [7.62mm] _(json)_ | 56 式半自動生成機率 [7.62mm] |
+| `Sandbox\|Sandbox_ModernFirearmsSystemSandboxGun_M7_cat_Spawn` | `3633421539/Escape from Kentucky4215` = M7 Assault Rifle Spawn Chance [.38] _(json)_<br>`3780151182/MFS_community_fix` = M7 Battle Rifle Spawn Chance [6.8mm] _(json)_ | M7 自動步槍生成機率 [.38] |
 | `Sandbox\|Sandbox_PhunSprinters_Decorate` | `3532685233/PhunSprinters` = Decorate _(死檔 Sandbox_EN.txt)_<br>`3676252110/PhunSprinters2` = Decorate Sprinters _(json)_ | 節日裝扮跑屍 |
 | `Sandbox\|Sandbox_PhunSprinters_DefaultRisk` | `3532685233/PhunSprinters` = Default Risk _(死檔 Sandbox_EN.txt)_<br>`3676252110/PhunSprinters2` = Default Risk %% _(json)_ | 預設跑屍機率%% |
 | `Sandbox\|Sandbox_PhunSprinters_DefaultRisk_tooltip` | `3532685233/PhunSprinters` = Percentage chance of a zed being a sprinter. This value is … _(死檔 Sandbox_EN.txt)_<br>`3676252110/PhunSprinters2` = Percentage chance of a zed being a sprinter. If you use Phu… _(json)_ | 殭屍變為跑屍的基礎機率. 搭配區域模組時, 未單獨設定區域則沿用該預設值. 0為無機率 50為50%% 100為必定跑… |
@@ -1833,6 +1840,12 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `Tooltip\|Tooltip_PhalanxPills` | `3638633196/ExtensiveHealthReworkB42` = Knox Virus suppressant medication. &lt;LINE&gt; &lt;RGB:1,0… _(死檔 Tooltip_EN.txt)_<br>`3726328119/ExtensiveHealthReworkB42` = Knox Virus suppressant medication. &lt;LINE&gt; &lt;RGB:1,0… _(json)_ | 諾克斯病毒抑制藥物.&lt;br&gt;不能治癒-重置感染進度&lt;br&gt;&lt;br&gt;每次使用效果遞減… |
 | `Tooltip\|Tooltip_Revolver` | `3773858287/B42 Rain's Firearms & Gun Parts` = .45 ACP revolver _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = .45 ACP revolver _(json)_<br>`3777433827/BritaCombinedB42` = Speedloaders and loose rounds are handled by the Build 42 r… _(json)_ | .45 ACP左輪手槍 |
 | `Tooltip\|Tooltip_SalvageVehicle` | `2757712197/Vehicle Repair Overhaul - Vehicle Salvage Overhaul` = Salvaging vehicles with a Welding Mask and Propane Torch wi… _(json)_<br>`3727602756/ChoppedVehicleSalvage` = Salvaging vehicles with a welding mask and propane torch wi… _(json)_ | 佩戴焊工面罩, 使用丙烷噴燈拆解車輛, 可將車輛從道路上清理移走. 整車拆解相比拆解汽車殘骸耗時更長, 消耗更多丙烷,… |
+| `Tooltip\|Tooltip_WBHM_AntiDiarrhealTablets` | `3723942896/TDDUPMarriageCompanion` = Helps reduce fluid loss and cramping during stomach illness. _(json)_<br>`3723942896/TDDUPMedicalFramework` = Reduces fluid-loss/cramping states in the diagnostic medica… _(json)_ | 在診斷醫療腸胃疾病模型中減輕體液流失/絞痛狀態. |
+| `Tooltip\|Tooltip_WBHM_AntiNauseaTablets` | `3723942896/TDDUPMarriageCompanion` = Helps reduce nausea and vomiting during stomach illness. _(json)_<br>`3723942896/TDDUPMedicalFramework` = Reduces nausea and vomiting-risk states in the diagnostic m… _(json)_ | 在診斷醫療腸胃疾病模型中減輕噁心與嘔吐風險狀態. |
+| `Tooltip\|Tooltip_WBHM_AntihistamineTablets` | `3723942896/TDDUPMarriageCompanion` = Helps reduce allergy symptoms. _(json)_<br>`3723942896/TDDUPMedicalFramework` = Reduces simulated allergy flare symptoms in the medical mod… _(json)_ | 在醫療模型中減輕模擬的過敏發作症狀. |
+| `Tooltip\|Tooltip_WBHM_ElectrolytePowder` | `3723942896/TDDUPMarriageCompanion` = Electrolyte powder for dehydration recovery and fluid repla… _(json)_<br>`3723942896/TDDUPMedicalFramework` = Diagnostic medical supply for dehydration recovery. Restore… _(json)_ | 用於脫水恢復的診斷醫療用品. 在健康模型中恢復體液/電解質平衡. |
+| `Tooltip\|Tooltip_WBHM_RecoveryCareKit` | `3723942896/TDDUPMarriageCompanion` = A broad field-care kit for short-term recovery. _(json)_<br>`3723942896/TDDUPMedicalFramework` = Broad field-care kit for simulated short-term recovery stat… _(json)_ | 針對模擬短期恢復狀態的綜合野外照護包. |
+| `Tooltip\|Tooltip_WBHM_Sling` | `3723942896/TDDUPMarriageCompanion` = Supports an injured arm during short-term recovery. _(json)_<br>`3723942896/TDDUPMedicalFramework` = Supports an injured arm during short-term recovery. The med… _(json)_ | 在短期恢復期間支撐受傷的手臂. 醫療模型可將該手臂標記為暫時受限. |
 | `Tooltip\|Tooltip_item_Boombox` | `3739256725/Talis New Music` = A loud portable stereo with room for a cassette and battery. _(json)_<br>`3743911767/IVA` = Foreign boombox. Doesn't get local radio,&lt;br&gt;but can … _(json)_ | 一款進口的行動式收音機. 無法收聽本地電臺, &lt;br&gt;但可以播放磁帶. 採用電池供電. |
 | `Tooltip\|Tooltip_item_Vinyl` | `3739256725/Talis New Music` = A record player for spinning vinyl records. _(json)_<br>`3743911767/IVA` = It needs electricity and connected speakers to function. _(json)_ | 它需要通電並連線揚聲器才能工作. |
 | `Tooltip\|Tooltip_item_Walkman` | `3397198968/TrueMusic_b42` = The famous player from Sany. _(死檔 Tooltip_EN.txt)_<br>`3632610172/True Moozic B42+ - The Music operating System for Project Zomboid SPMP` = The famous player from Zony. _(死檔 tooltip.json)_<br>`3739256725/Talis New Music` = A portable cassette player for music on the move. _(json)_<br>`3743911767/IVA` = The famous player from Sany. _(json)_ | Sony最著名的音樂播放器. |
