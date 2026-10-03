@@ -4,6 +4,26 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 18 個 MOD 新增的繁簡中文，共 3,384 項。** Read Your Manga（#662，新收錄的 33 部漫畫共 1,848 冊，如《SPY×FAMILY 間諜家家酒》《BLUE LOCK 藍色監獄》《灌籃高手》《第一神拳》《哆啦A夢》，另有 2 個漫畫生成器物品）、Till Death Do Us Part - Marriage Companion（#678，家庭與育兒、嬰兒照護、醫療照護、指甲 Moodle、配偶互動選單與大量沙盒設定，1,080 項）、Dead Magic（#674，每個法術與儀式的開關及耐力／疲勞消耗設定，206 項）、HydeCo. Clay（#668，陶瓷動物擺飾與泥漿鑄模配方，82 項）、Legendary Tactical Weapons（#675，改版後的生成設定與刀劍收納箱，54 項）、Modern Firearms System Community Fix Patch（#680，新彈匣、裝飾彈匣與零件改裝配方，46 項）、W900 Semi-Truck（#665，9 項）、Totally's NATO and Commonwealth Firearms（#663，特種部隊貝雷帽等，9 項）、Legendary Satchel（#670，8 項）、Legendary Fanny Pack（#669，8 項）、HydeCo. Unlimited Cars（#666，8 項）、El Eternauta（#676，Favalli 潛水面罩與服裝說明，5 項）、末日鎮屍錄（#682，強化度化殘魂，4 項）、GaelGunStore（#671，4 項）、Livestock Panel Plus（#681，公雞啼叫音量，3 項）、Extended categories（#672，3 項）、Fred's Night Vision Goggles（#664，3 項）、Hold Crouch to Sit（#679，2 項）。
+  > 技術要點：除末日鎮屍錄外全數落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫（cn 不經簡繁轉換），新鍵皆以有效 CN 值登記 `ch_review_state`。末日鎮屍錄依 `cn_source: upstream` 把簡中逐字照抄上游 `Translate/CN` 進 own 目錄、繁中以作者簡中為主直寫進 `sources/ch`。7 路翻譯後經 Codex、Grok 8 路對抗複核，43 條修正提議採納 34 條（隱私卡片、同伴等 Marriage Companion 用語統一；嬰兒背帶是穿戴物不是提籃；特種部隊群；El Eternauta 的濾芯；瞄具「柔化」視野等）。漫畫書名逐部查證台灣代理與大陸官方譯名，冊名沿用既有的「第 N 卷(大)／(小)」格式；《神樂缽》依 lint 異體字規則用「缽」。Legendary Satchel／Fanny Pack／Tactical Weapons 的新生成設定比照已出貨的 Legendary Backpack／Cap／Duffelbag 句型。
+
+### Changed
+
+- **依上游英文改值重譯 90 項。** Marriage Companion 82 項沙盒設定（對話文字大小改為百分比選項、主控台訊息抑制說明、休閒活動頻率、「家庭與育兒」「關係弧線」分類前綴等，#678）；HydeCo. Unlimited Cars 3 項自訂預設說明補上原版數值對照（#666）；Read Your Manga 的沙盒頁名改為 MOD 名、「符合世界觀」選項拿掉 1993 年前的限定（#662）；Totally's NATO 的兩件 CAF OG 107 綠色衣褲（#663）；GaelGunStore 的瞄具畫面開關說明（#671）。
+  > 技術要點：own 層 85 鍵連同 `en` 錨點更新，As1 衍生層 5 鍵改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點），皆登記 `ch_review_state`；build 的 `own_anchor_drift` 由 81 筆歸零。其中 4 鍵上游 `Sandbox.json` 已改字、同分支的 `Sandbox_EN.txt` 仍是舊文，`own_anchor_drift`「任一來源相符即算最新」因而漏報，改以 census 新舊比對補抓。
+- **105 個與其他 MOD 共用的鍵完成裁決：104 項採用（或確認沿用）對每個 MOD 都成立的譯名，1 項改為不出貨中文。**
+  - Modern Firearms System 原版與社群修正版共用的 76 鍵：修正版本批把 M7 改稱 Battle Rifle、308ClipU 改稱 7.62x39 AK 彈匣、56S 改稱 SKS，譯名改為兩版共通的「M7 步槍」「7.62mm 30 發彈匣」「北方工業 56 式半自動步槍」；彈匣／彈鼓模式切換配方註明「部分版本需先卸下所有配件」；原版誤寫成 .338 的 5 發彈匣配方依兩版實際產物改為 .44 馬格南；下掛榴彈配方不再與 40mm 高爆榴彈撞名；背包系列改用原作者的型號與名稱，鋼鞭拿掉兩版互斥的外形詞。御林長刀的攜行件原版稱刀鞘、修正版稱背帶，找不到共通說法，改為不出貨，兩版各自顯示作者的名稱。
+  - GaelGunStore 與 Brita、Rain's、Totally's 槍械共用的 21 個槍械與彈藥物品名：拿掉只屬單方的廠牌或細節（AK5C、L85、P90 彈匣），M9A3 依本包「廠牌＋型號＋種類」慣例補上貝瑞塔，其餘確認現譯成立。
+  - Marriage Companion 與其醫療框架子模組共用的 7 個醫療選單與藥品說明，改為兩邊共通的寫法；Extended categories、Global Storage SiK、QoL Compendium 的「食物-易腐爛」分類確認沿用。
+  > 技術要點：`owner_conflict_decisions.json` 新增 105 筆（translate 104、unship 1，`unshipped_keys.json` 同步以 `owner_signature` 雙向背書）；census 簽名寫入前以既有 1,341 筆已裁決鍵自檢全數相符。改值的 34 鍵：As1 衍生層改 `sources/ch`＋`cn_overrides`，own 層連 `_note` 更新，皆登記 `ch_review_state`；`OWNER_CONFLICTS.md` 重生。
+- **Read Your Manga 兩部漫畫的繁中書名統一**：《RE：從零開始的異世界生活 第三章：零之真實》有 11 冊殘留半翻英文的舊譯，《銃夢：LAST ORDER 最後的任務》有 13 冊用了另一個書名，改成與同系列其他冊一致。
+
+其餘追蹤單無需另外變更：Metro 2033 Universal Charger（#677）只把 MOD 資料夾改名，鍵與英文不變；Drink Smart（#667）只把全形百分號改成 `%%`，現行譯文早已是 `%%`；Read Your Manga 其餘 838 冊只是書名的空白與標點變動。Legendary Tactical Weapons／Satchel／Fanny Pack、El Eternauta、Read Your Manga 上游刪除的舊沙盒與物品鍵屬 As1 衍生層，依同步流程保留。
+
 ## [42.21.0-1.38.0] - 2026-10-02
 
 ### Added

@@ -8790,6 +8790,739 @@
       "reason": "2026-10-02 #655 裁決：Auto All 與測試分支 Auto All BETA 的同一則停止訊息. 主版多一句「健康值下限在模組選項中」, 但 BETA 沒有 Auto Mechanics 健康值下限 (healthFloor) 選項, 現值的第二句對 BETA 不成立. 只保留兩版共有的第一句.",
       "ch": "已停止: 傷勢過重, 無法繼續負重.",
       "cn": "已停止: 伤势过重, 无法继续负重."
+    },
+    "ItemName|Base.308ClipU": {
+      "action": "translate",
+      "signature": "5301f1dad0af4567",
+      "reason": "2026-10-03 裁決：3633421539 ModernFirearmsSystem 稱 7.62×51mm 30-Round Magazine, 3780151182 社群修正版本批改稱 7.62x39mm AK 30 round Magazine. 兩版 script 的 Base.308ClipU 完全相同 (30 發, AmmoType base:bullets_308, 供 AK103/Groza/SCAR-H 等共用), 是同一物品, 只有英文標示的口徑不同. 現行 7.62×51mm 只符合原版, 改用雙方都成立的上位口徑 7.62mm.",
+      "ch": "7.62mm 30 發彈匣",
+      "cn": "7.62mm 30 发弹匣"
+    },
+    "ItemName|Base.56S_cat": {
+      "action": "translate",
+      "signature": "a7454d1037f107c6",
+      "reason": "2026-10-03 裁決：原版稱 Norinco Type 56S Rifle, 社群修正版本批改稱 Type 56 Semi-Automatic Rifle (SKS). 兩版 script 相同 (DisplayName 56半自动步枪, 10 發, base:bullets_308), 即北方工業出口的 56 式半自動步槍 (SKS 仿製型), 同一實體. 依修正版補出「半自動」種類字, 廠牌北方工業對兩版都成立.",
+      "ch": "北方工業 56 式半自動步槍",
+      "cn": "北方工业 56 式半自动步枪"
+    },
+    "ItemName|Base.AWMClip": {
+      "action": "translate",
+      "signature": "8d8334af9609015c",
+      "reason": "2026-10-03 裁決：原版稱 .44 Magnum 5-Round AWM Magazine, 修正版稱 .44 Magnum 5-Round Magazine. 同一物品 (5 發, base:bullets_44), 但修正版的 AWM 已改用 338Clip_5Rd_cat, AWMClip 改供 ROSE_cat 使用, 「AWM 彈匣」對修正版不成立. 去掉 AWM 字樣, 口徑與容量對兩版都正確.",
+      "ch": ".44 馬格南 5 發彈匣",
+      "cn": ".44 马格南 5 发弹匣"
+    },
+    "ItemName|Base.BagS_cat_1": {
+      "action": "translate",
+      "signature": "4920b888bacc6816",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「运动背包」與 MFS_BackpackSystem_fix 的「MFS Exercise Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS運動背包",
+      "cn": "MFS运动背包"
+    },
+    "ItemName|Base.BagS_cat_10": {
+      "action": "translate",
+      "signature": "767832b4a65612c8",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「雨林猎手背包」與 MFS_BackpackSystem_fix 的「MFS Jungle Hunter Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS叢林獵手背包",
+      "cn": "MFS丛林猎手背包"
+    },
+    "ItemName|Base.BagS_cat_11": {
+      "action": "translate",
+      "signature": "17de46c16163fd7a",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「大型攀登包」與 MFS_BackpackSystem_fix 的「MFS Big Climbing Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS大型攀登背包",
+      "cn": "MFS大型攀登背包"
+    },
+    "ItemName|Base.BagS_cat_12": {
+      "action": "translate",
+      "signature": "2bed0c8846339f0e",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「GA野战背包」與 MFS_BackpackSystem_fix 的「MFS GA Field Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS GA野戰背包",
+      "cn": "MFS GA野战背包"
+    },
+    "ItemName|Base.BagS_cat_13": {
+      "action": "translate",
+      "signature": "7f55757865bd61d6",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「DASH战术背包」與 MFS_BackpackSystem_fix 的「MFS DASH Tactical Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS DASH戰術背包",
+      "cn": "MFS DASH战术背包"
+    },
+    "ItemName|Base.BagS_cat_14": {
+      "action": "translate",
+      "signature": "5453b4fa967a38fc",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「野战徒步背包」與 MFS_BackpackSystem_fix 的「MFS Field Rucksack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山; 原 ch/cn 不一致 (MFS野戰徒步背包 / MFS野战背包), 統一為同一名稱.",
+      "ch": "MFS野戰徒步背包",
+      "cn": "MFS野战徒步背包"
+    },
+    "ItemName|Base.BagS_cat_15": {
+      "action": "translate",
+      "signature": "96def04841922791",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「生存战术背包」與 MFS_BackpackSystem_fix 的「MFS Survival Tactical Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS生存戰術背包",
+      "cn": "MFS生存战术背包"
+    },
+    "ItemName|Base.BagS_cat_16": {
+      "action": "translate",
+      "signature": "6cb8229e96eda9d8",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「MAP侦察背包」與 MFS_BackpackSystem_fix 的「MFS MAP Scout Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS MAP偵察背包",
+      "cn": "MFS MAP侦察背包"
+    },
+    "ItemName|Base.BagS_cat_17": {
+      "action": "translate",
+      "signature": "8e6988684c0897f6",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「GT1户外登山背包」與 MFS_BackpackSystem_fix 的「MFS GT1 Outdoor Hiking Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山; 原 ch/cn 不一致 (MFS GT1戶外登山背包 / MFS GT1户外徒步背包), 統一為同一名稱.",
+      "ch": "MFS GT1戶外登山背包",
+      "cn": "MFS GT1户外登山背包"
+    },
+    "ItemName|Base.BagS_cat_18": {
+      "action": "translate",
+      "signature": "c2baab53061d8da0",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「D2战术背包」與 MFS_BackpackSystem_fix 的「MFS Tactical Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山; 原 ch/cn 不一致 (MFS戰術背包 / MFS战术背包), 統一為同一名稱.",
+      "ch": "MFS D2戰術背包",
+      "cn": "MFS D2战术背包"
+    },
+    "ItemName|Base.BagS_cat_19": {
+      "action": "translate",
+      "signature": "f4139a6cab46fcb9",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「HLS2重型背包」與 MFS_BackpackSystem_fix 的「MFS HLS2 Rucksack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山; 原 ch/cn 不一致 (MFS HLS2重型背包 / MFS HLS2背包), 統一為同一名稱.",
+      "ch": "MFS HLS2重型背包",
+      "cn": "MFS HLS2重型背包"
+    },
+    "ItemName|Base.BagS_cat_2": {
+      "action": "translate",
+      "signature": "e20f18a0a862474f",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「轻便背包」與 MFS_BackpackSystem_fix 的「MFS Light Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS輕型背包",
+      "cn": "MFS轻型背包"
+    },
+    "ItemName|Base.BagS_cat_20": {
+      "action": "translate",
+      "signature": "ffc7afc87633bde6",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「GT5野战背包」與 MFS_BackpackSystem_fix 的「MFS GT5 Field Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS GT5野戰背包",
+      "cn": "MFS GT5野战背包"
+    },
+    "ItemName|Base.BagS_cat_21": {
+      "action": "translate",
+      "signature": "fb7f7f4dcdd5ad0d",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「D3战术登山包」與 MFS_BackpackSystem_fix 的「MFS Tactical Hiking Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山; 原 ch/cn 不一致 (MFS D3戰術登山背包 / MFS战术徒步背包), 統一為同一名稱.",
+      "ch": "MFS D3戰術登山背包",
+      "cn": "MFS D3战术登山背包"
+    },
+    "ItemName|Base.BagS_cat_22": {
+      "action": "translate",
+      "signature": "53e1595f9b10833e",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「ALS背负系统」與 MFS_BackpackSystem_fix 的「MFS ALS Backpack System」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS ALS背包系統",
+      "cn": "MFS ALS背包系统"
+    },
+    "ItemName|Base.BagS_cat_23": {
+      "action": "translate",
+      "signature": "731a871f77a3a7de",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「重型登山背包」與 MFS_BackpackSystem_fix 的「MFS Heavy Hiking Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山; 原 ch/cn 不一致 (MFS重型徒步背包 / MFS重型徒步背包), 統一為同一名稱.",
+      "ch": "MFS重型登山背包",
+      "cn": "MFS重型登山背包"
+    },
+    "ItemName|Base.BagS_cat_24": {
+      "action": "translate",
+      "signature": "96f7f3b7c3f62ae1",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「GTO重型战术背包」與 MFS_BackpackSystem_fix 的「MFS GT0 Heavy Tactical Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山; 原 ch/cn 不一致 (MFS GTO重型戰術背包 / MFS GT0重型战术背包), 統一為同一名稱.",
+      "ch": "MFS GTO重型戰術背包",
+      "cn": "MFS GTO重型战术背包"
+    },
+    "ItemName|Base.BagS_cat_25": {
+      "action": "translate",
+      "signature": "2edad706de6a129c",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「D7战术背包」與 MFS_BackpackSystem_fix 的「MFS D7 Tactical Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS D7戰術背包",
+      "cn": "MFS D7战术背包"
+    },
+    "ItemName|Base.BagS_cat_3": {
+      "action": "translate",
+      "signature": "a10f6ec283cd24a2",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「旅行背包」與 MFS_BackpackSystem_fix 的「MFS Travel Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS旅行背包",
+      "cn": "MFS旅行背包"
+    },
+    "ItemName|Base.BagS_cat_4": {
+      "action": "translate",
+      "signature": "e4e47e90686fe596",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「帆布背包」與 MFS_BackpackSystem_fix 的「MFS Canvas Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS帆布背包",
+      "cn": "MFS帆布背包"
+    },
+    "ItemName|Base.BagS_cat_5": {
+      "action": "translate",
+      "signature": "a76012fbde010f1e",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「DG运动背包」與 MFS_BackpackSystem_fix 的「MFS DG Exercise Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS DG運動背包",
+      "cn": "MFS DG运动背包"
+    },
+    "ItemName|Base.BagS_cat_6": {
+      "action": "translate",
+      "signature": "4d8e7625b90d632d",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「战术快拆背包」與 MFS_BackpackSystem_fix 的「MFS Tactical QD Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS戰術快拆背包",
+      "cn": "MFS战术快拆背包"
+    },
+    "ItemName|Base.BagS_cat_7": {
+      "action": "translate",
+      "signature": "7d74af939069b10f",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「突袭战术背包」與 MFS_BackpackSystem_fix 的「MFS Assualt Tactical Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS突擊戰術背包",
+      "cn": "MFS突击战术背包"
+    },
+    "ItemName|Base.BagS_cat_8": {
+      "action": "translate",
+      "signature": "1571ade4087839a7",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「轻型户外背包」與 MFS_BackpackSystem_fix 的「MFS Light Outdoor Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS輕型戶外背包",
+      "cn": "MFS轻型户外背包"
+    },
+    "ItemName|Base.BagS_cat_9": {
+      "action": "translate",
+      "signature": "6de9d37f74b41944",
+      "reason": "2026-10-03 裁決：BackpackSystem 的 script 名「露营背包」與 MFS_BackpackSystem_fix 的「MFS Camping Backpack」是同一個背包 (同一物品代號, 修正版只是補英文名). 系列統一沿用「MFS+型號+名稱」, 型號與名稱以原作者 script 名為準, Hiking 一律譯登山.",
+      "ch": "MFS露營背包",
+      "cn": "MFS露营背包"
+    },
+    "ItemName|Base.DragonSlayer": {
+      "action": "translate",
+      "signature": "c8809ad53da4427f",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「斩龙剑DragonSlayer」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Dragon Slayer Sword」, 同一物品. 以正式名稱翻譯.",
+      "ch": "斬龍劍",
+      "cn": "斩龙剑"
+    },
+    "ItemName|Base.FangsOfTheYoungWolf": {
+      "action": "translate",
+      "signature": "92e13a4ec7f8b38b",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「幼狼之牙FangsOfTheYoungWolf」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Young Wolf」, 同一物品. 以正式名稱翻譯; 修正版 Young Wolf 是簡稱, 以原作者全名為準.",
+      "ch": "幼狼之牙",
+      "cn": "幼狼之牙"
+    },
+    "ItemName|Base.FantasyKnightSword": {
+      "action": "translate",
+      "signature": "857cf1cae84125c7",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「幻想骑士剑FantasyKnightSword」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Fantasy Knight Sword」, 同一物品. 以正式名稱翻譯.",
+      "ch": "幻想騎士劍",
+      "cn": "幻想骑士剑"
+    },
+    "ItemName|Base.FantasyKnightSwordScabbard": {
+      "action": "translate",
+      "signature": "c89172ab9d9a71cb",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「幻想骑士剑剑鞘FantasyKnightSwordScabbard」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Fantasy Knight Sword Scabbard」, 同一物品. 以正式名稱翻譯.",
+      "ch": "幻想騎士劍劍鞘",
+      "cn": "幻想骑士剑剑鞘"
+    },
+    "ItemName|Base.HaliasturIndusCrossblade": {
+      "action": "translate",
+      "signature": "e7b6758f8c5ea130",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「栗鸢横刀HaliasturIndusCrossblade」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Haliastur Indus Crossblade」, 同一物品. 以正式名稱翻譯.",
+      "ch": "栗鳶橫刀",
+      "cn": "栗鸢横刀"
+    },
+    "ItemName|Base.HaliasturIndusCrossbladeScabbard": {
+      "action": "translate",
+      "signature": "c96bd907a1e94579",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「栗鸢横刀鞘HaliasturIndusCrossbladeScabbard」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Haliastur Indus Crossblade Scabbard」, 同一物品. 以正式名稱翻譯.",
+      "ch": "栗鳶橫刀刀鞘",
+      "cn": "栗鸢横刀刀鞘"
+    },
+    "ItemName|Base.MiaoSword": {
+      "action": "translate",
+      "signature": "6dbd93223ab7436e",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「苗刀MiaoSword」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Miao Sword」, 同一物品. 以正式名稱翻譯.",
+      "ch": "苗刀",
+      "cn": "苗刀"
+    },
+    "ItemName|Base.MiaoSwordS": {
+      "action": "translate",
+      "signature": "25aa4f6714ae8b59",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「苗刀绑带MiaoSword」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Miao Sword Sling」, 同一物品. 以正式名稱翻譯; 原作者「苗刀绑带」與修正版 Sling 同義.",
+      "ch": "苗刀刀帶",
+      "cn": "苗刀刀带"
+    },
+    "ItemName|Base.MurasamaBlade": {
+      "action": "translate",
+      "signature": "c17da8dc95ac77a5",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「高频村雨MurasamaBlade」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Murasama Blade」, 同一物品. 以正式名稱翻譯; 原 ch/cn 不一致 (高頻村雨刀 / 村雨刀), 統一為同一名稱.",
+      "ch": "高頻村雨刀",
+      "cn": "高频村雨刀"
+    },
+    "ItemName|Base.MurasamaBladeScabbard": {
+      "action": "translate",
+      "signature": "93bceaec053853f5",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「村雨剑鞘MurasamaBladeScabbard」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Murasama Blade Scabbard」, 同一物品. 以正式名稱翻譯.",
+      "ch": "村雨刀刀鞘",
+      "cn": "村雨刀刀鞘"
+    },
+    "ItemName|Base.Noctis": {
+      "action": "translate",
+      "signature": "92017c9da85dcf76",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「夜煌Noctis」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Noctis Blade」, 同一物品. 以正式名稱翻譯.",
+      "ch": "夜煌刀",
+      "cn": "夜煌刀"
+    },
+    "ItemName|Base.NoctisScabbard": {
+      "action": "translate",
+      "signature": "ea362f377076f570",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「夜煌刀鞘」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Noctis Blade Scabbard」, 同一物品. 以正式名稱翻譯.",
+      "ch": "夜煌刀刀鞘",
+      "cn": "夜煌刀刀鞘"
+    },
+    "ItemName|Base.OnimaruKunitusna": {
+      "action": "translate",
+      "signature": "4b1dcd0ec573fc2f",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「鬼丸国纲OnimaruKunitusna」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Onimaru Kunitusna Blade」, 同一物品. 以正式名稱翻譯.",
+      "ch": "鬼丸國綱刀",
+      "cn": "鬼丸国纲刀"
+    },
+    "ItemName|Base.OnimaruKunitusnaS": {
+      "action": "translate",
+      "signature": "adfcf06312474602",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「鬼丸国纲刀鞘」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Onimaru Kunitusna Blade Scabbard」, 同一物品. 以正式名稱翻譯.",
+      "ch": "鬼丸國綱刀刀鞘",
+      "cn": "鬼丸国纲刀刀鞘"
+    },
+    "ItemName|Base.PanguAxe": {
+      "action": "translate",
+      "signature": "1f35519c00969bbe",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「盘古斧PanguAxe」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Pangu Axe」, 同一物品. 以正式名稱翻譯.",
+      "ch": "盤古斧",
+      "cn": "盘古斧"
+    },
+    "ItemName|Base.PirateCaptain": {
+      "action": "translate",
+      "signature": "479ed44c66c03e0f",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「海盗船长PirateCaptain」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Pirate Captain Saber」, 同一物品. 以正式名稱翻譯.",
+      "ch": "海盜船長彎刀",
+      "cn": "海盗船长弯刀"
+    },
+    "ItemName|Base.SteelWhip": {
+      "action": "translate",
+      "signature": "fa45e1c8af13592b",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「八棱钢鞭SteelWhip」是中英混寫占位名, MFS_BladesmithSystem_fix 的英文為「Steel Whip」, 同一物品. 但兩方中文對外形描述不一: 原作者寫「八棱」, 修正版自帶繁中寫「龍頭鋼鞭」, 八棱與龍頭互斥. 取各方都成立的上位名「鋼鞭」, 不帶外形限定詞.",
+      "ch": "鋼鞭",
+      "cn": "钢鞭"
+    },
+    "ItemName|Base.StormAxe": {
+      "action": "translate",
+      "signature": "e0e6df62c9ad99cb",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「风暴战斧StormAxe」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Storm Axe」, 同一物品. 以正式名稱翻譯.",
+      "ch": "風暴戰斧",
+      "cn": "风暴战斧"
+    },
+    "ItemName|Base.TacticalTangCrossblade": {
+      "action": "translate",
+      "signature": "d00e613f53a15922",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「战术唐横刀TacticalTangCrossblade」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Tactical Tang Crossblade」, 同一物品. 以正式名稱翻譯.",
+      "ch": "戰術唐橫刀",
+      "cn": "战术唐横刀"
+    },
+    "ItemName|Base.TacticalTangCrossbladeScabbard": {
+      "action": "translate",
+      "signature": "de28db7510d106f6",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「战术唐横刀鞘TacticalTangCrossbladeScabbard」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Tactical Tang Crossblade Scabbard」, 同一物品. 以正式名稱翻譯.",
+      "ch": "戰術唐橫刀刀鞘",
+      "cn": "战术唐横刀刀鞘"
+    },
+    "ItemName|Base.TideSword": {
+      "action": "translate",
+      "signature": "48a8e898d490980d",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「潮汐之剑TideSword」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Tide Sword」, 同一物品. 以正式名稱翻譯; 兩方都稱劍 (潮汐之剑 / Tide Sword), 由「潮汐之刃」改為「潮汐之劍」.",
+      "ch": "潮汐之劍",
+      "cn": "潮汐之剑"
+    },
+    "ItemName|Base.Yamato": {
+      "action": "translate",
+      "signature": "340a1d37a95b64d6",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「阎魔刀Yamato」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Yamato Blade」, 同一物品. 以正式名稱翻譯.",
+      "ch": "閻魔刀",
+      "cn": "阎魔刀"
+    },
+    "ItemName|Base.YamatoScabbard": {
+      "action": "translate",
+      "signature": "7f762b8d4ed2c765",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「阎魔刀鞘YamatoScabbard」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Yamato Blade Scabbard」, 同一物品. 以正式名稱翻譯.",
+      "ch": "閻魔刀刀鞘",
+      "cn": "阎魔刀刀鞘"
+    },
+    "ItemName|Base.YanlingSword": {
+      "action": "translate",
+      "signature": "d0ff3fdbc4113405",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「雁翎刀YanlingSword」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Yanling Sword」, 同一物品. 以正式名稱翻譯.",
+      "ch": "雁翎刀",
+      "cn": "雁翎刀"
+    },
+    "ItemName|Base.YanlingSwordScabbard": {
+      "action": "translate",
+      "signature": "91b163a295f701af",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「雁翎刀鞘YanlingSwordScabbard」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Yanling Sword Scabbard」, 同一物品. 以正式名稱翻譯.",
+      "ch": "雁翎刀刀鞘",
+      "cn": "雁翎刀刀鞘"
+    },
+    "ItemName|Base.YulinSword": {
+      "action": "translate",
+      "signature": "146e94744c370d45",
+      "reason": "2026-10-03 裁決：BladesmithSystem 的 script 名「御林长刀YulinSword」是中英混寫占位名, MFS_BladesmithSystem_fix 為正式英文名「Yulin Sword」, 同一物品. 以正式名稱翻譯.",
+      "ch": "御林長刀",
+      "cn": "御林长刀"
+    },
+    "ItemName|Base.YulinSwordS": {
+      "action": "unship",
+      "signature": "3c1c78226ab0f4ab",
+      "reason": "2026-10-03 裁決：同一件可穿戴的御林長刀攜行件 (BodyLocation cat:YulinSwordS), 但兩方對形制的說法互斥: 原作者 script 名「御林长刀鞘YulinSwordS」是刀鞘, 社群修正版 MFS_BladesmithSystem_fix 英文「Yulin Sword Sling」與其自帶繁中「御林長刀綁帶」是背帶. 「刀鞘」對修正版不成立, 「刀帶」對原版不成立, 找不到誠實的中性名稱. 抑制後: 只裝原版的玩家看到 script 名「御林长刀鞘YulinSwordS」; 修正版需搭配原版載入, 玩家看到修正版自帶的繁中／簡中或英文「Yulin Sword Sling」."
+    },
+    "ItemName|Base.M7_cat": {
+      "action": "translate",
+      "signature": "47f6371e703ac2f2",
+      "reason": "2026-10-03 裁決：原版稱 M7 Assault Rifle, 修正版本批改稱 M7 Battle Rifle. 兩版 script 同一把槍 (同用 Base.68Clip 30 發彈匣, AmmoType bullets_38), 只差槍種歸類 (突擊步槍 vs 戰鬥步槍). 現行「突擊步槍」只符合原版, 改用雙方都成立的上位詞「步槍」.",
+      "ch": "M7 步槍",
+      "cn": "M7 步枪"
+    },
+    "ItemName|Base.M7_cat_Drum": {
+      "action": "translate",
+      "signature": "e01312d26cbea69d",
+      "reason": "2026-10-03 裁決：原版稱 M7 Assault Rifle (Drum), 修正版本批改稱 M7 Battle Rifle (Drum). 同一把彈鼓型 M7 (兩版都用 Base.68Drum_cat), 只差槍種歸類, 與 Base.M7_cat 一致改用上位詞「步槍」.",
+      "ch": "M7 步槍 (彈鼓)",
+      "cn": "M7 步枪 (弹鼓)"
+    },
+    "ItemName|Gunpart.Misc_13": {
+      "action": "translate",
+      "signature": "205170de4190774f",
+      "reason": "2026-10-03 裁決：原版 script 名「十三」與修正版英文「13」是同一個槍械小掛件 (修正版只是把原作者的中文名改寫成拼音或英文), 同一實體. 沿用原作者名稱的現行譯文.",
+      "ch": "十三",
+      "cn": "十三"
+    },
+    "ItemName|Gunpart.Misc_baizhi": {
+      "action": "translate",
+      "signature": "8b3ec2e3b078e660",
+      "reason": "2026-10-03 裁決：原版 script 名「白芷」與修正版英文「baizhi」是同一個槍械小掛件 (修正版只是把原作者的中文名改寫成拼音或英文), 同一實體. 沿用原作者名稱的現行譯文.",
+      "ch": "白芷",
+      "cn": "白芷"
+    },
+    "ItemName|Gunpart.Misc_cat": {
+      "action": "translate",
+      "signature": "0bb87f06bc3cb8f5",
+      "reason": "2026-10-03 裁決：原版 script 名「旧猫」與修正版英文「cat」是同一個槍械小掛件 (修正版只是把原作者的中文名改寫成拼音或英文), 同一實體. 沿用原作者名稱的現行譯文.",
+      "ch": "舊貓",
+      "cn": "旧猫"
+    },
+    "ItemName|Gunpart.Misc_es": {
+      "action": "translate",
+      "signature": "b7ad423101b22eed",
+      "reason": "2026-10-03 裁決：原版 script 名「ES」與修正版英文「es」是同一個槍械小掛件 (修正版只是把原作者的中文名改寫成拼音或英文), 同一實體. 沿用原作者名稱的現行譯文.",
+      "ch": "ES",
+      "cn": "ES"
+    },
+    "ItemName|Gunpart.Misc_maosha": {
+      "action": "translate",
+      "signature": "94ed619d8789e7f4",
+      "reason": "2026-10-03 裁決：原版 script 名「猫鲨」與修正版英文「maosha」是同一個槍械小掛件 (修正版只是把原作者的中文名改寫成拼音或英文), 同一實體. 沿用原作者名稱的現行譯文.",
+      "ch": "貓鯊",
+      "cn": "猫鲨"
+    },
+    "ItemName|Gunpart.Misc_nannan": {
+      "action": "translate",
+      "signature": "ac6fbb9d66af873a",
+      "reason": "2026-10-03 裁決：原版 script 名「楠楠」與修正版英文「nannan」是同一個槍械小掛件 (修正版只是把原作者的中文名改寫成拼音或英文), 同一實體. 沿用原作者名稱的現行譯文.",
+      "ch": "楠楠",
+      "cn": "楠楠"
+    },
+    "ItemName|Gunpart.Misc_subieli": {
+      "action": "translate",
+      "signature": "f012991f17639402",
+      "reason": "2026-10-03 裁決：原版 script 名「苏老师」與修正版英文「subieli」是同一個槍械小掛件 (修正版只是把原作者的中文名改寫成拼音或英文), 同一實體. 沿用原作者名稱的現行譯文.",
+      "ch": "蘇老師",
+      "cn": "苏老师"
+    },
+    "ItemName|Gunpart.Misc_zhizi": {
+      "action": "translate",
+      "signature": "0778108661f9be88",
+      "reason": "2026-10-03 裁決：原版 script 名「栀子」與修正版英文「zhizi」是同一個槍械小掛件 (修正版只是把原作者的中文名改寫成拼音或英文), 同一實體. 沿用原作者名稱的現行譯文.",
+      "ch": "梔子",
+      "cn": "栀子"
+    },
+    "Recipes|ClipMode": {
+      "action": "translate",
+      "signature": "ade8ea3c64f13dff",
+      "reason": "2026-10-03 裁決：同一個切換配方. 原版英文附 (Remove All Attachments First), 其 OnCreate 為 shotgunSawnoff, 不會轉移配件; 修正版改用 MFSChangeMagazineMode 會保留配件, 所以英文拿掉這句. 照抄「請先卸下所有配件」對修正版不成立, 整句刪掉又會讓原版玩家切換時遺失配件. 改成「部分版本需先卸下所有配件」, 對兩版都成立且保留提醒.",
+      "ch": "切換到標準彈匣模式 (部分版本需先卸下所有配件)",
+      "cn": "切换到标准弹匣模式 (部分版本需先卸下所有配件)"
+    },
+    "Recipes|DrumMode": {
+      "action": "translate",
+      "signature": "56c452652f063247",
+      "reason": "2026-10-03 裁決：同 ClipMode: 原版需先卸下配件 (shotgunSawnoff 不轉移配件), 修正版 MFSChangeMagazineMode 會保留配件. 改用「部分版本需先卸下所有配件」對兩版都成立; 同時把 ch「切換為」統一為與 ClipMode 一致的「切換到」.",
+      "ch": "切換到彈鼓模式 (部分版本需先卸下所有配件)",
+      "cn": "切换到弹鼓模式 (部分版本需先卸下所有配件)"
+    },
+    "Recipes|GrenadeAmmo": {
+      "action": "translate",
+      "signature": "29487a4089dd2337",
+      "reason": "2026-10-03 裁決：兩版的 GrenadeAmmo 配方都指產出 Base.GrenadeAmmo (原版 recipe 輸出即此物, 兩版 ItemName 都叫 Underbarrel Grenade Round, 即 40mm 下掛榴彈). 原版稱 Craft 40mm HE Grenade Round, 修正版改稱 Craft Underbarrel Grenade Round, 是因為修正版另有 GrenadeAmmo40 配方佔用了「Craft 40mm HE Grenade Round」. 現行「製作 40mm 高爆榴彈」與 GrenadeAmmo40 撞名, 改為「40mm 下掛榴彈」 (與同系列 Underbarrel「下掛」一致), 對兩版都正確且可區分新版.",
+      "ch": "製作 40mm 下掛榴彈",
+      "cn": "制作 40mm 下挂榴弹"
+    },
+    "Recipes|MFS_Restore_PistolLight2_To_GunLight": {
+      "action": "translate",
+      "signature": "1765ffae561fc182",
+      "reason": "2026-10-03 裁決：原版作 ... to Gun Light, 修正版作 ... to Vanilla Gun Light, 指同一個還原成本體槍燈的配方, 只差是否寫出 Vanilla. 現行「還原為槍燈」對兩版都成立, 沿用.",
+      "ch": "將手槍燈 2 還原為槍燈",
+      "cn": "将手枪灯 2 还原为枪灯"
+    },
+    "Recipes|MFS_Restore_PistolLight3_To_GunLight": {
+      "action": "translate",
+      "signature": "ab17ad4c82bbff75",
+      "reason": "2026-10-03 裁決：原版作 ... to Gun Light, 修正版作 ... to Vanilla Gun Light, 指同一個還原成本體槍燈的配方, 只差是否寫出 Vanilla. 現行「還原為槍燈」對兩版都成立, 沿用.",
+      "ch": "將手槍燈 3 還原為槍燈",
+      "cn": "将手枪灯 3 还原为枪灯"
+    },
+    "Recipes|MFS_Restore_RifleLight1_To_GunLight": {
+      "action": "translate",
+      "signature": "e9b6ff7ae43c523b",
+      "reason": "2026-10-03 裁決：原版作 ... to Gun Light, 修正版作 ... to Vanilla Gun Light, 指同一個還原成本體槍燈的配方, 只差是否寫出 Vanilla. 現行「還原為槍燈」對兩版都成立, 沿用.",
+      "ch": "將步槍燈 1 還原為槍燈",
+      "cn": "将步枪灯 1 还原为枪灯"
+    },
+    "Recipes|MFS_Restore_RifleLight_To_GunLight": {
+      "action": "translate",
+      "signature": "69fc5f39874a3e19",
+      "reason": "2026-10-03 裁決：原版作 ... to Gun Light, 修正版作 ... to Vanilla Gun Light, 指同一個還原成本體槍燈的配方, 只差是否寫出 Vanilla. 現行「還原為槍燈」對兩版都成立, 沿用.",
+      "ch": "將步槍燈還原為槍燈",
+      "cn": "将步枪灯还原为枪灯"
+    },
+    "Recipes|Magnum(5)": {
+      "action": "translate",
+      "signature": "62d81a458caa5b89",
+      "reason": "2026-10-03 裁決：兩版 script 的 Magnum(5) 完全相同, 都以 3 個 part1_cat 產出 Base.AWMClip, 而 AWMClip 在兩版都是 5 發 base:bullets_44. 原版英文 .338 Lapua Magnum 是與產物不符的舊文字, 修正版已更正為 .44 Magnum 5-Round Magazine. 同一配方, 依實際產物翻譯, 與 Base.AWMClip 譯名一致.",
+      "ch": "製作 .44 馬格南 5 發彈匣",
+      "cn": "制作 .44 马格南 5 发弹匣"
+    },
+    "Sandbox|Sandbox_ModernFirearmsSystemSandboxGun_56S_cat_Spawn": {
+      "action": "translate",
+      "signature": "248c1c388bdb1f8f",
+      "reason": "2026-10-03 裁決：原版 Model 56 Semi-Auto Spawn Chance [7.62mm], 修正版本批改為 Type 56 Semi-Automatic Rifle (SKS) Spawn Chance [7.62mm]. 都是 Base.56S_cat 的生成機率, 同一設定. 補上「步槍」與 ItemName 一致, 對兩版都成立.",
+      "ch": "56 式半自動步槍生成機率 [7.62mm]",
+      "cn": "56 式半自动步枪刷新几率 [7.62mm]"
+    },
+    "Sandbox|Sandbox_ModernFirearmsSystemSandboxGun_M7_cat_Spawn": {
+      "action": "translate",
+      "signature": "3ec55a09fcff246c",
+      "reason": "2026-10-03 裁決：原版 M7 Assault Rifle Spawn Chance [.38], 修正版本批改為 M7 Battle Rifle Spawn Chance [6.8mm]. 同一把 Base.M7_cat 的生成設定 (兩版 script 都用 68Clip, AmmoType bullets_38), 但槍種與括號口徑標示互相衝突, 現行 [.38] 與「自動步槍」只符合原版. 改用上位詞「步槍」並省略口徑括號, 對兩版都成立.",
+      "ch": "M7 步槍生成機率",
+      "cn": "M7 步枪刷新几率"
+    },
+    "Tooltip|Tooltip_weapon_Silencer": {
+      "action": "translate",
+      "signature": "a120ad852301feb3",
+      "reason": "2026-10-03 裁決：ModernFirearmsSystem 與修正版作 Suppressor, Vanilla Weapons PLUS (MarzVanillaGuns) 作 Silencer, 都是槍口消音器這個配件的提示, 同義詞. 沿用「消音器」.",
+      "ch": "消音器",
+      "cn": "消音器"
+    },
+    "ContextMenu|ContextMenu_WBHM_TreatPartner": {
+      "action": "translate",
+      "signature": "af397052c439e223",
+      "reason": "2026-10-03 裁決: TDDUPMarriageCompanion 寫 Medical Care: Treat Partner, TDDUPMedicalFramework 寫 Treat Patient, 兩者的 WBHM_Client.lua 都是用 getPartnerFor 取得伴侶後才加這個右鍵選單, 指的是同一個動作, 治療對象都是伴侶. 現值「治療病患」偏向 Framework 的措辭, 改成「醫療照護: 治療伴侶」, 對兩方都成立, 也跟同組的「醫療照護」用詞一致.",
+      "ch": "醫療照護: 治療伴侶",
+      "cn": "医疗护理: 治疗伴侣"
+    },
+    "IG_UI|IGUI_ItemCat_FoodPerishable": {
+      "action": "translate",
+      "signature": "f845d01d764dfa52",
+      "reason": "2026-10-03 裁決: Extended categories, Global Storage SiK 寫 Food - Perishable, QoL Compendium 寫 Food (Perishable), 只差標點, 是同一個分類. 沿用現值, 跟本包其他 IGUI_ItemCat_Food* 的「食物-xx」格式一致.",
+      "ch": "食物-易腐爛",
+      "cn": "食物-易腐烂"
+    },
+    "ItemName|Base.762x39Carton": {
+      "action": "translate",
+      "signature": "67752798bfad4888",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 Carton of 12 boxes of 7.62x39mm ammunition, Rain's 兩個變體寫 Carton of 7.62x39 Rounds, 都是同口徑的整箱彈藥, 只差詳略. 現值沒有寫盒數, 對各方都成立, 沿用.",
+      "ch": "7.62x39子彈 (整箱)",
+      "cn": "7.62x39子弹 (整箱)"
+    },
+    "ItemName|Base.AK101": {
+      "action": "translate",
+      "signature": "f541ac18050ad636",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 AK-101 Rifle, Rain's Expanded 寫 AK-101, 只差有沒有寫出種類, 是同一把槍. 沿用現值.",
+      "ch": "AK-101步槍",
+      "cn": "AK-101自动步枪"
+    },
+    "ItemName|Base.AK103": {
+      "action": "translate",
+      "signature": "e0ce5ccf2b9c8fad",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 AK-103 Rifle, Brita 的 script 寫 AK-103 Assault Rifle, 是同一把槍, 只差種類字的詳略. 沿用現值.",
+      "ch": "AK-103步槍",
+      "cn": "AK-103步枪"
+    },
+    "ItemName|Base.AK12": {
+      "action": "translate",
+      "signature": "155f2548d95f6fbd",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 AK-12 Rifle, Brita 的 script 寫 AK-12 Assault Rifle, 是同一把槍, 只差種類字的詳略. 沿用現值.",
+      "ch": "AK-12步槍",
+      "cn": "AK-12步枪"
+    },
+    "ItemName|Base.AK5C": {
+      "action": "translate",
+      "signature": "c21da4e0c658607d",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 FN AK5C Rifle, Brita 的 script 寫 Swedish AK5-C w/Extended Stock (另有 AK5C_Fold 折疊槍托版), 都是同一款瑞典 AK5C 步槍. 現值「赫斯塔爾」只來自 Gael 標的 FN 廠牌, Brita 沒有這樣標, 所以拿掉廠牌改成中性的「AK5C步槍」, 對兩方都成立. Brita 的折疊槍托版另有自己的鍵, 不受影響.",
+      "ch": "AK5C步槍",
+      "cn": "AK5C步枪"
+    },
+    "ItemName|Base.AN94": {
+      "action": "translate",
+      "signature": "a2761385b3bf33d1",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 AN-94 Abakan Rifle, Brita 的 script 寫 AN-94 Assault Rifle, 是同一把槍 (Abakan 是 AN-94 的別名). 沿用現值.",
+      "ch": "AN-94 Abakan步槍",
+      "cn": "AN-94 Abakan步枪"
+    },
+    "ItemName|Base.G36C": {
+      "action": "translate",
+      "signature": "ca6c59c6b288ba31",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 Heckler & Koch G36C Carbine, Brita 的 script 寫 H&K G36-C Rifle w/Extended Stock (另有 G36C_Fold 折疊槍托版), 都是 H&K G36C, G36C 本身就是卡賓槍型. 現值對兩方都成立, 沿用. Brita 的折疊槍托版另有自己的鍵.",
+      "ch": "黑克勒-科赫G36C卡賓槍",
+      "cn": "黑克勒-科赫G36C卡宾枪"
+    },
+    "ItemName|Base.L85": {
+      "action": "translate",
+      "signature": "4cf617e8037330de",
+      "reason": "2026-10-03 裁決: GaelGunStore 的 Base.L85 是 L85A2 Rifle, Brita 的 Base.L85 是 L85A1 (Brita 另有獨立的 Base.L85A2). A1 與 A2 是同一款 L85 步槍的不同改型, 現值「L85A2步槍」對 Brita 的 A1 不成立, 改成上位說法「L85步槍」, 對兩方都成立; Brita 的 A2 版仍由 Base.L85A2 自己的鍵區分.",
+      "ch": "L85步槍",
+      "cn": "L85步枪"
+    },
+    "ItemName|Base.L86": {
+      "action": "translate",
+      "signature": "3bb883ec7e39f5cb",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 L86 LSW Machine Gun, Brita 的 script 寫 L86A1, L86A1 就是 L86 輕型支援武器 (LSW), 是同一把槍. 現值沒有寫改型號, 對兩方都成立, 沿用.",
+      "ch": "L86 LSW機槍",
+      "cn": "L86 LSW机枪"
+    },
+    "ItemName|Base.M14": {
+      "action": "translate",
+      "signature": "6c8f016ff019694a",
+      "reason": "2026-10-03 裁決: Totally's NATO 寫 M14, Brita 的 script 寫 M14 Rifle, 是同一把槍. ch 沿用現值; cn 現值只有「M14」, 等於沒翻, 補成「M14战斗步枪」跟 ch 一致.",
+      "ch": "M14戰鬥步槍",
+      "cn": "M14战斗步枪"
+    },
+    "ItemName|Base.M40": {
+      "action": "translate",
+      "signature": "4ff9c0a19f9b2454",
+      "reason": "2026-10-03 裁決: Totally's NATO 與 GaelGunStore 寫 M40 Sniper Rifle, Brita 的 script 寫 Remington M40 Rifle, 是同一把槍, 只差廠牌與種類字的詳略. 沿用現值.",
+      "ch": "M40狙擊步槍",
+      "cn": "M40狙击步枪"
+    },
+    "ItemName|Base.M40A1": {
+      "action": "translate",
+      "signature": "472f5f528d4a6729",
+      "reason": "2026-10-03 裁決: Totally's NATO 寫 M40A1 Sniper Rifle, Brita 的 script 寫 Remington M40A1 Rifle, 是同一把槍. ch 沿用現值; cn 拿掉型號與種類之間多出的空格, 跟 ch 和 M40 一致.",
+      "ch": "M40A1狙擊步槍",
+      "cn": "M40A1狙击步枪"
+    },
+    "ItemName|Base.M9A3": {
+      "action": "translate",
+      "signature": "e59f0469ba370d1f",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 M9A3 Pistol, Brita 的 script 寫 Beretta M9A3 Pistol, 是同一把槍, 只差有沒有寫廠牌. 依本包「廠牌+型號+種類」的慣例補成「貝瑞塔M9A3手槍」, 也一併拿掉現值多出的空格. 簡中廠牌沿用 GaelGunStore 既有的「贝雷塔」.",
+      "ch": "貝瑞塔M9A3手槍",
+      "cn": "贝雷塔M9A3手枪"
+    },
+    "ItemName|Base.P220": {
+      "action": "translate",
+      "signature": "6819697f462d0adc",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 SIG Sauer P220 Pistol, Brita 的 script 寫 Sig Sauer P220, 是同一把槍, 只差大小寫與種類字. 沿用現值.",
+      "ch": "西格紹爾P220手槍",
+      "cn": "西格绍尔P220手枪"
+    },
+    "ItemName|Base.P90Clip": {
+      "action": "translate",
+      "signature": "99dc008891d68b20",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 Magazine for FN P90 (50 rounds) (script 的 AmmoType 是 9mm), Brita 的 script 寫 5.7x28mm P90 Magazine, 都是 P90 專用彈匣, 是同一種物品. 雙方口徑寫法不同, 現值原本就沒寫口徑; Brita 的 script 原始檔不在本地下載中, 無法確認容量是否同為 50 發, 所以拿掉「(50 發)」, 改成對兩方都成立的「FN P90 彈匣」. 容量仍會顯示在物品資訊中.",
+      "ch": "FN P90 彈匣",
+      "cn": "FN P90 弹匣"
+    },
+    "ItemName|Base.RPK": {
+      "action": "translate",
+      "signature": "86cee368ceeda920",
+      "reason": "2026-10-03 裁決: Totally's Eastern Bloc 寫 RPK Light Machine Gun, GaelGunStore 寫 RPK Machine Gun, Rain's 兩個變體寫 RPK, 都是同一把 RPK, 只差種類字的詳略. 沿用現值.",
+      "ch": "RPK機槍",
+      "cn": "RPK轻型机枪"
+    },
+    "ItemName|Base.RPK16": {
+      "action": "translate",
+      "signature": "5f92db3c09e11f98",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 RPK-16 Machine Gun, Brita 的 script 寫 RPK-16, 是同一把槍, 只差有沒有寫種類. 沿用現值.",
+      "ch": "RPK-16機槍",
+      "cn": "RPK-16机枪"
+    },
+    "ItemName|Base.Striker": {
+      "action": "translate",
+      "signature": "6eaa255186ff07d6",
+      "reason": "2026-10-03 裁決: GaelGunStore 與其 Legacy 版寫 Armsel Striker Shotgun, Rain's 兩個變體寫 Armsel Striker, 是同一把槍, 只差有沒有寫種類. 沿用現值.",
+      "ch": "Armsel Striker霰彈槍",
+      "cn": "阿姆塞尔打击者霰弹枪"
+    },
+    "ItemName|Base.VSSK": {
+      "action": "translate",
+      "signature": "6c7fba4347144af7",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 VSSK Vykhlop Sniper Rifle, Brita 的 script 寫 VSSK Vykhlop, 是同一把槍, 只差有沒有寫種類. 沿用現值.",
+      "ch": "VSSK Vykhlop狙擊步槍",
+      "cn": "VSSK Vykhlop狙击步枪"
+    },
+    "ItemName|Base.WA2000": {
+      "action": "translate",
+      "signature": "72c43f5eda4a59b2",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 Walther WA 2000 Sniper Rifle, Brita 的 script 寫 Walther WA2000, 是同一把槍, 只差空格與種類字. 沿用現值.",
+      "ch": "瓦爾特WA 2000狙擊步槍",
+      "cn": "瓦尔特WA 2000狙击步枪"
+    },
+    "ItemName|Base.XM8": {
+      "action": "translate",
+      "signature": "80036b034c26fe13",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 Heckler & Koch XM8 Rifle, Brita 的 script 寫 H&K XM8, 是同一把槍, 只差廠牌全名與種類字. 沿用現值.",
+      "ch": "黑克勒-科赫XM8步槍",
+      "cn": "黑克勒-科赫XM8步枪"
+    },
+    "Tooltip|Tooltip_WBHM_AntiDiarrhealTablets": {
+      "action": "translate",
+      "signature": "fec95f73be228785",
+      "reason": "2026-10-03 裁決: 同一 workshop 項目 (3723942896) 的 TDDUPMarriageCompanion 與 TDDUPMedicalFramework 共用 WBHM 醫療系統, 是同一種藥品; Companion 是白話版, Framework 多了「診斷醫療模型」的系統說明. 現值照 Framework 翻, 改成照 Companion 的白話說法, 內容是 Framework 說明的子集, 對兩方都成立.",
+      "ch": "有助於在腸胃疾病期間減輕體液流失與絞痛.",
+      "cn": "有助于在肠胃疾病期间减轻体液流失和绞痛."
+    },
+    "Tooltip|Tooltip_WBHM_AntiNauseaTablets": {
+      "action": "translate",
+      "signature": "5239c84671a3aa22",
+      "reason": "2026-10-03 裁決: TDDUPMarriageCompanion 與 TDDUPMedicalFramework 是同一 WBHM 醫療系統的同一種藥品, Companion 是白話版, Framework 多了「診斷醫療模型」的說明. 改成照 Companion 的白話說法, 對兩方都成立.",
+      "ch": "有助於在腸胃疾病期間減輕噁心與嘔吐.",
+      "cn": "有助于在肠胃疾病期间减轻恶心和呕吐."
+    },
+    "Tooltip|Tooltip_WBHM_AntihistamineTablets": {
+      "action": "translate",
+      "signature": "d26606fe574e518c",
+      "reason": "2026-10-03 裁決: TDDUPMarriageCompanion 與 TDDUPMedicalFramework 是同一 WBHM 醫療系統的同一種藥品, Companion 寫 Helps reduce allergy symptoms, Framework 寫在醫療模型中減輕模擬的過敏發作症狀. 改成照 Companion 的白話說法, 對兩方都成立.",
+      "ch": "有助於減輕過敏症狀.",
+      "cn": "有助于减轻过敏症状."
+    },
+    "Tooltip|Tooltip_WBHM_ElectrolytePowder": {
+      "action": "translate",
+      "signature": "7cb1d35430705dc1",
+      "reason": "2026-10-03 裁決: TDDUPMarriageCompanion 與 TDDUPMedicalFramework 是同一 WBHM 醫療系統的同一種用品, 兩方都說用於脫水恢復與補充體液/電解質, Framework 多了「診斷醫療用品, 健康模型」的系統說明. 改成照 Companion 的白話說法, 對兩方都成立.",
+      "ch": "用於脫水恢復與補充體液的電解質粉.",
+      "cn": "用于脱水恢复和补充体液的电解质粉."
+    },
+    "Tooltip|Tooltip_WBHM_RecoveryCareKit": {
+      "action": "translate",
+      "signature": "c8e4d97c535c531d",
+      "reason": "2026-10-03 裁決: TDDUPMarriageCompanion 與 TDDUPMedicalFramework 是同一 WBHM 醫療系統的同一種用品, 只差 Framework 多寫 simulated ... states. 改成去掉「模擬狀態」的白話說法, 對兩方都成立.",
+      "ch": "用於短期恢復的綜合野外照護包.",
+      "cn": "用于短期恢复的综合野外护理包."
+    },
+    "Tooltip|Tooltip_WBHM_Sling": {
+      "action": "translate",
+      "signature": "a9a28adc49a41d5c",
+      "reason": "2026-10-03 裁決: TDDUPMarriageCompanion 與 TDDUPMedicalFramework 是同一 WBHM 醫療系統的同一種用品, Companion 的英文是 Framework 第一句, Framework 多一句「醫療模型可將手臂標記為暫時受限」. 只保留兩方共有的第一句, 對兩方都成立.",
+      "ch": "在短期恢復期間支撐受傷的手臂.",
+      "cn": "在短期恢复期间支撑受伤的手臂."
     }
   }
 }

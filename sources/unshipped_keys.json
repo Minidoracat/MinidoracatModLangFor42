@@ -1639,6 +1639,11 @@
    "as1_value": "当僵尸在此区域内时: 无动作, 将僵尸移出区域, 或将其从游戏中移除. 注意: 移除将包括玩家尸体! ",
    "owner_signature": "a8ae429ab3624524",
    "reason": "2026-10-02 #649 裁決：PhunZones 舊版說明的是核取方塊「取消勾選則殭屍不會在此區域生成」; PhunZones 2 本次改值後說明的是下拉選單: 區域內殭屍可無動作/移出/移除, 「生成」類選項只處理在此生成的殭屍 (遊蕩進來的不管, 但卸載後重新載入算生成), 跟隨此設定的土匪改為阻止生成, 移除會包含玩家屍體. 兩版控制項與語意不同, 照 2 代新英文寫會向舊版玩家描述不存在的選項, 兩版共通的寫法則只剩「設定殭屍」而沒用, 現值也已過時且漏譯. 抑制後 PhunZones 2 顯示 IG_UI.json 的最新英文. 已接受殘留: 3388867450/PhunZones 會顯示鍵名."
+  },
+  "ItemName.json|Base.YulinSwordS": {
+   "as1_value": "御林长刀刀带",
+   "owner_signature": "3c1c78226ab0f4ab",
+   "reason": "2026-10-03 裁決：同一件可穿戴的御林長刀攜行件 (BodyLocation cat:YulinSwordS), 但兩方對形制的說法互斥: 原作者 script 名「御林长刀鞘YulinSwordS」是刀鞘, 社群修正版 MFS_BladesmithSystem_fix 英文「Yulin Sword Sling」與其自帶繁中「御林長刀綁帶」是背帶. 「刀鞘」對修正版不成立, 「刀帶」對原版不成立, 找不到誠實的中性名稱. 抑制後: 只裝原版的玩家看到 script 名「御林长刀鞘YulinSwordS」; 修正版需搭配原版載入, 玩家看到修正版自帶的繁中／簡中或英文「Yulin Sword Sling」."
   }
  }
 }
