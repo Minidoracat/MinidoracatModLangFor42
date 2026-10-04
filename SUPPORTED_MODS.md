@@ -1353,7 +1353,7 @@
 | [Casualties Undead (Build 42)](https://steamcommunity.com/sharedfiles/filedetails/?id=3805748433) | — | — | `CasualtiesUndead` | ? | — | — |
 | [This Is Me - More Character Traits](https://steamcommunity.com/sharedfiles/filedetails/?id=3806020504) | — | — | `thisIsMe-Traits`, `thisIsMe-TraitsMP`, `thisIsMeTraits_TraitsAsSkills` | ? | — | — |
 | [末日镇尸录\|Tales of Taoist Exorcism〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3806373669) | 末日鎮屍錄 | 以道士身分在末日中修煉道術，使用桃木劍、八卦鏡、五雷令牌、萬魂幡等法器鎮屍驅邪，另有玄門法市、收鬼罈役鬼與殭屍王等首領。 | `TalesOfTaoistExorcism` | 247 | — | ⚠️ 簡中為作者原文（本包逐字沿用），本包只翻繁中。作者在 Lua 裡寫死了幾段簡體字：服用糯米缸時的「感染度」浮字、五雷令牌畫面上的「五雷敕令」、四個「生成飛僵／鬼新娘／白僵／黑僵（測試）」右鍵選項。這些不走翻譯表，任何翻譯包都補不了。 |
-| [Smart Animal Waste [B42+]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3808507911) | 智慧動物糞便處理 | 把木箱改造成回收箱，自動收集動物區域的糞便、餵給附近堆肥箱、用空麻袋裝好堆肥並送到指定貨架；羽毛也能轉成堆肥。 | `SmartAnimalWaste` | 502 | — | — |
+| [Smart Animal Waste [B42+]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3808507911) | 智慧動物糞便處理 | 把木箱改造成回收箱，自動收集動物區域的糞便、餵給附近堆肥箱、用空麻袋裝好堆肥並送到指定貨架；羽毛也能轉成堆肥。 | `SmartAnimalWaste` | 514 | — | — |
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 

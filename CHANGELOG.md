@@ -10,6 +10,22 @@
 
 - **95 張 MOD 地圖的地圖選單標題與說明改顯示繁中／簡中。** 開新遊戲選世界、選出生點時，地圖名稱與介紹不再是英文，例如 Mount Crow City 顯示「烏鴉山市 (原版)」、Greenport 顯示「肯塔基州, 綠港」。涵蓋小地圖支援清單上新收錄的 69 個地圖 MOD（77 張地圖：Atlanta、Coryerdon、Daisy County、Greenport、Kingsmouth North、Nellis Air Force Base、Vila Z、唐人街、銀杉谷等），另補已支援的 SecretZ 15 張據點、提基鎮、浣熊市與泰勒斯維爾。作者原本就附簡中的 12 個 MOD，簡中沿用作者原文、繁中依作者簡中翻譯。地圖英文名是佔位字（如 MyMap、空白）或遊戲讀不到的舊格式時，改用地圖本名。只翻地圖選單文字，這些 MOD 的物品等其他文字不在本次範圍。
   > 技術要點：own lane 新增 69 個目錄（`origin: own`；作者自附簡中者標 `cn_source: upstream`，CN 逐字照抄上游 `Translate/CN`）共 77 檔 147 鍵；已在名冊的 As1 衍生 MOD 共 18 張地圖 36 鍵落 `own_translations.json`；全數登記 `ch_review_state`。英文取自 map.info；map.info 寫 `See media/lua/shared/Translate/EN/<資料夾>/title.txt` 的 6 張（B42 不讀這種 B41 舊格式，英文玩家看到的是那串路徑），改取 `title.txt`／`description.txt` 內容。名冊登記後 `backfill-en` 補齊 EN 證據，69 個 MOD 的 EN 鍵與 As1 譯文零交集，不影響 split 歸屬。tracker 不抽 map.info，作者改地圖標題或說明不會開「可能過時」issue。`apply_translations.py` 的本體碰撞檢查與 `build_mod.own_anchor_drift` 的過時比對，對 `title`／`description` 改為只比同檔名（同 split、verify [12]）：舊寫法按裸鍵名比，前者擋下全部地圖鍵、後者把 36 鍵誤報成過時；`test_own_anchor_drift.py` 補情境（舊實作會失敗）。未收：Path of Zenith（上游 EN JSON 含未逸出的換行，`backfill-en` 拒收）、EchoCreek MilitaryBase 與 Atlanta Safe Zone（地圖資料夾名含非 ASCII 字元）。
+- **補齊 15 個 MOD 新增的繁簡中文，共 377 項。** Evolving Traits World（#686，新增「酗酒者」特質的戒斷 Moodle、輕／中／重度與沙盒機率設定，以及取代「沙發馬鈴薯」的「討厭健身房」特質，83 項）、Gore's SVU4 Core（#697，點火鎖芯、渦輪增壓器、中冷器等 12 種引擎零件與製作配方、車窗與輪胎配方、7 色汽車噴漆，81 項）、ClothesBox Redux（#683，迷彩服、背心、包款等服裝，78 項）、Knox Buildworks（#700，側欄分類、放大鏡預覽、規劃模式的物資與構件等介面，56 項）、Smart Animal Waste（#702，16 項）、Legendary Naginata（#693，12 項）、CD: Survivor Breed Pack（#699，大麥町犬與同伴加成，12 項）、Modern Firearms System Community Fix Patch（#701，BAR 與 ARX200 的彈匣等，10 項）、PhunZones 2（#696，8 項）、True Moozic（#694，5 項）、Vehicle Military Zones（#690，4 項）、The Best Lockpicking（#691，4 項）、Legendary Katana Wakizashi（#695，4 項）、[B42] Sandbox Options（#689，2 項）、[MT] Tactical Bags（#692，左右兩款武器槍套，2 項）。
+  > 技術要點：Smart Animal Waste 是 own 目錄（CN 寫 own 目錄、CH 寫 `sources/ch`），其餘全數落 `own_translations.json`；ch／cn 逐鍵對照 EN 直寫，新鍵皆以有效 CN 值登記 `ch_review_state`。5 路翻譯後經 Codex、Grok 2 路對抗複核，28 條修正提議採納 15 條（Knox 指南的 next game update 是下一輪遊戲迴圈而非版本更新、物資說明的 access 不是權限、MFS 的 BAR 沿用已出貨的「勃朗寧自動步槍」、ClothesBox 兩件迷彩長褲的簡中對齊官方「军用长裤 (沙漠迷彩)」格式等），退回 13 條（薙刀修復配方的 Sheet Metal 沿用同系列「金屬板」、新英文已拿掉 Beretta 的 ARX200 彈匣不補廠牌、簡中「大麦町犬」本為大陸通用名）。
+
+### Changed
+
+- **依上游英文改值重譯 93 項。** Gore's SVU4 Core 35 項沙盒設定說明（裝甲吸收比例、耐久與重量倍率、隨機裝甲生成機率等整段改寫）與 7 項物品（噴漆改為「汽車噴漆 (紅)」格式、車身包膜捲、工業流體小型儲槽改為只收汽油與淨水，#697）；Knox Buildworks 19 項介面與指南（#700）；Smart Animal Waste 16 項（#702）；Evolving Traits World 7 項（「沙發馬鈴薯」改為「討厭健身房」、健身狂說明補上伏地挺身與波比跳，#686）；ClothesBox Redux 4 項服裝名（#683）；Responsive Pivoting 2 項（#687）；Tripping Zombies 1 項（布偶物理需開啟「啟用物理受擊反應」、多人需搭配 Ragdolls in Multiplayer，#698）；PhunZones 2 1 項（#696）；Modern Firearms System Community Fix Patch 1 項彈鼓配方（#701）。
+  > 技術要點：own 層 22 鍵連 `en` 錨點更新（其中 ClothesBox 3 鍵上游只改拼字或大小寫，只更新錨點），As1 衍生層 58 鍵改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點），Smart Animal Waste 16 鍵改 own 目錄 CN＋`sources/ch`，皆登記 `ch_review_state`；`own_anchor_drift` 由 22 筆歸零。Smart Animal Waste 另有 36 鍵上游只改標點、大小寫或單複數，現行譯文不變。
+- **12 個與其他 MOD 共用的鍵完成裁決，其中 5 項改為對每個 MOD 都成立的譯名。** 隨身聽說明不再寫 Sony（各 MOD 刻意用 Sany／Zony 仿名，Talis New Music 則是另一段說明），改為「可攜式磁帶播放器」；車內音樂選項改為「磁帶播放器」（簡中原為「磁带录音机」）；Escape from Kentucky 與 MFS 社群修正版的 7.62 彈鼓口徑不同，改為「7.62mm 100 發彈鼓」；M240 彈鏈盒與其配方拿掉單方的 M240／NATO 標示。其餘 7 項確認沿用（褲管塞入／拉出、製作奶油、解除短接、連接揚聲器、插入磁帶／唱片）。
+  > 技術要點：`owner_conflict_decisions.json` 新增 12 筆 translate；改值的 5 鍵改 `sources/ch`＋`cn_overrides` 並登記 `ch_review_state`；`OWNER_CONFLICTS.md` 重生。
+
+### Removed
+
+- **移除 45 項上游已刪除、所有 MOD 都不再使用的原創翻譯。** Gore's SVU4 Core 31 項（舊的消音器與引擎零件配方、舊零件製作沙盒設定）、Evolving Traits World 9 項（沙發馬鈴薯的沙盒設定與說明）、Smart Animal Waste 4 項、[MT] Tactical Bags 1 項（武器槍套改為左右兩款）。沙發馬鈴薯的特質名稱仍被 Evolving Traits World 遷移用的舊特質引用，保留。
+  > 技術要點：以 `sources/en` 全庫與 tracker state 確認沒有任何 owner 仍定義這些鍵，並對 steamcmd 抓下的現行 Workshop 內容 grep Lua／script 確認無引用；`ch_review_state` 同步移除。保留的 `UI_trait_CouchPotato` 由 `42.19/media/scripts/ETW_Traits.txt` 的 `ETW:CouchPotato` 以 UIName／UIDescription 引用，理由記在該鍵 `_note`。As1 衍生層的上游刪除鍵（Gore's SVU4 Core 122、Legendary Naginata 6、Herbalist 1、Tactical Bags 1）依同步流程保留。
+
+其餘追蹤單無需另外變更：Herbalist（#685）把配方分類鍵改名為已出貨的 `IGUI_CraftingCategories_Herbalist`，其餘鍵只換了來源檔；Totally's NATO（#688）只把 9 頂貝雷帽搬到另一個 script 檔，英文不變。
 
 ## [42.21.0-1.39.0] - 2026-10-03
 

@@ -14111,18 +14111,18 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_ApocalypseProtectionPercent_tooltip": {
     "as1_value": "末日装甲吸收的来袭伤害百分比. 数值越高, 对车辆的保护越强.",
-    "reason": "無 EN 錨點; own「末日装甲所吸收的来袭伤害百分比. 数值越高对车辆的保护越强.」與另外三個 ProtectionPercent tooltip 完全同句式, as1 在「数值越高」後多插逗號, 採 own 可讓四條 tooltip 一致。",
-    "value": "末日装甲所吸收的来袭伤害百分比. 数值越高对车辆的保护越强."
+    "reason": "無 EN 錨點; own「末日装甲所吸收的来袭伤害百分比. 数值越高对车辆的保护越强.」與另外三個 ProtectionPercent tooltip 完全同句式, as1 在「数值越高」後多插逗號, 採 own 可讓四條 tooltip 一致。 ／2026-10-04 #683–#702：上游英文改為 'Share of each incoming hit absorbed by Apocalypse armor whil'，依新英文重譯。",
+    "value": "装甲仍有耐久时, 末日装甲对每次来袭攻击所吸收的伤害比例. 其余伤害会传到原版车辆部件. 若该次攻击摧毁装甲, 多出的伤害仍可能穿透. 100%% 代表完全吸收, 但仅限于装甲耗尽之前."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_ArmorDurabilityMultiplier_tooltip": {
     "as1_value": "装甲耐久和抗性的倍乘系数.",
-    "reason": "無 EN 錨點; own「将装甲耐久与抗性乘以此倍率.」是動詞句, 與本檔其餘五條 Multiplier tooltip 同句式, 也對得上未衝突鍵標題「装甲耐久倍率」; as1 的「倍乘系数」是名詞片語且自創術語。",
-    "value": "将装甲耐久与抗性乘以此倍率."
+    "reason": "無 EN 錨點; own「将装甲耐久与抗性乘以此倍率.」是動詞句, 與本檔其餘五條 Multiplier tooltip 同句式, 也對得上未衝突鍵標題「装甲耐久倍率」; as1 的「倍乘系数」是名詞片語且自創術語。 ／2026-10-04 #683–#702：上游英文改為 'Controls how quickly installed armor loses health when it ab'，依新英文重譯。",
+    "value": "控制已安装装甲在吸收伤害时损失耐久的速度. 1.0 = 正常, 0.5 = 装甲承受一半伤害 (更耐用), 2.0 = 装甲承受双倍伤害 (更快损耗). 此设置不会改变防护百分比."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_ArmorWeightMultiplier_tooltip": {
     "as1_value": "车辆加装装甲后新增质量的倍乘系数.",
-    "reason": "無 EN 錨點; own「将装甲为车辆增加的重量乘以此倍率.」沿用本檔 Multiplier tooltip 的「将…乘以此倍率」句式, as1 改寫成「新增质量的倍乘系数」還把「重量」換成物理學的「质量」, 與未衝突鍵「装甲重量倍率」對不上。",
-    "value": "将装甲为车辆增加的重量乘以此倍率."
+    "reason": "無 EN 錨點; own「将装甲为车辆增加的重量乘以此倍率.」沿用本檔 Multiplier tooltip 的「将…乘以此倍率」句式, as1 改寫成「新增质量的倍乘系数」還把「重量」換成物理學的「质量」, 與未衝突鍵「装甲重量倍率」對不上。 ／2026-10-04 #683–#702：上游英文改為 'Multiplies the extra vehicle mass added by installed SVU4 ar'，依新英文重譯。",
+    "value": "将已安装 SVU4 装甲额外增加的车辆重量乘以此倍率. 1.0 = 正常增加重量, 0.5 = 一半, 2.0 = 双倍. “启用装甲重量”关闭时无效."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_BlockAllSVU4ArmorOnKI5Vehicles": {
     "as1_value": "阻止在 KI5 车辆上安装 SVU4 装甲",
@@ -14131,28 +14131,28 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_BlockAllSVU4ArmorOnKI5Vehicles_tooltip": {
     "as1_value": "启用后, Gore's SVU4 不会在任何检测到的 KI5 / that DAMN Library 车辆上安装装甲. 请改用车辆自带的装甲系统.",
-    "reason": "無 EN 錨點; own「請改用該車輛原生的裝甲系統」用「原生」指 KI5 車輛自帶的系統較精確, as1 的「车辆自带」語意相同但 own 與同檔其他 tooltip 的書面語調一致。",
-    "value": "启用后 Gore's SVU4 不会在任何检测到的 KI5 / that DAMN Library 车辆上安装装甲. 请改用该车辆原生的装甲系统."
+    "reason": "無 EN 錨點; own「請改用該車輛原生的裝甲系統」用「原生」指 KI5 車輛自帶的系統較精確, as1 的「车辆自带」語意相同但 own 與同檔其他 tooltip 的書面語調一致。 ／2026-10-04 #683–#702：上游英文改為 'When enabled, SVU4 blocks new SVU4 armor installation on det'，依新英文重譯。",
+    "value": "启用后, SVU4 会禁止在检测到的 KI5 / that DAMN Library 车辆上新安装 SVU4 装甲, 以便改用该车辆原生的装甲系统."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_EnableAdminLogs_tooltip": {
     "as1_value": "将装甲安装、修理、拆除、被拒操作和燃油泄漏事件记录到服务器日志.",
-    "reason": "orchestrator 覆核改判：原判以「全形標點正規化」為由改用 new，但該值的全形字元只有頓號「、」，而頓號依 repo 既有規則刻意保留（CHANGELOG.md 標點正規化條目「頓號「、」與省略號「…」依既有規則保留」；scripts/reanchor_registries.py:34-36 的 STRIP 剝除域註解明寫「刻意不含頓號與省略號…動了就該重審」）。原 own 值在譯文品質上本已勝出，故直接採 own。",
-    "value": "将装甲安装、修复、拆卸、被拒动作与漏油事件记录至服务器日志."
+    "reason": "orchestrator 覆核改判：原判以「全形標點正規化」為由改用 new，但該值的全形字元只有頓號「、」，而頓號依 repo 既有規則刻意保留（CHANGELOG.md 標點正規化條目「頓號「、」與省略號「…」依既有規則保留」；scripts/reanchor_registries.py:34-36 的 STRIP 剝除域註解明寫「刻意不含頓號與省略號…動了就該重審」）。原 own 值在譯文品質上本已勝出，故直接採 own。 ／2026-10-04 #683–#702：上游英文改為 'Writes SVU4 armor installs, repairs, removals, rejected acti'，依新英文重譯。",
+    "value": "将 SVU4 装甲的安装、修复、拆卸、被拒动作与漏油事件写入服务器/管理员日志. 不会启用调试控制台的刷屏信息."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_EnableApocalypseArmorGrade_tooltip": {
     "as1_value": "允许玩家安装末日装甲. 已有的末日装甲仍可拆除或修理, 除非其他兼容性规则阻止.",
-    "reason": "無 EN 錨點; own「既有的末日装甲在未被其他兼容性规则阻挡时仍可拆卸或修复.」把條件子句前置, 與另外三條 Enable*ArmorGrade_tooltip 完全同句式, as1 用「除非…阻止」後置句且動詞換成拆除/修理, 會與 own 的 EnableStandardArmorGrade(未衝突鍵沿用同組動詞)分裂。",
-    "value": "允许玩家安装末日装甲. 既有的末日装甲在未被其他兼容性规则阻挡时仍可拆卸或修复."
+    "reason": "無 EN 錨點; own「既有的末日装甲在未被其他兼容性规则阻挡时仍可拆卸或修复.」把條件子句前置, 與另外三條 Enable*ArmorGrade_tooltip 完全同句式, as1 用「除非…阻止」後置句且動詞換成拆除/修理, 會與 own 的 EnableStandardArmorGrade(未衝突鍵沿用同組動詞)分裂。 ／2026-10-04 #683–#702：上游英文改為 'Allows new Apocalypse armor installations. Existing Apocalyp'，依新英文重譯。",
+    "value": "允许新安装末日装甲. 既有的末日装甲在未被其他兼容性规则阻挡该操作时仍可拆卸与修复."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_EnableArmorWeight_tooltip": {
     "as1_value": "启用安装装甲后增加的车辆重量.",
-    "reason": "無 EN 錨點; own「启用已安装装甲为车辆增加的重量.」明確指出是「已安裝」裝甲才計重, as1「启用安装装甲后增加的车辆重量」語意較含糊, 且 own 與 ArmorWeightMultiplier_tooltip 用同一組措辭。",
-    "value": "启用已安装装甲为车辆增加的重量."
+    "reason": "無 EN 錨點; own「启用已安装装甲为车辆增加的重量.」明確指出是「已安裝」裝甲才計重, as1「启用安装装甲后增加的车辆重量」語意較含糊, 且 own 與 ArmorWeightMultiplier_tooltip 用同一組措辭。 ／2026-10-04 #683–#702：上游英文改為 'When enabled, installed SVU4 armor adds vehicle mass using t'，依新英文重譯。",
+    "value": "启用后, 已安装的 SVU4 装甲会按“已安装装甲重量倍率”增加车辆重量. 禁用时, SVU4 装甲不会额外增加车辆重量."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_EnableRandomSurvivorArmor_tooltip": {
     "as1_value": "允许旧世界车辆在生成时随机附带已安装的磨损装甲板. 多人游戏中以服务器为准.",
-    "reason": "無 EN 錨點; own「多人游戏中由服务器主控.」明確指出主控方, as1「以服务器为准」較弱; 其餘語意相同, 依偏好 own 原則取 own。",
-    "value": "允许旧世界车辆生成时就装有随机的磨损装甲板. 多人游戏中由服务器主控."
+    "reason": "無 EN 錨點; own「多人游戏中由服务器主控.」明確指出主控方, as1「以服务器为准」較弱; 其餘語意相同, 依偏好 own 原則取 own。 ／2026-10-04 #683–#702：上游英文改為 'Allows eligible world-spawned vehicles to receive random wor'，依新英文重譯。",
+    "value": "允许符合条件的世界生成车辆获得随机的磨损 SVU4 装甲板. 不会为每辆车都加装装甲. 多人游戏中由服务器主控."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_EnableReinforcedArmorGrade": {
     "as1_value": "启用强化装甲",
@@ -14161,8 +14161,8 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_EnableReinforcedArmorGrade_tooltip": {
     "as1_value": "允许玩家安装强化装甲. 已有的强化装甲仍可拆除或修理, 除非其他兼容性规则阻止.",
-    "reason": "無 EN 錨點; 與同組 Enable*ArmorGrade_tooltip 同句式, 且沿用 own 全檔統一的等級名「强化型装甲」, as1 的「强化装甲」會與本檔其他強化型鍵不一致。",
-    "value": "允许玩家安装强化型装甲. 既有的强化型装甲在未被其他兼容性规则阻挡时仍可拆卸或修复."
+    "reason": "無 EN 錨點; 與同組 Enable*ArmorGrade_tooltip 同句式, 且沿用 own 全檔統一的等級名「强化型装甲」, as1 的「强化装甲」會與本檔其他強化型鍵不一致。 ／2026-10-04 #683–#702：上游英文改為 'Allows new Reinforced armor installations. Existing Reinforc'，依新英文重譯。",
+    "value": "允许新安装强化型装甲. 既有的强化型装甲在未被其他兼容性规则阻挡该操作时仍可拆卸与修复."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_EnableScrapArmorGrade": {
     "as1_value": "启用废铁装甲",
@@ -14171,8 +14171,8 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_EnableScrapArmorGrade_tooltip": {
     "as1_value": "允许玩家安装废铁装甲. 已有的废铁装甲仍可拆除或修理, 除非其他兼容性规则阻止.",
-    "reason": "無 EN 錨點; 沿用 own 全檔統一的「废料装甲」並與其他三條 Enable*ArmorGrade_tooltip 同句式, as1 的「废铁」在同檔會造成兩套等級名。",
-    "value": "允许玩家安装废料装甲. 既有的废料装甲在未被其他兼容性规则阻挡时仍可拆卸或修复."
+    "reason": "無 EN 錨點; 沿用 own 全檔統一的「废料装甲」並與其他三條 Enable*ArmorGrade_tooltip 同句式, as1 的「废铁」在同檔會造成兩套等級名。 ／2026-10-04 #683–#702：上游英文改為 'Allows new Scrap armor installations. Existing Scrap armor r'，依新英文重譯。",
+    "value": "允许新安装废料装甲. 既有的废料装甲在未被其他兼容性规则阻挡该操作时仍可拆卸与修复."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_EnableSkillRequirements": {
     "as1_value": "启用技能要求",
@@ -14181,13 +14181,13 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_EnableSkillRequirements_tooltip": {
     "as1_value": "启用装甲等级对应的金属焊接和机械技能要求.",
-    "reason": "無 EN 錨點但術語可查: 官方 IGUI_perks_Mechanics =「技工」、IGUI_perks_MetalWelding =「金工」, own 的「金工与技工技能需求」用的正是官方技能名; as1 的「金属焊接和机械技能」兩個技能名都不是官方用字, 且與本 mod Tooltip.json 已出貨的「需要技工 6、金工 4」衝突。",
-    "value": "启用各装甲等级的金工与技工技能需求."
+    "reason": "無 EN 錨點但術語可查: 官方 IGUI_perks_Mechanics =「技工」、IGUI_perks_MetalWelding =「金工」, own 的「金工与技工技能需求」用的正是官方技能名; as1 的「金属焊接和机械技能」兩個技能名都不是官方用字, 且與本 mod Tooltip.json 已出貨的「需要技工 6、金工 4」衝突。 ／2026-10-04 #683–#702：上游英文改為 'When enabled, SVU4 armor installation and repair enforce the'，依新英文重譯。",
+    "value": "启用后, SVU4 装甲的安装与修复会执行其设定的金工与技工技能需求. 关闭此选项不会移除材料成本."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_EnableStandardArmorGrade_tooltip": {
     "as1_value": "允许玩家安装标准装甲. 已有的标准装甲仍可拆除或修理, 除非其他兼容性规则阻止.",
-    "reason": "無 EN 錨點; own 與另外三條 Enable*ArmorGrade_tooltip 同句式(條件子句前置、用拆卸/修复), 且對應未衝突鍵標題「启用标准装甲」; as1 改用拆除/修理會使四條 tooltip 動詞不一。",
-    "value": "允许玩家安装标准装甲. 既有的标准装甲在未被其他兼容性规则阻挡时仍可拆卸或修复."
+    "reason": "無 EN 錨點; own 與另外三條 Enable*ArmorGrade_tooltip 同句式(條件子句前置、用拆卸/修复), 且對應未衝突鍵標題「启用标准装甲」; as1 改用拆除/修理會使四條 tooltip 動詞不一。 ／2026-10-04 #683–#702：上游英文改為 'Allows new Standard armor installations. Existing Standard a'，依新英文重譯。",
+    "value": "允许新安装标准装甲. 既有的标准装甲在未被其他兼容性规则阻挡该操作时仍可拆卸与修复."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_GasLeakRateMultiplier": {
     "as1_value": "燃油泄漏速率倍率",
@@ -14196,8 +14196,8 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_GasLeakRateMultiplier_tooltip": {
     "as1_value": "油箱装甲被击穿后燃油损失的倍乘系数. 设为 0 可禁用燃油泄漏.",
-    "reason": "無 EN 錨點; own「将油箱装甲被刺穿后的燃油流失速率乘以此倍率. 设为0可禁用漏油.」沿用本檔 Multiplier tooltip 的動詞句式與「刺穿」(對應 GasTankPunctureDamage「油箱刺穿伤害」), as1 用「击穿」「倍乘系数」與同檔其他鍵不一致。",
-    "value": "将油箱装甲被刺穿后的燃油流失速率乘以此倍率. 设为0可禁用漏油."
+    "reason": "無 EN 錨點; own「将油箱装甲被刺穿后的燃油流失速率乘以此倍率. 设为0可禁用漏油.」沿用本檔 Multiplier tooltip 的動詞句式與「刺穿」(對應 GasTankPunctureDamage「油箱刺穿伤害」), as1 用「击穿」「倍乘系数」與同檔其他鍵不一致。 ／2026-10-04 #683–#702：上游英文改為 'Multiplies fuel loss from a punctured gas tank after its arm'，依新英文重譯。",
+    "value": "将油箱装甲被摧毁后、油箱被刺穿所造成的燃油流失乘以此倍率. 1.0 = 正常漏油速率, 0.5 = 一半, 2.0 = 双倍, 0 = 禁用漏油."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_GasTankLeakClearCondition": {
     "as1_value": "油箱泄漏清除条件",
@@ -14206,8 +14206,8 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_GasTankLeakClearCondition_tooltip": {
     "as1_value": "修复原版油箱后清除泄漏所需的油箱状态.",
-    "reason": "無 EN 錨點; own「修复原版油箱后解除漏油所需的油箱耐久度.」把 condition 正確讀成耐久值, 與標題一致; as1 的「所需的油箱状态」承襲同一個 Condition 誤讀且語意不清。",
-    "value": "修复原版油箱后解除漏油所需的油箱耐久度."
+    "reason": "無 EN 錨點; own「修复原版油箱后解除漏油所需的油箱耐久度.」把 condition 正確讀成耐久值, 與標題一致; as1 的「所需的油箱状态」承襲同一個 Condition 誤讀且語意不清。 ／2026-10-04 #683–#702：上游英文改為 'Vanilla Gas Tank condition required before an active SVU4 fu'，依新英文重譯。",
+    "value": "解除正在发生的 SVU4 漏油前, 原版油箱所需达到的耐久度. 例如: 90 表示须将油箱修复至至少 90 耐久度."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_GasTankPunctureDamage": {
     "as1_value": "油箱击穿伤害",
@@ -14216,13 +14216,13 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_GasTankPunctureDamage_tooltip": {
     "as1_value": "油箱装甲被摧毁时对原版油箱造成的状态伤害.",
-    "reason": "無 EN 錨點; own「造成的耐久伤害」與本檔其餘鍵一律用「耐久」(ArmorDurabilityMultiplier、RandomArmorMaxHealth「最高耐久」)一致, as1 的「状态伤害」在本檔是孤例。",
-    "value": "油箱装甲被摧毁时对原版油箱造成的耐久伤害."
+    "reason": "無 EN 錨點; own「造成的耐久伤害」與本檔其餘鍵一律用「耐久」(ArmorDurabilityMultiplier、RandomArmorMaxHealth「最高耐久」)一致, as1 的「状态伤害」在本檔是孤例。 ／2026-10-04 #683–#702：上游英文改為 'Condition damage applied to the vanilla Gas Tank at the mome'，依新英文重譯。",
+    "value": "油箱装甲被摧毁的瞬间对原版油箱造成的耐久伤害. 0 = 无直接刺穿伤害; 100 = 最多 100 点耐久."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_MaterialCostMultiplier_tooltip": {
     "as1_value": "装甲制作和修理成本的倍乘系数.",
-    "reason": "無 EN 錨點; own「将装甲制作与修复成本乘以此倍率.」沿用本檔六條 Multiplier tooltip 的統一句式與「修复」動詞, as1 的「倍乘系数」名詞句加「修理」與同檔不一致。",
-    "value": "将装甲制作与修复成本乘以此倍率."
+    "reason": "無 EN 錨點; own「将装甲制作与修复成本乘以此倍率.」沿用本檔六條 Multiplier tooltip 的統一句式與「修复」動詞, as1 的「倍乘系数」名詞句加「修理」與同檔不一致。 ／2026-10-04 #683–#702：上游英文改為 'Multiplies materials used by SVU4 armor installation and rep'，依新英文重譯。",
+    "value": "将 SVU4 装甲安装与修复所用的材料乘以此倍率. 1.0 = 正常成本, 0.5 = 一半成本, 2.0 = 双倍成本. 最终物品数量由装甲配方系统取整."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_MaxQueuedActions": {
     "as1_value": "最大排队装甲操作数",
@@ -14246,8 +14246,8 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_MaxQueuedActions_tooltip": {
     "as1_value": "限制玩家从一次批量按钮按下可排队的装甲操作数量. 适用于批量安装、批量修理和批量拆除. 单个操作不受影响.",
-    "reason": "orchestrator 覆核改判：原判以「全形標點正規化」為由改用 new，但該值的全形字元只有頓號「、」，而頓號依 repo 既有規則刻意保留（CHANGELOG.md 標點正規化條目「頓號「、」與省略號「…」依既有規則保留」；scripts/reanchor_registries.py:34-36 的 STRIP 剝除域註解明寫「刻意不含頓號與省略號…動了就該重審」）。原 own 值在譯文品質上本已勝出，故直接採 own。",
-    "value": "限制玩家按一次批量按钮可排入的装甲动作数量. 适用于批量安装、批量修复与批量拆卸. 单件动作不受影响."
+    "reason": "orchestrator 覆核改判：原判以「全形標點正規化」為由改用 new，但該值的全形字元只有頓號「、」，而頓號依 repo 既有規則刻意保留（CHANGELOG.md 標點正規化條目「頓號「、」與省略號「…」依既有規則保留」；scripts/reanchor_registries.py:34-36 的 STRIP 剝除域註解明寫「刻意不含頓號與省略號…動了就該重審」）。原 own 值在譯文品質上本已勝出，故直接採 own。 ／2026-10-04 #683–#702：上游英文改為 'Maximum number of armor actions queued by one batch command.'，依新英文重譯。",
+    "value": "单次批量指令可排入队列的装甲动作数量上限. 适用于批量安装、修复与拆卸. 不会限制普通的单件动作."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_MultiInstallMode": {
     "as1_value": "批量安装模式",
@@ -14271,8 +14271,8 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_MultiInstallMode_tooltip": {
     "as1_value": "控制玩家如何排队安装装甲. 仅限单个安装禁用批量安装. 单等级允许批量安装但在更换等级时清除选择. 完全批量允许同一批次中安装混合等级.",
-    "reason": "無 EN 錨點; own 三句分別對上 option1/2/3 的原字串(仅单件安装、单一等级、完全多重安装), as1 的「仅限单个安装/单等级/完全批量」與任一組 option 值都對不齊。",
-    "value": "控制玩家排入装甲安装队列的方式. 仅单件安装会禁用批量安装. 单一等级允许批量安装但切换等级时会清除已选项目. 完全多重安装允许同一批中混用不同等级."
+    "reason": "無 EN 錨點; own 三句分別對上 option1/2/3 的原字串(仅单件安装、单一等级、完全多重安装), as1 的「仅限单个安装/单等级/完全批量」與任一組 option 值都對不齊。 ／2026-10-04 #683–#702：上游英文改為 'Controls batch armor installation only. Single install disab'，依新英文重譯。",
+    "value": "仅控制批量装甲安装. 仅单件安装会禁用批量安装. 单一等级批量允许一次安装同一装甲等级的多块装甲板. 完全多重安装允许在同一个排入队列的批次中混用不同装甲等级."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_RandomArmorApocalypseChance": {
     "as1_value": "随机末日装甲概率 %%",
@@ -14281,8 +14281,8 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_RandomArmorApocalypseChance_tooltip": {
     "as1_value": "每次车辆/面板掷骰可生成磨损末日装甲的概率. 保持较低数值以限制稀有幸存者改装.",
-    "reason": "無 EN 錨點; own 第二句「保持较低数值可让幸存者改装车更稀有.」語意通順, as1 的「保持较低数值以限制稀有幸存者改装」把修飾語掛錯, 讀成「限制稀有的改裝」語意反了, 屬實質缺陷。",
-    "value": "每次车辆/装甲板判定生成磨损末日装甲的几率. 保持较低数值可让幸存者改装车更稀有."
+    "reason": "無 EN 錨點; own 第二句「保持较低数值可让幸存者改装车更稀有.」語意通順, as1 的「保持较低数值以限制稀有幸存者改装」把修飾語掛錯, 讀成「限制稀有的改裝」語意反了, 屬實質缺陷。 ／2026-10-04 #683–#702：上游英文改為 'Chance used when rolling random worn Apocalypse armor for el'，依新英文重譯。",
+    "value": "为符合条件的幸存者车辆判定随机磨损末日装甲时所使用的几率. 这是每次判定时该等级的几率, 而非保证所有车辆中的固定比例."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_RandomArmorMaxHealth": {
     "as1_value": "随机装甲最高耐久 %%",
@@ -14291,8 +14291,8 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_RandomArmorMaxHealth_tooltip": {
     "as1_value": "随机生成的幸存者装甲板的最高耐久.",
-    "reason": "無 EN 錨點; own「随机生成的幸存者装甲板最高耐久.」與未衝突鍵標題「随机装甲最高耐久%%」同構, as1 只多插一個「的」無實質差異, 依偏好 own 原則取 own。",
-    "value": "随机生成的幸存者装甲板最高耐久."
+    "reason": "無 EN 錨點; own「随机生成的幸存者装甲板最高耐久.」與未衝突鍵標題「随机装甲最高耐久%%」同構, as1 只多插一個「的」無實質差異, 依偏好 own 原則取 own。 ／2026-10-04 #683–#702：上游英文改為 'Maximum starting health percentage for a randomly spawned wo'，依新英文重譯。",
+    "value": "随机生成的磨损装甲板初始耐久的最高百分比. 若此值低于“随机装甲最低耐久”, SVU4 会自动对调两个数值."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_RandomArmorMaxPanels": {
     "as1_value": "每车最大随机装甲板数量",
@@ -14301,8 +14301,8 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_RandomArmorMaxPanels_tooltip": {
     "as1_value": "每辆车通过随机幸存者装甲生成可获得的最大磨损装甲板数量.",
-    "reason": "無 EN 錨點; own「一辆车可从随机幸存者装甲生成获得的磨损装甲板数量上限.」與標題的「数量上限」呼應, as1 用「最大…数量」與 own 標題對不上。",
-    "value": "一辆车可从随机幸存者装甲生成获得的磨损装甲板数量上限."
+    "reason": "無 EN 錨點; own「一辆车可从随机幸存者装甲生成获得的磨损装甲板数量上限.」與標題的「数量上限」呼應, as1 用「最大…数量」與 own 標題對不上。 ／2026-10-04 #683–#702：上游英文改為 'Maximum number of random worn armor panels that an eligible '，依新英文重譯。",
+    "value": "符合条件的幸存者车辆可获得的随机磨损装甲板数量上限. 这是上限值, 并非保证生成的装甲板数量."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_RandomArmorMinHealth": {
     "as1_value": "随机装甲最低耐久 %%",
@@ -14311,8 +14311,8 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_RandomArmorMinHealth_tooltip": {
     "as1_value": "随机生成的幸存者装甲板的最低耐久.",
-    "reason": "無 EN 錨點; own「随机生成的幸存者装甲板最低耐久.」與 MaxHealth tooltip 對稱且對上未衝突鍵標題「随机装甲最低耐久%%」, as1 差別僅一個「的」, 取 own 保持成對一致。",
-    "value": "随机生成的幸存者装甲板最低耐久."
+    "reason": "無 EN 錨點; own「随机生成的幸存者装甲板最低耐久.」與 MaxHealth tooltip 對稱且對上未衝突鍵標題「随机装甲最低耐久%%」, as1 差別僅一個「的」, 取 own 保持成對一致。 ／2026-10-04 #683–#702：上游英文改為 'Minimum starting health percentage for a randomly spawned wo'，依新英文重譯。",
+    "value": "随机生成的磨损装甲板初始耐久的最低百分比. 若此值高于“随机装甲最高耐久”, SVU4 会自动对调两个数值."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_RandomArmorReinforcedChance": {
     "as1_value": "随机强化装甲概率 %%",
@@ -14321,8 +14321,8 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_RandomArmorReinforcedChance_tooltip": {
     "as1_value": "每次车辆/面板掷骰可生成磨损强化装甲的概率.",
-    "reason": "無 EN 錨點; own「每次车辆/装甲板判定生成磨损强化型装甲的几率.」與同組另外三條 Chance tooltip 同句式, as1 的「每次车辆/面板掷骰」把 panel 譯成「面板」(UI 面板)而非裝甲板, 屬語意錯誤。",
-    "value": "每次车辆/装甲板判定生成磨损强化型装甲的几率."
+    "reason": "無 EN 錨點; own「每次车辆/装甲板判定生成磨损强化型装甲的几率.」與同組另外三條 Chance tooltip 同句式, as1 的「每次车辆/面板掷骰」把 panel 譯成「面板」(UI 面板)而非裝甲板, 屬語意錯誤。 ／2026-10-04 #683–#702：上游英文改為 'Chance used when rolling random worn Reinforced armor for el'，依新英文重譯。",
+    "value": "为符合条件的幸存者车辆判定随机磨损强化型装甲时所使用的几率. 这是每次判定时该等级的几率, 而非保证所有车辆中的固定比例."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_RandomArmorScrapChance": {
     "as1_value": "随机废铁装甲概率 %%",
@@ -14331,8 +14331,8 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_RandomArmorScrapChance_tooltip": {
     "as1_value": "每次车辆/面板掷骰可生成磨损废铁装甲的概率. 废铁通常应最为常见.",
-    "reason": "無 EN 錨點; own 沿用「废料」等級名且「装甲板」正確, as1 除了改成「废铁」外還把 panel 譯成「面板」, 在裝甲板語境是錯譯。",
-    "value": "每次车辆/装甲板判定生成磨损废料装甲的几率. 废料通常应为最常见的等级."
+    "reason": "無 EN 錨點; own 沿用「废料」等級名且「装甲板」正確, as1 除了改成「废铁」外還把 panel 譯成「面板」, 在裝甲板語境是錯譯。 ／2026-10-04 #683–#702：上游英文改為 'Chance used when rolling random worn Scrap armor for eligibl'，依新英文重譯。",
+    "value": "为符合条件的幸存者车辆判定随机磨损废料装甲时所使用的几率. 这是每次判定时该等级的几率, 而非保证所有车辆中的固定比例."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_RandomArmorStandardChance": {
     "as1_value": "随机标准装甲概率 %%",
@@ -14341,8 +14341,8 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_RandomArmorStandardChance_tooltip": {
     "as1_value": "每次车辆/面板掷骰可生成磨损标准装甲的概率.",
-    "reason": "無 EN 錨點; own「每次车辆/装甲板判定生成磨损标准装甲的几率.」與同組三條 tooltip 同句式, as1 的「面板掷骰」把 armor panel 誤譯為 UI 面板。",
-    "value": "每次车辆/装甲板判定生成磨损标准装甲的几率."
+    "reason": "無 EN 錨點; own「每次车辆/装甲板判定生成磨损标准装甲的几率.」與同組三條 tooltip 同句式, as1 的「面板掷骰」把 armor panel 誤譯為 UI 面板。 ／2026-10-04 #683–#702：上游英文改為 'Chance used when rolling random worn Standard armor for elig'，依新英文重譯。",
+    "value": "为符合条件的幸存者车辆判定随机磨损标准装甲时所使用的几率. 这是每次判定时该等级的几率, 而非保证所有车辆中的固定比例."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_ReinforcedProtectionPercent": {
     "as1_value": "强化装甲保护 %%",
@@ -14351,8 +14351,8 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_ReinforcedProtectionPercent_tooltip": {
     "as1_value": "强化装甲吸收的来袭伤害百分比. 数值越高, 对车辆的保护越强.",
-    "reason": "無 EN 錨點; own 與另外三條 ProtectionPercent tooltip 同句式並沿用「强化型装甲」, as1 除等級名不同外還在「数值越高」後插逗號, 與同組三條不一致。",
-    "value": "强化型装甲所吸收的来袭伤害百分比. 数值越高对车辆的保护越强."
+    "reason": "無 EN 錨點; own 與另外三條 ProtectionPercent tooltip 同句式並沿用「强化型装甲」, as1 除等級名不同外還在「数值越高」後插逗號, 與同組三條不一致。 ／2026-10-04 #683–#702：上游英文改為 'Share of each incoming hit absorbed by Reinforced armor whil'，依新英文重譯。",
+    "value": "装甲仍有耐久时, 强化型装甲对每次来袭攻击所吸收的伤害比例. 其余伤害会传到原版车辆部件. 若该次攻击摧毁装甲, 多出的伤害仍可能穿透. 100%% 代表完全吸收, 但仅限于装甲耗尽之前."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_ScrapProtectionPercent": {
     "as1_value": "废铁装甲保护 %%",
@@ -14361,18 +14361,18 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_ScrapProtectionPercent_tooltip": {
     "as1_value": "废铁装甲吸收的来袭伤害百分比. 数值越高, 对车辆的保护越强.",
-    "reason": "無 EN 錨點; own 與同組三條 ProtectionPercent tooltip 同句式並用「废料装甲」, as1 的「废铁」會讓同檔出現兩套等級名。",
-    "value": "废料装甲所吸收的来袭伤害百分比. 数值越高对车辆的保护越强."
+    "reason": "無 EN 錨點; own 與同組三條 ProtectionPercent tooltip 同句式並用「废料装甲」, as1 的「废铁」會讓同檔出現兩套等級名。 ／2026-10-04 #683–#702：上游英文改為 'Share of each incoming hit absorbed by Scrap armor while arm'，依新英文重譯。",
+    "value": "装甲仍有耐久时, 废料装甲对每次来袭攻击所吸收的伤害比例. 其余伤害会传到原版车辆部件. 若该次攻击摧毁装甲, 多出的伤害仍可能穿透. 100%% 代表完全吸收, 但仅限于装甲耗尽之前."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_SoundRadiusMultiplier": {
     "as1_value": "声音半径倍率",
-    "reason": "無 EN 錨點; 這裡的 radius 指焊接噪音的傳播範圍, own「声音范围倍率」與自身 tooltip「传播距离」呼應, as1 的「声音半径」是幾何直譯, 玩家設定介面上不自然。",
-    "value": "声音范围倍率"
+    "reason": "無 EN 錨點; 這裡的 radius 指焊接噪音的傳播範圍, own「声音范围倍率」與自身 tooltip「传播距离」呼應, as1 的「声音半径」是幾何直譯, 玩家設定介面上不自然。 ／2026-10-04 #683–#702：上游英文改為 'Armor Work Noise Radius Multiplier'，依新英文重譯。",
+    "value": "装甲作业噪音范围倍率"
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_SoundRadiusMultiplier_tooltip": {
     "as1_value": "焊接噪音传播距离的倍乘系数.",
-    "reason": "無 EN 錨點; own「将焊接噪音的传播距离乘以此倍率.」沿用本檔六條 Multiplier tooltip 的統一動詞句式, as1 的「倍乘系数」名詞句與同檔其餘鍵不一致。",
-    "value": "将焊接噪音的传播距离乘以此倍率."
+    "reason": "無 EN 錨點; own「将焊接噪音的传播距离乘以此倍率.」沿用本檔六條 Multiplier tooltip 的統一動詞句式, as1 的「倍乘系数」名詞句與同檔其餘鍵不一致。 ／2026-10-04 #683–#702：上游英文改為 'Multiplies the radius of noise created by SVU4 armor work. 1'，依新英文重譯。",
+    "value": "将 SVU4 装甲作业产生的噪音范围乘以此倍率. 1.0 = 正常范围, 0 = 静音, 2.0 = 两倍噪音范围."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_StandardProtectionPercent": {
     "as1_value": "标准装甲保护 %%",
@@ -14381,13 +14381,13 @@
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_StandardProtectionPercent_tooltip": {
     "as1_value": "标准装甲吸收的来袭伤害百分比. 数值越高, 对车辆的保护越强.",
-    "reason": "無 EN 錨點; own 與同組三條 ProtectionPercent tooltip 逐字同句式, as1 在「数值越高」後插逗號使四條不齊。",
-    "value": "标准装甲所吸收的来袭伤害百分比. 数值越高对车辆的保护越强."
+    "reason": "無 EN 錨點; own 與同組三條 ProtectionPercent tooltip 逐字同句式, as1 在「数值越高」後插逗號使四條不齊。 ／2026-10-04 #683–#702：上游英文改為 'Share of each incoming hit absorbed by Standard armor while '，依新英文重譯。",
+    "value": "装甲仍有耐久时, 标准装甲对每次来袭攻击所吸收的伤害比例. 其余伤害会传到原版车辆部件. 若该次攻击摧毁装甲, 多出的伤害仍可能穿透. 100%% 代表完全吸收, 但仅限于装甲耗尽之前."
   },
   "Sandbox.json|Sandbox_GoresSVU4Core_XPRewardMultiplier_tooltip": {
     "as1_value": "金属焊接和机械经验奖励的倍乘系数.",
-    "reason": "無 EN 錨點但術語可查: 官方 IGUI_perks_MetalWelding =「金工」、IGUI_perks_Mechanics =「技工」, own 的「将金工与技工经验奖励乘以此倍率.」用官方技能名且沿用本檔 Multiplier 句式; as1 的「金属焊接和机械经验奖励」兩個技能名都不是官方用字。",
-    "value": "将金工与技工经验奖励乘以此倍率."
+    "reason": "無 EN 錨點但術語可查: 官方 IGUI_perks_MetalWelding =「金工」、IGUI_perks_Mechanics =「技工」, own 的「将金工与技工经验奖励乘以此倍率.」用官方技能名且沿用本檔 Multiplier 句式; as1 的「金属焊接和机械经验奖励」兩個技能名都不是官方用字。 ／2026-10-04 #683–#702：上游英文改為 'Multiplies MetalWelding and Mechanics XP awarded by SVU4 arm'，依新英文重譯。",
+    "value": "将 SVU4 装甲动作给予的金工与技工经验乘以此倍率. 1.0 = 正常经验, 0 = 不获得 SVU4 装甲经验, 2.0 = 双倍经验."
   },
   "Sandbox.json|Sandbox_GydeTraitMags_NegToPos_tooltip": {
     "as1_value": "如果角色初始拥有某特质的负面版本, 则允许获得对应的正面版本 (例如: 周日司机 → 超速狂魔).",
@@ -21470,8 +21470,8 @@
     "value": "久经磨练的幸存者. <br>擅长防守周界, 抵御僵尸与活人的威胁."
   },
   "UI.json|UI_trait_GymRatDesc": {
-    "value": "你花了很多时间在健身房锻炼肌肉.<br>当前等级进度介于 5%% 到 95%% 之间时, 锻炼获得的体格与力量经验值翻倍, 且锻炼疲劳的积累默认减半.",
-    "reason": "2026-09-27 #600 上游改文：經驗值加倍限定於目前等級進度 5%–95% 之間；#321 已補的雙倍經驗與鍛鍊疲勞減半一併保留。 ｜#321 上游 new EN 新增雙倍 Fitness/Strength XP 與鍛鍊疲勞減半機制；舊 As1 中文只譯第一句，必須同步補齊。",
+    "value": "你花了很多时间在健身房锻炼肌肉.<br>当前等级进度介于 5%% 到 95%% 之间时, 锻炼 (俯卧撑、波比跳等) 获得的体格与力量经验值翻倍, 且锻炼疲劳的积累默认减半.",
+    "reason": "2026-09-27 #600 上游改文：經驗值加倍限定於目前等級進度 5%–95% 之間；#321 已補的雙倍經驗與鍛鍊疲勞減半一併保留。 ｜#321 上游 new EN 新增雙倍 Fitness/Strength XP 與鍛鍊疲勞減半機制；舊 As1 中文只譯第一句，必須同步補齊。 ／2026-10-04 #683–#702：上游英文改為 'You spent a lot of time at the gym getting swole.<br>Exercis'，依新英文重譯。",
     "as1_value": "花了很多时间在健身房锻炼肌肉"
   },
   "UI.json|UI_trait_HCB_ApiphobiaDesc": {
@@ -56974,5 +56974,160 @@
     "as1_value": "《寓言杀手》第21卷(小)",
     "value": "《寓言杀手》第21卷",
     "reason": "2026-10-03 #662：拿掉 (大)／(小)。_l／_s 是同一冊的平放／立放擺放變體（物品右鍵選單切換），上游英文與作者簡中都不區分。"
+  },
+  "Sandbox.json|Sandbox_GoresSVU4Core_XPRewardMultiplier": {
+    "as1_value": "经验奖励倍率",
+    "value": "装甲经验奖励倍率",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'Armor XP Reward Multiplier'，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_GoresSVU4Core_ArmorWeightMultiplier": {
+    "as1_value": "装甲重量倍率",
+    "value": "已安装装甲重量倍率",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'Installed Armor Weight Multiplier'，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_GoresSVU4Core_ArmorDurabilityMultiplier": {
+    "as1_value": "装甲耐久倍率",
+    "value": "装甲承受伤害倍率",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'Armor Damage Taken Multiplier'，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_GoresSVU4Core_MaterialCostMultiplier": {
+    "as1_value": "材料成本倍率",
+    "value": "装甲材料成本倍率",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'Armor Material Cost Multiplier'，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_PivotMod_NimbleSystem_tooltip": {
+    "as1_value": "切换mod系统模式.<br>关闭时, 使用上述瞄准与行走时固定的转向速度;<br>开启时, 根据灵活技能等级与以下系数决定转向速度, 应用于所有转向",
+    "value": "切换mod系统模式.<br>关闭时, 使用上述瞄准与行走时固定的转向速度;<br>开启时, 根据灵活技能等级与以下系数决定转向速度, 同时应用于瞄准与行走. 慢跑和冲刺始终保持原版速度.",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'Switches the entire mod between two systems.<br>OFF: the fix'，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_PivotMod_TraitVersion_tooltip": {
+    "as1_value": "开启时, 转向加速只会作用于选择了'保持专注' 和' 酒精作用' 特质的角色.<br>关闭时, 转向加速对所有角色生效",
+    "value": "开启时, 转向加速只会作用于拥有特质的角色, 其他角色以原版速度转向. 使用固定转向速度时, 仅限拥有“保持专注”的角色; 使用基于灵活属性的转向时, 拥有任一特质 (“保持专注”或“酒精作用”) 的角色均适用.<br>关闭时, 转向加速对所有角色生效",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'When ON, the turning buff applies only to trait holders; eve'，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_GuideDetailsBody": {
+    "as1_value": " <H2> 阅读检查器 <TEXT> <LINE> <LINE> 右侧的检查器显示所选名称, 描述, 预览, 实用属性, 尺寸, 就绪状态, 技能和材料. 尺寸以宽 x 深 x 高的形式显示在预览下方, 这样你可以在开始放置前判断所需的空间. <LINE> <LINE> <H2> 存储容量 <TEXT> <LINE> <LINE> 存储信息只针对一个可用面显示, 而不会在每次旋转时重复相同的信息. <INDENT:18> <LINE> 多格物品会列出该面上提供存储的每一格. <LINE> 因此, 两格垃圾箱可以显示两个独立的容量. <LINE> 同一格上的多个隔间, 例如冷藏室和冷冻室, 会分别列出. <INDENT:0> <LINE> <LINE> <PUSHRGB:0.88,0.78,0.40> 重要: <POPRGB> <SPACE> 预览的容量描述的是完成后的物品. 蓝图幽灵无法存放物品.",
+    "value": " <H2> 阅读检查器 <TEXT> <LINE> <LINE> 固定在右侧的检查器显示所选名称, 描述, 预览, 实用属性, 尺寸, 就绪状态和选项. 材料与工具, 技能与知识仍位于同一检查器中, 各自拥有独立的滚动区域. 数量会显示角色拥有多少以及配方需要多少. <LINE> <LINE> 选择任意需求即可在最右侧打开“可用材料 / 可能的物品”. 已拥有的替代品会在那里被计数并标记, 选择其中一项只会更改该项配方输入. 可建造物列表和所选配方保持可见. <LINE> <LINE> <H2> 存储容量 <TEXT> <LINE> <LINE> 存储信息只针对一个可用面显示, 而不会在每次旋转时重复相同的信息. 多格物品会列出提供存储的每一格, 电器则可分别列出不同的隔间, 例如冷藏室和冷冻室. 预览的容量描述的是完成后的物品; 蓝图幽灵无法存放物品.",
+    "reason": "2026-10-04 #683–#702：上游英文改為 ' <H2> Reading the inspector <TEXT> <LINE> <LINE> The fixed r'，依新英文重譯。"
+  },
+  "UI.json|UI_optionscreen_KBW_HoverPreview_Tooltip": {
+    "as1_value": "将鼠标悬停在可建造物收藏星标下方的放大镜图标上以放大预览. 紧凑模式还会显示需求; 普通界面仅显示可建造物. 默认禁用.",
+    "value": "将鼠标悬停在可建造物的放大镜按钮上即可查看更大的预览.",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'Hover the magnifying-glass button on a buildable to see a la'，依新英文重譯。"
+  },
+  "UI.json|UI_optionscreen_KBW_HoverPreviewSize": {
+    "as1_value": "悬停预览大小",
+    "value": "放大镜预览大小",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'Magnifier preview size'，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_GuideAppearanceBody": {
+    "as1_value": " <IMAGECENTRE:media/ui/inventoryPanes/Button_Gear.png,28,28> <LINE> <LINE> <H2> 诺克斯界面外观 <TEXT> <LINE> <LINE> 选择主题, 高对比度, 面板不透明度, 以及棋盘格, 浅色, 深色或自定义物品预览背景. 棋盘格可使极暗和极亮的物品都更易于分辨. <LINE> <LINE> <H2> 可读性控制 <TEXT> <LINE> <LINE> 淡化不可用建造图标是一个开/关开关. 当变暗的物品难以辨认时, 请将其关闭; 就绪边框和建造限制仍会保持生效. 网格, 详细列表和紧凑视图可让你在更多信息与更少屏幕占用之间进行选择. <LINE> <LINE> 如果你使用更大的游戏字体, 想要更多详情时可加宽或加高面板, 或者使用紧凑模式以占用更小的空间. 切换模式后请拖拽调整大小的角. 外观选择是个人的, 不会影响其他玩家.",
+    "value": " <IMAGECENTRE:media/ui/inventoryPanes/Button_Gear.png,28,28> <LINE> <LINE> <H2> 诺克斯界面外观 <TEXT> <LINE> <LINE> 齿轮按钮会打开个人显示设置. 你可以从七种面板色调中选择一种, 启用高对比度, 将面板不透明度设为 35%% 至 100%%, 并选择棋盘格, 浅色, 深色或自定义物品预览背景. 更改会在调整时实时显示在打开的目录中, 并保存到下次游戏. <LINE> <LINE> <H2> 尺寸与可读性 <TEXT> <LINE> <LINE> 卡片大小范围为 75%% 至 175%%. 预览大小有默认, 大和特大三种选项. 当变暗的图像难以辨认时, 可以禁用淡化不可用图标; 就绪边框和建造限制仍会保持生效. <LINE> <LINE> 网格, 列表和紧凑模式控制信息密度, 与这些外观选项相互独立. 如果你使用更大的游戏字体, 可以调整窗口大小或使用紧凑模式以占用更小的空间. 外观选择只影响你的客户端.",
+    "reason": "2026-10-04 #683–#702：上游英文改為 ' <IMAGECENTRE:media/ui/inventoryPanes/Button_Gear.png,28,28>'，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_CatalogIconSize": {
+    "as1_value": "建造图标大小",
+    "value": "网格卡片大小",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'Grid card size'，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_GuideCatalogBody": {
+    "as1_value": " <H2> 搜索与筛选 <TEXT> <LINE> <LINE> 搜索可以查找可建造物名称, 需求, 或同时查找所有内容. 将其与分类页面以及类型, 材质和技能筛选结合使用, 可在庞大的集合中缩小范围. 当预期内容不显示时, 请清除筛选或返回全部. <LINE> <LINE> <H2> 快速导航 <TEXT> <LINE> <LINE> <INDENT:18> 收藏可将亲手挑选的配方集中在一起. <LINE> 最近可返回近期使用过的配方. <LINE> 排序可改变顺序, 而不改变可用性. <LINE> 分类箭头可显示更多分类页面. <INDENT:0> <LINE> <LINE> <IMAGE:media/ui/inventoryPanes/FavouriteYes.png,20,20> 星标只会更改你的个人收藏列表. 被服务器禁用的可建造物即使被收藏也仍然不可用.",
+    "value": " <H2> 浏览无需猜测 <TEXT> <LINE> <LINE> 分类和子分类会始终显示在左侧侧边栏中. 搜索可以查找配方名称, 所需物品, 或全部内容. 搜索范围, 排序, 材质, 技能和“所有品质”控件固定在目录上方; “清除筛选”可返回完整集合. “可建造”会逐步找出你的角色能用随身携带和附近地面物资制作的配方. <LINE> <LINE> <H2> 快速导航 <TEXT> <LINE> <LINE> <INDENT:18> 收藏可将亲手挑选的配方集中在一起. <LINE> 最近可返回近期使用过的配方. <LINE> 排序可改变顺序, 而不改变可用性. <LINE> 网格和列表按钮可改变显示密度, 而不会丢失当前选择. <INDENT:0> <LINE> <LINE> <IMAGE:media/ui/inventoryPanes/FavouriteYes.png,20,20> 星标只会更改你的个人收藏列表. 被服务器禁用的可建造物即使被收藏也仍然不可用. <LINE> <LINE> 右键点击世界中的格子并选择“在诺克斯建筑工坊中查找此构件”即可打开其配方. 对于空洞口, “查找适合此洞口的门/窗”会列出兼容的构件, 因此匹配门窗不再需要根据图像猜测.",
+    "reason": "2026-10-04 #683–#702：上游英文改為 ' <H2> Browse without guessing <TEXT> <LINE> <LINE> Categorie'，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_GuideViewsBody": {
+    "as1_value": " <IMAGE:media/ui/craftingMenus/Icon_Grid.png,24,24> <SPACE> <IMAGE:media/ui/craftingMenus/Icon_List.png,24,24> <LINE> <LINE> <H2> 选择适合你的视图 <TEXT> <LINE> <LINE> 网格视图为每个可建造物提供一张大型可视化卡片. 详细列表视图可一次显示更多名称, 分类和状态信息. 紧凑模式使用子分类侧列表和密集的图标网格, 当你想要快速概览或更小的窗口时非常有用. <LINE> <LINE> 在紧凑模式中选择图标仍会在底部提供可用的组, 品质, 型号, 材质和饰面选项. 将鼠标悬停在图标上可查看其名称和需求. <LINE> <LINE> <PUSHRGB:0.88,0.78,0.40> 提示: <POPRGB> <SPACE> 拖拽右下角以找到舒适的大小. 布局会适应当前的字体大小和可用空间.",
+    "value": " <IMAGE:media/ui/craftingMenus/Icon_Grid.png,24,24> <SPACE> <IMAGE:media/ui/craftingMenus/Icon_List.png,24,24> <LINE> <LINE> <H2> 选择适合你的视图 <TEXT> <LINE> <LINE> 网格视图为每个可建造物提供一张可视化卡片. 列表视图可在屏幕上容纳更多配方名称和就绪信息. 在普通窗口中, 所选配方会保留在右侧检查器中, 卡片上的放大镜可打开其更大的预览. 卡片的其余部分仍可用于选择, 收藏和置顶. <LINE> <LINE> 紧凑模式会移除固定检查器以保留世界视野. 将指针停留在紧凑卡片上即可查看其预览, 材料, 工具, 技能和知识, 然后使用底部的建造或放置规划操作. <LINE> <LINE> 包含多个相关构件的配方使用检查器中的箭头切换; 箭头之间的数字表示当前显示的是组中的第几个成员. 拖拽右下角以找到舒适的大小. 布局会适应当前的字体和可用空间.",
+    "reason": "2026-10-04 #683–#702：上游英文改為 ' <IMAGE:media/ui/craftingMenus/Icon_Grid.png,24,24> <SPACE> '，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_AllSubcategories": {
+    "as1_value": "所有类型",
+    "value": "所有子分类",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'All subcategories'，依新英文重譯。"
+  },
+  "UI.json|UI_optionscreen_KBW_CatalogIconSize": {
+    "as1_value": "建造图标大小",
+    "value": "网格卡片大小",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'Grid card size'，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_NoBlueprintSelected": {
+    "as1_value": "未选择蓝图",
+    "value": "请选择或创建一个规划.",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'Select or create a plan.'，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_GuideMultiplayerBody": {
+    "as1_value": " <H2> 当某个玩家无法建造时 <TEXT> <LINE> <LINE> 检查该角色的材料, 工具, 技能, 已学配方, 光线, 距离和蓝图权限. 重新选择可建造物以查看缺失的需求, 然后在合适的格子上尝试放置光标. <LINE> <LINE> <H2> 当所有玩家都遇到同样的问题时 <TEXT> <LINE> <LINE> 询问管理员该可建造物或其分类是否被禁用, 以及规划模式是否允许. 所有玩家都应使用相同版本的诺克斯建筑工坊及其启用的附加组件. 服务器或模组更新后, 请重新连接再测试. <LINE> <LINE> <BHC> 服务器会做出最终决定. <RGB:0.92,0.91,0.88> <SPACE> 它会检查配方, 位置, 权限, 物品使用, 经验和完成后的物品, 以便每个玩家看到相同的结果.",
+    "value": " <H2> 当某个玩家无法建造时 <TEXT> <LINE> <LINE> 检查该角色的材料, 工具, 技能, 已学配方, 光线, 距离和蓝图权限. 重新选择可建造物以查看缺失的需求, 然后在合适的格子上尝试放置光标. <LINE> <LINE> <H2> 当所有玩家都遇到同样的问题时 <TEXT> <LINE> <LINE> 询问管理员该可建造物或其分类是否被禁用, 以及规划模式是否允许. 服务器和客户端需要使用匹配版本的诺克斯, ElyonLib 和已启用的附加组件. 服务器或模组更新后, 请重新连接再测试. <LINE> <LINE> 在完整备份后, 可以将诺克斯添加到现有存档中. 对于已加载过诺克斯或已启用的建造附加组件的存档, 请勿将其移除: 自定义物品和实体会获得持久的 WorldDictionary 标识, 存档中途移除可能导致世界无法加载. 请恢复原有的模组组合或安装前的备份, 而不是删除字典文件. <LINE> <LINE> <BHC> 服务器会做出最终决定. <RGB:0.92,0.91,0.88> <SPACE> 它会检查配方, 位置, 权限, 物品使用, 经验和完成后的物品, 以便每个玩家看到相同的结果.",
+    "reason": "2026-10-04 #683–#702：上游英文改為 ' <H2> When one player cannot build <TEXT> <LINE> <LINE> Chec'，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_HoverPreviewTooltip": {
+    "as1_value": "将鼠标悬停在可建造物收藏星标下方的放大镜图标上以放大预览. 紧凑模式还会显示需求; 普通界面仅显示可建造物. 默认禁用.",
+    "value": "将鼠标悬停在可建造物的放大镜按钮上即可查看更大的预览.",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'Hover the magnifying-glass button on a buildable to see a la'，依新英文重譯。"
+  },
+  "UI.json|UI_optionscreen_KBW_HoverPreviewSize_Tooltip": {
+    "as1_value": "选择大预览的尺寸. 悬停预览仅在启用悬停预览选项开启时可用.",
+    "value": "选择鼠标悬停在放大镜上时显示的放大预览尺寸.",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'Choose the enlarged preview size shown while the magnifying '，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_GuideViewsTitle": {
+    "as1_value": "网格, 列表与紧凑视图",
+    "value": "网格, 列表与预览",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'Grid, list and previews'，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_HoverPreviewSizeTooltip": {
+    "as1_value": "此尺寸仅在启用悬停预览选项开启时使用.",
+    "value": "设置鼠标悬停在放大镜上时显示的放大预览.",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'Sets the enlarged preview shown while the magnifying glass i'，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_HoverPreviewSize": {
+    "as1_value": "悬停预览大小",
+    "value": "放大镜预览大小",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'Magnifier preview size'，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_GuidePlanningBody": {
+    "as1_value": " <H2> 规划是可编辑的幽灵 <TEXT> <LINE> <LINE> 放置规划会向当前激活的蓝图添加幽灵, 而不是立即建造. 规划模式可以创建, 复制, 重命名, 删除, 激活和移动蓝图, 但受权限和服务器限制约束. <LINE> <LINE> <H2> 布局工具 <TEXT> <LINE> <LINE> <INDENT:18> 在所选等级上放置单个可建造物. <LINE> 绘制, 更新和擦除房间布局. <LINE> 更改等级以进行多层规划. <LINE> 移动蓝图原点或擦除错误的放置. <INDENT:0> <LINE> <LINE> <BHC> 在建造完成前, 幽灵不提供碰撞, 存储, 水, 光或保护. <RGB:0.92,0.91,0.88> <SPACE> 服务器可以禁用规划模式或限制放置数量和蓝图半径.",
+    "value": " <H2> 两个专注的窗口 <TEXT> <LINE> <LINE> 规划模式会将蓝图工作区保留在左侧, 并在右侧单独打开一个窄版的可建造物目录. 工作区包含规划, 构件, 房间和物资. 规划目录提供搜索, 分类和子分类选择器, 紧凑的可建造物网格, 以及用于切换组, 变体, 材质和饰面选项的箭头. 选择筛选条件时会一次性给出完整结果, 因此浏览时卡片不会分批陆续出现, 也不会移动你的选择. <LINE> <LINE> 放置规划会将所选构件添加到当前激活的蓝图中, 而不消耗材料. 预览布局会在单独的窗口中打开完整的规划. 你可以在等距视图和俯视视图之间切换, 在楼层之间移动, 开关地板网格, 使规划适应窗口, 使用鼠标滚轮缩放, 以及拖动平移. 房间会保留所选的颜色, 物资区有自己的绿色轮廓. <LINE> <LINE> <H2> 建造前检查 <TEXT> <LINE> <LINE> 物资会显示随身物品, 附近地面和收集区域中的拥有与需求数量. 共用材料会在整个规划中分配, 保留的工具可以重复使用, 在检查完成并确认规划就绪之前, 全部建造将保持不可用. 在建造完成前, 幽灵不提供碰撞, 存储, 水, 光或保护.",
+    "reason": "2026-10-04 #683–#702：上游英文改為 ' <H2> Two focused windows <TEXT> <LINE> <LINE> Planning Mode'，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_GuideBuildingBody": {
+    "as1_value": " <H2> 使用建造光标 <TEXT> <LINE> <LINE> 选择建造, 将预览移到目标格子, 在可用时旋转或更改其朝向, 并在有效位置确认. 许多兼容的可建造物会保持在光标上, 因此只要仍有所需材料, 你就可以连续放置多个. <LINE> <LINE> <H2> 如果预览无效 <TEXT> <LINE> <LINE> 请检查被占用的格子, 缺失的支撑, 墙的错误一侧, 所需的地板或框架, 光线不足, 距离过远, 或有东西挡住了多格占地的一部分. 楼梯, 大门, 大型家具和不规则物品需要其占地内的每一格都有效. <LINE> <LINE> 当计时动作完成时, 配方会消耗其材料, 按说明保留或磨损其工具, 授予其经验, 并生成完成后的物品.",
+    "value": " <H2> 使用建造光标 <TEXT> <LINE> <LINE> 选择建造, 将预览移到目标格子, 在可用时旋转或更改其朝向, 并在有效位置确认. 许多兼容的可建造物会保持在光标上, 因此只要材料仍然可用, 你就可以连续放置多个. 右键点击可取消放置; 目录会在下一次游戏循环更新时恢复, 而不是在光标回调中重新打开. <LINE> <LINE> <H2> 如果预览无效 <TEXT> <LINE> <LINE> 请阅读光标旁的消息. 检查被占用的格子, 缺失的支撑, 错误的墙边, 所需的地板或匹配的框架, 光线不足, 距离过远, 或有东西挡住了多格占地. 楼梯, 大门, 大型家具和不规则物品需要其占地内的每一格都有效. <LINE> <LINE> 当计时动作完成时, 配方会消耗其材料, 按说明保留或磨损其工具, 授予其经验, 并生成完成后的物品.",
+    "reason": "2026-10-04 #683–#702：上游英文改為 ' <H2> Using the construction cursor <TEXT> <LINE> <LINE> Sel'，依新英文重譯。"
+  },
+  "UI.json|UI_optionscreen_KBW_CatalogIconSize_Tooltip": {
+    "as1_value": "在标准网格和紧凑模式中缩放建造卡片和图标.",
+    "value": "将目录网格卡片大小设置为 75%% 至 175%%.",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'Set the catalogue grid card size from 75% to 175%.'，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_PhunZones_FileTooltip": {
+    "as1_value": "查看 lua/PhunZones.lua 文件的内容",
+    "value": "查看, 复制或导入你的自定义内容 (lua/PhunZones.json)",
+    "reason": "2026-10-04 #683–#702：上游英文改為 'View, copy or import your customisations (lua/PhunZones.json'，依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_item_Walkman": {
+    "as1_value": "Sony最著名的音乐播放器.",
+    "value": "便携式磁带播放器.",
+    "reason": "2026-10-04 owner 衝突裁決：TrueMusic／IVA 寫 The famous player from Sany.、True Moozic 寫 from Zony.（刻意避開 Sony 的仿名）、Talis New Music 寫 A portable cassette player for music on the move.；原譯「Sony最著名的音樂播放器」對 Talis 不成立，且寫出各 MOD 刻意避開的品牌。改用各方共通的「可攜式磁帶播放器」。"
+  },
+  "IG_UI.json|IGUI_MusicOptionsCar": {
+    "as1_value": "磁带录音机",
+    "value": "磁带播放器",
+    "reason": "2026-10-04 owner 衝突裁決：三方寫 Cassette player、True Moozic 寫 Use Cassette Player；原 CH「使用磁帶播放器」只貼合 True Moozic、CN「磁带录音机」不是播放器。改用名詞「磁帶播放器」，對所有 owner 成立。"
+  },
+  "ItemName.json|Base.762Drum_cat": {
+    "as1_value": "7.62×51mm 100 发弹鼓",
+    "value": "7.62mm 100 发弹鼓",
+    "reason": "2026-10-04 owner 衝突裁決：Escape from Kentucky 寫 7.62×51mm 100-Round Drum Magazine，MFS 社群修正版改為 7.62×39mm AK 100-Round MG Drum，口徑不同；比照 Base.308ClipU 的 7.62mm 共通寫法，拿掉單方的口徑長度與 AK／MG 細節。"
+  },
+  "ItemName.json|Base.M240BeltBox": {
+    "as1_value": "M240 7.62×51mm 100 发弹链盒",
+    "value": "7.62×51mm 100 发弹链盒",
+    "reason": "2026-10-04 owner 衝突裁決：Escape from Kentucky 寫 M240 7.62×51mm 100-Round Belt Box，MFS 社群修正版改為 7.62×51mm NATO 100-Round MG Belt Box；同一 7.62×51mm 100 發彈鏈盒，拿掉單方的 M240／NATO／MG。"
+  },
+  "Recipes.json|M240BeltBox(100)": {
+    "as1_value": "制作 7.62x51mm M240 100 发弹链盒",
+    "value": "制作 7.62×51mm 100 发弹链盒",
+    "reason": "2026-10-04 owner 衝突裁決：同 Base.M240BeltBox：兩方配方名只差 M240 與 NATO／MG 標示，改用共通的「製作 7.62×51mm 100 發彈鏈盒」。"
   }
 }
