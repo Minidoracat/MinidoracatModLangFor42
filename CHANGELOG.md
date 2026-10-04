@@ -4,6 +4,13 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **95 張 MOD 地圖的地圖選單標題與說明改顯示繁中／簡中。** 開新遊戲選世界、選出生點時，地圖名稱與介紹不再是英文，例如 Mount Crow City 顯示「烏鴉山市 (原版)」、Greenport 顯示「肯塔基州, 綠港」。涵蓋小地圖支援清單上新收錄的 69 個地圖 MOD（77 張地圖：Atlanta、Coryerdon、Daisy County、Greenport、Kingsmouth North、Nellis Air Force Base、Vila Z、唐人街、銀杉谷等），另補已支援的 SecretZ 15 張據點、提基鎮、浣熊市與泰勒斯維爾。作者原本就附簡中的 12 個 MOD，簡中沿用作者原文、繁中依作者簡中翻譯。地圖英文名是佔位字（如 MyMap、空白）或遊戲讀不到的舊格式時，改用地圖本名。只翻地圖選單文字，這些 MOD 的物品等其他文字不在本次範圍。
+  > 技術要點：own lane 新增 69 個目錄（`origin: own`；作者自附簡中者標 `cn_source: upstream`，CN 逐字照抄上游 `Translate/CN`）共 77 檔 147 鍵；已在名冊的 As1 衍生 MOD 共 18 張地圖 36 鍵落 `own_translations.json`；全數登記 `ch_review_state`。英文取自 map.info；map.info 寫 `See media/lua/shared/Translate/EN/<資料夾>/title.txt` 的 6 張（B42 不讀這種 B41 舊格式，英文玩家看到的是那串路徑），改取 `title.txt`／`description.txt` 內容。名冊登記後 `backfill-en` 補齊 EN 證據，69 個 MOD 的 EN 鍵與 As1 譯文零交集，不影響 split 歸屬。tracker 不抽 map.info，作者改地圖標題或說明不會開「可能過時」issue。`apply_translations.py` 的本體碰撞檢查與 `build_mod.own_anchor_drift` 的過時比對，對 `title`／`description` 改為只比同檔名（同 split、verify [12]）：舊寫法按裸鍵名比，前者擋下全部地圖鍵、後者把 36 鍵誤報成過時；`test_own_anchor_drift.py` 補情境（舊實作會失敗）。未收：Path of Zenith（上游 EN JSON 含未逸出的換行，`backfill-en` 拒收）、EchoCreek MilitaryBase 與 Atlanta Safe Zone（地圖資料夾名含非 ASCII 字元）。
+
 ## [42.21.0-1.39.0] - 2026-10-03
 
 ### Added

@@ -19,6 +19,8 @@
   7. ItemName：同 owner 有 ItemName.json 時 script DisplayName 不算數；只有 B41 前綴鍵
      （引擎不查）時改比 script DisplayName。
   8. 錨點跟上執行期勝出值後不報。
+  9. 地圖 `title`／`description` 只比同檔名的上游值：別張地圖的標題不得讓這張地圖誤報
+     （2026-10-04 收 18 張地圖標題時，裸鍵比對把 36 鍵全數誤報成過時）。
 
 執行：uv run scripts/test_own_anchor_drift.py
 不依賴測試框架，assert 失敗即測試失敗（exit code != 0）。
@@ -56,6 +58,9 @@ mods = {
     }},
     "2": {"records": {
         f"translate_en|{EN.format(tag='common', file='IG_UI.json')}|IGUI_Shared": h("Owner two"),
+        # 9：地圖檔域鍵
+        f"translate_en|{EN.format(tag='42', file='Greenleaf.json')}|title": h("Greenleaf,KY"),
+        f"translate_en|{EN.format(tag='42', file='Greenleaf.json')}|description": h("Map desc"),
     }},
 }
 own = {
@@ -65,10 +70,13 @@ own = {
     "IG_UI.json": {"IGUI_Shared": {"en": "Owner two"}, "IGUI_Layer": {"en": "Common old"}},
     "ItemName.json": {"Base.Gun": {"en": "Gun script"}, "Base.Old": {"en": "Prefixed dead"}},
     "Recipes.json": {"Make Bottle of Vinegar": {"en": "Make Bottle of Vinegar"}},
+    "Greenleaf.json": {"title": {"en": "Greenleaf,KY"}, "description": {"en": "Old map desc"}},
+    "Other Map.json": {"title": {"en": "Other Map"}, "description": {"en": "Other desc"}},
 }
 
 drift = build_mod.own_anchor_drift(own, mods)
 assert drift == [
+    "Greenleaf.json|description",
     "IG_UI.json|IGUI_Layer", "ItemName.json|Base.Gun", "ItemName.json|Base.Old",
     "Sandbox.json|Sandbox_Both", "Sandbox.json|Sandbox_Txt",
 ], f"錨點漂移判定錯誤：{drift}"
@@ -78,6 +86,7 @@ own["Sandbox.json"]["Sandbox_Both"]["en"] = "JSON new"
 own["IG_UI.json"]["IGUI_Layer"]["en"] = "Version new"
 own["ItemName.json"]["Base.Gun"]["en"] = "Gun JSON"
 own["ItemName.json"]["Base.Old"]["en"] = "Old script"
+own["Greenleaf.json"]["description"]["en"] = "Map desc"
 assert build_mod.own_anchor_drift(own, mods) == [], "錨點已更新仍被報出"
 
-print("PASS: own_anchor_drift 8 組情境通過")
+print("PASS: own_anchor_drift 9 組情境通過")

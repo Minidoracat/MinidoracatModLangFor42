@@ -80,6 +80,9 @@ def main() -> int:
             except Exception:  # noqa: BLE001
                 pass
     allow = set(v.get("allowlist", {}))
+    # 地圖檔泛用鍵 title/description 只按同檔名判碰撞（同 verify [12]）：
+    # 別張 MOD 地圖的 `<資料夾>.json|title` 不是本體鍵，按裸鍵名比會全數誤擋。
+    map_pairs = set(v.get("vanilla_scoped_pairs", []))
 
     errs: list[str] = []
     total = 0
@@ -102,7 +105,11 @@ def main() -> int:
                 b = sorted(TOKEN.findall(spec[col]))
                 if en_safe != b:
                     errs.append(f"{fname}|{k}: {col} format token 與 sanitize(en) 不符 {en_safe} vs {b}")
-            if k in van and k not in allow:
+            if k in ("title", "description"):
+                hit = f"{fname}|{k}" in map_pairs or (BASE_GAME / fname).is_file()
+            else:
+                hit = k in van
+            if hit and k not in allow:
                 errs.append(f"{fname}|{k}: 撞 vanilla 鍵（鐵律不得 override）")
     if errs:
         print(f"❌ {len(errs)} 項檢查未過，未寫入：", file=sys.stderr)

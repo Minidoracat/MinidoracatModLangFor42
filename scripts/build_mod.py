@@ -709,10 +709,15 @@ def own_anchor_drift(own: dict[str, dict[str, dict]], mods: dict) -> list[str]:
         `Sandbox.json` 已改、`Sandbox_EN.txt` 仍舊，漏報 8 鍵）。
     刻意依較新的死檔翻譯時，`en` 錨點填執行期勝出值、理由寫進 `_note`。跨 owner 仍是
     任一相符即算最新（多 owner 共用鍵由 owner 衝突裁決處理）；上游完全沒有該鍵（配方
-    區塊名、引擎推導鍵）不在本函式範圍。
+    區塊名、引擎推導鍵）不在本函式範圍。地圖 `title`／`description` 只比同檔名（檔名幹）
+    的上游值：泛用鍵名按裸鍵比，會拿別張地圖的標題判定這張地圖「過時」。
     """
     import tracker
     from prep_mod_strings import EN_SOURCE_SCRIPT, _src_rank  # 來源優先序的單一實作
+    from split_sources import SCOPED_GENERIC_KEYS, _file_stem  # 地圖檔域鍵的單一定義
+
+    def scoped(fname: str, key: str) -> str:
+        return f"{_file_stem(fname)}|{key}" if key in SCOPED_GENERIC_KEYS else key
 
     upstream: dict[str, set[str]] = {}
     for mod in mods.values():
@@ -731,7 +736,7 @@ def own_anchor_drift(own: dict[str, dict[str, dict]], mods: dict) -> list[str]:
                 continue
             src = EN_SOURCE_SCRIPT if parts[0] == "script_item_dn" else path[-1]
             versioned = tracker._branch_tag(rid) not in ("common", "")
-            cands = [(parts[2], (_src_rank(src), versioned))]
+            cands = [(scoped(path[-1], parts[2]), (_src_rank(src), versioned))]
             if parts[2].startswith("ItemName_"):
                 # 引擎只查裸 fullType，前綴鍵即使寫在 ItemName.json 也是死鍵
                 cands.append((parts[2][len("ItemName_"):], (0, versioned)))
@@ -748,8 +753,8 @@ def own_anchor_drift(own: dict[str, dict[str, dict]], mods: dict) -> list[str]:
         f"{fname}|{key}"
         for fname, keys in sorted(own.items())
         for key, entry in sorted(keys.items())
-        if upstream.get(key) and isinstance(entry, dict) and isinstance(entry.get("en"), str)
-        and tracker.value_hash(entry["en"]) not in upstream[key]
+        if upstream.get(scoped(fname, key)) and isinstance(entry, dict) and isinstance(entry.get("en"), str)
+        and tracker.value_hash(entry["en"]) not in upstream[scoped(fname, key)]
     ]
 
 
