@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1273 個 Workshop 模組**（1610 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
+共支援 **1273 個 Workshop 模組**（1612 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -429,7 +429,7 @@
 | [The Division Equipment [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3479867929) | 全境封鎖裝備 | 新增《全境封鎖》主題裝備，含背包、臂章與戰術面罩等。 | `SHDEquipment` | 92 | — | — |
 | [Quality of Life Modpack](https://steamcommunity.com/sharedfiles/filedetails/?id=3480305875) | 生活品質模組包 | 多項便利功能合集，含防毒面具濾芯更換與每日擊殺統計等。 | `twistresting` | 193 | — | — |
 | [Constown (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3480990544) | 康斯鎮 | 肯塔基州諾克斯縣的小鎮地圖，四線道公路貫穿鎮中心，有汽車旅館、修車廠與歇業店舖。 | `Constown42` | 142 | ⚠️ ≥2 | — |
-| [[MT] Tactical Bags](https://steamcommunity.com/sharedfiles/filedetails/?id=3481148861) | — | — | `[MT] Tactical Bags`, `[MT] Tactical Bags - More Balance` | 125 | — | — |
+| [[MT] Tactical Bags](https://steamcommunity.com/sharedfiles/filedetails/?id=3481148861) | — | — | `[MT] Tactical Bags`, `[MT] Tactical Bags - More Balance`, `[MT] Tactical Bags - More Balance ( no item restriction )` | 125 | — | — |
 | [Raven Creek B42〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3484263516) | 渡鴉溪 | 位於地圖西南方的港口城市地圖（B42 移植版）。 | `RavenCreekB42` | 2 | — | 只收地圖選單的標題與說明；地圖本身沒有其他可翻文字。 |
 | [[B42] Intuitive Crafting](https://steamcommunity.com/sharedfiles/filedetails/?id=3486217110) | 直覺化製作 | 改良製作介面，可依材料、經驗與已學配方篩選分類顯示。 | `IntuitiveCrafting` | 49 | ⚠️ ≥1 | — |
 | [JM3 chop](https://steamcommunity.com/sharedfiles/filedetails/?id=3486247131) | — | — | `JM3_chop` | 10 | — | — |
@@ -1140,7 +1140,7 @@
 | [Cats Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=3779907776) | 貓咪模組 | 加入可飼養的貓，含多種品種（橘貓、短毛貓等）、幼貓與公母之分，並提供貓食盆、貓糧與牛奶等液體。 | `CatsMod` | 223 | — | — |
 | [Machinery](https://steamcommunity.com/sharedfiles/filedetails/?id=3780027195) | Machinery（機械設備） | 新增台鋸、台式砂輪機、液壓機等可用機械與帶鋸條、鑽頭組等耗材，操作時可能發生手部割傷等事故。 | `Machinery` | 412 | ⚠️ ≥2 | — |
 | [Reading Reworked - Faster Reading & Walking [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3780124271) | 閱讀機制重做 | 坐著閱讀更快、可邊走邊讀，並依書本頁數、閱讀快／閱讀慢特質與老花眼鏡調整閱讀時間。 | `ReadingReworked` | 17 | — | — |
-| [[On hold] Modern Firearms System Community Fix Patch [On hold]](https://steamcommunity.com/sharedfiles/filedetails/?id=3780151182) | — | — | `MFS_BackpackSystem_fix`, `MFS_BladesmithSystem_fix`, `MFS_community_fix`, `MFS_community_fix_low_RPM` | 1222 | ⚠️ ≥63 | — |
+| [[On hold] Modern Firearms System Community Fix Patch [On hold]](https://steamcommunity.com/sharedfiles/filedetails/?id=3780151182) | — | — | `MFSCP_PSA_ammoconversion`, `MFS_BackpackSystem_fix`, `MFS_BladesmithSystem_fix`, `MFS_community_fix`, `MFS_community_fix_low_RPM` | 1222 | ⚠️ ≥63 | — |
 | [Elevators](https://steamcommunity.com/sharedfiles/filedetails/?id=3780306632) | 可運作的電梯 | 建築內的電梯可以實際搭乘並選擇樓層，可設定是否需要電力。 | `Elevators` | 13 | — | — |
 | [[B42.20+ MP] - Push Vehicle](https://steamcommunity.com/sharedfiles/filedetails/?id=3780639614) | — | — | `PushVehicle` | 5 | — | — |
 | [Equipment UI - Paper Doll Equipment Interface SP/MP [B42.20+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3780682550) | — | — | `EquipmentUI_B42` | 28 | — | — |

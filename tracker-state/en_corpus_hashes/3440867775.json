@@ -1,5 +1,5 @@
 {
-  "corpus_hash": "faec1dbad9ca8bb6f7cfb531552adf58fe7b5114111fceaed67903eb0c649e01",
+  "corpus_hash": "c50e5dbf6a36aaf8e298490902298ea0eae56e00eb2bdf43bd3bd4afd271230f",
   "extractor_schema": 10,
   "mod_ids": [
     "TheBestLockpicking"
@@ -7,6 +7,8 @@
   "records": {
     "script_craftRecipe|mods/TheBestLockpicking/42/media/scripts/recipes/BestLock_recipes.txt|CreateBobbyPin": "efa41ca5135a",
     "script_craftRecipe|mods/TheBestLockpicking/42/media/scripts/recipes/BestLock_recipes.txt|CreateBobbyPin2": "3d06cb50ad86",
+    "script_craftRecipe|mods/TheBestLockpicking/42/media/scripts/recipes/BestLock_recipes.txt|PackSetOfLockpickingBooks": "bae4ec53c9f8",
+    "script_craftRecipe|mods/TheBestLockpicking/42/media/scripts/recipes/BestLock_recipes.txt|UnpackSetOfLockpickingBooks": "36a93ff960a5",
     "script_item|mods/TheBestLockpicking/42/media/scripts/BestLock_items.txt|BestLock.AlarmMag": "0e2f46444f33",
     "script_item|mods/TheBestLockpicking/42/media/scripts/BestLock_items.txt|BestLock.BobbyPin": "63b376e2dd53",
     "script_item|mods/TheBestLockpicking/42/media/scripts/BestLock_items.txt|BestLock.BookLockpicking1": "34cc3c699839",
@@ -14,6 +16,7 @@
     "script_item|mods/TheBestLockpicking/42/media/scripts/BestLock_items.txt|BestLock.BookLockpicking3": "03930fd45a14",
     "script_item|mods/TheBestLockpicking/42/media/scripts/BestLock_items.txt|BestLock.BookLockpicking4": "63eb3e7d0460",
     "script_item|mods/TheBestLockpicking/42/media/scripts/BestLock_items.txt|BestLock.BookLockpicking5": "764ac0750f65",
+    "script_item|mods/TheBestLockpicking/42/media/scripts/BestLock_items.txt|BestLock.BookLockpickingSet": "ab64f404342a",
     "script_item|mods/TheBestLockpicking/42/media/scripts/BestLock_items.txt|BestLock.GarageCodeNote": "a9ba43e47edc",
     "script_item|mods/TheBestLockpicking/42/media/scripts/BestLock_items.txt|BestLock.HandmadeBobbyPin": "d8beb0d0a707",
     "script_item|mods/TheBestLockpicking/42/media/scripts/BestLock_items.txt|BestLock.LockpickingMag": "5223580f3d70",
@@ -29,11 +32,14 @@
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/ItemName.json|BestLock.BookLockpicking3": "016c95148495",
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/ItemName.json|BestLock.BookLockpicking4": "2bc1acd875e6",
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/ItemName.json|BestLock.BookLockpicking5": "acb0d41cee21",
+    "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/ItemName.json|BestLock.BookLockpickingSet": "0b4369c106ec",
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/ItemName.json|BestLock.GarageCodeNote": "0ca7bd5f045d",
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/ItemName.json|BestLock.HandmadeBobbyPin": "bd99fa4112e6",
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/ItemName.json|BestLock.LockpickingMag": "e9ffbbef74ac",
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/Recipes.json|CreateBobbyPin": "ec43dd602e8e",
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/Recipes.json|CreateBobbyPin2": "d16370f38b33",
+    "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/Recipes.json|PackSetOfLockpickingBooks": "3bfcc7deadd3",
+    "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/Recipes.json|UnpackSetOfLockpickingBooks": "420468701403",
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BestLockAlarm": "01efe3d88048",
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BestLockDifficulty": "c436ab03d5d7",
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BestLockDoors": "233c9a484442",
@@ -282,6 +288,7 @@
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/UI.json|UI_BestLock_HotwireStartByWires": "262a36a560d1",
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/UI.json|UI_BestLock_HotwireStarted": "77ffab3bec6c",
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/UI.json|UI_BestLock_HotwireStarterTouch": "feeaea685f11",
+    "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/UI.json|UI_BestLock_HotwireWireCut": "907baf730d4d",
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/UI.json|UI_BestLock_HotwireWiresHint": "dd2567a7ff73",
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/UI.json|UI_BestLock_HouseKey": "7bd3c3846e8a",
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/UI.json|UI_BestLock_LockJammed": "f387b1d30540",
@@ -437,5 +444,5 @@
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/UI.json|UI_window_is_unlocked": "01eba43882cd",
     "translate_en|mods/TheBestLockpicking/42/media/lua/shared/Translate/EN/UI.json|UI_zRe_isLocked": "70c85514ef7b"
   },
-  "updated_at": "2026-10-02T10:33:15Z"
+  "updated_at": "2026-10-04T10:37:56Z"
 }
