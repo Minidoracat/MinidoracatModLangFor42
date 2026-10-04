@@ -1,17 +1,21 @@
-[h1][B42]繁體簡體模組翻譯 42.21.0-1.39.0[/h1]
-[i]2026-10-03[/i]
+[h1][B42]繁體簡體模組翻譯 42.21.0-1.40.0[/h1]
+[i]2026-10-04[/i]
 
 [h3]新增[/h3]
 [list]
-[*] 18 個模組新增的文字補上繁簡中文，共 3,384 項：Read Your Manga 新收錄的 33 部漫畫共 1,848 冊（《SPY×FAMILY 間諜家家酒》《BLUE LOCK 藍色監獄》《灌籃高手》《第一神拳》《哆啦A夢》等），Till Death Do Us Part - Marriage Companion 的家庭與育兒、嬰兒照護、醫療照護、配偶互動選單與沙盒設定，Dead Magic 每個法術與儀式的開關及消耗設定。
-[*] 其他補齊的模組：HydeCo. Clay 的陶瓷擺飾與鑄模配方、Legendary Tactical Weapons 的新生成設定與刀劍收納箱、Modern Firearms System 社群修正版的新彈匣與零件改裝配方、W900 Semi-Truck、Totally's NATO 的特種部隊貝雷帽、Legendary Satchel、Legendary Fanny Pack、HydeCo. Unlimited Cars、El Eternauta、末日鎮屍錄、GaelGunStore、Livestock Panel Plus、Extended categories、Fred's Night Vision Goggles、Hold Crouch to Sit。
+[*] 95 張 MOD 地圖的地圖選單標題與說明改顯示繁簡中文：開新遊戲選世界、選出生點時不再是英文，例如 Mount Crow City 顯示「烏鴉山市 (原版)」。涵蓋小地圖支援清單上新收錄的 69 個地圖模組（Atlanta、Coryerdon、Daisy County、Greenport、Kingsmouth North、Nellis Air Force Base、Vila Z、唐人街、銀杉谷等），以及 SecretZ 的 15 張據點、提基鎮、浣熊市與泰勒斯維爾。這些地圖模組目前只翻地圖選單文字。
+[*] 15 個模組新增的文字補上繁簡中文，共 377 項：Evolving Traits World 的新特質「酗酒者」（戒斷狀態、輕／中／重度與沙盒設定）和取代「沙發馬鈴薯」的「討厭健身房」，Gore's SVU4 Core 的點火鎖芯、渦輪增壓器等引擎零件與製作配方、車窗與輪胎配方、7 色汽車噴漆，ClothesBox Redux 的迷彩服、背心與包款，Knox Buildworks 的側欄分類、放大鏡預覽與規劃模式介面。
+[*] 其他補齊的模組：Smart Animal Waste、Legendary Naginata、CD: Survivor Breed Pack（大麥町犬）、Modern Firearms System 社群修正版、PhunZones 2、True Moozic、Vehicle Military Zones、The Best Lockpicking、Legendary Katana Wakizashi、Sandbox Options、MT Tactical Bags。
 [/list]
 
 [h3]更新[/h3]
 [list]
-[*] 跟上模組作者改寫的英文，重譯 94 項：Marriage Companion 的對話文字大小、主控台訊息與休閒活動設定，HydeCo. Unlimited Cars 的自訂預設說明，Totally's NATO 的綠色衣褲，GaelGunStore 的瞄具畫面開關說明等。
-[*] Read Your Manga 的漫畫名稱拿掉「(大)」「(小)」：那其實是同一本漫畫平放或立放的兩種擺法，原本切換擺法時書名會跟著變。另外統一了《RE：從零開始的異世界生活》第三章與《銃夢：LAST ORDER》兩部的書名。
-[*] Modern Firearms System 原版與社群修正版共用的物品，改用兩版都正確的名稱（例如 M7 步槍、7.62mm 30 發彈匣、.44 馬格南彈匣配方）；御林長刀的攜行件兩版說法不同，改顯示各自模組的名稱。
-[*] GaelGunStore 與其他槍械模組共用的槍名、Marriage Companion 與其醫療子模組共用的醫療選單和藥品說明，也改成對每個模組都正確的寫法。
+[*] 跟上模組作者改寫的英文，重譯 93 項：Gore's SVU4 Core 的裝甲沙盒設定說明（吸收比例、耐久與重量倍率、隨機裝甲生成）與噴漆、車身包膜等物品名，Knox Buildworks 的介面與使用指南，Smart Animal Waste 的介面用語，Evolving Traits World 的健身特質說明等。
+[*] 與其他模組共用的文字改成對每個模組都正確的寫法：隨身聽說明改為「可攜式磁帶播放器」、車內音樂選項統一為「磁帶播放器」；Escape from Kentucky 與 Modern Firearms System 社群修正版共用的 7.62 彈鼓與 M240 彈鏈盒，拿掉只屬其中一版的口徑或型號。
 [*] 更新下載完成後，請重新啟動遊戲載入新翻譯；不需要重開存檔。
+[/list]
+
+[h3]移除[/h3]
+[list]
+[*] 拿掉 45 項模組作者已經刪除的舊文字，例如 Gore's SVU4 Core 舊的消音器與引擎零件配方、Evolving Traits World 的沙發馬鈴薯設定。
 [/list]
