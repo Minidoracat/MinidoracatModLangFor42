@@ -328,4 +328,17 @@ with tempfile.TemporaryDirectory() as td:
     ok, details, warn = verify_dist.check_review_drift(repo, str(dist_cn))
     assert ok and not details and len(warn) == 2, (details, warn)
 
-print("PASS: CH corpus lane 15/15 案例通過")
+# 14. cn-diff 讀舊版檔：檔名含 glob 字元且舊 ref 沒有此檔 → None，不得崩潰
+#     （`git show <ref>:<path>` 會把它當 pathspec、空輸出退出 0）
+with tempfile.TemporaryDirectory() as td:
+    import subprocess
+    git = ["git", "-C", td, "-c", "user.name=t", "-c", "user.email=t@t"]
+    subprocess.run(["git", "-C", td, "init", "-q"], check=True)
+    wjson(Path(td) / "a.json", {"k": "v"})
+    subprocess.run(git + ["add", "a.json"], check=True)
+    subprocess.run(git + ["commit", "-q", "-m", "init"], check=True)
+    assert verify_dist._git_show_json(td, "HEAD", "a.json") == {"k": "v"}
+    assert verify_dist._git_show_json(td, "HEAD", "Manor[Poor Version].json") is None
+    assert verify_dist._git_show_json(td, "HEAD", "missing.json") is None
+
+print("PASS: CH corpus lane 16/16 案例通過")

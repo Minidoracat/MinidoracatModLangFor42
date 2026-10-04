@@ -1117,9 +1117,14 @@ def check_as1_drift(repo: str, as1_cn: str) -> tuple[bool, list[str], list[str]]
 # --cn-diff：git 層 CN 值變動複核（封住四條 registry/手改盲徑的出口檢查）
 # --------------------------------------------------------------------------- #
 def _git_show_json(repo: str, ref: str, relpath: str) -> dict | None:
-    """讀 <ref>:<relpath> 的 JSON；該 ref 無此檔 → None。"""
+    """讀 <ref>:<relpath> 的 JSON；該 ref 無此檔 → None。
+
+    用 `git cat-file -p`，不用 `git show`：檔名含 `[` `*` `?` 等 glob 字元、且 ref 沒有此檔時，
+    `git show <ref>:<path>` 會把整串當 pathspec，輸出空白且退出 0（例：新收的
+    `Hazelnut Manor[Poor Version].json`），json.loads 隨即崩潰。cat-file 只認物件名，查無即非零退出。
+    """
     proc = subprocess.run(
-        ["git", "-C", repo, "show", f"{ref}:{relpath}"], capture_output=True
+        ["git", "-C", repo, "cat-file", "-p", f"{ref}:{relpath}"], capture_output=True
     )
     if proc.returncode != 0:
         return None
