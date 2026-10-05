@@ -691,7 +691,7 @@
 | [Better Trapping](https://steamcommunity.com/sharedfiles/filedetails/?id=3649582861) | 更好的誘捕 | 強化誘捕系統，提供動物、誘餌與活躍時間等詳細資訊介面與誘捕說明。 | `EURY_TRAPPING` | 23 | — | — |
 | [Makeshift Raft](https://steamcommunity.com/sharedfiles/filedetails/?id=3649587333) | — | — | `MakeshiftRaft` | 11 | — | — |
 | [Ford Transcontinental](https://steamcommunity.com/sharedfiles/filedetails/?id=3649632887) | — | — | `FordTranscontinental`, `FordTranscontinentalVanillaTires` | 55 | — | — |
-| [Extended categories (B42)](https://steamcommunity.com/sharedfiles/filedetails/?id=3650035249) | 擴充物品分類 | 擴充物品欄分類，新增彈藥盒、彈匣等更細緻的物品類別。 | `CAExtendedCategories` | 316 | ⚠️ ≥2 | — |
+| [Extended categories (B42)](https://steamcommunity.com/sharedfiles/filedetails/?id=3650035249) | 擴充物品分類 | 擴充物品欄分類，新增彈藥盒、彈匣等更細緻的物品類別。 | `CAExtendedCategories` | 316 | ⚠️ ≥1 | — |
 | [True Action Dancing B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3650071729) | 真實動作跳舞 | 新增多種跳舞動作表情，如康康舞、小雞舞等可供角色表演。 | `TrueActionsDancing` | 205 | — | — |
 | [[B42] Horticulture](https://steamcommunity.com/sharedfiles/filedetails/?id=3650168851) | 園藝 | 新增大麻種植與加工系統，可製作香菸、雪茄等相關物品。 | `B42Horticulture` | 85 | — | — |
 | [N.W.M.F. Weaponry](https://steamcommunity.com/sharedfiles/filedetails/?id=3651242585) | N.W.M.F. 軍械庫 | 新增武器內容，並可調整彈匣與修復工具的生成稀有度。 | `NWMF1` | 8 | — | — |
@@ -1343,7 +1343,7 @@
 | [Frockin Splendor! Vol.6](https://steamcommunity.com/sharedfiles/filedetails/?id=3798149669) | Frockin Splendor! 華麗服飾 Vol.6 | 第六輯服飾擴充，新增外套、大衣、裙裝、褲裝、毛衣、腰帶與衣物收納用品。 | `GanydeBielovzki's Frockin Splendor! Vol.6` | 6 | — | — |
 | [ProjectHoomans WIP](https://steamcommunity.com/sharedfiles/filedetails/?id=3799685526) | — | — | `ProjectHoomans` | ? | — | — |
 | ['83 GMC G-Series Vans](https://steamcommunity.com/sharedfiles/filedetails/?id=3799732653) | — | — | `83gmcGseriesVans`, `83gmcVanduraATeam` | 22 | — | — |
-| [Snake's ModPack Build 42](https://steamcommunity.com/sharedfiles/filedetails/?id=3800233932) | Snake 模組包 Build 42 | 整合料理、農漁業、彈藥製作、汽車維修、服飾、工具與多張地圖的模組包。 | `SMP_AmmoMaker`, `SMP_AquaFarm`, `SMP_AquaFarmResources`, `SMP_BarcoAbandonado`, `SMP_BatesMetalicos`, `SMP_CustomMapBridge`, `SMP_Factory`, `SMP_LeGourmetUltimate`, `SMP_LootZetaEnhancedEdition`, `SMP_MilitaryComplex`, `SMP_NumarkComplex`, `SMP_ROxygenTank`, `SMP_RPropaneTank`, `SMP_SkillsMag`, `SMP_SnakeMechanicalOverhaul`, `SMP_SnakeUtilsPack`, `SMP_SnakeClothingMod`, `SMP_SnakeMansion`, `SMP_SnakeVille`, `SMP_TableSaw`, `SMP_ZStreamersCars` | 7 | ⚠️ ≥20 | — |
+| [Snake's ModPack Build 42](https://steamcommunity.com/sharedfiles/filedetails/?id=3800233932) | Snake 模組包 Build 42 | 整合料理、農漁業、彈藥製作、汽車維修、服飾、工具與多張地圖的模組包。 | `SMP_AmmoMaker`, `SMP_AquaFarm`, `SMP_AquaFarmResources`, `SMP_BarcoAbandonado`, `SMP_BatesMetalicos`, `SMP_CustomMapBridge`, `SMP_Factory`, `SMP_LeGourmetUltimate`, `SMP_LootZetaEnhancedEdition`, `SMP_MilitaryComplex`, `SMP_NumarkComplex`, `SMP_ROxygenTank`, `SMP_RPropaneTank`, `SMP_SkillsMag`, `SMP_SnakeMechanicalOverhaul`, `SMP_SnakeUtilsPack`, `SMP_SnakeClothingMod`, `SMP_SnakeMansion`, `SMP_SnakeVille`, `SMP_TableSaw`, `SMP_ZStreamersCars` | 7 | ⚠️ ≥21 | — |
 | [RPG Inventory - NeatUI [SP/MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3800660445) | — | — | `RPGInventory` | ? | — | — |
 | [ShadowZ](https://steamcommunity.com/sharedfiles/filedetails/?id=3800671550) | — | — | `ShadowZ` | 43 | — | — |
 | [Stay With Me - Companion NPC [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3800989007) | — | — | `Bridge` | ? | — | — |
