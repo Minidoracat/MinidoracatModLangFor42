@@ -57129,5 +57129,45 @@
     "as1_value": "制作 7.62x51mm M240 100 发弹链盒",
     "value": "制作 7.62×51mm 100 发弹链盒",
     "reason": "2026-10-04 owner 衝突裁決：同 Base.M240BeltBox：兩方配方名只差 M240 與 NATO／MG 標示，改用共通的「製作 7.62×51mm 100 發彈鏈盒」。"
+  },
+  "IG_UI.json|IGUI_Wounds_PanelBlood": {
+    "as1_value": "失血",
+    "value": "血量",
+    "reason": "2026-10-05 #713：上游英文由 Blood loss 改為 Blood，面板改顯示剩餘血量（例 80% (4000 ml)），「失血」意思相反，改為「血量」。"
+  },
+  "Sandbox.json|Sandbox_WoundsOverhaul_SutureGameEnabled": {
+    "as1_value": "手动缝合伤口:",
+    "value": "小游戏: 缝合",
+    "reason": "2026-10-05 #713：上游英文由 Stitch wounds by hand: 改為 Minigame: stitching，與同批新增的取彈、修剪小遊戲設定同句型。"
+  },
+  "UI.json|UI_TBYW_Preview_RotationHint": {
+    "as1_value": "LT/RT: 旋转|R3: 正面",
+    "value": "LT/RT: 旋转|R3: 正面|LB/RB: 款式|X: 选项",
+    "reason": "2026-10-05 #716：上游英文新增 X: Options；原譯本就漏了 LB/RB: Variants，一併補上。"
+  },
+  "IG_UI.json|IGUI_HotbarAttachment_PARContainerSmallLeft": {
+    "as1_value": "左侧小型容器",
+    "value": "左侧小型容器 (袋子、用品包、收纳盒)",
+    "reason": "2026-10-05 #712：上游括號說明由 bags only 改為 bags, kits, cases（可掛載種類增加），原譯沒有括號說明，補上。"
+  },
+  "IG_UI.json|IGUI_HotbarAttachment_PARContainerSmallRight": {
+    "as1_value": "右侧小型容器",
+    "value": "右侧小型容器 (袋子、用品包、收纳盒)",
+    "reason": "2026-10-05 #712：上游括號說明由 bags only 改為 bags, kits, cases（可掛載種類增加），原譯沒有括號說明，補上。"
+  },
+  "Sandbox.json|Sandbox_SmartRadialMenu_EnableReloadUnloadAllMagazines_tooltip": {
+    "as1_value": "添加全部弹匣装填/卸弹的环形菜单",
+    "value": "在武器子菜单中添加一个选项, 用于将全部弹匣装填/卸弹的动作加入队列.",
+    "reason": "2026-10-05 #705：原譯漏譯「在武器子選單」與「排入佇列」，補全（上游只把 weapon 改為 weapons）。"
+  },
+  "Sandbox.json|Sandbox_SmartRadialMenu_EnableWringOutAllClothes_tooltip": {
+    "as1_value": "添加拧干全部湿衣物的环形菜单",
+    "value": "在衣物子菜单中添加一个选项, 用于将拧干全部湿衣物的动作加入队列.",
+    "reason": "2026-10-05 #705：原譯漏譯「在衣物子選單」與「排入佇列」，補全（上游把 clothing item submenu 改為 clothing submenu）。"
+  },
+  "ItemName.json|Base.WaterPotForgedBuckwheat": {
+    "as1_value": "荞麦 (锻造平底锅)",
+    "value": "荞麦 (粗制蒸煮锅)",
+    "reason": "2026-10-05 #711：Forged Pot 是本體 Base.PotForged「粗制蒸煮锅」，原譯「锻造平底锅」連鍋具種類都譯錯；與同 MOD 本批新增的「肉冻 (粗制蒸煮锅)」一致。"
   }
 }

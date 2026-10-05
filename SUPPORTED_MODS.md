@@ -440,7 +440,7 @@
 | [Auto Forage](https://steamcommunity.com/sharedfiles/filedetails/?id=3478924012) | — | — | `GUNS_AutoForage` | 24 | — | — |
 | [[B41/B42] Hephas Stalker PDA](https://steamcommunity.com/sharedfiles/filedetails/?id=3479108127) | — | — | `HephasStalkerPDA`, `HephasStalkerPDA_PersonalLog` | 32 | — | — |
 | [JM3 propane](https://steamcommunity.com/sharedfiles/filedetails/?id=3479641945) | JM3 丙烷系統 | 新增丙烷相關機制，可查看容量、剩餘燃料並填充丙烷罐。 | `JM3_propane` | 6 | — | — |
-| [Willowbrook Bastion!〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3479667649) | 柳溪堡壘 | 位於馬爾德勞西側的 2x2 堡壘地圖，另附 2026 版。 | `Willowbrook Bastion!`, `Willowbrook Bastion! 2` | 4 | — | — |
+| [Willowbrook Bastion!〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3479667649) | 柳溪堡壘 | 位於馬爾德勞西側的 2x2 堡壘地圖（另附 2026 版），內含中式冷兵器、21 式戰術裝備、消音器與鍛造配方。 | `Willowbrook Bastion!`, `Willowbrook Bastion! 2` | 146 | — | — |
 | [The Division Equipment [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3479867929) | 全境封鎖裝備 | 新增《全境封鎖》主題裝備，含背包、臂章與戰術面罩等。 | `SHDEquipment` | 92 | — | — |
 | [Quality of Life Modpack](https://steamcommunity.com/sharedfiles/filedetails/?id=3480305875) | 生活品質模組包 | 多項便利功能合集，含防毒面具濾芯更換與每日擊殺統計等。 | `twistresting` | 193 | — | — |
 | [Constown (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3480990544) | 康斯鎮 | 肯塔基州諾克斯縣的小鎮地圖，四線道公路貫穿鎮中心，有汽車旅館、修車廠與歇業店舖。 | `Constown42` | 142 | ⚠️ ≥2 | — |

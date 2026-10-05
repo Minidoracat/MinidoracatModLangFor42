@@ -4,6 +4,29 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 12 個 MOD 新增的繁簡中文，共 866 項。** Extraction Mode（#715，車庫的車輛／拖車部署與收回、PvP 部署小隊、藏身點住戶與訪客邀請、以物易物服務與交易物品，396 項）、Willowbrook Bastion!（#704，本批起整包收錄：大夏龍雀、漢環首刀、苗刀等中式冷兵器與招式說明、21 式戰術裝備、消音器、鍛造配方與沙盒設定，142 項）、Wounds Overhaul（#713，心搏停止與電擊器、取出子彈與修剪傷口小遊戲、昏厥、依體重計算血量，83 項）、The Butcher's Table（#711，肝、心、腎、牛肚、舌等內臟料理，以及肉凍、骨頭湯、俄式鹽漬豬油等配方，58 項）、Try Before You Wear（#716，試穿預覽的舒適度、行動力、姿勢與重設選項，58 項）、Extended categories（#707，改版後的盒裝／箱裝分類與飲品、乳製品等新分類，55 項）、Snake's ModPack（#717，可攀爬梯子的右鍵選單、彈藥製造的背心與背包、地圖彩蛋鑰匙卡，34 項）、Cone Vision Outline（#708，17 項沙盒設定）、Sauce Tooltips（#710，鑰匙可開啟的房間與位置提示，9 項）、PhunZones 2（#709，區域內 6 種變異體的生成率與說明，7 項）、VorpallySauced（#706，抹除彈匣上的「悸動」銘印，5 項）、Smart Radial Menu（#705，一鍵關閉所有響鈴鬧鐘，2 項）。
+  > 技術要點：Willowbrook Bastion! 是 own 目錄，使用者 2026-10-05 核准由地圖選單擴大為整包；作者自附簡中，比照 2026-10-04 裁定標 `cn_source: upstream`，CN 逐字照抄上游 `Translate/CN` 寫進 own 目錄，CH 以作者簡中為主、EN 為輔寫進 `sources/ch`。其餘 724 項落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫。新鍵皆以有效 CN 值登記 `ch_review_state`。6 路翻譯後經 Codex、Grok 6 路對抗複核，45 條修正提議採納 41 條（Extraction Mode 的 extraction transaction 是撤離作業而非交易、server authority 是「由伺服器執行」而非權限、owner unavailable 是無法取得車主身分；Willowbrook 戰術棒球帽補上「帽簷朝前」、[天道] 補上不會被處決、容器掉落開關控制的是武器不是容器；The Butcher's Table 的 Aspic (Pot) 依內容物在前寫成「肉凍 (蒸煮鍋)」、Forged Pot 照本體「粗製蒸煮鍋」；Wounds Overhaul 的 ripped sheets 照本體「碎布」等），退回 4 條（Willowbrook 頭盔與帽子沿用作者的「星空迷彩」、停用前綴沿用作者與英文的「灰燼使者」、交易清單照上游英文寫醫用酒精、台灣「以下／以上」本就含本數）。lint 另抓出 registration 誤用「登錄」、「查看」「點擊」共 10 項改為「登記」「檢視」「點選」；client 的「用戶端」登記 lint 豁免。Try Before You Wear 有 1 鍵的 `UI.json` 與 `UI_EN.txt` 只差引號跳脫，prep 取到 `.txt` 值，`en` 錨點改為執行期 json 值。
+
+### Changed
+
+- **依上游英文改值重譯 14 項。** Snake's ModPack 4 項地圖彩蛋獎勵畫面（上游由西班牙文改為英文，物品名對齊為「邪教徒鐮刀」「獻祭匕首」，#717）；Extraction Mode 2 項交易物品（肥皂與維他命改為整瓶清潔劑與醫用酒精，#715）；Wounds Overhaul 2 項（傷口面板改顯示剩餘血量、手動縫合設定改名為縫合小遊戲，#713）；Plysken Attachments Reborn 2 項小型容器掛載欄位補上可掛的袋子、用品包、收納盒（#712）；Smart Radial Menu 3 項（裝填／卸彈改用本體用語「清空彈匣」，補上簡中原本漏譯的子選單與排入佇列，#705）；Try Before You Wear 1 項手把按鍵提示補上款式與選項鍵（#716）。
+  > 技術要點：own 層 6 鍵連 `en` 錨點更新，`own_anchor_drift` 6→0；As1 衍生層 8 鍵改 `sources/ch`，其中 7 鍵 CN 走 `cn_overrides`（帶 `as1_value` 錨點），皆登記 `ch_review_state`。The Butcher's Table 的 Dry Chicken 與 Smart Radial Menu 另 2 項上游只改字或標點，現行譯文不變，同樣登記已審。
+- **The Butcher's Table 的「蕎麥 (鍛造平底鍋)」改為「蕎麥 (粗製蒸煮鍋)」。** Forged Pot 是本體的粗製蒸煮鍋，原譯連鍋具都譯錯；現在與本批新增的「肉凍 (粗製蒸煮鍋)」一致。
+  > 技術要點：As1 衍生層 1 鍵改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點），登記 `ch_review_state`。
+- **2 個與其他 MOD 共用的鍵完成裁決，譯名不變。** Extended categories 刪掉自己的「槍托」分類後，其餘 8 個 MOD 的英文都沒變，維持「武器配件-槍托」；The Butcher's Table 的 Dry Fish Fillet 與 Food Drying 的 Dry Fish 都是風乾魚肉的配方，維持「風乾魚肉」。
+  > 技術要點：`owner_conflict_decisions.json` 重簽 `IG_UI|IGUI_ItemCat_Stock`、新增 `Recipes|DryFish`（translate），`OWNER_CONFLICTS.md` 重生。
+
+### Removed
+
+- **移除 92 項上游已刪除、所有 MOD 都不再使用的原創翻譯。** Extraction Mode 63 項（改版前的車庫提示、送貨容器與撤離訊息、暖氣目標溫度設定等）、Extended categories 29 項（舊的彈殼材料盒裝／箱裝分類、敲製石器的武器複合分類，以及弓、彈鼓、小飾品、對講機分類）。Extended categories 會用「這個分類有沒有翻譯」決定要不要再細分，殘留的舊譯名會讓中文玩家多出英文玩家沒有的分類，這次一併消除。
+  > 技術要點：以 `sources/en` 全庫與 tracker state 確認沒有任何 owner 仍定義這些鍵，並對 steamcmd 抓下的現行 Workshop 內容查 Lua／script 引用，含動態組鍵（Extraction Mode 的 `IGUI_ExtractionMode_Barter_` 組字、Extended categories 的 `CAEC_Utils.isKnownCategory` 以 `getTextOrNull` 探測分類）；`ch_review_state` 同步移除 19 筆。As1 衍生層的上游刪除鍵（Extended categories 137、Extraction Mode 46、Try Before You Wear 1）依同步流程保留。
+
+其餘追蹤單無需另外變更：Modern Firearms System Community Fix Patch（#714）新增的 5 個拆解與修理包配方本來就已出貨；Herbalist（#703）的 NoBiofuel 版把配方分類鍵改回已出貨的 `IGUI_CraftCategory_Herbalist`，舊鍵與「玉米餅 (未烹飪)」仍由主版 Herbalist 使用，保留。
+
 ## [42.21.0-1.40.0] - 2026-10-04
 
 ### Added

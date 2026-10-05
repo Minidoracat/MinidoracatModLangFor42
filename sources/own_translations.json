@@ -9307,6 +9307,121 @@
     "en": "Vehicle must be completely stopped",
     "ch": "車輛必須完全停止",
     "cn": "车辆必须完全停止"
+   },
+   "ContextMenu_BlockedLadders": {
+    "en": "The ladders do not have a floor at both ends.",
+    "ch": "梯子的兩端並非都有地板.",
+    "cn": "梯子两端并非都有地板."
+   },
+   "ContextMenu_BlockedLaddersDirection": {
+    "en": "Could not determine the direction of the ladder.",
+    "ch": "無法判斷梯子的方向.",
+    "cn": "无法判断梯子的方向."
+   },
+   "ContextMenu_BlockedManholeCover": {
+    "en": "The manhole cover is blocked.",
+    "ch": "人孔蓋被擋住了.",
+    "cn": "井盖被挡住了."
+   },
+   "ContextMenu_BlockedTrapdoor": {
+    "en": "The trapdoor is blocked.",
+    "ch": "活板門被擋住了.",
+    "cn": "活板门被挡住了."
+   },
+   "ContextMenu_GoDownManhole": {
+    "en": "Go down the manhole",
+    "ch": "爬下人孔",
+    "cn": "爬下井口"
+   },
+   "ContextMenu_GoDownTrapdoor": {
+    "en": "Go down the trapdoor",
+    "ch": "從活板門爬下去",
+    "cn": "从活板门爬下去"
+   },
+   "ContextMenu_GoUpTrapdoor": {
+    "en": "Go up the trapdoor",
+    "ch": "從活板門爬上去",
+    "cn": "从活板门爬上去"
+   },
+   "ContextMenu_PlayerPositionReset": {
+    "en": "Player position reset.",
+    "ch": "玩家位置已重設.",
+    "cn": "玩家位置已重置."
+   },
+   "ContextMenu_UseLadders": {
+    "en": "Use ladders",
+    "ch": "使用梯子",
+    "cn": "使用梯子"
+   },
+   "ContextMenu_InspectTT": {
+    "en": "Inspect for more information.",
+    "ch": "檢查以取得更多資訊.",
+    "cn": "检查以获取更多信息."
+   },
+   "ContextMenu_PickUpKeyCard": {
+    "en": "Pick Up Key Card",
+    "ch": "撿起鑰匙卡",
+    "cn": "捡起钥匙卡"
+   },
+   "ContextMenu_Hue": {
+    "en": "Hue",
+    "ch": "色相",
+    "cn": "色相"
+   },
+   "ContextMenu_Other": {
+    "en": "Random",
+    "ch": "隨機",
+    "cn": "随机"
+   },
+   "ContextMenu_PaintColor": {
+    "en": "Color",
+    "ch": "顏色",
+    "cn": "颜色"
+   },
+   "ContextMenu_PaintCompare": {
+    "en": "Compare",
+    "ch": "比較",
+    "cn": "对比"
+   },
+   "ContextMenu_PaintCompareTT": {
+    "en": "Hold to see the original color.",
+    "ch": "按住以檢視原本的顏色.",
+    "cn": "按住以查看原来的颜色."
+   },
+   "ContextMenu_PaintCurrent": {
+    "en": "Current",
+    "ch": "目前",
+    "cn": "当前"
+   },
+   "ContextMenu_PaintNew": {
+    "en": "New",
+    "ch": "新的",
+    "cn": "新的"
+   },
+   "ContextMenu_PaintPalette": {
+    "en": "Palette",
+    "ch": "調色盤",
+    "cn": "调色板"
+   },
+   "ContextMenu_PaintReset": {
+    "en": "Restore",
+    "ch": "還原",
+    "cn": "还原"
+   },
+   "ContextMenu_PaintWarning": {
+    "en": "Selecting this option will reduce the contents of the automotive paint machine to 0.",
+    "ch": "選擇此選項會將汽車噴漆機的內容物歸零.",
+    "cn": "选择此选项会将汽车喷漆机的内容物清零."
+   },
+   "ContextMenu_Saturation": {
+    "en": "Saturation",
+    "ch": "飽和度",
+    "cn": "饱和度"
+   },
+   "ContextMenu_Value": {
+    "en": "Brightness",
+    "ch": "亮度",
+    "cn": "亮度"
    }
   },
   "Fluids.json": {
@@ -19373,11 +19488,6 @@
     "cn": "指定交付容器",
     "en": "Assign Delivery Container"
    },
-   "IGUI_ExtractionMode_AssignDeliveryContainerTooltip": {
-    "ch": "選擇藏身點一樓的任何傢俱容器. 若它被移動或移除, 請重新指定交付容器.",
-    "cn": "选择藏身点一楼的任意家具容器. 若它被移动或移除, 请重新指定交付容器.",
-    "en": "Select any furniture container on the hideout's ground floor. If it is moved or removed, assign a delivery container again."
-   },
    "IGUI_ExtractionMode_BoardExtraction": {
     "ch": "登上撤離直升機",
     "cn": "登上撤离直升机",
@@ -19477,11 +19587,6 @@
     "ch": "車庫控制台只在你於藏身點內保持存活時可用.",
     "cn": "车库控制台仅在你于藏身点内存活时可用.",
     "en": "Garage controls are only available while alive in the hideout."
-   },
-   "IGUI_ExtractionMode_Error_GarageKeyProtected": {
-    "ch": "為保護車輛鑰匙, 車輛入庫已取消: %1.",
-    "cn": "为保护车辆钥匙, 车辆入库已取消: %1.",
-    "en": "Vehicle storage was cancelled to protect its ignition key: %1."
    },
    "IGUI_ExtractionMode_Error_GarageNoActive": {
     "ch": "藏身點目前沒有使用中的車輛.",
@@ -19648,16 +19753,6 @@
     "cn": "交互以打开车库控制台",
     "en": "Interact to open the Garage Controls"
    },
-   "IGUI_ExtractionMode_GarageControlsOpenTooltip": {
-    "ch": "開啟車庫控制台.",
-    "cn": "打开车库控制台.",
-    "en": "Open the garage controls."
-   },
-   "IGUI_ExtractionMode_GarageControlsWalkTooltip": {
-    "ch": "走到標示出的格子並使用車庫控制台.",
-    "cn": "走到标示出的格子并使用车库控制台.",
-    "en": "Walk to the outlined tile and use the garage controls."
-   },
    "IGUI_ExtractionMode_GarageDeleteStored": {
     "ch": "刪除已入庫車輛",
     "cn": "删除已入库车辆",
@@ -19668,11 +19763,6 @@
     "cn": "删除拖车",
     "en": "DELETE TRAILER"
    },
-   "IGUI_ExtractionMode_GarageDoorLocked": {
-    "ch": "車庫已鎖上. 撤離一輛車即可解鎖.",
-    "cn": "车库已锁上. 撤离一辆车即可解锁.",
-    "en": "The garage is locked. Extract a vehicle to unlock it."
-   },
    "IGUI_ExtractionMode_GarageEmergencyClear": {
     "ch": "緊急: 清除藏身點車輛",
     "cn": "紧急: 清除藏身点车辆",
@@ -19682,11 +19772,6 @@
     "ch": "緊急清理\n\n要永久刪除目前藏身點內所有實體車輛與拖車嗎? 那些世界車輛內的所有貨物也會一併銷毀. 已入庫的車庫紀錄不會被刪除.\n\n只在遊戲崩潰留下無主車輛模型時, 才用這個功能來修復.",
     "cn": "紧急清理\n\n要永久删除当前藏身点内所有实体车辆与拖车吗? 那些世界车辆内的所有货物也会一并销毁. 已入库的车库记录不会被删除.\n\n仅在游戏崩溃留下无主车辆模型时, 才用这个功能来修复.",
     "en": "EMERGENCY CLEANUP\n\nPermanently delete every physical vehicle and trailer currently inside the hideout? All cargo inside those world vehicles will also be destroyed. Stored garage records are not deleted.\n\nUse this only to recover from a crash that left an orphaned vehicle model."
-   },
-   "IGUI_ExtractionMode_GarageEmergencyTooltip": {
-    "ch": "永久移除藏身點內無主的實體車輛與拖車, 且不刪除已入庫的車庫紀錄.",
-    "cn": "永久移除藏身点内无主的实体车辆与拖车, 且不删除已入库的车库记录.",
-    "en": "Permanently remove orphaned physical vehicles and trailers from inside the hideout without deleting stored garage records."
    },
    "IGUI_ExtractionMode_GarageEmergencyWait": {
     "ch": "進行緊急清理前, 請正常收回受追蹤的使用中車輛, 或等待其使用中狀態解除.",
@@ -19823,181 +19908,6 @@
     "cn": "个人车库",
     "en": "PERSONAL GARAGE"
    },
-   "IGUI_ExtractionMode_GarageTooltipAlreadyReturning": {
-    "ch": "使用中的車輛已經在收回了.",
-    "cn": "使用中的车辆已经在收回了.",
-    "en": "The active vehicle is already being returned."
-   },
-   "IGUI_ExtractionMode_GarageTooltipDelete": {
-    "ch": "永久刪除所選的已入庫車輛與其中所有貨物. 使用中的車輛必須先收回.",
-    "cn": "永久删除所选的已入库车辆与其中所有货物. 使用中的车辆必须先收回.",
-    "en": "Permanently delete the selected stored vehicle and all cargo inside it. Active vehicles must be returned first."
-   },
-   "IGUI_ExtractionMode_GarageTooltipDeleteShort": {
-    "ch": "確認後永久移除所選的車輛紀錄.",
-    "cn": "确认后永久移除所选的车辆记录.",
-    "en": "Permanently remove the selected vehicle record after confirmation."
-   },
-   "IGUI_ExtractionMode_GarageTooltipDeleteTrailer": {
-    "ch": "永久刪除所選的已入庫拖車與其中所有貨物.",
-    "cn": "永久删除所选的已入库拖车与其中所有货物.",
-    "en": "Permanently delete the selected stored trailer and all cargo inside it."
-   },
-   "IGUI_ExtractionMode_GarageTooltipDeploy": {
-    "ch": "將所選車輛部署到藏身點的車庫停位.",
-    "cn": "将所选车辆部署到藏身点的车库停位.",
-    "en": "Deploy the selected vehicle into the hideout garage bay."
-   },
-   "IGUI_ExtractionMode_GarageTooltipDeployTrailer": {
-    "ch": "生成所選拖車, 並自動掛接到使用中的車輛.",
-    "cn": "生成所选拖车, 并自动挂接到使用中的车辆.",
-    "en": "Spawn the selected trailer and automatically attach it to the active vehicle."
-   },
-   "IGUI_ExtractionMode_GarageTooltipDriverAlreadyOwner": {
-    "ch": "目前的駕駛已經和你共用車庫所有權.",
-    "cn": "当前的驾驶员已经和你共享车库所有权.",
-    "en": "The current driver already shares your garage ownership."
-   },
-   "IGUI_ExtractionMode_GarageTooltipDriverRequired": {
-    "ch": "必須有另一名玩家坐上駕駛座, 才能轉移所有權.",
-    "cn": "必须有另一名玩家坐上驾驶座, 才能转移所有权.",
-    "en": "Another player must sit in the driver's seat before ownership can be transferred."
-   },
-   "IGUI_ExtractionMode_GarageTooltipInactiveSwap": {
-    "ch": "其他玩家的車輛只能在其閒置計時結束後才能更換.",
-    "cn": "其他玩家的车辆只能在其闲置计时结束后才能更换.",
-    "en": "Another player's vehicle can only be swapped after its inactivity timer expires."
-   },
-   "IGUI_ExtractionMode_GarageTooltipNoActiveReturn": {
-    "ch": "藏身點沒有使用中的車輛可以收回.",
-    "cn": "藏身点没有使用中的车辆可以收回.",
-    "en": "There is no active hideout vehicle to return."
-   },
-   "IGUI_ExtractionMode_GarageTooltipNoActiveTrailer": {
-    "ch": "藏身點沒有使用中的拖車可以收回.",
-    "cn": "藏身点没有使用中的拖车可以收回.",
-    "en": "There is no active hideout trailer to return."
-   },
-   "IGUI_ExtractionMode_GarageTooltipNoTransferVehicle": {
-    "ch": "藏身點沒有使用中的車輛可以轉移.",
-    "cn": "藏身点没有使用中的车辆可以转移.",
-    "en": "There is no active hideout vehicle to transfer."
-   },
-   "IGUI_ExtractionMode_GarageTooltipOccupiedSwap": {
-    "ch": "其他玩家使用中的車輛有人乘坐, 無法更換.",
-    "cn": "其他玩家使用中的车辆有人乘坐, 无法更换.",
-    "en": "Another player's active vehicle is occupied and cannot be swapped."
-   },
-   "IGUI_ExtractionMode_GarageTooltipReserved": {
-    "ch": "使用中的車輛已為突襲部署保留.",
-    "cn": "使用中的车辆已为突袭部署保留.",
-    "en": "The active vehicle is reserved for raid deployment."
-   },
-   "IGUI_ExtractionMode_GarageTooltipReservedReturn": {
-    "ch": "你的車輛已為突襲部署保留, 無法收回.",
-    "cn": "你的车辆已为突袭部署保留, 无法收回.",
-    "en": "Your vehicle is reserved for raid deployment and cannot be returned."
-   },
-   "IGUI_ExtractionMode_GarageTooltipReservedSwap": {
-    "ch": "使用中的車輛已為某次突襲部署保留, 無法更換.",
-    "cn": "使用中的车辆已为某次突袭部署保留, 无法更换.",
-    "en": "The active vehicle is reserved for a raid deployment and cannot be swapped."
-   },
-   "IGUI_ExtractionMode_GarageTooltipReturn": {
-    "ch": "將使用中的車輛與目前所有貨物存回你的車庫.",
-    "cn": "将使用中的车辆与当前所有货物保存回你的车库.",
-    "en": "Save the active vehicle and all current cargo back into your garage."
-   },
-   "IGUI_ExtractionMode_GarageTooltipReturnOwnerOnly": {
-    "ch": "只有使用中車輛的擁有者才能手動收回.",
-    "cn": "只有使用中车辆的所有者才能手动收回.",
-    "en": "Only the active vehicle's owner can return it manually."
-   },
-   "IGUI_ExtractionMode_GarageTooltipReturnTrailer": {
-    "ch": "儲存並移除你使用中的拖車.",
-    "cn": "保存并移除你使用中的拖车.",
-    "en": "Save and despawn your active trailer."
-   },
-   "IGUI_ExtractionMode_GarageTooltipReturnTrailerOwnerOnly": {
-    "ch": "只有使用中拖車的擁有者才能將它收回.",
-    "cn": "只有使用中拖车的所有者才能将它收回.",
-    "en": "Only the active trailer's owner can return it."
-   },
-   "IGUI_ExtractionMode_GarageTooltipReturningToOwner": {
-    "ch": "使用中的車輛已經在收回其擁有者的車庫了.",
-    "cn": "使用中的车辆已经在收回其所有者的车库了.",
-    "en": "The active vehicle is already being returned to its owner's garage."
-   },
-   "IGUI_ExtractionMode_GarageTooltipSelectDelete": {
-    "ch": "選擇要刪除的已入庫車輛. 刪除某輛車前, 請先收回使用中的車輛.",
-    "cn": "选择要删除的已入库车辆. 删除某辆车前, 请先收回使用中的车辆.",
-    "en": "Select a stored vehicle to delete. Return an active vehicle before deleting that vehicle."
-   },
-   "IGUI_ExtractionMode_GarageTooltipSelectDeploy": {
-    "ch": "選擇要部署的已入庫車輛.",
-    "cn": "选择要部署的已入库车辆.",
-    "en": "Select a stored vehicle to deploy."
-   },
-   "IGUI_ExtractionMode_GarageTooltipSelectSwap": {
-    "ch": "從你的已入庫車輛中選一輛換上.",
-    "cn": "从你的已入库车辆中选一辆换上.",
-    "en": "Select one of your stored vehicles to swap in."
-   },
-   "IGUI_ExtractionMode_GarageTooltipSelectTrailer": {
-    "ch": "請先選擇一輛已入庫的拖車.",
-    "cn": "请先选择一辆已入库的拖车.",
-    "en": "Select a stored trailer first."
-   },
-   "IGUI_ExtractionMode_GarageTooltipSwapInactive": {
-    "ch": "將閒置的車輛收回給其擁有者, 並部署你所選的車輛.",
-    "cn": "将闲置的车辆收回给其所有者, 并部署你所选的车辆.",
-    "en": "Return the inactive vehicle to its owner and deploy your selected vehicle."
-   },
-   "IGUI_ExtractionMode_GarageTooltipSwapOwn": {
-    "ch": "收回你使用中的車輛, 並部署所選車輛.",
-    "cn": "收回你使用中的车辆, 并部署所选车辆.",
-    "en": "Return your active vehicle and deploy the selected vehicle."
-   },
-   "IGUI_ExtractionMode_GarageTooltipTrailerNeedsVehicle": {
-    "ch": "選擇拖車前請先部署一輛車.",
-    "cn": "选择拖车前请先部署一辆车.",
-    "en": "Deploy a vehicle before selecting a trailer."
-   },
-   "IGUI_ExtractionMode_GarageTooltipTrailerOwnerOnly": {
-    "ch": "只有使用中拖車的擁有者才能更換它.",
-    "cn": "只有使用中拖车的所有者才能更换它.",
-    "en": "Only the active trailer's owner can swap it."
-   },
-   "IGUI_ExtractionMode_GarageTooltipTransactionPending": {
-    "ch": "這輛車還在完成它的撤離交易.",
-    "cn": "这辆车还在完成它的撤离交易.",
-    "en": "This vehicle is still completing its extraction transaction."
-   },
-   "IGUI_ExtractionMode_GarageTooltipTransferOwnerOnly": {
-    "ch": "只有使用中車輛的擁有者才能轉移它.",
-    "cn": "只有使用中车辆的所有者才能转移它.",
-    "en": "Only the active vehicle's owner can transfer it."
-   },
-   "IGUI_ExtractionMode_GarageTooltipTransferToDriver": {
-    "ch": "將這輛使用中的車輛轉移給目前的駕駛 %1.",
-    "cn": "将这辆使用中的车辆转移给当前的驾驶员 %1.",
-    "en": "Transfer this active vehicle to current driver %1."
-   },
-   "IGUI_ExtractionMode_GarageTooltipTransition": {
-    "ch": "上一輛使用中的車輛還在移除中. 車庫轉換完成前無法部署任何車輛.",
-    "cn": "上一辆使用中的车辆还在移除中. 车库转换完成前无法部署任何车辆.",
-    "en": "The previous active vehicle is still despawning. No vehicle can be deployed until the garage transition finishes."
-   },
-   "IGUI_ExtractionMode_GarageTooltipWaitDelete": {
-    "ch": "刪除車輛前, 請先等目前的車輛收回或更換完成.",
-    "cn": "删除车辆前, 请先等当前的车辆收回或更换完成.",
-    "en": "Wait for the current vehicle return or swap to finish before deleting a vehicle."
-   },
-   "IGUI_ExtractionMode_GarageTooltipYourVehicleReturning": {
-    "ch": "你使用中的車輛已經在收回了.",
-    "cn": "你使用中的车辆已经在收回了.",
-    "en": "Your active vehicle is already being returned."
-   },
    "IGUI_ExtractionMode_GarageTrailer": {
     "ch": "拖車",
     "cn": "拖车",
@@ -20032,11 +19942,6 @@
     "ch": "車輛與貨物將留在原地! 回到邊界內即可取消.",
     "cn": "车辆和货物将留在原地! 回到边界内即可取消.",
     "en": "Vehicle and cargo stay behind! Return inside to cancel."
-   },
-   "IGUI_ExtractionMode_HordeWavesComplete": {
-    "ch": "威脅波次: 已全部出現",
-    "cn": "威胁波次: 已全部出现",
-    "en": "THREAT WAVES: ALL DEPLOYED"
    },
    "IGUI_ExtractionMode_HordeWavesExpected": {
     "ch": "預計威脅: %1 之後的某個時間",
@@ -20105,11 +20010,6 @@
     "ch": "原本應有一批交付抵達, 但你尚未設定交付容器.",
     "cn": "原本应有一批交付抵达, 但你尚未设置交付容器.",
     "en": "A delivery was supposed to arrive, but you haven't set a delivery container."
-   },
-   "IGUI_ExtractionMode_Message_DeliveryContainerRequired": {
-    "ch": "有一批後勤補給正在等待. 請在藏身點指定一個家具容器來接收.",
-    "cn": "有一批后勤补给正在等待. 请在藏身点指定一个家具容器来接收.",
-    "en": "A logistics shipment is waiting. Assign a furniture container in the hideout to receive it."
    },
    "IGUI_ExtractionMode_Message_GarageDeleted": {
     "ch": "已刪除 %1 以及其中存放的所有貨物.",
@@ -20197,11 +20097,6 @@
     "cn": "新的交付已抵达!",
     "en": "A new delivery has arrived!"
    },
-   "IGUI_ExtractionMode_Message_PendingDeliveryPlaced": {
-    "ch": "%1 件待交付物品已放入指定的容器.",
-    "cn": "%1 件待交付物品已放入指定的容器.",
-    "en": "%1 pending delivery item(s) were placed in the assigned container."
-   },
    "IGUI_ExtractionMode_Message_RaidRoadsClosed": {
     "ch": "遊蕩的屍潮封鎖了道路. 從邊界脫離只會帶回倖存者; 車輛與車上貨物都會留在原地.",
     "cn": "游荡的尸潮封锁了道路. 从边界脱离只会带回幸存者; 车辆和车内货物都会留在原地.",
@@ -20266,26 +20161,6 @@
     "en": "VEHICLE ROUTE BLOCKED: standard deployment remains available; vehicles cannot enter or be recovered at marked locations.",
     "ch": "車輛路線封鎖: 標準部署仍可使用; 車輛無法進入或從標記的地點帶回.",
     "cn": "车辆路线封锁: 标准部署仍可使用; 车辆无法进入或从标记的地点带回."
-   },
-   "IGUI_ExtractionMode_Shipment_AmmoEquipment": {
-    "ch": "彈藥和裝備補給",
-    "cn": "弹药和装备补给",
-    "en": "ammunition and equipment shipments"
-   },
-   "IGUI_ExtractionMode_Shipment_AmmoMedicalEquipment": {
-    "ch": "彈藥、醫療和裝備補給",
-    "cn": "弹药、医疗和装备补给",
-    "en": "ammunition, medical, and equipment shipments"
-   },
-   "IGUI_ExtractionMode_Shipment_Equipment": {
-    "ch": "裝備補給",
-    "cn": "装备补给",
-    "en": "equipment shipment"
-   },
-   "IGUI_ExtractionMode_Shipment_MedicalEquipment": {
-    "ch": "醫療和裝備補給",
-    "cn": "医疗和装备补给",
-    "en": "medical and equipment shipments"
    },
    "IGUI_ExtractionMode_TownChoiceActiveRaid": {
     "ch": "%1  |  派系突襲 #%2 進行中",
@@ -20831,21 +20706,6 @@
     "ch": "技工",
     "cn": "技工",
     "en": "Mechanics"
-   },
-   "IGUI_ExtractionMode_VehicleCorpseCargoHint": {
-    "ch": "無法安全搬動這具屍體. 請先回到邊界內再試一次.",
-    "cn": "无法安全搬动这具尸体. 请先回到边界内再试一次.",
-    "en": "The body could not be moved safely. Return inside the boundary before trying again."
-   },
-   "IGUI_ExtractionMode_VehicleExtractionBlocked": {
-    "ch": "車輛撤離已封鎖",
-    "cn": "车辆撤离已封锁",
-    "en": "VEHICLE EXTRACTION BLOCKED"
-   },
-   "IGUI_ExtractionMode_VehicleExtractionRetryHint": {
-    "ch": "請回到邊界範圍內再重試.",
-    "cn": "请回到边界范围内再重试.",
-    "en": "Return inside the boundary before trying again."
    },
    "IGUI_ExtractionMode_VehicleReadyFuel": {
     "ch": "車輛進場  |  就緒 %1/%2  |  燃料 %3/%4 L",
@@ -35292,16 +35152,6 @@
     "ch": "槍枝配燈",
     "cn": "战术手电"
    },
-   "IGUI_ExtractionMode_Barter_graves_money_for_pack_Offered_1": {
-    "en": "Money",
-    "ch": "紙鈔",
-    "cn": "纸币"
-   },
-   "IGUI_ExtractionMode_Barter_graves_money_for_pack_Received_1": {
-    "en": "Military Backpack",
-    "ch": "軍用背包",
-    "cn": "军用背包"
-   },
    "IGUI_ExtractionMode_Barter_graves_money_for_reddot_Offered_1": {
     "en": "Money",
     "ch": "紙鈔",
@@ -35378,14 +35228,14 @@
     "cn": "水瓶或罐装汽水"
    },
    "IGUI_ExtractionMode_Barter_layne_soap_for_vitamins_Offered_1": {
-    "en": "Soap (Not Empty)",
-    "ch": "肥皂 (非空)",
-    "cn": "肥皂 (非空)"
+    "en": "Full Bottle of Cleaning Liquid",
+    "ch": "清潔劑 (整瓶)",
+    "cn": "清洁液 (整瓶)"
    },
    "IGUI_ExtractionMode_Barter_layne_soap_for_vitamins_Received_1": {
-    "en": "Vitamins",
-    "ch": "維他命",
-    "cn": "维生素"
+    "en": "Bottle of Rubbing Alcohol",
+    "ch": "瓶裝醫用酒精",
+    "cn": "瓶装医用酒精"
    },
    "IGUI_ExtractionMode_Barter_layne_toilet_paper_for_sewing_Offered_1": {
     "en": "Toilet Paper (Not Empty)",
@@ -35631,26 +35481,6 @@
     "en": "Upgrades at %1 Trust",
     "ch": "信任達 %1 時升級",
     "cn": "信任达 %1 时升级"
-   },
-   "IGUI_ExtractionMode_Tooltip_DebugRemoveUpgrade": {
-    "en": "DEBUG: Remove this upgrade from the shared hideout. Materials are not refunded; existing deliveries, furniture, and dependent upgrades remain.",
-    "ch": "除錯: 從共享藏身點移除此升級. 材料不會退還; 現有的交付、家具與依賴它的升級都會保留.",
-    "cn": "调试: 从共享藏身点移除此升级. 材料不会退还; 现有的交付、家具与依赖它的升级都会保留."
-   },
-   "IGUI_ExtractionMode_Tooltip_UpgradeMaterialsMissingHideoutSupply": {
-    "en": "Required materials were not found in your inventory or loaded hideout furniture containers.",
-    "ch": "在你的物品欄或已載入的藏身點家具容器中找不到所需材料.",
-    "cn": "在你的物品栏或已加载的藏身点家具容器中找不到所需材料."
-   },
-   "IGUI_ExtractionMode_Tooltip_VehicleRouteBlocked": {
-    "en": "Roaming Hordes covered the roads. Standard deployment remains available. Vehicles cannot enter or be recovered from this location.",
-    "ch": "遊蕩的屍潮佔滿了道路. 標準部署仍可使用. 車輛無法進入此地點, 也無法從此地點帶回.",
-    "cn": "游荡的尸潮占满了道路. 标准部署仍可使用. 车辆无法进入此地点, 也无法从此地点带回."
-   },
-   "IGUI_ExtractionMode_UpgradeReferenceSupplySnapshot": {
-    "en": "READ ONLY DURING RAID - Hideout container counts use the latest completed server snapshot.",
-    "ch": "突襲期間唯讀 - 藏身點容器內的材料數量採用伺服器最近一次完成的快照.",
-    "cn": "突袭期间只读 - 藏身点容器内的材料数量采用服务器最近一次完成的快照."
    },
    "IGUI_ExtractionMode_UpgradesSubtitleHideoutSupply": {
     "en": "Materials are taken from your inventory first, then loaded hideout furniture containers.",
@@ -36940,24 +36770,24 @@
     "cn": "轮胎机"
    },
    "IGUI_Reward_Guadana": {
-    "en": "<H1> SECRETO OBTENIDO <BR> <IMAGECENTRE:Reward_Guadana> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>Has obtenido la guadaña!!! <LINE> <H1>",
-    "ch": "<H1> 獲得秘密 <BR> <IMAGECENTRE:Reward_Guadana> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你獲得了大鎌刀!!! <LINE> <H1>",
-    "cn": "<H1> 获得秘密 <BR> <IMAGECENTRE:Reward_Guadana> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了大镰刀!!! <LINE> <H1>"
+    "en": "<H1> SECRET OBTAINED <BR> <IMAGECENTRE:Reward_Guadana> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>You have obtained the cultist's scythe!!! <LINE> <H1>",
+    "ch": "<H1> 獲得秘密 <BR> <IMAGECENTRE:Reward_Guadana> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你獲得了邪教徒鐮刀!!! <LINE> <H1>",
+    "cn": "<H1> 获得秘密 <BR> <IMAGECENTRE:Reward_Guadana> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了邪教徒镰刀!!! <LINE> <H1>"
    },
    "IGUI_Reward_MorningStar": {
-    "en": "<H1> SECRETO OBTENIDO <BR> <BR> <IMAGECENTRE:Reward_MorningStar> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>Has obtenido el lucero del alba!!! <LINE> <H1>",
+    "en": "<H1> SECRET OBTAINED <BR> <BR> <IMAGECENTRE:Reward_MorningStar> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>You have obtained the Morning Star!!! <LINE> <H1>",
     "ch": "<H1> 獲得秘密 <BR> <BR> <IMAGECENTRE:Reward_MorningStar> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你獲得了晨星錘!!! <LINE> <H1>",
     "cn": "<H1> 获得秘密 <BR> <BR> <IMAGECENTRE:Reward_MorningStar> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了晨星锤!!! <LINE> <H1>"
    },
    "IGUI_Reward_SacrificialDagger": {
-    "en": "<H1> SECRETO OBTENIDO <BR> <IMAGECENTRE:Reward_SacrificialDagger> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>Has obtenido la daga sacrificial!!! <LINE> <H1>",
-    "ch": "<H1> 獲得秘密 <BR> <IMAGECENTRE:Reward_SacrificialDagger> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你獲得了祭祀匕首!!! <LINE> <H1>",
-    "cn": "<H1> 获得秘密 <BR> <IMAGECENTRE:Reward_SacrificialDagger> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了祭祀匕首!!! <LINE> <H1>"
+    "en": "<H1> SECRET OBTAINED <BR> <IMAGECENTRE:Reward_SacrificialDagger> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>You have obtained the sacrificial dagger!!! <LINE> <H1>",
+    "ch": "<H1> 獲得秘密 <BR> <IMAGECENTRE:Reward_SacrificialDagger> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你獲得了獻祭匕首!!! <LINE> <H1>",
+    "cn": "<H1> 获得秘密 <BR> <IMAGECENTRE:Reward_SacrificialDagger> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了献祭匕首!!! <LINE> <H1>"
    },
    "IGUI_Reward_SkullSword": {
-    "en": "<H1> SECRETO OBTENIDO <BR> <IMAGECENTRE:Reward_SkullSword> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>Has obtenido la espada calavera!!! <LINE> <H1>",
-    "ch": "<H1> 已獲得秘密 <BR> <IMAGECENTRE:Reward_SkullSword> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你獲得了骷髏劍!!! <LINE> <H1>",
-    "cn": "<H1> 已获得秘密 <BR> <IMAGECENTRE:Reward_SkullSword> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了骷髅剑!!! <LINE> <H1>"
+    "en": "<H1> SECRET OBTAINED <BR> <IMAGECENTRE:Reward_SkullSword> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>You have obtained the skull sword!!! <LINE> <H1>",
+    "ch": "<H1> 獲得秘密 <BR> <IMAGECENTRE:Reward_SkullSword> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你獲得了骷髏劍!!! <LINE> <H1>",
+    "cn": "<H1> 获得秘密 <BR> <IMAGECENTRE:Reward_SkullSword> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了骷髅剑!!! <LINE> <H1>"
    },
    "IGUI_?_Fish_Arowana": {
     "en": "???????",
@@ -44199,21 +44029,6 @@
     "ch": "材料-彈藥-弓",
     "cn": "材料-弹药-弓"
    },
-   "IGUI_ItemCat_MaterialAmmoBowBox": {
-    "en": "Material - Ammo - Bow - Box",
-    "ch": "材料-彈藥-弓-盒裝",
-    "cn": "材料-弹药-弓-盒装"
-   },
-   "IGUI_ItemCat_MaterialAmmoBowCarton": {
-    "en": "Material - Ammo - Bow - Carton",
-    "ch": "材料-彈藥-弓-箱裝",
-    "cn": "材料-弹药-弓-箱装"
-   },
-   "IGUI_ItemCat_MaterialAmmoBowMag": {
-    "en": "Material - Ammo - Bow - Magazine",
-    "ch": "材料-彈藥-弓-彈匣",
-    "cn": "材料-弹药-弓-弹匣"
-   },
    "IGUI_ItemCat_MaterialAmmoBox": {
     "en": "Material - Ammo - Box",
     "ch": "材料-彈藥-盒裝",
@@ -44229,100 +44044,25 @@
     "ch": "材料-彈藥-爆裂物",
     "cn": "材料-弹药-爆炸物"
    },
-   "IGUI_ItemCat_MaterialAmmoExplosiveBox": {
-    "en": "Material - Ammo - Explosive - Box",
-    "ch": "材料-彈藥-爆裂物-盒裝",
-    "cn": "材料-弹药-爆炸物-盒装"
-   },
-   "IGUI_ItemCat_MaterialAmmoExplosiveCarton": {
-    "en": "Material - Ammo - Explosive - Carton",
-    "ch": "材料-彈藥-爆裂物-箱裝",
-    "cn": "材料-弹药-爆炸物-箱装"
-   },
-   "IGUI_ItemCat_MaterialAmmoExplosiveMag": {
-    "en": "Material - Ammo - Explosive - Magazine",
-    "ch": "材料-彈藥-爆裂物-彈匣",
-    "cn": "材料-弹药-爆炸物-弹匣"
-   },
    "IGUI_ItemCat_MaterialAmmoHandgun": {
     "en": "Material - Ammo - Handgun",
     "ch": "材料-彈藥-手槍",
     "cn": "材料-弹药-手枪"
-   },
-   "IGUI_ItemCat_MaterialAmmoHandgunBox": {
-    "en": "Material - Ammo - Handgun - Box",
-    "ch": "材料-彈藥-手槍-盒裝",
-    "cn": "材料-弹药-手枪-盒装"
-   },
-   "IGUI_ItemCat_MaterialAmmoHandgunCarton": {
-    "en": "Material - Ammo - Handgun - Carton",
-    "ch": "材料-彈藥-手槍-箱裝",
-    "cn": "材料-弹药-手枪-箱装"
-   },
-   "IGUI_ItemCat_MaterialAmmoHandgunMag": {
-    "en": "Material - Ammo - Handgun - Magazine",
-    "ch": "材料-彈藥-手槍-彈匣",
-    "cn": "材料-弹药-手枪-弹匣"
    },
    "IGUI_ItemCat_MaterialAmmoRifle": {
     "en": "Material - Ammo - Rifle",
     "ch": "材料-彈藥-步槍",
     "cn": "材料-弹药-步枪"
    },
-   "IGUI_ItemCat_MaterialAmmoRifleBox": {
-    "en": "Material - Ammo - Rifle - Box",
-    "ch": "材料-彈藥-步槍-盒裝",
-    "cn": "材料-弹药-步枪-盒装"
-   },
-   "IGUI_ItemCat_MaterialAmmoRifleCarton": {
-    "en": "Material - Ammo - Rifle - Carton",
-    "ch": "材料-彈藥-步槍-箱裝",
-    "cn": "材料-弹药-步枪-箱装"
-   },
-   "IGUI_ItemCat_MaterialAmmoRifleMag": {
-    "en": "Material - Ammo - Rifle - Magazine",
-    "ch": "材料-彈藥-步槍-彈匣",
-    "cn": "材料-弹药-步枪-弹匣"
-   },
    "IGUI_ItemCat_MaterialAmmoShotgun": {
     "en": "Material - Ammo - Shotgun",
     "ch": "材料-彈藥-霰彈槍",
     "cn": "材料-弹药-霰弹枪"
    },
-   "IGUI_ItemCat_MaterialAmmoShotgunBox": {
-    "en": "Material - Ammo - Shotgun - Box",
-    "ch": "材料-彈藥-霰彈槍-盒裝",
-    "cn": "材料-弹药-霰弹枪-盒装"
-   },
-   "IGUI_ItemCat_MaterialAmmoShotgunCarton": {
-    "en": "Material - Ammo - Shotgun - Carton",
-    "ch": "材料-彈藥-霰彈槍-箱裝",
-    "cn": "材料-弹药-霰弹枪-箱装"
-   },
-   "IGUI_ItemCat_MaterialAmmoShotgunMag": {
-    "en": "Material - Ammo - Shotgun - Magazine",
-    "ch": "材料-彈藥-霰彈槍-彈匣",
-    "cn": "材料-弹药-霰弹枪-弹匣"
-   },
    "IGUI_ItemCat_MaterialAmmoToy": {
     "en": "Material - Ammo - Toy",
     "ch": "材料-彈藥-玩具",
     "cn": "材料-弹药-玩具"
-   },
-   "IGUI_ItemCat_MaterialAmmoToyBox": {
-    "en": "Material - Ammo - Toy - Box",
-    "ch": "材料-彈藥-玩具-盒裝",
-    "cn": "材料-弹药-玩具-盒装"
-   },
-   "IGUI_ItemCat_MaterialAmmoToyCarton": {
-    "en": "Material - Ammo - Toy - Carton",
-    "ch": "材料-彈藥-玩具-箱裝",
-    "cn": "材料-弹药-玩具-箱装"
-   },
-   "IGUI_ItemCat_MaterialAmmoToyMag": {
-    "en": "Material - Ammo - Toy - Magazine",
-    "ch": "材料-彈藥-玩具-彈匣",
-    "cn": "材料-弹药-玩具-弹匣"
    },
    "IGUI_ItemCat_MaterialButcheringBox": {
     "en": "Material - Butchering - Box",
@@ -44522,16 +44262,6 @@
     "ch": "彈藥-手槍-彈鼓",
     "cn": "弹药-手枪-弹鼓"
    },
-   "IGUI_ItemCat_Bow": {
-    "en": "Bow",
-    "ch": "弓",
-    "cn": "弓"
-   },
-   "IGUI_ItemCat_Drum": {
-    "en": "Drum",
-    "ch": "彈鼓",
-    "cn": "弹鼓"
-   },
    "IGUI_ItemCat_FoodFrozen": {
     "en": "Food - Frozen",
     "ch": "食物-冷凍",
@@ -44711,11 +44441,6 @@
     "en": "Wait for the hideout garage to finish loading.",
     "ch": "請等待藏身點車庫載入完成.",
     "cn": "请等待藏身点车库加载完成."
-   },
-   "IGUI_ExtractionMode_GarageLiftsTooltip": {
-    "en": "Hide or restore both decorative vehicle lifts.",
-    "ch": "隱藏或還原兩座裝飾用的車輛升降機.",
-    "cn": "隐藏或恢复两台装饰用的车辆举升机."
    },
    "IGUI_ExtractionMode_GarageShowLifts": {
     "en": "SHOW VEHICLE LIFTS",
@@ -47565,41 +47290,6 @@
     "ch": "工具-玻璃/武器-長矛",
     "cn": "工具-玻璃/武器-长矛"
    },
-   "IGUI_ItemCat_ToolKnapping__WeaponAxe": {
-    "en": "Tool - Knapping / Weapon - Axe",
-    "ch": "工具-石器/武器-斧頭",
-    "cn": "工具-石器/武器-斧头"
-   },
-   "IGUI_ItemCat_ToolKnapping__WeaponBlunt": {
-    "en": "Tool - Knapping / Weapon - Long Blunt",
-    "ch": "工具-石器/武器-長棍",
-    "cn": "工具-石器/武器-长棍"
-   },
-   "IGUI_ItemCat_ToolKnapping__WeaponCrafted": {
-    "en": "Tool - Knapping / Weapon - Crafted",
-    "ch": "工具-石器/武器-自製",
-    "cn": "工具-石器/武器-自制"
-   },
-   "IGUI_ItemCat_ToolKnapping__WeaponLongBlade": {
-    "en": "Tool - Knapping / Weapon - Long Blade",
-    "ch": "工具-石器/武器-長刀",
-    "cn": "工具-石器/武器-长刀"
-   },
-   "IGUI_ItemCat_ToolKnapping__WeaponSmallBlade": {
-    "en": "Tool - Knapping / Weapon - Short Blade",
-    "ch": "工具-石器/武器-短刀",
-    "cn": "工具-石器/武器-短刀"
-   },
-   "IGUI_ItemCat_ToolKnapping__WeaponSmallBlunt": {
-    "en": "Tool - Knapping / Weapon - Short Blunt",
-    "ch": "工具-石器/武器-短棍",
-    "cn": "工具-石器/武器-短棍"
-   },
-   "IGUI_ItemCat_ToolKnapping__WeaponSpear": {
-    "en": "Tool - Knapping / Weapon - Spear",
-    "ch": "工具-石器/武器-長矛",
-    "cn": "工具-石器/武器-长矛"
-   },
    "IGUI_ItemCat_ToolMaintenance__WeaponAxe": {
     "en": "Tool - Maintenance / Weapon - Axe",
     "ch": "工具-維護/武器-斧頭",
@@ -47955,11 +47645,6 @@
     "ch": "工具/武器-長矛",
     "cn": "工具/武器-长矛"
    },
-   "IGUI_ItemCat_Trinket": {
-    "en": "Trinket",
-    "ch": "小飾品",
-    "cn": "小饰品"
-   },
    "IGUI_ItemCat_VehicleMaintenance__WeaponAxe": {
     "en": "Vehicle Maintenance / Weapon - Axe",
     "ch": "載具維修/武器-斧頭",
@@ -47994,11 +47679,6 @@
     "en": "Vehicle Maintenance / Weapon - Spear",
     "ch": "載具維修/武器-長矛",
     "cn": "载具维修/武器-长矛"
-   },
-   "IGUI_ItemCat_Walkie": {
-    "en": "Walkie-Talkie",
-    "ch": "對講機",
-    "cn": "对讲机"
    },
    "IGUI_ItemCat_WeaponPart__WeaponLongBlade": {
     "en": "Weapon Part / Weapon - Long Blade",
@@ -83835,11 +83515,6 @@
     "ch": "取消乘車撤離",
     "cn": "取消乘车撤离"
    },
-   "IGUI_ExtractionMode_CancelVehicleExtractionHint": {
-    "en": "Cancel the countdown. No fuel is spent.",
-    "ch": "取消倒數. 不會消耗燃料.",
-    "cn": "取消倒计时. 不会消耗燃料."
-   },
    "IGUI_ExtractionMode_ExtractViaVehicle": {
     "en": "EXTRACT VIA VEHICLE",
     "ch": "乘車撤離",
@@ -106059,6 +105734,2241 @@
     "en": "Requires a matching window opening. Right-click an empty frame and choose \"Find doors/windows for this opening\".",
     "ch": "需要相符的窗戶開口. 在空的框架上按右鍵並選擇「尋找適合此開口的門/窗」.",
     "cn": "需要匹配的窗户洞口. 右键点击空框架并选择“查找适合此洞口的门/窗”."
+   },
+   "IGUI_ItemCat_AppearanceBox": {
+    "en": "Appearance - Box",
+    "ch": "外觀-盒裝",
+    "cn": "外观-盒装"
+   },
+   "IGUI_ItemCat_AppearanceCarton": {
+    "en": "Appearance - Carton",
+    "ch": "外觀-箱裝",
+    "cn": "外观-箱装"
+   },
+   "IGUI_ItemCat_CookingWeaponBox": {
+    "en": "Cooking / Weapon - Box",
+    "ch": "烹飪/武器-盒裝",
+    "cn": "烹饪/武器-盒装"
+   },
+   "IGUI_ItemCat_CookingWeaponCarton": {
+    "en": "Cooking / Weapon - Carton",
+    "ch": "烹飪/武器-箱裝",
+    "cn": "烹饪/武器-箱装"
+   },
+   "IGUI_ItemCat_FireSourceBox": {
+    "en": "Fire Source - Box",
+    "ch": "火源-盒裝",
+    "cn": "火源-盒装"
+   },
+   "IGUI_ItemCat_FireSourceCarton": {
+    "en": "Fire Source - Carton",
+    "ch": "火源-箱裝",
+    "cn": "火源-箱装"
+   },
+   "IGUI_ItemCat_FoodBakingBox": {
+    "en": "Food - Baking - Box",
+    "ch": "食物-烘焙-盒裝",
+    "cn": "食物-烘焙-盒装"
+   },
+   "IGUI_ItemCat_FoodBakingCarton": {
+    "en": "Food - Baking - Carton",
+    "ch": "食物-烘焙-箱裝",
+    "cn": "食物-烘焙-箱装"
+   },
+   "IGUI_ItemCat_FoodBeverage": {
+    "en": "Food - Beverage",
+    "ch": "食物-飲品",
+    "cn": "食物-饮品"
+   },
+   "IGUI_ItemCat_FoodBeverageBox": {
+    "en": "Food - Beverage - Box",
+    "ch": "食物-飲品-盒裝",
+    "cn": "食物-饮品-盒装"
+   },
+   "IGUI_ItemCat_FoodBeverageCarton": {
+    "en": "Food - Beverage - Carton",
+    "ch": "食物-飲品-箱裝",
+    "cn": "食物-饮品-箱装"
+   },
+   "IGUI_ItemCat_FoodBreadBox": {
+    "en": "Food - Bread - Box",
+    "ch": "食物-麵包-盒裝",
+    "cn": "食物-面包-盒装"
+   },
+   "IGUI_ItemCat_FoodBreadCarton": {
+    "en": "Food - Bread - Carton",
+    "ch": "食物-麵包-箱裝",
+    "cn": "食物-面包-箱装"
+   },
+   "IGUI_ItemCat_FoodCandyBox": {
+    "en": "Food - Candy - Box",
+    "ch": "食物-糖果-盒裝",
+    "cn": "食物-糖果-盒装"
+   },
+   "IGUI_ItemCat_FoodCandyCarton": {
+    "en": "Food - Candy - Carton",
+    "ch": "食物-糖果-箱裝",
+    "cn": "食物-糖果-箱装"
+   },
+   "IGUI_ItemCat_FoodCannedBox": {
+    "en": "Food - Canned - Box",
+    "ch": "食物-罐頭-盒裝",
+    "cn": "食物-罐头-盒装"
+   },
+   "IGUI_ItemCat_FoodCannedCarton": {
+    "en": "Food - Canned - Carton",
+    "ch": "食物-罐頭-箱裝",
+    "cn": "食物-罐头-箱装"
+   },
+   "IGUI_ItemCat_FoodDairy": {
+    "en": "Food - Dairy",
+    "ch": "食物-乳製品",
+    "cn": "食物-乳制品"
+   },
+   "IGUI_ItemCat_FoodDairyBox": {
+    "en": "Food - Dairy - Box",
+    "ch": "食物-乳製品-盒裝",
+    "cn": "食物-乳制品-盒装"
+   },
+   "IGUI_ItemCat_FoodDairyCarton": {
+    "en": "Food - Dairy - Carton",
+    "ch": "食物-乳製品-箱裝",
+    "cn": "食物-乳制品-箱装"
+   },
+   "IGUI_ItemCat_FoodDishBox": {
+    "en": "Food - Dish - Box",
+    "ch": "食物-菜餚-盒裝",
+    "cn": "食物-菜品-盒装"
+   },
+   "IGUI_ItemCat_FoodDishCarton": {
+    "en": "Food - Dish - Carton",
+    "ch": "食物-菜餚-箱裝",
+    "cn": "食物-菜品-箱装"
+   },
+   "IGUI_ItemCat_FoodFrozenBox": {
+    "en": "Food - Frozen - Box",
+    "ch": "食物-冷凍-盒裝",
+    "cn": "食物-冷冻-盒装"
+   },
+   "IGUI_ItemCat_FoodFrozenCarton": {
+    "en": "Food - Frozen - Carton",
+    "ch": "食物-冷凍-箱裝",
+    "cn": "食物-冷冻-箱装"
+   },
+   "IGUI_ItemCat_FoodHerbBox": {
+    "en": "Food - Herbs - Box",
+    "ch": "食物-草藥-盒裝",
+    "cn": "食物-草药-盒装"
+   },
+   "IGUI_ItemCat_FoodHerbBox__FirstAid": {
+    "en": "Food - Herbs - Box / First Aid",
+    "ch": "食物-草藥-盒裝/醫療",
+    "cn": "食物-草药-盒装/医疗"
+   },
+   "IGUI_ItemCat_FoodHerbCarton": {
+    "en": "Food - Herbs - Carton",
+    "ch": "食物-草藥-箱裝",
+    "cn": "食物-草药-箱装"
+   },
+   "IGUI_ItemCat_FoodMeatBox": {
+    "en": "Food - Meat - Box",
+    "ch": "食物-肉類-盒裝",
+    "cn": "食物-肉类-盒装"
+   },
+   "IGUI_ItemCat_FoodMeatCarton": {
+    "en": "Food - Meat - Carton",
+    "ch": "食物-肉類-箱裝",
+    "cn": "食物-肉类-箱装"
+   },
+   "IGUI_ItemCat_FoodNoExplicitBox": {
+    "en": "Food - Condiment - Box",
+    "ch": "食物-調味料-盒裝",
+    "cn": "食物-调料-盒装"
+   },
+   "IGUI_ItemCat_FoodNoExplicitCarton": {
+    "en": "Food - Condiment - Carton",
+    "ch": "食物-調味料-箱裝",
+    "cn": "食物-调料-箱装"
+   },
+   "IGUI_ItemCat_FoodPerishableBeverage": {
+    "en": "Food - Perishable - Beverage",
+    "ch": "食物-易腐爛-飲品",
+    "cn": "食物-易腐烂-饮品"
+   },
+   "IGUI_ItemCat_FoodPerishableBox__FirstAid": {
+    "en": "Food - Perishable - Box / First Aid",
+    "ch": "食物-易腐爛-盒裝/醫療",
+    "cn": "食物-易腐烂-盒装/医疗"
+   },
+   "IGUI_ItemCat_FoodPerishableDairy": {
+    "en": "Food - Perishable - Dairy",
+    "ch": "食物-易腐爛-乳製品",
+    "cn": "食物-易腐烂-乳制品"
+   },
+   "IGUI_ItemCat_FoodPerishableProduce": {
+    "en": "Food - Perishable - Produce",
+    "ch": "食物-易腐爛-蔬果",
+    "cn": "食物-易腐烂-蔬果"
+   },
+   "IGUI_ItemCat_FoodPetFoodBox": {
+    "en": "Food - Pets - Box",
+    "ch": "食物-寵物-盒裝",
+    "cn": "食物-宠物-盒装"
+   },
+   "IGUI_ItemCat_FoodPetFoodCarton": {
+    "en": "Food - Pets - Carton",
+    "ch": "食物-寵物-箱裝",
+    "cn": "食物-宠物-箱装"
+   },
+   "IGUI_ItemCat_FoodPortionBox": {
+    "en": "Food - Portion - Box",
+    "ch": "食物-單份-盒裝",
+    "cn": "食物-单份-盒装"
+   },
+   "IGUI_ItemCat_FoodPortionCarton": {
+    "en": "Food - Portion - Carton",
+    "ch": "食物-單份-箱裝",
+    "cn": "食物-单份-箱装"
+   },
+   "IGUI_ItemCat_FoodPreservedBox": {
+    "en": "Food - Preserved - Box",
+    "ch": "食物-醃製-盒裝",
+    "cn": "食物-腌制-盒装"
+   },
+   "IGUI_ItemCat_FoodPreservedCarton": {
+    "en": "Food - Preserved - Carton",
+    "ch": "食物-醃製-箱裝",
+    "cn": "食物-腌制-箱装"
+   },
+   "IGUI_ItemCat_FoodProduce": {
+    "en": "Food - Produce",
+    "ch": "食物-蔬果",
+    "cn": "食物-蔬果"
+   },
+   "IGUI_ItemCat_FoodProduceBox": {
+    "en": "Food - Produce - Box",
+    "ch": "食物-蔬果-盒裝",
+    "cn": "食物-蔬果-盒装"
+   },
+   "IGUI_ItemCat_FoodProduceCarton": {
+    "en": "Food - Produce - Carton",
+    "ch": "食物-蔬果-箱裝",
+    "cn": "食物-蔬果-箱装"
+   },
+   "IGUI_ItemCat_FoodSeafoodBox": {
+    "en": "Food - Seafood - Box",
+    "ch": "食物-海鮮-盒裝",
+    "cn": "食物-海鲜-盒装"
+   },
+   "IGUI_ItemCat_FoodSeafoodCarton": {
+    "en": "Food - Seafood - Carton",
+    "ch": "食物-海鮮-箱裝",
+    "cn": "食物-海鲜-箱装"
+   },
+   "IGUI_ItemCat_FoodSnackBox": {
+    "en": "Food - Snack - Box",
+    "ch": "食物-零食-盒裝",
+    "cn": "食物-零食-盒装"
+   },
+   "IGUI_ItemCat_FoodSnackCarton": {
+    "en": "Food - Snack - Carton",
+    "ch": "食物-零食-箱裝",
+    "cn": "食物-零食-箱装"
+   },
+   "IGUI_ItemCat_FoodSpiceBox": {
+    "en": "Food - Spice - Box",
+    "ch": "食物-香料-盒裝",
+    "cn": "食物-香料-盒装"
+   },
+   "IGUI_ItemCat_FoodSpiceCarton": {
+    "en": "Food - Spice - Carton",
+    "ch": "食物-香料-箱裝",
+    "cn": "食物-香料-箱装"
+   },
+   "IGUI_ItemCat_FoodStapleBox": {
+    "en": "Food - Staple - Box",
+    "ch": "食物-主食-盒裝",
+    "cn": "食物-主食-盒装"
+   },
+   "IGUI_ItemCat_FoodStapleCarton": {
+    "en": "Food - Staple - Carton",
+    "ch": "食物-主食-箱裝",
+    "cn": "食物-主食-箱装"
+   },
+   "IGUI_ItemCat_GardeningAnimalFeed": {
+    "en": "Gardening - Animal Feed",
+    "ch": "園藝-動物飼料",
+    "cn": "园艺-动物饲料"
+   },
+   "IGUI_ItemCat_HouseholdBox": {
+    "en": "Household - Box",
+    "ch": "家用物品-盒裝",
+    "cn": "家用物品-盒装"
+   },
+   "IGUI_ItemCat_HouseholdCarton": {
+    "en": "Household - Carton",
+    "ch": "家用物品-箱裝",
+    "cn": "家用物品-箱装"
+   },
+   "IGUI_PhunZones_MutantHusk": {
+    "en": "Husk Spawn Rate",
+    "ch": "鐵殼者生成率",
+    "cn": "铁壳者生成率"
+   },
+   "IGUI_PhunZones_MutantLeaper": {
+    "en": "Leaper Spawn Rate",
+    "ch": "躍擊者生成率",
+    "cn": "跃击者生成率"
+   },
+   "IGUI_PhunZones_MutantPuker": {
+    "en": "Puker Spawn Rate",
+    "ch": "嘔吐者生成率",
+    "cn": "呕吐者生成率"
+   },
+   "IGUI_PhunZones_MutantSkitter": {
+    "en": "Skitter Spawn Rate",
+    "ch": "疾爬者生成率",
+    "cn": "疾爬者生成率"
+   },
+   "IGUI_PhunZones_MutantSpawn_tooltip": {
+    "en": "Requires The Mutants mod. Percentage (0-100, decimals allowed) of zombies that become this mutant when they spawn in this zone. Leave empty to use the sandbox setting; 0 stops this mutant spawning here. Mutants that wander in from elsewhere are not affected",
+    "ch": "需要 The Mutants 模組. 在此區域生成的殭屍中, 會變成此種變異體的百分比 (0-100, 可用小數). 留空則使用沙盒設定; 設為 0 則此變異體不會在此生成. 從其他地方遊蕩進來的變異體不受影響",
+    "cn": "需要 The Mutants 模组. 在此区域生成的僵尸中, 会变成此种变异体的百分比 (0-100, 可用小数). 留空则使用沙盒设置; 设为 0 则此变异体不会在此生成. 从其他地方游荡进来的变异体不受影响"
+   },
+   "IGUI_PhunZones_MutantWeeper": {
+    "en": "Weeper Spawn Rate",
+    "ch": "悲泣者生成率",
+    "cn": "悲泣者生成率"
+   },
+   "IGUI_PhunZones_MutantWrecker": {
+    "en": "Wrecker Spawn Rate",
+    "ch": "破壞者生成率",
+    "cn": "破坏者生成率"
+   },
+   "IGUI_Wounds_ArrestHow": {
+    "en": "Only chest compressions and a defibrillator can bring you back.",
+    "ch": "只有胸部按壓和電擊器能把你救回來.",
+    "cn": "只有胸外按压和除颤器能把你救回来."
+   },
+   "IGUI_Wounds_ArrestLeft": {
+    "en": "About %s min left",
+    "ch": "約剩 %s 分鐘",
+    "cn": "约剩 %s 分钟"
+   },
+   "IGUI_Wounds_ArrestTitle": {
+    "en": "Your heart has stopped",
+    "ch": "你的心臟停止跳動了",
+    "cn": "你的心脏停止跳动了"
+   },
+   "IGUI_Wounds_BloodLeft": {
+    "en": "%s%% (%s ml)",
+    "ch": "%s%% (%s ml)",
+    "cn": "%s%% (%s ml)"
+   },
+   "IGUI_Wounds_BulletJoint": {
+    "en": "in the joint",
+    "ch": "在關節內",
+    "cn": "在关节内"
+   },
+   "IGUI_Wounds_BulletSealed": {
+    "en": "The wound has closed over the bullet.",
+    "ch": "傷口已把子彈封在裡面了.",
+    "cn": "伤口已把子弹封在里面了."
+   },
+   "IGUI_Wounds_BulletThrough": {
+    "en": "through and through",
+    "ch": "貫穿傷",
+    "cn": "贯穿伤"
+   },
+   "IGUI_Wounds_BulletTissue": {
+    "en": "in the tissue",
+    "ch": "在組織內",
+    "cn": "在组织内"
+   },
+   "IGUI_Wounds_CarDoorBlocked": {
+    "en": "Their door is blocked.",
+    "ch": "對方那側的車門被擋住了.",
+    "cn": "他们那侧的车门被挡住了."
+   },
+   "IGUI_Wounds_CarFar": {
+    "en": "Bring them right up to a door.",
+    "ch": "把對方帶到車門旁邊.",
+    "cn": "把他们带到车门旁边."
+   },
+   "IGUI_Wounds_CarFull": {
+    "en": "No free passenger seat.",
+    "ch": "沒有空的乘客座位.",
+    "cn": "没有空的乘客座位."
+   },
+   "IGUI_Wounds_CarIn": {
+    "en": "%s is in the car.",
+    "ch": "%s 已在車上.",
+    "cn": "%s 已在车上."
+   },
+   "IGUI_Wounds_CarMoving": {
+    "en": "The car has to be standing still.",
+    "ch": "車輛必須完全停止.",
+    "cn": "车辆必须完全停下."
+   },
+   "IGUI_Wounds_DefibFailed": {
+    "en": "No rhythm. Charge again.",
+    "ch": "沒有心律. 再次充電.",
+    "cn": "没有心律. 再次充电."
+   },
+   "IGUI_Wounds_DefibFlat": {
+    "en": "The battery is flat.",
+    "ch": "電池沒電了.",
+    "cn": "电池没电了."
+   },
+   "IGUI_Wounds_DefibNotNeeded": {
+    "en": "Their heart is beating - a shock won't help.",
+    "ch": "對方心臟還在跳 - 電擊沒有用.",
+    "cn": "他们的心脏还在跳 - 电击没有用."
+   },
+   "IGUI_Wounds_DressingFirst": {
+    "en": "Take the dressing off first.",
+    "ch": "先取下敷料.",
+    "cn": "先取下敷料."
+   },
+   "IGUI_Wounds_ExtractBlind": {
+    "en": "Grip the bullet and pull it straight out",
+    "ch": "夾住子彈, 直接拔出來",
+    "cn": "夹住子弹, 直接拔出来"
+   },
+   "IGUI_Wounds_ExtractDone": {
+    "en": "The bullet is out.",
+    "ch": "子彈取出來了.",
+    "cn": "子弹取出来了."
+   },
+   "IGUI_Wounds_ExtractFirst": {
+    "en": "Get the bullet out first",
+    "ch": "先取出子彈",
+    "cn": "先取出子弹"
+   },
+   "IGUI_Wounds_ExtractIn": {
+    "en": "Grip the bullet and draw it out along the line",
+    "ch": "夾住子彈, 沿著線拉出來",
+    "cn": "夹住子弹, 沿着线拉出来"
+   },
+   "IGUI_Wounds_ExtractSlip": {
+    "en": "The grip slips.",
+    "ch": "沒夾穩, 滑掉了.",
+    "cn": "没夹稳, 滑脱了."
+   },
+   "IGUI_Wounds_FaintAlive": {
+    "en": "Still breathing. Someone beside you can bring you round.",
+    "ch": "還有呼吸. 身旁有人就能把你喚醒.",
+    "cn": "还有呼吸. 身边有人就能把你唤醒."
+   },
+   "IGUI_Wounds_FaintAlone": {
+    "en": "Left alone, you will come to for a few minutes - stop the bleeding then.",
+    "ch": "若無人在旁, 你會短暫清醒幾分鐘 - 趁那時止血.",
+    "cn": "如果身边没人, 你会短暂清醒几分钟 - 趁那时止血."
+   },
+   "IGUI_Wounds_FaintFor": {
+    "en": "Unconscious for %s min",
+    "ch": "已昏迷 %s 分鐘",
+    "cn": "已昏迷 %s 分钟"
+   },
+   "IGUI_Wounds_FaintLucid": {
+    "en": "You come to - stop the bleeding!",
+    "ch": "你醒過來了 - 快止血!",
+    "cn": "你醒过来了 - 快止血!"
+   },
+   "IGUI_Wounds_FaintTitle": {
+    "en": "You are unconscious",
+    "ch": "你失去了意識",
+    "cn": "你失去了意识"
+   },
+   "IGUI_Wounds_GunshotWound": {
+    "en": "Gunshot wound",
+    "ch": "槍傷",
+    "cn": "枪伤"
+   },
+   "IGUI_Wounds_MenuCarIn": {
+    "en": "Put in the car: %s",
+    "ch": "放進車內: %s",
+    "cn": "放进车里: %s"
+   },
+   "IGUI_Wounds_MenuCarOut": {
+    "en": "Take out of the car: %s",
+    "ch": "從車內抬出: %s",
+    "cn": "从车里抬出: %s"
+   },
+   "IGUI_Wounds_MenuDefib": {
+    "en": "Defibrillator: %s",
+    "ch": "電擊器: %s",
+    "cn": "除颤器: %s"
+   },
+   "IGUI_Wounds_MenuDefibTip": {
+    "en": "Their heart has stopped. Each shock costs a charge, and each one after the first is less likely to work.",
+    "ch": "對方心跳已停止. 每次電擊會消耗一格電量, 而第一次之後的每次電擊成功率都會降低.",
+    "cn": "他们的心跳已停止. 每次电击会消耗一格电量, 而第一次之后的每次电击成功率都会降低."
+   },
+   "IGUI_Wounds_MenuLetGo": {
+    "en": "Let go: %s",
+    "ch": "放開: %s",
+    "cn": "放开: %s"
+   },
+   "IGUI_Wounds_MenuRevive": {
+    "en": "Chest compressions: %s",
+    "ch": "胸部按壓: %s",
+    "cn": "胸外按压: %s"
+   },
+   "IGUI_Wounds_MenuReviveTip": {
+    "en": "Their heart has stopped. Compressions buy time and rarely restart it; a defibrillator is the real way back.",
+    "ch": "對方心跳已停止. 按壓能爭取時間, 但很少能讓心臟重新跳動; 電擊器才是真正的救命手段.",
+    "cn": "他们的心跳已停止. 按压能争取时间, 但很少能让心脏重新跳动; 除颤器才是真正的救命手段."
+   },
+   "IGUI_Wounds_MenuRouse": {
+    "en": "Bring round: %s",
+    "ch": "喚醒: %s",
+    "cn": "唤醒: %s"
+   },
+   "IGUI_Wounds_MenuRouseTip": {
+    "en": "Only once nothing is bleeding. Gets them on their feet for about an hour; it does not put any blood back.",
+    "ch": "須先止住所有出血. 能讓對方起身行動約一小時; 但不會補回任何血液.",
+    "cn": "必须先止住所有出血. 能让他们站起来活动约一小时; 但不会补回任何血液."
+   },
+   "IGUI_Wounds_MenuTamponade": {
+    "en": "Pack the wound",
+    "ch": "填塞傷口",
+    "cn": "填塞伤口"
+   },
+   "IGUI_Wounds_MenuTow": {
+    "en": "Drag: %s",
+    "ch": "拖行: %s",
+    "cn": "拖行: %s"
+   },
+   "IGUI_Wounds_MenuTowTip": {
+    "en": "They come along the ground behind you. No running, and it wears you out fast; raising a weapon, stairs and cars make you let go.",
+    "ch": "對方會被你拖在地上走. 無法奔跑, 而且體力消耗很快; 舉起武器, 上下樓梯或上車都會讓你放手.",
+    "cn": "他们会被你拖着在地上走. 无法奔跑, 而且体力消耗很快; 举起武器, 上下楼梯或上车都会让你松手."
+   },
+   "IGUI_Wounds_MenuUnpack": {
+    "en": "Remove the packing",
+    "ch": "取出填塞物",
+    "cn": "取出填塞物"
+   },
+   "IGUI_Wounds_NoExtractTissue": {
+    "en": "The bullet is too deep in the tissue - pack the wound and take antibiotics.",
+    "ch": "子彈卡在組織深處 - 填塞傷口並服用抗生素.",
+    "cn": "子弹卡在组织深处 - 填塞伤口并服用抗生素."
+   },
+   "IGUI_Wounds_NoStitchBullet": {
+    "en": "You don't stitch a gunshot wound - flush it and pack it.",
+    "ch": "槍傷不能縫合 - 要沖洗後再填塞.",
+    "cn": "枪伤不能缝合 - 要冲洗后再填塞."
+   },
+   "IGUI_Wounds_Packed": {
+    "en": "Packed",
+    "ch": "已填塞",
+    "cn": "已填塞"
+   },
+   "IGUI_Wounds_PackingBare": {
+    "en": "Packing uncovered",
+    "ch": "填塞物未包紮",
+    "cn": "填塞物未包扎"
+   },
+   "IGUI_Wounds_PackingDone": {
+    "en": "The wound has closed - the packing comes away.",
+    "ch": "傷口已癒合 - 填塞物脫落了.",
+    "cn": "伤口已愈合 - 填塞物脱落了."
+   },
+   "IGUI_Wounds_ReviveBleeding": {
+    "en": "They are still bleeding - stop it first.",
+    "ch": "對方仍在流血 - 先止血.",
+    "cn": "他们还在流血 - 先止血."
+   },
+   "IGUI_Wounds_ReviveFailed": {
+    "en": "No response. Keep going.",
+    "ch": "沒有反應. 繼續.",
+    "cn": "没有反应. 继续."
+   },
+   "IGUI_Wounds_ReviveKeep": {
+    "en": "The heart is still stopped. Keep going.",
+    "ch": "心臟仍未恢復跳動. 繼續.",
+    "cn": "心脏仍未恢复跳动. 继续."
+   },
+   "IGUI_Wounds_RevivePulse": {
+    "en": "There's a pulse!",
+    "ch": "有脈搏了!",
+    "cn": "有脉搏了!"
+   },
+   "IGUI_Wounds_ReviveWoke": {
+    "en": "You come round.",
+    "ch": "你醒過來了.",
+    "cn": "你醒过来了."
+   },
+   "IGUI_Wounds_ReviveWorked": {
+    "en": "They're coming round.",
+    "ch": "對方正在甦醒.",
+    "cn": "他们正在苏醒."
+   },
+   "IGUI_Wounds_TamponadeNeed": {
+    "en": "Requires a bandage or ripped sheets",
+    "ch": "需要繃帶或碎布",
+    "cn": "需要绷带或碎布条"
+   },
+   "IGUI_Wounds_TowHold": {
+    "en": "You have hold of %s.",
+    "ch": "你抓住了 %s.",
+    "cn": "你抓住了 %s."
+   },
+   "IGUI_Wounds_TowLost": {
+    "en": "You lost your hold.",
+    "ch": "你沒抓穩, 鬆手了.",
+    "cn": "你没抓稳, 松手了."
+   },
+   "IGUI_Wounds_TowTaken": {
+    "en": "Someone else already has hold of them.",
+    "ch": "已經有其他人抓著對方了.",
+    "cn": "已经有其他人抓着他们了."
+   },
+   "IGUI_Wounds_TowTired": {
+    "en": "Too exhausted to keep pulling.",
+    "ch": "太累了, 拖不動了.",
+    "cn": "太累了, 拖不动了."
+   },
+   "IGUI_Wounds_TowWeapon": {
+    "en": "You let go to take up your weapon.",
+    "ch": "你為了舉起武器而放手.",
+    "cn": "你为了举起武器而松手."
+   },
+   "IGUI_Wounds_TrimCut": {
+    "en": "Cut along the edge of the dead tissue",
+    "ch": "沿著壞死組織的邊緣切",
+    "cn": "沿着坏死组织的边缘切"
+   },
+   "IGUI_Wounds_TrimCutGuide": {
+    "en": "Cut along the dotted line",
+    "ch": "沿著虛線切",
+    "cn": "沿着虚线切"
+   },
+   "IGUI_Wounds_TrimDone": {
+    "en": "The edges are trimmed.",
+    "ch": "邊緣修剪完成.",
+    "cn": "边缘修剪完成."
+   },
+   "IGUI_Wounds_TrimLift": {
+    "en": "Pick the cut strips out with the tip of the blade",
+    "ch": "用刀尖挑出切下的組織條",
+    "cn": "用刀尖挑出切下的组织条"
+   },
+   "IGUI_Wounds_TrimNoTweezers": {
+    "en": "No tweezers - the edge will not hold still.",
+    "ch": "沒有鑷子 - 邊緣固定不住.",
+    "cn": "没有镊子 - 边缘固定不住."
+   },
+   "IGUI_Wounds_TrimSlip": {
+    "en": "The blade slips off the edge.",
+    "ch": "刀從邊緣滑開了.",
+    "cn": "刀从边缘滑开了."
+   },
+   "IGUI_Wounds_TrimSnip": {
+    "en": "Snip along the edge of the dead tissue",
+    "ch": "沿著壞死組織的邊緣剪",
+    "cn": "沿着坏死组织的边缘剪"
+   },
+   "IGUI_Wounds_TrimSnipGuide": {
+    "en": "Snip along the dotted line",
+    "ch": "沿著虛線剪",
+    "cn": "沿着虚线剪"
+   },
+   "IGUI_Wounds_TrimTooTight": {
+    "en": "Dead tissue left behind.",
+    "ch": "留下了壞死組織.",
+    "cn": "留下了坏死组织."
+   },
+   "IGUI_Wounds_TrimTooWide": {
+    "en": "That took live skin.",
+    "ch": "切掉了健康的皮膚.",
+    "cn": "切掉了健康的皮肤."
+   },
+   "IGUI_ExtractionMode_Barter_graves_repair_Offered_1": {
+    "en": "Money",
+    "ch": "紙鈔",
+    "cn": "纸币"
+   },
+   "IGUI_ExtractionMode_Barter_layne_clothing_Offered_1": {
+    "en": "Money",
+    "ch": "紙鈔",
+    "cn": "纸币"
+   },
+   "IGUI_ExtractionMode_Barter_layne_healing_Offered_1": {
+    "en": "Money",
+    "ch": "紙鈔",
+    "cn": "纸币"
+   },
+   "IGUI_ExtractionMode_Barter_layne_soap_for_vitamins_Offered_2": {
+    "en": "Full Bottle of Bleach",
+    "ch": "漂白劑 (整瓶)",
+    "cn": "漂白剂 (整瓶)"
+   },
+   "IGUI_ExtractionMode_Barter_mercer_repair_Offered_1": {
+    "en": "Money",
+    "ch": "紙鈔",
+    "cn": "纸币"
+   },
+   "IGUI_ExtractionMode_Barter_porch_repair_Offered_1": {
+    "en": "Money",
+    "ch": "紙鈔",
+    "cn": "纸币"
+   },
+   "IGUI_ExtractionMode_Error_HeatingHideoutOnly": {
+    "en": "Heating controls are only available inside the idle hideout.",
+    "ch": "暖氣控制只能在藏身點內空閒時使用.",
+    "cn": "供暖控制只能在藏身点内空闲时使用."
+   },
+   "IGUI_ExtractionMode_Error_HeatingNotInstalled": {
+    "en": "Install Heating before using its controls.",
+    "ch": "使用暖氣控制前, 請先安裝「暖氣」.",
+    "cn": "使用供暖控制前, 请先安装“供暖”."
+   },
+   "IGUI_ExtractionMode_Garage_Error_ActiveVehicleLoading": {
+    "en": "The active vehicle is still loading and could not be identified safely. Wait a moment and try again.",
+    "ch": "使用中的車輛仍在載入, 無法安全識別. 請稍候再試.",
+    "cn": "使用中的车辆仍在加载, 无法安全识别. 请稍候再试."
+   },
+   "IGUI_ExtractionMode_Garage_Error_ActiveVehicleNotLoaded": {
+    "en": "The active vehicle is not currently loaded.",
+    "ch": "使用中的車輛目前尚未載入.",
+    "cn": "使用中的车辆当前尚未加载."
+   },
+   "IGUI_ExtractionMode_Garage_Error_ActiveVehicleOccupied": {
+    "en": "The active hideout vehicle is occupied.",
+    "ch": "藏身點使用中的車輛有人乘坐.",
+    "cn": "藏身点使用中的车辆有人乘坐."
+   },
+   "IGUI_ExtractionMode_Garage_Error_ActiveVehicleRaidReserved": {
+    "en": "The active hideout vehicle is reserved for a raid deployment.",
+    "ch": "藏身點使用中的車輛已為突襲部署保留.",
+    "cn": "藏身点使用中的车辆已为突袭部署保留."
+   },
+   "IGUI_ExtractionMode_Garage_Error_AdminCleanupInProgress": {
+    "en": "Wait for the administrator's garage cleanup to finish.",
+    "ch": "請等待管理員的車庫清理完成.",
+    "cn": "请等待管理员的车库清理完成."
+   },
+   "IGUI_ExtractionMode_Garage_Error_AlreadyInDestinationGarage": {
+    "en": "That vehicle is already in the destination garage.",
+    "ch": "那輛車已經在目的地車庫中.",
+    "cn": "那辆车已经在目的地车库中."
+   },
+   "IGUI_ExtractionMode_Garage_Error_AlreadyReturning": {
+    "en": "The vehicle is already being returned to its owner's garage.",
+    "ch": "該車輛已在送回車主車庫的途中.",
+    "cn": "该车辆已在送回车主车库的途中."
+   },
+   "IGUI_ExtractionMode_Garage_Error_AttachedTrailerSaveFailed": {
+    "en": "The vehicle stayed active because its attached trailer could not be saved safely: %1",
+    "ch": "車輛仍保持使用中, 因為其掛接的拖車無法安全儲存: %1",
+    "cn": "车辆仍保持使用中, 因为其挂接的拖车无法安全保存: %1"
+   },
+   "IGUI_ExtractionMode_Garage_Error_BayBlockedByPhysicalVehicle": {
+    "en": "The hideout vehicle bay is blocked by another physical vehicle. If it was left by a crash, use Emergency: Clear Hideout Vehicles.",
+    "ch": "藏身點車位被另一輛實體車輛擋住. 若是遊戲崩潰遺留的, 請使用「緊急: 清除藏身點車輛」.",
+    "cn": "藏身点车位被另一辆实体车辆挡住. 若是游戏崩溃遗留的, 请使用“紧急: 清除藏身点车辆”."
+   },
+   "IGUI_ExtractionMode_Garage_Error_BayNotLoaded": {
+    "en": "The hideout vehicle bay is not loaded.",
+    "ch": "藏身點車位尚未載入.",
+    "cn": "藏身点车位尚未加载."
+   },
+   "IGUI_ExtractionMode_Garage_Error_BayRegistrationFailed": {
+    "en": "The hideout vehicle bay could not be registered.",
+    "ch": "無法登記藏身點車位.",
+    "cn": "无法注册藏身点车位."
+   },
+   "IGUI_ExtractionMode_Garage_Error_BlankName": {
+    "en": "Vehicle names cannot be blank.",
+    "ch": "車輛名稱不可為空白.",
+    "cn": "车辆名称不能为空."
+   },
+   "IGUI_ExtractionMode_Garage_Error_CargoCaptureFailed": {
+    "en": "vehicle cargo could not be captured safely: %1",
+    "ch": "無法安全擷取車輛貨物: %1",
+    "cn": "无法安全获取车辆货物: %1"
+   },
+   "IGUI_ExtractionMode_Garage_Error_ChooseDifferentPlayer": {
+    "en": "Choose a different player.",
+    "ch": "請選擇其他玩家.",
+    "cn": "请选择其他玩家."
+   },
+   "IGUI_ExtractionMode_Garage_Error_ClearanceTileOccupied": {
+    "en": "The garage player clearance tile is occupied.",
+    "ch": "車庫的玩家淨空格已被佔用.",
+    "cn": "车库的玩家净空格已被占用."
+   },
+   "IGUI_ExtractionMode_Garage_Error_ClearanceTileUnavailable": {
+    "en": "The garage's player clearance tile is unavailable.",
+    "ch": "車庫的玩家淨空格無法使用.",
+    "cn": "车库的玩家净空格不可用."
+   },
+   "IGUI_ExtractionMode_Garage_Error_DestinationNotLoaded": {
+    "en": "The vehicle destination is not loaded.",
+    "ch": "車輛目的地尚未載入.",
+    "cn": "车辆目的地尚未加载."
+   },
+   "IGUI_ExtractionMode_Garage_Error_DriverAlreadyOwner": {
+    "en": "The current driver already shares ownership of this garage.",
+    "ch": "目前的駕駛已共同擁有此車庫.",
+    "cn": "当前的驾驶员已共同拥有此车库."
+   },
+   "IGUI_ExtractionMode_Garage_Error_DriverChanged": {
+    "en": "The player in the driver's seat changed. Review the current driver and try again.",
+    "ch": "駕駛座上的玩家已更換. 請確認目前的駕駛後再試.",
+    "cn": "驾驶座上的玩家已更换. 请确认当前的驾驶员后再试."
+   },
+   "IGUI_ExtractionMode_Garage_Error_DriverGarageUnavailable": {
+    "en": "The current driver's garage identity is unavailable.",
+    "ch": "無法取得目前駕駛的車庫身分.",
+    "cn": "无法获取当前驾驶员的车库身份."
+   },
+   "IGUI_ExtractionMode_Garage_Error_EmergencyDebugRequired": {
+    "en": "Emergency hideout vehicle cleanup is only available with Debug Logging and Admin Tools enabled.",
+    "ch": "藏身點車輛緊急清理只有在啟用「除錯日誌與管理員工具」時才能使用.",
+    "cn": "藏身点车辆紧急清理仅在启用“调试日志和管理员工具”时才能使用."
+   },
+   "IGUI_ExtractionMode_Garage_Error_EmergencyHideoutOnly": {
+    "en": "Emergency vehicle cleanup can only be used while alive inside the hideout.",
+    "ch": "車輛緊急清理只能在你存活且位於藏身點內時使用.",
+    "cn": "车辆紧急清理只能在你存活且位于藏身点内时使用."
+   },
+   "IGUI_ExtractionMode_Garage_Error_EmergencyPartial": {
+    "en": "Emergency cleanup removed %1 vehicle(s), but %2 could not be removed. Try again after the world finishes loading.",
+    "ch": "緊急清理已移除 %1 輛車, 但有 %2 輛無法移除. 請等世界載入完成後再試.",
+    "cn": "紧急清理已移除 %1 辆车, 但有 %2 辆无法移除. 请等世界加载完成后再试."
+   },
+   "IGUI_ExtractionMode_Garage_Error_EmergencyPlayersInside": {
+    "en": "Every player must exit all hideout vehicles and vehicle interiors before emergency cleanup.",
+    "ch": "進行緊急清理前, 所有玩家都必須離開所有藏身點車輛與車輛內部空間.",
+    "cn": "进行紧急清理前, 所有玩家都必须离开所有藏身点车辆和车辆内部空间."
+   },
+   "IGUI_ExtractionMode_Garage_Error_EmergencyRegistryUnavailable": {
+    "en": "Project Zomboid's loaded vehicle registry is not available yet.",
+    "ch": "《殭屍毀滅工程》的已載入車輛登記表尚無法使用.",
+    "cn": "《僵尸毁灭工程》的已加载车辆注册表尚不可用."
+   },
+   "IGUI_ExtractionMode_Garage_Error_EmergencyTrackedVehicles": {
+    "en": "Wait for the tracked active vehicle and trailer state to clear, or return them normally, before using emergency cleanup.",
+    "ch": "使用緊急清理前, 請等待受追蹤的使用中車輛與拖車狀態解除, 或正常收回它們.",
+    "cn": "使用紧急清理前, 请等待受跟踪的使用中车辆与拖车状态解除, 或正常收回它们."
+   },
+   "IGUI_ExtractionMode_Garage_Error_ExtractionDataUnsafe": {
+    "en": "Vehicle extraction was cancelled because its vehicle or cargo data could not be saved safely: %1",
+    "ch": "車輛撤離已取消, 因為無法安全儲存其車輛或貨物資料: %1",
+    "cn": "车辆撤离已取消, 因为无法安全保存其车辆或货物数据: %1"
+   },
+   "IGUI_ExtractionMode_Garage_Error_ExtractionPending": {
+    "en": "That vehicle is still completing its extraction transaction.",
+    "ch": "那輛車的撤離作業仍在處理中.",
+    "cn": "那辆车的撤离事务仍在处理中."
+   },
+   "IGUI_ExtractionMode_Garage_Error_InactivityTimer": {
+    "en": "The active hideout vehicle has not been inactive long enough to swap.",
+    "ch": "藏身點使用中的車輛閒置時間還不夠久, 無法更換.",
+    "cn": "藏身点使用中的车辆闲置时间还不够长, 无法更换."
+   },
+   "IGUI_ExtractionMode_Garage_Error_IndoorBayRegistrationFailed": {
+    "en": "Project Zomboid could not register the indoor hideout vehicle bay.",
+    "ch": "《殭屍毀滅工程》無法登記室內藏身點車位.",
+    "cn": "《僵尸毁灭工程》无法注册室内藏身点车位."
+   },
+   "IGUI_ExtractionMode_Garage_Error_InsertionKeyProtected": {
+    "en": "Vehicle insertion was cancelled before the ignition key could be lost: %1",
+    "ch": "車輛進場已在點火鑰匙遺失前取消: %1",
+    "cn": "车辆进场已在点火钥匙丢失前取消: %1"
+   },
+   "IGUI_ExtractionMode_Garage_Error_InvalidTrailerRecord": {
+    "en": "invalid trailer record",
+    "ch": "拖車紀錄無效",
+    "cn": "拖车记录无效"
+   },
+   "IGUI_ExtractionMode_Garage_Error_KeyCreationFailed": {
+    "en": "Project Zomboid could not create the replacement vehicle key.",
+    "ch": "《殭屍毀滅工程》無法建立替換用的車鑰匙.",
+    "cn": "《僵尸毁灭工程》无法创建替换用的车钥匙."
+   },
+   "IGUI_ExtractionMode_Garage_Error_KeyDeliveryFailed": {
+    "en": "The replacement vehicle key could not be added to the owner's inventory.",
+    "ch": "替換用的車鑰匙無法加入車主的物品欄.",
+    "cn": "替换用的车钥匙无法加入车主的物品栏."
+   },
+   "IGUI_ExtractionMode_Garage_Error_KeyOwnerUnavailable": {
+    "en": "The vehicle owner is unavailable for key delivery.",
+    "ch": "車主目前無法接收鑰匙.",
+    "cn": "车主当前无法接收钥匙."
+   },
+   "IGUI_ExtractionMode_Garage_Error_KeyReturnPending": {
+    "en": "Your vehicle key is still being returned. Wait a moment and try again.",
+    "ch": "你的車鑰匙仍在歸還中. 請稍候再試.",
+    "cn": "你的车钥匙仍在归还中. 请稍候再试."
+   },
+   "IGUI_ExtractionMode_Garage_Error_LivingDriverRequired": {
+    "en": "A living player must be sitting in the driver's seat.",
+    "ch": "必須有一名存活的玩家坐在駕駛座上.",
+    "cn": "必须有一名存活的玩家坐在驾驶座上."
+   },
+   "IGUI_ExtractionMode_Garage_Error_LivingOwnerRequired": {
+    "en": "A living owner is required.",
+    "ch": "需要一名存活的車主.",
+    "cn": "需要一名存活的车主."
+   },
+   "IGUI_ExtractionMode_Garage_Error_LivingTrailerOwnerRequired": {
+    "en": "A living trailer owner is required.",
+    "ch": "需要一名存活的拖車擁有者.",
+    "cn": "需要一名存活的拖车所有者."
+   },
+   "IGUI_ExtractionMode_Garage_Error_NoActiveTrailer": {
+    "en": "There is no active hideout trailer.",
+    "ch": "藏身點沒有使用中的拖車.",
+    "cn": "藏身点没有使用中的拖车."
+   },
+   "IGUI_ExtractionMode_Garage_Error_NoRecoverableSnapshot": {
+    "en": "The active vehicle has no recoverable snapshot.",
+    "ch": "使用中的車輛沒有可復原的快照.",
+    "cn": "使用中的车辆没有可恢复的快照."
+   },
+   "IGUI_ExtractionMode_Garage_Error_NotActiveVehicle": {
+    "en": "That is not the active hideout vehicle.",
+    "ch": "那不是藏身點使用中的車輛.",
+    "cn": "那不是藏身点使用中的车辆."
+   },
+   "IGUI_ExtractionMode_Garage_Error_OwnerInventoryUnavailable": {
+    "en": "The vehicle owner has no available inventory.",
+    "ch": "車主沒有可用的物品欄.",
+    "cn": "车主没有可用的物品栏."
+   },
+   "IGUI_ExtractionMode_Garage_Error_OwnerOutsideHideout": {
+    "en": "Vehicles can only be deployed while their owner is inside the hideout.",
+    "ch": "只有在車主位於藏身點內時才能部署車輛.",
+    "cn": "只有在车主位于藏身点内时才能部署车辆."
+   },
+   "IGUI_ExtractionMode_Garage_Error_OwnerUnavailable": {
+    "en": "The vehicle owner is unavailable.",
+    "ch": "目前無法取得車主身分.",
+    "cn": "当前无法获取车主身份."
+   },
+   "IGUI_ExtractionMode_Garage_Error_PreviousTrailerDespawning": {
+    "en": "The previous trailer is still despawning. Wait a moment and try again.",
+    "ch": "上一輛拖車仍在移除中. 請稍候再試.",
+    "cn": "上一辆拖车仍在移除中. 请稍候再试."
+   },
+   "IGUI_ExtractionMode_Garage_Error_PreviousVehicleDespawning": {
+    "en": "The previous active vehicle is still despawning. Wait for the current garage transition to finish.",
+    "ch": "上一輛使用中的車輛仍在移除中. 請等待目前的車庫切換完成.",
+    "cn": "上一辆使用中的车辆仍在移除中. 请等待当前的车库切换完成."
+   },
+   "IGUI_ExtractionMode_Garage_Error_RaidSourceRemovalFailed": {
+    "en": "The raid source removal could not be queued.",
+    "ch": "無法將突襲來源移除排入佇列.",
+    "cn": "无法将突袭来源移除加入队列."
+   },
+   "IGUI_ExtractionMode_Garage_Error_RaidTrailerInteriorOccupied": {
+    "en": "The attached trailer cannot enter a raid while someone is inside its interior.",
+    "ch": "拖車內部有人時, 掛接的拖車無法進入突襲.",
+    "cn": "拖车内部有人时, 挂接的拖车无法进入突袭."
+   },
+   "IGUI_ExtractionMode_Garage_Error_ReconstructionDataUnavailable": {
+    "en": "Vehicle reconstruction data is unavailable.",
+    "ch": "車輛重建資料無法使用.",
+    "cn": "车辆重建数据不可用."
+   },
+   "IGUI_ExtractionMode_Garage_Error_ReconstructionPositionRejected": {
+    "en": "Project Zomboid rejected the vehicle reconstruction position.",
+    "ch": "《殭屍毀滅工程》拒絕了車輛重建位置.",
+    "cn": "《僵尸毁灭工程》拒绝了车辆重建位置."
+   },
+   "IGUI_ExtractionMode_Garage_Error_RestorationCargoChangedDetails": {
+    "en": "Vehicle restoration found missing or changed cargo: %1",
+    "ch": "車輛復原時發現貨物遺失或變動: %1",
+    "cn": "车辆恢复时发现货物丢失或变动: %1"
+   },
+   "IGUI_ExtractionMode_Garage_Error_RestorationFailed": {
+    "en": "Vehicle restoration failed.",
+    "ch": "車輛復原失敗.",
+    "cn": "车辆恢复失败."
+   },
+   "IGUI_ExtractionMode_Garage_Error_ReturnTrailerBeforeDelete": {
+    "en": "Return the active trailer before deleting it.",
+    "ch": "刪除前請先收回使用中的拖車.",
+    "cn": "删除前请先收回使用中的拖车."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerAlreadyAttached": {
+    "en": "The active vehicle already has another trailer attached.",
+    "ch": "使用中的車輛已掛接另一輛拖車.",
+    "cn": "使用中的车辆已挂接另一辆拖车."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerAlreadyInDestinationGarage": {
+    "en": "That trailer is already in the destination garage.",
+    "ch": "那輛拖車已經在目的地車庫中.",
+    "cn": "那辆拖车已经在目的地车库中."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerAttachmentFailed": {
+    "en": "The trailer could not be attached to the active vehicle.",
+    "ch": "無法將拖車掛接到使用中的車輛.",
+    "cn": "无法将拖车挂接到使用中的车辆."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerAttachmentTargetsUnavailable": {
+    "en": "Trailer attachment targets are unavailable.",
+    "ch": "拖車掛接目標無法使用.",
+    "cn": "拖车挂接目标不可用."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerDataUnavailable": {
+    "en": "Trailer data is unavailable.",
+    "ch": "拖車資料無法使用.",
+    "cn": "拖车数据不可用."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerHitchRejected": {
+    "en": "Project Zomboid rejected the trailer hitch constraint.",
+    "ch": "《殭屍毀滅工程》拒絕了拖車掛接約束.",
+    "cn": "《僵尸毁灭工程》拒绝了拖车挂接约束."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerInteriorOccupied": {
+    "en": "That trailer cannot be returned while a player is inside its interior.",
+    "ch": "有玩家在拖車內部時, 無法將它收回.",
+    "cn": "有玩家在拖车内部时, 无法将它收回."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerInteriorOccupiedShort": {
+    "en": "The trailer interior is occupied.",
+    "ch": "拖車內部有人.",
+    "cn": "拖车内部有人."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerLoading": {
+    "en": "The active trailer is still loading and could not be saved safely.",
+    "ch": "使用中的拖車仍在載入, 無法安全儲存.",
+    "cn": "使用中的拖车仍在加载, 无法安全保存."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerMissing": {
+    "en": "That stored trailer no longer exists.",
+    "ch": "那輛已入庫的拖車已不存在.",
+    "cn": "那辆已入库的拖车已不存在."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerOwnerOutsideHideout": {
+    "en": "Trailers can only be deployed while their owner is inside the hideout.",
+    "ch": "只有在擁有者位於藏身點內時才能部署拖車.",
+    "cn": "只有在所有者位于藏身点内时才能部署拖车."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerOwnerUnavailable": {
+    "en": "The active trailer owner is unavailable.",
+    "ch": "目前無法取得使用中拖車的擁有者身分.",
+    "cn": "当前无法获取使用中拖车的所有者身份."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerPhysicsLost": {
+    "en": "Trailer attachment lost its vehicle physics controller: %1",
+    "ch": "拖車掛接時失去了車輛物理控制器: %1",
+    "cn": "拖车挂接时丢失了车辆物理控制器: %1"
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerPhysicsWait": {
+    "en": "Trailer attachment waited for vehicle physics: %1",
+    "ch": "拖車掛接時未能等到車輛物理系統就緒: %1",
+    "cn": "拖车挂接时未能等到车辆物理系统就绪: %1"
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerReconstructionUnavailable": {
+    "en": "Trailer reconstruction data is unavailable.",
+    "ch": "拖車重建資料無法使用.",
+    "cn": "拖车重建数据不可用."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerStagingUnavailable": {
+    "en": "No clear, loaded staging point was available behind the active vehicle.",
+    "ch": "使用中的車輛後方沒有已載入且無障礙的停放點.",
+    "cn": "使用中的车辆后方没有已加载且无障碍的停放点."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerStayedStored": {
+    "en": "The vehicle swap completed, but the trailer stayed safely stored: %1",
+    "ch": "車輛更換已完成, 但拖車仍安全留在車庫中: %1",
+    "cn": "车辆更换已完成, 但拖车仍安全留在车库中: %1"
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerVehicleBusy": {
+    "en": "The active vehicle is busy with another garage or raid transition.",
+    "ch": "使用中的車輛正在進行另一項車庫或突襲切換.",
+    "cn": "使用中的车辆正在进行另一项车库或突袭切换."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TrailerVehicleLoading": {
+    "en": "The active hideout vehicle is still loading.",
+    "ch": "藏身點使用中的車輛仍在載入.",
+    "cn": "藏身点使用中的车辆仍在加载."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TransferRaidReserved": {
+    "en": "The vehicle cannot be transferred while it is reserved for raid deployment.",
+    "ch": "車輛已為突襲部署保留時無法轉移.",
+    "cn": "车辆已为突袭部署保留时无法转移."
+   },
+   "IGUI_ExtractionMode_Garage_Error_TransferWhileReturning": {
+    "en": "Wait for the active vehicle to finish returning before transferring it.",
+    "ch": "轉移前請等待使用中的車輛完成收回.",
+    "cn": "转移前请等待使用中的车辆完成收回."
+   },
+   "IGUI_ExtractionMode_Garage_Error_VehicleCreationFailed": {
+    "en": "Project Zomboid could not create that vehicle in the indoor hideout bay.",
+    "ch": "《殭屍毀滅工程》無法在室內藏身點車位建立那輛車.",
+    "cn": "《僵尸毁灭工程》无法在室内藏身点车位创建那辆车."
+   },
+   "IGUI_ExtractionMode_Garage_Error_VehicleMissing": {
+    "en": "That garage vehicle no longer exists.",
+    "ch": "那輛車庫車輛已不存在.",
+    "cn": "那辆车库车辆已不存在."
+   },
+   "IGUI_ExtractionMode_Garage_Error_VehicleNotRegistered": {
+    "en": "Project Zomboid has not registered the vehicle in a loaded chunk.",
+    "ch": "《殭屍毀滅工程》尚未在已載入的區塊中登記該車輛.",
+    "cn": "《僵尸毁灭工程》尚未在已加载的区块中注册该车辆."
+   },
+   "IGUI_ExtractionMode_Garage_Error_VehiclePhysicsUnavailable": {
+    "en": "Project Zomboid has not initialized the vehicle physics controller.",
+    "ch": "《殭屍毀滅工程》尚未初始化車輛物理控制器.",
+    "cn": "《僵尸毁灭工程》尚未初始化车辆物理控制器."
+   },
+   "IGUI_ExtractionMode_Garage_Error_VehicleUnavailable": {
+    "en": "vehicle is unavailable",
+    "ch": "車輛無法使用",
+    "cn": "车辆不可用"
+   },
+   "IGUI_ExtractionMode_Garage_Message_EmergencyNone": {
+    "en": "Emergency cleanup found no physical vehicles inside the hideout.",
+    "ch": "緊急清理未在藏身點內發現任何實體車輛.",
+    "cn": "紧急清理未在藏身点内发现任何实体车辆."
+   },
+   "IGUI_ExtractionMode_Garage_Message_EmergencyRemoved": {
+    "en": "Emergency cleanup permanently removed %1 physical hideout vehicle(s). Stored garage records were unchanged.",
+    "ch": "緊急清理已永久移除 %1 輛藏身點實體車輛. 已入庫的車庫紀錄未受影響.",
+    "cn": "紧急清理已永久移除 %1 辆藏身点实体车辆. 已入库的车库记录未受影响."
+   },
+   "IGUI_ExtractionMode_Garage_Message_TrailerDeployed": {
+    "en": "Your trailer was deployed and attached to the active vehicle.",
+    "ch": "你的拖車已部署並掛接到使用中的車輛.",
+    "cn": "你的拖车已部署并挂接到使用中的车辆."
+   },
+   "IGUI_ExtractionMode_Garage_Message_TrailerReturned": {
+    "en": "Your active trailer was returned to the garage.",
+    "ch": "你使用中的拖車已收回車庫.",
+    "cn": "你使用中的拖车已收回车库."
+   },
+   "IGUI_ExtractionMode_Garage_Message_VehicleSavedAfterRaid": {
+    "en": "%1 was saved to your personal garage.",
+    "ch": "%1 已存入你的個人車庫.",
+    "cn": "%1 已存入你的个人车库."
+   },
+   "IGUI_ExtractionMode_PvP_AcceptAndTravel": {
+    "en": "Accept and travel to Hideout",
+    "ch": "接受並前往藏身點",
+    "cn": "接受并前往藏身点"
+   },
+   "IGUI_ExtractionMode_PvP_AdminDestinationActiveRaid": {
+    "en": "Active raid",
+    "ch": "突襲進行中",
+    "cn": "突袭进行中"
+   },
+   "IGUI_ExtractionMode_PvP_AdminDestinationAvailable": {
+    "en": "Available",
+    "ch": "可用",
+    "cn": "可用"
+   },
+   "IGUI_ExtractionMode_PvP_AdminDestinationSpecial": {
+    "en": "Special deployment",
+    "ch": "特殊部署",
+    "cn": "特殊部署"
+   },
+   "IGUI_ExtractionMode_PvP_AdminReadyCountSuffix": {
+    "en": "  |  %1 ready",
+    "ch": "  |  %1 人就緒",
+    "cn": "  |  %1 人就绪"
+   },
+   "IGUI_ExtractionMode_PvP_AtOwnerHideout": {
+    "en": "At: %1's Hideout",
+    "ch": "位置: %1 的藏身點",
+    "cn": "位置: %1 的藏身点"
+   },
+   "IGUI_ExtractionMode_PvP_AtUnassignedHideout": {
+    "en": "At: Unassigned Hideout",
+    "ch": "位置: 未分配的藏身點",
+    "cn": "位置: 未分配的藏身点"
+   },
+   "IGUI_ExtractionMode_PvP_AvailableFor": {
+    "en": "AVAILABLE FOR %1",
+    "ch": "剩餘可用時間 %1",
+    "cn": "剩余可用时间 %1"
+   },
+   "IGUI_ExtractionMode_PvP_AvailableForSentence": {
+    "en": "Available for %1",
+    "ch": "剩餘可用時間 %1",
+    "cn": "剩余可用时间 %1"
+   },
+   "IGUI_ExtractionMode_PvP_CancelOptOut": {
+    "en": "Cancel opt out",
+    "ch": "取消退出",
+    "cn": "取消退出"
+   },
+   "IGUI_ExtractionMode_PvP_CancelRotatingReadiness": {
+    "en": "Cancel rotating raid readiness",
+    "ch": "取消輪換突襲就緒",
+    "cn": "取消轮换突袭就绪"
+   },
+   "IGUI_ExtractionMode_PvP_CancelSpecialReadiness": {
+    "en": "Cancel special readiness",
+    "ch": "取消特殊部署就緒",
+    "cn": "取消特殊部署就绪"
+   },
+   "IGUI_ExtractionMode_PvP_CategoryInvitations": {
+    "en": "Invitations",
+    "ch": "邀請",
+    "cn": "邀请"
+   },
+   "IGUI_ExtractionMode_PvP_CategoryOnlinePlayers": {
+    "en": "Online Players",
+    "ch": "線上玩家",
+    "cn": "在线玩家"
+   },
+   "IGUI_ExtractionMode_PvP_CategoryResidencies": {
+    "en": "Residencies",
+    "ch": "居住處",
+    "cn": "居住处"
+   },
+   "IGUI_ExtractionMode_PvP_CategoryYourGuests": {
+    "en": "Your Guests",
+    "ch": "你的訪客",
+    "cn": "你的访客"
+   },
+   "IGUI_ExtractionMode_PvP_CategoryYourResidents": {
+    "en": "Your Residents",
+    "ch": "你的住戶",
+    "cn": "你的住户"
+   },
+   "IGUI_ExtractionMode_PvP_Close": {
+    "en": "Close",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "IGUI_ExtractionMode_PvP_Decline": {
+    "en": "Decline",
+    "ch": "拒絕",
+    "cn": "拒绝"
+   },
+   "IGUI_ExtractionMode_PvP_Deploy": {
+    "en": "DEPLOY",
+    "ch": "部署",
+    "cn": "部署"
+   },
+   "IGUI_ExtractionMode_PvP_DeployingInSeconds": {
+    "en": "DEPLOYING IN %1 SECONDS",
+    "ch": "%1 秒後部署",
+    "cn": "%1 秒后部署"
+   },
+   "IGUI_ExtractionMode_PvP_EndResidency": {
+    "en": "End residency",
+    "ch": "結束居住",
+    "cn": "结束居住"
+   },
+   "IGUI_ExtractionMode_PvP_EndResidencyAtOwner": {
+    "en": "End residency at %1's Hideout",
+    "ch": "結束在 %1 的藏身點居住",
+    "cn": "结束在 %1 的藏身点居住"
+   },
+   "IGUI_ExtractionMode_PvP_EndSelectedResidency": {
+    "en": "End selected player's residency",
+    "ch": "結束所選玩家的居住",
+    "cn": "结束所选玩家的居住"
+   },
+   "IGUI_ExtractionMode_PvP_EndSelectedVisit": {
+    "en": "End selected player's visit",
+    "ch": "結束所選玩家的拜訪",
+    "cn": "结束所选玩家的拜访"
+   },
+   "IGUI_ExtractionMode_PvP_ErrorAcceptConditions": {
+    "en": "Be alive, outside a raid and on foot in a hideout before accepting.",
+    "ch": "接受前, 你必須存活, 不在突襲中, 並徒步待在藏身點內.",
+    "cn": "接受前, 你必须存活, 不在突袭中, 并徒步待在藏身点内."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorActionPvPOnly": {
+    "en": "This action requires PvPvE mode.",
+    "ch": "此動作需要 PvPvE 模式.",
+    "cn": "此操作需要 PvPvE 模式."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorAlreadyDeploying": {
+    "en": "You are already deploying or in a raid.",
+    "ch": "你已經在部署中或正在突襲.",
+    "cn": "你已经在部署中或正在突袭."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorAnchorOutsideCell": {
+    "en": "The anchor must be inside its cell.",
+    "ch": "錨點必須位於其所屬的地圖格內.",
+    "cn": "锚点必须位于其所属的地图格内."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorAssignHideoutFirst": {
+    "en": "Assign this player an owned hideout before returning them home.",
+    "ch": "送此玩家回家前, 請先為他分配一個專屬藏身點.",
+    "cn": "送此玩家回家前, 请先为他分配一个专属藏身点."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorAssignmentAccountRequired": {
+    "en": "An account is required for hideout assignment.",
+    "ch": "分配藏身點需要帳號.",
+    "cn": "分配藏身点需要账号."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorAssignmentNeedsRepair": {
+    "en": "Your saved hideout assignment needs administrator repair.",
+    "ch": "你已儲存的藏身點分配需要管理員修復.",
+    "cn": "你已保存的藏身点分配需要管理员修复."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorChooseAnotherPlayer": {
+    "en": "Choose another online player.",
+    "ch": "請選擇另一名線上玩家.",
+    "cn": "请选择另一名在线玩家."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorChooseUnusedHideout": {
+    "en": "Choose an unused packaged hideout.",
+    "ch": "請選擇一個未使用的預製藏身點.",
+    "cn": "请选择一个未使用的预制藏身点."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorCountdownEnded": {
+    "en": "That raid countdown has ended. Wait for the next location.",
+    "ch": "該突襲的倒數已結束. 請等待下一個地點.",
+    "cn": "该突袭的倒计时已结束. 请等待下一个地点."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorDepartingRaidsActive": {
+    "en": "Wait for raids departing from this hideout to finish.",
+    "ch": "請等待從這個藏身點出發的突襲結束.",
+    "cn": "请等待从这个藏身点出发的突袭结束."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorDeploymentFailed": {
+    "en": "Raid deployment could not start.",
+    "ch": "突襲部署無法開始.",
+    "cn": "突袭部署无法开始."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorDestinationCellUnavailable": {
+    "en": "The destination map cell is unavailable.",
+    "ch": "目的地地圖格無法使用.",
+    "cn": "目的地地图格不可用."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorDriverRequired": {
+    "en": "A driver must be seated before vehicle deployment.",
+    "ch": "車輛部署前必須有駕駛就座.",
+    "cn": "车辆部署前必须有驾驶员就座."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorEndResidencyFirst": {
+    "en": "End your current residency before accepting another resident invitation.",
+    "ch": "接受另一個住戶邀請前, 請先結束目前的居住.",
+    "cn": "接受另一个住户邀请前, 请先结束当前的居住."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorEndResidencyForOwnHome": {
+    "en": "End your residency to restore your own hideout as your return destination.",
+    "ch": "結束居住, 即可將你自己的藏身點恢復為返回目的地.",
+    "cn": "结束居住, 即可将你自己的藏身点恢复为返回目的地."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorEveryOccupantReady": {
+    "en": "Vehicle deployment skipped: every occupant must ready up for this raid.",
+    "ch": "已略過車輛部署: 每位乘員都必須為這場突襲就緒.",
+    "cn": "已跳过车辆部署: 每位乘员都必须为这场突袭就绪."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorEveryVehicleOccupantReady": {
+    "en": "Every vehicle occupant must ready up.",
+    "ch": "每位車上乘員都必須就緒.",
+    "cn": "每位车上乘员都必须就绪."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorExitVehicleToOptOut": {
+    "en": "Exit your vehicle before opting out.",
+    "ch": "選擇不參加前, 請先下車.",
+    "cn": "选择不参加前, 请先下车."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorFootInsertionsFull": {
+    "en": "This raid is already full: all on-foot insertions are claimed.",
+    "ch": "這場突襲已滿: 所有徒步進場名額都已被佔用.",
+    "cn": "这场突袭已满: 所有徒步进场名额都已被占用."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorGroupChanged": {
+    "en": "Your deployment group changed. Refresh the deployment window.",
+    "ch": "你的部署小隊已變動. 請重新整理部署視窗.",
+    "cn": "你的部署小队已变动. 请刷新部署窗口."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorGroupDeploymentFailed": {
+    "en": "This group's deployment failed: %1",
+    "ch": "此小隊的部署失敗: %1",
+    "cn": "此小队的部署失败: %1"
+   },
+   "IGUI_ExtractionMode_PvP_ErrorGroupPreparingOtherDestination": {
+    "en": "Your group is preparing for another destination. Cancel readiness before changing it.",
+    "ch": "你的小隊正在準備前往另一個目的地. 變更前請先取消就緒.",
+    "cn": "你的小队正在准备前往另一个目的地. 更改前请先取消就绪."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorHideoutAccessRequired": {
+    "en": "You must own or be a member of that hideout.",
+    "ch": "你必須擁有該藏身點或是其成員.",
+    "cn": "你必须拥有该藏身点或是其成员."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorHideoutMapAndEntryUnavailable": {
+    "en": "Your PvPvE hideout map is unavailable. Restore the map pack and ExtractionModeHideouts map entry before continuing.",
+    "ch": "你的 PvPvE 藏身點地圖無法使用. 繼續前請先恢復地圖包與 ExtractionModeHideouts 地圖項目.",
+    "cn": "你的 PvPvE 藏身点地图不可用. 继续前请先恢复地图包和 ExtractionModeHideouts 地图条目."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorHideoutMapUnavailable": {
+    "en": "Your PvPvE hideout map is unavailable. Restore the map pack before continuing.",
+    "ch": "你的 PvPvE 藏身點地圖無法使用. 繼續前請先恢復地圖包.",
+    "cn": "你的 PvPvE 藏身点地图不可用. 继续前请先恢复地图包."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorHideoutNoLongerUnused": {
+    "en": "That hideout is no longer unused.",
+    "ch": "該藏身點已不再是未使用狀態.",
+    "cn": "该藏身点已不再是未使用状态."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorHideoutOwnerRequired": {
+    "en": "A hideout owner is required.",
+    "ch": "需要一名藏身點擁有者.",
+    "cn": "需要一名藏身点所有者."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorHideoutPoolMapMissing": {
+    "en": "The PvPvE hideout pool map is missing. Add ExtractionModeHideouts to the server map list and restart.",
+    "ch": "缺少 PvPvE 藏身點池地圖. 請將 ExtractionModeHideouts 加入伺服器地圖清單並重新啟動.",
+    "cn": "缺少 PvPvE 藏身点池地图. 请将 ExtractionModeHideouts 添加到服务器地图列表并重新启动."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorHostEndVisitOnly": {
+    "en": "Only the host can end another player's visit.",
+    "ch": "只有主人可以結束其他玩家的拜訪.",
+    "cn": "只有主人可以结束其他玩家的拜访."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorHostUnavailable": {
+    "en": "The host is no longer in that hideout.",
+    "ch": "主人已不在那個藏身點.",
+    "cn": "主人已不在那个藏身点."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorInitialCellAssignment": {
+    "en": "The initial spawn cell cannot be assigned as a PvPvE hideout.",
+    "ch": "初始出生地圖格不能分配為 PvPvE 藏身點.",
+    "cn": "初始出生地图格不能分配为 PvPvE 藏身点."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorInitialCellOwner": {
+    "en": "The initial spawn cell cannot have a PvPvE hideout owner.",
+    "ch": "初始出生地圖格不能有 PvPvE 藏身點擁有者.",
+    "cn": "初始出生地图格不能有 PvPvE 藏身点所有者."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorInvalidHideoutCell": {
+    "en": "Invalid hideout cell.",
+    "ch": "無效的藏身點地圖格.",
+    "cn": "无效的藏身点地图格."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorInvalidReadinessChoice": {
+    "en": "Invalid readiness choice.",
+    "ch": "無效的就緒選項.",
+    "cn": "无效的就绪选项."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorInvalidSpecialDeployment": {
+    "en": "Choose a valid special deployment.",
+    "ch": "請選擇有效的特殊部署.",
+    "cn": "请选择有效的特殊部署."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorInvitationCooldown": {
+    "en": "Wait a few seconds before sending another invitation.",
+    "ch": "請等幾秒再發送下一個邀請.",
+    "cn": "请等几秒再发送下一个邀请."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorInvitationExpired": {
+    "en": "That invitation has expired.",
+    "ch": "該邀請已過期.",
+    "cn": "该邀请已过期."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorInvitationInvalid": {
+    "en": "The invitation is no longer valid.",
+    "ch": "此邀請已失效.",
+    "cn": "此邀请已失效."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorInvitationsPvPOnly": {
+    "en": "Hideout invitations are available in PvPvE mode.",
+    "ch": "藏身點邀請只在 PvPvE 模式中可用.",
+    "cn": "藏身点邀请仅在 PvPvE 模式中可用."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorLocationLockedOrActive": {
+    "en": "That location is locked or already has an active raid.",
+    "ch": "該地點已鎖定, 或已有進行中的突襲.",
+    "cn": "该地点已锁定, 或已有进行中的突袭."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorNoHideoutPool": {
+    "en": "The server has no packaged PvPvE hideout pool.",
+    "ch": "伺服器沒有預製的 PvPvE 藏身點池.",
+    "cn": "服务器没有预制的 PvPvE 藏身点池."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorNoHideoutsAvailable": {
+    "en": "No PvPvE hideouts are available. An administrator must expand the map pool.",
+    "ch": "沒有可用的 PvPvE 藏身點. 管理員必須擴充地圖池.",
+    "cn": "没有可用的 PvPvE 藏身点. 管理员必须扩充地图池."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorNoInsertionRoute": {
+    "en": "No usable insertion route is available for this raid.",
+    "ch": "這場突襲沒有可用的進場路線.",
+    "cn": "这场突袭没有可用的进场路线."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorOwnerRaidActive": {
+    "en": "The owner must finish their raid before reassignment.",
+    "ch": "重新分配前, 擁有者必須先結束他的突襲.",
+    "cn": "重新分配前, 所有者必须先结束他的突袭."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorOwnerRemoveMemberOnly": {
+    "en": "Only the hideout owner can remove another member.",
+    "ch": "只有藏身點擁有者可以移除其他成員.",
+    "cn": "只有藏身点所有者可以移除其他成员."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorOwnershipChanged": {
+    "en": "Ownership changed. Refresh the hideout list.",
+    "ch": "擁有權已變更. 請重新整理藏身點清單.",
+    "cn": "所有权已变更. 请刷新藏身点列表."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorPlayerBusy": {
+    "en": "That player is currently deploying or in a raid.",
+    "ch": "該玩家目前正在部署或在突襲中.",
+    "cn": "该玩家当前正在部署或在突袭中."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorPvPAdminRequired": {
+    "en": "Extraction PvP administrator access is required.",
+    "ch": "需要 Extraction PvP 管理員權限.",
+    "cn": "需要 Extraction PvP 管理员权限."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorPvPMapRequired": {
+    "en": "Extraction PvP requires the Extraction Mode PvP Map mod. Enable it on the server and clients.",
+    "ch": "Extraction PvP 需要「Extraction Mode PvP Map」模組. 請在伺服器與用戶端啟用它.",
+    "cn": "Extraction PvP 需要“Extraction Mode PvP Map”模组. 请在服务器和客户端启用它."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorPvPvEAdminRequired": {
+    "en": "PvPvE admin access is required.",
+    "ch": "需要 PvPvE 管理員權限.",
+    "cn": "需要 PvPvE 管理员权限."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorPvPvEServerAuthority": {
+    "en": "PvPvE server authority is required.",
+    "ch": "此操作必須在 PvPvE 模式下由伺服器執行.",
+    "cn": "此操作必须在 PvPvE 模式下由服务器执行."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorReadyInsideHideout": {
+    "en": "Return inside an accessible hideout to ready up.",
+    "ch": "請回到可進入的藏身點內才能就緒.",
+    "cn": "请回到可进入的藏身点内才能就绪."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorReassignmentPvPOnly": {
+    "en": "Reassignment requires PvPvE mode.",
+    "ch": "重新分配需要 PvPvE 模式.",
+    "cn": "重新分配需要 PvPvE 模式."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorReassignmentStopped": {
+    "en": "Reassignment stopped: %1",
+    "ch": "重新分配已中止: %1",
+    "cn": "重新分配已中止: %1"
+   },
+   "IGUI_ExtractionMode_PvP_ErrorRecentDeathBlocked": {
+    "en": "Raid blocked due to recent player/team member death.",
+    "ch": "由於玩家/隊員最近死亡, 突襲已被封鎖.",
+    "cn": "由于玩家/队员最近死亡, 突袭已被封锁."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorRegisteredHideoutAccountRequired": {
+    "en": "A registered hideout and account are required.",
+    "ch": "需要已登記的藏身點與帳號.",
+    "cn": "需要已注册的藏身点和账号."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorRemoveCorpseCargo": {
+    "en": "Remove corpse cargo before entering a raid.",
+    "ch": "進入突襲前, 請先移除車上的屍體.",
+    "cn": "进入突袭前, 请先移除车上的尸体."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorResidencyChanged": {
+    "en": "That residency changed. Refresh the player list.",
+    "ch": "該居住狀態已變更. 請重新整理玩家清單.",
+    "cn": "该居住状态已变更. 请刷新玩家列表."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorReturnAccessibleHideout": {
+    "en": "Return to an accessible hideout outside a raid.",
+    "ch": "請在突襲外回到可進入的藏身點.",
+    "cn": "请在突袭外回到可进入的藏身点."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorReturnConditions": {
+    "en": "Returning requires an assigned hideout, being alive and on foot, and no active raid or deployment.",
+    "ch": "返回需要已分配的藏身點, 保持存活並徒步, 且沒有進行中的突襲或部署.",
+    "cn": "返回需要已分配的藏身点, 保持存活并徒步, 且没有进行中的突袭或部署."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorReviewDeploymentTutorial": {
+    "en": "Review the vehicle deployment tutorial before readying up.",
+    "ch": "就緒前請先檢視車輛進場教學.",
+    "cn": "就绪前请先查看车辆进场教程."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorReviewDeploymentTutorialAgain": {
+    "en": "Review the vehicle deployment tutorial, then ready again.",
+    "ch": "請檢視車輛進場教學, 然後再次就緒.",
+    "cn": "请查看车辆进场教程, 然后再次就绪."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorReviewVehicleTutorial": {
+    "en": "Review the vehicle tutorial, then ready again.",
+    "ch": "請檢視車輛教學, 然後再次就緒.",
+    "cn": "请查看车辆教程, 然后再次就绪."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorRoadsClosed": {
+    "en": "Roads are closed. Exit your vehicle to deploy on foot.",
+    "ch": "道路已封閉. 請下車改以徒步部署.",
+    "cn": "道路已封闭. 请下车改为徒步部署."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorRotationChanged": {
+    "en": "The raid rotation changed. Refresh and try again.",
+    "ch": "突襲輪換已變更. 請重新整理後再試.",
+    "cn": "突袭轮换已变更. 请刷新后再试."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorSchedulingInactive": {
+    "en": "PvPvE scheduling is not active.",
+    "ch": "PvPvE 排程未啟用.",
+    "cn": "PvPvE 调度未启用."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorServerAuthorityRequired": {
+    "en": "Server authority is required.",
+    "ch": "此操作必須由伺服器執行.",
+    "cn": "此操作必须由服务器执行."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorSpecialLocked": {
+    "en": "This special deployment is not unlocked for you.",
+    "ch": "你尚未解鎖此特殊部署.",
+    "cn": "你尚未解锁此特殊部署."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorSpecialPvPOnly": {
+    "en": "Special group deployment requires PvPvE mode.",
+    "ch": "特殊小隊部署需要 PvPvE 模式.",
+    "cn": "特殊小队部署需要 PvPvE 模式."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorTrailerStillStoring": {
+    "en": "The active trailer has not finished storing.",
+    "ch": "使用中的拖車尚未完成入庫.",
+    "cn": "使用中的拖车尚未完成入库."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorTravelConditions": {
+    "en": "Travel and home changes require being on foot in a hideout, outside a raid.",
+    "ch": "前往其他藏身點與變更住所時, 你必須徒步待在藏身點內, 且不在突襲中.",
+    "cn": "前往其他藏身点和更改住所时, 你必须徒步待在藏身点内, 且不在突袭中."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorUnknownHideoutAction": {
+    "en": "Unknown hideout action.",
+    "ch": "未知的藏身點動作.",
+    "cn": "未知的藏身点操作."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorUseScheduledRaid": {
+    "en": "PvPvE uses the scheduled raid shown on your HUD. Ready up before its countdown ends.",
+    "ch": "PvPvE 使用 HUD 上顯示的排定突襲. 請在倒數結束前就緒.",
+    "cn": "PvPvE 使用 HUD 上显示的预定突袭. 请在倒计时结束前就绪."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorVehicleInsertionsFull": {
+    "en": "All vehicle insertions are claimed for this raid.",
+    "ch": "這場突襲的所有車輛進場名額都已被佔用.",
+    "cn": "这场突袭的所有车辆进场名额都已被占用."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorVehicleNeedsFuel": {
+    "en": "The vehicle needs more fuel.",
+    "ch": "車輛需要更多燃料.",
+    "cn": "车辆需要更多燃料."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorVehicleStorageInProgress": {
+    "en": "A vehicle storage operation is already underway. Wait for it to finish.",
+    "ch": "已有車輛入庫作業正在進行. 請等它完成.",
+    "cn": "已有车辆入库操作正在进行. 请等它完成."
+   },
+   "IGUI_ExtractionMode_PvP_ErrorWaitingRaidLocation": {
+    "en": "Waiting for an available raid location.",
+    "ch": "正在等待可用的突襲地點.",
+    "cn": "正在等待可用的突袭地点."
+   },
+   "IGUI_ExtractionMode_PvP_FactionDeploymentHint": {
+    "en": "Factions can group on foot across hideouts; vehicles deploy separately.",
+    "ch": "派系成員可跨藏身點徒步組隊; 車輛則分開部署.",
+    "cn": "阵营成员可跨藏身点徒步组队; 车辆则分开部署."
+   },
+   "IGUI_ExtractionMode_PvP_GroupCountdownSuffix": {
+    "en": "  |  Deploying in %1",
+    "ch": "  |  %1 後部署",
+    "cn": "  |  %1 后部署"
+   },
+   "IGUI_ExtractionMode_PvP_GroupDecisionHint": {
+    "en": "Your deployment group decides, then a 10-second countdown starts.",
+    "ch": "由你的部署小隊做出決定後, 開始 10 秒倒數.",
+    "cn": "由你的部署小队做出决定后, 开始 10 秒倒计时."
+   },
+   "IGUI_ExtractionMode_PvP_GroupPreparing": {
+    "en": "YOUR GROUP IS PREPARING FOR %1",
+    "ch": "你的小隊正在準備前往 %1",
+    "cn": "你的小队正在准备前往 %1"
+   },
+   "IGUI_ExtractionMode_PvP_GroupReadyCount": {
+    "en": "%1 ready / %2 in this group",
+    "ch": "已就緒 %1 / 本小隊共 %2 人",
+    "cn": "已就绪 %1 / 本小队共 %2 人"
+   },
+   "IGUI_ExtractionMode_PvP_GuestInvitation": {
+    "en": "%1 — Guest invitation",
+    "ch": "%1 — 訪客邀請",
+    "cn": "%1 — 访客邀请"
+   },
+   "IGUI_ExtractionMode_PvP_GuestsResidentsHint": {
+    "en": "Guests can visit. Residents can contribute and make changes.",
+    "ch": "訪客可以拜訪. 住戶可以提供貢獻並進行變更.",
+    "cn": "访客可以拜访. 住户可以做出贡献并进行更改."
+   },
+   "IGUI_ExtractionMode_PvP_HideoutInvites": {
+    "en": "HIDEOUT / INVITES",
+    "ch": "藏身點 / 邀請",
+    "cn": "藏身点 / 邀请"
+   },
+   "IGUI_ExtractionMode_PvP_HideoutInvitesCount": {
+    "en": "HIDEOUT / INVITES (%1)",
+    "ch": "藏身點 / 邀請 (%1)",
+    "cn": "藏身点 / 邀请 (%1)"
+   },
+   "IGUI_ExtractionMode_PvP_HideoutInvitesTitle": {
+    "en": "Hideout / Invites",
+    "ch": "藏身點 / 邀請",
+    "cn": "藏身点 / 邀请"
+   },
+   "IGUI_ExtractionMode_PvP_InviteGuest": {
+    "en": "Invite as Guest",
+    "ch": "邀請為訪客",
+    "cn": "邀请为访客"
+   },
+   "IGUI_ExtractionMode_PvP_InviteResident": {
+    "en": "Invite as Resident",
+    "ch": "邀請為住戶",
+    "cn": "邀请为住户"
+   },
+   "IGUI_ExtractionMode_PvP_MessageAdminChangedRaid": {
+    "en": "An admin changed the next raid to %1. The rotation countdown has restarted; ready up again to join.",
+    "ch": "管理員已將下一場突襲改為 %1. 輪換倒數已重新開始; 請再次就緒以加入.",
+    "cn": "管理员已将下一场突袭改为 %1. 轮换倒计时已重新开始; 请再次就绪以加入."
+   },
+   "IGUI_ExtractionMode_PvP_MessageGroupPreparing": {
+    "en": "Your deployment group is preparing for %1. Open DEPLOY to ready up or opt out.",
+    "ch": "你的部署小隊正在準備前往 %1. 請開啟「部署」以就緒或選擇不參加.",
+    "cn": "你的部署小队正在准备前往 %1. 请打开“部署”以就绪或选择不参加."
+   },
+   "IGUI_ExtractionMode_PvP_MessageGuestInvitation": {
+    "en": "%1 invited you to visit their hideout. Open HIDEOUT / INVITES to respond.",
+    "ch": "%1 邀請你拜訪他的藏身點. 請開啟「藏身點 / 邀請」回應.",
+    "cn": "%1 邀请你拜访其藏身点. 请打开“藏身点 / 邀请”进行回应."
+   },
+   "IGUI_ExtractionMode_PvP_MessageResidentInvitation": {
+    "en": "%1 invited you to become a hideout resident. Open HIDEOUT / INVITES to respond.",
+    "ch": "%1 邀請你成為藏身點住戶. 請開啟「藏身點 / 邀請」回應.",
+    "cn": "%1 邀请你成为藏身点住户. 请打开“藏身点 / 邀请”进行回应."
+   },
+   "IGUI_ExtractionMode_PvP_MessageSavingVehiclesBeforeReassignment": {
+    "en": "Saving the active vehicle and trailer before reassignment.",
+    "ch": "重新分配前, 正在儲存使用中的車輛與拖車.",
+    "cn": "重新分配前, 正在保存使用中的车辆和拖车."
+   },
+   "IGUI_ExtractionMode_PvP_NextRaid": {
+    "en": "NEXT RAID: %1",
+    "ch": "下一場突襲: %1",
+    "cn": "下一场突袭: %1"
+   },
+   "IGUI_ExtractionMode_PvP_NoEntries": {
+    "en": "No entries to display.",
+    "ch": "沒有可顯示的項目.",
+    "cn": "没有可显示的条目."
+   },
+   "IGUI_ExtractionMode_PvP_NotReadied": {
+    "en": "NOT READIED",
+    "ch": "未就緒",
+    "cn": "未就绪"
+   },
+   "IGUI_ExtractionMode_PvP_NotReadiedDeployingIn": {
+    "en": "NOT READIED  |  Deploying in %1",
+    "ch": "未就緒  |  %1 後部署",
+    "cn": "未就绪  |  %1 后部署"
+   },
+   "IGUI_ExtractionMode_PvP_NotReadiedSuffix": {
+    "en": "  |  NOT READIED",
+    "ch": "  |  未就緒",
+    "cn": "  |  未就绪"
+   },
+   "IGUI_ExtractionMode_PvP_NotReadiedWaiting": {
+    "en": "NOT READIED  |  Waiting for ready / opt out",
+    "ch": "未就緒  |  等待就緒 / 不參加",
+    "cn": "未就绪  |  等待就绪 / 不参加"
+   },
+   "IGUI_ExtractionMode_PvP_OpenDeployDecision": {
+    "en": "OPEN DEPLOY TO READY UP OR OPT OUT",
+    "ch": "開啟「部署」以就緒或選擇不參加",
+    "cn": "打开“部署”以就绪或选择不参加"
+   },
+   "IGUI_ExtractionMode_PvP_OptOut": {
+    "en": "Opt out",
+    "ch": "不參加",
+    "cn": "不参加"
+   },
+   "IGUI_ExtractionMode_PvP_OptOutRotatingRaid": {
+    "en": "Opt out of rotating raid",
+    "ch": "不參加輪換突襲",
+    "cn": "不参加轮换突袭"
+   },
+   "IGUI_ExtractionMode_PvP_OptOutSpecialDeployment": {
+    "en": "Opt out of special deployment",
+    "ch": "不參加特殊部署",
+    "cn": "不参加特殊部署"
+   },
+   "IGUI_ExtractionMode_PvP_OptedOut": {
+    "en": "OPTED OUT",
+    "ch": "已選擇不參加",
+    "cn": "已选择不参加"
+   },
+   "IGUI_ExtractionMode_PvP_OptedOutDeployingIn": {
+    "en": "OPTED OUT  |  Deploying in %1",
+    "ch": "已選擇不參加  |  %1 後部署",
+    "cn": "已选择不参加  |  %1 后部署"
+   },
+   "IGUI_ExtractionMode_PvP_OptedOutPrefix": {
+    "en": "OPTED OUT  |  %1",
+    "ch": "已選擇不參加  |  %1",
+    "cn": "已选择不参加  |  %1"
+   },
+   "IGUI_ExtractionMode_PvP_OptedOutSuffix": {
+    "en": "  |  OPTED OUT",
+    "ch": "  |  已選擇不參加",
+    "cn": "  |  已选择不参加"
+   },
+   "IGUI_ExtractionMode_PvP_OptedOutWaiting": {
+    "en": "OPTED OUT  |  Waiting for ready / opt out",
+    "ch": "已選擇不參加  |  等待就緒 / 不參加",
+    "cn": "已选择不参加  |  等待就绪 / 不参加"
+   },
+   "IGUI_ExtractionMode_PvP_OutsideHideout": {
+    "en": "Outside a hideout",
+    "ch": "不在藏身點內",
+    "cn": "不在藏身点内"
+   },
+   "IGUI_ExtractionMode_PvP_OwnerHideout": {
+    "en": "%1's Hideout",
+    "ch": "%1 的藏身點",
+    "cn": "%1 的藏身点"
+   },
+   "IGUI_ExtractionMode_PvP_OwnerHideoutReturnHome": {
+    "en": "%1's Hideout (return home)",
+    "ch": "%1 的藏身點 (返回自家)",
+    "cn": "%1 的藏身点 (返回自家)"
+   },
+   "IGUI_ExtractionMode_PvP_PlayerOffline": {
+    "en": "%1 (offline)",
+    "ch": "%1 (離線)",
+    "cn": "%1 (离线)"
+   },
+   "IGUI_ExtractionMode_PvP_PlayerOnline": {
+    "en": "%1 (online)",
+    "ch": "%1 (線上)",
+    "cn": "%1 (在线)"
+   },
+   "IGUI_ExtractionMode_PvP_PlayerUnavailable": {
+    "en": "%1 (unavailable)",
+    "ch": "%1 (無法邀請)",
+    "cn": "%1 (无法邀请)"
+   },
+   "IGUI_ExtractionMode_PvP_Readied": {
+    "en": "READIED",
+    "ch": "已就緒",
+    "cn": "已就绪"
+   },
+   "IGUI_ExtractionMode_PvP_ReadiedDeployingIn": {
+    "en": "READIED  |  Deploying in %1",
+    "ch": "已就緒  |  %1 後部署",
+    "cn": "已就绪  |  %1 后部署"
+   },
+   "IGUI_ExtractionMode_PvP_ReadiedSuffix": {
+    "en": "  |  READIED",
+    "ch": "  |  已就緒",
+    "cn": "  |  已就绪"
+   },
+   "IGUI_ExtractionMode_PvP_ReadiedWaiting": {
+    "en": "READIED  |  Waiting for ready / opt out",
+    "ch": "已就緒  |  等待就緒 / 不參加",
+    "cn": "已就绪  |  等待就绪 / 不参加"
+   },
+   "IGUI_ExtractionMode_PvP_ReadyCountSuffix": {
+    "en": "  |  %1 READY",
+    "ch": "  |  %1 人就緒",
+    "cn": "  |  %1 人就绪"
+   },
+   "IGUI_ExtractionMode_PvP_ReadyLouisville": {
+    "en": "Ready for Louisville",
+    "ch": "就緒: 路易斯維爾",
+    "cn": "就绪: 路易斯维尔"
+   },
+   "IGUI_ExtractionMode_PvP_ReadyRotatingRaid": {
+    "en": "Ready for rotating raid",
+    "ch": "就緒: 輪換突襲",
+    "cn": "就绪: 轮换突袭"
+   },
+   "IGUI_ExtractionMode_PvP_ReadySpecialDeployment": {
+    "en": "Ready for special deployment",
+    "ch": "就緒: 特殊部署",
+    "cn": "就绪: 特殊部署"
+   },
+   "IGUI_ExtractionMode_PvP_RefreshPending": {
+    "en": "Refresh pending - waiting for the location to clear.",
+    "ch": "等待刷新 - 正在等待該地點淨空.",
+    "cn": "等待刷新 - 正在等待该地点清空."
+   },
+   "IGUI_ExtractionMode_PvP_RefreshPreparing": {
+    "en": "Preparing refreshed loot and encounters.",
+    "ch": "正在準備刷新後的戰利品與遭遇.",
+    "cn": "正在准备刷新后的战利品和遭遇."
+   },
+   "IGUI_ExtractionMode_PvP_ResidentInvitation": {
+    "en": "%1 — Resident invitation",
+    "ch": "%1 — 住戶邀請",
+    "cn": "%1 — 住户邀请"
+   },
+   "IGUI_ExtractionMode_PvP_ReturnOwnHideout": {
+    "en": "Return to your own Hideout",
+    "ch": "返回你自己的藏身點",
+    "cn": "返回你自己的藏身点"
+   },
+   "IGUI_ExtractionMode_PvP_ReturnResidenceHideout": {
+    "en": "Return to current residence Hideout",
+    "ch": "返回目前居住的藏身點",
+    "cn": "返回当前居住的藏身点"
+   },
+   "IGUI_ExtractionMode_PvP_RoadsBlockedTag": {
+    "en": "[ROADS BLOCKED]",
+    "ch": "[道路封鎖]",
+    "cn": "[道路封锁]"
+   },
+   "IGUI_ExtractionMode_PvP_RoadsBlockedWarning": {
+    "en": "ROADS BLOCKED: deploy on foot; vehicles cannot be extracted.",
+    "ch": "道路封鎖: 請徒步部署; 車輛無法撤離.",
+    "cn": "道路封锁: 请步行部署; 车辆无法撤离."
+   },
+   "IGUI_ExtractionMode_PvP_RotatingRaid": {
+    "en": "ROTATING RAID: %1",
+    "ch": "輪換突襲: %1",
+    "cn": "轮换突袭: %1"
+   },
+   "IGUI_ExtractionMode_PvP_SpecialDeployment": {
+    "en": "SPECIAL DEPLOYMENT",
+    "ch": "特殊部署",
+    "cn": "特殊部署"
+   },
+   "IGUI_ExtractionMode_PvP_StartsIn": {
+    "en": "STARTS IN %1",
+    "ch": "%1 後開始",
+    "cn": "%1 后开始"
+   },
+   "IGUI_ExtractionMode_PvP_StartsInSentence": {
+    "en": "Starts in %1",
+    "ch": "%1 後開始",
+    "cn": "%1 后开始"
+   },
+   "IGUI_ExtractionMode_PvP_TeleportOwnerHideout": {
+    "en": "Teleport to %1's Hideout",
+    "ch": "傳送至 %1 的藏身點",
+    "cn": "传送至 %1 的藏身点"
+   },
+   "IGUI_ExtractionMode_PvP_TeleportResidentHideout": {
+    "en": "Teleport to resident Hideout",
+    "ch": "傳送至你居住的藏身點",
+    "cn": "传送至你居住的藏身点"
+   },
+   "IGUI_ExtractionMode_PvP_TownReadied": {
+    "en": "%1  |  READIED",
+    "ch": "%1  |  已就緒",
+    "cn": "%1  |  已就绪"
+   },
+   "IGUI_ExtractionMode_PvP_WaitingForGroupSuffix": {
+    "en": "  |  Waiting for group",
+    "ch": "  |  等待小隊",
+    "cn": "  |  等待小队"
+   },
+   "IGUI_ExtractionMode_PvP_WaitingForLocation": {
+    "en": "WAITING FOR A LOCATION",
+    "ch": "正在等待地點",
+    "cn": "正在等待地点"
+   },
+   "IGUI_ExtractionMode_PvP_WaitingForLocationSentence": {
+    "en": "Waiting for a location",
+    "ch": "正在等待地點",
+    "cn": "正在等待地点"
+   },
+   "IGUI_ExtractionMode_PvP_WaitingGroupDecision": {
+    "en": "WAITING FOR YOUR DEPLOYMENT GROUP TO READY / OPT OUT",
+    "ch": "等待你的部署小隊就緒 / 不參加",
+    "cn": "等待你的部署小队就绪 / 不参加"
+   },
+   "IGUI_ExtractionMode_ServiceTier_Major": {
+    "en": "Major",
+    "ch": "高級",
+    "cn": "高级"
+   },
+   "IGUI_ExtractionMode_ServiceTier_Minor": {
+    "en": "Minor",
+    "ch": "初級",
+    "cn": "初级"
+   },
+   "IGUI_ExtractionMode_ServiceTier_Standard": {
+    "en": "Standard",
+    "ch": "標準",
+    "cn": "标准"
+   },
+   "IGUI_ExtractionMode_Service_BulletGlassPreview": {
+    "en": "Remove the bullet. Embedded glass still needs removal.",
+    "ch": "取出子彈. 嵌入的玻璃碎片仍需取出.",
+    "cn": "取出子弹. 嵌入的玻璃碎片仍需取出."
+   },
+   "IGUI_ExtractionMode_Service_BulletPreview": {
+    "en": "Remove the bullet and treat the resulting deep wound and bleeding. Knox infection is unchanged.",
+    "ch": "取出子彈, 並治療由此造成的深層傷口與流血. 諾克斯感染不受影響.",
+    "cn": "取出子弹, 并治疗由此造成的深层伤口和流血. 诺克斯感染不受影响."
+   },
+   "IGUI_ExtractionMode_Service_BulletWoundLabel": {
+    "en": "%1 - Bullet Wound",
+    "ch": "%1 - 槍傷",
+    "cn": "%1 - 枪伤"
+   },
+   "IGUI_ExtractionMode_Service_ClothingPreview": {
+    "en": "Condition: %1 -> %2; repair %3 hole(s)",
+    "ch": "狀況: %1 -> %2; 修補 %3 個破洞",
+    "cn": "状况: %1 -> %2; 修补 %3 个破洞"
+   },
+   "IGUI_ExtractionMode_Service_ConditionPreview": {
+    "en": "Condition: %1 -> %2",
+    "ch": "狀況: %1 -> %2",
+    "cn": "状况: %1 -> %2"
+   },
+   "IGUI_ExtractionMode_Service_Error_MoneyChanged": {
+    "en": "Money changed before payment.",
+    "ch": "付款前紙鈔數量發生了變化.",
+    "cn": "付款前纸币数量发生了变化."
+   },
+   "IGUI_ExtractionMode_Service_Error_MoneyUnavailable": {
+    "en": "Money is unavailable.",
+    "ch": "無法取得紙鈔.",
+    "cn": "无法获取纸币."
+   },
+   "IGUI_ExtractionMode_Service_Error_NeedMoney": {
+    "en": "You need %1 Money.",
+    "ch": "你需要 %1 張紙鈔.",
+    "cn": "你需要 %1 张纸币."
+   },
+   "IGUI_ExtractionMode_Service_Error_NoRecoverableHealth": {
+    "en": "There is no recoverable health damage to heal.",
+    "ch": "沒有可恢復的健康損傷可治療.",
+    "cn": "没有可恢复的健康损伤可治疗."
+   },
+   "IGUI_ExtractionMode_Service_Error_NotUnlocked": {
+    "en": "You have not unlocked this service.",
+    "ch": "你尚未解鎖此服務.",
+    "cn": "你尚未解锁此服务."
+   },
+   "IGUI_ExtractionMode_Service_Error_SelectionExpired": {
+    "en": "Selection expired. Select the target again.",
+    "ch": "選擇已逾時. 請重新選擇目標.",
+    "cn": "选择已过期. 请重新选择目标."
+   },
+   "IGUI_ExtractionMode_Service_Error_ServiceFailedRefunded": {
+    "en": "Service failed; your %1 Money was refunded.",
+    "ch": "服務失敗; 已退還你的 %1 張紙鈔.",
+    "cn": "服务失败; 已退还你的 %1 张纸币."
+   },
+   "IGUI_ExtractionMode_Service_Error_TargetChanged": {
+    "en": "The selected target changed or no longer needs this service.",
+    "ch": "所選目標已變更, 或不再需要此服務.",
+    "cn": "所选目标已更改, 或不再需要此服务."
+   },
+   "IGUI_ExtractionMode_Service_ItemLabel": {
+    "en": "%1 - %2 (%3)",
+    "ch": "%1 - %2 (%3)",
+    "cn": "%1 - %2 (%3)"
+   },
+   "IGUI_ExtractionMode_Service_Location_Attached": {
+    "en": "Attached - %1",
+    "ch": "已掛載 - %1",
+    "cn": "已挂载 - %1"
+   },
+   "IGUI_ExtractionMode_Service_Location_Back": {
+    "en": "Back",
+    "ch": "揹著",
+    "cn": "背着"
+   },
+   "IGUI_ExtractionMode_Service_Location_Belt": {
+    "en": "Belt",
+    "ch": "皮帶",
+    "cn": "皮带"
+   },
+   "IGUI_ExtractionMode_Service_Location_BeltLeft": {
+    "en": "Belt Left",
+    "ch": "皮帶左邊",
+    "cn": "皮带左边"
+   },
+   "IGUI_ExtractionMode_Service_Location_BeltRight": {
+    "en": "Belt Right",
+    "ch": "皮帶右邊",
+    "cn": "皮带右边"
+   },
+   "IGUI_ExtractionMode_Service_Location_EquippedBothHands": {
+    "en": "Equipped - Both Hands",
+    "ch": "已裝備 - 雙手",
+    "cn": "已装备 - 双手"
+   },
+   "IGUI_ExtractionMode_Service_Location_EquippedPrimaryHand": {
+    "en": "Equipped - Primary Hand",
+    "ch": "已裝備 - 主手",
+    "cn": "已装备 - 主手"
+   },
+   "IGUI_ExtractionMode_Service_Location_EquippedSecondaryHand": {
+    "en": "Equipped - Secondary Hand",
+    "ch": "已裝備 - 副手",
+    "cn": "已装备 - 副手"
+   },
+   "IGUI_ExtractionMode_Service_Location_Inventory": {
+    "en": "Inventory",
+    "ch": "物品欄",
+    "cn": "物品栏"
+   },
+   "IGUI_ExtractionMode_Service_Location_LeftHolster": {
+    "en": "Left Holster",
+    "ch": "左槍套",
+    "cn": "左枪套"
+   },
+   "IGUI_ExtractionMode_Service_Location_RightHolster": {
+    "en": "Right Holster",
+    "ch": "右槍套",
+    "cn": "右枪套"
+   },
+   "IGUI_ExtractionMode_Service_Location_Worn": {
+    "en": "Worn",
+    "ch": "穿戴中",
+    "cn": "穿戴中"
+   },
+   "IGUI_ExtractionMode_Service_NoTargets": {
+    "en": "No eligible targets available",
+    "ch": "沒有符合條件的目標",
+    "cn": "没有符合条件的目标"
+   },
+   "IGUI_ExtractionMode_Service_OverallHealthLabel": {
+    "en": "Overall Health (No wounds cured) - %1",
+    "ch": "整體健康 (不治療傷口) - %1",
+    "cn": "整体健康 (不治疗伤口) - %1"
+   },
+   "IGUI_ExtractionMode_Service_OverallHealthLimited": {
+    "en": "Health is limited by ongoing effects; there is no recoverable body damage to heal.",
+    "ch": "健康受持續效果限制; 沒有可恢復的身體傷害可治療.",
+    "cn": "健康受持续效果限制; 没有可恢复的身体伤害可治疗."
+   },
+   "IGUI_ExtractionMode_Service_OverallHealthPreview": {
+    "en": "Health: %1 -> %2 (wounds and Knox infection unchanged)",
+    "ch": "健康: %1 -> %2 (傷口與諾克斯感染不變)",
+    "cn": "健康: %1 -> %2 (伤口和诺克斯感染不变)"
+   },
+   "IGUI_ExtractionMode_Service_PreviewSelect": {
+    "en": "Select an eligible target to preview the effect.",
+    "ch": "選擇符合條件的目標以預覽效果.",
+    "cn": "选择符合条件的目标以预览效果."
+   },
+   "IGUI_ExtractionMode_Service_PreviewVehicleSelect": {
+    "en": "Select a damaged part on your active, unoccupied garage vehicle.",
+    "ch": "在你使用中且無人乘坐的車庫車輛上選擇一個受損零件.",
+    "cn": "在你使用中且无人乘坐的车库车辆上选择一个受损部件."
+   },
+   "IGUI_ExtractionMode_Service_SelectTarget": {
+    "en": "Select a target...",
+    "ch": "選擇目標…",
+    "cn": "选择目标…"
+   },
+   "IGUI_ExtractionMode_Service_VehiclePartLabel": {
+    "en": "%1 - %2",
+    "ch": "%1 - %2",
+    "cn": "%1 - %2"
+   },
+   "IGUI_ExtractionMode_Service_Waiting": {
+    "en": "Waiting for service...",
+    "ch": "正在等待服務…",
+    "cn": "正在等待服务…"
+   },
+   "IGUI_ExtractionMode_Service_WoundLabel": {
+    "en": "%1 - %2",
+    "ch": "%1 - %2",
+    "cn": "%1 - %2"
+   },
+   "IGUI_ExtractionMode_Service_WoundPreview": {
+    "en": "Reduce remaining wound recovery by %1 (Knox infection unchanged)",
+    "ch": "剩餘傷口恢復時間減少 %1 (諾克斯感染不變)",
+    "cn": "剩余伤口恢复时间减少 %1 (诺克斯感染不变)"
+   },
+   "IGUI_ExtractionMode_Service_Wound_Bite": {
+    "en": "Bite wound",
+    "ch": "咬傷",
+    "cn": "咬伤"
+   },
+   "IGUI_ExtractionMode_Service_Wound_Bleeding": {
+    "en": "Bleeding",
+    "ch": "流血",
+    "cn": "流血"
+   },
+   "IGUI_ExtractionMode_Service_Wound_Burn": {
+    "en": "Burn",
+    "ch": "燒傷",
+    "cn": "烧伤"
+   },
+   "IGUI_ExtractionMode_Service_Wound_Cut": {
+    "en": "Cut",
+    "ch": "割傷",
+    "cn": "割伤"
+   },
+   "IGUI_ExtractionMode_Service_Wound_Deep": {
+    "en": "Deep wound",
+    "ch": "深層傷口",
+    "cn": "深层伤口"
+   },
+   "IGUI_ExtractionMode_Service_Wound_Fracture": {
+    "en": "Fracture",
+    "ch": "骨折",
+    "cn": "骨折"
+   },
+   "IGUI_ExtractionMode_Service_Wound_Scratch": {
+    "en": "Scratch",
+    "ch": "抓傷",
+    "cn": "抓伤"
+   },
+   "IGUI_ExtractionMode_Service_Wound_Stitched": {
+    "en": "Stitched wound",
+    "ch": "已縫合傷口",
+    "cn": "已缝合伤口"
+   },
+   "IGUI_ExtractionMode_Service_clothing": {
+    "en": "Clothing Repair",
+    "ch": "衣物修補",
+    "cn": "衣物修补"
+   },
+   "IGUI_ExtractionMode_Service_gun": {
+    "en": "Firearm Repair",
+    "ch": "槍械修理",
+    "cn": "枪械修理"
+   },
+   "IGUI_ExtractionMode_Service_melee": {
+    "en": "Melee Repair",
+    "ch": "近戰武器修理",
+    "cn": "近战武器修理"
+   },
+   "IGUI_ExtractionMode_Service_vehicle": {
+    "en": "Vehicle Part Repair",
+    "ch": "車輛零件修理",
+    "cn": "车辆部件修理"
+   },
+   "IGUI_ExtractionMode_Service_wound": {
+    "en": "Wound Treatment",
+    "ch": "傷口治療",
+    "cn": "伤口治疗"
+   },
+   "IGUI_ExtractionMode_TurnHeatingOff": {
+    "en": "TURN HEATING OFF",
+    "ch": "關閉暖氣",
+    "cn": "关闭供暖"
+   },
+   "IGUI_ExtractionMode_TurnHeatingOn": {
+    "en": "TURN HEATING ON",
+    "ch": "開啟暖氣",
+    "cn": "开启供暖"
+   },
+   "IGUI_CrumpledNoteReaded": {
+    "en": "<TEXT> The lady is giving me a strange look from the terrace. <LINE> I think he realized I went into the boss's office. <LINE> She knows about the card. <LINE> I hid the object in the only place that damned woman wouldn't dare climb up to... <LINE> on the top floor of the <ORANGE> <SPACE> SV Communications Tower. <LINE> <TEXT> If something happens to me, let them look there. <LINE> I don't have much time left...",
+    "ch": "<TEXT> 那位女士在露臺上用奇怪的眼神看著我. <LINE> 我想她已經發現我進過老闆的辦公室了. <LINE> 她知道卡片的事. <LINE> 我把東西藏在那個該死的女人唯一不敢爬上去的地方… <LINE> 就在 <ORANGE> <SPACE> SV 通訊塔的頂樓. <LINE> <TEXT> 如果我出了什麼事, 叫他們去那裡找. <LINE> 我剩下的時間不多了…",
+    "cn": "<TEXT> 那位女士在露台上用奇怪的眼神看着我. <LINE> 我想她已经发现我进过老板的办公室了. <LINE> 她知道卡片的事. <LINE> 我把东西藏在了那个该死的女人唯一不敢爬上去的地方… <LINE> 就在 <ORANGE> <SPACE> SV 通信塔的顶楼. <LINE> <TEXT> 如果我出了什么事, 让他们去那里找. <LINE> 我剩下的时间不多了…"
+   },
+   "IGUI_GoldCardFound": {
+    "en": "<H1> SECRET OBTAINED <BR> <BR> <IMAGECENTRE:Reward_GoldCard> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>You have obtained the golden key card!!! <LINE> <H1>",
+    "ch": "<H1> 獲得秘密 <BR> <BR> <IMAGECENTRE:Reward_GoldCard> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你獲得了金色鑰匙卡!!! <LINE> <H1>",
+    "cn": "<H1> 获得秘密 <BR> <BR> <IMAGECENTRE:Reward_GoldCard> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了金色钥匙卡!!! <LINE> <H1>"
    }
   },
   "ItemName.json": {
@@ -280950,6 +282860,211 @@
     "en": "OTs-14 Groza 75-Round Drum (decoration part)",
     "ch": "OTs-14 雷暴 75 發彈鼓 (裝飾件)",
     "cn": "OTs-14 雷暴 75 发弹鼓 (装饰件)"
+   },
+   "Base.AnimalFat": {
+    "en": "Animal Fat",
+    "ch": "動物脂肪",
+    "cn": "动物脂肪"
+   },
+   "Base.Aspic": {
+    "en": "Bowl of Aspic",
+    "ch": "一碗肉凍",
+    "cn": "一碗肉冻"
+   },
+   "Base.AspicClay": {
+    "en": "Bowl of Aspic",
+    "ch": "一碗肉凍",
+    "cn": "一碗肉冻"
+   },
+   "Base.AspicPot": {
+    "en": "Aspic (Pot)",
+    "ch": "肉凍 (蒸煮鍋)",
+    "cn": "肉冻 (蒸煮锅)"
+   },
+   "Base.AspicPotForged": {
+    "en": "Aspic (Forged Pot)",
+    "ch": "肉凍 (粗製蒸煮鍋)",
+    "cn": "肉冻 (粗制蒸煮锅)"
+   },
+   "Base.BliniLiver": {
+    "en": "Blini with Liver",
+    "ch": "肝餡俄式薄餅",
+    "cn": "肝馅俄式薄饼"
+   },
+   "Base.BoneBrothPot": {
+    "en": "Raw Bone Broth (Pot)",
+    "ch": "生骨頭湯 (蒸煮鍋)",
+    "cn": "生骨头汤 (蒸煮锅)"
+   },
+   "Base.BoneBrothPotCooked": {
+    "en": "Bone Broth (Pot)",
+    "ch": "骨頭湯 (蒸煮鍋)",
+    "cn": "骨头汤 (蒸煮锅)"
+   },
+   "Base.BoneBrothPotForged": {
+    "en": "Raw Bone Broth (Forged Pot)",
+    "ch": "生骨頭湯 (粗製蒸煮鍋)",
+    "cn": "生骨头汤 (粗制蒸煮锅)"
+   },
+   "Base.BoneBrothPotForgedCooked": {
+    "en": "Bone Broth (Forged Pot)",
+    "ch": "骨頭湯 (粗製蒸煮鍋)",
+    "cn": "骨头汤 (粗制蒸煮锅)"
+   },
+   "Base.Cracklings": {
+    "en": "Cracklings",
+    "ch": "油渣",
+    "cn": "油渣"
+   },
+   "Base.DriedHeart": {
+    "en": "Dried Heart",
+    "ch": "風乾心臟",
+    "cn": "风干心脏"
+   },
+   "Base.FriedLiverOnions": {
+    "en": "Liver with Onions",
+    "ch": "洋蔥炒肝",
+    "cn": "洋葱炒肝"
+   },
+   "Base.FriedLiverOnionsClay": {
+    "en": "Liver with Onions",
+    "ch": "洋蔥炒肝",
+    "cn": "洋葱炒肝"
+   },
+   "Base.FriedPotatoesCracklingsClay": {
+    "en": "Fried Potatoes with Cracklings",
+    "ch": "油渣炒馬鈴薯",
+    "cn": "油渣炒土豆"
+   },
+   "Base.Heart": {
+    "en": "Heart",
+    "ch": "心臟",
+    "cn": "心脏"
+   },
+   "Base.Kidneys": {
+    "en": "Kidneys",
+    "ch": "腎臟",
+    "cn": "肾脏"
+   },
+   "Base.KidneysSoaked": {
+    "en": "Soaked Kidneys",
+    "ch": "腎臟 (已浸泡)",
+    "cn": "肾脏 (已浸泡)"
+   },
+   "Base.Liver": {
+    "en": "Liver",
+    "ch": "肝臟",
+    "cn": "肝脏"
+   },
+   "Base.LiverCake": {
+    "en": "Liver Cake",
+    "ch": "千層肝餅",
+    "cn": "千层肝饼"
+   },
+   "Base.LiverCakeClay": {
+    "en": "Liver Cake",
+    "ch": "千層肝餅",
+    "cn": "千层肝饼"
+   },
+   "Base.LiverCakeRaw": {
+    "en": "Liver Cake (Raw)",
+    "ch": "千層肝餅 (生)",
+    "cn": "千层肝饼 (生)"
+   },
+   "Base.LiverCakeRawClay": {
+    "en": "Liver Cake (Raw)",
+    "ch": "千層肝餅 (生)",
+    "cn": "千层肝饼 (生)"
+   },
+   "Base.LiverSausage": {
+    "en": "Raw Liver Sausage",
+    "ch": "生肝腸",
+    "cn": "生肝肠"
+   },
+   "Base.LiverSausageCooked": {
+    "en": "Liver Sausage",
+    "ch": "肝腸",
+    "cn": "肝肠"
+   },
+   "Base.Lungs": {
+    "en": "Lungs",
+    "ch": "肺臟",
+    "cn": "肺脏"
+   },
+   "Base.PanFriedLiverOnions": {
+    "en": "Frying Pan with Liver and Onions",
+    "ch": "平底鍋 (洋蔥炒肝)",
+    "cn": "平底煎锅 (洋葱炒肝)"
+   },
+   "Base.PanFriedLiverOnionsForged": {
+    "en": "Frying Pan with Liver and Onions",
+    "ch": "平底鍋 (洋蔥炒肝)",
+    "cn": "平底煎锅 (洋葱炒肝)"
+   },
+   "Base.PirozhkiLiver": {
+    "en": "Raw Liver Pirozhki",
+    "ch": "生俄式肝餡餅",
+    "cn": "生俄式肝馅饼"
+   },
+   "Base.PirozhkiLiverBaked": {
+    "en": "Liver Pirozhki",
+    "ch": "俄式肝餡餅",
+    "cn": "俄式肝馅饼"
+   },
+   "Base.SaltedSalo": {
+    "en": "Salted Salo",
+    "ch": "俄式鹽漬豬油",
+    "cn": "俄式盐渍猪油"
+   },
+   "Base.Tongue": {
+    "en": "Tongue",
+    "ch": "舌頭",
+    "cn": "舌头"
+   },
+   "Base.TongueBoiled": {
+    "en": "Boiled Tongue",
+    "ch": "水煮舌頭",
+    "cn": "水煮舌头"
+   },
+   "Base.TongueSlice": {
+    "en": "Tongue Slice",
+    "ch": "舌片",
+    "cn": "舌片"
+   },
+   "Base.Tripe": {
+    "en": "Tripe",
+    "ch": "牛肚",
+    "cn": "牛肚"
+   },
+   "Base.TripeCleaned": {
+    "en": "Cleaned Tripe",
+    "ch": "牛肚 (已清洗)",
+    "cn": "牛肚 (已清洗)"
+   },
+   "Wounds.Defibrillator": {
+    "en": "Portable defibrillator",
+    "ch": "攜帶式電擊器",
+    "cn": "便携式除颤器"
+   },
+   "AmmoMaker.Bag_ASMilitary": {
+    "en": "Ammo Specialist DuffelBag",
+    "ch": "彈藥專家行李袋",
+    "cn": "弹药专家行李袋"
+   },
+   "AmmoMaker.Vest_BulletAmmoSpecialist": {
+    "en": "Bulletproof Vest - Ammo Specialist",
+    "ch": "防彈背心 (彈藥專家)",
+    "cn": "防弹背心 (弹药专家)"
+   },
+   "Base.CrumpledNote": {
+    "en": "Crumpled Note",
+    "ch": "皺巴巴的紙條",
+    "cn": "皱巴巴的纸条"
+   },
+   "Base.KeyCardGold": {
+    "en": "Key Car Gold",
+    "ch": "金色鑰匙卡",
+    "cn": "金色钥匙卡"
    }
   },
   "Print_Media.json": {
@@ -302295,6 +304410,91 @@
     "en": "Craft .30-06 (7.62×63mm) BAR 20-Round Magazine",
     "ch": "製作 .30-06 (7.62×63mm) 勃朗寧自動步槍 20 發彈匣",
     "cn": "制作 .30-06 (7.62×63mm) 勃朗宁自动步枪 20 发弹匣"
+   },
+   "CleanTripe": {
+    "en": "Clean Tripe",
+    "ch": "清洗牛肚",
+    "cn": "清洗牛肚"
+   },
+   "DryHeart": {
+    "en": "Dry Heart",
+    "ch": "晾乾心臟",
+    "cn": "晾干心脏"
+   },
+   "MakeAspic": {
+    "en": "Set Aspic in the Pot",
+    "ch": "在蒸煮鍋中凝固肉凍",
+    "cn": "在蒸煮锅中凝固肉冻"
+   },
+   "MakeBliniLiver": {
+    "en": "Make Blini with Liver",
+    "ch": "製作肝餡俄式薄餅",
+    "cn": "制作肝馅俄式薄饼"
+   },
+   "MakeBoneBroth": {
+    "en": "Boil Bone Broth",
+    "ch": "熬煮骨頭湯",
+    "cn": "熬煮骨头汤"
+   },
+   "MakeFriedLiverOnions": {
+    "en": "Fry Liver with Onions",
+    "ch": "製作洋蔥炒肝",
+    "cn": "制作洋葱炒肝"
+   },
+   "MakeFriedLiverOnionsSeasoned": {
+    "en": "Fry Liver with Onions (Seasoned)",
+    "ch": "製作洋蔥炒肝 (已調味)",
+    "cn": "制作洋葱炒肝 (已调味)"
+   },
+   "MakeFriedPotatoesWithCracklings": {
+    "en": "Fry Potatoes with Real Cracklings",
+    "ch": "用真正的油渣炒馬鈴薯",
+    "cn": "用真正的油渣炒土豆"
+   },
+   "MakeLiverCake": {
+    "en": "Make Liver Cake",
+    "ch": "製作千層肝餅",
+    "cn": "制作千层肝饼"
+   },
+   "MakeLiverSausage": {
+    "en": "Make Liver Sausage",
+    "ch": "製作肝腸",
+    "cn": "制作肝肠"
+   },
+   "MakePirozhkiLiver": {
+    "en": "Make Liver Pirozhki",
+    "ch": "製作俄式肝餡餅",
+    "cn": "制作俄式肝馅饼"
+   },
+   "RenderLard": {
+    "en": "Render Lard",
+    "ch": "熬製豬油",
+    "cn": "熬制猪油"
+   },
+   "SaltSalo": {
+    "en": "Salt Salo",
+    "ch": "醃製俄式豬油",
+    "cn": "腌制俄式猪油"
+   },
+   "ServeAspic": {
+    "en": "Serve Aspic into Bowls",
+    "ch": "分裝肉凍至碗中",
+    "cn": "分装肉冻到碗中"
+   },
+   "ServeFriedLiverOnions": {
+    "en": "Plate Liver with Onions",
+    "ch": "裝盤洋蔥炒肝",
+    "cn": "装盘洋葱炒肝"
+   },
+   "SliceTongue": {
+    "en": "Slice Tongue",
+    "ch": "將舌頭切片",
+    "cn": "将舌头切片"
+   },
+   "SoakKidneys": {
+    "en": "Soak Kidneys",
+    "ch": "浸泡腎臟",
+    "cn": "浸泡肾脏"
    }
   },
   "Sandbox.json": {
@@ -312739,16 +314939,6 @@
     "en": "Kept only so existing server configurations remain valid. Engine oil no longer expires with time; drain and refill only to recover from a leak.",
     "ch": "僅為了讓現有的伺服器設定仍然有效而保留. 機油不再隨時間過期; 只有在漏油後才需要排油並重新補充.",
     "cn": "仅为了让现有的服务器配置仍然有效而保留. 机油不再随时间过期; 只有在漏油后才需要排油并重新补充."
-   },
-   "Sandbox_ExtractionMode_HideoutHeatingTargetTemperature": {
-    "en": "Heating Target Temperature (Celsius)",
-    "ch": "供暖目標溫度 (攝氏)",
-    "cn": "供暖目标温度 (摄氏)"
-   },
-   "Sandbox_ExtractionMode_HideoutHeatingTargetTemperature_tooltip": {
-    "en": "Requires the Heating hideout upgrade and generator power.\n\nTemperature the hideout heating aims to maintain. Heating switches off when the weather is warm enough. 24 C is about 75 F.",
-    "ch": "需要「暖氣」藏身點升級與發電機供電.\n\n藏身點暖氣要維持的目標溫度. 天氣夠暖時暖氣會關閉. 攝氏 24 度約為華氏 75 度.",
-    "cn": "需要“供暖”藏身点升级和发电机供电.\n\n藏身点供暖要维持的目标温度. 天气足够暖和时供暖会关闭. 摄氏 24 度约为华氏 75 度."
    },
    "Sandbox_SimpleSuppressors_ContentScope": {
     "en": "CONTENT | Available suppressor families",
@@ -352845,6 +355035,171 @@
     "en": "Require paint and a paintbrush for pre-colored Expanded recipes and selected wall finishes during construction. Disable to build those colors without paint. Does not change vanilla painting of existing walls or bucket capacity.",
     "ch": "建造預先上色的原版擴充配方及部分牆面飾面時, 需要油漆與油漆刷. 停用後即可不用油漆建造這些顏色. 不會改變原版為既有牆面上漆的方式或油漆桶容量.",
     "cn": "建造预先上色的原版扩展配方及部分墙面饰面时, 需要油漆和油漆刷. 禁用后无需油漆即可建造这些颜色. 不会改变原版对现有墙面涂漆的方式或油漆桶容量."
+   },
+   "Sandbox_SmartRadialMenu_EnableStopAllRingingAlarms": {
+    "en": "Add a slice to stop all ringing alarms",
+    "ch": "新增停止所有響鈴鬧鐘的環形選單項目",
+    "cn": "添加停止全部响铃闹钟的环形菜单选项"
+   },
+   "Sandbox_SmartRadialMenu_EnableStopAllRingingAlarms_tooltip": {
+    "en": "Add a slice in the alarms submenu to stop all ringing alarms.",
+    "ch": "在鬧鐘子選單中新增一個項目, 用於停止所有正在響的鬧鐘.",
+    "cn": "在闹钟子菜单中添加一个选项, 用于停止所有正在响铃的闹钟."
+   },
+   "Sandbox_ConeVisionOutline": {
+    "en": "Cone Vision Outline",
+    "ch": "視野錐輪廓",
+    "cn": "视野锥轮廓"
+   },
+   "Sandbox_ConeVisionOutline_ConeOutlineAlpha": {
+    "en": "Cone outline intensity",
+    "ch": "視野錐輪廓強度",
+    "cn": "视野锥轮廓强度"
+   },
+   "Sandbox_ConeVisionOutline_ConeOutlineAlpha_tooltip": {
+    "en": "Outline opacity, 0 to 1 (default 0.3). Applied only when 'Enforce these settings for all players' is on. Same as the mod option of the same name.",
+    "ch": "輪廓不透明度, 範圍 0 到 1 (預設 0.3). 僅在開啟「對所有玩家強制套用這些設定」時生效. 與同名的模組選項相同.",
+    "cn": "轮廓不透明度, 范围 0 到 1 (默认 0.3). 仅在开启“对所有玩家强制应用这些设置”时生效. 与同名的模组选项相同."
+   },
+   "Sandbox_ConeVisionOutline_EnforceSettings": {
+    "en": "Enforce these settings for all players",
+    "ch": "對所有玩家強制套用這些設定",
+    "cn": "对所有玩家强制应用这些设置"
+   },
+   "Sandbox_ConeVisionOutline_EnforceSettings_tooltip": {
+    "en": "Multiplayer only. Off by default: every player uses their own Cone Vision Outline options (Settings -> Mods). When on, the settings below replace each player's own, and changing them in the mod options has no effect. The outline colour stays the player's choice. Has no effect in singleplayer.",
+    "ch": "僅限多人遊戲. 預設關閉: 每位玩家使用各自的視野錐輪廓選項 (設定 -> 模組). 開啟後, 下方設定會取代每位玩家自己的設定, 在模組選項中變更這些設定也不會生效. 輪廓顏色仍由玩家自行選擇. 在單人遊戲中沒有作用.",
+    "cn": "仅限多人游戏. 默认关闭: 每位玩家使用各自的视野锥轮廓选项 (设置 -> 模组). 开启后, 下方设置会替换每位玩家自己的设置, 在模组选项中更改这些设置也不会生效. 轮廓颜色仍由玩家自行选择. 在单人游戏中无效."
+   },
+   "Sandbox_ConeVisionOutline_LegacyOutlineMode": {
+    "en": "Legacy outline mode",
+    "ch": "舊版輪廓模式",
+    "cn": "旧版轮廓模式"
+   },
+   "Sandbox_ConeVisionOutline_LegacyOutlineMode_tooltip": {
+    "en": "Applied only when 'Enforce these settings for all players' is on. Same as the mod option of the same name: use the old square-visibility check instead of asking the game which zombies and animals it draws.",
+    "ch": "僅在開啟「對所有玩家強制套用這些設定」時生效. 與同名的模組選項相同: 改用舊的方塊可見性判定, 而不是直接讀取遊戲正在繪製哪些殭屍與動物.",
+    "cn": "仅在开启“对所有玩家强制应用这些设置”时生效. 与同名的模组选项相同: 改用旧的方块可见性判定, 而不是直接读取游戏正在绘制哪些僵尸和动物."
+   },
+   "Sandbox_ConeVisionOutline_OutlineAlwaysOn": {
+    "en": "Outlines always on",
+    "ch": "一律顯示輪廓",
+    "cn": "始终显示轮廓"
+   },
+   "Sandbox_ConeVisionOutline_OutlineAlwaysOn_tooltip": {
+    "en": "Applied only when 'Enforce these settings for all players' is on. Same as the mod option of the same name: outlines are shown all the time, not only while aiming (RMB).",
+    "ch": "僅在開啟「對所有玩家強制套用這些設定」時生效. 與同名的模組選項相同: 輪廓會持續顯示, 而不只在瞄準 (右鍵) 時顯示.",
+    "cn": "仅在开启“对所有玩家强制应用这些设置”时生效. 与同名的模组选项相同: 轮廓会一直显示, 而不只在瞄准 (右键) 时显示."
+   },
+   "Sandbox_ConeVisionOutline_OutlineAnimals": {
+    "en": "Outline animals",
+    "ch": "顯示動物輪廓",
+    "cn": "显示动物轮廓"
+   },
+   "Sandbox_ConeVisionOutline_OutlineAnimals_tooltip": {
+    "en": "Applied only when 'Enforce these settings for all players' is on. Same as the mod option of the same name: animals are outlined along with zombies.",
+    "ch": "僅在開啟「對所有玩家強制套用這些設定」時生效. 與同名的模組選項相同: 動物會和殭屍一樣顯示輪廓.",
+    "cn": "仅在开启“对所有玩家强制应用这些设置”时生效. 与同名的模组选项相同: 动物会和僵尸一样显示轮廓."
+   },
+   "Sandbox_ConeVisionOutline_ScaleOutlineByFog": {
+    "en": "Scale outline by fog",
+    "ch": "依霧氣縮放輪廓",
+    "cn": "根据雾气缩放轮廓"
+   },
+   "Sandbox_ConeVisionOutline_ScaleOutlineByFog_tooltip": {
+    "en": "Applied only when 'Enforce these settings for all players' is on. Same as the mod option of the same name: outlines fade with distance in fog.",
+    "ch": "僅在開啟「對所有玩家強制套用這些設定」時生效. 與同名的模組選項相同: 在霧中, 輪廓會隨距離逐漸淡出.",
+    "cn": "仅在开启“对所有玩家强制应用这些设置”时生效. 与同名的模组选项相同: 在雾中, 轮廓会随距离逐渐淡出."
+   },
+   "Sandbox_ConeVisionOutline_ScaleOutlineByLight": {
+    "en": "Scale outline by light level",
+    "ch": "依光照縮放輪廓",
+    "cn": "根据光照缩放轮廓"
+   },
+   "Sandbox_ConeVisionOutline_ScaleOutlineByLight_tooltip": {
+    "en": "Applied only when 'Enforce these settings for all players' is on. Same as the mod option of the same name: the outline fades as the light on the target drops, and is gone in full darkness. Turn this on to stop outlines giving away zombies in the dark.",
+    "ch": "僅在開啟「對所有玩家強制套用這些設定」時生效. 與同名的模組選項相同: 目標所受的光照越暗, 輪廓越淡, 完全黑暗時輪廓會消失. 開啟此項可避免輪廓在黑暗中暴露殭屍的位置.",
+    "cn": "仅在开启“对所有玩家强制应用这些设置”时生效. 与同名的模组选项相同: 目标所受的光照越暗, 轮廓越淡, 完全黑暗时轮廓会消失. 开启此项可避免轮廓在黑暗中暴露僵尸的位置."
+   },
+   "Sandbox_ConeVisionOutline_VehicleOutlineAlwaysOn": {
+    "en": "Vehicle: outlines always on",
+    "ch": "乘車時: 一律顯示輪廓",
+    "cn": "乘车时: 始终显示轮廓"
+   },
+   "Sandbox_ConeVisionOutline_VehicleOutlineAlwaysOn_tooltip": {
+    "en": "Applied only when 'Enforce these settings for all players' is on. Same as the mod option of the same name: in a vehicle, outlines are shown without holding RMB.",
+    "ch": "僅在開啟「對所有玩家強制套用這些設定」時生效. 與同名的模組選項相同: 乘車時無須按住右鍵即可顯示輪廓.",
+    "cn": "仅在开启“对所有玩家强制应用这些设置”时生效. 与同名的模组选项相同: 乘车时无需按住右键即可显示轮廓."
+   },
+   "Sandbox_WoundsOverhaul_BloodVolumeByWeight": {
+    "en": "Blood volume depends on weight",
+    "ch": "血量取決於體重",
+    "cn": "血量取决于体重"
+   },
+   "Sandbox_WoundsOverhaul_BloodVolumeByWeight_tooltip": {
+    "en": "A heavier survivor has more blood to lose: about 4.2 litres at 70 kg and under, 5 at 80, 5.8 at 90 and over. The same wound empties a light body faster, and the same bag of blood does less for a heavy one. Off: everybody has 5 litres, as before.",
+    "ch": "體重越重的倖存者可失的血越多: 70 公斤以下約 4.2 公升, 80 公斤為 5 公升, 90 公斤以上為 5.8 公升. 同樣的傷口會讓體重輕的人更快失血, 同一袋血對體重重的人效果也較小. 關閉: 所有人皆為 5 公升, 與以往相同.",
+    "cn": "体重越重的幸存者可流失的血越多: 70 公斤及以下约 4.2 升, 80 公斤为 5 升, 90 公斤及以上为 5.8 升. 同样的伤口会让体重轻的人更快失血, 同一袋血对体重大的人效果也更小. 关闭: 所有人都是 5 升, 与以往相同."
+   },
+   "Sandbox_WoundsOverhaul_DebugLog": {
+    "en": "Write a diagnostic log:",
+    "ch": "寫入診斷記錄檔:",
+    "cn": "写入诊断日志:"
+   },
+   "Sandbox_WoundsOverhaul_DebugLog_tooltip": {
+    "en": "Writes what the mod is doing to Zomboid/Lua/Wounds_debug.log, and on a server to Wounds_debug_server.log: every condition's numbers once an in-game minute, and what each of them asked for.<br>For working out where health is going when nothing is visible on the panel. It does NOT enable any cheat.<br>Off by default: the file grows and is never cleaned up.",
+    "ch": "將模組的運作情況寫入 Zomboid/Lua/Wounds_debug.log, 伺服器上則寫入 Wounds_debug_server.log: 每個遊戲內分鐘記錄一次各狀況的數值, 以及它們各自要求了什麼.<br>用於在面板上看不出任何異狀時, 查明健康值流失到哪裡. 這「不會」啟用任何作弊功能.<br>預設關閉: 檔案會持續變大且永遠不會被清理.",
+    "cn": "将模组的运行情况写入 Zomboid/Lua/Wounds_debug.log, 服务器上则写入 Wounds_debug_server.log: 每个游戏内分钟记录一次各状况的数值, 以及它们各自请求了什么.<br>用于在面板上看不出任何异常时, 查明健康值流失到哪里. 这“不会”启用任何作弊功能.<br>默认关闭: 文件会持续变大且永远不会被清理."
+   },
+   "Sandbox_WoundsOverhaul_DrawFromOthers": {
+    "en": "Draw blood from other players",
+    "ch": "從其他玩家抽血",
+    "cn": "从其他玩家抽血"
+   },
+   "Sandbox_WoundsOverhaul_DrawFromOthers_tooltip": {
+    "en": "On: with a needle and an empty bag you can draw blood from another player standing next to you, not only from yourself - the donor pays the blood loss. On a server that includes a player who is unconscious and cannot refuse, so turn it on only if you trust your players.<br>Not yet tested in a multiplayer game.<br>Off: everybody draws only from their own arm.",
+    "ch": "開啟: 只要有針和空的採血袋, 你不只能從自己身上抽血, 也能從站在身旁的其他玩家身上抽血 - 失血由捐血者承擔. 在伺服器上, 這也包括失去意識, 無法拒絕的玩家, 因此請只在信任你的玩家時開啟.<br>尚未在多人遊戲中測試.<br>關閉: 每個人只能從自己的手臂抽血.",
+    "cn": "开启: 只要有针和空的采血袋, 你不仅能从自己身上抽血, 也能从站在身边的其他玩家身上抽血 - 失血由献血者承担. 在服务器上, 这也包括失去意识, 无法拒绝的玩家, 所以请只在信任你的玩家时开启.<br>尚未在多人游戏中测试.<br>关闭: 每个人只能从自己的手臂抽血."
+   },
+   "Sandbox_WoundsOverhaul_ExtractGameEnabled": {
+    "en": "Minigame: bullet extraction",
+    "ch": "小遊戲: 取出子彈",
+    "cn": "小游戏: 取出子弹"
+   },
+   "Sandbox_WoundsOverhaul_ExtractGameEnabled_tooltip": {
+    "en": "On: taking out a lodged bullet opens a close-up where you guide the tweezers in yourself. A shaky hand hurts and can slip.<br>Off: the bullet comes out the vanilla way.",
+    "ch": "開啟: 取出嵌入的子彈時會開啟特寫畫面, 由你親手引導鑷子. 手不穩會造成疼痛, 也可能滑脫.<br>關閉: 依原版方式取出子彈.",
+    "cn": "开启: 取出嵌入的子弹时会打开特写画面, 由你亲手引导镊子. 手不稳会造成疼痛, 也可能滑脱.<br>关闭: 按原版方式取出子弹."
+   },
+   "Sandbox_WoundsOverhaul_GunshotWoundsEnabled": {
+    "en": "Gunshot wounds:",
+    "ch": "槍傷:",
+    "cn": "枪伤:"
+   },
+   "Sandbox_WoundsOverhaul_GunshotWoundsEnabled_tooltip": {
+    "en": "On: a bullet stops either in a joint - it has to come out before anything else - or deep in the tissue, where it stays: pack the wound and run antibiotics until the flesh closes over it. Gunshot wounds are packed, not stitched.<br>Not yet tested in a multiplayer game.<br>Off: bullets work exactly as in vanilla.",
+    "ch": "開啟: 子彈會停在關節內 - 必須優先取出 - 或停在組織深處並留在體內: 填塞傷口並持續服用抗生素, 直到皮肉在子彈上方癒合. 槍傷用填塞處理, 不縫合.<br>尚未在多人遊戲中測試.<br>關閉: 子彈的運作方式與原版完全相同.",
+    "cn": "开启: 子弹会停在关节内 - 必须优先取出 - 或停在组织深处并留在体内: 填塞伤口并持续服用抗生素, 直到皮肉在子弹上方愈合. 枪伤用填塞处理, 不缝合.<br>尚未在多人游戏中测试.<br>关闭: 子弹的机制与原版完全相同."
+   },
+   "Sandbox_WoundsOverhaul_TrimGameEnabled": {
+    "en": "Minigame: trimming the edges",
+    "ch": "小遊戲: 修剪傷口邊緣",
+    "cn": "小游戏: 修剪伤口边缘"
+   },
+   "Sandbox_WoundsOverhaul_TrimGameEnabled_tooltip": {
+    "en": "On: trimming a ragged wound opens a close-up where you cut the dead edge away yourself, with a scalpel or scissors. How clean the cut is decides how well the wound stitches afterwards and how much it hurts.<br>Off: trimming is a plain timed action, as it was before the minigame.",
+    "ch": "開啟: 修剪參差不齊的傷口時會開啟特寫畫面, 由你親手用手術刀或剪刀切除壞死的邊緣. 切得越乾淨, 之後縫合的效果越好, 疼痛也越輕.<br>關閉: 修剪為一般的計時動作, 與加入小遊戲之前相同.",
+    "cn": "开启: 修剪参差不齐的伤口时会打开特写画面, 由你亲手用手术刀或剪刀切除坏死的边缘. 切得越干净, 之后缝合的效果越好, 疼痛也越轻.<br>关闭: 修剪为普通的计时动作, 与加入小游戏之前相同."
+   },
+   "Sandbox_WoundsOverhaul_UnconsciousEnabled": {
+    "en": "Passing out from blood loss (BETA):",
+    "ch": "失血昏厥 (測試版):",
+    "cn": "失血昏厥 (测试版):"
+   },
+   "Sandbox_WoundsOverhaul_UnconsciousEnabled_tooltip": {
+    "en": "BETA - turn on at your own risk. Not yet tested in a multiplayer game. Reloading does not get you up - a character who was out is out again. It cannot trap anybody: after six hours down they come round whatever happened, and turning this off stands them up.<br><br>On: after losing about a third of their blood the character goes down and the screen goes dark - they cannot move or act, and they are helpless where they fell. Once the bleeding is stopped another survivor can bring them round, which buys an hour on their feet but does not put blood back; only a transfusion or time does that.<br>Bleed on past that and the heart can stop: then only chest compressions (which buy time) and a defibrillator (which starts it) help, and without them they die within half an hour.<br>Alone, they come round on their own once the bleeding has been stopped long enough. Still bleeding, they come to for a few minutes - time to put a bandage on; left open, the wound puts them under again.<br>Off: blood loss behaves exactly as it did before.",
+    "ch": "測試版 - 開啟風險自負. 尚未在多人遊戲中測試. 重新讀檔無法讓你起身 - 昏迷中的角色讀檔後依然昏迷. 它不會讓任何人永遠困住: 倒地六小時後無論發生什麼都會醒來, 關閉此選項也會讓他們站起來.<br><br>開啟: 失去約三分之一的血液後, 角色會倒地且畫面變暗 - 無法移動或行動, 只能無助地躺在倒下的地方. 止血後, 其他倖存者可以將其喚醒, 讓他能再站起來行動一小時, 但不會補回血液; 只有輸血或時間能做到.<br>若繼續失血, 心臟可能停止跳動: 此時只有胸部按壓 (爭取時間) 與電擊器 (讓心臟重新跳動) 有用, 沒有這些, 角色會在半小時內死亡.<br>獨自一人時, 只要止血夠久就會自行甦醒. 若仍在流血, 會短暫清醒幾分鐘 - 足以包紮傷口; 傷口若不處理, 會再次讓他昏迷.<br>關閉: 失血的運作方式與以往完全相同.",
+    "cn": "测试版 - 开启风险自负. 尚未在多人游戏中测试. 重新读档无法让你起身 - 昏迷中的角色读档后依然昏迷. 它不会把任何人永远困住: 倒地六小时后无论发生什么都会醒来, 关闭此选项也会让他们站起来.<br><br>开启: 失去约三分之一的血液后, 角色会倒地且屏幕变暗 - 无法移动或行动, 只能无助地躺在倒下的地方. 止血后, 其他幸存者可以将其唤醒, 让其能再站起来活动一小时, 但不会补回血液; 只有输血或时间能做到.<br>若继续失血, 心脏可能停止跳动: 此时只有胸外按压 (争取时间) 与除颤器 (让心脏重新跳动) 有用, 没有这些, 角色会在半小时内死亡.<br>独自一人时, 只要止血够久就会自行苏醒. 若仍在流血, 会短暂清醒几分钟 - 足以包扎伤口; 伤口若不处理, 会再次让其昏迷.<br>关闭: 失血机制与以往完全相同."
    }
   },
   "Tooltip.json": {
@@ -371402,6 +373757,461 @@
     "en": "A wooden panel wall with a window opening. Build a wooden or metal wall frame first.",
     "ch": "帶有窗戶開口的木質鑲板牆. 請先建造木質或金屬牆框架.",
     "cn": "带有窗洞的木质镶板墙. 请先建造木质或金属墙框架."
+   },
+   "Tooltip_Recipe_TBT_NeedsCold": {
+    "en": "The broth must be cooked, then left to cool before it will set.",
+    "ch": "骨頭湯必須先煮熟, 再放涼後才會凝固.",
+    "cn": "骨头汤必须先煮熟, 然后放凉才会凝固."
+   },
+   "Tooltip_item_TBT_BoilFirst": {
+    "en": "Needs long, slow cooking before it can be sliced.",
+    "ch": "需要長時間慢火燉煮後才能切片.",
+    "cn": "需要长时间文火慢炖后才能切片."
+   },
+   "Tooltip_item_TBT_CleanFirst": {
+    "en": "Must be cleaned with salt and water before use.",
+    "ch": "使用前必須用鹽和水清洗.",
+    "cn": "使用前必须用盐和水清洗."
+   },
+   "Tooltip_item_TBT_RenderFirst": {
+    "en": "Render it down into lard and cracklings.",
+    "ch": "可熬製成豬油與油渣.",
+    "cn": "可熬制成猪油和油渣."
+   },
+   "Tooltip_item_TBT_SoakFirst": {
+    "en": "Soak in water before cooking, or it will taste foul.",
+    "ch": "烹煮前要先泡水, 否則會有腥臊味.",
+    "cn": "烹饪前需先用水浸泡, 否则会有腥臊味."
+   },
+   "Tooltip_ExtractionMode_AddGasoline": {
+    "en": "Drain pure gasoline from carried containers, including containers inside bags.",
+    "ch": "從隨身攜帶的容器中倒出純汽油, 包含包內的容器.",
+    "cn": "从随身携带的容器中倒出纯汽油, 包括包内的容器."
+   },
+   "Tooltip_ExtractionMode_AdministerCure": {
+    "en": "Completely clears the Knox infection. Ordinary wound infections are unaffected.",
+    "ch": "徹底清除諾克斯感染. 一般的傷口感染不受影響.",
+    "cn": "彻底清除诺克斯感染. 普通的伤口感染不受影响."
+   },
+   "Tooltip_ExtractionMode_AssignDeliveryContainer": {
+    "en": "Select any furniture container on the hideout's ground floor. If it is moved or removed, assign a delivery container again.",
+    "ch": "選擇藏身點一樓的任一傢俱容器. 若該容器被移動或移除, 請重新指定交付容器.",
+    "cn": "选择藏身点一楼的任一家具容器. 若该容器被移动或移除, 请重新指定交付容器."
+   },
+   "Tooltip_ExtractionMode_AutoCompleteQuest": {
+    "en": "DEBUG: Complete this quest without consuming items or completing objectives.",
+    "ch": "除錯: 不消耗物品、不完成目標, 直接完成此任務.",
+    "cn": "调试: 不消耗物品、不完成目标, 直接完成此任务."
+   },
+   "Tooltip_ExtractionMode_AutoCompleteUpgrade": {
+    "en": "DEBUG: Install this upgrade without prerequisites, skills, or materials.",
+    "ch": "除錯: 無需前置條件、技能或材料, 直接安裝此升級.",
+    "cn": "调试: 无需前置条件、技能或材料, 直接安装此升级."
+   },
+   "Tooltip_ExtractionMode_BarterHideoutOnly": {
+    "en": "Trades can only be completed while idle inside the hideout.",
+    "ch": "只能在藏身點內空閒時完成交易.",
+    "cn": "只能在藏身点内空闲时完成交易."
+   },
+   "Tooltip_ExtractionMode_BarterItemsMissing": {
+    "en": "Carry every offered item in your inventory or nested bags.",
+    "ch": "請將所有要交出的物品帶在物品欄或其中的包內.",
+    "cn": "请将所有要交出的物品携带在物品栏或其中的包内."
+   },
+   "Tooltip_ExtractionMode_BoardVehicle": {
+    "en": "Exit the vehicle before boarding the extraction helicopter.",
+    "ch": "請先離開車輛, 再登上撤離直升機.",
+    "cn": "请先离开车辆, 再登上撤离直升机."
+   },
+   "Tooltip_ExtractionMode_CancelVehicleExtraction": {
+    "en": "Cancel the countdown. No fuel is spent.",
+    "ch": "取消倒數. 不會消耗燃料.",
+    "cn": "取消倒计时. 不会消耗燃料."
+   },
+   "Tooltip_ExtractionMode_CompleteBarter": {
+    "en": "Exchange the offered items. Trust unlocks this trade and is not consumed.",
+    "ch": "交出所提供的物品進行交換. 信任用於解鎖此交易, 不會被消耗.",
+    "cn": "交出所提供的物品进行交换. 信任用于解锁此交易, 不会被消耗."
+   },
+   "Tooltip_ExtractionMode_CompleteQuest": {
+    "en": "Consume the required items and complete this quest for your current quest group.",
+    "ch": "消耗所需物品, 為你目前所屬的任務群組完成此任務.",
+    "cn": "消耗所需物品, 为你当前所属的任务组完成此任务."
+   },
+   "Tooltip_ExtractionMode_Contacts": {
+    "en": "Review contact quests and repeatable barter trades",
+    "ch": "檢視聯絡人任務與可重複的以物易物交易",
+    "cn": "查看联络人任务和可重复的以物易物交易"
+   },
+   "Tooltip_ExtractionMode_DebugFillTank": {
+    "en": "DEBUG: Fill the generator tank without consuming carried gasoline.",
+    "ch": "除錯: 加滿發電機油箱, 不消耗隨身汽油.",
+    "cn": "调试: 加满发电机油箱, 不消耗随身汽油."
+   },
+   "Tooltip_ExtractionMode_DebugRemoveUpgrade": {
+    "en": "DEBUG: Remove this upgrade from the shared hideout. Materials are not refunded; existing deliveries, furniture, and dependent upgrades remain.",
+    "ch": "除錯: 從共享藏身點移除此升級. 材料不會退還; 已有的交付物、傢俱與相依的升級都會保留.",
+    "cn": "调试: 从共享藏身点移除此升级. 材料不会退还; 已有的交付物、家具和依赖它的升级都会保留."
+   },
+   "Tooltip_ExtractionMode_DebugTools": {
+    "en": "Open server-authoritative Extraction Mode test actions",
+    "ch": "開啟由伺服器主導的撤離模式測試動作",
+    "cn": "打开由服务器主导的撤离模式测试操作"
+   },
+   "Tooltip_ExtractionMode_Deploy": {
+    "en": "Choose the rotating raid or a special deployment. Manage readiness and opt out.",
+    "ch": "選擇輪換突襲或特殊部署. 管理就緒狀態與不參加.",
+    "cn": "选择轮换突袭或特殊部署. 管理就绪状态和不参加."
+   },
+   "Tooltip_ExtractionMode_FlareOutdoors": {
+    "en": "Move outdoors so the helicopter can see the flare.",
+    "ch": "移到室外, 讓直升機能看見訊號彈.",
+    "cn": "移到室外, 让直升机能看到信号弹."
+   },
+   "Tooltip_ExtractionMode_FlareRequired": {
+    "en": "An extraction flare gun is required.",
+    "ch": "需要一把撤離訊號槍.",
+    "cn": "需要一把撤离信号枪."
+   },
+   "Tooltip_ExtractionMode_GarageAlreadyReturning": {
+    "en": "The active vehicle is already being returned.",
+    "ch": "使用中的車輛已在收回中.",
+    "cn": "使用中的车辆已在收回中."
+   },
+   "Tooltip_ExtractionMode_GarageControlsOpen": {
+    "en": "Open the garage controls.",
+    "ch": "開啟車庫控制台.",
+    "cn": "打开车库控制台."
+   },
+   "Tooltip_ExtractionMode_GarageControlsWalk": {
+    "en": "Walk to the outlined tile and use the garage controls.",
+    "ch": "走到標示外框的格子, 並使用車庫控制台.",
+    "cn": "走到描边标出的格子, 并使用车库控制台."
+   },
+   "Tooltip_ExtractionMode_GarageDelete": {
+    "en": "Permanently delete the selected stored vehicle and all cargo inside it. Active vehicles must be returned first.",
+    "ch": "永久刪除所選的已入庫車輛及其中所有貨物. 使用中的車輛必須先收回.",
+    "cn": "永久删除所选的已入库车辆及其中所有货物. 使用中的车辆必须先收回."
+   },
+   "Tooltip_ExtractionMode_GarageDeleteShort": {
+    "en": "Permanently remove the selected vehicle record after confirmation.",
+    "ch": "確認後永久移除所選的車輛紀錄.",
+    "cn": "确认后永久移除所选的车辆记录."
+   },
+   "Tooltip_ExtractionMode_GarageDeleteTrailer": {
+    "en": "Permanently delete the selected stored trailer and all cargo inside it.",
+    "ch": "永久刪除所選的已入庫拖車及其中所有貨物.",
+    "cn": "永久删除所选的已入库拖车及其中所有货物."
+   },
+   "Tooltip_ExtractionMode_GarageDeploy": {
+    "en": "Deploy the selected vehicle into the hideout garage bay.",
+    "ch": "將所選車輛部署到藏身點車庫車位.",
+    "cn": "将所选车辆部署到藏身点车库车位."
+   },
+   "Tooltip_ExtractionMode_GarageDeployTrailer": {
+    "en": "Spawn the selected trailer and automatically attach it to the active vehicle.",
+    "ch": "生成所選拖車, 並自動掛接到使用中的車輛.",
+    "cn": "生成所选拖车, 并自动挂接到使用中的车辆."
+   },
+   "Tooltip_ExtractionMode_GarageDriverAlreadyOwner": {
+    "en": "The current driver already shares your garage ownership.",
+    "ch": "目前的駕駛已共享你的車庫所有權.",
+    "cn": "当前驾驶员已共享你的车库所有权."
+   },
+   "Tooltip_ExtractionMode_GarageDriverRequired": {
+    "en": "Another player must sit in the driver's seat before ownership can be transferred.",
+    "ch": "必須有其他玩家坐在駕駛座上, 才能轉移所有權.",
+    "cn": "必须有其他玩家坐在驾驶座上, 才能转移所有权."
+   },
+   "Tooltip_ExtractionMode_GarageEmergency": {
+    "en": "Permanently remove orphaned physical vehicles and trailers from inside the hideout without deleting stored garage records.",
+    "ch": "永久移除藏身點內的無主實體車輛與拖車, 不會刪除已入庫的車庫紀錄.",
+    "cn": "永久移除藏身点内的无主实体车辆和拖车, 不会删除已入库的车库记录."
+   },
+   "Tooltip_ExtractionMode_GarageInactiveSwap": {
+    "en": "Another player's vehicle can only be swapped after its inactivity timer expires.",
+    "ch": "其他玩家的車輛須在閒置計時結束後才能更換.",
+    "cn": "其他玩家的车辆须在闲置计时结束后才能更换."
+   },
+   "Tooltip_ExtractionMode_GarageLifts": {
+    "en": "Hide or restore both decorative vehicle lifts.",
+    "ch": "隱藏或恢復兩台裝飾用車輛升降機.",
+    "cn": "隐藏或恢复两台装饰用车辆举升机."
+   },
+   "Tooltip_ExtractionMode_GarageMembershipRequired": {
+    "en": "Hideout membership is required to use this garage.",
+    "ch": "必須是藏身點成員才能使用此車庫.",
+    "cn": "必须是藏身点成员才能使用此车库."
+   },
+   "Tooltip_ExtractionMode_GarageNoActiveReturn": {
+    "en": "There is no active hideout vehicle to return.",
+    "ch": "藏身點沒有可收回的使用中車輛.",
+    "cn": "藏身点没有可收回的使用中车辆."
+   },
+   "Tooltip_ExtractionMode_GarageNoActiveTrailer": {
+    "en": "There is no active hideout trailer to return.",
+    "ch": "藏身點沒有可收回的使用中拖車.",
+    "cn": "藏身点没有可收回的使用中拖车."
+   },
+   "Tooltip_ExtractionMode_GarageNoTransferVehicle": {
+    "en": "There is no active hideout vehicle to transfer.",
+    "ch": "藏身點沒有可轉移的使用中車輛.",
+    "cn": "藏身点没有可转移的使用中车辆."
+   },
+   "Tooltip_ExtractionMode_GarageOccupiedSwap": {
+    "en": "Another player's active vehicle is occupied and cannot be swapped.",
+    "ch": "其他玩家的使用中車輛有人乘坐, 無法更換.",
+    "cn": "其他玩家的使用中车辆有人乘坐, 无法更换."
+   },
+   "Tooltip_ExtractionMode_GarageReserved": {
+    "en": "The active vehicle is reserved for raid deployment.",
+    "ch": "使用中的車輛已為突襲部署保留.",
+    "cn": "使用中的车辆已为突袭部署保留."
+   },
+   "Tooltip_ExtractionMode_GarageReservedReturn": {
+    "en": "Your vehicle is reserved for raid deployment and cannot be returned.",
+    "ch": "你的車輛已為突襲部署保留, 無法收回.",
+    "cn": "你的车辆已为突袭部署保留, 无法收回."
+   },
+   "Tooltip_ExtractionMode_GarageReservedSwap": {
+    "en": "The active vehicle is reserved for a raid deployment and cannot be swapped.",
+    "ch": "使用中的車輛已為突襲部署保留, 無法更換.",
+    "cn": "使用中的车辆已为突袭部署保留, 无法更换."
+   },
+   "Tooltip_ExtractionMode_GarageReturn": {
+    "en": "Save the active vehicle and all current cargo back into your garage.",
+    "ch": "將使用中的車輛與目前所有貨物存回你的車庫.",
+    "cn": "将使用中的车辆和当前所有货物存回你的车库."
+   },
+   "Tooltip_ExtractionMode_GarageReturnOwnerOnly": {
+    "en": "Only the active vehicle's owner can return it manually.",
+    "ch": "只有使用中車輛的擁有者才能手動收回它.",
+    "cn": "只有使用中车辆的所有者才能手动收回它."
+   },
+   "Tooltip_ExtractionMode_GarageReturnTrailer": {
+    "en": "Save and despawn your active trailer.",
+    "ch": "儲存並移除你使用中的拖車.",
+    "cn": "保存并移除你使用中的拖车."
+   },
+   "Tooltip_ExtractionMode_GarageReturnTrailerOwnerOnly": {
+    "en": "Only the active trailer's owner can return it.",
+    "ch": "只有使用中拖車的擁有者才能收回它.",
+    "cn": "只有使用中拖车的所有者才能收回它."
+   },
+   "Tooltip_ExtractionMode_GarageReturningToOwner": {
+    "en": "The active vehicle is already being returned to its owner's garage.",
+    "ch": "使用中的車輛已正在送回其擁有者的車庫.",
+    "cn": "使用中的车辆已正在送回其所有者的车库."
+   },
+   "Tooltip_ExtractionMode_GarageSelectDelete": {
+    "en": "Select a stored vehicle to delete. Return an active vehicle before deleting that vehicle.",
+    "ch": "請選擇要刪除的已入庫車輛. 刪除使用中的車輛前, 請先將它收回.",
+    "cn": "请选择要删除的已入库车辆. 删除使用中的车辆前, 请先将它收回."
+   },
+   "Tooltip_ExtractionMode_GarageSelectDeploy": {
+    "en": "Select a stored vehicle to deploy.",
+    "ch": "請選擇要部署的已入庫車輛.",
+    "cn": "请选择要部署的已入库车辆."
+   },
+   "Tooltip_ExtractionMode_GarageSelectSwap": {
+    "en": "Select one of your stored vehicles to swap in.",
+    "ch": "請從你的已入庫車輛中選擇一輛來更換.",
+    "cn": "请从你的已入库车辆中选择一辆换上."
+   },
+   "Tooltip_ExtractionMode_GarageSelectTrailer": {
+    "en": "Select a stored trailer first.",
+    "ch": "請先選擇一輛已入庫的拖車.",
+    "cn": "请先选择一辆已入库的拖车."
+   },
+   "Tooltip_ExtractionMode_GarageSwapInactive": {
+    "en": "Return the inactive vehicle to its owner and deploy your selected vehicle.",
+    "ch": "將閒置的車輛送回其擁有者, 並部署你所選的車輛.",
+    "cn": "将闲置的车辆送回其所有者, 并部署你所选的车辆."
+   },
+   "Tooltip_ExtractionMode_GarageSwapOwn": {
+    "en": "Return your active vehicle and deploy the selected vehicle.",
+    "ch": "收回你使用中的車輛, 並部署所選的車輛.",
+    "cn": "收回你使用中的车辆, 并部署所选的车辆."
+   },
+   "Tooltip_ExtractionMode_GarageTrailerNeedsVehicle": {
+    "en": "Deploy a vehicle before selecting a trailer.",
+    "ch": "選擇拖車前請先部署車輛.",
+    "cn": "选择拖车前请先部署车辆."
+   },
+   "Tooltip_ExtractionMode_GarageTrailerOwnerOnly": {
+    "en": "Only the active trailer's owner can swap it.",
+    "ch": "只有使用中拖車的擁有者才能更換它.",
+    "cn": "只有使用中拖车的所有者才能更换它."
+   },
+   "Tooltip_ExtractionMode_GarageTransactionPending": {
+    "en": "This vehicle is still completing its extraction transaction.",
+    "ch": "這輛車的撤離作業仍在處理中.",
+    "cn": "这辆车的撤离事务仍在处理中."
+   },
+   "Tooltip_ExtractionMode_GarageTransferOwnerOnly": {
+    "en": "Only the active vehicle's owner can transfer it.",
+    "ch": "只有使用中車輛的擁有者才能轉移它.",
+    "cn": "只有使用中车辆的所有者才能转移它."
+   },
+   "Tooltip_ExtractionMode_GarageTransferToDriver": {
+    "en": "Transfer this active vehicle to current driver %1.",
+    "ch": "將這輛使用中的車輛轉移給目前的駕駛 %1.",
+    "cn": "将这辆使用中的车辆转移给当前驾驶员 %1."
+   },
+   "Tooltip_ExtractionMode_GarageTransition": {
+    "en": "The previous active vehicle is still despawning. No vehicle can be deployed until the garage transition finishes.",
+    "ch": "上一輛使用中的車輛仍在移除中. 車庫切換完成前無法部署任何車輛.",
+    "cn": "上一辆使用中的车辆仍在移除中. 车库切换完成前无法部署任何车辆."
+   },
+   "Tooltip_ExtractionMode_GarageWaitDelete": {
+    "en": "Wait for the current vehicle return or swap to finish before deleting a vehicle.",
+    "ch": "刪除車輛前, 請先等目前的車輛收回或更換完成.",
+    "cn": "删除车辆前, 请先等当前的车辆收回或更换完成."
+   },
+   "Tooltip_ExtractionMode_GarageYourVehicleReturning": {
+    "en": "Your active vehicle is already being returned.",
+    "ch": "你使用中的車輛已在收回中.",
+    "cn": "你使用中的车辆已在收回中."
+   },
+   "Tooltip_ExtractionMode_HeatingTemperature": {
+    "en": "Select the hideout's target temperature. Uses your game's Celsius or Fahrenheit display setting.",
+    "ch": "選擇藏身點的目標溫度. 依照你遊戲中的攝氏或華氏顯示設定.",
+    "cn": "选择藏身点的目标温度. 使用你游戏中的摄氏或华氏显示设置."
+   },
+   "Tooltip_ExtractionMode_HideoutUpgrades": {
+    "en": "Install permanent shared hideout improvements",
+    "ch": "安裝永久性的共享藏身點改良",
+    "cn": "安装永久性的共享藏身点改进"
+   },
+   "Tooltip_ExtractionMode_InstallUpgrade": {
+    "en": "Consume the required materials and install this shared upgrade.",
+    "ch": "消耗所需材料, 安裝此共享升級.",
+    "cn": "消耗所需材料, 安装此共享升级."
+   },
+   "Tooltip_ExtractionMode_ObjectivesIncomplete": {
+    "en": "Complete every quest objective before turning this in.",
+    "ch": "提交前請完成所有任務目標.",
+    "cn": "提交前请完成所有任务目标."
+   },
+   "Tooltip_ExtractionMode_QuestCompleted": {
+    "en": "This quest has already been completed for your current quest group.",
+    "ch": "你目前所屬的任務群組已完成此任務.",
+    "cn": "你当前所属的任务组已完成此任务."
+   },
+   "Tooltip_ExtractionMode_QuestDetails": {
+    "en": "Expand or collapse this quest's full briefing.",
+    "ch": "展開或收合此任務的完整簡報.",
+    "cn": "展开或收起此任务的完整简报."
+   },
+   "Tooltip_ExtractionMode_QuestHideoutOnly": {
+    "en": "Quest materials can only be turned in while idle inside the hideout.",
+    "ch": "只能在藏身點內空閒時提交任務物資.",
+    "cn": "只能在藏身点内空闲时提交任务物资."
+   },
+   "Tooltip_ExtractionMode_QuestItemsMissing": {
+    "en": "Carry every required item in your inventory or nested bags.",
+    "ch": "請將所有所需物品帶在物品欄或其中的包內.",
+    "cn": "请将所有所需物品携带在物品栏或其中的包内."
+   },
+   "Tooltip_ExtractionMode_QuestReference": {
+    "en": "Review active quests, requirements, objectives, and full briefings. Read-only during raids.",
+    "ch": "檢視進行中的任務、需求、目標與完整簡報. 突襲期間為唯讀.",
+    "cn": "查看进行中的任务、需求、目标和完整简报. 突袭期间只读."
+   },
+   "Tooltip_ExtractionMode_ShowAdminSingleplayer": {
+    "en": "Show the Admin button beside the raid HUD minimize button. Multiplayer administrators always have access, regardless of this option.",
+    "ch": "在突襲 HUD 的最小化按鈕旁顯示「管理員」按鈕. 無論此選項為何, 多人遊戲的管理員一律可以使用.",
+    "cn": "在突袭 HUD 的最小化按钮旁显示“管理员”按钮. 无论此选项如何, 多人游戏的管理员始终可以使用."
+   },
+   "Tooltip_ExtractionMode_StartGenerator": {
+    "en": "Supply electricity and replenish piped water while gasoline remains.",
+    "ch": "在仍有汽油時供應電力並補充自來水.",
+    "cn": "在仍有汽油时供应电力并补充自来水."
+   },
+   "Tooltip_ExtractionMode_StopGenerator": {
+    "en": "Shut down electricity and water to conserve fuel.",
+    "ch": "關閉電力與供水以節省燃料.",
+    "cn": "关闭电力和供水以节省燃料."
+   },
+   "Tooltip_ExtractionMode_ToggleBarterContact": {
+    "en": "Expand or collapse this trader's barter list.",
+    "ch": "展開或收合此商人的以物易物清單.",
+    "cn": "展开或收起此商人的以物易物清单."
+   },
+   "Tooltip_ExtractionMode_ToggleHUD": {
+    "en": "Collapse or expand raid information",
+    "ch": "收合或展開突襲資訊",
+    "cn": "收起或展开突袭信息"
+   },
+   "Tooltip_ExtractionMode_ToggleHeating": {
+    "en": "Turn heating on or off. Requires generator power. Generator fuel usage increases by 20%% while heating is running. Heating pauses when the weather reaches the selected temperature.",
+    "ch": "開啟或關閉暖氣. 需要發電機供電. 暖氣運轉時發電機耗油量增加 20%%, 氣溫達到所選溫度時暖氣會暫停.",
+    "cn": "开启或关闭供暖. 需要发电机供电. 供暖运行时发电机耗油量增加 20%%, 气温达到所选温度时供暖会暂停."
+   },
+   "Tooltip_ExtractionMode_UpgradeHideoutOnly": {
+    "en": "Upgrades can only be installed while the raid system is idle in the hideout.",
+    "ch": "只有在突襲系統於藏身點內處於空閒時才能安裝升級.",
+    "cn": "只有在突袭系统于藏身点内处于空闲时才能安装升级."
+   },
+   "Tooltip_ExtractionMode_UpgradeInstalled": {
+    "en": "This upgrade is permanently installed for the shared hideout.",
+    "ch": "此升級已永久安裝於共享藏身點.",
+    "cn": "此升级已永久安装于共享藏身点."
+   },
+   "Tooltip_ExtractionMode_UpgradeMaterialsMissing": {
+    "en": "Carry all required materials in your inventory or nested bags.",
+    "ch": "請將所有所需材料帶在物品欄或其中的包內.",
+    "cn": "请将所有所需材料携带在物品栏或其中的包内."
+   },
+   "Tooltip_ExtractionMode_UpgradeMaterialsMissingHideoutSupply": {
+    "en": "Required materials were not found in your inventory or loaded hideout furniture containers.",
+    "ch": "在你的物品欄或已載入的藏身點傢俱容器中找不到所需材料.",
+    "cn": "在你的物品栏或已加载的藏身点家具容器中找不到所需材料."
+   },
+   "Tooltip_ExtractionMode_UpgradeReference": {
+    "en": "Review unfinished hideout upgrades and their requirements. Read-only during raids.",
+    "ch": "檢視未完成的藏身點升級及其需求. 突襲期間為唯讀.",
+    "cn": "查看未完成的藏身点升级及其需求. 突袭期间只读."
+   },
+   "Tooltip_ExtractionMode_UseVanillaDeath": {
+    "en": "When Allow Players to Choose Vanilla Death is enabled in the sandbox settings, die normally and create a new survivor instead of being rescued. Unchecked: follow the world's Death Handling setting. Changes take effect in the hideout before you ready up; choices made during a raid wait until you return. This preference is saved on this computer and applies only in worlds that allow it.",
+    "ch": "若沙盒設定中已啟用「允許玩家選擇原版死亡」, 則照常死亡並建立新的倖存者, 而不會被救回. 未勾選: 依照世界的「死亡處理」設定. 變更須在就緒前於藏身點內才會生效; 突襲期間所做的選擇會等到你返回後才生效. 此偏好設定儲存在這台電腦上, 且只適用於允許此選項的世界.",
+    "cn": "若沙盒设置中已启用“允许玩家选择原版死亡”, 则照常死亡并创建新的幸存者, 而不会被救回. 未勾选: 遵循世界的“死亡处理”设置. 更改需在就绪前于藏身点内才会生效; 突袭期间所做的选择会等到你返回后才生效. 此偏好设置保存在这台电脑上, 且仅适用于允许此选项的世界."
+   },
+   "Tooltip_ExtractionMode_VaccineSampleRequired": {
+    "en": "Carry the Vaccine Sample onto the rooftop helipad to signal the pilot.",
+    "ch": "攜帶疫苗樣本到屋頂停機坪, 向飛行員發訊號.",
+    "cn": "携带疫苗样本到屋顶停机坪, 向飞行员发信号."
+   },
+   "Tooltip_ExtractionMode_VehicleRouteBlocked": {
+    "en": "Roaming Hordes covered the roads. Standard deployment remains available. Vehicles cannot enter or be recovered from this location.",
+    "ch": "遊蕩的屍潮佔滿了道路. 仍可進行一般部署. 車輛無法進入此地點, 也無法從此地點收回.",
+    "cn": "游荡的尸潮占满了道路. 仍可进行普通部署. 车辆无法进入此地点, 也无法从此地点收回."
+   },
+   "Tooltip_ActivateDetonator": {
+    "en": "Activates the detonator on the set frequency.",
+    "ch": "以設定好的頻率啟動起爆器.",
+    "cn": "以设置好的频率启动起爆器."
+   },
+   "Tooltip_CrumpledNote": {
+    "en": "A wet and crumpled note, but the text still appears to be legible.",
+    "ch": "一張又濕又皺的紙條, 但上面的字跡似乎還能辨認.",
+    "cn": "一张又湿又皱的纸条, 但上面的字迹似乎还能辨认."
+   },
+   "Tooltip_KeyCardGold": {
+    "en": "A key card that looks like it opens some important door.",
+    "ch": "一張看起來能打開某扇重要門的鑰匙卡.",
+    "cn": "一张看起来能打开某扇重要大门的钥匙卡."
+   },
+   "Tooltip_PickKeyCardTT": {
+    "en": "It seems this item has some kind of use.",
+    "ch": "這件物品似乎有某種用途.",
+    "cn": "这件物品似乎有某种用途."
+   },
+   "Tooltip_ReadTT": {
+    "en": "Read this for important information.",
+    "ch": "閱讀它以取得重要資訊.",
+    "cn": "阅读它以获取重要信息."
    }
   },
   "UI.json": {
@@ -377216,11 +380026,6 @@
     "cn": "在单人游戏中显示管理员控件",
     "en": "Show Admin controls in singleplayer"
    },
-   "UI_ExtractionMode_ShowAdminSingleplayerTooltip": {
-    "ch": "在戰局 HUD 的縮小按鈕旁邊顯示管理員按鈕. 多人遊戲的管理員一律有存取權限, 不受這個選項影響.",
-    "cn": "在战局 HUD 的最小化按钮旁边显示管理员按钮. 多人游戏的管理员一律有访问权限, 不受这个选项影响.",
-    "en": "Show the Admin button beside the raid HUD minimize button. Multiplayer administrators always have access, regardless of this option."
-   },
    "UI_LPP_EggsOnGround": {
     "ch": "地上的蛋",
     "cn": "地上的蛋",
@@ -381763,11 +384568,6 @@
     "en": "Use Vanilla Death",
     "ch": "使用原版死亡",
     "cn": "使用原版死亡"
-   },
-   "UI_ExtractionMode_UseVanillaDeathTooltip": {
-    "en": "When Allow Players to Choose Vanilla Death is enabled in the sandbox settings, die normally and create a new survivor instead of being rescued. Unchecked: follow the world's Death Handling setting. Changes take effect in the hideout before you ready up; choices made during a raid wait until you return. This preference is saved on this computer and applies only in worlds that allow it.",
-    "ch": "當沙盒設定中啟用「允許玩家選擇原版死亡」時, 你會正常死亡並建立新的倖存者, 而不是被救回. 未勾選時: 依照世界的「死亡處理」設定. 變更須在你就緒前於藏身點內才會生效; 突襲期間所做的選擇會等到你返回後才生效. 此偏好儲存在這台電腦上, 且只在允許此選項的世界中生效.",
-    "cn": "当沙盒设置中启用“允许玩家选择原版死亡”时, 你会正常死亡并创建新的幸存者, 而不是被救回. 未勾选时: 遵循世界的“死亡处理”设置. 更改需在你就绪前于藏身点内才会生效; 突袭期间所做的选择会等到你返回后才生效. 此偏好保存在这台电脑上, 且只在允许此选项的世界中生效."
    },
    "UI_ETW_SubTab_CombatTraits": {
     "en": "Combat Traits",
@@ -413244,6 +416044,366 @@
     "en": "Not working. Need to check the wire.",
     "ch": "沒有反應. 得檢查一下電線.",
     "cn": "没有反应. 得检查一下电线."
+   },
+   "UI_VorpallySauced_NotifyMagazineReset": {
+    "en": "The mark is gone. It is just a magazine.",
+    "ch": "銘印消失了. 它只是個普通的彈匣.",
+    "cn": "铭印消失了. 它只是个普通的弹匣."
+   },
+   "UI_VorpallySauced_UnmakeDesc": {
+    "en": "Strips the mark. The magazine goes back to holding %1. Nothing comes back.",
+    "ch": "剝除銘印. 彈匣容量恢復為 %1. 失去的不會再回來.",
+    "cn": "剥除铭印. 弹匣容量恢复为 %1. 失去的不会再回来."
+   },
+   "UI_VorpallySauced_UnmakeMagazine": {
+    "en": "Unmake the Stir",
+    "ch": "抹除悸動",
+    "cn": "抹除悸动"
+   },
+   "UI_VorpallySauced_UnmakeNeedEmpty": {
+    "en": "Empty it first. There are still %1 rounds in there.",
+    "ch": "先把它清空. 裡面還有 %1 發子彈.",
+    "cn": "先把它清空. 里面还有 %1 发子弹."
+   },
+   "UI_VorpallySauced_UnmakeTitle": {
+    "en": "Unmake the Stir",
+    "ch": "抹除悸動",
+    "cn": "抹除悸动"
+   },
+   "UI_ST_DescKeyOrigin": {
+    "en": "Keys: which building the key opens and the street it is on",
+    "ch": "鑰匙: 可開啟哪棟建築及其所在街道",
+    "cn": "钥匙: 能打开哪栋建筑及其所在街道"
+   },
+   "UI_ST_KeyAlsoOpensMany": {
+    "en": "This key also fits %1 other buildings",
+    "ch": "這把鑰匙也能開啟另外 %1 棟建築",
+    "cn": "这把钥匙也能打开另外 %1 栋建筑"
+   },
+   "UI_ST_KeyAlsoOpensOne": {
+    "en": "This key also fits one other building",
+    "ch": "這把鑰匙也能開啟另外一棟建築",
+    "cn": "这把钥匙也能打开另外一栋建筑"
+   },
+   "UI_ST_KeyLocation": {
+    "en": "Location",
+    "ch": "位置",
+    "cn": "位置"
+   },
+   "UI_ST_KeyNearStreet": {
+    "en": "a building near %1",
+    "ch": "%1 附近的建築",
+    "cn": "%1 附近的建筑"
+   },
+   "UI_ST_KeyOnStreet": {
+    "en": "a building on %1",
+    "ch": "%1 上的建築",
+    "cn": "%1 上的建筑"
+   },
+   "UI_ST_KeyOpens": {
+    "en": "Opens",
+    "ch": "可開啟",
+    "cn": "可打开"
+   },
+   "UI_ST_KeyRooms": {
+    "en": "Rooms",
+    "ch": "房間",
+    "cn": "房间"
+   },
+   "UI_ST_SecKey": {
+    "en": "Key",
+    "ch": "鑰匙",
+    "cn": "钥匙"
+   },
+   "UI_TBYW_Garment_CancelTake": {
+    "en": "Cancel taking",
+    "ch": "取消拿取",
+    "cn": "取消获取"
+   },
+   "UI_TBYW_Garment_Take": {
+    "en": "Take to inventory",
+    "ch": "放入物品欄",
+    "cn": "放入物品栏"
+   },
+   "UI_TBYW_Options_ResetConfirm": {
+    "en": "Burn the whole lookbook? Every saved outfit and folder of %1 will be gone for good.",
+    "ch": "要燒掉整本造型集嗎? %1 的所有已儲存套裝與資料夾都將永遠消失.",
+    "cn": "要烧掉整本造型集吗? %1的所有已保存套装和文件夹都将永久消失."
+   },
+   "UI_TBYW_Options_ResetDone": {
+    "en": "Lookbook wiped. Fresh start, fresh looks.",
+    "ch": "造型集已清空. 全新開始, 全新造型.",
+    "cn": "造型集已清空. 全新开始, 全新造型."
+   },
+   "UI_TBYW_Options_ResetNoGame": {
+    "en": "Load a save first. Outfits belong to your survivor, not to the main menu.",
+    "ch": "請先載入存檔. 套裝屬於你的倖存者, 不屬於主選單.",
+    "cn": "请先加载存档. 套装属于你的幸存者, 而不属于主菜单."
+   },
+   "UI_TBYW_Options_ResetOutfits": {
+    "en": "Reset saved outfits",
+    "ch": "重設已儲存的套裝",
+    "cn": "重置已保存的套装"
+   },
+   "UI_TBYW_Options_ResetOutfitsTooltip": {
+    "en": "Deletes every saved outfit and folder of the current survivor. Useful if saved outfits ever get corrupted. Only works in game.",
+    "ch": "刪除目前倖存者所有已儲存的套裝與資料夾. 已儲存的套裝損毀時可派上用場. 僅能在遊戲中使用.",
+    "cn": "删除当前幸存者所有已保存的套装和文件夹. 已保存的套装损坏时可派上用场. 仅在游戏中可用."
+   },
+   "UI_TBYW_Pose_Default": {
+    "en": "Default",
+    "ch": "預設",
+    "cn": "默认"
+   },
+   "UI_TBYW_Pose_Random": {
+    "en": "Random",
+    "ch": "隨機",
+    "cn": "随机"
+   },
+   "UI_TBYW_Stats_Barefoot": {
+    "en": "Barefoot walk",
+    "ch": "赤腳步行",
+    "cn": "赤脚行走"
+   },
+   "UI_TBYW_Stats_CombatSpeed": {
+    "en": "Combat speed",
+    "ch": "戰鬥速度",
+    "cn": "战斗速度"
+   },
+   "UI_TBYW_Stats_ComfortDownTo": {
+    "en": "Cozy down to %1",
+    "ch": "低至 %1 仍舒適",
+    "cn": "低至%1仍舒适"
+   },
+   "UI_TBYW_Stats_ComfortMoving": {
+    "en": "%1 once you get moving",
+    "ch": "活動時: %1",
+    "cn": "活动时: %1"
+   },
+   "UI_TBYW_Stats_Comfort_Chilly": {
+    "en": "Chilly",
+    "ch": "有點冷",
+    "cn": "有点冷"
+   },
+   "UI_TBYW_Stats_Comfort_Cold": {
+    "en": "Cold",
+    "ch": "冷",
+    "cn": "冷"
+   },
+   "UI_TBYW_Stats_Comfort_Comfortable": {
+    "en": "Comfortable",
+    "ch": "舒適",
+    "cn": "舒适"
+   },
+   "UI_TBYW_Stats_Comfort_Freezing": {
+    "en": "Freezing",
+    "ch": "嚴寒",
+    "cn": "严寒"
+   },
+   "UI_TBYW_Stats_Comfort_Hot": {
+    "en": "Hot",
+    "ch": "炎熱",
+    "cn": "炎热"
+   },
+   "UI_TBYW_Stats_Comfort_VeryCold": {
+    "en": "Very cold",
+    "ch": "非常冷",
+    "cn": "非常冷"
+   },
+   "UI_TBYW_Stats_Comfort_Warm": {
+    "en": "Warm",
+    "ch": "溫暖",
+    "cn": "温暖"
+   },
+   "UI_TBYW_Stats_Mobility": {
+    "en": "Mobility",
+    "ch": "行動力",
+    "cn": "行动力"
+   },
+   "UI_TBYW_Stats_MobilityCompact": {
+    "en": "Weight %1, run speed %2",
+    "ch": "重量 %1, 跑步速度 %2",
+    "cn": "重量%1, 跑步速度%2"
+   },
+   "UI_TBYW_Stats_Outside": {
+    "en": "Outside %1, feels like %2",
+    "ch": "室外 %1, 體感 %2",
+    "cn": "室外%1, 体感%2"
+   },
+   "UI_TBYW_Stats_OutsideCalm": {
+    "en": "Outside %1",
+    "ch": "室外 %1",
+    "cn": "室外%1"
+   },
+   "UI_TBYW_Stats_OutsideNoWatch": {
+    "en": "Outside right now",
+    "ch": "目前室外",
+    "cn": "当前室外"
+   },
+   "UI_TBYW_Stats_RunSpeed": {
+    "en": "Run speed",
+    "ch": "跑步速度",
+    "cn": "跑步速度"
+   },
+   "UI_TBYW_Stats_WalkSpeed": {
+    "en": "Walk speed",
+    "ch": "步行速度",
+    "cn": "步行速度"
+   },
+   "UI_TBYW_Stats_WornWeight": {
+    "en": "Worn weight",
+    "ch": "穿戴重量",
+    "cn": "穿戴重量"
+   },
+   "UI_TBYW_Status_ComfortChilly": {
+    "en": "A touch nippy. Nothing a cuddle can't fix.",
+    "ch": "有點涼颼颼的. 抱一抱就好了.",
+    "cn": "有点凉飕飕的. 抱一抱就好了."
+   },
+   "UI_TBYW_Status_ComfortChilly2": {
+    "en": "Fresh air on display. Bring a sweater.",
+    "ch": "露得很透氣. 帶件毛衣吧.",
+    "cn": "露得很通风. 带件毛衣吧."
+   },
+   "UI_TBYW_Status_ComfortChilly3": {
+    "en": "Slightly chilly. Keep moving, gorgeous.",
+    "ch": "稍微有點冷. 繼續動起來吧, 美人.",
+    "cn": "稍微有点冷. 继续动起来吧, 美人."
+   },
+   "UI_TBYW_Status_ComfortCold": {
+    "en": "Looking hot, feeling cold. Classic.",
+    "ch": "看起來很辣, 身體卻很冷. 經典.",
+    "cn": "看起来很辣, 身上却很冷. 经典."
+   },
+   "UI_TBYW_Status_ComfortCold2": {
+    "en": "Shivery. Layers can be sexy too.",
+    "ch": "冷得發抖. 多穿幾層也能很性感.",
+    "cn": "冷得发抖. 多穿几层也可以很性感."
+   },
+   "UI_TBYW_Status_ComfortCold3": {
+    "en": "Brisk. Something cozier would not hurt.",
+    "ch": "冷颼颼的. 穿暖和一點也無妨.",
+    "cn": "冷飕飕的. 穿暖和点也无妨."
+   },
+   "UI_TBYW_Status_ComfortComfortable": {
+    "en": "Just right. Snug, warm, and very watchable.",
+    "ch": "剛剛好. 舒適溫暖, 還很養眼.",
+    "cn": "刚刚好. 舒适温暖, 还很养眼."
+   },
+   "UI_TBYW_Status_ComfortComfortable2": {
+    "en": "Perfect weather for this look.",
+    "ch": "這種天氣最適合這套造型了.",
+    "cn": "这天气最适合这套造型了."
+   },
+   "UI_TBYW_Status_ComfortComfortable3": {
+    "en": "Comfy and cute. The apocalypse can wait.",
+    "ch": "舒服又可愛. 末日先等等吧.",
+    "cn": "舒服又可爱. 末日先等等吧."
+   },
+   "UI_TBYW_Status_ComfortFreezing": {
+    "en": "Bold choice. Your bits will file a complaint.",
+    "ch": "大膽的選擇. 你的重要部位會提出抗議的.",
+    "cn": "大胆的选择. 你的重要部位会提出抗议的."
+   },
+   "UI_TBYW_Status_ComfortFreezing2": {
+    "en": "Frostbite is not an accessory, darling.",
+    "ch": "凍傷可不是配件, 親愛的.",
+    "cn": "冻伤可不是配饰, 亲爱的."
+   },
+   "UI_TBYW_Status_ComfortFreezing3": {
+    "en": "Even the zombies would put on a coat.",
+    "ch": "連殭屍都會想穿件外套.",
+    "cn": "连僵尸都会想穿件外套."
+   },
+   "UI_TBYW_Status_ComfortHot": {
+    "en": "Way too hot. Peel something off before you melt.",
+    "ch": "太熱了. 在融化之前先脫掉幾件吧.",
+    "cn": "太热了. 在融化之前先脱掉几件吧."
+   },
+   "UI_TBYW_Status_ComfortHot2": {
+    "en": "Sweating buckets. Less is more today.",
+    "ch": "汗如雨下. 今天穿得越少越好.",
+    "cn": "汗如雨下. 今天穿得越少越好."
+   },
+   "UI_TBYW_Status_ComfortHot3": {
+    "en": "Overdressed for this heat, and not in the fun way.",
+    "ch": "這種熱天穿太多了, 而且一點都不好玩.",
+    "cn": "这么热的天穿太多了, 而且一点都不好玩."
+   },
+   "UI_TBYW_Status_ComfortVeryCold": {
+    "en": "Goosebumps everywhere, and not the fun kind.",
+    "ch": "全身起雞皮疙瘩, 而且不是令人心動的那種.",
+    "cn": "浑身起鸡皮疙瘩, 而且不是让人心动的那种."
+   },
+   "UI_TBYW_Status_ComfortVeryCold2": {
+    "en": "Gorgeous, but the cold is getting very personal.",
+    "ch": "美是美, 但寒意已經直往身上鑽了.",
+    "cn": "美是美, 但寒意已经直往身上钻了."
+   },
+   "UI_TBYW_Status_ComfortVeryCold3": {
+    "en": "Add a layer. Or three. Or a warm someone.",
+    "ch": "加一件吧. 或三件. 或找個暖呼呼的人.",
+    "cn": "加一件吧. 或者三件. 或者找个暖乎乎的人."
+   },
+   "UI_TBYW_Status_ComfortWarm": {
+    "en": "Toasty. Lose a layer, nobody will complain.",
+    "ch": "暖烘烘的. 脫掉一件吧, 沒人會抱怨的.",
+    "cn": "暖烘烘的. 脱掉一件吧, 没人会有意见的."
+   },
+   "UI_TBYW_Status_ComfortWarm2": {
+    "en": "Getting warm in here. Unbutton something.",
+    "ch": "這裡變熱了. 解開幾顆扣子吧.",
+    "cn": "这里变热了. 解开几颗扣子吧."
+   },
+   "UI_TBYW_Status_ComfortWarm3": {
+    "en": "A little steamy. Not entirely a bad thing.",
+    "ch": "有點熱氣騰騰. 也不全是壞事.",
+    "cn": "有点热气腾腾. 也不全是坏事."
+   },
+   "UI_TBYW_Status_FetchCancelled": {
+    "en": "Never mind. \"%1\" stays where it was.",
+    "ch": "算了. 「%1」留在原處.",
+    "cn": "算了. “%1”留在原处."
+   },
+   "UI_TBYW_Tooltip_IsometricOff": {
+    "en": "Switch to character view",
+    "ch": "切換到角色視角",
+    "cn": "切换到角色视角"
+   },
+   "UI_TBYW_Tooltip_IsometricOn": {
+    "en": "Switch to isometric view",
+    "ch": "切換到等距視角",
+    "cn": "切换到等距视角"
+   },
+   "UI_TBYW_Tooltip_Pose": {
+    "en": "Choose a preview pose",
+    "ch": "選擇預覽姿勢",
+    "cn": "选择预览姿势"
+   },
+   "UI_TBYW_Tooltip_Styles": {
+    "en": "Styles",
+    "ch": "款式",
+    "cn": "款式"
+   },
+   "UI_TBYW_Tooltip_StylesHint": {
+    "en": "Right click to change style",
+    "ch": "按右鍵切換款式",
+    "cn": "右键点击切换款式"
+   },
+   "UI_TBYW_Tooltip_StylesMore": {
+    "en": "+%1 more",
+    "ch": "還有 %1 款",
+    "cn": "还有%1款"
+   },
+   "UI_TBYW_Tooltip_ZoomIn": {
+    "en": "Zoom in",
+    "ch": "放大",
+    "cn": "放大"
+   },
+   "UI_TBYW_Tooltip_ZoomOut": {
+    "en": "Zoom out",
+    "ch": "縮小",
+    "cn": "缩小"
    }
   },
   "MakeUp.json": {
