@@ -4,6 +4,25 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 13 個 MOD 新增的繁簡中文，共 895 項。** Bundle Up!（#725，新的獸皮／皮革成捆與大捆、陶器與骨器盒裝、鍛造與石器零件盒裝、香草與作物的箱裝、乾草與纖維的大包，以及對應的打包／拆包配方，522 項）、Stay With Me（#733，同伴的外觀編輯、戰鬥模式，以及依親密程度變化的戰鬥喊話，187 項）、Companion Dogs（#724，獸醫照護的草藥、酊劑與配方、幫狗洗澡與夾除跳蚤、草本免疫 Moodle，80 項）、Extended categories（#722，醫療／紀念品／工具與防具的複合分類，以及建築、清潔、書寫等新分類，58 項）、Backcountry ATV（#732，翻正全地形車、側持槍枝、引擎音量與生成率設定，14 項）、Dead Magic（#723，快速施法欄位與按鍵設定，12 項）、Neat Lockpicking（#729，撬棍小遊戲按鍵、耐力消耗與彈子阻力設定，7 項）、Off-Grid: Solar Power（#731，一鍵關燈的結果提示，6 項）、Home Brewing（#728，4 項）、Immersive Searching（#727，2 項）、CleanUI（#718）、The Best Lockpicking（#719）、Global Storage SiK（#726）各 1 項。
+  > 技術要點：CleanUI 是 own 目錄（CN 寫 own 目錄、CH 寫 `sources/ch`），其餘 894 項落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫，新鍵皆以有效 CN 值登記 `ch_review_state`。Bundle Up! 的 512 個物品名依 MOD 配方 itemMapper 解出內容物，以「容器前綴＋內容物名稱」組字：Box 盒裝、Carton 箱裝、Case 大箱裝、Crate 板條箱裝、Bundle 成捆、Large Bundle 大捆，繩子／床單繩後綴沿用已出貨慣例；新出現的 Bale 定為「大包」（本 MOD 已用「捆包」稱 bundle）。內容物繁中取家族本體翻譯包 LangFor42 的譯名（本體官方繁中有「土豆」「西蘭花」、把車前草譯成「芭蕉」等），簡中取本體官方簡中。Extended categories 的複合分類沿用該 MOD 已出貨的各段譯名組字。2 路翻譯加主代理組字後經 Codex、Grok 4 路對抗複核，24 條修正提議採納 23 條（Stay With Me 的 It got you 依已出貨用語改為「傷到你了」、破門喊話不寫死是門、One more hit 與 One more 分開譯；撬棍的 stamina drain 照本體「耐力」；Pack Seed Packets in Box 補上「裝入」以免讀成「種子包裝盒」；Extended categories 的 Writing 簡中對齊已出貨的「写作」），退回 1 條（I'll go to them 是對應「去對付它們」模式的回應，保留「對付」）。Backcountry ATV 的 quad 統一用已出貨載具名「多用途全地形車」的「全地形車」。
+
+### Changed
+
+- **依上游英文改值重譯 76 項。** Bundle Up! 60 項（種子小袋改為「盒裝X種子包」55 項，以及對應的打包／拆包配方與 3 項沙盒設定，#725）；Take A Bath And Shower 10 項 Moodle 說明（上游由第一人稱改為第二人稱，「我」改為「你」，#721）；Companion Dogs 2 項（哈士奇品種說明依現行英文重寫、爪子受傷機率預設改為 0.4% 並補上戰鬥等級遞減說明，#724）；Livestock Panel Plus 2 項（啼叫音量設為 0 可只讓自己聽不到、多人遊戲由伺服器決定啼叫時機，#730）；Neat Lockpicking 1 項（撬棍小遊戲改顯示自訂按鍵，#729）；Off-Grid: Solar Power 1 項（備用發電機轉換說明，#731）。
+  > 技術要點：own 層 64 鍵連 `en` 錨點更新；As1 衍生層 12 鍵改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點），皆登記 `ch_review_state`。Take A Bath And Shower 另有 6 項上游只把 I 改成 You、譯文本來就沒寫主詞，維持現值並登記已審；40 項上游改成佔位字 Not Used（該 Moodle 等級不會顯示），維持現值。
+- **7 個與其他 MOD 共用的鍵完成裁決，其中 6 項改為對每個 MOD 都成立的譯名。** 拆汽水包配方由「拆包蘇打水」改為「拆包汽水」（Liel's Drinks 與 Bundle Up!，Soda 是汽水而非碳酸水）；PZK 的 SWAT 箱式貨車在 Small Town First Responders 改名為一般的 Franklin Box Van，繁中拿掉「特警版」；四個撬鎖 MOD 共用的撬鎖技能說明拿掉只屬 Neat Lockpicking 的小遊戲與折斷機率，回到「玩家在沒有鑰匙的情況下, 強行撬鎖的熟練程度」；Neat Lockpicking 與附加包 Lockpicking Master 共用的自製撬鎖工具、撬鎖工具、撬鎖雜誌說明，拿掉只屬一方的材料與構造細節。耐儲食物分類維持「食物: 不易腐壞」。
+  > 技術要點：`owner_conflict_decisions.json` 新增 7 筆 translate；改值的鍵改 `sources/ch`，CN 偏離 As1 者走 `cn_overrides`（撬鎖技能說明撤掉舊 override、回到 As1 原譯），皆登記 `ch_review_state`；`OWNER_CONFLICTS.md` 重生。Lockpicking Master 在同一分支的 `Tooltip.json` 與死檔 `UI_EN.txt` 寫了不同英文，prep 的 census 取到死檔值，裁決改以執行期 `Tooltip.json` 的英文判斷。
+
+### Removed
+
+- **移除 2 項上游已刪除、所有 MOD 都不再使用的原創翻譯。** Extended categories 的「配飾-上身/園藝」（上游改為「園藝/配飾-上身」，新鍵已補）；Companion Dogs 的「治療中: %1」（改為帶痊癒時間的新提示）。Extended categories 會用「這個分類有沒有翻譯」決定要不要再細分，殘留的舊鍵會讓中文玩家多出英文玩家沒有的分類。
+  > 技術要點：以 `sources/en` 全庫與 tracker state 確認沒有任何 owner 仍定義這兩鍵，並對 steamcmd 抓下的現行 Workshop 內容查 Lua／script 引用（Companion Dogs 只剩 `IGUI_PD_VetRow_courseCure`）；`ch_review_state` 同步移除。As1 衍生層的上游刪除鍵（Small Town First Responders 90 個物品名，#720）依同步流程保留。
+
 ## [42.21.0-1.41.0] - 2026-10-05
 
 ### Added

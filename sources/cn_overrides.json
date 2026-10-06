@@ -25180,11 +25180,6 @@
     "reason": "本鍵是零件鍵，EN 'Pickup Woodboards' 是皮卡貨斗木板圍板（同模組另有 Truck Side Woodboards）；原值『皮卡木材運輸車』把零件說成整車並改寫用途。CN 源檔同誤，不能證明與 EN 等義。",
     "value": "皮卡木板围板"
   },
-  "IG_UI.json|IGUI_perks_Lockpicking_Description": {
-    "as1_value": "玩家在没有钥匙的情况下, 强行撬锁的熟练程度.",
-    "reason": "EN 第二句 'Higher levels make the minigame easier and reduce the chance of snapping a lockpick' 在譯文中完全沒有對應文字，等級效益與折斷率兩項實質資訊漏譯；同 MOD 自帶 IGUI_NeatLockpicking_BreakChance（CH『折斷機率: %1%%』）證明該機制確實存在。沿用語料既有詞『撬鎖工具』『折斷機率』，不自創『撬鎖器』。",
-    "value": "撬开门与车辆锁具的熟练程度. 等级越高, 撬锁小游戏越简单, 撬锁工具折断概率也越低."
-  },
   "Moodles.json|Moodles_HomeSick_L4_desc": {
     "as1_value": "每一分钟都是折磨.",
     "reason": "EN 為 'Each passing hour is torment.'，時間單位是 hour；CH/CN 寫成「每一分鐘／每一分钟」把單位換成分鐘，屬可客觀證明的數量單位錯誤。修正只改時間單位，保留原句式與半角句號（與同組 Moodles_HomeSick_L1~L3_desc 的標點慣例一致）。無 %、<LINE>、<IMAGE>、<br> 等 token。",
@@ -57169,5 +57164,85 @@
     "as1_value": "荞麦 (锻造平底锅)",
     "value": "荞麦 (粗制蒸煮锅)",
     "reason": "2026-10-05 #711：Forged Pot 是本體 Base.PotForged「粗制蒸煮锅」，原譯「锻造平底锅」連鍋具種類都譯錯；與同 MOD 本批新增的「肉冻 (粗制蒸煮锅)」一致。"
+  },
+  "Moodles.json|Moodles_BodyGrime_Bad_desc_lvl4": {
+    "as1_value": "皮肤感觉黏糊糊的, 很不舒服! 我想现在就去洗掉它!",
+    "value": "皮肤感觉黏糊糊的, 很不舒服! 你想现在就去洗掉它!",
+    "reason": "2026-10-07 #721：上游 Moodle 說明由第一人稱改為第二人稱（I → You），原譯的「我」改為「你」。"
+  },
+  "Moodles.json|Moodles_CoolingBody_Good_desc_lvl1": {
+    "as1_value": "大热天里我给身体降了温, 感觉格外清爽惬意.",
+    "value": "大热天里你给身体降了温, 感觉格外清爽惬意.",
+    "reason": "2026-10-07 #721：上游 Moodle 說明由第一人稱改為第二人稱（I → You），原譯的「我」改為「你」。"
+  },
+  "Moodles.json|Moodles_FeelingGaze_Bad_desc_lvl1": {
+    "as1_value": "有人正在看我洗澡",
+    "value": "有人正在看你洗澡.",
+    "reason": "2026-10-07 #721：上游 Moodle 說明由第一人稱改為第二人稱（I → You），原譯的「我」改為「你」。"
+  },
+  "Moodles.json|Moodles_FeelingGaze_Bad_desc_lvl2": {
+    "as1_value": "有些人正在看我洗澡",
+    "value": "有些人正在看你洗澡.",
+    "reason": "2026-10-07 #721：上游 Moodle 說明由第一人稱改為第二人稱（I → You），原譯的「我」改為「你」。"
+  },
+  "Moodles.json|Moodles_WarmingBody_Good_desc_lvl1": {
+    "as1_value": "在寒冷的天气里, 我让身体暖和了起来. 同时, 也温暖了我的内心.",
+    "value": "在寒冷的天气里, 你让身体暖和了起来. 同时, 也温暖了你的内心.",
+    "reason": "2026-10-07 #721：上游 Moodle 說明由第一人稱改為第二人稱（I → You），原譯的「我」改為「你」。"
+  },
+  "Moodles.json|Moodles_WarmingBody_Good_desc_lvl2": {
+    "as1_value": "在寒冷的天气里, 我让身体暖和了起来. 同时, 也温暖了我的内心.",
+    "value": "在寒冷的天气里, 你让身体暖和了起来. 同时, 也温暖了你的内心.",
+    "reason": "2026-10-07 #721：上游 Moodle 說明由第一人稱改為第二人稱（I → You），原譯的「我」改為「你」。"
+  },
+  "Moodles.json|Moodles_WarmingBody_Good_desc_lvl3": {
+    "as1_value": "在寒冷的天气里, 我让身体暖和了起来. 同时, 也温暖了我的内心.",
+    "value": "在寒冷的天气里, 你让身体暖和了起来. 同时, 也温暖了你的内心.",
+    "reason": "2026-10-07 #721：上游 Moodle 說明由第一人稱改為第二人稱（I → You），原譯的「我」改為「你」。"
+  },
+  "Moodles.json|Moodles_WarmingBody_Good_desc_lvl4": {
+    "as1_value": "在寒冷的天气里, 我让身体暖和了起来. 同时, 也温暖了我的内心.",
+    "value": "在寒冷的天气里, 你让身体暖和了起来. 同时, 也温暖了你的内心.",
+    "reason": "2026-10-07 #721：上游 Moodle 說明由第一人稱改為第二人稱（I → You），原譯的「我」改為「你」。"
+  },
+  "Moodles.json|Moodles_FeelingGaze_Bad_desc_lvl3": {
+    "as1_value": "我可不是在做洗澡秀！",
+    "value": "你洗澡时可不想被人围观!",
+    "reason": "2026-10-07 #721：上游改寫為 You don't want an audience while you bathe!（原為 I'm not doing a bathing show!），依新英文重譯，並改掉原譯的全形驚嘆號。"
+  },
+  "Moodles.json|Moodles_FeelingGaze_Bad_desc_lvl4": {
+    "as1_value": "我可不是在做洗澡秀！",
+    "value": "你洗澡时可不想被人围观!",
+    "reason": "2026-10-07 #721：上游改寫為 You don't want an audience while you bathe!（原為 I'm not doing a bathing show!），依新英文重譯，並改掉原譯的全形驚嘆號。"
+  },
+  "IG_UI.json|IGUI_PD_BreedDesc_husky": {
+    "as1_value": "一种强壮的北方雪橇犬: 是目前最强壮的犬种, 天生适合拖运货物 (其驮袋容量最大) 和抵御严寒. 它学习战斗略快于小卡犬, 能独自击杀僵尸, 但并非战士. 固执 (学习服从较慢), 友好 (不擅长守卫) 且食量大 (饿得快). 稀有 - 仅在寒冷的冬季以及宠物店和兽医诊所出没.",
+    "value": "坚韧的雪橇犬, 是目前原始力量最强的犬种, 能提升驮袋负重, 还能在寒冷中帮你保暖. 战斗能力一般. 性格固执 (学习服从较慢), 饿得和渴得都更快. 稀有: 主要出现在寒冷的冬季, 以及宠物店和兽医诊所.",
+    "reason": "2026-10-07 #724：上游把 found only in 改為 found mostly in；原譯另與現行英文多處不符（Average fighter 譯成學戰鬥比小卡犬快、多出「友好」、漏「渴得快」、keeps you warm 譯成自身抵禦嚴寒），依現行英文重寫。"
+  },
+  "IG_UI.json|IGUI_NeatLockpicking_InstrCrowbar": {
+    "as1_value": "按空格键停止箭头",
+    "value": "按 %1 停止箭头",
+    "reason": "2026-10-07 #729：上游把 Press SPACE 改為 Press %1（按鍵改為可自訂，由 %1 帶入按鍵名），譯文改用 %1。"
+  },
+  "Recipes.json|OpenSodaCanPack": {
+    "as1_value": "拆包苏打水",
+    "value": "拆包汽水",
+    "reason": "2026-10-07 #725 裁決：Liel's Drinks 寫 Open Soda Can Pack、Bundle Up! 寫 Open Pack of Soda，都是拆開一組罐裝汽水；Soda 是汽水（本體 Base.SodaCan 罐裝汽水），原譯「蘇打水」是碳酸水，改為兩方共通的「拆包汽水」。"
+  },
+  "Tooltip.json|Tooltip_NeatLockpick_HandmadeLockpick": {
+    "as1_value": "铁丝或回形针制成的简易撬锁工具. 材质脆弱, 在张力过大时极易折断. ",
+    "value": "脆弱的自制撬锁工具, 很容易折断.",
+    "reason": "2026-10-07 #729 裁決：Lockpicking Master 是 Neat Lockpicking 的附加包，對同一物品另寫說明；原譯「鐵絲或迴紋針製成」「張力過大時極易折斷」只屬 Lockpicking Master，改為兩方共通的「脆弱的自製撬鎖工具, 很容易折斷」。"
+  },
+  "Tooltip.json|Tooltip_NeatLockpick_Lockpick": {
+    "as1_value": "精工制作的钢铁撬锁工具, 坚实耐用, 不易在撬锁过程中损坏. ",
+    "value": "制式撬锁工具, 坚固耐用.",
+    "reason": "2026-10-07 #729 裁決：Neat 寫市售、能承受幾次失誤，Lockpicking Master 寫製式鋼製、堅固耐用；拿掉只屬一方的「精工」「鋼鐵」，改為兩方共通的「製式撬鎖工具, 堅固耐用」。"
+  },
+  "Tooltip.json|Tooltip_NeatLockpick_LockpickingMag": {
+    "as1_value": "详细解析撬锁技巧以及锁具结构的杂志. ",
+    "value": "介绍撬锁技巧的杂志.",
+    "reason": "2026-10-07 #729 裁決：Neat 寫教你製作撬鎖工具與撬鎖，Lockpicking Master 寫撬鎖技巧與鎖具構造；拿掉只屬 Master 的「鎖具結構」，改為兩方共通的「介紹撬鎖技巧的雜誌」（雜誌教的配方遊戲會另列）。"
   }
 }
