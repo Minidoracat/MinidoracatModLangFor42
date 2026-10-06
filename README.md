@@ -15,7 +15,7 @@
 
 ## 合作與授權
 
-本 MOD 為如一漢化組（As1）「[B42]統一模組漢化」（[Workshop 3556540080](https://steamcommunity.com/sharedfiles/filedetails/?id=3556540080)）的**授權繁體中文版**，掛名如一漢化組。As1 已翻譯的文字，簡中以 As1 原文為基礎（少數錯誤另立登記修正）；As1 未收錄的模組與新增文字由本包逐鍵自撰簡中。繁中文本全部為逐鍵人工維護的台灣用語譯文（對照英文原文與術語表校訂，不使用自動簡繁轉換）。
+本 MOD 為如一漢化組（As1）「[B42]統一模組漢化」（[Workshop 3556540080](https://steamcommunity.com/sharedfiles/filedetails/?id=3556540080)）的**授權繁體中文版**，掛名如一漢化組。As1 已翻譯的文字，簡中以 As1 原文為基礎（少數錯誤另立登記修正）；As1 未收錄的模組與新增文字由本包用 AI 逐句補譯簡中。繁中文本全部使用 Anthropic、ChatGPT 最新的 AI 模型逐句翻譯成台灣用語（對照英文原文與術語表校訂，不使用自動簡繁轉換）。
 
 支援的 MOD 由本包自行登記與追蹤：追蹤器每日監看各 MOD 與 As1 包的文本變更，新增或改動的文字由本包直接補譯，不必等 As1 同步。
 
@@ -57,7 +57,7 @@ MOD 永遠免費。喜歡的話可以請我喝杯咖啡，贊助會用在伺服�
 
 ## 開發
 
-生成物（`MOD/` 與 `sources/mods/`）勿手改（例外：`sources/mods/` 下 `metadata.json` 標 `origin: "own"` 的原創翻譯目錄為人工真相），請改人工真相層（`sources/ch/` 繁中 corpus、`sources/own_translations.json`、`sources/cn_overrides.json`、`sources/placeholder_exceptions.json`、`sources/mod_registry.json` 支援名冊）後重跑管線。`sources/lua/` 為凍結歷史產物，不新增、不修改、不維護。繁中已斷絕 OpenCC 機轉，逐鍵人工維護。
+生成物（`MOD/` 與 `sources/mods/`）勿手改（例外：`sources/mods/` 下 `metadata.json` 標 `origin: "own"` 的原創翻譯目錄為人工真相），請改人工真相層（`sources/ch/` 繁中 corpus、`sources/own_translations.json`、`sources/cn_overrides.json`、`sources/placeholder_exceptions.json`、`sources/mod_registry.json` 支援名冊）後重跑管線。`sources/lua/` 為凍結歷史產物，不新增、不修改、不維護。繁中已斷絕 OpenCC 機轉，改用 AI 逐句翻譯、逐鍵維護。
 
 ### 發布到 Workshop
 
