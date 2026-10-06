@@ -1,5 +1,5 @@
 {
-  "corpus_hash": "4aac03098a61d5fd526312052467164588960f52fbecd8fffe6d636c2b9d678b",
+  "corpus_hash": "435d1f407a540d544e27a8c5a454c01f2b75d902bfb1b6985bf8088ae0e5fed0",
   "extractor_schema": 10,
   "mod_ids": [
     "DeadMagic"
@@ -127,6 +127,7 @@
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_AddSpellToGrimoire": "89d84bc0ffa9",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_ApplyResearchToActive": "63eac6803da9",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_CastActiveSpell": "e3f3dbfcedb1",
+    "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_CastFail_EmptyQuickCastSlot": "1c0b8745cef8",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_CastFail_EnchantFatigue": "d149a7057303",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_CastFail_InvalidMark": "9abc3a27e39b",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_CastFail_InvalidTarget": "2f7bb4feedc3",
@@ -141,6 +142,7 @@
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_CastFail_NotEnoughEndurance": "a4e6661a96a0",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_CastFail_OnCooldown": "69612e227a83",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_CastFail_OutOfRange": "ac4a2d133192",
+    "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_CastFail_QuickCastChanged": "38a04f4c4c05",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_CastFail_ResearchManualLocked": "51a761f743e6",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_CastFail_ResearchNoPoints": "054e698b32b5",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_CastFail_ResearchNodeOwned": "dbda52af03d7",
@@ -222,6 +224,11 @@
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_MeditationMessage_MoreBenefits": "8ea4647a5d8b",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_ModOptions_Title": "e58666f8e543",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_OpenArcaneResearch": "2bcf12f0c259",
+    "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_QuickCast": "20d8d2875baf",
+    "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_QuickCastAssign": "897af4427476",
+    "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_QuickCastClear": "444f308af7bd",
+    "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_QuickCastEmpty": "c6c094bc0054",
+    "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_QuickCastSlot": "76b70193e9d1",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_Radial_MoveEarlier": "736612d4d0a9",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_Radial_MoveLater": "d6e856081ebe",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_DeadMagic_Radial_Next": "0b533b7e2347",
@@ -1015,7 +1022,12 @@
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/UI.json|UI_optionscreen_binding_DeadMagicCastGrimoireSpell": "ee3b90a688cc",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/UI.json|UI_optionscreen_binding_DeadMagicCycleGrimoireSpell": "d668abf41f1d",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/UI.json|UI_optionscreen_binding_DeadMagicOpenRitualMenu": "d3a1f4762e80",
+    "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/UI.json|UI_optionscreen_binding_DeadMagicQuickCastSlot1": "33fe2f56f8c2",
+    "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/UI.json|UI_optionscreen_binding_DeadMagicQuickCastSlot2": "fd5804b2bf3c",
+    "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/UI.json|UI_optionscreen_binding_DeadMagicQuickCastSlot3": "350b02e5a985",
+    "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/UI.json|UI_optionscreen_binding_DeadMagicQuickCastSlot4": "cb967aa0bbc2",
+    "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/UI.json|UI_optionscreen_binding_DeadMagicQuickCastSlot5": "35bd62f19974",
     "translate_en|mods/Dead Magic/42/media/lua/shared/Translate/EN/UI.json|UI_trait_MagicSkillDesc": "04b20aeec7ea"
   },
-  "updated_at": "2026-10-03T09:55:43Z"
+  "updated_at": "2026-10-06T11:18:53Z"
 }
