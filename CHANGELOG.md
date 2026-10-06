@@ -23,6 +23,11 @@
 - **移除 2 項上游已刪除、所有 MOD 都不再使用的原創翻譯。** Extended categories 的「配飾-上身/園藝」（上游改為「園藝/配飾-上身」，新鍵已補）；Companion Dogs 的「治療中: %1」（改為帶痊癒時間的新提示）。Extended categories 會用「這個分類有沒有翻譯」決定要不要再細分，殘留的舊鍵會讓中文玩家多出英文玩家沒有的分類。
   > 技術要點：以 `sources/en` 全庫與 tracker state 確認沒有任何 owner 仍定義這兩鍵，並對 steamcmd 抓下的現行 Workshop 內容查 Lua／script 引用（Companion Dogs 只剩 `IGUI_PD_VetRow_courseCure`）；`ch_review_state` 同步移除。As1 衍生層的上游刪除鍵（Small Town First Responders 90 個物品名，#720）依同步流程保留。
 
+### Fixed
+
+- **修正 Stay With Me 的同伴說話時頭頂不顯示對話（#733 玩家回報）。** 這個 MOD 拿翻譯鍵 `IGUI_NotAlone_OverheadCyrillic` 當開關：台詞或名字含英文以外的字元時，只有這個鍵是 1 才會顯示在頭頂。本包原本照英文寫 0，所以中文玩家的同伴回應都不顯示，取的中文名字也會被換回預設名；現在改為 1，與西班牙文、義大利文、俄文翻譯相同。
+  > 技術要點：`own_translations.json` 該鍵 ch／cn 改為 `"1"`（`en` 錨點維持上游 `"0"`），`_note` 記下機制（`BridgeData.overheadOk()`），登記 `ch_review_state`。own 層值為純數字或 yes／no／on／off 的 122 鍵逐一看過，其餘是顯示用文字、數值選項或上游檔頭標記，沒看到其他同類旗標。
+
 ## [42.21.0-1.41.0] - 2026-10-05
 
 ### Added
