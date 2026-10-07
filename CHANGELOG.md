@@ -4,7 +4,7 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
-## [Unreleased]
+## [42.21.0-1.43.0] - 2026-10-08
 
 ### Added
 
@@ -22,6 +22,8 @@
 
 - **移除 The Darkness Is Coming 2 上游已刪除的 2 項原創翻譯（#742）。** 沙盒設定「[危險霧氣] 屍體病累積速率」與其說明，上游改為防毒面具濾芯消耗速率。
   > 技術要點：`sources/en` 全庫與 tracker state 已無任何 owner 定義這兩鍵，steamcmd 抓下的現行 Workshop 內容也查無 Lua／script／沙盒選項引用；`ch_review_state` 同步移除。Evolving Traits World（10 項）與 Immersive autoHIDE HUD（6 項 FPS 計數器）的上游刪除鍵屬 As1 衍生層，依同步流程保留。
+
+其餘追蹤單無需另外變更：damnlib（#735）新增的 3 個 Land Rover 輪胎物品名本來就已出貨。
 
 ## [42.21.0-1.42.0] - 2026-10-07
 
