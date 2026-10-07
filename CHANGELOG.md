@@ -4,6 +4,25 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 8 個 MOD 新增的繁簡中文，共 37 項。** Immersive autoHIDE HUD（#738，切換物品時顯示快捷欄、物品欄與容器同時顯示、保持顯示武器、在車內保持顯示小地圖、其他視窗與面板動畫、暫停時顯示全部，12 項）、Evolving Traits World（#734，翻譯狀態分頁改用 Weblate 後的完成度標題、總行數與說明，7 項）、Kitsune's Crossbow Mod（#741，回收折斷的長／短／木弩箭配方與說明，5 項）、SoapZ（#739，蜂蜜皂、盒裝蜂蜜皂與製作配方，4 項）、Fred's Night Vision Goggles（#736，夜視顏色選項，4 項）、CleanHotBar（#737，使用控制器時顯示／自動恢復快捷欄，2 項）、The Darkness Is Coming 2（#742，防毒面具濾芯消耗速率設定，2 項）、Hemp Roll（#740，自製捲菸紙）。
+  > 技術要點：全數落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫，新鍵皆以有效 CN 值登記 `ch_review_state`。物品名沿用本體譯名（金屬廢料、鋒利燧石片、防毒面具濾芯、捲菸紙）與 SoapZ 既有「盒裝12塊」格式。Evolving Traits World 另有 25 個鍵是每版由 Weblate 重算的翻譯統計數字（`UI_ETW_TranslationStats_*`），上游各語言檔都留空、引擎保留英文檔的現值，翻了反而會把數字凍結在舊版，登記 `untranslatable_keys.json` 不補譯。
+
+### Changed
+
+- **依上游英文改值重譯 2 項。** Evolving Traits World 徵求翻譯維護者的提示改為「詳情請見創意工坊頁面」（#734）；Fred's Night Vision Goggles 的夜視亮度說明拿掉「越綠」（新增了白色夜視，#736）。
+  > 技術要點：Evolving Traits World 屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點）；Fred's Night Vision Goggles 屬 own 層，連 `en` 錨點更新；兩者皆登記 `ch_review_state`。
+- **6 個與其他 MOD 共用的鍵完成裁決，全部維持現值。** CleanHotBar 的彈藥文字高度、武器耐久警告、手持裝備、狀態列高度（與 RE Hotbar、BritaCombinedB42 共用，三方英文只差拼寫、大小寫或 height／size 的說法，#737）；Hemp Roll 與 B42 Horticulture 共用的「錫罐菸斗 (大麻)」「菸斗 (大麻)」（#740）。
+  > 技術要點：`owner_conflict_decisions.json` 新增 6 筆 translate，`OWNER_CONFLICTS.md` 重生。
+
+### Removed
+
+- **移除 The Darkness Is Coming 2 上游已刪除的 2 項原創翻譯（#742）。** 沙盒設定「[危險霧氣] 屍體病累積速率」與其說明，上游改為防毒面具濾芯消耗速率。
+  > 技術要點：`sources/en` 全庫與 tracker state 已無任何 owner 定義這兩鍵，steamcmd 抓下的現行 Workshop 內容也查無 Lua／script／沙盒選項引用；`ch_review_state` 同步移除。Evolving Traits World（10 項）與 Immersive autoHIDE HUD（6 項 FPS 計數器）的上游刪除鍵屬 As1 衍生層，依同步流程保留。
+
 ## [42.21.0-1.42.0] - 2026-10-07
 
 ### Added
