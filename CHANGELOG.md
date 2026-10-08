@@ -4,6 +4,25 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 12 個 MOD 新增的繁簡中文，共 665 項。** Knox Aquarium（#758，魚缸放置與環形選單、加水與排水、改成乾式棲地養老鼠與家鼠、混養缸與單一物種缸、魚種與體型限制，以及單人遊戲也會出現的測試版工具，376 項）、Extended categories（#747，鍛造、建築、耕作、釣魚、畜牧、金屬、石材、木材等材料的盒裝／捆裝／箱裝分類、各類「/武器」複合分類、文學-書籍／娛樂，以及新的分類細緻度選項囤積者／平衡／精簡，77 項）、Wallpapers and More Paint Options（#743，新的壁紙與裝飾瓷磚、三款踢腳板與雕刻／上漆配方，54 項）、Palm Pilot（#752，PalmPilot 上的西洋棋單人對局與附近玩家的多人對局、邀請與斷線提示、PalmPilot 生成率設定，44 項）、Bloodlust Overwhelming（#755，新的「瞬殺閃現」發作與相關沙盒設定、失控時攻擊或前往 NPC 的設定與角色台詞，36 項）、Roaming Survivors（#759，倖存者上下車的指令、狀態與台詞，24 項）、Dead Magic（#748，新儀式「催生」與儀式手冊、防風雨珠寶附魔、魔法書重新命名，18 項）、Modern Firearms System Community Fix Patch（#753，.30-06 勃朗寧自動步槍彈匣與 M1919 彈鏈、.303 路易士彈盤與製作配方、多款彈匣裝飾件，17 項）、Tikitown & PowerPlant（#744，熬煉豬油與骨脂、過濾油脂的配方與鍋裝產物，9 項）、Playable Minigames（#750，二十一點牌桌字樣、胡桃木棋盤配色、設定頁標題、Wordle 顏色說明，8 項）、Livestock Panel Plus（#754，公雞啼叫已移到獨立 MOD Rooster Crow 的更新通知）、Off-Grid: Solar Power（#756，只能在俯視視角使用的提示）。
+  > 技術要點：全數落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫，新鍵皆以有效 CN 值登記 `ch_review_state`。Knox Aquarium 拆三批平行翻譯並共用譯名表；測試版工具在單人遊戲對所有玩家顯示（`K.betaToolsAllowed` 單人視同管理員），照一般文字翻譯，動物名沿用本體（老鼠／家鼠）。Extended categories 的 69 個分類名依該 MOD 已出貨的各段譯名組字，新出現的段：Blacksmithing 鍛造、Animal Care 畜牧（本體技能名）、Metal 金屬、Stone 石材、Wood 木材、Book 書籍。6 路對抗複核提出 21 條修正、採納 17 條；Knox Aquarium 兩位複核者對同一組詞各自改向對方（Inspect 檢視／查看、Expire 過期／超過時限），統一採「檢視」與「超過時限」（活魚運送時限到期，不是食物過期）。
+
+### Changed
+
+- **依上游英文改值重譯 9 項。** Adaptive Wear System 3 項（#749，批次修復說明改為「重複修復可將完整性恢復至 100%」、最多件數改由第一個參數帶入；撕開床單也會獲得裁縫經驗）、Project Remnants - Logistics, AI & UI Patch 1 項（#757，卸貨提示改為停在安全屋內並選擇「車輛卸貨」）、PZTrainer 2 項（#751，無限彈藥需要的相容補丁改為 B42.21）、Bloodlust Overwhelming 1 項（#755，從死亡暴走恢復時的台詞「好吧.」改為「沒事, 我死不了.」）、Wallpapers and More Paint Options 2 項（#743，棕石與紅白瓷磚的物品名由「瓷磚包」改為「瓷磚」，與同系列一致）。
+  > 技術要點：Adaptive Wear System 與 Project Remnants 屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點）；其餘屬 own 層，連 `en` 錨點更新；皆登記 `ch_review_state`。Extended categories 7 項「工具-鍛造/武器-*」（#747）上游只把 Blacksmithing 改成 Blacksmith，譯文不變，只更新 `en` 錨點；As1 衍生的「工具-鍛造」維持並登記已審。
+
+### Removed
+
+- **移除 10 項上游已刪除、MOD 不再使用的原創翻譯。** Livestock Panel Plus 公雞啼叫的 5 項設定（#754，功能已移到獨立 MOD Rooster Crow）、Playable Minigames 的「其他遊戲的預設值」「目前不提供保險」（#750，改由新的設定頁標題與牌桌字樣取代）、Roaming Survivors 的「adminHelp」與「拉到附近 (修正小屋生成點)」（#759）、CleanHotBar 的使用控制器時自動恢復快捷欄（#745）。
+  > 技術要點：`sources/en` 全庫與 tracker state 已無任何 owner 定義這些鍵，steamcmd 抓下的現行 Workshop 內容也查無 Lua／script 引用；Roaming Survivors 的鍵是英文原文的雜湊（`IGUI_RNPC_<tHex(英文)>`），另以英文原文搜過 Lua。`ch_review_state` 同步移除。Quality of Life Modpack 的 4 項 Nimble 上限設定（#746）只從 42.20 分支刪除，42.18／42.19 舊分支仍定義並引用，依規則保留；Adaptive Wear System 1 項（#749）屬 As1 衍生層，依同步流程保留。
+
+其餘追蹤單無需另外變更：Wallpapers and More Paint Options 改由翻譯檔提供的 40 個瓷磚、油漆、木器著色劑物品名，與 Knox Aquarium 的 3 個空魚缸物品名本來就已出貨。
+
 ## [42.21.0-1.43.0] - 2026-10-08
 
 ### Added
