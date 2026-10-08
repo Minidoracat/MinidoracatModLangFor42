@@ -1,6 +1,11 @@
 {
-  "corpus_hash": "3044a42a04d5836eb0280825400a28cef3b0c350a72f702128324530b7aab9f7",
+  "corpus_hash": "46b74343e1572b1cc10c09c33a6a5c663020dbb1a3cc7343caccc5746d983e15",
   "extractor_schema": 10,
+  "mod_ids": [
+    "TikitownPower",
+    "TikitownScrapWorks",
+    "tikitown"
+  ],
   "records": {
     "script_craftRecipe|mods/Tikitown/42/media/scripts/Tikitown_Recipes.txt|Add_Cards_to_Box": "427fc8d6d86a",
     "script_craftRecipe|mods/Tikitown/42/media/scripts/Tikitown_Recipes.txt|CombineImmunoCure": "808ae869a532",
@@ -50,6 +55,8 @@
     "script_craftRecipe|mods/TikitownPowerPlant/common/media/scripts/TikitownPower_Recipes.txt|Forge_Powerplant_Suction_Nozzle": "88bb12d0b32c",
     "script_craftRecipe|mods/TikitownPowerPlant/common/media/scripts/TikitownPower_Recipes.txt|Mix_Coolant_Base": "c08de84a4d13",
     "script_craftRecipe|mods/TikitownPowerPlant/common/media/scripts/TikitownPower_Recipes.txt|Mix_Corrosion_Inhibitor": "69c197014306",
+    "script_craftRecipe|mods/TikitownPowerPlant/common/media/scripts/TikitownPower_Recipes.txt|Render_Bone_Grease_Fragments": "aaee791b136e",
+    "script_craftRecipe|mods/TikitownPowerPlant/common/media/scripts/TikitownPower_Recipes.txt|Render_Lard": "31d284bfd59b",
     "script_craftRecipe|mods/TikitownPowerPlant/common/media/scripts/TikitownPower_Recipes.txt|RepairFurnaceControlSystem": "f171fe296b43",
     "script_craftRecipe|mods/TikitownPowerPlant/common/media/scripts/TikitownPower_Recipes.txt|RepairPumpCheckValve": "a73f401431c3",
     "script_craftRecipe|mods/TikitownPowerPlant/common/media/scripts/TikitownPower_Recipes.txt|RepairPumpDisch": "3cf5fa3c81bd",
@@ -63,6 +70,7 @@
     "script_craftRecipe|mods/TikitownPowerPlant/common/media/scripts/TikitownPower_Recipes.txt|Store_Antifreeze": "3813af2a5840",
     "script_craftRecipe|mods/TikitownPowerPlant/common/media/scripts/TikitownPower_Recipes.txt|Store_Industrial_Grease": "719fea8e8471",
     "script_craftRecipe|mods/TikitownPowerPlant/common/media/scripts/TikitownPower_Recipes.txt|Store_Oil": "6f6f37c1c8ee",
+    "script_craftRecipe|mods/TikitownPowerPlant/common/media/scripts/TikitownPower_Recipes.txt|Strain_Rendered_Fat": "5f4da2845801",
     "script_craftRecipe|mods/TikitownScrapWorks/42/media/scripts/recipes/TikitownScrapWorks_recipes.txt|ScrapWorks_Break_Down_Metal_Pipe": "1934b268e31a",
     "script_craftRecipe|mods/TikitownScrapWorks/42/media/scripts/recipes/TikitownScrapWorks_recipes.txt|ScrapWorks_Break_Down_Small_Sheet": "b4df4af762ee",
     "script_craftRecipe|mods/TikitownScrapWorks/42/media/scripts/recipes/TikitownScrapWorks_recipes.txt|ScrapWorks_Bundle_Small_Scrap": "d6b2823aa04f",
@@ -581,6 +589,12 @@
     "script_item|mods/TikitownPowerPlant/42/media/scripts/TikitownPower_Items.txt|TikitownPower.PumpImpeller": "afb3dad16ee8",
     "script_item|mods/TikitownPowerPlant/42/media/scripts/TikitownPower_Items.txt|TikitownPower.PumpSeals": "01c29c8a419e",
     "script_item|mods/TikitownPowerPlant/42/media/scripts/TikitownPower_Items.txt|TikitownPower.PumpSuction": "3dba3ec6d724",
+    "script_item|mods/TikitownPowerPlant/42/media/scripts/TikitownPower_Items.txt|TikitownPower.RawBonePot": "ee3953bdbd8a",
+    "script_item|mods/TikitownPowerPlant/42/media/scripts/TikitownPower_Items.txt|TikitownPower.RawBonePotForged": "d9f95df95879",
+    "script_item|mods/TikitownPowerPlant/42/media/scripts/TikitownPower_Items.txt|TikitownPower.RawFatPot": "8cf21baa643b",
+    "script_item|mods/TikitownPowerPlant/42/media/scripts/TikitownPower_Items.txt|TikitownPower.RawFatPotForged": "512cc99d88a3",
+    "script_item|mods/TikitownPowerPlant/42/media/scripts/TikitownPower_Items.txt|TikitownPower.RenderedFatPot": "483b061e229d",
+    "script_item|mods/TikitownPowerPlant/42/media/scripts/TikitownPower_Items.txt|TikitownPower.RenderedFatPotForged": "1a51007aadd8",
     "script_item|mods/TikitownPowerPlant/42/media/scripts/TikitownPower_Items.txt|TikitownPower.ShopFloorSurvivalist": "befd308a5581",
     "script_item|mods/TikitownPowerPlant/42/media/scripts/TikitownPower_Items.txt|TikitownPower.ShopFloorSurvivalist2": "bb060428bace",
     "script_item|mods/TikitownPowerPlant/42/media/scripts/TikitownPower_Items.txt|TikitownPower.ShopFloorSurvivalist3": "0c71777f9eb5",
@@ -976,6 +990,12 @@
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/ItemName.json|TikitownPower.PumpImpeller": "deb20b09acc7",
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/ItemName.json|TikitownPower.PumpSeals": "3d73c0ab41a0",
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/ItemName.json|TikitownPower.PumpSuction": "1ab2c2d614c1",
+    "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/ItemName.json|TikitownPower.RawBonePot": "368e6b96edae",
+    "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/ItemName.json|TikitownPower.RawBonePotForged": "fe5e5e64e2b2",
+    "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/ItemName.json|TikitownPower.RawFatPot": "95ed8ff6e100",
+    "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/ItemName.json|TikitownPower.RawFatPotForged": "1fa5f4449933",
+    "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/ItemName.json|TikitownPower.RenderedFatPot": "9e255c79e081",
+    "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/ItemName.json|TikitownPower.RenderedFatPotForged": "fb4d8a915cee",
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/ItemName.json|TikitownPower.ShopFloorSurvivalist": "df3e8e45359f",
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/ItemName.json|TikitownPower.ShopFloorSurvivalist2": "6b74ab1c01a2",
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/ItemName.json|TikitownPower.ShopFloorSurvivalist3": "139df07c9254",
@@ -1002,6 +1022,8 @@
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/Recipes.json|Forge_Powerplant_Suction_Nozzle": "b287a8361cde",
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/Recipes.json|Mix_Coolant_Base": "1e7d9a60bddb",
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/Recipes.json|Mix_Corrosion_Inhibitor": "0b6d8d70ccde",
+    "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/Recipes.json|Render_Bone_Grease_Fragments": "9721ee0cbb22",
+    "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/Recipes.json|Render_Lard": "5ac66dbff511",
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/Recipes.json|RepairFurnaceControlSystem": "8f2e414e85b4",
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/Recipes.json|RepairPumpCheckValve": "d8df522e7274",
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/Recipes.json|RepairPumpDisch": "8e3dd7b495b8",
@@ -1015,6 +1037,7 @@
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/Recipes.json|Store_Antifreeze": "0adf03c6d291",
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/Recipes.json|Store_Industrial_Grease": "a31c11120fdd",
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/Recipes.json|Store_Oil": "6a2bc094fdbb",
+    "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/Recipes.json|Strain_Rendered_Fat": "bada44861d9d",
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_TikitownPower": "fcdcd112c822",
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_TikitownPower_DailyDegradeChance": "186dfb6b5d3e",
     "translate_en|mods/TikitownPowerPlant/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_TikitownPower_DailyDegradeChance_tooltip": "563c28602304",
@@ -1050,5 +1073,5 @@
     "translate_en|mods/TikitownScrapWorks/42/media/lua/shared/Translate/EN/Recipes.json|ScrapWorks_Scrap_Umbrella": "2b5cb71b5e94",
     "translate_en|mods/TikitownScrapWorks/42/media/lua/shared/Translate/EN/Recipes.json|ScrapWorks_Scrap_Weights": "aa4fa9505e92"
   },
-  "updated_at": "2026-09-30T10:30:21Z"
+  "updated_at": "2026-10-08T11:22:52Z"
 }
