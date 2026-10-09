@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1342 個 Workshop 模組**（1691 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
+共支援 **1342 個 Workshop 模組**（1692 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -834,7 +834,7 @@
 | [Yumi's Meat Expansion 2.0 w/ Hunting](https://steamcommunity.com/sharedfiles/filedetails/?id=3700009701) | — | — | `MeatExpansion2.0` | 194 | — | — |
 | [AWS - Adaptative Wear System](https://steamcommunity.com/sharedfiles/filedetails/?id=3700283070) | — | — | `AdaptiveWearSystem` | 58 | — | — |
 | [PZLinux B42.17](https://steamcommunity.com/sharedfiles/filedetails/?id=3700371875) | — | — | `B42_PZLinux42` | 288 | — | — |
-| [Yumi's Fishing Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3700643615) | — | — | `FishingExpansion` | 31 | — | — |
+| [Yumi's Fishing Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3700643615) | — | — | `FishingExpansion 2.0` | 31 | — | — |
 | [Yumi's Advanced Trapping Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=3700831155) | — | — | `AdvancedTrapping` | 41 | — | — |
 | [[OC] Ellie's Outfits [Tomb Body/B42.16+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3701066084) | — | — | `ElliesOutfits` | 48 | — | — |
 | [Macon From TWD〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3701164856) | 梅肯（陰屍路） | 以《陰屍路》遊戲為藍本的梅肯小鎮地圖。 | `Macon` | 2 | — | — |
@@ -892,7 +892,7 @@
 | [AutoOpenDoorsWhileDriving](https://steamcommunity.com/sharedfiles/filedetails/?id=3719603024) | — | — | `AutoOpenDoorsWhileDriving` | 2 | — | — |
 | [The Director](https://steamcommunity.com/sharedfiles/filedetails/?id=3720305815) | — | — | `ZombieTactician` | 59 | — | — |
 | [[B42] Vanilla Firearms Rework](https://steamcommunity.com/sharedfiles/filedetails/?id=3720484992) | — | — | `VanillaFirearmsRework` | 4 | ⚠️ ≥37 | — |
-| [IDBFS - Industrial Distillery & Biofuel System](https://steamcommunity.com/sharedfiles/filedetails/?id=3721068590) | — | — | `Distillery&Biofuel` | 118 | ⚠️ ≥1 | — |
+| [IDBFS - Industrial Distillery & Biofuel System](https://steamcommunity.com/sharedfiles/filedetails/?id=3721068590) | — | — | `Distillery&Biofuel`, `Distillery&BiofuelNewWorlds` | 118 | ⚠️ ≥1 | — |
 | [Manual Save & Slot Manager [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3721602150) | — | — | `ManualSaveMod` | 792 | — | — |
 | [[42.18+] RustBury〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3721711345) | 鏽堡鎮 | 諾克斯病毒爆發後的場景地圖，有福索石油的大型工業園區與鄰近小鎮，鎮上留有倖存者痕跡。 | `rustbury_2026_b42` | 2 | — | — |
 | [ST Additions - Better Hutches](https://steamcommunity.com/sharedfiles/filedetails/?id=3721829036) | 改良雞舍 | 雞舍可鋪木屑降低髒污，並能分別取出已受精／未受精的蛋。 | `STA_BetterHutches` | 18 | — | — |
