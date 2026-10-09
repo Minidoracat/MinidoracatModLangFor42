@@ -730,7 +730,7 @@
 | [Legion Weaponry](https://steamcommunity.com/sharedfiles/filedetails/?id=3665548194) | Legion 軍團武器庫 | 新增武器內容，可調整彈匣與彈藥掉落稀有度等沙盒選項。 | `LEGION18` | 11 | — | — |
 | [Not Random Sprinters [42.17]](https://steamcommunity.com/sharedfiles/filedetails/?id=3665657529) | — | — | `NotRandomSprinters` | 27 | — | — |
 | [Ash's King County Sheriff's Deputy Cavalry Hat [Redux] B42.20](https://steamcommunity.com/sharedfiles/filedetails/?id=3665928226) | — | — | `KingCountyCavalryHatRedux1KTexture`, `KingCountyCavalryHatReduxTwo` | 3 | — | — |
-| [[B42 SP/MP]Dawn Town〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3666180085) | 拂曉鎮 | 建築密集擁擠的城鎮地圖，災變後由幫派、邪教與倖存者派系割據各街區。 | `dawn_town` | 2 | — | — |
+| [[B42 SP/MP]Dawn Town〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3666180085) | 拂曉鎮 | 建築密集擁擠的城鎮地圖，災變後由幫派、邪教與倖存者陣營割據各街區。 | `dawn_town` | 2 | — | — |
 | [Buildable Water Pump](https://steamcommunity.com/sharedfiles/filedetails/?id=3666938579) | — | — | `BuildablePump` | 24 | — | — |
 | [[B42.20] Bag Upgrade Plus](https://steamcommunity.com/sharedfiles/filedetails/?id=3668094025) | — | — | `BagUpgradePlusUpdated` | 55 | — | — |
 | [Renewable Spare Engine Parts](https://steamcommunity.com/sharedfiles/filedetails/?id=3668110789) | 可再生備用引擎零件 | 提供製作備用引擎零件的配方，讓車輛維修資源可再生。 | `SeawhiteRenewableSpareEngineParts` | ? | — | — |
@@ -1095,7 +1095,7 @@
 | [CD: Doberman](https://steamcommunity.com/sharedfiles/filedetails/?id=3770795385) | — | — | `CompanionDogsDoberman` | 8 | — | — |
 | ['91 Lexus LS400](https://steamcommunity.com/sharedfiles/filedetails/?id=3770890864) | — | — | `91lexusLS400` | 24 | — | — |
 | [CD: Survivor Breed Pack (12 Dogs) [ALPHA]](https://steamcommunity.com/sharedfiles/filedetails/?id=3771088405) | — | — | `CompanionDogsBreedPack15` | 121 | — | — |
-| [Book Tracker](https://steamcommunity.com/sharedfiles/filedetails/?id=3771468380) | 書籍追蹤器 | 追蹤技能書與配方雜誌等閱讀內容，並提供多人派系任務的建立、接取、進度與獎勵管理。 | `BookTracker` | 302 | — | — |
+| [Book Tracker](https://steamcommunity.com/sharedfiles/filedetails/?id=3771468380) | 書籍追蹤器 | 追蹤技能書與配方雜誌等閱讀內容，並提供多人陣營任務的建立、接取、進度與獎勵管理。 | `BookTracker` | 302 | — | — |
 | [Fancy Handwork B42.20](https://steamcommunity.com/sharedfiles/filedetails/?id=3771638611) | — | — | `FancyHandworkB42_19` | 28 | — | — |
 | [[B42] KR SolarOS - Portable Solar Panel Generator, Solar Panel Charger & Custom Flashlights/Batteries](https://steamcommunity.com/sharedfiles/filedetails/?id=3771709541) | — | — | `KRSolarOS` | ? | — | — |
 | [Spawn Selector](https://steamcommunity.com/sharedfiles/filedetails/?id=3772052709) | 出生點選擇器 | 可選擇或隨機決定出生地點、新增興趣點與圖例介面，並以沙盒設定限制可出生的建築類型（市政與公共建築、餐廳與酒吧等）。 | `SpawnSelector` | 96 | — | — |

@@ -4,6 +4,13 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Changed
+
+- **繁中的「派系」統一改稱「陣營」，共 231 項。** 和遊戲本體、其他系列 MOD 用同一個詞：Book Tracker、Dynamic Trading、Bandits NPC（包含「匪徒陣營 1–16」的設定）、Knox Chronicles、Knox Survivors、CSR、Project A-Life、Roaming Survivors 等。簡中維持如一漢化組的原文。
+  > 技術要點：`sources/ch` 176 鍵（190 處）、`own_translations.json` 的 ch 55 鍵（65 處）、`mod_names_zh.json` 摘要 2 處（重跑 manifest 更新 SUPPORTED_MODS.md）。依 EN 分類：Faction 209 鍵（其中 49 鍵沒有歸檔的上游英文，依鍵名與內容判斷）；Bandits 的 Clan 18 鍵，同一個 MOD 的其他設定原本就寫「陣營」，一併改成陣營；unaffiliated 與 Join／Leave them 4 鍵。`sources/terminology.json` 同步本體新增的 replace 規則「派系→陣營」，`lint_ch.py` [E] 自此擋住新出現的「派系」。`Sandbox_DynamicTrading.BanditHouseRoamerEligiblePercent_tooltip` 的 lint 豁免錨點隨新值重算（保留「被選中」的裁決不變）。
+
 ## [42.21.0-1.44.0] - 2026-10-08
 
 ### Added
