@@ -4,6 +4,27 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 13 個 MOD 新增的繁簡中文，共 352 項。** Yumi's Fishing Expansion（#769，129 種漁獲的腐爛版物品名）、PhunMart 2（#768，24 款販賣機家具與其中 19 款的未通電版本、3D 販賣機與全細節顯示選項、販賣機 3D 材質與 2D 圖塊設定、錢包已滿提示，58 項）、Modern Firearms System Community Fix Patch（#777，.300 BLK、7.62×51mm、7.62×54mmR 的彈匣、彈鼓與彈鏈盒、多款槍械的彈匣裝飾件與製作／轉換配方、HK416D 與 MSR 生成機率，34 項）、Willowbrook Bastion!（#764，唐僧的袈裟、如意金箍棒、九齒釘耙、降魔禪杖、斬馬刀與彩蛋武器，以及戰術背包、背心、腿包與牛馬包的減重設定，31 項）、Wess Admin Tools 與伺服器版（#772／#773，刪除最近的車輛、修理並補齊所有零件、右鍵選單項目開關、生成失敗提示，30 項）、Extended categories（#767，容器、烹飪、畜牧與「工具-槍械」等分類，23 項）、ModernFirearmsSystem（#766，封鎖製作配方的沙盒設定、槍口煙霧與拋殼特效選項，13 項）、NeatUI XP Drop（#774，數字大小、數字顯示在面板下方、額外面板顯示在上方，10 項）、Bloodlust Overwhelming（#778，冥想相關設定、立即狂暴所需累積嗜血值、NPC 嗜血值修正，10 項）、[SVRP] ClassicBows（#776，除錯模式、命中計算用最低瞄準等級、僅從屍體回收箭矢、回溯戰利品生成，8 項）、NeatUI Equipment（#779，關閉 NeatUI Equipment、重設面板大小與位置，4 項）、IDBFS（#771，Legacy 分支提示），以及 HK416D 突擊步槍的物品名。
+  > 技術要點：Willowbrook Bastion! 依 `cn_source: upstream` 把作者簡中逐字抄進 own 目錄 CN，只有 4 個沙盒標題的裸 `(%)` 逸出成 `(%%)`；繁中以作者簡中為主寫進 `sources/ch`。其餘全數落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫，新鍵皆以有效 CN 值登記 `ch_review_state`。Yumi's Fishing Expansion 的腐爛魚名依已出貨的生魚名機械改寫「X (生)」→「X (腐爛)」；Extended categories 依該 MOD 已出貨的各段譯名組字，新段 Farming＝耕作、Husbandry＝畜牧；PhunMart 販賣機家具名沿用已出貨的販賣機物品名。3 路翻譯、4 路對抗複核提出 3 條修正，採納 2 條（Gifted XP 改譯「天賦體驗」，與平價／豪華體驗排成同一組等級名），退回 1 條（工業儲槽是台灣慣用語）；另將 Wess 伺服器版的 `IGUI_WAS_*` 統一用該 MOD 既有的「載具」。
+
+### Changed
+
+- **依上游英文改值重譯 18 項。** [SVRP] ClassicBows 7 項（#776，沙盒標題加上 [SVRP]、傷害倍率改稱弓弩傷害倍率、箭矢回收機率與各設定說明補上新增的說明句）、PhunMart 2 4 項（#768，商店視窗圖片的選填覆寫、圖塊朝向順序改為東、南、西、北、斷電圖塊與 2D 圖塊說明）、Playable Minigames 3 項（#770，跳棋與西洋棋說明補上「或把棋子拖到該格」與王車易位的新走法）、Willowbrook Bastion! 2 項（#764，泰山寶環改名八面漢劍，物品名與鍛造配方）、NeatUI XP Drop 1 項（#774，取代收音機與電視的所有經驗值提示）、Bloodlust Overwhelming 1 項（#778，停用嗜血值壓抑記憶也會停用冥想造成的累積）。
+  > 技術要點：PhunMart 的 3 項屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點）；Willowbrook 的 2 項改 own 目錄 CN（照抄作者新簡中）與 `sources/ch`；其餘屬 own 層，連 `en` 錨點更新；皆登記 `ch_review_state`。
+- **裁決 11 個多 MOD 共用鍵，改譯 5 項。** damnlib 把 89 款 Land Rover 衛士的 3 種共用輪胎改名為 Land Rover 輪胎（#762／#765），譯名拿掉只屬 89defender 的「89款」（越野輪胎另拿掉「衛士」）；ModernFirearmsSystem 與社群修正版分別把原版狩獵步槍稱作 Remington MSR 與 MSR2（#766／#777），彈匣裝飾件與生成機率改為「雷明頓 MSR 系列」。MSR 模組化狙擊步槍、IDBFS 兩個分支的 4 項液體機率設定（只差 `(%)`／`(%%)`）維持現值。
+  > 技術要點：裁決登記 `owner_conflict_decisions.json` 並重生 `OWNER_CONFLICTS.md`；As1 衍生的 2 項走 `sources/ch`＋`cn_overrides`（生成機率沿用既有覆寫、改值補理由），輪胎 3 項與新收的 `Base.HK416D_cat` 屬 own 層並附 `_note`。
+
+### Removed
+
+- **移除 120 項上游已刪除、MOD 不再使用的原創翻譯。** Yumi's Fishing Expansion 的 112 個物品名（#769，110 種熟漁獲，以及生魚子醬與魚子醬握壽司）、[SVRP] ClassicBows 舊版 `SVRPClassicBowsLocal` 的 4 項沙盒設定（#776，已改名為不帶 Local 的新設定）、PhunMart 2 的斷電圖塊欄位與說明（#768）、Wess Admin Tools 伺服器版的「無法修理該載具」「正在修復最近的載具」（#773）。
+  > 技術要點：`sources/en` 全庫與 tracker state 已無任何 owner 定義這些鍵，steamcmd 抓下的現行 Workshop 內容也查無 Lua／script 引用（Yumi 另以不帶模組前綴的物品名與 `.. "Cooked"` 組字搜過；ClassicBows 的 `SVRPClassicBowsLocal` 只剩讀舊存檔沙盒值的後備路徑，`sandbox-options.txt` 已無此頁）；`ch_review_state` 同步移除。Wess Admin Tools 客戶端版的 2 項（#772）屬 As1 衍生層，依同步流程保留。
+
+其餘追蹤單無需另外變更：'91 RANGE ROVER Classic（#760）、[B42] Bandits NPC（#763）、'89 LAND ROVER Defender（#765）新增的鍵只是換了版本資料夾，英文與已出貨譯文一致；Evolving Traits World（#761）只改了每版重算的翻譯統計數字（已登記不翻譯）；CD: Survivor Breed Pack（#775）只改了 `common` 資料夾的 2 段犬種描述，遊戲實際載入的 `42` 資料夾仍是舊英文，譯文維持不變。
+
 ## [42.21.0-1.44.1] - 2026-10-09
 
 ### Changed

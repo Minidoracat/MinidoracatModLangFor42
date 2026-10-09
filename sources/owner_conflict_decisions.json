@@ -9705,6 +9705,83 @@
       "reason": "2026-10-08 #740 裁決：B42 Horticulture 寫 Smoking Pipe with Hemp、Hemp Roll 寫 Hemp-Packed Pipe，都是填了大麻的菸斗；現行出貨「菸斗 (大麻)」對兩方都成立，維持現值。",
       "ch": "菸斗 (大麻)",
       "cn": "烟斗 (大麻)"
+    },
+    "ItemName|Base.89defenderMilitaryTire2": {
+      "action": "translate",
+      "signature": "6c6eeb03bd67690e",
+      "reason": "2026-10-09 #762／#765 裁決：damnlib 把共用輪胎改名為 Land Rover Wolf Military Tire，89defender 仍寫 89 LR Wolf Military Tire；拿掉只屬 89defender 的「89款」，改為兩方都成立的「Land Rover狼軍用輪胎」。",
+      "ch": "Land Rover狼軍用輪胎",
+      "cn": "路虎狼军用轮胎"
+    },
+    "ItemName|Base.89defenderDakarTire2": {
+      "action": "translate",
+      "signature": "401a5ade55c433fd",
+      "reason": "2026-10-09 #762／#765 裁決：damnlib 寫 Land Rover Dakar Tire（不含 Defender），89defender 寫 89 LR Defender Dakar Tire；拿掉只屬 89defender 的「89款」「衛士」，改為兩方都成立的「Land Rover越野輪胎」（Dakar 沿用既有譯法「越野」）。",
+      "ch": "Land Rover越野輪胎",
+      "cn": "路虎越野轮胎"
+    },
+    "ItemName|Base.89defenderTire2": {
+      "action": "translate",
+      "signature": "15ed2b71970811be",
+      "reason": "2026-10-09 #762／#765 裁決：damnlib 把共用輪胎改名為 Land Rover Defender Tire，89defender 仍寫 89 LR Defender Tire；拿掉只屬 89defender 的「89款」，改為兩方都成立的「Land Rover衛士輪胎」。",
+      "ch": "Land Rover衛士輪胎",
+      "cn": "路虎卫士轮胎"
+    },
+    "ItemName|Gunpart.Clip_HuntingRifle": {
+      "action": "translate",
+      "signature": "dce3e71a51ccaab4",
+      "reason": "2026-10-09 #766／#777 裁決：主 MOD 把原版狩獵步槍改成 Remington MSR，社群修正版改成 Remington MSR2；改為兩方都成立的「雷明頓 MSR 系列彈匣 (裝飾件)」。",
+      "ch": "雷明頓 MSR 系列彈匣 (裝飾件)",
+      "cn": "雷明顿 MSR 系列弹匣 (装饰件)"
+    },
+    "ItemName|Base.HK416D_cat": {
+      "action": "translate",
+      "signature": "513fba443edb4a5f",
+      "reason": "2026-10-09 #766／#777 裁決：主 MOD 只在 script 寫 HK416D，社群修正版寫 HK416D Assault Rifle；HK416D 本就是突擊步槍，「HK416D 突擊步槍」對兩方都成立，與本包 Cyclone AK 突擊步槍等同系列寫法一致。",
+      "ch": "HK416D 突擊步槍",
+      "cn": "HK416D 突击步枪"
+    },
+    "ItemName|Base.MSR_cat": {
+      "action": "translate",
+      "signature": "5408c7a7d401b783",
+      "reason": "2026-10-09 #777 裁決：主 MOD 寫 MSR Modular Sniper Rifle，社群修正版寫 Remington MSR；Remington MSR 就是雷明頓的模組化狙擊步槍，現行出貨「MSR 模組化狙擊步槍」對兩方都成立，維持現值。",
+      "ch": "MSR 模組化狙擊步槍",
+      "cn": "MSR 模块化狙击步枪"
+    },
+    "Sandbox|Sandbox_ModernFirearmsSystemSandboxGun_HuntingRifle_Spawn": {
+      "action": "translate",
+      "signature": "dbd7efa65e260c3d",
+      "reason": "2026-10-09 #766／#777 裁決：主 MOD 寫 Remington MSR，社群修正版寫 Remington MSR2（同一個原版狩獵步槍欄位）；改為兩方都成立的「雷明頓 MSR 系列生成機率 [7.62mm]」，也與社群修正版另一個 MSR_cat 設定（MSR 模組化狙擊步槍）分得開。",
+      "ch": "雷明頓 MSR 系列生成機率 [7.62mm]",
+      "cn": "雷明顿 MSR 系列刷新几率 [7.62mm]"
+    },
+    "Sandbox|Sandbox_IDBFS_WorldDoubleBarrelLiquidChance": {
+      "action": "translate",
+      "signature": "489003bf7a8d197f",
+      "reason": "2026-10-09 #771 裁決：New Worlds 分支把 (%) 改成 (%%)，Legacy 分支仍是 (%)，兩者都是字面百分號；現行出貨的「(%%)」對兩個分支都成立，維持現值。",
+      "ch": "雙桶容器中有液體 (%%)",
+      "cn": "双桶容器中有液体 (%%)"
+    },
+    "Sandbox|Sandbox_IDBFS_WorldIndustrialTankLiquidChance": {
+      "action": "translate",
+      "signature": "f24701d0e86c0168",
+      "reason": "2026-10-09 #771 裁決：New Worlds 分支把 (%) 改成 (%%)，Legacy 分支仍是 (%)，兩者都是字面百分號；現行出貨的「(%%)」對兩個分支都成立，維持現值。",
+      "ch": "工業儲槽中有液體 (%%)",
+      "cn": "工业储罐中有液体 (%%)"
+    },
+    "Sandbox|Sandbox_IDBFS_WorldMetalDrumLiquidChance": {
+      "action": "translate",
+      "signature": "e6964f805bcde5c2",
+      "reason": "2026-10-09 #771 裁決：New Worlds 分支把 (%) 改成 (%%)，Legacy 分支仍是 (%)，兩者都是字面百分號；現行出貨的「(%%)」對兩個分支都成立，維持現值。",
+      "ch": "金屬油桶中有液體 (%%)",
+      "cn": "金属油桶中有液体 (%%)"
+    },
+    "Sandbox|Sandbox_IDBFS_WorldWoodenBarrelLiquidChance": {
+      "action": "translate",
+      "signature": "41efe87c810b2e69",
+      "reason": "2026-10-09 #771 裁決：New Worlds 分支把 (%) 改成 (%%)，Legacy 分支仍是 (%)，兩者都是字面百分號；現行出貨的「(%%)」對兩個分支都成立，維持現值。",
+      "ch": "木桶中有液體 (%%)",
+      "cn": "木桶中有液体 (%%)"
     }
   }
 }

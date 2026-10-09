@@ -27057,8 +27057,8 @@
   },
   "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_HuntingRifle_Spawn": {
     "as1_value": "原版狩猎步枪刷新几率",
-    "value": "雷明顿 MSR 刷新几率 [7.62mm]",
-    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
+    "value": "雷明顿 MSR 系列刷新几率 [7.62mm]",
+    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。 2026-10-09 #766／#777 共用鍵裁決（見 owner_conflict_decisions.json）：主 MOD 寫 Remington MSR，社群修正版寫 Remington MSR2（同一個原版狩獵步槍欄位）；改為兩方都成立的「雷明頓 MSR 系列生成機率 [7.62mm]」，也與社群修正版另一個 MSR_cat 設定（MSR 模組化狙擊步槍）分得開。"
   },
   "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_JS14_Rifle_Spawn": {
     "as1_value": "原版 JS-14 步枪刷新几率",
@@ -57269,5 +57269,25 @@
     "as1_value": "将载货车辆停在基地内, 然后按下按钮",
     "value": "将载货车辆停在安全屋内, 然后选择“车辆卸货”.",
     "reason": "2026-10-08 #757：上游英文把「inside the base, then press the button」改成「inside the safehouse, then select Unload vehicles.」，As1 仍是舊句；改為停在安全屋內並選擇「车辆卸货」（同 MOD 已出貨的選單名）。"
+  },
+  "IG_UI.json|IGUI_PhunMart_Hint_Background": {
+    "as1_value": "media/textures/下的PNG文件名",
+    "value": "商店窗口图片的可选覆盖, 位于 media/textures/ 下. 留空则使用 3D 贴图的正面",
+    "reason": "2026-10-09 #768：上游英文由「PNG filename from media/textures/」改為「Optional override for the shop window image, under media/textures/. Empty uses the front of the 3D texture」，As1 仍是舊句；改寫為選填的商店視窗圖片覆寫、留空則用 3D 貼圖正面。"
+  },
+  "IG_UI.json|IGUI_PhunMart_Hint_Sprites": {
+    "as1_value": "4个方向精灵名N,E,S,W",
+    "value": "4 个图块名称 (朝向: 东, 南, 西, 北)",
+    "reason": "2026-10-09 #768：上游英文把圖塊朝向順序由 N, E, S, W 改為 E, S, W, N，As1 仍是舊順序；依新英文改為「4 个图块名称 (朝向: 东, 南, 西, 北)」，用語與同批新增的 2D 图块一致。"
+  },
+  "IG_UI.json|IGUI_PhunMart_Hint_UnpSprites": {
+    "as1_value": "机器断电时显示的4个方向精灵",
+    "value": "机器需要电力但未通电时显示的 4 个图块名称 (东, 南, 西, 北)",
+    "reason": "2026-10-09 #768：上游英文補上朝向順序 (E, S, W, N) 並改成「需要電力但沒電時」，As1 仍是舊句；依新英文重譯。"
+  },
+  "ItemName.json|Gunpart.Clip_HuntingRifle": {
+    "as1_value": "雷明顿 MSR 弹匣 (装饰件)",
+    "value": "雷明顿 MSR 系列弹匣 (装饰件)",
+    "reason": "2026-10-09 #766／#777 共用鍵裁決（見 owner_conflict_decisions.json）：主 MOD 把原版狩獵步槍改成 Remington MSR，社群修正版改成 Remington MSR2；改為兩方都成立的「雷明頓 MSR 系列彈匣 (裝飾件)」。"
   }
 }
