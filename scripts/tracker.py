@@ -1022,9 +1022,13 @@ def _iter_script_records(mod_dir: Path) -> list[tuple[str, str, str, str]]:
     裸區塊名（見 `_MODULE_LINE_RE` 註解）。
     """
     records: list[tuple[str, str, str, str]] = []
+    # 引擎以 equalsIgnoreCase 找 media／scripts（ScriptManager.loadScripts →
+    # ZomboidFileSystem.getCanonicalFile(File, String)）：`media/Scripts` 照樣載入。
+    # 大小寫敏感的比對在 Linux runner 會把整批物品當成上游刪除（2026-10-10 #783 Frockin 系列）。
     script_dirs = [
-        cand for cand in sorted(mod_dir.rglob("scripts"))
-        if cand.is_dir() and cand.parent.name == "media"
+        cand for cand in sorted(mod_dir.rglob("*"))
+        if cand.name.lower() == "scripts" and cand.parent.name.lower() == "media"
+        and cand.is_dir()
     ]
     for scripts_dir in script_dirs:
         for tf in sorted(scripts_dir.rglob("*.txt")):
@@ -1344,9 +1348,10 @@ def trim_download(item_dir: Path) -> None:
 
     def keep(path: Path) -> bool:
         parts = path.parts
+        lower = [p.lower() for p in parts]
         return (
             "Translate" in parts
-            or ("media" in parts and "scripts" in parts)
+            or ("media" in lower and "scripts" in lower)  # 大小寫同 _iter_script_records
             or path.suffix.lower() == ".lua"
             or path.name == "mod.info"
         )
@@ -3376,6 +3381,20 @@ def cmd_self_test() -> int:
             f"情境15：無尾逗號的 DisplayName 仍被收錄（引擎其實不套用）：{dn.get('Inline.NoComma')!r}"
         assert ("script_item", rel, "Inline.NoComma", "Inline.NoComma") in recs, \
             "情境15：item 本身仍須有 record（只是沒有 DisplayName）"
+
+    # 引擎以 equalsIgnoreCase 找 media／scripts（ZomboidFileSystem.getCanonicalFile）；
+    # Frockin 系列改名 `media/Scripts` 後，大小寫敏感比對讓整批物品被判成上游刪除（#783）
+    with tempfile.TemporaryDirectory() as td:
+        cdir = Path(td) / "mods" / "M" / "42" / "Media" / "Scripts" / "clothing"
+        cdir.mkdir(parents=True)
+        (cdir / "c.txt").write_text(
+            "module Base\n{\n    item Capped\n    {\n        DisplayName = Capped Dir,\n    }\n}\n",
+            encoding="utf-8",
+        )
+        trim_download(Path(td))
+        recs = _iter_script_records(Path(td))
+        assert ("script_item_dn", "mods/M/42/Media/Scripts/clothing/c.txt", "Base.Capped",
+                "Capped Dir") in recs, f"情境15：`Media/Scripts` 大小寫變體被裁掉或漏抽：{recs}"
 
     # 大括號配對向上失準（行尾註解／屬性值裡的裸 `{`）：depth 回不到 0 會讓後續 module
     # 標頭永遠不被辨識，其 item 沿用前一個 module 名而拼出**看似有效卻錯誤**的 fullType

@@ -9782,6 +9782,20 @@
       "reason": "2026-10-09 #771 裁決：New Worlds 分支把 (%) 改成 (%%)，Legacy 分支仍是 (%)，兩者都是字面百分號；現行出貨的「(%%)」對兩個分支都成立，維持現值。",
       "ch": "木桶中有液體 (%%)",
       "cn": "木桶中有液体 (%%)"
+    },
+    "ItemName|Base.part4_cat": {
+      "action": "translate",
+      "signature": "d851df9c696b4a11",
+      "reason": "2026-10-10 #797 裁決：主 MOD 叫 Firearm Rubber Components（作者繁中「槍械橡膠零件」），社群修正版改叫 Firearm Optics Components；兩邊都由「拆解配件」配方拆解瞄具（tags[optics]）取得，改為兩方都成立的「槍械配件零件」，省略各自的材質描述。",
+      "ch": "槍械配件零件",
+      "cn": "枪械配件零件"
+    },
+    "Recipes|拆解配件DisassembleWeaponPart": {
+      "action": "translate",
+      "signature": "42d0b95e2340db14",
+      "reason": "2026-10-10 #797 裁決：主 MOD 寫 Disassemble Weapon Part，社群修正版寫 Disassemble Optics / Electronic Attachments；兩邊的輸入都是瞄具等武器配件，維持兩方都成立的「拆解武器配件」。",
+      "ch": "拆解武器配件",
+      "cn": "拆解武器配件"
     }
   }
 }

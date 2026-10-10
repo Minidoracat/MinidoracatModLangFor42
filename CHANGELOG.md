@@ -4,6 +4,29 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **新收錄 SMB steps 的繁簡中文，共 51 項。**（#780 翻譯申請）可攀爬垂直梯子與消防桿的 MOD：爬上／爬下與跨到左右兩側的選單、建造下一段梯子的材料需求與無法攀爬的原因、木梯／鋼梯／消防桿的建造說明，以及攀爬耗費體力、失足摔落的沙盒設定。
+  > 技術要點：使用者核准 own lane 收錄，新建 `sources/mods/3813489363/`（`origin: "own"`），作者只附 EN／PTBR，CN 寫進 own 目錄、CH 寫進 `sources/ch`，皆對照 EN 直寫，零 vanilla 碰撞；已加進名冊、watchlist 與 tracker 基準，上游改英文會開「可能過時」issue。
+- **補齊 14 個 MOD 新增的繁簡中文，共 1,200 項。** Stay With Me（#801，可選男性同伴後的人稱版本、「支援我」「待在我後面」兩種戰鬥姿態、砍樹與清理工作的指令和回報、手電筒與體力條選項、技能升級提示，以及上下車、車上、天候、光線、送禮與幫忙穿戴時依親密程度變化的台詞，1,061 項）、Modern Firearms System Community Fix Patch（#797，瞄準鏡重製與零件回收配方、槍背帶與槍托緩衝墊、武器卡彈的沙盒設定、熱成像瞄準鏡標記樣式，31 項）、RPG Inventory - NeatUI（#800，沉浸式搜尋的各項設定與伺服器同步提示，28 項）、Roaming Survivors（#799，陣營遷移據點、玩家要求陣營搬走的對話與沙盒設定，22 項）、Pinoy Survival Foods（#795，鴨仔蛋與白仁蛋的盒裝、湯鍋煮製與配方，18 項）、Frockin Splendor! Vol.5（#787，紅色款收納箱、衣物防塵袋與三級容器掉落倍率設定，14 項）、Bloodlust Overwhelming（#798，Lifestyles: Hobbies 三級正念對失控與喊叫機率的修正設定，12 項）、Wallpapers and More Paint Options（#781，頂角線、腰線、素面踢腳板與兩款護牆板的配方，5 項）、Frockin Stompers!（#791，容器掉落倍率設定，3 項）、Yumi's Fishing Expansion（#789，指定下一次釣到的漁獲，2 項），以及 Ammo Loot Drop（#782）、Willowbrook Bastion!（#785）、Better Vanilla ALICE Suspenders（#788）、Better Vanilla Filters and UI（#790）各 1 項。
+  > 技術要點：Willowbrook 依 `cn_source: upstream` 照抄作者簡中進 own 目錄、CH 寫進 `sources/ch`；其餘全數落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫，新鍵皆以有效 CN 值登記 `ch_review_state`。Stay With Me 沒有後綴的鍵是女性同伴，`<鍵>Male`／`SocM_*` 是男性版（Lua 以 `getTextOrNull` 探測），兩邊句型一致只換人稱。6 路翻譯、6 路對抗複核提出 7 條修正全數採納（keep watch 不限夜間、手電筒「光線昏暗時」自動開啟、本體物品名鐵管／刮傷／焊工面罩／丙烷噴燈／鋼棒）；繁中「污」統一寫成 corpus 慣用的「汙」。
+
+### Changed
+
+- **依上游英文改值重譯 10 項。** Ammo Loot Drop 與 Guns of Marz 版各 1 項（#782／#796，彈匣掉落說明依新英文完整重寫：補回原本漏掉的顏色標記與「共用 N 種彈匣」，Guns of Marz 版的槍枝與彈匣數更新為 90／49／34）、Wallpapers and More Paint Options 2 項（#781，黑白上漆配方由「踢腳板」改為泛指的「裝飾」）、Better Vanilla Filters and UI 1 項（#790，濾芯耐久倍率說明改為「數值越高越耐用」）、Plysken Attachments Reborn 1 項（#792，背包掛件減重說明補上武器與工具維持原重，並補齊原本縮寫掉的條件）、Water Pump 1 項（#793，水管連接改為抽水機連接）、Skill Journal 1 項（#794，補上增益較大的讀者能從同一頁多拿經驗）、Bloodlust Overwhelming 1 項（#798，沒有正念或乙型阻斷劑時喊叫機率才是 100%）、RPG Inventory - NeatUI 1 項（#800，停用 RPG 物品欄與沉浸式搜尋即可改回原版物品欄）。
+  > 技術要點：Ammo Loot Drop 系列、Better Vanilla Filters、Plysken、Water Pump、Skill Journal 共 6 項屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點）；其餘屬 own 層，連 `en` 錨點更新；皆登記 `ch_review_state`。兩個 MOD 的「彈匣預裝彈量」說明只改措辭（turns up → arrives），譯文不變，只更新 `en` 錨點。
+- **裁決 2 個多 MOD 共用鍵，改譯 1 項。** Modern Firearms System 社群修正版把 Firearm Rubber Components 改名為 Firearm Optics Components（#797），兩邊都由拆解瞄具取得，物品名改為兩方都成立的「槍械配件零件」；拆解配方維持「拆解武器配件」。
+  > 技術要點：裁決登記 `owner_conflict_decisions.json` 並重生 `OWNER_CONFLICTS.md`；`Base.part4_cat` 屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`。
+
+### Removed
+
+- **移除 9 項上游已刪除、MOD 不再使用的原創翻譯。** Stay With Me 8 項（#801，送衣服與首飾時的舊台詞，已改為依親密程度分組的新台詞池）、Wallpapers and More Paint Options 1 項（#781，「雕刻踢腳板」配方改名為「雕刻素面踢腳板」）。
+  > 技術要點：`sources/en` 全庫與 tracker state 已無任何 owner 定義這些鍵，steamcmd 抓下的現行 Workshop 內容也查無 Lua／script 引用（Stay With Me 的穿戴台詞改由 `BridgeMoments.line` 以「池名_親密度」組鍵；同前綴的 NotAlone NPC Mod 3785948334 也無引用）；`ch_review_state` 同步移除。
+
+其餘追蹤單無需另外變更翻譯：Frockin Splendor! Vol.3／Vol.4、Frockin Wiseguys!（#783／#784／#786）與 Vol.5、Frockin Stompers!（#787／#791）回報的大量刪除，是作者把 `media/scripts` 資料夾改名為 `media/Scripts`，追蹤器比對大小寫而誤判；遊戲不分大小寫照樣載入，物品英文與譯名都沒變，已修正追蹤器並重抽這 5 個 MOD。Knox Immersivity B42（#802）在 Steam API 查無資料，但實際開啟 Workshop 頁面仍可存取（標題註明即將更新），翻譯保留。
+
 ## [42.21.0-1.45.0] - 2026-10-10
 
 ### Added

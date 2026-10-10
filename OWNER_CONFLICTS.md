@@ -23,7 +23,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1486** 個鍵（`unship` 310、`translate` 1176）。這些鍵的 owner 條目共 4205 筆：可載入 `.json` 2724、script 673、死檔 808。另有 **382** 個鍵尚未裁決。
+現況：已裁決 **1488** 個鍵（`unship` 310、`translate` 1178）。這些鍵的 owner 條目共 4209 筆：可載入 `.json` 2728、script 673、死檔 808。另有 **380** 個鍵尚未裁決。
 
 ## 不出貨的鍵（310）
 
@@ -342,7 +342,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_profdesc_veteran` | `2840805724/SimpleOverhaulTraitsAndOccupations` = War. War never changes... _(json)_<br>`3387957272/Detailed Descriptions for Occupations and Traits` = Foraging Bonuses:&lt;br&gt;+1.75 vision radius&lt;br&gt;33%… _(json)_ | 2026-08-29 #316：Detailed Descriptions 與 Simple Overhaul 以同一職業描述鍵承載完全不同內容（一方為完整知識/搜尋加成，另一方為一句摘要），沒有同時保真且有用的中性譯文。兩方均有可載入 JSON EN，抑制後顯示各自英文。 | — |
 | `UI\|UI_trait_BloodlustDesc` | `2459400130/DynamicTraits` = An uncontrollable urge to kill zombies. Going too long with… _(json)_<br>`2914075159/Evolving Traits World` = You find great joy in culling the undead.&lt;br&gt;You gain… _(json)_<br>`3657541591/Superheroes` = Double the speed. Triple the damage.&lt;br&gt;Recover endur… _(json)_ | 三個模組共用同鍵但效果不同：Dynamic Traits 是長時間不殺殭屍會惡化心情，ETW 是擊殺後降低壓力與恐慌，Superheroes 是速度與傷害加成、近戰擊殺恢復耐力及麻木。沒有完整且適用三方的單一說明，維持不出貨；三方皆有可載入 JSON 英文，玩家改讀各自模組的原文。 | — |
 
-## 採中性譯名的鍵（1176）
+## 採中性譯名的鍵（1178）
 
 這些鍵有中文，且該譯名對每個 MOD 都成立。
 
@@ -1210,6 +1210,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|Base.m_lok_magpul` | `3616176188/GaelGunStore` = Magpul M-LOK Grip _(json)_<br>`3623297453/GaelGunStore_Legacy` = M Lok Magpul _(script)_ | 2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Magpul M-LOK Grip」與「M Lok Magpul」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「Magpul M-LOK握把」採現行名稱，對兩個 owner 均成立。 | — |
 | `ItemName\|Base.magpul_afg` | `3616176188/GaelGunStore` = Magpul AFG Angled Foregrip _(json)_<br>`3623297453/GaelGunStore_Legacy` = Magpul Afg _(script)_ | 2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 | — |
 | `ItemName\|Base.magpul_rvg` | `3616176188/GaelGunStore` = Magpul RVG Vertical Grip _(json)_<br>`3623297453/GaelGunStore_Legacy` = Magpul Rvg _(script)_ | 2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 | — |
+| `ItemName\|Base.part4_cat` | `3633421539/Escape from Kentucky4215` = Firearm Rubber Components _(json)_<br>`3780151182/MFS_community_fix` = Firearm Optics Components _(json)_ | 2026-10-10 #797 裁決：主 MOD 叫 Firearm Rubber Components（作者繁中「槍械橡膠零件」），社群修正版改叫 Firearm Optics Components；兩邊都由「拆解配件」配方拆解瞄具（tags[optics]）取得，改為兩方都成立的「槍械配件零件」，省略各自的材質描述。 | — |
 | `ItemName\|Base.pistol_shotgun` | `3616176188/GaelGunStore` = Pistol-Grip Shotgun _(json)_<br>`3623297453/GaelGunStore_Legacy` = pistol shotgun _(script)_ | 2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 | — |
 | `ItemName\|Base.pk_stock_plastic` | `3616176188/GaelGunStore` = Plastic Stock for PK _(json)_<br>`3623297453/GaelGunStore_Legacy` = Pk Stock Plastic _(script)_ | 2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 | — |
 | `ItemName\|Base.pk_stock_wood` | `3616176188/GaelGunStore` = Wood Stock for PK _(json)_<br>`3623297453/GaelGunStore_Legacy` = Pk Stock Wood _(script)_ | 2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 | — |
@@ -1290,6 +1291,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `Recipes\|MakeYeast` | `2875059598/Herbalist` = Make Yeast _(json)_<br>`2875059598/Herbalist_NoBiofuel` = Make Yeast _(json)_<br>`3600616323/Todo Caserito` = Obtain yeast _(json)_<br>`3795521454/RealisticRecipes` = Make Yeast _(json)_ | 三個 owner 都是取得酵母：2875059598/Herbalist 與 Herbalist_NoBiofuel 寫 'Make Yeast'，3600616323/Todo Caserito 寫 'Obtain yeast'（該 mod 另有 MakeLevaduraCaseraJar='Prepare brewer's yeast' 專指自製啤酒酵母罐）。Make／Obtain 是取得途徑的措辭差，產物都是酵母本身。現行「製作酵母」未宣稱任何特定菌種或容器，對三者皆成立。 ／2026-10-01 As1 名單納管複核：新增 owner 3795521454/RealisticRecipes，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 | — |
 | `Recipes\|OpenBoxOfBullets100` | `3183820077/Guns93Test` = Open Box (100 Bullets) _(json)_<br>`3715977706/BetterVanillaFirearms42` = Open Box (100 Rounds) _(json)_ | 2026-10-02 #644 裁決：Guns of 93 的 Open Box (100 Bullets) 與 Better Vanilla Firearms 的 Open Box (100 Rounds) 是同一個拆開百發彈藥盒的配方, 只差 Bullets/Rounds. 沿用現值. | — |
 | `Recipes\|OpenSodaCanPack` | `2790211934/Liel's Drinks` = Open Soda Can Pack _(json)_<br>`3746632343/Vanilla` = Open Pack of Soda _(json)_ | 2026-10-07 #725 裁決：Liel's Drinks 寫 Open Soda Can Pack、Bundle Up! 寫 Open Pack of Soda，都是拆開一組罐裝汽水；Soda 是汽水（本體 Base.SodaCan 罐裝汽水），原譯「蘇打水」是碳酸水，改為兩方共通的「拆包汽水」。 | — |
+| `Recipes\|拆解配件DisassembleWeaponPart` | `3633421539/Escape from Kentucky4215` = Disassemble Weapon Part _(json)_<br>`3780151182/MFS_community_fix` = Disassemble Optics / Electronic Attachments _(json)_ | 2026-10-10 #797 裁決：主 MOD 寫 Disassemble Weapon Part，社群修正版寫 Disassemble Optics / Electronic Attachments；兩邊的輸入都是瞄具等武器配件，維持兩方都成立的「拆解武器配件」。 | — |
 | `Sandbox\|Sandbox_ADWWF` | `3569050120/[B42]Kill Cell - Armory` = Advanced Weapons _(死檔 Sandbox_EN.txt)_<br>`3623297453/GaelGunStore_Legacy` = Gael Gun Store _(死檔 Sandbox_EN.txt)_<br>`3633421539/Escape from Kentucky4215` = Advanced Firearms _(json)_<br>`3780151182/MFS_community_fix` = Advanced Firearms _(json)_ | 三個 owner 的標題雖分別為 Advanced Weapons、Gael Gun Store、Advanced Firearms，但都屬槍械／武器模組設定區。採中性「槍械相關內容／枪械相关内容」，不宣稱 Advanced、品牌或商店名，對每個 owner 都成立。 ／2026-10-01 As1 名單納管複核：新增 owner 3780151182/MFS_community_fix，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 | — |
 | `Sandbox\|Sandbox_ActionTimeMultiplier_tooltip` | `3551139118/MyCustomFirearm` = Scales how long disassemble/repair/upgrade actions take. _(json)_<br>`3555558732/OgrimMachineUtils` = Scales the time to do actions using the machines. _(json)_<br>`3555558732/OgrimMachineUtils-Legacy` = Scales the time to do actions using the machines. _(json)_ | 2026-09-27 裁決：Ogrim 的兩個模組共用這個沙盒選項鍵：Universal Custom Firearm 指拆解／修理／升級槍械的操作時間，Machine Utils（含 Legacy 變體）指使用機器的操作時間。兩者都是「該模組操作耗時的倍率」，現值「使用機器」只符合 Machine Utils，改成中性的「相關操作」；選項出現在各模組自己的沙盒頁面，玩家能從上下文知道是哪種操作。 | — |
 | `Sandbox\|Sandbox_Bandits.BaseSpawnHourlyChance` | `3268487204/Bandits` = Bandit base/camp hourly spawn chance (if location allows) [… _(json)_<br>`3412682512/BanditsAddOptions` = NPC base/camp hourly spawn chance [%] _(死檔 Sandbox_EN.txt)_ | 2026-09-27 裁決：Bandits Extra Options（3412682512）是 Bandits NPC（3268487204）的附加選項模組，這個鍵是同一個沙盒選項；附加模組只是把 "Bandit" 寫成 "NPC" 並省略 "(if location allows)" 的說明，機制相同。現值對兩者都成立，沿用；翻譯也讓附加模組（Sandbox_EN.txt 死檔）不會顯示鍵名。 | — |
@@ -1525,7 +1527,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_thickblooddesc` | `1299328280/More Traits` = You bleed more slowly from wounds. _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Wounds bleeds less.&lt;br&gt;(-50% damage from bleeding.) _(json)_ | 2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。 | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（382）
+## 尚未裁決的衝突（380）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
@@ -1669,7 +1671,6 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|Base.ThompsonMagazine` | `3383901556/Modern & Historical Firearms Bundle` = Thompson Magazine _(script)_<br>`3773858287/B42 Rain's Firearms & Gun Parts` = .45 ACP SMG Magazine _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = .45 ACP SMG Magazine _(json)_ | 湯普森衝鋒槍彈匣 |
 | `ItemName\|Base.UZIMag` | `2256623447/Firearms` = UZI Carbine Magazine _(json)_<br>`2256623447/FirearmsBETA` = UZI Carbine Magazine _(json)_<br>`3779417912/Totally's Cops and Robbers Firearms` = IMI Uzi Magazine _(json)_ | UZI衝鋒槍彈匣 |
 | `ItemName\|Base.WoodenLadder` | `2737665235/Ladders` = Wooden Ladder _(script)_<br>`3629835761/Ladders` = Wooden ladder _(json)_<br>`3629835761/LaddersOld` = Wooden ladder _(json)_ | 木梯 |
-| `ItemName\|Base.part4_cat` | `3633421539/Escape from Kentucky4215` = Firearm Rubber Components _(json)_<br>`3780151182/MFS_community_fix` = Firearm Optics Components _(json)_ | 槍械橡膠零件 |
 | `ItemName\|ISA.SolarFailsafe` | `2969478819/ImmersiveSolarArrays` = Moveable _(script)_<br>`3647117173/ImmersiveSolarArraysMP` = ISA_SolarFailSafe _(script)_<br>`3723961714/Infoteo's Immersive Solar Arrays` = Moveable _(script)_ | 故障保險觸發器 |
 | `ItemName\|ISA.SolarPanelFlat` | `2969478819/ImmersiveSolarArrays` = Moveable _(script)_<br>`3647117173/ImmersiveSolarArraysMP` = ISA_SolarPanelFlat _(script)_<br>`3723961714/Infoteo's Immersive Solar Arrays` = Moveable _(script)_ | 平板太陽能板 |
 | `ItemName\|ISA.SolarPanelMounted` | `2969478819/ImmersiveSolarArrays` = Moveable _(script)_<br>`3647117173/ImmersiveSolarArraysMP` = ISA_SolarPanelMounted _(script)_<br>`3723961714/Infoteo's Immersive Solar Arrays` = Moveable _(script)_ | 落地式太陽能板 |
@@ -1693,7 +1694,6 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `Recipes\|MakeFrenchFries` | `3600616323/Todo Caserito` = Prepare french fries _(json)_<br>`3727395976/OGCookingExpanded` = Make French Fries _(json)_<br>`3795521454/RealisticRecipes` = Make French Fries _(json)_ | 製作薯條 |
 | `Recipes\|MakeKatanaHandle` | `3569158406/TacticalSheathsReborn` = Make Katana Handle _(json)_<br>`3795521454/RealisticRecipes` = Katana Handle _(json)_ | 製作武士刀刀柄 |
 | `Recipes\|MakeSausage` | `3600616323/Todo Caserito` = Stuff sausages _(json)_<br>`3795521454/RealisticRecipes` = Make Sausage _(json)_ | 灌製香腸 |
-| `Recipes\|拆解配件DisassembleWeaponPart` | `3633421539/Escape from Kentucky4215` = Disassemble Weapon Part _(json)_<br>`3780151182/MFS_community_fix` = Disassemble Optics / Electronic Attachments _(json)_ | 拆解武器配件 |
 | `Recorded_Media\|RM_6f98888f-2e1c-4895-b465-8e97d94adee5` | `2732294885/Named skill VHS tapes` = [First Aid] VHS: KY Medical Frontline E2 _(json)_<br>`3153010942/FirstAidVHSTapes` = VHS: KY Medical Frontline E2 _(json)_ | [急救] VHS: 肯塔基醫療前線 第2集 |
 | `Recorded_Media\|RM_91e040db-5de6-4960-8375-147ee6b47347` | `2732294885/Named skill VHS tapes` = [First Aid] VHS: KY Medical Frontline E1 _(json)_<br>`3153010942/FirstAidVHSTapes` = VHS: KY Medical Frontline E1 _(json)_ | [急救] VHS: 肯塔基醫療前線 第1集 |
 | `Recorded_Media\|RM_ETC_FA1_ItemDisplayName` | `2732294885/Named skill VHS tapes` = [Blacksmithing] VHS: Forge Ahead E1 _(json)_<br>`3409272479/EmergencyTVChannel` = VHS: Forge Ahead E1 _(json)_ | VHS: 鍛造前行 E1 |
