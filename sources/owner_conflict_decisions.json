@@ -659,10 +659,10 @@
     },
     "Tooltip|Tooltip_GunP": {
       "action": "translate",
-      "signature": "cee8e00b905914f8",
-      "reason": "八 owner 共同動作為按 G 裝填／開火，只有一方額外要求瞄準；移除 owner 專屬的「瞄準並」。",
-      "ch": "按 G 裝填<br>按 G 開火",
-      "cn": "按 G 装填<br>按 G 开火"
+      "signature": "3258ff9de654e794",
+      "reason": "八 owner 共同動作為按 G 裝填／開火，只有一方額外要求瞄準；移除 owner 專屬的「瞄準並」。 ／2026-10-11 #813 裁決（使用者選定兩行並陳）：MFS 社群修正版新增 owner，改寫成舊式發射器（瞄準時按 G 裝填／發射）與新式發射器（按 G 切換榴彈模式後用一般裝填與射擊鍵）兩種；其餘 8 個 owner 仍是按 G 裝填／開火。第一行對 9 個 owner 都成立，第二行明指 MFS 新式發射器，對其他 owner 不構成錯誤說明。",
+      "ch": "按 G 裝填, 按 G 開火<br>MFS 新式發射器: 按 G 切換榴彈模式, 再用一般的裝填與射擊鍵",
+      "cn": "按 G 装填, 按 G 开火<br>MFS 新式发射器: 按 G 切换榴弹模式, 再使用常规的装填和射击键"
     },
     "Tooltip|Tooltip_HikingBoots": {
       "action": "translate",
@@ -2884,8 +2884,8 @@
     },
     "IG_UI|IGUI_WeaponUI_FireRate": {
       "action": "translate",
-      "signature": "8e6b982bca72dbc5",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 3 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 owner 3780151182/MFS_community_fix，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。",
+      "signature": "9d73f67d491f8eb5",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 3 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 owner 3780151182/MFS_community_fix，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 ／2026-10-11 #813 複核：MFS 社群修正版改為 Auto fire rate（全自動射速），仍是射速數值，「射速」對每個 owner 都成立，重新背書。",
       "ch": "射速",
       "cn": "射速"
     },
@@ -9796,6 +9796,384 @@
       "reason": "2026-10-10 #797 裁決：主 MOD 寫 Disassemble Weapon Part，社群修正版寫 Disassemble Optics / Electronic Attachments；兩邊的輸入都是瞄具等武器配件，維持兩方都成立的「拆解武器配件」。",
       "ch": "拆解武器配件",
       "cn": "拆解武器配件"
+    },
+    "IG_UI|IGUI_WeaponUI_Sound": {
+      "action": "translate",
+      "signature": "50db99af9b749a55",
+      "reason": "2026-10-11 #813 裁決：MFS 社群修正版寫 Noise range（噪音範圍），其餘 8 個 owner 寫 Noise；同一項武器噪音數值，「噪音」對每個 owner 都成立，維持現值。",
+      "ch": "噪音",
+      "cn": "噪音"
+    },
+    "ItemName|Phun.WristWatch_Left_MilitaryX": {
+      "action": "translate",
+      "signature": "01ed3536c18b74e7",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprintersUI 的 script DisplayName 是 Military Watch，但它自己的 ItemName_EN.txt 稱 Special Military Issued Sensor；PhunSprinters 2 叫 Military Sensor。兩邊都是同一個軍用感應器，「軍用特製感應裝置」對兩方都成立，維持現值。",
+      "ch": "軍用特製感應裝置",
+      "cn": "军用特制感应装置"
+    },
+    "ItemName|Phun.WristWatch_Right_MilitaryX": {
+      "action": "translate",
+      "signature": "01ed3536c18b74e7",
+      "reason": "2026-10-11 #807 裁決：同 Phun.WristWatch_Left_MilitaryX（左右手版本），維持「軍用特製感應裝置」。",
+      "ch": "軍用特製感應裝置",
+      "cn": "军用特制感应装置"
+    },
+    "IG_UI|IGUI_PhunSprinters_ActiveMode1": {
+      "action": "translate",
+      "signature": "5c634d8719f9733f",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt，稱 rabid zeds／zeds）與 PhunSprinters 2（稱 sprinters）措辭不同，指的都是會奔跑的殭屍；現行譯文對兩方都成立，維持現值。",
+      "ch": "跑屍將躁動至黎明",
+      "cn": "跑尸将躁动至黎明"
+    },
+    "IG_UI|IGUI_PhunSprinters_ActiveMode2": {
+      "action": "translate",
+      "signature": "5588b318261033c3",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt，稱 rabid zeds／zeds）與 PhunSprinters 2（稱 sprinters）措辭不同，指的都是會奔跑的殭屍；現行譯文對兩方都成立，維持現值。",
+      "ch": "跑屍處於躁動狀態",
+      "cn": "跑尸处于躁动状态"
+    },
+    "IG_UI|IGUI_PhunSprinters_ActiveMode3": {
+      "action": "translate",
+      "signature": "6291d1ba294865a2",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt，稱 rabid zeds／zeds）與 PhunSprinters 2（稱 sprinters）措辭不同，指的都是會奔跑的殭屍；現行譯文對兩方都成立，維持現值。",
+      "ch": "整體環境過暗 跑屍已躁動",
+      "cn": "整体环境过暗 跑尸已躁动"
+    },
+    "IG_UI|IGUI_PhunSprinters_ActiveMode4": {
+      "action": "translate",
+      "signature": "1fc7b924299ca45a",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt，稱 rabid zeds／zeds）與 PhunSprinters 2（稱 sprinters）措辭不同，指的都是會奔跑的殭屍；現行譯文對兩方都成立，維持現值。",
+      "ch": "處於黑暗區域時 跑屍會躁動",
+      "cn": "处于黑暗区域时 跑尸会躁动"
+    },
+    "IG_UI|IGUI_PhunSprinters_InactiveMode1": {
+      "action": "translate",
+      "signature": "43b325447f06a810",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt，稱 rabid zeds／zeds）與 PhunSprinters 2（稱 sprinters）措辭不同，指的都是會奔跑的殭屍；現行譯文對兩方都成立，維持現值。",
+      "ch": "跑屍將平靜至黃昏",
+      "cn": "跑尸将平静至黄昏"
+    },
+    "IG_UI|IGUI_PhunSprinters_InactiveMode2": {
+      "action": "translate",
+      "signature": "5588b318261033c3",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt，稱 rabid zeds／zeds）與 PhunSprinters 2（稱 sprinters）措辭不同，指的都是會奔跑的殭屍；現行譯文對兩方都成立，維持現值。",
+      "ch": "跑屍處於平靜狀態",
+      "cn": "跑尸处于平静状态"
+    },
+    "IG_UI|IGUI_PhunSprinters_InactiveMode3": {
+      "action": "translate",
+      "signature": "b3902c3e8890a038",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt，稱 rabid zeds／zeds）與 PhunSprinters 2（稱 sprinters）措辭不同，指的都是會奔跑的殭屍；現行譯文對兩方都成立，維持現值。",
+      "ch": "整體環境明亮 跑屍已平靜",
+      "cn": "整体环境明亮 跑尸已平静"
+    },
+    "IG_UI|IGUI_PhunSprinters_InactiveMode4": {
+      "action": "translate",
+      "signature": "4abada723e2219ae",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt，稱 rabid zeds／zeds）與 PhunSprinters 2（稱 sprinters）措辭不同，指的都是會奔跑的殭屍；現行譯文對兩方都成立，維持現值。",
+      "ch": "處於光亮區域時 跑屍會平靜",
+      "cn": "处于光亮区域时 跑尸会平静"
+    },
+    "IG_UI|IGUI_PhunSprinters_Moon_Increasing_Desc": {
+      "action": "translate",
+      "signature": "d59cc50167521cd0",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
+      "ch": "%1會使跑屍數量增加%2%%",
+      "cn": "%1会使跑尸数量增加%2%%"
+    },
+    "IG_UI|IGUI_PhunSprinters_Moon_Reducing_Desc": {
+      "action": "translate",
+      "signature": "d8e1a3761fd09df0",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
+      "ch": "%1會安撫殭屍, 使跑屍數量減少%2%%",
+      "cn": "%1会安抚僵尸, 使跑尸数量减少%2%%"
+    },
+    "IG_UI|IGUI_PhunSprinters_Risk_Area_Percentage": {
+      "action": "translate",
+      "signature": "e993d2074de13c59",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
+      "ch": " - %1區域風險:%2%%",
+      "cn": "- %1区域风险:%2%%"
+    },
+    "IG_UI|IGUI_PhunSprinters_Risk_Hours_Discounted": {
+      "action": "translate",
+      "signature": "5f60863d7aa38596",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
+      "ch": " - %1時間衰減:-%2%%",
+      "cn": "- %1时长衰减:-%2%%"
+    },
+    "IG_UI|IGUI_PhunSprinters_Risk_Moon_Percentage": {
+      "action": "translate",
+      "signature": "6b9e9f7e34d0e1d6",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
+      "ch": " - %1月相修正:%2%%",
+      "cn": "- %1月相修正:%2%%"
+    },
+    "IG_UI|IGUI_PhunSprinters_Risk_Percentage": {
+      "action": "translate",
+      "signature": "191ef293dd397ee5",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
+      "ch": "風險:%1%%",
+      "cn": "风险:%1%%"
+    },
+    "IG_UI|IGUI_PhunSprinters_Too_Dark_Desc": {
+      "action": "translate",
+      "signature": "22dfad7d121c999a",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt，稱 rabid zeds／zeds）與 PhunSprinters 2（稱 sprinters）措辭不同，指的都是會奔跑的殭屍；現行譯文對兩方都成立，維持現值。",
+      "ch": "室外昏暗環境會讓跑屍變得躁動",
+      "cn": "室外昏暗环境会让跑尸变得躁动"
+    },
+    "IG_UI|IGUI_PhunSprinters_Too_Light_Desc": {
+      "action": "translate",
+      "signature": "eff70d8d93ce0ce2",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt，稱 rabid zeds／zeds）與 PhunSprinters 2（稱 sprinters）措辭不同，指的都是會奔跑的殭屍；現行譯文對兩方都成立，維持現值。",
+      "ch": "室外明亮光線可安撫跑屍",
+      "cn": "室外明亮光线可安抚跑尸"
+    },
+    "IG_UI|IGUI_PhunSprinters_X_Risk": {
+      "action": "translate",
+      "signature": "c95cb38b78cbf865",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt，稱 rabid zeds／zeds）與 PhunSprinters 2（稱 sprinters）措辭不同，指的都是會奔跑的殭屍；現行譯文對兩方都成立，維持現值。",
+      "ch": "%1危險等級為%2 有%3%%的殭屍會進入疾跑狀態",
+      "cn": "%1危险等级为%2 有%3%%的僵尸会进入疾跑状态"
+    },
+    "IG_UI|IGUI_PhunSprinters_ZedsAreRestless": {
+      "action": "translate",
+      "signature": "5ebca1907fb99f26",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt，稱 rabid zeds／zeds）與 PhunSprinters 2（稱 sprinters）措辭不同，指的都是會奔跑的殭屍；現行譯文對兩方都成立，維持現值。",
+      "ch": "跑屍躁動活躍",
+      "cn": "跑尸躁动活跃"
+    },
+    "IG_UI|IGUI_PhunSprinters_ZedsAreSettling": {
+      "action": "translate",
+      "signature": "5bfa9e4abc895060",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt，稱 rabid zeds／zeds）與 PhunSprinters 2（稱 sprinters）措辭不同，指的都是會奔跑的殭屍；現行譯文對兩方都成立，維持現值。",
+      "ch": "跑屍趨於平靜",
+      "cn": "跑尸趋于平静"
+    },
+    "IG_UI|IGUI_PhunSprinters_maxRisk": {
+      "action": "translate",
+      "signature": "69338e9b657d91e7",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
+      "ch": "跑屍風險上限%%",
+      "cn": "跑尸风险上限%%"
+    },
+    "IG_UI|IGUI_PhunSprinters_maxRisk_Tooltip": {
+      "action": "translate",
+      "signature": "3dff5d420a073ebe",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
+      "ch": "該區域跑屍出現的最大機率. 留空或填100即為100%%",
+      "cn": "该区域跑尸出现的最大概率. 留空或填100即为100%%"
+    },
+    "Sandbox|Sandbox_PhunSprinters_Debug_tooltip": {
+      "action": "translate",
+      "signature": "8d283384e9702724",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters 是「輸出詳細日誌, 需重啟」，PhunSprinters 2 改成管理員專用的殭屍頭頂除錯顯示並輸出詳細日誌、免重啟；兩者對重啟的說法相反，改為兩方都成立的「輸出詳細的除錯資訊」，拿掉重啟敘述。",
+      "ch": "輸出詳細的除錯資訊 (便於排查模組問題)",
+      "cn": "输出详细的调试信息 (便于排查模组问题)"
+    },
+    "Sandbox|Sandbox_PhunSprinters_Decorate": {
+      "action": "translate",
+      "signature": "185bf78bbc52c719",
+      "reason": "2026-10-11 #807 裁決：舊版 Decorate、PhunSprinters 2 改 Decorate Sprinters，都是替跑屍加節日裝扮，維持現值。",
+      "ch": "節日裝扮跑屍",
+      "cn": "节日装扮跑尸"
+    },
+    "Sandbox|Sandbox_PhunSprinters_DefaultRisk": {
+      "action": "translate",
+      "signature": "aa8a465df982d3d8",
+      "reason": "2026-10-11 #807 裁決：舊版 Default Risk、PhunSprinters 2 改 Default Risk %%；兩版的值都是百分比機率，「預設跑屍機率%%」對兩方都成立，維持現值。",
+      "ch": "預設跑屍機率%%",
+      "cn": "默认跑尸概率%%"
+    },
+    "Sandbox|Sandbox_PhunSprinters_DefaultRisk_tooltip": {
+      "action": "translate",
+      "signature": "fe5ca111d853c843",
+      "reason": "2026-10-11 #807 裁決：兩版都說明殭屍成為跑屍的百分比機率，PhunZones 沒給值時用這個預設；PhunSprinters 2 只補述區域可由上層區域繼承。現行譯文（搭配區域模組時未單獨設定就沿用預設）對兩方都成立，維持現值。",
+      "ch": "殭屍變為跑屍的基礎機率. 搭配區域模組時, 未單獨設定區域則沿用該預設值. 0為無機率 50為50%% 100為必定跑屍.",
+      "cn": "僵尸变为跑尸的基础概率. 搭配区域模组时, 未单独设置区域则沿用该默认值. 0为无概率 50为50%% 100为必定跑尸."
+    },
+    "Sandbox|Sandbox_PhunSprinters_HoursDiscount_tooltip": {
+      "action": "translate",
+      "signature": "eb2cf86a0b952e45",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
+      "ch": "所有角色累計遊玩時間達到該數值後, 風險倍率恢復正常. 例:240小時(10遊戲天)時, 第五天玩家實際風險減半. 留空或0關閉該功能.",
+      "cn": "所有角色累计游玩时长达到该数值后, 风险倍率恢复正常. 例:240小时(10游戏天)时, 第五天玩家实际风险减半. 留空或0关闭该功能."
+    },
+    "Sandbox|Sandbox_PhunSprinters_Mode": {
+      "action": "translate",
+      "signature": "bdad3bfa7547d0e8",
+      "reason": "2026-10-11 #807 裁決：舊版標題 Sprinters run:、PhunSprinters 2 改 Mode；都是選擇跑屍何時奔跑的模式，「執行模式」對兩方都成立，維持現值。",
+      "ch": "執行模式",
+      "cn": "运行模式"
+    },
+    "Sandbox|Sandbox_PhunSprinters_Mode_option1": {
+      "action": "translate",
+      "signature": "73c769459451d3a5",
+      "reason": "2026-10-11 #807 裁決：舊版 Between Dusk and Dawn、PhunSprinters 2 改 Dusk till dawn，同一選項換說法，維持「黃昏至黎明」。",
+      "ch": "黃昏至黎明",
+      "cn": "黄昏至黎明"
+    },
+    "Sandbox|Sandbox_PhunSprinters_Mode_tooltip": {
+      "action": "translate",
+      "signature": "161fb25ba6f68b0d",
+      "reason": "2026-10-11 #807 裁決：兩版只差措辭（determins when a sprinter will actually run／governs when sprinters will run），維持現值。",
+      "ch": "控制跑屍何時啟動奔跑. ** = 效能佔用低, *** = 根據殭屍數量中高佔用",
+      "cn": "控制跑尸何时启动奔跑. ** = 性能占用低, *** = 根据僵尸数量中高占用"
+    },
+    "Sandbox|Sandbox_PhunSprinters_MoonPhaseCrescent_tooltip": {
+      "action": "translate",
+      "signature": "9e46939d5fd18afb",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
+      "ch": "按該數值修正蛾眉月夜晚的跑屍機率. 例:50為降低50%% 200為翻倍機率. 留空或填0則不修正.",
+      "cn": "按该数值修正娥眉月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 留空或填0则不修正."
+    },
+    "Sandbox|Sandbox_PhunSprinters_MoonPhaseFull_tooltip": {
+      "action": "translate",
+      "signature": "734addbddf78e413",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
+      "ch": "按該數值修正滿月夜晚的跑屍機率. 例:50為降低50%% 200為翻倍機率. 留空或填0則不修正.",
+      "cn": "按该数值修正满月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 留空或填0则不修正."
+    },
+    "Sandbox|Sandbox_PhunSprinters_MoonPhaseGibbous_tooltip": {
+      "action": "translate",
+      "signature": "cdf38792652f6c8e",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
+      "ch": "按該數值修正凸月夜晚的跑屍機率. 例:50為降低50%% 200為翻倍機率. 留空或填0則不修正.",
+      "cn": "按该数值修正凸月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 留空或填0则不修正."
+    },
+    "Sandbox|Sandbox_PhunSprinters_MoonPhaseNew_tooltip": {
+      "action": "translate",
+      "signature": "cce4303d003657f1",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
+      "ch": "按該數值修正新月夜晚的跑屍機率. 例:50為降低50%% 200為翻倍機率. 留空或填0則不修正.",
+      "cn": "按该数值修正新月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 留空或填0则不修正."
+    },
+    "Sandbox|Sandbox_PhunSprinters_MoonPhaseQuarter_tooltip": {
+      "action": "translate",
+      "signature": "6bd78e605b0aa4b9",
+      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
+      "ch": "按該數值修正上弦月夜晚的跑屍機率. 例:50為降低50%% 200為翻倍機率. 留空或填0則不修正.",
+      "cn": "按该数值修正上弦月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 留空或填0则不修正."
+    },
+    "Sandbox|Sandbox_PhunSprinters_SprintingChangeNotificationVolume": {
+      "action": "translate",
+      "signature": "8938d64670a4273a",
+      "reason": "2026-10-11 #807 裁決：舊版叫 Night Change Volume，PhunSprinters 2 改叫 Sprinting Change Volume（天候也會觸發，不只晝夜）；改為兩方都成立的「跑屍狀態切換提示音量」。",
+      "ch": "跑屍狀態切換提示音量",
+      "cn": "跑尸状态切换提示音量"
+    },
+    "Sandbox|Sandbox_PhunSprinters_SprintingChangeNotificationVolume_tooltip": {
+      "action": "translate",
+      "signature": "074798a6514711fb",
+      "reason": "2026-10-11 #807 裁決：兩版都是跑屍開始／停止奔跑的條件改變時播放（黃昏、惡劣天氣開始，黎明停止）；PhunSprinters 2 另補充「宣告的是條件、不是個別殭屍」與光照模式的延遲，舊版沒有，故只譯兩方共通的部分。",
+      "ch": "跑屍奔跑條件切換時 (例如黃昏或惡劣天氣時開始, 黎明時停止) 播放的提示音效音量. 設為0可關閉",
+      "cn": "跑尸奔跑条件切换时 (例如黄昏或恶劣天气时开始, 黎明时停止) 播放的提示音效音量. 设为0可关闭"
+    },
+    "IG_UI|IGUI_WeaponUI_RecoilDelayModifier": {
+      "action": "translate",
+      "signature": "fbeba56a06a04423",
+      "reason": "2026-10-11 #813 裁決：Escape from Kentucky 寫 Recoil Delay，MFS 社群修正版改寫 Shot delay；兩者是同一項武器數值（RecoilDelay，兩發之間的延遲），沿用遊戲慣稱「後坐力延遲」，維持現值。",
+      "ch": "後坐力延遲",
+      "cn": "后坐力延迟"
+    },
+    "UI|UI_GunpartTooltip_EnableCompact_tooltip": {
+      "action": "translate",
+      "signature": "277ce8af6136c1b8",
+      "reason": "2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。",
+      "ch": "為具有多個掛載點的武器配件使用精簡的自訂工具提示",
+      "cn": "为具有多个挂载点的武器配件使用紧凑的自定义提示"
+    },
+    "UI|UI_GunpartTooltip_ShowMountList_tooltip": {
+      "action": "translate",
+      "signature": "d133f31a96ce6d93",
+      "reason": "2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。",
+      "ch": "在槍械配件的工具提示中顯示武器相容性清單",
+      "cn": "在枪械配件提示中显示武器兼容性列表"
+    },
+    "UI|UI_options_AWCWF_desc_effects": {
+      "action": "translate",
+      "signature": "4444d408d0a7804e",
+      "reason": "2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。",
+      "ch": "可獨立於武器音效, 單獨設定槍口與拋殼特效.",
+      "cn": "可独立于武器音效, 单独配置枪口与抛壳特效."
+    },
+    "UI|UI_options_AWCWF_desc_general": {
+      "action": "translate",
+      "signature": "3b86718bd93b5016",
+      "reason": "2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。",
+      "ch": "現代槍械系統的附加設定. 可在遊戲的按鍵綁定頁面設定控制項.",
+      "cn": "现代枪械系统的附加设置. 可在游戏的按键绑定页面配置控制项."
+    },
+    "UI|UI_options_AWCWF_desc_handgun_grip": {
+      "action": "translate",
+      "signature": "bf723a2dba39a255",
+      "reason": "2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。",
+      "ch": "MFS手槍模型是以手較小的身體替換模組為基礎製作的, 因此在預設遊戲身體上, 手槍可能會略微位於手的後方. 這些設定可對此進行修正. 步槍不受影響.",
+      "cn": "MFS手枪模型是以手较小的身体替换模组为基础制作的, 因此在默认游戏身体上, 手枪可能会略微位于手的后方. 这些设置可对此进行修正. 步枪不受影响."
+    },
+    "UI|UI_options_AWCWF_desc_weapon_sounds": {
+      "action": "translate",
+      "signature": "456bb7c9dca979f7",
+      "reason": "2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。",
+      "ch": "可獨立於其他遊戲音訊, 單獨設定MFS的槍聲與裝填音效.",
+      "cn": "可独立于其他游戏音频, 单独配置MFS的枪声与装填音效."
+    },
+    "UI|UI_options_AWCWF_enable_muzzle_smoke_tooltip": {
+      "action": "translate",
+      "signature": "fc940274f4bf6bfd",
+      "reason": "2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。",
+      "ch": "開火時顯示槍口火光與煙霧. 關閉則隱藏此視覺效果.",
+      "cn": "开火时显示枪口火光与烟雾. 关闭则隐藏此视觉效果."
+    },
+    "UI|UI_options_AWCWF_enable_new_gunshot_tooltip": {
+      "action": "translate",
+      "signature": "3e22704f8b2c6aa3",
+      "reason": "2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。",
+      "ch": "使用MFS的多層槍聲音效系統. 關閉則使用武器的標準開火音效.",
+      "cn": "使用MFS的多层枪声音效系统. 关闭则使用武器的标准开火音效."
+    },
+    "UI|UI_options_AWCWF_enable_shell_ejection_tooltip": {
+      "action": "translate",
+      "signature": "b22e9d7670b9ed2c",
+      "reason": "2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。",
+      "ch": "射擊時拋出彈殼並掉落在地上. 關閉則不再生成彈殼.",
+      "cn": "射击时抛出弹壳并掉落在地上. 关闭则不再生成弹壳."
+    },
+    "UI|UI_options_AWCWF_handgun_grip_body_replacer_tooltip": {
+      "action": "translate",
+      "signature": "dc4cdd878ce1e56b",
+      "reason": "2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。",
+      "ch": "如果你使用VSGirlBody模組, 請勾選此項. 勾選後將使用模型最初設計的手槍握持位置. 若使用預設遊戲身體, 請保持不勾選.",
+      "cn": "如果你使用VSGirlBody模组, 请勾选此项. 勾选后将使用模型最初设计的手枪握持位置. 若使用默认游戏身体, 请保持不勾选."
+    },
+    "UI|UI_options_AWCWF_handgun_grip_offset_tooltip": {
+      "action": "translate",
+      "signature": "db5cb81236369c01",
+      "reason": "2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。",
+      "ch": "手持手槍在手部前移的距離. 0.03適合預設遊戲身體. 設為0則使用模型原始位置, 不做改動. 僅限手槍.",
+      "cn": "手持手枪在手部前移的距离. 0.03适合默认游戏身体. 设为0则使用模型原始位置, 不做改动. 仅限手枪."
+    },
+    "UI|UI_options_AWCWF_shell_casing_volume_tooltip": {
+      "action": "translate",
+      "signature": "5ec8107488a1e35a",
+      "reason": "2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。",
+      "ch": "調整彈殼落地的音量. 0為靜音, 0.5為預設, 2為兩倍音量.",
+      "cn": "调整弹壳落地的音量. 0为静音, 0.5为默认, 2为两倍音量."
+    },
+    "UI|UI_options_AWCWF_weapon_reload_volume_tooltip": {
+      "action": "translate",
+      "signature": "8b60fdc496c020d7",
+      "reason": "2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。",
+      "ch": "調整MFS裝填音量. 0為靜音, 1為預設, 2為兩倍音量.",
+      "cn": "调整MFS装填音量. 0为静音, 1为默认, 2为两倍音量."
+    },
+    "UI|UI_options_AWCWF_weapon_shot_volume_tooltip": {
+      "action": "translate",
+      "signature": "c8c872fe3a7d091d",
+      "reason": "2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。",
+      "ch": "調整MFS槍聲音量. 0為靜音, 1為預設, 2為兩倍音量.",
+      "cn": "调整MFS枪声音量. 0为静音, 1为默认, 2为两倍音量."
     }
   }
 }

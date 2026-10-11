@@ -4,6 +4,27 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 11 個 MOD 新增的繁簡中文，共 288 項。** Knox Buildworks（#811，屋頂輔助工具的屋頂型式、坡度、屋簷、出簷與各種無法生成的原因，規劃工具的房間切除與延伸、滴管工具、快捷欄、只顯示部分樓層與世界預覽設定，9 本建築雜誌與對應的配方知識，冰箱壓縮機、冷媒瓶、塑膠布等 7 種新材料與配方，以及雜誌、放置與編輯構件、預覽、屋頂、房間五篇新指南，194 項）、Water Pipes（#809，截止閥與配方、整棟建築一鍵接通水管的指令、結果與失敗原因、淨水器壓力傳遞設定，33 項）、PhunSprinters 2（#807，個人的跑屍嘶吼與狀態切換音量、是否排除 The Mutants 的六種變異體、原版跑屍替換方式、除錯顯示選項，25 項）、PhunMart 2（#808，在地圖上標記開過的販賣機、標記顏色與大小，16 項）、Tow Truck（#805，拖吊車掛接時間與 Java 版本檢查設定，5 項）、NeatUI Equipment（#815，CleanUI 外觀、面板不透明度、衣物收納提示，5 項）、NeatUI XP Drop（#810，技能圖示大小與數字速度，4 項）、Custom Gamepad UI（#804，武器輪盤隱藏未掛載的武器，2 項）、Bloodlust Overwhelming（#814，冥想解除壓抑嗜血值的修正值，2 項），以及 Advanced Medicine（#812，紀錄在開啟後被他人修改的提示）、Modern Firearms System Community Fix Patch（#813，對門傷害）各 1 項。
+  > 技術要點：全數落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫，新鍵皆以有效 CN 值登記 `ch_review_state`。4 路翻譯、4 路對抗複核提出 12 條修正全數採納（Knox 屋頂的 Lean-to 是所有單坡佈局共用的名稱、不限依附式；雜誌名的長凳與路面對齊同 MOD 子分類；快捷欄 slot 譯「槽位」、texture 譯「紋理」對齊本體官方譯名，並同步到指南內文）；PhunSprinters 2 的 The Mutants 變異體名、Zombie Speed 選項值引用與本包既有譯名、本體官方標籤一致；Water Pipes 的 metal pipe 用本體官方譯名「鐵管」。
+
+### Changed
+
+- **依上游英文改值重譯 11 項。** Knox Buildworks 6 項（#811，「不只是裝飾」指南補上窗簾，新增燈光、玻璃與窗簾一節；規劃模式指南改寫為由「規劃」按鈕進入、四個分頁與懸停預覽；建造佇列指南改為物資、建造與收集區域；目錄卡片大小；「移除所選」改為「刪除所選」）、Washing Menus Improved 2 項（#806，汙水可清潔的物品補上繃帶、牛仔布條與皮革條）、NeatUI XP Drop 2 項（#810，數字大小補上「正常: 100」與倍率說明）、Modern Firearms System Community Fix Patch 1 項（#813，熱成像說明的作者名改為 Gogumi）。
+  > 技術要點：Knox 5 項與 Washing Menus 2 項屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點）；其餘屬 own 層連 `en` 錨點更新；皆登記 `ch_review_state`。MFS 熱成像標記模式說明上游只加了換行，只更新 `en` 錨點。
+- **裁決 56 個多 MOD 共用鍵，改譯 4 項。** 槍械 MOD 共用的榴彈發射器提示（#813）：MFS 社群修正版改寫成舊式與新式兩種發射器，改為兩行並陳——第一行「按 G 裝填, 按 G 開火」對所有槍械 MOD 都成立，第二行說明 MFS 新式發射器按 G 切換榴彈模式後用一般的裝填與射擊鍵。PhunSprinters 與 PhunSprinters 2 共用的沙盒設定（#807）：除錯選項改為「輸出詳細的除錯資訊」（兩版對是否需要重啟的說法相反），提示音量改為「跑屍狀態切換提示音量」，說明改成黃昏或惡劣天氣時開始、黎明時停止。其餘 52 項確認現譯成立：射速、噪音、後坐力延遲（MFS 改寫成 Auto fire rate、Noise range、Shot delay）、MFS 與 Escape from Kentucky 的選項說明（只差 MFS 為提示框加的換行）、PhunSprinters 兩版的提示與沙盒說明（只差 rabid zeds／sprinters 的稱呼或 `%`／`%%` 寫法），以及兩版共用的軍用感應器物品名。
+  > 技術要點：`owner_conflict_decisions.json` 新增 54 筆、重新背書 2 筆（`IGUI_WeaponUI_FireRate`、`Tooltip_GunP`）；改值的 4 鍵屬 As1 衍生層，改 `sources/ch`＋`cn_overrides` 並登記 `ch_review_state`；`OWNER_CONFLICTS.md` 重生，尚未裁決的衝突由 397 降為 343。
+
+### Removed
+
+- **移除 4 項上游已刪除的原創翻譯。** NeatUI XP Drop 的數字大小四段選項（特大／大／一般／小，#810），已改為數值滑桿。
+  > 技術要點：`sources/en` 全庫與 tracker state 已無任何 owner 定義這些鍵，steamcmd 抓下的現行 Workshop 內容也查無引用（`NeatXPSettings.lua` 改用 `addSlider`）；`ch_review_state` 同步移除。
+
+其餘追蹤單無需另外變更翻譯：Evolving Traits World（#803）只改了每版重算的翻譯統計數字（已登記不翻譯）；Custom Gamepad UI（#804）另 7 項只把說明裡的 `%` 改寫成 `%%`，譯文原本就是安全寫法；PhunSprinters 2（#807）移除的骷髏外觀設定 2 項屬 As1 衍生層，依同步流程保留。
+
 ## [42.21.0-1.46.0] - 2026-10-10
 
 ### Added

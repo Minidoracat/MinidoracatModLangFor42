@@ -9442,6 +9442,21 @@
     "en": "Top tier",
     "ch": "頂層",
     "cn": "顶层"
+   },
+   "ContextMenu_WaterPipesCloseValve": {
+    "en": "Close valve",
+    "ch": "關閉閥門",
+    "cn": "关闭阀门"
+   },
+   "ContextMenu_WaterPipesOpenValve": {
+    "en": "Open valve",
+    "ch": "開啟閥門",
+    "cn": "打开阀门"
+   },
+   "ContextMenu_WaterPipesPlumbBuilding": {
+    "en": "Plumb this building",
+    "ch": "為這棟建築接通水管",
+    "cn": "为这栋建筑接通水管"
    }
   },
   "Fluids.json": {
@@ -105577,9 +105592,9 @@
     "cn": "移除 %1"
    },
    "IGUI_KBW_RemoveSelectedPiece": {
-    "en": "Remove selected",
-    "ch": "移除所選",
-    "cn": "移除所选"
+    "en": "Delete selected",
+    "ch": "刪除所選",
+    "cn": "删除所选"
    },
    "IGUI_KBW_SearchIn": {
     "en": "Search in",
@@ -112082,34 +112097,14 @@
     "cn": "数字会从面板往下落, 而不是往上飘. 适合把面板贴在屏幕顶端时使用."
    },
    "IGUI_NeatXP_Opt_DropSize": {
-    "en": "Number size",
-    "ch": "數字大小",
-    "cn": "数字大小"
-   },
-   "IGUI_NeatXP_Opt_DropSize_Huge": {
-    "en": "Huge",
-    "ch": "特大",
-    "cn": "特大"
-   },
-   "IGUI_NeatXP_Opt_DropSize_Large": {
-    "en": "Large",
-    "ch": "大",
-    "cn": "大"
-   },
-   "IGUI_NeatXP_Opt_DropSize_Normal": {
-    "en": "Normal",
-    "ch": "一般",
-    "cn": "普通"
-   },
-   "IGUI_NeatXP_Opt_DropSize_Small": {
-    "en": "Small",
-    "ch": "小",
-    "cn": "小"
+    "en": "Number size (normal: 100)",
+    "ch": "數字大小 (正常: 100)",
+    "cn": "数字大小 (正常: 100)"
    },
    "IGUI_NeatXP_Opt_DropSize_Tooltip": {
-    "en": "How big the XP numbers are, over the panel or over your character.",
-    "ch": "經驗值數字的大小, 不論顯示在面板上方或角色頭上.",
-    "cn": "经验值数字的大小, 无论显示在面板上方还是角色头顶."
+    "en": "How big the XP numbers are, over the panel or over your character. 100 is the usual size, 200 twice as big.",
+    "ch": "經驗值數字的大小, 不論顯示在面板上方或角色頭上. 100 為一般大小, 200 為兩倍大.",
+    "cn": "经验值数字的大小, 无论显示在面板上方还是角色头顶. 100 为常规大小, 200 为两倍大."
    },
    "IGUI_NeatXP_Opt_StackAbove": {
     "en": "Extra panels above",
@@ -117765,6 +117760,956 @@
     "en": "Grant Foraging XP",
     "ch": "給予搜尋經驗",
     "cn": "给予搜寻经验"
+   },
+   "IGUI_PhunSprinters_Options": {
+    "en": "Phun Sprinters",
+    "ch": "跑屍模組",
+    "cn": "跑尸模组"
+   },
+   "IGUI_PhunSprinters_Options_ChangeVolume": {
+    "en": "Sprinting Change Volume",
+    "ch": "跑屍狀態切換提示音量",
+    "cn": "跑尸状态切换提示音量"
+   },
+   "IGUI_PhunSprinters_Options_ChangeVolume_Tooltip": {
+    "en": "Scales the server's volume for the sound that plays when sprinting becomes possible or stops being possible (eg dusk and dawn), for you only. 100 is as the server set it, 0 mutes it for you. If the server has it at 0 it stays off.",
+    "ch": "僅對你自己依比例調整伺服器設定的提示音量, 此音效會在跑屍開始可以奔跑或不再能奔跑時播放 (例如黃昏與黎明). 100 為伺服器設定的音量, 0 則只對你靜音. 若伺服器設為 0, 則一律保持關閉.",
+    "cn": "仅对你自己按比例调整服务器设置的提示音量, 此音效会在跑尸开始可以奔跑或不再能奔跑时播放 (例如黄昏与黎明). 100 为服务器设置的音量, 0 则仅对你静音. 若服务器设为 0, 则始终保持关闭."
+   },
+   "IGUI_PhunSprinters_Options_ScreechVolume": {
+    "en": "Sprinter Screech Volume",
+    "ch": "跑屍嘶吼音量",
+    "cn": "跑尸嘶吼音量"
+   },
+   "IGUI_PhunSprinters_Options_ScreechVolume_Tooltip": {
+    "en": "Scales the server's sprinter screech volume for you only. 100 is as the server set it, 0 mutes it for you. If the server has it at 0 it stays off.",
+    "ch": "僅對你自己依比例調整伺服器設定的跑屍嘶吼音量. 100 為伺服器設定的音量, 0 則只對你靜音. 若伺服器設為 0, 則一律保持關閉.",
+    "cn": "仅对你自己按比例调整服务器设置的跑尸嘶吼音量. 100 为服务器设置的音量, 0 则仅对你静音. 若服务器设为 0, 则始终保持关闭."
+   },
+   "IGUI_PhunMart_Opt_MapColor": {
+    "en": "Mark colour",
+    "ch": "標記顏色",
+    "cn": "标记颜色"
+   },
+   "IGUI_PhunMart_Opt_MapColor_tooltip": {
+    "en": "The colour of new marks. Marks already on your map keep their colour.",
+    "ch": "新標記的顏色. 地圖上已有的標記會保留原本的顏色.",
+    "cn": "新标记的颜色. 地图上已有的标记会保留原来的颜色."
+   },
+   "IGUI_PhunMart_Opt_MapLabelSize": {
+    "en": "Label size (%)",
+    "ch": "標籤大小 (%%)",
+    "cn": "标签大小 (%%)"
+   },
+   "IGUI_PhunMart_Opt_MapLabelSize_tooltip": {
+    "en": "Size of the shop names on new marks. Marks already on your map keep their size.",
+    "ch": "新標記上商店名稱的大小. 地圖上已有的標記會保留原本的大小.",
+    "cn": "新标记上商店名称的大小. 地图上已有的标记会保留原来的大小."
+   },
+   "IGUI_PhunMart_Opt_MapLabels": {
+    "en": "Write the shop's name",
+    "ch": "標註商店名稱",
+    "cn": "标注商店名称"
+   },
+   "IGUI_PhunMart_Opt_MapLabels_tooltip": {
+    "en": "Write the shop's name under the dollar sign.",
+    "ch": "在美元符號下方寫上商店名稱.",
+    "cn": "在美元符号下方写上商店名称."
+   },
+   "IGUI_PhunMart_Opt_MapMarks": {
+    "en": "Mark machines on my map",
+    "ch": "在我的地圖上標記機台",
+    "cn": "在我的地图上标记机器"
+   },
+   "IGUI_PhunMart_Opt_MapMarks_tooltip": {
+    "en": "The first time you open a machine, put a dollar sign on your world map where it stands. The server may turn this off, or ask for a pen or pencil in your inventory.",
+    "ch": "第一次開啟某台機台時, 在你的世界地圖上該機台所在位置畫上美元符號. 伺服器可能會關閉此功能, 或要求物品欄中有原子筆或鉛筆.",
+    "cn": "第一次打开某台机器时, 在你的世界地图上该机器所在位置画上美元符号. 服务器可能会关闭此功能, 或要求物品栏中有笔或铅笔."
+   },
+   "IGUI_PhunMart_Opt_MapSymbolSize": {
+    "en": "Symbol size (%)",
+    "ch": "符號大小 (%%)",
+    "cn": "符号大小 (%%)"
+   },
+   "IGUI_PhunMart_Opt_MapSymbolSize_tooltip": {
+    "en": "Size of the dollar sign on new marks. 100 matches a symbol placed by hand. Marks already on your map keep their size.",
+    "ch": "新標記上美元符號的大小. 100 與手動放置的符號大小相同. 地圖上已有的標記會保留原本的大小.",
+    "cn": "新标记上美元符号的大小. 100 与手动放置的符号大小相同. 地图上已有的标记会保留原来的大小."
+   },
+   "IGUI_PhunMart_Opt_MapTitle": {
+    "en": "Map marks",
+    "ch": "地圖標記",
+    "cn": "地图标记"
+   },
+   "IGUI_WaterPipesEmitterNoPressure": {
+    "en": "No pressure at this emitter.",
+    "ch": "此灌溉頭沒有壓力.",
+    "cn": "此灌溉头没有压力."
+   },
+   "IGUI_WaterPipesGaugeNoPressure": {
+    "en": "No pressure here.",
+    "ch": "此處沒有壓力.",
+    "cn": "此处没有压力."
+   },
+   "IGUI_WaterPipesPlumbBuildingDesc": {
+    "en": "Runs a concealed pipe tree from the tile you clicked to every sink, toilet and washer in the building, climbing to other floors through the walls. Costs %1 metal pipe(s) per fixture connected, taken when the work starts; a fixture it cannot reach is refunded. Pipes you already laid are reused, never built over. Pipe laid this way gives nothing back when dismantled.",
+    "ch": "從你點選的格子鋪設一套暗埋的樹狀管線, 通往建築內的每個水槽, 馬桶和洗衣機, 並穿過牆壁延伸到其他樓層. 每接通一個用水裝置消耗 %1 根鐵管, 於開工時扣除; 無法接通的用水裝置會退還. 你已鋪設的水管會被重複利用, 絕不會在上面重複建造. 以此方式鋪設的水管拆除時不會返還任何材料.",
+    "cn": "从你点击的格子铺设一套暗埋的树状管线, 通往建筑内的每个水槽, 马桶和洗衣机, 并穿过墙壁延伸到其他楼层. 每接通一个用水设备消耗 %1 根金属管, 在开工时扣除; 无法接通的用水设备会退还. 你已铺设的水管会被重复利用, 绝不会在其上重复建造. 以此方式铺设的水管拆除时不会返还任何材料."
+   },
+   "IGUI_WaterPipesPlumbBuildingDone": {
+    "en": "Plumbed %1 fixtures, %2 tiles of pipe.",
+    "ch": "已接通 %1 個用水裝置, 鋪設 %2 格水管.",
+    "cn": "已接通 %1 个用水设备, 铺设 %2 格水管."
+   },
+   "IGUI_WaterPipesPlumbBuildingNeedPipes": {
+    "en": "Needs %1 metal pipes; you have %2.",
+    "ch": "需要 %1 根鐵管; 你有 %2 根.",
+    "cn": "需要 %1 根金属管; 你有 %2 根."
+   },
+   "IGUI_WaterPipesPlumbBuildingNoBuilding": {
+    "en": "Not inside a building.",
+    "ch": "不在建築內.",
+    "cn": "不在建筑内."
+   },
+   "IGUI_WaterPipesPlumbBuildingNoFixtures": {
+    "en": "Nothing here to plumb.",
+    "ch": "這裡沒有可接通水管的用水裝置.",
+    "cn": "这里没有可接通水管的用水设备."
+   },
+   "IGUI_WaterPipesPlumbBuildingNothingToDo": {
+    "en": "This building is already plumbed.",
+    "ch": "這棟建築已接通水管.",
+    "cn": "这栋建筑已接通水管."
+   },
+   "IGUI_WaterPipesPlumbBuildingPartial": {
+    "en": "Plumbed %1 fixtures; %2 left out:",
+    "ch": "已接通 %1 個用水裝置; %2 個未接通:",
+    "cn": "已接通 %1 个用水设备; %2 个未接通:"
+   },
+   "IGUI_WaterPipesPlumbBuildingReason_noClimb": {
+    "en": "no wall to reach its floor",
+    "ch": "沒有牆壁可通往其所在樓層",
+    "cn": "没有墙壁可通往其所在楼层"
+   },
+   "IGUI_WaterPipesPlumbBuildingReason_noRoute": {
+    "en": "no route from here",
+    "ch": "從這裡沒有可行的路線",
+    "cn": "从这里没有可行的路线"
+   },
+   "IGUI_WaterPipesPlumbBuildingReason_overCap": {
+    "en": "over the distance limit, build again from another spot",
+    "ch": "超出距離上限, 請從其他位置重新建造",
+    "cn": "超出距离上限, 请从其他位置重新建造"
+   },
+   "IGUI_WaterPipesPlumbBuildingReason_wouldLoop": {
+    "en": "connecting it would close a loop",
+    "ch": "接通它會形成迴路",
+    "cn": "接通它会形成回路"
+   },
+   "IGUI_WaterPipesPlumbBuildingRefusal_badRequest": {
+    "en": "the request was not valid",
+    "ch": "請求無效",
+    "cn": "请求无效"
+   },
+   "IGUI_WaterPipesPlumbBuildingRefusal_noFixtures": {
+    "en": "no fixture here left to connect",
+    "ch": "這裡已沒有可接通的用水裝置",
+    "cn": "这里已没有可接通的用水设备"
+   },
+   "IGUI_WaterPipesPlumbBuildingRefusal_noPipes": {
+    "en": "not enough metal pipes",
+    "ch": "鐵管不足",
+    "cn": "金属管不足"
+   },
+   "IGUI_WaterPipesPlumbBuildingRefused": {
+    "en": "The server stopped the work: %1.",
+    "ch": "伺服器中止了施工: %1.",
+    "cn": "服务器中止了施工: %1."
+   },
+   "IGUI_WaterPipesPlumbBuildingSkipped": {
+    "en": "%1: %2",
+    "ch": "%1: %2",
+    "cn": "%1: %2"
+   },
+   "IGUI_WaterPipesPlumbBuildingSkippedMore": {
+    "en": "...and %1 more, listed in console.txt.",
+    "ch": "…還有 %1 個, 已列於 console.txt.",
+    "cn": "…还有 %1 个, 已列在 console.txt 中."
+   },
+   "IGUI_WaterPipesPlumbBuildingTruncated": {
+    "en": "This building is too big to survey in one go: only the part nearest you was planned.",
+    "ch": "這棟建築太大, 無法一次勘查完畢: 只規劃了最靠近你的部分.",
+    "cn": "这栋建筑太大, 无法一次勘察完毕: 只规划了离你最近的部分."
+   },
+   "IGUI_WaterPipesValveClosedDesc": {
+    "en": "Nothing passes, either way. The two sides are separate networks and share no water, pressure or contamination.",
+    "ch": "任何方向都無法流通. 兩側為各自獨立的管網, 不共享水, 壓力或汙染.",
+    "cn": "任何方向都无法通过. 两侧为各自独立的管网, 不共享水, 压力或污染."
+   },
+   "IGUI_WaterPipesValveClosedName": {
+    "en": "Valve: closed",
+    "ch": "閥門: 關閉",
+    "cn": "阀门: 关闭"
+   },
+   "IGUI_WaterPipesValveOpenDesc": {
+    "en": "Water passes through. This side and the far side are one network.",
+    "ch": "水可以流通. 這一側與另一側屬於同一個管網.",
+    "cn": "水可以通过. 这一侧与另一侧属于同一个管网."
+   },
+   "IGUI_WaterPipesValveOpenName": {
+    "en": "Valve: open",
+    "ch": "閥門: 開啟",
+    "cn": "阀门: 打开"
+   },
+   "IGUI_NeatXP_Opt_DropIconSize": {
+    "en": "Skill icon size (normal: 100)",
+    "ch": "技能圖示大小 (正常: 100)",
+    "cn": "技能图标大小 (正常: 100)"
+   },
+   "IGUI_NeatXP_Opt_DropIconSize_Tooltip": {
+    "en": "How big the skill icon beside each XP number is. 100 is the usual size, 200 twice as big.",
+    "ch": "每個經驗值數字旁技能圖示的大小. 100 為一般大小, 200 為兩倍大.",
+    "cn": "每个经验值数字旁技能图标的大小. 100 为常规大小, 200 为两倍大."
+   },
+   "IGUI_NeatXP_Opt_DropSpeed": {
+    "en": "Number speed (normal: 100)",
+    "ch": "數字速度 (正常: 100)",
+    "cn": "数字速度 (正常: 100)"
+   },
+   "IGUI_NeatXP_Opt_DropSpeed_Tooltip": {
+    "en": "How fast the XP numbers rise and fade. 100 is the usual speed, 200 twice as fast.",
+    "ch": "經驗值數字上升與淡出的速度. 100 為一般速度, 200 為兩倍快.",
+    "cn": "经验值数字上升和淡出的速度. 100 为常规速度, 200 为两倍快."
+   },
+   "IGUI_KBW_CutRoom": {
+    "en": "Cut from room",
+    "ch": "從房間切除",
+    "cn": "从房间切除"
+   },
+   "IGUI_KBW_ExtendRoom": {
+    "en": "Extend room",
+    "ch": "延伸房間",
+    "cn": "扩展房间"
+   },
+   "IGUI_KBW_FetchCapacityBlocked": {
+    "en": "There are matching supplies, but none can be carried or transferred. Free space in your inventory or backpack, or place materials beside the build site.",
+    "ch": "有符合的物資, 但都無法攜帶或轉移. 請騰出物品欄或背包的空間, 或將材料放在建造地點旁.",
+    "cn": "有匹配的物资, 但都无法携带或转移. 请腾出物品栏或背包空间, 或将材料放在建造地点旁边."
+   },
+   "IGUI_KBW_GuideMagazinesBody": {
+    "en": " <IMAGE:media/ui/craftingMenus/BuildProperty_Book_16.png,20,20> <LINE> <LINE>  <H2> Unlocking buildables <TEXT> <LINE> <LINE> Many buildables must be learned before they can be built. Read the matching magazine - such as Fine Wood Working, The Family Handyman, Old House Journal, Architectural Digest, Popular Mechanics, Home Mechanix, Projects In Metal, the Flooring Guide or the Decoration Guide - or reach the higher skill level the recipe allows instead. In Skills & Knowledge, select the knowledge row to see which magazine teaches it. <LINE> <LINE> Locked recipes are hidden until learned. All qualities shows them so you can see what a magazine unlocks, but they still cannot be built until you know them; the server checks the same rule. <LINE> <LINE>  <H2> Where to find them <TEXT> <LINE> <LINE> Magazines turn up in bookshops, libraries, magazine racks and mechanic shelves. Each one teaches one group of recipes, for example dressers, doors and windows, wooden floors, lighting or bathroom appliances. <LINE> <LINE>  <H2> Building components <TEXT> <LINE> <LINE> Appliances and plumbing use Refrigerant Bottles, Refrigerator Compressors, Plastic Sheets, Insulation Foam, Small Rubber Tubes, Thin Copper Pipe and Rubber Seals. They are found in tool and electronics stores and tool crates. Cut a Plastic Sheet into small sheets with scissors, make a Small Rubber Tube from a rubber hose, and assemble a Refrigerator Compressor from sheet metal, electronics scrap, electric wire, screws and thin copper pipe.",
+    "ch": " <IMAGE:media/ui/craftingMenus/BuildProperty_Book_16.png,20,20> <LINE> <LINE>  <H2> 解鎖可建造物 <TEXT> <LINE> <LINE> 許多可建造物必須先學會才能建造. 請閱讀對應的雜誌, 例如《精細木工》, 《家庭雜工》, 《老房子期刊》, 《建築文摘》, 《大眾機械》, 《居家機工》, 《金屬工藝》, 《地板指南》或《裝飾指南》, 或者改為達到該配方所允許的較高技能等級. 在「技能與知識」中選取知識列, 即可檢視由哪本雜誌教授. <LINE> <LINE> 鎖定的配方在學會前會隱藏. 「所有品質」會將它們顯示出來, 讓你知道雜誌會解鎖哪些內容, 但在學會之前仍然無法建造; 伺服器也會檢查同樣的規則. <LINE> <LINE>  <H2> 在哪裡找到雜誌 <TEXT> <LINE> <LINE> 雜誌會出現在書店, 圖書館, 雜誌架和修車廠貨架上. 每本雜誌教授一組配方, 例如五斗櫃, 門窗, 木地板, 照明或浴室設備. <LINE> <LINE>  <H2> 建造零件 <TEXT> <LINE> <LINE> 電器和管線會用到冷媒瓶, 冰箱壓縮機, 塑膠布, 隔熱泡棉, 小橡膠管, 細銅管和橡膠密封圈. 這些可以在五金行, 電子產品店和工具箱中找到. 用剪刀將塑膠布剪成小塊塑膠布, 用橡膠軟管製作小橡膠管, 並用鋼板, 電子廢料, 電線, 螺絲和細銅管組裝冰箱壓縮機.",
+    "cn": " <IMAGE:media/ui/craftingMenus/BuildProperty_Book_16.png,20,20> <LINE> <LINE>  <H2> 解锁可建造物 <TEXT> <LINE> <LINE> 许多可建造物必须先学会才能建造. 请阅读对应的杂志, 例如《精细木工》, 《家庭杂工》, 《老房子期刊》, 《建筑文摘》, 《大众机械》, 《居家机工》, 《金属工艺》, 《地板指南》或《装饰指南》, 或者改为达到该配方所允许的更高技能等级. 在“技能与知识”中选择知识行, 即可查看由哪本杂志教授. <LINE> <LINE> 锁定的配方在学会之前会被隐藏. “所有品质”会将它们显示出来, 让你了解杂志会解锁哪些内容, 但在学会之前仍然无法建造; 服务器也会检查同样的规则. <LINE> <LINE>  <H2> 在哪里找到杂志 <TEXT> <LINE> <LINE> 杂志会出现在书店, 图书馆, 杂志架和修车铺货架上. 每本杂志教授一组配方, 例如五斗柜, 门窗, 木地板, 照明或浴室设备. <LINE> <LINE>  <H2> 建造零件 <TEXT> <LINE> <LINE> 电器和管道会用到制冷剂瓶, 冰箱压缩机, 塑料布, 隔热泡沫, 小橡胶管, 细铜管和橡胶密封圈. 这些可以在五金店, 电子产品店和工具箱中找到. 用剪刀将塑料布剪成小块塑料布, 用橡胶软管制作小橡胶管, 并用金属板, 电子废料, 电线, 螺丝和细铜管组装冰箱压缩机."
+   },
+   "IGUI_KBW_GuideMagazinesTitle": {
+    "en": "Magazines and learning recipes",
+    "ch": "雜誌與學習配方",
+    "cn": "杂志与学习配方"
+   },
+   "IGUI_KBW_GuidePlanningToolsBody": {
+    "en": " <H2> Adding pieces <TEXT> <LINE> <LINE> <INDENT:18> Choose a piece in the planning catalogue, select Add to plan and click in the world. Walls drag in a line and floors fill a dragged rectangle.  <LINE> Quickbar: the numbered bar at the bottom of the screen saves the current catalogue selection with its stage, variant, material and finish. Click an empty slot to save it, click a filled slot or press 1-9 to place it, and right-click a slot to replace or clear it.  <LINE> Pipette: in the Pieces tab, select Pipette and hover a planned ghost or a built piece in the world. The piece that would be picked is outlined and named; when several share a tile, the rotate key steps through them. Click to keep planning with exactly that piece - recipe, variant, material, direction and paint, plaster or wallpaper - without searching the catalogue. <INDENT:0> <LINE> <LINE>  <H2> Editing the plan <TEXT> <LINE> <LINE> <INDENT:18> Select ghosts: drag a box to select planned pieces; hold Shift to add to the selection. Ctrl-click and Shift-click in the Pieces list select several pieces too.  <LINE> Delete selected, or the Delete key, removes every selected ghost at once.  <LINE> Erase tool removes the topmost planned piece on the tile you click; click again for the next one.  <LINE> Move blueprint shows the whole plan under the cursor and moves it where you click.  <LINE> Stop tool puts away whichever planning tool is in your hand. <INDENT:0> <LINE> <LINE>  <PUSHRGB:0.88,0.78,0.40> A red ghost explains itself. <POPRGB> <SPACE> Hold the cursor over the spot to read why: another planned piece in the way, outside the plan's range, a missing frame or earlier stage, or no permission.",
+    "ch": " <H2> 新增構件 <TEXT> <LINE> <LINE> <INDENT:18> 在規劃目錄中選擇一個構件, 選擇「加入規劃」, 然後在世界中點選. 牆壁會沿直線拖曳放置, 地板則會填滿拖曳出的矩形.  <LINE> 快捷欄: 畫面底部的編號欄會儲存目前的目錄選取, 包括其階段, 變體, 材質和飾面. 點選空槽位即可儲存, 點選已儲存的槽位或按 1-9 即可放置, 按右鍵點選槽位則可取代或清除.  <LINE> 滴管工具: 在構件分頁中選擇「滴管工具」, 然後將游標停在世界中的已規劃幽靈或已建造構件上. 將被選取的構件會顯示外框和名稱; 當同一格上有多個構件時, 旋轉鍵可逐一切換. 點選即可沿用完全相同的構件繼續規劃, 包括配方, 變體, 材質, 方向以及油漆, 灰泥或壁紙, 不必在目錄中搜尋. <INDENT:0> <LINE> <LINE>  <H2> 編輯規劃 <TEXT> <LINE> <LINE> <INDENT:18> 選取幽靈: 拖曳出方框即可選取已規劃的構件; 按住 Shift 可加入選取範圍. 在構件清單中按住 Ctrl 或 Shift 點選, 也可以選取多個構件.  <LINE> 「移除所選」或 Delete 鍵會一次移除所有選取的幽靈.  <LINE> 擦除工具會移除你點選的格子上最上層的已規劃構件; 再點一次即可移除下一個.  <LINE> 移動藍圖會在游標下顯示整個規劃, 並將它移到你點選的位置.  <LINE> 停止工具會收起你手上正在使用的任何規劃工具. <INDENT:0> <LINE> <LINE>  <PUSHRGB:0.88,0.78,0.40> 紅色幽靈會說明原因. <POPRGB> <SPACE> 將游標停在該位置即可檢視原因: 有其他已規劃的構件擋住, 超出規劃範圍, 缺少框架或前一個階段, 或沒有權限.",
+    "cn": " <H2> 添加构件 <TEXT> <LINE> <LINE> <INDENT:18> 在规划目录中选择一个构件, 选择“添加到规划”, 然后在世界中点击. 墙壁会沿直线拖动放置, 地板则会填满拖出的矩形.  <LINE> 快捷栏: 屏幕底部的编号栏会保存当前的目录选择, 包括其阶段, 变体, 材质和饰面. 点击空槽位即可保存, 点击已保存的槽位或按 1-9 即可放置, 右键点击槽位则可替换或清除.  <LINE> 吸管工具: 在构件标签页中选择“吸管工具”, 然后将鼠标悬停在世界中的已规划幽灵或已建造构件上. 将被选取的构件会显示轮廓和名称; 当同一格上有多个构件时, 旋转键可逐个切换. 点击即可使用完全相同的构件继续规划, 包括配方, 变体, 材质, 方向以及油漆, 灰泥或壁纸, 无需在目录中搜索. <INDENT:0> <LINE> <LINE>  <H2> 编辑规划 <TEXT> <LINE> <LINE> <INDENT:18> 选择幽灵: 拖出方框即可选择已规划的构件; 按住 Shift 可添加到当前选择. 在构件列表中按住 Ctrl 或 Shift 点击, 也可以选择多个构件.  <LINE> “移除所选”或 Delete 键会一次性移除所有选中的幽灵.  <LINE> 擦除工具会移除你点击的格子上最上层的已规划构件; 再次点击即可移除下一个.  <LINE> 移动蓝图会在鼠标下显示整个规划, 并将其移动到你点击的位置.  <LINE> 停止工具会收起你手中正在使用的任何规划工具. <INDENT:0> <LINE> <LINE>  <PUSHRGB:0.88,0.78,0.40> 红色幽灵会说明原因. <POPRGB> <SPACE> 将鼠标悬停在该位置即可查看原因: 有其他已规划的构件挡住, 超出规划范围, 缺少框架或前一阶段, 或没有权限."
+   },
+   "IGUI_KBW_GuidePlanningToolsTitle": {
+    "en": "Placing and editing pieces",
+    "ch": "放置與編輯構件",
+    "cn": "放置与编辑构件"
+   },
+   "IGUI_KBW_GuidePreviewBody": {
+    "en": " <H2> World preview settings <TEXT> <LINE> <LINE> In the Plans tab, World preview settings choose how ghosts are drawn: Blueprint tint, Original textures or Solid preview (100%). Show the selected level only, the selected level with faded neighbours, the selected level and below, or all levels, and hide roofs, planned walls or room zones while you work inside a building. These settings change only what you see and are kept per player. <LINE> <LINE>  <H2> Preview layout <TEXT> <LINE> <LINE> Preview layout opens the whole plan in its own window. Switch between Isometric and Top-down, move between floors, toggle the grid, use Fit, zoom with the mouse wheel and drag to pan. The top-down view draws walls on the edge they stand on, floors as filled squares, objects as blocks and roofs hatched, with north up; rooms keep their colours and the gather area has a green outline.",
+    "ch": " <H2> 世界預覽設定 <TEXT> <LINE> <LINE> 在規劃分頁中, 世界預覽設定可選擇幽靈的繪製方式: 藍圖色調, 原始紋理或實體預覽 (100%%). 你可以只顯示所選樓層, 顯示所選樓層並淡化相鄰樓層, 顯示所選樓層及以下樓層, 或顯示所有樓層; 在建築內工作時, 也可以隱藏屋頂, 已規劃的牆壁或房間區域. 這些設定只會改變你看到的畫面, 並會依玩家分別保存. <LINE> <LINE>  <H2> 預覽佈局 <TEXT> <LINE> <LINE> 預覽佈局會在獨立視窗中開啟整個規劃. 你可以在等距視角與俯視之間切換, 在樓層間移動, 開關網格, 使用「符合視窗」, 用滑鼠滾輪縮放, 以及拖曳平移. 俯視檢視會將牆壁畫在其所在的邊上, 地板畫成填滿的方格, 物件畫成方塊, 屋頂以斜線標示, 並以北方朝上; 房間會保留各自的顏色, 收集區域則有綠色外框.",
+    "cn": " <H2> 世界预览设置 <TEXT> <LINE> <LINE> 在规划标签页中, 世界预览设置可选择幽灵的绘制方式: 蓝图色调, 原始纹理或实体预览 (100%%). 你可以只显示所选楼层, 显示所选楼层并淡化相邻楼层, 显示所选楼层及以下楼层, 或显示所有楼层; 在建筑内工作时, 还可以隐藏屋顶, 已规划的墙壁或房间区域. 这些设置只会改变你看到的画面, 并按玩家分别保存. <LINE> <LINE>  <H2> 预览布局 <TEXT> <LINE> <LINE> 预览布局会在单独的窗口中打开整个规划. 你可以在等距视角和俯视之间切换, 在楼层之间移动, 开关网格, 使用“适应窗口”, 用鼠标滚轮缩放, 以及拖动平移. 俯视视图会将墙壁绘制在其所在的边上, 地板绘制为填充的方格, 物体绘制为方块, 屋顶以斜线标示, 并以北方朝上; 房间会保留各自的颜色, 收集区域则有绿色轮廓."
+   },
+   "IGUI_KBW_GuidePreviewTitle": {
+    "en": "Previews and world view",
+    "ch": "預覽與世界檢視",
+    "cn": "预览与世界视图"
+   },
+   "IGUI_KBW_GuideRoofsBody": {
+    "en": " <H2> Roofs without guesswork <TEXT> <LINE> <LINE> Select a room in the Rooms tab and open Roof helper. Neighbouring rooms on the same level are roofed together, and a room under an upper storey is roofed against that wall. The helper lists every roof that fits - flat, shed, lean-to, gable, hip and cross-gable - as small shaded 3D models, best first, with the recommended one marked. <LINE> <LINE>  <H2> Choosing a roof <TEXT> <LINE> <LINE> <INDENT:18> Roof family and pitch: the roof tiles and their slope, 30 or 45 degrees.  <LINE> Gable walls and Gable finish: the end walls, in any variant their family shares and in paint, plaster, plaster with paint or wallpaper where every piece accepts it.  <LINE> Overhang, Maximum rise, Start level offset, Ceiling deck and Eaves fine-tune the roof.  <LINE> Hover a layout to see it in the world in its real tiles, click to choose it, then select Add preview to blueprint. <INDENT:0> <LINE> <LINE> The roof is added as ordinary planned pieces, so it is built, erased and checked like any other ghost. Shallow sheets, roof trim and tents are placed by hand from the catalogue. <LINE> <LINE>  <PUSHRGB:0.88,0.78,0.40> At 45 degrees the north and west slopes are hidden by the camera. <POPRGB> <SPACE> The ceiling deck keeps those tiles dry, as in vanilla buildings; at 30 degrees every side is built.",
+    "ch": " <H2> 屋頂不必靠猜 <TEXT> <LINE> <LINE> 在房間分頁中選擇一個房間, 然後開啟屋頂助手. 同一樓層上相鄰的房間會一起加上屋頂, 而位於上層樓下方的房間會以靠著該面牆的方式加上屋頂. 助手會列出所有適合的屋頂, 包括平頂, 單坡式, 依附單坡式, 山牆式, 四坡式和交叉山牆式, 並以小型陰影 3D 模型呈現, 最佳的排在最前面, 並標示出建議的那一個. <LINE> <LINE>  <H2> 選擇屋頂 <TEXT> <LINE> <LINE> <INDENT:18> 屋頂家族與坡度: 屋頂瓦片及其坡度, 30 或 45 度.  <LINE> 山牆與山牆飾面: 兩端的端牆, 可使用其家族共有的任何變體, 並可在每個構件都支援時使用油漆, 灰泥, 灰泥加油漆或壁紙.  <LINE> 出簷, 最大升高, 起始樓層偏移, 天花板層和屋簷可微調屋頂.  <LINE> 將游標停在某個佈局上, 即可在世界中以實際瓦片檢視, 點選即可選用, 然後選擇「將預覽加入藍圖」. <INDENT:0> <LINE> <LINE> 屋頂會以一般的已規劃構件加入, 因此其建造, 擦除和檢查方式與其他幽靈相同. 緩坡屋面, 屋頂飾條和帳篷需從目錄中手動放置. <LINE> <LINE>  <PUSHRGB:0.88,0.78,0.40> 在 45 度時, 北側與西側坡面會被鏡頭擋住而隱藏. <POPRGB> <SPACE> 天花板層會讓這些格子保持乾燥, 與原版建築相同; 在 30 度時, 每一側都會建造.",
+    "cn": " <H2> 屋顶无需猜测 <TEXT> <LINE> <LINE> 在房间标签页中选择一个房间, 然后打开屋顶助手. 同一楼层上相邻的房间会一起加盖屋顶, 而位于上层楼下方的房间会以倚靠该面墙的方式加盖屋顶. 助手会列出所有合适的屋顶, 包括平顶, 单坡式, 依附单坡式, 山墙式, 四坡式和交叉山墙式, 并以带阴影的小型 3D 模型呈现, 最佳的排在最前面, 并标出推荐的那一个. <LINE> <LINE>  <H2> 选择屋顶 <TEXT> <LINE> <LINE> <INDENT:18> 屋顶家族与坡度: 屋顶瓦片及其坡度, 30 或 45 度.  <LINE> 山墙与山墙饰面: 两端的端墙, 可使用其家族共有的任何变体, 并可在每个构件都支持时使用油漆, 灰泥, 灰泥加油漆或壁纸.  <LINE> 出檐, 最大升高, 起始楼层偏移, 天花板层和檐口可微调屋顶.  <LINE> 将鼠标悬停在某个布局上, 即可在世界中以实际瓦片查看, 点击即可选用, 然后选择“将预览添加到蓝图”. <INDENT:0> <LINE> <LINE> 屋顶会作为普通的已规划构件添加, 因此其建造, 擦除和检查方式与其他幽灵相同. 缓坡屋面, 屋顶饰条和帐篷需要从目录中手动放置. <LINE> <LINE>  <PUSHRGB:0.88,0.78,0.40> 在 45 度时, 北侧和西侧坡面会被镜头遮挡而隐藏. <POPRGB> <SPACE> 天花板层会让这些格子保持干燥, 与原版建筑相同; 在 30 度时, 每一侧都会建造."
+   },
+   "IGUI_KBW_GuideRoofsTitle": {
+    "en": "Roof helper",
+    "ch": "屋頂助手",
+    "cn": "屋顶助手"
+   },
+   "IGUI_KBW_GuideRoomsBody": {
+    "en": " <H2> Drawing rooms <TEXT> <LINE> <LINE> In the Rooms tab, type a name, pick a colour, select Draw room and drag a rectangle on the planning level. Rooms mark out spaces, show as coloured outlines and give the Roof helper its footprint. <LINE> <LINE>  <H2> Any shape <TEXT> <LINE> <LINE> <INDENT:18> Extend room: select a room and drag a rectangle that touches or overlaps it to add a wing; repeat for L, T, U or irregular shapes.  <LINE> Cut from room: select a room and drag an area to clear it out, for notches, holes or trimming a side. A room cut down to nothing is removed.  <LINE> Update room saves a new name or colour, Delete room removes the selected room, and Erase room removes the room on the tile you click. <INDENT:0> <LINE> <LINE> Rooms are planning marks only: they do not build walls or floors by themselves.",
+    "ch": " <H2> 繪製房間 <TEXT> <LINE> <LINE> 在房間分頁中輸入名稱, 選擇顏色, 選擇「繪製房間」, 然後在規劃樓層上拖曳出一個矩形. 房間用來劃分空間, 會以彩色外框顯示, 並為屋頂助手提供佔地範圍. <LINE> <LINE>  <H2> 任意形狀 <TEXT> <LINE> <LINE> <INDENT:18> 延伸房間: 選擇一個房間, 然後拖曳出與其相接或重疊的矩形, 即可加上一個側翼; 重複此操作可做出 L 形, T 形, U 形或不規則形狀.  <LINE> 從房間切除: 選擇一個房間, 然後拖曳出要清除的區域, 可用於做出凹口, 開洞或修整某一側. 被切到完全不剩的房間會被移除.  <LINE> 「更新房間」會儲存新的名稱或顏色, 「刪除房間」會移除所選的房間, 「擦除房間」則會移除你點選的格子上的房間. <INDENT:0> <LINE> <LINE> 房間只是規劃標記: 它們本身不會建造牆壁或地板.",
+    "cn": " <H2> 绘制房间 <TEXT> <LINE> <LINE> 在房间标签页中输入名称, 选择颜色, 选择“绘制房间”, 然后在规划楼层上拖出一个矩形. 房间用于划分空间, 会以彩色轮廓显示, 并为屋顶助手提供占地范围. <LINE> <LINE>  <H2> 任意形状 <TEXT> <LINE> <LINE> <INDENT:18> 扩展房间: 选择一个房间, 然后拖出与其相接或重叠的矩形, 即可添加一个侧翼; 重复此操作可做出 L 形, T 形, U 形或不规则形状.  <LINE> 从房间切除: 选择一个房间, 然后拖出要清除的区域, 可用于做出凹口, 开洞或修整某一侧. 被切得一点不剩的房间会被移除.  <LINE> “更新房间”会保存新的名称或颜色, “删除房间”会移除所选房间, “擦除房间”则会移除你点击的格子上的房间. <INDENT:0> <LINE> <LINE> 房间只是规划标记: 它们本身不会建造墙壁或地板."
+   },
+   "IGUI_KBW_GuideRoomsTitle": {
+    "en": "Rooms",
+    "ch": "房間",
+    "cn": "房间"
+   },
+   "IGUI_KBW_HideRoofs": {
+    "en": "Hide roofs",
+    "ch": "隱藏屋頂",
+    "cn": "隐藏屋顶"
+   },
+   "IGUI_KBW_HideRooms": {
+    "en": "Hide room zones",
+    "ch": "隱藏房間區域",
+    "cn": "隐藏房间区域"
+   },
+   "IGUI_KBW_HideWalls": {
+    "en": "Hide planned walls",
+    "ch": "隱藏已規劃牆壁",
+    "cn": "隐藏已规划墙壁"
+   },
+   "IGUI_KBW_KnowledgeFromMagazine": {
+    "en": "Read: %1",
+    "ch": "閱讀: %1",
+    "cn": "阅读: %1"
+   },
+   "IGUI_KBW_No": {
+    "en": "No",
+    "ch": "否",
+    "cn": "否"
+   },
+   "IGUI_KBW_PipetteNext": {
+    "en": "%1 of %2 on this tile - %3 for the next",
+    "ch": "此格第 %1 個 (共 %2 個) - %3 切換下一個",
+    "cn": "此格第 %1 个 (共 %2 个) - %3 切换下一个"
+   },
+   "IGUI_KBW_PipettePicked": {
+    "en": "Planning: %1",
+    "ch": "規劃中: %1",
+    "cn": "规划中: %1"
+   },
+   "IGUI_KBW_PipettePlanned": {
+    "en": "Planned: %1",
+    "ch": "已規劃: %1",
+    "cn": "已规划: %1"
+   },
+   "IGUI_KBW_PipetteTool": {
+    "en": "Pipette",
+    "ch": "滴管工具",
+    "cn": "吸管工具"
+   },
+   "IGUI_KBW_PipetteWorld": {
+    "en": "Built: %1",
+    "ch": "已建造: %1",
+    "cn": "已建造: %1"
+   },
+   "IGUI_KBW_PlanNothingToCut": {
+    "en": "That area does not overlap the selected room.",
+    "ch": "該區域與所選房間沒有重疊.",
+    "cn": "该区域与所选房间没有重叠."
+   },
+   "IGUI_KBW_PlanRoomTooComplex": {
+    "en": "The room would have too many parts; cut a simpler area.",
+    "ch": "房間會被分割成過多部分; 請切除較簡單的區域.",
+    "cn": "房间会被分割成过多部分; 请切除更简单的区域."
+   },
+   "IGUI_KBW_QuickbarAssign": {
+    "en": "Save catalogue selection in this slot",
+    "ch": "將目錄選取項目儲存到此槽位",
+    "cn": "将目录所选项保存到此槽位"
+   },
+   "IGUI_KBW_QuickbarClear": {
+    "en": "Clear slot",
+    "ch": "清除槽位",
+    "cn": "清除槽位"
+   },
+   "IGUI_KBW_QuickbarEmpty": {
+    "en": "Empty building slot",
+    "ch": "空的建造槽位",
+    "cn": "空建造槽位"
+   },
+   "IGUI_KBW_QuickbarHelp": {
+    "en": "Click or press 1-9 to select. Right-click to save or clear. Saves stage, material, variant and finish.",
+    "ch": "點選或按 1-9 選擇. 按右鍵儲存或清除. 會儲存階段, 材質, 變體與飾面.",
+    "cn": "点击或按 1-9 选择. 右键点击保存或清除. 会保存阶段, 材质, 变体和饰面."
+   },
+   "IGUI_KBW_QuickbarUnavailable": {
+    "en": "This saved buildable is unavailable or locked. Check its knowledge and server settings.",
+    "ch": "這個已儲存的可建造物無法使用或已鎖定. 請檢查其所需知識與伺服器設定.",
+    "cn": "此已保存的可建造物不可用或已锁定. 请检查其所需知识和服务器设置."
+   },
+   "IGUI_KBW_RemovedPieces": {
+    "en": "Removed %1 planned pieces",
+    "ch": "已移除 %1 個已規劃構件",
+    "cn": "已移除 %1 个已规划构件"
+   },
+   "IGUI_KBW_RoofApply": {
+    "en": "Add preview to blueprint",
+    "ch": "將預覽加入藍圖",
+    "cn": "将预览添加到蓝图"
+   },
+   "IGUI_KBW_RoofAutoComplex": {
+    "en": "This footprint has %1 crossing wings, so Auto fit selected a continuous flat roof.",
+    "ch": "此佔地有 %1 個交叉側翼, 因此自動適配選用了連續平屋頂.",
+    "cn": "此占地有 %1 个交叉侧翼, 因此自动适配选择了连续平屋顶."
+   },
+   "IGUI_KBW_RoofAutoFit": {
+    "en": "Auto fit roof",
+    "ch": "自動適配屋頂",
+    "cn": "自动适配屋顶"
+   },
+   "IGUI_KBW_RoofAutoSkippedDetails": {
+    "en": "The safe flat layout omits the selected pitched-roof eaves or gable walls. Choose a supported pitched layout if you need those details.",
+    "ch": "安全的平頂佈局會省略所選的斜屋頂屋簷或山牆. 若需要這些細部, 請選擇受支援的斜頂佈局.",
+    "cn": "安全的平顶布局会省略所选的坡屋顶檐口或山墙. 如需这些细部, 请选择受支持的坡顶布局."
+   },
+   "IGUI_KBW_RoofAutoValley": {
+    "en": "This footprint turns through a valley angle missing from this roof set. Auto fit chose a continuous flat roof.",
+    "ch": "此佔地的轉折需要此屋頂組缺少的斜溝角度. 自動適配已選用連續平屋頂.",
+    "cn": "此占地的转折需要该屋顶组缺少的斜沟角度. 自动适配已选择连续平屋顶."
+   },
+   "IGUI_KBW_RoofCeiling": {
+    "en": "Ceiling deck",
+    "ch": "天花板層",
+    "cn": "天花板层"
+   },
+   "IGUI_KBW_RoofCeilingAuto": {
+    "en": "Automatic",
+    "ch": "自動",
+    "cn": "自动"
+   },
+   "IGUI_KBW_RoofComputing": {
+    "en": "Working out the roof layouts that fit this footprint.",
+    "ch": "正在計算適合此佔地的屋頂佈局.",
+    "cn": "正在计算适合此占地的屋顶布局."
+   },
+   "IGUI_KBW_RoofCoverage": {
+    "en": "Footprint covered: %1 / %2 tiles.",
+    "ch": "佔地覆蓋: %1 / %2 格.",
+    "cn": "占地覆盖: %1 / %2 格."
+   },
+   "IGUI_KBW_RoofCrossGable": {
+    "en": "Cross gable",
+    "ch": "交叉山牆式",
+    "cn": "交叉山墙式"
+   },
+   "IGUI_KBW_RoofCustom": {
+    "en": "Specialized pieces",
+    "ch": "專用構件",
+    "cn": "专用构件"
+   },
+   "IGUI_KBW_RoofDesc_crossGable": {
+    "en": "Each wing gets its own ridge, meeting the others in valleys; every wing ends in a gable wall.",
+    "ch": "每個側翼各有自己的屋脊, 與其他側翼在斜溝處相接; 每個側翼的末端都是山牆.",
+    "cn": "每个侧翼都有各自的屋脊, 与其他侧翼在斜沟处相接; 每个侧翼的末端都是山墙."
+   },
+   "IGUI_KBW_RoofDesc_flat": {
+    "en": "A flat roof you can walk on.",
+    "ch": "可在上面行走的平屋頂.",
+    "cn": "可以在上面行走的平屋顶."
+   },
+   "IGUI_KBW_RoofDesc_gable": {
+    "en": "Two slopes meet at the ridge; end walls close both gable ends.",
+    "ch": "兩個坡面在屋脊相交; 端牆封閉兩側的山牆端.",
+    "cn": "两个坡面在屋脊相交; 端墙封闭两侧的山墙端."
+   },
+   "IGUI_KBW_RoofDesc_gableHipWings": {
+    "en": "The main block ends in gable walls; the wings are hipped.",
+    "ch": "主體末端為山牆; 側翼為四坡.",
+    "cn": "主体末端为山墙; 侧翼为四坡."
+   },
+   "IGUI_KBW_RoofDesc_hip": {
+    "en": "Slopes on every side, with hips at the corners and valleys at inside corners. No end walls.",
+    "ch": "每一側都有坡面, 外角為斜脊, 內角為斜溝. 沒有端牆.",
+    "cn": "每一侧都有坡面, 外角为斜脊, 内角为斜沟. 没有端墙."
+   },
+   "IGUI_KBW_RoofDesc_hipWings": {
+    "en": "The main block slopes on all sides; the wings end in gable walls.",
+    "ch": "主體各側皆為坡面; 側翼末端為山牆.",
+    "cn": "主体各侧均为坡面; 侧翼末端为山墙."
+   },
+   "IGUI_KBW_RoofDesc_leanTo_E": {
+    "en": "Leans on the upper storey and falls to the east.",
+    "ch": "倚靠上層樓體, 朝東向下傾斜.",
+    "cn": "倚靠上层楼体, 朝东向下倾斜."
+   },
+   "IGUI_KBW_RoofDesc_leanTo_N": {
+    "en": "Leans on the upper storey and falls to the north.",
+    "ch": "倚靠上層樓體, 朝北向下傾斜.",
+    "cn": "倚靠上层楼体, 朝北向下倾斜."
+   },
+   "IGUI_KBW_RoofDesc_leanTo_S": {
+    "en": "Leans on the upper storey and falls to the south.",
+    "ch": "倚靠上層樓體, 朝南向下傾斜.",
+    "cn": "倚靠上层楼体, 朝南向下倾斜."
+   },
+   "IGUI_KBW_RoofDesc_leanTo_W": {
+    "en": "Leans on the upper storey and falls to the west.",
+    "ch": "倚靠上層樓體, 朝西向下傾斜.",
+    "cn": "倚靠上层楼体, 朝西向下倾斜."
+   },
+   "IGUI_KBW_RoofDesc_mixed": {
+    "en": "Some wings end in gable walls, the others are hipped.",
+    "ch": "部分側翼末端為山牆, 其餘為四坡.",
+    "cn": "部分侧翼末端为山墙, 其余为四坡."
+   },
+   "IGUI_KBW_RoofDesc_shed_E": {
+    "en": "One slope falling to the east, with a tall wall along the west side.",
+    "ch": "單一坡面朝東向下傾斜, 西側有一道高牆.",
+    "cn": "单一坡面朝东向下倾斜, 西侧有一道高墙."
+   },
+   "IGUI_KBW_RoofDesc_shed_N": {
+    "en": "One slope falling to the north, with a tall wall along the south side.",
+    "ch": "單一坡面朝北向下傾斜, 南側有一道高牆.",
+    "cn": "单一坡面朝北向下倾斜, 南侧有一道高墙."
+   },
+   "IGUI_KBW_RoofDesc_shed_S": {
+    "en": "One slope falling to the south, with a tall wall along the north side.",
+    "ch": "單一坡面朝南向下傾斜, 北側有一道高牆.",
+    "cn": "单一坡面朝南向下倾斜, 北侧有一道高墙."
+   },
+   "IGUI_KBW_RoofDesc_shed_W": {
+    "en": "One slope falling to the west, with a tall wall along the east side.",
+    "ch": "單一坡面朝西向下傾斜, 東側有一道高牆.",
+    "cn": "单一坡面朝西向下倾斜, 东侧有一道高墙."
+   },
+   "IGUI_KBW_RoofDirection": {
+    "en": "Low edge",
+    "ch": "低邊",
+    "cn": "低边"
+   },
+   "IGUI_KBW_RoofEast": {
+    "en": "East",
+    "ch": "東",
+    "cn": "东"
+   },
+   "IGUI_KBW_RoofEaves": {
+    "en": "Eaves",
+    "ch": "屋簷",
+    "cn": "檐口"
+   },
+   "IGUI_KBW_RoofElevation": {
+    "en": "Start level offset",
+    "ch": "起始樓層偏移",
+    "cn": "起始楼层偏移"
+   },
+   "IGUI_KBW_RoofError_covered_by_room": {
+    "en": "This room is covered by an upper room. Select its exposed upper floor to plan a roof.",
+    "ch": "此房間被上層房間覆蓋. 請選擇其外露的上層樓面來規劃屋頂.",
+    "cn": "此房间被上层房间覆盖. 请选择其外露的上层楼面来规划屋顶."
+   },
+   "IGUI_KBW_RoofError_dimensions": {
+    "en": "Use a room with whole, positive dimensions and an overhang from 0 to 2.",
+    "ch": "請使用尺寸為正整數且出簷為 0 至 2 的房間.",
+    "cn": "请使用尺寸为正整数且出檐为 0 到 2 的房间."
+   },
+   "IGUI_KBW_RoofError_eaves_shape": {
+    "en": "Flat roofs have no authored edge eaves. Turn eaves off or place trim manually.",
+    "ch": "平屋頂沒有預製的邊緣屋簷. 請關閉屋簷或手動放置飾條.",
+    "cn": "平屋顶没有预制的边缘檐口. 请关闭檐口或手动放置饰条."
+   },
+   "IGUI_KBW_RoofError_gable_shape": {
+    "en": "Gable end walls require Gable, Cross gable or Hip with gabled wings. Choose one of those layouts or set gable material to None.",
+    "ch": "山牆端牆需要山牆式, 交叉山牆式或四坡式配山牆側翼. 請選擇其中一種佈局, 或將山牆材料設為「無」.",
+    "cn": "山墙端墙需要山墙式, 交叉山墙式或四坡式配山墙侧翼. 请选择其中一种布局, 或将山墙材料设为“无”."
+   },
+   "IGUI_KBW_RoofError_height_limit": {
+    "en": "The roof would exceed the supported world height.",
+    "ch": "屋頂會超出支援的世界高度.",
+    "cn": "屋顶会超出支持的世界高度."
+   },
+   "IGUI_KBW_RoofError_locked": {
+    "en": "A required roof piece is locked or disabled. Choose an unlocked family or refresh the helper after learning its requirements.",
+    "ch": "所需的屋頂構件已鎖定或停用. 請選擇已解鎖的家族, 或在學會其需求後重新整理屋頂助手.",
+    "cn": "所需的屋顶构件已锁定或禁用. 请选择已解锁的家族, 或在学会其需求后刷新屋顶助手."
+   },
+   "IGUI_KBW_RoofError_manual_only": {
+    "en": "This family contains individually placed roof details, not a complete automatic roof. Use Place roof detail.",
+    "ch": "此家族包含需個別放置的屋頂細部, 而非完整的自動屋頂. 請使用「放置屋頂細部」.",
+    "cn": "此家族包含需单独放置的屋顶细部, 而非完整的自动屋顶. 请使用“放置屋顶细部”."
+   },
+   "IGUI_KBW_RoofError_missing_eaves": {
+    "en": "Matching automatic eaves are unavailable for this family. Turn eaves off or place its details manually.",
+    "ch": "此家族沒有相符的自動屋簷. 請關閉屋簷或手動放置其細部.",
+    "cn": "此家族没有匹配的自动檐口. 请关闭檐口或手动放置其细部."
+   },
+   "IGUI_KBW_RoofError_missing_face": {
+    "en": "This family lacks a required slope face or step. Select another direction, pitch or family.",
+    "ch": "此家族缺少必要的坡面或階梯. 請選擇其他方向, 坡度或家族.",
+    "cn": "此家族缺少必需的坡面或阶梯. 请选择其他方向, 坡度或家族."
+   },
+   "IGUI_KBW_RoofError_missing_flat": {
+    "en": "This family has no matching flat roof tile. Select another family.",
+    "ch": "此家族沒有相符的平屋頂格子. 請選擇其他家族.",
+    "cn": "此家族没有匹配的平屋顶格子. 请选择其他家族."
+   },
+   "IGUI_KBW_RoofError_missing_gable": {
+    "en": "A matching gable slope, end or full-height wall is locked or unavailable. Choose another gable family or omit gable walls.",
+    "ch": "相符的山牆坡面牆, 端牆或全高牆已鎖定或不可用. 請選擇其他山牆家族, 或省略山牆.",
+    "cn": "匹配的山墙坡面墙, 端墙或全高墙已锁定或不可用. 请选择其他山墙家族, 或省略山墙."
+   },
+   "IGUI_KBW_RoofError_missing_hip": {
+    "en": "This family has no complete automatic hip mapping. Its hip pieces are available under Place roof detail.",
+    "ch": "此家族沒有完整的自動斜脊對應. 其斜脊構件可在「放置屋頂細部」中取得.",
+    "cn": "此家族没有完整的自动斜脊映射. 其斜脊构件可在“放置屋顶细部”中找到."
+   },
+   "IGUI_KBW_RoofError_missing_slope": {
+    "en": "This family has no supported slope sequence. Select a pitched family or a flat roof.",
+    "ch": "此家族沒有受支援的坡面序列. 請選擇斜頂家族或平屋頂.",
+    "cn": "此家族没有受支持的坡面序列. 请选择坡顶家族或平屋顶."
+   },
+   "IGUI_KBW_RoofError_missing_valley": {
+    "en": "This pitch has no verified corner or valley pieces for an automatic roof over this shape. Try 45° or use separate manual runs.",
+    "ch": "此坡度沒有經過驗證的轉角或斜溝構件, 無法在此形狀上自動建立屋頂. 請嘗試 45°, 或改為分段手動鋪設.",
+    "cn": "此坡度没有经过验证的转角或斜沟构件, 无法在此形状上自动生成屋顶. 请尝试 45°, 或改为分段手动铺设."
+   },
+   "IGUI_KBW_RoofError_no_permission": {
+    "en": "You need contribute access to edit this blueprint.",
+    "ch": "你需要貢獻權限才能編輯此藍圖.",
+    "cn": "你需要贡献权限才能编辑此蓝图."
+   },
+   "IGUI_KBW_RoofError_no_profile": {
+    "en": "No unlocked roof family is available. Enable Vanilla Expanded and learn a matching magazine or skill.",
+    "ch": "沒有可用的已解鎖屋頂家族. 請啟用原版擴充, 並透過相符的雜誌或技能學會.",
+    "cn": "没有可用的已解锁屋顶家族. 请启用原版扩展, 并通过匹配的杂志或技能学会."
+   },
+   "IGUI_KBW_RoofError_odd_gable": {
+    "en": "This family has no automatic ridge for an odd span. Use an even span, a flat cap, or place its ridge pieces manually.",
+    "ch": "此家族沒有適用奇數跨距的自動屋脊. 請使用偶數跨距, 平頂封蓋, 或手動放置其屋脊構件.",
+    "cn": "此家族没有适用于奇数跨度的自动屋脊. 请使用偶数跨度, 平顶封盖, 或手动放置其屋脊构件."
+   },
+   "IGUI_KBW_RoofError_out_of_range": {
+    "en": "The roof extends beyond the blueprint planning area.",
+    "ch": "屋頂超出了藍圖規劃範圍.",
+    "cn": "屋顶超出了蓝图规划范围."
+   },
+   "IGUI_KBW_RoofError_placement_limit": {
+    "en": "This roof would exceed the blueprint placement limit.",
+    "ch": "此屋頂會超過藍圖放置上限.",
+    "cn": "此屋顶会超出蓝图放置上限."
+   },
+   "IGUI_KBW_RoofError_plan_overlap": {
+    "en": "The roof overlaps existing planned pieces. Adjust the footprint or remove conflicting plans first.",
+    "ch": "屋頂與現有的已規劃構件重疊. 請先調整佔地或移除衝突的規劃.",
+    "cn": "屋顶与现有的已规划构件重叠. 请先调整占地或移除冲突的规划."
+   },
+   "IGUI_KBW_RoofError_rise_shape": {
+    "en": "A flat roof has no slope to cap. Set maximum rise to Full Rise.",
+    "ch": "平屋頂沒有可封頂的坡面. 請將最大升高設為「完整坡面」.",
+    "cn": "平屋顶没有可封顶的坡面. 请将最大升高设为“完整坡面”."
+   },
+   "IGUI_KBW_RoofError_too_complex": {
+    "en": "These wings cannot form a clean pitched roof with the available pieces. Auto fit can cover the footprint with a continuous flat roof.",
+    "ch": "這些側翼無法用現有構件組成整齊的斜屋頂. 自動適配可以用連續平屋頂覆蓋此佔地.",
+    "cn": "这些侧翼无法用现有构件组成规整的坡屋顶. 自动适配可以用连续平屋顶覆盖此占地."
+   },
+   "IGUI_KBW_RoofError_too_large": {
+    "en": "The roof helper supports up to 576 tiles including overhang. Divide a larger footprint into rooms.",
+    "ch": "屋頂助手最多支援 576 格 (含出簷). 較大的佔地請分割成多個房間.",
+    "cn": "屋顶助手最多支持 576 格 (含出檐). 较大的占地请拆分为多个房间."
+   },
+   "IGUI_KBW_RoofError_unsupported_shape": {
+    "en": "This shape cannot make a continuous roof with the chosen pitch, direction and footprint. Try another layout or divide the footprint.",
+    "ch": "此形狀無法以所選的坡度, 方向與佔地組成連續屋頂. 請嘗試其他佈局或分割佔地.",
+    "cn": "此形状无法以所选的坡度, 方向和占地形成连续屋顶. 请尝试其他布局或拆分占地."
+   },
+   "IGUI_KBW_RoofFlat": {
+    "en": "Flat",
+    "ch": "平頂",
+    "cn": "平顶"
+   },
+   "IGUI_KBW_RoofFullRise": {
+    "en": "Full slope",
+    "ch": "完整坡面",
+    "cn": "完整坡面"
+   },
+   "IGUI_KBW_RoofGable": {
+    "en": "Gable",
+    "ch": "山牆式",
+    "cn": "山墙式"
+   },
+   "IGUI_KBW_RoofGableFinish": {
+    "en": "Gable finish",
+    "ch": "山牆飾面",
+    "cn": "山墙饰面"
+   },
+   "IGUI_KBW_RoofGableMaterial": {
+    "en": "Gable walls",
+    "ch": "山牆",
+    "cn": "山墙"
+   },
+   "IGUI_KBW_RoofGablePlain": {
+    "en": "Bare",
+    "ch": "素面",
+    "cn": "无饰面"
+   },
+   "IGUI_KBW_RoofHelp": {
+    "en": "Every layout is drawn as a small model; the shading shows which way each slope faces. Hover a layout to see it in the world in its real tiles, click to choose it. Each card previews the real tile: use its arrows, the mouse wheel or a click on it to switch roof family, gable walls and gable finish (painted, wallpapered or plastered where the material allows it). At 45° the north and west slopes are hidden by the camera, so the ceiling deck keeps those tiles dry; at 30° both sides are built. End walls use the gable material and follow the exact slope of the roof. Only families the helper can lay out by itself are listed; shallow sheets, roof trim and tents are placed from the catalogue.",
+    "ch": "每種佈局都以小模型呈現; 陰影表示各坡面的朝向. 將滑鼠停在佈局上, 即可在遊戲世界中以實際格子檢視, 點選即可選用. 每張卡片都會預覽實際格子: 使用其箭頭, 滑鼠滾輪或點選卡片, 即可切換屋頂家族, 山牆與山牆飾面 (材料允許時可選塗漆, 壁紙或灰泥). 在 45° 時, 北側與西側坡面會被鏡頭遮住, 因此由天花板層讓這些格子保持乾燥; 在 30° 時兩側都會建造. 端牆使用山牆材料, 並完全貼合屋頂的坡度. 只會列出屋頂助手能自行鋪排的家族; 緩坡板片, 屋頂飾條與帳篷需從目錄放置.",
+    "cn": "每种布局都以小模型呈现; 阴影表示各坡面的朝向. 将鼠标悬停在布局上, 即可在游戏世界中以实际格子查看, 点击即可选择. 每张卡片都会预览实际格子: 使用其箭头, 鼠标滚轮或点击卡片, 即可切换屋顶家族, 山墙和山墙饰面 (材料允许时可选涂漆, 墙纸或抹灰). 在 45° 时, 北侧和西侧坡面会被镜头遮挡, 因此由天花板层保持这些格子干燥; 在 30° 时两侧都会建造. 端墙使用山墙材料, 并精确贴合屋顶的坡度. 只会列出屋顶助手能自行布置的家族; 缓坡板片, 屋顶饰条和帐篷需从目录中放置."
+   },
+   "IGUI_KBW_RoofHelper": {
+    "en": "Roof helper",
+    "ch": "屋頂助手",
+    "cn": "屋顶助手"
+   },
+   "IGUI_KBW_RoofHip": {
+    "en": "Hip",
+    "ch": "四坡式",
+    "cn": "四坡式"
+   },
+   "IGUI_KBW_RoofHipWings": {
+    "en": "Hip with gabled wings",
+    "ch": "四坡式配山牆側翼",
+    "cn": "四坡式配山墙侧翼"
+   },
+   "IGUI_KBW_RoofKind_crossGable": {
+    "en": "Cross gable",
+    "ch": "交叉山牆式",
+    "cn": "交叉山墙式"
+   },
+   "IGUI_KBW_RoofKind_flat": {
+    "en": "Flat",
+    "ch": "平頂",
+    "cn": "平顶"
+   },
+   "IGUI_KBW_RoofKind_gable": {
+    "en": "Gable",
+    "ch": "山牆式",
+    "cn": "山墙式"
+   },
+   "IGUI_KBW_RoofKind_gableHipWings": {
+    "en": "Gable with hipped wings",
+    "ch": "山牆式配四坡側翼",
+    "cn": "山墙式配四坡侧翼"
+   },
+   "IGUI_KBW_RoofKind_hip": {
+    "en": "Hip",
+    "ch": "四坡式",
+    "cn": "四坡式"
+   },
+   "IGUI_KBW_RoofKind_hipWings": {
+    "en": "Hip with gabled wings",
+    "ch": "四坡式配山牆側翼",
+    "cn": "四坡式配山墙侧翼"
+   },
+   "IGUI_KBW_RoofKind_mixed": {
+    "en": "Mixed gables and hips",
+    "ch": "山牆與四坡混合",
+    "cn": "山墙与四坡混合"
+   },
+   "IGUI_KBW_RoofKind_shed": {
+    "en": "Lean-to",
+    "ch": "單坡式",
+    "cn": "单坡式"
+   },
+   "IGUI_KBW_RoofLayouts": {
+    "en": "Roof layouts for this footprint (hover to preview in the world, click to choose)",
+    "ch": "此佔地的屋頂佈局 (滑鼠停留可在遊戲世界中預覽, 點選即可選用)",
+    "cn": "此占地的屋顶布局 (悬停可在游戏世界中预览, 点击即可选择)"
+   },
+   "IGUI_KBW_RoofNoChoices": {
+    "en": "No options",
+    "ch": "無選項",
+    "cn": "无选项"
+   },
+   "IGUI_KBW_RoofNoGables": {
+    "en": "None",
+    "ch": "無",
+    "cn": "无"
+   },
+   "IGUI_KBW_RoofNoSuggestions": {
+    "en": "No complete layout for these options. Change the family or clear optional additions.",
+    "ch": "這些選項沒有完整的佈局. 請更換家族或清除選用的附加項目.",
+    "cn": "这些选项没有完整的布局. 请更换家族或清除可选的附加项."
+   },
+   "IGUI_KBW_RoofNorth": {
+    "en": "North",
+    "ch": "北",
+    "cn": "北"
+   },
+   "IGUI_KBW_RoofOverhang": {
+    "en": "Overhang (tiles)",
+    "ch": "出簷 (格)",
+    "cn": "出檐 (格)"
+   },
+   "IGUI_KBW_RoofRecommended": {
+    "en": "recommended",
+    "ch": "建議",
+    "cn": "推荐"
+   },
+   "IGUI_KBW_RoofRegionSummary": {
+    "en": "Connected roof area: %1 tiles across %2 × %3.",
+    "ch": "相連屋頂區域: %1 格, 範圍 %2 × %3.",
+    "cn": "相连屋顶区域: %1 格, 范围 %2 × %3."
+   },
+   "IGUI_KBW_RoofRidgeEW": {
+    "en": "ridge east to west",
+    "ch": "屋脊東西向",
+    "cn": "屋脊东西走向"
+   },
+   "IGUI_KBW_RoofRidgeNS": {
+    "en": "ridge north to south",
+    "ch": "屋脊南北向",
+    "cn": "屋脊南北走向"
+   },
+   "IGUI_KBW_RoofRise": {
+    "en": "Maximum rise (levels)",
+    "ch": "最大升高 (層)",
+    "cn": "最大升高 (层)"
+   },
+   "IGUI_KBW_RoofSelectRoom": {
+    "en": "Select or draw a room in the Rooms tab first.",
+    "ch": "請先在「房間」分頁中選擇或繪製房間.",
+    "cn": "请先在“房间”标签页中选择或绘制房间."
+   },
+   "IGUI_KBW_RoofShallow": {
+    "en": "Shallow",
+    "ch": "緩坡",
+    "cn": "缓坡"
+   },
+   "IGUI_KBW_RoofShape": {
+    "en": "Shape",
+    "ch": "形狀",
+    "cn": "形状"
+   },
+   "IGUI_KBW_RoofShed": {
+    "en": "Shed",
+    "ch": "單坡式",
+    "cn": "单坡式"
+   },
+   "IGUI_KBW_RoofSouth": {
+    "en": "South",
+    "ch": "南",
+    "cn": "南"
+   },
+   "IGUI_KBW_RoofStats": {
+    "en": "%1 roof pieces, %2 end-wall pieces, %3 storey(s) high",
+    "ch": "%1 個屋頂構件, %2 個端牆構件, 高 %3 層",
+    "cn": "%1 个屋顶构件, %2 个端墙构件, 高 %3 层"
+   },
+   "IGUI_KBW_RoofStyle": {
+    "en": "Roof family and pitch",
+    "ch": "屋頂家族與坡度",
+    "cn": "屋顶家族与坡度"
+   },
+   "IGUI_KBW_RoofSuggest": {
+    "en": "Suggest layouts",
+    "ch": "建議佈局",
+    "cn": "推荐布局"
+   },
+   "IGUI_KBW_RoofSummary": {
+    "en": "%1 pieces, starting at level %2.",
+    "ch": "%1 個構件, 起始樓層 %2.",
+    "cn": "%1 个构件, 起始楼层 %2."
+   },
+   "IGUI_KBW_RoofTagApprox": {
+    "en": "%1 tile(s) use the closest piece this roof set has.",
+    "ch": "%1 格使用了此屋頂組中最接近的構件.",
+    "cn": "%1 格使用了该屋顶组中最接近的构件."
+   },
+   "IGUI_KBW_RoofTagCrown": {
+    "en": "Levels off into a flat crown after %1 storey(s).",
+    "ch": "升高 %1 層後收為平頂.",
+    "cn": "升高 %1 层后收为平顶."
+   },
+   "IGUI_KBW_RoofTagMissing": {
+    "en": "%1 visible tile(s) have no matching piece in this roof set.",
+    "ch": "%1 個可見格子在此屋頂組中沒有相符的構件.",
+    "cn": "%1 个可见格子在该屋顶组中没有匹配的构件."
+   },
+   "IGUI_KBW_RoofTagRidgeGap": {
+    "en": "This set has no ridge piece for an odd span; %1 ridge tile(s) stay open over the ceiling deck.",
+    "ch": "此屋頂組沒有適用奇數跨距的屋脊構件; %1 格屋脊會在天花板層上方保持敞開.",
+    "cn": "该屋顶组没有适用于奇数跨度的屋脊构件; %1 格屋脊会在天花板层上方保持敞开."
+   },
+   "IGUI_KBW_RoofUnavailable": {
+    "en": "unavailable",
+    "ch": "不可用",
+    "cn": "不可用"
+   },
+   "IGUI_KBW_RoofWest": {
+    "en": "West",
+    "ch": "西",
+    "cn": "西"
+   },
+   "IGUI_KBW_RoomCut": {
+    "en": "Area cleared from the room",
+    "ch": "已將該區域從房間中清除",
+    "cn": "已将该区域从房间中清除"
+   },
+   "IGUI_KBW_RoomRemovedByCut": {
+    "en": "Room cleared completely and removed",
+    "ch": "房間已完全清空並移除",
+    "cn": "房间已完全清空并移除"
+   },
+   "IGUI_KBW_SelectTool": {
+    "en": "Select ghosts",
+    "ch": "選取幽靈",
+    "cn": "选择幽灵"
+   },
+   "IGUI_KBW_SelectionSummary": {
+    "en": "Selected: %1 planned pieces",
+    "ch": "已選取: %1 個已規劃構件",
+    "cn": "已选择: %1 个已规划构件"
+   },
+   "IGUI_KBW_ShowRoofs": {
+    "en": "Show roofs",
+    "ch": "顯示屋頂",
+    "cn": "显示屋顶"
+   },
+   "IGUI_KBW_ShowRooms": {
+    "en": "Show room zones",
+    "ch": "顯示房間區域",
+    "cn": "显示房间区域"
+   },
+   "IGUI_KBW_ShowWalls": {
+    "en": "Show planned walls",
+    "ch": "顯示已規劃牆壁",
+    "cn": "显示已规划墙壁"
+   },
+   "IGUI_KBW_ViewAdjacent": {
+    "en": "Selected level + faded neighbours",
+    "ch": "所選樓層 + 淡化相鄰樓層",
+    "cn": "所选楼层 + 淡化相邻楼层"
+   },
+   "IGUI_KBW_ViewAll": {
+    "en": "All levels",
+    "ch": "所有樓層",
+    "cn": "所有楼层"
+   },
+   "IGUI_KBW_ViewBelow": {
+    "en": "Selected level and below",
+    "ch": "所選樓層及以下",
+    "cn": "所选楼层及以下"
+   },
+   "IGUI_KBW_ViewCurrent": {
+    "en": "Selected level only",
+    "ch": "僅所選樓層",
+    "cn": "仅所选楼层"
+   },
+   "IGUI_KBW_ViewGhost": {
+    "en": "Blueprint tint",
+    "ch": "藍圖色調",
+    "cn": "蓝图色调"
+   },
+   "IGUI_KBW_ViewSolid": {
+    "en": "Solid preview (100%)",
+    "ch": "實體預覽 (100%%)",
+    "cn": "实体预览 (100%%)"
+   },
+   "IGUI_KBW_ViewTexture": {
+    "en": "Original textures",
+    "ch": "原始紋理",
+    "cn": "原始纹理"
+   },
+   "IGUI_KBW_WorldView": {
+    "en": "World preview settings",
+    "ch": "世界預覽設定",
+    "cn": "世界预览设置"
+   },
+   "IGUI_KBW_Yes": {
+    "en": "Yes",
+    "ch": "是",
+    "cn": "是"
+   },
+   "IGUI_WeaponUI_DoorDamage": {
+    "en": "Door damage",
+    "ch": "對門傷害",
+    "cn": "对门伤害"
    }
   },
   "ItemName.json": {
@@ -296265,6 +297210,131 @@
     "en": "Penoy (Raw)",
     "ch": "白仁蛋 (生)",
     "cn": "白仁蛋 (生)"
+   },
+   "KnoxBuildworks.ArchitecturalDigest_RugsCarpets": {
+    "en": "Architectural Digest: Rugs & Carpets",
+    "ch": "建築文摘: 地墊與地毯",
+    "cn": "建筑文摘: 地垫与地毯"
+   },
+   "KnoxBuildworks.DecorationsGuide_RoadwayGarage": {
+    "en": "Decoration Guide: Roadway & Garage",
+    "ch": "裝飾指南: 路面與車庫",
+    "cn": "装饰指南: 路面与车库"
+   },
+   "KnoxBuildworks.FineWoodWorking_DoorsWindows": {
+    "en": "Fine Wood Working: Doors & Windows",
+    "ch": "精細木工: 門與窗",
+    "cn": "精细木工: 门与窗"
+   },
+   "KnoxBuildworks.FineWoodWorking_Furniture_BedsCouchesArmchairs": {
+    "en": "Fine Wood Working: Beds Couches & Armchairs",
+    "ch": "精細木工: 床, 沙發與扶手椅",
+    "cn": "精细木工: 床, 沙发与扶手椅"
+   },
+   "KnoxBuildworks.FineWoodWorking_Furniture_ChairsBenches": {
+    "en": "Fine Wood Working: Chairs & Benches",
+    "ch": "精細木工: 椅子與長凳",
+    "cn": "精细木工: 椅子与长凳"
+   },
+   "KnoxBuildworks.FineWoodWorking_Furniture_Counters": {
+    "en": "Fine Wood Working: Counters",
+    "ch": "精細木工: 櫃檯",
+    "cn": "精细木工: 柜台"
+   },
+   "KnoxBuildworks.FineWoodWorking_Furniture_Crates": {
+    "en": "Fine Wood Working: Crates",
+    "ch": "精細木工: 板條箱",
+    "cn": "精细木工: 板条箱"
+   },
+   "KnoxBuildworks.FineWoodWorking_Furniture_DesksTables": {
+    "en": "Fine Wood Working: Desks & Tables",
+    "ch": "精細木工: 書桌與桌子",
+    "cn": "精细木工: 书桌与桌子"
+   },
+   "KnoxBuildworks.FineWoodWorking_Furniture_Dressers": {
+    "en": "Fine Wood Working: Dressers",
+    "ch": "精細木工: 五斗櫃",
+    "cn": "精细木工: 五斗柜"
+   },
+   "KnoxBuildworks.FlooringGuide_Ceramic": {
+    "en": "Flooring Guide: Ceramic Tiles",
+    "ch": "地板指南: 瓷磚",
+    "cn": "地板指南: 瓷砖"
+   },
+   "KnoxBuildworks.FlooringGuide_Paved": {
+    "en": "Flooring Guide: Paved Surfaces",
+    "ch": "地板指南: 鋪面",
+    "cn": "地板指南: 铺面"
+   },
+   "KnoxBuildworks.HomeMechanix_Bathroom": {
+    "en": "Home Mechanix: Bathroom Appliances",
+    "ch": "居家機工: 浴室設備",
+    "cn": "居家机工: 浴室设备"
+   },
+   "KnoxBuildworks.InsulationFoam": {
+    "en": "Insulation Foam",
+    "ch": "隔熱泡棉",
+    "cn": "隔热泡沫"
+   },
+   "KnoxBuildworks.OldHouseJournal_WoodenFloors": {
+    "en": "Old House Journal: Wooden Floors",
+    "ch": "老房子期刊: 木地板",
+    "cn": "老房子期刊: 木地板"
+   },
+   "KnoxBuildworks.PlasticSheet": {
+    "en": "Plastic Sheet",
+    "ch": "塑膠布",
+    "cn": "塑料布"
+   },
+   "KnoxBuildworks.PlasticSheetSmall": {
+    "en": "Plastic Sheet - Small",
+    "ch": "塑膠布 (小)",
+    "cn": "塑料布 (小)"
+   },
+   "KnoxBuildworks.PopularMechanics_HomeAppliances": {
+    "en": "Popular Mechanics: Home Appliances",
+    "ch": "大眾機械: 家用電器",
+    "cn": "大众机械: 家用电器"
+   },
+   "KnoxBuildworks.PopularMechanics_Lighting": {
+    "en": "Popular Mechanics: Lighting",
+    "ch": "大眾機械: 照明",
+    "cn": "大众机械: 照明"
+   },
+   "KnoxBuildworks.ProjectsInMetal_Diverse": {
+    "en": "Projects In Metal",
+    "ch": "金屬工藝",
+    "cn": "金属工艺"
+   },
+   "KnoxBuildworks.RefrigerantBottle": {
+    "en": "Refrigerant Bottle",
+    "ch": "冷媒瓶",
+    "cn": "制冷剂瓶"
+   },
+   "KnoxBuildworks.RefrigeratorCompressor": {
+    "en": "Refrigerator Compressor",
+    "ch": "冰箱壓縮機",
+    "cn": "冰箱压缩机"
+   },
+   "KnoxBuildworks.RubberSeal": {
+    "en": "Rubber Seal",
+    "ch": "橡膠密封圈",
+    "cn": "橡胶密封圈"
+   },
+   "KnoxBuildworks.SmallRubberTube": {
+    "en": "Small Rubber Tube",
+    "ch": "小橡膠管",
+    "cn": "小橡胶管"
+   },
+   "KnoxBuildworks.TheFamilyHandyman_StairsFences": {
+    "en": "The Family Handyman: Stairs & Fences",
+    "ch": "家庭雜工: 樓梯與圍籬",
+    "cn": "家庭杂工: 楼梯与围栏"
+   },
+   "KnoxBuildworks.ThinCopperPipe": {
+    "en": "Thin Copper Pipe",
+    "ch": "細銅管",
+    "cn": "细铜管"
    }
   },
   "Print_Media.json": {
@@ -318100,6 +319170,111 @@
     "en": "Recycle Firearm Optics Components",
     "ch": "回收槍械配件零件",
     "cn": "回收枪械配件零件"
+   },
+   "WaterPipeValve": {
+    "en": "Shut-off Valve",
+    "ch": "截止閥",
+    "cn": "截止阀"
+   },
+   "KBWAssembleCompressor": {
+    "en": "Assemble Refrigerator Compressor",
+    "ch": "組裝冰箱壓縮機",
+    "cn": "组装冰箱压缩机"
+   },
+   "KBWCutPlasticSheet": {
+    "en": "Cut Plastic Sheet",
+    "ch": "裁切塑膠布",
+    "cn": "裁剪塑料布"
+   },
+   "KBWKnowledge_ArchitecturalDigest_RugsCarpets": {
+    "en": "Architectural Digest: Rugs & Carpets",
+    "ch": "建築文摘: 地墊與地毯",
+    "cn": "建筑文摘: 地垫与地毯"
+   },
+   "KBWKnowledge_DecorationsGuide_RoadwayGarage": {
+    "en": "Decoration Guide: Roadway & Garage",
+    "ch": "裝飾指南: 路面與車庫",
+    "cn": "装饰指南: 路面与车库"
+   },
+   "KBWKnowledge_FineWoodWorking_DoorsWindows": {
+    "en": "Fine Wood Working: Doors & Windows",
+    "ch": "精細木工: 門與窗",
+    "cn": "精细木工: 门与窗"
+   },
+   "KBWKnowledge_FineWoodWorking_Furniture_BedsCouchesArmchairs": {
+    "en": "Fine Wood Working: Beds Couches & Armchairs",
+    "ch": "精細木工: 床, 沙發與扶手椅",
+    "cn": "精细木工: 床, 沙发与扶手椅"
+   },
+   "KBWKnowledge_FineWoodWorking_Furniture_ChairsBenches": {
+    "en": "Fine Wood Working: Chairs & Benches",
+    "ch": "精細木工: 椅子與長凳",
+    "cn": "精细木工: 椅子与长凳"
+   },
+   "KBWKnowledge_FineWoodWorking_Furniture_Counters": {
+    "en": "Fine Wood Working: Counters",
+    "ch": "精細木工: 櫃檯",
+    "cn": "精细木工: 柜台"
+   },
+   "KBWKnowledge_FineWoodWorking_Furniture_Crates": {
+    "en": "Fine Wood Working: Crates",
+    "ch": "精細木工: 板條箱",
+    "cn": "精细木工: 板条箱"
+   },
+   "KBWKnowledge_FineWoodWorking_Furniture_DesksTables": {
+    "en": "Fine Wood Working: Desks & Tables",
+    "ch": "精細木工: 書桌與桌子",
+    "cn": "精细木工: 书桌与桌子"
+   },
+   "KBWKnowledge_FineWoodWorking_Furniture_Dressers": {
+    "en": "Fine Wood Working: Dressers",
+    "ch": "精細木工: 五斗櫃",
+    "cn": "精细木工: 五斗柜"
+   },
+   "KBWKnowledge_FlooringGuide_Ceramic": {
+    "en": "Flooring Guide: Ceramic Tiles",
+    "ch": "地板指南: 瓷磚",
+    "cn": "地板指南: 瓷砖"
+   },
+   "KBWKnowledge_FlooringGuide_Paved": {
+    "en": "Flooring Guide: Paved Surfaces",
+    "ch": "地板指南: 鋪面",
+    "cn": "地板指南: 铺面"
+   },
+   "KBWKnowledge_HomeMechanix_Bathroom": {
+    "en": "Home Mechanix: Bathroom Appliances",
+    "ch": "居家機工: 浴室設備",
+    "cn": "居家机工: 浴室设备"
+   },
+   "KBWKnowledge_OldHouseJournal_WoodenFloors": {
+    "en": "Old House Journal: Wooden Floors",
+    "ch": "老房子期刊: 木地板",
+    "cn": "老房子期刊: 木地板"
+   },
+   "KBWKnowledge_PopularMechanics_HomeAppliances": {
+    "en": "Popular Mechanics: Home Appliances",
+    "ch": "大眾機械: 家用電器",
+    "cn": "大众机械: 家用电器"
+   },
+   "KBWKnowledge_PopularMechanics_Lighting": {
+    "en": "Popular Mechanics: Lighting",
+    "ch": "大眾機械: 照明",
+    "cn": "大众机械: 照明"
+   },
+   "KBWKnowledge_ProjectsInMetal_Diverse": {
+    "en": "Projects In Metal",
+    "ch": "金屬工藝",
+    "cn": "金属工艺"
+   },
+   "KBWKnowledge_TheFamilyHandyman_StairsFences": {
+    "en": "The Family Handyman: Stairs & Fences",
+    "ch": "家庭雜工: 樓梯與圍籬",
+    "cn": "家庭杂工: 楼梯与围栏"
+   },
+   "KBWPrepareRubberTube": {
+    "en": "Prepare Rubber Tube",
+    "ch": "製備橡膠管",
+    "cn": "制备橡胶管"
    }
   },
   "Sandbox.json": {
@@ -369401,6 +370576,186 @@
     "en": "Factions settle at least this far from a player base when they can. 0 is off.",
     "ch": "可行時, 陣營會在距離玩家基地至少這麼遠的地方落腳. 0 為關閉.",
     "cn": "可行时, 派系会在距离玩家基地至少这么远的地方落脚. 0 为关闭."
+   },
+   "Sandbox_TowTruckMod": {
+    "en": "Tow Truck Mod",
+    "ch": "拖吊車模組",
+    "cn": "拖车模组"
+   },
+   "Sandbox_TowTruckMod_EnableVersionCheck": {
+    "en": "Version check - Java",
+    "ch": "版本檢查 - Java",
+    "cn": "版本检查 - Java"
+   },
+   "Sandbox_TowTruckMod_EnableVersionCheck_tooltip": {
+    "en": "Enable or disable the verison check for Java compatability",
+    "ch": "啟用或停用 Java 相容性的版本檢查",
+    "cn": "启用或禁用 Java 兼容性的版本检查"
+   },
+   "Sandbox_TowTruckMod_HitchTime": {
+    "en": "Tow truck hitch time",
+    "ch": "拖吊車掛接時間",
+    "cn": "拖车挂接时间"
+   },
+   "Sandbox_TowTruckMod_HitchTime_tooltip": {
+    "en": "Adjusts the base time it takes a tow truck to hook another vehicle in seconds.",
+    "ch": "調整拖吊車掛接另一輛車所需的基礎時間 (秒).",
+    "cn": "调整拖车挂接另一辆车所需的基础时间 (秒)."
+   },
+   "Sandbox_PhunSprinters_Debug_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_PhunSprinters_Debug_option2": {
+    "en": "Simple",
+    "ch": "簡易",
+    "cn": "简易"
+   },
+   "Sandbox_PhunSprinters_Debug_option3": {
+    "en": "Extended",
+    "ch": "詳細",
+    "cn": "详细"
+   },
+   "Sandbox_PhunSprinters_IgnoreMutantHusk": {
+    "en": "Ignore Husks (The Mutants)",
+    "ch": "忽略鐵殼者 (The Mutants)",
+    "cn": "忽略铁壳者 (The Mutants)"
+   },
+   "Sandbox_PhunSprinters_IgnoreMutantHusk_tooltip": {
+    "en": "Only used when The Mutants is installed. Ticked: Husks are never made into sprinters and are left entirely to The Mutants. Unticked: Husks roll against risk like any other zed.",
+    "ch": "僅在安裝 The Mutants 時使用. 勾選: 鐵殼者永遠不會變成跑屍, 完全交由 The Mutants 處理. 未勾選: 鐵殼者會像其他殭屍一樣依風險擲骰判定.",
+    "cn": "仅在安装 The Mutants 时使用. 勾选: 铁壳者永远不会变成跑尸, 完全交由 The Mutants 处理. 未勾选: 铁壳者会像其他僵尸一样按风险掷骰判定."
+   },
+   "Sandbox_PhunSprinters_IgnoreMutantLeaper": {
+    "en": "Ignore Leapers (The Mutants)",
+    "ch": "忽略躍擊者 (The Mutants)",
+    "cn": "忽略跃击者 (The Mutants)"
+   },
+   "Sandbox_PhunSprinters_IgnoreMutantLeaper_tooltip": {
+    "en": "Only used when The Mutants is installed. Ticked: Leapers are left entirely to The Mutants, which already makes them run at all times. Unticked: they roll against risk like any other zed, but still keep their own speed when not chosen.",
+    "ch": "僅在安裝 The Mutants 時使用. 勾選: 躍擊者完全交由 The Mutants 處理, 該模組本來就會讓牠們一直奔跑. 未勾選: 牠們會像其他殭屍一樣依風險擲骰判定, 但沒被抽中時仍保有自己的速度.",
+    "cn": "仅在安装 The Mutants 时使用. 勾选: 跃击者完全交由 The Mutants 处理, 该模组本来就会让它们一直奔跑. 未勾选: 它们会像其他僵尸一样按风险掷骰判定, 但未被选中时仍保持自己的速度."
+   },
+   "Sandbox_PhunSprinters_IgnoreMutantPuker": {
+    "en": "Ignore Pukers (The Mutants)",
+    "ch": "忽略嘔吐者 (The Mutants)",
+    "cn": "忽略呕吐者 (The Mutants)"
+   },
+   "Sandbox_PhunSprinters_IgnoreMutantPuker_tooltip": {
+    "en": "Only used when The Mutants is installed. Ticked: Pukers are never made into sprinters and are left entirely to The Mutants. Unticked: Pukers roll against risk like any other zed.",
+    "ch": "僅在安裝 The Mutants 時使用. 勾選: 嘔吐者永遠不會變成跑屍, 完全交由 The Mutants 處理. 未勾選: 嘔吐者會像其他殭屍一樣依風險擲骰判定.",
+    "cn": "仅在安装 The Mutants 时使用. 勾选: 呕吐者永远不会变成跑尸, 完全交由 The Mutants 处理. 未勾选: 呕吐者会像其他僵尸一样按风险掷骰判定."
+   },
+   "Sandbox_PhunSprinters_IgnoreMutantSkitter": {
+    "en": "Ignore Skitters (The Mutants)",
+    "ch": "忽略疾爬者 (The Mutants)",
+    "cn": "忽略疾爬者 (The Mutants)"
+   },
+   "Sandbox_PhunSprinters_IgnoreMutantSkitter_tooltip": {
+    "en": "Only used when The Mutants is installed. Ticked: Skitters are never made into sprinters and are left entirely to The Mutants. Unticked: Skitters roll against risk like any other zed.",
+    "ch": "僅在安裝 The Mutants 時使用. 勾選: 疾爬者永遠不會變成跑屍, 完全交由 The Mutants 處理. 未勾選: 疾爬者會像其他殭屍一樣依風險擲骰判定.",
+    "cn": "仅在安装 The Mutants 时使用. 勾选: 疾爬者永远不会变成跑尸, 完全交由 The Mutants 处理. 未勾选: 疾爬者会像其他僵尸一样按风险掷骰判定."
+   },
+   "Sandbox_PhunSprinters_IgnoreMutantWeeper": {
+    "en": "Ignore Weepers (The Mutants)",
+    "ch": "忽略悲泣者 (The Mutants)",
+    "cn": "忽略悲泣者 (The Mutants)"
+   },
+   "Sandbox_PhunSprinters_IgnoreMutantWeeper_tooltip": {
+    "en": "Only used when The Mutants is installed. Ticked: Weepers are left entirely to The Mutants, which already makes them run at all times. Unticked: they roll against risk like any other zed, but still keep their own speed when not chosen.",
+    "ch": "僅在安裝 The Mutants 時使用. 勾選: 悲泣者完全交由 The Mutants 處理, 該模組本來就會讓牠們一直奔跑. 未勾選: 牠們會像其他殭屍一樣依風險擲骰判定, 但沒被抽中時仍保有自己的速度.",
+    "cn": "仅在安装 The Mutants 时使用. 勾选: 悲泣者完全交由 The Mutants 处理, 该模组本来就会让它们一直奔跑. 未勾选: 它们会像其他僵尸一样按风险掷骰判定, 但未被选中时仍保持自己的速度."
+   },
+   "Sandbox_PhunSprinters_IgnoreMutantWrecker": {
+    "en": "Ignore Wreckers (The Mutants)",
+    "ch": "忽略破壞者 (The Mutants)",
+    "cn": "忽略破坏者 (The Mutants)"
+   },
+   "Sandbox_PhunSprinters_IgnoreMutantWrecker_tooltip": {
+    "en": "Only used when The Mutants is installed. Ticked: Wreckers are never made into sprinters and are left entirely to The Mutants. Unticked: Wreckers roll against risk like any other zed.",
+    "ch": "僅在安裝 The Mutants 時使用. 勾選: 破壞者永遠不會變成跑屍, 完全交由 The Mutants 處理. 未勾選: 破壞者會像其他殭屍一樣依風險擲骰判定.",
+    "cn": "仅在安装 The Mutants 时使用. 勾选: 破坏者永远不会变成跑尸, 完全交由 The Mutants 处理. 未勾选: 破坏者会像其他僵尸一样按风险掷骰判定."
+   },
+   "Sandbox_PhunSprinters_VanillaSprinters": {
+    "en": "Replace vanilla sprinters with",
+    "ch": "原版跑屍替換為",
+    "cn": "原版跑尸替换为"
+   },
+   "Sandbox_PhunSprinters_VanillaSprinters_option1": {
+    "en": "Fast shamblers",
+    "ch": "快速蹣跚者",
+    "cn": "快速蹒跚者"
+   },
+   "Sandbox_PhunSprinters_VanillaSprinters_option2": {
+    "en": "Shamblers",
+    "ch": "蹣跚者",
+    "cn": "蹒跚者"
+   },
+   "Sandbox_PhunSprinters_VanillaSprinters_option3": {
+    "en": "Random (fixed per zed)",
+    "ch": "隨機 (每隻殭屍固定)",
+    "cn": "随机 (每只僵尸固定)"
+   },
+   "Sandbox_PhunSprinters_VanillaSprinters_tooltip": {
+    "en": "What the game's own sprinters are replaced with. This only does anything where there are vanilla sprinters to remove. Zombie Speed = Sprinters: every zed would otherwise run, so they all become this. Zombie Speed = Random: only the sprinter share is removed and the game's existing fast shambler / shambler mix is kept exactly as it is, so this setting is not used. Zombie Speed = Fast Shamblers or Shamblers: there are no sprinters to replace, so nothing is changed at all and your setting is left alone. Either way this mod becomes the only thing that decides who runs. Nothing is written to your save and the change lasts only for the session. Read once when the world loads: changing it mid-session has no effect until a restart, because by then the conversion has already happened and there are no vanilla sprinters left to replace.",
+    "ch": "遊戲原版的跑屍要替換成什麼. 只有在有原版跑屍可移除時才會起作用. 殭屍速度 = 衝刺者: 原本每隻殭屍都會奔跑, 因此全部會變成此設定. 殭屍速度 = 隨機: 只移除跑屍的部分, 遊戲原有的快速蹣跚者 / 蹣跚者比例完全保持不變, 因此不會使用此設定. 殭屍速度 = 快速蹣跚者或蹣跚者: 沒有跑屍可替換, 因此完全不做任何更改, 你的設定也維持原樣. 無論哪種情況, 此模組都會成為決定誰會奔跑的唯一依據. 不會寫入你的存檔, 變更只在本次遊戲期間有效. 於世界載入時讀取一次: 遊戲進行中更改要重新啟動後才會生效, 因為屆時轉換已經完成, 已沒有原版跑屍可替換.",
+    "cn": "游戏原版的跑尸要替换成什么. 只有在有原版跑尸可移除时才会起作用. 僵尸速度 = 短跑运动员: 原本每只僵尸都会奔跑, 因此全部会变成此设置. 僵尸速度 = 随机: 只移除跑尸的部分, 游戏原有的快速蹒跚者 / 蹒跚者比例完全保持不变, 因此不会使用此设置. 僵尸速度 = 快速蹒跚或蹒跚: 没有跑尸可替换, 因此完全不做任何更改, 你的设置也保持原样. 无论哪种情况, 此模组都会成为决定谁会奔跑的唯一依据. 不会写入你的存档, 更改只在本次游戏期间有效. 在世界加载时读取一次: 游戏期间更改需重启后才会生效, 因为届时转换已经完成, 已没有原版跑尸可替换."
+   },
+   "Sandbox_PhunMart_MarkShopsOnMap": {
+    "en": "Mark visited machines on the map",
+    "ch": "在地圖上標記造訪過的機台",
+    "cn": "在地图上标记访问过的机器"
+   },
+   "Sandbox_PhunMart_MarkShopsOnMap_option1": {
+    "en": "Disabled",
+    "ch": "停用",
+    "cn": "禁用"
+   },
+   "Sandbox_PhunMart_MarkShopsOnMap_option2": {
+    "en": "Only with a pen or pencil",
+    "ch": "僅限持有原子筆或鉛筆",
+    "cn": "仅限持有笔或铅笔"
+   },
+   "Sandbox_PhunMart_MarkShopsOnMap_option3": {
+    "en": "Always, no writing tool needed",
+    "ch": "一律標記, 不需書寫工具",
+    "cn": "始终标记, 无需书写工具"
+   },
+   "Sandbox_PhunMart_MarkShopsOnMap_tooltip": {
+    "en": "The first time a player opens a machine, it is marked with a dollar sign on their own world map. Each machine is marked once per character, so a mark the player deletes stays deleted. Players can also turn marks off for themselves under Options > Mods.",
+    "ch": "玩家第一次開啟某台機台時, 會在其自己的世界地圖上以美元符號標記. 每台機台對每個角色只標記一次, 因此玩家刪除的標記不會再出現. 玩家也可以在 選項 > 模組 中為自己關閉標記.",
+    "cn": "玩家第一次打开某台机器时, 会在其自己的世界地图上以美元符号标记. 每台机器对每个角色只标记一次, 因此玩家删除的标记不会再出现. 玩家也可以在 选项 > 模组 中为自己关闭标记."
+   },
+   "Sandbox_WaterPipes_BuildingPlumbCostPerFixture": {
+    "en": "Metal pipe per fixture",
+    "ch": "每個用水裝置的鐵管數",
+    "cn": "每个用水设备的金属管数"
+   },
+   "Sandbox_WaterPipes_BuildingPlumbCostPerFixture_tooltip": {
+    "en": "Metal pipes each fixture costs when plumbing a whole building. 1 = one pipe per sink, toilet or washer connected, however far the pipe has to run to reach it. 0 = free. Pipe laid this way gives nothing back when dismantled.",
+    "ch": "為整棟建築接通水管時, 每個用水裝置消耗的鐵管數. 1 = 每接通一個水槽, 馬桶或洗衣機消耗一根鐵管, 不論水管要鋪多遠才能到達. 0 = 免費. 以此方式鋪設的水管拆除時不會返還任何材料.",
+    "cn": "为整栋建筑接通水管时, 每个用水设备消耗的金属管数. 1 = 每接通一个水槽, 马桶或洗衣机消耗一根金属管, 不论水管要铺多远才能到达. 0 = 免费. 以此方式铺设的水管拆除时不会返还任何材料."
+   },
+   "Sandbox_WaterPipes_PurifierHeadTransfer": {
+    "en": "Pressure a purifier passes on (%%)",
+    "ch": "淨水器傳遞的壓力 (%%)",
+    "cn": "净水器传递的压力 (%%)"
+   },
+   "Sandbox_WaterPipes_PurifierHeadTransfer_tooltip": {
+    "en": "How much of the pressure arriving at a purifier's dirty side reaches its clean side, as a percentage. A purifier is two tanks with a filter between them, so it cannot carry pressure the way a pipe does. 60 = default: town mains at 25 leave 15 behind the purifier, enough for taps and drips at full rate but not for a sprinkler without a pump. 100 makes the purifier transparent to pressure. 0 gives the clean side only a container's own base pressure.",
+    "ch": "抵達淨水器髒水側的壓力有多少能傳到淨水側, 以百分比表示. 淨水器是兩個水槽中間夾著濾芯, 因此無法像水管那樣傳遞壓力. 60 = 預設: 城鎮供水壓力 25 經過淨水器後剩下 15, 足以讓水龍頭和滴灌頭全速運作, 但沒有水泵時不足以帶動灑水器. 100 則讓淨水器完全不影響壓力. 0 則讓淨水側只有容器本身的基礎壓力.",
+    "cn": "抵达净水器脏水侧的压力有多少能传到净水侧, 以百分比表示. 净水器是两个水槽中间夹着滤芯, 因此无法像水管那样传递压力. 60 = 默认: 城镇供水压力 25 经过净水器后剩下 15, 足以让水龙头和滴灌头全速运作, 但没有水泵时不足以带动洒水器. 100 则让净水器完全不影响压力. 0 则让净水侧只有容器本身的基础压力."
+   },
+   "Sandbox_BloodlustO_MeditationUnsuppressBloodlustModifier": {
+    "en": "Meditation Unsuppress Bloodlust Modifier",
+    "ch": "冥想解除壓抑嗜血值修正值",
+    "cn": "冥想解除压抑嗜血值修正值"
+   },
+   "Sandbox_BloodlustO_MeditationUnsuppressBloodlustModifier_tooltip": {
+    "en": "Bloodlust reduced from meditation is used up this much to remove suppressed bloodlust instead of reducing your current bloodlust.\n\n0.3 means 30%% of bloodlust change is used up.\n",
+    "ch": "冥想所減少的嗜血值中, 有此比例會用來消除壓抑的嗜血值, 而不是減少你目前的嗜血值.\n\n0.3 表示 30%% 的嗜血值變化會被用掉.\n",
+    "cn": "冥想所减少的嗜血值中, 有此比例会用来消除压抑的嗜血值, 而不是减少你当前的嗜血值.\n\n0.3 表示 30%% 的嗜血值变化会被用掉.\n"
    }
   },
   "Tooltip.json": {
@@ -388448,6 +389803,31 @@
     "en": "Only in the top-down view. Switch to it first.",
     "ch": "僅能在俯視視角下使用. 請先切換到俯視視角.",
     "cn": "仅能在俯视视角下使用. 请先切换到俯视视角."
+   },
+   "Tooltip_craft_WaterPipeValveDesc": {
+    "en": "A shut-off valve. Fits onto a pipe that is already there, concealed building plumbing included, so nothing has to come down first. Open it does nothing; closed it splits the network in two, and the sides stop sharing water, pressure and contamination. Right-click to turn it, Pipe Wrench in hand.",
+    "ch": "截止閥. 可直接裝在既有的水管上, 包括暗埋的建築管線, 因此不必先拆除任何東西. 開啟時沒有任何作用; 關閉時會把管網一分為二, 兩側不再共享水, 壓力和汙染. 手持管鉗按右鍵即可轉動.",
+    "cn": "截止阀. 可直接装在现有的水管上, 包括暗埋的建筑管线, 因此无需先拆除任何东西. 打开时没有任何作用; 关闭时会把管网一分为二, 两侧不再共享水, 压力和污染. 手持管钳右键即可转动."
+   },
+   "Tooltip_KBW_CutRoom": {
+    "en": "Drag an area to clear it out of the selected room. A room cut down to nothing is removed.",
+    "ch": "拖曳出一塊區域, 將其從所選房間中清除. 被切除到完全不剩的房間會被移除.",
+    "cn": "拖拽出一块区域, 将其从所选房间中清除. 被切除到一点不剩的房间会被移除."
+   },
+   "Tooltip_KBW_PipetteTool": {
+    "en": "Click a planned ghost or a built piece in the world to plan more of exactly that piece - same recipe, variant, material, direction and paint, plaster or wallpaper - without searching the catalogue. The rotate key steps through the pieces on a tile.",
+    "ch": "點選世界中已規劃的幽靈或已建造的構件, 即可規劃更多完全相同的構件 - 相同的配方, 變體, 材質, 方向以及油漆, 灰泥或壁紙 - 無須搜尋目錄. 旋轉鍵可逐一切換同一格上的各個構件.",
+    "cn": "点击世界中已规划的幽灵或已建造的构件, 即可规划更多完全相同的构件 - 相同的配方, 变体, 材质, 方向以及油漆, 灰泥或墙纸 - 无需搜索目录. 旋转键可逐个切换同一格上的各个构件."
+   },
+   "Tooltip_KBW_SelectTool": {
+    "en": "Drag a box on the planning level to select planned ghosts. Hold Shift to add to the selection. Delete removes the selected ghosts.",
+    "ch": "在規劃樓層上拖曳出方框以選取已規劃的幽靈. 按住 Shift 可加入目前的選取範圍. 按 Delete 會移除所選的幽靈.",
+    "cn": "在规划楼层上拖拽方框以选择已规划的幽灵. 按住 Shift 可添加到当前选择. 按 Delete 会移除所选幽灵."
+   },
+   "Tooltip_KBWVE_SlidingGlassSideWall": {
+    "en": "The glass is part of this side wall. It is a built-in window; no separate window item is needed.",
+    "ch": "玻璃是這面側牆的一部分. 這是內建的窗戶; 不需要另外的窗戶物品.",
+    "cn": "玻璃是这面侧墙的一部分. 这是内置窗户; 无需单独的窗户物品."
    }
   },
   "UI.json": {
@@ -431025,9 +432405,9 @@
     "cn": "耗尽"
    },
    "UI_options_AWCWF_desc_thermal": {
-    "en": "Thermal scope scan optimization by 고구미. Choose your local marker style; other players keep their own settings.",
-    "ch": "熱成像瞄準鏡掃描最佳化 (由 고구미 製作). 選擇你本機的標記樣式; 其他玩家保留各自的設定.",
-    "cn": "热成像瞄准镜扫描优化 (由 고구미 制作). 选择你本地的标记样式; 其他玩家保留各自的设置."
+    "en": "Thermal scope scan optimization by Gogumi.\nChoose your local marker style;\nother players keep their own settings.",
+    "ch": "熱成像瞄準鏡掃描最佳化 (由 Gogumi 製作). 選擇你本機的標記樣式; 其他玩家保留各自的設定.",
+    "cn": "热成像瞄准镜扫描优化 (由 Gogumi 制作). 选择你本地的标记样式; 其他玩家保留各自的设置."
    },
    "UI_options_AWCWF_section_thermal": {
     "en": "Thermal Scope",
@@ -431040,7 +432420,7 @@
     "cn": "热成像标记样式"
    },
    "UI_options_AWCWF_thermal_marker_mode_tooltip": {
-    "en": "Both styles use the optimized scanner. Classic keeps detected markers. Visibility Fade holds markers for 150 ms, then fades them over 350 ms after losing sight. Apply a style change to clear current markers. Your choice is saved on this computer.",
+    "en": "Both styles use the optimized scanner.\n Classic keeps detected markers.\n Visibility Fade holds markers for 150 ms, then \nfades them over 350 ms after losing sight.\n Apply a style change to clear current markers.\n Your choice is saved on this computer.",
     "ch": "兩種樣式都使用最佳化的掃描器. 「經典」會保留已偵測到的標記. 「可見度淡出」會在失去視線後讓標記停留 150 毫秒, 再於 350 毫秒內淡出. 套用樣式變更會清除目前的標記. 你的選擇會儲存在這台電腦上.",
     "cn": "两种样式都使用优化后的扫描器. “经典”会保留已检测到的标记. “可见度淡出”会在失去视线后让标记停留 150 毫秒, 再在 350 毫秒内淡出. 应用样式更改会清除当前的标记. 你的选择会保存在这台电脑上."
    },
@@ -431053,6 +432433,46 @@
     "en": "Optimized - Visibility Fade",
     "ch": "最佳化 - 可見度淡出",
     "cn": "优化 - 可见度淡出"
+   },
+   "UI_CGUI_hideNotAttachedWeapons": {
+    "en": "Hide Not Attached Weapons",
+    "ch": "隱藏未掛載的武器",
+    "cn": "隐藏未挂载的武器"
+   },
+   "UI_CGUI_hideNotAttachedWeapons_tooltip": {
+    "en": "Remove not attached weapons from the Weapon Radial Menu.",
+    "ch": "從武器輪盤選單中移除未掛載的武器.",
+    "cn": "从武器轮盘菜单中移除未挂载的武器."
+   },
+   "UI_FamilyZMedicine_NoteConflict": {
+    "en": "This note changed since you opened it. Refresh it before editing again.",
+    "ch": "此紀錄在你開啟後已被更改. 請先重新整理再編輯.",
+    "cn": "此记录在你打开后已被更改. 请先刷新再编辑."
+   },
+   "UI_NEQ_options_match_cleanui": {
+    "en": "Look like CleanUI",
+    "ch": "套用 CleanUI 外觀",
+    "cn": "采用 CleanUI 外观"
+   },
+   "UI_NEQ_options_match_cleanui_tooltip": {
+    "en": "The panel and the wardrobe use CleanUI's own frame and the background opacity set in CleanUI's options, so they match the inventory. The opacity slider is not used while this is on. Needs CleanUI.",
+    "ch": "面板與衣櫥會使用 CleanUI 本身的外框, 以及 CleanUI 選項中設定的背景不透明度, 讓外觀與物品欄一致. 開啟此項時不會使用不透明度滑桿. 需要 CleanUI.",
+    "cn": "面板和衣橱会使用 CleanUI 自身的边框, 以及 CleanUI 选项中设置的背景不透明度, 使外观与物品栏一致. 开启此项时不会使用不透明度滑块. 需要 CleanUI."
+   },
+   "UI_NEQ_options_panel_opacity": {
+    "en": "Panel opacity (normal: 100)",
+    "ch": "面板不透明度 (正常: 100)",
+    "cn": "面板不透明度 (正常: 100)"
+   },
+   "UI_NEQ_options_panel_opacity_tooltip": {
+    "en": "How solid the background of the panel and the wardrobe is. 100 is fully opaque; lower lets the game show through.",
+    "ch": "面板與衣櫥背景的不透明程度. 100 為完全不透明; 數值越低, 越能透出後方的遊戲畫面.",
+    "cn": "面板和衣橱背景的不透明程度. 100 为完全不透明; 数值越低, 越能透出后方的游戏画面."
+   },
+   "UI_NEQ_put_away": {
+    "en": "Clothes put away in: %1",
+    "ch": "衣物已收進: %1",
+    "cn": "衣物已放入: %1"
    }
   },
   "MakeUp.json": {
