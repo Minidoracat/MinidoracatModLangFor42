@@ -17,6 +17,8 @@
   > 技術要點：Knox 5 項與 Washing Menus 2 項屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點）；其餘屬 own 層連 `en` 錨點更新；皆登記 `ch_review_state`。MFS 熱成像標記模式說明上游只加了換行，只更新 `en` 錨點。
 - **裁決 56 個多 MOD 共用鍵，改譯 4 項。** 槍械 MOD 共用的榴彈發射器提示（#813）：MFS 社群修正版改寫成舊式與新式兩種發射器，改為兩行並陳——第一行「按 G 裝填, 按 G 開火」對所有槍械 MOD 都成立，第二行說明 MFS 新式發射器按 G 切換榴彈模式後用一般的裝填與射擊鍵。PhunSprinters 與 PhunSprinters 2 共用的沙盒設定（#807）：除錯選項改為「輸出詳細的除錯資訊」（兩版對是否需要重啟的說法相反），提示音量改為「跑屍狀態切換提示音量」，說明改成黃昏或惡劣天氣時開始、黎明時停止。其餘 52 項確認現譯成立：射速、噪音、後坐力延遲（MFS 改寫成 Auto fire rate、Noise range、Shot delay）、MFS 與 Escape from Kentucky 的選項說明（只差 MFS 為提示框加的換行）、PhunSprinters 兩版的提示與沙盒說明（只差 rabid zeds／sprinters 的稱呼或 `%`／`%%` 寫法），以及兩版共用的軍用感應器物品名。
   > 技術要點：`owner_conflict_decisions.json` 新增 54 筆、重新背書 2 筆（`IGUI_WeaponUI_FireRate`、`Tooltip_GunP`）；改值的 4 鍵屬 As1 衍生層，改 `sources/ch`＋`cn_overrides` 並登記 `ch_review_state`；`OWNER_CONFLICTS.md` 重生，尚未裁決的衝突由 397 降為 343。
+- **修正 Knox Buildworks 把「樓層」譯成「等級」的 4 處。** 規劃模式的「Use my level」按鈕是切到角色所在的樓層，改為「使用我所在樓層」，規劃模式指南引用的按鈕名一併更新；簡中的藍圖摘要「等级 %1」與新藍圖提示「在当前等级创建」也改為楼层。
+  > 技術要點：依據 `PlanningMode.lua` 的 `onUsePlayerLevel()` 以 `math.floor(player:getZ())` 設定藍圖樓層、藍圖摘要 `%1` 填 `blueprint.level`。4 鍵皆屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點）並登記 `ch_review_state`；建造階段的「Level N」（`IGUI_KBW_Level`）維持「等級」。
 
 ### Removed
 
