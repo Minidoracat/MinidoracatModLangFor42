@@ -20,7 +20,7 @@
 [*] 多人遊戲要由服主把翻譯包加進伺服器，自己訂閱不會帶進伺服器
 [*] 想知道某個 MOD 有沒有支援：[url=https://github.com/Minidoracat/MinidoracatModLangFor42/blob/main/SUPPORTED_MODS.md]完整支援 MOD 清單[/url]
 [/olist]
-📖 [b]安裝、排序與多人設定：[/b][url=https://steamcommunity.com/workshop/filedetails/discussion/3386633401/586187095760095821/]安裝、排序與常見問題（本體＋模組翻譯）[/url]
+📖 [b]安裝、排序與多人設定：[/b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3817839726]中文翻譯包 Chinese Translation MOD 完整說明：安裝、排序與常見問題[/url]
 📋 [b]支援清單、許願與譯錯回報：[/b][url=https://steamcommunity.com/workshop/filedetails/discussion/3765907717/586187095760095861/]支援清單＆翻譯許願／錯誤回報[/url]
 
 [h2]✨ 主要功能[/h2]
