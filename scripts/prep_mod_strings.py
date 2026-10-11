@@ -762,13 +762,18 @@ def main() -> int:
     conflicts_other: dict[str, dict[str, str]] = {}
     resolved: dict[str, dict[str, str]] = {}
     stale_dec: list[str] = []
+    # 需人工重新裁決的訊息（格式 `<落點檔|鍵>：<原因>`），寫進 artifact `_stale_decisions`。
+    # 與 census 盲區（owner 載入失敗）分開：排程 tracker 把前者開成 issue、後者才算故障。
+    redo: list[str] = []
 
     # **unship 裁決即使「衝突已消失」也必須重審**：build 本身不讀 owner census，會繼續
     # 抑制；故 check mode 全庫 blocking。一般 prep 只在該 owner 涉及本批時 blocking，
     # 非本批則降為 stale report——否則任一無關 mod 更新都會凍結全庫所有補譯工作。
     skipped_ids = {fk for _, _, ids in skipped for fk in ids}
 
-    def unship_issue(message: str, owners: dict | None) -> None:
+    def unship_issue(message: str, owners: dict | None, *, blind: bool = False) -> None:
+        if not blind:
+            redo.append(message)
         if args.check_decisions or (owners and set(owners) & batch_owners):
             unchecked.append(message)
         else:
@@ -781,7 +786,7 @@ def main() -> int:
         if not owners:
             if fk in skipped_ids:
                 unship_issue(f"{fk}：相關 owner 載入失敗，census 不可判定；"
-                             "先修基準／鏡像，不得據此退役 unship", owners)
+                             "先修基準／鏡像，不得據此退役 unship", owners, blind=True)
             else:
                 unship_issue(f"{fk}：unship 裁決鍵已不在 census，應退役／重查", owners)
             continue
@@ -877,10 +882,12 @@ def main() -> int:
                         resolved_unship_keys.add(twin_fk)
                 continue
             stale_dec.append(f"{fk}：{why}")
+            redo.append(stale_dec[-1])
         elif fk in decided:
             # 條目存在但形狀壞損（含明確的 `null`）：**必須具名**，否則操作者只看到
             # 「owner 衝突」，不知道自己登記的那條被整條忽略，會以為 gate 壞了而繞過它。
             stale_dec.append(f"{fk}：裁決條目形狀壞損（{type(d).__name__}），已忽略")
+            redo.append(stale_dec[-1])
         # **裁決驗證是全庫規則，必須在 batch 分流之前跑**：否則 `_owner_conflicts_other`
         # 先 `continue`，台帳永遠不生效，已裁的 66 鍵會永久留在 708 待辦裡。
         # 合格者已在上方 `continue`；未裁決／裁決過時者才依是否涉及本批 owner 分流。
@@ -939,6 +946,7 @@ def main() -> int:
     with open(out, "w", encoding="utf-8") as f:
         json.dump({"strings": rows, "_gap": {k: v[0] for k, v in gap.items()},
                    "_unchecked": unchecked, "_undecidable": undecidable,
+                   "_stale_decisions": redo,
                    # 三個衝突欄位都帶 `has_json_en`／`en_source` 加註（見 `annotate`）：
                    # 裁決 translate vs unship 全靠它，先前得逐一人工翻 `sources/en/<wid>.json`
                    # 的 rid 路徑，是最容易判錯的環節（#245 項目 1）。

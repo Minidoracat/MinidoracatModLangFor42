@@ -13,7 +13,7 @@ tracker.py — MinidoracatModLangFor42 雙上游追蹤器（PZ B42 如一模組�
   * 純標準函式庫（urllib / subprocess / hashlib）→ 供 `uv run scripts/tracker.py` 直接執行，CI 免裝依賴。
   * API client 免 key 為主（研究實證端點無 key 參數）；STEAM_API_KEY 為設定選項、非 429 解藥（附加而已）。
   * 交易順序：取數 → diff → 開/更 issue → 最後 commit 成功子集 state；--dry-run 保證零 issue 零 commit。
-  * 核心邏輯（diff / issue 冪等 / git 重試）皆以可注入依賴實作，供內建 self-test 十八情境 mock 驗證。
+  * 核心邏輯（diff / issue 冪等 / git 重試）皆以可注入依賴實作，供內建 self-test 十九情境 mock 驗證。
 
 命令（uv run scripts/tracker.py <命令>）：
   as1-list       擷取 As1 網站模組清單 → sources/as1_modlist.json（參考快照），並把標「正常」與 split 已歸屬、
@@ -26,7 +26,7 @@ tracker.py — MinidoracatModLangFor42 雙上游追蹤器（PZ B42 如一模組�
   check          僅打 API 查時間戳，寫 changed 清單 artifact（workflow check job；無寫權限）
   diff           讀 changed，下載+裁剪+抽取+diff，寫 diffs artifact（workflow download job；無 GitHub 權限）
   issue          讀 diffs，列 open issue 冪等開/更，commit 成功子集 state（workflow issue+state job）
-  self-test      內建十八情境 mock 測試
+  self-test      內建十九情境 mock 測試
 """
 from __future__ import annotations
 
@@ -219,6 +219,9 @@ ISSUE_LABEL = "tracker"
 ISSUE_TYPE_SYNC = "sync"  # 待同步（layer-B）
 ISSUE_TYPE_STALE = "stale"  # 可能過時（layer-A）
 ISSUE_TYPE_REMOVED = "removed"  # 已下架（Workshop 項目不可存取，需人工確認處置）
+# owner 衝突裁決過時：全庫單張、id 固定，依每輪 owner 報告現況開／更／關（`sync_decision_issue`）
+ISSUE_TYPE_DECISION = "decision"
+DECISION_ISSUE_ID = "owner-conflicts"
 _MARKER_RE = re.compile(
     r"<!--\s*tracker:type=(?P<type>[^;]+);id=(?P<id>[^;]+);hash=(?P<hash>[^;\s]+)\s*-->"
 )
@@ -1430,6 +1433,12 @@ class GhClient:
             capture_output=True, text=True, cwd=str(PROJECT_ROOT), check=True,
         )
 
+    def close_issue(self, number: int, comment: str) -> None:
+        subprocess.run(
+            ["gh", "issue", "close", str(number), "--comment", comment],
+            capture_output=True, text=True, cwd=str(PROJECT_ROOT), check=True,
+        )
+
 
 def index_issues(issues: list[dict]) -> dict[tuple[str, str], dict]:
     """由 open issue 清單建索引：key=(類型, workshop_id) → {number, hash, body}。"""
@@ -1514,30 +1523,119 @@ MANIFEST_OUTPUTS = ("SUPPORTED_MODS.md", "README.md", "STEAM_DESCRIPTION.md",
                     "MOD/MinidoracatModLangFor42/workshop.txt", "OWNER_CONFLICTS.md")
 
 
-def refresh_manifest() -> bool:
-    """重生 manifest 生成物與 `OWNER_CONFLICTS.md`。回傳是否成功。
+def refresh_manifest() -> tuple[bool, dict | None]:
+    """重生 manifest 生成物與 `OWNER_CONFLICTS.md`。回傳 (是否成功, 可信的 owner 報告或 None)。
 
     失敗**不阻斷** state commit——追蹤器停止推進的代價（issue 不再開、上游變更漏偵測）
     遠大於生成物晚一輪同步，且 state 推進本身是自癒的。呼叫端改以非零退出碼讓 CI 轉紅。
-    owner 報告在裁決過時／wid 盲區時非零退出，但報告本身已先寫出；照樣回報失敗，
-    讓排程把「有裁決需要重做」顯示出來。
+    owner 報告在裁決過時時也非零退出，但那是待人工裁決、不是故障（見 `owner_report_verdict`）：
+    不算失敗，改由呼叫端 `sync_decision_issue` 開成 issue。
     """
     scripts = PROJECT_ROOT / "scripts"
+
+    def run(cmd: list[str]) -> subprocess.CompletedProcess:
+        return subprocess.run(cmd, capture_output=True, text=True, cwd=str(PROJECT_ROOT))
+
     with tempfile.TemporaryDirectory() as tmp:
-        cmds = [
-            [sys.executable, str(scripts / "build_mod.py"), "manifest"],
-            [sys.executable, str(scripts / "prep_mod_strings.py"), "--owner-report",
-             "--out", str(Path(tmp) / "owner-report.json")],
-        ]
-        ok = True
-        for cmd in cmds:
-            proc = subprocess.run(cmd, capture_output=True, text=True, cwd=str(PROJECT_ROOT))
-            if proc.returncode != 0:
-                detail = (proc.stderr or proc.stdout or "").strip()[-500:]
-                print(f"  ⚠️ {Path(cmd[1]).name} 重生失敗（rc={proc.returncode}）：{detail}",
-                      file=sys.stderr)
-                ok = False
-    return ok
+        out = Path(tmp) / "owner-report.json"
+        manifest = run([sys.executable, str(scripts / "build_mod.py"), "manifest"])
+        owner = run([sys.executable, str(scripts / "prep_mod_strings.py"), "--owner-report",
+                     "--out", str(out)])
+        try:
+            report = owner_report_verdict(owner.returncode, load_json(out))
+        except (OSError, ValueError):
+            report = None
+    ok = True
+    for proc, failed in ((manifest, manifest.returncode != 0), (owner, report is None)):
+        if failed:
+            detail = (proc.stderr or proc.stdout or "").strip()[-500:]
+            print(f"  ⚠️ {Path(proc.args[1]).name} 重生失敗（rc={proc.returncode}）：{detail}",
+                  file=sys.stderr)
+            ok = False
+    return ok, report
+
+
+def owner_report_verdict(rc: int, report: object) -> dict | None:
+    """判讀 `prep_mod_strings.py --owner-report` 的 artifact；可信時回報告，否則 None。
+
+    裁決過時會讓 rc=1，但只要 `_unchecked` 全數也列在 `_stale_decisions`（unship 裁決過時在
+    check mode 兩邊都記），報告仍可信。其餘 `_unchecked` 是 census 盲區：少一個 owner 也會讓
+    簽名不符，過時清單本身不可信，回 None——不得據此開／關 issue。
+    """
+    try:
+        stale, unchecked = report["_stale_decisions"], report["_unchecked"]
+        if not (isinstance(stale, list) and isinstance(unchecked, list)
+                and isinstance(report["_owner_conflicts_other"], dict)):
+            return None
+        if rc != 0 and (not stale or set(unchecked) - set(stale)):
+            return None
+    except (KeyError, TypeError):
+        return None
+    return report
+
+
+def build_decision_plan(report: dict, index: dict[tuple[str, str], dict]) -> dict | None:
+    """依 owner 報告的 `_stale_decisions` 組全庫單張『裁決過時』issue plan；無過時回 None。
+
+    content_hash 只取過時清單：清單不變即 skip，不因關聯 issue 開關而洗留言。
+    """
+    stale = report["_stale_decisions"]
+    if not stale:
+        return None
+    others = report["_owner_conflicts_other"]
+    # 訊息格式 `<落點檔|鍵>：<原因>`；owner＝`{wid}/{root}`，連到該 wid 開著的追蹤 issue
+    wids = {o.partition("/")[0] for m in stale for o in others.get(m.partition("：")[0], {})}
+    related = sorted({index[(t, w)]["number"] for w in wids
+                      for t in (ISSUE_TYPE_STALE, ISSUE_TYPE_REMOVED) if (t, w) in index})
+    content_hash = hashlib.sha256("\n".join(sorted(stale)).encode("utf-8")).hexdigest()
+    body = "\n".join([
+        make_marker(ISSUE_TYPE_DECISION, DECISION_ISSUE_ID, content_hash),
+        f"## owner 衝突裁決過時（{len(stale)} 條）",
+        "",
+        "下列多 owner 共用鍵的裁決已不成立（owner 增減、上游改值或出貨錨點漂移），需要重新裁決：",
+        "",
+        "```text",
+        *(_neutralize_markers(m).replace("```", "ˋˋˋ") for m in stale),
+        "```",
+        "",
+        f"相關 owner 開著的追蹤 issue：{'、'.join(f'#{n}' for n in related) or '無'}",
+        "",
+        "處理：逐鍵確認現行譯文對每個 owner 是否仍成立（owner 與上游英文見 `OWNER_CONFLICTS.md`），"
+        "更新 `sources/owner_conflict_decisions.json` 的 `signature`／`reason`（unship 另含 "
+        "`sources/unshipped_keys.json` 的 `owner_signature`），再跑 "
+        "`uv run scripts/prep_mod_strings.py --owner-report`。清單清空後追蹤器自動關閉本 issue。",
+    ])
+    return {
+        "type": ISSUE_TYPE_DECISION,
+        "workshop_id": DECISION_ISSUE_ID,
+        "content_hash": content_hash,
+        "title": "[裁決過時] owner 衝突裁決需要重新裁決",
+        "body": body,
+        "comment": f"過時裁決清單有變動（現為 {len(stale)} 條），詳見更新後的內文。",
+    }
+
+
+def sync_decision_issue(report: dict, index: dict[tuple[str, str], dict], gh) -> bool:
+    """依 owner 報告冪等開／更／關『裁決過時』issue。gh 失敗回 False、不拋出（state 已提交）。"""
+    ident = (ISSUE_TYPE_DECISION, DECISION_ISSUE_ID)
+    plan = build_decision_plan(report, index)
+    try:
+        if plan is None:
+            existing = index.pop(ident, None)
+            if existing is None:
+                return True
+            gh.close_issue(existing["number"], "owner 報告已無過時裁決，自動關閉。")
+            action = "close"
+        else:
+            if ident not in index:
+                gh.ensure_label()
+            action = apply_issue_plan(plan, index, gh, dry_run=False)
+    except (RuntimeError, subprocess.CalledProcessError) as exc:
+        print(f"  ⚠️ 裁決過時 issue 同步失敗：{exc}", file=sys.stderr)
+        return False
+    print(f"  issue {ISSUE_TYPE_DECISION}/{DECISION_ISSUE_ID} → {action}"
+          f"（過時裁決 {len(report['_stale_decisions'])} 條）")
+    return True
 
 
 def state_add_paths() -> list[str]:
@@ -2028,7 +2126,7 @@ def cmd_run(args) -> int:
 
     # 提交成功子集 state（僅成功處理者推進 last_success/time_updated）
     _persist_state(ts, meta, ok_ids, removed, corpus_state, corpus_updates, en_texts)
-    manifest_ok = refresh_manifest()  # EN 鏡像變動會改到 SUPPORTED_MODS.md 的「覆寫本體」欄
+    manifest_ok, owner_report = refresh_manifest()  # EN 鏡像變動會改到 SUPPORTED_MODS.md 的「覆寫本體」欄
     status = commit_state_with_retry(
         state_add_paths(),
         f"chore(tracker): 更新追蹤器狀態 {now_iso()}",
@@ -2036,6 +2134,8 @@ def cmd_run(args) -> int:
     if status == COMMIT_FAILED:
         print("❌ state commit/push 失敗（下輪自癒）。", file=sys.stderr)
         return 1
+    if owner_report is not None and not sync_decision_issue(owner_report, index, gh):
+        manifest_ok = False
     print(f"\n完成：issue {len(plans)} 筆、state {'已提交' if status == COMMIT_OK else '無變更'}。")
     return 0 if manifest_ok else 1
 
@@ -2230,7 +2330,7 @@ def cmd_issue(args) -> int:
         ts, diffs.get("meta", {}), diffs.get("ok_ids", []), diffs.get("removed", []),
         corpus_state, diffs.get("corpus_updates", {}), diffs.get("en_texts", {}),
     )
-    manifest_ok = refresh_manifest()  # EN 鏡像變動會改到 SUPPORTED_MODS.md 的「覆寫本體」欄
+    manifest_ok, owner_report = refresh_manifest()  # EN 鏡像變動會改到 SUPPORTED_MODS.md 的「覆寫本體」欄
     status = commit_state_with_retry(
         state_add_paths(),
         f"chore(tracker): 更新追蹤器狀態 {now_iso()}",
@@ -2240,6 +2340,8 @@ def cmd_issue(args) -> int:
         return 1
     if status == COMMIT_OK and Path(args.inp).resolve() == BACKFILL_PLANS_JSON.resolve():
         BACKFILL_PLANS_JSON.unlink(missing_ok=True)
+    if owner_report is not None and not sync_decision_issue(owner_report, index, gh):
+        manifest_ok = False
     print(f"完成：issue {len(plans)} 筆、state {'已提交' if status == COMMIT_OK else '無變更'}。")
     return 0 if manifest_ok else 1
 
@@ -2919,11 +3021,11 @@ def cmd_backfill_en(args) -> int:
 
 
 # ============================================================
-# 命令：self-test（十八情境 mock 測試，assert-based）
+# 命令：self-test（十九情境 mock 測試，assert-based）
 # ============================================================
 def cmd_self_test() -> int:
     print("=" * 60)
-    print("self-test：十八情境 mock 測試")
+    print("self-test：十九情境 mock 測試")
     print("=" * 60)
 
     def rec(kind, rel, key, val):
@@ -2990,6 +3092,13 @@ def cmd_self_test() -> int:
 
         def update_body(self, number, body):
             self.issues[number]["body"] = body
+
+        def ensure_label(self):
+            pass
+
+        def close_issue(self, number, comment):
+            self.comments.append((number, comment))
+            self.issues.pop(number)
 
     fake = FakeGh()
     existing_body = make_marker(ISSUE_TYPE_STALE, "222", "OLDHASH") + "\n舊摘要"
@@ -3777,7 +3886,43 @@ def cmd_self_test() -> int:
         assert extract_mod_ids(item) == ["A", "C"], f"情境18：mod ID 抽取錯誤（{extract_mod_ids(item)}）"
     print("  ✅ 情境18 As1 名單→名冊補登（只增不減、fail-closed）＋mod.info 只認有效分支")
 
-    print("\n✅ self-test 十八情境全通過。")
+    # 情境 19：owner 裁決過時是待人工裁決、不是故障——開成全庫單張 issue，不讓排程轉紅；
+    # census 盲區（`_unchecked` 不在 `_stale_decisions`）則過時清單本身不可信，不得開／關 issue。
+    msg = "IG_UI|IGUI_X：裁決簽名已過時（owner 增減或上游改值）"
+    rep = {"_stale_decisions": [msg], "_unchecked": [],
+           "_owner_conflicts_other": {"IG_UI|IGUI_X": {"222/ModB": {}, "999/ModZ": {}}}}
+    unship = "ItemName|Base.Y：owner 衝突已消失，unship 裁決應退役並恢復出貨"
+    rep_unship = {**rep, "_stale_decisions": [msg, unship], "_unchecked": [unship]}
+    assert owner_report_verdict(1, rep) is rep, "情境19：只有裁決過時卻判成不可信"
+    assert owner_report_verdict(1, rep_unship) is rep_unship, \
+        "情境19：unship 裁決過時（check mode 同列 _unchecked）被當成 census 盲區"
+    assert owner_report_verdict(1, {**rep, "_unchecked": ["2（非本批）：缺鏡像"]}) is None, \
+        "情境19：census 盲區仍信任過時清單（少 owner 也會讓簽名不符）"
+    assert owner_report_verdict(1, {**rep, "_stale_decisions": []}) is None, \
+        "情境19：rc=1 卻無過時裁決，竟判可信"
+    assert owner_report_verdict(0, {"_stale_decisions": []}) is None, "情境19：缺欄 artifact 竟判可信"
+    assert owner_report_verdict(0, ["not", "a", "dict"]) is None, "情境19：頂層非 dict 竟判可信"
+    gh19 = FakeGh()
+    gh19.issues[7] = {"number": 7, "title": "[可能過時] ModB",
+                      "body": make_marker(ISSUE_TYPE_STALE, "222", "H")}
+    idx19 = index_issues([gh19.issues[7]])
+    assert sync_decision_issue(rep, idx19, gh19), "情境19：開 issue 失敗"
+    opened = [n for n, i in gh19.issues.items() if n != 7]
+    assert len(opened) == 1, f"情境19：應新開一張裁決過時 issue：{gh19.issues}"
+    body19 = gh19.issues[opened[0]]["body"]
+    assert parse_markers(body19)[0][:2] == (ISSUE_TYPE_DECISION, DECISION_ISSUE_ID), "情境19：marker 身分錯誤"
+    assert msg in body19 and "#7" in body19, f"情境19：body 缺過時鍵或相關 owner issue：{body19}"
+    assert sync_decision_issue(rep, idx19, gh19) and len(gh19.issues) == 2 and not gh19.comments, \
+        "情境19：清單不變卻重開或留言"
+    assert sync_decision_issue(rep_unship, idx19, gh19) and len(gh19.issues) == 2, \
+        "情境19：清單變動應更新同一張"
+    assert unship in gh19.issues[opened[0]]["body"], "情境19：清單變動後 body 未更新"
+    assert sync_decision_issue({**rep, "_stale_decisions": []}, idx19, gh19), "情境19：關 issue 失敗"
+    assert opened[0] not in gh19.issues and (ISSUE_TYPE_DECISION, DECISION_ISSUE_ID) not in idx19, \
+        "情境19：過時清單清空後 issue 未關閉"
+    print("  ✅ 情境19 owner 裁決過時 → 單張 issue 開／更／關，census 盲區不信任過時清單")
+
+    print("\n✅ self-test 十九情境全通過。")
     return 0
 
 
@@ -3793,7 +3938,7 @@ def main() -> None:
   uv run scripts/tracker.py as1-list               # 擷取 As1 網站名單（參考快照），As1 支援的 MOD 補登進名冊
   uv run scripts/tracker.py gen-watchlist          # metadata ∪ registry active → watchlist.json（含 As1）
   uv run scripts/tracker.py --dry-run --limit 5    # 真打 API 查 5 個時間戳，不下載/不開 issue
-  uv run scripts/tracker.py self-test              # 十八情境 mock 測試
+  uv run scripts/tracker.py self-test              # 十九情境 mock 測試
   uv run scripts/tracker.py check  --out c.json    # workflow check job
   uv run scripts/tracker.py diff   --in c.json --out d.json --steamcmd <path>
   uv run scripts/tracker.py issue  --in d.json     # workflow issue+state job

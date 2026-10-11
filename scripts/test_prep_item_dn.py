@@ -552,6 +552,9 @@ rc, art = run(**CONFLICT_FIXTURE, dist_items={"Base.Shared": "共用譯名"},
               decisions={"ItemName|Base.Shared": {**D, "signature": "0" * 16}},
               check_decisions=True)
 assert rc == 1, f"4p3. 過時 signature 在 check mode 未阻斷：rc={rc}"
+# tracker 靠 `_stale_decisions` 把「裁決要重做」開成 issue；漏列就退回排程轉紅、無 issue。
+assert any(s.startswith("ItemName|Base.Shared：") for s in art["_stale_decisions"]), \
+    f"4p3. 過時裁決未寫進 _stale_decisions：{art['_stale_decisions']}"
 
 # 4p4. `--owner-report-check` 的退出碼必須與**報告漂移本身**耦合，不能只反映有無衝突：
 #      少了 `report_drift`（或改成只看 conflicts/unchecked）時，CI 的 report gate 對一份
@@ -696,6 +699,30 @@ rc, art = run(
     unshipped={UNSHIP_BARE: UNSHIP_REG[UNSHIP_BARE]})
 assert rc == 1 and any("owner 衝突已消失" in u for u in art["_unchecked"]), \
     f"4q2c. 衝突消失後 unship 仍靜默生效：rc={rc} {art['_unchecked']}"
+# check mode 的 unship 過時列 `_unchecked`（blocking），也必須列 `_stale_decisions`，
+# 否則 tracker 把它當 census 盲區：排程轉紅且不開 issue。
+rc, art = run(
+    records={f"script_item_dn|{EFF}|Base.Shared": "hOne"},
+    mirror={f"script_item_dn|{EFF}|Base.Shared": "Owner A Name"},
+    dist_items={}, dist_cn={}, vanilla=[], check_decisions=True,
+    decisions={"ItemName|Base.Shared": UNSHIP_DEC},
+    unshipped={UNSHIP_BARE: UNSHIP_REG[UNSHIP_BARE]})
+assert rc == 1 and art["_unchecked"] and set(art["_unchecked"]) <= set(art["_stale_decisions"]), \
+    f"4q2c. check mode 的 unship 過時未列 _stale_decisions：{art['_unchecked']} {art['_stale_decisions']}"
+
+# 4q2d. **census 盲區不是裁決過時**：owner 載入失敗時 census 少一個 owner，簽名本來就對不上；
+#       列進 `_stale_decisions` 會讓 tracker 信任一份錯的過時清單、排程照綠。
+rc, art = run(records={f"script_item_dn|{EFF}|Base.Mine": "hK1"},
+              mirror={f"script_item_dn|{EFF}|Base.Mine": "My Own Item"},
+              dist_items={}, dist_cn={}, vanilla=[], second_wid="2",
+              second_records={f"script_item_dn|{EFF}|Base.Both": "hQ1"},
+              second_mirror={f"script_item_dn|{EFF}|Base.Both": "Theirs",
+                             f"script_item_dn|{EFF}|Base.Extra": "Ahead"},  # 鏡像領先→載入失敗
+              decisions={"ItemName|Base.Both": UNSHIP_DEC}, check_decisions=True)
+assert rc == 1 and any("載入失敗" in u for u in art["_unchecked"]), \
+    f"4q2d. owner 載入失敗未列 _unchecked：rc={rc} {art['_unchecked']}"
+assert not any("載入失敗" in s for s in art["_stale_decisions"]), \
+    f"4q2d. census 盲區被當成裁決過時：{art['_stale_decisions']}"
 
 # 4q3. unshipped registry 是人工真相；四種壞損都須列 `_unchecked` 且 artifact 照樣重寫。
 for label, payload in (
