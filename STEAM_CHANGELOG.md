@@ -1,21 +1,25 @@
-[h1][B42]繁體簡體模組翻譯 42.21.0-1.46.0[/h1]
-[i]2026-10-10[/i]
+[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.21.0-1.47.0[/h1]
+[i]2026-10-11[/i]
 
 [h3]新增[/h3]
 [list]
-[*] 新收錄爬梯模組 SMB steps，51 項文字全數補上繁簡中文：爬上／爬下與跨到左右兩側的選單、延伸梯子需要的材料、無法攀爬的原因、木梯／鋼梯／消防桿的建造說明，以及攀爬耗費體力、失足摔落的沙盒設定（玩家申請）。
-[*] Stay With Me 補上 1,061 項：可選男性同伴後的人稱版本、「支援我」「待在我後面」兩種戰鬥姿態、砍樹與清理工作的指令和回報、手電筒與體力條選項，以及上下車、車上、天候、光線、送禮與幫忙穿戴時依親密程度變化的台詞。
-[*] 其他補齊的模組，共 139 項：Modern Firearms System Community Fix Patch（瞄準鏡重製、零件回收、武器卡彈設定、熱成像瞄準鏡標記）、RPG Inventory - NeatUI（沉浸式搜尋設定）、Roaming Survivors（陣營遷移據點、要求陣營搬走）、Pinoy Survival Foods（鴨仔蛋與白仁蛋）、Frockin Splendor! Vol.5 與 Frockin Stompers!（紅色收納物品、容器掉落倍率）、Bloodlust Overwhelming（正念相關設定）、Wallpapers and More Paint Options（頂角線、腰線、護牆板配方），以及 Yumi's Fishing Expansion、Ammo Loot Drop、Willowbrook Bastion!、Better Vanilla ALICE Suspenders、Better Vanilla Filters and UI。
+[*] Knox Buildworks 補上 194 項：屋頂輔助工具（屋頂型式、坡度、屋簷與出簷、無法生成的原因）、房間切除與延伸、滴管工具、快捷欄、樓層檢視與世界預覽設定、9 本建築雜誌與對應配方、冰箱壓縮機與冷媒瓶等 7 種新材料，以及 5 篇新指南。
+[*] Water Pipes 補上 33 項：截止閥、整棟建築一鍵接通水管的指令與失敗原因、淨水器壓力傳遞設定。
+[*] PhunSprinters 2 補上 25 項：個人的跑屍嘶吼與狀態切換音量、是否排除 The Mutants 的六種變異體、原版跑屍要換成哪種殭屍、除錯顯示選項。
+[*] PhunMart 2 補上 16 項：在地圖上標記開過的販賣機，以及標記的顏色與大小。
+[*] 其他補齊的模組，共 20 項：Tow Truck（掛接時間）、NeatUI Equipment（CleanUI 外觀、面板不透明度）、NeatUI XP Drop（技能圖示大小、數字速度）、Custom Gamepad UI（隱藏未掛載的武器）、Bloodlust Overwhelming（冥想設定）、Advanced Medicine、Modern Firearms System Community Fix Patch。
 [/list]
 
 [h3]更新[/h3]
 [list]
-[*] 跟上模組作者改寫的英文，重譯 10 項：Ammo Loot Drop 與 Guns of Marz 版的彈匣掉落說明完整重寫（補回顏色標記，Guns of Marz 版數字更新）、Plysken Attachments Reborn 的背包減重說明補齊條件、Water Pump 的「抽水機連接」、Skill Journal、Better Vanilla Filters and UI、Bloodlust Overwhelming、RPG Inventory、Wallpapers 各一句說明。
-[*] Modern Firearms System 與社群修正版共用的零件改名為對兩邊都正確的「槍械配件零件」。
+[*] 跟上模組作者改寫的英文，重譯 11 項：Knox Buildworks 的規劃模式、物資與「不只是裝飾」三篇指南，Washing Menus Improved 的汙水清潔設定（補上繃帶、牛仔布條與皮革條），NeatUI XP Drop 的數字大小說明等。
+[*] 槍械模組共用的榴彈發射器提示改為兩行：一般的「按 G 裝填, 按 G 開火」，加上 Modern Firearms System 新式發射器的操作說明。
+[*] PhunSprinters 新舊兩版共用的除錯與提示音量設定，改成對兩版都正確的說法。
+[*] Knox Buildworks 規劃模式的「使用我的等級」改為「使用我所在樓層」（按鈕其實是切到角色所在的樓層），簡中的藍圖樓層顯示也一併修正。
 [*] 更新下載完成後，請重新啟動遊戲載入新翻譯；不需要重開存檔。
 [/list]
 
 [h3]移除[/h3]
 [list]
-[*] 拿掉 9 項模組作者已經刪除的舊文字：Stay With Me 送衣服與首飾的舊台詞（已換成依親密程度變化的新台詞），以及 Wallpapers 改名前的舊配方名。
+[*] 拿掉 NeatUI XP Drop 已刪除的四段數字大小選項（已改成數值滑桿）。
 [/list]
