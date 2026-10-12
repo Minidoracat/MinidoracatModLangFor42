@@ -1,25 +1,24 @@
-[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.21.0-1.47.0[/h1]
-[i]2026-10-11[/i]
+[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.21.0-1.48.0[/h1]
+[i]2026-10-12[/i]
 
 [h3]新增[/h3]
 [list]
-[*] Knox Buildworks 補上 194 項：屋頂輔助工具（屋頂型式、坡度、屋簷與出簷、無法生成的原因）、房間切除與延伸、滴管工具、快捷欄、樓層檢視與世界預覽設定、9 本建築雜誌與對應配方、冰箱壓縮機與冷媒瓶等 7 種新材料，以及 5 篇新指南。
-[*] Water Pipes 補上 33 項：截止閥、整棟建築一鍵接通水管的指令與失敗原因、淨水器壓力傳遞設定。
-[*] PhunSprinters 2 補上 25 項：個人的跑屍嘶吼與狀態切換音量、是否排除 The Mutants 的六種變異體、原版跑屍要換成哪種殭屍、除錯顯示選項。
-[*] PhunMart 2 補上 16 項：在地圖上標記開過的販賣機，以及標記的顏色與大小。
-[*] 其他補齊的模組，共 20 項：Tow Truck（掛接時間）、NeatUI Equipment（CleanUI 外觀、面板不透明度）、NeatUI XP Drop（技能圖示大小、數字速度）、Custom Gamepad UI（隱藏未掛載的武器）、Bloodlust Overwhelming（冥想設定）、Advanced Medicine、Modern Firearms System Community Fix Patch。
+[*] The MRE Chronicles 補上 266 項：安布雷拉公司系列口糧與合集盒、北方先鋒與南極口糧等寒地系列、三合一咖啡與熱可可等熱飲湯品、5 份印刷品，以及新口糧的生成設定。
+[*] Knox Buildworks 補上 167 項：山牆頂端飾板、博風板、屋簷封簷板、落水管出水彎頭、奇數跨距屋脊與墊高平屋頂等新屋頂構件，櫃檯與壁式層架等目錄分類，以及除錯用的自動化測試工具。
+[*] GridInventory 補上 29 項：容器按鈕大小、一次載入的周圍容器上限、按住快速檢視、滾輪行為、切換物品欄快捷鍵與額外容器列數。
+[*] Modern Firearms System Community Fix Patch 補上 24 項：AK 與 M7 槍托管轉接器、裝飾用彈匣與彈鼓、5.45x39mm 75 發彈鼓配方。
+[*] 其他補齊的模組，共 53 項：My So-Called Toy（背包登山扣與氣球掛點）、KnoxGPS（在地圖標記停車位置與進過的建築）、Exhaustive Power Rework（停電音效音量、抽水泵）、PhunMart 2（收銀機零錢設定）、Ammo Loot Drop · Guns of Marz（40mm 榴彈掉落設定）、Bundle Up!（打包面板快捷鍵）。
 [/list]
 
 [h3]更新[/h3]
 [list]
-[*] 跟上模組作者改寫的英文，重譯 11 項：Knox Buildworks 的規劃模式、物資與「不只是裝飾」三篇指南，Washing Menus Improved 的汙水清潔設定（補上繃帶、牛仔布條與皮革條），NeatUI XP Drop 的數字大小說明等。
-[*] 槍械模組共用的榴彈發射器提示改為兩行：一般的「按 G 裝填, 按 G 開火」，加上 Modern Firearms System 新式發射器的操作說明。
-[*] PhunSprinters 新舊兩版共用的除錯與提示音量設定，改成對兩版都正確的說法。
-[*] Knox Buildworks 規劃模式的「使用我的等級」改為「使用我所在樓層」（按鈕其實是切到角色所在的樓層），簡中的藍圖樓層顯示也一併修正。
+[*] 跟上模組作者改寫的英文，重譯 107 項：Knox Buildworks 的屋頂構件改用新名稱，Ammo Loot Drop · Guns of Marz 的原版彈種標上「(原版)」、掉落說明依新內容整段重寫，The MRE Chronicles 的熱食版本補上「(熱)」。
+[*] Extensive Power Rework 三個版本共用的文字，改成對每個版本都正確的說法：「需要停電」改稱「停供」（新版的水廠看的是停水）、「路易斯維爾發電廠」名稱統一、預設值不同的說明不再寫預設值、維修面板的元件待修數不再顯示成「%d」。
+[*] Modern Firearms System 與社群修正版的 5.45×39mm 彈鼓發數不同，物品名改為不寫發數。
 [*] 更新下載完成後，請重新啟動遊戲載入新翻譯；不需要重開存檔。
 [/list]
 
 [h3]移除[/h3]
 [list]
-[*] 拿掉 NeatUI XP Drop 已刪除的四段數字大小選項（已改成數值滑桿）。
+[*] 拿掉 Knox Buildworks 已刪除的舊屋頂封簷板與落水管（已由新的屋頂飾條取代）。
 [/list]
