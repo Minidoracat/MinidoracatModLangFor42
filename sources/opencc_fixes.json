@@ -2079,13 +2079,6 @@
       "reason": "通行、規則通過、驗證通過或表決通過語境。",
       "ch_value": "672632727e2fd4b5"
     },
-    "IG_UI.json|IGUI_KBW_DebugTestPlaceNow": {
-      "patterns": [
-        "通(\\s*)過(?!\\s*[測考審檢])"
-      ],
-      "reason": "通行、規則通過、驗證通過或表決通過語境。",
-      "ch_value": "a6e3bc218fa33efb"
-    },
     "IG_UI.json|IGUI_KBW_DebugTestProgress": {
       "patterns": [
         "通(\\s*)過(?!\\s*[測考審檢])"
@@ -2623,6 +2616,27 @@
       ],
       "reason": "「用戶端」是 client 的台灣標準譯法（與伺服器並列），不是 user，故保留並豁免 A pattern。",
       "ch_value": "77e208d63fb09da4"
+    },
+    "IG_UI.json|IGUI_KBW_DebugTestProgressLine": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "2026-10-12 裁決 keep：除錯測試執行器的測試結果「通過」（pass），同 IGUI_KBW_DebugTestPass。",
+      "ch_value": "25096c9b60e5f4ee"
+    },
+    "IG_UI.json|IGUI_KBW_DebugTestReviewPass": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "2026-10-12 裁決 keep：除錯測試執行器的測試結果「通過」（pass），同 IGUI_KBW_DebugTestPass。",
+      "ch_value": "2f758e4d4550136d"
+    },
+    "Tooltip.json|Tooltip_MGsMRE_CinnamonDiced": {
+      "patterns": [
+        "菜(\\s*)單"
+      ],
+      "reason": "2026-10-12 裁決 keep：「野戰菜單」是口糧餐點菜單（field menu），餐飲語境，同 Recipes.json|Order the Menu。",
+      "ch_value": "18950efbfe24edb3"
     }
   }
 }

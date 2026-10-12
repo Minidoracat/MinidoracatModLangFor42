@@ -4,6 +4,27 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 10 個 MOD 新增的繁簡中文，共 539 項。** The MRE Chronicles（#825，安布雷拉公司系列口糧、配件包與合集盒，北方先鋒、凍原巡邏、冰川之境、南極口糧等寒地系列，三合一咖啡、松針茶、熱可可與番茄羅勒湯等熱飲湯品，5 份印刷品，以及新口糧的生成設定，266 項）、Knox Buildworks（#821，Vanilla Expanded 新增的山牆頂端飾板、博風板、屋簷封簷板、落水管出水彎頭與奇數跨距屋脊、墊高平屋頂等屋頂構件和群組、櫃檯與壁式層架等目錄子分類，以及除錯模式的自動化測試執行器與雜誌解鎖提示，167 項）、GridInventory（#824，容器按鈕大小、一次載入的世界容器上限、按住快速檢視、滾輪行為、切換物品欄快捷鍵與額外容器列數，29 項）、Modern Firearms System Community Fix Patch（#823，AK 與 M7 槍托管轉接器、裝飾用彈匣與彈鼓、5.45x39mm 75 發彈鼓配方，24 項）、My So-Called Toy（#817，背包左右登山扣與氣球掛點和對應選項，19 項）、KnoxGPS（#826，在地圖標記停車位置與進過的建築、前往我的車輛，12 項）、Exhaustive Power Rework（#827，停電音效音量、建築水箱的抽水泵啟停，7 項）、PhunMart 2（#819，收銀機帶零錢的機率與金額上下限，6 項）、Ammo Loot Drop · Guns of Marz（#822，40mm 鹿彈、高爆彈與燃燒彈的掉落設定，6 項），以及 Bundle Up!（#820，打包面板快捷鍵，3 項）。
+  > 技術要點：全數落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫，新鍵皆以有效 CN 值登記 `ch_review_state`。7 路翻譯、7 路對抗複核提出 16 條修正全數採納（PhunMart 零錢說明拿掉譯者自行補上的「錢包」、GridInventory 貨架與 Economy 檔位、P4 說明句 `<br>` 前標點、MRE 餐點編號與合集盒寫法對齊同 MOD 既有譯文、Knox 測試套件的支撐牆）。Knox 屋頂沿用同 MOD 既有術語：Odd-Span＝奇數跨距、Hip End＝斜脊端、rake board＝博風板，Shakes 譯「木板瓦」以區分同批的 Shingles「木瓦」；MRE 的 Print Media `_info` 版面值照抄上游（已是 42.20.4 裸材質路徑格式）。
+
+### Changed
+
+- **依上游英文改值重譯 107 項。** Knox Buildworks 53 項（#821，Vanilla Expanded 44 個屋頂構件改用新命名，例如「半斜溝內角」改為「奇數跨距屋脊交會」、「屋頂區塊 9-x」改為「奇數跨距斜脊端」等；除錯測試執行器 9 項）、Ammo Loot Drop · Guns of Marz 42 項（#822，原版彈種的掉落設定補上「(原版)」；掉落機率與「只有持槍殭屍掉落」的說明依新英文完整重寫：彈種增為 35 種，補上彈鏈供彈與榴彈發射器彈藥只由士兵掉落），The MRE Chronicles 12 項（#825，熱食版本補上「(熱)」，抹茶綠茶與牛肉大麥的說明重寫，兩個口糧生成設定的清單補上新口糧）。
+  > 技術要點：Knox 33 項與 Ammo Loot Drop 28 項屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點）；其餘 46 項屬 own 層，連 `en` 錨點更新；皆登記 `ch_review_state`。MRE 另 8 項只修英文錯字、PhunMart 2 的 2 項只把 `(%)` 改寫成 `(percent)`，譯文不變，只更新 `en` 錨點；Guns of Marz 的 40mm 發射器標題只刪了 Weapons，現譯成立。
+- **裁決 39 個多 MOD 共用鍵，改譯 19 項。** Extensive Power Rework 停更版、Community 版與 Exhaustive Power Rework fork 共用的 38 個鍵（#827）：沙盒分頁標題改為三版共用的「電力重製 (EPR)」；fork 的水廠改看停水，「需要停電」相關的 3 項改用「停供」；Louisville 發電廠統一稱「路易斯維爾發電廠」；三版預設值不同的 3 項沙盒說明拿掉預設值；元件待修數改用兩種呼叫方式都能代入的 `%s`（原本的 `%d` 在 fork 會顯示字面）；面板按鈕拿掉方括號，損壞程度改為「初始損壞程度」，區塊與小節標題依 fork 的版面調整冒號與空格；中斷台詞改為「被打斷了, 晚點再繼續…」。其餘 20 項確認現譯成立（三版預設值相同的沙盒說明保留預設值）。Modern Firearms System 與其社群修正版的 5.45×39mm 彈鼓（#823）發數不同，物品名改為不寫發數的「5.45×39mm 彈鼓」。
+  > 技術要點：`owner_conflict_decisions.json` 新增 39 筆；預設值依三版 `sandbox-options.txt` 比對，佔位與標點依三版 Lua 的呼叫方式與繪製方式判定；改值的 19 鍵皆屬 As1 衍生層，改 `sources/ch`＋`cn_overrides` 並登記 `ch_review_state`；`OWNER_CONFLICTS.md` 重生，尚未裁決的衝突由 344 降為 305。
+
+### Removed
+
+- **移除 57 項上游已刪除的原創翻譯。** Knox Buildworks Vanilla Expanded 舊的屋頂封簷板、30 度封簷板與尖頂、屋頂落水管與它們的群組名和說明（#821），已由新的屋頂飾條構件取代。
+  > 技術要點：`sources/en` 全庫與 tracker state 已無任何 owner 定義這些鍵，steamcmd 抓下的現行 Workshop 內容也查無 `roofing_trim` 引用；`ch_review_state` 同步移除。
+
+其餘追蹤單無需另外變更翻譯：Aquatsar Yacht Club（#818）只把既有的動力船與帆船定義複製到 42.17 版本夾，船名早已出貨；Bundle Up!（#820）另 1,623 個物品與配方區塊只搬了檔案位置；Exhaustive Power Rework（#827）另 10 項只把 `%%s` 改成 `%1`，現譯的 `%s` 在帶參 getText 下照常代入；My So-Called Bag（#816）移除的 9 項、Knox Buildworks 移除的 33 項、MFS 移除的舊彈鼓配方與 GridInventory 移除的 2 項屬 As1 衍生層，依同步流程保留。
+
 ## [42.21.0-1.47.0] - 2026-10-11
 
 ### Added

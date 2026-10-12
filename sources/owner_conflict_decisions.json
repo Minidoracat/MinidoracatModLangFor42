@@ -10174,6 +10174,279 @@
       "reason": "2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。",
       "ch": "調整MFS槍聲音量. 0為靜音, 1為預設, 2為兩倍音量.",
       "cn": "调整MFS枪声音量. 0为静音, 1为默认, 2为两倍音量."
+    },
+    "ItemName|Base.545Drum_cat": {
+      "action": "translate",
+      "signature": "d68e2ff9ea781af2",
+      "reason": "2026-10-12 #823 裁決：ModernFirearmsSystem 寫 100-Round、Community Fix Patch 改成 75-Round，同一個 5.45×39mm 彈鼓；現譯「100發」對 Patch 不成立，比照同 MOD 其他不寫發數的彈鼓譯名，改為「5.45×39mm 彈鼓」。",
+      "ch": "5.45×39mm 彈鼓",
+      "cn": "5.45×39mm 弹鼓"
+    },
+    "Sandbox|Sandbox_EPR": {
+      "action": "translate",
+      "signature": "006007b934dba28f",
+      "reason": "2026-10-12 #827 裁決：前兩版 Extensive Power Rework、fork 為 Exhaustive Power Rework，只差形容詞；拿掉形容詞，改為三方共用的「電力重製 (EPR)」。",
+      "ch": "電力重製 (EPR)",
+      "cn": "电力重制 (EPR)"
+    },
+    "Sandbox|Sandbox_EPR_AssessmentTimeMinutes_tooltip": {
+      "action": "translate",
+      "signature": "5510366adecabdbf",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "ch": "損壞評估階段的基礎時間. 預設: 30 分鐘",
+      "cn": "损坏评估阶段的基础时间. 默认: 30 分钟"
+    },
+    "Sandbox|Sandbox_EPR_CalibrationTimeMinutes_tooltip": {
+      "action": "translate",
+      "signature": "17f8a6a481744658",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "ch": "校準階段的基礎時間. 預設: 90 分鐘",
+      "cn": "校准阶段的基础时间. 默认: 90 分钟"
+    },
+    "Sandbox|Sandbox_EPR_DebugMode_tooltip": {
+      "action": "translate",
+      "signature": "d8523754db0e0223",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "ch": "在控制台顯示除錯資訊. 預設: 關閉",
+      "cn": "在控制台显示调试信息. 默认: 关闭"
+    },
+    "Sandbox|Sandbox_EPR_DegradationRate_tooltip": {
+      "action": "translate",
+      "signature": "15d712229268935d",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "ch": "設施健康度隨時間流失的速度. 數值越高, 衰減越快. 預設: 1.0",
+      "cn": "设施健康度随时间流失的速度. 数值越高, 衰减越快. 默认: 1.0"
+    },
+    "Sandbox|Sandbox_EPR_FieldComponentCount_tooltip": {
+      "action": "translate",
+      "signature": "7fafb9a05912de45",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "ch": "在修復主控制面板後需要修理的額外維修點數量. 預設: 2",
+      "cn": "在修复主控制面板后需要修理的额外维修点数量. 默认: 2"
+    },
+    "Sandbox|Sandbox_EPR_LouisvillePlantEnabled_tooltip": {
+      "action": "translate",
+      "signature": "08cd522ee52927be",
+      "reason": "2026-10-12 #827 裁決：前兩版 Enable the Louisville Combined Utility Plant、fork 寫 Makes the Louisville Power Plant repairable；三版關閉此選項時都不能修這座電廠，改為「啟用路易斯維爾發電廠, 使其可以修復」，三版預設都是開啟。",
+      "ch": "啟用路易斯維爾發電廠, 使其可以修復. 預設: 開啟",
+      "cn": "启用路易斯维尔发电厂, 使其可以修复. 默认: 开启"
+    },
+    "Sandbox|Sandbox_EPR_MinElectricalSkill_tooltip": {
+      "action": "translate",
+      "signature": "c2ddce9a1b6f2a3f",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "ch": "修復變電站所需的最低電工技能. 預設: 7",
+      "cn": "修复变电站所需的最低电气技能. 默认: 7"
+    },
+    "Sandbox|Sandbox_EPR_MinMetalworkSkill_tooltip": {
+      "action": "translate",
+      "signature": "556201e515f127bc",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "ch": "修復變電站所需的最低焊接技能. 預設: 4",
+      "cn": "修复变电站所需的最低焊接技能. 默认: 4"
+    },
+    "Sandbox|Sandbox_EPR_PartReplacementTimeMinutes_tooltip": {
+      "action": "translate",
+      "signature": "37761d85e607beae",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "ch": "零件更換階段的基礎時間. 預設: 360 分鐘 (6 小時)",
+      "cn": "零件更换阶段的基础时间. 默认: 360 分钟 (6 小时)"
+    },
+    "Sandbox|Sandbox_EPR_PartRequirementMultiplier_tooltip": {
+      "action": "translate",
+      "signature": "5c610de1634bf563",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）都是零件需求倍率，EPR_B42 與 fork 寫 Lower = fewer parts，Community 寫 Higher = more demanding (up to 8x)，同一單調關係；8x 上限只有 Community 成立（另兩版上限 2），現譯不提上限、三版預設都是 1.0，維持現值。",
+      "ch": "所需零件數量的乘數. 數值越低, 零件越少. 預設: 1.0",
+      "cn": "所需零件数量的乘数. 数值越低, 零件越少. 默认: 1.0"
+    },
+    "Sandbox|Sandbox_EPR_RepairNoiseRadius_tooltip": {
+      "action": "translate",
+      "signature": "a056d79c77aaff88",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "ch": "維修聲音傳播的距離 (格). 預設: 100",
+      "cn": "维修声音传播的距离 (格). 默认: 100"
+    },
+    "Sandbox|Sandbox_EPR_RepairSpeedMultiplier_tooltip": {
+      "action": "translate",
+      "signature": "e1aed41f1889bd81",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "ch": "所有維修時間的乘數. 數值越低, 維修越快. 預設: 1.0",
+      "cn": "所有维修时间的乘数. 数值越低, 维修越快. 默认: 1.0"
+    },
+    "Sandbox|Sandbox_EPR_RequirePowerOff": {
+      "action": "translate",
+      "signature": "abfffc68f89e762b",
+      "reason": "2026-10-12 #827 裁決：前兩版 Require Power Shutoff（只檢查停電），fork 改 Require Utility Shutoff（水廠檢查停水、其他設施檢查停電）；現譯「需要停電」對 fork 水廠不成立，改用 fork 既有譯文的「停供」：「需要停供」。",
+      "ch": "需要停供",
+      "cn": "需要停供"
+    },
+    "Sandbox|Sandbox_EPR_RequirePowerOff_tooltip": {
+      "action": "translate",
+      "signature": "a538a2ae247a6920",
+      "reason": "2026-10-12 #827 裁決：前兩版 after vanilla power shuts off、fork 改 after the world's own power or water shutoff；同 RequirePowerOff，改為「僅在原版停供發生後才允許維修」，三版預設都是開啟。",
+      "ch": "僅在原版停供發生後才允許維修. 預設: 開啟",
+      "cn": "仅在原版停供发生后才允许维修. 默认: 开启"
+    },
+    "Sandbox|Sandbox_EPR_RequirePrerequisite_tooltip": {
+      "action": "translate",
+      "signature": "d0c6cc0cd25d952a",
+      "reason": "2026-10-12 #827 裁決：前兩版 Louisville Combined Plant、fork 改 Louisville Power Plant，句意相同；「聯合發電廠」對 fork 不準，改為中性的「路易斯維爾發電廠」，三版預設都是開啟。",
+      "ch": "必須先修復路易斯維爾發電廠, 才能修復其他設施. 預設: 開啟",
+      "cn": "必须先修复路易斯维尔发电厂, 才能修复其他设施. 默认: 开启"
+    },
+    "Sandbox|Sandbox_EPR_RequireTools_tooltip": {
+      "action": "translate",
+      "signature": "0142d804c317f237",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "ch": "需要特定工具才能進行維修. 預設: 開啟",
+      "cn": "需要特定工具才能进行维修. 默认: 开启"
+    },
+    "Sandbox|Sandbox_EPR_SkillRequirementMultiplier_tooltip": {
+      "action": "translate",
+      "signature": "818e49cc418e0e7a",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "ch": "所有技能需求的乘數. 數值越低, 越簡單. 預設: 1.0",
+      "cn": "所有技能需求的乘数. 数值越低, 越简单. 默认: 1.0"
+    },
+    "Sandbox|Sandbox_EPR_StartupDefenseTimeMinutes_tooltip": {
+      "action": "translate",
+      "signature": "ecfeded9761bef77",
+      "reason": "2026-10-12 #827 裁決：三版都是啟動時須防守設施的時間，但預設值不同（前兩版 5、fork 75），fork 另補關閉設施要兩倍時間；只譯共通句，拿掉「預設: 5 分鐘」。",
+      "ch": "啟動期間必須堅守設施的時間.",
+      "cn": "启动期间必须坚守设施的时间."
+    },
+    "Sandbox|Sandbox_EPR_StartupNoiseRadius_tooltip": {
+      "action": "translate",
+      "signature": "6240447f50805eec",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "ch": "啟動聲音傳播的距離 (格). 啟動聲音非常大! 預設: 150",
+      "cn": "启动声音传播的距离 (格). 启动声音非常大! 默认: 150"
+    },
+    "Sandbox|Sandbox_EPR_ToolsConsumed_tooltip": {
+      "action": "translate",
+      "signature": "641973e7a09ee65e",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "ch": "工具用於維修時會損失耐久度. 預設: 開啟",
+      "cn": "工具用于维修时会损失耐久度. 默认: 开启"
+    },
+    "Sandbox|Sandbox_EPR_WaterPlantElectricalSkill_tooltip": {
+      "action": "translate",
+      "signature": "fea9a077c1c3e74b",
+      "reason": "2026-10-12 #827 裁決：三版都是修水處理廠的最低電工技能，預設值不同（前兩版 5、fork 8），fork 另補全圖只有一座水廠；只譯共通句，拿掉「預設: 5」。",
+      "ch": "修復水處理廠所需的最低電工技能.",
+      "cn": "修复水处理厂所需的最低电气技能."
+    },
+    "Sandbox|Sandbox_EPR_WaterPlantMetalworkSkill_tooltip": {
+      "action": "translate",
+      "signature": "6a015fd13b949e51",
+      "reason": "2026-10-12 #827 裁決：三版都是修水處理廠的最低焊接技能，預設值不同（前兩版 5、fork 6），fork 另補全圖只有一座水廠；只譯共通句，拿掉「預設: 5」。",
+      "ch": "修復水處理廠所需的最低焊接技能.",
+      "cn": "修复水处理厂所需的最低焊接技能."
+    },
+    "Sandbox|Sandbox_EPR_ZombieAttractionEnabled_tooltip": {
+      "action": "translate",
+      "signature": "f9f5972258fd59fd",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "ch": "維修和啟動會吸引附近的殭屍. 預設: 開啟",
+      "cn": "维修和启动会吸引附近的僵尸. 默认: 开启"
+    },
+    "Sandbox|Sandbox_EPR_ZombieAttractionMultiplier_tooltip": {
+      "action": "translate",
+      "signature": "e3d718e7b77e6626",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "ch": "被吸引的殭屍數量. 數值越高, 殭屍越多. 預設: 1.0",
+      "cn": "被吸引的僵尸数量. 数值越高, 僵尸越多. 默认: 1.0"
+    },
+    "UI|UI_EPR_Dialogue_Interrupted": {
+      "action": "translate",
+      "signature": "3a76844b01a0d10b",
+      "reason": "2026-10-12 #827 裁決：前兩版 Damn, I got interrupted!、fork 改 I'll continue later...；三版都在修理動作中斷、進度已保存時說這句（前兩版 Lua 的後備字串就是 I'll continue later...），改為兩句都成立的「被打斷了, 晚點再繼續…」。",
+      "ch": "被打斷了, 晚點再繼續…",
+      "cn": "被打断了, 晚点再继续…"
+    },
+    "UI|UI_EPR_Dialogue_NeedParts": {
+      "action": "translate",
+      "signature": "86479796c4f189f7",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）只差 for this；三版 Lua 都在台詞後串接零件名，現譯「我需要更多零件.」對三方都成立，維持現值。",
+      "ch": "我需要更多零件.",
+      "cn": "我需要更多零件."
+    },
+    "UI|UI_EPR_Menu_ComponentsNeedRepair": {
+      "action": "translate",
+      "signature": "296eae3f168217db",
+      "reason": "2026-10-12 #827 裁決：前兩版英文 %d、fork 改 %1。前兩版 Lua 以 string.format(getText(key), 數量) 代入，fork 以帶參 getText(key, 數量) 代入（數字會先轉成字串）；%d 在帶參 getText 會顯示字面、%1 交給 string.format 會出錯，%s 兩種呼叫都能正常代入，改為「%s 個元件需要修理」。",
+      "ch": "%s 個元件需要修理",
+      "cn": "%s 个组件需要修理"
+    },
+    "UI|UI_EPR_Notify_FacilityOnline": {
+      "action": "translate",
+      "signature": "23df234bafb9fab8",
+      "reason": "2026-10-12 #827 裁決：前兩版英文 %s、fork 改 %1。前兩版 Lua 寫死英文不讀此鍵，fork 以帶參 getText(key, 設施名) 呼叫；%s 以字串參數代入可正常顯示，現譯「%s 現已上線!」對三方都成立，維持現值。",
+      "ch": "%s 現已上線!",
+      "cn": "%s 现已上线!"
+    },
+    "UI|UI_EPR_Panel_BeginRepair": {
+      "action": "translate",
+      "signature": "1057cb3a25e958af",
+      "reason": "2026-10-12 #827 裁決：前兩版 [ BEGIN REPAIR ]、fork 改 BEGIN REPAIR；前兩版 Lua 不讀此鍵，fork 當按鈕標籤（按鈕自帶外框），拿掉方括號改為「開始維修」。",
+      "ch": "開始維修",
+      "cn": "开始维修"
+    },
+    "UI|UI_EPR_Panel_ContinueRepair": {
+      "action": "translate",
+      "signature": "a80553e0458ed5ce",
+      "reason": "2026-10-12 #827 裁決：前兩版 [ CONTINUE REPAIR ]、fork 改 CONTINUE REPAIR；同 BeginRepair，拿掉方括號改為「繼續維修」。",
+      "ch": "繼續維修",
+      "cn": "继续维修"
+    },
+    "UI|UI_EPR_Panel_DamageLevel": {
+      "action": "translate",
+      "signature": "c4223983885e1255",
+      "reason": "2026-10-12 #827 裁決：前兩版 DAMAGE LEVEL:、fork 改 Damage when found；前兩版 Lua 不讀此鍵，三版顯示的都是發現時的初始損壞程度，fork 標籤與數值分開繪製，改為不帶冒號的「初始損壞程度」。",
+      "ch": "初始損壞程度",
+      "cn": "初始损坏程度"
+    },
+    "UI|UI_EPR_Panel_Functional": {
+      "action": "translate",
+      "signature": "4b39b012a60bfebd",
+      "reason": "2026-10-12 #827 裁決：前兩版 FUNCTIONAL、fork 改 Complete，都指元件修好；只有 fork 讀此鍵（元件狀態值），「正常」對三方都成立，維持現值。",
+      "ch": "正常",
+      "cn": "正常"
+    },
+    "UI|UI_EPR_Panel_RequiredParts": {
+      "action": "translate",
+      "signature": "384ef85a461722d3",
+      "reason": "2026-10-12 #827 裁決：前兩版 REQUIRED PARTS:、fork 改 PARTS:；只有 fork 讀此鍵，當獨立一行的小節標題、後面不接文字，「所需零件:」對三方都成立，只拿掉多餘的尾端空格。",
+      "ch": "所需零件:",
+      "cn": "所需零件:"
+    },
+    "UI|UI_EPR_Panel_RequiredTools": {
+      "action": "translate",
+      "signature": "3b857e3551a08bc2",
+      "reason": "2026-10-12 #827 裁決：前兩版 REQUIRED TOOLS:、fork 改 TOOLS:；同 RequiredParts，「所需工具:」維持，只拿掉多餘的尾端空格。",
+      "ch": "所需工具:",
+      "cn": "所需工具:"
+    },
+    "UI|UI_EPR_Panel_ZoneCoverage": {
+      "action": "translate",
+      "signature": "708f6b467f7bb4f5",
+      "reason": "2026-10-12 #827 裁決：前兩版 ZONE COVERAGE:、fork 改 REGION COVERAGE；三版都當區塊框標題（前兩版 Lua 的後備字串也沒有冒號），改為不帶冒號的「覆蓋區域」。",
+      "ch": "覆蓋區域",
+      "cn": "覆盖区域"
+    },
+    "UI|UI_EPR_PowerNeverShutoff": {
+      "action": "translate",
+      "signature": "32f1d666c677ec86",
+      "reason": "2026-10-12 #827 裁決：前兩版 Power is set to never shut off、fork 改 Utilities（水廠看停水、其他看停電）；現譯「電力設定為永不切斷」對 fork 水廠不成立，改為「原版停供設定為永不發生」。",
+      "ch": "原版停供設定為永不發生. 無法使用 EPR 設施.",
+      "cn": "原版停供设置为永不发生. 无法使用 EPR 设施."
+    },
+    "UI|UI_EPR_Prerequisite_Required": {
+      "action": "translate",
+      "signature": "d5eaa5986ccdccb9",
+      "reason": "2026-10-12 #827 裁決：前兩版 Louisville Combined Plant、fork 改 Louisville Power Plant，情境相同；改為中性的「路易斯維爾發電廠」。",
+      "ch": "必須先修復路易斯維爾發電廠!",
+      "cn": "必须先修复路易斯维尔发电厂!"
     }
   }
 }

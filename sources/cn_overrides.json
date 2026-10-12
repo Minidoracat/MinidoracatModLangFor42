@@ -57374,5 +57374,405 @@
     "as1_value": "在当前等级创建一个新蓝图.",
     "value": "在当前楼层创建一个新蓝图.",
     "reason": "2026-10-11：新藍圖建立在角色目前所在樓層（current level＝樓層），As1 誤作「等级」；CH 已是「目前樓層」。"
+  },
+  "ItemName.json|Base.545Drum_cat": {
+    "as1_value": "5.45×39mm 100 发弹鼓",
+    "value": "5.45×39mm 弹鼓",
+    "reason": "2026-10-12 #823 裁決：ModernFirearmsSystem 寫 100-Round、Community Fix Patch 改成 75-Round，同一個 5.45×39mm 彈鼓；現譯「100發」對 Patch 不成立，比照同 MOD 其他不寫發數的彈鼓譯名，改為「5.45×39mm 彈鼓」。"
+  },
+  "Sandbox.json|Sandbox_EPR": {
+    "as1_value": "深度电力重制",
+    "value": "电力重制 (EPR)",
+    "reason": "2026-10-12 #827 裁決：前兩版 Extensive Power Rework、fork 為 Exhaustive Power Rework，只差形容詞；拿掉形容詞，改為三方共用的「電力重製 (EPR)」。"
+  },
+  "Sandbox.json|Sandbox_EPR_LouisvillePlantEnabled_tooltip": {
+    "as1_value": "启用路易斯维尔联合发电厂. 默认: 开启",
+    "value": "启用路易斯维尔发电厂, 使其可以修复. 默认: 开启",
+    "reason": "2026-10-12 #827 裁決：前兩版 Enable the Louisville Combined Utility Plant、fork 寫 Makes the Louisville Power Plant repairable；三版關閉此選項時都不能修這座電廠，改為「啟用路易斯維爾發電廠, 使其可以修復」，三版預設都是開啟。"
+  },
+  "Sandbox.json|Sandbox_EPR_RequirePowerOff": {
+    "as1_value": "需要停电",
+    "value": "需要停供",
+    "reason": "2026-10-12 #827 裁決：前兩版 Require Power Shutoff（只檢查停電），fork 改 Require Utility Shutoff（水廠檢查停水、其他設施檢查停電）；現譯「需要停電」對 fork 水廠不成立，改用 fork 既有譯文的「停供」：「需要停供」。"
+  },
+  "Sandbox.json|Sandbox_EPR_RequirePowerOff_tooltip": {
+    "as1_value": "仅在原版电力切断后才允许维修. 默认: 开启",
+    "value": "仅在原版停供发生后才允许维修. 默认: 开启",
+    "reason": "2026-10-12 #827 裁決：前兩版 after vanilla power shuts off、fork 改 after the world's own power or water shutoff；同 RequirePowerOff，改為「僅在原版停供發生後才允許維修」，三版預設都是開啟。"
+  },
+  "Sandbox.json|Sandbox_EPR_RequirePrerequisite_tooltip": {
+    "as1_value": "必须先修复路易斯维尔联合发电厂, 才能修复其他设施. 默认: 开启",
+    "value": "必须先修复路易斯维尔发电厂, 才能修复其他设施. 默认: 开启",
+    "reason": "2026-10-12 #827 裁決：前兩版 Louisville Combined Plant、fork 改 Louisville Power Plant，句意相同；「聯合發電廠」對 fork 不準，改為中性的「路易斯維爾發電廠」，三版預設都是開啟。"
+  },
+  "Sandbox.json|Sandbox_EPR_StartupDefenseTimeMinutes_tooltip": {
+    "as1_value": "启动期间必须坚守设施的时间. 默认: 5 分钟",
+    "value": "启动期间必须坚守设施的时间.",
+    "reason": "2026-10-12 #827 裁決：三版都是啟動時須防守設施的時間，但預設值不同（前兩版 5、fork 75），fork 另補關閉設施要兩倍時間；只譯共通句，拿掉「預設: 5 分鐘」。"
+  },
+  "Sandbox.json|Sandbox_EPR_WaterPlantElectricalSkill_tooltip": {
+    "as1_value": "修复水处理厂所需的最低电气技能. 默认: 5",
+    "value": "修复水处理厂所需的最低电气技能.",
+    "reason": "2026-10-12 #827 裁決：三版都是修水處理廠的最低電工技能，預設值不同（前兩版 5、fork 8），fork 另補全圖只有一座水廠；只譯共通句，拿掉「預設: 5」。"
+  },
+  "Sandbox.json|Sandbox_EPR_WaterPlantMetalworkSkill_tooltip": {
+    "as1_value": "修复水处理厂所需的最低焊接技能. 默认: 5",
+    "value": "修复水处理厂所需的最低焊接技能.",
+    "reason": "2026-10-12 #827 裁決：三版都是修水處理廠的最低焊接技能，預設值不同（前兩版 5、fork 6），fork 另補全圖只有一座水廠；只譯共通句，拿掉「預設: 5」。"
+  },
+  "UI.json|UI_EPR_Dialogue_Interrupted": {
+    "as1_value": "该死, 被打断了!",
+    "value": "被打断了, 晚点再继续…",
+    "reason": "2026-10-12 #827 裁決：前兩版 Damn, I got interrupted!、fork 改 I'll continue later...；三版都在修理動作中斷、進度已保存時說這句（前兩版 Lua 的後備字串就是 I'll continue later...），改為兩句都成立的「被打斷了, 晚點再繼續…」。"
+  },
+  "UI.json|UI_EPR_Menu_ComponentsNeedRepair": {
+    "as1_value": "%d 个组件需要修理",
+    "value": "%s 个组件需要修理",
+    "reason": "2026-10-12 #827 裁決：前兩版英文 %d、fork 改 %1。前兩版 Lua 以 string.format(getText(key), 數量) 代入，fork 以帶參 getText(key, 數量) 代入（數字會先轉成字串）；%d 在帶參 getText 會顯示字面、%1 交給 string.format 會出錯，%s 兩種呼叫都能正常代入，改為「%s 個元件需要修理」。"
+  },
+  "UI.json|UI_EPR_Panel_BeginRepair": {
+    "as1_value": "[ 开始维修 ]",
+    "value": "开始维修",
+    "reason": "2026-10-12 #827 裁決：前兩版 [ BEGIN REPAIR ]、fork 改 BEGIN REPAIR；前兩版 Lua 不讀此鍵，fork 當按鈕標籤（按鈕自帶外框），拿掉方括號改為「開始維修」。"
+  },
+  "UI.json|UI_EPR_Panel_ContinueRepair": {
+    "as1_value": "[ 继续维修 ]",
+    "value": "继续维修",
+    "reason": "2026-10-12 #827 裁決：前兩版 [ CONTINUE REPAIR ]、fork 改 CONTINUE REPAIR；同 BeginRepair，拿掉方括號改為「繼續維修」。"
+  },
+  "UI.json|UI_EPR_Panel_DamageLevel": {
+    "as1_value": "损坏程度: ",
+    "value": "初始损坏程度",
+    "reason": "2026-10-12 #827 裁決：前兩版 DAMAGE LEVEL:、fork 改 Damage when found；前兩版 Lua 不讀此鍵，三版顯示的都是發現時的初始損壞程度，fork 標籤與數值分開繪製，改為不帶冒號的「初始損壞程度」。"
+  },
+  "UI.json|UI_EPR_Panel_RequiredParts": {
+    "as1_value": "所需零件: ",
+    "value": "所需零件:",
+    "reason": "2026-10-12 #827 裁決：前兩版 REQUIRED PARTS:、fork 改 PARTS:；只有 fork 讀此鍵，當獨立一行的小節標題、後面不接文字，「所需零件:」對三方都成立，只拿掉多餘的尾端空格。"
+  },
+  "UI.json|UI_EPR_Panel_RequiredTools": {
+    "as1_value": "所需工具: ",
+    "value": "所需工具:",
+    "reason": "2026-10-12 #827 裁決：前兩版 REQUIRED TOOLS:、fork 改 TOOLS:；同 RequiredParts，「所需工具:」維持，只拿掉多餘的尾端空格。"
+  },
+  "UI.json|UI_EPR_Panel_ZoneCoverage": {
+    "as1_value": "覆盖区域: ",
+    "value": "覆盖区域",
+    "reason": "2026-10-12 #827 裁決：前兩版 ZONE COVERAGE:、fork 改 REGION COVERAGE；三版都當區塊框標題（前兩版 Lua 的後備字串也沒有冒號），改為不帶冒號的「覆蓋區域」。"
+  },
+  "UI.json|UI_EPR_PowerNeverShutoff": {
+    "as1_value": "电力设置为永不切断. 无法使用 EPR 设施.",
+    "value": "原版停供设置为永不发生. 无法使用 EPR 设施.",
+    "reason": "2026-10-12 #827 裁決：前兩版 Power is set to never shut off、fork 改 Utilities（水廠看停水、其他看停電）；現譯「電力設定為永不切斷」對 fork 水廠不成立，改為「原版停供設定為永不發生」。"
+  },
+  "UI.json|UI_EPR_Prerequisite_Required": {
+    "as1_value": "必须先修复路易斯维尔联合发电厂!",
+    "value": "必须先修复路易斯维尔发电厂!",
+    "reason": "2026-10-12 #827 裁決：前兩版 Louisville Combined Plant、fork 改 Louisville Power Plant，情境相同；改為中性的「路易斯維爾發電廠」。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_LightBrownRoof_SlopeMiddle": {
+    "as1_value": "浅棕屋顶坡面中段",
+    "value": "浅棕色奇数跨度屋脊 (1.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Light Brown Roof Slope Middle → Light Brown Odd-Span Ridge (1.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_LightBrownRoof_SlopeTop": {
+    "as1_value": "浅棕屋顶坡面顶段",
+    "value": "浅棕色奇数跨度屋脊 (2.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Light Brown Roof Slope Top → Light Brown Odd-Span Ridge (2.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_black_shingles_half_valley_inner_1": {
+    "as1_value": "黑色木瓦半斜沟内角1",
+    "value": "黑色奇数跨度屋脊交汇 (0.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Black Shingles Half Valley Inner 1 → Black Odd-Span Ridge Junction (0.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_black_shingles_half_valley_inner_2": {
+    "as1_value": "黑色木瓦半斜沟内角2",
+    "value": "黑色奇数跨度屋脊交汇 (1.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Black Shingles Half Valley Inner 2 → Black Odd-Span Ridge Junction (1.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_black_shingles_half_valley_inner_3": {
+    "as1_value": "黑色木瓦半斜沟内角3",
+    "value": "黑色奇数跨度屋脊交汇 (2.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Black Shingles Half Valley Inner 3 → Black Odd-Span Ridge Junction (2.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_black_shingles_half_valley_outer_1": {
+    "as1_value": "黑色木瓦半斜沟外角1",
+    "value": "黑色奇数跨度斜脊端 (0.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Black Shingles Half Valley Outer 1 → Black Odd-Span Hip End (0.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_black_shingles_half_valley_outer_2": {
+    "as1_value": "黑色木瓦半斜沟外角2",
+    "value": "黑色奇数跨度斜脊端 (1.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Black Shingles Half Valley Outer 2 → Black Odd-Span Hip End (1.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_black_shingles_half_valley_outer_3": {
+    "as1_value": "黑色木瓦半斜沟外角3",
+    "value": "黑色奇数跨度斜脊端 (2.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Black Shingles Half Valley Outer 3 → Black Odd-Span Hip End (2.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_black_shingles_pitched_half": {
+    "as1_value": "黑色木瓦半坡面",
+    "value": "黑色奇数跨度屋脊 (2.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Black Shingles Pitched Half → Black Odd-Span Ridge (2.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_brown_shingles_half_valley_inner_1": {
+    "as1_value": "棕色木瓦半斜沟内角1",
+    "value": "棕色木瓦奇数跨度屋脊交汇 (0.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Brown Shingles Half Valley Inner 1 → Brown Shingles Odd-Span Ridge Junction (0.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_brown_shingles_half_valley_inner_2": {
+    "as1_value": "棕色木瓦半斜沟内角2",
+    "value": "棕色木瓦奇数跨度屋脊交汇 (1.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Brown Shingles Half Valley Inner 2 → Brown Shingles Odd-Span Ridge Junction (1.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_brown_shingles_half_valley_inner_3": {
+    "as1_value": "棕色木瓦半斜沟内角3",
+    "value": "棕色木瓦奇数跨度屋脊交汇 (2.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Brown Shingles Half Valley Inner 3 → Brown Shingles Odd-Span Ridge Junction (2.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_brown_shingles_half_valley_outer_1": {
+    "as1_value": "棕色木瓦半斜沟外角1",
+    "value": "棕色木瓦奇数跨度斜脊端 (0.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Brown Shingles Half Valley Outer 1 → Brown Shingles Odd-Span Hip End (0.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_brown_shingles_half_valley_outer_2": {
+    "as1_value": "棕色木瓦半斜沟外角2",
+    "value": "棕色木瓦奇数跨度斜脊端 (1.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Brown Shingles Half Valley Outer 2 → Brown Shingles Odd-Span Hip End (1.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_brown_shingles_half_valley_outer_3": {
+    "as1_value": "棕色木瓦半斜沟外角3",
+    "value": "棕色木瓦奇数跨度斜脊端 (2.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Brown Shingles Half Valley Outer 3 → Brown Shingles Odd-Span Hip End (2.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_brown_shingles_pitched_half": {
+    "as1_value": "棕色木瓦半坡面",
+    "value": "棕色木瓦奇数跨度屋脊 (2.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Brown Shingles Pitched Half → Brown Shingles Odd-Span Ridge (2.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_glass_half_pitched_3": {
+    "as1_value": "玻璃半坡面3",
+    "value": "玻璃奇数跨度屋脊 (2.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Glass Half Pitched 3 → Glass Odd-Span Ridge (2.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_grey_shingles_half_valley_inner_1": {
+    "as1_value": "灰色木瓦半斜沟内角1",
+    "value": "灰色奇数跨度屋脊交汇 (0.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Grey Shingles Half Valley Inner 1 → Grey Odd-Span Ridge Junction (0.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_grey_shingles_half_valley_inner_2": {
+    "as1_value": "灰色木瓦半斜沟内角2",
+    "value": "灰色奇数跨度屋脊交汇 (1.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Grey Shingles Half Valley Inner 2 → Grey Odd-Span Ridge Junction (1.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_grey_shingles_half_valley_inner_3": {
+    "as1_value": "灰色木瓦半斜沟内角3",
+    "value": "灰色奇数跨度屋脊交汇 (2.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Grey Shingles Half Valley Inner 3 → Grey Odd-Span Ridge Junction (2.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_grey_shingles_half_valley_outer_1": {
+    "as1_value": "灰色木瓦半斜沟外角1",
+    "value": "灰色奇数跨度斜脊端 (0.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Grey Shingles Half Valley Outer 1 → Grey Odd-Span Hip End (0.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_grey_shingles_half_valley_outer_2": {
+    "as1_value": "灰色木瓦半斜沟外角2",
+    "value": "灰色奇数跨度斜脊端 (1.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Grey Shingles Half Valley Outer 2 → Grey Odd-Span Hip End (1.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_grey_shingles_half_valley_outer_3": {
+    "as1_value": "灰色木瓦半斜沟外角3",
+    "value": "灰色奇数跨度斜脊端 (2.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Grey Shingles Half Valley Outer 3 → Grey Odd-Span Hip End (2.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_roofing_grey_shingles_pitched_half": {
+    "as1_value": "灰色木瓦半坡面",
+    "value": "灰色奇数跨度屋脊 (2.5 阶)",
+    "reason": "2026-10-12 #821：KBWVE 屋頂構件改用新命名（Grey Shingles Pitched Half → Grey Odd-Span Ridge (2.5 Steps)），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_DebugTestDockTooltip": {
+    "as1_value": "打开诺克斯建筑工坊建造测试运行器",
+    "value": "打开诺克斯建筑工坊自动化测试运行器",
+    "reason": "2026-10-12 #821：上游除錯測試執行器改寫英文（Open the Knox Buildworks build-test runner → Open the Knox Buildworks automated test runner），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_DebugTestNoSelection": {
+    "as1_value": "选择一个建造测试",
+    "value": "请先选择一个世界建造结果.",
+    "reason": "2026-10-12 #821：上游除錯測試執行器改寫英文（Select a buildable test → Select a world build result first.），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_DebugTestPending": {
+    "as1_value": "待处理",
+    "value": "未运行",
+    "reason": "2026-10-12 #821：上游除錯測試執行器改寫英文（Pending → Not run），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_DebugTestPlaceNow": {
+    "as1_value": "真实的诺克斯放置光标已激活. 放置并建造物品, 然后记录通过或失败.",
+    "value": "需求物品已生成, 真实的诺克斯放置光标已激活. 放置并建造该构件, 然后检查它.",
+    "reason": "2026-10-12 #821：上游除錯測試執行器改寫英文（The real Knox placement cursor is active. Place and build th → Requirements spawned and the real Knox placement cursor is a），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_DebugTestPrepare": {
+    "as1_value": "准备并放置",
+    "value": "手动准备",
+    "reason": "2026-10-12 #821：上游除錯測試執行器改寫英文（Prepare & place → Prepare manually），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_DebugTestSingleplayerOnly": {
+    "as1_value": "自动前置物品生成目前仅在单人调试会话中可用.",
+    "value": "自动生成需求物品仅在单人调试会话中可用.",
+    "reason": "2026-10-12 #821：上游除錯測試執行器改寫英文（Automatic prerequisite spawning is currently available in si → Automatic requirement spawning is available in single-player），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_DebugTestStatus": {
+    "as1_value": "测试状态",
+    "value": "状态",
+    "reason": "2026-10-12 #821：上游除錯測試執行器改寫英文（Test status → Status），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_DebugTestTitle": {
+    "as1_value": "诺克斯建造 - 测试运行器",
+    "value": "诺克斯建筑工坊 - 测试运行器",
+    "reason": "2026-10-12 #821：上游除錯測試執行器改寫英文（Knox Build - Test Runner → Knox Buildworks - Test Runner），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_KBW_DebugTestWallCoveringManual": {
+    "as1_value": "墙面覆盖操作目前必须通过诺克斯目录进行测试.",
+    "value": "墙面覆盖操作必须通过诺克斯目录进行测试.",
+    "reason": "2026-10-12 #821：上游除錯測試執行器改寫英文（Wall-covering actions must currently be tested from the Knox → Wall-covering actions must be tested from the Knox catalogue），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzDropRate_tooltip": {
+    "as1_value": "以百分比计算的掉落概率, 按每只僵尸、\n每种弹药类型 (共23种) 分别判定.\n默认1.8意味着大约三分之一的\n尸体上都会留下弹药.\n全部 23种类型分别独立判定, 所以设为10\n就已覆盖十之八九的尸体.\n设为0即可关闭此掉落.",
+    "value": "<RGB:1,1,1>你击杀的僵尸掉落每种弹药类型的\n概率.\n\n每种已开启的类型都会单独判定,\n而且大多数僵尸会被判定\n两次. 35 种类型全部开启时,\n每具尸体共判定 70 次.\n\n<RGB:0.100,0.800,1.000>所以 1.8 并不代表 1.8%% 的\n僵尸会掉落. 许多小概率会累加起来.\n设为 1.8 时, 大约 72%% 的\n尸体会掉落弹药.\n\n<RGB:1.000,0.700,0.200>其中 9 种是原版弹药. 本包会\n自行掉落它们, 因此可以\n独立运作. 若同时启用 Ammo Loot Drop,\n则改由该模组掉落它们.\n此时这里只剩 26 种类型, 因此\n大约 61%% 的尸体\n会掉落弹药.\n\n<RGB:0.800,1.000,0.000>如果你希望几乎每只僵尸\n都掉落弹药, 可以试试 6. 请慢慢\n调高.\n\n<RGB:1,1,1>设为 0 即停止掉落.",
+    "reason": "2026-10-12 #822：上游說明的彈種數與掉落率數字更新（35 種、70 次判定、約 72%／61% 屍體），舊譯是過時的縮寫版（也漏了色碼），依新英文完整重譯。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarz_Ammo3030Bullets": {
+    "as1_value": "掉落.30-30子弹",
+    "value": "掉落.30-30子弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarz_Ammo308Bullets": {
+    "as1_value": "掉落7.62x51mm子弹",
+    "value": "掉落7.62x51mm子弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarz_Ammo556Bullets": {
+    "as1_value": "掉落5.56x45mm子弹",
+    "value": "掉落5.56x45mm子弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarz_AmmoBullets357": {
+    "as1_value": "掉落.357马格南弹",
+    "value": "掉落.357马格南弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarz_AmmoBullets38": {
+    "as1_value": "掉落.38特殊弹",
+    "value": "掉落.38特殊弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarz_AmmoBullets44": {
+    "as1_value": "掉落.44马格南弹",
+    "value": "掉落.44马格南弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarz_AmmoBullets45": {
+    "as1_value": "掉落.45 ACP子弹",
+    "value": "掉落.45 ACP子弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarz_AmmoBullets9mm": {
+    "as1_value": "掉落9x19mm子弹",
+    "value": "掉落9x19mm子弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarz_ArmedZombiesOnly_tooltip": {
+    "as1_value": "关闭: 每只僵尸都能掉落弹药.\n一直以来都是如此.\n\n开启: 只有那些原本就\n会随身携带的僵尸才会掉落, 且只掉落\n与其枪械匹配的弹药:\n\n<RGB:0.100,0.800,1.000>士兵 - 所有种类\n猎人与护林员 - 大多数种类\n警察与匪徒 - 手枪、霰弹\n农民 - 步枪和霰弹\n警探、暴徒 - 仅手枪\n\n<RGB:1,1,1>其他人不掉落任何东西, 而且\n城镇里每百只僵尸中几乎\n只有一只符合条件.\n\n<RGB:0.800,1.000,0.000>请前往这些人的工作场所:\n警察局、军营、\n监狱、农场和酒吧.\n\n<RGB:1,1,1>调高掉落概率会有所帮助, 但\n无法让郊区有所产出.",
+    "value": "<RGB:1,1,1>关闭: 任何僵尸都可能掉落弹药. 这是\n常规设置.\n\n开启: 只有看起来带过枪的僵尸\n才会掉落弹药, 而且只会掉落\n符合其枪械的种类:\n\n<RGB:0.100,0.800,1.000>所有类型 - 士兵, 民兵 (4)\n手枪, 霰弹枪, 步枪 - 猎人,\n护林员, 露营者, 乡巴佬,\n生存主义者, 掠夺者 (20)\n手枪, 霰弹枪 - 警察, 警卫,\n匪徒, 摩托车手 (10)\n霰弹枪, 步枪 - 农民, 渔夫\n(2)\n仅手枪 - 警探, 特工,\n卡车司机, 黑帮分子 (5)\n\n<RGB:1,1,1>游戏中 125 种僵尸服装里共有 41 种\n符合条件. 其他僵尸什么都\n不会掉落. 在普通城镇中, 大约\n每 100 只僵尸只有 1 只穿着\n这些服装.\n\n<RGB:1.000,0.700,0.200>弹链供弹与榴弹发射器的弹药只会\n从士兵身上掉落. 在肯塔基州\n没有其他人携带它们.\n\n<RGB:0.800,1.000,0.000>所以请到这些人工作的地方搜寻:\n警察局, 军事基地,\n监狱, 农场和酒吧.\n\n<RGB:1,1,1>提高掉落概率会有一点帮助,\n但在郊区你仍然只能找到\n极少的东西.",
+    "reason": "2026-10-12 #822：上游說明新增「彈鏈供彈與榴彈發射器彈藥只由士兵掉落」一段，舊譯是過時的縮寫版（也漏了色碼），依新英文完整重譯。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzBoxDropRate_tooltip": {
+    "as1_value": "以百分比计算的掉落概率, 按每只僵尸、\n每种整盒弹药类型 (共23种) 分别判定.\n默认0.18意味着大约每25具尸体中\n会有一具掉出整盒弹药.\n一盒装有20到50发子弹, 所以\n很小的数值也能带来可观的收益.\n设为0即可关闭此掉落.",
+    "value": "<RGB:1,1,1>你击杀的僵尸掉落每种整盒弹药类型的\n概率.\n\n每种已开启的类型都会单独判定,\n而且大多数僵尸会被判定\n两次. 35 种类型全部开启时,\n每具尸体共判定 70 次.\n\n<RGB:0.100,0.800,1.000>所以 0.18 并不代表 0.18%% 的\n僵尸会掉落. 许多小概率会累加起来.\n设为 0.18 时, 大约每 8 具尸体\n会掉落 1 盒弹药.\n\n<RGB:1.000,0.700,0.200>其中 9 种是原版弹药盒. 本包会\n自行掉落它们, 因此可以\n独立运作. 若同时启用 Ammo Loot Drop Box,\n则改由该模组\n掉落它们. 此时这里只剩 26 种类型,\n因此大约每 11 具尸体\n会掉落 1 盒弹药.\n\n<RGB:0.800,1.000,0.000>一盒装有 10 到 50 发子弹, 所以\n这里设很小的数值就已经是\n大量弹药.\n\n<RGB:1,1,1>设为 0 即停止掉落.",
+    "reason": "2026-10-12 #822：上游說明的彈種數與掉落率數字更新（35 種、70 次判定、約 72%／61% 屍體），舊譯是過時的縮寫版（也漏了色碼），依新英文完整重譯。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzBox_Ammo3030Box": {
+    "as1_value": "掉落.30-30子弹",
+    "value": "掉落.30-30子弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzBox_Ammo308Box": {
+    "as1_value": "掉落7.62x51mm子弹",
+    "value": "掉落7.62x51mm子弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzBox_Ammo556Box": {
+    "as1_value": "掉落5.56x45mm子弹",
+    "value": "掉落5.56x45mm子弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzBox_AmmoBullets357Box": {
+    "as1_value": "掉落.357马格南弹",
+    "value": "掉落.357马格南弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzBox_AmmoBullets38Box": {
+    "as1_value": "掉落.38特殊弹",
+    "value": "掉落.38特殊弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzBox_AmmoBullets44Box": {
+    "as1_value": "掉落.44马格南弹",
+    "value": "掉落.44马格南弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzBox_AmmoBullets45Box": {
+    "as1_value": "掉落.45 ACP子弹",
+    "value": "掉落.45 ACP子弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzBox_AmmoBullets9mmBox": {
+    "as1_value": "掉落9x19mm子弹",
+    "value": "掉落9x19mm子弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzBox_ArmedZombiesOnly_tooltip": {
+    "as1_value": "关闭: 每只僵尸都能掉落整盒弹药.\n一直以来都是如此.\n\n开启: 只有那些原本就\n会随身携带的僵尸才会掉落, 且只掉落\n与其枪械匹配的弹药:\n\n<RGB:0.100,0.800,1.000>士兵 - 所有种类\n猎人与护林员 - 大多数种类\n警察与匪徒 - 手枪、霰弹\n农民 - 步枪和霰弹\n警探、暴徒 - 仅手枪\n\n<RGB:1,1,1>其他人不掉落任何东西, 而且\n城镇里每百只僵尸中几乎\n只有一只符合条件.\n\n<RGB:0.800,1.000,0.000>请前往这些人的工作场所:\n警察局、军营、\n监狱、农场和酒吧.\n\n<RGB:1,1,1>调高掉落概率会有所帮助, 但\n无法让郊区有所产出.",
+    "value": "<RGB:1,1,1>关闭: 任何僵尸都可能掉落整盒弹药. 这是\n常规设置.\n\n开启: 只有看起来带过枪的僵尸\n才会掉落整盒弹药, 而且只会掉落\n符合其枪械的种类:\n\n<RGB:0.100,0.800,1.000>所有类型 - 士兵, 民兵 (4)\n手枪, 霰弹枪, 步枪 - 猎人,\n护林员, 露营者, 乡巴佬,\n生存主义者, 掠夺者 (20)\n手枪, 霰弹枪 - 警察, 警卫,\n匪徒, 摩托车手 (10)\n霰弹枪, 步枪 - 农民, 渔夫\n(2)\n仅手枪 - 警探, 特工,\n卡车司机, 黑帮分子 (5)\n\n<RGB:1,1,1>游戏中 125 种僵尸服装里共有 41 种\n符合条件. 其他僵尸什么都\n不会掉落. 在普通城镇中, 大约\n每 100 只僵尸只有 1 只穿着\n这些服装.\n\n<RGB:1.000,0.700,0.200>弹链供弹与榴弹发射器的弹药只会\n从士兵身上掉落. 在肯塔基州\n没有其他人携带它们.\n\n<RGB:0.800,1.000,0.000>所以请到这些人工作的地方搜寻:\n警察局, 军事基地,\n监狱, 农场和酒吧.\n\n<RGB:1,1,1>提高掉落概率会有一点帮助,\n但在郊区你仍然只能找到\n极少的东西.",
+    "reason": "2026-10-12 #822：上游說明新增「彈鏈供彈與榴彈發射器彈藥只由士兵掉落」一段，舊譯是過時的縮寫版（也漏了色碼），依新英文完整重譯。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzCarton_Ammo3030Carton": {
+    "as1_value": "掉落.30-30子弹",
+    "value": "掉落.30-30子弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzCarton_Ammo308Carton": {
+    "as1_value": "掉落7.62x51mm子弹",
+    "value": "掉落7.62x51mm子弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzCarton_Ammo556Carton": {
+    "as1_value": "掉落5.56x45mm子弹",
+    "value": "掉落5.56x45mm子弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzCarton_AmmoBullets357Carton": {
+    "as1_value": "掉落.357马格南弹",
+    "value": "掉落.357马格南弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzCarton_AmmoBullets38Carton": {
+    "as1_value": "掉落.38特殊弹",
+    "value": "掉落.38特殊弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzCarton_AmmoBullets44Carton": {
+    "as1_value": "掉落.44马格南弹",
+    "value": "掉落.44马格南弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzCarton_AmmoBullets45Carton": {
+    "as1_value": "掉落.45 ACP子弹",
+    "value": "掉落.45 ACP子弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "Sandbox.json|Sandbox_GunsOfMarzCarton_AmmoBullets9mmCarton": {
+    "as1_value": "掉落9x19mm子弹",
+    "value": "掉落9x19mm子弹 (原版)",
+    "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
   }
 }
