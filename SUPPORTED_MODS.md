@@ -1099,7 +1099,7 @@
 | [Fancy Handwork B42.20](https://steamcommunity.com/sharedfiles/filedetails/?id=3771638611) | — | — | `FancyHandworkB42_19` | 28 | — | — |
 | [[B42] KR SolarOS - Portable Solar Panel Generator, Solar Panel Charger & Custom Flashlights/Batteries](https://steamcommunity.com/sharedfiles/filedetails/?id=3771709541) | — | — | `KRSolarOS` | ? | — | — |
 | [Spawn Selector](https://steamcommunity.com/sharedfiles/filedetails/?id=3772052709) | 出生點選擇器 | 可選擇或隨機決定出生地點、新增興趣點與圖例介面，並以沙盒設定限制可出生的建築類型（市政與公共建築、餐廳與酒吧等）。 | `SpawnSelector` | 96 | — | — |
-| [Knox Buildworks](https://steamcommunity.com/sharedfiles/filedetails/?id=3772269882) | 諾克斯建築工坊 | 新增大量可建造的家電與設施（柴火爐、水槽、冰箱等）、瀝青混合材料配方，並提供藍圖系統與可設定的藍圖半徑。 | `KnoxBuildworks`, `KnoxBuildworksVanillaExpanded` | 2973 | — | — |
+| [Knox Buildworks](https://steamcommunity.com/sharedfiles/filedetails/?id=3772269882) | 諾克斯建築工坊 | 新增大量可建造的家電與設施（柴火爐、水槽、冰箱等）、瀝青混合材料配方，並提供藍圖系統與可設定的藍圖半徑。 | `KnoxBuildworks`, `KnoxBuildworksVanillaExpanded` | 2973 | ⚠️ ≥1 | — |
 | [Water Pump](https://steamcommunity.com/sharedfiles/filedetails/?id=3772302032) | — | — | `WaterPump` | 87 | — | — |
 | [Indoor Climate](https://steamcommunity.com/sharedfiles/filedetails/?id=3772549209) | — | — | `IndoorClimateLiteB42` | 48 | — | — |
 | [Knox Immersivity B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3772609548) | — | — | `KnoxImersivityB42` | 92 | — | — |
