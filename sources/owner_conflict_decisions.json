@@ -9666,10 +9666,10 @@
     },
     "IG_UI|IGUI_CleanHotBar_AmmoText_Scale": {
       "action": "translate",
-      "signature": "6f010fd1bfc10b0a",
-      "reason": "2026-10-08 #737 裁決：CleanHotBar 與 RE Hotbar 寫 AmmoText Height，BritaCombinedB42 寫 Ammunition text size，都是用＋／－按鈕縮放彈藥數字的同一設定；文字高度即字級大小，現行出貨對三方都成立，維持現值。",
-      "ch": "彈藥文字高度",
-      "cn": "弹药文本高度"
+      "signature": "117aeaf9a870dc61",
+      "reason": "2026-10-13 #828／#841 裁決：CleanHotBar 改寫為 Ammo Text Size，與 BritaCombinedB42 的 Ammunition text size 都是「大小」，RE Hotbar 的 AmmoText Height 是同一個縮放彈藥數字的設定；改為三方都成立的「彈藥文字大小」。",
+      "ch": "彈藥文字大小",
+      "cn": "弹药文本大小"
     },
     "IG_UI|IGUI_CleanHotBar_DurabilityAlert": {
       "action": "translate",
@@ -9680,15 +9680,15 @@
     },
     "IG_UI|IGUI_CleanHotBar_EquipItem": {
       "action": "translate",
-      "signature": "b99c6b61ecf7d35f",
-      "reason": "2026-10-08 #737 裁決：CleanHotBar 與 RE Hotbar 寫 Hand Equiped，BritaCombinedB42 寫 Equipped in hand，同一設定；現行出貨「手持裝備」對三方都成立，維持現值。",
+      "signature": "438b5f914cab311d",
+      "reason": "2026-10-13 #828／#841 裁決：CleanHotBar 改寫為 Hand-Equipped，RE Hotbar 寫 Hand Equiped，BritaCombinedB42 寫 Equipped in hand，同一設定；現行「手持裝備」對三方都成立，維持現值。",
       "ch": "手持裝備",
       "cn": "手持装备"
     },
     "IG_UI|IGUI_CleanHotBar_StatusBar_Height": {
       "action": "translate",
-      "signature": "47392faaf1e4a354",
-      "reason": "2026-10-08 #737 裁決：CleanHotBar 與 RE Hotbar 寫 StatusBar Height，BritaCombinedB42 寫 Status bar height，只差拼寫與大小寫；現行出貨對三方都成立，維持現值。",
+      "signature": "2e64485c34b6c480",
+      "reason": "2026-10-13 #828／#841 裁決：CleanHotBar 改寫為 Status Bar Height，與 RE Hotbar 的 StatusBar Height、BritaCombinedB42 的 Status bar height 只差拼寫與大小寫；現行「狀態列高度」對三方都成立，維持現值。",
       "ch": "狀態列高度",
       "cn": "状态栏高度"
     },
@@ -10023,38 +10023,38 @@
     },
     "Sandbox|Sandbox_PhunSprinters_MoonPhaseCrescent_tooltip": {
       "action": "translate",
-      "signature": "9e46939d5fd18afb",
-      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
-      "ch": "按該數值修正蛾眉月夜晚的跑屍機率. 例:50為降低50%% 200為翻倍機率. 留空或填0則不修正.",
-      "cn": "按该数值修正娥眉月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 留空或填0则不修正."
+      "signature": "94d7dfeb1510ee18",
+      "reason": "2026-10-13 #832／#841 裁決：PhunSprinters 2 把結尾改成「100 為不變、0 代表那幾晚完全沒有跑屍」，與舊版 PhunSprinters（死檔 _EN.txt）的「留空或 0 不修正」相反；改成兩版都成立的「填100則不修正」，拿掉 0 的說明。",
+      "ch": "按該數值修正蛾眉月夜晚的跑屍機率. 例:50為降低50%% 200為翻倍機率. 填100則不修正.",
+      "cn": "按该数值修正娥眉月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 填100则不修正."
     },
     "Sandbox|Sandbox_PhunSprinters_MoonPhaseFull_tooltip": {
       "action": "translate",
-      "signature": "734addbddf78e413",
-      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
-      "ch": "按該數值修正滿月夜晚的跑屍機率. 例:50為降低50%% 200為翻倍機率. 留空或填0則不修正.",
-      "cn": "按该数值修正满月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 留空或填0则不修正."
+      "signature": "3a2e1ba22414616e",
+      "reason": "2026-10-13 #832／#841 裁決：PhunSprinters 2 把結尾改成「100 為不變、0 代表那幾晚完全沒有跑屍」，與舊版 PhunSprinters（死檔 _EN.txt）的「留空或 0 不修正」相反；改成兩版都成立的「填100則不修正」，拿掉 0 的說明。",
+      "ch": "按該數值修正滿月夜晚的跑屍機率. 例:50為降低50%% 200為翻倍機率. 填100則不修正.",
+      "cn": "按该数值修正满月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 填100则不修正."
     },
     "Sandbox|Sandbox_PhunSprinters_MoonPhaseGibbous_tooltip": {
       "action": "translate",
-      "signature": "cdf38792652f6c8e",
-      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
-      "ch": "按該數值修正凸月夜晚的跑屍機率. 例:50為降低50%% 200為翻倍機率. 留空或填0則不修正.",
-      "cn": "按该数值修正凸月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 留空或填0则不修正."
+      "signature": "f284cece949288d5",
+      "reason": "2026-10-13 #832／#841 裁決：PhunSprinters 2 把結尾改成「100 為不變、0 代表那幾晚完全沒有跑屍」，與舊版 PhunSprinters（死檔 _EN.txt）的「留空或 0 不修正」相反；改成兩版都成立的「填100則不修正」，拿掉 0 的說明。",
+      "ch": "按該數值修正凸月夜晚的跑屍機率. 例:50為降低50%% 200為翻倍機率. 填100則不修正.",
+      "cn": "按该数值修正凸月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 填100则不修正."
     },
     "Sandbox|Sandbox_PhunSprinters_MoonPhaseNew_tooltip": {
       "action": "translate",
-      "signature": "cce4303d003657f1",
-      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
-      "ch": "按該數值修正新月夜晚的跑屍機率. 例:50為降低50%% 200為翻倍機率. 留空或填0則不修正.",
-      "cn": "按该数值修正新月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 留空或填0则不修正."
+      "signature": "a2f4751dd8e60824",
+      "reason": "2026-10-13 #832／#841 裁決：PhunSprinters 2 把結尾改成「100 為不變、0 代表那幾晚完全沒有跑屍」，與舊版 PhunSprinters（死檔 _EN.txt）的「留空或 0 不修正」相反；改成兩版都成立的「填100則不修正」，拿掉 0 的說明。",
+      "ch": "按該數值修正新月夜晚的跑屍機率. 例:50為降低50%% 200為翻倍機率. 填100則不修正.",
+      "cn": "按该数值修正新月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 填100则不修正."
     },
     "Sandbox|Sandbox_PhunSprinters_MoonPhaseQuarter_tooltip": {
       "action": "translate",
-      "signature": "6bd78e605b0aa4b9",
-      "reason": "2026-10-11 #807 裁決：舊版 PhunSprinters（死檔 _EN.txt）與 PhunSprinters 2 只差字面百分號寫成 % 或 %%，語意相同，維持現值。",
-      "ch": "按該數值修正上弦月夜晚的跑屍機率. 例:50為降低50%% 200為翻倍機率. 留空或填0則不修正.",
-      "cn": "按该数值修正上弦月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 留空或填0则不修正."
+      "signature": "713950f4b1896dbc",
+      "reason": "2026-10-13 #832／#841 裁決：PhunSprinters 2 把結尾改成「100 為不變、0 代表那幾晚完全沒有跑屍」，與舊版 PhunSprinters（死檔 _EN.txt）的「留空或 0 不修正」相反；改成兩版都成立的「填100則不修正」，拿掉 0 的說明。",
+      "ch": "按該數值修正上弦月夜晚的跑屍機率. 例:50為降低50%% 200為翻倍機率. 填100則不修正.",
+      "cn": "按该数值修正上弦月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 填100则不修正."
     },
     "Sandbox|Sandbox_PhunSprinters_SprintingChangeNotificationVolume": {
       "action": "translate",
@@ -10447,6 +10447,34 @@
       "reason": "2026-10-12 #827 裁決：前兩版 Louisville Combined Plant、fork 改 Louisville Power Plant，情境相同；改為中性的「路易斯維爾發電廠」。",
       "ch": "必須先修復路易斯維爾發電廠!",
       "cn": "必须先修复路易斯维尔发电厂!"
+    },
+    "Sandbox|Sandbox_CommonSense_PryAllDoors_tooltip": {
+      "action": "translate",
+      "signature": "098490aba63415e3",
+      "reason": "2026-10-13 #834 裁決：BB_CommonSenseRoy、CommonSense 3717968421 與 3750253491 三版只差 pried open up 的贅字與結尾空白，語意相同；現行譯文對三方都成立，維持現值。",
+      "ch": "開啟後所有門都能被撬開. 預設加固門 (監獄門, 金屬格柵門等) 需要達到指定力量等級才能撬動.",
+      "cn": "开启后所有门都能被撬开. 默认加固门 (监狱门, 金属格栅门等) 需要达到指定力量等级才能撬动."
+    },
+    "Tooltip|Tooltip_CS_CantPryOpenRDoor": {
+      "action": "translate",
+      "signature": "ea6d5b5d5a21bacb",
+      "reason": "2026-10-13 #834 裁決：三版語意相同，佔位方言 3717968421 為 %1、另兩版為 %s；依 placeholder.md 多 owner 方言分歧寫 %s（帶參 getText 與 string.format 兩種呼叫都能代入），現行譯文已是 %s，維持現值。",
+      "ch": "這扇門太過堅固, 需要%s級力量才能撬動.",
+      "cn": "这扇门太坚固了, 你撬不开. 需要力量等级 %s."
+    },
+    "Sandbox|Sandbox_CommonSense_CanWoundChance": {
+      "action": "translate",
+      "signature": "c35a5c9a8251e08e",
+      "reason": "2026-10-13 #834 裁決：3717968421 寫 Can-Opening Injury Chance，3750253491 寫 Chance to Get Injured Opening Cans，同一設定；現行「開罐受傷機率」對兩方都成立，維持現值。",
+      "ch": "開罐受傷機率",
+      "cn": "开罐受伤概率"
+    },
+    "Sandbox|Sandbox_CommonSense_CanWoundChance_tooltip": {
+      "action": "translate",
+      "signature": "d08181bcb7b5aa34",
+      "reason": "2026-10-13 #834 裁決：3717968421 寫 with an improvised tool，3750253491 寫 with knives or scissors（BB_CS_OnCraft.lua 的 CSOpen…WithAnyTool 配方，不用開罐器時判定），改為兩版都成立的「用刀具、剪刀等臨時工具」，受傷部位不寫死。",
+      "ch": "用刀具、剪刀等臨時工具開罐頭時受傷的機率.",
+      "cn": "用刀具、剪刀等临时工具开罐头时受伤的概率."
     }
   }
 }

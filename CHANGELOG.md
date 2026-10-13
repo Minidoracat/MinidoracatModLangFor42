@@ -10,11 +10,24 @@
 
 - **SMB steps 補上 0.4.5 新增的 1 項繁簡中文。** 伺服器開著穿牆反作弊（`AntiCheatNoClip`）時，往上爬會被拒絕並顯示這則提示：反作弊會把往上爬的人拉回去，請管理員設為 4，往下爬不受影響（#840）。
   > 技術要點：own 目錄 CN＋`sources/ch`，CH／CN 逐鍵對照 EN 直寫，以有效 CN 值登記 `ch_review_state`；「穿牆反作弊」沿用本體伺服器設定說明的譯名。上游 52 鍵的 EN 值 hash 與 tracker state 全數相符，兩組動態組鍵（`ContextMenu_SMB_steps_Refused*` 6 個、`Tooltip_SMB_steps_Build*` 12 個）全數出貨。
+- **補齊 12 個 MOD 新增的繁簡中文，共 2,445 項。** Project A-Life（#839，NPC 名牌與職稱、對話與回應、訪客與安全屋事件、聲望與態度、無線電與交談介面、編輯器說明，以及改版後重新分頁的沙盒設定：遭遇、突襲、受傷倒地與救援、建築搜刮、NPC 行為模組與標有「[專家]」的進階調校，2,244 項）、Long Term Preservation Extended（#830，罐裝、鹹肉罐裝與臘製的海狸肉、熊肉、人肉、殭屍腦等新食材與整盒裝，鑿岩鹽、各 DLC 相容版的醃肉、熬油、製罐與裝箱配方，132 項）、Aegis Panel（#835，依類別清除地板、家具、地上物品、植被、牆與窗戶，整塊區塊清除，補給包冷卻群組與發放物品的耐久、填充量、液體設定，32 項）、Mattnetic's Hide Anywhere（#838，體重、攜帶物品、藏身處類型與特質是否影響進入時間與進入資格的 6 個開關，12 項）、Pixel Strike Indicator & Health Bar（#837，Project Viewpoint 第一／第三人稱下血條與傷害數字的顯示位置，8 項）、Project Cook（#829，基礎物品留在物品欄或放回原容器，4 項）、Modern Firearms System（#831，戰術手電筒的聚光／開啟／關閉，3 項）、TwisTonFire - WANTED（#833，燧石與石灰石沉積的掃描，3 項）、CleanHotBar（#828，控制器輪盤顯示設定與 MOD 選項標題，2 項）、PhunSprinters 2（#832，跑屍速度，2 項）、Common Sense（#834，除錯輸出，2 項），以及 Furniture Push & Pull（#836，移動前先拆開堆疊容器的提示，1 項）。
+  > 技術要點：全數落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫，新鍵皆以有效 CN 值登記 `ch_review_state`。15 路翻譯、15 路對抗複核提出 68 條修正全數採納；合併時統一 A-Life 跨群組的職稱譯法（17 個職稱各收斂成一種譯法，依陣營刻意區分的 Engineer／Picker／Cook／Outrider 等保留），faction 依 2026-10-09 家族裁定譯「陣營」，Beaver 對齊本體官方譯名「海狸」。A-Life 的鍵名是英文的雜湊（`ALifeText.lua` 的 `Text.key`），改字就是新鍵；12 個 wid 以 steamcmd 重抓，10,037 筆文本 record 的值 hash 與 tracker state 全數相符。
 
 ### Changed
 
 - **SMB steps 的工具、材料、技能與按鍵改用本體譯名，共 5 項。** 延伸木梯要的「錘子」、延伸鋼梯要的「金屬棒」（配方收鐵條、鋼棒、鋼條任一種，不只鋼棒）、消防桿兩則說明裡打破地板用的「破牆大錘」；沙盒「攀爬會消耗體力」的說明改用本體的「攀爬繩索」、「肌肉拉傷係數」與「慢跑鍵」，消耗減少的條件改為「力量與體格越高」（原本寫成身強力壯、身體健康等特質，實際依的是力量與體格技能等級）。
   > 技術要點：own 目錄，CH 改 `sources/ch` 5 鍵，CN 改 own 目錄 3 鍵（錘子與金屬棒的簡中原本就對齊本體），改值的 CN 重新登記 `ch_review_state`；支援清單摘要的「奔跑鍵」同步改「慢跑鍵」。依據 `SMB_stepsRealism.lua` 以 `Perks.Strength`／`Perks.Fitness` 計算消耗、`SMB_stepsShift.lua` 以 `KeybindId.RUN` 判斷加速。
+- **依上游英文改值重譯 218 項。** Project A-Life 214 項（#839，沙盒設定全面改寫：選項名改為描述效果，例如「啟用敵對 A-Life」改為「敵對陣營」，說明改成新的數值與規則，並在結尾補上預設值）、Aegis Panel 3 項（#835，補給包冷卻時間的 `%1` 改由 MOD 自帶單位，拿掉譯文寫死的「小時」；修理說明改為修復所選玩家身上所有物品、包含背包並補好衣物破洞）、Mattnetic's Hide Anywhere 1 項（#838，基礎進出時間說明改寫：進入可低至 0.25 秒、離開維持 1 秒下限，以及四個進入時間修正開關）。
+  > 技術要點：A-Life 201 項、Aegis 3 項、Hide Anywhere 1 項屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點）；A-Life 13 項屬 own 層連 `en` 錨點更新；皆登記 `ch_review_state`。另把 A-Life 已出貨的 4 個「名字 - Runaway」由「逃家者」改為「逃犯」（同屬監獄脫逃陣營 `alife_lockup_escapees`，與本批新增的 4 人一致），已出貨的 18 個介面字串把 faction 的「勢力」改為「陣營」（與本批及 2026-10-09 家族裁定一致）；Long Term Preservation Extended VFX 為 `IGUI_CraftingCategories_Woodwork` 定義了英文 Woodworking，`en` 錨點跟上，譯名「木工」不變。
+- **裁決 12 個多 MOD 共用鍵，改譯 7 項。** CleanHotBar 把三個熱鍵列設定的英文改寫（#828／#841）：彈藥文字改為三方都成立的「彈藥文字大小」，「手持裝備」「狀態列高度」維持。PhunSprinters 2 把月相跑屍機率說明的結尾改成「100 為不變、0 代表那幾晚沒有跑屍」，與舊版「留空或 0 不修正」相反（#832／#841）：5 項改為兩版都成立的「填100則不修正」。Common Sense 三個版本（#834）：開罐受傷機率說明改為「用刀具、剪刀等臨時工具開罐頭時受傷的機率」，撬門說明、撬門力量不足提示（維持兩種呼叫方式都能代入的 `%s`）與開罐受傷機率標題維持現值。
+  > 技術要點：`owner_conflict_decisions.json` 新增 4 筆、重新背書 8 筆；改值的 7 鍵屬 As1 衍生層，改 `sources/ch`＋`cn_overrides` 並登記 `ch_review_state`；`OWNER_CONFLICTS.md` 重生，#841 的 8 條過時裁決清空。
+
+### Removed
+
+- **移除 23 項上游已刪除的 Project A-Life 原創翻譯。** 舊版的陣營與部隊名（Knox Cordon Detachment、National Guard Remnants 等）、對話介面標題與除錯工具說明（#839）。
+  > 技術要點：A-Life 的鍵名＝`Text.hash(英文)`，現行 Workshop 內容的 Lua 已不含這些英文，`sources/en` 全庫與 tracker state 也無 owner；`ch_review_state` 同步移除。另 3 項（Careful、A-LIFE、Diagnostics）上游 EN 檔雖已移除，但現行 Lua 仍有同一英文字面（Careful 經野戰無線電的 `FieldRadio.ui(word)` 無 ctx 查表，算出的就是舊鍵），保留並在 `_note` 記引用處。
+
+其餘追蹤單無需另外變更翻譯：TwisTonFire - WANTED（#833）另 46 項只是把既有鍵搬進 42.20 版本夾；Modern Firearms System（#831）新增的 4 個彈藥配方是本體同名配方；Project A-Life 移除的 6 個舊沙盒分頁標題、Aegis Panel 移除的 3 項與 Long Term Preservation Extended 移除的 `PackJarsFoodHorse` 配方屬 As1 衍生層（後者仍由 HM 相容版定義），依同步流程保留。
 
 ## [42.21.0-1.48.0] - 2026-10-12
 

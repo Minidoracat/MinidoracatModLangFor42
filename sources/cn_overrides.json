@@ -57774,5 +57774,1060 @@
     "as1_value": "掉落9x19mm子弹",
     "value": "掉落9x19mm子弹 (原版)",
     "reason": "2026-10-12 #822：上游標題加註 (vanilla)，表示原版彈種，補上「(原版)」。"
+  },
+  "IG_UI.json|IGUI_CleanHotBar_AmmoText_Scale": {
+    "as1_value": "弹药文本高度",
+    "value": "弹药文本大小",
+    "reason": "2026-10-13 #828／#841 裁決：CleanHotBar 改寫為 Ammo Text Size，與 BritaCombinedB42 的 Ammunition text size 都是「大小」，RE Hotbar 的 AmmoText Height 是同一個縮放彈藥數字的設定；改為三方都成立的「彈藥文字大小」。"
+  },
+  "Sandbox.json|Sandbox_PhunSprinters_MoonPhaseCrescent_tooltip": {
+    "as1_value": "按该数值修正娥眉月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 留空或填0则不修正.",
+    "value": "按该数值修正娥眉月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 填100则不修正.",
+    "reason": "2026-10-13 #832／#841 裁決：PhunSprinters 2 把結尾改成「100 為不變、0 代表那幾晚完全沒有跑屍」，與舊版 PhunSprinters（死檔 _EN.txt）的「留空或 0 不修正」相反；改成兩版都成立的「填100則不修正」，拿掉 0 的說明。"
+  },
+  "Sandbox.json|Sandbox_PhunSprinters_MoonPhaseFull_tooltip": {
+    "as1_value": "按该数值修正满月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 留空或填0则不修正.",
+    "value": "按该数值修正满月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 填100则不修正.",
+    "reason": "2026-10-13 #832／#841 裁決：PhunSprinters 2 把結尾改成「100 為不變、0 代表那幾晚完全沒有跑屍」，與舊版 PhunSprinters（死檔 _EN.txt）的「留空或 0 不修正」相反；改成兩版都成立的「填100則不修正」，拿掉 0 的說明。"
+  },
+  "Sandbox.json|Sandbox_PhunSprinters_MoonPhaseGibbous_tooltip": {
+    "as1_value": "按该数值修正凸月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 留空或填0则不修正.",
+    "value": "按该数值修正凸月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 填100则不修正.",
+    "reason": "2026-10-13 #832／#841 裁決：PhunSprinters 2 把結尾改成「100 為不變、0 代表那幾晚完全沒有跑屍」，與舊版 PhunSprinters（死檔 _EN.txt）的「留空或 0 不修正」相反；改成兩版都成立的「填100則不修正」，拿掉 0 的說明。"
+  },
+  "Sandbox.json|Sandbox_PhunSprinters_MoonPhaseNew_tooltip": {
+    "as1_value": "按该数值修正新月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 留空或填0则不修正.",
+    "value": "按该数值修正新月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 填100则不修正.",
+    "reason": "2026-10-13 #832／#841 裁決：PhunSprinters 2 把結尾改成「100 為不變、0 代表那幾晚完全沒有跑屍」，與舊版 PhunSprinters（死檔 _EN.txt）的「留空或 0 不修正」相反；改成兩版都成立的「填100則不修正」，拿掉 0 的說明。"
+  },
+  "Sandbox.json|Sandbox_PhunSprinters_MoonPhaseQuarter_tooltip": {
+    "as1_value": "按该数值修正上弦月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 留空或填0则不修正.",
+    "value": "按该数值修正上弦月夜晚的跑尸概率. 例:50为降低50%% 200为翻倍概率. 填100则不修正.",
+    "reason": "2026-10-13 #832／#841 裁決：PhunSprinters 2 把結尾改成「100 為不變、0 代表那幾晚完全沒有跑屍」，與舊版 PhunSprinters（死檔 _EN.txt）的「留空或 0 不修正」相反；改成兩版都成立的「填100則不修正」，拿掉 0 的說明。"
+  },
+  "Sandbox.json|Sandbox_CommonSense_CanWoundChance_tooltip": {
+    "as1_value": "使用刀具、剪刀开罐头时划伤手部的概率.",
+    "value": "用刀具、剪刀等临时工具开罐头时受伤的概率.",
+    "reason": "2026-10-13 #834 裁決：3717968421 寫 with an improvised tool，3750253491 寫 with knives or scissors（BB_CS_OnCraft.lua 的 CSOpen…WithAnyTool 配方，不用開罐器時判定），改為兩版都成立的「用刀具、剪刀等臨時工具」，受傷部位不寫死。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PresetWorld": {
+    "as1_value": "世界预设 (以下所有设置均会随之变动)",
+    "value": "世界规模: 有多少人",
+    "reason": "2026-10-13 #839：上游英文改寫（World preset (moves every setting below)… → World size: how many people…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PresetWorld_tooltip": {
+    "as1_value": "每个数字下方都有一个旋钮. 它设置世界容纳的幸存者数量, 开始时有多少城镇有人驻守, 你遇见他们的频率, 他们是单独旅行还是结伴旅行, 有多少哨所, 突袭何时开始以及它们之间相隔多远, 以及突袭波, 侦查小队或后备呼叫的规模. 默认设置是经过测试的平衡状态, 且不会写入任何内容, 因此现有的存档会保留其已有的所有数字. 你为自己设置的任何选项仍然有效: 预设只会将选项移动到它们自己的默认状态, 所以调整一个滑块, 预设不会改变: 它看不到的事是你故意选择了已是默认的值. 疯狂模式会故意超出模组自身的硬上限: 最多220个活跃敌人 (测试上限120个), 24个哨所 (12个), 每个城镇4个 (2个), 12个户外营地 (6个), 40个离线小队 (24个), 每个哨所4个任务小队 (2个) 以及8人组成的侦查小队 (3个). 这些数字未经测试: 预计服务器负载会更重, 可能会出现bug, 请先备份你的存档.",
+    "value": "正常: 200名幸存者, 45个住户地点, 6个哨所. 突袭也会随之缩放. 只会更改仍为默认值的选项; 团体上限实时更新, 其他需重新加载. 压力测试不受支持; 可能卡顿.\n默认: 正常 (3).",
+    "reason": "2026-10-13 #839：上游英文改寫（IF THE GAME STUTTERS, TURN THIS DOWN FIR… → Normal: 200 survivors, 45 resident sites…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PresetWorld_option1": {
+    "as1_value": "荒芜: 几乎无人留存",
+    "value": "荒芜",
+    "reason": "2026-10-13 #839：上游英文改寫（Deserted -- almost nobody left (lightest… → Deserted…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PresetWorld_option2": {
+    "as1_value": "稀少: 仅存寥寥数人",
+    "value": "稀少",
+    "reason": "2026-10-13 #839：上游英文改寫（Sparse -- a few lone survivors (light on… → Sparse…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PresetWorld_option3": {
+    "as1_value": "平衡: 测试默认设置 (无更改)",
+    "value": "正常",
+    "reason": "2026-10-13 #839：上游英文改寫（Balanced -- the tested default, moderate… → Normal…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PresetWorld_option4": {
+    "as1_value": "拥挤: 群体聚集, 前哨林立, 频繁的突袭",
+    "value": "拥挤",
+    "reason": "2026-10-13 #839：上游英文改寫（Crowded -- groups, outposts and frequent… → Crowded…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PresetWorld_option5": {
+    "as1_value": "疯狂: 超出测试极限, 不支持",
+    "value": "压力测试 (不受支持, 可能卡顿)",
+    "reason": "2026-10-13 #839：上游英文改寫（Insane -- past the tested limits, unsupp… → Stress test (unsupported, may lag)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RealisticOutbreak": {
+    "as1_value": "现实中的疫情暴发",
+    "value": "疫情暴发初期活动",
+    "reason": "2026-10-13 #839：上游英文改寫（Realistic outbreak… → Early outbreak activity…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RealisticOutbreak_tooltip": {
+    "as1_value": "疫情爆发的最初几天, 情况就是这样. 警察守卫着他们的警局, 家庭守卫着自己的房屋 (除非你自己设定了其他选项, 否则城镇一开始就会有人把守), 国民警卫队在西点以北的桥上设有检查站, 头三天里各种情况都会增多. 第三天之后, 警察和军队就彻底从道路上消失了; 72小时后, 桥上的检查站被废弃, 所有放置在那里的物品都被移走. 这是默认设置.",
+    "value": "在游戏内的前3天增加额外活动, 并在西点以北设置国民警卫队检查站. 72小时后, 道路上的警察, 军队和检查站都会消失.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（The first days of the outbreak, the way … → Adds extra activity for the first 3 game…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PersistentSquadCap": {
+    "as1_value": "已保存的小队上限",
+    "value": "已保存哨所与队伍上限",
+    "reason": "2026-10-13 #839：上游英文改寫（Saved group limit (outposts, persistent … → Saved outpost and crew limit…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PersistentSquadCap_tooltip": {
+    "as1_value": "默认情况下, 每次能携带的最大小队数量为3个. 这并不会限制当前场景中新出现的离线小队数量. 其他队伍会持续到本次服务器场景结束. 前哨基地结构会单独保存. 降低限制会在下次加载时就清退多余的已保存小队, 而不是在玩家面前清退.",
+    "value": "限制重启后保留的哨所驻军和常驻队伍数量. 远方漫游团体和开局建筑住户另有各自的上限. 调低此值会影响下次存档.\n默认: 45.",
+    "reason": "2026-10-13 #839：上游英文改寫（How many groups are written into the sav… → Limits outpost garrisons and persistent …），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostTaskSquadCap": {
+    "as1_value": "每个前哨站的临时任务小队",
+    "value": "每个哨所的活动队伍",
+    "reason": "2026-10-13 #839：上游英文改寫（Temporary task squads per outpost… → Active teams per outpost…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostTaskSquadCap_tooltip": {
+    "as1_value": "每个前哨站同时派出巡逻, 清扫或狩猎队伍. 默认值为1; 设为0则禁用派遣. 队伍仅限当前会话; 站点信息仍会保存.",
+    "value": "限制每个哨所同时派出的巡逻, 搜刮和狩猎队伍. 设为0时不会派出任何队伍. 队伍仅存在于本次游戏期间; 哨所本身仍会保存.\n默认: 2.",
+    "reason": "2026-10-13 #839：上游英文改寫（Simultaneous patrol, scavenging or hunti… → Caps simultaneous patrol, scavenging and…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Party_LoneWeight": {
+    "as1_value": "唯一幸存者权重",
+    "value": "小型队伍频率权重",
+    "reason": "2026-10-13 #839：上游英文改寫（Lone survivor weight… → Small-party frequency weight…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Party_LoneWeight_tooltip": {
+    "as1_value": "自然形成的1-3人小团体的相对频率, 派系优先原则.",
+    "value": "设置自然形成的1-3人小型队伍相对于较大团体的频率. 数值越高, 小型队伍越多; 阵营专属规则优先.\n默认: 3.",
+    "reason": "2026-10-13 #839：上游英文改寫（Relative frequency of natural 1–3-person… → Sets the relative frequency of natural 1…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Party_GroupWeight": {
+    "as1_value": "群体权重",
+    "value": "大型团体频率权重",
+    "reason": "2026-10-13 #839：上游英文改寫（Group weight… → Large-group frequency weight…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Party_GroupWeight_tooltip": {
+    "as1_value": "自然形成的4人及以上小组的相对频率. 默认情况下每三个单独行动的玩家组成一个小组.",
+    "value": "设置自然形成的4人及以上团体相对于小型队伍的频率. 两者权重相同时, 两种规模被选中的权重也相同.\n默认: 1.",
+    "reason": "2026-10-13 #839：上游英文改寫（Relative frequency of natural 4+ person … → Sets the relative frequency of natural g…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Offline_FoundGapHours": {
+    "as1_value": "离线创建间隔 (游戏小时数)",
+    "value": "新漫游团体间隔 (游戏内小时)",
+    "reason": "2026-10-13 #839：上游英文改寫（Offline founding interval (game hours)… → New roaming group interval (game hours)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Offline_FoundGapHours_tooltip": {
+    "as1_value": "新离线队伍之间的最短时间间隔, 默认为1.5; 离线小队上限仍然适用.",
+    "value": "设置两个新远方漫游团体出现之间的最短时间. 现有团体会保留; 世界团体上限和本地平静期仍然适用.\n默认: 6.",
+    "reason": "2026-10-13 #839：上游英文改寫（Minimum time between new offline parties… → Sets the minimum time between new distan…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_Enabled": {
+    "as1_value": "启用侦察兵引导的突袭",
+    "value": "侦察兵引导的自动突袭",
+    "reason": "2026-10-13 #839：上游英文改寫（Enable scout-led raids… → Automatic scout-led raids…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_Enabled_tooltip": {
+    "as1_value": "自动突袭需要成功生成敌方侦查小队, 准备时间以及最小天数. 管理员面板可以强制发起突袭.",
+    "value": "启用自动突袭: 先有无线电预警, 侦察兵在不被察觉的情况下抵达, 接着集结后发起攻击. 最早突袭日仍然适用. 管理员可以强制发起突袭.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Automatic raids require a successfully s… → Enables automatic raids: a radio warning…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_MinDay": {
+    "as1_value": "最早的突袭日",
+    "value": "最早自动突袭 (世界天数)",
+    "reason": "2026-10-13 #839：上游英文改寫（Earliest raid day… → Earliest automatic raid (world-age days)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_MinDay_tooltip": {
+    "as1_value": "自动突袭无法在此世界纪年日之前开始.",
+    "value": "世界达到此天数之前, 不会开始自动突袭. 例如设为60, 前60个游戏日都不会发生.\n默认: 30.",
+    "reason": "2026-10-13 #839：上游英文改寫（Automatic raids cannot begin before this… → Automatic raids cannot begin before the …），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_CooldownDays": {
+    "as1_value": "副本冷静时间 (游戏日)",
+    "value": "突袭最短间隔 (游戏内天数)",
+    "reason": "2026-10-13 #839：上游英文改寫（Raid cooldown (game days)… → Minimum gap between raids (game days)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_CooldownDays_tooltip": {
+    "as1_value": "自动全面突袭之间的最短间隔时间.",
+    "value": "设置两次自动全面突袭之间的最短时间. 例如设为14, 两次突袭之间至少相隔两个游戏周.\n默认: 21.",
+    "reason": "2026-10-13 #839：上游英文改寫（Minimum time between automatic full-scal… → Sets the minimum time between automatic …），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_Chance": {
+    "as1_value": "每次检查的突袭/侦查几率 (百分比)",
+    "value": "突袭: 每次检查的概率 (百分比)",
+    "reason": "2026-10-13 #839：上游英文改寫（Raid/scout chance per check (percent)… → Raids: chance per check (percent)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_Chance_tooltip": {
+    "as1_value": "每次检查时 (默认每10分钟游戏时间检查一次) 都有机会启动由侦查单位引导的集结. 默认值为0.02, 冷静时间为14天, 这意味着大约每六到七周会进行一次全面突袭. 0表示关闭自动突袭.",
+    "value": "每次检查时侦察兵开始为突袭集结的概率. 设为0可停止自动突袭; 冷却时间和最早突袭日限制仍然适用.\n默认: 0.01.",
+    "reason": "2026-10-13 #839：上游英文改寫（Chance to start the scout-led buildup on… → Chance for scouts to begin a raid buildu…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_CheckMinutes": {
+    "as1_value": "检查间隔 (游戏分钟数)",
+    "value": "[专家] 检查间隔 (游戏内分钟)",
+    "reason": "2026-10-13 #839：上游英文改寫（Check interval (game minutes)… → [Expert] Check interval (game minutes)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_Waves": {
+    "as1_value": "突袭波次",
+    "value": "每次突袭波数 (波)",
+    "reason": "2026-10-13 #839：上游英文改寫（Raid waves… → Waves per raid (waves)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_Waves_tooltip": {
+    "as1_value": "每波突袭的攻击次数.",
+    "value": "设置每次突袭的攻击波数. 攻击者总数上限仍然适用, 因此额外的波次不会突破该上限.\n默认: 3.",
+    "reason": "2026-10-13 #839：上游英文改寫（Number of attacking waves per raid.… → Sets the number of attacking waves in a …），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_GroupSize": {
+    "as1_value": "每波突袭的NPC数量",
+    "value": "每波突袭要求的攻击者 (NPC)",
+    "reason": "2026-10-13 #839：上游英文改寫（NPCs per raid wave… → Requested attackers per raid wave (NPCs)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_GroupSize_tooltip": {
+    "as1_value": "每波攻击需要多少攻击者. 生成准入仍然执行运行时限制.",
+    "value": "设置每一波要求的攻击者人数. 突袭总人数上限和其他生成限制可能使实际人数减少.\n默认: 6.",
+    "reason": "2026-10-13 #839：上游英文改寫（Requested attackers in each wave. Spawn … → Sets the requested attackers in each wav…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_WaveDelayMinutes": {
+    "as1_value": "攻击波次之间的延迟 (游戏分钟).",
+    "value": "[专家] 波次间隔 (游戏内分钟)",
+    "reason": "2026-10-13 #839：上游英文改寫（Delay between waves (game minutes)… → [Expert] Delay between waves (game minut…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_Helicopter": {
+    "as1_value": "直升机",
+    "value": "A-Life直升机",
+    "reason": "2026-10-13 #839：上游英文改寫（Helicopters… → A-Life helicopters…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_Helicopter_tooltip": {
+    "as1_value": "每架A-Life直升机: 突袭和增援空投, 夜间探照灯和飞越. 关闭意味着它们都不会飞行.",
+    "value": "允许所有A-Life直升机: 突袭和支援抵达, 夜间探照灯和飞越. 关闭: 这些直升机都不会出动.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Every A-Life helicopter: raid and reinfo… → Allows all A-Life helicopters: raid and …），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_ScoutBuildupHours": {
+    "as1_value": "侦查兵集结 (游戏时长)",
+    "value": "[专家] 侦察集结 (游戏内小时)",
+    "reason": "2026-10-13 #839：上游英文改寫（Scout buildup (game hours)… → [Expert] Scout buildup (game hours)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_ScoutLifetimeHours": {
+    "as1_value": "侦查情报有效期 (游戏小时数)",
+    "value": "[专家] 侦察情报有效期 (游戏内小时)",
+    "reason": "2026-10-13 #839：上游英文改寫（Scout intelligence lifetime (game hours)… → [Expert] Scout intelligence lifetime (ga…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_ScoutSize": {
+    "as1_value": "敌方侦察队规模",
+    "value": "自动突袭前的侦察兵 (NPC)",
+    "reason": "2026-10-13 #839：上游英文改寫（Enemy scout party size… → Scouts before an automatic raid (NPCs)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_ScoutSize_tooltip": {
+    "as1_value": "在自动全面突袭前派出的敌方侦查兵数量.",
+    "value": "设置自动全面突袭前抵达的敌方侦察兵人数. 他们不计入突袭的攻击者总数上限.\n默认: 3.",
+    "reason": "2026-10-13 #839：上游英文改寫（Number of enemy scouts sent before an au… → Sets how many enemy scouts arrive before…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Support_Chance_tooltip": {
+    "as1_value": "获得许可的支援请求的成功几率.",
+    "value": "设置获准的支援请求成功的概率. 例如设为50, 每次获准的请求都有二分之一的概率得到回应.\n默认: 20.",
+    "reason": "2026-10-13 #839：上游英文改寫（Chance of a permitted support call succe… → Sets the chance that an allowed backup c…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Support_CooldownHours": {
+    "as1_value": "支援冷静时间 (游戏小时数)",
+    "value": "成功请求支援的间隔 (游戏内小时)",
+    "reason": "2026-10-13 #839：上游英文改寫（Backup cooldown (game hours)… → Gap between successful backup calls (gam…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Support_CooldownHours_tooltip": {
+    "as1_value": "同一个小组成功请求支援的最小游戏间隔时间.",
+    "value": "设置同一团体两次成功请求支援之间的最短等待时间. 例如设为6, 表示必须等待四分之一个游戏日.\n默认: 3.",
+    "reason": "2026-10-13 #839：上游英文改寫（Minimum game time between successful cal… → Sets the minimum wait between successful…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Support_GroupSize": {
+    "as1_value": "默认支援小队规模",
+    "value": "支援小队备用规模 (NPC)",
+    "reason": "2026-10-13 #839：上游英文改寫（Default backup squad size… → Backup group fallback size (NPCs)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Support_GroupSize_tooltip": {
+    "as1_value": "当请求者/派系没有预设的支援规模时, 进行回退处理.",
+    "value": "仅在请求的NPC或其阵营没有自己的规模时, 设置支援规模. 不会取代其档案中选定的规模.\n默认: 3.",
+    "reason": "2026-10-13 #839：上游英文改寫（Fallback when the caller/faction has no … → Sets backup size only when the calling N…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Support_MaxCalls": {
+    "as1_value": "每个小组的最大支援请求",
+    "value": "每个团体的支援请求上限 (次)",
+    "reason": "2026-10-13 #839：上游英文改寫（Maximum backup calls per group… → Backup call limit per group (calls)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Support_MaxCalls_tooltip": {
+    "as1_value": "限制一个小组重复提出的援军请求.",
+    "value": "限制单个团体可提出的增援请求次数, 避免无休止地重复请求支援.\n默认: 1.",
+    "reason": "2026-10-13 #839：上游英文改寫（Limits repeated reinforcement requests f… → Limits how many reinforcement requests o…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Support_SpotlightChance": {
+    "as1_value": "探照灯呼叫几率 (百分比)",
+    "value": "直升机探照灯呼叫概率 (百分比)",
+    "reason": "2026-10-13 #839：上游英文改寫（Spotlight call chance (percent)… → Helicopter searchlight call chance (perc…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Support_SpotlightChance_tooltip": {
+    "as1_value": "有几率发起一次经授权的直升机探照灯请求. 仅地面的请求者无法使用此功能.",
+    "value": "设置获准请求直升机支援的NPC呼叫探照灯的概率. 仅限地面的呼叫者无法请求.\n默认: 12.",
+    "reason": "2026-10-13 #839：上游英文改寫（Chance for an authorized helicopter spot… → Sets the chance of a searchlight call fr…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Support_SpotlightSeconds": {
+    "as1_value": "探照灯持续时间 (实际秒数)",
+    "value": "探照灯飞行持续时间 (实际秒数)",
+    "reason": "2026-10-13 #839：上游英文改寫（Spotlight duration (real seconds)… → Searchlight flight duration (real second…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Support_SpotlightSeconds_tooltip": {
+    "as1_value": "在户外时跟随目标玩家; 在室内时则变暗.",
+    "value": "设置请求的探照灯飞行在直升机离开前持续多久.\n默认: 180.",
+    "reason": "2026-10-13 #839：上游英文改寫（Follows the target player while outdoors… → Sets how long a requested searchlight fl…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Support_HelicopterSeconds": {
+    "as1_value": "直升机支援持续时间 (实际秒数)",
+    "value": "支援直升机效果持续时间 (实际秒数)",
+    "reason": "2026-10-13 #839：上游英文改寫（Helicopter support duration (real second… → Support helicopter effect duration (real…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Support_HelicopterSeconds_tooltip": {
+    "as1_value": "虚拟支援直升机演示的持续时间.",
+    "value": "设置支援直升机飞越效果的持续时间. 这不会决定地面增援停留多久.\n默认: 35.",
+    "reason": "2026-10-13 #839：上游英文改寫（Duration of the virtual support helicopt… → Sets how long the support helicopter's f…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Scavenge_BuildingRadius": {
+    "as1_value": "搜刮建筑搜索半径",
+    "value": "搜刮建筑搜索半径 (格)",
+    "reason": "2026-10-13 #839：上游英文改寫（Scavenging building search radius… → Scavenging building search radius (tiles…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Scavenge_BuildingRadius_tooltip": {
+    "as1_value": "选择附近建筑物的最大距离; 值越大, 搜索工作量越大.",
+    "value": "设置搜刮者寻找附近建筑的距离. 数值越大, 搜索范围越广, 但找到建筑所需的工作量也越大.\n默认: 27.",
+    "reason": "2026-10-13 #839：上游英文改寫（Maximum distance for selecting a nearby … → Sets how far scavengers look for a nearb…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Scavenge_CarryLimit": {
+    "as1_value": "返回前携带的拾取物品",
+    "value": "返回前搜刮的物品数 (件)",
+    "reason": "2026-10-13 #839：上游英文改寫（Scavenged items carried before returning… → Scavenged items before returning (items)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Scavenge_CarryLimit_tooltip": {
+    "as1_value": "返回营地 / 基地仓库前可收集的最大物品数量.",
+    "value": "搜刮者收集到这么多件物品后, 会返回营地或基地仓库. 例如设为4, 他们会带着4件收集到的物品回家.\n默认: 8.",
+    "reason": "2026-10-13 #839：上游英文改寫（Maximum collected items before heading b… → Scavengers return to their camp or base …），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Scavenge_ReturnAfterBuildings": {
+    "as1_value": "搜索建筑物后返回",
+    "value": "返回前搜查的建筑数 (栋)",
+    "reason": "2026-10-13 #839：上游英文改寫（Return after buildings searched… → Buildings searched before returning (bui…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Scavenge_ReturnAfterBuildings_tooltip": {
+    "as1_value": "搜查了这么多栋建筑后, 把补给品带回家.",
+    "value": "搜刮者搜查这么多栋建筑后, 会把补给品带回家. 例如设为3, 可搜查3栋建筑后再返回.\n默认: 2.",
+    "reason": "2026-10-13 #839：上游英文改寫（Bring supplies home after searching this… → Scavengers bring supplies home after sea…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.ALifeEnabled": {
+    "as1_value": "启用敌对A-Life",
+    "value": "敌对阵营",
+    "reason": "2026-10-13 #839：上游英文改寫（Enable hostile A-Life… → Hostile factions…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.ALifeEnabled_tooltip": {
+    "as1_value": "关闭: 不会生成敌对势力, 突袭和哨所也会停止. 但友军, 中立和谨慎的NPC仍会生成.",
+    "value": "关闭可阻止敌对阵营, 自动突袭和新哨所出现. 友善, 中立和谨慎的幸存者仍会出现.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Off: no hostile factions spawn, and raid… → Off prevents hostile factions, automatic…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.NpcNight": {
+    "as1_value": "夜晚NPC",
+    "value": "NPC夜间视力",
+    "reason": "2026-10-13 #839：上游英文改寫（NPCs at night… → NPC night sight…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.NpcNight_tooltip": {
+    "as1_value": "手电筒: NPC携带光源, 在黑暗中能看到12格 (若光源在你身上, 则能看到20格). 夜视: NPC仅在夜间能看见东西; 请自行为他们配备护目镜.",
+    "value": "手电筒: NPC在黑暗中能看到12格, 光源照到你时则为20格. 夜视: NPC在夜间也能看见, 但护目镜必须由你自行提供.\n默认: 手电筒 (1).",
+    "reason": "2026-10-13 #839：上游英文改寫（Flashlights: NPCs carry a light and see … → Flashlights: NPCs see 12 tiles in darkne…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.NightActivity": {
+    "as1_value": "夜间行动几率",
+    "value": "幸存者夜间活动",
+    "reason": "2026-10-13 #839：上游英文改寫（Night activity chance… → Survivors active after dark…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.NightActivity_tooltip": {
+    "as1_value": "一支小队在天黑后继续行进和工作的可能性有多大. 其他人会找个房子过夜或搭起帐篷: 他们会拉上窗帘, 在窗户上挂上床单, 安坐至天明, 把死者留在外面不管. 没有风险: 大家都躲起来. 敢于冒险的人: 几乎没有.",
+    "value": "有多少团体会在夜间继续行进和工作. “没有风险”会让所有人找地方躲藏; “冒险者”会让多数团体保持活动.\n默认: 中几率 (3).",
+    "reason": "2026-10-13 #839：上游英文改寫（How likely a squad is to keep moving and… → How many groups keep travelling and work…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OfflineSquadCap": {
+    "as1_value": "地图上的离线小队",
+    "value": "远方漫游团体上限",
+    "reason": "2026-10-13 #839：上游英文改寫（Offline squads on the map… → Distant roaming group limit…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OfflineSquadCap_tooltip": {
+    "as1_value": "每场离线漫游小队的最大数量, 默认为6个. 0表示关闭离线世界; 附近的交火活动和已保存的前哨基地仍然保留. 单独的已保存小队限制控制着下一场返回的小队数量, 但不会阻止现在创建新的小队.",
+    "value": "已保存的漫游团体在重启后最多返回至此上限 (按比例缩放); 设为0或在“仅限本地”模式下, 改用已保存队伍上限. 调低会停止创建新团体; 多出的团体会继续移动直到重新加载.\n默认: 30.",
+    "reason": "2026-10-13 #839：上游英文改寫（How many squads travel the map while nob… → Saved roaming groups return up to this r…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OfflineTickSeconds": {
+    "as1_value": "每 (秒) 进行一次离线更新",
+    "value": "远方团体更新间隔 (实际秒数)",
+    "reason": "2026-10-13 #839：上游英文改寫（Offline update every (seconds)… → Distant group update interval (real seco…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OfflineTickSeconds_tooltip": {
+    "as1_value": "离线小队多久进行一次行动和决策.",
+    "value": "设置远方漫游团体移动和做决策的频率. 间隔越长, 更新越少.\n默认: 20.",
+    "reason": "2026-10-13 #839：上游英文改寫（How often offline squads move and decide… → Sets how often distant roaming groups mo…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OfflineTravelTilesPerHour": {
+    "as1_value": "离线移动速度 (每小时区块数)",
+    "value": "[专家] 离线移动速度 (每小时格数)",
+    "reason": "2026-10-13 #839：上游英文改寫（Offline travel speed (tiles per hour)… → [Expert] Offline travel speed (tiles per…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OfflineRevenge": {
+    "as1_value": "记仇的小队",
+    "value": "记仇归来的幸存者",
+    "reason": "2026-10-13 #839：上游英文改寫（Squads hold grudges… → Returning survivor grudges…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OfflineRevenge_tooltip": {
+    "as1_value": "一个曾被你们击败并逃脱的小队, 在两三天后带着支援回来了.",
+    "value": "在你手下折损成员并逃脱的团体, 可能会在两到三个游戏日后带着支援回来复仇.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（A squad that lost people to you and got … → Groups that lose members to you and esca…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostsEnabled": {
+    "as1_value": "前哨站随时间而出现",
+    "value": "新的NPC设防哨所",
+    "reason": "2026-10-13 #839：上游英文改寫（Outposts rise over time… → New fortified NPC outposts…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostsEnabled_tooltip": {
+    "as1_value": "随着时间的推移, 出现了设防的哨所, 守卫的房屋和森林营地, 由一支永不撤离的驻军把守.",
+    "value": "让设防据点, 有人占据的房屋和森林营地随时间出现, 并由留守原地的驻军把守.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Fortified stations, held houses and fore… → Lets fortified stations, occupied houses…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostsMaxSites": {
+    "as1_value": "同时存在的前哨站 (最多)",
+    "value": "全世界哨所上限",
+    "reason": "2026-10-13 #839：上游英文改寫（Outposts at once (max)… → World outpost limit…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostsMaxSites_tooltip": {
+    "as1_value": "可以同时存在多少个前哨站. 0表示关闭所有前哨站.",
+    "value": "限制整张地图上同时存在的哨所数量. 设为0时禁用哨所.\n默认: 6.",
+    "reason": "2026-10-13 #839：上游英文改寫（How many outposts may stand at the same … → Limits how many outposts may exist at on…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostsPerCity": {
+    "as1_value": "每个城镇的前哨站",
+    "value": "每个城镇的哨所上限",
+    "reason": "2026-10-13 #839：上游英文改寫（Outposts per town… → Outpost limit per town…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostsPerCity_tooltip": {
+    "as1_value": "一个城镇可以拥有多少个哨所.",
+    "value": "限制每个城镇可拥有的设防建筑哨所数量. 户外营地另有上限.\n默认: 1.",
+    "reason": "2026-10-13 #839：上游英文改寫（How many outposts one town may hold.… → Limits how many fortified-building outpo…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostsInterval": {
+    "as1_value": "多久进行前哨刷新 (分钟)",
+    "value": "新哨所判定间隔 (游戏内分钟)",
+    "reason": "2026-10-13 #839：上游英文改寫（Outpost roll every (minutes)… → New-outpost checks (game minutes)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostsInterval_tooltip": {
+    "as1_value": "游戏中世界每隔多长时间 (包括睡眠和快进时间) 会进行前哨刷新. 一个时钟静止的世界会回到相同的实际分钟数.",
+    "value": "两次建立哨所机会之间的时间. 睡眠和快进也会计入. 若游戏时钟停止, 判定改以相同数值的实际分钟计算.\n默认: 30.",
+    "reason": "2026-10-13 #839：上游英文改寫（How often the world rolls for a new outp… → Time between chances to found an outpost…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostsChance": {
+    "as1_value": "前哨刷新几率 (%%)",
+    "value": "每次判定的新哨所概率 (百分比)",
+    "reason": "2026-10-13 #839：上游英文改寫（Outpost roll chance (%%)… → New-outpost chance per check (percent)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostsChance_tooltip": {
+    "as1_value": "每次刷新发现新前哨的几率.",
+    "value": "哨所判定建立新据点的概率 (需有合适的地点).\n默认: 20.",
+    "reason": "2026-10-13 #839：上游英文改寫（The chance each roll founds a new outpos… → Chance that an outpost check founds a ne…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostsBuildRadius": {
+    "as1_value": "前哨建立在 (区块)",
+    "value": "哨所与玩家的建造距离 (格)",
+    "reason": "2026-10-13 #839：上游英文改寫（Outposts build within (tiles)… → Outpost building distance from players (…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostsBuildRadius_tooltip": {
+    "as1_value": "只有当玩家达到如此距离（即地面已加载）时, 才会建造提议的前哨站, 且绝不会在距离任何玩家40格以内的地方建造.",
+    "value": "一般哨所会在此距离内开始建造, 且距离玩家至少40格. 固定检查站最远可在200格外开始建造; 都需要地面已加载.\n默认: 120.",
+    "reason": "2026-10-13 #839：上游英文改寫（A proposed outpost is built only while a… → Normal outposts start within this distan…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostsSpawnRadius": {
+    "as1_value": "驻军在 (区块) 内生成",
+    "value": "哨所守卫出现距离 (格)",
+    "reason": "2026-10-13 #839：上游英文改寫（Garrison spawns within (tiles)… → Distance that brings outpost guards in (…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostsSpawnRadius_tooltip": {
+    "as1_value": "当玩家靠近到如此程度时, 一个已建好的前哨站就会有人驻守.",
+    "value": "玩家进入此距离内时, 已建成的哨所就会有驻军进驻.\n默认: 90.",
+    "reason": "2026-10-13 #839：上游英文改寫（A built outpost is manned when a player … → A built outpost receives its garrison wh…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.SupportEnabled": {
+    "as1_value": "小队请求支援",
+    "value": "NPC请求支援",
+    "reason": "2026-10-13 #839：上游英文改寫（Squads call for backup… → NPC backup calls…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.SupportEnabled_tooltip": {
+    "as1_value": "一个联络中的小队可能会呼叫快速反应小队; 呼叫次数有限, 有冷静时间, 而且很有可能无人接听.",
+    "value": "交战中的团体可能会请求支援; 请求次数有限, 有冷却时间, 也可能无人回应.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（A squad in contact may call a quick-reac… → Groups in contact may request backup, wi…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PopulationRate": {
+    "as1_value": "交火频率倍率",
+    "value": "自然遭遇频率 (百分比)",
+    "reason": "2026-10-13 #839：上游英文改寫（Encounter frequency (percent)… → Natural encounter frequency (percent)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PopulationRate_tooltip": {
+    "as1_value": "扩大全面交火的门槛, 默认值为平衡状态.",
+    "value": "缩放自然阵营遭遇的概率. 设为50时, 这些检查带来团体的概率只有正常的一半.\n默认: 150.",
+    "reason": "2026-10-13 #839：上游英文改寫（Scales the global encounter gate. 100 is… → Scales the chance of natural faction enc…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.GroupScale": {
+    "as1_value": "小组规模倍率",
+    "value": "自然团体规模 (百分比)",
+    "reason": "2026-10-13 #839：上游英文改寫（Group size (percent)… → Natural group size (percent)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.GroupScale_tooltip": {
+    "as1_value": "扩大自然敌对小队的国模.",
+    "value": "缩放自然出现的团体的NPC人数. 设为100时, 团体保持原本规模. 阵营的规模限制仍然适用.\n默认: 100.",
+    "reason": "2026-10-13 #839：上游英文改寫（Scales natural group sizes. 100 keeps th… → Scales the number of NPCs in naturally a…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.SimulationRadius": {
+    "as1_value": "详细模拟半径",
+    "value": "活跃NPC距离 (格)",
+    "reason": "2026-10-13 #839：上游英文改寫（Detailed simulation radius… → Active NPC distance (tiles)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.SimulationRadius_tooltip": {
+    "as1_value": "常驻角色收到的物理外壳的区块距离.",
+    "value": "设置已保存的NPC必须距离玩家多近, 才会以实体角色出现. 距离越大, 附近保持活跃的NPC越多.\n默认: 90.",
+    "reason": "2026-10-13 #839：上游英文改寫（Distance in tiles at which persistent ac… → Sets how close saved NPCs must be to a p…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.MaxHostiles": {
+    "as1_value": "活跃敌对行动者人数上限",
+    "value": "漫游幸存者上限 (NPC)",
+    "reason": "2026-10-13 #839：上游英文改寫（Maximum living hostile actors… → Roaming survivor limit (NPCs)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.MaxHostiles_tooltip": {
+    "as1_value": "对自然存在的常驻敌对角色的硬性上限.",
+    "value": "存活NPC数量达到此值时, 停止产生新的漫游队伍, 和平的幸存者也计入. 这不是全县人口; 现有队伍会保留.\n默认: 12.",
+    "reason": "2026-10-13 #839：上游英文改寫（Hard cap for natural persistent hostile … → Stops new roaming crews at this living-N…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.EncounterChance": {
+    "as1_value": "每次检查的遭遇几率 (百分比)",
+    "value": "每次检查的自然遭遇概率 (百分比)",
+    "reason": "2026-10-13 #839：上游英文改寫（Encounter chance per check (percent)… → Natural encounter chance per check (perc…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.EncounterChance_tooltip": {
+    "as1_value": "两种自然生成者的每次掷骰几率: 阵营主管在每次遭遇检查间隔内掷骰一次, 遭遇主管在每次遭遇掷骰间隔内掷骰一次. 默认值为25.",
+    "value": "设置每次自然遭遇检查出现团体的概率. 以游戏内小时计的阵营检查和以游戏内分钟计的遭遇检查都会使用此值.\n默认: 10.",
+    "reason": "2026-10-13 #839：上游英文改寫（Chance per roll for both natural spawner… → Sets the chance of a group on each natur…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.EncounterInterval": {
+    "as1_value": "遭遇检查间隔 (游戏小时数)",
+    "value": "阵营遭遇检查间隔 (游戏内小时)",
+    "reason": "2026-10-13 #839：上游英文改寫（Encounter check interval (game hours)… → Faction encounter check interval (game h…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.EncounterInterval_tooltip": {
+    "as1_value": "自然敌对遭遇检查之间的游戏时间.",
+    "value": "设置两次自然阵营遭遇检查之间的时间. 检查可能失败; 这并非保证的相遇间隔.\n默认: 8.",
+    "reason": "2026-10-13 #839：上游英文改寫（Game hours between natural hostile encou… → Sets the time between natural faction en…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.SafehouseMargin": {
+    "as1_value": "安全屋排除边际",
+    "value": "多人游戏安全屋生成缓冲区 (格)",
+    "reason": "2026-10-13 #839：上游英文改寫（Safehouse exclusion margin… → Multiplayer safehouse spawn buffer (tile…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.SafehouseMargin_tooltip": {
+    "as1_value": "多人游戏安全屋周围增加非生成区块.",
+    "value": "已认领的多人游戏安全屋周围额外的禁止生成距离. 设为8时, 新NPC无法在认领范围外围8格内生成.\n默认: 8.",
+    "reason": "2026-10-13 #839：上游英文改寫（Extra no-spawn tiles around multiplayer … → Extra no-spawn distance around claimed m…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Warfare": {
+    "as1_value": "敌对派系冲突",
+    "value": "阵营交战",
+    "reason": "2026-10-13 #839：上游英文改寫（Hostile faction conflict… → Faction battles…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Warfare_tooltip": {
+    "as1_value": "允许敌对的A-Life派系之间相互战斗.",
+    "value": "允许敌对NPC阵营互相交战.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Allows hostile A-Life factions to fight … → Allows hostile NPC factions to fight eac…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Retreat": {
+    "as1_value": "允许撤退",
+    "value": "受伤敌人撤退",
+    "reason": "2026-10-13 #839：上游英文改寫（Allow retreat… → Injured hostile retreats…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Retreat_tooltip": {
+    "as1_value": "受伤的敌对NPC可能会撤退.",
+    "value": "允许受伤的敌对NPC从战斗中撤退.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Injured hostile NPCs may retreat.… → Allows wounded hostile NPCs to retreat f…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Scavenging": {
+    "as1_value": "允许拾取",
+    "value": "敌对NPC搜刮",
+    "reason": "2026-10-13 #839：上游英文改寫（Allow scavenging… → Hostile scavenging…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Scavenging_tooltip": {
+    "as1_value": "敌对掠夺者可能会夺走附近的补给.",
+    "value": "允许敌对的搜刮者拿走附近的补给.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Hostile looters may take nearby supplies… → Allows hostile looters to take nearby su…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Investigate": {
+    "as1_value": "调查干扰",
+    "value": "调查骚动",
+    "reason": "2026-10-13 #839：上游英文改寫（Investigate disturbances… → Investigation of disturbances…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Investigate_tooltip": {
+    "as1_value": "敌军朝着他们注意到的枪声, 喊声和其他痕迹走去.",
+    "value": "敌对NPC可能会朝着他们注意到的枪声, 喊声和其他活动迹象走去.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Hostiles walk toward gunfire, shouts and… → Hostile NPCs may walk toward gunfire, sh…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Regroup": {
+    "as1_value": "在首领处重新集结",
+    "value": "[专家] 向首领重新集结",
+    "reason": "2026-10-13 #839：上游英文改寫（Regroup on the leader… → [Expert] Regroup on the leader…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.GroupMarch": {
+    "as1_value": "集体行动",
+    "value": "[专家] 集体行动",
+    "reason": "2026-10-13 #839：上游英文改寫（Move as a group… → [Expert] Move as a group…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.WeaponDrops": {
+    "as1_value": "允许武器掉落",
+    "value": "NPC武器掉落",
+    "reason": "2026-10-13 #839：上游英文改寫（Allow weapon drops… → NPC weapon drops…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.WeaponDrops_tooltip": {
+    "as1_value": "符合条件的NPC武器可能会留在尸体物品中.",
+    "value": "允许符合条件的NPC枪械和近战武器留在尸体上供人搜刮. 武器掉落概率仍然适用.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Eligible NPC weapons may survive into co… → Allows eligible NPC guns and melee weapo…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.DropsWeaponChance": {
+    "as1_value": "武器掉落几率",
+    "value": "NPC武器掉落概率",
+    "reason": "2026-10-13 #839：上游英文改寫（Weapon drop chance… → NPC weapon drop chance…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.DropsWeaponChance_tooltip": {
+    "as1_value": "已死亡的NPC身上的枪械或近战武器的保留几率. 每个NPC配置文件都会保留其创建者设定的独特几率. 除此之外, 所有NPC都遵循统一几率. 管理员生成器生成的NPC仍遵循其自身配置. 需开启 '允许武器掉落' 选项.",
+    "value": "“每个NPC档案”使用每个NPC自身的概率乘以NPC战利品百分比. 选择其他选项则对所有武器使用同一概率, 并忽略该百分比; 需开启“NPC武器掉落”.\n默认: 每个NPC档案 (1).",
+    "reason": "2026-10-13 #839：上游英文改寫（How often a dead NPC's gun or melee weap… → Per NPC profile uses each NPC's own chan…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.DropsWeaponCondition_tooltip": {
+    "as1_value": "掉落武器的状态如何. 每个NPC的档案都会保留各自的评分和早期游戏曲线, 在早期游戏的前几周, 你大多会获得损坏或接近损坏的枪支. 除此之外, 还包括每个NPC掉落的每件武器的状态. 损坏意味着它必须先修复才能使用. NPC仍然会用它全力战斗.",
+    "value": "设置掉落武器的状态, 不影响NPC的战斗力. “每个NPC档案”沿用该档案的评级和游戏初期磨损曲线; “破碎”需要先修理才能使用.\n默认: 每个NPC档案 (1).",
+    "reason": "2026-10-13 #839：上游英文改寫（What shape a dropped weapon is in. Per N… → Sets dropped weapon condition, not NPC c…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.WeaponJamming": {
+    "as1_value": "启用NPC武器卡壳",
+    "value": "NPC枪械卡壳",
+    "reason": "2026-10-13 #839：上游英文改寫（Enable NPC weapon jamming… → NPC firearm jams…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.WeaponJamming_tooltip": {
+    "as1_value": "非左轮手枪类NPC枪械可能会出现无法射击, 卡壳, 然后明显退壳的情况.",
+    "value": "允许左轮以外的NPC枪械卡壳: 枪械会发出咔哒声而无法击发, 随后NPC会拉动枪机排除故障.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Non-revolver NPC firearms can fail to fi… → Allows NPC firearms other than revolvers…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.WeaponJamChance": {
+    "as1_value": "NPC武器卡壳概率 (百分比)",
+    "value": "[专家] NPC武器卡壳概率 (百分比)",
+    "reason": "2026-10-13 #839：上游英文改寫（NPC weapon jam chance (percent)… → [Expert] NPC weapon jam chance (percent)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.BreachStrength": {
+    "as1_value": "NPC破坏强度 (百分比)",
+    "value": "[专家] NPC破坏强度 (百分比)",
+    "reason": "2026-10-13 #839：上游英文改寫（NPC breach strength (percent)… → [Expert] NPC breach strength (percent)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.MultiHit": {
+    "as1_value": "NPC多重命中 (实验性)",
+    "value": "[专家] NPC多重命中 (实验性)",
+    "reason": "2026-10-13 #839：上游英文改寫（NPC multi-hit (experimental)… → [Expert] NPC multi-hit (experimental)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.BulletPenetration": {
+    "as1_value": "子弹穿透 (实验)",
+    "value": "[专家] 子弹穿透 (实验性)",
+    "reason": "2026-10-13 #839：上游英文改寫（Bullet penetration (experimental)… → [Expert] Bullet penetration (experimenta…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PopulateOnStart": {
+    "as1_value": "在启动时填充地点 (实验性)",
+    "value": "开局建筑居民 (实验性)",
+    "reason": "2026-10-13 #839：上游英文改寫（Populate places on start (experimental)… → Starting building residents (experimenta…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PopulateOnStart_tooltip": {
+    "as1_value": "每个世界中, 城镇的房间会被读取一次, 幸存者可能占据的地方: 警察局, 消防站, 诊所和牙医诊所, 枪械店, 仓库, 加油站, 汽车旅馆, 餐厅, 教堂, 学校, 商店和住宅: 会被标记为有人驻守: 稀有10%%, 不常见20%%, 常见35%%, 每个城镇至少有两个. 玩家首次靠近时, 标记的地方会从与房间相匹配的派系中为居民分配: 警察局中的警察, 消防局中的消防员, 病房里的医护人员, 住宅中的一家人. 他们是常驻性质, 并随世界一同保存.",
+    "value": "每个世界会标记一次合适的建筑, 比例为百分之10, 20或35. 玩家靠近时居民才会出现, 并会随存档保存. “疫情暴发初期活动”不会自动开启此功能.\n默认: 关闭 (1).",
+    "reason": "2026-10-13 #839：上游英文改寫（Once per world, the towns' rooms are rea… → Marks 10, 20 or 35 percent of suitable b…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PopulateMax": {
+    "as1_value": "人口最多的地方",
+    "value": "开局有人居住建筑上限",
+    "reason": "2026-10-13 #839：上游英文改寫（Populated places at most… → Starting inhabited building limit…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PopulateMax_tooltip": {
+    "as1_value": "在全世界人口最多的地方通常首先列出. 最繁忙的地方 (如车站, 消防局, 诊所) 则被放在首位.",
+    "value": "限制整张地图中被选为开局居民住所的建筑数量. 每个世界只选定一次; 警察局, 消防局和诊所优先.\n默认: 45.",
+    "reason": "2026-10-13 #839：上游英文改寫（The most places in the whole world that … → Limits buildings selected for starting r…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Search": {
+    "as1_value": "搜索丢失的目标",
+    "value": "[专家] 搜索丢失的目标",
+    "reason": "2026-10-13 #839：上游英文改寫（Search for lost targets… → [Expert] Search for lost targets…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.SearchShout": {
+    "as1_value": "回应玩家的呼喊",
+    "value": "[专家] 回应玩家的呼喊",
+    "reason": "2026-10-13 #839：上游英文改寫（React to player shouts… → [Expert] React to player shouts…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.SearchCallout": {
+    "as1_value": "群组位置标注",
+    "value": "[专家] 团体位置通报",
+    "reason": "2026-10-13 #839：上游英文改寫（Group location callouts… → [Expert] Group location callouts…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Clues": {
+    "as1_value": "调查玩家踪迹",
+    "value": "调查幸存者踪迹",
+    "reason": "2026-10-13 #839：上游英文改寫（Investigate player traces… → Investigation of survivor traces…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Clues_tooltip": {
+    "as1_value": "当没有敌人可打时, NPC会在发现幸存者迹象的区域进行搜索.",
+    "value": "没有战斗时, NPC会搜索有幸存者在附近迹象的区域, 例如路障或运行中的发电机.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（With nothing to fight, NPCs search areas… → When not fighting, NPCs search areas wit…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.CluesVehicles": {
+    "as1_value": "注意车辆",
+    "value": "车辆踪迹",
+    "reason": "2026-10-13 #839：上游英文改寫（Notice vehicles… → Vehicle traces…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.CluesVehicles_tooltip": {
+    "as1_value": "一辆正在行驶或被非法启动的车辆会使其周围区域成为值得搜索的区域.",
+    "value": "发动中或被短接点火的车辆会引来NPC搜索周围区域.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（A running or hotwired vehicle marks the … → Running or hotwired vehicles attract NPC…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.CluesBarricades": {
+    "as1_value": "注意路障",
+    "value": "路障踪迹",
+    "reason": "2026-10-13 #839：上游英文改寫（Notice barricades… → Barricade traces…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.CluesBarricades_tooltip": {
+    "as1_value": "门窗上装有木板, 表明这座建筑归某人所有.",
+    "value": "门窗上钉的木板会让NPC将建筑视为有人占据且值得调查.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Planked windows and doors mark a buildin… → Planks on doors and windows make NPCs tr…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.CluesPlayerBuilt": {
+    "as1_value": "注意已建成的墙壁",
+    "value": "玩家建筑踪迹",
+    "reason": "2026-10-13 #839：上游英文改寫（Notice built walls… → Player-built structure traces…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.CluesPlayerBuilt_tooltip": {
+    "as1_value": "玩家建造的墙壁, 大门和围栏标志着某个地点已被占领.",
+    "value": "玩家建造的墙壁, 大门和围栏会让NPC将该地点视为有人占据且值得调查.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Player-built walls, gates and fences mar… → Player-built walls, gates and fences mak…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.CluesPower": {
+    "as1_value": "注意运行中的发电机",
+    "value": "发电机踪迹",
+    "reason": "2026-10-13 #839：上游英文改寫（Notice running generators… → Generator traces…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.CluesPower_tooltip": {
+    "as1_value": "一个活跃的发电机是附近有人居住的有力证据.",
+    "value": "运行中的发电机会让NPC强烈认为附近有人居住, 从而前来调查.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（An active generator is strong evidence s… → A running generator gives NPCs a strong …），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.CluesWeight": {
+    "as1_value": "线索调查的积极性",
+    "value": "幸存者踪迹敏感度 (正常值倍数)",
+    "reason": "2026-10-13 #839：上游英文改寫（Trace investigation eagerness… → Survivor-trace sensitivity (times normal…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.CluesWeight_tooltip": {
+    "as1_value": "衡量NPC对线索采取行动的意愿程度. 意愿程度越高, 需要的调查证据越少; 意愿程度越低, 就需要更确凿的线索.",
+    "value": "调整NPC调查幸存者踪迹的积极程度. 数值越高, 越薄弱的证据也会引来搜索; 数值越低, 则需要越确凿的证据.\n默认: 1.0.",
+    "reason": "2026-10-13 #839：上游英文改寫（Scales how readily NPCs act on traces. H… → Scales how readily NPCs investigate surv…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Voice": {
+    "as1_value": "NPC语音音频",
+    "value": "NPC录音语音",
+    "reason": "2026-10-13 #839：上游英文改寫（NPC voice audio… → Recorded NPC voices…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Voice_tooltip": {
+    "as1_value": "播放NPC所说的录音片段. 默认情况下关闭: NPC仅以文字形式对话. 痛苦和死亡音效不受影响.",
+    "value": "在有录音时播放语音. 关闭时对话仅以文字呈现; 痛苦和死亡音效另行处理.\n默认: 关闭.",
+    "reason": "2026-10-13 #839：上游英文改寫（Plays recorded voice clips for what NPCs… → Enables recorded speech where available.…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.ShowAdminTools_tooltip": {
+    "as1_value": "生成面板, 遭遇列表, 前哨站建造器和突袭设置. 关闭这些功能可获得简洁的右键菜单; 运行时状态和创建者功能则保持不变. 服务器管理员不受影响.",
+    "value": "右键菜单中的管理员控制台, 生成面板, 遭遇列表, 哨所建造器和突袭设置. 玩家还需在选项中勾选“诊断”. 关闭此项可让右键菜单保持简洁; 编辑器 (Insert键) 和世界状态 (Home键) 仍可通过快捷键和暂停菜单打开. 服务器上的管理员不受影响.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（The spawn panel, encounter list, outpost… → The admin console, spawn panel, encounte…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.VehicleDamage": {
+    "as1_value": "NPC会受到载具的伤害",
+    "value": "车辆对NPC的伤害",
+    "reason": "2026-10-13 #839：上游英文改寫（NPCs take damage from vehicles… → Vehicle damage to NPCs…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.VehicleDamage_tooltip": {
+    "as1_value": "移动的车辆会对碰撞到的NPC造成伤害, 伤害程度与车辆速度成正比. 关闭此选项可完全停止车辆碰撞检测. 无论是否关闭此选项, NPC都无法通过完好的车窗接近你.",
+    "value": "行驶中的车辆撞到NPC时会造成伤害, 伤害取决于车速. 关闭: 碰撞不会对NPC造成伤害. 无论开关, 完好的车窗都能保护你免受NPC攻击.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（A moving vehicle hurts an NPC it hits, s… → Moving vehicles hurt NPCs they hit, with…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.AimDifficulty": {
+    "as1_value": "NPC对玩家的瞄准度",
+    "value": "NPC对玩家的射击准确度",
+    "reason": "2026-10-13 #839：上游英文改寫（NPC aim vs players… → NPC shooting accuracy against players…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.AimDifficulty_tooltip": {
+    "as1_value": "NPC枪火击中玩家的频率. 中等难度下, 每个NPC的瞄准技能保持不变. 非常容易难度下, 命中率为40%%; 容易难度下, 命中率为65%%; 困难难度下, 命中率为125%%; 非常困难难度下, 命中率为150%%; 极限难度下, 命中率为180%%. 对僵尸的命中率在战斗页面设置.",
+    "value": "选项越高, NPC对玩家射击越准确. 中等沿用NPC自身的瞄准技能; 对僵尸的准确度另行设置.\n默认: 中 (3).",
+    "reason": "2026-10-13 #839：上游英文改寫（How often NPC gunfire hits players. Medi… → Higher choices make NPC gunfire more acc…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.AimZombiePercent": {
+    "as1_value": "NPC对僵尸的瞄准度 (%%)",
+    "value": "[专家] NPC对僵尸的瞄准度 (%%)",
+    "reason": "2026-10-13 #839：上游英文改寫（NPC accuracy vs zombies (%%)… → [Expert] NPC accuracy vs zombies (%%)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Tracers": {
+    "as1_value": "显示弹道轨迹",
+    "value": "NPC弹道轨迹",
+    "reason": "2026-10-13 #839：上游英文改寫（Show bullet streaks… → NPC bullet streaks…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Tracers_tooltip": {
+    "as1_value": "在NPC每次射击时, 都会在屏幕上画出一条可见的轨迹. 枪口闪光, 枪声和弹壳均不受影响.",
+    "value": "沿NPC射击的弹道显示可见轨迹. 关闭此项不会影响枪口闪光, 枪声或弹壳.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Draws a visible streak along each shot a… → Shows a visible streak along NPC gunshot…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.ModuleCover": {
+    "as1_value": "射击者利用掩护物",
+    "value": "[专家] 射手会利用掩体",
+    "reason": "2026-10-13 #839：上游英文改寫（Shooters use cover… → [Expert] Shooters use cover…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.ModuleWithdraw": {
+    "as1_value": "射击手撤离后再度参与战斗",
+    "value": "[专家] 射手撤退后再度交战",
+    "reason": "2026-10-13 #839：上游英文改寫（Shooters withdraw and re-engage… → [Expert] Shooters withdraw and re-engage…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.ModuleHealing": {
+    "as1_value": "模块: 包扎伤口",
+    "value": "[专家] 模块: 包扎伤口",
+    "reason": "2026-10-13 #839：上游英文改寫（Module: dress wounds… → [Expert] Module: dress wounds…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Wounds_tooltip": {
+    "as1_value": "命中NPC: 腿部受伤会使其无法奔跑, 除非包扎, 否则当生命值低于10%%时, 它们会在几秒钟内因失血过多而死亡.",
+    "value": "命中会造成瘀伤, 骨折, 撕裂伤, 枪伤或咬伤. 腿部受伤会拖慢NPC, 手臂受伤会影响瞄准, 开放性伤口会持续流血直到包扎; 生命值低于百分之10时, 会迅速失血而死.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Hits mark NPCs: a leg wound takes their … → Hits cause bruises, fractures, cuts, bul…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.SprintEnabled": {
+    "as1_value": "动作: 冲刺爆发",
+    "value": "[专家] 移动: 冲刺爆发",
+    "reason": "2026-10-13 #839：上游英文改寫（Movement: sprint bursts… → [Expert] Movement: sprint bursts…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.ModuleGunner": {
+    "as1_value": "行为: 枪手压制",
+    "value": "[专家] 行为: 枪手压制",
+    "reason": "2026-10-13 #839：上游英文改寫（Behavior: gunner suppression… → [Expert] Behavior: gunner suppression…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Encounters": {
+    "as1_value": "随机遭遇",
+    "value": "随机团体遭遇",
+    "reason": "2026-10-13 #839：上游英文改寫（Random encounters… → Random group encounters…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Encounters_tooltip": {
+    "as1_value": "遭遇事件导演: 巡逻队, 突袭队, 拾荒小队, 暗杀小队和驻军从玩家附近的目录中随机生成, 并由地图上的城镇区域自行放置.",
+    "value": "允许巡逻队, 拾荒者和敌对队伍等团体在玩家附近的合适地图区域出现.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（The encounter director: patrols, raids, … → Allows groups such as patrols, scavenger…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.EncounterRollInterval": {
+    "as1_value": "遭遇检定间隔 (游戏分钟)",
+    "value": "随机遭遇检定间隔 (游戏分钟)",
+    "reason": "2026-10-13 #839：上游英文改寫（Encounter roll interval (game minutes)… → Random encounter check interval (game mi…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.EncounterRollInterval_tooltip": {
+    "as1_value": "遭遇导演掷骰之间的游戏分钟数 (包括睡眠和快进掷骰). 默认值为60, 范围为10-720. 每次掷骰的生成几率来源于遭遇几率选项.",
+    "value": "设置两次随机遭遇检定之间的时间, 睡眠或快进时也会检定. 是否出现团体仍由遭遇概率决定.\n默认: 120.",
+    "reason": "2026-10-13 #839：上游英文改寫（Game minutes between encounter director … → Sets the time between random encounter c…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.DormantTtl": {
+    "as1_value": "未访问NPC的生存时间 (世界小时)",
+    "value": "未访问NPC的清理延迟 (游戏内小时)",
+    "reason": "2026-10-13 #839：上游英文改寫（Unvisited NPC lifetime (world hours)… → Unvisited NPC cleanup delay (game hours)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.DormantTtl_tooltip": {
+    "as1_value": "在游戏内停留了如此时长且无人靠近的已停放NPC会被清理. 常驻NPC (管理员锚点, 遭遇驻军) 则永远不会过期. 0可禁用清理功能.",
+    "value": "闲置NPC在这段时间内无人靠近就会被清理. 常驻队伍 (例如锚定的NPC和驻军) 永不过期. 设为0时禁用清理.\n默认: 8.",
+    "reason": "2026-10-13 #839：上游英文改寫（A parked NPC nobody has been near for th… → Removes inactive NPCs after nobody has a…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.ModuleBehaviors": {
+    "as1_value": "NPC行动 (领导者、狙击手、医疗兵...)",
+    "value": "[专家] NPC行为 (领导者、狙击手、医疗兵…)",
+    "reason": "2026-10-13 #839：上游英文改寫（NPC conducts (leader, sniper, medic...)… → [Expert] NPC conducts (leader, sniper, m…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.ModuleStrafe": {
+    "as1_value": "射手在移动中瞄准",
+    "value": "[专家] 射手在移动中瞄准",
+    "reason": "2026-10-13 #839：上游英文改寫（Shooters aim while moving… → [Expert] Shooters aim while moving…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.WorldMode": {
+    "as1_value": "A-Life世界模式",
+    "value": "世界模拟模式",
+    "reason": "2026-10-13 #839：上游英文改寫（A-Life world mode… → World simulation mode…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.WorldMode_tooltip": {
+    "as1_value": "完整版: 附近无人时小队在整张地图上漫游 (离线模拟), 当你靠近时才会出现; 哨所自行升降. 仅限本地: 无离线小队: NPC群体仅在玩家附近存在 (最低性能要求); 哨所仍然会升起.",
+    "value": "完全模式下, 团体会在玩家视野外持续移动. 仅限本地模式不再生成新的远方团体; 已有的团体会在重新加载时撤除. 两种模式下哨所都仍可发展.\n默认: 完全A-Life模式 (离线小队在地图上漫游) (1).",
+    "reason": "2026-10-13 #839：上游英文改寫（Full: squads roam the whole map while no… → Full keeps groups travelling beyond play…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RateEncounters": {
+    "as1_value": "遭遇率",
+    "value": "随机遭遇频率",
+    "reason": "2026-10-13 #839：上游英文改寫（Encounter rate… → Random encounter frequency…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RateEncounters_tooltip": {
+    "as1_value": "遭遇导演在玩家附近召唤新团体的频率. 低级则概率减半, 高级则概率增加两倍 (召唤间隔不变).",
+    "value": "调整玩家附近出现随机团体的概率, 不改变检定间隔. 低使概率减半; 丰富使概率变为三倍.\n默认: 正常 (2).",
+    "reason": "2026-10-13 #839：上游英文改寫（How often the encounter director rolls a… → Scales the chance of a random group near…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RateGroups": {
+    "as1_value": "漫游团体比例",
+    "value": "漫游团体数量",
+    "reason": "2026-10-13 #839：上游英文改寫（Roaming group rate… → Roaming group abundance…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RateGroups_tooltip": {
+    "as1_value": "世界保留的组数: 包括生成乘数和离线小队上限. 两者都较低时, 丰富模式会使它们各自的上限增加两倍 (但不超过各自的上限).",
+    "value": "同时调整自然出现的团体和远方漫游团体上限. 低使两者减半; 丰富使两者变为三倍, 但不超过各自上限.\n默认: 正常 (2).",
+    "reason": "2026-10-13 #839：上游英文改寫（How many groups the world keeps: the spa… → Scales natural group arrivals and the di…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RateSurvivors": {
+    "as1_value": "幸存者比例",
+    "value": "友善与中立团体频率",
+    "reason": "2026-10-13 #839：上游英文改寫（Survivor rate… → Friendly and neutral group frequency…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RateSurvivors_tooltip": {
+    "as1_value": "在组建团队时, 对玩家友好或中立的派系被选中的频率. 低选项则派系在敌对派系面前的权重减半, 丰富选项则派系则将其权重增至三倍.",
+    "value": "调整友善, 中立和谨慎阵营相对于敌对阵营被选中的频率. 低使其选择权重减半; 丰富使其变为三倍.\n默认: 正常 (2).",
+    "reason": "2026-10-13 #839：上游英文改寫（How often the factions that are friendly… → Scales how often friendly, neutral and w…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RateMetaEvents": {
+    "as1_value": "元事件发生率",
+    "value": "远方世界事件",
+    "reason": "2026-10-13 #839：上游英文改寫（Meta event rate… → Distant world events…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RateMetaEvents_tooltip": {
+    "as1_value": "远处的枪声, 直升机声, 汽车碰撞声, 以及世界的氛围: 在低难度下, 每日和每周上限减半, 事件之间的间隔加倍; 在丰富难度下, 上限增至三倍, 间隔缩短.",
+    "value": "调整远处枪声, 直升机和其他背景事件. 低使事件上限减半, 并使事件间隔加倍.\n默认: 正常 (2).",
+    "reason": "2026-10-13 #839：上游英文改寫（Distant gunfire, helicopters, car crashe… → Changes distant gunfire, helicopters and…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostsOutsideCity": {
+    "as1_value": "城镇外的营地和野外基地 (最大数量)",
+    "value": "户外营地与基地上限",
+    "reason": "2026-10-13 #839：上游英文改寫（Camps and field bases outside towns (max… → Outdoor camp and base limit…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.OutpostsOutsideCity_tooltip": {
+    "as1_value": "在每个城镇的强化建筑数量限制之上, 可以同时存在多少个户外场所: 森林营地, 野外基地, 急救站, 仓库. 0表示禁用户外场所.",
+    "value": "限制森林营地, 野外基地和急救站等户外据点的数量, 与城镇设防建筑分开计算. 设为0时禁用户外据点.\n默认: 2.",
+    "reason": "2026-10-13 #839：上游英文改寫（How many outdoor sites -- forest camps, … → Limits outdoor sites such as forest camp…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PatrolRestEnabled": {
+    "as1_value": "巡逻休息",
+    "value": "巡逻与侦察兵休息",
+    "reason": "2026-10-13 #839：上游英文改寫（Patrols rest… → Patrol and scout rest stops…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PatrolRestEnabled_tooltip": {
+    "as1_value": "巡逻队和侦察队每隔几个小时以及战斗结束后, 都会在路上稍作停留: 围成一个圈, 一人坐着, 一人抽烟, 其他人则喝酒聊天, 然后继续前行.",
+    "value": "巡逻队和侦察兵每隔几个小时以及战斗结束后, 会离开道路停下来坐一坐, 抽烟, 喝点东西或聊天, 然后继续前行.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Patrols and scout parties stop off the r… → Patrols and scouts pause off the road ev…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PatrolRestMinMinutes": {
+    "as1_value": "巡逻休息: 最短 (游戏分钟数)",
+    "value": "巡逻休息最短时间 (游戏分钟)",
+    "reason": "2026-10-13 #839：上游英文改寫（Patrol rest: minimum (game minutes)… → Shortest patrol rest (game minutes)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PatrolRestMinMinutes_tooltip": {
+    "as1_value": "最短休息时间, 以游戏分钟计.",
+    "value": "设置巡逻休息的最短时间. 例如30表示每次休息至少持续半个游戏内小时.\n默认: 20.",
+    "reason": "2026-10-13 #839：上游英文改寫（The shortest rest, in game minutes.… → Sets the minimum length of a patrol rest…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PatrolRestMaxMinutes": {
+    "as1_value": "巡逻休息: 最长 (游戏分钟)",
+    "value": "巡逻休息最长时间 (游戏分钟)",
+    "reason": "2026-10-13 #839：上游英文改寫（Patrol rest: maximum (game minutes)… → Longest patrol rest (game minutes)…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PatrolRestMaxMinutes_tooltip": {
+    "as1_value": "最长休息时间, 以游戏分钟计.",
+    "value": "设置巡逻休息的最长时间. 例如60表示每次休息最多一个游戏内小时.\n默认: 45.",
+    "reason": "2026-10-13 #839：上游英文改寫（The longest rest, in game minutes.… → Sets the maximum length of a patrol rest…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PatrolRestEveryHours": {
+    "as1_value": "巡逻休息: 每 (游戏小时)",
+    "value": "巡逻定时休息间隔 (游戏内小时)",
+    "reason": "2026-10-13 #839：上游英文改寫（Patrol rest: every (game hours)… → Scheduled patrol rest interval (game hou…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.PatrolRestEveryHours_tooltip": {
+    "as1_value": "每个小队在预定的休息时间之间的游戏小时数, 期间会有一些波动. 战斗结束后, 会有一个自主的休息时间.",
+    "value": "设置团体两次计划休息之间的通常间隔时间, 会有一些波动. 战斗后的休息不受此安排影响.\n默认: 3.0.",
+    "reason": "2026-10-13 #839：上游英文改寫（Game hours between scheduled rests, per … → Sets the usual time between a group's pl…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.TalkEnabled": {
+    "as1_value": "NPC会回应与其交谈的玩家",
+    "value": "NPC回应聊天",
+    "reason": "2026-10-13 #839：上游英文改寫（NPCs answer players who talk… → NPC replies to chat…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.TalkEnabled_tooltip": {
+    "as1_value": "在NPC附近输入聊天内容, 他们会回答: 问题, 请求, 威胁, 是或否. 当你攻击他们或在战斗中帮助他们时, 他们也会用言语做出反应.",
+    "value": "附近的NPC会回答你输入的问题, 请求, 威胁以及是或否的回复. 当你攻击他们或帮助他们战斗时, 他们也会开口说话.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Type in chat near NPCs and they answer: … → Nearby NPCs answer typed questions, requ…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.TalkSinglePlayerChat": {
+    "as1_value": "单人游戏中的聊天框",
+    "value": "单人游戏聊天框",
+    "reason": "2026-10-13 #839：上游英文改寫（Chat box in single player… → Single-player chat box…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.TalkSinglePlayerChat_tooltip": {
+    "as1_value": "单人模式没有聊天窗口. 启用此功能后, 切换聊天键会打开一个小窗口, 用于与NPC对话. 使用 '!' 开始一个窗口, 以大声喊话.",
+    "value": "在单人游戏中, “切换聊天”按键会打开一个小型聊天栏, 用于与NPC对话. 消息以 ! 开头即可大声喊话.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Single player has no chat window. With t… → The Toggle chat key opens a small chat l…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.TalkPresence": {
+    "as1_value": "NPC会注意到附近的玩家",
+    "value": "NPC问候与关注",
+    "reason": "2026-10-13 #839：上游英文改寫（NPCs notice players nearby… → NPC greetings and attention…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.TalkPresence_tooltip": {
+    "as1_value": "当你走近并说话时, 友善且中立的人会停下脚步看着你; 路过的朋友会跟你打招呼; 而歹徒团伙则会向陌生人喊话.",
+    "value": "友善和中立的NPC会注意到附近的你, 你说话时会停下来看着你. 路过的朋友会向你打招呼; 歹徒团伙会向陌生人喊话.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Friendly and neutral people stop and loo… → Friendly and neutral NPCs notice you nea…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.TalkRiskAssessment": {
+    "as1_value": "新来的幸存者避免争斗",
+    "value": "新手幸存者不愿交战",
+    "reason": "2026-10-13 #839：上游英文改寫（Fresh survivors avoid fights… → Fresh survivors' reluctance to fight…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.TalkRiskAssessment_tooltip": {
+    "as1_value": "受到惊吓的普通人不会向没有攻击他们的人开火, 在火力悬殊的情况下会退缩.而老兵和掠夺者则从不如此.",
+    "value": "新手幸存者会避免无端挑起战斗, 但敌对关系, 仇怨和自卫仍会让他们发动攻击. 老兵和掠食者不受此谨慎限制.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Scared ordinary people do not open fire … → Fresh survivors avoid unprovoked fights,…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RobberyEnabled": {
+    "as1_value": "抢劫",
+    "value": "歹徒拦路抢劫",
+    "reason": "2026-10-13 #839：上游英文改寫（Robberies… → Outlaw hold-ups…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RobberyEnabled_tooltip": {
+    "as1_value": "歹徒团伙可能会拦住单独的玩家而不开枪: 让玩家举起手, 放下武器, 拿走三到四件贵重物品, 然后离开. 如果玩家拒绝, 他们就会开枪.",
+    "value": "歹徒可能会抢劫单独的玩家而不开枪: 举起双手, 放下武器, 拿走三到四件贵重物品, 然后离开. 拒绝可能会招来枪击.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（Outlaw crews may hold up a lone player i… → Outlaws may rob a lone player instead of…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RobberyChance": {
+    "as1_value": "抢劫概率 (正常值的百分比)",
+    "value": "歹徒拦路抢劫频率 (正常值的百分比)",
+    "reason": "2026-10-13 #839：上游英文改寫（Robbery chance (percent of normal)… → Outlaw hold-up frequency (percent of nor…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RobberyChance_tooltip": {
+    "as1_value": "衡量歹徒团伙选择抢劫而非战斗的频率. 100表示正常, 0表示从不, 200表示频率加倍.",
+    "value": "调整歹徒选择抢劫而非战斗的频率. 0表示从不; 200表示正常频率的两倍, 并非必定抢劫.\n默认: 100.",
+    "reason": "2026-10-13 #839：上游英文改寫（Scales how often an outlaw crew chooses … → Scales how often outlaws choose robbery …），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RadioKnoxCounty": {
+    "as1_value": "诺克斯县广播频道",
+    "value": "诺克斯县幸存者电台",
+    "reason": "2026-10-13 #839：上游英文改寫（Knox County Radio Channel… → Knox County survivor radio…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RadioKnoxCounty_tooltip": {
+    "as1_value": "这是一个由幸存者运营的电台, 播放着扫描到的交通信息, 军事对话, 求助电话, 故事, 笑话以及关于你所在世界真实情况的传言.",
+    "value": "添加一个由幸存者运营的电台, 播放扫描器截获的通讯, 军方对话, 来电, 故事, 笑话以及关于你所在世界中事件的传言.\n默认: 开启.",
+    "reason": "2026-10-13 #839：上游英文改寫（A survivor-run station with scanner traf… → Adds a survivor-run station with scanner…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.RadioKnoxFrequency_tooltip": {
+    "as1_value": "默认值99600 = 99.6 MHz. 如果紧急电台或其他模块已占用该频率, 请选择一个未使用的FM频率. 该电台永远不会替换其他频道. 更改此设置后请重新启动服务器; 打开收音机以添加匹配的预设.",
+    "value": "请选择一个未使用的频率; 100000表示100 MHz. 永远不会替换其他频道. 更改后请重新启动服务器, 然后打开收音机添加对应的预设频道.\n默认: 99600.",
+    "reason": "2026-10-13 #839：上游英文改寫（Default 99600 = 99.6 MHz. Choose an unus… → Choose an unused frequency; 100000 means…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_DHCS_BaseInteractionSeconds_tooltip": {
+    "as1_value": "设定进入和离开藏身处的基础引导时间. 幸存者的体重、携带物品的体积、藏身处类型, 以及 '隐秘'、 '毫不起眼' 或 '身轻如燕' 等特质都会影响最终时间. 有效范围: 1.0至30.0秒. 默认值: 7.0秒. 在多人游戏中, 仅管理员可以更改此服务器设置.",
+    "value": "设定进入与离开藏身处共用的基础时间. 进入时间可设为 0.25 至 30.0 秒; 离开时间保留原有的 1.0 秒下限. 管理员可通过开关禁用体重、携带物品体积、藏身处类型与特质对进入时间的修正 (仅限进入). 四项进入时间修正全部禁用时, 所有人进入都会使用设定的基础时间. 所有默认值不变: 7.0 秒; 修正启用. 多人游戏: 仅限管理员.",
+    "reason": "2026-10-13 #838：上游英文改寫（Sets the base channel time for entering … → Sets the shared base entry/exit time. En…），依新英文重譯。"
+  },
+  "UI.json|UI_Aegis_KitCooldown": {
+    "as1_value": "%1小时后可再次领取",
+    "value": "%1后可再次领取",
+    "reason": "2026-10-13 #835：上游英文改寫（Available again in %1 h… → Available again in %1…），依新英文重譯。"
+  },
+  "UI.json|UI_Aegis_KitMonthWait": {
+    "as1_value": "每月1日再次可用, 还需%1小时",
+    "value": "每月1日再次可用, 还需%1",
+    "reason": "2026-10-13 #835：上游英文改寫（Available again on the 1st, in %1 h… → Available again on the 1st, in %1…），依新英文重譯。"
+  },
+  "UI.json|UI_Aegis_RepairTooltip": {
+    "as1_value": "将你背包中的所有物品恢复至最佳状态.",
+    "value": "将所选玩家携带的所有物品恢复至最佳状态, 包括背包在内, 并修补衣物上的破洞.",
+    "reason": "2026-10-13 #835：上游英文改寫（Restores every item in your inventory to… → Restores everything the selected player …），依新英文重譯。"
   }
 }
