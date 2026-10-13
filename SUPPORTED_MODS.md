@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1343 個 Workshop 模組**（1693 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
+共支援 **1343 個 Workshop 模組**（1694 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1069,7 +1069,7 @@
 | [MRE Mod [B42.20.2]](https://steamcommunity.com/sharedfiles/filedetails/?id=3765409550) | 即食口糧 | 新增 1993 與 2026 兩個年份、共 36 種菜色的美軍即食口糧，附整盒包裝、拆封配方與生成率／營養值沙盒設定。 | `bdtmre` | 60 | — | — |
 | [Practice Crafting Skills](https://steamcommunity.com/sharedfiles/filedetails/?id=3765795716) | — | — | `CraftingSkillsPractice`, `CraftingSkillsPracticeCompatability`, `CraftingSkillsPracticeHard`, `CraftingSkillsPracticeHardCompatability` | 1 | — | — |
 | [Black Powder Gunsmithing](https://steamcommunity.com/sharedfiles/filedetails/?id=3766140920) | — | — | `BlackPowderGunsmithing` | 98 | — | — |
-| [Aegis Panel](https://steamcommunity.com/sharedfiles/filedetails/?id=3766508989) | Aegis 管理面板 | 功能完整的多人伺服器管理員與玩家管理工具面板. | — | 1138 | — | ⚠️ 內建說明、更新記錄與導覽刻意寫死 EN/DE，部分建材名稱與操作日誌也走英文；這些文字不經 PZ JSON 翻譯表，任何翻譯包都無法補上。 |
+| [Aegis Panel](https://steamcommunity.com/sharedfiles/filedetails/?id=3766508989) | Aegis 管理面板 | 功能完整的多人伺服器管理員與玩家管理工具面板. | `AP` | 1138 | — | ⚠️ 內建說明、更新記錄與導覽刻意寫死 EN/DE，部分建材名稱與操作日誌也走英文；這些文字不經 PZ JSON 翻譯表，任何翻譯包都無法補上。 |
 | [Blackout Predators](https://steamcommunity.com/sharedfiles/filedetails/?id=3766513120) | 黑暗捕食者（Blackout Predators） | 新增夜魔捕食者，含固定巢穴系統（可設定活躍巢穴上限）與環境尖叫間隔等沙盒及選項設定。 | `blackoutpredators` | 33 | — | — |
 | [Ammo Reloading Bench](https://steamcommunity.com/sharedfiles/filedetails/?id=3766525060) | — | — | `ammobench` | 41 | — | — |
 | ['70 Chevrolet Chevelle / El Camino](https://steamcommunity.com/sharedfiles/filedetails/?id=3766571591) | — | — | `70chevelle` | 50 | — | — |
