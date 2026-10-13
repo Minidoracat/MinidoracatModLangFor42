@@ -4,6 +4,18 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **SMB steps 補上 0.4.5 新增的 1 項繁簡中文。** 伺服器開著穿牆反作弊（`AntiCheatNoClip`）時，往上爬會被拒絕並顯示這則提示：反作弊會把往上爬的人拉回去，請管理員設為 4，往下爬不受影響（#840）。
+  > 技術要點：own 目錄 CN＋`sources/ch`，CH／CN 逐鍵對照 EN 直寫，以有效 CN 值登記 `ch_review_state`；「穿牆反作弊」沿用本體伺服器設定說明的譯名。上游 52 鍵的 EN 值 hash 與 tracker state 全數相符，兩組動態組鍵（`ContextMenu_SMB_steps_Refused*` 6 個、`Tooltip_SMB_steps_Build*` 12 個）全數出貨。
+
+### Changed
+
+- **SMB steps 的工具、材料、技能與按鍵改用本體譯名，共 5 項。** 延伸木梯要的「錘子」、延伸鋼梯要的「金屬棒」（配方收鐵條、鋼棒、鋼條任一種，不只鋼棒）、消防桿兩則說明裡打破地板用的「破牆大錘」；沙盒「攀爬會消耗體力」的說明改用本體的「攀爬繩索」、「肌肉拉傷係數」與「慢跑鍵」，消耗減少的條件改為「力量與體格越高」（原本寫成身強力壯、身體健康等特質，實際依的是力量與體格技能等級）。
+  > 技術要點：own 目錄，CH 改 `sources/ch` 5 鍵，CN 改 own 目錄 3 鍵（錘子與金屬棒的簡中原本就對齊本體），改值的 CN 重新登記 `ch_review_state`；支援清單摘要的「奔跑鍵」同步改「慢跑鍵」。依據 `SMB_stepsRealism.lua` 以 `Perks.Strength`／`Perks.Fitness` 計算消耗、`SMB_stepsShift.lua` 以 `KeybindId.RUN` 判斷加速。
+
 ## [42.21.0-1.48.0] - 2026-10-12
 
 ### Added
