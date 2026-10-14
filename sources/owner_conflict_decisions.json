@@ -10475,6 +10475,67 @@
       "reason": "2026-10-13 #834 裁決：3717968421 寫 with an improvised tool，3750253491 寫 with knives or scissors（BB_CS_OnCraft.lua 的 CSOpen…WithAnyTool 配方，不用開罐器時判定），改為兩版都成立的「用刀具、剪刀等臨時工具」，受傷部位不寫死。",
       "ch": "用刀具、剪刀等臨時工具開罐頭時受傷的機率.",
       "cn": "用刀具、剪刀等临时工具开罐头时受伤的概率."
+    },
+    "Tooltip|Tooltip_SalvageVehicle": {
+      "action": "translate",
+      "signature": "4cffbc49447039f0",
+      "reason": "2026-10-14 #842：Vehicle Repair Overhaul 新增子模組 Vehicle Salvage Overhaul（2757712197）定義同鍵，與 Chopped Vehicle Salvage（3727602756）說法不同：前者為移除擋路車輛、比拆解汽車殘骸耗時與耗丙烷更多但產出更多並提示先拆零件，後者為摧毀車輛取得金工材料。依 2026-10-11 兩行並陳裁定：前兩行（焊工面罩＋丙烷噴燈拆解回收車輛、取得可用材料、金工等級越高回收越多）對兩方都成立；第三行明指「車輛拆解回收大修」的專屬說明，對 Chopped Vehicle Salvage 不構成錯誤說明。舊譯只依前者英文，對後者有誤，一併修正。",
+      "ch": "佩戴焊工面罩並使用丙烷噴燈拆解回收車輛, 可將車輛拆除, 並取得可用材料.<br>金工技能等級越高, 回收的可用材料就越多.<br>車輛拆解回收大修: 比拆解汽車殘骸耗時更長, 消耗更多丙烷, 但能產出額外物資並獲得更多經驗值. 建議先拆下車輛配件並清空後車廂.",
+      "cn": "佩戴焊工面罩并使用丙烷喷灯拆解回收车辆, 可将车辆拆除, 并获得可用材料.<br>金工技能等级越高, 回收的可用材料就越多.<br>车辆拆解回收大修: 比拆解汽车残骸耗时更长, 消耗更多丙烷, 但能产出额外物资并获得更多经验值. 建议先拆下车辆配件并清空后备箱."
+    },
+    "ItemName|Base.338Clip_cat": {
+      "action": "translate",
+      "signature": "2c4668b8d528a918",
+      "reason": "2026-10-14 #854：MFS 社群修正版改為「8.6mm (.338 LM) 10-Round MK18 Magazine」、EFK 仍為「8.6mm 10-Round Magazine」；兩方 script 皆 MaxAmmo 10、8.6mm 彈種，現譯「8.6mm 10 發彈匣」對兩方都成立，維持。",
+      "ch": "8.6mm 10 發彈匣",
+      "cn": "8.6mm 10 发弹匣"
+    },
+    "ItemName|Base.338Drum_cat": {
+      "action": "translate",
+      "signature": "c72252829d62a3ed",
+      "reason": "2026-10-14 #854：MFS 社群修正版「8.6mm (.338 LM) 100-Round MG Box Magazine/Belt」vs EFK「8.6mm 100-Round Drum Magazine」；兩方 script 皆 MaxAmmo 100、GunType 為機槍，舊譯「彈鼓」對前者不成立，改為不分彈鼓／彈箱的「8.6mm 100 發機槍彈匣」。",
+      "ch": "8.6mm 100 發機槍彈匣",
+      "cn": "8.6mm 100 发机枪弹匣"
+    },
+    "ItemName|Base.MG42Drum_cat": {
+      "action": "translate",
+      "signature": "0bfaa0f65b82b44f",
+      "reason": "2026-10-14 #854：MFS 社群修正版「7.62×51mm 75-Round MG3 Drum」vs EFK「7.92×57mm 75-Round Drum」，口徑說法互斥（兩方 script 實為 base:bullets_308、MaxAmmo 75、GunType MG3／MG42）；改為不寫口徑的「75 發機槍彈鼓」。",
+      "ch": "75 發機槍彈鼓",
+      "cn": "75 发机枪弹鼓"
+    },
+    "Recipes|7.62Drum(75)": {
+      "action": "translate",
+      "signature": "e0ec6bb714900b01",
+      "reason": "2026-10-14 #854：兩方配方皆產出 Base.MG42Drum_cat，英文口徑與槍型說法互斥（7.92x57mm MG42／7.62×51mm MG3）；比照物品名改為「製作 75 發機槍彈鼓」。",
+      "ch": "製作 75 發機槍彈鼓",
+      "cn": "制作 75 发机枪弹鼓"
+    },
+    "Recipes|8.6Drum": {
+      "action": "translate",
+      "signature": "152ea8d26c72a0d8",
+      "reason": "2026-10-14 #854：EFK「Craft 8.6mm Drum Magazine」vs MFS 社群修正版「Craft 8.6mm (.338 LM) 100-Round MG Box Magazine/Belt」；兩方都沒有名為 8.6Drum 的 craftRecipe，取兩方都成立的「製作 8.6mm 機槍彈匣」。",
+      "ch": "製作 8.6mm 機槍彈匣",
+      "cn": "制作 8.6mm 机枪弹匣"
+    },
+    "Recipes|8.6Drum(100)": {
+      "action": "translate",
+      "signature": "6f3e9c583b76c69c",
+      "reason": "2026-10-14 #854：兩方配方皆產出 Base.338Drum_cat（100 發），EFK 稱 Drum Magazine、MFS 社群修正版稱 MG Box Magazine/Belt；比照物品名改為「製作 8.6mm 100 發機槍彈匣」。",
+      "ch": "製作 8.6mm 100 發機槍彈匣",
+      "cn": "制作 8.6mm 100 发机枪弹匣"
+    },
+    "Recipes|8.6机枪弹鼓": {
+      "action": "translate",
+      "signature": "7437a7e2c1ff37cd",
+      "reason": "2026-10-14 #854：同 Base.338Drum_cat，EFK「8.6 100-Round Drum Magazine」vs MFS 社群修正版「8.6mm (.338 LM) 100-Round MG Box Magazine/Belt」；改為「8.6mm 100 發機槍彈匣」。",
+      "ch": "8.6mm 100 發機槍彈匣",
+      "cn": "8.6mm 100 发机枪弹匣"
+    },
+    "Sandbox|Sandbox_MFSCommunityFixLoot_EnableMFSCivilianFirearms": {
+      "action": "unship",
+      "signature": "2370c02745c2ed01",
+      "reason": "2026-10-14 #854 裁決不出貨：同一沙盒變數在兩方意義互斥——EFK（3633421539）仍是「將所有 MFS 槍械加入民用槍械地點」且有作用（MFS_CivilianOnlyLoot.lua 讀取），MFS 社群修正版（3780151182）已改為無作用的舊選項、標題寫「(已移至 MFS 4 - 掉落規則) 槍店展示櫃」（GunSpawns.lua 註明 now inert）。沒有對兩方都成立的中性譯名。兩方都在有效分支 42 的 Translate/EN/Sandbox.json 定義此鍵且自帶 CH／CN，抑制後玩家看到各自 MOD 自帶的中文或英文。"
     }
   }
 }

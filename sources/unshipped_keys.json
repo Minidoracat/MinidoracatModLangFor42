@@ -1644,6 +1644,11 @@
    "as1_value": "御林长刀刀带",
    "owner_signature": "3c1c78226ab0f4ab",
    "reason": "2026-10-03 裁決：同一件可穿戴的御林長刀攜行件 (BodyLocation cat:YulinSwordS), 但兩方對形制的說法互斥: 原作者 script 名「御林长刀鞘YulinSwordS」是刀鞘, 社群修正版 MFS_BladesmithSystem_fix 英文「Yulin Sword Sling」與其自帶繁中「御林長刀綁帶」是背帶. 「刀鞘」對修正版不成立, 「刀帶」對原版不成立, 找不到誠實的中性名稱. 抑制後: 只裝原版的玩家看到 script 名「御林长刀鞘YulinSwordS」; 修正版需搭配原版載入, 玩家看到修正版自帶的繁中／簡中或英文「Yulin Sword Sling」."
+  },
+  "Sandbox.json|Sandbox_MFSCommunityFixLoot_EnableMFSCivilianFirearms": {
+   "as1_value": "将所有 MFS 枪械加入民用枪械刷新地点",
+   "owner_signature": "2370c02745c2ed01",
+   "reason": "2026-10-14 #854 裁決不出貨：同一沙盒變數在兩方意義互斥——EFK（3633421539）仍是「將所有 MFS 槍械加入民用槍械地點」且有作用（MFS_CivilianOnlyLoot.lua 讀取），MFS 社群修正版（3780151182）已改為無作用的舊選項、標題寫「(已移至 MFS 4 - 掉落規則) 槍店展示櫃」（GunSpawns.lua 註明 now inert）。沒有對兩方都成立的中性譯名。兩方都在有效分支 42 的 Translate/EN/Sandbox.json 定義此鍵且自帶 CH／CN，抑制後玩家看到各自 MOD 自帶的中文或英文。"
   }
  }
 }

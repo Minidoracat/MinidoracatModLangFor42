@@ -4,6 +4,27 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 14 個 MOD 新增的繁簡中文，共 1,290 項。** Read Your Manga（#843，《哆啦A夢》第 46–200 卷，以及《噬謊者》《20世紀少年》《晚安，布布》《魔法少女holoWitches!》《holoX MEETing!》《Holoearth Chronicles Side:E 大和神想怪異譚》六部新作，另有漫畫生成倍率的沙盒設定，507 項）、Stay With Me（#857，同伴裝備視窗與各部位欄位、區域搜刮設定與物品分類、擊殺里程碑台詞、收到電池、香菸、魚餌、無線電等物品時的回應，坐下休息、清除雜草、搜刮與釣魚等事件台詞，更新說明與錯誤回報產生器，448 項）、Arcadia RV Interiors（#851，房車電力系統：船用電池艙、岸電樁與岸電電纜、保險絲與保險絲盒、電源管理器，以及相關配方與沙盒設定，151 項）、Vehicle Repair Overhaul（#842，維修遞減與修復全損零件等開關、從地上與附近容器取用材料，以及新子模組「車輛拆解回收大修」各類零件的拆解時間，50 項）、TwisTonFire - WANTED（#850，掃描排除區域的新增、改名與清單切換，30 項）、ApocalipseBR Regioes（#848，地圖繪製區域、PvP／安全區、進入訊息、開門機率與殭屍感知規則，28 項）、Bicycle!（#846，警用與新配色自行車、運動水壺、後架包，以及腳傷無法踩踏的提示，22 項）、that DAMN Library（#844，簡易與三腳架路標及其繪製配方、輪胎修補條，21 項）、Modern Firearms System Community Fix Patch（#854，8.6mm AWM／M200 彈匣與裝飾件、槍托管轉接器、MFS 4 掉落規則頁的槍店展示櫃與軍用槍械限定等設定，19 項），以及 Coca-Cola Freezer ICE（#856，Dr Pepper 海報，5 項）、Bundle Up!（#849，牧草與草屑捆，4 項）、GridInventory（#855，拖曳時旋轉物品的快捷鍵，2 項）、Exact Minute Clock（#853，右鍵開啟鬧鐘設定，2 項）、Dark/Invisible Weapon Slings（#847，1 項）。
+  > 技術要點：全數落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫，新鍵皆以有效 CN 值登記 `ch_review_state`。9 路翻譯、9 路對抗複核提出 30 條修正全數採納（同伴台詞「I'll take it.」統一為「我收下了」、garden 依同 MOD 既有譯文寫「花園」、Arcadia 小型物件的 Build 改「製作」、額定電流與 chance 的簡中「几率」等）。Read Your Manga 冊名依 2026-10-03 裁定 `_l`／`_s` 同譯《書名》第N卷；Arcadia 有 5 個鍵上游 `UI.json` 與殘留的 `UI_EN.txt` 不同值，依執行期 JSON 英文翻譯。16 個 wid 以 steamcmd 重抓，34,874 筆文本 record 的值 hash 與 tracker state 全數相符。
+
+### Changed
+
+- **依上游英文改值重譯 12 項。** Arcadia RV Interiors 8 項（#851，舊的房車電池組改為無作用的舊版物品、說明書改名「房車電力手冊」並改教船用電池艙／岸電樁／岸電電纜、空電池位、首次發現殭屍遭遇改為單人也可用、電池消耗預設改 0.5、舊的初始電池組開關標為無作用）、Modern Firearms System Community Fix Patch 3 項（#854，沙盒分頁「MFS 5 - 武器可靠度」、8.6mm 10 發 MK18 與 5 發 AWM 彈匣配方補上型號）、ApocalipseBR Regioes 1 項（#848，「請先畫完區域, 或先選擇兩個角.」）。
+  > 技術要點：Arcadia 4 項與 Regioes 1 項屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點）；其餘屬 own 層連 `en` 錨點更新；皆登記 `ch_review_state`。Auto All（#852）3 項只把英文的字面 `%` 改寫成 `%%`，譯文原本就是 `%%`，只更新 `en` 錨點。
+- **裁決 9 個多 MOD 共用鍵，改譯 7 項、不出貨 1 項。** Modern Firearms System 社群修正版與 Escape from Kentucky（#854）：8.6mm 100 發彈藥容器一方改稱機槍彈箱／彈鏈、一方仍是彈鼓，物品名與 3 個配方名改為「8.6mm 100 發機槍彈匣」；MG42／MG3 的 75 發彈鼓兩方口徑寫法互斥，物品名與配方名改為不寫口徑的「75 發機槍彈鼓」；兩方都沒有配方使用的 `8.6Drum` 改為「製作 8.6mm 機槍彈匣」；8.6mm 10 發彈匣兩方都成立，維持。沙盒選項 `EnableMFSCivilianFirearms` 在 EFK 仍有作用、在社群修正版已改為無作用並標示「已移至 MFS 4」，沒有兩方都成立的譯名，改為不出貨，玩家看到各自 MOD 自帶的中文。Vehicle Repair Overhaul 新子模組與 Chopped Vehicle Salvage 共用的拆解回收說明（#842）改為兩方都成立的共通兩行，第三行標明「車輛拆解回收大修」專屬的耗時、耗丙烷與先拆零件提示（舊譯只符合前者）。
+  > 技術要點：`owner_conflict_decisions.json` 新增 9 筆（translate 8、unship 1，`unshipped_keys.json` 以 `owner_signature` 雙向背書）；依兩方 script 的 `MaxAmmo`／`AmmoType`／`GunType` 與 Lua 讀取沙盒變數的方式判定；改值的 6 鍵屬 As1 衍生層、1 鍵屬 own 層，皆登記 `ch_review_state`；`OWNER_CONFLICTS.md` 重生，尚未裁決的衝突由 309 降為 300。
+
+### Removed
+
+- **移除 3 項上游已刪除的原創翻譯。** Read Your Manga 的兩個漫畫生成器物品（#843）、Modern Firearms System Community Fix Patch 舊的 8.6mm 5 發彈匣 `Base.338Clip_5Rd_cat`（#854，已由 AWM 5 發彈匣取代）。
+  > 技術要點：`sources/en` 全庫與 tracker state 已無 owner，現行 Workshop 內容的 script 與 Lua 也不再定義或引用（MFS 只剩註解提及）；`ch_review_state` 同步移除。
+
+其餘追蹤單無需另外變更翻譯：Hanksie's Musical Wonders（#845）只把 MOD 資料夾由 `HMW` 改名為 `HMW (B42)`，2,361 筆鍵值不變；Read Your Manga 拆成 235 個子 MOD、物品名改由 `ItemName.json` 提供，838 個 DisplayName 只差一個空白、已出貨的冊名不受影響，舊版 `ItemName_EN.txt` 的 B41 前綴鍵與 17 個舊沙盒設定屬 As1 衍生層，依同步流程保留；Vehicle Repair Overhaul 的 Armour 改 Armor 譯文不變，移除的「整車拆解回收」開關屬 As1 衍生層、保留；Modern Firearms System Community Fix Patch 移除的兩個榴彈物品顯示名與兩個彈鼓配方屬 As1 衍生層、保留。
+
 ## [42.21.0-1.49.0] - 2026-10-13
 
 ### Added

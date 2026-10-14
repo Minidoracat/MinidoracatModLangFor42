@@ -17421,8 +17421,8 @@
   },
   "Tooltip.json|Tooltip_SalvageVehicle": {
     "as1_value": "佩戴焊工面罩, 使用丙烷喷灯拆解车辆, 可将车辆从道路上清理移走. 整车拆解相比拆解汽车残骸耗时更长, 消耗更多丙烷, 但能产出额外物资,还能获得更多技能经验值.<LINE> 金工技能等级越高, 拆解获得的可用零件和材料就越多. <LINE> * 建议先提前拆空车辆配件并清空后备箱",
-    "reason": "物品欄 tooltip 為純文字路徑（ObjectTooltip 不解析標籤），<LINE> 僅 ISRichTextPanel 認得，正規化為官方慣例 <br>（Translator 載入轉 \\n，兩種消費端皆安全）",
-    "value": "佩戴焊工面罩, 使用丙烷喷灯拆解车辆, 可将车辆从道路上清理移走. 整车拆解相比拆解汽车残骸耗时更长, 消耗更多丙烷, 但能产出额外物资,还能获得更多技能经验值.<br>金工技能等级越高, 拆解获得的可用零件和材料就越多.<br>* 建议先提前拆空车辆配件并清空后备箱"
+    "value": "佩戴焊工面罩并使用丙烷喷灯拆解回收车辆, 可将车辆拆除, 并获得可用材料.<br>金工技能等级越高, 回收的可用材料就越多.<br>车辆拆解回收大修: 比拆解汽车残骸耗时更长, 消耗更多丙烷, 但能产出额外物资并获得更多经验值. 建议先拆下车辆配件并清空后备箱.",
+    "reason": "2026-10-14 #842：Vehicle Repair Overhaul 新增子模組 Vehicle Salvage Overhaul 定義同鍵，與 Chopped Vehicle Salvage 說法不同；改為兩方都成立的共通兩行＋具名專屬行（裁決見 owner_conflict_decisions）。依物品欄 tooltip 純文字路徑沿用 <br>。"
   },
   "Tooltip.json|Tooltip_SandwichMilanesa": {
     "as1_value": "米兰萨三明治是图库曼市阿根廷美食的经典之作.",
@@ -58829,5 +58829,55 @@
     "as1_value": "将你背包中的所有物品恢复至最佳状态.",
     "value": "将所选玩家携带的所有物品恢复至最佳状态, 包括背包在内, 并修补衣物上的破洞.",
     "reason": "2026-10-13 #835：上游英文改寫（Restores every item in your inventory to… → Restores everything the selected player …），依新英文重譯。"
+  },
+  "UI.json|UI_RMMP_SaySelectBoth": {
+    "as1_value": "请先在地图上选择两个角!",
+    "value": "请先画完区域, 或先选择两个角.",
+    "reason": "2026-10-14 #848：上游英文改寫（Select both corners on the map first! → Finish drawing a region, or set both corners first.），依新英文重譯。"
+  },
+  "ItemName.json|Base.338Drum_cat": {
+    "as1_value": "8.6mm 100 发弹鼓",
+    "value": "8.6mm 100 发机枪弹匣",
+    "reason": "2026-10-14 #854：MFS 社群修正版改為 MG Box Magazine/Belt，EFK 仍為 Drum Magazine；兩方皆 100 發、供機槍使用，改為不分彈鼓／彈箱的「機槍彈匣」。"
+  },
+  "ItemName.json|Base.MG42Drum_cat": {
+    "as1_value": "7.92×57mm 75 发弹鼓",
+    "value": "75 发机枪弹鼓",
+    "reason": "2026-10-14 #854：MFS 社群修正版改標 7.62×51mm MG3，EFK 標 7.92×57mm；兩方口徑說法不同，改為不寫口徑的「75 發機槍彈鼓」。"
+  },
+  "Recipes.json|7.62Drum(75)": {
+    "as1_value": "制作 7.92x57mm MG42 75 发弹鼓",
+    "value": "制作 75 发机枪弹鼓",
+    "reason": "2026-10-14 #854：產物 Base.MG42Drum_cat 兩方口徑說法不同（7.92×57mm MG42／7.62×51mm MG3），配方名比照物品名不寫口徑。"
+  },
+  "Recipes.json|8.6Drum(100)": {
+    "as1_value": "制作 8.6mm 100 发弹鼓",
+    "value": "制作 8.6mm 100 发机枪弹匣",
+    "reason": "2026-10-14 #854：產物 Base.338Drum_cat，MFS 社群修正版改為 MG Box Magazine/Belt、EFK 仍為 Drum Magazine，配方名比照物品名。"
+  },
+  "Recipes.json|8.6机枪弹鼓": {
+    "as1_value": "8.6mm 100 发弹鼓",
+    "value": "8.6mm 100 发机枪弹匣",
+    "reason": "2026-10-14 #854：同 Base.338Drum_cat，MFS 社群修正版改為 MG Box Magazine/Belt、EFK 仍為 Drum Magazine。"
+  },
+  "ItemName.json|ArcadiaRV.RVPowerMagazine": {
+    "as1_value": "专业辅助电源指南",
+    "value": "房车电力手册",
+    "reason": "2026-10-14 #851：上游英文改寫（Auxiliury Power for Professionals → RV Power Manual），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_ArcadiaRVPowerMagazine": {
+    "as1_value": "教导如何建造嵌入式辅助房车电池组.",
+    "value": "教导如何制作房车船用电池舱, 房车岸电桩与房车岸电电缆.",
+    "reason": "2026-10-14 #851：上游英文改寫（Teaches how to construct recessed auxiliary RV power banks. → Teaches RV Marine Power Bay, RV Shore-Power Pedestal and RV Shore-Power Cable construction.），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_ArcadiaRVRVPowerBank": {
+    "as1_value": "一种紧凑型的双位车载电池落地柜. 拾取前必须清空内部物品.",
+    "value": "旧版物品, 对房车电力没有作用. 请改用房车船用电池舱提供辅助电力.",
+    "reason": "2026-10-14 #851：上游英文改寫（A compact two-position floor cabinet… → Legacy inventory item with no RV electrical effect…），依新英文重譯。"
+  },
+  "UI.json|UI_ArcadiaAuxBank_NoBattery": {
+    "as1_value": "未安装电池",
+    "value": "空电池位",
+    "reason": "2026-10-14 #851：上游英文改寫（No battery installed → Empty slot），依新英文重譯。"
   }
 }
