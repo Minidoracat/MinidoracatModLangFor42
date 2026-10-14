@@ -1,5 +1,5 @@
 {
-  "corpus_hash": "180425d29145d5054fb45e6a7d7662945e9b965caaf1f53d95e80fcb19077699",
+  "corpus_hash": "cd0aa22354d8bd495976ab1e6c3946a4ac06b3eae8c56a634c193fe59387a403",
   "extractor_schema": 10,
   "mod_ids": [
     "BundleUp",
@@ -77,6 +77,7 @@
     "script_craftRecipe|mods/Vanilla/42/media/scripts/recipes/recipes_packs.txt|PackCeramicCrate": "e27d7a52fb74",
     "script_craftRecipe|mods/Vanilla/42/media/scripts/recipes/recipes_packs.txt|PackDryCarton": "a4c0a0565383",
     "script_craftRecipe|mods/Vanilla/42/media/scripts/recipes/recipes_packs.txt|PackFibreBale": "b2dee60ca147",
+    "script_craftRecipe|mods/Vanilla/42/media/scripts/recipes/recipes_packs.txt|PackFodderBundle": "f1988fa13eaf",
     "script_craftRecipe|mods/Vanilla/42/media/scripts/recipes/recipes_packs.txt|PackFreshCarton": "dc8540efc5de",
     "script_craftRecipe|mods/Vanilla/42/media/scripts/recipes/recipes_packs.txt|PackJuice": "705e3e07a33b",
     "script_craftRecipe|mods/Vanilla/42/media/scripts/recipes/recipes_packs.txt|PackJuiceSealed": "a4ae8b1d4eb1",
@@ -135,6 +136,7 @@
     "script_craftRecipe|mods/Vanilla/42/media/scripts/recipes/recipes_packs.txt|UnpackDryCarton": "e5b80d4814d9",
     "script_craftRecipe|mods/Vanilla/42/media/scripts/recipes/recipes_packs.txt|UnpackElectronicsScrapBox": "9b32295b96e6",
     "script_craftRecipe|mods/Vanilla/42/media/scripts/recipes/recipes_packs.txt|UnpackFibreBale": "3361e43a5d8e",
+    "script_craftRecipe|mods/Vanilla/42/media/scripts/recipes/recipes_packs.txt|UnpackFodderBundle": "220108b1f7b1",
     "script_craftRecipe|mods/Vanilla/42/media/scripts/recipes/recipes_packs.txt|UnpackFreshCarton": "9684c052defc",
     "script_craftRecipe|mods/Vanilla/42/media/scripts/recipes/recipes_packs.txt|UnpackJuice": "55941296371b",
     "script_craftRecipe|mods/Vanilla/42/media/scripts/recipes/recipes_packs.txt|UnpackKnappedBox": "591d09f5fc0c",
@@ -3201,6 +3203,7 @@
     "script_item|mods/Vanilla/42/media/scripts/items/packs.txt|BundleUp.GrassBagR": "e7649057d2ae",
     "script_item|mods/Vanilla/42/media/scripts/items/packs.txt|BundleUp.GrassBagSR": "23da24c663a3",
     "script_item|mods/Vanilla/42/media/scripts/items/packs.txt|BundleUp.GrassTuftBale": "9fd22715e3b8",
+    "script_item|mods/Vanilla/42/media/scripts/items/packs.txt|BundleUp.GrassTuftBundle": "054d8f78b97d",
     "script_item|mods/Vanilla/42/media/scripts/items/packs.txt|BundleUp.GravelbagLR": "a68606a1abe7",
     "script_item|mods/Vanilla/42/media/scripts/items/packs.txt|BundleUp.GravelbagLSR": "c7345aea5876",
     "script_item|mods/Vanilla/42/media/scripts/items/packs.txt|BundleUp.GravelbagR": "d4b6129437d6",
@@ -3220,6 +3223,7 @@
     "script_item|mods/Vanilla/42/media/scripts/items/packs.txt|BundleUp.HamCarton": "e8cdd78fb2d0",
     "script_item|mods/Vanilla/42/media/scripts/items/packs.txt|BundleUp.HardCandiesCarton": "cb21ee113460",
     "script_item|mods/Vanilla/42/media/scripts/items/packs.txt|BundleUp.HayTuftBale": "8d7963b547e4",
+    "script_item|mods/Vanilla/42/media/scripts/items/packs.txt|BundleUp.HayTuftBundle": "41a7170c8e5f",
     "script_item|mods/Vanilla/42/media/scripts/items/packs.txt|BundleUp.HeavyChainLinkBox": "eb4de7994f49",
     "script_item|mods/Vanilla/42/media/scripts/items/packs.txt|BundleUp.HematiteLargeSack": "284d73b73ef1",
     "script_item|mods/Vanilla/42/media/scripts/items/packs.txt|BundleUp.HematiteSack": "bbb867e697f3",
@@ -8395,6 +8399,7 @@
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/ItemName.json|BundleUp.GrassBagR": "26383a8f9e71",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/ItemName.json|BundleUp.GrassBagSR": "e8af00710df8",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/ItemName.json|BundleUp.GrassTuftBale": "9f88c85d8a6c",
+    "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/ItemName.json|BundleUp.GrassTuftBundle": "3aa87761463e",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/ItemName.json|BundleUp.GravelbagLR": "066b6125e8c9",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/ItemName.json|BundleUp.GravelbagLSR": "6ed77524f721",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/ItemName.json|BundleUp.GravelbagR": "246dbdeca12f",
@@ -8428,6 +8433,7 @@
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/ItemName.json|BundleUp.HardCandiesCase": "462d4fe3c346",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/ItemName.json|BundleUp.HardCandiesCrate": "c4b591a8bddb",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/ItemName.json|BundleUp.HayTuftBale": "31b1077e6a10",
+    "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/ItemName.json|BundleUp.HayTuftBundle": "12ea7c763070",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/ItemName.json|BundleUp.HeavyChainLinkBox": "c5c400b1da30",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/ItemName.json|BundleUp.HematiteLargeSack": "fcff23c4088d",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/ItemName.json|BundleUp.HematiteSack": "2903426caf23",
@@ -9872,6 +9878,7 @@
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/Recipes.json|PackDrinkCase": "54b04072758e",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/Recipes.json|PackDryCarton": "99df4bbe24db",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/Recipes.json|PackFibreBale": "0ab4b0bb2bfd",
+    "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/Recipes.json|PackFodderBundle": "55ac1ab504e7",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/Recipes.json|PackFoodCase": "227f6d9dc0a1",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/Recipes.json|PackFoodCrate": "224e9325722b",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/Recipes.json|PackFoodCrate2": "224e9325722b",
@@ -9944,6 +9951,7 @@
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/Recipes.json|UnpackDryCarton": "df5971698356",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/Recipes.json|UnpackElectronicsScrapBox": "ee43e4910b73",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/Recipes.json|UnpackFibreBale": "045bcdfaf2e3",
+    "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/Recipes.json|UnpackFodderBundle": "7b45f393c1f2",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/Recipes.json|UnpackFoodCase": "08a11b4145d6",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/Recipes.json|UnpackFoodCrate": "dd0926b25044",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/Recipes.json|UnpackFoodCrate2": "66612a547f44",
@@ -10654,5 +10662,5 @@
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BundleUp_SpawnSupplies": "15b6ee5f5300",
     "translate_en|mods/Vanilla/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_BundleUp_SpawnSupplies_tooltip": "e22a854a34d3"
   },
-  "updated_at": "2026-10-12T12:00:19Z"
+  "updated_at": "2026-10-14T09:33:43Z"
 }

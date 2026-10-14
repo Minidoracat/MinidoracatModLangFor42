@@ -23,7 +23,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1585** 個鍵（`unship` 310、`translate` 1275）。這些鍵的 owner 條目共 4451 筆：可載入 `.json` 2886、script 677、死檔 888。另有 **301** 個鍵尚未裁決。
+現況：已裁決 **1585** 個鍵（`unship` 310、`translate` 1275）。這些鍵的 owner 條目共 4451 筆：可載入 `.json` 2886、script 677、死檔 888。另有 **309** 個鍵尚未裁決。
 
 ## 不出貨的鍵（310）
 
@@ -1624,7 +1624,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_thickblooddesc` | `1299328280/More Traits` = You bleed more slowly from wounds. _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Wounds bleeds less.&lt;br&gt;(-50% damage from bleeding.) _(json)_ | 2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。 | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（301）
+## 尚未裁決的衝突（309）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
@@ -1680,6 +1680,8 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|Base.223Carton` | `3611718925/VFE` = Carton of .223 Rounds _(json)_<br>`3761077099/VFE` = Carton of .223 Boxes _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts` = Carton of .223 Rounds _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = Carton of .223 Rounds _(json)_ | .223彈藥 (整件) |
 | `ItemName\|Base.22Clip` | `2256623447/Firearms` = Colt Ace Magazine _(json)_<br>`2256623447/FirearmsBETA` = Colt Ace Magazine _(json)_<br>`3777433827/BritaCombinedB42` = 22-LR Magazine _(script)_ | 柯爾特王牌左輪手槍彈匣 |
 | `ItemName\|Base.308BulletsLinked` | `3611718925/VFE` = .308 Linked Round _(json)_<br>`3761077099/VFE` = Linked 7.62x51mm Round _(json)_ | 彈鏈連結 7.62x51mm 彈藥 |
+| `ItemName\|Base.338Clip_cat` | `3633421539/Escape from Kentucky4215` = 8.6mm 10-Round Magazine _(json)_<br>`3780151182/MFS_community_fix` = 8.6mm (.338 LM) 10-Round MK18 Magazine _(json)_ | 8.6mm 10 發彈匣 |
+| `ItemName\|Base.338Drum_cat` | `3633421539/Escape from Kentucky4215` = 8.6mm 100-Round Drum Magazine _(json)_<br>`3780151182/MFS_community_fix` = 8.6mm (.338 LM) 100-Round MG Box Magazine/Belt _(json)_ | 8.6mm 100 發彈鼓 |
 | `ItemName\|Base.45Clip_Attachment` | `3720484992/VanillaFirearmsRework` = Mag Attachment Model _(script)_<br>`3773858287/B42 Rain's Firearms & Gun Parts` = .45 ACP Magazine _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = .45 ACP Magazine _(json)_ | .45 ACP彈匣 |
 | `ItemName\|Base.46Box` | `3611718925/VFEP93` = Box of 4.6mm Rounds _(json)_<br>`3762355926/VFEP93` = Box of 4.6 Rounds _(json)_ | 4.6mm彈藥 (整盒) |
 | `ItemName\|Base.46Bullets` | `3611718925/VFEP93` = 4.6mm Round _(json)_<br>`3762355926/VFEP93` = 4.6 Rounds _(json)_ | 4.6mm彈藥 |
@@ -1736,6 +1738,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|Base.M14Clip_Attachment` | `2256623447/Firearms` = M14 Magazine _(json)_<br>`2256623447/FirearmsBETA` = M14 Magazine _(json)_<br>`3720484992/VanillaFirearmsRework` = Mag Attachment Model _(script)_<br>`3773858287/B42 Rain's Firearms & Gun Parts` = 7.62x51 Magazine _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = 7.62x51 Magazine _(json)_ | M14自動步槍彈匣 |
 | `ItemName\|Base.M4A1` | `3611718925/VFEP93` = M4A1 Assault Rifle _(json)_<br>`3762355926/VFEP93` = M4A1 Assault Rifle _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = M4A1 _(json)_<br>`3777433827/BritaCombinedB42` = Colt M4A1 Carbine _(script)_ | 柯爾特M4A1自動步槍 |
 | `ItemName\|Base.MAC10Folded` | `3611718925/VFE` = M10 Submachinegun _(json)_<br>`3761077099/VFE` = M10 Submachinegun _(json)_<br>`3779417912/Totally's Cops and Robbers Firearms` = MAC-10 Submachinegun _(json)_ | M10 衝鋒槍 |
+| `ItemName\|Base.MG42Drum_cat` | `3633421539/Escape from Kentucky4215` = 7.92×57mm 75-Round Drum _(json)_<br>`3780151182/MFS_community_fix` = 7.62×51mm 75-Round MG3 Drum _(json)_ | 7.92×57mm 75發彈鼓 |
 | `ItemName\|Base.MK2SD` | `3611718925/VFE` = MK2SD Pistol _(json)_<br>`3761077099/VFE` = MK2-SD Pistol _(json)_ | 儒格MK2SD手槍 |
 | `ItemName\|Base.MP153sawn` | `3611718925/VFES` = Sawed-off MP-153 Shotgun _(json)_<br>`3761284354/VFES` = Sawed-Off MP-153 Shotgun _(json)_ | 貝加爾MP-153霰彈槍 (鋸短) |
 | `ItemName\|Base.Makarov` | `2961450523/Totally's Eastern Bloc Firearms Pack` = PM Makarov Pistol _(json)_<br>`3611718925/VFES` = Makarov Pistol _(json)_<br>`3761284354/VFES` = Makarov Pistol _(json)_<br>`3777433827/BritaCombinedB42` = Makarov (9mm) _(script)_ | 馬卡洛夫手槍 |
@@ -1763,6 +1766,10 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|USMRE.MREPorkwithRiceinBBQSauce` | `3406930410/MRE XIII (1993) - Meal Ready to Eat MOD Real version` = MRE(Pork with Rice in BBQ Sauce) _(script)_<br>`3738115503/MRE` = MRE(Pork with Rice in BBQ Sauce - Cold) _(script)_ | MRE BBQ 醬豬肉佐飯餐包 (冷食) |
 | `ItemName\|USMRE.MRESpaghettiwithMeatSauce` | `3406930410/MRE XIII (1993) - Meal Ready to Eat MOD Real version` = MRE(Spaghetti with Meat Sauce) _(script)_<br>`3738115503/MRE` = MRE(Spaghetti with Meat Sauce - Cold) _(script)_ | MRE 肉醬義大利麵餐包 (冷食) |
 | `ItemName\|USMRE.MRETunawithNoodles` | `3406930410/MRE XIII (1993) - Meal Ready to Eat MOD Real version` = MRE(Tuna with Noodles) _(script)_<br>`3738115503/MRE` = MRE(Tuna with Noodles - Cold) _(script)_ | MRE 鮪魚麵餐包 (冷食) |
+| `Recipes\|7.62Drum(75)` | `3633421539/Escape from Kentucky4215` = Craft 7.92x57mm MG42 75-Round Drum Magazine _(json)_<br>`3780151182/MFS_community_fix` = Craft 7.62×51mm 75-Round MG3 Drum _(json)_ | 製作 7.92x57mm MG42 75 發彈鼓 |
+| `Recipes\|8.6Drum` | `3633421539/Escape from Kentucky4215` = Craft 8.6mm Drum Magazine _(json)_<br>`3780151182/MFS_community_fix` = Craft 8.6mm (.338 LM) 100-Round MG Box Magazine/Belt _(json)_ | 製作 8.6mm 彈鼓 |
+| `Recipes\|8.6Drum(100)` | `3633421539/Escape from Kentucky4215` = Craft 8.6mm 100-Round Drum Magazine _(json)_<br>`3780151182/MFS_community_fix` = Craft 8.6mm (.338 LM) 100-Round MG Box Magazine/Belt _(json)_ | 製作 8.6mm 100 發彈鼓 |
+| `Recipes\|8.6机枪弹鼓` | `3633421539/Escape from Kentucky4215` = 8.6 100-Round Drum Magazine _(json)_<br>`3780151182/MFS_community_fix` = 8.6mm (.338 LM) 100-Round MG Box Magazine/Belt _(json)_ | 8.6mm 100發彈鼓 |
 | `Recipes\|AssembleWakizashi` | `3723127305/Nihonto` = Assemble Wakizashi _(json)_<br>`3774213378/B42 Rain's Axes & Blades` = Assemble Wakizashi (A) _(json)_ | 組裝脅差 |
 | `Recipes\|MakeDough` | `3622474939/AbuelitaLindaMexicanFoods` = Make Dough _(json)_<br>`3795521454/RealisticRecipes` = Dough _(json)_ | 製作麵糰 |
 | `Recipes\|MakeFrenchFries` | `3600616323/Todo Caserito` = Prepare french fries _(json)_<br>`3727395976/OGCookingExpanded` = Make French Fries _(json)_<br>`3795521454/RealisticRecipes` = Make French Fries _(json)_ | 製作薯條 |
@@ -1847,6 +1854,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `Sandbox\|Sandbox_InventoryTetris_ItemWeightMultiplier_tooltip` | `3769773293/INVENTORY_TETRISP_MP` = The only weight setting. Every item is multiplied by it - e… _(json)_<br>`3775513231/InventoryTetris` = Scales actual Java item weights (e.g. 0.10 = 10 percent wei… _(json)_ | 縮放實際Java物品重量 (例如0.10=10%%重量). 設為1.0以停用. 網格尺寸保持原始大小不變. |
 | `Sandbox\|Sandbox_InventoryTetris_PreventTardisStacking` | `3598501350/RE Tetris [B42]` = Prevent Infinite Container Stacking _(json)_<br>`3769773293/INVENTORY_TETRISP_MP` = Prevent Infinite Container Stacking _(json)_<br>`3775513231/InventoryTetris` = Prevent TARDIS Stacking _(json)_ | 防止無限容器堆疊 |
 | `Sandbox\|Sandbox_InventoryTetris_UseItemTransferTime` | `3598501350/RE Tetris [B42]` = Item Transfer Time _(json)_<br>`3769773293/INVENTORY_TETRISP_MP` = Item Transfer Time _(json)_<br>`3775513231/InventoryTetris` = Use Item Transfer Time _(json)_ | 物品轉移時間 |
+| `Sandbox\|Sandbox_MFSCommunityFixLoot_EnableMFSCivilianFirearms` | `3633421539/Escape from Kentucky4215` = Add All MFS Firearms to Civilian Firearm Locations _(json)_<br>`3780151182/MFS_community_fix` = (Moved to MFS 4 - Loot Rules) Gun-Shop Display Cases _(json)_ | 將所有 MFS 槍械加入民用槍械生成地點 |
 | `Sandbox\|Sandbox_MWPWeapons` | `2732407704/MWPWeapons` = MWP Weapons Loot _(死檔 Sandbox_EN.txt)_<br>`3747202678/MWPWeapons42` = MWP Weapons _(json)_ | MWP 武器 |
 | `Sandbox\|Sandbox_RefinedHotwiring_KeyMechanics` | `2930762705/KeyBlank` = Mechanics to create the car key: _(json)_<br>`3640448510/Fluffy's Key Blank` = Mechanics level needed to make a key using a blank _(json)_ | 使用鑰匙坯製作鑰匙所需的技工等級 |
 | `Sandbox\|Sandbox_RefinedHotwiring_KeyMetalworking` | `2930762705/KeyBlank` = Metalworking to create the car key: _(json)_<br>`3640448510/Fluffy's Key Blank` = Welding level needed to make a key using a blank _(json)_ | 使用鑰匙坯製作鑰匙所需的金工等級 |
