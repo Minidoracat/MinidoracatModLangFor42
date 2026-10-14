@@ -1,25 +1,24 @@
-[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.21.0-1.49.0[/h1]
-[i]2026-10-13[/i]
+[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.21.0-1.50.0[/h1]
+[i]2026-10-14[/i]
 
 [h3]新增[/h3]
 [list]
-[*] Project A-Life 補上 2,244 項：NPC 名牌與職稱、對話與回應、訪客與安全屋事件、聲望與態度、編輯器說明，以及改版後重新分頁的沙盒設定（遭遇、突襲、受傷倒地與救援、建築搜刮、標有「[專家]」的進階調校）。
-[*] Long Term Preservation Extended 補上 132 項：罐裝、鹹肉罐裝與臘製的海狸肉、熊肉、人肉、殭屍腦等新食材與整盒裝，鑿岩鹽與各 DLC 相容版的醃肉、熬油、製罐、裝箱配方。
-[*] Aegis Panel 補上 32 項：依類別清除地板、家具、地上物品、植被、牆與窗戶，整塊區塊清除，補給包冷卻群組與發放物品的耐久、填充量、液體設定。
-[*] SMB steps 補上 1 項：伺服器的穿牆反作弊（AntiCheatNoClip）擋住往上爬時的提示。
-[*] 其他補齊的模組，共 36 項：Mattnetic's Hide Anywhere（體重、攜帶物品、藏身處與特質是否影響進入）、Pixel Strike Indicator & Health Bar（第一／第三人稱的血條與數字位置）、Project Cook（基礎物品處理方式）、Modern Firearms System（戰術手電筒模式）、TwisTonFire - WANTED（燧石與石灰石沉積）、CleanHotBar、PhunSprinters 2（跑屍速度）、Common Sense（除錯輸出）、Furniture Push & Pull（堆疊容器提示）。
+[*] Read Your Manga 補上 507 項：《哆啦A夢》第 46–200 卷，以及《噬謊者》《20世紀少年》《晚安，布布》《魔法少女holoWitches!》《holoX MEETing!》《Holoearth Chronicles Side:E 大和神想怪異譚》六部新作，另有漫畫生成倍率的沙盒設定。
+[*] Stay With Me 補上 448 項：同伴裝備視窗與各部位欄位、區域搜刮設定與物品分類、擊殺里程碑台詞、收到電池、香菸、魚餌、無線電等物品時的回應，坐下休息、清除雜草、搜刮與釣魚等事件台詞，以及更新說明與錯誤回報產生器。
+[*] Arcadia RV Interiors 補上 151 項：房車電力系統，包括船用電池艙、岸電樁與岸電電纜、保險絲與保險絲盒、電源管理器，以及相關配方與沙盒設定。
+[*] Vehicle Repair Overhaul 補上 50 項：維修遞減與修復全損零件等開關、從地上與附近容器取用材料，以及新子模組「車輛拆解回收大修」各類零件的拆解時間。
+[*] 其他補齊的模組，共 134 項：TwisTonFire - WANTED（掃描排除區域）、ApocalipseBR Regioes（地圖繪製區域、PvP／安全區、進入訊息與殭屍感知規則）、Bicycle!（警用與新配色自行車、運動水壺、後架包）、that DAMN Library（路標與輪胎修補條）、Modern Firearms System Community Fix Patch（8.6mm AWM／M200 彈匣、槍托管轉接器、掉落規則設定）、Coca-Cola Freezer ICE（Dr Pepper 海報）、Bundle Up!（牧草與草屑捆）、GridInventory（拖曳時旋轉物品的快捷鍵）、Exact Minute Clock（右鍵開啟鬧鐘設定）、Dark/Invisible Weapon Slings。
 [/list]
 
 [h3]更新[/h3]
 [list]
-[*] 跟上模組作者改寫的英文，重譯 218 項：Project A-Life 的沙盒設定全面改寫，選項名改成描述效果（例如「啟用敵對 A-Life」改為「敵對陣營」）、說明換成新的數值與規則；Aegis Panel 的補給包冷卻時間不再多一個「小時」；Hide Anywhere 的進出時間說明更新。
-[*] PhunSprinters 新舊兩版對月相設定「填 0」的說法相反，說明改成兩版都成立的「填100則不修正」；CleanHotBar 的彈藥文字設定改稱「彈藥文字大小」；Common Sense 的開罐受傷說明改成「用刀具、剪刀等臨時工具」。
-[*] Project A-Life 的 faction 統一譯「陣營」，監獄脫逃者的職稱由「逃家者」改為「逃犯」。
-[*] SMB steps 的工具、材料、技能與按鍵改用遊戲本體的譯名：錘子、金屬棒、破牆大錘、攀爬繩索、肌肉拉傷係數、慢跑鍵，以及力量與體格。
+[*] 跟上模組作者改寫的英文，重譯 12 項：Arcadia RV Interiors 舊的房車電池組改為無作用的舊版物品、說明書改名「房車電力手冊」、電池消耗預設改 0.5；Modern Firearms System 社群修正版的武器可靠度分頁改為「MFS 5」，8.6mm 彈匣配方補上型號；ApocalipseBR Regioes 的區域選取提示更新。
+[*] Modern Firearms System 社群修正版與 Escape from Kentucky 對同一批彈藥寫法不同：8.6mm 100 發的彈鼓／彈箱統一稱「8.6mm 100 發機槍彈匣」，MG42／MG3 的 75 發彈鼓兩邊口徑寫法互斥，改為「75 發機槍彈鼓」。「將 MFS 槍械加入民用槍械地點」這個沙盒選項在兩邊的作用不同，本包不再提供譯文，改顯示各自模組自帶的中文。
+[*] Vehicle Repair Overhaul 與 Chopped Vehicle Salvage 共用的拆解回收說明改為兩邊都正確的內容，「車輛拆解回收大修」專屬的耗時與先拆零件提示另列一行。
 [*] 更新下載完成後，請重新啟動遊戲載入新翻譯；不需要重開存檔。
 [/list]
 
 [h3]移除[/h3]
 [list]
-[*] 拿掉 Project A-Life 已刪除的 23 項舊文字（舊版陣營名、對話介面標題與除錯工具說明）。
+[*] 拿掉模組作者已刪除的 3 項舊文字：Read Your Manga 的兩個漫畫生成器物品，以及 Modern Firearms System 社群修正版舊的 8.6mm 5 發彈匣（已由 AWM 5 發彈匣取代）。
 [/list]
