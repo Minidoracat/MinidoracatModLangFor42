@@ -23,7 +23,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1594** 個鍵（`unship` 311、`translate` 1283）。這些鍵的 owner 條目共 4469 筆：可載入 `.json` 2904、script 677、死檔 888。另有 **300** 個鍵尚未裁決。
+現況：已裁決 **1594** 個鍵（`unship` 311、`translate` 1283）。這些鍵的 owner 條目共 4469 筆：可載入 `.json` 2904、script 677、死檔 888。另有 **301** 個鍵尚未裁決。
 
 ## 不出貨的鍵（311）
 
@@ -1633,7 +1633,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_thickblooddesc` | `1299328280/More Traits` = You bleed more slowly from wounds. _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Wounds bleeds less.&lt;br&gt;(-50% damage from bleeding.) _(json)_ | 2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。 | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（300）
+## 尚未裁決的衝突（301）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
@@ -1843,6 +1843,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `Sandbox\|Sandbox_EHR_HypothermiaEnabled_tooltip` | `3638633196/ExtensiveHealthReworkB42` = Extreme cold + wet exposure causes hypothermia. LETHAL - ca… _(死檔 Sandbox_EN.txt)_<br>`3726328119/ExtensiveHealthReworkB42` = Low core body temperature causes hypothermia while the Body… _(json)_ | 極寒+受潮導致失溫症. 致命-有心搏驟停風險. |
 | `Sandbox\|Sandbox_EPR_ShowMapOverlay_tooltip` | `3643765614/EPR_B42` = Show facility locations on the map. Default: On _(死檔 Sandbox_EN.txt)_<br>`3733603053/EPR_Community` = Draw EPR power/water zone coverage boxes and facility marke… _(json)_ | 在地圖上顯示設施位置. 預設: 開啟 |
 | `Sandbox\|Sandbox_Excrementum_UrinatePassiveMultiplier_tooltip` | `3693805407/Excrementum` = Passive urine production multiplier from metabolism.\\nBy d… _(json)_<br>`3776175202/Excrementum` = Passive urine production multiplier from metabolism.\\nBy d… _(json)_ | 從新陳代謝中被動產生尿液的倍率.\\n預設約佔總產量的 30%% (無天賦、無寒冷等). |
+| `Sandbox\|Sandbox_IDBFS_WorldIndustrialTankLiquidChance_tooltip` | `3721068590/Distillery & Biofuel Framework` = Chance for industrial tanks found in the world to contain e… _(json)_<br>`3721068590/Distillery & Biofuel Framework - New Worlds` = Chance for industrial tanks found in the world to contain e… _(json)_ | 世界中找到的工業儲槽裝有乙醇或生物燃料的機率. 玩家建造的儲槽一律從空的開始. |
 | `Sandbox\|Sandbox_ISA_ConnectPanelMin_tooltip` | `2969478819/ImmersiveSolarArrays` = Base number of in-game minutes it takes to connect one pane… _(死檔 Sandbox_EN.txt)_<br>`3647117173/ImmersiveSolarArraysMP` = Base number of in-game minutes it takes to connect one pane… _(json)_<br>`3652024179/ImmersiveSolarArraysFixed` = Base number of in-game minutes it takes to connect one pane… _(死檔 Sandbox_EN.txt)_<br>`3723961714/Infoteo's Immersive Solar Arrays` = Time in minutes needed to connect one solar panel. Default:… _(json)_ | 連接一塊太陽能板所需的基礎遊戲內分鐘數. 預設: 5. 調低數值讓連線速度更快. |
 | `Sandbox\|Sandbox_ISA_batteryDegradeChance_tooltip` | `2969478819/ImmersiveSolarArrays` = Multiplier for the average degrade of batteries.\\nDecreasi… _(死檔 Sandbox_EN.txt)_<br>`3647117173/ImmersiveSolarArraysMP` = Multiplier for the average degrade of batteries. Decreasing… _(json)_<br>`3652024179/ImmersiveSolarArraysFixed` = Multiplier for the average degrade of batteries.\\nDecreasi… _(死檔 Sandbox_EN.txt)_<br>`3723961714/Infoteo's Immersive Solar Arrays` = Multiplier for the average degrade of batteries. Decreasing… _(json)_ | 電池平均損耗的倍率. \\n調低該數值將顯著延長電池壽命. |
 | `Sandbox\|Sandbox_InventoryTetris` | `3598501350/RE Tetris [B42]` = RE Interface — Tetris _(json)_<br>`3769773293/INVENTORY_TETRISP_MP` = Inventory Tetris _(json)_<br>`3775513231/InventoryTetris` = Inventory Tetris _(json)_ | RE介面 (幾何物品欄) |
