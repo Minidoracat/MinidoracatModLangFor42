@@ -10536,6 +10536,13 @@
       "action": "unship",
       "signature": "2370c02745c2ed01",
       "reason": "2026-10-14 #854 裁決不出貨：同一沙盒變數在兩方意義互斥——EFK（3633421539）仍是「將所有 MFS 槍械加入民用槍械地點」且有作用（MFS_CivilianOnlyLoot.lua 讀取），MFS 社群修正版（3780151182）已改為無作用的舊選項、標題寫「(已移至 MFS 4 - 掉落規則) 槍店展示櫃」（GunSpawns.lua 註明 now inert）。沒有對兩方都成立的中性譯名。兩方都在有效分支 42 的 Translate/EN/Sandbox.json 定義此鍵且自帶 CH／CN，抑制後玩家看到各自 MOD 自帶的中文或英文。"
+    },
+    "Sandbox|Sandbox_IDBFS_WorldIndustrialTankLiquidChance_tooltip": {
+      "action": "translate",
+      "signature": "53b53dcc1e744668",
+      "reason": "2026-10-15 #862 裁決：New Worlds 版（新世界用、持續開發）改成工業儲槽可裝乙醇、生物燃料或汽油，Legacy 版（舊存檔用、凍結）仍只有乙醇或生物燃料；兩版互斥、共用同一譯文。依 2026-10-11 兩行並陳裁定的精神，保留共通的「乙醇或生物燃料」，以括號點名 New Worlds 版另可能裝汽油，對兩版都成立。",
+      "ch": "世界中找到的工業儲槽裝有乙醇或生物燃料的機率 (New Worlds 版也可能裝有汽油). 玩家建造的儲槽一律從空的開始.",
+      "cn": "世界中找到的工业储罐装有乙醇或生物燃料的几率 (New Worlds 版也可能装有汽油). 玩家建造的储罐总是从空的开始."
     }
   }
 }

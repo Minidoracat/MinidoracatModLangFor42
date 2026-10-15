@@ -23,7 +23,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1594** 個鍵（`unship` 311、`translate` 1283）。這些鍵的 owner 條目共 4469 筆：可載入 `.json` 2904、script 677、死檔 888。另有 **301** 個鍵尚未裁決。
+現況：已裁決 **1595** 個鍵（`unship` 311、`translate` 1284）。這些鍵的 owner 條目共 4471 筆：可載入 `.json` 2906、script 677、死檔 888。另有 **300** 個鍵尚未裁決。
 
 ## 不出貨的鍵（311）
 
@@ -343,7 +343,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_profdesc_veteran` | `2840805724/SimpleOverhaulTraitsAndOccupations` = War. War never changes... _(json)_<br>`3387957272/Detailed Descriptions for Occupations and Traits` = Foraging Bonuses:&lt;br&gt;+1.75 vision radius&lt;br&gt;33%… _(json)_ | 2026-08-29 #316：Detailed Descriptions 與 Simple Overhaul 以同一職業描述鍵承載完全不同內容（一方為完整知識/搜尋加成，另一方為一句摘要），沒有同時保真且有用的中性譯文。兩方均有可載入 JSON EN，抑制後顯示各自英文。 | — |
 | `UI\|UI_trait_BloodlustDesc` | `2459400130/DynamicTraits` = An uncontrollable urge to kill zombies. Going too long with… _(json)_<br>`2914075159/Evolving Traits World` = You find great joy in culling the undead.&lt;br&gt;You gain… _(json)_<br>`3657541591/Superheroes` = Double the speed. Triple the damage.&lt;br&gt;Recover endur… _(json)_ | 三個模組共用同鍵但效果不同：Dynamic Traits 是長時間不殺殭屍會惡化心情，ETW 是擊殺後降低壓力與恐慌，Superheroes 是速度與傷害加成、近戰擊殺恢復耐力及麻木。沒有完整且適用三方的單一說明，維持不出貨；三方皆有可載入 JSON 英文，玩家改讀各自模組的原文。 | — |
 
-## 採中性譯名的鍵（1283）
+## 採中性譯名的鍵（1284）
 
 這些鍵有中文，且該譯名對每個 MOD 都成立。
 
@@ -1378,6 +1378,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `Sandbox\|Sandbox_GGSLO_prob_ammo_mags` | `3616176188/GaelGunStore` = Magazines spawn probability _(json)_<br>`3630196063/WAR` = Ammo and mags spawn probability _(死檔 Sandbox_EN.txt)_ | 2026-09-29 #613：GaelGunStore 把彈藥與彈匣拆成兩個選項，此鍵改為 'Magazines spawn probability'（另有 _tooltip 'Magazines, drums and clips.'；子彈改由 Sandbox_GGSLO_prob_ammo 控制）。WAR（3630196063）仍寫 'Ammo and mags spawn probability'，但只存在 B42 不讀的 Sandbox_EN.txt；不出貨會讓 WAR 玩家看到字面鍵名、GaelGunStore 玩家看到英文。採 GaelGunStore 現行語意出貨；已接受殘留：WAR 玩家看到的中文少了「彈藥」。 | — |
 | `Sandbox\|Sandbox_IDBFS_WorldDoubleBarrelLiquidChance` | `3721068590/Distillery & Biofuel Framework` = Liquids in Double-Barrel Containers (%) _(json)_<br>`3721068590/Distillery & Biofuel Framework - New Worlds` = Liquids in Double-Barrel Containers (%%) _(json)_ | 2026-10-09 #771 裁決：New Worlds 分支把 (%) 改成 (%%)，Legacy 分支仍是 (%)，兩者都是字面百分號；現行出貨的「(%%)」對兩個分支都成立，維持現值。 | — |
 | `Sandbox\|Sandbox_IDBFS_WorldIndustrialTankLiquidChance` | `3721068590/Distillery & Biofuel Framework` = Liquids in Industrial Tanks (%) _(json)_<br>`3721068590/Distillery & Biofuel Framework - New Worlds` = Liquids in Industrial Tanks (%%) _(json)_ | 2026-10-09 #771 裁決：New Worlds 分支把 (%) 改成 (%%)，Legacy 分支仍是 (%)，兩者都是字面百分號；現行出貨的「(%%)」對兩個分支都成立，維持現值。 | — |
+| `Sandbox\|Sandbox_IDBFS_WorldIndustrialTankLiquidChance_tooltip` | `3721068590/Distillery & Biofuel Framework` = Chance for industrial tanks found in the world to contain e… _(json)_<br>`3721068590/Distillery & Biofuel Framework - New Worlds` = Chance for industrial tanks found in the world to contain e… _(json)_ | 2026-10-15 #862 裁決：New Worlds 版（新世界用、持續開發）改成工業儲槽可裝乙醇、生物燃料或汽油，Legacy 版（舊存檔用、凍結）仍只有乙醇或生物燃料；兩版互斥、共用同一譯文。依 2026-10-11 兩行並陳裁定的精神，保留共通的「乙醇或生物燃料」，以括號點名 New Worlds 版另可能裝汽油，對兩版都成立。 | — |
 | `Sandbox\|Sandbox_IDBFS_WorldMetalDrumLiquidChance` | `3721068590/Distillery & Biofuel Framework` = Liquids in Metal Drums (%) _(json)_<br>`3721068590/Distillery & Biofuel Framework - New Worlds` = Liquids in Metal Drums (%%) _(json)_ | 2026-10-09 #771 裁決：New Worlds 分支把 (%) 改成 (%%)，Legacy 分支仍是 (%)，兩者都是字面百分號；現行出貨的「(%%)」對兩個分支都成立，維持現值。 | — |
 | `Sandbox\|Sandbox_IDBFS_WorldWoodenBarrelLiquidChance` | `3721068590/Distillery & Biofuel Framework` = Liquids in Wooden Barrels (%) _(json)_<br>`3721068590/Distillery & Biofuel Framework - New Worlds` = Liquids in Wooden Barrels (%%) _(json)_ | 2026-10-09 #771 裁決：New Worlds 分支把 (%) 改成 (%%)，Legacy 分支仍是 (%)，兩者都是字面百分號；現行出貨的「(%%)」對兩個分支都成立，維持現值。 | — |
 | `Sandbox\|Sandbox_KATTAJ1` | `3470426196/KATTAJ1 Military Pack` = KATTAJ1 Military Pack _(json)_<br>`3470491629/Night Vision` = KATTAJ1 Night Vision Goggles _(json)_ | 2026-09-27 裁決：KATTAJ1 的兩個 MOD (Military Pack 軍事裝備包, Night Vision Goggles 夜視鏡) 共用同一個沙盒分頁「KATTAJ1」, 同時啟用時選項併在同一頁. 現值「軍事裝備包」只對 Military Pack 成立; 夜視鏡同樣是軍用裝備 (其選項是軍方/警方儲藏處的夜視鏡生成率), 改為「KATTAJ1 軍事裝備」對兩個 MOD 都成立. | — |
@@ -1633,7 +1634,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_thickblooddesc` | `1299328280/More Traits` = You bleed more slowly from wounds. _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Wounds bleeds less.&lt;br&gt;(-50% damage from bleeding.) _(json)_ | 2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。 | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（301）
+## 尚未裁決的衝突（300）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
@@ -1843,7 +1844,6 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `Sandbox\|Sandbox_EHR_HypothermiaEnabled_tooltip` | `3638633196/ExtensiveHealthReworkB42` = Extreme cold + wet exposure causes hypothermia. LETHAL - ca… _(死檔 Sandbox_EN.txt)_<br>`3726328119/ExtensiveHealthReworkB42` = Low core body temperature causes hypothermia while the Body… _(json)_ | 極寒+受潮導致失溫症. 致命-有心搏驟停風險. |
 | `Sandbox\|Sandbox_EPR_ShowMapOverlay_tooltip` | `3643765614/EPR_B42` = Show facility locations on the map. Default: On _(死檔 Sandbox_EN.txt)_<br>`3733603053/EPR_Community` = Draw EPR power/water zone coverage boxes and facility marke… _(json)_ | 在地圖上顯示設施位置. 預設: 開啟 |
 | `Sandbox\|Sandbox_Excrementum_UrinatePassiveMultiplier_tooltip` | `3693805407/Excrementum` = Passive urine production multiplier from metabolism.\\nBy d… _(json)_<br>`3776175202/Excrementum` = Passive urine production multiplier from metabolism.\\nBy d… _(json)_ | 從新陳代謝中被動產生尿液的倍率.\\n預設約佔總產量的 30%% (無天賦、無寒冷等). |
-| `Sandbox\|Sandbox_IDBFS_WorldIndustrialTankLiquidChance_tooltip` | `3721068590/Distillery & Biofuel Framework` = Chance for industrial tanks found in the world to contain e… _(json)_<br>`3721068590/Distillery & Biofuel Framework - New Worlds` = Chance for industrial tanks found in the world to contain e… _(json)_ | 世界中找到的工業儲槽裝有乙醇或生物燃料的機率. 玩家建造的儲槽一律從空的開始. |
 | `Sandbox\|Sandbox_ISA_ConnectPanelMin_tooltip` | `2969478819/ImmersiveSolarArrays` = Base number of in-game minutes it takes to connect one pane… _(死檔 Sandbox_EN.txt)_<br>`3647117173/ImmersiveSolarArraysMP` = Base number of in-game minutes it takes to connect one pane… _(json)_<br>`3652024179/ImmersiveSolarArraysFixed` = Base number of in-game minutes it takes to connect one pane… _(死檔 Sandbox_EN.txt)_<br>`3723961714/Infoteo's Immersive Solar Arrays` = Time in minutes needed to connect one solar panel. Default:… _(json)_ | 連接一塊太陽能板所需的基礎遊戲內分鐘數. 預設: 5. 調低數值讓連線速度更快. |
 | `Sandbox\|Sandbox_ISA_batteryDegradeChance_tooltip` | `2969478819/ImmersiveSolarArrays` = Multiplier for the average degrade of batteries.\\nDecreasi… _(死檔 Sandbox_EN.txt)_<br>`3647117173/ImmersiveSolarArraysMP` = Multiplier for the average degrade of batteries. Decreasing… _(json)_<br>`3652024179/ImmersiveSolarArraysFixed` = Multiplier for the average degrade of batteries.\\nDecreasi… _(死檔 Sandbox_EN.txt)_<br>`3723961714/Infoteo's Immersive Solar Arrays` = Multiplier for the average degrade of batteries. Decreasing… _(json)_ | 電池平均損耗的倍率. \\n調低該數值將顯著延長電池壽命. |
 | `Sandbox\|Sandbox_InventoryTetris` | `3598501350/RE Tetris [B42]` = RE Interface — Tetris _(json)_<br>`3769773293/INVENTORY_TETRISP_MP` = Inventory Tetris _(json)_<br>`3775513231/InventoryTetris` = Inventory Tetris _(json)_ | RE介面 (幾何物品欄) |

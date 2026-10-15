@@ -129058,6 +129058,91 @@
     "en": "Bug Report",
     "ch": "錯誤回報",
     "cn": "错误报告"
+   },
+   "IGUI_PhunSprinters_maxSpeed": {
+    "en": "Sprinter Speed %%",
+    "ch": "跑屍速度 %%",
+    "cn": "跑尸速度 %%"
+   },
+   "IGUI_PhunSprinters_maxSpeed_Tooltip": {
+    "en": "The fastest a sprinter in this zone can be, 25-100. Leave blank to use the sandbox setting",
+    "ch": "該區域跑屍的最高速度, 25-100. 留空則使用沙盒設定",
+    "cn": "该区域跑尸的最高速度, 25-100. 留空则使用沙盒设置"
+   },
+   "IGUI_PhunSprinters_minSpeed": {
+    "en": "Slowest Sprinter Speed %%",
+    "ch": "跑屍最低速度 %%",
+    "cn": "跑尸最低速度 %%"
+   },
+   "IGUI_PhunSprinters_minSpeed_Tooltip": {
+    "en": "The slowest a sprinter in this zone can be, 25-100. Leave blank to use the sandbox setting",
+    "ch": "該區域跑屍的最低速度, 25-100. 留空則使用沙盒設定",
+    "cn": "该区域跑尸的最低速度, 25-100. 留空则使用沙盒设置"
+   },
+   "IGUI_IDBFS_Fluid_gasoline": {
+    "en": "Gasoline",
+    "ch": "汽油",
+    "cn": "汽油"
+   },
+   "IGUI_ALifeUI_0b880329172d42b8": {
+    "en": "Law",
+    "ch": "執法",
+    "cn": "执法"
+   },
+   "IGUI_ALifeUI_0cfbba970d56b31e": {
+    "en": "Crime",
+    "ch": "犯罪",
+    "cn": "犯罪"
+   },
+   "IGUI_ALifeUI_0d1ca23a2fa451b3": {
+    "en": "Elite",
+    "ch": "精銳",
+    "cn": "精锐"
+   },
+   "IGUI_ALifeUI_0de38b8c70b90646": {
+    "en": "Place",
+    "ch": "地點",
+    "cn": "地点"
+   },
+   "IGUI_ALifeUI_1b3d579012b84ad8": {
+    "en": "Unknown",
+    "ch": "未知",
+    "cn": "未知"
+   },
+   "IGUI_ALifeUI_1deb648a19e893ad": {
+    "en": "Medical",
+    "ch": "醫療",
+    "cn": "医疗"
+   },
+   "IGUI_ALifeUI_1e3aa1d23a3c4371": {
+    "en": "Squad key",
+    "ch": "小隊圖例",
+    "cn": "小队图例"
+   },
+   "IGUI_ALifeUI_21f38190733a4e96": {
+    "en": "Military",
+    "ch": "軍方",
+    "cn": "军方"
+   },
+   "IGUI_ALifeUI_3a5af7ff225763ca": {
+    "en": "Offline",
+    "ch": "離線",
+    "cn": "离线"
+   },
+   "IGUI_ALifeUI_5e57fc3a5562a752": {
+    "en": "Outpost",
+    "ch": "前哨站",
+    "cn": "哨所"
+   },
+   "IGUI_ALifeUI_7c888a975c2b3e07": {
+    "en": "Live",
+    "ch": "在場",
+    "cn": "在场"
+   },
+   "IGUI_ALifeUI_7eb0830d17dda299": {
+    "en": "Civilian",
+    "ch": "平民",
+    "cn": "平民"
    }
   },
   "ItemName.json": {
@@ -352857,9 +352942,9 @@
     "cn": "工业储罐中有液体 (%%)"
    },
    "Sandbox_IDBFS_WorldIndustrialTankLiquidChance_tooltip": {
-    "en": "Chance for industrial tanks found in the world to contain ethanol or biofuel. Player-built tanks always start empty.",
-    "ch": "世界中找到的工業儲槽裝有乙醇或生物燃料的機率. 玩家建造的儲槽一律從空的開始.",
-    "cn": "世界中找到的工业储罐装有乙醇或生物燃料的几率. 玩家建造的储罐总是从空的开始."
+    "en": "Chance for industrial tanks found in the world to contain ethanol, biofuel, or gasoline. Player-built tanks always start empty.",
+    "ch": "世界中找到的工業儲槽裝有乙醇或生物燃料的機率 (New Worlds 版也可能裝有汽油). 玩家建造的儲槽一律從空的開始.",
+    "cn": "世界中找到的工业储罐装有乙醇或生物燃料的几率 (New Worlds 版也可能装有汽油). 玩家建造的储罐总是从空的开始."
    },
    "Sandbox_IDBFS_WorldMetalDrumLiquidChance": {
     "en": "Liquids in Metal Drums (%)",
@@ -385507,9 +385592,9 @@
     "cn": "跑尸速度 %%"
    },
    "Sandbox_PhunSprinters_SprinterSpeed_tooltip": {
-    "en": "Speed of sprinters while running, as a percentage of normal. 100 = vanilla speed, 75 = 25%% slower, 50 = half speed. Applies only to zeds this mod makes sprint. Each sprinter keeps the speed it was given when it started sprinting, so changing this affects new sprinters, not ones already running. Note: this works by replacing the vanilla zombie sprint animation files, so it can conflict with other mods that also change them (eg other slower sprinter mods).",
-    "ch": "跑屍奔跑時的速度, 以正常速度的百分比表示. 100 = 原版速度, 75 = 慢 25%%, 50 = 半速. 只套用於本模組讓其衝刺的殭屍. 每隻跑屍會維持開始衝刺時被賦予的速度, 因此變更此設定只會影響新的跑屍, 不影響已在奔跑的跑屍. 注意: 此功能是藉由替換原版殭屍衝刺動畫檔案來運作, 因此可能與其他同樣修改這些檔案的模組衝突 (例如其他讓跑屍變慢的模組).",
-    "cn": "跑尸奔跑时的速度, 以正常速度的百分比表示. 100 = 原版速度, 75 = 慢 25%%, 50 = 半速. 仅适用于本模组使其冲刺的僵尸. 每只跑尸会保持开始冲刺时被赋予的速度, 因此更改此设置只影响新的跑尸, 不影响已在奔跑的跑尸. 注意: 此功能通过替换原版僵尸冲刺动画文件来实现, 因此可能与其他同样修改这些文件的模组冲突 (例如其他让跑尸变慢的模组)."
+    "en": "Speed of sprinters while running, as a percentage of normal. 100 = vanilla speed, 75 = 25%% slower, 50 = half speed. This is the fastest a sprinter can be. Set Slowest Sprinter Speed below it to give each sprinter its own speed between the two. Applies only to zeds this mod makes sprint. Each sprinter keeps the speed it was given when it started sprinting, so changing this affects new sprinters, not ones already running. PhunZones zones can override both. Note: this works by replacing the vanilla zombie sprint animation files, so it can conflict with other mods that also change them (eg other slower sprinter mods).",
+    "ch": "跑屍奔跑時的速度, 以正常速度的百分比表示. 100 = 原版速度, 75 = 慢 25%%, 50 = 半速. 這是跑屍能達到的最高速度. 將「跑屍最低速度」設得比它低, 每隻跑屍就會在兩者之間獲得各自的速度. 只套用於本模組讓其衝刺的殭屍. 每隻跑屍會維持開始衝刺時被賦予的速度, 因此變更此設定只會影響新的跑屍, 不影響已在奔跑的跑屍. PhunZones 區域可以覆寫這兩項設定. 注意: 此功能是藉由替換原版殭屍衝刺動畫檔案來運作, 因此可能與其他同樣修改這些檔案的模組衝突 (例如其他讓跑屍變慢的模組).",
+    "cn": "跑尸奔跑时的速度, 以正常速度的百分比表示. 100 = 原版速度, 75 = 慢 25%%, 50 = 半速. 这是跑尸能达到的最高速度. 将“跑尸最低速度”设得比它低, 每只跑尸就会在两者之间获得各自的速度. 仅适用于本模组使其冲刺的僵尸. 每只跑尸会保持开始冲刺时被赋予的速度, 因此更改此设置只影响新的跑尸, 不影响已在奔跑的跑尸. PhunZones 区域可以覆盖这两项设置. 注意: 此功能通过替换原版僵尸冲刺动画文件来实现, 因此可能与其他同样修改这些文件的模组冲突 (例如其他让跑尸变慢的模组)."
    },
    "Sandbox_CommonSense_Debug": {
     "en": "Debug",
@@ -386092,9 +386177,9 @@
     "cn": "全郡幸存者人口池 (NPC)"
    },
    "Sandbox_ProjectALife.CensusSize_tooltip": {
-    "en": "Sets the finite survivor pool when the world starts. Natural groups and reinforcements draw from it; deaths reduce it. Slow arrivals replace losses. Admin spawns do not count.\nDefault 200.",
-    "ch": "設定世界開始時的有限倖存者人口池. 自然出現的團體與增援都從中抽取; 死亡會使其減少. 緩慢抵達的新來者會遞補損失. 管理員生成的NPC不計入.\n預設: 200.",
-    "cn": "设置世界开始时的有限幸存者人口池. 自然出现的团体和增援都从中抽取; 死亡会使其减少. 缓慢抵达的新来者会补充损失. 管理员生成的NPC不计入.\n默认: 200."
+    "en": "Sets the finite survivor pool when the world starts. Natural groups and reinforcements draw from it; deaths reduce it. Slow arrivals replace losses. Admin spawns do not count.\nDefault 360.",
+    "ch": "設定世界開始時的有限倖存者人口池. 自然出現的團體與增援都從中抽取; 死亡會使其減少. 緩慢抵達的新來者會遞補損失. 管理員生成的NPC不計入.\n預設: 360.",
+    "cn": "设置世界开始时的有限幸存者人口池. 自然出现的团体和增援都从中抽取; 死亡会使其减少. 缓慢抵达的新来者会补充损失. 管理员生成的NPC不计入.\n默认: 360."
    },
    "Sandbox_ProjectALife.ChatterEnabled": {
     "en": "Group chatter and passing greetings",
@@ -386837,9 +386922,9 @@
     "cn": "[专家] NPC对僵尸开枪 (%%)"
    },
    "Sandbox_ProjectALife.GunsVsZombiesPercent_tooltip": {
-    "en": "How often an NPC that could shoot a zombie does so. Gunfire draws more zombies, so by default NPCs walk around zombies, use melee on a lone one, and keep their guns for NPCs and players. They still shoot when cornered, hurt, defending a hurt player, on a horde that blocks the way, or on duty as military or police. 0 means never unless cornered. 100 is the old behaviour. Default 15.",
-    "ch": "能夠射擊殭屍的NPC實際開槍的頻率. 槍聲會引來更多殭屍, 因此預設情況下NPC會繞過殭屍, 以近戰對付落單的殭屍, 把槍留給NPC與玩家. 但在被逼入絕境, 受傷, 保護受傷的玩家, 面對擋路的殭屍群, 或以軍警身分執勤時, 他們仍會開槍. 0表示除非被逼入絕境, 否則絕不開槍. 100為舊版行為. 預設: 15.",
-    "cn": "能够射击僵尸的NPC实际开枪的频率. 枪声会引来更多僵尸, 因此默认情况下NPC会绕开僵尸, 用近战对付落单的僵尸, 把枪留给NPC与玩家. 但在被逼入绝境, 受伤, 保护受伤的玩家, 面对挡路的僵尸群, 或以军警身份执勤时, 他们仍会开枪. 0表示除非被逼入绝境, 否则绝不开枪. 100为旧版行为. 默认: 15."
+    "en": "How often an NPC that could shoot a zombie does so. Gunfire draws more zombies, so lowering this makes NPCs walk around zombies, use melee on a lone one, and keep their guns for NPCs and players. They still shoot when cornered, hurt, defending a hurt player, on a horde that blocks the way, or on duty as military or police. 0 means never unless cornered. 100 is the old behaviour. Default 50.",
+    "ch": "能夠射擊殭屍的NPC實際開槍的頻率. 槍聲會引來更多殭屍, 因此調低此值會讓NPC繞過殭屍, 以近戰對付落單的殭屍, 把槍留給NPC與玩家. 但在被逼入絕境, 受傷, 保護受傷的玩家, 面對擋路的殭屍群, 或以軍警身分執勤時, 他們仍會開槍. 0表示除非被逼入絕境, 否則絕不開槍. 100為舊版行為. 預設: 50.",
+    "cn": "能够射击僵尸的NPC实际开枪的频率. 枪声会引来更多僵尸, 因此调低该值会让NPC绕开僵尸, 用近战对付落单的僵尸, 把枪留给NPC与玩家. 但在被逼入绝境, 受伤, 保护受伤的玩家, 面对挡路的僵尸群, 或以军警身份执勤时, 他们仍会开枪. 0表示除非被逼入绝境, 否则绝不开枪. 100为旧版行为. 默认: 50."
    },
    "Sandbox_ProjectALife.HearingAlertPercent": {
     "en": "Sound alert awareness (percent)",
@@ -387402,12 +387487,12 @@
     "cn": "被僵尸咬伤或攻击而感染的NPC会穿着自己的衣服尸变起身. 游戏的“传染”, “致死时间”和“尸体复活”设置仍然适用.\n默认: 开启."
    },
    "Sandbox_ProjectALife.NeighbourGroups": {
-    "en": "Neighbourhood roaming group limit",
+    "en": "Neighbourhood travelling group limit",
     "ch": "鄰近漫遊團體上限",
     "cn": "邻近漫游群体上限"
    },
    "Sandbox_ProjectALife.NeighbourGroups_tooltip": {
-    "en": "Blocks new roaming groups when this many already live within 240 tiles. From day 4, the limit drops by one but never below one.\nDefault 4.",
+    "en": "Blocks new travelling groups when this many already live within 240 tiles. From day 4, the limit drops by one but never below one.\nDefault 4.",
     "ch": "240格內已有此數量的漫遊團體時, 不再出現新的漫遊團體. 從第4天起, 上限減少1, 但不會低於1.\n預設: 4.",
     "cn": "240格内已有该数量的漫游群体时, 不再出现新的漫游群体. 从第4天起, 上限减少1, 但不会低于1.\n默认: 4."
    },
@@ -387587,9 +387672,9 @@
     "cn": "[专家] 每轮哨所建造工作量"
    },
    "Sandbox_ProjectALife.OutpostsBuildBudget_tooltip": {
-    "en": "Maximum work units per round. Higher values finish sooner but may increase server stalls. Multiplayer streaming pauses still apply.\nDefault 250.",
-    "ch": "每輪最多的工作單位. 數值越高完成越快, 但可能增加伺服器卡頓. 多人模式的串流暫停仍然適用.\n預設: 250.",
-    "cn": "每轮最多的工作单位. 数值越高完成越快, 但可能增加服务器卡顿. 多人模式的流式加载暂停仍然适用.\n默认: 250."
+    "en": "Maximum work units per round. Higher values finish sooner but may increase server stalls. Multiplayer streaming pauses still apply.\nDefault 100.",
+    "ch": "每輪最多的工作單位. 數值越高完成越快, 但可能增加伺服器卡頓. 多人模式的串流暫停仍然適用.\n預設: 100.",
+    "cn": "每轮最多的工作单位. 数值越高完成越快, 但可能增加服务器卡顿. 多人模式的流式加载暂停仍然适用.\n默认: 100."
    },
    "Sandbox_ProjectALife.OutpostsCompoundSpacing": {
     "en": "Walled compound spacing (tiles)",
@@ -387857,9 +387942,9 @@
     "cn": "群体目标与计划"
    },
    "Sandbox_ProjectALife.PlansEnabled_tooltip": {
-    "en": "Free groups choose goals such as supplies or shelter, discuss them and follow through until done, blocked, hurt or threatened. Off: groups return to roaming and idling.\nDefault on.",
-    "ch": "自由團體會選擇物資或避難所等目標, 討論後貫徹執行, 直到完成, 受阻, 受傷或受到威脅為止. 關閉: 團體恢復為四處遊蕩與閒置.\n預設: 開啟.",
-    "cn": "自由群体会选择物资或避难所等目标, 讨论后贯彻执行, 直到完成, 受阻, 受伤或受到威胁为止. 关闭: 群体恢复为四处游荡与闲置.\n默认: 开启."
+    "en": "Free groups choose goals such as supplies or shelter, discuss them and follow through until done, blocked, hurt or threatened. Off: groups return to travelling and idling.\nDefault on.",
+    "ch": "自由團體會選擇物資或避難所等目標, 討論後貫徹執行, 直到完成, 受阻, 受傷或受到威脅為止. 關閉: 團體恢復為四處移動與閒置.\n預設: 開啟.",
+    "cn": "自由群体会选择物资或避难所等目标, 讨论后贯彻执行, 直到完成, 受阻, 受伤或受到威胁为止. 关闭: 群体恢复为四处移动与闲置.\n默认: 开启."
    },
    "Sandbox_ProjectALife.PlansLifespanHours": {
     "en": "Group plan time limit (game hours)",
@@ -387892,19 +387977,19 @@
     "cn": "群体出发前会讨论计划, 抵达或放弃时也会开口说话. 关闭: 仍会执行计划, 但不出声.\n默认: 开启."
    },
    "Sandbox_ProjectALife.PresetDifficulty": {
-    "en": "Difficulty: how dangerous NPCs are",
-    "ch": "難度: NPC有多危險",
-    "cn": "难度: NPC有多危险"
+    "en": "Difficulty",
+    "ch": "難度",
+    "cn": "难度"
    },
    "Sandbox_ProjectALife.PresetDifficulty_option1": {
-    "en": "Light",
-    "ch": "輕鬆",
-    "cn": "轻松"
+    "en": "Easy",
+    "ch": "容易",
+    "cn": "容易"
    },
    "Sandbox_ProjectALife.PresetDifficulty_option2": {
-    "en": "Standard",
-    "ch": "標準",
-    "cn": "标准"
+    "en": "Medium",
+    "ch": "中等",
+    "cn": "中等"
    },
    "Sandbox_ProjectALife.PresetDifficulty_option3": {
     "en": "Hard",
@@ -387912,14 +387997,14 @@
     "cn": "困难"
    },
    "Sandbox_ProjectALife.PresetDifficulty_option4": {
-    "en": "Brutal",
-    "ch": "殘酷",
-    "cn": "残酷"
+    "en": "Hardcore",
+    "ch": "極限難度",
+    "cn": "极限难度"
    },
    "Sandbox_ProjectALife.PresetDifficulty_tooltip": {
-    "en": "Light: 50 damage, 80 health, raids day 60. Only default-valued options change; density is separate. Reload for full effect. Hostile cap affects new admissions only.\nDefault Standard (2).",
-    "ch": "輕鬆: 傷害50, 生命值80, 第60天起突襲. 只會變更仍為預設值的選項; 人口密度另行設定. 重新載入後完全生效. 敵對上限只影響新准許生成的NPC.\n預設: 標準 (2).",
-    "cn": "轻松: 伤害50, 生命值80, 第60天起突袭. 只会更改仍为默认值的选项; 人口密度另行设置. 重新加载后完全生效. 敌对上限只影响新准许生成的NPC.\n默认: 标准 (2)."
+    "en": "How dangerous NPCs are. Easy: half damage, 80 health, raids from day 60. Only default-valued options change; density is separate. Reload for full effect.\nDefault Easy (1).",
+    "ch": "NPC有多危險. 容易: 傷害減半, 生命值80, 第60天起突襲. 只會變更仍為預設值的選項; 人口密度另行設定. 重新載入後完全生效.\n預設: 容易 (1).",
+    "cn": "NPC有多危险. 容易: 伤害减半, 生命值80, 第60天起突袭. 只会更改仍为默认值的选项; 人口密度另行设置. 重新加载后完全生效.\n默认: 容易 (1)."
    },
    "Sandbox_ProjectALife.Raid_MaxAttackers": {
     "en": "Total automatic raid limit (NPCs)",
@@ -387927,9 +388012,9 @@
     "cn": "自动突袭总人数上限 (NPC)"
    },
    "Sandbox_ProjectALife.Raid_MaxAttackers_tooltip": {
-    "en": "Caps attackers across all automatic raid waves, spread evenly among the waves. Earlier scouts do not count. Admin-forced raids ignore this limit.\nDefault 8.",
-    "ch": "限制所有自動突襲波次的攻擊者總數, 平均分配到各波次. 先前的偵察兵不計入. 管理員強制發動的突襲不受此上限限制.\n預設: 8.",
-    "cn": "限制所有自动突袭波次的攻击者总数, 平均分配到各波次. 先前的侦察兵不计入. 管理员强制发起的突袭不受此上限限制.\n默认: 8."
+    "en": "Caps attackers across all automatic raid waves, spread evenly among the waves. Earlier scouts do not count. Admin-forced raids ignore this limit.\nDefault 12.",
+    "ch": "限制所有自動突襲波次的攻擊者總數, 平均分配到各波次. 先前的偵察兵不計入. 管理員強制發動的突襲不受此上限限制.\n預設: 12.",
+    "cn": "限制所有自动突袭波次的攻击者总数, 平均分配到各波次. 先前的侦察兵不计入. 管理员强制发起的突袭不受此上限限制.\n默认: 12."
    },
    "Sandbox_ProjectALife.Raid_SirenAircraftSounds": {
     "en": "Sirens and aircraft sounds",
@@ -388237,7 +388322,7 @@
     "cn": "死亡后当地补充延迟 (游戏内天数)"
    },
    "Sandbox_ProjectALife.RespawnCooldownDays_tooltip": {
-    "en": "Blocks new roaming groups in an area of about 120 tiles after NPC deaths. Heavy losses extend the delay. At 0, this delay is disabled.\nDefault 3.",
+    "en": "Blocks new travelling groups in an area of about 120 tiles after NPC deaths. Heavy losses extend the delay. At 0, this delay is disabled.\nDefault 3.",
     "ch": "NPC死亡後, 約120格範圍內不會出現新的漫遊團體. 傷亡慘重會延長此延遲. 設為0時停用此延遲.\n預設: 3.",
     "cn": "NPC死亡后, 约120格范围内不会出现新的漫游群体. 伤亡惨重会延长该延迟. 设为0时禁用该延迟.\n默认: 3."
    },
@@ -388587,17 +388672,17 @@
     "cn": "初始城镇群体净空距离 (格)"
    },
    "Sandbox_ProjectALife.SeedClearTiles_tooltip": {
-    "en": "Prevents starting roaming groups from being placed this close to a player. Groups may still arrive later. At 0, this starting clearance is disabled.\nDefault 150.",
+    "en": "Prevents starting travelling groups from being placed this close to a player. Groups may still arrive later. At 0, this starting clearance is disabled.\nDefault 150.",
     "ch": "防止初始漫遊團體被放置在離玩家這麼近的位置. 之後仍可能有團體到來. 設為0時停用此初始淨空距離.\n預設: 150.",
     "cn": "防止初始漫游群体被放置在离玩家这么近的位置. 之后仍可能有群体到来. 设为0时禁用该初始净空距离.\n默认: 150."
    },
    "Sandbox_ProjectALife.SeedPerTown": {
-    "en": "Starting roaming groups per town",
+    "en": "Starting travelling groups per town",
     "ch": "每座城鎮的初始漫遊團體",
     "cn": "每座城镇的初始漫游群体"
    },
    "Sandbox_ProjectALife.SeedPerTown_tooltip": {
-    "en": "Sets how many roaming groups each town receives when the world starts. The distant roaming group limit may allow extra groups in larger worlds.\nDefault 3.",
+    "en": "Sets how many travelling groups each town receives when the world starts. The distant travelling group limit may allow extra groups in larger worlds.\nDefault 3.",
     "ch": "設定世界開始時每座城鎮分配到的漫遊團體數量. 在較大的世界中, 遠方漫遊團體上限可能允許額外的團體.\n預設: 3.",
     "cn": "设置世界开始时每座城镇分配到的漫游群体数量. 在较大的世界中, 远方漫游团体上限可能允许额外的群体.\n默认: 3."
    },
@@ -388657,9 +388742,9 @@
     "cn": "NPC出现净空距离 (格)"
    },
    "Sandbox_ProjectALife.SpawnKeepOutTiles_tooltip": {
-    "en": "Keeps random groups from appearing this close or in view. Countryside adds 20 tiles; loaded-map limits still apply. Groups appear outside the clearance and walk in.\nDefault 70.",
-    "ch": "防止隨機團體在這麼近的距離或視線範圍內出現. 鄉間額外加20格; 已載入地圖範圍的限制仍然適用. 團體會在淨空範圍外出現, 再走進來.\n預設: 70.",
-    "cn": "防止随机群体在这么近的距离或视线范围内出现. 乡间额外加20格; 已加载地图范围的限制仍然适用. 群体会在净空范围外出现, 再走进来.\n默认: 70."
+    "en": "Keeps random groups from appearing this close or in view. Countryside adds 10 tiles; loaded-map limits still apply. Groups appear outside the clearance and walk in. Too high a value leaves almost no room to appear inside the loaded map.\nDefault 45.",
+    "ch": "防止隨機團體在這麼近的距離或視線範圍內出現. 鄉間額外加10格; 已載入地圖範圍的限制仍然適用. 團體會在淨空範圍外出現, 再走進來. 數值太高會使已載入地圖內幾乎沒有空間可供出現.\n預設: 45.",
+    "cn": "防止随机群体在这么近的距离或视线范围内出现. 乡间额外加10格; 已加载地图范围的限制仍然适用. 群体会在净空范围外出现, 再走进来. 数值过高会使已加载地图内几乎没有空间可供出现.\n默认: 45."
    },
    "Sandbox_ProjectALife.SpawnRuralDensity": {
     "en": "Countryside encounter rate (percent of town rate)",
@@ -388982,9 +389067,9 @@
     "cn": "每座城镇的新角色团体上限"
    },
    "Sandbox_ProjectALife.TownWelcomeGroups_tooltip": {
-    "en": "How many welcome groups each new character gets, and how many can be alive in one town at once, even when several players start there.\nDefault 2.",
-    "ch": "每個新角色可獲得的迎接團體數量, 也是單一城鎮同時存活的團體上限, 即使有多名玩家在該處開局也一樣.\n預設: 2.",
-    "cn": "每个新角色可获得的迎接团体数量, 也是单个城镇同时存活的团体上限, 即使有多名玩家在该处开局也一样.\n默认: 2."
+    "en": "How many welcome groups each new character gets, and how many can be alive in one town at once, even when several players start there.\nDefault 4.",
+    "ch": "每個新角色可獲得的迎接團體數量, 也是單一城鎮同時存活的團體上限, 即使有多名玩家在該處開局也一樣.\n預設: 4.",
+    "cn": "每个新角色可获得的迎接团体数量, 也是单个城镇同时存活的团体上限, 即使有多名玩家在该处开局也一样.\n默认: 4."
    },
    "Sandbox_ProjectALife.TurningDelay": {
     "en": "Delay before NPC reanimation",
@@ -389830,6 +389915,61 @@
     "en": "Off: also rifles and shotguns.",
     "ch": "關閉: 也會出現步槍與霰彈槍.",
     "cn": "关闭: 也会出现步枪和霰弹枪."
+   },
+   "Sandbox_ModernFirearmsSystemDamageSandbox": {
+    "en": "MFS5 Gun Damage",
+    "ch": "MFS5 槍械傷害",
+    "cn": "MFS5 枪械伤害"
+   },
+   "Sandbox_ModernFirearmsSystemDamageSandbox_FirearmDamage": {
+    "en": "Global Gun Damage Multiplier",
+    "ch": "全域槍械傷害倍率",
+    "cn": "全局枪械伤害倍率"
+   },
+   "Sandbox_ModernFirearmsSystemDamageSandbox_FirearmDamage_tooltip": {
+    "en": "Multiplies the damage of every gun. 0.5 = 50% base damage, 2 = double damage. 1 is the default.",
+    "ch": "所有槍械的傷害都乘以此倍率. 0.5 = 基礎傷害的 50%%, 2 = 雙倍傷害. 預設為 1.",
+    "cn": "所有枪械的伤害都乘以该倍率. 0.5 = 基础伤害的 50%%, 2 = 双倍伤害. 默认为 1."
+   },
+   "Sandbox_PhunSprinters_SprinterSpeedMin": {
+    "en": "Slowest Sprinter Speed %%",
+    "ch": "跑屍最低速度 %%",
+    "cn": "跑尸最低速度 %%"
+   },
+   "Sandbox_PhunSprinters_SprinterSpeedMin_tooltip": {
+    "en": "The slowest a sprinter can be, as a percentage of normal. Each sprinter gets its own speed between this and Sprinter Speed. At or above Sprinter Speed (the default, 100), every sprinter runs at exactly Sprinter Speed.",
+    "ch": "跑屍的最低速度, 以正常速度的百分比表示. 每隻跑屍會在此值與「跑屍速度」之間獲得各自的速度. 設為等於或高於「跑屍速度」時 (即預設的 100), 每隻跑屍都會剛好以「跑屍速度」奔跑.",
+    "cn": "跑尸的最低速度, 以正常速度的百分比表示. 每只跑尸会在此值与“跑尸速度”之间获得各自的速度. 设为等于或高于“跑尸速度”时 (即默认的 100), 每只跑尸都会正好以“跑尸速度”奔跑."
+   },
+   "Sandbox_FightZ_LearnAspirantFromBook": {
+    "en": "Learn Aspiring Fighter by reading Fists Vol. 1",
+    "ch": "閱讀「殭屍搏鬥: 拳擊1-2」習得格鬥愛好者",
+    "cn": "阅读“僵尸搏斗: 拳击1-2”习得格斗爱好者"
+   },
+   "Sandbox_FightZ_LearnAspirantFromBook_tooltip": {
+    "en": "Fully reading the first Fists manual unlocks Aspiring Fighter if the character has no fist combat trait. Works with or without Traits As Skills and gives no free Fists levels. Completed reading in existing saves also qualifies.",
+    "ch": "角色沒有任何拳擊戰鬥特質時, 完整讀完第一本拳擊手冊即可解鎖格鬥愛好者. 不論是否使用特質即技能都有效, 且不會免費給予拳擊等級. 既有存檔中已讀完的也算數.",
+    "cn": "角色没有任何拳击战斗特质时, 完整读完第一本拳击手册即可解锁格斗爱好者. 无论是否使用特质即技能都有效, 且不会免费给予拳击等级. 现有存档中已读完的也算数."
+   },
+   "Sandbox_ProjectALife.KeepEncounterNpcs": {
+    "en": "Keep peaceful travellers after restart",
+    "ch": "重啟後保留和平的旅人",
+    "cn": "重启后保留和平的旅行者"
+   },
+   "Sandbox_ProjectALife.KeepEncounterNpcs_tooltip": {
+    "en": "Visitors, travellers and traders you met stay in the world when you quit. Raiders and other hostile groups do not. Counts toward the saved crew limit.\nDefault on.",
+    "ch": "你遇過的訪客, 旅人與商人在你離開遊戲後會留在世界中. 掠奪者與其他敵對團體則不會. 計入已保存隊伍上限.\n預設: 開啟.",
+    "cn": "你遇到过的访客, 旅行者和商人在你退出游戏后会留在世界中. 掠夺者和其他敌对团体则不会. 计入已保存队伍上限.\n默认: 开启."
+   },
+   "Sandbox_ProjectALife.NpcShotNoise": {
+    "en": "[Expert] How far NPC gunshots are heard (percent)",
+    "ch": "[專家] NPC槍聲傳播距離 (百分比)",
+    "cn": "[专家] NPC枪声传播距离 (百分比)"
+   },
+   "Sandbox_ProjectALife.NpcShotNoise_tooltip": {
+    "en": "Scales how far zombies and others hear NPC gunfire. At 50, a shot carries half as far. Players and NPCs hear the same reduced range. Lower it on busy servers where NPC shooting pulls hordes across the map. Default 100.",
+    "ch": "調整殭屍與其他人能聽見NPC槍聲的距離. 設為50時, 槍聲傳播距離減半. 玩家與NPC聽到的範圍也同樣縮減. 在NPC槍戰會把殭屍群從地圖各處引來的熱鬧伺服器上, 可調低此值. 預設: 100.",
+    "cn": "调整僵尸和其他人能听到NPC枪声的距离. 设为50时, 枪声传播距离减半. 玩家和NPC听到的范围也同样缩小. 在NPC枪战会把僵尸群从地图各处引来的繁忙服务器上, 可调低该值. 默认: 100."
    }
   },
   "Tooltip.json": {
@@ -453432,6 +453572,46 @@
     "en": "Right-click anywhere on the digital watch face to open the set-alarm dialog (bigger target than the gear icon). Turn off if another mod uses right click on the clock.",
     "ch": "在電子錶面任意處右鍵點選即可開啟鬧鐘設定對話方塊 (比齒輪圖示更容易點中). 如果其他模組也會在時鐘上使用右鍵, 請關閉此選項.",
     "cn": "在电子表盘任意位置右键点击即可打开闹钟设置对话框 (比齿轮图标更容易点中). 如果其他模组也会在时钟上使用右键, 请关闭此选项."
+   },
+   "UI_TWF_QOL_FOOD_INTELLIGENT_FEAST": {
+    "en": "Intelligent Feast! for Food",
+    "ch": "食物: 智慧大吃一頓!",
+    "cn": "食物: 智能大吃一顿!"
+   },
+   "UI_TWF_QOL_FOOD_INTELLIGENT_FEAST_TT": {
+    "en": "Enabled: Feast! eats only the portions needed to satisfy hunger and is hidden when no food can be eaten. Disabled: Feast! uses Rat Edition behavior, eating selected food items one at a time in full portions until vanilla prevents further eating.",
+    "ch": "啟用: 「大吃一頓!」只會吃掉填飽肚子所需的份量, 且沒有可吃的食物時不會出現在選單中. 停用: 「大吃一頓!」改用 Rat Edition 的行為, 逐一整份吃掉選取的食物, 直到原版不允許再進食為止.",
+    "cn": "启用: “大吃一顿!”只会吃掉填饱肚子所需的分量, 且没有可吃的食物时不会出现在菜单中. 禁用: “大吃一顿!”改用 Rat Edition 的行为, 逐一整份吃掉选中的食物, 直到原版不允许继续进食为止."
+   },
+   "UI_WANTED_AlreadyGlobal": {
+    "en": "Already on Global List",
+    "ch": "已在全域清單中",
+    "cn": "已在全局列表中"
+   },
+   "UI_WANTED_MoveFromSave": {
+    "en": "Move from Save List",
+    "ch": "從存檔清單移入",
+    "cn": "从存档列表移入"
+   },
+   "UI_TAS_Action_FightZFirstBook": {
+    "en": "Finish Fists Vol. 1 (unlocks the first stage once)",
+    "ch": "讀完「殭屍搏鬥: 拳擊1-2」 (僅解鎖第一階段, 限一次)",
+    "cn": "读完“僵尸搏斗: 拳击1-2” (仅解锁第一阶段, 限一次)"
+   },
+   "UI_TAS_Action_FightZPunch": {
+    "en": "Land fist punches (normally 1 XP; critical hits 2 XP)",
+    "ch": "出拳命中 (一般 1 點經驗; 暴擊 2 點經驗)",
+    "cn": "出拳命中 (普通 1 点经验; 暴击 2 点经验)"
+   },
+   "UI_TAS_Spectrum_FightZ_UnarmedCombat": {
+    "en": "Unarmed combat",
+    "ch": "徒手格鬥",
+    "cn": "徒手格斗"
+   },
+   "UI_TAS_Spectrum_FightZ_UnarmedCombat_Description": {
+    "en": "Finish Fists Vol. 1 to learn Aspiring Fighter. Land punches to progress to Fist Initiate at stage 4 and Fist Fighter at stage 8. Earned traits do not grant free Fists levels.",
+    "ch": "讀完「殭屍搏鬥: 拳擊1-2」即可習得格鬥愛好者. 持續出拳命中來推進, 第 4 階段晉升拳擊入門, 第 8 階段晉升拳擊高手. 以此獲得的特質不會免費給予拳擊等級.",
+    "cn": "读完“僵尸搏斗: 拳击1-2”即可习得格斗爱好者. 持续出拳命中来推进, 第 4 阶段晋升拳击入门, 第 8 阶段晋升拳击高手. 以此获得的特质不会免费给予拳击等级."
    }
   },
   "MakeUp.json": {
