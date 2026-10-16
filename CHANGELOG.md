@@ -4,6 +4,22 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 14 個 MOD 新增的繁簡中文，共 383 項。** Knox Buildworks（#877，舊木鑲板窗牆系列、壁掛式空調、無線電與電視等家電、閣樓木地板、煙囪帽、裱框畫與壁飾等可建造物件與 13 個子分類，擷取建築成藍圖的除錯工具訊息，以及允許匯入超過上限藍圖的沙盒設定，124 項）、Fruity Farmer Fruit Trees（#880，可可樹、咖啡、花生、鳳梨與甘蔗等新作物，各種水果冰淇淋與甜筒，咖啡豆與可可豆的烘焙研磨，甘蔗榨汁熬糖，111 項）、Long Term Preservation Extended（#869，黑熊、棕熊、野豬、山貓、郊狼、麋鹿的罐裝肉、鹹肉與臘肉，以及醃製罐頭的裝箱與開箱配方，55 項）、Vanilla Foods Expanded（#868，各種派的演進配方名、蛋白奶昔液體、沖飲與蛋白奶昔配方，35 項）、Arcadia RV Interiors（#878，電池艙與車輛管理器快捷鍵的沙盒設定、岸電箱開關、電路故障與岸電電纜收回的訊息，19 項）、Guns of Marz（#875，2 號口徑步槍、M203 榴彈發射器、M1／M1905 刺刀與新彈匣，16 項）、Wallpapers and More Paint Options（#866，典雅與素面護牆板、踢腳板、頂角線、腰線的安裝與移除，14 項）、Bandits Radio Expansion（#872，一般殭屍血腥效果，2 項）、Slayer's Week One（#879，清理小組的廣播，2 項），以及 Bicycle!（#867）、Hot Brass（#870）、Gunworks-gang（#874）、Natures Call（#873）、'62 Daimler Ferret（#881）各 1 項。
+  > 技術要點：全數落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫，新鍵皆以有效 CN 值登記 `ch_review_state`。7 路翻譯、7 路對抗複核提出 6 條修正，採納 4 條（Fruity Farmer 的糖依本體譯「白糖」、Knox Buildworks 的 Chimney Pots 與同 MOD 物件說明一致改「煙囪帽」、Arcadia 快捷鍵說明引用的按鍵名改用既有的「進入或離開露營車內部」）；2 條不採納（建議沿用的本體鍵英文分別是 Red Oak Chair、White Phone，與本批英文不同名）。16 個 wid 以 steamcmd 重抓，14,533 筆文本 record 的值 hash 與 tracker state 全數相符。
+
+### Changed
+
+- **依上游英文改值重譯 129 項。** Arcadia RV Interiors 111 項（#878，房車電力系統全面改名與改寫：船用電池艙改稱「電池艙」，電池艙面板的電量標籤改為電量充足／中等／偏低／沒電，世界電網、岸電充電、電纜距離、電池消耗與快捷鍵提示等沙盒設定的標題與說明改成較短的寫法，保險絲、房車船用電池、岸電樁與岸電電纜的說明也一併改寫）、Natures Call 15 項（#873，特質說明補上具體數值，例如意外頻率、每小時失禁機率、單次排出比例）、Knox Buildworks 2 項（#877，「每個藍圖的最大構件數」沙盒設定與說明改寫為手動擴建上限，另寫明藍圖最多 10,000 個構件）、Fruity Farmer Fruit Trees 1 項（#880，作物名「葡萄藤」改為「葡萄」）。
+  > 技術要點：Arcadia 16 項、Natures Call 15 項、Knox Buildworks 2 項、Fruity Farmer 1 項屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點；Arcadia「未安裝電池」英文改回 As1 當初的意思，撤除舊 override）；Arcadia 其餘 95 項屬 own 層連 `en` 錨點更新，其中 2 項舊版只存在 B42 不讀的 `_EN.txt`、這版才進 JSON，由 build 的 `own_anchor_drift` 報出後一併重譯；皆登記 `ch_review_state`。英文改了但譯文仍正確的只更新 `en` 錨點：Arcadia 2 項、Bandits Radio Expansion 4 項（#872，英文只把字面 `%` 改寫成 `%%`）。
+- **裁決 1 個多 MOD 共用鍵。** Guns of Marz 新版把 Glock 17 改寫成 Glock-17，舊版（Old Version，已凍結）維持 Glock 17；同一把槍只差連字號，現行「格洛克17手槍」對兩版都成立，維持原譯（#875）。
+  > 技術要點：`owner_conflict_decisions.json` 新增 1 筆 translate；`OWNER_CONFLICTS.md` 重生。
+
+其餘追蹤單無需另外變更翻譯：'85 Chevrolet Step-Van（#871）在 `common` 補上 JSON 格式的 `IG_UI`／`Recipes` 翻譯檔（原本只有 B42 不讀的 `_EN.txt`），鍵名與英文都和已出貨譯文一致；'76 Chrysler New Yorker（#876）只改了 B42 不載入的根目錄 `media/scripts` 舊配方名，B42 的配方名早已是「製作小型復古車頂行李架」。Arcadia 上游移除的舊電池組建造沙盒設定 18 項、Vanilla Foods Expanded 移除的 2 個舊配方屬 As1 衍生層，依 split 不變式保留。
+
 ## [42.21.0-1.51.0] - 2026-10-15
 
 ### Added

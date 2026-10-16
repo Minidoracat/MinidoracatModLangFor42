@@ -58867,18 +58867,13 @@
   },
   "Tooltip.json|Tooltip_ArcadiaRVPowerMagazine": {
     "as1_value": "教导如何建造嵌入式辅助房车电池组.",
-    "value": "教导如何制作房车船用电池舱, 房车岸电桩与房车岸电电缆.",
-    "reason": "2026-10-14 #851：上游英文改寫（Teaches how to construct recessed auxiliary RV power banks. → Teaches RV Marine Power Bay, RV Shore-Power Pedestal and RV Shore-Power Cable construction.），依新英文重譯。"
+    "value": "教导如何制作房车电池舱、岸电桩和岸电电缆.",
+    "reason": "2026-10-16 #878：上游英文改寫（Teaches RV Marine Power Bay, RV Shore-Po… → Teaches you to build an RV Battery Bay, …），依新英文重譯。"
   },
   "Tooltip.json|Tooltip_ArcadiaRVRVPowerBank": {
     "as1_value": "一种紧凑型的双位车载电池落地柜. 拾取前必须清空内部物品.",
-    "value": "旧版物品, 对房车电力没有作用. 请改用房车船用电池舱提供辅助电力.",
-    "reason": "2026-10-14 #851：上游英文改寫（A compact two-position floor cabinet… → Legacy inventory item with no RV electrical effect…），依新英文重譯。"
-  },
-  "UI.json|UI_ArcadiaAuxBank_NoBattery": {
-    "as1_value": "未安装电池",
-    "value": "空电池位",
-    "reason": "2026-10-14 #851：上游英文改寫（No battery installed → Empty slot），依新英文重譯。"
+    "value": "此旧版物品无法为房车供电. 请改用房车电池舱.",
+    "reason": "2026-10-16 #878：上游英文改寫（Legacy inventory item with no RV electri… → This old item does not power an RV. Use …），依新英文重譯。"
   },
   "UI.json|UI_TWF_QOL_FORAGING_BETTERLIGHT": {
     "as1_value": "启用更好的搜寻光照",
@@ -58894,5 +58889,160 @@
     "as1_value": "允许使用拳击战斗, 但无学习加成或拳击点数.",
     "value": "允许使用拳击战斗, 但无学习加成或拳击点数. 启用相应的沙盒选项时, 也可以完整读完“僵尸搏斗: 拳击1-2”来习得.",
     "reason": "2026-10-15 #864：上游英文改寫（Allows fist fighting without learning bo… → Allows fist fighting without learning bo…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_KBW_MaxPlacementsPerBlueprint": {
+    "as1_value": "每个蓝图的最大规划可建造物数",
+    "value": "每个蓝图的最大构件数",
+    "reason": "2026-10-16 #877：上游英文改寫（Max planned buildables per blueprint → Max pieces per blueprint），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_KBW_MaxPlacementsPerBlueprint_tooltip": {
+    "as1_value": "单个蓝图可容纳的幽灵放置数量上限.",
+    "value": "玩家手动扩建蓝图时最多可规划到多少个构件. 蓝图一律不会超过 10,000 个构件.",
+    "reason": "2026-10-16 #877：上游英文改寫（Upper limit of ghost placements a single… → How many planned pieces players may buil…），依新英文重譯。"
+  },
+  "Farming.json|Farming_ffruit_Grapevine": {
+    "as1_value": "葡萄藤",
+    "value": "葡萄",
+    "reason": "2026-10-16 #880：上游英文改寫（Grapevine → Grapes），依新英文重譯。"
+  },
+  "UI.json|UI_ArcadiaAuxBank_Average": {
+    "as1_value": "平均安装电量",
+    "value": "平均电池电量",
+    "reason": "2026-10-16 #878：上游英文改寫（Average installed charge → Average battery charge），依新英文重譯。"
+  },
+  "UI.json|UI_ArcadiaAuxBank_Combined": {
+    "as1_value": "合计存储电量",
+    "value": "总存储电量",
+    "reason": "2026-10-16 #878：上游英文改寫（Combined stored charge → Total stored charge），依新英文重譯。"
+  },
+  "UI.json|UI_ArcadiaAuxBank_ExtraBatteries": {
+    "as1_value": "检测到额外电池",
+    "value": "此电池组无法使用的多余电池",
+    "reason": "2026-10-16 #878：上游英文改寫（Extra batteries detected → Extra batteries this bank cannot use），依新英文重譯。"
+  },
+  "UI.json|UI_ArcadiaAuxBank_Full": {
+    "as1_value": "两个电池位均已被占用.",
+    "value": "两个电池位都已装满.",
+    "reason": "2026-10-16 #878：上游英文改寫（Both battery positions are occupied. → Both battery slots are full.），依新英文重譯。"
+  },
+  "UI.json|UI_ArcadiaAuxBank_Green": {
+    "as1_value": "绿色",
+    "value": "电量充足",
+    "reason": "2026-10-16 #878：上游英文改寫（Green → Good charge），依新英文重譯。"
+  },
+  "UI.json|UI_ArcadiaAuxBank_InvalidContents": {
+    "as1_value": "检测到不支持的物品",
+    "value": "不属于此处的物品",
+    "reason": "2026-10-16 #878：上游英文改寫（Unsupported items detected → Items that do not belong here），依新英文重譯。"
+  },
+  "UI.json|UI_ArcadiaAuxBank_InventoryFull": {
+    "as1_value": "空间不足, 无法取出该电池.",
+    "value": "请先腾出物品栏空间, 再取出电池. 保险丝损坏不会妨碍取出.",
+    "reason": "2026-10-16 #878：上游英文改寫（There is not enough room to remove that … → Make room in your inventory, then remove…），依新英文重譯。"
+  },
+  "UI.json|UI_ArcadiaAuxBank_NotReady": {
+    "as1_value": "辅助电池组不可用或已变更.",
+    "value": "房车电池组不可用或已变更.",
+    "reason": "2026-10-16 #878：上游英文改寫（The auxiliary battery bank is unavailabl… → The RV Battery Bank is unavailable or ch…），依新英文重譯。"
+  },
+  "UI.json|UI_ArcadiaAuxBank_Orange": {
+    "as1_value": "橙色",
+    "value": "电量偏低",
+    "reason": "2026-10-16 #878：上游英文改寫（Orange → Low charge），依新英文重譯。"
+  },
+  "UI.json|UI_ArcadiaAuxBank_Red": {
+    "as1_value": "红色",
+    "value": "没电",
+    "reason": "2026-10-16 #878：上游英文改寫（Red → Empty），依新英文重譯。"
+  },
+  "UI.json|UI_ArcadiaAuxBank_Title": {
+    "as1_value": "辅助电池组",
+    "value": "房车电池组",
+    "reason": "2026-10-16 #878：上游英文改寫（Auxiliary Battery Bank → RV Battery Bank），依新英文重譯。"
+  },
+  "UI.json|UI_ArcadiaAuxBank_TooFar": {
+    "as1_value": "靠近辅助电池组.",
+    "value": "靠近房车电池组.",
+    "reason": "2026-10-16 #878：上游英文改寫（Move closer to the auxiliary battery ban… → Move closer to the RV Battery Bank.），依新英文重譯。"
+  },
+  "UI.json|UI_ArcadiaAuxBank_Yellow": {
+    "as1_value": "黄色",
+    "value": "电量中等",
+    "reason": "2026-10-16 #878：上游英文改寫（Yellow → Medium charge），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_NaturesCall_Trait_NCAccidentProne_Desc": {
+    "as1_value": "自控能力下降, 更容易发生失禁意外.",
+    "value": "膀胱和肠道自控能力 -12%%, 失禁频率增加 20%%. 自控能力低还会让每次失禁的量更大.",
+    "reason": "2026-10-16 #873：上游英文改寫（Lower control makes accidents more likel… → -12%% bladder and bowel control and 20%%…），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_NaturesCall_Trait_NCAccidentProof_Desc": {
+    "as1_value": "自控能力提升 更难失禁 憋尿憋便时间更长.",
+    "value": "膀胱和肠道自控能力 +18%%. 一旦超过全满状态, 失禁频率降低, 排出量也更少.",
+    "reason": "2026-10-16 #873：上游英文改寫（Better control makes accidents less like… → +18%% bladder and bowel control. Once yo…），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_NaturesCall_Trait_NCBedPooper_Desc": {
+    "as1_value": "睡眠中可能发生大便失禁.",
+    "value": "睡眠中肠道充盈度至少 20%% 时, 每小时有 5%% 概率弄脏床铺, 并排空肠道. 每 8 小时最多发生一次.",
+    "reason": "2026-10-16 #873：上游英文改寫（You can have bowel accidents while aslee… → While asleep with bowels at least 20%% f…），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_NaturesCall_Trait_NCBedwetter_Desc": {
+    "as1_value": "睡眠中可能发生尿床失禁.",
+    "value": "睡眠中膀胱充盈度至少 20%% 时, 每小时有 8%% 概率尿床, 并排空膀胱. 每 6 小时最多发生一次.",
+    "reason": "2026-10-16 #873：上游英文改寫（You can have bladder accidents while asl… → While asleep with a bladder at least 20%…），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_NaturesCall_Trait_NCBigBladder_Desc": {
+    "as1_value": "膀胱充盈速度变慢, 排尿频率降低.",
+    "value": "膀胱充盈速度减慢 20%%, 排尿频率降低.",
+    "reason": "2026-10-16 #873：上游英文改寫（Your bladder fills more slowly, so you n… → Your bladder fills 20%% more slowly, so …），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_NaturesCall_Trait_NCBigBowels_Desc": {
+    "as1_value": "肠道充盈速度变慢, 排便频率降低.",
+    "value": "肠道充盈速度减慢 20%%, 排便频率降低.",
+    "reason": "2026-10-16 #873：上游英文改寫（Your bowels fill more slowly, so you nee… → Your bowels fill 20%% more slowly, so yo…），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_NaturesCall_Trait_NCIBS_Desc": {
+    "as1_value": "劣质食物对肠胃影响更大, 失禁后果更严重.",
+    "value": "肠胃对所吃食物的反应增强 35%%, 无论好坏都是如此, 且变化更快. 失禁后果加重 20%%.",
+    "reason": "2026-10-16 #873：上游英文改寫（Poor food affects your gut more strongly… → Your gut reacts 35%% more strongly to wh…），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_NaturesCall_Trait_NCLactoseIntolerant_Desc": {
+    "as1_value": "乳制品会增加肠道负担, 更容易引发腹痛痉挛.",
+    "value": "乳制品几乎总会让你腹泻约 1 小时 (持续食用最长可达 3.5 小时), 期间肠道充盈速度大幅加快, 并可能引发腹痛痉挛.",
+    "reason": "2026-10-16 #873：上游英文改寫（Dairy causes extra bowel pressure and ca… → Dairy almost always gives you diarrhea f…），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_NaturesCall_Trait_NCPassiveBladderIncontinence_Desc": {
+    "as1_value": "隐藏膀胱数值. 任意充盈度都可能失禁, 且一次性排空膀胱.",
+    "value": "隐藏膀胱数值. 任意充盈度都可能失禁, 概率从几乎全空时每小时约 1%%, 到全满时每小时约 20%%, 且每次都会完全排空膀胱. 尿湿的衣物会一直保持污秽状态, 直到清洗或更换为止.",
+    "reason": "2026-10-16 #873：上游英文改寫（Your bladder meter is hidden. Accidents … → Your bladder meter is hidden. Accidents …），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_NaturesCall_Trait_NCPassiveBowelIncontinence_Desc": {
+    "as1_value": "隐藏肠道数值. 任意充盈度都可能失禁, 且一次性排空肠道.",
+    "value": "隐藏肠道数值. 任意充盈度都可能失禁, 概率从几乎全空时每小时约 1%%, 到全满时每小时约 20%%, 且每次都会完全排空肠道. 弄脏的衣物会一直保持污秽状态, 直到清洗或更换为止.",
+    "reason": "2026-10-16 #873：上游英文改寫（Your bowel meter is hidden. Accidents ca… → Your bowel meter is hidden. Accidents ca…），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_NaturesCall_Trait_NCSmallBladder_Desc": {
+    "as1_value": "膀胱充盈速度变快, 需要更频繁排尿.",
+    "value": "膀胱充盈速度加快 20%%, 需要更频繁排尿.",
+    "reason": "2026-10-16 #873：上游英文改寫（Your bladder fills faster, so you need t… → Your bladder fills 20%% faster, so you n…），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_NaturesCall_Trait_NCSmallBowels_Desc": {
+    "as1_value": "肠道充盈速度变快, 需要更频繁排便.",
+    "value": "肠道充盈速度加快 25%%, 需要更频繁排便.",
+    "reason": "2026-10-16 #873：上游英文改寫（Your bowels fill faster, so you need to … → Your bowels fill 25%% faster, so you nee…），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_NaturesCall_Trait_NCSqueamish_Desc": {
+    "as1_value": "穿着污秽衣物会产生更强的不适与负面情绪.",
+    "value": "穿着污秽衣物产生的不适与负面情绪增加 40%%.",
+    "reason": "2026-10-16 #873：上游英文改寫（Soiled clothing causes more discomfort a… → Soiled clothing causes 40%% more discomf…），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_NaturesCall_Trait_NCStressBladderIncontinent_Desc": {
+    "as1_value": "膀胱数值可见, 未满也可能失禁, 仅排出部分尿液.",
+    "value": "膀胱充盈度达到 10%% 时就可能开始渗漏, 且越满概率越高, 全满时每小时约 15%%. 每次渗漏会排出膀胱内 70-95%% 的尿液 (自控能力良好且肠胃健康时排出较少). 数值保持可见. 尿湿的衣物会一直保持污秽状态, 直到清洗或更换为止.",
+    "reason": "2026-10-16 #873：上游英文改寫（Your bladder meter stays visible, but ac… → Leaks can start once your bladder is 10%…），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_NaturesCall_Trait_NCStressBowelIncontinent_Desc": {
+    "as1_value": "肠道数值可见, 未满也可能失禁, 仅排出部分粪便.",
+    "value": "肠道充盈度达到 10%% 时就可能开始渗漏, 且越满概率越高, 全满时每小时约 15%%. 每次渗漏会排出肠道内 70-95%% 的粪便 (自控能力良好且肠胃健康时排出较少). 数值保持可见. 弄脏的衣物会一直保持污秽状态, 直到清洗或更换为止.",
+    "reason": "2026-10-16 #873：上游英文改寫（Your bowel meter stays visible, but acci… → Leaks can start once your bowels are 10%…），依新英文重譯。"
   }
 }

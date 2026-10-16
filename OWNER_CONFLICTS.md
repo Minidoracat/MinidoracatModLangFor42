@@ -23,7 +23,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1595** 個鍵（`unship` 311、`translate` 1284）。這些鍵的 owner 條目共 4471 筆：可載入 `.json` 2906、script 677、死檔 888。另有 **301** 個鍵尚未裁決。
+現況：已裁決 **1596** 個鍵（`unship` 311、`translate` 1285）。這些鍵的 owner 條目共 4473 筆：可載入 `.json` 2908、script 677、死檔 888。另有 **300** 個鍵尚未裁決。
 
 ## 不出貨的鍵（311）
 
@@ -343,7 +343,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_profdesc_veteran` | `2840805724/SimpleOverhaulTraitsAndOccupations` = War. War never changes... _(json)_<br>`3387957272/Detailed Descriptions for Occupations and Traits` = Foraging Bonuses:&lt;br&gt;+1.75 vision radius&lt;br&gt;33%… _(json)_ | 2026-08-29 #316：Detailed Descriptions 與 Simple Overhaul 以同一職業描述鍵承載完全不同內容（一方為完整知識/搜尋加成，另一方為一句摘要），沒有同時保真且有用的中性譯文。兩方均有可載入 JSON EN，抑制後顯示各自英文。 | — |
 | `UI\|UI_trait_BloodlustDesc` | `2459400130/DynamicTraits` = An uncontrollable urge to kill zombies. Going too long with… _(json)_<br>`2914075159/Evolving Traits World` = You find great joy in culling the undead.&lt;br&gt;You gain… _(json)_<br>`3657541591/Superheroes` = Double the speed. Triple the damage.&lt;br&gt;Recover endur… _(json)_ | 三個模組共用同鍵但效果不同：Dynamic Traits 是長時間不殺殭屍會惡化心情，ETW 是擊殺後降低壓力與恐慌，Superheroes 是速度與傷害加成、近戰擊殺恢復耐力及麻木。沒有完整且適用三方的單一說明，維持不出貨；三方皆有可載入 JSON 英文，玩家改讀各自模組的原文。 | — |
 
-## 採中性譯名的鍵（1284）
+## 採中性譯名的鍵（1285）
 
 這些鍵有中文，且該譯名對每個 MOD 都成立。
 
@@ -1285,6 +1285,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|Gunpart.Misc_subieli` | `3633421539/Escape from Kentucky4215` = 苏老师 _(script)_<br>`3780151182/MFS_community_fix` = subieli _(json)_ | 2026-10-03 裁決：原版 script 名「苏老师」與修正版英文「subieli」是同一個槍械小掛件 (修正版只是把原作者的中文名改寫成拼音或英文), 同一實體. 沿用原作者名稱的現行譯文. | — |
 | `ItemName\|Gunpart.Misc_zhizi` | `3633421539/Escape from Kentucky4215` = 栀子 _(script)_<br>`3780151182/MFS_community_fix` = zhizi _(json)_ | 2026-10-03 裁決：原版 script 名「栀子」與修正版英文「zhizi」是同一個槍械小掛件 (修正版只是把原作者的中文名改寫成拼音或英文), 同一實體. 沿用原作者名稱的現行譯文. | — |
 | `ItemName\|Gunpart.bayonet1_cat` | `3633421539/BackpackSystem` = M9MilitaryBayonet _(json)_<br>`3633421539/Escape from Kentucky4215` = M9 Military Bayonet _(json)_<br>`3780151182/MFS_community_fix` = M9 Military Bayonet _(json)_ | 兩 owner 屬同一 workshop 項目（3633421539）下的兩個 mod root，值差異僅是有無空格（M9 Military Bayonet vs M9MilitaryBayonet），必然同一實體。現行譯名維持。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。 ／2026-10-01 As1 名單納管複核：新增 owner 3780151182/MFS_community_fix，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 | — |
+| `ItemName\|MarzGuns.GLOCK17` | `3722134990/GunsOfMarz` = Glock-17 _(json)_<br>`3722134990/GunsOfMarzPreviousVersion` = Glock 17 _(json)_ | 2026-10-16 #875 裁決：Guns of Marz 新版（GunsOfMarz）把 Glock 17 改寫成 Glock-17，舊版（GunsOfMarzPreviousVersion，凍結）仍是 Glock 17；兩者是同一把槍、只差連字號。現行「格洛克17手槍」不含連字號寫法，對兩版都成立，維持原譯。 | — |
 | `ItemName\|Phun.WristWatch_Left_MilitaryX` | `3532685233/PhunSprintersUI` = Military Watch _(script)_<br>`3676252110/PhunSprinters2` = Military Sensor _(script)_ | 2026-10-11 #807 裁決：舊版 PhunSprintersUI 的 script DisplayName 是 Military Watch，但它自己的 ItemName_EN.txt 稱 Special Military Issued Sensor；PhunSprinters 2 叫 Military Sensor。兩邊都是同一個軍用感應器，「軍用特製感應裝置」對兩方都成立，維持現值。 | — |
 | `ItemName\|Phun.WristWatch_Right_MilitaryX` | `3532685233/PhunSprintersUI` = Military Watch _(script)_<br>`3676252110/PhunSprinters2` = Military Sensor _(script)_ | 2026-10-11 #807 裁決：同 Phun.WristWatch_Left_MilitaryX（左右手版本），維持「軍用特製感應裝置」。 | — |
 | `ItemName\|Tsarcraft.TCBoombox` | `3397198968/TrueMusic_b42` = Boombox _(script)_<br>`3402491515/tsarslib` = Boombox 'Kazakhstan-102-stereo' _(json)_<br>`3632610172/True Moozic B42+ - The Music operating System for Project Zomboid SPMP` = Boombox _(script)_<br>`3743911767/IVA` = Boombox 'Kazakhstan-102-stereo' _(json)_ | 同物裁決：TrueMusic 重用 Tsarcraft 音樂物件，tsarslib 原名 Boombox 'Kazakhstan-102-stereo'。CH 修正壞字串『哈薩克斯風坦』與 stereo 誤譯，採手提音響'哈薩克-102-立體聲'；CN 採手提音响'哈萨克斯坦-102-立体声'。B42 runtime 查裸鍵；ItemName_ 前綴鍵屬 legacy，保留通用『手提音響』不影響 runtime，非漏改。 ／2026-10-01 As1 名單納管複核：新增 owner 3632610172/True Moozic B42+ - The Music operating System for Project Zomboid SPMP、3743911767/IVA，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 | — |
@@ -1634,7 +1635,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_thickblooddesc` | `1299328280/More Traits` = You bleed more slowly from wounds. _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Wounds bleeds less.&lt;br&gt;(-50% damage from bleeding.) _(json)_ | 2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。 | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（301）
+## 尚未裁決的衝突（300）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
@@ -1761,7 +1762,6 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|ISA.SolarPanelFlat` | `2969478819/ImmersiveSolarArrays` = Moveable _(script)_<br>`3647117173/ImmersiveSolarArraysMP` = ISA_SolarPanelFlat _(script)_<br>`3723961714/Infoteo's Immersive Solar Arrays` = Moveable _(script)_ | 平板太陽能板 |
 | `ItemName\|ISA.SolarPanelMounted` | `2969478819/ImmersiveSolarArrays` = Moveable _(script)_<br>`3647117173/ImmersiveSolarArraysMP` = ISA_SolarPanelMounted _(script)_<br>`3723961714/Infoteo's Immersive Solar Arrays` = Moveable _(script)_ | 落地式太陽能板 |
 | `ItemName\|ISA.SolarPanelWall` | `2969478819/ImmersiveSolarArrays` = Moveable _(script)_<br>`3647117173/ImmersiveSolarArraysMP` = ISA_SolarPanelWall _(script)_<br>`3723961714/Infoteo's Immersive Solar Arrays` = Moveable _(script)_ | 壁掛式太陽能板 |
-| `ItemName\|MarzGuns.GLOCK17` | `3722134990/GunsOfMarz` = Glock-17 _(json)_<br>`3722134990/GunsOfMarzPreviousVersion` = Glock 17 _(json)_ | 格洛克17手槍 |
 | `ItemName\|USMRE.MREBeefStew` | `3406930410/MRE XIII (1993) - Meal Ready to Eat MOD Real version` = MRE(Beef Stew) _(script)_<br>`3738115503/MRE` = MRE(Beef Stew - Cold) _(script)_ | MRE 燉牛肉餐包 (冷食) |
 | `ItemName\|USMRE.MREChickenStew` | `3406930410/MRE XIII (1993) - Meal Ready to Eat MOD Real version` = MRE(Chicken Stew) _(script)_<br>`3738115503/MRE` = MRE(Chicken Stew - Cold) _(script)_ | MRE 燉雞肉餐包 (冷食) |
 | `ItemName\|USMRE.MREChickenalaKing` | `3406930410/MRE XIII (1993) - Meal Ready to Eat MOD Real version` = MRE(Chicken a la King) _(script)_<br>`3738115503/MRE` = MRE(Chicken a la King - Cold) _(script)_ | MRE 奶油蘑菇燉雞餐包 (冷食) |
