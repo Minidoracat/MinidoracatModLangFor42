@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1343 個 Workshop 模組**（1929 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
+共支援 **1342 個 Workshop 模組**（1928 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -701,7 +701,6 @@
 | [Lock-Mart Industries M577](https://steamcommunity.com/sharedfiles/filedetails/?id=3652371248) | Lock-Mart Industries M577 | 新增 Lock-Mart Industries M577 裝甲運兵車，配備遙控砲塔與多人座位。 | `lockMartM577` | ? | — | — |
 | [Tank Water](https://steamcommunity.com/sharedfiles/filedetails/?id=3652517636) | 儲水箱 | 新增多種容量儲水箱與水泵、濾芯等供水設備，建立儲水系統。 | `TankWater` | 288 | — | — |
 | [[J&G] British DPM Uniform [B42/41]](https://steamcommunity.com/sharedfiles/filedetails/?id=3654107996) | J&G 英軍 DPM 迷彩制服 | 新增英軍 DPM-95 迷彩制服、頭盔、防毒面具與護具，可自行製作。 | `[J&G] British DPM Uniform` | 57 | — | — |
-| [Swim Skill](https://steamcommunity.com/sharedfiles/filedetails/?id=3654513156) | — | — | `swim_skill` | 13 | — | — |
 | [Spare Engine Parts Crafting](https://steamcommunity.com/sharedfiles/filedetails/?id=3654864424) | — | — | `SpareEnginePartsCrafting` | 9 | — | — |
 | [Reactive Sound Events](https://steamcommunity.com/sharedfiles/filedetails/?id=3656190498) | 動態音效事件 | 新增依玩家行為風格觸發的動態音效事件，可引發恐慌或驚醒反應。 | `ReactiveSE` | 1058 | — | — |
 | [StorageWorks](https://steamcommunity.com/sharedfiles/filedetails/?id=3657325209) | — | — | `StorageWorks` | 8 | — | — |
@@ -760,7 +759,7 @@
 | [PhunCure 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3676251425) | PhunCure 2 趣味解藥 | 新增可注射的解藥，能治癒咬傷、殭屍病毒與傷口感染，效果可自訂。 | `phuncure2` | 33 | — | — |
 | [PhunSprinters 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3676252110) | — | — | `phunsprinters2` | 96 | — | — |
 | [PhunZones 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3676252660) | — | — | `phunzones2` | 84 | — | — |
-| [Hi Res Clock 2.0 - Modern Watch UI](https://steamcommunity.com/sharedfiles/filedetails/?id=3676283016) | — | — | `Hi-Res-Clock` | 181 | — | — |
+| [Hi Res Clock 2.0 - Modern Watch UI](https://steamcommunity.com/sharedfiles/filedetails/?id=3676283016) | — | — | `B42MPAlarmSoundFix`, `Hi-Res-Clock` | 181 | — | — |
 | [Tanks Have Propane (B42) .14 & .15](https://steamcommunity.com/sharedfiles/filedetails/?id=3676347667) | — | — | `TanksHavePropane42` | 10 | — | — |
 | [Lua Digital Watch Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3676456221) | — | — | `LuaDigitalWatchUI` | 6 | — | — |
 | [Better Vanilla ALICE Suspenders](https://steamcommunity.com/sharedfiles/filedetails/?id=3676721528) | 更好的原版 ALICE 背帶 | 改良原版 ALICE 背帶裝備，並附帶多個出生地點選項描述。 | `bettervanillaalicesuspendersID` | ? | — | — |
@@ -775,7 +774,7 @@
 | [Second Dawn Weaponry](https://steamcommunity.com/sharedfiles/filedetails/?id=3680810727) | — | — | `SecondDawnWeaponry18` | 11 | — | — |
 | [Unified Carry Weight Framework (UCWF)](https://steamcommunity.com/sharedfiles/filedetails/?id=3682045254) | — | — | `UnifiedCarryWeightFramework` | 5 | — | — |
 | [[B42] Sunshi's Cooler System \| (SP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3682702613) | — | — | `SunshiCS` | 2 | — | — |
-| [Equipment UI – STABLE +](https://steamcommunity.com/sharedfiles/filedetails/?id=3682936016) | — | — | `EQUIPMENT_UI`, `EQUIPMENT_UI_B42`, `equipmentuipatch` | 22 | — | — |
+| [Equipment UI – STABLE +](https://steamcommunity.com/sharedfiles/filedetails/?id=3682936016) | — | — | `EQUIPMENT_UI`, `EQUIPMENT_UI_B42` | 22 | — | — |
 | [Zombie Penetration [B42.15]](https://steamcommunity.com/sharedfiles/filedetails/?id=3683154388) | — | — | `ZP_FirearmsPenetration_B4215`, `ZP_G93Penetration_B4215`, `ZP_GGSPenetration_B4215`, `ZP_MFSPenetration_B4215`, `ZombiePenetration_B4215` | 197 | — | — |
 | [[B42.19] Filibuster Rhymes' Certified Used Cars](https://steamcommunity.com/sharedfiles/filedetails/?id=3683878228) | — | — | `B42FRUsedCarsAnimAlpha`, `B42FRUsedCarsAnimTitle` | 402 | ⚠️ ≥3 | — |
 | [PALSJ's Customization Options [B42 Only]](https://steamcommunity.com/sharedfiles/filedetails/?id=3683898699) | — | — | `PALPal`, `PALPeeAdds`, `PALPeeDefs`, `PALPoo`, `PALShit` | 232 | — | — |
@@ -1358,7 +1357,7 @@
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
-## 已下架模組（11 個，翻譯保留）
+## 已下架模組（12 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
@@ -1372,6 +1371,7 @@
 | [Todo Caserito [Build 42/42.19 SP/MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3600616323) | Todo Caserito 家常料理 | 新增拉美風家常料理與配方，如薯條、塔可、玉米餅與布丁等。 | `Todo Caserito` | 410 | — | ⚠️ 有一項配方名稱（代號 MakeTortilla）與草藥師、Abuelita Linda 兩個 MOD 撞名、卻是不同的食物——本 MOD 的是阿根廷豬油餅（tortillas de grasa），那兩邊的同一代號是墨西哥玉米餅。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故此鍵不出貨、遊戲內顯示該 MOD 自己的英文原文。本 MOD 另有專門表示玉米餅的配方（MakeTortillaCasera），該項不受影響。 | 2026-09-12 |
 | [[42] Vanilla Firearms Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3611718925) | 原版槍械擴充 | 擴充原版風格槍械與彈藥，新增多款步槍、霰彈槍與各式彈匣。 | `VFExpansion2Reduxb42`, `VFExpansion3Reduxb42`, `VFExpansionReduxb42` | 457 | ⚠️ ≥24 | — | 2026-08-01 |
 | [3651494414](https://steamcommunity.com/sharedfiles/filedetails/?id=3651494414) | DayZ 槍械 | 新增 DayZ 風格槍械相關內容。 | `DayZ_Guns_B42` | ? | — | — | 2026-07-17 |
+| [Swim Skill](https://steamcommunity.com/sharedfiles/filedetails/?id=3654513156) | — | — | `swim_skill` | 13 | — | — | 2026-10-17 |
 | [PH's Self Care](https://steamcommunity.com/sharedfiles/filedetails/?id=3684225110) | — | — | `PHSelfCare` | 31 | — | — | 2026-10-01 |
 | [[PZCh] Growing Up - Kid mod challenge](https://steamcommunity.com/sharedfiles/filedetails/?id=3701972216) | — | — | `GrowingUp` | 16 | — | — | 2026-10-01 |
 | [Peachey Distillation](https://steamcommunity.com/sharedfiles/filedetails/?id=3784741776) | Peachey 蒸餾 | 加入發酵醪、蒸餾器與陳釀流程，可釀製苦艾烈酒、陳釀葡萄酒等酒品，並提供專屬蒸餾製作分類。 | `peacheysdistillation` | 122 | — | — | 2026-09-10 |
