@@ -57817,8 +57817,8 @@
   },
   "Sandbox.json|Sandbox_ProjectALife.PresetWorld_tooltip": {
     "as1_value": "每个数字下方都有一个旋钮. 它设置世界容纳的幸存者数量, 开始时有多少城镇有人驻守, 你遇见他们的频率, 他们是单独旅行还是结伴旅行, 有多少哨所, 突袭何时开始以及它们之间相隔多远, 以及突袭波, 侦查小队或后备呼叫的规模. 默认设置是经过测试的平衡状态, 且不会写入任何内容, 因此现有的存档会保留其已有的所有数字. 你为自己设置的任何选项仍然有效: 预设只会将选项移动到它们自己的默认状态, 所以调整一个滑块, 预设不会改变: 它看不到的事是你故意选择了已是默认的值. 疯狂模式会故意超出模组自身的硬上限: 最多220个活跃敌人 (测试上限120个), 24个哨所 (12个), 每个城镇4个 (2个), 12个户外营地 (6个), 40个离线小队 (24个), 每个哨所4个任务小队 (2个) 以及8人组成的侦查小队 (3个). 这些数字未经测试: 预计服务器负载会更重, 可能会出现bug, 请先备份你的存档.",
-    "value": "NPC数量. 中等: 200名幸存者, 45个住户地点, 6个哨所; “多”会再增加团体, 哨所和突袭. 只会更改仍为默认值的选项. “最多”可能卡顿.\n默认: 多 (4).",
-    "reason": "2026-10-15 #865：上游英文改寫（Normal: 200 survivors, 45 resident sites… → How many NPCs. Medium: 200 survivors, 45…），依新英文重譯。"
+    "value": "“战争挑战”: 上限最高. 同时存活大量NPC. 需要配置不错的电脑. 仅更改上限, 不更改概率或时机. “多”仍是常规选择.\n默认: 多 (4).",
+    "reason": "2026-10-17 #897：上游英文改寫（How many NPCs. Medium: 200 survivors, 45… → The War Challenge: Biggest limits. Lots …），依新英文重譯。"
   },
   "Sandbox.json|Sandbox_ProjectALife.PresetWorld_option1": {
     "as1_value": "荒芜: 几乎无人留存",
@@ -58292,8 +58292,8 @@
   },
   "Sandbox.json|Sandbox_ProjectALife.EncounterChance_tooltip": {
     "as1_value": "两种自然生成者的每次掷骰几率: 阵营主管在每次遭遇检查间隔内掷骰一次, 遭遇主管在每次遭遇掷骰间隔内掷骰一次. 默认值为25.",
-    "value": "设置每次自然遭遇检查出现团体的概率. 以游戏内小时计的阵营检查和以游戏内分钟计的遭遇检查都会使用此值.\n默认: 40.",
-    "reason": "2026-10-15 #865：上游預設值改為 40（原 10），依新英文更新。"
+    "value": "设置每次自然遭遇检查出现团体的概率. 以游戏内小时计的阵营检查和以游戏内分钟计的遭遇检查都会使用此值.\n默认: 15.",
+    "reason": "2026-10-17 #897：上游英文改寫（Sets the chance of a group on each natur… → Sets the chance of a group on each natur…），依新英文重譯。"
   },
   "Sandbox.json|Sandbox_ProjectALife.EncounterInterval": {
     "as1_value": "遭遇检查间隔 (游戏小时数)",
@@ -59044,5 +59044,200 @@
     "as1_value": "肠道数值可见, 未满也可能失禁, 仅排出部分粪便.",
     "value": "肠道充盈度达到 10%% 时就可能开始渗漏, 且越满概率越高, 全满时每小时约 15%%. 每次渗漏会排出肠道内 70-95%% 的粪便 (自控能力良好且肠胃健康时排出较少). 数值保持可见. 弄脏的衣物会一直保持污秽状态, 直到清洗或更换为止.",
     "reason": "2026-10-16 #873：上游英文改寫（Your bowel meter stays visible, but acci… → Leaks can start once your bowels are 10%…），依新英文重譯。"
+  },
+  "ItemName.json|Base.HKClaw": {
+    "as1_value": "瞄准镜座(MP5/HK91)",
+    "value": "爪式瞄准镜座(黑克勒-科赫滚柱延迟枪机)",
+    "reason": "2026-10-17 #883：上游英文改寫（Scope Mount (MP5/HK91) → Scope Claw Mount (HK Roller-Delayed)），依新英文重譯。"
+  },
+  "ItemName.json|Base.AR15BurstTrigger": {
+    "as1_value": "选择射击扳机组(半自动/点射/全自动)(AR-15自动步枪)",
+    "value": "选择射击扳机组(半自动/3发点射/全自动)(AR-15自动步枪)",
+    "reason": "2026-10-17 #883：上游英文改寫（Select Fire Trigger Group (Semi/Burst/Fu… → Select Fire Trigger Group (Semi/3rd-Burs…），依新英文重譯。"
+  },
+  "ItemName.json|Base.FNCBurstTrigger": {
+    "as1_value": "选择射击扳机部件(半自动/点射/全自动)(FNC自动步枪)",
+    "value": "选择射击扳机部件(半自动/3发点射/全自动)(FNC自动步枪)",
+    "reason": "2026-10-17 #883：上游英文改寫（Select Fire Trigger Parts (Semi/Burst/Fu… → Select Fire Trigger Parts (Semi/3rd-Burs…），依新英文重譯。"
+  },
+  "ItemName.json|Base.HK91ExtendStock": {
+    "as1_value": "HK91可伸缩式枪托",
+    "value": "A3可伸缩式枪托(HK91, SR9, SAR-8)",
+    "reason": "2026-10-17 #883：上游英文改寫（HK91 Retractable Stock → A3 Retractable Stock (HK91, SR9, SAR-8)），依新英文重譯。"
+  },
+  "ItemName.json|Base.HK91RetractStock": {
+    "as1_value": "HK91可伸缩式枪托",
+    "value": "A3可伸缩式枪托(HK91, SR9, SAR-8)",
+    "reason": "2026-10-17 #883：上游英文改寫（HK91 Retractable Stock → A3 Retractable Stock (HK91, SR9, SAR-8)），依新英文重譯。"
+  },
+  "ItemName.json|Base.HKBurstTrigger": {
+    "as1_value": "选择射击扳机组件(半自动/点射/全自动)(黑克勒-科赫滚柱延迟枪机)",
+    "value": "选择射击扳机组件(半自动/3发点射/全自动)(黑克勒-科赫滚柱延迟枪机)",
+    "reason": "2026-10-17 #883：上游英文改寫（Select Fire Trigger Pack (Semi/Burst/Ful… → Select Fire Trigger Pack (Semi/3rd-Burst…），依新英文重譯。"
+  },
+  "ItemName.json|Base.MP5ExtendStock": {
+    "as1_value": "MP5可伸缩式枪托",
+    "value": "A3可伸缩式枪托(MP5, HK94, HK93)",
+    "reason": "2026-10-17 #883：上游英文改寫（MP5 Retractable Stock → A3 Retractable Stock (MP5, HK94, HK93)），依新英文重譯。"
+  },
+  "ItemName.json|Base.MP5RetractStock": {
+    "as1_value": "MP5可伸缩式枪托",
+    "value": "A3可伸缩式枪托(MP5, HK94, HK93)",
+    "reason": "2026-10-17 #883：上游英文改寫（MP5 Retractable Stock → A3 Retractable Stock (MP5, HK94, HK93)），依新英文重譯。"
+  },
+  "ItemName.json|Base.Mini14AutoBurstPart": {
+    "as1_value": "选择射击部件(半自动/点射/全自动)(Mini-14/Mini-30步枪)",
+    "value": "选择射击部件(半自动/3发点射/全自动)(Mini-14/Mini-30步枪)",
+    "reason": "2026-10-17 #883：上游英文改寫（Select Fire Parts (Semi/Burst/Full-Auto)… → Select Fire Parts (Semi/3rd-Burst/Full-A…），依新英文重譯。"
+  },
+  "ItemName.json|Base.Mini14AutoBurstPartSS": {
+    "as1_value": "选择射击部件(半自动/点射/全自动)(Mini-14/Mini-30步枪)",
+    "value": "选择射击部件(半自动/3发点射/全自动)(Mini-14/Mini-30步枪)",
+    "reason": "2026-10-17 #883：上游英文改寫（Select Fire Parts (Semi/Burst/Full-Auto)… → Select Fire Parts (Semi/3rd-Burst/Full-A…），依新英文重譯。"
+  },
+  "ItemName.json|Base.30Silencer": {
+    "as1_value": "步枪消音器(.30口径)",
+    "value": "步枪消音器(.30口径/7.62mm)",
+    "reason": "2026-10-17 #883：上游英文改寫（Rifle Silencer (.30 cal) → Rifle Silencer (.30 cal/7.62mm)），依新英文重譯。"
+  },
+  "ItemName.json|Base.556ReflexCan": {
+    "as1_value": "Reflx步枪消音器(.22口径)",
+    "value": "Reflx步枪消音器(.223口径)",
+    "reason": "2026-10-17 #883：上游英文改寫（Reflx Rifle Silencer (.22 cal) → Reflx Rifle Silencer (.223 cal)），依新英文重譯。"
+  },
+  "ItemName.json|Base.556Silencer": {
+    "as1_value": "步枪消音器(.22口径)",
+    "value": "步枪消音器(.223口径)",
+    "reason": "2026-10-17 #883：上游英文改寫（Rifle Silencer (.22 cal) → Rifle Silencer (.223 cal)），依新英文重譯。"
+  },
+  "ItemName.json|Base.DIY30Silencer": {
+    "as1_value": "自制步枪消音器(.30口径)",
+    "value": "自制步枪消音器(.30口径/7.62mm)",
+    "reason": "2026-10-17 #883：上游英文改寫（Homemade Rifle Silencer (.30 cal) → Homemade Rifle Silencer (.30 cal/7.62mm)），依新英文重譯。"
+  },
+  "ItemName.json|Base.DIY556Silencer": {
+    "as1_value": "自制步枪消音器(.22口径)",
+    "value": "自制步枪消音器(.223口径)",
+    "reason": "2026-10-17 #883：上游英文改寫（Homemade Rifle Silencer (.22 cal) → Homemade Rifle Silencer (.223 cal)），依新英文重譯。"
+  },
+  "Recipes.json|Craft22LRSilencer": {
+    "as1_value": "制作自制.22 LR消音器",
+    "value": "制作自制.22手枪消音器",
+    "reason": "2026-10-17 #883：上游英文改寫（Craft Homemade .22 LR Silencer → Craft Homemade .22 Pistol Silencer），依新英文重譯。"
+  },
+  "Recipes.json|Craft30Silencer": {
+    "as1_value": "制作自制.30口径步枪消音器",
+    "value": "制作自制.30口径/7.62mm步枪消音器",
+    "reason": "2026-10-17 #883：上游英文改寫（Craft Homemade .30 cal Rifle Silencer → Craft Homemade .30 cal/7.62mm Rifle Sile…），依新英文重譯。"
+  },
+  "Recipes.json|Craft45Silencer": {
+    "as1_value": "制作自制.45消音器",
+    "value": "制作自制.45口径手枪消音器",
+    "reason": "2026-10-17 #883：上游英文改寫（Craft Homemade .45 Auto Silencer → Craft Homemade .45 cal Pistol Silencer），依新英文重譯。"
+  },
+  "Recipes.json|Craft556Silencer": {
+    "as1_value": "制作自制.223消音器",
+    "value": "制作自制.223口径步枪消音器",
+    "reason": "2026-10-17 #883：上游英文改寫（Craft Homemade .223 Silencer → Craft Homemade .223 cal Rifle Silencer），依新英文重譯。"
+  },
+  "Recipes.json|Craft9mmSilencer": {
+    "as1_value": "制作自制9mm消音器",
+    "value": "制作自制9mm手枪消音器",
+    "reason": "2026-10-17 #883：上游英文改寫（Craft Homemade 9mm Silencer → Craft Homemade 9mm Pistol Silencer），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_12gaSilencer": {
+    "as1_value": "需要螺纹孔口. 将减少12ga霰弹枪的声音半径.",
+    "value": "武器配件. 无需工具. 需要螺纹枪管. 将减少12ga霰弹枪的声音半径.",
+    "reason": "2026-10-17 #883：上游英文改寫（Requires threaded bore. Will reduce the … → Weapon attachment. No tool required. Req…），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_22Silencer": {
+    "as1_value": "需要螺纹枪管. 将减少.22 LR枪械的声音半径. 可以安装在.223/5.56枪械上, 但耐久度会下降得更快.",
+    "value": "武器配件. 无需工具. 需要螺纹枪管. 将减少.22 LR枪械的声音半径. 可以安装在.223/5.56枪械上, 但耐久度会下降得更快.",
+    "reason": "2026-10-17 #883：上游英文改寫（Requires threaded barrel. Will reduce th… → Weapon attachment. No tool required. Req…），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_30Silencer": {
+    "as1_value": "需要螺纹枪管. 将减少枪械的声音半径.<br>可以安装在任何有螺纹枪管的枪械上, 除了7.92x57毛瑟, .45自动, .44 MAG, 10mm, .40子弹, 9mm, .38特制和.380自动枪械.",
+    "value": "武器配件. 无需工具. 需要螺纹枪管. 将减少枪械的声音半径. 可以安装在任何有螺纹枪管的枪械上, 除了7.92x57毛瑟, .45自动, .44 MAG, 10mm, .40 S&W, 9mm, .38特制和.380自动枪械.",
+    "reason": "2026-10-17 #883：上游英文改寫（Requires threaded barrel. Will reduce th… → Weapon attachment. No tool required. Req…），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_45Silencer": {
+    "as1_value": "需要螺纹枪管. 将减少.45自动, .44 MAG, 9mm, .38特制, .380自动, .25自动和.22 LR枪械的声音半径.<br>可以适配于大部分步枪口径, 但耐久度会下降得更快.",
+    "value": "武器配件. 无需工具. 需要螺纹枪管. 将减少.45自动, .44 MAG, .40 S&W, 9mm, .38特制, .380自动, .25自动和.22 LR枪械的声音半径. 可以适配于大部分步枪口径, 但耐久度会下降得更快.",
+    "reason": "2026-10-17 #883：上游英文改寫（Requires threaded barrel. Will reduce th… → Weapon attachment. No tool required. Req…），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_556Silencer": {
+    "as1_value": "需要螺纹枪管. 将减少.223/5.56和.22LR枪械的声音半径.",
+    "value": "武器配件. 无需工具. 需要螺纹枪管. 将减少.223/5.56和.22 LR枪械的声音半径.",
+    "reason": "2026-10-17 #883：上游英文改寫（Requires threaded barrel. Will reduce th… → Weapon attachment. No tool required. Req…），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_8mmSilencer": {
+    "as1_value": "需要螺纹枪管. 将减少枪械的声音半径.<br>可以安装在有螺纹枪管的7.92x57毛瑟枪械上. 在.30口径的枪械上效果会较差.<br>不适用于.45自动, .44 MAG, 10mm, .40子弹, 9mm, .38特制和.380自动枪械.",
+    "value": "武器配件. 无需工具. 需要螺纹枪管. 将减少枪械的声音半径. 可以安装在有螺纹枪管的7.92x57毛瑟枪械上. 在.30口径的枪械上效果会较差. 不适用于.45自动, .44 MAG, 10mm, .40 S&W, 9mm, .38特制和.380自动枪械.",
+    "reason": "2026-10-17 #883：上游英文改寫（Requires threaded barrel. Will reduce th… → Weapon attachment. No tool required. Req…），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_AmmoSleeve": {
+    "as1_value": "武器配件. 减少枪械装填时间.",
+    "value": "武器配件. 无需工具. 减少枪械装填时间.",
+    "reason": "2026-10-17 #883：上游英文改寫（Weapon attachment. Reduces firearm reloa… → Weapon attachment. No tool required. Red…），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_AutoPart": {
+    "as1_value": "武器全自动零件. 与扳机一起安装以获得全自动功能.",
+    "value": "武器全自动零件. 无需工具. 与扳机一起安装以获得全自动功能.",
+    "reason": "2026-10-17 #883：上游英文改寫（Weapon auto parts. Installed alongside a… → Weapon auto parts. No tool required. Ins…），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_Furniture": {
+    "as1_value": "武器配件. 改善后坐力, 射击延迟, 瞄准时间和命中率.",
+    "value": "武器配件. 无需工具. 改善后坐力, 射击延迟, 瞄准时间和命中率.",
+    "reason": "2026-10-17 #883：上游英文改寫（Weapon furniture. Improves recoil and de… → Weapon furniture. No tool required. Impr…），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_OilFilterSilencer": {
+    "as1_value": "需要螺纹枪管. 将减少枪械的声音半径. 枪械威力越大, 耐久度下降越快.",
+    "value": "武器配件. 无需工具. 需要螺纹枪管. 将减少枪械的声音半径. 枪械威力越大, 耐久度下降越快.",
+    "reason": "2026-10-17 #883：上游英文改寫（Requires threaded barrel. Will reduce th… → Weapon attachment. No tool required. Req…），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_Riser": {
+    "as1_value": "武器配件. 提高命中率和暴击率, 但会减慢瞄准时间.",
+    "value": "武器配件. 无需工具. 提高命中率和暴击率, 但会减慢瞄准时间.",
+    "reason": "2026-10-17 #883：上游英文改寫（Weapon furniture. Improves hit and criti… → Weapon furniture. No tool required. Impr…），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_ScopeMount": {
+    "as1_value": "武器配件. 允许安装瞄准镜和红点.",
+    "value": "武器配件. 无需工具. 允许安装瞄准镜和红点.",
+    "reason": "2026-10-17 #883：上游英文改寫（Weapon attachment. Will allow for scopes… → Weapon attachment. No tool required. Wil…），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_SpeedStrip44": {
+    "as1_value": "适用于绝大多数.44 MAG左轮手枪.",
+    "value": "适用于大多数.44 MAG左轮手枪.",
+    "reason": "2026-10-17 #883：上游英文改寫（Works with mostly .44 Magnum Revolvers. → Works with most .44 Magnum Revolvers.），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_TriggerMatch": {
+    "as1_value": "武器火控. 枪械运行必需品. 提高命中率和暴击率.",
+    "value": "武器火控. 无需工具. 枪械运行必需品. 提高命中率和暴击率.",
+    "reason": "2026-10-17 #883：上游英文改寫（Weapon fire control. Required item for f… → Weapon fire control. No tool required. R…），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_TriggerPart": {
+    "as1_value": "武器火控. 枪械运行必需品.",
+    "value": "武器火控. 无需工具. 枪械运行必需品.",
+    "reason": "2026-10-17 #883：上游英文改寫（Weapon fire control. Required item for f… → Weapon fire control. No tool required. R…），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_WeaponLight": {
+    "as1_value": "这种夹装式战术手电可以安装在许多枪械的枪管或弹仓管上.",
+    "value": "武器配件. 需要一把螺丝刀进行安装. 这种夹装式战术手电可以安装在许多枪械的枪管或弹仓管上.",
+    "reason": "2026-10-17 #883：上游英文改寫（This clamp mounted light can be install … → Weapon attachment. Requires a screwdrive…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ImmersiveBlackouts_ElectricityShutoffDayRange": {
+    "as1_value": "停电日期范围",
+    "value": "停电时间",
+    "reason": "2026-10-17 #888：上游英文改寫（Shutoff Day Range → Electricity Shutoff），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ImmersiveBlackouts_WaterShutoffDayRange": {
+    "as1_value": "停水日期范围",
+    "value": "停水时间",
+    "reason": "2026-10-17 #888：上游英文改寫（Shutoff Day Range → Water Shutoff），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_HydeCoUnlimitedCars_AdvancedKeyChance_tooltip": {
+    "as1_value": "仅在预设为自定义时生效. 车辆生成时携带钥匙的概率.",
+    "value": "仅在预设为自定义时生效. 车辆在某处附带钥匙的概率: 点火开关上、手套箱内、附近的僵尸身上、附近的容器内或地上. 钥匙是否留在点火开关上取决于游戏本身的“钥匙”战利品设置, 且仅限车门未上锁的车辆, 因此即使设为 100, 大多数钥匙也会在车辆附近而非车内. 烧毁的车辆和拖车永远不会有钥匙.",
+    "reason": "2026-10-17 #885：上游英文改寫（Only used when Preset = Custom. Chance t… → Only used when Preset = Custom. The chan…），依新英文重譯。"
   }
 }

@@ -4,6 +4,27 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 10 個 MOD 新增的繁簡中文，共 510 項。** Arcadia RV Interiors（#893，保險絲、保險絲盒、船用電池、電池艙、岸電樁、岸電電纜與兩本手冊各自的戰利品生成等級，房車電力物品的戰利品總倍率，岸電電纜的「連接電纜」「斷開電纜」按鈕與狀態，電網供電讀數，以及電力尚未載入時的連接提示，126 項）、Willowbrook Bastion!（#886，武器品階、擊殺進階與古刀自癒訊息，刀客、靈動、詭道、君子、先登等新招式與詞條，彩蛋武器掉落機率，四把槍與消音器的槍聲音量和試聽，提示框上色與負重修正的相容模式開關，105 項）、Guns of 93（#883，HK91／HK93／MP5／SR9／SAR-8 的護木、槍托、下機匣、提把、兩腳架與消焰器，湯普森衝鋒槍與它的彈匣、彈鼓、瞄具和零件，帶三爪轉接座的消音器，新彈匣，彈鏈修理與製作配方，2／3／4 發點射模式，102 項）、Project A-Life（#897，錯誤回報視窗，NPC 對話泡泡的大小、精簡顯示與移動時隱藏選項，銀色隔離兵團、黑玻璃分遣隊、鐵果園掠奪者三個後期敵對陣營，特種部隊、大型行軍團體、前哨站協同團體、前哨站獵殺隊、遠距槍擊反應與 NPC 腳步聲音量等沙盒設定，以及新的 NPC 數量預設「戰爭挑戰」，102 項）、GridInventory（#895，自動整理、類別篩選與搜尋列，溢出區與三種溢出行為，浮動背包視窗走遠自動關閉，物品資訊、重量與文字陰影，3D 檢視，裝備欄位選擇，單人忽略負重，50 項）、Yumi's Meat Expansion 2.0（#890，模組動物屠宰經驗倍率，13 項）、RPG Inventory（#896，選擇數量對話框，5 項）、True Music（#884，自動播放與磁帶槽，3 項）、Plysken Irrigation Pipes（#891，把堆肥或肥料一次全部倒入灌溉水，2 項）、Last Cup Coffee（#892，糖漿架與可可糖漿架說明，2 項）。
+  > 技術要點：Willowbrook 依 `cn_source: upstream` 照抄作者簡中進 own 目錄，CH 以作者簡中為主寫進 `sources/ch`；其餘 405 項落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫；新鍵皆以有效 CN 值登記 `ch_review_state`。5 路翻譯、5 路對抗複核提出 14 條修正：採納 10 條（A-Life 的 speech box 與既有世界設定「NPC頭上的對話泡泡」是同一個功能，統一稱「對話泡泡」；GridInventory 溢出行為說明的首句語序；Arcadia 戰利品等級名在說明裡加引號）；改用其他寫法 3 條（Guns of 93 湯普森的 `M1928`／`M1` 照英文保留型號，因為 `Guns93GunConfigureSpawns.lua` 生成時會以「廠牌＋物品名＋A1＋Thompson＋彈種」重組名稱，加上槍種會拆開型號；A-Life 的 ownership checks 依 Lua 無法確定指開槍者還是控制權，改用中性的「歸屬判定」）；不採納 1 條（True Music 的 Cassette slot 維持「磁帶槽」，與同 MOD 既有的磁帶物品名一致）。Willowbrook 彩蛋掉落機率標題照作者簡中寫「(百分比)」；作者簡中的「」依 own 層 CN 用字規則（verify [14]）改為“”，共 8 項。16 個 wid 以 steamcmd 重抓，14,195 筆文本 record 的值 hash 與 tracker state 全數相符。
+
+### Changed
+
+- **依上游英文改值重譯 70 項。** Guns of 93 38 項（#883，配件說明補上「無需工具」或「需要螺絲起子安裝」，消音器口徑改寫成 .223 或 .30/7.62mm、.45 消音器補上 .40 S&W，扳機組的點射改為 3 發點射，可伸縮式槍托改成跨槍型共用的 A3 槍托名，自製手槍消音器改名，消音器配方名補上手槍／步槍）、Willowbrook Bastion! 19 項（#886，六把武器說明補上刀客、浴血奮戰、決死、靈動、君子、克己守心等新招式，萬人敵補上周圍敵人越多傷害越高，影襲與斬擊合併為詭道，同心改為下一擊必定暴擊、傷害大幅提高，關閉特效時的說明不再列出被關閉的招式，金箍棒打出豆腐的機率由 20% 降為 1%，「王道」觸發時的頭頂提示改為「給朕跪下!」）、Project A-Life 8 項（#897，遭遇機率預設 40 改 15、新角色迎接團體預設 4 改 8，NPC 對殭屍開槍頻率補上世界未滿 14 天時預設值視為 70，NPC 屍體掉落、裝備磨損、訪客敲門聲、隨機團體最短距離與 NPC 數量預設組的說明改寫）、Immersive Blackouts 2 項（#888，兩個標題改為「停電時間」「停水時間」，與本體同名設定一致）、Arcadia RV Interiors 2 項（#893，連接步驟改為使用「連接電纜」，搬移岸電樁前先斷開電纜）、HydeCo. Unlimited Cars 1 項（#885，鑰匙機率說明完整重寫：鑰匙可能在點火開關、手套箱、附近殭屍、附近容器或地上，燒燬的車輛與拖車不會有鑰匙）。
+  > 技術要點：Guns of 93 36 項、A-Life 2 項、Immersive Blackouts 2 項、HydeCo 1 項屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（新增 39 筆、更新 2 筆，帶 `as1_value` 錨點）；Guns of 93 2 項、A-Life 6 項、Arcadia 2 項屬 own 層，連 `en` 錨點更新；Willowbrook 屬 own 目錄，CN 改取作者最新簡中，CH 依作者簡中重寫；皆登記 `ch_review_state`。Willowbrook 另有 8 個減重率設定英文只把 `%` 改寫成 `%%`，譯文原本就是 `%%`，不需變更；作者把簡中「[威凤]」修正為「[威风]」，CN 跟著更新（CH 原本就是「威風」）。
+- **裁決 4 個多 MOD 共用鍵，皆維持原譯。** Guns of 93 新增的 MP5SD（script 顯示名 HK MP5SD）與 MP5/10（HK MP5/10）和其他槍械 MOD 的同鍵是同一把槍，「黑克勒-科赫MP5SD衝鋒槍」「黑克勒-科赫MP5/10衝鋒槍」對所有 MOD 都成立（#883、#899）；Last Cup Coffee 的 Portable Thermos 與 SapphCooking 的 Thermos 都是隨身保溫容器，維持「隨行保溫杯」（#892）；Better Containers 等三個 MOD 的武器分類「Weapon - Magazine (Fixed)」只差括號前空格，維持「武器-彈匣 (固定式)」（#887）。
+  > 技術要點：`owner_conflict_decisions.json` 新增 3 筆 translate、MP5SD 更新 signature；signature 寫入前以 1,590 筆既有裁決自檢全符；`OWNER_CONFLICTS.md` 重生，尚未裁決的衝突由 301 降為 298。
+
+### Removed
+
+- **移除 17 項上游已刪除的原創翻譯。** GridInventory 的手把游標移動模式 4 項，以及沙盒「旋轉/縮放物品圖像」2 項（#895，這個開關改成用戶端選項，新鍵已另譯）；Willowbrook Bastion! 舊的「已關閉·」武器名 8 項，以及「火牆!」「高貴」「貼身腰掛」三則說明（#886）。
+  > 技術要點：`sources/en` 全庫與 tracker state 已無 owner，現行 Workshop 內容的 Lua 與 script 也不再引用（Willowbrook 的 `Tooltip_wboff_*` 只剩 `EffectsSwitch.lua` 註解提及）；GridInventory 自 `own_translations.json` 刪除，Willowbrook 自 own 目錄 CN 與 `sources/ch` 刪除；`ch_review_state` 同步移除。
+
+其餘追蹤單無需另外變更翻譯：Better Containers（#887）把翻譯檔由 `42.20` 搬到 `42.21` 版本夾，鍵值與已出貨譯文一致；Equipment UI（#889）移除 `EQUIPMENTUIPATCH` 子模組，19 個鍵仍由 `EquipmentUI` 子模組以相同英文提供；Slayer's Week One（#894）只改了遊戲不載入的 `42.20` 版本夾，有效的 `42.21` 早已含這些設定；Evolving Traits World（#882）只更新各語言翻譯完成度的統計數字，這些鍵依既有登記不翻譯（出貨會凍結數字）。Guns of 93 移除的 3 個物品與 1 則說明屬 As1 衍生層，依 split 不變式保留；21 個生成器物品的 DisplayName 上游漏了逗號，不列入缺口。Swim Skill（#898）的 Workshop 頁面登入後仍顯示「存取物品時發生問題」，依政策保留翻譯與監看。
+
 ## [42.21.0-1.52.0] - 2026-10-16
 
 ### Added

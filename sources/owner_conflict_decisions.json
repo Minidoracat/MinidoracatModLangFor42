@@ -484,8 +484,8 @@
     },
     "ItemName|Base.MP5SD": {
       "action": "translate",
-      "signature": "e5fc69988ee5357f",
-      "reason": "三 owner 均為 H&K MP5SD（整合消音型 MP5），僅後綴差異（Submachinegun vs 9mm）。現行譯名廠牌與型號對所有 owner 皆事實，維持現行。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3761077099/VFE 'MP5SD Submachinegun'、3773858287/B42 Rain's Firearms & Gun Parts（含 Expanded）'MP5SD'，皆為 H&K MP5SD，原譯仍成立。",
+      "signature": "c40a0842b17dc773",
+      "reason": "三 owner 均為 H&K MP5SD（整合消音型 MP5），僅後綴差異（Submachinegun vs 9mm）。現行譯名廠牌與型號對所有 owner 皆事實，維持現行。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3761077099/VFE 'MP5SD Submachinegun'、3773858287/B42 Rain's Firearms & Gun Parts（含 Expanded）'MP5SD'，皆為 H&K MP5SD，原譯仍成立。 ／2026-10-17 #883／#899 複核：Guns of 93（3183820077/Guns93Test）新增 script DisplayName 'HK MP5SD'（無 JSON 譯名，執行期顯示 script 名），同為黑克勒-科赫 MP5SD；現行「黑克勒-科赫MP5SD衝鋒槍」仍對全部 owner 成立，裁決與出貨譯文不變，僅更新 signature。",
       "ch": "黑克勒-科赫MP5SD衝鋒槍",
       "cn": "黑克勒-科赫MP5SD冲锋枪"
     },
@@ -10550,6 +10550,27 @@
       "reason": "2026-10-16 #875 裁決：Guns of Marz 新版（GunsOfMarz）把 Glock 17 改寫成 Glock-17，舊版（GunsOfMarzPreviousVersion，凍結）仍是 Glock 17；兩者是同一把槍、只差連字號。現行「格洛克17手槍」不含連字號寫法，對兩版都成立，維持原譯。",
       "ch": "格洛克17手槍",
       "cn": "格洛克17手枪"
+    },
+    "ItemName|Base.MP510": {
+      "action": "translate",
+      "signature": "88572031c05d722e",
+      "reason": "2026-10-17 #883 裁決：Firearms B42（2256623447，Firearms／FirearmsBETA）是 'MP5/10'，Guns of 93（3183820077/Guns93Test）新增同鍵 'HK MP5/10'；兩者都是黑克勒-科赫 MP5/10（10mm 衝鋒槍），只差廠牌縮寫前綴。現行「黑克勒-科赫MP5/10衝鋒槍」對三個 owner 都成立，維持原譯。",
+      "ch": "黑克勒-科赫MP5/10衝鋒槍",
+      "cn": "黑克勒-科赫MP5/10冲锋枪"
+    },
+    "Fluids|Fluid_Container_Thermos": {
+      "action": "translate",
+      "signature": "2aae21459d8201bc",
+      "reason": "2026-10-17 #892 裁決：SapphCooking（3409143790/SapphCookingB42）是 'Thermos'，Last Cup Coffee（3740865682）是 'Portable Thermos'；兩者都是可隨身攜帶的保溫容器，As1 對兩個 owner 的簡中同為「便携保温杯」。現行「隨行保溫杯」對兩者都成立，維持原譯。",
+      "ch": "隨行保溫杯",
+      "cn": "便携保温杯"
+    },
+    "IG_UI|IGUI_ItemCat_WepAmmoMagF": {
+      "action": "translate",
+      "signature": "2392bb4dcbe15951",
+      "reason": "2026-10-17 #887 裁決：BetterSorting-42（3413005308，B42 不讀的 IG_UI_EN.txt）是 'Weapon - Magazine(Fixed)'，Better Containers（3586216562）與 BetterSortingReborn（3774523641）是 'Weapon - Magazine (Fixed)'；只差括號前空格。現行「武器-彈匣 (固定式)」對三者都成立，維持原譯。",
+      "ch": "武器-彈匣 (固定式)",
+      "cn": "武器-弹匣 (固定)"
     }
   }
 }

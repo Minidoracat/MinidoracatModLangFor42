@@ -9542,6 +9542,31 @@
     "en": "Sweet Potato Pie",
     "ch": "地瓜派",
     "cn": "红薯派"
+   },
+   "ContextMenu_FireMode_Burst2": {
+    "en": "2rd-Burst",
+    "ch": "2發點射",
+    "cn": "2发点射"
+   },
+   "ContextMenu_FireMode_Burst3": {
+    "en": "3rd-Burst",
+    "ch": "3發點射",
+    "cn": "3发点射"
+   },
+   "ContextMenu_FireMode_Burst4": {
+    "en": "4rd-Burst",
+    "ch": "4發點射",
+    "cn": "4发点射"
+   },
+   "ContextMenu_PIP_PourAllCompost": {
+    "en": "Pour all Compost into irrigation water (%1 pours)",
+    "ch": "將所有堆肥倒入灌溉水中 (%1 次)",
+    "cn": "将所有堆肥倒入灌溉水中 (%1 次)"
+   },
+   "ContextMenu_PIP_PourAllFertilizer": {
+    "en": "Pour all Fertilizer into irrigation water (%1 pours)",
+    "ch": "將所有肥料倒入灌溉水中 (%1 次)",
+    "cn": "将所有肥料倒入灌溉水中 (%1 次)"
    }
   },
   "Fluids.json": {
@@ -83015,26 +83040,6 @@
     "ch": "使用類比搖桿時虛擬游標的移動速度 (0 到 100, 預設為 50). 搖桿推得越用力, 游標移動得越快. 不影響方向鍵.",
     "cn": "使用模拟摇杆时虚拟光标的移动速度 (0 到 100, 默认为 50). 摇杆推得越用力, 光标移动得越快. 不影响方向键."
    },
-   "IGUI_GridInv_OptionsJoypadCursorMode": {
-    "en": "Gamepad cursor movement",
-    "ch": "手把游標移動方式",
-    "cn": "手柄光标移动方式"
-   },
-   "IGUI_GridInv_OptionsJoypadCursorMode_Cell": {
-    "en": "Cell by cell",
-    "ch": "逐格移動",
-    "cn": "逐格移动"
-   },
-   "IGUI_GridInv_OptionsJoypadCursorMode_Snap": {
-    "en": "Snap to items (default)",
-    "ch": "吸附至物品 (預設)",
-    "cn": "吸附到物品 (默认)"
-   },
-   "IGUI_GridInv_OptionsJoypadCursorMode_Tooltip": {
-    "en": "How the virtual cursor moves with the gamepad D-pad/analog stick in the grids. 'Snap to items' (default) jumps directly from item to item (Tarkov style). 'Cell by cell' moves one grid cell at a time, including empty cells.",
-    "ch": "在網格中使用手把方向鍵/類比搖桿時, 虛擬游標的移動方式. 「吸附至物品」 (預設) 會直接從一個物品跳到下一個物品 (塔科夫風格). 「逐格移動」則每次移動一個網格格子, 包含空格子.",
-    "cn": "在网格中使用手柄方向键/模拟摇杆时, 虚拟光标的移动方式. “吸附到物品” (默认) 会直接从一个物品跳到下一个物品 (塔科夫风格). “逐格移动”则每次移动一个网格单元, 包括空格子."
-   },
    "IGUI_GridInv_OptionsModifierAlt": {
     "en": "Alt + Click Action",
     "ch": "Alt + 點選動作",
@@ -129823,6 +129828,546 @@
     "en": "Wall Decor",
     "ch": "壁飾",
     "cn": "墙饰"
+   },
+   "IGUI_TC_autoplay_off": {
+    "en": "Autoplay: Off",
+    "ch": "自動播放: 關閉",
+    "cn": "自动播放: 关闭"
+   },
+   "IGUI_TC_autoplay_on": {
+    "en": "Autoplay: On",
+    "ch": "自動播放: 開啟",
+    "cn": "自动播放: 开启"
+   },
+   "IGUI_TC_cassette_slot": {
+    "en": "Cassette slot",
+    "ch": "磁帶槽",
+    "cn": "磁带槽"
+   },
+   "IGUI_GridInv_AutoSort": {
+    "en": "Sort",
+    "ch": "整理",
+    "cn": "整理"
+   },
+   "IGUI_GridInv_AutoSortBlocked": {
+    "en": "Unsortable",
+    "ch": "無法整理",
+    "cn": "无法整理"
+   },
+   "IGUI_GridInv_AutoSortNoRoom": {
+    "en": "No room",
+    "ch": "沒有空間",
+    "cn": "没有空间"
+   },
+   "IGUI_GridInv_AutoSortTooltip": {
+    "en": "Sort the items of this container by category, then size, packing the grids tightly",
+    "ch": "依類別、再依大小整理此容器中的物品, 將網格緊密排滿",
+    "cn": "按类别、再按大小整理此容器中的物品, 将网格紧密排满"
+   },
+   "IGUI_GridInv_AutoSortUnsearched": {
+    "en": "Search first",
+    "ch": "請先搜尋",
+    "cn": "请先搜索"
+   },
+   "IGUI_GridInv_Cat_ammo": {
+    "en": "Ammo",
+    "ch": "彈藥",
+    "cn": "弹药"
+   },
+   "IGUI_GridInv_Cat_bags": {
+    "en": "Bags",
+    "ch": "背包",
+    "cn": "背包"
+   },
+   "IGUI_GridInv_Cat_clothing": {
+    "en": "Clothes",
+    "ch": "衣服",
+    "cn": "衣服"
+   },
+   "IGUI_GridInv_Cat_food": {
+    "en": "Food",
+    "ch": "食物",
+    "cn": "食物"
+   },
+   "IGUI_GridInv_Cat_medical": {
+    "en": "Medical",
+    "ch": "醫療",
+    "cn": "医疗"
+   },
+   "IGUI_GridInv_Cat_other": {
+    "en": "Other",
+    "ch": "其他",
+    "cn": "其他"
+   },
+   "IGUI_GridInv_Cat_weapons": {
+    "en": "Weapons",
+    "ch": "武器",
+    "cn": "武器"
+   },
+   "IGUI_GridInv_FloatingAutoClose_Far": {
+    "en": "Far (10 tiles)",
+    "ch": "遠 (10 格)",
+    "cn": "远 (10 格)"
+   },
+   "IGUI_GridInv_FloatingAutoClose_Medium": {
+    "en": "Medium (6 tiles)",
+    "ch": "中 (6 格)",
+    "cn": "中 (6 格)"
+   },
+   "IGUI_GridInv_FloatingAutoClose_Near": {
+    "en": "Near (3 tiles)",
+    "ch": "近 (3 格)",
+    "cn": "近 (3 格)"
+   },
+   "IGUI_GridInv_FloatingAutoClose_Off": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "IGUI_GridInv_Inspect_Auto": {
+    "en": "Auto",
+    "ch": "自動",
+    "cn": "自动"
+   },
+   "IGUI_GridInv_Inspect_AutoTooltip": {
+    "en": "Auto-rotate the model and reset the view. Left drag rotates, right drag moves the view, scroll zooms.",
+    "ch": "自動旋轉模型並重設視角. 左鍵拖曳可旋轉, 右鍵拖曳可移動視角, 滾輪可縮放.",
+    "cn": "自动旋转模型并重置视角. 左键拖动可旋转, 右键拖动可移动视角, 滚轮可缩放."
+   },
+   "IGUI_GridInv_KeepSearch": {
+    "en": "Keep",
+    "ch": "保留",
+    "cn": "保留"
+   },
+   "IGUI_GridInv_ModAction_Inspect": {
+    "en": "Inspect (3D)",
+    "ch": "檢視 (3D)",
+    "cn": "查看 (3D)"
+   },
+   "IGUI_GridInv_OptionsFloatingAutoClose": {
+    "en": "Auto-close bag windows when far",
+    "ch": "遠離時自動關閉背包視窗",
+    "cn": "远离时自动关闭背包窗口"
+   },
+   "IGUI_GridInv_OptionsFloatingAutoClose_Tooltip": {
+    "en": "Closes a floating bag window when you walk away from where the bag is: on the floor, inside a crate or on a corpse.\n\nBags you carry never close. Pinned windows close too.\n\nOff: windows stay open until you close them.",
+    "ch": "當你走離背包所在的位置時, 自動關閉該浮動背包視窗: 地上、箱子裡或屍體上的背包.\n\n你身上攜帶的背包永遠不會關閉. 已固定的視窗也會關閉.\n\n關閉: 視窗會保持開啟, 直到你自行關閉.",
+    "cn": "当你走离背包所在的位置时, 自动关闭该浮动背包窗口: 地上、箱子里或尸体上的背包.\n\n你身上携带的背包永远不会关闭. 已固定的窗口也会关闭.\n\n关闭: 窗口会保持打开, 直到你自行关闭."
+   },
+   "IGUI_GridInv_OptionsIconRotation": {
+    "en": "Rotate/Scale Item Sprites",
+    "ch": "旋轉/縮放物品圖示",
+    "cn": "旋转/缩放物品图标"
+   },
+   "IGUI_GridInv_OptionsIconRotation_Tooltip": {
+    "en": "Draws item sprites with the rotation, scale and anchor tuned for the mod, so tools, clothes and bottles sit nicely in their cells.\n\nOn (default): tuned sprites.\n\nOff: plain sprites, only the footprint size applies. Slightly faster to render.\n\nThis is a per-machine visual setting; each player chooses their own.",
+    "ch": "以針對本模組調校過的旋轉、縮放與錨點繪製物品圖示, 讓工具、衣服和瓶子在格子中擺得整齊好看.\n\n開啟 (預設): 調校過的圖示.\n\n關閉: 一般圖示, 只套用占位尺寸. 算繪稍快.\n\n這是各電腦獨立的視覺設定; 每位玩家可自行選擇.",
+    "cn": "以针对本模组调整过的旋转、缩放与锚点绘制物品图标, 让工具、衣服和瓶子在格子中摆得整齐美观.\n\n开启 (默认): 调整过的图标.\n\n关闭: 普通图标, 只应用占位尺寸. 渲染稍快.\n\n这是各电脑独立的视觉设置; 每位玩家可自行选择."
+   },
+   "IGUI_GridInv_OptionsItemInfo": {
+    "en": "Item info",
+    "ch": "物品資訊",
+    "cn": "物品信息"
+   },
+   "IGUI_GridInv_OptionsItemInfo_Tooltip": {
+    "en": "Shows extra info inside each item: the ammo count of magazines.\n\nOff: items show only their icon, as before.",
+    "ch": "在每個物品內顯示額外資訊: 彈匣的彈藥數量.\n\n關閉: 物品只顯示圖示, 與之前相同.",
+    "cn": "在每个物品内显示额外信息: 弹匣的弹药数量.\n\n关闭: 物品只显示图标, 与之前相同."
+   },
+   "IGUI_GridInv_OptionsItemWeight": {
+    "en": "Item weight",
+    "ch": "物品重量",
+    "cn": "物品重量"
+   },
+   "IGUI_GridInv_OptionsItemWeight_Tooltip": {
+    "en": "Shows each item's weight in its top-right corner; for a pile, the total of the pile.\n\nNeeds Item info on. Turn off for slightly faster rendering.",
+    "ch": "在每個物品的右上角顯示其重量; 若是一疊物品, 則顯示整疊的總重.\n\n需開啟「物品資訊」. 關閉可讓算繪稍快.",
+    "cn": "在每个物品的右上角显示其重量; 若是一叠物品, 则显示整叠的总重.\n\n需开启“物品信息”. 关闭可让渲染稍快."
+   },
+   "IGUI_GridInv_OptionsMultiLootCorpsesOnly": {
+    "en": "Multi-container only for corpses",
+    "ch": "多容器僅限屍體",
+    "cn": "多容器仅限尸体"
+   },
+   "IGUI_GridInv_OptionsMultiLootCorpsesOnly_Tooltip": {
+    "en": "Shows several containers at once only for corpses. Crates, shelves, fridges and the floor show just the one you selected.\n\nThe 'Max World Containers' limit still applies to the corpses. Better performance in bases full of containers.\n\nNeeds 'Show all loot containers' on.",
+    "ch": "只有屍體會同時顯示多個容器. 箱子、貨架、冰箱和地面只顯示你選取的那一個.\n\n「世界容器上限」仍會套用到屍體. 在滿是容器的基地中效能更佳.\n\n需開啟「顯示所有戰利品容器」.",
+    "cn": "只有尸体会同时显示多个容器. 箱子、货架、冰箱和地面只显示你选中的那一个.\n\n“世界容器上限”仍会应用于尸体. 在满是容器的基地中性能更佳.\n\n需开启“显示所有战利品容器”."
+   },
+   "IGUI_GridInv_OptionsTextShadow": {
+    "en": "Text shadow",
+    "ch": "文字陰影",
+    "cn": "文字阴影"
+   },
+   "IGUI_GridInv_OptionsTextShadow_Tooltip": {
+    "en": "Draws a dark shadow under the small texts inside items (weight, ammo, stack count) so they read better over bright sprites.\n\nOff (default): plain text. On: each text is drawn twice, which costs some FPS.\n\nThis is a per-machine visual setting.",
+    "ch": "在物品內的小字 (重量, 彈藥, 堆疊數量) 下方繪製深色陰影, 讓它們在明亮的圖示上更容易閱讀.\n\n關閉 (預設): 一般文字. 開啟: 每段文字都會繪製兩次, 會消耗一些 FPS.\n\n這是各電腦獨立的視覺設定.",
+    "cn": "在物品内的小字 (重量, 弹药, 堆叠数量) 下方绘制深色阴影, 让它们在明亮的图标上更容易阅读.\n\n关闭 (默认): 普通文字. 开启: 每段文字都会绘制两次, 会消耗一些 FPS.\n\n这是各电脑独立的视觉设置."
+   },
+   "IGUI_GridInv_OptionsTopBar": {
+    "en": "Search / filter bar",
+    "ch": "搜尋 / 篩選列",
+    "cn": "搜索 / 筛选栏"
+   },
+   "IGUI_GridInv_OptionsTopBar_Tooltip": {
+    "en": "Reserves a bar above the inventory and loot grids for search, category filter and auto-sort.\n\nOff: the grids use the full height, as before.",
+    "ch": "在物品欄與戰利品網格上方保留一列, 用於搜尋、類別篩選與自動整理.\n\n關閉: 網格使用完整高度, 與之前相同.",
+    "cn": "在物品栏与战利品网格上方预留一栏, 用于搜索、类别筛选与自动整理.\n\n关闭: 网格使用完整高度, 与之前相同."
+   },
+   "IGUI_GridInv_OverflowPenalty": {
+    "en": "Overflow full: you cannot sprint",
+    "ch": "溢出區有物品: 你無法衝刺",
+    "cn": "溢出区有物品: 你无法冲刺"
+   },
+   "IGUI_GridInv_OverflowTitle": {
+    "en": "Overflow",
+    "ch": "溢出區",
+    "cn": "溢出区"
+   },
+   "IGUI_GridInv_SearchPlaceholder": {
+    "en": "Search items...",
+    "ch": "搜尋物品…",
+    "cn": "搜索物品…"
+   },
+   "IGUI_GridInv_SlotPicker_Empty": {
+    "en": "Nothing to equip here",
+    "ch": "這裡沒有可裝備的物品",
+    "cn": "这里没有可装备的物品"
+   },
+   "IGUI_GridInv_SlotPicker_Equipped": {
+    "en": "Equipped - click to take off",
+    "ch": "已裝備 - 點選以卸下",
+    "cn": "已装备 - 点击卸下"
+   },
+   "IGUI_GridInv_SlotPicker_Replaces": {
+    "en": "Replaces",
+    "ch": "取代",
+    "cn": "替换"
+   },
+   "IGUI_LockedNestedBag_Hint": {
+    "en": "Take the bag out of the container first (drop it or hold it).",
+    "ch": "請先將背包從容器中取出 (丟到地上或拿在手上).",
+    "cn": "请先将背包从容器中取出 (丢到地上或拿在手上)."
+   },
+   "IGUI_RPGInventory_AmountConfirm": {
+    "en": "Confirm quantity",
+    "ch": "確認數量",
+    "cn": "确认数量"
+   },
+   "IGUI_RPGInventory_AmountHint": {
+    "en": "Enter confirms. Then click a destination. Esc cancels.",
+    "ch": "按 Enter 確認. 接著點選目的地. 按 Esc 取消.",
+    "cn": "按 Enter 确认. 接着点击目标. 按 Esc 取消."
+   },
+   "IGUI_RPGInventory_AmountMove": {
+    "en": "Move",
+    "ch": "移動",
+    "cn": "移动"
+   },
+   "IGUI_RPGInventory_AmountStay": {
+    "en": "Keep",
+    "ch": "保留",
+    "cn": "保留"
+   },
+   "IGUI_RPGInventory_AmountTitle": {
+    "en": "Choose quantity",
+    "ch": "選擇數量",
+    "cn": "选择数量"
+   },
+   "IGUI_ALifeUI_0618c90f4d073c4e": {
+    "en": "Saved on the server. Ask the server admin for these files.",
+    "ch": "已儲存在伺服器上. 請向伺服器管理員索取這些檔案.",
+    "cn": "已保存在服务器上. 请向服务器管理员索取这些文件."
+   },
+   "IGUI_ALifeUI_0703c760456d1076": {
+    "en": "Argent Isolation Corps - Leader",
+    "ch": "銀色隔離兵團 - 隊長",
+    "cn": "银色隔离兵团 - 队长"
+   },
+   "IGUI_ALifeUI_07a0a64b5710392e": {
+    "en": "Only part of it was saved: {reason}",
+    "ch": "只儲存了一部分: {reason}",
+    "cn": "只保存了一部分: {reason}"
+   },
+   "IGUI_ALifeUI_07eb92c35bcfeea5": {
+    "en": "Boxed NPC speech",
+    "ch": "NPC對話泡泡",
+    "cn": "NPC对话气泡"
+   },
+   "IGUI_ALifeUI_0cf88a9d0c8a76c4": {
+    "en": "Close",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "IGUI_ALifeUI_0d2b2c513b4e18d2": {
+    "en": "Copying is not available here.",
+    "ch": "此處無法使用複製功能.",
+    "cn": "此处无法使用复制功能."
+   },
+   "IGUI_ALifeUI_0d956a32290d4cfe": {
+    "en": "Large",
+    "ch": "大",
+    "cn": "大"
+   },
+   "IGUI_ALifeUI_0e1a62a025847b89": {
+    "en": "Small",
+    "ch": "小",
+    "cn": "小"
+   },
+   "IGUI_ALifeUI_0f1328ba1d29234b": {
+    "en": "Blackglass Detachment",
+    "ch": "黑玻璃分遣隊",
+    "cn": "黑玻璃分遣队"
+   },
+   "IGUI_ALifeUI_135e8d5f688cca3f": {
+    "en": "the game gave an error ({code})",
+    "ch": "遊戲回傳錯誤 ({code})",
+    "cn": "游戏返回错误 ({code})"
+   },
+   "IGUI_ALifeUI_13a0ab4649e513e5": {
+    "en": "Could not copy the path.",
+    "ch": "無法複製路徑.",
+    "cn": "无法复制路径."
+   },
+   "IGUI_ALifeUI_13bd4e1d6914680f": {
+    "en": "the game could not send the request",
+    "ch": "遊戲無法送出請求",
+    "cn": "游戏无法发送请求"
+   },
+   "IGUI_ALifeUI_1b71acdd31f55a6f": {
+    "en": "Iron Orchard Raiders",
+    "ch": "鐵果園掠奪者",
+    "cn": "铁果园掠夺者"
+   },
+   "IGUI_ALifeUI_20c197361371312d": {
+    "en": "Argent Isolation Corps - Rifleman",
+    "ch": "銀色隔離兵團 - 步槍兵",
+    "cn": "银色隔离兵团 - 步枪兵"
+   },
+   "IGUI_ALifeUI_229860ba122c9da0": {
+    "en": "On by default. Long boxes return when you stop moving. Short warnings stay visible.",
+    "ch": "預設開啟. 停止移動後, 長篇對話泡泡會重新出現. 簡短的警告會保持顯示.",
+    "cn": "默认开启. 停止移动后, 长篇对话气泡会重新出现. 简短的警告会保持显示."
+   },
+   "IGUI_ALifeUI_2341d7833f6fd7ec": {
+    "en": "Small is the default. Applies to new boxed speech; classic overhead text is unchanged.",
+    "ch": "預設為「小」. 套用於新出現的對話泡泡; 經典的頭頂文字不受影響.",
+    "cn": "默认为“小”. 应用于新出现的对话气泡; 经典的头顶文字不受影响."
+   },
+   "IGUI_ALifeUI_2486991526e4f0bc": {
+    "en": "On: smaller text and boxes, leaving more of the scene visible. Off: larger text. Applies immediately to new speech on this computer. Plain floating text is unchanged.",
+    "ch": "開啟: 文字與對話泡泡較小, 能看到更多畫面. 關閉: 文字較大. 立即套用於這台電腦上新出現的對話. 一般浮動文字不受影響.",
+    "cn": "开启: 文字和对话气泡更小, 可以看到更多画面. 关闭: 文字更大. 立即应用于这台电脑上新出现的对话. 普通浮动文字不受影响."
+   },
+   "IGUI_ALifeUI_27946cf52a2efe50": {
+    "en": "On: named speech boxes. Off: the game's plain floating text above NPC heads. Applies immediately on this computer only, including multiplayer. The world setting can also turn boxes off.",
+    "ch": "開啟: 顯示附有名字的對話泡泡. 關閉: 使用遊戲本身在NPC頭上的一般浮動文字. 立即生效, 只影響這台電腦, 多人遊戲中也是如此. 世界設定也可以關閉對話泡泡.",
+    "cn": "开启: 显示带有名字的对话气泡. 关闭: 使用游戏本身在NPC头顶的普通浮动文字. 立即生效, 仅影响这台电脑, 多人游戏中也是如此. 世界设置也可以关闭对话气泡."
+   },
+   "IGUI_ALifeUI_29cb759212aa019a": {
+    "en": "Saved. Attach these files when you report a bug.",
+    "ch": "已儲存. 回報錯誤時請附上這些檔案.",
+    "cn": "已保存. 报告错误时请附上这些文件."
+   },
+   "IGUI_ALifeUI_2bc0ef242979b021": {
+    "en": "Argent Isolation Corps",
+    "ch": "銀色隔離兵團",
+    "cn": "银色隔离兵团"
+   },
+   "IGUI_ALifeUI_2dddda911218ba65": {
+    "en": "Blackglass Detachment - Rifleman",
+    "ch": "黑玻璃分遣隊 - 步槍兵",
+    "cn": "黑玻璃分遣队 - 步枪兵"
+   },
+   "IGUI_ALifeUI_301b52854a0d2a66": {
+    "en": "A-Life bug report",
+    "ch": "A-Life 錯誤回報",
+    "cn": "A-Life 错误报告"
+   },
+   "IGUI_ALifeUI_3065919a4bd40e20": {
+    "en": "Copy path",
+    "ch": "複製路徑",
+    "cn": "复制路径"
+   },
+   "IGUI_ALifeUI_30969f5e71fe273d": {
+    "en": "The game says it saved the report, but this file is missing or old: {files}",
+    "ch": "遊戲表示已儲存報告, 但此檔案不存在或是舊檔: {files}",
+    "cn": "游戏表示已保存报告, 但此文件缺失或是旧文件: {files}"
+   },
+   "IGUI_ALifeUI_309f9dc46662c331": {
+    "en": "Path copied.",
+    "ch": "已複製路徑.",
+    "cn": "已复制路径."
+   },
+   "IGUI_ALifeUI_33b691f81dcf665a": {
+    "en": "Your own lines went to console.txt. Attach it too.",
+    "ch": "你這端的記錄已寫入 console.txt. 也請一併附上.",
+    "cn": "你这端的日志已写入 console.txt. 也请一并附上."
+   },
+   "IGUI_ALifeUI_353e31ab7313ab12": {
+    "en": "Look in the Lua folder inside your Zomboid folder.",
+    "ch": "請到 Zomboid 資料夾內的 Lua 資料夾中尋找.",
+    "cn": "请在 Zomboid 文件夹内的 Lua 文件夹中查找."
+   },
+   "IGUI_ALifeUI_3596f2117bd253d1": {
+    "en": "Compact NPC speech boxes",
+    "ch": "精簡NPC對話泡泡",
+    "cn": "紧凑型NPC对话气泡"
+   },
+   "IGUI_ALifeUI_37255a12527dc2a5": {
+    "en": "A-Life: save bug report",
+    "ch": "A-Life: 儲存錯誤回報",
+    "cn": "A-Life: 保存错误报告"
+   },
+   "IGUI_ALifeUI_3883fbd555045ba8": {
+    "en": "Could not open the folder. Use Copy path.",
+    "ch": "無法開啟資料夾. 請使用「複製路徑」.",
+    "cn": "无法打开文件夹. 请使用“复制路径”."
+   },
+   "IGUI_ALifeUI_3db3632724954942": {
+    "en": "Iron Orchard Raiders - Medic",
+    "ch": "鐵果園掠奪者 - 醫護兵",
+    "cn": "铁果园掠夺者 - 医护兵"
+   },
+   "IGUI_ALifeUI_3e986b93043aa74b": {
+    "en": "Hide long speech boxes while moving",
+    "ch": "移動時隱藏長篇對話泡泡",
+    "cn": "移动时隐藏长篇对话气泡"
+   },
+   "IGUI_ALifeUI_40963b534ecd5653": {
+    "en": "Server files: {files}",
+    "ch": "伺服器檔案: {files}",
+    "cn": "服务器文件: {files}"
+   },
+   "IGUI_ALifeUI_41987b4d35232f4d": {
+    "en": "Not saved: {reason}",
+    "ch": "未儲存: {reason}",
+    "cn": "未保存: {reason}"
+   },
+   "IGUI_ALifeUI_42d898cb41a9df5a": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "IGUI_ALifeUI_435136056f84c8b5": {
+    "en": "In this folder: {path}",
+    "ch": "位於此資料夾: {path}",
+    "cn": "位于此文件夹: {path}"
+   },
+   "IGUI_ALifeUI_454acdb97ff2007c": {
+    "en": "Open report folder",
+    "ch": "開啟報告資料夾",
+    "cn": "打开报告文件夹"
+   },
+   "IGUI_ALifeUI_47d3a7a6424b0a35": {
+    "en": "there is no player in the game yet",
+    "ch": "遊戲中還沒有玩家",
+    "cn": "游戏中还没有玩家"
+   },
+   "IGUI_ALifeUI_49422a7c164edbc4": {
+    "en": "Report files: {files}",
+    "ch": "報告檔案: {files}",
+    "cn": "报告文件: {files}"
+   },
+   "IGUI_ALifeUI_496c5f2f0e97e508": {
+    "en": "Ask a server admin to save the server files.",
+    "ch": "請伺服器管理員儲存伺服器端的檔案.",
+    "cn": "请服务器管理员保存服务器端的文件."
+   },
+   "IGUI_ALifeUI_49fafd625e4ce5b7": {
+    "en": "Argent Isolation Corps - Medic",
+    "ch": "銀色隔離兵團 - 醫護兵",
+    "cn": "银色隔离兵团 - 医护兵"
+   },
+   "IGUI_ALifeUI_5147d5631e8661ca": {
+    "en": "Iron Orchard Raiders - Rifleman",
+    "ch": "鐵果園掠奪者 - 步槍兵",
+    "cn": "铁果园掠夺者 - 步枪兵"
+   },
+   "IGUI_ALifeUI_528257040496174f": {
+    "en": "Opening the folder. If nothing opens, use Copy path.",
+    "ch": "正在開啟資料夾. 若沒有開啟任何東西, 請使用「複製路徑」.",
+    "cn": "正在打开文件夹. 如果什么都没有打开, 请使用“复制路径”."
+   },
+   "IGUI_ALifeUI_541294ba7f81e3c5": {
+    "en": "Nothing was saved on the server: {reason}",
+    "ch": "伺服器上沒有儲存任何內容: {reason}",
+    "cn": "服务器上没有保存任何内容: {reason}"
+   },
+   "IGUI_ALifeUI_541b3b953ef265b7": {
+    "en": "you pressed it twice in a row, try again in a moment",
+    "ch": "你連按了兩次, 請稍後再試",
+    "cn": "你连按了两次, 请稍后再试"
+   },
+   "IGUI_ALifeUI_5543d62a538d33cd": {
+    "en": "Blackglass Detachment - Gunner",
+    "ch": "黑玻璃分遣隊 - 槍手",
+    "cn": "黑玻璃分遣队 - 枪手"
+   },
+   "IGUI_ALifeUI_571855e360411926": {
+    "en": "NPC speech box size",
+    "ch": "NPC對話泡泡大小",
+    "cn": "NPC对话气泡大小"
+   },
+   "IGUI_ALifeUI_577d1b9652077c5f": {
+    "en": "Saving the report...",
+    "ch": "正在儲存報告…",
+    "cn": "正在保存报告…"
+   },
+   "IGUI_ALifeUI_5fc4cdc82286bf4b": {
+    "en": "Blackglass Detachment - Leader",
+    "ch": "黑玻璃分遣隊 - 隊長",
+    "cn": "黑玻璃分遣队 - 队长"
+   },
+   "IGUI_ALifeUI_609af1e05ee75d71": {
+    "en": "Save bug report",
+    "ch": "儲存錯誤回報",
+    "cn": "保存错误报告"
+   },
+   "IGUI_ALifeUI_68d2ba4e7cab396a": {
+    "en": "Open console folder",
+    "ch": "開啟 console 資料夾",
+    "cn": "打开 console 文件夹"
+   },
+   "IGUI_ALifeUI_71c8e5c13c77fc36": {
+    "en": "Iron Orchard Raiders - Leader",
+    "ch": "鐵果園掠奪者 - 隊長",
+    "cn": "铁果园掠夺者 - 队长"
+   },
+   "IGUI_ALifeUI_743db21571a4ffa8": {
+    "en": "Attach {files} to your bug report anyway.",
+    "ch": "仍請將 {files} 附在你的錯誤回報中.",
+    "cn": "仍请将 {files} 附到你的错误报告中."
+   },
+   "IGUI_ALifeUI_77562c1f46956616": {
+    "en": "Blackglass Detachment - Medic",
+    "ch": "黑玻璃分遣隊 - 醫護兵",
+    "cn": "黑玻璃分遣队 - 医护兵"
+   },
+   "IGUI_ALifeUI_79608e38238fb290": {
+    "en": "Look in your Zomboid folder.",
+    "ch": "請到你的 Zomboid 資料夾中尋找.",
+    "cn": "请在你的 Zomboid 文件夹中查找."
+   },
+   "IGUI_ALifeUI_79991a100b9b0bc5": {
+    "en": "Game log: {files}",
+    "ch": "遊戲記錄: {files}",
+    "cn": "游戏日志: {files}"
+   },
+   "IGUI_ALifeUI_7b30c37d7cc2176f": {
+    "en": "Your own lines went to console.txt. Attach it to your bug report.",
+    "ch": "你這端的記錄已寫入 console.txt. 請將它附在你的錯誤回報中.",
+    "cn": "你这端的日志已写入 console.txt. 请将它附到你的错误报告中."
+   },
+   "IGUI_ALifeUI_7c82cfc1767384f8": {
+    "en": "Argent Isolation Corps - Gunner",
+    "ch": "銀色隔離兵團 - 槍手",
+    "cn": "银色隔离兵团 - 枪手"
+   },
+   "IGUI_ALifeUI_7f595e94155b58f5": {
+    "en": "Opening folders is not available here. Use the path above.",
+    "ch": "此處無法開啟資料夾. 請使用上方的路徑.",
+    "cn": "此处无法打开文件夹. 请使用上方的路径."
    }
   },
   "ItemName.json": {
@@ -200760,14 +201305,14 @@
     "cn": "70款道奇挑战者后挡风玻璃装甲"
    },
    "Base.DIY45BoostedSilencer": {
-    "en": "Homemade .45 Auto Silencer w/ Booster",
-    "ch": "自製.45 Auto消音器 附增壓器",
-    "cn": "自制.45 Auto消音器 附增压器"
+    "en": "Homemade Pistol Silencer (.45 cal, Booster)",
+    "ch": "自製手槍消音器(.45口徑, 帶增壓器)",
+    "cn": "自制手枪消音器(.45口径, 带增压器)"
    },
    "Base.DIY9mmBoostedSilencer": {
-    "en": "Homemade 9mm Silencer w/ guns93:Booster",
-    "ch": "自製9mm消音器 附增壓器",
-    "cn": "自制9mm消音器 附增压器"
+    "en": "Homemade Pistol Silencer (9mm, Booster)",
+    "ch": "自製手槍消音器(9mm, 帶增壓器)",
+    "cn": "自制手枪消音器(9mm, 带增压器)"
    },
    "Base.DesertTechMDRX": {
     "en": "Desert Tech MDRX",
@@ -312893,6 +313438,411 @@
     "en": "Sugarcane Cutting",
     "ch": "甘蔗插條",
     "cn": "甘蔗插条"
+   },
+   "Base.SAR8Stock": {
+    "en": "Springfield Thumb Hole Stock and Lower (HK91, SR9, SAR-8)",
+    "ch": "春田拇指孔槍托與下機匣(HK91, SR9, SAR-8)",
+    "cn": "春田拇指孔枪托与下机匣(HK91, SR9, SAR-8)"
+   },
+   "Base.15MP5Mag": {
+    "en": "15rd HK MP5 Magazine (9mm)",
+    "ch": "黑克勒-科赫MP5衝鋒槍彈匣 (15發, 9mm)",
+    "cn": "黑克勒-科赫MP5冲锋枪弹匣 (15发, 9mm)"
+   },
+   "Base.30TommyMag": {
+    "en": "30rd Thompson Magazine (.45 Auto)",
+    "ch": "湯普森衝鋒槍彈匣 (30發, .45 Auto)",
+    "cn": "汤普森冲锋枪弹匣 (30发, .45 Auto)"
+   },
+   "Base.TommyDrum": {
+    "en": "50rd Thompson Drum Magazine (.45 Auto)",
+    "ch": "湯普森衝鋒槍彈鼓 (50發, .45 Auto)",
+    "cn": "汤普森冲锋枪弹鼓 (50发, .45 Auto)"
+   },
+   "Base.TommyVertGrip": {
+    "en": "Thompson Vertical Foregrip (Thompson M1921/M1928/M1)",
+    "ch": "湯普森垂直前握把(湯普森M1921/M1928/M1)",
+    "cn": "汤普森垂直前握把(汤普森M1921/M1928/M1)"
+   },
+   "Base.HK91Lower": {
+    "en": "2-Postion Lower w/ Grip (HK91, SR9, SAR-8)",
+    "ch": "兩段式下機匣(附握把)(HK91, SR9, SAR-8)",
+    "cn": "两段式下机匣(带握把)(HK91, SR9, SAR-8)"
+   },
+   "Base.HKCheekRest": {
+    "en": "Cheek Riser For Fixed Stock (HK Roller-Delayed)",
+    "ch": "固定式槍托用貼腮增高墊(黑克勒-科赫滾輪延遲反衝式)",
+    "cn": "固定式枪托用贴腮增高垫(黑克勒-科赫滚柱延迟枪机)"
+   },
+   "Base.TommyLymanSight": {
+    "en": "Thompson Lyman Sight",
+    "ch": "湯普森萊曼瞄具",
+    "cn": "汤普森莱曼瞄准具"
+   },
+   "Base.TommyHandguard": {
+    "en": "Thompson Handgaurd (Thompson M1921/M1928/M1)",
+    "ch": "湯普森護木(湯普森M1921/M1928/M1)",
+    "cn": "汤普森护木(汤普森M1921/M1928/M1)"
+   },
+   "Base.HK93Handguard": {
+    "en": "Wide Handgaurd (HK93)",
+    "ch": "寬護木(HK93)",
+    "cn": "宽护木(HK93)"
+   },
+   "Base.40TriLugSilencer": {
+    "en": "Pistol Silencer (.40 cal, Tri-Lug Adapter)",
+    "ch": "手槍消音器(.40口徑, 帶三爪轉接座)",
+    "cn": "手枪消音器(.40口径, 带三爪转接座)"
+   },
+   "Base.TommyM1928": {
+    "en": "M1928",
+    "ch": "M1928",
+    "cn": "M1928"
+   },
+   "Base.HK91Stock": {
+    "en": "Fixed Stock (HK91, SR9, SAR-8)",
+    "ch": "固定式槍托(HK91, SR9, SAR-8)",
+    "cn": "固定式枪托(HK91, SR9, SAR-8)"
+   },
+   "Base.SR9BakHandguard": {
+    "en": "Faux Wood Handgaurd (HK91, SR9, SAR-8)",
+    "ch": "仿木護木(HK91, SR9, SAR-8)",
+    "cn": "仿木护木(HK91, SR9, SAR-8)"
+   },
+   "Base.SilencerTriLug": {
+    "en": "Silencer Tri-Lug Adapter",
+    "ch": "消音器三爪轉接座",
+    "cn": "消音器三爪转接座"
+   },
+   "Base.MP5ForendLight_On": {
+    "en": "Weapon Light Forend (MP5)",
+    "ch": "戰術燈護木(MP5)",
+    "cn": "战术灯护木(MP5)"
+   },
+   "Base.HK915Mag": {
+    "en": "HK91 5rd Magazine",
+    "ch": "黑克勒-科赫HK91自動步槍彈匣 (5發)",
+    "cn": "黑克勒-科赫HK91自动步枪弹匣 (5发)"
+   },
+   "Base.DIY45TriLugSilencer": {
+    "en": "Homemade Pistol Silencer (.45 cal, Tri-Lug Adapter)",
+    "ch": "自製手槍消音器(.45口徑, 帶三爪轉接座)",
+    "cn": "自制手枪消音器(.45口径, 带三爪转接座)"
+   },
+   "Base.MP5FlashHider": {
+    "en": "Tri-Lug Flash Hider",
+    "ch": "三爪消焰器",
+    "cn": "三爪消焰器"
+   },
+   "Base.40MP5Mag": {
+    "en": "40rd HK MP5 Magazine (9mm)",
+    "ch": "黑克勒-科赫MP5衝鋒槍彈匣 (40發, 9mm)",
+    "cn": "黑克勒-科赫MP5冲锋枪弹匣 (40发, 9mm)"
+   },
+   "Base.TommyM1A1Sight": {
+    "en": "Thompson M1A1 Sight",
+    "ch": "湯普森M1A1瞄具",
+    "cn": "汤普森M1A1瞄准具"
+   },
+   "Base.40HK93Mag": {
+    "en": "40rd HK93 Magazine",
+    "ch": "黑克勒-科赫HK93自動步槍彈匣 (40發)",
+    "cn": "黑克勒-科赫HK93自动步枪弹匣 (40发)"
+   },
+   "Base.HK91GreenHandguard": {
+    "en": "Green Wide Handgaurd (HK91, SR9, SAR-8)",
+    "ch": "綠色寬護木(HK91, SR9, SAR-8)",
+    "cn": "绿色宽护木(HK91, SR9, SAR-8)"
+   },
+   "Base.HK91FlashHider": {
+    "en": "HK Flash Hider (.30 cal)",
+    "ch": "黑克勒-科赫消焰器(.30口徑)",
+    "cn": "黑克勒-科赫消焰器(.30口径)"
+   },
+   "Base.HKScopeLight": {
+    "en": "HK Flashlight Mount",
+    "ch": "黑克勒-科赫手電筒座",
+    "cn": "黑克勒-科赫手电筒座"
+   },
+   "Base.HK91GreenStock": {
+    "en": "Green Fixed Stock (HK91, SR9, SAR-8)",
+    "ch": "綠色固定式槍托(HK91, SR9, SAR-8)",
+    "cn": "绿色固定式枪托(HK91, SR9, SAR-8)"
+   },
+   "Base.MP5ForendLight": {
+    "en": "Weapon Light Forend (MP5)",
+    "ch": "戰術燈護木(MP5)",
+    "cn": "战术灯护木(MP5)"
+   },
+   "Base.SR9Handguard": {
+    "en": "Sporter Handgaurd (HK91, SR9, SAR-8)",
+    "ch": "運動型護木(HK91, SR9, SAR-8)",
+    "cn": "运动型护木(HK91, SR9, SAR-8)"
+   },
+   "Base.40BoostedSilencer": {
+    "en": "Pistol Silencer (.40 cal, Booster)",
+    "ch": "手槍消音器(.40口徑, 帶增壓器)",
+    "cn": "手枪消音器(.40口径, 带增压器)"
+   },
+   "Base.HK91GreenRound": {
+    "en": "Green Round Handgaurd (HK91, SR9, SAR-8)",
+    "ch": "綠色圓形護木(HK91, SR9, SAR-8)",
+    "cn": "绿色圆形护木(HK91, SR9, SAR-8)"
+   },
+   "Base.HKBipod": {
+    "en": "HK Bipod (HK91 and HK93 Wide Handgaurd)",
+    "ch": "黑克勒-科赫兩腳架(HK91與HK93寬護木)",
+    "cn": "黑克勒-科赫两脚架(HK91与HK93宽护木)"
+   },
+   "Base.MP5NavyLower": {
+    "en": "4-Postion Navy Lower (MP5, HK93, HK94)",
+    "ch": "四段式Navy下機匣(MP5, HK93, HK94)",
+    "cn": "四段式Navy下机匣(MP5, HK93, HK94)"
+   },
+   "Base.40Silencer": {
+    "en": "Pistol Silencer (.40 cal/10mm)",
+    "ch": "手槍消音器(.40口徑/10mm)",
+    "cn": "手枪消音器(.40口径/10mm)"
+   },
+   "Base.9mmTriLugSilencer": {
+    "en": "Pistol Silencer (9mm, Tri-Lug Adapter)",
+    "ch": "手槍消音器(9mm, 帶三爪轉接座)",
+    "cn": "手枪消音器(9mm, 带三爪转接座)"
+   },
+   "Base.DIY40Silencer": {
+    "en": "Homemade Pistol Silencer (.40 cal/10mm)",
+    "ch": "自製手槍消音器(.40口徑/10mm)",
+    "cn": "自制手枪消音器(.40口径/10mm)"
+   },
+   "Base.SR9BakStock": {
+    "en": "Thumb Hole Faux Wood Stock and Lower (HK91, SR9, SAR-8)",
+    "ch": "仿木拇指孔槍托與下機匣(HK91, SR9, SAR-8)",
+    "cn": "仿木拇指孔枪托与下机匣(HK91, SR9, SAR-8)"
+   },
+   "Base.TommyM1A1": {
+    "en": "M1",
+    "ch": "M1",
+    "cn": "M1"
+   },
+   "Base.MP5Round": {
+    "en": "Round Handgaurd (MP5, HK94)",
+    "ch": "圓形護木(MP5, HK94)",
+    "cn": "圆形护木(MP5, HK94)"
+   },
+   "Base.HKBipod_On": {
+    "en": "HK Bipod (HK91 and HK93 Wide Handgaurd)",
+    "ch": "黑克勒-科赫兩腳架(HK91與HK93寬護木)",
+    "cn": "黑克勒-科赫两脚架(HK91与HK93宽护木)"
+   },
+   "Base.HK94BarrelShroud": {
+    "en": "Barrel Shroud /w Vertical Grip (HK94)",
+    "ch": "槍管護套(附垂直握把)(HK94)",
+    "cn": "枪管护套(带垂直握把)(HK94)"
+   },
+   "Base.HK93Mag": {
+    "en": "30rd HK93 Magazine",
+    "ch": "黑克勒-科赫HK93自動步槍彈匣 (30發)",
+    "cn": "黑克勒-科赫HK93自动步枪弹匣 (30发)"
+   },
+   "Base.TommyM1A1Stock": {
+    "en": "Fixed Stock (Thompson M1)",
+    "ch": "固定式槍托(湯普森M1)",
+    "cn": "固定式枪托(汤普森M1)"
+   },
+   "Base.CuttsComp": {
+    "en": "Cutts Compensator (.45 cal)",
+    "ch": "卡茨補償器(.45口徑)",
+    "cn": "卡茨补偿器(.45口径)"
+   },
+   "Base.MountedHandTorch_On": {
+    "en": "HK Flashlight Mount w/ Flashlight",
+    "ch": "黑克勒-科赫手電筒座(附手電筒)",
+    "cn": "黑克勒-科赫手电筒座(带手电筒)"
+   },
+   "Base.HK94Lower": {
+    "en": "2-Postion Lower w/ Grip (MP5, HK93, HK94)",
+    "ch": "兩段式下機匣(附握把)(MP5, HK93, HK94)",
+    "cn": "两段式下机匣(带握把)(MP5, HK93, HK94)"
+   },
+   "Base.SAR8FlashHider": {
+    "en": "Pinned Flash Hider (.30 cal)",
+    "ch": "銷接消焰器(.30口徑)",
+    "cn": "销接消焰器(.30口径)"
+   },
+   "Base.HKBurst2Trigger": {
+    "en": "Select Fire Trigger Pack (Semi/2rd-Burst) (HK Roller-Delayed)",
+    "ch": "射擊模式選擇扳機組件(半自動/2發點射)(黑克勒-科赫滾輪延遲反衝式)",
+    "cn": "选择射击扳机组件(半自动/2发点射)(黑克勒-科赫滚柱延迟枪机)"
+   },
+   "Base.HKSR9": {
+    "en": "HK SR9",
+    "ch": "黑克勒-科赫SR9步槍",
+    "cn": "黑克勒-科赫SR9步枪"
+   },
+   "Base.TommyM1928Stock": {
+    "en": "Removable Stock (Thompson M1921/M1928)",
+    "ch": "可拆式槍托(湯普森M1921/M1928)",
+    "cn": "可拆卸枪托(汤普森M1921/M1928)"
+   },
+   "Base.MP5Mag40SW": {
+    "en": "30rd HK MP5/40 Magazine (.40 S&W)",
+    "ch": "黑克勒-科赫MP5/40衝鋒槍彈匣 (30發, .40 S&W)",
+    "cn": "黑克勒-科赫MP5/40冲锋枪弹匣 (30发, .40 S&W)"
+   },
+   "Base.MP5SEFLower": {
+    "en": "3-Postion Navy Lower (MP5, HK93, HK94)",
+    "ch": "三段式Navy下機匣(MP5, HK93, HK94)",
+    "cn": "三段式Navy下机匣(MP5, HK93, HK94)"
+   },
+   "Base.HKMagRelease": {
+    "en": "Paddle Magazine Release (HK Roller-Delayed)",
+    "ch": "拍板式彈匣釋放鈕(黑克勒-科赫滾輪延遲反衝式)",
+    "cn": "拍板式弹匣释放钮(黑克勒-科赫滚柱延迟枪机)"
+   },
+   "Base.MP5TriLug": {
+    "en": "Tri-Lug Adapter",
+    "ch": "三爪轉接座",
+    "cn": "三爪转接座"
+   },
+   "Base.MP5StraightMag": {
+    "en": "HK 30rd MP5 Straight Magazine",
+    "ch": "黑克勒-科赫MP5衝鋒槍直彈匣 (30發)",
+    "cn": "黑克勒-科赫MP5冲锋枪直弹匣 (30发)"
+   },
+   "Base.MP5Stock": {
+    "en": "Fixed Stock (MP5, HK94, HK93)",
+    "ch": "固定式槍托(MP5, HK94, HK93)",
+    "cn": "固定式枪托(MP5, HK94, HK93)"
+   },
+   "Base.MP5Lower": {
+    "en": "SEF Lower (MP5, HK93, HK94)",
+    "ch": "SEF下機匣(MP5, HK93, HK94)",
+    "cn": "SEF下机匣(MP5, HK93, HK94)"
+   },
+   "Base.45TriLugSilencer": {
+    "en": "Pistol Silencer (.45 cal, Tri-Lug Adapter)",
+    "ch": "手槍消音器(.45口徑, 帶三爪轉接座)",
+    "cn": "手枪消音器(.45口径, 带三爪转接座)"
+   },
+   "Base.20TommyMag": {
+    "en": "20rd Thompson Magazine (.45 Auto)",
+    "ch": "湯普森衝鋒槍彈匣 (20發, .45 Auto)",
+    "cn": "汤普森冲锋枪弹匣 (20发, .45 Auto)"
+   },
+   "Base.MP5Handguard": {
+    "en": "Wide Handgaurd (MP5, HK94)",
+    "ch": "寬護木(MP5, HK94)",
+    "cn": "宽护木(MP5, HK94)"
+   },
+   "Base.HK91GreenLower": {
+    "en": "2-Postion Lower w/ Green Grip (HK91, SR9, SAR-8)",
+    "ch": "兩段式下機匣(附綠色握把)(HK91, SR9, SAR-8)",
+    "cn": "两段式下机匣(带绿色握把)(HK91, SR9, SAR-8)"
+   },
+   "Base.DIY40TriLugSilencer": {
+    "en": "Homemade Pistol Silencer (.40 cal/10mm, Tri-Lug Adapter)",
+    "ch": "自製手槍消音器(.40口徑/10mm, 帶三爪轉接座)",
+    "cn": "自制手枪消音器(.40口径/10mm, 带三爪转接座)"
+   },
+   "Base.MountedHandTorch": {
+    "en": "HK Flashlight Mount w/ Flashlight",
+    "ch": "黑克勒-科赫手電筒座(附手電筒)",
+    "cn": "黑克勒-科赫手电筒座(带手电筒)"
+   },
+   "Base.HK93RetractStock": {
+    "en": "A3 Retractable Stock (HK93, MP5, HK94)",
+    "ch": "A3可伸縮式槍托(HK93, MP5, HK94)",
+    "cn": "A3可伸缩式枪托(HK93, MP5, HK94)"
+   },
+   "Base.HK91Round": {
+    "en": "Round Handgaurd (HK91, SR9, SAR-8)",
+    "ch": "圓形護木(HK91, SR9, SAR-8)",
+    "cn": "圆形护木(HK91, SR9, SAR-8)"
+   },
+   "Base.MP540": {
+    "en": "HK MP5/40",
+    "ch": "黑克勒-科赫MP5/40衝鋒槍",
+    "cn": "黑克勒-科赫MP5/40冲锋枪"
+   },
+   "Base.HK91WoodStock": {
+    "en": "Wood Fixed Stock (HK91, SR9, SAR-8)",
+    "ch": "木質固定式槍托(HK91, SR9, SAR-8)",
+    "cn": "木质固定式枪托(HK91, SR9, SAR-8)"
+   },
+   "Base.HK9110Mag": {
+    "en": "HK91 10rd Magazine",
+    "ch": "黑克勒-科赫HK91自動步槍彈匣 (10發)",
+    "cn": "黑克勒-科赫HK91自动步枪弹匣 (10发)"
+   },
+   "Base.DIY40BoostedSilencer": {
+    "en": "Homemade Pistol Silencer (.40 cal/10mm, Booster)",
+    "ch": "自製手槍消音器(.40口徑/10mm, 帶增壓器)",
+    "cn": "自制手枪消音器(.40口径/10mm, 带增压器)"
+   },
+   "Base.TommyLSight": {
+    "en": "Thompson L Sight",
+    "ch": "湯普森L形瞄具",
+    "cn": "汤普森L形瞄准具"
+   },
+   "Base.HK93ExtendStock": {
+    "en": "A3 Retractable Stock (HK93, MP5, HK94)",
+    "ch": "A3可伸縮式槍托(HK93, MP5, HK94)",
+    "cn": "A3可伸缩式枪托(HK93, MP5, HK94)"
+   },
+   "Base.25HK93Mag": {
+    "en": "25rd HK93 Magazine",
+    "ch": "黑克勒-科赫HK93自動步槍彈匣 (25發)",
+    "cn": "黑克勒-科赫HK93自动步枪弹匣 (25发)"
+   },
+   "Base.SR9Stock": {
+    "en": "HK Thumb Hole Stock and Lower (HK91, SR9, SAR-8)",
+    "ch": "黑克勒-科赫拇指孔槍托與下機匣(HK91, SR9, SAR-8)",
+    "cn": "黑克勒-科赫拇指孔枪托与下机匣(HK91, SR9, SAR-8)"
+   },
+   "Base.MP5Mag10mm": {
+    "en": "30rd HK MP5/10 Magazine (10mm Auto)",
+    "ch": "黑克勒-科赫MP5/10衝鋒槍彈匣 (30發, 10mm Auto)",
+    "cn": "黑克勒-科赫MP5/10冲锋枪弹匣 (30发, 10mm Auto)"
+   },
+   "Base.CuttsCompThread": {
+    "en": "Cutts Compensator, Threaded (.45 cal)",
+    "ch": "螺紋卡茨補償器(.45口徑)",
+    "cn": "螺纹卡茨补偿器(.45口径)"
+   },
+   "Base.HKCarryHandle": {
+    "en": "Carry Handle (HK91, SR9, SAR-8, HK93)",
+    "ch": "提把(HK91, SR9, SAR-8, HK93)",
+    "cn": "提把(HK91, SR9, SAR-8, HK93)"
+   },
+   "Base.HK93Stock": {
+    "en": "Fixed Stock (HK93, MP5)",
+    "ch": "固定式槍托(HK93, MP5)",
+    "cn": "固定式枪托(HK93, MP5)"
+   },
+   "Base.TommyTrigger": {
+    "en": "Trigger Parts (Semi/Full-Auto) (Thompson M1921/M1928/M1)",
+    "ch": "扳機部件(半自動/全自動)(湯普森M1921/M1928/M1)",
+    "cn": "扳机部件(半自动/全自动)(汤普森M1921/M1928/M1)"
+   },
+   "Base.DIY9mmTriLugSilencer": {
+    "en": "Homemade Pistol Silencer (9mm, Tri-Lug Adapter)",
+    "ch": "自製手槍消音器(9mm, 帶三爪轉接座)",
+    "cn": "自制手枪消音器(9mm, 带三爪转接座)"
+   },
+   "Base.HK91Wood": {
+    "en": "Wood Handgaurd (HK91, SR9, SAR-8)",
+    "ch": "木質護木(HK91, SR9, SAR-8)",
+    "cn": "木质护木(HK91, SR9, SAR-8)"
+   },
+   "Base.HK91Handguard": {
+    "en": "Wide Handgaurd (HK91, SR9, SAR-8)",
+    "ch": "寬護木(HK91, SR9, SAR-8)",
+    "cn": "宽护木(HK91, SR9, SAR-8)"
+   },
+   "Base.MP5SDSilencer": {
+    "en": "HK MP5SD Integral Silencer",
+    "ch": "黑克勒-科赫MP5SD一體式消音器",
+    "cn": "黑克勒-科赫MP5SD一体式消音器"
    }
   },
   "Print_Media.json": {
@@ -335679,6 +336629,71 @@
     "en": "Make 62 Daimler Ferret Mk2 Front Hatch",
     "ch": "製作62款戴姆勒雪貂Mk2前艙蓋",
     "cn": "制造62款戴姆勒雪貂Mk2前舱盖"
+   },
+   "Craft40Silencer": {
+    "en": "Craft Homemade .40 cal/10mm Pistol Silencer",
+    "ch": "製作自製.40口徑/10mm手槍消音器",
+    "cn": "制作自制.40口径/10mm手枪消音器"
+   },
+   "InstallHKFlashlight": {
+    "en": "Install Flashlight into HK Flashlight Mount",
+    "ch": "將手電筒裝入黑克勒-科赫手電筒座",
+    "cn": "将手电筒装入黑克勒-科赫手电筒座"
+   },
+   "InstallHKPaddle": {
+    "en": "Install Magazine Paddle Release in Firearm",
+    "ch": "在槍械上安裝拍板式彈匣釋放鈕",
+    "cn": "在枪械上安装拍板式弹匣释放钮"
+   },
+   "InstallTriLug": {
+    "en": "Install Tri-Lug Adapter into Silencer",
+    "ch": "將三爪轉接座裝入消音器",
+    "cn": "将三爪转接座装入消音器"
+   },
+   "Make308BeltLink": {
+    "en": "Repair .308 Rem Belt Link",
+    "ch": "修理.308 Rem彈鏈節",
+    "cn": "修理.308 Rem弹链节"
+   },
+   "Make308BeltLinks50": {
+    "en": "Make 50 .308 Rem Belt Links",
+    "ch": "製作50個.308 Rem彈鏈節",
+    "cn": "制作50个.308 Rem弹链节"
+   },
+   "Make556BeltLink": {
+    "en": "Repair .223 Rem Belt Link",
+    "ch": "修理.223 Rem彈鏈節",
+    "cn": "修理.223 Rem弹链节"
+   },
+   "Make556BeltLinks50": {
+    "en": "Make 50 .223 Rem Belt Links",
+    "ch": "製作50個.223 Rem彈鏈節",
+    "cn": "制作50个.223 Rem弹链节"
+   },
+   "RemoveHKFlashlight": {
+    "en": "Remove Flashlight into HK Flashlight Mount",
+    "ch": "從黑克勒-科赫手電筒座取出手電筒",
+    "cn": "从黑克勒-科赫手电筒座取出手电筒"
+   },
+   "RemoveHKPaddle": {
+    "en": "Remove Magazine Paddle Release From Firearm",
+    "ch": "從槍械上移除拍板式彈匣釋放鈕",
+    "cn": "从枪械上移除拍板式弹匣释放钮"
+   },
+   "RemovePinWeldCanon": {
+    "en": "Remove Pinned & Welded Muzzle Device",
+    "ch": "移除銷接焊固的槍口裝置",
+    "cn": "移除销接焊固的枪口装置"
+   },
+   "RemoveTriLug": {
+    "en": "Remove Tri-Lug Adapter From Silencer",
+    "ch": "從消音器中取出三爪轉接座",
+    "cn": "从消音器中取出三爪转接座"
+   },
+   "ThreadPinnedCanon": {
+    "en": "Thread Unthreaded Muzzle Device",
+    "ch": "為無螺紋槍口裝置攻牙",
+    "cn": "为无螺纹枪口装置攻丝"
    }
   },
   "Sandbox.json": {
@@ -369231,16 +370246,6 @@
     "ch": "加入木工、電工、金工與縫紉四本練習手冊. 拿著其中一本即可依手冊進行練習, 消耗材料換取該行業的經驗. 每項練習都會造成材料淨損失, 因此這是消化多餘材料的地方, 而非製作物品的方法. 關閉則手冊不會生成, 練習也無法製作.",
     "cn": "添加木工、电工、金工与缝纫四本练习手册. 拿着其中一本即可按手册进行练习, 消耗材料换取该行业的经验. 每项练习都会造成材料净损失, 因此这是消化多余材料的地方, 而非制作物品的方法. 关闭则手册不会刷新, 练习也无法制作."
    },
-   "Sandbox_GridInventory_IconRotation": {
-    "en": "Rotate/Scale Item Sprites",
-    "ch": "旋轉/縮放物品圖像",
-    "cn": "旋转/缩放物品贴图"
-   },
-   "Sandbox_GridInventory_IconRotation_tooltip": {
-    "en": "Applies the sprite rotation, scale and anchor overrides (hardcoded + GridDevTool) for all players.\n\nOn: everyone sees item sprites rotated/scaled/anchored as configured.\n\nOff (default): the server forces the default sprite (only the footprint w/h is applied) so old saves/overrides from before rotation/scale/anchor existed are never changed out of nowhere.\n\nRecommended: on for new saves where sprites were tuned. Server-side decision for everyone.",
-    "ch": "對所有玩家套用圖像的旋轉, 縮放與錨點覆寫設定 (內建 + GridDevTool).\n\n開啟: 所有人看到的物品圖像都會依設定旋轉/縮放/錨定.\n\n關閉 (預設): 伺服器強制使用預設圖像 (僅套用占位寬/高), 因此在旋轉/縮放/錨點功能推出前的舊存檔/覆寫設定, 永遠不會無故被更改.\n\n建議: 已調整過圖像的新存檔請開啟. 此為伺服器端設定, 對所有人生效.",
-    "cn": "对所有玩家应用贴图的旋转, 缩放与锚点覆盖设置 (内置 + GridDevTool).\n\n开启: 所有人看到的物品贴图都会按设置旋转/缩放/锚定.\n\n关闭 (默认): 服务器强制使用默认贴图 (仅应用占位宽/高), 因此在旋转/缩放/锚点功能推出前的旧存档/覆盖设置, 永远不会无故被更改.\n\n建议: 已调整过贴图的新存档请开启. 此为服务器端设置, 对所有人生效."
-   },
    "Sandbox_MGsMRE_LootRarity": {
     "en": "Loot Rarity Level",
     "ch": "物資稀有度等級",
@@ -388597,9 +389602,9 @@
     "cn": "[专家] NPC对僵尸开枪 (%%)"
    },
    "Sandbox_ProjectALife.GunsVsZombiesPercent_tooltip": {
-    "en": "How often an NPC that could shoot a zombie does so. Gunfire draws more zombies, so lowering this makes NPCs walk around zombies, use melee on a lone one, and keep their guns for NPCs and players. They still shoot when cornered, hurt, defending a hurt player, on a horde that blocks the way, or on duty as military or police. 0 means never unless cornered. 100 is the old behaviour. Default 50.",
-    "ch": "能夠射擊殭屍的NPC實際開槍的頻率. 槍聲會引來更多殭屍, 因此調低此值會讓NPC繞過殭屍, 以近戰對付落單的殭屍, 把槍留給NPC與玩家. 但在被逼入絕境, 受傷, 保護受傷的玩家, 面對擋路的殭屍群, 或以軍警身分執勤時, 他們仍會開槍. 0表示除非被逼入絕境, 否則絕不開槍. 100為舊版行為. 預設: 50.",
-    "cn": "能够射击僵尸的NPC实际开枪的频率. 枪声会引来更多僵尸, 因此调低该值会让NPC绕开僵尸, 用近战对付落单的僵尸, 把枪留给NPC与玩家. 但在被逼入绝境, 受伤, 保护受伤的玩家, 面对挡路的僵尸群, 或以军警身份执勤时, 他们仍会开枪. 0表示除非被逼入绝境, 否则绝不开枪. 100为旧版行为. 默认: 50."
+    "en": "How often an NPC that could shoot a zombie does so. Gunfire draws more zombies, so lowering this makes NPCs walk around zombies, use melee on a lone one, and keep their guns for NPCs and players. They still shoot when cornered, hurt, defending a hurt player, on a horde that blocks the way, or on duty as military or police. 0 means never unless cornered. 100 is the old behaviour. While the world is under 14 days old the default 50 acts as 70, so early NPCs shoot more. Default 50.",
+    "ch": "能夠射擊殭屍的NPC實際開槍的頻率. 槍聲會引來更多殭屍, 因此調低此值會讓NPC繞過殭屍, 以近戰對付落單的殭屍, 把槍留給NPC與玩家. 但在被逼入絕境, 受傷, 保護受傷的玩家, 面對擋路的殭屍群, 或以軍警身分執勤時, 他們仍會開槍. 0表示除非被逼入絕境, 否則絕不開槍. 100為舊版行為. 世界存在未滿14天時, 預設值50會視為70, 因此前期NPC會更常開槍. 預設: 50.",
+    "cn": "能够射击僵尸的NPC实际开枪的频率. 枪声会引来更多僵尸, 因此调低该值会让NPC绕开僵尸, 用近战对付落单的僵尸, 把枪留给NPC与玩家. 但在被逼入绝境, 受伤, 保护受伤的玩家, 面对挡路的僵尸群, 或以军警身份执勤时, 他们仍会开枪. 0表示除非被逼入绝境, 否则绝不开枪. 100为旧版行为. 世界存在未满14天时, 默认值50会按70计算, 因此前期NPC会更常开枪. 默认: 50."
    },
    "Sandbox_ProjectALife.HearingAlertPercent": {
     "en": "Sound alert awareness (percent)",
@@ -388967,9 +389972,9 @@
     "cn": "NPC战利品: 尸体上保留多少装备 (百分比)"
    },
    "Sandbox_ProjectALife.LootNpcDropPercent_tooltip": {
-    "en": "Chance that each item an NPC carried stays on its body. 100 means everything they carried drops (the default); lower values leave emptier bodies. Use the wear setting below to make drops poorer instead. A fixed NPC weapon drop chance overrides this for weapons.\nDefault 100.",
-    "ch": "NPC攜帶的每件物品留在其屍體上的機率. 100表示攜帶的所有物品都會掉落 (預設值); 數值越低, 屍體越空. 若想讓掉落物變差, 請改用下方的磨損設定. 若NPC武器掉落機率設為固定選項, 武器會以該設定為準.\n預設: 100.",
-    "cn": "NPC携带的每件物品留在其尸体上的概率. 100表示携带的所有物品都会掉落 (默认值); 数值越低, 尸体越空. 若想让掉落物变差, 请改用下方的磨损设置. 若NPC武器掉落概率设为固定选项, 武器会以该设置为准.\n默认: 100."
+    "en": "Chance for each carried item to stay on an NPC's body. 100 drops all items; lower values drop fewer. Fixed NPC weapon drop chances take priority. Use wear below for poorer gear.\nDefault 100.",
+    "ch": "NPC攜帶的每件物品留在其屍體上的機率. 100表示所有物品都會掉落; 數值越低, 掉落越少. 固定的NPC武器掉落機率優先. 若想讓裝備變差, 請改用下方的磨損設定.\n預設: 100.",
+    "cn": "NPC携带的每件物品留在其尸体上的概率. 100表示所有物品都会掉落; 数值越低, 掉落越少. 固定的NPC武器掉落概率优先. 若想让装备变差, 请改用下方的磨损设置.\n默认: 100."
    },
    "Sandbox_ProjectALife.LootNpcSuppliesPercent": {
     "en": "[Expert] NPC loot: supplies and other items (percent of the loot setting)",
@@ -388997,9 +390002,9 @@
     "cn": "NPC战利品: 掉落装备的磨损程度 (百分比)"
    },
    "Sandbox_ProjectALife.LootNpcWearPercent_tooltip": {
-    "en": "Gear on NPC bodies comes out used up: many guns are broken or nearly so, magazines are almost empty, clothes and vests are tattered, loose ammo is scarce. NPCs still fight with working weapons while alive; the wear is applied when they die. 0 leaves everything pristine, 100 is full wear.\nDefault 100.",
-    "ch": "NPC屍體上的裝備會是用舊的狀態: 許多槍械已損壞或接近損壞, 彈匣幾乎是空的, 衣物與背心破爛不堪, 散裝彈藥稀少. NPC活著時仍使用正常運作的武器戰鬥; 磨損在死亡時才套用. 0表示一切完好如新, 100為完全磨損.\n預設: 100.",
-    "cn": "NPC尸体上的装备会是用旧的状态: 许多枪械已损坏或接近损坏, 弹匣几乎是空的, 衣物和背心破烂不堪, 散装弹药稀少. NPC活着时仍使用正常运行的武器战斗; 磨损在死亡时才应用. 0表示一切完好如新, 100为完全磨损.\n默认: 100."
+    "en": "Wear added to gear and ammo on death. 0 adds no wear; 100 is full. Fixed NPC weapon conditions take priority. Guns can still drop broken: set Dropped weapon condition for working guns.\nDefault 100.",
+    "ch": "NPC死亡時加在裝備與彈藥上的磨損. 0表示不增加磨損; 100為完全磨損. 固定的NPC武器狀態優先. 槍械仍可能以損壞狀態掉落: 若要掉落可用的槍械, 請設定「掉落武器狀態」.\n預設: 100.",
+    "cn": "NPC死亡时施加在装备和弹药上的磨损. 0表示不增加磨损; 100为完全磨损. 固定的NPC武器状态优先. 枪械仍可能以损坏状态掉落: 若要掉落可用的枪械, 请设置“掉落武器状态”.\n默认: 100."
    },
    "Sandbox_ProjectALife.LootRareDropPercent": {
     "en": "Rare armor drop chance (percent)",
@@ -390267,9 +391272,9 @@
     "cn": "访客敲门与闯入开门声"
    },
    "Sandbox_ProjectALife.Safehouse_KnockSounds_tooltip": {
-    "en": "Visitors knock at your door or window and you hear it from up to about 50 tiles, instead of a text notice. A door sound plays only when someone breaks into your house and opens the first door inside. Off: text notice only.\nDefault on.",
-    "ch": "訪客會敲你的門或窗, 你在約50格內都聽得到, 取代文字通知. 只有在有人闖入你家並打開屋內第一扇門時, 才會播放開門聲. 關閉: 僅有文字通知.\n預設: 開啟.",
-    "cn": "访客会敲你的门或窗, 你在约50格内都能听到, 取代文字通知. 只有在有人闯入你家并打开屋内第一扇门时, 才会播放开门声. 关闭: 仅有文字通知.\n默认: 开启."
+    "en": "Hear visitors knock at doors or windows from about 50 tiles away. Break-ins sound when the first inside door opens. Off: text notices only.\nDefault on.",
+    "ch": "在約50格外就能聽到訪客敲門或敲窗. 有人闖入時, 打開屋內第一扇門會發出聲音. 關閉: 僅有文字通知.\n預設: 開啟.",
+    "cn": "在约50格外就能听到访客敲门或敲窗. 有人闯入时, 打开屋内第一扇门会发出声音. 关闭: 仅有文字通知.\n默认: 开启."
    },
    "Sandbox_ProjectALife.Safehouse_LadderGapHours": {
     "en": "Time between hostile warning stages (game hours)",
@@ -390417,9 +391422,9 @@
     "cn": "NPC出现净空距离 (格)"
    },
    "Sandbox_ProjectALife.SpawnKeepOutTiles_tooltip": {
-    "en": "Keeps random groups from appearing this close or in view. Countryside adds 10 tiles; loaded-map limits still apply. Groups appear outside the clearance and walk in. Too high a value leaves almost no room to appear inside the loaded map.\nDefault 45.",
-    "ch": "防止隨機團體在這麼近的距離或視線範圍內出現. 鄉間額外加10格; 已載入地圖範圍的限制仍然適用. 團體會在淨空範圍外出現, 再走進來. 數值太高會使已載入地圖內幾乎沒有空間可供出現.\n預設: 45.",
-    "cn": "防止随机群体在这么近的距离或视线范围内出现. 乡间额外加10格; 已加载地图范围的限制仍然适用. 群体会在净空范围外出现, 再走进来. 数值过高会使已加载地图内几乎没有空间可供出现.\n默认: 45."
+    "en": "Minimum distance from players for random groups to appear, then walk in. Sight and loaded-map limits also apply; too large a distance can prevent spawns.\nDefault 45.",
+    "ch": "隨機團體出現時與玩家的最短距離, 出現後再走進來. 視線與已載入地圖範圍的限制同樣適用; 距離過大可能導致無法生成.\n預設: 45.",
+    "cn": "随机群体出现时与玩家的最短距离, 出现后再走进来. 视线与已加载地图范围的限制同样适用; 距离过大可能导致无法生成.\n默认: 45."
    },
    "Sandbox_ProjectALife.SpawnRuralDensity": {
     "en": "Countryside encounter rate (percent of town rate)",
@@ -390742,9 +391747,9 @@
     "cn": "每座城镇的新角色团体上限"
    },
    "Sandbox_ProjectALife.TownWelcomeGroups_tooltip": {
-    "en": "How many welcome groups each new character gets, and how many can be alive in one town at once, even when several players start there.\nDefault 4.",
-    "ch": "每個新角色可獲得的迎接團體數量, 也是單一城鎮同時存活的團體上限, 即使有多名玩家在該處開局也一樣.\n預設: 4.",
-    "cn": "每个新角色可获得的迎接团体数量, 也是单个城镇同时存活的团体上限, 即使有多名玩家在该处开局也一样.\n默认: 4."
+    "en": "How many welcome groups each new character gets, and how many can be alive in one town at once, even when several players start there.\nDefault 8.",
+    "ch": "每個新角色可獲得的迎接團體數量, 也是單一城鎮同時存活的團體上限, 即使有多名玩家在該處開局也一樣.\n預設: 8.",
+    "cn": "每个新角色可获得的迎接团体数量, 也是单个城镇同时存活的团体上限, 即使有多名玩家在该处开局也一样.\n默认: 8."
    },
    "Sandbox_ProjectALife.TurningDelay": {
     "en": "Delay before NPC reanimation",
@@ -391685,6 +392690,901 @@
     "en": "On: use the Vehicle Manager shortcut or right-click. Off: right-click only. Battery Bay and pedestal access is set separately in RV Power Manager > Power settings (admins only). Your Enter/Exit RV key is unchanged.",
     "ch": "開啟: 可用車輛管理器快捷鍵或右鍵. 關閉: 僅限右鍵. 電池艙與岸電樁的使用方式需另外在「房車電源管理器 > 電源設定」中調整 (僅限管理員). 你的進入/離開房車按鍵不受影響.",
     "cn": "开启: 可使用车辆管理器快捷键或右键. 关闭: 仅限右键. 电池舱与岸电桩的使用方式需另外在“房车电源管理器 > 电源设置”中调整 (仅限管理员). 你的进入/离开房车按键不受影响."
+   },
+   "Sandbox_MEH_ModdedButcheringXP": {
+    "en": "Modded Animal Butchering XP",
+    "ch": "模組動物屠宰經驗",
+    "cn": "模组动物屠宰经验"
+   },
+   "Sandbox_MEH_ModdedButcheringXP_option1": {
+    "en": "0x - Disabled",
+    "ch": "0倍 (停用)",
+    "cn": "0倍 (禁用)"
+   },
+   "Sandbox_MEH_ModdedButcheringXP_option10": {
+    "en": "5x",
+    "ch": "5倍",
+    "cn": "5倍"
+   },
+   "Sandbox_MEH_ModdedButcheringXP_option11": {
+    "en": "10x",
+    "ch": "10倍",
+    "cn": "10倍"
+   },
+   "Sandbox_MEH_ModdedButcheringXP_option2": {
+    "en": "0.25x",
+    "ch": "0.25倍",
+    "cn": "0.25倍"
+   },
+   "Sandbox_MEH_ModdedButcheringXP_option3": {
+    "en": "0.5x",
+    "ch": "0.5倍",
+    "cn": "0.5倍"
+   },
+   "Sandbox_MEH_ModdedButcheringXP_option4": {
+    "en": "0.75x",
+    "ch": "0.75倍",
+    "cn": "0.75倍"
+   },
+   "Sandbox_MEH_ModdedButcheringXP_option5": {
+    "en": "1x - Default",
+    "ch": "1倍 (預設)",
+    "cn": "1倍 (默认)"
+   },
+   "Sandbox_MEH_ModdedButcheringXP_option6": {
+    "en": "1.5x",
+    "ch": "1.5倍",
+    "cn": "1.5倍"
+   },
+   "Sandbox_MEH_ModdedButcheringXP_option7": {
+    "en": "2x",
+    "ch": "2倍",
+    "cn": "2倍"
+   },
+   "Sandbox_MEH_ModdedButcheringXP_option8": {
+    "en": "3x",
+    "ch": "3倍",
+    "cn": "3倍"
+   },
+   "Sandbox_MEH_ModdedButcheringXP_option9": {
+    "en": "4x",
+    "ch": "4倍",
+    "cn": "4倍"
+   },
+   "Sandbox_MEH_ModdedButcheringXP_tooltip": {
+    "en": "Multiplies Butchering XP earned from cutting Meat Expansion hunted carcasses. This does not change vanilla animal butchering XP. The normal game XP multiplier also applies.",
+    "ch": "調整切割肉類擴充狩獵所得屍體時獲得的屠宰經驗倍率. 不會改變原版動物的屠宰經驗. 遊戲本身的經驗倍率同樣適用.",
+    "cn": "按倍率调整切割肉类扩展猎获尸体时获得的屠宰经验. 不会改变原版动物的屠宰经验. 游戏本身的经验倍率同样生效."
+   },
+   "Sandbox_RVInterior_RVLootBrokenCable": {
+    "en": "Broken shore power cable loot",
+    "ch": "斷裂的岸電電纜戰利品",
+    "cn": "断裂的岸电电缆战利品"
+   },
+   "Sandbox_RVInterior_RVLootBrokenCable_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_RVInterior_RVLootBrokenCable_option2": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "Sandbox_RVInterior_RVLootBrokenCable_option3": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "Sandbox_RVInterior_RVLootBrokenCable_option4": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "Sandbox_RVInterior_RVLootBrokenCable_option5": {
+    "en": "Heavy",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_RVInterior_RVLootBrokenCable_tooltip": {
+    "en": "Medium is half the old common-loot weights; Heavy is the old common-loot weight. Off disables this item only. Restart required; existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
+    "ch": "「中」為舊版一般戰利品權重的一半; 「大量」等同舊版一般戰利品權重. 「關閉」只會停用此物品. 需要重新啟動; 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
+    "cn": "“中”为旧版常规战利品权重的一半; “大量”等同旧版常规战利品权重. “关闭”仅禁用此物品. 需要重启; 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
+   },
+   "Sandbox_RVInterior_RVLootFuseBlue": {
+    "en": "Blue fuse (15 A) loot",
+    "ch": "藍色保險絲 (15 A) 戰利品",
+    "cn": "蓝色保险丝 (15 A) 战利品"
+   },
+   "Sandbox_RVInterior_RVLootFuseBlue_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_RVInterior_RVLootFuseBlue_option2": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "Sandbox_RVInterior_RVLootFuseBlue_option3": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "Sandbox_RVInterior_RVLootFuseBlue_option4": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "Sandbox_RVInterior_RVLootFuseBlue_option5": {
+    "en": "Heavy",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_RVInterior_RVLootFuseBlue_tooltip": {
+    "en": "Medium is half the old common-loot weights; Heavy is the old common-loot weight. Off disables this item only. Restart required; existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
+    "ch": "「中」為舊版一般戰利品權重的一半; 「大量」等同舊版一般戰利品權重. 「關閉」只會停用此物品. 需要重新啟動; 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
+    "cn": "“中”为旧版常规战利品权重的一半; “大量”等同旧版常规战利品权重. “关闭”仅禁用此物品. 需要重启; 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxBlue": {
+    "en": "Blue fuse box (15 A) loot",
+    "ch": "藍色保險絲盒 (15 A) 戰利品",
+    "cn": "蓝色保险丝盒 (15 A) 战利品"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxBlue_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxBlue_option2": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxBlue_option3": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxBlue_option4": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxBlue_option5": {
+    "en": "Heavy",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxBlue_tooltip": {
+    "en": "Medium is half the old common-loot weights; Heavy is the old common-loot weight. Off disables this item only. Restart required; existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
+    "ch": "「中」為舊版一般戰利品權重的一半; 「大量」等同舊版一般戰利品權重. 「關閉」只會停用此物品. 需要重新啟動; 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
+    "cn": "“中”为旧版常规战利品权重的一半; “大量”等同旧版常规战利品权重. “关闭”仅禁用此物品. 需要重启; 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxGreen": {
+    "en": "Green fuse box (30 A) loot",
+    "ch": "綠色保險絲盒 (30 A) 戰利品",
+    "cn": "绿色保险丝盒 (30 A) 战利品"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxGreen_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxGreen_option2": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxGreen_option3": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxGreen_option4": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxGreen_option5": {
+    "en": "Heavy",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxGreen_tooltip": {
+    "en": "Medium is half the old common-loot weights; Heavy is the old common-loot weight. Off disables this item only. Restart required; existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
+    "ch": "「中」為舊版一般戰利品權重的一半; 「大量」等同舊版一般戰利品權重. 「關閉」只會停用此物品. 需要重新啟動; 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
+    "cn": "“中”为旧版常规战利品权重的一半; “大量”等同旧版常规战利品权重. “关闭”仅禁用此物品. 需要重启; 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxRed": {
+    "en": "Red fuse box (10 A) loot",
+    "ch": "紅色保險絲盒 (10 A) 戰利品",
+    "cn": "红色保险丝盒 (10 A) 战利品"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxRed_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxRed_option2": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxRed_option3": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxRed_option4": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxRed_option5": {
+    "en": "Heavy",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxRed_tooltip": {
+    "en": "Medium is half the old common-loot weights; Heavy is the old common-loot weight. Off disables this item only. Restart required; existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
+    "ch": "「中」為舊版一般戰利品權重的一半; 「大量」等同舊版一般戰利品權重. 「關閉」只會停用此物品. 需要重新啟動; 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
+    "cn": "“中”为旧版常规战利品权重的一半; “大量”等同旧版常规战利品权重. “关闭”仅禁用此物品. 需要重启; 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxYellow": {
+    "en": "Yellow fuse box (20 A) loot",
+    "ch": "黃色保險絲盒 (20 A) 戰利品",
+    "cn": "黄色保险丝盒 (20 A) 战利品"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxYellow_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxYellow_option2": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxYellow_option3": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxYellow_option4": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxYellow_option5": {
+    "en": "Heavy",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_RVInterior_RVLootFuseBoxYellow_tooltip": {
+    "en": "Medium is half the old common-loot weights; Heavy is the old common-loot weight. Off disables this item only. Restart required; existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
+    "ch": "「中」為舊版一般戰利品權重的一半; 「大量」等同舊版一般戰利品權重. 「關閉」只會停用此物品. 需要重新啟動; 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
+    "cn": "“中”为旧版常规战利品权重的一半; “大量”等同旧版常规战利品权重. “关闭”仅禁用此物品. 需要重启; 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
+   },
+   "Sandbox_RVInterior_RVLootFuseGreen": {
+    "en": "Green fuse (30 A) loot",
+    "ch": "綠色保險絲 (30 A) 戰利品",
+    "cn": "绿色保险丝 (30 A) 战利品"
+   },
+   "Sandbox_RVInterior_RVLootFuseGreen_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_RVInterior_RVLootFuseGreen_option2": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "Sandbox_RVInterior_RVLootFuseGreen_option3": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "Sandbox_RVInterior_RVLootFuseGreen_option4": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "Sandbox_RVInterior_RVLootFuseGreen_option5": {
+    "en": "Heavy",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_RVInterior_RVLootFuseGreen_tooltip": {
+    "en": "Medium is half the old common-loot weights; Heavy is the old common-loot weight. Off disables this item only. Restart required; existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
+    "ch": "「中」為舊版一般戰利品權重的一半; 「大量」等同舊版一般戰利品權重. 「關閉」只會停用此物品. 需要重新啟動; 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
+    "cn": "“中”为旧版常规战利品权重的一半; “大量”等同旧版常规战利品权重. “关闭”仅禁用此物品. 需要重启; 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
+   },
+   "Sandbox_RVInterior_RVLootFuseRed": {
+    "en": "Red fuse (10 A) loot",
+    "ch": "紅色保險絲 (10 A) 戰利品",
+    "cn": "红色保险丝 (10 A) 战利品"
+   },
+   "Sandbox_RVInterior_RVLootFuseRed_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_RVInterior_RVLootFuseRed_option2": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "Sandbox_RVInterior_RVLootFuseRed_option3": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "Sandbox_RVInterior_RVLootFuseRed_option4": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "Sandbox_RVInterior_RVLootFuseRed_option5": {
+    "en": "Heavy",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_RVInterior_RVLootFuseRed_tooltip": {
+    "en": "Medium is half the old common-loot weights; Heavy is the old common-loot weight. Off disables this item only. Restart required; existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
+    "ch": "「中」為舊版一般戰利品權重的一半; 「大量」等同舊版一般戰利品權重. 「關閉」只會停用此物品. 需要重新啟動; 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
+    "cn": "“中”为旧版常规战利品权重的一半; “大量”等同旧版常规战利品权重. “关闭”仅禁用此物品. 需要重启; 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
+   },
+   "Sandbox_RVInterior_RVLootFuseYellow": {
+    "en": "Yellow fuse (20 A) loot",
+    "ch": "黃色保險絲 (20 A) 戰利品",
+    "cn": "黄色保险丝 (20 A) 战利品"
+   },
+   "Sandbox_RVInterior_RVLootFuseYellow_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_RVInterior_RVLootFuseYellow_option2": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "Sandbox_RVInterior_RVLootFuseYellow_option3": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "Sandbox_RVInterior_RVLootFuseYellow_option4": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "Sandbox_RVInterior_RVLootFuseYellow_option5": {
+    "en": "Heavy",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_RVInterior_RVLootFuseYellow_tooltip": {
+    "en": "Medium is half the old common-loot weights; Heavy is the old common-loot weight. Off disables this item only. Restart required; existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
+    "ch": "「中」為舊版一般戰利品權重的一半; 「大量」等同舊版一般戰利品權重. 「關閉」只會停用此物品. 需要重新啟動; 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
+    "cn": "“中”为旧版常规战利品权重的一半; “大量”等同旧版常规战利品权重. “关闭”仅禁用此物品. 需要重启; 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
+   },
+   "Sandbox_RVInterior_RVLootLegacyFuse": {
+    "en": "Legacy RV power fuse loot",
+    "ch": "舊版房車保險絲戰利品",
+    "cn": "旧版房车保险丝战利品"
+   },
+   "Sandbox_RVInterior_RVLootLegacyFuse_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_RVInterior_RVLootLegacyFuse_option2": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "Sandbox_RVInterior_RVLootLegacyFuse_option3": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "Sandbox_RVInterior_RVLootLegacyFuse_option4": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "Sandbox_RVInterior_RVLootLegacyFuse_option5": {
+    "en": "Heavy",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_RVInterior_RVLootLegacyFuse_tooltip": {
+    "en": "Medium is half the old common-loot weights; Heavy is the old common-loot weight. Off disables this item only. Restart required; existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
+    "ch": "「中」為舊版一般戰利品權重的一半; 「大量」等同舊版一般戰利品權重. 「關閉」只會停用此物品. 需要重新啟動; 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
+    "cn": "“中”为旧版常规战利品权重的一半; “大量”等同旧版常规战利品权重. “关闭”仅禁用此物品. 需要重启; 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
+   },
+   "Sandbox_RVInterior_RVLootMarineBattery": {
+    "en": "Marine battery loot",
+    "ch": "船用電池戰利品",
+    "cn": "船用电池战利品"
+   },
+   "Sandbox_RVInterior_RVLootMarineBattery_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_RVInterior_RVLootMarineBattery_option2": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "Sandbox_RVInterior_RVLootMarineBattery_option3": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "Sandbox_RVInterior_RVLootMarineBattery_option4": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "Sandbox_RVInterior_RVLootMarineBattery_option5": {
+    "en": "Heavy",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_RVInterior_RVLootMarineBattery_tooltip": {
+    "en": "Independent roll per suitable shop/warehouse container with free space: Off 0 percent, Low 5 percent, Medium 10 percent, High 15 percent, Heavy 20 percent. Existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
+    "ch": "每個有空位的合適商店/倉庫容器各自獨立擲骰, 機率為: 「關閉」0, 「低」5, 「中」10, 「高」15, 「大量」20 (百分比). 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
+    "cn": "每个有空余空间的合适商店/仓库容器各自独立判定, 几率为: “关闭”0, “低”5, “中”10, “高”15, “大量”20 (百分比). 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
+   },
+   "Sandbox_RVInterior_RVLootMarineBay": {
+    "en": "RV battery bay loot",
+    "ch": "房車電池艙戰利品",
+    "cn": "房车电池舱战利品"
+   },
+   "Sandbox_RVInterior_RVLootMarineBay_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_RVInterior_RVLootMarineBay_option2": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "Sandbox_RVInterior_RVLootMarineBay_option3": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "Sandbox_RVInterior_RVLootMarineBay_option4": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "Sandbox_RVInterior_RVLootMarineBay_option5": {
+    "en": "Heavy",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_RVInterior_RVLootMarineBay_tooltip": {
+    "en": "Independent roll per suitable shop/warehouse container with free space: Off 0 percent, Low 5 percent, Medium 10 percent, High 15 percent, Heavy 20 percent. Existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
+    "ch": "每個有空位的合適商店/倉庫容器各自獨立擲骰, 機率為: 「關閉」0, 「低」5, 「中」10, 「高」15, 「大量」20 (百分比). 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
+    "cn": "每个有空余空间的合适商店/仓库容器各自独立判定, 几率为: “关闭”0, “低”5, “中”10, “高”15, “大量”20 (百分比). 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
+   },
+   "Sandbox_RVInterior_RVLootMarineManual": {
+    "en": "Marine Battery Manual loot",
+    "ch": "船用電池手冊戰利品",
+    "cn": "船用电池手册战利品"
+   },
+   "Sandbox_RVInterior_RVLootMarineManual_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_RVInterior_RVLootMarineManual_option2": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "Sandbox_RVInterior_RVLootMarineManual_option3": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "Sandbox_RVInterior_RVLootMarineManual_option4": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "Sandbox_RVInterior_RVLootMarineManual_option5": {
+    "en": "Heavy",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_RVInterior_RVLootMarineManual_tooltip": {
+    "en": "Medium is half the old common-loot weights; Heavy is the old common-loot weight. Off disables this item only. Restart required; existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
+    "ch": "「中」為舊版一般戰利品權重的一半; 「大量」等同舊版一般戰利品權重. 「關閉」只會停用此物品. 需要重新啟動; 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
+    "cn": "“中”为旧版常规战利品权重的一半; “大量”等同旧版常规战利品权重. “关闭”仅禁用此物品. 需要重启; 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
+   },
+   "Sandbox_RVInterior_RVLootPowerManual": {
+    "en": "RV Power Manual loot",
+    "ch": "房車電力手冊戰利品",
+    "cn": "房车电力手册战利品"
+   },
+   "Sandbox_RVInterior_RVLootPowerManual_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_RVInterior_RVLootPowerManual_option2": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "Sandbox_RVInterior_RVLootPowerManual_option3": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "Sandbox_RVInterior_RVLootPowerManual_option4": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "Sandbox_RVInterior_RVLootPowerManual_option5": {
+    "en": "Heavy",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_RVInterior_RVLootPowerManual_tooltip": {
+    "en": "Medium is half the old common-loot weights; Heavy is the old common-loot weight. Off disables this item only. Restart required; existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
+    "ch": "「中」為舊版一般戰利品權重的一半; 「大量」等同舊版一般戰利品權重. 「關閉」只會停用此物品. 需要重新啟動; 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
+    "cn": "“中”为旧版常规战利品权重的一半; “大量”等同旧版常规战利品权重. “关闭”仅禁用此物品. 需要重启; 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
+   },
+   "Sandbox_RVInterior_RVLootShoreCable": {
+    "en": "Shore power cable loot",
+    "ch": "岸電電纜戰利品",
+    "cn": "岸电电缆战利品"
+   },
+   "Sandbox_RVInterior_RVLootShoreCable_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_RVInterior_RVLootShoreCable_option2": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "Sandbox_RVInterior_RVLootShoreCable_option3": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "Sandbox_RVInterior_RVLootShoreCable_option4": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "Sandbox_RVInterior_RVLootShoreCable_option5": {
+    "en": "Heavy",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_RVInterior_RVLootShoreCable_tooltip": {
+    "en": "Medium is half the old common-loot weights; Heavy is the old common-loot weight. Off disables this item only. Restart required; existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
+    "ch": "「中」為舊版一般戰利品權重的一半; 「大量」等同舊版一般戰利品權重. 「關閉」只會停用此物品. 需要重新啟動; 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
+    "cn": "“中”为旧版常规战利品权重的一半; “大量”等同旧版常规战利品权重. “关闭”仅禁用此物品. 需要重启; 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
+   },
+   "Sandbox_RVInterior_RVLootShorePedestal": {
+    "en": "Shore power pedestal loot",
+    "ch": "岸電樁戰利品",
+    "cn": "岸电桩战利品"
+   },
+   "Sandbox_RVInterior_RVLootShorePedestal_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_RVInterior_RVLootShorePedestal_option2": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "Sandbox_RVInterior_RVLootShorePedestal_option3": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "Sandbox_RVInterior_RVLootShorePedestal_option4": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "Sandbox_RVInterior_RVLootShorePedestal_option5": {
+    "en": "Heavy",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_RVInterior_RVLootShorePedestal_tooltip": {
+    "en": "Independent roll per suitable shop/warehouse container with free space: Off 0 percent, Low 5 percent, Medium 10 percent, High 15 percent, Heavy 20 percent. Existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
+    "ch": "每個有空位的合適商店/倉庫容器各自獨立擲骰, 機率為: 「關閉」0, 「低」5, 「中」10, 「高」15, 「大量」20 (百分比). 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
+    "cn": "每个有空余空间的合适商店/仓库容器各自独立判定, 几率为: “关闭”0, “低”5, “中”10, “高”15, “大量”20 (百分比). 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
+   },
+   "Sandbox_RVInterior_RVPowerLootMultiplier": {
+    "en": "RV power loot spawn multiplier",
+    "ch": "房車電力物品戰利品生成倍率",
+    "cn": "房车电力物品战利品生成倍率"
+   },
+   "Sandbox_RVInterior_RVPowerLootMultiplier_tooltip": {
+    "en": "Scales all RV power-item loot. 0 disables future spawns; 0.5 halves them; 1 is normal; 2 doubles them. Common loot is now 50 percent lower. Battery bay, shore pedestal and marine battery rolls are still 10 percent each at 1. Restart the server or single-player game for common-loot changes. Existing loot is untouched.",
+    "ch": "調整所有房車電力物品的戰利品數量. 0 會停止日後生成; 0.5 減半; 1 為正常; 2 加倍. 一般戰利品現在減少百分之五十. 倍率為 1 時, 電池艙、岸電樁與船用電池的擲骰機率仍各為百分之十. 一般戰利品的變更需重新啟動伺服器或單人遊戲才會生效. 已生成的戰利品不受影響.",
+    "cn": "调整所有房车电力物品的战利品数量. 0 会停止今后的生成; 0.5 减半; 1 为正常; 2 加倍. 常规战利品现在减少百分之五十. 倍率为 1 时, 电池舱、岸电桩和船用电池的判定几率仍各为百分之十. 常规战利品的更改需要重启服务器或单人游戏才会生效. 已生成的战利品不受影响."
+   },
+   "Sandbox_GridInventory_IgnoreCarryWeight": {
+    "en": "Ignore Carry Weight (single player)",
+    "ch": "忽略負重 (單人遊戲)",
+    "cn": "忽略负重 (单人游戏)"
+   },
+   "Sandbox_GridInventory_IgnoreCarryWeight_tooltip": {
+    "en": "Single player only. Containers stop checking weight capacity: only grid space limits what fits, like in Inventory Tetris. A bag with free slots accepts an item of any weight. Off by default. Has no effect in multiplayer (the server validates weight).",
+    "ch": "僅限單人遊戲. 容器不再檢查重量容量: 只有網格空間決定能放入什麼, 就像 Inventory Tetris 一樣. 有空格的背包可接受任何重量的物品. 預設關閉. 在多人遊戲中無效 (由伺服器驗證重量).",
+    "cn": "仅限单人游戏. 容器不再检查重量容量: 只有网格空间决定能放入什么, 就像 Inventory Tetris 一样. 有空格的背包可接受任意重量的物品. 默认关闭. 在多人游戏中无效 (由服务器验证重量)."
+   },
+   "Sandbox_GridInventory_OverflowGraceMs": {
+    "en": "Overflow Grace Time (ms)",
+    "ch": "溢出區寬限時間 (毫秒)",
+    "cn": "溢出区宽限时间 (毫秒)"
+   },
+   "Sandbox_GridInventory_OverflowGraceMs_tooltip": {
+    "en": "Classic mode only. How long (in milliseconds, with no action running) an item can stay in the overflow before the auto-drop moves it. Gives time for chained actions such as crafting. 0 = move immediately.",
+    "ch": "僅限經典模式. 物品在溢出區中可停留多久 (毫秒, 且沒有動作進行時), 之後才會被自動丟棄移走. 讓製作等連續動作有時間完成. 0 = 立即移走.",
+    "cn": "仅限经典模式. 物品在溢出区中可停留多久 (毫秒, 且没有动作进行时), 之后才会被自动丢弃移走. 让制作等连续动作有时间完成. 0 = 立即移走."
+   },
+   "Sandbox_GridInventory_OverflowMode": {
+    "en": "Overflow Behavior",
+    "ch": "溢出區行為",
+    "cn": "溢出区行为"
+   },
+   "Sandbox_GridInventory_OverflowMode_option1": {
+    "en": "Classic (grace time, then auto-drop)",
+    "ch": "經典 (寬限時間後自動丟棄)",
+    "cn": "经典 (宽限时间后自动丢弃)"
+   },
+   "Sandbox_GridInventory_OverflowMode_option2": {
+    "en": "Strict (refuse items that do not fit)",
+    "ch": "嚴格 (拒收放不下的物品)",
+    "cn": "严格 (拒收放不下的物品)"
+   },
+   "Sandbox_GridInventory_OverflowMode_option3": {
+    "en": "Keep (overflow stays, no sprint)",
+    "ch": "保留 (溢出區保留, 無法衝刺)",
+    "cn": "保留 (溢出区保留, 无法冲刺)"
+   },
+   "Sandbox_GridInventory_OverflowMode_tooltip": {
+    "en": "What happens to items that do not fit in your inventory grid.\n\nClassic: they wait in a red overflow list, then are moved to another bag or dropped on the floor after a short grace time. The context menu works on overflow items.\n\nStrict (hardcore): there is no overflow. Items that do not fit are refused before the transfer starts; anything that still gets in (crafting results, unequipped gear) is dropped on the floor at once. No context menu on overflow items.\n\nKeep (medium): the overflow list is never cleared automatically. No context menu, and you cannot sprint while there are items in the overflow.",
+    "ch": "無法放入你的物品欄網格的物品會如何處理.\n\n經典: 物品會先待在紅色的溢出區清單中, 經過短暫的寬限時間後, 移到其他背包或丟到地上. 溢出區物品可使用右鍵選單.\n\n嚴格 (硬核): 沒有溢出區. 放不下的物品會在轉移開始前被拒收; 仍然進來的物品 (製作成品, 卸下的裝備) 會立即丟到地上. 溢出區物品無法使用右鍵選單.\n\n保留 (中等): 溢出區清單永遠不會自動清空. 無法使用右鍵選單, 且溢出區中有物品時你無法衝刺.",
+    "cn": "无法放入你的物品栏网格的物品会如何处理.\n\n经典: 物品会先停留在红色的溢出区列表中, 经过短暂的宽限时间后, 移到其他背包或丢到地上. 溢出区物品可使用右键菜单.\n\n严格 (硬核): 没有溢出区. 放不下的物品会在转移开始前被拒收; 仍然进入的物品 (制作成品, 卸下的装备) 会立即丢到地上. 溢出区物品无法使用右键菜单.\n\n保留 (中等): 溢出区列表永远不会自动清空. 无法使用右键菜单, 且溢出区中有物品时你无法冲刺."
+   },
+   "Sandbox_ProjectALife.Assassins_GapHours": {
+    "en": "Outpost hunting crews: game hours between",
+    "ch": "前哨站獵殺隊: 間隔遊戲內小時",
+    "cn": "哨所猎杀队: 间隔游戏内小时"
+   },
+   "Sandbox_ProjectALife.Assassins_GapHours_tooltip": {
+    "en": "Game hours between hunts sent by each hostile outpost. From day 7, after dark, one crew per player. Uses faction sightings refreshed every 24 game hours. At 0, off.\nDefault 72.",
+    "ch": "每個敵對前哨站派出獵殺行動之間間隔的遊戲內小時. 從第7天起於入夜後出動, 每位玩家一支隊伍. 依據每24遊戲內小時更新一次的陣營目擊紀錄. 設為0時關閉.\n預設: 72.",
+    "cn": "每个敌对哨所派出猎杀行动之间间隔的游戏内小时. 从第7天起于入夜后出动, 每名玩家一支队伍. 依据每24游戏内小时更新一次的阵营目击记录. 设为0时关闭.\n默认: 72."
+   },
+   "Sandbox_ProjectALife.Audio_NpcFootsteps": {
+    "en": "NPC footsteps volume (percent)",
+    "ch": "NPC腳步聲音量 (百分比)",
+    "cn": "NPC脚步声音量 (百分比)"
+   },
+   "Sandbox_ProjectALife.Audio_NpcFootsteps_tooltip": {
+    "en": "Volume of human footsteps for nearby A-Life survivors on this computer. Set 0 to turn them off. Does not change noise heard by zombies.\nDefault 100.",
+    "ch": "這台電腦上附近 A-Life 倖存者的人類腳步聲音量. 設為0可關閉. 不會改變殭屍聽到的噪音.\n預設: 100.",
+    "cn": "这台电脑上附近 A-Life 幸存者的人类脚步声音量. 设为0可关闭. 不会改变僵尸听到的噪音.\n默认: 100."
+   },
+   "Sandbox_ProjectALife.Combat_SniperAwareness": {
+    "en": "Distant gunfire reactions (percent)",
+    "ch": "遠距槍擊反應 (百分比)",
+    "cn": "远距离枪击反应 (百分比)"
+   },
+   "Sandbox_ProjectALife.Combat_SniperAwarenessTiles": {
+    "en": "Distant gunfire: minimum range",
+    "ch": "遠距槍擊: 最短距離",
+    "cn": "远距离枪击: 最短距离"
+   },
+   "Sandbox_ProjectALife.Combat_SniperAwarenessTiles_tooltip": {
+    "en": "Shots from at least this many tiles can trigger distant-fire reactions. Scoped rifles can qualify closer; normal sight and ownership checks still apply.\nDefault 40.",
+    "ch": "至少從這麼多格外射擊, 才能觸發遠距槍擊反應. 裝有瞄準鏡的步槍在較近距離也可能符合條件; 一般的視線與歸屬判定仍然適用.\n預設: 40.",
+    "cn": "至少从这么多格外射击, 才能触发远距离枪击反应. 装有瞄准镜的步枪在较近距离也可能符合条件; 常规的视线与归属判定仍然适用.\n默认: 40."
+   },
+   "Sandbox_ProjectALife.Combat_SniperAwareness_tooltip": {
+    "en": "Chance to react to a distant hit, close bullet crack or witnessed killing. People need a real cue, not knowledge of a hidden shooter. Set 0 to disable.\nDefault 100.",
+    "ch": "對遠處命中, 近距離子彈破空聲或目擊殺人做出反應的機率. 人們需要真正的線索, 而不是憑空得知隱藏的槍手. 設為0可停用.\n預設: 100.",
+    "cn": "对远处命中, 近距离子弹破空声或目击杀人做出反应的概率. 人们需要真实的线索, 而不是凭空得知隐藏的枪手. 设为0可禁用.\n默认: 100."
+   },
+   "Sandbox_ProjectALife.Late_FactionStartDay": {
+    "en": "Late factions: earliest day",
+    "ch": "後期陣營: 最早出現日",
+    "cn": "后期阵营: 最早出现日"
+   },
+   "Sandbox_ProjectALife.Late_FactionStartDay_tooltip": {
+    "en": "Earliest world day for the new raider and hazmat factions. Special forces have a separate earliest day. At 0, no minimum day applies.\nDefault 14.",
+    "ch": "新的掠奪者與防化陣營最早出現的世界天數. 特種部隊另有獨立的最早出現日. 設為0時不設最低天數.\n預設: 14.",
+    "cn": "新的掠夺者和防化阵营最早出现的世界天数. 特种部队另有单独的最早出现日. 设为0时不设最低天数.\n默认: 14."
+   },
+   "Sandbox_ProjectALife.Late_FactionsEnabled": {
+    "en": "Late hostile factions",
+    "ch": "後期敵對陣營",
+    "cn": "后期敌对阵营"
+   },
+   "Sandbox_ProjectALife.Late_FactionsEnabled_tooltip": {
+    "en": "Adds rare, tougher hostile factions after their earliest day. Their weapons and clothing use existing game items. Off keeps these new factions out.\nDefault on.",
+    "ch": "在各自的最早出現日之後, 加入稀有且更強悍的敵對陣營. 他們的武器與衣物都使用遊戲既有物品. 關閉則不會出現這些新陣營.\n預設: 開啟.",
+    "cn": "在各自的最早出现日之后, 加入稀有且更强悍的敌对阵营. 他们的武器和衣物都使用游戏现有物品. 关闭则不会出现这些新阵营.\n默认: 开启."
+   },
+   "Sandbox_ProjectALife.Late_SpecialForcesStartDay": {
+    "en": "Special forces: earliest day",
+    "ch": "特種部隊: 最早出現日",
+    "cn": "特种部队: 最早出现日"
+   },
+   "Sandbox_ProjectALife.Late_SpecialForcesStartDay_tooltip": {
+    "en": "Earliest world day for rare four-to-six-person special forces groups. At 0, no minimum day applies; late hostile factions must still be enabled.\nDefault 21.",
+    "ch": "稀有的四到六人特種部隊團體最早出現的世界天數. 設為0時不設最低天數; 仍須啟用「後期敵對陣營」.\n預設: 21.",
+    "cn": "稀有的四到六人特种部队团体最早出现的世界天数. 设为0时不设最低天数; 仍须启用“后期敌对阵营”.\n默认: 21."
+   },
+   "Sandbox_ProjectALife.Late_WeaponScalePercent": {
+    "en": "Late weapon progression (percent)",
+    "ch": "後期武器成長 (百分比)",
+    "cn": "后期武器成长 (百分比)"
+   },
+   "Sandbox_ProjectALife.Late_WeaponScalePercent_tooltip": {
+    "en": "Scales later weapon, ammunition and armour progression for new groups after day 13. The early worn-weapon curve stays unchanged. Set 0 to disable this progression.\nDefault 100.",
+    "ch": "調整第13天後新團體在武器, 彈藥與護甲上的後期成長幅度. 前期的磨損武器曲線維持不變. 設為0可停用此成長.\n預設: 100.",
+    "cn": "调整第13天后新团体在武器, 弹药和护甲上的后期成长幅度. 前期的磨损武器曲线保持不变. 设为0可禁用此成长.\n默认: 100."
+   },
+   "Sandbox_ProjectALife.Offline_ApproachGapHours": {
+    "en": "Groups heading your way (game hours between)",
+    "ch": "朝你而來的團體 (間隔遊戲內小時)",
+    "cn": "朝你而来的团体 (间隔游戏内小时)"
+   },
+   "Sandbox_ProjectALife.Offline_ApproachGapHours_tooltip": {
+    "en": "Sets the daylight game hours between distant travelling groups (up to 1500 tiles away) heading for you and arriving out of sight. Hostile ones wait until day 3. At 0, off.\nDefault 6.",
+    "ch": "設定遠方漫遊團體 (最遠1500格外) 朝你前進並在視線外抵達的間隔, 以白天的遊戲內小時計. 敵對團體要等到第3天. 設為0時關閉.\n預設: 6.",
+    "cn": "设置远方漫游团体 (最远1500格外) 朝你前进并在视线外抵达的间隔, 以白天的游戏内小时计. 敌对团体要等到第3天. 设为0时关闭.\n默认: 6."
+   },
+   "Sandbox_ProjectALife.Outposts_BridgeHostile": {
+    "en": "Hostile military checkpoints",
+    "ch": "敵對軍方檢查站",
+    "cn": "敌对军方检查站"
+   },
+   "Sandbox_ProjectALife.Outposts_BridgeHostile_tooltip": {
+    "en": "Military checkpoint crews are hostile by default and warn once before firing. Off restores their careful stance. Earned relations and combat safety still apply.\nDefault on.",
+    "ch": "軍方檢查站人員預設為敵對, 開槍前會先警告一次. 關閉則恢復為謹慎態度. 已累積的關係與戰鬥安全機制仍然適用.\n預設: 開啟.",
+    "cn": "军方检查站人员默认为敌对, 开枪前会先警告一次. 关闭则恢复为谨慎态度. 已累积的关系与战斗安全机制仍然适用.\n默认: 开启."
+   },
+   "Sandbox_ProjectALife.Outposts_MegaEnabled": {
+    "en": "Large marching groups",
+    "ch": "大型行軍團體",
+    "cn": "大型行军团体"
+   },
+   "Sandbox_ProjectALife.Outposts_MegaEnabled_option1": {
+    "en": "Automatic: off on Light, on otherwise",
+    "ch": "自動: 難度為「容易」時關閉, 其他難度開啟",
+    "cn": "自动: 难度为“容易”时关闭, 其他难度开启"
+   },
+   "Sandbox_ProjectALife.Outposts_MegaEnabled_option2": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_ProjectALife.Outposts_MegaEnabled_option3": {
+    "en": "On",
+    "ch": "開啟",
+    "cn": "开启"
+   },
+   "Sandbox_ProjectALife.Outposts_MegaEnabled_tooltip": {
+    "en": "Automatic keeps these groups off on Light difficulty and on otherwise. Choose Off or On to override that rule in any world preset.\nDefault Automatic: off on Light, on otherwise (1).",
+    "ch": "「自動」會在難度為「容易」時關閉這些團體, 其他難度則開啟. 選擇「關閉」或「開啟」可在任何世界預設下覆寫此規則.\n預設: 自動: 難度為「容易」時關閉, 其他難度開啟 (1).",
+    "cn": "“自动”会在难度为“容易”时关闭这些团体, 其他难度则开启. 选择“关闭”或“开启”可在任何世界预设下覆盖此规则.\n默认: 自动: 难度为“容易”时关闭, 其他难度开启 (1)."
+   },
+   "Sandbox_ProjectALife.Outposts_MegaGapDays": {
+    "en": "Large marching groups: days between",
+    "ch": "大型行軍團體: 間隔遊戲內天數",
+    "cn": "大型行军团体: 间隔游戏内天数"
+   },
+   "Sandbox_ProjectALife.Outposts_MegaGapDays_tooltip": {
+    "en": "Game days between large-group departures from each outpost. They use existing people and weaken the site while away. Set 0 to stop departures.\nDefault 12.",
+    "ch": "每個前哨站派出大型團體之間間隔的遊戲內天數. 他們由現有人員組成, 外出期間據點會變弱. 設為0可停止出發.\n預設: 12.",
+    "cn": "每个哨所派出大型团体之间间隔的游戏内天数. 他们由现有人员组成, 外出期间据点会变弱. 设为0可停止出发.\n默认: 12."
+   },
+   "Sandbox_ProjectALife.Outposts_MegaMaxActive": {
+    "en": "Large marching groups: world limit",
+    "ch": "大型行軍團體: 全世界上限",
+    "cn": "大型行军团体: 全世界上限"
+   },
+   "Sandbox_ProjectALife.Outposts_MegaMaxActive_tooltip": {
+    "en": "Maximum large marching groups away at once, with one per faction. Set 0 to stop departures. The War Challenge raises the world limit to 2.\nDefault 1.",
+    "ch": "同時在外的大型行軍團體上限, 每個陣營一支. 設為0可停止出發. 「戰爭挑戰」會將全世界上限提高到2.\n預設: 1.",
+    "cn": "同时在外的大型行军团体上限, 每个阵营一支. 设为0可停止出发. “战争挑战”会将全世界上限提高到2.\n默认: 1."
+   },
+   "Sandbox_ProjectALife.Outposts_MegaMinAgeDays": {
+    "en": "Large marching groups: outpost age",
+    "ch": "大型行軍團體: 前哨站存在天數",
+    "cn": "大型行军团体: 哨所存在天数"
+   },
+   "Sandbox_ProjectALife.Outposts_MegaMinAgeDays_tooltip": {
+    "en": "An outpost must exist this many game days before sending a large group. At 0, a new site can qualify if it has enough people.\nDefault 10.",
+    "ch": "前哨站必須存在這麼多遊戲內天數, 才能派出大型團體. 設為0時, 只要人數足夠, 新據點也能符合條件.\n預設: 10.",
+    "cn": "哨所必须存在这么多游戏内天数, 才能派出大型团体. 设为0时, 只要人数足够, 新据点也能符合条件.\n默认: 10."
+   },
+   "Sandbox_ProjectALife.Outposts_MegaSize": {
+    "en": "Large marching groups: people",
+    "ch": "大型行軍團體: 人數",
+    "cn": "大型行军团体: 人数"
+   },
+   "Sandbox_ProjectALife.Outposts_MegaSize_tooltip": {
+    "en": "People combined from an outpost and its existing squads. A site without enough people cannot send the group. Rendering remains spread across frames.\nDefault 16.",
+    "ch": "由前哨站及其現有小隊合併組成的人數. 人數不足的據點無法派出該團體. 繪製仍會分散到多個影格進行.\n預設: 16.",
+    "cn": "由哨所及其现有小队合并组成的人数. 人数不足的据点无法派出该团体. 渲染仍会分散到多帧进行.\n默认: 16."
+   },
+   "Sandbox_ProjectALife.Outposts_TrioEnabled": {
+    "en": "Outposts send coordinated groups",
+    "ch": "前哨站派出協同團體",
+    "cn": "哨所派出协同团体"
+   },
+   "Sandbox_ProjectALife.Outposts_TrioEnabled_tooltip": {
+    "en": "Established outposts can send three existing squads together. Their people leave the site; this does not create extra survivors.\nDefault on.",
+    "ch": "已站穩腳步的前哨站可以同時派出三支現有小隊. 這些人員會離開據點; 不會額外產生倖存者.\n預設: 開啟.",
+    "cn": "已站稳脚跟的哨所可以同时派出三支现有小队. 这些人员会离开据点; 不会额外生成幸存者.\n默认: 开启."
+   },
+   "Sandbox_ProjectALife.Outposts_TrioGapDays": {
+    "en": "Coordinated groups: days between",
+    "ch": "協同團體: 間隔遊戲內天數",
+    "cn": "协同团体: 间隔游戏内天数"
+   },
+   "Sandbox_ProjectALife.Outposts_TrioGapDays_tooltip": {
+    "en": "Game days between coordinated departures from each outpost. Set 0 to stop these departures.\nDefault 5.",
+    "ch": "每個前哨站協同出發之間間隔的遊戲內天數. 設為0可停止這類出發.\n預設: 5.",
+    "cn": "每个哨所协同出发之间间隔的游戏内天数. 设为0可停止这类出发.\n默认: 5."
+   },
+   "Sandbox_ProjectALife.Outposts_TrioMaxActive": {
+    "en": "Coordinated groups: active sites",
+    "ch": "協同團體: 同時出動據點數",
+    "cn": "协同团体: 同时出动据点数"
+   },
+   "Sandbox_ProjectALife.Outposts_TrioMaxActive_tooltip": {
+    "en": "Maximum outposts with a coordinated group away at once. Set 0 to stop departures. The War Challenge raises this limit to 3.\nDefault 2.",
+    "ch": "同時有協同團體在外的前哨站數量上限. 設為0可停止出發. 「戰爭挑戰」會將此上限提高到3.\n預設: 2.",
+    "cn": "同时有协同团体在外的哨所数量上限. 设为0可停止出发. “战争挑战”会将此上限提高到3.\n默认: 2."
+   },
+   "Sandbox_ProjectALife.Outposts_TrioMinAgeDays": {
+    "en": "Coordinated groups: outpost age",
+    "ch": "協同團體: 前哨站存在天數",
+    "cn": "协同团体: 哨所存在天数"
+   },
+   "Sandbox_ProjectALife.Outposts_TrioMinAgeDays_tooltip": {
+    "en": "An outpost must exist this many game days before sending three squads. At 0, a new site can qualify if it has enough people.\nDefault 7.",
+    "ch": "前哨站必須存在這麼多遊戲內天數, 才能派出三支小隊. 設為0時, 只要人數足夠, 新據點也能符合條件.\n預設: 7.",
+    "cn": "哨所必须存在这么多游戏内天数, 才能派出三支小队. 设为0时, 只要人数足够, 新据点也能符合条件.\n默认: 7."
+   },
+   "Sandbox_ProjectALife.PresetWorld_option6": {
+    "en": "The War Challenge",
+    "ch": "戰爭挑戰",
+    "cn": "战争挑战"
+   },
+   "Sandbox_ProjectALife_2War": {
+    "en": "A-Life: War and reinforcements",
+    "ch": "A-Life: 戰爭與增援",
+    "cn": "A-Life: 战争与增援"
    }
   },
   "Tooltip.json": {
@@ -411637,6 +413537,41 @@
     "en": "A thin upright wooden post.",
     "ch": "一根細長直立的木柱.",
     "cn": "一根细长直立的木柱."
+   },
+   "Tooltip_40Silencer": {
+    "en": "Weapon attachment. No tool required. Requires threaded barrel. Will reduce the sound radius of .40 S&W, 9mm, .38 Special, .380 Auto, .25 Auto, and 22 LR firearms. Can be mounted most rifle calibers, but condition will degrade faster.",
+    "ch": "武器配件. 無需工具. 需要螺紋槍管. 將減少.40 S&W, 9mm, .38特製, .380自動, .25自動和.22 LR槍械的聲音半徑. 可以適配於大部分步槍口徑, 但耐久度會下降得更快.",
+    "cn": "武器配件. 无需工具. 需要螺纹枪管. 将减少.40 S&W, 9mm, .38特制, .380自动, .25自动和.22 LR枪械的声音半径. 可以适配于大部分步枪口径, 但耐久度会下降得更快."
+   },
+   "Tooltip_Plus2MagScrew": {
+    "en": "Weapon attachment. Requires a screwdriver to install. Increases magazine capacity by 2.",
+    "ch": "武器配件. 需要一把螺絲起子進行安裝. 彈匣容量增加2發.",
+    "cn": "武器配件. 需要一把螺丝刀进行安装. 弹匣容量增加2发."
+   },
+   "Tooltip_weapon_Magwell": {
+    "en": "Magwell Accessory",
+    "ch": "彈匣井配件",
+    "cn": "弹匣井配件"
+   },
+   "Tooltip_weapon_QDMount": {
+    "en": "Muzzle Adapter",
+    "ch": "槍口轉接座",
+    "cn": "枪口转接座"
+   },
+   "Tooltip_weapon_Receiver2": {
+    "en": "Receiver Accessory",
+    "ch": "機匣配件",
+    "cn": "机匣配件"
+   },
+   "Tooltip_LCC_CocoaSyrupRack": {
+    "en": "20 servings of cocoa syrup. Each mocha, frappe or affogato uses one serving. When depleted, the rack is returned and can be refilled with cocoa powder.",
+    "ch": "20 份可可糖漿. 每杯摩卡、冰沙咖啡或阿芙佳朵消耗一份. 用完後會歸還糖漿架, 可再用可可粉補充.",
+    "cn": "20 份可可糖浆. 每杯摩卡、冰沙咖啡或阿芙佳朵消耗一份. 用完后会返还糖浆架, 可用可可粉重新补充."
+   },
+   "Tooltip_LCC_SyrupRack": {
+    "en": "A refillable syrup rack. Add cocoa powder to use it in mocha, frappe and affogato recipes.",
+    "ch": "可重複補充的糖漿架. 加入可可粉後即可用於摩卡、冰沙咖啡與阿芙佳朵的配方.",
+    "cn": "可重复补充的糖浆架. 加入可可粉后即可用于摩卡、冰沙咖啡和阿芙佳朵的配方."
    }
   },
   "UI.json": {
@@ -455029,9 +456964,9 @@
     "cn": "连接房车"
    },
    "UI_ArcadiaPower_ConnectSteps": {
-    "en": "1 Plug in cable  >  2 Connect RV  >  3 Start charging",
-    "ch": "1 插上電纜  >  2 連接房車  >  3 開始充電",
-    "cn": "1 插上电缆  >  2 连接房车  >  3 开始充电"
+    "en": "Use Connect Cable to link this RV.",
+    "ch": "使用「連接電纜」來連接此房車.",
+    "cn": "使用“连接电缆”来连接此房车."
    },
    "UI_ArcadiaPower_Control": {
     "en": "RV POWER",
@@ -455309,9 +457244,9 @@
     "cn": "移除电缆"
    },
    "UI_ArcadiaShore_RemoveCableFirst": {
-    "en": "Stop charging and remove the cable before moving the pedestal.",
-    "ch": "搬移岸電樁前請先停止充電並移除電纜.",
-    "cn": "搬移岸电桩前请先停止充电并移除电缆."
+    "en": "Disconnect the cable before moving the pedestal.",
+    "ch": "搬移岸電樁前請先斷開電纜.",
+    "cn": "搬移岸电桩前请先断开电缆."
    },
    "UI_ArcadiaShore_ReturnFailed": {
     "en": "Unable to return the cable. It remains safely in the pedestal.",
@@ -455492,6 +457427,66 @@
     "en": "Use generator for this RV pedestal",
     "ch": "將發電機用於此房車岸電樁",
     "cn": "将发电机用于此房车岸电桩"
+   },
+   "UI_ArcadiaPower_CableAtPedestal": {
+    "en": "Cable installed; use Connect Cable.",
+    "ch": "電纜已安裝; 請使用「連接電纜」.",
+    "cn": "电缆已安装; 请使用“连接电缆”."
+   },
+   "UI_ArcadiaPower_CableDisconnected": {
+    "en": "RV cable disconnected",
+    "ch": "房車電纜已斷開",
+    "cn": "房车电缆已断开"
+   },
+   "UI_ArcadiaPower_CableUnplugged": {
+    "en": "Cable unplugged",
+    "ch": "電纜已拔下",
+    "cn": "电缆已拔下"
+   },
+   "UI_ArcadiaPower_ConnectCable": {
+    "en": "Connect Cable",
+    "ch": "連接電纜",
+    "cn": "连接电缆"
+   },
+   "UI_ArcadiaPower_DisconnectCable": {
+    "en": "Disconnect Cable",
+    "ch": "斷開電纜",
+    "cn": "断开电缆"
+   },
+   "UI_ArcadiaPower_GridDrawCurrent": {
+    "en": "RV is on grid power; grid-fed appliances are not included in this reading.",
+    "ch": "房車正使用電網供電; 由電網供電的電器不計入此讀數.",
+    "cn": "房车正在使用电网供电; 由电网供电的电器不计入此读数."
+   },
+   "UI_ArcadiaPower_GridDrawNote": {
+    "en": "Grid-powered appliances are excluded from generator/battery readings.",
+    "ch": "由電網供電的電器不計入發電機/電池讀數.",
+    "cn": "由电网供电的电器不计入发电机/电池读数."
+   },
+   "UI_ArcadiaPower_GridDrawShort": {
+    "en": "Grid power",
+    "ch": "電網供電",
+    "cn": "电网供电"
+   },
+   "UI_ArcadiaPower_RVConnected": {
+    "en": "RV connected",
+    "ch": "房車已連接",
+    "cn": "房车已连接"
+   },
+   "UI_ArcadiaShore_InteriorPowerNotLoaded": {
+    "en": "Enter the RV once to finish initializing its power system, then refresh and connect again. No shore power was granted.",
+    "ch": "請先進入房車一次以完成其電力系統的初始化, 然後重新整理並再次連接. 未供應岸電.",
+    "cn": "请先进入房车一次以完成其电力系统的初始化, 然后刷新并重新连接. 未供应岸电."
+   },
+   "UI_ArcadiaShore_InteriorPowerNotReady": {
+    "en": "RV power has not finished loading or settling. Refresh and try connecting again; no power was granted.",
+    "ch": "房車電力尚未完成載入或結算. 請重新整理後再試著連接; 未供應任何電力.",
+    "cn": "房车电力尚未完成加载或结算. 请刷新后再尝试连接; 未供应任何电力."
+   },
+   "UI_ArcadiaShore_NoReadyBatteryBay": {
+    "en": "No battery bay is ready inside this RV. Place a Battery Bay if none is installed; otherwise enter the RV and let its contents load, then refresh and connect again.",
+    "ch": "此房車內沒有就緒的電池艙. 若尚未安裝, 請放置一座電池艙; 否則請進入房車並等待其內容物載入, 然後重新整理並再次連接.",
+    "cn": "此房车内没有就绪的电池舱. 若尚未安装, 请放置一座电池舱; 否则请进入房车并等待其内容加载完成, 然后刷新并重新连接."
    }
   },
   "MakeUp.json": {
