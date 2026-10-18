@@ -59849,5 +59849,215 @@
     "value": "简体中文翻译由 {Your Name} 提供",
     "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN 將原文佔位 {Your Name} 改成 {你的名字}, 未保留佔位名稱。",
     "as1_value": "简体中文翻译由 {你的名字} 提供"
+  },
+  "ItemName.json|Base.22Clip": {
+    "as1_value": "柯尔特王牌左轮手枪弹匣",
+    "value": ".22 LR弹匣",
+    "reason": "2026-10-19 owner 衝突裁決：Firearms 的 Colt Ace Magazine 是 .22 LR 的柯爾特王牌 (1911 式半自動手槍) 彈匣; Brita 統合版／Legacy 為 22-LR Magazine, 新 Brita Local 為 10/22/ZiP .22 LR 10 發彈匣. 現值「柯爾特王牌左輪手槍彈匣」對 Brita 不成立 (且王牌本身也不是左輪). 三方共同事實是 .22 LR 彈匣, 改為中性「.22 LR彈匣」."
+  },
+  "Tooltip.json|Tooltip_Bipod": {
+    "as1_value": "减少后坐力, 从而增加命中率",
+    "value": "减少后坐力. Brita: 作为固定式减后坐力配件, 不支持展开架设.",
+    "reason": "2026-10-19 owner 衝突裁決：Firearms 說兩腳架減少後坐力並因而提高命中率; 兩個 Brita 說它是固定式減後坐力配件, 不支援展開. 「從而增加命中率」只有 Firearms 明說, 改為共通句「減少後坐力」加 Brita 具名專屬句, 對全部 owner 都誠實. 英文三方皆無記號, 譯文亦無."
+  },
+  "Tooltip.json|Tooltip_HeavyBarrel": {
+    "as1_value": "精密重型枪管提高精度 (+5), 缓解后坐力 (-2)<br>惩罚瞄准时间 (+1)",
+    "value": "重型枪管, 可减少后坐力, 但瞄准较慢.<br>Brita: 精度 (+5), 后坐力 (-2), 瞄准时间 (+1)",
+    "reason": "2026-10-19 owner 衝突裁決：FRAcceptableGunsDemo 說重型槍管提高傷害射程、減少後坐力, 但上靶較慢且為開火必需; 兩個 Brita 說精度 +5、後坐力 -2、瞄準時間 +1. 現值 ch 是 FRA 版、cn 是 Brita 版, 兩邊不一致. 共通事實是減後坐力但瞄準較慢, 加 Brita 具名數值句; FRA 的英文在 Tooltip_EN.txt 死檔, 不出貨會露鍵名, 故翻譯. <br> 數量依 Brita 英文與現值為 1."
+  },
+  "ItemName.json|MarzGuns.50Magazine8_DEAGLE": {
+    "as1_value": ".50 AE 8发弹匣",
+    "value": ".50 AE 弹匣",
+    "reason": "2026-10-19 owner 衝突裁決：Guns of Marz 與 Brita Legacy 寫 .50 AE 8 發彈匣; 新 Brita Local 把同一物品改為沙漠之鷹 .50 AE 7 發彈匣 (其 DEagle_Hawk 容量為 7). 現值「8發」對 Local 不成立, 拿掉發數改為三方都成立的「.50 AE 彈匣」; 容量仍顯示在物品資訊."
+  },
+  "ItemName.json|MarzGuns.556x45Magazine60_STANAG": {
+    "as1_value": "5.56x45mm 60发并联式STANAG弹匣",
+    "value": "5.56x45mm 双联30发STANAG弹匣",
+    "reason": "2026-10-19 owner 衝突裁決：Guns of Marz／Legacy 是 60 發叢林式 (兩個 30 發並聯) STANAG 彈匣; 新 Brita Local 稱 STANAG 並聯彈匣 (一次只用 30 發那一側). 「60發」對 Local 會誤導, 改用兩方都成立的「雙聯30發」, 與同類鍵 MarzGuns.9x19Magazine60_MP5 的現行「雙聯30發彈匣」一致."
+  },
+  "Tooltip.json|Tooltip_ASP": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "近战武器. 此 B42 移植版未实现旧版 GunFighter 的特殊功能.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版說此舊版 GunFighter 功能在 B42 移植版已停用; 新 Brita Local 說這是近戰武器, GunFighter 的特殊變形未實作. 兩方意思相容; 現值只符合統合版. 改為共通句「近戰武器＋未實作舊版 GunFighter 特殊功能」, 對兩方都成立."
+  },
+  "Tooltip.json|Tooltip_Baton": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "近战武器. 此 B42 移植版未实现旧版 GunFighter 的特殊功能.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版說此舊版 GunFighter 功能在 B42 移植版已停用; 新 Brita Local 說這是近戰武器, GunFighter 的特殊握持模式未實作. 兩方意思相容; 現值只符合統合版. 改為共通句「近戰武器＋未實作舊版 GunFighter 特殊功能」, 對兩方都成立."
+  },
+  "Tooltip.json|Tooltip_BeLikeWater_Book": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "武术参考书.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版此鍵只寫「舊版 GunFighter 功能在 B42 移植版已停用」; 新 Brita Local 改為單純的物品描述 (Local: Martial arts reference book). 現值 (停用說明) 對 Local 不成立; Local 的描述只說明物品是什麼、不宣稱功能可用, 對統合版的同一物品也是事實, 故改用此中性描述."
+  },
+  "Tooltip.json|Tooltip_BoyScout_Book": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "户外求生参考书.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版此鍵只寫「舊版 GunFighter 功能在 B42 移植版已停用」; 新 Brita Local 改為單純的物品描述 (Local: Outdoor survival reference book). 現值 (停用說明) 對 Local 不成立; Local 的描述只說明物品是什麼、不宣稱功能可用, 對統合版的同一物品也是事實, 故改用此中性描述."
+  },
+  "Tooltip.json|Tooltip_Butterfly": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "近战武器. 此 B42 移植版未实现旧版 GunFighter 的特殊功能.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版說此舊版 GunFighter 功能在 B42 移植版已停用; 新 Brita Local 說這是近戰武器, GunFighter 的折疊與握持動作未實作. 兩方意思相容; 現值只符合統合版. 改為共通句「近戰武器＋未實作舊版 GunFighter 特殊功能」, 對兩方都成立."
+  },
+  "Tooltip.json|Tooltip_FNHerstal_Book": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "枪械参考书: FN Herstal 武器.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版此鍵只寫「舊版 GunFighter 功能在 B42 移植版已停用」; 新 Brita Local 改為單純的物品描述 (Local: Firearm reference book: FN Herstal weapons). 現值 (停用說明) 對 Local 不成立; Local 的描述只說明物品是什麼、不宣稱功能可用, 對統合版的同一物品也是事實, 故改用此中性描述."
+  },
+  "Tooltip.json|Tooltip_HecklerKoch_Book": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "枪械参考书: Heckler & Koch 武器.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版此鍵只寫「舊版 GunFighter 功能在 B42 移植版已停用」; 新 Brita Local 改為單純的物品描述 (Local: Firearm reference book: Heckler & Koch weapons). 現值 (停用說明) 對 Local 不成立; Local 的描述只說明物品是什麼、不宣稱功能可用, 對統合版的同一物品也是事實, 故改用此中性描述."
+  },
+  "Tooltip.json|Tooltip_Integral_Launcher": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "一体式榴弹发射器.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版此鍵只寫「舊版 GunFighter 功能在 B42 移植版已停用」; 新 Brita Local 改為單純的物品描述 (Local: Integrated grenade launcher). 現值 (停用說明) 對 Local 不成立; Local 的描述只說明物品是什麼、不宣稱功能可用, 對統合版的同一物品也是事實, 故改用此中性描述."
+  },
+  "Tooltip.json|Tooltip_Kalashnikov_Book": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "枪械参考书: AK 系步枪.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版此鍵只寫「舊版 GunFighter 功能在 B42 移植版已停用」; 新 Brita Local 改為單純的物品描述 (Local: Firearm reference book: AK-pattern rifles). 現值 (停用說明) 對 Local 不成立; Local 的描述只說明物品是什麼、不宣稱功能可用, 對統合版的同一物品也是事實, 故改用此中性描述."
+  },
+  "Tooltip.json|Tooltip_Karambit": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "近战武器. 此 B42 移植版未实现旧版 GunFighter 的特殊功能.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版說此舊版 GunFighter 功能在 B42 移植版已停用; 新 Brita Local 說這是近戰武器, GunFighter 的特殊握持模式未實作. 兩方意思相容; 現值只符合統合版. 改為共通句「近戰武器＋未實作舊版 GunFighter 特殊功能」, 對兩方都成立."
+  },
+  "Tooltip.json|Tooltip_Landmine": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "感应式地雷.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版此鍵只寫「舊版 GunFighter 功能在 B42 移植版已停用」; 新 Brita Local 改為單純的物品描述 (Local: Proximity mine). 現值 (停用說明) 對 Local 不成立; Local 的描述只說明物品是什麼、不宣稱功能可用, 對統合版的同一物品也是事實, 故改用此中性描述."
+  },
+  "Tooltip.json|Tooltip_NunChucks": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "近战武器. 此 B42 移植版未实现旧版 GunFighter 的特殊功能.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版說此舊版 GunFighter 功能在 B42 移植版已停用; 新 Brita Local 說這是近戰武器, GunFighter 的特殊握持模式未實作. 兩方意思相容; 現值只符合統合版. 改為共通句「近戰武器＋未實作舊版 GunFighter 特殊功能」, 對兩方都成立."
+  },
+  "Tooltip.json|Tooltip_Reloading_Component": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "弹药复装组件.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版此鍵只寫「舊版 GunFighter 功能在 B42 移植版已停用」; 新 Brita Local 改為單純的物品描述 (Local: Ammunition-reloading component). 現值 (停用說明) 對 Local 不成立; Local 的描述只說明物品是什麼、不宣稱功能可用, 對統合版的同一物品也是事實, 故改用此中性描述."
+  },
+  "Tooltip.json|Tooltip_Reloading_Manual": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "弹药复装参考手册.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版此鍵只寫「舊版 GunFighter 功能在 B42 移植版已停用」; 新 Brita Local 改為單純的物品描述 (Local: Ammunition-reloading reference manual). 現值 (停用說明) 對 Local 不成立; Local 的描述只說明物品是什麼、不宣稱功能可用, 對統合版的同一物品也是事實, 故改用此中性描述."
+  },
+  "Tooltip.json|Tooltip_Reloading_Press": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "弹药复装压机.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版此鍵只寫「舊版 GunFighter 功能在 B42 移植版已停用」; 新 Brita Local 改為單純的物品描述 (Local: Ammunition-reloading press). 現值 (停用說明) 對 Local 不成立; Local 的描述只說明物品是什麼、不宣稱功能可用, 對統合版的同一物品也是事實, 故改用此中性描述."
+  },
+  "Tooltip.json|Tooltip_Stoner_Book": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "枪械参考书: AR 系步枪.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版此鍵只寫「舊版 GunFighter 功能在 B42 移植版已停用」; 新 Brita Local 改為單純的物品描述 (Local: Firearm reference book: AR-pattern rifles). 現值 (停用說明) 對 Local 不成立; Local 的描述只說明物品是什麼、不宣稱功能可用, 對統合版的同一物品也是事實, 故改用此中性描述."
+  },
+  "Tooltip.json|Tooltip_Switch_Striker": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "替换用击发机构.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版此鍵只寫「舊版 GunFighter 功能在 B42 移植版已停用」; 新 Brita Local 改為單純的物品描述 (Local: Replacement firing mechanism). 現值 (停用說明) 對 Local 不成立; Local 的描述只說明物品是什麼、不宣稱功能可用, 對統合版的同一物品也是事實, 故改用此中性描述."
+  },
+  "Tooltip.json|Tooltip_Thrown": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "近战武器. 此 B42 移植版未实现旧版 GunFighter 的特殊功能.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版說此舊版 GunFighter 功能在 B42 移植版已停用; 新 Brita Local 說這是近戰武器, GunFighter 的獨立投擲模式未實作. 兩方意思相容; 現值只符合統合版. 改為共通句「近戰武器＋未實作舊版 GunFighter 特殊功能」, 對兩方都成立."
+  },
+  "Tooltip.json|Tooltip_Torch": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "简易火把.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版此鍵只寫「舊版 GunFighter 功能在 B42 移植版已停用」; 新 Brita Local 改為單純的物品描述 (Local: Improvised torch). 現值 (停用說明) 對 Local 不成立; Local 的描述只說明物品是什麼、不宣稱功能可用, 對統合版的同一物品也是事實, 故改用此中性描述."
+  },
+  "Tooltip.json|Tooltip_TriggerGroup_Select": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "选射扳机组.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版此鍵只寫「舊版 GunFighter 功能在 B42 移植版已停用」; 新 Brita Local 改為單純的物品描述 (Local: Selective-fire trigger group). 現值 (停用說明) 對 Local 不成立; Local 的描述只說明物品是什麼、不宣稱功能可用, 對統合版的同一物品也是事實, 故改用此中性描述."
+  },
+  "Tooltip.json|Tooltip_TriggerGroup_Target": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "精准扳机组.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版此鍵只寫「舊版 GunFighter 功能在 B42 移植版已停用」; 新 Brita Local 改為單純的物品描述 (Local: Precision trigger group). 現值 (停用說明) 對 Local 不成立; Local 的描述只說明物品是什麼、不宣稱功能可用, 對統合版的同一物品也是事實, 故改用此中性描述."
+  },
+  "Tooltip.json|Tooltip_WarSword": {
+    "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+    "value": "近战武器. 此 B42 移植版未实现旧版 GunFighter 的特殊功能.",
+    "reason": "2026-10-19 owner 衝突裁決：Brita 統合版說此舊版 GunFighter 功能在 B42 移植版已停用; 新 Brita Local 說這是近戰武器, GunFighter 的特殊握持模式未實作. 兩方意思相容; 現值只符合統合版. 改為共通句「近戰武器＋未實作舊版 GunFighter 特殊功能」, 對兩方都成立."
+  },
+  "Sandbox.json|Sandbox_Bandits.CorpseSwapper": {
+    "as1_value": "尝试移除定格的站立尸体",
+    "value": "尝试移除定格的站立尸体 [不起作用]",
+    "reason": "2026-10-19 owner 衝突裁決：Bandits 原版寫 'Attempt to remove frozen standing corpses', Tweaks 改標成 'Remove frozen standing corpses [DOES NOTHING]', 兩者是同一個沙盒選項. 已查 Bandits 原始碼: BanditUpdate.lua 中讀取 General_CorpseSwapper 的整段程式碼都在 --[[ ]] 註解內, 不論裝不裝 Tweaks 此選項都沒有作用. 加註「無作用」對兩方都是事實, 也和已出貨的 tooltip 一致."
+  },
+  "Sandbox.json|Sandbox_Bandits.OriginalBandits": {
+    "as1_value": "仅允许生成本地和其他模组的匪徒",
+    "value": "允许生成土匪模组自带的帮派",
+    "reason": "2026-10-19 owner 衝突裁決：同一個選項 Bandits.General_OriginalBandits. 已查 BanditCustom.lua: 開啟時才會載入 modid Bandits2 (即 Bandits 本體) 自帶的幫派檔, 本地與其他模組的匪徒不論開關都會載入. Bandits 原版英文 'Only LOCAL and other mod bandits allowed to spawn' 與實際效果相反, Tweaks 的 'Allow this mod's own gangs to spawn' 才正確. 依實際行為翻譯對兩方都成立, 現值則照抄了相反的說法, 對兩方都會誤導."
+  },
+  "Sandbox.json|Sandbox_HomeInventory_MaxZonesPerPlayer": {
+    "as1_value": "每位玩家的最大区域数",
+    "value": "最大区域数量",
+    "reason": "2026-10-19 owner 衝突裁決：原版 Home Inventory 以每位玩家計算 'Maximum Zones Per Player', NeatUI 分支在多人模式改以每個安全屋計算. 現值「每位玩家」對分支版不成立. 標題拿掉計算單位後兩方都成立, 計算方式交給 tooltip 分別說明."
+  },
+  "Sandbox.json|Sandbox_HomeInventory_MaxZonesPerPlayer_tooltip": {
+    "as1_value": "每位玩家最多可创建的家庭区域数量. 调低此设置不会移除已存在的区域.",
+    "value": "可创建的家庭区域数量上限. 调低此设置不会移除已有的区域. 原版 Home Inventory: 按每位玩家计算. NeatUI 分支: 多人模式按每个安全屋计算, 单人模式按整个世界计算.",
+    "reason": "2026-10-19 owner 衝突裁決：兩方都是區域數量上限, 且都寫明調低不會移除既有區域, 這是共通句. 差別只在計算單位 (原版每位玩家, 分支多人每個安全屋/單人每個世界), 以具名句分別寫出, 兩方都誠實."
+  },
+  "UI.json|UI_HomeInventory_DeleteAllConfirm": {
+    "as1_value": "删除此存档中的所有家庭库存数据, 包括属于其他玩家的数据? 此操作无法撤销.",
+    "value": "删除此存档中所有的家庭库存区域和缓存, 包括属于其他玩家的部分? 此操作无法撤销.",
+    "reason": "2026-10-19 owner 衝突裁決：兩方都是刪除整個存檔的全部 Home Inventory 資料 (原版說 data, 也就是區域與快取; 分支說 zones and caches, 含多人模式每個安全屋). 分支刪除所有安全屋的資料, 必然也包括其他玩家的部分, 所以此寫法兩方都成立. 現值本身也大致通用, 但改寫成區域與快取更貼近分支英文."
+  },
+  "UI.json|UI_HomeInventory_DeleteCharacterConfirm": {
+    "as1_value": "删除属于此角色的所有家庭库存数据? 此操作无法撤销.",
+    "value": "删除属于此角色的家庭库存数据? 此操作无法撤销. NeatUI 分支: 单人模式会永久删除你的区域和缓存, 多人模式只清除个人探索数据, 共享的安全屋区域会保留.",
+    "reason": "2026-10-19 owner 衝突裁決：原版刪除此角色的全部資料; 分支單人刪除區域與快取, 多人只清個人探索資料並保留共用安全屋區域. 現值「所有資料」對分支多人模式不成立. 共通句改為刪除屬於此角色的資料 (共用安全屋區域不屬於個人, 兩方都成立), 分支差異以具名句說明."
+  },
+  "UI.json|UI_HomeInventory_DeleteCharacterDataTooltip": {
+    "as1_value": "删除属于当前角色的家庭库存区域和缓存内容.",
+    "value": "删除属于当前角色的家庭库存数据. NeatUI 分支: 单人模式删除区域和缓存内容, 多人模式只清除个人探索数据, 保留共享的安全屋区域.",
+    "reason": "2026-10-19 owner 衝突裁決：原版刪除目前角色的區域與快取; 分支在多人模式保留共用安全屋區域. 現值寫死「區域與快取」對分支多人模式不成立, 共通句改為角色資料, 分支行為以具名句寫出."
+  },
+  "UI.json|UI_HomeInventory_ZoneManagerDesc": {
+    "as1_value": "家庭区域用于标记你的基地, 或基地内的区域.",
+    "value": "家庭区域用于标记你的基地, 或基地内的区域. NeatUI 分支: 多人模式下区域必须位于你的安全屋内, 并与安全屋所有者及成员共享.",
+    "reason": "2026-10-19 owner 衝突裁決：兩方都說區域用於標記基地內的範圍, 現值共通句對兩方都成立. 分支多了多人模式須在安全屋內且共用的限制, 以具名句補上, 原版玩家看到也不會誤會自己的行為."
+  },
+  "IG_UI.json|IGUI_Breed_brown": {
+    "as1_value": "小卡犬",
+    "value": "棕色",
+    "reason": "2026-10-19 owner 衝突裁決：Companion Dogs 的 'Caramelo' 是焦糖色的巴西土狗, HydeCo 河狸與青蛙的 'Brown' 是棕色毛色/體色. 現值「小卡犬」對河狸與青蛙完全錯誤. 「棕色」對焦糖色的狗也是事實描述, 三方都成立."
+  },
+  "Sandbox.json|Sandbox_ClaimableOutposts": {
+    "as1_value": "可占领前哨站",
+    "value": "前哨站",
+    "reason": "2026-10-19 owner 衝突裁決：這是沙盒分頁標題, 兩方各寫自己的 MOD 名 Claimable Outposts / Dynamic Outposts. 現值「可佔領前哨站」是其中一方的名稱, 比照 EatSmart 前例改用兩方共通的中性名稱."
+  },
+  "UI.json|UI_options_claimableoutposts_attackMoodles_tooltip": {
+    "as1_value": "显示或隐藏已占领前哨站的尸潮和强盗攻击图标. 仅客户端生效.",
+    "value": "显示或隐藏前哨站遭受攻击时的状态图标. 仅客户端生效.",
+    "reason": "2026-10-19 owner 衝突裁決：Claimable 有屍潮與強盜兩種攻擊圖示, Dynamic 只有屍潮攻擊圖示. 現值提到強盜對 Dynamic 不成立; 不列攻擊種類的寫法對兩方都成立."
+  },
+  "UI.json|UI_options_claimableoutposts_mapIcons_tooltip": {
+    "as1_value": "在世界地图上显示或隐藏可占领前哨站图标. 仅客户端生效.",
+    "value": "在世界地图上显示或隐藏前哨站图标. 仅客户端生效.",
+    "reason": "2026-10-19 owner 衝突裁決：兩方英文只差 MOD 名. 現值「可佔領前哨站圖示」帶了其中一方的名稱, 改為中性的前哨站圖示."
+  },
+  "UI.json|UI_options_claimableoutposts_name": {
+    "as1_value": "可占领前哨站",
+    "value": "前哨站",
+    "reason": "2026-10-19 owner 衝突裁決：模組選項分頁名稱, 兩方各寫自己的 MOD 名. 同 Sandbox_ClaimableOutposts, 改為兩方共通的「前哨站」."
+  },
+  "UI.json|UI_options_claimableoutposts_threatDifficulty_tooltip": {
+    "as1_value": "在单人/本地游戏中缩放感染威胁、战利品计时、强盗前哨站守卫、友好前哨站幸存者和强盗袭击者.",
+    "value": "在单人/本地游戏中缩放感染威胁和战利品计时. Claimable Outposts: 还会缩放强盗前哨站守卫、友好前哨站幸存者和强盗袭击者.",
+    "reason": "2026-10-19 owner 衝突裁決：兩方都縮放感染威脅與戰利品計時, 這是共通句; 強盜守衛, 友好倖存者, 強盜襲擊者只有 Claimable 有, 以具名句補上. 現值把強盜相關項目寫成通用, 對 Dynamic 不成立."
+  },
+  "IG_UI.json|IGUI_perks_MartialArts_Description": {
+    "as1_value": "提高使用武术缠手带战斗时的伤害. 通过成功击中目标获取经验.",
+    "value": "提升武术战斗能力. 通过成功击中目标获得经验. I Am Bruce Lee Now: 提高使用武术缠手带战斗时的伤害. Bruce Lee's Nunchaku: 强化受支持的武术流派所用的战斗技巧.",
+    "reason": "2026-10-19 owner 衝突裁決：兩方都是武術技能說明, 且都靠擊中目標獲得經驗 (Nunchaku 寫 damaging strikes, 擊中造成傷害仍屬擊中), 這兩句為共通句. 現值「纏手帶傷害」只符合 I Am Bruce Lee Now, 兩方的具體效果以具名句分別寫出."
   }
 }

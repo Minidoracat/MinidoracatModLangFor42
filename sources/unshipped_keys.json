@@ -1649,6 +1649,66 @@
    "as1_value": "将所有 MFS 枪械加入民用枪械刷新地点",
    "owner_signature": "2370c02745c2ed01",
    "reason": "2026-10-14 #854 裁決不出貨：同一沙盒變數在兩方意義互斥——EFK（3633421539）仍是「將所有 MFS 槍械加入民用槍械地點」且有作用（MFS_CivilianOnlyLoot.lua 讀取），MFS 社群修正版（3780151182）已改為無作用的舊選項、標題寫「(已移至 MFS 4 - 掉落規則) 槍店展示櫃」（GunSpawns.lua 註明 now inert）。沒有對兩方都成立的中性譯名。兩方都在有效分支 42 的 Translate/EN/Sandbox.json 定義此鍵且自帶 CH／CN，抑制後玩家看到各自 MOD 自帶的中文或英文。"
+  },
+  "Tooltip.json|Tooltip_Grenade": {
+   "as1_value": "装备在主手并进行普通攻击以拔销投掷. <br>可挂在织带槽上",
+   "owner_signature": "d5524f40a10136ba",
+   "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決不出貨：Rain's 說裝備後普通攻擊拔銷投擲、可掛織帶; Brita 統合版說此舊版 GunFighter 功能已停用; Brita Local 說裝備後瞄準並以攻擊鍵投擲. 「可用」與「已停用」互斥, 找不到對三方都誠實的說法. 不出貨後三方 (皆有 Tooltip.json) 各自顯示自己的英文, 無鍵名殘留."
+  },
+  "Tooltip.json|Tooltip_Revolver": {
+   "as1_value": ".45 ACP左轮手枪",
+   "owner_signature": "2a64f87c0d982be7",
+   "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決不出貨：Rain's 的 Tooltip_Revolver 是「.45 ACP 左輪手槍」; 兩個 Brita 的同鍵說明快速裝彈器與散彈由 B42 裝填系統處理, 且套用在多種口徑左輪上. 現值「.45 ACP左輪手槍」對 Brita 不成立, 中性的「左輪手槍」又失去兩方原意. 不出貨後 Rain's 與 Brita 都顯示自己 Tooltip.json 的英文."
+  },
+  "Tooltip.json|Tooltip_Archery_Component": {
+   "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+   "owner_signature": "97de8178c455c57e",
+   "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決不出貨：Brita 統合版說此功能已停用或不支援; Local 說明箭／弩箭的組裝配方 (Crafting > Weaponry, 需箭桿、箭頭、三片羽毛與膠水). 兩方對功能能否使用的說法互斥, 只翻共同名詞又會丟掉 Local 的操作說明, 找不到誠實又有用的中性譯文. 不出貨後兩方 (皆有 Tooltip.json) 各自顯示自己的英文, 無鍵名殘留."
+  },
+  "Tooltip.json|Tooltip_Attached_Launcher": {
+   "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+   "owner_signature": "2f722bfa0266a8b6",
+   "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決不出貨：Brita 統合版說此功能已停用或不支援; Local 說明下掛榴彈發射器安裝後以 U 鍵切換並裝填射擊. 兩方對功能能否使用的說法互斥, 只翻共同名詞又會丟掉 Local 的操作說明, 找不到誠實又有用的中性譯文. 不出貨後兩方 (皆有 Tooltip.json) 各自顯示自己的英文, 無鍵名殘留."
+  },
+  "Tooltip.json|Tooltip_Claymore": {
+   "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+   "owner_signature": "6be0b9d42ab56303",
+   "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決不出貨：Brita 統合版說此功能已停用或不支援; Local 詳述闊刀地雷的放置、感應／定時／遙控模式切換. 兩方對功能能否使用的說法互斥, 只翻共同名詞又會丟掉 Local 的操作說明, 找不到誠實又有用的中性譯文. 不出貨後兩方 (皆有 Tooltip.json) 各自顯示自己的英文, 無鍵名殘留."
+  },
+  "Tooltip.json|Tooltip_FirstBlood_Book": {
+   "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+   "owner_signature": "af79c7191319caaf",
+   "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決不出貨：Brita 統合版說此功能已停用或不支援; Local 說此書教授箭與弩箭的組裝與回收配方 (木工 2／3). 兩方對功能能否使用的說法互斥, 只翻共同名詞又會丟掉 Local 的操作說明, 找不到誠實又有用的中性譯文. 不出貨後兩方 (皆有 Tooltip.json) 各自顯示自己的英文, 無鍵名殘留."
+  },
+  "Tooltip.json|Tooltip_M203": {
+   "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+   "owner_signature": "dd92a9b701dc4b27",
+   "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決不出貨：Brita 統合版說此功能已停用或不支援; Local 說這是 40mm 榴彈發射器構型, 以一般武器操作裝填射擊. 兩方對功能能否使用的說法互斥, 只翻共同名詞又會丟掉 Local 的操作說明, 找不到誠實又有用的中性譯文. 不出貨後兩方 (皆有 Tooltip.json) 各自顯示自己的英文, 無鍵名殘留."
+  },
+  "Tooltip.json|Tooltip_M2A1_Can": {
+   "as1_value": "丙烷气瓶<br>-使用丙烷充填<br>-与火焰喷射器或彩弹枪配合使用",
+   "owner_signature": "4fd04554aebb67b0",
+   "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決不出貨：Brita 統合版／Legacy 說是以丙烷填充、供火焰噴射器或漆彈槍用的丙烷罐; 新 Brita Local 說是容量 100 單位的火焰噴射器燃料罐, 要拆 Flamethrower Fuel 經 Gunworks 裝填, 不是丙烷. 填充方式與用途說明互斥, 中性譯文會丟掉兩邊的操作資訊. 不出貨後兩方 (皆有 Tooltip.json) 各自顯示自己的英文, 無鍵名殘留."
+  },
+  "Tooltip.json|Tooltip_M2A1_Tank": {
+   "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+   "owner_signature": "b5fd7df17c2da528",
+   "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決不出貨：Brita 統合版說此功能已停用或不支援; Local 說是容量 240 單位的 M2A1 燃料箱, 經 Gunworks 裝填. 兩方對功能能否使用的說法互斥, 只翻共同名詞又會丟掉 Local 的操作說明, 找不到誠實又有用的中性譯文. 不出貨後兩方 (皆有 Tooltip.json) 各自顯示自己的英文, 無鍵名殘留."
+  },
+  "Tooltip.json|Tooltip_SKS": {
+   "as1_value": "整体式刺刀提供其模型与属性; 不支持单独展开.",
+   "owner_signature": "3f2a2c5de8a265b6",
+   "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決不出貨：Brita 統合版說此功能已停用或不支援; Local 說整體式刺刀要先在武器選單展開才能近戰; 統合版說整體式刺刀只提供模型與數值、不支援單獨展開. 兩方對功能能否使用的說法互斥, 只翻共同名詞又會丟掉 Local 的操作說明, 找不到誠實又有用的中性譯文. 不出貨後兩方 (皆有 Tooltip.json) 各自顯示自己的英文, 無鍵名殘留."
+  },
+  "Tooltip.json|Tooltip_StandAlone_Launcher": {
+   "as1_value": "旧版GunFighter功能. 该功能在当前B42移植版中已禁用.",
+   "owner_signature": "09cd057b98ff8382",
+   "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決不出貨：Brita 統合版說此功能已停用或不支援; Local 說是榴彈發射器, 以一般武器操作裝填射擊. 兩方對功能能否使用的說法互斥, 只翻共同名詞又會丟掉 Local 的操作說明, 找不到誠實又有用的中性譯文. 不出貨後兩方 (皆有 Tooltip.json) 各自顯示自己的英文, 無鍵名殘留."
+  },
+  "IG_UI.json|IGUI_perks_Martial Arts_Description": {
+   "as1_value": "提高使用武术缠手带战斗时的伤害. 通过成功击中目标获取经验.",
+   "owner_signature": "86f3fc939e1b7700",
+   "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決不出貨：三方說明差異很大: I Am Bruce Lee Now 是纏手帶傷害, Bruce Lee's Nunchaku 是支援流派的戰鬥技巧, Senators Martial Arts Core 是所有流派的攻速, 傷害, 耐力消耗加上隱藏熟練度與按 K 開介面, 且只有 Senator 含 <LINE>. 共通部分只剩空泛的一句, 加三段具名句又無法讓 <LINE> 數量同時符合三方英文. 不出貨後三方都有 JSON 英文, 各自看到自己 MOD 的英文說明."
   }
  }
 }
