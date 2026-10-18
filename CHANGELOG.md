@@ -4,6 +4,27 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 8 個 MOD 新增的繁簡中文，共 221 項。** HDs Food Recipes（#904，無花果、芝麻、橡實凍、南瓜、羅勒青醬、狗狗熱狗、提拉米蘇、辣味鮪魚飯等新料理與食材，以及它們的製作、風乾、壓榨與研磨配方和加料料理選單名，134 項）、Modern Firearms System Community Fix Patch（#907，M249 SAW 與 Mk46 輕機槍、200 發機槍彈箱、M249 的固定式／傘兵型／戰術槍托、兩腳架與槍托管轉接器、Trijicon ACOG 附 RMR 瞄準鏡、零件摺疊與展開動作、製作配方與生成機率設定，40 項）、Knox Buildworks（#906，建造狀態標籤、擦除工具在同格構件間切換的提示、匯入藍圖時缺模組／被停用／需要新版的警告、顯示未學會配方的選項，19 項）、Standardized Vehicle Upgrades 3 Core（#902，圓形與平板長條燈、三款計程車頂燈、11 款驕傲旗計程車廣告與改裝分類，18 項）、GridInventory（#908，組合選單、物品選單附帶 3D 預覽、開發工具的顯示方式選項，6 項）、Icons Inventory（#905，方向鍵循環切換容器，2 項），以及 Guns of 93（#900，HK93 細長護木）、True Music（#901，磁帶損壞時的角色台詞）各 1 項。
+  > 技術要點：全數落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫，新鍵皆以有效 CN 值登記 `ch_review_state`。3 路翻譯、3 路對抗複核提出 5 條修正全數採納（HDs Food Recipes 的生熱狗腸、它的烹煮提示與製作配方，簡中改用本體 `Base.Hotdog_single` 的官方譯名「烤肠」；海苔包辣味鮪魚飯與其配方的簡中，依本體 `Base.Seaweed` 改「海苔」）。SVU3 的 `IGUI_VehiclePartATA2RoofLightbarFlat1`／`Flat2` 依執行期 `IG_UI.json` 的英文翻譯（B42 不讀的 `IG_UI_EN.txt` 寫 Flat Lightbar 1／2，prep 取到的是這個死檔值）；Flat1 是上游把 `…LightbarFlat` 改名、英文仍是 Supernova Edge Lightbar，沿用舊譯「超新星鋒刃長條燈」。9 個 wid 以 steamcmd 重抓，14,917 筆文本 record 的值 hash 與 tracker state 全數相符。
+
+### Changed
+
+- **依上游英文改值重譯 7 項。** Guns of 93 4 項（#900，HK91／SR9／SAR-8 與 MP5／HK94 的圓形護木改名為細長護木，柯爾特 D 型框架的標靶握把改名為禮贈型握把）、HDs Food Recipes 2 項（#904，「提神人參茶」改為「人參茶 (耐力)」，物品與液體名同步）、Knox Buildworks 1 項（#906，規劃工具指南的擦除工具說明改為先移除外框標示的構件，同格有多個構件時用旋轉鍵往下切換）。
+  > 技術要點：皆屬 own 層，連 `en` 錨點更新並登記 `ch_review_state`。
+- **裁決 9 個多 MOD 共用鍵，皆維持原譯。** Standardized Vehicle Upgrades 3 Core 與 Infoteo's Vehicle Armor（#902）共用的 8 個車頂長條燈／旋轉警燈名稱與「改裝件安裝時間」沙盒標題：SVU3 只在 B42 不讀的 `IG_UI_EN.txt`／`Sandbox_EN.txt` 改了英文，遊戲實際載入的 `.json` 與 Infoteo's Vehicle Armor 完全相同，現行譯名對兩者都成立。
+  > 技術要點：`owner_conflict_decisions.json` 新增 9 筆 translate，signature 照 census 值計算（census 取到死檔英文，`reason` 記明執行期英文）；寫入前以 1,594 筆既有裁決自檢全符；`OWNER_CONFLICTS.md` 重生，尚未裁決的衝突由 306 降為 297。
+
+### Removed
+
+- **移除 1 項上游已刪除的原創翻譯。** Knox Buildworks 原版擴充的可建造物「堆疊鋼管」（#906），上游定義檔只剩已出貨的「鋼管堆」。
+  > 技術要點：`sources/en` 全庫與 tracker state 已無 owner，現行 Workshop 內容的定義檔與 Lua 也不再引用；`ch_review_state` 同步移除。
+
+其餘追蹤單無需另外變更翻譯：Frockin Shirts & Ties!（#903）的 1,096 筆新增與刪除，是作者把 `media/scripts` 改名為 `media/Scripts`，548 筆文本英文逐筆相同，已出貨譯文照常生效。SVU3 刪除的 `Base.ATARoofLightItem` 仍由 tsarslib 以 Roof lights 定義，譯文保留；`IGUI_VehiclePartATA2RoofLightbarFlat` 屬 As1 衍生層，Infoteo's Vehicle Armor 仍在使用，保留。HDs Food Recipes 刪除的 `Fluid_Container_Carton` 是本體鍵，本包本來就不出貨。Guns of 93 的 21 個生成器物品 DisplayName 上游漏了逗號，不列入缺口。
+
 ## [42.21.0-1.53.0] - 2026-10-17
 
 ### Added
