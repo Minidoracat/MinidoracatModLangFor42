@@ -722,7 +722,7 @@
 | [Infoteo Refill Propane Tanks](https://steamcommunity.com/sharedfiles/filedetails/?id=3662405609) | — | — | `Infoteorefillpropanetanks` | 4 | — | — |
 | [Yet Another Rest Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=3662567682) | — | — | `YetAnotherRestMod` | 18 | — | — |
 | [[B42.20] 1 Click Toogle Mask UI](https://steamcommunity.com/sharedfiles/filedetails/?id=3662976494) | — | — | `MaskToggleUI` | 3 | — | — |
-| [HDs Food Recipes](https://steamcommunity.com/sharedfiles/filedetails/?id=3663132395) | — | — | `HDsFoodRecipes` | 624 | ⚠️ ≥1 | — |
+| [HDs Food Recipes](https://steamcommunity.com/sharedfiles/filedetails/?id=3663132395) | — | — | `HDsFoodRecipes` | 624 | — | — |
 | [Xnertot Farmable Trees B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3663890932) | Xnertot 可種植果樹 | 新增蘋果、香蕉、櫻桃等多種果樹樹苗，可自行種植果樹並調整生長時間。 | `XnerTreeB42` | 59 | — | — |
 | [Hunter's Base B42〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3664225685) | 獵人基地 | 獵人基地據點地圖，提供標準版與小型版兩種配置。 | `Hunter'sBaseB42`, `Hunter'sBaseB42Small` | 2 | — | — |
 | [ERS - Energy Routing System](https://steamcommunity.com/sharedfiles/filedetails/?id=3665315101) | ERS - 能量路由系統 | 新增能量路由系統，可用電纜與控制器連接設備進行電力配送與管理。 | `EnergyRoutingSystem` | 152 | — | — |
