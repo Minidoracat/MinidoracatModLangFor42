@@ -20,7 +20,7 @@
   6. table.sort 禁用      — Kahlua 的 sort 是遞迴 quicksort（coroutine 堆疊上限 3000），
                            已排序輸入退化 O(n) 深度、數百筆即溢位；一律用迭代 merge sort
   7. MOD/ 樹雜物          — .omc/.claude/.gitnexus；Workshop 整包上傳不看 .gitignore
-  8. 佔位符殘留            — {{TOKEN}} 漏替換（略過根層 temp/、output/ 與各層 node_modules/）
+  8. 佔位符殘留            — {{TOKEN}} 漏替換（略過根層 temp/、output/、tracker-state/ 與各層 node_modules/）
   9. Steam 描述位元組      — 各語言 ≤8000 UTF-8 bytes（中日文 3 bytes/字，容易低估）
  10. 沙盒選項翻譯配對       — 每個 option 要有 Sandbox_<translation> 標題＋ _tooltip＋分頁名
  11. 公開文件洩漏掃描      — CHANGELOG bullet 與 STEAM_*.md 都會原樣貼到公開 Steam 頁；掃基礎設施
@@ -269,8 +269,10 @@ for base, dirs, files in os.walk(REPO):
     # 根層 temp/（E2E 產物）、output/（本機草稿）是 gitignored、不入版控也不上傳；node_modules/ 是相依套件。
     # 2026-10-19 Economy 的 temp/（3.4 萬檔）讓這一項跑 146 秒，LangFor42 的 output/ 草稿造成假 FAIL。
     # 依目錄名略過、不用「git 忽略的全略過」：AGENTS.md 也被 git 忽略，但 scaffold 後要檢查它的佔位符。
+    # 本 repo 另略過根層 tracker-state/：追蹤器產生的狀態檔（2026-10-19 共 118,973 檔、只有 1,442 個進版控），
+    # 不是 scaffold 會留下佔位符的地方；它讓這一項跑 555 秒，佔整支 verify 557 秒的九成九。
     dirs[:] = [d for d in dirs if d not in (".git", ".omc", ".claude", ".gitnexus", "__pycache__", "node_modules")
-               and not (base == REPO and d in ("temp", "output"))]
+               and not (base == REPO and d in ("temp", "output", "tracker-state"))]
     for name in files:
         p = os.path.join(base, name)
         if os.path.abspath(p) == SELF:
