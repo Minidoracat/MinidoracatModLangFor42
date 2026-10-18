@@ -32,30 +32,30 @@
     "Tooltip|Tooltip_LeadFishingbox": {
       "action": "translate",
       "signature": "182ed170ccd14fb5",
-      "reason": "2026-09-22 #501: 兩個 owner 均描述盒內裝有釣魚用途的鉛，僅英文措辭不同。",
+      "reason": "2026-09-22 #501: 兩個 owner 均描述盒內裝有釣魚用途的鉛，僅英文措辭不同。 ／2026-10-18 As1 v3.11.0 收錄此鍵，簡中改用 As1 譯文「此盒装有钓鱼用铅.」：對各 owner 一樣成立，cn 錨點隨之更新；繁中不變。",
       "ch": "內裝釣魚用鉛.",
-      "cn": "内装钓鱼用铅."
+      "cn": "此盒装有钓鱼用铅."
     },
     "Tooltip|Tooltip_alreadyknownrecipe": {
       "action": "translate",
       "signature": "eb23b80fc8e52dd4",
-      "reason": "2026-09-22 #501: 已知與已學習在配方提示皆表示已學會，保留前導空白與括號。",
+      "reason": "2026-09-22 #501: 已知與已學習在配方提示皆表示已學會，保留前導空白與括號。 ／2026-10-18 As1 v3.11.0 收錄此鍵，簡中改用 As1 譯文「(已知)」：對各 owner 一樣成立，cn 錨點隨之更新；繁中不變。",
       "ch": " (已學會)",
-      "cn": " (已学会)"
+      "cn": " (已知)"
     },
     "Tooltip|Tooltip_needknownrecipe": {
       "action": "translate",
       "signature": "47e2c4373b3bb598",
-      "reason": "2026-09-22 #501: 兩個 owner 僅大小寫不同，皆表示所需配方。",
+      "reason": "2026-09-22 #501: 兩個 owner 僅大小寫不同，皆表示所需配方。 ／2026-10-18 As1 v3.11.0 收錄此鍵，簡中改用 As1 譯文「需要配方:」：對各 owner 一樣成立，cn 錨點隨之更新；繁中不變。",
       "ch": "所需配方: ",
-      "cn": "所需配方: "
+      "cn": "需要配方: "
     },
     "Tooltip|Tooltip_needrecipe": {
       "action": "translate",
       "signature": "f614b48c513add53",
-      "reason": "2026-09-22 #501: 兩個 owner 僅大小寫不同，皆表示所需配方。",
+      "reason": "2026-09-22 #501: 兩個 owner 僅大小寫不同，皆表示所需配方。 ／2026-10-18 As1 v3.11.0 收錄此鍵，簡中改用 As1 譯文「需要配方:」：對各 owner 一樣成立，cn 錨點隨之更新；繁中不變。",
       "ch": "所需配方: ",
-      "cn": "所需配方: "
+      "cn": "需要配方: "
     },
     "ItemName|Base.Glock23": {
       "action": "unship",
@@ -106,29 +106,29 @@
     },
     "ItemName|Base.AK47": {
       "action": "translate",
-      "signature": "64717d26948a774b",
-      "reason": "三個 owner（Firearms / FirearmsBETA 同 wid 兩 root，值相同；VFE）都是 7.62×39 的 AK-47 本體，同型號同口徑。英文差異只是有無後綴類別詞（'AK-47' vs 'AK-47 Assault Rifle'）。VFE 對應彈匣 Base.762Clip='AK-47 Magazine'、Firearms 為 Base.AK_Mag='AK-47 Magazine'，皆同一槍。現行譯名不含任何 owner 專屬型號/廠牌宣稱，與已出貨的 Base.AK47Folded/Unfolded、Base.762Clip、Base.AK_Mag 同族一致，建議維持。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 owner 3761077099/VFE、3773858287/B42 Rain's Firearms & Gun Parts、3773858287/B42 Rain's Firearms & Gun Parts Expanded、3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。",
+      "signature": "74af9e8e82a7cd94",
+      "reason": "三個 owner（Firearms / FirearmsBETA 同 wid 兩 root，值相同；VFE）都是 7.62×39 的 AK-47 本體，同型號同口徑。英文差異只是有無後綴類別詞（'AK-47' vs 'AK-47 Assault Rifle'）。VFE 對應彈匣 Base.762Clip='AK-47 Magazine'、Firearms 為 Base.AK_Mag='AK-47 Magazine'，皆同一槍。現行譯名不含任何 owner 專屬型號/廠牌宣稱，與已出貨的 Base.AK47Folded/Unfolded、Base.762Clip、Base.AK_Mag 同族一致，建議維持。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 owner 3761077099/VFE、3773858287/B42 Rain's Firearms & Gun Parts、3773858287/B42 Rain's Firearms & Gun Parts Expanded、3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3611718925/VFE）；現行裁決對全部 owner 仍成立。",
       "ch": "AK-47自動步槍",
       "cn": "AK-47自动步枪"
     },
     "ItemName|Base.CZ75": {
       "action": "translate",
-      "signature": "5d3ac06b5260aba5",
-      "reason": "三個 owner 指的是同一把 9mm CZ 75 手槍，而且巧合的是連自帶英文都收斂到同一字串：GaelGunStore 與其 Legacy 版的 script DisplayName 是 'CZ75 Pistol'，但兩者自家 ItemName 覆寫成 'CZ 75 Pistol'，與 VFE 的 'CZ 75 Pistol' 完全相同（工作包 values 取的是 script 值，故看起來有差）。GGS 的 Base.Clip_CZ75='Clip 9mm 15round' 亦確認為 9mm。「捷克」對應 CZ = Česká zbrojovka，對三 owner 皆成立，無型號/口徑衝突，建議維持。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3761077099/VFE（CZ 75 Pistol）、3777433827/Brita（CZ-75b (Stainless) Pistol），同屬 CZ 75 系列，現行「捷克CZ75手槍」成立。",
+      "signature": "cb21e92de4ed259e",
+      "reason": "三個 owner 指的是同一把 9mm CZ 75 手槍，而且巧合的是連自帶英文都收斂到同一字串：GaelGunStore 與其 Legacy 版的 script DisplayName 是 'CZ75 Pistol'，但兩者自家 ItemName 覆寫成 'CZ 75 Pistol'，與 VFE 的 'CZ 75 Pistol' 完全相同（工作包 values 取的是 script 值，故看起來有差）。GGS 的 Base.Clip_CZ75='Clip 9mm 15round' 亦確認為 9mm。「捷克」對應 CZ = Česká zbrojovka，對三 owner 皆成立，無型號/口徑衝突，建議維持。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3761077099/VFE（CZ 75 Pistol）、3777433827/Brita（CZ-75b (Stainless) Pistol），同屬 CZ 75 系列，現行「捷克CZ75手槍」成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "捷克CZ75手槍",
       "cn": "捷克CZ75手枪"
     },
     "ItemName|Base.FAL": {
       "action": "translate",
-      "signature": "deebf29b9985d886",
-      "reason": "四個 owner 都是 FN FAL 本體（7.62 NATO/.308 級），無型號或口徑分歧：Guns93Test 'FN FAL'（Base.FALMag='FN FAL Magazine (.308 Win)'）、GaelGunStore 與 Legacy 自家 ItemName 'FN FAL Rifle'、VFE 'FAL Battle Rifle'。英文差異只在廠牌前綴與類別詞（Battle Rifle vs 無）。FAL 為 FN（Fabrique Nationale de Herstal）產品，寫「赫斯塔爾」不是偏向某 owner 的宣稱，且與已出貨的 Base.FALClassic、Base.FALClip、Base.FALMag、Base.FAL_CQB 同族用法一致。註：GGS 的 FAL CQB 走獨立 key Base.FAL_CQB，不會混淆。建議維持。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3761077099/VFE（FAL Battle Rifle）、3777433827/Brita（FN FAL 50.00，即 FAL 標準型號編號），同一 FN FAL，現行成立。",
+      "signature": "3f2b3945cb915bcb",
+      "reason": "四個 owner 都是 FN FAL 本體（7.62 NATO/.308 級），無型號或口徑分歧：Guns93Test 'FN FAL'（Base.FALMag='FN FAL Magazine (.308 Win)'）、GaelGunStore 與 Legacy 自家 ItemName 'FN FAL Rifle'、VFE 'FAL Battle Rifle'。英文差異只在廠牌前綴與類別詞（Battle Rifle vs 無）。FAL 為 FN（Fabrique Nationale de Herstal）產品，寫「赫斯塔爾」不是偏向某 owner 的宣稱，且與已出貨的 Base.FALClassic、Base.FALClip、Base.FALMag、Base.FAL_CQB 同族用法一致。註：GGS 的 FAL CQB 走獨立 key Base.FAL_CQB，不會混淆。建議維持。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3761077099/VFE（FAL Battle Rifle）、3777433827/Brita（FN FAL 50.00，即 FAL 標準型號編號），同一 FN FAL，現行成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "赫斯塔爾FAL自動步槍",
       "cn": "赫斯塔尔FAL自动步枪"
     },
     "ItemName|Base.M249": {
       "action": "translate",
-      "signature": "f3c747f9e59dc646",
-      "reason": "兩個 owner 都是 FN M249 5.56/.223 輕機槍：Guns93Test 'FN M249'（彈藥箱 Base.M249Box='M249 Ammo Box (Belted .223)'）、VFES 'M249 Light Machinegun'（彈藥箱 Base.556box100='M249 Box'）。英文差異只是廠牌前綴 vs 類別後綴，同一實體。現行譯名同時保留廠牌與類別，對兩者皆成立；與已出貨的 Base.556box100='赫斯塔爾M249輕機槍彈藥箱'、Base.M249Box='M249彈藥箱 (.223彈鏈)' 一致，建議維持。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3761284354/VFES 'M249 Light Machinegun'、3773858287/B42 Rain's Firearms & Gun Parts（含 Expanded）'M249'、BritaCombinedB42 'M249E2 LMG'；皆為 FN M249 輕機槍（M249E2 為其改進型），「赫斯塔爾M249輕機槍」仍對全部 owner 成立。",
+      "signature": "a8cede99e70a4307",
+      "reason": "兩個 owner 都是 FN M249 5.56/.223 輕機槍：Guns93Test 'FN M249'（彈藥箱 Base.M249Box='M249 Ammo Box (Belted .223)'）、VFES 'M249 Light Machinegun'（彈藥箱 Base.556box100='M249 Box'）。英文差異只是廠牌前綴 vs 類別後綴，同一實體。現行譯名同時保留廠牌與類別，對兩者皆成立；與已出貨的 Base.556box100='赫斯塔爾M249輕機槍彈藥箱'、Base.M249Box='M249彈藥箱 (.223彈鏈)' 一致，建議維持。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3761284354/VFES 'M249 Light Machinegun'、3773858287/B42 Rain's Firearms & Gun Parts（含 Expanded）'M249'、BritaCombinedB42 'M249E2 LMG'；皆為 FN M249 輕機槍（M249E2 為其改進型），「赫斯塔爾M249輕機槍」仍對全部 owner 成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "赫斯塔爾M249輕機槍",
       "cn": "赫斯塔尔M249轻机枪"
     },
@@ -141,8 +141,8 @@
     },
     "ItemName|Base.MP7": {
       "action": "translate",
-      "signature": "7a675e5fb38d2b9f",
-      "reason": "本包最需要交叉檢查的一鍵，但證據支持中性可行。表面上 GaelGunStore 的值是 'MP7 9mm'（機制上改膛 9mm，Base.Clip_MP7='Clip 9mm 15round'）而 VFEP93 是 4.6mm 平台（Base.46Clip40='MP7 Magazine'、Base.46Bullets='4.6mm Round'），像是口徑衝突；但 'MP7 9mm' 只是 GGS 的 script DisplayName，GGS 與 Legacy 自家 ItemName 已覆寫成 'Heckler & Koch MP7 Submachine Gun'，即兩個 owner 實際顯示的都是不帶口徑的 H&K MP7。因此現行不宣稱口徑的譯名對兩者都誠實，也沒有丟掉作者原本要給玩家的資訊。口徑辨識資訊落在彈匣鍵而非槍身鍵（已出貨 Base.Clip_MP7='9mm 15 發彈匣'、Base.46Clip40='黑克勒-科赫MP7衝鋒槍彈匣'、Gunpart.Clip_MP7_cat='MP7 4.6mm 彈匣'），玩家仍能區分。建議維持；若主 agent 要零風險，替代方案是改為不帶類別詞的「黑克勒-科赫MP7」，但沒有必要。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3762355926/VFEP93 'MP7 Submachinegun'（與既有 VFEP93 同文）、3777433827/BritaCombinedB42 'H&K MP7'，皆為 H&K MP7 衝鋒槍，原譯仍成立。",
+      "signature": "412fbf8b368cd2d1",
+      "reason": "本包最需要交叉檢查的一鍵，但證據支持中性可行。表面上 GaelGunStore 的值是 'MP7 9mm'（機制上改膛 9mm，Base.Clip_MP7='Clip 9mm 15round'）而 VFEP93 是 4.6mm 平台（Base.46Clip40='MP7 Magazine'、Base.46Bullets='4.6mm Round'），像是口徑衝突；但 'MP7 9mm' 只是 GGS 的 script DisplayName，GGS 與 Legacy 自家 ItemName 已覆寫成 'Heckler & Koch MP7 Submachine Gun'，即兩個 owner 實際顯示的都是不帶口徑的 H&K MP7。因此現行不宣稱口徑的譯名對兩者都誠實，也沒有丟掉作者原本要給玩家的資訊。口徑辨識資訊落在彈匣鍵而非槍身鍵（已出貨 Base.Clip_MP7='9mm 15 發彈匣'、Base.46Clip40='黑克勒-科赫MP7衝鋒槍彈匣'、Gunpart.Clip_MP7_cat='MP7 4.6mm 彈匣'），玩家仍能區分。建議維持；若主 agent 要零風險，替代方案是改為不帶類別詞的「黑克勒-科赫MP7」，但沒有必要。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3762355926/VFEP93 'MP7 Submachinegun'（與既有 VFEP93 同文）、3777433827/BritaCombinedB42 'H&K MP7'，皆為 H&K MP7 衝鋒槍，原譯仍成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "黑克勒-科赫MP7衝鋒槍",
       "cn": "黑克勒-科赫MP7冲锋枪"
     },
@@ -155,8 +155,8 @@
     },
     "ItemName|Base.SVD": {
       "action": "translate",
-      "signature": "6083e0beb9487436",
-      "reason": "三個 owner 都是 7.62×54R 的 SVD 德拉貢諾夫狙擊步槍：VFES 'Dragunov Sniper Rifle'（Base.762Clip10='Dragunov Magazine'）、GaelGunStore 與 Legacy 的 script 'SVD Rifle' 但自家 ItemName 覆寫為 'Dragunov SVD Sniper Rifle'（Base.Clip_SVD='Clip 762x54r 20 round'）。英文差異只是型號代號與人名的取捨，同一實體。GGS 的其他變體（SVD12/SVDK/SVD_short）都走獨立 key，不會被本鍵影響。現行譯名與已出貨的 Base.762Clip10='德拉貢諾夫狙擊步槍彈匣'、Base.SVD_cat='SVD 德拉貢諾夫狙擊步槍' 一致，建議維持。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 owner 3761284354/VFES、3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。",
+      "signature": "fa304a815446bc9a",
+      "reason": "三個 owner 都是 7.62×54R 的 SVD 德拉貢諾夫狙擊步槍：VFES 'Dragunov Sniper Rifle'（Base.762Clip10='Dragunov Magazine'）、GaelGunStore 與 Legacy 的 script 'SVD Rifle' 但自家 ItemName 覆寫為 'Dragunov SVD Sniper Rifle'（Base.Clip_SVD='Clip 762x54r 20 round'）。英文差異只是型號代號與人名的取捨，同一實體。GGS 的其他變體（SVD12/SVDK/SVD_short）都走獨立 key，不會被本鍵影響。現行譯名與已出貨的 Base.762Clip10='德拉貢諾夫狙擊步槍彈匣'、Base.SVD_cat='SVD 德拉貢諾夫狙擊步槍' 一致，建議維持。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 owner 3761284354/VFES、3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3611718925/VFES）；現行裁決對全部 owner 仍成立。",
       "ch": "德拉貢諾夫狙擊步槍",
       "cn": "德拉贡诺夫狙击步枪"
     },
@@ -239,8 +239,8 @@
     },
     "ItemName|Base.Galil": {
       "action": "translate",
-      "signature": "51b1995ec7a90131",
-      "reason": "「Galil Assault Rifle」與「IMI Galil」同指以色列 IMI Galil 步槍，僅品牌前綴與類別後綴的詳略差。現行「加利爾自動步槍」不綁品牌寫法對兩 owner 皆成立，維持現值。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3761284354/VFES（Galil Assault Rifle）、3773858287/Rain（IMI Galil）、3777433827/Brita（IMI Galil ARM），同一加利爾步槍，現行成立。",
+      "signature": "54640d887627b9f7",
+      "reason": "「Galil Assault Rifle」與「IMI Galil」同指以色列 IMI Galil 步槍，僅品牌前綴與類別後綴的詳略差。現行「加利爾自動步槍」不綁品牌寫法對兩 owner 皆成立，維持現值。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3761284354/VFES（Galil Assault Rifle）、3773858287/Rain（IMI Galil）、3777433827/Brita（IMI Galil ARM），同一加利爾步槍，現行成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "加利爾自動步槍",
       "cn": "加利尔自动步枪"
     },
@@ -267,15 +267,15 @@
     },
     "ItemName|Base.SKS": {
       "action": "translate",
-      "signature": "70d28753a5d8969c",
-      "reason": "「SKS」與「SKS Rifle」同指 SKS 半自動步槍，僅後綴詳略差。SKS 本身即半自動設計（Guns93 的 SKSTrigger 亦標 Semi），「SKS半自動步槍」對全部 owner 成立，維持現值。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3761077099/VFE 'SKS Rifle'、3777433827/BritaCombinedB42 'SKS Carbine'；SKS 本身即半自動卡賓槍（卡賓槍屬步槍），「SKS半自動步槍」仍成立。",
+      "signature": "021a71e33feb2c74",
+      "reason": "「SKS」與「SKS Rifle」同指 SKS 半自動步槍，僅後綴詳略差。SKS 本身即半自動設計（Guns93 的 SKSTrigger 亦標 Semi），「SKS半自動步槍」對全部 owner 成立，維持現值。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3761077099/VFE 'SKS Rifle'、3777433827/BritaCombinedB42 'SKS Carbine'；SKS 本身即半自動卡賓槍（卡賓槍屬步槍），「SKS半自動步槍」仍成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "SKS半自動步槍",
       "cn": "SKS半自动步枪"
     },
     "ItemName|Base.Saiga12": {
       "action": "translate",
-      "signature": "5d626e6cd5a484d6",
-      "reason": "「Saiga-12」與「Saiga-12 Shotgun」同指俄製 Saiga-12 霰彈槍，僅後綴詳略差。現行譯名對兩 owner 皆成立，維持現值。（附帶觀察：倉內 Base.Saiga12_cat 用拉丁「Saiga-12」而此鍵用「賽加-12」，屬風格不一致，非本衝突範疇。） 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3761284354/VFES 'Saiga-12 Shotgun'、3777433827/BritaCombinedB42 'Saiga 12'，同為 Saiga-12 霰彈槍，原譯仍成立。",
+      "signature": "d62266c1e8a5bc81",
+      "reason": "「Saiga-12」與「Saiga-12 Shotgun」同指俄製 Saiga-12 霰彈槍，僅後綴詳略差。現行譯名對兩 owner 皆成立，維持現值。（附帶觀察：倉內 Base.Saiga12_cat 用拉丁「Saiga-12」而此鍵用「賽加-12」，屬風格不一致，非本衝突範疇。） 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3761284354/VFES 'Saiga-12 Shotgun'、3777433827/BritaCombinedB42 'Saiga 12'，同為 Saiga-12 霰彈槍，原譯仍成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "賽加-12霰彈槍",
       "cn": "赛加-12霰弹枪"
     },
@@ -330,8 +330,8 @@
     },
     "ItemName|Base.762x39Box": {
       "action": "translate",
-      "signature": "af701b9ba8bab3ac",
-      "reason": "同物命名/格式差異。兩個 owner 都是 7.62×39mm 的 Box（整盒）。工作包所列的 GaelGunStore_Legacy 值 \"Box of .762x39 Bullets\" 其實是該 mod 的 script DisplayName（作者打錯小數點，寫成 .762），而其自帶英文 Translate 寫的是 \"Box of 7.62x39mm Rounds (30 Rounds)\"，與 Firearms 的 \"Box of 7.62x39mm Rounds\" 同物，僅多標 30 發容量。現行譯文未寫入發數，正好對容量未明的 Firearms 與標 30 發的 Gael 同時成立；亦未沿用 Gael 的 .762 錯誤寫法。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3773858287/Rain 兩包寫 Box of 7.62x39 Rounds、3777433827/BritaCombinedB42 寫 Box of 7.62x39mm Rounds，同義且未標發數，現行「7.62x39mm彈藥 (整盒)」成立。",
+      "signature": "64ec4a3e0ead0ba2",
+      "reason": "同物命名/格式差異。兩個 owner 都是 7.62×39mm 的 Box（整盒）。工作包所列的 GaelGunStore_Legacy 值 \"Box of .762x39 Bullets\" 其實是該 mod 的 script DisplayName（作者打錯小數點，寫成 .762），而其自帶英文 Translate 寫的是 \"Box of 7.62x39mm Rounds (30 Rounds)\"，與 Firearms 的 \"Box of 7.62x39mm Rounds\" 同物，僅多標 30 發容量。現行譯文未寫入發數，正好對容量未明的 Firearms 與標 30 發的 Gael 同時成立；亦未沿用 Gael 的 .762 錯誤寫法。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3773858287/Rain 兩包寫 Box of 7.62x39 Rounds、3777433827/BritaCombinedB42 寫 Box of 7.62x39mm Rounds，同義且未標發數，現行「7.62x39mm彈藥 (整盒)」成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 2256623447/Firearms）；現行裁決對全部 owner 仍成立。",
       "ch": "7.62x39mm彈藥 (整盒)",
       "cn": "7.62x39mm弹药 (整盒)"
     },
@@ -400,8 +400,8 @@
     },
     "ItemName|Base.UZI": {
       "action": "translate",
-      "signature": "b1baf3a82b8b12bb",
-      "reason": "同槍不同命名，且「衝鋒槍」對兩個 owner 都成立。關鍵反查：Firearms 雖把 Base.UZI 譯為 \"UZI Carbine\"，但該 mod 並無另一支 UZI SMG 品項（全 mod 只有這一支 UZI 及其配件），且其 Sandbox 說明文字直接寫 \"Whether or not UZI SMGs spawn.\"，證明作者自己就把它當衝鋒槍，Carbine 只是命名風格而非另一種半自動卡賓型。GaelGunStore（含 Legacy）script DN \"UZI 9mm\"、自帶英文 \"UZI Submachine Gun\"，並另有獨立的 Base.Micro_UZI，故 Base.UZI 是全尺寸 9mm 烏茲。現行「UZI衝鋒槍」對兩者皆成立。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3773858287/B42 Rain's Firearms & Gun Parts（含 Expanded）'UZI'、3777433827/BritaCombinedB42 'IMI UZI w/Extended Stock'，皆為 UZI 衝鋒槍，原譯仍成立。",
+      "signature": "27a77dea7a67ba8a",
+      "reason": "同槍不同命名，且「衝鋒槍」對兩個 owner 都成立。關鍵反查：Firearms 雖把 Base.UZI 譯為 \"UZI Carbine\"，但該 mod 並無另一支 UZI SMG 品項（全 mod 只有這一支 UZI 及其配件），且其 Sandbox 說明文字直接寫 \"Whether or not UZI SMGs spawn.\"，證明作者自己就把它當衝鋒槍，Carbine 只是命名風格而非另一種半自動卡賓型。GaelGunStore（含 Legacy）script DN \"UZI 9mm\"、自帶英文 \"UZI Submachine Gun\"，並另有獨立的 Base.Micro_UZI，故 Base.UZI 是全尺寸 9mm 烏茲。現行「UZI衝鋒槍」對兩者皆成立。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3773858287/B42 Rain's Firearms & Gun Parts（含 Expanded）'UZI'、3777433827/BritaCombinedB42 'IMI UZI w/Extended Stock'，皆為 UZI 衝鋒槍，原譯仍成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "UZI衝鋒槍",
       "cn": "UZI冲锋枪"
     },
@@ -442,15 +442,15 @@
     },
     "ItemName|Base.762x39Bullets": {
       "action": "translate",
-      "signature": "fd23e3639cb88c55",
-      "reason": "三 owner 均為 7.62×39mm 子彈，僅命名格式差異（'.762x39 Ammo' 是 GaelGun 的非標準寫法，指同一彈種）。現行譯名完全中性，維持現行。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3773858287/Rain 兩包寫 7.62x39 Round、3777433827/BritaCombinedB42 寫 7.62x39mm Round，同義，現行成立。",
+      "signature": "3c4fd437cec4a671",
+      "reason": "三 owner 均為 7.62×39mm 子彈，僅命名格式差異（'.762x39 Ammo' 是 GaelGun 的非標準寫法，指同一彈種）。現行譯名完全中性，維持現行。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3773858287/Rain 兩包寫 7.62x39 Round、3777433827/BritaCombinedB42 寫 7.62x39mm Round，同義，現行成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 2256623447/Firearms）；現行裁決對全部 owner 仍成立。",
       "ch": "7.62x39mm彈藥",
       "cn": "7.62x39mm弹药"
     },
     "ItemName|Base.AA12": {
       "action": "translate",
-      "signature": "3605be5da27efa64",
-      "reason": "三 owner 均為 Atchisson AA-12 自動霰彈槍，僅連字號/後綴差異。艾奇遜（Atchisson）為該槍設計者，對所有 owner 皆為事實，維持現行。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3762355926/VFEP93（AA12 Shotgun）、3773858287/Rain（AA-12 Combat Shotgun）、3777433827/Brita（Atchisson AA-12 Shotgun），皆同一 AA-12，現行成立。",
+      "signature": "454655a321bf65c3",
+      "reason": "三 owner 均為 Atchisson AA-12 自動霰彈槍，僅連字號/後綴差異。艾奇遜（Atchisson）為該槍設計者，對所有 owner 皆為事實，維持現行。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3762355926/VFEP93（AA12 Shotgun）、3773858287/Rain（AA-12 Combat Shotgun）、3777433827/Brita（Atchisson AA-12 Shotgun），皆同一 AA-12，現行成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "艾奇遜AA12霰彈槍",
       "cn": "艾奇逊AA12霰弹枪"
     },
@@ -491,8 +491,8 @@
     },
     "ItemName|Base.Mosin": {
       "action": "translate",
-      "signature": "d95aa0969265388a",
-      "reason": "三 owner 均為莫辛-納甘步槍，同一實體。但兩邊英文都未稱 sniper（基本型是栓動步槍非狙擊型），現行 '莫辛-納甘狙擊步槍' 的「狙擊」是過度指定，建議去掉改為 '莫辛-納甘步槍'。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3761284354/VFES 'Mosin Rifle'（與既有 VFES 同文）、3777433827/BritaCombinedB42 'Mosin Nagant 1891/30'，皆為莫辛-納甘步槍，原譯仍成立。",
+      "signature": "245c29089eb2b751",
+      "reason": "三 owner 均為莫辛-納甘步槍，同一實體。但兩邊英文都未稱 sniper（基本型是栓動步槍非狙擊型），現行 '莫辛-納甘狙擊步槍' 的「狙擊」是過度指定，建議去掉改為 '莫辛-納甘步槍'。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3761284354/VFES 'Mosin Rifle'（與既有 VFES 同文）、3777433827/BritaCombinedB42 'Mosin Nagant 1891/30'，皆為莫辛-納甘步槍，原譯仍成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "莫辛-納甘步槍",
       "cn": "莫辛-纳甘步枪"
     },
@@ -2286,8 +2286,8 @@
     },
     "ItemName|Base.M4": {
       "action": "translate",
-      "signature": "66d9ab3acafd0989",
-      "reason": "2026-08-23 #231 多 owner：M4 Carbine／M4 Assault Rifle。M4 的共同實體是卡賓槍，沿用現值。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42，英文 'Colt M4 Carbine'，與既有 'M4 Carbine' 同物（多廠牌前綴），「M4卡賓槍」仍成立。",
+      "signature": "49500e122dbf2944",
+      "reason": "2026-08-23 #231 多 owner：M4 Carbine／M4 Assault Rifle。M4 的共同實體是卡賓槍，沿用現值。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42，英文 'Colt M4 Carbine'，與既有 'M4 Carbine' 同物（多廠牌前綴），「M4卡賓槍」仍成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "M4卡賓槍",
       "cn": "M4卡宾枪"
     },
@@ -2415,8 +2415,8 @@
     },
     "ItemName|Base.AKM": {
       "action": "translate",
-      "signature": "5c3e0101cd47dee2",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 2961450523/Totally's Eastern Bloc（AKM）、3777433827/Brita（AKM Assault Rifle），同一 AKM，現行「AKM自動步槍」成立。",
+      "signature": "cb81ccc42e223193",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 2961450523/Totally's Eastern Bloc（AKM）、3777433827/Brita（AKM Assault Rifle），同一 AKM，現行「AKM自動步槍」成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "AKM自動步槍",
       "cn": "AKM自动步枪"
     },
@@ -2604,8 +2604,8 @@
     },
     "ItemName|Base.FAMAS": {
       "action": "translate",
-      "signature": "29f95db9ddef767d",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 owner 3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。",
+      "signature": "0ea166dfda81bdf2",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 owner 3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3243805556/Totally's NATO Firearms Pack B42）；現行裁決對全部 owner 仍成立。",
       "ch": "FAMAS F1步槍",
       "cn": "FAMAS F1步枪"
     },
@@ -2961,15 +2961,15 @@
     },
     "ItemName|Base.AK74": {
       "action": "translate",
-      "signature": "058bf4445999db55",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 owner 3761284354/VFES、3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。",
+      "signature": "3213e04c0afa48eb",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 owner 3761284354/VFES、3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3611718925/VFES）；現行裁決對全部 owner 仍成立。",
       "ch": "AK-74自動步槍",
       "cn": "AK-47自动步枪"
     },
     "ItemName|Base.VSS": {
       "action": "translate",
-      "signature": "df81f2c02f32f90e",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 2961450523/Totally's Eastern Bloc Firearms Pack 與 3777433827/BritaCombinedB42 'VSS Vintorez'、3761284354/VFES 'VSS Sniper Rifle'，皆為 VSS 微聲狙擊步槍，原譯仍成立。",
+      "signature": "afade10f819f7720",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 2961450523/Totally's Eastern Bloc Firearms Pack 與 3777433827/BritaCombinedB42 'VSS Vintorez'、3761284354/VFES 'VSS Sniper Rifle'，皆為 VSS 微聲狙擊步槍，原譯仍成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 2961450523/Totally's Eastern Bloc Firearms Pack）；現行裁決對全部 owner 仍成立。",
       "ch": "VSS狙擊步槍",
       "cn": "VSS狙击步枪"
     },
@@ -3017,8 +3017,8 @@
     },
     "ItemName|Base.KSG": {
       "action": "translate",
-      "signature": "e72fb6d3bdbde348",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42 寫 KEL-TEC KSG，同一凱爾泰克 KSG，現行成立。",
+      "signature": "2adea00847190724",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42 寫 KEL-TEC KSG，同一凱爾泰克 KSG，現行成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "凱爾泰克KSG霰彈槍",
       "cn": "凯尔泰克KSG霰弹枪"
     },
@@ -3542,8 +3542,8 @@
     },
     "ItemName|Base.VP70": {
       "action": "translate",
-      "signature": "8fd0c8701f255bac",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42，英文 'H&K VP70M'（VP70 的軍用型），仍是黑克勒-科赫 VP70 手槍，原譯成立。",
+      "signature": "69689de69e5f1552",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42，英文 'H&K VP70M'（VP70 的軍用型），仍是黑克勒-科赫 VP70 手槍，原譯成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "黑克勒-科赫VP70手槍",
       "cn": "黑克勒-科赫VP70手枪"
     },
@@ -3731,8 +3731,8 @@
     },
     "ItemName|Base.M1": {
       "action": "translate",
-      "signature": "de2d0c79e8008df1",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 owner 3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。",
+      "signature": "6a23e3c6ac3e5750",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 owner 3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3616176188/GaelGunStore）；現行裁決對全部 owner 仍成立。",
       "ch": "M1加蘭德步槍",
       "cn": "M1加兰德步枪"
     },
@@ -3745,8 +3745,8 @@
     },
     "ItemName|Base.KS23": {
       "action": "translate",
-      "signature": "fc67b053c0d75080",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 owner 3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。",
+      "signature": "2d873d317ef617c0",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 owner 3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3616176188/GaelGunStore）；現行裁決對全部 owner 仍成立。",
       "ch": "KS-23霰彈槍",
       "cn": "KS-23霰弹枪"
     },
@@ -4109,8 +4109,8 @@
     },
     "ItemName|Base.SVDK": {
       "action": "translate",
-      "signature": "116f1939804248d6",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42，英文 'Dragunov SVDS Sniper Rifle'（SVDS 折疊托型），與 GaelGunStore 'SVDK Sniper Rifle'（大口徑 SVDK）型號不同，現譯「SVDK狙擊步槍」對 Brita 為不實；兩者都是德拉古諾夫 SVD 的衍生型，且兩 MOD 都另有 Base.SVD（已譯「德拉貢諾夫狙擊步槍」），故改「德拉貢諾夫改型狙擊步槍」對全部 owner 成立又不與 Base.SVD 撞名。",
+      "signature": "fe9bfd4b844a0e29",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42，英文 'Dragunov SVDS Sniper Rifle'（SVDS 折疊托型），與 GaelGunStore 'SVDK Sniper Rifle'（大口徑 SVDK）型號不同，現譯「SVDK狙擊步槍」對 Brita 為不實；兩者都是德拉古諾夫 SVD 的衍生型，且兩 MOD 都另有 Base.SVD（已譯「德拉貢諾夫狙擊步槍」），故改「德拉貢諾夫改型狙擊步槍」對全部 owner 成立又不與 Base.SVD 撞名。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "德拉貢諾夫改型狙擊步槍",
       "cn": "德拉贡诺夫改型狙击步枪"
     },
@@ -4774,8 +4774,8 @@
     },
     "ItemName|Base.50Clip": {
       "action": "translate",
-      "signature": "65db7b4c5a1ac268",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42 寫 50-Mag Sgl-Stack Magazine（定義於 Magazine_ASH.txt，是 ASh 的 .50 MAG 單排彈匣，非 .50 BMG，容量亦未標），原譯「.50 BMG彈匣 (10 發)」對其不實；改為對 Gael 的 .50 BMG 10 發與 Brita 的 .50 MAG 都成立的「.50口徑彈匣」。",
+      "signature": "3602bd50604c7672",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42 寫 50-Mag Sgl-Stack Magazine（定義於 Magazine_ASH.txt，是 ASh 的 .50 MAG 單排彈匣，非 .50 BMG，容量亦未標），原譯「.50 BMG彈匣 (10 發)」對其不實；改為對 Gael 的 .50 BMG 10 發與 Brita 的 .50 MAG 都成立的「.50口徑彈匣」。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal 'Desert Eagle .50 AE 7rd Mag A'、BritaGunworksLegacyMagazines '50-Mag Sgl-Stack Magazine'；現行「.50口徑彈匣」不限定型號與彈種，對全部 owner 仍成立。",
       "ch": ".50口徑彈匣",
       "cn": ".50口径弹匣"
     },
@@ -4809,8 +4809,8 @@
     },
     "ItemName|Base.545x39Box": {
       "action": "translate",
-      "signature": "2dd74ea7fb314736",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。 ／2026-10-01 As1 名單納管複核：新增 2961450523/Totally's Eastern Bloc 與 3777433827/BritaCombinedB42 皆寫 Box of 5.45x39mm Rounds，與既有同義，現行「5.45x39mm子彈 (整盒)」成立。",
+      "signature": "a7c1a54e20c8162c",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。 ／2026-10-01 As1 名單納管複核：新增 2961450523/Totally's Eastern Bloc 與 3777433827/BritaCombinedB42 皆寫 Box of 5.45x39mm Rounds，與既有同義，現行「5.45x39mm子彈 (整盒)」成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 2961450523/Totally's Eastern Bloc Firearms Pack）；現行裁決對全部 owner 仍成立。",
       "ch": "5.45x39mm子彈 (整盒)",
       "cn": "5.45x39mm子弹 (整盒)"
     },
@@ -4851,8 +4851,8 @@
     },
     "ItemName|Base.762x54rBox": {
       "action": "translate",
-      "signature": "e25f406eaedfc557",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42 寫 Box of 7.62x54mm-R Rounds，未標發數且為不同作者的彈藥系統，原譯的「(20 發)」只有 Gael 明示，對 Brita 無據；去掉發數，口徑對三 owner 皆成立。",
+      "signature": "7d8859d822741a31",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42 寫 Box of 7.62x54mm-R Rounds，未標發數且為不同作者的彈藥系統，原譯的「(20 發)」只有 Gael 明示，對 Brita 無據；去掉發數，口徑對三 owner 皆成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "盒裝7.62x54mmR子彈",
       "cn": "盒装7.62x54mmR子弹"
     },
@@ -5126,8 +5126,8 @@
     },
     "ItemName|Base.M1887": {
       "action": "translate",
-      "signature": "9d8f4e1b6aa8b06d",
-      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Winchester 1887 Lever-Action Shotgun」與「M1887 Shotgun」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「溫徹斯特1887槓桿式霰彈槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42，英文 'Winchester Model 1887'，即溫徹斯特1887槓桿式霰彈槍本身，原譯對三個 owner 皆成立。",
+      "signature": "c9b18b5962abd8cb",
+      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Winchester 1887 Lever-Action Shotgun」與「M1887 Shotgun」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「溫徹斯特1887槓桿式霰彈槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42，英文 'Winchester Model 1887'，即溫徹斯特1887槓桿式霰彈槍本身，原譯對三個 owner 皆成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "溫徹斯特1887槓桿式霰彈槍",
       "cn": "温彻斯特1887杠杆式霰弹枪"
     },
@@ -5168,8 +5168,8 @@
     },
     "ItemName|Base.G17": {
       "action": "translate",
-      "signature": "337f99e71cf34bd7",
-      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Glock 17 Pistol」與「Glock-17」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「格洛克17手槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 owner 3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。",
+      "signature": "074d54acdb3f4587",
+      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Glock 17 Pistol」與「Glock-17」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「格洛克17手槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 owner 3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3616176188/GaelGunStore）；現行裁決對全部 owner 仍成立。",
       "ch": "格洛克17手槍",
       "cn": "格洛克17手枪"
     },
@@ -5381,8 +5381,8 @@
     },
     "ItemName|Base.MP9": {
       "action": "unship",
-      "signature": "119c6827b739de4a",
-      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Brügger & Thomet MP9 Submachine Gun」與「MP9 45」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「布魯格-托梅MP9衝鋒槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42，其 Base.MP9 是 'S&W M&P-9'（史密斯威森 M&P9 警用手槍，script 位於 POLICE_PISTOLS.txt），與 GaelGunStore 'Brügger & Thomet MP9 Submachine Gun'（布魯格-托梅 MP9 衝鋒槍）是不同廠牌、不同槍種、不同型號名（M&P9≠MP9），找不到同時誠實的中性譯名，改不出貨讓各 MOD 顯示自帶英文。"
+      "signature": "d5f2cfefb37fca39",
+      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Brügger & Thomet MP9 Submachine Gun」與「MP9 45」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「布魯格-托梅MP9衝鋒槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42，其 Base.MP9 是 'S&W M&P-9'（史密斯威森 M&P9 警用手槍，script 位於 POLICE_PISTOLS.txt），與 GaelGunStore 'Brügger & Thomet MP9 Submachine Gun'（布魯格-托梅 MP9 衝鋒槍）是不同廠牌、不同槍種、不同型號名（M&P9≠MP9），找不到同時誠實的中性譯名，改不出貨讓各 MOD 顯示自帶英文。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。"
     },
     "ItemName|Base.SIG_553": {
       "action": "translate",
@@ -5552,15 +5552,15 @@
     },
     "ItemName|Base.MK18": {
       "action": "translate",
-      "signature": "78448bd333699ef6",
-      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依同作者 current／Legacy 共用鍵，Mk 18 Mod 0 與 MK18 視為同一物件，但 Carbine 與 Assault Rifle 標籤不同；改用共同上位詞「步槍」。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42，英文 'Mk.18 Mod.1'，是 Mod 1 構型，現譯「Mk 18 Mod 0步槍」的 Mod 0 對 Brita 為不實；GaelGunStore 'Mk 18 Mod 0 Carbine'、Legacy 'MK18 Assault Rifle'、Brita 'Mk.18 Mod.1' 共同為 Mk 18 步槍，去掉 Mod 編號改「Mk 18步槍」對三者皆成立。",
+      "signature": "f40b53a566972777",
+      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依同作者 current／Legacy 共用鍵，Mk 18 Mod 0 與 MK18 視為同一物件，但 Carbine 與 Assault Rifle 標籤不同；改用共同上位詞「步槍」。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42，英文 'Mk.18 Mod.1'，是 Mod 1 構型，現譯「Mk 18 Mod 0步槍」的 Mod 0 對 Brita 為不實；GaelGunStore 'Mk 18 Mod 0 Carbine'、Legacy 'MK18 Assault Rifle'、Brita 'Mk.18 Mod.1' 共同為 Mk 18 步槍，去掉 Mod 編號改「Mk 18步槍」對三者皆成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "Mk 18步槍",
       "cn": "Mk 18步枪"
     },
     "ItemName|Base.M39": {
       "action": "translate",
-      "signature": "9184fe93876d04f3",
-      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依同作者 current／Legacy 共用鍵，M39 EMR Sniper Rifle 與 M39 Hunter 視為同一 M39 物件；改用中性「M39步槍」，不把 Legacy 的 Hunter 強制標成狙擊步槍。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42，其 Base.M39 是 'S&W Model-39 Pistol'（史密斯威森 Model 39 手槍），與 GaelGunStore 'M39 EMR Sniper Rifle'／Legacy 'M39 Hunter' 的步槍不同類，現譯「M39步槍」對 Brita 為不實；三者唯一共同點是 M39 型號名，改為不宣稱槍種的中性專名「M39」（比照 Base.FedorovAvtomat 保留拉丁專名的前例）。",
+      "signature": "406738151d7fc98e",
+      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依同作者 current／Legacy 共用鍵，M39 EMR Sniper Rifle 與 M39 Hunter 視為同一 M39 物件；改用中性「M39步槍」，不把 Legacy 的 Hunter 強制標成狙擊步槍。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42，其 Base.M39 是 'S&W Model-39 Pistol'（史密斯威森 Model 39 手槍），與 GaelGunStore 'M39 EMR Sniper Rifle'／Legacy 'M39 Hunter' 的步槍不同類，現譯「M39步槍」對 Brita 為不實；三者唯一共同點是 M39 型號名，改為不宣稱槍種的中性專名「M39」（比照 Base.FedorovAvtomat 保留拉丁專名的前例）。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "M39",
       "cn": "M39"
     },
@@ -5620,8 +5620,8 @@
     },
     "ItemName|Base.G43": {
       "action": "translate",
-      "signature": "12df173a85f9a2b7",
-      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「G43 Rifle」與「Gewehr 43」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「G43步槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42 寫 Glock 43 Pistol（GLOCK.txt，與 G17/G42 同列），與 Gael 的 G43 Rifle／Gewehr 43 步槍是不同槍種，「G43步槍」對其不實；改為兩者字面共有、不宣稱槍種的「G43」。",
+      "signature": "ed4d8a2336646d19",
+      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「G43 Rifle」與「Gewehr 43」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「G43步槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42 寫 Glock 43 Pistol（GLOCK.txt，與 G17/G42 同列），與 Gael 的 G43 Rifle／Gewehr 43 步槍是不同槍種，「G43步槍」對其不實；改為兩者字面共有、不宣稱槍種的「G43」。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "G43",
       "cn": "G43"
     },
@@ -5648,8 +5648,8 @@
     },
     "ItemName|Base.Thompson": {
       "action": "translate",
-      "signature": "500f308ae9788ad6",
-      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Thompson M1A1 Submachine Gun」與「Thompson 45」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「湯普森M1A1衝鋒槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 3773858287/B42 Rain's Firearms & Gun Parts（含 Expanded）'M1A1 Thompson' 與 3777433827/BritaCombinedB42 'Thompson M1'；Brita 是 M1 型（另有獨立的 Base.Thompson_1928），現譯 ch「湯普森M1A1衝鋒槍」/cn「M1A1汤普森冲锋枪」的 M1A1 對 Brita 不實，改為不帶子型號的「湯普森衝鋒槍」，對 GaelGunStore M1A1、Legacy 'Thompson 45'、Rain's M1A1、Brita M1 皆成立。",
+      "signature": "3c8dfbed9c5357b4",
+      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Thompson M1A1 Submachine Gun」與「Thompson 45」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「湯普森M1A1衝鋒槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 3773858287/B42 Rain's Firearms & Gun Parts（含 Expanded）'M1A1 Thompson' 與 3777433827/BritaCombinedB42 'Thompson M1'；Brita 是 M1 型（另有獨立的 Base.Thompson_1928），現譯 ch「湯普森M1A1衝鋒槍」/cn「M1A1汤普森冲锋枪」的 M1A1 對 Brita 不實，改為不帶子型號的「湯普森衝鋒槍」，對 GaelGunStore M1A1、Legacy 'Thompson 45'、Rain's M1A1、Brita M1 皆成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "湯普森衝鋒槍",
       "cn": "汤普森冲锋枪"
     },
@@ -5695,8 +5695,8 @@
     },
     "ItemName|Base.G18": {
       "action": "translate",
-      "signature": "cbc5dd942d2c94ad",
-      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Glock 18 Pistol」與「Glock-18」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「格洛克18手槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 owner 3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。",
+      "signature": "23706227ea139776",
+      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Glock 18 Pistol」與「Glock-18」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「格洛克18手槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 owner 3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3616176188/GaelGunStore）；現行裁決對全部 owner 仍成立。",
       "ch": "格洛克18手槍",
       "cn": "格洛克18手枪"
     },
@@ -5807,8 +5807,8 @@
     },
     "ItemName|Base.L96": {
       "action": "translate",
-      "signature": "56205cc1212a502f",
-      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Accuracy International Arctic Warfare Sniper Rifle」與「L963」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「精密國際北極戰爭狙擊步槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42 寫 L118 A1 Arctic Warfare：L118A1 是英軍對精密國際 Arctic Warfare 的制式編號，現行「精密國際北極戰爭狙擊步槍」成立。",
+      "signature": "27ccfd102ef110be",
+      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Accuracy International Arctic Warfare Sniper Rifle」與「L963」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「精密國際北極戰爭狙擊步槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42 寫 L118 A1 Arctic Warfare：L118A1 是英軍對精密國際 Arctic Warfare 的制式編號，現行「精密國際北極戰爭狙擊步槍」成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "精密國際北極戰爭狙擊步槍",
       "cn": "精密国际北极战争狙击步枪"
     },
@@ -5877,8 +5877,8 @@
     },
     "ItemName|Base.BAR": {
       "action": "translate",
-      "signature": "b750b6cbaadc700e",
-      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Browning M1918 Automatic Rifle」與「BAR M1918A」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「勃朗寧M1918自動步槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42 寫 M1918 BAR，同一勃朗寧 M1918 自動步槍，現行成立。",
+      "signature": "5ece40bb737c8d4d",
+      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Browning M1918 Automatic Rifle」與「BAR M1918A」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「勃朗寧M1918自動步槍」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42 寫 M1918 BAR，同一勃朗寧 M1918 自動步槍，現行成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "勃朗寧M1918自動步槍",
       "cn": "勃朗宁M1918自动步枪"
     },
@@ -6121,8 +6121,8 @@
     },
     "ItemName|Base.545x39Bullets": {
       "action": "translate",
-      "signature": "9001a512bbd7ba39",
-      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「5.45x39mm Rounds」與「.545x39 Ammo」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「5.45x39mm子彈」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 2961450523/Totally's Eastern Bloc 與 3777433827/BritaCombinedB42 皆寫 5.45x39mm Round，與既有同義，現行成立。",
+      "signature": "f7ed74ea43541ea5",
+      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「5.45x39mm Rounds」與「.545x39 Ammo」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「5.45x39mm子彈」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 2961450523/Totally's Eastern Bloc 與 3777433827/BritaCombinedB42 皆寫 5.45x39mm Round，與既有同義，現行成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 2961450523/Totally's Eastern Bloc Firearms Pack）；現行裁決對全部 owner 仍成立。",
       "ch": "5.45x39mm子彈",
       "cn": "5.45x39mm子弹"
     },
@@ -6135,8 +6135,8 @@
     },
     "ItemName|Base.762x54rBullets": {
       "action": "translate",
-      "signature": "83e8b1a24b0d1a17",
-      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「7.62x54mmR Rounds」與「.762x54r Ammo」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「7.62x54mmR子彈」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42 寫 7.62x54mm-R Round，同一彈種僅連字號差，現行「7.62x54mmR子彈」成立。",
+      "signature": "a92bf9c99f7bcc82",
+      "reason": "2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「7.62x54mmR Rounds」與「.762x54r Ammo」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「7.62x54mmR子彈」採現行名稱，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 3777433827/BritaCombinedB42 寫 7.62x54mm-R Round，同一彈種僅連字號差，現行「7.62x54mmR子彈」成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "7.62x54mmR子彈",
       "cn": "7.62x54mmR子弹"
     },
@@ -6273,8 +6273,8 @@
     },
     "ContextMenu|ContextMenu_FireMode_Safe": {
       "action": "unship",
-      "signature": "df0fcdc7bbf45649",
-      "reason": "2026-08-29 #315：同鍵分別表示 Missing Required Part 與 Safe，功能語意互斥，沒有誠實中性譯名。Guns93 有可載入 JSON EN；FRAcceptableGunsDemo 只有死檔 ContextMenu_EN.txt，抑制後後者會顯示字面鍵名；已接受此殘留，避免向兩方玩家出貨錯誤指令。"
+      "signature": "b399e582c1eb634f",
+      "reason": "2026-08-29 #315：同鍵分別表示 Missing Required Part 與 Safe，功能語意互斥，沒有誠實中性譯名。Guns93 有可載入 JSON EN；FRAcceptableGunsDemo 只有死檔 ContextMenu_EN.txt，抑制後後者會顯示字面鍵名；已接受此殘留，避免向兩方玩家出貨錯誤指令。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3813655486/Gunsmith1993（英文同 3554570236/FRAcceptableGunsDemo）；現行裁決對全部 owner 仍成立。"
     },
     "IG_UI|IGUI_FirearmRadial_FoldStock": {
       "action": "translate",
@@ -7887,8 +7887,8 @@
     },
     "Sandbox|Sandbox_Bandits.DensityScore": {
       "action": "translate",
-      "signature": "d1b2464d9fe31927",
-      "reason": "2026-09-27 裁決：Bandits Extra Options（3412682512）是 Bandits NPC（3268487204）的附加選項模組，這個鍵是同一個沙盒選項，附加模組的 \"Bandits spawn more in towns\" 是本體說明的簡略版。現值對兩者都成立，沿用。",
+      "signature": "a24301247fde40c2",
+      "reason": "2026-09-27 裁決：Bandits Extra Options（3412682512）是 Bandits NPC（3268487204）的附加選項模組，這個鍵是同一個沙盒選項，附加模組的 \"Bandits spawn more in towns\" 是本體說明的簡略版。現值對兩者都成立，沿用。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3796757031/BanditsNPCTweaks 把標題改寫為 'Spawn density in towns [DOES NOTHING]'，它同時提供的說明鍵（As1 v3.11.0 已收）寫明此設定無作用；Bandits 的 BanditServerSpawner.lua（42.20、42.21 第 1106–1109 行）確實把套用此設定的程式註解掉。標題描述選項本意、說明寫明無作用，兩者並陳對三個 owner 都成立，維持原譯。",
       "ch": "城鎮中匪徒生成率提高, 偏僻地區生成率降低",
       "cn": "城镇中匪徒生成率提高, 偏僻地区生成率降低"
     },
@@ -8541,8 +8541,8 @@
     },
     "ItemName|Base.G36": {
       "action": "translate",
-      "signature": "9205811b918121b3",
-      "reason": "2026-10-02 錨點全量比對：GaelGunStore 為 Heckler & Koch G36 Rifle、Brita 為 H&K G36 Rifle w/Extended Stock，是同一款步槍；Brita 多標延長槍托，現譯不宣稱槍托型式，對兩方皆成立。",
+      "signature": "ebbc001a37950a27",
+      "reason": "2026-10-02 錨點全量比對：GaelGunStore 為 Heckler & Koch G36 Rifle、Brita 為 H&K G36 Rifle w/Extended Stock，是同一款步槍；Brita 多標延長槍托，現譯不宣稱槍托型式，對兩方皆成立。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "Heckler & Koch G36 步槍",
       "cn": "Heckler & Koch G36 步枪"
     },
@@ -8562,8 +8562,8 @@
     },
     "ItemName|Base.556Belt": {
       "action": "unship",
-      "signature": "722050a5b1f10c76",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Base.556Belt 是「Belted .223 Rem Rounds」(上好鏈節的 .223 彈鏈, 該 MOD 另有 M249Box 彈藥箱物品); Brita 的同代號物品是「5.56x45mm Box Magazine」(盒式彈匣). 彈鏈與盒式彈匣是不同的彈藥形態, 找不到對雙方都誠實又有用的上位詞 (現值「.223 Rem彈鏈」對 Brita 是錯的). 抑制後 Guns of 93 顯示自己 ItemName.json 的英文, Brita 顯示 script 英文, 無鍵名殘留."
+      "signature": "aae385f7ece12d65",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Base.556Belt 是「Belted .223 Rem Rounds」(上好鏈節的 .223 彈鏈, 該 MOD 另有 M249Box 彈藥箱物品); Brita 的同代號物品是「5.56x45mm Box Magazine」(盒式彈匣). 彈鏈與盒式彈匣是不同的彈藥形態, 找不到對雙方都誠實又有用的上位詞 (現值「.223 Rem彈鏈」對 Brita 是錯的). 抑制後 Guns of 93 顯示自己 ItemName.json 的英文, Brita 顯示 script 英文, 無鍵名殘留. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal 寫 'M249 5.56 100rd Belt Box'（彈鏈盒）、BritaGunworksLegacyMagazines 寫 '5.56x45mm Box Magazine'；與 Guns of 93 的彈鏈仍是不同彈藥形態，維持不出貨。"
     },
     "ItemName|Base.GunCleaningKit": {
       "action": "translate",
@@ -8574,8 +8574,8 @@
     },
     "ItemName|Base.Buckmark": {
       "action": "translate",
-      "signature": "1626e56f6cd538e9",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Browning Buck Mark 與 Brita 的 Browning Buckmark (script 名) 是同一把勃朗寧 .22 手槍, 只差拼字空格. 現值已含廠牌+型號+種類, 對雙方都成立, 沿用.",
+      "signature": "c598599ddc608361",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Browning Buck Mark 與 Brita 的 Browning Buckmark (script 名) 是同一把勃朗寧 .22 手槍, 只差拼字空格. 現值已含廠牌+型號+種類, 對雙方都成立, 沿用. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "勃朗寧Buck Mark手槍",
       "cn": "勃朗宁雄鹿标记手枪"
     },
@@ -8588,22 +8588,22 @@
     },
     "ItemName|Base.M723": {
       "action": "translate",
-      "signature": "db62c7500379cfb7",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Colt Model 723 與 Brita 的 Colt M723 Carbine (script 名) 是同一款柯爾特 M723 短步槍, 只差是否寫出種類字. 卡賓槍屬步槍, 現值對雙方都成立, 沿用.",
+      "signature": "2f4d6c2dd3e3c27c",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Colt Model 723 與 Brita 的 Colt M723 Carbine (script 名) 是同一款柯爾特 M723 短步槍, 只差是否寫出種類字. 卡賓槍屬步槍, 現值對雙方都成立, 沿用. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "柯爾特723型步槍",
       "cn": "柯尔特723型步枪"
     },
     "ItemName|Base.3006Bullets": {
       "action": "translate",
-      "signature": "edc680e7114f39a5",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 .30-06 Round 與 Brita 的 30-06 SPRG Round (script 名, SPRG = Springfield) 是同一種 .30-06 春田步槍彈, 只差寫法. 沿用現值.",
+      "signature": "890d3dd310b44bda",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的 .30-06 Round 與 Brita 的 30-06 SPRG Round (script 名, SPRG = Springfield) 是同一種 .30-06 春田步槍彈, 只差寫法. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": ".30-06子彈",
       "cn": ".30-06子弹"
     },
     "ItemName|Base.P226": {
       "action": "translate",
-      "signature": "692899d9955001e3",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Sig P226, Rain's Firearms (含 Expanded) 的 SIG Sauer P226 與 Brita 的 Sig Sauer P226 (script 名) 是同一把西格紹爾 P226 手槍, 只差廠牌寫全與大小寫. 現值符合本包「廠牌+型號+種類」慣例, 沿用.",
+      "signature": "8b003a6c9d261acb",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Sig P226, Rain's Firearms (含 Expanded) 的 SIG Sauer P226 與 Brita 的 Sig Sauer P226 (script 名) 是同一把西格紹爾 P226 手槍, 只差廠牌寫全與大小寫. 現值符合本包「廠牌+型號+種類」慣例, 沿用. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "西格P226手槍",
       "cn": "西格绍尔P226手枪"
     },
@@ -8616,20 +8616,20 @@
     },
     "ItemName|Base.308Belt": {
       "action": "unship",
-      "signature": "94967f7901a3b6ab",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Base.308Belt 是「Belted .308 Rounds」(.308 彈鏈, 該 MOD 另有 M60Box 彈藥箱); Brita 的同代號物品是「308 Box Magazine」(盒式彈匣). 彈鏈與盒式彈匣是不同彈藥形態, 現值「.308彈鏈」對 Brita 不成立, 也找不到雙方都成立的上位詞. 抑制後 Guns of 93 顯示 ItemName.json 英文, Brita 顯示 script 英文, 無鍵名殘留."
+      "signature": "fa2827a0166ba34f",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Base.308Belt 是「Belted .308 Rounds」(.308 彈鏈, 該 MOD 另有 M60Box 彈藥箱); Brita 的同代號物品是「308 Box Magazine」(盒式彈匣). 彈鏈與盒式彈匣是不同彈藥形態, 現值「.308彈鏈」對 Brita 不成立, 也找不到雙方都成立的上位詞. 抑制後 Guns of 93 顯示 ItemName.json 英文, Brita 顯示 script 英文, 無鍵名殘留. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal 寫 '7.62x51 100rd Belt Box'、BritaGunworksLegacyMagazines 寫 '308 Box Magazine'；與 Guns of 93 的 .308 彈鏈仍是不同彈藥形態，維持不出貨。"
     },
     "ItemName|Base.3006Box": {
       "action": "translate",
-      "signature": "8ac86b14c1f1b523",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Box of .30-06 Rounds 與 Brita 的 Box of 30-06 SPRG Rounds (script 名) 是同一盒 .30-06 子彈, 只差寫法. 沿用現值.",
+      "signature": "36ffbccae22f1be0",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Box of .30-06 Rounds 與 Brita 的 Box of 30-06 SPRG Rounds (script 名) 是同一盒 .30-06 子彈, 只差寫法. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": ".30-06子彈 (整盒)",
       "cn": ".30-06子弹 (整盒)"
     },
     "ItemName|Base.M9": {
       "action": "translate",
-      "signature": "64092e16559e8ec2",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Beretta M9 與 Brita 的 Beretta M9 Pistol (script 名) 是同一把貝瑞塔 M9 手槍, 只差有無種類字. 沿用現值.",
+      "signature": "b4ad85a570110003",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Beretta M9 與 Brita 的 Beretta M9 Pistol (script 名) 是同一把貝瑞塔 M9 手槍, 只差有無種類字. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "貝瑞塔M9手槍",
       "cn": "伯莱塔M9手枪"
     },
@@ -8642,15 +8642,15 @@
     },
     "ItemName|Base.M870": {
       "action": "translate",
-      "signature": "651b08f09477ab42",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 M870 與 Brita 的 Model 870 Marine (script 名, 雷明頓 870 的不鏽鋼 Marine 款) 都是雷明頓 870 泵動霰彈槍這把槍, 「M870霰彈槍」對兩者都成立, 沿用現值.",
+      "signature": "b3bd0da25971bc03",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的 M870 與 Brita 的 Model 870 Marine (script 名, 雷明頓 870 的不鏽鋼 Marine 款) 都是雷明頓 870 泵動霰彈槍這把槍, 「M870霰彈槍」對兩者都成立, 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "M870霰彈槍",
       "cn": "M870霰弹枪"
     },
     "ItemName|Base.SKSClip": {
       "action": "translate",
-      "signature": "7458292346fab1b7",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Stripper Clip (7.62x39) 與 Brita 的 7.62x39mm Stripper Clip (script 名) 是同一種 7.62x39 橋夾, 只差詞序. 沿用現值.",
+      "signature": "bf7e026cad992a7e",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Stripper Clip (7.62x39) 與 Brita 的 7.62x39mm Stripper Clip (script 名) 是同一種 7.62x39 橋夾, 只差詞序. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal 'SKS 7.62x39 10rd Stripper Clip'、BritaGunworksLegacyMagazines '7.62x39mm Stripper Clip'，同為 7.62x39 橋夾；現行譯名對全部 owner 仍成立。",
       "ch": "7.62x39橋夾",
       "cn": "7.62x39桥夹"
     },
@@ -8663,15 +8663,15 @@
     },
     "Tooltip|Tooltip_AmmoCarrier": {
       "action": "translate",
-      "signature": "53eecee50a93058a",
-      "reason": "2026-10-02 #644 裁決：兩方都是掛在槍上的彈藥袋配件說明, 同一東西. Guns of 93 寫「武器配件, 需螺絲起子安裝, 減少裝填時間」; Brita 寫「讓逐發裝填武器直接取用彈藥, ReloadTime -10」. 「需要螺絲起子」只在 Guns of 93 成立, 改為兩方共有的事實「武器配件. 減少槍械裝填時間.」; 不帶 Brita 的 <br> 換行, 記號數與現值一致 (0).",
+      "signature": "054ffcd90041d2ab",
+      "reason": "2026-10-02 #644 裁決：兩方都是掛在槍上的彈藥袋配件說明, 同一東西. Guns of 93 寫「武器配件, 需螺絲起子安裝, 減少裝填時間」; Brita 寫「讓逐發裝填武器直接取用彈藥, ReloadTime -10」. 「需要螺絲起子」只在 Guns of 93 成立, 改為兩方共有的事實「武器配件. 減少槍械裝填時間.」; 不帶 Brita 的 <br> 換行, 記號數與現值一致 (0). ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "武器配件. 減少槍械裝填時間.",
       "cn": "武器配件. 减少枪械装填时间."
     },
     "Tooltip|Tooltip_Bayonet": {
       "action": "unship",
-      "signature": "584e474fa540d11a",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的刺刀說明是「按 Z 在刺刀與槍械用法之間切換」; Brita 則明說「只加上刺刀模型與數值修正, 不支援獨立的刺擊模式」. 兩者語意相反, 現值「按下Z鍵切換」會誤導 Brita 玩家, 也找不到兩方都成立又有用的說法. 抑制後兩方都顯示自己 Tooltip.json 的英文, 無鍵名殘留."
+      "signature": "85dce50103f44741",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的刺刀說明是「按 Z 在刺刀與槍械用法之間切換」; Brita 則明說「只加上刺刀模型與數值修正, 不支援獨立的刺擊模式」. 兩者語意相反, 現值「按下Z鍵切換」會誤導 Brita 玩家, 也找不到兩方都成立又有用的說法. 抑制後兩方都顯示自己 Tooltip.json 的英文, 無鍵名殘留. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal 說明刺刀用近戰／推擠鍵（預設空白鍵）或 MOD 選項的按鍵攻擊；與 Guns of 93 的「按 Z 切換」操作仍互斥，維持不出貨。"
     },
     "IG_UI|IGUI_PhunZones_AllZones_tooltip": {
       "action": "translate",
@@ -9351,92 +9351,92 @@
     },
     "ItemName|Base.AK103": {
       "action": "translate",
-      "signature": "e0ce5ccf2b9c8fad",
-      "reason": "2026-10-03 裁決: GaelGunStore 寫 AK-103 Rifle, Brita 的 script 寫 AK-103 Assault Rifle, 是同一把槍, 只差種類字的詳略. 沿用現值.",
+      "signature": "e4b92f213657399f",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 AK-103 Rifle, Brita 的 script 寫 AK-103 Assault Rifle, 是同一把槍, 只差種類字的詳略. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "AK-103步槍",
       "cn": "AK-103步枪"
     },
     "ItemName|Base.AK12": {
       "action": "translate",
-      "signature": "155f2548d95f6fbd",
-      "reason": "2026-10-03 裁決: GaelGunStore 寫 AK-12 Rifle, Brita 的 script 寫 AK-12 Assault Rifle, 是同一把槍, 只差種類字的詳略. 沿用現值.",
+      "signature": "9bc82b02829794f7",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 AK-12 Rifle, Brita 的 script 寫 AK-12 Assault Rifle, 是同一把槍, 只差種類字的詳略. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "AK-12步槍",
       "cn": "AK-12步枪"
     },
     "ItemName|Base.AK5C": {
       "action": "translate",
-      "signature": "c21da4e0c658607d",
-      "reason": "2026-10-03 裁決: GaelGunStore 寫 FN AK5C Rifle, Brita 的 script 寫 Swedish AK5-C w/Extended Stock (另有 AK5C_Fold 折疊槍托版), 都是同一款瑞典 AK5C 步槍. 現值「赫斯塔爾」只來自 Gael 標的 FN 廠牌, Brita 沒有這樣標, 所以拿掉廠牌改成中性的「AK5C步槍」, 對兩方都成立. Brita 的折疊槍托版另有自己的鍵, 不受影響.",
+      "signature": "69abcc0d605d4ad8",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 FN AK5C Rifle, Brita 的 script 寫 Swedish AK5-C w/Extended Stock (另有 AK5C_Fold 折疊槍托版), 都是同一款瑞典 AK5C 步槍. 現值「赫斯塔爾」只來自 Gael 標的 FN 廠牌, Brita 沒有這樣標, 所以拿掉廠牌改成中性的「AK5C步槍」, 對兩方都成立. Brita 的折疊槍托版另有自己的鍵, 不受影響. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "AK5C步槍",
       "cn": "AK5C步枪"
     },
     "ItemName|Base.AN94": {
       "action": "translate",
-      "signature": "a2761385b3bf33d1",
-      "reason": "2026-10-03 裁決: GaelGunStore 寫 AN-94 Abakan Rifle, Brita 的 script 寫 AN-94 Assault Rifle, 是同一把槍 (Abakan 是 AN-94 的別名). 沿用現值.",
+      "signature": "a7cb59ba8a4dac3a",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 AN-94 Abakan Rifle, Brita 的 script 寫 AN-94 Assault Rifle, 是同一把槍 (Abakan 是 AN-94 的別名). 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "AN-94 Abakan步槍",
       "cn": "AN-94 Abakan步枪"
     },
     "ItemName|Base.G36C": {
       "action": "translate",
-      "signature": "ca6c59c6b288ba31",
-      "reason": "2026-10-03 裁決: GaelGunStore 寫 Heckler & Koch G36C Carbine, Brita 的 script 寫 H&K G36-C Rifle w/Extended Stock (另有 G36C_Fold 折疊槍托版), 都是 H&K G36C, G36C 本身就是卡賓槍型. 現值對兩方都成立, 沿用. Brita 的折疊槍托版另有自己的鍵.",
+      "signature": "3533363e5836fd8b",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 Heckler & Koch G36C Carbine, Brita 的 script 寫 H&K G36-C Rifle w/Extended Stock (另有 G36C_Fold 折疊槍托版), 都是 H&K G36C, G36C 本身就是卡賓槍型. 現值對兩方都成立, 沿用. Brita 的折疊槍托版另有自己的鍵. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "黑克勒-科赫G36C卡賓槍",
       "cn": "黑克勒-科赫G36C卡宾枪"
     },
     "ItemName|Base.L85": {
       "action": "translate",
-      "signature": "4cf617e8037330de",
-      "reason": "2026-10-03 裁決: GaelGunStore 的 Base.L85 是 L85A2 Rifle, Brita 的 Base.L85 是 L85A1 (Brita 另有獨立的 Base.L85A2). A1 與 A2 是同一款 L85 步槍的不同改型, 現值「L85A2步槍」對 Brita 的 A1 不成立, 改成上位說法「L85步槍」, 對兩方都成立; Brita 的 A2 版仍由 Base.L85A2 自己的鍵區分.",
+      "signature": "b5e3b0a406801445",
+      "reason": "2026-10-03 裁決: GaelGunStore 的 Base.L85 是 L85A2 Rifle, Brita 的 Base.L85 是 L85A1 (Brita 另有獨立的 Base.L85A2). A1 與 A2 是同一款 L85 步槍的不同改型, 現值「L85A2步槍」對 Brita 的 A1 不成立, 改成上位說法「L85步槍」, 對兩方都成立; Brita 的 A2 版仍由 Base.L85A2 自己的鍵區分. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "L85步槍",
       "cn": "L85步枪"
     },
     "ItemName|Base.L86": {
       "action": "translate",
-      "signature": "3bb883ec7e39f5cb",
-      "reason": "2026-10-03 裁決: GaelGunStore 寫 L86 LSW Machine Gun, Brita 的 script 寫 L86A1, L86A1 就是 L86 輕型支援武器 (LSW), 是同一把槍. 現值沒有寫改型號, 對兩方都成立, 沿用.",
+      "signature": "74e28c4e94e9b5fc",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 L86 LSW Machine Gun, Brita 的 script 寫 L86A1, L86A1 就是 L86 輕型支援武器 (LSW), 是同一把槍. 現值沒有寫改型號, 對兩方都成立, 沿用. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "L86 LSW機槍",
       "cn": "L86 LSW机枪"
     },
     "ItemName|Base.M14": {
       "action": "translate",
-      "signature": "6c8f016ff019694a",
-      "reason": "2026-10-03 裁決: Totally's NATO 寫 M14, Brita 的 script 寫 M14 Rifle, 是同一把槍. ch 沿用現值; cn 現值只有「M14」, 等於沒翻, 補成「M14战斗步枪」跟 ch 一致.",
+      "signature": "5619d37e7f93f43b",
+      "reason": "2026-10-03 裁決: Totally's NATO 寫 M14, Brita 的 script 寫 M14 Rifle, 是同一把槍. ch 沿用現值; cn 現值只有「M14」, 等於沒翻, 補成「M14战斗步枪」跟 ch 一致. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "M14戰鬥步槍",
       "cn": "M14战斗步枪"
     },
     "ItemName|Base.M40": {
       "action": "translate",
-      "signature": "4ff9c0a19f9b2454",
-      "reason": "2026-10-03 裁決: Totally's NATO 與 GaelGunStore 寫 M40 Sniper Rifle, Brita 的 script 寫 Remington M40 Rifle, 是同一把槍, 只差廠牌與種類字的詳略. 沿用現值.",
+      "signature": "9a049548e4cf749f",
+      "reason": "2026-10-03 裁決: Totally's NATO 與 GaelGunStore 寫 M40 Sniper Rifle, Brita 的 script 寫 Remington M40 Rifle, 是同一把槍, 只差廠牌與種類字的詳略. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "M40狙擊步槍",
       "cn": "M40狙击步枪"
     },
     "ItemName|Base.M40A1": {
       "action": "translate",
-      "signature": "472f5f528d4a6729",
-      "reason": "2026-10-03 裁決: Totally's NATO 寫 M40A1 Sniper Rifle, Brita 的 script 寫 Remington M40A1 Rifle, 是同一把槍. ch 沿用現值; cn 拿掉型號與種類之間多出的空格, 跟 ch 和 M40 一致.",
+      "signature": "e62d6bc26e288839",
+      "reason": "2026-10-03 裁決: Totally's NATO 寫 M40A1 Sniper Rifle, Brita 的 script 寫 Remington M40A1 Rifle, 是同一把槍. ch 沿用現值; cn 拿掉型號與種類之間多出的空格, 跟 ch 和 M40 一致. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "M40A1狙擊步槍",
       "cn": "M40A1狙击步枪"
     },
     "ItemName|Base.M9A3": {
       "action": "translate",
-      "signature": "e59f0469ba370d1f",
-      "reason": "2026-10-03 裁決: GaelGunStore 寫 M9A3 Pistol, Brita 的 script 寫 Beretta M9A3 Pistol, 是同一把槍, 只差有沒有寫廠牌. 依本包「廠牌+型號+種類」的慣例補成「貝瑞塔M9A3手槍」, 也一併拿掉現值多出的空格. 簡中廠牌沿用 GaelGunStore 既有的「贝雷塔」.",
+      "signature": "ae9c23f771441ff1",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 M9A3 Pistol, Brita 的 script 寫 Beretta M9A3 Pistol, 是同一把槍, 只差有沒有寫廠牌. 依本包「廠牌+型號+種類」的慣例補成「貝瑞塔M9A3手槍」, 也一併拿掉現值多出的空格. 簡中廠牌沿用 GaelGunStore 既有的「贝雷塔」. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "貝瑞塔M9A3手槍",
       "cn": "贝雷塔M9A3手枪"
     },
     "ItemName|Base.P220": {
       "action": "translate",
-      "signature": "6819697f462d0adc",
-      "reason": "2026-10-03 裁決: GaelGunStore 寫 SIG Sauer P220 Pistol, Brita 的 script 寫 Sig Sauer P220, 是同一把槍, 只差大小寫與種類字. 沿用現值.",
+      "signature": "3dedc1d5718a8a59",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 SIG Sauer P220 Pistol, Brita 的 script 寫 Sig Sauer P220, 是同一把槍, 只差大小寫與種類字. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "西格紹爾P220手槍",
       "cn": "西格绍尔P220手枪"
     },
     "ItemName|Base.P90Clip": {
       "action": "translate",
-      "signature": "99dc008891d68b20",
-      "reason": "2026-10-03 裁決: GaelGunStore 寫 Magazine for FN P90 (50 rounds) (script 的 AmmoType 是 9mm), Brita 的 script 寫 5.7x28mm P90 Magazine, 都是 P90 專用彈匣, 是同一種物品. 雙方口徑寫法不同, 現值原本就沒寫口徑; Brita 的 script 原始檔不在本地下載中, 無法確認容量是否同為 50 發, 所以拿掉「(50 發)」, 改成對兩方都成立的「FN P90 彈匣」. 容量仍會顯示在物品資訊中.",
+      "signature": "5e2785dcf5a1a8c8",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 Magazine for FN P90 (50 rounds) (script 的 AmmoType 是 9mm), Brita 的 script 寫 5.7x28mm P90 Magazine, 都是 P90 專用彈匣, 是同一種物品. 雙方口徑寫法不同, 現值原本就沒寫口徑; Brita 的 script 原始檔不在本地下載中, 無法確認容量是否同為 50 發, 所以拿掉「(50 發)」, 改成對兩方都成立的「FN P90 彈匣」. 容量仍會顯示在物品資訊中. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal 'P90/AR-57 5.7x28 50rd Mag'、BritaGunworksLegacyMagazines '5.7x28mm P90 Magazine'，同為 P90 彈匣；現行譯名仍成立。",
       "ch": "FN P90 彈匣",
       "cn": "FN P90 弹匣"
     },
@@ -9449,8 +9449,8 @@
     },
     "ItemName|Base.RPK16": {
       "action": "translate",
-      "signature": "5f92db3c09e11f98",
-      "reason": "2026-10-03 裁決: GaelGunStore 寫 RPK-16 Machine Gun, Brita 的 script 寫 RPK-16, 是同一把槍, 只差有沒有寫種類. 沿用現值.",
+      "signature": "f67f62d8b1ab07c3",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 RPK-16 Machine Gun, Brita 的 script 寫 RPK-16, 是同一把槍, 只差有沒有寫種類. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "RPK-16機槍",
       "cn": "RPK-16机枪"
     },
@@ -9463,22 +9463,22 @@
     },
     "ItemName|Base.VSSK": {
       "action": "translate",
-      "signature": "6c7fba4347144af7",
-      "reason": "2026-10-03 裁決: GaelGunStore 寫 VSSK Vykhlop Sniper Rifle, Brita 的 script 寫 VSSK Vykhlop, 是同一把槍, 只差有沒有寫種類. 沿用現值.",
+      "signature": "88810d92f83314dc",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 VSSK Vykhlop Sniper Rifle, Brita 的 script 寫 VSSK Vykhlop, 是同一把槍, 只差有沒有寫種類. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "VSSK Vykhlop狙擊步槍",
       "cn": "VSSK Vykhlop狙击步枪"
     },
     "ItemName|Base.WA2000": {
       "action": "translate",
-      "signature": "72c43f5eda4a59b2",
-      "reason": "2026-10-03 裁決: GaelGunStore 寫 Walther WA 2000 Sniper Rifle, Brita 的 script 寫 Walther WA2000, 是同一把槍, 只差空格與種類字. 沿用現值.",
+      "signature": "0408f1fe0abd23cd",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 Walther WA 2000 Sniper Rifle, Brita 的 script 寫 Walther WA2000, 是同一把槍, 只差空格與種類字. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "瓦爾特WA 2000狙擊步槍",
       "cn": "瓦尔特WA 2000狙击步枪"
     },
     "ItemName|Base.XM8": {
       "action": "translate",
-      "signature": "80036b034c26fe13",
-      "reason": "2026-10-03 裁決: GaelGunStore 寫 Heckler & Koch XM8 Rifle, Brita 的 script 寫 H&K XM8, 是同一把槍, 只差廠牌全名與種類字. 沿用現值.",
+      "signature": "fc36b8b380e9a4a9",
+      "reason": "2026-10-03 裁決: GaelGunStore 寫 Heckler & Koch XM8 Rifle, Brita 的 script 寫 H&K XM8, 是同一把槍, 只差廠牌全名與種類字. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "黑克勒-科赫XM8步槍",
       "cn": "黑克勒-科赫XM8步枪"
     },

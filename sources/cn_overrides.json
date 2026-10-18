@@ -59239,5 +59239,615 @@
     "as1_value": "仅在预设为自定义时生效. 车辆生成时携带钥匙的概率.",
     "value": "仅在预设为自定义时生效. 车辆在某处附带钥匙的概率: 点火开关上、手套箱内、附近的僵尸身上、附近的容器内或地上. 钥匙是否留在点火开关上取决于游戏本身的“钥匙”战利品设置, 且仅限车门未上锁的车辆, 因此即使设为 100, 大多数钥匙也会在车辆附近而非车内. 烧毁的车辆和拖车永远不会有钥匙.",
     "reason": "2026-10-17 #885：上游英文改寫（Only used when Preset = Custom. Chance t… → Only used when Preset = Custom. The chan…），依新英文重譯。"
+  },
+  "ContextMenu.json|ContextMenu_LoadedMixed": {
+    "value": "装填弹药:    混合",
+    "reason": "2026-10-18 As1 v3.11.0 收錄此鍵為「已装填弹药」；本鍵由 Loaded Ammo 與 Load Ammo 共用（owner_conflict_decisions 2026-09-22 #501 裁決），「已」只符合其中一方，維持不限定完成狀態的中性譯名。",
+    "as1_value": "已装填弹药:    混合"
+  },
+  "ContextMenu.json|ContextMenu_LoadedAmmo": {
+    "value": "装填弹药:    ",
+    "reason": "2026-10-18 As1 v3.11.0 收錄此鍵為「已装填弹药」；本鍵由 Loaded Ammo 與 Load Ammo 共用（owner_conflict_decisions 2026-09-22 #501 裁決），「已」只符合其中一方，維持不限定完成狀態的中性譯名。",
+    "as1_value": "已装填弹药:    "
+  },
+  "ItemName.json|AmmoMaker.44CasesCan": {
+    "value": ".44口径弹壳罐",
+    "reason": "2026-10-18 As1 v3.11.0 照上游英文誤植譯為 .34 口徑；同 MOD Tooltip_44CasesCan 明寫內裝 25 個 .44 彈殼，物品 id 也是 44CasesCan，維持 .44。",
+    "as1_value": ".34口径弹壳罐"
+  },
+  "ItemName.json|Base.Padlock_Cut": {
+    "value": "挂锁 (已剪断)",
+    "reason": "2026-10-18 As1 v3.11.0 譯「剪断挂锁」讀起來像動作；此鍵是已被剪斷的掛鎖物品，與同英文的 ContextMenu_Cut_Padlock 動作分譯，維持「挂锁 (已剪断)」。",
+    "as1_value": "剪断挂锁"
+  },
+  "Tooltip.json|Tooltip_GetGunPowderDesc": {
+    "value": "你可以从这个容器取得 %1 单位的火药",
+    "reason": "2026-10-18 As1 v3.11.0 收錄此鍵：As1 把佔位 %1 寫成「1%」，玩家會看到固定的「1%」而不是實際數量；沿用原創譯文（依上游英文）。",
+    "as1_value": "你可以从此容器获取1%%单位火药"
+  },
+  "Tooltip.json|Tooltip_PutGunPowderDesc": {
+    "value": "这个容器可以放入 %1 单位的火药.",
+    "reason": "2026-10-18 As1 v3.11.0 收錄此鍵：As1 把佔位 %1 寫成「1%」，玩家會看到固定的「1%」而不是實際數量；沿用原創譯文（依上游英文）。",
+    "as1_value": "你可以向此容器放入1%%单位火药."
+  },
+  "UI.json|UI_AM_GunPowderAdd": {
+    "value": "加入 %1 火药",
+    "reason": "2026-10-18 As1 v3.11.0 收錄此鍵：As1 把佔位 %1 寫成「1%」，玩家會看到固定的「1%」而不是實際數量；沿用原創譯文（依上游英文）。",
+    "as1_value": "添加1%%火药"
+  },
+  "UI.json|UI_AM_GunPowderTake": {
+    "value": "取出 %1 火药",
+    "reason": "2026-10-18 As1 v3.11.0 收錄此鍵：As1 把佔位 %1 寫成「1%」，玩家會看到固定的「1%」而不是實際數量；沿用原創譯文（依上游英文）。",
+    "as1_value": "取出1%%火药"
+  },
+  "Tooltip.json|Tooltip_ProjDescMP308": {
+    "value": "制作 .308口径铅弹头 (制作 .308口径子弹的基本部件)",
+    "reason": "2026-10-18 As1 v3.11.0 收錄此鍵：As1 多加了上游英文沒有的 <LINE>，與繁中標記數量不對稱（placeholder gate）；沿用原創譯文（依上游英文）。",
+    "as1_value": "制作.308口径弹头. <LINE>  (制作.308口径子弹的基础部件)"
+  },
+  "Tooltip.json|Tooltip_craft_caneFenceGateDesc": {
+    "value": "穿过栅栏到另一侧, 不必<br>翻越它!",
+    "reason": "2026-10-18 As1 v3.11.0 收錄此鍵：As1 少了上游英文的 <br>，與繁中標記數量不對稱（placeholder gate）；沿用原創譯文（依上游英文）。",
+    "as1_value": "无需翻越栅栏即可到达另一侧!"
+  },
+  "UI.json|UI_trait_TVJunkieDesc": {
+    "value": "你每天都得看电视过过瘾.<br>默认须在24个游戏内活跃小时内收到至少四次电视互动指令 (无聊/不开心等增减) 才算看过. 超过设定的在线时间仍未有效收看, 无聊和不开心会每分钟增加. 离线期间不计入.",
+    "reason": "2026-10-18 As1 v3.11.0 收錄此鍵：As1 多了上游英文沒有的 <br>，與繁中標記數量不對稱（placeholder gate）；沿用原創譯文（依上游英文）。",
+    "as1_value": "你需要每日的电视补给.<br>默认情况下, 在24个活跃游戏小时内收到至少四次电视互动命令 (无聊/不快乐等增加) 才计为观看过.<br>一旦超过配置的在线时间而没有符合条件的观看, 无聊和不快乐每分钟增加. 离线时间不计入."
+  },
+  "UI.json|UI_trait_gunnutdesc": {
+    "value": "你对枪械充满热情.<br>你知道所有弹药复装的配方.<br>军用武器 (M16 和 M14) 的装填速度快 25%%.<br>射击时弹壳会<br>直接进入物品栏.",
+    "reason": "2026-10-18 As1 v3.11.0 收錄此鍵：As1 少了上游英文的一個 <br>，與繁中標記數量不對稱（placeholder gate）；沿用原創譯文（依上游英文）。",
+    "as1_value": "你对枪械充满热情.<br>你知道所有弹药装填配方.<br>军用武器 (M16和M14) 装填速度加快 25%%.<br>射击时,弹壳会直接进入物品栏."
+  },
+  "ItemName.json|HydeCoBeavers.BeaverLeather_Fur": {
+    "value": "河狸皮 (带毛, 未鞣制)",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：Hide (Furred) 與 Leather (Furred) 都譯「河狸皮 (带毛)」, 未區分未鞣製 (本體 CN 作「带毛, 未鞣制」)。",
+    "as1_value": "河狸皮 (带毛)"
+  },
+  "Sandbox.json|Sandbox_HydeCoBeavers_BeaversNearPlayer_tooltip": {
+    "value": "同一时间每名玩家附近最多出现的河狸数量 (默认6); 巢穴规模越大, 外出数量越多. 调低则数量减少, 调高则增多. 设为0则阻止新河狸外出.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯「(6 by default)」與「Lower it to see fewer, raise it for more」。",
+    "as1_value": "同一时间每名玩家附近最多出现的河狸数量; 巢穴规模越大, 外出数量越多. 设为0则阻止新河狸外出."
+  },
+  "Sandbox.json|Sandbox_HydeCoBeavers_Beavers_tooltip": {
+    "value": "河狸会在县内野外的溪流、河流、湖泊和池塘边筑巢, 但绝不会在城镇里筑巢. 巢穴最初由两只河狸建立, 规模较小; 随着木材不断运入 - 有些顺水漂来, 有些由河狸啃倒并拖回 - 巢穴会逐渐扩建为中型和大型. 巢穴越大, 能容纳的河狸越多, 外出的数量也越多. 春季会在剩余空间中诞下幼崽. 储备充足的巢穴处于安定状态: 河狸会安心休息, 允许玩家靠近, 并诞下更多幼崽. 当大型巢穴住满河狸时, 每年春季都会派出一对年轻河狸前往其他水域建立新巢. 河狸从黄昏活动到黎明, 冬季外出较少, 白天通常一次只出现一只. 发现玩家的河狸会游开并潜水逃离. 河狸会从水中带回海苔、石头、浸水木材或河流冲下来的各种物品, 从绳索到他人的钱包都有可能; 河流也会将杂物卡在巢穴的树枝堆中, 随木材一同取出. 你可以取走巢穴不需要的木材, 或用斧头拆毁巢穴, 但这样会让河狸逃散且永不返回. 拉扯巢穴会让河狸冲出来咬人. 死去的河狸可提供肉、骨头和毛皮.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯「Pull at a lodge and its beavers come out and bite」; 「each spring」誤作「每對春季」。",
+    "as1_value": "河狸会在县内野外的溪流、河流、湖泊和池塘边筑巢, 但绝不会在城镇里筑巢. 巢穴最初由两只河狸建立, 规模较小; 随着木材不断运入 - 有些顺水漂来, 有些由河狸啃倒并拖回 - 巢穴会逐渐扩建为中型和大型. 巢穴越大, 能容纳的河狸越多, 外出的数量也越多. 春季会在剩余空间中诞下幼崽. 储备充足的巢穴处于安定状态: 河狸会安心休息, 允许玩家靠近, 并诞下更多幼崽. 当大型巢穴住满河狸时, 每对春季都会派出一对年轻河狸前往其他水域建立新巢. 河狸从黄昏活动到黎明, 冬季外出较少, 白天通常一次只出现一只. 发现玩家的河狸会游开并潜水逃离. 河狸会从水中带回海苔、石头、浸水木材或河流冲下来的各种物品, 从绳索到他人的钱包都有可能; 河流也会将杂物卡在巢穴的树枝堆中, 随木材一同取出. 你可以取走巢穴不需要的木材, 或用斧头拆毁巢穴, 但这样会让河狸逃散且永不返回. 死去的河狸可提供肉、骨头和毛皮."
+  },
+  "Sandbox.json|Sandbox_HydeCoBeavers_ZombieBiteInfects_tooltip": {
+    "value": "默认关闭: 僵尸河狸的咬伤只会造成伤害, 绝不会携带诺克斯病毒. 若开启, 僵尸河狸造成的抓伤或撕裂伤可能会按照游戏本身的概率导致感染.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：laceration (撕裂傷) 誤作「咬伤」。",
+    "as1_value": "默认关闭: 僵尸河狸的咬伤只会造成伤害, 绝不会携带诺克斯病毒. 若开启, 被僵尸河狸抓伤或咬伤可能会按照游戏本身的概率导致感染."
+  },
+  "Recipes.json|HydeCoOrchard_CutPaintBlackToGrey": {
+    "value": "将黑色油漆稀释为灰色",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「黑色油漆」。",
+    "as1_value": "稀释为灰色"
+  },
+  "Recipes.json|HydeCoOrchard_CutPaintBlueToLightBlue": {
+    "value": "将蓝色油漆稀释为浅蓝色",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「藍色」。",
+    "as1_value": "稀释漆为浅蓝色"
+  },
+  "Recipes.json|HydeCoOrchard_CutPaintBrownToLightBrown": {
+    "value": "将棕色油漆稀释为浅棕色",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「棕色油漆」。",
+    "as1_value": "稀释为浅棕色"
+  },
+  "Recipes.json|HydeCoOrchard_GrindBlueFromBerries": {
+    "value": "用浆果研磨蓝色颜料",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯「from Berries」, 與一般研磨配方同名。",
+    "as1_value": "研磨蓝色颜料"
+  },
+  "Recipes.json|HydeCoOrchard_GrindPinkFromBerries": {
+    "value": "用浆果研磨粉色颜料",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯「from Berries」, 與一般研磨配方同名。",
+    "as1_value": "研磨粉色颜料"
+  },
+  "Recipes.json|HydeCoOrchard_GrindPurpleFromBerries": {
+    "value": "用浆果研磨紫色颜料",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯「from Berries」, 與一般研磨配方同名。",
+    "as1_value": "研磨紫色颜料"
+  },
+  "Recipes.json|HydeCoOrchard_MakePaintBlueFromVerditer": {
+    "value": "用石青调制蓝色油漆",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「from Verditer」, 與一般調色配方同名。",
+    "as1_value": "调制蓝色油漆"
+  },
+  "Recipes.json|HydeCoOrchard_MakePaintCyanFromVerdigris": {
+    "value": "用铜绿调制青色油漆",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「from Verdigris」, 與一般調色配方同名。",
+    "as1_value": "调制青色油漆"
+  },
+  "Recipes.json|HydeCoOrchard_MakePaintFromEgyptianBlue": {
+    "value": "用埃及蓝调制蓝色油漆",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「from Egyptian Blue」, 與一般調色配方同名。",
+    "as1_value": "调制蓝色油漆"
+  },
+  "Recipes.json|HydeCoOrchard_MakePaintFromIronGall": {
+    "value": "用铁胆墨水调制黑色油漆",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「from Iron Gall」, 與一般調色配方同名。",
+    "as1_value": "调制黑色油漆"
+  },
+  "Recipes.json|HydeCoOrchard_MakePaintFromVerdigris": {
+    "value": "用铜绿调制绿色油漆",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「from Verdigris」, 與一般調色配方同名。",
+    "as1_value": "调制绿色油漆"
+  },
+  "Recipes.json|HydeCoOrchard_MakePaintFromVerditer": {
+    "value": "用石青调制青绿色油漆",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「from Verditer」, 與一般調色配方同名。",
+    "as1_value": "调制青绿色油漆"
+  },
+  "Recipes.json|HydeCoOrchard_MakePaintGreyFromIronGall": {
+    "value": "用铁胆墨水调制灰色油漆",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「from Iron Gall」, 與一般調色配方同名。",
+    "as1_value": "调制灰色油漆"
+  },
+  "Recipes.json|Recipe_HydeCoOrchard_CutPaintBlackToGrey": {
+    "value": "将黑色油漆稀释为灰色",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「黑色油漆」。",
+    "as1_value": "稀释为灰色"
+  },
+  "Recipes.json|Recipe_HydeCoOrchard_CutPaintBlueToLightBlue": {
+    "value": "将蓝色油漆稀释为浅蓝色",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「藍色」。",
+    "as1_value": "稀释漆为浅蓝色"
+  },
+  "Recipes.json|Recipe_HydeCoOrchard_CutPaintBrownToLightBrown": {
+    "value": "将棕色油漆稀释为浅棕色",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「棕色油漆」。",
+    "as1_value": "稀释为浅棕色"
+  },
+  "Recipes.json|Recipe_HydeCoOrchard_GrindBlueFromBerries": {
+    "value": "用浆果研磨蓝色颜料",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯「from Berries」, 與一般研磨配方同名。",
+    "as1_value": "研磨蓝色颜料"
+  },
+  "Recipes.json|Recipe_HydeCoOrchard_GrindPinkFromBerries": {
+    "value": "用浆果研磨粉色颜料",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯「from Berries」, 與一般研磨配方同名。",
+    "as1_value": "研磨粉色颜料"
+  },
+  "Recipes.json|Recipe_HydeCoOrchard_GrindPurpleFromBerries": {
+    "value": "用浆果研磨紫色颜料",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯「from Berries」, 與一般研磨配方同名。",
+    "as1_value": "研磨紫色颜料"
+  },
+  "Recipes.json|Recipe_HydeCoOrchard_MakePaintBlueFromVerditer": {
+    "value": "用石青调制蓝色油漆",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「from Verditer」, 與一般調色配方同名。",
+    "as1_value": "调制蓝色油漆"
+  },
+  "Recipes.json|Recipe_HydeCoOrchard_MakePaintCyanFromVerdigris": {
+    "value": "用铜绿调制青色油漆",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「from Verdigris」, 與一般調色配方同名。",
+    "as1_value": "调制青色油漆"
+  },
+  "Recipes.json|Recipe_HydeCoOrchard_MakePaintFromEgyptianBlue": {
+    "value": "用埃及蓝调制蓝色油漆",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「from Egyptian Blue」, 與一般調色配方同名。",
+    "as1_value": "调制蓝色油漆"
+  },
+  "Recipes.json|Recipe_HydeCoOrchard_MakePaintFromIronGall": {
+    "value": "用铁胆墨水调制黑色油漆",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「from Iron Gall」, 與一般調色配方同名。",
+    "as1_value": "调制黑色油漆"
+  },
+  "Recipes.json|Recipe_HydeCoOrchard_MakePaintFromVerdigris": {
+    "value": "用铜绿调制绿色油漆",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「from Verdigris」, 與一般調色配方同名。",
+    "as1_value": "调制绿色油漆"
+  },
+  "Recipes.json|Recipe_HydeCoOrchard_MakePaintFromVerditer": {
+    "value": "用石青调制青绿色油漆",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「from Verditer」, 與一般調色配方同名。",
+    "as1_value": "调制青绿色油漆"
+  },
+  "Recipes.json|Recipe_HydeCoOrchard_MakePaintGreyFromIronGall": {
+    "value": "用铁胆墨水调制灰色油漆",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯來源「from Iron Gall」, 與一般調色配方同名。",
+    "as1_value": "调制灰色油漆"
+  },
+  "UI.json|UI_HydeCoOrchard_NeedTrowel": {
+    "value": "你需要挖掘工具 - 园艺铲、锄头或铁锹.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：trowel (園藝鏟) 誤作「抹刀」。",
+    "as1_value": "你需要挖掘工具 - 抹刀、锄头或铁锹."
+  },
+  "Sandbox.json|Sandbox_HydeCoFrogs_FrogsNearPlayer_tooltip": {
+    "value": "同一时间每名玩家附近最多出现的青蛙数量 (默认4). 调低则数量减少, 调高则增多. 设为0则阻止新青蛙出现.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯「(4 by default)」與「Lower it to see fewer, raise it for more」。",
+    "as1_value": "同一时间每名玩家附近最多出现的青蛙数量. 设为0则阻止新青蛙出现."
+  },
+  "Sandbox.json|Sandbox_HydeCoRobins_RobinsNearPlayer_tooltip": {
+    "value": "同一时间每名玩家附近最多出现的知更鸟数量 (默认6). 调低则数量减少, 调高则增多. 设为0则阻止新知更鸟出现.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯「(6 by default)」與「Lower it to see fewer, raise it for more」。",
+    "as1_value": "同一时间每名玩家附近最多出现的知更鸟数量. 设为0则阻止新知更鸟出现."
+  },
+  "Sandbox.json|Sandbox_HydeCoSquirrels_SquirrelsNearPlayer_tooltip": {
+    "value": "同一时间最多有多少只巢穴松鼠在一名玩家附近觅食 (默认4). 调低则数量减少, 调高则增多. 设为0则阻止巢穴释放任何松鼠.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯「(4 by default)」與「Lower it to see fewer, raise it for more」。",
+    "as1_value": "同一时间最多有多少只巢穴松鼠在一名玩家附近觅食. 设为0则阻止巢穴释放任何松鼠."
+  },
+  "UI.json|UI_ModManagerExt_fastDrawTip": {
+    "value": "仅绘制屏幕可见的行. 模组管理器每帧绘制列表所有行, 模组较多时会降低滚动速度.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 把 Mod Manager (MOD) 譯成「原版模组管理器」, en 無「原版」。",
+    "as1_value": "仅绘制屏幕可见的行. 原版模组管理器每帧绘制列表所有行, 模组较多时会降低滚动速度."
+  },
+  "UI.json|UI_ModManagerExt_reloadScreenTip": {
+    "value": "在Lua重载期间显示黑屏, 包含进度条、加载内容及所属模组. 关闭此项则保持游戏默认的小型 '正在重新加载Lua' 标签.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 把「Reloading Lua」標籤譯成「重置Lua」(重置≠重新載入)。",
+    "as1_value": "在Lua重载期间显示黑屏, 包含进度条、加载内容及所属模组. 关闭此项则保持游戏默认的小型 '重置Lua' 标签."
+  },
+  "UI.json|UI_ModManagerExt_serverLayoutTip": {
+    "value": "根据最长名称调整服务器列表和建立服务器界面的服务器框宽度, 居中每个设置页面并确保选项框足够宽, 同时加宽 '选择模组' 列表. 关闭此项则保持游戏默认布局.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 漏譯 host screen (建立伺服器畫面), 只寫「界面的服务器框」。",
+    "as1_value": "根据最长名称调整服务器列表和界面的服务器框宽度, 居中每个设置页面并确保选项框足够宽, 同时加宽 '选择模组' 列表. 关闭此项则保持游戏默认布局."
+  },
+  "UI.json|UI_TME_Emote_fishy_flourish": {
+    "value": "鱼样炫技",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 半譯, 留英文 flourish。",
+    "as1_value": "鱼样 flourish"
+  },
+  "UI.json|UI_TME_Emote_hype": {
+    "value": "嗨翻全场",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 未翻譯, 只留英文 hype (且有前導空格)。",
+    "as1_value": " hype"
+  },
+  "UI.json|UI_TME_Emote_last_forever": {
+    "value": "天长地久",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1「永恒最后」語意錯亂, en 為持續到永遠。",
+    "as1_value": "永恒最后"
+  },
+  "UI.json|UI_TME_Emote_never_gonna_give": {
+    "value": "永远不会放弃你",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 譯成「永不放弃」(never give up), en 是 Never Gonna Give You Up 的「不會放棄你」。",
+    "as1_value": "永不放弃"
+  },
+  "UI.json|UI_TME_Emote_peace_out": {
+    "value": "闪人了",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 逐字直譯「和平退出」, en 為俚語「閃人／再見」。",
+    "as1_value": "和平退出"
+  },
+  "UI.json|UI_TME_Emote_run_it_down": {
+    "value": "一路冲到底",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 未翻譯, 寫成英文 rundown (且有前導空格)。",
+    "as1_value": " rundown"
+  },
+  "UI.json|UI_TME_Emote_smeeze": {
+    "value": "Smeeze舞",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 譯成「喷嚏」, 把舞名 Smeeze 誤當 sneeze。",
+    "as1_value": "喷嚏"
+  },
+  "UI.json|UI_TME_Emote_travelers.layer_6.bow": {
+    "value": "弓弦乐器",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 譯成「鞠躬」, 但此處是樂器分軌名 (與班卓琴、口琴等並列)。",
+    "as1_value": "鞠躬"
+  },
+  "ItemName.json|DesertCargo.Jacket_FieldCoatDarkBrown": {
+    "value": "连帽厚帆布野战夹克 (深棕)",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：Duck 是厚實的平織帆布, As1 誤譯成鴨絨。",
+    "as1_value": "连帽鸭绒野战夹克 (深棕)"
+  },
+  "ItemName.json|DesertCargo.Jacket_FieldCoatDarkBrownOpen": {
+    "value": "连帽厚帆布野战夹克 (深棕, 敞开)",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：Duck 是厚實的平織帆布, As1 誤譯成鴨絨。",
+    "as1_value": "连帽鸭绒野战夹克 (深棕, 敞开)"
+  },
+  "ItemName.json|DesertCargo.Jacket_FieldCoatTan": {
+    "value": "连帽厚帆布野战夹克 (棕褐)",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：Duck 是厚實的平織帆布, As1 誤譯成鴨絨。",
+    "as1_value": "连帽鸭绒野战夹克 (棕褐)"
+  },
+  "ItemName.json|DesertCargo.Jacket_FieldCoatTanOpen": {
+    "value": "连帽厚帆布野战夹克 (棕褐, 敞开)",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：Duck 是厚實的平織帆布, As1 誤譯成鴨絨。",
+    "as1_value": "连帽鸭绒野战夹克 (棕褐, 敞开)"
+  },
+  "ItemName.json|DesertCargo.Trousers_JeansCarpenter": {
+    "value": "牛仔裤 (木工款)",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：Carpenter 是木工款牛仔褲, As1 譯成「伐木工」。",
+    "as1_value": "牛仔裤 (伐木工)"
+  },
+  "Recipes.json|KW_CutElkPelt": {
+    "value": "马鹿皮分割",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1「马皮分割」把 Elk (馬鹿) 譯成馬。",
+    "as1_value": "马皮分割"
+  },
+  "Sandbox.json|Sandbox_KW_AggressiveToZombies_tooltip": {
+    "value": "成年的熊、郊狼、山猫和野猪会攻击附近的僵尸. 马鹿和所有幼年动物仍会逃跑. 默认关闭. 不论此选项如何, 成年熊也会攻击20格内可见的玩家.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 末句譯成「野生動物對玩家仍保持防禦姿態 (不主動攻擊)」, 與 en「成年熊會攻擊 20 格內可見玩家」相反。",
+    "as1_value": "成年的熊、郊狼、山猫和野猪会攻击附近的僵尸. 马鹿和所有幼年动物仍会逃跑. 默认关闭. 野生动物对玩家仍保持防御姿态 (不主动攻击)."
+  },
+  "Sandbox.json|Sandbox_ImmersiveSnow_ColdCorpses_tooltip": {
+    "value": "当户外温度为0°C或更低时, 尸体上方不会有苍蝇飞舞, 其恶臭也不会使人患病: 模组会将游戏的\"腐烂尸体对健康的影响\"保持为\"无\", 并在温度高于+1°C时恢复. 如果在保持期间你自行设置了该选项, 模组会保留你的设置并关闭此选项. 在从存档中移除本模组前, 请在控制台运行ISnow.cleanSave() (详见模组页面), 否则该选项可能保持为\"无\".",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 漏譯「若在維持期間你自行設定該選項, 模組會保留你的設定並關閉此選項」一句。",
+    "as1_value": "当户外温度为0°C或更低时, 尸体上方不会有苍蝇飞舞, 其恶臭也不会使人患病: 模组会将游戏的\"腐烂尸体对健康的影响\"保持为\"无\", 并在温度高于+1°C时恢复. 在从存档中移除本模组前, 请在控制台运行ISnow.cleanSave() (详见模组页面), 否则该选项可能保持为\"无\"."
+  },
+  "Sandbox.json|Sandbox_GrateEscape_StuckCovers_tooltip": {
+    "value": "适用于'玩家可以更改设置' 关闭时. 开启: 井盖从轻松开启到严重锈蚀不等, 打开一个顽固的井盖需要力量、健身、像样的杠杆和体力充沛的双腿 - 最近打开的井盖会保持松动约一个月, 之后再次锈死. 关闭: 每个井盖都能轻松开启.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 把 fresh legs (體力充沛的雙腿) 直譯成「新鮮的雙腿」。",
+    "as1_value": "适用于'玩家可以更改设置' 关闭时. 开启: 井盖从轻松开启到严重锈蚀不等, 打开一个顽固的井盖需要力量、健身、像样的杠杆和新鲜的双腿 - 最近打开的井盖会保持松动约一个月, 之后再次锈死. 关闭: 每个井盖都能轻松开启."
+  },
+  "UI.json|UI_GrateEscape_TipPackFood": {
+    "value": "背包里大约有%1的食物.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 把 holds (背包目前裝有) 譯成「能裝」(容量), 語意不同。",
+    "as1_value": "背包大约能装%1的食物."
+  },
+  "UI.json|UI_GrateEscape_TipPackWater": {
+    "value": "背包里大约有%1的水.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 把 holds (背包目前裝有) 譯成「能裝」(容量), 語意不同。",
+    "as1_value": "背包大约能装%1的水."
+  },
+  "Sandbox.json|Sandbox_ZombieDismemberment_PoolBlood_tooltip": {
+    "value": "在地面静止的存活截肢者 (包括无臂僵尸) 身下形成高密度血泊. 随着时间推移和血液排放, 血泊会扩大并蔓延至相邻的已加载地面.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 把 floors (地面格) 譯成「樓層」。",
+    "as1_value": "在地面静止的存活截肢者 (包括无臂僵尸) 身下形成高密度血泊. 随着时间推移和血液排放, 血泊会扩大并蔓延至相邻加载楼层."
+  },
+  "Sandbox.json|Sandbox_TrueSleep_FloorMult": {
+    "value": "地板休息倍率",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 把 Floor (睡地板) 誤解為「下限」, 譯成「休息下限倍率」。",
+    "as1_value": "休息下限倍率"
+  },
+  "Sandbox.json|Sandbox_ForestWildlife_GlobalCap_tooltip": {
+    "value": "本模组在整个存档中放置的动物群组中的动物总数.\\n每当你再次经过一个群组时, 计数会自动修正.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 譯成「群組總數」, en 是群體中的動物總數。",
+    "as1_value": "本模组在整个存档中放置的动物群组总数.\\n每当你再次经过一个群组时, 计数会自动修正."
+  },
+  "UI.json|UI_UO_ClearTip": {
+    "value": "清除共享的文本测量数据和验证状态. 计数器将保留. 故障的缓存将保持禁用状态, 直到新会话开始.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 寫成「設置和計數器將保留」並漏掉驗證狀態, en 只保留計數器。",
+    "as1_value": "清除缓存的文本测量数据. 设置和计数器将保留. 故障的缓存将保持禁用状态, 直到新会话开始."
+  },
+  "UI.json|UI_UO_Description": {
+    "value": "带有兼容性检查的持久化菜单文本缓存. 库存更新仍会立即生效. 按下“应用”后更改才会生效.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 譯的是舊版英文: 說設定優先於 UndyingOptimizer.cfg, 漏了「按套用才生效」。",
+    "as1_value": "带有兼容性保护的菜单文本测量缓存. 库存立即刷新. 这些设置优先于UndyingOptimizer.cfg中的匹配项."
+  },
+  "UI.json|UI_UO_menuCacheTip": {
+    "value": "在多次打开菜单之间共享有上限的文本测量结果. 结果不一致时会清除缓存并重试一次; 若持续不一致则暂停缓存.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 譯的是另一段文字 (針對 42.21.0、讓位給 Tempo 等), 與 en 完全不同。",
+    "as1_value": "针对构建版本42.21.0. 自动让位于Tempo、ResponsiveUI和MPOptimizer, 以及更改后的菜单方法."
+  },
+  "UI.json|UI_UO_sessionReportTip": {
+    "value": "在世界会话开始时, 以及断开连接或返回主菜单时写入报告. 手动保存可独立运行.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 多了「活動期間每 60 現實秒」, 漏了手動儲存獨立運作。",
+    "as1_value": "在会话开始时、活动期间每60现实秒、以及断开连接或返回主菜单时写入报告."
+  },
+  "UI.json|UI_ZomVisFix_Options_ZombieOpacity_Desc": {
+    "value": "由此模组的子格子光线追踪器显示的僵尸的不透明度",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 譯的是舊版說明, 多了「兩者兼有」光線追蹤設定的整段文字與換行, 也沒提次格射線偵測。",
+    "as1_value": "由此模组显示的僵尸的不透明度 (不会影响其他僵尸)\n如果使用\"两者兼有\"的光线追踪设置, 则对于由基于格子的光线追踪器显示的僵尸, 此值将被忽略"
+  },
+  "UI.json|UI_ZomVisFix_Options_ZombieOpacity_Name": {
+    "value": "僵尸不透明度 (子格子)",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 漏譯 (sub-tile)。",
+    "as1_value": "僵尸不透明度"
+  },
+  "UI.json|UI_SurvivorBriefing_Position_tooltip": {
+    "value": "简报出现的位置. 它会避开聊天框、图标栏、速度按钮、状态图标和快捷栏. 大小另在“文本大小”中设置.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN 為舊版說明: 漏譯快捷欄與「文字大小」另設, 並多出「居中大號顯示」。",
+    "as1_value": "简报出现的位置. 在角落时可以避开聊天框、图标栏、速度按钮和状态图标. 居中则会在屏幕中央以大号显示."
+  },
+  "UI.json|UI_SurvivorBriefing_motion_tooltip": {
+    "value": "让外观带有动态效果: 文本行上升到位, 宽银幕黑边滑入, 文字逐字打出. 关闭: 所有内容改为淡入, 在任何UI帧率下都保持流畅. 印章、贴纸、闪烁和光标闪动无论开关都会出现.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN 為舊版說明: 未譯寬銀幕黑邊、逐字打出與印章/貼紙等, 另加 en 沒有的抖動建議。",
+    "as1_value": "文本行在淡入时会向上移动到位, 且天数下方的横线会横向展开. 关闭: 所有内容仅淡入淡出, 在任何UI帧率下都保持流畅. 如果简报看起来有抖动, 请关闭此选项."
+  },
+  "UI.json|UI_SurvivorBriefing_onMidnight": {
+    "value": "每日简报",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：en 為「每日簡報」(時刻可設定), CN 仍譯為「午夜時顯示」。",
+    "as1_value": "午夜时显示"
+  },
+  "UI.json|UI_SurvivorBriefing_onMidnight_tooltip": {
+    "value": "每天一次, 在下方设置的时刻 (默认为午夜), 且你清醒时显示. 该时刻你在睡觉, 或在此前不到两小时才醒来? 则以你醒来时显示的简报代替.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN 將顯示時刻固定為 00:00, 漏譯可設定時刻, 以及在設定時刻前不到兩小時醒來時, 以起床簡報代替每日簡報的規則。",
+    "as1_value": "当你清醒且时钟变为00:00时. 如果午夜时在睡觉? 则会在你醒来时显示."
+  },
+  "UI.json|UI_SurvivorBriefing_realistic_tooltip": {
+    "value": "遵循与游戏自带时钟相同的规则. 如果你手腕上没有手表或手中没有钟表, 你只能知道大致时段 (上午、傍晚等). 日期和温度需要数字设备才能显示. 包里的手表不算数. 击杀数超过一百后只会显示大致数字.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN 漏譯最後一句「擊殺超過一百後只顯示大略數字」。",
+    "as1_value": "遵循与游戏自带时钟相同的规则. 如果你手腕上没有手表或手中没有钟表, 你只能知道大致时段 (上午、傍晚等). 日期和温度需要数字设备才能显示. 包里的手表不算数."
+  },
+  "Tooltip.json|Tooltip_SAB_CompactBox": {
+    "value": "仅限装载动物的容器. 装载的动物按体重计算负重; 每只成年鸡最多增加4点负重. 空箱负重: 1. 可装1只支持的成年动物或最多4只幼崽; 混装时共用容量. 右键点击可装入手中抓着的动物, 或取出已命名的动物. 放在地上时, 打开门可让动物在1-5秒的随机延迟后陆续离开. 装入动物、拿起或举起箱子会自动关门. 箱内动物仍需照料.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN 譯成「可裝1隻雞或最多4隻小雞; 其他小動物需體型合適」, en 為「1 隻支援的成年動物或最多 4 隻幼崽; 混裝共用容量」。",
+    "as1_value": "仅限装载动物的容器. 装载的动物按体重计算负重; 每只成年鸡最多增加4点负重. 空箱负重: 1. 可装1只鸡或最多4只小鸡; 其他小动物需体型合适. 右键点击可装入手中抓着的动物, 或取出已命名的动物. 放在地上时, 打开门可让动物在1-5秒的随机延迟后陆续离开. 装入动物、拿起或举起箱子会自动关门. 箱内动物仍需照料."
+  },
+  "IG_UI.json|IGUI_SFC_ClaimDeed_UseOption": {
+    "value": "预览安全屋认领范围",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：en 是「預覽」安全屋申請範圍, As1 譯成「在此認領安全屋」。",
+    "as1_value": "在此认领安全屋"
+  },
+  "Sandbox.json|Sandbox_SafehouseFactionControl_FactionTrackingEnabled_tooltip": {
+    "value": "默认禁用. 导出派系快照和事件. 快照间隔以现实秒数设置. 外部读取程序无法更改游戏数据.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 譯的是舊版說明 (寫入 factions_snapshot.json 等), 與現行 en (預設停用、快照間隔以現實秒數設定) 內容不符。",
+    "as1_value": "将派系成员数据写入磁盘 (factions_snapshot.json / factions_events.jsonl), 供外部工具读取. 成员变化时立即更新, 并定期刷新. 只读 -- 外部无法写回游戏."
+  },
+  "Sandbox.json|Sandbox_PickupTiles": {
+    "value": "可拾取的图块",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：Tiles 指遊戲圖塊 (可搬動物件), As1 譯成「地磚」。",
+    "as1_value": "可拾取的地砖"
+  },
+  "Sandbox.json|Sandbox_PickupTiles_Change_GoldPallet_Weight_tooltip": {
+    "value": "将金条托盘的重量减半, 并 <LINE>允许拾取并堆叠位于第二层第一和第二级的图块.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：tiles 指圖塊, As1 譯「地磚」。",
+    "as1_value": "将金条托盘的重量减半, 并 <LINE>允许拾取并堆叠位于第二层第一和第二级的地砖."
+  },
+  "Sandbox.json|Sandbox_PickupTiles_Pickup_WorkBench_tooltip": {
+    "value": "允许拾取: 金属带锯, 砧板, 磨石, 石磨, 原始熔炉, 冶炼炉, 鼓风炉, 原始锻造炉, 锻造炉, 屠宰钩, 原始窑炉, 高级窑炉, 圆顶窑, 大风箱, 鸡舍.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯 Chicken Hutch (雞舍)。",
+    "as1_value": "允许拾取: 金属带锯, 砧板, 磨石, 石磨, 原始熔炉, 冶炼炉, 鼓风炉, 原始锻造炉, 锻造炉, 屠宰钩, 原始窑炉, 高级窑炉, 圆顶窑, 大风箱."
+  },
+  "Sandbox.json|Sandbox_TheyKnew": {
+    "value": "They Knew: 生成",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯 \": Spawns\"。",
+    "as1_value": "They Knew"
+  },
+  "Sandbox.json|Sandbox_TheyKnew_ColouredHazmatSpawnChance_tooltip": {
+    "value": "与黑色防化服生成率相同的尺度, 由三种颜色共享. 默认0.3. 0 表示不再生成. 军队基地和实验室改用下方两项设置.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯「預設 0.3」與「軍事基地與實驗室改用下方兩項設定」。",
+    "as1_value": "与黑色防化服相同的尺度, 由三种颜色共享. 0 表示不再生成."
+  },
+  "Sandbox.json|Sandbox_TheyKnew_HazmatGrowthDays_tooltip": {
+    "value": "防化服生成率从第1天的正常值逐步攀升到这一天的完整倍率, 之后保持不变. 默认60. 0 表示关闭增长.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 改寫成背景敘述, 漏譯「第 1 天正常值逐步升到此日的完整倍率後維持」與預設 60。",
+    "as1_value": "随着疫情持续, 更多队伍被派往现场. 防化僵尸数量在这段时间内攀升. 0 表示关闭."
+  },
+  "Sandbox.json|Sandbox_TheyKnew_HazmatGrowthMax_tooltip": {
+    "value": "经过上述天数后, 所有防化服生成率所乘的倍数. 默认3 (三倍数量). 1 表示关闭增长.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯「預設 3 (三倍數量). 1 為關閉成長」。",
+    "as1_value": "经过上述天数后, 防化僵尸数量增加的倍数."
+  },
+  "Sandbox.json|Sandbox_TheyKnew_HazmatSpawnChance_tooltip": {
+    "value": "黑色防化服僵尸在普通区域 (非军队基地或实验室) 的常见程度. 不是百分比: 0.3 (默认) 约为 1/1200, 1 约为 1/375, 3 约为 1/125. 0 表示不再生成.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 譯文內容與 en 不同 (改寫成相對服裝權重 373, 漏 1≈1/375 與預設值)。",
+    "as1_value": "相对于普通僵尸服装的权重, 后者总和约为 373. 在没有特殊僵尸类型的区域, 0.3 约为 1/1200, 3 约为 1/125. 0 表示不再生成."
+  },
+  "Sandbox.json|Sandbox_TheyKnew_LabHazmatChance_tooltip": {
+    "value": "实验室中穿着防化服的僵尸百分比, 多为白色款. 默认8.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯「預設 8」, 且多加「秘密」。",
+    "as1_value": "秘密实验室中穿着防化服的僵尸百分比, 多为白色款."
+  },
+  "Sandbox.json|Sandbox_TheyKnew_MilitaryHazmatChance_tooltip": {
+    "value": "军队基地、秘密基地和军队储藏室中穿着防化服的僵尸百分比, 多为军队款. 默认2. 适用于使用原版军队区域的附加地图.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯「軍用儲藏室」與「預設 2」。",
+    "as1_value": "军队基地和秘密基地中穿着防化服的僵尸百分比, 多为军队款. 适用于使用原版军队区域的附加地图."
+  },
+  "Sandbox.json|Sandbox_TheyKnew_SatchelCapacity_tooltip": {
+    "value": "战术挎包的容量. 仅对新挎包生效.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯第一句「戰術側背包可容納的量」。",
+    "as1_value": "仅对新挎包生效."
+  },
+  "Sandbox.json|Sandbox_TheyKnew_SatchelWeightReduction_tooltip": {
+    "value": "挎包内物品重量中你感觉不到的百分比. 仅对新挎包生效.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯第一句 (減重百分比的說明)。",
+    "as1_value": "仅对新挎包生效."
+  },
+  "Sandbox.json|Sandbox_CustomWeight_Truemusic": {
+    "value": "True Music 磁带与黑胶唱片重量",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯 True Music (指該模組的物品)。",
+    "as1_value": "磁带与黑胶唱片重量"
+  },
+  "UI.json|UI_ModManagerExt_TipSortApply": {
+    "value": "使用模组加载顺序排序器进行排序, 然后像 '确定' 一样保存.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 把 ACCEPT 按鈕誤稱為「应用」. 官方 CN 的 UI_btn_accept 是「确定」, UI_btn_apply 才是「应用」。",
+    "as1_value": "使用模组加载顺序排序器进行排序, 然后像 '应用' 一样保存."
+  },
+  "UI.json|UI_ModManagerExt_foldersTip": {
+    "value": "将模组列表分组到文件夹中, 按名称排序. 点击文件夹可折叠, 勾选复选框可启用或禁用其中列出的所有模组, 右键点击查看更多选项.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1 將「分組到資料夾中, 再依名稱排序」誤寫為「按名称分组到文件夹中」; 並漏掉 listed 的限制, 將其中列出的模組寫成其中所有模組。",
+    "as1_value": "将模组列表按名称分组到文件夹中. 点击文件夹可折叠, 勾选复选框可启用或禁用其中所有模组, 右键点击查看更多选项."
+  },
+  "ItemName.json|DesertCargo.Jacket_ParkaBlack": {
+    "value": "隧道帽派克大衣 (黑)",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯 Snorkel 所指的隧道型帽兜款式, 只留下泛稱派克大衣。",
+    "as1_value": "派克大衣 (黑)"
+  },
+  "ItemName.json|DesertCargo.Jacket_ParkaBlackOpen": {
+    "value": "隧道帽派克大衣 (黑, 敞开)",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯 Snorkel 所指的隧道型帽兜款式, 只留下泛稱派克大衣。",
+    "as1_value": "派克大衣 (黑, 敞开)"
+  },
+  "ItemName.json|DesertCargo.Jacket_ParkaSage": {
+    "value": "隧道帽派克大衣 (鼠尾草绿)",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯 Snorkel 所指的隧道型帽兜款式, 只留下泛稱派克大衣。",
+    "as1_value": "派克大衣 (鼠尾草绿)"
+  },
+  "ItemName.json|DesertCargo.Jacket_ParkaSageOpen": {
+    "value": "隧道帽派克大衣 (鼠尾草绿, 敞开)",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：漏譯 Snorkel 所指的隧道型帽兜款式, 只留下泛稱派克大衣。",
+    "as1_value": "派克大衣 (鼠尾草绿, 敞开)"
+  },
+  "ItemName.json|ItemName_Base.CBX_Ras_ohota": {
+    "value": "战术作战携行背心",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：Unloading Vest 在此指分散裝備負重的攜行背心, 不是用於卸除彈藥的卸彈背心。",
+    "as1_value": "战术作战卸弹背心"
+  },
+  "UI.json|UI_MLOSExt_LegendRules": {
+    "value": "违反排序规则: 本模组应在某个模组之后加载, 但该模组位于其下方",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：載入先後關係譯反. 英文指本模組必須在另一模組之後載入, As1 卻寫成另一模組應在本模組之後載入。",
+    "as1_value": "违反排序规则, 应在其后加载的模组位于其下方"
+  },
+  "UI.json|UI_MLOSExt_categoryAlpha": {
+    "value": "高亮不透明度",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：Opacity 是不透明度, As1 譯成透明度, 把量值方向寫反。",
+    "as1_value": "高亮透明度"
+  },
+  "UI.json|UI_MLOSExt_categoryAlphaTip": {
+    "value": "分类着色的强度, 从微弱到半透明覆盖整行.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：將 half covering 誤解為覆蓋一半的列面積; 此選項調整的是著色不透明度, 不是覆蓋範圍。",
+    "as1_value": "分类着色的强度, 从微弱到覆盖行的一半."
+  },
+  "Recipes.json|KW_CutCoyotePelt": {
+    "value": "郊狼皮分割",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：As1「狼皮分割」把 Coyote (郊狼) 誤譯成狼。",
+    "as1_value": "狼皮分割"
+  },
+  "Sandbox.json|Sandbox_TrancasRemoviveis_WorldArt_tooltip": {
+    "value": "在门、窗和栅栏门上绘制门闩、插销、门锁和尖刺木板. 关闭: 功能完全相同, 但不显示图形 (如果你看到视觉错误或运行了更改这些贴图的模组, 请使用此选项). 实验性功能.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN 將 gates 譯為「围栏」, 原文指柵門, 不是圍欄。",
+    "as1_value": "在门、窗和围栏上绘制门闩、插销、门锁和尖刺木板. 关闭: 功能完全相同, 但不显示图形 (如果你看到视觉错误或运行了更改这些贴图的模组, 请使用此选项). 实验性功能."
+  },
+  "UI.json|UI_TR_Spike_Renail": {
+    "value": "重新钉钉 (恢复伤害)",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN 將 restore damage 譯為「恢复损坏」, 此處是恢復尖刺對殭屍造成的傷害。",
+    "as1_value": "重新钉钉 (恢复损坏)"
+  },
+  "UI.json|UI_TR_Spike_RenailHint": {
+    "value": "更换弯曲的钉子. 伤害恢复至100%%.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN 將 Damage goes back to 100% 譯為「损坏恢复至100%%」, 原文指尖刺傷害恢復至完整數值。",
+    "as1_value": "更换弯曲的钉子. 损坏恢复至100%%."
+  },
+  "UI.json|UI_SurvivorBriefing_motion": {
+    "value": "动态效果",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN「上浮动画」仍只描述舊版上浮效果, 新版 Motion 也涵蓋黑邊滑入與逐字顯示。",
+    "as1_value": "上浮动画"
+  },
+  "ItemName.json|SmallAnimalBox.CompactAnimalBox": {
+    "value": "小型动物木箱",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN「小型动物箱」漏譯 Wooden 的木製材質。",
+    "as1_value": "小型动物箱"
+  },
+  "ItemName.json|SmallAnimalBox.SmallAnimalBox": {
+    "value": "大型动物木箱",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN「大型动物箱」漏譯 Wooden 的木製材質。",
+    "as1_value": "大型动物箱"
+  },
+  "Recipes.json|MakeCompactAnimalBox": {
+    "value": "制作小型动物木箱",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN「制作小型动物箱」漏譯 Wooden 的木製材質。",
+    "as1_value": "制作小型动物箱"
+  },
+  "Recipes.json|MakeSmallAnimalBox": {
+    "value": "制作大型动物木箱",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN「制作大型动物箱」漏譯 Wooden 的木製材質。",
+    "as1_value": "制作大型动物箱"
+  },
+  "IG_UI.json|IGUI_BLPower_BatteryDead": {
+    "value": "%1: 已失效, 请更换",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN 將需要更換的 dead 電池譯成「已耗尽」, 混淆電池失效與電量耗盡。",
+    "as1_value": "%1: 已耗尽, 请更换"
+  },
+  "IG_UI.json|IGUI_BLPower_NoBatteries": {
+    "value": "没有可充电的电池: 请将仍可用的汽车电池放入架中.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN 漏譯 live 對電池仍可使用的限定。",
+    "as1_value": "无可充电设备: 请将汽车电池放入架中."
+  },
+  "Tooltip.json|Tooltip_BL_BatteryBank": {
+    "value": "托盘上的架子装有五个汽车电池和一个逆变器. 静音、无废气: 可在室内安全运行. 可容纳任何汽车电池; 当它关闭且该位置有其他发电机或室内电网供电时, 会为电池充电. 电池会损耗, 需要更换.",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN 漏譯 on a pallet, 未說明電池架位於棧板上。",
+    "as1_value": "架子上装有五个汽车电池和一个逆变器. 静音、无废气: 可在室内安全运行. 可容纳任何汽车电池; 当它关闭且该位置有其他发电机或室内电网供电时, 会为电池充电. 电池会损耗, 需要更换."
+  },
+  "Sandbox.json|Sandbox_RechargeableBatteries.CraftTimeBase_tooltip": {
+    "value": "将100%%耗尽的电池充满所需的时间. (时间随电池电量%%调整)",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN 將 scales with 譯為「與電池剩餘電量百分比成比例」, 原文未指定與剩餘電量成正比。",
+    "as1_value": "将完全耗尽的电池充满所需的时间. (时间与电池剩余电量百分比成比例)"
+  },
+  "Sandbox.json|Sandbox_RechargeableBatteries.TranslationCreator_Example": {
+    "value": "简体中文翻译由 {Your Name} 提供",
+    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN 將原文佔位 {Your Name} 改成 {你的名字}, 未保留佔位名稱。",
+    "as1_value": "简体中文翻译由 {你的名字} 提供"
   }
 }

@@ -1348,7 +1348,7 @@
   },
   "ContextMenu.json|ContextMenu_FireMode_Safe": {
    "as1_value": "缺少必要零件",
-   "owner_signature": "df0fcdc7bbf45649",
+   "owner_signature": "b399e582c1eb634f",
    "reason": "2026-08-29 #315：同鍵分別表示 Missing Required Part 與 Safe，功能語意互斥，沒有誠實中性譯名。Guns93 有可載入 JSON EN；FRAcceptableGunsDemo 只有死檔 ContextMenu_EN.txt，抑制後後者會顯示字面鍵名；已接受此殘留，避免向兩方玩家出貨錯誤指令。"
   },
   "Tooltip.json|Tooltip_weapon_Light": {
@@ -1592,12 +1592,12 @@
   },
   "ItemName.json|Base.MP9": {
    "as1_value": "布鲁格-托梅MP9冲锋枪",
-   "owner_signature": "119c6827b739de4a",
+   "owner_signature": "d5f2cfefb37fca39",
    "reason": "2026-10-01 owner 衝突無誠實中性譯名：新增 3777433827/BritaCombinedB42，其 Base.MP9 是 'S&W M&P-9'（史密斯威森 M&P9 警用手槍，script 位於 POLICE_PISTOLS.txt），與 GaelGunStore 'Brügger & Thomet MP9 Submachine Gun'（布魯格-托梅 MP9 衝鋒槍）是不同廠牌、不同槍種、不同型號名（M&P9≠MP9），找不到同時誠實的中性譯名，改不出貨讓各 MOD 顯示自帶英文。"
   },
   "ItemName.json|ItemName_Base.MP9": {
    "as1_value": "布鲁加-托梅MP9冲锋枪",
-   "owner_signature": "119c6827b739de4a",
+   "owner_signature": "d5f2cfefb37fca39",
    "reason": "與 ItemName.json|Base.MP9 同步抑制的 B41 前綴孿生鍵。"
   },
   "Tooltip.json|Tooltip_LabSyringe": {
@@ -1607,17 +1607,17 @@
   },
   "ItemName.json|Base.556Belt": {
    "as1_value": ".223 Rem弹链",
-   "owner_signature": "722050a5b1f10c76",
+   "owner_signature": "aae385f7ece12d65",
    "reason": "2026-10-02 #644 裁決：Guns of 93 的 Base.556Belt 是「Belted .223 Rem Rounds」(上好鏈節的 .223 彈鏈, 該 MOD 另有 M249Box 彈藥箱物品); Brita 的同代號物品是「5.56x45mm Box Magazine」(盒式彈匣). 彈鏈與盒式彈匣是不同的彈藥形態, 找不到對雙方都誠實又有用的上位詞 (現值「.223 Rem彈鏈」對 Brita 是錯的). 抑制後 Guns of 93 顯示自己 ItemName.json 的英文, Brita 顯示 script 英文, 無鍵名殘留."
   },
   "ItemName.json|Base.308Belt": {
    "as1_value": ".308弹链",
-   "owner_signature": "94967f7901a3b6ab",
+   "owner_signature": "fa2827a0166ba34f",
    "reason": "2026-10-02 #644 裁決：Guns of 93 的 Base.308Belt 是「Belted .308 Rounds」(.308 彈鏈, 該 MOD 另有 M60Box 彈藥箱); Brita 的同代號物品是「308 Box Magazine」(盒式彈匣). 彈鏈與盒式彈匣是不同彈藥形態, 現值「.308彈鏈」對 Brita 不成立, 也找不到雙方都成立的上位詞. 抑制後 Guns of 93 顯示 ItemName.json 英文, Brita 顯示 script 英文, 無鍵名殘留."
   },
   "Tooltip.json|Tooltip_Bayonet": {
    "as1_value": "按下Z键在刺刀与枪械之间切换.",
-   "owner_signature": "584e474fa540d11a",
+   "owner_signature": "85dce50103f44741",
    "reason": "2026-10-02 #644 裁決：Guns of 93 的刺刀說明是「按 Z 在刺刀與槍械用法之間切換」; Brita 則明說「只加上刺刀模型與數值修正, 不支援獨立的刺擊模式」. 兩者語意相反, 現值「按下Z鍵切換」會誤導 Brita 玩家, 也找不到兩方都成立又有用的說法. 抑制後兩方都顯示自己 Tooltip.json 的英文, 無鍵名殘留."
   },
   "IG_UI.json|IGUI_PhunZones_Bandits_tooltip": {

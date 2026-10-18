@@ -29,6 +29,8 @@
   "Sandbox_HydeCoUnlimitedCars_DebugLogging_tooltip": "输出服务器端信息 (预设、受影响区域、原版车辆生成率), 用于排查多人/专用服务器问题.",
   "Sandbox_HydeCoUnlimitedCars_EqualizeVehicleTypes": "均衡车辆类型概率",
   "Sandbox_HydeCoUnlimitedCars_EqualizeVehicleTypes_tooltip": "启用后 (且预设不为原版), 区域内每种车辆类型拥有相同的出现概率. 影响多样性, 不影响总数量.",
+  "Sandbox_HydeCoUnlimitedCars_KeepZoneMix": "保留街区差异",
+  "Sandbox_HydeCoUnlimitedCars_KeepZoneMix_tooltip": "启用后, 预设或自定义模式会基于每个区域各自的原版车辆状态进行上调或下调, 而不是让所有区域采用同一状态. 这样废车场仍比车行更差, 交通堵塞路段也保留其残骸. 车钥匙概率仍遵循预设. 预设 1-4 从不改变车辆状态.",
   "Sandbox_HydeCoUnlimitedCars_Preset": "预设",
   "Sandbox_HydeCoUnlimitedCars_Preset_option1": "1 = 原版 (不作修改)",
   "Sandbox_HydeCoUnlimitedCars_Preset_option10": "10 = 稀有精品 (车辆稀少, 状态极佳)",
@@ -49,5 +51,11 @@
   "Sandbox_HydeCoUnlimitedCars_Preset_option7": "7 = 自定义 (使用高级选项卡)",
   "Sandbox_HydeCoUnlimitedCars_Preset_option8": "8 = 满载崭新 (最大生成量, 近乎完好的零件)",
   "Sandbox_HydeCoUnlimitedCars_Preset_option9": "9 = 满载残骸 (最大生成量, 大量重度受损车辆)",
-  "Sandbox_HydeCoUnlimitedCars_Preset_tooltip": "控制模组的行为模式. 默认为原版 (不作任何修改)."
+  "Sandbox_HydeCoUnlimitedCars_Preset_tooltip": "控制模组的行为模式. 默认为原版 (不作任何修改).",
+  "Sandbox_HydeCoUnlimitedCars_TierKeptPercent": "逐车构成: 保养良好的车辆 (%%)",
+  "Sandbox_HydeCoUnlimitedCars_TierKeptPercent_tooltip": "新生成的停放车辆曾被保养的概率: 每个零件 67-100%%, 电池已充电, 油箱有燃油, 轮胎已充气, 与原版 '最近的幸存者车辆' 效果相同, 并叠加于其上. 三项逐车概率共用同一次投掷, 因此总和超过 100 时, 靠后的项目只能分得剩余部分. 烧毁车辆以及调试或管理员生成的车辆绝不受影响. 仅作用于尚未被任何人加载过的区域.",
+  "Sandbox_HydeCoUnlimitedCars_TierRoughPercent": "逐车构成: 破旧车辆 (%%)",
+  "Sandbox_HydeCoUnlimitedCars_TierRoughPercent_tooltip": "新生成的停放车辆成为破旧车辆的概率, 其多数零件约为 35-65%%. 绝不会让车辆状态优于其所在区域掷出的结果. 适用于所有预设, 包括原版. 0=关闭.",
+  "Sandbox_HydeCoUnlimitedCars_TierWreckPercent": "逐车构成: 残骸 (%%)",
+  "Sandbox_HydeCoUnlimitedCars_TierWreckPercent_tooltip": "新生成的停放车辆成为残骸的概率, 其多数零件约为 15-50%%. 绝不会让车辆状态优于其所在区域掷出的结果. 适用于所有预设, 包括原版. 0=关闭."
 }
