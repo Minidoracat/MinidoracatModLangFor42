@@ -1,5 +1,5 @@
 {
-  "corpus_hash": "e97fe2285409425fab83a55322398288f8ada7d9b985cbe1e9a620657e89ba21",
+  "corpus_hash": "1bb750653a834d9c8c394fe4b496c62e06fe7bd71daa3a43041cc6424e666961",
   "extractor_schema": 10,
   "mod_ids": [
     "GridInventory"
@@ -78,6 +78,7 @@
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_GridInv_ModAction_QuickTransfer": "5825762b2aee",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_GridInv_ModAction_StackPicker": "52de5a3bab85",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_GridInv_ModAction_TakeOne": "7cf17b6e7357",
+    "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_GridInv_NoRoomToTake": "39d1e45b7105",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_GridInv_OptionsAutoSearch": "cb62250de82f",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_GridInv_OptionsAutoSearch_Tooltip": "c958614478cc",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_GridInv_OptionsCloseOnEsc": "d37c0dcd1378",
@@ -155,6 +156,8 @@
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_GridInv_SlotPicker_Empty": "ffe67109dd60",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_GridInv_SlotPicker_Equipped": "6f0fb7acee76",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_GridInv_SlotPicker_Replaces": "11755fd7edde",
+    "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_GridInv_StackHalfTooltip": "05c787d5b09a",
+    "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_GridInv_StackQtyTooltip": "2193d2e0c5ea",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_GridSearch": "49c266baaaa7",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_InvPanel_PutIn": "bf86a52e7bda",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_InventoryFull": "a586ad6a7ef7",
@@ -178,7 +181,12 @@
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_PaperDoll_Socks": "c25faab79e1e",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_PaperDoll_Title": "7f2465ac7cef",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_SearchFirst": "593ae5f95c7d",
+    "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_StackPicker_HintSelected": "9aea6be13a33",
+    "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_StackPicker_HintTop": "75346cff9c13",
+    "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_StackPicker_Leader": "3f53871b0838",
+    "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_StackPicker_Summary": "7d580daa6098",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_StackPicker_Take": "8b862ba45dce",
+    "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_StackPicker_TakePile": "7d7f4dbd01a7",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/IG_UI.json|IGUI_Unequip": "4543c883301a",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_GridInventory": "fd2e05983a9e",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_GridInventory_ContainerBonusRows": "cd9bac2c6f3b",
@@ -210,11 +218,12 @@
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_GridInventory_ScatterMode_option1": "1ea75d87a7cf",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_GridInventory_ScatterMode_option2": "4e577174391a",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_GridInventory_ScatterMode_option3": "46c7dc0bf3b0",
-    "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_GridInventory_ScatterMode_tooltip": "f9c96ec963af",
+    "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_GridInventory_ScatterMode_option4": "54be7db1dade",
+    "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_GridInventory_ScatterMode_tooltip": "52ebc8568bcb",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_GridInventory_SearchTimePerItem": "f314984a263e",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_GridInventory_SearchTimePerItem_tooltip": "cd0f7f938224",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_GridInventory_SearchWorldContainers": "4bac2e223941",
     "translate_en|mods/GridInventory/42.20/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_GridInventory_SearchWorldContainers_tooltip": "b6043c9b2392"
   },
-  "updated_at": "2026-10-18T08:53:59Z"
+  "updated_at": "2026-10-19T10:01:02Z"
 }

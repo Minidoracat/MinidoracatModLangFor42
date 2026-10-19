@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1427 個 Workshop 模組**（2043 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
+共支援 **1427 個 Workshop 模組**（2047 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -823,7 +823,7 @@
 | [[B42] Excrementum](https://steamcommunity.com/sharedfiles/filedetails/?id=3693805407) | — | — | `ExcrementumB42` | 279 | — | — |
 | [Gas Mask Attach [B42.20]](https://steamcommunity.com/sharedfiles/filedetails/?id=3693854821) | — | — | `GasMaskAttach` | 13 | — | — |
 | [Floatopia B42〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3693913206) | 漂浮烏托邦 | 漂浮烏托邦地圖。 | `Floatopia` | 1 | — | — |
-| [ERS - Network Extend Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=3694031031) | — | — | `ERS_NetworkInfrastructurePack` | 41 | — | — |
+| [ERS - Network Extend Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=3694031031) | — | — | `ERS_NetworkInfrastructurePack`, `ERS_NetworkInfrastructurePackNewWorlds` | 41 | — | — |
 | [Tooltiplib - Tooltip Framework for Modders](https://steamcommunity.com/sharedfiles/filedetails/?id=3694097672) | — | — | `TooltipLib` | 15 | — | — |
 | [Sauce Tooltips](https://steamcommunity.com/sharedfiles/filedetails/?id=3694158509) | Sauce Tooltips | 在物品提示中加入額外資訊，例如可加入的料理與每級瞄準加成等數值。 | `SauceTooltips` | 187 | — | — |
 | [Gone in 60 Seconds](https://steamcommunity.com/sharedfiles/filedetails/?id=3695166848) | — | — | `GoneIn60Seconds` | 7 | — | — |
@@ -980,7 +980,7 @@
 | [New Music [42+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3739256725) | — | — | `NewMusic` | 36 | — | — |
 | [Playable UNO: The Card Game](https://steamcommunity.com/sharedfiles/filedetails/?id=3739382095) | — | — | `playable_uno_cards` | 49 | — | — |
 | [[B42] Undead Survivor](https://steamcommunity.com/sharedfiles/filedetails/?id=3739427877) | — | — | `UndeadSurvivor42` | 117 | ⚠️ ≥3 | — |
-| [Water Pipes](https://steamcommunity.com/sharedfiles/filedetails/?id=3739595559) | — | — | `waterpipes` | 19 | ⚠️ ≥1 | — |
+| [Water Pipes](https://steamcommunity.com/sharedfiles/filedetails/?id=3739595559) | — | — | `waterpipes`, `waterpipesviewpoint` | 19 | ⚠️ ≥1 | — |
 | [Braven's Camouflage Reworked](https://steamcommunity.com/sharedfiles/filedetails/?id=3739612285) | — | — | `VB_Cammo` | 27 | — | — |
 | [Jeeve's Zones](https://steamcommunity.com/sharedfiles/filedetails/?id=3739941052) | — | — | `JeevesZones` | 69 | — | — |
 | [Companion Dogs [ALPHA]](https://steamcommunity.com/sharedfiles/filedetails/?id=3740052292) | — | — | `CompanionDogs` | 368 | — | — |
@@ -1422,7 +1422,7 @@
 | [Better Building Plus [B42 MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3812970899) | Better Building Plus 建築改良 | 用藍圖規劃並建造新建築，完工後會成為與原版房屋相同、可接水電的正式建築。 | `BetterBuildingPlus` | ? | — | — |
 | [HydeCo. Job Fair! 42.21.0](https://steamcommunity.com/sharedfiles/filedetails/?id=3813029846) | HydeCo. 就業博覽會！ | 新增 276 種職業與 28 種特質，開局即在工作地點並持有工具、鑰匙與工作服。 | `HydeCoJobFair` | ? | — | — |
 | [Useful Pallets](https://steamcommunity.com/sharedfiles/filedetails/?id=3813053718) | 實用棧板 | 可將木板、原木、磚塊等材料堆放在棧板上儲存，製作時可直接取用。 | `UsefulPallets` | 182 | ⚠️ ≥2 | — |
-| [They Knew Continued](https://steamcommunity.com/sharedfiles/filedetails/?id=3813362974) | They Knew Continued 他們早就知道（續） | 新增治癒、延緩與預防諾克斯感染的多種藥物，為 They Knew 的延續版。 | `TheyKnewContinued`, `TheyKnewContinued_ZVV` | 150 | — | — |
+| [They Knew Continued](https://steamcommunity.com/sharedfiles/filedetails/?id=3813362974) | They Knew Continued 他們早就知道（續） | 新增治癒、延緩與預防諾克斯感染的多種藥物，為 They Knew 的延續版。 | `TheyKnewContinued`, `TheyKnewContinued_AZ`, `TheyKnewContinued_AZBP`, `TheyKnewContinued_ZVV` | 150 | — | — |
 | [Cry of Fear Monster NPCs [Beta]](https://steamcommunity.com/sharedfiles/filedetails/?id=3813406470) | Cry of Fear 怪物 NPC | 加入《Cry of Fear》的怪物，保留原版模型、動作與音效，各有獨特攻擊與生成族群。 | `CryOfFearMonsters` | 120 | — | — |
 | [SMB steps〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3813489363) | SMB 爬梯 | 可攀爬垂直梯子與消防桿，按住慢跑鍵加速攀爬或滑下；可建造木梯、鋼梯與消防桿，並把梯子一段段往上延伸。 | `SMB_steps` | 52 | — | — |
 | [Gunsmith: The 1993 Arsenal](https://steamcommunity.com/sharedfiles/filedetails/?id=3813655486) | 槍匠：1993 軍火庫 | 將原版槍械與彈藥全換成 1993 年以前的真實槍彈，並可用零件拆裝改造槍枝。 | `Gunsmith1993` | 1 | — | — |
