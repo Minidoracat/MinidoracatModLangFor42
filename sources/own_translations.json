@@ -7710,6 +7710,71 @@
     "en": "Work on building",
     "ch": "繼續施工",
     "cn": "继续施工"
+   },
+   "ContextMenu_WaterPipesOpenSensor": {
+    "en": "Open sensor",
+    "ch": "開啟感測器",
+    "cn": "打开传感器"
+   },
+   "ContextMenu_AreaTasks_Bag": {
+    "en": "Bag",
+    "ch": "背包",
+    "cn": "背包"
+   },
+   "ContextMenu_AreaTasks_Container": {
+    "en": "Container",
+    "ch": "容器",
+    "cn": "容器"
+   },
+   "ContextMenu_AreaTasks_ContainerSingle": {
+    "en": "Container (Single)",
+    "ch": "容器 (單一)",
+    "cn": "容器 (单个)"
+   },
+   "ContextMenu_AreaTasks_ContainersArea": {
+    "en": "Containers (Area)",
+    "ch": "容器 (區域)",
+    "cn": "容器 (区域)"
+   },
+   "ContextMenu_AreaTasks_Ground": {
+    "en": "Ground",
+    "ch": "地面",
+    "cn": "地面"
+   },
+   "ContextMenu_AreaTasks_MoveItems": {
+    "en": "Move Items",
+    "ch": "移動物品",
+    "cn": "移动物品"
+   },
+   "ContextMenu_AreaTasks_ToContainer": {
+    "en": "To Container",
+    "ch": "放進容器",
+    "cn": "放入容器"
+   },
+   "ContextMenu_AreaTasks_ToTrashAndEmpty": {
+    "en": "To Trash and Empty",
+    "ch": "丟進垃圾桶並清空",
+    "cn": "丢进垃圾桶并清空"
+   },
+   "ContextMenu_AreaTasks_ToVehicle": {
+    "en": "To Vehicle",
+    "ch": "放進車輛",
+    "cn": "放入车辆"
+   },
+   "ContextMenu_AreaTasks_Vehicle": {
+    "en": "Vehicle",
+    "ch": "車輛",
+    "cn": "车辆"
+   },
+   "ContextMenu_AreaTasks_VehicleSingle": {
+    "en": "Vehicle (Single)",
+    "ch": "車輛 (單一)",
+    "cn": "车辆 (单个)"
+   },
+   "ContextMenu_AreaTasks_VehiclesArea": {
+    "en": "Vehicles (Area)",
+    "ch": "車輛 (區域)",
+    "cn": "车辆 (区域)"
    }
   },
   "Fluids.json": {
@@ -55303,9 +55368,9 @@
     "cn": "因压力过大而爆裂. 仍可输水, 但已停止浇水."
    },
    "IGUI_WaterPipesEmitterBurst": {
-    "en": "Blown out by too much pressure. Repair it with a pipe wrench and a repair kit.",
-    "ch": "因壓力過大而爆裂. 請用管鉗和修理工具組修理.",
-    "cn": "因压力过大而爆裂. 请用管钳和修理工具包修理."
+    "en": "Blown out by too much pressure. Repair it with a Pipe Wrench and Duct Tape.",
+    "ch": "因壓力過大而爆裂. 請用管鉗和大力膠帶修理.",
+    "cn": "因压力过大而爆裂. 请用管钳和管道胶带修理."
    },
    "IGUI_WaterPipesEmitterBurstRisk": {
     "en": "Close to bursting (blows out above %1). Put a router in between and set a limit.",
@@ -55313,9 +55378,9 @@
     "cn": "即将爆裂 (超过 %1 就会爆裂). 在中间加装分流器并设置上限."
    },
    "IGUI_WaterPipesEmitterDry": {
-    "en": "There is no water in the network for it to draw. Fill a barrel on the line, or switch on a pump with a source.",
-    "ch": "管網中沒有水可供汲取. 請把管線上的水桶裝滿, 或開啟一個接有水源的水泵.",
-    "cn": "管网中没有水可供汲取. 请把管线上的水桶装满, 或打开一个接有水源的水泵."
+    "en": "There is no water in the network for it to draw. Fill a container on the line, or switch on a pump with a source.",
+    "ch": "管網中沒有水可供汲取. 請把管線上的容器裝滿, 或開啟一個接有水源的水泵.",
+    "cn": "管网中没有水可供汲取. 请把管线上的容器装满, 或打开一个接有水源的水泵."
    },
    "IGUI_WaterPipesEmitterLow": {
     "en": "Not enough to water (needs %1). Add a pump, shorten the run, or raise the limit on the router feeding it.",
@@ -95142,9 +95207,9 @@
     "cn": "此处没有压力."
    },
    "IGUI_WaterPipesPlumbBuildingDesc": {
-    "en": "Runs a concealed pipe tree from the tile you clicked to every sink, toilet and washer in the building, climbing to other floors through the walls. Costs %1 metal pipe(s) per fixture connected, taken when the work starts; a fixture it cannot reach is refunded. Pipes you already laid are reused, never built over. Pipe laid this way gives nothing back when dismantled.",
-    "ch": "從你點選的格子鋪設一套暗埋的樹狀管線, 通往建築內的每個水槽, 馬桶和洗衣機, 並穿過牆壁延伸到其他樓層. 每接通一個用水裝置消耗 %1 根鐵管, 於開工時扣除; 無法接通的用水裝置會退還. 你已鋪設的水管會被重複利用, 絕不會在上面重複建造. 以此方式鋪設的水管拆除時不會返還任何材料.",
-    "cn": "从你点击的格子铺设一套暗埋的树状管线, 通往建筑内的每个水槽, 马桶和洗衣机, 并穿过墙壁延伸到其他楼层. 每接通一个用水设备消耗 %1 根金属管, 在开工时扣除; 无法接通的用水设备会退还. 你已铺设的水管会被重复利用, 绝不会在其上重复建造. 以此方式铺设的水管拆除时不会返还任何材料."
+    "en": "Runs a concealed pipe tree from the tile you clicked to every sink, toilet and washer in the building, climbing to other floors through the walls. Costs %1 Iron Pipe(s) per fixture connected, taken when the work starts; a fixture it cannot reach is refunded. Pipes you already laid are reused, never built over. Pipe laid this way gives nothing back when dismantled.",
+    "ch": "從你點選的格子鋪設一套暗埋的樹狀管線, 通往建築內的每個水槽, 馬桶和洗衣機, 並穿過牆壁延伸到其他樓層. 每接通一個用水裝置消耗 %1 根鐵管, 於開工時扣除; 無法接通的用水裝置所耗的鐵管會退還. 你已鋪設的水管會被重複利用, 絕不會在上面重複建造. 以此方式鋪設的水管拆除時不會返還任何材料.",
+    "cn": "从你点击的格子铺设一套暗埋的树状管线, 通往建筑内的每个水槽, 马桶和洗衣机, 并穿过墙壁延伸到其他楼层. 每接通一个用水设备消耗 %1 根金属管, 在开工时扣除; 无法接通的用水设备所耗的金属管会退还. 你已铺设的水管会被重复利用, 绝不会在其上重复建造. 以此方式铺设的水管拆除时不会返还任何材料."
    },
    "IGUI_WaterPipesPlumbBuildingDone": {
     "en": "Plumbed %1 fixtures, %2 tiles of pipe.",
@@ -95152,7 +95217,7 @@
     "cn": "已接通 %1 个用水设备, 铺设 %2 格水管."
    },
    "IGUI_WaterPipesPlumbBuildingNeedPipes": {
-    "en": "Needs %1 metal pipes; you have %2.",
+    "en": "Needs %1 Iron Pipes; you have %2.",
     "ch": "需要 %1 根鐵管; 你有 %2 根.",
     "cn": "需要 %1 根金属管; 你有 %2 根."
    },
@@ -95207,7 +95272,7 @@
     "cn": "这里已没有可接通的用水设备"
    },
    "IGUI_WaterPipesPlumbBuildingRefusal_noPipes": {
-    "en": "not enough metal pipes",
+    "en": "not enough Iron Pipes",
     "ch": "鐵管不足",
     "cn": "金属管不足"
    },
@@ -147630,6 +147695,481 @@
     "en": "Trunk Storage",
     "ch": "後車廂儲物",
     "cn": "后备箱储物"
+   },
+   "IGUI_CraftingCategories_Aiming": {
+    "en": "Firearms",
+    "ch": "槍械",
+    "cn": "枪械"
+   },
+   "IGUI_WaterPipesSensorApply": {
+    "en": "Apply",
+    "ch": "套用",
+    "cn": "应用"
+   },
+   "IGUI_WaterPipesSensorInvert": {
+    "en": "Invert: switch on at the maximum and off at the minimum",
+    "ch": "反轉: 達到上限時開啟, 達到下限時關閉",
+    "cn": "反转: 达到上限时开启, 达到下限时关闭"
+   },
+   "IGUI_WaterPipesSensorLink": {
+    "en": "Link valves",
+    "ch": "連結閥門",
+    "cn": "关联阀门"
+   },
+   "IGUI_WaterPipesSensorLinked": {
+    "en": "Linked valves",
+    "ch": "已連結的閥門",
+    "cn": "已关联的阀门"
+   },
+   "IGUI_WaterPipesSensorMax": {
+    "en": "Maximum",
+    "ch": "上限",
+    "cn": "上限"
+   },
+   "IGUI_WaterPipesSensorMin": {
+    "en": "Minimum",
+    "ch": "下限",
+    "cn": "下限"
+   },
+   "IGUI_WaterPipesSensorName": {
+    "en": "Name",
+    "ch": "名稱",
+    "cn": "名称"
+   },
+   "IGUI_WaterPipesSensorNoBattery": {
+    "en": "No battery",
+    "ch": "沒有電池",
+    "cn": "没有电池"
+   },
+   "IGUI_WaterPipesSensorNoCrop": {
+    "en": "No crop on this tile",
+    "ch": "這一格沒有作物",
+    "cn": "这一格没有作物"
+   },
+   "IGUI_WaterPipesSensorNoLinks": {
+    "en": "No valves linked yet",
+    "ch": "尚未連結任何閥門",
+    "cn": "尚未关联任何阀门"
+   },
+   "IGUI_WaterPipesSensorOff": {
+    "en": "off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "IGUI_WaterPipesSensorOn": {
+    "en": "on",
+    "ch": "開啟",
+    "cn": "开启"
+   },
+   "IGUI_WaterPipesSensorPowerGrid": {
+    "en": "Power: electricity",
+    "ch": "電源: 電力",
+    "cn": "电源: 电力"
+   },
+   "IGUI_WaterPipesSensorReading": {
+    "en": "Crop moisture: %1",
+    "ch": "作物水分: %1",
+    "cn": "作物水分: %1"
+   },
+   "IGUI_WaterPipesSensorReason_atMax": {
+    "en": "Moisture has reached the maximum",
+    "ch": "水分已達上限",
+    "cn": "水分已达上限"
+   },
+   "IGUI_WaterPipesSensorReason_atMin": {
+    "en": "Moisture has reached the minimum",
+    "ch": "水分已達下限",
+    "cn": "水分已达下限"
+   },
+   "IGUI_WaterPipesSensorReason_noCrop": {
+    "en": "Nothing to measure: plant something here",
+    "ch": "沒有可量測的對象: 請在這裡種植作物",
+    "cn": "没有可测量的对象: 请在这里种植作物"
+   },
+   "IGUI_WaterPipesSensorReason_noEdge": {
+    "en": "Between the two: waiting for it to reach either end",
+    "ch": "介於上下限之間: 等待達到其中一端",
+    "cn": "介于上下限之间: 等待达到其中一端"
+   },
+   "IGUI_WaterPipesSensorReason_towardMax": {
+    "en": "Between the two: holds until it reaches the maximum",
+    "ch": "介於上下限之間: 維持現狀直到達到上限",
+    "cn": "介于上下限之间: 保持现状直到达到上限"
+   },
+   "IGUI_WaterPipesSensorReason_towardMin": {
+    "en": "Between the two: holds until it reaches the minimum",
+    "ch": "介於上下限之間: 維持現狀直到達到下限",
+    "cn": "介于上下限之间: 保持现状直到达到下限"
+   },
+   "IGUI_WaterPipesSensorSelecting": {
+    "en": "Click a valve to link or unlink it. Esc to finish.",
+    "ch": "點選閥門即可連結或取消連結. 按 Esc 結束.",
+    "cn": "点击阀门即可关联或取消关联. 按 Esc 结束."
+   },
+   "IGUI_WaterPipesSensorSignalOff": {
+    "en": "Signal: off",
+    "ch": "訊號: 關閉",
+    "cn": "信号: 关闭"
+   },
+   "IGUI_WaterPipesSensorSignalOn": {
+    "en": "Signal: on",
+    "ch": "訊號: 開啟",
+    "cn": "信号: 开启"
+   },
+   "IGUI_WaterPipesSensorTitle": {
+    "en": "Soil moisture sensor",
+    "ch": "土壤濕度感測器",
+    "cn": "土壤湿度传感器"
+   },
+   "IGUI_WaterPipesSensorUnlink": {
+    "en": "Unlink",
+    "ch": "取消連結",
+    "cn": "取消关联"
+   },
+   "IGUI_WaterPipesSensorValveClosed": {
+    "en": "closed",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "IGUI_WaterPipesSensorValveOpen": {
+    "en": "open",
+    "ch": "開啟",
+    "cn": "打开"
+   },
+   "IGUI_WaterPipesSensorValveRow": {
+    "en": "%1 - %2 tiles - %3",
+    "ch": "%1 - %2 格 - %3",
+    "cn": "%1 - %2 格 - %3"
+   },
+   "IGUI_WaterPipesSensorValveSwitchOff": {
+    "en": "switched off by hand",
+    "ch": "已手動關閉",
+    "cn": "已手动关闭"
+   },
+   "IGUI_WaterPipesSensorValveUnnamed": {
+    "en": "Unnamed valve",
+    "ch": "未命名閥門",
+    "cn": "未命名阀门"
+   },
+   "IGUI_WaterPipesSignalNameValve": {
+    "en": "Name this valve:",
+    "ch": "為這個閥門命名:",
+    "cn": "为这个阀门命名:"
+   },
+   "IGUI_WaterPipesSignalRefused_noBattery": {
+    "en": "You have no battery",
+    "ch": "你身上沒有電池",
+    "cn": "你身上没有电池"
+   },
+   "IGUI_WaterPipesSignalRefused_noSensor": {
+    "en": "The sensor is gone, or you are too far from it",
+    "ch": "感測器已不存在, 或你離它太遠",
+    "cn": "传感器已不存在, 或你离它太远"
+   },
+   "IGUI_WaterPipesSignalRefused_noValve": {
+    "en": "There is no valve there any more",
+    "ch": "那裡已經沒有閥門了",
+    "cn": "那里已经没有阀门了"
+   },
+   "IGUI_WaterPipesSignalRefused_outOfRange": {
+    "en": "That valve is too far from the sensor",
+    "ch": "該閥門離感測器太遠",
+    "cn": "该阀门离传感器太远"
+   },
+   "IGUI_WaterPipesSignalRefused_safehouse": {
+    "en": "That valve is in a safehouse you are not a member of",
+    "ch": "該閥門位在你未加入的安全屋內",
+    "cn": "该阀门位于你未加入的安全屋内"
+   },
+   "IGUI_WaterPipesSignalRefused_sensorSafehouse": {
+    "en": "That sensor is in a safehouse you are not a member of",
+    "ch": "該感測器位在你未加入的安全屋內",
+    "cn": "该传感器位于你未加入的安全屋内"
+   },
+   "IGUI_WaterPipesValveLinked": {
+    "en": "Driven by %1 moisture sensor(s): it opens while any of them gives a signal.",
+    "ch": "由 %1 個濕度感測器控制: 只要其中任一個發出訊號就會開啟.",
+    "cn": "由 %1 个湿度传感器控制: 只要其中任意一个发出信号就会打开."
+   },
+   "IGUI_WaterPipesValveSwitchOff": {
+    "en": "Switched off by hand: it stays closed whatever the sensors say.",
+    "ch": "已手動關閉: 無論感測器狀態如何都會保持關閉.",
+    "cn": "已手动关闭: 无论传感器状态如何都会保持关闭."
+   },
+   "IGUI_WaterPipesValveWaiting": {
+    "en": "Switched on, but no sensor is giving a signal, so it stays closed.",
+    "ch": "已開啟, 但沒有任何感測器發出訊號, 因此仍保持關閉.",
+    "cn": "已开启, 但没有任何传感器发出信号, 因此仍保持关闭."
+   },
+   "IGUI_CraftingCategories_RVPower": {
+    "en": "Arcadia RV Power Crafting",
+    "ch": "Arcadia 房車電力製作",
+    "cn": "Arcadia 房车电力制作"
+   },
+   "IGUI_GridInv_NoRoomToTake": {
+    "en": "No room to take it out",
+    "ch": "沒有空間可以取出",
+    "cn": "没有空间可以取出"
+   },
+   "IGUI_GridInv_StackHalfTooltip": {
+    "en": "Half of the pile",
+    "ch": "整堆的一半",
+    "cn": "整堆的一半"
+   },
+   "IGUI_GridInv_StackQtyTooltip": {
+    "en": "Quantity to take. Selected items always go; the rest is filled from the top of the list. Shift = 10 at a time.",
+    "ch": "要取出的數量. 已選取的物品一定會取出; 其餘從清單頂端依序補足. Shift = 一次 10 個.",
+    "cn": "要取出的数量. 已选中的物品一定会取出; 其余从列表顶部依次补足. Shift = 一次 10 个."
+   },
+   "IGUI_StackPicker_HintSelected": {
+    "en": "%1 selected + %2 from the top of the list",
+    "ch": "已選取 %1 個 + 清單頂端 %2 個",
+    "cn": "已选中 %1 个 + 列表顶部 %2 个"
+   },
+   "IGUI_StackPicker_HintTop": {
+    "en": "%1 from the top of the list",
+    "ch": "清單頂端 %1 個",
+    "cn": "列表顶部 %1 个"
+   },
+   "IGUI_StackPicker_Leader": {
+    "en": "Leader",
+    "ch": "堆疊代表",
+    "cn": "堆叠代表"
+   },
+   "IGUI_StackPicker_Summary": {
+    "en": "%1 items · %2 units · %3",
+    "ch": "%1 項物品 · 共 %2 個 · %3",
+    "cn": "%1 项物品 · 共 %2 个 · %3"
+   },
+   "IGUI_StackPicker_TakePile": {
+    "en": "Take %1 as a new pile",
+    "ch": "取出 %1 個成為新的一堆",
+    "cn": "取出 %1 个作为新的一堆"
+   },
+   "IGUI_AreaTasks_AddTrapBaitDescription": {
+    "en": "Add the chosen carried bait to empty traps in the selected area, using native bait rules and portions. Existing bait and catches are left alone.",
+    "ch": "依原版的誘餌規則與用量, 將選定的隨身誘餌放進選定區域內的空陷阱. 已有的誘餌與獵物不會被動到.",
+    "cn": "按原版的诱饵规则和用量, 将选定的随身诱饵放入选定区域内的空陷阱. 已有的诱饵和猎物保持不动."
+   },
+   "IGUI_AreaTasks_CheckTrapDescription": {
+    "en": "Collect catches from the selected traps using the native Check Trap action. Empty traps are skipped. Stops after a live catch so you can store or put it down.",
+    "ch": "使用原版陷阱的「檢查」動作收取選定陷阱中的獵物. 空陷阱會跳過. 捕獲活的獵物後會停止, 讓你先把牠收好或放下.",
+    "cn": "使用原版陷阱的“检查”动作收取选定陷阱中的猎物. 空陷阱会被跳过. 捕获活的猎物后会停止, 以便你将其存放或放下."
+   },
+   "IGUI_AreaTasks_ChooseItemSource": {
+    "en": "Point at a source container or vehicle storage access area.",
+    "ch": "請將游標指向來源容器或車輛儲物空間的存取區域.",
+    "cn": "指向来源容器或车辆储物空间的存取区域."
+   },
+   "IGUI_AreaTasks_ChooseVehicleStorage": {
+    "en": "Point at a vehicle storage access area.",
+    "ch": "請將游標指向車輛儲物空間的存取區域.",
+    "cn": "指向车辆储物空间的存取区域."
+   },
+   "IGUI_AreaTasks_CorpseStorageFailed": {
+    "en": "Corpse storage was not confirmed. Work stopped.",
+    "ch": "無法確認屍體已存入. 任務已停止.",
+    "cn": "无法确认尸体已存入. 任务已停止."
+   },
+   "IGUI_AreaTasks_CorpseStorageUnavailable": {
+    "en": "The selected storage moved, cannot be accessed, or has no room for another corpse.",
+    "ch": "選定的儲物空間已移動、無法存取, 或沒有空間再放一具屍體.",
+    "cn": "选定的储物空间已移动、无法访问, 或没有空间再放一具尸体."
+   },
+   "IGUI_AreaTasks_CorpseTrashFailed": {
+    "en": "The trash container was not emptied. Work stopped.",
+    "ch": "垃圾桶未被清空. 任務已停止.",
+    "cn": "垃圾桶未被清空. 任务已停止."
+   },
+   "IGUI_AreaTasks_CorpseTrashUnavailable": {
+    "en": "The selected trash container cannot be used, or the server has disabled Trash Delete All.",
+    "ch": "選定的垃圾桶無法使用, 或伺服器已停用垃圾桶的「全部銷毀」 (TrashDeleteAll).",
+    "cn": "选定的垃圾桶无法使用, 或服务器已禁用垃圾桶的“全部销毁” (TrashDeleteAll)."
+   },
+   "IGUI_AreaTasks_CorpsesToContainerDescription": {
+    "en": "Drag human corpses from the selected area into a container that accepts them.",
+    "ch": "將選定區域內的人類屍體拖進可容納屍體的容器.",
+    "cn": "将选定区域内的人类尸体拖入可容纳尸体的容器."
+   },
+   "IGUI_AreaTasks_CorpsesToTrashDescription": {
+    "en": "Drag each selected human corpse into a trash container, then permanently delete all its contents after each deposit.",
+    "ch": "將選取範圍內的每具人類屍體拖進垃圾桶, 每放入一具後就永久銷毀垃圾桶內的所有內容物.",
+    "cn": "将选中范围内的每具人类尸体拖入垃圾桶, 每放入一具后就永久销毁垃圾桶内的所有物品."
+   },
+   "IGUI_AreaTasks_CorpsesToVehicleDescription": {
+    "en": "Drag human corpses into suitable storage at a vehicle access area. Open the storage door first.",
+    "ch": "將人類屍體拖進車輛存取區域處合適的儲物空間. 請先打開儲物空間的艙門.",
+    "cn": "将人类尸体拖入车辆存取区域处合适的储物空间. 请先打开储物空间的舱门."
+   },
+   "IGUI_AreaTasks_ItemContainerFull": {
+    "en": "The selected container has no room for the remaining items.",
+    "ch": "選定的容器沒有空間放下剩餘物品.",
+    "cn": "选定的容器没有空间容纳剩余物品."
+   },
+   "IGUI_AreaTasks_ItemDestinationsFull": {
+    "en": "None of the selected storage can accept the remaining items.",
+    "ch": "選定的儲物空間都放不下剩餘物品.",
+    "cn": "选定的储物空间均无法容纳剩余物品."
+   },
+   "IGUI_AreaTasks_ItemDestinationsUnavailable": {
+    "en": "The selected storage destinations moved, disappeared, or cannot be accessed.",
+    "ch": "選定的儲物目的地已移動、消失或無法存取.",
+    "cn": "选定的储物目的地已移动、消失或无法访问."
+   },
+   "IGUI_AreaTasks_ItemSourceUnavailable": {
+    "en": "The selected item source moved, disappeared, or cannot be accessed.",
+    "ch": "選定的物品來源已移動、消失或無法存取.",
+    "cn": "选定的物品来源已移动、消失或无法访问."
+   },
+   "IGUI_AreaTasks_ItemTransferFailed": {
+    "en": "The item transfer did not complete. Work stopped.",
+    "ch": "物品轉移未完成. 任務已停止.",
+    "cn": "物品转移未完成. 任务已停止."
+   },
+   "IGUI_AreaTasks_MoveItemsRoute": {
+    "en": "Move Items: %1 > %2",
+    "ch": "移動物品: %1 > %2",
+    "cn": "移动物品: %1 > %2"
+   },
+   "IGUI_AreaTasks_MoveItemsStarted": {
+    "en": "Started %1.",
+    "ch": "已開始%1.",
+    "cn": "已开始%1."
+   },
+   "IGUI_AreaTasks_MoveItemsToContainerDescription": {
+    "en": "Move selected items into a container. Undelivered items stay in your inventory. Leave Unwanted items behind.",
+    "ch": "把選取的物品移進容器. 未送達的物品會留在你的物品欄. 標記為「不想要」的物品會留在原地.",
+    "cn": "将选中的物品移入容器. 未送达的物品会留在你的物品栏中. 标记为“不想要”的物品会留在原地."
+   },
+   "IGUI_AreaTasks_NoItemDestinations": {
+    "en": "No eligible item destinations in that area.",
+    "ch": "該區域內沒有符合條件的物品目的地.",
+    "cn": "该区域内没有符合条件的物品目的地."
+   },
+   "IGUI_AreaTasks_NoItemSources": {
+    "en": "No eligible item sources in that area.",
+    "ch": "該區域內沒有符合條件的物品來源.",
+    "cn": "该区域内没有符合条件的物品来源."
+   },
+   "IGUI_AreaTasks_PutDownTrapCatch": {
+    "en": "Put down or store the animal or heavy item in your hands before checking another trap.",
+    "ch": "請先放下或收好手上的動物或重物, 才能檢查下一個陷阱.",
+    "cn": "请先放下或收好手中的动物或重物, 再检查下一个陷阱."
+   },
+   "IGUI_AreaTasks_RequiresTrapBait": {
+    "en": "Requires usable bait in carried inventory.",
+    "ch": "需要隨身攜帶可用的誘餌.",
+    "cn": "需要随身携带可用的诱饵."
+   },
+   "IGUI_AreaTasks_SameItemContainer": {
+    "en": "Choose a destination that does not include the source container.",
+    "ch": "請選擇不包含來源容器的目的地.",
+    "cn": "请选择不包含来源容器的目的地."
+   },
+   "IGUI_AreaTasks_SelectedTrapBaitUnavailable": {
+    "en": "The chosen bait is no longer available in carried inventory.",
+    "ch": "隨身物品中已沒有所選的誘餌.",
+    "cn": "所选诱饵在随身物品栏中已不可用."
+   },
+   "IGUI_AreaTasks_ToContainersDescription": {
+    "en": "Move selected items into containers in a second area, filling suitable storage in turn. Includes stacked containers.",
+    "ch": "把選取的物品移進第二個區域內的容器, 依序填滿合適的儲物空間. 包括疊放的容器.",
+    "cn": "将选中的物品移入第二个区域内的容器, 依次填满合适的储物空间. 包括堆叠的容器."
+   },
+   "IGUI_AreaTasks_ToVehicleDescription": {
+    "en": "Move selected items into cargo storage at a vehicle access point. Open the storage door first. Undelivered items stay in your inventory.",
+    "ch": "把選取的物品移進車輛存取點的載貨空間. 請先打開儲物空間的艙門. 未送達的物品會留在你的物品欄.",
+    "cn": "将选中的物品移入车辆存取点的载货空间. 请先打开储物空间的舱门. 未送达的物品会留在你的物品栏中."
+   },
+   "IGUI_AreaTasks_ToVehiclesDescription": {
+    "en": "Move selected items into vehicle storage in a second area, filling suitable storage in turn. Open storage doors first.",
+    "ch": "把選取的物品移進第二個區域內的車輛儲物空間, 依序填滿合適的儲物空間. 請先打開儲物空間的艙門.",
+    "cn": "将选中的物品移入第二个区域内的车辆储物空间, 依次填满合适的储物空间. 请先打开储物空间的舱门."
+   },
+   "IGUI_AreaTasks_TrapActionFailed": {
+    "en": "The trap action was not confirmed. Work stopped.",
+    "ch": "無法確認陷阱動作已完成. 任務已停止.",
+    "cn": "无法确认陷阱动作已完成. 任务已停止."
+   },
+   "IGUI_AreaTasks_VehicleStorageFull": {
+    "en": "The selected vehicle storage has no room for the remaining items.",
+    "ch": "選定的車輛儲物空間沒有空間放下剩餘物品.",
+    "cn": "选定的车辆储物空间没有空间容纳剩余物品."
+   },
+   "IGUI_AreaTasks_VehicleStorageUnavailable": {
+    "en": "The selected vehicle storage moved, disappeared, or cannot be accessed.",
+    "ch": "選定的車輛儲物空間已移動、消失或無法存取.",
+    "cn": "选定的车辆储物空间已移动、消失或无法访问."
+   },
+   "IGUI_AreaTasks_VehicleTransferFailed": {
+    "en": "The vehicle storage transfer did not complete. Undelivered items remain in your inventory.",
+    "ch": "車輛儲物空間的轉移未完成. 未送達的物品仍在你的物品欄中.",
+    "cn": "向车辆储物空间的转移未完成. 未送达的物品仍在你的物品栏中."
+   },
+   "IGUI_BCPack_FlipUpright": {
+    "en": "Flip upright",
+    "ch": "翻正車輛",
+    "cn": "翻正车辆"
+   },
+   "IGUI_BCPack_Options": {
+    "en": "Backcountry ATV: new machines",
+    "ch": "Backcountry 全地形車: 新車輛",
+    "cn": "Backcountry 全地形越野车: 新车辆"
+   },
+   "IGUI_BCPack_OptionsHelp": {
+    "en": "Engine sound volume for each vehicle in this pack. It also follows the game's own Sound and Vehicle engine volume, and the server's sandbox setting.",
+    "ch": "本包每輛車的引擎音量. 同時也會受遊戲本身的「遊戲音量」與「車輛引擎音量」, 以及伺服器的沙盒設定影響.",
+    "cn": "本包中每辆车的引擎音量. 同时也会受游戏自身的“游戏音量”和“车辆引擎音量”, 以及服务器的沙盒设置影响."
+   },
+   "IGUI_BCQuad_OptionsHelp": {
+    "en": "Engine sound volume for each vehicle in this pack. It also follows the game's own Sound and Vehicle engine volume, and the server's sandbox setting.",
+    "ch": "本包每輛車的引擎音量. 同時也會受遊戲本身的「遊戲音量」與「車輛引擎音量」, 以及伺服器的沙盒設定影響.",
+    "cn": "本包中每辆车的引擎音量. 同时也会受游戏自身的“游戏音量”和“车辆引擎音量”, 以及服务器的沙盒设置影响."
+   },
+   "IGUI_VehicleNameBCBikeCRF450": {
+    "en": "Honda CRF450",
+    "ch": "本田CRF450",
+    "cn": "本田CRF450"
+   },
+   "IGUI_VehicleNameBCBikeNXR": {
+    "en": "Honda NXR Bros",
+    "ch": "本田NXR Bros",
+    "cn": "本田NXR Bros"
+   },
+   "IGUI_VehicleNameBCBikePolice": {
+    "en": "Harley-Davidson Police Electra Glide",
+    "ch": "哈雷-戴維森警用Electra Glide",
+    "cn": "哈雷-戴维森警用Electra Glide"
+   },
+   "IGUI_VehicleNameBCBikeRoadKing": {
+    "en": "Harley-Davidson Road King",
+    "ch": "哈雷-戴維森Road King",
+    "cn": "哈雷-戴维森Road King"
+   },
+   "IGUI_VehicleNameBCQuadHeavy": {
+    "en": "Heavy Utility Quad",
+    "ch": "重型多用途全地形車",
+    "cn": "重型多用途全地形越野车"
+   },
+   "IGUI_VehicleNameBCQuadRaptor": {
+    "en": "Yamaha Raptor",
+    "ch": "山葉Raptor",
+    "cn": "雅马哈Raptor"
+   },
+   "IGUI_VehicleNameBCQuadZilla": {
+    "en": "Suzuki Quadzilla 500",
+    "ch": "鈴木Quadzilla 500",
+    "cn": "铃木Quadzilla 500"
+   },
+   "IGUI_VehiclePartBCBikeSaddlebags": {
+    "en": "Saddlebags",
+    "ch": "馬鞍包",
+    "cn": "马鞍包"
+   },
+   "IGUI_Locksmith_ToolWorn": {
+    "en": "Your tool takes a beating",
+    "ch": "你的工具磨損了不少",
+    "cn": "你的工具磨损了不少"
    }
   },
   "ItemName.json": {
@@ -219872,9 +220412,9 @@
     "cn": "扳机与枪机零件 (半自动/全自动) (Micro Uzi)"
    },
    "Base.Mini30MagSS": {
-    "en": "20rd Ruger Mini-30 Magazine",
-    "ch": "20發RugerMini-30彈匣",
-    "cn": "20发RugerMini-30弹匣"
+    "en": "20rd Ruger Mini-30 Magazine (7.62x39)",
+    "ch": "魯格Mini-30步槍彈匣 (20發, 7.62x39)",
+    "cn": "鲁格Mini-30步枪弹匣 (20发, 7.62x39)"
    },
    "Base.Mjill": {
     "en": "Jill Mask",
@@ -247387,11 +247927,6 @@
     "ch": "露怡巧克力船長蛋糕",
     "cn": "露怡巧克力船长蛋糕"
    },
-   "SnackTime89.ST_Bamboula": {
-    "en": "St Michel Bamboula",
-    "ch": "聖米歇爾班布拉可可餅乾",
-    "cn": "圣米歇尔班布拉可可饼干"
-   },
    "SnackTime89.ST_KelloggsChocos": {
     "en": "Kellogg's Chocos",
     "ch": "家樂氏Chocos巧克力麥片",
@@ -247431,11 +247966,6 @@
     "en": "Bowl of Kellogg's Froot Loops",
     "ch": "一碗Kellogg's香果圈",
     "cn": "一碗Kellogg's果味圈"
-   },
-   "SnackTime89.ST_BamboulaBiscuit": {
-    "en": "St Michel Bamboula",
-    "ch": "聖米歇爾班布拉可可餅乾",
-    "cn": "圣米歇尔班布拉可可饼干"
    },
    "SnackTime89.ST_CerealBowl_NestleTrio": {
     "en": "Bowl of Nestlé Trio",
@@ -320670,9 +321200,9 @@
     "cn": "红色保险丝"
    },
    "ArcadiaRV.RVPowerFuse": {
-    "en": "RV Fuse",
-    "ch": "房車保險絲",
-    "cn": "房车保险丝"
+    "en": "Red Fuse",
+    "ch": "紅色保險絲",
+    "cn": "红色保险丝"
    },
    "ArcadiaRV.RVFuseYellow": {
     "en": "Yellow Fuse",
@@ -334268,6 +334798,16 @@
     "en": "67 Chevrolet Impala Rear Door",
     "ch": "67款雪佛蘭Impala後車門",
     "cn": "67款雪佛兰Impala后车门"
+   },
+   "SnackTime89.ST_Bamboola": {
+    "en": "St Michel Bamboola",
+    "ch": "聖米歇爾班布拉可可餅乾",
+    "cn": "圣米歇尔班布拉可可饼干"
+   },
+   "SnackTime89.ST_BamboolaBiscuit": {
+    "en": "St Michel Bamboola",
+    "ch": "聖米歇爾班布拉可可餅乾",
+    "cn": "圣米歇尔班布拉可可饼干"
    }
   },
   "Print_Media.json": {
@@ -348516,9 +349056,9 @@
     "cn": "[SW] 制作油漆刷"
    },
    "SW_Carve_Knitting_Needles": {
-    "en": "[SW] Make needle",
-    "ch": "[SW] 製作針",
-    "cn": "[SW] 制作针"
+    "en": "[SW] Carve knitting needles",
+    "ch": "[SW] 削製編織針",
+    "cn": "[SW] 削制编织针"
    },
    "SW_Carve_Rolling_Pin": {
     "en": "[SW] Carve rolling pin",
@@ -349006,9 +349546,9 @@
     "cn": "[SW] 回收纸张"
    },
    "SW_Strip_Electric_Wire": {
-    "en": "[SW] Make electric wire",
-    "ch": "[SW] 製作電線",
-    "cn": "[SW] 制作电线"
+    "en": "[SW] Strip electric wire",
+    "ch": "[SW] 剝取電線",
+    "cn": "[SW] 剥取电线"
    },
    "DryRodentMeat": {
     "en": "Dry Rodent Meat (Jerky)",
@@ -353135,11 +353675,6 @@
     "ch": "製作黃色保險絲盒",
     "cn": "制作黄色保险丝盒"
    },
-   "ArcadiaRV.BuildRVPowerFuse": {
-    "en": "Build RV Fuse",
-    "ch": "製作房車保險絲",
-    "cn": "制作房车保险丝"
-   },
    "ArcadiaRV.UpgradeRVDeepCycleBattery": {
     "en": "Upgrade RV Marine Battery",
     "ch": "升級房車船用電池",
@@ -353169,11 +353704,6 @@
     "en": "Build RV Marine Power Bay",
     "ch": "建造房車船用電池艙",
     "cn": "建造房车船用电池舱"
-   },
-   "BuildRVPowerFuse": {
-    "en": "Build RV Fuse",
-    "ch": "製作房車保險絲",
-    "cn": "制作房车保险丝"
    },
    "BuildRVShorePowerCable": {
     "en": "Build RV Shore-Power Cable",
@@ -356319,6 +356849,16 @@
     "en": "Make 67 Chevrolet Impala Trunk Lid",
     "ch": "製作67款雪佛蘭Impala後車廂蓋",
     "cn": "制作67款雪佛兰Impala后备箱盖"
+   },
+   "WaterPipeHumiditySensor": {
+    "en": "Soil Moisture Sensor",
+    "ch": "土壤濕度感測器",
+    "cn": "土壤湿度传感器"
+   },
+   "UpgradeMysteriousBackPack": {
+    "en": "Upgrade Mysterious Backpack (Tier 1)",
+    "ch": "升級神秘背包 (一階)",
+    "cn": "升级神秘背包 (一阶)"
    }
   },
   "Sandbox.json": {
@@ -378801,9 +379341,9 @@
     "cn": "回收产量"
    },
    "Sandbox_ScrapSurvival_RecyclingYieldMultiplier_tooltip": {
-    "en": "Controls how many materials are recovered when recycling. 1.00 = normal yield, 0.50 = half yield, 2.00 = double yield. Item condition and the character’s relevant skill still influence the final result.",
-    "ch": "控制回收時能取回多少材料. 1.00 = 正常產量, 0.50 = 一半產量, 2.00 = 兩倍產量. 物品狀況與角色的相關技能仍會影響最終結果.",
-    "cn": "控制回收时能取回多少材料. 1.00 = 正常产量, 0.50 = 一半产量, 2.00 = 两倍产量. 物品状况与角色的相关技能仍会影响最终结果."
+    "en": "The yield multiplier applies only to iron, steel, generic metal and wood recycling. 0.50 = lower; 1.00 = normal; 2.00 = higher. Each craft still produces at least one item; item condition and skill also affect yield.",
+    "ch": "產量倍率只套用於鐵、鋼、一般金屬與木材的回收. 0.50 = 較低; 1.00 = 正常; 2.00 = 較高. 每次製作仍至少產出一個物品; 物品狀況與技能也會影響產量.",
+    "cn": "产量倍率仅适用于铁、钢、普通金属和木材的回收. 0.50 = 较低; 1.00 = 正常; 2.00 = 较高. 每次制作仍至少产出一个物品; 物品状况和技能也会影响产量."
    },
    "Sandbox_ScrapSurvival_SkillRequirements": {
     "en": "Skill Requirements",
@@ -379066,9 +379606,9 @@
     "cn": "消防栓压力 (以 0.1 为单位)"
    },
    "Sandbox_WaterPipes_HydrantHead_tooltip": {
-    "en": "Pressure an open, mains-fed fire hydrant holds its network at, in tenths of a metre of water column. 400 = 40.0, well above the household mains (25.0) and a sprinkler's 20.0, because a hydrant is a high-flow tap on the town main. Opening one runs sprinklers far from any barrel with no pump, right up to the day the water is cut, after which the hydrant still yields its reserve but with no pressure. Lower it to make hydrants less of a free pump.",
-    "ch": "開啟且由自來水主管供水的消防栓維持其管網的壓力, 單位為十分之一公尺水柱. 400 = 40.0, 遠高於家用自來水 (25.0) 和灑水器所需的 20.0, 因為消防栓是城鎮主管上的大流量水龍頭. 開啟消防栓可讓遠離任何水桶的灑水器在沒有水泵的情況下運轉, 直到停水那天為止; 停水後消防栓仍會流出剩餘的儲水, 但沒有壓力. 調低此值可讓消防栓不那麼像免費水泵.",
-    "cn": "打开且由自来水总管供水的消防栓维持其管网的压力, 单位为十分之一米水柱. 400 = 40.0, 远高于家用自来水 (25.0) 和洒水器所需的 20.0, 因为消防栓是城镇总管上的大流量水龙头. 打开消防栓可让远离任何水桶的洒水器在没有水泵的情况下运转, 直到停水那天为止; 停水后消防栓仍会流出剩余的储水, 但没有压力. 调低此值可让消防栓不那么像免费水泵."
+    "en": "Pressure an open, mains-fed fire hydrant holds its network at, in tenths of a metre of water column. 400 = 40.0, well above the household mains (25.0) and a sprinkler's 20.0, because a hydrant is a high-flow tap on the town main. Opening one runs sprinklers far from any container with no pump, right up to the day the water is cut, after which the hydrant still yields its reserve but with no pressure. Lower it to make hydrants less of a free pump.",
+    "ch": "開啟且由自來水主管供水的消防栓維持其管網的壓力, 單位為十分之一公尺水柱. 400 = 40.0, 遠高於家用自來水 (25.0) 和灑水器所需的 20.0, 因為消防栓是城鎮主管上的大流量水龍頭. 開啟消防栓可讓遠離任何容器的灑水器在沒有水泵的情況下運轉, 直到停水那天為止; 停水後消防栓仍會流出剩餘的儲水, 但沒有壓力. 調低此值可讓消防栓不那麼像免費水泵.",
+    "cn": "打开且由自来水总管供水的消防栓维持其管网的压力, 单位为十分之一米水柱. 400 = 40.0, 远高于家用自来水 (25.0) 和洒水器所需的 20.0, 因为消防栓是城镇总管上的大流量水龙头. 打开消防栓可让远离任何容器的洒水器在没有水泵的情况下运转, 直到停水那天为止; 停水后消防栓仍会流出剩余的储水, 但没有压力. 调低此值可让消防栓不那么像免费水泵."
    },
    "Sandbox_WaterPipes_HydrantReserve": {
     "en": "Fire hydrant reserve (litres)",
@@ -379126,9 +379666,9 @@
     "cn": "容器基础压力 (以 0.1 为单位)"
    },
    "Sandbox_WaterPipes_PressureContainerBase_tooltip": {
-    "en": "Pressure a barrel or collector provides on its own floor, in tenths of a metre of water column, from the weight of its own water. 10 = 1.0, which lets a tap draw from about 20 tiles away on the flat. Raise this if taps in your base sit a long way from their barrels.",
-    "ch": "水桶或集水器憑自身水重在所在樓層提供的壓力, 單位為十分之一公尺水柱. 10 = 1.0, 可讓水龍頭在平地上從約 20 格外取水. 如果基地裡的水龍頭離水桶很遠, 可以調高此值.",
-    "cn": "水桶或集水器凭自身水重在所在楼层提供的压力, 单位为十分之一米水柱. 10 = 1.0, 可让水龙头在平地上从约 20 格外取水. 如果基地里的水龙头离水桶很远, 可以调高此值."
+    "en": "Pressure a container provides on its own floor, in tenths of a metre of water column, from the weight of its own water. 10 = 1.0, which lets a tap draw from about 20 tiles away on the flat. Raise this if taps in your base sit a long way from their containers.",
+    "ch": "容器憑自身水重在所在樓層提供的壓力, 單位為十分之一公尺水柱. 10 = 1.0, 可讓水龍頭在平地上從約 20 格外取水. 如果基地裡的水龍頭離其容器很遠, 可以調高此值.",
+    "cn": "容器凭自身水重在所在楼层提供的压力, 单位为十分之一米水柱. 10 = 1.0, 可让水龙头在平地上从约 20 格外取水. 如果基地里的水龙头离其容器很远, 可以调高此值."
    },
    "Sandbox_WaterPipes_PressureFrictionScale": {
     "en": "Pipe friction (%%)",
@@ -379181,9 +379721,9 @@
     "cn": "水泵可从河流和湖泊汲水"
    },
    "Sandbox_WaterPipes_PumpFromWaterBodies_tooltip": {
-    "en": "When on, a pump placed beside open water draws unlimited dirty water from it, which you can then clean with a purifier. Turn this off to keep water scarce: pumps will still work from wells and from your own barrels.",
-    "ch": "開啟後, 放在開放水域旁的水泵可從中汲取無限量的髒水, 之後可用淨水器淨化. 關閉此選項可讓水保持稀缺: 水泵仍可從水井和你自己的水桶汲水.",
-    "cn": "开启后, 放在开放水域旁的水泵可从中汲取无限量的脏水, 之后可用净水器净化. 关闭此选项可让水保持稀缺: 水泵仍可从水井和你自己的水桶汲水."
+    "en": "When on, a pump placed beside open water draws unlimited dirty water from it, which you can then clean with a purifier. Turn this off to keep water scarce: pumps will still work from wells and from your own containers.",
+    "ch": "開啟後, 放在開放水域旁的水泵可從中汲取無限量的髒水, 之後可用淨水器淨化. 關閉此選項可讓水保持稀缺: 水泵仍可從水井和你自己的容器汲水.",
+    "cn": "开启后, 放在开放水域旁的水泵可从中汲取无限量的脏水, 之后可用净水器净化. 关闭此选项可让水保持稀缺: 水泵仍可从水井和你自己的容器汲水."
    },
    "Sandbox_WaterPipes_PumpHead": {
     "en": "Pressure added by one pump (tenths)",
@@ -379261,9 +379801,9 @@
     "cn": "密封水变质天数"
    },
    "Sandbox_WaterPipes_StagnationDaysClosed_tooltip": {
-    "en": "How many days a sealed container (a covered tank, the pipe network itself, a lidded amphora) may sit with no movement before its water turns tainted. Sealed water keeps for weeks, so this is the long timer. Set to 0 so sealed water never goes bad.",
-    "ch": "密封容器 (有蓋水箱, 管網本身, 有蓋的雙耳罐) 在水不流動的情況下可放置多少天才會變成受汙染的水. 密封的水可保存數週, 因此這是較長的計時. 設為 0 則密封的水永不變質.",
-    "cn": "密封容器 (有盖水箱, 管网本身, 有盖的双耳罐) 在水不流动的情况下可放置多少天才会变成受污染的水. 密封的水可保存数周, 因此这是较长的计时. 设为 0 则密封的水永不变质."
+    "en": "How many days a sealed container (a covered collector, the pipe network itself, a lidded amphora) may sit with no movement before its water turns tainted. Sealed water keeps for weeks, so this is the long timer. Set to 0 so sealed water never goes bad.",
+    "ch": "密封容器 (有蓋的雨水收集器, 管網本身, 有蓋的雙耳罐) 在水不流動的情況下可放置多少天才會變成受汙染的水. 密封的水可保存數週, 因此這是較長的計時. 設為 0 則密封的水永不變質.",
+    "cn": "密封容器 (有盖的雨水收集器, 管网本身, 有盖的双耳罐) 在水不流动的情况下可放置多少天才会变成受污染的水. 密封的水可保存数周, 因此这是较长的计时. 设为 0 则密封的水永不变质."
    },
    "Sandbox_WaterPipes_StagnationDaysOpen": {
     "en": "Days before open water goes bad",
@@ -379271,9 +379811,9 @@
     "cn": "开放水变质天数"
    },
    "Sandbox_WaterPipes_StagnationDaysOpen_tooltip": {
-    "en": "How many days an open, rain-catching container (a rain barrel, an uncovered amphora) may sit with no movement before its water turns tainted. Open water spoils in days, so this is the short timer. Set to 0 so open water never goes bad on its own (rain can still taint it).",
-    "ch": "可承接雨水的開口容器 (集雨桶, 無蓋的雙耳罐) 在水不流動的情況下可放置多少天才會變成受汙染的水. 開放的水幾天內就會變質, 因此這是較短的計時. 設為 0 則開放的水不會自行變質 (雨水仍可能汙染它).",
-    "cn": "可承接雨水的开口容器 (雨水收集桶, 无盖的双耳罐) 在水不流动的情况下可放置多少天才会变成受污染的水. 开放的水几天内就会变质, 因此这是较短的计时. 设为 0 则开放的水不会自行变质 (雨水仍可能污染它)."
+    "en": "How many days an open, rain-catching container (a rain collector, an uncovered amphora) may sit with no movement before its water turns tainted. Open water spoils in days, so this is the short timer. Set to 0 so open water never goes bad on its own (rain can still taint it).",
+    "ch": "可承接雨水的開口容器 (雨水收集器, 無蓋的雙耳罐) 在水不流動的情況下可放置多少天才會變成受汙染的水. 開放的水幾天內就會變質, 因此這是較短的計時. 設為 0 則開放的水不會自行變質 (雨水仍可能汙染它).",
+    "cn": "可承接雨水的开口容器 (雨水收集器, 无盖的双耳罐) 在水不流动的情况下可放置多少天才会变成受污染的水. 开放的水几天内就会变质, 因此这是较短的计时. 设为 0 则开放的水不会自行变质 (雨水仍可能污染它)."
    },
    "Sandbox_WaterPipes_WaterStagnation": {
     "en": "Water goes stagnant",
@@ -403091,12 +403631,12 @@
     "cn": "玩家第一次打开某台机器时, 会在其自己的世界地图上以美元符号标记. 每台机器对每个角色只标记一次, 因此玩家删除的标记不会再出现. 玩家也可以在 选项 > 模组 中为自己关闭标记."
    },
    "Sandbox_WaterPipes_BuildingPlumbCostPerFixture": {
-    "en": "Metal pipe per fixture",
+    "en": "Iron Pipes per fixture",
     "ch": "每個用水裝置的鐵管數",
     "cn": "每个用水设备的金属管数"
    },
    "Sandbox_WaterPipes_BuildingPlumbCostPerFixture_tooltip": {
-    "en": "Metal pipes each fixture costs when plumbing a whole building. 1 = one pipe per sink, toilet or washer connected, however far the pipe has to run to reach it. 0 = free. Pipe laid this way gives nothing back when dismantled.",
+    "en": "Iron Pipes each fixture costs when plumbing a whole building. 1 = one Iron Pipe per sink, toilet or washer connected, however far the pipe has to run to reach it. 0 = free. Pipe laid this way gives nothing back when dismantled.",
     "ch": "為整棟建築接通水管時, 每個用水裝置消耗的鐵管數. 1 = 每接通一個水槽, 馬桶或洗衣機消耗一根鐵管, 不論水管要鋪多遠才能到達. 0 = 免費. 以此方式鋪設的水管拆除時不會返還任何材料.",
     "cn": "为整栋建筑接通水管时, 每个用水设备消耗的金属管数. 1 = 每接通一个水槽, 马桶或洗衣机消耗一根金属管, 不论水管要铺多远才能到达. 0 = 免费. 以此方式铺设的水管拆除时不会返还任何材料."
    },
@@ -407121,14 +407661,14 @@
     "cn": "启用后, 玩家在PvP区域内会被强制关闭安全模式, 并跳过安全模式的冷却时间. 禁用时, 玩家通过原版的切换计时器和冷却时间自行控制安全模式. 原生的非PvP区域保护仍然有效."
    },
    "Sandbox_RVInterior_AllowGlobalRVPower": {
-    "en": "Use world power before the first outage",
-    "ch": "首次停電前使用世界電網",
-    "cn": "首次停电前使用世界电网"
+    "en": "Allow direct Grid Power in RV interiors",
+    "ch": "允許房車內部直接使用電網供電",
+    "cn": "允许房车内部直接使用电网供电"
    },
    "Sandbox_RVInterior_AllowGlobalRVPower_tooltip": {
-    "en": "When on, RVs use the world power grid until its first outage. Turn this off to require RV batteries now.",
-    "ch": "啟用時, 房車在世界電網首次停電前都由其供電. 停用則房車立即需要房車電池.",
-    "cn": "启用时, 房车在世界电网首次停电前都由其供电. 禁用则房车立即需要房车电池."
+    "en": "Default on. Turn off to disconnect direct World Power immediately; powered shore pedestals, engines and batteries still work. No restart required. The separate restored-power setting still applies.",
+    "ch": "預設: 開啟. 關閉後會立即切斷直接的電網供電; 有電的岸電樁、引擎與電池仍可運作. 不需重新啟動. 另一項「世界電網恢復時重新使用」設定仍然適用.",
+    "cn": "默认: 开启. 关闭后会立即切断直接的电网供电; 有电的岸电桩、发动机和电池仍可正常工作. 无需重启. 另一项“世界电网恢复时重新使用”设置仍然适用."
    },
    "Sandbox_RVInterior_AllowRestoredGlobalRVPower": {
     "en": "Use world power again if it returns",
@@ -407181,14 +407721,14 @@
     "cn": "制作一条岸电电缆所需的电线单位数."
    },
    "Sandbox_RVInterior_ShoreChargePercentPerHour": {
-    "en": "Shore charging per game hour (%%)",
-    "ch": "每遊戲小時岸電充電量 (%%)",
-    "cn": "每游戏小时岸电充电量 (%%)"
+    "en": "Shore reference rate per game hour (%%)",
+    "ch": "每遊戲小時岸電參考速率 (%%)",
+    "cn": "每游戏小时岸电参考速率 (%%)"
    },
    "Sandbox_RVInterior_ShoreChargePercentPerHour_tooltip": {
-    "en": "How much each installed battery gains per game hour while shore power is connected. 0 turns shore charging off.",
-    "ch": "連接岸電時, 每顆已安裝電池每遊戲小時增加的電量. 0 會關閉岸電充電.",
-    "cn": "连接岸电时, 每块已安装电池每游戏小时增加的电量. 0 会关闭岸电充电."
+    "en": "Fixed shore input referenced to one standard battery, shared by the whole RV. More installed batteries do not increase input. Appliance demand is deducted before charging; 0 turns shore input off.",
+    "ch": "固定的岸電輸入量, 以一顆標準電池為基準, 由整輛房車共用. 安裝更多電池不會增加輸入量. 充電前會先扣除電器用電; 0 會關閉岸電輸入.",
+    "cn": "固定的岸电输入量, 以一块标准电池为基准, 由整辆房车共享. 安装更多电池不会增加输入量. 充电前会先扣除电器用电; 0 会关闭岸电输入."
    },
    "Sandbox_MFSCommunityFixLootRules": {
     "en": "MFS 4 - Loot Rules",
@@ -407701,41 +408241,6 @@
     "cn": "大量"
    },
    "Sandbox_RVInterior_RVLootFuseYellow_tooltip": {
-    "en": "Medium is half the old common-loot weights; Heavy is the old common-loot weight. Off disables this item only. Restart required; existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
-    "ch": "「中」為舊版一般戰利品權重的一半; 「大量」等同舊版一般戰利品權重. 「關閉」只會停用此物品. 需要重新啟動; 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
-    "cn": "“中”为旧版常规战利品权重的一半; “大量”等同旧版常规战利品权重. “关闭”仅禁用此物品. 需要重启; 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
-   },
-   "Sandbox_RVInterior_RVLootLegacyFuse": {
-    "en": "Legacy RV power fuse loot",
-    "ch": "舊版房車保險絲戰利品",
-    "cn": "旧版房车保险丝战利品"
-   },
-   "Sandbox_RVInterior_RVLootLegacyFuse_option1": {
-    "en": "Off",
-    "ch": "關閉",
-    "cn": "关闭"
-   },
-   "Sandbox_RVInterior_RVLootLegacyFuse_option2": {
-    "en": "Low",
-    "ch": "低",
-    "cn": "低"
-   },
-   "Sandbox_RVInterior_RVLootLegacyFuse_option3": {
-    "en": "Medium",
-    "ch": "中",
-    "cn": "中"
-   },
-   "Sandbox_RVInterior_RVLootLegacyFuse_option4": {
-    "en": "High",
-    "ch": "高",
-    "cn": "高"
-   },
-   "Sandbox_RVInterior_RVLootLegacyFuse_option5": {
-    "en": "Heavy",
-    "ch": "大量",
-    "cn": "大量"
-   },
-   "Sandbox_RVInterior_RVLootLegacyFuse_tooltip": {
     "en": "Medium is half the old common-loot weights; Heavy is the old common-loot weight. Off disables this item only. Restart required; existing loot is unchanged. Unedited items inherit saved legacy loot settings.",
     "ch": "「中」為舊版一般戰利品權重的一半; 「大量」等同舊版一般戰利品權重. 「關閉」只會停用此物品. 需要重新啟動; 已生成的戰利品不受影響. 未編輯的物品會沿用已儲存的舊版戰利品設定.",
     "cn": "“中”为旧版常规战利品权重的一半; “大量”等同旧版常规战利品权重. “关闭”仅禁用此物品. 需要重启; 已生成的战利品不受影响. 未修改的物品会沿用已保存的旧版战利品设置."
@@ -415371,9 +415876,9 @@
     "cn": "致命"
    },
    "Sandbox_SNT_TurretStrength_tooltip": {
-    "en": "Sets damage, accuracy and instant kills of all turrets (normal zombie: 1.0 health). Weak: damage x0.6, -15 percent hit chance, no instant kills - rifle needs 3-5 hits. Realistic (default): base values, 5 percent instant kills - rifle 2-3 hits. Strong: damage x2, +3 percent, 15 percent instant kills - rifle 1-2 hits. Very strong: damage x3.5, +5 percent, 30 percent instant kills - almost always 1 hit. Extreme: damage x6, +10 percent, 75 percent instant kills. Lethal: every hit kills, +15 percent.",
-    "ch": "設定所有砲塔的傷害、命中率與即死率 (一般殭屍: 1.0 生命值). 弱: 傷害 x0.6, 命中率降低 15 個百分點, 無即死 - 步槍需命中 3-5 次. 寫實 (預設): 基礎數值, 百分之 5 即死 - 步槍需命中 2-3 次. 強: 傷害 x2, 命中率提高 3 個百分點, 百分之 15 即死 - 步槍需命中 1-2 次. 非常強: 傷害 x3.5, 命中率提高 5 個百分點, 百分之 30 即死 - 幾乎總是命中 1 次即可擊殺. 極端: 傷害 x6, 命中率提高 10 個百分點, 百分之 75 即死. 致命: 每次命中都會擊殺, 命中率提高 15 個百分點.",
-    "cn": "设置所有炮塔的伤害、命中率和即死率 (普通僵尸: 1.0 生命值). 弱: 伤害 x0.6, 命中率降低 15 个百分点, 无即死 - 步枪需命中 3-5 次. 写实 (默认): 基础数值, 百分之 5 即死 - 步枪需命中 2-3 次. 强: 伤害 x2, 命中率提高 3 个百分点, 百分之 15 即死 - 步枪需命中 1-2 次. 非常强: 伤害 x3.5, 命中率提高 5 个百分点, 百分之 30 即死 - 几乎总是命中 1 次即可击杀. 极端: 伤害 x6, 命中率提高 10 个百分点, 百分之 75 即死. 致命: 每次命中都会击杀, 命中率提高 15 个百分点."
+    "en": "Sets damage, accuracy and instant kills of all turrets (normal zombie: 1.0 health). Weak: damage x0.6, -15 percent hit chance, no instant kills - rifle needs 2-3 hits. Realistic (default): base values, 5 percent instant kills - rifle 1-2 hits. Strong: damage x2, +3 percent, 15 percent instant kills - rifle almost always 1 hit. Very strong: damage x3.5, +5 percent, 30 percent instant kills - almost always 1 hit. Extreme: damage x6, +10 percent, 75 percent instant kills. Lethal: every hit kills, +15 percent.",
+    "ch": "設定所有砲塔的傷害、命中率與即死率 (一般殭屍: 1.0 生命值). 弱: 傷害 x0.6, 命中率降低 15 個百分點, 無即死 - 步槍需命中 2-3 次. 寫實 (預設): 基礎數值, 百分之 5 即死 - 步槍需命中 1-2 次. 強: 傷害 x2, 命中率提高 3 個百分點, 百分之 15 即死 - 步槍幾乎總是命中 1 次即可擊殺. 非常強: 傷害 x3.5, 命中率提高 5 個百分點, 百分之 30 即死 - 幾乎總是命中 1 次即可擊殺. 極端: 傷害 x6, 命中率提高 10 個百分點, 百分之 75 即死. 致命: 每次命中都會擊殺, 命中率提高 15 個百分點.",
+    "cn": "设置所有炮塔的伤害、命中率和即死率 (普通僵尸: 1.0 生命值). 弱: 伤害 x0.6, 命中率降低 15 个百分点, 无即死 - 步枪需命中 2-3 次. 写实 (默认): 基础数值, 百分之 5 即死 - 步枪需命中 1-2 次. 强: 伤害 x2, 命中率提高 3 个百分点, 百分之 15 即死 - 步枪几乎总是命中 1 次即可击杀. 非常强: 伤害 x3.5, 命中率提高 5 个百分点, 百分之 30 即死 - 几乎总是命中 1 次即可击杀. 极端: 伤害 x6, 命中率提高 10 个百分点, 百分之 75 即死. 致命: 每次命中都会击杀, 命中率提高 15 个百分点."
    },
    "Sandbox_SNT_UG_AllowVanilla": {
     "en": "Universal Gun Turret: accept vanilla weapons",
@@ -417904,6 +418409,436 @@
     "en": "Enable preset spawn for 67 Impala Baby",
     "ch": "啟用67款Impala Baby的預設生成",
     "cn": "启用67款Impala Baby的预设生成"
+   },
+   "Sandbox_WaterPipes_SensorBatteryDays": {
+    "en": "Moisture sensor battery life (days)",
+    "ch": "濕度感測器電池續航 (天)",
+    "cn": "湿度传感器电池续航 (天)"
+   },
+   "Sandbox_WaterPipes_SensorBatteryDays_tooltip": {
+    "en": "How many days a full Battery keeps a moisture sensor running when its tile has no electricity.",
+    "ch": "所在格子沒有電力時, 一顆充滿電的電池可讓濕度感測器運作多少天.",
+    "cn": "所在格子没有电力时, 一块充满电的电池可让湿度传感器运行多少天."
+   },
+   "Sandbox_WaterPipes_SensorLinkRange": {
+    "en": "Moisture sensor link range (tiles)",
+    "ch": "濕度感測器連結範圍 (格)",
+    "cn": "湿度传感器关联范围 (格)"
+   },
+   "Sandbox_WaterPipes_SensorLinkRange_tooltip": {
+    "en": "How far from a moisture sensor a valve can be and still be linked to it. 0 = no limit.",
+    "ch": "閥門與濕度感測器相距多遠以內仍可與其連結. 0 = 無限制.",
+    "cn": "阀门与湿度传感器相距多远以内仍可与其关联. 0 = 无限制."
+   },
+   "Sandbox_RVInterior_EngineBatteryDamageAffectsEngineCharging": {
+    "en": "Engine/Battery Damage Affects Engine Charging",
+    "ch": "引擎/電池損壞影響引擎充電",
+    "cn": "发动机/电池损坏影响发动机充电"
+   },
+   "Sandbox_RVInterior_EngineBatteryDamageAffectsEngineCharging_tooltip": {
+    "en": "On: engine or starter-battery damage reduces engine input, with a 0.0025 /h running floor. Off: use the configured engine input regardless of damage. A stopped or destroyed engine still supplies zero. Marine-bay batteries and shore input are unaffected.",
+    "ch": "開啟: 引擎或啟動電池受損會降低引擎輸入電量, 運轉時最低仍有 0.0025 /h. 關閉: 不論損壞程度, 一律使用設定的引擎輸入電量. 熄火或已損毀的引擎依然不供電. 電池艙內的電池與岸電輸入不受影響.",
+    "cn": "开启: 发动机或启动电池受损会降低发动机输入电量, 运转时最低仍有 0.0025 /h. 关闭: 无论损坏程度, 一律使用设置的发动机输入电量. 熄火或已损毁的发动机依然不供电. 电池舱内的电池和岸电输入不受影响."
+   },
+   "Sandbox_GridInventory_ScatterMode_option4": {
+    "en": "By character traits (default)",
+    "ch": "依角色特質 (預設)",
+    "cn": "按角色特质 (默认)"
+   },
+   "Sandbox_BackcountryATVPack": {
+    "en": "Backcountry ATV: new machines",
+    "ch": "Backcountry 全地形車: 新車輛",
+    "cn": "Backcountry 全地形越野车: 新车辆"
+   },
+   "Sandbox_BackcountryATVPack_EngineVolume": {
+    "en": "Engine volume (%%)",
+    "ch": "引擎音量 (%%)",
+    "cn": "引擎音量 (%%)"
+   },
+   "Sandbox_BackcountryATVPack_EngineVolume_tooltip": {
+    "en": "How loud the quad's engine is, for everyone. 100 is normal, 0 is silent, 200 is twice as loud.",
+    "ch": "全地形車引擎的音量, 對所有人生效. 100 為正常, 0 為靜音, 200 為兩倍音量.",
+    "cn": "全地形越野车引擎的音量, 对所有人生效. 100 为正常, 0 为静音, 200 为两倍音量."
+   },
+   "Sandbox_BackcountryATVPack_FlipQuad": {
+    "en": "Flip upright",
+    "ch": "翻正車輛",
+    "cn": "翻正车辆"
+   },
+   "Sandbox_BackcountryATVPack_FlipQuad_tooltip": {
+    "en": "Lets players put a rolled machine back on its wheels from the right-click menu.",
+    "ch": "讓玩家可從右鍵選單將翻覆的車輛翻正, 讓車輪重新著地.",
+    "cn": "让玩家可以通过右键菜单将翻倒的车辆翻正, 使车轮重新着地."
+   },
+   "Sandbox_BackcountryATVPack_SpawnCRF450": {
+    "en": "Spawn rate: Honda CRF450",
+    "ch": "生成率: 本田CRF450",
+    "cn": "生成率: 本田CRF450"
+   },
+   "Sandbox_BackcountryATVPack_SpawnCRF450_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_BackcountryATVPack_SpawnCRF450_option2": {
+    "en": "Rare",
+    "ch": "稀有",
+    "cn": "稀有"
+   },
+   "Sandbox_BackcountryATVPack_SpawnCRF450_option3": {
+    "en": "Normal",
+    "ch": "正常",
+    "cn": "正常"
+   },
+   "Sandbox_BackcountryATVPack_SpawnCRF450_option4": {
+    "en": "Common",
+    "ch": "常見",
+    "cn": "常见"
+   },
+   "Sandbox_BackcountryATVPack_SpawnCRF450_option5": {
+    "en": "Very common",
+    "ch": "非常常見",
+    "cn": "非常常见"
+   },
+   "Sandbox_BackcountryATVPack_SpawnCRF450_tooltip": {
+    "en": "How often this machine turns up, on top of the overall spawn rate. Off removes it from the world's spawns.",
+    "ch": "此車輛的出現頻率, 會在整體生成率之上再套用. 選擇「關閉」會將它從世界生成中移除.",
+    "cn": "此车辆的出现频率, 会在总体生成率的基础上再叠加. 选择“关闭”会将其从世界生成中移除."
+   },
+   "Sandbox_BackcountryATVPack_SpawnHeavy": {
+    "en": "Spawn rate: Heavy Utility Quad",
+    "ch": "生成率: 重型多用途全地形車",
+    "cn": "生成率: 重型多用途全地形越野车"
+   },
+   "Sandbox_BackcountryATVPack_SpawnHeavy_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_BackcountryATVPack_SpawnHeavy_option2": {
+    "en": "Rare",
+    "ch": "稀有",
+    "cn": "稀有"
+   },
+   "Sandbox_BackcountryATVPack_SpawnHeavy_option3": {
+    "en": "Normal",
+    "ch": "正常",
+    "cn": "正常"
+   },
+   "Sandbox_BackcountryATVPack_SpawnHeavy_option4": {
+    "en": "Common",
+    "ch": "常見",
+    "cn": "常见"
+   },
+   "Sandbox_BackcountryATVPack_SpawnHeavy_option5": {
+    "en": "Very common",
+    "ch": "非常常見",
+    "cn": "非常常见"
+   },
+   "Sandbox_BackcountryATVPack_SpawnHeavy_tooltip": {
+    "en": "How often this machine turns up, on top of the overall spawn rate. Off removes it from the world's spawns.",
+    "ch": "此車輛的出現頻率, 會在整體生成率之上再套用. 選擇「關閉」會將它從世界生成中移除.",
+    "cn": "此车辆的出现频率, 会在总体生成率的基础上再叠加. 选择“关闭”会将其从世界生成中移除."
+   },
+   "Sandbox_BackcountryATVPack_SpawnInTowns": {
+    "en": "Also in town parking",
+    "ch": "也出現在城鎮停車場",
+    "cn": "也出现在城镇停车场"
+   },
+   "Sandbox_BackcountryATVPack_SpawnInTowns_tooltip": {
+    "en": "Lets the road and trail bikes and the sport quads turn up, rarely, in town parking lots too.",
+    "ch": "讓公路機車、越野機車與運動型全地形車也會偶爾出現在城鎮的停車場.",
+    "cn": "让公路摩托车、越野摩托车和运动型全地形越野车也会偶尔出现在城镇的停车场."
+   },
+   "Sandbox_BackcountryATVPack_SpawnNXR": {
+    "en": "Spawn rate: Honda NXR Bros",
+    "ch": "生成率: 本田NXR Bros",
+    "cn": "生成率: 本田NXR Bros"
+   },
+   "Sandbox_BackcountryATVPack_SpawnNXR_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_BackcountryATVPack_SpawnNXR_option2": {
+    "en": "Rare",
+    "ch": "稀有",
+    "cn": "稀有"
+   },
+   "Sandbox_BackcountryATVPack_SpawnNXR_option3": {
+    "en": "Normal",
+    "ch": "正常",
+    "cn": "正常"
+   },
+   "Sandbox_BackcountryATVPack_SpawnNXR_option4": {
+    "en": "Common",
+    "ch": "常見",
+    "cn": "常见"
+   },
+   "Sandbox_BackcountryATVPack_SpawnNXR_option5": {
+    "en": "Very common",
+    "ch": "非常常見",
+    "cn": "非常常见"
+   },
+   "Sandbox_BackcountryATVPack_SpawnNXR_tooltip": {
+    "en": "How often this machine turns up, on top of the overall spawn rate. Off removes it from the world's spawns.",
+    "ch": "此車輛的出現頻率, 會在整體生成率之上再套用. 選擇「關閉」會將它從世界生成中移除.",
+    "cn": "此车辆的出现频率, 会在总体生成率的基础上再叠加. 选择“关闭”会将其从世界生成中移除."
+   },
+   "Sandbox_BackcountryATVPack_SpawnPolice": {
+    "en": "Spawn rate: Harley-Davidson Police Electra Glide",
+    "ch": "生成率: 哈雷-戴維森警用Electra Glide",
+    "cn": "生成率: 哈雷-戴维森警用Electra Glide"
+   },
+   "Sandbox_BackcountryATVPack_SpawnPolice_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_BackcountryATVPack_SpawnPolice_option2": {
+    "en": "Rare",
+    "ch": "稀有",
+    "cn": "稀有"
+   },
+   "Sandbox_BackcountryATVPack_SpawnPolice_option3": {
+    "en": "Normal",
+    "ch": "正常",
+    "cn": "正常"
+   },
+   "Sandbox_BackcountryATVPack_SpawnPolice_option4": {
+    "en": "Common",
+    "ch": "常見",
+    "cn": "常见"
+   },
+   "Sandbox_BackcountryATVPack_SpawnPolice_option5": {
+    "en": "Very common",
+    "ch": "非常常見",
+    "cn": "非常常见"
+   },
+   "Sandbox_BackcountryATVPack_SpawnPolice_tooltip": {
+    "en": "How often this machine turns up, on top of the overall spawn rate. Off removes it from the world's spawns.",
+    "ch": "此車輛的出現頻率, 會在整體生成率之上再套用. 選擇「關閉」會將它從世界生成中移除.",
+    "cn": "此车辆的出现频率, 会在总体生成率的基础上再叠加. 选择“关闭”会将其从世界生成中移除."
+   },
+   "Sandbox_BackcountryATVPack_SpawnQuadzilla": {
+    "en": "Spawn rate: Suzuki Quadzilla 500",
+    "ch": "生成率: 鈴木Quadzilla 500",
+    "cn": "生成率: 铃木Quadzilla 500"
+   },
+   "Sandbox_BackcountryATVPack_SpawnQuadzilla_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_BackcountryATVPack_SpawnQuadzilla_option2": {
+    "en": "Rare",
+    "ch": "稀有",
+    "cn": "稀有"
+   },
+   "Sandbox_BackcountryATVPack_SpawnQuadzilla_option3": {
+    "en": "Normal",
+    "ch": "正常",
+    "cn": "正常"
+   },
+   "Sandbox_BackcountryATVPack_SpawnQuadzilla_option4": {
+    "en": "Common",
+    "ch": "常見",
+    "cn": "常见"
+   },
+   "Sandbox_BackcountryATVPack_SpawnQuadzilla_option5": {
+    "en": "Very common",
+    "ch": "非常常見",
+    "cn": "非常常见"
+   },
+   "Sandbox_BackcountryATVPack_SpawnQuadzilla_tooltip": {
+    "en": "How often this machine turns up, on top of the overall spawn rate. Off removes it from the world's spawns.",
+    "ch": "此車輛的出現頻率, 會在整體生成率之上再套用. 選擇「關閉」會將它從世界生成中移除.",
+    "cn": "此车辆的出现频率, 会在总体生成率的基础上再叠加. 选择“关闭”会将其从世界生成中移除."
+   },
+   "Sandbox_BackcountryATVPack_SpawnRaptor": {
+    "en": "Spawn rate: Yamaha Raptor",
+    "ch": "生成率: 山葉Raptor",
+    "cn": "生成率: 雅马哈Raptor"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRaptor_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRaptor_option2": {
+    "en": "Rare",
+    "ch": "稀有",
+    "cn": "稀有"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRaptor_option3": {
+    "en": "Normal",
+    "ch": "正常",
+    "cn": "正常"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRaptor_option4": {
+    "en": "Common",
+    "ch": "常見",
+    "cn": "常见"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRaptor_option5": {
+    "en": "Very common",
+    "ch": "非常常見",
+    "cn": "非常常见"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRaptor_tooltip": {
+    "en": "How often this machine turns up, on top of the overall spawn rate. Off removes it from the world's spawns.",
+    "ch": "此車輛的出現頻率, 會在整體生成率之上再套用. 選擇「關閉」會將它從世界生成中移除.",
+    "cn": "此车辆的出现频率, 会在总体生成率的基础上再叠加. 选择“关闭”会将其从世界生成中移除."
+   },
+   "Sandbox_BackcountryATVPack_SpawnRate": {
+    "en": "Spawn rate (all machines)",
+    "ch": "生成率 (所有車輛)",
+    "cn": "生成率 (所有车辆)"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRate_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRate_option2": {
+    "en": "Rare",
+    "ch": "稀有",
+    "cn": "稀有"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRate_option3": {
+    "en": "Normal",
+    "ch": "正常",
+    "cn": "正常"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRate_option4": {
+    "en": "Common",
+    "ch": "常見",
+    "cn": "常见"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRate_option5": {
+    "en": "Very common",
+    "ch": "非常常見",
+    "cn": "非常常见"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRate_tooltip": {
+    "en": "How often the quads and bikes turn up on farms, ranger stations, logging sites, rural homes and police lots. Each machine below also has its own rate, multiplied by this one. Only areas you have not explored yet are affected. If you change it, restart the game before loading the world.",
+    "ch": "全地形車與機車出現在農場、護林站、伐木場、鄉間住宅與警局停車場的頻率. 下方每種車輛另有各自的生成率, 會再乘上此值. 只會影響你尚未探索的區域. 若更改此設定, 請先重新啟動遊戲再載入世界.",
+    "cn": "全地形越野车和摩托车出现在农场、护林站、伐木场、乡村住宅和警局停车场的频率. 下方每种车辆另有各自的生成率, 会再乘以此值. 只会影响你尚未探索的区域. 若更改此设置, 请先重启游戏再加载世界."
+   },
+   "Sandbox_BackcountryATVPack_SpawnRoadKing": {
+    "en": "Spawn rate: Harley-Davidson Road King",
+    "ch": "生成率: 哈雷-戴維森Road King",
+    "cn": "生成率: 哈雷-戴维森Road King"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRoadKing_option1": {
+    "en": "Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRoadKing_option2": {
+    "en": "Rare",
+    "ch": "稀有",
+    "cn": "稀有"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRoadKing_option3": {
+    "en": "Normal",
+    "ch": "正常",
+    "cn": "正常"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRoadKing_option4": {
+    "en": "Common",
+    "ch": "常見",
+    "cn": "常见"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRoadKing_option5": {
+    "en": "Very common",
+    "ch": "非常常見",
+    "cn": "非常常见"
+   },
+   "Sandbox_BackcountryATVPack_SpawnRoadKing_tooltip": {
+    "en": "How often this machine turns up, on top of the overall spawn rate. Off removes it from the world's spawns.",
+    "ch": "此車輛的出現頻率, 會在整體生成率之上再套用. 選擇「關閉」會將它從世界生成中移除.",
+    "cn": "此车辆的出现频率, 会在总体生成率的基础上再叠加. 选择“关闭”会将其从世界生成中移除."
+   },
+   "Sandbox_BackcountryATV_ColorBlack": {
+    "en": "Original quad colors: Black",
+    "ch": "原款全地形車顏色: 黑色",
+    "cn": "原款全地形越野车颜色: 黑色"
+   },
+   "Sandbox_BackcountryATV_ColorBlack_tooltip": {
+    "en": "Ticked: new original quads can spawn in this color. Untick a color and none spawn in it; quads already in it get a ticked color. Untick all but White for the classic look.",
+    "ch": "勾選: 新生成的原款全地形車可以是此顏色. 取消勾選某個顏色後就不會再生成該顏色; 已是該顏色的全地形車會改為某個已勾選的顏色. 若要經典外觀, 只保留白色勾選即可.",
+    "cn": "勾选: 新生成的原款全地形越野车可以是此颜色. 取消勾选某个颜色后就不会再生成该颜色; 已是该颜色的全地形越野车会改为某个已勾选的颜色. 若要经典外观, 只保留白色勾选即可."
+   },
+   "Sandbox_BackcountryATV_ColorBlue": {
+    "en": "Original quad colors: Blue",
+    "ch": "原款全地形車顏色: 藍色",
+    "cn": "原款全地形越野车颜色: 蓝色"
+   },
+   "Sandbox_BackcountryATV_ColorBlue_tooltip": {
+    "en": "Ticked: new original quads can spawn in this color. Untick a color and none spawn in it; quads already in it get a ticked color. Untick all but White for the classic look.",
+    "ch": "勾選: 新生成的原款全地形車可以是此顏色. 取消勾選某個顏色後就不會再生成該顏色; 已是該顏色的全地形車會改為某個已勾選的顏色. 若要經典外觀, 只保留白色勾選即可.",
+    "cn": "勾选: 新生成的原款全地形越野车可以是此颜色. 取消勾选某个颜色后就不会再生成该颜色; 已是该颜色的全地形越野车会改为某个已勾选的颜色. 若要经典外观, 只保留白色勾选即可."
+   },
+   "Sandbox_BackcountryATV_ColorCamo": {
+    "en": "Original quad colors: Camo",
+    "ch": "原款全地形車顏色: 迷彩",
+    "cn": "原款全地形越野车颜色: 迷彩"
+   },
+   "Sandbox_BackcountryATV_ColorCamo_tooltip": {
+    "en": "Ticked: new original quads can spawn in this color. Untick a color and none spawn in it; quads already in it get a ticked color. Untick all but White for the classic look.",
+    "ch": "勾選: 新生成的原款全地形車可以是此顏色. 取消勾選某個顏色後就不會再生成該顏色; 已是該顏色的全地形車會改為某個已勾選的顏色. 若要經典外觀, 只保留白色勾選即可.",
+    "cn": "勾选: 新生成的原款全地形越野车可以是此颜色. 取消勾选某个颜色后就不会再生成该颜色; 已是该颜色的全地形越野车会改为某个已勾选的颜色. 若要经典外观, 只保留白色勾选即可."
+   },
+   "Sandbox_BackcountryATV_ColorGreen": {
+    "en": "Original quad colors: Green",
+    "ch": "原款全地形車顏色: 綠色",
+    "cn": "原款全地形越野车颜色: 绿色"
+   },
+   "Sandbox_BackcountryATV_ColorGreen_tooltip": {
+    "en": "Ticked: new original quads can spawn in this color. Untick a color and none spawn in it; quads already in it get a ticked color. Untick all but White for the classic look.",
+    "ch": "勾選: 新生成的原款全地形車可以是此顏色. 取消勾選某個顏色後就不會再生成該顏色; 已是該顏色的全地形車會改為某個已勾選的顏色. 若要經典外觀, 只保留白色勾選即可.",
+    "cn": "勾选: 新生成的原款全地形越野车可以是此颜色. 取消勾选某个颜色后就不会再生成该颜色; 已是该颜色的全地形越野车会改为某个已勾选的颜色. 若要经典外观, 只保留白色勾选即可."
+   },
+   "Sandbox_BackcountryATV_ColorPink": {
+    "en": "Original quad colors: Pink",
+    "ch": "原款全地形車顏色: 粉紅色",
+    "cn": "原款全地形越野车颜色: 粉红色"
+   },
+   "Sandbox_BackcountryATV_ColorPink_tooltip": {
+    "en": "Ticked: new original quads can spawn in this color. Untick a color and none spawn in it; quads already in it get a ticked color. Untick all but White for the classic look.",
+    "ch": "勾選: 新生成的原款全地形車可以是此顏色. 取消勾選某個顏色後就不會再生成該顏色; 已是該顏色的全地形車會改為某個已勾選的顏色. 若要經典外觀, 只保留白色勾選即可.",
+    "cn": "勾选: 新生成的原款全地形越野车可以是此颜色. 取消勾选某个颜色后就不会再生成该颜色; 已是该颜色的全地形越野车会改为某个已勾选的颜色. 若要经典外观, 只保留白色勾选即可."
+   },
+   "Sandbox_BackcountryATV_ColorRed": {
+    "en": "Original quad colors: Red",
+    "ch": "原款全地形車顏色: 紅色",
+    "cn": "原款全地形越野车颜色: 红色"
+   },
+   "Sandbox_BackcountryATV_ColorRed_tooltip": {
+    "en": "Ticked: new original quads can spawn in this color. Untick a color and none spawn in it; quads already in it get a ticked color. Untick all but White for the classic look.",
+    "ch": "勾選: 新生成的原款全地形車可以是此顏色. 取消勾選某個顏色後就不會再生成該顏色; 已是該顏色的全地形車會改為某個已勾選的顏色. 若要經典外觀, 只保留白色勾選即可.",
+    "cn": "勾选: 新生成的原款全地形越野车可以是此颜色. 取消勾选某个颜色后就不会再生成该颜色; 已是该颜色的全地形越野车会改为某个已勾选的颜色. 若要经典外观, 只保留白色勾选即可."
+   },
+   "Sandbox_BackcountryATV_ColorWhite": {
+    "en": "Original quad colors: White",
+    "ch": "原款全地形車顏色: 白色",
+    "cn": "原款全地形越野车颜色: 白色"
+   },
+   "Sandbox_BackcountryATV_ColorWhite_tooltip": {
+    "en": "Ticked: new original quads can spawn in this color. Untick a color and none spawn in it; quads already in it get a ticked color. Untick all but White for the classic look.",
+    "ch": "勾選: 新生成的原款全地形車可以是此顏色. 取消勾選某個顏色後就不會再生成該顏色; 已是該顏色的全地形車會改為某個已勾選的顏色. 若要經典外觀, 只保留白色勾選即可.",
+    "cn": "勾选: 新生成的原款全地形越野车可以是此颜色. 取消勾选某个颜色后就不会再生成该颜色; 已是该颜色的全地形越野车会改为某个已勾选的颜色. 若要经典外观, 只保留白色勾选即可."
+   },
+   "Sandbox_BackcountryATV_ColorYellow": {
+    "en": "Original quad colors: Yellow",
+    "ch": "原款全地形車顏色: 黃色",
+    "cn": "原款全地形越野车颜色: 黄色"
+   },
+   "Sandbox_BackcountryATV_ColorYellow_tooltip": {
+    "en": "Ticked: new original quads can spawn in this color. Untick a color and none spawn in it; quads already in it get a ticked color. Untick all but White for the classic look.",
+    "ch": "勾選: 新生成的原款全地形車可以是此顏色. 取消勾選某個顏色後就不會再生成該顏色; 已是該顏色的全地形車會改為某個已勾選的顏色. 若要經典外觀, 只保留白色勾選即可.",
+    "cn": "勾选: 新生成的原款全地形越野车可以是此颜色. 取消勾选某个颜色后就不会再生成该颜色; 已是该颜色的全地形越野车会改为某个已勾选的颜色. 若要经典外观, 只保留白色勾选即可."
    }
   },
   "Tooltip.json": {
@@ -423397,16 +424332,6 @@
     "ch": "簡易的木製架子, 可用來風乾蘑菇、漿果、水果、蔬菜、醃肉和醃魚. 比烤箱慢, 但不需要燃料.",
     "cn": "简易的木制架子, 可用来风干蘑菇、浆果、水果、蔬菜、腌肉和腌鱼. 比烤箱慢, 但不需要燃料."
    },
-   "Tooltip_SnackTime89_ST_Bamboula": {
-    "en": "The cocoa biscuit with chocolate chips that turns snack time into a party!",
-    "ch": "加了巧克力豆的可可餅乾, 讓點心時間變成派對!",
-    "cn": "加了巧克力豆的可可饼干, 让零食时间变成派对!"
-   },
-   "Tooltip_SnackTime89_ST_BamboulaBiscuit": {
-    "en": "The cocoa biscuit with chocolate chips that turns snack time into a party!",
-    "ch": "加了巧克力豆的可可餅乾, 讓點心時間變成派對!",
-    "cn": "加了巧克力豆的可可饼干, 让零食时间变成派对!"
-   },
    "Tooltip_SnackTime89_ST_CaptainChocCake": {
     "en": "Set sail for snack time with chocolate chips!",
     "ch": "帶著巧克力豆, 揚帆駛向點心時間!",
@@ -424549,9 +425474,9 @@
     "cn": "滴灌头. 为所在格子的作物浇水并将水继续往下传的管道. 不需要压力, 只需要水. 压力过大会使其爆裂, 因此别让水泵接在同一条管线上, 或用流体分配器限制压力. 需要管钳."
    },
    "Tooltip_craft_WaterPipeRouterDesc": {
-    "en": "A one-way valve: water flows in through the green band (IN) and out through the red band (OUT), never back, capped at the pressure ceiling you set. Put a vessel on its tile and the two sides exchange only through it: a purifier cleans water in transit, a tank buffers it. Rotate with R to aim the OUT side.",
-    "ch": "單向閥: 水從綠色環 (IN) 流入, 從紅色環 (OUT) 流出, 絕不回流, 壓力上限由你設定. 在它所在的地格放上容器後, 兩側只能經由該容器交換: 淨水器會在途中淨化水, 水箱則作為緩衝. 按 R 旋轉以調整 OUT 端的方向.",
-    "cn": "单向阀: 水从绿色环 (IN) 流入, 从红色环 (OUT) 流出, 绝不回流, 压力上限由你设置. 在它所在的地块放上容器后, 两侧只能通过该容器交换: 净水器会在途中净化水, 水箱则起缓冲作用. 按 R 旋转以调整 OUT 端的朝向."
+    "en": "A one-way valve: water flows in through the green band (IN) and out through the red band (OUT), never back, capped at the pressure ceiling you set. Put a vessel on its tile and the two sides exchange only through it: a purifier cleans water in transit, a container buffers it. Rotate with R to aim the OUT side.",
+    "ch": "單向閥: 水從綠色環 (IN) 流入, 從紅色環 (OUT) 流出, 絕不回流, 壓力上限由你設定. 在它所在的地格放上容器後, 兩側只能經由該容器交換: 淨水器會在途中淨化水, 容器則作為緩衝. 按 R 旋轉以調整 OUT 端的方向.",
+    "cn": "单向阀: 水从绿色环 (IN) 流入, 从红色环 (OUT) 流出, 绝不回流, 压力上限由你设置. 在它所在的地块放上容器后, 两侧只能通过该容器交换: 净水器会在途中净化水, 容器则起缓冲作用. 按 R 旋转以调整 OUT 端的朝向."
    },
    "Tooltip_craft_WaterPipeSprinklerDesc": {
     "en": "Sprinkler. A pipe that waters the whole 3x3 around it, but needs real pressure, which means a pump. It sprays every tile whether or not it is growing, wastes water, and is loud enough to draw zombies. Needs a Pipe Wrench.",
@@ -424569,9 +425494,9 @@
     "cn": "电动水泵. 装在管线上时, 通电期间会提高水压, 串联多台水泵效果可叠加. 放在水井或开放水域旁时, 也会把水抽进管网. 它最多只能从约两层楼以下吸水, 但能往上推送得高得多, 所以要装在低处. 需要管钳和焊接工具."
    },
    "Tooltip_craft_WaterPurifierElectricDesc": {
-    "en": "Electric purifier tank. Put it on a Fluid Router: tainted water enters from the green (IN) side and leaves purified through the red (OUT) side while it has power. The filter wears with use; right-click to repair it with charcoal and ripped sheets. Needs welding gear and clear space above.",
-    "ch": "電動淨水槽. 放在流體分配器上: 通電期間, 受汙染的水從綠色 (IN) 端進入, 淨化後從紅色 (OUT) 端流出. 濾芯會隨使用而耗損; 按右鍵可用木炭和碎布修理. 需要焊接工具, 且上方要有淨空.",
-    "cn": "电动净水罐. 放在流体分配器上: 通电期间, 受污染的水从绿色 (IN) 端进入, 净化后从红色 (OUT) 端流出. 滤芯会随使用而磨损; 右键可用木炭和碎布条修理. 需要焊接工具, 且上方要留出空间."
+    "en": "Electric purifier tank. Put it on a Fluid Router: tainted water enters from the green (IN) side and leaves purified through the red (OUT) side while it has power. The filter wears with use; right-click to repair it with charcoal and Rags. Needs welding gear and clear space above.",
+    "ch": "電動淨水槽. 放在流體分流器上: 通電期間, 受汙染的水從綠色 (IN) 端進入, 淨化後從紅色 (OUT) 端流出. 濾芯會隨使用而耗損; 按右鍵可用木炭和碎布條修理. 需要焊接工具, 且上方要有淨空.",
+    "cn": "电动净水罐. 放在流体分流器上: 通电期间, 受污染的水从绿色 (IN) 端进入, 净化后从红色 (OUT) 端流出. 滤芯会随使用而磨损; 右键可用木炭和碎布条修理. 需要焊接工具, 且上方要留出空间."
    },
    "Tooltip_TrampleSteam": {
     "en": "Puts a spring in your step. Parachute not included.",
@@ -431034,9 +431959,9 @@
     "cn": "仅能在俯视视角下使用. 请先切换到俯视视角."
    },
    "Tooltip_craft_WaterPipeValveDesc": {
-    "en": "A shut-off valve. Fits onto a pipe that is already there, concealed building plumbing included, so nothing has to come down first. Open it does nothing; closed it splits the network in two, and the sides stop sharing water, pressure and contamination. Right-click to turn it, Pipe Wrench in hand.",
-    "ch": "截止閥. 可直接裝在既有的水管上, 包括暗埋的建築管線, 因此不必先拆除任何東西. 開啟時沒有任何作用; 關閉時會把管網一分為二, 兩側不再共享水, 壓力和汙染. 手持管鉗按右鍵即可轉動.",
-    "cn": "截止阀. 可直接装在现有的水管上, 包括暗埋的建筑管线, 因此无需先拆除任何东西. 打开时没有任何作用; 关闭时会把管网一分为二, 两侧不再共享水, 压力和污染. 手持管钳右键即可转动."
+    "en": "A shut-off valve. Fits onto a pipe that is already there, concealed building plumbing included, so nothing has to come down first. Open it does nothing; closed it splits the network in two, and the sides stop sharing water, pressure and contamination. Right-click to turn it by hand.",
+    "ch": "截止閥. 可直接裝在既有的水管上, 包括暗埋的建築管線, 因此不必先拆除任何東西. 開啟時沒有任何作用; 關閉時會把管網一分為二, 兩側不再共享水, 壓力和汙染. 按右鍵即可徒手轉動.",
+    "cn": "截止阀. 可直接装在现有的水管上, 包括暗埋的建筑管线, 因此无需先拆除任何东西. 打开时没有任何作用; 关闭时会把管网一分为二, 两侧不再共享水, 压力和污染. 右键即可徒手转动."
    },
    "Tooltip_KBW_CutRoom": {
     "en": "Drag an area to clear it out of the selected room. A room cut down to nothing is removed.",
@@ -431824,9 +432749,9 @@
     "cn": "教导如何将车用电池升级为房车船用电池. 旧电池的电量与状态会保留."
    },
    "Tooltip_ArcadiaRVPowerFuse": {
-    "en": "Replaces a missing fuse in an RV Battery Bay.",
-    "ch": "用於補上房車電池艙中缺少的保險絲.",
-    "cn": "用于补上房车电池舱中缺失的保险丝."
+    "en": "Legacy red 10A fuse retained from an older save. Fits the red slot in an RV Battery Bay. Remove the old fuse before installing it.",
+    "ch": "舊存檔保留下來的舊版紅色 10A 保險絲. 可裝入房車電池艙的紅色插槽. 安裝前請先取下舊保險絲.",
+    "cn": "旧存档保留下来的旧版红色 10A 保险丝. 可装入房车电池舱的红色插槽. 安装前请先取下旧保险丝."
    },
    "Tooltip_ArcadiaRVRVMarinePowerBay": {
     "en": "Holds four vehicle batteries to power an RV. Stand beside it and hold the Battery Bay shortcut shown on screen. Remove all batteries before moving it.",
@@ -434397,6 +435322,66 @@
     "en": "A steel plate on a wooden stand, like the ones at gun ranges. Shoot at it from 3 to 30 tiles to train Aiming, or to zero a new optic. Pick it up and move it like furniture.",
     "ch": "裝在木架上的鋼板, 就像靶場用的那種. 從 3 到 30 格的距離射擊可訓練瞄準, 或替新光學瞄具歸零. 可像家具一樣拿起搬動.",
     "cn": "装在木架上的钢板, 就像靶场用的那种. 从 3 到 30 格的距离射击可训练瞄准, 或给新光学瞄具归零. 可像家具一样拿起搬动."
+   },
+   "Tooltip_weapon_BayoLug": {
+    "en": "Bayonet Lug",
+    "ch": "刺刀座",
+    "cn": "刺刀座"
+   },
+   "Tooltip_SnackTime89_ST_Bamboola": {
+    "en": "The cocoa biscuit with chocolate chips that turns snack time into a party!",
+    "ch": "加了巧克力豆的可可餅乾, 讓點心時間變成派對!",
+    "cn": "加了巧克力豆的可可饼干, 让零食时间变成派对!"
+   },
+   "Tooltip_SnackTime89_ST_BamboolaBiscuit": {
+    "en": "The cocoa biscuit with chocolate chips that turns snack time into a party!",
+    "ch": "加了巧克力豆的可可餅乾, 讓點心時間變成派對!",
+    "cn": "加了巧克力豆的可可饼干, 让零食时间变成派对!"
+   },
+   "Tooltip_IDBFS_BookBiofuel": {
+    "en": "Teaches ethanol refining into biofuel.",
+    "ch": "教導如何將乙醇精製成生物燃料.",
+    "cn": "教导如何将乙醇精炼成生物燃料."
+   },
+   "Tooltip_IDBFS_BookBottled": {
+    "en": "Teaches bottling of spirits, drinks, vinegar and oils.",
+    "ch": "教導如何將烈酒、飲料、醋與油裝瓶.",
+    "cn": "教导如何将烈酒、饮料、醋和油装瓶."
+   },
+   "Tooltip_IDBFS_BookDestilery": {
+    "en": "Teaches all alcohol distillation processes at the still.",
+    "ch": "教導在蒸餾器進行的所有酒精蒸餾製程.",
+    "cn": "教导在蒸馏器上进行的所有酒精蒸馏工艺."
+   },
+   "Tooltip_IDBFS_BookFermentation": {
+    "en": "Teaches mash preparation, yeast, fermentation and vinegar production.",
+    "ch": "教導醪的調製、酵母、發酵與醋的製作.",
+    "cn": "教导醪的调制、酵母、发酵和醋的制作."
+   },
+   "Tooltip_IDBFS_BookIndustrial": {
+    "en": "Teaches construction of all ten IDBFS machines and storage structures.",
+    "ch": "教導如何建造全部十種 IDBFS 機器與儲存設施.",
+    "cn": "教导如何建造全部十种 IDBFS 机器和储存设施."
+   },
+   "Tooltip_IDBFS_BookOilProduction": {
+    "en": "Teaches sunflower and olive oil production.",
+    "ch": "教導如何製作葵花籽油與橄欖油.",
+    "cn": "教导如何制作葵花籽油和橄榄油."
+   },
+   "Tooltip_IDBFS_RequiresManual": {
+    "en": "Read %1 to learn this process.",
+    "ch": "閱讀 %1 即可學會此製程.",
+    "cn": "阅读 %1 即可学会此工艺."
+   },
+   "Tooltip_craft_WaterPipeHumiditySensorDesc": {
+    "en": "A stake you push into soil that can be planted. It reads how much water the crop on its tile has: when it drops to the minimum you set it gives a signal, and when it climbs to the maximum it stops; in between it keeps what it was doing. The valves you link to it open on the signal and close without it. Runs on the tile's electricity or on a Battery. Right-click it to set it up and link valves.",
+    "ch": "插進可耕種土壤的感測樁. 它會讀取同一格作物的含水量: 降到你設定的下限時發出訊號, 升到上限時停止發出; 介於兩者之間時維持原本的狀態. 與它連結的閥門在收到訊號時開啟, 沒有訊號時關閉. 使用所在格子的電力或電池運作. 對它按右鍵即可進行設定並連結閥門.",
+    "cn": "插入可耕种土壤的传感桩. 它会读取同一格作物的含水量: 降到你设置的下限时发出信号, 升到上限时停止发出; 介于两者之间时保持原来的状态. 与它关联的阀门在收到信号时打开, 没有信号时关闭. 使用所在格子的电力或电池运行. 右键点击它即可进行设置并关联阀门."
+   },
+   "Tooltip_UpgradeMysteriousBackPack": {
+    "en": "Empty it first. Turns it into the Authentic Z ALICE pack (Tier 1) with attachment slots, which you can keep upgrading with Authentic Z recipes. Capacity goes from 30 to 28 and back to 30 at Tier 3.",
+    "ch": "需先清空. 會改造成帶有掛載欄位的 Authentic Z ALICE 背包 (一階), 之後可用 Authentic Z 的配方繼續升級. 容量會從 30 降為 28, 到三階時再回到 30.",
+    "cn": "需要先清空. 会改造成带有挂载栏位的 Authentic Z ALICE 背包 (一阶), 之后可以用 Authentic Z 的配方继续升级. 容量会从 30 降为 28, 到三阶时恢复为 30."
    }
   },
   "UI.json": {
@@ -476881,9 +477866,9 @@
     "cn": "Y2K 千禧风"
    },
    "UI_SurvivorBriefing_Look_tooltip": {
-    "en": "How the briefing looks. Every look shows the lines you switch on above, at the position and text size set below (Emergency Broadcast becomes a full-width bar in the centre positions; Cinematic always uses the whole screen). To try them all on your own character, right-click in the world and pick \"Survivor Briefing: test looks\".",
-    "ch": "簡報的外觀. 每種外觀都會顯示你在上方開啟的資訊行, 並使用下方設定的位置與文字大小 (緊急廣播在置中位置會變成全寬橫條; 電影外觀一律使用整個螢幕). 若要在自己的角色上逐一試用, 請在世界中按右鍵並選擇「倖存者簡報: 測試外觀」.",
-    "cn": "简报的外观. 每种外观都会显示你在上方开启的信息行, 并使用下方设置的位置和文本大小 (紧急广播在居中位置会变成全宽横条; 电影外观始终使用整个屏幕). 若要在自己的角色上逐一试用, 请在世界中右键点击并选择“幸存者简报: 测试外观”."
+    "en": "How the briefing looks. Every look shows the lines you switch on above, at the position and text size set below (Emergency Broadcast becomes a full-width bar in the centre positions; Cinematic always uses the whole screen). To try them all on your own character, press \"Preview the looks\" below.",
+    "ch": "簡報的外觀. 每種外觀都會顯示你在上方開啟的資訊行, 並使用下方設定的位置與文字大小 (緊急廣播在置中位置會變成全寬橫條; 電影外觀一律使用整個螢幕). 若要在自己的角色上逐一試用, 請按下方的「預覽外觀」.",
+    "cn": "简报的外观. 每种外观都会显示你在上方开启的信息行, 并使用下方设置的位置和文本大小 (紧急广播在居中位置会变成全宽横条; 电影外观始终使用整个屏幕). 若要在自己的角色上逐一试用, 请点击下方的“预览外观”."
    },
    "UI_SurvivorBriefing_dailySunrise": {
     "en": "Daily briefing at sunrise",
@@ -476901,9 +477886,9 @@
     "cn": "右键菜单中的外观窗口"
    },
    "UI_SurvivorBriefing_looksMenu_tooltip": {
-    "en": "Adds \"Survivor Briefing: test looks\" to the menu you get by right-clicking in the world, to try every look on your own character and keep the one you like. Off: the entry is gone.",
-    "ch": "在世界中按右鍵開啟的選單裡加入「倖存者簡報: 測試外觀」, 讓你在自己的角色上試用每種外觀, 並保留喜歡的那一種. 關閉: 該選項會消失.",
-    "cn": "在世界中右键点击打开的菜单里添加“幸存者简报: 测试外观”, 让你在自己的角色上试用每种外观, 并保留喜欢的那一种. 关闭: 该选项会消失."
+    "en": "Also puts \"Survivor Briefing: test looks\" in the menu you get by right-clicking in the world. Off by default: \"Preview the looks\" above opens the same window.",
+    "ch": "同時在世界中按右鍵開啟的選單裡加入「倖存者簡報: 測試外觀」. 預設關閉: 上方的「預覽外觀」會開啟同一個視窗.",
+    "cn": "同时在世界中右键点击打开的菜单里添加“幸存者简报: 测试外观”. 默认关闭: 上方的“预览外观”会打开同一个窗口."
    },
    "UI_SurvivorBriefing_onTown": {
     "en": "Show when entering a town",
@@ -484679,6 +485664,106 @@
     "en": "The ground is still wet.",
     "ch": "地面還很濕.",
     "cn": "地面还很湿."
+   },
+   "UI_AHS_EpisodeHint_cardiovascular_disease": {
+    "en": "chronic cardiovascular strain",
+    "ch": "慢性心血管負荷",
+    "cn": "慢性心血管负荷"
+   },
+   "UI_AHS_EpisodeHint_knee_osteoarthritis": {
+    "en": "persistent knee trouble",
+    "ch": "持續的膝蓋問題",
+    "cn": "持续的膝盖问题"
+   },
+   "UI_AHS_EpisodeHint_nutritional_anemia": {
+    "en": "nutrition-related weakness",
+    "ch": "營養相關性虛弱",
+    "cn": "营养相关性虚弱"
+   },
+   "UI_AHS_EpisodeHint_severe_malnutrition": {
+    "en": "severe nutritional depletion",
+    "ch": "嚴重營養耗竭",
+    "cn": "严重营养耗竭"
+   },
+   "UI_AHS_Episode_cardiovascular_disease": {
+    "en": "cardiovascular disease",
+    "ch": "心血管疾病",
+    "cn": "心血管疾病"
+   },
+   "UI_AHS_Episode_knee_osteoarthritis": {
+    "en": "knee osteoarthritis",
+    "ch": "膝部退化性關節炎",
+    "cn": "膝骨关节炎"
+   },
+   "UI_AHS_Episode_nutritional_anemia": {
+    "en": "nutritional anemia",
+    "ch": "營養性貧血",
+    "cn": "营养性贫血"
+   },
+   "UI_AHS_Episode_severe_malnutrition": {
+    "en": "severe protein-energy malnutrition",
+    "ch": "重度蛋白質熱量營養不良",
+    "cn": "重度蛋白质-能量营养不良"
+   },
+   "UI_AHS_Report_Basic_Type_cardiovascular_disease": {
+    "en": "Hard effort brings weakness and discomfort in my chest.",
+    "ch": "一用力就覺得虛弱, 胸口也不舒服.",
+    "cn": "一用力就觉得虚弱, 胸口也不舒服."
+   },
+   "UI_AHS_Report_Basic_Type_knee_osteoarthritis": {
+    "en": "My knee aches after long walks or running, even after losing weight.",
+    "ch": "走遠路或跑步之後膝蓋就會痛, 就算瘦下來了也一樣.",
+    "cn": "走远路或跑步之后膝盖就会疼, 就算瘦下来了也一样."
+   },
+   "UI_AHS_Report_Basic_Type_nutritional_anemia": {
+    "en": "I tire quickly and feel weak when I exert myself.",
+    "ch": "我很容易累, 一出力就覺得虛弱.",
+    "cn": "我很容易累, 一使劲就觉得没力气."
+   },
+   "UI_AHS_Report_Basic_Type_severe_malnutrition": {
+    "en": "I feel deeply exhausted and my wounds recover slowly. I need sustained adequate nutrition.",
+    "ch": "我覺得累到不行, 傷口也好得很慢. 我需要持續攝取足夠的營養.",
+    "cn": "我觉得累得不行, 伤口也好得很慢. 我需要持续摄入足够的营养."
+   },
+   "UI_NEQ_options_show_key_rings": {
+    "en": "Always show key rings",
+    "ch": "一律顯示鑰匙環",
+    "cn": "始终显示钥匙环"
+   },
+   "UI_NEQ_options_show_key_rings_tooltip": {
+    "en": "Key rings stay in the inventory list even while equipped items are hidden.",
+    "ch": "即使隱藏已裝備物品, 鑰匙環仍會留在物品欄清單中.",
+    "cn": "即使隐藏已装备物品, 钥匙环仍会保留在物品栏列表中."
+   },
+   "UI_SurvivorBriefing_PreviewLooks": {
+    "en": "Preview the looks",
+    "ch": "預覽外觀",
+    "cn": "预览外观"
+   },
+   "UI_SurvivorBriefing_PreviewLooks_tooltip": {
+    "en": "Opens the looks window as soon as you are back in the game: click a look to see it on your own character, and \"Use these settings\" keeps it.",
+    "ch": "回到遊戲後立即開啟外觀視窗: 點選一種外觀即可在自己的角色上預覽, 按「套用這些設定」即可保留.",
+    "cn": "回到游戏后立即打开外观窗口: 点击一种外观即可在自己的角色上预览, 点击“使用这些设置”即可保留."
+   },
+   "UI_ModManagerExt_changelogOrder": {
+    "en": "Changelog Order",
+    "ch": "更新日誌順序",
+    "cn": "更新日志顺序"
+   },
+   "UI_ModManagerExt_changelogOrderTip": {
+    "en": "Reads a ChangeLog.txt that lists its newest version at the top the right way round, in the Changelog row and in the change notes Mod Manager fills in when uploading. Off reads every ChangeLog.txt newest at the bottom, as Mod Manager does.",
+    "ch": "把最新版本列在最上方的 ChangeLog.txt 會以正確的順序讀取, 套用於「更新說明」列以及模組管理器上傳時自動填入的更新說明. 關閉則與模組管理器相同, 一律將每個 ChangeLog.txt 當作最新版本在最下方來讀取.",
+    "cn": "将最新版本列在顶部的 ChangeLog.txt 会按正确的顺序读取, 适用于“更新说明”行以及模组管理器上传时自动填写的更新说明. 关闭则与模组管理器相同, 始终将每个 ChangeLog.txt 视为最新版本在底部来读取."
+   },
+   "UI_optionscreen_binding_VPUI_CycleLootBag": {
+    "en": "Cycle preferred loot bag",
+    "ch": "切換偏好的搜刮背包",
+    "cn": "切换首选的搜刮背包"
+   },
+   "UI_optionscreen_binding_VPUI_HudLayout": {
+    "en": "HUD layout (move / hide the HUD)",
+    "ch": "HUD 版面 (移動/隱藏 HUD)",
+    "cn": "HUD 布局 (移动/隐藏 HUD)"
    }
   },
   "MakeUp.json": {
@@ -491039,6 +492124,11 @@
     "en": "Universal Gun Turret",
     "ch": "通用槍砲塔",
     "cn": "通用枪炮塔"
+   },
+   "WaterPipes_Humidity_Sensor": {
+    "en": "Soil Moisture Sensor",
+    "ch": "土壤濕度感測器",
+    "cn": "土壤湿度传感器"
    }
   },
   "Stash.json": {

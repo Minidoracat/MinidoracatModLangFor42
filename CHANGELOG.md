@@ -4,6 +4,29 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **新收錄 Dog Tired Armory（#935 翻譯申請）：245 項繁簡中文。** 沿牆組裝的軍械庫構件：木製、金屬、鐵管、軍用、收藏級五種等級的槍架（3／4 槍位與轉角 5 槍位，含左端、中段、右端、獨立版本）、長槍掛板、近戰武器掛板、手槍牆、彈藥櫃、收納櫃、轉角收納櫃，以及彈藥、步槍彈匣、手槍彈匣、手槍展示與復裝櫃檯，還有各櫃子上下層的分頁標題。
+  > 技術要點：使用者 2026-10-19 核准 own lane，作者只附英文，CH／CN 皆對照 EN 人工直寫，落 `sources/mods/3816701056/`（`origin: own`）與 `sources/ch`；建造選單名（`IGUI_DTA_*`）與可搬運物品名（`DTArmory.Mov_DTA_*`）共用 129 條相異英文。加進名冊、watchlist 與 tracker 基準（`backfill-en` 首建），`mod_names_zh` 補中文名「Dog Tired 軍械庫」；零 vanilla 碰撞、與 As1 鍵集無交集。1 路對抗複核無修正。
+- **補齊 15 個 MOD 新增的繁簡中文，共 231 項。** Backcountry ATV（#927，本田 CRF450／NXR Bros、哈雷-戴維森 Road King 與警用 Electra Glide 機車、山葉 Raptor、鈴木 Quadzilla 500 與重型多用途全地形車，各車生成率、城鎮停車場生成、原款全地形車顏色與翻正車輛，91 項）、Water Pipes（#922，可連結閥門的土壤濕度感測器：感測器視窗、上下限與訊號狀態、連結被拒原因、電池續航與連結範圍設定，48 項）、Area Tasks（#926，「移動物品」子選單的來源與目的地、把屍體拖進容器／車輛／垃圾桶、批次放誘餌與檢查陷阱，以及各種失敗訊息，44 項）、AHS - Advanced Health System（#916，心血管疾病、膝部退化性關節炎、營養性貧血與重度營養不良的名稱、提示與自述，12 項）、GridInventory（#924，從一堆物品裡挑數量的視窗與依角色特質散放的選項，9 項）、IDBFS（#920，6 本配方書的說明與「閱讀某書即可學會此製程」，7 項）、SnackTime 89（#914，改名的班布拉可可餅乾，4 項）、Arcadia RV Interiors（#923，房車電力製作分類與引擎／電池損壞影響引擎充電的設定，3 項），以及 Guns of 93、NeatUI Equipment、Survivor Briefing、Mod Manager Extension、Viewpoint - Interface、They Knew Continued 各 2 項、Locksmith 1 項。
+  > 技術要點：全數落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫，新鍵皆以有效 CN 值登記 `ch_review_state`。3 路翻譯、3 路對抗複核提出 8 條修正，採納 3 條（Water Pipes 整棟接水管說明改為「無法接通的用水裝置所耗的鐵管會退還」；Area Tasks 的取出失敗訊息只在從容器或車輛取物時出現，「撿起」改「取出」；Mod Manager Extension 說明裡的面板列名改用已出貨的「更新說明」），不採納 5 條：rain collector 維持家族本體翻譯包 `Fluid_Container_Collector` 的「雨水收集器」（審查建議的「集雨器」不是本體譯名，3 條）；They Knew Continued 的 Tier 維持「一階／三階」，與本包已出貨的 Authentic Z 背包名「(一階)／(二階)／(三階)」一致（2 條）。22 個 wid 以 steamcmd 重抓，12,984 筆文本 record 的值 hash 與 tracker state 全數相符。
+
+### Changed
+
+- **依上游英文改值重譯 42 項。** Water Pipes 16 項（#922，改用本體物品名：水桶改容器、金屬管改鐵管、修理工具組改管鉗與大力膠帶、碎布改碎布條，四種水管的建造說明照新英文完整重寫並補上鐵管與陶管段的用料，閥門改為徒手轉動）、Area Tasks 9 項（#926，「移動地面物品」改名「移動物品」後的負重上限設定與失敗訊息、目的地距離設定補上容器／車輛來源）、Arcadia RV Interiors 7 項（#923，舊版紅色 10A 保險絲、允許房車內部直接使用電網供電、岸電改為整輛房車共用的固定參考速率，離開房車按鈕）、SalvageWorks 3 項（#921，削製編織針、剝取電線、回收產量倍率只套用於金屬與木材）、Survivor Briefing 2 項（#929，說明改為指向「預覽外觀」按鈕）、Guns of 93 2 項（#912，Mini-30 彈匣補上 7.62x39，9mm 消音器說明補上「武器配件. 無需工具.」），以及 GridInventory（#924，散放模式說明新增依角色特質一段）、Locksmith（#928，撬棍耐力消耗改為 0.05）、Junkyard Sentinel（#931，砲塔強度各級的步槍命中次數）各 1 項。
+  > 技術要點：As1 衍生層 18 鍵改 `sources/ch`＋`cn_overrides`（新增 15、更新 2，帶 `as1_value` 錨點；Water Pipes 的 `WaterPipes_ForgeMetalPipe` 簡中與 As1 相同、不需 override），順手修掉 As1 舊簡中的「书香」與多餘引號；own 層 28 鍵連 `en` 錨點更新，其中 Water Pipes 4 鍵原譯已寫鐵管、只更新錨點；皆登記 `ch_review_state`。
+- **重新背書 1 個多 MOD 共用鍵的裁決，譯名不變（#934）。** Guns of 93 新增的製作分類 `IGUI_CraftingCategories_Ammunition` 與 Hot Brass Ammo Crafting、Escape from Kentucky、MFS 社群修正版、Snake's ModPack 共用，五方都指彈藥製作分類，維持「彈藥」。
+  > 技術要點：`owner_conflict_decisions.json` 更新 signature 並補記 reason，寫入前以 1,760 筆既有裁決自檢全符；`OWNER_CONFLICTS.md` 重生。
+
+### Removed
+
+- **移除 13 項上游已刪除的原創翻譯。** Arcadia RV Interiors（#923）不再能製作的房車保險絲配方 2 項與已退役的「舊版房車保險絲戰利品」沙盒設定 7 項；SnackTime 89（#914）改名前的 Bamboula 餅乾 4 項（新名 Bamboola 已補上）。
+  > 技術要點：`sources/en` 全庫與 tracker state 已無 owner；Arcadia 的 `RVLootLegacyFuse` 雖仍留在 Lua 戰利品表（`retired=true`，保留存檔遮罩位置），但 `sandbox-options.txt` 已無此選項，Lua 也只對仍存在的設定組 `Sandbox_RVInterior_*` 鍵；`ch_review_state` 同步移除。
+
+其餘追蹤單無需另外變更翻譯：They Knew Continued（#933）的 25 個沙盒標題只把 `%` 改成 `%%`，已出貨譯文本來就寫 `%%`；ERS - Energy Routing System（#915）與 ERS - Network Extend Pack（#917）新增的 New Worlds 版子模組英文與原版逐筆相同；The ARK Female Character Patch（#919）只是多了 42.20／42.21 版本夾、內容與 42.18 相同；Repair Floor Cracks（#918）只刪了 B42 不讀的 `ContextMenu_EN.txt`；Totally's NATO Firearms Pack（#913）新增的 `Base.M21` 沒有顯示名稱文字。
+
 ## [42.21.0-1.54.0] - 2026-10-19
 
 ### Added

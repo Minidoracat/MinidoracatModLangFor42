@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1427 個 Workshop 模組**（2047 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
+共支援 **1428 個 Workshop 模組**（2048 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1435,6 +1435,7 @@
 | [Too Many Emotes](https://steamcommunity.com/sharedfiles/filedetails/?id=3815468401) | Too Many Emotes 超多表情動作 | 在表情輪盤新增 300 多種表情動作，可瀏覽與收藏，多人模式可同步動作。 | `TooManyEmotes` | 359 | — | — |
 | [HydeCo. Orchard! 42.21.0](https://steamcommunity.com/sharedfiles/filedetails/?id=3815617457) | HydeCo. 果園！ | 新增果樹、漿果灌木與攀牆葡萄藤等 15 種植物，會隨四季變化，缺水可能生病枯死。 | `HydeCoOrchard` | 387 | — | — |
 | [My So-Called Fashion](https://steamcommunity.com/sharedfiles/filedetails/?id=3816335149) | My So-Called Fashion 我的時尚 | 新增將上衣綁腰、背包鬆背、眼鏡戴頭上、耳罩掛脖子等穿搭方式與原創服裝。 | `P4MySoCalledFashion` | 24 | — | — |
+| [Dog Tired Armory〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3816701056) | Dog Tired 軍械庫 | 沿牆組裝槍架、掛板、儲物櫃與櫃檯，打造連續的軍械庫；收納的槍枝以 3D 模型陳列，彈藥盒擺在架上。構件分木製、金屬、管架、軍用、收藏五種等級，都能上掛鎖。 | `DogTiredArmory` | 245 | — | — |
 | [[B42] Knox Inventory - Tarkov-style UI Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=3816775774) | Knox Inventory - 塔科夫風格介面大改 | 以《逃離塔科夫》風格重做介面，物品依實際尺寸放入格狀物品欄，並顯示 3D 角色。 | `KnoxInventory` | ? | — | — |
 | [Extreme Weather](https://steamcommunity.com/sharedfiles/filedetails/?id=3816847772) | 極端天氣 | 新增龍捲風、冰雹等致命風暴，會摧毀建築、拋飛車輛與殭屍，來襲前有緊急廣播預警。 | `ExtremeWeather` | ? | — | — |
 | [Knox Wildlife [B42.21 Beta]](https://steamcommunity.com/sharedfiles/filedetails/?id=3818096743) | Knox 野生動物 | 新增黑熊、棕熊、郊狼、麋鹿、山貓與野豬六種野生動物，含屠宰與毛皮加工配方。 | `KnoxWildlife` | 104 | — | — |

@@ -27607,8 +27607,8 @@
   },
   "IG_UI.json|IGUI_AreaTasks_MoveGroundItemsDescription": {
     "as1_value": "收集零散物品并将其丢弃在指定地点. 忽略不需要的物品.",
-    "value": "收集零散物品并放到选定的地点. 标记为“不想要”的物品会留在原地.",
-    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：Unwanted 是本體物品標記（Tooltip_Unwanted「不想要」），原譯「忽略不需要的物品」看不出是標記"
+    "value": "将选中的物品移到地面上的某个地点. 标记为“不想要”的物品会留在原地.",
+    "reason": "2026-10-19 #926：上游英文改寫（Gather loose items and drop them at a ch… → Move selected items to a ground spot. Le…），依新英文重譯。"
   },
   "IG_UI.json|IGUI_AreaTasks_ToStorageDescription": {
     "as1_value": "将零散物品收集到选定的储物容器中. 如果在收集过程中容器已满, 多余物品将丢在旁边. 忽略不想要的物品.",
@@ -27617,8 +27617,8 @@
   },
   "IG_UI.json|IGUI_AreaTasks_IntoBagDescription": {
     "as1_value": "直接将零散物品收集到随身背包中, 直到装不下为止. 忽略不想要的物品.",
-    "value": "将零散物品直接收进随身背包, 直到装不下为止. 标记为“不想要”的物品会留在原地.",
-    "reason": "2026-09-27 Area Tasks（3793163745）收錄複核：Unwanted 是本體物品標記（Tooltip_Unwanted「不想要」）"
+    "value": "将选中的物品直接收进随身背包, 直到装不下为止. 标记为“不想要”的物品会留在原地.",
+    "reason": "2026-10-19 #926：上游英文改寫（Collect loose items directly into a carr… → Move selected items directly into a carr…），依新英文重譯。"
   },
   "ContextMenu.json|ContextMenu_KnifeSheath_WearBack": {
     "value": "佩戴",
@@ -60059,5 +60059,80 @@
     "as1_value": "提高使用武术缠手带战斗时的伤害. 通过成功击中目标获取经验.",
     "value": "提升武术战斗能力. 通过成功击中目标获得经验. I Am Bruce Lee Now: 提高使用武术缠手带战斗时的伤害. Bruce Lee's Nunchaku: 强化受支持的武术流派所用的战斗技巧.",
     "reason": "2026-10-19 owner 衝突裁決：兩方都是武術技能說明, 且都靠擊中目標獲得經驗 (Nunchaku 寫 damaging strikes, 擊中造成傷害仍屬擊中), 這兩句為共通句. 現值「纏手帶傷害」只符合 I Am Bruce Lee Now, 兩方的具體效果以具名句分別寫出."
+  },
+  "Tooltip.json|Tooltip_craft_WaterPipeDesc": {
+    "as1_value": "管道自动连接成网络. 可为水槽, 淋浴器和马桶接通水管, 并连接雨水收集器, 桶和容器以共享用水. 需要管钳来连接.",
+    "value": "可输送水或燃料. 会自动连接成管网. 可为水槽, 淋浴器和马桶接通水管; 也可连接雨水收集器, 双耳罐和其他容器. 以金属管或陶管段建造. 拆除时会返还金属管, 但陶管段会永久消耗. 需要管钳.",
+    "reason": "2026-10-19 #922：上游英文改寫（Carries water or fuel. Auto-connects int… → Carries water or fuel. Auto-connects int…），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_craft_WaterPipeHiddenDesc": {
+    "as1_value": "暗埋水管: 嵌入墙体并用灰泥抹平, 使其保持隐蔽, 同时仍能像普通水管一样自动连接和输水. 使用'显示管道网络'可将其显露. 需要管钳和一桶混合水泥 (粘土水泥或混凝土).",
+    "value": "用灰泥封在看不见处的水管. 能像普通水管一样输送流体. 可用“显示管道网络”让它显露. 使用金属管或陶管段; 陶管段会永久消耗. 需要管钳和一桶混合水泥.",
+    "reason": "2026-10-19 #922：上游英文改寫（A pipe plastered out of sight. Carries f… → A pipe plastered out of sight. Carries f…），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_craft_WaterPipeRiserDesc": {
+    "as1_value": "用于墙体的垂直管道盖. 连接墙体两侧的地面管道并链接不同楼层. 需要管钳来连接.",
+    "value": "沿墙向上铺设的水管. 连接墙两侧的地面水管, 并连通不同楼层. 使用金属管或陶管段; 陶管段会永久消耗. 需要管钳.",
+    "reason": "2026-10-19 #922：上游英文改寫（A pipe run up a wall. Links floor pipes … → A pipe run up a wall. Links floor pipes …），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_craft_WaterPipeRiserHiddenDesc": {
+    "as1_value": "暗埋书香水管: 嵌入墙体并用灰泥抹平, 使其保持隐蔽, 同时仍能像普通水管一样自动连接和输水. 使用'显示管道网络'可将其显露. 需要管钳和一桶混合水泥 (粘土水泥或混凝土).\"",
+    "value": "用灰泥封进墙内的竖向水管. 在看不见处连通各楼层. 可用“显示管道网络”让它显露. 使用金属管或陶管段; 陶管段会永久消耗. 需要管钳和一桶混合水泥.",
+    "reason": "2026-10-19 #922：上游英文改寫（A vertical pipe plastered into the wall.… → A vertical pipe plastered into the wall.…），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_AreaTasks_GroundItemCarryLimit": {
+    "as1_value": "你携带的重量已达到或超过 '移动地面物品' 的负重上限.",
+    "value": "你携带的重量已达到或超过“移动物品”的负重上限.",
+    "reason": "2026-10-19 #926：上游英文改寫（Your carried weight is already at or abo… → Your carried weight is already at or abo…），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_AreaTasks_GroundItemDestinationBlocked": {
+    "as1_value": "无法到达选定的地面物品目的地.",
+    "value": "无法到达选定的物品目的地.",
+    "reason": "2026-10-19 #926：上游英文改寫（The selected ground-item destination cou… → The selected item destination could not …），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_AreaTasks_GroundItemDropFailed": {
+    "as1_value": "地面物品放置未完成.",
+    "value": "物品送达未完成.",
+    "reason": "2026-10-19 #926：上游英文改寫（The ground-item drop did not complete. → The item delivery did not complete.），依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_AreaTasks_GroundItemPickupFailed": {
+    "as1_value": "地面物品拾取未完成.",
+    "value": "物品拾取未完成. 任务已停止.",
+    "reason": "2026-10-19 #926：上游英文改寫（The ground-item pickup did not complete. → The item pickup did not complete. Work s…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_AreaTasksGroundItemCarryMode": {
+    "as1_value": "移动地面物品的负重上限",
+    "value": "移动物品的负重上限",
+    "reason": "2026-10-19 #926：上游英文改寫（Move Ground Items carry limit → Move Items carry limit），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_AreaTasksGroundItemCarryMode_tooltip": {
+    "as1_value": "适用于 '丢到地面' 和 '存入容器', 不适用于 '装入背包'. '最大负重' 使用普通物品栏上限. '避免超重' 使用角色当前未超重的承载能力 (包含已有负重), 可能需要更多趟数. 无法在上限内装入的物品会被留下.",
+    "value": "适用于所有“移动物品”路线, 但目的地为“背包”的除外. “最大负重”使用普通物品栏上限. “避免超重”使用角色当前未超重的承载能力 (包含已有负重), 可能需要更多趟数. 无法在上限内装入的物品会被留下.",
+    "reason": "2026-10-19 #926：上游英文改寫（Applies to To Ground and To Storage, not… → Applies to all Move Items routes except …），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_AreaTasksMaximumDestinationDistance_tooltip": {
+    "as1_value": "选择任务目的地时与玩家的最大格数距离. 默认值: 50. 允许范围: 1到100.",
+    "value": "选择容器/车辆来源或任务目的地时与玩家的最大格数距离. 默认值: 50. 允许范围: 1到100.",
+    "reason": "2026-10-19 #926：上游英文改寫（Maximum tile distance from the player wh… → Maximum tile distance from the player wh…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_GridInventory_ScatterMode_tooltip": {
+    "as1_value": "没有保存位置的物品会如何放入容器.\n\n自动 (自然战利品): 只有从未被搜刮过的容器才会获得自然的随机布局; 玩家物品栏和已探索过的容器则会整齐地填满.\n\n始终散放 (杂乱): 物品会散落得到处都是, 包括你自己的物品栏. 快速转移会变得杂乱; 使用 x, y 精确拖放则能保持整齐.\n\n从不散放 (整齐): 所有物品都会从左上角开始自动填充, 从不随机.",
+    "value": "按角色特质: 杂乱无章的角色放下的所有物品都会散放, 即使在自己的物品栏中也一样. 井井有条的角色和其他角色则遵循“自动”. 自然生成的战利品始终散放.\n\n没有保存位置的物品会如何放入容器.\n\n自动 (自然战利品): 只有从未被搜刮过的容器才会获得自然的随机布局; 玩家物品栏和已探索过的容器则会整齐地填满.\n\n始终散放 (杂乱): 物品会散落得到处都是, 包括你自己的物品栏. 快速转移会变得杂乱; 使用 x, y 精确拖放则能保持整齐.\n\n从不散放 (整齐): 所有物品都会从左上角开始自动填充, 从不随机.",
+    "reason": "2026-10-19 #924：上游英文改寫（How items without a saved position are p… → By character traits: a Disorganized char…），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_Locksmith_CrowbarEnduranceCost_tooltip": {
+    "as1_value": "单次强行破门尝试消耗的耐力值 (在体格和力量属性减免之前). 耐力范围为0到1, 因此0.03代表满条耐力的百分之三. 疲惫的角色成功率较低, 但永远不会被阻止尝试.",
+    "value": "单次强行破门尝试消耗的耐力值 (在体格和力量属性减免之前). 耐力范围为0到1, 因此0.05代表满条耐力的百分之五. 疲惫的角色成功率较低, 但永远不会被阻止尝试.",
+    "reason": "2026-10-19 #928：上游英文改寫（Endurance spent by one forcing attempt, … → Endurance spent by one forcing attempt, …），依新英文重譯。"
+  },
+  "UI.json|UI_exitrvinterior": {
+    "as1_value": "离开房车内部",
+    "value": "离开房车",
+    "reason": "2026-10-19 #923：上游英文改寫（Exit → Exit RV），依新英文重譯。"
+  },
+  "Tooltip.json|Tooltip_9mmSilencer": {
+    "as1_value": "需要螺纹枪管. 将减少9mm, .38特制, .380自动, .25自动, 和.22 LR枪械的声音半径.<br>可以适配于大部分步枪口径, 但耐久度会下降得更快.",
+    "value": "武器配件. 无需工具. 需要螺纹枪管. 将减少9mm, .38特制, .380自动, .25自动和.22 LR枪械的声音半径. 可以适配于大部分步枪口径, 但耐久度会下降得更快.",
+    "reason": "2026-10-19 #912：上游新增 Tooltip.json 英文（開頭多了「Weapon attachment. No tool required.」、拿掉 <br>），依新英文重譯。"
   }
 }
