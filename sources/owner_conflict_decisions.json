@@ -11716,6 +11716,21 @@
       "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決（維持現值）：四個 HydeCo MOD 都是 'Albino', Bunnies 是 'Czech Albino' (捷克白化兔品種). 「白化」對 HydeCo 完全成立, 對 Bunnies 也是事實 (只省略產地), 而且 Bunnies 的同類品種 czechspotted 另有「捷克斑點」, 玩家仍能分辨. 維持現值.",
       "ch": "白化",
       "cn": "白化"
+    },
+    "ItemName|Base.762Bullets": {
+      "action": "unship",
+      "signature": "6db187a6cc720e9a",
+      "reason": "2026-10-20 LangFor42 #5 玩家回報：裝 B42 Rain's Firearms & Gun Parts 時，它的 7.62x51 子彈、盒裝、箱裝顯示成「7.62x39mm 彈藥」「7.62x39mm 彈藥盒」「7.62mm彈藥 (整件)」。Base.762Bullets／762Box／762Carton 被多個可獨立啟用的 owner 用來表示不同口徑：Rain's 兩版（含 Expanded）是 7.62x51，其餘在架 owner 都是 7.62x39mm，Workshop API 查無（result 9）的 3611718925/VFE 只寫 7.62mm。口徑是承重資訊；上位口徑「7.62mm」也不誠實：Rain's 另有 Base.762x39Bullets／Box／Carton（7.62x39），只寫 7.62mm 分不出是哪一種。沒有誠實中性譯名。2026-10-20 下載 6 個在架 owner 查證，Translate 只有 EN 與 RU／HU／PL／ES／IT，沒有 CH／CN，抑制後各自顯示正確英文。"
+    },
+    "ItemName|Base.762Box": {
+      "action": "unship",
+      "signature": "63bfdc01843db99e",
+      "reason": "2026-10-20 LangFor42 #5 玩家回報：裝 B42 Rain's Firearms & Gun Parts 時，它的 7.62x51 子彈、盒裝、箱裝顯示成「7.62x39mm 彈藥」「7.62x39mm 彈藥盒」「7.62mm彈藥 (整件)」。Base.762Bullets／762Box／762Carton 被多個可獨立啟用的 owner 用來表示不同口徑：Rain's 兩版（含 Expanded）是 7.62x51，其餘在架 owner 都是 7.62x39mm，Workshop API 查無（result 9）的 3611718925/VFE 只寫 7.62mm。口徑是承重資訊；上位口徑「7.62mm」也不誠實：Rain's 另有 Base.762x39Bullets／Box／Carton（7.62x39），只寫 7.62mm 分不出是哪一種。沒有誠實中性譯名。2026-10-20 下載 6 個在架 owner 查證，Translate 只有 EN 與 RU／HU／PL／ES／IT，沒有 CH／CN，抑制後各自顯示正確英文。"
+    },
+    "ItemName|Base.762Carton": {
+      "action": "unship",
+      "signature": "9cd4b84b9cc24c09",
+      "reason": "2026-10-20 LangFor42 #5 玩家回報：裝 B42 Rain's Firearms & Gun Parts 時，它的 7.62x51 子彈、盒裝、箱裝顯示成「7.62x39mm 彈藥」「7.62x39mm 彈藥盒」「7.62mm彈藥 (整件)」。Base.762Bullets／762Box／762Carton 被多個可獨立啟用的 owner 用來表示不同口徑：Rain's 兩版（含 Expanded）是 7.62x51，其餘在架 owner 都是 7.62x39mm，Workshop API 查無（result 9）的 3611718925/VFE 只寫 7.62mm。口徑是承重資訊；上位口徑「7.62mm」也不誠實：Rain's 另有 Base.762x39Bullets／Box／Carton（7.62x39），只寫 7.62mm 分不出是哪一種。沒有誠實中性譯名。2026-10-20 下載 6 個在架 owner 查證，Translate 只有 EN 與 RU／HU／PL／ES／IT，沒有 CH／CN，抑制後各自顯示正確英文。"
     }
   }
 }

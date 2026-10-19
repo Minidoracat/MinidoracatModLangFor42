@@ -4,6 +4,13 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Fixed
+
+- **Rain's Firearms & Gun Parts 的 7.62x51 子彈、盒裝、箱裝不再顯示成 7.62x39mm（玩家回報）。** 這三種彈藥的物品代號也被 VFE、Totally's 系列等槍械 MOD 拿來當 7.62x39mm 彈藥，翻譯表沒辦法依你裝了哪個 MOD 切換，所以改為不提供中文：各 MOD 顯示自己的英文名稱，Rain's 的會顯示 7.62x51 Round、Box of 7.62x51 Rounds、Carton of 7.62x51 Rounds。
+  > 技術要點：回報在本體翻譯包 MinidoracatLangFor42 #5。`ItemName|Base.762Bullets`／`Base.762Box`／`Base.762Carton` 登記 owner 衝突 `action: unship`，`unshipped_keys.json` 帶 `as1_value`＋`owner_signature`；比照 2026-08-29 #303 AmmoConverter 前例（口徑是承重資訊），上位口徑「7.62mm」也不採用，因為 Rain's 另有 `Base.762x39*`（7.62x39）。6 個在架 owner 以 steamcmd 下載查證，Translate 只有 EN 與 RU／HU／PL／ES／IT，沒有 CH／CN；3611718925/VFE Workshop API 查無（result 9）。`OWNER_CONFLICTS.md` 重生：不出貨 323→326、尚未裁決 278→275。
+
 ## [42.21.0-1.55.0] - 2026-10-19
 
 ### Added
