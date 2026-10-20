@@ -4,6 +4,29 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 11 個 MOD 新增的繁簡中文，共 2,147 項。** Stay With Me - Companion NPC（#949，1,433 項）：男女同伴走進各類建築與本體城鎮時的台詞、開車時（屍臭、引擎、天氣、酒後、無聊、健康）與步行時的事件台詞、裝水與梳洗等工作回報、閒聊／開玩笑／稱讚／調情／安慰的回應、收到古龍水／香水／美髮用品／首飾的反應，以及鍛鍊與六級訓練稱號、設定「家」的範圍、淋浴與梳洗、躺床、撬門、送禮等介面和 11 個沙盒設定（負重加成、每日友誼與戀愛上限、送禮與心情效果倍率、開始戀愛的條件等）。Knox Inventory（#953，367 項）：新的健康分頁（3D 身體、各部位傷勢與處置路徑、拖曳醫療用品處置）、汽車儀表板與車用收音機、房間名稱、模組開關、存檔保護提示與測試台說明。Roaming Survivors（#948，204 項）：倖存者 NPC 的警告、閒聊、討物資與對峙台詞，以及 11 個沙盒設定。Reactive Sound Events（#942，58 項）：聲響指示器、事件顏色、地圖上的收音機情報標記，以及優先城鎮與道路、允許俄亥俄河對岸事件兩個沙盒設定。MFS 社群修正版（#947，39 項）：反器材步槍的裝飾件彈匣、檢視武器的視角操作與新的「MFS 6 - 出廠配件與殭屍掉落」沙盒頁。另有 HDs Food Recipes 18 項（#943，肉丸義大利麵、炒馬鈴薯絲與食物保鮮設定）、colinel's Division Gadgets 14 項（#951，火砲、焚化、狙擊三種砲塔與研究配方、拆陶瓷板配方）、Hardship: Inertia 6 項（#952，後退時絆倒的設定）、Equipment UI 4 項（#944）、Survival HUD 3 項（#941），以及 Guns of Marz 1 項（#945，Glock-17 彈匣改了鍵名，沿用舊譯）。
+  > 技術要點：ch／cn 逐鍵對照 EN 直寫；Hardship: Inertia 落 own 目錄 `sources/mods/3816083168/CN`＋`sources/ch`，其餘落 `own_translations.json`；新鍵皆以有效 CN 值登記 `ch_review_state`。10 路翻譯、8 路對抗複核（Knox 三組由同一位審查者跨組核對用詞）提出 46 條修正全數採納，例如 Knox 健康分頁的狀態改用本體健康面板譯名（髒繃帶、夾板、縫合）、Pour 是倒掉而非轉移液體、Roaming Survivors 的 the dead 指行屍、MFS 沙盒說明的 hers is used 是改由 Riko 的子模組處理掉落。主代理另改 2 處：瞄準反應「Normal」提示的開頭與共用選項同譯「一般／普通」；Thoridal 彈匣譯「索利達爾」，與共用的槍名一致。lint 棘輪抓出 8 處，改掉「通過」「污」與 4 處「對話框」，餐廳的「菜單」與儀表「指針」登記豁免。15 個 wid 以 steamcmd 重抓，21,466 筆文本 record 的值 hash 與 tracker state 全數相符。
+
+### Changed
+
+- **依上游英文改值重譯 13 項。** Reactive Sound Events 5 項（#942，Knox Relay 的廣播頻率由 99.8 改為 112.4，反應範圍說明補上「須介於最小與最大聲音範圍之間」）、Stay With Me 4 項（#949，擊殺數改為標題、視窗分頁「搜刮」「選單」、選單順序說明補上「取消勾選即可隱藏」）、Better Vehicle Dynamics 2 項（#946，Java 元件改為手動安裝的說明）、MFS 社群修正版 1 項（#947，標準哈里斯兩腳架 (摺疊)），以及 Knox Inventory 快捷欄模組說明 1 項（#953，見下一條）。
+  > 技術要點：Reactive Sound Events 屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（新增 5，帶 `as1_value` 錨點）；其餘屬 own 層，連 `en` 錨點更新；皆登記 `ch_review_state`。Guns of 93（#939）的 `Base.HK94BarrelShroud` 只把「/w」改成「w/」，譯文不變、只更新錨點。
+- **重新裁決 5 個多 MOD 共用鍵（#955 等）。** `Base.M21` 多了 Totally's NATO Firearms Pack（M21 Sniper Weapon System），三方都是 M21 狙擊步槍，維持「M21狙擊步槍」；MFS 社群修正版把 Solis'dar 改拼成 Thoridal，兩個英文名都是原版 MFS 中文名「索利达尔」的拼法（兩個 MOD 自帶的繁中都寫「索利達爾」），槍名與生成機率設定維持「索利達爾」；標準哈里斯兩腳架維持現值；Knox Inventory 的新子模組 KnoxInventoryBeta 把快捷欄模組說明寫得較短，改譯成兩版共通的「包含你雙手的快捷欄位列. 使用 Clean UI 等其他快捷欄模組時, 請關閉此項.」。
+  > 技術要點：`owner_conflict_decisions.json` 更新 1 筆 signature、新增 4 筆（皆 `action: translate`），寫入前以 1,763 筆既有裁決自檢全符；`OWNER_CONFLICTS.md` 重生。
+- **修正 4 處既有譯文。** Roaming Survivors 兩則屍群情報把「the dead」誤譯成「死人」，改為「行屍」；Reactive Sound Events 一句廣播把「奔馳在路上」誤轉成「賓士在路上」；Uzi 裝飾件彈鼓的繁中誤寫成「彈匣」。
+  > 技術要點：前兩項是 own 層（`own_translations.json`），後兩項只改 `sources/ch`，簡中原本就正確。
+
+### Removed
+
+- **移除 9 項上游已刪除的原創翻譯。** Stay With Me（#949）改版前的開車屍臭台詞 9 句：上游把屍臭事件拆成依附近屍體數（4／8／16 具）的三組新台詞，新台詞已補上。
+  > 技術要點：`sources/en` 全庫與 tracker state 已無 owner；`BridgeDrive.lua` 只觸發 `EvCarSmell4／8／16`，舊池 `EvCarSmell_<Close|Near|Far>_N` 已無人讀取；`ch_review_state` 同步移除。
+
+其餘追蹤單無需另外變更翻譯：Hug the Plushie!（#950）新增的 9 筆是擁抱用的 script 物品區塊，沒有顯示文字；Reactive Sound Events 另有 5 鍵只把 `%` 改成 `%%`，已出貨譯文本來就寫 `%%`；Survival HUD（#941）刪除的 `UI_optionscreen_ShowHandSlots`、MFS 社群修正版刪除的 `Base.索利达尔`、Guns of Marz 改名前的彈匣鍵都屬 As1 衍生層，依 split 不變式保留。Dildo GTA Weapon（#954）Workshop 頁面已無法存取，依政策保留翻譯並繼續監看。
+
 ## [42.21.0-1.56.0] - 2026-10-20
 
 ### Added

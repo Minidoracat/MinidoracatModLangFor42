@@ -3052,8 +3052,8 @@
     },
     "ItemName|Base.M21": {
       "action": "translate",
-      "signature": "ffbceeb6b70c752f",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。",
+      "signature": "2d21a42075c3d7cf",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-20 #940／#955：新增 owner 3243805556/Totally's NATO Firearms Pack B42（ItemName.json 寫 'M21 Sniper Weapon System'，即 M21 狙擊步槍的正式名）；GaelGunStore 兩版的 script DisplayName 寫 'M21 Assault Rifle'，但 GaelGunStore 的 ItemName.json 與 Legacy 的 ItemName_EN.txt 都是 'M21 Sniper Rifle'，三方指同一把以 M14 為底的狙擊步槍。現行「M21狙擊步槍」對三方都成立，重新背書。",
       "ch": "M21狙擊步槍",
       "cn": "M21狙击步枪"
     },
@@ -11731,6 +11731,34 @@
       "action": "unship",
       "signature": "9cd4b84b9cc24c09",
       "reason": "2026-10-20 LangFor42 #5 玩家回報：裝 B42 Rain's Firearms & Gun Parts 時，它的 7.62x51 子彈、盒裝、箱裝顯示成「7.62x39mm 彈藥」「7.62x39mm 彈藥盒」「7.62mm彈藥 (整件)」。Base.762Bullets／762Box／762Carton 被多個可獨立啟用的 owner 用來表示不同口徑：Rain's 兩版（含 Expanded）是 7.62x51，其餘在架 owner 都是 7.62x39mm，Workshop API 查無（result 9）的 3611718925/VFE 只寫 7.62mm。口徑是承重資訊；上位口徑「7.62mm」也不誠實：Rain's 另有 Base.762x39Bullets／Box／Carton（7.62x39），只寫 7.62mm 分不出是哪一種。沒有誠實中性譯名。2026-10-20 下載 6 個在架 owner 查證，Translate 只有 EN 與 RU／HU／PL／ES／IT，沒有 CH／CN，抑制後各自顯示正確英文。"
+    },
+    "ItemName|Base.Thoridal": {
+      "action": "translate",
+      "signature": "bfdc51681804e2c8",
+      "reason": "2026-10-20 #947：MFS 社群修正版把英文從 Solis'dar 改成 'Thoridal .50 Beowulf Rifle'，Escape from Kentucky 仍寫 \"Solis'dar\"。兩方是同一物品（同為 scripts/gun/50/cat_Beowulf.txt 的 Base.Thoridal），英文只是原版 MFS 中文名「索利达尔」的兩種拼法：EFK 自帶 CH／CN 寫「索利達爾／索利达尔」，MFS 社群修正版自帶 CH／CN 寫「索利達爾 .50 Beowulf 步槍／索利达尔 .50 Beowulf 步枪」。現行「索利達爾」是兩方共同的名稱，對兩方都成立；不加 .50 Beowulf 步槍（EFK 未寫，且兩方沙盒都標 [.50 BMG]，口徑說法不一致），維持現值。",
+      "ch": "索利達爾",
+      "cn": "索利达尔"
+    },
+    "ItemName|Gunpart.Harris_Open": {
+      "action": "translate",
+      "signature": "b3d5aa61fdee6cb1",
+      "reason": "2026-10-20 #947：MFS 社群修正版把英文改成 'Standard Harris Bipod (Deployed)'，並新增同族 Gunpart.Harris_Close 'Standard Harris Bipod (Folded)'；Escape from Kentucky 仍寫 'Standard Harris Bipod'，且沒有 Harris_Close。兩方是同一個展開狀態的兩腳架零件。現行「標準哈里斯兩腳架」對兩方都成立；MFS 玩家仍能以 Harris_Close 的「(摺疊)」分辨兩種狀態，維持現值。",
+      "ch": "標準哈里斯兩腳架",
+      "cn": "标准哈里斯两脚架"
+    },
+    "Sandbox|Sandbox_ModernFirearmsSystemSandboxGun_Thoridal_Spawn": {
+      "action": "translate",
+      "signature": "2c8dc5f1c59fc501",
+      "reason": "2026-10-20 #947：MFS 社群修正版寫 'Thoridal Spawn Chance [.50 BMG]'，Escape from Kentucky 寫 \"Solis'dar Spawn Chance [.50 BMG]\"；與 ItemName|Base.Thoridal 同一物品，Solis'dar／Thoridal 都是「索利达尔」的拼法（兩方自帶 CH 都寫「索利達爾 [.50 BMG]」）。現行「索利達爾生成機率 [.50 BMG]」對兩方都成立，維持現值。",
+      "ch": "索利達爾生成機率 [.50 BMG]",
+      "cn": "索利达尔刷新几率 [.50 BMG]"
+    },
+    "IG_UI|IGUI_Knox_Module_hotbar_Info": {
+      "action": "translate",
+      "signature": "270e0a1a3254b39d",
+      "reason": "2026-10-20 #953：Knox Inventory 新增 KnoxInventoryBeta 子模組，同鍵英文較短：'The quick slots bar with your hands on it. Switch it off for Clean UI and other hotbar mods.'；主模組 KnoxInventory 另寫位置（畫面底部）、外觀（Knox 風格）與關閉後遊戲或該模組的快捷欄會回來。改譯成兩方共通的內容：快捷欄包含雙手、使用 Clean UI 等其他快捷欄模組時關閉。",
+      "ch": "包含你雙手的快捷欄位列. 使用 Clean UI 等其他快捷欄模組時, 請關閉此項.",
+      "cn": "包含你双手的快捷栏位行. 使用 Clean UI 等其他快捷栏模组时, 请关闭此项."
     }
   }
 }

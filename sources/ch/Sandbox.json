@@ -11847,7 +11847,7 @@
   "Sandbox_ReactiveSE_MinSoundRange": "聲音最小觸發範圍",
   "Sandbox_ReactiveSE_MinSoundRange_tooltip": "聲音事件生成位置與玩家之間的最小距離 (以格子為單位)",
   "Sandbox_ReactiveSE_ReactionThresholdRange": "反應門檻值範圍",
-  "Sandbox_ReactiveSE_ReactionThresholdRange_tooltip": "若聲音在此距離內觸發, 玩家可能會恐慌或驚醒;超出此範圍的聲音僅可被聽見",
+  "Sandbox_ReactiveSE_ReactionThresholdRange_tooltip": "若聲音在此距離內觸發, 玩家可能會恐慌或驚醒; 超出此範圍的聲音僅可被聽見. 必須介於聲音最小觸發範圍與聲音最大觸發範圍之間, 否則會自動調整",
   "Sandbox_ReadAndRecall": "閱讀與回憶",
   "Sandbox_ReadAndRecallKnox": "閱讀與回憶: 諾克斯版",
   "Sandbox_ReadAndRecallKnox_FloorPercent": "保底經驗百分比",
@@ -26919,5 +26919,11 @@
   "Sandbox_HardshipInertia_ZombieTug": "走開時遭拉扯",
   "Sandbox_HardshipInertia_ZombieTugStrength": "拉扯力道",
   "Sandbox_HardshipInertia_ZombieTugStrength_tooltip": "殭屍每次試圖抓住你時, 讓你減速的程度.",
-  "Sandbox_HardshipInertia_ZombieTug_tooltip": "想用走路甩開緊跟在身後的殭屍, 沒那麼容易: 殭屍每次試圖抓住你, 都會把你往後拉, 讓你短暫減速. 負重、疲勞和腿傷會讓情況更糟; 力量與體格有助於你掙脫. 永遠不會讓你完全停下."
+  "Sandbox_HardshipInertia_ZombieTug_tooltip": "想用走路甩開緊跟在身後的殭屍, 沒那麼容易: 殭屍每次試圖抓住你, 都會把你往後拉, 讓你短暫減速. 負重、疲勞和腿傷會讓情況更糟; 力量與體格有助於你掙脫. 永遠不會讓你完全停下.",
+  "Sandbox_HardshipInertia_TripChance": "絆倒機率",
+  "Sandbox_HardshipInertia_TripChance_tooltip": "各種絆倒發生的機率. 1 = 預設 (第一級恐慌時, 屍體 3%%, 爬行殭屍 8%%).",
+  "Sandbox_HardshipInertia_TripMinDistance": "絆倒: 最短距離",
+  "Sandbox_HardshipInertia_TripMinDistance_tooltip": "必須一口氣後退多遠 (格) 才可能絆倒. 快速點按按鍵永遠不會讓你絆倒.",
+  "Sandbox_HardshipInertia_TripPanicEffect": "絆倒機率: 恐慌影響",
+  "Sandbox_HardshipInertia_TripPanicEffect_tooltip": "第一級之後, 每多一級恐慌或害怕會讓絆倒機率提高多少. 1 = 預設 (最高等級時最多 4 倍), 0 = 恐慌不影響絆倒機率."
 }
