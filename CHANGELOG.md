@@ -4,7 +4,7 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
-## [Unreleased]
+## [42.21.0-1.57.0] - 2026-10-20
 
 ### Added
 
@@ -16,7 +16,7 @@
 - **依上游英文改值重譯 13 項。** Reactive Sound Events 5 項（#942，Knox Relay 的廣播頻率由 99.8 改為 112.4，反應範圍說明補上「須介於最小與最大聲音範圍之間」）、Stay With Me 4 項（#949，擊殺數改為標題、視窗分頁「搜刮」「選單」、選單順序說明補上「取消勾選即可隱藏」）、Better Vehicle Dynamics 2 項（#946，Java 元件改為手動安裝的說明）、MFS 社群修正版 1 項（#947，標準哈里斯兩腳架 (摺疊)），以及 Knox Inventory 快捷欄模組說明 1 項（#953，見下一條）。
   > 技術要點：Reactive Sound Events 屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（新增 5，帶 `as1_value` 錨點）；其餘屬 own 層，連 `en` 錨點更新；皆登記 `ch_review_state`。Guns of 93（#939）的 `Base.HK94BarrelShroud` 只把「/w」改成「w/」，譯文不變、只更新錨點。
 - **重新裁決 5 個多 MOD 共用鍵（#955 等）。** `Base.M21` 多了 Totally's NATO Firearms Pack（M21 Sniper Weapon System），三方都是 M21 狙擊步槍，維持「M21狙擊步槍」；MFS 社群修正版把 Solis'dar 改拼成 Thoridal，兩個英文名都是原版 MFS 中文名「索利达尔」的拼法（兩個 MOD 自帶的繁中都寫「索利達爾」），槍名與生成機率設定維持「索利達爾」；標準哈里斯兩腳架維持現值；Knox Inventory 的新子模組 KnoxInventoryBeta 把快捷欄模組說明寫得較短，改譯成兩版共通的「包含你雙手的快捷欄位列. 使用 Clean UI 等其他快捷欄模組時, 請關閉此項.」。
-  > 技術要點：`owner_conflict_decisions.json` 更新 1 筆 signature、新增 4 筆（皆 `action: translate`），寫入前以 1,763 筆既有裁決自檢全符；`OWNER_CONFLICTS.md` 重生。
+  > 技術要點：`owner_conflict_decisions.json` 更新 1 筆 signature、新增 4 筆（皆 `action: translate`），寫入前以 1,763 筆既有裁決自檢全符；`OWNER_CONFLICTS.md` 重生，尚未裁決的衝突 279→275。
 - **修正 4 處既有譯文。** Roaming Survivors 兩則屍群情報把「the dead」誤譯成「死人」，改為「行屍」；Reactive Sound Events 一句廣播把「奔馳在路上」誤轉成「賓士在路上」；Uzi 裝飾件彈鼓的繁中誤寫成「彈匣」。
   > 技術要點：前兩項是 own 層（`own_translations.json`），後兩項只改 `sources/ch`，簡中原本就正確。
 
