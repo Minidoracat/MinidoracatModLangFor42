@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1428 個 Workshop 模組**（2048 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
+共支援 **1431 個 Workshop 模組**（2051 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1431,9 +1431,12 @@
 | [Crosshair Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=3814251221) | 準心大改 | 每把槍都有仿照其實際瞄具的準心，外觀、大小與顏色皆可調整。 | `CompleteCrosshairOverhaul` | 111 | — | — |
 | [Surplus & Thrift: The 1993 Wardrobe](https://steamcommunity.com/sharedfiles/filedetails/?id=3814472954) | Surplus & Thrift：1993 衣櫥 | 新增 1993 年肯塔基可見的軍品店與二手衣服飾，多數衣物可用不同方式穿著。 | `DesertCargo` | 252 | — | — |
 | [colinel's Division Gadgets](https://steamcommunity.com/sharedfiles/filedetails/?id=3814484099) | colinel 的全境封鎖裝備 | 新增《全境封鎖 2》的 SHD 特工特質與掃描脈衝、無人機、追蹤地雷等科技裝備。 | `DivisionGadgets` | 47 | — | — |
+| [Hardship: Brawling〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3814487652) | Hardship：肉搏 | Hardship 系列的徒手格鬥：空手瞄準就能舉拳出拳，新增徒手技能、好勇鬥狠特質與拳擊手職業，出拳也會讓指節痠痛、刮傷。另有格擋、前踢、奔跑衝撞、踹門與持槍砸擊；玩家互毆多半只會打昏，刀殺動作也變快。 | `HardshipBrawling` | 101 | ⚠️ ≥1 | — |
 | [Lost Province [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3815128534) | Lost Province 失落省份 | 完整重現加拿大愛德華王子島的大型獨立地圖，含所有城鎮與鄉村農地。 | `Lost Province` | ? | — | — |
 | [Too Many Emotes](https://steamcommunity.com/sharedfiles/filedetails/?id=3815468401) | Too Many Emotes 超多表情動作 | 在表情輪盤新增 300 多種表情動作，可瀏覽與收藏，多人模式可同步動作。 | `TooManyEmotes` | 359 | — | — |
 | [HydeCo. Orchard! 42.21.0](https://steamcommunity.com/sharedfiles/filedetails/?id=3815617457) | HydeCo. 果園！ | 新增果樹、漿果灌木與攀牆葡萄藤等 15 種植物，會隨四季變化，缺水可能生病枯死。 | `HydeCoOrchard` | 387 | — | — |
+| [FTZ Carts & Trolleys [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3815775971) | FTZ 各式推車 | 新增購物車、平板推車、洗衣推車、園藝推車、清潔推車、手推車與獨輪車七種推車，雙手推著走、像背包一樣裝東西，車內物品不計重量。會出現在超市、倉庫、洗衣房、工地等相符的地點，常留有少量合適的物品；容量與生成率都能調整。 | `FTZCartsTrolleys` | 30 | — | — |
+| [Hardship: Inertia〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3816083168) | Hardship：慣性 | Hardship 系列的身體動作：可以趴下、四肢著地或仰躺移動，也能靠牆坐下；起步、停步與轉向帶有慣性，撞牆會彈開，被身後殭屍抓住會被往後拉。另能趴著或蹲低射擊，並加入手動換彈匣與拉動槍機。 | `HardshipInertia` | 67 | — | — |
 | [My So-Called Fashion](https://steamcommunity.com/sharedfiles/filedetails/?id=3816335149) | My So-Called Fashion 我的時尚 | 新增將上衣綁腰、背包鬆背、眼鏡戴頭上、耳罩掛脖子等穿搭方式與原創服裝。 | `P4MySoCalledFashion` | 24 | — | — |
 | [Dog Tired Armory〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3816701056) | Dog Tired 軍械庫 | 沿牆組裝槍架、掛板、儲物櫃與櫃檯，打造連續的軍械庫；收納的槍枝以 3D 模型陳列，彈藥盒擺在架上。構件分木製、金屬、管架、軍用、收藏五種等級，都能上掛鎖。 | `DogTiredArmory` | 245 | — | — |
 | [[B42] Knox Inventory - Tarkov-style UI Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=3816775774) | Knox Inventory - 塔科夫風格介面大改 | 以《逃離塔科夫》風格重做介面，物品依實際尺寸放入格狀物品欄，並顯示 3D 角色。 | `KnoxInventory` | ? | — | — |

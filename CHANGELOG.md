@@ -4,6 +4,13 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **新收錄 Hardship: Brawling、Hardship: Inertia 與 FTZ Carts & Trolleys（#936–#938 翻譯申請）：共 198 項繁簡中文。** Hardship: Brawling（#937）101 項：徒手技能、「好勇鬥狠」特質與拳擊手職業、拳擊與裸拳纏手帶及製作配方、擊昏訊息、模組選項裡的格擋／用槍格擋／奔跑衝撞按鍵，以及格擋、前踢、奔跑衝撞、踹門、持槍砸擊、刀殺速度與玩家互毆等沙盒設定。Hardship: Inertia（#938）67 項：右鍵選單的「姿勢」（趴下、四肢著地、仰躺、起身、靠牆坐下）、模組選項的姿勢按鍵、安裝 Casualties Undead 時無法採取某姿勢的原因，以及移動慣性、地面姿勢、跌倒驚慌、手動上膛與換彈匣、攀爬高圍欄、殭屍拉扯等沙盒設定。FTZ Carts & Trolleys（#936）30 項：購物車、平板推車、洗衣推車、園藝推車、清潔推車、手推車與獨輪車，以及各推車容量與生成設定。
+  > 技術要點：使用者 2026-10-20 核准 own lane，三個 MOD 作者都沒附中文，CH／CN 皆對照 EN 人工直寫，落 `sources/mods/<wid>/`（`origin: own`）與 `sources/ch`；加進名冊、watchlist 與 tracker 基準（`backfill-en` 首建），`mod_names_zh` 補中文名。Hardship: Brawling 上游 102 鍵中的 `UI_trait_BarFighter` 是本體鍵（作者把本體特質 Brawler 改名 Bruiser），依收錄鐵律不收，中文仍顯示本體的「打手」（簡中「斗士」）；MOD 自己的新特質 Brawler 因此譯「好勇鬥狠」，避免兩個特質在中文同名。其餘零 vanilla 碰撞、與 As1 鍵集無交集。3 路對抗複核提出 21 條修正全數採納（部分改用較短的措辭），例如奔跑衝撞說明改成「提高撞倒對方、降低自己絆倒的機率」、推踢在任一腿部或腳部受傷時就不能用、Wound Expansion 指的是神經損傷的失手掉落、Inertia 的地面速度／耐力／潛行設定只套用於趴下、四肢著地與仰躺，工地的袋裝混凝土改用本體譯名；lint 棘輪抓出 4 處「點擊／查看」，改為「按滑鼠左鍵／看看」。
+
 ## [42.21.0-1.55.1] - 2026-10-20
 
 ### Fixed
