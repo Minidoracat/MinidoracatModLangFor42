@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1431 個 Workshop 模組**（2051 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
+共支援 **1430 個 Workshop 模組**（2051 個 mod ID）；另 **13 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1181,7 +1181,6 @@
 | [Pinoy Survival Foods [B42+MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3777402784) | — | — | `PinoySurvivalFoods` | 74 | — | — |
 | [Brita Weapon and Armor B42 Unified Compatibility Port](https://steamcommunity.com/sharedfiles/filedetails/?id=3777433827) | — | — | `BritaCombinedB42` | 296 | ⚠️ ≥9 | — |
 | [Zone Tools](https://steamcommunity.com/sharedfiles/filedetails/?id=3777485502) | 區域工具 | 圈選區域批次作業（如清理灌木）並將物品運往卸貨點，可設定各工具的最大區域範圍。 | `ZoneTools` | 96 | — | — |
-| [Dildo GTA Weapon [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3777681298) | — | — | `DildoFunnyWeapon` | 105 | — | — |
 | [[B42.20] Bandits Fix Plus - Loot, Radar, Companions and Stealth](https://steamcommunity.com/sharedfiles/filedetails/?id=3777752751) | — | — | `BanditsFixPlus` | 50 | — | — |
 | [Nick's Book Tracker](https://steamcommunity.com/sharedfiles/filedetails/?id=3777800131) | — | — | `NicksBookTracker` | 40 | — | — |
 | [Loot Run Assistant](https://steamcommunity.com/sharedfiles/filedetails/?id=3777814834) | 搜刮助手 | 提供搜刮標記模式，可與容器清理模組（Container Cleanup）連動一鍵啟停，並可設定是否允許向安全屋或陣營共享標記。 | `LootRunAssistant` | 48 | — | — |
@@ -1439,14 +1438,14 @@
 | [Hardship: Inertia〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3816083168) | Hardship：慣性 | Hardship 系列的身體動作：可以趴下、四肢著地或仰躺移動，也能靠牆坐下；起步、停步與轉向帶有慣性，撞牆會彈開，被身後殭屍抓住會被往後拉。另能趴著或蹲低射擊，並加入手動換彈匣與拉動槍機。 | `HardshipInertia` | 67 | — | — |
 | [My So-Called Fashion](https://steamcommunity.com/sharedfiles/filedetails/?id=3816335149) | My So-Called Fashion 我的時尚 | 新增將上衣綁腰、背包鬆背、眼鏡戴頭上、耳罩掛脖子等穿搭方式與原創服裝。 | `P4MySoCalledFashion` | 24 | — | — |
 | [Dog Tired Armory〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3816701056) | Dog Tired 軍械庫 | 沿牆組裝槍架、掛板、儲物櫃與櫃檯，打造連續的軍械庫；收納的槍枝以 3D 模型陳列，彈藥盒擺在架上。構件分木製、金屬、管架、軍用、收藏五種等級，都能上掛鎖。 | `DogTiredArmory` | 245 | — | — |
-| [[B42] Knox Inventory - Tarkov-style UI Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=3816775774) | Knox Inventory - 塔科夫風格介面大改 | 以《逃離塔科夫》風格重做介面，物品依實際尺寸放入格狀物品欄，並顯示 3D 角色。 | `KnoxInventory` | ? | — | — |
+| [[B42] Knox Inventory - Tarkov-style UI Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=3816775774) | Knox Inventory - 塔科夫風格介面大改 | 以《逃離塔科夫》風格重做介面，物品依實際尺寸放入格狀物品欄，並顯示 3D 角色。 | `KnoxInventory`, `KnoxInventoryBeta` | ? | — | — |
 | [Extreme Weather](https://steamcommunity.com/sharedfiles/filedetails/?id=3816847772) | 極端天氣 | 新增龍捲風、冰雹等致命風暴，會摧毀建築、拋飛車輛與殭屍，來襲前有緊急廣播預警。 | `ExtremeWeather` | ? | — | — |
 | [Knox Wildlife [B42.21 Beta]](https://steamcommunity.com/sharedfiles/filedetails/?id=3818096743) | Knox 野生動物 | 新增黑熊、棕熊、郊狼、麋鹿、山貓與野豬六種野生動物，含屠宰與毛皮加工配方。 | `KnoxWildlife` | 104 | — | — |
 | ['67 Chevrolet Impala](https://steamcommunity.com/sharedfiles/filedetails/?id=3820938264) | '67 Chevrolet Impala | 新增 1967 年 Chevrolet Impala 車輛，含《超自然檔案》黑色特別版與多款可替換零件。 | `67chevyImpala` | ? | — | — |
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
-## 已下架模組（12 個，翻譯保留）
+## 已下架模組（13 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
@@ -1463,4 +1462,5 @@
 | [Swim Skill](https://steamcommunity.com/sharedfiles/filedetails/?id=3654513156) | — | — | `swim_skill` | 13 | — | — | 2026-10-17 |
 | [PH's Self Care](https://steamcommunity.com/sharedfiles/filedetails/?id=3684225110) | — | — | `PHSelfCare` | 31 | — | — | 2026-10-01 |
 | [[PZCh] Growing Up - Kid mod challenge](https://steamcommunity.com/sharedfiles/filedetails/?id=3701972216) | — | — | `GrowingUp` | 16 | — | — | 2026-10-01 |
+| [Dildo GTA Weapon [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3777681298) | — | — | `DildoFunnyWeapon` | 105 | — | — | 2026-10-20 |
 | [Peachey Distillation](https://steamcommunity.com/sharedfiles/filedetails/?id=3784741776) | Peachey 蒸餾 | 加入發酵醪、蒸餾器與陳釀流程，可釀製苦艾烈酒、陳釀葡萄酒等酒品，並提供專屬蒸餾製作分類。 | `peacheysdistillation` | 122 | — | — | 2026-09-10 |
