@@ -4733,9 +4733,9 @@
     "ItemName|Base.357Clip": {
       "action": "translate",
       "signature": "f3c206ef2d48a32e",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 3715977706/BetterVanillaFirearms42 寫 L-F Magazine：BVF 把 Base.DE_Pistol 改名 L-F Pistol，本鍵即該槍彈匣；現行「DE手槍彈匣」與已出貨的 Base.DE_Pistol=「DE手槍」同指此槍，維持。",
-      "ch": "DE手槍彈匣",
-      "cn": "DE手枪弹匣"
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 3715977706/BetterVanillaFirearms42 寫 L-F Magazine：BVF 把 Base.DE_Pistol 改名 L-F Pistol，本鍵即該槍彈匣；現行「DE手槍彈匣」與已出貨的 Base.DE_Pistol=「DE手槍」同指此槍，維持。 ／2026-10-21 #965 重新裁決：三方都是 .357 手槍彈匣——GaelGunStore '.357 Magnum Magazine (10 Rounds)'、Legacy '.357 Magazine 10 round'、Better Vanilla Firearms 'L-F Magazine'（AmmoType bullets_357，配 Base.DE_Pistol「L-F Pistol」，9 發）。舊值「DE手槍彈匣」沿用 BVF 內部舊 ID，BVF 英文已改名 L-F、GaelGunStore 的這個彈匣也通用於多把 .357 自動手槍；改為三方都成立的「.357手槍彈匣」，同批把 Base.DE_Pistol 改成「L-F手槍」。",
+      "ch": ".357手槍彈匣",
+      "cn": ".357手枪弹匣"
     },
     "ItemName|Base.357Drum45": {
       "action": "translate",
@@ -11672,10 +11672,10 @@
     },
     "UI|UI_options_claimableoutposts_attackMoodles_tooltip": {
       "action": "translate",
-      "signature": "34e9c234f6b8afd7",
-      "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決：Claimable 有屍潮與強盜兩種攻擊圖示, Dynamic 只有屍潮攻擊圖示. 現值提到強盜對 Dynamic 不成立; 不列攻擊種類的寫法對兩方都成立.",
-      "ch": "顯示或隱藏前哨站遭受攻擊時的狀態圖示. 僅在客戶端生效.",
-      "cn": "显示或隐藏前哨站遭受攻击时的状态图标. 仅客户端生效."
+      "signature": "ec1db530d5619ed4",
+      "reason": "2026-10-21 #979 重新裁決：Dynamic Outposts 加入強盜襲擊，英文由 'Show or hide the outpost horde attack moodles' 改為 'Show or hide Horde and Bandit attack moodles'；Claimable 原本就寫 horde and bandit。兩方都有屍潮與強盜兩種攻擊圖示，改譯成寫出兩種攻擊的「前哨站遭受屍潮與強盜攻擊時的狀態圖示」；不寫 Claimable 專屬的「已佔領」。（2026-10-19 舊裁決：當時 Dynamic 只有屍潮攻擊圖示，故不列攻擊種類。）",
+      "ch": "顯示或隱藏前哨站遭受屍潮與強盜攻擊時的狀態圖示. 僅在客戶端生效.",
+      "cn": "显示或隐藏前哨站遭受尸潮和强盗攻击时的状态图标. 仅客户端生效."
     },
     "UI|UI_options_claimableoutposts_mapIcons_tooltip": {
       "action": "translate",
@@ -11759,6 +11759,30 @@
       "reason": "2026-10-20 #953：Knox Inventory 新增 KnoxInventoryBeta 子模組，同鍵英文較短：'The quick slots bar with your hands on it. Switch it off for Clean UI and other hotbar mods.'；主模組 KnoxInventory 另寫位置（畫面底部）、外觀（Knox 風格）與關閉後遊戲或該模組的快捷欄會回來。改譯成兩方共通的內容：快捷欄包含雙手、使用 Clean UI 等其他快捷欄模組時關閉。",
       "ch": "包含你雙手的快捷欄位列. 使用 Clean UI 等其他快捷欄模組時, 請關閉此項.",
       "cn": "包含你双手的快捷栏位行. 使用 Clean UI 等其他快捷栏模组时, 请关闭此项."
+    },
+    "ItemName|Base.CampCarbine": {
+      "action": "unship",
+      "signature": "49591cfd8bd271c8",
+      "reason": "2026-10-21 #965 裁決不出貨：同一 key 是兩把不同的槍。VFE（3611718925、3761077099）是 MC-45 Carbine，.45 ACP、7 發（Base.45Clip）；Better Vanilla Firearms（3715977706）是 LN-9 Trapper Carbine，9mm、15 發（Base.SN506_Clip）。型號與口徑都不同，「卡賓槍」上位詞在 BVF 會和它其他卡賓槍（LN-45、WC-66、WC-92、R-M-6520、R-M-727）分不出來，比照 Base.Glock23 不出貨。抑制後：兩方都有可載入的 ItemName.json，繁中玩家看到各自的英文；BVF 自帶 Translate/CN（「LN-9 狩猎卡宾枪」），簡中玩家裝 BVF 時看到 MOD 自帶簡中，裝 VFE 時看到英文（VFE 只有 EN／ES／IT／RU）。"
+    },
+    "ItemName|Base.JS5_Clip": {
+      "action": "unship",
+      "signature": "678b56ada7063932",
+      "reason": "2026-10-21 #965 裁決不出貨：同一 key 是兩把不同衝鋒槍的彈匣。Better Vanilla Firearms（3715977706）是 KH-5 Magazine（配 Base.JS5_SMG「KH-5 Submachinegun」）；Marz Vanilla Guns（3773834525）是 JS5 20-Round Magazine（配 Base.JS5_smg「JS5 SMG」），兩者都是 9mm。槍型名不同，「9mm 衝鋒槍彈匣」在 Marz 會和 MP5 的 9mm 彈匣（9mmClip_25／30／40／100）分不出來，比照 Base.Glock23 不出貨。抑制後：兩方都有可載入的 ItemName.json，繁中玩家看到各自的英文；BVF 自帶 Translate/CN（「KH-5 弹匣」），簡中玩家裝 BVF 時看到 MOD 自帶簡中，裝 Marz 時看到英文（Marz 只有 EN）。"
+    },
+    "Recipes|AssembleWakizashi": {
+      "action": "translate",
+      "signature": "5391c630da721e78",
+      "reason": "2026-10-21 #971 裁決維持現值：Nihonto（3723127305）寫 'Assemble Wakizashi'，Rain's Axes & Blades（3774213378）寫 'Assemble Wakizashi (A)'。兩方都是組裝脇差的配方；(A) 是 Rain's 區分自家 A、B 兩款脇差的標記，Rain's 另一個配方 AssembleWakizashiB 仍顯示「組裝脅差 (B)」，不寫 (A) 也分得出來；寫 (A) 則對 Nihonto 不成立。",
+      "ch": "組裝脅差",
+      "cn": "组装胁差"
+    },
+    "IG_UI|IGUI_Knox_Choice_loot_scope_Info": {
+      "action": "translate",
+      "signature": "4436ab4388bb848e",
+      "reason": "2026-10-21 #978 裁決：Knox Inventory 1.0 BETA（KnoxInventoryBeta）在「自動」一項多寫 'and with OldPoint's overhead camera'；Lua 只有 Beta 支援 OldPoint（KnoxCompat.lua），主模組 KnoxInventory 沒有。照 2026-10-11 使用者裁定採「共通內容＋具名專屬句」：保留兩方共通的說明，句末加「Knox Inventory 1.0 BETA: 使用 OldPoint 的俯視鏡頭時也列出周圍全部.」。",
+      "ch": "「周圍」欄會列出哪些容器. 「只限開啟的」: 你在世界中點選開啟或用 Viewpoint 的按鍵開啟的那個容器, 以及你旁邊的地板. 「自動」: 使用 Viewpoint 的鏡頭時同前者, 使用一般鏡頭時列出周圍全部. 在車內時一律全部顯示. Knox Inventory 1.0 BETA: 使用 OldPoint 的俯視鏡頭時也列出周圍全部.",
+      "cn": "“周围”栏会列出哪些容器. “仅限打开的”: 你在世界中点击打开或用 Viewpoint 的按键打开的那个容器, 以及你旁边的地板. “自动”: 使用 Viewpoint 的镜头时同前者, 使用普通镜头时列出周围全部. 在车内时总是全部显示. Knox Inventory 1.0 BETA: 使用 OldPoint 的俯视镜头时也列出周围全部."
     }
   }
 }

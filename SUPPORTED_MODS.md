@@ -396,7 +396,7 @@
 | [Vehicle Military Zones](https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337) | 軍事區域車輛 | 在軍事區域生成軍用車輛，可調整生成率、鑰匙與損壞機率。 | `VMZNEW` | 19 | — | — |
 | [[B42] Useful Barrels](https://steamcommunity.com/sharedfiles/filedetails/?id=3436537035) | 有用的汽油桶 | 讓汽油桶可儲存燃料、酒類、飲料與染料等多種液體，可沙盒調整。 | `UsefulBarrels`, `UsefulBarrelsMP` | 80 | — | — |
 | [[B41/B42.18] Injectors [Distribution Update]](https://steamcommunity.com/sharedfiles/filedetails/?id=3437429771) | 注射針劑 | 新增腎上腺素、嗎啡等多種注射針劑，提供各類增益效果。 | `Injectors` | 26 | — | — |
-| [CleanUI [B42.12]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3437629766) | 簡潔介面 | 以更精簡快速的版面取代原版物品欄、戰利品與右鍵選單介面。 | `CleanUI` | 51 | — | — |
+| [CleanUI [B42.12]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3437629766) | 簡潔介面 | 以更精簡快速的版面取代原版物品欄、戰利品與右鍵選單介面。 | `CleanUI` | 55 | — | — |
 | [Nepenthe's High Beams](https://steamcommunity.com/sharedfiles/filedetails/?id=3438126404) | Nepenthe 的遠光燈 | 為車輛新增遠光燈控制，支援快捷鍵、徑向選單與常亮模式。 | `NepHighBeams` | 21 | — | — |
 | [HydeCo. Unlimited Cars 42.16.3](https://steamcommunity.com/sharedfiles/filedetails/?id=3438759949) | HydeCo. 無限車輛 | 調整車輛生成機制，可自訂燒毀、鑰匙、零件損壞機率與拖車生成。 | `hydecounlimitedcars` | 59 | — | — |
 | [Military Ponchos: RELOADED](https://steamcommunity.com/sharedfiles/filedetails/?id=3439247001) | 軍用雨披：重製版 | 新增多國迷彩軍用雨披，兼具雨具與偽裝用途。 | `MilitaryPonchosRELOADED` | ? | — | — |
@@ -1430,7 +1430,7 @@
 | [Crosshair Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=3814251221) | 準心大改 | 每把槍都有仿照其實際瞄具的準心，外觀、大小與顏色皆可調整。 | `CompleteCrosshairOverhaul` | 111 | — | — |
 | [Surplus & Thrift: The 1993 Wardrobe](https://steamcommunity.com/sharedfiles/filedetails/?id=3814472954) | Surplus & Thrift：1993 衣櫥 | 新增 1993 年肯塔基可見的軍品店與二手衣服飾，多數衣物可用不同方式穿著。 | `DesertCargo` | 252 | — | — |
 | [colinel's Division Gadgets](https://steamcommunity.com/sharedfiles/filedetails/?id=3814484099) | colinel 的全境封鎖裝備 | 新增《全境封鎖 2》的 SHD 特工特質與掃描脈衝、無人機、追蹤地雷等科技裝備。 | `DivisionGadgets` | 47 | — | — |
-| [Hardship: Brawling〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3814487652) | Hardship：肉搏 | Hardship 系列的徒手格鬥：空手瞄準就能舉拳出拳，新增徒手技能、好勇鬥狠特質與拳擊手職業，出拳也會讓指節痠痛、刮傷。另有格擋、前踢、奔跑衝撞、踹門與持槍砸擊；玩家互毆多半只會打昏，刀殺動作也變快。 | `HardshipBrawling` | 101 | ⚠️ ≥1 | — |
+| [Hardship: Brawling〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3814487652) | Hardship：肉搏 | Hardship 系列的徒手格鬥：空手瞄準就能舉拳出拳，新增徒手技能、好勇鬥狠特質與拳擊手職業，出拳也會讓指節痠痛、刮傷。另有格擋、前踢、奔跑衝撞、踹門與持槍砸擊；玩家互毆多半只會打昏，刀殺動作也變快。 | `HardshipBrawling` | 103 | ⚠️ ≥1 | — |
 | [Lost Province [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3815128534) | Lost Province 失落省份 | 完整重現加拿大愛德華王子島的大型獨立地圖，含所有城鎮與鄉村農地。 | `Lost Province` | ? | — | — |
 | [Too Many Emotes](https://steamcommunity.com/sharedfiles/filedetails/?id=3815468401) | Too Many Emotes 超多表情動作 | 在表情輪盤新增 300 多種表情動作，可瀏覽與收藏，多人模式可同步動作。 | `TooManyEmotes` | 359 | — | — |
 | [HydeCo. Orchard! 42.21.0](https://steamcommunity.com/sharedfiles/filedetails/?id=3815617457) | HydeCo. 果園！ | 新增果樹、漿果灌木與攀牆葡萄藤等 15 種植物，會隨四季變化，缺水可能生病枯死。 | `HydeCoOrchard` | 387 | — | — |

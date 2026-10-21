@@ -1724,6 +1724,16 @@
    "as1_value": "7.62mm弹药 (整件)",
    "owner_signature": "9cd4b84b9cc24c09",
    "reason": "2026-10-20 LangFor42 #5 玩家回報：裝 B42 Rain's Firearms & Gun Parts 時，它的 7.62x51 子彈、盒裝、箱裝顯示成「7.62x39mm 彈藥」「7.62x39mm 彈藥盒」「7.62mm彈藥 (整件)」。Base.762Bullets／762Box／762Carton 被多個可獨立啟用的 owner 用來表示不同口徑：Rain's 兩版（含 Expanded）是 7.62x51，其餘在架 owner 都是 7.62x39mm，Workshop API 查無（result 9）的 3611718925/VFE 只寫 7.62mm。口徑是承重資訊；上位口徑「7.62mm」也不誠實：Rain's 另有 Base.762x39Bullets／Box／Carton（7.62x39），只寫 7.62mm 分不出是哪一種。沒有誠實中性譯名。2026-10-20 下載 6 個在架 owner 查證，Translate 只有 EN 與 RU／HU／PL／ES／IT，沒有 CH／CN，抑制後各自顯示正確英文。"
+  },
+  "ItemName.json|Base.CampCarbine": {
+   "as1_value": "MC-45 卡宾枪",
+   "owner_signature": "49591cfd8bd271c8",
+   "reason": "2026-10-21 #965 裁決不出貨：同一 key 是兩把不同的槍。VFE（3611718925、3761077099）是 MC-45 Carbine，.45 ACP、7 發（Base.45Clip）；Better Vanilla Firearms（3715977706）是 LN-9 Trapper Carbine，9mm、15 發（Base.SN506_Clip）。型號與口徑都不同，「卡賓槍」上位詞在 BVF 會和它其他卡賓槍（LN-45、WC-66、WC-92、R-M-6520、R-M-727）分不出來，比照 Base.Glock23 不出貨。抑制後：兩方都有可載入的 ItemName.json，繁中玩家看到各自的英文；BVF 自帶 Translate/CN（「LN-9 狩猎卡宾枪」），簡中玩家裝 BVF 時看到 MOD 自帶簡中，裝 VFE 時看到英文（VFE 只有 EN／ES／IT／RU）。"
+  },
+  "ItemName.json|Base.JS5_Clip": {
+   "as1_value": "JS5 20发弹匣",
+   "owner_signature": "678b56ada7063932",
+   "reason": "2026-10-21 #965 裁決不出貨：同一 key 是兩把不同衝鋒槍的彈匣。Better Vanilla Firearms（3715977706）是 KH-5 Magazine（配 Base.JS5_SMG「KH-5 Submachinegun」）；Marz Vanilla Guns（3773834525）是 JS5 20-Round Magazine（配 Base.JS5_smg「JS5 SMG」），兩者都是 9mm。槍型名不同，「9mm 衝鋒槍彈匣」在 Marz 會和 MP5 的 9mm 彈匣（9mmClip_25／30／40／100）分不出來，比照 Base.Glock23 不出貨。抑制後：兩方都有可載入的 ItemName.json，繁中玩家看到各自的英文；BVF 自帶 Translate/CN（「KH-5 弹匣」），簡中玩家裝 BVF 時看到 MOD 自帶簡中，裝 Marz 時看到英文（Marz 只有 EN）。"
   }
  }
 }

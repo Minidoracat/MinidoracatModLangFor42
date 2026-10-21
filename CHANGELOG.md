@@ -4,6 +4,31 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **補齊 22 個 MOD 新增的繁簡中文，共 674 項。** Live to Fight Another Day 留得青山在（#976，168 項）：3.0 版的「第二章: 外面的世界」，包括世界中的各種場景（路障、檢查哨、撤離點、燃燒的房屋、萬人塚等）、遠處傳來的聲響、紙條、商人與前哨站，以及測試版「封鎖區士兵」職業的設定。互動小遊戲（#966，133 項）：Balatroid 撲克牌遊戲的盲注、底注、小丑牌、優惠券、消耗牌等介面。Moodle Effects Explained（#970，85 項）：裝了 DTEM 或 Expanded Moodles 時附加的數值說明，以及 DTEM 自訂狀態（過敏、嗜血、咖啡因、用藥過量等）。P4 My So-Called Toy（#962，81 項）：「四季物語」20 色彩色筆（用日本傳統色名）、新一卷的扭蛋與扭蛋機、地圖的傳統符號。倖存者簡報（#974，29 項）：安布雷拉外觀與筆記功能。另有 Rain's Axes & Blades 25 項（#971，武裝劍、戰斧、巨斧、晨星錘與鍛造配方）、ApocalipseBR Regioes 21 項（#964）、Airdrop 20 項（#967）、that DAMN Library 19 項（#957，白色標誌牌）、槍匠：1993 軍火庫 17 項（#975，射擊模式與保險）、KR FriOS Redux 16 項（#960，噴漆顏色）、Maskarad's Summer Car 14 項（#972，ECU 診斷）、Better Vanilla Firearms 12 項（#965）、Tripping Zombies: Reborn 10 項（#969）、Dynamic Outposts 6 項（#973）、簡潔介面 4 項（#958），The Mission 與 Trample Steam 各 3 項，車輛維修大修、簡潔快捷欄與 Hardship：肉搏各 2 項，敲碎大石與 Knox Inventory 各 1 項。
+  > 技術要點：ch／cn 逐鍵對照 EN 直寫。簡潔介面與 Hardship：肉搏落 own 目錄（`sources/mods/<wid>/CN`＋`sources/ch`），其餘 668 鍵落 `own_translations.json`；新鍵皆以有效 CN 值登記 `ch_review_state`。7 路翻譯、7 路對抗複核共提出 52 條，本批譯文採納 22 條，例如 Live to Fight 前哨站 empty 是物資清空、flare 照本體譯「訊號彈」，扭蛋機台不是扭蛋，Balatroid 的 Current 盲注狀態譯「目前」。不採納 3 條：Gunsmith 的 JSP、Magnum 沿用同 MOD 既有的「被甲軟尖彈」「馬格南」；ApocalipseBR 的 `roll < 50` 寫成「小於」不是標記問題。主代理裁定 Moodle Effects Explained 的 `1/30 per game min` 是「每遊戲分鐘 1/30 機率」，不是每 30 分鐘一次。lint 棘輪抓出同 MOD 的特質名用了簡中官方譯名換字形（精神抖擻、昏昏欲睡、輾轉難眠、食慾旺盛），改為本體繁中「有活力」「貪睡」「失眠」「食量大」，「食量較小」也改為本體的「食量小」；「安全局」登記 lint 豁免（不是「全局」）。23 個 wid 以 steamcmd 重抓，18,071 筆文本 record 的值 hash 與 tracker state 全數相符。
+
+### Changed
+
+- **依上游英文改值重譯 19 項。** Live to Fight Another Day 3 項（#976，首次救援在各遊戲模式的機率、每次救援降低的機率範例）、ApocalipseBR Regioes 4 項（#964，除錯日誌的記錄內容、舊版全域 PvP 強制已被各區域的 forcedPvP 屬性取代）、倖存者簡報 3 項（#974，外觀增為 17 種等）、Hardship：肉搏 3 項（#977，格擋鈍器與斧頭也可能骨裂、刀刃不會；衝撞要按住一下才算）、互動小遊戲 2 項（#966，休閒撞球規則改為打進自己的球才能繼續擊球）、Airdrop 2 項（#967，指令需要多人模式管理員或單人偵錯模式、已註冊物品含模組物品）、Tripping Zombies 2 項（#969，布娃娃效果涵蓋絆倒、跌下樓梯與被擊倒）。
+  > 技術要點：ApocalipseBR 的除錯日誌 2 項與 Airdrop 指令 1 項屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（帶 `as1_value` 錨點）；Hardship：肉搏 3 項改 own 目錄；其餘屬 own 層，連 `en` 錨點更新；皆登記 `ch_review_state`。互動小遊戲的 `BalLevel` 只把 Lv. 改成 lvl.，譯文維持「Lv.%1」、只更新錨點。
+- **重新裁決 4 個多 MOD 共用鍵（#979 等），另有 2 個改為不提供中文（見 Removed）。** Dynamic Outposts 加入強盜襲擊，攻擊圖示選項說明改為兩方都成立的「前哨站遭受屍潮與強盜攻擊時的狀態圖示」（#979）；Knox Inventory 1.0 BETA 的「周圍」欄說明多了 OldPoint 俯視鏡頭，採共通說明加一句具名的 BETA 專屬說明（#978）；Rain's Axes & Blades 的「Assemble Wakizashi (A)」與 Nihonto 同鍵，維持「組裝脅差」（#971）；`Base.357Clip` 三方都是 .357 手槍彈匣，由「DE手槍彈匣」改為「.357手槍彈匣」（#965）。
+  > 技術要點：`owner_conflict_decisions.json` 更新 2 筆（`attackMoodles_tooltip` signature、`Base.357Clip` 出貨錨點）、新增 4 筆，寫入前以 1,767 筆既有裁決自檢全符；`OWNER_CONFLICTS.md` 重生，已裁決 1,773→1,777、尚未裁決 276→272。
+- **修正 35 處既有譯文。** P4 My So-Called Toy 的 6 台扭蛋機原本和扭蛋同名，物品名與家具標題共 12 項改為「扭蛋機 (…)」；Airdrop 6 項沙盒說明譯自舊版英文（物資等級已不控制殭屍、箭頭可指向精確位置），依現行英文重譯；ApocalipseBR 地圖選點的 3 個座標顯示把 `%s` 寫成 `%d`，遊戲裡會顯示成字面的「%d」；Better Vanilla Firearms 改名後的 4 把槍與彈匣（L-F 手槍、MSR788 狩獵步槍與其 .30-30 彈匣、SN5906 手槍彈匣）；車輛維修大修的「引擎重构中」等 3 項改為「翻修」；Moodle Effects Explained 2 項選項說明（Moodles in Lua 是 MOD 名、字型大小只影響狀態圖示提示）；互動小遊戲 5 項全形標點、缺空格與「首領 盲注」多餘空格。
+  > 技術要點：As1 衍生層改 `sources/ch`＋`cn_overrides`（新增 30、更新 1；1 項只改繁中），own 層改 `own_translations.json`；皆登記 `ch_review_state`。本節加上前兩節，`cn_overrides` 共新增 34 筆。
+
+### Removed
+
+- **移除 6 項上游已刪除的原創翻譯。** Knox Inventory 1.0 BETA（#978）刪掉的 5 個介面字串（完成、格、全部、太重、穿戴時重量），以及 Better Vanilla Firearms（#965）拿掉的 M16A2 突擊卡賓槍。
+  > 技術要點：`sources/en` 全庫與 tracker state 已無 owner，現行 Workshop 內容的 Lua／script 也查無引用（含 `IGUI_Knox_` 動態組鍵的 Freshness 與設定滑桿名稱）；`ch_review_state` 同步移除。
+- **Better Vanilla Firearms 與 VFE、Marz Vanilla Guns 共用的 2 個物品代號改為不提供中文。** `Base.CampCarbine` 在 VFE 是 .45 口徑的 MC-45 卡賓槍、在 Better Vanilla Firearms 是 9mm 的 LN-9 Trapper 卡賓槍；`Base.JS5_Clip` 分別是 KH-5 與 JS5 兩把不同衝鋒槍的彈匣。翻譯表沒辦法依你裝了哪個 MOD 切換，這兩項改為顯示各 MOD 自己的名稱（Better Vanilla Firearms 自帶簡中）。
+  > 技術要點：登記 owner 衝突 `action: unship`，`unshipped_keys.json` 帶 `as1_value`＋`owner_signature`，比照 `Base.Glock23` 前例（型號與口徑都不同、上位詞在同 MOD 內分不出來）。
+
+其餘追蹤單無需另外變更翻譯：Moodle Effects Explained（#970）修改的 456 筆都是覆蓋本體 Moodle 的鍵（「×」改「*」與相容行的用字），本包依政策不出貨；that DAMN Library（#957）移除的 85 款 Chevrolet Step-Van 字串、Better Vanilla Firearms 移除的開盒配方屬 As1 衍生層，依 split 不變式保留；Dynamic Outposts 修改的另一筆在 B42 不讀的 `UI_EN.txt`。
+
 ## [42.21.0-1.57.0] - 2026-10-20
 
 ### Added

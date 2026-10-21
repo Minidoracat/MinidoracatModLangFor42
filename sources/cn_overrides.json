@@ -14936,8 +14936,8 @@
   },
   "Sandbox.json|Sandbox_PlayablePool_EnableBetaMinigames_tooltip": {
     "as1_value": "显示飞镖, 纸牌游戏, 国际象棋和跳棋. 这些游戏仍在活跃开发中, 可能无法正常运行.",
-    "reason": "首批第二批 EN 明確數字、品類或狀態修正。",
-    "value": "启用开发中的扑克 roguelike「Balatroid」。其他小游戏各有独立开关；单人模式在小游戏设置中另有本地 beta 选项，多人模式一律采用服务器设置"
+    "reason": "首批第二批 EN 明確數字、品類或狀態修正。 ／2026-10-21 #966 改半形標點與“”引號（本包慣例）。",
+    "value": "启用开发中的扑克 roguelike“Balatroid”. 其他小游戏各有独立开关. 单人模式在小游戏设置中另有本地 beta 选项; 多人模式一律采用服务器设置."
   },
   "Sandbox.json|Sandbox_PlayablePool_MaxPlayDistance_tooltip": {
     "as1_value": "玩家距台球桌的最大格子距离. 超过该距离后, 玩家将无法使用台球桌, 也无法保持台球窗口开启.",
@@ -60037,8 +60037,8 @@
   },
   "UI.json|UI_options_claimableoutposts_attackMoodles_tooltip": {
     "as1_value": "显示或隐藏已占领前哨站的尸潮和强盗攻击图标. 仅客户端生效.",
-    "value": "显示或隐藏前哨站遭受攻击时的状态图标. 仅客户端生效.",
-    "reason": "2026-10-19 owner 衝突裁決：Claimable 有屍潮與強盜兩種攻擊圖示, Dynamic 只有屍潮攻擊圖示. 現值提到強盜對 Dynamic 不成立; 不列攻擊種類的寫法對兩方都成立."
+    "value": "显示或隐藏前哨站遭受尸潮和强盗攻击时的状态图标. 仅客户端生效.",
+    "reason": "2026-10-21 #979 owner 衝突重新裁決：Dynamic Outposts 加入強盜襲擊後，兩方都有屍潮與強盜攻擊圖示；As1 值的「已占领」只屬 Claimable，改寫成兩方都成立的「前哨站遭受尸潮和强盗攻击时的状态图标」。（2026-10-19 舊值不列攻擊種類。）"
   },
   "UI.json|UI_options_claimableoutposts_mapIcons_tooltip": {
     "as1_value": "在世界地图上显示或隐藏可占领前哨站图标. 仅客户端生效.",
@@ -60159,5 +60159,175 @@
     "as1_value": "若声音在此距离内触发, 玩家可能会恐慌或惊醒;超出此范围的声音仅可被听见",
     "value": "若声音在此距离内触发, 玩家可能会恐慌或惊醒; 超出此范围的声音仅可被听见. 必须介于声音最小触发范围与声音最大触发范围之间, 否则会自动调整",
     "reason": "2026-10-20 #942：上游英文改寫（If a sound occurs within this distance, … → If a sound occurs within this distance, …），依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_RegionManager_DebugMode": {
+    "value": "调试日志",
+    "reason": "2026-10-21 #964 上游改英文重譯（舊英文 'Enable debug logs'）",
+    "as1_value": "启用调试日志"
+  },
+  "Sandbox.json|Sandbox_RegionManager_DebugMode_tooltip": {
+    "value": "启用区域管理器的诊断日志, 包括僵尸数量控制的注册、激活、暂停和添加, 地图表单提交, 以及强制PvP策略变更和安全模式请求. 默认禁用. 服务器的僵尸数量日志和客户端的PvP日志会分别显示在各自的控制台中.",
+    "reason": "2026-10-21 #964 上游改英文重譯（舊英文 'Turns RegionManager debug logging on/off.'）",
+    "as1_value": "开关区域管理器的调试日志."
+  },
+  "UI.json|UI_AirdropMod_CommandClientOnly": {
+    "value": "空投指令需要多人模式管理员或单人调试模式.",
+    "reason": "2026-10-21 #967 上游改英文重譯（舊英文 'AirdropMod commands are only available in client/server multiplayer.'）",
+    "as1_value": "空投模组指令仅支持客户端/服务器多人模式使用."
+  },
+  "ItemName.json|P4MySoCalledToy.P4MovCapsuleToy01": {
+    "value": "扭蛋机 (斯皮福滑块拼图)",
+    "reason": "2026-10-21 #962 修正舊譯：P4MovCapsuleToy 是可搬動的扭蛋機台（Type=Moveable，JP 譯 ガチャガチャ），As1 譯「扭蛋」與同 MOD 的扭蛋物品 P4Capsule 撞名；改「扭蛋机」，與同 MOD 右鍵選單「扭蛋机」一致。",
+    "as1_value": "扭蛋 (斯皮福滑块拼图)"
+  },
+  "ItemName.json|P4MySoCalledToy.P4MovCapsuleToy02": {
+    "value": "扭蛋机 (Pump Pury 第 1 卷)",
+    "reason": "2026-10-21 #962 修正舊譯：P4MovCapsuleToy 是可搬動的扭蛋機台（Type=Moveable，JP 譯 ガチャガチャ），As1 譯「扭蛋」與同 MOD 的扭蛋物品 P4Capsule 撞名；改「扭蛋机」，與同 MOD 右鍵選單「扭蛋机」一致。",
+    "as1_value": "扭蛋 (Pump Pury 第 1 卷)"
+  },
+  "ItemName.json|P4MySoCalledToy.P4MovCapsuleToy03": {
+    "value": "扭蛋机 (Pump Pury 第 2 卷)",
+    "reason": "2026-10-21 #962 修正舊譯：P4MovCapsuleToy 是可搬動的扭蛋機台（Type=Moveable，JP 譯 ガチャガチャ），As1 譯「扭蛋」與同 MOD 的扭蛋物品 P4Capsule 撞名；改「扭蛋机」，與同 MOD 右鍵選單「扭蛋机」一致。",
+    "as1_value": "扭蛋 (Pump Pury 第 2 卷)"
+  },
+  "ItemName.json|P4MySoCalledToy.P4MovCapsuleToy04": {
+    "value": "扭蛋机 (毛绒气球)",
+    "reason": "2026-10-21 #962 修正舊譯：P4MovCapsuleToy 是可搬動的扭蛋機台（Type=Moveable，JP 譯 ガチャガチャ），As1 譯「扭蛋」與同 MOD 的扭蛋物品 P4Capsule 撞名；改「扭蛋机」，與同 MOD 右鍵選單「扭蛋机」一致。",
+    "as1_value": "扭蛋 (毛绒气球)"
+  },
+  "ItemName.json|P4MySoCalledToy.P4MovCapsuleToy05": {
+    "value": "扭蛋机 (斯皮福登山扣)",
+    "reason": "2026-10-21 #962 修正舊譯：P4MovCapsuleToy 是可搬動的扭蛋機台（Type=Moveable，JP 譯 ガチャガチャ），As1 譯「扭蛋」與同 MOD 的扭蛋物品 P4Capsule 撞名；改「扭蛋机」，與同 MOD 右鍵選單「扭蛋机」一致。",
+    "as1_value": "扭蛋 (斯皮福登山扣)"
+  },
+  "ItemName.json|P4MySoCalledToy.P4MovCapsuleToy06": {
+    "value": "扭蛋机 (晴天娃娃)",
+    "reason": "2026-10-21 #962 修正舊譯：P4MovCapsuleToy 是可搬動的扭蛋機台（Type=Moveable，JP 譯 ガチャガチャ），As1 譯「扭蛋」與同 MOD 的扭蛋物品 P4Capsule 撞名；改「扭蛋机」，與同 MOD 右鍵選單「扭蛋机」一致。",
+    "as1_value": "扭蛋 (晴天娃娃)"
+  },
+  "UI.json|UI_P4MySoCalledToy_Title_P4MovCapsuleToy01": {
+    "value": "扭蛋机 (斯皮福滑块拼图)",
+    "reason": "2026-10-21 #962 修正舊譯：P4MovCapsuleToy 是可搬動的扭蛋機台（Type=Moveable，JP 譯 ガチャガチャ），As1 譯「扭蛋」與同 MOD 的扭蛋物品 P4Capsule 撞名；改「扭蛋机」，與同 MOD 右鍵選單「扭蛋机」一致。",
+    "as1_value": "扭蛋 (斯皮福滑块拼图)"
+  },
+  "UI.json|UI_P4MySoCalledToy_Title_P4MovCapsuleToy02": {
+    "value": "扭蛋机 (Pump Pury 第 1 卷)",
+    "reason": "2026-10-21 #962 修正舊譯：P4MovCapsuleToy 是可搬動的扭蛋機台（Type=Moveable，JP 譯 ガチャガチャ），As1 譯「扭蛋」與同 MOD 的扭蛋物品 P4Capsule 撞名；改「扭蛋机」，與同 MOD 右鍵選單「扭蛋机」一致。",
+    "as1_value": "扭蛋 (Pump Pury 第 1 卷)"
+  },
+  "UI.json|UI_P4MySoCalledToy_Title_P4MovCapsuleToy03": {
+    "value": "扭蛋机 (Pump Pury 第 2 卷)",
+    "reason": "2026-10-21 #962 修正舊譯：P4MovCapsuleToy 是可搬動的扭蛋機台（Type=Moveable，JP 譯 ガチャガチャ），As1 譯「扭蛋」與同 MOD 的扭蛋物品 P4Capsule 撞名；改「扭蛋机」，與同 MOD 右鍵選單「扭蛋机」一致。",
+    "as1_value": "扭蛋 (Pump Pury 第 2 卷)"
+  },
+  "UI.json|UI_P4MySoCalledToy_Title_P4MovCapsuleToy04": {
+    "value": "扭蛋机 (毛绒气球)",
+    "reason": "2026-10-21 #962 修正舊譯：P4MovCapsuleToy 是可搬動的扭蛋機台（Type=Moveable，JP 譯 ガチャガチャ），As1 譯「扭蛋」與同 MOD 的扭蛋物品 P4Capsule 撞名；改「扭蛋机」，與同 MOD 右鍵選單「扭蛋机」一致。",
+    "as1_value": "扭蛋 (毛绒气球)"
+  },
+  "UI.json|UI_P4MySoCalledToy_Title_P4MovCapsuleToy05": {
+    "value": "扭蛋机 (斯皮福登山扣)",
+    "reason": "2026-10-21 #962 修正舊譯：P4MovCapsuleToy 是可搬動的扭蛋機台（Type=Moveable，JP 譯 ガチャガチャ），As1 譯「扭蛋」與同 MOD 的扭蛋物品 P4Capsule 撞名；改「扭蛋机」，與同 MOD 右鍵選單「扭蛋机」一致。",
+    "as1_value": "扭蛋 (斯皮福登山扣)"
+  },
+  "UI.json|UI_P4MySoCalledToy_Title_P4MovCapsuleToy06": {
+    "value": "扭蛋机 (晴天娃娃)",
+    "reason": "2026-10-21 #962 修正舊譯：P4MovCapsuleToy 是可搬動的扭蛋機台（Type=Moveable，JP 譯 ガチャガチャ），As1 譯「扭蛋」與同 MOD 的扭蛋物品 P4Capsule 撞名；改「扭蛋机」，與同 MOD 右鍵選單「扭蛋机」一致。",
+    "as1_value": "扭蛋 (晴天娃娃)"
+  },
+  "UI.json|UI_MEE_FallbackTooltipShadow_Tooltip": {
+    "value": "只影响未启用 Moodles in Lua 时使用的内部备用提示. 如果其他 UI 模组导致提示阴影出现视觉问题, 可以禁用它.",
+    "reason": "2026-10-21 #970 修正舊譯：Moodles in Lua 是另一個 MOD 名，As1 拆成「在Lua中的Moodles」；fallback 對齊同 MOD「备用」。",
+    "as1_value": "只影响在Lua中的Moodles未激活时使用的内部回退提示. 如果其他UI模组导致提示阴影出现视觉问题, 可以禁用它."
+  },
+  "UI.json|UI_MEE_TooltipFontSize_Tooltip": {
+    "value": "仅更改“图标效果解释”用于状态图标提示的字体大小.",
+    "reason": "2026-10-21 #970 修正舊譯：As1「仅修改模组的字体大小」漏了「只影響狀態圖示提示」，誤成整個模組的字型設定。",
+    "as1_value": "仅修改模组的字体大小"
+  },
+  "Sandbox.json|Sandbox_AirdropMod_AirdropLootLevel_tooltip": {
+    "value": "控制每次空投的默认物资品质和类别权重.",
+    "reason": "2026-10-21 #967 修正舊譯：As1 譯自舊版英文，與現行英文不符（現行只控制物資品質與類別權重，殭屍設定已拆到另一個選項）。",
+    "as1_value": "控制空投默认物资品质, 周边僵尸数量, 僵尸刷新范围, 特殊僵尸生成规则."
+  },
+  "Sandbox.json|Sandbox_AirdropMod_AirdropUseLootLevelDefaults_tooltip": {
+    "value": "启用后, 所选的物资等级会控制物品数量和类别权重. 除非启用下方选项, 否则僵尸设置仍保持手动设置.",
+    "reason": "2026-10-21 #967 修正舊譯：As1 譯自舊版英文，與現行英文不符（殭屍設定已拆成下方獨立選項）。",
+    "as1_value": "开启后,物资等级自动控制僵尸数量上下限,刷新半径,物品数量和物资权重.关闭以使用下方自定义数值."
+  },
+  "Sandbox.json|Sandbox_AirdropMod_AirdropZombieMax_tooltip": {
+    "value": "空投周围生成僵尸的数量上限. 只有在启用“使用物资等级的僵尸设置”时才会忽略此选项.",
+    "reason": "2026-10-21 #967 修正舊譯：As1 譯自舊版英文，與現行英文不符（忽略條件改為「使用物資等級的殭屍設定」）。",
+    "as1_value": "空投周边刷新僵尸最高数量, 开启等级默认参数后此项失效."
+  },
+  "Sandbox.json|Sandbox_AirdropMod_AirdropZombieMin_tooltip": {
+    "value": "空投周围生成僵尸的数量下限. 只有在启用“使用物资等级的僵尸设置”时才会忽略此选项.",
+    "reason": "2026-10-21 #967 修正舊譯：As1 譯自舊版英文，與現行英文不符（忽略條件改為「使用物資等級的殭屍設定」）。",
+    "as1_value": "空投周边刷新僵尸最低数量, 开启等级默认参数后此项失效."
+  },
+  "Sandbox.json|Sandbox_AirdropMod_AirdropZombieSpawnRadius_tooltip": {
+    "value": "空投箱周围分布事件僵尸所用的半径 (格). 只有在启用“使用物资等级的僵尸设置”时才会忽略此选项.",
+    "reason": "2026-10-21 #967 修正舊譯：As1 譯自舊版英文，與現行英文不符（忽略條件改為「使用物資等級的殭屍設定」）。",
+    "as1_value": "单位格子, 空投箱周边僵尸生成范围, 开启等级默认参数后此项失效."
+  },
+  "Sandbox.json|Sandbox_AirdropMod_AirdropShowDirectionArrow_tooltip": {
+    "value": "在游戏画面显示指向空投标记的方向箭头.",
+    "reason": "2026-10-21 #967 修正舊譯：As1 譯自舊版英文，與現行英文不符（現行英文沒有「只指大致區域」，另有「箭頭指向精確空投位置」選項）。",
+    "as1_value": "游戏界面显示箭头指示空投大致区域, 不会指向精确坐标."
+  },
+  "UI.json|UI_RMMP_CoordMouse": {
+    "value": "鼠标: (%s, %s)",
+    "reason": "2026-10-21 #964 修正佔位：上游英文是 %s，Lua 以帶參 getText(key, x, y) 呼叫；As1 寫 %d 在帶參路徑顯示字面「%d」（placeholder.md 已知坑）。",
+    "as1_value": "鼠标: (%d, %d)"
+  },
+  "UI.json|UI_RMMP_CoordPoint1": {
+    "value": "点1: (%s, %s)",
+    "reason": "2026-10-21 #964 修正佔位：上游英文是 %s，Lua 以帶參 getText(key, x, y) 呼叫；As1 寫 %d 在帶參路徑顯示字面「%d」（placeholder.md 已知坑）。",
+    "as1_value": "点1: (%d, %d)"
+  },
+  "UI.json|UI_RMMP_CoordPoint2": {
+    "value": "点2: (%s, %s)",
+    "reason": "2026-10-21 #964 修正佔位：上游英文是 %s，Lua 以帶參 getText(key, x, y) 呼叫；As1 寫 %d 在帶參路徑顯示字面「%d」（placeholder.md 已知坑）。",
+    "as1_value": "点2: (%d, %d)"
+  },
+  "ItemName.json|Base.MSR3030_Rifle": {
+    "value": "MSR788狩猎步枪",
+    "reason": "2026-10-21 #965 修正舊譯：Better Vanilla Firearms 已改名（現行 'MSR788 Hunting Rifle'），As1 仍是舊型號。",
+    "as1_value": "MSR3030狩猎步枪"
+  },
+  "ItemName.json|Base.MSR3030_Clip": {
+    "value": ".30-30 MSR788步枪弹匣",
+    "reason": "2026-10-21 #965 修正舊譯：Better Vanilla Firearms 已改名（現行 '.30-30 MSR788 Magazine'），As1 仍是舊型號。",
+    "as1_value": "MSR3030步枪弹匣"
+  },
+  "ItemName.json|Base.SN506_Clip": {
+    "value": "SN5906手枪弹匣",
+    "reason": "2026-10-21 #965 修正舊譯：Better Vanilla Firearms 已改名（現行 'SN5906 Magazine'），As1 仍是舊型號。",
+    "as1_value": "SN506手枪弹匣"
+  },
+  "ItemName.json|Base.DE_Pistol": {
+    "value": "L-F手枪",
+    "reason": "2026-10-21 #965 修正舊譯：Better Vanilla Firearms 已改名（現行 'L-F Pistol'），As1 仍是舊型號。",
+    "as1_value": "DE手枪"
+  },
+  "Sandbox.json|Sandbox_VRO_EnableEngineRebuild": {
+    "value": "启用发动机翻修",
+    "reason": "2026-10-21 #956 修正舊譯：As1「引擎重构中」「发动机重构」把 Rebuild 譯成軟體用語「重构」；統一為同 MOD 繁中既有的「翻修」。",
+    "as1_value": "引擎重构中"
+  },
+  "IG_UI.json|IGUI_EER_RebuildEngine": {
+    "value": "翻修发动机",
+    "reason": "2026-10-21 #956 修正舊譯：As1「引擎重构中」「发动机重构」把 Rebuild 譯成軟體用語「重构」；統一為同 MOD 繁中既有的「翻修」。",
+    "as1_value": "发动机重构"
+  },
+  "Sandbox.json|Sandbox_VRO_EnableEngineRebuild_tooltip": {
+    "value": "是否启用游戏内的“翻修发动机”动作. (若已启用 'Project Summer Car' 或其他发动机维修类模组, 此设置将无效.)",
+    "reason": "2026-10-21 #956 修正舊譯：As1「引擎重构中」「发动机重构」把 Rebuild 譯成軟體用語「重构」；統一為同 MOD 繁中既有的「翻修」。",
+    "as1_value": "是否启用游戏内的引擎重构操作(若已启用 'Project Summer Car' 或其他引擎维修类模组, 此设置将无效. )"
+  },
+  "ItemName.json|Base.357Clip": {
+    "value": ".357手枪弹匣",
+    "reason": "2026-10-21 #965 重新裁決：三方都是 .357 手槍彈匣——GaelGunStore '.357 Magnum Magazine (10 Rounds)'、Legacy '.357 Magazine 10 round'、Better Vanilla Firearms 'L-F Magazine'（AmmoType bullets_357，配 Base.DE_Pistol「L-F Pistol」，9 發）。舊值「DE手槍彈匣」沿用 BVF 內部舊 ID，BVF 英文已改名 L-F、GaelGunStore 的這個彈匣也通用於多把 .357 自動手槍；改為三方都成立的「.357手槍彈匣」，同批把 Base.DE_Pistol 改成「L-F手槍」。",
+    "as1_value": "DE手枪弹匣"
   }
 }

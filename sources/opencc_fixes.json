@@ -1510,13 +1510,6 @@
       "reason": "原文是固定詞「在線上」；套用規則會誤成「線上上」。",
       "ch_value": "79d619c3cb284f14"
     },
-    "UI.json|UI_AirdropMod_CommandClientOnly": {
-      "patterns": [
-        "用(\\s*)戶"
-      ],
-      "reason": "「用戶端」是 client 的固定技術用語，不等同 user。",
-      "ch_value": "18d608bdfe0c38b0"
-    },
     "UI.json|UI_HiResClock_GlobalRestoreAllDefaults_Tooltip": {
       "patterns": [
         "登(\\s*)錄",
@@ -2665,6 +2658,13 @@
       ],
       "reason": "2026-10-20 #953 裁決 keep：Knox Inventory 汽車儀表板測試說明的「the needles」是儀表的實體指針（速度表、轉速表），不是滑鼠 pointer／抽象指標。",
       "ch_value": "c006c039aa9968d3"
+    },
+    "IG_UI.json|IGUI_SurvivorBriefing_LK_Umb_Unit": {
+      "patterns": [
+        "全局"
+      ],
+      "reason": "2026-10-21 #974 裁決 keep：「安全局」是 Umbrella Security Service 的「安全＋局」(security bureau)，不是「全局」(global)。",
+      "ch_value": "7e05bbd132f5a681"
     }
   }
 }
