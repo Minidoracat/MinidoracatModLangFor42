@@ -23,7 +23,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1773** 個鍵（`unship` 326、`translate` 1447）。這些鍵的 owner 條目共 5034 筆：可載入 `.json` 3296、script 848、死檔 890。另有 **275** 個鍵尚未裁決。
+現況：已裁決 **1773** 個鍵（`unship` 326、`translate` 1447）。這些鍵的 owner 條目共 5034 筆：可載入 `.json` 3296、script 848、死檔 890。另有 **276** 個鍵尚未裁決。
 
 ## 不出貨的鍵（326）
 
@@ -1773,7 +1773,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_options_AWCWF_shell_casing_volume_tooltip` | `3633421539/Escape from Kentucky4215` = Adjust the volume of shell casings hitting the ground. 0 mu… _(json)_<br>`3780151182/MFS_community_fix` = Adjust the volume of shell casings hitting the ground. 0 mu… _(json)_ | 2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。 | — |
 | `UI\|UI_options_AWCWF_weapon_reload_volume_tooltip` | `3633421539/Escape from Kentucky4215` = Adjust MFS reload volume. 0 mutes it, 1 is the default, and… _(json)_<br>`3780151182/MFS_community_fix` = Adjust MFS reload volume. 0 mutes it, 1 is the default, and… _(json)_ | 2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。 | — |
 | `UI\|UI_options_AWCWF_weapon_shot_volume_tooltip` | `3633421539/Escape from Kentucky4215` = Adjust MFS gunshot volume. 0 mutes it, 1 is the default, an… _(json)_<br>`3780151182/MFS_community_fix` = Adjust MFS gunshot volume. 0 mutes it, 1 is the default, an… _(json)_ | 2026-10-11 #813 裁決：MFS 社群修正版與 Escape from Kentucky 的英文只差 MFS 版為提示框排版加入的手動換行，語意相同，維持現值。 | — |
-| `UI\|UI_options_claimableoutposts_attackMoodles_tooltip` | `3745620322/Claimable Outposts` = Show or hide the horde and bandit attack moodles for claime… _(json)_<br>`3791152383/Dynamic Outposts` = Show or hide the outpost horde attack moodles. Client-side … _(json)_ | 2026-10-19 As1 v3.11.0 新 owner 裁決：Claimable 有屍潮與強盜兩種攻擊圖示, Dynamic 只有屍潮攻擊圖示. 現值提到強盜對 Dynamic 不成立; 不列攻擊種類的寫法對兩方都成立. | — |
+| `UI\|UI_options_claimableoutposts_attackMoodles_tooltip` | `3745620322/Claimable Outposts` = Show or hide the horde and bandit attack moodles for claime… _(json)_<br>`3791152383/Dynamic Outposts` = Show or hide Horde and Bandit attack moodles. Client-side o… _(json)_ | 2026-10-19 As1 v3.11.0 新 owner 裁決：Claimable 有屍潮與強盜兩種攻擊圖示, Dynamic 只有屍潮攻擊圖示. 現值提到強盜對 Dynamic 不成立; 不列攻擊種類的寫法對兩方都成立. | — |
 | `UI\|UI_options_claimableoutposts_mapIcons_tooltip` | `3745620322/Claimable Outposts` = Show or hide Claimable Outposts icons on your world map. Cl… _(json)_<br>`3791152383/Dynamic Outposts` = Show or hide Dynamic Outposts icons on your world map. Clie… _(json)_ | 2026-10-19 As1 v3.11.0 新 owner 裁決：兩方英文只差 MOD 名. 現值「可佔領前哨站圖示」帶了其中一方的名稱, 改為中性的前哨站圖示. | — |
 | `UI\|UI_options_claimableoutposts_name` | `3745620322/Claimable Outposts` = Claimable Outposts _(json)_<br>`3791152383/Dynamic Outposts` = Dynamic Outposts _(json)_ | 2026-10-19 As1 v3.11.0 新 owner 裁決：模組選項分頁名稱, 兩方各寫自己的 MOD 名. 同 Sandbox_ClaimableOutposts, 改為兩方共通的「前哨站」. | — |
 | `UI\|UI_options_claimableoutposts_threatDifficulty_tooltip` | `3745620322/Claimable Outposts` = Scales infected threats, loot timing, bandit outpost guards… _(json)_<br>`3791152383/Dynamic Outposts` = Scales infected threats and loot timing in singleplayer/loc… _(json)_ | 2026-10-19 As1 v3.11.0 新 owner 裁決：兩方都縮放感染威脅與戰利品計時, 這是共通句; 強盜守衛, 友好倖存者, 強盜襲擊者只有 Claimable 有, 以具名句補上. 現值把強盜相關項目寫成通用, 對 Dynamic 不成立. | — |
@@ -1812,7 +1812,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_thickblooddesc` | `1299328280/More Traits` = You bleed more slowly from wounds. _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Wounds bleeds less.&lt;br&gt;(-50% damage from bleeding.) _(json)_ | 2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。 | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（275）
+## 尚未裁決的衝突（276）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
@@ -1830,6 +1830,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `IG_UI\|IGUI_HotbarAttachment_ChestRig` | `3625951765/Simple sling Mod` = ChestRig _(死檔 IG_UI_EN.txt)_<br>`3713038671/JSling` = Chest Rig Left _(死檔 IG_UI_EN.txt)_ | 胸掛 |
 | `IG_UI\|IGUI_HotbarAttachment_ChestRigRight` | `3625951765/Simple sling Mod` = ChestRigRight _(死檔 IG_UI_EN.txt)_<br>`3713038671/JSling` = Chest Rig Right _(死檔 IG_UI_EN.txt)_ | 胸掛 (右) |
 | `IG_UI\|IGUI_HotbarAttachment_KnifeSheath` | `3625951765/Simple sling Mod` = KnifeSheath _(死檔 IG_UI_EN.txt)_<br>`3713038671/JSling` = Knife Sheath _(死檔 IG_UI_EN.txt)_ | 刀鞘 |
+| `IG_UI\|IGUI_Knox_Choice_loot_scope_Info` | `3816775774/KnoxInventory` = Which containers the Surroundings column lists. "Only the o… _(json)_<br>`3816775774/KnoxInventoryBeta` = Which containers the Surroundings column lists. "Only the o… _(json)_ | 「周圍」欄會列出哪些容器. 「只限開啟的」: 你在世界中點選開啟或用 Viewpoint 的按鍵開啟的那個容器, 以及… |
 | `IG_UI\|IGUI_ProxInv_Text_ForceSelectOff` | `2847184718/ProximityInventory` = Prox Inv Force Selected: OFF _(json)_<br>`3669550831/ProximityInventory` = Force Selected: OFF _(json)_ | 強制選取: 關 |
 | `IG_UI\|IGUI_ProxInv_Text_ForceSelectOn` | `2847184718/ProximityInventory` = Prox Inv Force Selected: ON _(json)_<br>`3669550831/ProximityInventory` = Force Selected: ON _(json)_ | 強制選取: 開 |
 | `IG_UI\|IGUI_Pry_fail` | `3714335263/BB_CommonSenseRoy` = It won't give in. I can try again... _(json)_<br>`3717968421/CommonSense` = It won't give in. I can try again... _(json)_<br>`3718616260/ebfsensofencing` = Nao vai ceder. Posso tentar de novo... _(死檔 IG_UI_EN.txt)_ | 撬不動. 我可以再試一次… |

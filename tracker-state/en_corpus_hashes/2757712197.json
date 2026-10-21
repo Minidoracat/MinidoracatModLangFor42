@@ -1,5 +1,5 @@
 {
-  "corpus_hash": "3a037800ef91101bb8cd230a3370c1b2f560b89106089b21018c79d0addbefb2",
+  "corpus_hash": "708a5b0d02039d1fbae2f8989458f58ee126622fd96916d9af450f250d8c3a2a",
   "extractor_schema": 10,
   "mod_ids": [
     "VehicleRepairOverhaul",
@@ -26,7 +26,6 @@
     "script_craftRecipe|mods/Vehicle Repair Overhaul - Vehicle Salvage Overhaul/42/media/scripts/VROSalvageParts_B42.txt|Salvage Vehicle Tires": "626755c62caa",
     "script_craftRecipe|mods/Vehicle Repair Overhaul - Vehicle Salvage Overhaul/42/media/scripts/VROSalvageParts_B42.txt|Salvage Vehicle Trunk Doors": "3859370a7a10",
     "script_craftRecipe|mods/Vehicle Repair Overhaul - Vehicle Salvage Overhaul/42/media/scripts/VROSalvageParts_B42.txt|Salvage Wooden Vehicle Parts": "87dc06a22979",
-    "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/FixAFlat.txt|VRO Fix Tire FixAFlat": "2132e7387696",
     "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix Battery": "06374c062c64",
     "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix Brake": "6717d33a7e20",
     "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix Brake Welding": "4d01de989bac",
@@ -51,6 +50,7 @@
     "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix Glove box 1": "1df00dc64f41",
     "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix Hood": "cd5452561ac8",
     "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix Hood Welding": "e055e23ad4ed",
+    "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix Hubcaps Welding": "fe2a6c1619d3",
     "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix KI5 Wood Parts": "ee555cb3ae08",
     "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix Large Battery": "6e4c800dec9f",
     "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix Light": "a52be75d8a4c",
@@ -91,6 +91,7 @@
     "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix Suspension Welding": "de3ceb71d4f1",
     "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix Tank Containers": "7107fb0a7756",
     "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix Tire": "1a367697b296",
+    "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix Tire FixAFlat": "2132e7387696",
     "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix Trailer": "4962c9d22ec5",
     "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix Trailer 1": "d68ab354c227",
     "script_fixing|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/vehiclesfixing.txt|VRO Fix Trailer Lids": "88951d35db87",
@@ -777,8 +778,8 @@
     "script_fixing|mods/Vehicle Repair Overhaul/media/scripts/vehicles/zzzzVROvehiclerepairfixesFull.txt|Fix renault12 Trunk Lid Welding": "c524a4056a41",
     "script_fixing|mods/Vehicle Repair Overhaul/media/scripts/vehicles/zzzzVROvehiclerepairfixesFull.txt|fix Brake": "a593a30b9bf6",
     "script_item_dn|mods/Vehicle Repair Overhaul/media/scripts/vehicles/FixAFlat.txt|FixAFlat.FixAFlat": "fe5232f24c39",
+    "script_item|mods/Vehicle Repair Overhaul/42/media/scripts/VRO/items_VRO.txt|VRO.FixAFlat": "b955157b0c50",
     "script_item|mods/Vehicle Repair Overhaul/42/media/scripts/VRO/items_VRO.txt|VRO.recipefiller": "4cef5a3df00c",
-    "script_item|mods/Vehicle Repair Overhaul/42/media/scripts/vehicles/FixAFlat.txt|VRO.FixAFlat": "b955157b0c50",
     "script_item|mods/Vehicle Repair Overhaul/media/scripts/vehicles/FixAFlat.txt|FixAFlat.FixAFlat": "7170863a2da7",
     "script_recipe|mods/Vehicle Repair Overhaul/media/scripts/vehicles/VROSalvageParts.txt|Salvage Large Container Tanks": "78234f662e4d",
     "script_recipe|mods/Vehicle Repair Overhaul/media/scripts/vehicles/VROSalvageParts.txt|Salvage Vehicle Armour": "ed07a1ffbc6a",
@@ -881,6 +882,8 @@
     "translate_en|mods/Vehicle Repair Overhaul/common/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_VRO": "3ed0b5f74f56",
     "translate_en|mods/Vehicle Repair Overhaul/common/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_VRO_DisableDiminishingRepairs": "f26411543976",
     "translate_en|mods/Vehicle Repair Overhaul/common/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_VRO_DisableDiminishingRepairs_tooltip": "9887b5c8379c",
+    "translate_en|mods/Vehicle Repair Overhaul/common/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_VRO_DisableUninstallRequirement": "ebc0745933e1",
+    "translate_en|mods/Vehicle Repair Overhaul/common/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_VRO_DisableUninstallRequirement_tooltip": "8e64854e6804",
     "translate_en|mods/Vehicle Repair Overhaul/common/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_VRO_EnableEngineRebuild": "52fa63f47c84",
     "translate_en|mods/Vehicle Repair Overhaul/common/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_VRO_EnableEngineRebuild_tooltip": "3a5e1805e643",
     "translate_en|mods/Vehicle Repair Overhaul/common/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_VRO_RepairFullyBrokenParts": "aa0b49d27888",
@@ -930,5 +933,5 @@
     "translate_en|mods/Vehicle Repair Overhaul/media/lua/shared/Translate/EN/Tooltip_EN.txt|Tooltip_SalvageVehicle": "b777989e2cd3",
     "translate_en|mods/Vehicle Repair Overhaul/media/lua/shared/Translate/EN/Tooltip_EN.txt|Tooltip_eer_RebuildEngine": "566db68a2f63"
   },
-  "updated_at": "2026-10-14T09:31:08Z"
+  "updated_at": "2026-10-21T09:22:50Z"
 }
