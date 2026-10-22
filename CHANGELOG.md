@@ -4,6 +4,33 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **新收錄 Custom Guns Camos 自訂槍械迷彩（#980 翻譯申請，54 項）。** 噴漆槍、塗裝選單（基本色、數位迷彩、虎斑迷彩、碎片迷彩、迷彩、特殊六類與各款圖案名稱）、補充油漆，以及各類圖案開關的沙盒設定。
+  > 技術要點：使用者 2026-10-22 核准 own lane；作者只附 EN／ES，CH／CN 皆對照 EN 人工直寫，落 `sources/mods/3797940348/`（`origin: own`）與 `sources/ch`。加進名冊、watchlist（gen-watchlist）與 tracker 基準（backfill-en 首建），`mod_names_zh` 補「自訂槍械迷彩」；Lua 全部經 `getText` 讀 JSON，零 vanilla 碰撞、與 As1 鍵集無交集。
+- **汐汐的靜謐小屋改為整包翻譯（#986，37 項）。** 原本只翻地圖選單的標題與說明，現在加上汐汐的背包、腰包、鑰匙圈、緊急救援套件、能量藥劑，以及冰箱、床、槍架、酒桶貨架等家具名稱與說明。
+  > 技術要點：使用者 2026-10-22 核准擴大收錄；作者自附簡中，比照 Willowbrook 標 `cn_source: upstream`：CN 逐字照抄上游 `Translate/CN`（上游把 `Xixi_Wine_Barrel` 的鍵名多打一個空格，照作者用詞補「酒桶」），CH 以作者簡中為主、EN 為輔人工直寫。
+- **補齊 14 個 MOD 新增的繁簡中文，共 228 項。** Knox Inventory（#996，66 項）：汽車儀表板上的面板字樣（暖氣、溫度、車燈、車窗、卡帶、搜台、調頻等，FM 與 KM/H 依作者設計保留英文）、各旋鈕與按鈕的提示、新聞頁示範面板，以及多人遊戲「分享我的音樂」「聽見他人的音樂」設定。Project A-Life - Jeem 擴充（#991，56 項）：0.7.5 版的發版檢查步驟（衣物保護居民、借背包給跟隨者、守衛留在崗哨等）、外出居民與基地建立失敗的提示，以及「居民在家放鬆」沙盒設定。另有 Surplus & Thrift：1993 衣櫥 38 項（#994，褲管塞進靴子的變體與動作）、軍用雨披：重製版 17 項（#983，各地點與款式的生成倍率）、Project Zomboid Optimiser 14 項（#990，尋路與區塊載入的 Java 進階選項）、True Sewers 下水道 13 項（#992，爬進管道、敲牆、挖掘、聆聽）、FTZ 各式推車 8 項（#995，簡易推車與手推車搬運家具）、TwisTonFire - 快速自動標記 6 項（#984，多人自動分享標記）、AHS 4 項（#985，CU 治療模式）、更好的手電筒 2 項（#982）、AWS 2 項（#987），TwisTonFire - WANTED、槍匠：1993 軍火庫各 1 項（#989、#993）。
+  > 技術要點：ch／cn 逐鍵對照 EN 直寫；FTZ 各式推車落 own 目錄 `sources/mods/3815775971/CN`＋`sources/ch`，其餘 220 鍵落 `own_translations.json`；新鍵皆以有效 CN 值登記 `ch_review_state`。4 路翻譯、4 路對抗複核提出 45 條：本批譯文採納 20 條，例如 A-Life 的潛行專長統一為介面上的「潛行殺手」、測試布置給的是「民用防彈背心」與「黃豆罐頭」、引用的護甲選項寫完整標題「[專家] NPC護甲與衣物防護 (所有命中)」，True Sewers 的「太窄了: 得用爬的」是在管道裡想站起來時的台詞，Knox 儀表板模組說明的 lamps 是「指示燈」不是警示燈；範圍外 11 條採納 10 條（列入下方修正既有譯文）；不採納 15 條（句尾補空格不符本包慣例；Xixi 槍架照作者簡中不保留上游英文的開頭空格；「用戶端」見下方）。軍用雨披的「20 percent」寫成「百分之 20」（英文沒有 `%`，寫 `20%%` 會讓佔位符不對稱）。lint 棘輪抓出 2 處「搜索」改「搜尋」。16 個 wid 以 steamcmd 重抓，15,751 筆文本 record 的值 hash 與 tracker state 全數相符。
+
+### Changed
+
+- **依上游英文改值重譯 9 項。** Project A-Life - Jeem 擴充 7 項（#991，拿掉 A-Life 1.4／1.3.15 的版本限定字樣；殭屍咬傷設定改為說明咬傷對 NPC 的影響、每隻殭屍的咬人間隔與同時咬人上限）、Knox Inventory 1 項（#996，儀表板模組說明補上開關、卡帶與暖氣）、Plysken Irrigation Pipes 1 項（#988，要先製作的改為黏土灌溉管道）。
+  > 技術要點：皆屬 own 層，連 `en` 錨點更新並登記 `ch_review_state`。
+- **修正 12 處既有譯文。** 軍用雨披的 6 件「披肩斗篷」英文和其他同款一樣是 Military Poncho，改回「軍用斗篷 (顏色)」；Project A-Life - Jeem 擴充 4 項（服裝倉庫有 3 處寫成「衣物倉庫」，和實際選項名「服裝」對不上；測試布置的「一罐豆子」改為本體物品名「黃豆罐頭」）；更好的手電筒 2 項（壞掉的手電筒說明多了英文沒有的「燈泡損壞、修復前」，EGENEREX 被寫成「能科電池」）。
+  > 技術要點：軍用雨披與 A-Life 擴充屬 own 層改 `own_translations.json`；更好的手電筒屬 As1 衍生層，只改繁中 `sources/ch`。複核另建議把更好的手電筒心跳設定的「用戶端」改「客戶端」，該鍵已有「技術語境用戶端是台灣慣用詞」的 lint 豁免，維持原譯。
+
+### Removed
+
+- **移除 155 項上游已刪除的原創翻譯。** Knox Inventory（#996）84 項：舊版儀表板的狀態字樣（車門、引擎、暖氣、車燈、後車廂等）、物品資訊的 Contents 列，以及已刪除的測試台項目；Project A-Life - Jeem 擴充（#991）71 項：「被搜刮過的世界」功能的選單與提示、從建築建立基地、外觀衣物，以及已移除的沙盒選項（冷靜下來、擁擠上限、目標區域、咬傷感染機率與屍變時間等）。
+  > 技術要點：`sources/en` 全庫與 tracker state 已無 owner，現行 Workshop 內容的 Lua／script 也查無引用（含 `IGUI_Knox_Dash_`、`IGUI_Knox_Stat_` 動態組鍵與 `sandbox-options.txt`）；`ch_review_state` 同步移除，失效的 lint 豁免 1 筆一併刪除。
+- **Knox Inventory 的測試台清單不再提供中文（195 項，另有本次新增的 111 項不翻）。** 測試台是作者自己驗證功能用的清單，讀這些字串的程式沒有隨 Workshop 版發布，玩家在遊戲裡看不到。
+  > 技術要點：使用者 2026-10-22 裁定；`IGUI_KnoxTB_*` 共 306 鍵登記 `untranslatable_keys.json`（理由：`KnoxTestBench.lua` 不在 Workshop 內容，`KnoxScreen.lua` 註解 the bench is left out of the Workshop build），已出貨的 195 鍵自 `own_translations.json` 與 `ch_review_state` 移除。
+
+其餘追蹤單無需另外變更翻譯：靴子擴充 11（#981）只改了 script 的 DisplayName，執行期由同 MOD 的 `ItemName.json`（Western Boots）勝出，且這兩個物品代號是本體鍵、本包不出貨；軍用雨披（#983）刪掉的 62 筆在 B42 不讀的 `_EN.txt`；Project Zomboid Optimiser（#990）新增的 244 筆裡，同一組 24 個鍵分放在三個檔，另一半在 B42 不讀的根層 `media/`。
+
 ## [42.21.0-1.58.0] - 2026-10-21
 
 ### Added

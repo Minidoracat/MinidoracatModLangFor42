@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1430 個 Workshop 模組**（2051 個 mod ID）；另 **13 個已下架**（翻譯保留，見文末）。
+共支援 **1431 個 Workshop 模組**（2052 個 mod ID）；另 **13 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -793,7 +793,7 @@
 | [Cheat Menu: Reloaded [B42 Fixed]](https://steamcommunity.com/sharedfiles/filedetails/?id=3683918273) | — | — | `CheatMenuReloaded` | 638 | — | — |
 | ['84 Chevrolet Corvette](https://steamcommunity.com/sharedfiles/filedetails/?id=3684254299) | — | — | `84corvette` | 26 | — | — |
 | [[RE9] Hatchet](https://steamcommunity.com/sharedfiles/filedetails/?id=3685136499) | — | — | `RE9Hatchet` | 2 | — | — |
-| [[B42]Xixi's Serene Cottage〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3685508479) | 汐汐的靜謐小屋 | 肯塔基州的靜謐小屋據點地圖。 | `Xixi's Serene Cottage` | 2 | — | — |
+| [[B42]Xixi's Serene Cottage〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3685508479) | 汐汐的靜謐小屋 | 肯塔基州的靜謐小屋據點地圖，附汐汐的背包、腰包、急救套件、能量藥劑與冰箱、床、槍架等家具。 | `Xixi's Serene Cottage` | 39 | — | — |
 | [Hybrid Combat Overhaul [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3686046560) | — | — | `HybridCombatOverhaul` | 25 | — | — |
 | [True Dualwield Z \| Traits + Melee Expansion (B42+ ~ BETA)](https://steamcommunity.com/sharedfiles/filedetails/?id=3686068158) | — | — | `TrueDualWieldZ` | 28 | — | — |
 | [Oxygen Refill](https://steamcommunity.com/sharedfiles/filedetails/?id=3686093952) | — | — | `OxyRefill` | 20 | — | — |
@@ -1368,6 +1368,7 @@
 | [Try Before You Wear](https://steamcommunity.com/sharedfiles/filedetails/?id=3797492691) | — | — | `TryBeforeYouWear` | 283 | — | — |
 | [Mattnetic's Hide Anywhere](https://steamcommunity.com/sharedfiles/filedetails/?id=3797779872) | — | — | `HideAnywhere` | 134 | — | — |
 | [Roaming Survivors](https://steamcommunity.com/sharedfiles/filedetails/?id=3797874733) | — | — | `RoamingSurvivors` | 50 | — | — |
+| [Custom Guns Camos〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3797940348) | 自訂槍械迷彩 | 用噴漆槍替槍械塗上純色、數位、虎斑、碎片與各式特殊迷彩，不改變物品 ID。在槍上按右鍵開啟塗裝選單，需要有油漆的噴漆槍並戴著防塵口罩；各類圖案可在沙盒設定開關。 | `Custom Guns Camos` | 54 | — | — |
 | [CD: Rats](https://steamcommunity.com/sharedfiles/filedetails/?id=3798112588) | — | — | `CompanionBattleRat`, `CompanionFancyRat` | 45 | — | — |
 | [[B42MP] Frockin Backstage!](https://steamcommunity.com/sharedfiles/filedetails/?id=3798146388) | — | — | `GanydeBielovzki's Frockin Backstage!` | 61 | ⚠️ ≥2 | — |
 | [Frockin Splendor! Vol.6](https://steamcommunity.com/sharedfiles/filedetails/?id=3798149669) | Frockin Splendor! 華麗服飾 Vol.6 | 第六輯服飾擴充，新增外套、大衣、裙裝、褲裝、毛衣、腰帶與衣物收納用品。 | `GanydeBielovzki's Frockin Splendor! Vol.6` | 6 | — | — |
@@ -1434,7 +1435,7 @@
 | [Lost Province [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3815128534) | Lost Province 失落省份 | 完整重現加拿大愛德華王子島的大型獨立地圖，含所有城鎮與鄉村農地。 | `Lost Province` | ? | — | — |
 | [Too Many Emotes](https://steamcommunity.com/sharedfiles/filedetails/?id=3815468401) | Too Many Emotes 超多表情動作 | 在表情輪盤新增 300 多種表情動作，可瀏覽與收藏，多人模式可同步動作。 | `TooManyEmotes` | 359 | — | — |
 | [HydeCo. Orchard! 42.21.0](https://steamcommunity.com/sharedfiles/filedetails/?id=3815617457) | HydeCo. 果園！ | 新增果樹、漿果灌木與攀牆葡萄藤等 15 種植物，會隨四季變化，缺水可能生病枯死。 | `HydeCoOrchard` | 387 | — | — |
-| [FTZ Carts & Trolleys [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3815775971) | FTZ 各式推車 | 新增購物車、平板推車、洗衣推車、園藝推車、清潔推車、手推車與獨輪車七種推車，雙手推著走、像背包一樣裝東西，車內物品不計重量。會出現在超市、倉庫、洗衣房、工地等相符的地點，常留有少量合適的物品；容量與生成率都能調整。 | `FTZCartsTrolleys` | 30 | — | — |
+| [FTZ Carts & Trolleys [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3815775971) | FTZ 各式推車 | 新增購物車、平板推車、洗衣推車、園藝推車、清潔推車、手推車與獨輪車七種推車，雙手推著走、像背包一樣裝東西，車內物品不計重量。會出現在超市、倉庫、洗衣房、工地等相符的地點，常留有少量合適的物品；容量與生成率都能調整。 | `FTZCartsTrolleys` | 38 | — | — |
 | [Hardship: Inertia〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3816083168) | Hardship：慣性 | Hardship 系列的身體動作：可以趴下、四肢著地或仰躺移動，也能靠牆坐下；起步、停步與轉向帶有慣性，撞牆會彈開，被身後殭屍抓住會被往後拉。另能趴著或蹲低射擊，並加入手動換彈匣與拉動槍機。 | `HardshipInertia` | 73 | — | — |
 | [My So-Called Fashion](https://steamcommunity.com/sharedfiles/filedetails/?id=3816335149) | My So-Called Fashion 我的時尚 | 新增將上衣綁腰、背包鬆背、眼鏡戴頭上、耳罩掛脖子等穿搭方式與原創服裝。 | `P4MySoCalledFashion` | 24 | — | — |
 | [Dog Tired Armory〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3816701056) | Dog Tired 軍械庫 | 沿牆組裝槍架、掛板、儲物櫃與櫃檯，打造連續的軍械庫；收納的槍枝以 3D 模型陳列，彈藥盒擺在架上。構件分木製、金屬、管架、軍用、收藏五種等級，都能上掛鎖。 | `DogTiredArmory` | 245 | — | — |
