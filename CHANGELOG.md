@@ -4,6 +4,23 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **同一個翻譯鍵被不同 MOD 拿來指不同東西時，改成依你啟用的 MOD 顯示各自的譯文（2,039 個鍵、300 個 MOD）。** 例如 `Base.762Box`：Rain's Firearms 的是 7.62x51 彈藥盒，VFE、Totally's 等槍械包的是 7.62x39mm；以前只能出一個籠統譯名或乾脆不翻，現在遊戲載入時會看你啟用了哪些 MOD，套用對應的繁簡中文。同時啟用好幾個時，以模組順序最後載入的為準，和英文顯示一致。
+  > 技術要點：新人工真相 `sources/owner_variants.json`（衝突鍵 2,039 鍵、4,288 組，每組 owner 各自的 CH／CN）。本包 shared Lua 注入器在載入期寫入 `Translator.BY_NAME`，物品名另 `setDisplayName`、配方名 `overrideTranslationName`、特質與職業說明以 `setDescription` 刷新；JSON 照舊出中性譯名或不出貨，作為認不出 owner 時的退路。JSON-only 邊界依 2026-10-23 使用者裁定修訂，只允許本包兩支 Lua。36 批翻譯、36 批對抗複核，複核修正 192 組（例：GaelGunStore 舊版物品名照 B42 實際載入的 script DisplayName 重譯、Coach Gun 是「馬車霰彈槍」、同 MOD 的雙聯彈匣與 Moodles 狀態名統一）。新 gate：prep 簽名與分組檢查（過時時輸出新分組與新簽名）、build 逐值 token／標記／簡體字與檔名白名單、verify [18] 資料檔與 [19] 本包 Lua、lint 掃各組繁中。特質／職業名稱（8 鍵）與 `Fluid_Name_`、`EC_Energy_` 在遊戲載入時就固定，執行期改不了，照舊只靠 JSON 裁決。
+- **MOD 改寫了原版文字時，啟用該 MOD 才換成對應的中文（632 個鍵、69 個 MOD）。** 例如槍械包把原版子彈改成「Box of .308 Rounds」，現在會顯示「盒裝.308子彈」；Moodle 說明類 MOD 加上的數值與效果、特質說明 MOD 列出的配方清單也有中文了。沒有啟用那個 MOD 的玩家看到的原版文字完全不變，句子裡沒改的部分照本體完全翻譯的譯法。
+  > 技術要點：`owner_variants.json` 的 `kind: vanilla` 1,347 組由 GPT-6 Astra（max）與 Claude 逐組三輪討論審核（使用者 2026-10-23 授權取代逐案核准）：1,227 組雙方同意同一份最終文字才寫 `approved` 出貨；120 組不核准（只差大小寫、標點等無實質差異、最終文字和本體完全翻譯相同、英文和作者說明表矛盾、上游標錯物品）。基準改照本體完全翻譯（LangFor42），點名的特質名照它的特質畫面（使用者同日裁定；lint [A] 的官方名規則對這些組登記帶錨點的例外），技能標籤對齊技能面板。
+- **新增「MOD 文字衝突」提醒與清單。** 啟用的 MOD 之間有同一個翻譯鍵、英文卻不同時，進遊戲會跳一次提醒，列出互相覆蓋的 MOD；同一份清單看過就不再跳。附加包與補丁、MOD 改寫原版文字只列在清單、不跳提醒。在模組選項可以隨時打開清單，也能關掉自動提醒；支援鍵盤（Esc、Enter、方向鍵）與手把。
+  > 技術要點：client Lua 讀 `media/CatModLang/conflicts.tsv`（K 列來自 prep `--owner-report` 生成的 `sources/owner_conflicts.tsv`，V 列為各 MOD 改寫本體鍵數）；介面文字 23 鍵在新人工真相 `sources/pack_ui.json`；看過的清單記在 `Zomboid/Lua/CatModLangFor42_conflicts_seen.txt`。E2E `owner-variants-sp`、`conflict-notice-sp` CH／CN 實機 PASS。
+
+### Changed
+
+- **修正既有譯文 153 項（繁中 142、簡中 24）。** 台灣譯名：Lamborghini 改「藍寶堅尼」（51 項）、Ford Escort 不再用大陸車名「福睿斯」（29 項）、「國際象棋」改「西洋棋」（7 項）；EHR 的陸用語改台灣說法（獻血→捐血、藥物相互作用→藥物交互作用、非甾體→非類固醇、干預→介入、心臟驟停→心跳停止、攝氏度→攝氏）。錯譯：Coach Gun 是「馬車霰彈槍」不是教練、Sacrificial Spear 是「獻祭長矛」、Colt Python 是「蟒蛇」而 Anaconda 是「水蟒」、Brita 的 Swedish AK5-C 是「瑞典AK5C」、Destroyable World Fences 是另一個 MOD 不是「模式」、黑膠唱片機要「連接」揚聲器；混入簡體或 OpenCC 誤轉的「跑尸」「程式碼」；同 MOD 用字統一（修理套件、踩踏力度、鑰匙胚、雙聯彈匣、揹帶，Knox Chronicles 守衛統一叫「華倫·派克」）。簡中：AK-74 被寫成 AK-47、柯爾特王牌不是左輪、EPR 的技能名照官方「电工」。
+  > 技術要點：翻譯條件譯文時譯者與複核者回報的出貨層問題，逐鍵核實 EN、owner 與本體鍵後才改：繁中改 `sources/ch`／own 層，簡中偏離 As1 一律登記 `cn_overrides`（帶 `as1_value`），新有效 CN 值登記 `ch_review_state`，受影響裁決的 ch／cn 錨點同步更新並重生 `OWNER_CONFLICTS.md`。已裁決不出貨或本體同名的鍵不動。
+- **Named skill VHS tapes 的錄影帶技能標籤改成技能面板上的名稱（繁中 30 項、簡中 42 項）。** 繁中「焊接、農耕、砌築、陷阱、打製石器」改為「金工、耕作、石工、誘捕、石器」；簡中另把「搜寻、裁缝」改為「搜索、缝纫」。同系列的原版錄影帶標籤也是同一套名稱。
+
 ## [42.21.0-1.59.0] - 2026-10-22
 
 ### Added

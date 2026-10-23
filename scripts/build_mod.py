@@ -27,6 +27,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 import shutil
 import sys
@@ -66,6 +67,35 @@ MOD_MEDIA = (
 OUT_CH = MOD_MEDIA / "lua" / "shared" / "Translate" / "CH"
 OUT_CN = MOD_MEDIA / "lua" / "shared" / "Translate" / "CN"
 OUT_LUA = MOD_MEDIA / "lua" / "client"
+
+# 條件譯文（`references/variants.md`）：真相檔、本包介面文字、本包兩支 Lua 與資料檔落點。
+OWNER_VARIANTS_JSON = SOURCES / "owner_variants.json"
+PACK_UI_JSON = SOURCES / "pack_ui.json"
+OWNER_CONFLICTS_TSV = SOURCES / "owner_conflicts.tsv"
+PACK_LUA_SRC = SOURCES / "pack_lua"
+OUT_DATA = MOD_MEDIA / "CatModLang"
+OUT_PACK_SHARED = MOD_MEDIA / "lua" / "shared" / "CatModLang"
+OUT_PACK_CLIENT = OUT_LUA / "CatModLang"
+# 注入器寫得進去、且查詢時才讀表的翻譯表（`Translator.BY_NAME` 名；42.21.0 反編譯靜態查證，
+# 2026-10-23）。不在此集合的條目 build fail，不靜默丟。
+VARIANT_FILES = frozenset({
+    "IG_UI", "UI", "ItemName", "Tooltip", "Sandbox", "ContextMenu", "Recipes", "Moodles",
+    "Recorded_Media", "Moveables", "Fluids", "Entity",
+})
+# 載入期就把顯示名快取進 Java 物件、Lua 刷新不到的鍵前綴：寫進資料檔也無效，build fail。
+# Fluid_Name_（FluidDefinitionScript.java:228）、EC_Energy_（EnergyDefinitionScript.java:177）
+# 整個前綴都擋。UI_trait_／UI_prof_ 只擋名稱：名稱是 final（CharacterTraitDefinition.java:35-38、
+# CharacterProfessionDefinition.java:30-33），說明有 public setDescription（同檔 :166、:123），
+# 注入器會刷新，故鍵名以 desc 結尾（不分大小寫）者放行。
+VARIANT_DEAD_PREFIXES = ("Fluid_Name_", "EC_Energy_")
+VARIANT_NAME_ONLY_PREFIXES = ("UI_trait_", "UI_prof_")
+
+
+def variant_key_unrefreshable(key: str) -> bool:
+    """這個鍵的顯示文字在載入期已快取、注入器刷新不到嗎？"""
+    return key.startswith(VARIANT_DEAD_PREFIXES) or (
+        key.startswith(VARIANT_NAME_ONLY_PREFIXES) and not key.lower().endswith("desc"))
+
 
 README = PROJECT_ROOT / "README.md"
 SUPPORTED_MODS_MD = PROJECT_ROOT / "SUPPORTED_MODS.md"
@@ -905,6 +935,233 @@ def apply_own(
 
 
 # ============================================================
+# 本包介面文字與條件譯文（references/variants.md）
+# ============================================================
+def load_pack_ui() -> dict[str, dict[str, dict]]:
+    """載入 pack_ui.json（人工真相 #17；缺失或壞形即 fail）。
+
+    schema 同 own_translations：`entries.<檔名>.<鍵>={en,ch,cn}`；只出貨 ch／cn（介面只在
+    CH、CN 出現），en 是原文說明。
+    """
+    _require_truth_file(PACK_UI_JSON, "本包介面文字")
+    try:
+        entries = load_json(PACK_UI_JSON).get("entries")
+    except (json.JSONDecodeError, AttributeError):
+        entries = None
+    if not isinstance(entries, dict) or any(
+        not isinstance(keys, dict) or any(
+            not isinstance(s, dict)
+            or not all(isinstance(s.get(f), str) and s[f] for f in ("ch", "cn"))
+            for s in keys.values()
+        )
+        for keys in entries.values()
+    ):
+        print("❌ pack_ui.json 形狀壞損（entries.<檔名>.<鍵> 須有非空字串 ch／cn）。", file=sys.stderr)
+        sys.exit(1)
+    return entries
+
+
+def apply_pack_ui(
+    merged_cn: dict[str, dict], merged_ch: dict[str, dict],
+    pack_ui: dict[str, dict[str, dict]], scoped: dict[str, set[str]],
+) -> list[str]:
+    """介面鍵併入合併結果（gate 之前，隨後走 CH 值層／placeholder gate）；回傳錯誤。
+
+    鍵不得已存在（不覆寫任何翻譯鍵）、不得撞本體鍵；值須直寫 formatted() 安全形式。
+    """
+    errors: list[str] = []
+    for fname, keys in sorted(pack_ui.items()):
+        cn_map = merged_cn.setdefault(fname, {})
+        ch_map = merged_ch.setdefault(fname, {})
+        for key, spec in sorted(keys.items()):
+            if key in cn_map or key in ch_map:
+                errors.append(f"  pack_ui {fname}|{key}: 鍵已存在於合併結果（介面鍵不得覆寫翻譯鍵）")
+                continue
+            if key in scoped.get(fname, ()):
+                errors.append(f"  pack_ui {fname}|{key}: 撞本體鍵（不得改寫本體譯文）")
+                continue
+            errors += [
+                f"  pack_ui {fname}|{key}.{f}: 含 formatted() 必炸 % 序列，"
+                f"請改為 {sanitize_format_tokens(spec[f])!r}"
+                for f in ("ch", "cn") if sanitize_format_tokens(spec[f]) != spec[f]
+            ]
+            cn_map[key] = spec["cn"]
+            ch_map[key] = spec["ch"]
+    return errors
+
+
+_FORMAT_FIXER_RE = re.compile(r"%%|%([1-9])")
+
+
+def format_fixer(value: str) -> str:
+    """引擎 JSON 載入期的轉換（`Translator.java:170`、`:909-911`）：`%%` 不變、`%N`→`%N$s`。
+
+    注入器直接寫 `Translator.BY_NAME`、繞過 JSON 載入，資料檔的值要先轉好；寫成 `%1`
+    會在每次查詢記一筆 UnknownFormatConversionException。regex 交替先吃 `%%`，與引擎
+    同一個 left-to-right 單次掃描。
+    """
+    return _FORMAT_FIXER_RE.sub(lambda m: f"%{m.group(1)}$s" if m.group(1) else "%%", value)
+
+
+def load_owner_variants() -> dict[str, dict]:
+    """載入 owner_variants.json（人工真相 #16；缺失或壞形即 fail）。回傳去掉 `_` 欄的 entries。
+
+    環境變數 `MODLANG_OWNER_VARIANTS` 可改指拋棄式測試檔（會印出提示）。形狀規則與 prep
+    共用 `prep_mod_strings._variant_shape_problem`，不另寫第二套。
+    """
+    import prep_mod_strings
+
+    path = Path(os.environ.get(prep_mod_strings.OWNER_VARIANTS_ENV) or OWNER_VARIANTS_JSON)
+    if path != OWNER_VARIANTS_JSON:
+        print(f"  ⚠️ 條件譯文真相檔改指 {path}（環境變數 {prep_mod_strings.OWNER_VARIANTS_ENV}）")
+    _require_truth_file(path, "條件譯文")
+    try:
+        data = load_json(path)
+    except json.JSONDecodeError as exc:
+        print(f"❌ {path.name} 格式錯誤：{exc}", file=sys.stderr)
+        sys.exit(1)
+    entries = data.get("entries") if isinstance(data, dict) else None
+    if not isinstance(entries, dict):
+        print(f"❌ {path.name} 缺 entries 物件。", file=sys.stderr)
+        sys.exit(1)
+    entries = {fk: e for fk, e in entries.items() if not fk.startswith("_")}
+    bad = [f"  {fk}: {why}" for fk, e in entries.items()
+           if (why := prep_mod_strings._variant_shape_problem(fk, e))]
+    if bad:
+        print(f"❌ {path.name} 條目形狀壞損 {len(bad)} 處：", file=sys.stderr)
+        for line in bad:
+            print(line, file=sys.stderr)
+        sys.exit(1)
+    return entries
+
+
+def variant_group_approved(entry: dict, group: dict) -> bool:
+    """出貨規則：kind=conflict 一律出貨；kind=vanilla 逐 group 核准（使用者逐 MOD 核准）——
+    條目層級 `approved` 非空＝全部 group 都核准，否則看該 group 自己的 `approved`。"""
+    return entry["kind"] == "conflict" or any(
+        str(x.get("approved") or "").strip() for x in (entry, group))
+
+
+def variant_shipped_owners(entry: dict) -> tuple[dict[str, dict | None], bool]:
+    """出貨的 owner → 所屬 group（核准者）或 None（寫空值列：勝出時注入器不寫、維持 JSON／本體）。
+
+    沒有任何核准 group 的條目整鍵不出貨（回空 dict）；有核准 group 時，未核准 group 的
+    owners 與 `skip_owners` 都寫空值列。回 (對映, 是否有核准 group)。
+    """
+    if not any(variant_group_approved(entry, g) for g in entry["groups"]):
+        return {}, False
+    out: dict[str, dict | None] = {
+        o: (g if variant_group_approved(entry, g) else None)
+        for g in entry["groups"] for o in g["owners"]}
+    out.update({o: None for o in entry.get("skip_owners", [])})
+    return out, True
+
+
+def variant_gate(
+    entries: dict[str, dict], scoped: dict[str, set[str]]
+) -> tuple[list[str], dict[str, list[tuple[str, ...]]], int]:
+    """條件譯文逐值 gate＋出貨列。回 (錯誤, {"CH"／"CN": 排序後的列}, 已核准本體鍵數)。
+
+    gate 對全部條目跑（含未核准的本體鍵）：非空、formatted() 安全、format token 與 ASCII
+    標記多重集合＝該組 EN、CH 無簡體專用字、檔名在 VARIANT_FILES、鍵的顯示文字刷新得到
+    （`variant_key_unrefreshable`）。列＝(檔名, 鍵, wid, root, formatFixer 後的值)；本體鍵
+    依 `variant_shipped_owners`：未核准 group 的 owners 與 skip_owners 各一列空值（該 owner
+    勝出時不寫入），沒有任何核准 group 的本體鍵整鍵不出貨。已核准本體鍵數＝至少一組核准的鍵。
+    """
+    errors: list[str] = []
+    rows: dict[str, list[tuple[str, ...]]] = {"CH": [], "CN": []}
+    approved = 0
+    for fk, e in sorted(entries.items()):
+        fname, _, key = fk.partition("|")
+        if fname not in VARIANT_FILES:
+            errors.append(f"  {fk}: 檔名 {fname} 不在 VARIANT_FILES（注入器寫不進去）")
+            continue
+        if variant_key_unrefreshable(key):
+            errors.append(f"  {fk}: 這個鍵的顯示文字在載入期已快取，注入器刷新不到（寫了也無效）")
+            continue
+        is_vanilla = key in scoped.get(f"{fname}.json", ())
+        if e["kind"] == "conflict" and is_vanilla:
+            errors.append(f"  {fk}: 是本體鍵，須改 kind=vanilla 並逐案核准")
+            continue
+        if e["kind"] == "vanilla" and not is_vanilla:
+            errors.append(f"  {fk}: kind=vanilla 但不在 vanilla_keys.json 的 scoped 基準內")
+            continue
+        for g in e["groups"]:
+            want = token_multiset(sanitize_format_tokens(g["en"]))
+            for lang in rows:
+                val = g[lang.lower()]
+                tag = f"  {fk} [{lang}] {g['owners'][0]}"
+                if not val:
+                    errors.append(f"{tag}: 空值")
+                elif sanitize_format_tokens(val) != val:
+                    errors.append(f"{tag}: 含 formatted() 必炸 % 序列，請改為 "
+                                  f"{sanitize_format_tokens(val)!r}")
+                elif (got := token_multiset(val)) != want:
+                    errors.append(f"{tag}: format token／標記與該組 EN 不符 "
+                                  f"EN多={dict(want - got)} 譯文多={dict(got - want)}｜{val[:40]!r}")
+                if lang == "CH" and (bad := sorted(set(val) & _SIMPLIFIED_ONLY)):
+                    errors.append(f"{tag}: 含簡體專用字「{''.join(bad)}」｜{val[:40]!r}")
+        shipped, any_ok = variant_shipped_owners(e)
+        approved += any_ok and e["kind"] == "vanilla"
+        for lang, out in rows.items():
+            out += [(fname, key, *o.split("/", 1),
+                     format_fixer(g[lang.lower()]) if g is not None else "")
+                    for o, g in shipped.items()]
+    for out in rows.values():
+        out.sort()
+    return errors, rows, approved
+
+
+VARIANT_TSV_HEADER = (
+    "# Generated by scripts/build_mod.py build from sources/owner_variants.json; do not edit."
+    " file<TAB>key<TAB>wid<TAB>root<TAB>value (formatFixer applied; empty value = winner keeps"
+    " the JSON value; fields escape \\\\ \\t \\n \\r)"
+)
+CONFLICTS_TSV_HEADER = (
+    "# Generated by scripts/build_mod.py build; do not edit. K rows copied from"
+    " sources/owner_conflicts.tsv; V<TAB>wid<TAB>vanilla keys the MOD overrides (lower bound)"
+    "<TAB>of those, keys with shipped variants"
+)
+
+
+def render_variant_tsv(rows: list[tuple[str, ...]]) -> str:
+    import prep_mod_strings
+
+    return "\n".join([VARIANT_TSV_HEADER, *(
+        "\t".join(map(prep_mod_strings.tsv_escape, r)) for r in rows)]) + "\n"
+
+
+def render_conflicts_tsv(entries: dict[str, dict]) -> str:
+    """conflicts.tsv＝照抄 `sources/owner_conflicts.tsv` 的 K 列，再附 V 列（每個覆寫本體的 wid）。"""
+    if not OWNER_CONFLICTS_TSV.is_file():
+        print(f"❌ 生成物缺失：{OWNER_CONFLICTS_TSV.name}"
+              "（先跑 uv run scripts/prep_mod_strings.py --owner-report --out <tmp>）", file=sys.stderr)
+        sys.exit(1)
+    k_rows = [line for line in OWNER_CONFLICTS_TSV.read_bytes().decode("utf-8").split("\n")
+              if line.startswith("K\t")]
+    covered: Counter = Counter()
+    for e in entries.values():
+        if e["kind"] == "vanilla":
+            shipped, _ = variant_shipped_owners(e)
+            skip = set(e.get("skip_owners", []))
+            covered.update({o.split("/", 1)[0] for o, g in shipped.items()
+                            if g is not None or o in skip})
+    v_rows = [f"V\t{wid}\t{n}\t{covered[wid]}"
+              for wid, n in sorted(vanilla_override_counts().items()) if n]
+    return "\n".join([CONFLICTS_TSV_HEADER, *k_rows, *v_rows]) + "\n"
+
+
+def plan_pack_lua() -> dict[Path, list[Path]]:
+    """本包自己的 Lua：`sources/pack_lua/{shared,client}/*.lua` → dist 的 `CatModLang/` 子目錄。"""
+    if not PACK_LUA_SRC.is_dir():
+        print(f"❌ 人工真相目錄缺失：{PACK_LUA_SRC.relative_to(PROJECT_ROOT)}（本包 Lua）。",
+              file=sys.stderr)
+        sys.exit(1)
+    return {OUT_PACK_SHARED: sorted((PACK_LUA_SRC / "shared").glob("*.lua")),
+            OUT_PACK_CLIENT: sorted((PACK_LUA_SRC / "client").glob("*.lua"))}
+
+
+# ============================================================
 # 來源收集與合併（值感知去重）
 # ============================================================
 def collect_source_cn_dirs() -> list[Path]:
@@ -1314,9 +1571,19 @@ def cmd_build() -> int:
     report_own_anchor_gaps(own)
     report_stale_as1_keys()
 
+    # 本包介面文字：gate 之前併入（走 CH 值層／placeholder gate），不進 own 錨點報告
+    scoped, _ = load_vanilla_scoped()
+    pack_ui_errors = apply_pack_ui(merged_cn, merged_ch, load_pack_ui(), scoped)
+
     # CH 值層 gate 須在 apply_own 之後：own_translations 的 ch 也走這道簡繁不變式檢查
     ch_value_errors = ch_value_gate(merged_cn, merged_ch)
     errors, warnings = placeholder_gate(merged_cn, merged_ch)
+
+    # 條件譯文：逐值 gate＋出貨列（資料檔在全部 gate 通過後才寫）
+    variants = load_owner_variants()
+    variant_errors, variant_rows, n_variant_vanilla = variant_gate(variants, scoped)
+    conflicts_text = render_conflicts_tsv(variants)
+    pack_lua_plan = plan_pack_lua()
 
     # Lua 複製計畫先算：basename 衝突屬硬錯，須在清空/寫出前先攔
     lua_plan, lua_conflicts = plan_lua()
@@ -1349,7 +1616,16 @@ def cmd_build() -> int:
         print(f"\n❌ vanilla keep 錨點失效 {len(keep_anchor_errors)} 處：")
         for e in keep_anchor_errors:
             print(e)
-    if conflicts or ch_value_errors or fmt_errors or errors or lua_conflicts or keep_anchor_errors:
+    if (conflicts or ch_value_errors or fmt_errors or errors or lua_conflicts
+            or keep_anchor_errors or pack_ui_errors or variant_errors):
+        for label, errs in (("本包介面文字（pack_ui.json）", pack_ui_errors),
+                            ("條件譯文（owner_variants.json）", variant_errors)):
+            if errs:
+                print(f"\n❌ {label} gate {len(errs)} 處：")
+                for e in errs[:50]:
+                    print(e)
+                if len(errs) > 50:
+                    print(f"  ...（還有 {len(errs) - 50} 處）")
         if conflicts:
             print(f"\n❌ 合併衝突（同 (檔,鍵) 異值）{len(conflicts)} 處：")
             for c in conflicts:
@@ -1388,10 +1664,9 @@ def cmd_build() -> int:
         return 1
 
     # 全部 gate 通過 → 精確鏡像：先清空本 build 擁有的輸出區再寫出
-    # （只清 CN/CH 與 client/；勿碰 media/textures/ 靜態資產）
-    clear_output_dir(OUT_CN)
-    clear_output_dir(OUT_CH)
-    clear_output_dir(OUT_LUA)
+    # （只清 CN/CH、client/、本包資料檔與 shared/CatModLang；勿碰 media/textures/ 靜態資產）
+    for d in (OUT_CN, OUT_CH, OUT_LUA, OUT_DATA, OUT_PACK_SHARED):
+        clear_output_dir(d)
 
     for fname, fmap in merged_cn.items():
         write_json(OUT_CN / fname, fmap)
@@ -1400,8 +1675,20 @@ def cmd_build() -> int:
     write_text(OUT_CH / "language.txt", LANGUAGE_TXT["CH"])
     write_text(OUT_CN / "language.txt", LANGUAGE_TXT["CN"])
     lua_count = write_lua(lua_plan)
+    for lang, rows in variant_rows.items():
+        write_text(OUT_DATA / f"variants_{lang}.tsv", render_variant_tsv(rows))
+    write_text(OUT_DATA / "conflicts.tsv", conflicts_text)
+    for dest, srcs in pack_lua_plan.items():
+        for src in srcs:
+            dest.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(src, dest / src.name)
+    n_pack_lua = sum(len(s) for s in pack_lua_plan.values())
 
-    print(f"\n✅ 已寫出 CN/CH 各 {len(merged_cn)} 檔、language.txt ×2、Lua {lua_count} 檔")
+    print(f"\n✅ 已寫出 CN/CH 各 {len(merged_cn)} 檔、language.txt ×2、Lua {lua_count} 檔、"
+          f"本包 Lua {n_pack_lua} 檔")
+    print(f"  依啟用 MOD 套用：{len({r[:2] for r in variant_rows['CH']})} 鍵、"
+          f"{len(variant_rows['CH'])} 筆 owner 譯文（本體鍵 {n_variant_vanilla} 鍵已核准）"
+          "→ variants_CH.tsv、variants_CN.tsv")
 
     # 未消費人工真相報告（非阻斷，供檢視）
     report_unused(exceptions, used_exc, cn_overrides, used_cn_ov)

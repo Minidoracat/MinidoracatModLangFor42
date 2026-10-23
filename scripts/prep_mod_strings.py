@@ -25,6 +25,10 @@ per-mod `extractor_schema >= 9` 才有 module 可精確比對；不可判定者�
 條目帶 `{en, has_json_en, en_source}`（見 `annotate`）：`has_json_en` 決定「抑制後這個
 owner 的玩家看到自己 mod 的英文，還是字面鍵名」，是 translate／unship 裁決的承重事實。
 
+`--check-decisions`（`--owner-report*` 隱含）另建 vanilla-inclusive census `census_v`（同一套
+收斂、不扣本體鍵），驗 `sources/owner_variants.json`（條件譯文）的簽名與 owner 分組；
+`--owner-report` 另寫 `sources/owner_conflicts.tsv`（census_v 的衝突鍵，衝突提醒資料）。
+
 有效性判準見 tracker.resolve_effective_branches：`common` ＋唯一最佳版本夾。
 此處**只濾分支不濾副檔名**——`_EN.txt` 的鍵在執行期沒有 EN 定義，但我方譯文
 照樣生效（Translator 按鍵查譯文），把它們算進缺口才對。
@@ -303,6 +307,156 @@ def render_owner_report(decided: dict, census: dict[str, dict[str, str]],
     return "\n".join(out) + "\n"
 
 
+# 條件譯文真相檔（人工真相 #16，`references/variants.md`）。環境變數可改指拋棄式測試檔；
+# 路徑在執行期由 ROOT 算，測試 harness 改指 ROOT 時才不會穿透讀到真 repo。
+OWNER_VARIANTS_ENV = "MODLANG_OWNER_VARIANTS"
+
+
+def owner_variants_path(root: Path) -> Path:
+    return Path(os.environ.get(OWNER_VARIANTS_ENV) or root / "sources/owner_variants.json")
+
+
+def _variant_shape_problem(fk: str, e) -> str | None:
+    """條目結構不合 schema 的理由，合格則 None（與 census 無關的部分）。"""
+    fname, sep, key = fk.partition("|")
+    if not (sep and fname and key) or not isinstance(e, dict):
+        return "條目鍵或形狀壞損"
+    kind = e.get("kind")
+    if kind not in ("conflict", "vanilla"):
+        return f"未知 kind={kind!r}（只接受 conflict／vanilla）"
+    if not isinstance(e.get("signature"), str) or not e["signature"]:
+        return "缺 signature"
+    groups = e.get("groups")
+    if not isinstance(groups, list) or not groups:
+        return "groups 須為非空清單"
+    seen: list[str] = []
+    for g in groups:
+        if not isinstance(g, dict) or not isinstance(g.get("owners"), list) or not g["owners"]:
+            return "每個 group 須有非空 owners 清單"
+        if not all(isinstance(g.get(f), str) for f in ("en", "ch", "cn")):
+            return "每個 group 須有字串 en／ch／cn"
+        if "approved" in g and (kind != "vanilla" or not isinstance(g["approved"], str)):
+            return ("group 的 approved 只限 kind=vanilla，且須為字串"
+                    "（逐 MOD 核准本體鍵條件譯文的紀錄）")
+        seen += g["owners"]
+    if kind == "vanilla":
+        skip = e.get("skip_owners", [])
+        if not isinstance(e.get("vanilla_en"), str) or not isinstance(skip, list):
+            return "kind=vanilla 須有字串 vanilla_en 與 skip_owners 清單"
+        if not isinstance(e.get("approved", ""), str):
+            return "approved 須為字串"
+        seen += skip
+    elif any(f in e for f in ("skip_owners", "vanilla_en", "approved")):
+        return "kind=conflict 不得有 skip_owners／vanilla_en／approved（本體鍵改用 kind=vanilla）"
+    if not all(isinstance(o, str) and "/" in o for o in seen):
+        return "owner 須為 `<wid>/<root>` 字串"
+    if len(set(seen)) != len(seen):
+        return "同一 owner 出現在多個 group／skip_owners"
+    return None
+
+
+def variant_grouping(owners: dict[str, str], vanilla_en: str | None
+                     ) -> tuple[list[dict], list[str]]:
+    """census owner 的條件譯文分組（唯一實作：檢查、`_stale_variants` 建議、K 列組號共用）。
+
+    同 `norm_en` 同組；組序依排序後 owner 先見順序，組內 owner 排序，`en` 取組內第一個
+    owner 的原值。給 `vanilla_en` 時，英文與本體相同的 owner 拆成 `skip_owners`。
+    回 ([{"owners", "en"}], skip_owners)。
+    """
+    by: dict[str, list[str]] = {}
+    for o in sorted(owners):
+        by.setdefault(norm_en(owners[o]), []).append(o)
+    vn = norm_en(vanilla_en) if vanilla_en is not None else None
+    return ([{"owners": os_, "en": owners[os_[0]]} for n, os_ in by.items() if n != vn],
+            by.get(vn, []) if vn is not None else [])
+
+
+def check_owner_variants(entries: dict, census_v: dict[str, dict[str, str]],
+                         scoped: dict, blind: set[str]
+                         ) -> tuple[list[str], list[str], dict[str, dict]]:
+    """驗 `owner_variants.json` 對 vanilla-inclusive census。
+
+    回 (`_unchecked`, `_stale_decisions`, `_stale_variants`)：形狀壞損與 census 盲區列第一個；
+    簽名過時與分組和 census 不符列第二個（需人工重新裁決），並在第三個附重新分組的建議
+    （新簽名、`variant_grouping` 的分組，譯文欄留給維護者重譯）。
+    """
+    bad: list[str] = []
+    stale: list[str] = []
+    proposals: dict[str, dict] = {}
+    for fk, e in entries.items():
+        if fk.startswith("_"):
+            continue
+        if why := _variant_shape_problem(fk, e):
+            bad.append(f"{fk}：owner_variants 條目形狀壞損（{why}）")
+            continue
+        if fk in blind:
+            bad.append(f"{fk}：相關 owner 鏡像缺值或上游格式壞損，census 不可判定"
+                       "（先修鏡像，不得據此改條件譯文）")
+            continue
+        owners = census_v.get(fk, {})
+        fname, _, key = fk.partition("|")
+        in_vanilla = key in set(scoped.get(f"{fname}.json", ()))
+        vanilla_en = e.get("vanilla_en") if in_vanilla else None
+        groups, skip_want = variant_grouping(owners, vanilla_en)
+        problems: list[str] = []
+        if e["signature"] != census_signature(owners):
+            message = f"{fk}：條件譯文過時（owner 或上游英文變了）"
+        else:
+            skip = e.get("skip_owners", [])
+            listed = {o for g in e["groups"] for o in g["owners"]} | set(skip)
+            if listed != set(owners):
+                problems.append(f"owner 集合不符（多 {sorted(listed - set(owners))}、"
+                                f"少 {sorted(set(owners) - listed)}）")
+            elif (sorted(sorted(g["owners"]) for g in e["groups"])
+                  != sorted(g["owners"] for g in groups) or sorted(skip) != skip_want):
+                problems.append("owner 分組與英文異同不符（同英文同組；本體鍵與本體同英文者列"
+                                " skip_owners）")
+            for g in e["groups"]:
+                gn = norm_en(g["en"])
+                problems += [f"{o} 的英文與所屬 group 的 en 不同" for o in g["owners"]
+                             if o in owners and norm_en(owners[o]) != gn]
+            if e["kind"] == "conflict":
+                if in_vanilla:
+                    problems.append("是本體鍵，須改 kind=vanilla 並逐案核准")
+                if len({norm_en(v) for v in owners.values()}) < 2:
+                    problems.append("census 已無英文衝突，條件譯文應退役")
+            elif not in_vanilla:
+                problems.append("不在 vanilla_keys.json 的 scoped 基準內，不是本體鍵")
+            if not problems:
+                continue
+            message = f"{fk}：條件譯文分組與 census 不符（{'；'.join(problems)}）"
+        stale.append(message)
+        proposals[fk] = {"kind": "vanilla" if in_vanilla else "conflict",
+                         "signature": census_signature(owners), "vanilla_en": vanilla_en,
+                         "groups": groups, "skip_owners": skip_want, "reason": message}
+    return bad, stale, proposals
+
+
+def tsv_escape(s: str) -> str:
+    """資料檔欄位跳脫（注入器逆轉）：`\\`→`\\\\`、TAB→`\\t`、LF→`\\n`、CR→`\\r`，反斜線先轉。"""
+    return s.replace("\\", "\\\\").replace("\t", "\\t").replace("\n", "\\n").replace("\r", "\\r")
+
+
+OWNER_CONFLICTS_TSV_HEADER = (
+    "# Generated by scripts/prep_mod_strings.py --owner-report; do not edit.\n"
+    "# K<TAB>file|key<TAB>group:wid/root ... (same group number = same English;"
+    " numbered by sorted owner order; fields escape \\\\ \\t \\n \\r)"
+)
+
+
+def render_owner_conflicts_tsv(census_v: dict[str, dict[str, str]]) -> str:
+    """`sources/owner_conflicts.tsv`：census_v 中 ≥2 種 `norm_en` 的鍵，一鍵一列 K。"""
+    rows = [OWNER_CONFLICTS_TSV_HEADER]
+    for fk in sorted(census_v):
+        groups, _ = variant_grouping(census_v[fk], None)
+        if len(groups) < 2:
+            continue
+        gid = {o: i for i, g in enumerate(groups, 1) for o in g["owners"]}
+        rows.append("\t".join(["K", tsv_escape(fk),
+                               *(f"{gid[o]}:{tsv_escape(o)}" for o in sorted(census_v[fk]))]))
+    return "\n".join(rows) + "\n"
+
+
 def converge_owner(recs: dict, mirror: dict, eff: dict, *, vanilla: set[str],
                    dn_gap: dict[str, set[str]],
                    src: dict[tuple[str, str], str] | None = None
@@ -449,6 +603,9 @@ def main() -> int:
     # **刻意不併進 census**：`census_signature()` 對 census 的值做 hash，混進來源就會讓
     # 全部既有裁決的 signature 一次失效、382 條台帳全部要重簽。
     en_src: dict[str, dict[str, str]] = collections.defaultdict(dict)
+    # 只在 `--check-decisions` 建（條件譯文驗證與 `owner_conflicts.tsv` 用），形狀同 census。
+    census_v: dict[str, dict[str, str]] = collections.defaultdict(dict)
+    blind_v: set[str] = set()                 # census_v 的盲區身分（鏡像缺值／格式壞損）
     batch_owners: set[str] = set()            # 本批 wid 底下的 owner（決定 blocking 範圍）
     gap: dict[str, tuple[str, str]] = {}      # "<file>|<key>" -> (en, wid)
 
@@ -626,6 +783,27 @@ def main() -> int:
         for (owner, fk), en in cen.items():
             census[fk][f"{wid}/{owner}"] = en
             en_src[fk][f"{wid}/{owner}"] = cen_src[(owner, fk)]
+        if args.check_decisions:
+            # **vanilla-inclusive census `census_v`**（條件譯文的 owner universe）：同一套
+            # 收斂，只是不扣本體鍵——本體同名鍵的 MOD 英文也要能逐 owner 套用。既有 census
+            # 與裁決一字不動（它的 signature 錨著 382 條台帳）。
+            stats_v = {o: tracker._item_dn_stats(schema, owners_dn.get(o, set()),
+                                                 owners_txt.get(o, {}), set(), set(),
+                                                 len(owners_item.get(o, set())))
+                       for o in stats}
+            for (owner, fk), en in converge_owner(
+                    recs, mirror, eff, vanilla=set(),
+                    dn_gap={o: st_v["gap"] for o, st_v in stats_v.items()}).items():
+                census_v[fk][f"{wid}/{owner}"] = en
+            # 盲區同 census 的 `blind_ids`，但不扣本體鍵（條件譯文涵蓋它們）。
+            blind_v |= {f"ItemName|{k}" for st_v in stats_v.values()
+                        for k in st_v["blind_keys"]} | {
+                f"{tgt}|{key}"
+                for rid in recs if rid.startswith("translate_en|") and branch_ok(rid, eff)
+                and rid not in mirror
+                for relpath, key in [rid.partition("|")[2].partition("|")[::2]]
+                for tgt in [target_file(os.path.basename(relpath).rsplit(".", 1)[0], key)]
+                if tgt}
         if wid not in args.wids:
             # **非本批 wid 的 census 盲區也要 fail-closed**：`load_wid` 成功不代表這個 wid
             # 的每個 owner 都進了 census——落入 `mirror` 缺值／`malformed` 桶的鍵不進
@@ -892,13 +1070,38 @@ def main() -> int:
         # 先 `continue`，台帳永遠不生效，已裁的 66 鍵會永久留在 708 待辦裡。
         # 合格者已在上方 `continue`；未裁決／裁決過時者才依是否涉及本批 owner 分流。
         (conflicts if set(owners) & batch_owners else conflicts_other)[fk] = owners
+    # 條件譯文真相檔（`--check-decisions` 才驗，`--owner-report*` 隱含）。缺檔＝空（同裁決
+    # 台帳的漸進登記；出貨端 build 另以缺檔即 fail 把關）；壞損列 `_unchecked`、不 raise。
+    variant_keys: set[str] = set()
+    stale_variants: dict[str, dict] = {}
+    if args.check_decisions:
+        var_p = owner_variants_path(ROOT)
+        var_entries: dict = {}
+        if var_p.is_file():
+            try:
+                raw_var = _jload(var_p)
+            except (ValueError, OSError) as exc:
+                raw_var = exc
+            cand = raw_var.get("entries") if isinstance(raw_var, dict) else None
+            if isinstance(cand, dict):
+                var_entries = cand
+            else:
+                unchecked.append(f"{var_p.name} 無法解析或 entries 形狀壞損"
+                                 "——條件譯文全部未驗")
+        var_bad, var_stale, stale_variants = check_owner_variants(
+            var_entries, census_v, vjson["scoped_keys"], blind_v)
+        unchecked += var_bad
+        stale_dec += var_stale
+        redo += var_stale
+        variant_keys = {k for k in var_entries if not k.startswith("_")}
     # **`batch_keys` 由 census 反推**：census 不扣 shipped，才涵蓋「本批 owner 的鍵已出貨、
     # 而被跳過的 wid 是新 owner」這個形狀——用扣過 shipped 的 `local`／`gap` 取交集會漏掉。
     batch_keys = {fk for fk, owners in census.items() if set(owners) & batch_owners}
     if args.check_decisions:
         # check mode 沒有 batch_owners；把**所有 decision key**當成必驗 identity，讓下方
         # skipped 交集把相關 owner 的鏡像／state 盲區轉成 non-zero，避免台帳假綠。
-        batch_keys |= set(decided)
+        # 條件譯文鍵同理（census_v 少一個 owner＝分組與簽名都不可信）。
+        batch_keys |= set(decided) | variant_keys
     # 被跳過的 wid 若與本批身分集有交集，它可能就是另一個 owner——census 少了它，衝突
     # 判定即為假陰性。故列 `_unchecked` 讓退出碼與消費端都攔住。
     for wid, why, ids in skipped:
@@ -947,6 +1150,8 @@ def main() -> int:
         json.dump({"strings": rows, "_gap": {k: v[0] for k, v in gap.items()},
                    "_unchecked": unchecked, "_undecidable": undecidable,
                    "_stale_decisions": redo,
+                   # 條件譯文過時／分組不符者的重新分組建議（新簽名＋分組，譯文欄留給維護者重譯）
+                   "_stale_variants": stale_variants,
                    # 三個衝突欄位都帶 `has_json_en`／`en_source` 加註（見 `annotate`）：
                    # 裁決 translate vs unship 全靠它，先前得逐一人工翻 `sources/en/<wid>.json`
                    # 的 rid 路徑，是最容易判錯的環節（#245 項目 1）。
@@ -998,17 +1203,21 @@ def main() -> int:
         page = render_owner_report(decided, census, en_src,
                                    pending={**conflicts_other, **conflicts},
                                    shipped_ch=shipped_ch)
-        old = (OWNER_CONFLICTS_MD.read_text(encoding="utf-8")
-               if OWNER_CONFLICTS_MD.exists() else None)
-        if page == old:
-            print(f"  ℹ️ {OWNER_CONFLICTS_MD.name} 內容未變動")
-        elif args.owner_report_check:
-            report_drift = True
-            print(f"❌ {OWNER_CONFLICTS_MD.name} 與來源不同步"
-                  "（需重跑 --owner-report）", file=sys.stderr)
-        else:
-            OWNER_CONFLICTS_MD.write_text(page, encoding="utf-8", newline="\n")
-            print(f"  ✅ 已更新 {OWNER_CONFLICTS_MD.name}")
+        # `owner_conflicts.tsv`（注入器旁的衝突清單資料，build 照抄進 conflicts.tsv）與
+        # 報告同一個生成時機；路徑在執行期由 ROOT 算（測試 harness 改指 ROOT）。
+        for path, text in ((OWNER_CONFLICTS_MD, page),
+                           (ROOT / "sources" / "owner_conflicts.tsv",
+                            render_owner_conflicts_tsv(census_v))):
+            old = path.read_bytes().decode("utf-8") if path.exists() else None
+            if text == old:
+                print(f"  ℹ️ {path.name} 內容未變動")
+            elif args.owner_report_check:
+                report_drift = True
+                print(f"❌ {path.name} 與來源不同步"
+                      "（需重跑 --owner-report）", file=sys.stderr)
+            else:
+                path.write_text(text, encoding="utf-8", newline="\n")
+                print(f"  ✅ 已更新 {path.name}")
     if unchecked or conflicts or report_drift or (args.check_decisions and stale_dec):
         # **非零退出**：wid 級跳過會讓 artifact 長得跟「這個 mod 沒缺口」一模一樣，
         # 下游 apply_wf_result 只讀 strings/_gap，於是整個 mod 的物品名再次隱形（#221）。

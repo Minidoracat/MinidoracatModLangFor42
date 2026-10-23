@@ -1,0 +1,124 @@
+{
+ "_comment": "本包自身介面文字（衝突提醒、衝突清單、選項頁）。人工真相；build 併入出貨 CH／CN JSON。介面只在 CH、CN 語言出現，所以只出貨 ch／cn；en 是原文說明，不出貨。標點照 PZ 中文慣例用半形；CN 引號用“”。見 .claude/skills/modlang-dev/references/variants.md。",
+ "entries": {
+  "UI.json": {
+   "UI_CatModLang_Options": {
+    "en": "Chinese MOD Translations",
+    "ch": "繁體簡體模組翻譯",
+    "cn": "繁体简体模组翻译"
+   },
+   "UI_CatModLang_NotifyOption": {
+    "en": "Remind me about new MOD text conflicts",
+    "ch": "有新的 MOD 文字衝突時提醒我",
+    "cn": "出现新的 MOD 文本冲突时提醒我"
+   },
+   "UI_CatModLang_OpenList": {
+    "en": "View MOD text conflicts",
+    "ch": "查看 MOD 文字衝突",
+    "cn": "查看 MOD 文本冲突"
+   }
+  },
+  "IG_UI.json": {
+   "IGUI_CatModLang_NoticeTitle": {
+    "en": "MOD text conflicts found",
+    "ch": "發現 MOD 文字衝突",
+    "cn": "发现 MOD 文本冲突"
+   },
+   "IGUI_CatModLang_NoticeBody": {
+    "en": "Among your enabled MODs, %1 pairs overwrite each other's text. The game only shows the one loaded later, in English too.",
+    "ch": "你啟用的 MOD 中, 有 %1 組會互相覆蓋文字. 遊戲只顯示較晚載入的那一份, 英文也一樣.",
+    "cn": "你启用的 MOD 中, 有 %1 组会互相覆盖文本. 游戏只显示较晚加载的那一份, 英文也一样."
+   },
+   "IGUI_CatModLang_NoticeMore": {
+    "en": "%1 more pairs. Press View list to see them all.",
+    "ch": "另外還有 %1 組, 按「查看清單」看全部.",
+    "cn": "另外还有 %1 组, 点击“查看列表”查看全部."
+   },
+   "IGUI_CatModLang_NoticeHint": {
+    "en": "If both are old and new versions of the same MOD, keep only one. You can reopen the list from the %2 page in %1.",
+    "ch": "如果是同一個 MOD 的新舊版本, 只留一個即可. 之後可以在「%1」的「%2」頁再打開清單.",
+    "cn": "如果是同一个 MOD 的新旧版本, 只保留一个即可. 之后可以在“%1”的“%2”页面再次打开列表."
+   },
+   "IGUI_CatModLang_ViewList": {
+    "en": "View list",
+    "ch": "查看清單",
+    "cn": "查看列表"
+   },
+   "IGUI_CatModLang_Close": {
+    "en": "Close",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "IGUI_CatModLang_ListTitle": {
+    "en": "MOD text conflicts",
+    "ch": "MOD 文字衝突",
+    "cn": "MOD 文本冲突"
+   },
+   "IGUI_CatModLang_ListIntro": {
+    "en": "Based on the MODs currently enabled.",
+    "ch": "依目前啟用的 MOD 整理.",
+    "cn": "按当前启用的 MOD 整理."
+   },
+   "IGUI_CatModLang_GroupOverwrite": {
+    "en": "Different MODs overwriting each other (%1 pairs)",
+    "ch": "不同 MOD 互相覆蓋 (%1 組)",
+    "cn": "不同 MOD 互相覆盖 (%1 组)"
+   },
+   "IGUI_CatModLang_GroupOverwriteDesc": {
+    "en": "The game only shows the one loaded later, in English too. If both are old and new versions of the same MOD, keep only one.",
+    "ch": "遊戲只顯示較晚載入的那一份, 英文也一樣. 如果是同一個 MOD 的新舊版本, 只留一個即可.",
+    "cn": "游戏只显示较晚加载的那一份, 英文也一样. 如果是同一个 MOD 的新旧版本, 只保留一个即可."
+   },
+   "IGUI_CatModLang_GroupAddon": {
+    "en": "Add-ons and patches (%1 pairs)",
+    "ch": "附加包與補丁 (%1 組)",
+    "cn": "附加包与补丁 (%1 组)"
+   },
+   "IGUI_CatModLang_GroupAddonDesc": {
+    "en": "They are meant to rewrite the main MOD's text. Nothing to do.",
+    "ch": "它們本來就會改寫主 MOD 的文字, 不用處理.",
+    "cn": "它们本来就会改写主 MOD 的文本, 无需处理."
+   },
+   "IGUI_CatModLang_GroupVanilla": {
+    "en": "MODs rewriting vanilla text (%1)",
+    "ch": "MOD 改寫原版文字 (%1 個)",
+    "cn": "MOD 改写原版文本 (%1 个)"
+   },
+   "IGUI_CatModLang_GroupVanillaDesc": {
+    "en": "This pack only provides the MOD's version where it was approved. Elsewhere you usually see the vanilla Chinese text.",
+    "ch": "本包只為核准過的地方提供 MOD 版譯文, 其他地方通常顯示原版中文.",
+    "cn": "本包只为审核通过的部分提供 MOD 版译文, 其他部分通常显示原版中文."
+   },
+   "IGUI_CatModLang_Count": {
+    "en": "%1 texts",
+    "ch": "%1 處文字",
+    "cn": "%1 处文本"
+   },
+   "IGUI_CatModLang_CountAtLeast": {
+    "en": "At least %1 texts",
+    "ch": "至少 %1 處文字",
+    "cn": "至少 %1 处文本"
+   },
+   "IGUI_CatModLang_VanillaCovered": {
+    "en": "At least %1 texts, %2 with the MOD's version",
+    "ch": "至少 %1 處文字, 其中 %2 處已有 MOD 版譯文",
+    "cn": "至少 %1 处文本, 其中 %2 处已有 MOD 版译文"
+   },
+   "IGUI_CatModLang_Rewrites": {
+    "en": "Rewrites %2 texts of %1",
+    "ch": "改寫 %1 的 %2 處文字",
+    "cn": "改写 %1 的 %2 处文本"
+   },
+   "IGUI_CatModLang_Showing": {
+    "en": "(shown now)",
+    "ch": "(目前顯示)",
+    "cn": "(当前显示)"
+   },
+   "IGUI_CatModLang_Empty": {
+    "en": "The enabled MODs do not overwrite each other's text.",
+    "ch": "目前啟用的 MOD 沒有互相覆蓋的文字.",
+    "cn": "当前启用的 MOD 没有互相覆盖的文本."
+   }
+  }
+ }
+}

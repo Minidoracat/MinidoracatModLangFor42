@@ -163,8 +163,8 @@
     "ItemName|Base.SlingAalt": {
       "action": "translate",
       "signature": "deb246b2ff2b62f5",
-      "reason": "四個 owner 是同一組背帶 item 的本體與換皮 addon，不是不同實體：NoirRifleSlings（含 4 版 root）在 Sling_items.txt 定義 Base.SlingA/SlingAalt/SlingAalt2/SlingAalt3='Rifle Sling'，Dark Weapon Slings 與 Invisible Weapon Slings 則對同一組 key 覆寫 ItemName='Weapon Sling'，且共用同一套 ContextMenu_SlingStyle1~4 與 IGUI_HotbarAttachment_Sling* 鍵，證明是同一功能系統的貼圖變體。'Weapon Sling' 是 'Rifle Sling' 的上位詞，現行「武器背帶」對四者皆成立（換皮版可掛非步槍武器，寫死「步槍」才會偏向 Noir）。另發現一個純內部一致性問題（非 owner 衝突、非本鍵可單獨解決）：同族 Base.SlingA 與 ItemName_Base.SlingA* 出貨為「武器揹帶」，而 Base.SlingAalt/Aalt2/Aalt3 為「武器背帶」，揹/背 用字不統一；建議整組另案統一，不要只改本鍵。",
-      "ch": "武器背帶",
+      "reason": "四個 owner 是同一組背帶 item 的本體與換皮 addon，不是不同實體：NoirRifleSlings（含 4 版 root）在 Sling_items.txt 定義 Base.SlingA/SlingAalt/SlingAalt2/SlingAalt3='Rifle Sling'，Dark Weapon Slings 與 Invisible Weapon Slings 則對同一組 key 覆寫 ItemName='Weapon Sling'，且共用同一套 ContextMenu_SlingStyle1~4 與 IGUI_HotbarAttachment_Sling* 鍵，證明是同一功能系統的貼圖變體。'Weapon Sling' 是 'Rifle Sling' 的上位詞，現行「武器背帶」對四者皆成立（換皮版可掛非步槍武器，寫死「步槍」才會偏向 Noir）。另發現一個純內部一致性問題（非 owner 衝突、非本鍵可單獨解決）：同族 Base.SlingA 與 ItemName_Base.SlingA* 出貨為「武器揹帶」，而 Base.SlingAalt/Aalt2/Aalt3 為「武器背帶」，揹/背 用字不統一；建議整組另案統一，不要只改本鍵。 ／2026-10-23 用語修正：CH 出貨錨點隨譯文更新為「武器揹帶」，裁決本身不變。",
+      "ch": "武器揹帶",
       "cn": "武器背带"
     },
     "ItemName|Base.UMP45": {
@@ -282,8 +282,8 @@
     "ItemName|Base.SlingAalt2": {
       "action": "translate",
       "signature": "deb246b2ff2b62f5",
-      "reason": "「Rifle Sling」與「Weapon Sling」來自同一背帶系列的換色/變體 mod（Noir 兩包、Dark/Invisible 兩包，共用 SlingAalt 鍵系），實體同為槍用背帶。「武器背帶」是 Rifle Sling 的上位詞，對全部 owner 誠實，維持現值。",
-      "ch": "武器背帶",
+      "reason": "「Rifle Sling」與「Weapon Sling」來自同一背帶系列的換色/變體 mod（Noir 兩包、Dark/Invisible 兩包，共用 SlingAalt 鍵系），實體同為槍用背帶。「武器背帶」是 Rifle Sling 的上位詞，對全部 owner 誠實，維持現值。 ／2026-10-23 用語修正：CH 出貨錨點隨譯文更新為「武器揹帶」，裁決本身不變。",
+      "ch": "武器揹帶",
       "cn": "武器背带"
     },
     "ItemName|Base.USP45": {
@@ -394,8 +394,8 @@
     "ItemName|Base.SlingAalt3": {
       "action": "translate",
       "signature": "deb246b2ff2b62f5",
-      "reason": "同一套背帶框架的重製／換皮，非不同物。四個 mod_root 全部持有完全相同的四鍵組 Base.SlingA / SlingAalt / SlingAalt2 / SlingAalt3（對應四種揹法），且都是 scripts/clothing 下的可穿戴背帶：NoirRifleSlings 與 NoirRifleSlings4 稱 \"Rifle Sling\"，Dark Weapon Slings 與 Invisible Weapon Slings 稱 \"Weapon Sling\"（後者僅材質為隱形版，命名仍用同一泛稱，其 IGUI_HotbarAttachment_Sling* 亦全為 \"Weapon Sling\"）。現行「武器背帶」採較寬的 Weapon 而非 Rifle，可同時涵蓋只掛步槍與泛用武器兩種說法，對四個 owner 皆成立。",
-      "ch": "武器背帶",
+      "reason": "同一套背帶框架的重製／換皮，非不同物。四個 mod_root 全部持有完全相同的四鍵組 Base.SlingA / SlingAalt / SlingAalt2 / SlingAalt3（對應四種揹法），且都是 scripts/clothing 下的可穿戴背帶：NoirRifleSlings 與 NoirRifleSlings4 稱 \"Rifle Sling\"，Dark Weapon Slings 與 Invisible Weapon Slings 稱 \"Weapon Sling\"（後者僅材質為隱形版，命名仍用同一泛稱，其 IGUI_HotbarAttachment_Sling* 亦全為 \"Weapon Sling\"）。現行「武器背帶」採較寬的 Weapon 而非 Rifle，可同時涵蓋只掛步槍與泛用武器兩種說法，對四個 owner 皆成立。 ／2026-10-23 用語修正：CH 出貨錨點隨譯文更新為「武器揹帶」，裁決本身不變。",
+      "ch": "武器揹帶",
       "cn": "武器背带"
     },
     "ItemName|Base.UZI": {
@@ -534,8 +534,8 @@
     "Tooltip|Tooltip_ArmyBoots": {
       "action": "translate",
       "signature": "26f9fb75199b254e",
-      "reason": "只有 Boots Expanded Vanilla B42 root 活用本鍵；full root 同名翻譯是 B41 遷移死鍵。現值 2.5/600 等於唯一活 owner。",
-      "ch": "踩踏力道: 2.5 耐久度: 600",
+      "reason": "只有 Boots Expanded Vanilla B42 root 活用本鍵；full root 同名翻譯是 B41 遷移死鍵。現值 2.5/600 等於唯一活 owner。 ／2026-10-23 用語修正：CH 出貨錨點隨譯文更新為「踩踏力度: 2.5 耐久度: 600」，裁決本身不變。",
+      "ch": "踩踏力度: 2.5 耐久度: 600",
       "cn": "踩踏力度: 2.5 耐久度: 600"
     },
     "Tooltip|Tooltip_ArmyBootsDesert": {
@@ -590,8 +590,8 @@
     "Tooltip|Tooltip_BlackBoots": {
       "action": "translate",
       "signature": "350a0201c77d3934",
-      "reason": "只有 Boots Expanded Vanilla B42 root 活用本鍵；full root 同名翻譯是死鍵。現值 2.5/400 等於唯一活 owner。",
-      "ch": "踩踏力道: 2.5 耐久度: 400",
+      "reason": "只有 Boots Expanded Vanilla B42 root 活用本鍵；full root 同名翻譯是死鍵。現值 2.5/400 等於唯一活 owner。 ／2026-10-23 用語修正：CH 出貨錨點隨譯文更新為「踩踏力度: 2.5 耐久度: 400」，裁決本身不變。",
+      "ch": "踩踏力度: 2.5 耐久度: 400",
       "cn": "踩踏力度: 2.5 耐久度: 400"
     },
     "Tooltip|Tooltip_ChAmmonia": {
@@ -2962,9 +2962,9 @@
     "ItemName|Base.AK74": {
       "action": "translate",
       "signature": "3213e04c0afa48eb",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 owner 3761284354/VFES、3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3611718925/VFES）；現行裁決對全部 owner 仍成立。",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 owner 3761284354/VFES、3777433827/BritaCombinedB42，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3611718925/VFES）；現行裁決對全部 owner 仍成立。 ／2026-10-23 用語修正：CN 出貨錨點隨譯文更新為「AK-74自动步枪」，裁決本身不變。",
       "ch": "AK-74自動步槍",
-      "cn": "AK-47自动步枪"
+      "cn": "AK-74自动步枪"
     },
     "ItemName|Base.VSS": {
       "action": "translate",
@@ -7304,8 +7304,8 @@
     "IG_UI|IGUI_HGR_TIP_REASM_USE_KIT": {
       "action": "translate",
       "signature": "53a516d47eff6cff",
-      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差大小寫與句點. 沿用現值.",
-      "ch": "使用修理套裝, \\n無懲罰",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差大小寫與句點. 沿用現值. ／2026-10-23 用語修正：CH 出貨錨點隨譯文更新為「使用修理套件, \\n無懲罰」，裁決本身不變。",
+      "ch": "使用修理套件, \\n無懲罰",
       "cn": "使用修理套装, \\n无惩罚"
     },
     "IG_UI|IGUI_HGR_TIP_REASM_USE_SCREW_FMT": {
@@ -7318,8 +7318,8 @@
     "IG_UI|IGUI_HGR_TIP_REPAIR_KIT_FMT": {
       "action": "translate",
       "signature": "8236d3fad1f3de72",
-      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差 Improve / Improvement 措辭. 沿用現值.",
-      "ch": "使用修理套裝: \\n成功率: 必定成功\\n提升: +%d%%",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差 Improve / Improvement 措辭. 沿用現值. ／2026-10-23 用語修正：CH 出貨錨點隨譯文更新為「使用修理套件: \\n成功率: 必定成功\\n提升: +%d%%」，裁決本身不變。",
+      "ch": "使用修理套件: \\n成功率: 必定成功\\n提升: +%d%%",
       "cn": "使用修理套装: \\n成功率: 保证\\n提升: +%d%%"
     },
     "IG_UI|IGUI_HGR_TIP_REPAIR_SCREW_FMT": {
@@ -7346,8 +7346,8 @@
     "IG_UI|IGUI_HGR_USED_REPAIR_KIT": {
       "action": "translate",
       "signature": "0f4d39158119382b",
-      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差句點. 沿用現值.",
-      "ch": "已使用修理套裝",
+      "reason": "2026-09-27 裁決：同一工作坊項目 3562222835 的兩個變體 (HybridGunRepair 舊版死檔 IG_UI_EN.txt, HybridGunRepair_v2 為 JSON), 玩家只會啟用其一, 同一介面字串; 只差句點. 沿用現值. ／2026-10-23 用語修正：CH 出貨錨點隨譯文更新為「已使用修理套件」，裁決本身不變。",
+      "ch": "已使用修理套件",
       "cn": "已使用修理套装"
     },
     "IG_UI|IGUI_HGR_USED_SOLVENT": {
@@ -10234,9 +10234,9 @@
     "Sandbox|Sandbox_EPR_MinElectricalSkill_tooltip": {
       "action": "translate",
       "signature": "c2ddce9a1b6f2a3f",
-      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。 ／2026-10-23 用語修正：CN 出貨錨點隨譯文更新為「修复变电站所需的最低电工技能. 默认: 7」，裁決本身不變。",
       "ch": "修復變電站所需的最低電工技能. 預設: 7",
-      "cn": "修复变电站所需的最低电气技能. 默认: 7"
+      "cn": "修复变电站所需的最低电工技能. 默认: 7"
     },
     "Sandbox|Sandbox_EPR_MinMetalworkSkill_tooltip": {
       "action": "translate",
@@ -10332,9 +10332,9 @@
     "Sandbox|Sandbox_EPR_WaterPlantElectricalSkill_tooltip": {
       "action": "translate",
       "signature": "fea9a077c1c3e74b",
-      "reason": "2026-10-12 #827 裁決：三版都是修水處理廠的最低電工技能，預設值不同（前兩版 5、fork 8），fork 另補全圖只有一座水廠；只譯共通句，拿掉「預設: 5」。",
+      "reason": "2026-10-12 #827 裁決：三版都是修水處理廠的最低電工技能，預設值不同（前兩版 5、fork 8），fork 另補全圖只有一座水廠；只譯共通句，拿掉「預設: 5」。 ／2026-10-23 用語修正：CN 出貨錨點隨譯文更新為「修复水处理厂所需的最低电工技能.」，裁決本身不變。",
       "ch": "修復水處理廠所需的最低電工技能.",
-      "cn": "修复水处理厂所需的最低电气技能."
+      "cn": "修复水处理厂所需的最低电工技能."
     },
     "Sandbox|Sandbox_EPR_WaterPlantMetalworkSkill_tooltip": {
       "action": "translate",
@@ -10617,15 +10617,15 @@
     "IG_UI|IGUI_VehiclePartATA2RoofLightbarV1": {
       "action": "translate",
       "signature": "4445ae277e935968",
-      "reason": "2026-10-18 #902 裁決：census 取到 StandardizedVehicleUpgrades3Core（3403490889） 死檔 IG_UI_EN.txt 的 'V-Shaped Lightbar'（B42 不讀 _EN.txt），該 MOD 執行期載入的 common/IG_UI.json 仍是 'Elite Victory Code 1 Lightbar'，與 IVA（3743911767/IVA）的 IG_UI.json 相同。現行「精英級勝利程式碼1號長條燈」照兩個 owner 的執行期英文翻譯，對兩者都成立，維持原譯。SVU3 若日後把 IG_UI.json 也改成 'V-Shaped Lightbar'，census 值不變、簽名不會失效，處理該 MOD 的可能過時 issue 時要回頭重新裁決。",
-      "ch": "精英級勝利程式碼1號長條燈",
+      "reason": "2026-10-18 #902 裁決：census 取到 StandardizedVehicleUpgrades3Core（3403490889） 死檔 IG_UI_EN.txt 的 'V-Shaped Lightbar'（B42 不讀 _EN.txt），該 MOD 執行期載入的 common/IG_UI.json 仍是 'Elite Victory Code 1 Lightbar'，與 IVA（3743911767/IVA）的 IG_UI.json 相同。現行「精英級勝利程式碼1號長條燈」照兩個 owner 的執行期英文翻譯，對兩者都成立，維持原譯。SVU3 若日後把 IG_UI.json 也改成 'V-Shaped Lightbar'，census 值不變、簽名不會失效，處理該 MOD 的可能過時 issue 時要回頭重新裁決。 ／2026-10-23 用語修正：CH 出貨錨點隨譯文更新為「精英級勝利代碼1號長條燈」，裁決本身不變。",
+      "ch": "精英級勝利代碼1號長條燈",
       "cn": "精英级胜利代码1号长条灯"
     },
     "IG_UI|IGUI_VehiclePartATA2RoofLightbarV2": {
       "action": "translate",
       "signature": "c4bacd45bd359fe2",
-      "reason": "2026-10-18 #902 裁決：census 取到 StandardizedVehicleUpgrades3Core（3403490889） 死檔 IG_UI_EN.txt 的 'V-Shaped Lightbar 2'（B42 不讀 _EN.txt），該 MOD 執行期載入的 common/IG_UI.json 仍是 'Elite Victory Code 2 Lightbar'，與 IVA（3743911767/IVA）的 IG_UI.json 相同。現行「精英級勝利程式碼2號長條燈」照兩個 owner 的執行期英文翻譯，對兩者都成立，維持原譯。SVU3 若日後把 IG_UI.json 也改成 'V-Shaped Lightbar 2'，census 值不變、簽名不會失效，處理該 MOD 的可能過時 issue 時要回頭重新裁決。",
-      "ch": "精英級勝利程式碼2號長條燈",
+      "reason": "2026-10-18 #902 裁決：census 取到 StandardizedVehicleUpgrades3Core（3403490889） 死檔 IG_UI_EN.txt 的 'V-Shaped Lightbar 2'（B42 不讀 _EN.txt），該 MOD 執行期載入的 common/IG_UI.json 仍是 'Elite Victory Code 2 Lightbar'，與 IVA（3743911767/IVA）的 IG_UI.json 相同。現行「精英級勝利程式碼2號長條燈」照兩個 owner 的執行期英文翻譯，對兩者都成立，維持原譯。SVU3 若日後把 IG_UI.json 也改成 'V-Shaped Lightbar 2'，census 值不變、簽名不會失效，處理該 MOD 的可能過時 issue 時要回頭重新裁決。 ／2026-10-23 用語修正：CH 出貨錨點隨譯文更新為「精英級勝利代碼2號長條燈」，裁決本身不變。",
+      "ch": "精英級勝利代碼2號長條燈",
       "cn": "精英级胜利代码2号长条灯"
     },
     "Sandbox|Sandbox_SVUC_timeMods": {

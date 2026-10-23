@@ -9,7 +9,7 @@
 本支拿**本機 PZ 安裝的現況**驗「我方 dist 的實際結果」——是對真實資料的端到端斷言，
 故必須列入每次收尾的驗證鏈。
 
-守兩件事：
+守三件事：
 
 1. **零覆蓋**：dist 的 `Translate/{CH,CN}/<檔>` 不得出現本體同 (檔,鍵)。
    判準是**本體現在真的有的鍵**（EN ∪ CH ∪ CN 三語聯集），不是 `vanilla_keys.json` 快照。
@@ -20,6 +20,9 @@
 2. **基準不得過時**：本體現有鍵若不在 `vanilla_keys.json` 的 `scoped_keys` 內即失敗，
    要求重跑 `extract_vanilla_keys.py`。遊戲更新會新增鍵，基準是快照、不會自己跟上；
    少了誰，抑制就對誰整批靜默失效。
+3. **條件譯文的本體英文錨點不得過時**：`sources/owner_variants.json` 的 `kind=vanilla` 條目，
+   `vanilla_en` 必須等於本體現況 EN。本體改英文時，哪些 MOD 與本體同英文（`skip_owners`）、
+   哪些不同（要出 MOD 版譯文）的分組可能已不成立，必須重新裁決。
 
 本體安裝不在本機時**一律判失敗**，沒有豁免旗標——一個「因為讀不到本體所以通過」的綠燈，
 正是這道防線最該擋住的東西。
@@ -28,6 +31,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -115,7 +119,29 @@ def main(argv: list[str] | None = None) -> int:
         print("   修法：uv run scripts/extract_vanilla_keys.py --pz-build <ver> --date <YYYY-MM-DD>")
         return 1
 
-    print(f"✅ 零覆蓋：dist CN/CH 對本體現有 {total} 個 (檔,鍵) 無任何交集；vanilla_keys.json 基準與本體同步。")
+    # [3] 條件譯文的本體英文錨點：`kind=vanilla` 條目的 `vanilla_en`＝本機遊戲現況 EN。
+    # 本體改了英文，「哪些 owner 與本體同英文（skip_owners）」的分組就可能不再成立，要重新裁決。
+    vpath = Path(os.environ.get("MODLANG_OWNER_VARIANTS") or ROOT / "sources/owner_variants.json")
+    ventries = json.loads(vpath.read_text(encoding="utf-8-sig"))["entries"]
+    en = load_dir(tdir / "EN")
+    drift: list[str] = []
+    n_var = 0
+    for fk, e in ventries.items():
+        if fk.startswith("_") or not isinstance(e, dict) or e.get("kind") != "vanilla":
+            continue
+        n_var += 1
+        fname, _, key = fk.partition("|")
+        cur = en.get(f"{fname}.json", {}).get(key)
+        if cur != e.get("vanilla_en"):
+            drift.append(f"{fk}：錨點 {e.get('vanilla_en')!r} ≠ 本體現況 {cur!r}")
+    if drift:
+        print(f"❌ 條件譯文 {len(drift)} 個本體鍵的 vanilla_en 錨點與本體現況 EN 不符（本體改英文，要重新裁決）：")
+        for d in drift[:20]:
+            print(f"     {d}")
+        return 1
+
+    print(f"✅ 零覆蓋：dist CN/CH 對本體現有 {total} 個 (檔,鍵) 無任何交集；vanilla_keys.json 基準與本體同步；"
+          f"條件譯文 {n_var} 個本體鍵的 vanilla_en 錨點與本體現況相符。")
     return 0
 
 

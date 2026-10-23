@@ -1518,9 +1518,11 @@ def _is_non_fast_forward(stderr: str) -> bool:
 # 連帶清掉而永遠同步不上。
 # `OWNER_CONFLICTS.md` 自 2026-09-27 起公開列出**尚未裁決**的衝突，而那一節由 census
 # （tracker state＋`sources/en`）算出，每次上游更新都可能變動；不隨 state 重生，
-# CI 的 `--owner-report-check` 就會在排程 commit 後轉紅。
+# CI 的 `--owner-report-check` 就會在排程 commit 後轉紅。`sources/owner_conflicts.tsv`
+# （2026-10-23 起，衝突提醒的資料來源）由同一次 `--owner-report` 生成，理由相同。
 MANIFEST_OUTPUTS = ("SUPPORTED_MODS.md", "README.md", "STEAM_DESCRIPTION.md",
-                    "MOD/MinidoracatModLangFor42/workshop.txt", "OWNER_CONFLICTS.md")
+                    "MOD/MinidoracatModLangFor42/workshop.txt", "OWNER_CONFLICTS.md",
+                    "sources/owner_conflicts.tsv")
 
 
 def refresh_manifest() -> tuple[bool, dict | None]:
@@ -1592,7 +1594,7 @@ def build_decision_plan(report: dict, index: dict[tuple[str, str], dict]) -> dic
         make_marker(ISSUE_TYPE_DECISION, DECISION_ISSUE_ID, content_hash),
         f"## owner 衝突裁決過時（{len(stale)} 條）",
         "",
-        "下列多 owner 共用鍵的裁決已不成立（owner 增減、上游改值或出貨錨點漂移），需要重新裁決：",
+        "下列多 owner 共用鍵的裁決或條件譯文已不成立（owner 增減、上游改值或出貨錨點漂移），需要重新裁決：",
         "",
         "```text",
         *(_neutralize_markers(m).replace("```", "ˋˋˋ") for m in stale),
@@ -1603,7 +1605,14 @@ def build_decision_plan(report: dict, index: dict[tuple[str, str], dict]) -> dic
         "處理：逐鍵確認現行譯文對每個 owner 是否仍成立（owner 與上游英文見 `OWNER_CONFLICTS.md`），"
         "更新 `sources/owner_conflict_decisions.json` 的 `signature`／`reason`（unship 另含 "
         "`sources/unshipped_keys.json` 的 `owner_signature`），再跑 "
-        "`uv run scripts/prep_mod_strings.py --owner-report`。清單清空後追蹤器自動關閉本 issue。",
+        "`uv run scripts/prep_mod_strings.py --owner-report`。",
+        "",
+        "訊息寫「條件譯文過時」或「條件譯文分組與 census 不符」者改 `sources/owner_variants.json`："
+        "依現行 owner 與上游英文重新分組、重譯該組 `ch`／`cn`，更新 `signature`（規則見 "
+        "`.claude/skills/modlang-dev/references/variants.md`）。新分組與新簽名在 "
+        "`uv run scripts/prep_mod_strings.py --check-decisions --out <tmp>` 輸出的 `_stale_variants`；"
+        "改完重跑同一指令確認不再列出。"
+        "清單清空後追蹤器自動關閉本 issue。",
     ])
     return {
         "type": ISSUE_TYPE_DECISION,

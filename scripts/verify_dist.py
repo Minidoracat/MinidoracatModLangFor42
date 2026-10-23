@@ -35,8 +35,8 @@ verify_dist.py — MinidoracatModLangFor42 的獨立 dist 驗證器（oracle）�
                       會影響未安裝該 mod 的使用者）
   [13] 檔名可載入性   ：有前綴路由的鍵不得只存在於 PZ 不會載入的檔名裡（放錯＝永遠取不到）；
                       上游查無同名鍵者＝作廢鍵名 → WARN
-  [14] own 層 CN 用字 ：own 層 CN 不得殘留 t2s 抓不到的台灣字形（助詞「著」須寫「着」、
-                      「牠」「妳」、直角引號）——只掃 own，As1 快照忠實鏡像不歸本項管
+  [14] own 層 CN 用字 ：own 層（含本包介面文字 pack_ui.json）CN 不得殘留 t2s 抓不到的台灣字形
+                      （助詞「著」須寫「着」、「牠」「妳」、直角引號）——只掃 own，As1 快照忠實鏡像不歸本項管
   [15] ItemName 死鍵  ：`ItemName_<M>.<I>` 是 B41 鍵形，B42 只查裸 `<M>.<I>`（反編譯實證）；
                       前綴鍵無裸鍵對應＝玩家看到英文。豁免須登記 itemname_dead_allowlist.json。
                       **`Base.` 不等於本體**——MOD 也能往 module Base 加物品，只認 vanilla scoped 基準
@@ -45,10 +45,16 @@ verify_dist.py — MinidoracatModLangFor42 的獨立 dist 驗證器（oracle）�
                       去前綴後對得上上游現行區塊名、卻沒出貨該裸鍵＝玩家看到英文配方名。
                       豁免須登記 recipe_dead_allowlist.json
   [17] Print Media   ：`Print_Media.json` 的 `*_info` 須符合 42.20.4 rich-text 解析契約。
-  （編號歷史上缺 [5]；實際驗證項數仍為 16。）
+  [18] 條件譯文資料檔 ：`media/CatModLang/variants_{CH,CN}.tsv` ＝由 sources/owner_variants.json
+                      獨立重算（formatFixer、欄位跳脫、白名單、本體鍵逐 group 核准：未核准組寫空值列）；
+                      `conflicts.tsv` 的 K 列＝sources/owner_conflicts.tsv、V 列已涵蓋數重算
+  [19] 本包 Lua      ：`media/lua/{shared,client}/CatModLang/*.lua` 與 sources/pack_lua 檔集、bytes 一致
+  pack_ui.json 的介面鍵併入 [1]／[9] 的原創層期望（dist 值＝sanitize 後真相值）。
+  （編號歷史上缺 [5]；實際驗證項數為 18。）
 
 冪等子命令（獨立於預設全跑，供「連跑兩次 build 第二次零 diff」驗證）：
-  --snapshot-dist <dir>：把 dist 現況（.json + language.txt + client/*.lua 的 sha256）存到 <dir>/dist_hashes.json
+  --snapshot-dist <dir>：把 dist 現況（.json + language.txt + client/*.lua + 本包資料檔與 Lua 的 sha256）
+                         存到 <dir>/dist_hashes.json
   --compare-dist  <dir>：比對現況與 <dir>/dist_hashes.json，有 diff 退出 1
 """
 
@@ -526,6 +532,9 @@ def _resolve_paths(repo: str, snapshot_path: str) -> dict:
         "dist_cn": os.path.join(dist_translate, "CN") if dist_translate else None,
         "dist_ch": os.path.join(dist_translate, "CH") if dist_translate else None,
         "lua_client": lua_client,
+        # <...>/42/media：本包資料檔 media/CatModLang 與 lua/*/CatModLang 的根
+        "media": os.path.dirname(os.path.dirname(os.path.dirname(dist_translate)))
+        if dist_translate else None,
     }
 
 
@@ -1213,7 +1222,7 @@ def cmd_cn_diff(paths: dict, base_ref: str) -> int:
 # 冪等子命令
 # --------------------------------------------------------------------------- #
 def _dist_hash_map(dist_translate: str, lua_client: str | None) -> dict[str, str]:
-    """dist 內 .json / language.txt / client lua 的 {相對路徑: sha256}。"""
+    """dist 內 .json / language.txt / client lua／本包資料檔與本包 Lua 的 {相對路徑: sha256}。"""
     result: dict[str, str] = {}
     for pattern in ("**/*.json", "**/language.txt"):
         for path in glob.glob(os.path.join(dist_translate, pattern), recursive=True):
@@ -1222,6 +1231,10 @@ def _dist_hash_map(dist_translate: str, lua_client: str | None) -> dict[str, str
     if lua_client and os.path.isdir(lua_client):
         for path in glob.glob(os.path.join(lua_client, "*.lua")):
             result[f"lua/client/{os.path.basename(path)}"] = _sha256(path)
+    media = os.path.dirname(os.path.dirname(os.path.dirname(dist_translate)))
+    for pattern in ("CatModLang/*.tsv", "lua/shared/CatModLang/*.lua", "lua/client/CatModLang/*.lua"):
+        for path in glob.glob(os.path.join(media, *pattern.split("/"))):
+            result[f"media/{os.path.relpath(path, media).replace(os.sep, '/')}"] = _sha256(path)
     return result
 
 
@@ -1747,8 +1760,8 @@ CN_BAD_GLYPHS = (("牠", "它"), ("妳", "你"), ("「", "“"), ("」", "”"))
 CN_ZHU_TAIL = re.compile(r"著(?=$|[\s.,;!?)\]」』”、。，；！？]|<)")
 
 
-def check_own_cn_glyphs(repo: str) -> tuple[bool, list[str], list[str]]:
-    """[14] own 層 CN 不得殘留 t2s 抓不到的台灣字形。"""
+def check_own_cn_glyphs(repo: str, pack_ui: dict | None = None) -> tuple[bool, list[str], list[str]]:
+    """[14] own 層（含本包介面文字 pack_ui）CN 不得殘留 t2s 抓不到的台灣字形。"""
     src: list[tuple[str, str, str]] = []
     for fname, bucket in _load_own(repo).items():
         for key, spec in bucket.items():
@@ -1758,6 +1771,8 @@ def check_own_cn_glyphs(repo: str) -> tuple[bool, list[str], list[str]]:
         for key, spec in bucket.items():
             if isinstance(spec, dict) and isinstance(spec.get("cn"), str):
                 src.append((f"own-mod:{fname}", key, spec["cn"]))
+    for fname, bucket in (pack_ui or {}).items():
+        src += [(f"pack_ui:{fname}", key, spec["cn"]) for key, spec in bucket.items()]
 
     fail: list[str] = []
     for label, key, val in src:
@@ -2358,6 +2373,175 @@ def check_print_media(dist_cn: str, dist_ch: str) -> tuple[bool, list[str], list
     return not fail, fail, warn
 
 
+# --- [18] 條件譯文資料檔／[19] 本包 Lua ----------------------------------------- #
+# 獨立重算（不 import builder）：由 `sources/owner_variants.json` 推期望的
+# `media/CatModLang/variants_{CH,CN}.tsv`，K 列對 `sources/owner_conflicts.tsv`。
+# 注入器可寫的翻譯表與刷新不到的鍵（獨立列舉，與 builder `VARIANT_FILES`／
+# `variant_key_unrefreshable` 同語意：UI_trait_／UI_prof_ 只擋名稱，以 desc 結尾的說明鍵放行）。
+VARIANT_FILES = frozenset({
+    "IG_UI", "UI", "ItemName", "Tooltip", "Sandbox", "ContextMenu", "Recipes", "Moodles",
+    "Recorded_Media", "Moveables", "Fluids", "Entity",
+})
+VARIANT_DEAD_PREFIXES = ("Fluid_Name_", "EC_Energy_")
+VARIANT_NAME_ONLY_PREFIXES = ("UI_trait_", "UI_prof_")
+OWNER_VARIANTS_ENV = "MODLANG_OWNER_VARIANTS"   # 拋棄式測試檔改指（與 build 同一個變數）
+_TSV_UNESCAPE = {"\\": "\\", "t": "\t", "n": "\n", "r": "\r"}
+
+
+def _tsv_unescape(field: str) -> str:
+    """逆轉資料檔跳脫（單趟掃描）；未知跳脫擲例外。"""
+    out: list[str] = []
+    i = 0
+    while i < len(field):
+        ch = field[i]
+        if ch == "\\":
+            nxt = field[i + 1] if i + 1 < len(field) else ""
+            if nxt not in _TSV_UNESCAPE:
+                raise ValueError(f"未知跳脫 \\{nxt}｜{field[:40]!r}")
+            out.append(_TSV_UNESCAPE[nxt])
+            i += 2
+        else:
+            out.append(ch)
+            i += 1
+    return "".join(out)
+
+
+def format_fixer_expectation(value: str) -> str:
+    """引擎 JSON 載入期 formatFixer（`%%|%([1-9])`）：`%%` 原樣、`%N`→`%N$s`；左到右單趟。"""
+    out: list[str] = []
+    i = 0
+    while i < len(value):
+        if value.startswith("%%", i):
+            out.append("%%")
+            i += 2
+        elif value[i] == "%" and i + 1 < len(value) and value[i + 1] in "123456789":
+            out.append(f"%{value[i + 1]}$s")
+            i += 2
+        else:
+            out.append(value[i])
+            i += 1
+    return "".join(out)
+
+
+def _read_tsv(path: str) -> list[list[str]]:
+    """讀資料檔：UTF-8 無 BOM、LF、首行 `#` 註解；回傳非註解列（欄位已逆跳脫）。"""
+    with open(path, "rb") as f:
+        raw = f.read()
+    if raw.startswith(b"\xef\xbb\xbf") or b"\r" in raw or not raw.endswith(b"\n"):
+        raise ValueError(f"{os.path.basename(path)} 須為 UTF-8 無 BOM、LF、結尾換行")
+    lines = raw.decode("utf-8").split("\n")[:-1]
+    if not lines or not lines[0].startswith("#"):
+        raise ValueError(f"{os.path.basename(path)} 首行須為 # 註解")
+    return [[_tsv_unescape(c) for c in ln.split("\t")] for ln in lines if not ln.startswith("#")]
+
+
+def _load_owner_variants(repo: str) -> dict[str, dict]:
+    path = os.environ.get(OWNER_VARIANTS_ENV) or os.path.join(repo, "sources", "owner_variants.json")
+    data = _read_json(path)
+    entries = data.get("entries") if isinstance(data, dict) else None
+    if not isinstance(entries, dict):
+        raise ValueError("owner_variants.json 缺 entries 物件")
+    return {k: v for k, v in entries.items() if not k.startswith("_")}
+
+
+def _load_pack_ui(repo: str) -> dict[str, dict]:
+    """讀 sources/pack_ui.json（人工真相 #17）；缺檔或形狀壞損擲例外。"""
+    data = _read_json(os.path.join(repo, "sources", "pack_ui.json"))
+    entries = data.get("entries") if isinstance(data, dict) else None
+    if not isinstance(entries, dict) or not all(
+        isinstance(keys, dict) and all(
+            isinstance(s, dict) and isinstance(s.get("ch"), str) and isinstance(s.get("cn"), str)
+            for s in keys.values())
+        for keys in entries.values()
+    ):
+        raise ValueError("pack_ui.json 形狀壞損（entries.<檔名>.<鍵> 須有字串 ch／cn）")
+    return entries
+
+
+def check_variants(repo: str, media: str) -> tuple[bool, list[str], list[str]]:
+    """[18] 條件譯文資料檔＝由真相檔獨立重算的期望；conflicts.tsv 的 K 列＝sources/owner_conflicts.tsv。"""
+    fail: list[str] = []
+    entries = _load_owner_variants(repo)
+    expected: dict[str, list[list[str]]] = {"CH": [], "CN": []}
+    covered: Counter = Counter()
+    for fk, e in sorted(entries.items()):
+        fname, _, key = fk.partition("|")
+        kind = e["kind"]
+        if kind not in ("conflict", "vanilla"):
+            fail.append(f"{fk}：未知 kind={kind!r}")
+            continue
+        if kind == "conflict" and any("approved" in g for g in e["groups"]):
+            fail.append(f"{fk}：kind=conflict 的 group 帶 approved（build 應擋下）")
+            continue
+        # 本體鍵逐 group 核准：條目層級 approved 非空＝全組核准；沒有任何核准組＝整鍵不出貨，
+        # 有核准組時未核准組的 owners 與 skip_owners 一律寫空值列。
+        entry_ok = kind == "conflict" or bool(str(e.get("approved") or "").strip())
+        ok_groups = [entry_ok or bool(str(g.get("approved") or "").strip()) for g in e["groups"]]
+        if not any(ok_groups):
+            continue    # 未經使用者核准的本體鍵不出貨
+        if fname not in VARIANT_FILES or key.startswith(VARIANT_DEAD_PREFIXES) or (
+                key.startswith(VARIANT_NAME_ONLY_PREFIXES) and not key.lower().endswith("desc")):
+            fail.append(f"{fk}：檔名不在注入器白名單或鍵前綴刷新不到（build 應擋下）")
+            continue
+        skip = e.get("skip_owners", []) if kind == "vanilla" else []
+        for lang in expected:
+            for g, ok in zip(e["groups"], ok_groups):
+                val = format_fixer_expectation(g[lang.lower()]) if ok else ""
+                expected[lang] += [[fname, key, *o.split("/", 1), val] for o in g["owners"]]
+            expected[lang] += [[fname, key, *o.split("/", 1), ""] for o in skip]
+        if kind == "vanilla":
+            covered.update({o.split("/", 1)[0] for o in [
+                *skip, *(o for g, ok in zip(e["groups"], ok_groups) if ok for o in g["owners"])]})
+    data_dir = os.path.join(media, "CatModLang")
+    for lang, want in expected.items():
+        want.sort()
+        name = f"variants_{lang}.tsv"
+        try:
+            got = _read_tsv(os.path.join(data_dir, name))
+        except (OSError, ValueError) as exc:
+            fail.append(f"{name} 無法讀取（{exc}）")
+            continue
+        if got != want:
+            wset, gset = {tuple(r) for r in want}, {tuple(r) for r in got}
+            fail += [f"{name} 缺列：{r}" for r in sorted(wset - gset)]
+            fail += [f"{name} 多列（無真相源或未核准）：{r}" for r in sorted(gset - wset)]
+            if wset == gset:
+                fail.append(f"{name} 列順序或重複列與期望不符（須依 檔名、鍵、wid、root 排序）")
+    try:
+        got = _read_tsv(os.path.join(data_dir, "conflicts.tsv"))
+        src = _read_tsv(os.path.join(repo, "sources", "owner_conflicts.tsv"))
+    except (OSError, ValueError) as exc:
+        return False, fail + [f"conflicts.tsv／owner_conflicts.tsv 無法讀取（{exc}）"], []
+    if [r for r in got if r[0] == "K"] != [r for r in src if r[0] == "K"]:
+        fail.append("conflicts.tsv 的 K 列與 sources/owner_conflicts.tsv 不一致（重跑 build）")
+    for r in got:
+        if r[0] == "K":
+            continue
+        if r[0] != "V" or len(r) != 4 or not r[1].isdigit() or not r[2].isdigit() or int(r[2]) <= 0:
+            fail.append(f"conflicts.tsv 列不合 K／V 形狀：{r}")
+        elif r[3] != str(covered[r[1]]):
+            fail.append(f"conflicts.tsv V 列 wid {r[1]} 已涵蓋數 {r[3]} ≠ 期望 {covered[r[1]]}")
+    return not fail, fail, []
+
+
+def check_pack_lua(repo: str, media: str) -> tuple[bool, list[str], list[str]]:
+    """[19] 本包 Lua：dist `lua/{shared,client}/CatModLang/*.lua` 與 `sources/pack_lua/{shared,client}/` 檔集與 bytes 一致。"""
+    src_root = os.path.join(repo, "sources", "pack_lua")
+    if not os.path.isdir(src_root):
+        return False, ["sources/pack_lua 不存在（本包 Lua 為人工真相）"], []
+    fail: list[str] = []
+    for side in ("shared", "client"):
+        src = {os.path.basename(p): p for p in glob.glob(os.path.join(src_root, side, "*.lua"))}
+        dist = {os.path.basename(p): p
+                for p in glob.glob(os.path.join(media, "lua", side, "CatModLang", "*.lua"))}
+        fail += [f"dist 缺少 lua/{side}/CatModLang/{n}" for n in sorted(set(src) - set(dist))]
+        fail += [f"dist 多出 lua/{side}/CatModLang/{n}" for n in sorted(set(dist) - set(src))]
+        fail += [f"lua/{side}/CatModLang/{n}：來源與 dist bytes 不一致"
+                 for n in sorted(set(src) & set(dist)) if _sha256(src[n]) != _sha256(dist[n])]
+    return not fail, fail, []
+
+
+
 def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
     repo = paths["repo"]
     as1_cn = paths["as1_cn"]
@@ -2406,8 +2590,18 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
                         f"原創鍵重複登錄：{fname}|{key} 同時存在於 own_translations 與原創 mod 目錄"
                     )
                 bucket[key] = entry
+        # 本包介面文字併入同一個「人工直寫真相」期望：[1] 對 cn、[9] 對 ch、落地完整性
+        # 一起驗（dist 值＝sanitize 後的真相值；build 的 format gate 保證兩者相同）。
+        pack_ui = _load_pack_ui(repo)
+        for fname, keys in pack_ui.items():
+            bucket = own.setdefault(fname, {})
+            for key, spec in keys.items():
+                if key in bucket:
+                    raise ValueError(f"pack_ui 鍵與原創層重複：{fname}|{key}")
+                bucket[key] = {"cn": sanitize_expectation(spec["cn"]),
+                               "ch": sanitize_expectation(spec["ch"])}
     except Exception as exc:  # noqa: BLE001 — 原創層檔壞掉直接判 FAIL
-        print(f"ERROR：原創翻譯層無法解析（{exc}）")
+        print(f"ERROR：原創翻譯層／pack_ui.json 無法解析（{exc}）")
         return 1
 
     # 出貨抑制集合：dist 面向的期望一律扣除（真相層仍持有這些鍵，只是不出貨）。
@@ -2467,7 +2661,7 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
     except Exception as exc:  # noqa: BLE001
         ok13, d13, w13 = False, [f"檔名可載入性檢查失敗（{exc}）"], []
     try:
-        ok14, d14, w14 = check_own_cn_glyphs(repo)
+        ok14, d14, w14 = check_own_cn_glyphs(repo, pack_ui)
     except Exception as exc:  # noqa: BLE001
         ok14, d14, w14 = False, [f"own CN 用字檢查失敗（{exc}）"], []
     try:
@@ -2482,6 +2676,14 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         ok17, d17, w17 = check_print_media(dist_cn, dist_ch)
     except Exception as exc:  # noqa: BLE001 — 出貨檔壞損直接判 FAIL
         ok17, d17, w17 = False, [f"Print Media 契約檢查失敗（{exc}）"], []
+    try:
+        ok18, d18, w18 = check_variants(repo, paths["media"])
+    except Exception as exc:  # noqa: BLE001 — 真相檔／資料檔壞損直接判 FAIL
+        ok18, d18, w18 = False, [f"條件譯文資料檔檢查失敗（{exc}）"], []
+    try:
+        ok19, d19, w19 = check_pack_lua(repo, paths["media"])
+    except Exception as exc:  # noqa: BLE001
+        ok19, d19, w19 = False, [f"本包 Lua 檢查失敗（{exc}）"], []
 
     rows = [
         ("1", "CN 逐檔 parity（As1 缺席時僅降級 As1 比對）" if as1_missing else "CN 逐檔 parity",
@@ -2501,6 +2703,8 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         ("15", "ItemName 死鍵", ok15, d15, w15),
         ("16", "Recipes 死鍵", ok16, d16, w16),
         ("17", "Print Media 42.20.4 契約", ok17, d17, w17),
+        ("18", "條件譯文資料檔", ok18, d18, w18),
+        ("19", "本包 Lua", ok19, d19, w19),
     ]
 
     n_pass = sum(1 for _, _, ok, _, _ in rows if ok is True)

@@ -5,10 +5,13 @@
 """
 lint_ch.py — CH 真相層品質稽核與棘輪 gate
 
-掃描範圍為**兩個 CH 真相層**：`sources/ch/` corpus 與 `sources/own_translations.json`
-的 `ch` 欄（原創翻譯層）。兩者 (檔名|鍵) 命名空間互斥（own 鍵依設計不進 corpus，
-apply_own 在 corpus_gate 之後才合入），故合併掃描後 lint_exemptions 與
-ch_review_state 的 (檔名|鍵) 查找對兩層一致適用；報告以 [own] 標記來源真相層。
+掃描範圍為**三個 CH 真相層**：`sources/ch/` corpus、`sources/own_translations.json`
+的 `ch` 欄（原創翻譯層）與 `sources/owner_variants.json` 各組的 `ch`（條件譯文）。前兩者
+(檔名|鍵) 命名空間互斥（own 鍵依設計不進 corpus，apply_own 在 corpus_gate 之後才合入），
+故合併掃描後 lint_exemptions 與 ch_review_state 的 (檔名|鍵) 查找對兩層一致適用；報告以
+[own] 標記來源真相層。條件譯文以假檔名 `owner_variants`、鍵 `<檔名>|<鍵>#<組序>`（1 起）
+併入；它沒有 dist CN 可對 ch_review_state，[C] 誤中改走 lint_exemptions（同樣帶 ch_value
+錨點，lint_exemptions 鍵寫 `owner_variants|<檔名>|<鍵>#<組序>`）。
 
 斷絕 OpenCC 後 CH corpus 為人工真相層，本工具是批次償還審查債的雷達＋防退步 gate：
   [A] opencc_fixes 十族 regex：凍結基線殘留＋人工新條目回歸（**棘輪 gate**，超基線退出 1）
@@ -32,6 +35,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -39,6 +43,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CH_DIR = PROJECT_ROOT / "sources" / "ch"
 OWN_JSON = PROJECT_ROOT / "sources" / "own_translations.json"
+VARIANTS_JSON = PROJECT_ROOT / "sources" / "owner_variants.json"
 FIXES_JSON = PROJECT_ROOT / "sources" / "opencc_fixes.json"
 TERM_JSON = PROJECT_ROOT / "sources" / "terminology.json"
 REVIEW_STATE_JSON = PROJECT_ROOT / "sources" / "ch_review_state.json"
@@ -189,10 +194,29 @@ def main() -> int:
             own_keys.add((fname, key))
             n_own += 1
 
+    # 條件譯文各組的 ch（同為 CH 真相層），假檔名 `owner_variants`、鍵 `<檔名>|<鍵>#<組序>`。
+    # 缺檔／壞形 fail-loud（同其他真相檔）；環境變數 MODLANG_OWNER_VARIANTS 可改指拋棄式測試檔。
+    var_path = Path(os.environ.get("MODLANG_OWNER_VARIANTS") or VARIANTS_JSON)
+    if not var_path.exists():
+        print(f"❌ 條件譯文不存在：{var_path}", file=sys.stderr)
+        return 1
+    var_entries = load_json(var_path).get("entries")
+    if not isinstance(var_entries, dict):
+        print(f"❌ 條件譯文 entries 形狀壞損：{var_path}", file=sys.stderr)
+        return 1
+    vmap = corpus.setdefault("owner_variants", {})
+    for fk, entry in var_entries.items():
+        if fk.startswith("_"):
+            continue
+        groups = entry.get("groups") if isinstance(entry, dict) else None
+        for i, g in enumerate(groups if isinstance(groups, list) else [None], 1):
+            vmap[f"{fk}#{i}"] = g.get("ch") if isinstance(g, dict) else g
+
     non_str = [
         (f, k) for f, m in corpus.items() for k, v in m.items() if not isinstance(v, str)
     ]
-    print(f"corpus：{len(corpus)} 檔、{n_keys} 鍵（＋own_translations {len(own_entries)} 檔、{n_own} 鍵）")
+    print(f"corpus：{len(corpus)} 檔、{n_keys} 鍵（＋own_translations {len(own_entries)} 檔、{n_own} 鍵、"
+          f"條件譯文 {len(vmap)} 組）")
     if non_str:
         print(f"⚠️ corpus 非字串值 {len(non_str)} 鍵（異常，掃描已跳過）：{non_str[:5]}")
 
@@ -213,9 +237,14 @@ def main() -> int:
     #   * ch_value（裁決當時 CH 值 sha256[:16]）必須與現行 CH 相符，否則豁免失效
     #     （命中重新計入棘輪）並列警告——值變了就必須重新裁決
     exemptions = fixes.get("lint_exemptions", {})
+    # select 規則的 needle 也收：條件譯文沒有 dist CN 可對 ch_review_state，[C] 誤中只能走這裡。
     known_patterns = {
         r.get("pattern") for g in fixes.get("post_fixes", []) for r in g.get("rules", [])
-    } | {r["match"]["value"] for r in replace_rules}
+    } | {r["match"]["value"] for r in replace_rules} | {
+        r["match"]["value"] for r in term.get("rules", [])
+        if r.get("status") == "approved" and r.get("mode") == "select"
+        and isinstance(r.get("match", {}).get("value"), str)
+    }
     active_exempt: dict[str, set[str]] = {}
     for rk, spec in sorted(exemptions.items()):
         pats = spec.get("patterns") if isinstance(spec, dict) else None
@@ -288,6 +317,7 @@ def main() -> int:
         hits = [
             h for h in scan(corpus, lambda v, n=needle: n in v)
             if not adjudicated(h[0], h[1])
+            and needle not in active_exempt.get(f"{h[0]}|{h[1]}", set())
         ]
         if hits:
             select_hits += len(hits)
