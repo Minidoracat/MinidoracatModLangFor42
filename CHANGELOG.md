@@ -15,8 +15,8 @@
 
 - **上游改了英文的已出貨文字跟著改（重譯 164 鍵，另 30 鍵確認原譯仍成立）。** 例如 Smart Animal Waste 的距離與時間句型；Tactical Bags 的 6 個腰帶口袋改叫「戰術腰帶口袋 [N]」，和新的「戰術腰帶」分開；Locksmith 的提示改成「掛鎖」；Willowbrook 的預設值與彩蛋武器說明。
   > 技術要點：As1 衍生層的繁中改 `sources/ch`，簡中有變的登記 `cn_overrides.json`（附 `as1_value`）；Smart Animal Waste 的 Livestock Zone 改用原版名稱「畜牧區」，取代舊譯「動物區域」，`mod_names_zh.json` 的簡介同步。
-- **Ammo Loot Drop 有 13 段說明是照舊版英文翻的，改照現行英文重譯。** 掉落率說明的數字與顏色段落、彈種清單漏掉的槍名都補齊；.30-06 彈匣與 .45-70 的口徑寫法也和同 MOD 其他選項統一（春田、軍用彈）。
-  > 技術要點：As1 的譯文停在舊版英文、追蹤器又只回報英文有變的鍵，所以逐鍵對照該 MOD 現行出貨的 281 鍵找出；13 鍵的簡中登記 `cn_overrides.json`。
+- **Ammo Loot Drop 有 13 段說明是照舊版英文翻的，改照現行英文重譯。** 掉落率說明的數字與顏色段落、彈種清單漏掉的槍名都補齊；.30-06 彈匣與 .45-70 的寫法也和同 MOD 其他選項統一（春田、軍用彈）。Guns of Marz 的 AR-15 簡中物品名從「自动步枪」改成「民用步枪」，和英文 Civilian Rifle 與彈種清單一致。
+  > 技術要點：As1 的譯文停在舊版英文、追蹤器又只回報英文有變的鍵，所以逐鍵對照該 MOD 現行出貨的 281 鍵找出；13 鍵與 `MarzGuns.AR15` 的簡中登記 `cn_overrides.json`。
 - **Modern Firearms System 社群修正版的瞄準鏡配方改用原版物品名「瞄準鏡 (4 倍)」**，和這次新增的 Trijicon ACOG/RMR 配方一致。
 - **同一個鍵被不同 MOD 指向不同東西的 24 個鍵重新裁決。** `Base.762Clip` 改成「AK系列7.62x39mm彈匣」，對 Totally's Cops and Robbers 的民用 AK 也成立；MFS 社群修正版與 Escape from Kentucky 口徑不同的 5 個生成機率選項拿掉口徑括號；Striker 12／Armsel Protecta 與 9mm／9x39mm 彈鼓等 4 個鍵沒有對兩邊都成立的譯名，改為不出貨（已有條件譯文的照常依啟用的 MOD 顯示）。
   > 技術要點：`owner_conflict_decisions.json` 新增 24 筆（translate 20、unship 4），`unshipped_keys.json` 新增 4 筆，簽名以 1,780 筆既有裁決自檢全符；`OWNER_CONFLICTS.md` 重生。
