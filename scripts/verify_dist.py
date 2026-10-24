@@ -1147,7 +1147,7 @@ def cmd_cn_diff(paths: dict, base_ref: str) -> int:
 
     觀察「輸出」而非輸入：不論變動來自 As1 同步、cn_overrides、placeholder 例外
     還是 own 層，一律在此匯流受檢。CH 真相層＝`sources/ch/`（corpus 鍵）＋
-    `own_translations.json` 的 ch（原創鍵）。已審台帳中 hash 與現行 CN 相符的鍵
+    `own_translations.json` 與 `pack_ui.json` 的 ch（原創鍵與本包介面文字）。已審台帳中 hash 與現行 CN 相符的鍵
     視為已背書，不列待複核。範圍註記：只看現況存在的鍵——被移除的鍵由 build
     corpus gate（孤兒鍵）把關，不在本檢查視野。
     有待複核鍵 → 退出 1（供 release 前把關）；base_ref 無法解析 → 退出 2。
@@ -1168,17 +1168,19 @@ def cmd_cn_diff(paths: dict, base_ref: str) -> int:
         print(f"⚠️ 已審台帳不可用，本次不套用背書豁免（{exc}）")
         review_state = {}
 
-    def own_ch_map(data: dict | None) -> dict[str, dict[str, str]]:
+    def own_ch_map(*docs: dict | None) -> dict[str, dict[str, str]]:
         out: dict[str, dict[str, str]] = {}
-        for fname, keys in (data or {}).get("entries", {}).items():
-            for key, spec in keys.items():
-                if isinstance(spec, dict) and isinstance(spec.get("ch"), str):
-                    out.setdefault(fname, {})[key] = spec["ch"]
+        for data in docs:
+            for fname, keys in (data or {}).get("entries", {}).items():
+                for key, spec in keys.items():
+                    if isinstance(spec, dict) and isinstance(spec.get("ch"), str):
+                        out.setdefault(fname, {})[key] = spec["ch"]
         return out
 
-    own_path = os.path.join(repo, "sources", "own_translations.json")
-    own_new = own_ch_map(_read_json(own_path) if os.path.isfile(own_path) else None)
-    own_old = own_ch_map(_git_show_json(repo, base_ref, "sources/own_translations.json"))
+    own_rels = ("sources/own_translations.json", "sources/pack_ui.json")
+    own_new = own_ch_map(*(_read_json(os.path.join(repo, rel)) if os.path.isfile(os.path.join(repo, rel)) else None
+                           for rel in own_rels))
+    own_old = own_ch_map(*(_git_show_json(repo, base_ref, rel) for rel in own_rels))
 
     pending: list[str] = []
     n_changed = 0
@@ -1204,7 +1206,7 @@ def cmd_cn_diff(paths: dict, base_ref: str) -> int:
             if key in new_ch or key in old_ch:
                 covered = old_ch.get(key) != new_ch.get(key)
             else:
-                # 原創鍵：CH 真相在 own_translations 的 ch
+                # 原創鍵與本包介面文字：CH 真相在 own_translations／pack_ui 的 ch
                 covered = own_old.get(name, {}).get(key) != own_new.get(name, {}).get(key)
             if not covered:
                 pending.append(

@@ -341,4 +341,28 @@ with tempfile.TemporaryDirectory() as td:
     assert verify_dist._git_show_json(td, "HEAD", "Manor[Poor Version].json") is None
     assert verify_dist._git_show_json(td, "HEAD", "missing.json") is None
 
-print("PASS: CH corpus lane 16/16 案例通過")
+# 15. cn-diff 的 CH 真相層含 pack_ui.json：介面文字新增鍵帶 ch 不列待複核，CN 改了而 ch 沒動照列
+#     （1.60.0 發版前 cn-diff 只讀 sources/ch 與 own_translations，18 個新介面鍵全被誤列）
+with tempfile.TemporaryDirectory() as td:
+    import contextlib
+    import io
+    import subprocess
+    root = Path(td)
+    git = ["git", "-C", td, "-c", "user.name=t", "-c", "user.email=t@t"]
+    subprocess.run(["git", "-C", td, "init", "-q"], check=True)
+    wjson(root / "sources" / "ch_review_state.json", {})
+    wjson(root / "distCN" / "IG_UI.json", {"kOld": "旧"})
+    wjson(root / "sources" / "pack_ui.json",
+          {"entries": {"IG_UI.json": {"kOld": {"ch": "舊", "cn": "旧"}}}})
+    subprocess.run(git + ["add", "-A"], check=True)
+    subprocess.run(git + ["commit", "-q", "-m", "base"], check=True)
+    wjson(root / "distCN" / "IG_UI.json", {"kOld": "改了", "kNew": "新增"})
+    wjson(root / "sources" / "pack_ui.json", {"entries": {"IG_UI.json": {
+        "kOld": {"ch": "舊", "cn": "改了"}, "kNew": {"ch": "新增", "cn": "新增"}}}})
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        rc = verify_dist.cmd_cn_diff({"repo": td, "dist_cn": str(root / "distCN")}, "HEAD")
+    out = buf.getvalue()
+    assert rc == 1 and "IG_UI.json|kOld" in out and "kNew" not in out, out
+
+print("PASS: CH corpus lane 17/17 案例通過")
