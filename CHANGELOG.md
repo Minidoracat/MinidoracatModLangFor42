@@ -15,6 +15,8 @@
   > 技術要點（順序）：使用者 2026-10-24 裁定改由載入順序決定，取代「注入器一律蓋過 LangFor42」。資料檔每列最前面加類型欄（`v` 本體鍵、`c` 衝突鍵），build 與 verify [18] 一起改；注入器在 `getActivatedMods()` 看到本體翻譯包 `CatLangFor42` 排在本包之後，就整批跳過 `v` 列，開機行多印 `vanilla=on|off`。E2E `owner-variants-sp` 加 `--base before|after` 兩種輪次，真實資料 CH 實機 PASS：排在後面時 632 個本體鍵全部跳過、其中 628 個確認保留 LangFor42 的值；排在前面時套用 40 個。
 - **新增「MOD 文字衝突」提醒與清單。** 啟用的 MOD 之間有同一個翻譯鍵、英文卻不同時，進遊戲會跳一次提醒，列出互相覆蓋的 MOD；同一份清單看過就不再跳。附加包與補丁、MOD 改寫原版文字只列在清單、不跳提醒。本體完全翻譯排在本包之後時，清單的「MOD 改寫原版文字」分組會說明那些 MOD 版譯文目前沒有套用，以及怎麼調整。在模組選項可以隨時打開清單，也能關掉自動提醒；支援鍵盤（Esc、Enter、方向鍵）與手把。
   > 技術要點：client Lua 讀 `media/CatModLang/conflicts.tsv`（K 列來自 prep `--owner-report` 生成的 `sources/owner_conflicts.tsv`，V 列為各 MOD 改寫本體鍵數）；介面文字 24 鍵在新人工真相 `sources/pack_ui.json`，順序說明帶入遊戲「模組順序」按鈕的實際名稱；看過的清單記在 `Zomboid/Lua/CatModLangFor42_conflicts_seen.txt`。E2E `owner-variants-sp`、`conflict-notice-sp` CH／CN 實機 PASS，順序說明另以 `--define offshot=1` 截圖確認排版。
+- **補齊 14 個 MOD 新增的繁簡中文，共 432 項。** Senator 武術核心（#1020，219 項）：以色列格鬥術、柔術、白眉拳、摔角等新流派的招式、連段、訓練雜誌與沙盒設定。Hot Brass 可見彈殼（#1012，42 項）：9x39mm 等新口徑的彈殼與彈頭，以及各彈種的組裝、拆解配方。動態前哨站（#1017，35 項）：新的屍潮設定頁與各地區標題。真實溫度（#1011，31 項）：冷氣機、分離式冷氣機、晾曬架與皮革乾燥的設定。Better Building Plus（#1021，31 項）：樓層、地下室與佔地範圍編輯。Knox Inventory（#1023，24 項）：發電機面板與家電圖示。兔子品種（#1019，20 項）：捷克、維也納等新品種與兔毛衣物。另有生活品質模組包 17 項（#1010）、Trees Have Loot 5 項（#1000）、'66 Pontiac 2 項（#1008）、TwisTonFire - WANTED 2 項（#1015）、FTZ 各式推車 2 項（#1022，推車滾動音效）、CleanHotBar 1 項（#1009）、Moodle Effects Explained 1 項（#1016，舊版變體公告）。
+  > 技術要點：追蹤器 2026-10-23 開的「可能過時」issue。prep 抽 25 個 MOD 的缺口 429 鍵（370 條相異英文），依 MOD 分 4 路翻譯、4 路跨模型對抗複核（review-lane-codex），複核標出 13 條（Gunworks 配方改用已出貨的子彈名、Knox 家電圖示比對清單補「爐具」、晾曬架說明刪掉原文沒有的生效條件等），`apply_wf_result` 套用 24 欄後落 `own_translations`。FTZ 是 own 目錄，新鍵落 `sources/mods/3815775971/CN/UI.json`＋`sources/ch`。Moodle Effects Explained 的舊版變體公告 DTEM 與 Expanded Moodles 英文只差變體名稱：JSON 出中性值「這個變體」，條件譯文各自寫出名稱，裁決登記 `owner_conflict_decisions`。Knox Inventory 新增的 33 個測試台鍵依 2026-10-22 裁定登記 `untranslatable_keys.json`（#996）。新鍵皆以有效 CN 值登記 `ch_review_state`。
 
 ### Changed
 
@@ -33,6 +35,15 @@
   > 技術要點：使用者 2026-10-24 裁定，登記 `unshipped_keys.json` 第三類（原版名稱鍵歸本體翻譯包；定義從原版選項鍵放寬到原版程式、腳本、圖塊會查的名稱）；陶藝工作臺的 owner 衝突裁決改為 unship（`owner_signature` 雙向背書），條件譯文條目一併移除。收尾閘門 ⑦ 新增 [4]：成品與本機 LangFor42 出貨鍵的交集都要登記，原版不會顯示的 9 鍵（7 個 B42 不讀的 `Recipe_*`、PZK VLC 自己的主選單新聞、MOD 新增的「鑰匙」物品分類）登記在新人工真相 `sources/langfor42_shared_keys.json`；回歸測試 `test_langfor42_shared.py` 加進 CI。
 - **Bunnies 兔子 MOD 的毛色「Orange」不再顯示成「橘貓」。** 這個翻譯鍵 KittyMod 與 Cats Mod 的貓咪品種也在用。現在依你啟用的 MOD 顯示：Bunnies 與 KittyMod 的 Orange 是「橘色」，Cats Mod 的 Orange cat 照樣是「橘貓」。
   > 技術要點：追蹤器 2026-10-23 發現 Bunnies（3809817126）也定義 `IG_UI|IGUI_Breed_orange`（#1024）。裁決的中性譯名改「橘色」（同 As1 對 KittyMod 同英文 `IGUI_Breed_orangemanx` 的譯法），簡中偏離 As1 登記 `cn_overrides`；條件譯文重分組成 KittyMod＋Bunnies「橘色」、Cats Mod「橘貓」。同批 Moodle Effects Explained（3747745835）拿掉 DTEM／EM 變體的 `42.20` 夾、改讀 `42.15`（#1016）：66 個條件譯文鍵的英文只差單一 `%` 寫法，照原譯文與核准重新簽名；Windchill lvl1 這兩個變體的檢查版本範圍變成 42.20.1，拆出的新組待雙模型重審、暫不出貨。重分組後 7 筆 lint 豁免的組序跟著改。
+- **跟上 5 個 MOD 改過的英文（152 項）。** 動態前哨站把每個沙盒選項開頭的地名移到新的地區標題，選項名稱全部改寫（92 項）；Senator 武術核心的連段名稱改成出招順序，另有 Leaping knee 與反引號鍵（46 項）；Better Building Plus 9 項；真實溫度的發電機統計納入冷氣機（3 項）；更好的手電筒可以掛在一般背包上，不再只限登山包（2 項）。
+  > 技術要點：own 層 151 鍵依新英文更新並同步英文錨點；真實溫度 3 鍵屬 As1 衍生層，繁中改 `sources/ch`、簡中偏離登記 `cn_overrides`（英文從 `(%)` 改成 `(percent)` 的那鍵寫「百分比」，不寫 `%%`）。Better Building Plus 另 2 鍵英文只改措辭，譯文維持。KI5 車輛 9 個 MOD 新收進自己 JSON 的配方英文（182 鍵）157 鍵與 damnlib 同英文、23 鍵是 VW Type 1（即金龜車），現行譯文都不改；82 Jeep J10、79 Camaro 上游刪除的 `HEADER_*` 殘鍵屬 As1 衍生層，照不變式保留；Guns of Marz、Hug the Plushie 只改腳本，沒有文字變更。
+- **補譯時順帶修正既有譯文 23 項（繁中 23、簡中 11）。** 動態前哨站的設定頁標題改照 MOD 中文名「動態前哨站」（上游已從 Claimable Outposts 改名 Dynamic Outposts）；.38 Special 口徑名照本體完全翻譯的寫法統一為「.38 Special」（Hot Brass 的組裝、拆解與彈頭，以及穿甲彈、曳光彈配方，共 8 項）；Hot Brass 的 Persistent Casings 是「彈殼留存」不是「耐用彈殼」，10x25mm Auto 的簡中不再把 Auto 譯成「自动」，.38 彈殼名去掉多餘空格；SWMG 的 5.56x45mm 高壓彈口徑誤寫成 5.45x39mm；動態前哨站的同步訊息改用中文省略號「…」；真實溫度簡中說明把「窗户」寫成「床」；標點改半形（真實溫度除錯訊息 4 項、Hot Brass 強盜彈殼 2 項）。
+  > 技術要點：4 路譯者與複核回報的「範圍外」逐項核實 owner、英文與層別後才改：As1 衍生層繁中改 `sources/ch`、簡中偏離登記 `cn_overrides`（帶 `as1_value`），own 層走 `apply_translations`。未採納 2 項：Bunnies 的 Czech Albino 已有裁決（中性「白化」）與條件譯文（Bunnies 組「捷克白化」）；生活品質模組包的說明比舊英文短，是因為生效的 `42.20` 夾英文本來就沒有警告句。
+
+### Removed
+
+- **真實溫度移除上游已刪掉的「對流過渡強度」沙盒選項（2 項）。**
+  > 技術要點：own 層。全庫英文鏡像與追蹤狀態都已沒有 owner 定義，steamcmd 重抓的現行 Workshop 內容（Lua、沙盒設定、翻譯檔）零引用（tracker.md 第 5 條第 8 步）。
 
 ## [42.21.0-1.59.0] - 2026-10-22
 

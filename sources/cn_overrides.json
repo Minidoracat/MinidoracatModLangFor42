@@ -61309,5 +61309,50 @@
     "as1_value": "橘猫",
     "reason": "2026-10-24：兔子 MOD Bunnies（3809817126）也用此鍵、英文 Orange，「橘猫」不適用兔子；改中性的「橘色」（同 As1 對 KittyMod 同英文 IGUI_Breed_orangemanx 的譯法，#1024）。",
     "value": "橘色"
+  },
+  "IG_UI.json|IGUI_RCGeneratorHeaterLoad": {
+    "as1_value": "真实温度加热器",
+    "reason": "2026-10-24：上游 2026-10-23 把 RealisticTemperature Heaters 改成 Realistic Temperature heaters and air conditioners（加入冷氣機）（#1011）。",
+    "value": "真实温度加热器与空调"
+  },
+  "IG_UI.json|IGUI_RCGeneratorHeaterSubtotal": {
+    "as1_value": "加热器小计: %1 升/小时",
+    "reason": "2026-10-24：上游 2026-10-23 把 RT heater subtotal 改成 Realistic Temperature subtotal（不再只算加熱器）（#1011）。",
+    "value": "真实温度小计: %1 升/小时"
+  },
+  "Sandbox.json|Sandbox_RealisticCold_IndustrialHeaterSpawnRate": {
+    "as1_value": "工业暖炉生成几率 (%%)",
+    "reason": "2026-10-24：上游 2026-10-23 把 (%) 改成 (percent)，英文已無 % 符號，依 token 對稱規則寫「百分比」（#1011）。",
+    "value": "工业暖炉生成几率 (百分比)"
+  },
+  "ItemName.json|HBVCEF.10x25_Casing": {
+    "as1_value": "10x25mm自动弹壳",
+    "reason": "2026-10-24：Auto 是口徑名 10mm Auto 的一部分，As1 譯成「自动」。",
+    "value": "10x25mm Auto弹壳"
+  },
+  "Sandbox.json|Sandbox_HB_PermanentCasings": {
+    "as1_value": "耐用弹壳",
+    "reason": "2026-10-24：英文 Persistent Casings 是彈殼落地後留在地面，As1 譯成「耐用」。",
+    "value": "弹壳留存"
+  },
+  "ItemName.json|SWMG.556x45_Bullet_Overpressured": {
+    "as1_value": "5.45x39mm高压弹",
+    "reason": "2026-10-24：英文 5.56x45mm [+P] Round，As1 口徑誤寫成 5.45x39mm。",
+    "value": "5.56x45mm高压弹"
+  },
+  "IG_UI.json|IGUI_CO_StatusSyncing": {
+    "as1_value": "同步中...",
+    "reason": "2026-10-24：中文省略號改用「…」。",
+    "value": "同步中…"
+  },
+  "IG_UI.json|IGUI_CO_WaitingForServerState": {
+    "as1_value": "正在等待服务器状态...",
+    "reason": "2026-10-24：中文省略號改用「…」。",
+    "value": "正在等待服务器状态…"
+  },
+  "Sandbox.json|Sandbox_RealisticCold_BreachWeightCurtain_tooltip": {
+    "as1_value": "寒冷通过拉上窗帘但没有关上的床涌入的程度. 默认为0.3 - 窗帘有效, 但还不够有效",
+    "reason": "2026-10-24：As1 錯字：拉上窗簾但沒關上的是窗戶，誤寫成「床」。",
+    "value": "寒冷通过拉上窗帘但没有关上的窗户涌入的程度. 默认为0.3 - 窗帘有效, 但还不够有效"
   }
 }

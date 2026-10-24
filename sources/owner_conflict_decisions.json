@@ -11781,6 +11781,62 @@
       "reason": "2026-10-21 #978 裁決：Knox Inventory 1.0 BETA（KnoxInventoryBeta）在「自動」一項多寫 'and with OldPoint's overhead camera'；Lua 只有 Beta 支援 OldPoint（KnoxCompat.lua），主模組 KnoxInventory 沒有。照 2026-10-11 使用者裁定採「共通內容＋具名專屬句」：保留兩方共通的說明，句末加「Knox Inventory 1.0 BETA: 使用 OldPoint 的俯視鏡頭時也列出周圍全部.」。",
       "ch": "「周圍」欄會列出哪些容器. 「只限開啟的」: 你在世界中點選開啟或用 Viewpoint 的按鍵開啟的那個容器, 以及你旁邊的地板. 「自動」: 使用 Viewpoint 的鏡頭時同前者, 使用一般鏡頭時列出周圍全部. 在車內時一律全部顯示. Knox Inventory 1.0 BETA: 使用 OldPoint 的俯視鏡頭時也列出周圍全部.",
       "cn": "“周围”栏会列出哪些容器. “仅限打开的”: 你在世界中点击打开或用 Viewpoint 的按键打开的那个容器, 以及你旁边的地板. “自动”: 使用 Viewpoint 的镜头时同前者, 使用普通镜头时列出周围全部. 在车内时总是全部显示. Knox Inventory 1.0 BETA: 使用 OldPoint 的俯视镜头时也列出周围全部."
+    },
+    "UI|UI_MEE_LegacyVariantNotice": {
+      "action": "translate",
+      "signature": "f60313e96d5badc3",
+      "reason": "DTEM 與 Expanded Moodles 兩個變體的舊版遷移公告只差變體名稱；中性值寫「這個變體」「對應的 MOD」，變體名稱由條件譯文補上（2026-10-24 #1016）。",
+      "ch": "Moodle Effects Explained 的這個變體現已改為舊版遷移項目.\n\n在 Build 42.20.2 以後的版本, 這個變體不再修改狀態圖示說明.\n請停用它, 改為啟用 Moodle Effects Explained 主 MOD.\n主 MOD 會自動偵測對應的 MOD, 並加上相容的說明.",
+      "cn": "Moodle Effects Explained 的这个变体现已改为旧版迁移项.\n\n在 Build 42.20.2 及以后的版本, 这个变体不再修改状态图标说明.\n请停用它, 改为启用 Moodle Effects Explained 主模组.\n主模组会自动检测对应的模组, 并添加兼容说明."
+    },
+    "Moodles|Moodles_MEE_DTEMCustom_dtemallergy_Bad_desc_lvl1": {
+      "action": "translate",
+      "signature": "9ec44bf27f36ed72",
+      "reason": "MoodleEffectsExplained（42.20 夾）與 DTEM 變體（42.15 夾）只差 %% 與 % 的寫法，內容相同；同一譯文對兩者成立（2026-10-24 #1016）。",
+      "ch": "DTEM: 偶爾打噴嚏和咳嗽.<br>DTEM: 過敏 21-40 %%",
+      "cn": "DTEM: 偶尔打喷嚏和咳嗽.<br>DTEM: 过敏 21-40 %%"
+    },
+    "Moodles|Moodles_MEE_DTEMCustom_dtemallergy_Bad_desc_lvl2": {
+      "action": "translate",
+      "signature": "989344d06cfd0e91",
+      "reason": "MoodleEffectsExplained（42.20 夾）與 DTEM 變體（42.15 夾）只差 %% 與 % 的寫法，內容相同；同一譯文對兩者成立（2026-10-24 #1016）。",
+      "ch": "DTEM: 頻繁打噴嚏和咳嗽, 身體多處發癢.<br>DTEM: 抓癢讓你感到疼痛.<br>DTEM: 過敏 41-60 %%<br>DTEM: 每遊戲分鐘1/5機率疼痛+0-14",
+      "cn": "DTEM: 频繁打喷嚏和咳嗽, 身体多处发痒.<br>DTEM: 抓挠会让你感到疼痛.<br>DTEM: 过敏 41-60 %%<br>DTEM: 每游戏分钟1/5概率疼痛+0-14"
+    },
+    "Moodles|Moodles_MEE_DTEMCustom_dtemallergy_Bad_desc_lvl3": {
+      "action": "translate",
+      "signature": "11a2dfd62cd2e076",
+      "reason": "MoodleEffectsExplained（42.20 夾）與 DTEM 變體（42.15 夾）只差 %% 與 % 的寫法，內容相同；同一譯文對兩者成立（2026-10-24 #1016）。",
+      "ch": "DTEM: 身上大部分部位發癢.<br>DTEM: 疼痛明顯加劇.<br>DTEM: 過敏 61-80 %%<br>DTEM: 每遊戲分鐘: 2次 (1/5機率疼痛+0-14)",
+      "cn": "DTEM: 身体大部分区域发痒.<br>DTEM: 疼痛明显加剧.<br>DTEM: 过敏 61-80 %%<br>DTEM: 每游戏分钟: 2次 (1/5概率疼痛+0-14)"
+    },
+    "Moodles|Moodles_MEE_DTEMCustom_dtemallergy_Bad_desc_lvl4": {
+      "action": "translate",
+      "signature": "83bfd113c2bd5bb3",
+      "reason": "MoodleEffectsExplained（42.20 夾）寫 Overall Body Health -2，DTEM 變體（42.15 夾）寫 every game min: Overall Body Health -2；中性值不寫頻率，對兩者都不算錯，DTEM 的頻率由條件譯文補上（2026-10-24 #1016）。",
+      "ch": "DTEM: 過敏已蔓延至全身.<br>DTEM: 疲勞上升, 耐力與健康下降.<br>DTEM: 過敏 >80 %%<br>DTEM: 每遊戲分鐘: 2次 (1/5機率疼痛+0-14)<br>DTEM: 每遊戲分鐘1/10機率疲勞+0.07<br>DTEM: 每遊戲分鐘1/10機率耐力-0.07<br>DTEM: 整體身體健康-2<br>DTEM: 每遊戲分鐘1/3機率疼痛+0-14<br>DTEM: 每現實時間2.5秒: 1/3機率食物中毒+3",
+      "cn": "DTEM: 过敏已蔓延至全身.<br>DTEM: 疲劳增加, 耐力与生命值下降.<br>DTEM: 过敏 >80 %%<br>DTEM: 每游戏分钟: 2次 (1/5概率疼痛+0-14)<br>DTEM: 每游戏分钟1/10概率疲劳+0.07<br>DTEM: 每游戏分钟1/10概率耐力-0.07<br>DTEM: 整体身体健康-2<br>DTEM: 每游戏分钟1/3概率疼痛+0-14<br>DTEM: 每现实时间2.5秒: 1/3概率食物中毒+3"
+    },
+    "Moodles|Moodles_MEE_DTEMCustom_dtemoverdose_Bad_desc_lvl2": {
+      "action": "translate",
+      "signature": "6b74ecfb061cf8c0",
+      "reason": "MoodleEffectsExplained（42.20 夾）與 DTEM 變體（42.15 夾）只差 %% 與 % 的寫法，內容相同；同一譯文對兩者成立（2026-10-24 #1016）。",
+      "ch": "DTEM: 輕微焦躁並出汗.<br>DTEM: 用藥過量 51-70 %%<br>DTEM: 每現實時間25秒: 1/7機率壓力+0.10<br>DTEM: 每現實時間25秒: 1/7機率溼潤度+10<br>DTEM: 恢復: -4 / 現實時間150秒",
+      "cn": "DTEM: 轻微烦躁并出汗.<br>DTEM: 用药过量 51-70 %%<br>DTEM: 每现实时间25秒: 1/7概率压力+0.10<br>DTEM: 每现实时间25秒: 1/7概率湿润度+10<br>DTEM: 恢复: -4 / 现实时间150秒"
+    },
+    "Moodles|Moodles_MEE_DTEMCustom_dtemoverdose_Bad_desc_lvl3": {
+      "action": "translate",
+      "signature": "f21f506afeb75e66",
+      "reason": "MoodleEffectsExplained（42.20 夾）與 DTEM 變體（42.15 夾）只差 %% 與 % 的寫法，內容相同；同一譯文對兩者成立（2026-10-24 #1016）。",
+      "ch": "DTEM: 你感到有些昏沉.<br>DTEM: 用藥過量 71-85 %%<br>DTEM: 每現實時間25秒: 1/7機率壓力+0.10<br>DTEM: 每現實時間25秒: 1/7機率溼潤度+10<br>DTEM: 每現實時間25秒: 1/5機率疲勞+0.07<br>DTEM: 恢復: -4 / 現實時間150秒",
+      "cn": "DTEM: 你感到有些困倦.<br>DTEM: 用药过量 71-85 %%<br>DTEM: 每现实时间25秒: 1/7概率压力+0.10<br>DTEM: 每现实时间25秒: 1/7概率湿润度+10<br>DTEM: 每现实时间25秒: 1/5概率疲劳+0.07<br>DTEM: 恢复: -4 / 现实时间150秒"
+    },
+    "Moodles|Moodles_MEE_DTEMCustom_dtemoverdose_Bad_desc_lvl4": {
+      "action": "translate",
+      "signature": "decfead206f5a05c",
+      "reason": "MoodleEffectsExplained（42.20 夾）與 DTEM 變體（42.15 夾）只差 %% 與 % 的寫法，內容相同；同一譯文對兩者成立（2026-10-24 #1016）。",
+      "ch": "DTEM: 嚴重中毒.<br>DTEM: 有死亡危險.<br>DTEM: 用藥過量 >85 %%<br>DTEM: 每現實時間25秒: 1/7機率壓力+0.10<br>DTEM: 每現實時間25秒: 1/7機率溼潤度+10<br>DTEM: 每現實時間25秒: 1/5機率疲勞+0.07<br>DTEM: 每現實時間25秒: 1/5機率食物中毒<br>DTEM: 恢復: -4 / 現實時間150秒",
+      "cn": "DTEM: 严重中毒.<br>DTEM: 有死亡风险.<br>DTEM: 用药过量 >85 %%<br>DTEM: 每现实时间25秒: 1/7概率压力+0.10<br>DTEM: 每现实时间25秒: 1/7概率湿润度+10<br>DTEM: 每现实时间25秒: 1/5概率疲劳+0.07<br>DTEM: 每现实时间25秒: 1/5概率食物中毒<br>DTEM: 恢复: -4 / 现实时间150秒"
     }
   }
 }

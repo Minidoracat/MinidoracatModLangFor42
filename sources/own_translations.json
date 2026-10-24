@@ -7895,6 +7895,11 @@
     "en": "Untuck from Boots",
     "ch": "把褲管從靴子拉出",
     "cn": "把裤管从靴子里拉出"
+   },
+   "ContextMenu_BBP_WriteMaterials": {
+    "en": "Write Materials List",
+    "ch": "寫下材料清單",
+    "cn": "写下材料清单"
    }
   },
   "Fluids.json": {
@@ -140092,7 +140097,7 @@
     "cn": "已添加: %1"
    },
    "IGUI_BBP_Extension_NeedsRoom": {
-    "en": "A renovation has to keep at least one room. Leave a room standing, or draw a new one.",
+    "en": "A renovation has to keep at least one room. Leave one or draw a new one.",
     "ch": "翻修至少要保留一個房間. 請保留一個房間, 或畫一個新的.",
     "cn": "翻修至少要保留一个房间. 请保留一个房间, 或画一个新的."
    },
@@ -140902,7 +140907,7 @@
     "cn": "实体"
    },
    "IGUI_BBP_NeedSledgehammer": {
-    "en": "You need a sledgehammer to tear this out.",
+    "en": "You need a sledgehammer to remove this.",
     "ch": "你需要破牆大錘才能拆除這個.",
     "cn": "你需要破墙大锤才能拆除这个."
    },
@@ -141212,9 +141217,9 @@
     "cn": "木窗框 (3级)"
    },
    "IGUI_BBP_PieceWrongLevel": {
-    "en": "Build that from its own floor. Floors and roofs can also go up from the floor below.",
-    "ch": "請在它所在的樓層建造. 地板與屋頂也可以從下一層往上蓋.",
-    "cn": "请在它所在的楼层建造. 地板和屋顶也可以从下一层往上盖."
+    "en": "Build that from its own floor. Floors and roofs can also go up from the floor below, and digging and stairs below ground can be done from the floor above.",
+    "ch": "請在它所在的樓層建造. 地板與屋頂也可以從下一層往上蓋, 地下的挖掘與樓梯則可以從上一層進行.",
+    "cn": "请在它所在的楼层建造. 地板和屋顶也可以从下一层往上盖, 地下的挖掘和楼梯则可以从上一层进行."
    },
    "IGUI_BBP_Pipette": {
     "en": "Pipette",
@@ -141387,19 +141392,19 @@
     "cn": "重命名组合"
    },
    "IGUI_BBP_RenovationNeedsSledgehammer": {
-    "en": "This renovation tears out %1 pieces. Carry a sledgehammer, or keep one in a container nearby.",
-    "ch": "此翻修會拆除 %1 個構件. 請攜帶破牆大錘, 或在附近的容器中放一把.",
-    "cn": "此翻修会拆除 %1 个构件. 请携带破墙大锤, 或在附近的容器中放一把."
+    "en": "This renovation removes %1 pieces. You will need a sledgehammer.",
+    "ch": "此翻修會拆除 %1 個構件. 你需要一把破牆大錘.",
+    "cn": "此翻修会拆除 %1 个构件. 你需要一把破墙大锤."
    },
    "IGUI_BBP_RenovationRoomsNeedSledgehammer": {
-    "en": "This renovation removes rooms (%1). Carry a sledgehammer to do that.",
-    "ch": "此翻修會移除房間 (%1). 需要攜帶破牆大錘才能進行.",
-    "cn": "此翻修会移除房间 (%1). 需要携带破墙大锤才能进行."
+    "en": "This renovation removes rooms (%1). You will need a sledgehammer.",
+    "ch": "此翻修會移除房間 (%1). 你需要一把破牆大錘.",
+    "cn": "此翻修会移除房间 (%1). 你需要一把破墙大锤."
    },
    "IGUI_BBP_RoofDesc_crossGable": {
-    "en": "Each wing gets its own ridge, with valleys where they meet.",
-    "ch": "每個側翼各有自己的屋脊, 交會處形成天溝.",
-    "cn": "每个侧翼各有自己的屋脊, 交汇处形成天沟."
+    "en": "Each wing gets its own ridge, with proper valleys.",
+    "ch": "每個側翼各有自己的屋脊, 並有完整的天溝.",
+    "cn": "每个侧翼各有自己的屋脊, 并有完整的天沟."
    },
    "IGUI_BBP_RoofDesc_flat": {
     "en": "A flat roof you can walk on, with a trimmed edge.",
@@ -141417,14 +141422,14 @@
     "cn": "每一侧都是斜面, 因此不需要建造山墙."
    },
    "IGUI_BBP_RoofDesc_hipFlat": {
-    "en": "Slopes up one storey, then a flat top you can walk on.",
-    "ch": "斜面上升一層樓高, 頂部是可行走的平頂.",
-    "cn": "斜面上升一层楼高, 顶部是可行走的平顶."
+    "en": "Slopes up one storey, then a flat top.",
+    "ch": "斜面上升一層樓高, 頂部為平頂.",
+    "cn": "斜面上升一层楼高, 顶部为平顶."
    },
    "IGUI_BBP_RoofDesc_hipWings": {
-    "en": "The main block slopes on all sides, the wings end in gables.",
-    "ch": "主體四面皆為斜面, 側翼末端為山牆.",
-    "cn": "主体四面皆为斜面, 侧翼末端为山墙."
+    "en": "The main block slopes on all sides, the wings have gables.",
+    "ch": "主體四面皆為斜面, 側翼帶有山牆.",
+    "cn": "主体四面皆为斜面, 侧翼带有山墙."
    },
    "IGUI_BBP_RoofDesc_shedAgainst": {
     "en": "One slope falling away from the building it leans on.",
@@ -141497,9 +141502,9 @@
     "cn": "山墙"
    },
    "IGUI_BBP_RoofHelper_NoFootprint": {
-    "en": "Draw the rooms first. The helper roofs the footprint you drew.",
-    "ch": "請先畫出房間. 屋頂助手會為你畫出的佔地範圍加上屋頂.",
-    "cn": "请先画出房间. 屋顶助手会为你画出的占地范围加上屋顶."
+    "en": "Draw the rooms first, the helper needs them.",
+    "ch": "請先畫出房間, 屋頂助手需要它們.",
+    "cn": "请先画出房间, 屋顶助手需要它们."
    },
    "IGUI_BBP_RoofHelper_Note": {
     "en": "Applying replaces any roof already planned on this part of the footprint.",
@@ -142837,9 +142842,9 @@
     "cn": "模板"
    },
    "IGUI_BBP_TipColours": {
-    "en": "%1 colours. Click again to pick one; the whole style follows.",
-    "ch": "%1 種顏色. 再按一次可選擇一種; 整個樣式會隨之變更.",
-    "cn": "%1 种颜色. 再点击一次可选择一种; 整个样式会随之更改."
+    "en": "%1 colours. Click again to pick one.",
+    "ch": "%1 種顏色. 再按一次可選擇一種.",
+    "cn": "%1 种颜色. 再点击一次可选择一种."
    },
    "IGUI_BBP_TipControls": {
     "en": "Click: select  |  Right-click: options  |  Drag: quickbar",
@@ -157986,6 +157991,426 @@
     "en": "Others' music volume",
     "ch": "他人音樂音量",
     "cn": "他人音乐音量"
+   },
+   "IGUI_CleanHotBar_ChamberedRoundSeparate": {
+    "en": "Show Chambered Round Separately (+1)",
+    "ch": "分開顯示膛內子彈 (+1)",
+    "cn": "单独显示膛内子弹 (+1)"
+   },
+   "IGUI_RCAirCon_AlreadyThere": {
+    "en": "There is already one on this wall",
+    "ch": "這面牆上已經有一台了",
+    "cn": "这面墙上已经有一台了"
+   },
+   "IGUI_RCAirCon_BadSpot": {
+    "en": "Can't install here",
+    "ch": "無法安裝在這裡",
+    "cn": "无法安装在这里"
+   },
+   "IGUI_RCAirCon_FanPower": {
+    "en": "Cooling power",
+    "ch": "製冷強度",
+    "cn": "制冷强度"
+   },
+   "IGUI_RCAirCon_NeedInside": {
+    "en": "Point at a spot inside a building",
+    "ch": "請指向建築內部的位置",
+    "cn": "请指向建筑内部的位置"
+   },
+   "IGUI_RCAirCon_NeedOutsideBehind": {
+    "en": "The other side of this wall isn't outdoors",
+    "ch": "這面牆的另一側不是室外",
+    "cn": "这面墙的另一侧不是室外"
+   },
+   "IGUI_RCAirCon_NeedWall": {
+    "en": "Needs a solid wall, no door or window",
+    "ch": "需要實心牆, 不能有門或窗戶",
+    "cn": "需要实心墙, 不能有门或窗户"
+   },
+   "IGUI_RCAirCon_PowerHigh": {
+    "en": "High",
+    "ch": "高",
+    "cn": "高"
+   },
+   "IGUI_RCAirCon_PowerLow": {
+    "en": "Low",
+    "ch": "低",
+    "cn": "低"
+   },
+   "IGUI_RCAirCon_PowerMax": {
+    "en": "Max",
+    "ch": "最強",
+    "cn": "最强"
+   },
+   "IGUI_RCAirCon_PowerMedium": {
+    "en": "Medium",
+    "ch": "中",
+    "cn": "中"
+   },
+   "IGUI_RCAirCon_RoomTemp": {
+    "en": "Room temperature",
+    "ch": "室溫",
+    "cn": "室温"
+   },
+   "IGUI_RCAirCon_Settings": {
+    "en": "Settings",
+    "ch": "設定",
+    "cn": "设置"
+   },
+   "IGUI_RCAirCon_Status": {
+    "en": "Status",
+    "ch": "狀態",
+    "cn": "状态"
+   },
+   "IGUI_RCAirCon_StatusCooling": {
+    "en": "Cooling",
+    "ch": "製冷中",
+    "cn": "制冷中"
+   },
+   "IGUI_RCAirCon_StatusIdle": {
+    "en": "At target",
+    "ch": "已達目標溫度",
+    "cn": "已达目标温度"
+   },
+   "IGUI_RCAirCon_StatusNoPower": {
+    "en": "No power",
+    "ch": "沒有電力",
+    "cn": "没有电力"
+   },
+   "IGUI_RCAirCon_StatusOff": {
+    "en": "Off",
+    "ch": "已關閉",
+    "cn": "已关闭"
+   },
+   "IGUI_RCAirCon_Target": {
+    "en": "Cool down to",
+    "ch": "降溫至",
+    "cn": "降温至"
+   },
+   "IGUI_RCAirCon_Title": {
+    "en": "Air Conditioner",
+    "ch": "冷氣機",
+    "cn": "空调"
+   },
+   "IGUI_RCAirCon_TurnOff": {
+    "en": "Turn Off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "IGUI_RCAirCon_TurnOn": {
+    "en": "Turn On",
+    "ch": "開啟",
+    "cn": "开启"
+   },
+   "IGUI_RCAirCon_Uninstall": {
+    "en": "Uninstall",
+    "ch": "拆除",
+    "cn": "拆除"
+   },
+   "IGUI_AnimalType_dwarfbuck": {
+    "en": "Dwarf Buck",
+    "ch": "侏儒公兔",
+    "cn": "侏儒公兔"
+   },
+   "IGUI_AnimalType_dwarfdoe": {
+    "en": "Dwarf Doe",
+    "ch": "侏儒母兔",
+    "cn": "侏儒母兔"
+   },
+   "IGUI_AnimalType_dwarfkitten": {
+    "en": "Dwarf Kitten",
+    "ch": "侏儒小兔",
+    "cn": "侏儒幼兔"
+   },
+   "IGUI_Breed_bew": {
+    "en": "BEW",
+    "ch": "藍眼白",
+    "cn": "蓝眼白"
+   },
+   "IGUI_Breed_black": {
+    "en": "Black",
+    "ch": "黑色",
+    "cn": "黑色"
+   },
+   "IGUI_Breed_bluevienna": {
+    "en": "Blue of Vienna",
+    "ch": "維也納藍",
+    "cn": "维也纳蓝"
+   },
+   "IGUI_Breed_chin": {
+    "en": "Chinchilla",
+    "ch": "青紫藍",
+    "cn": "青紫蓝"
+   },
+   "IGUI_Breed_chin_l": {
+    "en": "Chinchilla Giant",
+    "ch": "青紫藍 (巨型)",
+    "cn": "巨型青紫蓝"
+   },
+   "IGUI_Breed_chin_s": {
+    "en": "Small Chinchilla",
+    "ch": "青紫藍 (小型)",
+    "cn": "小型青紫蓝"
+   },
+   "IGUI_Breed_dutch": {
+    "en": "Dutch",
+    "ch": "荷蘭",
+    "cn": "荷兰"
+   },
+   "IGUI_Breed_giant_moravian": {
+    "en": "Moravian Giant",
+    "ch": "摩拉維亞巨型",
+    "cn": "摩拉维亚巨型"
+   },
+   "IGUI_Breed_rew": {
+    "en": "REW",
+    "ch": "紅眼白",
+    "cn": "红眼白"
+   },
+   "IGUI_Breed_silver": {
+    "en": "Silver",
+    "ch": "銀色",
+    "cn": "银色"
+   },
+   "IGUI_Breed_silver_l": {
+    "en": "Big Light Silver",
+    "ch": "淺銀色 (大型)",
+    "cn": "大型浅银色"
+   },
+   "IGUI_BBP_Action_Digging": {
+    "en": "Digging...",
+    "ch": "正在挖掘…",
+    "cn": "正在挖掘…"
+   },
+   "IGUI_BBP_BelowGroundDark": {
+    "en": "Tip: Place a light switch in the basement so it's not pitch black.",
+    "ch": "提示: 在地下室放一個電燈開關, 才不會一片漆黑.",
+    "cn": "提示: 在地下室放一个电灯开关, 以免一片漆黑."
+   },
+   "IGUI_BBP_BelowGroundDigs": {
+    "en": "Below ground: %1 squares to dig.",
+    "ch": "地下: 需挖掘 %1 格.",
+    "cn": "地下: 需挖掘 %1 格."
+   },
+   "IGUI_BBP_BelowGroundNoStairs": {
+    "en": "%1 has no stairs up, place stairs down there.",
+    "ch": "%1 沒有向上的樓梯, 請在那一層放置樓梯.",
+    "cn": "%1 没有向上的楼梯, 请在那一层放置楼梯."
+   },
+   "IGUI_BBP_BelowGroundRaised": {
+    "en": "%1 is drawn here to show what it will look like underground.",
+    "ch": "%1 繪製在此處, 用來呈現它在地下的樣子.",
+    "cn": "%1 绘制在此处, 用来展示它在地下的样子."
+   },
+   "IGUI_BBP_EditLevel": {
+    "en": "Editing: %1",
+    "ch": "編輯中: %1",
+    "cn": "正在编辑: %1"
+   },
+   "IGUI_BBP_FloorNoStairs": {
+    "en": "%1 needs stairs going up to it.",
+    "ch": "%1 需要有從下層通往該層的樓梯.",
+    "cn": "%1 需要有从下层通往该层的楼梯."
+   },
+   "IGUI_BBP_Level_Basement": {
+    "en": "Basement %1",
+    "ch": "地下室 %1",
+    "cn": "地下室 %1"
+   },
+   "IGUI_BBP_Level_Ground": {
+    "en": "Ground floor",
+    "ch": "地面層",
+    "cn": "地面层"
+   },
+   "IGUI_BBP_Level_Upper": {
+    "en": "Floor %1",
+    "ch": "樓層 %1",
+    "cn": "楼层 %1"
+   },
+   "IGUI_BBP_NoteHeaderNeeded": {
+    "en": "Still needed for %1:",
+    "ch": "%1 仍需要:",
+    "cn": "%1 仍需要:"
+   },
+   "IGUI_BBP_NoteHeaderPlan": {
+    "en": "Materials for %1:",
+    "ch": "%1 所需材料:",
+    "cn": "%1 所需材料:"
+   },
+   "IGUI_BBP_NoteLine": {
+    "en": "%1 x %2",
+    "ch": "%1 x %2",
+    "cn": "%1 x %2"
+   },
+   "IGUI_BBP_NoteMore": {
+    "en": "...and %1 more",
+    "ch": "…還有 %1 項",
+    "cn": "…还有 %1 项"
+   },
+   "IGUI_BBP_NoteNothingNeeded": {
+    "en": "Nothing left to gather for this build.",
+    "ch": "這項工程已不需要再收集任何材料.",
+    "cn": "这项工程已无需再收集任何材料."
+   },
+   "IGUI_BBP_NoteTitle": {
+    "en": "Materials: %1",
+    "ch": "材料: %1",
+    "cn": "材料: %1"
+   },
+   "IGUI_BBP_NoteTool": {
+    "en": "%1 (tool)",
+    "ch": "%1 (工具)",
+    "cn": "%1 (工具)"
+   },
+   "IGUI_BBP_RoomLevel": {
+    "en": "Rooms on: %1",
+    "ch": "房間樓層: %1",
+    "cn": "房间楼层: %1"
+   },
+   "IGUI_BBP_StairClearsFloors": {
+    "en": "Removes %1 floor tiles over the stairs",
+    "ch": "會移除樓梯上方的 %1 塊地板",
+    "cn": "会移除楼梯上方的 %1 块地板"
+   },
+   "IGUI_BBP_Validator_NoStairToFloor": {
+    "en": "Floor %1 has floor tiles but no stairs up to it, and part of the build has to be done standing there. Add stairs on the floor below, or remove that floor.",
+    "ch": "樓層 %1 有地板, 但沒有樓梯通往該層, 而部分建造工作必須站在那裡進行. 請在下一層加上樓梯, 或移除該樓層.",
+    "cn": "楼层 %1 有地板, 但没有楼梯通往该层, 而部分建造工作必须站在那里进行. 请在下一层添加楼梯, 或移除该楼层."
+   },
+   "IGUI_BBP_Validator_NoStairUp": {
+    "en": "Rooms below ground need a stair leading up from their level.",
+    "ch": "地下的房間需要有從該層往上的樓梯.",
+    "cn": "地下的房间需要有从该层向上的楼梯."
+   },
+   "IGUI_BBP_ViewAbove": {
+    "en": "Above",
+    "ch": "上層",
+    "cn": "上层"
+   },
+   "IGUI_BBP_ViewBasement": {
+    "en": "Basement",
+    "ch": "地下室",
+    "cn": "地下室"
+   },
+   "IGUI_KnoxGen_Decimal": {
+    "en": ".",
+    "ch": ".",
+    "cn": "."
+   },
+   "IGUI_KnoxGen_DemoFridge": {
+    "en": "Fridge",
+    "ch": "冰箱",
+    "cn": "冰箱"
+   },
+   "IGUI_KnoxGen_DemoStove": {
+    "en": "Stove",
+    "ch": "爐具",
+    "cn": "炉灶"
+   },
+   "IGUI_KnoxGen_Engine": {
+    "en": "ENGINE",
+    "ch": "引擎",
+    "cn": "引擎"
+   },
+   "IGUI_KnoxGen_FreeOutlet": {
+    "en": "Free outlet",
+    "ch": "空插座",
+    "cn": "空插座"
+   },
+   "IGUI_KnoxGen_Fuel": {
+    "en": "FUEL",
+    "ch": "燃料",
+    "cn": "燃料"
+   },
+   "IGUI_KnoxGen_Hours": {
+    "en": "HOURS",
+    "ch": "小時",
+    "cn": "小时"
+   },
+   "IGUI_KnoxGen_House": {
+    "en": "HOUSE",
+    "ch": "房屋",
+    "cn": "房屋"
+   },
+   "IGUI_KnoxGen_LampCo": {
+    "en": "CO GAS",
+    "ch": "一氧化碳",
+    "cn": "一氧化碳"
+   },
+   "IGUI_KnoxGen_LampOil": {
+    "en": "OIL",
+    "ch": "機油",
+    "cn": "机油"
+   },
+   "IGUI_KnoxGen_LampRun": {
+    "en": "RUN",
+    "ch": "運轉",
+    "cn": "运转"
+   },
+   "IGUI_KnoxGen_Left": {
+    "en": "TIME LEFT",
+    "ch": "剩餘時間",
+    "cn": "剩余时间"
+   },
+   "IGUI_KnoxGen_Load": {
+    "en": "LOAD",
+    "ch": "負載",
+    "cn": "负载"
+   },
+   "IGUI_KnoxGen_Off": {
+    "en": "OFF",
+    "ch": "關",
+    "cn": "关"
+   },
+   "IGUI_KnoxGen_On": {
+    "en": "ON",
+    "ch": "開",
+    "cn": "开"
+   },
+   "IGUI_KnoxGen_Outlets": {
+    "en": "OUTLETS 120 V",
+    "ch": "插座 120 V",
+    "cn": "插座 120 V"
+   },
+   "IGUI_KnoxGen_PerHour": {
+    "en": "L/h",
+    "ch": "L/h",
+    "cn": "L/h"
+   },
+   "IGUI_KnoxGen_Run": {
+    "en": "RUN",
+    "ch": "運轉",
+    "cn": "运转"
+   },
+   "IGUI_KnoxGen_Spec": {
+    "en": "5500 W · 4-STROKE · GASOLINE · 120 V",
+    "ch": "5500 W · 四行程 · 汽油 · 120 V",
+    "cn": "5500 W · 四冲程 · 汽油 · 120 V"
+   },
+   "IGUI_KnoxGen_Tip": {
+    "en": "%1 · %2",
+    "ch": "%1 · %2",
+    "cn": "%1 · %2"
+   },
+   "IGUI_KnoxGen_Words_fridge": {
+    "en": "fridge,freezer,refrigerator",
+    "ch": "fridge,freezer,refrigerator,冰箱,冷凍櫃,冰櫃",
+    "cn": "fridge,freezer,refrigerator,冰箱,冰柜,冷冻柜"
+   },
+   "IGUI_KnoxGen_Words_stove": {
+    "en": "stove,oven,microwave,range,grill",
+    "ch": "stove,oven,microwave,range,grill,火爐,爐灶,烤箱,烤爐,微波爐,烤架,爐具",
+    "cn": "stove,oven,microwave,range,grill,火炉,炉灶,烤箱,烤炉,微波炉,烤架"
+   },
+   "IGUI_Knox_Module_generator": {
+    "en": "Generator",
+    "ch": "發電機",
+    "cn": "发电机"
+   },
+   "IGUI_Knox_Module_generator_Info": {
+    "en": "The generator's window: the tank, the starter cord, the gauges, the outlets.",
+    "ch": "發電機視窗: 油箱、啟動拉繩、儀表、插座.",
+    "cn": "发电机窗口: 油箱、启动拉绳、仪表、插座."
    }
   },
   "ItemName.json": {
@@ -252481,7 +252906,7 @@
    },
    "HBAC.38_Projectile": {
     "en": ".38 Special Projectile",
-    "ch": ".38 特種彈頭",
+    "ch": ".38 Special彈頭",
     "cn": ".38特种弹头"
    },
    "HBAC.44_Projectile": {
@@ -252556,7 +252981,7 @@
    },
    "HBAC.38_ProjectileBox": {
     "en": "Box of .38 Special Projectiles",
-    "ch": ".38 特種彈頭 (整盒)",
+    "ch": ".38 Special彈頭 (整盒)",
     "cn": ".38特种弹头 (整盒)"
    },
    "HBAC.44_ProjectileBox": {
@@ -345179,6 +345604,71 @@
     "en": "Faded Ripped Jeans (Mid Wash)",
     "ch": "牛仔褲 (刷色破洞, 中度水洗)",
     "cn": "牛仔裤 (褪色破洞, 中水洗)"
+   },
+   "Base.66pontiacLeMansRearSideWindow3": {
+    "en": "66 Pontiac LeMans / GTO Rear Side Window",
+    "ch": "66款龐蒂亞克勒芒 / GTO後側窗",
+    "cn": "66款庞蒂亚克勒芒 / GTO后侧窗"
+   },
+   "HBAC.9x39_Projectile": {
+    "en": "9x39mm Projectile",
+    "ch": "9x39mm彈頭",
+    "cn": "9x39mm弹头"
+   },
+   "HBAC.9x39_ProjectileBox": {
+    "en": "Box of 9x39mm Projectiles",
+    "ch": "9x39mm彈頭 (整盒)",
+    "cn": "9x39mm弹头 (整盒)"
+   },
+   "Base.RabbitFur_Hoodie_UP": {
+    "en": "Rabbit Fur Hoodie",
+    "ch": "連帽衫 (兔毛皮)",
+    "cn": "连帽衫 (兔毛皮)"
+   },
+   "Base.RabbitFur_Trousers": {
+    "en": "Rabbit Fur Trousers",
+    "ch": "兔毛皮長褲",
+    "cn": "兔毛皮长裤"
+   },
+   "Base.RabbitFur_WinterHat": {
+    "en": "Rabbit Fur Winter Hat",
+    "ch": "冬帽 (兔毛皮)",
+    "cn": "冬帽 (兔毛皮)"
+   },
+   "Base.RabbitFur_Hoodie_DOWN": {
+    "en": "Rabbit Fur Hoodie",
+    "ch": "連帽衫 (兔毛皮)",
+    "cn": "连帽衫 (兔毛皮)"
+   },
+   "Base.RabbitFur_JacketLong": {
+    "en": "Rabbit Fur Coat",
+    "ch": "兔毛皮大衣",
+    "cn": "兔毛皮大衣"
+   },
+   "Base.RabbitFur_Jacket": {
+    "en": "Rabbit Fur Jacket",
+    "ch": "兔毛皮夾克",
+    "cn": "兔毛皮夹克"
+   },
+   "SenatorMartialArts.jiujitsuMagazine": {
+    "en": "Jiu-Jitsu Training Guide",
+    "ch": "《柔術訓練指南》",
+    "cn": "《柔术训练指南》"
+   },
+   "SenatorMartialArts.combativesMagazine": {
+    "en": "Krav Maga: Break Contact",
+    "ch": "《以色列格鬥術》: 脫離接觸",
+    "cn": "《马伽术》: 脱离接触"
+   },
+   "SenatorMartialArts.pakmeiMagazine": {
+    "en": "Pak Mei Training Guide",
+    "ch": "《白眉拳訓練指南》",
+    "cn": "《白眉拳训练指南》"
+   },
+   "SenatorMartialArts.wrestlingMagazine": {
+    "en": "Wrestling: Heavy Hands and Hard Landings",
+    "ch": "《摔角》: 重手與重摔",
+    "cn": "《摔跤》: 重手与重摔"
    }
   },
   "Print_Media.json": {
@@ -351232,12 +351722,12 @@
    },
    "Make38SPAP": {
     "en": "Make .38 Special AP",
-    "ch": "製作.38特種穿甲彈",
+    "ch": "製作.38 Special穿甲彈",
     "cn": "制作.38特种穿甲弹"
    },
    "Make38SPTR": {
     "en": "Make .38 Special TR",
-    "ch": "製作.38特種曳光彈",
+    "ch": "製作.38 Special曳光彈",
     "cn": "制作.38特种曳光弹"
    },
    "Make44MagAP": {
@@ -351472,12 +351962,12 @@
    },
    "Produce38SPAP": {
     "en": "Produce .38 Special AP",
-    "ch": "量產.38特種穿甲彈",
+    "ch": "量產.38 Special穿甲彈",
     "cn": "量产.38特种穿甲弹"
    },
    "Produce38SPTR": {
     "en": "Produce .38 Special TR",
-    "ch": "量產.38特種曳光彈",
+    "ch": "量產.38 Special曳光彈",
     "cn": "量产.38特种曳光弹"
    },
    "Produce44MagAP": {
@@ -355881,7 +356371,7 @@
    },
    "Make_38_Bullet": {
     "en": "Assemble .38 Special Round",
-    "ch": "組裝 .38 特種子彈",
+    "ch": "組裝 .38 Special子彈",
     "cn": "组装 .38 特种子弹"
    },
    "Make_44_Bullet": {
@@ -355966,7 +356456,7 @@
    },
    "Disassemble_38_Bullet": {
     "en": "Disassemble .38 Special Round",
-    "ch": "拆解 .38 特種子彈",
+    "ch": "拆解 .38 Special子彈",
     "cn": "拆解 .38 特种子弹"
    },
    "Disassemble_44_Bullet": {
@@ -367390,6 +367880,231 @@
     "en": "Make Fiberglass Handle",
     "ch": "製作玻璃纖維柄",
     "cn": "制作玻璃纤维柄"
+   },
+   "66pontiacLeMansMakeRearSideWindow": {
+    "en": "Make 66 Pontiac LeMans / GTO Rear Side Window",
+    "ch": "製作66款龐蒂亞克勒芒/GTO後側窗",
+    "cn": "制作66款庞蒂亚克勒芒/GTO后侧窗"
+   },
+   "RCAirConditioner": {
+    "en": "Air Conditioner",
+    "ch": "冷氣機",
+    "cn": "空调"
+   },
+   "RCMakeCompactSpaceHeater": {
+    "en": "Make Compact Space Heater",
+    "ch": "製作小型電暖器",
+    "cn": "制作小型电暖器"
+   },
+   "RCMakeElectricSpaceHeater": {
+    "en": "Make Electric Space Heater",
+    "ch": "製作電暖器",
+    "cn": "制作电暖器"
+   },
+   "RCMakeGasSpaceHeater": {
+    "en": "Make Gas Space Heater",
+    "ch": "製作燃氣暖器",
+    "cn": "制作燃气暖器"
+   },
+   "Disassemble_12Gauge_Shell_Buckshot_GoM": {
+    "en": "Disassemble 12 Gauge Buckshot Shell (Gunworks)",
+    "ch": "拆解12號鹿彈 (Gunworks)",
+    "cn": "拆解12号鹿弹 (Gunworks)"
+   },
+   "Disassemble_223_Bullet_GoM": {
+    "en": "Disassemble .223 Remington Round (Gunworks)",
+    "ch": "拆解 .223雷明頓彈 (Gunworks)",
+    "cn": "拆解 .223雷明顿弹 (Gunworks)"
+   },
+   "Disassemble_3006_Bullet_GoM": {
+    "en": "Disassemble .30-06 Springfield Round (Gunworks)",
+    "ch": "拆解 .30-06春田彈 (Gunworks)",
+    "cn": "拆解 .30-06春田弹 (Gunworks)"
+   },
+   "Disassemble_3030_Bullet_GoM": {
+    "en": "Disassemble .30-30 Round (Gunworks)",
+    "ch": "拆解 .30-30 子彈 (Gunworks)",
+    "cn": "拆解 .30-30 子弹 (Gunworks)"
+   },
+   "Disassemble_308_Bullet_GoM": {
+    "en": "Disassemble .308 Winchester Round (Gunworks)",
+    "ch": "拆解 .308溫徹斯特彈 (Gunworks)",
+    "cn": "拆解 .308温彻斯特弹 (Gunworks)"
+   },
+   "Disassemble_357_Bullet_GoM": {
+    "en": "Disassemble .357 Magnum Round (Gunworks)",
+    "ch": "拆解 .357 馬格南子彈 (Gunworks)",
+    "cn": "拆解 .357 马格南子弹 (Gunworks)"
+   },
+   "Disassemble_38_Bullet_GoM": {
+    "en": "Disassemble .38 Special Round (Gunworks)",
+    "ch": "拆解 .38 Special子彈 (Gunworks)",
+    "cn": "拆解 .38特殊弹 (Gunworks)"
+   },
+   "Disassemble_44_Bullet_GoM": {
+    "en": "Disassemble .44 Magnum Round (Gunworks)",
+    "ch": "拆解 .44 馬格南子彈 (Gunworks)",
+    "cn": "拆解 .44 马格南子弹 (Gunworks)"
+   },
+   "Disassemble_45_Bullet_GoM": {
+    "en": "Disassemble .45 ACP Round (Gunworks)",
+    "ch": "拆解 .45 ACP 子彈 (Gunworks)",
+    "cn": "拆解 .45 ACP 子弹 (Gunworks)"
+   },
+   "Disassemble_545x39_Bullet_GoM": {
+    "en": "Disassemble 5.45x39mm Round (Gunworks)",
+    "ch": "拆解 5.45x39mm 子彈 (Gunworks)",
+    "cn": "拆解 5.45x39mm 子弹 (Gunworks)"
+   },
+   "Disassemble_556x45_Bullet_ArmorPiercing_GoM": {
+    "en": "Disassemble 5.56x45mm Armor Piercing Round (Gunworks)",
+    "ch": "拆解 5.56x45mm 穿甲彈 (Gunworks)",
+    "cn": "拆解 5.56x45mm 穿甲弹 (Gunworks)"
+   },
+   "Disassemble_556x45_Bullet_GoM": {
+    "en": "Disassemble 5.56x45mm Round (Gunworks)",
+    "ch": "拆解 5.56x45mm 子彈 (Gunworks)",
+    "cn": "拆解 5.56x45mm 子弹 (Gunworks)"
+   },
+   "Disassemble_556x45_Bullet_HollowPoint_GoM": {
+    "en": "Disassemble 5.56x45mm Hollow Point Round (Gunworks)",
+    "ch": "拆解 5.56x45mm 空尖彈 (Gunworks)",
+    "cn": "拆解 5.56x45mm 空尖弹 (Gunworks)"
+   },
+   "Disassemble_556x45_Bullet_Overpressured_GoM": {
+    "en": "Disassemble 5.56x45mm [+P] Round (Gunworks)",
+    "ch": "拆解 5.56x45mm 高壓彈 [+P] (Gunworks)",
+    "cn": "拆解 5.56x45mm 高压弹 [+P] (Gunworks)"
+   },
+   "Disassemble_556x45_Bullet_Subsonic_GoM": {
+    "en": "Disassemble 5.56x45mm Subsonic Round (Gunworks)",
+    "ch": "拆解 5.56x45mm 亞音速彈 (Gunworks)",
+    "cn": "拆解 5.56x45mm 亚音速弹 (Gunworks)"
+   },
+   "Disassemble_762x39_Bullet_GoM": {
+    "en": "Disassemble 7.62x39mm Round (Gunworks)",
+    "ch": "拆解 7.62x39mm 子彈 (Gunworks)",
+    "cn": "拆解 7.62x39mm 子弹 (Gunworks)"
+   },
+   "Disassemble_762x51_Bullet_GoM": {
+    "en": "Disassemble 7.62x51mm Round (Gunworks)",
+    "ch": "拆解 7.62x51mm 子彈 (Gunworks)",
+    "cn": "拆解 7.62x51mm 子弹 (Gunworks)"
+   },
+   "Disassemble_762x54_Bullet_GoM": {
+    "en": "Disassemble 7.62x54mm Round (Gunworks)",
+    "ch": "拆解 7.62x54mm 子彈 (Gunworks)",
+    "cn": "拆解 7.62x54mm 子弹 (Gunworks)"
+   },
+   "Disassemble_9x19_Bullet_GoM": {
+    "en": "Disassemble 9x19mm Round (Gunworks)",
+    "ch": "拆解 9x19mm 子彈 (Gunworks)",
+    "cn": "拆解 9x19mm 子弹 (Gunworks)"
+   },
+   "Disassemble_9x39_Bullet_GoM": {
+    "en": "Disassemble 9x39mm Round (Gunworks)",
+    "ch": "拆解 9x39mm 子彈 (Gunworks)",
+    "cn": "拆解 9x39mm 子弹 (Gunworks)"
+   },
+   "Make_12Gauge_Shell_Buckshot_GoM": {
+    "en": "Assemble 12 Gauge Buckshot Shell (Gunworks)",
+    "ch": "組裝12號鹿彈 (Gunworks)",
+    "cn": "组装12号鹿弹 (Gunworks)"
+   },
+   "Make_223_Bullet_GoM": {
+    "en": "Assemble .223 Remington Round (Gunworks)",
+    "ch": "組裝 .223雷明頓彈 (Gunworks)",
+    "cn": "组装 .223雷明顿弹 (Gunworks)"
+   },
+   "Make_3006_Bullet_GoM": {
+    "en": "Assemble .30-06 Springfield Round (Gunworks)",
+    "ch": "組裝 .30-06春田彈 (Gunworks)",
+    "cn": "组装 .30-06春田弹 (Gunworks)"
+   },
+   "Make_3030_Bullet_GoM": {
+    "en": "Assemble .30-30 Round (Gunworks)",
+    "ch": "組裝 .30-30 子彈 (Gunworks)",
+    "cn": "组装 .30-30 子弹 (Gunworks)"
+   },
+   "Make_308_Bullet_GoM": {
+    "en": "Assemble .308 Winchester Round (Gunworks)",
+    "ch": "組裝 .308溫徹斯特彈 (Gunworks)",
+    "cn": "组装 .308温彻斯特弹 (Gunworks)"
+   },
+   "Make_357_Bullet_GoM": {
+    "en": "Assemble .357 Magnum Round (Gunworks)",
+    "ch": "組裝 .357 馬格南子彈 (Gunworks)",
+    "cn": "组装 .357 马格南子弹 (Gunworks)"
+   },
+   "Make_38_Bullet_GoM": {
+    "en": "Assemble .38 Special Round (Gunworks)",
+    "ch": "組裝 .38 Special子彈 (Gunworks)",
+    "cn": "组装 .38特殊弹 (Gunworks)"
+   },
+   "Make_44_Bullet_GoM": {
+    "en": "Assemble .44 Magnum Round (Gunworks)",
+    "ch": "組裝 .44 馬格南子彈 (Gunworks)",
+    "cn": "组装 .44 马格南子弹 (Gunworks)"
+   },
+   "Make_45_Bullet_GoM": {
+    "en": "Assemble .45 ACP Round (Gunworks)",
+    "ch": "組裝 .45 ACP 子彈 (Gunworks)",
+    "cn": "组装 .45 ACP 子弹 (Gunworks)"
+   },
+   "Make_545x39_Bullet_GoM": {
+    "en": "Assemble 5.45x39mm Round (Gunworks)",
+    "ch": "組裝 5.45x39mm 子彈 (Gunworks)",
+    "cn": "组装 5.45x39mm 子弹 (Gunworks)"
+   },
+   "Make_556x45_Bullet_ArmorPiercing_GoM": {
+    "en": "Assemble 5.56x45mm Armor Piercing Round (Gunworks)",
+    "ch": "組裝 5.56x45mm 穿甲彈 (Gunworks)",
+    "cn": "组装 5.56x45mm 穿甲弹 (Gunworks)"
+   },
+   "Make_556x45_Bullet_GoM": {
+    "en": "Assemble 5.56x45mm Round (Gunworks)",
+    "ch": "組裝 5.56x45mm 子彈 (Gunworks)",
+    "cn": "组装 5.56x45mm 子弹 (Gunworks)"
+   },
+   "Make_556x45_Bullet_HollowPoint_GoM": {
+    "en": "Assemble 5.56x45mm Hollow Point Round (Gunworks)",
+    "ch": "組裝 5.56x45mm 空尖彈 (Gunworks)",
+    "cn": "组装 5.56x45mm 空尖弹 (Gunworks)"
+   },
+   "Make_556x45_Bullet_Overpressured_GoM": {
+    "en": "Assemble 5.56x45mm [+P] Round (Gunworks)",
+    "ch": "組裝 5.56x45mm 高壓彈 [+P] (Gunworks)",
+    "cn": "组装 5.56x45mm 高压弹 [+P] (Gunworks)"
+   },
+   "Make_556x45_Bullet_Subsonic_GoM": {
+    "en": "Assemble 5.56x45mm Subsonic Round (Gunworks)",
+    "ch": "組裝 5.56x45mm 亞音速彈 (Gunworks)",
+    "cn": "组装 5.56x45mm 亚音速弹 (Gunworks)"
+   },
+   "Make_762x39_Bullet_GoM": {
+    "en": "Assemble 7.62x39mm Round (Gunworks)",
+    "ch": "組裝 7.62x39mm 子彈 (Gunworks)",
+    "cn": "组装 7.62x39mm 子弹 (Gunworks)"
+   },
+   "Make_762x51_Bullet_GoM": {
+    "en": "Assemble 7.62x51mm Round (Gunworks)",
+    "ch": "組裝 7.62x51mm 子彈 (Gunworks)",
+    "cn": "组装 7.62x51mm 子弹 (Gunworks)"
+   },
+   "Make_762x54_Bullet_GoM": {
+    "en": "Assemble 7.62x54mm Round (Gunworks)",
+    "ch": "組裝 7.62x54mm 子彈 (Gunworks)",
+    "cn": "组装 7.62x54mm 子弹 (Gunworks)"
+   },
+   "Make_9x19_Bullet_GoM": {
+    "en": "Assemble 9x19mm Round (Gunworks)",
+    "ch": "組裝 9x19mm 子彈 (Gunworks)",
+    "cn": "组装 9x19mm 子弹 (Gunworks)"
+   },
+   "Make_9x39_Bullet_GoM": {
+    "en": "Assemble 9x39mm Round (Gunworks)",
+    "ch": "組裝 9x39mm 子彈 (Gunworks)",
+    "cn": "组装 9x39mm 子弹 (Gunworks)"
    }
   },
   "Sandbox.json": {
@@ -370987,16 +371702,6 @@
     "en": "Night of the Living Dead",
     "ch": "活死人之夜",
     "cn": "活死人之夜"
-   },
-   "Sandbox_RealisticCold_ConvectiveBridgeStrength": {
-    "en": "Convective Bridge Strength (1.0 = baseline)",
-    "ch": "對流過渡強度 (1.0 = 基礎)",
-    "cn": "对流过渡强度 (1.0 = 基础)"
-   },
-   "Sandbox_RealisticCold_ConvectiveBridgeStrength_tooltip": {
-    "en": "Smoothes the warming-rate cliff right at normal body temperature. 1.0 is baseline. 0 disables the bridge, warming up from cold to normal feels fast, but heating past normal in hot air feels much slower.",
-    "ch": "平滑正常體溫附近的升溫速率斷崖. 1.0 為基礎值. 0 會停用此過渡, 從寒冷回升到正常體溫感覺很快, 但在熱空氣中升到正常體溫以上則會慢得多.",
-    "cn": "平滑正常体温附近的升温速率断崖. 1.0 为基础值. 0 会禁用此过渡, 从寒冷回升到正常体温感觉很快, 但在热空气中升到正常体温以上则会慢得多."
    },
    "Sandbox_RealisticCold_InsulationSpreadBias": {
     "en": "Per-Body-Part Insulation Bias (default 0.30)",
@@ -377928,13 +378633,13 @@
    },
    "Sandbox_HB_BanditsCasings": {
     "en": "Enable Casings on Bandits (Requires Bandits from Slayer)",
-    "ch": "啟用強盜彈殼（需要 Slayer 的 Bandits）",
-    "cn": "启用强盗弹壳（需要 Slayer 的 Bandits）"
+    "ch": "啟用強盜彈殼 (需要 Slayer 的 Bandits)",
+    "cn": "启用强盗弹壳 (需要 Slayer 的 Bandits)"
    },
    "Sandbox_HB_BanditsCasings_tooltip": {
     "en": "Bandits will drop casings when shooting their guns.",
-    "ch": "強盜開槍時會掉落彈殼。",
-    "cn": "强盗开枪时会掉落弹壳。"
+    "ch": "強盜開槍時會掉落彈殼.",
+    "cn": "强盗开枪时会掉落弹壳."
    },
    "Sandbox_BurdJournals_EnableLootJournalExpiration": {
     "en": "Enable Loot Journal Expiration",
@@ -420193,8 +420898,8 @@
    },
    "Sandbox_ClaimableOutposts_Loot": {
     "en": "Dynamic Outposts - Loot & Resupply",
-    "ch": "可佔領前哨站 - 戰利品與補給",
-    "cn": "可占领前哨站 - 战利品与补给"
+    "ch": "動態前哨站 - 戰利品與補給",
+    "cn": "动态前哨站 - 战利品与补给"
    },
    "Sandbox_ClaimableOutposts_MapVisibility_option1": {
     "en": "Revealed from start",
@@ -420223,13 +420928,13 @@
    },
    "Sandbox_ClaimableOutposts_Threats": {
     "en": "Dynamic Outposts - Threats & Infestations",
-    "ch": "可佔領前哨站 - 威脅與感染",
-    "cn": "可占领前哨站 - 威胁与感染"
+    "ch": "動態前哨站 - 威脅與感染",
+    "cn": "动态前哨站 - 威胁与感染"
    },
    "Sandbox_ClaimableOutposts_WorldGeneration": {
     "en": "Dynamic Outposts - World Generation",
-    "ch": "可佔領前哨站 - 世界生成",
-    "cn": "可占领前哨站 - 世界生成"
+    "ch": "動態前哨站 - 世界生成",
+    "cn": "动态前哨站 - 世界生成"
    },
    "Sandbox_ClaimableOutposts_banditOccupationChance": {
     "en": "Hostile NPC occupation chance (%%)",
@@ -420287,9 +420992,9 @@
     "cn": "需要 Bandits2 或 Project A Life. 敌对NPC袭击开始时, 随机抽取的袭击者数量下限."
    },
    "Sandbox_ClaimableOutposts_brandenburgAllowAmmo": {
-    "en": "Brandenburg: allow ammo outposts",
-    "ch": "勃蘭登堡: 允許彈藥前哨站",
-    "cn": "勃兰登堡: 允许弹药前哨站"
+    "en": "Ammo Outposts",
+    "ch": "彈藥前哨站",
+    "cn": "弹药前哨站"
    },
    "Sandbox_ClaimableOutposts_brandenburgAllowAmmo_tooltip": {
     "en": "Allow ammo candidates to be selected for Brandenburg. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420297,9 +421002,9 @@
     "cn": "允许在勃兰登堡选出弹药类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_brandenburgAllowBar": {
-    "en": "Brandenburg: allow bar outposts",
-    "ch": "勃蘭登堡: 允許酒吧前哨站",
-    "cn": "勃兰登堡: 允许酒吧前哨站"
+    "en": "Bar Outposts",
+    "ch": "酒吧前哨站",
+    "cn": "酒吧前哨站"
    },
    "Sandbox_ClaimableOutposts_brandenburgAllowBar_tooltip": {
     "en": "Allow Bar candidates to be selected for Brandenburg. Existing claimed outposts are preserved.",
@@ -420307,9 +421012,9 @@
     "cn": "允许在勃兰登堡选出酒吧类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_brandenburgAllowConstruction": {
-    "en": "Brandenburg: allow construction outposts",
-    "ch": "勃蘭登堡: 允許建築前哨站",
-    "cn": "勃兰登堡: 允许建筑前哨站"
+    "en": "Construction Outposts",
+    "ch": "建築前哨站",
+    "cn": "建筑前哨站"
    },
    "Sandbox_ClaimableOutposts_brandenburgAllowConstruction_tooltip": {
     "en": "Allow Construction candidates to be selected for Brandenburg. Existing claimed outposts are preserved.",
@@ -420327,9 +421032,9 @@
     "cn": "允许在勃兰登堡选出制作类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_brandenburgAllowFood": {
-    "en": "Brandenburg: allow food outposts",
-    "ch": "勃蘭登堡: 允許食物前哨站",
-    "cn": "勃兰登堡: 允许食物前哨站"
+    "en": "Food Outposts",
+    "ch": "食物前哨站",
+    "cn": "食物前哨站"
    },
    "Sandbox_ClaimableOutposts_brandenburgAllowFood_tooltip": {
     "en": "Allow food candidates to be selected for Brandenburg. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420337,9 +421042,9 @@
     "cn": "允许在勃兰登堡选出食物类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_brandenburgAllowFuel": {
-    "en": "Brandenburg: allow fuel outposts",
-    "ch": "勃蘭登堡: 允許燃料前哨站",
-    "cn": "勃兰登堡: 允许燃料前哨站"
+    "en": "Fuel Outposts",
+    "ch": "燃料前哨站",
+    "cn": "燃料前哨站"
    },
    "Sandbox_ClaimableOutposts_brandenburgAllowFuel_tooltip": {
     "en": "Allow fuel candidates to be selected for Brandenburg. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420347,9 +421052,9 @@
     "cn": "允许在勃兰登堡选出燃料类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_brandenburgAllowIndustrial": {
-    "en": "Brandenburg: allow industrial outposts",
-    "ch": "勃蘭登堡: 允許工業前哨站",
-    "cn": "勃兰登堡: 允许工业前哨站"
+    "en": "Industrial Outposts",
+    "ch": "工業前哨站",
+    "cn": "工业前哨站"
    },
    "Sandbox_ClaimableOutposts_brandenburgAllowIndustrial_tooltip": {
     "en": "Allow industrial candidates to be selected for Brandenburg. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420357,9 +421062,9 @@
     "cn": "允许在勃兰登堡选出工业类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_brandenburgAllowMedical": {
-    "en": "Brandenburg: allow medical outposts",
-    "ch": "勃蘭登堡: 允許醫療前哨站",
-    "cn": "勃兰登堡: 允许医疗前哨站"
+    "en": "Medical Outposts",
+    "ch": "醫療前哨站",
+    "cn": "医疗前哨站"
    },
    "Sandbox_ClaimableOutposts_brandenburgAllowMedical_tooltip": {
     "en": "Allow medical candidates to be selected for Brandenburg. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420367,9 +421072,9 @@
     "cn": "允许在勃兰登堡选出医疗类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_brandenburgOutpostCount": {
-    "en": "Brandenburg: number of outposts",
-    "ch": "勃蘭登堡: 前哨站數量",
-    "cn": "勃兰登堡: 前哨站数量"
+    "en": "Active Outposts",
+    "ch": "啟用的前哨站數量",
+    "cn": "启用的前哨站数量"
    },
    "Sandbox_ClaimableOutposts_brandenburgOutpostCount_tooltip": {
     "en": "How many of the 6 built-in Brandenburg outpost candidates are enabled in this world. If fewer allowed resource types are available, the actual number can be lower.",
@@ -420377,9 +421082,9 @@
     "cn": "在此世界中启用勃兰登堡 6 个内置前哨站候选地点中的多少个. 如果可用的允许资源类型较少, 实际数量可能更低."
    },
    "Sandbox_ClaimableOutposts_coalfieldAllowAmmo": {
-    "en": "Historic Coalfield: allow ammo outposts",
-    "ch": "歷史煤田鎮: 允許彈藥前哨站",
-    "cn": "历史煤田镇: 允许弹药前哨站"
+    "en": "Ammo Outposts",
+    "ch": "彈藥前哨站",
+    "cn": "弹药前哨站"
    },
    "Sandbox_ClaimableOutposts_coalfieldAllowAmmo_tooltip": {
     "en": "Allow Ammo candidates to be selected for Historic Coalfield.",
@@ -420387,9 +421092,9 @@
     "cn": "允许在历史煤田镇选出弹药类候选地点."
    },
    "Sandbox_ClaimableOutposts_coalfieldAllowConstruction": {
-    "en": "Historic Coalfield: allow construction outposts",
-    "ch": "歷史煤田鎮: 允許建築前哨站",
-    "cn": "历史煤田镇: 允许建筑前哨站"
+    "en": "Construction Outposts",
+    "ch": "建築前哨站",
+    "cn": "建筑前哨站"
    },
    "Sandbox_ClaimableOutposts_coalfieldAllowConstruction_tooltip": {
     "en": "Allow Construction candidates to be selected for Historic Coalfield.",
@@ -420397,9 +421102,9 @@
     "cn": "允许在历史煤田镇选出建筑类候选地点."
    },
    "Sandbox_ClaimableOutposts_coalfieldAllowCrafting": {
-    "en": "Historic Coalfield: allow crafting outposts",
-    "ch": "歷史煤田鎮: 允許製作前哨站",
-    "cn": "历史煤田镇: 允许制作前哨站"
+    "en": "Crafting Outposts",
+    "ch": "製作前哨站",
+    "cn": "制作前哨站"
    },
    "Sandbox_ClaimableOutposts_coalfieldAllowCrafting_tooltip": {
     "en": "Allow Crafting candidates to be selected for Historic Coalfield.",
@@ -420407,9 +421112,9 @@
     "cn": "允许在历史煤田镇选出制作类候选地点."
    },
    "Sandbox_ClaimableOutposts_coalfieldAllowFood": {
-    "en": "Historic Coalfield: allow food outposts",
-    "ch": "歷史煤田鎮: 允許食物前哨站",
-    "cn": "历史煤田镇: 允许食物前哨站"
+    "en": "Food Outposts",
+    "ch": "食物前哨站",
+    "cn": "食物前哨站"
    },
    "Sandbox_ClaimableOutposts_coalfieldAllowFood_tooltip": {
     "en": "Allow Food candidates to be selected for Historic Coalfield.",
@@ -420417,9 +421122,9 @@
     "cn": "允许在历史煤田镇选出食物类候选地点."
    },
    "Sandbox_ClaimableOutposts_coalfieldAllowFuel": {
-    "en": "Historic Coalfield: allow fuel outposts",
-    "ch": "歷史煤田鎮: 允許燃料前哨站",
-    "cn": "历史煤田镇: 允许燃料前哨站"
+    "en": "Fuel Outposts",
+    "ch": "燃料前哨站",
+    "cn": "燃料前哨站"
    },
    "Sandbox_ClaimableOutposts_coalfieldAllowFuel_tooltip": {
     "en": "Allow Fuel candidates to be selected for Historic Coalfield.",
@@ -420427,9 +421132,9 @@
     "cn": "允许在历史煤田镇选出燃料类候选地点."
    },
    "Sandbox_ClaimableOutposts_coalfieldOutpostCount": {
-    "en": "Historic Coalfield: active outposts",
-    "ch": "歷史煤田鎮: 啟用的前哨站數量",
-    "cn": "历史煤田镇: 启用的前哨站数量"
+    "en": "Active Outposts",
+    "ch": "啟用的前哨站數量",
+    "cn": "启用的前哨站数量"
    },
    "Sandbox_ClaimableOutposts_coalfieldOutpostCount_tooltip": {
     "en": "Number of outpost candidates selected around Historic Coalfield. Conflict groups may reduce the final count when nearby alternatives are mutually exclusive.",
@@ -420437,9 +421142,9 @@
     "cn": "在历史煤田镇周边选出的前哨站候选地点数量. 当附近的替代地点互斥时, 冲突组可能使最终数量减少."
    },
    "Sandbox_ClaimableOutposts_echoAllowFuel": {
-    "en": "Echo Creek: allow fuel outposts",
-    "ch": "迴音河: 允許燃料前哨站",
-    "cn": "回音溪: 允许燃料前哨站"
+    "en": "Fuel Outposts",
+    "ch": "燃料前哨站",
+    "cn": "燃料前哨站"
    },
    "Sandbox_ClaimableOutposts_echoAllowFuel_tooltip": {
     "en": "Allow fuel candidates to be selected for Echo Creek. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420447,9 +421152,9 @@
     "cn": "允许在回音溪选出燃料类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_echoAllowMechanic": {
-    "en": "Echo Creek: allow mechanic outposts",
-    "ch": "迴音河: 允許汽修前哨站",
-    "cn": "回音溪: 允许汽修前哨站"
+    "en": "Mechanic Outposts",
+    "ch": "汽修前哨站",
+    "cn": "汽修前哨站"
    },
    "Sandbox_ClaimableOutposts_echoAllowMechanic_tooltip": {
     "en": "Allow Mechanic candidates to be selected for Echo Creek. Existing claimed outposts are preserved.",
@@ -420457,9 +421162,9 @@
     "cn": "允许在回音溪选出汽修类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_echoOutpostCount": {
-    "en": "Echo Creek: number of outposts",
-    "ch": "迴音河: 前哨站數量",
-    "cn": "回音溪: 前哨站数量"
+    "en": "Active Outposts",
+    "ch": "啟用的前哨站數量",
+    "cn": "启用的前哨站数量"
    },
    "Sandbox_ClaimableOutposts_echoOutpostCount_tooltip": {
     "en": "How many of the 1 built-in Echo Creek outpost candidates are enabled in this world. If fewer allowed resource types are available, the actual number can be lower.",
@@ -420467,9 +421172,9 @@
     "cn": "在此世界中启用回音溪 1 个内置前哨站候选地点中的多少个. 如果可用的允许资源类型较少, 实际数量可能更低."
    },
    "Sandbox_ClaimableOutposts_ekronAllowAgricultural": {
-    "en": "Ekron: allow agricultural outposts",
-    "ch": "以革倫: 允許農業前哨站",
-    "cn": "以革伦: 允许农业前哨站"
+    "en": "Agricultural Outposts",
+    "ch": "農業前哨站",
+    "cn": "农业前哨站"
    },
    "Sandbox_ClaimableOutposts_ekronAllowAgricultural_tooltip": {
     "en": "Allow agricultural candidates to be selected for Ekron. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420477,9 +421182,9 @@
     "cn": "允许在以革伦选出农业类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_ekronAllowAmmo": {
-    "en": "Ekron: allow ammo outposts",
-    "ch": "以革倫: 允許彈藥前哨站",
-    "cn": "以革伦: 允许弹药前哨站"
+    "en": "Ammo Outposts",
+    "ch": "彈藥前哨站",
+    "cn": "弹药前哨站"
    },
    "Sandbox_ClaimableOutposts_ekronAllowAmmo_tooltip": {
     "en": "Allow ammo candidates to be selected for Ekron. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420487,9 +421192,9 @@
     "cn": "允许在以革伦选出弹药类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_ekronAllowFood": {
-    "en": "Ekron: allow food outposts",
-    "ch": "以革倫: 允許食物前哨站",
-    "cn": "以革伦: 允许食物前哨站"
+    "en": "Food Outposts",
+    "ch": "食物前哨站",
+    "cn": "食物前哨站"
    },
    "Sandbox_ClaimableOutposts_ekronAllowFood_tooltip": {
     "en": "Allow food candidates to be selected for Ekron. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420497,9 +421202,9 @@
     "cn": "允许在以革伦选出食物类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_ekronAllowFuel": {
-    "en": "Ekron: allow fuel outposts",
-    "ch": "以革倫: 允許燃料前哨站",
-    "cn": "以革伦: 允许燃料前哨站"
+    "en": "Fuel Outposts",
+    "ch": "燃料前哨站",
+    "cn": "燃料前哨站"
    },
    "Sandbox_ClaimableOutposts_ekronAllowFuel_tooltip": {
     "en": "Allow fuel candidates to be selected for Ekron. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420507,9 +421212,9 @@
     "cn": "允许在以革伦选出燃料类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_ekronAllowIndustrial": {
-    "en": "Ekron: allow industrial outposts",
-    "ch": "以革倫: 允許工業前哨站",
-    "cn": "以革伦: 允许工业前哨站"
+    "en": "Industrial Outposts",
+    "ch": "工業前哨站",
+    "cn": "工业前哨站"
    },
    "Sandbox_ClaimableOutposts_ekronAllowIndustrial_tooltip": {
     "en": "Allow industrial candidates to be selected for Ekron. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420517,9 +421222,9 @@
     "cn": "允许在以革伦选出工业类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_ekronAllowMedical": {
-    "en": "Ekron: allow medical outposts",
-    "ch": "以革倫: 允許醫療前哨站",
-    "cn": "以革伦: 允许医疗前哨站"
+    "en": "Medical Outposts",
+    "ch": "醫療前哨站",
+    "cn": "医疗前哨站"
    },
    "Sandbox_ClaimableOutposts_ekronAllowMedical_tooltip": {
     "en": "Allow medical candidates to be selected for Ekron. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420527,9 +421232,9 @@
     "cn": "允许在以革伦选出医疗类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_ekronOutpostCount": {
-    "en": "Ekron: number of outposts",
-    "ch": "以革倫: 前哨站數量",
-    "cn": "以革伦: 前哨站数量"
+    "en": "Active Outposts",
+    "ch": "啟用的前哨站數量",
+    "cn": "启用的前哨站数量"
    },
    "Sandbox_ClaimableOutposts_ekronOutpostCount_tooltip": {
     "en": "How many of the 6 built-in Ekron outpost candidates are enabled in this world. If fewer allowed resource types are available, the actual number can be lower.",
@@ -420537,9 +421242,9 @@
     "cn": "在此世界中启用以革伦 6 个内置前哨站候选地点中的多少个. 如果可用的允许资源类型较少, 实际数量可能更低."
    },
    "Sandbox_ClaimableOutposts_fallasAllowAmmo": {
-    "en": "Fallas Lake: allow ammo outposts",
-    "ch": "法拉斯湖鎮: 允許彈藥前哨站",
-    "cn": "法拉斯湖镇: 允许弹药前哨站"
+    "en": "Ammo Outposts",
+    "ch": "彈藥前哨站",
+    "cn": "弹药前哨站"
    },
    "Sandbox_ClaimableOutposts_fallasAllowAmmo_tooltip": {
     "en": "Allow ammo candidates to be selected for Fallas Lake. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420547,9 +421252,9 @@
     "cn": "允许在法拉斯湖镇选出弹药类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_fallasAllowConstruction": {
-    "en": "Fallas Lake: allow construction outposts",
-    "ch": "法拉斯湖鎮: 允許建築前哨站",
-    "cn": "法拉斯湖镇: 允许建筑前哨站"
+    "en": "Construction Outposts",
+    "ch": "建築前哨站",
+    "cn": "建筑前哨站"
    },
    "Sandbox_ClaimableOutposts_fallasAllowConstruction_tooltip": {
     "en": "Allow Construction candidates to be selected for Fallas Lake. Existing claimed outposts are preserved.",
@@ -420567,9 +421272,9 @@
     "cn": "允许在法拉斯湖镇选出制作类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_fallasAllowFood": {
-    "en": "Fallas Lake: allow food outposts",
-    "ch": "法拉斯湖鎮: 允許食物前哨站",
-    "cn": "法拉斯湖镇: 允许食物前哨站"
+    "en": "Food Outposts",
+    "ch": "食物前哨站",
+    "cn": "食物前哨站"
    },
    "Sandbox_ClaimableOutposts_fallasAllowFood_tooltip": {
     "en": "Allow food candidates to be selected for Fallas Lake. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420577,9 +421282,9 @@
     "cn": "允许在法拉斯湖镇选出食物类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_fallasAllowFuel": {
-    "en": "Fallas Lake: allow fuel outposts",
-    "ch": "法拉斯湖鎮: 允許燃料前哨站",
-    "cn": "法拉斯湖镇: 允许燃料前哨站"
+    "en": "Fuel Outposts",
+    "ch": "燃料前哨站",
+    "cn": "燃料前哨站"
    },
    "Sandbox_ClaimableOutposts_fallasAllowFuel_tooltip": {
     "en": "Allow fuel candidates to be selected for Fallas Lake. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420587,9 +421292,9 @@
     "cn": "允许在法拉斯湖镇选出燃料类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_fallasAllowMedical": {
-    "en": "Fallas Lake: allow medical outposts",
-    "ch": "法拉斯湖鎮: 允許醫療前哨站",
-    "cn": "法拉斯湖镇: 允许医疗前哨站"
+    "en": "Medical Outposts",
+    "ch": "醫療前哨站",
+    "cn": "医疗前哨站"
    },
    "Sandbox_ClaimableOutposts_fallasAllowMedical_tooltip": {
     "en": "Allow medical candidates to be selected for Fallas Lake. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420597,9 +421302,9 @@
     "cn": "允许在法拉斯湖镇选出医疗类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_fallasOutpostCount": {
-    "en": "Fallas Lake: number of outposts",
-    "ch": "法拉斯湖鎮: 前哨站數量",
-    "cn": "法拉斯湖镇: 前哨站数量"
+    "en": "Active Outposts",
+    "ch": "啟用的前哨站數量",
+    "cn": "启用的前哨站数量"
    },
    "Sandbox_ClaimableOutposts_fallasOutpostCount_tooltip": {
     "en": "How many of the 5 built-in Fallas Lake outpost candidates are enabled in this world. If fewer allowed resource types are available, the actual number can be lower.",
@@ -420692,9 +421397,9 @@
     "cn": "让每个感染地点的扩散计时器在设置的天数上下随机浮动. 20%% 表示 10 天的计时器会在约 8 到 12 天之间随机决定."
    },
    "Sandbox_ClaimableOutposts_irvingtonAllowAmmo": {
-    "en": "Irvington: allow ammo outposts",
-    "ch": "歐文頓: 允許彈藥前哨站",
-    "cn": "欧文顿: 允许弹药前哨站"
+    "en": "Ammo Outposts",
+    "ch": "彈藥前哨站",
+    "cn": "弹药前哨站"
    },
    "Sandbox_ClaimableOutposts_irvingtonAllowAmmo_tooltip": {
     "en": "Allow ammo candidates to be selected for Irvington. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420702,9 +421407,9 @@
     "cn": "允许在欧文顿选出弹药类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_irvingtonAllowConstruction": {
-    "en": "Irvington: allow construction outposts",
-    "ch": "歐文頓: 允許建築前哨站",
-    "cn": "欧文顿: 允许建筑前哨站"
+    "en": "Construction Outposts",
+    "ch": "建築前哨站",
+    "cn": "建筑前哨站"
    },
    "Sandbox_ClaimableOutposts_irvingtonAllowConstruction_tooltip": {
     "en": "Allow Construction candidates to be selected for Irvington. Existing claimed outposts are preserved.",
@@ -420722,9 +421427,9 @@
     "cn": "允许在欧文顿选出制作类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_irvingtonAllowFood": {
-    "en": "Irvington: allow food outposts",
-    "ch": "歐文頓: 允許食物前哨站",
-    "cn": "欧文顿: 允许食物前哨站"
+    "en": "Food Outposts",
+    "ch": "食物前哨站",
+    "cn": "食物前哨站"
    },
    "Sandbox_ClaimableOutposts_irvingtonAllowFood_tooltip": {
     "en": "Allow food candidates to be selected for Irvington. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420732,9 +421437,9 @@
     "cn": "允许在欧文顿选出食物类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_irvingtonAllowFuel": {
-    "en": "Irvington: allow fuel outposts",
-    "ch": "歐文頓: 允許燃料前哨站",
-    "cn": "欧文顿: 允许燃料前哨站"
+    "en": "Fuel Outposts",
+    "ch": "燃料前哨站",
+    "cn": "燃料前哨站"
    },
    "Sandbox_ClaimableOutposts_irvingtonAllowFuel_tooltip": {
     "en": "Allow fuel candidates to be selected for Irvington. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420742,9 +421447,9 @@
     "cn": "允许在欧文顿选出燃料类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_irvingtonAllowIndustrial": {
-    "en": "Irvington: allow industrial outposts",
-    "ch": "歐文頓: 允許工業前哨站",
-    "cn": "欧文顿: 允许工业前哨站"
+    "en": "Industrial Outposts",
+    "ch": "工業前哨站",
+    "cn": "工业前哨站"
    },
    "Sandbox_ClaimableOutposts_irvingtonAllowIndustrial_tooltip": {
     "en": "Allow industrial candidates to be selected for Irvington. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420752,9 +421457,9 @@
     "cn": "允许在欧文顿选出工业类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_irvingtonAllowMedical": {
-    "en": "Irvington: allow medical outposts",
-    "ch": "歐文頓: 允許醫療前哨站",
-    "cn": "欧文顿: 允许医疗前哨站"
+    "en": "Medical Outposts",
+    "ch": "醫療前哨站",
+    "cn": "医疗前哨站"
    },
    "Sandbox_ClaimableOutposts_irvingtonAllowMedical_tooltip": {
     "en": "Allow medical candidates to be selected for Irvington. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420762,9 +421467,9 @@
     "cn": "允许在欧文顿选出医疗类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_irvingtonOutpostCount": {
-    "en": "Irvington: number of outposts",
-    "ch": "歐文頓: 前哨站數量",
-    "cn": "欧文顿: 前哨站数量"
+    "en": "Active Outposts",
+    "ch": "啟用的前哨站數量",
+    "cn": "启用的前哨站数量"
    },
    "Sandbox_ClaimableOutposts_irvingtonOutpostCount_tooltip": {
     "en": "How many of the 6 built-in Irvington outpost candidates are enabled in this world. If fewer allowed resource types are available, the actual number can be lower.",
@@ -420862,9 +421567,9 @@
     "cn": "此类前哨站生成战利品前需要等待的游戏天数."
    },
    "Sandbox_ClaimableOutposts_louisvilleAllowAgricultural": {
-    "en": "Louisville: allow agricultural outposts",
-    "ch": "路易斯維爾: 允許農業前哨站",
-    "cn": "路易斯维尔: 允许农业前哨站"
+    "en": "Agricultural Outposts",
+    "ch": "農業前哨站",
+    "cn": "农业前哨站"
    },
    "Sandbox_ClaimableOutposts_louisvilleAllowAgricultural_tooltip": {
     "en": "Allow agricultural candidates to be selected for Louisville. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420872,9 +421577,9 @@
     "cn": "允许在路易斯维尔选出农业类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_louisvilleAllowAmmo": {
-    "en": "Louisville: allow ammo outposts",
-    "ch": "路易斯維爾: 允許彈藥前哨站",
-    "cn": "路易斯维尔: 允许弹药前哨站"
+    "en": "Ammo Outposts",
+    "ch": "彈藥前哨站",
+    "cn": "弹药前哨站"
    },
    "Sandbox_ClaimableOutposts_louisvilleAllowAmmo_tooltip": {
     "en": "Allow ammo candidates to be selected for Louisville. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420882,9 +421587,9 @@
     "cn": "允许在路易斯维尔选出弹药类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_louisvilleAllowConstruction": {
-    "en": "Louisville: allow construction outposts",
-    "ch": "路易斯維爾: 允許建築前哨站",
-    "cn": "路易斯维尔: 允许建筑前哨站"
+    "en": "Construction Outposts",
+    "ch": "建築前哨站",
+    "cn": "建筑前哨站"
    },
    "Sandbox_ClaimableOutposts_louisvilleAllowConstruction_tooltip": {
     "en": "Allow Construction candidates to be selected for Louisville. Existing claimed outposts are preserved.",
@@ -420902,9 +421607,9 @@
     "cn": "允许在路易斯维尔选出制作类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_louisvilleAllowFood": {
-    "en": "Louisville: allow food outposts",
-    "ch": "路易斯維爾: 允許食物前哨站",
-    "cn": "路易斯维尔: 允许食物前哨站"
+    "en": "Food Outposts",
+    "ch": "食物前哨站",
+    "cn": "食物前哨站"
    },
    "Sandbox_ClaimableOutposts_louisvilleAllowFood_tooltip": {
     "en": "Allow food candidates to be selected for Louisville. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420912,9 +421617,9 @@
     "cn": "允许在路易斯维尔选出食物类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_louisvilleAllowFuel": {
-    "en": "Louisville: allow fuel outposts",
-    "ch": "路易斯維爾: 允許燃料前哨站",
-    "cn": "路易斯维尔: 允许燃料前哨站"
+    "en": "Fuel Outposts",
+    "ch": "燃料前哨站",
+    "cn": "燃料前哨站"
    },
    "Sandbox_ClaimableOutposts_louisvilleAllowFuel_tooltip": {
     "en": "Allow fuel candidates to be selected for Louisville. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420922,9 +421627,9 @@
     "cn": "允许在路易斯维尔选出燃料类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_louisvilleAllowIndustrial": {
-    "en": "Louisville: allow industrial outposts",
-    "ch": "路易斯維爾: 允許工業前哨站",
-    "cn": "路易斯维尔: 允许工业前哨站"
+    "en": "Industrial Outposts",
+    "ch": "工業前哨站",
+    "cn": "工业前哨站"
    },
    "Sandbox_ClaimableOutposts_louisvilleAllowIndustrial_tooltip": {
     "en": "Allow industrial candidates to be selected for Louisville. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420932,9 +421637,9 @@
     "cn": "允许在路易斯维尔选出工业类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_louisvilleAllowMechanic": {
-    "en": "Louisville: allow mechanic outposts",
-    "ch": "路易斯維爾: 允許汽修前哨站",
-    "cn": "路易斯维尔: 允许汽修前哨站"
+    "en": "Mechanic Outposts",
+    "ch": "汽修前哨站",
+    "cn": "汽修前哨站"
    },
    "Sandbox_ClaimableOutposts_louisvilleAllowMechanic_tooltip": {
     "en": "Allow Mechanic candidates to be selected for Louisville. Existing claimed outposts are preserved.",
@@ -420942,9 +421647,9 @@
     "cn": "允许在路易斯维尔选出汽修类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_louisvilleAllowMedical": {
-    "en": "Louisville: allow medical outposts",
-    "ch": "路易斯維爾: 允許醫療前哨站",
-    "cn": "路易斯维尔: 允许医疗前哨站"
+    "en": "Medical Outposts",
+    "ch": "醫療前哨站",
+    "cn": "医疗前哨站"
    },
    "Sandbox_ClaimableOutposts_louisvilleAllowMedical_tooltip": {
     "en": "Allow medical candidates to be selected for Louisville. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420952,9 +421657,9 @@
     "cn": "允许在路易斯维尔选出医疗类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_louisvilleOutpostCount": {
-    "en": "Louisville: number of outposts",
-    "ch": "路易斯維爾: 前哨站數量",
-    "cn": "路易斯维尔: 前哨站数量"
+    "en": "Active Outposts",
+    "ch": "啟用的前哨站數量",
+    "cn": "启用的前哨站数量"
    },
    "Sandbox_ClaimableOutposts_louisvilleOutpostCount_tooltip": {
     "en": "How many of the 12 built-in Louisville outpost candidates are enabled in this world. If fewer allowed resource types are available, the actual number can be lower.",
@@ -420982,9 +421687,9 @@
     "cn": "前哨站地图图标的服务器规则. “开局即显示”会立即显示所有已启用的前哨站. “接近时发现”会隐藏未占领的前哨站, 直到该玩家靠得足够近而发现它们."
    },
    "Sandbox_ClaimableOutposts_marchridgeAllowFood": {
-    "en": "March Ridge: allow food outposts",
-    "ch": "三月嶺: 允許食物前哨站",
-    "cn": "三月岭: 允许食物前哨站"
+    "en": "Food Outposts",
+    "ch": "食物前哨站",
+    "cn": "食物前哨站"
    },
    "Sandbox_ClaimableOutposts_marchridgeAllowFood_tooltip": {
     "en": "Allow food candidates to be selected for March Ridge. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -420992,9 +421697,9 @@
     "cn": "允许在三月岭选出食物类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_marchridgeAllowFuel": {
-    "en": "March Ridge: allow fuel outposts",
-    "ch": "三月嶺: 允許燃料前哨站",
-    "cn": "三月岭: 允许燃料前哨站"
+    "en": "Fuel Outposts",
+    "ch": "燃料前哨站",
+    "cn": "燃料前哨站"
    },
    "Sandbox_ClaimableOutposts_marchridgeAllowFuel_tooltip": {
     "en": "Allow fuel candidates to be selected for March Ridge. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421002,9 +421707,9 @@
     "cn": "允许在三月岭选出燃料类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_marchridgeAllowMedical": {
-    "en": "March Ridge: allow medical outposts",
-    "ch": "三月嶺: 允許醫療前哨站",
-    "cn": "三月岭: 允许医疗前哨站"
+    "en": "Medical Outposts",
+    "ch": "醫療前哨站",
+    "cn": "医疗前哨站"
    },
    "Sandbox_ClaimableOutposts_marchridgeAllowMedical_tooltip": {
     "en": "Allow medical candidates to be selected for March Ridge. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421012,9 +421717,9 @@
     "cn": "允许在三月岭选出医疗类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_marchridgeOutpostCount": {
-    "en": "March Ridge: number of outposts",
-    "ch": "三月嶺: 前哨站數量",
-    "cn": "三月岭: 前哨站数量"
+    "en": "Active Outposts",
+    "ch": "啟用的前哨站數量",
+    "cn": "启用的前哨站数量"
    },
    "Sandbox_ClaimableOutposts_marchridgeOutpostCount_tooltip": {
     "en": "How many of the 3 built-in March Ridge outpost candidates are enabled in this world. If fewer allowed resource types are available, the actual number can be lower.",
@@ -421027,9 +421732,9 @@
     "cn": "单个玩家可亲自占领的前哨站数量上限. 由其他玩家占领的阵营/全服务器共享前哨站不计入此玩家的上限."
    },
    "Sandbox_ClaimableOutposts_muldraughAllowAmmo": {
-    "en": "Muldraugh: allow ammo outposts",
-    "ch": "馬爾德勞: 允許彈藥前哨站",
-    "cn": "马尔德劳: 允许弹药前哨站"
+    "en": "Ammo Outposts",
+    "ch": "彈藥前哨站",
+    "cn": "弹药前哨站"
    },
    "Sandbox_ClaimableOutposts_muldraughAllowAmmo_tooltip": {
     "en": "Allow ammo candidates to be selected for Muldraugh. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421037,9 +421742,9 @@
     "cn": "允许在马尔德劳选出弹药类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_muldraughAllowFood": {
-    "en": "Muldraugh: allow food outposts",
-    "ch": "馬爾德勞: 允許食物前哨站",
-    "cn": "马尔德劳: 允许食物前哨站"
+    "en": "Food Outposts",
+    "ch": "食物前哨站",
+    "cn": "食物前哨站"
    },
    "Sandbox_ClaimableOutposts_muldraughAllowFood_tooltip": {
     "en": "Allow food candidates to be selected for Muldraugh. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421047,9 +421752,9 @@
     "cn": "允许在马尔德劳选出食物类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_muldraughAllowFuel": {
-    "en": "Muldraugh: allow fuel outposts",
-    "ch": "馬爾德勞: 允許燃料前哨站",
-    "cn": "马尔德劳: 允许燃料前哨站"
+    "en": "Fuel Outposts",
+    "ch": "燃料前哨站",
+    "cn": "燃料前哨站"
    },
    "Sandbox_ClaimableOutposts_muldraughAllowFuel_tooltip": {
     "en": "Allow fuel candidates to be selected for Muldraugh. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421057,9 +421762,9 @@
     "cn": "允许在马尔德劳选出燃料类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_muldraughAllowMedical": {
-    "en": "Muldraugh: allow medical outposts",
-    "ch": "馬爾德勞: 允許醫療前哨站",
-    "cn": "马尔德劳: 允许医疗前哨站"
+    "en": "Medical Outposts",
+    "ch": "醫療前哨站",
+    "cn": "医疗前哨站"
    },
    "Sandbox_ClaimableOutposts_muldraughAllowMedical_tooltip": {
     "en": "Allow medical candidates to be selected for Muldraugh. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421067,9 +421772,9 @@
     "cn": "允许在马尔德劳选出医疗类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_muldraughOutpostCount": {
-    "en": "Muldraugh: number of outposts",
-    "ch": "馬爾德勞: 前哨站數量",
-    "cn": "马尔德劳: 前哨站数量"
+    "en": "Active Outposts",
+    "ch": "啟用的前哨站數量",
+    "cn": "启用的前哨站数量"
    },
    "Sandbox_ClaimableOutposts_muldraughOutpostCount_tooltip": {
     "en": "How many of the 4 built-in Muldraugh outpost candidates are enabled in this world. If fewer allowed resource types are available, the actual number can be lower.",
@@ -421127,9 +421832,9 @@
     "cn": "统计距中心此距离内所有楼层已加载的存活僵尸, 不包含强盗NPC. 僵尸数量达到 50 加上每存活 2 个世界天数再加 1 只时即停止吸引. 增加量上限为 150: 从第 300 天起最多 200. 陆续抵达的僵尸可能超过此阈值."
    },
    "Sandbox_ClaimableOutposts_riversideAllowAmmo": {
-    "en": "Riverside: allow ammo outposts",
-    "ch": "河畔鎮: 允許彈藥前哨站",
-    "cn": "河畔镇: 允许弹药前哨站"
+    "en": "Ammo Outposts",
+    "ch": "彈藥前哨站",
+    "cn": "弹药前哨站"
    },
    "Sandbox_ClaimableOutposts_riversideAllowAmmo_tooltip": {
     "en": "Allow ammo candidates to be selected for Riverside. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421137,9 +421842,9 @@
     "cn": "允许在河畔镇选出弹药类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_riversideAllowFood": {
-    "en": "Riverside: allow food outposts",
-    "ch": "河畔鎮: 允許食物前哨站",
-    "cn": "河畔镇: 允许食物前哨站"
+    "en": "Food Outposts",
+    "ch": "食物前哨站",
+    "cn": "食物前哨站"
    },
    "Sandbox_ClaimableOutposts_riversideAllowFood_tooltip": {
     "en": "Allow food candidates to be selected for Riverside. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421147,9 +421852,9 @@
     "cn": "允许在河畔镇选出食物类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_riversideAllowFuel": {
-    "en": "Riverside: allow fuel outposts",
-    "ch": "河畔鎮: 允許燃料前哨站",
-    "cn": "河畔镇: 允许燃料前哨站"
+    "en": "Fuel Outposts",
+    "ch": "燃料前哨站",
+    "cn": "燃料前哨站"
    },
    "Sandbox_ClaimableOutposts_riversideAllowFuel_tooltip": {
     "en": "Allow fuel candidates to be selected for Riverside. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421157,9 +421862,9 @@
     "cn": "允许在河畔镇选出燃料类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_riversideAllowMedical": {
-    "en": "Riverside: allow medical outposts",
-    "ch": "河畔鎮: 允許醫療前哨站",
-    "cn": "河畔镇: 允许医疗前哨站"
+    "en": "Medical Outposts",
+    "ch": "醫療前哨站",
+    "cn": "医疗前哨站"
    },
    "Sandbox_ClaimableOutposts_riversideAllowMedical_tooltip": {
     "en": "Allow medical candidates to be selected for Riverside. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421167,9 +421872,9 @@
     "cn": "允许在河畔镇选出医疗类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_riversideOutpostCount": {
-    "en": "Riverside: number of outposts",
-    "ch": "河畔鎮: 前哨站數量",
-    "cn": "河畔镇: 前哨站数量"
+    "en": "Active Outposts",
+    "ch": "啟用的前哨站數量",
+    "cn": "启用的前哨站数量"
    },
    "Sandbox_ClaimableOutposts_riversideOutpostCount_tooltip": {
     "en": "How many of the 4 built-in Riverside outpost candidates are enabled in this world. If fewer allowed resource types are available, the actual number can be lower.",
@@ -421177,9 +421882,9 @@
     "cn": "在此世界中启用河畔镇 4 个内置前哨站候选地点中的多少个. 如果可用的允许资源类型较少, 实际数量可能更低."
    },
    "Sandbox_ClaimableOutposts_rosewoodAllowAmmo": {
-    "en": "Rosewood: allow ammo outposts",
-    "ch": "羅斯伍德: 允許彈藥前哨站",
-    "cn": "罗斯伍德: 允许弹药前哨站"
+    "en": "Ammo Outposts",
+    "ch": "彈藥前哨站",
+    "cn": "弹药前哨站"
    },
    "Sandbox_ClaimableOutposts_rosewoodAllowAmmo_tooltip": {
     "en": "Allow ammo candidates to be selected for Rosewood. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421187,9 +421892,9 @@
     "cn": "允许在罗斯伍德选出弹药类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_rosewoodAllowFood": {
-    "en": "Rosewood: allow food outposts",
-    "ch": "羅斯伍德: 允許食物前哨站",
-    "cn": "罗斯伍德: 允许食物前哨站"
+    "en": "Food Outposts",
+    "ch": "食物前哨站",
+    "cn": "食物前哨站"
    },
    "Sandbox_ClaimableOutposts_rosewoodAllowFood_tooltip": {
     "en": "Allow food candidates to be selected for Rosewood. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421197,9 +421902,9 @@
     "cn": "允许在罗斯伍德选出食物类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_rosewoodAllowFuel": {
-    "en": "Rosewood: allow fuel outposts",
-    "ch": "羅斯伍德: 允許燃料前哨站",
-    "cn": "罗斯伍德: 允许燃料前哨站"
+    "en": "Fuel Outposts",
+    "ch": "燃料前哨站",
+    "cn": "燃料前哨站"
    },
    "Sandbox_ClaimableOutposts_rosewoodAllowFuel_tooltip": {
     "en": "Allow fuel candidates to be selected for Rosewood. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421207,9 +421912,9 @@
     "cn": "允许在罗斯伍德选出燃料类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_rosewoodAllowMechanic": {
-    "en": "Rosewood: allow mechanic outposts",
-    "ch": "羅斯伍德: 允許汽修前哨站",
-    "cn": "罗斯伍德: 允许汽修前哨站"
+    "en": "Mechanic Outposts",
+    "ch": "汽修前哨站",
+    "cn": "汽修前哨站"
    },
    "Sandbox_ClaimableOutposts_rosewoodAllowMechanic_tooltip": {
     "en": "Allow Mechanic candidates to be selected for Rosewood. Existing claimed outposts are preserved.",
@@ -421217,9 +421922,9 @@
     "cn": "允许在罗斯伍德选出汽修类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_rosewoodAllowMedical": {
-    "en": "Rosewood: allow medical outposts",
-    "ch": "羅斯伍德: 允許醫療前哨站",
-    "cn": "罗斯伍德: 允许医疗前哨站"
+    "en": "Medical Outposts",
+    "ch": "醫療前哨站",
+    "cn": "医疗前哨站"
    },
    "Sandbox_ClaimableOutposts_rosewoodAllowMedical_tooltip": {
     "en": "Allow medical candidates to be selected for Rosewood. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421227,9 +421932,9 @@
     "cn": "允许在罗斯伍德选出医疗类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_rosewoodOutpostCount": {
-    "en": "Rosewood: number of outposts",
-    "ch": "羅斯伍德: 前哨站數量",
-    "cn": "罗斯伍德: 前哨站数量"
+    "en": "Active Outposts",
+    "ch": "啟用的前哨站數量",
+    "cn": "启用的前哨站数量"
    },
    "Sandbox_ClaimableOutposts_rosewoodOutpostCount_tooltip": {
     "en": "How many of the 4 built-in Rosewood outpost candidates are enabled in this world. If fewer allowed resource types are available, the actual number can be lower.",
@@ -421237,9 +421942,9 @@
     "cn": "在此世界中启用罗斯伍德 4 个内置前哨站候选地点中的多少个. 如果可用的允许资源类型较少, 实际数量可能更低."
    },
    "Sandbox_ClaimableOutposts_ruralAllowAgricultural": {
-    "en": "Rural / standalone: allow agricultural outposts",
-    "ch": "鄉村 / 獨立地點: 允許農業前哨站",
-    "cn": "乡村 / 独立地点: 允许农业前哨站"
+    "en": "Agricultural Outposts",
+    "ch": "農業前哨站",
+    "cn": "农业前哨站"
    },
    "Sandbox_ClaimableOutposts_ruralAllowAgricultural_tooltip": {
     "en": "Allow Agricultural candidates to be selected from the rural / standalone pool. Existing claimed outposts are preserved.",
@@ -421247,9 +421952,9 @@
     "cn": "允许从乡村 / 独立地点池中选出农业类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_ruralAllowAmmo": {
-    "en": "Rural / standalone: allow ammo outposts",
-    "ch": "鄉村 / 獨立地點: 允許彈藥前哨站",
-    "cn": "乡村 / 独立地点: 允许弹药前哨站"
+    "en": "Ammo Outposts",
+    "ch": "彈藥前哨站",
+    "cn": "弹药前哨站"
    },
    "Sandbox_ClaimableOutposts_ruralAllowAmmo_tooltip": {
     "en": "Allow Ammo candidates to be selected from the rural / standalone pool. Existing claimed outposts are preserved.",
@@ -421257,9 +421962,9 @@
     "cn": "允许从乡村 / 独立地点池中选出弹药类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_ruralAllowBar": {
-    "en": "Rural / standalone: allow bar outposts",
-    "ch": "鄉村 / 獨立地點: 允許酒吧前哨站",
-    "cn": "乡村 / 独立地点: 允许酒吧前哨站"
+    "en": "Bar Outposts",
+    "ch": "酒吧前哨站",
+    "cn": "酒吧前哨站"
    },
    "Sandbox_ClaimableOutposts_ruralAllowBar_tooltip": {
     "en": "Allow Bar candidates to be selected from the rural / standalone pool. Existing claimed outposts are preserved.",
@@ -421267,9 +421972,9 @@
     "cn": "允许从乡村 / 独立地点池中选出酒吧类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_ruralAllowConstruction": {
-    "en": "Rural / standalone: allow construction outposts",
-    "ch": "鄉村 / 獨立地點: 允許建築前哨站",
-    "cn": "乡村 / 独立地点: 允许建筑前哨站"
+    "en": "Construction Outposts",
+    "ch": "建築前哨站",
+    "cn": "建筑前哨站"
    },
    "Sandbox_ClaimableOutposts_ruralAllowConstruction_tooltip": {
     "en": "Allow Construction candidates to be selected from the rural / standalone pool. Existing claimed outposts are preserved.",
@@ -421277,9 +421982,9 @@
     "cn": "允许从乡村 / 独立地点池中选出建筑类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_ruralAllowCrafting": {
-    "en": "Rural / standalone: allow crafting outposts",
-    "ch": "鄉村 / 獨立地點: 允許製作前哨站",
-    "cn": "乡村 / 独立地点: 允许制作前哨站"
+    "en": "Crafting Outposts",
+    "ch": "製作前哨站",
+    "cn": "制作前哨站"
    },
    "Sandbox_ClaimableOutposts_ruralAllowCrafting_tooltip": {
     "en": "Allow Crafting candidates to be selected from the rural / standalone pool. Existing claimed outposts are preserved.",
@@ -421287,9 +421992,9 @@
     "cn": "允许从乡村 / 独立地点池中选出制作类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_ruralAllowFood": {
-    "en": "Rural / standalone: allow food outposts",
-    "ch": "鄉村 / 獨立地點: 允許食物前哨站",
-    "cn": "乡村 / 独立地点: 允许食物前哨站"
+    "en": "Food Outposts",
+    "ch": "食物前哨站",
+    "cn": "食物前哨站"
    },
    "Sandbox_ClaimableOutposts_ruralAllowFood_tooltip": {
     "en": "Allow Food candidates to be selected from the rural / standalone pool. Existing claimed outposts are preserved.",
@@ -421297,9 +422002,9 @@
     "cn": "允许从乡村 / 独立地点池中选出食物类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_ruralAllowFuel": {
-    "en": "Rural / standalone: allow fuel outposts",
-    "ch": "鄉村 / 獨立地點: 允許燃料前哨站",
-    "cn": "乡村 / 独立地点: 允许燃料前哨站"
+    "en": "Fuel Outposts",
+    "ch": "燃料前哨站",
+    "cn": "燃料前哨站"
    },
    "Sandbox_ClaimableOutposts_ruralAllowFuel_tooltip": {
     "en": "Allow Fuel candidates to be selected from the rural / standalone pool. Existing claimed outposts are preserved.",
@@ -421307,9 +422012,9 @@
     "cn": "允许从乡村 / 独立地点池中选出燃料类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_ruralAllowIndustrial": {
-    "en": "Rural / standalone: allow industrial outposts",
-    "ch": "鄉村 / 獨立地點: 允許工業前哨站",
-    "cn": "乡村 / 独立地点: 允许工业前哨站"
+    "en": "Industrial Outposts",
+    "ch": "工業前哨站",
+    "cn": "工业前哨站"
    },
    "Sandbox_ClaimableOutposts_ruralAllowIndustrial_tooltip": {
     "en": "Allow Industrial candidates to be selected from the rural / standalone pool. Existing claimed outposts are preserved.",
@@ -421317,9 +422022,9 @@
     "cn": "允许从乡村 / 独立地点池中选出工业类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_ruralAllowMechanic": {
-    "en": "Rural / standalone: allow mechanic outposts",
-    "ch": "鄉村 / 獨立地點: 允許汽修前哨站",
-    "cn": "乡村 / 独立地点: 允许汽修前哨站"
+    "en": "Mechanic Outposts",
+    "ch": "汽修前哨站",
+    "cn": "汽修前哨站"
    },
    "Sandbox_ClaimableOutposts_ruralAllowMechanic_tooltip": {
     "en": "Allow Mechanic candidates to be selected from the rural / standalone pool. Existing claimed outposts are preserved.",
@@ -421327,9 +422032,9 @@
     "cn": "允许从乡村 / 独立地点池中选出汽修类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_ruralAllowMedical": {
-    "en": "Rural / standalone: allow medical outposts",
-    "ch": "鄉村 / 獨立地點: 允許醫療前哨站",
-    "cn": "乡村 / 独立地点: 允许医疗前哨站"
+    "en": "Medical Outposts",
+    "ch": "醫療前哨站",
+    "cn": "医疗前哨站"
    },
    "Sandbox_ClaimableOutposts_ruralAllowMedical_tooltip": {
     "en": "Allow Medical candidates to be selected from the rural / standalone pool. Existing claimed outposts are preserved.",
@@ -421337,9 +422042,9 @@
     "cn": "允许从乡村 / 独立地点池中选出医疗类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_ruralOutpostCount": {
-    "en": "Rural / standalone: number of outposts",
-    "ch": "鄉村 / 獨立地點: 前哨站數量",
-    "cn": "乡村 / 独立地点: 前哨站数量"
+    "en": "Active Outposts",
+    "ch": "啟用的前哨站數量",
+    "cn": "启用的前哨站数量"
    },
    "Sandbox_ClaimableOutposts_ruralOutpostCount_tooltip": {
     "en": "How many rural or standalone outpost candidates are enabled independently of town quotas. Conflict groups and disabled resource types can reduce the final number.",
@@ -421347,9 +422052,9 @@
     "cn": "独立于城镇配额之外, 启用多少个乡村或独立地点的前哨站候选地点. 冲突组和已禁用的资源类型可能使最终数量减少."
    },
    "Sandbox_ClaimableOutposts_valleyAllowAgricultural": {
-    "en": "Valley Station: allow agricultural outposts",
-    "ch": "山谷站: 允許農業前哨站",
-    "cn": "山谷站: 允许农业前哨站"
+    "en": "Agricultural Outposts",
+    "ch": "農業前哨站",
+    "cn": "农业前哨站"
    },
    "Sandbox_ClaimableOutposts_valleyAllowAgricultural_tooltip": {
     "en": "Allow agricultural candidates to be selected for Valley Station. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421357,9 +422062,9 @@
     "cn": "允许在山谷站选出农业类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_valleyAllowAmmo": {
-    "en": "Valley Station: allow ammo outposts",
-    "ch": "山谷站: 允許彈藥前哨站",
-    "cn": "山谷站: 允许弹药前哨站"
+    "en": "Ammo Outposts",
+    "ch": "彈藥前哨站",
+    "cn": "弹药前哨站"
    },
    "Sandbox_ClaimableOutposts_valleyAllowAmmo_tooltip": {
     "en": "Allow ammo candidates to be selected for Valley Station. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421367,9 +422072,9 @@
     "cn": "允许在山谷站选出弹药类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_valleyAllowBar": {
-    "en": "Valley Station: allow bar outposts",
-    "ch": "山谷站: 允許酒吧前哨站",
-    "cn": "山谷站: 允许酒吧前哨站"
+    "en": "Bar Outposts",
+    "ch": "酒吧前哨站",
+    "cn": "酒吧前哨站"
    },
    "Sandbox_ClaimableOutposts_valleyAllowBar_tooltip": {
     "en": "Allow Bar candidates to be selected for Valley Station. Existing claimed outposts are preserved.",
@@ -421377,9 +422082,9 @@
     "cn": "允许在山谷站选出酒吧类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_valleyAllowFood": {
-    "en": "Valley Station: allow food outposts",
-    "ch": "山谷站: 允許食物前哨站",
-    "cn": "山谷站: 允许食物前哨站"
+    "en": "Food Outposts",
+    "ch": "食物前哨站",
+    "cn": "食物前哨站"
    },
    "Sandbox_ClaimableOutposts_valleyAllowFood_tooltip": {
     "en": "Allow food candidates to be selected for Valley Station. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421387,9 +422092,9 @@
     "cn": "允许在山谷站选出食物类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_valleyAllowFuel": {
-    "en": "Valley Station: allow fuel outposts",
-    "ch": "山谷站: 允許燃料前哨站",
-    "cn": "山谷站: 允许燃料前哨站"
+    "en": "Fuel Outposts",
+    "ch": "燃料前哨站",
+    "cn": "燃料前哨站"
    },
    "Sandbox_ClaimableOutposts_valleyAllowFuel_tooltip": {
     "en": "Allow fuel candidates to be selected for Valley Station. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421397,9 +422102,9 @@
     "cn": "允许在山谷站选出燃料类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_valleyOutpostCount": {
-    "en": "Valley Station: number of outposts",
-    "ch": "山谷站: 前哨站數量",
-    "cn": "山谷站: 前哨站数量"
+    "en": "Active Outposts",
+    "ch": "啟用的前哨站數量",
+    "cn": "启用的前哨站数量"
    },
    "Sandbox_ClaimableOutposts_valleyOutpostCount_tooltip": {
     "en": "How many of the 4 built-in Valley Station outpost candidates are enabled in this world. If fewer allowed resource types are available, the actual number can be lower.",
@@ -421407,9 +422112,9 @@
     "cn": "在此世界中启用山谷站 4 个内置前哨站候选地点中的多少个. 如果可用的允许资源类型较少, 实际数量可能更低."
    },
    "Sandbox_ClaimableOutposts_westpointAllowAmmo": {
-    "en": "West Point: allow ammo outposts",
-    "ch": "西點鎮: 允許彈藥前哨站",
-    "cn": "西点镇: 允许弹药前哨站"
+    "en": "Ammo Outposts",
+    "ch": "彈藥前哨站",
+    "cn": "弹药前哨站"
    },
    "Sandbox_ClaimableOutposts_westpointAllowAmmo_tooltip": {
     "en": "Allow ammo candidates to be selected for West Point. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421417,9 +422122,9 @@
     "cn": "允许在西点镇选出弹药类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_westpointAllowBar": {
-    "en": "West Point: allow bar outposts",
-    "ch": "西點鎮: 允許酒吧前哨站",
-    "cn": "西点镇: 允许酒吧前哨站"
+    "en": "Bar Outposts",
+    "ch": "酒吧前哨站",
+    "cn": "酒吧前哨站"
    },
    "Sandbox_ClaimableOutposts_westpointAllowBar_tooltip": {
     "en": "Allow Bar candidates to be selected for West Point. Existing claimed outposts are preserved.",
@@ -421427,9 +422132,9 @@
     "cn": "允许在西点镇选出酒吧类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_westpointAllowConstruction": {
-    "en": "West Point: allow construction outposts",
-    "ch": "西點鎮: 允許建築前哨站",
-    "cn": "西点镇: 允许建筑前哨站"
+    "en": "Construction Outposts",
+    "ch": "建築前哨站",
+    "cn": "建筑前哨站"
    },
    "Sandbox_ClaimableOutposts_westpointAllowConstruction_tooltip": {
     "en": "Allow Construction candidates to be selected for West Point. Existing claimed outposts are preserved.",
@@ -421447,9 +422152,9 @@
     "cn": "允许在西点镇选出制作类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_westpointAllowFood": {
-    "en": "West Point: allow food outposts",
-    "ch": "西點鎮: 允許食物前哨站",
-    "cn": "西点镇: 允许食物前哨站"
+    "en": "Food Outposts",
+    "ch": "食物前哨站",
+    "cn": "食物前哨站"
    },
    "Sandbox_ClaimableOutposts_westpointAllowFood_tooltip": {
     "en": "Allow food candidates to be selected for West Point. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421457,9 +422162,9 @@
     "cn": "允许在西点镇选出食物类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_westpointAllowFuel": {
-    "en": "West Point: allow fuel outposts",
-    "ch": "西點鎮: 允許燃料前哨站",
-    "cn": "西点镇: 允许燃料前哨站"
+    "en": "Fuel Outposts",
+    "ch": "燃料前哨站",
+    "cn": "燃料前哨站"
    },
    "Sandbox_ClaimableOutposts_westpointAllowFuel_tooltip": {
     "en": "Allow fuel candidates to be selected for West Point. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421467,9 +422172,9 @@
     "cn": "允许在西点镇选出燃料类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_westpointAllowIndustrial": {
-    "en": "West Point: allow industrial outposts",
-    "ch": "西點鎮: 允許工業前哨站",
-    "cn": "西点镇: 允许工业前哨站"
+    "en": "Industrial Outposts",
+    "ch": "工業前哨站",
+    "cn": "工业前哨站"
    },
    "Sandbox_ClaimableOutposts_westpointAllowIndustrial_tooltip": {
     "en": "Allow industrial candidates to be selected for West Point. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421477,9 +422182,9 @@
     "cn": "允许在西点镇选出工业类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_westpointAllowMechanic": {
-    "en": "West Point: allow mechanic outposts",
-    "ch": "西點鎮: 允許汽修前哨站",
-    "cn": "西点镇: 允许汽修前哨站"
+    "en": "Mechanic Outposts",
+    "ch": "汽修前哨站",
+    "cn": "汽修前哨站"
    },
    "Sandbox_ClaimableOutposts_westpointAllowMechanic_tooltip": {
     "en": "Allow Mechanic candidates to be selected for West Point. Existing claimed outposts are preserved.",
@@ -421487,9 +422192,9 @@
     "cn": "允许在西点镇选出汽修类候选地点. 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_westpointAllowMedical": {
-    "en": "West Point: allow medical outposts",
-    "ch": "西點鎮: 允許醫療前哨站",
-    "cn": "西点镇: 允许医疗前哨站"
+    "en": "Medical Outposts",
+    "ch": "醫療前哨站",
+    "cn": "医疗前哨站"
    },
    "Sandbox_ClaimableOutposts_westpointAllowMedical_tooltip": {
     "en": "Allow medical candidates to be selected for West Point. Existing claimed outposts are preserved if world-generation settings are changed.",
@@ -421497,9 +422202,9 @@
     "cn": "允许在西点镇选出医疗类候选地点. 更改世界生成设置时, 已占领的前哨站会保留."
    },
    "Sandbox_ClaimableOutposts_westpointOutpostCount": {
-    "en": "West Point: number of outposts",
-    "ch": "西點鎮: 前哨站數量",
-    "cn": "西点镇: 前哨站数量"
+    "en": "Active Outposts",
+    "ch": "啟用的前哨站數量",
+    "cn": "启用的前哨站数量"
    },
    "Sandbox_ClaimableOutposts_westpointOutpostCount_tooltip": {
     "en": "How many of the 6 built-in West Point outpost candidates are enabled in this world. If fewer allowed resource types are available, the actual number can be lower.",
@@ -426967,9 +427672,9 @@
     "cn": "总是"
    },
    "Sandbox_BBP_Progression_tooltip": {
-    "en": "The build menu fills up as you level Carpentry: crude walls at first, everything sensible by level 7, and faster building above it. Electrical work needs Electrical skill. Magazines and studying built examples unlock pieces early.",
-    "ch": "建造選單會隨木工等級提升逐步解鎖: 一開始只有簡陋的牆, 到 7 級時所有合理項目都會解鎖, 之後等級越高建造越快. 電工類項目需要電工技能. 雜誌與觀摩已建成的範例可提早解鎖構件.",
-    "cn": "建造菜单会随木工等级提升逐步解锁: 一开始只有简陋的墙, 到 7 级时所有合理项目都会解锁, 之后等级越高建造越快. 电工类项目需要电工技能. 杂志与观摩已建成的范例可提前解锁构件."
+    "en": "The build menu fills up as you level Carpentry: crude walls at first, everything sensible by level 7, and faster building above it. Electrical work needs Electrical skill. Magazines and studying built examples unlock pieces early. When off, every piece can be built. Changing it in-game takes effect at once.",
+    "ch": "建造選單會隨木工等級提升逐步解鎖: 一開始只有簡陋的牆, 到 7 級時所有合理項目都會解鎖, 之後等級越高建造越快. 電工類項目需要電工技能. 雜誌與觀摩已建成的範例可提早解鎖構件. 關閉時, 所有構件皆可建造. 在遊戲中變更會立即生效.",
+    "cn": "建造菜单会随木工等级提升逐步解锁: 一开始只有简陋的墙, 到 7 级时所有合理项目都会解锁, 之后等级越高建造越快. 电工类项目需要电工技能. 杂志与观摩已建成的范例可提前解锁构件. 关闭时, 所有构件均可建造. 在游戏中更改会立即生效."
    },
    "Sandbox_HydeCoJobFair": {
     "en": "Job Fair",
@@ -430687,14 +431392,14 @@
     "cn": "第二章, 3.0 版新增: 你在外面世界中发现的地点、声响和纸条, 还有商人、场景和事件. 默认关闭. 关闭时, 本模组只有救援, 与 2.0 完全相同. 新游戏请在此开启; 在尚未包含此内容的存档中, 开始游玩时会询问你一次, 之后可以右键点击地面更改. 封锁区士兵有自己的开关."
    },
    "Sandbox_BFBackpackAttachment_enabled": {
-    "en": "Flashlights on Hiking Backpacks",
-    "ch": "登山包掛手電筒",
-    "cn": "登山包挂手电筒"
+    "en": "Flashlights on Backpacks",
+    "ch": "背包掛手電筒",
+    "cn": "背包挂手电筒"
    },
    "Sandbox_BFBackpackAttachment_enabled_tooltip": {
-    "en": "Allows Torch1, Torch2, Torch3 and Torch5 to use the bottom slot of regular and large hiking backpacks. The flashlight shares the slot with a tent or bedroll. Its model sits sideways, but the standard beam still shines forward through the character. Disabled by default.",
-    "ch": "允許 Torch1、Torch2、Torch3 與 Torch5 使用一般與大型登山包的底部掛槽. 手電筒與帳篷或睡袋共用此掛槽. 其模型會橫向擺放, 但標準光束仍會穿過角色向前照射. 預設停用.",
-    "cn": "允许 Torch1、Torch2、Torch3 和 Torch5 使用普通和大型登山包的底部挂槽. 手电筒与帐篷或睡袋共用此挂槽. 其模型横向放置, 但标准光束仍会穿过角色向前照射. 默认禁用."
+    "en": "Allows Torch1, Torch2, Torch3 and Torch5 to use the bottom slot of any backpack that has one: regular and large hiking bags, crafted framepacks, and ALICE or military backpacks. The flashlight shares the slot with a tent or bedroll. Its model sits sideways, but the standard beam still shines forward through the character. Disabled by default.",
+    "ch": "允許 Torch1、Torch2、Torch3 與 Torch5 使用任何具有底部掛槽的背包: 一般與大型登山包、自製框架背包, 以及 ALICE 背包或軍用背包. 手電筒與帳篷或睡袋共用此掛槽. 其模型會橫向擺放, 但標準光束仍會穿過角色向前照射. 預設停用.",
+    "cn": "允许 Torch1、Torch2、Torch3 和 Torch5 使用任何带有底部挂槽的背包: 普通和大型登山包、自制框架背包, 以及 ALICE 背包或军用背包. 手电筒与帐篷或睡袋共用此挂槽. 其模型横向放置, 但标准光束仍会穿过角色向前照射. 默认禁用."
    },
    "Sandbox_MilitaryPonchosRELOADED": {
     "en": "Military Ponchos",
@@ -430800,6 +431505,516 @@
     "en": "Your people inside their own base behave like people at home. Nobody sneaks about (A-Life's Stealth specialty and its quiet walking). Nobody leaves the base to look for a zombie that went out of sight past the fence, or walks out to a noise past it (someone who shot at them is still hunted). Nobody goes to check a noise made by their own crew or by you, or treats the base's own barricades, generators and cars as clues to search. Guards stay on their posts unless a crewmate close by calls for help. The early-outbreak panic doesn't grip them. A real threat changes all of it: someone they see and fight, the base alarm, a mission, an escort. Off: A-Life decides as it does everywhere else.",
     "ch": "你的人在自己的基地內會像在家一樣行動. 沒有人會四處潛行 (A-Life 的潛行殺手專長與其安靜行走). 沒有人會為了尋找在圍籬外走出視線的殭屍而離開基地, 也不會走出去查探圍籬外的聲響 (朝他們開槍的人仍會被追殺). 沒有人會去察看自己隊伍或你發出的聲響, 也不會把基地自己的路障、發電機與車輛當成線索去搜尋. 除非附近的隊友呼救, 否則警衛會留在崗哨上. 疫情爆發初期的恐慌不會影響他們. 真正的威脅會改變這一切: 他們看見並交戰的對象、基地警報、任務、護送. 關閉: 由 A-Life 照它在其他地方的方式決定.",
     "cn": "你的人在自己的基地内会像在家一样行动. 没有人会四处潜行 (A-Life 的潜行杀手专长及其安静行走). 没有人会为了寻找在围栏外走出视线的僵尸而离开基地, 也不会走出去查探围栏外的声响 (朝他们开枪的人仍会被追杀). 没有人会去查看自己队伍或你发出的声响, 也不会把基地自己的路障、发电机和车辆当成线索去搜索. 除非附近的队友呼救, 否则警卫会留在岗哨上. 疫情爆发初期的恐慌不会影响他们. 真正的威胁会改变这一切: 他们看见并交战的对象、基地警报、任务、护送. 关闭: 由 A-Life 按它在其他地方的方式决定."
+   },
+   "Sandbox_RealisticCold_DryingRackHeatBridge": {
+    "en": "Drying Racks Use Simulated Room Heat",
+    "ch": "晾曬架使用模擬室溫",
+    "cn": "晾晒架使用模拟室温"
+   },
+   "Sandbox_RealisticCold_DryingRackHeatBridge_tooltip": {
+    "en": "Drying racks and leather curing use the mod's simulated room temperature. A rack in a room at or above the minimum below dries at normal speed, and faster in rooms warmer than 20°C. The rack's warmth stays on the rack and does not heat the room. While the power grid is on, the base game already keeps powered buildings warm, so this matters once the grid goes down.",
+    "ch": "晾曬架與皮革乾燥會使用本模組模擬的室溫. 若晾曬架所在房間的溫度達到或高於下方的最低值, 就會以正常速度晾乾, 房間溫度高於 20°C 時則會更快. 晾曬架的熱度只作用於晾曬架本身, 不會讓房間變暖. 電網供電期間, 原版遊戲本來就會讓有電的建築保持溫暖, 因此電網停止供電後, 這項設定便顯得重要.",
+    "cn": "晾晒架和皮革干燥会使用本模组模拟的室温. 若晾晒架所在房间的温度达到或高于下方的最低值, 就会以正常速度晾干, 房间温度高于 20°C 时则会更快. 晾晒架的热量只作用于晾晒架本身, 不会让房间变暖. 电网供电期间, 原版游戏本来就会让有电的建筑保持温暖, 因此电网停止供电后, 这项设置就更为重要."
+   },
+   "Sandbox_RealisticCold_DryingRackMinRoomTemp": {
+    "en": "Drying Rack Minimum Room Temperature",
+    "ch": "晾曬架最低室溫",
+    "cn": "晾晒架最低室温"
+   },
+   "Sandbox_RealisticCold_DryingRackMinRoomTemp_tooltip": {
+    "en": "How warm a room must be (°C) before racks in it dry at normal speed. Colder rooms are left to the base game.",
+    "ch": "房間需達到多少溫度 (°C), 其中的晾曬架才會以正常速度晾乾. 更冷的房間則交由原版遊戲處理.",
+    "cn": "房间需达到多少温度 (°C), 其中的晾晒架才会以正常速度晾干. 更冷的房间则交由原版游戏处理."
+   },
+   "Sandbox_ClaimableOutposts_Horde": {
+    "en": "Dynamic Outposts - Horde Settings",
+    "ch": "動態前哨站 - 屍潮設定",
+    "cn": "动态前哨站 - 尸潮设置"
+   },
+   "Sandbox_ClaimableOutposts_hordeVarianceMax": {
+    "en": "Zombie count variance - maximum",
+    "ch": "殭屍數量浮動 - 最大值",
+    "cn": "僵尸数量浮动 - 最大值"
+   },
+   "Sandbox_ClaimableOutposts_hordeVarianceMax_tooltip": {
+    "en": "Maximum integer offset per allocation (-20 to 20). Example: 10 base, -3 min and +3 max produces 7 to 13 zombies for each point.",
+    "ch": "每次分配的整數偏移量上限 (-20 到 20). 範例: 基礎值 10, 最小值 -3 且最大值 +3 時, 每個感染點會產生 7 到 13 隻殭屍.",
+    "cn": "每次分配的整数偏移量上限 (-20 到 20). 示例: 基础值 10, 最小值 -3 且最大值 +3 时, 每个感染点会生成 7 到 13 只僵尸."
+   },
+   "Sandbox_ClaimableOutposts_hordeVarianceMin": {
+    "en": "Zombie count variance - minimum",
+    "ch": "殭屍數量浮動 - 最小值",
+    "cn": "僵尸数量浮动 - 最小值"
+   },
+   "Sandbox_ClaimableOutposts_hordeVarianceMin_tooltip": {
+    "en": "Minimum integer offset per allocation (-20 to 20). If larger than maximum, the two bounds are swapped. A point cannot contribute a negative number of zombies.",
+    "ch": "每次分配的整數偏移量下限 (-20 到 20). 若大於最大值, 兩個上下限會互換. 單一感染點提供的殭屍數量不會低於 0.",
+    "cn": "每次分配的整数偏移量下限 (-20 到 20). 如果大于最大值, 两个上下限会互换. 单个感染点提供的僵尸数量不会低于 0."
+   },
+   "Sandbox_ClaimableOutposts_hordeZombiesPerPoint": {
+    "en": "Zombies per infestation point (includes threat 0 base)",
+    "ch": "每個感染點的殭屍數 (含威脅 0 基礎量)",
+    "cn": "每个感染点的僵尸数 (含威胁 0 基础量)"
+   },
+   "Sandbox_ClaimableOutposts_hordeZombiesPerPoint_tooltip": {
+    "en": "Base number of zombies per allocation: one allocation at infestation level 0, plus one for each active satellite point.",
+    "ch": "每次分配的基礎殭屍數量: 感染等級 0 時分配一次, 每個活躍的周邊感染點再各加一次.",
+    "cn": "每次分配的基础僵尸数量: 感染等级 0 时分配一次, 每个活跃的周边感染点再各加一次."
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_brandenburg": {
+    "en": "______  Brandenburg  ______",
+    "ch": "______  勃蘭登堡  ______",
+    "cn": "______  勃兰登堡  ______"
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_brandenburg_tooltip": {
+    "en": "Visual section heading only. The checkbox is cosmetic and does not change outpost generation. Use Active Outposts below to configure the area.",
+    "ch": "僅為視覺用的區段標題. 此核取方塊只是裝飾, 不會改變前哨站生成. 請使用下方的「啟用的前哨站數量」設定此區域.",
+    "cn": "仅为视觉用的分区标题. 此复选框只是装饰, 不会改变前哨站生成. 请使用下方的“启用的前哨站数量”设置此区域."
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_coalfield": {
+    "en": "______  Historic Coalfield  ______",
+    "ch": "______  歷史煤田鎮  ______",
+    "cn": "______  历史煤田镇  ______"
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_coalfield_tooltip": {
+    "en": "Visual section heading only. The checkbox is cosmetic and does not change outpost generation. Use Active Outposts below to configure the area.",
+    "ch": "僅為視覺用的區段標題. 此核取方塊只是裝飾, 不會改變前哨站生成. 請使用下方的「啟用的前哨站數量」設定此區域.",
+    "cn": "仅为视觉用的分区标题. 此复选框只是装饰, 不会改变前哨站生成. 请使用下方的“启用的前哨站数量”设置此区域."
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_echo": {
+    "en": "______  Echo Creek  ______",
+    "ch": "______  迴音河  ______",
+    "cn": "______  回音溪  ______"
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_echo_tooltip": {
+    "en": "Visual section heading only. The checkbox is cosmetic and does not change outpost generation. Use Active Outposts below to configure the area.",
+    "ch": "僅為視覺用的區段標題. 此核取方塊只是裝飾, 不會改變前哨站生成. 請使用下方的「啟用的前哨站數量」設定此區域.",
+    "cn": "仅为视觉用的分区标题. 此复选框只是装饰, 不会改变前哨站生成. 请使用下方的“启用的前哨站数量”设置此区域."
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_ekron": {
+    "en": "______  Ekron  ______",
+    "ch": "______  以革倫  ______",
+    "cn": "______  以革伦  ______"
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_ekron_tooltip": {
+    "en": "Visual section heading only. The checkbox is cosmetic and does not change outpost generation. Use Active Outposts below to configure the area.",
+    "ch": "僅為視覺用的區段標題. 此核取方塊只是裝飾, 不會改變前哨站生成. 請使用下方的「啟用的前哨站數量」設定此區域.",
+    "cn": "仅为视觉用的分区标题. 此复选框只是装饰, 不会改变前哨站生成. 请使用下方的“启用的前哨站数量”设置此区域."
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_fallas": {
+    "en": "______  Fallas Lake  ______",
+    "ch": "______  法拉斯湖鎮  ______",
+    "cn": "______  法拉斯湖镇  ______"
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_fallas_tooltip": {
+    "en": "Visual section heading only. The checkbox is cosmetic and does not change outpost generation. Use Active Outposts below to configure the area.",
+    "ch": "僅為視覺用的區段標題. 此核取方塊只是裝飾, 不會改變前哨站生成. 請使用下方的「啟用的前哨站數量」設定此區域.",
+    "cn": "仅为视觉用的分区标题. 此复选框只是装饰, 不会改变前哨站生成. 请使用下方的“启用的前哨站数量”设置此区域."
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_irvington": {
+    "en": "______  Irvington  ______",
+    "ch": "______  歐文頓  ______",
+    "cn": "______  欧文顿  ______"
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_irvington_tooltip": {
+    "en": "Visual section heading only. The checkbox is cosmetic and does not change outpost generation. Use Active Outposts below to configure the area.",
+    "ch": "僅為視覺用的區段標題. 此核取方塊只是裝飾, 不會改變前哨站生成. 請使用下方的「啟用的前哨站數量」設定此區域.",
+    "cn": "仅为视觉用的分区标题. 此复选框只是装饰, 不会改变前哨站生成. 请使用下方的“启用的前哨站数量”设置此区域."
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_louisville": {
+    "en": "______  Louisville  ______",
+    "ch": "______  路易斯維爾  ______",
+    "cn": "______  路易斯维尔  ______"
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_louisville_tooltip": {
+    "en": "Visual section heading only. The checkbox is cosmetic and does not change outpost generation. Use Active Outposts below to configure the area.",
+    "ch": "僅為視覺用的區段標題. 此核取方塊只是裝飾, 不會改變前哨站生成. 請使用下方的「啟用的前哨站數量」設定此區域.",
+    "cn": "仅为视觉用的分区标题. 此复选框只是装饰, 不会改变前哨站生成. 请使用下方的“启用的前哨站数量”设置此区域."
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_marchridge": {
+    "en": "______  March Ridge  ______",
+    "ch": "______  三月嶺  ______",
+    "cn": "______  三月岭  ______"
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_marchridge_tooltip": {
+    "en": "Visual section heading only. The checkbox is cosmetic and does not change outpost generation. Use Active Outposts below to configure the area.",
+    "ch": "僅為視覺用的區段標題. 此核取方塊只是裝飾, 不會改變前哨站生成. 請使用下方的「啟用的前哨站數量」設定此區域.",
+    "cn": "仅为视觉用的分区标题. 此复选框只是装饰, 不会改变前哨站生成. 请使用下方的“启用的前哨站数量”设置此区域."
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_muldraugh": {
+    "en": "______  Muldraugh  ______",
+    "ch": "______  馬爾德勞  ______",
+    "cn": "______  马尔德劳  ______"
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_muldraugh_tooltip": {
+    "en": "Visual section heading only. The checkbox is cosmetic and does not change outpost generation. Use Active Outposts below to configure the area.",
+    "ch": "僅為視覺用的區段標題. 此核取方塊只是裝飾, 不會改變前哨站生成. 請使用下方的「啟用的前哨站數量」設定此區域.",
+    "cn": "仅为视觉用的分区标题. 此复选框只是装饰, 不会改变前哨站生成. 请使用下方的“启用的前哨站数量”设置此区域."
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_riverside": {
+    "en": "______  Riverside  ______",
+    "ch": "______  河畔鎮  ______",
+    "cn": "______  河畔镇  ______"
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_riverside_tooltip": {
+    "en": "Visual section heading only. The checkbox is cosmetic and does not change outpost generation. Use Active Outposts below to configure the area.",
+    "ch": "僅為視覺用的區段標題. 此核取方塊只是裝飾, 不會改變前哨站生成. 請使用下方的「啟用的前哨站數量」設定此區域.",
+    "cn": "仅为视觉用的分区标题. 此复选框只是装饰, 不会改变前哨站生成. 请使用下方的“启用的前哨站数量”设置此区域."
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_rosewood": {
+    "en": "______  Rosewood  ______",
+    "ch": "______  羅斯伍德  ______",
+    "cn": "______  罗斯伍德  ______"
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_rosewood_tooltip": {
+    "en": "Visual section heading only. The checkbox is cosmetic and does not change outpost generation. Use Active Outposts below to configure the area.",
+    "ch": "僅為視覺用的區段標題. 此核取方塊只是裝飾, 不會改變前哨站生成. 請使用下方的「啟用的前哨站數量」設定此區域.",
+    "cn": "仅为视觉用的分区标题. 此复选框只是装饰, 不会改变前哨站生成. 请使用下方的“启用的前哨站数量”设置此区域."
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_rural": {
+    "en": "______  Rural / Standalone  ______",
+    "ch": "______  鄉村 / 獨立地點  ______",
+    "cn": "______  乡村 / 独立地点  ______"
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_rural_tooltip": {
+    "en": "Visual section heading only. The checkbox is cosmetic and does not change outpost generation. Use Active Outposts below to configure the area.",
+    "ch": "僅為視覺用的區段標題. 此核取方塊只是裝飾, 不會改變前哨站生成. 請使用下方的「啟用的前哨站數量」設定此區域.",
+    "cn": "仅为视觉用的分区标题. 此复选框只是装饰, 不会改变前哨站生成. 请使用下方的“启用的前哨站数量”设置此区域."
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_valley": {
+    "en": "______  Valley Station  ______",
+    "ch": "______  山谷站  ______",
+    "cn": "______  山谷站  ______"
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_valley_tooltip": {
+    "en": "Visual section heading only. The checkbox is cosmetic and does not change outpost generation. Use Active Outposts below to configure the area.",
+    "ch": "僅為視覺用的區段標題. 此核取方塊只是裝飾, 不會改變前哨站生成. 請使用下方的「啟用的前哨站數量」設定此區域.",
+    "cn": "仅为视觉用的分区标题. 此复选框只是装饰, 不会改变前哨站生成. 请使用下方的“启用的前哨站数量”设置此区域."
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_westpoint": {
+    "en": "______  West Point  ______",
+    "ch": "______  西點鎮  ______",
+    "cn": "______  西点镇  ______"
+   },
+   "Sandbox_ClaimableOutposts_uiHeader_westpoint_tooltip": {
+    "en": "Visual section heading only. The checkbox is cosmetic and does not change outpost generation. Use Active Outposts below to configure the area.",
+    "ch": "僅為視覺用的區段標題. 此核取方塊只是裝飾, 不會改變前哨站生成. 請使用下方的「啟用的前哨站數量」設定此區域.",
+    "cn": "仅为视觉用的分区标题. 此复选框只是装饰, 不会改变前哨站生成. 请使用下方的“启用的前哨站数量”设置此区域."
+   },
+   "Sandbox_MartialArts": {
+    "en": "Martial Arts",
+    "ch": "武術",
+    "cn": "武术"
+   },
+   "Sandbox_MartialArts_BoxingAttackDamage": {
+    "en": "Boxing - base attack damage (percent)",
+    "ch": "拳擊 - 基礎攻擊傷害 (百分比)",
+    "cn": "拳击 - 基础攻击伤害 (百分比)"
+   },
+   "Sandbox_MartialArts_BoxingAttackDamage_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales martial arts attack damage. Does not add damage to positional Jiu-Jitsu throws.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整武術攻擊傷害. 不會增加柔術姿勢摔投的傷害.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整武术攻击伤害. 不会为柔术的姿势投摔增加伤害."
+   },
+   "Sandbox_MartialArts_BoxingAttackSpeed": {
+    "en": "Boxing - base attack speed (percent)",
+    "ch": "拳擊 - 基礎攻擊速度 (百分比)",
+    "cn": "拳击 - 基础攻击速度 (百分比)"
+   },
+   "Sandbox_MartialArts_BoxingAttackSpeed_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Changes attack playback speed, including paired throws. Does not change movement or dodge speed.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊動作的播放速度, 包括雙人摔投. 不影響移動或閃避速度.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击动作的播放速度, 包括双人投摔. 不影响移动或闪避速度."
+   },
+   "Sandbox_MartialArts_BoxingStaminaDrain": {
+    "en": "Boxing - base stamina drain (percent)",
+    "ch": "拳擊 - 基礎耐力消耗 (百分比)",
+    "cn": "拳击 - 基础耐力消耗 (百分比)"
+   },
+   "Sandbox_MartialArts_BoxingStaminaDrain_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales attack stamina cost, including paired throws. Zero removes the cost; minimum stamina requirements still apply. Does not change dodge costs.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊的耐力消耗, 包括雙人摔投. 設為 0 即不消耗; 最低耐力需求仍然適用. 不影響閃避消耗.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击的耐力消耗, 包括双人投摔. 设为0则不消耗; 最低耐力要求依然有效. 不影响闪避消耗."
+   },
+   "Sandbox_MartialArts_BrawlingAttackDamage": {
+    "en": "Brawling - base attack damage (percent)",
+    "ch": "鬥毆 - 基礎攻擊傷害 (百分比)",
+    "cn": "斗殴 - 基础攻击伤害 (百分比)"
+   },
+   "Sandbox_MartialArts_BrawlingAttackDamage_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales martial arts attack damage. Does not add damage to positional Jiu-Jitsu throws.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整武術攻擊傷害. 不會增加柔術姿勢摔投的傷害.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整武术攻击伤害. 不会为柔术的姿势投摔增加伤害."
+   },
+   "Sandbox_MartialArts_BrawlingAttackSpeed": {
+    "en": "Brawling - base attack speed (percent)",
+    "ch": "鬥毆 - 基礎攻擊速度 (百分比)",
+    "cn": "斗殴 - 基础攻击速度 (百分比)"
+   },
+   "Sandbox_MartialArts_BrawlingAttackSpeed_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Changes attack playback speed, including paired throws. Does not change movement or dodge speed.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊動作的播放速度, 包括雙人摔投. 不影響移動或閃避速度.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击动作的播放速度, 包括双人投摔. 不影响移动或闪避速度."
+   },
+   "Sandbox_MartialArts_BrawlingStaminaDrain": {
+    "en": "Brawling - base stamina drain (percent)",
+    "ch": "鬥毆 - 基礎耐力消耗 (百分比)",
+    "cn": "斗殴 - 基础耐力消耗 (百分比)"
+   },
+   "Sandbox_MartialArts_BrawlingStaminaDrain_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales attack stamina cost, including paired throws. Zero removes the cost; minimum stamina requirements still apply. Does not change dodge costs.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊的耐力消耗, 包括雙人摔投. 設為 0 即不消耗; 最低耐力需求仍然適用. 不影響閃避消耗.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击的耐力消耗, 包括双人投摔. 设为0则不消耗; 最低耐力要求依然有效. 不影响闪避消耗."
+   },
+   "Sandbox_MartialArts_CombativesAttackDamage": {
+    "en": "Military Combatives - base attack damage (percent)",
+    "ch": "軍事格鬥術 - 基礎攻擊傷害 (百分比)",
+    "cn": "军事格斗术 - 基础攻击伤害 (百分比)"
+   },
+   "Sandbox_MartialArts_CombativesAttackDamage_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales martial arts attack damage. Does not add damage to positional Jiu-Jitsu throws.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整武術攻擊傷害. 不會增加柔術姿勢摔投的傷害.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整武术攻击伤害. 不会为柔术的姿势投摔增加伤害."
+   },
+   "Sandbox_MartialArts_CombativesAttackSpeed": {
+    "en": "Military Combatives - base attack speed (percent)",
+    "ch": "軍事格鬥術 - 基礎攻擊速度 (百分比)",
+    "cn": "军事格斗术 - 基础攻击速度 (百分比)"
+   },
+   "Sandbox_MartialArts_CombativesAttackSpeed_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Changes attack playback speed, including paired throws. Does not change movement or dodge speed.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊動作的播放速度, 包括雙人摔投. 不影響移動或閃避速度.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击动作的播放速度, 包括双人投摔. 不影响移动或闪避速度."
+   },
+   "Sandbox_MartialArts_CombativesStaminaDrain": {
+    "en": "Military Combatives - base stamina drain (percent)",
+    "ch": "軍事格鬥術 - 基礎耐力消耗 (百分比)",
+    "cn": "军事格斗术 - 基础耐力消耗 (百分比)"
+   },
+   "Sandbox_MartialArts_CombativesStaminaDrain_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales attack stamina cost, including paired throws. Zero removes the cost; minimum stamina requirements still apply. Does not change dodge costs.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊的耐力消耗, 包括雙人摔投. 設為 0 即不消耗; 最低耐力需求仍然適用. 不影響閃避消耗.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击的耐力消耗, 包括双人投摔. 设为0则不消耗; 最低耐力要求依然有效. 不影响闪避消耗."
+   },
+   "Sandbox_MartialArts_DamageDoors": {
+    "en": "Allow martial arts attacks to damage doors",
+    "ch": "允許武術攻擊損壞門",
+    "cn": "允许武术攻击损坏门"
+   },
+   "Sandbox_MartialArts_DamageDoors_tooltip": {
+    "en": "Off preserves the current behaviour: martial arts proxy attacks deal no door damage. On gives them 1 base door damage per hit. Does not change real weapons, pushing, windows or tree damage.",
+    "ch": "關閉時維持目前行為: 武術的代理攻擊不會對門造成傷害. 開啟後每次命中對門造成 1 點基礎傷害. 不影響真正武器、推擠、窗戶或樹木的傷害.",
+    "cn": "关闭时保持当前行为: 武术的代理攻击不会对门造成伤害. 开启后每次命中对门造成1点基础伤害. 不影响真实武器、推搡、窗户或树木的伤害."
+   },
+   "Sandbox_MartialArts_JiuJitsuAttackDamage": {
+    "en": "Jiu-Jitsu - base attack damage (percent)",
+    "ch": "柔術 - 基礎攻擊傷害 (百分比)",
+    "cn": "柔术 - 基础攻击伤害 (百分比)"
+   },
+   "Sandbox_MartialArts_JiuJitsuAttackDamage_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales martial arts attack damage. Does not add damage to positional Jiu-Jitsu throws.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整武術攻擊傷害. 不會增加柔術姿勢摔投的傷害.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整武术攻击伤害. 不会为柔术的姿势投摔增加伤害."
+   },
+   "Sandbox_MartialArts_JiuJitsuAttackSpeed": {
+    "en": "Jiu-Jitsu - base attack speed (percent)",
+    "ch": "柔術 - 基礎攻擊速度 (百分比)",
+    "cn": "柔术 - 基础攻击速度 (百分比)"
+   },
+   "Sandbox_MartialArts_JiuJitsuAttackSpeed_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Changes attack playback speed, including paired throws. Does not change movement or dodge speed.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊動作的播放速度, 包括雙人摔投. 不影響移動或閃避速度.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击动作的播放速度, 包括双人投摔. 不影响移动或闪避速度."
+   },
+   "Sandbox_MartialArts_JiuJitsuStaminaDrain": {
+    "en": "Jiu-Jitsu - base stamina drain (percent)",
+    "ch": "柔術 - 基礎耐力消耗 (百分比)",
+    "cn": "柔术 - 基础耐力消耗 (百分比)"
+   },
+   "Sandbox_MartialArts_JiuJitsuStaminaDrain_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales attack stamina cost, including paired throws. Zero removes the cost; minimum stamina requirements still apply. Does not change dodge costs.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊的耐力消耗, 包括雙人摔投. 設為 0 即不消耗; 最低耐力需求仍然適用. 不影響閃避消耗.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击的耐力消耗, 包括双人投摔. 设为0则不消耗; 最低耐力要求依然有效. 不影响闪避消耗."
+   },
+   "Sandbox_MartialArts_KarateAttackDamage": {
+    "en": "Karate - base attack damage (percent)",
+    "ch": "空手道 - 基礎攻擊傷害 (百分比)",
+    "cn": "空手道 - 基础攻击伤害 (百分比)"
+   },
+   "Sandbox_MartialArts_KarateAttackDamage_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales martial arts attack damage. Does not add damage to positional Jiu-Jitsu throws.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整武術攻擊傷害. 不會增加柔術姿勢摔投的傷害.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整武术攻击伤害. 不会为柔术的姿势投摔增加伤害."
+   },
+   "Sandbox_MartialArts_KarateAttackSpeed": {
+    "en": "Karate - base attack speed (percent)",
+    "ch": "空手道 - 基礎攻擊速度 (百分比)",
+    "cn": "空手道 - 基础攻击速度 (百分比)"
+   },
+   "Sandbox_MartialArts_KarateAttackSpeed_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Changes attack playback speed, including paired throws. Does not change movement or dodge speed.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊動作的播放速度, 包括雙人摔投. 不影響移動或閃避速度.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击动作的播放速度, 包括双人投摔. 不影响移动或闪避速度."
+   },
+   "Sandbox_MartialArts_KarateStaminaDrain": {
+    "en": "Karate - base stamina drain (percent)",
+    "ch": "空手道 - 基礎耐力消耗 (百分比)",
+    "cn": "空手道 - 基础耐力消耗 (百分比)"
+   },
+   "Sandbox_MartialArts_KarateStaminaDrain_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales attack stamina cost, including paired throws. Zero removes the cost; minimum stamina requirements still apply. Does not change dodge costs.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊的耐力消耗, 包括雙人摔投. 設為 0 即不消耗; 最低耐力需求仍然適用. 不影響閃避消耗.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击的耐力消耗, 包括双人投摔. 设为0则不消耗; 最低耐力要求依然有效. 不影响闪避消耗."
+   },
+   "Sandbox_MartialArts_MMAAttackDamage": {
+    "en": "MMA - base attack damage (percent)",
+    "ch": "綜合格鬥 - 基礎攻擊傷害 (百分比)",
+    "cn": "综合格斗 - 基础攻击伤害 (百分比)"
+   },
+   "Sandbox_MartialArts_MMAAttackDamage_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales martial arts attack damage. Does not add damage to positional Jiu-Jitsu throws.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整武術攻擊傷害. 不會增加柔術姿勢摔投的傷害.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整武术攻击伤害. 不会为柔术的姿势投摔增加伤害."
+   },
+   "Sandbox_MartialArts_MMAAttackSpeed": {
+    "en": "MMA - base attack speed (percent)",
+    "ch": "綜合格鬥 - 基礎攻擊速度 (百分比)",
+    "cn": "综合格斗 - 基础攻击速度 (百分比)"
+   },
+   "Sandbox_MartialArts_MMAAttackSpeed_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Changes attack playback speed, including paired throws. Does not change movement or dodge speed.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊動作的播放速度, 包括雙人摔投. 不影響移動或閃避速度.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击动作的播放速度, 包括双人投摔. 不影响移动或闪避速度."
+   },
+   "Sandbox_MartialArts_MMAStaminaDrain": {
+    "en": "MMA - base stamina drain (percent)",
+    "ch": "綜合格鬥 - 基礎耐力消耗 (百分比)",
+    "cn": "综合格斗 - 基础耐力消耗 (百分比)"
+   },
+   "Sandbox_MartialArts_MMAStaminaDrain_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales attack stamina cost, including paired throws. Zero removes the cost; minimum stamina requirements still apply. Does not change dodge costs.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊的耐力消耗, 包括雙人摔投. 設為 0 即不消耗; 最低耐力需求仍然適用. 不影響閃避消耗.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击的耐力消耗, 包括双人投摔. 设为0则不消耗; 最低耐力要求依然有效. 不影响闪避消耗."
+   },
+   "Sandbox_MartialArts_MuayThaiAttackDamage": {
+    "en": "Muay Thai - base attack damage (percent)",
+    "ch": "泰拳 - 基礎攻擊傷害 (百分比)",
+    "cn": "泰拳 - 基础攻击伤害 (百分比)"
+   },
+   "Sandbox_MartialArts_MuayThaiAttackDamage_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales martial arts attack damage. Does not add damage to positional Jiu-Jitsu throws.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整武術攻擊傷害. 不會增加柔術姿勢摔投的傷害.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整武术攻击伤害. 不会为柔术的姿势投摔增加伤害."
+   },
+   "Sandbox_MartialArts_MuayThaiAttackSpeed": {
+    "en": "Muay Thai - base attack speed (percent)",
+    "ch": "泰拳 - 基礎攻擊速度 (百分比)",
+    "cn": "泰拳 - 基础攻击速度 (百分比)"
+   },
+   "Sandbox_MartialArts_MuayThaiAttackSpeed_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Changes attack playback speed, including paired throws. Does not change movement or dodge speed.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊動作的播放速度, 包括雙人摔投. 不影響移動或閃避速度.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击动作的播放速度, 包括双人投摔. 不影响移动或闪避速度."
+   },
+   "Sandbox_MartialArts_MuayThaiStaminaDrain": {
+    "en": "Muay Thai - base stamina drain (percent)",
+    "ch": "泰拳 - 基礎耐力消耗 (百分比)",
+    "cn": "泰拳 - 基础耐力消耗 (百分比)"
+   },
+   "Sandbox_MartialArts_MuayThaiStaminaDrain_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales attack stamina cost, including paired throws. Zero removes the cost; minimum stamina requirements still apply. Does not change dodge costs.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊的耐力消耗, 包括雙人摔投. 設為 0 即不消耗; 最低耐力需求仍然適用. 不影響閃避消耗.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击的耐力消耗, 包括双人投摔. 设为0则不消耗; 最低耐力要求依然有效. 不影响闪避消耗."
+   },
+   "Sandbox_MartialArts_PakMeiAttackDamage": {
+    "en": "Pak Mei - base attack damage (percent)",
+    "ch": "白眉拳 - 基礎攻擊傷害 (百分比)",
+    "cn": "白眉拳 - 基础攻击伤害 (百分比)"
+   },
+   "Sandbox_MartialArts_PakMeiAttackDamage_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales martial arts attack damage. Does not add damage to positional Jiu-Jitsu throws.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整武術攻擊傷害. 不會增加柔術姿勢摔投的傷害.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整武术攻击伤害. 不会为柔术的姿势投摔增加伤害."
+   },
+   "Sandbox_MartialArts_PakMeiAttackSpeed": {
+    "en": "Pak Mei - base attack speed (percent)",
+    "ch": "白眉拳 - 基礎攻擊速度 (百分比)",
+    "cn": "白眉拳 - 基础攻击速度 (百分比)"
+   },
+   "Sandbox_MartialArts_PakMeiAttackSpeed_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Changes attack playback speed, including paired throws. Does not change movement or dodge speed.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊動作的播放速度, 包括雙人摔投. 不影響移動或閃避速度.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击动作的播放速度, 包括双人投摔. 不影响移动或闪避速度."
+   },
+   "Sandbox_MartialArts_PakMeiStaminaDrain": {
+    "en": "Pak Mei - base stamina drain (percent)",
+    "ch": "白眉拳 - 基礎耐力消耗 (百分比)",
+    "cn": "白眉拳 - 基础耐力消耗 (百分比)"
+   },
+   "Sandbox_MartialArts_PakMeiStaminaDrain_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales attack stamina cost, including paired throws. Zero removes the cost; minimum stamina requirements still apply. Does not change dodge costs.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊的耐力消耗, 包括雙人摔投. 設為 0 即不消耗; 最低耐力需求仍然適用. 不影響閃避消耗.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击的耐力消耗, 包括双人投摔. 设为0则不消耗; 最低耐力要求依然有效. 不影响闪避消耗."
+   },
+   "Sandbox_MartialArts_TaekwondoAttackDamage": {
+    "en": "Taekwondo - base attack damage (percent)",
+    "ch": "跆拳道 - 基礎攻擊傷害 (百分比)",
+    "cn": "跆拳道 - 基础攻击伤害 (百分比)"
+   },
+   "Sandbox_MartialArts_TaekwondoAttackDamage_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales martial arts attack damage. Does not add damage to positional Jiu-Jitsu throws.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整武術攻擊傷害. 不會增加柔術姿勢摔投的傷害.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整武术攻击伤害. 不会为柔术的姿势投摔增加伤害."
+   },
+   "Sandbox_MartialArts_TaekwondoAttackSpeed": {
+    "en": "Taekwondo - base attack speed (percent)",
+    "ch": "跆拳道 - 基礎攻擊速度 (百分比)",
+    "cn": "跆拳道 - 基础攻击速度 (百分比)"
+   },
+   "Sandbox_MartialArts_TaekwondoAttackSpeed_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Changes attack playback speed, including paired throws. Does not change movement or dodge speed.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊動作的播放速度, 包括雙人摔投. 不影響移動或閃避速度.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击动作的播放速度, 包括双人投摔. 不影响移动或闪避速度."
+   },
+   "Sandbox_MartialArts_TaekwondoStaminaDrain": {
+    "en": "Taekwondo - base stamina drain (percent)",
+    "ch": "跆拳道 - 基礎耐力消耗 (百分比)",
+    "cn": "跆拳道 - 基础耐力消耗 (百分比)"
+   },
+   "Sandbox_MartialArts_TaekwondoStaminaDrain_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales attack stamina cost, including paired throws. Zero removes the cost; minimum stamina requirements still apply. Does not change dodge costs.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊的耐力消耗, 包括雙人摔投. 設為 0 即不消耗; 最低耐力需求仍然適用. 不影響閃避消耗.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击的耐力消耗, 包括双人投摔. 设为0则不消耗; 最低耐力要求依然有效. 不影响闪避消耗."
+   },
+   "Sandbox_MartialArts_WrestlingAttackDamage": {
+    "en": "Wrestling - base attack damage (percent)",
+    "ch": "摔角 - 基礎攻擊傷害 (百分比)",
+    "cn": "摔跤 - 基础攻击伤害 (百分比)"
+   },
+   "Sandbox_MartialArts_WrestlingAttackDamage_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales martial arts attack damage. Does not add damage to positional Jiu-Jitsu throws.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整武術攻擊傷害. 不會增加柔術姿勢摔投的傷害.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整武术攻击伤害. 不会为柔术的姿势投摔增加伤害."
+   },
+   "Sandbox_MartialArts_WrestlingAttackSpeed": {
+    "en": "Wrestling - base attack speed (percent)",
+    "ch": "摔角 - 基礎攻擊速度 (百分比)",
+    "cn": "摔跤 - 基础攻击速度 (百分比)"
+   },
+   "Sandbox_MartialArts_WrestlingAttackSpeed_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Changes attack playback speed, including paired throws. Does not change movement or dodge speed.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊動作的播放速度, 包括雙人摔投. 不影響移動或閃避速度.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击动作的播放速度, 包括双人投摔. 不影响移动或闪避速度."
+   },
+   "Sandbox_MartialArts_WrestlingStaminaDrain": {
+    "en": "Wrestling - base stamina drain (percent)",
+    "ch": "摔角 - 基礎耐力消耗 (百分比)",
+    "cn": "摔跤 - 基础耐力消耗 (百分比)"
+   },
+   "Sandbox_MartialArts_WrestlingStaminaDrain_tooltip": {
+    "en": "100 = current balance, 50 = half, 200 = double. Scales attack stamina cost, including paired throws. Zero removes the cost; minimum stamina requirements still apply. Does not change dodge costs.",
+    "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊的耐力消耗, 包括雙人摔投. 設為 0 即不消耗; 最低耐力需求仍然適用. 不影響閃避消耗.",
+    "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击的耐力消耗, 包括双人投摔. 设为0则不消耗; 最低耐力要求依然有效. 不影响闪避消耗."
    }
   },
   "Tooltip.json": {
@@ -447558,6 +448773,51 @@
     "en": "Needs boots on to tuck into.",
     "ch": "需要穿上靴子才能把褲管塞進去.",
     "cn": "需要穿着靴子才能把裤管塞进去."
+   },
+   "Tooltip_craft_RCAirConditionerDesc": {
+    "en": "A split air conditioner, mounted high on an outside wall. Point it at a solid wall that leads straight outdoors. Needs grid power or a generator.",
+    "ch": "分離式冷氣機, 安裝在外牆高處. 請對準一面直通室外的實心牆. 需要電網供電或發電機.",
+    "cn": "分体式空调, 安装在外墙高处. 请对准一面直通室外的实心墙. 需要电网供电或发电机."
+   },
+   "Tooltip_SMA_CombativesMagazine": {
+    "en": "Learn Krav Maga. A Krav Maga-inspired game adaptation, not an authentic curriculum. Interrupt threats, create space and disengage. No pain-compliance or choke incapacitation against zombies.",
+    "ch": "學習以色列格鬥術. 這是受以色列格鬥術啟發的遊戲改編, 並非正統課程. 打斷威脅、拉開距離並脫離. 對殭屍無法使用疼痛壓制或鎖喉制伏.",
+    "cn": "学习马伽术. 这是受马伽术启发的游戏改编版本, 并非正统课程. 打断威胁、拉开距离并脱身. 对僵尸无法使用疼痛制服或锁喉制伏."
+   },
+   "Tooltip_BBP_EditLevelDown": {
+    "en": "Work on the level below. To add a basement room, use Edit Footprint and step the level down there.",
+    "ch": "改為編輯下一層. 若要新增地下室房間, 請使用「編輯佔地範圍」並在其中切換到下一層.",
+    "cn": "切换到下一层进行编辑. 若要添加地下室房间, 请使用“编辑占地范围”并在其中切换到下一层."
+   },
+   "Tooltip_BBP_EditLevelUp": {
+    "en": "Work on the level above.",
+    "ch": "改為編輯上一層.",
+    "cn": "切换到上一层进行编辑."
+   },
+   "Tooltip_BBP_NoteNeedsPaper": {
+    "en": "Needs a blank sheet of paper or an empty notebook in the inventory.",
+    "ch": "物品欄中需要有一張空白紙張或空白筆記本.",
+    "cn": "物品栏中需要有一张空白纸张或空白笔记本."
+   },
+   "Tooltip_BBP_RoomLevelDown": {
+    "en": "Draw rooms one level down. Below the ground floor is a basement: it is dug out with a shovel before anything is built in it, and it needs stairs up.",
+    "ch": "在下一層繪製房間. 地面層以下為地下室: 在其中建造任何東西前, 需先用鏟子挖開, 且需要有往上的樓梯.",
+    "cn": "在下一层绘制房间. 地面层以下为地下室: 在其中建造任何东西前, 需先用铲子挖开, 且需要有向上的楼梯."
+   },
+   "Tooltip_BBP_RoomLevelUp": {
+    "en": "Draw rooms one level up.",
+    "ch": "在上一層繪製房間.",
+    "cn": "在上一层绘制房间."
+   },
+   "Tooltip_BBP_ToggleAbove": {
+    "en": "Show or hide the floors above this basement level while you edit it. Hidden, their rooms stay as a faint outline while Rooms is on.",
+    "ch": "編輯此地下室樓層時, 顯示或隱藏其上方的樓層. 隱藏時, 若「房間」已開啟, 上方樓層的房間會以淡淡的輪廓顯示.",
+    "cn": "编辑此地下室楼层时, 显示或隐藏其上方的楼层. 隐藏时, 若“房间”已开启, 上方楼层的房间会以淡淡的轮廓显示."
+   },
+   "Tooltip_BBP_ToggleBasement": {
+    "en": "Mark where the basement lies while you edit a floor above it: a faint shade in see-through view, an outline in solid view. Needs Rooms on.",
+    "ch": "編輯地下室上方的樓層時標示地下室的位置: 透視檢視中以淡色陰影顯示, 實體檢視中以輪廓顯示. 需開啟「房間」.",
+    "cn": "编辑地下室上方的楼层时标示地下室的位置: 透视视图中以淡色阴影显示, 实体视图中以轮廓显示. 需开启“房间”."
    }
   },
   "UI.json": {
@@ -492332,114 +493592,114 @@
     "cn": "截踢 - 前手直拳 - 前手背拳"
    },
    "UI_SMA_Combo_kAxePalm": {
-    "en": "Axe Kick, Punch, Palm",
-    "ch": "下劈踢、出拳、掌擊",
-    "cn": "下劈腿、出拳、掌击"
+    "en": "Knee - high round kick",
+    "ch": "膝擊 - 高掃踢",
+    "cn": "膝击 - 高扫踢"
    },
    "UI_SMA_Combo_kDragon": {
-    "en": "Dragon Combination",
-    "ch": "龍形連段",
-    "cn": "龙形连招"
+    "en": "Rush: front kick - hand strike - punch - round kick",
+    "ch": "猛攻: 前踢 - 手擊 - 出拳 - 掃踢",
+    "cn": "猛攻: 前踢 - 手击 - 出拳 - 扫踢"
    },
    "UI_SMA_Combo_kFivePunch": {
-    "en": "Five-Punch Flurry",
-    "ch": "五拳連打",
-    "cn": "五拳连打"
+    "en": "Body round kick - high round kick",
+    "ch": "中段掃踢 - 高掃踢",
+    "cn": "中段扫踢 - 高扫踢"
    },
    "UI_SMA_Combo_kFourPunch": {
-    "en": "Four-Punch Rush",
-    "ch": "四拳猛攻",
-    "cn": "四拳猛攻"
+    "en": "Front kick - straight - finishing hand strike",
+    "ch": "前踢 - 直拳 - 終結手擊",
+    "cn": "前踢 - 直拳 - 终结手击"
    },
    "UI_SMA_Combo_kFrontPunch": {
-    "en": "Front Kick, Punch",
-    "ch": "前踢、出拳",
-    "cn": "前踢、出拳"
+    "en": "Front kick - straight",
+    "ch": "前踢 - 直拳",
+    "cn": "前踢 - 直拳"
    },
    "UI_SMA_Combo_kFrontRound": {
-    "en": "Front Kick, Roundhouse",
-    "ch": "前踢、迴旋踢",
-    "cn": "前踢、回旋踢"
+    "en": "Knee - driving punch",
+    "ch": "膝擊 - 突進拳",
+    "cn": "膝击 - 突进拳"
    },
    "UI_SMA_Combo_kHammerFrontBack": {
-    "en": "Hammer, Front Kick, Spinning Back",
-    "ch": "鎚拳、前踢、轉身後踢",
-    "cn": "锤拳、前踢、转身后踢"
+    "en": "Brazilian high kick - low sweeping kick",
+    "ch": "巴西高踢 - 低位掃腿",
+    "cn": "巴西高踢 - 低位扫腿"
    },
    "UI_SMA_Combo_kJabUpper": {
-    "en": "Jab, Uppercut",
-    "ch": "刺拳、上勾拳",
-    "cn": "刺拳、上勾拳"
+    "en": "Three-punch chain",
+    "ch": "三拳連擊",
+    "cn": "三拳连击"
    },
    "UI_SMA_Combo_kKumiteStorm2": {
-    "en": "Kumite Storm",
-    "ch": "組手風暴",
-    "cn": "组手风暴"
+    "en": "Rush: front kick - hand strike - driving punch",
+    "ch": "猛攻: 前踢 - 手擊 - 突進拳",
+    "cn": "猛攻: 前踢 - 手击 - 突进拳"
    },
    "UI_SMA_Combo_kLungeRound": {
-    "en": "Lunge, Punch, Roundhouse",
-    "ch": "突進、出拳、迴旋踢",
-    "cn": "突进、出拳、回旋踢"
+    "en": "Lead straight - high round kick",
+    "ch": "前手直拳 - 高掃踢",
+    "cn": "前手直拳 - 高扫踢"
    },
    "UI_SMA_Combo_kOneTwo": {
-    "en": "One-Two",
-    "ch": "一二連擊",
-    "cn": "一二连击"
+    "en": "Lead straight - reverse straight",
+    "ch": "前手直拳 - 後手直拳",
+    "cn": "前手直拳 - 后手直拳"
    },
    "UI_SMA_Combo_kPalmHammer": {
-    "en": "Palm and Hammer",
-    "ch": "掌擊與鎚拳",
-    "cn": "掌击与锤拳"
+    "en": "Knife-hand - driving hand strike",
+    "ch": "手刀 - 突進手擊",
+    "cn": "手刀 - 突进手击"
    },
    "UI_SMA_Combo_kPunchBack": {
-    "en": "Punch into Spinning Back Kick",
-    "ch": "出拳接轉身後踢",
-    "cn": "出拳接转身后踢"
+    "en": "Low round kick - front kick",
+    "ch": "低掃踢 - 前踢",
+    "cn": "低扫踢 - 前踢"
    },
    "UI_SMA_Combo_kPunchFront": {
-    "en": "Punch and Front Kick",
-    "ch": "出拳與前踢",
-    "cn": "出拳与前踢"
+    "en": "Two body punches",
+    "ch": "兩記腹部拳",
+    "cn": "两记腹部拳"
    },
    "UI_SMA_Combo_kPunchJump": {
-    "en": "Punches into Jumping Front Kick",
-    "ch": "連拳接跳躍前踢",
-    "cn": "连拳接跳跃前踢"
+    "en": "Straight - high kick - forward backfist",
+    "ch": "直拳 - 高踢 - 向前背拳",
+    "cn": "直拳 - 高踢 - 向前背拳"
    },
    "UI_SMA_Combo_kPunchSweep": {
-    "en": "Punch and Sweep",
-    "ch": "出拳與掃腿",
-    "cn": "出拳与扫腿"
+    "en": "Two straights - low sweeping kick",
+    "ch": "兩記直拳 - 低位掃腿",
+    "cn": "两记直拳 - 低位扫腿"
    },
    "UI_SMA_Combo_kRoundJabUpper": {
-    "en": "Roundhouse, Jab, Uppercut",
-    "ch": "迴旋踢、刺拳、上勾拳",
-    "cn": "回旋踢、刺拳、上勾拳"
+    "en": "Knee - high kick - low kick",
+    "ch": "膝擊 - 高踢 - 低踢",
+    "cn": "膝击 - 高踢 - 低踢"
    },
    "UI_SMA_Combo_kRoundSpinHook": {
-    "en": "Roundhouse, Spinning Hook",
-    "ch": "迴旋踢、轉身勾踢",
-    "cn": "回旋踢、转身勾踢"
+    "en": "Inward crescent kick - forward backfist",
+    "ch": "內擺踢 - 向前背拳",
+    "cn": "内摆踢 - 向前背拳"
    },
    "UI_SMA_Combo_kSideBack": {
-    "en": "Side Kick, Spinning Back Kick",
-    "ch": "側踢、轉身後踢",
-    "cn": "侧踢、转身后踢"
+    "en": "Elbow - sweeping hand strike",
+    "ch": "肘擊 - 橫掃手擊",
+    "cn": "肘击 - 横扫手击"
    },
    "UI_SMA_Combo_kSideHookUpper": {
-    "en": "Side, Spinning Hook, Uppercut",
-    "ch": "側踢、轉身勾踢、上勾拳",
-    "cn": "侧踢、转身勾踢、上勾拳"
+    "en": "Knee - high kick - driving hand strike",
+    "ch": "膝擊 - 高踢 - 突進手擊",
+    "cn": "膝击 - 高踢 - 突进手击"
    },
    "UI_SMA_Combo_kSideRound": {
-    "en": "Side Kick, Roundhouse",
-    "ch": "側踢、迴旋踢",
-    "cn": "侧踢、回旋踢"
+    "en": "Driving punch - front kick",
+    "ch": "突進拳 - 前踢",
+    "cn": "突进拳 - 前踢"
    },
    "UI_SMA_Combo_kTriplePunch": {
-    "en": "Triple Punch",
-    "ch": "三連拳",
-    "cn": "三连拳"
+    "en": "Lead straight - body punch",
+    "ch": "前手直拳 - 腹部拳",
+    "cn": "前手直拳 - 腹部拳"
    },
    "UI_SMA_Combo_karate0": {
     "en": "Lead straight",
@@ -492972,54 +494232,54 @@
     "cn": "前手掌击 - 前手横肘 - 扫腿"
    },
    "UI_SMA_Combo_tClinchKnees": {
-    "en": "Clinch Knees",
-    "ch": "纏抱膝擊",
-    "cn": "缠抱膝击"
+    "en": "Lead teep / Jab / Low kick",
+    "ch": "前腳正蹬 / 刺拳 / 低踢",
+    "cn": "前脚正蹬 / 刺拳 / 低踢"
    },
    "UI_SMA_Combo_tCrossElbow": {
-    "en": "Cross, Elbow",
-    "ch": "後手直拳、肘擊",
-    "cn": "后手直拳、肘击"
+    "en": "Cross / Rising elbow",
+    "ch": "後手直拳 / 上挑肘",
+    "cn": "后手直拳 / 上挑肘"
    },
    "UI_SMA_Combo_tCrossLowHigh": {
-    "en": "Cross, Low Kick, High Kick",
-    "ch": "後手直拳、低踢、高踢",
-    "cn": "后手直拳、低踢、高踢"
+    "en": "Lead teep / Cross / Low kick / Body kick",
+    "ch": "前腳正蹬 / 後手直拳 / 低踢 / 中段踢",
+    "cn": "前脚正蹬 / 后手直拳 / 低踢 / 中段踢"
    },
    "UI_SMA_Combo_tEightLimbs": {
-    "en": "Art of Eight Limbs",
-    "ch": "八肢之術",
-    "cn": "八肢之术"
+    "en": "Lead teep / Cross / Downward elbow / Rear knee / Jumping elbow",
+    "ch": "前腳正蹬 / 後手直拳 / 下砸肘 / 後膝擊 / 跳肘",
+    "cn": "前脚正蹬 / 后手直拳 / 下砸肘 / 后膝击 / 跳肘"
    },
    "UI_SMA_Combo_tElbowStorm2": {
-    "en": "Elbow Storm",
-    "ch": "肘擊風暴",
-    "cn": "肘击风暴"
+    "en": "Jab / Cross / Low kick / Turning elbow",
+    "ch": "刺拳 / 後手直拳 / 低踢 / 轉身肘",
+    "cn": "刺拳 / 后手直拳 / 低踢 / 转身肘"
    },
    "UI_SMA_Combo_tJabElbow": {
-    "en": "Jab, Elbow, Elbow",
-    "ch": "刺拳、肘擊、肘擊",
-    "cn": "刺拳、肘击、肘击"
+    "en": "Jab / Rear knee / Downward elbow",
+    "ch": "刺拳 / 後膝擊 / 下砸肘",
+    "cn": "刺拳 / 后膝击 / 下砸肘"
    },
    "UI_SMA_Combo_tJabHigh": {
-    "en": "Jab, High Kick",
-    "ch": "刺拳、高踢",
-    "cn": "刺拳、高踢"
+    "en": "Low kick / Cross / Body kick",
+    "ch": "低踢 / 後手直拳 / 中段踢",
+    "cn": "低踢 / 后手直拳 / 中段踢"
    },
    "UI_SMA_Combo_tJabSlash": {
-    "en": "Jab, Elbow",
-    "ch": "刺拳、肘擊",
-    "cn": "刺拳、肘击"
+    "en": "Jab / Cross",
+    "ch": "刺拳 / 後手直拳",
+    "cn": "刺拳 / 后手直拳"
    },
    "UI_SMA_Combo_tJumpElbow": {
-    "en": "One-Two, Jumping Elbow",
-    "ch": "一二連擊、跳肘",
-    "cn": "一二连击、跳肘"
+    "en": "Cross / Downward elbow / Rear knee / Jumping elbow",
+    "ch": "後手直拳 / 下砸肘 / 後膝擊 / 跳肘",
+    "cn": "后手直拳 / 下砸肘 / 后膝击 / 跳肘"
    },
    "UI_SMA_Combo_tKickElbow": {
-    "en": "Body Kick, Cross, Elbow",
-    "ch": "中段踢、後手直拳、肘擊",
-    "cn": "中段踢、后手直拳、肘击"
+    "en": "Low kick / Cross / Rising elbow / Rear knee",
+    "ch": "低踢 / 後手直拳 / 上挑肘 / 後膝擊",
+    "cn": "低踢 / 后手直拳 / 上挑肘 / 后膝击"
    },
    "UI_SMA_Combo_tLowHigh": {
     "en": "Low Kick, High Kick",
@@ -493027,64 +494287,64 @@
     "cn": "低踢、高踢"
    },
    "UI_SMA_Combo_tOneTwoBody": {
-    "en": "One-Two, Body Kick",
-    "ch": "一二連擊、中段踢",
-    "cn": "一二连击、中段踢"
+    "en": "Jab / Cross / Rising elbow",
+    "ch": "刺拳 / 後手直拳 / 上挑肘",
+    "cn": "刺拳 / 后手直拳 / 上挑肘"
    },
    "UI_SMA_Combo_tOneTwoKnee": {
-    "en": "One-Two, Knee",
-    "ch": "一二連擊、膝擊",
-    "cn": "一二连击、膝击"
+    "en": "Jab / Rear knee / Step knee",
+    "ch": "刺拳 / 後膝擊 / 上步膝擊",
+    "cn": "刺拳 / 后膝击 / 上步膝击"
    },
    "UI_SMA_Combo_tOneTwoLow": {
-    "en": "One-Two, Low Kick",
-    "ch": "一二連擊、低踢",
-    "cn": "一二连击、低踢"
+    "en": "Jab / Cross / Lead teep",
+    "ch": "刺拳 / 後手直拳 / 前腳正蹬",
+    "cn": "刺拳 / 后手直拳 / 前脚正蹬"
    },
    "UI_SMA_Combo_tSpinElbow": {
-    "en": "Low Kick, Spinning Elbow",
-    "ch": "低踢、轉身肘",
-    "cn": "低踢、转身肘"
+    "en": "Jab / Turning elbow / Low kick",
+    "ch": "刺拳 / 轉身肘 / 低踢",
+    "cn": "刺拳 / 转身肘 / 低踢"
    },
    "UI_SMA_Combo_tTeepBody": {
-    "en": "Teep, Body Kick",
-    "ch": "正蹬、中段踢",
-    "cn": "正蹬、中段踢"
+    "en": "Rear teep / Jab / Cross",
+    "ch": "後腳正蹬 / 刺拳 / 後手直拳",
+    "cn": "后脚正蹬 / 刺拳 / 后手直拳"
    },
    "UI_SMA_Combo_tTeepCross": {
-    "en": "Teep, Cross",
-    "ch": "正蹬、後手直拳",
-    "cn": "正蹬、后手直拳"
+    "en": "Cross / Lead teep",
+    "ch": "後手直拳 / 前腳正蹬",
+    "cn": "后手直拳 / 前脚正蹬"
    },
    "UI_SMA_Combo_tTeepElbow": {
-    "en": "Teep, Cross, Elbow",
-    "ch": "正蹬、後手直拳、肘擊",
-    "cn": "正蹬、后手直拳、肘击"
+    "en": "Cross / Downward elbow / Rear knee",
+    "ch": "後手直拳 / 下砸肘 / 後膝擊",
+    "cn": "后手直拳 / 下砸肘 / 后膝击"
    },
    "UI_SMA_Combo_tTeepElbows": {
-    "en": "Teep into Double Elbow",
-    "ch": "正蹬接雙肘",
-    "cn": "正蹬接双肘"
+    "en": "Lead teep / Cross / Rising elbow",
+    "ch": "前腳正蹬 / 後手直拳 / 上挑肘",
+    "cn": "前脚正蹬 / 后手直拳 / 上挑肘"
    },
    "UI_SMA_Combo_tTeepHigh": {
-    "en": "Teep, Cross, High Kick",
-    "ch": "正蹬、後手直拳、高踢",
-    "cn": "正蹬、后手直拳、高踢"
+    "en": "Jab / Rear knee / Downward elbow / High kick",
+    "ch": "刺拳 / 後膝擊 / 下砸肘 / 高踢",
+    "cn": "刺拳 / 后膝击 / 下砸肘 / 高踢"
    },
    "UI_SMA_Combo_tTeepLow": {
-    "en": "Teep, Low Kick",
-    "ch": "正蹬、低踢",
-    "cn": "正蹬、低踢"
+    "en": "Jab / Low kick",
+    "ch": "刺拳 / 低踢",
+    "cn": "刺拳 / 低踢"
    },
    "UI_SMA_Combo_tTeepSpin": {
-    "en": "Teep, Elbow, Spinning Elbow",
-    "ch": "正蹬、肘擊、轉身肘",
-    "cn": "正蹬、肘击、转身肘"
+    "en": "Rear teep / Cross / Rising elbow / High kick",
+    "ch": "後腳正蹬 / 後手直拳 / 上挑肘 / 高踢",
+    "cn": "后脚正蹬 / 后手直拳 / 上挑肘 / 高踢"
    },
    "UI_SMA_Combo_tTempleFury2": {
-    "en": "Temple Fury",
-    "ch": "神廟之怒",
-    "cn": "神庙之怒"
+    "en": "Jab / Cross / Low kick / Turning elbow / High kick",
+    "ch": "刺拳 / 後手直拳 / 低踢 / 轉身肘 / 高踢",
+    "cn": "刺拳 / 后手直拳 / 低踢 / 转身肘 / 高踢"
    },
    "UI_SMA_Combo_taekwondo_flow_doubleTornado": {
     "en": "Switch-kick double - Tornado kick",
@@ -493612,9 +494872,9 @@
     "cn": "跃起下压"
    },
    "UI_SMA_Guide_Common": {
-    "en": "<H2> Learn and practise <LINE> <TEXT> Close this guide and choose Read on the magazine to learn the style. Opening these pages alone does not teach it. Finish reading; interrupted reading does not grant the style. <LINE> <LINE> Martial Arts is one skill, from level 0 to 10, shared by every style. Each level raises your attack speed and damage and lowers the endurance each strike costs. Every style also has its own hidden mastery, from 0 to 5. Landing hits with a style trains the skill and that style's mastery. You begin with two combinations. Each mastery level unlocks four more, longer ones, and mastery 2, 3, 4 and 5 each unlock a special, which is a heavy attack. <LINE> <LINE> <H2> Controls <LINE> <TEXT> Keep both hands free of ordinary equipment. Aim and attack to begin. Hold attack to continue the combination; release it to finish the current strike. Release aim to cancel. Aim toward a fallen zombie and use the floor-attack control when necessary. <LINE> <LINE> Right-click the ground and choose Martial Arts, or press K, to open the Martial Arts window. Choose the style you fight with there and see each style's mastery and everything it unlocks; click an unlocked heavy attack of your active style to equip it. Default keys: Backslash cycles learned styles; R uses the equipped special; K opens the window. All of them can be rebound in Options. <LINE> <LINE> Every strike costs endurance, including misses. Moving strikes cost 12% more, and each skill level improves efficiency and stance footwork. Watch your endurance. Higher skill improves speed but does not remove fatigue or attack recovery. Specials have no timed cooldown.",
-    "ch": "<H2> 學習與練習 <LINE> <TEXT> 關閉本指南, 然後對雜誌選擇「閱讀」以學會該流派. 只翻開這些頁面並不會學會. 必須讀完; 中斷閱讀不會習得該流派. <LINE> <LINE> 武術是單一技能, 從 0 級到 10 級, 所有流派共用. 每提升一級都會提高攻擊速度與傷害, 並降低每次出招消耗的耐力. 每個流派另有各自的隱藏精通度, 從 0 到 5. 使用某個流派命中目標會同時訓練此技能與該流派的精通度. 一開始你會有兩個連段. 每提升一級精通度會再解鎖四個更長的連段, 而精通度 2、3、4、5 各會解鎖一個特殊技, 也就是重擊. <LINE> <LINE> <H2> 操作 <LINE> <TEXT> 雙手不要拿一般裝備. 瞄準並攻擊即可開始. 按住攻擊可延續連段; 放開則完成目前這一擊. 放開瞄準即可取消. 必要時瞄準倒地的殭屍並使用地面攻擊操作. <LINE> <LINE> 在地面按右鍵並選擇「武術」, 或按 K, 即可開啟武術視窗. 你可以在那裡選擇作戰流派, 檢視各流派的精通度與所有解鎖內容; 點選目前流派已解鎖的重擊即可裝備. 預設按鍵: 反斜線鍵切換已學會的流派; R 使用已裝備的特殊技; K 開啟視窗. 全部都可以在「選項」中重新設定. <LINE> <LINE> 每次出招都會消耗耐力, 揮空也一樣. 移動中出招多消耗 12%%, 而每一級技能都會提升效率與架式步法. 注意你的耐力. 技能越高速度越快, 但不會消除疲勞或攻擊後的硬直. 特殊技沒有冷卻時間.",
-    "cn": "<H2> 学习与练习 <LINE> <TEXT> 关闭本指南, 然后对杂志选择“阅读”来学会该流派. 仅仅翻开这些页面并不能学会. 必须读完; 中断阅读不会习得该流派. <LINE> <LINE> 武术是一项技能, 从0级到10级, 所有流派共享. 每提升一级都会提高攻击速度和伤害, 并降低每次出招消耗的耐力. 每个流派还有各自的隐藏精通度, 从0到5. 用某个流派命中目标会同时训练该技能和该流派的精通度. 开始时你拥有两个连招. 每提升一级精通度会再解锁四个更长的连招, 而精通度2、3、4、5各解锁一个特殊技, 即重击. <LINE> <LINE> <H2> 操作 <LINE> <TEXT> 双手不要持有普通装备. 瞄准并攻击即可开始. 按住攻击可继续连招; 松开则完成当前这一击. 松开瞄准即可取消. 必要时瞄准倒地的僵尸并使用地面攻击操作. <LINE> <LINE> 右键点击地面并选择“武术”, 或按 K, 即可打开武术窗口. 你可以在那里选择战斗所用的流派, 并查看各流派的精通度及其全部解锁内容; 点击当前流派已解锁的重击即可装备. 默认按键: 反斜杠键切换已学会的流派; R 使用已装备的特殊技; K 打开窗口. 所有按键均可在“选项”中重新绑定. <LINE> <LINE> 每次出招都会消耗耐力, 打空也一样. 移动中出招多消耗12%%, 每级技能都会提升效率和架势步法. 注意你的耐力. 技能越高速度越快, 但不会消除疲劳或攻击后摇. 特殊技没有冷却时间."
+    "en": "<H2> Learn and practise <LINE> <TEXT> Close this guide and choose Read on the magazine to learn the style. Opening these pages alone does not teach it. Finish reading; interrupted reading does not grant the style. <LINE> <LINE> Martial Arts is one skill, from level 0 to 10, shared by every style. Each level raises your attack speed and damage and lowers the endurance each strike costs. Every style also has its own hidden mastery, from 0 to 5. Landing hits with a style trains the skill and that style's mastery. You begin with two combinations. Each mastery level unlocks four more, longer ones, and mastery 2, 3, 4 and 5 each unlock a special, which is a heavy attack. <LINE> <LINE> <H2> Controls <LINE> <TEXT> Keep both hands free of ordinary equipment. Aim and attack to begin. Hold attack to continue the combination; release it to finish the current strike. Release aim to cancel. Aim toward a fallen zombie and use the floor-attack control when necessary. <LINE> <LINE> Right-click the ground and choose Martial Arts, or press K, to open the Martial Arts window. Choose the style you fight with there and see each style's mastery and everything it unlocks; click an unlocked heavy attack of your active style to equip it. Default keys: Backtick (`) cycles learned styles; R uses the equipped special; K opens the window. All of them can be rebound in Options. <LINE> <LINE> Every strike costs endurance, including misses. Moving strikes cost 12% more, and each skill level improves efficiency and stance footwork. Watch your endurance. Higher skill improves speed but does not remove fatigue or attack recovery. Specials have no timed cooldown.",
+    "ch": "<H2> 學習與練習 <LINE> <TEXT> 關閉本指南, 然後對雜誌選擇「閱讀」以學會該流派. 只翻開這些頁面並不會學會. 必須讀完; 中斷閱讀不會習得該流派. <LINE> <LINE> 武術是單一技能, 從 0 級到 10 級, 所有流派共用. 每提升一級都會提高攻擊速度與傷害, 並降低每次出招消耗的耐力. 每個流派另有各自的隱藏精通度, 從 0 到 5. 使用某個流派命中目標會同時訓練此技能與該流派的精通度. 一開始你會有兩個連段. 每提升一級精通度會再解鎖四個更長的連段, 而精通度 2、3、4、5 各會解鎖一個特殊技, 也就是重擊. <LINE> <LINE> <H2> 操作 <LINE> <TEXT> 雙手不要拿一般裝備. 瞄準並攻擊即可開始. 按住攻擊可延續連段; 放開則完成目前這一擊. 放開瞄準即可取消. 必要時瞄準倒地的殭屍並使用地面攻擊操作. <LINE> <LINE> 在地面按右鍵並選擇「武術」, 或按 K, 即可開啟武術視窗. 你可以在那裡選擇作戰流派, 檢視各流派的精通度與所有解鎖內容; 點選目前流派已解鎖的重擊即可裝備. 預設按鍵: 反引號鍵 (`)切換已學會的流派; R 使用已裝備的特殊技; K 開啟視窗. 全部都可以在「選項」中重新設定. <LINE> <LINE> 每次出招都會消耗耐力, 揮空也一樣. 移動中出招多消耗 12%%, 而每一級技能都會提升效率與架式步法. 注意你的耐力. 技能越高速度越快, 但不會消除疲勞或攻擊後的硬直. 特殊技沒有冷卻時間.",
+    "cn": "<H2> 学习与练习 <LINE> <TEXT> 关闭本指南, 然后对杂志选择“阅读”来学会该流派. 仅仅翻开这些页面并不能学会. 必须读完; 中断阅读不会习得该流派. <LINE> <LINE> 武术是一项技能, 从0级到10级, 所有流派共享. 每提升一级都会提高攻击速度和伤害, 并降低每次出招消耗的耐力. 每个流派还有各自的隐藏精通度, 从0到5. 用某个流派命中目标会同时训练该技能和该流派的精通度. 开始时你拥有两个连招. 每提升一级精通度会再解锁四个更长的连招, 而精通度2、3、4、5各解锁一个特殊技, 即重击. <LINE> <LINE> <H2> 操作 <LINE> <TEXT> 双手不要持有普通装备. 瞄准并攻击即可开始. 按住攻击可继续连招; 松开则完成当前这一击. 松开瞄准即可取消. 必要时瞄准倒地的僵尸并使用地面攻击操作. <LINE> <LINE> 右键点击地面并选择“武术”, 或按 K, 即可打开武术窗口. 你可以在那里选择战斗所用的流派, 并查看各流派的精通度及其全部解锁内容; 点击当前流派已解锁的重击即可装备. 默认按键: 反引号键 (`)切换已学会的流派; R 使用已装备的特殊技; K 打开窗口. 所有按键均可在“选项”中重新绑定. <LINE> <LINE> 每次出招都会消耗耐力, 打空也一样. 移动中出招多消耗12%%, 每级技能都会提升效率和架势步法. 注意你的耐力. 技能越高速度越快, 但不会消除疲劳或攻击后摇. 特殊技没有冷却时间."
    },
    "UI_SMA_Guide_basic": {
     "en": "Slow, ordinary strikes available to everyone. Mastery levels 1-4 add body straight, one-two, short knee and straight-hook. At mastery 5, Grab and Knee unlocks as your only heavy attack. Equip it in the Martial Arts window and use the heavy-attack control (R by default). Eight normal attack choices and one heavy at full mastery, with modest speed and damage gains. At close range, the knee and jab-knee can grab a standing zombie by the head. Use the normal shove control for emergency separation.",
@@ -494072,9 +495332,9 @@
     "cn": "飞身前踢"
    },
    "UI_SMA_Move_karate_flyingSideKick": {
-    "en": "Flying Side Kick",
-    "ch": "飛身側踢",
-    "cn": "飞身侧踢"
+    "en": "Leaping knee",
+    "ch": "躍起膝擊",
+    "cn": "跃起膝击"
    },
    "UI_SMA_Move_karate_kiaiFinale2": {
     "en": "Kiai Finale",
@@ -498655,6 +499915,887 @@
     "en": "Listen",
     "ch": "聆聽",
     "cn": "聆听"
+   },
+   "UI_MEE_LegacyVariantNotice": {
+    "en": "Moodle Effects Explained - DTEM is now a legacy migration entry.\n\nOn Build 42.20.2 and later, this variant no longer changes moodle descriptions.\nDisable it and enable the main Moodle Effects Explained mod instead.\nThe main MEE variant detects DTEM automatically and adds its compatible notes.",
+    "ch": "Moodle Effects Explained 的這個變體現已改為舊版遷移項目.\n\n在 Build 42.20.2 以後的版本, 這個變體不再修改狀態圖示說明.\n請停用它, 改為啟用 Moodle Effects Explained 主 MOD.\n主 MOD 會自動偵測對應的 MOD, 並加上相容的說明.",
+    "cn": "Moodle Effects Explained 的这个变体现已改为旧版迁移项.\n\n在 Build 42.20.2 及以后的版本, 这个变体不再修改状态图标说明.\n请停用它, 改为启用 Moodle Effects Explained 主模组.\n主模组会自动检测对应的模组, 并添加兼容说明.",
+    "_note": "DTEM 與 Expanded Moodles 兩個變體的舊版遷移公告只差變體名稱；英文錨點取 DTEM，中性值寫「這個變體」「對應的 MOD」，名稱由條件譯文補上（2026-10-24 #1016）。"
+   },
+   "UI_THL_ModOptions_AxeBranchesDropToWorld": {
+    "en": "Branches cut with axes drop on the ground",
+    "ch": "用斧頭砍下的樹枝掉在地上",
+    "cn": "用斧头砍下的树枝掉在地上"
+   },
+   "UI_THL_ModOptions_AxeBranchesDropToWorld_Tooltip": {
+    "en": "When enabled, branches cut with axes are placed on the ground instead of in the player's inventory.",
+    "ch": "啟用後, 用斧頭砍下的樹枝會放在地上, 而不是放進玩家的物品欄.",
+    "cn": "启用后, 用斧头砍下的树枝会放在地上, 而不是放进玩家的物品栏."
+   },
+   "UI_THL_ModOptions_KnifeBranchesDropToWorld": {
+    "en": "Branches cut with knives drop on the ground",
+    "ch": "用刀砍下的樹枝掉在地上",
+    "cn": "用刀砍下的树枝掉在地上"
+   },
+   "UI_THL_ModOptions_KnifeBranchesDropToWorld_Tooltip": {
+    "en": "When enabled, branches cut with knives are placed on the ground instead of in the player's inventory.",
+    "ch": "啟用後, 用刀砍下的樹枝會放在地上, 而不是放進玩家的物品欄.",
+    "cn": "启用后, 用刀砍下的树枝会放在地上, 而不是放进玩家的物品栏."
+   },
+   "UI_THL_ModOptions_Name": {
+    "en": "Trees Have Loot",
+    "ch": "樹上有東西",
+    "cn": "树上有东西"
+   },
+   "UI_TWF_QOL_SECTION_SLEEP": {
+    "en": "Sleep",
+    "ch": "睡眠",
+    "cn": "睡眠"
+   },
+   "UI_TWF_QOL_SLEEP_MODAL_ENABLE": {
+    "en": "Enhanced Sleep Confirmation",
+    "ch": "強化睡眠確認",
+    "cn": "增强睡眠确认"
+   },
+   "UI_TWF_QOL_SLEEP_MODAL_ENABLE_TT": {
+    "en": "Default: On. Centers the sleep confirmation dialog and shows a warning when worn equipment contributes to discomfort at or above the selected level. Off restores the vanilla sleep confirmation.",
+    "ch": "預設: 開啟. 將睡眠確認對話方塊置中, 並在穿戴裝備造成的不適達到或超過所選等級時顯示警告. 關閉則恢復原版的睡眠確認.",
+    "cn": "默认: 开启. 将睡眠确认对话框居中, 并在穿戴装备造成的不适达到或超过所选等级时显示警告. 关闭则恢复原版的睡眠确认."
+   },
+   "UI_TWF_QOL_SLEEP_MODAL_LEVEL_1": {
+    "en": "Level 1 (20+)",
+    "ch": "等級 1 (20+)",
+    "cn": "等级 1 (20+)"
+   },
+   "UI_TWF_QOL_SLEEP_MODAL_LEVEL_2": {
+    "en": "Level 2 (40+)",
+    "ch": "等級 2 (40+)",
+    "cn": "等级 2 (40+)"
+   },
+   "UI_TWF_QOL_SLEEP_MODAL_LEVEL_3": {
+    "en": "Level 3 (60+)",
+    "ch": "等級 3 (60+)",
+    "cn": "等级 3 (60+)"
+   },
+   "UI_TWF_QOL_SLEEP_MODAL_LEVEL_4": {
+    "en": "Level 4 (80+)",
+    "ch": "等級 4 (80+)",
+    "cn": "等级 4 (80+)"
+   },
+   "UI_TWF_QOL_SLEEP_MODAL_WARNING_LEVEL": {
+    "en": "Sleep Discomfort Warning Level",
+    "ch": "睡眠不適警告等級",
+    "cn": "睡眠不适警告等级"
+   },
+   "UI_TWF_QOL_SLEEP_MODAL_WARNING_LEVEL_TT": {
+    "en": "Default: Level 2. Show a warning only if worn gear contributes to projected sleeping discomfort at or above this level. Level 1: 20, Level 2: 40, Level 3: 60, Level 4: 80. Stress can already increase at Level 1; this setting only changes when the warning appears.",
+    "ch": "預設: 等級 2. 只有在穿戴裝備造成的預估睡眠不適達到或超過此等級時才顯示警告. 等級 1: 20, 等級 2: 40, 等級 3: 60, 等級 4: 80. 壓力在等級 1 時就可能增加; 此設定只會改變警告出現的時機.",
+    "cn": "默认: 等级 2. 仅当穿戴装备造成的预计睡眠不适达到或超过此等级时才显示警告. 等级 1: 20, 等级 2: 40, 等级 3: 60, 等级 4: 80. 压力在等级 1 时就可能增加; 此设置只会改变警告出现的时机."
+   },
+   "UI_TWF_SLEEP_STRESS_ITEMS": {
+    "en": "Uncomfortable equipment:",
+    "ch": "不舒適的裝備:",
+    "cn": "不舒适的装备:"
+   },
+   "UI_TWF_SLEEP_STRESS_LEVEL": {
+    "en": "Projected discomfort: %1 / 100 (warning at %2)",
+    "ch": "預估不適: %1 / 100 (達 %2 時警告)",
+    "cn": "预计不适: %1 / 100 (达到 %2 时警告)"
+   },
+   "UI_TWF_SLEEP_STRESS_MORE": {
+    "en": "+%1 more items",
+    "ch": "+%1 件其他物品",
+    "cn": "+%1 件其他物品"
+   },
+   "UI_TWF_SLEEP_STRESS_WARNING": {
+    "en": "Discomfort from worn gear will increase stress during sleep.",
+    "ch": "穿戴裝備造成的不適會在睡眠期間增加壓力.",
+    "cn": "穿戴装备造成的不适会在睡眠期间增加压力."
+   },
+   "UI_TWF_SLEEP_BEDTIME_FAILED": {
+    "en": "Could not put all uncomfortable gear on the floor. Sleep canceled.",
+    "ch": "無法將所有不舒適的裝備放到地上. 已取消睡眠.",
+    "cn": "无法将所有不舒适的装备放到地上. 已取消睡眠."
+   },
+   "UI_TWF_SLEEP_BEDTIME_MODE": {
+    "en": "Bedtime mode: Remove uncomfortable gear",
+    "ch": "就寢模式: 卸下不舒適的裝備",
+    "cn": "就寝模式: 卸下不舒适的装备"
+   },
+   "UI_TWF_SLEEP_BEDTIME_MODE_TT": {
+    "en": "Automatically drop uncomfortable worn items before sleep (including Favorites), then pick up and wear them after waking. Favorite status is preserved. Off by default; saved across sessions.",
+    "ch": "睡前自動丟下會造成不適的穿戴物品 (包括收藏的物品), 醒來後再撿起並穿上. 收藏狀態會保留. 預設關閉; 設定會保留到之後的遊戲.",
+    "cn": "睡前自动丢下会造成不适的穿戴物品 (包括收藏的物品), 醒来后再捡起并穿上. 收藏状态会保留. 默认关闭; 设置会保留到之后的游戏."
+   },
+   "UI_TWF_SLEEP_BEDTIME_NOT_RESTORED": {
+    "en": "Some gear could not be put back on; check the floor.",
+    "ch": "部分裝備無法穿回; 請檢查地面.",
+    "cn": "部分装备无法穿回; 请检查地面."
+   },
+   "UI_WANTED_CurrentVehicleIgnored": {
+    "en": "Current vehicle always excluded.",
+    "ch": "目前乘坐的載具一律排除.",
+    "cn": "当前乘坐的车辆始终排除."
+   },
+   "UI_WANTED_ScanVehicles": {
+    "en": "Scan Vehicles: %1",
+    "ch": "掃描載具: %1",
+    "cn": "扫描车辆: %1"
+   },
+   "UI_SMA_CombativesAdaptation": {
+    "en": "Krav Maga-inspired game adaptation",
+    "ch": "受以色列格鬥術啟發的遊戲改編",
+    "cn": "受马伽术启发的游戏改编"
+   },
+   "UI_SMA_Combo_combatives_elbow": {
+    "en": "Close elbow",
+    "ch": "近身肘",
+    "cn": "近身肘"
+   },
+   "UI_SMA_Combo_combatives_knee": {
+    "en": "Standing knee",
+    "ch": "站立膝擊",
+    "cn": "站立膝击"
+   },
+   "UI_SMA_Combo_combatives_lowKick": {
+    "en": "Low kick",
+    "ch": "低踢",
+    "cn": "低踢"
+   },
+   "UI_SMA_Combo_combatives_palm": {
+    "en": "Palm interruption",
+    "ch": "截擊掌",
+    "cn": "截击掌"
+   },
+   "UI_SMA_Combo_combatives_shortCross": {
+    "en": "Short cross",
+    "ch": "短後手直拳",
+    "cn": "短后手直拳"
+   },
+   "UI_SMA_Combo_combatives_stopKick": {
+    "en": "Stop kick",
+    "ch": "截踢",
+    "cn": "截踢"
+   },
+   "UI_SMA_Combo_jiujitsu_checkElbow": {
+    "en": "Low kick + Short elbow",
+    "ch": "低踢 + 短肘",
+    "cn": "低踢 + 短肘"
+   },
+   "UI_SMA_Combo_jiujitsu_checkPalm": {
+    "en": "Low kick + Palm entry",
+    "ch": "低踢 + 掌擊切入",
+    "cn": "低踢 + 掌击切入"
+   },
+   "UI_SMA_Combo_jiujitsu_checkPalmDown": {
+    "en": "Low kick + Palm entry + Descending elbow",
+    "ch": "低踢 + 掌擊切入 + 下砸肘",
+    "cn": "低踢 + 掌击切入 + 下砸肘"
+   },
+   "UI_SMA_Combo_jiujitsu_checkPalmTurn": {
+    "en": "Low kick + Palm entry + Turning kick",
+    "ch": "低踢 + 掌擊切入 + 轉身踢",
+    "cn": "低踢 + 掌击切入 + 转身踢"
+   },
+   "UI_SMA_Combo_jiujitsu_descendingElbow": {
+    "en": "Descending elbow",
+    "ch": "下砸肘",
+    "cn": "下砸肘"
+   },
+   "UI_SMA_Combo_jiujitsu_elbowCheck": {
+    "en": "Short elbow + Low kick",
+    "ch": "短肘 + 低踢",
+    "cn": "短肘 + 低踢"
+   },
+   "UI_SMA_Combo_jiujitsu_entry": {
+    "en": "Elbow Entry",
+    "ch": "肘擊切入",
+    "cn": "肘击切入"
+   },
+   "UI_SMA_Combo_jiujitsu_entryPalm": {
+    "en": "Elbow Entry + Palm entry",
+    "ch": "肘擊切入 + 掌擊切入",
+    "cn": "肘击切入 + 掌击切入"
+   },
+   "UI_SMA_Combo_jiujitsu_entryRiseKnee": {
+    "en": "Elbow Entry + Rising elbow + Knee entry",
+    "ch": "肘擊切入 + 上挑肘 + 膝擊切入",
+    "cn": "肘击切入 + 上挑肘 + 膝击切入"
+   },
+   "UI_SMA_Combo_jiujitsu_kneeElbow": {
+    "en": "Knee entry + Short elbow",
+    "ch": "膝擊切入 + 短肘",
+    "cn": "膝击切入 + 短肘"
+   },
+   "UI_SMA_Combo_jiujitsu_kneeEntry": {
+    "en": "Knee entry",
+    "ch": "膝擊切入",
+    "cn": "膝击切入"
+   },
+   "UI_SMA_Combo_jiujitsu_lowCheck": {
+    "en": "Low kick",
+    "ch": "低踢",
+    "cn": "低踢"
+   },
+   "UI_SMA_Combo_jiujitsu_palmDown": {
+    "en": "Palm entry + Descending elbow",
+    "ch": "掌擊切入 + 下砸肘",
+    "cn": "掌击切入 + 下砸肘"
+   },
+   "UI_SMA_Combo_jiujitsu_palmElbow": {
+    "en": "Palm entry + Short elbow",
+    "ch": "掌擊切入 + 短肘",
+    "cn": "掌击切入 + 短肘"
+   },
+   "UI_SMA_Combo_jiujitsu_palmElbowKnee": {
+    "en": "Palm entry + Short elbow + Knee entry",
+    "ch": "掌擊切入 + 短肘 + 膝擊切入",
+    "cn": "掌击切入 + 短肘 + 膝击切入"
+   },
+   "UI_SMA_Combo_jiujitsu_palmEntry": {
+    "en": "Palm entry",
+    "ch": "掌擊切入",
+    "cn": "掌击切入"
+   },
+   "UI_SMA_Combo_jiujitsu_palmKnee": {
+    "en": "Palm entry + Knee entry",
+    "ch": "掌擊切入 + 膝擊切入",
+    "cn": "掌击切入 + 膝击切入"
+   },
+   "UI_SMA_Combo_jiujitsu_riseKnee": {
+    "en": "Rising elbow + Knee entry",
+    "ch": "上挑肘 + 膝擊切入",
+    "cn": "上挑肘 + 膝击切入"
+   },
+   "UI_SMA_Combo_jiujitsu_risingElbow": {
+    "en": "Rising elbow",
+    "ch": "上挑肘",
+    "cn": "上挑肘"
+   },
+   "UI_SMA_Combo_jiujitsu_shortElbow": {
+    "en": "Short elbow",
+    "ch": "短肘",
+    "cn": "短肘"
+   },
+   "UI_SMA_Combo_jiujitsu_turnKick": {
+    "en": "Turning kick",
+    "ch": "轉身踢",
+    "cn": "转身踢"
+   },
+   "UI_SMA_Combo_jiujitsu_turnPalm": {
+    "en": "Turning kick + Palm entry",
+    "ch": "轉身踢 + 掌擊切入",
+    "cn": "转身踢 + 掌击切入"
+   },
+   "UI_SMA_Combo_pakmei_bellyPalm": {
+    "en": "Short Body Palm",
+    "ch": "短距腹部掌",
+    "cn": "短距腹部掌"
+   },
+   "UI_SMA_Combo_pakmei_bodyDouble": {
+    "en": "Body Double",
+    "ch": "腹部雙擊",
+    "cn": "腹部双击"
+   },
+   "UI_SMA_Combo_pakmei_clawElbow": {
+    "en": "Claw and Elbow",
+    "ch": "爪擊與肘擊",
+    "cn": "爪击与肘击"
+   },
+   "UI_SMA_Combo_pakmei_descendingPalm": {
+    "en": "Descending Palm",
+    "ch": "下劈掌",
+    "cn": "下劈掌"
+   },
+   "UI_SMA_Combo_pakmei_dipRise": {
+    "en": "Ducking Double Strike",
+    "ch": "下潛雙擊",
+    "cn": "下潜双击"
+   },
+   "UI_SMA_Combo_pakmei_doublePalm": {
+    "en": "Closing Palms",
+    "ch": "雙掌合擊",
+    "cn": "双掌合击"
+   },
+   "UI_SMA_Combo_pakmei_drivingFist": {
+    "en": "Driving Fist",
+    "ch": "進步衝拳",
+    "cn": "进步冲拳"
+   },
+   "UI_SMA_Combo_pakmei_fivePressure": {
+    "en": "Five-Hit Pressure",
+    "ch": "五擊壓迫",
+    "cn": "五击压迫"
+   },
+   "UI_SMA_Combo_pakmei_guardElbow": {
+    "en": "Low Kick and Palm",
+    "ch": "低踢與掌擊",
+    "cn": "低踢与掌击"
+   },
+   "UI_SMA_Combo_pakmei_headBodyThree": {
+    "en": "Head-to-Body Pressure",
+    "ch": "由頭至腹壓迫",
+    "cn": "由头至腹压迫"
+   },
+   "UI_SMA_Combo_pakmei_lowEntry": {
+    "en": "Low Entry Chain",
+    "ch": "低位切入連擊",
+    "cn": "低位切入连击"
+   },
+   "UI_SMA_Combo_pakmei_pressure": {
+    "en": "Three-Hit Pressure",
+    "ch": "三擊壓迫",
+    "cn": "三击压迫"
+   },
+   "UI_SMA_Combo_pakmei_pursuitCross": {
+    "en": "Six-Hit Pursuit",
+    "ch": "六擊追擊",
+    "cn": "六击追击"
+   },
+   "UI_SMA_Combo_pakmei_risingCross": {
+    "en": "Crouching Cross",
+    "ch": "蹲身後手直拳",
+    "cn": "蹲身后手直拳"
+   },
+   "UI_SMA_Combo_pakmei_rollingElbow": {
+    "en": "Hand-Hand-Elbow",
+    "ch": "手-手-肘",
+    "cn": "手-手-肘"
+   },
+   "UI_SMA_Combo_pakmei_shinKick": {
+    "en": "Low Shin Kick",
+    "ch": "低位脛踢",
+    "cn": "低位胫踢"
+   },
+   "UI_SMA_Combo_pakmei_shortStraight": {
+    "en": "Short Straight",
+    "ch": "短直拳",
+    "cn": "短直拳"
+   },
+   "UI_SMA_Combo_pakmei_staggerCross": {
+    "en": "Staggering Cross",
+    "ch": "破勢後手直拳",
+    "cn": "破势后手直拳"
+   },
+   "UI_SMA_Combo_pakmei_throat": {
+    "en": "Throat Strike",
+    "ch": "擊喉",
+    "cn": "击喉"
+   },
+   "UI_SMA_Combo_pakmei_throatBody": {
+    "en": "High-Low Combination",
+    "ch": "高低連段",
+    "cn": "高低连招"
+   },
+   "UI_SMA_Combo_pakmei_turningPalm": {
+    "en": "Turning Palm",
+    "ch": "轉身掌",
+    "cn": "转身掌"
+   },
+   "UI_SMA_Combo_pakmei_uppercut": {
+    "en": "Side Uppercut",
+    "ch": "側上勾拳",
+    "cn": "侧上勾拳"
+   },
+   "UI_SMA_Combo_wrestling_ankleKick": {
+    "en": "Ankle kick",
+    "ch": "踢腳踝",
+    "cn": "踢脚踝"
+   },
+   "UI_SMA_Combo_wrestling_bodyHead": {
+    "en": "Body-head hands",
+    "ch": "腹部-頭部連擊",
+    "cn": "腹部-头部连击"
+   },
+   "UI_SMA_Combo_wrestling_bodyPunch": {
+    "en": "Body straight",
+    "ch": "腹部直拳",
+    "cn": "腹部直拳"
+   },
+   "UI_SMA_Combo_wrestling_bootHead": {
+    "en": "Boot + headbutt",
+    "ch": "踹踢 + 頭槌",
+    "cn": "踹踢 + 头槌"
+   },
+   "UI_SMA_Combo_wrestling_chop": {
+    "en": "Knife-edge chop",
+    "ch": "手刀劈掌",
+    "cn": "手刀劈掌"
+   },
+   "UI_SMA_Combo_wrestling_chopHeadbutt": {
+    "en": "Chop + headbutt",
+    "ch": "劈掌 + 頭槌",
+    "cn": "劈掌 + 头槌"
+   },
+   "UI_SMA_Combo_wrestling_chopHook": {
+    "en": "Chop + hook",
+    "ch": "劈掌 + 勾拳",
+    "cn": "劈掌 + 勾拳"
+   },
+   "UI_SMA_Combo_wrestling_chopPair": {
+    "en": "Double chop",
+    "ch": "雙劈掌",
+    "cn": "双劈掌"
+   },
+   "UI_SMA_Combo_wrestling_frontKick": {
+    "en": "Front boot",
+    "ch": "正面踹踢",
+    "cn": "正面踹踢"
+   },
+   "UI_SMA_Combo_wrestling_hammer": {
+    "en": "Heavy hook",
+    "ch": "重勾拳",
+    "cn": "重勾拳"
+   },
+   "UI_SMA_Combo_wrestling_headbutt": {
+    "en": "Headbutt",
+    "ch": "頭槌",
+    "cn": "头槌"
+   },
+   "UI_SMA_Combo_wrestling_heavyChain": {
+    "en": "Heavy hand chain",
+    "ch": "重拳連擊",
+    "cn": "重拳连击"
+   },
+   "UI_SMA_Combo_wrestling_heelSweep": {
+    "en": "Heel sweep",
+    "ch": "腳跟掃腿",
+    "cn": "脚跟扫腿"
+   },
+   "UI_SMA_Combo_wrestling_highKick": {
+    "en": "High round kick",
+    "ch": "高掃踢",
+    "cn": "高扫踢"
+   },
+   "UI_SMA_Combo_wrestling_kickChop": {
+    "en": "Kick + chop",
+    "ch": "踢擊 + 劈掌",
+    "cn": "踢击 + 劈掌"
+   },
+   "UI_SMA_Combo_wrestling_knee": {
+    "en": "Hopping knee",
+    "ch": "跳步膝擊",
+    "cn": "跳步膝击"
+   },
+   "UI_SMA_Combo_wrestling_kneeHook": {
+    "en": "Knee + hook",
+    "ch": "膝擊 + 勾拳",
+    "cn": "膝击 + 勾拳"
+   },
+   "UI_SMA_Combo_wrestling_lowHigh": {
+    "en": "Low-high hands",
+    "ch": "低-高連擊",
+    "cn": "低-高连击"
+   },
+   "UI_SMA_Combo_wrestling_lowKick": {
+    "en": "Low kick",
+    "ch": "低踢",
+    "cn": "低踢"
+   },
+   "UI_SMA_Combo_wrestling_lowPalm": {
+    "en": "Low palm",
+    "ch": "低位掌擊",
+    "cn": "低位掌击"
+   },
+   "UI_SMA_Combo_wrestling_lowSweep": {
+    "en": "Low sweep",
+    "ch": "低掃腿",
+    "cn": "低扫腿"
+   },
+   "UI_SMA_Combo_wrestling_palm": {
+    "en": "Overhand chop",
+    "ch": "過頂劈掌",
+    "cn": "过顶劈掌"
+   },
+   "UI_SMA_Combo_wrestling_risingHands": {
+    "en": "Rising strike",
+    "ch": "上挑擊",
+    "cn": "上挑击"
+   },
+   "UI_SMA_JeanSpecial_jeanFlyingKick": {
+    "en": "Flying side kick",
+    "ch": "飛身側踢",
+    "cn": "飞身侧踢"
+   },
+   "UI_SMA_JeanSpecial_karateChain": {
+    "en": "Five-stage Jean rush",
+    "ch": "Jean 五段猛攻",
+    "cn": "Jean 五段猛攻"
+   },
+   "UI_SMA_JeanSpecial_lungePunch": {
+    "en": "Driving reverse punch",
+    "ch": "突進逆突",
+    "cn": "突进逆突"
+   },
+   "UI_SMA_JeanSpecial_risingStrike": {
+    "en": "Double jumping knee",
+    "ch": "雙跳膝",
+    "cn": "双跳膝"
+   },
+   "UI_SMA_JeanSpecial_sideKick": {
+    "en": "Forward-directed side kick",
+    "ch": "正前方側踢",
+    "cn": "正前方侧踢"
+   },
+   "UI_SMA_JiuJitsuDescription": {
+    "en": "Control an arm, break balance, throw and disengage. The throw causes a knockdown, not health damage. Mastery lowers its stamina cost. Space or Esc releases the hold.",
+    "ch": "控制手臂、破壞平衡、摔投後脫離. 摔投會擊倒目標, 但不會造成生命傷害. 精通度會降低其耐力消耗. 按空白鍵或 Esc 可解除擒抱.",
+    "cn": "控制手臂、破坏平衡、投摔后脱身. 投摔会将目标击倒, 但不会造成生命值伤害. 精通度会降低其耐力消耗. 按空格键或 Esc 可解除擒抱."
+   },
+   "UI_SMA_JiuJitsuStamina": {
+    "en": "Throw stamina: -%1%%",
+    "ch": "摔投耐力: -%1%%",
+    "cn": "投摔耐力: -%1%%"
+   },
+   "UI_SMA_JiuJitsuTarget": {
+    "en": "Move close in front of an upright zombie. Both fighters need clear ground.",
+    "ch": "靠近一隻站立殭屍的正前方. 雙方腳下都需要淨空的地面.",
+    "cn": "移动到一只站立僵尸的正前方近处. 双方脚下都需要空旷的地面."
+   },
+   "UI_SMA_Move_jiujitsu_elbowDrive": {
+    "en": "Driving elbow",
+    "ch": "頂肘",
+    "cn": "顶肘"
+   },
+   "UI_SMA_Move_jiujitsu_forwardThrow": {
+    "en": "Arm-Control Takedown",
+    "ch": "控臂摔",
+    "cn": "控臂摔"
+   },
+   "UI_SMA_Move_jiujitsu_scissorThrow": {
+    "en": "Side-control takedown",
+    "ch": "側控摔",
+    "cn": "侧控摔"
+   },
+   "UI_SMA_Move_jiujitsu_turnoverThrow": {
+    "en": "Turnover takedown",
+    "ch": "翻身摔",
+    "cn": "翻身摔"
+   },
+   "UI_SMA_Move_karate_floorAttack": {
+    "en": "Diving ground punch",
+    "ch": "俯衝地面拳",
+    "cn": "俯冲地面拳"
+   },
+   "UI_SMA_Move_karate_jeanFlyingKick": {
+    "en": "Flying side kick",
+    "ch": "飛身側踢",
+    "cn": "飞身侧踢"
+   },
+   "UI_SMA_Move_karate_jean_B1": {
+    "en": "Lead body punch",
+    "ch": "前手腹部拳",
+    "cn": "前手腹部拳"
+   },
+   "UI_SMA_Move_karate_jean_B2": {
+    "en": "Rear body punch",
+    "ch": "後手腹部拳",
+    "cn": "后手腹部拳"
+   },
+   "UI_SMA_Move_karate_jean_C1": {
+    "en": "Knife-hand",
+    "ch": "手刀",
+    "cn": "手刀"
+   },
+   "UI_SMA_Move_karate_jean_C2": {
+    "en": "Driving knife-hand",
+    "ch": "突進手刀",
+    "cn": "突进手刀"
+   },
+   "UI_SMA_Move_karate_jean_D1": {
+    "en": "Forward kick",
+    "ch": "向前踢",
+    "cn": "向前踢"
+   },
+   "UI_SMA_Move_karate_jean_D2": {
+    "en": "Lead straight",
+    "ch": "前手直拳",
+    "cn": "前手直拳"
+   },
+   "UI_SMA_Move_karate_jean_D3": {
+    "en": "Reverse straight",
+    "ch": "後手直拳",
+    "cn": "后手直拳"
+   },
+   "UI_SMA_Move_karate_jean_D4": {
+    "en": "High kick",
+    "ch": "高踢",
+    "cn": "高踢"
+   },
+   "UI_SMA_Move_karate_jean_D5": {
+    "en": "Finishing hand strike",
+    "ch": "終結手擊",
+    "cn": "终结手击"
+   },
+   "UI_SMA_Move_karate_jean_E1": {
+    "en": "Driving elbow",
+    "ch": "頂肘",
+    "cn": "顶肘"
+   },
+   "UI_SMA_Move_karate_jean_E2": {
+    "en": "Sweeping hand strike",
+    "ch": "橫掃手擊",
+    "cn": "横扫手击"
+   },
+   "UI_SMA_Move_karate_jean_F1": {
+    "en": "Front kick",
+    "ch": "前踢",
+    "cn": "前踢"
+   },
+   "UI_SMA_Move_karate_jean_F2": {
+    "en": "Driving straight",
+    "ch": "突進直拳",
+    "cn": "突进直拳"
+   },
+   "UI_SMA_Move_karate_jean_F3": {
+    "en": "Finishing hand strike",
+    "ch": "終結手擊",
+    "cn": "终结手击"
+   },
+   "UI_SMA_Move_karate_jean_I1": {
+    "en": "Inward crescent kick",
+    "ch": "內擺踢",
+    "cn": "内摆踢"
+   },
+   "UI_SMA_Move_karate_jean_I2": {
+    "en": "Forward backfist",
+    "ch": "向前背拳",
+    "cn": "向前背拳"
+   },
+   "UI_SMA_Move_karate_jean_L1": {
+    "en": "Low round kick",
+    "ch": "低掃踢",
+    "cn": "低扫踢"
+   },
+   "UI_SMA_Move_karate_jean_L2": {
+    "en": "Front kick",
+    "ch": "前踢",
+    "cn": "前踢"
+   },
+   "UI_SMA_Move_karate_jean_M1": {
+    "en": "Body round kick",
+    "ch": "中段掃踢",
+    "cn": "中段扫踢"
+   },
+   "UI_SMA_Move_karate_jean_M2": {
+    "en": "High round kick",
+    "ch": "高掃踢",
+    "cn": "高扫踢"
+   },
+   "UI_SMA_Move_karate_jean_N1": {
+    "en": "Rising knee",
+    "ch": "上頂膝",
+    "cn": "上顶膝"
+   },
+   "UI_SMA_Move_karate_jean_N2": {
+    "en": "High round kick",
+    "ch": "高掃踢",
+    "cn": "高扫踢"
+   },
+   "UI_SMA_Move_karate_jean_N3K": {
+    "en": "Low kick",
+    "ch": "低踢",
+    "cn": "低踢"
+   },
+   "UI_SMA_Move_karate_jean_N3P": {
+    "en": "Driving hand strike",
+    "ch": "突進手擊",
+    "cn": "突进手击"
+   },
+   "UI_SMA_Move_karate_jean_NP": {
+    "en": "Rising straight",
+    "ch": "上衝直拳",
+    "cn": "上冲直拳"
+   },
+   "UI_SMA_Move_karate_jean_P1": {
+    "en": "Lead straight",
+    "ch": "前手直拳",
+    "cn": "前手直拳"
+   },
+   "UI_SMA_Move_karate_jean_P2": {
+    "en": "Reverse straight",
+    "ch": "後手直拳",
+    "cn": "后手直拳"
+   },
+   "UI_SMA_Move_karate_jean_PB": {
+    "en": "Body punch",
+    "ch": "腹部拳",
+    "cn": "腹部拳"
+   },
+   "UI_SMA_Move_karate_jean_PF": {
+    "en": "Forward backfist",
+    "ch": "向前背拳",
+    "cn": "向前背拳"
+   },
+   "UI_SMA_Move_karate_jean_PH": {
+    "en": "Finishing hook",
+    "ch": "終結勾拳",
+    "cn": "终结勾拳"
+   },
+   "UI_SMA_Move_karate_jean_PK": {
+    "en": "High round kick",
+    "ch": "高掃踢",
+    "cn": "高扫踢"
+   },
+   "UI_SMA_Move_karate_jean_PL": {
+    "en": "Low sweeping kick",
+    "ch": "低位掃腿",
+    "cn": "低位扫腿"
+   },
+   "UI_SMA_Move_karate_jean_POWER": {
+    "en": "Deep lunge punch",
+    "ch": "大步突進拳",
+    "cn": "大步突进拳"
+   },
+   "UI_SMA_Move_karate_jean_Q1": {
+    "en": "Driving punch",
+    "ch": "突進拳",
+    "cn": "突进拳"
+   },
+   "UI_SMA_Move_karate_jean_Q2": {
+    "en": "Front kick",
+    "ch": "前踢",
+    "cn": "前踢"
+   },
+   "UI_SMA_Move_karate_jean_SIDE": {
+    "en": "Forward side kick",
+    "ch": "向前側踢",
+    "cn": "向前侧踢"
+   },
+   "UI_SMA_Move_karate_jean_Z1": {
+    "en": "Brazilian high kick",
+    "ch": "巴西高踢",
+    "cn": "巴西高踢"
+   },
+   "UI_SMA_Move_karate_jean_Z2": {
+    "en": "Low sweeping kick",
+    "ch": "低位掃腿",
+    "cn": "低位扫腿"
+   },
+   "UI_SMA_Move_pakmei_clawFlurry": {
+    "en": "Claw Flurry",
+    "ch": "爪擊連打",
+    "cn": "爪击连打"
+   },
+   "UI_SMA_Move_pakmei_counter": {
+    "en": "Evasive Counter",
+    "ch": "閃避反擊",
+    "cn": "闪避反击"
+   },
+   "UI_SMA_Move_pakmei_palm": {
+    "en": "Advancing Palms",
+    "ch": "進步雙掌",
+    "cn": "进步双掌"
+   },
+   "UI_SMA_Move_pakmei_sweep": {
+    "en": "Low Sweep",
+    "ch": "低掃腿",
+    "cn": "低扫腿"
+   },
+   "UI_SMA_PakMeiClawFlurryDesc": {
+    "en": "Two rapid claw strikes at close range. Requires mastery 5 and at least 30% endurance.",
+    "ch": "在近距離快速打出兩記爪擊. 需要精通度 5, 且至少有 30%% 耐力.",
+    "cn": "在近距离快速打出两记爪击. 需要精通度5, 且至少有30%%耐力."
+   },
+   "UI_SMA_PakMeiCounterDesc": {
+    "en": "Evade an incoming attack without taking damage, then counter the same enemy within 0.55 seconds. Face the enemy and return to striking range. No cooldown or invulnerability.",
+    "ch": "閃避來襲的攻擊且不受傷害, 然後在 0.55 秒內反擊同一名敵人. 需面向敵人並回到打擊距離. 沒有冷卻時間, 也沒有無敵效果.",
+    "cn": "闪避来袭的攻击且不受伤害, 然后在0.55秒内反击同一个敌人. 需面向敌人并回到打击距离. 没有冷却时间, 也没有无敌效果."
+   },
+   "UI_SMA_PakMeiCounterReady": {
+    "en": "Counter ready: close in!",
+    "ch": "可以反擊: 快靠近!",
+    "cn": "反击就绪: 快靠近!"
+   },
+   "UI_SMA_PakMeiPalmDesc": {
+    "en": "Two palm strikes from your current position. Requires a close target and at least 15% endurance.",
+    "ch": "從目前位置打出兩記掌擊. 需要近距離目標, 且至少有 15%% 耐力.",
+    "cn": "从当前位置打出两记掌击. 需要近距离目标, 且至少有15%%耐力."
+   },
+   "UI_SMA_PakMeiSweepDesc": {
+    "en": "A committed low sweep against a standing enemy. Requires at least 25% endurance.",
+    "ch": "對站立的敵人全力施展低掃腿. 至少需要 25%% 耐力.",
+    "cn": "对站立的敌人全力施展低扫腿. 至少需要25%%耐力."
+   },
+   "UI_SMA_StyleDesc_pakmei": {
+    "en": "Explosive close-range kung fu: compact hand strikes, palms, sweeps and timed evasive counters.",
+    "ch": "爆發性的近距離功夫: 緊湊的手部打擊、掌擊、掃腿與看準時機的閃避反擊.",
+    "cn": "爆发性的近距离功夫: 紧凑的手部打击、掌击、扫腿以及把握时机的闪避反击."
+   },
+   "UI_SMA_WR_Identity": {
+    "en": "Clinches, slams and a ground hammerfist. Aim at a downed target to strike; committed attacks leave you exposed.",
+    "ch": "纏抱、摔擊與地面鎚拳. 瞄準倒地目標即可攻擊; 全力出招會讓你露出破綻.",
+    "cn": "缠抱、摔击与地面锤拳. 瞄准倒地目标即可攻击; 全力出招会让你露出破绽."
+   },
+   "UI_SMA_WR_Space": {
+    "en": "Throw unavailable: need open-air, level space and an upright target. Use a standing strike.",
+    "ch": "無法摔投: 需要露天平坦的空間與站立的目標. 請改用站立打擊.",
+    "cn": "无法投摔: 需要露天平坦的空间和站立的目标. 请改用站立打击."
+   },
+   "UI_SMA_WR_Target": {
+    "en": "Face an upright zombie at close range. Standing strikes remain available.",
+    "ch": "在近距離面向一隻站立的殭屍. 仍可使用站立打擊.",
+    "cn": "在近距离面对一只站立的僵尸. 仍可使用站立打击."
+   },
+   "UI_SMA_WR_bodylockThrow": {
+    "en": "Scoop powerslam (16%)",
+    "ch": "抱起力量摔 (16%%)",
+    "cn": "抱起力量摔 (16%%)"
+   },
+   "UI_SMA_WR_bodylockThrow_Help": {
+    "en": "Costs 16% stamina on commitment; requires at least 24%. Up to 2.33s rooted and vulnerable. Face one upright zombie at close range, in open-air level space with room for both bodies. Melee/shove cancels; damage, interruption, death or disconnect releases the hold. Cancellation does not refund stamina. Damage lands only at the source slam. Standing attacks remain usable when a throw is unavailable.",
+    "ch": "出招時消耗 16%% 耐力; 至少需要 24%% 耐力. 最多 2.33 秒無法移動且容易受到攻擊. 需在近距離面向一隻站立的殭屍, 並位於露天、平坦且足以容納雙方身體的空間. 近戰/推擠會取消; 受到傷害、被打斷、死亡或斷線會解除擒抱. 取消不會退還耐力. 傷害只會在原始摔擊動作的落地瞬間造成. 無法摔投時仍可使用站立攻擊.",
+    "cn": "出招时消耗16%%耐力; 至少需要24%%耐力. 最多2.33秒无法移动且易受攻击. 需在近距离面对一只站立的僵尸, 并处于露天、平坦且能容纳双方身体的空间. 近战/推搡会取消; 受到伤害、被打断、死亡或断线会解除擒抱. 取消不会返还耐力. 伤害只会在原始摔击动作的落地瞬间造成. 无法投摔时仍可使用站立攻击."
+   },
+   "UI_SMA_WR_overheadSlam": {
+    "en": "Overhead slam (12%)",
+    "ch": "過頂摔 (12%%)",
+    "cn": "过顶摔 (12%%)"
+   },
+   "UI_SMA_WR_overheadSlam_Help": {
+    "en": "Costs 12% stamina on commitment; requires at least 20%. Up to 2.53s rooted and vulnerable. Face one upright zombie at close range, in open-air level space with room for both bodies. Melee/shove cancels; damage, interruption, death or disconnect releases the hold. Cancellation does not refund stamina. Damage lands only at the source slam. Standing attacks remain usable when a throw is unavailable.",
+    "ch": "出招時消耗 12%% 耐力; 至少需要 20%% 耐力. 最多 2.53 秒無法移動且容易受到攻擊. 需在近距離面向一隻站立的殭屍, 並位於露天、平坦且足以容納雙方身體的空間. 近戰/推擠會取消; 受到傷害、被打斷、死亡或斷線會解除擒抱. 取消不會退還耐力. 傷害只會在原始摔擊動作的落地瞬間造成. 無法摔投時仍可使用站立攻擊.",
+    "cn": "出招时消耗12%%耐力; 至少需要20%%耐力. 最多2.53秒无法移动且易受攻击. 需在近距离面对一只站立的僵尸, 并处于露天、平坦且能容纳双方身体的空间. 近战/推搡会取消; 受到伤害、被打断、死亡或断线会解除擒抱. 取消不会返还耐力. 伤害只会在原始摔击动作的落地瞬间造成. 无法投摔时仍可使用站立攻击."
+   },
+   "UI_SMA_WR_risingHands": {
+    "en": "Rising strike",
+    "ch": "上挑擊",
+    "cn": "上挑击"
+   },
+   "UI_SMA_WR_risingHands_Help": {
+    "en": "A powerful close-range rising strike. Requires 20% stamina; high attack endurance cost. No clinch target needed. Includes the full recovery and leaves you vulnerable to interruption.",
+    "ch": "強力的近距離上挑擊. 需要 20%% 耐力; 攻擊耐力消耗高. 不需要纏抱目標. 包含完整的收招時間, 期間容易被打斷.",
+    "cn": "强力的近距离上挑击. 需要20%%耐力; 攻击耐力消耗高. 无需缠抱目标. 包含完整的收招时间, 期间容易被打断."
+   },
+   "UI_SMA_WR_screwPiledriver": {
+    "en": "Screw piledriver (24%)",
+    "ch": "螺旋打樁摔 (24%%)",
+    "cn": "螺旋打桩摔 (24%%)"
+   },
+   "UI_SMA_WR_screwPiledriver_Help": {
+    "en": "Costs 24% stamina on commitment; requires at least 32%. Up to 3.67s rooted and vulnerable. Face one upright zombie at close range, in open-air level space with room for both bodies. Melee/shove cancels; damage, interruption, death or disconnect releases the hold. Cancellation does not refund stamina. Damage lands only at the source slam. Standing attacks remain usable when a throw is unavailable.",
+    "ch": "出招時消耗 24%% 耐力; 至少需要 32%% 耐力. 最多 3.67 秒無法移動且容易受到攻擊. 需在近距離面向一隻站立的殭屍, 並位於露天、平坦且足以容納雙方身體的空間. 近戰/推擠會取消; 受到傷害、被打斷、死亡或斷線會解除擒抱. 取消不會退還耐力. 傷害只會在原始摔擊動作的落地瞬間造成. 無法摔投時仍可使用站立攻擊.",
+    "cn": "出招时消耗24%%耐力; 至少需要32%%耐力. 最多3.67秒无法移动且易受攻击. 需在近距离面对一只站立的僵尸, 并处于露天、平坦且能容纳双方身体的空间. 近战/推搡会取消; 受到伤害、被打断、死亡或断线会解除擒抱. 取消不会返还耐力. 伤害只会在原始摔击动作的落地瞬间造成. 无法投摔时仍可使用站立攻击."
+   },
+   "UI_SMA_combatives": {
+    "en": "Krav Maga",
+    "ch": "以色列格鬥術",
+    "cn": "马伽术"
+   },
+   "UI_SMA_jiujitsu": {
+    "en": "Jiu-Jitsu",
+    "ch": "柔術",
+    "cn": "柔术"
+   },
+   "UI_SMA_pakmei": {
+    "en": "Pak Mei",
+    "ch": "白眉拳",
+    "cn": "白眉拳"
+   },
+   "UI_SMA_wrestling": {
+    "en": "Wrestling",
+    "ch": "摔角",
+    "cn": "摔跤"
    }
   },
   "MakeUp.json": {
