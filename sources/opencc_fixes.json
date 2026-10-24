@@ -1447,14 +1447,6 @@
       "ch_value": "5c5f882caf9a74a9",
       "reason": "「藥物交互作用」是台灣醫藥標準術語（衛福部藥品仿單與健保用藥指引通用），陸用語才作「相互作用」；本 pattern 針對的是「交互」誤用情形，此處為誤中"
     },
-    "IG_UI.json|IGUI_BookAiming5_Pg4": {
-      "patterns": [
-        "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
-        "窗(\\s*)口"
-      ],
-      "reason": "「窗口」指實體窗戶而非 UI 視窗；「打開」亦為實體開窗動作。",
-      "ch_value": "be41c756210864a5"
-    },
     "IG_UI.json|IGUI_BookCarpentry5_Pg15": {
       "patterns": [
         "(?<![演計運估換推心珠])算法"
@@ -1583,14 +1575,6 @@
       ],
       "reason": "「排泄物」是固定生理學詞彙，不能改成「排洩物」。",
       "ch_value": "a067b88846beea9b"
-    },
-    "IG_UI.json|IGUI_BookAiming5_Pg7": {
-      "patterns": [
-        "(?<!使)用戶(?![端名])",
-        "用(\\s*)戶"
-      ],
-      "reason": "命中來自跨詞界「衣物用＋戶外」；原句是用戶外防味噴霧處理衣物，並非 user／用戶，兩條規則套用都會破壞句子。",
-      "ch_value": "47ad61a2b842f504"
     },
     "IG_UI.json|IGUI_BookCooking4_Pg7": {
       "patterns": [
@@ -1771,22 +1755,6 @@
       ],
       "reason": "「登錄檔」是 Windows Registry 的台灣標準譯名，不是登入動作；保留並豁免兩個登錄 pattern。",
       "ch_value": "cc507d8994d3568e"
-    },
-    "IG_UI.json|IGUI_BookAiming1_Pg7": {
-      "patterns": [
-        "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
-        "窗(\\s*)口"
-      ],
-      "reason": "「靜止窗口大概能維持兩秒」是射擊呼吸中的時間窗口，不是 UI 視窗或實體窗戶；A/E 兩個模式在本鍵均為語意假陽性。",
-      "ch_value": "3da9dfbc9b276a22"
-    },
-    "IG_UI.json|IGUI_BookAiming3_Pg6": {
-      "patterns": [
-        "(?<![從爬破臨絡務售進])(?<!爬出)(?<!跳出)(?<!翻出)(?<!逃出)(?<!望出)窗口(?![外邊沿臺框戶])",
-        "窗(\\s*)口"
-      ],
-      "reason": "「時間窗口抓準了」是可射擊時機的時間窗口，不是 UI 視窗或實體窗戶；A/E 兩個模式均須鍵級豁免。",
-      "ch_value": "0430943d1eae1805"
     },
     "IG_UI.json|IGUI_BookForaging3_Pg3": {
       "patterns": [
