@@ -220,13 +220,25 @@ end
 function Modal:onJoypadDirUp() self:scrollBy(-40) end
 function Modal:onJoypadDirDown() self:scrollBy(40) end
 
+-- In game: right side of the player's screen, left of the moodle column (x = screen width - (10 + icon size),
+-- UIManager.java:417, MoodlesUI.java:53), vertically centred like vanilla admin messages (ISAdminMessage.lua:147).
+-- The notice opens right after spawning and must not cover the character in the middle; ISModalRichText:update
+-- keeps the window vertically centred while it grows to fit the text. Main menu (no player): screen centre.
+local function origin(w, h, player)
+    local core = getCore()
+    if not player then return core:getScreenWidth() / 2 - w / 2, core:getScreenHeight() / 2 - h / 2 end
+    local left, moodles = getPlayerScreenLeft(player), UIManager.getMoodleUI(player)
+    local right = left + getPlayerScreenWidth(player) - 10 - (moodles and moodles:getWidth() or 32) - 16
+    return math.max(left + 20, right - w), getPlayerScreenTop(player) + getPlayerScreenHeight(player) / 2 - h / 2
+end
+
 local function open(kind, text, onclick)
     local core = getCore()
     local w = math.min(kind == "list" and 560 or 480, core:getScreenWidth() - 40)
     local h = 160
     local player = getSpecificPlayer(0) and 0 or nil
-    local m = Modal:new(core:getScreenWidth() / 2 - w / 2, core:getScreenHeight() / 2 - h / 2, w, h, text,
-        kind == "notice", nil, onclick, player)
+    local x, y = origin(w, h, player)
+    local m = Modal:new(x, y, w, h, text, kind == "notice", nil, onclick, player)
     m.yesText, m.noText = "IGUI_CatModLang_ViewList", "IGUI_CatModLang_Close"
     m:initialise()
     if m.no then
