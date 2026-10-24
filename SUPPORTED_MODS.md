@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1431 個 Workshop 模組**（2052 個 mod ID）；另 **13 個已下架**（翻譯保留，見文末）。
+共支援 **1429 個 Workshop 模組**（2050 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -743,12 +743,10 @@
 | [Ash's King County Sheriff's Deputy Cavalry Hat [Redux] B42.20](https://steamcommunity.com/sharedfiles/filedetails/?id=3665928226) | — | — | `KingCountyCavalryHatRedux1KTexture`, `KingCountyCavalryHatReduxTwo` | 3 | — | — |
 | [[B42 SP/MP]Dawn Town〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3666180085) | 拂曉鎮 | 建築密集擁擠的城鎮地圖，災變後由幫派、邪教與倖存者陣營割據各街區。 | `dawn_town` | 2 | — | — |
 | [Buildable Water Pump](https://steamcommunity.com/sharedfiles/filedetails/?id=3666938579) | — | — | `BuildablePump` | 24 | — | — |
-| [[B42.20] Bag Upgrade Plus](https://steamcommunity.com/sharedfiles/filedetails/?id=3668094025) | — | — | `BagUpgradePlusUpdated` | 55 | — | — |
 | [Renewable Spare Engine Parts](https://steamcommunity.com/sharedfiles/filedetails/?id=3668110789) | 可再生備用引擎零件 | 提供製作備用引擎零件的配方，讓車輛維修資源可再生。 | `SeawhiteRenewableSpareEngineParts` | ? | — | — |
 | [Legendary Katana Wakizashi](https://steamcommunity.com/sharedfiles/filedetails/?id=3668370011) | — | — | `LKB42` | 108 | — | — |
 | [Forged by Combat](https://steamcommunity.com/sharedfiles/filedetails/?id=3668844554) | 戰鬥淬煉 | 依近戰武器擊殺數累積戰鬥進程，逐級提供傷害、暴擊與攻速加成。 | `ForgedByCombat` | 24 | — | — |
 | [Realistic Environmental Vehicle Decay [B41/B42][SP/MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3669145719) | — | — | `EnvironmentalVehicleDecay` | 105 | — | — |
-| [[B42.20] Bag Upgrade Plus Realistic](https://steamcommunity.com/sharedfiles/filedetails/?id=3669286020) | — | — | `BagUpgradePlusRealistic` | 55 | — | — |
 | [URIETA SHOP](https://steamcommunity.com/sharedfiles/filedetails/?id=3669368320) | — | — | `UrietaShop` | 419 | — | — |
 | [Legendary Professions and Traits](https://steamcommunity.com/sharedfiles/filedetails/?id=3669469283) | 傳奇職業與特質 | 新增刀術大師、鍛刀師等多種職業與傳奇特質供角色創建選擇。 | `LPTB42` | 51 | — | — |
 | [[FIXED] Proximity Inventory B42.19+ [SP/MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3669550831) | — | — | `ProximityInventory` | 19 | — | — |
@@ -1446,7 +1444,7 @@
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
-## 已下架模組（13 個，翻譯保留）
+## 已下架模組（15 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
@@ -1461,6 +1459,8 @@
 | [[42] Vanilla Firearms Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3611718925) | 原版槍械擴充 | 擴充原版風格槍械與彈藥，新增多款步槍、霰彈槍與各式彈匣。 | `VFExpansion2Reduxb42`, `VFExpansion3Reduxb42`, `VFExpansionReduxb42` | 457 | ⚠️ ≥24 | — | 2026-08-01 |
 | [3651494414](https://steamcommunity.com/sharedfiles/filedetails/?id=3651494414) | DayZ 槍械 | 新增 DayZ 風格槍械相關內容。 | `DayZ_Guns_B42` | ? | — | — | 2026-07-17 |
 | [Swim Skill](https://steamcommunity.com/sharedfiles/filedetails/?id=3654513156) | — | — | `swim_skill` | 13 | — | — | 2026-10-17 |
+| [[B42.20] Bag Upgrade Plus](https://steamcommunity.com/sharedfiles/filedetails/?id=3668094025) | — | — | `BagUpgradePlusUpdated` | 55 | — | — | 2026-10-24 |
+| [[B42.20] Bag Upgrade Plus Realistic](https://steamcommunity.com/sharedfiles/filedetails/?id=3669286020) | — | — | `BagUpgradePlusRealistic` | 55 | — | — | 2026-10-24 |
 | [PH's Self Care](https://steamcommunity.com/sharedfiles/filedetails/?id=3684225110) | — | — | `PHSelfCare` | 31 | — | — | 2026-10-01 |
 | [[PZCh] Growing Up - Kid mod challenge](https://steamcommunity.com/sharedfiles/filedetails/?id=3701972216) | — | — | `GrowingUp` | 16 | — | — | 2026-10-01 |
 | [Dildo GTA Weapon [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3777681298) | — | — | `DildoFunnyWeapon` | 105 | — | — | 2026-10-20 |
