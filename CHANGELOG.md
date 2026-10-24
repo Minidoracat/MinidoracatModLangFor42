@@ -4,12 +4,18 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
-## [Unreleased]
+## [42.21.0-1.60.1] - 2026-10-24
 
 ### Changed
 
 - **「MOD 文字衝突」提醒與清單改放在畫面右側，不再擋住剛進遊戲的角色。** 1.60.0 的提醒一進遊戲就跳在畫面正中間，會遮住角色周圍；現在改到右側、狀態圖示的左邊。在主選單打開清單時照舊置中。
-  > 技術要點：使用者 2026-10-24 回報。`CatModLangConflicts.lua` 新增 `origin()`：遊戲中放玩家畫面右側、moodle 欄左邊（`UIManager.java:417`，寬度讀 `UIManager.getMoodleUI`）、垂直置中，垂直置中沿用原版 `ISModalRichText:update`。四個角落已有速度控制與家族 Toast、小地圖、側邊欄、多人聊天框；右側中段也是原版管理員訊息的位置（`ISAdminMessage.lua:147`）。E2E `conflict-notice-sp` 加位置檢查，CH 實機 22 項 PASS。
+  > 技術要點：使用者 2026-10-24 回報。`CatModLangConflicts.lua` 新增 `origin()`：遊戲中放玩家畫面右側、moodle 欄左邊（`UIManager.java:417`，寬度讀 `UIManager.getMoodleUI`）、垂直置中，垂直置中沿用原版 `ISModalRichText:update`。四個角落已有速度控制與家族 Toast、小地圖、側邊欄、多人聊天框；右側中段也是原版管理員訊息的位置（`ISAdminMessage.lua:147`）。E2E `conflict-notice-sp` 加位置檢查。
+- **提醒最後多一段說明，寫出之後去哪裡再看清單。** 到「選項」的「模組」頁，在「繁體簡體模組翻譯」底下按「查看 MOD 文字衝突」；同一個地方也能關掉自動提醒。
+  > 技術要點：`pack_ui.json` 的 `IGUI_CatModLang_NoticeHint` 只留「新舊版本只留一個」那句，路徑另成一段 `IGUI_CatModLang_NoticeReopen`（介面文字 25 鍵）；四個名稱都用遊戲實際的翻譯鍵帶入：`UI_mainscreen_option`、`UI_mainscreen_mods`（選項頁的分頁名，`MainOptions.lua:2798`）、`UI_CatModLang_Options`、`UI_CatModLang_OpenList`。
+- **看過的衝突清單改成記住最近 20 組。** 在 MOD 組合不同的伺服器與單機之間切換時，看過的組合不會再跳提醒；只有出現沒看過的衝突組合才會跳。
+  > 技術要點：使用者 2026-10-24 裁定，取代 2026-10-23「和上次看過的不同才跳」。`Zomboid/Lua/CatModLangFor42_conflicts_seen.txt` 改為一行一組、最新在前（`CatModLang.seenAfter`），1.60.0 寫的單行檔照樣讀得懂。
+- **彈藥轉換器（AmmoConverter）新增的子模組，彈藥轉換配方也依啟用的 MOD 顯示對應的中文。**
+  > 技術要點：追蹤器 2026-10-24 #1049。新增的 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 子模組英文與既有組相同，Gunrunners 子模組改用 7.62x39mm 的英文：16 筆 owner 衝突裁決重新背書（.30-30／.30-06、7.62x51／.308 等口徑仍互斥，9 鍵維持不出貨，`unshipped_keys.json` 的 `owner_signature` 同步），簽名以 1,764 筆既有裁決自檢全符；15 個配方與 `ContextMenu_Inject`（Injectors 已不在 owner 名單）的條件譯文照新分組重排，譯文沿用。MFS 社群修正版把 `Base.9mmClip` 改名為 9x19mm 17-Round Magazine：這組屬於改寫原版文字，雙模型審核前不出貨，啟用時顯示本體翻譯的名稱。`OWNER_CONFLICTS.md` 重生。
 
 ## [42.21.0-1.60.0] - 2026-10-24
 
