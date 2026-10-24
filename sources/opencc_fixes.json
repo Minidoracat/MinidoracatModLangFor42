@@ -1111,6 +1111,102 @@
           "note": "Brawler（UI_trait_BarFighter）：LangFor42「鬥士」；「街頭鬥士」是另一種舊寫法"
         }
       ]
+    },
+    {
+      "category": "本體物品名",
+      "description": "MOD 文字點名原版物品時，物品名照家族本體翻譯包 LangFor42（使用者 2026-10-24 裁定；以前照遊戲官方繁中）：只收官方名夠獨特、全包判定時沒有任何保留例的換名，replacement 是 LangFor42 名稱。泛稱、加限定詞或同字別物的換名（鏟子、繩子、日誌、選單、皮靴等）不收，靠逐值判定。指 MOD 自訂且英文不同的東西時，以 lint_exemptions 逐鍵豁免。",
+      "rules": [
+        {
+          "pattern": "床單繩",
+          "replacement": "逃脫繩",
+          "note": "Sheet Rope：LangFor42「逃脫繩」；官方 CH「床單繩」"
+        },
+        {
+          "pattern": "乙型阻斷劑",
+          "replacement": "β-阻斷劑",
+          "note": "Beta Blockers：LangFor42「β-阻斷劑」；官方 CH「乙型阻斷劑」"
+        },
+        {
+          "pattern": "抗?抑鬱藥",
+          "replacement": "抗憂鬱藥",
+          "note": "Antidepressants：LangFor42「抗憂鬱藥」；官方 CH「抑鬱藥」"
+        },
+        {
+          "pattern": "十字鎬",
+          "replacement": "丁字鎬",
+          "note": "Pickaxe：LangFor42「丁字鎬」；官方 CH「十字鎬」"
+        },
+        {
+          "pattern": "氮磷鉀肥料袋?",
+          "replacement": "袋裝化肥",
+          "note": "Fertilizer：LangFor42「袋裝化肥」；官方 CH「氮磷鉀肥料」"
+        },
+        {
+          "pattern": "美式足球頭盔",
+          "replacement": "橄欖球頭盔",
+          "note": "Football Helmet：LangFor42「橄欖球頭盔」；官方 CH「美式足球頭盔」"
+        },
+        {
+          "pattern": "康福利草",
+          "replacement": "聚合草",
+          "note": "Comfrey：LangFor42「聚合草」；官方 CH「康福利草」"
+        },
+        {
+          "pattern": "牧場沙拉醬",
+          "replacement": "田園沙拉醬",
+          "note": "Ranch：LangFor42「田園沙拉醬」；官方 CH「牧場沙拉醬」"
+        },
+        {
+          "pattern": "Plonkies\\s*奶油海綿蛋糕",
+          "replacement": "蛋黃夾心捲",
+          "note": "Plonkies：LangFor42「蛋黃夾心捲」；官方 CH「Plonkies 奶油海綿蛋糕」"
+        },
+        {
+          "pattern": "木棍陷阱",
+          "replacement": "樹枝陷阱",
+          "note": "Stick Trap：LangFor42「樹枝陷阱」；官方 CH「木棍陷阱」"
+        },
+        {
+          "pattern": "巧克力脆片",
+          "replacement": "巧克力豆",
+          "note": "Chocolate Chips：LangFor42「巧克力豆」；官方 CH「巧克力脆片」"
+        },
+        {
+          "pattern": "婚禮面紗",
+          "replacement": "婚禮頭紗",
+          "note": "Wedding Veil：LangFor42「婚禮頭紗」；官方 CH「婚禮面紗」"
+        },
+        {
+          "pattern": "陳皮酒",
+          "replacement": "庫拉索酒",
+          "note": "Curacao：LangFor42「庫拉索酒」；官方 CH「陳皮酒」"
+        },
+        {
+          "pattern": "柺杖糖",
+          "replacement": "拐杖糖",
+          "note": "Candy Cane：LangFor42「拐杖糖」；官方 CH「柺杖糖」"
+        },
+        {
+          "pattern": "工頭背心",
+          "replacement": "領班背心",
+          "note": "Foreman Vest：LangFor42「領班背心」；官方 CH「工頭背心」"
+        },
+        {
+          "pattern": "消防員褲",
+          "replacement": "消防員長褲",
+          "note": "Firefighter Pants：LangFor42「消防員長褲」；官方 CH「消防員褲」"
+        },
+        {
+          "pattern": "M16\\s*彈匣",
+          "replacement": "M16 5.56mm彈匣",
+          "note": "M16 Magazine：LangFor42「M16 5.56mm彈匣」；官方 CH「M16 彈匣」"
+        },
+        {
+          "pattern": "M1911\\s*自動彈匣",
+          "replacement": "M1911 .45彈匣",
+          "note": "M1911 Auto Magazine：LangFor42「M1911 .45彈匣」；官方 CH「M1911 自動彈匣」"
+        }
+      ]
     }
   ],
   "suspicious_patterns": [
@@ -1768,7 +1864,7 @@
         "黃油"
       ],
       "reason": "「石化了的黃油、鏽成一坨的螺絲」明確是車底機件上的潤滑脂，不是 butter；改成「奶油」會造成機械語境錯譯。",
-      "ch_value": "3f46720fbd7d033c"
+      "ch_value": "ebe8cfd35778bcbf"
     },
     "IG_UI.json|IGUI_Dream169": {
       "patterns": [
@@ -1854,7 +1950,7 @@
         "泄(?!殖)"
       ],
       "reason": "「動物天天排泄」是台灣通用的生理術語「排泄」，不是「排洩」；保留並豁免此 E pattern。",
-      "ch_value": "b10b56bb8625ac62"
+      "ch_value": "0c8016251d9f6fe2"
     },
     "IG_UI.json|IGUI_BookMechanic2_Pg11": {
       "patterns": [
@@ -3493,6 +3589,13 @@
       ],
       "reason": "2026-10-24 特質名照 LangFor42 裁決 keep：英文 Student Driver 與 poordriver 鍵指 More Traits 的自有駕駛特質，不是原版 Sunday Driver，故新手上路保留",
       "ch_value": "0ef6b86b5a2d0bbf"
+    },
+    "ItemName.json|BundleUp.MenuCardBundle": {
+      "patterns": [
+        "菜(\\s*)單"
+      ],
+      "reason": "2026-10-24 物品名照 LangFor42：Bundle Up「Box of Menus」裝的是原版實體菜單物品（Menu），LangFor42 名稱就是「菜單」，不是介面選單。",
+      "ch_value": "a61e8fd8a87b99e4"
     }
   }
 }

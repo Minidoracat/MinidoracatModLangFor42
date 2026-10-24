@@ -21506,8 +21506,8 @@
   },
   "UI.json|UI_trait_Lumberjack": {
     "as1_value": "伐木工人",
-    "reason": "As1「伐木工人」同時與雙方固定的 UI_trait_woodworker「伐木工人」及 As1 自己的 UI_prof_woodcutter「伐木工人」三重撞名。",
-    "value": "伐木工"
+    "reason": "As1「伐木工人」同時與雙方固定的 UI_trait_woodworker「伐木工人」及 As1 自己的 UI_prof_woodcutter「伐木工人」三重撞名。 2026-10-24：與原版 Axeman／Lumberjack「伐木工」 同名，改名避免特質清單出現兩個同名特質。",
+    "value": "伐木专家"
   },
   "UI.json|UI_trait_LumberjackDesc": {
     "as1_value": "采伐和加工木材的专家. <br>擅长放倒树木, 亡灵和活人.",
@@ -61189,5 +61189,120 @@
     "as1_value": " <RGB:0,0,0> <CENTRE> <SIZE:large> 空中管控: 鸟类 <LINE> <LINE> <LEFT> <SIZE:medium> 耗子攻地下室, 鸟攻你的菜地和后院粮. 鸽子、乌鸦聪明得不上夹子, 但视觉诱饵一骗一个准. <LINE> <LINE> 木棍撑盒子——土得掉渣但对付城里鸟最管用的办法. 一个扣过来的木箱, 一根小棍子撑起一条缝, 棍子拴根长绳——你就能坐在前廊上手动除草了.",
     "value": " <RGB:0,0,0> <CENTRE> <SIZE:large> 空中管控: 鸟类 <LINE> <LINE> <LEFT> <SIZE:medium> 老鼠进攻地下室, 鸟则进攻你的菜园和后院的粮食. 鸽子和乌鸦太聪明, 不会中弹簧夹, 但很容易上视觉诱饵的当. <LINE> <LINE> 用木棍撑起的箱子陷阱, 是对付城市鸟类最原始也最有效的方法. 一个倒扣的木箱, 用一根拴着长绳的小棍撑起来, 让你坐在前廊上就能亲手除害.",
     "reason": "2026-10-24：As1 譯文內容偏離英文（英文結尾是坐在前廊上親手除害 (manual pest control) , CN 寫成\"手动除草\".），依現行英文重譯。"
+  },
+  "UI.json|UI_trait_Calloused": {
+    "as1_value": "麻木不仁",
+    "value": "心肠冷硬",
+    "reason": "2026-10-24：與原版 Desensitized「麻木不仁」 同名，改名避免特質清單出現兩個同名特質。"
+  },
+  "UI.json|UI_trait_SWFlimsy": {
+    "as1_value": "弱不禁风",
+    "value": "体格单薄",
+    "reason": "2026-10-24：與原版 Puny「弱不禁风」 同名，改名避免特質清單出現兩個同名特質。"
+  },
+  "UI.json|UI_trait_glassbody": {
+    "as1_value": "弱不禁风",
+    "value": "易碎体质",
+    "reason": "2026-10-24：與原版 Puny「弱不禁风」 同名，改名避免特質清單出現兩個同名特質。"
+  },
+  "UI.json|UI_trait_woodcutter": {
+    "as1_value": "伐木工",
+    "value": "樵夫",
+    "reason": "2026-10-24：與原版 Axeman／Lumberjack「伐木工」 同名，改名避免特質清單出現兩個同名特質。"
+  },
+  "UI.json|UI_trait_owlperson": {
+    "as1_value": "夜猫子",
+    "value": "猫头鹰",
+    "reason": "2026-10-24：與原版 Night Owl「夜猫子」 同名，改名避免特質清單出現兩個同名特質。"
+  },
+  "UI.json|UI_trait_SQnightowl": {
+    "as1_value": "夜猫子",
+    "value": "昼伏夜出",
+    "reason": "2026-10-24：與原版 Night Owl「夜猫子」 同名，改名避免特質清單出現兩個同名特質。"
+  },
+  "UI.json|UI_trait_SWParamedic": {
+    "as1_value": "急救员",
+    "value": "救护员",
+    "reason": "2026-10-24：與原版 First Aider「急救员」 同名，改名避免特質清單出現兩個同名特質。"
+  },
+  "UI.json|UI_trait_softstomach": {
+    "as1_value": "脾胃虚弱",
+    "value": "肠胃娇弱",
+    "reason": "2026-10-24：與原版 Weak Stomach「脾胃虚弱」 同名，改名避免特質清單出現兩個同名特質。"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedKillsRequired": {
+    "as1_value": "解锁麻木不仁特质所需击杀数",
+    "value": "解锁心肠冷硬特质所需击杀数",
+    "reason": "2026-10-24：Calloused 特質改名「心肠冷硬」（原與 Desensitized「麻木不仁」同名），同步沙盒選項。"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedKillsRequired_tooltip": {
+    "as1_value": "解锁麻木不仁特质所需击杀僵尸数量.",
+    "value": "解锁心肠冷硬特质所需击杀僵尸数量.",
+    "reason": "2026-10-24：Calloused 特質改名「心肠冷硬」（原與 Desensitized「麻木不仁」同名），同步沙盒選項。"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxBoredomAllowed": {
+    "as1_value": "麻木不仁特质生效时允许的最大无聊值",
+    "value": "心肠冷硬特质生效时允许的最大无聊值",
+    "reason": "2026-10-24：Calloused 特質改名「心肠冷硬」（原與 Desensitized「麻木不仁」同名），同步沙盒選項。"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxBoredomAllowed_tooltip": {
+    "as1_value": "麻木不仁特质生效时允许的最高无聊值.",
+    "value": "心肠冷硬特质生效时允许的最高无聊值.",
+    "reason": "2026-10-24：Calloused 特質改名「心肠冷硬」（原與 Desensitized「麻木不仁」同名），同步沙盒選項。"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxStressAllowed": {
+    "as1_value": "麻木不仁特质生效时允许的最大压力值",
+    "value": "心肠冷硬特质生效时允许的最大压力值",
+    "reason": "2026-10-24：Calloused 特質改名「心肠冷硬」（原與 Desensitized「麻木不仁」同名），同步沙盒選項。"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxStressAllowed_tooltip": {
+    "as1_value": "麻木不仁特质生效时允许的最高压力值.",
+    "value": "心肠冷硬特质生效时允许的最高压力值.",
+    "reason": "2026-10-24：Calloused 特質改名「心肠冷硬」（原與 Desensitized「麻木不仁」同名），同步沙盒選項。"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxUnhappinessAllowed": {
+    "as1_value": "麻木不仁特质生效时允许的最大不悦值",
+    "value": "心肠冷硬特质生效时允许的最大不悦值",
+    "reason": "2026-10-24：Calloused 特質改名「心肠冷硬」（原與 Desensitized「麻木不仁」同名），同步沙盒選項。"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_CallousedMaxUnhappinessAllowed_tooltip": {
+    "as1_value": "麻木不仁特质生效时允许的最高不悦值.",
+    "value": "心肠冷硬特质生效时允许的最高不悦值.",
+    "reason": "2026-10-24：Calloused 特質改名「心肠冷硬」（原與 Desensitized「麻木不仁」同名），同步沙盒選項。"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_DisableCalloused": {
+    "as1_value": "禁用麻木不仁特质",
+    "value": "禁用心肠冷硬特质",
+    "reason": "2026-10-24：Calloused 特質改名「心肠冷硬」（原與 Desensitized「麻木不仁」同名），同步沙盒選項。"
+  },
+  "Sandbox.json|Sandbox_NumbTrait_B42_DisableCalloused_tooltip": {
+    "as1_value": "将麻木不仁特质排除在进阶路径外.",
+    "value": "将心肠冷硬特质排除在进阶路径外.",
+    "reason": "2026-10-24：Calloused 特質改名「心肠冷硬」（原與 Desensitized「麻木不仁」同名），同步沙盒選項。"
+  },
+  "Sandbox.json|Sandbox_SurvivorQuirks_CostNightOwl": {
+    "as1_value": "夜猫子花费",
+    "value": "昼伏夜出花费",
+    "reason": "2026-10-24：Nocturnal 特質改名「昼伏夜出」（原與 Night Owl「夜猫子」同名），同步沙盒選項。"
+  },
+  "Sandbox.json|Sandbox_SurvivorQuirks_CostNightOwl_tooltip": {
+    "as1_value": "创建角色时夜猫子特质的点数花费. 负值返还点数.",
+    "value": "创建角色时昼伏夜出特质的点数花费. 负值返还点数.",
+    "reason": "2026-10-24：Nocturnal 特質改名「昼伏夜出」（原與 Night Owl「夜猫子」同名），同步沙盒選項。"
+  },
+  "Sandbox.json|Sandbox_SurvivorQuirks_EnableNightOwl": {
+    "as1_value": "夜猫子",
+    "value": "昼伏夜出",
+    "reason": "2026-10-24：Nocturnal 特質改名「昼伏夜出」（原與 Night Owl「夜猫子」同名），同步沙盒選項。"
+  },
+  "ItemName.json|LDK.Crystal": {
+    "as1_value": "Crysta啤酒",
+    "reason": "2026-10-24：As1 漏了品牌名結尾的 l（英文 Crystal；同 MOD 的 LDK.CrystalBottle 英文 Crystal Bottle）。",
+    "value": "Crystal啤酒"
+  },
+  "ItemName.json|LDK.CrystalBottle": {
+    "as1_value": "塑料瓶 (Crysta啤酒)",
+    "reason": "2026-10-24：As1 漏了品牌名結尾的 l（英文 Crystal；同 MOD 的 LDK.CrystalBottle 英文 Crystal Bottle）。",
+    "value": "塑料瓶 (Crystal啤酒)"
   }
 }
