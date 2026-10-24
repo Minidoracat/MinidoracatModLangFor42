@@ -1803,6 +1803,26 @@
   "Moveables.json|Wide_Medical_Cabinet": {
    "as1_value": "宽型医疗柜",
    "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版圖塊名稱（Translator.getMoveableDisplayName 以圖塊 CustomName 查）；本包原創翻譯層收錄（出自 OpenAllContainers 3465040406）。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "ItemName.json|Base.Striker12": {
+   "as1_value": "阿姆塞尔守护者霰弹枪",
+   "owner_signature": "039124bcf1e0160a",
+   "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：同一 key 是兩把不同型號的槍。Modern & Historical Firearms Bundle 是 Striker 12（只有 script DisplayName，has_json_en false），Totally's Cops and Robbers 是 Armsel Protecta（ItemName.json，另有 Base.Striker12Folded「Armsel Protecta (Folded)」）。Protecta 是 Armsel 在 Striker 之後重新設計的型號，型號名是這兩把槍唯一的識別，上位詞「轉輪霰彈槍」會把型號抹掉；現行出貨 CH「Striker 12霰彈槍」與 CN「阿姆塞尔守护者霰弹枪」各自只符合一方。比照 Base.Glock23、Base.JS5_Clip 不出貨。抑制後：Totally's 玩家看到自帶 ItemName.json 的 Armsel Protecta（該 MOD 只有 Translate/EN）；MHFB 由 script fallback 顯示 Striker 12（MHFB 不在本機，沒查它是否自帶 CH/CN；tracker 只記 EN）。B41 前綴孿生鍵 ItemName_Base.Striker12 在 sources/en、真相層與 dist 都不存在，不需同步登記。"
+  },
+  "ItemName.json|Base.9mmDrum_cat": {
+   "as1_value": "9mm 帕拉贝鲁姆 50 发弹鼓",
+   "owner_signature": "6bbb8db27b87ac79",
+   "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：同一 key 在兩方是不同槍用、標不同口徑的彈鼓。Escape from Kentucky（3633421539）寫 9mm Parabellum 50-Round Drum Magazine，GunType Base.KrissVector_cat，並是 EFK 湯普森（9mm）的 MagazineType；MFS 社群修正版（3780151182）改寫 9x39mm 50-Round Rifle Drum，GunType 是 AMB17／AS VAL／AS VAL MOD4。口徑是承重資訊：現行「9mm 帕拉貝倫 50發彈鼓」讓社群修正版玩家誤以為能裝進同 MOD 的 9x19mm 彈鼓槍（Base.9mmDrum_p_cat）；拿掉口徑只剩「50 發彈鼓」也分不出槍種，「步槍彈鼓」對 EFK（Vector、湯普森衝鋒槍）不成立。兩方都有可載入 ItemName.json，且都自帶 Translate/CH、CN：不出貨後繁中玩家看到 EFK「9mm 帕拉貝魯姆 50 發彈鼓」或社群修正版「9x39mm 50 發步槍彈鼓」，各自正確。B41 前綴孿生鍵在 sources/en、真相層與 dist 都不存在，不需同步登記。"
+  },
+  "ItemName.json|Gunpart.Clip_9mmDrum_cat": {
+   "as1_value": "9mm 50 发弹鼓 (装饰件)",
+   "owner_signature": "1577c4f9651d2c49",
+   "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Base.9mmDrum_cat 的裝飾件，口徑說法同樣互斥：Escape from Kentucky（3633421539）寫 9mm 50-Round Drum Magazine (decoration part)，MFS 社群修正版（3780151182）寫 9x39mm 50-Round Rifle Drum (decoration part)。理由同 Base.9mmDrum_cat；兩方都自帶 CH/CN，不出貨後繁中玩家看到 EFK「9mm 50 發彈鼓 (裝飾配件)」或社群修正版「9x39mm 50 發步槍彈鼓 (裝飾配件)」。B41 前綴孿生鍵不存在，不需同步登記。"
+  },
+  "Recipes.json|9mmDrum(50)": {
+   "as1_value": "制作 9x19mm 50 发弹鼓",
+   "owner_signature": "b85e185cff2a6214",
+   "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Escape from Kentucky（3633421539）寫 Craft 9x19mm 50-Round Drum Magazine，MFS 社群修正版（3780151182）寫 Craft 9x39mm 50-Round Rifle Drum；兩方配方產物都是 Base.9mmDrum_cat，口徑說法互斥，比照該物品名不出貨。兩方都有可載入 Recipes.json 並自帶 CH/CN：不出貨後繁中玩家看到 EFK「製作 9×19mm 50 發彈鼓」或社群修正版「製作 9x39mm 50 發步槍彈鼓」。"
   }
  }
 }

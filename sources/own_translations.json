@@ -7900,6 +7900,31 @@
     "en": "Write Materials List",
     "ch": "寫下材料清單",
     "cn": "写下材料清单"
+   },
+   "ContextMenu_InjectMedication": {
+    "en": "Inject Medication",
+    "ch": "注射藥物",
+    "cn": "注射药物"
+   },
+   "ContextMenu_TWHolster": {
+    "en": "Normal Style",
+    "ch": "一般樣式",
+    "cn": "普通样式"
+   },
+   "ContextMenu_TWHolster_invis": {
+    "en": "Invis Style",
+    "ch": "隱形樣式",
+    "cn": "隐形样式"
+   },
+   "ContextMenu_Tgunbelt_invis": {
+    "en": "Invis Style",
+    "ch": "隱形樣式",
+    "cn": "隐形样式"
+   },
+   "ContextMenu_LabPanelCollectBlood": {
+    "en": "Coletar Sangue",
+    "ch": "採集血液",
+    "cn": "采集血液"
    }
   },
   "Fluids.json": {
@@ -133702,9 +133727,9 @@
     "cn": "使用这些设置"
    },
    "IGUI_SurvivorBriefing_LK_Welcome": {
-    "en": "Survivor Briefing 1.0: the briefing now comes in 17 looks,\\nfrom a camcorder screen to a classified military briefing.\\nPick yours now?\\n\\nYou can change it any time in Options > Mods > Survivor Briefing.",
-    "ch": "倖存者簡報 1.0: 簡報現在有 17 種外觀,\\n從攝影機畫面到機密軍事簡報都有.\\n現在就選一個嗎?\\n\\n你隨時可以在 選項 > 模組 > 倖存者簡報 中更改.",
-    "cn": "幸存者简报 1.0: 简报现在有17种外观,\\n从摄像机画面到机密军事简报应有尽有.\\n现在就选一个吗?\\n\\n你随时可以在 选项 > 模组 > 幸存者简报 中更改."
+    "en": "Survivor Briefing 1.0: the briefing now comes in 23 looks,\\nfrom a camcorder screen to a classified military briefing.\\nPick yours now?\\n\\nYou can change it any time in Options > Mods > Survivor Briefing.",
+    "ch": "倖存者簡報 1.0: 簡報現在有 23 種外觀,\\n從攝影機畫面到機密軍事簡報都有.\\n現在就選一個嗎?\\n\\n你隨時可以在 選項 > 模組 > 倖存者簡報 中更改.",
+    "cn": "幸存者简报 1.0: 简报现在有23种外观,\\n从摄像机画面到机密军事简报应有尽有.\\n现在就选一个吗?\\n\\n你随时可以在 选项 > 模组 > 幸存者简报 中更改."
    },
    "IGUI_SurvivorBriefing_OutbreakDay": {
     "en": "Outbreak day",
@@ -158411,6 +158436,706 @@
     "en": "The generator's window: the tank, the starter cord, the gauges, the outlets.",
     "ch": "發電機視窗: 油箱、啟動拉繩、儀表、插座.",
     "cn": "发电机窗口: 油箱、启动拉绳、仪表、插座."
+   },
+   "IGUI_HotbarAttachment_MT_Main_TWHolster_attach_invis": {
+    "en": "Pistol Holster",
+    "ch": "手槍槍套",
+    "cn": "手枪枪套"
+   },
+   "IGUI_HotbarAttachment_MT_Main_Tgunbelt_attach_invis": {
+    "en": "Gun Belt",
+    "ch": "槍帶",
+    "cn": "枪带"
+   },
+   "IGUI_HotbarAttachment_MT_TacticalBeltOrig_Left_attach": {
+    "en": "Belt Left",
+    "ch": "腰帶左側",
+    "cn": "腰带左侧"
+   },
+   "IGUI_HotbarAttachment_MT_TacticalBeltOrig_Right_attach": {
+    "en": "Belt Right",
+    "ch": "腰帶右側",
+    "cn": "腰带右侧"
+   },
+   "IGUI_PlayerText_CollectFromOther1": {
+    "en": "Easy now, that was nothing.",
+    "ch": "放輕鬆, 這根本沒什麼.",
+    "cn": "放轻松, 这根本不算什么."
+   },
+   "IGUI_PlayerText_CollectFromOther2": {
+    "en": "You're not afraid of needles, are you?",
+    "ch": "你該不會怕打針吧?",
+    "cn": "你不会是怕打针吧?"
+   },
+   "IGUI_PlayerText_CollectFromOther3": {
+    "en": "Stop whining.",
+    "ch": "別再哀哀叫了.",
+    "cn": "别再哼哼唧唧了."
+   },
+   "IGUI_PlayerText_CollectFromOther4": {
+    "en": "There are worse things than a needle. Teeth, for example.",
+    "ch": "比針頭可怕的東西多的是. 比如說, 牙齒.",
+    "cn": "比针头可怕的东西多的是. 比如说, 牙齿."
+   },
+   "IGUI_PlayerText_CollectFromOther5": {
+    "en": "Stop squirming. It's just a little prick.",
+    "ch": "別亂動. 只是扎一下而已.",
+    "cn": "别乱动. 只是扎一下而已."
+   },
+   "IGUI_PlayerText_OtherTestNegative1": {
+    "en": "Lucky bastard. Negative. This time...",
+    "ch": "走運的傢伙. 陰性. 這次算你好運…",
+    "cn": "走运的家伙. 阴性. 这次算你走运…"
+   },
+   "IGUI_PlayerText_OtherTestNegative2": {
+    "en": "Negative. At least we'll save some ammo.",
+    "ch": "陰性. 至少能省下一些彈藥.",
+    "cn": "阴性. 至少能省下点弹药."
+   },
+   "IGUI_PlayerText_OtherTestNegative3": {
+    "en": "Great. I'll go deliver the good news.",
+    "ch": "很好. 我去報告這個好消息.",
+    "cn": "很好. 我去通报这个好消息."
+   },
+   "IGUI_PlayerText_OtherTestNegative4": {
+    "en": "Well, look at that. Negative. He gets to live a little longer.",
+    "ch": "喔, 你看看. 陰性. 他還能多活一陣子.",
+    "cn": "哟, 瞧瞧. 阴性. 他还能多活一阵子."
+   },
+   "IGUI_PlayerText_OtherTestNegative5": {
+    "en": "Not today. Maybe tomorrow.",
+    "ch": "今天還不是. 也許明天吧.",
+    "cn": "今天还不是. 也许明天吧."
+   },
+   "IGUI_PlayerText_OtherTestPositive": {
+    "en": "How am I supposed to break the news? It's positive.",
+    "ch": "這消息要我怎麼說出口? 是陽性.",
+    "cn": "这消息让我怎么开口? 是阳性."
+   },
+   "IGUI_PlayerText_OtherTestPositive1": {
+    "en": "Yeah... bad news.",
+    "ch": "是啊…壞消息.",
+    "cn": "是啊…坏消息."
+   },
+   "IGUI_PlayerText_OtherTestPositive2": {
+    "en": "Wonderful... now all we have to do is wait for him to drop dead.",
+    "ch": "太好了…現在我們只能等他倒地死掉了.",
+    "cn": "太好了…现在我们只需要等他倒地死掉了."
+   },
+   "IGUI_PlayerText_OtherTestPositive3": {
+    "en": "Positive. One less on our team, one more on theirs.",
+    "ch": "陽性. 我們這邊少一個, 它們那邊多一個.",
+    "cn": "阳性. 我们这边少一个, 它们那边多一个."
+   },
+   "IGUI_PlayerText_OtherTestPositive4": {
+    "en": "It's positive. Maybe I should just kill him right now.",
+    "ch": "是陽性. 也許我該現在就殺了他.",
+    "cn": "是阳性. 也许我该现在就杀了他."
+   },
+   "IGUI_PlayerText_OtherTestPositive5": {
+    "en": "It's positive. On the bright side, he'll make a perfect specimen for the autopsy table.",
+    "ch": "是陽性. 往好處想, 他會是解剖臺上的完美標本.",
+    "cn": "是阳性. 往好处想, 他会是解剖台上的完美标本."
+   },
+   "IGUI_PlayerText_OtherTestPositive6": {
+    "en": "He's already dead. He just hasn't stopped breathing yet.",
+    "ch": "他已經死了. 只是還沒停止呼吸而已.",
+    "cn": "他已经死了. 只是还没停止呼吸而已."
+   },
+   "IGUI_Locksmith_KeyNameFor": {
+    "en": "%1 Key",
+    "ch": "%1鑰匙",
+    "cn": "%1钥匙"
+   },
+   "IGUI_Locksmith_LatchWindow": {
+    "en": "Latch Window",
+    "ch": "閂上窗戶",
+    "cn": "闩上窗户"
+   },
+   "IGUI_Locksmith_Room_attic": {
+    "en": "Attic",
+    "ch": "閣樓",
+    "cn": "阁楼"
+   },
+   "IGUI_Locksmith_Room_bar": {
+    "en": "Bar",
+    "ch": "酒吧",
+    "cn": "酒吧"
+   },
+   "IGUI_Locksmith_Room_barn": {
+    "en": "Barn",
+    "ch": "穀倉",
+    "cn": "谷仓"
+   },
+   "IGUI_Locksmith_Room_basement": {
+    "en": "Basement",
+    "ch": "地下室",
+    "cn": "地下室"
+   },
+   "IGUI_Locksmith_Room_bathroom": {
+    "en": "Bathroom",
+    "ch": "浴室",
+    "cn": "浴室"
+   },
+   "IGUI_Locksmith_Room_bedroom": {
+    "en": "Bedroom",
+    "ch": "臥室",
+    "cn": "卧室"
+   },
+   "IGUI_Locksmith_Room_breakroom": {
+    "en": "Break Room",
+    "ch": "休息室",
+    "cn": "休息室"
+   },
+   "IGUI_Locksmith_Room_changeroom": {
+    "en": "Changing Room",
+    "ch": "更衣間",
+    "cn": "更衣间"
+   },
+   "IGUI_Locksmith_Room_classroom": {
+    "en": "Classroom",
+    "ch": "教室",
+    "cn": "教室"
+   },
+   "IGUI_Locksmith_Room_closet": {
+    "en": "Closet",
+    "ch": "衣帽間",
+    "cn": "衣帽间"
+   },
+   "IGUI_Locksmith_Room_diningroom": {
+    "en": "Dining Room",
+    "ch": "餐廳",
+    "cn": "餐厅"
+   },
+   "IGUI_Locksmith_Room_foyer": {
+    "en": "Foyer",
+    "ch": "玄關",
+    "cn": "玄关"
+   },
+   "IGUI_Locksmith_Room_garage": {
+    "en": "Garage",
+    "ch": "車庫",
+    "cn": "车库"
+   },
+   "IGUI_Locksmith_Room_garagestorage": {
+    "en": "Garage",
+    "ch": "車庫",
+    "cn": "车库"
+   },
+   "IGUI_Locksmith_Room_greenhouse": {
+    "en": "Greenhouse",
+    "ch": "溫室",
+    "cn": "温室"
+   },
+   "IGUI_Locksmith_Room_gym": {
+    "en": "Gym",
+    "ch": "健身房",
+    "cn": "健身房"
+   },
+   "IGUI_Locksmith_Room_hall": {
+    "en": "Hall",
+    "ch": "大廳",
+    "cn": "大厅"
+   },
+   "IGUI_Locksmith_Room_hallway": {
+    "en": "Hallway",
+    "ch": "走廊",
+    "cn": "走廊"
+   },
+   "IGUI_Locksmith_Room_janitor": {
+    "en": "Janitor's Closet",
+    "ch": "清潔用品間",
+    "cn": "清洁工具间"
+   },
+   "IGUI_Locksmith_Room_kidsbedroom": {
+    "en": "Kids' Room",
+    "ch": "兒童房",
+    "cn": "儿童房"
+   },
+   "IGUI_Locksmith_Room_kitchen": {
+    "en": "Kitchen",
+    "ch": "廚房",
+    "cn": "厨房"
+   },
+   "IGUI_Locksmith_Room_laboratory": {
+    "en": "Laboratory",
+    "ch": "實驗室",
+    "cn": "实验室"
+   },
+   "IGUI_Locksmith_Room_laundry": {
+    "en": "Laundry Room",
+    "ch": "洗衣間",
+    "cn": "洗衣房"
+   },
+   "IGUI_Locksmith_Room_livingroom": {
+    "en": "Living Room",
+    "ch": "客廳",
+    "cn": "客厅"
+   },
+   "IGUI_Locksmith_Room_lobby": {
+    "en": "Lobby",
+    "ch": "接待大廳",
+    "cn": "大堂"
+   },
+   "IGUI_Locksmith_Room_lockerroom": {
+    "en": "Locker Room",
+    "ch": "更衣室",
+    "cn": "更衣室"
+   },
+   "IGUI_Locksmith_Room_mechanic": {
+    "en": "Mechanic's Garage",
+    "ch": "修車廠",
+    "cn": "汽修厂"
+   },
+   "IGUI_Locksmith_Room_medical": {
+    "en": "Medical Room",
+    "ch": "醫務室",
+    "cn": "医务室"
+   },
+   "IGUI_Locksmith_Room_meetingroom": {
+    "en": "Meeting Room",
+    "ch": "會議室",
+    "cn": "会议室"
+   },
+   "IGUI_Locksmith_Room_motelroom": {
+    "en": "Motel Room",
+    "ch": "汽車旅館房間",
+    "cn": "汽车旅馆房间"
+   },
+   "IGUI_Locksmith_Room_motelroomoccupied": {
+    "en": "Motel Room",
+    "ch": "汽車旅館房間",
+    "cn": "汽车旅馆房间"
+   },
+   "IGUI_Locksmith_Room_office": {
+    "en": "Office",
+    "ch": "辦公室",
+    "cn": "办公室"
+   },
+   "IGUI_Locksmith_Room_policeoffice": {
+    "en": "Police Office",
+    "ch": "警察辦公室",
+    "cn": "警察办公室"
+   },
+   "IGUI_Locksmith_Room_security": {
+    "en": "Security",
+    "ch": "保全室",
+    "cn": "保安室"
+   },
+   "IGUI_Locksmith_Room_shed": {
+    "en": "Shed",
+    "ch": "棚屋",
+    "cn": "棚屋"
+   },
+   "IGUI_Locksmith_Room_stairwell": {
+    "en": "Stairwell",
+    "ch": "樓梯間",
+    "cn": "楼梯间"
+   },
+   "IGUI_Locksmith_Room_storage": {
+    "en": "Storage",
+    "ch": "儲藏室",
+    "cn": "储藏室"
+   },
+   "IGUI_Locksmith_Room_storageunit": {
+    "en": "Storage Unit",
+    "ch": "倉儲間",
+    "cn": "仓储间"
+   },
+   "IGUI_Locksmith_Room_warehouse": {
+    "en": "Warehouse",
+    "ch": "倉庫",
+    "cn": "仓库"
+   },
+   "IGUI_Locksmith_Room_workshop": {
+    "en": "Workshop",
+    "ch": "工作室",
+    "cn": "工作间"
+   },
+   "IGUI_Locksmith_ShimWindow": {
+    "en": "Shim Window",
+    "ch": "撥開窗閂",
+    "cn": "拨开窗闩"
+   },
+   "IGUI_Locksmith_TakeKey": {
+    "en": "Take %1 From Bag",
+    "ch": "從包裡取出%1",
+    "cn": "从包里取出%1"
+   },
+   "IGUI_Locksmith_TooltipBroken": {
+    "en": "Broken",
+    "ch": "已損壞",
+    "cn": "已损坏"
+   },
+   "IGUI_Locksmith_TooltipCode": {
+    "en": "Code",
+    "ch": "密碼",
+    "cn": "密码"
+   },
+   "IGUI_Locksmith_TooltipHeld": {
+    "en": "You have it",
+    "ch": "在你身上",
+    "cn": "在你身上"
+   },
+   "IGUI_Locksmith_TooltipKey": {
+    "en": "Key",
+    "ch": "鑰匙",
+    "cn": "钥匙"
+   },
+   "IGUI_Locksmith_TooltipKnown": {
+    "en": "You know it",
+    "ch": "你知道",
+    "cn": "你知道"
+   },
+   "IGUI_Locksmith_TooltipLatched": {
+    "en": "Latched",
+    "ch": "已閂上",
+    "cn": "已闩上"
+   },
+   "IGUI_Locksmith_TooltipLock": {
+    "en": "Lock",
+    "ch": "鎖",
+    "cn": "锁"
+   },
+   "IGUI_Locksmith_TooltipMissing": {
+    "en": "Not on you",
+    "ch": "不在身上",
+    "cn": "不在身上"
+   },
+   "IGUI_Locksmith_TooltipNoKeyCut": {
+    "en": "None cut yet",
+    "ch": "尚未配製",
+    "cn": "尚未配制"
+   },
+   "IGUI_Locksmith_TooltipTitle": {
+    "en": "Lock",
+    "ch": "鎖",
+    "cn": "锁"
+   },
+   "IGUI_Locksmith_TooltipUnknown": {
+    "en": "Unknown",
+    "ch": "未知",
+    "cn": "未知"
+   },
+   "IGUI_Locksmith_UnlatchWindow": {
+    "en": "Unlatch Window",
+    "ch": "解開窗閂",
+    "cn": "解开窗闩"
+   },
+   "IGUI_NotAlone_OptLootMenu": {
+    "en": "Show loot / gift menu options",
+    "ch": "顯示搜刮/禮物選單選項",
+    "cn": "显示搜刮/礼物菜单选项"
+   },
+   "IGUI_NotAlone_OptLootMenuTip": {
+    "en": "Shows the companion's loot, wear, and gift options in right-click menus.",
+    "ch": "在右鍵選單中顯示同伴的搜刮、穿上與禮物選項.",
+    "cn": "在右键菜单中显示同伴的搜刮、穿上和礼物选项."
+   },
+   "IGUI_ALifeUI_0191c9fd1195817e": {
+    "en": "World Status",
+    "ch": "世界狀態",
+    "cn": "世界状态"
+   },
+   "IGUI_ALifeUI_01ad26a34f03a216": {
+    "en": "Turn on Diagnostics in Options, Project A-Life. Then load a game (single player, or a server where you are an admin), right-click the ground and open A-Life.",
+    "ch": "在 選項 > A-Life 計畫 中開啟「診斷」. 接著載入遊戲 (單人遊戲, 或你是管理員的伺服器), 對地面按右鍵並開啟 A-Life.",
+    "cn": "在 选项 > A-Life 计划 中开启“诊断”. 接着加载游戏 (单人游戏, 或你是管理员的服务器), 右键点击地面并打开 A-Life."
+   },
+   "IGUI_ALifeUI_0a2b45c43deb4ba2": {
+    "en": "Saves the full A-Life diagnostics to console.txt and report files. In multiplayer, server output is saved in the server log (coop-console.txt when hosting).",
+    "ch": "將完整的 A-Life 診斷儲存到 console.txt 與報告檔案. 多人遊戲中, 伺服器的輸出會儲存在伺服器記錄中 (自行架設時為 coop-console.txt).",
+    "cn": "将完整的 A-Life 诊断保存到 console.txt 和报告文件. 多人游戏中, 服务器的输出会保存在服务器日志中 (自建主机时为 coop-console.txt)."
+   },
+   "IGUI_ALifeUI_0c8d93891a392030": {
+    "en": "NPC Creator",
+    "ch": "NPC 編輯器",
+    "cn": "NPC 编辑器"
+   },
+   "IGUI_ALifeUI_0e59d7d56f1af6cb": {
+    "en": "Save to console.txt",
+    "ch": "儲存到 console.txt",
+    "cn": "保存到 console.txt"
+   },
+   "IGUI_ALifeUI_1408d4e85acde0df": {
+    "en": "Shows the A-Life right-click menu. Off by default. In multiplayer, all players can see World Status and copy an individual bug report. Server-wide reports and A-Life Creator require admin access. Testing tools need Diagnostics. NPC talk is always available. World Status is also available with Home and from the pause menu.",
+    "ch": "顯示 A-Life 右鍵選單. 預設關閉. 多人遊戲中, 所有玩家都能檢視世界狀態並複製個人錯誤回報. 全伺服器報告與 A-Life 編輯器需要管理員權限. 測試工具需要開啟診斷. 與 NPC 交談一律可用. 世界狀態也可以用 Home 鍵或從暫停選單開啟.",
+    "cn": "显示 A-Life 右键菜单. 默认关闭. 多人游戏中, 所有玩家都能查看世界状态并复制个人错误报告. 全服务器报告和 A-Life 编辑器需要管理员权限. 测试工具需要开启诊断. 与 NPC 交谈始终可用. 世界状态也可以通过 Home 键或暂停菜单打开."
+   },
+   "IGUI_ALifeUI_14992c1f7f2623a7": {
+    "en": "Save Bug Report",
+    "ch": "儲存錯誤回報",
+    "cn": "保存错误报告"
+   },
+   "IGUI_ALifeUI_22d829f81d3f1574": {
+    "en": "A-Life",
+    "ch": "A-Life",
+    "cn": "A-Life"
+   },
+   "IGUI_ALifeUI_27c447dc1742fbd0": {
+    "en": "No faction overrides",
+    "ch": "沒有陣營關係覆寫",
+    "cn": "没有阵营关系覆盖"
+   },
+   "IGUI_ALifeUI_2e67d79b46696fa0": {
+    "en": "Remove NPCs",
+    "ch": "移除 NPC",
+    "cn": "移除 NPC"
+   },
+   "IGUI_ALifeUI_2ec492f667f5a4a4": {
+    "en": "Reputation (last known)",
+    "ch": "聲望 (最後已知)",
+    "cn": "声望 (最后已知)"
+   },
+   "IGUI_ALifeUI_2fecaabb21b94bfa": {
+    "en": "Encounter Arrows",
+    "ch": "遭遇指示箭頭",
+    "cn": "遭遇指示箭头"
+   },
+   "IGUI_ALifeUI_39020d9e74248f4d": {
+    "en": "Could not copy the server-wide report.",
+    "ch": "無法複製全伺服器報告.",
+    "cn": "无法复制全服务器报告."
+   },
+   "IGUI_ALifeUI_3e2728e17be0fde2": {
+    "en": "Squads on Map",
+    "ch": "地圖上的小隊",
+    "cn": "地图上的小队"
+   },
+   "IGUI_ALifeUI_469910fb64c8de11": {
+    "en": "Shows the A-Life right-click menu. Off by default. In multiplayer, non-admin players see World Status only. Server admins and single-player users can also save bug reports and open the Creator. Testing tools need Diagnostics. NPC talk is always available. World Status is also available with Home and from the pause menu.",
+    "ch": "顯示 A-Life 右鍵選單. 預設關閉. 多人遊戲中, 非管理員玩家只會看到世界狀態. 伺服器管理員與單人遊戲玩家還能儲存錯誤回報並開啟編輯器. 測試工具需要開啟診斷. 與 NPC 交談一律可用. 世界狀態也可以用 Home 鍵或從暫停選單開啟.",
+    "cn": "显示 A-Life 右键菜单. 默认关闭. 多人游戏中, 非管理员玩家只能看到世界状态. 服务器管理员和单人游戏玩家还能保存错误报告并打开编辑器. 测试工具需要开启诊断. 与 NPC 交谈始终可用. 世界状态也可以通过 Home 键或暂停菜单打开."
+   },
+   "IGUI_ALifeUI_489c3c63013ce7fc": {
+    "en": "Admin Console",
+    "ch": "管理員主控台",
+    "cn": "管理员控制台"
+   },
+   "IGUI_ALifeUI_4f587fd91aacc4a3": {
+    "en": "Server-wide reports are admin-only in multiplayer. Use the individual report below.",
+    "ch": "多人遊戲中, 全伺服器報告僅限管理員使用. 請使用下方的個人報告.",
+    "cn": "多人游戏中, 全服务器报告仅限管理员使用. 请使用下方的个人报告."
+   },
+   "IGUI_ALifeUI_4f833b853d899600": {
+    "en": "Admin Tool",
+    "ch": "管理工具",
+    "cn": "管理工具"
+   },
+   "IGUI_ALifeUI_4fa584e801e0cf2d": {
+    "en": "Individual report copied. Paste it into your bug report and fill in what happened. Nothing was saved on the server.",
+    "ch": "已複製個人報告. 請將它貼到你的錯誤回報中, 並填寫發生了什麼事. 伺服器上沒有儲存任何東西.",
+    "cn": "已复制个人报告. 请将其粘贴到你的错误报告中, 并填写发生了什么. 服务器上没有保存任何内容."
+   },
+   "IGUI_ALifeUI_54c676df0cf65f80": {
+    "en": "Spawn squad here opens the classic spawn panel to choose NPCs and encounters. Remove NPCs clears nearby NPCs or deletes the nearest outpost. Admin Tool contains the other world tools.",
+    "ch": "「在此生成小隊」會開啟經典生成面板, 讓你選擇 NPC 與遭遇. 「移除 NPC」會清除附近的 NPC 或刪除最近的前哨站. 「管理工具」包含其他世界工具.",
+    "cn": "“在此生成小队”会打开经典生成面板, 供你选择 NPC 和遭遇. “移除 NPC”会清除附近的 NPC 或删除最近的哨所. “管理工具”包含其他世界工具."
+   },
+   "IGUI_ALifeUI_5a7cd3f019bee764": {
+    "en": "Spawn squad here",
+    "ch": "在此生成小隊",
+    "cn": "在此生成小队"
+   },
+   "IGUI_ALifeUI_5b328c1d48fab741": {
+    "en": "Save server-wide bug report",
+    "ch": "儲存全伺服器錯誤回報",
+    "cn": "保存全服务器错误报告"
+   },
+   "IGUI_ALifeUI_629fdfbc2351b0c5": {
+    "en": "Copy individual report",
+    "ch": "複製個人報告",
+    "cn": "复制个人报告"
+   },
+   "IGUI_ALifeUI_631e33c8573b1f00": {
+    "en": "Copies only your local game details. No files are written and nothing is sent to the server.",
+    "ch": "只會複製你本機的遊戲資訊. 不會寫入任何檔案, 也不會傳送任何東西到伺服器.",
+    "cn": "仅复制你本地的游戏信息. 不会写入任何文件, 也不会向服务器发送任何内容."
+   },
+   "IGUI_ALifeUI_632b4457783bc3fa": {
+    "en": "Could not copy the individual report.",
+    "ch": "無法複製個人報告.",
+    "cn": "无法复制个人报告."
+   },
+   "IGUI_ALifeUI_6346e82749927c3a": {
+    "en": "Save individual bug report",
+    "ch": "儲存個人錯誤回報",
+    "cn": "保存个人错误报告"
+   },
+   "IGUI_ALifeUI_6392d7cc494cd2e1": {
+    "en": "Copies your game version, enabled mods, player details and nearby NPC diagnostics. Paste it into your bug report. No files are saved on your computer or the server.",
+    "ch": "複製你的遊戲版本、已啟用的模組、玩家資訊與附近 NPC 的診斷. 請將它貼到你的錯誤回報中. 不會在你的電腦或伺服器上儲存任何檔案.",
+    "cn": "复制你的游戏版本、已启用的模组、玩家信息和附近 NPC 的诊断. 请将其粘贴到你的错误报告中. 不会在你的电脑或服务器上保存任何文件."
+   },
+   "IGUI_ALifeUI_6455c111437815c2": {
+    "en": "Writes the server-wide diagnostics to the game log and A-Life report files. Hosted multiplayer also uses coop-console.txt.",
+    "ch": "將全伺服器診斷寫入遊戲記錄與 A-Life 報告檔案. 自行架設的多人遊戲也會使用 coop-console.txt.",
+    "cn": "将全服务器诊断写入游戏日志和 A-Life 报告文件. 自建主机的多人游戏也会使用 coop-console.txt."
+   },
+   "IGUI_ALifeUI_648533692d83b059": {
+    "en": "Use this when reporting a bug to the A-Life team.",
+    "ch": "向 A-Life 團隊回報錯誤時請使用此功能.",
+    "cn": "向 A-Life 团队报告错误时请使用此功能."
+   },
+   "IGUI_ALifeUI_66d1722d48482214": {
+    "en": "World population",
+    "ch": "世界人口",
+    "cn": "世界人口"
+   },
+   "IGUI_ALifeUI_67edfc250e623e7d": {
+    "en": "Copy server report",
+    "ch": "複製伺服器報告",
+    "cn": "复制服务器报告"
+   },
+   "IGUI_ALifeUI_6abbcabf4661c01d": {
+    "en": "Squads and encounters",
+    "ch": "小隊與遭遇",
+    "cn": "小队与遭遇"
+   },
+   "IGUI_ALifeUI_6bd8559b68929e16": {
+    "en": "Admin-only in multiplayer. You can still copy your individual report below.",
+    "ch": "多人遊戲中僅限管理員. 你仍可在下方複製個人報告.",
+    "cn": "多人游戏中仅限管理员. 你仍可在下方复制个人报告."
+   },
+   "IGUI_ALifeUI_6c3ea88c410a4d96": {
+    "en": "Dev Tools",
+    "ch": "開發工具",
+    "cn": "开发工具"
+   },
+   "IGUI_ALifeUI_6d3636981e3aa808": {
+    "en": "The same menu has A-Life Creator below Remove NPCs, so you can edit, spawn and look again without leaving the game. In multiplayer press SYNC TO SERVER after editing so the server gets your catalog.",
+    "ch": "同一個選單中, 「移除 NPC」下方還有「A-Life 編輯器」, 讓你不必離開遊戲就能編輯、生成並再次檢視. 在多人遊戲中, 編輯後請按 SYNC TO SERVER, 讓伺服器取得你的目錄.",
+    "cn": "同一个菜单中, “移除 NPC”下方还有“A-Life 编辑器”, 让你不必离开游戏就能编辑、生成并再次查看. 在多人游戏中, 编辑后请按 SYNC TO SERVER, 让服务器获得你的目录."
+   },
+   "IGUI_ALifeUI_6edc8f7326914557": {
+    "en": "NPC activity",
+    "ch": "NPC 活動",
+    "cn": "NPC 活动"
+   },
+   "IGUI_ALifeUI_70250dd07cf8dd8e": {
+    "en": "Edit this NPC",
+    "ch": "編輯此 NPC",
+    "cn": "编辑此 NPC"
+   },
+   "IGUI_ALifeUI_711ba4d54705e471": {
+    "en": "Server-wide report copied.",
+    "ch": "已複製全伺服器報告.",
+    "cn": "已复制全服务器报告."
+   },
+   "IGUI_ALifeUI_738750cb35ec51a9": {
+    "en": "Display",
+    "ch": "顯示",
+    "cn": "显示"
+   },
+   "IGUI_ALifeUI_74dcde0e017a8320": {
+    "en": "Save the server-wide report first, then wait for it to finish before copying.",
+    "ch": "請先儲存全伺服器報告, 等它完成後再複製.",
+    "cn": "请先保存全服务器报告, 等其完成后再复制."
+   },
+   "IGUI_ALifeUI_7618fb4e253c5d69": {
+    "en": "Health and performance",
+    "ch": "運作狀況與效能",
+    "cn": "运行状况与性能"
+   },
+   "IGUI_ALifeUI_78dfe2c74e5b7e69": {
+    "en": "The same menu has NPC Creator, so you can edit, spawn and look again without leaving the game. In multiplayer press SYNC TO SERVER after editing so the server gets your catalog.",
+    "ch": "同一個選單中還有「NPC 編輯器」, 讓你不必離開遊戲就能編輯、生成並再次檢視. 在多人遊戲中, 編輯後請按 SYNC TO SERVER, 讓伺服器取得你的目錄.",
+    "cn": "同一个菜单中还有“NPC 编辑器”, 让你不必离开游戏就能编辑、生成并再次查看. 在多人游戏中, 编辑后请按 SYNC TO SERVER, 让服务器获得你的目录."
+   },
+   "IGUI_ALifeUI_7a6fd46d48c1cb33": {
+    "en": "Simulation",
+    "ch": "模擬",
+    "cn": "模拟"
+   },
+   "IGUI_SurvivorBriefing_LK_DL_Night": {
+    "en": "Good night. Good luck.",
+    "ch": "晚安. 祝你好運.",
+    "cn": "晚安. 祝你好运."
+   },
+   "IGUI_SurvivorBriefing_LK_DL_Sunset": {
+    "en": "Sunset in %1 h",
+    "ch": "%1 小時後日落",
+    "cn": "%1 小时后日落"
+   },
+   "IGUI_SurvivorBriefing_LK_HM_Blessings": {
+    "en": "50 Blessings",
+    "ch": "50 Blessings",
+    "cn": "50 Blessings"
+   },
+   "IGUI_SurvivorBriefing_LK_HM_Message": {
+    "en": "1 new message",
+    "ch": "1 則新留言",
+    "cn": "1 条新留言"
+   },
+   "IGUI_SurvivorBriefing_LK_MP_Bandits": {
+    "en": "%1 bandits, too.",
+    "ch": "還有 %1 個匪徒.",
+    "cn": "还有%1个土匪."
+   },
+   "IGUI_SurvivorBriefing_LK_MP_Date": {
+    "en": "%1.",
+    "ch": "%1.",
+    "cn": "%1."
+   },
+   "IGUI_SurvivorBriefing_LK_MP_Deaths": {
+    "en": "%1 of us gone.",
+    "ch": "我們失去了 %1 個人.",
+    "cn": "我们失去了%1个人."
+   },
+   "IGUI_SurvivorBriefing_LK_MP_Kills": {
+    "en": "%1 of them so far. They kept coming.",
+    "ch": "到目前為止解決了 %1 隻. 它們不斷湧來.",
+    "cn": "到目前为止解决了%1只. 它们不断涌来."
+   },
+   "IGUI_SurvivorBriefing_LK_MP_Outbreak": {
+    "en": "Day %1 of the end of the world.",
+    "ch": "世界末日的第 %1 天.",
+    "cn": "世界末日的第%1天."
+   },
+   "IGUI_SurvivorBriefing_LK_MP_Place": {
+    "en": "%1. Nobody was waiting for me here.",
+    "ch": "%1. 這裡沒有人在等我.",
+    "cn": "%1. 这里没有人在等我."
+   },
+   "IGUI_SurvivorBriefing_LK_MP_PlaceNear": {
+    "en": "%1, near %2. Nobody was waiting for me here.",
+    "ch": "%1, %2 附近. 這裡沒有人在等我.",
+    "cn": "%1, 靠近%2. 这里没有人在等我."
+   },
+   "IGUI_SurvivorBriefing_LK_MP_Weather": {
+    "en": "The sky: %1. It suited my mood.",
+    "ch": "天空: %1. 正合我的心情.",
+    "cn": "天空: %1. 正合我的心情."
+   },
+   "IGUI_SurvivorBriefing_LK_MP_Who": {
+    "en": "My name is %1. %2, before all this.",
+    "ch": "我叫 %1. 在這一切發生之前, 我是 %2.",
+    "cn": "我叫%1. 在这一切发生之前, 我是%2."
+   },
+   "IGUI_SurvivorBriefing_LK_MP_WhoNoJob": {
+    "en": "My name is %1.",
+    "ch": "我叫 %1.",
+    "cn": "我叫%1."
+   },
+   "IGUI_SurvivorBriefing_LK_RDR_Presents": {
+    "en": "%1 presents",
+    "ch": "%1 呈獻",
+    "cn": "%1 出品"
+   },
+   "IGUI_SurvivorBriefing_LK_Wayne_Corp": {
+    "en": "Wayne Enterprises",
+    "ch": "偉恩企業",
+    "cn": "韦恩企业"
+   },
+   "IGUI_SurvivorBriefing_LK_Wayne_Div": {
+    "en": "Applied Sciences Division",
+    "ch": "應用科學部",
+    "cn": "应用科学部"
+   },
+   "IGUI_SurvivorBriefing_LK_Wayne_Status": {
+    "en": "Secure connection",
+    "ch": "安全連線",
+    "cn": "安全连接"
    }
   },
   "ItemName.json": {
@@ -242066,121 +242791,6 @@
     "en": "CRT",
     "ch": "CRT",
     "cn": "CRT"
-   },
-   "injectorItems.injector_adrenaline": {
-    "en": "Adrenaline Injector",
-    "ch": "腎上腺素注射器",
-    "cn": "肾上腺素注射器"
-   },
-   "injectorItems.injector_ahf1": {
-    "en": "AHF1-M Stimulant Injector",
-    "ch": "AHF1-M 興奮劑注射器",
-    "cn": "AHF1-M 兴奋剂注射器"
-   },
-   "injectorItems.injector_btg2a2": {
-    "en": "2A2-(b-TG) Stimulant Injector",
-    "ch": "2A2-(b-TG) 興奮劑注射器",
-    "cn": "2A2-(b-TG) 兴奋剂注射器"
-   },
-   "injectorItems.injector_btg3": {
-    "en": "3-(b-TG) Stimulant Injector",
-    "ch": "3-(b-TG) 興奮劑注射器",
-    "cn": "3-(b-TG) 兴奋剂注射器"
-   },
-   "injectorItems.injector_empty": {
-    "en": "Empty Injector Cartridge",
-    "ch": "空注射器藥匣",
-    "cn": "空注射器药匣"
-   },
-   "injectorItems.injector_etg": {
-    "en": "eTG-Change Regenerative Stimulant Injector",
-    "ch": "eTG-Change 再生興奮劑注射器",
-    "cn": "eTG-Change 再生兴奋剂注射器"
-   },
-   "injectorItems.injector_meldonin": {
-    "en": "Meldonin Injector",
-    "ch": "Meldonin 注射器",
-    "cn": "Meldonin 注射器"
-   },
-   "injectorItems.injector_morphine": {
-    "en": "Morphine Injector",
-    "ch": "嗎啡注射器",
-    "cn": "吗啡注射器"
-   },
-   "injectorItems.injector_mule": {
-    "en": "M.U.L.E. Stimulant Injector",
-    "ch": "M.U.L.E. 興奮劑注射器",
-    "cn": "M.U.L.E. 兴奋剂注射器"
-   },
-   "injectorItems.injector_norepinephrine": {
-    "en": "L1 (Norepinephrine) Injector",
-    "ch": "L1 (正腎上腺素) 注射器",
-    "cn": "L1 (去甲肾上腺素) 注射器"
-   },
-   "injectorItems.injector_obdolbos": {
-    "en": "Obdolbos Cocktail Injector",
-    "ch": "Obdolbos 雞尾酒注射器",
-    "cn": "Obdolbos 鸡尾酒注射器"
-   },
-   "injectorItems.injector_obdolbos2": {
-    "en": "Obdolbos 2 Cocktail Injector",
-    "ch": "Obdolbos 2 雞尾酒注射器",
-    "cn": "Obdolbos 2 鸡尾酒注射器"
-   },
-   "injectorItems.injector_p22": {
-    "en": "P22 (Product 22) Stimulant Injector",
-    "ch": "P22 (Product 22) 興奮劑注射器",
-    "cn": "P22 (Product 22) 兴奋剂注射器"
-   },
-   "injectorItems.injector_perfotoran": {
-    "en": "Perfotoran (Blue Blood) Stimulant Injector",
-    "ch": "Perfotoran (藍血) 興奮劑注射器",
-    "cn": "Perfotoran (蓝血) 兴奋剂注射器"
-   },
-   "injectorItems.injector_pnb": {
-    "en": "PNB (Product 16) Stimulant Injector",
-    "ch": "PNB (Product 16) 興奮劑注射器",
-    "cn": "PNB (Product 16) 兴奋剂注射器"
-   },
-   "injectorItems.injector_propital": {
-    "en": "Propital Regenerative Stimulant Injector",
-    "ch": "Propital 再生興奮劑注射器",
-    "cn": "Propital 再生兴奋剂注射器"
-   },
-   "injectorItems.injector_sj1": {
-    "en": "SJ1 TGLabs Combat Stimulant Injector",
-    "ch": "SJ1 TGLabs 戰鬥興奮劑注射器",
-    "cn": "SJ1 TGLabs 战斗兴奋剂注射器"
-   },
-   "injectorItems.injector_sj12": {
-    "en": "SJ12 TGLabs Combat Stimulant Injector",
-    "ch": "SJ12 TGLabs 戰鬥興奮劑注射器",
-    "cn": "SJ12 TGLabs 战斗兴奋剂注射器"
-   },
-   "injectorItems.injector_sj6": {
-    "en": "SJ6 TGLabs Combat Stimulant Injector",
-    "ch": "SJ6 TGLabs 戰鬥興奮劑注射器",
-    "cn": "SJ6 TGLabs 战斗兴奋剂注射器"
-   },
-   "injectorItems.injector_sj9": {
-    "en": "SJ9 TGLabs Combat Stimulant Injector",
-    "ch": "SJ9 TGLabs 戰鬥興奮劑注射器",
-    "cn": "SJ9 TGLabs 战斗兴奋剂注射器"
-   },
-   "injectorItems.injector_trimadol": {
-    "en": "Trimadol Stimulant Injector",
-    "ch": "Trimadol 興奮劑注射器",
-    "cn": "Trimadol 兴奋剂注射器"
-   },
-   "injectorItems.injector_xtg": {
-    "en": "xTG-12 Antidote Injector",
-    "ch": "xTG-12 解毒劑注射器",
-    "cn": "xTG-12 解毒剂注射器"
-   },
-   "injectorItems.injector_zagustin": {
-    "en": "Zagustin Hemostatic Drug Injector",
-    "ch": "Zagustin 止血藥注射器",
-    "cn": "Zagustin 止血药注射器"
    },
    "Base.RF_StenMKIIS": {
     "en": "Sten MK II (S) Silenced Submachine Gun",
@@ -345669,6 +346279,386 @@
     "en": "Wrestling: Heavy Hands and Hard Landings",
     "ch": "《摔角》: 重手與重摔",
     "cn": "《摔跤》: 重手与重摔"
+   },
+   "Injectors.injector_empty": {
+    "en": "Empty Injector Cartridge",
+    "ch": "空注射器藥匣",
+    "cn": "空注射器药匣"
+   },
+   "Injectors.injector_black_cyan": {
+    "en": "Black Cyan Injector",
+    "ch": "注射器 (黑色, 青色)",
+    "cn": "注射器 (黑色, 青色)"
+   },
+   "Injectors.injector_black_cyan_red": {
+    "en": "Black Cyan Red Injector",
+    "ch": "注射器 (黑色, 青色, 紅色)",
+    "cn": "注射器 (黑色, 青色, 红色)"
+   },
+   "Injectors.injector_black_yellow": {
+    "en": "Black Yellow Injector",
+    "ch": "注射器 (黑色, 黃色)",
+    "cn": "注射器 (黑色, 黄色)"
+   },
+   "Injectors.injector_bright_green": {
+    "en": "Bright Green Injector",
+    "ch": "注射器 (亮綠色)",
+    "cn": "注射器 (亮绿色)"
+   },
+   "Injectors.injector_brown_lightbrown": {
+    "en": "Brown Lightbrown Injector",
+    "ch": "注射器 (棕色, 淺棕色)",
+    "cn": "注射器 (棕色, 浅棕色)"
+   },
+   "Injectors.injector_charcoal_orange": {
+    "en": "Charcoal Orange Injector",
+    "ch": "注射器 (炭灰色, 橙色)",
+    "cn": "注射器 (炭灰色, 橙色)"
+   },
+   "Injectors.injector_dark_bluegrey": {
+    "en": "Dark Bluegrey Injector",
+    "ch": "注射器 (深藍灰色)",
+    "cn": "注射器 (深蓝灰色)"
+   },
+   "Injectors.injector_deep_blue": {
+    "en": "Deep Blue Injector",
+    "ch": "注射器 (深藍色)",
+    "cn": "注射器 (深蓝色)"
+   },
+   "Injectors.injector_deep_purple": {
+    "en": "Deep Purple Injector",
+    "ch": "注射器 (深紫色)",
+    "cn": "注射器 (深紫色)"
+   },
+   "Injectors.injector_grey_bloodred": {
+    "en": "Grey Bloodred Injector",
+    "ch": "注射器 (灰色, 血紅色)",
+    "cn": "注射器 (灰色, 血红色)"
+   },
+   "Injectors.injector_grey_brown": {
+    "en": "Grey Brown Injector",
+    "ch": "注射器 (灰色, 棕色)",
+    "cn": "注射器 (灰色, 棕色)"
+   },
+   "Injectors.injector_maroon_silver": {
+    "en": "Maroon Silver Injector",
+    "ch": "注射器 (栗紅色, 銀色)",
+    "cn": "注射器 (栗红色, 银色)"
+   },
+   "Injectors.injector_navy_blue": {
+    "en": "Navy Blue Injector",
+    "ch": "注射器 (海軍藍)",
+    "cn": "注射器 (海军蓝)"
+   },
+   "Injectors.injector_olive_lightblue": {
+    "en": "Olive Lightblue Injector",
+    "ch": "注射器 (橄欖綠, 淺藍色)",
+    "cn": "注射器 (橄榄绿, 浅蓝色)"
+   },
+   "Injectors.injector_olive_pink": {
+    "en": "Olive Pink Injector",
+    "ch": "注射器 (橄欖綠, 粉紅色)",
+    "cn": "注射器 (橄榄绿, 粉红色)"
+   },
+   "Injectors.injector_purple_red": {
+    "en": "Purple Red Injector",
+    "ch": "注射器 (紫色, 紅色)",
+    "cn": "注射器 (紫色, 红色)"
+   },
+   "Injectors.injector_red_green": {
+    "en": "Red Green Injector",
+    "ch": "注射器 (紅色, 綠色)",
+    "cn": "注射器 (红色, 绿色)"
+   },
+   "Injectors.injector_red_lightblue": {
+    "en": "Red Lightblue Injector",
+    "ch": "注射器 (紅色, 淺藍色)",
+    "cn": "注射器 (红色, 浅蓝色)"
+   },
+   "Injectors.injector_slate_purple": {
+    "en": "Slate Purple Injector",
+    "ch": "注射器 (石板灰, 紫色)",
+    "cn": "注射器 (石板灰, 紫色)"
+   },
+   "Injectors.injector_teal_black": {
+    "en": "Teal Black Injector",
+    "ch": "注射器 (藍綠色, 黑色)",
+    "cn": "注射器 (蓝绿色, 黑色)"
+   },
+   "Injectors.injector_teal_green": {
+    "en": "Teal Green Injector",
+    "ch": "注射器 (藍綠色, 綠色)",
+    "cn": "注射器 (蓝绿色, 绿色)"
+   },
+   "Injectors.injector_yellow_silver": {
+    "en": "Yellow Silver Injector",
+    "ch": "注射器 (黃色, 銀色)",
+    "cn": "注射器 (黄色, 银色)"
+   },
+   "Base.TBeltOrig": {
+    "en": "Tactical belt",
+    "ch": "戰術腰帶",
+    "cn": "战术腰带"
+   },
+   "Base.TWHolster_invis": {
+    "en": "Legs Holsters",
+    "ch": "腿部槍套",
+    "cn": "腿部枪套"
+   },
+   "Base.Tgunbelt_invis": {
+    "en": "Gun Belt",
+    "ch": "槍帶",
+    "cn": "枪带"
+   },
+   "Base.MFSCP_9x39Clip30": {
+    "en": "9x39mm 30-Round Magazine",
+    "ch": "9x39mm 30 發彈匣",
+    "cn": "9x39mm 30 发弹匣"
+   },
+   "Base.MFSCP_57x28Clip20": {
+    "en": "5.7x28mm 20-Round Five-seveN Magazine",
+    "ch": "5.7x28mm Five-seveN 20 發彈匣",
+    "cn": "5.7x28mm Five-seveN 20 发弹匣"
+   },
+   "Base.MFSCP_45Drum100_Thompson": {
+    "en": "Thompson 100-Round .45 ACP Drum",
+    "ch": "湯普森 .45 ACP 100 發彈鼓",
+    "cn": "汤普森 .45 ACP 100 发弹鼓"
+   },
+   "Gunpart.MFSCP_AMB17_cat_30rd_mag": {
+    "en": "AMB-17 30-Round Magazine (decoration part)",
+    "ch": "AMB-17 30 發彈匣 (裝飾件)",
+    "cn": "AMB-17 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_AMB17_cat_50rd_drum": {
+    "en": "AMB-17 50-Round Rifle Drum (decoration part)",
+    "ch": "AMB-17 50 發步槍彈鼓 (裝飾件)",
+    "cn": "AMB-17 50 发步枪弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_AS_VAL_MOD4_cat_30rd_mag": {
+    "en": "AS Val MOD4 30-Round Magazine (decoration part)",
+    "ch": "AS Val MOD4 30 發彈匣 (裝飾件)",
+    "cn": "AS Val MOD4 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_AS_VAL_MOD4_cat_50rd_drum": {
+    "en": "AS Val MOD4 50-Round Rifle Drum (decoration part)",
+    "ch": "AS Val MOD4 50 發步槍彈鼓 (裝飾件)",
+    "cn": "AS Val MOD4 50 发步枪弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_AS_VAL_cat_30rd_mag": {
+    "en": "AS Val 30-Round Magazine (decoration part)",
+    "ch": "AS Val 30 發彈匣 (裝飾件)",
+    "cn": "AS Val 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_AS_VAL_cat_50rd_drum": {
+    "en": "AS Val 50-Round Rifle Drum (decoration part)",
+    "ch": "AS Val 50 發步槍彈鼓 (裝飾件)",
+    "cn": "AS Val 50 发步枪弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_BerettaM93R_cat_17rd_mag": {
+    "en": "Beretta M93R 17-Round Magazine (decoration part)",
+    "ch": "貝瑞塔 M93R 17 發彈匣 (裝飾件)",
+    "cn": "伯莱塔 M93R 17 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_BerettaM93R_cat_30rd_mag": {
+    "en": "Beretta M93R 30-Round Magazine (decoration part)",
+    "ch": "貝瑞塔 M93R 30 發彈匣 (裝飾件)",
+    "cn": "伯莱塔 M93R 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_BerettaM93R_cat_50rd_drum": {
+    "en": "Beretta M93R 50-Round Drum (decoration part)",
+    "ch": "貝瑞塔 M93R 50 發彈鼓 (裝飾件)",
+    "cn": "伯莱塔 M93R 50 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_EMP_cat_30rd_mag": {
+    "en": "Erma EMP 30-Round Magazine (decoration part)",
+    "ch": "埃爾瑪 EMP 30 發彈匣 (裝飾件)",
+    "cn": "埃尔玛 EMP 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_FN57_cat_20rd_mag": {
+    "en": "FN Five-seveN 20-Round Magazine (decoration part)",
+    "ch": "赫斯塔爾 Five-seveN 20 發彈匣 (裝飾件)",
+    "cn": "赫斯塔尔 Five-seveN 20 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_G17_cat_17rd_mag": {
+    "en": "Glock 17 17-Round Magazine (decoration part)",
+    "ch": "格洛克 17 17 發彈匣 (裝飾件)",
+    "cn": "格洛克 17 17 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_G17_cat_30rd_mag": {
+    "en": "Glock 17 30-Round Magazine (decoration part)",
+    "ch": "格洛克 17 30 發彈匣 (裝飾件)",
+    "cn": "格洛克 17 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_G17_cat_50rd_drum": {
+    "en": "Glock 17 50-Round Drum (decoration part)",
+    "ch": "格洛克 17 50 發彈鼓 (裝飾件)",
+    "cn": "格洛克 17 50 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_G18_cat_17rd_mag": {
+    "en": "Glock 18 17-Round Magazine (decoration part)",
+    "ch": "格洛克 18 17 發彈匣 (裝飾件)",
+    "cn": "格洛克 18 17 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_G18_cat_30rd_mag": {
+    "en": "Glock 18 30-Round Magazine (decoration part)",
+    "ch": "格洛克 18 30 發彈匣 (裝飾件)",
+    "cn": "格洛克 18 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_G18_cat_50rd_drum": {
+    "en": "Glock 18 50-Round Drum (decoration part)",
+    "ch": "格洛克 18 50 發彈鼓 (裝飾件)",
+    "cn": "格洛克 18 50 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_G19_cat_17rd_mag": {
+    "en": "Glock 19 17-Round Magazine (decoration part)",
+    "ch": "格洛克 19 17 發彈匣 (裝飾件)",
+    "cn": "格洛克 19 17 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_G19_cat_30rd_mag": {
+    "en": "Glock 19 30-Round Magazine (decoration part)",
+    "ch": "格洛克 19 30 發彈匣 (裝飾件)",
+    "cn": "格洛克 19 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_G19_cat_50rd_drum": {
+    "en": "Glock 19 50-Round Drum (decoration part)",
+    "ch": "格洛克 19 50 發彈鼓 (裝飾件)",
+    "cn": "格洛克 19 50 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_G34_cat_17rd_mag": {
+    "en": "Glock 34 17-Round Magazine (decoration part)",
+    "ch": "格洛克 34 17 發彈匣 (裝飾件)",
+    "cn": "格洛克 34 17 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_G34_cat_30rd_mag": {
+    "en": "Glock 34 30-Round Magazine (decoration part)",
+    "ch": "格洛克 34 30 發彈匣 (裝飾件)",
+    "cn": "格洛克 34 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_G34_cat_50rd_drum": {
+    "en": "Glock 34 50-Round Drum (decoration part)",
+    "ch": "格洛克 34 50 發彈鼓 (裝飾件)",
+    "cn": "格洛克 34 50 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_KrissVector_cat_30rd_mag": {
+    "en": "KRISS Vector 30-Round Magazine (decoration part)",
+    "ch": "KRISS Vector 30 發彈匣 (裝飾件)",
+    "cn": "KRISS Vector 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_KrissVector_cat_50rd_drum": {
+    "en": "KRISS Vector 50-Round Drum (decoration part)",
+    "ch": "KRISS Vector 50 發彈鼓 (裝飾件)",
+    "cn": "KRISS Vector 50 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_M9A4_cat_17rd_mag": {
+    "en": "Beretta M9A4 17-Round Magazine (decoration part)",
+    "ch": "貝瑞塔 M9A4 17 發彈匣 (裝飾件)",
+    "cn": "伯莱塔 M9A4 17 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_M9A4_cat_30rd_mag": {
+    "en": "Beretta M9A4 30-Round Magazine (decoration part)",
+    "ch": "貝瑞塔 M9A4 30 發彈匣 (裝飾件)",
+    "cn": "伯莱塔 M9A4 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_M9A4_cat_50rd_drum": {
+    "en": "Beretta M9A4 50-Round Drum (decoration part)",
+    "ch": "貝瑞塔 M9A4 50 發彈鼓 (裝飾件)",
+    "cn": "伯莱塔 M9A4 50 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_M9_cat_17rd_mag": {
+    "en": "Beretta M9 17-Round Magazine (decoration part)",
+    "ch": "貝瑞塔 M9 17 發彈匣 (裝飾件)",
+    "cn": "伯莱塔 M9 17 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_M9_cat_30rd_mag": {
+    "en": "Beretta M9 30-Round Magazine (decoration part)",
+    "ch": "貝瑞塔 M9 30 發彈匣 (裝飾件)",
+    "cn": "伯莱塔 M9 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_M9_cat_50rd_drum": {
+    "en": "Beretta M9 50-Round Drum (decoration part)",
+    "ch": "貝瑞塔 M9 50 發彈鼓 (裝飾件)",
+    "cn": "伯莱塔 M9 50 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_MP7_cat_30rd_mag": {
+    "en": "HK MP7 30-Round Magazine (decoration part)",
+    "ch": "黑克勒-科赫 MP7 30 發彈匣 (裝飾件)",
+    "cn": "黑克勒-科赫 MP7 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_MP7_cat_50rd_drum": {
+    "en": "HK MP7 50-Round Drum (decoration part)",
+    "ch": "黑克勒-科赫 MP7 50 發彈鼓 (裝飾件)",
+    "cn": "黑克勒-科赫 MP7 50 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_SIGP226_cat_17rd_mag": {
+    "en": "SIG Sauer P226 17-Round Magazine (decoration part)",
+    "ch": "西格-紹爾 P226 17 發彈匣 (裝飾件)",
+    "cn": "西格-绍尔 P226 17 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_SIGP226_cat_30rd_mag": {
+    "en": "SIG Sauer P226 30-Round Magazine (decoration part)",
+    "ch": "西格-紹爾 P226 30 發彈匣 (裝飾件)",
+    "cn": "西格-绍尔 P226 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_SIGP226_cat_50rd_drum": {
+    "en": "SIG Sauer P226 50-Round Drum (decoration part)",
+    "ch": "西格-紹爾 P226 50 發彈鼓 (裝飾件)",
+    "cn": "西格-绍尔 P226 50 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_Taran2011_cat_17rd_mag": {
+    "en": "Taran Tactical 2011 17-Round Magazine (decoration part)",
+    "ch": "塔蘭戰術 2011 17 發彈匣 (裝飾件)",
+    "cn": "塔兰战术 2011 17 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_Taran2011_cat_30rd_mag": {
+    "en": "Taran Tactical 2011 30-Round Magazine (decoration part)",
+    "ch": "塔蘭戰術 2011 30 發彈匣 (裝飾件)",
+    "cn": "塔兰战术 2011 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_Thompson_cat_100rd_drum": {
+    "en": "Thompson 100-Round Drum (decoration part)",
+    "ch": "湯普森 100 發彈鼓 (裝飾件)",
+    "cn": "汤普森 100 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_VSSM_cat_30rd_mag": {
+    "en": "VSSM 30-Round Magazine (decoration part)",
+    "ch": "VSSM 30 發彈匣 (裝飾件)",
+    "cn": "VSSM 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_VSSM_cat_50rd_drum": {
+    "en": "VSSM 50-Round Rifle Drum (decoration part)",
+    "ch": "VSSM 50 發步槍彈鼓 (裝飾件)",
+    "cn": "VSSM 50 发步枪弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_lugerP08_cat_17rd_mag": {
+    "en": "Luger P08 17-Round Magazine (decoration part)",
+    "ch": "魯格 P08 17 發彈匣 (裝飾件)",
+    "cn": "鲁格 P08 17 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_lugerP08_cat_50rd_drum": {
+    "en": "Luger P08 50-Round Drum (decoration part)",
+    "ch": "魯格 P08 50 發彈鼓 (裝飾件)",
+    "cn": "鲁格 P08 50 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_mp5_cat_30rd_mag": {
+    "en": "HK MP5 30-Round Magazine (decoration part)",
+    "ch": "黑克勒-科赫 MP5 30 發彈匣 (裝飾件)",
+    "cn": "黑克勒-科赫 MP5 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_mp5_cat_50rd_drum": {
+    "en": "HK MP5 50-Round Drum (decoration part)",
+    "ch": "黑克勒-科赫 MP5 50 發彈鼓 (裝飾件)",
+    "cn": "黑克勒-科赫 MP5 50 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_uzi_cat_30rd_mag": {
+    "en": "Uzi 30-Round Magazine (decoration part)",
+    "ch": "UZI 30 發彈匣 (裝飾件)",
+    "cn": "乌兹 30 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_uzi_cat_50rd_drum": {
+    "en": "Uzi 50-Round Drum (decoration part)",
+    "ch": "UZI 50 發彈鼓 (裝飾件)",
+    "cn": "乌兹 50 发弹鼓 (装饰件)"
    }
   },
   "Print_Media.json": {
@@ -356918,8 +357908,8 @@
    },
    "MFS_Adapt_x4Scope_To_Leupold_LPVO": {
     "en": "Adapt 4x Scope to Leupold Mark8 CQBSS LPVO Scope",
-    "ch": "將 4 倍瞄準鏡改裝為 Leupold Mark8 CQBSS LPVO 瞄準鏡",
-    "cn": "将 4 倍瞄准镜改装为利奥波德 Mark8 CQBSS LPVO 瞄准镜"
+    "ch": "將瞄準鏡 (4 倍) 改裝為 Leupold Mark8 CQBSS LPVO 瞄準鏡",
+    "cn": "将瞄准镜 (4 倍) 改装为利奥波德 Mark8 CQBSS LPVO 瞄准镜"
    },
    "MFS_Convert_40_To_GrenadeAmmo": {
     "en": "Convert New 40mm Round to Legacy 40mm Round",
@@ -356968,8 +357958,8 @@
    },
    "MFS_Restore_Leupold_LPVO_To_x4Scope": {
     "en": "Restore Leupold Mark8 CQBSS LPVO Scope to 4x Scope",
-    "ch": "將 Leupold Mark8 CQBSS LPVO 瞄準鏡還原為 4 倍瞄準鏡",
-    "cn": "将利奥波德 Mark8 CQBSS LPVO 瞄准镜还原为 4 倍瞄准镜"
+    "ch": "將 Leupold Mark8 CQBSS LPVO 瞄準鏡還原為瞄準鏡 (4 倍)",
+    "cn": "将利奥波德 Mark8 CQBSS LPVO 瞄准镜还原为瞄准镜 (4 倍)"
    },
    "MFS_Restore_Romeo5_H_To_RedDot": {
     "en": "Restore Romeo5 high mount red dot to Red Dot",
@@ -363693,8 +364683,8 @@
    },
    "MFS_Adapt_x4Scope_To_TANGO6T": {
     "en": "Adapt 4x Scope to SIG Sauer TANGO6T LPVO Scope",
-    "ch": "將 4 倍瞄準鏡改裝為西格-紹爾 TANGO6T LPVO 瞄準鏡",
-    "cn": "将 4 倍瞄准镜改装为西格-绍尔 TANGO6T LPVO 瞄准镜"
+    "ch": "將瞄準鏡 (4 倍) 改裝為西格-紹爾 TANGO6T LPVO 瞄準鏡",
+    "cn": "将瞄准镜 (4 倍) 改装为西格-绍尔 TANGO6T LPVO 瞄准镜"
    },
    "MFS_Craft_Stock_Magpul_MOE_SL_stock_fde": {
     "en": "Craft Magpul MOE SL stock (FDE)",
@@ -363708,8 +364698,8 @@
    },
    "MFS_Restore_TANGO6T_To_x4Scope": {
     "en": "Restore SIG Sauer TANGO6T LPVO Scope to 4x Scope",
-    "ch": "將西格-紹爾 TANGO6T LPVO 瞄準鏡還原為 4 倍瞄準鏡",
-    "cn": "将西格-绍尔 TANGO6T LPVO 瞄准镜还原为 4 倍瞄准镜"
+    "ch": "將西格-紹爾 TANGO6T LPVO 瞄準鏡還原為瞄準鏡 (4 倍)",
+    "cn": "将西格-绍尔 TANGO6T LPVO 瞄准镜还原为瞄准镜 (4 倍)"
    },
    "MK47Magazine(60)": {
     "en": "Craft 7.62×51mm 60-Round Coupled Magazine",
@@ -368105,6 +369095,196 @@
     "en": "Assemble 9x39mm Round (Gunworks)",
     "ch": "組裝 9x39mm 子彈 (Gunworks)",
     "cn": "组装 9x39mm 子弹 (Gunworks)"
+   },
+   "ConvertTo4570Box": {
+    "en": "Convert to Box of .45-70 Rounds",
+    "ch": "轉換為 .45-70 子彈 (整盒)",
+    "cn": "转换为 .45-70 子弹 (整盒)"
+   },
+   "ConvertTo4570Bullets": {
+    "en": "Convert to .45-70 Round",
+    "ch": "轉換為 .45-70 子彈",
+    "cn": "转换为 .45-70 子弹"
+   },
+   "ConvertTo4570Carton": {
+    "en": "Convert to Carton of .45-70 Rounds",
+    "ch": "轉換為 .45-70 子彈 (整箱)",
+    "cn": "转换为 .45-70 子弹 (整箱)"
+   },
+   "ConvertTo45ColtBullets": {
+    "en": "Convert to .45 Colt Round",
+    "ch": "轉換為 .45 Colt 子彈",
+    "cn": "转换为 .45 Colt 子弹"
+   },
+   "ConvertTo45ColtBulletsBox": {
+    "en": "Convert to Box of .45 Colt Rounds",
+    "ch": "轉換為 .45 Colt 子彈 (整盒)",
+    "cn": "转换为 .45 Colt 子弹 (整盒)"
+   },
+   "ConvertTo45ColtBulletsCarton": {
+    "en": "Convert to Carton of .45 Colt Rounds",
+    "ch": "轉換為 .45 Colt 子彈 (整箱)",
+    "cn": "转换为 .45 Colt 子弹 (整箱)"
+   },
+   "ConvertTo763x25Bullets": {
+    "en": "Convert to 7.63x25 Round",
+    "ch": "轉換為 7.63x25 子彈",
+    "cn": "转换为 7.63x25 子弹"
+   },
+   "ConvertToBullets76325Box": {
+    "en": "Convert to Box of 7.63x25 Rounds",
+    "ch": "轉換為 7.63x25 子彈 (整盒)",
+    "cn": "转换为 7.63x25 子弹 (整盒)"
+   },
+   "ConvertToBullets76325Carton": {
+    "en": "Convert to Carton of 7.63x25 Rounds",
+    "ch": "轉換為 7.63x25 子彈 (整箱)",
+    "cn": "转换为 7.63x25 子弹 (整箱)"
+   },
+   "ConvertTo57Box": {
+    "en": "Convert to Box of 5.7x28mm Rounds",
+    "ch": "轉換為 5.7x28mm 子彈 (整盒)",
+    "cn": "转换为 5.7x28mm 子弹 (整盒)"
+   },
+   "ConvertTo57Bullets": {
+    "en": "Convert to 5.7x28mm Round",
+    "ch": "轉換為 5.7x28mm 子彈",
+    "cn": "转换为 5.7x28mm 子弹"
+   },
+   "ConvertTo57Carton": {
+    "en": "Convert to Carton of 5.7x28mm Rounds",
+    "ch": "轉換為 5.7x28mm 子彈 (整箱)",
+    "cn": "转换为 5.7x28mm 子弹 (整箱)"
+   },
+   "ConvertTo76254Box": {
+    "en": "Convert to Box of 7.62x54mmR Rounds",
+    "ch": "轉換為 7.62x54R 子彈 (整盒)",
+    "cn": "转换为 7.62x54R 子弹 (整盒)"
+   },
+   "ConvertTo76254Bullets": {
+    "en": "Convert to 7.62x54mmR Round",
+    "ch": "轉換為 7.62x54R 子彈",
+    "cn": "转换为 7.62x54R 子弹"
+   },
+   "ConvertTo76254Carton": {
+    "en": "Convert to Carton of 7.62x54mmR Rounds",
+    "ch": "轉換為 7.62x54R 子彈 (整箱)",
+    "cn": "转换为 7.62x54R 子弹 (整箱)"
+   },
+   "ConvertToKentuckyRifleAssociation_kra_22LR": {
+    "en": "Convert to .22 LR Round",
+    "ch": "轉換為.22 LR子彈",
+    "cn": "转换为 .22 LR 子弹"
+   },
+   "ConvertToKentuckyRifleAssociation_kra_22LRBox": {
+    "en": "Convert to Box of .22 LR Rounds",
+    "ch": "轉換為.22 LR子彈 (整盒)",
+    "cn": "转换为 .22 LR 子弹 (整盒)"
+   },
+   "ConvertToKentuckyRifleAssociation_kra_50Bmg": {
+    "en": "Convert to .50 BMG Round",
+    "ch": "轉換為.50 BMG子彈",
+    "cn": "转换为 .50 BMG 子弹"
+   },
+   "ConvertToKentuckyRifleAssociation_kra_50BmgBox": {
+    "en": "Convert to Box of .50 BMG Rounds",
+    "ch": "轉換為.50 BMG子彈 (整盒)",
+    "cn": "转换为 .50 BMG 子弹 (整盒)"
+   },
+   "ConvertToKentuckyRifleAssociation_kra_545": {
+    "en": "Convert to 5.45x39 Round",
+    "ch": "轉換為5.45x39mm子彈",
+    "cn": "转换为 5.45x39mm 子弹"
+   },
+   "ConvertToKentuckyRifleAssociation_kra_545Box": {
+    "en": "Convert to Box of 5.45x39 Rounds",
+    "ch": "轉換為5.45x39mm子彈 (整盒)",
+    "cn": "转换为 5.45x39mm 子弹 (整盒)"
+   },
+   "ConvertToKentuckyRifleAssociation_kra_762": {
+    "en": "Convert to 7.62x39 Round",
+    "ch": "轉換為7.62x39mm子彈",
+    "cn": "转换为 7.62x39mm 子弹"
+   },
+   "ConvertToKentuckyRifleAssociation_kra_762Box": {
+    "en": "Convert to Box of 7.62x39 Rounds",
+    "ch": "轉換為7.62x39mm子彈 (整盒)",
+    "cn": "转换为 7.62x39mm 子弹 (整盒)"
+   },
+   "ConvertToKentuckyRifleAssociation_kra_762_54R": {
+    "en": "Convert to 7.62x54R Round",
+    "ch": "轉換為7.62x54R子彈",
+    "cn": "转换为 7.62x54R 子弹"
+   },
+   "ConvertToKentuckyRifleAssociation_kra_762_54RBox": {
+    "en": "Convert to Box of 7.62x54R Rounds",
+    "ch": "轉換為7.62x54R子彈 (整盒)",
+    "cn": "转换为 7.62x54R 子弹 (整盒)"
+   },
+   "ConvertToKentuckyRifleAssociation_kra_9_39": {
+    "en": "Convert to 9x39 Round",
+    "ch": "轉換為9x39mm子彈",
+    "cn": "转换为 9x39mm 子弹"
+   },
+   "ConvertToKentuckyRifleAssociation_kra_9_39Box": {
+    "en": "Convert to Box of 9x39 Rounds",
+    "ch": "轉換為9x39mm子彈 (整盒)",
+    "cn": "转换为 9x39mm 子弹 (整盒)"
+   },
+   "ConvertTo46Box": {
+    "en": "Convert to Box of 4.6x30mm Rounds",
+    "ch": "轉換為 4.6x30mm 子彈 (整盒)",
+    "cn": "转换为 4.6x30mm 子弹 (整盒)"
+   },
+   "ConvertTo46Bullets": {
+    "en": "Convert to 4.6x30mm Round",
+    "ch": "轉換為 4.6x30mm 子彈",
+    "cn": "转换为 4.6x30mm 子弹"
+   },
+   "ConvertTo46Carton": {
+    "en": "Convert to Carton of 4.6x30mm Rounds",
+    "ch": "轉換為 4.6x30mm 子彈 (整箱)",
+    "cn": "转换为 4.6x30mm 子弹 (整箱)"
+   },
+   "TBeltOrig": {
+    "en": "Tactical belt",
+    "ch": "戰術腰帶",
+    "cn": "战术腰带"
+   },
+   "5.56BeltBox(200)": {
+    "en": "Craft 5.56x45mm 200-Round MG Box Magazine",
+    "ch": "製作 5.56x45mm 200 發機槍彈箱",
+    "cn": "制作 5.56x45mm 200 发机枪弹箱"
+   },
+   "5.7x28Magazine(20)": {
+    "en": "Craft 5.7x28mm 20-Round Five-seveN Magazine",
+    "ch": "製作 5.7x28mm Five-seveN 20 發彈匣",
+    "cn": "制作 5.7x28mm Five-seveN 20 发弹匣"
+   },
+   "9x39Magazine(30)": {
+    "en": "Craft 9x39mm 30-Round Magazine",
+    "ch": "製作 9x39mm 30 發彈匣",
+    "cn": "制作 9x39mm 30 发弹匣"
+   },
+   "MFS_Adapt_x4Scope_To_ACOG_RMR_BK": {
+    "en": "Adapt 4x Scope to Trijicon ACOG/RMR (Black)",
+    "ch": "將瞄準鏡 (4 倍) 改裝為 Trijicon ACOG/RMR (黑色)",
+    "cn": "将瞄准镜 (4 倍) 改装为 Trijicon ACOG/RMR (黑色)"
+   },
+   "MFS_Adapt_x4Scope_To_ACOG_RMR_FDE": {
+    "en": "Adapt 4x Scope to Trijicon ACOG/RMR (FDE)",
+    "ch": "將瞄準鏡 (4 倍) 改裝為 Trijicon ACOG/RMR (沙色)",
+    "cn": "将瞄准镜 (4 倍) 改装为 Trijicon ACOG/RMR (沙色)"
+   },
+   "MFS_Restore_ACOG_RMR_BK_To_x4Scope": {
+    "en": "Restore Trijicon ACOG/RMR (Black) to 4x Scope",
+    "ch": "將 Trijicon ACOG/RMR (黑色) 還原為瞄準鏡 (4 倍)",
+    "cn": "将 Trijicon ACOG/RMR (黑色) 还原为瞄准镜 (4 倍)"
+   },
+   "MFS_Restore_ACOG_RMR_FDE_To_x4Scope": {
+    "en": "Restore Trijicon ACOG/RMR (FDE) to 4x Scope",
+    "ch": "將 Trijicon ACOG/RMR (沙色) 還原為瞄準鏡 (4 倍)",
+    "cn": "将 Trijicon ACOG/RMR (沙色) 还原为瞄准镜 (4 倍)"
    }
   },
   "Sandbox.json": {
@@ -398532,9 +399712,9 @@
     "cn": "Guns of Marz 弹匣掉落率"
    },
    "Sandbox_GunsOfMarzMagazineDropRate_tooltip": {
-    "en": "<RGB:1,1,1>The chance that a zombie you kill is\ncarrying a magazine.\n\nThis is the total chance, not the\nchance for each magazine. All the\nmagazines you turn on share it.\nTurning a caliber off changes which\nmagazine you get, not how often you\nget one.\n\n<RGB:0.100,0.800,1.000>Most zombies are checked twice. At\n0.5 you get a magazine from about 1\nbody in 100. The 34 magazines share\nthat chance.\n\n<RGB:1.000,0.700,0.200>The 6 base game magazines are in\nthat count. This pack drops them so\nit can work on its own. If Ammo Loot\nDrop Magazine is also on, that mod\ndrops them instead, and only the 28\nthis pack adds share the chance\nhere.\n\n<RGB:0.800,1.000,0.000>A loaded magazine is ammunition you\ncan fire straight away. It is worth\nmore than the same rounds found\nloose. Raise this slowly.\n\n<RGB:1,1,1>Set it to 0 to stop the drop.",
-    "ch": "<RGB:1,1,1>你擊殺的殭屍身上帶有彈匣的\n機率.\n\n這是總機率, 而非每種彈匣各自的\n機率. 所有已開啟的彈匣共用\n這個機率. 關閉某種口徑\n只會改變你拿到哪種彈匣,\n而不會改變你拿到\n彈匣的頻率.\n\n<RGB:0.100,0.800,1.000>大多數殭屍會被判定兩次. 設為\n0.5 時, 大約每 100 具屍體\n會掉落 1 個彈匣. 34 種彈匣共用\n這個機率.\n\n<RGB:1.000,0.700,0.200>其中包含 6 種本體遊戲的彈匣.\n本包會自行掉落它們, 因此可以\n獨立運作. 若同時啟用 Ammo Loot\nDrop Magazine, 則改由該模組\n掉落它們, 這裡只剩本包新增的\n28 種彈匣共用\n此機率.\n\n<RGB:0.800,1.000,0.000>已裝彈的彈匣就是能立刻\n射擊的彈藥. 它比同樣數量的\n散裝子彈更有價值.\n請慢慢調高.\n\n<RGB:1,1,1>設為 0 即停止掉落.",
-    "cn": "<RGB:1,1,1>你击杀的僵尸身上带有弹匣的\n概率.\n\n这是总概率, 而非每种弹匣各自的\n概率. 所有已开启的弹匣共用\n这个概率. 关闭某种口径\n只会改变你拿到哪种弹匣,\n而不会改变你拿到\n弹匣的频率.\n\n<RGB:0.100,0.800,1.000>大多数僵尸会被判定两次. 设为\n0.5 时, 大约每 100 具尸体\n会掉落 1 个弹匣. 34 种弹匣共用\n这个概率.\n\n<RGB:1.000,0.700,0.200>其中包含 6 种本体游戏的弹匣.\n本包会自行掉落它们, 因此可以\n独立运作. 若同时启用 Ammo Loot\nDrop Magazine, 则改由该模组\n掉落它们, 这里只剩本包新增的\n28 种弹匣共用\n此概率.\n\n<RGB:0.800,1.000,0.000>已装弹的弹匣就是能立刻\n射击的弹药. 它比同样数量的\n散装子弹更有价值.\n请慢慢调高.\n\n<RGB:1,1,1>设为 0 即停止掉落."
+    "en": "<RGB:1,1,1>The chance that a zombie you kill is\ncarrying a magazine.\n\nThis is the total chance, not the\nchance for each magazine. All the\nmagazines you turn on share it.\nTurning a caliber off changes which\nmagazine you get, not how often you\nget one.\n\n<RGB:0.100,0.800,1.000>Most zombies are checked twice. At\n0.5 you get a magazine from about 1\nbody in 100. The 35 magazines share\nthat chance.\n\n<RGB:1.000,0.700,0.200>The 6 base game magazines are in\nthat count. This pack drops them so\nit can work on its own. If Ammo Loot\nDrop Magazine is also on, that mod\ndrops them instead, and only the 29\nthis pack adds share the chance\nhere.\n\n<RGB:0.800,1.000,0.000>A loaded magazine is ammunition you\ncan fire straight away. It is worth\nmore than the same rounds found\nloose. Raise this slowly.\n\n<RGB:1,1,1>Set it to 0 to stop the drop.",
+    "ch": "<RGB:1,1,1>你擊殺的殭屍身上帶有彈匣的\n機率.\n\n這是總機率, 而非每種彈匣各自的\n機率. 所有已開啟的彈匣共用\n這個機率. 關閉某種口徑\n只會改變你拿到哪種彈匣,\n而不會改變你拿到\n彈匣的頻率.\n\n<RGB:0.100,0.800,1.000>大多數殭屍會被判定兩次. 設為\n0.5 時, 大約每 100 具屍體\n會掉落 1 個彈匣. 35 種彈匣共用\n這個機率.\n\n<RGB:1.000,0.700,0.200>其中包含 6 種本體遊戲的彈匣.\n本包會自行掉落它們, 因此可以\n獨立運作. 若同時啟用 Ammo Loot\nDrop Magazine, 則改由該模組\n掉落它們, 這裡只剩本包新增的\n29 種彈匣共用\n此機率.\n\n<RGB:0.800,1.000,0.000>已裝彈的彈匣就是能立刻\n射擊的彈藥. 它比同樣數量的\n散裝子彈更有價值.\n請慢慢調高.\n\n<RGB:1,1,1>設為 0 即停止掉落.",
+    "cn": "<RGB:1,1,1>你击杀的僵尸身上带有弹匣的\n概率.\n\n这是总概率, 而非每种弹匣各自的\n概率. 所有已开启的弹匣共用\n这个概率. 关闭某种口径\n只会改变你拿到哪种弹匣,\n而不会改变你拿到\n弹匣的频率.\n\n<RGB:0.100,0.800,1.000>大多数僵尸会被判定两次. 设为\n0.5 时, 大约每 100 具尸体\n会掉落 1 个弹匣. 35 种弹匣共用\n这个概率.\n\n<RGB:1.000,0.700,0.200>其中包含 6 种本体游戏的弹匣.\n本包会自行掉落它们, 因此可以\n独立运作. 若同时启用 Ammo Loot\nDrop Magazine, 则改由该模组\n掉落它们, 这里只剩本包新增的\n29 种弹匣共用\n此概率.\n\n<RGB:0.800,1.000,0.000>已装弹的弹匣就是能立刻\n射击的弹药. 它比同样数量的\n散装子弹更有价值.\n请慢慢调高.\n\n<RGB:1,1,1>设为 0 即停止掉落."
    },
    "Sandbox_GunsOfMarzMagazine_ArmedZombiesOnly": {
     "en": "Only Armed Zombies Drop Magazines",
@@ -398578,8 +399758,8 @@
    },
    "Sandbox_GunsOfMarzMagazine_Mags3006_Bullet": {
     "en": "Drop .30-06 Springfield Magazines",
-    "ch": "掉落.30-06斯普林菲爾德彈彈匣",
-    "cn": "掉落.30-06斯普林菲尔德弹弹匣"
+    "ch": "掉落.30-06春田彈匣",
+    "cn": "掉落.30-06春田弹匣"
    },
    "Sandbox_GunsOfMarzMagazine_Mags3006_Bullet_tooltip": {
     "en": "BAR 20Rds .30-06 Magazine\nEn Bloc 8Rds .30-06 Clip",
@@ -398682,9 +399862,9 @@
     "cn": "掉落9x19mm弹匣"
    },
    "Sandbox_GunsOfMarzMagazine_Mags9x19_Bullet_tooltip": {
-    "en": "Hi-Power 13Rds 9x19mm Magazine\nM92FS 15Rds 9x19mm Magazine\nM93R 18Rds 9x19mm Magazine\nMP5 20Rds 9x19mm Magazine\nP226 10Rds 9x19mm Magazine\nTEC-9 20Rds 9x19mm Magazine\nVP70M 18Rds 9x19mm Magazine",
-    "ch": "Hi-Power 13發9x19mm彈匣\nM92FS 15發9x19mm彈匣\nM93R 18發9x19mm彈匣\nMP5 20發9x19mm彈匣\nP226 10發9x19mm彈匣\nTEC-9 20發9x19mm彈匣\nVP70M 18發9x19mm彈匣",
-    "cn": "Hi-Power 13发9x19mm弹匣\nM92FS 15发9x19mm弹匣\nM93R 18发9x19mm弹匣\nMP5 20发9x19mm弹匣\nP226 10发9x19mm弹匣\nTEC-9 20发9x19mm弹匣\nVP70M 18发9x19mm弹匣"
+    "en": "Glock-17 17Rds 9x19mm Magazine\nHi-Power 13Rds 9x19mm Magazine\nM92FS 15Rds 9x19mm Magazine\nM93R 18Rds 9x19mm Magazine\nMP5 20Rds 9x19mm Magazine\nP226 10Rds 9x19mm Magazine\nTEC-9 20Rds 9x19mm Magazine\nVP70M 18Rds 9x19mm Magazine",
+    "ch": "Glock-17 17發9x19mm彈匣\nHi-Power 13發9x19mm彈匣\nM92FS 15發9x19mm彈匣\nM93R 18發9x19mm彈匣\nMP5 20發9x19mm彈匣\nP226 10發9x19mm彈匣\nTEC-9 20發9x19mm彈匣\nVP70M 18發9x19mm彈匣",
+    "cn": "Glock-17 17发9x19mm弹匣\nHi-Power 13发9x19mm弹匣\nM92FS 15发9x19mm弹匣\nM93R 18发9x19mm弹匣\nMP5 20发9x19mm弹匣\nP226 10发9x19mm弹匣\nTEC-9 20发9x19mm弹匣\nVP70M 18发9x19mm弹匣"
    },
    "Sandbox_GunsOfMarzMagazine_Mags9x39_Bullet": {
     "en": "Drop 9x39mm Magazines",
@@ -432015,6 +433195,626 @@
     "en": "100 = current balance, 50 = half, 200 = double. Scales attack stamina cost, including paired throws. Zero removes the cost; minimum stamina requirements still apply. Does not change dodge costs.",
     "ch": "100 = 目前平衡, 50 = 一半, 200 = 兩倍. 調整攻擊的耐力消耗, 包括雙人摔投. 設為 0 即不消耗; 最低耐力需求仍然適用. 不影響閃避消耗.",
     "cn": "100 = 当前平衡, 50 = 一半, 200 = 两倍. 调整攻击的耐力消耗, 包括双人投摔. 设为0则不消耗; 最低耐力要求依然有效. 不影响闪避消耗."
+   },
+   "Sandbox_Injectors.GLOBAL_BLACK_CYAN_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Black Cyan Injector Spawn Weight",
+    "ch": "注射器 (黑色, 青色) 生成權重",
+    "cn": "注射器 (黑色, 青色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_BLACK_CYAN_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the black cyan injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (黑色, 青色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (黑色, 青色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_BLACK_CYAN_RED_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Black Cyan Red Injector Spawn Weight",
+    "ch": "注射器 (黑色, 青色, 紅色) 生成權重",
+    "cn": "注射器 (黑色, 青色, 红色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_BLACK_CYAN_RED_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the black cyan red injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (黑色, 青色, 紅色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (黑色, 青色, 红色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_BLACK_YELLOW_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Black Yellow Injector Spawn Weight",
+    "ch": "注射器 (黑色, 黃色) 生成權重",
+    "cn": "注射器 (黑色, 黄色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_BLACK_YELLOW_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the black yellow injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (黑色, 黃色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (黑色, 黄色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_BRIGHT_GREEN_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Bright Green Injector Spawn Weight",
+    "ch": "注射器 (亮綠色) 生成權重",
+    "cn": "注射器 (亮绿色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_BRIGHT_GREEN_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the bright green injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (亮綠色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (亮绿色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_BROWN_LIGHTBROWN_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Brown Lightbrown Injector Spawn Weight",
+    "ch": "注射器 (棕色, 淺棕色) 生成權重",
+    "cn": "注射器 (棕色, 浅棕色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_BROWN_LIGHTBROWN_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the brown lightbrown injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (棕色, 淺棕色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (棕色, 浅棕色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_CHARCOAL_ORANGE_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Charcoal Orange Injector Spawn Weight",
+    "ch": "注射器 (炭灰色, 橙色) 生成權重",
+    "cn": "注射器 (炭灰色, 橙色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_CHARCOAL_ORANGE_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the charcoal orange injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (炭灰色, 橙色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (炭灰色, 橙色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_DARK_BLUEGREY_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Dark Bluegrey Injector Spawn Weight",
+    "ch": "注射器 (深藍灰色) 生成權重",
+    "cn": "注射器 (深蓝灰色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_DARK_BLUEGREY_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the dark bluegrey injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (深藍灰色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (深蓝灰色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_DEEP_BLUE_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Deep Blue Injector Spawn Weight",
+    "ch": "注射器 (深藍色) 生成權重",
+    "cn": "注射器 (深蓝色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_DEEP_BLUE_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the deep blue injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (深藍色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (深蓝色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_DEEP_PURPLE_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Deep Purple Injector Spawn Weight",
+    "ch": "注射器 (深紫色) 生成權重",
+    "cn": "注射器 (深紫色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_DEEP_PURPLE_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the deep purple injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (深紫色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (深紫色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_EFFECT_POLLING_RATE": {
+    "en": "Effect Polling Rate",
+    "ch": "效果輪詢間隔",
+    "cn": "效果轮询间隔"
+   },
+   "Sandbox_Injectors.GLOBAL_EFFECT_POLLING_RATE_tooltip": {
+    "en": "Rate at which player effects are polled. Debug feature.",
+    "ch": "輪詢玩家效果的間隔. 除錯功能.",
+    "cn": "轮询玩家效果的间隔. 调试功能."
+   },
+   "Sandbox_Injectors.GLOBAL_GREY_BLOODRED_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Grey Bloodred Injector Spawn Weight",
+    "ch": "注射器 (灰色, 血紅色) 生成權重",
+    "cn": "注射器 (灰色, 血红色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_GREY_BLOODRED_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the grey bloodred injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (灰色, 血紅色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (灰色, 血红色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_GREY_BROWN_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Grey Brown Injector Spawn Weight",
+    "ch": "注射器 (灰色, 棕色) 生成權重",
+    "cn": "注射器 (灰色, 棕色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_GREY_BROWN_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the grey brown injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (灰色, 棕色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (灰色, 棕色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_INJECTION_DURATION": {
+    "en": "Injection Duration",
+    "ch": "注射所需時間",
+    "cn": "注射时长"
+   },
+   "Sandbox_Injectors.GLOBAL_INJECTION_DURATION_tooltip": {
+    "en": "Duration of the timed action required to apply an injector.",
+    "ch": "使用注射器所需計時動作的持續時間.",
+    "cn": "使用注射器所需计时动作的持续时间."
+   },
+   "Sandbox_Injectors.GLOBAL_INJECTOR_EQUIP_SPEED": {
+    "en": "Injector Equip Speed",
+    "ch": "注射器裝備時間",
+    "cn": "注射器装备时间"
+   },
+   "Sandbox_Injectors.GLOBAL_INJECTOR_EQUIP_SPEED_tooltip": {
+    "en": "How much time it takes to equip an injector.",
+    "ch": "裝備注射器需要多少時間.",
+    "cn": "装备注射器需要多少时间."
+   },
+   "Sandbox_Injectors.GLOBAL_LOGGER_OFFSET": {
+    "en": "Logger Time Offset",
+    "ch": "日誌時間偏移",
+    "cn": "日志时间偏移"
+   },
+   "Sandbox_Injectors.GLOBAL_LOGGER_OFFSET_tooltip": {
+    "en": "Timezone offset applied to log timestamps in hours.",
+    "ch": "套用到日誌時間戳記的時區偏移, 單位為小時.",
+    "cn": "应用到日志时间戳的时区偏移, 单位为小时."
+   },
+   "Sandbox_Injectors.GLOBAL_MAROON_SILVER_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Maroon Silver Injector Spawn Weight",
+    "ch": "注射器 (栗紅色, 銀色) 生成權重",
+    "cn": "注射器 (栗红色, 银色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_MAROON_SILVER_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the maroon silver injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (栗紅色, 銀色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (栗红色, 银色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_NAVY_BLUE_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Navy Blue Injector Spawn Weight",
+    "ch": "注射器 (海軍藍) 生成權重",
+    "cn": "注射器 (海军蓝) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_NAVY_BLUE_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the navy blue injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (海軍藍) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (海军蓝) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_OLIVE_LIGHTBLUE_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Olive Lightblue Injector Spawn Weight",
+    "ch": "注射器 (橄欖綠, 淺藍色) 生成權重",
+    "cn": "注射器 (橄榄绿, 浅蓝色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_OLIVE_LIGHTBLUE_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the olive lightblue injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (橄欖綠, 淺藍色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (橄榄绿, 浅蓝色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_OLIVE_PINK_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Olive Pink Injector Spawn Weight",
+    "ch": "注射器 (橄欖綠, 粉紅色) 生成權重",
+    "cn": "注射器 (橄榄绿, 粉红色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_OLIVE_PINK_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the olive pink injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (橄欖綠, 粉紅色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (橄榄绿, 粉红色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_OVERDOSE_BLOCK_ENABLED": {
+    "en": "Overdose Injection Block",
+    "ch": "藥物過量時禁止注射",
+    "cn": "药物过量时禁止注射"
+   },
+   "Sandbox_Injectors.GLOBAL_OVERDOSE_BLOCK_ENABLED_tooltip": {
+    "en": "When overdose death is disabled, the character cannot inject while overdose is at or above the threshold.",
+    "ch": "停用藥物過量死亡時, 藥物過量值達到或超過閾值期間角色無法注射.",
+    "cn": "禁用药物过量死亡时, 药物过量值达到或超过阈值期间角色无法注射."
+   },
+   "Sandbox_Injectors.GLOBAL_OVERDOSE_DEATH_ENABLED": {
+    "en": "Overdose Death",
+    "ch": "藥物過量死亡",
+    "cn": "药物过量死亡"
+   },
+   "Sandbox_Injectors.GLOBAL_OVERDOSE_DEATH_ENABLED_tooltip": {
+    "en": "Whether to force character death when overdose reaches 100%.",
+    "ch": "藥物過量值達到 100%% 時是否強制角色死亡.",
+    "cn": "药物过量值达到 100%% 时是否强制角色死亡."
+   },
+   "Sandbox_Injectors.GLOBAL_OVERDOSE_DECAY": {
+    "en": "Overdose Decay Amount",
+    "ch": "藥物過量衰減量",
+    "cn": "药物过量衰减量"
+   },
+   "Sandbox_Injectors.GLOBAL_OVERDOSE_DECAY_tooltip": {
+    "en": "Overdose points removed at each decay step.",
+    "ch": "每次衰減時移除的藥物過量點數.",
+    "cn": "每次衰减时移除的药物过量点数."
+   },
+   "Sandbox_Injectors.GLOBAL_OVERDOSE_RATE": {
+    "en": "Overdose Decay Rate",
+    "ch": "藥物過量衰減間隔",
+    "cn": "药物过量衰减间隔"
+   },
+   "Sandbox_Injectors.GLOBAL_OVERDOSE_RATE_tooltip": {
+    "en": "Ticks between decay steps.",
+    "ch": "兩次衰減之間相隔的 tick 數.",
+    "cn": "两次衰减之间间隔的 tick 数."
+   },
+   "Sandbox_Injectors.GLOBAL_OVERDOSE_THRESHOLD": {
+    "en": "Overdose Threshold",
+    "ch": "藥物過量閾值",
+    "cn": "药物过量阈值"
+   },
+   "Sandbox_Injectors.GLOBAL_OVERDOSE_THRESHOLD_tooltip": {
+    "en": "Maximum character overdose level.",
+    "ch": "角色藥物過量值的上限.",
+    "cn": "角色药物过量值的上限."
+   },
+   "Sandbox_Injectors.GLOBAL_PAINKILLERS_OVERDOSE_PENALTY": {
+    "en": "Painkillers Overdose Penalty",
+    "ch": "止痛藥藥物過量懲罰",
+    "cn": "止痛药药物过量惩罚"
+   },
+   "Sandbox_Injectors.GLOBAL_PAINKILLERS_OVERDOSE_PENALTY_tooltip": {
+    "en": "Amount of overdose added per consumed vanilla painkiller.",
+    "ch": "每服用一次原版止痛藥所增加的藥物過量值.",
+    "cn": "每服用一次原版止痛药所增加的药物过量值."
+   },
+   "Sandbox_Injectors.GLOBAL_PURPLE_RED_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Purple Red Injector Spawn Weight",
+    "ch": "注射器 (紫色, 紅色) 生成權重",
+    "cn": "注射器 (紫色, 红色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_PURPLE_RED_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the purple red injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (紫色, 紅色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (紫色, 红色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_RED_GREEN_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Red Green Injector Spawn Weight",
+    "ch": "注射器 (紅色, 綠色) 生成權重",
+    "cn": "注射器 (红色, 绿色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_RED_GREEN_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the red green injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (紅色, 綠色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (红色, 绿色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_RED_LIGHTBLUE_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Red Lightblue Injector Spawn Weight",
+    "ch": "注射器 (紅色, 淺藍色) 生成權重",
+    "cn": "注射器 (红色, 浅蓝色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_RED_LIGHTBLUE_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the red lightblue injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (紅色, 淺藍色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (红色, 浅蓝色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_SLATE_PURPLE_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Slate Purple Injector Spawn Weight",
+    "ch": "注射器 (石板灰, 紫色) 生成權重",
+    "cn": "注射器 (石板灰, 紫色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_SLATE_PURPLE_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the slate purple injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (石板灰, 紫色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (石板灰, 紫色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_TEAL_BLACK_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Teal Black Injector Spawn Weight",
+    "ch": "注射器 (藍綠色, 黑色) 生成權重",
+    "cn": "注射器 (蓝绿色, 黑色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_TEAL_BLACK_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the teal black injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (藍綠色, 黑色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (蓝绿色, 黑色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_TEAL_GREEN_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Teal Green Injector Spawn Weight",
+    "ch": "注射器 (藍綠色, 綠色) 生成權重",
+    "cn": "注射器 (蓝绿色, 绿色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_TEAL_GREEN_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the teal green injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (藍綠色, 綠色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (蓝绿色, 绿色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors.GLOBAL_YELLOW_SILVER_INJECTOR_SPAWN_WEIGHT": {
+    "en": "Yellow Silver Injector Spawn Weight",
+    "ch": "注射器 (黃色, 銀色) 生成權重",
+    "cn": "注射器 (黄色, 银色) 生成权重"
+   },
+   "Sandbox_Injectors.GLOBAL_YELLOW_SILVER_INJECTOR_SPAWN_WEIGHT_tooltip": {
+    "en": "Chance for the yellow silver injector to take place of the spawned dummy injector.<BR>Uses custom weights. Total custom spawn weight must not exceed 100.",
+    "ch": "注射器 (黃色, 銀色) 取代已生成佔位注射器的機率.<BR>使用自訂權重. 自訂生成權重總和不得超過 100.",
+    "cn": "注射器 (黄色, 银色) 替换已生成占位注射器的几率.<BR>使用自定义权重. 自定义生成权重总和不得超过 100."
+   },
+   "Sandbox_Injectors_global": {
+    "en": "Injectors",
+    "ch": "注射針劑模組",
+    "cn": "注射针剂模组"
+   },
+   "Sandbox_ZombieVirusVaccineBETA_AllowBodyCompostage": {
+    "en": "Allow Body Composting",
+    "ch": "允許屍體堆肥",
+    "cn": "允许尸体堆肥"
+   },
+   "Sandbox_ZombieVirusVaccineBETA_AllowBodyCompostage_tooltip": {
+    "en": "Allows players to place corpses in a composter to produce fertilizer",
+    "ch": "允許玩家將屍體放入堆肥箱以產生肥料",
+    "cn": "允许玩家将尸体放入堆肥箱以产生肥料"
+   },
+   "Sandbox_JC_MemberRights": {
+    "en": "Per-Member Rights",
+    "ch": "個別成員權限",
+    "cn": "成员个别权限"
+   },
+   "Sandbox_JC_MemberRights_tooltip": {
+    "en": "When enabled, a claim owner can set what each member may do: use containers, build, destroy, and manage members. Presets are Guest (may enter, nothing else), Member and Manager. Existing members keep full Member rights until the owner changes them. Off: members work exactly as before.",
+    "ch": "啟用後, 認領擁有者可以設定每位成員能做的事: 使用容器、建造、破壞與管理成員. 預設組合有來賓 (可進入, 其他都不行)、成員與管理者. 既有成員會保有完整的成員權限, 直到擁有者變更為止. 關閉: 成員的運作方式與以前完全相同.",
+    "cn": "启用后, 认领所有者可以设置每位成员能做的事: 使用容器、建造、破坏和管理成员. 预设有宾客 (可进入, 其他都不行)、成员和管理者. 现有成员会保留完整的成员权限, 直到所有者更改为止. 关闭: 成员的运作方式与以前完全相同."
+   },
+   "Sandbox_JC_PublicEntry": {
+    "en": "Public Entry",
+    "ch": "公開進入",
+    "cn": "公开进入"
+   },
+   "Sandbox_JC_PublicEntry_tooltip": {
+    "en": "When enabled, a claim owner can open a safehouse to the public. Visitors may walk in (and optionally use containers) but are never members. Only works when the server option SafehouseAllowTrepass is off and DisableSafehouseWhenOwnerConnected is off. While inside, a visitor counts as a visit for the vanilla SafeHouseRemovalTime clock (not for this mod's own claim expiry). Turning this off closes every open claim and removes any visitor inside within a second.",
+    "ch": "啟用後, 認領擁有者可以將安全屋對外開放. 訪客可以走進來 (並可選擇讓他們使用容器), 但永遠不會是成員. 僅在伺服器選項 SafehouseAllowTrepass 與 DisableSafehouseWhenOwnerConnected 都關閉時才有效. 訪客待在裡面時, 會算作原版 SafeHouseRemovalTime 計時的一次造訪 (不計入本模組自己的認領過期). 關閉此項會關閉所有開放中的認領, 並在一秒內移除裡面的所有訪客.",
+    "cn": "启用后, 认领所有者可以将安全屋对外开放. 访客可以走进来 (并可选择让他们使用容器), 但永远不会是成员. 仅在服务器选项 SafehouseAllowTrepass 和 DisableSafehouseWhenOwnerConnected 都关闭时才有效. 访客待在里面时, 会算作原版 SafeHouseRemovalTime 计时的一次造访 (不计入本模组自己的认领过期). 关闭此项会关闭所有开放中的认领, 并在一秒内移除里面的所有访客."
+   },
+   "Sandbox_Locksmith_AlarmMinChance": {
+    "en": "Lowest alarm chance",
+    "ch": "最低警報機率",
+    "cn": "最低警报几率"
+   },
+   "Sandbox_Locksmith_AlarmMinChance_tooltip": {
+    "en": "However high Nimble gets, a pick never becomes completely silent against an alarmed building. Set to 0 to let a master picker beat an alarm outright. Turn off and a window already latched no longer holds.",
+    "ch": "無論靈活多高, 對裝有警報的建築撬鎖都不會完全無聲. 設為 0 可讓撬鎖高手完全不觸發警報. 關閉後, 已閂上的窗戶也不再鎖得住.",
+    "cn": "无论灵活多高, 对装有警报的建筑撬锁都不会完全无声. 设为 0 可让撬锁高手完全不触发警报. 关闭后, 已闩上的窗户也不再锁得住."
+   },
+   "Sandbox_Locksmith_AlarmOnBreakIn": {
+    "en": "Breaking in trips a house alarm",
+    "ch": "闖入會觸發房屋警報",
+    "cn": "闯入会触发房屋警报"
+   },
+   "Sandbox_Locksmith_AlarmOnBreakIn_tooltip": {
+    "en": "In the base game only climbing through a window can set off a house alarm, so prying the front door off its hinges is completely silent. With this on, picking, prying or cutting your way into an alarmed building wakes it too. Only a successful break-in trips it.",
+    "ch": "原版遊戲中只有爬窗才會觸發房屋警報, 所以把前門從鉸鏈上撬下來完全不會響. 開啟後, 以撬鎖、撬開或剪斷的方式闖入裝有警報的建築也會觸發警報. 只有成功闖入才會觸發.",
+    "cn": "在原版游戏中, 只有翻窗才会触发房屋警报, 因此把前门从铰链上撬下来完全不会响. 开启后, 以撬锁、撬开或剪断的方式闯入装有警报的建筑同样会触发警报. 只有成功闯入才会触发."
+   },
+   "Sandbox_Locksmith_AlarmPerNimble": {
+    "en": "Alarm chance removed per Nimble level",
+    "ch": "每級靈活降低的警報機率",
+    "cn": "每级灵活降低的警报几率"
+   },
+   "Sandbox_Locksmith_AlarmPerNimble_tooltip": {
+    "en": "Taken off both alarm chances for each level of Nimble, so a practised hand is quieter whether the attempt lands or not. One slider moves both cases together, which is what stops them ever crossing over.",
+    "ch": "每級靈活從兩種警報機率各扣除的數值, 所以熟練的手不論嘗試成功與否都更安靜. 一個滑桿同時調整兩種情況, 這樣兩者的高低才永遠不會顛倒.",
+    "cn": "每级灵活从两种警报几率中各扣除的数值, 因此熟练的手无论尝试成功与否都更安静. 一个滑块同时调整两种情况, 这样两者的高低才永远不会颠倒."
+   },
+   "Sandbox_Locksmith_AlarmPickFailChance": {
+    "en": "Alarm chance on a failed pick",
+    "ch": "撬鎖失敗時的警報機率",
+    "cn": "撬锁失败时的警报几率"
+   },
+   "Sandbox_Locksmith_AlarmPickFailChance_tooltip": {
+    "en": "How likely a botched lockpick attempt is to wake an alarmed building, before Nimble is taken off. Fumbling a lock is the loudest way to meet one, so this is the higher of the two.",
+    "ch": "撬鎖失敗時驚動裝有警報之建築的機率, 未扣除靈活減免. 笨手笨腳地弄鎖是碰上警報最吵的方式, 所以這是兩者中較高的那個.",
+    "cn": "撬锁失败时惊动装有警报的建筑的几率, 尚未扣除灵活减免. 笨手笨脚地摆弄锁是碰上警报最吵的方式, 因此这是两者中较高的一个."
+   },
+   "Sandbox_Locksmith_AlarmPickSuccessChance": {
+    "en": "Alarm chance on a successful pick",
+    "ch": "撬鎖成功時的警報機率",
+    "cn": "撬锁成功时的警报几率"
+   },
+   "Sandbox_Locksmith_AlarmPickSuccessChance_tooltip": {
+    "en": "How likely a clean lockpick is to wake an alarmed building, before Nimble is taken off. Slipping a lock quietly is the whole point, so keep this well below the failure chance.",
+    "ch": "俐落撬開鎖時驚動裝有警報之建築的機率, 未扣除靈活減免. 悄悄開鎖正是重點所在, 所以請讓它遠低於失敗時的機率.",
+    "cn": "干净利落地撬开锁时惊动装有警报的建筑的几率, 尚未扣除灵活减免. 悄无声息地开锁才是重点, 因此请将其设得远低于失败时的几率."
+   },
+   "Sandbox_Locksmith_AllowContainerLocks": {
+    "en": "Allow padlocking containers",
+    "ch": "允許為容器加掛鎖",
+    "cn": "允许给容器加挂锁"
+   },
+   "Sandbox_Locksmith_AllowContainerLocks_tooltip": {
+    "en": "Lets a player fit a padlock or combination padlock to storage furniture: cabinets, lockers, dressers, crates, counters and the like. Appliances, campfires, feeding troughs and foraging bushes are never included. Turn off and a container answers only to its own vanilla lock.",
+    "ch": "讓玩家可在收納家具上安裝掛鎖或密碼鎖: 櫥櫃、儲物櫃、五斗櫃、板條箱、櫃檯之類. 家電、營火、飼料槽與採集用的灌木叢永遠不在此列. 關閉後, 容器只受它原版自帶的鎖控制.",
+    "cn": "允许玩家为储物家具安装挂锁或密码锁: 橱柜、储物柜、五斗柜、板条箱、柜台等. 家电、营火、饲料槽和采集用的灌木丛永远不包括在内. 关闭后, 容器只受其原版自带的锁控制."
+   },
+   "Sandbox_Locksmith_AllowKeyRetrieval": {
+    "en": "Allow taking a stowed key",
+    "ch": "允許取出收起的鑰匙",
+    "cn": "允许取出收起的钥匙"
+   },
+   "Sandbox_Locksmith_AllowKeyRetrieval_tooltip": {
+    "en": "Adds a right-click entry that moves a matching key out of a bag and into your hands. The game only looks for keys in your main inventory and on key rings, so a key in a backpack hides the vanilla Lock and Unlock entries even though you are carrying it.",
+    "ch": "新增一個右鍵選項, 把對應的鑰匙從包裡移到你手上. 遊戲只會在主物品欄與鑰匙環上找鑰匙, 所以放在背包裡的鑰匙即使帶在身上, 原版的「上鎖」與「解鎖」選項也不會出現.",
+    "cn": "添加一个右键选项, 将匹配的钥匙从包里移到你手上. 游戏只会在主物品栏和钥匙环上查找钥匙, 因此即使你随身携带, 放在背包里的钥匙也会让原版的“上锁”和“解锁”选项不出现."
+   },
+   "Sandbox_Locksmith_AllowKeyedWindows": {
+    "en": "Window latches can take a key",
+    "ch": "窗閂可綁定鑰匙",
+    "cn": "窗闩可绑定钥匙"
+   },
+   "Sandbox_Locksmith_AllowKeyedWindows_tooltip": {
+    "en": "Off by default, because a window is a latch and not a lock. Switched on, latching a window also binds it to a house key you are carrying, so whoever holds that key can open it from outside instead of having to shim it.",
+    "ch": "預設關閉, 因為窗戶上的是閂而不是鎖. 開啟後, 閂上窗戶時也會將它綁定到你身上帶著的房屋鑰匙, 持有那把鑰匙的人就能從外面打開, 不必撥開窗閂.",
+    "cn": "默认关闭, 因为窗户上的是闩而不是锁. 开启后, 闩上窗户时也会将其绑定到你随身携带的房屋钥匙, 持有该钥匙的人就能从外面打开, 而不必拨开窗闩."
+   },
+   "Sandbox_Locksmith_AllowWindowLocks": {
+    "en": "Allow latching and shimming windows",
+    "ch": "允許閂上與撥開窗戶",
+    "cn": "允许闩上和拨开窗户"
+   },
+   "Sandbox_Locksmith_AllowWindowLocks_tooltip": {
+    "en": "Lets a player throw a window latch from inside, and shim a latched window open from outside with a screwdriver and a paperclip. Shimming costs exactly what picking a door lock costs and also follows the lockpicking switch. The base game has no way to lock or unlock a window at all.",
+    "ch": "讓玩家可從室內閂上窗閂, 並從室外用螺絲起子與迴紋針撥開已閂上的窗戶. 撥開窗閂的消耗與撬門鎖完全相同, 也受撬鎖開關控制. 原版遊戲完全沒有鎖上或解鎖窗戶的方法.",
+    "cn": "允许玩家从室内闩上窗闩, 并从室外用螺丝刀和回形针拨开已闩上的窗户. 拨开窗闩的消耗与撬门锁完全相同, 同样受撬锁开关控制. 原版游戏完全无法锁上或解锁窗户."
+   },
+   "Sandbox_Locksmith_AutoNameKeys": {
+    "en": "Name new keys automatically",
+    "ch": "自動命名新鑰匙",
+    "cn": "自动命名新钥匙"
+   },
+   "Sandbox_Locksmith_AutoNameKeys_tooltip": {
+    "en": "A freshly cut key is named after the room it opens, so a key ring stops being a pile of identical keys. You can still rename any key by hand. Keys cut for an outdoor gate, which belongs to no room, keep their default name.",
+    "ch": "新配製的鑰匙會以它能開啟的房間命名, 讓鑰匙環不再是一堆一模一樣的鑰匙. 你仍可手動重新命名任何鑰匙. 為室外柵門配製的鑰匙不屬於任何房間, 會保留預設名稱.",
+    "cn": "新配制的钥匙会以其能打开的房间命名, 避免钥匙环变成一堆难以分辨的相同钥匙. 你仍可以手动重命名任何钥匙. 为室外大门配制的钥匙不属于任何房间, 会保留默认名称."
+   },
+   "Sandbox_Locksmith_ShowLockTooltip": {
+    "en": "Show lock state on the tooltip",
+    "ch": "在提示框顯示鎖的狀態",
+    "cn": "在提示框中显示锁的状态"
+   },
+   "Sandbox_Locksmith_ShowLockTooltip_tooltip": {
+    "en": "Hovering a locked door, gate or container shows what kind of lock it has and whether you can open it, so you no longer have to right-click to find out. It never shows a combination, only whether you know it.",
+    "ch": "滑鼠移到上鎖的門、柵門或容器上時, 會顯示它裝的是哪種鎖以及你能否打開, 不必再按右鍵確認. 它絕不會顯示密碼, 只會顯示你是否知道密碼.",
+    "cn": "鼠标悬停在上锁的门、大门或容器上时, 会显示其锁的类型以及你能否打开, 无需再右键查看. 它从不显示密码, 只显示你是否知道密码."
+   },
+   "Sandbox_ALifeDriving": {
+    "en": "A-Life vehicles",
+    "ch": "A-Life 車輛",
+    "cn": "A-Life 车辆"
+   },
+   "Sandbox_ALifeDriving_Enabled": {
+    "en": "Enable NPC vehicles",
+    "ch": "啟用 NPC 車輛",
+    "cn": "启用 NPC 车辆"
+   },
+   "Sandbox_ALifeDriving_Enabled_tooltip": {
+    "en": "NPC driving, passenger crews and automatic multiplayer control handover. Driving debug controls require admin access.",
+    "ch": "NPC 駕駛、乘車隊伍, 以及多人遊戲中的自動控制權交接. 駕駛除錯控制需要管理員權限.",
+    "cn": "NPC 驾驶、乘车队伍, 以及多人游戏中的自动控制权移交. 驾驶调试控制需要管理员权限."
+   },
+   "Sandbox_ALifeDriving_VehicleArrivals": {
+    "en": "Arrive by car",
+    "ch": "乘車抵達",
+    "cn": "乘车抵达"
+   },
+   "Sandbox_ALifeDriving_VehicleArrivals_tooltip": {
+    "en": "By car spawns create functioning vehicles with seated NPC crews. They drive to a reachable nearby road and dismount. Requires loaded terrain.",
+    "ch": "「乘車」生成會建立可正常運作的車輛, 並載著已就座的 NPC 隊伍. 他們會開到附近可抵達的道路後下車. 需要地形已載入.",
+    "cn": "“乘车”生成会创建可正常使用的车辆, 并载有已就座的 NPC 队伍. 他们会开到附近可到达的道路后下车. 需要地形已加载."
+   },
+   "Sandbox_ImmersiveSnow_RainWashHours": {
+    "en": "Snow washed away by rain (hours)",
+    "ch": "雨水沖走積雪所需時間 (小時)",
+    "cn": "雨水冲走积雪所需时间 (小时)"
+   },
+   "Sandbox_ImmersiveSnow_RainWashHours_tooltip": {
+    "en": "Game hours of rain that wash a full cover of snow off the ground, in stages: the snow thins out, the prints and the depth go with it; heavy rain is twice as fast. 0: all at once at the next hour, as in vanilla. In MP the server decides.",
+    "ch": "雨水把地面一整層積雪沖走所需的遊戲小時數, 分階段進行: 積雪逐漸變薄, 腳印與積雪深度也隨之消失; 大雨時快一倍. 0: 與原版相同, 在下一個整點一次全部消失. 多人遊戲中由伺服器決定.",
+    "cn": "雨水把地面整层积雪冲走所需的游戏小时数, 分阶段进行: 积雪逐渐变薄, 脚印和积雪深度也随之消失; 大雨时快一倍. 0: 与原版相同, 在下一个整点一次性全部消失. 多人游戏中由服务器决定."
+   },
+   "Sandbox_ImmersiveSnow_Snow3DGround": {
+    "en": "3D snow on the ground",
+    "ch": "地面 3D 積雪",
+    "cn": "地面 3D 积雪"
+   },
+   "Sandbox_ImmersiveSnow_Snow3DGround_tooltip": {
+    "en": "Only in the 3D view of Viewpoint with the Immersive Snow - Viewpoint add-on: the snow on the ground has a depth (prints, ruts and furrows pressed into it). Off: the ground snow is flat, as Viewpoint lays it.",
+    "ch": "僅限搭配 Immersive Snow - Viewpoint 附加模組時的 Viewpoint 3D 視角: 地面積雪具有深度 (腳印、車轍與溝痕會壓進雪中). 關閉: 地面積雪是平的, 與 Viewpoint 原本的鋪法相同.",
+    "cn": "仅限搭配 Immersive Snow - Viewpoint 附加模组时的 Viewpoint 3D 视角: 地面积雪具有深度 (脚印、车辙和沟痕会压进雪中). 关闭: 地面积雪是平的, 与 Viewpoint 原本的铺设方式相同."
+   },
+   "Sandbox_ImmersiveSnow_Snow3DVehicles": {
+    "en": "3D snow on vehicles",
+    "ch": "車輛 3D 積雪",
+    "cn": "车辆 3D 积雪"
+   },
+   "Sandbox_ImmersiveSnow_Snow3DVehicles_tooltip": {
+    "en": "Only in the 3D view of Viewpoint with the Immersive Snow - Viewpoint add-on: the snow on vehicles lies on top as a layer with a thickness (roof, bonnet, boot). Off: the snow on vehicles is flat, as in the isometric view.",
+    "ch": "僅限搭配 Immersive Snow - Viewpoint 附加模組時的 Viewpoint 3D 視角: 車輛上的積雪會以具有厚度的雪層堆在上方 (車頂、引擎罩、後車廂). 關閉: 車輛上的積雪是平的, 與等角視角相同.",
+    "cn": "仅限搭配 Immersive Snow - Viewpoint 附加模组时的 Viewpoint 3D 视角: 车辆上的积雪会以具有厚度的雪层堆在上方 (车顶、引擎盖、后备箱). 关闭: 车辆上的积雪是平的, 与等距视角相同."
+   },
+   "Sandbox_ImmersiveSnow_SnowDepth": {
+    "en": "Snow depth (cm)",
+    "ch": "積雪深度 (公分)",
+    "cn": "积雪深度 (厘米)"
+   },
+   "Sandbox_ImmersiveSnow_SnowDepth_tooltip": {
+    "en": "Only with the Immersive Snow - Viewpoint add-on: depth of the snow on the ground in Viewpoint's 3D view at the highest snow level, less while it is building up or melting. The snow also drifts deeper against buildings, steps run together into a trench and shovelled squares stand as cuttings; from 10 cm it slows you down (3D snow slows you down).",
+    "ch": "僅限搭配 Immersive Snow - Viewpoint 附加模組: Viewpoint 3D 視角中, 積雪達最高等級時的地面積雪深度, 積雪累積或融化期間會較淺. 積雪也會在建築旁堆得更深, 連續的腳步會連成一道雪溝, 用鏟子清過的格子則像切開的雪道般凹下; 從 10 公分起會拖慢你 (「3D 積雪會拖慢你」).",
+    "cn": "仅限搭配 Immersive Snow - Viewpoint 附加模组: Viewpoint 3D 视角中, 积雪达到最高等级时的地面积雪深度, 积雪累积或融化期间会较浅. 积雪还会在建筑旁堆得更深, 连续的脚步会连成一道雪沟, 用铲子清理过的格子则像切开的雪道般凹陷; 从 10 厘米起会减慢你的速度 (“3D 积雪会减慢你的速度”)."
+   },
+   "Sandbox_ImmersiveSnow_SnowSlowdown": {
+    "en": "3D snow slows you down",
+    "ch": "3D 積雪會拖慢你",
+    "cn": "3D 积雪会减慢你的速度"
+   },
+   "Sandbox_ImmersiveSnow_SnowSlowdown_tooltip": {
+    "en": "Only with the Immersive Snow - Viewpoint add-on (its 3D snow on the ground): from 10 cm of snow (Snow depth) wading through it tires you, from 30 cm you cannot sprint, and a vehicle you drive goes slower (at 45 cm about half its top speed). Not on squares cleared with a shovel; on trampled paths it is easier. In MP the server decides.",
+    "ch": "僅限搭配 Immersive Snow - Viewpoint 附加模組 (其地面 3D 積雪): 積雪達 10 公分 (「積雪深度」) 起, 在雪中跋涉會消耗耐力; 從 30 公分起無法衝刺. 積雪也會讓你駕駛的車輛變慢 (45 公分時約為最高速度的一半). 用鏟子清過的格子不受影響; 在踩踏小徑上比較輕鬆. 多人遊戲中由伺服器決定.",
+    "cn": "仅限搭配 Immersive Snow - Viewpoint 附加模组 (其地面 3D 积雪): 积雪达到 10 厘米 (“积雪深度”) 起, 在雪中跋涉会消耗耐力; 从 30 厘米起无法冲刺. 积雪也会使你驾驶的车辆减速 (45 厘米时约为最高速度的一半). 用铲子清理过的格子不受影响; 在踩踏路径上比较轻松. 多人游戏中由服务器决定."
+   },
+   "Sandbox_ImmersiveSnow_SnowThickness3D": {
+    "en": "Snow thickness on vehicles in 3D (%%)",
+    "ch": "3D 車輛積雪厚度 (%%)",
+    "cn": "3D 车辆积雪厚度 (%%)"
+   },
+   "Sandbox_ImmersiveSnow_SnowThickness3D_tooltip": {
+    "en": "Only in the 3D view of Viewpoint with the Immersive Snow - Viewpoint add-on: the snow on vehicles stands out as a layer where it settles on top (the roof, the bonnet: up to about 12 cm at the last stage at 100%%); clothes, the vehicles' sides, ice and frost on the glass stay flat. 0: flat, as before.",
+    "ch": "僅限搭配 Immersive Snow - Viewpoint 附加模組時的 Viewpoint 3D 視角: 車輛上方積雪的地方會凸起成一層雪 (車頂、引擎罩: 設為 100%% 時, 最後階段最厚約 12 公分); 衣物、車身側面、玻璃上的冰與霜仍是平的. 0: 平的, 與以前相同.",
+    "cn": "仅限搭配 Immersive Snow - Viewpoint 附加模组时的 Viewpoint 3D 视角: 车辆上方积雪的地方会凸起成一层雪 (车顶、引擎盖: 设为 100%% 时, 最后阶段最厚约 12 厘米); 衣物、车身侧面、玻璃上的冰和霜仍是平的. 0: 平的, 与以前相同."
+   },
+   "Sandbox_TheyKnew_PartialPackChance": {
+    "en": "Partially used medicine packs (%%)",
+    "ch": "部分用過的藥包 (%%)",
+    "cn": "部分用过的药包 (%%)"
+   },
+   "Sandbox_TheyKnew_PartialPackChance_tooltip": {
+    "en": "Chance for new Zomboxolone and Zomboxycycline loot packs to have doses missing. Applies to hazmat drops and medical container loot. 0 disables it. Existing packs and single-use medicines are unaffected.",
+    "ch": "新生成的贊博索酮與贊博西環素藥包缺少部分劑量的機率. 適用於防護服殭屍掉落物與醫療容器中的物資. 0 為關閉. 已存在的藥包與單次使用的藥物不受影響.",
+    "cn": "新生成的僵尸甘珀酸和僵尸西环素药包缺少部分剂量的几率. 适用于防化僵尸掉落物和医疗容器中的物资. 0 表示关闭. 已有的药包和一次性药物不受影响."
+   },
+   "Sandbox_TheyKnew_PartialPackMinDoses": {
+    "en": "Minimum doses in partially used packs",
+    "ch": "部分用過藥包的最少劑量",
+    "cn": "部分用过药包的最少剂量"
+   },
+   "Sandbox_TheyKnew_PartialPackMinDoses_tooltip": {
+    "en": "Lowest number of doses left when a pack spawns partially used. Rolls from this number up to 9 doses. Packs hold 10 doses; setting this to 10 keeps them full.",
+    "ch": "藥包以部分用過狀態生成時, 剩餘劑量的最低數量. 會在此數值到 9 劑之間隨機決定. 藥包可裝 10 劑; 設為 10 則保持滿量.",
+    "cn": "药包以部分用过状态生成时, 剩余剂量的最低数量. 会在该数值到 9 剂之间随机决定. 药包容量为 10 剂; 设为 10 则保持满量."
+   },
+   "Sandbox_COF_Spawns_DrownedAmount": {
+    "en": "Drowned (number)",
+    "ch": "溺死者 (數量)",
+    "cn": "溺亡者 (数量)"
+   },
+   "Sandbox_COF_Spawns_DrownedAmount_tooltip": {
+    "en": "How many Drowned live in each map area. Type any number, decimals too: 0.25 = one in every 4 areas. 0 = none. The old settings: Rare 0.25, Uncommon 0.5, Normal 1, High 2.",
+    "ch": "每個地圖區域中有多少溺死者. 可輸入任何數字, 小數也可以: 0.25 = 每 4 個區域 1 個. 0 = 沒有. 舊設定對照: 稀少 0.25, 少見 0.5, 普通 1, 多 2.",
+    "cn": "每个地图区域中有多少溺亡者. 可输入任意数字, 也可以是小数: 0.25 = 每 4 个区域 1 个. 0 = 无. 旧设置对照: 罕见 0.25, 稀少 0.5, 普通 1, 高 2."
+   },
+   "Sandbox_COF_Spawns_RegularAmount": {
+    "en": "Regular monsters (number)",
+    "ch": "一般怪物 (數量)",
+    "cn": "常规怪物 (数量)"
+   },
+   "Sandbox_COF_Spawns_RegularAmount_tooltip": {
+    "en": "How many regular monsters (Slowers, Fasters, Children and others) live around you in a town; fewer in the suburbs and the countryside. Type any number, decimals too. 0 = none. The old settings: Rare 4, Uncommon 8, Normal 12, High 20.",
+    "ch": "你在城鎮中時, 周圍有多少一般怪物 (慢行者、快行者、孩童等); 郊區與鄉間較少. 可輸入任何數字, 小數也可以. 0 = 沒有. 舊設定對照: 稀少 4, 少見 8, 普通 12, 多 20.",
+    "cn": "你在城镇中时, 周围有多少常规怪物 (慢行者、快行者、小孩等); 郊区和乡村较少. 可输入任意数字, 也可以是小数. 0 = 无. 旧设置对照: 罕见 4, 稀少 8, 普通 12, 高 20."
+   },
+   "Sandbox_COF_Spawns_SawcrazyAmount": {
+    "en": "Sawcrazies (number)",
+    "ch": "電鋸瘋子 (數量)",
+    "cn": "电锯疯子 (数量)"
+   },
+   "Sandbox_COF_Spawns_SawcrazyAmount_tooltip": {
+    "en": "How many Sawcrazies live in each map area. Type any number, decimals too: 0.25 = one in every 4 areas, 1 = one in each. 0 = none. The old settings: Rare 0.1, Uncommon 0.25, Normal 0.5, High 1.",
+    "ch": "每個地圖區域中有多少電鋸瘋子. 可輸入任何數字, 小數也可以: 0.25 = 每 4 個區域 1 個, 1 = 每個區域 1 個. 0 = 沒有. 舊設定對照: 稀少 0.1, 少見 0.25, 普通 0.5, 多 1.",
+    "cn": "每个地图区域中有多少电锯疯子. 可输入任意数字, 也可以是小数: 0.25 = 每 4 个区域 1 个, 1 = 每个区域 1 个. 0 = 无. 旧设置对照: 罕见 0.1, 稀少 0.25, 普通 0.5, 高 1."
+   },
+   "Sandbox_COF_Spawns_SawrunnerAmount": {
+    "en": "Sawrunners (number)",
+    "ch": "電鋸狂奔者 (數量)",
+    "cn": "电锯狂奔者 (数量)"
+   },
+   "Sandbox_COF_Spawns_SawrunnerAmount_tooltip": {
+    "en": "How many Sawrunners live in each map area (needs ordinary Sawrunner spawning on). Type any number, decimals too: 0.25 = one in every 4 areas. 0 = none. The old settings: Rare 0.25, Uncommon 0.5, Normal 1, High 2.",
+    "ch": "每個地圖區域中有多少電鋸狂奔者 (需開啟「允許電鋸狂奔者一般生成」). 可輸入任何數字, 小數也可以: 0.25 = 每 4 個區域 1 個. 0 = 沒有. 舊設定對照: 稀少 0.25, 少見 0.5, 普通 1, 多 2.",
+    "cn": "每个地图区域中有多少电锯狂奔者 (需开启“允许常规生成电锯狂奔者”). 可输入任意数字, 也可以是小数: 0.25 = 每 4 个区域 1 个. 0 = 无. 旧设置对照: 罕见 0.25, 稀少 0.5, 普通 1, 高 2."
+   },
+   "Sandbox_COF_Spawns_StrangerAmount": {
+    "en": "Strangers (number)",
+    "ch": "陌生人 (數量)",
+    "cn": "怪人 (数量)"
+   },
+   "Sandbox_COF_Spawns_StrangerAmount_tooltip": {
+    "en": "How many Strangers live in each map area. Type any number, decimals too: 0.25 = one in every 4 areas. 0 = none. The old settings: Rare 0.25, Uncommon 0.5, Normal 1, High 2.",
+    "ch": "每個地圖區域中有多少陌生人. 可輸入任何數字, 小數也可以: 0.25 = 每 4 個區域 1 個. 0 = 沒有. 舊設定對照: 稀少 0.25, 少見 0.5, 普通 1, 多 2.",
+    "cn": "每个地图区域中有多少怪人. 可输入任意数字, 也可以是小数: 0.25 = 每 4 个区域 1 个. 0 = 无. 旧设置对照: 罕见 0.25, 稀少 0.5, 普通 1, 高 2."
    }
   },
   "Tooltip.json": {
@@ -448818,6 +450618,146 @@
     "en": "Mark where the basement lies while you edit a floor above it: a faint shade in see-through view, an outline in solid view. Needs Rooms on.",
     "ch": "編輯地下室上方的樓層時標示地下室的位置: 透視檢視中以淡色陰影顯示, 實體檢視中以輪廓顯示. 需開啟「房間」.",
     "cn": "编辑地下室上方的楼层时标示地下室的位置: 透视视图中以淡色阴影显示, 实体视图中以轮廓显示. 需开启“房间”."
+   },
+   "Tooltip_black_cyan": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_black_cyan_red": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_black_yellow": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_bright_green": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_brown_lightbrown": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_charcoal_orange": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_dark_bluegrey": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_deep_blue": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_deep_purple": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_grey_bloodred": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_grey_brown": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_maroon_silver": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_navy_blue": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_olive_lightblue": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_olive_pink": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_purple_red": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_red_green": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_red_lightblue": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_slate_purple": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_teal_black": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_teal_green": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_yellow_silver": {
+    "en": "Contains a measured dose of an active chemical solution.<BR>The exact effects of the liquid are unknown.",
+    "ch": "內含一劑定量的活性化學溶液.<BR>這種液體的確切效果不明.",
+    "cn": "内含一剂定量的活性化学溶液.<BR>这种液体的确切效果未知."
+   },
+   "Tooltip_TBeltOrig": {
+    "en": "Looks like usual belt but all items hide.",
+    "ch": "看起來像普通腰帶, 但所有物品都會隱藏.",
+    "cn": "看起来像普通腰带, 但所有物品都会隐藏."
+   },
+   "Tooltip_TWHolster_invis": {
+    "en": "Belt for Pistol",
+    "ch": "手槍用腰帶",
+    "cn": "手枪用腰带"
+   },
+   "Tooltip_Locksmith_LatchWindow": {
+    "en": "Holds the window shut against anyone outside. You can release it again from in here.",
+    "ch": "把窗戶閂緊, 外面的人都打不開. 之後你可以從室內再解開.",
+    "cn": "将窗户闩紧, 外面的人都打不开. 之后你可以从室内再次解开."
+   },
+   "Tooltip_Locksmith_ShimWindow": {
+    "en": "Slip the latch with a screwdriver and a paperclip. Costs exactly what picking a door lock costs, and pays the same Nimble either way.",
+    "ch": "用螺絲起子與迴紋針撥開窗閂. 消耗與獲得的靈活經驗都和撬門鎖完全相同.",
+    "cn": "用螺丝刀和回形针拨开窗闩. 消耗和获得的灵活经验都与撬门锁完全相同."
+   },
+   "Tooltip_Locksmith_TakeKey": {
+    "en": "The game only finds keys in your main inventory and on key rings, so this one is hidden from the lock menu while it sits in a bag.",
+    "ch": "遊戲只會在主物品欄與鑰匙環上找鑰匙, 所以這把鑰匙放在包裡時, 鎖的選單不會出現它.",
+    "cn": "游戏只会在主物品栏和钥匙环上查找钥匙, 因此这把钥匙放在包里时, 锁的菜单中不会显示它."
+   },
+   "Tooltip_Locksmith_WindowInside": {
+    "en": "The latch is on the other side. You would have to shim it, or go round.",
+    "ch": "窗閂在另一側. 你得把它撥開, 或是繞過去.",
+    "cn": "窗闩在另一侧. 你得把它拨开, 或者绕过去."
    }
   },
   "UI.json": {
@@ -500796,6 +502736,631 @@
     "en": "Wrestling",
     "ch": "摔角",
     "cn": "摔跤"
+   },
+   "UI_Injectors_Admin_BtnApplyWounds": {
+    "en": "Apply Bleeding and Deep Wounds",
+    "ch": "施加流血和深傷口",
+    "cn": "施加流血和深伤口"
+   },
+   "UI_Injectors_Admin_BtnClose": {
+    "en": "CLOSE",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "UI_Injectors_Admin_BtnDumpVars": {
+    "en": "Dump Sandbox Variables",
+    "ch": "傾印沙盒變數",
+    "cn": "转储沙盒变量"
+   },
+   "UI_Injectors_Admin_BtnOpenConstructor": {
+    "en": "Open Injector Constructor",
+    "ch": "開啟注射器建構器",
+    "cn": "打开注射器构造器"
+   },
+   "UI_Injectors_Admin_BtnOpenEffects": {
+    "en": "Open Injector Effects Panel",
+    "ch": "開啟注射器效果面板",
+    "cn": "打开注射器效果面板"
+   },
+   "UI_Injectors_Admin_BtnReduceHealth": {
+    "en": "Reduce General Health",
+    "ch": "降低整體健康",
+    "cn": "降低整体健康"
+   },
+   "UI_Injectors_Admin_BtnReloadVars": {
+    "en": "Reload Sandbox Variables",
+    "ch": "重新載入沙盒變數",
+    "cn": "重新加载沙盒变量"
+   },
+   "UI_Injectors_Admin_BtnSetMaxPain": {
+    "en": "Set Maximum Applicable Pain",
+    "ch": "設定可施加的最大疼痛",
+    "cn": "设置可施加的最大疼痛"
+   },
+   "UI_Injectors_Admin_BtnTools": {
+    "en": "Injector Tools",
+    "ch": "注射器工具",
+    "cn": "注射器工具"
+   },
+   "UI_Injectors_Admin_Title": {
+    "en": "INJECTORS PANEL",
+    "ch": "注射器面板",
+    "cn": "注射器面板"
+   },
+   "UI_Injectors_BtnAddEffect": {
+    "en": "Add Effect",
+    "ch": "新增效果",
+    "cn": "添加效果"
+   },
+   "UI_Injectors_BtnInvoke": {
+    "en": "Invoke",
+    "ch": "觸發",
+    "cn": "触发"
+   },
+   "UI_Injectors_BtnLoad": {
+    "en": "Load",
+    "ch": "載入",
+    "cn": "加载"
+   },
+   "UI_Injectors_BtnRemoveEffect": {
+    "en": "Remove",
+    "ch": "移除",
+    "cn": "移除"
+   },
+   "UI_Injectors_BtnSave": {
+    "en": "Save",
+    "ch": "儲存",
+    "cn": "保存"
+   },
+   "UI_Injectors_Effects_BtnClear": {
+    "en": "Clear Effects",
+    "ch": "清除效果",
+    "cn": "清除效果"
+   },
+   "UI_Injectors_Effects_BtnRequest": {
+    "en": "Request Effects",
+    "ch": "請求效果",
+    "cn": "请求效果"
+   },
+   "UI_Injectors_Effects_Delay": {
+    "en": "Delay: %1",
+    "ch": "延遲: %1",
+    "cn": "延迟: %1"
+   },
+   "UI_Injectors_Effects_OverdoseLevel": {
+    "en": "Overdose Level: %1 / %2",
+    "ch": "藥物過量值: %1 / %2",
+    "cn": "药物过量值: %1 / %2"
+   },
+   "UI_Injectors_Effects_Pending": {
+    "en": "pending...",
+    "ch": "等待中…",
+    "cn": "等待中…"
+   },
+   "UI_Injectors_Effects_Time": {
+    "en": "Time: %1",
+    "ch": "時間: %1",
+    "cn": "时间: %1"
+   },
+   "UI_Injectors_Effects_Title": {
+    "en": "Injector Effects",
+    "ch": "注射器效果",
+    "cn": "注射器效果"
+   },
+   "UI_Injectors_Group_BodyParts": {
+    "en": "Body Parts",
+    "ch": "身體部位",
+    "cn": "身体部位"
+   },
+   "UI_Injectors_Group_Scaling": {
+    "en": "Scaling",
+    "ch": "縮放",
+    "cn": "缩放"
+   },
+   "UI_Injectors_Group_Time": {
+    "en": "Time",
+    "ch": "時間",
+    "cn": "时间"
+   },
+   "UI_Injectors_Group_Timing": {
+    "en": "Timing",
+    "ch": "計時",
+    "cn": "计时"
+   },
+   "UI_Injectors_Group_Values": {
+    "en": "Values",
+    "ch": "數值",
+    "cn": "数值"
+   },
+   "UI_Injectors_Note_Delay": {
+    "en": "delay before activation",
+    "ch": "生效前的延遲",
+    "cn": "生效前的延迟"
+   },
+   "UI_Injectors_Note_Duration": {
+    "en": "how long the effect lasts",
+    "ch": "效果持續多久",
+    "cn": "效果持续多久"
+   },
+   "UI_Injectors_Note_EnduranceAmount": {
+    "en": "endurance delta per tick",
+    "ch": "每 tick 的耐力變化量",
+    "cn": "每 tick 的耐力变化量"
+   },
+   "UI_Injectors_Note_FoodSicknessAmount": {
+    "en": "sickness delta per tick",
+    "ch": "每 tick 的食物中毒變化量",
+    "cn": "每 tick 的食物中毒变化量"
+   },
+   "UI_Injectors_Note_GeneralHealthBase": {
+    "en": "base health delta applied each activation",
+    "ch": "每次生效套用的基礎健康變化量",
+    "cn": "每次生效应用的基础健康变化量"
+   },
+   "UI_Injectors_Note_GeneralHealthDelay": {
+    "en": "activation delay",
+    "ch": "生效延遲",
+    "cn": "生效延迟"
+   },
+   "UI_Injectors_Note_GeneralHealthDuration": {
+    "en": "effect duration",
+    "ch": "效果持續時間",
+    "cn": "效果持续时间"
+   },
+   "UI_Injectors_Note_Groin": {
+    "en": "Groin coefficient",
+    "ch": "腹股溝係數",
+    "cn": "腹股沟系数"
+   },
+   "UI_Injectors_Note_Head": {
+    "en": "Head coefficient",
+    "ch": "頭部係數",
+    "cn": "头部系数"
+   },
+   "UI_Injectors_Note_HungerAmount": {
+    "en": "hunger delta applied each activation",
+    "ch": "每次生效套用的飢餓變化量",
+    "cn": "每次生效应用的饥饿变化量"
+   },
+   "UI_Injectors_Note_IntoxicationAmount": {
+    "en": "intoxication delta per tick",
+    "ch": "每 tick 的酒醉程度變化量",
+    "cn": "每 tick 的醉酒度变化量"
+   },
+   "UI_Injectors_Note_LeftFoot": {
+    "en": "Left foot coefficient",
+    "ch": "左腳係數",
+    "cn": "左脚系数"
+   },
+   "UI_Injectors_Note_LeftForeArm": {
+    "en": "Left forearm coefficient",
+    "ch": "左前臂係數",
+    "cn": "左前臂系数"
+   },
+   "UI_Injectors_Note_LeftHand": {
+    "en": "Left hand coefficient",
+    "ch": "左手係數",
+    "cn": "左手系数"
+   },
+   "UI_Injectors_Note_LeftLowerLeg": {
+    "en": "Left lower leg coefficient",
+    "ch": "左小腿係數",
+    "cn": "左小腿系数"
+   },
+   "UI_Injectors_Note_LeftUpperArm": {
+    "en": "Left upper arm coefficient",
+    "ch": "左上臂係數",
+    "cn": "左上臂系数"
+   },
+   "UI_Injectors_Note_LeftUpperLeg": {
+    "en": "Left upper leg coefficient",
+    "ch": "左大腿係數",
+    "cn": "左大腿系数"
+   },
+   "UI_Injectors_Note_MaxRange": {
+    "en": "maximum linear scaling range",
+    "ch": "線性縮放範圍上限",
+    "cn": "线性缩放范围上限"
+   },
+   "UI_Injectors_Note_MaxScale": {
+    "en": "maximum linear scaling multiplier",
+    "ch": "線性縮放倍率上限",
+    "cn": "线性缩放倍率上限"
+   },
+   "UI_Injectors_Note_MendBleedingBase": {
+    "en": "base bleeding reduction per activation",
+    "ch": "每次生效的基礎流血時間縮短量",
+    "cn": "每次生效的基础流血时间缩短量"
+   },
+   "UI_Injectors_Note_MendDeepWoundBase": {
+    "en": "base deep wound reduction per activation",
+    "ch": "每次生效的基礎深傷口癒合時間縮短量",
+    "cn": "每次生效的基础深伤口愈合时间缩短量"
+   },
+   "UI_Injectors_Note_MinRange": {
+    "en": "minimum linear scaling range",
+    "ch": "線性縮放範圍下限",
+    "cn": "线性缩放范围下限"
+   },
+   "UI_Injectors_Note_MinScale": {
+    "en": "minimum linear scaling multiplier",
+    "ch": "線性縮放倍率下限",
+    "cn": "线性缩放倍率下限"
+   },
+   "UI_Injectors_Note_Neck": {
+    "en": "Neck coefficient",
+    "ch": "頸部係數",
+    "cn": "颈部系数"
+   },
+   "UI_Injectors_Note_OverdoseBase": {
+    "en": "fixed overdose penalty applied each tick",
+    "ch": "每 tick 套用的固定藥物過量懲罰",
+    "cn": "每 tick 应用的固定药物过量惩罚"
+   },
+   "UI_Injectors_Note_PainBase": {
+    "en": "base pain delta applied each activation",
+    "ch": "每次生效套用的基礎疼痛變化量",
+    "cn": "每次生效应用的基础疼痛变化量"
+   },
+   "UI_Injectors_Note_PainDelay": {
+    "en": "activation delay",
+    "ch": "生效延遲",
+    "cn": "生效延迟"
+   },
+   "UI_Injectors_Note_PainDuration": {
+    "en": "effect duration",
+    "ch": "效果持續時間",
+    "cn": "效果持续时间"
+   },
+   "UI_Injectors_Note_Rate": {
+    "en": "update frequency",
+    "ch": "更新間隔",
+    "cn": "更新间隔"
+   },
+   "UI_Injectors_Note_RightFoot": {
+    "en": "Right foot coefficient",
+    "ch": "右腳係數",
+    "cn": "右脚系数"
+   },
+   "UI_Injectors_Note_RightForeArm": {
+    "en": "Right forearm coefficient",
+    "ch": "右前臂係數",
+    "cn": "右前臂系数"
+   },
+   "UI_Injectors_Note_RightHand": {
+    "en": "Right hand coefficient",
+    "ch": "右手係數",
+    "cn": "右手系数"
+   },
+   "UI_Injectors_Note_RightLowerLeg": {
+    "en": "Right lower leg coefficient",
+    "ch": "右小腿係數",
+    "cn": "右小腿系数"
+   },
+   "UI_Injectors_Note_RightUpperArm": {
+    "en": "Right upper arm coefficient",
+    "ch": "右上臂係數",
+    "cn": "右上臂系数"
+   },
+   "UI_Injectors_Note_RightUpperLeg": {
+    "en": "Right upper leg coefficient",
+    "ch": "右大腿係數",
+    "cn": "右大腿系数"
+   },
+   "UI_Injectors_Note_TemperatureAmount": {
+    "en": "temperature delta per tick",
+    "ch": "每 tick 的體溫變化量",
+    "cn": "每 tick 的体温变化量"
+   },
+   "UI_Injectors_Note_ThirstAmount": {
+    "en": "thirst delta applied each activation",
+    "ch": "每次生效套用的口渴變化量",
+    "cn": "每次生效应用的口渴变化量"
+   },
+   "UI_Injectors_Note_TorsoLower": {
+    "en": "Lower torso coefficient",
+    "ch": "下身係數",
+    "cn": "下身系数"
+   },
+   "UI_Injectors_Note_TorsoUpper": {
+    "en": "Upper torso coefficient",
+    "ch": "上身係數",
+    "cn": "上身系数"
+   },
+   "UI_Injectors_Note_ZombieInfectionAmount": {
+    "en": "infection delta per tick",
+    "ch": "每 tick 的感染變化量",
+    "cn": "每 tick 的感染变化量"
+   },
+   "UI_Injectors_Notes_ChangeEndurance": {
+    "en": "Controls endurance recovery or drain. (range: 0-1)",
+    "ch": "控制耐力的恢復或消耗. (範圍: 0-1)",
+    "cn": "控制耐力的恢复或消耗. (范围: 0-1)"
+   },
+   "UI_Injectors_Notes_ChangeFoodSickness": {
+    "en": "Controls food sickness level. (range: 0-100)",
+    "ch": "控制食物中毒程度. (範圍: 0-100)",
+    "cn": "控制食物中毒程度. (范围: 0-100)"
+   },
+   "UI_Injectors_Notes_ChangeGeneralHealth": {
+    "en": "Controls general health. (range: 0-100)",
+    "ch": "控制整體健康. (範圍: 0-100)",
+    "cn": "控制整体健康. (范围: 0-100)"
+   },
+   "UI_Injectors_Notes_ChangeHunger": {
+    "en": "Controls hunger stat value. (range: 0-1)",
+    "ch": "控制飢餓數值. (範圍: 0-1)",
+    "cn": "控制饥饿数值. (范围: 0-1)"
+   },
+   "UI_Injectors_Notes_ChangeIntoxication": {
+    "en": "Controls intoxication level over time. (range: 0-100)",
+    "ch": "隨時間控制酒醉程度. (範圍: 0-100)",
+    "cn": "随时间控制醉酒程度. (范围: 0-100)"
+   },
+   "UI_Injectors_Notes_ChangeOverdose": {
+    "en": "Applies overdose penalty over time.",
+    "ch": "隨時間施加藥物過量懲罰.",
+    "cn": "随时间施加药物过量惩罚."
+   },
+   "UI_Injectors_Notes_ChangePain": {
+    "en": "Controls pain stat value. (range: 0-100)",
+    "ch": "控制疼痛數值. (範圍: 0-100)",
+    "cn": "控制疼痛数值. (范围: 0-100)"
+   },
+   "UI_Injectors_Notes_ChangeTemperature": {
+    "en": "Controls body temperature over time. (range: 20-40)",
+    "ch": "隨時間控制體溫. (範圍: 20-40)",
+    "cn": "随时间控制体温. (范围: 20-40)"
+   },
+   "UI_Injectors_Notes_ChangeThirst": {
+    "en": "Controls thirst stat value. (range: 0-1)",
+    "ch": "控制口渴數值. (範圍: 0-1)",
+    "cn": "控制口渴数值. (范围: 0-1)"
+   },
+   "UI_Injectors_Notes_ChangeZombieInfection": {
+    "en": "Controls zombie infection progression. (range: 0-100)",
+    "ch": "控制殭屍感染進程. (範圍: 0-100)",
+    "cn": "控制僵尸感染进程. (范围: 0-100)"
+   },
+   "UI_Injectors_Notes_MendBleeding": {
+    "en": "Reduces bleeding time on affected body parts.",
+    "ch": "縮短受影響身體部位的流血時間.",
+    "cn": "缩短受影响身体部位的流血时间."
+   },
+   "UI_Injectors_Notes_MendDeepWound": {
+    "en": "Reduces deep wound healing time on affected body parts.",
+    "ch": "縮短受影響身體部位的深傷口癒合時間.",
+    "cn": "缩短受影响身体部位的深伤口愈合时间."
+   },
+   "UI_Injectors_OverdoseBlocked": {
+    "en": "I can't take any more of this right now.",
+    "ch": "我現在承受不了更多了.",
+    "cn": "我现在承受不了更多了."
+   },
+   "UI_Injectors_Title": {
+    "en": "Injector Constructor",
+    "ch": "注射器建構器",
+    "cn": "注射器构造器"
+   },
+   "UI_JeevesClaims_AccessDefaultSaved": {
+    "en": "Default rights saved.",
+    "ch": "已儲存預設權限.",
+    "cn": "默认权限已保存."
+   },
+   "UI_JeevesClaims_AccessDenied": {
+    "en": "You cannot change that in this claim.",
+    "ch": "你無法在此認領中變更該項.",
+    "cn": "你无法在此认领中更改该项."
+   },
+   "UI_JeevesClaims_AccessHintDefault": {
+    "en": "Applies to every member who has not been given rights of their own, including members added later. Manage is never a default.",
+    "ch": "套用於所有未個別設定權限的成員, 包括之後加入的成員. 「管理」永遠不會是預設權限.",
+    "cn": "适用于所有未单独设置权限的成员, 包括之后添加的成员. “管理”永远不会是默认权限."
+   },
+   "UI_JeevesClaims_AccessHintMember": {
+    "en": "A member can always enter the claim. To keep someone out, remove them.",
+    "ch": "成員一律可以進入認領範圍. 若要不讓某人進入, 請將其移除.",
+    "cn": "成员始终可以进入认领范围. 若要不让某人进入, 请将其移除."
+   },
+   "UI_JeevesClaims_AccessNoRight_build": {
+    "en": "You may not build in this claim",
+    "ch": "你不能在此認領中建造",
+    "cn": "你不能在此认领中建造"
+   },
+   "UI_JeevesClaims_AccessNoRight_containers": {
+    "en": "You may not use containers in this claim",
+    "ch": "你不能使用此認領中的容器",
+    "cn": "你不能使用此认领中的容器"
+   },
+   "UI_JeevesClaims_AccessNoRight_destroy": {
+    "en": "You may not destroy anything in this claim",
+    "ch": "你不能破壞此認領中的任何東西",
+    "cn": "你不能破坏此认领中的任何东西"
+   },
+   "UI_JeevesClaims_AccessNotMember": {
+    "en": "%1 is not a member of this claim.",
+    "ch": "%1 不是此認領的成員.",
+    "cn": "%1 不是此认领的成员."
+   },
+   "UI_JeevesClaims_AccessRight_build": {
+    "en": "Build - construct, move furniture, barricade, set up generators",
+    "ch": "建造 - 興建、搬動家具、加固門窗、架設發電機",
+    "cn": "建造 - 修建、搬动家具、加固门窗、架设发电机"
+   },
+   "UI_JeevesClaims_AccessRight_containers": {
+    "en": "Use containers - take, store, craft from them, run generators",
+    "ch": "使用容器 - 拿取、存放、用其中物品製作、運轉發電機",
+    "cn": "使用容器 - 拿取、存放、用其中物品制作、运行发电机"
+   },
+   "UI_JeevesClaims_AccessRight_destroy": {
+    "en": "Destroy - disassemble, sledgehammer, scrap furniture",
+    "ch": "破壞 - 拆解、用大錘敲毀、拆毀家具",
+    "cn": "破坏 - 拆解、用大锤砸毁、拆毁家具"
+   },
+   "UI_JeevesClaims_AccessRight_manage": {
+    "en": "Manage - invite and remove members, set their rights, public entry",
+    "ch": "管理 - 邀請與移除成員、設定其權限、公開進入",
+    "cn": "管理 - 邀请和移除成员、设置其权限、公开进入"
+   },
+   "UI_JeevesClaims_AccessSave": {
+    "en": "Save",
+    "ch": "儲存",
+    "cn": "保存"
+   },
+   "UI_JeevesClaims_AccessSaved": {
+    "en": "Rights saved for %1.",
+    "ch": "已儲存 %1 的權限.",
+    "cn": "已保存 %1 的权限."
+   },
+   "UI_JeevesClaims_AccessTag_custom": {
+    "en": "Custom",
+    "ch": "自訂",
+    "cn": "自定义"
+   },
+   "UI_JeevesClaims_AccessTag_guest": {
+    "en": "Guest",
+    "ch": "來賓",
+    "cn": "宾客"
+   },
+   "UI_JeevesClaims_AccessTag_manager": {
+    "en": "Manager",
+    "ch": "管理者",
+    "cn": "管理者"
+   },
+   "UI_JeevesClaims_AccessTag_member": {
+    "en": "Member",
+    "ch": "成員",
+    "cn": "成员"
+   },
+   "UI_JeevesClaims_AccessTag_visitor": {
+    "en": "Visitor",
+    "ch": "訪客",
+    "cn": "访客"
+   },
+   "UI_JeevesClaims_AccessTitleDefault": {
+    "en": "Default Rights for New Members",
+    "ch": "新成員的預設權限",
+    "cn": "新成员的默认权限"
+   },
+   "UI_JeevesClaims_AccessTitleMember": {
+    "en": "Rights: %1",
+    "ch": "權限: %1",
+    "cn": "权限: %1"
+   },
+   "UI_JeevesClaims_BtnDefaultRights": {
+    "en": "Default Rights",
+    "ch": "預設權限",
+    "cn": "默认权限"
+   },
+   "UI_JeevesClaims_BtnPublicEntry": {
+    "en": "Public Entry",
+    "ch": "公開進入",
+    "cn": "公开进入"
+   },
+   "UI_JeevesClaims_BtnRights": {
+    "en": "Rights",
+    "ch": "權限",
+    "cn": "权限"
+   },
+   "UI_JeevesClaims_PublicEntryHint": {
+    "en": "Visitors are never members: they cannot build, destroy, set a respawn point here or keep the claim from expiring. They are shown as Visitor in the member list while they are inside.",
+    "ch": "訪客永遠不會是成員: 他們不能建造、破壞、在此設定重生點, 也無法讓認領免於過期. 訪客待在裡面時, 會在成員清單中顯示為「訪客」.",
+    "cn": "访客永远不会是成员: 他们不能建造、破坏、在此设置重生点, 也无法使认领免于过期. 访客待在里面时, 会在成员列表中显示为“访客”."
+   },
+   "UI_JeevesClaims_PublicEntrySaved_containers": {
+    "en": "Claim open to visitors, containers included.",
+    "ch": "認領已對訪客開放, 包括容器.",
+    "cn": "认领已对访客开放, 包括容器."
+   },
+   "UI_JeevesClaims_PublicEntrySaved_enter": {
+    "en": "Claim open to visitors.",
+    "ch": "認領已對訪客開放.",
+    "cn": "认领已对访客开放."
+   },
+   "UI_JeevesClaims_PublicEntrySaved_off": {
+    "en": "Claim closed to the public.",
+    "ch": "認領已不對外開放.",
+    "cn": "认领已不对外开放."
+   },
+   "UI_JeevesClaims_PublicEntryTitle": {
+    "en": "Public Entry",
+    "ch": "公開進入",
+    "cn": "公开进入"
+   },
+   "UI_JeevesClaims_PublicEntry_containers": {
+    "en": "Open - anyone may walk in and use containers",
+    "ch": "開放 - 任何人都可以走進來並使用容器",
+    "cn": "开放 - 任何人都可以走进来并使用容器"
+   },
+   "UI_JeevesClaims_PublicEntry_enter": {
+    "en": "Open - anyone may walk in, but not touch anything",
+    "ch": "開放 - 任何人都可以走進來, 但不能碰任何東西",
+    "cn": "开放 - 任何人都可以走进来, 但不能碰任何东西"
+   },
+   "UI_JeevesClaims_PublicEntry_off": {
+    "en": "Closed - only members may enter",
+    "ch": "關閉 - 只有成員可以進入",
+    "cn": "关闭 - 只有成员可以进入"
+   },
+   "UI_JeevesClaims_RespawnNotMember": {
+    "en": "You can only respawn inside a claim you belong to.",
+    "ch": "你只能在自己所屬的認領內重生.",
+    "cn": "你只能在自己所属的认领内重生."
+   },
+   "UI_SurvivorBriefing_Look_DyingLight": {
+    "en": "Dying Light",
+    "ch": "垂死之光",
+    "cn": "消逝的光芒"
+   },
+   "UI_SurvivorBriefing_Look_Glitch": {
+    "en": "Glitch",
+    "ch": "故障風",
+    "cn": "故障风"
+   },
+   "UI_SurvivorBriefing_Look_Hotline": {
+    "en": "Hotline Miami",
+    "ch": "火線邁阿密",
+    "cn": "火线迈阿密"
+   },
+   "UI_SurvivorBriefing_Look_Payne": {
+    "en": "Max Payne",
+    "ch": "江湖本色",
+    "cn": "马克思·佩恩"
+   },
+   "UI_SurvivorBriefing_Look_RedDead": {
+    "en": "Red Dead",
+    "ch": "碧血狂殺",
+    "cn": "荒野大镖客"
+   },
+   "UI_SurvivorBriefing_Look_Wayne": {
+    "en": "Wayne Enterprises",
+    "ch": "偉恩企業",
+    "cn": "韦恩企业"
+   },
+   "UI_ImmersiveSnow_Snow3DGround_tooltip": {
+    "en": "Off: the ground snow in Viewpoint's 3D view is flat for you, whatever the sandbox says. With the 3D snow on vehicles off too, there is no 3D snow anywhere. Only with the Immersive Snow - Viewpoint add-on.",
+    "ch": "關閉: 無論沙盒如何設定, 你在 Viewpoint 3D 視角中看到的地面積雪都是平的. 若同時關閉車輛 3D 積雪, 就完全沒有 3D 積雪. 僅限搭配 Immersive Snow - Viewpoint 附加模組.",
+    "cn": "关闭: 无论沙盒设置如何, 你在 Viewpoint 3D 视角中看到的地面积雪都是平的. 若同时关闭车辆 3D 积雪, 就完全没有 3D 积雪. 仅限搭配 Immersive Snow - Viewpoint 附加模组."
+   },
+   "UI_ImmersiveSnow_Snow3DVehicles_tooltip": {
+    "en": "Off: the snow on vehicles in Viewpoint's 3D view is flat for you (no snow caps on top), whatever the sandbox says. With the 3D snow on the ground off too, there is no 3D snow anywhere. Only with the Immersive Snow - Viewpoint add-on.",
+    "ch": "關閉: 無論沙盒如何設定, 你在 Viewpoint 3D 視角中看到的車輛積雪都是平的 (上方沒有隆起的雪頂). 若同時關閉地面 3D 積雪, 就完全沒有 3D 積雪. 僅限搭配 Immersive Snow - Viewpoint 附加模組.",
+    "cn": "关闭: 无论沙盒设置如何, 你在 Viewpoint 3D 视角中看到的车辆积雪都是平的 (上方没有隆起的雪顶). 若同时关闭地面 3D 积雪, 就完全没有 3D 积雪. 仅限搭配 Immersive Snow - Viewpoint 附加模组."
+   },
+   "UI_ImmersiveSnow_SnowSlowdown_tooltip": {
+    "en": "Off: the 3D snow does not slow you down. In multiplayer the server alone decides, this switch does nothing there. Only with the Immersive Snow - Viewpoint add-on.",
+    "ch": "關閉: 3D 積雪不會拖慢你. 多人遊戲中完全由伺服器決定, 此開關在多人遊戲中沒有作用. 僅限搭配 Immersive Snow - Viewpoint 附加模組.",
+    "cn": "关闭: 3D 积雪不会减慢你的速度. 多人游戏中完全由服务器决定, 此开关在多人游戏中不起作用. 仅限搭配 Immersive Snow - Viewpoint 附加模组."
+   },
+   "UI_optionscreen_binding_VPUI_FurniturePickup": {
+    "en": "Furniture: pick up what you aim at",
+    "ch": "家具: 拿起你瞄準的物件",
+    "cn": "家具: 拿起你瞄准的物件"
+   },
+   "UI_optionscreen_binding_VPUI_FurnitureRotate": {
+    "en": "Furniture: rotate what you aim at",
+    "ch": "家具: 旋轉你瞄準的物件",
+    "cn": "家具: 旋转你瞄准的物件"
    }
   },
   "MakeUp.json": {

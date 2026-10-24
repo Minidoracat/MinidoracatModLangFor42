@@ -451,7 +451,7 @@
 | [Auto Forage](https://steamcommunity.com/sharedfiles/filedetails/?id=3478924012) | — | — | `GUNS_AutoForage` | 24 | — | — |
 | [[B41/B42] Hephas Stalker PDA](https://steamcommunity.com/sharedfiles/filedetails/?id=3479108127) | — | — | `HephasStalkerPDA`, `HephasStalkerPDA_PersonalLog` | 32 | — | — |
 | [JM3 propane](https://steamcommunity.com/sharedfiles/filedetails/?id=3479641945) | JM3 丙烷系統 | 新增丙烷相關機制，可查看容量、剩餘燃料並填充丙烷罐。 | `JM3_propane` | 6 | — | — |
-| [Willowbrook Bastion!〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3479667649) | 柳溪堡壘 | 位於馬爾德勞西側的 2x2 堡壘地圖（另附 2026 版），內含中式冷兵器、21 式戰術裝備、消音器與鍛造配方。 | `Willowbrook Bastion!`, `Willowbrook Bastion! 2` | 272 | — | — |
+| [Willowbrook Bastion!〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3479667649) | 柳溪堡壘 | 位於馬爾德勞西側的 2x2 堡壘地圖（另附 2026 版），內含中式冷兵器、21 式戰術裝備、消音器與鍛造配方。 | `Willowbrook Bastion!`, `Willowbrook Bastion! 2` | 365 | — | — |
 | [The Division Equipment [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3479867929) | 全境封鎖裝備 | 新增《全境封鎖》主題裝備，含背包、臂章與戰術面罩等。 | `SHDEquipment` | 92 | — | — |
 | [Quality of Life Modpack](https://steamcommunity.com/sharedfiles/filedetails/?id=3480305875) | 生活品質模組包 | 多項便利功能合集，含防毒面具濾芯更換與每日擊殺統計等。 | `twistresting` | 193 | — | — |
 | [Constown (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3480990544) | 康斯鎮 | 肯塔基州諾克斯縣的小鎮地圖，四線道公路貫穿鎮中心，有汽車旅館、修車廠與歇業店舖。 | `Constown42` | 142 | ⚠️ ≥2 | — |
@@ -1398,7 +1398,7 @@
 | [Project JoJo (MP/SP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3807750510) | Project JoJo | 新增《JoJo》風格的替身系統，以箭覺醒替身並使用時停等能力對抗殭屍。 | `JoJoStandSystem0183Standalone` | ? | — | — |
 | [HydeCo. Squirrels! 42.21.0](https://steamcommunity.com/sharedfiles/filedetails/?id=3808150913) | HydeCo. 松鼠！ | 新增棲息在樹上巢穴的活體松鼠，會覓食與逃竄，砍倒巢樹可捕捉並取得儲藏的橡實。 | `HydeCoSquirrels` | 29 | — | — |
 | [[B42] Dynamic Gear Rattling](https://steamcommunity.com/sharedfiles/filedetails/?id=3808152720) | 動態裝備碰撞聲 | 衣物、背包與身上掛載的物品會依移動方式發出聲響，可選擇讓殭屍也聽得到。 | `DynamicGearRattling` | 5 | — | — |
-| [Smart Animal Waste [B42+]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3808507911) | 智慧動物糞便處理 | 把木箱改造成回收箱，自動收集動物區域的糞便、餵給附近堆肥箱、用空麻袋裝好堆肥並送到指定貨架；羽毛也能轉成堆肥。 | `SmartAnimalWaste` | 514 | — | — |
+| [Smart Animal Waste [B42+]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3808507911) | 智慧動物糞便處理 | 把木箱改造成回收箱，自動收集畜牧區的糞便、餵給附近堆肥箱、用空麻袋裝好堆肥並送到指定的儲物容器；羽毛也能轉成堆肥。 | `SmartAnimalWaste` | 846 | — | — |
 | [Over the Shoulder](https://steamcommunity.com/sharedfiles/filedetails/?id=3808805481) | 回頭望 | 可用滑鼠中鍵或手把右搖桿控制角色轉頭，回頭察看身後追兵。 | `OverTheShoulder`, `OverTheShoulderAZFix`, `OverTheShoulderFHFix`, `OverTheShoulderLimpFix`, `OverTheShoulderSauce`, `OverTheShoulderSauceWalkRun` | 17 | — | — |
 | [Survivor Briefing](https://steamcommunity.com/sharedfiles/filedetails/?id=3808944882) | 倖存者簡報 | 每段生存章節開始時顯示日期、時間、角色、地點、天氣與擊殺數簡報，提供 16 種樣式。 | `SurvivorBriefing` | 136 | — | — |
 | [Bunnies](https://steamcommunity.com/sharedfiles/filedetails/?id=3809817126) | 兔子品種 | 新增 28 種兔子品種，會在農場與野外生成，可用誘捕技能捕捉。 | `Bunnies` | 36 | — | — |

@@ -11837,6 +11837,166 @@
       "reason": "MoodleEffectsExplained（42.20 夾）與 DTEM 變體（42.15 夾）只差 %% 與 % 的寫法，內容相同；同一譯文對兩者成立（2026-10-24 #1016）。",
       "ch": "DTEM: 嚴重中毒.<br>DTEM: 有死亡危險.<br>DTEM: 用藥過量 >85 %%<br>DTEM: 每現實時間25秒: 1/7機率壓力+0.10<br>DTEM: 每現實時間25秒: 1/7機率溼潤度+10<br>DTEM: 每現實時間25秒: 1/5機率疲勞+0.07<br>DTEM: 每現實時間25秒: 1/5機率食物中毒<br>DTEM: 恢復: -4 / 現實時間150秒",
       "cn": "DTEM: 严重中毒.<br>DTEM: 有死亡风险.<br>DTEM: 用药过量 >85 %%<br>DTEM: 每现实时间25秒: 1/7概率压力+0.10<br>DTEM: 每现实时间25秒: 1/7概率湿润度+10<br>DTEM: 每现实时间25秒: 1/5概率疲劳+0.07<br>DTEM: 每现实时间25秒: 1/5概率食物中毒<br>DTEM: 恢复: -4 / 现实时间150秒"
+    },
+    "ItemName|Base.Glock17Mag": {
+      "action": "translate",
+      "signature": "d855053dd044bb40",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Firearms／FirearmsBETA 寫 Glock 17 Magazine，Totally's Cops and Robbers 的 script DisplayName 寫 Glock 17rnd Magazine（MaxAmmo 17、base:bullets_9mm、GunType Glock17;Glock19）。同為 Glock 17 的 17 發 9mm 彈匣，只差有沒有標發數；現行「格洛克17手槍彈匣」不寫發數，對三個 owner 都成立，維持現值。",
+      "ch": "格洛克17手槍彈匣",
+      "cn": "格洛克17手枪弹匣"
+    },
+    "ItemName|Base.UZIMag": {
+      "action": "translate",
+      "signature": "1234a5c68b4ec039",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Firearms／FirearmsBETA 寫 UZI Carbine Magazine，Totally's Cops and Robbers 寫 IMI Uzi Magazine（script：base:bullets_9mm、32 發、GunType Base.Uzi「IMI Uzi Personal Defence Weapon」）。兩邊都是 IMI 烏茲的 9mm 彈匣；Firearms 的 Carbine 只是命名風格（見 Base.UZI 裁決：該 MOD 自己的沙盒說明寫 UZI SMGs），Totally's 的 PDW 也是同一把烏茲衝鋒槍。現行「UZI衝鋒槍彈匣」對全部 owner 成立，維持現值。",
+      "ch": "UZI衝鋒槍彈匣",
+      "cn": "UZI冲锋枪弹匣"
+    },
+    "ItemName|Base.762Clip": {
+      "action": "translate",
+      "signature": "bef51354a7b0fdeb",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：TEBFP 與兩個 VFE 寫 AK-47 Magazine，Totally's Cops and Robbers 改寫 AK Pattern 30rnd Magazine（script：AmmoType totally_guns:bullets_762sov，即同 MOD 的 Base.762Bullets「7.62x39mm Round」；GunType Base.ClaycoAK「Clayco Sports AKS」與 Base.AKMClayco，30 發）。四方都是 7.62x39mm 的 AK 系列彈匣，但 Totally's 沒有 AK-47、配用的是民用半自動 AKS，現行「AK-47自動步槍彈匣」對它不成立。比照 Base.Clip_M4_URGI_BLOCK_I「M4系列彈匣」改為「AK系列7.62x39mm彈匣」：口徑對四方都是事實（TEBFP／VFE 的 AK-47 彈匣即 7.62x39mm），也與 TEBFP 的 5.45mm AK-74 彈匣、RPK 彈匣分得開；不寫 30 發（VFE 未標發數）。",
+      "ch": "AK系列7.62x39mm彈匣",
+      "cn": "AK系列7.62x39mm弹匣"
+    },
+    "ItemName|Base.Striker12": {
+      "action": "unship",
+      "signature": "039124bcf1e0160a",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：同一 key 是兩把不同型號的槍。Modern & Historical Firearms Bundle 是 Striker 12（只有 script DisplayName，has_json_en false），Totally's Cops and Robbers 是 Armsel Protecta（ItemName.json，另有 Base.Striker12Folded「Armsel Protecta (Folded)」）。Protecta 是 Armsel 在 Striker 之後重新設計的型號，型號名是這兩把槍唯一的識別，上位詞「轉輪霰彈槍」會把型號抹掉；現行出貨 CH「Striker 12霰彈槍」與 CN「阿姆塞尔守护者霰弹枪」各自只符合一方。比照 Base.Glock23、Base.JS5_Clip 不出貨。抑制後：Totally's 玩家看到自帶 ItemName.json 的 Armsel Protecta（該 MOD 只有 Translate/EN）；MHFB 由 script fallback 顯示 Striker 12（MHFB 不在本機，沒查它是否自帶 CH/CN；tracker 只記 EN）。B41 前綴孿生鍵 ItemName_Base.Striker12 在 sources/en、真相層與 dist 都不存在，不需同步登記。"
+    },
+    "Recipes|ConvertTo22Bullets": {
+      "action": "translate",
+      "signature": "1322bbc9d8e586f6",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：AmmoConverter 各子模組只差寫 .22 或 .22 LR：Rain's Firearms & Gun Parts Expanded 子模組寫 .22，其餘子模組寫 .22 LR。各子模組配方的產物都是 Base.22Bullets（上游 scripts 已核對），Rain's Expanded 的 .22 彈藥族（.22 Round／Box of .22 Rounds／Carton of .22 Boxes）沒有第二種 .22 口徑，與 ItemName|Base.Bullets22Box／Bullets22Carton 裁決一致視為 .22 LR。現行譯文對全部 owner 成立，維持現值。",
+      "ch": "轉換為 .22 LR 子彈",
+      "cn": "转换为 .22 LR 子弹"
+    },
+    "Recipes|ConvertToBullets22Box": {
+      "action": "translate",
+      "signature": "25d34dc3fc2c666e",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：AmmoConverter 各子模組只差寫 .22 或 .22 LR：Rain's Firearms & Gun Parts Expanded 子模組寫 .22，其餘子模組寫 .22 LR。各子模組配方的產物都是 Base.Bullets22Box（上游 scripts 已核對），Rain's Expanded 的 .22 彈藥族（.22 Round／Box of .22 Rounds／Carton of .22 Boxes）沒有第二種 .22 口徑，與 ItemName|Base.Bullets22Box／Bullets22Carton 裁決一致視為 .22 LR。現行譯文對全部 owner 成立，維持現值。",
+      "ch": "轉換為.22 LR子彈 (整盒)",
+      "cn": "转换为 .22 LR 子弹 (整盒)"
+    },
+    "Recipes|ConvertToBullets22Carton": {
+      "action": "translate",
+      "signature": "fa1592558975cfab",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：AmmoConverter 各子模組只差寫 .22 或 .22 LR：Rain's Firearms & Gun Parts Expanded 子模組寫 .22，其餘子模組寫 .22 LR。各子模組配方的產物都是 Base.Bullets22Carton（上游 scripts 已核對），Rain's Expanded 的 .22 彈藥族（.22 Round／Box of .22 Rounds／Carton of .22 Boxes）沒有第二種 .22 口徑，與 ItemName|Base.Bullets22Box／Bullets22Carton 裁決一致視為 .22 LR。現行譯文對全部 owner 成立，維持現值。",
+      "ch": "轉換為.22 LR子彈 (整箱)",
+      "cn": "转换为 .22 LR 子弹 (整箱)"
+    },
+    "Recipes|ConvertTo545Box": {
+      "action": "translate",
+      "signature": "58dd56fcc405c090",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：AmmoConverter 的 ExtendedVanillaWeapons／VFExpansion2 寫 5.45x39mm，ModernFirearmsSystem 子模組寫 5.45x39（省略 mm），同一口徑；三個子模組配方產物相同（Base.545Bullets／545Box／545Carton）。現行 5.45x39mm 譯文對全部 owner 成立，維持現值。",
+      "ch": "轉換為 5.45x39mm 子彈 (整盒)",
+      "cn": "转换为 5.45x39mm 子弹 (整盒)"
+    },
+    "Recipes|ConvertTo545Bullets": {
+      "action": "translate",
+      "signature": "aa4c3912ad56b303",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：AmmoConverter 的 ExtendedVanillaWeapons／VFExpansion2 寫 5.45x39mm，ModernFirearmsSystem 子模組寫 5.45x39（省略 mm），同一口徑；三個子模組配方產物相同（Base.545Bullets／545Box／545Carton）。現行 5.45x39mm 譯文對全部 owner 成立，維持現值。",
+      "ch": "轉換為 5.45x39mm 子彈",
+      "cn": "转换为 5.45x39mm 子弹"
+    },
+    "Recipes|ConvertTo545Carton": {
+      "action": "translate",
+      "signature": "d2a701dd79ad2890",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：AmmoConverter 的 ExtendedVanillaWeapons／VFExpansion2 寫 5.45x39mm，ModernFirearmsSystem 子模組寫 5.45x39（省略 mm），同一口徑；三個子模組配方產物相同（Base.545Bullets／545Box／545Carton）。現行 5.45x39mm 譯文對全部 owner 成立，維持現值。",
+      "ch": "轉換為 5.45x39mm 子彈 (整箱)",
+      "cn": "转换为 5.45x39mm 子弹 (整箱)"
+    },
+    "ItemName|Base.MAC10Folded": {
+      "action": "translate",
+      "signature": "81896c8634145302",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：兩個 VFE 寫 M10 Submachinegun（3761077099 的 script DisplayName 即 MAC-10 Submachinegun），Totally's Cops and Robbers 寫 MAC-10 Submachinegun。英格拉姆 M10 就是 MAC-10，同一把衝鋒槍、只差通稱；現行「M10 衝鋒槍」對全部 owner 成立，維持現值。",
+      "ch": "M10 衝鋒槍",
+      "cn": "M10 冲锋枪"
+    },
+    "ItemName|Base.9mmDrum_p_cat": {
+      "action": "translate",
+      "signature": "49c6cf41929e5881",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Escape from Kentucky（3633421539）寫 9mm Parabellum 50-Round Pistol Drum Magazine，MFS 社群修正版（3780151182）改寫 9x19mm 50-Round Drum。兩方 script 都是 base:bullets_9mm、MaxAmmo 50，GunType 都以手槍為主（EFK：G18／G34／Taurus／MP7／P226／M93R／Taran2011；MFS 社群修正版：Pistol／G17／G18／G19／G34／M9A4／P226 等加上 MP5、Vector、Uzi）。9mm 帕拉貝倫即 9x19mm，「手槍彈鼓」對兩方的手槍都成立，也讓 EFK 玩家能和 Base.9mmDrum_cat（另一個 50 發彈鼓）分開；現行譯文維持。",
+      "ch": "9mm 帕拉貝倫 50發手槍彈鼓",
+      "cn": "9mm 帕拉贝鲁姆 50 发手枪弹鼓"
+    },
+    "ItemName|Gunpart.Clip_9mmDrum_p_cat": {
+      "action": "translate",
+      "signature": "2188528f46e1be7a",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Escape from Kentucky（3633421539）寫 9mm Pistol Drum Magazine (decoration part)，MFS 社群修正版（3780151182）寫 9x19mm 50-Round Drum (decoration part)。與 Base.9mmDrum_p_cat 同一彈鼓的裝飾件，理由同該鍵；現行「9mm 手槍彈鼓 (裝飾件)」不寫發數、口徑 9mm 對兩方成立，維持現值。",
+      "ch": "9mm 手槍彈鼓 (裝飾件)",
+      "cn": "9mm 手枪弹鼓 (装饰件)"
+    },
+    "ItemName|Base.9mmClip25": {
+      "action": "translate",
+      "signature": "d4a5d86fbc71eb61",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Escape from Kentucky（3633421539）寫 9mm Parabellum 30-Round Magazine，MFS 社群修正版（3780151182）改寫 9x19mm 30-Round Extended Magazine。兩方 script 都是 base:bullets_9mm、MaxAmmo 30；9mm 帕拉貝倫即 9x19mm，差別只在社群修正版多標 Extended。現行「9mm 帕拉貝倫 30發彈匣」對兩方成立，維持現值。",
+      "ch": "9mm 帕拉貝倫 30發彈匣",
+      "cn": "9mm 帕拉贝鲁姆 30 发弹匣"
+    },
+    "ItemName|Base.45_Thompson_Drum": {
+      "action": "translate",
+      "signature": "de57f18966e03b0b",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Escape from Kentucky（3633421539）寫 Thompson 100-Round .45 ACP Drum，MFS 社群修正版（3780151182）的 script DisplayName 寫 Thompson 100 Round .45ACP Drum（script：base:bullets_45、MaxAmmo 100、GunType Thompson_cat），只差連字號與空格。現行譯文對兩方成立，維持現值。",
+      "ch": "湯普森 .45 ACP 100 發彈鼓",
+      "cn": "汤普森 .45 ACP 100 发弹鼓"
+    },
+    "Recipes|9mmDrum(50)(手枪)": {
+      "action": "translate",
+      "signature": "15490e7990b11bf8",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Escape from Kentucky（3633421539）寫 Craft 9x19mm 50-Round Pistol Drum Magazine，MFS 社群修正版（3780151182）寫 Craft 9x19mm 50-Round Drum；兩方配方產物都是 Base.9mmDrum_p_cat。比照該物品名的裁決保留「手槍彈鼓」，現行譯文維持。",
+      "ch": "製作 9x19mm 50 發手槍彈鼓",
+      "cn": "制作 9x19mm 50 发手枪弹鼓"
+    },
+    "ItemName|Base.9mmDrum_cat": {
+      "action": "unship",
+      "signature": "6bbb8db27b87ac79",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：同一 key 在兩方是不同槍用、標不同口徑的彈鼓。Escape from Kentucky（3633421539）寫 9mm Parabellum 50-Round Drum Magazine，GunType Base.KrissVector_cat，並是 EFK 湯普森（9mm）的 MagazineType；MFS 社群修正版（3780151182）改寫 9x39mm 50-Round Rifle Drum，GunType 是 AMB17／AS VAL／AS VAL MOD4。口徑是承重資訊：現行「9mm 帕拉貝倫 50發彈鼓」讓社群修正版玩家誤以為能裝進同 MOD 的 9x19mm 彈鼓槍（Base.9mmDrum_p_cat）；拿掉口徑只剩「50 發彈鼓」也分不出槍種，「步槍彈鼓」對 EFK（Vector、湯普森衝鋒槍）不成立。兩方都有可載入 ItemName.json，且都自帶 Translate/CH、CN：不出貨後繁中玩家看到 EFK「9mm 帕拉貝魯姆 50 發彈鼓」或社群修正版「9x39mm 50 發步槍彈鼓」，各自正確。B41 前綴孿生鍵在 sources/en、真相層與 dist 都不存在，不需同步登記。"
+    },
+    "ItemName|Gunpart.Clip_9mmDrum_cat": {
+      "action": "unship",
+      "signature": "1577c4f9651d2c49",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Base.9mmDrum_cat 的裝飾件，口徑說法同樣互斥：Escape from Kentucky（3633421539）寫 9mm 50-Round Drum Magazine (decoration part)，MFS 社群修正版（3780151182）寫 9x39mm 50-Round Rifle Drum (decoration part)。理由同 Base.9mmDrum_cat；兩方都自帶 CH/CN，不出貨後繁中玩家看到 EFK「9mm 50 發彈鼓 (裝飾配件)」或社群修正版「9x39mm 50 發步槍彈鼓 (裝飾配件)」。B41 前綴孿生鍵不存在，不需同步登記。"
+    },
+    "Recipes|9mmDrum(50)": {
+      "action": "unship",
+      "signature": "b85e185cff2a6214",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Escape from Kentucky（3633421539）寫 Craft 9x19mm 50-Round Drum Magazine，MFS 社群修正版（3780151182）寫 Craft 9x39mm 50-Round Rifle Drum；兩方配方產物都是 Base.9mmDrum_cat，口徑說法互斥，比照該物品名不出貨。兩方都有可載入 Recipes.json 並自帶 CH/CN：不出貨後繁中玩家看到 EFK「製作 9×19mm 50 發彈鼓」或社群修正版「製作 9x39mm 50 發步槍彈鼓」。"
+    },
+    "Sandbox|Sandbox_ModernFirearmsSystemSandboxGun_AMB17_cat_Spawn": {
+      "action": "translate",
+      "signature": "00a2571d906db75a",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Escape from Kentucky（3633421539）寫 AMB17 Nightmare Spawn Chance [9mm]，MFS 社群修正版（3780151182）改寫 AMB17 Nightmare Spawn Chance [9x39mm]；同一把槍的生成機率設定。兩方 script 的 AmmoType 都是 base:bullets_9mm，社群修正版改用 9x39 彈匣並把括號改標 9x39mm，括號說法互斥。比照 Sandbox_ModernFirearmsSystemSandboxGun_M7_cat_Spawn 的前例省略口徑括號，其餘維持現行譯名。",
+      "ch": "AMB-17 噩夢生成機率",
+      "cn": "AMB-17 噩梦刷新几率"
+    },
+    "Sandbox|Sandbox_ModernFirearmsSystemSandboxGun_AS_VAL_MOD4_cat_Spawn": {
+      "action": "translate",
+      "signature": "8c7b022e2461627e",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Escape from Kentucky（3633421539）寫 AS VAL MOD4 Spawn Chance [9mm]，MFS 社群修正版（3780151182）改寫 AS VAL MOD4 Spawn Chance [9x39mm]；同一把槍的生成機率設定。兩方 script 的 AmmoType 都是 base:bullets_9mm，社群修正版改用 9x39 彈匣並把括號改標 9x39mm，括號說法互斥。比照 Sandbox_ModernFirearmsSystemSandboxGun_M7_cat_Spawn 的前例省略口徑括號，其餘維持現行譯名。",
+      "ch": "AS Val MOD4 生成機率",
+      "cn": "AS Val MOD4 刷新几率"
+    },
+    "Sandbox|Sandbox_ModernFirearmsSystemSandboxGun_AS_VAL_cat_Spawn": {
+      "action": "translate",
+      "signature": "e6e9f9730a4c2de8",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Escape from Kentucky（3633421539）寫 AS VAL Suppressed Rifle Spawn Chance [9mm]，MFS 社群修正版（3780151182）改寫 AS VAL Suppressed Rifle Spawn Chance [9x39mm]；同一把槍的生成機率設定。兩方 script 的 AmmoType 都是 base:bullets_9mm，社群修正版改用 9x39 彈匣並把括號改標 9x39mm，括號說法互斥。比照 Sandbox_ModernFirearmsSystemSandboxGun_M7_cat_Spawn 的前例省略口徑括號，其餘維持現行譯名。",
+      "ch": "AS Val 消音步槍生成機率",
+      "cn": "AS Val 消音步枪刷新几率"
+    },
+    "Sandbox|Sandbox_ModernFirearmsSystemSandboxGun_VSSM_cat_Spawn": {
+      "action": "translate",
+      "signature": "52f93e72d076d185",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Escape from Kentucky（3633421539）寫 VSSM Suppressed Sniper Spawn Chance [9mm]，MFS 社群修正版（3780151182）改寫 VSSM Suppressed Sniper Spawn Chance [9x39mm]；同一把槍的生成機率設定。兩方 script 的 AmmoType 都是 base:bullets_9mm，社群修正版改用 9x39 彈匣並把括號改標 9x39mm，括號說法互斥。比照 Sandbox_ModernFirearmsSystemSandboxGun_M7_cat_Spawn 的前例省略口徑括號，其餘維持現行譯名。",
+      "ch": "VSSM 消音狙擊生成機率",
+      "cn": "VSSM 消音狙击刷新几率"
+    },
+    "Sandbox|Sandbox_ModernFirearmsSystemSandboxGun_Thompson_cat_Spawn": {
+      "action": "translate",
+      "signature": "1a8f702d3c2c52ad",
+      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Escape from Kentucky（3633421539）寫 Thompson SMG Spawn Chance [9mm]，MFS 社群修正版（3780151182）改寫 Thompson SMG Spawn Chance [.45 ACP]；同一把槍的生成機率設定。兩方湯普森的 script 不同（EFK：base:bullets_9mm、MagazineType 9mmDrum_cat；社群修正版：base:bullets_45、100 發彈鼓），口徑括號互斥。比照 Sandbox_ModernFirearmsSystemSandboxGun_M7_cat_Spawn 的前例省略口徑括號，其餘維持現行譯名。",
+      "ch": "湯普森衝鋒槍生成機率",
+      "cn": "汤普森冲锋枪刷新几率"
     }
   }
 }
