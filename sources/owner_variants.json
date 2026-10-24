@@ -20139,7 +20139,8 @@
      "en": "9x19mm 17-Round Magazine",
      "ch": "9x19mm 17發彈匣",
      "cn": "9x19mm 17发弹匣",
-     "_note": "2026-10-24 #1049：MFS 社群修正版把英文從 9mm Parabellum 17-Round Magazine 改成 9x19mm 17-Round Magazine；待雙模型審核，核准前不出貨。"
+     "_note": "2026-10-24 #1049：MFS 社群修正版把英文從 9mm Parabellum 17-Round Magazine 改成 9x19mm 17-Round Magazine；同日雙模型審核核准。",
+     "approved": "2026-10-24 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
     },
     {
      "owners": [
@@ -47074,7 +47075,8 @@
      "en": "Wind chill > 5 °C<br>Would lower outdoor effective temperature<br>Clothing wind resistance reduces exposure<br>Level 1 is unreachable in checked builds 42.15.3-42.20.1",
      "ch": "風寒值>5 °C<br>理論上會降低戶外體感溫度<br>服裝的防風性可降低暴露<br>經檢查的版本42.15.3-42.20.1中無法達到等級1",
      "cn": "风寒值>5 °C<br>理论上会降低户外体感温度<br>服装的防风性可降低暴露<br>经检查的版本42.15.3-42.20.1中无法达到等级1",
-     "_note": "2026-10-24 上游拿掉 DTEM／EM 的 42.20 夾、改讀 42.15，檢查版本範圍 42.20.4→42.20.1（譯文已同步）；改過的組需雙模型重審，審核前不出貨（#1016）。"
+     "_note": "2026-10-24 上游拿掉 DTEM／EM 的 42.20 夾、改讀 42.15，檢查版本範圍 42.20.4→42.20.1（譯文已同步，#1016）；同日雙模型審核核准。",
+     "approved": "2026-10-24 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
     },
     {
      "owners": [
@@ -67668,6 +67670,435 @@
      "en": "DTEM: Severe intoxication.<br>DTEM: Risk of death.<br>DTEM: Overdose >85 %<br>DTEM: 25 s IRL: 1/7 Stress +0.10<br>DTEM: 25 s IRL: 1/7 Wetness +10<br>DTEM: 25 s IRL: 1/5 Fatigue +0.07<br>DTEM: 25 s IRL: 1/5 Food Sickness<br>DTEM: Recovery: -4 / 150 s IRL",
      "ch": "DTEM: 嚴重中毒.<br>DTEM: 有死亡危險.<br>DTEM: 用藥過量 >85 %%<br>DTEM: 每現實時間25秒: 1/7機率壓力+0.10<br>DTEM: 每現實時間25秒: 1/7機率溼潤度+10<br>DTEM: 每現實時間25秒: 1/5機率疲勞+0.07<br>DTEM: 每現實時間25秒: 1/5機率食物中毒<br>DTEM: 恢復: -4 / 現實時間150秒",
      "cn": "DTEM: 严重中毒.<br>DTEM: 有死亡风险.<br>DTEM: 用药过量 >85 %%<br>DTEM: 每现实时间25秒: 1/7概率压力+0.10<br>DTEM: 每现实时间25秒: 1/7概率湿润度+10<br>DTEM: 每现实时间25秒: 1/5概率疲劳+0.07<br>DTEM: 每现实时间25秒: 1/5概率食物中毒<br>DTEM: 恢复: -4 / 现实时间150秒"
+    }
+   ]
+  },
+  "Recipes|ConvertTo22Bullets": {
+   "kind": "conflict",
+   "signature": "1322bbc9d8e586f6",
+   "groups": [
+    {
+     "owners": [
+      "3388844065/AmmoConverterB42RainsFirearmsAndGunPartsExpanded4220"
+     ],
+     "en": "Convert to .22 Round",
+     "ch": "轉換為 .22 子彈",
+     "cn": "转换为 .22 子弹"
+    },
+    {
+     "owners": [
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
+      "3388844065/AmmoConverterGunrunnersWeaponPackB42Port",
+      "3388844065/AmmoConverterVFExpansion1",
+      "3388844065/AmmoConverterVFExpansion2",
+      "3388844065/AmmoConverterVFExpansion3",
+      "3388844065/AmmoConverterguns93"
+     ],
+     "en": "Convert to .22 LR Round",
+     "ch": "轉換為 .22 LR 子彈",
+     "cn": "转换为 .22 LR 子弹"
+    }
+   ]
+  },
+  "Recipes|ConvertToBullets22Box": {
+   "kind": "conflict",
+   "signature": "25d34dc3fc2c666e",
+   "groups": [
+    {
+     "owners": [
+      "3388844065/AmmoConverterB42RainsFirearmsAndGunPartsExpanded4220"
+     ],
+     "en": "Convert to Box of .22 Rounds",
+     "ch": "轉換為.22子彈 (整盒)",
+     "cn": "转换为 .22 子弹 (整盒)"
+    },
+    {
+     "owners": [
+      "3388844065/AmmoConverterfirearmmod",
+      "3388844065/AmmoConverterfirearmmodbeta"
+     ],
+     "en": "Convert to Box of .22 LR Rounds",
+     "ch": "轉換為.22 LR子彈 (整盒)",
+     "cn": "转换为 .22 LR 子弹 (整盒)"
+    }
+   ]
+  },
+  "Recipes|ConvertToBullets22Carton": {
+   "kind": "conflict",
+   "signature": "fa1592558975cfab",
+   "groups": [
+    {
+     "owners": [
+      "3388844065/AmmoConverterB42RainsFirearmsAndGunPartsExpanded4220"
+     ],
+     "en": "Convert to Carton of .22 Rounds",
+     "ch": "轉換為.22子彈 (整箱)",
+     "cn": "转换为 .22 子弹 (整箱)"
+    },
+    {
+     "owners": [
+      "3388844065/AmmoConverterGaelGunStore_B42",
+      "3388844065/AmmoConverterfirearmmod",
+      "3388844065/AmmoConverterfirearmmodbeta"
+     ],
+     "en": "Convert to Carton of .22 LR Rounds",
+     "ch": "轉換為.22 LR子彈 (整箱)",
+     "cn": "转换为 .22 LR 子弹 (整箱)"
+    }
+   ]
+  },
+  "Recipes|ConvertTo545Box": {
+   "kind": "conflict",
+   "signature": "58dd56fcc405c090",
+   "groups": [
+    {
+     "owners": [
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
+      "3388844065/AmmoConverterVFExpansion2"
+     ],
+     "en": "Convert to Box of 5.45x39mm Rounds",
+     "ch": "轉換為 5.45x39mm 子彈 (整盒)",
+     "cn": "转换为 5.45x39mm 子弹 (整盒)"
+    },
+    {
+     "owners": [
+      "3388844065/AmmoConverterModernFirearmsSystem"
+     ],
+     "en": "Convert to Box of 5.45x39 Rounds",
+     "ch": "轉換為 5.45x39 子彈 (整盒)",
+     "cn": "转换为 5.45x39 子弹 (整盒)"
+    }
+   ]
+  },
+  "Recipes|ConvertTo545Bullets": {
+   "kind": "conflict",
+   "signature": "aa4c3912ad56b303",
+   "groups": [
+    {
+     "owners": [
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
+      "3388844065/AmmoConverterVFExpansion2"
+     ],
+     "en": "Convert to 5.45x39mm Round",
+     "ch": "轉換為 5.45x39mm 子彈",
+     "cn": "转换为 5.45x39mm 子弹"
+    },
+    {
+     "owners": [
+      "3388844065/AmmoConverterModernFirearmsSystem"
+     ],
+     "en": "Convert to 5.45x39 Round",
+     "ch": "轉換為 5.45x39 子彈",
+     "cn": "转换为 5.45x39 子弹"
+    }
+   ]
+  },
+  "Recipes|ConvertTo545Carton": {
+   "kind": "conflict",
+   "signature": "d2a701dd79ad2890",
+   "groups": [
+    {
+     "owners": [
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
+      "3388844065/AmmoConverterVFExpansion2"
+     ],
+     "en": "Convert to Carton of 5.45x39mm Rounds",
+     "ch": "轉換為 5.45x39mm 子彈 (整箱)",
+     "cn": "转换为 5.45x39mm 子弹 (整箱)"
+    },
+    {
+     "owners": [
+      "3388844065/AmmoConverterModernFirearmsSystem"
+     ],
+     "en": "Convert to Carton of 5.45x39 Rounds",
+     "ch": "轉換為 5.45x39 子彈 (整箱)",
+     "cn": "转换为 5.45x39 子弹 (整箱)"
+    }
+   ]
+  },
+  "ItemName|Base.9mmDrum_p_cat": {
+   "kind": "conflict",
+   "signature": "49c6cf41929e5881",
+   "groups": [
+    {
+     "owners": [
+      "3633421539/Escape from Kentucky4215"
+     ],
+     "en": "9mm Parabellum 50-Round Pistol Drum Magazine",
+     "ch": "9mm 帕拉貝倫 50發手槍彈鼓",
+     "cn": "9mm 帕拉贝鲁姆 50 发手枪弹鼓"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "9x19mm 50-Round Drum",
+     "ch": "9x19mm 50 發彈鼓",
+     "cn": "9x19mm 50 发弹鼓"
+    }
+   ]
+  },
+  "ItemName|Gunpart.Clip_9mmDrum_p_cat": {
+   "kind": "conflict",
+   "signature": "2188528f46e1be7a",
+   "groups": [
+    {
+     "owners": [
+      "3633421539/Escape from Kentucky4215"
+     ],
+     "en": "9mm Pistol Drum Magazine (decoration part)",
+     "ch": "9mm 手槍彈鼓 (裝飾件)",
+     "cn": "9mm 手枪弹鼓 (装饰件)"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "9x19mm 50-Round Drum (decoration part)",
+     "ch": "9x19mm 50 發彈鼓 (裝飾件)",
+     "cn": "9x19mm 50 发弹鼓 (装饰件)"
+    }
+   ]
+  },
+  "ItemName|Base.9mmClip25": {
+   "kind": "conflict",
+   "signature": "d4a5d86fbc71eb61",
+   "groups": [
+    {
+     "owners": [
+      "3633421539/Escape from Kentucky4215"
+     ],
+     "en": "9mm Parabellum 30-Round Magazine",
+     "ch": "9mm 帕拉貝倫 30發彈匣",
+     "cn": "9mm 帕拉贝鲁姆 30 发弹匣"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "9x19mm 30-Round Extended Magazine",
+     "ch": "9x19mm 30 發加長彈匣",
+     "cn": "9x19mm 30 发加长弹匣"
+    }
+   ]
+  },
+  "ItemName|Base.45_Thompson_Drum": {
+   "kind": "conflict",
+   "signature": "de57f18966e03b0b",
+   "groups": [
+    {
+     "owners": [
+      "3633421539/Escape from Kentucky4215"
+     ],
+     "en": "Thompson 100-Round .45 ACP Drum",
+     "ch": "湯普森 .45 ACP 100 發彈鼓",
+     "cn": "汤普森 .45 ACP 100 发弹鼓"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "Thompson 100 Round .45ACP Drum",
+     "ch": "湯普森 .45 ACP 100 發彈鼓",
+     "cn": "汤普森 .45 ACP 100 发弹鼓"
+    }
+   ]
+  },
+  "Recipes|9mmDrum(50)(手枪)": {
+   "kind": "conflict",
+   "signature": "15490e7990b11bf8",
+   "groups": [
+    {
+     "owners": [
+      "3633421539/Escape from Kentucky4215"
+     ],
+     "en": "Craft 9x19mm 50-Round Pistol Drum Magazine",
+     "ch": "製作 9x19mm 50 發手槍彈鼓",
+     "cn": "制作 9x19mm 50 发手枪弹鼓"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "Craft 9x19mm 50-Round Drum",
+     "ch": "製作 9x19mm 50 發彈鼓",
+     "cn": "制作 9x19mm 50 发弹鼓"
+    }
+   ]
+  },
+  "ItemName|Base.9mmDrum_cat": {
+   "kind": "conflict",
+   "signature": "6bbb8db27b87ac79",
+   "groups": [
+    {
+     "owners": [
+      "3633421539/Escape from Kentucky4215"
+     ],
+     "en": "9mm Parabellum 50-Round Drum Magazine",
+     "ch": "9mm 帕拉貝倫 50發彈鼓",
+     "cn": "9mm 帕拉贝鲁姆 50 发弹鼓"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "9x39mm 50-Round Rifle Drum",
+     "ch": "9x39mm 50 發步槍彈鼓",
+     "cn": "9x39mm 50 发步枪弹鼓"
+    }
+   ]
+  },
+  "ItemName|Gunpart.Clip_9mmDrum_cat": {
+   "kind": "conflict",
+   "signature": "1577c4f9651d2c49",
+   "groups": [
+    {
+     "owners": [
+      "3633421539/Escape from Kentucky4215"
+     ],
+     "en": "9mm 50-Round Drum Magazine (decoration part)",
+     "ch": "9mm 50發彈鼓 (裝飾件)",
+     "cn": "9mm 50 发弹鼓 (装饰件)"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "9x39mm 50-Round Rifle Drum (decoration part)",
+     "ch": "9x39mm 50 發步槍彈鼓 (裝飾件)",
+     "cn": "9x39mm 50 发步枪弹鼓 (装饰件)"
+    }
+   ]
+  },
+  "Recipes|9mmDrum(50)": {
+   "kind": "conflict",
+   "signature": "b85e185cff2a6214",
+   "groups": [
+    {
+     "owners": [
+      "3633421539/Escape from Kentucky4215"
+     ],
+     "en": "Craft 9x19mm 50-Round Drum Magazine",
+     "ch": "製作 9x19mm 50 發彈鼓",
+     "cn": "制作 9x19mm 50 发弹鼓"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "Craft 9x39mm 50-Round Rifle Drum",
+     "ch": "製作 9x39mm 50 發步槍彈鼓",
+     "cn": "制作 9x39mm 50 发步枪弹鼓"
+    }
+   ]
+  },
+  "Sandbox|Sandbox_ModernFirearmsSystemSandboxGun_AMB17_cat_Spawn": {
+   "kind": "conflict",
+   "signature": "00a2571d906db75a",
+   "groups": [
+    {
+     "owners": [
+      "3633421539/Escape from Kentucky4215"
+     ],
+     "en": "AMB17 Nightmare Spawn Chance [9mm]",
+     "ch": "AMB-17 噩夢生成機率 [9mm]",
+     "cn": "AMB-17 噩梦刷新几率 [9mm]"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "AMB17 Nightmare Spawn Chance [9x39mm]",
+     "ch": "AMB-17 噩夢生成機率 [9x39mm]",
+     "cn": "AMB-17 噩梦刷新几率 [9x39mm]"
+    }
+   ]
+  },
+  "Sandbox|Sandbox_ModernFirearmsSystemSandboxGun_AS_VAL_MOD4_cat_Spawn": {
+   "kind": "conflict",
+   "signature": "8c7b022e2461627e",
+   "groups": [
+    {
+     "owners": [
+      "3633421539/Escape from Kentucky4215"
+     ],
+     "en": "AS VAL MOD4 Spawn Chance [9mm]",
+     "ch": "AS Val MOD4 生成機率 [9mm]",
+     "cn": "AS Val MOD4 刷新几率 [9mm]"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "AS VAL MOD4 Spawn Chance [9x39mm]",
+     "ch": "AS Val MOD4 生成機率 [9x39mm]",
+     "cn": "AS Val MOD4 刷新几率 [9x39mm]"
+    }
+   ]
+  },
+  "Sandbox|Sandbox_ModernFirearmsSystemSandboxGun_AS_VAL_cat_Spawn": {
+   "kind": "conflict",
+   "signature": "e6e9f9730a4c2de8",
+   "groups": [
+    {
+     "owners": [
+      "3633421539/Escape from Kentucky4215"
+     ],
+     "en": "AS VAL Suppressed Rifle Spawn Chance [9mm]",
+     "ch": "AS Val 消音步槍生成機率 [9mm]",
+     "cn": "AS Val 消音步枪刷新几率 [9mm]"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "AS VAL Suppressed Rifle Spawn Chance [9x39mm]",
+     "ch": "AS Val 消音步槍生成機率 [9x39mm]",
+     "cn": "AS Val 消音步枪刷新几率 [9x39mm]"
+    }
+   ]
+  },
+  "Sandbox|Sandbox_ModernFirearmsSystemSandboxGun_VSSM_cat_Spawn": {
+   "kind": "conflict",
+   "signature": "52f93e72d076d185",
+   "groups": [
+    {
+     "owners": [
+      "3633421539/Escape from Kentucky4215"
+     ],
+     "en": "VSSM Suppressed Sniper Spawn Chance [9mm]",
+     "ch": "VSSM 消音狙擊生成機率 [9mm]",
+     "cn": "VSSM 消音狙击刷新几率 [9mm]"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "VSSM Suppressed Sniper Spawn Chance [9x39mm]",
+     "ch": "VSSM 消音狙擊生成機率 [9x39mm]",
+     "cn": "VSSM 消音狙击刷新几率 [9x39mm]"
+    }
+   ]
+  },
+  "Sandbox|Sandbox_ModernFirearmsSystemSandboxGun_Thompson_cat_Spawn": {
+   "kind": "conflict",
+   "signature": "1a8f702d3c2c52ad",
+   "groups": [
+    {
+     "owners": [
+      "3633421539/Escape from Kentucky4215"
+     ],
+     "en": "Thompson SMG Spawn Chance [9mm]",
+     "ch": "湯普森衝鋒槍生成機率 [9mm]",
+     "cn": "汤普森冲锋枪刷新几率 [9mm]"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "Thompson SMG Spawn Chance [.45 ACP]",
+     "ch": "湯普森衝鋒槍生成機率 [.45 ACP]",
+     "cn": "汤普森冲锋枪刷新几率 [.45 ACP]"
     }
    ]
   }
