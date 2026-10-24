@@ -93,7 +93,7 @@ jobs:
       # 第三方 action pin 完整 commit SHA
       - id: steamcmd
         uses: CyberAndrii/setup-steamcmd@afc45f145b95c175c3a3862d3ca84756537d48e8 # v1.3.0
-      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: tracker-changed
       - name: 下載+裁剪+diff（Workshop 內容只靜態解析、絕不執行）
@@ -123,7 +123,7 @@ jobs:
       - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
         with:
           enable-cache: false # 純標準函式庫，無相依可快取
-      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: tracker-diffs
       - name: 設定 git 身分
