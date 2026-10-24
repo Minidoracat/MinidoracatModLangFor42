@@ -4,29 +4,14 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
-## [Unreleased]
+## [42.21.0-1.60.1] - 2026-10-24
 
 ### Added
 
 - **22 個 MOD 更新後新增的文字補上繁簡中文（1,247 鍵）。** 數量較多的是 Smart Animal Waste 的新版介面（616 鍵）、Injectors 改版後的 22 支彩色注射器與沙盒選項（192 鍵）、Willowbrook Bastion!（95 鍵）、Locksmith（82 鍵）、Modern Firearms System 社群修正版（57 鍵）、Project A-Life（48 鍵）、Jeeve's Claims（37 鍵）與 Ammo Converter（30 鍵）。
   > 技術要點：追蹤器 2026-10-24 #1025–#1046「可能過時」。own 目錄的 Smart Animal Waste 與 Willowbrook（簡中照作者 `Translate/CN` 逐字照抄）寫進 own 目錄 CN 與 `sources/ch`；其餘 536 鍵走 `apply_wf_result`／`apply_translations` 進 `own_translations.json`。6 路翻譯、6 路對抗複核，採納 103 條修正，例如注射器顏色改成「注射器 (黑色, 青色)」的物品名格式、輪詢與衰減設定照 Lua 實際用法譯成「間隔」、hutch 照原版譯「畜欄」、配方點名的原版 4x Scope 照 LangFor42 寫「瞄準鏡 (4 倍)」。Ammo Converter 新配方的 Carton 沿用該 MOD 其他 80 多條配方的「(整箱)」，未採納改成「(整件)」的建議。
-
-### Changed
-
-- **上游改了英文的已出貨文字跟著改（重譯 164 鍵，另 30 鍵確認原譯仍成立）。** 例如 Smart Animal Waste 的距離與時間句型；Tactical Bags 的 6 個腰帶口袋改叫「戰術腰帶口袋 [N]」，和新的「戰術腰帶」分開；Locksmith 的提示改成「掛鎖」；Willowbrook 的預設值與彩蛋武器說明。
-  > 技術要點：As1 衍生層的繁中改 `sources/ch`，簡中有變的登記 `cn_overrides.json`（附 `as1_value`）；Smart Animal Waste 的 Livestock Zone 改用原版名稱「畜牧區」，取代舊譯「動物區域」，`mod_names_zh.json` 的簡介同步。
-- **Ammo Loot Drop 有 13 段說明是照舊版英文翻的，改照現行英文重譯。** 掉落率說明的數字與顏色段落、彈種清單漏掉的槍名都補齊；.30-06 彈匣與 .45-70 的寫法也和同 MOD 其他選項統一（春田、軍用彈）。Guns of Marz 的 AR-15 簡中物品名從「自动步枪」改成「民用步枪」，和英文 Civilian Rifle 與彈種清單一致。
-  > 技術要點：As1 的譯文停在舊版英文、追蹤器又只回報英文有變的鍵，所以逐鍵對照該 MOD 現行出貨的 281 鍵找出；13 鍵與 `MarzGuns.AR15` 的簡中登記 `cn_overrides.json`。
-- **Modern Firearms System 社群修正版的瞄準鏡配方改用原版物品名「瞄準鏡 (4 倍)」**，和這次新增的 Trijicon ACOG/RMR 配方一致。
-- **同一個鍵被不同 MOD 指向不同東西的 24 個鍵重新裁決。** `Base.762Clip` 改成「AK系列7.62x39mm彈匣」，對 Totally's Cops and Robbers 的民用 AK 也成立；MFS 社群修正版與 Escape from Kentucky 口徑不同的 5 個生成機率選項拿掉口徑括號；Striker 12／Armsel Protecta 與 9mm／9x39mm 彈鼓等 4 個鍵沒有對兩邊都成立的譯名，改為不出貨（已有條件譯文的照常依啟用的 MOD 顯示）。
-  > 技術要點：`owner_conflict_decisions.json` 新增 24 筆（translate 20、unship 4），`unshipped_keys.json` 新增 4 筆，簽名以 1,780 筆既有裁決自檢全符；`OWNER_CONFLICTS.md` 重生。
-
-### Removed
-
-- **上游已刪除的 309 個鍵不再出貨**：Smart Animal Waste 舊版介面 284 鍵、Injectors 舊藥劑名稱 23 鍵、Willowbrook 已移除的沙盒選項 2 鍵。
-  > 技術要點：核實 `sources/en` 全庫、tracker state 與現行 Workshop 內容的 Lua／script 都沒有引用才刪，連同 `ch_review_state`。As1 衍生層的上游刪除鍵依 split 不變式保留。
-
-## [42.21.0-1.60.1] - 2026-10-24
+- **口徑或寫法不同的同名鍵，改成依啟用的 MOD 顯示各自的名稱（新增 19 個鍵）。** 包括 Escape from Kentucky 與 MFS 社群修正版的 9mm／9x39mm 彈鼓、彈匣、配方與 5 個生成機率選項，以及 Ammo Converter 各子模組的 .22／5.45 配方；例如生成機率選項在 Escape from Kentucky 顯示「[9mm]」、在 MFS 社群修正版顯示「[9x39mm]」。遊戲認不出啟用的 MOD 時，照舊顯示中性譯名。
+  > 技術要點：這次上游更新新出現的 19 個衝突鍵補 `owner_variants.json` 條目（kind conflict，38 組），依 2026-10-23 使用者裁定「衝突鍵都為每個 owner 提供各自的譯文」。使用者 2026-10-24 授權雙模型審核：GPT-6 Astra（max）與 Claude 兩輪都同意同一份文字。同一輪核准兩組改寫原版文字的條件譯文：MFS 社群修正版的 `Base.9mmClip`（9x19mm 17發彈匣），以及 Moodle Effects Explained DTEM／EM 版的 `Moodles_Windchill_desc_lvl1`（檢查版本改成 42.20.1）。
 
 ### Changed
 
@@ -37,7 +22,19 @@
 - **看過的衝突清單改成記住最近 20 組。** 在 MOD 組合不同的伺服器與單機之間切換時，看過的組合不會再跳提醒；只有出現沒看過的衝突組合才會跳。
   > 技術要點：使用者 2026-10-24 裁定，取代 2026-10-23「和上次看過的不同才跳」。`Zomboid/Lua/CatModLangFor42_conflicts_seen.txt` 改為一行一組、最新在前（`CatModLang.seenAfter`），1.60.0 寫的單行檔照樣讀得懂。
 - **彈藥轉換器（AmmoConverter）新增的子模組，彈藥轉換配方也依啟用的 MOD 顯示對應的中文。**
-  > 技術要點：追蹤器 2026-10-24 #1049。新增的 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 子模組英文與既有組相同，Gunrunners 子模組改用 7.62x39mm 的英文：16 筆 owner 衝突裁決重新背書（.30-30／.30-06、7.62x51／.308 等口徑仍互斥，9 鍵維持不出貨，`unshipped_keys.json` 的 `owner_signature` 同步），簽名以 1,764 筆既有裁決自檢全符；15 個配方與 `ContextMenu_Inject`（Injectors 已不在 owner 名單）的條件譯文照新分組重排，譯文沿用。MFS 社群修正版把 `Base.9mmClip` 改名為 9x19mm 17-Round Magazine：這組屬於改寫原版文字，雙模型審核前不出貨，啟用時顯示本體翻譯的名稱。`OWNER_CONFLICTS.md` 重生。
+  > 技術要點：追蹤器 2026-10-24 #1049。新增的 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 子模組英文與既有組相同，Gunrunners 子模組改用 7.62x39mm 的英文：16 筆 owner 衝突裁決重新背書（.30-30／.30-06、7.62x51／.308 等口徑仍互斥，9 鍵維持不出貨，`unshipped_keys.json` 的 `owner_signature` 同步），簽名以 1,764 筆既有裁決自檢全符；15 個配方與 `ContextMenu_Inject`（Injectors 已不在 owner 名單）的條件譯文照新分組重排，譯文沿用。MFS 社群修正版把 `Base.9mmClip` 改名為 9x19mm 17-Round Magazine：這組屬於改寫原版文字，經雙模型審核核准後出貨（見上方 Added）。`OWNER_CONFLICTS.md` 重生。
+- **上游改了英文的已出貨文字跟著改（重譯 164 鍵，另 30 鍵確認原譯仍成立）。** 例如 Smart Animal Waste 的距離與時間句型；Tactical Bags 的 6 個腰帶口袋改叫「戰術腰帶口袋 [N]」，和新的「戰術腰帶」分開；Locksmith 的提示改成「掛鎖」；Willowbrook 的預設值與彩蛋武器說明。
+  > 技術要點：As1 衍生層的繁中改 `sources/ch`，簡中有變的登記 `cn_overrides.json`（附 `as1_value`）；Smart Animal Waste 的 Livestock Zone 改用原版名稱「畜牧區」，取代舊譯「動物區域」，`mod_names_zh.json` 的簡介同步。
+- **Ammo Loot Drop 有 13 段說明是照舊版英文翻的，改照現行英文重譯。** 掉落率說明的數字與顏色段落、彈種清單漏掉的槍名都補齊；.30-06 彈匣與 .45-70 的寫法也和同 MOD 其他選項統一（春田、軍用彈）。Guns of Marz 的 AR-15 簡中物品名從「自动步枪」改成「民用步枪」，和英文 Civilian Rifle 與彈種清單一致。
+  > 技術要點：As1 的譯文停在舊版英文、追蹤器又只回報英文有變的鍵，所以逐鍵對照該 MOD 現行出貨的 281 鍵找出；13 鍵與 `MarzGuns.AR15` 的簡中登記 `cn_overrides.json`。
+- **Modern Firearms System 社群修正版的瞄準鏡配方改用原版物品名「瞄準鏡 (4 倍)」**，和這次新增的 Trijicon ACOG/RMR 配方一致。
+- **同一個鍵被不同 MOD 指向不同東西的 24 個鍵重新裁決。** `Base.762Clip` 改成「AK系列7.62x39mm彈匣」，對 Totally's Cops and Robbers 的民用 AK 也成立；MFS 社群修正版與 Escape from Kentucky 口徑不同的 5 個生成機率選項，中性譯名拿掉口徑括號；Striker 12／Armsel Protecta 與 9mm／9x39mm 彈鼓等 4 個鍵沒有對兩邊都成立的譯名，改為不出貨。遊戲認得出啟用的 MOD 時，這些鍵照條件譯文顯示各自的名稱。
+  > 技術要點：`owner_conflict_decisions.json` 新增 24 筆（translate 20、unship 4），`unshipped_keys.json` 新增 4 筆，簽名以 1,780 筆既有裁決自檢全符；`OWNER_CONFLICTS.md` 重生。
+
+### Removed
+
+- **上游已刪除的 309 個鍵不再出貨**：Smart Animal Waste 舊版介面 284 鍵、Injectors 舊藥劑名稱 23 鍵、Willowbrook 已移除的沙盒選項 2 鍵。
+  > 技術要點：核實 `sources/en` 全庫、tracker state 與現行 Workshop 內容的 Lua／script 都沒有引用才刪，連同 `ch_review_state`。As1 衍生層的上游刪除鍵依 split 不變式保留。
 
 ## [42.21.0-1.60.0] - 2026-10-24
 
