@@ -160,8 +160,12 @@ function CatModLang.listText(res, mods)
         end
     end
     if #res.vanilla > 0 then
+        local desc = getText("IGUI_CatModLang_GroupVanillaDesc")
+        if CatModLang.vanillaOff then -- set by CatModLangVariants: vanilla pack loads after this pack
+            desc = desc .. " <LINE> <LINE> " .. getText("IGUI_CatModLang_VanillaOff", getText("UI_mods_ModsOrder"))
+        end
         t[#t + 1] = " <H2> " .. getText("IGUI_CatModLang_GroupVanilla", #res.vanilla) .. " <LINE> <TEXT> "
-            .. getText("IGUI_CatModLang_GroupVanillaDesc") .. " <LINE> <LINE> "
+            .. desc .. " <LINE> <LINE> "
         for _, v in ipairs(res.vanilla) do
             local names = {}
             for i, rank in ipairs(v.ranks) do names[i] = modName(mods[rank]) end

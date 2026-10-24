@@ -1,7 +1,7 @@
 {
  "_comment": "已裁決不出貨的 (檔名|鍵)。**真相層照樣保留**——`sources/_unsorted/CN` 是 As1 lane 的忠實鏡像，刪掉會讓 tracker 的 layer-B 把它報成永久差異、每次 As1 更新都開假的『待同步』issue；`sources/ch` 也必須逐鍵鏡像 CN 才過 corpus 鍵集 gate。所以抑制只發生在出貨那一步，語意與 vanilla 出貨抑制相同。",
  "_recheck": "兩類判準不同。第一類：As1 每次更新後重查一次；as1_value 漂移是重新搜尋 mod／正確落點的訊號。第二類：as1_value 是抑制前有效 CN 值錨點（own lane 也適用），值漂移代表真相層改動；as1_value 缺失／漂移或 owner_signature 漂移代表 owner 增減／上游英文改值，兩者任一漂移都要重審 unship 裁決。",
- "_rule": "登記前先分類。第一類（檔名不可載入／落點不明）：必須先試著指認 mod；Workshop 搜尋端點查『內部 id』 https://steamcommunity.com/workshop/browse/?appid=108600&searchtext=<內部id> ——鍵名前綴多半是內部 id 而非顯示名，語意搜尋常找不到。能指認 mod 就該補正確鍵，不能把本檔當丟棄場（BarrEx／Super Bulldozer／Last Cup Coffee 都曾因此救回，見 744670b、da34211）。第二類（#230 owner 衝突）：須查證為不同實體、無誠實中性譯名，且 JSON 無法依 mod 啟用狀態條件化；與 owner_conflict_decisions.json 的 action=unship 雙向背書，條目必帶 as1_value 與 owner_signature；ItemName 裸鍵若存在 B41 前綴孿生鍵，兩者必須一起抑制。 第三類（原版選項鍵歸本體翻譯包）：原版 Lua 查表、原版未定義、由 CatLangFor42 負責譯名的鍵；不需 owner 背書，條目帶 as1_value 錨點與使用者裁決日期。",
+ "_rule": "登記前先分類。第一類（檔名不可載入／落點不明）：必須先試著指認 mod；Workshop 搜尋端點查『內部 id』 https://steamcommunity.com/workshop/browse/?appid=108600&searchtext=<內部id> ——鍵名前綴多半是內部 id 而非顯示名，語意搜尋常找不到。能指認 mod 就該補正確鍵，不能把本檔當丟棄場（BarrEx／Super Bulldozer／Last Cup Coffee 都曾因此救回，見 744670b、da34211）。第二類（#230 owner 衝突）：須查證為不同實體、無誠實中性譯名，且 JSON 無法依 mod 啟用狀態條件化；與 owner_conflict_decisions.json 的 action=unship 雙向背書，條目必帶 as1_value 與 owner_signature；ItemName 裸鍵若存在 B41 前綴孿生鍵，兩者必須一起抑制。 第三類（原版名稱鍵歸本體翻譯包）：原版程式、腳本或圖塊會查、原版翻譯檔未定義、由 CatLangFor42 負責譯名的鍵（原版選項、物品、車輛、製作站名稱等）；不需 owner 背書，條目帶 as1_value 錨點與使用者裁決日期。收尾閘門 ⑦ 比對本體翻譯包出貨鍵：撞到的鍵原版會顯示就登記本類，原版不會顯示（MOD 自有、B42 不讀）就登記 langfor42_shared_keys.json。",
  "entries": {
   "IG_UI.json|IGUI_VehicleNamefhq240SXCabrio": {
    "as1_value": "日产240SX 敞篷版 (S13)",
@@ -1734,6 +1734,75 @@
    "as1_value": "JS5 20发弹匣",
    "owner_signature": "678b56ada7063932",
    "reason": "2026-10-21 #965 裁決不出貨：同一 key 是兩把不同衝鋒槍的彈匣。Better Vanilla Firearms（3715977706）是 KH-5 Magazine（配 Base.JS5_SMG「KH-5 Submachinegun」）；Marz Vanilla Guns（3773834525）是 JS5 20-Round Magazine（配 Base.JS5_smg「JS5 SMG」），兩者都是 9mm。槍型名不同，「9mm 衝鋒槍彈匣」在 Marz 會和 MP5 的 9mm 彈匣（9mmClip_25／30／40／100）分不出來，比照 Base.Glock23 不出貨。抑制後：兩方都有可載入的 ItemName.json，繁中玩家看到各自的英文；BVF 自帶 Translate/CN（「KH-5 弹匣」），簡中玩家裝 BVF 時看到 MOD 自帶簡中，裝 Marz 時看到英文（Marz 只有 EN）。"
+  },
+  "IG_UI.json|IGUI_VehicleNameVanSeats_Mural": {
+   "as1_value": "骑士·坚守",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版車輛 VanSeats_Mural 的車名（ISVehicleMechanics.lua／ISVehicleMenu.lua 以 getText(\"IGUI_VehicleName\"..車名) 查）；PZK VLC（3217685049）用同鍵改名。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "IG_UI.json|IGUI_VehiclePartPassengerCompartment": {
+   "as1_value": "乘员舱",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版車輛零件 PassengerCompartment 的名稱（ISVehicleMechanics.lua 以 getText(\"IGUI_VehiclePart\"..零件 ID) 查）；來源未歸屬 MOD（_unsorted）。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "ItemName.json|Base.FruitSaladClay": {
+   "as1_value": "水果沙拉",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版物品 Base.FruitSaladClay（media/scripts/generated/items/food.txt）的名稱；Long Term Preservation Extended（3597673472、3789287166）用同鍵改名。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "ItemName.json|Base.HotDrinkCopper": {
+   "as1_value": "热饮",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版物品 Base.HotDrinkCopper（media/scripts/generated/items/food.txt）的名稱；Long Term Preservation Extended（3597673472、3789287166）用同鍵改名。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "ItemName.json|Base.HotDrinkGold": {
+   "as1_value": "热饮",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版物品 Base.HotDrinkGold（media/scripts/generated/items/food.txt）的名稱；Long Term Preservation Extended（3597673472、3789287166）用同鍵改名。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "ItemName.json|Base.HotDrinkMetal": {
+   "as1_value": "热饮",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版物品 Base.HotDrinkMetal（media/scripts/generated/items/food.txt）的名稱；Long Term Preservation Extended（3597673472、3789287166）用同鍵改名。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "ItemName.json|Base.HotDrinkSilver": {
+   "as1_value": "热饮",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版物品 Base.HotDrinkSilver（media/scripts/generated/items/food.txt）的名稱；Long Term Preservation Extended（3597673472、3789287166）用同鍵改名。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "ItemName.json|Base.HotDrinkTumbler": {
+   "as1_value": "热饮",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版物品 Base.HotDrinkTumbler（media/scripts/generated/items/food.txt）的名稱；Long Term Preservation Extended（3597673472、3789287166）用同鍵改名。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "Moveables.json|Blacksmith_Anvil": {
+   "as1_value": "铁砧",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版圖塊名稱（Translator.getMoveableDisplayName 以圖塊 CustomName 查）；Nick's Moveable Workstations（3782735637）用同鍵補譯。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "Moveables.json|Chopping_Block": {
+   "as1_value": "砧板",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版圖塊名稱（Translator.getMoveableDisplayName 以圖塊 CustomName 查）；Nick's Moveable Workstations（3782735637）用同鍵補譯。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "Moveables.json|Primitive_Forge": {
+   "as1_value": "原始锻造炉",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版圖塊名稱（Translator.getMoveableDisplayName 以圖塊 CustomName 查）；Nick's Moveable Workstations（3782735637）用同鍵補譯。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "Moveables.json|Simple_Cooking_Pit": {
+   "as1_value": "石砌火坑 (石块)",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版圖塊名稱（Translator.getMoveableDisplayName 以圖塊 CustomName 查）；Nick's Moveable Workstations（3782735637）用同鍵補譯。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "Moveables.json|Stone_Mill": {
+   "as1_value": "石磨",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版圖塊名稱（Translator.getMoveableDisplayName 以圖塊 CustomName 查）；Nick's Moveable Workstations（3782735637）用同鍵補譯。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "Moveables.json|Campfire": {
+   "as1_value": "营火套件",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版圖塊名稱（Translator.getMoveableDisplayName 以圖塊 CustomName 查）；[B42/41] Pickup ATM & FirePlace & Well（3294592194）用同鍵改名。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "Moveables.json|Pottery_Table": {
+   "as1_value": "陶艺工作台",
+   "owner_signature": "cfa7d441ce23ad8d",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版圖塊名稱（Translator.getMoveableDisplayName 以圖塊 CustomName 查）；Pickup ATM & FirePlace & Well（3294592194）與 Nick's Moveable Workstations（3782735637）用同鍵補譯，owner_variants.json 的條件譯文條目一併移除。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "Moveables.json|Distillery": {
+   "as1_value": "蒸馏器",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版圖塊名稱（Translator.getMoveableDisplayName 以圖塊 CustomName 查）；本包原創翻譯層收錄。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
+  },
+  "Moveables.json|Wide_Medical_Cabinet": {
+   "as1_value": "宽型医疗柜",
+   "reason": "2026-10-24 使用者裁決不出貨（第三類：原版名稱鍵歸本體翻譯包）：原版圖塊名稱（Translator.getMoveableDisplayName 以圖塊 CustomName 查）；本包原創翻譯層收錄（出自 OpenAllContainers 3465040406）。原版翻譯檔沒有這個鍵、由 CatLangFor42（本體翻譯包）負責譯名。本體鍵條件譯文改由載入順序決定後預設本包排最後，同鍵會改到所有玩家看到的原版名稱，故不出貨。"
   }
  }
 }

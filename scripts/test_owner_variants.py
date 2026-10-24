@@ -7,7 +7,8 @@
 兜底；本包又承諾「JSON 出貨零本體鍵、本體鍵的條件譯文逐案核准才出貨」。要鎖住的事：
   1. formatFixer：`%N`→`%N$s`、`%%` 原樣，builder 與 oracle 兩份實作同語意。
   2. 欄位跳脫往返：`\\`、TAB、LF、CR 跳脫後逆轉回原值；未知跳脫 fail-loud。
-  3. build `variant_gate`：本體鍵逐 group 核准（條目層級 approved＝全組；部分核准時未核准組與
+  3. build `variant_gate`：列首類型欄（`v` 本體鍵、`c` 衝突鍵；本體翻譯包排在本包之後時注入器靠它跳過
+     本體鍵）；本體鍵逐 group 核准（條目層級 approved＝全組；部分核准時未核准組與
      skip owner 出空值列；全未核准整鍵不出貨）；
      token 不符、簡體字、空值、白名單外檔名、刷新不到的鍵（特質／職業名稱、液體名；說明鍵
      `*desc` 放行）、conflict 撞本體鍵都擋下。
@@ -83,19 +84,19 @@ errs, rows, n_van = build_mod.variant_gate(GOOD, SCOPED)
 assert not errs, errs
 assert n_van == 1
 assert rows["CH"] == [
-    ("IG_UI", "IGUI_Car", "1", "A", "車 %1$s"), ("IG_UI", "IGUI_Car", "2", "B", "卡車 %1$s"),
-    ("ItemName", "Base.Axe", "1", "A", "消防斧"), ("ItemName", "Base.Axe", "3", "C", ""),
+    ("c", "IG_UI", "IGUI_Car", "1", "A", "車 %1$s"), ("c", "IG_UI", "IGUI_Car", "2", "B", "卡車 %1$s"),
+    ("v", "ItemName", "Base.Axe", "1", "A", "消防斧"), ("v", "ItemName", "Base.Axe", "3", "C", ""),
 ], rows["CH"]
-assert rows["CN"][1] == ("IG_UI", "IGUI_Car", "2", "B", "卡车 %1$s")
+assert rows["CN"][1] == ("c", "IG_UI", "IGUI_Car", "2", "B", "卡车 %1$s")
 
 case("未核准本體鍵不出貨")
 unapproved = json.loads(json.dumps(GOOD))
 unapproved["ItemName|Base.Axe"]["approved"] = "  "
 errs, rows, n_van = build_mod.variant_gate(unapproved, SCOPED)
 assert not errs and n_van == 0
-assert all(r[1] != "Base.Axe" for r in rows["CH"] + rows["CN"]), "未核准本體鍵出貨了"
+assert all(r[2] != "Base.Axe" for r in rows["CH"] + rows["CN"]), "未核准本體鍵出貨了"
 del unapproved["ItemName|Base.Axe"]["approved"]
-assert all(r[1] != "Base.Axe" for r in build_mod.variant_gate(unapproved, SCOPED)[1]["CH"])
+assert all(r[2] != "Base.Axe" for r in build_mod.variant_gate(unapproved, SCOPED)[1]["CH"])
 
 # 本體鍵逐 MOD（逐 group）核准：1/A 核准、2/B 未核准、3/C 與本體同英文（skip）
 PARTIAL = {"ItemName|Base.Axe": {
@@ -105,14 +106,14 @@ PARTIAL = {"ItemName|Base.Axe": {
 case("部分 group 核准：核准組出值、未核准組與 skip 出空值列（勝出規則不變，每個 owner 都有列）")
 errs, rows, n_van = build_mod.variant_gate(PARTIAL, SCOPED)
 assert not errs and n_van == 1, (errs, n_van)
-assert rows["CH"] == [("ItemName", "Base.Axe", "1", "A", "消防斧"), ("ItemName", "Base.Axe", "2", "B", ""),
-                      ("ItemName", "Base.Axe", "2", "B2", ""), ("ItemName", "Base.Axe", "3", "C", "")], rows
+assert rows["CH"] == [("v", "ItemName", "Base.Axe", "1", "A", "消防斧"), ("v", "ItemName", "Base.Axe", "2", "B", ""),
+                      ("v", "ItemName", "Base.Axe", "2", "B2", ""), ("v", "ItemName", "Base.Axe", "3", "C", "")], rows
 
 case("條目層級核准＝全組核准")
 whole = json.loads(json.dumps(PARTIAL))
 whole["ItemName|Base.Axe"]["approved"] = "2026-10-23 全部核准"
 _, rows, _ = build_mod.variant_gate(whole, SCOPED)
-assert [r[4] for r in rows["CH"]] == ["消防斧", "木斧", "木斧", ""], rows
+assert [r[5] for r in rows["CH"]] == ["消防斧", "木斧", "木斧", ""], rows
 
 case("全未核准（group 的 approved 空白）整鍵不出貨、連空值列都不寫")
 none_ok = json.loads(json.dumps(PARTIAL))
@@ -189,9 +190,9 @@ for key, blocked in (("UI_trait_XDesc", False), ("UI_trait_xdesc", False), ("UI_
         assert any("刷新不到" in f for f in fail) is blocked, (key, fail)
 
 case("資料檔渲染")
-text = build_mod.render_variant_tsv([("UI", "UI_X", "1", "A\tB", "一\n二")])
+text = build_mod.render_variant_tsv([("c", "UI", "UI_X", "1", "A\tB", "一\n二")])
 lines = text.split("\n")
-assert lines[0].startswith("#") and lines[-1] == "" and lines[1] == "UI\tUI_X\t1\tA\\tB\t一\\n二", lines
+assert lines[0].startswith("#") and lines[-1] == "" and lines[1] == "c\tUI\tUI_X\t1\tA\\tB\t一\\n二", lines
 
 # --- 4. prep --check-decisions ------------------------------------------------------- #
 EFF_A = "mods/A/42.20/media/scripts/items.txt"
@@ -329,7 +330,8 @@ with tempfile.TemporaryDirectory() as tdn:
     for label, tampered in (
         ("改值", original.replace("消防斧", "斧")),
         ("值沒套 formatFixer", original.replace("%1$s", "%1")),
-        ("多一列（未核准／無真相源）", original + "UI\tUI_X\t9\tZ\t偷渡\n"),
+        ("多一列（未核准／無真相源）", original + "c\tUI\tUI_X\t9\tZ\t偷渡\n"),
+        ("本體鍵標成衝突鍵（本體翻譯包排在後面時注入器不會跳過）", original.replace("v\tItemName", "c\tItemName")),
         ("CRLF", original.replace("\n", "\r\n")),
     ):
         case(f"verify 抓 {label}")
@@ -376,7 +378,7 @@ with tempfile.TemporaryDirectory() as tdn:
     ok, fail, _ = verify_dist.check_variants(str(td), str(media))
     assert not ok and any("木斧" in f for f in fail), fail
     case("verify 抓 未核准 group 的空值列被拿掉")
-    ch.write_text(original.replace("ItemName\tBase.Axe\t2\tB2\t\n", ""), encoding="utf-8", newline="\n")
+    ch.write_text(original.replace("v\tItemName\tBase.Axe\t2\tB2\t\n", ""), encoding="utf-8", newline="\n")
     assert not verify_dist.check_variants(str(td), str(media))[0]
     ch.write_text(original, encoding="utf-8", newline="\n")
     case("verify 抓 V 列把未核准 group 的 wid 算進已涵蓋")

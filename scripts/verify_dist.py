@@ -46,7 +46,8 @@ verify_dist.py — MinidoracatModLangFor42 的獨立 dist 驗證器（oracle）�
                       豁免須登記 recipe_dead_allowlist.json
   [17] Print Media   ：`Print_Media.json` 的 `*_info` 須符合 42.20.4 rich-text 解析契約。
   [18] 條件譯文資料檔 ：`media/CatModLang/variants_{CH,CN}.tsv` ＝由 sources/owner_variants.json
-                      獨立重算（formatFixer、欄位跳脫、白名單、本體鍵逐 group 核准：未核准組寫空值列）；
+                      獨立重算（類型欄 v 本體鍵／c 衝突鍵、formatFixer、欄位跳脫、白名單、本體鍵逐 group
+                      核准：未核准組寫空值列）；
                       `conflicts.tsv` 的 K 列＝sources/owner_conflicts.tsv、V 列已涵蓋數重算
   [19] 本包 Lua      ：`media/lua/{shared,client}/CatModLang/*.lua` 與 sources/pack_lua 檔集、bytes 一致
   pack_ui.json 的介面鍵併入 [1]／[9] 的原創層期望（dist 值＝sanitize 後真相值）。
@@ -2484,11 +2485,13 @@ def check_variants(repo: str, media: str) -> tuple[bool, list[str], list[str]]:
             fail.append(f"{fk}：檔名不在注入器白名單或鍵前綴刷新不到（build 應擋下）")
             continue
         skip = e.get("skip_owners", []) if kind == "vanilla" else []
+        # 類型欄：注入器靠 v 判斷本體翻譯包排在本包之後時要跳過哪些列
+        code = "v" if kind == "vanilla" else "c"
         for lang in expected:
             for g, ok in zip(e["groups"], ok_groups):
                 val = format_fixer_expectation(g[lang.lower()]) if ok else ""
-                expected[lang] += [[fname, key, *o.split("/", 1), val] for o in g["owners"]]
-            expected[lang] += [[fname, key, *o.split("/", 1), ""] for o in skip]
+                expected[lang] += [[code, fname, key, *o.split("/", 1), val] for o in g["owners"]]
+            expected[lang] += [[code, fname, key, *o.split("/", 1), ""] for o in skip]
         if kind == "vanilla":
             covered.update({o.split("/", 1)[0] for o in [
                 *skip, *(o for g, ok in zip(e["groups"], ok_groups) if ok for o in g["owners"])]})
@@ -2506,7 +2509,7 @@ def check_variants(repo: str, media: str) -> tuple[bool, list[str], list[str]]:
             fail += [f"{name} 缺列：{r}" for r in sorted(wset - gset)]
             fail += [f"{name} 多列（無真相源或未核准）：{r}" for r in sorted(gset - wset)]
             if wset == gset:
-                fail.append(f"{name} 列順序或重複列與期望不符（須依 檔名、鍵、wid、root 排序）")
+                fail.append(f"{name} 列順序或重複列與期望不符（須依 類型、檔名、鍵、wid、root 排序）")
     try:
         got = _read_tsv(os.path.join(data_dir, "conflicts.tsv"))
         src = _read_tsv(os.path.join(repo, "sources", "owner_conflicts.tsv"))

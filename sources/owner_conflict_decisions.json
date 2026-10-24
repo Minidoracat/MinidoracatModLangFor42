@@ -11580,11 +11580,9 @@
       "cn": "允许生成土匪模组自带的帮派"
     },
     "Moveables|Pottery_Table": {
-      "action": "translate",
+      "action": "unship",
       "signature": "cfa7d441ce23ad8d",
-      "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決（維持現值）：鍵名 Pottery_Table 來自原版圖塊屬性 GroupName=Pottery, CustomName=Table (已查 newtiledefinitions.tiles), 也就是原版的陶藝工作臺 (Pottery Bench), 不是另有 Simple/Modern_Pottery_Wheel 鍵的陶輪. Nick's 寫 'Pottery Bench' 正確, Pickup 寫 'Pottery Wheel' 是誤標 (它自己的 KO 也譯成作業台). 兩個 MOD 拾取的是同一個圖塊, 現值「陶藝工作臺」對應實物且與官方譯名一致, 兩方都成立.",
-      "ch": "陶藝工作臺",
-      "cn": "陶艺工作台"
+      "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決（維持現值）：鍵名 Pottery_Table 來自原版圖塊屬性 GroupName=Pottery, CustomName=Table (已查 newtiledefinitions.tiles), 也就是原版的陶藝工作臺 (Pottery Bench), 不是另有 Simple/Modern_Pottery_Wheel 鍵的陶輪. Nick's 寫 'Pottery Bench' 正確, Pickup 寫 'Pottery Wheel' 是誤標 (它自己的 KO 也譯成作業台). 兩個 MOD 拾取的是同一個圖塊, 現值「陶藝工作臺」對應實物且與官方譯名一致, 兩方都成立. 2026-10-24 使用者裁決改為不出貨（unshipped_keys.json 第三類：原版名稱鍵歸本體翻譯包）：這是原版圖塊名稱，原版翻譯檔沒有、由 CatLangFor42 負責譯名（同為「陶藝工作臺」）；本包排在本體翻譯包之後時同鍵會改到所有玩家看到的原版名稱，owner_variants.json 的條件譯文條目一併移除。"
     },
     "Sandbox|Sandbox_HomeInventory_MaxZonesPerPlayer": {
       "action": "translate",
