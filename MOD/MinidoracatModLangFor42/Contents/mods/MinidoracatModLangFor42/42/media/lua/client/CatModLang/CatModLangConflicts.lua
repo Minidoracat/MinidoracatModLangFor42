@@ -187,7 +187,8 @@ function CatModLang.noticeText(res, mods)
     if n > NOTICE_PAIRS then
         t[#t + 1] = " <TEXT> " .. getText("IGUI_CatModLang_NoticeMore", n - NOTICE_PAIRS) .. " <LINE> <LINE> "
     end
-    t[#t + 1] = " <TEXT> " .. getText("IGUI_CatModLang_NoticeHint") .. " <LINE> <LINE> "
+    -- Where to reopen the list, in the yellow vanilla uses for MOD notes (ISPauseModListUI.lua:24).
+    t[#t + 1] = " <TEXT> " .. getText("IGUI_CatModLang_NoticeHint") .. " <LINE> <LINE> <RGB:1,1,0> "
         .. getText("IGUI_CatModLang_NoticeReopen", getText("UI_mainscreen_option"), getText("UI_mainscreen_mods"),
             getText("UI_CatModLang_Options"), getText("UI_CatModLang_OpenList"))
     return table.concat(t)

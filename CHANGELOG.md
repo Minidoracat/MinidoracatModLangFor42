@@ -10,8 +10,8 @@
 
 - **「MOD 文字衝突」提醒與清單改放在畫面右側，不再擋住剛進遊戲的角色。** 1.60.0 的提醒一進遊戲就跳在畫面正中間，會遮住角色周圍；現在改到右側、狀態圖示的左邊。在主選單打開清單時照舊置中。
   > 技術要點：使用者 2026-10-24 回報。`CatModLangConflicts.lua` 新增 `origin()`：遊戲中放玩家畫面右側、moodle 欄左邊（`UIManager.java:417`，寬度讀 `UIManager.getMoodleUI`）、垂直置中，垂直置中沿用原版 `ISModalRichText:update`。四個角落已有速度控制與家族 Toast、小地圖、側邊欄、多人聊天框；右側中段也是原版管理員訊息的位置（`ISAdminMessage.lua:147`）。E2E `conflict-notice-sp` 加位置檢查。
-- **提醒最後多一段說明，寫出之後去哪裡再看清單。** 到「選項」的「模組」頁，在「繁體簡體模組翻譯」底下按「查看 MOD 文字衝突」；同一個地方也能關掉自動提醒。
-  > 技術要點：`pack_ui.json` 的 `IGUI_CatModLang_NoticeHint` 只留「新舊版本只留一個」那句，路徑另成一段 `IGUI_CatModLang_NoticeReopen`（介面文字 25 鍵）；四個名稱都用遊戲實際的翻譯鍵帶入：`UI_mainscreen_option`、`UI_mainscreen_mods`（選項頁的分頁名，`MainOptions.lua:2798`）、`UI_CatModLang_Options`、`UI_CatModLang_OpenList`。
+- **提醒最後多一段黃色的說明，寫出之後去哪裡再看清單。** 到「選項」的「模組」頁，在「繁體簡體模組翻譯」底下按「查看 MOD 文字衝突」；同一個地方也能關掉自動提醒。
+  > 技術要點：`pack_ui.json` 的 `IGUI_CatModLang_NoticeHint` 只留「新舊版本只留一個」那句，路徑另成一段 `IGUI_CatModLang_NoticeReopen`（介面文字 25 鍵）；四個名稱都用遊戲實際的翻譯鍵帶入：`UI_mainscreen_option`、`UI_mainscreen_mods`（選項頁的分頁名，`MainOptions.lua:2798`）、`UI_CatModLang_Options`、`UI_CatModLang_OpenList`。這段用原版暫停選單 MOD 清單標示提醒的黃色 `<RGB:1,1,0>`（`ISPauseModListUI.lua:24`），使用者 2026-10-24 要求醒目。
 - **看過的衝突清單改成記住最近 20 組。** 在 MOD 組合不同的伺服器與單機之間切換時，看過的組合不會再跳提醒；只有出現沒看過的衝突組合才會跳。
   > 技術要點：使用者 2026-10-24 裁定，取代 2026-10-23「和上次看過的不同才跳」。`Zomboid/Lua/CatModLangFor42_conflicts_seen.txt` 改為一行一組、最新在前（`CatModLang.seenAfter`），1.60.0 寫的單行檔照樣讀得懂。
 - **彈藥轉換器（AmmoConverter）新增的子模組，彈藥轉換配方也依啟用的 MOD 顯示對應的中文。**
