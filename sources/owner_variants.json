@@ -358,13 +358,12 @@
   },
   "ContextMenu|ContextMenu_Inject": {
    "kind": "conflict",
-   "signature": "1387a87aedd290f5",
+   "signature": "c87e93fe3438e2f5",
    "groups": [
     {
      "owners": [
       "2900366269/DrugMod",
       "3404956403/N&C's Narcotics",
-      "3437429771/Injectors",
       "3707475814/BanditsWeekOneTheArk",
       "3777949201/ZombieCureSyringe"
      ],
@@ -20060,7 +20059,7 @@
   },
   "ItemName|Base.9mmClip": {
    "kind": "vanilla",
-   "signature": "eeb98585fe98cd29",
+   "signature": "e7307dd4d1ff72f8",
    "vanilla_en": "M9 Magazine",
    "skip_owners": [
     "3611718925/VFE",
@@ -20107,8 +20106,7 @@
     },
     {
      "owners": [
-      "3633421539/Escape from Kentucky4215",
-      "3780151182/MFS_community_fix"
+      "3633421539/Escape from Kentucky4215"
      ],
      "en": "9mm Parabellum 17-Round Magazine",
      "ch": "9mm 帕拉貝倫 17發彈匣",
@@ -20133,6 +20131,15 @@
      "ch": "9mm 貝瑞塔彈匣",
      "cn": "9mm 伯莱塔弹匣",
      "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "9x19mm 17-Round Magazine",
+     "ch": "9x19mm 17發彈匣",
+     "cn": "9x19mm 17发弹匣",
+     "_note": "2026-10-24 #1049：MFS 社群修正版把英文從 9mm Parabellum 17-Round Magazine 改成 9x19mm 17-Round Magazine；待雙模型審核，核准前不出貨。"
     },
     {
      "owners": [
@@ -47606,11 +47613,12 @@
   },
   "Recipes|ConvertTo3030": {
    "kind": "conflict",
-   "signature": "fa64031814ed7a6a",
+   "signature": "70d5015ac6b4a6c6",
    "groups": [
     {
      "owners": [
       "3388844065/AmmoConverterB42",
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
       "3388844065/AmmoConverterGaelGunStore_B42",
       "3388844065/AmmoConverterGunrunnersWeaponPackB42Port",
       "3388844065/AmmoConverterGunsOfMarz",
@@ -47625,6 +47633,8 @@
       "3388844065/AmmoConverterTIHFPA3R",
       "3388844065/AmmoConverterTNFPB42",
       "3388844065/AmmoConverterVFExpansion1",
+      "3388844065/AmmoConverterVFExpansion2",
+      "3388844065/AmmoConverterVFExpansion3",
       "3388844065/AmmoConverterfirearmmod",
       "3388844065/AmmoConverterfirearmmodbeta",
       "3388844065/AmmoConverterguns93"
@@ -47646,11 +47656,12 @@
   },
   "Recipes|ConvertTo3030Box": {
    "kind": "conflict",
-   "signature": "d35ac801923525ac",
+   "signature": "32fc377a04326335",
    "groups": [
     {
      "owners": [
       "3388844065/AmmoConverterB42",
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
       "3388844065/AmmoConverterGaelGunStore_B42",
       "3388844065/AmmoConverterGunrunnersWeaponPackB42Port",
       "3388844065/AmmoConverterGunsOfMarz",
@@ -47665,6 +47676,8 @@
       "3388844065/AmmoConverterTIHFPA3R",
       "3388844065/AmmoConverterTNFPB42",
       "3388844065/AmmoConverterVFExpansion1",
+      "3388844065/AmmoConverterVFExpansion2",
+      "3388844065/AmmoConverterVFExpansion3",
       "3388844065/AmmoConverterfirearmmod",
       "3388844065/AmmoConverterfirearmmodbeta",
       "3388844065/AmmoConverterguns93"
@@ -47686,11 +47699,12 @@
   },
   "Recipes|ConvertTo3030Carton": {
    "kind": "conflict",
-   "signature": "8f0b1d7758381f43",
+   "signature": "e72eef9864f7f3b2",
    "groups": [
     {
      "owners": [
       "3388844065/AmmoConverterB42",
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
       "3388844065/AmmoConverterGaelGunStore_B42",
       "3388844065/AmmoConverterGunrunnersWeaponPackB42Port",
       "3388844065/AmmoConverterGunsOfMarz",
@@ -47705,6 +47719,8 @@
       "3388844065/AmmoConverterTIHFPA3R",
       "3388844065/AmmoConverterTNFPB42",
       "3388844065/AmmoConverterVFExpansion1",
+      "3388844065/AmmoConverterVFExpansion2",
+      "3388844065/AmmoConverterVFExpansion3",
       "3388844065/AmmoConverterfirearmmod",
       "3388844065/AmmoConverterfirearmmodbeta",
       "3388844065/AmmoConverterguns93"
@@ -47726,11 +47742,12 @@
   },
   "Recipes|ConvertTo308": {
    "kind": "conflict",
-   "signature": "1dceeea85cae079c",
+   "signature": "0ba2918a822536e8",
    "groups": [
     {
      "owners": [
       "3388844065/AmmoConverterB42",
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
       "3388844065/AmmoConverterGaelGunStore_B42",
       "3388844065/AmmoConverterGunrunnersWeaponPackB42Port",
       "3388844065/AmmoConverterGunsOfMarz",
@@ -47745,6 +47762,8 @@
       "3388844065/AmmoConverterTIHFPA3R",
       "3388844065/AmmoConverterTNFPB42",
       "3388844065/AmmoConverterVFExpansion1",
+      "3388844065/AmmoConverterVFExpansion2",
+      "3388844065/AmmoConverterVFExpansion3",
       "3388844065/AmmoConverterfirearmmod",
       "3388844065/AmmoConverterfirearmmodbeta",
       "3388844065/AmmoConverterguns93"
@@ -47766,11 +47785,12 @@
   },
   "Recipes|ConvertTo308Box": {
    "kind": "conflict",
-   "signature": "88d86f1a3918f410",
+   "signature": "c1054f00a4af5502",
    "groups": [
     {
      "owners": [
       "3388844065/AmmoConverterB42",
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
       "3388844065/AmmoConverterGaelGunStore_B42",
       "3388844065/AmmoConverterGunrunnersWeaponPackB42Port",
       "3388844065/AmmoConverterGunsOfMarz",
@@ -47785,6 +47805,8 @@
       "3388844065/AmmoConverterTIHFPA3R",
       "3388844065/AmmoConverterTNFPB42",
       "3388844065/AmmoConverterVFExpansion1",
+      "3388844065/AmmoConverterVFExpansion2",
+      "3388844065/AmmoConverterVFExpansion3",
       "3388844065/AmmoConverterfirearmmod",
       "3388844065/AmmoConverterfirearmmodbeta",
       "3388844065/AmmoConverterguns93"
@@ -47806,11 +47828,12 @@
   },
   "Recipes|ConvertTo308Carton": {
    "kind": "conflict",
-   "signature": "116b5719a833a64b",
+   "signature": "259310e30bca202a",
    "groups": [
     {
      "owners": [
       "3388844065/AmmoConverterB42",
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
       "3388844065/AmmoConverterGaelGunStore_B42",
       "3388844065/AmmoConverterGunrunnersWeaponPackB42Port",
       "3388844065/AmmoConverterGunsOfMarz",
@@ -47825,6 +47848,8 @@
       "3388844065/AmmoConverterTIHFPA3R",
       "3388844065/AmmoConverterTNFPB42",
       "3388844065/AmmoConverterVFExpansion1",
+      "3388844065/AmmoConverterVFExpansion2",
+      "3388844065/AmmoConverterVFExpansion3",
       "3388844065/AmmoConverterfirearmmod",
       "3388844065/AmmoConverterfirearmmodbeta",
       "3388844065/AmmoConverterguns93"
@@ -47846,11 +47871,12 @@
   },
   "Recipes|ConvertTo556": {
    "kind": "conflict",
-   "signature": "4f3bddc63df62b88",
+   "signature": "fcbcd0be8cd62fc2",
    "groups": [
     {
      "owners": [
       "3388844065/AmmoConverterB42",
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
       "3388844065/AmmoConverterGaelGunStore_B42",
       "3388844065/AmmoConverterGunrunnersWeaponPackB42Port",
       "3388844065/AmmoConverterGunsOfMarz",
@@ -47865,6 +47891,8 @@
       "3388844065/AmmoConverterTIHFPA3R",
       "3388844065/AmmoConverterTNFPB42",
       "3388844065/AmmoConverterVFExpansion1",
+      "3388844065/AmmoConverterVFExpansion2",
+      "3388844065/AmmoConverterVFExpansion3",
       "3388844065/AmmoConverterfirearmmod",
       "3388844065/AmmoConverterfirearmmodbeta",
       "3388844065/AmmoConverterguns93"
@@ -47886,11 +47914,12 @@
   },
   "Recipes|ConvertTo556Box": {
    "kind": "conflict",
-   "signature": "21246969d63f99bd",
+   "signature": "0d37cd9a46d50356",
    "groups": [
     {
      "owners": [
       "3388844065/AmmoConverterB42",
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
       "3388844065/AmmoConverterGaelGunStore_B42",
       "3388844065/AmmoConverterGunrunnersWeaponPackB42Port",
       "3388844065/AmmoConverterGunsOfMarz",
@@ -47905,6 +47934,8 @@
       "3388844065/AmmoConverterTIHFPA3R",
       "3388844065/AmmoConverterTNFPB42",
       "3388844065/AmmoConverterVFExpansion1",
+      "3388844065/AmmoConverterVFExpansion2",
+      "3388844065/AmmoConverterVFExpansion3",
       "3388844065/AmmoConverterfirearmmod",
       "3388844065/AmmoConverterfirearmmodbeta",
       "3388844065/AmmoConverterguns93"
@@ -47926,11 +47957,12 @@
   },
   "Recipes|ConvertTo556Carton": {
    "kind": "conflict",
-   "signature": "15a9bb0e6f2ae87e",
+   "signature": "b62a5c58f345e8f4",
    "groups": [
     {
      "owners": [
       "3388844065/AmmoConverterB42",
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
       "3388844065/AmmoConverterGaelGunStore_B42",
       "3388844065/AmmoConverterGunrunnersWeaponPackB42Port",
       "3388844065/AmmoConverterGunsOfMarz",
@@ -47945,6 +47977,8 @@
       "3388844065/AmmoConverterTIHFPA3R",
       "3388844065/AmmoConverterTNFPB42",
       "3388844065/AmmoConverterVFExpansion1",
+      "3388844065/AmmoConverterVFExpansion2",
+      "3388844065/AmmoConverterVFExpansion3",
       "3388844065/AmmoConverterfirearmmod",
       "3388844065/AmmoConverterfirearmmodbeta",
       "3388844065/AmmoConverterguns93"
@@ -47966,7 +48000,7 @@
   },
   "Recipes|ConvertTo762Carton": {
    "kind": "conflict",
-   "signature": "24d5733e2104ac82",
+   "signature": "578c1915d91e5bc4",
    "groups": [
     {
      "owners": [
@@ -47979,7 +48013,10 @@
     },
     {
      "owners": [
-      "3388844065/AmmoConverterVFExpansion1"
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
+      "3388844065/AmmoConverterVFExpansion1",
+      "3388844065/AmmoConverterVFExpansion2",
+      "3388844065/AmmoConverterVFExpansion3"
      ],
      "en": "Convert to Carton of 7.62x39mm Rounds",
      "ch": "轉換為7.62x39mm子彈 (整箱)",
@@ -47989,7 +48026,7 @@
   },
   "Recipes|ConvertTo762x39": {
    "kind": "conflict",
-   "signature": "721393c4c354d7ba",
+   "signature": "58cb446b3ba10a27",
    "groups": [
     {
      "owners": [
@@ -48002,17 +48039,13 @@
     },
     {
      "owners": [
-      "3388844065/AmmoConverterGunrunnersWeaponPackB42Port"
-     ],
-     "en": "Convert to 7.62 Round",
-     "ch": "轉換為7.62子彈",
-     "cn": "转换为7.62子弹"
-    },
-    {
-     "owners": [
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
+      "3388844065/AmmoConverterGunrunnersWeaponPackB42Port",
       "3388844065/AmmoConverterTCAR",
       "3388844065/AmmoConverterTEBFP",
-      "3388844065/AmmoConverterVFExpansion1"
+      "3388844065/AmmoConverterVFExpansion1",
+      "3388844065/AmmoConverterVFExpansion2",
+      "3388844065/AmmoConverterVFExpansion3"
      ],
      "en": "Convert to 7.62x39mm Round",
      "ch": "轉換為7.62x39mm子彈",
@@ -48022,7 +48055,7 @@
   },
   "Recipes|ConvertTo762x39Box": {
    "kind": "conflict",
-   "signature": "d9968932e8799edb",
+   "signature": "2b2ce463c28ec8f8",
    "groups": [
     {
      "owners": [
@@ -48035,17 +48068,13 @@
     },
     {
      "owners": [
-      "3388844065/AmmoConverterGunrunnersWeaponPackB42Port"
-     ],
-     "en": "Convert to Box of 7.62 Rounds",
-     "ch": "轉換為7.62子彈 (整盒)",
-     "cn": "转换为7.62子弹 (整盒)"
-    },
-    {
-     "owners": [
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
+      "3388844065/AmmoConverterGunrunnersWeaponPackB42Port",
       "3388844065/AmmoConverterTCAR",
       "3388844065/AmmoConverterTEBFP",
-      "3388844065/AmmoConverterVFExpansion1"
+      "3388844065/AmmoConverterVFExpansion1",
+      "3388844065/AmmoConverterVFExpansion2",
+      "3388844065/AmmoConverterVFExpansion3"
      ],
      "en": "Convert to Box of 7.62x39mm Rounds",
      "ch": "轉換為7.62x39mm子彈 (整盒)",
@@ -48103,11 +48132,12 @@
   },
   "Recipes|ConvertTo9mm": {
    "kind": "conflict",
-   "signature": "06383e44764cfb65",
+   "signature": "43128672b8e88fd3",
    "groups": [
     {
      "owners": [
       "3388844065/AmmoConverterB42",
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
       "3388844065/AmmoConverterGaelGunStore_B42",
       "3388844065/AmmoConverterGunrunnersWeaponPackB42Port",
       "3388844065/AmmoConverterGunsOfMarz",
@@ -48122,6 +48152,8 @@
       "3388844065/AmmoConverterTIHFPA3R",
       "3388844065/AmmoConverterTNFPB42",
       "3388844065/AmmoConverterVFExpansion1",
+      "3388844065/AmmoConverterVFExpansion2",
+      "3388844065/AmmoConverterVFExpansion3",
       "3388844065/AmmoConverterfirearmmod",
       "3388844065/AmmoConverterfirearmmodbeta",
       "3388844065/AmmoConverterguns93"
@@ -48143,11 +48175,12 @@
   },
   "Recipes|ConvertTo9mmBox": {
    "kind": "conflict",
-   "signature": "5cf7556749354298",
+   "signature": "0a4f1bd337ea2cbd",
    "groups": [
     {
      "owners": [
       "3388844065/AmmoConverterB42",
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
       "3388844065/AmmoConverterGaelGunStore_B42",
       "3388844065/AmmoConverterGunrunnersWeaponPackB42Port",
       "3388844065/AmmoConverterGunsOfMarz",
@@ -48162,6 +48195,8 @@
       "3388844065/AmmoConverterTIHFPA3R",
       "3388844065/AmmoConverterTNFPB42",
       "3388844065/AmmoConverterVFExpansion1",
+      "3388844065/AmmoConverterVFExpansion2",
+      "3388844065/AmmoConverterVFExpansion3",
       "3388844065/AmmoConverterfirearmmod",
       "3388844065/AmmoConverterfirearmmodbeta",
       "3388844065/AmmoConverterguns93"
@@ -48183,11 +48218,12 @@
   },
   "Recipes|ConvertTo9mmCarton": {
    "kind": "conflict",
-   "signature": "b9dc6f6a32e6cddf",
+   "signature": "f82b2758e3c28e90",
    "groups": [
     {
      "owners": [
       "3388844065/AmmoConverterB42",
+      "3388844065/AmmoConverterExtendedVanillaWeapons",
       "3388844065/AmmoConverterGaelGunStore_B42",
       "3388844065/AmmoConverterGunrunnersWeaponPackB42Port",
       "3388844065/AmmoConverterGunsOfMarz",
@@ -48202,6 +48238,8 @@
       "3388844065/AmmoConverterTIHFPA3R",
       "3388844065/AmmoConverterTNFPB42",
       "3388844065/AmmoConverterVFExpansion1",
+      "3388844065/AmmoConverterVFExpansion2",
+      "3388844065/AmmoConverterVFExpansion3",
       "3388844065/AmmoConverterfirearmmod",
       "3388844065/AmmoConverterfirearmmodbeta",
       "3388844065/AmmoConverterguns93"

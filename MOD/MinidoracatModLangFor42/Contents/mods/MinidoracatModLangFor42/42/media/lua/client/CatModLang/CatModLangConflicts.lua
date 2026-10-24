@@ -8,7 +8,8 @@ require "ISUI/ISModalRichText"
 local lang = tostring(Translator.getLanguage())
 if (lang ~= "CH" and lang ~= "CN") or not CatModLang or not CatModLang.activeOwners then return end
 
-local SEEN = "CatModLangFor42_conflicts_seen.txt" -- in Zomboid/Lua/
+local SEEN = "CatModLangFor42_conflicts_seen.txt" -- in Zomboid/Lua/, one signature per line, newest first
+local SEEN_MAX = 20 -- MOD sets remembered: a server and single player each have their own
 local NOTICE_PAIRS = 3
 
 -- { rows = { { {g, wid, root}, ... }, ... }, vanilla = { [wid] = { total, covered } } }
@@ -186,8 +187,9 @@ function CatModLang.noticeText(res, mods)
     if n > NOTICE_PAIRS then
         t[#t + 1] = " <TEXT> " .. getText("IGUI_CatModLang_NoticeMore", n - NOTICE_PAIRS) .. " <LINE> <LINE> "
     end
-    t[#t + 1] = " <TEXT> " .. getText("IGUI_CatModLang_NoticeHint", getText("UI_mainscreen_option"),
-        getText("UI_mainscreen_mods"))
+    t[#t + 1] = " <TEXT> " .. getText("IGUI_CatModLang_NoticeHint") .. " <LINE> <LINE> "
+        .. getText("IGUI_CatModLang_NoticeReopen", getText("UI_mainscreen_option"), getText("UI_mainscreen_mods"),
+            getText("UI_CatModLang_Options"), getText("UI_CatModLang_OpenList"))
     return table.concat(t)
 end
 
@@ -274,27 +276,45 @@ function CatModLang.openList()
     return open("list", CatModLang.listText(res, mods))
 end
 
-local function lastSeen()
-    local r = getFileReader(SEEN, false)
-    if not r then return nil end
-    local s = r:readLine()
+local function readSeen()
+    local list, r = {}, getFileReader(SEEN, false)
+    if not r then return list end
+    local line = r:readLine()
+    while line do
+        if line ~= "" then list[#list + 1] = line end
+        line = r:readLine()
+    end
     r:close()
-    return s
+    return list
+end
+
+-- sig first, then the other remembered sets, at most SEEN_MAX.
+function CatModLang.seenAfter(list, sig)
+    local out = { sig }
+    for _, s in ipairs(list) do
+        if #out >= SEEN_MAX then break end
+        if s ~= sig then out[#out + 1] = s end
+    end
+    return out
 end
 
 local options = PZAPI.ModOptions:create("CatModLangFor42", "UI_CatModLang_Options")
 local notify = options:addTickBox("notify", "UI_CatModLang_NotifyOption", true)
 options:addButton("openList", "UI_CatModLang_OpenList", nil, function() CatModLang.openList() end)
 
--- Opens the notice when the set of MODs overwriting each other differs from the one last seen.
+-- Opens the notice when the set of MODs overwriting each other is not one of the recently seen sets.
 function CatModLang.maybeNotify()
     local res, mods = current()
     local sig = res.signature
-    if sig == "" or not notify:getValue() or sig == lastSeen() then return nil end
+    if sig == "" or not notify:getValue() then return nil end
+    local seen = readSeen()
+    for _, s in ipairs(seen) do
+        if s == sig then return nil end
+    end
     return open("notice", CatModLang.noticeText(res, mods), function(_, button)
         local w = getFileWriter(SEEN, true, false)
         if w then
-            w:write(sig)
+            w:write(table.concat(CatModLang.seenAfter(seen, sig), "\n"))
             w:close()
         end
         if button and button.internal == "YES" then CatModLang.openList() end

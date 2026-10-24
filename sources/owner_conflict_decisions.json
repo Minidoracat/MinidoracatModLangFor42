@@ -2342,13 +2342,13 @@
     },
     "Recipes|ConvertTo762x39": {
       "action": "unship",
-      "signature": "721393c4c354d7ba",
-      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to 7.62 Round vs Convert to 7.62x39mm Round vs Convert to 7.62x51 Round），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。"
+      "signature": "58cb446b3ba10a27",
+      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to 7.62 Round vs Convert to 7.62x39mm Round vs Convert to 7.62x51 Round），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。2026-10-24 #1049 重新背書：AmmoConverter 新增 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 三個子模組，英文與既有組相同，GunrunnersWeaponPackB42Port 改用 7.62x39mm 的英文；口徑仍互斥，維持不出貨。"
     },
     "Recipes|ConvertTo762x39Box": {
       "action": "unship",
-      "signature": "d9968932e8799edb",
-      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Box of 7.62 Rounds vs Convert to Box of 7.62x39mm Rounds vs Convert to Box of 7.62x51 Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。"
+      "signature": "2b2ce463c28ec8f8",
+      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Box of 7.62 Rounds vs Convert to Box of 7.62x39mm Rounds vs Convert to Box of 7.62x51 Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。2026-10-24 #1049 重新背書：AmmoConverter 新增 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 三個子模組，英文與既有組相同，GunrunnersWeaponPackB42Port 改用 7.62x39mm 的英文；口徑仍互斥，維持不出貨。"
     },
     "Recipes|ConvertTo9x18mm": {
       "action": "translate",
@@ -2359,8 +2359,8 @@
     },
     "ContextMenu|ContextMenu_Inject": {
       "action": "translate",
-      "signature": "1387a87aedd290f5",
-      "reason": "2026-08-25 #279 裁決中性譯名「注射」。上游 EN 是右鍵選單的動作詞：2900366269/DrugMod、3404956403/N&C's Narcotics、3437429771/Injectors 三家都是裸 'Inject'，3580511016/SCP Pack 為 'Inject Serum'、3615135168/ZVirusVaccine42BETA 為 'Injecting'、3673979113/XVirus 為 'Inject X-Virus'——六個 owner 都是「把某物注射進體內」這同一個動作，差別只在有無標註注射物，非不同實體。原 As1 CN 值「注射针剂模组」是上游誤譯（把動詞 Inject 當成 mod 名稱翻成「注射針劑模組」），對六個 owner 全部不成立且會讓玩家在右鍵選單看到模組名，故 CH 改寫為「注射」、CN 走 cn_overrides 登記同值。裸動詞對每個 owner 都成立——注射物由玩家實際點選的物品決定；已核對六個 owner 的 sources/en 鍵集，沒有任何一家另設「標示注射物」的子選單鍵（XVirus 另有的 ContextMenu_InjectPlayer='Inject %1' 是對其他玩家注射、語意不同，ZVirus 的 ContextMenu_LabInjectVaccine 是另一個動作）。 ／2026-10-01 As1 名單納管複核：新增 owner 3707475814/BanditsWeekOneTheArk、3777949201/ZombieCureSyringe，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。",
+      "signature": "c87e93fe3438e2f5",
+      "reason": "2026-08-25 #279 裁決中性譯名「注射」。上游 EN 是右鍵選單的動作詞：2900366269/DrugMod、3404956403/N&C's Narcotics、3437429771/Injectors 三家都是裸 'Inject'，3580511016/SCP Pack 為 'Inject Serum'、3615135168/ZVirusVaccine42BETA 為 'Injecting'、3673979113/XVirus 為 'Inject X-Virus'——六個 owner 都是「把某物注射進體內」這同一個動作，差別只在有無標註注射物，非不同實體。原 As1 CN 值「注射针剂模组」是上游誤譯（把動詞 Inject 當成 mod 名稱翻成「注射針劑模組」），對六個 owner 全部不成立且會讓玩家在右鍵選單看到模組名，故 CH 改寫為「注射」、CN 走 cn_overrides 登記同值。裸動詞對每個 owner 都成立——注射物由玩家實際點選的物品決定；已核對六個 owner 的 sources/en 鍵集，沒有任何一家另設「標示注射物」的子選單鍵（XVirus 另有的 ContextMenu_InjectPlayer='Inject %1' 是對其他玩家注射、語意不同，ZVirus 的 ContextMenu_LabInjectVaccine 是另一個動作）。 ／2026-10-01 As1 名單納管複核：新增 owner 3707475814/BanditsWeekOneTheArk、3777949201/ZombieCureSyringe，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。2026-10-24 #1049 重新背書：Injectors（3437429771）已不在這個鍵的 owner 名單，其餘 owner 不變，維持「注射」。",
       "ch": "注射",
       "cn": "注射"
     },
@@ -6304,80 +6304,80 @@
     },
     "Recipes|ConvertTo3030": {
       "action": "unship",
-      "signature": "fa64031814ed7a6a",
-      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to .30-06 Round vs Convert to .30-30 Round），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。"
+      "signature": "70d5015ac6b4a6c6",
+      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to .30-06 Round vs Convert to .30-30 Round），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。2026-10-24 #1049 重新背書：AmmoConverter 新增 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 三個子模組，英文與既有組相同；口徑仍互斥，維持不出貨。"
     },
     "Recipes|ConvertTo3030Box": {
       "action": "unship",
-      "signature": "d35ac801923525ac",
-      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Box of .30-06 Rounds vs Convert to Box of .30-30 Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。"
+      "signature": "32fc377a04326335",
+      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Box of .30-06 Rounds vs Convert to Box of .30-30 Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。2026-10-24 #1049 重新背書：AmmoConverter 新增 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 三個子模組，英文與既有組相同；口徑仍互斥，維持不出貨。"
     },
     "Recipes|ConvertTo3030Carton": {
       "action": "unship",
-      "signature": "8f0b1d7758381f43",
-      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Carton of .30-06 Rounds vs Convert to Carton of .30-30 Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。"
+      "signature": "e72eef9864f7f3b2",
+      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Carton of .30-06 Rounds vs Convert to Carton of .30-30 Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。2026-10-24 #1049 重新背書：AmmoConverter 新增 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 三個子模組，英文與既有組相同；口徑仍互斥，維持不出貨。"
     },
     "Recipes|ConvertTo308": {
       "action": "unship",
-      "signature": "1dceeea85cae079c",
-      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to .308 Round vs Convert to 7.62x51mm Round），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。 本裁決只把同一口徑的省略寫法視為可中性化；.308 Winchester 與 7.62x51mm NATO 雖高度相近且常互稱, 但膛壓與規格並非完全相同, 屬跨命名體系而非純省略, 不以多數值覆蓋少數 owner。"
+      "signature": "0ba2918a822536e8",
+      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to .308 Round vs Convert to 7.62x51mm Round），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。 本裁決只把同一口徑的省略寫法視為可中性化；.308 Winchester 與 7.62x51mm NATO 雖高度相近且常互稱, 但膛壓與規格並非完全相同, 屬跨命名體系而非純省略, 不以多數值覆蓋少數 owner。2026-10-24 #1049 重新背書：AmmoConverter 新增 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 三個子模組，英文與既有組相同；口徑仍互斥，維持不出貨。"
     },
     "Recipes|ConvertTo308Box": {
       "action": "unship",
-      "signature": "88d86f1a3918f410",
-      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Box of .308 Rounds vs Convert to Box of 7.62x51mm Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。 本裁決只把同一口徑的省略寫法視為可中性化；.308 Winchester 與 7.62x51mm NATO 雖高度相近且常互稱, 但膛壓與規格並非完全相同, 屬跨命名體系而非純省略, 不以多數值覆蓋少數 owner。"
+      "signature": "c1054f00a4af5502",
+      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Box of .308 Rounds vs Convert to Box of 7.62x51mm Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。 本裁決只把同一口徑的省略寫法視為可中性化；.308 Winchester 與 7.62x51mm NATO 雖高度相近且常互稱, 但膛壓與規格並非完全相同, 屬跨命名體系而非純省略, 不以多數值覆蓋少數 owner。2026-10-24 #1049 重新背書：AmmoConverter 新增 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 三個子模組，英文與既有組相同；口徑仍互斥，維持不出貨。"
     },
     "Recipes|ConvertTo308Carton": {
       "action": "unship",
-      "signature": "116b5719a833a64b",
-      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Carton of .308 Rounds vs Convert to Carton of 7.62x51mm Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。 本裁決只把同一口徑的省略寫法視為可中性化；.308 Winchester 與 7.62x51mm NATO 雖高度相近且常互稱, 但膛壓與規格並非完全相同, 屬跨命名體系而非純省略, 不以多數值覆蓋少數 owner。"
+      "signature": "259310e30bca202a",
+      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Carton of .308 Rounds vs Convert to Carton of 7.62x51mm Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。 本裁決只把同一口徑的省略寫法視為可中性化；.308 Winchester 與 7.62x51mm NATO 雖高度相近且常互稱, 但膛壓與規格並非完全相同, 屬跨命名體系而非純省略, 不以多數值覆蓋少數 owner。2026-10-24 #1049 重新背書：AmmoConverter 新增 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 三個子模組，英文與既有組相同；口徑仍互斥，維持不出貨。"
     },
     "Recipes|ConvertTo556": {
       "action": "translate",
-      "signature": "4f3bddc63df62b88",
-      "reason": "2026-08-29 #303：5.56 在本批槍械語境即 5.56x45mm 的常用簡稱；既有精確口徑譯文對兩方成立。",
+      "signature": "fcbcd0be8cd62fc2",
+      "reason": "2026-08-29 #303：5.56 在本批槍械語境即 5.56x45mm 的常用簡稱；既有精確口徑譯文對兩方成立。2026-10-24 #1049 重新背書：AmmoConverter 新增 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 三個子模組，英文與既有組相同，譯文對所有 owner 仍成立。",
       "ch": "轉換為5.56x45mm子彈",
       "cn": "转换为5.56x45mm子弹"
     },
     "Recipes|ConvertTo556Box": {
       "action": "translate",
-      "signature": "21246969d63f99bd",
-      "reason": "2026-08-29 #303：5.56 在本批槍械語境即 5.56x45mm 的常用簡稱；既有精確口徑譯文對兩方成立。",
+      "signature": "0d37cd9a46d50356",
+      "reason": "2026-08-29 #303：5.56 在本批槍械語境即 5.56x45mm 的常用簡稱；既有精確口徑譯文對兩方成立。2026-10-24 #1049 重新背書：AmmoConverter 新增 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 三個子模組，英文與既有組相同，譯文對所有 owner 仍成立。",
       "ch": "轉換為5.56x45mm子彈 (整盒)",
       "cn": "转换为5.56x45mm子弹 (整盒)"
     },
     "Recipes|ConvertTo556Carton": {
       "action": "translate",
-      "signature": "15a9bb0e6f2ae87e",
-      "reason": "2026-08-29 #303：5.56 在本批槍械語境即 5.56x45mm 的常用簡稱；既有精確口徑譯文對兩方成立。",
+      "signature": "b62a5c58f345e8f4",
+      "reason": "2026-08-29 #303：5.56 在本批槍械語境即 5.56x45mm 的常用簡稱；既有精確口徑譯文對兩方成立。2026-10-24 #1049 重新背書：AmmoConverter 新增 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 三個子模組，英文與既有組相同，譯文對所有 owner 仍成立。",
       "ch": "轉換為5.56x45mm子彈 (整箱)",
       "cn": "转换为5.56x45mm子弹 (整箱)"
     },
     "Recipes|ConvertTo9mm": {
       "action": "translate",
-      "signature": "06383e44764cfb65",
-      "reason": "2026-08-29 #303：9mm 在本批槍械語境即 9x19mm 的常用簡稱；既有精確口徑譯文對兩方成立。",
+      "signature": "43128672b8e88fd3",
+      "reason": "2026-08-29 #303：9mm 在本批槍械語境即 9x19mm 的常用簡稱；既有精確口徑譯文對兩方成立。2026-10-24 #1049 重新背書：AmmoConverter 新增 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 三個子模組，英文與既有組相同，譯文對所有 owner 仍成立。",
       "ch": "轉換為9x19mm子彈",
       "cn": "转换为9x19mm子弹"
     },
     "Recipes|ConvertTo9mmBox": {
       "action": "translate",
-      "signature": "5cf7556749354298",
-      "reason": "2026-08-29 #303：9mm 在本批槍械語境即 9x19mm 的常用簡稱；既有精確口徑譯文對兩方成立。",
+      "signature": "0a4f1bd337ea2cbd",
+      "reason": "2026-08-29 #303：9mm 在本批槍械語境即 9x19mm 的常用簡稱；既有精確口徑譯文對兩方成立。2026-10-24 #1049 重新背書：AmmoConverter 新增 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 三個子模組，英文與既有組相同，譯文對所有 owner 仍成立。",
       "ch": "轉換為9x19mm子彈 (整盒)",
       "cn": "转换为9x19mm子弹 (整盒)"
     },
     "Recipes|ConvertTo9mmCarton": {
       "action": "translate",
-      "signature": "b9dc6f6a32e6cddf",
-      "reason": "2026-08-29 #303：9mm 在本批槍械語境即 9x19mm 的常用簡稱；既有精確口徑譯文對兩方成立。",
+      "signature": "f82b2758e3c28e90",
+      "reason": "2026-08-29 #303：9mm 在本批槍械語境即 9x19mm 的常用簡稱；既有精確口徑譯文對兩方成立。2026-10-24 #1049 重新背書：AmmoConverter 新增 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 三個子模組，英文與既有組相同，譯文對所有 owner 仍成立。",
       "ch": "轉換為9x19mm子彈 (整箱)",
       "cn": "转换为9x19mm子弹 (整箱)"
     },
     "Recipes|ConvertTo762Carton": {
       "action": "unship",
-      "signature": "24d5733e2104ac82",
-      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Carton of 7.62x39mm Rounds vs Convert to Carton of 7.62x51 Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。"
+      "signature": "578c1915d91e5bc4",
+      "reason": "2026-08-29 #303：AmmoConverter 多個可獨立啟用的 owner 以同鍵表示不同口徑（Convert to Carton of 7.62x39mm Rounds vs Convert to Carton of 7.62x51 Rounds），口徑是承重資訊，不能用模糊「彈藥」掩蓋，沒有誠實中性譯名。各方均有可載入 JSON EN，抑制後顯示各自正確英文。2026-10-24 #1049 重新背書：AmmoConverter 新增 ExtendedVanillaWeapons、VFExpansion2、VFExpansion3 三個子模組，英文與既有組相同；口徑仍互斥，維持不出貨。"
     },
     "Recipes|ConvertTo762x39Bullets": {
       "action": "translate",
