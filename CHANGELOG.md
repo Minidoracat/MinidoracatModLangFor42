@@ -4,7 +4,7 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
-## [Unreleased]
+## [42.21.0-1.61.0] - 2026-10-25
 
 ### Added
 
@@ -22,6 +22,8 @@
 
 - **上游已刪除的 6 個鍵不再出貨**：Willowbrook Bastion! 的閃避、耐力兩項舊巔峰說明與兩個舊加成標籤（4 鍵），Viewpoint - Interface 的兩個家具快捷鍵名稱（2 鍵）。
   > 技術要點：核實 `sources/en` 全庫、tracker state 與現行 Workshop 內容的 Lua 都沒有引用才刪，連同 `ch_review_state`。Willowbrook 的 `IGUI_WB_Peak_Desc_` 是以 `WB_RHT.PEAK_LADDER` 的 key 動態組鍵，現行清單已沒有 Dodge、Endur。
+
+其餘追蹤單無需另外變更翻譯：Hug the Plushie（#1057）新增的是沒有顯示名稱的物品區塊；Project Zomboid Optimiser（#1056）新增的 240 筆，是同一組 12 個鍵分放在四個資料夾。
 
 ## [42.21.0-1.60.1] - 2026-10-24
 
