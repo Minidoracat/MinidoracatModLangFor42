@@ -4,6 +4,25 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **14 個 MOD 更新後新增的文字補上繁簡中文（110 鍵）。** 包括 Knox Inventory 新的設定頁分頁、準星面板與示範物品（43 鍵）、Project Zomboid Optimiser 的 FSR 畫面放大選項（12 鍵）、FTZ Carts & Trolleys 的汽修工具推車與屍體卸載選單（11 鍵）、Teto Plushies（10 鍵）、Live to Fight Another Day（8 鍵）、Tripping Zombies: Reborn 與 Willowbrook Bastion!（各 6 鍵）。
+  > 技術要點：追蹤器 2026-10-25 #1050–#1063「可能過時」。As1 衍生 MOD 的 91 鍵走 `apply_wf_result`／`apply_translations` 進 `own_translations.json`；own 目錄的 Willowbrook（簡中照作者 `Translate/CN` 逐字照抄）、FTZ、Hardship: Inertia 共 19 鍵寫 own 目錄 CN 與 `sources/ch`。3 路翻譯、3 路對抗複核，採納 4 條修正：Knox 示範物品 School bag、Beans 照原版名稱寫「小型背包」「黃豆罐頭」，Tripping Zombies 的擊倒延遲與 Hardship 的衝刺後減速說明改清楚動作先後。Knox 新增的 100 個測試台鍵（`IGUI_KnoxTB_*`）照 2026-10-22 裁定登記 `untranslatable_keys.json`，兩個子 MOD 的 Workshop 版都仍不含 `KnoxTestBench.lua`。
+- **Knox Inventory 設定頁的同一個分頁，依啟用的版本顯示各自的名稱。** 上游新增「Knox Inventory 1.0 BETA」子 MOD，把正式版的「遊戲」分頁改名為 Loot and bags；現在啟用正式版顯示「遊戲」，啟用 BETA 顯示「搜刮與背包」。
+  > 技術要點：`IGUI_Knox_Page_game` 成為 owner 衝突（KnoxInventory 的 Game、KnoxInventoryBeta 的 Loot and bags），兩個分頁名指不同內容、沒有中性譯名，`owner_conflict_decisions.json` 裁決不出貨，`owner_variants.json` 補 kind conflict 兩組譯文；BETA 的測試台按鈕說明 `IGUI_KnoxTB_A_Settings` 同樣成為衝突，照測試台裁定不出貨。兩筆都登記 `unshipped_keys.json`，`OWNER_CONFLICTS.md` 重生。
+
+### Changed
+
+- **上游改了英文的已出貨文字跟著改（重譯 82 鍵，另 4 鍵確認原譯仍成立）。** Tripping Zombies: Reborn 的沙盒選項名改成「XX 機率」的寫法，說明都補上新的預設值；Barricades Hurt Zombies 的結構與載具傷害改成固定數值（預設 5，不再是百分比），傷害模式的說明逐一解釋各模式；Hardship: Inertia 的選項說明照上游縮短；Senators Martial Arts 的拳術連段改成「刺拳 - 後手直拳 - 左手過頂拳」這類逐拳寫法；Willowbrook Bastion! 的巔峰加成從 5% 改成 10%，招架改成「預留 (尚未實作)」；Knox Inventory 的開關物品欄按鍵說明拿掉已搬到新說明的括號。
+  > 技術要點：As1 衍生層的繁中改 `sources/ch`，簡中有變的登記 `cn_overrides.json`（新增 34、更新 5，附 `as1_value`）；`own_translations` 19 鍵經 `apply_translations` 更新 `en` 錨點與譯文；Willowbrook 的簡中照作者 `Translate/CN` 最新版。
+
+### Removed
+
+- **上游已刪除的 6 個鍵不再出貨**：Willowbrook Bastion! 的閃避、耐力兩項舊巔峰說明與兩個舊加成標籤（4 鍵），Viewpoint - Interface 的兩個家具快捷鍵名稱（2 鍵）。
+  > 技術要點：核實 `sources/en` 全庫、tracker state 與現行 Workshop 內容的 Lua 都沒有引用才刪，連同 `ch_review_state`。Willowbrook 的 `IGUI_WB_Peak_Desc_` 是以 `WB_RHT.PEAK_LADDER` 的 key 動態組鍵，現行清單已沒有 Dodge、Endur。
+
 ## [42.21.0-1.60.1] - 2026-10-24
 
 ### Added

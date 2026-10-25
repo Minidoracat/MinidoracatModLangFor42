@@ -23,9 +23,9 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1809** 個鍵（`unship` 333、`translate` 1476）。這些鍵的 owner 條目共 5168 筆：可載入 `.json` 3427、script 851、死檔 890。另有 **269** 個鍵尚未裁決。
+現況：已裁決 **1811** 個鍵（`unship` 335、`translate` 1476）。這些鍵的 owner 條目共 5172 筆：可載入 `.json` 3431、script 851、死檔 890。另有 **267** 個鍵尚未裁決。
 
-## 不出貨的鍵（333）
+## 不出貨的鍵（335）
 
 這些鍵沒有中文。上游英文與各 MOD 的顯示行為如下。
 
@@ -33,6 +33,8 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 |---|---|---|---|
 | `ContextMenu\|ContextMenu_FireMode_Safe` | `3183820077/Guns93Test` = Missing Required Part _(json)_<br>`3554570236/FRAcceptableGunsDemo` = Safe _(死檔 ContextMenu_EN.txt)_<br>`3813655486/Gunsmith1993` = Safe _(json)_ | 2026-08-29 #315：同鍵分別表示 Missing Required Part 與 Safe，功能語意互斥，沒有誠實中性譯名。Guns93 有可載入 JSON EN；FRAcceptableGunsDemo 只有死檔 ContextMenu_EN.txt，抑制後後者會顯示字面鍵名；已接受此殘留，避免向兩方玩家出貨錯誤指令。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3813655486/Gunsmith1993（英文同 3554570236/FRAcceptableGunsDemo）；現行裁決對全部 owner 仍成立。 | — |
 | `IG_UI\|IGUI_Barrel_Shroud` | `3434653631/Advanced Warfare Community Weapons FrameWork` = Barrel Shroud _(死檔 IG_UI_EN.txt)_<br>`3569050120/[B42]Kill Cell - Armory` = Barrel Shroud _(死檔 IG_UI_EN.txt)_<br>`3590791727/WAR` = Bipod _(死檔 IG_UI_EN.txt)_<br>`3616176188/GaelGunStore` = Bipod _(json)_<br>`3623297453/GaelGunStore_Legacy` = Bipod _(死檔 IG_UI_EN.txt)_<br>`3630196063/WAR` = Bipod _(死檔 IG_UI_EN.txt)_<br>`3633421539/Escape from Kentucky4215` = Barrel shroud _(json)_<br>`3651494414/DayZ Firearms Pack` = Bipod _(死檔 IG_UI_EN.txt)_<br>`3780151182/MFS_community_fix` = Barrel shroud _(json)_ | 2026-08-27 #283–#292／Codex 複核：推論標記只支持 Barrel Shroud／Barrel shroud 為大小寫不同的同名槍管護罩；Bipod 仍是另一種兩腳架配件，現譯無法同時對所有 owner 成立，沒有誠實中性譯名。 ／2026-10-01 As1 名單納管複核：新增 owner 3780151182/MFS_community_fix，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 | — |
+| `IG_UI\|IGUI_KnoxTB_A_Settings` | `3816775774/KnoxInventory` = Open settings _(json)_<br>`3816775774/KnoxInventoryBeta` = Open the settings _(json)_ | 2026-10-25 #1063：Knox Inventory 新增的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）把測試台按鈕說明寫成 Open the settings，KnoxInventory 寫 Open settings。這是測試台鍵：讀它的 KnoxTestBench.lua 兩個子 MOD 的 Workshop 版都不含（KnoxScreen.lua 註解 the bench is left out of the Workshop build），其餘 IGUI_KnoxTB_* 已依 2026-10-22 裁定登記 untranslatable_keys.json，本鍵照同一裁定不出貨。兩方都有可載入 IG_UI.json，玩家看不到此鍵。 | — |
+| `IG_UI\|IGUI_Knox_Page_game` | `3816775774/KnoxInventory` = Game _(json)_<br>`3816775774/KnoxInventoryBeta` = Loot and bags _(json)_ | 2026-10-25 #1063：Knox Inventory 新增的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）把設定頁分頁 Game 改名 Loot and bags（分頁內容改成 Search and loot、Bags and pockets 兩節），KnoxInventory 仍是 Game；兩個分頁名指不同內容，沒有誠實中性譯名，不出貨。兩方都有可載入 IG_UI.json 並自帶 Translate/CN：不出貨後繁中玩家看到各自英文分頁名、簡中玩家看到作者簡中（「游戏」／「战利品与背包」）；條件譯文依啟用的子 MOD 寫入各自譯名。 | — |
 | `IG_UI\|IGUI_PhunZones_Bandits_tooltip` | `3388867450/PhunZones` = Untick to prevent bandits spawning in this zone. Note that … _(死檔 IG_UI_EN.txt)_<br>`3676252660/PhunZones2` = Requires the Bandits2 mod. Move or Remove also stops bandit… _(json)_ | 2026-10-02 #649 裁決：PhunZones 舊版說明的是核取方塊「取消勾選即禁止土匪在此生成 (需 Bandits 模組且殭屍能生成)」; PhunZones 2 本次改值後說明的是下拉選單的移出/移除/阻止生成/未設定/無動作各選項行為 (需 Bandits2). 兩版控制項與語意不同, 依 2 代新英文寫的說明會對舊版玩家描述不存在的選項, 寫成兩版共通則只剩「設定土匪」等無用內容, 現值也已過時且漏譯. 抑制後 PhunZones 2 顯示 IG_UI.json 的最新英文. 已接受殘留: 3388867450/PhunZones 會顯示鍵名. | — |
 | `IG_UI\|IGUI_PhunZones_NoWelcome` | `3388867450/PhunZones` = Announcement _(死檔 IG_UI_EN.txt)_<br>`3676252660/PhunZones2` = No Announce _(json)_ | 2026-10-02 #649 裁決：同一個核取方塊但兩版語意相反: PhunZones 舊版標籤「Announcement」, 勾選 = 進入區域時顯示區域名稱; PhunZones 2 標籤「No Announce」, 勾選 = 不顯示. 現值「不提示」對舊版剛好說反; 改成「進入公告」之類的中性名稱又會讓 2 代玩家誤判勾選方向, 這個開關的意義全在勾選方向上, 找不到兩版都成立的說法. 抑制後 PhunZones 2 顯示 IG_UI.json 英文. 已接受殘留: 3388867450/PhunZones 會顯示鍵名. | — |
 | `IG_UI\|IGUI_PhunZones_NoWelcome_tooltip` | `3388867450/PhunZones` = Tick to show the name of the zone on screen when the player… _(死檔 IG_UI_EN.txt)_<br>`3676252660/PhunZones2` = True prevents the name of the zone on screen when the playe… _(json)_ | 2026-10-02 #649 裁決：與 NoWelcome 標籤一起判斷. PhunZones 舊版「勾選以在玩家進入時於畫面顯示區域名稱」, PhunZones 2「為真時不顯示區域名稱」, 勾選效果相反; 中性寫法「控制是否顯示區域名稱」會拿掉唯一關鍵的勾選方向, 等於沒用. 抑制後 PhunZones 2 顯示 IG_UI.json 英文. 已接受殘留: 3388867450/PhunZones 會顯示鍵名. | — |
@@ -1848,7 +1850,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_thickblooddesc` | `1299328280/More Traits` = You bleed more slowly from wounds. _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Wounds bleeds less.&lt;br&gt;(-50% damage from bleeding.) _(json)_ | 2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。 | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（269）
+## 尚未裁決的衝突（267）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
@@ -1866,8 +1868,6 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `IG_UI\|IGUI_HotbarAttachment_ChestRig` | `3625951765/Simple sling Mod` = ChestRig _(死檔 IG_UI_EN.txt)_<br>`3713038671/JSling` = Chest Rig Left _(死檔 IG_UI_EN.txt)_ | 胸掛 |
 | `IG_UI\|IGUI_HotbarAttachment_ChestRigRight` | `3625951765/Simple sling Mod` = ChestRigRight _(死檔 IG_UI_EN.txt)_<br>`3713038671/JSling` = Chest Rig Right _(死檔 IG_UI_EN.txt)_ | 胸掛 (右) |
 | `IG_UI\|IGUI_HotbarAttachment_KnifeSheath` | `3625951765/Simple sling Mod` = KnifeSheath _(死檔 IG_UI_EN.txt)_<br>`3713038671/JSling` = Knife Sheath _(死檔 IG_UI_EN.txt)_ | 刀鞘 |
-| `IG_UI\|IGUI_KnoxTB_A_Settings` | `3816775774/KnoxInventory` = Open settings _(json)_<br>`3816775774/KnoxInventoryBeta` = Open the settings _(json)_ | （未出貨） |
-| `IG_UI\|IGUI_Knox_Page_game` | `3816775774/KnoxInventory` = Game _(json)_<br>`3816775774/KnoxInventoryBeta` = Loot and bags _(json)_ | 遊戲 |
 | `IG_UI\|IGUI_ProxInv_Text_ForceSelectOff` | `2847184718/ProximityInventory` = Prox Inv Force Selected: OFF _(json)_<br>`3669550831/ProximityInventory` = Force Selected: OFF _(json)_ | 強制選取: 關 |
 | `IG_UI\|IGUI_ProxInv_Text_ForceSelectOn` | `2847184718/ProximityInventory` = Prox Inv Force Selected: ON _(json)_<br>`3669550831/ProximityInventory` = Force Selected: ON _(json)_ | 強制選取: 開 |
 | `IG_UI\|IGUI_Pry_fail` | `3714335263/BB_CommonSenseRoy` = It won't give in. I can try again... _(json)_<br>`3717968421/CommonSense` = It won't give in. I can try again... _(json)_<br>`3718616260/ebfsensofencing` = Nao vai ceder. Posso tentar de novo... _(死檔 IG_UI_EN.txt)_ | 撬不動. 我可以再試一次… |

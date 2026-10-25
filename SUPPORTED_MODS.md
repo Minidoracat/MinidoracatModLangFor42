@@ -451,7 +451,7 @@
 | [Auto Forage](https://steamcommunity.com/sharedfiles/filedetails/?id=3478924012) | — | — | `GUNS_AutoForage` | 24 | — | — |
 | [[B41/B42] Hephas Stalker PDA](https://steamcommunity.com/sharedfiles/filedetails/?id=3479108127) | — | — | `HephasStalkerPDA`, `HephasStalkerPDA_PersonalLog` | 32 | — | — |
 | [JM3 propane](https://steamcommunity.com/sharedfiles/filedetails/?id=3479641945) | JM3 丙烷系統 | 新增丙烷相關機制，可查看容量、剩餘燃料並填充丙烷罐。 | `JM3_propane` | 6 | — | — |
-| [Willowbrook Bastion!〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3479667649) | 柳溪堡壘 | 位於馬爾德勞西側的 2x2 堡壘地圖（另附 2026 版），內含中式冷兵器、21 式戰術裝備、消音器與鍛造配方。 | `Willowbrook Bastion!`, `Willowbrook Bastion! 2` | 365 | — | — |
+| [Willowbrook Bastion!〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3479667649) | 柳溪堡壘 | 位於馬爾德勞西側的 2x2 堡壘地圖（另附 2026 版），內含中式冷兵器、21 式戰術裝備、消音器與鍛造配方。 | `Willowbrook Bastion!`, `Willowbrook Bastion! 2` | 367 | — | — |
 | [The Division Equipment [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3479867929) | 全境封鎖裝備 | 新增《全境封鎖》主題裝備，含背包、臂章與戰術面罩等。 | `SHDEquipment` | 92 | — | — |
 | [Quality of Life Modpack](https://steamcommunity.com/sharedfiles/filedetails/?id=3480305875) | 生活品質模組包 | 多項便利功能合集，含防毒面具濾芯更換與每日擊殺統計等。 | `twistresting` | 193 | — | — |
 | [Constown (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3480990544) | 康斯鎮 | 肯塔基州諾克斯縣的小鎮地圖，四線道公路貫穿鎮中心，有汽車旅館、修車廠與歇業店舖。 | `Constown42` | 142 | ⚠️ ≥2 | — |
@@ -1433,8 +1433,8 @@
 | [Lost Province [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3815128534) | Lost Province 失落省份 | 完整重現加拿大愛德華王子島的大型獨立地圖，含所有城鎮與鄉村農地。 | `Lost Province` | ? | — | — |
 | [Too Many Emotes](https://steamcommunity.com/sharedfiles/filedetails/?id=3815468401) | Too Many Emotes 超多表情動作 | 在表情輪盤新增 300 多種表情動作，可瀏覽與收藏，多人模式可同步動作。 | `TooManyEmotes` | 359 | — | — |
 | [HydeCo. Orchard! 42.21.0](https://steamcommunity.com/sharedfiles/filedetails/?id=3815617457) | HydeCo. 果園！ | 新增果樹、漿果灌木與攀牆葡萄藤等 15 種植物，會隨四季變化，缺水可能生病枯死。 | `HydeCoOrchard` | 387 | — | — |
-| [FTZ Carts & Trolleys [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3815775971) | FTZ 各式推車 | 新增購物車、平板推車、洗衣推車、園藝推車、清潔推車、手推車與獨輪車七種推車，雙手推著走、像背包一樣裝東西，車內物品不計重量。會出現在超市、倉庫、洗衣房、工地等相符的地點，常留有少量合適的物品；容量與生成率都能調整。 | `FTZCartsTrolleys` | 40 | — | — |
-| [Hardship: Inertia〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3816083168) | Hardship：慣性 | Hardship 系列的身體動作：可以趴下、四肢著地或仰躺移動，也能靠牆坐下；起步、停步與轉向帶有慣性，撞牆會彈開，被身後殭屍抓住會被往後拉。另能趴著或蹲低射擊，並加入手動換彈匣與拉動槍機。 | `HardshipInertia` | 73 | — | — |
+| [FTZ Carts & Trolleys [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3815775971) | FTZ 各式推車 | 新增購物車、平板推車、洗衣推車、園藝推車、清潔推車、手推車與獨輪車七種推車，雙手推著走、像背包一樣裝東西，車內物品不計重量。會出現在超市、倉庫、洗衣房、工地等相符的地點，常留有少量合適的物品；容量與生成率都能調整。 | `FTZCartsTrolleys` | 51 | — | — |
+| [Hardship: Inertia〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3816083168) | Hardship：慣性 | Hardship 系列的身體動作：可以趴下、四肢著地或仰躺移動，也能靠牆坐下；起步、停步與轉向帶有慣性，撞牆會彈開，被身後殭屍抓住會被往後拉。另能趴著或蹲低射擊，並加入手動換彈匣與拉動槍機。 | `HardshipInertia` | 75 | — | — |
 | [My So-Called Fashion](https://steamcommunity.com/sharedfiles/filedetails/?id=3816335149) | My So-Called Fashion 我的時尚 | 新增將上衣綁腰、背包鬆背、眼鏡戴頭上、耳罩掛脖子等穿搭方式與原創服裝。 | `P4MySoCalledFashion` | 24 | — | — |
 | [Dog Tired Armory〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3816701056) | Dog Tired 軍械庫 | 沿牆組裝槍架、掛板、儲物櫃與櫃檯，打造連續的軍械庫；收納的槍枝以 3D 模型陳列，彈藥盒擺在架上。構件分木製、金屬、管架、軍用、收藏五種等級，都能上掛鎖。 | `DogTiredArmory` | 245 | — | — |
 | [[B42] Knox Inventory - Tarkov-style UI Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=3816775774) | Knox Inventory - 塔科夫風格介面大改 | 以《逃離塔科夫》風格重做介面，物品依實際尺寸放入格狀物品欄，並顯示 3D 角色。 | `KnoxInventory`, `KnoxInventoryBeta` | ? | — | — |

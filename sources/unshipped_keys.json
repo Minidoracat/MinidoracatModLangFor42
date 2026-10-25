@@ -1823,6 +1823,16 @@
    "as1_value": "制作 9x19mm 50 发弹鼓",
    "owner_signature": "b85e185cff2a6214",
    "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Escape from Kentucky（3633421539）寫 Craft 9x19mm 50-Round Drum Magazine，MFS 社群修正版（3780151182）寫 Craft 9x39mm 50-Round Rifle Drum；兩方配方產物都是 Base.9mmDrum_cat，口徑說法互斥，比照該物品名不出貨。兩方都有可載入 Recipes.json 並自帶 CH/CN：不出貨後繁中玩家看到 EFK「製作 9×19mm 50 發彈鼓」或社群修正版「製作 9x39mm 50 發步槍彈鼓」。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Settings": {
+   "as1_value": "",
+   "owner_signature": "9fbb5a43512011ea",
+   "reason": "2026-10-25 #1063：Knox Inventory 新增的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）把測試台按鈕說明寫成 Open the settings，KnoxInventory 寫 Open settings。這是測試台鍵：讀它的 KnoxTestBench.lua 兩個子 MOD 的 Workshop 版都不含（KnoxScreen.lua 註解 the bench is left out of the Workshop build），其餘 IGUI_KnoxTB_* 已依 2026-10-22 裁定登記 untranslatable_keys.json，本鍵照同一裁定不出貨。兩方都有可載入 IG_UI.json，玩家看不到此鍵。"
+  },
+  "IG_UI.json|IGUI_Knox_Page_game": {
+   "as1_value": "游戏",
+   "owner_signature": "c6552ad68a275feb",
+   "reason": "2026-10-25 #1063：Knox Inventory 新增的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）把設定頁分頁 Game 改名 Loot and bags（分頁內容改成 Search and loot、Bags and pockets 兩節），KnoxInventory 仍是 Game；兩個分頁名指不同內容，沒有誠實中性譯名，不出貨。兩方都有可載入 IG_UI.json 並自帶 Translate/CN：不出貨後繁中玩家看到各自英文分頁名、簡中玩家看到作者簡中（「游戏」／「战利品与背包」）；條件譯文依啟用的子 MOD 寫入各自譯名。"
   }
  }
 }

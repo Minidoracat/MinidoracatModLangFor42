@@ -11826,13 +11826,13 @@
   },
   "Sandbox.json|Sandbox_BarricadesHurtZombies_BaseDamage": {
     "as1_value": "基础伤害 (默认: 5%%)",
-    "reason": "上游 EN 語意變更（tracker stale 3402208866），CN 跟進新 EN",
-    "value": "基础伤害 (默认: 18%%)"
+    "reason": "2026-10-25 #1050：上游英文改值，依新英文重譯。",
+    "value": "结构伤害 (默认: 5)"
   },
   "Sandbox.json|Sandbox_BarricadesHurtZombies_BaseDamage_tooltip": {
     "as1_value": "丧尸攻击木质路障或无装甲车辆时受到的基础伤害 (按他们的生命值百分比计算). 此数值将与材料和装甲类型加成相乘.",
-    "reason": "上游 EN 語意變更（tracker stale 3402208866），CN 跟進新 EN",
-    "value": "默认值 18 表示每次确认的结构撞击事件, 在应用材料与物体倍率前固定扣除 0.18 点僵尸生命, 不是该僵尸生命值的 18%%. Build 42.20 计算的是实际 ThumpFrame 事件; 本模组每次回调应用 1 单位伤害. 旧存档可能还留着较旧的数值, 若要使用当前默认平衡请设为 18."
+    "reason": "2026-10-25 #1050：上游英文改值，依新英文重譯。",
+    "value": "每次确认的结构撞击固定扣除的生命值 = 此数值 / 100, 在应用材料倍率之前计算. 设为 5 时扣除 0.05 点生命值: 在 B42.20.2 中, 普通僵尸约需撞击木质结构 30-36 次. 设为 0 可禁用结构伤害, 包括窗户. 现有世界会保留已保存的数值."
   },
   "Sandbox.json|Sandbox_BarricadesHurtZombies_ThumpDamageCooldown": {
     "as1_value": "撞击伤害冷却",
@@ -11846,13 +11846,13 @@
   },
   "Sandbox.json|Sandbox_BarricadesHurtZombies_VehicleBaseDamage": {
     "as1_value": "载具基础伤害 (默认: 5%%)",
-    "reason": "上游 EN 語意變更（tracker stale 3402208866 同批車輛側鄰鍵），CN 跟進新 EN",
-    "value": "载具基础伤害 (默认: 15%%)"
+    "reason": "2026-10-25 #1050：上游英文改值，依新英文重譯。",
+    "value": "载具伤害 (默认: 5)"
   },
   "Sandbox.json|Sandbox_BarricadesHurtZombies_VehicleBaseDamage_tooltip": {
     "as1_value": "僵尸攻击无装甲车辆时受到的基础伤害 (按他们的生命值百分比计算). 该数值与木质路障相独立以便分别进行调整. 车辆往往比路障拥有更多耐久. ",
-    "reason": "上游 EN 語意變更（tracker stale 3402208866 同批車輛側鄰鍵），CN 跟進新 EN",
-    "value": "数值 15 表示每次车辆撞击, 在应用材料倍率前固定扣除 0.15 点僵尸生命. 因此基础金属车辆每次确认撞击会扣除 0.1875 点生命. 不是该僵尸生命值的 15%%."
+    "reason": "2026-10-25 #1050：上游英文改值，依新英文重譯。",
+    "value": "每次确认撞击有人乘坐的车辆时固定扣除的生命值 = 此数值 / 100, 在应用材料倍率之前计算. 设为 5 时, 基础金属每次扣除 0.0625 点生命值 (普通僵尸约需 24-29 次). 仅“建筑 + 载具”和“所有物体 + 载具”会启用此项. 设为 0 可禁用车辆伤害."
   },
   "Sandbox.json|Sandbox_BarricadesHurtZombies_VehicleDamageCooldown": {
     "as1_value": "车辆伤害冷却时间",
@@ -25627,8 +25627,8 @@
   },
   "Sandbox.json|Sandbox_BarricadesHurtZombies_DamageMode_option1": {
     "as1_value": "仅玩家建造的物体",
-    "reason": "EN option1 為 Normal (Structures & Vehicles)（option2=All Objects／CH 所有物體、option3=Disabled／CH 停用）；現值「僅玩家建造的物體」漏掉載具又添加原文沒有的「僅」限定，適用範圍被改寫。",
-    "value": "普通 (建筑与载具)"
+    "reason": "2026-10-25 #1050：上游英文改值，依新英文重譯。",
+    "value": "建筑 + 载具"
   },
   "Sandbox.json|Sandbox_CDDA_MasterZ_tooltip": {
     "as1_value": "能够进化附近丧尸的丧尸",
@@ -61524,5 +61524,175 @@
     "as1_value": "柯尔特AR-15自动步枪",
     "value": "柯尔特AR-15民用步枪",
     "reason": "2026-10-24 #1035：英文是 AR-15 Civilian Rifle，As1 簡中寫成「自动步枪」；與繁中「民用步槍」及 Ammo Loot Drop 彈種清單一致。"
+  },
+  "Sandbox.json|Sandbox_BarricadesHurtZombies_DamageMode_option2": {
+    "as1_value": "所有物体",
+    "value": "所有物体 + 载具",
+    "reason": "2026-10-25 #1050：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BarricadesHurtZombies_DamageMode_tooltip": {
+    "as1_value": "哪些类型的物体在被攻击时会伤害丧尸",
+    "value": "“仅路障”只在僵尸撞击实际的木板、金属板或金属棒路障时造成伤害; 没有路障的门、窗户、家具和车辆不会造成伤害. “仅玩家建造 / 移动”包括路障和带有标记的建筑 / 家具. “仅模组防御物”需要自定义的 BarricadeDamageMultiplier. “禁用”会关闭 BHZ 的所有伤害. 已保存的选择会保留.",
+    "reason": "2026-10-25 #1050：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_CooldownMax_tooltip": {
+    "as1_value": "僵尸再次进行绊倒判定的最长间隔 (以更新刻数计) . 每次冷却时间在最小值和最大值之间随机, 避免绊倒形成固定节奏. 若设置低于最小值, 将强制提升至最小值.",
+    "value": "僵尸两次绊倒判定之间的最长间隔, 以游戏刻数计 (约 60 刻 = 1 秒). 冷却时间会在最小值和最大值之间随机.<br>默认: 150 刻.",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_CooldownMin_tooltip": {
+    "as1_value": "僵尸在判定绊倒后, 再次进行绊倒判定的最短间隔 (以更新刻数计) . 数值越高, 绊倒越罕见. 约60刻等于1秒.",
+    "value": "僵尸两次绊倒判定之间的最短间隔, 以游戏刻数计 (约 60 刻 = 1 秒).<br>默认: 100 刻.",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_CorpseTrip": {
+    "as1_value": "被尸体绊倒",
+    "value": "被尸体绊倒概率",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_CorpseTrip_tooltip": {
+    "as1_value": "移动中的僵尸站在有尸体的格子上时的绊倒概率 (%%) , 受冷却时间限制. 让杀戮区和尸体堆变成真正的障碍. <br>0=关闭.",
+    "value": "移动中的僵尸走过地上的尸体时绊倒的概率. 让杀戮区和尸体堆变成实体障碍.<br>默认: 23%% (0 = 禁用).",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_CrawlerChance": {
+    "as1_value": "绊倒变爬尸概率",
+    "value": "倒地变爬尸概率",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_CrawlerChance_tooltip": {
+    "as1_value": "绊倒的僵尸在倒地过程中弄断腿骨, 随后以爬尸形态爬起的概率 (%%) . <br>0=关闭 (默认) . 这是一个刺激且致命但公平的选项, 适合奔跑者模式.",
+    "value": "绊倒的僵尸落地时摔断双腿, 起身时变成爬尸的概率.<br>默认: 0%% (禁用).",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_EnableMod_tooltip": {
+    "as1_value": "模组总开关. 关闭此选项可完全停止僵尸绊倒, 而无需从存档中移除该模组.",
+    "value": "整个模组的总开关. 关闭后将禁用所有绊倒和击倒逻辑, 无需从存档中移除模组.",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_PileUp": {
+    "as1_value": "连环绊倒: 被倒地僵尸绊倒",
+    "value": "连环绊倒概率",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_PileUp_tooltip": {
+    "as1_value": "追逐中的僵尸撞到已倒地的僵尸时的绊倒概率 (%%) . 能让一次绊倒在密集的尸潮中引发连环倒塌. <br>0=关闭. 适用于所有速度的僵尸.",
+    "value": "僵尸踩到已倒在地上的其他僵尸时绊倒的概率, 造成僵尸叠成一堆和连锁反应.<br>默认: 30%% (0 = 禁用).",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_RequireChasing": {
+    "as1_value": "仅在追逐时绊倒",
+    "value": "仅在追逐玩家时绊倒",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_RequireChasing_tooltip": {
+    "as1_value": "关闭 (默认): 任何移动中的僵尸都可能绊倒, 包括游荡和迁徙的尸群. <br>开启: 僵尸仅在积极追逐视线内的目标时才会绊倒 (原版行为).",
+    "value": "关闭 (默认): 任何移动中的僵尸都可能绊倒, 包括游荡和迁徙的尸群.<br>开启: 只有正在积极追逐视线内玩家的僵尸才会绊倒.",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_TripEffect": {
+    "as1_value": "绊倒效果",
+    "value": "绊倒严重程度",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_TripEffect_option1": {
+    "as1_value": "踉跄 (轻微)",
+    "value": "踉跄 (轻微摇晃)",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_TripEffect_option2": {
+    "as1_value": "绊倒 (默认)",
+    "value": "绊倒 (默认平衡)",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_TripEffect_option3": {
+    "as1_value": "击倒 (严重)",
+    "value": "击倒 (重摔)",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_TripEffect_tooltip": {
+    "as1_value": "绊倒的表现形式.<br>踉跄: 轻微的摇晃, 短暂打断僵尸动作, 不会倒地. <br>绊倒 (默认) : 奔跑者会因惯性向前翻滚; 较慢的僵尸会直接扑倒. <br>击倒: 所有绊倒的僵尸都会倒地, 恢复时间最长.",
+    "value": "控制绊倒在物理上的严重程度.<br>踉跄: 短暂向前踉跄, 不会倒地.<br>绊倒: 奔跑者会高速向前翻滚; 蹒跚者会直接扑倒.<br>击倒: 猛烈击倒在地, 起身恢复时间更长.",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_TripNoise": {
+    "as1_value": "绊倒噪音 (格数)",
+    "value": "倒地撞击声 (格)",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_TripNoise_tooltip": {
+    "as1_value": "僵尸倒地时产生的噪音半径, 会像重击声一样吸引其他僵尸. <br>0=无声 (默认) .",
+    "value": "倒下的身体撞击地面时发出声音的可听半径 (格), 会惊动附近的僵尸.<br>默认: 0 (无声).",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_TripWhileFighting": {
+    "as1_value": "战斗准备状态下绊倒",
+    "value": "扑击 / 攻击时可能绊倒",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_TrippingZombies_TripWhileFighting_tooltip": {
+    "as1_value": "开启 (默认) : 僵尸在伸出双臂准备近战攻击 ('战斗准备'姿势) 时也可能绊倒, 因此冲锋的僵尸仍会向前扑倒. <br>关闭: 举起双臂准备攻击的僵尸不会绊倒, 直到它退回普通追逐状态 (原版行为). <br>注意: 战斗姿势的倒地复用了引擎的受击反应, 偶尔可能会选错倒地方向. 如果介意此问题, 请关闭此项.",
+    "value": "开启 (默认): 近距离扑击的僵尸也可能绊倒失足.<br>关闭: 处于攻击 / 扑击状态的僵尸不会绊倒.",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_collisionTripChanceFastShamblers": {
+    "as1_value": "快速蹒跚者碰撞绊倒概率",
+    "value": "碰撞绊倒概率: 快速蹒跚者",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_collisionTripChanceFastShamblers_tooltip": {
+    "as1_value": "奔跑中的快速蹒跚者在移动时撞到另一只僵尸的绊倒概率 (%%) . <br>0=永不绊倒, 100=必定绊倒.",
+    "value": "移动中的快速蹒跚者在尸群中撞到另一只僵尸时绊倒的概率.<br>默认: 10%% (0 = 禁用, 100 = 必定发生).",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_collisionTripChanceShamblers": {
+    "as1_value": "蹒跚者碰撞绊倒概率",
+    "value": "碰撞绊倒概率: 蹒跚者",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_collisionTripChanceShamblers_tooltip": {
+    "as1_value": "奔跑中的蹒跚者在移动时撞到另一只僵尸的绊倒概率 (%%) . <br>0=永不绊倒, 100=必定绊倒.",
+    "value": "移动中的慢速蹒跚者在尸群中撞到另一只僵尸时绊倒的概率.<br>默认: 4%% (0 = 禁用, 100 = 必定发生).",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_collisionTripChanceSprinters": {
+    "as1_value": "奔跑者碰撞绊倒概率",
+    "value": "碰撞绊倒概率: 奔跑者",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_collisionTripChanceSprinters_tooltip": {
+    "as1_value": "奔跑中的奔跑者在移动时撞到另一只僵尸的绊倒概率 (%%) . <br>0=永不绊倒, 100=必定绊倒.",
+    "value": "移动中的奔跑者在尸群中撞到另一只僵尸时绊倒的概率.<br>默认: 50%% (0 = 禁用, 100 = 必定发生).",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_randomTripChanceFastShamblers": {
+    "as1_value": "快速蹒跚者随机绊倒概率",
+    "value": "随机绊倒概率: 快速蹒跚者",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_randomTripChanceFastShamblers_tooltip": {
+    "as1_value": "移动中的快速蹒跚者在无障碍物时自己绊倒的概率 (%%) , 受冷却时间限制. <br>0=永不绊倒, 100=必定绊倒.",
+    "value": "移动中的快速蹒跚者在空旷无障碍的地面上失足的概率, 按冷却时间定期判定.<br>默认: 4%% (0 = 禁用, 100 = 必定发生).",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_randomTripChanceShamblers": {
+    "as1_value": "蹒跚者随机绊倒概率",
+    "value": "随机绊倒概率: 蹒跚者",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_randomTripChanceShamblers_tooltip": {
+    "as1_value": "移动中的蹒跚者在无障碍物时自己绊倒的概率 (%%) , 受冷却时间限制. <br>0=永不绊倒, 100=必定绊倒.",
+    "value": "移动中的慢速蹒跚者在空旷无障碍的地面上失足的概率, 按冷却时间定期判定.<br>默认: 2%% (0 = 禁用, 100 = 必定发生).",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_randomTripChanceSprinters": {
+    "as1_value": "奔跑者随机绊倒概率",
+    "value": "随机绊倒概率: 奔跑者",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_randomTripChanceSprinters_tooltip": {
+    "as1_value": "移动中的奔跑者在无障碍物时自己绊倒的概率 (%%) , 受冷却时间限制. <br>0=永不绊倒, 100=必定绊倒.",
+    "value": "移动中的奔跑者在空旷无障碍的地面上失足的概率, 按冷却时间定期判定.<br>默认: 7%% (0 = 禁用, 100 = 必定发生).",
+    "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
   }
 }
