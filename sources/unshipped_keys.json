@@ -1,7 +1,7 @@
 {
  "_comment": "已裁決不出貨的 (檔名|鍵)。**真相層照樣保留**——`sources/_unsorted/CN` 是 As1 lane 的忠實鏡像，刪掉會讓 tracker 的 layer-B 把它報成永久差異、每次 As1 更新都開假的『待同步』issue；`sources/ch` 也必須逐鍵鏡像 CN 才過 corpus 鍵集 gate。所以抑制只發生在出貨那一步，語意與 vanilla 出貨抑制相同。",
  "_recheck": "兩類判準不同。第一類：As1 每次更新後重查一次；as1_value 漂移是重新搜尋 mod／正確落點的訊號。第二類：as1_value 是抑制前有效 CN 值錨點（own lane 也適用），值漂移代表真相層改動；as1_value 缺失／漂移或 owner_signature 漂移代表 owner 增減／上游英文改值，兩者任一漂移都要重審 unship 裁決。",
- "_rule": "登記前先分類。第一類（檔名不可載入／落點不明）：必須先試著指認 mod；Workshop 搜尋端點查『內部 id』 https://steamcommunity.com/workshop/browse/?appid=108600&searchtext=<內部id> ——鍵名前綴多半是內部 id 而非顯示名，語意搜尋常找不到。能指認 mod 就該補正確鍵，不能把本檔當丟棄場（BarrEx／Super Bulldozer／Last Cup Coffee 都曾因此救回，見 744670b、da34211）。第二類（#230 owner 衝突）：須查證為不同實體、無誠實中性譯名，且 JSON 無法依 mod 啟用狀態條件化；與 owner_conflict_decisions.json 的 action=unship 雙向背書，條目必帶 as1_value 與 owner_signature；ItemName 裸鍵若存在 B41 前綴孿生鍵，兩者必須一起抑制。 第三類（原版名稱鍵歸本體翻譯包）：原版程式、腳本或圖塊會查、原版翻譯檔未定義、由 CatLangFor42 負責譯名的鍵（原版選項、物品、車輛、製作站名稱等）；不需 owner 背書，條目帶 as1_value 錨點與使用者裁決日期。收尾閘門 ⑦ 比對本體翻譯包出貨鍵：撞到的鍵原版會顯示就登記本類，原版不會顯示（MOD 自有、B42 不讀）就登記 langfor42_shared_keys.json。",
+ "_rule": "登記前先分類。第一類（檔名不可載入／落點不明）：必須先試著指認 mod；Workshop 搜尋端點查『內部 id』 https://steamcommunity.com/workshop/browse/?appid=108600&searchtext=<內部id> ——鍵名前綴多半是內部 id 而非顯示名，語意搜尋常找不到。能指認 mod 就該補正確鍵，不能把本檔當丟棄場（BarrEx／Super Bulldozer／Last Cup Coffee 都曾因此救回，見 744670b、da34211）。第二類（#230 owner 衝突）：須查證為不同實體、無誠實中性譯名，且 JSON 無法依 mod 啟用狀態條件化；與 owner_conflict_decisions.json 的 action=unship 雙向背書，條目必帶 as1_value 與 owner_signature；ItemName 裸鍵若存在 B41 前綴孿生鍵，兩者必須一起抑制。 第三類（原版名稱鍵歸本體翻譯包）：原版程式、腳本或圖塊會查、原版翻譯檔未定義、由 CatLangFor42 負責譯名的鍵（原版選項、物品、車輛、製作站名稱等）；不需 owner 背書，條目帶 as1_value 錨點與使用者裁決日期。收尾閘門 ⑦ 比對本體翻譯包出貨鍵：撞到的鍵原版會顯示就登記本類，原版不會顯示（MOD 自有、B42 不讀）就登記 langfor42_shared_keys.json。 第四類（名稱改由家族 MOD 提供）：家族 MOD 以同名物品接手已下架 MOD 的舊存檔物品、自帶各語言名稱，本包排在 Mods= 最後會蓋掉它的鍵；不需 owner 背書，條目帶 as1_value 錨點與使用者裁決日期。只收該家族 MOD 自己定義名稱的鍵，配方、沙盒選項等它不定義的鍵照常出貨。",
  "entries": {
   "IG_UI.json|IGUI_VehicleNamefhq240SXCabrio": {
    "as1_value": "日产240SX 敞篷版 (S13)",
@@ -1833,6 +1833,158 @@
    "as1_value": "游戏",
    "owner_signature": "c6552ad68a275feb",
    "reason": "2026-10-25 #1063：Knox Inventory 新增的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）把設定頁分頁 Game 改名 Loot and bags（分頁內容改成 Search and loot、Bags and pockets 兩節），KnoxInventory 仍是 Game；兩個分頁名指不同內容，沒有誠實中性譯名，不出貨。兩方都有可載入 IG_UI.json 並自帶 Translate/CN：不出貨後繁中玩家看到各自英文分頁名、簡中玩家看到作者簡中（「游戏」／「战利品与背包」）；條件譯文依啟用的子 MOD 寫入各自譯名。"
+  },
+  "ItemName.json|BagUpgradePlus.ALICEpackPlus": {
+   "as1_value": "军用背包增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.ALICEpack_CamoPlus": {
+   "as1_value": "军用背包增强版（森林迷彩）",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.ALICEpack_DesertCamoPlus": {
+   "as1_value": "军用背包增强版（沙漠迷彩）",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.BaseballBagPlus": {
+   "as1_value": "行李袋增强版 (棒球) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.BigHikingBagPlus_Travel": {
+   "as1_value": "带旅行补丁的大号登山背包增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.BigHikingBagplus": {
+   "as1_value": "大号登山背包增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.BreakdownBagPlus": {
+   "as1_value": "行李袋增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.BurglarBagPlus": {
+   "as1_value": "行李袋增强版 (窃贼) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.DuffelPlus": {
+   "as1_value": "行李袋增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.FannyPackBackPlus": {
+   "as1_value": "腰包增强版 (背面) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.FannyPackFrontPlus": {
+   "as1_value": "腰包增强版 (正面) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.FirstAidKitPlus": {
+   "as1_value": "书包增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。此鍵上游沒有對應的物品腳本（只有 EN 譯名），原本就不會顯示，隨同批一起停出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.FoodCannedPlus": {
+   "as1_value": "行李袋增强版 (罐头食品) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.FoodSnacksPlus": {
+   "as1_value": "行李袋增强版 (零食) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.HikingBagPlus": {
+   "as1_value": "登山背包增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.HydrationBackpackPlus": {
+   "as1_value": "水合背包增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.HydrationBackpackPlus_Camo": {
+   "as1_value": "水合背包 (迷彩) 增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.InmateEscapedBagPlus": {
+   "as1_value": "行李袋增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.MedicalPlus": {
+   "as1_value": "行李袋增强版 (医疗) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.MilitaryPlus": {
+   "as1_value": "行李袋增强版 (军用) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.MoneyBagPlus": {
+   "as1_value": "行李袋增强版 (钱袋) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.PolicePlus": {
+   "as1_value": "行李袋增强版 (警用) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.SWATPlus": {
+   "as1_value": "行李袋增强版 (特警) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.SatchelPlus": {
+   "as1_value": "挎包增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.Satchel_FishingPlus": {
+   "as1_value": "挎包增强版 (渔具) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.Satchel_MedicalPlus": {
+   "as1_value": "挎包增强版 (医疗) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.Satchel_MilitaryPlus": {
+   "as1_value": "挎包增强版 (军用) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.SchoolbagPlus": {
+   "as1_value": "书包增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.SheriffPlus": {
+   "as1_value": "行李袋增强版 (警长) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.ShotgunBagPlus": {
+   "as1_value": "行李袋增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.ShotgunDblBagPlus": {
+   "as1_value": "行李袋增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.ShotgunDblSawnoffBagPlus": {
+   "as1_value": "行李袋增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.ShotgunSawnoffBagPlus": {
+   "as1_value": "行李袋增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.TennisBagPlus": {
+   "as1_value": "行李袋增强版 (网球) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.ToolBagPlus": {
+   "as1_value": "行李袋增强版 (工具) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.WeaponBagPlus": {
+   "as1_value": "行李袋增强版 (武器) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|BagUpgradePlus.WorkerBagPlus": {
+   "as1_value": "行李袋增强版 (工人) ",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
+  },
+  "ItemName.json|Base.SheetSlingBagPlus": {
+   "as1_value": "布制单肩包增强版",
+   "reason": "2026-10-25 使用者裁決不出貨（第四類：名稱改由家族 MOD 提供）：Bag Upgrade Plus（3668094025）的物品名稱，Bag Upgrade Plus Realistic（3669286020）共用同一批鍵，兩者 Workshop 都已下架（API result 9）。Minidoracat Bags（MinidoracatBagsFor42）以同名物品接手舊存檔裡的背包，並自帶各語言名稱；本包排在 Mods= 最後，出貨同鍵會蓋掉它給舊款的名稱，故不出貨。"
   }
  }
 }

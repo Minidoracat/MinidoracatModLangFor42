@@ -4,6 +4,13 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Changed
+
+- **Bag Upgrade Plus 舊背包的名稱改由 Minidoracat Bags 提供。** Bag Upgrade Plus 已從 Workshop 下架，舊存檔裡的這批背包改由 Minidoracat Bags 接手；本包不再出貨這些背包的名稱，以免蓋掉 Minidoracat Bags 給舊款背包的名稱。Bag Upgrade Plus 的升級／降級配方與沙盒選項照常翻譯。
+  > 技術要點：Bag Upgrade Plus（3668094025）與 Bag Upgrade Plus Realistic（3669286020，同樣已下架）共用的 38 個物品名稱鍵（`BagUpgradePlus.*` 37 鍵與 `Base.SheetSlingBagPlus`）登記 `unshipped_keys.json` 新增的第四類「名稱改由家族 MOD 提供」，繁簡各少 38 鍵；As1 衍生層與 `sources/ch` 照樣保留，As1 日後同步也不會再出貨。配方 15 鍵、沙盒選項 3 鍵不受影響：Minidoracat Bags 沒有定義這些鍵。
+
 ## [42.21.0-1.61.0] - 2026-10-25
 
 ### Added
