@@ -1110,12 +1110,14 @@ def main() -> int:
             unchecked.append(f"{wid}（非本批）：{why}——它與本批共用 {len(hit)} 個鍵"
                              f"（如 {sorted(hit)[0]}），無法判定是否 owner 衝突；重抽該 mod")
 
-    # 這三類鍵**必須在建 by_en 之前**自 `_gap` 移除：留著就是 first-wins 的譯文，忽略
+    # 這四類鍵**必須在建 by_en 之前**自 `_gap` 移除：留著就是 first-wins 的譯文，忽略
     # 退出碼時照樣落地；反之若只從 `_gap` 移除卻已進 `strings`，下游會拿到沒有落點的
     # 孤兒字串。已裁決 unship 若殘留，下一步 `apply_wf_result` 會把「無誠實中性譯名」的
-    # first-wins 英文重新寫回真相層；已裁決不補譯者殘留則會被送去翻譯。registry 的解析與
-    # fail-closed 驗證共用 `tracker.load_untranslatable()`，避免兩 consumer 分岔；路徑同
-    # 其他 registry 走 `ROOT`，否則測試 harness 的臨時 repo 會讀到真 repo 的登記。
+    # first-wins 英文重新寫回真相層；已裁決不補譯者殘留則會被送去翻譯。`unshipped_keys.json`
+    # 的其他類（原版名稱鍵歸本體翻譯包等）沒有 owner 衝突裁決，dist 已抑制，不扣就每次都列成
+    # 缺口（#1065 `IGUI_VehicleNameVanSeats_Mural`）；照登記的檔名與鍵精確比對，不做前綴正規化。
+    # registry 的解析與 fail-closed 驗證共用 `tracker.load_untranslatable()`，避免兩 consumer
+    # 分岔；路徑同其他 registry 走 `ROOT`，否則測試 harness 的臨時 repo 會讀到真 repo 的登記。
     try:
         untr_pairs, _ = tracker.load_untranslatable(ROOT / "sources/untranslatable_keys.json")
     except (ValueError, OSError) as exc:
@@ -1129,7 +1131,8 @@ def main() -> int:
         gap.pop(fk, None)
     for fk in list(gap):
         stem, _, key = fk.partition("|")
-        if (stem, tracker._canon_key(f"{stem}.json", key)) in untr_pairs:
+        if ((stem, tracker._canon_key(f"{stem}.json", key)) in untr_pairs
+                or f"{stem}.json|{key}" in unship_entries):
             gap.pop(fk)
     by_en: dict[str, list[str]] = collections.defaultdict(list)
     wid_of: dict[str, set[str]] = collections.defaultdict(set)

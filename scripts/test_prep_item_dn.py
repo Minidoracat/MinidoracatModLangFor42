@@ -266,6 +266,22 @@ rc, art = run(records={r_prefixed: "h-pre"}, mirror={r_prefixed: "Prefixed Item"
 assert art["_gap"] == {}, \
     f"4c4. prep 未以 canonical runtime 身分扣除前綴形登記：{art['_gap']}"
 
+# 4c5. `unshipped_keys.json` 的非衝突類（原版名稱鍵歸本體翻譯包）：單一 owner、沒有 owner
+#      衝突裁決，dist 已抑制。prep 若只扣 owner 衝突的 unship，這鍵每次都會列成缺口，
+#      照著補進 own 層就違反裁定（#1065 `IGUI_VehicleNameVanSeats_Mural`）。控制組：沒登記
+#      時同一筆仍是缺口，確保扣掉的是登記而不是別的濾網。
+r_vname = f"translate_en|{EFF.replace('scripts/items.txt', 'lua/shared/Translate/EN/IG_UI.json')}|IGUI_VehicleNameVanSeats_Mural"
+VNAME = {"as1_value": "骑士·坚守", "reason": "原版名稱鍵歸本體翻譯包"}
+rc, art = run(records={r_vname: "h-vn"}, mirror={r_vname: "Chevalier Duravan"},
+              dist_items={}, vanilla=[],
+              unshipped={"IG_UI.json|IGUI_VehicleNameVanSeats_Mural": VNAME})
+assert rc == 0 and art["_gap"] == {}, \
+    f"4c5. 已登記不出貨的原版名稱鍵仍列成缺口：rc={rc} {art['_gap']}"
+rc, art = run(records={r_vname: "h-vn"}, mirror={r_vname: "Chevalier Duravan"},
+              dist_items={}, vanilla=[], unshipped={})
+assert set(art["_gap"]) == {"IG_UI|IGUI_VehicleNameVanSeats_Mural"}, \
+    f"4c5. 控制組：未登記時應列為缺口：{art['_gap']}"
+
 # 4c2. temp ROOT 隔離：真 repo 已登記這個 Mirage 鍵，但臨時 repo 沒有 registry，prep 必須
 #      把它視為缺口。若呼叫 `tracker.load_untranslatable()` 不傳 temp ROOT，就會穿透讀真 repo、
 #      測試假綠且正式工具在 linked/fixture repo 讀錯來源。
