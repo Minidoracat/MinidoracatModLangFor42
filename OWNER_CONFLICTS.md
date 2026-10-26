@@ -23,7 +23,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1811** 個鍵（`unship` 335、`translate` 1476）。這些鍵的 owner 條目共 5172 筆：可載入 `.json` 3431、script 851、死檔 890。另有 **267** 個鍵尚未裁決。
+現況：已裁決 **1811** 個鍵（`unship` 335、`translate` 1476）。這些鍵的 owner 條目共 5172 筆：可載入 `.json` 3431、script 851、死檔 890。另有 **268** 個鍵尚未裁決。
 
 ## 不出貨的鍵（335）
 
@@ -1009,7 +1009,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|Base.GunCleaningKit` | `3183820077/Guns93Test` = Gun Cleaning Supplies _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts` = Gun Cleaning Kit _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = Gun Cleaning Kit _(json)_ | 2026-10-02 #644 裁決：Guns of 93 的 Gun Cleaning Supplies 與 Rain's Firearms (含 Expanded 變體) 的 Gun Cleaning Kit 都是保養槍械用的清潔包, 只差 Supplies/Kit 的措辭, 屬同一物品. 「槍械清潔用品」對雙方都成立, 沿用現值. | — |
 | `ItemName\|Base.HK416` | `3611718925/VFES` = HK-416 Assault Rifle _(json)_<br>`3616176188/GaelGunStore` = Heckler & Koch HK416 Rifle _(json)_<br>`3761284354/VFES` = HK-416 Assault Rifle _(json)_ | 2026-08-27 #283–#292／Codex 複核：兩個 owner 都明示 HK-416／HK416，同一型號僅有廠牌全名與 Rifle／Assault Rifle 的粒度差；現譯保留型號與步槍類別，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 owner 3761284354/VFES，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 | — |
 | `ItemName\|Base.HK416D_cat` | `3633421539/Escape from Kentucky4215` = HK416D _(script)_<br>`3780151182/MFS_community_fix` = HK416D Assault Rifle _(json)_ | 2026-10-09 #766／#777 裁決：主 MOD 只在 script 寫 HK416D，社群修正版寫 HK416D Assault Rifle；HK416D 本就是突擊步槍，「HK416D 突擊步槍」對兩方都成立，與本包 Cyclone AK 突擊步槍等同系列寫法一致。 | — |
-| `ItemName\|Base.HK91` | `3183820077/Guns93Test` = HK91 _(json)_<br>`3243805556/Totally's NATO Firearms Pack B42` = Heckler and Koch HK91, _(json)_ | 2026-08-23 #231 多 owner：HK91／Heckler and Koch HK91。取不加廠牌與武器模式的中性名稱。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。 | — |
+| `ItemName\|Base.HK91` | `3183820077/Guns93Test` = HK91 _(json)_<br>`3243805556/Totally's NATO Firearms Pack B42` = Heckler and Koch HK91 _(json)_ | 2026-08-23 #231 多 owner：HK91／Heckler and Koch HK91。取不加廠牌與武器模式的中性名稱。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。 | — |
 | `ItemName\|Base.HKG28` | `3616176188/GaelGunStore` = Heckler & Koch G28 Sniper Rifle _(json)_<br>`3623297453/GaelGunStore_Legacy` = HKG28 Assault Rifle _(script)_ | 2026-08-27 #283–#292／Codex 複核：兩個 owner 都明示 G28／HKG28，但分別標為 Sniper Rifle 與 Assault Rifle；改用共同上位詞「步槍」，保留型號而不偏向任一槍種標籤。 | — |
 | `ItemName\|Base.HKMK23` | `3616176188/GaelGunStore` = Heckler & Koch MK23 Pistol _(json)_<br>`3623297453/GaelGunStore_Legacy` = HK-MK23 _(script)_ | 2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Heckler & Koch MK23 Pistol」與「HK-MK23」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「黑克勒-科赫MK23手槍」採現行名稱，對兩個 owner 均成立。 | — |
 | `ItemName\|Base.HK_121` | `3616176188/GaelGunStore` = Heckler & Koch HK121 Machine Gun _(json)_<br>`3623297453/GaelGunStore_Legacy` = HK-121 _(script)_ | 2026-08-27 #283–#292／Codex 複核：推論：依 task 對同作者 current／Legacy 的裁決規則，兩者共用此鍵，將「Heckler & Koch HK121 Machine Gun」與「HK-121」視為同一物件的現行正式名與 Legacy 名稱／script 代號差；現譯「黑克勒-科赫HK121機槍」採現行名稱，對兩個 owner 均成立。 | — |
@@ -1850,7 +1850,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_thickblooddesc` | `1299328280/More Traits` = You bleed more slowly from wounds. _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Wounds bleeds less.&lt;br&gt;(-50% damage from bleeding.) _(json)_ | 2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。 | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（267）
+## 尚未裁決的衝突（268）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
@@ -1938,6 +1938,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|Base.Bag_WorkerBag_LB` | `2959854619/AlicesDuffelBagTweak` = Duffel Bag _(script)_<br>`2959854619/aliceSvanillaDuffelBag` = Duffel Bag _(script)_<br>`3698401476/SkullysDuffelsAndRigs` = Worker Bag _(json)_ | 工人工具袋 |
 | `ItemName\|Base.Coupled762` | `3611718925/VFE` = Coupled 7.62 Magazines _(json)_<br>`3761077099/VFE` = Coupled 7.62x39mm Magazines _(json)_ | 7.62mm雙聯彈匣 |
 | `ItemName\|Base.Coupled762_Hidden` | `3611718925/VFE` = Coupled 7.62 Magazines _(json)_<br>`3761077099/VFE` = Coupled 7.62x39mm Magazines _(json)_ | 7.62mm雙聯彈匣 |
+| `ItemName\|Base.Glock18` | `3611718925/VFE` = G18 Pistol _(json)_<br>`3761077099/VFE` = G18 Pistol _(json)_<br>`3779417912/Totally's Cops and Robbers Firearms` = Glock 17 _(script)_ | G18 手槍 |
 | `ItemName\|Base.JS14_Clip_Attachment` | `2256623447/Firearms` = Mini-14 Magazine _(json)_<br>`2256623447/FirearmsBETA` = Mini-14 Magazine _(json)_<br>`3720484992/VanillaFirearmsRework` = Mag Attachment Model _(script)_<br>`3773858287/B42 Rain's Firearms & Gun Parts` = 5.56 Mini-14 Magazine _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = 5.56 Mini-14 Magazine _(json)_ | 儒格Mini-14自動步槍彈匣 |
 | `ItemName\|Base.M14Clip_Attachment` | `2256623447/Firearms` = M14 Magazine _(json)_<br>`2256623447/FirearmsBETA` = M14 Magazine _(json)_<br>`3720484992/VanillaFirearmsRework` = Mag Attachment Model _(script)_<br>`3773858287/B42 Rain's Firearms & Gun Parts` = 7.62x51 Magazine _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = 7.62x51 Magazine _(json)_ | M14自動步槍彈匣 |
 | `ItemName\|Base.MK2SD` | `3611718925/VFE` = MK2SD Pistol _(json)_<br>`3761077099/VFE` = MK2-SD Pistol _(json)_ | 儒格MK2SD手槍 |
