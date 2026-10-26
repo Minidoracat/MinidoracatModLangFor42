@@ -1,0 +1,17 @@
+{
+  "Sandbox_PBC": "Plysken电池充电器",
+  "Sandbox_PBC_CapRechargeableSlope": "损耗的电池容量更低: 可充电电池",
+  "Sandbox_PBC_CapRechargeableSlope_tooltip": "可充电电池也适用同样的限制, 但它更耐磨损. 默认值为0, 不产生任何改变. 设为0.4时, 耐久度90%%的电池仍能充到96%%的电量, 此后会缓慢下降. 请让它远低于普通电池的数值, 否则就没有理由去寻找可充电电池了.",
+  "Sandbox_PBC_CapVanillaSlope": "损耗的电池容量更低: 普通电池",
+  "Sandbox_PBC_CapVanillaSlope_tooltip": "损耗的电池无法充满电. 这表示耐久度每损失1点, 充电上限会损失多少点. 默认值为0, 不产生任何改变: 耐久度为10%%的电池仍能完全充满, 与目前一样. 设为1.5时, 耐久度一半的电池最多只能充到四分之一电量; 0.5较为温和, 3则很严苛.",
+  "Sandbox_PBC_CrankEnduranceCost": "每次充满消耗的耐力",
+  "Sandbox_PBC_CrankEnduranceCost_tooltip": "手摇也是体力活. 如果你只想充电而不想疲劳, 可以将其设为零.",
+  "Sandbox_PBC_CrankMinutesPerBattery": "每块空电池的手摇时间 (分钟)",
+  "Sandbox_PBC_CrankMinutesPerBattery_tooltip": "充满一块空电池需要摇多久. 默认值故意设置得很慢: 手摇充电器是最后手段, 而不是供电设备. 一块电池的容量大约是小手电筒耗电量的1000倍, 而符合现实的数值大约是当前值的一半. 如果你不想花这么多时间, 可以将其调低.",
+  "Sandbox_PBC_RechargeableLootWeight": "可充电电池稀有度 (普通电池的倍数)",
+  "Sandbox_PBC_RechargeableLootWeight_tooltip": "可充电电池的稀有程度, 以普通电池出现几率的倍数表示, 适用于游戏中所有会放置电池的地方. 默认值0.2使其出现几率只有普通电池的五分之一. 如果你完全不想让它生成, 请设为0.",
+  "Sandbox_PBC_WearRechargeablePerCharge": "每次充电的损耗: 可充电电池",
+  "Sandbox_PBC_WearRechargeablePerCharge_tooltip": "可充电电池正是为此设计的, 因此损耗速度慢得多. 这表示一次完整充电会消耗多少耐久度 (满值为100). 默认值1使电池大约可充电100次, 在正常游戏中你不太可能达到这个次数. 设为0.5可充电200次, 或者提高到4使其大约只能充电25次, 如果你希望它更重要.",
+  "Sandbox_PBC_WearVanillaPerCharge": "每次充电的损耗: 普通电池",
+  "Sandbox_PBC_WearVanillaPerCharge_tooltip": "普通电池本来就不是为充电而设计的, 因此每次充电都会让它损耗一点. 这表示一次完整充电会消耗多少耐久度 (满值为100). 默认值20使电池在耗尽前大约可充电5次. 调低它可以让游戏更宽松: 10可充电10次."
+}

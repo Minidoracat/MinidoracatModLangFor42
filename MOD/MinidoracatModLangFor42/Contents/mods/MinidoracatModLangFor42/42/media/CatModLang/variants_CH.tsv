@@ -28,6 +28,8 @@ c	ContextMenu	ContextMenu_Chainsaw_Tree	2335368829	Authentic Z - Current	砍伐�
 c	ContextMenu	ContextMenu_Chainsaw_Tree	2335368829	Authentic Z - Lite	砍伐樹木
 c	ContextMenu	ContextMenu_Chainsaw_Tree	3714025041	ebfchainsaw	砍伐樹木
 c	ContextMenu	ContextMenu_Chainsaw_Tree	3718616260	ebfchainsaw	砍伐樹木
+c	ContextMenu	ContextMenu_CleanWound	3580276809	The-Only-Cure	清潔傷口
+c	ContextMenu	ContextMenu_CleanWound	3818733381	TheOnlyCurePlus	清潔殘肢
 c	ContextMenu	ContextMenu_CloseJacket	2812326159	SpongieOpenJackets_Base	扣起衣服
 c	ContextMenu	ContextMenu_CloseJacket	3140453034	BWardrobe	扣起外套
 c	ContextMenu	ContextMenu_CloseJacket	3613433733	Rick Grimes - King County Sheriff Uniform (TWD) Build 42	扣起外套
@@ -41,6 +43,10 @@ c	ContextMenu	ContextMenu_Inject	3615135168	ZVirusVaccine42BETA	注射中
 c	ContextMenu	ContextMenu_Inject	3673979113	XVirus	注射 X 病毒
 c	ContextMenu	ContextMenu_Inject	3707475814	BanditsWeekOneTheArk	注射
 c	ContextMenu	ContextMenu_Inject	3777949201	ZombieCureSyringe	注射
+c	ContextMenu	ContextMenu_InstallProstLeft	3580276809	The-Only-Cure	為左臂安裝假肢
+c	ContextMenu	ContextMenu_InstallProstLeft	3818733381	TheOnlyCurePlus	為左側安裝假肢
+c	ContextMenu	ContextMenu_InstallProstRight	3580276809	The-Only-Cure	為右臂安裝假肢
+c	ContextMenu	ContextMenu_InstallProstRight	3818733381	TheOnlyCurePlus	為右側安裝假肢
 c	ContextMenu	ContextMenu_JacketOpen	2335368829	Authentic Z - Backpacks+	敞開外套
 c	ContextMenu	ContextMenu_JacketOpen	2335368829	Authentic Z - Current	敞開外套
 c	ContextMenu	ContextMenu_JacketOpen	2335368829	Authentic Z - Lite	敞開外套
@@ -59,6 +65,10 @@ c	ContextMenu	ContextMenu_Left	3409836763	Support Corps	左臂
 c	ContextMenu	ContextMenu_Left	3411888105	Frockin Splendor! Vol.2	換邊
 c	ContextMenu	ContextMenu_Left	3512993822	Support Corps	左臂
 c	ContextMenu	ContextMenu_Left	3798146388	Frockin Backstage!	換邊
+c	ContextMenu	ContextMenu_Limb_UpperArm_L	3580276809	The-Only-Cure	左上臂
+c	ContextMenu	ContextMenu_Limb_UpperArm_L	3818733381	TheOnlyCurePlus	左上臂
+c	ContextMenu	ContextMenu_Limb_UpperArm_R	3580276809	The-Only-Cure	右上臂
+c	ContextMenu	ContextMenu_Limb_UpperArm_R	3818733381	TheOnlyCurePlus	右上臂
 c	ContextMenu	ContextMenu_LoadedAmmo	3800233932	AmmoMakerUnderfire	已裝填彈藥:    
 c	ContextMenu	ContextMenu_LoadedAmmo	3800233932	Snake Utils Pack	裝填彈藥:    
 c	ContextMenu	ContextMenu_LoadedMixed	3800233932	AmmoMakerUnderfire	已裝填彈藥:    混合
@@ -303,12 +313,19 @@ c	IG_UI	IGUI_Empty	3597471949	GeneratorPlus2	空
 c	IG_UI	IGUI_FirearmRadial_FoldStock	3183820077	Guns93Test	摺疊槍托
 c	IG_UI	IGUI_FirearmRadial_FoldStock	3611718925	VFE	摺疊槍托
 c	IG_UI	IGUI_FirearmRadial_FoldStock	3761077099	VFE	摺疊槍托
+c	IG_UI	IGUI_FirearmRadial_FoldStock	3820580321	ExtendedVanillaWeapons	摺疊槍托
 c	IG_UI	IGUI_FirearmRadial_UnfoldStock	3183820077	Guns93Test	展開槍托
 c	IG_UI	IGUI_FirearmRadial_UnfoldStock	3611718925	VFE	展開槍托
 c	IG_UI	IGUI_FirearmRadial_UnfoldStock	3761077099	VFE	展開槍托
+c	IG_UI	IGUI_FirearmRadial_UnfoldStock	3820580321	ExtendedVanillaWeapons	展開槍托
 c	IG_UI	IGUI_FirearmRadial_UseBayonet	3183820077	Guns93Test	用作刺刀
 c	IG_UI	IGUI_FirearmRadial_UseBayonet	3611718925	VFE	使用刺刀
 c	IG_UI	IGUI_FirearmRadial_UseBayonet	3761077099	VFE	使用刺刀
+c	IG_UI	IGUI_FirearmRadial_UseBayonet	3820580321	ExtendedVanillaWeapons	使用刺刀
+c	IG_UI	IGUI_GridRV_BackupNotice	3820158673	DeadWorksNomadRV	<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 房車已改用車輛框架 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 遊牧者房車與戴爾的酋長房車現在改由 DeadWorks Vehicle Framework 運作. 每輛房車及其中的一切, 包括家具、冰箱、櫥櫃、水和電池, 都會在第一次載入時轉換. <LINE> 這應該會自動完成, 但請保留這次更新前的備份, 以防出錯. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何備份 <RGB:1,1,1> <LINE> 1. 退回主選單. <LINE> 2. 開啟你的 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 資料夾, 在 Windows 上通常是 <RGB:0.55,0.85,1> C:/Users/你的使用者名稱/Zomboid <RGB:1,1,1> <LINE> 3. 把 <RGB:0.55,0.85,1> Saves <RGB:1,1,1> 資料夾複製到安全的地方. <LINE> 若要復原, 把這份副本放回去, 並改回上一個版本. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 這則訊息只會顯示一次.
+c	IG_UI	IGUI_GridRV_BackupNotice	3820158673	GridRV	<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 遊牧者房車即將大更新 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 下次更新將重建房車內部的儲存方式: 家具、冰箱、櫥櫃以及其中的所有物品. <LINE> 你的房車與其中物品應該會自動轉移, 但請務必保留備份, 以防出錯. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何備份 <RGB:1,1,1> <LINE> 1. 退回主選單. <LINE> 2. 開啟你的 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 資料夾, 在 Windows 上通常是 <RGB:0.55,0.85,1> C:/Users/你的使用者名稱/Zomboid <RGB:1,1,1> <LINE> 3. 把 <RGB:0.55,0.85,1> Saves <RGB:1,1,1> 資料夾複製到安全的地方. <LINE> 之後若要復原這次更新, 把這份副本放回去即可. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 這則訊息只會顯示一次.
+c	IG_UI	IGUI_GridRV_BackupNoticeServer	3820158673	DeadWorksNomadRV	<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 房車已改用車輛框架 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 遊牧者房車與戴爾的酋長房車現在改由 DeadWorks Vehicle Framework 運作. 每輛房車及其中的一切, 包括家具、冰箱、櫥櫃、水和電池, 都會在第一次載入時轉換. <LINE> 這應該會自動完成, 但請保留這次更新前的備份, 以防出錯. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何備份 <RGB:1,1,1> <LINE> 1. 停止伺服器. <LINE> 2. 開啟你的 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 資料夾, 在 Windows 上通常是 <RGB:0.55,0.85,1> C:/Users/你的使用者名稱/Zomboid <RGB:1,1,1> <LINE> 3. 把 <RGB:0.55,0.85,1> Saves/Multiplayer <RGB:1,1,1> 底下這個伺服器的資料夾複製到安全的地方. <LINE> 若要復原, 把這份副本放回去, 並改回上一個版本. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 這則訊息只會顯示一次.
+c	IG_UI	IGUI_GridRV_BackupNoticeServer	3820158673	GridRV	<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 遊牧者房車即將大更新 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 下次更新將重建房車內部的儲存方式: 家具、冰箱、櫥櫃以及其中的所有物品. <LINE> 你的房車與其中物品應該會自動轉移, 但請務必保留備份, 以防出錯. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何備份伺服器 <RGB:1,1,1> <LINE> 1. 更新前先停止伺服器. <LINE> 2. 在 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 資料夾中, 把 <RGB:0.55,0.85,1> Saves/Multiplayer/伺服器名稱 <RGB:1,1,1> 和 <RGB:0.55,0.85,1> db/伺服器名稱.db <RGB:1,1,1> 複製到安全的地方. <LINE> 之後若要復原這次更新, 把兩者都放回去. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 這則訊息只會顯示一次.
 c	IG_UI	IGUI_HGR_APPLIED	3562222835	HybridGunRepair	已套用 - 
 c	IG_UI	IGUI_HGR_APPLIED	3562222835	HybridGunRepair_v2	已套用 - 
 c	IG_UI	IGUI_HGR_APPLY	3562222835	HybridGunRepair	套用
@@ -457,6 +474,7 @@ c	IG_UI	IGUI_ItemCat_Components	3801670664	BritaGunworksLocal	元件
 c	IG_UI	IGUI_ItemCat_Currency	2915656059	Cedar Hill	雪松山貨幣
 c	IG_UI	IGUI_ItemCat_Currency	3689006725	PhunMart2	貨幣
 c	IG_UI	IGUI_ItemCat_Currency	3787445252	DansOPWeaponsB42	貨幣
+c	IG_UI	IGUI_ItemCat_Currency	3807707103	RadioTraders	貨幣
 c	IG_UI	IGUI_ItemCat_FoodNonPerishable	3750612158	GlobalStorageSiK	食物-不易腐壞
 c	IG_UI	IGUI_ItemCat_FoodNonPerishable	3781012462	QoLCompendium	食物 (不易腐壞)
 c	IG_UI	IGUI_ItemCat_FoodPerishable	3650035249	CAExtendedCategories	食物-易腐爛
@@ -1813,6 +1831,7 @@ c	IG_UI	IGUI_media_dragVinyl	3743911767	IVA	插入黑膠唱片
 c	IG_UI	IGUI_perks_Archery_Description	3408337281	ArcherLib	提高你用弓和弩命中目標以及造成額外傷害的機率.
 c	IG_UI	IGUI_perks_Archery_Description	3775366853	UltimateMarksman	精準且有效率地使用弓的能力.
 c	IG_UI	IGUI_perks_Archery_Description	3775407541	RadArchery	提高你用弓和弩命中目標以及造成額外傷害的機率, 並延長其有效射程.
+c	IG_UI	IGUI_perks_Archery_Description	3813857786	Fletcher	射箭以及製作弓與箭. 拉弓更快、瞄準更穩、搭箭更快, 箭矢也更不容易折斷.
 c	IG_UI	IGUI_perks_Lockpicking_Description	3745815281	TheBestLockpickingB4219	決定你撬開門鎖與車鎖的能力. 會隨著練習提升.
 c	IG_UI	IGUI_perks_Lockpicking_Description	3758561559	AwesomeLockpicking	玩家在沒有鑰匙的情況下, 強行撬鎖的熟練程度.
 c	IG_UI	IGUI_perks_Lockpicking_Description	3779480850	Lockpicking	用簡易工具操作彈子鎖的技巧. 等級越高, 撬鎖的最佳位置範圍越寬, 髮夾的磨損越少, 也能撬開更難的鎖.
@@ -1929,6 +1948,7 @@ c	ItemName	Base.223Carton	3611718925	VFE	.223彈藥 (整件)
 c	ItemName	Base.223Carton	3761077099	VFE	.223彈藥 (整件)
 c	ItemName	Base.223Carton	3773858287	B42 Rain's Firearms & Gun Parts	.223彈藥 (整件)
 c	ItemName	Base.223Carton	3773858287	B42 Rain's Firearms & Gun Parts Expanded	.223彈藥 (整件)
+c	ItemName	Base.223Carton	3820580321	ExtendedVanillaWeapons	.223彈藥 (整件)
 c	ItemName	Base.223ExtClip	3777433827	BritaCombinedB42	223-REM擴充彈匣
 c	ItemName	Base.223ExtClip	3801670664	BritaGunworksLegacyMagazines	223-REM擴充彈匣
 c	ItemName	Base.223ExtClip	3801670664	BritaGunworksLocal	Mini-14 5.56 20發彈匣 A
@@ -1938,14 +1958,17 @@ c	ItemName	Base.223StdClip	3801670664	BritaGunworksLocal	Mini-14 5.56 10發彈�
 c	ItemName	Base.22Box	3183820077	Guns93Test	.22 LR彈藥 (整盒)
 c	ItemName	Base.22Box	3611718925	VFE	.22彈藥 (整盒)
 c	ItemName	Base.22Box	3761077099	VFE	.22彈藥 (整盒)
+c	ItemName	Base.22Box	3820580321	ExtendedVanillaWeapons	.22彈藥 (整盒)
 c	ItemName	Base.22Bullets	3183820077	Guns93Test	.22 LR彈藥
 c	ItemName	Base.22Bullets	3611718925	VFE	.22彈藥
 c	ItemName	Base.22Bullets	3761077099	VFE	.22彈藥
 c	ItemName	Base.22Bullets	3773858287	B42 Rain's Firearms & Gun Parts Expanded	.22彈藥
+c	ItemName	Base.22Bullets	3820580321	ExtendedVanillaWeapons	.22彈藥
 c	ItemName	Base.22Carton	3183820077	Guns93Test	.22 LR彈藥 (整件)
 c	ItemName	Base.22Carton	3611718925	VFE	.22彈藥 (整件)
 c	ItemName	Base.22Carton	3715977706	BetterVanillaFirearms42	.22 LR彈藥 (整件)
 c	ItemName	Base.22Carton	3761077099	VFE	.22彈藥盒 (整件)
+c	ItemName	Base.22Carton	3820580321	ExtendedVanillaWeapons	.22彈藥盒 (整件)
 c	ItemName	Base.22Clip	2256623447	Firearms	柯爾特王牌手槍彈匣
 c	ItemName	Base.22Clip	2256623447	FirearmsBETA	柯爾特王牌手槍彈匣
 c	ItemName	Base.22Clip	3777433827	BritaCombinedB42	.22 LR彈匣
@@ -1983,6 +2006,7 @@ c	ItemName	Base.308Box150	3616176188	GaelGunStore	盒裝.308溫徹斯特子彈 (
 c	ItemName	Base.308Box150	3623297453	GaelGunStore_Legacy	盒裝.308子彈 (150 發)
 c	ItemName	Base.308BulletsLinked	3611718925	VFE	彈鏈連結 .308 彈藥
 c	ItemName	Base.308BulletsLinked	3761077099	VFE	彈鏈連結 7.62x51mm 彈藥
+c	ItemName	Base.308BulletsLinked	3820580321	ExtendedVanillaWeapons	彈鏈連結 7.62x51mm 彈藥
 c	ItemName	Base.308Clip40	3616176188	GaelGunStore	.308溫徹斯特彈匣 (40 發)
 c	ItemName	Base.308Clip40	3623297453	GaelGunStore_Legacy	.308彈匣 (40 發)
 c	ItemName	Base.308ClipU	3633421539	Escape from Kentucky4215	7.62×51mm 30 發彈匣
@@ -2040,6 +2064,7 @@ c	ItemName	Base.45Clip25	3611718925	VFES	黑克勒-科赫UMP45衝鋒槍彈匣
 c	ItemName	Base.45Clip25	3616176188	GaelGunStore	.45 ACP彈匣 (25 發)
 c	ItemName	Base.45Clip25	3623297453	GaelGunStore_Legacy	.45 Auto彈匣 (25 發)
 c	ItemName	Base.45Clip25	3761284354	VFES	黑克勒-科赫UMP45衝鋒槍彈匣
+c	ItemName	Base.45Clip25	3820580321	ExtendedVanillaWeapons	黑克勒-科赫UMP45衝鋒槍彈匣
 c	ItemName	Base.45Clip_Attachment	3720484992	VanillaFirearmsRework	彈匣附件模型
 c	ItemName	Base.45Clip_Attachment	3773858287	B42 Rain's Firearms & Gun Parts	.45 ACP彈匣
 c	ItemName	Base.45Clip_Attachment	3773858287	B42 Rain's Firearms & Gun Parts Expanded	.45 ACP彈匣
@@ -2098,18 +2123,22 @@ c	ItemName	Base.545Box	3611718925	VFES	5.45mm彈藥 (整盒)
 c	ItemName	Base.545Box	3633421539	Escape from Kentucky4215	5.45×39mm彈藥 (整盒)
 c	ItemName	Base.545Box	3761284354	VFES	5.45mm彈藥 (整盒)
 c	ItemName	Base.545Box	3780151182	MFS_community_fix	5.45×39mm彈藥 (整盒)
+c	ItemName	Base.545Box	3820580321	ExtendedVanillaWeapons	5.45mm彈藥 (整盒)
 c	ItemName	Base.545Bullets	3611718925	VFES	5.45mm彈藥
 c	ItemName	Base.545Bullets	3633421539	Escape from Kentucky4215	5.45×39mm彈藥
 c	ItemName	Base.545Bullets	3761284354	VFES	5.45mm彈藥
 c	ItemName	Base.545Bullets	3780151182	MFS_community_fix	5.45×39mm彈藥
+c	ItemName	Base.545Bullets	3820580321	ExtendedVanillaWeapons	5.45mm彈藥
 c	ItemName	Base.545Carton	3611718925	VFES	5.45mm彈藥 (整件)
 c	ItemName	Base.545Carton	3633421539	Escape from Kentucky4215	5.45×39mm彈藥 (整件)
 c	ItemName	Base.545Carton	3761284354	VFES	5.45mm彈藥 (整件)
 c	ItemName	Base.545Carton	3780151182	MFS_community_fix	5.45×39mm彈藥 (整件)
+c	ItemName	Base.545Carton	3820580321	ExtendedVanillaWeapons	5.45mm彈藥 (整件)
 c	ItemName	Base.545Clip	3611718925	VFES	5.45mm彈匣
 c	ItemName	Base.545Clip	3633421539	Escape from Kentucky4215	5.45×39mm彈匣 (30 發)
 c	ItemName	Base.545Clip	3761284354	VFES	5.45mm彈匣
 c	ItemName	Base.545Clip	3780151182	MFS_community_fix	5.45×39mm彈匣 (30 發)
+c	ItemName	Base.545Clip	3820580321	ExtendedVanillaWeapons	5.45mm彈匣
 c	ItemName	Base.545Drum	3777433827	BritaCombinedB42	5.45x39mm彈鼓
 c	ItemName	Base.545Drum	3801670664	BritaGunworksLegacyMagazines	5.45x39mm彈鼓
 c	ItemName	Base.545Drum	3801670664	BritaGunworksLocal	AK 5.45x39 95發彈鼓
@@ -2134,6 +2163,7 @@ c	ItemName	Base.545x39Drum100	3616176188	GaelGunStore	5.45x39mm彈鼓 (100 發)
 c	ItemName	Base.545x39Drum100	3623297453	GaelGunStore_Legacy	5.45x39彈鼓 (100 發)
 c	ItemName	Base.556BattlePack	3611718925	VFE	5.56mm 戰鬥包
 c	ItemName	Base.556BattlePack	3761077099	VFE	5.56 戰鬥包
+c	ItemName	Base.556BattlePack	3820580321	ExtendedVanillaWeapons	5.56 戰鬥包
 c	ItemName	Base.556Belt	3183820077	Guns93Test	.223 Rem彈鏈
 c	ItemName	Base.556Belt	3777433827	BritaCombinedB42	5.56x45mm盒式彈匣
 c	ItemName	Base.556Belt	3801670664	BritaGunworksLegacyMagazines	5.56x45mm盒式彈匣
@@ -2161,10 +2191,13 @@ c	ItemName	Base.56S_cat	3633421539	Escape from Kentucky4215	北方工業 56S 式
 c	ItemName	Base.56S_cat	3780151182	MFS_community_fix	56 式半自動步槍 (SKS)
 c	ItemName	Base.57Box	3611718925	VFEP93	5.7mm彈藥 (整盒)
 c	ItemName	Base.57Box	3762355926	VFEP93	5.7mm彈藥 (整盒)
+c	ItemName	Base.57Box	3820580321	ExtendedVanillaWeapons	5.7mm彈藥 (整盒)
 c	ItemName	Base.57Bullets	3611718925	VFEP93	5.7mm彈藥
 c	ItemName	Base.57Bullets	3762355926	VFEP93	5.7mm彈藥
+c	ItemName	Base.57Bullets	3820580321	ExtendedVanillaWeapons	5.7mm彈藥
 c	ItemName	Base.57Carton	3611718925	VFEP93	5.7mm彈藥 (整件)
 c	ItemName	Base.57Carton	3762355926	VFEP93	5.7mm彈藥 (整件)
+c	ItemName	Base.57Carton	3820580321	ExtendedVanillaWeapons	5.7mm彈藥 (整件)
 c	ItemName	Base.57Clip	3777433827	BritaCombinedB42	5.7x28mm彈匣
 c	ItemName	Base.57Clip	3801670664	BritaGunworksLegacyMagazines	5.7x28mm彈匣
 c	ItemName	Base.57Clip	3801670664	BritaGunworksLocal	FN57/MPA57 5.7x28 20發彈匣
@@ -2174,11 +2207,14 @@ c	ItemName	Base.63beetleRearSeat1	3005903549	63beetle	63款福斯金龜車後座
 c	ItemName	Base.63beetleRearSeat1	3041122351	63Type2Van	63款福斯Type1後座椅
 c	ItemName	Base.76254Box	3611718925	VFES	7.62x54mm彈藥 (整盒)
 c	ItemName	Base.76254Box	3761284354	VFES	7.62x54R彈藥 (整盒)
+c	ItemName	Base.76254Box	3820580321	ExtendedVanillaWeapons	7.62x54R彈藥 (整盒)
 c	ItemName	Base.76254Bullets	3611718925	VFES	7.62x54mm彈藥
 c	ItemName	Base.76254Bullets	3658348791	WAR	7.62×54mmR彈藥
 c	ItemName	Base.76254Bullets	3761284354	VFES	7.62x54R彈藥
+c	ItemName	Base.76254Bullets	3820580321	ExtendedVanillaWeapons	7.62x54R彈藥
 c	ItemName	Base.76254Carton	3611718925	VFES	7.62x54mm彈藥 (整件)
 c	ItemName	Base.76254Carton	3761284354	VFES	7.62x54R彈藥 (整件)
+c	ItemName	Base.76254Carton	3820580321	ExtendedVanillaWeapons	7.62x54R彈藥 (整件)
 c	ItemName	Base.762Box	2961450523	Totally's Eastern Bloc Firearms Pack	7.62x39mm 彈藥 (整盒)
 c	ItemName	Base.762Box	3611718925	VFE	7.62mm 彈藥 (整盒)
 c	ItemName	Base.762Box	3715977706	BetterVanillaFirearms42	7.62x39mm 彈藥 (整盒)
@@ -2187,6 +2223,7 @@ c	ItemName	Base.762Box	3773834525	MarzVanillaGuns	7.62x39mm 彈藥 (整盒)
 c	ItemName	Base.762Box	3773858287	B42 Rain's Firearms & Gun Parts	7.62x51 彈藥 (整盒)
 c	ItemName	Base.762Box	3773858287	B42 Rain's Firearms & Gun Parts Expanded	7.62x51 彈藥 (整盒)
 c	ItemName	Base.762Box	3779417912	Totally's Cops and Robbers Firearms	7.62x39mm 彈藥 (整盒)
+c	ItemName	Base.762Box	3820580321	ExtendedVanillaWeapons	7.62x39mm 彈藥 (整盒)
 c	ItemName	Base.762Bullets	2961450523	Totally's Eastern Bloc Firearms Pack	7.62x39mm 彈藥
 c	ItemName	Base.762Bullets	3611718925	VFE	7.62mm 彈藥
 c	ItemName	Base.762Bullets	3715977706	BetterVanillaFirearms42	7.62x39mm 彈藥
@@ -2195,16 +2232,19 @@ c	ItemName	Base.762Bullets	3773834525	MarzVanillaGuns	7.62x39mm 彈藥
 c	ItemName	Base.762Bullets	3773858287	B42 Rain's Firearms & Gun Parts	7.62x51 彈藥
 c	ItemName	Base.762Bullets	3773858287	B42 Rain's Firearms & Gun Parts Expanded	7.62x51 彈藥
 c	ItemName	Base.762Bullets	3779417912	Totally's Cops and Robbers Firearms	7.62x39mm 彈藥
+c	ItemName	Base.762Bullets	3820580321	ExtendedVanillaWeapons	7.62x39mm 彈藥
 c	ItemName	Base.762Carton	3611718925	VFE	7.62mm彈藥 (整件)
 c	ItemName	Base.762Carton	3715977706	BetterVanillaFirearms42	7.62x39mm彈藥 (整件)
 c	ItemName	Base.762Carton	3761077099	VFE	7.62x39mm彈藥 (整件)
 c	ItemName	Base.762Carton	3773834525	MarzVanillaGuns	7.62x39mm彈藥 (整件)
 c	ItemName	Base.762Carton	3773858287	B42 Rain's Firearms & Gun Parts	7.62x51彈藥 (整件)
 c	ItemName	Base.762Carton	3773858287	B42 Rain's Firearms & Gun Parts Expanded	7.62x51彈藥 (整件)
+c	ItemName	Base.762Carton	3820580321	ExtendedVanillaWeapons	7.62x39mm彈藥 (整件)
 c	ItemName	Base.762Clip	2961450523	Totally's Eastern Bloc Firearms Pack	AK-47自動步槍彈匣
 c	ItemName	Base.762Clip	3611718925	VFE	AK-47自動步槍彈匣
 c	ItemName	Base.762Clip	3761077099	VFE	AK-47自動步槍彈匣
 c	ItemName	Base.762Clip	3779417912	Totally's Cops and Robbers Firearms	AK系列30發彈匣
+c	ItemName	Base.762Clip	3820580321	ExtendedVanillaWeapons	AK-47自動步槍彈匣
 c	ItemName	Base.762Drum	3777433827	BritaCombinedB42	7.62x39mm彈鼓
 c	ItemName	Base.762Drum	3801670664	BritaGunworksLegacyMagazines	7.62x39mm彈鼓
 c	ItemName	Base.762Drum	3801670664	BritaGunworksLocal	AK 7.62x39 75發彈鼓
@@ -2276,6 +2316,7 @@ c	ItemName	Base.9mmClip25	3780151182	MFS_community_fix	9x19mm 30 發加長彈匣
 c	ItemName	Base.9mmClip30	3611718925	VFE	黑克勒-科赫MP5衝鋒槍彈匣
 c	ItemName	Base.9mmClip30	3616176188	GaelGunStore	9mm彈匣 (30 發)
 c	ItemName	Base.9mmClip30	3761077099	VFE	黑克勒-科赫MP5衝鋒槍彈匣
+c	ItemName	Base.9mmClip30	3820580321	ExtendedVanillaWeapons	黑克勒-科赫MP5衝鋒槍彈匣
 c	ItemName	Base.9mmDrum	3777433827	BritaCombinedB42	9x19mm彈鼓
 c	ItemName	Base.9mmDrum	3801670664	BritaGunworksLegacyMagazines	9x19mm彈鼓
 c	ItemName	Base.9mmDrum	3801670664	BritaGunworksLocal	Beretta 92/SUB-2000 9mm 50發彈鼓
@@ -2323,6 +2364,7 @@ c	ItemName	Base.AA12	3773858287	B42 Rain's Firearms & Gun Parts	艾奇遜AA-12�
 c	ItemName	Base.AA12	3773858287	B42 Rain's Firearms & Gun Parts Expanded	艾奇遜AA-12戰鬥霰彈槍
 c	ItemName	Base.AA12	3777433827	BritaCombinedB42	艾奇遜AA-12霰彈槍
 c	ItemName	Base.AA12	3801670664	BritaGunworksLocal	艾奇遜AA-12霰彈槍
+c	ItemName	Base.AA12	3820580321	ExtendedVanillaWeapons	艾奇遜AA12霰彈槍
 c	ItemName	Base.ACR	3616176188	GaelGunStore	雷明頓ACR步槍
 c	ItemName	Base.ACR	3623297453	GaelGunStore_Legacy	自適應戰鬥步槍
 c	ItemName	Base.ADS	3616176188	GaelGunStore	ADS兩棲步槍
@@ -2337,6 +2379,7 @@ c	ItemName	Base.AK103	3801670664	BritaGunworksLocal	AK-103突擊步槍
 c	ItemName	Base.AK105	3611718925	VFES	AK-105自動步槍
 c	ItemName	Base.AK105	3761284354	VFES	AK-105自動步槍
 c	ItemName	Base.AK105	3773858287	B42 Rain's Firearms & Gun Parts Expanded	AK-105自動步槍
+c	ItemName	Base.AK105	3820580321	ExtendedVanillaWeapons	AK-105自動步槍
 c	ItemName	Base.AK12	3616176188	GaelGunStore	AK-12步槍
 c	ItemName	Base.AK12	3777433827	BritaCombinedB42	AK-12突擊步槍
 c	ItemName	Base.AK12	3801670664	BritaGunworksLocal	AK-12突擊步槍
@@ -2355,6 +2398,7 @@ c	ItemName	Base.AK47	3773858287	B42 Rain's Firearms & Gun Parts	AK-47自動步�
 c	ItemName	Base.AK47	3773858287	B42 Rain's Firearms & Gun Parts Expanded	AK-47自動步槍
 c	ItemName	Base.AK47	3777433827	BritaCombinedB42	AK-47突擊步槍
 c	ItemName	Base.AK47	3801670664	BritaGunworksLocal	AK-47突擊步槍
+c	ItemName	Base.AK47	3820580321	ExtendedVanillaWeapons	AK-47突擊步槍
 c	ItemName	Base.AK47_stock	3616176188	GaelGunStore	AK-47槍托
 c	ItemName	Base.AK47_stock	3623297453	GaelGunStore_Legacy	AK-47槍托
 c	ItemName	Base.AK5C	3616176188	GaelGunStore	赫斯塔爾AK5C步槍
@@ -2365,6 +2409,7 @@ c	ItemName	Base.AK74	3616176188	GaelGunStore	AK-74步槍
 c	ItemName	Base.AK74	3761284354	VFES	AK-74自動步槍
 c	ItemName	Base.AK74	3777433827	BritaCombinedB42	AK-74自動步槍
 c	ItemName	Base.AK74	3801670664	BritaGunworksLocal	AK-74自動步槍
+c	ItemName	Base.AK74	3820580321	ExtendedVanillaWeapons	AK-74自動步槍
 c	ItemName	Base.AK74_stock	3616176188	GaelGunStore	AK-74槍托
 c	ItemName	Base.AK74_stock	3623297453	GaelGunStore_Legacy	AK-74槍托
 c	ItemName	Base.AK74u_long	3616176188	GaelGunStore	AKS-74U長管卡賓槍
@@ -2388,6 +2433,7 @@ c	ItemName	Base.AKS74U	3611718925	VFES	AKS-74u自動步槍
 c	ItemName	Base.AKS74U	3761284354	VFES	AKS-74U自動步槍
 c	ItemName	Base.AKS74U	3777433827	BritaCombinedB42	AKS-74U自動步槍 (8吋槍管)
 c	ItemName	Base.AKS74U	3801670664	BritaGunworksLocal	AKS-74U自動步槍 (8吋槍管)
+c	ItemName	Base.AKS74U	3820580321	ExtendedVanillaWeapons	AKS-74U自動步槍
 c	ItemName	Base.AK_Wood_stock	3616176188	GaelGunStore	AK木質槍托
 c	ItemName	Base.AK_Wood_stock	3623297453	GaelGunStore_Legacy	AK木製槍托
 c	ItemName	Base.AMD65	2961450523	Totally's Eastern Bloc Firearms Pack	AMD-65自動步槍
@@ -2622,6 +2668,7 @@ c	ItemName	Base.Bipod	3611718925	VFE	兩腳架
 c	ItemName	Base.Bipod	3761077099	VFE	兩腳架
 c	ItemName	Base.Bipod	3777433827	BritaCombinedB42	兩腳架 (摺疊)
 c	ItemName	Base.Bipod	3801670664	BritaGunworksLocal	兩腳架 (摺疊)
+c	ItemName	Base.Bipod	3820580321	ExtendedVanillaWeapons	兩腳架
 c	ItemName	Base.BrowningHP	3616176188	GaelGunStore	勃朗寧Hi-Power手槍
 c	ItemName	Base.BrowningHP	3623297453	GaelGunStore_Legacy	勃朗寧HP手槍
 c	ItemName	Base.Browning_Auto	3616176188	GaelGunStore	勃朗寧Auto-5霰彈槍
@@ -2671,12 +2718,14 @@ c	ItemName	Base.Bullets50MagnumBox	3623297453	GaelGunStore_Legacy	盒裝.50 AE�
 c	ItemName	Base.CAR15	3183820077	Guns93Test	AR-15卡賓槍
 c	ItemName	Base.CAR15	3611718925	VFE	CAR-15突擊步槍
 c	ItemName	Base.CAR15	3761077099	VFE	CAR-15突擊步槍
+c	ItemName	Base.CAR15	3820580321	ExtendedVanillaWeapons	CAR-15突擊步槍
 c	ItemName	Base.CBJ	3616176188	GaelGunStore	CBJ-MS衝鋒槍
 c	ItemName	Base.CBJ	3623297453	GaelGunStore_Legacy	CBJ衝鋒槍 (9mm)
 c	ItemName	Base.CP33	3611718925	VFEP93	凱爾科技K-33手槍
 c	ItemName	Base.CP33	3762355926	VFEP93	凱爾科技K-33手槍
 c	ItemName	Base.CP33	3777433827	BritaCombinedB42	凱爾科技CP-33手槍
 c	ItemName	Base.CP33	3801670664	BritaGunworksLocal	凱爾科技CP-33手槍
+c	ItemName	Base.CP33	3820580321	ExtendedVanillaWeapons	凱爾科技K-33手槍
 c	ItemName	Base.CP33Clip	3777433827	BritaCombinedB42	凱爾科技CP33彈匣
 c	ItemName	Base.CP33Clip	3801670664	BritaGunworksLegacyMagazines	凱爾科技CP33彈匣
 c	ItemName	Base.CP33Clip	3801670664	BritaGunworksLocal	CP-33 .22 LR 33發彈匣
@@ -2691,6 +2740,7 @@ c	ItemName	Base.CZ75	3623297453	GaelGunStore_Legacy	捷克CZ75手槍
 c	ItemName	Base.CZ75	3761077099	VFE	捷克CZ75手槍
 c	ItemName	Base.CZ75	3777433827	BritaCombinedB42	捷克CZ-75b手槍 (不鏽鋼)
 c	ItemName	Base.CZ75	3801670664	BritaGunworksLocal	捷克CZ-75b手槍 (不鏽鋼)
+c	ItemName	Base.CZ75	3820580321	ExtendedVanillaWeapons	捷克CZ75手槍
 c	ItemName	Base.CZ805	3616176188	GaelGunStore	捷克CZ 805 BREN步槍
 c	ItemName	Base.CZ805	3623297453	GaelGunStore_Legacy	捷克CZ 805 BREN步槍
 c	ItemName	Base.CZScorpion	3616176188	GaelGunStore	捷克CZ Scorpion EVO 3衝鋒槍
@@ -2698,6 +2748,7 @@ c	ItemName	Base.CZScorpion	3623297453	GaelGunStore_Legacy	捷克CZ Scorpion衝�
 c	ItemName	Base.CampCarbine	3611718925	VFE	MC-45 卡賓槍
 c	ItemName	Base.CampCarbine	3715977706	BetterVanillaFirearms42	LN-9 狩獵卡賓槍
 c	ItemName	Base.CampCarbine	3761077099	VFE	MC-45 卡賓槍
+c	ItemName	Base.CampCarbine	3820580321	ExtendedVanillaWeapons	MC-45 卡賓槍
 c	ItemName	Base.CanPipe_Hemp	3650168851	B42Horticulture	錫罐菸斗 (大麻)
 c	ItemName	Base.CanPipe_Hemp	3768743814	HempRoll	錫罐菸斗 (大麻)
 c	ItemName	Base.Carcano	3616176188	GaelGunStore	卡爾卡諾M1891步槍
@@ -2740,8 +2791,10 @@ c	ItemName	Base.Coonan357	3616176188	GaelGunStore	Coonan .357馬格南手槍
 c	ItemName	Base.Coonan357	3623297453	GaelGunStore_Legacy	Coonan .357手槍
 c	ItemName	Base.Coupled762	3611718925	VFE	7.62雙聯彈匣
 c	ItemName	Base.Coupled762	3761077099	VFE	7.62x39mm雙聯彈匣
+c	ItemName	Base.Coupled762	3820580321	ExtendedVanillaWeapons	7.62x39mm雙聯彈匣
 c	ItemName	Base.Coupled762_Hidden	3611718925	VFE	7.62雙聯彈匣
 c	ItemName	Base.Coupled762_Hidden	3761077099	VFE	7.62x39mm雙聯彈匣
+c	ItemName	Base.Coupled762_Hidden	3820580321	ExtendedVanillaWeapons	7.62x39mm雙聯彈匣
 c	ItemName	Base.Cover2_Silencer	3616176188	GaelGunStore	附戰術護套消音器 (卡賓槍)
 c	ItemName	Base.Cover2_Silencer	3623297453	GaelGunStore_Legacy	護套消音器2
 c	ItemName	Base.Cover3_Silencer	3616176188	GaelGunStore	附戰術護套消音器 (步槍)
@@ -2789,6 +2842,7 @@ c	ItemName	Base.FAL	3623297453	GaelGunStore_Legacy	赫斯塔爾FAL自動步槍
 c	ItemName	Base.FAL	3761077099	VFE	FAL戰鬥步槍
 c	ItemName	Base.FAL	3777433827	BritaCombinedB42	赫斯塔爾FAL 50.00自動步槍
 c	ItemName	Base.FAL	3801670664	BritaGunworksLocal	赫斯塔爾FAL 50.00自動步槍
+c	ItemName	Base.FAL	3820580321	ExtendedVanillaWeapons	FAL戰鬥步槍
 c	ItemName	Base.FAL_CQB	3616176188	GaelGunStore	赫斯塔爾FAL CQB步槍
 c	ItemName	Base.FAL_CQB	3623297453	GaelGunStore_Legacy	赫斯塔爾FAL CQB步槍
 c	ItemName	Base.FAMAS	3243805556	Totally's NATO Firearms Pack B42	FAMAS F1步槍
@@ -2861,9 +2915,14 @@ c	ItemName	Base.Galil	3773858287	B42 Rain's Firearms & Gun Parts	IMI加利爾步
 c	ItemName	Base.Galil	3773858287	B42 Rain's Firearms & Gun Parts Expanded	IMI加利爾步槍
 c	ItemName	Base.Galil	3777433827	BritaCombinedB42	IMI加利爾ARM步槍
 c	ItemName	Base.Galil	3801670664	BritaGunworksLocal	IMI加利爾ARM步槍
+c	ItemName	Base.Galil	3820580321	ExtendedVanillaWeapons	加利爾自動步槍
 c	ItemName	Base.Glock17Mag	2256623447	Firearms	格洛克17手槍彈匣
 c	ItemName	Base.Glock17Mag	2256623447	FirearmsBETA	格洛克17手槍彈匣
 c	ItemName	Base.Glock17Mag	3779417912	Totally's Cops and Robbers Firearms	格洛克手槍彈匣 (17發)
+c	ItemName	Base.Glock18	3611718925	VFE	G18 手槍
+c	ItemName	Base.Glock18	3761077099	VFE	G18 手槍
+c	ItemName	Base.Glock18	3779417912	Totally's Cops and Robbers Firearms	格洛克17手槍
+c	ItemName	Base.Glock18	3820580321	ExtendedVanillaWeapons	G18 手槍
 c	ItemName	Base.Glock23	3183820077	Guns93Test	格洛克23手槍
 c	ItemName	Base.Glock23	3616176188	GaelGunStore	格洛克23手槍
 c	ItemName	Base.Glock23	3623297453	GaelGunStore_Legacy	USP-45手槍
@@ -2880,6 +2939,7 @@ c	ItemName	Base.GunCleaningKit	3773858287	B42 Rain's Firearms & Gun Parts Expand
 c	ItemName	Base.HK416	3611718925	VFES	黑克勒-科赫416自動步槍
 c	ItemName	Base.HK416	3616176188	GaelGunStore	黑克勒-科赫HK416步槍
 c	ItemName	Base.HK416	3761284354	VFES	黑克勒-科赫416自動步槍
+c	ItemName	Base.HK416	3820580321	ExtendedVanillaWeapons	黑克勒-科赫416自動步槍
 c	ItemName	Base.HK416D_cat	3633421539	Escape from Kentucky4215	HK416D
 c	ItemName	Base.HK416D_cat	3780151182	MFS_community_fix	HK416D 突擊步槍
 c	ItemName	Base.HK91	3183820077	Guns93Test	HK91步槍
@@ -3023,6 +3083,7 @@ c	ItemName	Base.M249	3773858287	B42 Rain's Firearms & Gun Parts	M249輕機槍
 c	ItemName	Base.M249	3773858287	B42 Rain's Firearms & Gun Parts Expanded	M249輕機槍
 c	ItemName	Base.M249	3777433827	BritaCombinedB42	M249E2輕機槍
 c	ItemName	Base.M249	3801670664	BritaGunworksLocal	M249E2輕機槍
+c	ItemName	Base.M249	3820580321	ExtendedVanillaWeapons	M249輕機槍
 c	ItemName	Base.M2A1_Can	3777433827	BritaCombinedB42	丙烷氣瓶
 c	ItemName	Base.M2A1_Can	3801670664	BritaGunworksLegacyMagazines	丙烷氣瓶
 c	ItemName	Base.M2A1_Can	3801670664	BritaGunworksLocal	Not-a-Flamethrower 100單位燃料罐
@@ -3054,6 +3115,7 @@ c	ItemName	Base.M4A1	3762355926	VFEP93	柯爾特M4A1自動步槍
 c	ItemName	Base.M4A1	3773858287	B42 Rain's Firearms & Gun Parts Expanded	柯爾特M4A1自動步槍
 c	ItemName	Base.M4A1	3777433827	BritaCombinedB42	柯爾特M4A1卡賓槍
 c	ItemName	Base.M4A1	3801670664	BritaGunworksLocal	柯爾特M4A1卡賓槍
+c	ItemName	Base.M4A1	3820580321	ExtendedVanillaWeapons	柯爾特M4A1自動步槍
 c	ItemName	Base.M60	2256623447	Firearms	M60通用機槍
 c	ItemName	Base.M60	2256623447	FirearmsBETA	M60通用機槍
 c	ItemName	Base.M60	3183820077	Guns93Test	薩科M60通用機槍
@@ -3102,6 +3164,7 @@ c	ItemName	Base.MAC10	3773858287	B42 Rain's Firearms & Gun Parts Expanded	MAC-10
 c	ItemName	Base.MAC10Folded	3611718925	VFE	M10 衝鋒槍
 c	ItemName	Base.MAC10Folded	3761077099	VFE	M10 衝鋒槍
 c	ItemName	Base.MAC10Folded	3779417912	Totally's Cops and Robbers Firearms	MAC-10衝鋒槍
+c	ItemName	Base.MAC10Folded	3820580321	ExtendedVanillaWeapons	M10 衝鋒槍
 c	ItemName	Base.MAC10Mag	2256623447	Firearms	MAC-10衝鋒槍彈匣
 c	ItemName	Base.MAC10Mag	2256623447	FirearmsBETA	MAC-10衝鋒槍彈匣
 c	ItemName	Base.MAC10Mag	3183820077	Guns93Test	科布雷MAC-10衝鋒槍彈匣 (30發, .45 Auto)
@@ -3115,8 +3178,10 @@ c	ItemName	Base.MK18	3777433827	BritaCombinedB42	Mk 18 Mod 1卡賓槍
 c	ItemName	Base.MK18	3801670664	BritaGunworksLocal	Mk 18 Mod 1卡賓槍
 c	ItemName	Base.MK2SD	3611718925	VFE	儒格MK2SD手槍
 c	ItemName	Base.MK2SD	3761077099	VFE	儒格MK2-SD手槍
+c	ItemName	Base.MK2SD	3820580321	ExtendedVanillaWeapons	儒格MK2-SD手槍
 c	ItemName	Base.MP153sawn	3611718925	VFES	貝加爾MP-153霰彈槍 (鋸短)
 c	ItemName	Base.MP153sawn	3761284354	VFES	貝加爾MP-153霰彈槍 (鋸短)
+c	ItemName	Base.MP153sawn	3820580321	ExtendedVanillaWeapons	貝加爾MP-153霰彈槍 (鋸短)
 c	ItemName	Base.MP155_montecarlo_stock	3616176188	GaelGunStore	MP-155蒙特卡羅槍托
 c	ItemName	Base.MP155_montecarlo_stock	3623297453	GaelGunStore_Legacy	MP155蒙特卡羅槍托
 c	ItemName	Base.MP18	3616176188	GaelGunStore	MP18/I衝鋒槍
@@ -3133,6 +3198,7 @@ c	ItemName	Base.MP5	3616176188	GaelGunStore	黑克勒-科赫MP5衝鋒槍
 c	ItemName	Base.MP5	3761077099	VFE	MP5衝鋒槍
 c	ItemName	Base.MP5	3773858287	B42 Rain's Firearms & Gun Parts	MP5衝鋒槍
 c	ItemName	Base.MP5	3773858287	B42 Rain's Firearms & Gun Parts Expanded	MP5衝鋒槍
+c	ItemName	Base.MP5	3820580321	ExtendedVanillaWeapons	MP5衝鋒槍
 c	ItemName	Base.MP510	2256623447	Firearms	黑克勒-科赫MP5/10衝鋒槍
 c	ItemName	Base.MP510	2256623447	FirearmsBETA	黑克勒-科赫MP5/10衝鋒槍
 c	ItemName	Base.MP510	3183820077	Guns93Test	黑克勒-科赫MP5/10衝鋒槍
@@ -3148,6 +3214,7 @@ c	ItemName	Base.MP5SD	3623297453	GaelGunStore_Legacy	MP5SD衝鋒槍 (9mm)
 c	ItemName	Base.MP5SD	3761077099	VFE	MP5SD衝鋒槍
 c	ItemName	Base.MP5SD	3773858287	B42 Rain's Firearms & Gun Parts	MP5SD衝鋒槍
 c	ItemName	Base.MP5SD	3773858287	B42 Rain's Firearms & Gun Parts Expanded	MP5SD衝鋒槍
+c	ItemName	Base.MP5SD	3820580321	ExtendedVanillaWeapons	MP5SD衝鋒槍
 c	ItemName	Base.MP7	3611718925	VFEP93	黑克勒-科赫MP7衝鋒槍
 c	ItemName	Base.MP7	3616176188	GaelGunStore	黑克勒-科赫MP7衝鋒槍
 c	ItemName	Base.MP7	3623297453	GaelGunStore_Legacy	MP7衝鋒槍 (9mm)
@@ -3177,10 +3244,12 @@ c	ItemName	Base.Makarov	3611718925	VFES	馬卡洛夫手槍
 c	ItemName	Base.Makarov	3761284354	VFES	馬卡洛夫手槍
 c	ItemName	Base.Makarov	3777433827	BritaCombinedB42	馬卡洛夫手槍 (9mm)
 c	ItemName	Base.Makarov	3801670664	BritaGunworksLocal	馬卡洛夫手槍 (9mm)
+c	ItemName	Base.Makarov	3820580321	ExtendedVanillaWeapons	馬卡洛夫手槍
 c	ItemName	Base.MatebaGrifone	3616176188	GaelGunStore	馬泰巴Grifone步槍
 c	ItemName	Base.MatebaGrifone	3623297453	GaelGunStore_Legacy	馬泰巴Grifone步槍
 c	ItemName	Base.MetalPipeSilencer	3309896124	SimpleSilencers	簡易消音器
 c	ItemName	Base.MetalPipeSilencer	3779164273	Improvised Silencers	金屬管消音器
+c	ItemName	Base.MetalPipeSilencer	3820580321	ExtendedVanillaWeapons	消音器
 c	ItemName	Base.MiaoSword	3633421539	BladesmithSystem	苗刀
 c	ItemName	Base.MiaoSword	3780151182	MFS_BladesmithSystem_fix	苗刀
 c	ItemName	Base.MiaoSwordS	3633421539	BladesmithSystem	苗刀綁帶
@@ -3190,6 +3259,7 @@ c	ItemName	Base.Micro_UZI	3623297453	GaelGunStore_Legacy	微型UZI衝鋒槍 (.22
 c	ItemName	Base.Mini14	3183820077	Guns93Test	儒格Mini-14步槍
 c	ItemName	Base.Mini14	3611718925	VFE	Mini-14步槍
 c	ItemName	Base.Mini14	3761077099	VFE	Mini-14步槍
+c	ItemName	Base.Mini14	3820580321	ExtendedVanillaWeapons	Mini-14步槍
 c	ItemName	Base.Mini_14	3616176188	GaelGunStore	儒格Mini-14步槍
 c	ItemName	Base.Mini_14	3623297453	GaelGunStore_Legacy	Mini-14突擊步槍
 c	ItemName	Base.Mosin	3611718925	VFES	莫辛-納甘步槍
@@ -3251,6 +3321,7 @@ c	ItemName	Base.P90	3611718925	VFEP93	赫斯塔爾P90衝鋒槍
 c	ItemName	Base.P90	3616176188	GaelGunStore	赫斯塔爾P90衝鋒槍
 c	ItemName	Base.P90	3623297453	GaelGunStore_Legacy	P90衝鋒槍 (9mm)
 c	ItemName	Base.P90	3762355926	VFEP93	赫斯塔爾P90衝鋒槍
+c	ItemName	Base.P90	3820580321	ExtendedVanillaWeapons	赫斯塔爾P90衝鋒槍
 c	ItemName	Base.P90Clip	3616176188	GaelGunStore	FN P90 彈匣 (50 發)
 c	ItemName	Base.P90Clip	3777433827	BritaCombinedB42	5.7x28mm P90 彈匣
 c	ItemName	Base.P90Clip	3801670664	BritaGunworksLegacyMagazines	5.7x28mm P90 彈匣
@@ -3266,6 +3337,7 @@ c	ItemName	Base.PBS4_Silencer	3623297453	GaelGunStore_Legacy	PBS4消音器
 c	ItemName	Base.PKM	3611718925	VFES	PKM輕機槍
 c	ItemName	Base.PKM	3616176188	GaelGunStore	PKM機槍
 c	ItemName	Base.PKM	3761284354	VFES	PKM輕機槍
+c	ItemName	Base.PKM	3820580321	ExtendedVanillaWeapons	PKM輕機槍
 c	ItemName	Base.PM_IILP	3616176188	GaelGunStore	施密特-本德PM II LP瞄準鏡
 c	ItemName	Base.PM_IILP	3623297453	GaelGunStore_Legacy	PM IILP瞄準鏡
 c	ItemName	Base.PP2000	3616176188	GaelGunStore	PP-2000衝鋒槍
@@ -3277,11 +3349,13 @@ c	ItemName	Base.PP93_Silencer	3623297453	GaelGunStore_Legacy	PP93消音器
 c	ItemName	Base.PPSH	3611718925	VFES	PPSh-41衝鋒槍
 c	ItemName	Base.PPSH	3761284354	VFES	PPSh-41衝鋒槍
 c	ItemName	Base.PPSH	3773858287	B42 Rain's Firearms & Gun Parts Expanded	波波沙衝鋒槍
+c	ItemName	Base.PPSH	3820580321	ExtendedVanillaWeapons	PPSh-41衝鋒槍
 c	ItemName	Base.PPSH41	3616176188	GaelGunStore	PPSh-41衝鋒槍
 c	ItemName	Base.PPSH41	3623297453	GaelGunStore_Legacy	PPSH41衝鋒槍 (9mm)
 c	ItemName	Base.PPSHDrum	3611718925	VFES	PPSh-41彈鼓
 c	ItemName	Base.PPSHDrum	3761284354	VFES	PPSh-41彈鼓
 c	ItemName	Base.PPSHDrum	3773858287	B42 Rain's Firearms & Gun Parts Expanded	波波沙衝鋒槍
+c	ItemName	Base.PPSHDrum	3820580321	ExtendedVanillaWeapons	PPSh-41彈鼓
 c	ItemName	Base.PP_Bizon	3616176188	GaelGunStore	PP-19野牛衝鋒槍
 c	ItemName	Base.PP_Bizon	3623297453	GaelGunStore_Legacy	PP野牛衝鋒槍 (.22 LR)
 c	ItemName	Base.PanguAxe	3633421539	BladesmithSystem	盤古斧
@@ -3360,6 +3434,7 @@ c	ItemName	Base.SKS	3616176188	GaelGunStore	SKS步槍
 c	ItemName	Base.SKS	3761077099	VFE	SKS步槍
 c	ItemName	Base.SKS	3777433827	BritaCombinedB42	SKS卡賓槍
 c	ItemName	Base.SKS	3801670664	BritaGunworksLocal	SKS卡賓槍
+c	ItemName	Base.SKS	3820580321	ExtendedVanillaWeapons	SKS步槍
 c	ItemName	Base.SKSClip	3183820077	Guns93Test	7.62x39橋夾
 c	ItemName	Base.SKSClip	3777433827	BritaCombinedB42	7.62x39mm橋夾
 c	ItemName	Base.SKSClip	3801670664	BritaGunworksLegacyMagazines	7.62x39mm橋夾
@@ -3401,12 +3476,14 @@ c	ItemName	Base.SV98	3611718925	VFES	SV-98狙擊步槍
 c	ItemName	Base.SV98	3616176188	GaelGunStore	SV-98狙擊步槍
 c	ItemName	Base.SV98	3623297453	GaelGunStore_Legacy	SV-98狙擊步槍
 c	ItemName	Base.SV98	3761284354	VFES	SV-98狙擊步槍
+c	ItemName	Base.SV98	3820580321	ExtendedVanillaWeapons	SV-98狙擊步槍
 c	ItemName	Base.SVD	3611718925	VFES	德拉貢諾夫狙擊步槍
 c	ItemName	Base.SVD	3616176188	GaelGunStore	德拉貢諾夫SVD狙擊步槍
 c	ItemName	Base.SVD	3623297453	GaelGunStore_Legacy	SVD步槍
 c	ItemName	Base.SVD	3761284354	VFES	德拉貢諾夫狙擊步槍
 c	ItemName	Base.SVD	3777433827	BritaCombinedB42	德拉貢諾夫狙擊步槍
 c	ItemName	Base.SVD	3801670664	BritaGunworksLocal	德拉貢諾夫狙擊步槍
+c	ItemName	Base.SVD	3820580321	ExtendedVanillaWeapons	德拉貢諾夫狙擊步槍
 c	ItemName	Base.SVD12	3616176188	GaelGunStore	SVDS狙擊步槍
 c	ItemName	Base.SVD12	3623297453	GaelGunStore_Legacy	SVD12突擊步槍
 c	ItemName	Base.SVDClip	3777433827	BritaCombinedB42	7.62x54r SVD彈匣
@@ -3450,6 +3527,7 @@ c	ItemName	Base.Saiga12	3623297453	GaelGunStore_Legacy	賽加-12霰彈槍
 c	ItemName	Base.Saiga12	3761284354	VFES	賽加-12霰彈槍
 c	ItemName	Base.Saiga12	3777433827	BritaCombinedB42	賽加-12霰彈槍
 c	ItemName	Base.Saiga12	3801670664	BritaGunworksLocal	賽加-12霰彈槍
+c	ItemName	Base.Saiga12	3820580321	ExtendedVanillaWeapons	賽加-12霰彈槍
 c	ItemName	Base.Saiga9_Silencer	3616176188	GaelGunStore	戰術護套消音器 (手槍)
 c	ItemName	Base.Saiga9_Silencer	3623297453	GaelGunStore_Legacy	賽加-9消音器
 c	ItemName	Base.Saiga9mm	3616176188	GaelGunStore	賽加-9衝鋒槍
@@ -3483,12 +3561,14 @@ c	ItemName	Base.Scrap_Silencer	3623297453	GaelGunStore_Legacy	廢料消音器
 c	ItemName	Base.ShellHolder	3611718925	VFE	霰彈托架
 c	ItemName	Base.ShellHolder	3616176188	GaelGunStore	霰彈托架
 c	ItemName	Base.ShellHolder	3761077099	VFE	霰彈托架
+c	ItemName	Base.ShellHolder	3820580321	ExtendedVanillaWeapons	霰彈托架
 c	ItemName	Base.ShotgunShells_Casing	3225267257	Spent Casings for Guns of 93 - B42	空鹿彈彈殼
 c	ItemName	Base.ShotgunShells_Casing	3630196063	WAR	空霰彈殼
 c	ItemName	Base.Silenced_Sten	3616176188	GaelGunStore	斯登Mk IIS消音衝鋒槍
 c	ItemName	Base.Silenced_Sten	3623297453	GaelGunStore_Legacy	斯登消音衝鋒槍 (9mm)
 c	ItemName	Base.Silencer	3309896124	SimpleSilencers	消音器
 c	ItemName	Base.Silencer	3779164273	Improvised Silencers	消音器
+c	ItemName	Base.Silencer	3820580321	ExtendedVanillaWeapons	專業消音器
 c	ItemName	Base.Sjorgen	3616176188	GaelGunStore	Sjogren慣性霰彈槍
 c	ItemName	Base.Sjorgen	3623297453	GaelGunStore_Legacy	Sjogren霰彈槍
 c	ItemName	Base.Sjorgen_Short	3616176188	GaelGunStore	Sjogren霰彈槍 (鋸短)
@@ -3584,12 +3664,14 @@ c	ItemName	Base.UMP45	3611718925	VFES	黑克勒-科赫UMP45衝鋒槍
 c	ItemName	Base.UMP45	3616176188	GaelGunStore	黑克勒-科赫UMP .45衝鋒槍
 c	ItemName	Base.UMP45	3623297453	GaelGunStore_Legacy	UMP-45衝鋒槍
 c	ItemName	Base.UMP45	3761284354	VFES	黑克勒-科赫UMP45衝鋒槍
+c	ItemName	Base.UMP45	3820580321	ExtendedVanillaWeapons	黑克勒-科赫UMP45衝鋒槍
 c	ItemName	Base.UMP45_long	3616176188	GaelGunStore	UMP-45長管衝鋒槍
 c	ItemName	Base.UMP45_long	3623297453	GaelGunStore_Legacy	UMP-45長管衝鋒槍
 c	ItemName	Base.USP45	3611718925	VFES	黑克勒-科赫USP-45手槍
 c	ItemName	Base.USP45	3616176188	GaelGunStore	黑克勒-科赫USP .45手槍
 c	ItemName	Base.USP45	3623297453	GaelGunStore_Legacy	USP-45手槍
 c	ItemName	Base.USP45	3761284354	VFES	黑克勒-科赫USP-45手槍
+c	ItemName	Base.USP45	3820580321	ExtendedVanillaWeapons	黑克勒-科赫USP-45手槍
 c	ItemName	Base.UZI	2256623447	Firearms	UZI衝鋒槍
 c	ItemName	Base.UZI	2256623447	FirearmsBETA	UZI衝鋒槍
 c	ItemName	Base.UZI	3616176188	GaelGunStore	UZI衝鋒槍
@@ -3617,6 +3699,7 @@ c	ItemName	Base.VSS	3616176188	GaelGunStore	VSS Vintorez步槍
 c	ItemName	Base.VSS	3761284354	VFES	VSS狙擊步槍
 c	ItemName	Base.VSS	3777433827	BritaCombinedB42	VSS Vintorez狙擊步槍
 c	ItemName	Base.VSS	3801670664	BritaGunworksLocal	VSS Vintorez狙擊步槍
+c	ItemName	Base.VSS	3820580321	ExtendedVanillaWeapons	VSS狙擊步槍
 c	ItemName	Base.VSSClip	3777433827	BritaCombinedB42	VSS狙擊步槍彈匣
 c	ItemName	Base.VSSClip	3801670664	BritaGunworksLegacyMagazines	VSS狙擊步槍彈匣
 c	ItemName	Base.VSSClip	3801670664	BritaGunworksLocal	AS VAL/VSS 9x39 10發彈匣
@@ -3997,6 +4080,10 @@ c	ItemName	Phun.WristWatch_Left_MilitaryX	3532685233	PhunSprintersUI	軍用手�
 c	ItemName	Phun.WristWatch_Left_MilitaryX	3676252110	PhunSprinters2	軍用感應器
 c	ItemName	Phun.WristWatch_Right_MilitaryX	3532685233	PhunSprintersUI	軍用手錶
 c	ItemName	Phun.WristWatch_Right_MilitaryX	3676252110	PhunSprinters2	軍用感應器
+c	ItemName	TOC.Prost_NormalArm_L	3580276809	The-Only-Cure	手臂假肢
+c	ItemName	TOC.Prost_NormalArm_L	3818733381	TheOnlyCurePlus	機械手臂
+c	ItemName	TOC.Prost_NormalArm_R	3580276809	The-Only-Cure	手臂假肢
+c	ItemName	TOC.Prost_NormalArm_R	3818733381	TheOnlyCurePlus	機械手臂
 c	ItemName	Tsarcraft.TCBoombox	3397198968	TrueMusic_b42	手提音響
 c	ItemName	Tsarcraft.TCBoombox	3402491515	tsarslib	手提音響'哈薩克-102-立體聲'
 c	ItemName	Tsarcraft.TCBoombox	3632610172	True Moozic B42+ - The Music operating System for Project Zomboid SPMP	手提音響
@@ -4401,6 +4488,8 @@ c	Recipes	ConvertToBullets22Carton	3388844065	AmmoConverterB42RainsFirearmsAndGu
 c	Recipes	ConvertToBullets22Carton	3388844065	AmmoConverterGaelGunStore_B42	轉換為.22 LR子彈 (整箱)
 c	Recipes	ConvertToBullets22Carton	3388844065	AmmoConverterfirearmmod	轉換為.22 LR子彈 (整箱)
 c	Recipes	ConvertToBullets22Carton	3388844065	AmmoConverterfirearmmodbeta	轉換為.22 LR子彈 (整箱)
+c	Recipes	CraftMetalPipeSilencer	3779164273	Improvised Silencers	製作金屬管消音器
+c	Recipes	CraftMetalPipeSilencer	3820580321	ExtendedVanillaWeapons	製作消音器
 c	Recipes	DrumMode	3633421539	Escape from Kentucky4215	切換到彈鼓模式 (請先卸下所有配件)
 c	Recipes	DrumMode	3780151182	MFS_community_fix	切換到彈鼓模式
 c	Recipes	DryFish	3736576212	TheButchersTable	風乾魚片
@@ -4760,6 +4849,12 @@ c	Sandbox	Sandbox_ISA_batteryDegradeChance_tooltip	2969478819	ImmersiveSolarArra
 c	Sandbox	Sandbox_ISA_batteryDegradeChance_tooltip	3647117173	ImmersiveSolarArraysMP	電池平均損耗的倍率.\n調低該數值將顯著延長電池壽命.
 c	Sandbox	Sandbox_ISA_batteryDegradeChance_tooltip	3652024179	ImmersiveSolarArraysFixed	電池平均損耗的倍率. \\n調低該數值將顯著延長電池壽命.
 c	Sandbox	Sandbox_ISA_batteryDegradeChance_tooltip	3723961714	Infoteo's Immersive Solar Arrays	電池平均損耗的倍率.\n調低該數值將顯著延長電池壽命.
+c	Sandbox	Sandbox_ISIL_MetalPipeDurability	3779164273	Improvised Silencers	金屬管消音器耐久度 (基礎射擊次數)
+c	Sandbox	Sandbox_ISIL_MetalPipeDurability	3820580321	ExtendedVanillaWeapons	消音器耐久度 (基礎射擊次數)
+c	Sandbox	Sandbox_ISIL_MetalPipeDurability_tooltip	3779164273	Improvised Silencers	金屬管消音器在損毀前可承受的9mm等效射擊次數.
+c	Sandbox	Sandbox_ISIL_MetalPipeDurability_tooltip	3820580321	ExtendedVanillaWeapons	可製作的消音器在損毀前可承受的9mm等效射擊次數.
+c	Sandbox	Sandbox_ISIL_MetalPipeNoiseReduction	3779164273	Improvised Silencers	金屬管消音器降噪幅度 (%%)
+c	Sandbox	Sandbox_ISIL_MetalPipeNoiseReduction	3820580321	ExtendedVanillaWeapons	消音器降噪幅度 (%%)
 c	Sandbox	Sandbox_InventoryTetris	3598501350	RE Tetris [B42]	RE介面 (幾何物品欄)
 c	Sandbox	Sandbox_InventoryTetris	3769773293	INVENTORY_TETRISP_MP	幾何物品欄
 c	Sandbox	Sandbox_InventoryTetris	3775513231	InventoryTetris	幾何物品欄
@@ -4919,6 +5014,10 @@ c	Sandbox	Sandbox_StarvingZombies_PlayerWindSpeedMultiplier_tooltip	3396867685	s
 c	Sandbox	Sandbox_StarvingZombies_PlayerWindSpeedMultiplier_tooltip	3396867685	starving-zombies-wip	此值用於決定風速對玩家氣味的影響程度.<br>數值越高, 影響越大.<br>風對氣味距離有顯著影響.
 c	Sandbox	Sandbox_StrengthSub_Name_tooltip	3750861914	FootballMod	乘以係數之前先從力量等級中扣除的數值: (力量等級-力量扣減值)*力量係數
 c	Sandbox	Sandbox_StrengthSub_Name_tooltip	3750861914	ShovingMod	乘以係數之前先從力量等級中扣除的數值: (力量-力量扣減值)*力量係數
+c	Sandbox	Sandbox_TOC	3580276809	The-Only-Cure	唯一療法
+c	Sandbox	Sandbox_TOC	3818733381	TheOnlyCurePlus	唯一療法+
+c	Sandbox	Sandbox_TOC_SurgeonAbilityImportance	3580276809	The-Only-Cure	主刀者急救技能的影響程度
+c	Sandbox	Sandbox_TOC_SurgeonAbilityImportance	3818733381	TheOnlyCurePlus	主刀者急救技能的影響程度
 c	Sandbox	Sandbox_TheBestLockpicking_LockpickingMode	3440867775	TheBestLockpicking	小遊戲
 c	Sandbox	Sandbox_TheBestLockpicking_LockpickingMode	3745815281	TheBestLockpickingB4219	開鎖模式
 c	Sandbox	Sandbox_TheBestLockpicking_LockpickingMode_Values_option1	3440867775	TheBestLockpicking	舊版 (簡易)
@@ -5189,6 +5288,7 @@ c	Tooltip	Tooltip_M2A1_Tank	3777433827	BritaCombinedB42	舊版 GunFighter 功能
 c	Tooltip	Tooltip_M2A1_Tank	3801670664	BritaGunworksLocal	M2A1 燃料罐<br>容量: 240 單位燃料.<br>拆開「火焰噴射器燃料」, 再透過槍械工坊裝填燃料罐.
 c	Tooltip	Tooltip_MetalPipeSilencer	3309896124	SimpleSilencers	將聲音傳播範圍降低 50%%, 但射程略微降低
 c	Tooltip	Tooltip_MetalPipeSilencer	3779164273	Improvised Silencers	將槍聲傳播範圍降低 60%%, 但射程略微降低.
+c	Tooltip	Tooltip_MetalPipeSilencer	3820580321	ExtendedVanillaWeapons	將槍聲傳播範圍降低 60%%, 但射程略微降低.
 c	Tooltip	Tooltip_MuscleRelaxants	3638633196	ExtensiveHealthReworkB42	非處方肌肉鬆弛劑. <LINE> 緩解破傷風或寄生蟲引起的肌肉痙攣. <LINE> 40%% 痙攣減輕. 不能治癒.
 c	Tooltip	Tooltip_MuscleRelaxants	3726328119	ExtensiveHealthReworkB42	非處方肌肉鬆弛劑. <LINE> 緩解破傷風或寄生蟲引起的肌肉痙攣. <LINE> 40%% 痙攣減輕. 不能治癒.
 c	Tooltip	Tooltip_NeatLockpick_HandmadeLockpick	3783535220	NeatLockpicking	脆弱的自製撬鎖工具, 很容易折斷.
@@ -5328,6 +5428,7 @@ c	Tooltip	Tooltip_Silencer	2256623447	FirearmsBETA	抑制開槍時的槍聲.
 c	Tooltip	Tooltip_Silencer	3309896124	SimpleSilencers	聲音傳播半徑降低80%%, 但射程略微降低
 c	Tooltip	Tooltip_Silencer	3773834525	MarzVanillaGuns	安裝或拆卸時需要扳手
 c	Tooltip	Tooltip_Silencer	3779164273	Improvised Silencers	槍械噪音傳播半徑降低80%%, 但射程略微降低.
+c	Tooltip	Tooltip_Silencer	3820580321	ExtendedVanillaWeapons	槍械噪音傳播半徑降低80%%, 但射程略微降低.
 c	Tooltip	Tooltip_Sneakers	2850935956	Boots Expanded	踩踏力度: 1.60 耐久度: 300
 c	Tooltip	Tooltip_Sneakers	2850935956	Boots Expanded Vanilla	踩踏力度: 1.6 耐久度: 250
 c	Tooltip	Tooltip_StandAlone_Launcher	3777433827	BritaCombinedB42	舊版 GunFighter 功能. 此功能在目前的 B42 移植版中已停用.
@@ -5336,6 +5437,8 @@ c	Tooltip	Tooltip_Stoner_Book	3777433827	BritaCombinedB42	舊版 GunFighter 功�
 c	Tooltip	Tooltip_Stoner_Book	3801670664	BritaGunworksLocal	槍械參考書: AR 系步槍.
 c	Tooltip	Tooltip_StrappedShoes	2850935956	Boots Expanded	踩踏力度: 3.50 耐久度: 150
 c	Tooltip	Tooltip_StrappedShoes	2850935956	Boots Expanded Vanilla	踩踏力度: 2.2 耐久度: 300
+c	Tooltip	Tooltip_Surgery_TempTooLow	3580276809	The-Only-Cure	溫度仍然太低
+c	Tooltip	Tooltip_Surgery_TempTooLow	3818733381	TheOnlyCurePlus	火還不夠熱
 c	Tooltip	Tooltip_Switch_Striker	3777433827	BritaCombinedB42	舊版 GunFighter 功能. 此功能在目前的 B42 移植版中已停用.
 c	Tooltip	Tooltip_Switch_Striker	3801670664	BritaGunworksLocal	替換用擊發機構.
 c	Tooltip	Tooltip_Thrown	3777433827	BritaCombinedB42	舊版 GunFighter 功能. 此功能在目前的 B42 移植版中已停用.
@@ -5378,6 +5481,8 @@ c	Tooltip	Tooltip_alreadyknownrecipe	3800233932	AmmoMakerUnderfire	 (已知)
 c	Tooltip	Tooltip_alreadyknownrecipe	3800233932	LeGourmetUltimate	 (已學會)
 c	Tooltip	Tooltip_item_Boombox	3739256725	Talis New Music	一台音量很大的手提音響, 可放入一卷磁帶與電池.
 c	Tooltip	Tooltip_item_Boombox	3743911767	IVA	一款進口的行動式收音機. 無法收聽本地電臺, <br>但可以播放磁帶. 採用電池供電.
+c	Tooltip	Tooltip_item_GridRVArmourManual	3820158673	DeadWorksNomadRV	可學習: 焊接房車尖刺撞角 (V 形楔), 焊接房車側面裝甲, 焊接房車排障器
+c	Tooltip	Tooltip_item_GridRVArmourManual	3820158673	GridRV	可學習: 焊接房車尖刺撞角 (V 形楔), 焊接房車側面裝甲
 c	Tooltip	Tooltip_item_Vinyl	3739256725	Talis New Music	用來播放黑膠唱片的唱盤.
 c	Tooltip	Tooltip_item_Vinyl	3743911767	IVA	它需要通電並接上揚聲器才能運作.
 c	Tooltip	Tooltip_item_Walkman	3397198968	TrueMusic_b42	Sany 出品的知名播放器.
@@ -5410,8 +5515,10 @@ c	UI	UI_AutoLoot_Tooltip_PerfMode	3392699932	AutoLoot	兩次連續搜尋之間�
 c	UI	UI_AutoLoot_Tooltip_PerfMode	3773340822	AutoLoot_B42	兩次連續搜尋之間的最小延遲
 c	UI	UI_CMRB_Combat_NoDelayShots	3453422228	CheatMenuPX	無延遲射擊模式
 c	UI	UI_CMRB_Combat_NoDelayShots	3683918273	CheatMenuReloaded	無射擊延遲
+c	UI	UI_CMRB_Combat_NoDelayShots	3815818643	RaxCheatMenu	無射擊延遲
 c	UI	UI_CMRB_Menu_Title	3453422228	CheatMenuPX	作弊選單: PX
 c	UI	UI_CMRB_Menu_Title	3683918273	CheatMenuReloaded	作弊選單: 重製版
+c	UI	UI_CMRB_Menu_Title	3815818643	RaxCheatMenu	作弊選單: 重製版
 c	UI	UI_EHR_BloodVolume	3638633196	ExtensiveHealthReworkB42	血液: %d 毫升 (%.0f%%)
 c	UI	UI_EHR_BloodVolume	3726328119	ExtensiveHealthReworkB42	血液: %1$s 毫升 (%2$s%%)
 c	UI	UI_EHR_Compact_DrugInteractions	3638633196	ExtensiveHealthReworkB42	! %d 種藥物相互作用
@@ -5916,6 +6023,7 @@ v	ItemName	Base.44Clip	3773858287	B42 Rain's Firearms & Gun Parts Expanded	.44�
 v	ItemName	Base.44Clip	3780151182	MFS_community_fix	.44馬格南 8發彈匣
 v	ItemName	Base.44Clip	3801670664	BritaGunworksLegacyMagazines	
 v	ItemName	Base.44Clip	3801670664	BritaGunworksLocal	沙漠之鷹 .44馬格南 8發彈匣
+v	ItemName	Base.44Clip	3820580321	ExtendedVanillaWeapons	DE彈匣
 v	ItemName	Base.45Clip	2256623447	Firearms	M1911彈匣
 v	ItemName	Base.45Clip	2256623447	FirearmsBETA	M1911彈匣
 v	ItemName	Base.45Clip	2874163136	CaptainJuezo1_WIP_B42	1911手槍彈匣
@@ -5931,6 +6039,7 @@ v	ItemName	Base.45Clip	3773858287	B42 Rain's Firearms & Gun Parts Expanded	.45 A
 v	ItemName	Base.45Clip	3780151182	MFS_community_fix	.45 ACP 7發彈匣
 v	ItemName	Base.45Clip	3801670664	BritaGunworksLegacyMagazines	
 v	ItemName	Base.45Clip	3801670664	BritaGunworksLocal	1911 .45 ACP 7發彈匣 A
+v	ItemName	Base.45Clip	3820580321	ExtendedVanillaWeapons	M1911彈匣
 v	ItemName	Base.556Box	2256623447	Firearms	
 v	ItemName	Base.556Box	2256623447	FirearmsBETA	
 v	ItemName	Base.556Box	3183820077	Guns93Test	盒裝.223雷明頓子彈
@@ -5953,6 +6062,7 @@ v	ItemName	Base.556Bullets	3722134990	GunsOfMarzPreviousVersion	5.56x45mm子彈 
 v	ItemName	Base.556Bullets	3773858287	B42 Rain's Firearms & Gun Parts	5.56子彈
 v	ItemName	Base.556Bullets	3773858287	B42 Rain's Firearms & Gun Parts Expanded	5.56子彈
 v	ItemName	Base.556Bullets	3780151182	MFS_community_fix	
+v	ItemName	Base.556Bullets	3820971639	XannyArmsGunPack	
 v	ItemName	Base.556Carton	3183820077	Guns93Test	箱裝.223雷明頓子彈
 v	ItemName	Base.556Carton	3616176188	GaelGunStore	箱裝5.56x45mm子彈 (12盒)
 v	ItemName	Base.556Carton	3633421539	Escape from Kentucky4215	
@@ -5978,6 +6088,7 @@ v	ItemName	Base.556Clip	3773858287	B42 Rain's Firearms & Gun Parts Expanded	5.56
 v	ItemName	Base.556Clip	3780151182	MFS_community_fix	5.56×45mm 30發彈匣
 v	ItemName	Base.556Clip	3801670664	BritaGunworksLegacyMagazines	
 v	ItemName	Base.556Clip	3801670664	BritaGunworksLocal	STANAG 5.56 30發彈匣 A
+v	ItemName	Base.556Clip	3820580321	ExtendedVanillaWeapons	
 v	ItemName	Base.9mmClip	2256623447	Firearms	貝瑞塔M9 9mm彈匣
 v	ItemName	Base.9mmClip	2256623447	FirearmsBETA	貝瑞塔M9 9mm彈匣
 v	ItemName	Base.9mmClip	2874163136	CaptainJuezo1_WIP_B42	貝瑞塔M9 9mm彈匣
@@ -5992,12 +6103,14 @@ v	ItemName	Base.9mmClip	3773858287	B42 Rain's Firearms & Gun Parts Expanded	9mm 
 v	ItemName	Base.9mmClip	3780151182	MFS_community_fix	9x19mm 17發彈匣
 v	ItemName	Base.9mmClip	3801670664	BritaGunworksLegacyMagazines	
 v	ItemName	Base.9mmClip	3801670664	BritaGunworksLocal	貝瑞塔92/93/SUB-2000 9mm 15發彈匣
+v	ItemName	Base.9mmClip	3820580321	ExtendedVanillaWeapons	
 v	ItemName	Base.AmmoStraps	3633421539	Escape from Kentucky4215	損壞的彈藥背帶
 v	ItemName	Base.AmmoStraps	3720484992	VanillaFirearmsRework	
 v	ItemName	Base.AmmoStraps	3761077099	VFE	子彈插環
 v	ItemName	Base.AmmoStraps	3773858287	B42 Rain's Firearms & Gun Parts	
 v	ItemName	Base.AmmoStraps	3773858287	B42 Rain's Firearms & Gun Parts Expanded	
 v	ItemName	Base.AmmoStraps	3780151182	MFS_community_fix	損壞的彈藥背帶
+v	ItemName	Base.AmmoStraps	3820580321	ExtendedVanillaWeapons	子彈插環
 v	ItemName	Base.AssaultRifle	2256623447	Firearms	M16A1
 v	ItemName	Base.AssaultRifle	2256623447	FirearmsBETA	M16A1
 v	ItemName	Base.AssaultRifle	2874163136	CaptainJuezo1_WIP_B42	
@@ -6023,6 +6136,7 @@ v	ItemName	Base.AssaultRifle2	3761077099	VFE	M14戰鬥步槍
 v	ItemName	Base.AssaultRifle2	3773858287	B42 Rain's Firearms & Gun Parts	M14
 v	ItemName	Base.AssaultRifle2	3773858287	B42 Rain's Firearms & Gun Parts Expanded	M14
 v	ItemName	Base.AssaultRifle2	3780151182	MFS_community_fix	M14步槍
+v	ItemName	Base.AssaultRifle2	3820580321	ExtendedVanillaWeapons	M14戰鬥步槍
 v	ItemName	Base.BeerBottle	3577903007	Vanilla Foods Expanded	瓶裝美式淡拉格啤酒
 v	ItemName	Base.BeerCan	3577903007	Vanilla Foods Expanded	罐裝美式淡拉格啤酒
 v	ItemName	Base.BeerCanPack	3577903007	Vanilla Foods Expanded	箱裝美式淡拉格啤酒
@@ -6038,6 +6152,7 @@ v	ItemName	Base.Bullets357	3722134990	GunsOfMarz	.357馬格南子彈 (原版)
 v	ItemName	Base.Bullets357	3722134990	GunsOfMarzPreviousVersion	.357馬格南子彈 (原版)
 v	ItemName	Base.Bullets357	3773858287	B42 Rain's Firearms & Gun Parts	
 v	ItemName	Base.Bullets357	3773858287	B42 Rain's Firearms & Gun Parts Expanded	
+v	ItemName	Base.Bullets357	3820971639	XannyArmsGunPack	
 v	ItemName	Base.Bullets357Box	2256623447	Firearms	盒裝.357子彈
 v	ItemName	Base.Bullets357Box	2256623447	FirearmsBETA	盒裝.357子彈
 v	ItemName	Base.Bullets357Box	3183820077	Guns93Test	
@@ -6125,6 +6240,7 @@ v	ItemName	Base.Bullets45	3722134990	GunsOfMarzPreviousVersion	.45 ACP子彈 (�
 v	ItemName	Base.Bullets45	3773858287	B42 Rain's Firearms & Gun Parts	
 v	ItemName	Base.Bullets45	3773858287	B42 Rain's Firearms & Gun Parts Expanded	
 v	ItemName	Base.Bullets45	3780151182	MFS_community_fix	
+v	ItemName	Base.Bullets45	3820971639	XannyArmsGunPack	
 v	ItemName	Base.Bullets45Box	2256623447	Firearms	
 v	ItemName	Base.Bullets45Box	2256623447	FirearmsBETA	
 v	ItemName	Base.Bullets45Box	3183820077	Guns93Test	盒裝.45 Auto子彈
@@ -6155,6 +6271,7 @@ v	ItemName	Base.Bullets9mm	3722134990	GunsOfMarzPreviousVersion	9x19mm子彈 (�
 v	ItemName	Base.Bullets9mm	3773858287	B42 Rain's Firearms & Gun Parts	9mm子彈
 v	ItemName	Base.Bullets9mm	3773858287	B42 Rain's Firearms & Gun Parts Expanded	9mm子彈
 v	ItemName	Base.Bullets9mm	3780151182	MFS_community_fix	9mm 帕拉貝倫子彈
+v	ItemName	Base.Bullets9mm	3820971639	XannyArmsGunPack	
 v	ItemName	Base.Bullets9mmBox	2256623447	Firearms	
 v	ItemName	Base.Bullets9mmBox	2256623447	FirearmsBETA	
 v	ItemName	Base.Bullets9mmBox	3183820077	Guns93Test	盒裝9mm子彈
@@ -6215,6 +6332,7 @@ v	ItemName	Base.DoubleBarrelShotgun	3761077099	VFE
 v	ItemName	Base.DoubleBarrelShotgun	3773858287	B42 Rain's Firearms & Gun Parts	雷明頓馬車霰彈槍
 v	ItemName	Base.DoubleBarrelShotgun	3773858287	B42 Rain's Firearms & Gun Parts Expanded	雷明頓馬車霰彈槍
 v	ItemName	Base.DoubleBarrelShotgun	3780151182	MFS_community_fix	
+v	ItemName	Base.DoubleBarrelShotgun	3820580321	ExtendedVanillaWeapons	
 v	ItemName	Base.DoubleBarrelShotgunSawnoff	2256623447	Firearms	羅西 Overland 馬車霰彈槍 (鋸短)
 v	ItemName	Base.DoubleBarrelShotgunSawnoff	2256623447	FirearmsBETA	羅西 Overland 馬車霰彈槍 (鋸短)
 v	ItemName	Base.DoubleBarrelShotgunSawnoff	3611718925	VFE	
@@ -6223,6 +6341,7 @@ v	ItemName	Base.DoubleBarrelShotgunSawnoff	3720484992	VanillaFirearmsRework	斯�
 v	ItemName	Base.DoubleBarrelShotgunSawnoff	3761077099	VFE	
 v	ItemName	Base.DoubleBarrelShotgunSawnoff	3773858287	B42 Rain's Firearms & Gun Parts	馬車霰彈槍 (鋸短)
 v	ItemName	Base.DoubleBarrelShotgunSawnoff	3773858287	B42 Rain's Firearms & Gun Parts Expanded	馬車霰彈槍 (鋸短)
+v	ItemName	Base.DoubleBarrelShotgunSawnoff	3820580321	ExtendedVanillaWeapons	
 v	ItemName	Base.GranolaBar	3577903007	Vanilla Foods Expanded	花生醬燕麥棒
 v	ItemName	Base.Gum	3577903007	Vanilla Foods Expanded	口香糖 (涼薄荷)
 v	ItemName	Base.GunLight	2256623447	Firearms	手槍戰術手電筒
@@ -6245,6 +6364,7 @@ v	ItemName	Base.HuntingRifle	3761077099	VFE	R788狩獵步槍
 v	ItemName	Base.HuntingRifle	3773858287	B42 Rain's Firearms & Gun Parts	雷明頓M788步槍
 v	ItemName	Base.HuntingRifle	3773858287	B42 Rain's Firearms & Gun Parts Expanded	雷明頓M788步槍
 v	ItemName	Base.HuntingRifle	3780151182	MFS_community_fix	雷明頓MSR2步槍
+v	ItemName	Base.HuntingRifle	3820580321	ExtendedVanillaWeapons	R788狩獵步槍
 v	ItemName	Base.Icecream	3577903007	Vanilla Foods Expanded	香草冰淇淋
 v	ItemName	Base.IcecreamMelted	3577903007	Vanilla Foods Expanded	香草冰淇淋 (融化)
 v	ItemName	Base.Icing	3577903007	Vanilla Foods Expanded	香草糖霜
@@ -6301,6 +6421,7 @@ v	ItemName	Base.M14Clip	3773858287	B42 Rain's Firearms & Gun Parts Expanded	7.62
 v	ItemName	Base.M14Clip	3780151182	MFS_community_fix	7.62×51mm 20發彈匣
 v	ItemName	Base.M14Clip	3801670664	BritaGunworksLegacyMagazines	
 v	ItemName	Base.M14Clip	3801670664	BritaGunworksLocal	M14 7.62x51 20發彈匣 B
+v	ItemName	Base.M14Clip	3820580321	ExtendedVanillaWeapons	M14彈匣
 v	ItemName	Base.MSR7T_Rifle	2256623447	Firearms	M24步槍
 v	ItemName	Base.MSR7T_Rifle	2256623447	FirearmsBETA	M24步槍
 v	ItemName	Base.MSR7T_Rifle	3715977706	BetterVanillaFirearms42	M24狙擊步槍
@@ -6342,6 +6463,7 @@ v	ItemName	Base.Pistol3	3761077099	VFE	DE手槍
 v	ItemName	Base.Pistol3	3773858287	B42 Rain's Firearms & Gun Parts	沙漠之鷹手槍
 v	ItemName	Base.Pistol3	3773858287	B42 Rain's Firearms & Gun Parts Expanded	沙漠之鷹手槍
 v	ItemName	Base.Pistol3	3780151182	MFS_community_fix	沙漠之鷹手槍
+v	ItemName	Base.Pistol3	3820580321	ExtendedVanillaWeapons	DE手槍
 v	ItemName	Base.Pizza	3577903007	Vanilla Foods Expanded	乳酪披薩片
 v	ItemName	Base.PizzaWhole	3577903007	Vanilla Foods Expanded	乳酪披薩
 v	ItemName	Base.Popsicle	3577903007	Vanilla Foods Expanded	覆盆子冰棒
@@ -6384,6 +6506,7 @@ v	ItemName	Base.Revolver_Long	3761077099	VFE	M29馬格南左輪手槍
 v	ItemName	Base.Revolver_Long	3773858287	B42 Rain's Firearms & Gun Parts	柯爾特水蟒左輪手槍
 v	ItemName	Base.Revolver_Long	3773858287	B42 Rain's Firearms & Gun Parts Expanded	柯爾特水蟒左輪手槍
 v	ItemName	Base.Revolver_Long	3780151182	MFS_community_fix	史密斯-韋森500型左輪手槍
+v	ItemName	Base.Revolver_Long	3820580321	ExtendedVanillaWeapons	M29馬格南左輪手槍
 v	ItemName	Base.Revolver_Short	2256623447	Firearms	S&W M36左輪手槍
 v	ItemName	Base.Revolver_Short	2256623447	FirearmsBETA	S&W M36左輪手槍
 v	ItemName	Base.Revolver_Short	2874163136	CaptainJuezo1_WIP_B42	SW M36左輪手槍
@@ -6393,6 +6516,7 @@ v	ItemName	Base.Revolver_Short	3720484992	VanillaFirearmsRework	.38左輪手槍
 v	ItemName	Base.Revolver_Short	3761077099	VFE	M10-5左輪手槍
 v	ItemName	Base.Revolver_Short	3773858287	B42 Rain's Firearms & Gun Parts	S&W M36左輪手槍
 v	ItemName	Base.Revolver_Short	3773858287	B42 Rain's Firearms & Gun Parts Expanded	S&W M36左輪手槍
+v	ItemName	Base.Revolver_Short	3820580321	ExtendedVanillaWeapons	M10-5左輪手槍
 v	ItemName	Base.Salmon	3800233932	LeGourmetUltimate	鮭魚片
 v	ItemName	Base.Shoes_BlueTrainers	2850935956	Boots Expanded	高筒運動鞋 (藍)
 v	ItemName	Base.Shoes_BlueTrainers	2850935956	Boots Expanded Vanilla	高筒運動鞋 (藍)
@@ -6413,6 +6537,7 @@ v	ItemName	Base.Shotgun	3761077099	VFE	M500霰彈槍
 v	ItemName	Base.Shotgun	3773858287	B42 Rain's Firearms & Gun Parts	雷明頓M870霰彈槍
 v	ItemName	Base.Shotgun	3773858287	B42 Rain's Firearms & Gun Parts Expanded	雷明頓M870霰彈槍
 v	ItemName	Base.Shotgun	3780151182	MFS_community_fix	
+v	ItemName	Base.Shotgun	3820580321	ExtendedVanillaWeapons	M500霰彈槍
 v	ItemName	Base.ShotgunSawnoff	2256623447	Firearms	莫斯伯格500霰彈槍 (鋸短)
 v	ItemName	Base.ShotgunSawnoff	2256623447	FirearmsBETA	莫斯伯格500霰彈槍 (鋸短)
 v	ItemName	Base.ShotgunSawnoff	2874163136	CaptainJuezo1_WIP_B42	M870霰彈槍 (鋸短)
@@ -6424,6 +6549,7 @@ v	ItemName	Base.ShotgunSawnoff	3761077099	VFE	M500霰彈槍 (鋸短)
 v	ItemName	Base.ShotgunSawnoff	3773858287	B42 Rain's Firearms & Gun Parts	雷明頓M870霰彈槍 (鋸短)
 v	ItemName	Base.ShotgunSawnoff	3773858287	B42 Rain's Firearms & Gun Parts Expanded	雷明頓M870霰彈槍 (鋸短)
 v	ItemName	Base.ShotgunSawnoff	3780151182	MFS_community_fix	雙管霰彈槍 (鋸短)
+v	ItemName	Base.ShotgunSawnoff	3820580321	ExtendedVanillaWeapons	M500霰彈槍 (鋸短)
 v	ItemName	Base.ShotgunShells	2256623447	Firearms	12ga霰彈槍子彈
 v	ItemName	Base.ShotgunShells	2256623447	FirearmsBETA	12ga霰彈槍子彈
 v	ItemName	Base.ShotgunShells	3183820077	Guns93Test	12ga鹿彈
@@ -6436,6 +6562,7 @@ v	ItemName	Base.ShotgunShells	3722134990	GunsOfMarzPreviousVersion	12號霰彈 (
 v	ItemName	Base.ShotgunShells	3773858287	B42 Rain's Firearms & Gun Parts	12g霰彈槍子彈
 v	ItemName	Base.ShotgunShells	3773858287	B42 Rain's Firearms & Gun Parts Expanded	12g霰彈槍子彈
 v	ItemName	Base.ShotgunShells	3780151182	MFS_community_fix	12號霰彈槍子彈
+v	ItemName	Base.ShotgunShells	3820971639	XannyArmsGunPack	
 v	ItemName	Base.ShotgunShellsBox	2256623447	Firearms	盒裝12ga霰彈槍子彈
 v	ItemName	Base.ShotgunShellsBox	2256623447	FirearmsBETA	盒裝12ga霰彈槍子彈
 v	ItemName	Base.ShotgunShellsBox	3183820077	Guns93Test	盒裝12ga鹿彈
@@ -6481,6 +6608,7 @@ v	ItemName	Base.VarmintRifle	3761077099	VFE	R700獵狐步槍
 v	ItemName	Base.VarmintRifle	3773858287	B42 Rain's Firearms & Gun Parts	Long Ranger步槍
 v	ItemName	Base.VarmintRifle	3773858287	B42 Rain's Firearms & Gun Parts Expanded	Long Ranger步槍
 v	ItemName	Base.VarmintRifle	3780151182	MFS_community_fix	
+v	ItemName	Base.VarmintRifle	3820580321	ExtendedVanillaWeapons	R700獵狐步槍
 v	ItemName	Base.WaterPotForgedPasta	3577903007	Vanilla Foods Expanded	粗製蒸煮鍋 (水, 義大利直麵)
 v	ItemName	Base.WaterPotPasta	3577903007	Vanilla Foods Expanded	蒸煮鍋 (水, 義大利直麵)
 v	ItemName	Base.WaterSaucepanPasta	3577903007	Vanilla Foods Expanded	平底煮鍋 (水, 義大利直麵)

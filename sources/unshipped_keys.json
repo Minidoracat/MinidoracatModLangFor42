@@ -1712,22 +1712,22 @@
   },
   "ItemName.json|Base.762Bullets": {
    "as1_value": "7.62x39mm 弹药",
-   "owner_signature": "6db187a6cc720e9a",
+   "owner_signature": "b38cf44c38af6b87",
    "reason": "2026-10-20 LangFor42 #5 玩家回報：裝 B42 Rain's Firearms & Gun Parts 時，它的 7.62x51 子彈、盒裝、箱裝顯示成「7.62x39mm 彈藥」「7.62x39mm 彈藥盒」「7.62mm彈藥 (整件)」。Base.762Bullets／762Box／762Carton 被多個可獨立啟用的 owner 用來表示不同口徑：Rain's 兩版（含 Expanded）是 7.62x51，其餘在架 owner 都是 7.62x39mm，Workshop API 查無（result 9）的 3611718925/VFE 只寫 7.62mm。口徑是承重資訊；上位口徑「7.62mm」也不誠實：Rain's 另有 Base.762x39Bullets／Box／Carton（7.62x39），只寫 7.62mm 分不出是哪一種。沒有誠實中性譯名。2026-10-20 下載 6 個在架 owner 查證，Translate 只有 EN 與 RU／HU／PL／ES／IT，沒有 CH／CN，抑制後各自顯示正確英文。"
   },
   "ItemName.json|Base.762Box": {
    "as1_value": "7.62x39mm 弹药盒",
-   "owner_signature": "63bfdc01843db99e",
+   "owner_signature": "ca5ded75f82974fe",
    "reason": "2026-10-20 LangFor42 #5 玩家回報：裝 B42 Rain's Firearms & Gun Parts 時，它的 7.62x51 子彈、盒裝、箱裝顯示成「7.62x39mm 彈藥」「7.62x39mm 彈藥盒」「7.62mm彈藥 (整件)」。Base.762Bullets／762Box／762Carton 被多個可獨立啟用的 owner 用來表示不同口徑：Rain's 兩版（含 Expanded）是 7.62x51，其餘在架 owner 都是 7.62x39mm，Workshop API 查無（result 9）的 3611718925/VFE 只寫 7.62mm。口徑是承重資訊；上位口徑「7.62mm」也不誠實：Rain's 另有 Base.762x39Bullets／Box／Carton（7.62x39），只寫 7.62mm 分不出是哪一種。沒有誠實中性譯名。2026-10-20 下載 6 個在架 owner 查證，Translate 只有 EN 與 RU／HU／PL／ES／IT，沒有 CH／CN，抑制後各自顯示正確英文。"
   },
   "ItemName.json|Base.762Carton": {
    "as1_value": "7.62mm弹药 (整件)",
-   "owner_signature": "9cd4b84b9cc24c09",
+   "owner_signature": "67ec51e0830dd49e",
    "reason": "2026-10-20 LangFor42 #5 玩家回報：裝 B42 Rain's Firearms & Gun Parts 時，它的 7.62x51 子彈、盒裝、箱裝顯示成「7.62x39mm 彈藥」「7.62x39mm 彈藥盒」「7.62mm彈藥 (整件)」。Base.762Bullets／762Box／762Carton 被多個可獨立啟用的 owner 用來表示不同口徑：Rain's 兩版（含 Expanded）是 7.62x51，其餘在架 owner 都是 7.62x39mm，Workshop API 查無（result 9）的 3611718925/VFE 只寫 7.62mm。口徑是承重資訊；上位口徑「7.62mm」也不誠實：Rain's 另有 Base.762x39Bullets／Box／Carton（7.62x39），只寫 7.62mm 分不出是哪一種。沒有誠實中性譯名。2026-10-20 下載 6 個在架 owner 查證，Translate 只有 EN 與 RU／HU／PL／ES／IT，沒有 CH／CN，抑制後各自顯示正確英文。"
   },
   "ItemName.json|Base.CampCarbine": {
    "as1_value": "MC-45 卡宾枪",
-   "owner_signature": "49591cfd8bd271c8",
+   "owner_signature": "5100213f38e0821c",
    "reason": "2026-10-21 #965 裁決不出貨：同一 key 是兩把不同的槍。VFE（3611718925、3761077099）是 MC-45 Carbine，.45 ACP、7 發（Base.45Clip）；Better Vanilla Firearms（3715977706）是 LN-9 Trapper Carbine，9mm、15 發（Base.SN506_Clip）。型號與口徑都不同，「卡賓槍」上位詞在 BVF 會和它其他卡賓槍（LN-45、WC-66、WC-92、R-M-6520、R-M-727）分不出來，比照 Base.Glock23 不出貨。抑制後：兩方都有可載入的 ItemName.json，繁中玩家看到各自的英文；BVF 自帶 Translate/CN（「LN-9 狩猎卡宾枪」），簡中玩家裝 BVF 時看到 MOD 自帶簡中，裝 VFE 時看到英文（VFE 只有 EN／ES／IT／RU）。"
   },
   "ItemName.json|Base.JS5_Clip": {
@@ -1825,7 +1825,7 @@
    "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Escape from Kentucky（3633421539）寫 Craft 9x19mm 50-Round Drum Magazine，MFS 社群修正版（3780151182）寫 Craft 9x39mm 50-Round Rifle Drum；兩方配方產物都是 Base.9mmDrum_cat，口徑說法互斥，比照該物品名不出貨。兩方都有可載入 Recipes.json 並自帶 CH/CN：不出貨後繁中玩家看到 EFK「製作 9×19mm 50 發彈鼓」或社群修正版「製作 9x39mm 50 發步槍彈鼓」。"
   },
   "IG_UI.json|IGUI_KnoxTB_A_Settings": {
-   "as1_value": "",
+   "as1_value": "打开设置",
    "owner_signature": "9fbb5a43512011ea",
    "reason": "2026-10-25 #1063：Knox Inventory 新增的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）把測試台按鈕說明寫成 Open the settings，KnoxInventory 寫 Open settings。這是測試台鍵：讀它的 KnoxTestBench.lua 兩個子 MOD 的 Workshop 版都不含（KnoxScreen.lua 註解 the bench is left out of the Workshop build），其餘 IGUI_KnoxTB_* 已依 2026-10-22 裁定登記 untranslatable_keys.json，本鍵照同一裁定不出貨。兩方都有可載入 IG_UI.json，玩家看不到此鍵。"
   },
@@ -1833,6 +1833,31 @@
    "as1_value": "游戏",
    "owner_signature": "c6552ad68a275feb",
    "reason": "2026-10-25 #1063：Knox Inventory 新增的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）把設定頁分頁 Game 改名 Loot and bags（分頁內容改成 Search and loot、Bags and pockets 兩節），KnoxInventory 仍是 Game；兩個分頁名指不同內容，沒有誠實中性譯名，不出貨。兩方都有可載入 IG_UI.json 並自帶 Translate/CN：不出貨後繁中玩家看到各自英文分頁名、簡中玩家看到作者簡中（「游戏」／「战利品与背包」）；條件譯文依啟用的子 MOD 寫入各自譯名。"
+  },
+  "ItemName.json|Base.Glock18": {
+   "as1_value": "G18 手枪",
+   "owner_signature": "3e9da5871ce4d805",
+   "reason": "2026-10-26：2026-10-26 裁決：VFE 兩版與 Complete Vanilla Firearms Expansion 的 ItemName.json 寫 G18 Pistol（三者 script DisplayName 都誤寫 G17 Pistol，由 JSON 改正），Totally's Cops and Robbers Firearms 的 script DisplayName 寫 Glock 17（該 MOD 另有 Base.Glock17 也叫 Glock 17，疑似複製 Glock17 區塊時漏改的上游筆誤，但沒有 ItemName.json 改正，玩家看到的就是 Glock 17）。G17 與 G18 是不同型號（G18 可全自動），型號是承重資訊：「G18 手槍」對 Totally's 不成立；上位名「格洛克手槍」會讓 VFE 系玩家分不出它和同 MOD 的 Base.Glock「G17 手槍」誰是 G18，同 #303／Base.762Bullets 前例不算中性值。unship 後：VFE 兩版與 Complete Vanilla Firearms Expansion（has_json_en）看到 G18 Pistol，Totally's（en_source script）看到 Glock 17；正常情況由條件譯文各自顯示 G18 手槍／格洛克17手槍。各 owner 是否自帶 Translate/CH、CN 沒查（本機沒有這四個 MOD 的檔案，sources/en 只有英文）."
+  },
+  "ItemName.json|Base.PPSHDrum": {
+   "as1_value": "波波沙冲锋枪弹鼓",
+   "owner_signature": "e41062f54d116dbb",
+   "reason": "2026-10-26：2026-10-26 裁決：VFES 兩版與 Complete Vanilla Firearms Expansion 的 Base.PPSHDrum 是 PPSH-41 Drum（彈鼓彈匣，在 VFES_items.txt），Rain's Firearms & Gun Parts Expanded 的 Base.PPSHDrum 英文是 PPSh，是裝彈鼓的槍本體（同該 MOD 的 Base.AK105Drum＝AK-105、彈匣另有 Base.AK105Clip）；一方是彈匣、一方是槍，沒有誠實中性值，現行「波波沙衝鋒槍彈鼓」會把 Rain's 的槍標成彈匣。unship 後：VFES 兩版與 Complete Vanilla Firearms Expansion（has_json_en）看到 PPSH-41 Drum，Rain's Expanded（has_json_en）看到 PPSh；正常情況由條件譯文各自顯示 PPSh-41彈鼓／波波沙衝鋒槍。各 owner 是否自帶 Translate/CH、CN 沒查（本機沒有這些 MOD 的檔案）."
+  },
+  "IG_UI.json|IGUI_GridRV_BackupNotice": {
+   "as1_value": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 游牧者房车即将迎来大更新 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 下次更新会重建房车内部的存储方式: 家具, 冰箱, 橱柜以及里面的一切. <LINE> 你的房车及其内容物本应会自动迁移, 但请务必备份, 以防万一. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何备份 <RGB:1,1,1> <LINE> 1. 退回主菜单. <LINE> 2. 打开你的 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 文件夹, 在Windows上通常是 <RGB:0.55,0.85,1> C:/Users/你的用户名/Zomboid <RGB:1,1,1> <LINE> 3. 把 <RGB:0.55,0.85,1> Saves <RGB:1,1,1> 文件夹复制到安全的地方. <LINE> 之后若要撤销更新, 把这个副本放回去即可. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 此消息只显示一次.",
+   "owner_signature": "b6a2e14b18202307",
+   "reason": "2026-10-26：2026-10-26 首次裁決: 同一 Workshop 項目 3820158673 的兩個子 MOD 公告內容互斥. GridRV 是更新前的預告 (Big Nomad RV update coming: 下次更新才會重建房車內部儲存方式, 請先備份), DeadWorksNomadRV 是更新後的通知 (遊牧者與戴爾房車已改由 DeadWorks Vehicle Framework 運作, 第一次載入時轉換, 復原要放回備份並改回舊版). 「即將更新」與「已經更新」互斥, 現行 As1 出貨的 GridRV 預告對 DeadWorksNomadRV 玩家是錯誤資訊; 寫成不分時態的中性句會讓預告讀起來像已完成或反之, 沒有誠實中性值. unship 後兩個 owner 都有 IG_UI.json 英文 (has_json_en), 注入器認不出 owner 時玩家看到各自 MOD 的英文, 正常情況由條件譯文顯示各自中文."
+  },
+  "IG_UI.json|IGUI_GridRV_BackupNoticeServer": {
+   "as1_value": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 游牧者房车即将迎来大更新 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 下次更新会重建房车内部的存储方式: 家具, 冰箱, 橱柜以及里面的一切. <LINE> 你的房车及其内容物本应会自动迁移, 但请务必备份, 以防万一. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何备份服务器 <RGB:1,1,1> <LINE> 1. 在更新前先停服. <LINE> 2. 在 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 文件夹里, 把 <RGB:0.55,0.85,1> Saves/Multiplayer/服务器名 <RGB:1,1,1> 和 <RGB:0.55,0.85,1> db/服务器名.db <RGB:1,1,1> 复制到安全的地方. <LINE> 之后若要撤销更新, 把这两个都放回去. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 此消息只显示一次.",
+   "owner_signature": "d8a38181472473f8",
+   "reason": "2026-10-26：2026-10-26 首次裁決: 同 IGUI_GridRV_BackupNotice 的伺服器版. GridRV 是更新前預告 (更新前停服, 備份 Saves/Multiplayer/伺服器名稱 和 db/伺服器名稱.db 兩處), DeadWorksNomadRV 是更新後通知 (已改用 DeadWorks Vehicle Framework, 只備份 Saves/Multiplayer 下該伺服器資料夾, 復原要改回舊版). 時態互斥, 備份步驟與標記數也不同 (GridRV 26 個 <, DeadWorksNomadRV 27 個), 沒有誠實中性值. unship 後兩個 owner 都有 IG_UI.json 英文, 認不出 owner 時顯示各自英文, 正常情況由條件譯文顯示中文."
+  },
+  "UI.json|UI_quick_tip_joke27": {
+   "as1_value": "你身后什么都没有.",
+   "owner_signature": "c8c1cc890c74bd78",
+   "reason": "2026-10-26：2026-10-26 首次裁決: 讀取畫面小提示, PZK Vanilla Plus Car Pack 是玩笑句「There's nothing behind you.」, Bandits Week One: The Ark 是 Commodore 64 的冷知識, 兩句毫無關聯, 沒有中性值. 現行 As1 出貨 PZK 那句, 對 The Ark 玩家顯示錯的內容. unship 後兩個 owner 都有 UI.json 英文, 認不出 owner 時顯示各自英文, 正常情況由條件譯文顯示中文."
   }
  }
 }

@@ -26602,8 +26602,8 @@
   },
   "UI.json|UI_CMRB_Menu_Title": {
     "as1_value": "作弊菜单: 重制版",
-    "reason": "EN 的 PX 是模組代號（CheatMenuPX），CH「重製版」是無依據的額外解讀。",
-    "value": "作弊菜单: PX"
+    "value": "作弊菜单",
+    "reason": "2026-10-26 owner 衝突裁決：2026-10-26 首次裁決: 選單標題, Cheat Menu PX 寫「Cheat Menu: PX」, Cheat Menu Reloaded 與 Rax Cheat Menu 寫「Cheat Menu: Reloaded」. 現行 As1 值「作弊選單: PX」對後兩者是錯的版本名; 去掉版本後綴的「作弊選單」對三個 owner 都成立."
   },
   "UI.json|UI_CUI_FullTop": {
     "as1_value": "全身套装",
@@ -28137,8 +28137,8 @@
   },
   "IG_UI.json|IGUI_perks_Archery_Description": {
     "as1_value": "提高你用弓和弩命中目标以及造成额外伤害的概率, 并延长它们的有效射程.",
-    "value": "提高你用弓和弩命中目标以及造成额外伤害的概率.",
-    "reason": "2026-10-02 #654：owner 衝突裁決改為對每個 MOD 都成立的中性譯名（見 owner_conflict_decisions.json）。"
+    "value": "提高你用弓和弩射击的准确度.",
+    "reason": "2026-10-26 owner 衝突裁決：2026-10-26 重新裁決 (新增 owner 3813857786/Fletcher): 四個 MOD 都是同一個「射箭」技能的說明. ArcherLib「提高弓弩命中與額外傷害機率」(英文只在死檔 IG_UI_EN.txt), Ultimate Marksman「精準有效率地使用弓」, RadArchery 再加「延長有效射程」, Fletcher「射箭與製作弓箭: 拉弓更快、瞄準更穩、搭箭更快、斷箭更少」(其沙盒 ArrowSpread 說明證實射箭等級影響箭矢偏離). 舊值的「額外傷害」在 Fletcher 與 Ultimate Marksman 沒有出處; 四方共有的只有「弓弩射擊更準」, 改成「提高你用弓和弩射擊的準確度」. 四個 MOD 都含弩 (Fletcher 有手弩、槓桿弩、絞盤弩). 出貨中文可避免 ArcherLib 的鍵名殘留."
   },
   "Tooltip.json|Tooltip_ProjectExile_Blessing_clothing_flexible_Description": {
     "as1_value": "减少衣物现有的移动和战斗速度惩罚.",
@@ -59287,8 +59287,8 @@
   },
   "ItemName.json|Base.556ReflexCan": {
     "as1_value": "Reflx步枪消音器(.22口径)",
-    "value": "Reflx步枪消音器(.223口径)",
-    "reason": "2026-10-17 #883：上游英文改寫（Reflx Rifle Silencer (.22 cal) → Reflx Rifle Silencer (.223 cal)），依新英文重譯。"
+    "value": "Reflex步枪消音器(.223口径)",
+    "reason": "2026-10-17 #883：上游英文改寫（Reflx Rifle Silencer (.22 cal) → Reflx Rifle Silencer (.223 cal)），依新英文重譯。 2026-10-26 追蹤器：上游改英文，依新英文重譯。"
   },
   "ItemName.json|Base.556Silencer": {
     "as1_value": "步枪消音器(.22口径)",
@@ -61694,5 +61694,3945 @@
     "as1_value": "移动中的奔跑者在无障碍物时自己绊倒的概率 (%%) , 受冷却时间限制. <br>0=永不绊倒, 100=必定绊倒.",
     "value": "移动中的奔跑者在空旷无障碍的地面上失足的概率, 按冷却时间定期判定.<br>默认: 7%% (0 = 禁用, 100 = 必定发生).",
     "reason": "2026-10-25 #1054：上游英文改值，依新英文重譯。"
+  },
+  "UI.json|UI_ImmersiveLore_Story_103_Content": {
+    "as1_value": "诚邀您参加……\\n\\n登上历史名船P.S. 迪莉娅号的独立日豪华游\\n\\n登上豪华尾轮蒸汽船迪莉娅号, 回到历史上更优雅, 更简单的时代, 参加这场奢华游船, 既庆祝激动人心的独立日, 也庆祝我们这艘船的百年诞辰.\\n\\nP.S. 迪莉娅号于1893年在宾夕法尼亚州匹兹堡建造, 作为缉私蒸汽船, 载着乘客往返于壮丽的俄亥俄河. 1967年, 一场大火烧毁了船的大部分上层建筑, 差点让它被拆解. 但后来一位路易斯维尔的捐助者向迪莉娅号之友慷慨捐款, 我们骄傲的船于1984年修复, 回到它应有的位置, 成为上密西西比水系明轮船中的闪亮明珠.\\n\\n如今, P.S. 迪莉娅号航行在纯净的俄亥俄河最翠绿的一段, 在勃兰登堡和肯塔基州路易斯维尔之间穿行, 当船绕回宏伟的谢尔曼·明顿大桥下时, 还能看到印第安纳州新奥尔巴尼河滨的迷人景色. P.S. 迪莉娅号由迪莉娅号之友有限责任公司运营, 是举办派对、活动或任何聚会的漂亮场所, 布置得也很用心.\\n\\n这个独立日, 迪莉娅号之友邀请您参加五小时晚餐游览, 下午5点从勃兰登堡港出发, 晚上10点左右返回. 现场音乐, 新鲜烹饪的食物和舞蹈都在行程中, P.S. 迪莉娅号将沿着诺克斯县河岸轻轻滑行, 在烟花温暖迷人的光中亮起, 那光亮和气势, 连月亮都要比下去.\\n\\n现在就预订你的位置, 参加这千载难逢的活动. 票价150美元起. 先到先得. 迪莉娅号之友有限责任公司不对历史名船P.S. 迪莉娅号上个人或团体的健康或安全负责. 甲板上禁止饮酒.",
+    "value": "诚挚邀请您参加…\\n\\n搭乘历史悠久的 P.S. 迪莉娅号, 共度7月4日豪华游河之旅\\n\\n登上豪华艉轮蒸汽船迪莉娅号, 回到历史上更优雅、更淳朴的年代, 参加这场奢华的游河盛会, 同时庆祝激动人心的独立日与本船的百年诞辰.\\n\\nP.S. 迪莉娅号于1893年在宾州匹兹堡建造, 原为营运蒸汽船, 在壮丽的俄亥俄河上下往返运送乘客. 1967年, 一场大火烧毁了船上大部分的上层建筑, 使她一度面临拆解的命运. 然而在一位路易斯维尔的赞助人慷慨捐款给“迪莉娅之友”后, 我们引以为傲的船于1984年修复完成, 重回她应有的地位, 成为密西西比河上游水系明轮蒸汽船中一颗闪耀的明珠.\\n\\n如今, P.S. 迪莉娅号航行于纯净的俄亥俄河最苍翠的河段之一, 往返于肯塔基州勃兰登堡与路易斯维尔之间, 沿途可欣赏印第安纳州新奥尔巴尼河滨的精彩景致, 再从雄伟的谢尔曼·明顿大桥下方折返. P.S. 迪莉娅号由迪莉娅之友有限责任公司经营, 是您举办派对、宴会或任何聚会的美丽且精心安排的场地.\\n\\n今年独立日, 迪莉娅之友邀请您参加五小时的晚餐游河行程, 下午5点从勃兰登堡港出发, 晚上10点左右返航. 行程包括现场音乐、现做美食与舞会, P.S. 迪莉娅号将沿着诺克斯地区的河岸缓缓滑行, 沐浴在烟花温暖而迷人的光芒中, 那份明亮与壮丽甚至足以与月亮争辉.\\n\\n立即预订您的位置, 参与这场千载难逢的盛会. 票价150美元起. 先到先得. 迪莉娅之友有限责任公司不对历史悠久的 P.S. 迪莉娅号上个人或团体的健康与安全负责. 甲板上禁止饮酒.",
+    "reason": "2026-10-26 As1 v3.12.0：把 revenue steamer（营运客船）误译为“缉私蒸汽船”"
+  },
+  "UI.json|UI_ImmersiveLore_Story_135_Content": {
+    "as1_value": "这只是以防万一; 如果你没回来, 我希望你找到这张字条. 我和你之间有那么深的牵绊, 所以这张纸一定会找到你, 我亲爱的里克. 已经10个小时了; 我一直在数每一分钟. 我知道想最坏的情况是我不对, 我知道你总叫我别这样, 可我控制不住. 我身体很弱; 我不舒服. 我糊涂了; 我害怕. 面包车里很冷, 没有你感觉更冷; 真他妈冷. 我知道我该跟你一起出去, 帮你找更多弹药. 我甩不掉这种恐惧感, 里克. 我真希望当时在你身边. 请快点回到我身边; 我比任何时候都需要你. 我记得你第一次消失超过几小时; 我当时整个人都垮了. 我不能再经历一次. 求你, 里克, 回到我身边. 我再也不会把你的安全当成理所当然. 只有你能帮我控制这些情绪; 只有你能帮我. 我谁都没有; 我们第一次见面时你就知道. 你知道我多珍惜我们相遇的那天吗? 对不起, 我的爱. 对不起, 里克, 为我可能给你带来的任何痛苦. 请原谅我, 回到我身边. 我不想看到你受伤, 看到你浑身是血……我好害怕. 我知道我体力上没法像你保护我那样保护你, 但我保证我有用.\\n我需要你知道, 你是我血里的红, 你是我的血管. 我的爱人, 伴侣和一生最好的朋友不能消失.",
+    "value": "这只是以防万一; 如果你没能痊愈, 我希望你能找到这张纸条. 我和你之间有那么强烈的羁绊, 所以这张纸一定会找到路回到你身边, 我亲爱的瑞克. 已经过了 10 个小时了; 我每一分钟都在数. 我知道往最坏的地方想是不对的, 也知道你总是叫我别这样, 但我控制不了. 我的身体很虚弱; 我觉得不舒服. 我好混乱; 我好害怕. 厢式车里好冷, 没有你更是冷上加冷; 真他妈的冷. 我知道我当时应该跟你一起下车, 帮你找更多弹药. 我甩不掉这种恐惧的感觉, 瑞克. 我真希望当时陪在你身边. 求你快点回到我身边; 我比任何时候都更需要你. 我还记得你第一次消失超过几个小时的时候; 我整个人都崩溃了. 我没办法再经历一次. 求求你, 瑞克, 回到我身边. 我再也不会把你的安危视为理所当然. 只有你能帮我控制这些情绪; 只有你能帮我. 我当时身边没有任何人; 我们第一次见面时你就知道了. 你知道我有多珍惜我们相遇的那一天吗? 对不起, 我的爱. 瑞克, 如果我曾让你痛苦, 真的很对不起. 求你原谅我, 回到我身边. 我不想看到你受伤, 看到你浑身是血… 我好害怕. 我知道我的身体没办法像你保护我那样保护你, 但我保证我是有用的.\\n我要你知道, 你是我血液里的红, 你是我的血管. 我的爱人, 伴侣和一生的挚友不能就这样消失.",
+    "reason": "2026-10-26 As1 v3.12.0：把条件 if you don't heal 改成“如果你没回来”"
+  },
+  "UI.json|UI_ImmersiveLore_Story_153_Content": {
+    "as1_value": "来自诺姆的诺姆认识地精, 来自诺姆的地精认识诺姆. 诺姆的诺姆和地精诺姆和诺姆地精否则像没有地精知道的那样认识诺姆. 诺姆的诺姆的来自诺姆的地精认识来自诺姆的诺姆认识地精诺姆和诺姆的地精. 来自诺姆的地精不认识地精, 但地精诺姆和诺姆的诺姆的地精认识. 诺姆的诺姆和地精诺姆和诺姆地精像诺姆一样认识地精. 诺姆喜欢来自诺姆的诺姆, 地精诺姆和来自诺姆的地精像诺姆一样喜欢地精.",
+    "value": "诺姆市的诺姆认识地精, 诺姆市的地精也认识诺姆. 诺姆市诺姆、地精诺姆和诺姆市地精, 对诺姆市的了解是没有哪个地精比得上的. 诺姆市诺姆的诺姆市地精知道, 诺姆市的诺姆认识地精诺姆和诺姆市的地精. 诺姆市的地精除了地精诺姆和诺姆市诺姆的地精之外, 谁也不认识. 诺姆市诺姆、地精诺姆和诺姆市地精对地精的了解, 就像对诺姆市一样. 诺姆市喜欢诺姆市的诺姆和地精诺姆, 诺姆市的地精喜欢地精, 就像喜欢诺姆市一样.",
+    "reason": "2026-10-26 As1 v3.12.0：绕口令多处误解句意，如把 but（除了）译成转折，otherwise...like no Gnome known 直译成病句"
+  },
+  "UI.json|UI_ImmersiveLore_Story_196_Content": {
+    "as1_value": "……和衰败\\n庞然残骸, 无边无际\\n 荒凉平坦的沙地伸向远方.\\n\\n……斯代尔, \"春在W\\n春天在远方, 远o\\n faint far scene of bud an\\n\\n可如今所有恋人们呢\\n被死亡分开,\\n灰死?\\n\\nS.T. 柯勒\\n在仙那度 di\\n一座庄严的乐\\n那里阿尔法, 圣\\n穿过测量过的洞窟\\n下到无阳的海.\\n\\n……树;\\n……森林古老如山\\n……阳光点点的绿地.\\n\\n罗伯特·弗罗斯特, \"出去, 出去……\"\\n电锯在院子里咆哮咔嗒\\n扬起尘土, 丢下炉火长的木\\n微风吹过时香甜的东",
+    "value": "…周围的衰朽\\n大残骸, 无边而荒凉\\n寂寥平坦的黄沙伸向远方.\\n\\n斯黛尔, “战时之\\n遥远的春天, 遥\\n那淡淡远景里的花苞与\\n\\n是如今那些恋人又如何\\n被死亡拆散,\\n灰色的死亡?\\n\\nS.T. 柯勒\\n忽必烈在上都\\n一座堂皇的欢\\n那儿有圣河阿\\n穿过深不可\\n注入不见天日的大海.\\n\\n生乳香的树木;\\n与山丘同样古老的森林\\n着阳光明媚的片片翠绿.\\n\\n罗伯特·弗罗斯特, “熄灭吧, 熄灭--”\\n院子里的电锯咆哮着, 咔啦作响\\n扬起木屑, 落下一截截炉子长短的木\\n微风吹过时散发甜香",
+    "reason": "2026-10-26 As1 v3.12.0：整行 faint far scene of bud an 未翻译，In Xanadu di 留英文"
+  },
+  "UI.json|UI_ImmersiveLore_Story_56_Title": {
+    "as1_value": "廉科POS键盘",
+    "value": "烂透的 ValuTech 键盘",
+    "reason": "2026-10-26 As1 v3.12.0：POS 在此指“烂货”（键盘手抱怨旧电子琴），As1 留成 POS 键盘读成收银键盘"
+  },
+  "Sandbox.json|Sandbox_ClaimableOutposts_maxClaimedOutposts": {
+    "as1_value": "已占领前哨站上限 (每名玩家)",
+    "value": "最大占领前哨站数量 (Claimable 为服务器总计, Dynamic 为每位玩家)",
+    "reason": "2026-10-26 As1 v3.12.0：en 为服务器总计，As1 写成每名玩家，方向相反；本包译文兼顾两个 owner"
+  },
+  "IG_UI.json|IGUI_BUUI_MergeResult": {
+    "as1_value": "%1 (邮寄自 %2)",
+    "value": "%1 (来自 %2)",
+    "reason": "2026-10-26 As1 v3.12.0：%1 from %2 无“邮寄”含义，As1 多出邮寄自"
+  },
+  "ItemName.json|BundleUp.3006Clip8Carton": {
+    "as1_value": ".30-06漏夹 (纸箱)",
+    "value": "箱装.30-06 8发漏夹",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 8Rds 弹数"
+  },
+  "ItemName.json|BundleUp.3006Clip8Crate": {
+    "as1_value": ".30-06漏夹 (木箱)",
+    "value": "板条箱装.30-06 8发漏夹",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 8Rds 弹数"
+  },
+  "ItemName.json|BundleUp.38357SpeedLoader6Box": {
+    "as1_value": ".38/.357马格南快速装弹器 (整盒)",
+    "value": "盒装.38 Special/.357 Magnum 6发快速装弹器",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 6Rds 弹数"
+  },
+  "ItemName.json|BundleUp.38357SpeedLoader6Carton": {
+    "as1_value": ".38/.357马格南快速装弹器 (纸箱)",
+    "value": "箱装.38 Special/.357 Magnum 6发快速装弹器",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 6Rds 弹数"
+  },
+  "ItemName.json|BundleUp.38357SpeedLoader6Crate": {
+    "as1_value": ".38/.357马格南快速装弹器 (木箱)",
+    "value": "板条箱装.38 Special/.357 Magnum 6发快速装弹器",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 6Rds 弹数"
+  },
+  "ItemName.json|BundleUp.CannedBellPepperCarton": {
+    "as1_value": "甜椒 (纸箱)",
+    "value": "箱装甜椒 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedBellPepperCase": {
+    "as1_value": "甜椒 (整箱)",
+    "value": "大箱装甜椒 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedBroccoliCarton": {
+    "as1_value": "西兰花 (纸箱)",
+    "value": "箱装西兰花 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedBroccoliCase": {
+    "as1_value": "西兰花 (整箱)",
+    "value": "大箱装西兰花 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedCabbageCarton": {
+    "as1_value": "卷心菜 (纸箱)",
+    "value": "箱装卷心菜 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedCabbageCase": {
+    "as1_value": "卷心菜 (整箱)",
+    "value": "大箱装卷心菜 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedCarrotsCarton": {
+    "as1_value": "胡萝卜 (纸箱)",
+    "value": "箱装胡萝卜 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedCarrotsCase": {
+    "as1_value": "胡萝卜 (整箱)",
+    "value": "大箱装胡萝卜 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedEggplantCarton": {
+    "as1_value": "茄子 (纸箱)",
+    "value": "箱装茄子 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedEggplantCase": {
+    "as1_value": "茄子 (整箱)",
+    "value": "大箱装茄子 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedLeekCase": {
+    "as1_value": "韭葱 (整箱)",
+    "value": "大箱装韭葱 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedPotatoCarton": {
+    "as1_value": "土豆 (纸箱)",
+    "value": "箱装土豆 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedPotatoCase": {
+    "as1_value": "土豆 (整箱)",
+    "value": "大箱装土豆 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedRedRadishCarton": {
+    "as1_value": "红萝卜 (纸箱)",
+    "value": "箱装红萝卜 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedRedRadishCase": {
+    "as1_value": "红萝卜 (整箱)",
+    "value": "大箱装红萝卜 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedRoeCase": {
+    "as1_value": "鱼卵 (整箱)",
+    "value": "大箱装鱼卵 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedTomatoCarton": {
+    "as1_value": "番茄 (纸箱)",
+    "value": "箱装番茄 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.CannedTomatoCase": {
+    "as1_value": "番茄 (整箱)",
+    "value": "大箱装番茄 (罐装)",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jarred（罐装），与同模组新鲜蔬菜箱同名"
+  },
+  "ItemName.json|BundleUp.ChessWhiteBox": {
+    "as1_value": "西洋棋子 (黑, White, 整盒)",
+    "value": "盒装西洋棋子 (白)",
+    "reason": "2026-10-26 As1 v3.12.0：en 为 White，As1 写成“黑, White”"
+  },
+  "ItemName.json|BundleUp.ClayTileUnfiredCrate": {
+    "as1_value": "黏土砖 (未烧制, 木箱)",
+    "value": "板条箱装黏土地砖 (未烧制)",
+    "reason": "2026-10-26 As1 v3.12.0：Clay Tiles 译成黏土砖，与 Clay Bricks 混同"
+  },
+  "ItemName.json|BundleUp.CornFrozenCarton": {
+    "as1_value": "玉米糖 (纸箱)",
+    "value": "箱装包装玉米",
+    "reason": "2026-10-26 As1 v3.12.0：Packaged Corn 误译为玉米糖"
+  },
+  "ItemName.json|BundleUp.CornFrozenCase": {
+    "as1_value": "玉米糖 (整箱)",
+    "value": "大箱装包装玉米",
+    "reason": "2026-10-26 As1 v3.12.0：Packaged Corn 误译为玉米糖"
+  },
+  "ItemName.json|BundleUp.CornFrozenCrate": {
+    "as1_value": "玉米糖 (木箱)",
+    "value": "板条箱装包装玉米",
+    "reason": "2026-10-26 As1 v3.12.0：Packaged Corn 误译为玉米糖"
+  },
+  "ItemName.json|BundleUp.Crisps2Carton": {
+    "as1_value": "薯片 (经典, 纸箱)",
+    "value": "箱装薯片 - 烧烤味",
+    "reason": "2026-10-26 As1 v3.12.0：Barbecue 口味误写为经典"
+  },
+  "ItemName.json|BundleUp.Crisps2Case": {
+    "as1_value": "薯片 (经典, 整箱)",
+    "value": "大箱装薯片 - 烧烤味",
+    "reason": "2026-10-26 As1 v3.12.0：Barbecue 口味误写为经典"
+  },
+  "ItemName.json|BundleUp.Crisps2Crate": {
+    "as1_value": "薯片 (经典, 木箱)",
+    "value": "板条箱装薯片 - 烧烤味",
+    "reason": "2026-10-26 As1 v3.12.0：Barbecue 口味误写为经典"
+  },
+  "ItemName.json|BundleUp.Crisps3Carton": {
+    "as1_value": "薯片 (海鲜, 纸箱)",
+    "value": "箱装薯片 - 盐醋味",
+    "reason": "2026-10-26 As1 v3.12.0：Salt & Vinegar 口味误写为海鲜"
+  },
+  "ItemName.json|BundleUp.Crisps3Case": {
+    "as1_value": "薯片 (海鲜, 整箱)",
+    "value": "大箱装薯片 - 盐醋味",
+    "reason": "2026-10-26 As1 v3.12.0：Salt & Vinegar 口味误写为海鲜"
+  },
+  "ItemName.json|BundleUp.Crisps3Crate": {
+    "as1_value": "薯片 (海鲜, 木箱)",
+    "value": "板条箱装薯片 - 盐醋味",
+    "reason": "2026-10-26 As1 v3.12.0：Salt & Vinegar 口味误写为海鲜"
+  },
+  "ItemName.json|BundleUp.CrispsCarton": {
+    "as1_value": "薯片 (烧烤, 纸箱)",
+    "value": "箱装薯片 - 原味",
+    "reason": "2026-10-26 As1 v3.12.0：Plain 口味误写为烧烤"
+  },
+  "ItemName.json|BundleUp.CrispsCase": {
+    "as1_value": "薯片 (烧烤, 整箱)",
+    "value": "大箱装薯片 - 原味",
+    "reason": "2026-10-26 As1 v3.12.0：Plain 口味误写为烧烤"
+  },
+  "ItemName.json|BundleUp.CrispsCrate": {
+    "as1_value": "薯片 (烧烤, 木箱)",
+    "value": "板条箱装薯片 - 原味",
+    "reason": "2026-10-26 As1 v3.12.0：Plain 口味误写为烧烤"
+  },
+  "ItemName.json|BundleUp.FlaxCase": {
+    "as1_value": "亚麻籽 (整箱)",
+    "value": "大箱装亚麻",
+    "reason": "2026-10-26 As1 v3.12.0：Flax（亚麻植株）误译为亚麻籽"
+  },
+  "ItemName.json|BundleUp.FlaxCrate": {
+    "as1_value": "亚麻籽 (木箱)",
+    "value": "板条箱装亚麻",
+    "reason": "2026-10-26 As1 v3.12.0：Flax（亚麻植株）误译为亚麻籽"
+  },
+  "ItemName.json|BundleUp.GamePieceRedBox": {
+    "as1_value": "游戏币 (黑, Red, 整盒)",
+    "value": "盒装红色游戏币",
+    "reason": "2026-10-26 As1 v3.12.0：en 为 Red，As1 写成“黑, Red”"
+  },
+  "ItemName.json|BundleUp.GamePieceWhiteBox": {
+    "as1_value": "游戏币 (黑, White, 整盒)",
+    "value": "盒装白色游戏币",
+    "reason": "2026-10-26 As1 v3.12.0：en 为 White，As1 写成“黑, White”"
+  },
+  "ItemName.json|BundleUp.GingerAleSP": {
+    "as1_value": "六罐装汽水 (薄荷)",
+    "value": "六连装姜汁汽水",
+    "reason": "2026-10-26 As1 v3.12.0：Ginger Ale 误译为薄荷汽水"
+  },
+  "ItemName.json|BundleUp.GingerAleSPCase": {
+    "as1_value": "汽水 (薄荷, 整箱)",
+    "value": "大箱装姜汁汽水",
+    "reason": "2026-10-26 As1 v3.12.0：Ginger Ale 误译为薄荷汽水"
+  },
+  "ItemName.json|BundleUp.GingerAleSPCrate": {
+    "as1_value": "汽水 (薄荷, 木箱)",
+    "value": "板条箱装姜汁汽水",
+    "reason": "2026-10-26 As1 v3.12.0：Ginger Ale 误译为薄荷汽水"
+  },
+  "ItemName.json|BundleUp.MagazineBundle": {
+    "as1_value": "弹匣 (整盒)",
+    "value": "盒装杂志",
+    "reason": "2026-10-26 As1 v3.12.0：Magazines 指杂志，As1 译成弹匣"
+  },
+  "ItemName.json|BundleUp.Magazine_NewBundle": {
+    "as1_value": "弹匣 (整盒)",
+    "value": "盒装杂志",
+    "reason": "2026-10-26 As1 v3.12.0：Magazines 指杂志，As1 译成弹匣"
+  },
+  "ItemName.json|BundleUp.PillsVitaminsBox": {
+    "as1_value": "维生素 (整盒)",
+    "value": "咖啡因片 (整盒)",
+    "reason": "2026-10-26 As1 v3.12.0：现行 en 为咖啡因片，As1 照旧版译成维生素"
+  },
+  "ItemName.json|BundleUp.PlantainCase": {
+    "as1_value": "大蕉 (整箱)",
+    "value": "大箱装车前草",
+    "reason": "2026-10-26 As1 v3.12.0：Base.Plantain 是车前草（草药），As1 译成大蕉"
+  },
+  "ItemName.json|BundleUp.VFX_CHUncrustableCase": {
+    "as1_value": "巧克力榛子无壳派 (整箱)",
+    "value": "大箱装巧克力榛子酱去边三明治",
+    "reason": "2026-10-26 As1 v3.12.0：Crustless 是去边三明治，As1 译成“无壳派”"
+  },
+  "ItemName.json|BundleUp.VFX_CHUncrustableCrate": {
+    "as1_value": "巧克力榛子无壳派 (木箱)",
+    "value": "板条箱装巧克力榛子酱去边三明治",
+    "reason": "2026-10-26 As1 v3.12.0：Crustless 是去边三明治，As1 译成“无壳派”"
+  },
+  "ItemName.json|BundleUp.VFX_CSUncrustableCase": {
+    "as1_value": "肉桂糖无壳派 (整箱)",
+    "value": "大箱装肉桂糖去边三明治",
+    "reason": "2026-10-26 As1 v3.12.0：Crustless 是去边三明治，As1 译成“无壳派”"
+  },
+  "ItemName.json|BundleUp.VFX_CannedCricketsCrate": {
+    "as1_value": "蟋蟀 (木箱)",
+    "value": "板条箱装蟋蟀罐头",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Canned（罐头），会被当成活饵/生物"
+  },
+  "ItemName.json|BundleUp.VFX_CannedSnailsCase": {
+    "as1_value": "蜗牛 (整箱)",
+    "value": "大箱装蜗牛罐头",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Canned（罐头），会被当成活饵/生物"
+  },
+  "ItemName.json|BundleUp.VFX_CannedSnailsCrate": {
+    "as1_value": "蜗牛 (木箱)",
+    "value": "板条箱装蜗牛罐头",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Canned（罐头），会被当成活饵/生物"
+  },
+  "ItemName.json|BundleUp.VFX_CannedWormsCarton": {
+    "as1_value": "蠕虫 (纸箱)",
+    "value": "箱装蠕虫罐头",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Canned（罐头），会被当成活饵/生物"
+  },
+  "ItemName.json|BundleUp.VFX_CannedWormsCase": {
+    "as1_value": "蠕虫 (整箱)",
+    "value": "大箱装蠕虫罐头",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Canned（罐头），会被当成活饵/生物"
+  },
+  "ItemName.json|BundleUp.VFX_CannedWormsCrate": {
+    "as1_value": "蠕虫 (木箱)",
+    "value": "板条箱装蠕虫罐头",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Canned（罐头），会被当成活饵/生物"
+  },
+  "ItemName.json|BundleUp.VFX_CheepsCarton": {
+    "as1_value": "芝士圈 (Cheeps, 纸箱)",
+    "value": "箱装 Cheeps 棉花糖",
+    "reason": "2026-10-26 As1 v3.12.0：Cheeps 是棉花糖类糖果（Candy），As1 译成芝士圈"
+  },
+  "ItemName.json|BundleUp.VFX_CheepsCase": {
+    "as1_value": "芝士圈 (Cheeps, 整箱)",
+    "value": "大箱装 Cheeps 棉花糖",
+    "reason": "2026-10-26 As1 v3.12.0：Cheeps 是棉花糖类糖果（Candy），As1 译成芝士圈"
+  },
+  "ItemName.json|BundleUp.VFX_CheepsCrate": {
+    "as1_value": "芝士圈 (Cheeps, 木箱)",
+    "value": "板条箱装 Cheeps 棉花糖",
+    "reason": "2026-10-26 As1 v3.12.0：Cheeps 是棉花糖类糖果（Candy），As1 译成芝士圈"
+  },
+  "ItemName.json|BundleUp.VFX_JarApricotsCarton": {
+    "as1_value": "杏 (纸箱)",
+    "value": "箱装罐装杏子",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jar（罐装），与新鲜蔬果整箱同名/混淆"
+  },
+  "ItemName.json|BundleUp.VFX_JarApricotsCase": {
+    "as1_value": "杏 (整箱)",
+    "value": "大箱装罐装杏子",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jar（罐装），与新鲜蔬果整箱同名/混淆"
+  },
+  "ItemName.json|BundleUp.VFX_JarBeetrootCase": {
+    "as1_value": "甜菜根 (整箱)",
+    "value": "大箱装罐装甜菜根",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jar（罐装），与新鲜蔬果整箱同名/混淆"
+  },
+  "ItemName.json|BundleUp.VFX_JarBlackOlivesCase": {
+    "as1_value": "黑橄榄 (整箱)",
+    "value": "大箱装罐装黑橄榄",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jar（罐装），与新鲜蔬果整箱同名/混淆"
+  },
+  "ItemName.json|BundleUp.VFX_JarBrusselSproutsCarton": {
+    "as1_value": "抱子甘蓝 (纸箱)",
+    "value": "箱装罐装抱子甘蓝",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jar（罐装），与新鲜蔬果整箱同名/混淆"
+  },
+  "ItemName.json|BundleUp.VFX_JarBrusselSproutsCase": {
+    "as1_value": "抱子甘蓝 (整箱)",
+    "value": "大箱装罐装抱子甘蓝",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jar（罐装），与新鲜蔬果整箱同名/混淆"
+  },
+  "ItemName.json|BundleUp.VFX_JarCherryCarton": {
+    "as1_value": "樱桃 (纸箱)",
+    "value": "箱装罐装樱桃",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jar（罐装），与新鲜蔬果整箱同名/混淆"
+  },
+  "ItemName.json|BundleUp.VFX_JarCherryCase": {
+    "as1_value": "樱桃 (整箱)",
+    "value": "大箱装罐装樱桃",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jar（罐装），与新鲜蔬果整箱同名/混淆"
+  },
+  "ItemName.json|BundleUp.VFX_JarCornCarton": {
+    "as1_value": "玉米 (纸箱)",
+    "value": "箱装罐装玉米",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jar（罐装），与新鲜蔬果整箱同名/混淆"
+  },
+  "ItemName.json|BundleUp.VFX_JarCornCase": {
+    "as1_value": "玉米 (整箱)",
+    "value": "大箱装罐装玉米",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jar（罐装），与新鲜蔬果整箱同名/混淆"
+  },
+  "ItemName.json|BundleUp.VFX_JarCucumberCarton": {
+    "as1_value": "黄瓜 (纸箱)",
+    "value": "箱装罐装黄瓜",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 Jar（罐装），与新鲜蔬果整箱同名/混淆"
+  },
+  "ItemName.json|BundleUp.VFX_JarCucumberCase": {
+    "as1_value": "黄瓜 (整箱)",
+    "value": "大箱装罐装黄瓜",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarGarlicCarton": {
+    "as1_value": "大蒜 (纸箱)",
+    "value": "箱装罐装大蒜",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarGarlicCase": {
+    "as1_value": "大蒜 (整箱)",
+    "value": "大箱装罐装大蒜",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarGreenBeansCarton": {
+    "as1_value": "青豆 (纸箱)",
+    "value": "箱装罐装四季豆",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarGreenBeansCase": {
+    "as1_value": "青豆 (整箱)",
+    "value": "大箱装罐装四季豆",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarGreenOlivesCase": {
+    "as1_value": "青橄榄 (整箱)",
+    "value": "大箱装罐装青橄榄",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarGreenPeasCarton": {
+    "as1_value": "豌豆 (纸箱)",
+    "value": "箱装罐装青豆",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarGreenPeasCase": {
+    "as1_value": "豌豆 (整箱)",
+    "value": "大箱装罐装青豆",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarOnionCarton": {
+    "as1_value": "洋葱 (纸箱)",
+    "value": "箱装罐装洋葱",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarOnionCase": {
+    "as1_value": "洋葱 (整箱)",
+    "value": "大箱装罐装洋葱",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarPeachCarton": {
+    "as1_value": "桃子 (纸箱)",
+    "value": "箱装罐装桃子",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarPeachCase": {
+    "as1_value": "桃子 (整箱)",
+    "value": "大箱装罐装桃子",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarPearCarton": {
+    "as1_value": "梨 (纸箱)",
+    "value": "箱装罐装梨子",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarPearCase": {
+    "as1_value": "梨 (整箱)",
+    "value": "大箱装罐装梨子",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarPepperJalapenoCarton": {
+    "as1_value": "墨西哥辣椒 (纸箱)",
+    "value": "箱装罐装墨西哥辣椒",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarPepperJalapenoCase": {
+    "as1_value": "墨西哥辣椒 (整箱)",
+    "value": "大箱装罐装墨西哥辣椒",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarPickledEggsCase": {
+    "as1_value": "腌蛋 (整箱)",
+    "value": "大箱装罐装腌鸡蛋",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarPickledPeppersCase": {
+    "as1_value": "腌辣椒 (整箱)",
+    "value": "大箱装罐装腌辣椒",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarPicklesCase": {
+    "as1_value": "酸黄瓜 (整箱)",
+    "value": "大箱装罐装腌黄瓜",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarPlumsCarton": {
+    "as1_value": "李子 (纸箱)",
+    "value": "箱装罐装李子",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarPlumsCase": {
+    "as1_value": "李子 (整箱)",
+    "value": "大箱装罐装李子",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarPumpkinCarton": {
+    "as1_value": "南瓜 (纸箱)",
+    "value": "箱装罐装南瓜",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarPumpkinCase": {
+    "as1_value": "南瓜 (整箱)",
+    "value": "大箱装罐装南瓜",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarSquashCarton": {
+    "as1_value": "西葫芦 (纸箱)",
+    "value": "箱装罐装笋瓜",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」且 Squash 译成西葫芦，与罐装西葫芦（Zucchini）同名；本包原译又与南瓜同名"
+  },
+  "ItemName.json|BundleUp.VFX_JarSquashCase": {
+    "as1_value": "西葫芦 (整箱)",
+    "value": "大箱装罐装笋瓜",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」且 Squash 译成西葫芦，与罐装西葫芦（Zucchini）同名；本包原译又与南瓜同名"
+  },
+  "ItemName.json|BundleUp.VFX_JarSundriedTomatoesCase": {
+    "as1_value": "番茄干 (整箱)",
+    "value": "大箱装罐装番茄干",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarSweetPotatoCarton": {
+    "as1_value": "红薯 (纸箱)",
+    "value": "箱装罐装红薯",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarSweetPotatoCase": {
+    "as1_value": "红薯 (整箱)",
+    "value": "大箱装罐装红薯",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarZucchiniCarton": {
+    "as1_value": "西葫芦 (纸箱)",
+    "value": "箱装罐装西葫芦",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_JarZucchiniCase": {
+    "as1_value": "西葫芦 (整箱)",
+    "value": "大箱装罐装西葫芦",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Jar of」，罐装品名与同系列新鲜品（如 Case of X）同名，变成另一种物品"
+  },
+  "ItemName.json|BundleUp.VFX_PackagedCauliflowerCrate": {
+    "as1_value": "花椰菜 (木箱)",
+    "value": "板条箱装包装花椰菜",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「Packaged」，与 Crate of Cauliflower 同名"
+  },
+  "ItemName.json|BundleUp.VFX_PumpernickelCase": {
+    "as1_value": "黑麦面包 (整箱)",
+    "value": "大箱装黑麦粗面包",
+    "reason": "2026-10-26 As1 v3.12.0：Pumpernickel 译成泛称黑麦面包，与 Case of Rye Bread 同名"
+  },
+  "ItemName.json|BundleUp.VFX_SnowPeasCase": {
+    "as1_value": "袋装雪豆 (整箱)",
+    "value": "大箱装荷兰豆袋",
+    "reason": "2026-10-26 As1 v3.12.0：Snow Peas 是荷兰豆，雪豆是另一种豆子；且漏掉 Bag"
+  },
+  "ItemName.json|BundleUp.WineRed_BoxedCrate": {
+    "as1_value": "红葡萄酒 (6-Bottle Boxes, 木箱)",
+    "value": "板条箱装红葡萄酒 (6瓶盒装)",
+    "reason": "2026-10-26 As1 v3.12.0：括号内「6-Bottle Boxes」未翻译"
+  },
+  "ItemName.json|BundleUp.WineWhite_BoxedCrate": {
+    "as1_value": "白葡萄酒 (6-Bottle Boxes, 木箱)",
+    "value": "板条箱装白葡萄酒 (6瓶盒装)",
+    "reason": "2026-10-26 As1 v3.12.0：括号内「6-Bottle Boxes」未翻译"
+  },
+  "Recipes.json|UnpackAmmoClipCarton": {
+    "as1_value": "打开弹匣 (纸箱, 12undefined)",
+    "value": "拆开弹匣箱 (12盒)",
+    "reason": "2026-10-26 As1 v3.12.0：数量单位变成「undefined」（boxes 未翻译）"
+  },
+  "Recipes.json|UnpackBoxCase": {
+    "as1_value": "打开食品大箱 (4undefined)",
+    "value": "拆开食品大箱 (4盒)",
+    "reason": "2026-10-26 As1 v3.12.0：数量单位变成「undefined」（boxes 未翻译）"
+  },
+  "Recipes.json|UnpackCapGunCapCarton": {
+    "as1_value": "打开火帽 (纸箱, 12undefined)",
+    "value": "拆开玩具火帽箱 (12盒)",
+    "reason": "2026-10-26 As1 v3.12.0：数量单位变成「undefined」（boxes 未翻译）"
+  },
+  "Recipes.json|UnpackGoM40mmCarton": {
+    "as1_value": "打开40mm弹药 (纸箱, 6undefined)",
+    "value": "拆开40mm榴弹箱 (6盒)",
+    "reason": "2026-10-26 As1 v3.12.0：数量单位变成「undefined」（boxes 未翻译）"
+  },
+  "Recipes.json|UnpackGoMDrumCarton": {
+    "as1_value": "打开弹鼓 (纸箱, 6undefined)",
+    "value": "拆开弹鼓箱 (6盒)",
+    "reason": "2026-10-26 As1 v3.12.0：数量单位变成「undefined」（boxes 未翻译）"
+  },
+  "Recipes.json|UnpackGoMMagazineCarton": {
+    "as1_value": "打开弹匣 (纸箱, 12undefined)",
+    "value": "拆开弹匣箱 (12盒)",
+    "reason": "2026-10-26 As1 v3.12.0：数量单位变成「undefined」（boxes 未翻译）"
+  },
+  "Recipes.json|UnpackGoMRepairPackCarton": {
+    "as1_value": "打开维修包 (纸箱, 4undefined)",
+    "value": "拆开维修包箱 (4盒)",
+    "reason": "2026-10-26 As1 v3.12.0：数量单位变成「undefined」（boxes 未翻译）"
+  },
+  "Recipes.json|UnpackMagazineBundle": {
+    "as1_value": "打开弹匣 (整盒, 10件)",
+    "value": "拆开杂志盒 (10件)",
+    "reason": "2026-10-26 As1 v3.12.0：Box of Magazines 指杂志（同系列有 TV Monthly Magazines），译成弹匣"
+  },
+  "Recipes.json|UnpackVFXBoxCase": {
+    "as1_value": "打开食品大箱 (4undefined)",
+    "value": "拆开食品大箱 (4盒)",
+    "reason": "2026-10-26 As1 v3.12.0：数量单位变成「undefined」（boxes 未翻译）"
+  },
+  "Sandbox.json|Sandbox_BundleUpPage_Food": {
+    "as1_value": "物品打包 (Bundle Up): 重量 - 食物",
+    "value": "Bundle Up: 重量 - 食物与饮料",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉「& Drink」，只写食物"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_AnimalFeedBagLR_tooltip": {
+    "as1_value": "单项覆盖: 饲料袋 (大捆, 绳索, 10件)",
+    "value": "大捆动物饲料袋 - 绳索 的单独覆盖值 (10 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_AnimalFeedBagLSR_tooltip": {
+    "as1_value": "单项覆盖: 饲料袋 (大捆, 逃脱绳, 10件)",
+    "value": "大捆动物饲料袋 - 逃脱绳 的单独覆盖值 (10 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_AnimalFeedBagR_tooltip": {
+    "as1_value": "单项覆盖: 饲料袋 (整捆, 绳索, 5件)",
+    "value": "成捆动物饲料袋 - 绳索 的单独覆盖值 (5 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_AnimalFeedBagSR_tooltip": {
+    "as1_value": "单项覆盖: 饲料袋 (整捆, 逃脱绳, 5件)",
+    "value": "成捆动物饲料袋 - 逃脱绳 的单独覆盖值 (5 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_BeerImportedPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装进口啤酒 (6件)",
+    "value": "六连装进口啤酒 的单独覆盖值 (6 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_BlueberrySP_tooltip": {
+    "as1_value": "单项覆盖: 六罐装蓝莓汽水 (6件)",
+    "value": "六连装蓝莓汽水 的单独覆盖值 (6 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_BrandyPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装白兰地 (6件)",
+    "value": "六连装白兰地 的单独覆盖值 (6 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_BrassIngot_L_tooltip": {
+    "as1_value": "单项覆盖: 大黄铜锭堆 (10件)",
+    "value": "一大叠黄铜锭 的单独覆盖值 (10 件). -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_BrassIngot_S_tooltip": {
+    "as1_value": "单项覆盖: 黄铜锭堆 (5件)",
+    "value": "一叠黄铜锭 的单独覆盖值 (5 件). -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_BubblegumSP_tooltip": {
+    "as1_value": "单项覆盖: 六罐装泡泡糖汽水 (6件)",
+    "value": "六连装泡泡糖汽水 的单独覆盖值 (6 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_ChampagnePack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装香槟 (6件)",
+    "value": "六连装香槟 的单独覆盖值 (6 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CharcoalSack_tooltip": {
+    "as1_value": "单项覆盖: 木炭 (整袋, 25件)",
+    "value": "麻袋装木炭 的单独覆盖值 (25 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CiderPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装苹果酒 (6件)",
+    "value": "六连装苹果酒 的单独覆盖值 (6 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_ClaySack_tooltip": {
+    "as1_value": "单项覆盖: 黏土 (整袋, 25件)",
+    "value": "麻袋装黏土 的单独覆盖值 (25 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_ClaybagLR_tooltip": {
+    "as1_value": "单项覆盖: 黏土袋 (大捆, 绳索, 10件)",
+    "value": "大捆黏土袋 - 绳索 的单独覆盖值 (10 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_ClaybagLSR_tooltip": {
+    "as1_value": "单项覆盖: 黏土袋 (大捆, 逃脱绳, 10件)",
+    "value": "大捆黏土袋 - 逃脱绳 的单独覆盖值 (10 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_ClaybagR_tooltip": {
+    "as1_value": "单项覆盖: 黏土袋 (整捆, 绳索, 5件)",
+    "value": "成捆黏土袋 - 绳索 的单独覆盖值 (5 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_ClaybagSR_tooltip": {
+    "as1_value": "单项覆盖: 黏土袋 (整捆, 逃脱绳, 5件)",
+    "value": "成捆黏土袋 - 逃脱绳 的单独覆盖值 (5 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CoffeeLiquerPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装咖啡利口酒 (6件)",
+    "value": "六连装咖啡利口酒 的单独覆盖值 (6 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_Coke_Large_tooltip": {
+    "as1_value": "单项覆盖: 焦炭 (大袋, 100件)",
+    "value": "大麻袋装焦炭 的单独覆盖值 (100 件). -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_Coke_Small_tooltip": {
+    "as1_value": "单项覆盖: 焦炭 (小袋, 50件)",
+    "value": "小麻袋装焦炭 的单独覆盖值 (50 件). -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CompostBagLR_tooltip": {
+    "as1_value": "单项覆盖: 堆肥袋 (大捆, 绳索, 10件)",
+    "value": "大捆堆肥袋 - 绳索 的单独覆盖值 (10 件). -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CompostBagLSR_tooltip": {
+    "as1_value": "单项覆盖: 堆肥袋 (大捆, 逃脱绳, 10件)",
+    "value": "大捆堆肥袋 - 逃脱绳 的单独覆盖值 (10 件). -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CompostBagR_tooltip": {
+    "as1_value": "单项覆盖: 堆肥袋 (整捆, 绳索, 5件)",
+    "value": "成捆堆肥袋 - 绳索 的单独覆盖值 (5 件). -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CompostBagSR_tooltip": {
+    "as1_value": "单项覆盖: 堆肥袋 (整捆, 逃脱绳, 5件)",
+    "value": "成捆堆肥袋 - 逃脱绳 的单独覆盖值 (5 件). -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_ConcretePowderLR_tooltip": {
+    "as1_value": "单项覆盖: 混凝土粉 (大捆, 绳索, 10件)",
+    "value": "大捆混凝土粉 - 绳索 的单独覆盖值 (10 件). -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_ConcretePowderLSR_tooltip": {
+    "as1_value": "单项覆盖: 混凝土粉 (大捆, 逃脱绳, 10件)",
+    "value": "大捆混凝土粉 - 逃脱绳 的单独覆盖值 (10 件). -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_ConcretePowderR_tooltip": {
+    "as1_value": "单项覆盖: 混凝土粉 (整捆, 绳索, 5件)",
+    "value": "成捆混凝土粉 - 绳索 的单独覆盖值 (5 件). -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_ConcretePowderSR_tooltip": {
+    "as1_value": "单项覆盖: 混凝土粉 (整捆, 逃脱绳, 5件)",
+    "value": "成捆混凝土粉 - 逃脱绳 的单独覆盖值 (5 件). -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CopperIngot_L_tooltip": {
+    "as1_value": "单项覆盖: 大铜锭堆 (10件)",
+    "value": "一大叠铜锭 的单独覆盖值 (10 件). -1 = 使用内置的 35%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CopperIngot_S_tooltip": {
+    "as1_value": "单项覆盖: 铜锭堆 (5件)",
+    "value": "一叠铜锭 的单独覆盖值 (5 件). -1 = 使用内置的 35%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CopperOreSack_tooltip": {
+    "as1_value": "单项覆盖: 铜矿石 (整袋, 10件)",
+    "value": "麻袋装铜矿石 的单独覆盖值 (10 件). -1 = 使用内置的 90%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CopperSheetLR_tooltip": {
+    "as1_value": "单项覆盖: 铜片 (大捆, 10件)",
+    "value": "大捆铜板 的单独覆盖值 (10 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CopperSheetLSR_tooltip": {
+    "as1_value": "单项覆盖: 铜片 (大捆, 逃脱绳, 10件)",
+    "value": "大捆铜板 (逃脱绳) 的单独覆盖值 (10 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CopperSheetR_tooltip": {
+    "as1_value": "单项覆盖: 铜片 (整捆, 5件)",
+    "value": "成捆铜板 的单独覆盖值 (5 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CopperSheetSR_tooltip": {
+    "as1_value": "单项覆盖: 铜片 (整捆, 逃脱绳, 5件)",
+    "value": "成捆铜板 (逃脱绳) 的单独覆盖值 (5 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CuracaoPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装陈皮酒 (6件)",
+    "value": "六连装陈皮酒 的单独覆盖值 (6 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_DietSodaPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装汽水 (无糖, 6件)",
+    "value": "六连装无糖可乐 的单独覆盖值 (6 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_DirtbagLR_tooltip": {
+    "as1_value": "单项覆盖: 泥土袋 (大捆, 绳索, 10件)",
+    "value": "大捆泥土袋 - 绳索 的单独覆盖值 (10 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_DirtbagLSR_tooltip": {
+    "as1_value": "单项覆盖: 泥土袋 (大捆, 逃脱绳, 10件)",
+    "value": "大捆泥土袋 - 逃脱绳 的单独覆盖值 (10 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_DirtbagR_tooltip": {
+    "as1_value": "单项覆盖: 泥土袋 (整捆, 绳索, 5件)",
+    "value": "成捆泥土袋 - 绳索 的单独覆盖值 (5 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_DirtbagSR_tooltip": {
+    "as1_value": "单项覆盖: 泥土袋 (整捆, 逃脱绳, 5件)",
+    "value": "成捆泥土袋 - 逃脱绳 的单独覆盖值 (5 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_FertilizerBagLR_tooltip": {
+    "as1_value": "单项覆盖: 化肥袋 (大捆, 绳索, 10件)",
+    "value": "大捆化肥袋 - 绳索 的单独覆盖值 (10 件). -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_FertilizerBagLSR_tooltip": {
+    "as1_value": "单项覆盖: 化肥袋 (大捆, 逃脱绳, 10件)",
+    "value": "大捆化肥袋 - 逃脱绳 的单独覆盖值 (10 件). -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_FertilizerBagR_tooltip": {
+    "as1_value": "单项覆盖: 化肥袋 (整捆, 绳索, 5件)",
+    "value": "成捆化肥袋 - 绳索 的单独覆盖值 (5 件). -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_FertilizerBagSR_tooltip": {
+    "as1_value": "单项覆盖: 化肥袋 (整捆, 逃脱绳, 5件)",
+    "value": "成捆化肥袋 - 逃脱绳 的单独覆盖值 (5 件). -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_FlatStoneSack_tooltip": {
+    "as1_value": "单项覆盖: 扁平石板 (整袋, 10件)",
+    "value": "麻袋装扁平石板 的单独覆盖值 (10 件). -1 = 使用内置的 60%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GasCanR_tooltip": {
+    "as1_value": "单项覆盖: 汽油罐 (整捆, 4件)",
+    "value": "成捆汽油罐 的单独覆盖值 (4 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GasCanSR_tooltip": {
+    "as1_value": "单项覆盖: 汽油罐 (整捆, 逃脱绳, 4件)",
+    "value": "成捆汽油罐 (逃脱绳) 的单独覆盖值 (4 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GinPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装金酒 (6件)",
+    "value": "六连装金酒 的单独覆盖值 (6 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GingerAleSP": {
+    "as1_value": "六罐装汽水 (薄荷, 减重%%)",
+    "value": "六连装姜汁汽水 - 减重 %%",
+    "reason": "2026-10-26 As1 v3.12.0：Ginger Ale 是姜汁汽水，误译成薄荷汽水"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GingerAleSP_tooltip": {
+    "as1_value": "单项覆盖: 六罐装汽水 (薄荷, 6件)",
+    "value": "六连装姜汁汽水 的单独覆盖值 (6 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」；Ginger Ale 误译成薄荷汽水"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GlassPanelLR_tooltip": {
+    "as1_value": "单项覆盖: 玻璃板 (大捆, 绳索, 10件)",
+    "value": "大捆玻璃板 - 绳索 的单独覆盖值 (10 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GlassPanelLSR_tooltip": {
+    "as1_value": "单项覆盖: 玻璃板 (大捆, 逃脱绳, 10件)",
+    "value": "大捆玻璃板 - 逃脱绳 的单独覆盖值 (10 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GlassPanelR_tooltip": {
+    "as1_value": "单项覆盖: 玻璃板 (整捆, 绳索, 5件)",
+    "value": "成捆玻璃板 - 绳索 的单独覆盖值 (5 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GlassPanelSR_tooltip": {
+    "as1_value": "单项覆盖: 玻璃板 (整捆, 逃脱绳, 5件)",
+    "value": "成捆玻璃板 - 逃脱绳 的单独覆盖值 (5 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GoldBar_L_tooltip": {
+    "as1_value": "单项覆盖: 大金锭堆 (10件)",
+    "value": "一大叠金锭 的单独覆盖值 (10 件). -1 = 使用内置的 75%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GoldBar_S_tooltip": {
+    "as1_value": "单项覆盖: 金锭堆 (5件)",
+    "value": "一叠金锭 的单独覆盖值 (5 件). -1 = 使用内置的 75%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GoldScrap_Large_tooltip": {
+    "as1_value": "单项覆盖: 金废料 (大袋, 100件)",
+    "value": "大麻袋装金碎片 的单独覆盖值 (100 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GoldScrap_Small_tooltip": {
+    "as1_value": "单项覆盖: 金废料 (小袋, 50件)",
+    "value": "小麻袋装金碎片 的单独覆盖值 (50 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GoldSheetLR_tooltip": {
+    "as1_value": "单项覆盖: 金板 (大捆, 10件)",
+    "value": "大捆金板 的单独覆盖值 (10 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GoldSheetLSR_tooltip": {
+    "as1_value": "单项覆盖: 金板 (大捆, 逃脱绳, 10件)",
+    "value": "大捆金板 (逃脱绳) 的单独覆盖值 (10 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GoldSheetR_tooltip": {
+    "as1_value": "单项覆盖: 金板 (整捆, 5件)",
+    "value": "成捆金板 的单独覆盖值 (5 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GoldSheetSR_tooltip": {
+    "as1_value": "单项覆盖: 金板 (整捆, 逃脱绳, 5件)",
+    "value": "成捆金板 (逃脱绳) 的单独覆盖值 (5 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GrapeSP_tooltip": {
+    "as1_value": "单项覆盖: 六罐装葡萄汽水 (6件)",
+    "value": "六连装葡萄汽水 的单独覆盖值 (6 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GrassBagLR_tooltip": {
+    "as1_value": "单项覆盖: 草料袋 (大捆, 绳索, 10件)",
+    "value": "大捆袋装草料 - 绳索 的单独覆盖值 (10 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GrassBagLSR_tooltip": {
+    "as1_value": "单项覆盖: 草料袋 (大捆, 逃脱绳, 10件)",
+    "value": "大捆袋装草料 - 逃脱绳 的单独覆盖值 (10 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GrassBagR_tooltip": {
+    "as1_value": "单项覆盖: 草料袋 (整捆, 绳索, 5件)",
+    "value": "成捆袋装草料 - 绳索 的单独覆盖值 (5 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GrassBagSR_tooltip": {
+    "as1_value": "单项覆盖: 草料袋 (整捆, 逃脱绳, 5件)",
+    "value": "成捆袋装草料 - 逃脱绳 的单独覆盖值 (5 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GravelbagLR_tooltip": {
+    "as1_value": "单项覆盖: 碎石袋 (大捆, 绳索, 10件)",
+    "value": "大捆碎石袋 - 绳索 的单独覆盖值 (10 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GravelbagLSR_tooltip": {
+    "as1_value": "单项覆盖: 碎石袋 (大捆, 逃脱绳, 10件)",
+    "value": "大捆碎石袋 - 逃脱绳 的单独覆盖值 (10 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GravelbagR_tooltip": {
+    "as1_value": "单项覆盖: 碎石袋 (整捆, 绳索, 5件)",
+    "value": "成捆碎石袋 - 绳索 的单独覆盖值 (5 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GravelbagSR_tooltip": {
+    "as1_value": "单项覆盖: 碎石袋 (整捆, 逃脱绳, 5件)",
+    "value": "成捆碎石袋 - 逃脱绳 的单独覆盖值 (5 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GrenadinePack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装石榴糖浆 (6件)",
+    "value": "六连装石榴糖浆 的单独覆盖值 (6 件). -1 = 继承类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HematiteLargeSack_tooltip": {
+    "as1_value": "单项覆盖: 大块赤铁矿 (整袋, 25件)",
+    "value": "麻袋装大铁矿石 的单独覆盖值 (25 件). -1 = 使用内置的 70%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HematiteSack_tooltip": {
+    "as1_value": "单项覆盖: 赤铁矿 (整袋, 25件)",
+    "value": "麻袋装铁矿石 (25 个) 的单品覆盖值. -1 = 使用内置的 40%%.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 使用内置的 X%%」，%% 记号也一并丢失"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCalfAngusLR_tooltip": {
+    "as1_value": "单项覆盖: 安格斯小牛皮 (大捆, 绳索, 10件)",
+    "value": "大捆小安格斯牛皮 - 绳索 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCalfAngusLSR_tooltip": {
+    "as1_value": "单项覆盖: 安格斯小牛皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆小安格斯牛皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCalfAngusR_tooltip": {
+    "as1_value": "单项覆盖: 安格斯小牛皮 (整捆, 绳索, 5件)",
+    "value": "成捆小安格斯牛皮 - 绳索 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCalfAngusSR_tooltip": {
+    "as1_value": "单项覆盖: 安格斯小牛皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆小安格斯牛皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCalfHolsteinLR_tooltip": {
+    "as1_value": "单项覆盖: 荷斯坦小牛皮 (大捆, 绳索, 10件)",
+    "value": "大捆小荷斯坦牛皮 - 绳索 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉整个子句「-1 = 继承类别/默认值」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCalfHolsteinLSR_tooltip": {
+    "as1_value": "单项覆盖: 荷斯坦小牛皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆小荷斯坦牛皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCalfHolsteinR_tooltip": {
+    "as1_value": "单项覆盖: 荷斯坦小牛皮 (整捆, 绳索, 5件)",
+    "value": "成捆小荷斯坦牛皮 - 绳索 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCalfHolsteinSR_tooltip": {
+    "as1_value": "单项覆盖: 荷斯坦小牛皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆小荷斯坦牛皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCalfSimmentalLR_tooltip": {
+    "as1_value": "单项覆盖: 西门塔尔小牛皮 (大捆, 绳索, 10件)",
+    "value": "大捆小西门塔尔牛皮 - 绳索 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCalfSimmentalLSR_tooltip": {
+    "as1_value": "单项覆盖: 西门塔尔小牛皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆小西门塔尔牛皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCalfSimmentalR_tooltip": {
+    "as1_value": "单项覆盖: 西门塔尔小牛皮 (整捆, 绳索, 5件)",
+    "value": "成捆小西门塔尔牛皮 - 绳索 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCalfSimmentalSR_tooltip": {
+    "as1_value": "单项覆盖: 西门塔尔小牛皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆小西门塔尔牛皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCowAngusLR_tooltip": {
+    "as1_value": "单项覆盖: 安格斯牛皮 (大捆, 绳索, 10件)",
+    "value": "大捆安格斯牛皮 - 绳索 (10 个) 的单品覆盖值. -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCowAngusLSR_tooltip": {
+    "as1_value": "单项覆盖: 安格斯牛皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆安格斯牛皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCowAngusR_tooltip": {
+    "as1_value": "单项覆盖: 安格斯牛皮 (整捆, 绳索, 5件)",
+    "value": "成捆安格斯牛皮 - 绳索 (5 个) 的单品覆盖值. -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCowAngusSR_tooltip": {
+    "as1_value": "单项覆盖: 安格斯牛皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆安格斯牛皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCowHolsteinLR_tooltip": {
+    "as1_value": "单项覆盖: 荷斯坦牛皮 (大捆, 绳索, 10件)",
+    "value": "大捆荷斯坦牛皮 - 绳索 (10 个) 的单品覆盖值. -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCowHolsteinLSR_tooltip": {
+    "as1_value": "单项覆盖: 荷斯坦牛皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆荷斯坦牛皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCowHolsteinR_tooltip": {
+    "as1_value": "单项覆盖: 荷斯坦牛皮 (整捆, 绳索, 5件)",
+    "value": "成捆荷斯坦牛皮 - 绳索 (5 个) 的单品覆盖值. -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCowHolsteinSR_tooltip": {
+    "as1_value": "单项覆盖: 荷斯坦牛皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆荷斯坦牛皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCowSimmentalLR_tooltip": {
+    "as1_value": "单项覆盖: 西门塔尔牛皮 (大捆, 绳索, 10件)",
+    "value": "大捆西门塔尔牛皮 - 绳索 (10 个) 的单品覆盖值. -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCowSimmentalLSR_tooltip": {
+    "as1_value": "单项覆盖: 西门塔尔牛皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆西门塔尔牛皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCowSimmentalR_tooltip": {
+    "as1_value": "单项覆盖: 西门塔尔牛皮 (整捆, 绳索, 5件)",
+    "value": "成捆西门塔尔牛皮 - 绳索 (5 个) 的单品覆盖值. -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCowSimmentalSR_tooltip": {
+    "as1_value": "单项覆盖: 西门塔尔牛皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆西门塔尔牛皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCrudeLargeLR_tooltip": {
+    "as1_value": "单项覆盖: 大块粗制皮革 (大捆, 绳索, 10件)",
+    "value": "大捆大型原始皮 - 绳索 (10 个) 的单品覆盖值. -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCrudeLargeLSR_tooltip": {
+    "as1_value": "单项覆盖: 大块粗制皮革 (大捆, 逃脱绳, 10件)",
+    "value": "大捆大型原始皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCrudeLargeR_tooltip": {
+    "as1_value": "单项覆盖: 大块粗制皮革 (整捆, 绳索, 5件)",
+    "value": "成捆大型原始皮 - 绳索 (5 个) 的单品覆盖值. -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCrudeLargeSR_tooltip": {
+    "as1_value": "单项覆盖: 大块粗制皮革 (整捆, 逃脱绳, 5件)",
+    "value": "成捆大型原始皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 使用内置的 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCrudeMediumLR_tooltip": {
+    "as1_value": "单项覆盖: 中块粗制皮革 (大捆, 绳索, 10件)",
+    "value": "大捆中型原始皮 - 绳索 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCrudeMediumLSR_tooltip": {
+    "as1_value": "单项覆盖: 中块粗制皮革 (大捆, 逃脱绳, 10件)",
+    "value": "大捆中型原始皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCrudeMediumR_tooltip": {
+    "as1_value": "单项覆盖: 中块粗制皮革 (整捆, 绳索, 5件)",
+    "value": "成捆中型原始皮 - 绳索 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCrudeMediumSR_tooltip": {
+    "as1_value": "单项覆盖: 中块粗制皮革 (整捆, 逃脱绳, 5件)",
+    "value": "成捆中型原始皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCrudeSmallLR_tooltip": {
+    "as1_value": "单项覆盖: 小块粗制皮革 (大捆, 绳索, 10件)",
+    "value": "大捆小型原始皮 - 绳索 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCrudeSmallLSR_tooltip": {
+    "as1_value": "单项覆盖: 小块粗制皮革 (大捆, 逃脱绳, 10件)",
+    "value": "大捆小型原始皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCrudeSmallR_tooltip": {
+    "as1_value": "单项覆盖: 小块粗制皮革 (整捆, 绳索, 5件)",
+    "value": "成捆小型原始皮 - 绳索 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideCrudeSmallSR_tooltip": {
+    "as1_value": "单项覆盖: 小块粗制皮革 (整捆, 逃脱绳, 5件)",
+    "value": "成捆小型原始皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideDeerLR_tooltip": {
+    "as1_value": "单项覆盖: 鹿皮 (大捆, 绳索, 10件)",
+    "value": "大捆鹿皮 - 绳索 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideDeerLSR_tooltip": {
+    "as1_value": "单项覆盖: 鹿皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆鹿皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideDeerR_tooltip": {
+    "as1_value": "单项覆盖: 鹿皮 (整捆, 绳索, 5件)",
+    "value": "成捆鹿皮 - 绳索 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideDeerSR_tooltip": {
+    "as1_value": "单项覆盖: 鹿皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆鹿皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideFawnLR_tooltip": {
+    "as1_value": "单项覆盖: 小鹿皮 (大捆, 绳索, 10件)",
+    "value": "大捆小鹿皮 - 绳索 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideFawnLSR_tooltip": {
+    "as1_value": "单项覆盖: 小鹿皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆小鹿皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideFawnR_tooltip": {
+    "as1_value": "单项覆盖: 小鹿皮 (整捆, 绳索, 5件)",
+    "value": "成捆小鹿皮 - 绳索 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideFawnSR_tooltip": {
+    "as1_value": "单项覆盖: 小鹿皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆小鹿皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideLambLR_tooltip": {
+    "as1_value": "单项覆盖: 羔羊皮 (大捆, 绳索, 10件)",
+    "value": "大捆小羊皮 - 绳索 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideLambLSR_tooltip": {
+    "as1_value": "单项覆盖: 羔羊皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆小羊皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideLambR_tooltip": {
+    "as1_value": "单项覆盖: 羔羊皮 (整捆, 绳索, 5件)",
+    "value": "成捆小羊皮 - 绳索 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideLambSR_tooltip": {
+    "as1_value": "单项覆盖: 羔羊皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆小羊皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HidePigBlackLR_tooltip": {
+    "as1_value": "单项覆盖: 黑猪皮 (大捆, 绳索, 10件)",
+    "value": "大捆黑猪皮 - 绳索 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HidePigBlackLSR_tooltip": {
+    "as1_value": "单项覆盖: 黑猪皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆黑猪皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HidePigBlackR_tooltip": {
+    "as1_value": "单项覆盖: 黑猪皮 (整捆, 绳索, 5件)",
+    "value": "成捆黑猪皮 - 绳索 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HidePigBlackSR_tooltip": {
+    "as1_value": "单项覆盖: 黑猪皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆黑猪皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HidePigLandraceLR_tooltip": {
+    "as1_value": "单项覆盖: 兰德拉斯猪皮 (大捆, 绳索, 10件)",
+    "value": "大捆兰德拉斯猪皮 - 绳索 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HidePigLandraceLSR_tooltip": {
+    "as1_value": "单项覆盖: 兰德拉斯猪皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆兰德拉斯猪皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HidePigLandraceR_tooltip": {
+    "as1_value": "单项覆盖: 兰德拉斯猪皮 (整捆, 绳索, 5件)",
+    "value": "成捆兰德拉斯猪皮 - 绳索 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HidePigLandraceSR_tooltip": {
+    "as1_value": "单项覆盖: 兰德拉斯猪皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆兰德拉斯猪皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HidePigletBlackLR_tooltip": {
+    "as1_value": "单项覆盖: 黑仔猪皮 (大捆, 绳索, 10件)",
+    "value": "大捆小黑猪皮 - 绳索 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HidePigletBlackLSR_tooltip": {
+    "as1_value": "单项覆盖: 黑仔猪皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆小黑猪皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HidePigletBlackR_tooltip": {
+    "as1_value": "单项覆盖: 黑仔猪皮 (整捆, 绳索, 5件)",
+    "value": "成捆小黑猪皮 - 绳索 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HidePigletBlackSR_tooltip": {
+    "as1_value": "单项覆盖: 黑仔猪皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆小黑猪皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HidePigletLandraceLR_tooltip": {
+    "as1_value": "单项覆盖: 兰德拉斯仔猪皮 (大捆, 绳索, 10件)",
+    "value": "大捆小兰德拉斯猪皮 - 绳索 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HidePigletLandraceLSR_tooltip": {
+    "as1_value": "单项覆盖: 兰德拉斯仔猪皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆小兰德拉斯猪皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HidePigletLandraceR_tooltip": {
+    "as1_value": "单项覆盖: 兰德拉斯仔猪皮 (整捆, 绳索, 5件)",
+    "value": "成捆小兰德拉斯猪皮 - 绳索 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HidePigletLandraceSR_tooltip": {
+    "as1_value": "单项覆盖: 兰德拉斯仔猪皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆小兰德拉斯猪皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideRabbitGreyLR_tooltip": {
+    "as1_value": "单项覆盖: 灰兔皮 (大捆, 绳索, 10件)",
+    "value": "大捆灰兔皮 - 绳索 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideRabbitGreyLSR_tooltip": {
+    "as1_value": "单项覆盖: 灰兔皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆灰兔皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideRabbitGreyR_tooltip": {
+    "as1_value": "单项覆盖: 灰兔皮 (整捆, 绳索, 5件)",
+    "value": "成捆灰兔皮 - 绳索 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideRabbitGreySR_tooltip": {
+    "as1_value": "单项覆盖: 灰兔皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆灰兔皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideRabbitLR_tooltip": {
+    "as1_value": "单项覆盖: 兔皮 (大捆, 绳索, 10件)",
+    "value": "大捆兔皮 - 绳索 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideRabbitLSR_tooltip": {
+    "as1_value": "单项覆盖: 兔皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆兔皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideRabbitR_tooltip": {
+    "as1_value": "单项覆盖: 兔皮 (整捆, 绳索, 5件)",
+    "value": "成捆兔皮 - 绳索 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideRabbitSR_tooltip": {
+    "as1_value": "单项覆盖: 兔皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆兔皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideRaccoonLR_tooltip": {
+    "as1_value": "单项覆盖: 浣熊皮 (大捆, 绳索, 10件)",
+    "value": "大捆浣熊皮革 - 绳索 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideRaccoonLSR_tooltip": {
+    "as1_value": "单项覆盖: 浣熊皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆浣熊皮革 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideRaccoonR_tooltip": {
+    "as1_value": "单项覆盖: 浣熊皮 (整捆, 绳索, 5件)",
+    "value": "成捆浣熊皮革 - 绳索 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideRaccoonSR_tooltip": {
+    "as1_value": "单项覆盖: 浣熊皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆浣熊皮革 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideSheepLR_tooltip": {
+    "as1_value": "单项覆盖: 绵羊皮 (大捆, 绳索, 10件)",
+    "value": "大捆绵羊皮 - 绳索 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideSheepLSR_tooltip": {
+    "as1_value": "单项覆盖: 绵羊皮 (大捆, 逃脱绳, 10件)",
+    "value": "大捆绵羊皮 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideSheepR_tooltip": {
+    "as1_value": "单项覆盖: 绵羊皮 (整捆, 绳索, 5件)",
+    "value": "成捆绵羊皮 - 绳索 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_HideSheepSR_tooltip": {
+    "as1_value": "单项覆盖: 绵羊皮 (整捆, 逃脱绳, 5件)",
+    "value": "成捆绵羊皮 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_IronBarLR_tooltip": {
+    "as1_value": "单项覆盖: 铁条 (大捆, 10件)",
+    "value": "大捆铁条 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_IronBarLSR_tooltip": {
+    "as1_value": "单项覆盖: 铁条 (大捆, 逃脱绳, 10件)",
+    "value": "大捆铁条 (逃脱绳) (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_IronBarR_tooltip": {
+    "as1_value": "单项覆盖: 铁条 (整捆, 5件)",
+    "value": "成捆铁条 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_IronBarSR_tooltip": {
+    "as1_value": "单项覆盖: 铁条 (整捆, 逃脱绳, 5件)",
+    "value": "成捆铁条 (逃脱绳) (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_IronBloomSack_tooltip": {
+    "as1_value": "单项覆盖: 铁坯 (整袋, 10件)",
+    "value": "麻袋装铁坯 (10 个) 的单品覆盖值. -1 = 使用内置的 80%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_IronIngot_L_tooltip": {
+    "as1_value": "单项覆盖: 大铁锭堆 (10件)",
+    "value": "一大叠铁锭 (10 个) 的单品覆盖值. -1 = 使用内置的 35%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_IronIngot_S_tooltip": {
+    "as1_value": "单项覆盖: 铁锭堆 (5件)",
+    "value": "一叠铁锭 (5 个) 的单品覆盖值. -1 = 使用内置的 35%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_IronOreSack_tooltip": {
+    "as1_value": "单项覆盖: 铁矿石 (整袋, 10件)",
+    "value": "麻袋装铁矿石 (10 个) 的单品覆盖值. -1 = 使用内置的 90%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_IronPipesLR_tooltip": {
+    "as1_value": "单项覆盖: 铁管 (大捆, 10件)",
+    "value": "大捆金属管 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_IronPipesLSR_tooltip": {
+    "as1_value": "单项覆盖: 铁管 (大捆, 逃脱绳, 10件)",
+    "value": "大捆金属管 (逃脱绳) (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_IronPipesR_tooltip": {
+    "as1_value": "单项覆盖: 铁管 (整捆, 5件)",
+    "value": "成捆金属管 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_IronPipesSR_tooltip": {
+    "as1_value": "单项覆盖: 铁管 (整捆, 逃脱绳, 5件)",
+    "value": "成捆金属管 (逃脱绳) (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceBoxApplePack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装苹果汁 (盒装, 6件)",
+    "value": "六连装苹果汁 (盒装) (6 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceBoxFruitpunchPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装水果宾治果汁 (盒装, 6件)",
+    "value": "六连装混合果汁 (盒装) (6 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceBoxGrapePack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装葡萄汁 (盒装, 6件)",
+    "value": "六连装葡萄汁 (盒装) (6 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceBoxOrangePack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装橙汁 (盒装, 6件)",
+    "value": "六连装橙汁 (盒装) (6 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceCranberryPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装蔓越莓汁 (6件)",
+    "value": "六连装蔓越莓汁 (6 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceFruitpunchPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装水果宾治 (6件)",
+    "value": "六连装混合果汁 (6 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceGrapePack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装葡萄汁 (6件)",
+    "value": "六连装葡萄汁 (6 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceLemonPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装柠檬汁 (6件)",
+    "value": "六连装柠檬汁 (6 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceOrangePack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装橙汁 (6件)",
+    "value": "六连装橙汁 (6 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceTomatoPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装番茄汁 (6件)",
+    "value": "六连装番茄汁 (6 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LargeBranchLR_tooltip": {
+    "as1_value": "单项覆盖: 大树枝 (大捆, 10件)",
+    "value": "大捆大树枝 (10 个) 的单品覆盖值. -1 = 使用内置的 35%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LargeBranchLSR_tooltip": {
+    "as1_value": "单项覆盖: 大树枝 (大捆, 逃脱绳, 10件)",
+    "value": "大捆大树枝 (逃脱绳) (10 个) 的单品覆盖值. -1 = 使用内置的 35%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LargeBranchR_tooltip": {
+    "as1_value": "单项覆盖: 大树枝 (整捆, 5件)",
+    "value": "成捆大树枝 (5 个) 的单品覆盖值. -1 = 使用内置的 35%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LargeBranchSR_tooltip": {
+    "as1_value": "单项覆盖: 大树枝 (整捆, 逃脱绳, 5件)",
+    "value": "成捆大树枝 (逃脱绳) (5 个) 的单品覆盖值. -1 = 使用内置的 35%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LargeHandleLR_tooltip": {
+    "as1_value": "单项覆盖: 长手柄 (大捆, 10件)",
+    "value": "大捆长手柄 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LargeHandleLSR_tooltip": {
+    "as1_value": "单项覆盖: 长手柄 (大捆, 逃脱绳, 10件)",
+    "value": "大捆长手柄 (逃脱绳) (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LargeHandleR_tooltip": {
+    "as1_value": "单项覆盖: 长手柄 (整捆, 5件)",
+    "value": "成捆长手柄 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LargeHandleSR_tooltip": {
+    "as1_value": "单项覆盖: 长手柄 (整捆, 逃脱绳, 5件)",
+    "value": "成捆长手柄 (逃脱绳) (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LargePlankLR_tooltip": {
+    "as1_value": "单项覆盖: 枕木 (大捆, 绳索, 10件)",
+    "value": "大捆枕木 - 绳索 (10 个) 的单品覆盖值. -1 = 使用内置的 60%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LargePlankLSR_tooltip": {
+    "as1_value": "单项覆盖: 枕木 (大捆, 逃脱绳, 10件)",
+    "value": "大捆枕木 - 逃脱绳 (10 个) 的单品覆盖值. -1 = 使用内置的 60%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LargePlankR_tooltip": {
+    "as1_value": "单项覆盖: 枕木 (整捆, 绳索, 5件)",
+    "value": "成捆枕木 - 绳索 (5 个) 的单品覆盖值. -1 = 使用内置的 60%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LargePlankSR_tooltip": {
+    "as1_value": "单项覆盖: 枕木 (整捆, 逃脱绳, 5件)",
+    "value": "成捆枕木 - 逃脱绳 (5 个) 的单品覆盖值. -1 = 使用内置的 60%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LargeStoneSack_tooltip": {
+    "as1_value": "单项覆盖: 大石块 (整袋, 10件)",
+    "value": "麻袋装大石块 (10 个) 的单品覆盖值. -1 = 使用内置的 90%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LeadPipeLR_tooltip": {
+    "as1_value": "单项覆盖: 铅管 (大捆, 10件)",
+    "value": "大捆铅管 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LeadPipeLSR_tooltip": {
+    "as1_value": "单项覆盖: 铅管 (大捆, 逃脱绳, 10件)",
+    "value": "大捆铅管 (逃脱绳) (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LeadPipeR_tooltip": {
+    "as1_value": "单项覆盖: 铅管 (整捆, 5件)",
+    "value": "成捆铅管 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LeadPipeSR_tooltip": {
+    "as1_value": "单项覆盖: 铅管 (整捆, 逃脱绳, 5件)",
+    "value": "成捆铅管 (逃脱绳) (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LimeSP_tooltip": {
+    "as1_value": "单项覆盖: 六罐装青柠汽水 (6件)",
+    "value": "六连装青柠汽水 (6 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LimestoneSack_tooltip": {
+    "as1_value": "单项覆盖: 石灰石 (整袋, 25件)",
+    "value": "麻袋装石灰石 (25 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LongStickLR_tooltip": {
+    "as1_value": "单项覆盖: 长棍 (大捆, 10件)",
+    "value": "大捆长棍 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LongStickLSR_tooltip": {
+    "as1_value": "单项覆盖: 长棍 (大捆, 逃脱绳, 10件)",
+    "value": "大捆长棍 (逃脱绳) (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LongStickR_tooltip": {
+    "as1_value": "单项覆盖: 长棍 (整捆, 5件)",
+    "value": "成捆长棍 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LongStickSR_tooltip": {
+    "as1_value": "单项覆盖: 长棍 (整捆, 逃脱绳, 5件)",
+    "value": "成捆长棍 (逃脱绳) (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_MalachiteLargeSack_tooltip": {
+    "as1_value": "单项覆盖: 大块孔雀石 (整袋, 25件)",
+    "value": "麻袋装大块孔雀石 (25 个) 的单品覆盖值. -1 = 使用内置的 70%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置的 70%%」整句与 %% 记号；本包原译把孔雀石写成铜矿石，与物品名不一致"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_MalachiteSack_tooltip": {
+    "as1_value": "单项覆盖: 孔雀石 (整袋, 25件)",
+    "value": "麻袋装孔雀石 (25 个) 的单品覆盖值. -1 = 使用内置的 40%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置的 40%%」整句与 %% 记号；本包原译把孔雀石写成铜矿石，与物品名不一致"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_MediumHandleLR_tooltip": {
+    "as1_value": "单项覆盖: 手柄 (大捆, 10件)",
+    "value": "大捆手柄 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_MediumHandleLSR_tooltip": {
+    "as1_value": "单项覆盖: 手柄 (大捆, 逃脱绳, 10件)",
+    "value": "大捆手柄 (逃脱绳) (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_MediumHandleR_tooltip": {
+    "as1_value": "单项覆盖: 手柄 (整捆, 5件)",
+    "value": "成捆手柄 (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_MediumHandleSR_tooltip": {
+    "as1_value": "单项覆盖: 手柄 (整捆, 逃脱绳, 5件)",
+    "value": "成捆手柄 (逃脱绳) (5 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_MilkBottlePack_tooltip": {
+    "as1_value": "单项覆盖: 六瓶装牛奶 (6件)",
+    "value": "六连装瓶装牛奶 (6 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_MilkChocSmallPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装巧克力牛奶 (6件)",
+    "value": "六连装巧克力牛奶 (6 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_MilkPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装牛奶 (6件)",
+    "value": "六连装纸盒牛奶 (6 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_MilkSmallPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装牛奶 (单人装, 6件)",
+    "value": "六连装单人装牛奶 (6 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_NailsBox_Medium_tooltip": {
+    "as1_value": "单项覆盖: 钉子 (中盒, 50件)",
+    "value": "中盒装钉子 (50 个) 的单品覆盖值. 默认为 60, 与原版 100 根装的盒装钉子一致. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句、「默认为 60…」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_NailsBox_Small_tooltip": {
+    "as1_value": "单项覆盖: 钉子 (小盒, 25件)",
+    "value": "小盒装钉子 (25 个) 的单品覆盖值. 默认为 60, 与原版 100 根装的盒装钉子一致. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句、「默认为 60…」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_OrangeSP_tooltip": {
+    "as1_value": "单项覆盖: 六罐装橙味汽水 (6件)",
+    "value": "六连装橘子汽水 (6 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PenBox_Black_tooltip": {
+    "as1_value": "单项覆盖: 黑笔 (整盒, 10件)",
+    "value": "盒装钢笔 (黑) (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PenBox_Blue_tooltip": {
+    "as1_value": "单项覆盖: 蓝笔 (整盒, 10件)",
+    "value": "盒装蓝色圆珠笔 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PenBox_Green_tooltip": {
+    "as1_value": "单项覆盖: 绿笔 (整盒, 10件)",
+    "value": "盒装绿色圆珠笔 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PenBox_Red_tooltip": {
+    "as1_value": "单项覆盖: 红笔 (整盒, 10件)",
+    "value": "盒装红色圆珠笔 (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PiercedIronBlockBox_tooltip": {
+    "as1_value": "单项覆盖: 穿孔铁方块 (整盒, 10件)",
+    "value": "盒装大铁块 (穿孔) (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PiercedIronChunkBox_tooltip": {
+    "as1_value": "单项覆盖: 穿孔铁块 (整盒, 40件)",
+    "value": "盒装铁块 (穿孔) (40 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PiercedIronIngot_L_tooltip": {
+    "as1_value": "单项覆盖: 大穿孔铁锭堆 (10件)",
+    "value": "一大叠铁锭 (穿孔) (10 个) 的单品覆盖值. -1 = 使用内置的 35%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PiercedIronIngot_S_tooltip": {
+    "as1_value": "单项覆盖: 穿孔铁锭堆 (5件)",
+    "value": "一叠铁锭 (穿孔) (5 个) 的单品覆盖值. -1 = 使用内置的 35%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PiercedSteelBlockBox_tooltip": {
+    "as1_value": "单项覆盖: 穿孔钢方块 (整盒, 10件)",
+    "value": "盒装大钢块 (穿孔) (10 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PiercedSteelChunkBox_tooltip": {
+    "as1_value": "单项覆盖: 穿孔钢块 (整盒, 40件)",
+    "value": "盒装钢块 (穿孔) (40 个) 的单品覆盖值. -1 = 沿用分类/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PiercedSteelIngot_L_tooltip": {
+    "as1_value": "单项覆盖: 大穿孔钢锭堆 (10件)",
+    "value": "一大叠钢锭 (穿孔) (10 个) 的单品覆盖值. -1 = 使用内置的 35%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PiercedSteelIngot_S_tooltip": {
+    "as1_value": "单项覆盖: 穿孔钢锭堆 (5件)",
+    "value": "一叠钢锭 (穿孔) (5 个) 的单品覆盖值. -1 = 使用内置的 35%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PineappleSP_tooltip": {
+    "as1_value": "单项覆盖: 六罐装菠萝汽水 (6件)",
+    "value": "六连装菠萝汽水 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PlankLR_tooltip": {
+    "as1_value": "单项覆盖: 木板 (大捆, 10件)",
+    "value": "大捆木板 (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PlankLSR_tooltip": {
+    "as1_value": "单项覆盖: 木板 (大捆, 逃脱绳, 10件)",
+    "value": "大捆木板 (逃脱绳) (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PlankR_tooltip": {
+    "as1_value": "单项覆盖: 木板 (整捆, 5件)",
+    "value": "成捆木板 (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PlankSR_tooltip": {
+    "as1_value": "单项覆盖: 木板 (整捆, 逃脱绳, 5件)",
+    "value": "成捆木板 (逃脱绳) (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PlasterPowderLR_tooltip": {
+    "as1_value": "单项覆盖: 石膏粉 (大捆, 绳索, 10件)",
+    "value": "大捆装石膏粉 - 绳索 (10 个) 的单独覆盖值. -1 = 使用内置值 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PlasterPowderLSR_tooltip": {
+    "as1_value": "单项覆盖: 石膏粉 (大捆, 逃脱绳, 10件)",
+    "value": "大捆装石膏粉 - 逃脱绳 (10 个) 的单独覆盖值. -1 = 使用内置值 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PlasterPowderR_tooltip": {
+    "as1_value": "单项覆盖: 石膏粉 (整捆, 绳索, 5件)",
+    "value": "捆装石膏粉 - 绳索 (5 个) 的单独覆盖值. -1 = 使用内置值 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PlasterPowderSR_tooltip": {
+    "as1_value": "单项覆盖: 石膏粉 (整捆, 逃脱绳, 5件)",
+    "value": "捆装石膏粉 - 逃脱绳 (5 个) 的单独覆盖值. -1 = 使用内置值 20%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PortPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装波特酒 (6件)",
+    "value": "六连装波特酒 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_QuicklimeSack_tooltip": {
+    "as1_value": "单项覆盖: 生石灰 (整袋, 25件)",
+    "value": "麻袋装生石灰 (25 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_RumPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装朗姆酒 (6件)",
+    "value": "六连装朗姆酒 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_Sack_Sack_tooltip": {
+    "as1_value": "单项覆盖: 麻袋 (整袋, 5件)",
+    "value": "麻袋装麻袋 (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SandbagLR_tooltip": {
+    "as1_value": "单项覆盖: 沙袋 (大捆, 绳索, 10件)",
+    "value": "一大捆沙袋 - 绳索 (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SandbagLSR_tooltip": {
+    "as1_value": "单项覆盖: 沙袋 (大捆, 逃脱绳, 10件)",
+    "value": "一大捆沙袋 - 逃脱绳 (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SandbagR_tooltip": {
+    "as1_value": "单项覆盖: 沙袋 (整捆, 绳索, 5件)",
+    "value": "一捆沙袋 - 绳索 (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SandbagSR_tooltip": {
+    "as1_value": "单项覆盖: 沙袋 (整捆, 逃脱绳, 5件)",
+    "value": "一捆沙袋 - 逃脱绳 (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SaplingLR_tooltip": {
+    "as1_value": "单项覆盖: 树苗 (大捆, 10件)",
+    "value": "大捆树苗 (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SaplingLSR_tooltip": {
+    "as1_value": "单项覆盖: 树苗 (大捆, 逃脱绳, 10件)",
+    "value": "大捆树苗 (逃脱绳) (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SaplingR_tooltip": {
+    "as1_value": "单项覆盖: 树苗 (整捆, 5件)",
+    "value": "成捆树苗 (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SaplingSR_tooltip": {
+    "as1_value": "单项覆盖: 树苗 (整捆, 逃脱绳, 5件)",
+    "value": "成捆树苗 (逃脱绳) (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_ScotchPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装苏格兰威士忌 (6件)",
+    "value": "六连装苏格兰威士忌 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_ScrewsBox_Medium_tooltip": {
+    "as1_value": "单项覆盖: 螺丝 (中盒, 50件)",
+    "value": "中盒装螺丝 (50 个) 的单独覆盖值. 默认为 60, 与原版 100 根装的盒装钉子一致. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句、「默认为 60…」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_ScrewsBox_Small_tooltip": {
+    "as1_value": "单项覆盖: 螺丝 (小盒, 25件)",
+    "value": "小盒装螺丝 (25 个) 的单独覆盖值. 默认为 60, 与原版 100 根装的盒装钉子一致. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句、「默认为 60…」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SharpedStoneSack_tooltip": {
+    "as1_value": "单项覆盖: 磨尖石块 (整袋, 25件)",
+    "value": "麻袋装锋利碎石 (25 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SheetMetalLR_tooltip": {
+    "as1_value": "单项覆盖: 金属板 (大捆, 10件)",
+    "value": "大捆金属板 (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SheetMetalLSR_tooltip": {
+    "as1_value": "单项覆盖: 金属板 (大捆, 逃脱绳, 10件)",
+    "value": "大捆金属板 (逃脱绳) (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SheetMetalR_tooltip": {
+    "as1_value": "单项覆盖: 金属板 (整捆, 5件)",
+    "value": "成捆金属板 (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SheetMetalSR_tooltip": {
+    "as1_value": "单项覆盖: 金属板 (整捆, 逃脱绳, 5件)",
+    "value": "成捆金属板 (逃脱绳) (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SherryPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装雪利酒 (6件)",
+    "value": "六连装雪利酒 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SilverBar_L_tooltip": {
+    "as1_value": "单项覆盖: 大银锭堆 (10件)",
+    "value": "一大叠银锭 (10 个) 的单独覆盖值. -1 = 使用内置值 50%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SilverBar_S_tooltip": {
+    "as1_value": "单项覆盖: 银锭堆 (5件)",
+    "value": "一叠银锭 (5 个) 的单独覆盖值. -1 = 使用内置值 50%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SilverScrap_Large_tooltip": {
+    "as1_value": "单项覆盖: 银废料 (大袋, 100件)",
+    "value": "大麻袋装银碎片 (100 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SilverScrap_Small_tooltip": {
+    "as1_value": "单项覆盖: 银废料 (小袋, 50件)",
+    "value": "小麻袋装银碎片 (50 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SmallGoldBar_L_tooltip": {
+    "as1_value": "单项覆盖: 大小金锭堆 (10件)",
+    "value": "一大叠小金锭 (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SmallGoldBar_S_tooltip": {
+    "as1_value": "单项覆盖: 小金锭堆 (5件)",
+    "value": "一叠小金锭 (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SmallMetalSheetL_tooltip": {
+    "as1_value": "单项覆盖: 小金属板 (大捆, 10件)",
+    "value": "一大捆小金属板 (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SmallMetalSheetS_tooltip": {
+    "as1_value": "单项覆盖: 小金属板 (整捆, 5件)",
+    "value": "一捆小金属板 (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SmallSilverBar_L_tooltip": {
+    "as1_value": "单项覆盖: 大小银锭堆 (10件)",
+    "value": "一大叠小银锭 (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SmallSilverBar_S_tooltip": {
+    "as1_value": "单项覆盖: 小银锭堆 (5件)",
+    "value": "一叠小银锭 (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SodaPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装汽水 (原味, 6件)",
+    "value": "六连装可乐 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SteelIngot_L_tooltip": {
+    "as1_value": "单项覆盖: 大钢锭堆 (10件)",
+    "value": "一大叠钢锭 (10 个) 的单独覆盖值. -1 = 使用内置值 35%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SteelIngot_S_tooltip": {
+    "as1_value": "单项覆盖: 钢锭堆 (5件)",
+    "value": "一叠钢锭 (5 个) 的单独覆盖值. -1 = 使用内置值 35%%.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 使用内置值」整句，en 的 %% 记号也缺"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SteelRodHalfBox_tooltip": {
+    "as1_value": "单项覆盖: 金属棒 (1/2, 整盒, 20件)",
+    "value": "盒装钢棒 (1/2) (20 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SteelRodLR_tooltip": {
+    "as1_value": "单项覆盖: 金属棒 (大捆, 10件)",
+    "value": "大捆钢棒 (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SteelRodLSR_tooltip": {
+    "as1_value": "单项覆盖: 金属棒 (大捆, 逃脱绳, 10件)",
+    "value": "大捆钢棒 (逃脱绳) (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SteelRodQuarterBox_tooltip": {
+    "as1_value": "单项覆盖: 金属棒 (1/4, 整盒, 40件)",
+    "value": "盒装钢棒 (1/4) (40 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SteelRodR_tooltip": {
+    "as1_value": "单项覆盖: 金属棒 (整捆, 5件)",
+    "value": "成捆钢棒 (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SteelRodSR_tooltip": {
+    "as1_value": "单项覆盖: 金属棒 (整捆, 逃脱绳, 5件)",
+    "value": "成捆钢棒 (逃脱绳) (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SteelSlugBox_tooltip": {
+    "as1_value": "单项覆盖: 钢块 (整盒, 200件)",
+    "value": "盒装钢块 (200 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_StoneBlockPack_tooltip": {
+    "as1_value": "单项覆盖: 石砖 (整包, 10件)",
+    "value": "袋装石砖 (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_StrawberrySP_tooltip": {
+    "as1_value": "单项覆盖: 六罐装草莓汽水 (6件)",
+    "value": "六连装草莓汽水 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_TequilaPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装龙舌兰酒 (6件)",
+    "value": "六连装龙舌兰酒 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_TreeBranchLR_tooltip": {
+    "as1_value": "单项覆盖: 树枝 (大捆, 10件)",
+    "value": "大捆树枝 (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_TreeBranchLSR_tooltip": {
+    "as1_value": "单项覆盖: 树枝 (大捆, 逃脱绳, 10件)",
+    "value": "大捆树枝 (逃脱绳) (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_TreeBranchR_tooltip": {
+    "as1_value": "单项覆盖: 树枝 (整捆, 5件)",
+    "value": "成捆树枝 (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_TreeBranchSR_tooltip": {
+    "as1_value": "单项覆盖: 树枝 (整捆, 逃脱绳, 5件)",
+    "value": "成捆树枝 (逃脱绳) (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_VarietyPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装什锦汽水 (6件)",
+    "value": "六连装综合汽水 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_VermouthPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装苦艾酒 (6件)",
+    "value": "六连装味美思酒 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_VodkaPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装伏特加 (6件)",
+    "value": "六连装伏特加 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WallpaperPasteLR_tooltip": {
+    "as1_value": "单项覆盖: 墙纸胶 (大捆, 绳索, 10件)",
+    "value": "大捆墙纸胶 - 绳索 (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WallpaperPasteLSR_tooltip": {
+    "as1_value": "单项覆盖: 墙纸胶 (大捆, 逃脱绳, 10件)",
+    "value": "大捆墙纸胶 - 逃脱绳 (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WallpaperPasteR_tooltip": {
+    "as1_value": "单项覆盖: 墙纸胶 (整捆, 绳索, 5件)",
+    "value": "成捆墙纸胶 - 绳索 (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WallpaperPasteSR_tooltip": {
+    "as1_value": "单项覆盖: 墙纸胶 (整捆, 逃脱绳, 5件)",
+    "value": "成捆墙纸胶 - 逃脱绳 (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WhiskeyPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装威士忌 (6件)",
+    "value": "六连装威士忌 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WineAgedPack_tooltip": {
+    "as1_value": "单项覆盖: 六瓶装优质红葡萄酒 (6件)",
+    "value": "六连装陈年红酒 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WineBoxPack_tooltip": {
+    "as1_value": "单项覆盖: 六瓶装盒装红葡萄酒 (6件)",
+    "value": "六连装盒装红酒 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WineRedPack_tooltip": {
+    "as1_value": "单项覆盖: 六瓶装红葡萄酒 (6件)",
+    "value": "六连装红葡萄酒 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WineScrewtopPack_tooltip": {
+    "as1_value": "单项覆盖: 六罐装廉价红酒 (6件)",
+    "value": "六连装廉价红酒 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WineWhitePack_tooltip": {
+    "as1_value": "单项覆盖: 六瓶装白葡萄酒 (6件)",
+    "value": "六连装白葡萄酒 (6 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WireCable_Large_tooltip": {
+    "as1_value": "单项覆盖: 铁丝 (大捆, 10件)",
+    "value": "大捆铁丝 (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WireCable_Small_tooltip": {
+    "as1_value": "单项覆盖: 铁丝 (整捆, 5件)",
+    "value": "成捆铁丝 (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WoodenRodLR_tooltip": {
+    "as1_value": "单项覆盖: 木棒 (大捆, 10件)",
+    "value": "大捆木棒 (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WoodenRodLSR_tooltip": {
+    "as1_value": "单项覆盖: 木棒 (大捆, 逃脱绳, 10件)",
+    "value": "大捆木棒 (逃脱绳) (10 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WoodenRodR_tooltip": {
+    "as1_value": "单项覆盖: 木棒 (整捆, 5件)",
+    "value": "成捆木棒 (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WoodenRodSR_tooltip": {
+    "as1_value": "单项覆盖: 木棒 (整捆, 逃脱绳, 5件)",
+    "value": "成捆木棒 (逃脱绳) (5 个) 的单独覆盖值. -1 = 沿用类别/默认值.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏掉「-1 = 沿用分类/默认值」整句"
+  },
+  "Sandbox.json|Sandbox_BundleUp_SpawnLevelInherit_option7": {
+    "as1_value": "双槽",
+    "value": "双倍",
+    "reason": "2026-10-26 As1 v3.12.0：Double 指生成量两倍，As1「双槽」误译"
+  },
+  "Sandbox.json|Sandbox_BundleUp_SpawnLevel_option6": {
+    "as1_value": "双槽",
+    "value": "双倍",
+    "reason": "2026-10-26 As1 v3.12.0：Double 指生成量两倍，As1「双槽」误译"
+  },
+  "IG_UI.json|IGUI_WAS_LightningOn": {
+    "as1_value": "闪电开启%1",
+    "value": "对 %1 降下闪电",
+    "reason": "2026-10-26 As1 v3.12.0：en 是对 %1 降下闪电，As1「闪电开启%1」把 on 误解成开启"
+  },
+  "Sandbox.json|Sandbox_WanderingHordes_WanderingExitDistance_tooltip": {
+    "as1_value": "最终目标点会被放在玩家身后多远. 数值越高, 尸群会尝试在区域内走得更远, 而不是在玩家附近被世界移除.",
+    "value": "僵尸会从生成点移动多远. 此值务必设得比生成距离大, 否则僵尸会在抵达你身边前就消失.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 照旧版英文翻（玩家身后目标点），与现行 en（距生成点移动距离、须大于生成距离）对不上"
+  },
+  "Sandbox.json|Sandbox_WanderingHordes_ZombieSpeedToggle_tooltip": {
+    "as1_value": "原版数值: 依据原版跑尸数量的随机百分比, 即全部跑尸都冲刺或都不冲刺. 跑尸百分比: 使用下面一行的数值.",
+    "value": "原版数值: 依原版“随机数目的跑尸”数值取随机的跑尸比例, 或全部为跑尸, 或完全没有跑尸. 跑尸比例: 采用下方一行的数值",
+    "reason": "2026-10-26 As1 v3.12.0：en 是三选一（随机比例／全部跑尸／没有跑尸），As1 用「即」把后两项写成随机比例的解释，且「都冲刺或都不冲刺」误译"
+  },
+  "UI.json|UI_trait_SeinarExtendedProfessions:Gambler": {
+    "as1_value": "致命赌博",
+    "value": "赌徒",
+    "reason": "2026-10-26 As1 v3.12.0：Gambler＝赌徒，As1「致命赌博」多出 en 没有的「致命」并改变指称"
+  },
+  "UI.json|UI_trait_SeinarExtendedProfessions:Sharpshooter": {
+    "as1_value": "狩猎标记",
+    "value": "神枪手",
+    "reason": "2026-10-26 As1 v3.12.0：Marksman＝神枪手，As1「狩猎标记」误译成别的东西"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_ColdOpOpen": {
+    "as1_value": "细腻乳化的高脂鸡肝与鸡胸肉混合料\n搭配紧实不易碎的黑麦饼干",
+    "value": "细腻乳化的高脂鸡肝与鸡胸肉混合肉酱\n搭配紧实不掉渣的硬饼干",
+    "reason": "2026-10-26 As1 v3.12.0：Hardtack（硬饼干）误译为黑麦饼干，多出 en 没有的“黑麦”"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_FieldGreen": {
+    "as1_value": "粗略碾碎的亚克雷变异植物叶 - 野外处理\n可中和常见的局部感染和疼痛",
+    "value": "粗略捣碎的阿克雷翠绿系植物叶片, 已做野外敷料处理\n可中和轻微的局部感染和疼痛",
+    "reason": "2026-10-26 As1 v3.12.0：virent（翠绿）误译为“变异”"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_GlacierCracklings": {
+    "as1_value": "防油纸套, 装着酥脆的重盐鸭皮和皮下脂肪块\n在士气跌到谷底的冰冻山脊上, 它能带来一轮\n易消化的热量与浓郁咸香的爆发",
+    "value": "防油纸套, 装满酥脆重咸、经过熬炼的\n鹅皮和皮下脂肪碎块. 能带来爆发性的速消化热量\n和浓烈咸香风味, 在冰封山脊上士气跌到谷底时特别管用",
+    "reason": "2026-10-26 As1 v3.12.0：goose skin（鹅皮）误译为鸭皮，且漏 Rendered"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_MarrowAshHot": {
+    "as1_value": "粉状乌黑膏, 由焦骨脂 - 碎芝麻壳\n和盐制成 - 在舌上留下奇怪的金属冰冷感",
+    "value": "热腾腾的粉质漆黑糊状物, 由烤焦的骨脂、碾碎的芝麻壳\n与盐制成. 会在舌头上留下奇特的金属冰凉感",
+    "reason": "2026-10-26 As1 v3.12.0：漏 Hot（热食版与冷食版靠此区分），句子结构破碎"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_MorelBoarOpen": {
+    "as1_value": "深度泥土味炖羊肚菌 - 浓缩野猪肉牛脂油脂\n厚重盐壳和野生花园百里香的尖锐芳香草本余味",
+    "value": "土香浓郁的炖羊肚菌, 浓缩野猪油脂\n厚重的盐壳, 余味带有野生百里香鲜明的草本香气",
+    "reason": "2026-10-26 As1 v3.12.0：pork tallow 误译为“野猪肉牛脂”（混入牛脂）"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_NatureBox": {
+    "as1_value": "野采的 - 风干而且的有机食品",
+    "value": "野外采集, 经过干燥, 有机得很有优越感",
+    "reason": "2026-10-26 As1 v3.12.0：漏 judgmentally，句子不通（“风干而且的”）"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_NeonTaurine": {
+    "as1_value": "合成蓝莓 - 强烈冰川薄荷醇脂质, 带清爽矿物盐余味",
+    "value": "人工蓝覆盆子, 浓烈的冰川薄荷脂质, 带有清爽的矿物盐余味",
+    "reason": "2026-10-26 As1 v3.12.0：blue-raspberry（蓝覆盆子）误译为蓝莓"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_NewVegasMix": {
+    "as1_value": "透明塑料袋, 装干变异果 - 土豆\n香蕉丝兰 - 爆竹浆果 - 内华达龙舌兰果 - 焦油浆果\n蜜豆荚和赞德根片",
+    "value": "透明塑料袋, 装有干燥的变种果, 番茄薯\n香蕉丝兰, 爆竹莓, 内华达龙舌兰果, 焦油莓\n蜜牧豆荚与山德根片",
+    "reason": "2026-10-26 As1 v3.12.0：Tato 误译为土豆、Honey Mesquite 漏 mesquite，专名译错"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_RadStagHot": {
+    "as1_value": "坚韧厚切变异鹿肉条\n配烟熏斑豆, 裹以厚重猪油釉",
+    "value": "热腾腾的坚韧厚切变异鹿肉条\n搭配烟熏斑豆, 裹着厚厚一层猪油",
+    "reason": "2026-10-26 As1 v3.12.0：漏 Hot（热食版）"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SmokedGatorHot": {
+    "as1_value": "热浓郁辛辣浓缩, 山胡桃烟熏鳄鱼肉 - 鸭油和秋葵粉",
+    "value": "热腾腾的浓郁辣味浓汁, 内含山核桃木烟熏鳄鱼肉、鸭油和檫树叶粉",
+    "reason": "2026-10-26 As1 v3.12.0：File powder（檫树叶粉）误译为秋葵粉"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SmokedGatorOpen": {
+    "as1_value": "浓郁辛辣浓缩, 山胡桃烟熏鳄鱼肉 - 鸭油和秋葵粉",
+    "value": "浓郁辣味浓汁, 内含山核桃木烟熏鳄鱼肉、鸭油和檫树叶粉",
+    "reason": "2026-10-26 As1 v3.12.0：File powder（檫树叶粉）误译为秋葵粉"
+  },
+  "ContextMenu.json|ContextMenu_NotAlone_InjuryModerate": {
+    "as1_value": "中伤",
+    "value": "中度",
+    "reason": "2026-10-26 As1 v3.12.0：Moderate 译“中伤”（诽谤义），伤势程度应为中度"
+  },
+  "IG_UI.json|IGUI_NotAlone_Dialogue_Flirt_005": {
+    "as1_value": "什么?! 我给你带来好运? 哦... 你说的是「好运」? 抱歉, 哈哈...",
+    "value": "什么?! 我给你带来“性”运? 哦…你是说“幸运”? 抱歉, 哈…",
+    "reason": "2026-10-26 As1 v3.12.0：双关 FUCK/luck 完全丢失，两处都译“好运”，句子失去意义"
+  },
+  "Sandbox.json|Sandbox_NotAlone_NPC_FieldSpawnCooldownHours": {
+    "as1_value": "成功生成后的冷却 (小时)",
+    "value": "成功生成后的流浪者生成冷却 (小时)",
+    "reason": "2026-10-26 As1 v3.12.0：漏对象 Wanderer（流浪者）"
+  },
+  "Tooltip.json|Tooltip_NotAlone_OccupationTrait_Burglar_1": {
+    "as1_value": "跟随: 可以开锁门窗与车辆.",
+    "value": "跟随时: 可以解锁门和车辆.",
+    "reason": "2026-10-26 As1 v3.12.0：多出 en 没有的“窗”（en 只有 doors and cars）"
+  },
+  "Sandbox.json|Sandbox_BloodlustO_AntidepressantsFadeOutTime_tooltip": {
+    "as1_value": "在基础持续时间结束前这么多分钟, 抗抑郁药效果开始减弱.\n这是从基础持续时间起算的; 例如持续 1020、淡出360时, 效果会在第660分钟开始减弱.",
+    "value": "在基础持续时间结束前的这么多分钟, 抗抑郁药效果开始减弱.\n此数值从基础持续时间起算; 例如持续时间 1020, 消退时间 360,\n",
+    "reason": "2026-10-26 As1 v3.12.0：en 句子止于逗号，As1 自行补“第660分钟开始减弱”的多余资讯，且少一个 \\n"
+  },
+  "Sandbox.json|Sandbox_BloodlustO_BetaBlockersFadeOutTime_tooltip": {
+    "as1_value": "在基础持续时间结束前这么多分钟, 效果开始减弱.\n从基础持续时间起算; 例如持续1020、淡出360时, 效果约在第660分钟开始减弱.",
+    "value": "在基础持续时间结束前的这么多分钟, β-阻断剂效果开始减弱.\n此数值从基础持续时间起算; 例如持续时间 1020, 消退时间 360,\n",
+    "reason": "2026-10-26 As1 v3.12.0：漏 beta blockers，自行补 en 没有的结论句，且少一个 \\n"
+  },
+  "Sandbox.json|Sandbox_BloodlustO_BetaBlockersKillCravingModifier_tooltip": {
+    "as1_value": "生效期间, 杀戮渴望带来的嗜血增长倍率.\n\n0.1表示嗜血只按 10%%的速度增长.",
+    "value": "β-阻断剂生效期间, 杀戮渴望造成的嗜血值增长修正.\n\n0.1 表示你的嗜血值只以 10%% 的速度增长.\n",
+    "reason": "2026-10-26 As1 v3.12.0：漏 beta blockers（何者生效），且少结尾 \\n"
+  },
+  "Sandbox.json|Sandbox_BloodlustO_BloodinessFreshnessMultiplierForFrenzy": {
+    "as1_value": "新鲜度对血腥度的倍率",
+    "value": "狂暴沾血新鲜度乘数",
+    "reason": "2026-10-26 As1 v3.12.0：漏 For Frenzy，误成“对血腥度的倍率”，对象错"
+  },
+  "Sandbox.json|Sandbox_BloodlustO_BufferExertionAfter_tooltip": {
+    "as1_value": "如果耐力达到此数值, 将开始累积耐力透支.\n\n25是第一个耐力图标出现时的数值.",
+    "value": "劳累达到此程度后, 开始被动累积劳累.\n\n25 时会出现第一个劳累状态“气喘吁吁”.\n",
+    "reason": "2026-10-26 As1 v3.12.0：漏 moodle 名称 \"Out of Breath\"，且少结尾 \\n"
+  },
+  "Sandbox.json|Sandbox_BloodlustO_ConsiderCarDriveOverAsCombat": {
+    "as1_value": "开车碾过计为命中",
+    "value": "开车碾过视为战斗",
+    "reason": "2026-10-26 As1 v3.12.0：Combat 误译为“命中”"
+  },
+  "Sandbox.json|Sandbox_BloodlustO_Control_MaxSecondsSinceHitToStopLockedIn_tooltip": {
+    "as1_value": "角色未攻击任何目标的最长持续秒数, 超过后必定结束完全沉浸.",
+    "value": "角色未攻击任何人, 停止杀红眼前最多需经过的现实秒数.\n",
+    "reason": "2026-10-26 As1 v3.12.0：少结尾 \\n，与 en 记号不对称"
+  },
+  "Sandbox.json|Sandbox_BloodlustO_CurlUpBloodlustPerMinute_tooltip": {
+    "as1_value": "蜷缩时, 每游戏内分钟减少 (负值)  或增加 (正值)的嗜血.\n",
+    "value": "蜷缩时每游戏内分钟减少 (负值) 或增加 (正值) 的嗜血值.\n注意, 减少嗜血值算是压抑嗜血值, 会有后果.\n",
+    "reason": "2026-10-26 As1 v3.12.0：整句漏掉 Note（减少嗜血算压抑、会有后果）"
+  },
+  "Sandbox.json|Sandbox_BloodlustO_HuggingPlushieBloodlustPerMinute_tooltip": {
+    "as1_value": "抱毛绒玩具时, 每游戏内分钟减少 (负值)  或增加 (正值)的嗜血.\n",
+    "value": "抱着毛绒玩偶时, 每游戏世界分钟减少 (负值) 或增加 (正值) 的嗜血值.\n注意, 减少嗜血值算是压抑嗜血, 会有后果.\n",
+    "reason": "2026-10-26 As1 v3.12.0：整句漏掉 Note（减少嗜血算压抑、会有后果）"
+  },
+  "Sandbox.json|Sandbox_BloodlustO_HuggingPlushieLastingKillCravingBloodlustModifier": {
+    "as1_value": "抱玩具后持续倍率",
+    "value": "抱毛绒玩偶持续杀戮渴望嗜血值修正",
+    "reason": "2026-10-26 As1 v3.12.0：漏 Kill Craving Bloodlust，只剩“持续倍率”"
+  },
+  "Sandbox.json|Sandbox_BloodlustO_SleepingPillsNightmaresModifier_tooltip": {
+    "as1_value": "安眠药生效期间, 噩梦概率乘以该值.\n\n0.1表示只有10%%的概率做噩梦.",
+    "value": "安眠药生效时, 噩梦几率乘以此数值.\n\n0.1 表示你做噩梦的频率只有 10%%.\n",
+    "reason": "2026-10-26 As1 v3.12.0：少结尾 \\n，与 en 记号不对称"
+  },
+  "UI.json|UI_BloodlustO:death-rampage:recovery:2": {
+    "as1_value": "行吧.",
+    "value": "没事, 我死不了.",
+    "reason": "2026-10-26 As1 v3.12.0：“Nah, I'll live.”译成“行吧.”，丢失“死不了”的意思"
+  },
+  "UI.json|UI_BloodlustO:intrusive-thought:death-rampage:9": {
+    "as1_value": "再歇一会儿",
+    "value": "再撑一下",
+    "reason": "2026-10-26 As1 v3.12.0：A little longer（再撑一下）误译为“再歇一会儿”，方向相反"
+  },
+  "ItemName.json|PuffinsRetroRelics.MadballScreaminMeme": {
+    "as1_value": "疯狂球 (尖叫棒球)",
+    "value": "尖叫咪咪疯狂球",
+    "reason": "2026-10-26 As1 v3.12.0：Screamin Meme 误译为“尖叫棒球”，多出棒球"
+  },
+  "Sandbox.json|Sandbox_PuffinsRetroRelics_CustomScale_option2": {
+    "as1_value": "标准生成率的25%%",
+    "value": "预期平衡的百分之二十五",
+    "reason": "2026-10-26 As1 v3.12.0：en 写 percent，As1 用 %%，格式记号不对称"
+  },
+  "Sandbox.json|Sandbox_PuffinsRetroRelics_CustomScale_option3": {
+    "as1_value": "标准生成率的50%%",
+    "value": "预期平衡的百分之五十",
+    "reason": "2026-10-26 As1 v3.12.0：en 写 percent，As1 用 %%，格式记号不对称"
+  },
+  "Sandbox.json|Sandbox_PuffinsRetroRelics_CustomScale_option4": {
+    "as1_value": "标准生成率的75%%",
+    "value": "预期平衡的百分之七十五",
+    "reason": "2026-10-26 As1 v3.12.0：en 写 percent，As1 用 %%，格式记号不对称"
+  },
+  "Sandbox.json|Sandbox_PuffinsRetroRelics_CustomScale_option5": {
+    "as1_value": "标准生成率 (100%%)",
+    "value": "预期平衡 (百分之一百)",
+    "reason": "2026-10-26 As1 v3.12.0：en 写 percent，As1 用 %%，格式记号不对称"
+  },
+  "Sandbox.json|Sandbox_PuffinsRetroRelics_CustomScale_option6": {
+    "as1_value": "标准生成率的150%%",
+    "value": "预期平衡的百分之一百五十",
+    "reason": "2026-10-26 As1 v3.12.0：en 写 percent，As1 用 %%，格式记号不对称"
+  },
+  "Sandbox.json|Sandbox_PuffinsRetroRelics_CustomScale_option7": {
+    "as1_value": "标准生成率的200%%",
+    "value": "预期平衡的百分之二百",
+    "reason": "2026-10-26 As1 v3.12.0：en 写 percent，As1 用 %%，格式记号不对称"
+  },
+  "Sandbox.json|Sandbox_PuffinsRetroRelics_CustomScale_option8": {
+    "as1_value": "标准生成率的250%%",
+    "value": "预期平衡的百分之二百五十",
+    "reason": "2026-10-26 As1 v3.12.0：en 写 percent，As1 用 %%，格式记号不对称"
+  },
+  "Sandbox.json|Sandbox_PuffinsRetroRelics_CustomScale_option9": {
+    "as1_value": "标准生成率的300%%",
+    "value": "预期平衡的百分之三百",
+    "reason": "2026-10-26 As1 v3.12.0：en 写 percent，As1 用 %%，格式记号不对称"
+  },
+  "Sandbox.json|Sandbox_PuffinsRetroRelics_RelicSpawnPreset_option1": {
+    "as1_value": "标准生成率 (100%%)",
+    "value": "预期平衡 (百分之一百)",
+    "reason": "2026-10-26 As1 v3.12.0：en 写 percent，As1 用 %%，格式记号不对称"
+  },
+  "Sandbox.json|Sandbox_PuffinsRetroRelics_RelicSpawnPreset_option3": {
+    "as1_value": "极稀有 (标准生成率的25%%)",
+    "value": "极为稀有 (预期平衡的百分之二十五)",
+    "reason": "2026-10-26 As1 v3.12.0：en 写 percent，As1 用 %%，格式记号不对称"
+  },
+  "Sandbox.json|Sandbox_PuffinsRetroRelics_RelicSpawnPreset_option4": {
+    "as1_value": "稀有 (标准生成率的50%%)",
+    "value": "稀有 (预期平衡的百分之五十)",
+    "reason": "2026-10-26 As1 v3.12.0：en 写 percent，As1 用 %%，格式记号不对称"
+  },
+  "Sandbox.json|Sandbox_PuffinsRetroRelics_RelicSpawnPreset_option5": {
+    "as1_value": "常见 (标准生成率的150%%)",
+    "value": "常见 (预期平衡的百分之一百五十)",
+    "reason": "2026-10-26 As1 v3.12.0：en 写 percent，As1 用 %%，格式记号不对称"
+  },
+  "Sandbox.json|Sandbox_PuffinsRetroRelics_RelicSpawnPreset_option6": {
+    "as1_value": "大量 (标准生成率的200%%)",
+    "value": "充裕 (预期平衡的百分之二百)",
+    "reason": "2026-10-26 As1 v3.12.0：en 写 percent，As1 用 %%，格式记号不对称"
+  },
+  "UI.json|UI_MarkXI_CALL_SUIT_ALREADY_WORN": {
+    "as1_value": "马克XI已战甲",
+    "value": "MARK XI 已装备",
+    "reason": "2026-10-26 As1 v3.12.0：“已战甲”误译，en 为已装备"
+  },
+  "Sandbox.json|Sandbox_ExoticDancerProfession_EnduranceDrainPercentPerMinute_tooltip": {
+    "as1_value": "表演时每游戏分钟消耗的耐力百分比.",
+    "value": "表演期间每游戏分钟扣除的耐力百分比, 由服务器权威计算.",
+    "reason": "2026-10-26 As1 v3.12.0：漏 Server-authoritative（由服务器权威计算）"
+  },
+  "UI.json|UI_CHB_OptionsCompatibility_Tooltip": {
+    "as1_value": "适用于LG Extended Electricity以及其他扩展或替换标准电网的模组的实验性兼容模式. 如果CHB无法直接检测到正常电网电力或原版发电机, 锅炉可以使用外部模组为其所在格子提供的电力. 在此模式下, 外部电源的燃料和负载计算可能与CHB的正常运行方式不同.",
+    "value": "针对其他扩展或替代标准电网之模组的实验性后备方案. 支持LG时请使用单独的LG Extended Electricity选项. 若CHB无法直接检测到普通电网电力或原版发电机, 此选项允许锅炉使用其他模组报告在其所在格子上的电力. 多人游戏中以服务器的沙盒设置为准. 外部电源的燃料与负载计算可能与CHB正常运行不同.",
+    "reason": "2026-10-26 As1 v3.12.0：照旧版英文翻：漏“另用 LG Extended Electricity 选项”与多人以服务器沙盒为准两句，内容与现行 en 不符"
+  },
+  "UI.json|UI_CHB_OptionsLGExtendedElectricity": {
+    "as1_value": "LG延长电力保修",
+    "value": "LG 扩展电力",
+    "reason": "2026-10-26 As1 v3.12.0：LG Extended Electricity 误译为“延长电力保修”"
+  },
+  "IG_UI.json|IGUI_NotAlone_Actions": {
+    "as1_value": "操作",
+    "value": "其他",
+    "reason": "2026-10-26 As1 v3.12.0：en 为 Other，As1 译“操作”"
+  },
+  "IG_UI.json|IGUI_NotAlone_CombatBackMeUpTip": {
+    "as1_value": "只有你先动手, 她才会加入.",
+    "value": "只在你开始战斗后才加入.",
+    "reason": "2026-10-26 As1 v3.12.0：多出 en 没有的性别“她”（此键不分性别）"
+  },
+  "IG_UI.json|IGUI_NotAlone_EquipSlot_face": {
+    "as1_value": "脸型",
+    "value": "脸部",
+    "reason": "2026-10-26 As1 v3.12.0：装备栏位 Face 误译为“脸型”（外貌），应为脸部"
+  },
+  "IG_UI.json|IGUI_NotAlone_HomeStatus": {
+    "as1_value": "居所: %1, %2格%3 %4x%5",
+    "value": "家: %1, %2  z%3  %4x%5",
+    "reason": "2026-10-26 As1 v3.12.0：z%3（楼层 z）误译为“格%3”"
+  },
+  "IG_UI.json|IGUI_NotAlone_Say_AlreadyClean": {
+    "as1_value": "我身上已经干净了.",
+    "value": "我很干净, 也没有东西要洗.",
+    "reason": "2026-10-26 As1 v3.12.0：漏 nothing to wash（没有要洗的东西）"
+  },
+  "IG_UI.json|IGUI_NotAlone_Say_GoWash": {
+    "as1_value": "我去洗洗.",
+    "value": "我去洗漱一下, 顺便洗点衣服.",
+    "reason": "2026-10-26 As1 v3.12.0：漏 do some laundry（顺便洗衣服）"
+  },
+  "IG_UI.json|IGUI_NotAlone_Soc_EvEngage_Far_3": {
+    "as1_value": "拿到手了.",
+    "value": "我处理.",
+    "reason": "2026-10-26 As1 v3.12.0：EvEngage 情境的 Got it 是「我來處理」，As1 譯成拿到東西"
+  },
+  "IG_UI.json|IGUI_NotAlone_Wash": {
+    "as1_value": "清洗一下",
+    "value": "洗澡并洗衣服",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 do laundry（洗衣服）"
+  },
+  "IG_UI.json|IGUI_NotAlone_WindowOrder": {
+    "as1_value": "指令",
+    "value": "菜单",
+    "reason": "2026-10-26 As1 v3.12.0：en 是 Menu，As1 譯成「指令」，照舊版英文"
+  },
+  "IG_UI.json|IGUI_ALifeUI_019643b81022beb7": {
+    "as1_value": "Ruth - 收税员",
+    "value": "Ruth - 收账人",
+    "reason": "2026-10-26 As1 v3.12.0：幫派 Collector（收帳人）譯成「收税员」（稅務官）；人名沿用 As1 寫法"
+  },
+  "IG_UI.json|IGUI_ALifeUI_1740d44b3127686d": {
+    "as1_value": "Adam - 合伙人",
+    "value": "Adam - 同伙",
+    "reason": "2026-10-26 As1 v3.12.0：幫派 Associate（外圍同夥）譯成「合伙人」，層級顛倒成高於核心成員；人名沿用 As1 寫法"
+  },
+  "IG_UI.json|IGUI_ALifeUI_2914911139ab30ed": {
+    "as1_value": "Calvin - 收税员",
+    "value": "Calvin - 收账人",
+    "reason": "2026-10-26 As1 v3.12.0：幫派 Collector（收帳人）譯成「收税员」（稅務官）；人名沿用 As1 寫法"
+  },
+  "IG_UI.json|IGUI_ALifeUI_31eabcb574ce5c09": {
+    "as1_value": "Gus - 收税员",
+    "value": "Gus - 收账人",
+    "reason": "2026-10-26 As1 v3.12.0：幫派 Collector（收帳人）譯成「收税员」（稅務官）；人名沿用 As1 寫法"
+  },
+  "IG_UI.json|IGUI_ALifeUI_36d7280849ddb0de": {
+    "as1_value": "Calvin - 排长",
+    "value": "Calvin - 排军士长",
+    "reason": "2026-10-26 As1 v3.12.0：Platoon Sergeant（士官）譯成「排长」（軍官）；人名沿用 As1 寫法"
+  },
+  "IG_UI.json|IGUI_ALifeUI_4486bf8a2ec50ade": {
+    "as1_value": "Lyle - 合伙人",
+    "value": "Lyle - 同伙",
+    "reason": "2026-10-26 As1 v3.12.0：幫派 Associate（外圍同夥）譯成「合伙人」，層級顛倒成高於核心成員；人名沿用 As1 寫法"
+  },
+  "IG_UI.json|IGUI_ALifeUI_48325d11182ad5fb": {
+    "as1_value": "几名占据高层的步枪手, 居高临下封锁街道, 绝不下楼.",
+    "value": "两名步枪兵据守高楼层, 压制下方街道, 拒不下楼.",
+    "reason": "2026-10-26 As1 v3.12.0：a pair（兩名）譯成「幾名」，數量錯"
+  },
+  "IG_UI.json|IGUI_ALifeUI_4d64498647c0c2fa": {
+    "as1_value": "Boyd - 合伙人",
+    "value": "Boyd - 同伙",
+    "reason": "2026-10-26 As1 v3.12.0：幫派 Associate（外圍同夥）譯成「合伙人」，層級顛倒成高於核心成員；人名沿用 As1 寫法"
+  },
+  "IG_UI.json|IGUI_ALifeUI_567fa38f12e2c311": {
+    "as1_value": "Clyde - 合伙人",
+    "value": "Clyde - 同伙",
+    "reason": "2026-10-26 As1 v3.12.0：幫派 Associate（外圍同夥）譯成「合伙人」，層級顛倒成高於核心成員；人名沿用 As1 寫法"
+  },
+  "IG_UI.json|IGUI_ALifeUI_5a18bb597b7aa45f": {
+    "as1_value": "Earl - 合伙人",
+    "value": "Earl - 同伙",
+    "reason": "2026-10-26 As1 v3.12.0：幫派 Associate（外圍同夥）譯成「合伙人」，層級顛倒成高於核心成員；人名沿用 As1 寫法"
+  },
+  "IG_UI.json|IGUI_ALifeUI_639ff09b353f1ce7": {
+    "as1_value": "Boyd - 收税员",
+    "value": "Boyd - 收账人",
+    "reason": "2026-10-26 As1 v3.12.0：幫派 Collector（收帳人）譯成「收税员」（稅務官）；人名沿用 As1 寫法"
+  },
+  "IG_UI.json|IGUI_ALifeUI_66b5217f2b276724": {
+    "as1_value": "Evan - 收税员",
+    "value": "Evan - 收账人",
+    "reason": "2026-10-26 As1 v3.12.0：幫派 Collector（收帳人）譯成「收税员」（稅務官）；人名沿用 As1 寫法"
+  },
+  "IG_UI.json|IGUI_ALifeUI_6ba2e0f46917f802": {
+    "as1_value": "Vernon - 合伙人",
+    "value": "Vernon - 同伙",
+    "reason": "2026-10-26 As1 v3.12.0：幫派 Associate（外圍同夥）譯成「合伙人」，層級顛倒成高於核心成員；人名沿用 As1 寫法"
+  },
+  "IG_UI.json|IGUI_ALifeUI_6cbb4aa400611cfe": {
+    "as1_value": "Clyde - 收税员",
+    "value": "Clyde - 收账人",
+    "reason": "2026-10-26 As1 v3.12.0：幫派 Collector（收帳人）譯成「收税员」（稅務官）；人名沿用 As1 寫法"
+  },
+  "IG_UI.json|IGUI_ALifeUI_6cda642b4dbeee91": {
+    "as1_value": "Curtis - 合伙人",
+    "value": "Curtis - 同伙",
+    "reason": "2026-10-26 As1 v3.12.0：幫派 Associate（外圍同夥）譯成「合伙人」，層級顛倒成高於核心成員；人名沿用 As1 寫法"
+  },
+  "IG_UI.json|IGUI_ALifeUI_73774258396cd5f8": {
+    "as1_value": "安德烈 - 排长",
+    "value": "安德烈 - 排军士长",
+    "reason": "2026-10-26 As1 v3.12.0：Platoon Sergeant（士官）譯成「排长」（軍官）；人名沿用 As1 寫法"
+  },
+  "ContextMenu.json|ContextMenu_SEW_AdmCapture": {
+    "as1_value": "把角点到此处的范围存为房间",
+    "value": "将从角落到此处的方框范围保存为房间, 放入",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 stocked with，後接物品清單會接不上"
+  },
+  "ContextMenu.json|ContextMenu_SEW_AdmRoom": {
+    "as1_value": "在墙后放置房间",
+    "value": "在墙后设置房间, 方向朝",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 to the（方向），後接方位會接不上"
+  },
+  "Sandbox.json|Sandbox_HydeCoUnderGround_BreathingDrain_tooltip": {
+    "as1_value": "氧气瓶和面具滤芯的消耗速度, 相对游戏自身的速率. 1.0 与基础游戏完全一致; 0表示永久用不完; 4表示消耗快四倍. 消耗由游戏自己计算, 这里只是每刻做一次修正, 1.0 时完全不介入.",
+    "value": "氧气罐和面具滤芯的消耗速度, 相对于游戏本身的速度. 1.0 与原版游戏的消耗完全相同; 0 则永远用不完; 4 则消耗速度为四倍. 在地下时, 运行中的氧气罐还会应用“地下氧气罐消耗”设置.",
+    "reason": "2026-10-26 As1 v3.12.0：最後一句照舊版英文翻，未譯地下氧氣罐消耗設定那句"
+  },
+  "Sandbox.json|Sandbox_HydeCoUnderGround_SporeSickness_tooltip": {
+    "as1_value": "孢子在地下对你影响有多重. 靠近出菇的尸体时会累积, 戴口罩能挡掉大部分, 回到干净空气里就会消退. 0表示关闭.",
+    "value": "孢子在地下对你的影响程度. 会在子实体附近累积, 面具可阻挡大部分, 回到干净空气后就会消退. 0 则关闭.",
+    "reason": "2026-10-26 As1 v3.12.0：fruiting bodies（子實體）誤譯成出菇的屍體"
+  },
+  "Tooltip.json|Tooltip_HydeCoUG_MiningMagazine2": {
+    "as1_value": "教授: 焙烧黄铁矿, 用煤制焦炭, 冶炼方铅矿, 从方铅矿提炼银, 冶炼闪锌矿, 用锌制黄铜锭, 煅烧石膏.",
+    "value": "解锁配方: 焙烧黄铁矿, 用煤炭制作焦炭, 熔炼方铅矿, 从方铅矿提炼银, 熔炼闪锌矿, 用锌制作黄铜锭, 煅烧石膏, 将锌烧成氧化锌, 铸造黄铜门把手, 制作电池酸液, 铸造铅板, 熔化废锌.",
+    "reason": "2026-10-26 As1 v3.12.0：教授清單漏掉後五項配方"
+  },
+  "Sandbox.json|Sandbox_LiveToFight_ChanceLossPerRescue_tooltip": {
+    "as1_value": "每次救援都会按此数值降低下一次的几率. 若初始为100且每次损失25, 那么第五次濒死必定死亡.",
+    "value": "每次救援都会让下一次救援的几率降低这么多. 设为 60 和 25 时, 第四次濒死必定致命; 设为 100 和 25 时则是第五次.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉 60 和 25 時第四次致命的條件"
+  },
+  "Sandbox.json|Sandbox_LiveToFight_Preset_tooltip": {
+    "as1_value": "0会读取游戏模式并与之对应: 天启对应标准, 复苏对应温和, 灭绝对应严酷, 爆发对应快速. 沙盒世界按其僵尸, 战利品和伤势来判定. 你亲自修改的任何选项总是优先于难度. 温和: 途中麻烦更少, 恶意陌生人更少, 没有致命旅程, 护士更仁慈, 醒来时生命值更多, 失去的更少. 严酷: 麻烦更多, 恶意更多, 护士更苛刻, 生命值更少, 失去的更多, 救援更快用尽. 快速: 昏迷, 黑屏和恢复时间更短. 标准: 保持选项原样.",
+    "value": "0 会读取游戏模式并与之匹配: 启示录为标准, 复兴为温和, 绝灭为严酷, 爆发为快速. 沙盒世界则根据其僵尸、物资和伤害设置判断. 你自行更改的任何选项总是优先于难度. 温和: 首次救援必定发生、途中意外较少、恶意陌生人少、移动不会致命、护士较仁慈、醒来时健康较高、损失较少. 严酷: 首次救援几率为百分之 30、意外更多、恶意更多、护士更严苛、健康较低、损失更多, 救援次数更快用完. 快速: 首次救援必定发生, 昏迷、黑屏和恢复期都较短. 标准: 保持选项原样, 首次救援几率为百分之 60.",
+    "reason": "2026-10-26 As1 v3.12.0：漏掉首次救援必定發生／30 percent／60 percent 等數值與條件"
+  },
+  "Sandbox.json|Sandbox_LiveToFight_TakeWorn_tooltip": {
+    "as1_value": "小偷会留下一件衣物或首饰, 如鞋子, 夹克, 帽子或手表.",
+    "value": "小偷会拿走一件衣物或首饰据为己有, 例如鞋子、夹克、帽子或手表.",
+    "reason": "2026-10-26 As1 v3.12.0：keeps（拿走據為己有）譯成「留下」，方向相反"
+  },
+  "ItemName.json|DesertCargo.Trousers_JeansCarpenter_TuckBoot93": {
+    "as1_value": "牛仔裤 (伐木工)",
+    "value": "牛仔裤 (木工款)",
+    "reason": "2026-10-26 As1 v3.12.0：Carpenter（木工）誤譯成伐木工"
+  },
+  "ItemName.json|DesertCargo.Trousers_JeansCarpenter_TuckCowboy": {
+    "as1_value": "牛仔裤 (伐木工)",
+    "value": "牛仔裤 (木工款)",
+    "reason": "2026-10-26 As1 v3.12.0：Carpenter（木工）誤譯成伐木工"
+  },
+  "IG_UI.json|IGUI_Knox_Act_toggle": {
+    "as1_value": "打开/关闭物品栏 (游戏的物品栏按键也有效)",
+    "value": "打开 / 关闭物品栏",
+    "reason": "2026-10-26 As1 v3.12.0：多出 en 沒有的括號說明（舊版英文）"
+  },
+  "IG_UI.json|IGUI_Knox_FluidHeld": {
+    "as1_value": "已使用",
+    "value": "已装",
+    "reason": "2026-10-26 As1 v3.12.0：Holds（已裝）誤譯成「已使用」"
+  },
+  "IG_UI.json|IGUI_NotAlone_OverheadCyrillic": {
+    "as1_value": "0",
+    "value": "1",
+    "reason": "2026-10-26 As1 v3.12.0：不是顯示文字，是 Stay With Me 讀的旗標：BridgeData.overheadOk() 遇到含非 ASCII 字元的台詞或名字，只在本鍵為 \"1\" 時顯示頭頂對話；As1 照 EN 寫 0 會讓中文同伴回應不顯示（2026-10-07 #733）"
+  },
+  "IG_UI.json|IGUI_Knox_Choice_loot_scope_Info": {
+    "as1_value": "'周围' 一栏列出哪些容器. \"仅已打开的\": 你在世界中点击打开或使用Viewpoint按键打开的容器, 以及你身边的地面. \"自动\": 使用Viewpoint视角时显示对应内容, 使用普通视角时显示周围所有内容. 在车内时始终显示所有内容.",
+    "value": "“周围”栏会列出哪些容器. “仅限打开的”: 你在世界中点击打开或用 Viewpoint 的按键打开的那个容器, 以及你旁边的地板. “自动”: 使用 Viewpoint 的镜头时同前者, 使用普通镜头时列出周围全部. 在车内时总是全部显示. Knox Inventory 1.0 BETA: 使用 OldPoint 的俯视镜头时也列出周围全部.",
+    "reason": "2026-10-26 As1 v3.12.0：多 owner 裁決鍵（KnoxInventory／KnoxInventoryBeta），As1 譯文漏了 Beta 版 OldPoint 俯視鏡頭那句，維持裁決譯文"
+  },
+  "IG_UI.json|IGUI_Breed_amr_rabbit_dutch_v1": {
+    "as1_value": "荷兰兔",
+    "value": "黑色荷兰兔",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "IG_UI.json|IGUI_Breed_amr_rabbit_dutch_v2": {
+    "as1_value": "荷兰兔",
+    "value": "巧克力色荷兰兔",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "IG_UI.json|IGUI_Breed_amr_rabbit_dutch_v3": {
+    "as1_value": "荷兰兔",
+    "value": "蓝色荷兰兔",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "IG_UI.json|IGUI_Breed_amr_rabbit_englishspot_v1": {
+    "as1_value": "英国斑点兔",
+    "value": "黑色英国斑点兔",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "IG_UI.json|IGUI_Breed_amr_rabbit_englishspot_v2": {
+    "as1_value": "英国斑点兔",
+    "value": "巧克力色英国斑点兔",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "IG_UI.json|IGUI_Breed_amr_rabbit_englishspot_v3": {
+    "as1_value": "英国斑点兔",
+    "value": "蓝色英国斑点兔",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "IG_UI.json|IGUI_Breed_amr_turkey_blueslate": {
+    "as1_value": "‌蓝石板火鸡",
+    "value": "蓝石板火鸡",
+    "reason": "2026-10-26 As1 v3.12.0：開頭夾帶零寬字元 U+200C, 刪除"
+  },
+  "ItemName.json|AMRBirds321.GooseWhole": {
+    "as1_value": "整鹅",
+    "value": "整鹅 (已拔毛)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯 (plucked), 補「(已拔毛)」"
+  },
+  "ItemName.json|AMRBirds321.PeafowlWhole": {
+    "as1_value": "整只孔雀",
+    "value": "整只孔雀 (已拔毛)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯 (plucked), 補「(已拔毛)」"
+  },
+  "ItemName.json|Base.AMR_Head_Bull_BW_01_bull": {
+    "as1_value": "黑白公牛头",
+    "value": "黑白公牛头 01",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯編號 01, 三個物品同名, 補編號"
+  },
+  "ItemName.json|Base.AMR_Head_Bull_BW_02_bull": {
+    "as1_value": "黑白公牛头",
+    "value": "黑白公牛头 02",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯編號 02, 三個物品同名, 補編號"
+  },
+  "ItemName.json|Base.AMR_Head_Bull_BW_03_bull": {
+    "as1_value": "黑白公牛头",
+    "value": "黑白公牛头 03",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯編號 03, 三個物品同名, 補編號"
+  },
+  "ItemName.json|Base.AMR_Head_Bull_Brown_01_bull": {
+    "as1_value": "棕色公牛头",
+    "value": "棕色公牛头 01",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯編號 01, 三個物品同名, 補編號"
+  },
+  "ItemName.json|Base.AMR_Head_Bull_Brown_02_bull": {
+    "as1_value": "棕色公牛头",
+    "value": "棕色公牛头 02",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯編號 02, 三個物品同名, 補編號"
+  },
+  "ItemName.json|Base.AMR_Head_Bull_Brown_03_bull": {
+    "as1_value": "棕色公牛头",
+    "value": "棕色公牛头 03",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯編號 03, 三個物品同名, 補編號"
+  },
+  "ItemName.json|Base.AMR_Head_Calf_BW_01_cowcalf": {
+    "as1_value": "黑白小牛头",
+    "value": "黑白小牛头 01",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯編號 01, 三個物品同名, 補編號"
+  },
+  "ItemName.json|Base.AMR_Head_Calf_BW_02_cowcalf": {
+    "as1_value": "黑白小牛头",
+    "value": "黑白小牛头 02",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯編號 02, 三個物品同名, 補編號"
+  },
+  "ItemName.json|Base.AMR_Head_Calf_BW_03_cowcalf": {
+    "as1_value": "黑白小牛头",
+    "value": "黑白小牛头 03",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯編號 03, 三個物品同名, 補編號"
+  },
+  "ItemName.json|Base.AMR_Head_Calf_Brown_01_cowcalf": {
+    "as1_value": "棕色小牛头",
+    "value": "棕色小牛头 01",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯編號 01, 三個物品同名, 補編號"
+  },
+  "ItemName.json|Base.AMR_Head_Calf_Brown_02_cowcalf": {
+    "as1_value": "棕色小牛头",
+    "value": "棕色小牛头 02",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯編號 02, 三個物品同名, 補編號"
+  },
+  "ItemName.json|Base.AMR_Head_Calf_Brown_03_cowcalf": {
+    "as1_value": "棕色小牛头",
+    "value": "棕色小牛头 03",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯編號 03, 三個物品同名, 補編號"
+  },
+  "ItemName.json|Base.AMR_Head_Pig_Berkshire_V1_Piglet": {
+    "as1_value": "伯克夏猪小猪头",
+    "value": "伯克夏小猪头",
+    "reason": "2026-10-26 As1 v3.12.0：多了一個「猪」字, 刪去, 與 V2/V3 一致"
+  },
+  "ItemName.json|Base.AMR_Head_Rabbit_Dutch_V1_Female_rabdoe": {
+    "as1_value": "母荷兰兔头",
+    "value": "黑色母荷兰兔头",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Head_Rabbit_Dutch_V1_Juvenile_rabkitten": {
+    "as1_value": "小荷兰兔头",
+    "value": "黑色小荷兰兔头",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Head_Rabbit_Dutch_V2_Female_rabdoe": {
+    "as1_value": "母荷兰兔头",
+    "value": "巧克力色母荷兰兔头",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Head_Rabbit_Dutch_V2_Juvenile_rabkitten": {
+    "as1_value": "小荷兰兔头",
+    "value": "巧克力色小荷兰兔头",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Head_Rabbit_Dutch_V3_Female_rabdoe": {
+    "as1_value": "母荷兰兔头",
+    "value": "蓝色母荷兰兔头",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Head_Rabbit_Dutch_V3_Juvenile_rabkitten": {
+    "as1_value": "小荷兰兔头",
+    "value": "蓝色小荷兰兔头",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Head_Rabbit_EnglishSpot_V1_Female_rabdoe": {
+    "as1_value": "英国斑点母兔头",
+    "value": "黑色英国斑点母兔头",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Head_Rabbit_EnglishSpot_V1_Juvenile_rabkitten": {
+    "as1_value": "英国斑点小兔头",
+    "value": "黑色英国斑点小兔头",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Head_Rabbit_EnglishSpot_V2_Female_rabdoe": {
+    "as1_value": "英国斑点母兔头",
+    "value": "巧克力色英国斑点母兔头",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Head_Rabbit_EnglishSpot_V2_Juvenile_rabkitten": {
+    "as1_value": "英国斑点小兔头",
+    "value": "巧克力色英国斑点小兔头",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Head_Rabbit_EnglishSpot_V3_Female_rabdoe": {
+    "as1_value": "英国斑点母兔头",
+    "value": "蓝色英国斑点母兔头",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Head_Rabbit_EnglishSpot_V3_Juvenile_rabkitten": {
+    "as1_value": "英国斑点小兔头",
+    "value": "蓝色英国斑点小兔头",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Head_Turkey_BlueSlate_Female_turkeyhen": {
+    "as1_value": "‌蓝石板母火鸡头",
+    "value": "蓝石板母火鸡头",
+    "reason": "2026-10-26 As1 v3.12.0：開頭夾帶零寬字元 U+200C, 刪除"
+  },
+  "ItemName.json|Base.AMR_Head_Turkey_BlueSlate_Juvenile_turkeypoult": {
+    "as1_value": "‌蓝石板小火鸡头",
+    "value": "蓝石板小火鸡头",
+    "reason": "2026-10-26 As1 v3.12.0：開頭夾帶零寬字元 U+200C, 刪除"
+  },
+  "ItemName.json|Base.AMR_Head_Turkey_BlueSlate_Male_gobblers": {
+    "as1_value": "‌蓝石板公火鸡头",
+    "value": "蓝石板公火鸡头",
+    "reason": "2026-10-26 As1 v3.12.0：開頭夾帶零寬字元 U+200C, 刪除"
+  },
+  "Sandbox.json|Sandbox_WoundExpansion.allowPoorlyStitched_tooltip": {
+    "as1_value": "因技能低、无消毒剂或缝合针导致的缝合不良. 关闭可阻止其发生并清除现有患者的此状态.",
+    "value": "因技能低、无消毒剂或使用缝纫针缝合导致的缝合不良. 关闭可阻止其发生并清除现有患者的此状态.",
+    "reason": "2026-10-26 As1 v3.12.0：sewing needle 誤譯成「缝合针」, 意思相反, 改為「使用缝纫针缝合」"
+  },
+  "Sandbox.json|Sandbox_WoundExpansion.fallSevere_tooltip": {
+    "as1_value": "坠落伤害达到或超过此值时视为严重坠落: 会导致脱臼和内出血, 而不仅仅是擦伤.",
+    "value": "坠落伤害达到或超过此值时视为严重坠落: 会导致脱臼和内出血, 而不是擦伤.",
+    "reason": "2026-10-26 As1 v3.12.0：instead of 誤譯成「而不仅仅是」, 改為「而不是」"
+  },
+  "ItemName.json|Base.AMR_Hide_Deer_Melanistic_Female_Fur_Tan_Small": {
+    "as1_value": "黑化母鹿皮 (鞣制带毛)",
+    "value": "黑化母鹿皮 (小块, 鞣制带毛)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯 Small, 補「小块」"
+  },
+  "ItemName.json|Base.AMR_Hide_Deer_Melanistic_Juvenile_Fur_Tan_Small": {
+    "as1_value": "黑化小鹿皮 (鞣制带毛)",
+    "value": "黑化小鹿皮 (小块, 鞣制带毛)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯 Small, 補「小块」"
+  },
+  "ItemName.json|Base.AMR_Hide_Deer_Melanistic_Male_Fur_Tan_Small": {
+    "as1_value": "黑化公鹿皮 (鞣制带毛)",
+    "value": "黑化公鹿皮 (小块, 鞣制带毛)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯 Small, 補「小块」"
+  },
+  "ItemName.json|Base.AMR_Hide_Deer_Piebald_Female_Fur_Tan_Small": {
+    "as1_value": "花斑母鹿皮 (鞣制带毛)",
+    "value": "花斑母鹿皮 (小块, 鞣制带毛)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯 Small, 補「小块」"
+  },
+  "ItemName.json|Base.AMR_Hide_Deer_Piebald_Juvenile_Fur_Tan_Small": {
+    "as1_value": "花斑小鹿皮 (鞣制带毛)",
+    "value": "花斑小鹿皮 (小块, 鞣制带毛)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯 Small, 補「小块」"
+  },
+  "ItemName.json|Base.AMR_Hide_Deer_Piebald_Male_Fur_Tan_Small": {
+    "as1_value": "花斑公鹿皮 (鞣制带毛)",
+    "value": "花斑公鹿皮 (小块, 鞣制带毛)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯 Small, 補「小块」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Female_Full": {
+    "as1_value": "母荷兰兔皮 (未加工)",
+    "value": "黑色母荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Female_Fur": {
+    "as1_value": "母荷兰兔皮 (带毛, 未鞣制)",
+    "value": "黑色母荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Female_Fur_Tan": {
+    "as1_value": "母荷兰兔皮",
+    "value": "黑色母荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Female_Fur_Tan_Wet": {
+    "as1_value": "母荷兰兔皮",
+    "value": "黑色母荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Female_Grey_Full": {
+    "as1_value": "母荷兰兔皮 (未加工)",
+    "value": "黑色母荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Female_Grey_Fur": {
+    "as1_value": "母荷兰兔皮 (带毛, 未鞣制)",
+    "value": "黑色母荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Female_Grey_Fur_Tan": {
+    "as1_value": "母荷兰兔皮",
+    "value": "黑色母荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Female_Grey_Fur_Tan_Wet": {
+    "as1_value": "母荷兰兔皮",
+    "value": "黑色母荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Juvenile_Full": {
+    "as1_value": "小荷兰兔皮 (未加工)",
+    "value": "黑色小荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Juvenile_Fur": {
+    "as1_value": "小荷兰兔皮 (带毛, 未鞣制)",
+    "value": "黑色小荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Juvenile_Fur_Tan": {
+    "as1_value": "小荷兰兔皮",
+    "value": "黑色小荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Juvenile_Fur_Tan_Wet": {
+    "as1_value": "小荷兰兔皮",
+    "value": "黑色小荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Juvenile_Grey_Full": {
+    "as1_value": "小荷兰兔皮 (未加工)",
+    "value": "黑色小荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Juvenile_Grey_Fur": {
+    "as1_value": "小荷兰兔皮 (带毛, 未鞣制)",
+    "value": "黑色小荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Juvenile_Grey_Fur_Tan": {
+    "as1_value": "小荷兰兔皮",
+    "value": "黑色小荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Juvenile_Grey_Fur_Tan_Wet": {
+    "as1_value": "小荷兰兔皮",
+    "value": "黑色小荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Male_Full": {
+    "as1_value": "公荷兰兔皮 (未加工)",
+    "value": "黑色公荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Male_Fur": {
+    "as1_value": "公荷兰兔皮 (带毛, 未鞣制)",
+    "value": "黑色公荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Male_Fur_Tan": {
+    "as1_value": "公荷兰兔皮",
+    "value": "黑色公荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Male_Fur_Tan_Wet": {
+    "as1_value": "公荷兰兔皮",
+    "value": "黑色公荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Male_Grey_Full": {
+    "as1_value": "公荷兰兔皮 (未加工)",
+    "value": "黑色公荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Male_Grey_Fur": {
+    "as1_value": "公荷兰兔皮 (带毛, 未鞣制)",
+    "value": "黑色公荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Male_Grey_Fur_Tan": {
+    "as1_value": "公荷兰兔皮",
+    "value": "黑色公荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V1_Male_Grey_Fur_Tan_Wet": {
+    "as1_value": "公荷兰兔皮",
+    "value": "黑色公荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Female_Full": {
+    "as1_value": "母荷兰兔皮 (未加工)",
+    "value": "巧克力色母荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Female_Fur": {
+    "as1_value": "母荷兰兔皮 (带毛, 未鞣制)",
+    "value": "巧克力色母荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Female_Fur_Tan": {
+    "as1_value": "母荷兰兔皮",
+    "value": "巧克力色母荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Female_Fur_Tan_Wet": {
+    "as1_value": "母荷兰兔皮",
+    "value": "巧克力色母荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Female_Grey_Full": {
+    "as1_value": "母荷兰兔皮 (未加工)",
+    "value": "巧克力色母荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Female_Grey_Fur": {
+    "as1_value": "母荷兰兔皮 (带毛, 未鞣制)",
+    "value": "巧克力色母荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Female_Grey_Fur_Tan": {
+    "as1_value": "母荷兰兔皮",
+    "value": "巧克力色母荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Female_Grey_Fur_Tan_Wet": {
+    "as1_value": "母荷兰兔皮",
+    "value": "巧克力色母荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Juvenile_Full": {
+    "as1_value": "小荷兰兔皮 (未加工)",
+    "value": "巧克力色小荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Juvenile_Fur": {
+    "as1_value": "小荷兰兔皮 (带毛, 未鞣制)",
+    "value": "巧克力色小荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Juvenile_Fur_Tan": {
+    "as1_value": "小荷兰兔皮",
+    "value": "巧克力色小荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Juvenile_Fur_Tan_Wet": {
+    "as1_value": "小荷兰兔皮",
+    "value": "巧克力色小荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Juvenile_Grey_Full": {
+    "as1_value": "小荷兰兔皮 (未加工)",
+    "value": "巧克力色小荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Juvenile_Grey_Fur": {
+    "as1_value": "小荷兰兔皮 (带毛, 未鞣制)",
+    "value": "巧克力色小荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Juvenile_Grey_Fur_Tan": {
+    "as1_value": "小荷兰兔皮",
+    "value": "巧克力色小荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Juvenile_Grey_Fur_Tan_Wet": {
+    "as1_value": "小荷兰兔皮",
+    "value": "巧克力色小荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Male_Full": {
+    "as1_value": "公荷兰兔皮 (未加工)",
+    "value": "巧克力色公荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Male_Fur": {
+    "as1_value": "公荷兰兔皮 (带毛, 未鞣制)",
+    "value": "巧克力色公荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Male_Fur_Tan": {
+    "as1_value": "公荷兰兔皮",
+    "value": "巧克力色公荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Male_Fur_Tan_Wet": {
+    "as1_value": "公荷兰兔皮",
+    "value": "巧克力色公荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Male_Grey_Full": {
+    "as1_value": "公荷兰兔皮 (未加工)",
+    "value": "巧克力色公荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Male_Grey_Fur": {
+    "as1_value": "公荷兰兔皮 (带毛, 未鞣制)",
+    "value": "巧克力色公荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Male_Grey_Fur_Tan": {
+    "as1_value": "公荷兰兔皮",
+    "value": "巧克力色公荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V2_Male_Grey_Fur_Tan_Wet": {
+    "as1_value": "公荷兰兔皮",
+    "value": "巧克力色公荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Chocolate, 補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Female_Full": {
+    "as1_value": "母荷兰兔皮 (未加工)",
+    "value": "蓝色母荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Female_Fur": {
+    "as1_value": "母荷兰兔皮 (带毛, 未鞣制)",
+    "value": "蓝色母荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Female_Fur_Tan": {
+    "as1_value": "母荷兰兔皮",
+    "value": "蓝色母荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Female_Fur_Tan_Wet": {
+    "as1_value": "母荷兰兔皮",
+    "value": "蓝色母荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Female_Grey_Full": {
+    "as1_value": "母荷兰兔皮 (未加工)",
+    "value": "蓝色母荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Female_Grey_Fur": {
+    "as1_value": "母荷兰兔皮 (带毛, 未鞣制)",
+    "value": "蓝色母荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Female_Grey_Fur_Tan": {
+    "as1_value": "母荷兰兔皮",
+    "value": "蓝色母荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Female_Grey_Fur_Tan_Wet": {
+    "as1_value": "母荷兰兔皮",
+    "value": "蓝色母荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Juvenile_Full": {
+    "as1_value": "小荷兰兔皮 (未加工)",
+    "value": "蓝色小荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Juvenile_Fur": {
+    "as1_value": "小荷兰兔皮 (带毛, 未鞣制)",
+    "value": "蓝色小荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Juvenile_Fur_Tan": {
+    "as1_value": "小荷兰兔皮",
+    "value": "蓝色小荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Juvenile_Fur_Tan_Wet": {
+    "as1_value": "小荷兰兔皮",
+    "value": "蓝色小荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Juvenile_Grey_Full": {
+    "as1_value": "小荷兰兔皮 (未加工)",
+    "value": "蓝色小荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Juvenile_Grey_Fur": {
+    "as1_value": "小荷兰兔皮 (带毛, 未鞣制)",
+    "value": "蓝色小荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Juvenile_Grey_Fur_Tan": {
+    "as1_value": "小荷兰兔皮",
+    "value": "蓝色小荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Juvenile_Grey_Fur_Tan_Wet": {
+    "as1_value": "小荷兰兔皮",
+    "value": "蓝色小荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Male_Full": {
+    "as1_value": "公荷兰兔皮 (未加工)",
+    "value": "蓝色公荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Male_Fur": {
+    "as1_value": "公荷兰兔皮 (带毛, 未鞣制)",
+    "value": "蓝色公荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Male_Fur_Tan": {
+    "as1_value": "公荷兰兔皮",
+    "value": "蓝色公荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Male_Fur_Tan_Wet": {
+    "as1_value": "公荷兰兔皮",
+    "value": "蓝色公荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Male_Grey_Full": {
+    "as1_value": "公荷兰兔皮 (未加工)",
+    "value": "蓝色公荷兰兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Male_Grey_Fur": {
+    "as1_value": "公荷兰兔皮 (带毛, 未鞣制)",
+    "value": "蓝色公荷兰兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Male_Grey_Fur_Tan": {
+    "as1_value": "公荷兰兔皮",
+    "value": "蓝色公荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_Dutch_V3_Male_Grey_Fur_Tan_Wet": {
+    "as1_value": "公荷兰兔皮",
+    "value": "蓝色公荷兰兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Blue, 補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Female_Full": {
+    "as1_value": "英国斑点母兔皮 (未加工)",
+    "value": "黑色英国斑点母兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Female_Fur": {
+    "as1_value": "英国斑点母兔皮 (带毛, 未鞣制)",
+    "value": "黑色英国斑点母兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Female_Fur_Tan": {
+    "as1_value": "英国斑点母兔皮",
+    "value": "黑色英国斑点母兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Female_Fur_Tan_Wet": {
+    "as1_value": "英国斑点母兔皮",
+    "value": "黑色英国斑点母兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Female_Grey_Full": {
+    "as1_value": "英国斑点母兔皮 (未加工)",
+    "value": "黑色英国斑点母兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Female_Grey_Fur": {
+    "as1_value": "英国斑点母兔皮 (带毛, 未鞣制)",
+    "value": "黑色英国斑点母兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Female_Grey_Fur_Tan": {
+    "as1_value": "英国斑点母兔皮",
+    "value": "黑色英国斑点母兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯毛色 Black, 補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Female_Grey_Fur_Tan_Wet": {
+    "as1_value": "英国斑点母兔皮",
+    "value": "黑色英国斑点母兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Juvenile_Full": {
+    "as1_value": "英国斑点小兔皮 (未加工)",
+    "value": "黑色英国斑点小兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Juvenile_Fur": {
+    "as1_value": "英国斑点小兔皮 (带毛, 未鞣制)",
+    "value": "黑色英国斑点小兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Juvenile_Fur_Tan": {
+    "as1_value": "英国斑点小兔皮",
+    "value": "黑色英国斑点小兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Juvenile_Fur_Tan_Wet": {
+    "as1_value": "英国斑点小兔皮",
+    "value": "黑色英国斑点小兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Juvenile_Grey_Full": {
+    "as1_value": "英国斑点小兔皮 (未加工)",
+    "value": "黑色英国斑点小兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Juvenile_Grey_Fur": {
+    "as1_value": "英国斑点小兔皮 (带毛, 未鞣制)",
+    "value": "黑色英国斑点小兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Juvenile_Grey_Fur_Tan": {
+    "as1_value": "英国斑点小兔皮",
+    "value": "黑色英国斑点小兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Juvenile_Grey_Fur_Tan_Wet": {
+    "as1_value": "英国斑点小兔皮",
+    "value": "黑色英国斑点小兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Male_Full": {
+    "as1_value": "英国斑点公兔皮 (未加工)",
+    "value": "黑色英国斑点公兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Male_Fur": {
+    "as1_value": "英国斑点公兔皮 (带毛, 未鞣制)",
+    "value": "黑色英国斑点公兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Male_Fur_Tan": {
+    "as1_value": "英国斑点公兔皮",
+    "value": "黑色英国斑点公兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Male_Fur_Tan_Wet": {
+    "as1_value": "英国斑点公兔皮",
+    "value": "黑色英国斑点公兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Male_Grey_Full": {
+    "as1_value": "英国斑点公兔皮 (未加工)",
+    "value": "黑色英国斑点公兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Male_Grey_Fur": {
+    "as1_value": "英国斑点公兔皮 (带毛, 未鞣制)",
+    "value": "黑色英国斑点公兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Male_Grey_Fur_Tan": {
+    "as1_value": "英国斑点公兔皮",
+    "value": "黑色英国斑点公兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V1_Male_Grey_Fur_Tan_Wet": {
+    "as1_value": "英国斑点公兔皮",
+    "value": "黑色英国斑点公兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Black，前面補「黑色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Female_Full": {
+    "as1_value": "英国斑点母兔皮 (未加工)",
+    "value": "巧克力色英国斑点母兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Female_Fur": {
+    "as1_value": "英国斑点母兔皮 (带毛, 未鞣制)",
+    "value": "巧克力色英国斑点母兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Female_Fur_Tan": {
+    "as1_value": "英国斑点母兔皮",
+    "value": "巧克力色英国斑点母兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Female_Fur_Tan_Wet": {
+    "as1_value": "英国斑点母兔皮",
+    "value": "巧克力色英国斑点母兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Female_Grey_Full": {
+    "as1_value": "英国斑点母兔皮 (未加工)",
+    "value": "巧克力色英国斑点母兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Female_Grey_Fur": {
+    "as1_value": "英国斑点母兔皮 (带毛, 未鞣制)",
+    "value": "巧克力色英国斑点母兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Female_Grey_Fur_Tan": {
+    "as1_value": "英国斑点母兔皮",
+    "value": "巧克力色英国斑点母兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Female_Grey_Fur_Tan_Wet": {
+    "as1_value": "英国斑点母兔皮",
+    "value": "巧克力色英国斑点母兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Juvenile_Full": {
+    "as1_value": "英国斑点小兔皮 (未加工)",
+    "value": "巧克力色英国斑点小兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Juvenile_Fur": {
+    "as1_value": "英国斑点小兔皮 (带毛, 未鞣制)",
+    "value": "巧克力色英国斑点小兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Juvenile_Fur_Tan": {
+    "as1_value": "英国斑点小兔皮",
+    "value": "巧克力色英国斑点小兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Juvenile_Fur_Tan_Wet": {
+    "as1_value": "英国斑点小兔皮",
+    "value": "巧克力色英国斑点小兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Juvenile_Grey_Full": {
+    "as1_value": "英国斑点小兔皮 (未加工)",
+    "value": "巧克力色英国斑点小兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Juvenile_Grey_Fur": {
+    "as1_value": "英国斑点小兔皮 (带毛, 未鞣制)",
+    "value": "巧克力色英国斑点小兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Juvenile_Grey_Fur_Tan": {
+    "as1_value": "英国斑点小兔皮",
+    "value": "巧克力色英国斑点小兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Juvenile_Grey_Fur_Tan_Wet": {
+    "as1_value": "英国斑点小兔皮",
+    "value": "巧克力色英国斑点小兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Male_Full": {
+    "as1_value": "英国斑点公兔皮 (未加工)",
+    "value": "巧克力色英国斑点公兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Male_Fur": {
+    "as1_value": "英国斑点公兔皮 (带毛, 未鞣制)",
+    "value": "巧克力色英国斑点公兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Male_Fur_Tan": {
+    "as1_value": "英国斑点公兔皮",
+    "value": "巧克力色英国斑点公兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Male_Fur_Tan_Wet": {
+    "as1_value": "英国斑点公兔皮",
+    "value": "巧克力色英国斑点公兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Male_Grey_Full": {
+    "as1_value": "英国斑点公兔皮 (未加工)",
+    "value": "巧克力色英国斑点公兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Male_Grey_Fur": {
+    "as1_value": "英国斑点公兔皮 (带毛, 未鞣制)",
+    "value": "巧克力色英国斑点公兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Male_Grey_Fur_Tan": {
+    "as1_value": "英国斑点公兔皮",
+    "value": "巧克力色英国斑点公兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V2_Male_Grey_Fur_Tan_Wet": {
+    "as1_value": "英国斑点公兔皮",
+    "value": "巧克力色英国斑点公兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Chocolate，前面補「巧克力色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Female_Full": {
+    "as1_value": "英国斑点母兔皮 (未加工)",
+    "value": "蓝色英国斑点母兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Female_Fur": {
+    "as1_value": "英国斑点母兔皮 (带毛, 未鞣制)",
+    "value": "蓝色英国斑点母兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Female_Fur_Tan": {
+    "as1_value": "英国斑点母兔皮",
+    "value": "蓝色英国斑点母兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Female_Fur_Tan_Wet": {
+    "as1_value": "英国斑点母兔皮",
+    "value": "蓝色英国斑点母兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Female_Grey_Full": {
+    "as1_value": "英国斑点母兔皮 (未加工)",
+    "value": "蓝色英国斑点母兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Female_Grey_Fur": {
+    "as1_value": "英国斑点母兔皮 (带毛, 未鞣制)",
+    "value": "蓝色英国斑点母兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Female_Grey_Fur_Tan": {
+    "as1_value": "英国斑点母兔皮",
+    "value": "蓝色英国斑点母兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Female_Grey_Fur_Tan_Wet": {
+    "as1_value": "英国斑点母兔皮",
+    "value": "蓝色英国斑点母兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Juvenile_Full": {
+    "as1_value": "英国斑点小兔皮 (未加工)",
+    "value": "蓝色英国斑点小兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Juvenile_Fur": {
+    "as1_value": "英国斑点小兔皮 (带毛, 未鞣制)",
+    "value": "蓝色英国斑点小兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Juvenile_Fur_Tan": {
+    "as1_value": "英国斑点小兔皮",
+    "value": "蓝色英国斑点小兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Juvenile_Fur_Tan_Wet": {
+    "as1_value": "英国斑点小兔皮",
+    "value": "蓝色英国斑点小兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Juvenile_Grey_Full": {
+    "as1_value": "英国斑点小兔皮 (未加工)",
+    "value": "蓝色英国斑点小兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Juvenile_Grey_Fur": {
+    "as1_value": "英国斑点小兔皮 (带毛, 未鞣制)",
+    "value": "蓝色英国斑点小兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Juvenile_Grey_Fur_Tan": {
+    "as1_value": "英国斑点小兔皮",
+    "value": "蓝色英国斑点小兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Juvenile_Grey_Fur_Tan_Wet": {
+    "as1_value": "英国斑点小兔皮",
+    "value": "蓝色英国斑点小兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Male_Full": {
+    "as1_value": "英国斑点公兔皮 (未加工)",
+    "value": "蓝色英国斑点公兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Male_Fur": {
+    "as1_value": "英国斑点公兔皮 (带毛, 未鞣制)",
+    "value": "蓝色英国斑点公兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Male_Fur_Tan": {
+    "as1_value": "英国斑点公兔皮",
+    "value": "蓝色英国斑点公兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Male_Fur_Tan_Wet": {
+    "as1_value": "英国斑点公兔皮",
+    "value": "蓝色英国斑点公兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Male_Grey_Full": {
+    "as1_value": "英国斑点公兔皮 (未加工)",
+    "value": "蓝色英国斑点公兔皮 (未加工)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Male_Grey_Fur": {
+    "as1_value": "英国斑点公兔皮 (带毛, 未鞣制)",
+    "value": "蓝色英国斑点公兔皮 (带毛, 未鞣制)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Male_Grey_Fur_Tan": {
+    "as1_value": "英国斑点公兔皮",
+    "value": "蓝色英国斑点公兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "ItemName.json|Base.AMR_Hide_Rabbit_EnglishSpot_V3_Male_Grey_Fur_Tan_Wet": {
+    "as1_value": "英国斑点公兔皮",
+    "value": "蓝色英国斑点公兔皮",
+    "reason": "2026-10-26 As1 v3.12.0：As1 漏譯毛色 Blue，前面補「蓝色」"
+  },
+  "UI.json|Sandbox_ClaimableOutposts_maxClaimedOutposts": {
+    "as1_value": "已占领前哨站上限 (每名玩家)",
+    "value": "已占领前哨站上限 (Claimable 为服务器总计, Dynamic 为每名玩家)",
+    "reason": "2026-10-26 As1 v3.12.0：兩個 owner 英文不同，As1 只寫每名玩家；括號內分列兩模組的計算方式"
+  },
+  "Sandbox.json|Sandbox_AnimalRemaster_AlbinoPer10000_tooltip": {
+    "as1_value": "仅适用于新的、未追踪的自然野生鹿和浣熊. 10=0.1%%; 100=1%%. 设为0将禁用此新毛色掷骰. 已保存/圈养/后代/明确指定的个体保持不变. 如果稀有概率超过100%%, 稀有份额将被归一化. 不会改变命名农场品种或花斑孔雀. 默认10.",
+    "value": "仅适用于新的、未追踪的自然野生鹿和浣熊. 10=百分之0.1; 100=百分之1. 设为0将禁用此新毛色掷骰. 已保存/圈养/后代/明确指定的个体保持不变. 如果稀有概率超过百分之100, 稀有份额将被归一化. 不会改变命名农场品种或花斑孔雀. 默认10.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 把 en 文字 percent 寫成 %%，改寫「百分之 N」"
+  },
+  "Sandbox.json|Sandbox_AnimalRemaster_DomesticDuckChance_tooltip": {
+    "as1_value": "符合条件的家鸭栖息地获得一对鸭子的概率 (在应用原版乘数之前). 默认25%%. 每个栖息地都有一个保存的稳定掷骰结果; 重复加载区块不会重新尝试该概率.",
+    "value": "符合条件的家鸭栖息地获得一对鸭子的概率 (在应用原版乘数之前). 默认百分之25. 每个栖息地都有一个保存的稳定掷骰结果; 重复加载区块不会重新尝试该概率.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 把 en 文字 percent 寫成 %%，改寫「百分之 N」"
+  },
+  "Sandbox.json|Sandbox_AnimalRemaster_MelanisticPer10000_tooltip": {
+    "as1_value": "仅适用于新的、未追踪的自然野生鹿和浣熊. 10=0.1%%; 100=1%%. 设为0将禁用此新毛色掷骰. 已保存/圈养/后代/明确指定的个体保持不变. 如果稀有概率超过100%%, 稀有份额将被归一化. 不会改变命名农场品种或花斑孔雀. 默认50.",
+    "value": "仅适用于新的、未追踪的自然野生鹿和浣熊. 10=百分之0.1; 100=百分之1. 设为0将禁用此新毛色掷骰. 已保存/圈养/后代/明确指定的个体保持不变. 如果稀有概率超过百分之100, 稀有份额将被归一化. 不会改变命名农场品种或花斑孔雀. 默认50.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 把 en 文字 percent 寫成 %%，改寫「百分之 N」"
+  },
+  "Sandbox.json|Sandbox_AnimalRemaster_PiebaldPer10000_tooltip": {
+    "as1_value": "仅适用于新的、未追踪的自然野生鹿和浣熊. 10=0.1%%; 100=1%%. 设为0将禁用此新毛色掷骰. 已保存/圈养/后代/明确指定的个体保持不变. 如果稀有概率超过100%%, 稀有份额将被归一化. 不会改变命名农场品种或花斑孔雀. 默认100.",
+    "value": "仅适用于新的、未追踪的自然野生鹿和浣熊. 10=百分之0.1; 100=百分之1. 设为0将禁用此新毛色掷骰. 已保存/圈养/后代/明确指定的个体保持不变. 如果稀有概率超过百分之100, 稀有份额将被归一化. 不会改变命名农场品种或花斑孔雀. 默认100.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 把 en 文字 percent 寫成 %%，改寫「百分之 N」"
+  },
+  "Sandbox.json|Sandbox_AnimalRemaster_RespectAnimalSpawnChance_tooltip": {
+    "as1_value": "使用原版动物生成概率设置来缩放家鸭和林鸳鸯的生成概率. 当此选项开启时, 原版的\"从不\"设置将禁用新鸭子的生成. 鸭子密度乘数: 特别稀少5%%, 稀少15%%, 偶尔35%%, 经常60%%, 非常频繁85%%, 总是尝试100%%. 这些是本模组的乘数.",
+    "value": "使用原版动物生成概率设置来缩放家鸭和林鸳鸯的生成概率. 当此选项开启时, 原版的\"从不\"设置将禁用新鸭子的生成. 鸭子密度乘数: 特别稀少百分之5, 稀少百分之15, 偶尔百分之35, 经常百分之60, 非常频繁百分之85, 总是百分之100. 这些是本模组的乘数.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 把 en 文字 percent 寫成 %%，改寫「百分之 N」；Always「总是尝试」改「总是」"
+  },
+  "Sandbox.json|Sandbox_AnimalRemaster_WoodDuckChance": {
+    "as1_value": "林鸳鸯海岸线生成概率 (百分比)",
+    "value": "野鸭海岸线生成概率 (百分比)",
+    "reason": "2026-10-26 As1 v3.12.0：en 是 Wild duck（共五種），As1 寫林鸳鸯；改野鸭"
+  },
+  "Sandbox.json|Sandbox_AnimalRemaster_WoodDuckChance_tooltip": {
+    "as1_value": "符合条件的100x100地块海岸线区域获得一对林鸳鸯的概率 (在应用原版乘数之前). 默认10%%. 每个区块都有一个保存的稳定掷骰结果.",
+    "value": "符合条件的100x100地块海岸线区域从同一个共享额度中获得一对林鸳鸯、绿翅鸭、蓝翅鸭、赤膀鸭或北美黑鸭的概率 (在应用原版乘数之前). 默认百分之10. 每个区块都有一个保存的稳定掷骰结果.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 把 en 文字 percent 寫成 %%，改寫「百分之 N」；補譯其餘四種鴨與 from one shared budget"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_CarSpawnDistance_tooltip": {
+    "as1_value": "送货车把车放在多远 (按格数). 实际落在该数值的 80%% 到 100%% 之间, 且在视野之外. 靠近之前会有绿色箭头指向它.",
+    "value": "送货车把车放在多远 (按格数). 实际落在该数值的百分之 80 到 100 之间, 且在视野之外. 靠近之前会有绿色箭头指向它.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 把 en 文字 percent 寫成 %%，改寫「百分之 N」"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_ContractDifficulty_tooltip": {
+    "as1_value": "委托单子能有多大. 每件物品的报酬在每种设置下都一样, 所以小单子给的钱少. 简单: 最多 10 件, 期限更长. 中等: 最多 15 件. 困难: 最多 20 件, 期限更短, 报酬 +10%%, 声望更多.",
+    "value": "委托单子能有多大. 每件物品的报酬在每种设置下都一样, 所以小单子给的钱少. 简单: 最多 10 件, 期限更长. 中等: 最多 15 件. 困难: 最多 20 件, 期限更短, 报酬多百分之 10, 声望更多.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 把 en 文字 percent 寫成 %%，改寫「百分之 N」"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_CustomCurrencyItems": {
+    "as1_value": "自定义货币物品 (原版硬币)*",
+    "value": "自定义货币物品",
+    "reason": "2026-10-26 As1 v3.12.0：As1 多了 en 沒有的「(原版硬币)*」，刪除"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_CustomCurrencyItems_tooltip": {
+    "as1_value": "允许玩家把特定物品当现金花, 每件有自己固定的价值 —— 适用于金、银或任何模组自带的货币物品. 格式: item:value, 用分号分隔. *默认是原版金币 ($150) 与银币 ($25) —— 替换或清空列表即可改用其他物品或价值, 或者完全换别的物品. 商人找零只用普通现金, 从不使用这些物品. 留空则只接受现金.",
+    "value": "允许玩家把特定物品当现金花, 每件有自己固定的价值 —— 适用于金、银或任何模组自带的货币物品. 格式: item:value[:rate[:cap]], 用分号分隔. rate 是实际计入价值的百分比 (默认 100); cap 是单次购买最多接受的该物品数量 (默认不限) —— 两者搭配可以让商人打折收下某样东西, 就像他们 '更喜欢硬币', 也能限制他们一次收下一大批的数量. 默认是原版金币 ($150) 与银币 ($25). 金锭被刻意排除 —— 它根本不是商人货币, 请把它运到已知的银行存入换成现金. 替换或清空列表即可完全改用其他物品、价值、比率或上限. 商人找零只用普通现金, 从不使用这些物品. 留空则只接受现金.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 依舊版 en：補格式 [:rate[:cap]] 與說明、金锭不列入的說明，刪多餘「*」"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_LateNightPremium_tooltip": {
+    "as1_value": "她对抢手货的收购价, 按她平时售价的百分比. 平时的回收价约为 30%%.",
+    "value": "她对抢手货的收购价, 按她平时售价的百分比. 平时的回收价约为百分之 30.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 把 en 文字 percent 寫成 %%，改寫「百分之 N」"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_LoanTerms_tooltip": {
+    "as1_value": "给你多长时间以及多少利息. 宽松: 14 天, 15%%. 标准: 7 天, 25%%. 严酷: 3 天, 40%%. 自定义: 使用下面两项设置.",
+    "value": "给你多长时间以及多少利息. 宽松: 14 天, 百分之 15. 标准: 7 天, 百分之 25. 严酷: 3 天, 百分之 40. 自定义: 使用下面两项设置.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 把 en 文字 percent 寫成 %%，改寫「百分之 N」"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_PriceFloorMargin_tooltip": {
+    "as1_value": "任何东西的售价都不会低于该商人的收购价加上标价的这个百分比, 所以低价买入再卖回去永远不赚. 商人不收购的物品按标价的 60%% 计算.",
+    "value": "任何东西的售价都不会低于该商人的收购价加上标价的这个百分比, 所以低价买入再卖回去永远不赚. 商人不收购的物品按标价的百分之 60 计算.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 把 en 文字 percent 寫成 %%，改寫「百分之 N」"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_WrenchCars_tooltip": {
+    "as1_value": "扳手出售旧车: 来自所有已装车辆模组 (含 Ki5 及同类) 的二手车, 状况 30%% 到 60%%, 四分之一箱油, 附带钥匙. 车会被放在离你约 45 格 (可调) 的空地上.",
+    "value": "扳手出售旧车: 来自所有已装车辆模组 (含 Ki5 及同类) 的二手车, 状况百分之 30 到 60, 四分之一箱油, 附带钥匙. 车会被放在离你约 45 格 (可调) 的空地上.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 把 en 文字 percent 寫成 %%，改寫「百分之 N」"
+  },
+  "Sandbox.json|Sandbox_PBC_CapRechargeableSlope_tooltip": {
+    "as1_value": "可充电电池也适用同样的限制, 但它更耐磨损. 默认值为0, 不产生任何改变. 设为0.4时, 耐久度90%%的电池仍能充到96%%的电量, 此后会缓慢下降. 请让它远低于普通电池的数值, 否则就没有理由去寻找可充电电池了.",
+    "value": "可充电电池也适用同样的限制, 但它更耐磨损. 默认值为0, 不产生任何改变. 设为0.4时, 耐久度百分之90的电池仍能充到百分之96的电量, 此后会缓慢下降. 请让它远低于普通电池的数值, 否则就没有理由去寻找可充电电池了.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 把 en 文字 percent 寫成 %%，改寫「百分之 N」"
+  },
+  "Sandbox.json|Sandbox_PBC_CapVanillaSlope_tooltip": {
+    "as1_value": "损耗的电池无法充满电. 这表示耐久度每损失1点, 充电上限会损失多少点. 默认值为0, 不产生任何改变: 耐久度为10%%的电池仍能完全充满, 与目前一样. 设为1.5时, 耐久度一半的电池最多只能充到四分之一电量; 0.5较为温和, 3则很严苛.",
+    "value": "损耗的电池无法充满电. 这表示耐久度每损失1点, 充电上限会损失多少点. 默认值为0, 不产生任何改变: 耐久度为百分之10的电池仍能完全充满, 与目前一样. 设为1.5时, 耐久度一半的电池最多只能充到四分之一电量; 0.5较为温和, 3则很严苛.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 把 en 文字 percent 寫成 %%，改寫「百分之 N」"
+  },
+  "Tooltip.json|Tooltip_item_AgrotsarMag": {
+    "as1_value": "该杂志涵盖了机械设备的修理, 维护, 技术评估, <br>可靠性和设备修复, 以及维修基地的后勤支持等问题.<br>该杂志面向各种所有制形式农场的农民, 专家和管理者, <br>以及区级专家, 边疆区部门和农业供应组织. <br>编辑委员会不仅非常关注生产问题的报道, <br>还注重描述乡村的文化生活以及乡村人生活的方方面面. <br>刊物积极推广科学成就和该地区最佳农场的经验, <br>讲述乡村人物的故事, 地区各区的发展历史与前景, <br>以及邻近地区的生活和工作经验.",
+    "value": "该杂志涵盖了机械设备的修理, 维护, 技术评估, <br>可靠性和设备修复, 以及维修基地的后勤支持等问题.<br>该杂志面向各种所有制形式农场的农民, 专家和管理者, <br>以及区级专家, 边疆区部门和农业供应组织. <br>编辑委员会不仅非常关注生产问题的报道, <br>还注重描述乡村的文化生活, <br>以及乡村人生活的方方面面. <br>刊物积极推广科学成就和该地区最佳农场的经验, <br>讲述乡村人物的故事, <br>地区各区的发展历史与前景, <br>以及邻近地区的生活和工作经验.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 <br> 8 個、en 10 個；重新斷行補成 10 個，文字不變"
+  },
+  "UI.json|UI_RadioTraders_Doc_nothing_1": {
+    "as1_value": "你就这状态, 身上没我能用的东西.",
+    "value": "你身上这些东西的状况, 我都用不上.",
+    "reason": "2026-10-26 As1 v3.12.0：in that condition 指物品狀況，As1 誤解成玩家狀態；改指物品"
+  },
+  "Sandbox.json|Sandbox_FieldMedicine_MedkitHungerPer100": {
+    "as1_value": "医疗包每消耗100点充能的饥饿度 (百分比)",
+    "value": "医疗包每消耗100点充能的饥饿度 (%%)",
+    "reason": "2026-10-26 As1 v3.12.0：en 單獨 % 被寫成「(百分比)」，改 %%"
+  },
+  "Sandbox.json|Sandbox_FieldMedicine_MedkitThirstPer100": {
+    "as1_value": "医疗包每消耗100点充能的口渴度 (百分比)",
+    "value": "医疗包每消耗100点充能的口渴度 (%%)",
+    "reason": "2026-10-26 As1 v3.12.0：en 單獨 % 被寫成「(百分比)」，改 %%"
+  },
+  "UI.json|UI_RadioTraders_Sparks_HoursHint": {
+    "as1_value": "通常从黎明到深夜在播.",
+    "value": "通常从黎明到晚间较晚时在播.",
+    "reason": "2026-10-26 As1 v3.12.0：late evening 被譯成「深夜」與 Owl 時段混淆，改「晚间较晚时」"
+  },
+  "IG_UI.json|IGUI_BPE_TestPositive": {
+    "as1_value": "诺克斯检测: 阳性. 当前进展约为%1%%.",
+    "value": "诺克斯检测: 阳性. 当前进展约为百分之%1.",
+    "reason": "2026-10-26 As1 v3.12.0：en「%1 percent」As1 寫 %1%%，改「百分之%1」"
+  },
+  "Tooltip.json|Tooltip_BPE_Camouflage": {
+    "as1_value": "让普通夜魔闻不到你的气味, 持续1游戏小时. 行走, 疾跑, 瞄准或攻击会使其失效. 精英和2格内的敌人仍能发现你.",
+    "value": "让普通夜魔闻不到你的气味, 持续1游戏小时. 奔跑, 疾跑, 瞄准或攻击会使其失效. 精英和2格内的敌人仍能发现你.",
+    "reason": "2026-10-26 As1 v3.12.0：Running 誤譯「行走」，改「奔跑」"
+  },
+  "Tooltip.json|Tooltip_BPE_EmpowermentModule": {
+    "as1_value": "握把: 增加5/10/15%%的命中伤害, 每次命中有上限. 不会覆盖武器的原有属性.",
+    "value": "握把: 增加百分之5/10/15的命中伤害, 每次命中有上限. 不会覆盖武器的原有属性.",
+    "reason": "2026-10-26 As1 v3.12.0：en「N percent」As1 寫 N%%，改「百分之N」"
+  },
+  "Tooltip.json|Tooltip_BPE_FlameModule": {
+    "as1_value": "枪头: 20/25/30%%的命中会造成持续余烬伤害. 三个等级. 不会点燃建筑或玩家.",
+    "value": "枪头: 百分之20/25/30的命中会造成持续余烬伤害. 三个等级. 不会点燃建筑或玩家.",
+    "reason": "2026-10-26 As1 v3.12.0：en「N percent」As1 寫 N%%，改「百分之N」"
+  },
+  "Tooltip.json|Tooltip_BPE_ModEmpowerment": {
+    "as1_value": "握把: 增加5/10/15%%的命中伤害, 每次命中有上限. 不会覆盖武器的原有属性.",
+    "value": "握把: 增加百分之5/10/15的命中伤害, 每次命中有上限. 不会覆盖武器的原有属性.",
+    "reason": "2026-10-26 As1 v3.12.0：en「N percent」As1 寫 N%%，改「百分之N」"
+  },
+  "Tooltip.json|Tooltip_BPE_ModFlame": {
+    "as1_value": "枪头: 20/25/30%%的命中会造成持续余烬伤害. 三个等级. 不会点燃建筑或玩家.",
+    "value": "枪头: 百分之20/25/30的命中会造成持续余烬伤害. 三个等级. 不会点燃建筑或玩家.",
+    "reason": "2026-10-26 As1 v3.12.0：en「N percent」As1 寫 N%%，改「百分之N」"
+  },
+  "Tooltip.json|Tooltip_BPE_ModReinforcement": {
+    "as1_value": "握把: 有15/30/45%%的概率避免1点近战磨损. 不会修复其他来源的损伤.",
+    "value": "握把: 有百分之15/30/45的概率避免1点近战磨损. 不会修复其他来源的损伤.",
+    "reason": "2026-10-26 As1 v3.12.0：en「N percent」As1 寫 N%%，改「百分之N」"
+  },
+  "Tooltip.json|Tooltip_BPE_ModSpark": {
+    "as1_value": "杆身: 20/25/30%%的命中会造成电击. 更高等级可连锁至1或2只附近僵尸. 墙壁会阻隔连锁.",
+    "value": "杆身: 百分之20/25/30的命中会造成电击. 更高等级可连锁至1或2只附近僵尸. 墙壁会阻隔连锁.",
+    "reason": "2026-10-26 As1 v3.12.0：en「N percent」As1 寫 N%%，改「百分之N」"
+  },
+  "Tooltip.json|Tooltip_BPE_ModVenom": {
+    "as1_value": "枪头: 20/25/30%%的命中会造成持续毒素伤害. 三个等级. 剧毒奇美拉免疫.",
+    "value": "枪头: 百分之20/25/30的命中会造成持续毒素伤害. 三个等级. 剧毒奇美拉免疫.",
+    "reason": "2026-10-26 As1 v3.12.0：en「N percent」As1 寫 N%%，改「百分之N」"
+  },
+  "Tooltip.json|Tooltip_BPE_NVGKit": {
+    "as1_value": "需要Corvus夜视仪. 用螺丝刀拆解即可取回其护目镜和头带. 装入电池后使用夜视仪模组的控制键. 不提供紫外线防护.",
+    "value": "需要Corvus夜视仪. 用螺丝刀组装即可取回其护目镜和头带. 装入电池后使用夜视仪模组的控制键. 不提供紫外线防护.",
+    "reason": "2026-10-26 As1 v3.12.0：Assemble 誤譯「拆解」，改「组装」"
+  },
+  "Tooltip.json|Tooltip_BPE_ReinforcementModule": {
+    "as1_value": "握把: 有15/30/45%%的概率避免1点近战磨损. 不会修复其他来源的损伤.",
+    "value": "握把: 有百分之15/30/45的概率避免1点近战磨损. 不会修复其他来源的损伤.",
+    "reason": "2026-10-26 As1 v3.12.0：en「N percent」As1 寫 N%%，改「百分之N」"
+  },
+  "Tooltip.json|Tooltip_BPE_SparkModule": {
+    "as1_value": "杆身: 20/25/30%%的命中会造成电击. 更高等级可连锁至1或2只附近僵尸. 墙壁会阻隔连锁.",
+    "value": "杆身: 百分之20/25/30的命中会造成电击. 更高等级可连锁至1或2只附近僵尸. 墙壁会阻隔连锁.",
+    "reason": "2026-10-26 As1 v3.12.0：en「N percent」As1 寫 N%%，改「百分之N」"
+  },
+  "Tooltip.json|Tooltip_BPE_VenomModule": {
+    "as1_value": "枪头: 20/25/30%%的命中会造成持续毒素伤害. 三个等级. 剧毒奇美拉免疫.",
+    "value": "枪头: 百分之20/25/30的命中会造成持续毒素伤害. 三个等级. 剧毒奇美拉免疫.",
+    "reason": "2026-10-26 As1 v3.12.0：en「N percent」As1 寫 N%%，改「百分之N」"
+  },
+  "UI.json|UI_CameraMotionBlur_Perf_Note": {
+    "as1_value": "日志详细程度: 最小仅记录报错. 正常模式在游戏加载和状态变更时记录几行信息. 详细模式还会每隔几秒记录状态行, 并在眼睛适应光线或变焦变化时记录大量信息; 仅在需要提交日志时使用.\n自动性能优化: 当FPS持续低于你设定的最低值时, 模组会逐步降低最耗费资源的效果 (招牌和灯光的光晕、镜头反射、模糊质量、色散), 并确认FPS是否真正提升. 若未提升, 模组会恢复原状, 因为问题并非由此引起. 当FPS在一段时间内远高于该数值时, 效果会恢复. '自动' 模糊质量在大屏幕上会以较低等级启动. console.txt中的每一行变更记录都会告知每次变化.",
+    "value": "日志详细程度: 最小仅记录报错. 正常模式在游戏加载和状态变更时记录几行信息. 详细模式还会每隔几秒记录状态行, 并在眼睛适应光线或变焦变化时记录大量信息; 仅在需要提交日志时使用. 自动性能优化: 当FPS持续低于你设定的最低值时, 模组会逐步降低最耗费资源的效果 (招牌和灯光的光晕、镜头反射、模糊质量、色散), 并确认FPS是否真正提升. 若未提升, 模组会恢复原状, 因为问题并非由此引起. 当FPS在一段时间内远高于该数值时, 效果会恢复. '自动' 模糊质量在大屏幕上会以较低等级启动. console.txt中的每一行变更记录都会告知每次变化.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 自加 en 沒有的換行字元，改成句號後空格"
+  },
+  "Sandbox.json|Sandbox_VehicleFire_ElectricalShorts_tooltip": {
+    "as1_value": "发动机区域起火时, 已安装且有电的电池可能偶尔引发闪光, 喇叭鸣响和启动失败的音效. 触发频率已降低. 电池没电或缺失时无法为车灯或喇叭供电.",
+    "value": "已安装且有电的电池可能引发短暂的短路, 每次最多两种效果: 车灯、喇叭、警报、车门未关提示音或启动失败. 已设防的载具在发动机/车厢起火时会触发警报. 没电就没有电气效果. 线路最终会烧毁; 短路发作有冷却时间.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 為舊版說明，依現行 en 重寫（補警報、車門提示音、設防警報、線路燒毀、冷卻；刪「触发频率已降低」）"
+  },
+  "Sandbox.json|Sandbox_VehicleFire_EngineCrashFireChance_tooltip": {
+    "as1_value": "发动机状况低于20%%时, 一次猛烈的前部撞击有10%%的概率先冒出黑烟. 之后再一次独立命中并损伤前部, 就会引燃发动机. 维修或更换发动机可取消这次待发的起火.",
+    "value": "发动机状况低于百分之20时, 一次猛烈的前部撞击有百分之10的概率先冒出黑烟. 之后再一次独立命中并损伤前部, 就会引燃发动机. 维修或更换发动机可取消这次待发的起火.",
+    "reason": "2026-10-26 As1 v3.12.0：en「N percent」As1 寫 N%%，改「百分之N」"
+  },
+  "Sandbox.json|Sandbox_VehicleFire_FuelExplosionChance_tooltip": {
+    "as1_value": "有燃料的油箱起火时会随机选定一种结果. 满油时即为爆炸概率; 燃料越少该概率越低. 否则燃料会迅速燃烧并加剧火势. 设为0则禁用爆炸. 爆炸规模不会改变这一概率. 燃料低于一半时产生半径2的小型爆燃; 至少一半时产生大型火球. 油量在油箱开始燃烧时即被记录.",
+    "value": "每个油箱起火时随机判定一种结果. 常规概率随燃料量缩放. 后备箱内有非空的丙烷罐或汽油罐时, 概率会提高: 小型爆炸为80%% (油箱低于一半), 大型火球为60%% (油箱至少一半). 设为0则禁用所有爆炸.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 為舊版說明，依現行 en 重寫：補後備箱丙烷罐/汽油罐提高到 80%%/60%% 的規則，刪半徑 2 等多餘內容"
+  },
+  "Sandbox.json|Sandbox_VehicleFire_HotwireFireChance_tooltip": {
+    "as1_value": "默认每次完成一次失败的短接操作有1%%的概率. 不会逐帧判定, 取消操作, 短接成功或普通启动发动机时不判定. 起火点位于载具地板的车厢内.",
+    "value": "默认每次完成一次失败的短接操作有百分之1的概率. 不会逐帧判定, 取消操作, 短接成功或普通启动发动机时不判定. 起火点位于载具地板的车厢内.",
+    "reason": "2026-10-26 As1 v3.12.0：en「N percent」As1 寫 N%%，改「百分之N」"
+  },
+  "Sandbox.json|Sandbox_VehicleFire_NearbyHeat_tooltip": {
+    "as1_value": "载具外一格范围内有两处及以上独立的燃烧地块时, 会对相邻一侧加热. 起火所需时间为直接接触延迟的两倍. 外露的已装轮胎和保险杠会先熔损至10%%状况. 仅一处邻近火焰不足以引燃. 冷却不会修复损伤.",
+    "value": "载具外一格范围内有两处独立的燃烧地块时会造成预热, 所需时间为直接接触的两倍. 保险杠会熔损至百分之10状况; 轮胎会爆胎至零胎压且状况最多百分之20, 并保持安装直到后期烧毁.",
+    "reason": "2026-10-26 As1 v3.12.0：As1 為舊版說明，依現行 en 重寫，percent 寫「百分之N」"
+  },
+  "Sandbox.json|Sandbox_VehicleFire_SmokeToxicity_tooltip": {
+    "as1_value": "身处燃烧的载具内时增加原版的食物中毒值. 中毒值超过90%%后, 继续暴露还会附加中毒效果. 不会造成僵尸感染. 打开, 破损或拆除的车窗可减少暴露.",
+    "value": "身处燃烧的载具内时增加原版的食物中毒值 (FOOD_SICKNESS). 食物中毒值超过百分之90后, 继续暴露还会附加中毒 (POISON) 效果. 不会造成僵尸感染. 打开, 破损或拆除的车窗可减少暴露.",
+    "reason": "2026-10-26 As1 v3.12.0：en「N percent」As1 寫 N%%，改「百分之N」；括號補回 en 的 FOOD_SICKNESS/POISON 原名"
+  },
+  "UI.json|UI_VFDev_ClickCar": {
+    "as1_value": "瞄准一辆载具并单击左键",
+    "value": "瞄准一辆载具并单击左键. 按 Esc / 右键取消.",
+    "reason": "2026-10-26 As1 v3.12.0：漏譯 Esc / right click cancels，補上"
+  },
+  "UI.json|UI_VFDev_Electrical": {
+    "as1_value": "短路 (车灯/喇叭)",
+    "value": "随机短路 (1-2种效果)",
+    "reason": "2026-10-26 As1 v3.12.0：As1 寫成「(车灯/喇叭)」，en 是隨機短路 1-2 種效果"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Pile": {
+    "as1_value": "羽毛、种子、杂志、钥匙",
+    "value": "羽毛、种子、弹匣、钥匙",
+    "reason": "2026-10-26 As1 v3.12.0：magazines 指 9mm 弹匣，As1 誤譯杂志"
+  },
+  "IG_UI.json|IGUI_KnoxTB_b_stacks_Do": {
+    "as1_value": "点击 '羽毛、种子、杂志、钥匙', 将地板上所有物品放入背包. 右键点击每本杂志.",
+    "value": "点击 '羽毛、种子、弹匣、钥匙', 将地板上所有物品放入背包. 右键点击每个弹匣.",
+    "reason": "2026-10-26 As1 v3.12.0：magazine 指弹匣，As1 誤譯杂志"
+  },
+  "IG_UI.json|IGUI_KnoxTB_b_stacks_Want": {
+    "as1_value": "羽毛、种子和草堆叠放置 (草每格10个, 6丛为一堆); 两本9mm弹匣杂志 - 分为两个格子, 满的和空的, 不合并为一堆; 满弹匣菜单有 '退弹', 空弹匣菜单有 '装填'.",
+    "value": "羽毛、种子和草堆叠放置 (草每格10个, 6丛为一堆); 两个9mm弹匣 - 分为两个格子, 满的和空的, 不合并为一堆; 满弹匣菜单有 '退弹', 空弹匣菜单有 '装填'.",
+    "reason": "2026-10-26 As1 v3.12.0：「两本9mm弹匣杂志」改「两个9mm弹匣」"
+  },
+  "IG_UI.json|IGUI_KnoxTB_cat_drag_Do": {
+    "as1_value": "打开设置 - '整理' 选项卡. 用鼠标抓住分类行并向上或向下拖动. 然后尝试行左侧的箭头.",
+    "value": "打开设置 - '顺序' 选项卡. 用鼠标抓住分类行并向上或向下拖动. 然后尝试行左侧的箭头.",
+    "reason": "2026-10-26 As1 v3.12.0：Order 分頁 As1 自譯「顺序」，此處寫「整理」指錯分頁"
+  },
+  "IG_UI.json|IGUI_KnoxTB_cat_order_Do": {
+    "as1_value": "打开设置 - 打开 '整理' 选项卡. 使用 '上移' 将 '食物和水' 移到顶部, 关闭窗口并整理背包.",
+    "value": "打开设置 - 打开 '顺序' 选项卡. 使用 '上移' 将 '食物和水' 移到顶部, 关闭窗口并整理背包.",
+    "reason": "2026-10-26 As1 v3.12.0：Order 分頁 As1 自譯「顺序」，此處寫「整理」指錯分頁"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_heater_Want": {
+    "as1_value": "暖气开启, LED灯变绿; 旋钮经过7个位置, 从蓝色到红色 (-25...+25, 同游戏原生暖气窗口): 圆形旋钮有点击声, 滚轮可转到底. 车窗打开时车窗灯亮. 右键点击打开游戏原生暖气窗口, 数值相同. 无钥匙或发动机未启动时暖气无反应, 提示说明原因.",
+    "value": "暖气开启, LED灯变绿; 旋钮经过7个位置, 从蓝色到红色 (-25...+25, 同游戏原生暖气窗口): 点击可循环转动, 滚轮可转到底. 车窗打开时车窗灯亮. 右键点击打开游戏原生暖气窗口, 数值相同. 无钥匙或发动机未启动时暖气无反应, 提示说明原因.",
+    "reason": "2026-10-26 As1 v3.12.0：round with clicks 誤譯「圆形旋钮有点击声」，改「点击可循环转动」"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_news_Do": {
+    "as1_value": "在主菜单打开帖子\"Behind the wheel\" (游戏内Knox界面的新闻标签页中也有). 在仪表盘部分: 点击钥匙, 等待发动机启动, 在速度表上转动方向盘, 切换灯光、门锁、后备箱、暖气, 插入和弹出磁带, 切换电台. 在轿车和皮卡部分点击电线. 滚动帖子使面板位于标题下方. 在面板空白处转动方向盘.",
+    "value": "在主菜单打开帖子\"Behind the wheel\" (游戏内Knox界面的新闻标签页中也有). 在仪表盘部分: 点击钥匙, 等待发动机启动, 在速度表上滚动鼠标滚轮, 切换灯光、门锁、后备箱、暖气, 插入和弹出磁带, 切换电台. 在轿车和皮卡部分点击电线. 滚动帖子使面板位于标题下方. 在面板空白处滚动鼠标滚轮.",
+    "reason": "2026-10-26 As1 v3.12.0：wheel 指滑鼠滾輪，As1 兩處「转动方向盘」改「滚动鼠标滚轮」"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_truck_Want": {
+    "as1_value": "皮卡车身: 矩形集群带有螺栓和遮阳板, 大灯为拉出式旋钮 (拉出后变大且阴影更长), 门锁拨杆, 无后备箱按钮 (游戏中皮卡也无锁止后备箱). 油量表下方是档位行R N 1-5, 当前档位高亮. 玻璃后方一列显示发动机、电池、大灯和巡航指示灯. 仪表盘右侧集群处有锁. 带拉杆的加热器: 温度调节和开关. 收音机和轿车相同.",
+    "value": "皮卡车身: 带螺栓和遮阳板的矩形仪表组, 大灯为拉出式旋钮 (拉出后变大且阴影更长), 门锁拨杆, 无后备箱按钮 (游戏中皮卡也无锁止后备箱). 油量表下方是档位行R N 1-5, 当前档位高亮. 玻璃后方一列显示发动机、电池、大灯和巡航指示灯. 仪表盘上仪表组右侧有锁. 带拉杆的加热器: 温度调节和开关. 收音机和轿车相同.",
+    "reason": "2026-10-26 As1 v3.12.0：cluster 指仪表组，As1 兩處譯「集群」"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ghost_pair_Do": {
+    "as1_value": "点击 '两具尸体': 你旁边的一个格子上出现两具尸体, 一具有斧头、撬棍、大锤和锤子, 另一具有苹果和铅笔. 打开物品栏, 在 '周围' 中选择有工具的尸体, 逐个Shift+左键点击工具 (或全选), 在它们移动过程中, 在列表中选择另一具尸体.",
+    "value": "点击 '两具尸体': 你旁边的一个格子上出现两具尸体, 一具有斧头、撬棍、大锤和锤子, 另一具有苹果和铅笔. 打开物品栏, 在 '周围' 中选择有工具的尸体, 逐个Shift+左键点击工具 (或 '全部拿走'), 在它们移动过程中, 在列表中选择另一具尸体.",
+    "reason": "2026-10-26 As1 v3.12.0：Take all 誤譯「全选」，改原版用語 '全部拿走'"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_tab_Want": {
+    "as1_value": "Knox界面显示在健康标签页, 下方有沙色阶段1面板. 三列内容平滑升起: 状态 (大号生命值数字、生命条、恢复速度、计数器、条形统计图、带有游戏图标的效果卡片)、身体 (身穿内衣面向你的角色模型、七个通过线条连接身体的区域面板、急救等级、底部按键提示)、伤害 (区域作为芯片/卡片显示, 底部为急救包). 第二次按下H关闭界面.",
+    "value": "Knox界面显示在健康标签页, 下方有沙色阶段1面板. 三列内容平滑升起: 状态 (大号生命值数字、生命条、恢复速度、计数器、条形统计图、带有游戏图标的效果卡片)、身体 (身穿内衣面向你的角色模型、七个通过线条连接身体的区域面板、急救等级、底部按键提示)、伤害 (以小标签显示的区域、卡片、底部的急救包). 第二次按下H关闭界面.",
+    "reason": "2026-10-26 As1 v3.12.0：chips 是介面小標籤，As1 譯「芯片」"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_wounds_Do": {
+    "as1_value": "打开健康标签页. 依次点击伤势按钮: 刮伤 (左前臂)、割伤出血 (右前臂)、深伤口 (左上臂)、玻璃碎片 (右手)、骨折 (左大腿)、烧伤 (头部)、枪伤 (腹股沟)、割伤 (腹部)、感染 (左小腿)、损坏 - 右脚归零. 每个按钮会将治疗该伤势所需的物品放入背包 (如果尚未拥有). '所有伤势' 一次性添加所有物品, '治愈' 则清除所有伤势. 等待10-15游戏分钟, 悬停查看身体、区域面板和生命条.",
+    "value": "打开健康标签页. 依次点击伤势按钮: 刮伤 (左前臂)、割伤出血 (右前臂)、深伤口 (左上臂)、玻璃碎片 (右手)、骨折 (左大腿)、烧伤 (头部)、枪伤 (腹股沟)、割伤 (腹部)、感染 (左小腿)、损坏 - 右脚归零. 每个按钮会将治疗该伤势所需的物品放入口袋 (如果尚未拥有). '所有伤势' 一次性添加所有物品, '治愈' 则清除所有伤势. 等待10-15游戏分钟, 悬停查看身体、区域面板和生命条.",
+    "reason": "2026-10-26 As1 v3.12.0：en puts … in the pockets，As1 譯「放入背包」"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_control_Do": {
+    "as1_value": "第一位玩家暂停/继续、搜索电台、跳过曲目、关闭收音机、拔出钥匙 (断电).",
+    "value": "第一位玩家暂停/继续、在曲目内跳转、跳过曲目、关闭收音机、拔出钥匙 (断电).",
+    "reason": "2026-10-26 As1 v3.12.0：seeks 指曲目內跳轉，As1 譯「搜索电台」"
+  },
+  "IG_UI.json|IGUI_KnoxTB_tent_slot_Do": {
+    "as1_value": "点击 '帐篷': 测试用ALICE背包装备到背上, 一个打包好的帐篷放在地上. 像玩家一样拾取帐篷: Shift+左键点击, 将其拖入背包, 或全选. 然后寻找它: 在背包网格、屏幕底部的快捷栏、以及关闭物品栏时的快捷键中查找. 尝试将其取下.",
+    "value": "点击 '帐篷': 测试用ALICE背包装备到背上, 一个打包好的帐篷放在地上. 像玩家一样拾取帐篷: Shift+左键点击, 将其拖入背包, 或 '全部拿走'. 然后寻找它: 在背包网格、屏幕底部的快捷栏、以及关闭物品栏时的快捷键中查找. 尝试将其取下.",
+    "reason": "2026-10-26 As1 v3.12.0：Take all 誤譯「全选」，改原版用語 '全部拿走'"
+  },
+  "Tooltip.json|MGsMRE_UmbrellaSmile_info": {
+    "as1_value": "<type:parent, width:805, height:910><type:texture, texture:media/textures/Item_微笑雨伞Icon.png, width:740, height:740, pivotX:0, pivotY:0.05, angle:0>",
+    "value": "<type:parent, width:805, height:910><type:texture, texture:media/textures/Item_UmbrellaSmileIcon.png, width:740, height:740, pivotX:0, pivotY:0.05, angle:0>",
+    "reason": "2026-10-26 As1 v3.12.0：As1 把材質路徑檔名 Item_UmbrellaSmileIcon.png 譯成中文，圖片載不到；還原檔名"
+  },
+  "Tooltip.json|Tooltip_item_GridRVArmourManual": {
+    "as1_value": "可学习: 焊接房车尖刺撞角 (V形楔), 焊接房车侧面装甲",
+    "value": "可学习: 房车装甲焊接配方",
+    "reason": "2026-10-26 owner 衝突裁決：2026-10-26 首次裁決: 房車裝甲手冊的說明. GridRV 教 2 個配方 (尖刺撞角 V 形楔、側面裝甲), DeadWorksNomadRV 多教「焊接房車排障器」. 現行 As1 值只列兩項, 對 DeadWorksNomadRV 漏列一個實際會學到的配方. 改成不列舉的「可學習: 房車裝甲焊接配方」, 排障器也在該 MOD 的 GridRVArmourItems 裝甲物品內, 對兩個 owner 都成立."
+  },
+  "ContextMenu.json|ContextMenu_InstallProstLeft": {
+    "as1_value": "为左臂安装假肢",
+    "value": "为左侧安装假肢",
+    "reason": "2026-10-26 owner 衝突裁決：2026-10-26 首次裁決: The Only Cure (3580276809) 與分支 The Only Cure+ (3818733381). 原版寫 on left arm (只有手臂假肢), The Only Cure+ 寫 on the left side (新增腿部假肢: 木腿、機械腿、仿生腿、醫療腿部假肢). 現值「為左臂安裝假肢」對 TOC+ 裝腿部假肢時是錯的; 改成「為左側安裝假肢」, 手臂也在左側, 對兩個 owner 都成立."
+  },
+  "ContextMenu.json|ContextMenu_InstallProstRight": {
+    "as1_value": "为右臂安装假肢",
+    "value": "为右侧安装假肢",
+    "reason": "2026-10-26 owner 衝突裁決：2026-10-26 首次裁決: The Only Cure (3580276809) 與分支 The Only Cure+ (3818733381). 原版寫 on right arm (只有手臂假肢), The Only Cure+ 寫 on the right side (新增腿部假肢: 木腿、機械腿、仿生腿、醫療腿部假肢). 現值「為右臂安裝假肢」對 TOC+ 裝腿部假肢時是錯的; 改成「為右側安裝假肢」, 手臂也在右側, 對兩個 owner 都成立."
+  },
+  "Sandbox.json|Sandbox_TOC_SurgeonAbilityImportance": {
+    "as1_value": "外科技能影响",
+    "value": "主刀者急救技能的影响程度",
+    "reason": "2026-10-26 owner 衝突裁決：2026-10-26 首次裁決並更正現值: The Only Cure (3580276809) 與分支 The Only Cure+ (3818733381). 原版寫 surgeon doctor ability, TOC+ 寫 surgeon First Aid ability: doctor 是原版急救技能的內部名 (Perks.Doctor), 分支只是把內部名換成顯示名, 指同一個技能. 現值「外科技能影響」點名一個不存在的「外科」技能, 對兩個 owner 都不成立; 改成「主刀者急救技能的影響程度」(急救＝LangFor42 IGUI_perks_Doctor)."
+  },
+  "IG_UI.json|IGUI_RR_DepotNoPower": {
+    "as1_value": "附近需要一个能用的发电机",
+    "value": "油罐的泵没有电 - 带一台运转中的发电机来",
+    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_RR_Note_Fuel": {
+    "as1_value": "她怠速时也烧油 - 没事就关掉她.\\n柴油机 - 她不认汽油.\\n右键机车 ->\\n'为机车加注柴油'.\\n油罐位置: 马尔德劳站; 山谷站\\n货运站: 平台路, 不是主路.\\n-> '从油罐为机车加油'\\n (她必须停靠在油罐旁边);\\n-> '从油罐为容器加油'.\\n每个油罐容量有限.\\n抽取柴油需要软管.\\n电瓶会被灯光和启动器耗尽.\\n耗尽时 - 找个能用的发电机, 链接\\n曲轴. 我们并没有专用充电器",
+    "value": "她怠速时也会烧油 - 不用时就熄火.\\n只能加柴油 - 汽油对她没用.\\n油桶: 右键点击机车 ->\\n“为机车加注柴油”.\\n大型油罐: 马尔德劳机务段; 山谷站\\n货运站: 在站台线, 不是正线.\\n-> “从油罐给机车加油”\\n   (她必须停在油罐旁);\\n-> “从油罐中加满容器”.\\n每座油罐存量各自有限; 泵需要电力.\\n抽回柴油需要软管.\\n启动和照明会消耗电瓶电量.\\n没电时 - 在附近放一台运转中的发电机, 再\\n转动曲轴. 机务段没有充电器.",
+    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_RR_Note_Panel": {
+    "as1_value": "6块仪表盘:时速表. 电流表, 气刹表,\\n转速表, 油量表, 水温表\\n水温表指的是水温不是水位\\n电流表就是动力表, 数值越高牵引力越大, 归0她就动不了\\n启动分启动, 预供油, 曲轴转动, 加热暖机\\n指示灯光\\n大灯和驾驶室的指示灯代表对应灯光亮起\\n发动机指示灯代表发动机运转情况\\n电瓶指示灯黄色代表亏电\\n红色代表无法启动\\n车况灯黄色动力衰减\\n红色随时自行熄火",
+    "value": "六个仪表: 速度, 电流, 制动风压,\\n引擎转速, 燃油, 水温.\\n水温表示温度, 不是水量.\\n电流 = 实际牵引力. 油门已开而\\n指针停在 0, 说明她动不了.\\n柴油机熄火时, 油门扇形座就是\\n启动器: 启动 / 预供油 / 转动曲轴 / 预热暖机.\\n指示灯\\n大灯, 室灯 - 对应的灯已打开.\\n引擎 - 柴油机运转中.\\n电瓶: 琥珀色 - 剩不了几次启动,\\n红色 - 启动器转不动.\\n机况 (引擎状态): 琥珀色 - 动力正在下降,\\n红色 - 她可能自行熄火.",
+    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_RR_Note_Run": {
+    "as1_value": "[R] 切换换向器挡位:空挡 -> 前进 -> 后退 -> 空挡\\n只能停车换挡.\\n空挡时油门失效, 示数 0.\\n[W] 键升油门挡位, [S] 键退挡. 一共8挡.\\n发动机运转才有动力.\\n按 [Space] 键- 空气制动.\\n标准操作: 油门降到 0, 然后刹车",
+    "value": "[R] - 换向器: 空挡 -> 前进 -> 后退 -> 空挡.\\n只能在停稳时切换.\\n空挡时油门锁死, 电流读数为 0.\\n[W] 升一挡, [S] 降一挡. 0 到 8 挡.\\n柴油机运转时才有动力.\\n长按 [Space] - 空气制动.\\n顺序: 油门先回 0, 再制动.\\n长按鼠标右键 - 沿着线路往前看.\\n使用手柄时\\n右扳机 - 升挡, 左扳机 - 降挡.\\n按住可连续升降挡. 十字键上/下也可以.\\n长按 B - 制动. 十字键左 - 换向器.\\n右摇杆 - 环顾; 同时按住 RB - 看得更远.\\n十字键右, 长按 - 驾驶室菜单.",
+    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_RR_Note_Signals": {
+    "as1_value": "长按 [Q] 键- 汽笛.\\n[L] 键 - 气铃, 自动发声.\\n这些都依赖于发动机的空气压缩机\\n熄火将不能发声.\\n[F] 键- 大灯: 关 / 暗 / 明.\\n暗是近光灯, 会车时使用.\\n照亮换向器选择的行驶方向.\\n[Shift+F] 键- 驾驶室顶灯.\\n灯光消耗电瓶电量",
+    "value": "长按 [Q] - 汽笛.\\n[L] - 气铃, 切换开关, 开启后自动鸣响.\\n两者都靠空气压缩机: 柴油机\\n熄火时就发不出任何声响信号.\\n[F] - 大灯: 开 / 关, 跟汽车一样.\\n照亮换向器所选方向的那一端.\\n[Shift+F] - 驾驶室顶灯.\\n夜里靠它的灯光可以在驾驶室阅读.\\n车号牌会照亮车号本身, 只要\\n她还有一点电就会亮着.\\n大灯和顶灯会消耗电瓶电量; 车号牌\\n不会. 一直开着会把电瓶耗光.\\n手柄: 按住 LB - 汽笛. 按下右摇杆 - 气铃.\\n大灯在驾驶室菜单里.",
+    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_RR_Note_Track": {
+    "as1_value": "道岔\\n右键道岔 -> '道岔切换':\\n主线 (直行) 或者分支.\\n设置会永久保存.\\n撞击\\n栅栏, 标牌, 车辆, 道口, 树木会被撞毁.\\n临近车站的水泥, 会被推动.\\n道口车辆会被撞飞.\\n撞上其他列车会停下.\\n所有撞击都会损耗耐久 (车况).\\n车况 0 - 失控, 报废,\\n无法维修",
+    "value": "道岔\\n右键点击道岔 -> “铁路道岔”:\\n主线 (直走) 或岔道.\\n设置会被保存.\\n撞击\\n栅栏, 标志, 锥桶, 门, 树 - 撞毁.\\n混凝土 - 几乎停下, 可推开穿过.\\n道口上的汽车 - 撞扁并被撞飞.\\n在服务器上则会直接摧毁它, 且\\n低于约 4 m/s 时她会停在车前.\\n货车厢, 机车 - 直接停下.\\n每次撞击都会磨损车架, 接着是引擎.\\n车架 0 - 无法移动. 引擎 0 - 引擎停转.",
+    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_RR_OutOfOrder": {
+    "as1_value": "故障 - 机车已损坏 (状态 0)",
+    "value": "故障 - 引擎已报废, 需要零件",
+    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_RR_Note_Derail": {
+    "as1_value": "脱轨不可修复\\n原因1. 损坏的铁轨 (高速撞开的铁轨末端).\\n原因2. 剧烈撞击 (车速≥8m/s).\\n脱轨后整车熄火, 全部操控失灵,\\n她将坏在此地, 永不可能再次随你启程.",
+    "value": "脱轨\\n1. 高速驶过损坏的铁轨 (断开的铁轨末端).\\n2. 剧烈撞击 (约 8 m/s 以上).\\n脱轨后: 引擎熄火, 操控全部失灵,\\n在她被放回轨道前都无法移动.\\n她是可以放回去的. 但这是件费时的工作, 不是\\n点一下就行 - 请见下一页.",
+    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+  },
+  "UI.json|UI_prof_RailroaderDesc": {
+    "as1_value": "你在诺克斯县的短线铁路工作 - 在铁路场地里操作调动机车, 在冬季早晨给燃油泵预热, 直到柴油机启动. 铁路仍然通向每条公路能延伸到的地方, 而你是为数不多还能在上面运送任何东西的人之一.",
+    "value": "无需阅读操作手册即可启动并驾驶任何机车. 冷机启动更容易成功.",
+    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+  },
+  "UI.json|UI_trait_RRRailroader_Desc": {
+    "as1_value": "你可以启动并驾驶一列机车: 换向器, 油门挡位, 空气制动. 没有这些, 即使驾驶室里满是操纵杆, 你也没办法启动",
+    "value": "具备任何机车的驾驶资格, 无需阅读操作手册.<br>冷机的柴油机更容易启动, 启动失败时的电瓶耗电量减半.",
+    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_RR_Note_Place": {
+    "as1_value": "K&L 800, GP7. 马尔德劳车站, 棚内车位.\\n找到时处于冷机停放状态\\n靠近她 [E] 键 - 进入驾驶室.\\n[E] 键 进入驾驶室 - 离开驾驶室 (等她先自动停下).\\n[V] 键 - 驾驶室菜单: 睡觉, 大灯, 离开.\\n标准操作: 登车 -> 换向器调到N (空挡) -> 启动 [W] 键",
+    "value": "K&L 800, GP7. 马尔德劳机务段, 棚内车位.\\n找到时处于冷机停放状态.\\n在她旁边按 [E] 键 - 登上驾驶室.\\n在驾驶室内按 [E] 键 - 下车 (她会先停下).\\n或右键点击她: 爬进 / 离开.\\n[V] 键 - 驾驶室菜单: 睡觉, 大灯, 离开.\\n标准操作: 登车 -> 换向器调到N (空挡) -> 启动 [W] 键.\\n使用手柄时: 交互键可上下车.\\n她的操控也能用手柄操作 - 见下方.\\n在服务器上: 一人驾驶, 其他人搭乘.\\n仅限服务器: [V] 键可接手或交出操控.\\n在驾驶室内登出 - 会保留你的座位.",
+    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_RR_Note_Start": {
+    "as1_value": "启动\\n换向器必须在N否则无法启动.\\n按 [W] 键- 单次点火尝试.\\n点火流程: 自动预供油1.5秒, 曲轴转动1.6秒.\\n点火失败 - 重复按 [W] 键, 保持预供油.\\n启动后自动加热暖机4秒, 此时动力受限.\\n每次打火消耗电瓶电量.\\n低温, 潮湿, 变质柴油都会降低点火成功率.\\n没电或没油无法启动.\\n熄火\\n车辆完全停稳, 油门归零后按 [S] 键熄火",
+    "value": "启动\\n换向器必须在N, 否则启动器不会转动.\\n按 [W] 键 - 单次点火尝试.\\n自动进行: 预供油约1.5秒, 然后曲轴转动约1.6秒.\\n点火失败 - 再按 [W] 键, 预供油会保留.\\n点火成功 - 暖机约4秒, 此时动力受限.\\n每次尝试都会消耗电瓶电量.\\n低温, 变质柴油会降低成功率. 下雨不会.\\n没油或电瓶没电 - 无法启动.\\n熄火\\n油门挡位为0且车辆完全停稳时按 [S] 键.\\n手柄: 十字键上启动, 十字键下熄火.",
+    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_PZCrossbows_CompoundCrossbowSpawnMult_tooltip": {
+    "as1_value": "调整复合十字弩在战利品中的生成倍率.",
+    "value": "调整复合十字弩和标准长度弩箭在容器战利品和搜寻中的生成倍率.",
+    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_PZCrossbows_HandCrossbowSpawnMult_tooltip": {
+    "as1_value": "调整手持十字弩在战利品中的生成倍率.",
+    "value": "调整手持十字弩和短弩箭在容器战利品和搜寻中的生成倍率.",
+    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_PZCrossbows_CrudeCrossbowSpawnMult_tooltip": {
+    "as1_value": "调整粗糙十字弩在战利品中的生成倍率.",
+    "value": "调整粗糙十字弩在容器战利品和搜寻中的生成倍率.",
+    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_PZCrossbows_ImprovedCrossbowSpawnMult_tooltip": {
+    "as1_value": "调整改良十字弩在战利品中的生成倍率.",
+    "value": "调整改良十字弩在容器战利品和搜寻中的生成倍率.",
+    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+  },
+  "ItemName.json|BundleUp.PlantainCarton": {
+    "as1_value": "大蕉 (纸箱)",
+    "value": "车前草 (纸箱)",
+    "reason": "2026-10-26 As1 v3.12.0：Plantain 是本體 Base.Plantain 車前草（官方簡中车前草），As1 寫成大蕉"
+  },
+  "ItemName.json|BundleUp.PlantainCrate": {
+    "as1_value": "大蕉 (木箱)",
+    "value": "车前草 (木箱)",
+    "reason": "2026-10-26 As1 v3.12.0：Plantain 是本體 Base.Plantain 車前草（官方簡中车前草），As1 寫成大蕉"
+  },
+  "Recipes.json|PackMagazineBundle": {
+    "as1_value": "将弹匣装盒",
+    "value": "将杂志装盒",
+    "reason": "2026-10-26 As1 v3.12.0：Pack Magazines in Box 的 Magazines 是雜誌（同組 UnpackMagazineBundle 為 10 本雜誌），As1 寫成弹匣"
   }
 }

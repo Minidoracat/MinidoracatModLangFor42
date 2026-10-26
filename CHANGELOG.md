@@ -4,6 +4,37 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **同步如一漢化組 v3.12.0：新增 5,433 項繁簡中文，包括 As1 這版新收的 33 個 MOD。** 例如 Ros's Radical Animal Remaster（家畜與野生動物的新品種與稀有毛色，1,896 項）、Radio Trader（用對講機或無線電呼叫商人買賣物資，1,063 項）、Blackout Predators Extended（347 項）、The Only Cure+（截肢與模組化義肢，345 項）、Knox Inventory（339 項）、Wound Expansion（擦傷、穿刺傷等新傷口與醫療用品，260 項）、Real Vehicle Interiors（可走進車內生活的露營車與巴士，185 項）、H.E.C.U.（97 項）、Tarkov Field Medic（90 項）、The MRE Chronicles（87 項）。
+  > 技術要點：As1 v3.12.0（Change Notes `<p id>`=1792982467）新增 25,435 個 (檔,鍵)。其中 19,804 鍵本包原本以 `own_translations` 自譯（見 Changed），198 鍵 `sources/ch` 已有；其餘 5,433 鍵繁中由 11 路翻譯、11 路對抗複核逐鍵對照上游英文直寫。全數登記 `ch_review_state`，worklist 清空。名冊依 `as1-list` 補登 33 個 MOD，`backfill-en` 全數成功，`snapshot.json` 重釘。As1 已收錄的 3 個 own 目錄退役（Puffin's Retro Relics、SMB steps、FTZ Carts & Trolleys），FTZ 有 11 鍵 As1 沒收，遷入 `own_translations`；split 以 `--allow-low-evidence` 接受移除 142 條因上游刪鍵消失的 owner edge。
+- **補齊 As1 v3.12.0 新收 MOD 其餘未翻的繁簡中文：13 個 MOD 共 8,895 項。** Living NPC（同伴的個性、記憶、人際關係、成家、繼承、遠征與倉儲作息，5,303 項）、Sandevistan（脊椎植入物與身體負擔，1,452 項）、Cheat Menu 2.0 - Rax 重生版（868 項）、Fletcher 弓箭製作（弓、十字弓、箭矢與射箭技能，539 項）、Xanny Arms 槍械包（槍械、配件與散裝／盒裝／箱裝彈藥，458 項）、BADLANDS 特質與職業（291 項），以及 Radio Trader、Viewpoint - 3D 露營車、Burning Vehicles、Real Vehicle Interiors、Complete Vanilla Firearms Expansion、Project Viewpoint 與 Blackout Predators Extended。
+  > 技術要點：prep 列出 8,403 條相異英文、8,895 鍵，全數落 `own_translations.json`，ch／cn 逐鍵對照 EN 直寫並登記 `ch_review_state`；重跑 prep 後這 33 個 wid 缺口為 0。分 20 組翻譯（Living NPC、Sandevistan、Cheat Menu、Fletcher 先建共用術語表），每組對抗複核。收尾統一：hotwire 照本體寫「短接啟動」、garden 寫「菜園」、兩個句點的省略寫「……」；15 鍵依各 MOD 語境以鍵層級另譯。Living NPC 的 `UI_LNPC_AI_Language` 是傳給 AI 的回覆語言代碼（作者 KO 版寫 `ko`），寫 `zh-TW`／`zh-CN`。譯者沒拿到原始檔、標為推測語境的鍵，以 steamcmd 下載現行版後對照 Lua 修正：Living NPC 技能條件「體能 3 級達成」、遠征「1 號小隊」（Lua 把鍵接在隊伍編號後）、家具指派提示照實際的選單名「指派這件家具」，Recall 功能統一寫「回顧」、簡中空欄位統一「栏位」；Xanny Arms 17 條「12 盒裝 → 1 箱」配方由「打包成箱」改「將盒裝子彈裝箱」；BADLANDS 藥癮說明的 vitamins 指原版 `Base.PillsVitamins`（B42 英文已改名 Caffeine Pills），繁中照 LangFor42 寫「咖啡因藥丸」。
+- **補上 B42 實際讀取的物品名與配方名：153 項。** Blackout Predators Extended 86、Radio Trader 4、Plysken Battery Charger 2 個物品名，The MRE Chronicles 40、The Only Cure+ 21 個配方名，As1 只翻了 B42 不讀的舊式鍵，遊戲裡原本仍顯示英文。
+  > 技術要點：前綴鍵 `ItemName_<fullType>`／`Recipe_<區塊名>` 照 As1 保留，把 CH 與有效 CN 複製成裸鍵寫進 `own_translations.json`，修好 verify [15]／[16]。Radio Trader 的 `ItemName_RadioTraders.BaseStationRadio` 在現行 script 與 Lua 都沒有對應物品，登記 `itemname_dead_allowlist.json`。
+- **21 個 MOD 更新後新增的文字補上繁簡中文（971 項）。** Stay With Me（同伴的主武器指派，以及配槍、換彈、收到零件時的對話，306 項）、Knox Inventory（物品欄版面編輯器的預設、對稱、分組與材質音效，194 項）、Railroader（守車家具、車門、照明與電源、重新上軌提示與音效選項，143 項）、Extreme Weather（異常電波、血紅天空警報、下擊暴流、全球超級風暴、電磁風暴讓手電筒失效、山洪，138 項）、Senators Martial Arts Core（新的拳擊與格鬥連段、倒地追擊提示，56 項）、Survivor Briefing（簡報樣式與動態效果選項，36 項）、PZ Simple Crossbows（金屬弩箭的鍛造、裝盒與焊接修理，21 項）、Knox Survivors（派系到來、軍事設施清理、警察巡邏，18 項）、Extended categories（11 項）、The Long Dark Guns（9 項）、Live to Fight Another Day（公路塞車、巡邏車與抗議現場等場景，8 項），以及 Guns of 93、My So-Called Fashion、Neat Rocco's UI、Tripping Zombies: Reborn、Better Building Plus、Area Tasks、Viewpoint - Interface、TwisTonFire、Totally's Long Arm of the Law、Totally's NATO Firearms Pack。
+  > 技術要點：追蹤器 2026-10-26 #1064–#1066、#1068–#1088「可能過時」。新鍵走 `apply_wf_result`／`apply_translations` 進 `own_translations.json`；7 路翻譯、7 路對抗複核。Knox 新增的 86 個測試台鍵（`IGUI_KnoxTB_*`）照 2026-10-22 裁定登記 `untranslatable_keys.json`：以 steamcmd 重抓 10-25 現行版，兩個子 MOD 仍不含 `KnoxTestBench.lua`。PZK VLC（#1065）的新車 `Vehicles_pzkTrailerFieldKitchen` 上游沒有車名翻譯鍵；同 MOD 的 `IGUI_VehicleNameVanSeats_Mural` 是 2026-10-24 裁定不出貨的原版車名，不補。
+
+### Changed
+
+- **上游改了英文的已出貨文字跟著改（97 項）。** Hardship: Brawling 的沙盒選項說明照新版重寫（拳頭、踢門、衝撞、格擋、持槍近戰、刀具暴擊與整合其他 MOD 的選項，44 項）；Railroader 的操作說明與職業、特質描述（職業特質的「啟動失敗時的電瓶耗電量減半」對照 Lua 的 `drainFactor` 確認）；Knox Survivors 的派系與人口設定說明、The Long Dark Guns 的步槍名、Tripping Zombies: Reborn 的倒地說明、Guns of 93 的護木與兩腳架名稱、PZ Simple Crossbows 的生成倍率說明、Extreme Weather 的山洪與龍捲風說明，以及 Senators Martial Arts、Neat Rocco's UI、El Hombre Paja 的個別文字。
+  > 技術要點：own 層 35 鍵經 `apply_translations` 更新 `en` 錨點與譯文；As1 衍生層 18 鍵改 `sources/ch`，簡中有變的登記 `cn_overrides`（附 `as1_value`）；Hardship: Brawling（own 目錄）44 鍵寫 own 目錄 CN 與 `sources/ch`；皆登記 `ch_review_state`。Senators 的 `UI_SMA_Move_boxing_powerCross` 英文錨點只差大小寫，更新 `en`、譯文不變。
+- **如一漢化組 v3.12.0 收錄了本包原本自譯的 19,804 項，簡中改用 As1 譯文，繁中不變。** 涵蓋 Bundle Up!（5,682 項）、Stay With Me（3,711 項）、The MRE Chronicles、Project A-Life、Bloodlust Overwhelming、Knox Inventory、HydeCo. Knox Underground!、NotAlone NPC、Wess Admin Tools、Survivor Journals、Immersive Lore 等 46 個 MOD。
+  > 技術要點：依 As1 同鍵優先，繁中沿用原譯落 `sources/ch`、刪除 own 條目，`ch_review_state` 改登記新的有效簡中。As1 簡中與原自譯不同的 16,774 鍵先以 judge_batch 對照英文初篩，標出 1,852 鍵可疑，再由 6 路逐鍵裁決：1,337 鍵仍採 As1、496 鍵維持原自譯、19 鍵重寫，後兩類登記 `cn_overrides`（帶 `as1_value` 錨點）。另有 3 鍵繁中改成和 As1 一致：`Clothing_Back`「背部」（欄位名）、`UI_MarkXI_HUD_MISSILE`「飛彈」、`zombie-nearby:5`「很近了」。
+- **修正如一漢化組 v3.12.0 新收簡中的 247 處錯誤。** 大多是 Ros's Radical Animal Remaster 的品系、毛色與編號漏譯，讓不同物品同名（例：黑色、巧克力色、藍色的英國斑點兔都譯成「英国斑点兔」，三隻編號不同的小牛頭同名）；另有 Burning Vehicles 照舊版英文翻譯的燃燒規則說明、Tarkov Field Medic 少了百分比記號，以及 Blackout Predators Extended、Knox Inventory、Radio Trader 的個別誤譯。Stay With Me 同伴頭頂的中文對話維持顯示（As1 新值會把它關掉）。
+  > 技術要點：繁中翻譯與複核時逐鍵標出 As1 問題，依現行英文改寫後登記 `cn_overrides`（帶 `as1_value` 錨點）並登記 `ch_review_state`。另以 `cn_overrides` 修 3 類：`MGsMRE_UmbrellaSmile_info` 的材質路徑被 As1 翻成中文、圖片載不到，還原檔名；`IGUI_NotAlone_OverheadCyrillic` 不是顯示文字，是 Stay With Me `BridgeData.overheadOk()` 讀的旗標，台詞或名字含非 ASCII 字元時只在值為 "1" 才顯示頭頂對話，As1 照英文寫 "0"，維持 "1"（#733）；Bundle Up! 的 PlantainCarton／PlantainCrate 照本體寫「车前草」。
+- **重新背書多 MOD 共用鍵的裁決與條件譯文，並裁決 As1 新鍵帶進的 43 個共用鍵。** 原有 49 筆裁決與 84 組條件譯文的譯名不變，只因新 owner 加入或上游改英文更新簽名（含 #1089 Guns of 93 的 `Base.HK91` 去掉英文尾端逗號）。新裁決的 43 鍵：38 鍵英文只差拼法或大小寫、同指一物，維持或統一譯名（例：7.62x54mm／7.62x54R 是同一種彈藥；The Only Cure 與分支 The Only Cure+ 共用的截肢、假肢與手術文字；Fletcher 加入後的射箭技能說明）；5 鍵兩方說法互斥、改為不出貨，各 MOD 顯示自己的英文：`Base.Glock18`（Totally's Long Arm 的名稱寫成 Glock 17）、`Base.PPSHDrum`、GridRV 的兩則備份公告（更新前預告與更新後通知互斥）、`UI_quick_tip_joke27`。
+  > 技術要點：`owner_conflict_decisions.json` 重簽 49 筆（含 4 筆 unship 的 `owner_signature`）、新增 43 筆（translate 38、unship 5），`owner_variants.json` 新增 18 組、更新 91 組；As1 衍生層改值的鍵改 `sources/ch`＋`cn_overrides`。unship 5 筆登記 `unshipped_keys.json`；`IGUI_KnoxTB_A_Settings` 的 `as1_value` 改填 As1 值。`OWNER_CONFLICTS.md` 重生。
+- **其他用語修正。** The Only Cure+ 的 Mechanical Arm 4 個物品與配方改「機械手臂」「製作機械手臂」；PZK 三台鐵路作業版車名改「騎士·堅守鐵路作業版」；Railroader 的 shovel 照本體寫「鐵鍬」；Knox Inventory 存檔清單的 Played 是最後遊玩時間，繁中「已遊玩」改「上次遊玩」；Bundle Up! 的雜誌裝盒配方改「將雜誌裝盒」；Cheat Menu 系列共用的 3 鍵全形標點改半形、「您」改「你」；Living NPC 與 Cheat Menu 2.0 的「用戶端」統一為「客戶端」。
+  > 技術要點：皆登記 `ch_review_state`。lint 棘輪擋下的 Knox 測試台 7 鍵「指針」是油表與發電機儀表的指針，不是滑鼠指標，登記 `lint_exemptions`（附 `ch_value` 錨點）。
+
+### Removed
+
+- **上游已刪除的 4 個鍵不再出貨**：Hardship: Brawling 的 PvP 傷害紀錄選項與說明（2 鍵）、Railroader 的煞車已施加／已鬆開兩個狀態提示（2 鍵）。
+  > 技術要點：核實 `sources/en` 全庫、tracker state 與 steamcmd 重抓的現行版 Lua／script 都沒有引用才刪（Railroader 唯一的動態組鍵是 `IGUI_RR_DoorName_`），連同 `ch_review_state`。
+
 ## [42.21.0-1.61.0] - 2026-10-25
 
 ### Added
