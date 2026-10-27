@@ -6246,9 +6246,9 @@
     "cn": "CU 治疗: %s"
    },
    "ContextMenu_AHS_CUTreatmentModeTip": {
-    "en": "Choose the mode for your next treatments. Quick mode uses the normal timed action; CU operations use First Aid for their result. Treatments already started keep their mode. CU settings still apply.",
-    "ch": "選擇接下來治療所用的模式. 快速模式使用一般的計時動作; CU 操作則依急救技能決定結果. 已開始的治療會維持原本的模式. CU 的設定仍然有效.",
-    "cn": "选择接下来治疗所使用的模式. 快速模式使用普通的计时动作; CU 操作则根据急救技能决定结果. 已开始的治疗会保持原有模式. CU 的设置仍然生效."
+    "en": "Choose the mode for your next treatments. Quick mode skips CU, AHS and Wound Expansion minigames and uses the normal timed action; CU operations use First Aid for their result. Treatments already started keep their mode. Mod settings still apply.",
+    "ch": "選擇接下來治療所用的模式. 快速模式會略過 CU、AHS 與 Wound Expansion 的小遊戲, 並使用一般的計時動作; CU 操作則依急救技能決定結果. 已開始的治療會維持原本的模式. 模組設定仍然有效.",
+    "cn": "选择接下来治疗所使用的模式. 快速模式会跳过 CU、AHS 和 Wound Expansion 的小游戏, 并使用普通的计时动作; CU 操作则根据急救技能决定结果. 已开始的治疗会保持原有模式. 模组设置仍然生效."
    },
    "ContextMenu_BBP_WriteMaterials": {
     "en": "Write Materials List",
@@ -6358,6 +6358,26 @@
     "en": "xxanyarms: test kits",
     "ch": "xxanyarms: 測試套組",
     "cn": "xxanyarms: 测试套件"
+   },
+   "ContextMenu_AHS_NebulizerGameExhale": {
+    "en": "EXHALE: release",
+    "ch": "呼氣: 放開",
+    "cn": "呼气: 松开"
+   },
+   "ContextMenu_AHS_NebulizerGameHint": {
+    "en": "Hold the mouse button to inhale. Release it to exhale. Complete three breaths.",
+    "ch": "按住滑鼠按鍵吸氣. 放開即可呼氣. 完成三次呼吸.",
+    "cn": "按住鼠标按键吸气. 松开即可呼气. 完成三次呼吸."
+   },
+   "ContextMenu_AHS_NebulizerGameInhale": {
+    "en": "INHALE: hold",
+    "ch": "吸氣: 按住",
+    "cn": "吸气: 按住"
+   },
+   "ContextMenu_AHS_NebulizerGameTitle": {
+    "en": "Nebulizer: paced breathing",
+    "ch": "霧化器: 節奏呼吸",
+    "cn": "雾化器: 节律呼吸"
    }
   },
   "Fluids.json": {
@@ -74269,7 +74289,7 @@
     "cn": "烹饪-厨具-捆装"
    },
    "IGUI_ItemCat_HusbandryFood": {
-    "en": "Husbandry - Food",
+    "en": "Animal Care - Food",
     "ch": "畜牧-食物",
     "cn": "畜牧-食物"
    },
@@ -130899,7 +130919,7 @@
     "cn": "战斗中只在枪打空时才装填."
    },
    "IGUI_NotAlone_GunReloadIdleOnTip": {
-    "en": "Tops up shotguns and revolvers. Swaps magazine guns at 25% or less.",
+    "en": "Tops up shotguns and revolvers. Swaps magazine guns at 25%% or less.",
     "ch": "替霰彈槍和左輪手槍補滿子彈. 使用彈匣的槍在彈藥剩 25%% 或更少時換彈匣.",
     "cn": "给霰弹枪和左轮手枪补满子弹. 使用弹匣的枪在弹药剩 25%% 或更少时换弹匣."
    },
@@ -133552,6 +133572,671 @@
     "en": "Global Superstorm",
     "ch": "全球超級風暴",
     "cn": "全球超级风暴"
+   },
+   "IGUI_ItemCat_Husbandry": {
+    "en": "Animal Care",
+    "ch": "畜牧",
+    "cn": "畜牧"
+   },
+   "IGUI_ItemCat_LiteratureSkillBook": {
+    "en": "Literature - Skill Book",
+    "ch": "文學-技能書",
+    "cn": "文学-技能书"
+   },
+   "IGUI_Wounds_AdminBlood": {
+    "en": "Admin: blood group",
+    "ch": "管理員: 血型",
+    "cn": "管理员: 血型"
+   },
+   "IGUI_Wounds_AdminBloodKnown": {
+    "en": "Set, and the character knows it",
+    "ch": "設定, 且角色知道血型",
+    "cn": "设置, 且角色知晓血型"
+   },
+   "IGUI_Wounds_AdminBloodUnknown": {
+    "en": "Set, to be typed",
+    "ch": "設定, 需經檢驗",
+    "cn": "设置, 需经检验"
+   },
+   "IGUI_Wounds_AmputateAbove": {
+    "en": "amputate above it",
+    "ch": "需從上方截肢",
+    "cn": "需要从上方截肢"
+   },
+   "IGUI_Wounds_BedClean": {
+    "en": "clean bed - a skin graft would close it",
+    "ch": "創面乾淨 - 植皮即可閉合",
+    "cn": "创面干净 - 植皮即可闭合"
+   },
+   "IGUI_Wounds_BlisterBurst": {
+    "en": "A blister on the burn has burst.",
+    "ch": "燒傷處的一個水泡破了.",
+    "cn": "烧伤处的一个水泡破了."
+   },
+   "IGUI_Wounds_Blisters": {
+    "en": "blisters: %s intact, %s burst",
+    "ch": "水泡: %s 個完整, %s 個破裂",
+    "cn": "水泡: %s 个完好, %s 个破裂"
+   },
+   "IGUI_Wounds_BurnCooled": {
+    "en": "cooled",
+    "ch": "已冷卻",
+    "cn": "已冷却"
+   },
+   "IGUI_Wounds_BurnCutOpen": {
+    "en": "cut open down its length",
+    "ch": "已沿全長切開",
+    "cn": "已沿全长切开"
+   },
+   "IGUI_Wounds_BurnDead": {
+    "en": "dead tissue - cut it away",
+    "ch": "壞死組織 - 需切除",
+    "cn": "坏死组织 - 需要切除"
+   },
+   "IGUI_Wounds_BurnDeadPart": {
+    "en": "dead tissue - %s of %s pieces cut away",
+    "ch": "壞死組織 - 已切除 %s / %s 塊",
+    "cn": "坏死组织 - 已切除 %s/%s 块"
+   },
+   "IGUI_Wounds_BurnDeepened": {
+    "en": "The burn has gone deeper.",
+    "ch": "燒傷加深了.",
+    "cn": "烧伤加深了."
+   },
+   "IGUI_Wounds_BurnDeg1": {
+    "en": "Burn, 1st degree",
+    "ch": "一度燒傷",
+    "cn": "一度烧伤"
+   },
+   "IGUI_Wounds_BurnDeg2": {
+    "en": "Burn, 2nd degree",
+    "ch": "二度燒傷",
+    "cn": "二度烧伤"
+   },
+   "IGUI_Wounds_BurnDeg3": {
+    "en": "Burn, 3rd degree",
+    "ch": "三度燒傷",
+    "cn": "三度烧伤"
+   },
+   "IGUI_Wounds_BurnDeg4": {
+    "en": "Burn, 4th degree",
+    "ch": "四度燒傷",
+    "cn": "四度烧伤"
+   },
+   "IGUI_Wounds_BurnOint": {
+    "en": "under ointment",
+    "ch": "已塗藥膏",
+    "cn": "已涂药膏"
+   },
+   "IGUI_Wounds_CoolNoWater": {
+    "en": "Needs a bottle with clean water.",
+    "ch": "需要一瓶乾淨的水.",
+    "cn": "需要一瓶干净的水."
+   },
+   "IGUI_Wounds_DeadLimb": {
+    "en": "Dead tissue",
+    "ch": "壞死組織",
+    "cn": "坏死组织"
+   },
+   "IGUI_Wounds_DebrideCut": {
+    "en": "Cut round each piece of dead skin to lift it off",
+    "ch": "沿每一塊壞死皮膚的周圍切開, 將其剝離",
+    "cn": "沿每一块坏死皮肤的周围切开, 将其剥离"
+   },
+   "IGUI_Wounds_DebrideDone": {
+    "en": "The dead tissue is off.",
+    "ch": "壞死組織已切除.",
+    "cn": "坏死组织已切除."
+   },
+   "IGUI_Wounds_DebrideOff": {
+    "en": "pieces off %s of %s",
+    "ch": "已剝離 %s / %s 塊",
+    "cn": "已剥离 %s/%s 块"
+   },
+   "IGUI_Wounds_DebrideSkill": {
+    "en": "Requires First Aid 3",
+    "ch": "需要急救 3 級",
+    "cn": "需要急救 3 级"
+   },
+   "IGUI_Wounds_Donor": {
+    "en": "Skin graft donor site",
+    "ch": "植皮供皮區",
+    "cn": "植皮供皮区"
+   },
+   "IGUI_Wounds_DonorRow": {
+    "en": "a shaved scrape - it heals by itself",
+    "ch": "削去表皮的擦傷 - 會自行癒合",
+    "cn": "削去表皮的擦伤 - 会自行愈合"
+   },
+   "IGUI_Wounds_Drug_alcohol": {
+    "en": "Alcohol",
+    "ch": "酒精",
+    "cn": "酒精"
+   },
+   "IGUI_Wounds_Drug_antidep": {
+    "en": "Antidepressants",
+    "ch": "抗憂鬱藥",
+    "cn": "抗抑郁药"
+   },
+   "IGUI_Wounds_Drug_beta": {
+    "en": "Beta blockers",
+    "ch": "β-阻斷劑",
+    "cn": "β-阻断剂"
+   },
+   "IGUI_Wounds_Drug_nicotine": {
+    "en": "Nicotine",
+    "ch": "尼古丁",
+    "cn": "尼古丁"
+   },
+   "IGUI_Wounds_Drug_sleeping": {
+    "en": "Sleeping pills",
+    "ch": "安眠藥",
+    "cn": "安眠药"
+   },
+   "IGUI_Wounds_DryGangrene": {
+    "en": "dry gangrene",
+    "ch": "乾性壞疽",
+    "cn": "干性坏疽"
+   },
+   "IGUI_Wounds_EscharBlade": {
+    "en": "Requires a scalpel or a sharp knife",
+    "ch": "需要手術刀或鋒利的刀",
+    "cn": "需要手术刀或锋利的刀"
+   },
+   "IGUI_Wounds_EscharCut": {
+    "en": "Draw the blade along the marked line, from one point to the other",
+    "ch": "沿著標記線下刀, 從一點劃到另一點",
+    "cn": "沿着标记线下刀, 从一点划到另一点"
+   },
+   "IGUI_Wounds_EscharDone": {
+    "en": "The eschar is open.",
+    "ch": "焦痂已切開.",
+    "cn": "焦痂已切开."
+   },
+   "IGUI_Wounds_EscharSkill": {
+    "en": "Requires First Aid 2",
+    "ch": "需要急救 2 級",
+    "cn": "需要急救 2 级"
+   },
+   "IGUI_Wounds_GraftBlade": {
+    "en": "Requires a scalpel",
+    "ch": "需要手術刀",
+    "cn": "需要手术刀"
+   },
+   "IGUI_Wounds_GraftDone": {
+    "en": "The graft is on.",
+    "ch": "皮片已貼上.",
+    "cn": "皮片已贴上."
+   },
+   "IGUI_Wounds_GraftFailed": {
+    "en": "The skin graft did not take.",
+    "ch": "植皮沒有存活.",
+    "cn": "植皮没有成活."
+   },
+   "IGUI_Wounds_GraftHarvest": {
+    "en": "From the top of the strip, one even pass of the blade down it",
+    "ch": "從標記長條的頂端開始, 沿著它以均勻的一刀向下削",
+    "cn": "从标记长条的顶端开始, 沿着它用均匀的一刀向下削"
+   },
+   "IGUI_Wounds_GraftLay": {
+    "en": "Lay the skin over the burn - click where it goes",
+    "ch": "將皮片鋪在燒傷處 - 點選要放的位置",
+    "cn": "将皮片铺在烧伤处 - 点击要放的位置"
+   },
+   "IGUI_Wounds_GraftLoose": {
+    "en": "The graft is on, but nothing holds it down - it will take less well",
+    "ch": "皮片已貼上, 但沒有固定 - 存活效果會較差",
+    "cn": "皮片已贴上, 但没有固定 - 成活效果会较差"
+   },
+   "IGUI_Wounds_GraftMiss": {
+    "en": "Not there - it goes over the burn",
+    "ch": "不是那裡 - 要鋪在燒傷處",
+    "cn": "不是那里 - 要铺在烧伤处"
+   },
+   "IGUI_Wounds_GraftNoDonor": {
+    "en": "No clean skin left on the thighs or upper arms to take",
+    "ch": "大腿或上臂已沒有可取用的完好皮膚",
+    "cn": "大腿或上臂已经没有可取用的完好皮肤"
+   },
+   "IGUI_Wounds_GraftNoStapler": {
+    "en": "No stapler and staples, nor needle and thread: the graft will lie loose and take less well.",
+    "ch": "沒有訂書機和訂書釘, 也沒有針和線: 皮片無法固定, 存活效果會較差.",
+    "cn": "没有订书机和订书钉, 也没有针和线: 皮片无法固定, 成活效果会较差."
+   },
+   "IGUI_Wounds_GraftSecure": {
+    "en": "Staple it down - click each mark round its edge",
+    "ch": "用訂書釘固定 - 點選邊緣的每個標記",
+    "cn": "用订书钉固定 - 点击边缘的每个标记"
+   },
+   "IGUI_Wounds_GraftSew": {
+    "en": "Sew it down - click each mark round its edge",
+    "ch": "縫合固定 - 點選邊緣的每個標記",
+    "cn": "缝合固定 - 点击边缘的每个标记"
+   },
+   "IGUI_Wounds_GraftSewn": {
+    "en": "No stapler: the graft will be sewn down with needle and thread, which holds it less well.",
+    "ch": "沒有訂書機: 皮片將改用針線縫合固定, 固定效果較差.",
+    "cn": "没有订书机: 皮片将改用针线缝合固定, 固定效果较差."
+   },
+   "IGUI_Wounds_GraftSkill": {
+    "en": "Requires First Aid 4",
+    "ch": "需要急救 4 級",
+    "cn": "需要急救 4 级"
+   },
+   "IGUI_Wounds_GraftTakingRow": {
+    "en": "graft taking - keep it dressed",
+    "ch": "植皮存活中 - 保持包紮",
+    "cn": "植皮成活中 - 保持包扎"
+   },
+   "IGUI_Wounds_GraftTook": {
+    "en": "The skin graft has taken.",
+    "ch": "植皮已存活.",
+    "cn": "植皮已成活."
+   },
+   "IGUI_Wounds_GraftTookRow": {
+    "en": "skin graft - it has taken",
+    "ch": "植皮 - 已存活",
+    "cn": "植皮 - 已成活"
+   },
+   "IGUI_Wounds_LimbDied": {
+    "en": "The limb below the burn has died.",
+    "ch": "燒傷處以下的肢體已壞死.",
+    "cn": "烧伤处以下的肢体已坏死."
+   },
+   "IGUI_Wounds_MenuBurnView": {
+    "en": "Look at the burn closely",
+    "ch": "仔細檢視燒傷",
+    "cn": "仔细查看烧伤"
+   },
+   "IGUI_Wounds_MenuCoolBurn": {
+    "en": "Cool the burn with water",
+    "ch": "用水冷卻燒傷",
+    "cn": "用水冷却烧伤"
+   },
+   "IGUI_Wounds_MenuDebride": {
+    "en": "Cut away the dead tissue",
+    "ch": "切除壞死組織",
+    "cn": "切除坏死组织"
+   },
+   "IGUI_Wounds_MenuEschar": {
+    "en": "Cut the eschar open (escharotomy)",
+    "ch": "切開焦痂 (焦痂切開術)",
+    "cn": "切开焦痂 (焦痂切开术)"
+   },
+   "IGUI_Wounds_MenuGraft": {
+    "en": "Graft skin over the burn",
+    "ch": "在燒傷處植皮",
+    "cn": "在烧伤处植皮"
+   },
+   "IGUI_Wounds_MenuOintment": {
+    "en": "Put ointment on the burn",
+    "ch": "在燒傷處塗藥膏",
+    "cn": "在烧伤处涂药膏"
+   },
+   "IGUI_Wounds_MenuPress": {
+    "en": "Press on the wound",
+    "ch": "按壓傷口",
+    "cn": "按压伤口"
+   },
+   "IGUI_Wounds_MenuStretch": {
+    "en": "Stretch the tight scar",
+    "ch": "伸展緊繃的疤痕",
+    "cn": "拉伸紧绷的疤痕"
+   },
+   "IGUI_Wounds_MenuTourniquet": {
+    "en": "Tie a tourniquet above it",
+    "ch": "在上方綁止血帶",
+    "cn": "在上方绑止血带"
+   },
+   "IGUI_Wounds_MenuTourniquetOff": {
+    "en": "Loosen the tourniquet",
+    "ch": "鬆開止血帶",
+    "cn": "松开止血带"
+   },
+   "IGUI_Wounds_OintDone": {
+    "en": "Done. The burn is %s covered.",
+    "ch": "完成. 燒傷已覆蓋 %s.",
+    "cn": "完成. 烧伤已覆盖 %s."
+   },
+   "IGUI_Wounds_OintLeft": {
+    "en": "covered %s, dabs left %s",
+    "ch": "已覆蓋 %s, 剩餘 %s 份",
+    "cn": "已覆盖 %s, 剩余 %s 份"
+   },
+   "IGUI_Wounds_OintNone": {
+    "en": "Needs burn cream or a herbal salve.",
+    "ch": "需要燒傷藥膏或草藥軟膏.",
+    "cn": "需要烧伤药膏或草药软膏."
+   },
+   "IGUI_Wounds_OintRub": {
+    "en": "Hold and rub it over the burn - gently over blisters",
+    "ch": "按住並在燒傷處塗抹 - 經過水泡時要輕柔",
+    "cn": "按住并在烧伤处涂抹 - 经过水泡时要轻柔"
+   },
+   "IGUI_Wounds_OintStart": {
+    "en": "Click on the burn to put a dab there",
+    "ch": "點選燒傷處, 在那裡點上一份藥膏",
+    "cn": "点击烧伤处, 在那里点上一份药膏"
+   },
+   "IGUI_Wounds_PracticeExtract": {
+    "en": "Take out a bullet (%s left)",
+    "ch": "取出子彈 (剩 %s 顆)",
+    "cn": "取出子弹 (剩 %s 颗)"
+   },
+   "IGUI_Wounds_PracticeGameOff": {
+    "en": "That minigame is switched off in the sandbox settings.",
+    "ch": "該小遊戲已在沙盒設定中關閉.",
+    "cn": "该小游戏已在沙盒设置中关闭."
+   },
+   "IGUI_Wounds_PracticeMenu": {
+    "en": "Practise on the body",
+    "ch": "在屍體上練習",
+    "cn": "在尸体上练习"
+   },
+   "IGUI_Wounds_PracticeNoGrip": {
+    "en": "Needs tweezers, forceps or pliers.",
+    "ch": "需要鑷子, 持針鉗或鉗子.",
+    "cn": "需要镊子, 持针钳或钳子."
+   },
+   "IGUI_Wounds_PracticeNoKit": {
+    "en": "Needs a needle and thread, or a suture needle.",
+    "ch": "需要針和線, 或縫合針.",
+    "cn": "需要针和线, 或缝合针."
+   },
+   "IGUI_Wounds_PracticeRotten": {
+    "en": "Too far gone to practise on.",
+    "ch": "腐爛得太嚴重, 無法用來練習.",
+    "cn": "腐烂得太严重, 没法用来练习."
+   },
+   "IGUI_Wounds_PracticeSuture": {
+    "en": "Stitch a wound",
+    "ch": "縫合傷口",
+    "cn": "缝合伤口"
+   },
+   "IGUI_Wounds_PracticeTag": {
+    "en": "Practice",
+    "ch": "練習",
+    "cn": "练习"
+   },
+   "IGUI_Wounds_PracticeTrim": {
+    "en": "Trim wound edges",
+    "ch": "修剪傷口邊緣",
+    "cn": "修剪伤口边缘"
+   },
+   "IGUI_Wounds_PracticeUsedUp": {
+    "en": "Nothing left on this body worth sewing.",
+    "ch": "這具屍體上已沒有值得縫合的地方.",
+    "cn": "这具尸体上已经没有值得缝合的地方."
+   },
+   "IGUI_Wounds_PressStart": {
+    "en": "Pressing on the wound",
+    "ch": "正在按壓傷口",
+    "cn": "正在按压伤口"
+   },
+   "IGUI_Wounds_Pressed": {
+    "en": "Held shut",
+    "ch": "按壓止血中",
+    "cn": "按压止血中"
+   },
+   "IGUI_Wounds_Ring": {
+    "en": "Tight eschar",
+    "ch": "緊繃的焦痂",
+    "cn": "紧绷的焦痂"
+   },
+   "IGUI_Wounds_RingNumb": {
+    "en": "The limb below the burn has gone numb and cold.",
+    "ch": "燒傷處以下的肢體變得麻木冰冷.",
+    "cn": "烧伤处以下的肢体变得麻木冰冷."
+   },
+   "IGUI_Wounds_RingNumbRow": {
+    "en": "numb and cold below - cut the eschar now",
+    "ch": "下方麻木冰冷 - 立即切開焦痂",
+    "cn": "下方麻木冰冷 - 立即切开焦痂"
+   },
+   "IGUI_Wounds_RingOpened": {
+    "en": "The eschar is open - the blood is coming back.",
+    "ch": "焦痂已切開 - 血液正在恢復流通.",
+    "cn": "焦痂已切开 - 血液正在恢复流通."
+   },
+   "IGUI_Wounds_RingRow": {
+    "en": "it goes all the way round",
+    "ch": "環繞肢體一整圈",
+    "cn": "环绕肢体一整圈"
+   },
+   "IGUI_Wounds_RingTight": {
+    "en": "The burnt limb is swelling tight.",
+    "ch": "燒傷的肢體腫脹緊繃.",
+    "cn": "烧伤的肢体肿胀紧绷."
+   },
+   "IGUI_Wounds_RingTightRow": {
+    "en": "the limb is swelling - cut the eschar",
+    "ch": "肢體正在腫脹 - 切開焦痂",
+    "cn": "肢体正在肿胀 - 切开焦痂"
+   },
+   "IGUI_Wounds_ScarTight": {
+    "en": "The burn has healed into a tight scar.",
+    "ch": "燒傷已癒合, 留下緊繃的疤痕.",
+    "cn": "烧伤已愈合, 留下紧绷的疤痕."
+   },
+   "IGUI_Wounds_Stiff": {
+    "en": "Tight burn scar",
+    "ch": "緊繃的燒傷疤痕",
+    "cn": "紧绷的烧伤疤痕"
+   },
+   "IGUI_Wounds_StiffRow": {
+    "en": "about %s days - stretching helps",
+    "ch": "約 %s 天 - 伸展有幫助",
+    "cn": "约 %s 天 - 拉伸有帮助"
+   },
+   "IGUI_Wounds_StitchesEarly": {
+    "en": "too early to remove",
+    "ch": "太早, 還不能拆線",
+    "cn": "太早, 还不能拆线"
+   },
+   "IGUI_Wounds_StitchesEarlyWhy": {
+    "en": "Too early: the wound has not closed yet and will open again.",
+    "ch": "太早了: 傷口尚未癒合, 會再次裂開.",
+    "cn": "太早了: 伤口尚未愈合, 会再次裂开."
+   },
+   "IGUI_Wounds_StitchesOverdue": {
+    "en": "Stitches left in too long",
+    "ch": "縫線留置過久",
+    "cn": "缝线留置过久"
+   },
+   "IGUI_Wounds_StitchesOverdueWhy": {
+    "en": "take them out - infection risk",
+    "ch": "該拆線了 - 有感染風險",
+    "cn": "该拆线了 - 有感染风险"
+   },
+   "IGUI_Wounds_StitchesReady": {
+    "en": "can be removed",
+    "ch": "可以拆線",
+    "cn": "可以拆线"
+   },
+   "IGUI_Wounds_StretchSoon": {
+    "en": "Stretched not long ago - again in about %s h",
+    "ch": "不久前才伸展過 - 約 %s 小時後可再次伸展",
+    "cn": "不久前刚拉伸过 - 约 %s 小时后可再次拉伸"
+   },
+   "IGUI_Wounds_Tourniquet": {
+    "en": "Tourniquet",
+    "ch": "止血帶",
+    "cn": "止血带"
+   },
+   "IGUI_Wounds_TourniquetDying": {
+    "en": "too long - the limb is dying",
+    "ch": "綁太久了 - 肢體正在壞死",
+    "cn": "绑太久了 - 肢体正在坏死"
+   },
+   "IGUI_Wounds_TourniquetFor": {
+    "en": "%s min",
+    "ch": "%s 分鐘",
+    "cn": "%s 分钟"
+   },
+   "IGUI_Wounds_TourniquetLong": {
+    "en": "%s min - loosen it soon",
+    "ch": "%s 分鐘 - 盡快鬆開",
+    "cn": "%s 分钟 - 尽快松开"
+   },
+   "IGUI_Wounds_TourniquetNoTie": {
+    "en": "Needs a belt (not worn), a rope or a strip of cloth.",
+    "ch": "需要皮帶 (未穿戴), 繩索或布條.",
+    "cn": "需要皮带 (未穿戴), 绳索或布条."
+   },
+   "IGUI_Wounds_TourniquetNumb": {
+    "en": "The limb below the tourniquet has gone numb.",
+    "ch": "止血帶以下的肢體已經麻木.",
+    "cn": "止血带以下的肢体已经麻木."
+   },
+   "IGUI_Wounds_WetGangrene": {
+    "en": "gangrene",
+    "ch": "壞疽",
+    "cn": "坏疽"
+   },
+   "IGUI_Wounds_WontRecover": {
+    "en": "it will not recover",
+    "ch": "無法恢復",
+    "cn": "无法恢复"
+   },
+   "IGUI_MFS_InspectResizeHint": {
+    "en": "Resize: drag the bottom-right corner (keeps the shape). Double-click the corner to reset the size.",
+    "ch": "調整大小: 拖曳右下角 (維持比例). 雙擊右下角可重設大小.",
+    "cn": "调整大小: 拖动右下角 (保持比例). 双击右下角可重置大小."
+   },
+   "IGUI_CO_StatusHordeWaitingForSpawn": {
+    "en": "Horde nearby - waiting for a safe spawn location",
+    "ch": "附近有屍潮 - 正在等待安全的生成位置",
+    "cn": "附近有尸潮 - 正在等待安全的生成位置"
+   },
+   "IGUI_CO_StatusHordeWaitingForTerrain": {
+    "en": "Horde nearby - loading spawn area",
+    "ch": "附近有屍潮 - 正在載入生成區域",
+    "cn": "附近有尸潮 - 正在加载生成区域"
+   },
+   "IGUI_ContainerTitle_BridgeParked": {
+    "en": "Companion",
+    "ch": "同伴",
+    "cn": "同伴"
+   },
+   "IGUI_NotAlone_CompatWarnMany": {
+    "en": "%1 are no longer required. Stay With Me now includes this A-Life protection, so you can disable or remove them.",
+    "ch": "%1 已不再需要. Stay With Me 現已內建這項 A-Life 保護, 你可以停用或移除這些模組.",
+    "cn": "%1 已不再需要. Stay With Me 现已内置这项 A-Life 保护, 你可以禁用或移除这些模组."
+   },
+   "IGUI_NotAlone_CompatWarnOne": {
+    "en": "%1 is no longer required. Stay With Me now includes this A-Life protection, so you can disable or remove it.",
+    "ch": "%1 已不再需要. Stay With Me 現已內建這項 A-Life 保護, 你可以停用或移除該模組.",
+    "cn": "%1 已不再需要. Stay With Me 现已内置这项 A-Life 保护, 你可以禁用或移除该模组."
+   },
+   "IGUI_NotAlone_InvWarnNear": {
+    "en": "%1 is carrying too much. The inventory is near the save limit (%2 / %3 characters). New transfers will stop at %4. Store or remove some items before that.",
+    "ch": "%1 攜帶的東西太多了. 物品欄已接近存檔上限 (%2 / %3 字元). 達到 %4 時將停止新的轉移. 請在那之前收納或移除一些物品.",
+    "cn": "%1 携带的东西太多了. 物品栏已接近存档上限 (%2 / %3 字符). 达到 %4 时将停止新的转移. 请在此之前存放或移除一些物品."
+   },
+   "IGUI_NotAlone_InvWarnTruncated": {
+    "en": "%1 is carrying too much. The saved inventory has reached the save limit (%2 / %3 characters). Recent inventory changes may not be saved. Store or remove some items.",
+    "ch": "%1 攜帶的東西太多了. 已儲存的物品欄已達存檔上限 (%2 / %3 字元). 最近的物品欄變更可能不會被儲存. 請收納或移除一些物品.",
+    "cn": "%1 携带的东西太多了. 已保存的物品栏已达到存档上限 (%2 / %3 字符). 最近的物品栏变更可能不会被保存. 请存放或移除一些物品."
+   },
+   "IGUI_GS_nearby__3284": {
+    "en": "(nearby)",
+    "ch": "(附近)",
+    "cn": "(附近)"
+   },
+   "IGUI_EW_Float": {
+    "en": "Your feet leave the ground...",
+    "ch": "你的雙腳離開了地面…",
+    "cn": "你的双脚离开了地面…"
+   },
+   "IGUI_EW_Frostbite": {
+    "en": "Your hands and feet are freezing!",
+    "ch": "你的手腳快凍僵了!",
+    "cn": "你的手脚快冻僵了!"
+   },
+   "IGUI_EW_Panel_Calm": {
+    "en": "No storm right now.",
+    "ch": "目前沒有風暴.",
+    "cn": "当前没有风暴."
+   },
+   "IGUI_EW_Panel_Funnel": {
+    "en": "Tornado EF%1, %2 tiles away",
+    "ch": "龍捲風 EF%1, 距離 %2 格",
+    "cn": "龙卷风 EF%1, 距离 %2 格"
+   },
+   "IGUI_EW_Panel_Hint": {
+    "en": "F7 opens and closes this window (change it in Mod Options).",
+    "ch": "按 F7 開啟或關閉此視窗 (可在模組選項中更改).",
+    "cn": "按 F7 打开或关闭此窗口 (可在模组选项中更改)."
+   },
+   "IGUI_EW_Panel_Now": {
+    "en": "Now",
+    "ch": "目前",
+    "cn": "当前"
+   },
+   "IGUI_EW_Panel_Off": {
+    "en": "(turned off in sandbox options: can still be started here)",
+    "ch": "(已在沙盒選項中關閉: 仍可在此開始)",
+    "cn": "(已在沙盒选项中关闭: 仍可在此开始)"
+   },
+   "IGUI_EW_Panel_Raging": {
+    "en": "%1 - strength %2 percent, %3 h left",
+    "ch": "%1 - 強度百分之 %2, 剩餘 %3 小時",
+    "cn": "%1 - 强度百分之 %2, 剩余 %3 小时"
+   },
+   "IGUI_EW_Panel_Random": {
+    "en": "Random",
+    "ch": "隨機",
+    "cn": "随机"
+   },
+   "IGUI_EW_Panel_Rating": {
+    "en": "Tornado rating",
+    "ch": "龍捲風等級",
+    "cn": "龙卷风等级"
+   },
+   "IGUI_EW_Panel_SelfTest": {
+    "en": "Run self-test",
+    "ch": "執行自我測試",
+    "cn": "运行自检"
+   },
+   "IGUI_EW_Panel_Start": {
+    "en": "Start now",
+    "ch": "立即開始",
+    "cn": "立即开始"
+   },
+   "IGUI_EW_Panel_Stop": {
+    "en": "Stop the storm",
+    "ch": "停止風暴",
+    "cn": "停止风暴"
+   },
+   "IGUI_EW_Panel_Storms": {
+    "en": "Storms",
+    "ch": "風暴",
+    "cn": "风暴"
+   },
+   "IGUI_EW_Panel_Title": {
+    "en": "Extreme Weather",
+    "ch": "極端天氣",
+    "cn": "极端天气"
+   },
+   "IGUI_EW_Panel_Warn": {
+    "en": "Start with a warning",
+    "ch": "預警後開始",
+    "cn": "预警后开始"
+   },
+   "IGUI_EW_Panel_Warning": {
+    "en": "%1 - warning, hits in %2 min",
+    "ch": "%1 - 預警中, %2 分鐘後來襲",
+    "cn": "%1 - 预警中, %2 分钟后来袭"
+   },
+   "IGUI_EW_adv_antigravity": {
+    "en": "Gravity anomaly. People, the dead, cars and loose objects may float off the ground in waves. Stay low, hold on, and keep away from damaged buildings.",
+    "ch": "重力異常. 人、死者、車輛與鬆散物品可能會一波波飄離地面. 壓低身體、抓穩, 並遠離受損的建築物.",
+    "cn": "重力异常. 人、死者、车辆和松散物品可能会一波波飘离地面. 压低身体、抓牢, 并远离受损的建筑物."
+   },
+   "IGUI_EW_antigravity": {
+    "en": "Anti-Gravity Storm",
+    "ch": "反重力風暴",
+    "cn": "反重力风暴"
    }
   },
   "ItemName.json": {
@@ -137194,9 +137879,9 @@
     "cn": "90款宝马E30敞篷版车顶"
    },
    "Base.90bmwE30CabrioSideWindows3": {
-    "en": "90 BMW E30 Cabrio Side Windows",
-    "ch": "90款BMW E30敞篷版側窗",
-    "cn": "90款宝马E30敞篷版侧窗"
+    "en": "90 BMW E30 Cabrio Side Windows (Obsolete)",
+    "ch": "90款BMW E30敞篷版側窗 (已廢棄)",
+    "cn": "90款宝马E30敞篷版侧窗 (已废弃)"
    },
    "Base.90bmwE30CabrioWindowArmor": {
     "en": "90 BMW E30 Cabrio Window Armor",
@@ -143457,9 +144142,9 @@
     "cn": "Pro 梨套装 (整盒)"
    },
    "Gunpart.MZ_UH1": {
-    "en": "MZ_UH1",
-    "ch": "VORTEX Razor AMG UH-1 Gen II 全息瞄準鏡",
-    "cn": "VORTEX Razor AMG UH-1 Gen II 全息瞄准镜"
+    "en": "Vortex Razor AMG UH-1 Gen II Holographic Sight",
+    "ch": "Vortex Razor AMG UH-1 Gen II 全像瞄準鏡",
+    "cn": "Vortex Razor AMG UH-1 Gen II 全息瞄准镜"
    },
    "Gunpart.XY_SnipeX": {
     "en": "SnipeX Suppressor",
@@ -181739,7 +182424,7 @@
    },
    "Base.RF_EOTech_EXPS3-0_x1Scope": {
     "en": "EOTech EXPS3-0 Holographic Sight (FDE)",
-    "ch": "EOTech EXPS3-0全息瞄準鏡 (FDE)",
+    "ch": "EOTech EXPS3-0全像瞄準鏡 (FDE)",
     "cn": "EOTech EXPS3-0全息瞄准镜 (FDE)"
    },
    "Base.RF_EOTech_Vudu_x6Scope": {
@@ -181749,7 +182434,7 @@
    },
    "Base.RF_EOTech_XPS3-2_x1Scope": {
     "en": "EOTech XPS3-2 Holographic Sight (Black)",
-    "ch": "EOTech XPS3-2全息瞄準鏡 (黑色)",
+    "ch": "EOTech XPS3-2全像瞄準鏡 (黑色)",
     "cn": "EOTech XPS3-2全息瞄准镜 (黑色)"
    },
    "Base.RF_FAL": {
@@ -257666,14 +258351,14 @@
     "cn": "5.56×45mm 20 发弹匣"
    },
    "Gunpart.Clip_AssaultRifle2": {
-    "en": "M14 20 Round Magazine",
-    "ch": "M14 20 發彈匣",
-    "cn": "M14 20 发弹匣"
+    "en": "M14 20-Round Magazine (decoration part)",
+    "ch": "M14 20 發彈匣 (裝飾件)",
+    "cn": "M14 20 发弹匣 (装饰件)"
    },
    "Gunpart.Clip_MEGA_AR15_cat_Drum": {
-    "en": "AR15 60 Round Drum",
-    "ch": "AR15 60 發彈鼓",
-    "cn": "AR15 60 发弹鼓"
+    "en": "MEGA AR15 60-Round Drum (decoration part)",
+    "ch": "MEGA AR15 60 發彈鼓 (裝飾件)",
+    "cn": "MEGA AR15 60 发弹鼓 (装饰件)"
    },
    "Base.GrenadeAmmo40": {
     "en": "40mmHE Grenade Round (New)",
@@ -257681,9 +258366,9 @@
     "cn": "40mm 高爆榴弹 (新版)"
    },
    "Gunpart.Clip_lugerP08cat": {
-    "en": "弹匣",
-    "ch": "彈匣",
-    "cn": "弹匣"
+    "en": "Luger P08 Magazine (decoration part)",
+    "ch": "魯格 P08 彈匣 (裝飾件)",
+    "cn": "鲁格 P08 弹匣 (装饰件)"
    },
    "Gunpart.MFSCP_AssaultRifle_20rd_mag": {
     "en": "M16 20-Round Magazine (decoration part)",
@@ -296415,12 +297100,12 @@
     "cn": "常识弹匣"
    },
    "Base.CugirMd91": {
-    "en": "Cugir Md. 91",
+    "en": "Cugir Md. 91'",
     "ch": "Cugir Md. 91",
     "cn": "Cugir Md. 91"
    },
    "Base.CugirMd91Clip": {
-    "en": "Cugir Md. 91 Magazine",
+    "en": "Cugir Md. 91' Magazine",
     "ch": "Cugir Md. 91 彈匣",
     "cn": "Cugir Md. 91 弹匣"
    },
@@ -297753,6 +298438,286 @@
     "en": "Tights - Fishnet",
     "ch": "褲襪 (漁網)",
     "cn": "连裤袜 (渔网)"
+   },
+   "Wounds.HerbalSalve": {
+    "en": "Herbal burn salve",
+    "ch": "草藥燒傷軟膏",
+    "cn": "草药烧伤软膏"
+   },
+   "Wounds.BurnCream": {
+    "en": "Burn cream",
+    "ch": "燒傷藥膏",
+    "cn": "烧伤药膏"
+   },
+   "Gunpart.AimpointPRO_reddot": {
+    "en": "Aimpoint PRO Red Dot Sight",
+    "ch": "Aimpoint PRO 紅點瞄準鏡",
+    "cn": "Aimpoint PRO 红点瞄准镜"
+   },
+   "Base.VR80_cat": {
+    "en": "Rock Island VR80 Semi-Auto Shotgun",
+    "ch": "Rock Island VR80 半自動霰彈槍",
+    "cn": "Rock Island VR80 半自动霰弹枪"
+   },
+   "Base.MFSCP_12GClip5": {
+    "en": "12 Gauge 5-Round Shotgun Magazine",
+    "ch": "12 號 5 發霰彈彈匣",
+    "cn": "12 号 5 发霰弹弹匣"
+   },
+   "Gunpart.VR80_Stockadapter": {
+    "en": "VR80 Stock Tube Adapter",
+    "ch": "VR80 槍托管轉接器",
+    "cn": "VR80 枪托管转接器"
+   },
+   "Gunpart.VR80_original_stock": {
+    "en": "VR80 Factory Stock Assembly",
+    "ch": "VR80 原廠槍托組件",
+    "cn": "VR80 原厂枪托组件"
+   },
+   "Base.MFSCP_12GClip10": {
+    "en": "12 Gauge 10-Round Shotgun Magazine",
+    "ch": "12 號 10 發霰彈彈匣",
+    "cn": "12 号 10 发霰弹弹匣"
+   },
+   "Gunpart.VR80_HERA_stock": {
+    "en": "VR80 HERA CQB Stock",
+    "ch": "VR80 HERA CQB 槍托",
+    "cn": "VR80 HERA CQB 枪托"
+   },
+   "Gunpart.MFSCP_RangeExt_Shotgun_10": {
+    "en": "Range Extension Barrel (Shotgun, +10)",
+    "ch": "增程槍管 (霰彈槍, +10)",
+    "cn": "增程枪管 (霰弹枪, +10)"
+   },
+   "Gunpart.MFSCP_RangeExt_Rifle_60": {
+    "en": "Range Extension Barrel (Rifle, +60)",
+    "ch": "增程槍管 (步槍, +60)",
+    "cn": "增程枪管 (步枪, +60)"
+   },
+   "Gunpart.MFSCP_RangeExt_Shotgun_30": {
+    "en": "Range Extension Barrel (Shotgun, +30)",
+    "ch": "增程槍管 (霰彈槍, +30)",
+    "cn": "增程枪管 (霰弹枪, +30)"
+   },
+   "Gunpart.MFSCP_RangeExt_Pistol_30": {
+    "en": "Range Extension Barrel (Pistol/SMG, +30)",
+    "ch": "增程槍管 (手槍/衝鋒槍, +30)",
+    "cn": "增程枪管 (手枪/冲锋枪, +30)"
+   },
+   "Gunpart.MFSCP_RangeExt_Pistol_15": {
+    "en": "Range Extension Barrel (Pistol/SMG, +15)",
+    "ch": "增程槍管 (手槍/衝鋒槍, +15)",
+    "cn": "增程枪管 (手枪/冲锋枪, +15)"
+   },
+   "Gunpart.MFSCP_RangeExt_Pistol_45": {
+    "en": "Range Extension Barrel (Pistol/SMG, +45)",
+    "ch": "增程槍管 (手槍/衝鋒槍, +45)",
+    "cn": "增程枪管 (手枪/冲锋枪, +45)"
+   },
+   "Gunpart.MFSCP_RangeExt_Shotgun_20": {
+    "en": "Range Extension Barrel (Shotgun, +20)",
+    "ch": "增程槍管 (霰彈槍, +20)",
+    "cn": "增程枪管 (霰弹枪, +20)"
+   },
+   "Gunpart.MFSCP_RangeExt_Rifle_30": {
+    "en": "Range Extension Barrel (Rifle, +30)",
+    "ch": "增程槍管 (步槍, +30)",
+    "cn": "增程枪管 (步枪, +30)"
+   },
+   "Gunpart.MFSCP_RangeExt_Rifle_90": {
+    "en": "Range Extension Barrel (Rifle, +90)",
+    "ch": "增程槍管 (步槍, +90)",
+    "cn": "增程枪管 (步枪, +90)"
+   },
+   "Gunpart.Flamethrower": {
+    "en": "Underbarrel Flamethrower (right-click + G to load/fire, 5 L of gasoline per load)",
+    "ch": "下掛式火焰噴射器 (右鍵 + G 裝填/發射, 每次裝填消耗 5 L 汽油)",
+    "cn": "下挂式火焰喷射器 (右键 + G 装填/发射, 每次装填消耗 5 L 汽油)"
+   },
+   "Gunpart.M28_cat": {
+    "en": "M28 Underbarrel Grenade Launcher",
+    "ch": "M28 下掛式榴彈發射器",
+    "cn": "M28 下挂式榴弹发射器"
+   },
+   "Gunpart.MFSCP_AA12_cat_20rd_drum": {
+    "en": "AA12 20-Round Drum (decoration part)",
+    "ch": "AA12 20 發彈鼓 (裝飾件)",
+    "cn": "AA12 20 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_Saiga12_cat_10rd_mag": {
+    "en": "Saiga-12 10-Round Magazine (decoration part)",
+    "ch": "賽加-12 10 發彈匣 (裝飾件)",
+    "cn": "赛加-12 10 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_Saiga12_cat_20rd_drum": {
+    "en": "Saiga-12 20-Round Drum (decoration part)",
+    "ch": "賽加-12 20 發彈鼓 (裝飾件)",
+    "cn": "赛加-12 20 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_Saiga12_cat_5rd_mag": {
+    "en": "Saiga-12 5-Round Magazine (decoration part)",
+    "ch": "賽加-12 5 發彈匣 (裝飾件)",
+    "cn": "赛加-12 5 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_VR80_cat_10rd_mag": {
+    "en": "VR80 10-Round Magazine (decoration part)",
+    "ch": "VR80 10 發彈匣 (裝飾件)",
+    "cn": "VR80 10 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_VR80_cat_20rd_drum": {
+    "en": "VR80 20-Round Drum (decoration part)",
+    "ch": "VR80 20 發彈鼓 (裝飾件)",
+    "cn": "VR80 20 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_VR80_cat_5rd_mag": {
+    "en": "VR80 5-Round Magazine (decoration part)",
+    "ch": "VR80 5 發彈匣 (裝飾件)",
+    "cn": "VR80 5 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_origin12_cat_10rd_mag": {
+    "en": "Origin-12 10-Round Magazine (decoration part)",
+    "ch": "Origin-12 10 發彈匣 (裝飾件)",
+    "cn": "Origin-12 10 发弹匣 (装饰件)"
+   },
+   "Gunpart.MFSCP_origin12_cat_20rd_drum": {
+    "en": "Origin-12 20-Round Drum (decoration part)",
+    "ch": "Origin-12 20 發彈鼓 (裝飾件)",
+    "cn": "Origin-12 20 发弹鼓 (装饰件)"
+   },
+   "Gunpart.MFSCP_origin12_cat_5rd_mag": {
+    "en": "Origin-12 5-Round Magazine (decoration part)",
+    "ch": "Origin-12 5 發彈匣 (裝飾件)",
+    "cn": "Origin-12 5 发弹匣 (装饰件)"
+   },
+   "SenatorMartialArts.BookMartialArts1": {
+    "en": "Vol. 1: The Way of the Wobbly Fist",
+    "ch": "武術技能書Vol.1 《搖搖晃晃拳之道》",
+    "cn": "武术技能书Vol.1 《摇摇晃晃拳之道》"
+   },
+   "SenatorMartialArts.BookMartialArts2": {
+    "en": "Vol. 2: Enter the Bruise",
+    "ch": "武術技能書Vol.2 《龍爭虎鬥: 瘀青篇》",
+    "cn": "武术技能书Vol.2 《龙争虎斗: 淤青篇》"
+   },
+   "SenatorMartialArts.BookMartialArts3": {
+    "en": "Vol. 3: Zen and the Art of Hitting Things",
+    "ch": "武術技能書Vol.3 《禪與揍東西的藝術》",
+    "cn": "武术技能书Vol.3 《禅与揍东西的艺术》"
+   },
+   "SenatorMartialArts.BookMartialArts4": {
+    "en": "Vol. 4: The Art of Not Getting Hit",
+    "ch": "武術技能書Vol.4 《不挨打的藝術》",
+    "cn": "武术技能书Vol.4 《不挨打的艺术》"
+   },
+   "SenatorMartialArts.BookMartialArts5": {
+    "en": "Vol. 5: Enlightenment Through Elbow",
+    "ch": "武術技能書Vol.5 《以肘悟道》",
+    "cn": "武术技能书Vol.5 《以肘悟道》"
+   },
+   "SenatorMartialArts.dragonMagazine": {
+    "en": "Dragon of Dojima: Reference Guide",
+    "ch": "《堂島之龍》: 參考指南",
+    "cn": "《堂岛之龙》: 参考指南"
+   },
+   "GS45.Part_ThreadedBarrel1911": {
+    "en": "M1911 Threaded Barrel and Bushing",
+    "ch": "M1911 螺紋槍管與槍管襯套",
+    "cn": "M1911 螺纹枪管与枪管衬套"
+   },
+   "GS700.Part_Supp700": {
+    "en": "Remington 700 Rifle Suppressor (.30 Calibre)",
+    "ch": "雷明頓 700 步槍消音器 (.30 口徑)",
+    "cn": "雷明顿 700 步枪消音器 (.30 口径)"
+   },
+   "GS700.Part_ThreadedMuzzle700": {
+    "en": "Remington 700 Threaded Muzzle (with Thread Cap)",
+    "ch": "雷明頓 700 螺紋槍口 (附螺紋護帽)",
+    "cn": "雷明顿 700 螺纹枪口 (带螺纹护帽)"
+   },
+   "GSB9.Part_ThreadedBarrelB92": {
+    "en": "Beretta 92 Threaded Barrel",
+    "ch": "貝瑞塔 92 螺紋槍管",
+    "cn": "伯莱塔 92 螺纹枪管"
+   },
+   "GSGL.Part_ThreadedBarrelGlock": {
+    "en": "Glock Threaded Barrel",
+    "ch": "格洛克螺紋槍管",
+    "cn": "格洛克螺纹枪管"
+   },
+   "GSM14.Part_SuppMini14": {
+    "en": "Mini-14 Suppressor (Flash Hider Clamp)",
+    "ch": "Mini-14 消音器 (消焰器夾固式)",
+    "cn": "Mini-14 消音器 (消焰器夹固式)"
+   },
+   "GSMP.Part_SuppMP5": {
+    "en": "MP5 Three-Lug Suppressor",
+    "ch": "MP5 三凸耳消音器",
+    "cn": "MP5 三凸耳消音器"
+   },
+   "GSTC.Mag_TEC10": {
+    "en": "TEC-9 10-Round Magazine",
+    "ch": "TEC-9 10 發彈匣",
+    "cn": "TEC-9 10 发弹匣"
+   },
+   "GSTC.Mag_TEC20": {
+    "en": "TEC-9 20-Round Magazine",
+    "ch": "TEC-9 20 發彈匣",
+    "cn": "TEC-9 20 发弹匣"
+   },
+   "GSTC.Mag_TEC32": {
+    "en": "TEC-9 32-Round Magazine",
+    "ch": "TEC-9 32 發彈匣",
+    "cn": "TEC-9 32 发弹匣"
+   },
+   "GSTC.Mag_TEC50": {
+    "en": "TEC-9 50-Round Magazine",
+    "ch": "TEC-9 50 發彈匣",
+    "cn": "TEC-9 50 发弹匣"
+   },
+   "GSTC.Part_BarrelTEC3": {
+    "en": "TEC-DC9M 3-Inch Mini Barrel",
+    "ch": "TEC-DC9M 3 吋 Mini 槍管",
+    "cn": "TEC-DC9M 3 英寸 Mini 枪管"
+   },
+   "GSTC.Part_BarrelTEC5": {
+    "en": "TEC-DC9 5-Inch Barrel and Shroud",
+    "ch": "TEC-DC9 5 吋槍管與護套",
+    "cn": "TEC-DC9 5 英寸枪管与护套"
+   },
+   "GSTC.Part_BrakeTEC": {
+    "en": "TEC-9 Muzzle Brake",
+    "ch": "TEC-9 槍口制退器",
+    "cn": "TEC-9 枪口制退器"
+   },
+   "GSTC.Part_NutTEC": {
+    "en": "TEC-DC9 Shroud Nut",
+    "ch": "TEC-DC9 護套螺帽",
+    "cn": "TEC-DC9 护套螺母"
+   },
+   "GSTC.Part_SuppTEC": {
+    "en": "TEC-9 Suppressor (MAC Thread)",
+    "ch": "TEC-9 消音器 (MAC 螺紋)",
+    "cn": "TEC-9 消音器 (MAC 螺纹)"
+   },
+   "GSTC.TECDC9": {
+    "en": "Intratec TEC-DC9",
+    "ch": "Intratec TEC-DC9",
+    "cn": "Intratec TEC-DC9"
+   },
+   "Gunsmith.Acc_SuppPistol45": {
+    "en": ".45 ACP Pistol Suppressor",
+    "ch": ".45 ACP 手槍消音器",
+    "cn": ".45 ACP 手枪消音器"
+   },
+   "Gunsmith.Acc_SuppPistol9": {
+    "en": "9mm Pistol Suppressor",
+    "ch": "9mm 手槍消音器",
+    "cn": "9mm 手枪消音器"
+   },
+   "Base.BizonPepe": {
+    "en": "Pepe Bizon",
+    "ch": "Pepe 野牛衝鋒槍",
+    "cn": "Pepe 野牛冲锋枪"
    }
   },
   "Print_Media.json": {
@@ -319275,6 +320240,96 @@
     "en": "Make Metal Bolt Heads with Blowtorch",
     "ch": "用噴燈製作金屬弩箭頭",
     "cn": "用喷灯制作金属弩箭头"
+   },
+   "MakeHerbalBurnSalve": {
+    "en": "Make Herbal Burn Salve",
+    "ch": "製作草藥燒傷軟膏",
+    "cn": "制作草药烧伤软膏"
+   },
+   "MFSCP_Craft_RangeExt_Pistol_15": {
+    "en": "Craft Range Extension Barrel (Pistol/SMG, +15)",
+    "ch": "製作增程槍管 (手槍/衝鋒槍, +15)",
+    "cn": "制作增程枪管 (手枪/冲锋枪, +15)"
+   },
+   "MFSCP_Craft_RangeExt_Pistol_30": {
+    "en": "Craft Range Extension Barrel (Pistol/SMG, +30)",
+    "ch": "製作增程槍管 (手槍/衝鋒槍, +30)",
+    "cn": "制作增程枪管 (手枪/冲锋枪, +30)"
+   },
+   "MFSCP_Craft_RangeExt_Pistol_45": {
+    "en": "Craft Range Extension Barrel (Pistol/SMG, +45)",
+    "ch": "製作增程槍管 (手槍/衝鋒槍, +45)",
+    "cn": "制作增程枪管 (手枪/冲锋枪, +45)"
+   },
+   "MFSCP_Craft_RangeExt_Rifle_30": {
+    "en": "Craft Range Extension Barrel (Rifle, +30)",
+    "ch": "製作增程槍管 (步槍, +30)",
+    "cn": "制作增程枪管 (步枪, +30)"
+   },
+   "MFSCP_Craft_RangeExt_Rifle_60": {
+    "en": "Craft Range Extension Barrel (Rifle, +60)",
+    "ch": "製作增程槍管 (步槍, +60)",
+    "cn": "制作增程枪管 (步枪, +60)"
+   },
+   "MFSCP_Craft_RangeExt_Rifle_90": {
+    "en": "Craft Range Extension Barrel (Rifle, +90)",
+    "ch": "製作增程槍管 (步槍, +90)",
+    "cn": "制作增程枪管 (步枪, +90)"
+   },
+   "MFSCP_Craft_RangeExt_Shotgun_10": {
+    "en": "Craft Range Extension Barrel (Shotgun, +10)",
+    "ch": "製作增程槍管 (霰彈槍, +10)",
+    "cn": "制作增程枪管 (霰弹枪, +10)"
+   },
+   "MFSCP_Craft_RangeExt_Shotgun_20": {
+    "en": "Craft Range Extension Barrel (Shotgun, +20)",
+    "ch": "製作增程槍管 (霰彈槍, +20)",
+    "cn": "制作增程枪管 (霰弹枪, +20)"
+   },
+   "MFSCP_Craft_RangeExt_Shotgun_30": {
+    "en": "Craft Range Extension Barrel (Shotgun, +30)",
+    "ch": "製作增程槍管 (霰彈槍, +30)",
+    "cn": "制作增程枪管 (霰弹枪, +30)"
+   },
+   "12GMagazine(10)": {
+    "en": "Craft 12 Gauge 10-Round Shotgun Magazine",
+    "ch": "製作 12 號 10 發霰彈彈匣",
+    "cn": "制作 12 号 10 发霰弹弹匣"
+   },
+   "12GMagazine(5)": {
+    "en": "Craft 12 Gauge 5-Round Shotgun Magazine",
+    "ch": "製作 12 號 5 發霰彈彈匣",
+    "cn": "制作 12 号 5 发霰弹弹匣"
+   },
+   "MFS_Adapt_RedDot_To_AimpointPRO": {
+    "en": "Adapt Red Dot to Aimpoint PRO red dot",
+    "ch": "將紅點瞄準鏡改裝為 Aimpoint PRO 紅點瞄準鏡",
+    "cn": "将红点瞄准镜改装为 Aimpoint PRO 红点瞄准镜"
+   },
+   "MFS_Craft_Optic_AimpointPRO": {
+    "en": "Rebuild Aimpoint PRO Red Dot",
+    "ch": "重製 Aimpoint PRO 紅點瞄準鏡",
+    "cn": "重制 Aimpoint PRO 红点瞄准镜"
+   },
+   "MFS_Craft_VR80_Factory_Stock": {
+    "en": "Craft VR80 Factory Stock Assembly",
+    "ch": "製作 VR80 原廠槍托組件",
+    "cn": "制作 VR80 原厂枪托组件"
+   },
+   "MFS_Craft_VR80_HERA_Stock": {
+    "en": "Craft VR80 HERA CQB Stock",
+    "ch": "製作 VR80 HERA CQB 槍托",
+    "cn": "制作 VR80 HERA CQB 枪托"
+   },
+   "MFS_Craft_VR80_Stock_Adapter": {
+    "en": "Craft VR80 Stock Tube Adapter",
+    "ch": "製作 VR80 槍托管轉接器",
+    "cn": "制作 VR80 枪托管转接器"
+   },
+   "MFS_Restore_AimpointPRO_To_RedDot": {
+    "en": "Restore Aimpoint PRO red dot to Red Dot",
+    "ch": "將 Aimpoint PRO 紅點瞄準鏡還原為紅點瞄準鏡",
+    "cn": "将 Aimpoint PRO 红点瞄准镜还原为红点瞄准镜"
    }
   },
   "Sandbox.json": {
@@ -370350,9 +371405,9 @@
     "cn": "风暴可能造成停电"
    },
    "Sandbox_ExtremeWeather_StormPowerOutages_tooltip": {
-    "en": "Ice storms and the global superstorm bring the power grid down while they last (only while the grid is still on). It comes back when the storm ends.",
-    "ch": "冰風暴與全球超級風暴持續期間會讓電網斷電 (僅限電網仍在供電時). 風暴結束後就會恢復供電.",
-    "cn": "冰风暴和全球超级风暴持续期间会让电网断电 (仅限电网仍在供电时). 风暴结束后就会恢复供电."
+    "en": "Blizzards, ice storms and the global superstorm bring the power grid down while they last (only while the grid is still on). It comes back when the storm ends.",
+    "ch": "暴風雪、冰風暴與全球超級風暴持續期間會讓電網斷電 (僅限電網仍在供電時). 風暴結束後就會恢復供電.",
+    "cn": "暴风雪、冰风暴和全球超级风暴持续期间会让电网断电 (仅限电网仍在供电时). 风暴结束后就会恢复供电."
    },
    "Sandbox_ExtremeWeather_SupercellMaxHours": {
     "en": "Supercell thunderstorm: longest (hours)",
@@ -370413,6 +371468,306 @@
     "en": "On: every tornado, EF1 to EF5, flattens everything its funnel passes over - walls, roofs, every upper floor, fences, furniture, doors and trees - and wrecks the vehicles in it. The wider the funnel, the wider the path. Crops are spared. Off: the damage depends on the EF rating (see the option above). Buildings also need Tornadoes destroy buildings on.",
     "ch": "開啟: 每個龍捲風 (EF1 到 EF5) 都會夷平漏斗雲經過的一切 - 牆壁、屋頂、所有上層樓層、圍籬、家具、門與樹木 - 並摧毀其中的車輛. 漏斗雲越寬, 破壞路徑就越寬. 農作物不受影響. 關閉: 破壞程度取決於 EF 等級 (見上方選項). 建築物還需要開啟「龍捲風會摧毀建築」.",
     "cn": "开启: 每个龙卷风 (EF1 到 EF5) 都会夷平漏斗云经过的一切 - 墙壁、屋顶、所有上层楼层、围栏、家具、门和树木 - 并摧毁其中的车辆. 漏斗云越宽, 破坏路径就越宽. 农作物不受影响. 关闭: 破坏程度取决于 EF 等级 (见上方选项). 建筑物还需要开启“龙卷风会摧毁建筑”."
+   },
+   "Sandbox_JD_ZombieMinPlayerDistance": {
+    "en": "Zombie Min Distance From Players (Tiles)",
+    "ch": "殭屍與玩家最小距離 (格)",
+    "cn": "僵尸与玩家最小距离 (格)"
+   },
+   "Sandbox_JD_ZombieMinPlayerDistance_tooltip": {
+    "en": "Airdrop zombies never spawn closer than this to any player, so a horde cannot appear right beside someone. They also never spawn inside a safehouse. 0 turns the distance rule off. Default 20.",
+    "ch": "空投殭屍絕不會在離任何玩家比此距離更近的位置生成, 因此屍群不會直接出現在某人身旁. 它們也絕不會在安全屋內生成. 0 為關閉此距離規則. 預設 20.",
+    "cn": "空投僵尸绝不会在离任何玩家比此距离更近的位置生成, 因此尸群不会直接出现在某人身边. 它们也绝不会在安全屋内生成. 0为关闭此距离规则. 默认值为20."
+   },
+   "Sandbox_TrippingZombies_CompatibilityOnly": {
+    "en": "Compatibility Only",
+    "ch": "僅相容模式",
+    "cn": "仅兼容模式"
+   },
+   "Sandbox_TrippingZombies_CompatibilityOnly_tooltip": {
+    "en": "On: this mod adds no trips, hit knockdowns, executions or death ragdolls of its own, and the options for those below are ignored. It keeps only its compatibility work: the Real Limbs / Proper Ragdolls bridge, its fixes for other ragdoll mods, and Stabilize Ragdoll Limbs.<br>Off (Default): everything on this page applies.",
+    "ch": "開啟: 本模組不會自行加入任何絆倒、受擊擊倒、處決或死亡布娃娃效果, 下方相關選項也會被忽略. 只保留相容性功能: Real Limbs / Proper Ragdolls 橋接、對其他布娃娃模組的修正, 以及「穩定布娃娃四肢」.<br>關閉 (預設): 本頁所有設定皆會套用.",
+    "cn": "开启: 本模组不会自行添加任何绊倒、受击击倒、处决或死亡布娃娃效果, 下方相关选项也会被忽略. 仅保留兼容性功能: Real Limbs / Proper Ragdolls 桥接、对其他布娃娃模组的修复, 以及“稳定布娃娃四肢”.<br>关闭 (默认): 本页所有设置均会生效."
+   },
+   "Sandbox_ImmersiveSearching_EnableSearchXP": {
+    "en": "Search Experience",
+    "ch": "搜尋經驗值",
+    "cn": "搜索经验"
+   },
+   "Sandbox_ImmersiveSearching_EnableSearchXP_tooltip": {
+    "en": "Enables or disables gaining Scavenging XP from searching containers.",
+    "ch": "啟用或停用搜尋容器時獲得搜尋技能經驗值.",
+    "cn": "启用或禁用搜索容器时获得搜寻技能经验."
+   },
+   "Sandbox_ImmersiveSearching_SearchSkillTimeMultiplier": {
+    "en": "Search Skill Time Multiplier",
+    "ch": "搜尋技能時間倍率",
+    "cn": "搜索技能时间倍率"
+   },
+   "Sandbox_ImmersiveSearching_SearchSkillTimeMultiplier_tooltip": {
+    "en": "Controls how much longer searches take at low Scavenging levels.\n\n1 = no penalty\n2 = twice as long at level 0\n10 = 10 times as long at level 0.\nThe penalty decreases with skill level and disappears at level 10.",
+    "ch": "控制搜尋技能等級低時, 搜尋要多花多少時間.\n\n1 = 無懲罰\n2 = 0 級時花費兩倍時間\n10 = 0 級時花費 10 倍時間.\n懲罰會隨技能等級提高而降低, 並在 10 級時消失.",
+    "cn": "控制搜寻技能等级较低时, 搜索要多花多少时间.\n\n1 = 无惩罚\n2 = 0 级时耗时两倍\n10 = 0 级时耗时 10 倍.\n惩罚会随技能等级提高而降低, 并在 10 级时消失."
+   },
+   "Sandbox_WoundsOverhaul_BleedingFirstAidEnabled": {
+    "en": "Bleeding first aid",
+    "ch": "出血急救處置",
+    "cn": "出血急救处理"
+   },
+   "Sandbox_WoundsOverhaul_BleedingFirstAidEnabled_tooltip": {
+    "en": "On: two things to do for a bleeding wound before the bandage. Press on it with your hand - a quarter of the blood loss while you hold it, hands busy. Tie a tourniquet high on an arm or leg with a belt, rope or strip of cloth - everything below stops bleeding, but past two hours the limb goes numb and past four the tissue starts dying.<br>Off: neither option.",
+    "ch": "開啟: 在包紮之前, 可對出血傷口採取兩種處置. 用手按壓傷口 - 按住期間失血量只有四分之一, 但雙手無法做其他事. 用皮帶, 繩索或布條在手臂或腿部的高處綁上止血帶 - 以下部位全部停止出血, 但超過兩小時肢體會麻木, 超過四小時組織開始壞死.<br>關閉: 兩種處置都不提供.",
+    "cn": "开启: 在包扎之前, 可以对出血伤口采取两种处理. 用手按压伤口 - 按住期间失血量只有四分之一, 但双手无法做其他事. 用皮带, 绳索或布条在手臂或腿部的高处绑上止血带 - 以下部位全部停止出血, 但超过两小时肢体会麻木, 超过四小时组织开始坏死.<br>关闭: 两种处理都不提供."
+   },
+   "Sandbox_WoundsOverhaul_BloodLossRate": {
+    "en": "Blood loss speed:",
+    "ch": "失血速度:",
+    "cn": "失血速度:"
+   },
+   "Sandbox_WoundsOverhaul_BloodLossRate_tooltip": {
+    "en": "Multiplies how fast a bleeding body loses blood. 1.0 is the mod's own rate - one untreated deep wound brings on the drain on health in about three and a half hours. 2.0 is twice as fast, 0.5 half.<br>The stages stay where they are: going under, the drain on health and the end come at the same share of blood gone.",
+    "ch": "調整出血時失血速度的倍率. 1.0 為模組本身的速度 - 一處未處理的深層傷口約三個半小時後, 健康值就會開始流失. 2.0 為兩倍速, 0.5 為一半.<br>各階段的門檻不變: 昏厥, 健康值開始流失與死亡, 仍在失去相同比例的血量時發生.",
+    "cn": "调整出血时失血速度的倍率. 1.0 为模组本身的速度 - 一处未处理的深层伤口约三个半小时后, 健康值就会开始流失. 2.0 为两倍速, 0.5 为一半.<br>各阶段的门槛不变: 昏厥, 健康值开始流失与死亡, 仍在失去相同比例的血量时发生."
+   },
+   "Sandbox_WoundsOverhaul_BloodRegenRate": {
+    "en": "Blood regeneration speed:",
+    "ch": "血液恢復速度:",
+    "cn": "血液恢复速度:"
+   },
+   "Sandbox_WoundsOverhaul_BloodRegenRate_tooltip": {
+    "en": "Multiplies how fast lost blood comes back. 1.0 is the mod's own rate - about a day to rebuild a third of the body's blood when well fed. 2.0 is twice as fast, 0.5 half.<br>Food and the healing traits still count on top.",
+    "ch": "調整失去的血液恢復速度的倍率. 1.0 為模組本身的速度 - 營養充足時約一天可補回全身三分之一的血量. 2.0 為兩倍速, 0.5 為一半.<br>食物與癒合相關的特質仍會額外疊加效果.",
+    "cn": "调整失去的血液恢复速度的倍率. 1.0 为模组本身的速度 - 营养充足时约一天可补回全身三分之一的血量. 2.0 为两倍速, 0.5 为一半.<br>食物与愈合相关的特质仍会额外叠加效果."
+   },
+   "Sandbox_WoundsOverhaul_BurnDegreesEnabled": {
+    "en": "Burns by degree",
+    "ch": "燒傷分度",
+    "cn": "烧伤分度"
+   },
+   "Sandbox_WoundsOverhaul_BurnDegreesEnabled_tooltip": {
+    "en": "On: a burn is 1st to 4th degree. 1st heals in a day and cannot get infected, 2nd blisters and needs a dressing, 3rd and 4th have dead tissue that barely heals and feeds infection until it is cut away. Burning longer burns deeper; an uncooled fresh burn may deepen within half an hour - cool it with water. Deep burns make you thirsty.<br>Off: vanilla's single kind of burn.",
+    "ch": "開啟: 燒傷分為一至四度. 一度一天內癒合且不會感染, 二度會起水泡並需要敷料, 三度與四度帶有壞死組織, 在切除之前幾乎無法癒合並會助長感染. 燒得越久傷得越深; 未冷卻的新燒傷可能在半小時內加深 - 要用水冷卻. 深度燒傷會讓你口渴.<br>關閉: 原版的單一種類燒傷.",
+    "cn": "开启: 烧伤分为一至四度. 一度一天内愈合且不会感染, 二度会起水泡并需要敷料, 三度与四度带有坏死组织, 在切除之前几乎无法愈合并会助长感染. 烧得越久伤得越深; 未冷却的新烧伤可能在半小时内加深 - 要用水冷却. 深度烧伤会让你口渴.<br>关闭: 原版的单一种类烧伤."
+   },
+   "Sandbox_WoundsOverhaul_CorpsePracticeEnabled": {
+    "en": "Practice on corpses",
+    "ch": "在屍體上練習",
+    "cn": "在尸体上练习"
+   },
+   "Sandbox_WoundsOverhaul_CorpsePracticeEnabled_tooltip": {
+    "en": "On: right-click a fresh body (three days at most) to practise on it - stitching, trimming wound edges, and taking out a bullet if one stayed in it when it was shot. Uses the same minigames, spends what the job spends, pays three quarters of the First Aid XP of the real thing. Three sessions of sewing and trimming per body.<br>Each kind needs its own minigame on.",
+    "ch": "開啟: 在新鮮的屍體 (死亡最多三天) 上按右鍵即可練習 - 縫合, 修剪傷口邊緣, 以及在中槍時子彈留在體內的情況下取出子彈. 使用相同的小遊戲, 消耗與實際治療相同的物資, 獲得實際治療四分之三的急救經驗. 每具屍體共可進行三次縫合與修剪練習.<br>每種練習都需要開啟對應的小遊戲.",
+    "cn": "开启: 右键点击新鲜的尸体 (死亡最多三天) 即可在上面练习 - 缝合, 修剪伤口边缘, 以及在中枪时子弹留在体内的情况下取出子弹. 使用相同的小游戏, 消耗与实际治疗相同的物资, 获得实际治疗四分之三的急救经验. 每具尸体共可进行三次缝合与修剪练习.<br>每种练习都需要开启对应的小游戏."
+   },
+   "Sandbox_WoundsOverhaul_DebrideGameEnabled": {
+    "en": "Minigame: cutting away burnt tissue",
+    "ch": "小遊戲: 切除燒傷組織",
+    "cn": "小游戏: 切除烧伤组织"
+   },
+   "Sandbox_WoundsOverhaul_DebrideGameEnabled_tooltip": {
+    "en": "On: cutting the dead tissue off a third- or fourth-degree burn opens a close-up where you run the blade round each piece yourself. Off the edge it cuts live skin.<br>Off: a plain timed action takes all of it off.",
+    "ch": "開啟: 切除三度或四度燒傷的壞死組織時會開啟特寫畫面, 由你親手沿每一塊的周圍下刀. 偏離邊緣會切到健康的皮膚.<br>關閉: 以一般的計時動作一次全部切除.",
+    "cn": "开启: 切除三度或四度烧伤的坏死组织时会打开特写画面, 由你亲手沿每一块的周围下刀. 偏离边缘会切到健康的皮肤.<br>关闭: 以普通的计时动作一次全部切除."
+   },
+   "Sandbox_WoundsOverhaul_DeepBurnsEnabled": {
+    "en": "Deep burns: escharotomy, grafts, scars",
+    "ch": "深度燒傷: 焦痂切開術, 植皮, 疤痕",
+    "cn": "深度烧伤: 焦痂切开术, 植皮, 疤痕"
+   },
+   "Sandbox_WoundsOverhaul_DeepBurnsEnabled_tooltip": {
+    "en": "On: a third- or fourth-degree burn round an arm or a leg can tighten and kill the limb below unless the eschar is cut open; a debrided deep burn can be closed with skin from the thigh; a healed deep burn leaves a tight, aching scar for days. With The Only Cure a dead limb is amputated.<br>Off: deep burns stop at cutting the dead tissue away.",
+    "ch": "開啟: 環繞手臂或腿部的三度或四度燒傷可能會收緊, 除非切開焦痂, 否則會使下方的肢體壞死; 切除壞死組織後的深度燒傷可用大腿的皮膚覆蓋閉合; 癒合的深度燒傷會留下緊繃, 疼痛的疤痕, 持續數天. 搭配 The Only Cure 時, 壞死的肢體需要截肢.<br>關閉: 深度燒傷的處理僅到切除壞死組織為止.",
+    "cn": "开启: 环绕手臂或腿部的三度或四度烧伤可能会收紧, 除非切开焦痂, 否则会使下方的肢体坏死; 切除坏死组织后的深度烧伤可用大腿的皮肤覆盖闭合; 愈合的深度烧伤会留下紧绷, 疼痛的疤痕, 持续数天. 搭配 The Only Cure 时, 坏死的肢体需要截肢.<br>关闭: 深度烧伤的处理仅到切除坏死组织为止."
+   },
+   "Sandbox_WoundsOverhaul_EscharGameEnabled": {
+    "en": "Minigame: escharotomy",
+    "ch": "小遊戲: 焦痂切開術",
+    "cn": "小游戏: 焦痂切开术"
+   },
+   "Sandbox_WoundsOverhaul_EscharGameEnabled_tooltip": {
+    "en": "On: cutting a tight eschar open shows the burn, and you draw the blade down it yourself.<br>Off: a plain timed action does it.",
+    "ch": "開啟: 切開緊繃的焦痂時會顯示燒傷處, 由你親手沿著它下刀.<br>關閉: 以一般的計時動作完成.",
+    "cn": "开启: 切开紧绷的焦痂时会显示烧伤处, 由你亲手沿着它下刀.<br>关闭: 以普通的计时动作完成."
+   },
+   "Sandbox_WoundsOverhaul_GraftGameEnabled": {
+    "en": "Minigame: skin graft",
+    "ch": "小遊戲: 植皮",
+    "cn": "小游戏: 植皮"
+   },
+   "Sandbox_WoundsOverhaul_GraftGameEnabled_tooltip": {
+    "en": "On: a skin graft is three moves of your own - shaving a strip off the thigh in one even pass, laying it over the burn, then fixing it down at each mark with staples (or needle and thread).<br>Off: a plain timed action does it.",
+    "ch": "開啟: 植皮由你親手完成三個步驟 - 以均勻的一刀從大腿削下一條皮, 將它鋪在燒傷處, 再用訂書釘 (或針線) 在每個標記處固定.<br>關閉: 以一般的計時動作完成.",
+    "cn": "开启: 植皮由你亲手完成三个步骤 - 用均匀的一刀从大腿削下一条皮, 将它铺在烧伤处, 再用订书钉 (或针线) 在每个标记处固定.<br>关闭: 以普通的计时动作完成."
+   },
+   "Sandbox_WoundsOverhaul_OintmentGameEnabled": {
+    "en": "Minigame: burn ointment",
+    "ch": "小遊戲: 塗抹燒傷藥膏",
+    "cn": "小游戏: 涂抹烧伤药膏"
+   },
+   "Sandbox_WoundsOverhaul_OintmentGameEnabled_tooltip": {
+    "en": "On: putting ointment on a burn opens a close-up where you take it out a dab at a time and rub it in yourself. Cover the whole burn, and go gently over blisters.<br>Off: a plain timed action that covers most of the burn.",
+    "ch": "開啟: 在燒傷處塗藥膏時會開啟特寫畫面, 由你親手每次取一份藥膏並塗抹開. 要覆蓋整個燒傷處, 經過水泡時要輕柔.<br>關閉: 以一般的計時動作塗抹, 可覆蓋大部分燒傷處.",
+    "cn": "开启: 在烧伤处涂药膏时会打开特写画面, 由你亲手每次取一份药膏并涂抹开. 要覆盖整个烧伤处, 经过水泡时要轻柔.<br>关闭: 以普通的计时动作涂抹, 可覆盖大部分烧伤处."
+   },
+   "Sandbox_ModernFirearmsSystemSandboxGun_VR80_cat_Spawn": {
+    "en": "Rock Island VR80 Shotgun Spawn Chance [12 Gauge]",
+    "ch": "Rock Island VR80 霰彈槍生成機率 [12 號]",
+    "cn": "Rock Island VR80 霰弹枪刷新几率 [12 号]"
+   },
+   "Sandbox_TrueSewers": {
+    "en": "True Sewers",
+    "ch": "True Sewers",
+    "cn": "True Sewers"
+   },
+   "Sandbox_TrueSewers_Digging": {
+    "en": "Digging under the city",
+    "ch": "在城市地底挖掘",
+    "cn": "在城市地下挖掘"
+   },
+   "Sandbox_TrueSewers_Digging_tooltip": {
+    "en": "Sledgehammer on sewer and basement walls, shovel or pickaxe through the earth: you can dig your own way between the sewers and the basements. Off: no Dig option, and Destroy works underground the way the game does. Tunnels already dug stay.",
+    "ch": "用大錘敲破下水道與地下室的牆壁, 用鐵鍬或丁字鎬挖穿泥土: 你可以在下水道與地下室之間自行挖出通道. 關閉: 沒有「挖掘」選項, 地底下的「破壞」照遊戲原本的方式運作. 已挖好的隧道會保留.",
+    "cn": "用大锤砸穿下水道和地下室的墙壁, 用铲子或丁字镐挖穿泥土: 你可以在下水道和地下室之间自己挖出通道. 关闭: 没有“挖掘”选项, 地下的“破坏”按游戏原本的方式运作. 已挖好的隧道会保留."
+   },
+   "Sandbox_TrueSewers_Zombies": {
+    "en": "Zombies in the sewers",
+    "ch": "下水道中的殭屍",
+    "cn": "下水道中的僵尸"
+   },
+   "Sandbox_TrueSewers_Zombies_Options_option1": {
+    "en": "None",
+    "ch": "無",
+    "cn": "无"
+   },
+   "Sandbox_TrueSewers_Zombies_Options_option2": {
+    "en": "Few",
+    "ch": "少量",
+    "cn": "少量"
+   },
+   "Sandbox_TrueSewers_Zombies_Options_option3": {
+    "en": "Normal",
+    "ch": "普通",
+    "cn": "普通"
+   },
+   "Sandbox_TrueSewers_Zombies_Options_option4": {
+    "en": "Many",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_TrueSewers_Zombies_Options_option5": {
+    "en": "Infested",
+    "ch": "滿是殭屍",
+    "cn": "满是僵尸"
+   },
+   "Sandbox_TrueSewers_Zombies_tooltip": {
+    "en": "How many zombies wait in the tunnels and side rooms. Normal: about one room in four, and a straggler now and then in the tunnels. Changing it mid-game only affects places not visited yet.",
+    "ch": "隧道與側室中有多少殭屍在等著. 普通: 大約每四個房間有一間有殭屍, 隧道中也偶爾會有落單的殭屍. 遊戲中途更改只會影響尚未去過的地方.",
+    "cn": "隧道和侧室里有多少僵尸在等着. 普通: 大约每四个房间中有一个有僵尸, 隧道里也偶尔会有落单的僵尸. 游戏中途更改只会影响尚未去过的地方."
+   },
+   "Sandbox_LiveToFight_HazmatBlend": {
+    "en": "Hazmat suit fools some zombies",
+    "ch": "化學防護服能騙過部分殭屍",
+    "cn": "化学防护服能骗过部分僵尸"
+   },
+   "Sandbox_LiveToFight_HazmatBlend_tooltip": {
+    "en": "While you wear a hazmat suit, 2 in 5 zombies without one do not notice you until you are within 2 squares. Once one has noticed you, it keeps after you. Hit one and it is no longer fooled.",
+    "ch": "穿著化學防護服時, 沒穿防護服的殭屍中每 5 隻有 2 隻在你進入 2 格內之前都不會注意到你. 殭屍一旦注意到你, 就會一直追著你. 攻擊它之後, 它就不會再被騙過.",
+    "cn": "穿着化学防护服时, 没穿防护服的僵尸中每 5 只有 2 只在你进入 2 格以内之前都不会注意到你. 僵尸一旦注意到你, 就会一直追着你. 攻击它之后, 它就不会再被骗过."
+   },
+   "Sandbox_LiveToFight_HazmatKin": {
+    "en": "Hazmat zombies ignore hazmat suits",
+    "ch": "穿化學防護服的殭屍無視穿防護服的人",
+    "cn": "穿化学防护服的僵尸无视穿防护服的人"
+   },
+   "Sandbox_LiveToFight_HazmatKin_tooltip": {
+    "en": "Zombies wearing hazmat suits leave you alone while you wear one too. Hit one and it comes for you like any other.",
+    "ch": "只要你也穿著化學防護服, 穿化學防護服的殭屍就不會理你. 攻擊其中一隻, 它就會像其他殭屍一樣朝你撲來.",
+    "cn": "只要你也穿着化学防护服, 穿化学防护服的僵尸就不会理你. 攻击其中一只, 它就会像其他僵尸一样朝你扑来."
+   },
+   "Sandbox_LiveToFight_SceneBreachedquarantine": {
+    "en": "Breached quarantine",
+    "ch": "失守的隔離屋",
+    "cn": "失守的隔离屋"
+   },
+   "Sandbox_LiveToFight_SceneBreachedquarantine_tooltip": {
+    "en": "A house the health department sealed with the sick inside, and it did not hold: the front door broken out, sandbags and a triage on the lawn, body bags, a FEMA van and a patrol car, the street closed off and the hazmat crew still walking. Only at a house whose front door faces a street. Days 3 to 30, most in the second and third week.",
+    "ch": "衛生部門把病患封在屋內的房子, 但沒能守住: 前門被從裡面破開, 草坪上有沙包與檢傷分類站, 還有屍袋、一輛 FEMA 廂型車與一輛巡邏車, 街道已被封鎖, 化學防護人員仍在走動. 只會出現在前門面向街道的房屋. 於第 3 到 30 天發生, 大多在第二與第三週.",
+    "cn": "卫生部门把病人封在屋内的房子, 但没能守住: 前门被从里面破开, 草坪上有沙袋和检伤分类点, 还有尸袋、一辆 FEMA 厢式车和一辆巡逻车, 街道已被封锁, 化学防护人员仍在走动. 只会出现在前门朝向街道的房屋. 于第 3 到 30 天发生, 大多在第二和第三周."
+   },
+   "Sandbox_LiveToFight_SceneSurvivortoll": {
+    "en": "Survivor tolls",
+    "ch": "倖存者收費站",
+    "cn": "幸存者收费站"
+   },
+   "Sandbox_LiveToFight_SceneSurvivortoll_tooltip": {
+    "en": "Survivors holding the road into a town: a fenced camp with a gate across the road, fires and lamps kept going, a notice for whoever comes by. Nobody is there when you arrive. Only on a straight road at the edge of a town (no house within 20 squares, a town within 120), never near the army's checkpoints, from day 8 on.",
+    "ch": "守住進城道路的倖存者: 一座圍著柵欄的營地, 柵門橫跨道路, 火堆與燈一直點著, 還有一張給路過者的告示. 你抵達時那裡空無一人. 只會出現在城鎮邊緣的筆直道路上 (20 格內沒有房屋, 120 格內有城鎮), 絕不會出現在軍方檢查哨附近, 從第 8 天起出現.",
+    "cn": "守住进城道路的幸存者: 一座带围栏的营地, 大门横跨道路, 火堆和灯一直亮着, 还有一张留给路过者的告示. 你抵达时那里空无一人. 只会出现在城镇边缘的笔直道路上 (20 格内没有房屋, 120 格内有城镇), 绝不会出现在军方检查站附近, 从第 8 天起出现."
+   },
+   "Sandbox_ExtremeWeather_AntigravityHouses": {
+    "en": "Anti-gravity tears houses apart",
+    "ch": "反重力會撕裂房屋",
+    "cn": "反重力会撕裂房屋"
+   },
+   "Sandbox_ExtremeWeather_AntigravityHouses_tooltip": {
+    "en": "During an anti-gravity storm, parts of houses near players (roofs, upper floors, some walls) sometimes tear loose and float away. Never right next to a player. Includes player bases.",
+    "ch": "反重力風暴期間, 玩家附近房屋的部分結構 (屋頂、上層樓層、部分牆壁) 有時會被扯脫並飄走. 絕不會發生在玩家緊鄰處. 包括玩家基地.",
+    "cn": "反重力风暴期间, 玩家附近房屋的部分结构 (屋顶、上层楼层、部分墙壁) 有时会被扯脱并飘走. 绝不会发生在玩家紧邻处. 包括玩家基地."
+   },
+   "Sandbox_ExtremeWeather_AntigravityMaxHours": {
+    "en": "Anti-gravity storm: longest (hours)",
+    "ch": "反重力風暴: 最長持續時間 (小時)",
+    "cn": "反重力风暴: 最长持续时间 (小时)"
+   },
+   "Sandbox_ExtremeWeather_AntigravityMaxHours_tooltip": {
+    "en": "Longest an anti-gravity storm lasts, in game hours (168 = 7 days). 0 = its usual length.",
+    "ch": "反重力風暴最長持續時間, 以遊戲小時計 (168 = 7 天). 0 = 使用其一般時長.",
+    "cn": "反重力风暴最长持续时间, 以游戏小时计 (168 = 7 天). 0 = 使用其通常时长."
+   },
+   "Sandbox_ExtremeWeather_AntigravityMinHours": {
+    "en": "Anti-gravity storm: shortest (hours)",
+    "ch": "反重力風暴: 最短持續時間 (小時)",
+    "cn": "反重力风暴: 最短持续时间 (小时)"
+   },
+   "Sandbox_ExtremeWeather_AntigravityMinHours_tooltip": {
+    "en": "Shortest an anti-gravity storm lasts, in game hours. 0 = its usual length.",
+    "ch": "反重力風暴最短持續時間, 以遊戲小時計. 0 = 使用其一般時長.",
+    "cn": "反重力风暴最短持续时间, 以游戏小时计. 0 = 使用其通常时长."
+   },
+   "Sandbox_ExtremeWeather_AntigravityRagdolls": {
+    "en": "Anti-gravity drops zombies as ragdolls",
+    "ch": "反重力會讓殭屍以布娃娃效果摔落",
+    "cn": "反重力会让僵尸以布娃娃效果摔落"
+   },
+   "Sandbox_ExtremeWeather_AntigravityRagdolls_tooltip": {
+    "en": "When an anti-gravity wave starts to sink, every zombie still in the air is knocked down where it hangs and falls limp as a ragdoll. Ragdolls need singleplayer and the game option for physics hit reactions; otherwise they do the normal knocked-down fall. Off: zombies sink gently back down with everything else.",
+    "ch": "反重力波開始下沉時, 所有仍在空中的殭屍都會在懸停處被擊倒, 以布娃娃效果癱軟落下. 布娃娃效果需要單人模式, 並開啟遊戲選項「啟用物理受擊反應」; 否則會以一般的擊倒方式倒下. 關閉: 殭屍會與其他一切一起緩緩降回地面.",
+    "cn": "反重力波开始下沉时, 所有仍在空中的僵尸都会在悬停处被击倒, 以布娃娃效果瘫软落下. 布娃娃效果需要单人模式, 并开启游戏选项“启用物理受击反应”; 否则会以普通的击倒方式倒下. 关闭: 僵尸会和其他一切一起缓缓降回地面."
+   },
+   "Sandbox_ExtremeWeather_AntigravityUproots": {
+    "en": "Anti-gravity rips up loose objects",
+    "ch": "反重力會扯起鬆散物品",
+    "cn": "反重力会扯起松散物品"
+   },
+   "Sandbox_ExtremeWeather_AntigravityUproots_tooltip": {
+    "en": "During an anti-gravity storm, outdoor furniture and objects you could pick up (benches, bins, crates, barrels...) come loose around players and float away as items you can pick up and place again. Containers drop their contents first.",
+    "ch": "反重力風暴期間, 玩家周圍可撿起的戶外家具與物件 (長椅、垃圾桶、木箱、桶子…) 會鬆脫並飄走, 變成可以再撿起與擺放的物品. 容器會先掉出裡面的物品.",
+    "cn": "反重力风暴期间, 玩家周围可捡起的户外家具和物件 (长椅、垃圾桶、木箱、桶…) 会松脱并飘走, 变成可以再次捡起和放置的物品. 容器会先掉出里面的物品."
+   },
+   "Sandbox_ExtremeWeather_EnableAntigravity": {
+    "en": "Enable anti-gravity storms",
+    "ch": "啟用反重力風暴",
+    "cn": "启用反重力风暴"
+   },
+   "Sandbox_ExtremeWeather_EnableAntigravity_tooltip": {
+    "en": "A still, violet gravity anomaly. In waves every few minutes gravity lets go: players, zombies, cars, loose items and ripped-up outdoor furniture float up off the ground, hang there and sink back down - every third wave is a surge that lifts everything higher. Characters never go higher than just under the next floor. Floating zombies can't attack. Parts of nearby houses tear loose and float away. Rare, any time of year.",
+    "ch": "一種靜謐的紫色重力異常. 每隔幾分鐘, 重力就會一波波失效: 玩家、殭屍、車輛、鬆散物品與被扯起的戶外家具會飄離地面, 懸停片刻後再降回地面 - 每第三波是一次湧升, 會把一切抬得更高. 角色最高只會升到上一層樓的正下方. 飄浮中的殭屍無法攻擊. 附近房屋的部分結構會被扯脫並飄走. 罕見, 全年皆可能發生.",
+    "cn": "一种静谧的紫色重力异常. 每隔几分钟, 重力就会一波波失效: 玩家、僵尸、车辆、松散物品和被扯起的户外家具会飘离地面, 悬停片刻后再降回地面 - 每第三波是一次涌升, 会把一切抬得更高. 角色最高只会升到上一层楼的正下方. 飘浮中的僵尸无法攻击. 附近房屋的部分结构会被扯脱并飘走. 罕见, 全年均可能发生."
+   },
+   "Sandbox_ExtremeWeather_EnableBlizzard_tooltip": {
+    "en": "A killer whiteout: 35 degrees colder, gale-force winds that stagger you and smash windows, and the power goes down. Outside you lose body heat fast, get frostbite once chilled, tire quickly, and can't sprint (or run at full strength) through the drifts. November to March.",
+    "ch": "致命的白矇暴風雪: 氣溫驟降 35 度, 烈風會讓你踉蹌並擊碎窗戶, 而且會停電. 在戶外會快速流失體溫, 一旦受寒就會凍傷, 很快就會疲累, 也無法在積雪中衝刺 (或全力奔跑). 十一月至三月.",
+    "cn": "致命的白化暴风雪: 气温骤降 35 度, 狂风会让你踉跄并击碎窗户, 而且会停电. 在户外会迅速流失体温, 一旦受寒就会冻伤, 很快就会疲劳, 也无法在积雪中冲刺 (或全力奔跑). 十一月至三月."
    }
   },
   "Tooltip.json": {
@@ -382498,6 +383853,121 @@
     "en": "Show or hide other floors",
     "ch": "顯示或隱藏其他樓層",
     "cn": "显示或隐藏其他楼层"
+   },
+   "Tooltip_BurdJournals_LootRewardJournal": {
+    "en": "Reward Journal",
+    "ch": "獎勵日記",
+    "cn": "奖励日记"
+   },
+   "Tooltip_WoundsBurnCream": {
+    "en": "Silver sulfadiazine. Spread over a burn to keep infection out and help it heal.",
+    "ch": "磺胺嘧啶銀. 塗抹在燒傷處, 可防止感染並幫助癒合.",
+    "cn": "磺胺嘧啶银. 涂抹在烧伤处, 可防止感染并帮助愈合."
+   },
+   "Tooltip_WoundsHerbalSalve": {
+    "en": "Plantain or comfrey in fat. Soothes a burn and helps it heal, but keeps infection out less well than the cream.",
+    "ch": "以油脂調製的車前草或聚合草. 能舒緩燒傷並幫助癒合, 但防止感染的效果不如燒傷藥膏.",
+    "cn": "用油脂调制的车前草或聚合草. 能舒缓烧伤并帮助愈合, 但防止感染的效果不如烧伤药膏."
+   },
+   "Tooltip_AimpointPRO_reddot": {
+    "en": "Rugged Aimpoint PRO (Patrol Rifle Optic) red dot sight.",
+    "ch": "堅固耐用的 Aimpoint PRO (巡邏步槍光學瞄具) 紅點瞄準鏡.",
+    "cn": "坚固耐用的 Aimpoint PRO (巡逻步枪光学瞄具) 红点瞄准镜."
+   },
+   "Tooltip_MZ_M6D": {
+    "en": "Primary Sight<br>Aim Time +3<br>Aim Range 2-34",
+    "ch": "主瞄準鏡<br>瞄準時間 +3<br>瞄準射程 2-34",
+    "cn": "主瞄准镜<br>瞄准时间 +3<br>瞄准射程 2-34"
+   },
+   "Tooltip_VR80_HERA_stock": {
+    "en": "Complete HERA CQB stock assembly for the VR80. Occupies the stock adapter slot and blocks a separate stock.",
+    "ch": "適用於 VR80 的完整 HERA CQB 槍托組件. 佔用槍托轉接器欄位, 無法再加裝獨立槍托.",
+    "cn": "适用于 VR80 的完整 HERA CQB 枪托组件. 占用枪托转接器槽位, 无法再加装独立枪托."
+   },
+   "Tooltip_VR80_Stockadapter": {
+    "en": "Install on the VR80 before adding a compatible separate stock. Remove the stock before removing this adapter.",
+    "ch": "須先安裝在 VR80 上, 才能加裝相容的獨立槍托. 拆除此轉接器前須先拆下槍托.",
+    "cn": "须先安装在 VR80 上, 才能加装兼容的独立枪托. 拆除此转接器前须先拆下枪托."
+   },
+   "Tooltip_VR80_original_stock": {
+    "en": "Complete factory stock assembly for the VR80. Occupies the stock adapter slot and blocks a separate stock.",
+    "ch": "適用於 VR80 的完整原廠槍托組件. 佔用槍托轉接器欄位, 無法再加裝獨立槍托.",
+    "cn": "适用于 VR80 的完整原厂枪托组件. 占用枪托转接器槽位, 无法再加装独立枪托."
+   },
+   "Tooltip_GS_GS45_Part_ThreadedBarrel1911": {
+    "en": "Sticks out past the slide, threaded for a suppressor.",
+    "ch": "伸出滑套前方, 附可安裝消音器的螺紋.",
+    "cn": "伸出套筒前方, 带可安装消音器的螺纹."
+   },
+   "Tooltip_GS_GS700_Part_Supp700": {
+    "en": "Screws onto the threaded muzzle. Takes .308 and .223. Hides flash. Quieting fades with wear. Fouling x1.5.",
+    "ch": "旋裝在螺紋槍口上. 適用 .308 與 .223. 遮蔽槍口焰. 消音效果隨磨損減弱. 積碳 x1.5.",
+    "cn": "拧装在螺纹枪口上. 适用 .308 和 .223. 遮蔽枪口焰. 消音效果随磨损减弱. 积碳 x1.5."
+   },
+   "Tooltip_GS_GS700_Part_ThreadedMuzzle700": {
+    "en": "The muzzle cut and threaded by a gunsmith, a cap over the threads. Takes a suppressor.",
+    "ch": "由槍匠切削槍口並車出螺紋, 螺紋上套有護帽. 可安裝消音器.",
+    "cn": "由枪匠切削枪口并车出螺纹, 螺纹上套着护帽. 可安装消音器."
+   },
+   "Tooltip_GS_GSB9_Part_ThreadedBarrelB92": {
+    "en": "Sticks out past the slide, threaded for a suppressor.",
+    "ch": "伸出滑套前方, 附可安裝消音器的螺紋.",
+    "cn": "伸出套筒前方, 带可安装消音器的螺纹."
+   },
+   "Tooltip_GS_GSGL_Part_ThreadedBarrelGlock": {
+    "en": "Sticks out past the slide, threaded for a suppressor. Fits every Glock.",
+    "ch": "伸出滑套前方, 附可安裝消音器的螺紋. 適用所有格洛克.",
+    "cn": "伸出套筒前方, 带可安装消音器的螺纹. 适用所有格洛克."
+   },
+   "Tooltip_GS_GSM14_Part_SuppMini14": {
+    "en": "Clamps onto the factory flash hider. Hides flash. Quieting fades with wear. Fouling x1.5.",
+    "ch": "夾裝在原廠消焰器上. 遮蔽槍口焰. 消音效果隨磨損減弱. 積碳 x1.5.",
+    "cn": "夹装在原厂消焰器上. 遮蔽枪口焰. 消音效果随磨损减弱. 积碳 x1.5."
+   },
+   "Tooltip_GS_GSMP_Part_SuppMP5": {
+    "en": "Locks onto the standard barrel's three lugs. Hides flash. Quieting fades with wear. Fouling x1.5.",
+    "ch": "鎖固在標準槍管的三個凸耳上. 遮蔽槍口焰. 消音效果隨磨損減弱. 積碳 x1.5.",
+    "cn": "锁固在标准枪管的三个凸耳上. 遮蔽枪口焰. 消音效果随磨损减弱. 积碳 x1.5."
+   },
+   "Tooltip_GS_GSTC_Part_BarrelTEC3": {
+    "en": "The Mini's short bare barrel, threaded: handier, less accurate, louder.",
+    "ch": "Mini 型的無護套短槍管, 附螺紋: 更好用, 但精準度較低, 也更吵.",
+    "cn": "Mini 型的无护套短枪管, 带螺纹: 更灵活, 但精准度更低, 也更响."
+   },
+   "Tooltip_GS_GSTC_Part_BarrelTEC5": {
+    "en": "The factory barrel inside its perforated shroud, threaded at the muzzle.",
+    "ch": "原廠槍管裝在開孔護套內, 槍口車有螺紋.",
+    "cn": "原厂枪管装在开孔护套内, 枪口带螺纹."
+   },
+   "Tooltip_GS_GSTC_Part_BrakeTEC": {
+    "en": "Ported tube on the threaded muzzle: less muzzle climb, more noise.",
+    "ch": "裝在螺紋槍口上的開孔套管: 減少槍口上揚, 但噪音更大.",
+    "cn": "装在螺纹枪口上的开孔套管: 减少枪口上扬, 但噪音更大."
+   },
+   "Tooltip_GS_GSTC_Part_NutTEC": {
+    "en": "Holds the shroud on the threaded muzzle.",
+    "ch": "將護套固定在螺紋槍口上.",
+    "cn": "将护套固定在螺纹枪口上."
+   },
+   "Tooltip_GS_GSTC_Part_SuppTEC": {
+    "en": "Screws onto the threaded muzzle in place of the shroud nut. Hides flash. Quieting fades with wear. Fouling x1.5.",
+    "ch": "取代護套螺帽, 旋裝在螺紋槍口上. 遮蔽槍口焰. 消音效果隨磨損減弱. 積碳 x1.5.",
+    "cn": "代替护套螺母, 拧装在螺纹枪口上. 遮蔽枪口焰. 消音效果随磨损减弱. 积碳 x1.5."
+   },
+   "Tooltip_GS_Gunsmith_Acc_SuppPistol45": {
+    "en": "Screws onto a threaded pistol barrel. .45 ACP, .40 S&W and 10mm. Hides flash. Quieting fades with wear. Fouling x1.5.",
+    "ch": "旋裝在手槍的螺紋槍管上. 適用 .45 ACP、.40 S&W 與 10mm. 遮蔽槍口焰. 消音效果隨磨損減弱. 積碳 x1.5.",
+    "cn": "拧装在手枪的螺纹枪管上. 适用 .45 ACP、.40 S&W 和 10mm. 遮蔽枪口焰. 消音效果随磨损减弱. 积碳 x1.5."
+   },
+   "Tooltip_GS_Gunsmith_Acc_SuppPistol9": {
+    "en": "Screws onto a threaded pistol barrel. 9mm only. Hides flash. Quieting fades with wear. Fouling x1.5.",
+    "ch": "旋裝在手槍的螺紋槍管上. 僅限 9mm. 遮蔽槍口焰. 消音效果隨磨損減弱. 積碳 x1.5.",
+    "cn": "拧装在手枪的螺纹枪管上. 仅限 9mm. 遮蔽枪口焰. 消音效果随磨损减弱. 积碳 x1.5."
+   },
+   "Tooltip_Pants_TuckNotTheseBoots": {
+    "en": "These boots can't take tucked trousers yet.",
+    "ch": "這雙靴子目前還無法把褲管塞進去.",
+    "cn": "这双靴子暂时还不能塞入裤管."
    }
   },
   "UI.json": {
@@ -454800,6 +456270,246 @@
     "en": "Furniture: rotate what you aim at",
     "ch": "家具: 旋轉瞄準的物件",
     "cn": "家具: 旋转瞄准的物件"
+   },
+   "UI_BurdJournals_BlessedScrollHint": {
+    "en": "Scroll for more",
+    "ch": "滾動檢視更多",
+    "cn": "滚动查看更多"
+   },
+   "UI_BurdJournals_CharacterNotReady": {
+    "en": "Your character is not ready yet. Try again in a moment.",
+    "ch": "你的角色尚未就緒. 請稍後再試.",
+    "cn": "你的角色尚未就绪. 请稍后再试."
+   },
+   "UI_BurdJournals_JournalRestoreFailed": {
+    "en": "Journal records could not be restored from this save data.",
+    "ch": "無法從此存檔資料還原日記紀錄.",
+    "cn": "无法从此存档数据还原日记记录."
+   },
+   "UI_BurdJournals_NeedWritingTool": {
+    "en": "You need a pen or pencil to write.",
+    "ch": "你需要鋼筆或鉛筆才能寫.",
+    "cn": "你需要钢笔或铅笔才能书写."
+   },
+   "UI_BurdJournals_SealedPromptTitle_blessed": {
+    "en": "Break the Blessed Seal?",
+    "ch": "要打破受祝福的封印嗎?",
+    "cn": "要打破受祝福的封印吗?"
+   },
+   "UI_TSEW_BassinBloque": {
+    "en": "Something is in the way down there.",
+    "ch": "下面有東西擋住了.",
+    "cn": "下面有东西挡住了."
+   },
+   "UI_TSEW_DescendreBassin": {
+    "en": "Climb down to the lower level",
+    "ch": "爬到下層",
+    "cn": "爬到下层"
+   },
+   "UI_TSEW_DescendrePuits": {
+    "en": "Climb down into the depths",
+    "ch": "往下爬入深處",
+    "cn": "向下爬入深处"
+   },
+   "UI_TSEW_RemonterBassin": {
+    "en": "Climb back up to the sewer",
+    "ch": "爬回上方的下水道",
+    "cn": "爬回上方的下水道"
+   },
+   "UI_TSEW_RemonterPuits": {
+    "en": "Climb back up to the surface",
+    "ch": "爬回地面",
+    "cn": "爬回地面"
+   },
+   "UI_options_TSEW_VolumePlaque": {
+    "en": "Manhole cover volume",
+    "ch": "人孔蓋音量",
+    "cn": "井盖音量"
+   },
+   "UI_options_TSEW_VolumePlaque_tooltip": {
+    "en": "Volume of the manhole cover sliding open or shut (0 = silent). Also follows the game's Sound slider.",
+    "ch": "人孔蓋滑開或關上時的音量 (0 = 靜音). 也會跟隨遊戲的「遊戲音量」滑桿.",
+    "cn": "井盖滑开或合上时的音量 (0 = 静音). 同时也会随游戏的音量滑块一起调整."
+   },
+   "UI_SMA_BrawlerUpgradeDescription": {
+    "en": "Reach Brawler mastery 3 to automatically become Brawler: Dragon, the most powerful striking style. Your mastery carries over; no book is needed.",
+    "ch": "鬥毆精通度達到 3 時會自動變為「鬥毆: 龍」, 這是最強的打擊流派. 精通度會保留; 不需要書籍.",
+    "cn": "斗殴精通度达到 3 时会自动变为“斗殴: 龙”, 这是最强的打击流派. 精通度会保留; 无需书籍."
+   },
+   "UI_SMA_BrawlerUpgradeHint": {
+    "en": "Evolves into Dragon at mastery 3.",
+    "ch": "精通度 3 時進化為「龍」.",
+    "cn": "精通度 3 时进化为“龙”."
+   },
+   "UI_SMA_Combo_dragon01": {
+    "en": "Rush 1 - Chain",
+    "ch": "猛攻 1 - 連擊",
+    "cn": "猛攻 1 - 连击"
+   },
+   "UI_SMA_Combo_dragon02": {
+    "en": "Rush 2 - Finisher",
+    "ch": "猛攻 2 - 終結技",
+    "cn": "猛攻 2 - 终结技"
+   },
+   "UI_SMA_Combo_dragon03": {
+    "en": "Rush 2 - Chain",
+    "ch": "猛攻 2 - 連擊",
+    "cn": "猛攻 2 - 连击"
+   },
+   "UI_SMA_Combo_dragon04": {
+    "en": "Rush 3 - Double finish",
+    "ch": "猛攻 3 - 雙重終結",
+    "cn": "猛攻 3 - 双重终结"
+   },
+   "UI_SMA_Combo_dragon05": {
+    "en": "Rush 3 - Finisher",
+    "ch": "猛攻 3 - 終結技",
+    "cn": "猛攻 3 - 终结技"
+   },
+   "UI_SMA_Combo_dragon06": {
+    "en": "Rush 3 - Chain",
+    "ch": "猛攻 3 - 連擊",
+    "cn": "猛攻 3 - 连击"
+   },
+   "UI_SMA_Combo_dragon07": {
+    "en": "Rush 4 - Double finish",
+    "ch": "猛攻 4 - 雙重終結",
+    "cn": "猛攻 4 - 双重终结"
+   },
+   "UI_SMA_Combo_dragon08": {
+    "en": "Rush 4 - Finisher",
+    "ch": "猛攻 4 - 終結技",
+    "cn": "猛攻 4 - 终结技"
+   },
+   "UI_SMA_Combo_dragon09": {
+    "en": "Rush 4 - Chain",
+    "ch": "猛攻 4 - 連擊",
+    "cn": "猛攻 4 - 连击"
+   },
+   "UI_SMA_Combo_dragon10": {
+    "en": "Rush 5 - Double finish",
+    "ch": "猛攻 5 - 雙重終結",
+    "cn": "猛攻 5 - 双重终结"
+   },
+   "UI_SMA_Combo_dragon11": {
+    "en": "Rush 5 - Finisher",
+    "ch": "猛攻 5 - 終結技",
+    "cn": "猛攻 5 - 终结技"
+   },
+   "UI_SMA_Combo_dragon12": {
+    "en": "Rush 6 - Double finish",
+    "ch": "猛攻 6 - 雙重終結",
+    "cn": "猛攻 6 - 双重终结"
+   },
+   "UI_SMA_Combo_dragon13": {
+    "en": "Cross - Hook",
+    "ch": "後手直拳 - 勾拳",
+    "cn": "后手直拳 - 勾拳"
+   },
+   "UI_SMA_Combo_dragon14": {
+    "en": "Cross - Body finish",
+    "ch": "後手直拳 - 腹部終結",
+    "cn": "后手直拳 - 腹部终结"
+   },
+   "UI_SMA_Combo_dragon15": {
+    "en": "Hook - Uppercut",
+    "ch": "勾拳 - 上勾拳",
+    "cn": "勾拳 - 上勾拳"
+   },
+   "UI_SMA_Combo_dragon16": {
+    "en": "Cross - Double finish",
+    "ch": "後手直拳 - 雙重終結",
+    "cn": "后手直拳 - 双重终结"
+   },
+   "UI_SMA_Combo_dragon17": {
+    "en": "Hook - Double finish",
+    "ch": "勾拳 - 雙重終結",
+    "cn": "勾拳 - 双重终结"
+   },
+   "UI_SMA_Combo_dragon18": {
+    "en": "Cross - Hook - Uppercut",
+    "ch": "後手直拳 - 勾拳 - 上勾拳",
+    "cn": "后手直拳 - 勾拳 - 上勾拳"
+   },
+   "UI_SMA_Combo_dragon19": {
+    "en": "Kick - Double finish",
+    "ch": "踢擊 - 雙重終結",
+    "cn": "踢击 - 双重终结"
+   },
+   "UI_SMA_Combo_dragon20": {
+    "en": "Cross - Hook - Double finish",
+    "ch": "後手直拳 - 勾拳 - 雙重終結",
+    "cn": "后手直拳 - 勾拳 - 双重终结"
+   },
+   "UI_SMA_Combo_dragon21": {
+    "en": "Hook - Kick - Double finish",
+    "ch": "勾拳 - 踢擊 - 雙重終結",
+    "cn": "勾拳 - 踢击 - 双重终结"
+   },
+   "UI_SMA_Combo_dragon22": {
+    "en": "Cross - Hook - Kick - Double finish",
+    "ch": "後手直拳 - 勾拳 - 踢擊 - 雙重終結",
+    "cn": "后手直拳 - 勾拳 - 踢击 - 双重终结"
+   },
+   "UI_SMA_DragonDescription": {
+    "en": "Brawler evolved at mastery 3 into Dragon of Dojima. Devastating rush combinations, powerful finishers and 25 percent faster attacks. Movement stays under your control.",
+    "ch": "鬥毆在精通度 3 時進化為堂島之龍. 擁有毀滅性的猛攻連段、強力的終結技, 攻擊速度快百分之 25. 移動仍由你掌控.",
+    "cn": "斗殴在精通度 3 时进化为堂岛之龙. 拥有毁灭性的猛攻连招、强力的终结技, 攻击速度加快百分之 25. 移动仍由你掌控."
+   },
+   "UI_SMA_DragonSpecial_drivingKick": {
+    "en": "Driving front kick",
+    "ch": "突進前踢",
+    "cn": "突进前踢"
+   },
+   "UI_SMA_DragonSpecial_finishingBlow": {
+    "en": "Power kick",
+    "ch": "重踢",
+    "cn": "重踢"
+   },
+   "UI_SMA_DragonSpecial_guardCounter": {
+    "en": "Turning counter kick",
+    "ch": "轉身反擊踢",
+    "cn": "转身反击踢"
+   },
+   "UI_SMA_DragonSpecial_risingCounter": {
+    "en": "Low counter punch",
+    "ch": "低位反擊拳",
+    "cn": "低位反击拳"
+   },
+   "UI_SMA_DragonUpgradeHint": {
+    "en": "Brawler upgrade. High-damage strikes.",
+    "ch": "鬥毆的升級版. 高傷害打擊.",
+    "cn": "斗殴的升级版. 高伤害打击."
+   },
+   "UI_SMA_Guide_dragon": {
+    "en": " <H1> Dragon of Dojima <LINE> <LINE> Reach Brawler mastery 3 to automatically evolve Brawler into Dragon of Dojima. No book is needed. Your Brawler mastery carries over and its slot becomes Brawler: Dragon. <LINE> <LINE> This is the strongest striking style, with high-damage rush combos and powerful finishers. Attacks are 25 percent faster, and movement stays under your control. <LINE> <LINE> Keep training Brawler mastery to unlock all 22 combos and four special attacks.",
+    "ch": " <H1> 堂島之龍 <LINE> <LINE> 鬥毆精通度達到 3 時, 鬥毆會自動進化為堂島之龍. 不需要書籍. 你的鬥毆精通度會保留, 原本的欄位會變成「鬥毆: 龍」. <LINE> <LINE> 這是最強的打擊流派, 擁有高傷害的猛攻連段與強力的終結技. 攻擊速度快百分之 25, 移動仍由你掌控. <LINE> <LINE> 持續提升鬥毆精通度, 即可解鎖全部 22 種連段與四種特殊技.",
+    "cn": " <H1> 堂岛之龙 <LINE> <LINE> 斗殴精通度达到 3 时, 斗殴会自动进化为堂岛之龙. 无需书籍. 你的斗殴精通度会保留, 原本的栏位会变成“斗殴: 龙”. <LINE> <LINE> 这是最强的打击流派, 拥有高伤害的猛攻连招和强力的终结技. 攻击速度加快百分之 25, 移动仍由你掌控. <LINE> <LINE> 继续提升斗殴精通度, 即可解锁全部 22 种连招和四种特殊技."
+   },
+   "UI_SMA_Move_dragon_floorAttack": {
+    "en": "Ground stomp",
+    "ch": "地面踩踏",
+    "cn": "地面踩踏"
+   },
+   "UI_SMA_OpenSkillBook": {
+    "en": "Open Skill Book",
+    "ch": "翻開技能書",
+    "cn": "打开技能书"
+   },
+   "UI_SMA_SkillBookReadHint": {
+    "en": "Use Read to study this volume and gain its skill-book XP bonus.",
+    "ch": "使用「閱讀」研讀本冊, 即可獲得其技能書經驗加成.",
+    "cn": "使用“阅读”研读本册, 即可获得其技能书经验加成."
+   },
+   "UI_SMA_dragon": {
+    "en": "Brawler: Dragon",
+    "ch": "鬥毆: 龍",
+    "cn": "斗殴: 龙"
+   },
+   "UI_SMA_Move_pakmei_floorAttack": {
+    "en": "Ground hammerfist",
+    "ch": "地面鎚拳",
+    "cn": "地面锤拳"
    }
   },
   "MakeUp.json": {

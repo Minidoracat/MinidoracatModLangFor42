@@ -12277,6 +12277,27 @@
       "reason": "2026-10-26 首次裁決: The Only Cure (3580276809) 與分支 The Only Cure+ (3818733381). 特質名, 只差 Upper arm 與 Upper Arm 大小寫, 同一特質, 維持現值. 特質名在載入期快取 (UI_trait_ 非 desc 鍵), 條件譯文刷新不到, 只能靠此 JSON 值.",
       "ch": "左上臂已截肢",
       "cn": "左上臂已截肢"
+    },
+    "ItemName|Base.AA12Clip": {
+      "action": "translate",
+      "signature": "ff083c1ffb710c43",
+      "reason": "2026-10-27 #1106：MFS 社群修正版把 AA12Clip 改名 12 Gauge 20-Round Shotgun Drum（同一彈鼓改給 AA12、Origin-12、Saiga-12 共用，MFS_MagazineCompat.lua），Escape from Kentucky 仍叫 AA12 20-Round Shotgun Drum。兩方都是 12 號 20 發霰彈彈鼓，JSON 取上位名稱、不寫 AA12；各 owner 的名稱走條件譯文。",
+      "ch": "12 號 20 發霰彈彈鼓",
+      "cn": "12 号 20 发霰弹弹鼓"
+    },
+    "ItemName|Base.ots38_cat": {
+      "action": "translate",
+      "signature": "a6b2d8d5fce63eb8",
+      "reason": "2026-10-27 #1106：MFS 社群修正版新增 ItemName.json 英文 OTs-38 Stechkin Silent Revolver，Escape from Kentucky 只有腳本 DisplayName ots38。型號 OTs-38 對兩方都成立，維持現行譯名；完整名稱走 MFS 的條件譯文。",
+      "ch": "OTs-38",
+      "cn": "OTs-38"
+    },
+    "ItemName|Base.bag_fuzhong": {
+      "action": "translate",
+      "signature": "9328252cf8e58c09",
+      "reason": "2026-10-27 #1106：MFS 社群修正版新增英文 Tactical Core Load Pack MK1，Escape from Kentucky 的腳本 DisplayName 是中文原名「战术核芯负重包MK1」，兩者同義，維持現行譯名（與兩個 MOD 自帶的 CH／CN 相同）。",
+      "ch": "戰術核芯負重包MK1",
+      "cn": "战术核芯负重包MK1"
     }
   }
 }

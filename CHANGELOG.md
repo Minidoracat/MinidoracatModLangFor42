@@ -4,6 +4,22 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **18 個 MOD 更新後新增的文字補上繁簡中文（346 項）。** Wounds Overhaul（燒傷分度、焦痂切開、植皮、壞疽、止血帶與新的處置小遊戲，128 項）、Modern Firearms System 社群修正版（新的 12 號霰彈彈匣、槍托組件與裝飾配件，52 項）、Senators Martial Arts Core（堂島之龍流派、連段與武術技能書，42 項）、Gunsmith: The 1993 Arsenal（TEC-9 系列、各種螺紋槍管與消音器，34 項）、Extreme Weather（反重力風暴與風暴面板，32 項）、True Sewers（下水道深處的攀爬選單與沙盒選項，17 項）、Live to Fight Another Day（8 項），以及 Burd's Survival Journals、Stay With Me、AHS、Immersive Searching、Willowbrook Bastion!、Extended categories、Jeeve's Drops、Tripping Zombies: Reborn、Dynamic Outposts、Surplus & Thrift、Complete Vanilla Firearms Expansion。
+  > 技術要點：追蹤器 2026-10-27 #1090–#1117「可能過時」。342 鍵走 `apply_wf_result`／`apply_translations` 進 `own_translations.json`；Willowbrook（own 目錄、`cn_source: upstream`）4 鍵寫 `sources/ch`，簡中逐字照抄作者 `Translate/CN`。6 路翻譯、6 路對抗複核，採納 4 條修正：Wounds Overhaul 取皮小遊戲的 strip 改「標記長條」（原譯「皮條」容易誤讀）、Gunsmith 的 TEC-DC9M Mini 是型號暱稱、Extreme Weather 的 loose objects 照同 MOD 寫「鬆散物品」、'90 BMW E30 的 (Obsolete) 照本體寫「(已廢棄)」。28 個 MOD 以 steamcmd 重抓現行版重抽，tracker record 逐筆相符；重跑 prep 後缺口 0。
+
+### Changed
+
+- **上游改了英文的已出貨文字跟著改（重譯 8 項，另 87 項確認原譯仍成立）。** MFS 社群修正版的 M14、MEGA AR15、魯格 P08 裝飾彈匣與 Vortex UH-1 瞄準鏡（4 項）、Willowbrook 自動裝填器沒電時的提示（改成背包裡放電池就會自動恢復）、AHS 的治療模式說明（快速模式會略過小遊戲）、Extreme Weather 的停電說明（加上暴風雪）、'90 BMW E30 敞篷版側窗標示已廢棄。
+  > 技術要點：own 層 11 鍵更新 `en` 錨點，其中 4 鍵譯文不變：Complete Vanilla Firearms Expansion 的 `Cugir Md. 91'` 多出的撇號判為上游筆誤、Extended categories 的 Husbandry→Animal Care 本體也譯「畜牧」、Stay With Me 只差 `%`→`%%`。Willowbrook 1 鍵寫 own 目錄 CN（作者簡中）與 `sources/ch`。KI5 的 Isuzu Trooper、Dodge Caravan、Nissan 240SX 這版第一次附上 EN 翻譯檔，83 個車名、零件與配方名逐鍵核對原譯仍成立（240SX 的前後車窗裝甲對照 `template_N240_armor.txt` 確認裝在側窗）；R32、Bronco、F350 Ambulance、Defender 只新增 `42.20` 夾，英文與已出貨相同。上游從 `42.20` 夾拿掉的 `90bmwE30CabrioMakeSideWindows` 在 `42.13` 夾與 that DAMN Library 仍有，As1 衍生層照常保留。
+- **MFS 社群修正版與 Escape from Kentucky 共用的 3 個物品名重新裁決。** MFS 把 AA12 彈鼓改給 AA12、Origin-12、Saiga-12 共用並改名，共用譯名改「12 號 20 發霰彈彈鼓」，只裝其中一個 MOD 時各自顯示自己的名稱（Escape from Kentucky 仍是「AA12 20 發霰彈彈鼓」）；OTs-38 左輪與戰術核芯負重包維持原譯，裝 MFS 時 OTs-38 顯示完整名稱「OTs-38 斯捷奇金微聲左輪手槍」。
+  > 技術要點：`owner_conflict_decisions.json` 新增 3 筆 translate，`owner_variants.json` 新增 3 條（6 組）；`Base.AA12Clip` 屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（附 `as1_value`）並登記 `ch_review_state`；`OWNER_CONFLICTS.md` 重生。
+- **繁中「全息瞄準鏡」改台灣用語「全像瞄準鏡」（6 項）。** MFS 社群修正版的 558、552、HCO、Vortex UH-1，以及 Rain's Firearms 的兩款 EOTech；同 MOD 的配方名原本就寫「全像」。簡中照舊。
+  > 技術要點：只改繁中（`sources/ch` 3 鍵、`own_translations` 3 鍵）。
+
 ## [42.21.0-1.62.1] - 2026-10-27
 
 ### Fixed
