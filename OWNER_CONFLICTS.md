@@ -23,7 +23,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1851** 個鍵（`unship` 340、`translate` 1511）。這些鍵的 owner 條目共 5331 筆：可載入 `.json` 3589、script 852、死檔 890。另有 **246** 個鍵尚未裁決。
+現況：已裁決 **1851** 個鍵（`unship` 340、`translate` 1511）。這些鍵的 owner 條目共 5331 筆：可載入 `.json` 3589、script 852、死檔 890。另有 **249** 個鍵尚未裁決。
 
 ## 不出貨的鍵（340）
 
@@ -1890,7 +1890,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_thickblooddesc` | `1299328280/More Traits` = You bleed more slowly from wounds. _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Wounds bleeds less.&lt;br&gt;(-50% damage from bleeding.) _(json)_ | 2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。 | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（246）
+## 尚未裁決的衝突（249）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
@@ -1943,6 +1943,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|Base.46Bullets` | `3611718925/VFEP93` = 4.6mm Round _(json)_<br>`3762355926/VFEP93` = 4.6 Rounds _(json)_ | 4.6mm彈藥 |
 | `ItemName\|Base.46Carton` | `3611718925/VFEP93` = Carton of 4.6mm Rounds _(json)_<br>`3762355926/VFEP93` = Carton of 4.6 Boxes _(json)_ | 4.6mm彈藥 (整件) |
 | `ItemName\|Base.556Clip_Attachment` | `2256623447/Firearms` = STANAG Magazine _(json)_<br>`2256623447/FirearmsBETA` = STANAG Magazine _(json)_<br>`3720484992/VanillaFirearmsRework` = Mag Attachment Model _(script)_<br>`3773858287/B42 Rain's Firearms & Gun Parts` = 5.56 STANAG Magazine _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = 5.56 STANAG Magazine _(json)_ | STANAG彈匣 |
+| `ItemName\|Base.AA12Clip` | `3633421539/Escape from Kentucky4215` = AA12 20-Round Shotgun Drum _(json)_<br>`3780151182/MFS_community_fix` = 12 Gauge 20-Round Shotgun Drum _(json)_ | AA12 20 發霰彈彈鼓 |
 | `ItemName\|Base.Bag_BaseballBag_LB` | `2959854619/AlicesDuffelBagTweak` = Duffel Bag _(script)_<br>`2959854619/aliceSvanillaDuffelBag` = Duffel Bag _(script)_<br>`3698401476/SkullysDuffelsAndRigs` = Baseball Bag _(json)_ | 棒球袋 |
 | `ItemName\|Base.Bag_BreakdownBag_LB` | `2959854619/AlicesDuffelBagTweak` = Duffel Bag _(script)_<br>`2959854619/aliceSvanillaDuffelBag` = Duffel Bag _(script)_<br>`3698401476/SkullysDuffelsAndRigs` = Breakdown Bag _(json)_ | 拋錨應急袋 |
 | `ItemName\|Base.Bag_BurglarBag_LB` | `2959854619/AlicesDuffelBagTweak` = Duffel Bag _(script)_<br>`2959854619/aliceSvanillaDuffelBag` = Duffel Bag _(script)_<br>`3698401476/SkullysDuffelsAndRigs` = Burglar Bag _(json)_ | 竊賊包 |
@@ -1969,6 +1970,8 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|Base.SteelLadder` | `2737665235/Ladders` = Steel Ladder _(script)_<br>`3629835761/Ladders` = Steel ladder _(json)_<br>`3629835761/LaddersOld` = Steel ladder _(json)_ | 鋼梯 |
 | `ItemName\|Base.ThompsonMagazine` | `3383901556/Modern & Historical Firearms Bundle` = Thompson Magazine _(script)_<br>`3773858287/B42 Rain's Firearms & Gun Parts` = .45 ACP SMG Magazine _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = .45 ACP SMG Magazine _(json)_ | 湯普森衝鋒槍彈匣 |
 | `ItemName\|Base.WoodenLadder` | `2737665235/Ladders` = Wooden Ladder _(script)_<br>`3629835761/Ladders` = Wooden ladder _(json)_<br>`3629835761/LaddersOld` = Wooden ladder _(json)_ | 木梯 |
+| `ItemName\|Base.bag_fuzhong` | `3633421539/Escape from Kentucky4215` = 战术核芯负重包MK1 _(script)_<br>`3780151182/MFS_community_fix` = Tactical Core Load Pack MK1 _(json)_ | 戰術核芯負重包MK1 |
+| `ItemName\|Base.ots38_cat` | `3633421539/Escape from Kentucky4215` = ots38 _(script)_<br>`3780151182/MFS_community_fix` = OTs-38 Stechkin Silent Revolver _(json)_ | OTs-38 |
 | `ItemName\|ISA.SolarFailsafe` | `2969478819/ImmersiveSolarArrays` = Moveable _(script)_<br>`3647117173/ImmersiveSolarArraysMP` = ISA_SolarFailSafe _(script)_<br>`3723961714/Infoteo's Immersive Solar Arrays` = Moveable _(script)_ | 故障保險觸發器 |
 | `ItemName\|ISA.SolarPanelFlat` | `2969478819/ImmersiveSolarArrays` = Moveable _(script)_<br>`3647117173/ImmersiveSolarArraysMP` = ISA_SolarPanelFlat _(script)_<br>`3723961714/Infoteo's Immersive Solar Arrays` = Moveable _(script)_ | 平板太陽能板 |
 | `ItemName\|ISA.SolarPanelMounted` | `2969478819/ImmersiveSolarArrays` = Moveable _(script)_<br>`3647117173/ImmersiveSolarArraysMP` = ISA_SolarPanelMounted _(script)_<br>`3723961714/Infoteo's Immersive Solar Arrays` = Moveable _(script)_ | 落地式太陽能板 |

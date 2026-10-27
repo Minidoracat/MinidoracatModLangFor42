@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1462 個 Workshop 模組**（2106 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
+共支援 **1462 個 Workshop 模組**（2108 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1009,7 +1009,7 @@
 | [US Military Grenades [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3745718141) | — | — | `Explosives` | 65 | — | — |
 | [The Best Lockpicking [B42.20]](https://steamcommunity.com/sharedfiles/filedetails/?id=3745815281) | — | — | `TheBestLockpickingB4219` | 89 | — | — |
 | [SoapZ](https://steamcommunity.com/sharedfiles/filedetails/?id=3746173075) | — | — | `SoapZ` | 116 | — | — |
-| [[B41/B42] Tripping Zombies: Reborn](https://steamcommunity.com/sharedfiles/filedetails/?id=3746603021) | — | — | `TrippingZombies` | 36 | — | — |
+| [[B41/B42] Tripping Zombies: Reborn](https://steamcommunity.com/sharedfiles/filedetails/?id=3746603021) | — | — | `TrippingZombies`, `TrippingZombiesRealLimbs` | 36 | — | — |
 | [Bundle Up! - A Packing Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=3746632343) | — | — | `BundleUp`, `BundleUpGoM`, `BundleUpUI`, `BundleUpVFX` | 5683 | — | — |
 | [[B42] Madax Weapons Pack - Fixed 4.20.2](https://steamcommunity.com/sharedfiles/filedetails/?id=3747202678) | — | — | `MWPWeaponsB42` | 12 | — | — |
 | [New Ellroy and Shadyside B42〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3747339147) | 新艾爾羅伊與沙德賽德 | 荒廢腐朽的美國小鎮新艾爾羅伊地圖，另含瘋子與不幸之人聚居的沙德賽德。 | `NewEllroyShadysideB42` | 4 | — | — |
@@ -1222,7 +1222,7 @@
 | [Cats Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=3779907776) | 貓咪模組 | 加入可飼養的貓，含多種品種（橘貓、短毛貓等）、幼貓與公母之分，並提供貓食盆、貓糧與牛奶等液體。 | `CatsMod` | 223 | — | — |
 | [Machinery](https://steamcommunity.com/sharedfiles/filedetails/?id=3780027195) | Machinery（機械設備） | 新增台鋸、台式砂輪機、液壓機等可用機械與帶鋸條、鑽頭組等耗材，操作時可能發生手部割傷等事故。 | `Machinery` | 412 | ⚠️ ≥2 | — |
 | [Reading Reworked - Faster Reading & Walking [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3780124271) | 閱讀機制重做 | 坐著閱讀更快、可邊走邊讀，並依書本頁數、閱讀快／閱讀慢特質與老花眼鏡調整閱讀時間。 | `ReadingReworked` | 17 | — | — |
-| [[On hold] Modern Firearms System Community Fix Patch [On hold]](https://steamcommunity.com/sharedfiles/filedetails/?id=3780151182) | — | — | `MFSCP_PSA_ammoconversion`, `MFS_BackpackSystem_fix`, `MFS_BladesmithSystem_fix`, `MFS_community_fix`, `MFS_community_fix_low_RPM` | 1219 | ⚠️ ≥63 | — |
+| [[On hold] Modern Firearms System Community Fix Patch [On hold]](https://steamcommunity.com/sharedfiles/filedetails/?id=3780151182) | — | — | `MFSCP_PSA_ammoconversion`, `MFSCP_range_extension_parts`, `MFS_BackpackSystem_fix`, `MFS_BladesmithSystem_fix`, `MFS_community_fix`, `MFS_community_fix_low_RPM` | 1219 | ⚠️ ≥63 | — |
 | [Elevators](https://steamcommunity.com/sharedfiles/filedetails/?id=3780306632) | 可運作的電梯 | 建築內的電梯可以實際搭乘並選擇樓層，可設定是否需要電力。 | `Elevators` | 13 | — | — |
 | [Beyond The Infection](https://steamcommunity.com/sharedfiles/filedetails/?id=3780539123) | Beyond The Infection 感染之外 | 重做感染系統，新增即時感染分頁顯示病程階段與效果，以及可延緩感染的實驗藥物。 | `beyondTheInfection` | 229 | — | — |
 | [[B42.20+ MP] - Push Vehicle](https://steamcommunity.com/sharedfiles/filedetails/?id=3780639614) | — | — | `PushVehicle` | 5 | — | — |
