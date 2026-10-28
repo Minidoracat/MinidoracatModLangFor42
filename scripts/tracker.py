@@ -13,7 +13,7 @@ tracker.py — MinidoracatModLangFor42 雙上游追蹤器（PZ B42 如一模組�
   * 純標準函式庫（urllib / subprocess / hashlib）→ 供 `uv run scripts/tracker.py` 直接執行，CI 免裝依賴。
   * API client 免 key 為主（研究實證端點無 key 參數）；STEAM_API_KEY 為設定選項、非 429 解藥（附加而已）。
   * 交易順序：取數 → diff → 開/更 issue → 最後 commit 成功子集 state；--dry-run 保證零 issue 零 commit。
-  * 核心邏輯（diff / issue 冪等 / git 重試）皆以可注入依賴實作，供內建 self-test 十九情境 mock 驗證。
+  * 核心邏輯（diff / issue 冪等 / git 重試）皆以可注入依賴實作，供內建 self-test 二十情境 mock 驗證。
 
 命令（uv run scripts/tracker.py <命令>）：
   as1-list       擷取 As1 網站模組清單 → sources/as1_modlist.json（參考快照），並把標「正常」與 split 已歸屬、
@@ -26,13 +26,14 @@ tracker.py — MinidoracatModLangFor42 雙上游追蹤器（PZ B42 如一模組�
   check          僅打 API 查時間戳，寫 changed 清單 artifact（workflow check job；無寫權限）
   diff           讀 changed，下載+裁剪+抽取+diff，寫 diffs artifact（workflow download job；無 GitHub 權限）
   issue          讀 diffs，列 open issue 冪等開/更，commit 成功子集 state（workflow issue+state job）
-  self-test      內建十九情境 mock 測試
+  self-test      內建二十情境 mock 測試
 """
 from __future__ import annotations
 
 import argparse
 import bisect
 import hashlib
+import html
 import json
 import os
 import random
@@ -212,7 +213,10 @@ AS1_MOD_ID = "B42ModTrans_CN"
 STEAM_APPID = "108600"  # Project Zomboid
 STEAM_API_URL = "https://api.steampowered.com/ISteamRemoteStorage/GetPublishedFileDetails/v1/"
 RESULT_OK = 1
-RESULT_NOT_FOUND = 9  # 已下架 / 無效 ID：標記 removed、不重試下載
+RESULT_NOT_FOUND = 9  # 已下架 / 無效 ID：標記 removed、不重試下載（不公開項目也回 9，見 probe_unlisted）
+CHANGELOG_URL = "https://steamcommunity.com/sharedfiles/filedetails/changelog/{}"
+_CHANGELOG_TS_RE = re.compile(r'<p id="(\d{9,})"')
+_ITEM_TITLE_RE = re.compile(r'<div class="workshopItemTitle">([^<]*)</div>')
 
 # issue 冪等：單一共通 label + body HTML marker
 ISSUE_LABEL = "tracker"
@@ -378,18 +382,18 @@ def _post_form(url: str, params: list[tuple[str, str]], timeout: float = 30.0) -
         return json.loads(resp.read().decode("utf-8"))
 
 
-def _post_with_retry(
-    params: list[tuple[str, str]],
+def _with_retry(
+    call: Callable[[], object],
     *,
     max_retries: int = 5,
     base_delay: float = 1.0,
     jitter: float = 0.5,
     sleep: Callable[[float], None] = time.sleep,
-) -> dict:
+):
     """429/5xx 用 Retry-After + 指數退避 + jitter 重試；其他錯誤直接拋。"""
     for attempt in range(max_retries + 1):
         try:
-            return _post_form(STEAM_API_URL, params)
+            return call()
         except urllib.error.HTTPError as exc:
             retryable = exc.code == 429 or 500 <= exc.code < 600
             if not retryable or attempt >= max_retries:
@@ -400,7 +404,7 @@ def _post_with_retry(
             else:
                 delay = base_delay * (2 ** attempt)
             sleep(delay + random.uniform(0.0, jitter))
-        except urllib.error.URLError:
+        except OSError:  # URLError 之外還有裸 TimeoutError/ConnectionResetError（皆 OSError）
             if attempt >= max_retries:
                 raise
             sleep(base_delay * (2 ** attempt) + random.uniform(0.0, jitter))
@@ -424,7 +428,7 @@ def _fetch_batch(ids: list[str], api_key: str | None) -> dict[str, dict]:
         params.append((f"publishedfileids[{i}]", wid))
     if api_key:  # 設定選項、非解藥：存在才附加
         params.append(("key", api_key))
-    return _details_from_response(_post_with_retry(params))
+    return _details_from_response(_with_retry(lambda: _post_form(STEAM_API_URL, params)))
 
 
 def fetch_details(
@@ -443,6 +447,44 @@ def fetch_details(
         except (urllib.error.HTTPError, urllib.error.URLError) as exc:
             print(f"  ⚠️ 缺漏重試失敗 {wid}: {exc}", file=sys.stderr)
     return result
+
+
+def _get_text(url: str, timeout: float = 30.0) -> str:
+    """GET 一頁（steamcommunity 常回 429，走同一套退避重試）。"""
+    def call() -> str:
+        req = urllib.request.Request(url, headers={"User-Agent": "modlangfor42-tracker/1"})
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return resp.read().decode("utf-8", errors="replace")
+    return _with_retry(call)
+
+
+def probe_unlisted(
+    details: dict[str, dict], *, get: Callable[[str], str] = _get_text
+) -> dict[str, dict]:
+    """API result=9 不一定是下架：不公開（unlisted）的項目 GetPublishedFileDetails 也回 9，
+    但頁面、更新紀錄與匿名 steamcmd 下載都照常（2026-10-28 實測 JM3 archery 3518662691、
+    Vanilla Firearms Expansion 3611718925；MiniMapModMaps #62 同一件事）。
+    對 result=9 的項目讀更新紀錄頁：有紀錄＝還拿得到，換成 result=1＋最新一筆的時間
+    （公開項目的這個值等於 API 的 time_updated）照常追蹤；錯誤頁或認不出的頁面維持 9。
+    讀取失敗（429、逾時）＝本輪不判，從 details 拿掉（classify 只記 last_attempt），
+    避免一次 429 就開「已下架」issue。"""
+    out = dict(details)
+    for wid, detail in details.items():
+        if int(detail.get("result", 0)) != RESULT_NOT_FOUND:
+            continue
+        try:
+            text = get(CHANGELOG_URL.format(wid))
+        except OSError as exc:  # 含 HTTPError（429）/URLError/TimeoutError
+            print(f"  ⚠️ id={wid} API result=9，更新紀錄頁讀不到（{exc}），本輪不判", file=sys.stderr)
+            del out[wid]
+            continue
+        stamps = [int(s) for s in _CHANGELOG_TS_RE.findall(text)]
+        title = _ITEM_TITLE_RE.search(text)
+        if stamps and title:
+            out[wid] = {"publishedfileid": wid, "result": RESULT_OK, "time_updated": max(stamps),
+                        "title": html.unescape(title.group(1)).strip()}
+            print(f"  ℹ️ {wid} 不公開（API result=9、更新紀錄頁可讀），照常追蹤")
+    return out
 
 
 def coverage_guard(ids: list[str], details: dict[str, dict]) -> None:
@@ -1769,8 +1811,8 @@ def build_removed_plans(newly_removed: list[str], watchlist: dict) -> list[dict]
             marker,
             f"## 已下架：{label}（Workshop {wid}）",
             "",
-            "追蹤器於每日檢查發現此 Workshop 項目已無法存取（Steam API result=9），",
-            "可能為作者隱藏／移除，或遭 Steam 下架。",
+            "追蹤器於每日檢查發現此 Workshop 項目已無法存取（Steam API result=9，更新紀錄頁也讀不到；",
+            "不公開的項目 API 也回 9，但讀得到更新紀錄頁，照常追蹤），可能為作者隱藏／移除，或遭 Steam 下架。",
             "",
             "**處置確認**：",
             "- 本包對應翻譯**預設保留**（既有訂閱者與側載玩家仍受益，多餘翻譯鍵無副作用）。",
@@ -2091,6 +2133,7 @@ def cmd_run(args) -> int:
     print(f"  查詢 {len(ids)} 個 workshop_id（batch={args.batch}，key={'有' if api_key else '無'}）...")
     details = fetch_details(ids, batch=args.batch, api_key=api_key)
     coverage_guard(ids, details)  # 全空/缺項 >50% → 非零退出
+    details = probe_unlisted(details)  # 不公開≠下架；讀不到更新紀錄頁的本輪不判
     changed, removed, newly_removed, meta = classify_changes(ids, details, ts)
     print(f"  時間戳變動：{len(changed)}；已下架：{len(removed)}（本輪新下架 {len(newly_removed)}）")
 
@@ -2259,6 +2302,7 @@ def cmd_check(args) -> int:
     api_key = os.environ.get("STEAM_API_KEY") or None
     details = fetch_details(ids, batch=args.batch, api_key=api_key)
     coverage_guard(ids, details)  # 印「查得 X/Y」；全空/缺項 >50% → 非零退出
+    details = probe_unlisted(details)  # 不公開≠下架；讀不到更新紀錄頁的本輪不判
     changed, removed, newly_removed, meta = classify_changes(ids, details, ts)
     out = {
         "generated_at": now_iso(),
@@ -3030,11 +3074,11 @@ def cmd_backfill_en(args) -> int:
 
 
 # ============================================================
-# 命令：self-test（十九情境 mock 測試，assert-based）
+# 命令：self-test（二十情境 mock 測試，assert-based）
 # ============================================================
 def cmd_self_test() -> int:
     print("=" * 60)
-    print("self-test：十九情境 mock 測試")
+    print("self-test：二十情境 mock 測試")
     print("=" * 60)
 
     def rec(kind, rel, key, val):
@@ -3931,7 +3975,34 @@ def cmd_self_test() -> int:
         "情境19：過時清單清空後 issue 未關閉"
     print("  ✅ 情境19 owner 裁決過時 → 單張 issue 開／更／關，census 盲區不信任過時清單")
 
-    print("\n✅ self-test 十九情境全通過。")
+    # 情境 20：API result=9 但更新紀錄頁可讀＝不公開，照常追蹤（不開「已下架」、已標下架者恢復）；
+    # 錯誤頁維持下架；頁面讀不到（429）＝本輪不判，不得新標下架。
+    page = '<div class="workshopItemTitle">A &amp; B</div><p id="1792348357"></p><p id="1792236999">x</p>'
+
+    def fake_get(url):
+        if url.endswith("/91"):
+            return page
+        if url.endswith("/92"):
+            return "<h3>There was a problem accessing the item.</h3>"
+        raise urllib.error.HTTPError(url, 429, "Too Many Requests", None, None)
+
+    probed = probe_unlisted({"90": {"result": 1, "time_updated": 5}, "91": {"result": 9},
+                             "92": {"result": 9}, "93": {"result": 9}}, get=fake_get)
+    assert probed["90"] == {"result": 1, "time_updated": 5}, "情境20：公開項目被改動"
+    assert probed["91"]["result"] == RESULT_OK and probed["91"]["time_updated"] == 1792348357, \
+        f"情境20：不公開項目未換成 result=1＋最新時間：{probed['91']}"
+    assert probed["91"]["title"] == "A & B", "情境20：標題未解 HTML 跳脫"
+    assert probed["92"]["result"] == RESULT_NOT_FOUND, "情境20：錯誤頁被當成不公開"
+    assert "93" not in probed, "情境20：讀取失敗未改成本輪不判"
+    ts20 = {"items": {"91": {"time_updated": 1792348357, "removed": True, "removed_at": "2026-10-01T00:00:00Z"},
+                      "92": {"time_updated": 1}, "93": {"time_updated": 1}}}
+    ch20, rm20, new20, meta20 = classify_changes(["91", "92", "93"], probed, ts20)
+    assert ch20 == [] and rm20 == ["92"] and new20 == ["92"], f"情境20：分類錯誤 {ch20} {rm20} {new20}"
+    assert not meta20["91"]["removed"] and meta20["91"]["removed_at"] is None, "情境20：不公開項目未恢復追蹤"
+    assert not meta20["93"]["removed"] and "last_result" not in meta20["93"], "情境20：讀不到頁面卻判了結果"
+    print("  ✅ 情境20 不公開（result=9＋更新紀錄頁可讀）照常追蹤，錯誤頁維持下架，429 本輪不判")
+
+    print("\n✅ self-test 二十情境全通過。")
     return 0
 
 
@@ -3947,7 +4018,7 @@ def main() -> None:
   uv run scripts/tracker.py as1-list               # 擷取 As1 網站名單（參考快照），As1 支援的 MOD 補登進名冊
   uv run scripts/tracker.py gen-watchlist          # metadata ∪ registry active → watchlist.json（含 As1）
   uv run scripts/tracker.py --dry-run --limit 5    # 真打 API 查 5 個時間戳，不下載/不開 issue
-  uv run scripts/tracker.py self-test              # 十九情境 mock 測試
+  uv run scripts/tracker.py self-test              # 二十情境 mock 測試
   uv run scripts/tracker.py check  --out c.json    # workflow check job
   uv run scripts/tracker.py diff   --in c.json --out d.json --steamcmd <path>
   uv run scripts/tracker.py issue  --in d.json     # workflow issue+state job
