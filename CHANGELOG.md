@@ -4,6 +4,27 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **9 個 MOD 更新後新增的文字補上繁簡中文（347 項）。** Long Term Preservation Extended（鴨、鵝、孔雀肉的罐頭與醃肉、法式凍派、食物棒、岩鹽與鹽磚、有機肥料與脫粒配方，233 項）、Knox Aquarium（測試版工具的生物展覽、紅耳龜與彩龜等新生物、曬背台，79 項）、'80 MAN KAT1（車輛零件與配方，16 項），以及 Sandevistan 的手把設定、'92 AM General M998 的 M101A3 拖車配方、that DAMN Library、Pickup ATM & FirePlace & Well 的梯子、Project Thiccener 的人體模型選項、Totally's NATO Firearms Pack 的 MG3 彈鼓。
+  > 技術要點：追蹤器 2026-10-28 #1118–#1138「可能過時」。347 鍵走 `apply_wf_result`／`apply_translations` 進 `own_translations.json`，登記 `ch_review_state`；4 路翻譯、4 路對抗複核，採納 1 條（Knox Aquarium 選項說明的 busy server 是「負載較高」）。上游英文寫錯名稱的 13 鍵照英文翻並在 `_note` 記錄：LTPE 附加包的鵝胸肉、小鵝肉罐頭英文寫成 Duck Leg／Duck Wing，6 個 Cured 物品英文錯位（配方 itemMapper 指的是鵝與孔雀），Collect Rice 配方實際是取種子。23 個 MOD 以 steamcmd 重抓現行版重抽，tracker record 逐筆相符；重跑 prep 後缺口 0。
+
+### Changed
+
+- **上游改了英文的已出貨文字跟著改（13 項）。** Knox Aquarium 的魚缸環形選單（加水改成可用身上的水或附近的雨水收集桶、水槽、湖泊，標題加上魚缸種類，活魚與運送時限以遊戲時間計算、睡覺也算，9 項）、Long Term Preservation Extended 的鹽磚改鑿成岩鹽、Knox Survivors 開門窗權限改成預設值並可由個別同伴指令覆蓋、Hardship: Brawling 整合 A-Life 時拳頭也能傷 NPC、Sandevistan 的 Viewpoint 自動偵測說明。
+  > 技術要點：own 層 11 鍵經 `apply_translations` 更新 `en` 錨點與譯文；`ChiselSaltLick` 屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（附 `as1_value`）；Hardship: Brawling（own 目錄）寫 own 目錄 CN 與 `sources/ch`；皆登記 `ch_review_state`。that DAMN Library 拿掉自帶的各車翻譯段後，'63 VW Type 1 與 '92 M998 共 42 個配方名的英文錨點改由各車 MOD 的正式名稱決定，原譯已符合，只更新 `en`。
+- **Containers! 的 4 台舊版 ISO 貨櫃半拖車名稱加回「舊版」。** that DAMN Library 不再定義這幾台車，車名只剩 Containers! 的 Legacy 版本；同 MOD 的新版貨櫃半拖車沿用原名，不加「舊版」兩組車會同名。
+  > 技術要點：#1139。`IGUI_VehicleNameisoContainer2`／`3tanker`／`4`／`5` 只剩單一 owner，移除 4 筆 `owner_conflict_decisions` 與 4 條 `owner_variants`，改 `sources/ch`＋`cn_overrides` 並登記 `ch_review_state`。`Recipes|ISOMakeContainerDoor` owner 由 3 減為 2，維持原譯、重簽簽名，條件譯文移除 damnlib。`OWNER_CONFLICTS.md` 重生。
+- **修正照舊版英文翻的已出貨譯文（24 項）。** that DAMN Library 的發電機放置提示、修補工具說明、三台福特 E-150 的車名（貝克曼思建築、摩爾汽修、神秘機器）、Volvo 245 旅行車行李架；Long Term Preservation Extended 的蒜末說明、空標籤罐、大量製作乾肉餅、其他類罐裝食品、熬製野豬油，以及鹽類配方的岩鹽與碎鹽用字和物品名一致；Project Thiccener 的屍體體型說明與「玩家體型」錯字；Better Pause 的自動暫停條件與「遊戲玩法」分區標題（原本空白）；萨博班消防指挥车、后侧窗與电灯开关的簡中；'80 MAN KAT1 加固保險桿和同系列配方用字一致。
+  > 技術要點：本批 21 個 MOD 的 As1 衍生層 9,834 鍵以 `judge_batch` 對照現行英文初篩，標出 451 鍵；Stay With Me 與 Vanilla Foods Expanded（兩者 issue 只有刪鍵或 id-only 變更）以外的 115 鍵，加上英文較長、信心低於 0.8 的 75 鍵，由 2 路代理逐條裁決：改譯 20 鍵，另補 3 鍵鹽類用字。CH 改 `sources/ch`，CN 偏離登記 `cn_overrides`（附 `as1_value`），皆登記 `ch_review_state`；KAT1 保險桿是 own 層，只改繁中。
+
+### Removed
+
+- **上游已刪除的 Knox Aquarium 魚種專用缸文字不再出貨（17 項）。**
+  > 技術要點：`sources/en` 全庫、tracker state 與 steamcmd 重抓的現行版 Lua 都沒有引用（Lua 以 `K.T('X')`／`K.M('X')` 組 `IGUI_KnoxAquarium_X`，搜過短名）才刪，連同 `ch_review_state`。Stay With Me 拿掉的 `IGUI_NotAlone_OverheadCyrillic` 與 Plysken 兩個 MOD 的 B41 前綴鍵屬 As1 衍生層，依 split 不變式保留；that DAMN Library 刪除的 686 鍵，110 鍵改由各車 MOD 定義、英文相同，其餘 As1 衍生層照舊保留。
+
 ## [42.21.0-1.63.0] - 2026-10-27
 
 ### Added

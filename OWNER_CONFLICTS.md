@@ -23,7 +23,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1854** 個鍵（`unship` 340、`translate` 1514）。這些鍵的 owner 條目共 5332 筆：可載入 `.json` 3588、script 854、死檔 890。另有 **246** 個鍵尚未裁決。
+現況：已裁決 **1850** 個鍵（`unship` 340、`translate` 1510）。這些鍵的 owner 條目共 5328 筆：可載入 `.json` 3584、script 854、死檔 890。另有 **246** 個鍵尚未裁決。
 
 ## 不出貨的鍵（340）
 
@@ -372,7 +372,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_quick_tip_joke27` | `3217685049/PZKVanillaPlusCarPack` = There's nothing behind you. _(json)_<br>`3707475814/BanditsWeekOneTheArk` = Commodore 64 (C64), released in 1982, was heavily used for … _(json)_ | 2026-10-26 首次裁決: 讀取畫面小提示, PZK Vanilla Plus Car Pack 是玩笑句「There's nothing behind you.」, Bandits Week One: The Ark 是 Commodore 64 的冷知識, 兩句毫無關聯, 沒有中性值. 現行 As1 出貨 PZK 那句, 對 The Ark 玩家顯示錯的內容. unship 後兩個 owner 都有 UI.json 英文, 認不出 owner 時顯示各自英文, 正常情況由條件譯文顯示中文. | — |
 | `UI\|UI_trait_BloodlustDesc` | `2459400130/DynamicTraits` = An uncontrollable urge to kill zombies. Going too long with… _(json)_<br>`2914075159/Evolving Traits World` = You find great joy in culling the undead.&lt;br&gt;You gain… _(json)_<br>`3657541591/Superheroes` = Double the speed. Triple the damage.&lt;br&gt;Recover endur… _(json)_ | 三個模組共用同鍵但效果不同：Dynamic Traits 是長時間不殺殭屍會惡化心情，ETW 是擊殺後降低壓力與恐慌，Superheroes 是速度與傷害加成、近戰擊殺恢復耐力及麻木。沒有完整且適用三方的單一說明，維持不出貨；三方皆有可載入 JSON 英文，玩家改讀各自模組的原文。 | — |
 
-## 採中性譯名的鍵（1514）
+## 採中性譯名的鍵（1510）
 
 這些鍵有中文，且該譯名對每個 MOD 都成立。
 
@@ -623,10 +623,6 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `IG_UI\|IGUI_VehicleNamefhqM715MZ` | `2791656602/fhqwhgads' Motorious Zone` = M715 _(json)_<br>`2791656602/fhqwhgads' Motorious Zone - Real Names Adddon` = Kaiser Jeep M715 _(json)_ | 共同中性名稱已查證：base 與 Real Names owner 的有效 EN 分別只差品牌前綴，兩者共同且完整可識別的名稱為 `M715`；JSON 出貨此值對兩 owner 都成立，無須退化為英文。 | — |
 | `IG_UI\|IGUI_VehicleNamefhqM715hardtopCivMZ` | `2791656602/fhqwhgads' Motorious Zone` = M715 _(json)_<br>`2791656602/fhqwhgads' Motorious Zone - Real Names Adddon` = Kaiser Jeep M715 _(json)_ | 共同中性名稱已查證：base 與 Real Names owner 的有效 EN 分別只差品牌前綴，兩者共同且完整可識別的名稱為 `M715`；JSON 出貨此值對兩 owner 都成立，無須退化為英文。 | — |
 | `IG_UI\|IGUI_VehicleNamefhqM715hardtopMZ` | `2791656602/fhqwhgads' Motorious Zone` = M715 _(json)_<br>`2791656602/fhqwhgads' Motorious Zone - Real Names Adddon` = Kaiser Jeep M715 _(json)_ | 共同中性名稱已查證：base 與 Real Names owner 的有效 EN 分別只差品牌前綴，兩者共同且完整可識別的名稱為 `M715`；JSON 出貨此值對兩 owner 都成立，無須退化為英文。 | — |
-| `IG_UI\|IGUI_VehicleNameisoContainer2` | `2625625421/isoContainers` = Legacy ISO Container with one door _(json)_ | 2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer2，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 "Legacy" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。 | — |
-| `IG_UI\|IGUI_VehicleNameisoContainer3tanker` | `2625625421/isoContainers` = Legacy ISO Fuel Tank _(json)_ | 2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer3tanker，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 "Legacy" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。 | — |
-| `IG_UI\|IGUI_VehicleNameisoContainer4` | `2625625421/isoContainers` = Legacy ISO Container with two doors _(json)_ | 2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer4，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 "Legacy" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。 | — |
-| `IG_UI\|IGUI_VehicleNameisoContainer5` | `2625625421/isoContainers` = Legacy ISO Container wreck _(json)_ | 2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer5，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 "Legacy" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。 | — |
 | `IG_UI\|IGUI_VehicleNamepzkChevalierCerise93PoliceLouisvillePD` | `3217685049/PZKVanillaPlusCarPack` = Louisville Police Chevalier Cerise _(json)_<br>`3459638181/SmallTownFirstRespondersMain` = Police Chevalier Cerise _(json)_ | 2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 | — |
 | `IG_UI\|IGUI_VehicleNamepzkChevalierCeriseSedanPoliceKST` | `3217685049/PZKVanillaPlusCarPack` = State Trooper Chevalier Cerise _(json)_<br>`3459638181/SmallTownFirstRespondersMain` = Police Chevalier Cerise _(json)_ | 2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 | — |
 | `IG_UI\|IGUI_VehicleNamepzkChevalierLaserPoliceKST` | `3217685049/PZKVanillaPlusCarPack` = State Trooper Chevalier Laser _(json)_<br>`3459638181/SmallTownFirstRespondersMain` = Police Chevalier Laser _(json)_ | 2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 | — |

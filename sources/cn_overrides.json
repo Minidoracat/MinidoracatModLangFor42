@@ -8691,8 +8691,8 @@
   },
   "Recipes.json|89volvo240MakeRoofrack": {
     "as1_value": "制作89款沃尔沃245旅行车车顶行李架",
-    "reason": "As1 上游張冠李戴：本配方 outputs 為 Base.89volvo240Roofrack1（DisplayName=89 Volvo 200 Series Roofrack），卻寫成 245 旅行車；與 89volvo245MakeRoofrack 互相對調",
-    "value": "制作89款沃尔沃200系列车顶行李架"
+    "reason": "As1 上游張冠李戴：本配方 outputs 為 Base.89volvo240Roofrack1（DisplayName=89 Volvo 200 Series Roofrack），卻寫成 245 旅行車；與 89volvo245MakeRoofrack 互相對調 ｜2026-10-28 追蹤器 #1118–#1139 舊譯複查：照舊版英文的「200系列」, 現行是 245 Wagon",
+    "value": "制作89款沃尔沃245旅行车车顶行李架"
   },
   "Recipes.json|89volvo245MakeRoofrack": {
     "as1_value": "制作89款沃尔沃200系列车顶行李架",
@@ -26957,23 +26957,23 @@
   },
   "IG_UI.json|IGUI_VehicleNameisoContainer2": {
     "as1_value": "ISO标准集装箱半挂车(单开门)",
-    "value": "ISO标准集装箱半挂车 (单开门)",
-    "reason": "上游 isoContainers 42.20 自行把這批舊車改標 Legacy（本鍵 owner 之一），同時新增 TrailerISOcontainerM1/M2/M3tanker/M4damaged 沿用原車名（M 系列分別以 ISO2_body／ISO4_Body／ISO3_Body／ISO5_body 重製同一批車）。不加「舊版／旧版」前綴，玩家車輛清單會出現兩組同名項目。As1 原值＝「ISO标准集装箱半挂车(单开门)」，CN 偏離需登記 cn_overrides（as1_value 即該值）；ch 為 corpus 人工真相。與 decisions 的同鍵裁決錨點一致，須一併套用。 ｜2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer2，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 \"Legacy\" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。"
+    "value": "旧版ISO标准集装箱半挂车 (单开门)",
+    "reason": "2026-10-28 #1139：that DAMN Library 移除自帶的車名 Translate 段，本鍵只剩 Containers!（2625625421）定義，英文為 Legacy ISO Container with one door；同 MOD 的新車 TrailerISOcontainerM1 沿用不帶 Legacy 的原車名，加「旧版」區分兩者（取代 2026-09-27 為了同時適用 DAMN Library 而採的中性譯名）。As1 原值＝「ISO标准集装箱半挂车(单开门)」，另補括號前空格。"
   },
   "IG_UI.json|IGUI_VehicleNameisoContainer3tanker": {
     "as1_value": "ISO标准燃料罐式半挂车",
-    "value": "ISO标准燃料罐式半挂车",
-    "reason": "上游 isoContainers 42.20 自行把這批舊車改標 Legacy（本鍵 owner 之一），同時新增 TrailerISOcontainerM1/M2/M3tanker/M4damaged 沿用原車名（M 系列分別以 ISO2_body／ISO4_Body／ISO3_Body／ISO5_body 重製同一批車）。不加「舊版／旧版」前綴，玩家車輛清單會出現兩組同名項目。As1 原值＝「ISO标准燃料罐式半挂车」，CN 偏離需登記 cn_overrides（as1_value 即該值）；ch 為 corpus 人工真相。與 decisions 的同鍵裁決錨點一致，須一併套用。 ｜2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer3tanker，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 \"Legacy\" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。"
+    "value": "旧版ISO标准燃料罐式半挂车",
+    "reason": "2026-10-28 #1139：that DAMN Library 移除自帶的車名 Translate 段，本鍵只剩 Containers!（2625625421）定義，英文為 Legacy ISO Fuel Tank；同 MOD 的新車 TrailerISOcontainerM3tanker 沿用不帶 Legacy 的原車名，加「旧版」區分兩者（取代 2026-09-27 為了同時適用 DAMN Library 而採的中性譯名）。As1 原值＝「ISO标准燃料罐式半挂车」。"
   },
   "IG_UI.json|IGUI_VehicleNameisoContainer4": {
     "as1_value": "ISO标准集装箱半挂车(双开门)",
-    "value": "ISO标准集装箱半挂车 (双开门)",
-    "reason": "上游 isoContainers 42.20 自行把這批舊車改標 Legacy（本鍵 owner 之一），同時新增 TrailerISOcontainerM1/M2/M3tanker/M4damaged 沿用原車名（M 系列分別以 ISO2_body／ISO4_Body／ISO3_Body／ISO5_body 重製同一批車）。不加「舊版／旧版」前綴，玩家車輛清單會出現兩組同名項目。As1 原值＝「ISO标准集装箱半挂车(双开门)」，CN 偏離需登記 cn_overrides（as1_value 即該值）；ch 為 corpus 人工真相。與 decisions 的同鍵裁決錨點一致，須一併套用。 ｜2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer4，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 \"Legacy\" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。"
+    "value": "旧版ISO标准集装箱半挂车 (双开门)",
+    "reason": "2026-10-28 #1139：that DAMN Library 移除自帶的車名 Translate 段，本鍵只剩 Containers!（2625625421）定義，英文為 Legacy ISO Container with two doors；同 MOD 的新車 TrailerISOcontainerM2 沿用不帶 Legacy 的原車名，加「旧版」區分兩者（取代 2026-09-27 為了同時適用 DAMN Library 而採的中性譯名）。As1 原值＝「ISO标准集装箱半挂车(双开门)」，另補括號前空格。"
   },
   "IG_UI.json|IGUI_VehicleNameisoContainer5": {
     "as1_value": "ISO标准集装箱半挂车残骸",
-    "value": "ISO标准集装箱半挂车残骸",
-    "reason": "上游 isoContainers 42.20 自行把這批舊車改標 Legacy（本鍵 owner 之一），同時新增 TrailerISOcontainerM1/M2/M3tanker/M4damaged 沿用原車名（M 系列分別以 ISO2_body／ISO4_Body／ISO3_Body／ISO5_body 重製同一批車）。不加「舊版／旧版」前綴，玩家車輛清單會出現兩組同名項目。As1 原值＝「ISO标准集装箱半挂车残骸」，CN 偏離需登記 cn_overrides（as1_value 即該值）；ch 為 corpus 人工真相。與 decisions 的同鍵裁決錨點一致，須一併套用。 ｜2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer5，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 \"Legacy\" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。"
+    "value": "旧版ISO标准集装箱半挂车残骸",
+    "reason": "2026-10-28 #1139：that DAMN Library 移除自帶的車名 Translate 段，本鍵只剩 Containers!（2625625421）定義，英文為 Legacy ISO Container wreck；同 MOD 的新車 TrailerISOcontainerM4damaged 沿用不帶 Legacy 的原車名，加「旧版」區分兩者（取代 2026-09-27 為了同時適用 DAMN Library 而採的中性譯名）。As1 原值＝「ISO标准集装箱半挂车残骸」。"
   },
   "IG_UI.json|IGUI_perks_Art_Description": {
     "as1_value": "提高雕刻和绘画行为的效率. <LINE> 3 级时可以绘制中等尺寸的画布. <LINE> 6 级时可以绘制大尺寸的画布. <LINE> 解锁新类型的雕塑.",
@@ -65639,5 +65639,110 @@
     "as1_value": "AA12 20 发霰弹弹鼓",
     "value": "12 号 20 发霰弹弹鼓",
     "reason": "2026-10-27 #1106 owner 衝突裁決：MFS 社群修正版把這個彈鼓改給多把 12 號霰彈槍共用並改名，JSON 改用兩方都成立的上位名稱，不寫 AA12。"
+  },
+  "Recipes.json|ChiselSaltLick": {
+    "as1_value": "将盐砖凿成粗盐",
+    "value": "将盐砖凿成岩盐",
+    "reason": "2026-10-28 #1129：Long Term Preservation Extended 把配方英文從 Chisel Salt Lick Into Crushed Salt 改成 Chisel Salt Lick Into Salt Rock（產物改為岩鹽，同 MOD 物品 Base.SaltRock 譯岩盐）。As1 原值照舊英文寫粗盐。"
+  },
+  "IG_UI.json|IGUI_DL_GeneratorInstallHint": {
+    "as1_value": "此处专为存放发电机, 不提供电力.",
+    "value": "这里很适合存放发电机. 车辆周围不会有电力供应.",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：原譯「專為存放」誇大且漏掉「車輛周圍」不供電的範圍"
+  },
+  "IG_UI.json|IGUI_VehicleName86fordE150beckmansBuilding": {
+    "as1_value": "86款福特E-150贝克曼思大厦",
+    "value": "86款福特E-150贝克曼思建筑",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：Building 指營造公司 (原版 VanBeckmans 譯「建築」), 非「大廈」"
+  },
+  "IG_UI.json|IGUI_VehicleName86fordE150mm": {
+    "as1_value": "86款福特E-150神秘机器",
+    "value": "神秘机器",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：現行英文只有 The Mystery Machine, 原譯多出舊版的「86款福特E-150」車型前綴; 用詞照同 MOD Catmysterymachine「神秘機器塗裝」"
+  },
+  "IG_UI.json|IGUI_VehicleName86fordE150mooresMechanics": {
+    "as1_value": "86款福特E-150摩尔力学",
+    "value": "86款福特E-150摩尔汽修",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：Mechanics 指修車行 (原版 VanMooreMechanics CH 譯「汽修」), 非「力學」"
+  },
+  "Tooltip.json|Tooltip_item_damnPlasticWeldingKit": {
+    "as1_value": "用于修复塑料部件的一套工具.",
+    "value": "一套可在外随时修复塑料部件的工具.",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：漏掉 on the go (外出途中隨時修理)"
+  },
+  "Tooltip.json|Tooltip_item_damnTireRepairKit": {
+    "as1_value": "用于修补轮胎的工具.",
+    "value": "一套可在外随时修补轮胎的工具.",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：漏掉 Set of 與 on the go"
+  },
+  "IG_UI.json|IGUI_VehicleName93chevySuburbanfd": {
+    "as1_value": "93款雪佛兰萨博班消防车",
+    "value": "93款雪佛兰萨博班消防指挥车",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：CN 漏掉 Fire Chief 的「指挥」, 與 CH「消防指揮車」不一致"
+  },
+  "ItemName.json|Base.EmptyJarLabeled": {
+    "as1_value": "贴标签的罐子",
+    "value": "空标签罐",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：CN 漏掉 Empty; 照同 MOD CN「空标签罐 (整箱)」「标签罐」格式"
+  },
+  "Recipes.json|93chevySuburbanMakeRearSideWindow": {
+    "as1_value": "制作93款雪佛兰萨博班/索罗德后窗",
+    "value": "制作93款雪佛兰萨博班/索罗德后侧窗",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：CN 漏「侧」, 會和另一配方 RearWindow「后窗」混淆"
+  },
+  "Recipes.json|MakePemmicanMeat2": {
+    "as1_value": "制作干肉饼 (4)",
+    "value": "大量制作干肉饼 (4)",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：CN 漏 In Bulk, 和 MakePemmicanMeat「制作干肉饼」無法區分"
+  },
+  "Recipes.json|OpenJarOfFood4": {
+    "as1_value": "打开罐装食品 (香料)",
+    "value": "打开罐装食品 (其他)",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：EN 是 (Other), CN 誤寫成 (香料)"
+  },
+  "Recipes.json|ReduceMeatLardKW": {
+    "as1_value": "提取猪油",
+    "value": "熬制野猪油",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：CN 漏 Boar; 照同 MOD ReduceMeatLard CN「熬制猪油」格式"
+  },
+  "Sandbox.json|Sandbox_PickupTiles_Pickup_Switch": {
+    "as1_value": "拾取开关",
+    "value": "拾取电灯开关",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：CN 漏 Light; 本體官方簡中 Light Switch 作「电灯开关」"
+  },
+  "Sandbox.json|Sandbox_Thiccener_EnableCorpses_tooltip": {
+    "as1_value": "警告: 该功能目前尚未完善, 可能会影响游戏性能 启用后, 尸体上也会呈现出相应体型",
+    "value": "在尸体上呈现体型变化, 让尸体保留生前的体型. 尸体会被重新烘焙进背景图集, 新尸体出现时可能会稍有延迟.",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：照舊版 EN (WARNING: not yet implemented…) 翻; 現行 EN 已移除警告並改寫說明"
+  },
+  "Tooltip.json|Tooltip_item_MashedGarlicMash": {
+    "as1_value": "用来制作蒜蓉.",
+    "value": "切得很细的蒜末.",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：現行 EN 是描述 (Finely Minced Garlic), 舊譯「用來製作蒜末」是舊版用途說明"
+  },
+  "UI.json|UI_TWF_BETTERPAUSE_PAUSE_ON_JOIN_TT": {
+    "as1_value": "启用后, 当世界完全加载好时, 游戏将自动暂停. 仅限单人模式.",
+    "value": "启用后, 会在世界、玩家和时间控制都完全就绪后自动暂停游戏. 仅限单人模式.",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：舊譯只寫「世界載入好」, 漏掉玩家與時間控制就緒的條件"
+  },
+  "UI.json|UI_TWF_BETTERPAUSE_SECTION_GAMEPLAY": {
+    "as1_value": " ",
+    "value": "游戏玩法",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：CH 為空白、CN 為空字串, Mod Options 的區段標題 (addTitle) 會顯示空白; MOD 自帶 CH/CN 亦為 遊戲玩法/游戏玩法"
+  },
+  "Recipes.json|ChiselSaltRock": {
+    "as1_value": "将盐岩凿成粗盐",
+    "value": "将岩盐凿成碎盐",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：配方名的物品要和同 MOD 物品名一致：Base.SaltRock 岩盐、Base.CrushedSalt 碎盐"
+  },
+  "Recipes.json|CreateSaltLick": {
+    "as1_value": "用粗盐制作盐砖",
+    "value": "用碎盐制作盐砖",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：配方名的物品要和同 MOD 物品名一致：Base.CrushedSalt 碎盐"
+  },
+  "Recipes.json|CrushSaltRock": {
+    "as1_value": "碾碎盐岩",
+    "value": "碾碎岩盐",
+    "reason": "2026-10-28 追蹤器 #1118–#1139 舊譯複查（對照 MOD 現行英文）：配方名的物品要和同 MOD 物品名一致：Base.SaltRock 岩鹽／岩盐"
   }
 }

@@ -7053,8 +7053,8 @@
     },
     "Recipes|ISOMakeContainerDoor": {
       "action": "translate",
-      "signature": "6e2beaee3350c26e",
-      "reason": "2026-09-21 #541 重新裁決 translate、維持現值（owner 由 2 增為 3，簽名重簽；舊簽名 ad982adf2e8a551c 已過時）：新 owner 2625625421/isoContainers 是這個配方的本主。逐字比對 42.20 上游 script——isoContainers/isoContainer_recipes.txt 與 82oshkoshM911/82oshkoshM911_recipes.txt 的 craftRecipe ISOMakeContainerDoor 區塊在收斂空白後完全相同（timedAction=Welding、time=150、同一份 inputs、outputs 皆為 item 1 Base.IsoContainerTrunkDoor2），三方指同一個「ISO 貨櫃門」配方，英文差異只是 oshkosh 多標 ISO 前綴；3171167894/damnlib 該段是 isoContainers 的舊快照拷貝（段首 HEADER_Recipes_EN_isoContainers=2625625421），全樹無 isoContainer 配方 script。產物 Base.IsoContainerTrunkDoor2 在 42.20 的 DisplayName 也已改為 \"ISO Container Door\"，現行出貨值對三個 owner 皆為真陳述，不改值、不需 unship。",
+      "signature": "22f4e7e508e77280",
+      "reason": "2026-09-21 #541 重新裁決 translate、維持現值（owner 由 2 增為 3，簽名重簽；舊簽名 ad982adf2e8a551c 已過時）：新 owner 2625625421/isoContainers 是這個配方的本主。逐字比對 42.20 上游 script——isoContainers/isoContainer_recipes.txt 與 82oshkoshM911/82oshkoshM911_recipes.txt 的 craftRecipe ISOMakeContainerDoor 區塊在收斂空白後完全相同（timedAction=Welding、time=150、同一份 inputs、outputs 皆為 item 1 Base.IsoContainerTrunkDoor2），三方指同一個「ISO 貨櫃門」配方，英文差異只是 oshkosh 多標 ISO 前綴；3171167894/damnlib 該段是 isoContainers 的舊快照拷貝（段首 HEADER_Recipes_EN_isoContainers=2625625421），全樹無 isoContainer 配方 script。產物 Base.IsoContainerTrunkDoor2 在 42.20 的 DisplayName 也已改為 \"ISO Container Door\"，現行出貨值對三個 owner 皆為真陳述，不改值、不需 unship。 ／2026-10-28 #1139：that DAMN Library 移除自帶的各車 Translate 段，owner 由 3 減為 2（82oshkoshM911、isoContainers），兩方仍指同一配方，維持現值、簽名重簽（舊簽名 6e2beaee3350c26e）。",
       "ch": "製作ISO貨櫃門",
       "cn": "制作ISO集装箱门"
     },
@@ -7746,34 +7746,6 @@
       "reason": "2026-09-27 裁決：三個 owner 都是 Zomboid Storylines（3620552991）同一工作坊項目的變體（storylines 為現行 JSON 版，vlmainquest1／vlmainquest1_legacy_42_12 為舊版 _EN.txt），是同一段劇情文本。舊版的 \"Task: (UPDATING)\" 是尚未完成的占位文字，以正式版 storylines 的 \"Find Dr. Venter at the marked location\" 為準，沿用現值；unship 會讓舊版（_EN.txt 死檔）顯示鍵名。",
       "ch": "目標: 前往標記地點尋找文特博士",
       "cn": "目标: 前往标记地点寻找Venter博士"
-    },
-    "IG_UI|IGUI_VehicleNameisoContainer2": {
-      "action": "translate",
-      "signature": "a74d54f614c3eb37",
-      "reason": "2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer2，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 \"Legacy\" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。",
-      "ch": "ISO標準貨櫃半拖車 (單開門)",
-      "cn": "ISO标准集装箱半挂车 (单开门)"
-    },
-    "IG_UI|IGUI_VehicleNameisoContainer3tanker": {
-      "action": "translate",
-      "signature": "0c5ac583e2b8a885",
-      "reason": "2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer3tanker，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 \"Legacy\" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。",
-      "ch": "ISO標準燃料罐半拖車",
-      "cn": "ISO标准燃料罐式半挂车"
-    },
-    "IG_UI|IGUI_VehicleNameisoContainer4": {
-      "action": "translate",
-      "signature": "065d51d49601988d",
-      "reason": "2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer4，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 \"Legacy\" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。",
-      "ch": "ISO標準貨櫃半拖車 (雙開門)",
-      "cn": "ISO标准集装箱半挂车 (双开门)"
-    },
-    "IG_UI|IGUI_VehicleNameisoContainer5": {
-      "action": "translate",
-      "signature": "d0dbe95bc5a7d6ae",
-      "reason": "2026-09-27 裁決：Containers!（2625625421）與 that DAMN Library（3171167894）定義的是同名車輛 script（Base.isoContainer5，同一套 Containers_ISO_body 模型），是同一種載具；Containers! 的 JSON 加上 \"Legacy\" 只是標示它是被 DAMN Library 接手前的舊版本。現值的「舊版」只屬 Containers! 一方，對 DAMN Library 玩家不成立，改為中性說法並補上 cn 括號前的空格。",
-      "ch": "ISO標準貨櫃半拖車殘骸",
-      "cn": "ISO标准集装箱半挂车残骸"
     },
     "IG_UI|IGUI_VehiclePartATA2InteractiveTrunkFront": {
       "action": "translate",
