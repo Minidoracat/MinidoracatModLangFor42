@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1462 個 Workshop 模組**（2108 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
+共支援 **1465 個 Workshop 模組**（2113 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -630,6 +630,7 @@
 | [ALICE Gear [B41/B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3610005735) | ALICE 裝備 | 新增 ALICE 系列軍用裝備，如野戰背包、水壺與戰術攜行具。 | `AliceGear` | 54 | — | — |
 | [[41/42 + MP] Hot Brass - Visible Casing Ejection Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3610677934) | Hot Brass - 可見彈殼拋殼框架 | 射擊時拋出可見彈殼，涵蓋多種口徑的彈殼物品。 | `HBVCEFb42`, `zHBVCEF` | 36 | — | — |
 | [Outfit Control](https://steamcommunity.com/sharedfiles/filedetails/?id=3610760744) | Outfit Control（套裝管理） | 可儲存與切換整套服裝，支援切換前先脫下衣物或直接存入衣櫃，並提供刪除套裝、晾乾衣物等介面功能。 | `OutfitControl` | 15 | — | — |
+| [[42] Vanilla Firearms Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3611718925) | 原版槍械擴充 | 擴充原版風格槍械與彈藥，新增多款步槍、霰彈槍與各式彈匣。 | `VFExpansion2Reduxb42`, `VFExpansion3Reduxb42`, `VFExpansionReduxb42` | 457 | ⚠️ ≥24 | — |
 | [Rick Grimes - King County Sheriff Uniform from The Walking Dead Build 42.13+ Updated](https://steamcommunity.com/sharedfiles/filedetails/?id=3613433733) | Rick Grimes - King County 警長制服（陰屍路） | 新增陰屍路 Rick Grimes 警長制服，外套可開合。 | `Rick Grimes - King County Sheriff Uniform (TWD)Build 42` | ? | — | — |
 | ['85 Chevrolet Step-Van](https://steamcommunity.com/sharedfiles/filedetails/?id=3614034284) | '85 Chevrolet Step-Van | 新增 1985 年雪佛蘭 Step-Van 廂型貨車，含多種商用塗裝版本。 | `85chevyStepVan`, `85chevyStepVanexpanded` | 55 | — | — |
 | [XP-1 Outfit [B41/B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3614804036) | XP-1 套裝 | 新增 XP-1 賽博忍者風格套裝，含護甲、面罩與義體等裝備。 | `CyberNinjaOutfit` | 21 | — | — |
@@ -790,6 +791,7 @@
 | [[B42.19] Filibuster Rhymes' Certified Used Cars](https://steamcommunity.com/sharedfiles/filedetails/?id=3683878228) | — | — | `B42FRUsedCarsAnimAlpha`, `B42FRUsedCarsAnimTitle` | 402 | ⚠️ ≥3 | — |
 | [PALSJ's Customization Options [B42 Only]](https://steamcommunity.com/sharedfiles/filedetails/?id=3683898699) | — | — | `PALPal`, `PALPeeAdds`, `PALPeeDefs`, `PALPoo`, `PALShit` | 232 | — | — |
 | [Cheat Menu: Reloaded [B42 Fixed]](https://steamcommunity.com/sharedfiles/filedetails/?id=3683918273) | — | — | `CheatMenuReloaded` | 638 | — | — |
+| [PH's Self Care](https://steamcommunity.com/sharedfiles/filedetails/?id=3684225110) | — | — | `PHSelfCare` | 31 | — | — |
 | ['84 Chevrolet Corvette](https://steamcommunity.com/sharedfiles/filedetails/?id=3684254299) | — | — | `84corvette` | 26 | — | — |
 | [[RE9] Hatchet](https://steamcommunity.com/sharedfiles/filedetails/?id=3685136499) | — | — | `RE9Hatchet` | 2 | — | — |
 | [[B42]Xixi's Serene Cottage〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3685508479) | 汐汐的靜謐小屋 | 肯塔基州的靜謐小屋據點地圖，附汐汐的背包、腰包、急救套件、能量藥劑與冰箱、床、槍架等家具。 | `Xixi's Serene Cottage` | 39 | — | — |
@@ -849,6 +851,7 @@
 | [[OC] Ellie's Outfits [Tomb Body/B42.16+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3701066084) | — | — | `ElliesOutfits` | 48 | — | — |
 | [Macon From TWD〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3701164856) | 梅肯（陰屍路） | 以《陰屍路》遊戲為藍本的梅肯小鎮地圖。 | `Macon` | 2 | — | — |
 | [Muldraugh 1993 B42〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3701834205) | 馬爾德勞 1993 | 1993 年的馬爾德勞城鎮地圖，位於 31W 號公路旁、緊鄰諾克斯堡軍事基地。 | `muldraugh1993b42` | 2 | — | — |
+| [[PZCh] Growing Up - Kid mod challenge](https://steamcommunity.com/sharedfiles/filedetails/?id=3701972216) | — | — | `GrowingUp` | 16 | — | — |
 | [Loot Sense](https://steamcommunity.com/sharedfiles/filedetails/?id=3702905123) | — | — | `LootSense` | 52 | — | — |
 | [Chinatown B42 version〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3703704021) | 唐人街 | 位於馬爾德勞北部的虛構華人社區地圖，有商業區、工業園區與幫派藏身的下水道。 | `Chinatown B42 version` | 2 | — | — |
 | [Chinatown Expansion B42 version〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3703704638) | 唐人街擴張區 | 位於馬爾德勞北部的虛構華人聚居社區地圖，商業繁榮、店鋪林立、高樓密布。 | `Chinatown Expansion B42 version`, `Chinatown Expansion B42 version (Less Traffic Jam)` | 2 | — | — |
@@ -1477,7 +1480,7 @@
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
-## 已下架模組（15 個，翻譯保留）
+## 已下架模組（12 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
@@ -1489,12 +1492,9 @@
 | [JM3 archery](https://steamcommunity.com/sharedfiles/filedetails/?id=3518662691) | JM3 弓箭 | 新增弓弩武器與箭矢系統，含瞄準鏡配件與箭矢製作材料。 | `JM3_archery` | 62 | — | — | 2026-09-16 |
 | [[Federal Rangers] CHIMERA V11 [B42.13.1+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3564110652) | [Federal Rangers] CHIMERA V11 | 新增大量戰術服裝與裝備，如背包、頭盔耳機與護具。 | `Federal_Rangers_Chimera`, `Federal_Rangers_Chimera_PatchN1` | 110 | — | — | 2026-07-18 |
 | [Todo Caserito [Build 42/42.19 SP/MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3600616323) | Todo Caserito 家常料理 | 新增拉美風家常料理與配方，如薯條、塔可、玉米餅與布丁等。 | `Todo Caserito` | 410 | — | ⚠️ 有一項配方名稱（代號 MakeTortilla）與草藥師、Abuelita Linda 兩個 MOD 撞名、卻是不同的食物——本 MOD 的是阿根廷豬油餅（tortillas de grasa），那兩邊的同一代號是墨西哥玉米餅。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故此鍵不出貨、遊戲內顯示該 MOD 自己的英文原文。本 MOD 另有專門表示玉米餅的配方（MakeTortillaCasera），該項不受影響。 | 2026-09-12 |
-| [[42] Vanilla Firearms Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3611718925) | 原版槍械擴充 | 擴充原版風格槍械與彈藥，新增多款步槍、霰彈槍與各式彈匣。 | `VFExpansion2Reduxb42`, `VFExpansion3Reduxb42`, `VFExpansionReduxb42` | 457 | ⚠️ ≥24 | — | 2026-08-01 |
 | [3651494414](https://steamcommunity.com/sharedfiles/filedetails/?id=3651494414) | DayZ 槍械 | 新增 DayZ 風格槍械相關內容。 | `DayZ_Guns_B42` | ? | — | — | 2026-07-17 |
 | [Swim Skill](https://steamcommunity.com/sharedfiles/filedetails/?id=3654513156) | — | — | `swim_skill` | 13 | — | — | 2026-10-17 |
 | [[B42.20] Bag Upgrade Plus](https://steamcommunity.com/sharedfiles/filedetails/?id=3668094025) | — | — | `BagUpgradePlusUpdated` | 55 | — | — | 2026-10-24 |
 | [[B42.20] Bag Upgrade Plus Realistic](https://steamcommunity.com/sharedfiles/filedetails/?id=3669286020) | — | — | `BagUpgradePlusRealistic` | 55 | — | — | 2026-10-24 |
-| [PH's Self Care](https://steamcommunity.com/sharedfiles/filedetails/?id=3684225110) | — | — | `PHSelfCare` | 31 | — | — | 2026-10-01 |
-| [[PZCh] Growing Up - Kid mod challenge](https://steamcommunity.com/sharedfiles/filedetails/?id=3701972216) | — | — | `GrowingUp` | 16 | — | — | 2026-10-01 |
 | [Dildo GTA Weapon [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3777681298) | — | — | `DildoFunnyWeapon` | 105 | — | — | 2026-10-20 |
 | [Peachey Distillation](https://steamcommunity.com/sharedfiles/filedetails/?id=3784741776) | Peachey 蒸餾 | 加入發酵醪、蒸餾器與陳釀流程，可釀製苦艾烈酒、陳釀葡萄酒等酒品，並提供專屬蒸餾製作分類。 | `peacheysdistillation` | 122 | — | — | 2026-09-10 |
