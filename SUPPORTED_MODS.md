@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1469 個 Workshop 模組**（2116 個 mod ID）；另 **8 個已下架**（翻譯保留，見文末）。
+共支援 **1469 個 Workshop 模組**（2117 個 mod ID）；另 **8 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1478,7 +1478,7 @@
 | [Off the Rack: The 1993 Military Gear](https://steamcommunity.com/sharedfiles/filedetails/?id=3819505238) | Off the Rack：1993 軍用裝備 | 將原版軍用裝備重製成 1993 年真實軍品外觀，物品與掉落不變；需 Surplus & Thrift：1993 衣櫥。 | `OffTheRackMilitary1993` | 7 | — | — |
 | [Viewpoint - 3D RVs [B42.21] [WIP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3820158673) | Viewpoint - 3D 露營車 | Viewpoint 附加模組，新增可走進內部的 Nomad 與 Dales Chieftain 露營車，可在車內烹飪、睡覺並擺放家具物資。 | `DaleChieftainRV`, `DeadWorksDaleRV`, `DeadWorksNomadRV`, `GridRV`, `GridRVHost` | 78 | — | — |
 | [Complete Vanilla Firearms Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3820580321) | Complete Vanilla Firearms Expansion 原版風槍械擴充整合版 | 整合 OG VFE、S.T.A.L.K.E.R.、Post 93' 等槍械擴充，新增大量槍械與對應彈藥、彈匣與配件。 | `ExtendedVanillaWeapons` | 413 | ⚠️ ≥22 | — |
-| [Living NPC](https://steamcommunity.com/sharedfiles/filedetails/?id=3820700754) | Living NPC 同伴生活 | Bandits2 附加模組，讓同伴擁有個性、記憶、人際關係與日常作息，可共住、成家並長期一起生活。 | `LivingNPC` | ? | ⚠️ ≥2 | — |
+| [Living NPC](https://steamcommunity.com/sharedfiles/filedetails/?id=3820700754) | Living NPC 同伴生活 | Bandits2 附加模組，讓同伴擁有個性、記憶、人際關係與日常作息，可共住、成家並長期一起生活。 | `LNPCRoadCompanion`, `LivingNPC` | ? | ⚠️ ≥2 | — |
 | ['67 Chevrolet Impala](https://steamcommunity.com/sharedfiles/filedetails/?id=3820938264) | '67 Chevrolet Impala | 新增 1967 年 Chevrolet Impala 車輛，含《超自然檔案》黑色特別版與多款可替換零件。 | `67chevyImpala` | 25 | — | — |
 | [Xanny Arms](https://steamcommunity.com/sharedfiles/filedetails/?id=3820971639) | Xanny Arms 槍械包 | 新增 72 把槍械與對應彈匣、瞄具與消音器等配件，彈藥有散裝、盒裝與箱裝。 | `XannyArmsCore`, `XannyArmsGunPack` | ? | ⚠️ ≥5 | — |
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
