@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1465 個 Workshop 模組**（2113 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
+共支援 **1469 個 Workshop 模組**（2116 個 mod ID）；另 **8 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -277,6 +277,7 @@
 | [TchernoLib](https://steamcommunity.com/sharedfiles/filedetails/?id=3389605231) | TchernoLib | 模組前置函式庫，供其他模組使用，提供顏色等共用沙盒選項。 | `TchernoLib` | 37 | — | — |
 | [Jump](https://steamcommunity.com/sharedfiles/filedetails/?id=3389606570) | 跳躍 | 新增跳躍動作，可自訂跳躍按鍵。 | `Jump` | 1 | — | — |
 | [Climb](https://steamcommunity.com/sharedfiles/filedetails/?id=3389681224) | 攀爬 | 新增攀爬牆壁動作，可自訂攀爬按鍵。 | `ClimbWall` | 1 | — | — |
+| [3389805754](https://steamcommunity.com/sharedfiles/filedetails/?id=3389805754) | 武士刀刀鞘 | 新增武士刀與刀具刀鞘，可佩戴於背部、臀部或大腿。 | `TKS42` | ? | — | — |
 | [TrapalaketownB42〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3390327877) | 特拉帕湖鎮 | 名為特拉帕湖鎮的小鎮地圖。 | `TrapalaketownB42` | 2 | — | — |
 | [Daisy County B42 version〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3390753141) | 雛菊郡 | 肯塔基州諾克斯縣的商業小鎮地圖，災難後繁華商業區淪為人間地獄，另有特殊物品版。 | `Daisy County B42 version`, `Daisy County B42 version(items part)` | 2 | — | — |
 | [Roll](https://steamcommunity.com/sharedfiles/filedetails/?id=3391149570) | 翻滾 | 新增翻滾動作，可綁定按鍵，翻滾時有機率撲滅角色身上的火。 | `Roll` | 14 | — | — |
@@ -331,6 +332,7 @@
 | [MRE XIII (1993) - Meal Ready to Eat MOD Real version for build 42](https://steamcommunity.com/sharedfiles/filedetails/?id=3406930410) | MRE XIII（1993）野戰口糧 | 新增 1993 年版美軍 MRE 野戰口糧，含加熱包、附件包、沖泡飲品與整箱堆放。 | `MREXIII_RealVersion` | 69 | — | — |
 | [Autotsar Tuning Atelier - Jaap Wrungel [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3407042038) | Autotsar 改裝工坊：Jaap Wrungel | 新增可改裝的 Jaap Wrungel 越野車與保險桿等零件。 | `ATA_Jeep` | 6 | — | — |
 | [Scavenger Skill [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3407792640) | 拾荒技能 [B42] | 新增「拾荒」技能，搜刮容器時有機率發現額外物品；含各等級機率與額外戰利品的沙盒設定，並新增「禿鷲」特質。 | `ScavengingSkill` | 2 | — | — |
+| [Vehicle Tuner [42.18]](https://steamcommunity.com/sharedfiles/filedetails/?id=3407970450) | — | — | `VehicleTuner` | 29 | — | — |
 | [Video Game Consoles Addon - More SNES Games](https://steamcommunity.com/sharedfiles/filedetails/?id=3408186716) | — | — | `VGC_Addon_SNESGames`, `VGC_Addon_SNESGames2` | 150 | — | — |
 | [ArcherLib〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3408337281) | ArcherLib 弓箭框架 | 提供弓箭技能與彈藥切換轉盤的前置框架，附技能書與範例弓弩。 | `ArcherLib`, `ArcherySampleMod` | 19 | — | — |
 | [Sapph's Cooking [B42+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3409143790) | Sapph 的烹飪 | 新增烹飪相關內容，包含保溫杯、果汁與能量飲料等飲品物品。 | `SapphCooking_B42` | 4 | ⚠️ ≥2 | — |
@@ -411,6 +413,7 @@
 | [Drink Smart [B42.12 - 42.19]](https://steamcommunity.com/sharedfiles/filedetails/?id=3447775367) | 智慧飲水 | 改善飲水行為，可設定不口渴時也能從選單飲水。 | `Drink_Smart` | 9 | — | — |
 | [[42+] [MP] Frogtown by TwinCrows〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3449473111) | 青蛙鎮 | 位於雌鹿谷森林湖區的小鎮地圖，有購物中心與新建公寓大樓。 | `Frogtown` | 2 | — | — |
 | [Reaper's Hair & Beard](https://steamcommunity.com/sharedfiles/filedetails/?id=3450583954) | Reaper 髮型與鬍型 | 新增多種鬍型與髮型造型選擇，如巴爾博鬍與絡腮鬍茬。 | `ReaperHairBeard`, `ReaperHairBeard42` | 29 | — | — |
+| [3452171674](https://steamcommunity.com/sharedfiles/filedetails/?id=3452171674) | FR Operator 幹員裝備 | 新增胸掛槍套、三角洲槍套、FR 槍械背心等可掛載裝備，並可透過右鍵選單調整槍套左右位置。 | `FR_Operator` | ? | — | — |
 | [[B42] New Coalfield [Alpha\|PAUSED]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3452917446) | 新煤田鎮 | 煤田鎮附近的森林小鎮地圖（Alpha 測試版，開發暫停中）。 | `PZKNewCoalfieldTownMap` | 2 | — | — |
 | [Cheat Menu Phoenix [B42] [B41 Re-Up]](https://steamcommunity.com/sharedfiles/filedetails/?id=3453422228) | 作弊選單 Phoenix | 功能完整的作弊選單，含上帝模式、無碰撞、瞬間建造等選項。 | `CheatMenuPX` | 620 | — | — |
 | [[B42MP] Frockin Shirts & Ties!](https://steamcommunity.com/sharedfiles/filedetails/?id=3453676250) | 華麗襯衫與領帶 | 新增襯衫與領帶服飾，可挽起衣袖或調整穿著方式。 | `GanydeBielovzki's Frockin Shirts n Ties` | 278 | — | — |
@@ -499,6 +502,7 @@
 | [Street Smarts](https://steamcommunity.com/sharedfiles/filedetails/?id=3511535258) | 街頭智慧 | 讓新角色初始知曉出生點周邊與道路資訊，範圍可調整。 | `NepLocalKnowledge` | 9 | — | — |
 | [[BROKEN] Support Goods Mega Mod [B42.10] - PREDATOR](https://steamcommunity.com/sharedfiles/filedetails/?id=3512993822) | 支援物資超級模組 - PREDATOR | 新增可穿戴的支援物資裝備，可選擇配戴左右側。 | `SUPPORTGOODS2` | ? | — | — |
 | [Seesaw Game](https://steamcommunity.com/sharedfiles/filedetails/?id=3515515643) | 蹺蹺板機制 | 新增技能總等級上限系統，超過上限時技能會降級平衡。 | `P4SeesawGame` | 10 | — | — |
+| [JM3 archery](https://steamcommunity.com/sharedfiles/filedetails/?id=3518662691) | JM3 弓箭 | 新增弓弩武器與箭矢系統，含瞄準鏡配件與箭矢製作材料。 | `JM3_archery` | 62 | — | — |
 | [White forest——————白森林（B42)(位置移动）〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3519054686) | 白森林 | 白森林地圖，開場是你趴倒在電腦桌前、天色漸晚；此版本已移動地圖位置。 | `linzimod` | 2 | — | — |
 | [Zombaroid [42, No Multiplayer]](https://steamcommunity.com/sharedfiles/filedetails/?id=3519916139) | 殭屍拍立得 | 新增拍立得相機與相紙，可在遊戲中拍攝照片。 | `Zombaroid` | 37 | ⚠️ ≥2 | — |
 | [More Car Features + Spawn Zones Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3520758551) | 更多車輛功能＋生成區擴充 | 擴充車輛功能與生成設定，含自動加油、攀爬車輛與部件品質調整。 | `WayMoreCars` | 161 | — | — |
@@ -1474,22 +1478,18 @@
 | [Off the Rack: The 1993 Military Gear](https://steamcommunity.com/sharedfiles/filedetails/?id=3819505238) | Off the Rack：1993 軍用裝備 | 將原版軍用裝備重製成 1993 年真實軍品外觀，物品與掉落不變；需 Surplus & Thrift：1993 衣櫥。 | `OffTheRackMilitary1993` | 7 | — | — |
 | [Viewpoint - 3D RVs [B42.21] [WIP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3820158673) | Viewpoint - 3D 露營車 | Viewpoint 附加模組，新增可走進內部的 Nomad 與 Dales Chieftain 露營車，可在車內烹飪、睡覺並擺放家具物資。 | `DaleChieftainRV`, `DeadWorksDaleRV`, `DeadWorksNomadRV`, `GridRV`, `GridRVHost` | 78 | — | — |
 | [Complete Vanilla Firearms Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3820580321) | Complete Vanilla Firearms Expansion 原版風槍械擴充整合版 | 整合 OG VFE、S.T.A.L.K.E.R.、Post 93' 等槍械擴充，新增大量槍械與對應彈藥、彈匣與配件。 | `ExtendedVanillaWeapons` | 413 | ⚠️ ≥22 | — |
-| [Living NPC](https://steamcommunity.com/sharedfiles/filedetails/?id=3820700754) | Living NPC 同伴生活 | Bandits2 附加模組，讓同伴擁有個性、記憶、人際關係與日常作息，可共住、成家並長期一起生活。 | `LNPCRoadCompanion`, `LivingNPC` | ? | ⚠️ ≥2 | — |
+| [Living NPC](https://steamcommunity.com/sharedfiles/filedetails/?id=3820700754) | Living NPC 同伴生活 | Bandits2 附加模組，讓同伴擁有個性、記憶、人際關係與日常作息，可共住、成家並長期一起生活。 | `LivingNPC` | ? | ⚠️ ≥2 | — |
 | ['67 Chevrolet Impala](https://steamcommunity.com/sharedfiles/filedetails/?id=3820938264) | '67 Chevrolet Impala | 新增 1967 年 Chevrolet Impala 車輛，含《超自然檔案》黑色特別版與多款可替換零件。 | `67chevyImpala` | 25 | — | — |
 | [Xanny Arms](https://steamcommunity.com/sharedfiles/filedetails/?id=3820971639) | Xanny Arms 槍械包 | 新增 72 把槍械與對應彈匣、瞄具與消音器等配件，彈藥有散裝、盒裝與箱裝。 | `XannyArmsCore`, `XannyArmsGunPack` | ? | ⚠️ ≥5 | — |
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
-## 已下架模組（12 個，翻譯保留）
+## 已下架模組（8 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 | 下架偵測 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| [3389805754](https://steamcommunity.com/sharedfiles/filedetails/?id=3389805754) | 武士刀刀鞘 | 新增武士刀與刀具刀鞘，可佩戴於背部、臀部或大腿。 | `TKS42` | ? | — | — | 2026-07-17 |
-| [Vehicle Tuner [42.18]](https://steamcommunity.com/sharedfiles/filedetails/?id=3407970450) | — | — | `VehicleTuner` | 29 | — | — | 2026-10-01 |
-| [3452171674](https://steamcommunity.com/sharedfiles/filedetails/?id=3452171674) | FR Operator 幹員裝備 | 新增胸掛槍套、三角洲槍套、FR 槍械背心等可掛載裝備，並可透過右鍵選單調整槍套左右位置。 | `FR_Operator` | ? | — | — | 2026-08-31 |
-| [JM3 archery](https://steamcommunity.com/sharedfiles/filedetails/?id=3518662691) | JM3 弓箭 | 新增弓弩武器與箭矢系統，含瞄準鏡配件與箭矢製作材料。 | `JM3_archery` | 62 | — | — | 2026-09-16 |
 | [[Federal Rangers] CHIMERA V11 [B42.13.1+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3564110652) | [Federal Rangers] CHIMERA V11 | 新增大量戰術服裝與裝備，如背包、頭盔耳機與護具。 | `Federal_Rangers_Chimera`, `Federal_Rangers_Chimera_PatchN1` | 110 | — | — | 2026-07-18 |
 | [Todo Caserito [Build 42/42.19 SP/MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3600616323) | Todo Caserito 家常料理 | 新增拉美風家常料理與配方，如薯條、塔可、玉米餅與布丁等。 | `Todo Caserito` | 410 | — | ⚠️ 有一項配方名稱（代號 MakeTortilla）與草藥師、Abuelita Linda 兩個 MOD 撞名、卻是不同的食物——本 MOD 的是阿根廷豬油餅（tortillas de grasa），那兩邊的同一代號是墨西哥玉米餅。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故此鍵不出貨、遊戲內顯示該 MOD 自己的英文原文。本 MOD 另有專門表示玉米餅的配方（MakeTortillaCasera），該項不受影響。 | 2026-09-12 |
 | [3651494414](https://steamcommunity.com/sharedfiles/filedetails/?id=3651494414) | DayZ 槍械 | 新增 DayZ 風格槍械相關內容。 | `DayZ_Guns_B42` | ? | — | — | 2026-07-17 |
