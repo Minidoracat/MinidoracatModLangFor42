@@ -4,6 +4,29 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **13 個 MOD 更新後新增的文字補上繁簡中文（824 項），本包自收的 2 個 MOD 另補 17 項。** Living NPC（同伴的生活習慣特質、吸菸需求與台詞、醫療實驗室的截肢與義肢介面、義肢與輪椅物品，519 項）、Symbiosis（血契眷屬的指令與方向提示、凝血刺槍等新能力、共生體印記外觀，110 項）、Senators Martial Arts Core（wrestling 流派改成拳腳連段，45 項）、Wounds Overhaul（取彈與植皮小遊戲、作弊選單，38 項）、TKS42 的武士刀與刀具刀鞘（32 項）、Extended categories 的備料與餐點分類（17 項）、Jeeve's Claims（16 項）、True Sewers（12 項），以及 Project Zomboid Optimiser、AWS、Gunsmith、Sandevistan、The Mission；本包自收的 ReloadAllAmmo 補上卸下彈匣的選單（4 項）、Hardship: Inertia 補上翻過櫃檯的動作與提示（13 項）。
+  > 技術要點：追蹤器 2026-10-29 #1140–#1155「可能過時」。824 鍵走 `apply_wf_result`／`apply_translations` 進 `own_translations.json`；ReloadAllAmmo 與 Hardship: Inertia 是 own 目錄，17 鍵寫 own 目錄 CN 與 `sources/ch`；皆登記 `ch_review_state`。6 路翻譯、6 路對抗複核，採納 7 條（SMA 移速說明的「at 100」是設定值不是速度、Living NPC 義肢裝上條件是傷口「已閉合」不是「已癒合」、刮傷照本體譯名等）。16 個 MOD 以 steamcmd 重抓現行版重抽，15 個與 tracker record 逐筆相符；Symbiosis 在追蹤器之後又更新（共生印記物品 33 個改成 18 個、沙盒說明改寫），本機以 `backfill-en` 的計畫檔更新 `tracker-state` 與 `sources/en/3738109511.json` 後照現行版翻。重跑 prep 後缺口 0。
+
+### Changed
+
+- **上游改了英文的已出貨文字跟著改（51 項）。** Senators Martial Arts Core 的 wrestling 流派 23 個招式名與流派說明（整批改成刺拳、直拳、勾拳等連段）、Symbiosis 的血契眷屬說明（跟隨 4 小時、可下指令，強化後 12 小時）、上限提示與共生體外觀選項、Project Zomboid Optimiser 的 FSR 選項與說明、Wounds Overhaul 的取彈與取皮步驟、Living NPC 的禿頭機率選項（英文改用 percent）、Hardship: Inertia 的右鍵選單選項說明。
+  > 技術要點：own 層 37 鍵經 `apply_translations` 更新 `en` 錨點與譯文；Symbiosis 5 鍵屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（附 `as1_value`）；Hardship: Inertia 1 鍵寫 own 目錄 CN 與 `sources/ch`；皆登記 `ch_review_state`。Symbiosis 另 6 鍵英文只差 `%`→`%%`，原譯不動。Optimiser 的 8 個 Pathfind 選項鍵上游 EN 檔已刪除，但 `MPOptim_UI_Settings.lua` 仍以 `MPOptim.GetText(鍵, 英文後備)` 讀取，保留並照 Lua 後備英文改譯，`en` 錨點改填後備字串、`_note` 記原因。
+- **Dynamic Traits 14 個技能特質的說明不再是空白。** 上游把說明從空字串改成「烹飪經驗加成」這類文字，舊譯照舊版留空白。
+  > 技術要點：#1140。`UI_trait_*desc` 14 鍵屬 As1 衍生層（As1 值是一個空格），改 `sources/ch`＋`cn_overrides` 並登記 `ch_review_state`；技能名繁中照 LangFor42、簡中照本體官方簡中。其中 7 鍵 SimpleOverhaulTraitsAndOccupations 同鍵仍是空字串，census 不算 owner；SOTO 的沙盒說明寫這類特質就是提高該技能經驗（`Sandbox_SOTO_SurvTraitsObtainable_tooltip` 以 Forager 為例），譯文對它也成立。
+- **Dynamic Traits 與 SimpleOverhaulTraitsAndOccupations 共用的金工、誘捕特質說明改為各自顯示。** 兩個 MOD 的同名特質效果不同（經驗加成 vs 會一些配方），JSON 不出貨，改由條件譯文依啟用的 MOD 寫入各自的說明。
+  > 技術要點：`UI_trait_metalwelderdesc`、`UI_trait_trapperdesc` 登記 `owner_conflict_decisions` `action: unship` 與 `unshipped_keys`（`owner_signature` 雙向背書），`owner_variants.json` 新增 2 條 `kind: conflict`（4 組）。#1139：`UI_trait_MechanicsDesc` 的 Dynamic Traits 改用本體英文，移到 `skip_owners`、重簽簽名，其餘兩組核准沿用。`OWNER_CONFLICTS.md` 重生。
+- **修正照舊版英文翻或寫錯的已出貨譯文（86 項）。** The Mission 的任務按鈕（接取、領取）、任務狀態「進行中」（原本是「奔跑」）、任務欄位上限提示、「伐木工」疊字與第一夜名稱；Symbiosis 的升級效能數值（原本少了參數、永遠顯示「百分之 2%」）、血彈與凝血說明、合併失敗提示，以及繁中混用的簡體「体」；Dynamic Traits 的嚴重感冒與傷口感染改成「食物中毒值」、「饮鸩止渴」取得方式選項的簡中名稱和特質名一致；Gunsmith 的 PSG-1、SVD 改成半自動步槍；Wounds Overhaul 的檢查耗時說明；Project Zomboid Optimiser 的「一般」分頁與背景執行緒說明；Jeeve's Claims 的簡中漏字與 46 項繁中括號、分號格式。
+  > 技術要點：本批 12 個 MOD 的 As1 衍生層 1,648 鍵以 `judge_batch` 對照現行英文（只取有效分支）初篩，標出 35 鍵，加上英文較長、信心低於 0.8 的 47 鍵，扣掉已裁決的 3 鍵後由代理逐條裁決：改譯 25 鍵。另依翻譯、複核與稽核代理回報修 15 鍵（`UI_Symbiosis_TraitEffectNext` 恢復 `%2`，Lua 會在後面接 `%`）。CH 改 `sources/ch`，CN 偏離登記 `cn_overrides`（附 `as1_value`），皆登記 `ch_review_state`；Jeeve's Claims 的 46 鍵只改繁中格式。
+
+### Removed
+
+- **上游已刪除的 Optimiser 與 Extended categories 文字不再出貨（12 項）。** Optimiser 的 Java MOD 載入、尋路時間預算與 FSR 預設名稱選項（8 項），Extended categories 的調味料與單份食物盒裝、箱裝分類（4 項）。
+  > 技術要點：`sources/en` 全庫、tracker state 與 steamcmd 重抓的現行版 Lua 都沒有引用才刪，連同 `ch_review_state`。Extended categories 的 `CAEC_Utils.isKnownCategory` 以 `getTextOrNull` 判斷分類，現行版已不產生 NoExplicit／Portion 分類，As1 衍生層的 4 個同類鍵依 split 不變式保留。Symbiosis 刪除的 5 鍵屬 As1 衍生層，照舊保留。
+
 ## [42.21.0-1.64.0] - 2026-10-28
 
 ### Added

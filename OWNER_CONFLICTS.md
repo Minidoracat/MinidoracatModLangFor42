@@ -23,9 +23,9 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1850** 個鍵（`unship` 340、`translate` 1510）。這些鍵的 owner 條目共 5328 筆：可載入 `.json` 3584、script 854、死檔 890。另有 **248** 個鍵尚未裁決。
+現況：已裁決 **1852** 個鍵（`unship` 342、`translate` 1510）。這些鍵的 owner 條目共 5332 筆：可載入 `.json` 3588、script 854、死檔 890。另有 **246** 個鍵尚未裁決。
 
-## 不出貨的鍵（340）
+## 不出貨的鍵（342）
 
 這些鍵沒有中文。上游英文與各 MOD 的顯示行為如下。
 
@@ -371,6 +371,8 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_profdesc_veteran` | `2840805724/SimpleOverhaulTraitsAndOccupations` = War. War never changes... _(json)_<br>`3387957272/Detailed Descriptions for Occupations and Traits` = Foraging Bonuses:&lt;br&gt;+1.75 vision radius&lt;br&gt;33%… _(json)_ | 2026-08-29 #316：Detailed Descriptions 與 Simple Overhaul 以同一職業描述鍵承載完全不同內容（一方為完整知識/搜尋加成，另一方為一句摘要），沒有同時保真且有用的中性譯文。兩方均有可載入 JSON EN，抑制後顯示各自英文。 | — |
 | `UI\|UI_quick_tip_joke27` | `3217685049/PZKVanillaPlusCarPack` = There's nothing behind you. _(json)_<br>`3707475814/BanditsWeekOneTheArk` = Commodore 64 (C64), released in 1982, was heavily used for … _(json)_ | 2026-10-26 首次裁決: 讀取畫面小提示, PZK Vanilla Plus Car Pack 是玩笑句「There's nothing behind you.」, Bandits Week One: The Ark 是 Commodore 64 的冷知識, 兩句毫無關聯, 沒有中性值. 現行 As1 出貨 PZK 那句, 對 The Ark 玩家顯示錯的內容. unship 後兩個 owner 都有 UI.json 英文, 認不出 owner 時顯示各自英文, 正常情況由條件譯文顯示中文. | — |
 | `UI\|UI_trait_BloodlustDesc` | `2459400130/DynamicTraits` = An uncontrollable urge to kill zombies. Going too long with… _(json)_<br>`2914075159/Evolving Traits World` = You find great joy in culling the undead.&lt;br&gt;You gain… _(json)_<br>`3657541591/Superheroes` = Double the speed. Triple the damage.&lt;br&gt;Recover endur… _(json)_ | 三個模組共用同鍵但效果不同：Dynamic Traits 是長時間不殺殭屍會惡化心情，ETW 是擊殺後降低壓力與恐慌，Superheroes 是速度與傷害加成、近戰擊殺恢復耐力及麻木。沒有完整且適用三方的單一說明，維持不出貨；三方皆有可載入 JSON 英文，玩家改讀各自模組的原文。 | — |
+| `UI\|UI_trait_metalwelderdesc` | `2459400130/DynamicTraits` = XP boost for Welding _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Knows some metalworking recipes. _(json)_ | 2026-10-29 #1140：Dynamic Traits 把說明從空字串改成「XP boost for Welding」（金工經驗加成），SimpleOverhaulTraitsAndOccupations 是「Knows some metalworking recipes.」（會一些金工配方）。兩個 MOD 的同名特質效果不同，沒有對兩邊都成立的中性說明，不出貨；兩方都有可載入 JSON 英文，注入器失敗時玩家看各自 MOD 的英文，正常時由條件譯文寫入各自的譯文。 | — |
+| `UI\|UI_trait_trapperdesc` | `2459400130/DynamicTraits` = XP boost for Trapping _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Knows some trapping recipes. _(json)_ | 2026-10-29 #1140：Dynamic Traits 把說明從空字串改成「XP boost for Trapping」（誘捕經驗加成），SimpleOverhaulTraitsAndOccupations 是「Knows some trapping recipes.」（會一些誘捕配方）。兩個 MOD 的同名特質效果不同，沒有對兩邊都成立的中性說明，不出貨；兩方都有可載入 JSON 英文，注入器失敗時玩家看各自 MOD 的英文，正常時由條件譯文寫入各自的譯文。 | — |
 
 ## 採中性譯名的鍵（1510）
 
@@ -1889,7 +1891,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_thickblooddesc` | `1299328280/More Traits` = You bleed more slowly from wounds. _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Wounds bleeds less.&lt;br&gt;(-50% damage from bleeding.) _(json)_ | 2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。 | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（248）
+## 尚未裁決的衝突（246）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
@@ -2138,8 +2140,6 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_optionscreen_binding_Auto_Loot_Config` | `3392699932/AutoLoot` = Change Configuration _(json)_<br>`3773340822/AutoLoot_B42` = Auto Loot Config _(json)_ | 變更設定 |
 | `UI\|UI_optionscreen_binding_Auto_Loot_Toggle` | `3392699932/AutoLoot` = Toggle On / Off _(json)_<br>`3773340822/AutoLoot_B42` = Auto Loot Toggle _(json)_ | 切換開/關 |
 | `UI\|UI_tetris_options_alt_click_action` | `3598501350/RE Tetris [B42]` = Alt Click Action _(json)_<br>`3769773293/INVENTORY_TETRISP_MP` = Equip _(json)_<br>`3775513231/InventoryTetris` = Alt Click Action _(json)_ | Alt點選操作 |
-| `UI\|UI_trait_metalwelderdesc` | `2459400130/DynamicTraits` = XP boost for Welding _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Knows some metalworking recipes. _(json)_ | 瞭解一些金工配方. |
 | `UI\|UI_trait_packmuledesc` | `1299328280/More Traits` = You're careful to pack everything you need.&lt;br&gt;Your m… _(json)_<br>`3716904170/ProfessionsTheArk` = You can carry twice as much as your normal body would allow… _(json)_<br>`3728140314/LastStandProfessions` = You can carry twice as much as your normal body would allow… _(json)_ | 你習慣把需要的東西都打包妥當. &lt;br&gt;你的最大負重上限提升. &lt;br&gt;力量對你負重能力的影響… |
 | `UI\|UI_trait_scroungerdesc` | `1299328280/More Traits` = You're careful to search every nook and cranny.&lt;br&gt;Yo… _(json)_<br>`3716904170/ProfessionsTheArk` = You can read junk piles like maps and spot useful parts oth… _(json)_<br>`3728140314/LastStandProfessions` = You can read junk piles like maps and spot useful parts oth… _(json)_ | 你會仔細搜過每一個角落. &lt;br&gt;你在搜尋容器時更容易找到物品. &lt;br&gt;若啟用拾荒技能模組,… |
 | `UI\|UI_trait_tinkererdesc` | `1299328280/More Traits` = You have a habit of tinkering with things. _(json)_<br>`3761145498/RGM` = Faster and better tinkering.&lt;br&gt;+20% chance to not co… _(json)_ | 你就是有東修西弄的習慣. |
-| `UI\|UI_trait_trapperdesc` | `2459400130/DynamicTraits` = XP boost for Trapping _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Knows some trapping recipes. _(json)_ | 瞭解一些誘捕配方. |

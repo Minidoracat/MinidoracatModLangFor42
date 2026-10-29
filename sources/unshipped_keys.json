@@ -1858,6 +1858,16 @@
    "as1_value": "你身后什么都没有.",
    "owner_signature": "c8c1cc890c74bd78",
    "reason": "2026-10-26：2026-10-26 首次裁決: 讀取畫面小提示, PZK Vanilla Plus Car Pack 是玩笑句「There's nothing behind you.」, Bandits Week One: The Ark 是 Commodore 64 的冷知識, 兩句毫無關聯, 沒有中性值. 現行 As1 出貨 PZK 那句, 對 The Ark 玩家顯示錯的內容. unship 後兩個 owner 都有 UI.json 英文, 認不出 owner 時顯示各自英文, 正常情況由條件譯文顯示中文."
+  },
+  "UI.json|UI_trait_metalwelderdesc": {
+   "as1_value": "了解一些金工配方.",
+   "owner_signature": "f504a466238750da",
+   "reason": "2026-10-29 #1140：Dynamic Traits 把說明從空字串改成「XP boost for Welding」（金工經驗加成），SimpleOverhaulTraitsAndOccupations 是「Knows some metalworking recipes.」（會一些金工配方）。兩個 MOD 的同名特質效果不同，沒有對兩邊都成立的中性說明，不出貨；兩方都有可載入 JSON 英文，注入器失敗時玩家看各自 MOD 的英文，正常時由條件譯文寫入各自的譯文。"
+  },
+  "UI.json|UI_trait_trapperdesc": {
+   "as1_value": "了解一些诱捕配方.",
+   "owner_signature": "d66bcebb2f1d59db",
+   "reason": "2026-10-29 #1140：Dynamic Traits 把說明從空字串改成「XP boost for Trapping」（誘捕經驗加成），SimpleOverhaulTraitsAndOccupations 是「Knows some trapping recipes.」（會一些誘捕配方）。兩個 MOD 的同名特質效果不同，沒有對兩邊都成立的中性說明，不出貨；兩方都有可載入 JSON 英文，注入器失敗時玩家看各自 MOD 的英文，正常時由條件譯文寫入各自的譯文。"
   }
  }
 }

@@ -1145,7 +1145,7 @@
 | [Jumbo Tree Indoor Fix](https://steamcommunity.com/sharedfiles/filedetails/?id=3774826484) | — | — | `JumboTreeIndoorFix` | 20 | — | — |
 | [Weight Reduction - Building Materials & Tools](https://steamcommunity.com/sharedfiles/filedetails/?id=3774841057) | — | — | `WeightReduction` | 5 | — | — |
 | [TTRP Hairstyles](https://steamcommunity.com/sharedfiles/filedetails/?id=3774898489) | — | — | `TTRPHairstyles` | 260 | — | — |
-| [ReloadAllAmmo [SP/MP]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3774932027) | 一鍵裝填所有彈匣 | 右鍵一次把子彈裝進多個彈匣，或一次清空所有彈匣。 | `ReloadAllAmmo` | 7 | — | — |
+| [ReloadAllAmmo [SP/MP]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3774932027) | 一鍵裝填所有彈匣 | 右鍵一次把子彈裝進多個彈匣，或一次清空所有彈匣。 | `ReloadAllAmmo` | 11 | — | — |
 | [Wounds Overhaul [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3775026731) | — | — | `WoundsOverhaul` | 121 | — | — |
 | [PZTrainer [B42.20]](https://steamcommunity.com/sharedfiles/filedetails/?id=3775055964) | — | — | `PZTrainer` | 485 | — | — |
 | [Peri's Random Scenarios 42.20 (Pillow Fork)](https://steamcommunity.com/sharedfiles/filedetails/?id=3775191731) | — | — | `PeriRandomScenarios` | 20 | — | — |
@@ -1458,7 +1458,7 @@
 | [Flesh & Blood: The 1993 Bodies](https://steamcommunity.com/sharedfiles/filedetails/?id=3815950578) | Flesh & Blood：1993 屍體 | 以原版畫風重繪更細緻的殭屍外觀，殭屍會隨時間腐爛，身上帶著其他倖存者與你的武器留下的傷痕。 | `FleshAndBlood1993`, `FleshAndBlood1993NoUnderwear` | 11 | — | — |
 | [Better Bodies](https://steamcommunity.com/sharedfiles/filedetails/?id=3815952291) | Better Bodies 更好的身體 | 重繪角色身體與皮膚材質，增加臉部選擇，身體會反映角色狀態，並新增傷口圖案與永久疤痕。 | `BetterBodies`, `BetterBodiesFaces` | 38 | — | — |
 | [Sandevistan](https://steamcommunity.com/sharedfiles/filedetails/?id=3816048725) | Sandevistan 斯安威斯坦 | 新增《電馭叛客 2077》風格的脊椎植入物，可讓周圍殭屍進入慢動作、自身行動加速，代價是身體負擔。 | `Sandevistan`, `SandevistanFX`, `SandevistanPsychosis`, `SandevistanViewpoint` | ? | — | — |
-| [Hardship: Inertia〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3816083168) | Hardship：慣性 | Hardship 系列的身體動作：可以趴下、四肢著地或仰躺移動，也能靠牆坐下；起步、停步與轉向帶有慣性，撞牆會彈開，被身後殭屍抓住會被往後拉。另能趴著或蹲低射擊，並加入手動換彈匣與拉動槍機。 | `HardshipInertia` | 75 | — | — |
+| [Hardship: Inertia〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3816083168) | Hardship：慣性 | Hardship 系列的身體動作：可以趴下、四肢著地或仰躺移動，也能靠牆坐下、翻過櫃檯等矮家具；起步、停步與轉向帶有慣性，撞牆會彈開，被身後殭屍抓住會被往後拉。另能趴著或蹲低射擊，並加入手動換彈匣與拉動槍機。 | `HardshipInertia` | 88 | — | — |
 | [True Sleep Everywhere](https://steamcommunity.com/sharedfiles/filedetails/?id=3816309551) | True Sleep Everywhere 真實睡眠動作 | 啟用遊戲內建卻未使用的睡眠動畫，角色會躺上床入睡再起身，也能席地打盹。 | `TrueSleepEverywhere` | 15 | — | — |
 | [My So-Called Fashion](https://steamcommunity.com/sharedfiles/filedetails/?id=3816335149) | My So-Called Fashion 我的時尚 | 新增將上衣綁腰、背包鬆背、眼鏡戴頭上、耳罩掛脖子等穿搭方式與原創服裝。 | `P4MySoCalledFashion` | 24 | — | — |
 | [Dog Tired Armory〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3816701056) | Dog Tired 軍械庫 | 沿牆組裝槍架、掛板、儲物櫃與櫃檯，打造連續的軍械庫；收納的槍枝以 3D 模型陳列，彈藥盒擺在架上。構件分木製、金屬、管架、軍用、收藏五種等級，都能上掛鎖。 | `DogTiredArmory` | 245 | — | — |

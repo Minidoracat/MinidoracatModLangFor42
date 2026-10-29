@@ -66369,19 +66369,12 @@
   },
   "UI|UI_trait_MechanicsDesc": {
    "kind": "vanilla",
-   "signature": "d96b320717d77bfe",
+   "signature": "49d5a288942d650a",
    "vanilla_en": "Has knowledge of common and commercial vehicle models, and repairs.",
-   "skip_owners": [],
+   "skip_owners": [
+    "2459400130/DynamicTraits"
+   ],
    "groups": [
-    {
-     "owners": [
-      "2459400130/DynamicTraits"
-     ],
-     "en": "Knows how to maintain and repair all types of vehicles.",
-     "ch": "懂得保養與維修各類車輛.",
-     "cn": "懂得保养和维修各类车辆.",
-     "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
-    },
     {
      "owners": [
       "2840805724/SimpleOverhaulTraitsAndOccupations"
@@ -68644,6 +68637,50 @@
      "en": "Tactical Core Load Pack MK1",
      "ch": "戰術核芯負重包MK1",
      "cn": "战术核芯负重包MK1"
+    }
+   ]
+  },
+  "UI|UI_trait_metalwelderdesc": {
+   "kind": "conflict",
+   "signature": "f504a466238750da",
+   "groups": [
+    {
+     "owners": [
+      "2459400130/DynamicTraits"
+     ],
+     "en": "XP boost for Welding",
+     "ch": "金工經驗加成",
+     "cn": "金工经验加成"
+    },
+    {
+     "owners": [
+      "2840805724/SimpleOverhaulTraitsAndOccupations"
+     ],
+     "en": "Knows some metalworking recipes.",
+     "ch": "瞭解一些金工配方.",
+     "cn": "了解一些金工配方."
+    }
+   ]
+  },
+  "UI|UI_trait_trapperdesc": {
+   "kind": "conflict",
+   "signature": "d66bcebb2f1d59db",
+   "groups": [
+    {
+     "owners": [
+      "2459400130/DynamicTraits"
+     ],
+     "en": "XP boost for Trapping",
+     "ch": "誘捕經驗加成",
+     "cn": "诱捕经验加成"
+    },
+    {
+     "owners": [
+      "2840805724/SimpleOverhaulTraitsAndOccupations"
+     ],
+     "en": "Knows some trapping recipes.",
+     "ch": "瞭解一些誘捕配方.",
+     "cn": "了解一些诱捕配方."
     }
    ]
   }
