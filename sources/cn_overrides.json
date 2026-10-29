@@ -8531,8 +8531,8 @@
   },
   "ItemName.json|_AM_ItemName_comment_5": {
     "as1_value": "不可用物品",
-    "reason": "2026-08-21 #222 有效分支 42.20 改為 LITERATURE ITEMS。",
-    "value": "文献物品"
+    "value": "包装弹药部件",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「LITERATURE ITEMS」改成「PACKED AMMO PARTS ITEMS」。"
   },
   "ItemName_EN.json|ItemName_TankWater.FilterCartridge": {
     "as1_value": "过滤滤芯",
@@ -15671,8 +15671,8 @@
   },
   "Sandbox.json|Sandbox_ammomaker_BirdExYield_tooltip": {
     "as1_value": "每颗种子产生的鸟粪量 (鸟类喂食器)",
-    "value": "每 20g '种子类' 物品产生的鸟粪量 (鸟类喂食器)",
-    "reason": "上游把口徑基準由 0.02g 改為 20g，是實質數值變更 (現譯的 0.02g 會誤導 1000 倍)。僅換數字，其餘句式/單引號/括號空格全部沿用現譯。attribution 僅 2788256295 單一 owner，且 cn_override 現值 (2026-09-05 #396 為補 0.02g 口徑而設) 需同步改為 20g 版本。"
+    "value": "每 20g '种子类' 物品产生的鸟粪量 (喂鸟器)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：Bird Feeder 統一照容器標題寫「喂鸟器」。"
   },
   "Sandbox.json|Sandbox_bdtmre": {
     "as1_value": "MRE即食口粮",
@@ -15771,8 +15771,8 @@
   },
   "Sandbox.json|_AM_Sandbox_comment_1": {
     "as1_value": "物品分布",
-    "reason": "2026-08-21 #222 有效分支 42.20 改為 LOOT。 2026-09-29 #616 上游改文：依新英文改譯（CRAFTING OPTIONS）。",
-    "value": "制作选项"
+    "value": "常规选项",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「CRAFTING OPTIONS」改成「GENERAL OPTIONS」。"
   },
   "Stash.json|Stash_P4StealthCamoMap1_Text3": {
     "as1_value": "当我抵达并命令他放弃抵抗时, 他无视了我的命令并将手伸向了了腰带.",
@@ -26362,8 +26362,8 @@
   },
   "Sandbox.json|Sandbox_ammomaker_DroppedCasingsLifetime_tooltip": {
     "as1_value": "设置掉落弹壳留存时间, 掉落弹壳大量堆积易造成卡顿",
-    "reason": "EN 為 Hours until dropped casings are removed，單位 Hours 在現值消失（數值欄位缺單位玩家無法判斷填幾）；另附加的「大量堆積易造成卡頓」在 EN 無依據。",
-    "value": "掉落的弹壳经过多少小时后移除"
+    "value": "掉落的弹壳经过多少小时后移除 (0: 永不移除)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「Hours until dropped casings are removed」改成「Hours until dropped casings are removed (0: Never remove them)」。"
   },
   "Tooltip.json|Tooltip_CCUpgrade_Tier2": {
     "as1_value": "将容器容量提升至250, 最终容量取决于容器的大小类别和沙盒设置",
@@ -26417,13 +26417,13 @@
   },
   "Tooltip.json|Tooltip_Item_FilterPaper": {
     "as1_value": "用于提取硝石的滤布",
-    "reason": "EN 為 Filter paper（濾紙），CH 誤譯為「濾布」＝不同物品類別（filter cloth），在製作流程中會誤導玩家找錯材料。濾紙沿用 repo 既有用語（CH IG_UI 7 處，如 IGUI_BookCooking3_Pg14）。old_cn 空＝目前無 cn_overrides 條目。",
-    "value": "用于提取硝石的滤纸"
+    "value": "用于机械式提取的滤纸",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「Filter paper for nitre extraction」改成「Filter paper for mechanical extraction」。"
   },
   "Tooltip.json|Tooltip_Recipe_Make4Buck00": {
     "as1_value": "组装4号鹿弹 (又名 4- gauge) - 26.7mm - 1780",
-    "reason": "EN 年份為 1975，CH 寫成 1780＝數字錯誤（同組兄弟鍵年份皆與 EN 一致：10Buck00 1830、12Buck00 1860、20Buck00 1870、410Buck00 1874，可證此為單鍵筆誤而非整組慣例）。只改年份，其餘維持同組既有排版（含「4- gauge」的空格樣式），避免與兄弟鍵格式分歧。old_cn 空＝目前無 cn_overrides 條目。",
-    "value": "组装4号鹿弹 (又名 4- gauge) - 26.7mm - 1975"
+    "value": "组装4号鹿弹 (又名 4-gauge) - 26.7mm - 1975",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：「4- gauge」多了空格，照英文寫 4-gauge。"
   },
   "Tooltip.json|Tooltip_SCP_Injector_AdrenalSurge": {
     "as1_value": "标注有肾上腺素字样的注射器. 无生产厂家, 无批次编号.<br> 独立密封包装, 一次性使用 <br> 看样子带这玩意的人没想着打持久战，只想速战速决. ",
@@ -27962,8 +27962,8 @@
   },
   "Tooltip.json|Tooltip_Item_PolishingCompound": {
     "as1_value": "用于去除金属物体氧化层和污垢的抛光剂",
-    "value": "用于去除小型金属物品氧化层和污垢的抛光剂",
-    "reason": "2026-09-29 #616 上游改文：依新英文改譯（Polishing compound to remove oxidation and dirt from  smallm…）。"
+    "value": "用于去除金属物品氧化层和污垢的抛光剂",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「Polishing compound to remove oxidation and dirt from  smallmetal items」改成「Compound to remove oxidation and dirt from metal items」。"
   },
   "Tooltip.json|Tooltip_Recipe_MakeBalls00": {
     "as1_value": "铸造鹿弹弹丸",
@@ -65969,5 +65969,245 @@
     "as1_value": "控制DTEM是否可以通过当前基于击杀的获取系统动态授予嗜血. 已存在或已选择的嗜血不会被移除.",
     "value": "控制DTEM是否可以通过当前基于击杀的获取系统动态授予“饮鸩止渴”. 已存在或已选择的“饮鸩止渴”不会被移除.",
     "reason": "2026-10-29 追蹤器 #1140 舊譯複查：同 MOD 的特質名 UI_trait_Bloodlust 簡中是「饮鸩止渴」（繁中兩處都已一致），沙盒選項改用同一名稱。"
+  },
+  "ItemName.json|ammomaker.ammomaker_PotOfBirdExcrement": {
+    "as1_value": "鸟粪(整罐)",
+    "value": "鸟粪 (整罐)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：罐裝物品照同 MOD 其餘 51 個物品的「名稱 (整罐)」格式補空格。"
+  },
+  "ItemName.json|ammomaker.ammomaker_PotForgedOfBirdExcrement": {
+    "as1_value": "鸟粪(整罐)",
+    "value": "鸟粪 (整罐)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：罐裝物品照同 MOD 其餘 51 個物品的「名稱 (整罐)」格式補空格。"
+  },
+  "Recipes.json|Make3006Spring": {
+    "as1_value": "制作.30-06c春田弹",
+    "value": "制作.30-06春田弹",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：As1 值多了一個 c（「.30-06c春田弹」）。"
+  },
+  "Tooltip.json|_AM_Tooltip_comment_7": {
+    "as1_value": "回收弹头配方",
+    "value": "弹壳物品",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游重新編號段落註解，現行英文是 CASING ITEMS。"
+  },
+  "Tooltip.json|_AM_Tooltip_comment_10": {
+    "as1_value": "回收弹壳配方",
+    "value": "制作底火配方",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游重新編號段落註解，現行英文是 MAKE PRIMER RECIPES。"
+  },
+  "Recipes.json|_AM_Recipes_comment_5": {
+    "as1_value": "回收弹壳配方",
+    "value": "制作底火配方",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游重新編號段落註解，現行英文是 MAKE PRIMER RECIPES。"
+  },
+  "Tooltip.json|Tooltip_Recipe_ExtractNitre": {
+    "as1_value": "使用滤纸和粗布从鸟粪混合物中提取硝石",
+    "value": "使用滤纸和碎布条从溶解的鸟粪中提取硝石",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：rags 是 Base.RippedSheets，照本體簡中「碎布条」，和新配方 ExtractPotash 一致；「鳥糞混合物」照英文改「溶解的鳥糞」。"
+  },
+  "Recipes.json|DissolveBirdExcrement": {
+    "as1_value": "鸟粪浸提 (制硝)",
+    "value": "溶解鸟粪",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：照英文 Dissolve Bird Excrement，和新配方「溶解盐」「溶解草木灰」同格式。"
+  },
+  "Tooltip.json|Tooltip_Recipe_DissolveBirdExcrement": {
+    "as1_value": "将鸟粪与水混合, 通过浸泡、过滤、蒸发、结晶以提取硝石",
+    "value": "将鸟粪溶于水中, 以提取硝石",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：As1 值多了英文沒有的浸泡、過濾、蒸發、結晶步驟，照英文直譯，和新配方 DissolveWoodAsh 同句型。"
+  },
+  "ItemName.json|_AM_ItemName_comment_4": {
+    "as1_value": "包装弹药部件",
+    "value": "底火物品",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「PACKED AMMO PARTS ITEMS」改成「PRIMER ITEMS」。"
+  },
+  "Tooltip.json|Tooltip_Craft_BirdFeeder": {
+    "as1_value": "制作鸟类喂食器, 可在白天将种子转化为鸟粪. ",
+    "value": "建造喂鸟器, 可在白天将种子转化为鸟粪",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「Build a bird feeder to turn seeds into bird excrement during daytime.」改成「Build a bird feeder to turn seeds into bird excrement during daytime」。"
+  },
+  "Tooltip.json|Tooltip_Item_BirdExcrement": {
+    "as1_value": "富含硝石的原材料",
+    "value": "生产硝石的原材料",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「Nitre-rich raw material」改成「Raw material for nitre production」。"
+  },
+  "Tooltip.json|Tooltip_Item_CharcoalPowder": {
+    "as1_value": "生产火药的原材料",
+    "value": "生产火药的可燃物",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「Raw material for gunpowder production」改成「Combustible for gunpowder production」。"
+  },
+  "Tooltip.json|Tooltip_Item_Nitre": {
+    "as1_value": "生产火药的原材料",
+    "value": "生产火药的氧化剂",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「Raw material for gunpowder production」改成「Oxidizer for gunpowder production」。"
+  },
+  "Tooltip.json|Tooltip_Item_PotOfBirdExcrement": {
+    "as1_value": "浸提鸟粪(用于制取硝石)",
+    "value": "用于提取硝石的溶液",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「Dissolved bird excrement to extract nitre from」改成「Solution to extract nitre from」。"
+  },
+  "Tooltip.json|Tooltip_Item_Sulfur": {
+    "as1_value": "生产火药的原材料",
+    "value": "生产火药的可燃物",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「Raw material for gunpowder production」改成「Combustible for gunpowder production」。"
+  },
+  "Tooltip.json|Tooltip_Recipe_MakeGunpowder": {
+    "as1_value": "混合硝石、木炭粉和硫磺以制作火药",
+    "value": "将硝石与木炭粉和硫磺混合以制作火药",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「Mix nitre, charcoal powder and sulfur to make gunpowder」改成「Mix nitre with charcoal powder and sulfur to make gunpowder」。"
+  },
+  "Tooltip.json|Tooltip_Recipe_MakeGunpowderScale": {
+    "as1_value": "建造可放置的天平, 用于称量火药颗粒和单位",
+    "value": "组装可放置的天平, 用于称量火药颗粒和单位",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「Build placeable scale to weigh gunpowder grains and units」改成「Assemble placeable scale to weigh gunpowder grains and units」。"
+  },
+  "Tooltip.json|Tooltip_Recipe_MakePolishingCompound": {
+    "as1_value": "将研磨剂混入抛光剂中",
+    "value": "混合研磨剂以制作抛光剂",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「Mix abrasives into polishing compound」改成「Mix abrasives to make polishing compound」。"
+  },
+  "Tooltip.json|_AM_Tooltip_comment_14": {
+    "as1_value": "不可用的物品",
+    "value": "文献物品",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「NOT AVAILABLE ITEMs」改成「LITERATURE ITEMS」。"
+  },
+  "Tooltip.json|_AM_Tooltip_comment_4": {
+    "as1_value": "制作鸟类喂食器",
+    "value": "制作实体",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「CRAFT BIRD FEEDER」改成「CRAFT ENTITIES」。"
+  },
+  "Tooltip.json|_AM_Tooltip_comment_8": {
+    "as1_value": "弹壳物品",
+    "value": "制作弹壳配方",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「CASING ITEMs」改成「MAKE CASING RECIPES」。"
+  },
+  "Tooltip.json|_AM_Tooltip_comment_9": {
+    "as1_value": "制作弹壳配方",
+    "value": "底火物品",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker：上游英文從「MAKE CASING RECIPES」改成「PRIMER ITEMS」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxBalls00": {
+    "as1_value": "鹿弹弹丸",
+    "value": "鹿弹弹丸 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxBulletsHandgunL": {
+    "as1_value": "手枪大口径弹头",
+    "value": "手枪大口径弹头 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxBulletsHandgunM": {
+    "as1_value": "手枪中口径弹头",
+    "value": "手枪中口径弹头 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxBulletsHandgunS": {
+    "as1_value": "手枪小口径弹头",
+    "value": "手枪小口径弹头 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxBulletsRifleL": {
+    "as1_value": "步枪大口径弹头",
+    "value": "步枪大口径弹头 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxBulletsRifleM": {
+    "as1_value": "步枪中口径弹头",
+    "value": "步枪中口径弹头 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxBulletsRifleS": {
+    "as1_value": "步枪小口径弹头",
+    "value": "步枪小口径弹头 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxCasingsBottleneckL": {
+    "as1_value": "瓶颈式大口径弹壳 (整盒)",
+    "value": "瓶颈式大口径弹壳 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxCasingsBottleneckM": {
+    "as1_value": "瓶颈式中口径弹壳 (整盒)",
+    "value": "瓶颈式中口径弹壳 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxCasingsBottleneckMRim": {
+    "as1_value": "瓶颈式中口径底缘弹壳 (整盒)",
+    "value": "瓶颈式中口径底缘弹壳 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxCasingsBottleneckS": {
+    "as1_value": "瓶颈式小口径弹壳 (整盒)",
+    "value": "瓶颈式小口径弹壳 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxCasingsStraightL": {
+    "as1_value": "直筒式大口径弹壳 (整盒)",
+    "value": "直筒式大口径弹壳 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxCasingsStraightLRim": {
+    "as1_value": "直筒式大口径底缘弹壳 (整盒)",
+    "value": "直筒式大口径底缘弹壳 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxCasingsStraightM": {
+    "as1_value": "直筒式中口径弹壳 (整盒)",
+    "value": "直筒式中口径弹壳 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxCasingsStraightMRim": {
+    "as1_value": "直筒式中口径底缘弹壳 (整盒)",
+    "value": "直筒式中口径底缘弹壳 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxCasingsStraightS": {
+    "as1_value": "直筒式小口径弹壳 (整盒)",
+    "value": "直筒式小口径弹壳 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxCasingsStraightSRim": {
+    "as1_value": "直筒式小口径底缘弹壳 (整盒)",
+    "value": "直筒式小口径底缘弹壳 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxHullsShotgunL": {
+    "as1_value": "霰弹大口径弹壳 (整盒)",
+    "value": "霰弹大口径弹壳 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxHullsShotgunS": {
+    "as1_value": "霰弹小口径弹壳 (整盒)",
+    "value": "霰弹小口径弹壳 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Item_BoxSlugs12": {
+    "as1_value": "12号独头弹",
+    "value": "12号独头弹 (25个装, 整盒)",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+  },
+  "Tooltip.json|Tooltip_Recipe_Make10Buck00": {
+    "as1_value": "组装10号鹿弹 (又名 10- gauge) - 19.7mm - 1830",
+    "value": "组装10号鹿弹 (又名 10-gauge) - 19.7mm - 1830",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：「4- gauge」多了空格，照英文寫 4-gauge。"
+  },
+  "Tooltip.json|Tooltip_Recipe_Make12Buck00": {
+    "as1_value": "组装12号鹿弹 (又名 12- gauge) - 18.5mm - 1860",
+    "value": "组装12号鹿弹 (又名 12-gauge) - 18.5mm - 1860",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：「4- gauge」多了空格，照英文寫 4-gauge。"
+  },
+  "Tooltip.json|Tooltip_Recipe_Make12Slug": {
+    "as1_value": "组装12号独头弹 (又名 12- gauge) - 18.5mm - 1860",
+    "value": "组装12号独头弹 (又名 12-gauge) - 18.5mm - 1860",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：「4- gauge」多了空格，照英文寫 4-gauge。"
+  },
+  "Tooltip.json|Tooltip_Recipe_Make20Buck00": {
+    "as1_value": "组装20号鹿弹 (又名 20- gauge) - 15.6mm - 1870",
+    "value": "组装20号鹿弹 (又名 20-gauge) - 15.6mm - 1870",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：「4- gauge」多了空格，照英文寫 4-gauge。"
+  },
+  "Tooltip.json|Tooltip_Recipe_RepaintReloadingPress": {
+    "as1_value": "重新喷涂子弹压床",
+    "value": "将子弹压床重新喷涂成另一种颜色",
+    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：漏了 in a different color。"
   }
 }

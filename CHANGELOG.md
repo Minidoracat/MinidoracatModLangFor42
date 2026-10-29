@@ -4,6 +4,20 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **Ammo Maker 與 Project Zomboid Optimiser 更新後新增的文字補上繁簡中文（473 項）。** Project Zomboid Optimiser 改版後的新設定介面（預設組、分區標題、選項名稱與說明、選項值與單位、資源影響標籤、提示訊息，384 項）；Ammo Maker 新增的電解製氯酸鉀、草木灰製鉀鹼、底火與底火杯、硝石床、礦物搜尋分類等物品、配方與沙盒選項（89 項）。
+  > 技術要點：追蹤器 2026-10-30 #1156、#1158「可能過時」。473 鍵走 `apply_wf_result`／`apply_translations` 進 `own_translations.json` 並登記 `ch_review_state`；3 路翻譯、2 路對抗複核，採納 11 條（屍體自動清理說明的刪除對象、安全屋「认领」、「佔用」統一等）。Optimiser 的 V2 介面由 Lua 以 `tostring(v) .. " " .. unit` 把單位接在數字後，`UI_MPOptim_Unit_Percent` 寫全形「％」；CN 中英文之間不加空格，照同 MOD 既有簡中。Optimiser 的 2,316 筆新增 record 中，有效分支（`42/`）是 388 鍵、扣掉已出貨後缺 384 鍵，其餘是不載入的 `UI_EN.txt` 與 B41 路徑。3 個 MOD 以 steamcmd 重抓現行版，與 tracker record 逐筆相符；重跑 prep 後缺口 0。
+
+### Changed
+
+- **Ammo Maker 上游改了英文的說明跟著改（13 項）。** 硝石、硫磺、木炭粉改成「氧化劑」「可燃物」這類用途說明，濾紙、拋光劑、鳥糞溶液、火藥天平與彈殼保留時間的說明照新英文改寫。
+  > 技術要點：#1156。另有 42 個 `_AM_*_comment_*` 段落註解鍵因上游重新編號跟著改（遊戲不顯示）。own 層 32 鍵經 `apply_translations` 更新 `en` 錨點與譯文；As1 衍生層 23 鍵改 `sources/ch`＋`cn_overrides`（附 `as1_value`）；皆登記 `ch_review_state`。
+- **修正 Ammo Maker 寫錯或漏資訊的已出貨譯文（33 項）。** 20 種「Box of 25」盒裝彈頭、彈殼、鹿彈說明補上「(25個裝, 整盒)」；鳥糞溶解配方改成「溶解鳥糞」、說明拿掉英文沒有的步驟；提取硝石的「粗布」照本體改「碎布條」；Bird Feeder 統一寫「餵鳥器」；鳥糞罐裝物品補上括號前的空格；鹿彈與獨頭彈說明的「4- gauge」改「4-gauge」；子彈壓床重新噴漆說明補上「另一種顏色」；簡中「.30-06c春田弹」多的 c 拿掉。
+  > 技術要點：#1156。Ammo Maker As1 衍生層 549 鍵以 `judge_batch` 對照現行英文（只取有效分支）初篩，標 25 鍵，由主代理逐條判定改 23 鍵，同類寫法（`X- gauge`）另修 3 鍵；另依翻譯與複核代理回報改 10 鍵（含 3 個重新編號後錯開的段落註解鍵）。CH 改 `sources/ch`，CN 偏離登記 `cn_overrides`（附 `as1_value`），皆登記 `ch_review_state`。CleanUI（#1157）新增的 176 筆 record 全在 `42.22/` 分支，PZ 42.21.0 只載入 `42.19/`，且兩分支的 88 鍵與英文完全相同，無需改動。上游刪除的 `Tooltip.json|_AM_ItemName_comment_5`（own 層段落註解鍵，現行版 Lua 與 script 無引用）一併刪除；Optimiser 的 `UI_MPOptim_TabJava` 仍定義在 `media/Translate/EN/UI_EN.txt`，依 own 層刪除條件保留。
+
 ## [42.21.0-1.65.0] - 2026-10-29
 
 ### Added
