@@ -1,18 +1,15 @@
-[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.21.0-1.65.0[/h1]
-[i]2026-10-29[/i]
+[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.21.0-1.66.0[/h1]
+[i]2026-10-30[/i]
 
 [h3]新增[/h3]
 [list]
-[*] 13 個 MOD 更新後新增的文字補上中文（共 824 處），例如 Living NPC 同伴的生活習慣特質、吸菸需求與台詞、醫療實驗室的截肢與義肢介面，Symbiosis 的血契眷屬指令與新能力，Senators Martial Arts Core 的新連段，Wounds Overhaul 的取彈與植皮小遊戲，TKS42 的各式刀鞘。
-[*] 本包自己收錄的 ReloadAllAmmo 補上卸下彈匣的選單，Hardship: Inertia 補上翻過櫃檯的動作與提示（共 17 處）。
+[*] Project Zomboid Optimiser 改版後的新設定介面補上中文（384 處）：預設組、分區標題、各選項的名稱、說明與數值單位、資源影響標籤與提示訊息。
+[*] Ammo Maker 新增的物品、配方與沙盒選項補上中文（89 處），例如電解製氯酸鉀、草木灰製鉀鹼、底火與底火杯、硝石床、礦物搜尋分類。
 [/list]
 
 [h3]更新[/h3]
 [list]
-[*] 上游改了英文的文字跟著更新（51 處）：Senators Martial Arts Core 的 wrestling 流派招式名、Symbiosis 的血契眷屬說明與外觀選項、Project Zomboid Optimiser 的 FSR 選項、Wounds Overhaul 的取彈與取皮步驟。
-[*] Dynamic Traits 有 14 個技能特質的說明原本是空白，現在會顯示「烹飪經驗加成」這類說明。
-[*] Dynamic Traits 與 Simple Overhaul: Traits and Occupations 同名的金工、誘捕特質效果不同，現在依你啟用的 MOD 顯示各自的說明。
-[*] 修正 86 處照舊版英文翻或寫錯的文字，例如 The Mission 的任務按鈕（接取、領取）、任務狀態「進行中」（原本寫成「奔跑」）與「伐木工」疊字，Symbiosis 升級效能原本永遠顯示「百分之 2%」，Gunsmith 的 PSG-1、SVD 改成半自動步槍，Jeeve's Claims 的括號與標點格式。
-[*] Project Zomboid Optimiser 與 Extended categories 已移除的選項與分類文字一併拿掉。
+[*] Ammo Maker 上游改了英文的說明跟著更新（13 處）：硝石、硫磺、木炭粉改成「氧化劑」「可燃物」這類用途說明，濾紙、拋光劑、鳥糞溶液、火藥天平與彈殼保留時間的說明照新英文改寫。
+[*] 修正 Ammo Maker 33 處寫錯或漏資訊的文字：20 種盒裝彈頭、彈殼、鹿彈的說明補上「(25個裝, 整盒)」，鳥糞溶解配方改成「溶解鳥糞」，提取硝石用的「粗布」改成「碎布條」，Bird Feeder 統一叫「餵鳥器」。
 [*] 更新下載完成後，請重新啟動遊戲載入新翻譯；不需要重開存檔。
 [/list]
