@@ -4,6 +4,27 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **9 個 MOD 更新後新增的文字補上繁簡中文（421 項）。** Roaming Survivors 的派系往事、檢查哨與邪教台詞、記憶事件與介面文字（207 項）；Ros's Radical Animal Remaster 新增的 6 種山羊（動物與群組名、毛色、頭與頭骨、山羊皮與鞣製配方、山羊肉與山羊奶、沙盒選項，173 項）；Wound Expansion 的各種治療小遊戲開關與戰利品數量（13 項）；Knox Inventory 的 Viewpoint 準星面板動作與說明（10 項）；Living NPC 醫療室的取出子彈與玻璃（7 項），以及 Survivor Briefing、Dear, Safehouse、Hot Brass、Outfit Control 的新選項與提示。
+  > 技術要點：追蹤器 2026-10-30 #1159–#1171「可能過時」。413 鍵走 `apply_wf_result`／`apply_translations` 進 `own_translations.json` 並登記 `ch_review_state`；4 路翻譯、3 路對抗複核，採納 12 條（收過路費台詞「Nobody rides free」原譯意思相反、記憶句的地點掛錯對象、邪教稱呼死者用「他們」、山羊沙盒說明的時間修飾對象等）。RRAR 上游 `Recipes.json` 只有 B41 前綴鍵 `Recipe_RRAR*`，B42 以裸 craftRecipe 區塊名查配方名，另補 8 個裸鍵（沿用前綴鍵譯文）。Survivor Briefing 的側邊位移選項英文有字面 `%`，譯文寫 `%%`。13 個 MOD 以 steamcmd 重抓現行版，與 tracker record 逐筆相符；重跑 prep 後缺口 0。Aquatsar Yacht Club 與 TchernoLib 新增的 record 全在 `42.22/` 分支，PZ 42.21.0 不載入，且兩分支的 JSON 英文完全相同；82 Porsche 911 新增的 69 鍵早已出貨；Long Term Preservation Extended 刪除的 8 鍵是不出貨的地圖說明檔。
+- **Knox Inventory 測試台的 149 個新鍵與 Roaming Survivors 的 24 個內部字串登記為不翻。** 前者由不隨 Workshop 版發布的 `KnoxTestBench.lua` 讀取（2026-10-22 裁定，#996）；後者是上游工具從 Lua 抽出的程式識別字（`type()` 比較、網路指令名、台詞表鍵名、主控台記錄），從不經 `RNPC.T` 顯示。
+  > 技術要點：登記 `sources/untranslatable_keys.json`，理由附 Lua 出處。
+
+### Changed
+
+- **上游改了英文的已出貨文字跟著改（64 項）。** Ros's Radical Animal Remaster 的鴨、鵝、孔雀與雅各羊名稱從只寫「公鴨」「母鵝」改成帶品種（例：「鴨 - 綠頭公鴨」，60 項）；Wound Expansion 的小遊戲總開關說明加上接骨、預設組說明拿掉已移除的摔落門檻並補上「硬核」會在急救 8 級前隱藏內出血；Knox Inventory 的背包變大放不下提示；Outfit Control 的脫衣換裝說明。
+  > 技術要點：64 鍵皆屬 As1 衍生層，改 `sources/ch`＋`cn_overrides`（附 `as1_value`）並登記 `ch_review_state`。Wound Expansion 上游刪除的 4 個摔落門檻鍵屬 As1 衍生層，依 split 不變式保留。
+- **修正照舊版英文翻或寫錯的已出貨譯文（23 項）。** Dear, Safehouse 的「與現有的安全屋重疊」（原本是「重設目前的安全屋」）、整理完成提示補回物品數量、安全屋名稱欄位、沙盒的房間與地塊清單改成以分號分隔（照舊譯填逗號設定會失效）、成員安全屋上限與街道距離說明；Roaming Survivors 的簡中聊天框訊息、離線影響、手動劃定基地與管理選單說明；Knox Inventory 的簡中拖放穿上提示與收音機紙帶；Ros's Radical Animal Remaster 的白冠黑波蘭雞頭簡中；Long Term Preservation Extended 的簡中大豆汁（原本「豆汁」）。
+  > 技術要點：本批 12 個 MOD 的 As1 衍生層 4,065 鍵以 `judge_batch` 對照現行英文（只取有效分支）初篩，標出 281 鍵；扣掉本批重譯的 44 鍵，加上英文較長、信心低於 0.8 的 255 鍵，由 2 路代理逐條裁決：改譯 19 鍵，另依代理回報補 4 鍵大豆汁。CH 改 `sources/ch`，CN 偏離登記 `cn_overrides`（附 `as1_value`），皆登記 `ch_review_state`。`IGUI_Breed_white` 是本體鍵、不出貨，簡中「白孔雀」不改。
+
+### Removed
+
+- **Roaming Survivors 上游已改寫的軍方派系介紹舊句不再出貨（1 項）。**
+  > 技術要點：`IGUI_RNPC_6282ff8f`（Well armed soldiers…）的英文在 `RNPC_01_Factions.lua` 改成 What's left of the Kentucky National Guard…，新句已照新鍵補譯；舊鍵在 `sources/en` 全庫、tracker state 與現行版 Lua 都已無引用，連同 `ch_review_state` 刪除。
+
 ## [42.21.0-1.66.0] - 2026-10-30
 
 ### Added

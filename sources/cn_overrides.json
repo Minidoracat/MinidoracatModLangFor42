@@ -66209,5 +66209,440 @@
     "as1_value": "重新喷涂子弹压床",
     "value": "将子弹压床重新喷涂成另一种颜色",
     "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：漏了 in a different color。"
+  },
+  "ItemName.json|Base.AMR_Head_Chicken_Polish_Female_hen": {
+    "as1_value": "波兰母鸡头",
+    "value": "白冠黑波兰母鸡头",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：漏掉品種描述 White Crested Black, 同 MOD 品種名 IGUI_Breed_amr_chicken_polish 為「白冠黑波兰鸡」"
+  },
+  "ItemName.json|Base.AMR_Head_Chicken_Polish_Juvenile_chick": {
+    "as1_value": "波兰小鸡头",
+    "value": "白冠黑波兰小鸡头",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：漏掉品種描述 White Crested Black, 同 MOD 品種名 IGUI_Breed_amr_chicken_polish 為「白冠黑波兰鸡」"
+  },
+  "ItemName.json|Base.AMR_Head_Chicken_Polish_Male_cockerel": {
+    "as1_value": "波兰公鸡头",
+    "value": "白冠黑波兰公鸡头",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：漏掉品種描述 White Crested Black, 同 MOD 品種名 IGUI_Breed_amr_chicken_polish 為「白冠黑波兰鸡」"
+  },
+  "IG_UI.json|IGUI_CSZ_MaxMemberSafehouses": {
+    "as1_value": "你加入的安全屋%1 数量已达最大",
+    "value": "你加入的安全屋数量已达上限 (%1)",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：CN「安全屋%1 数量」读起来像名为 %1 的安全屋, 改成数量上限"
+  },
+  "IG_UI.json|IGUI_CSZ_OrganizeDone": {
+    "as1_value": "管理物品移动",
+    "value": "整理完成! 已移动 %1 件物品.",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：漏了 %1 移動件數, 照現行英文重寫"
+  },
+  "IG_UI.json|IGUI_CSZ_Overlap": {
+    "as1_value": "重置当前安全屋",
+    "value": "与现有安全屋重叠",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：舊譯「重設目前的安全屋」與現行英文 Overlaps existing safehouse 無關"
+  },
+  "IG_UI.json|IGUI_CSZ_TargetMaxSafehouses": {
+    "as1_value": "'%1 拥有的安全屋%2 数量已达最大",
+    "value": "%1 拥有的安全屋数量已达上限 (%2)",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：CN 開頭多了單引號, 且「安全屋%2 数量」語意不清"
+  },
+  "IG_UI.json|IGUI_CSZ_Title": {
+    "as1_value": "地块",
+    "value": "名称: ",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：面板上安全屋標題欄位的標籤, 舊譯「地塊」意思錯"
+  },
+  "Sandbox.json|Sandbox_CSZ_Option_AllowedNonResidentialRooms": {
+    "as1_value": "允许的非住宅房间 (名称中以逗号隔开)",
+    "value": "允许的非住宅房间 (以分号分隔; 例: barn;shed;garage)",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：現行改用分號分隔並附範例, 舊譯寫逗號會讓設定失效"
+  },
+  "Sandbox.json|Sandbox_CSZ_Option_BlockedTiles": {
+    "as1_value": "阻隔地块 (不同地形名称以逗号隔开)",
+    "value": "禁止的地块 (以分号分隔的 sprite 名称)",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：現行改用分號分隔, 且填的是 sprite 名稱不是地形名稱"
+  },
+  "Sandbox.json|Sandbox_CSZ_Option_DrawAreaStreetBufferTiles": {
+    "as1_value": "绘制区域周围街道地块允许划定",
+    "value": "绘制区域划定时周围街道地块的允许距离",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：舊譯漏了 distance, 讀不出這是距離設定"
+  },
+  "Sandbox.json|Sandbox_CSZ_Option_MaxMemberSafehousesPerPlayer": {
+    "as1_value": "安全屋最大成员数",
+    "value": "作为成员可加入的安全屋上限",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：舊譯「安全屋最大成員數」是另一個意思, 實際限制的是玩家能以成員身分加入幾間安全屋"
+  },
+  "IG_UI.json|IGUI_Knox_DropToWear": {
+    "as1_value": "丢弃以穿上",
+    "value": "拖放以穿上",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：這是拖放到槽位的提示, CN「丢弃」會誤解成丟掉物品"
+  },
+  "IG_UI.json|IGUI_Knox_RadioTapeEmpty": {
+    "as1_value": "磁带上暂无内容. 打开收音机并调至某个电台: 广播内容会记录在此处, 即使关闭此窗口也会继续记录.",
+    "value": "纸带上暂无内容. 打开收音机并调至某个电台: 广播内容会打印在此处, 即使关闭此窗口也会继续打印.",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：收音機視窗下方是列印紙帶 (paper tape), CN 譯成磁带是別的東西"
+  },
+  "Sandbox.json|Sandbox_RNPC_AdminMenu_tooltip": {
+    "as1_value": "生成菜单、/rnpc、清除并重新播种.单人游玩时没有管理员选择'所有人'即可使用.",
+    "value": "生成菜单、/rnpc、清除并重新生成. 单人游玩时没有管理员: 选择 “所有人” 即可使用.",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：缺冒號讀成「沒有管理員選擇所有人」; CN「重新播种」也讀不懂"
+  },
+  "Sandbox.json|Sandbox_RNPC_ManualClaims_tooltip": {
+    "as1_value": "关闭: 封住窗户即为玩家基地. 开启: 仅右键设置. 各5个.",
+    "value": "关闭: 封住窗户即可将房屋设为基地. 开启: 只能通过右键设置. 每位玩家最多 5 栋房屋.",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：CN「各5个」讀不出是每位玩家最多 5 棟房屋"
+  },
+  "Sandbox.json|Sandbox_RNPC_OfflineAftermath": {
+    "as1_value": "离线状态",
+    "value": "离线期间的影响",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：CN「离线状态」與 Offline aftermath (離線期間 NPC 行為的後果) 意思不同"
+  },
+  "Sandbox.json|Sandbox_RNPC_ScreenText": {
+    "as1_value": "屏幕消息",
+    "value": "[RNPC] 消息",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：CN 對應舊版英文 (屏幕消息), 現行訊息改顯示在聊天框"
+  },
+  "Sandbox.json|Sandbox_RNPC_ScreenText_tooltip": {
+    "as1_value": "屏幕顶部的 [RNPC] 行.对讲机的发送与回复, 需要你身上有无线电.",
+    "value": "显示在聊天框中 (单人: 屏幕顶部). 对讲机与回复需要你身上带着无线电.",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：CN 是舊版「屏幕顶部的 [RNPC] 行」, 現行改為聊天框 (單人才在頂部)"
+  },
+  "Fluids.json|Fluid_Name_JuicedSoybeans": {
+    "as1_value": "豆汁",
+    "value": "大豆汁",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：Soybean 照本體官方簡中「大豆」；「豆汁」在大陸通常指北京綠豆發酵飲料。"
+  },
+  "ItemName.json|LTPE.JuicedSoybeansBottle": {
+    "as1_value": "瓶子 (豆汁)",
+    "value": "瓶子 (大豆汁)",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：Soybean 照本體官方簡中「大豆」；「豆汁」在大陸通常指北京綠豆發酵飲料。"
+  },
+  "ItemName.json|LTPE.JuicedSoybeansJar": {
+    "as1_value": "罐装豆汁",
+    "value": "罐装大豆汁",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：Soybean 照本體官方簡中「大豆」；「豆汁」在大陸通常指北京綠豆發酵飲料。"
+  },
+  "ItemName.json|LTPE.JuicedSoybeansJar_Open": {
+    "as1_value": "罐装豆汁 (已打开)",
+    "value": "罐装大豆汁 (已打开)",
+    "reason": "2026-10-30 追蹤器 #1159–#1171 舊譯複查（對照 MOD 現行英文）：Soybean 照本體官方簡中「大豆」；「豆汁」在大陸通常指北京綠豆發酵飲料。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_americanblackduck_drake": {
+    "as1_value": "公鸭",
+    "value": "鸭 - 北美黑公鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Drake」改成「Duck - American Black Drake」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_americanblackduck_duckling": {
+    "as1_value": "小鸭",
+    "value": "鸭 - 北美黑小鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Duckling」改成「Duck - American Black Duckling」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_americanblackduck_hen": {
+    "as1_value": "母鸭",
+    "value": "鸭 - 北美黑母鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Hen」改成「Duck - American Black Hen」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_bluewingedteal_drake": {
+    "as1_value": "公鸭",
+    "value": "鸭 - 蓝翅公鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Drake」改成「Duck - Blue Winged Teal Drake」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_bluewingedteal_duckling": {
+    "as1_value": "小鸭",
+    "value": "鸭 - 蓝翅小鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Duckling」改成「Duck - Blue Winged Teal Duckling」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_bluewingedteal_hen": {
+    "as1_value": "母鸭",
+    "value": "鸭 - 蓝翅母鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Hen」改成「Duck - Blue Winged Teal Hen」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_duck_blue_swedish_drake": {
+    "as1_value": "公鸭",
+    "value": "鸭 - 瑞典蓝公鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Drake」改成「Duck - Blue Swedish Drake」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_duck_blue_swedish_duckling": {
+    "as1_value": "小鸭",
+    "value": "鸭 - 瑞典蓝小鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Duckling」改成「Duck - Blue Swedish Duckling」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_duck_blue_swedish_hen": {
+    "as1_value": "母鸭",
+    "value": "鸭 - 瑞典蓝母鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Hen」改成「Duck - Blue Swedish Hen」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_duck_cayuga_drake": {
+    "as1_value": "公鸭",
+    "value": "鸭 - 卡尤加公鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Drake」改成「Duck - Cayuga Drake」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_duck_cayuga_duckling": {
+    "as1_value": "小鸭",
+    "value": "鸭 - 卡尤加小鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Duckling」改成「Duck - Cayuga Duckling」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_duck_cayuga_hen": {
+    "as1_value": "母鸭",
+    "value": "鸭 - 卡尤加母鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Hen」改成「Duck - Cayuga Hen」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_duck_khaki_campbell_drake": {
+    "as1_value": "公鸭",
+    "value": "鸭 - 卡基康贝尔公鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Drake」改成「Duck - Khaki Campbell Drake」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_duck_khaki_campbell_duckling": {
+    "as1_value": "小鸭",
+    "value": "鸭 - 卡基康贝尔小鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Duckling」改成「Duck - Khaki Campbell Duckling」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_duck_khaki_campbell_hen": {
+    "as1_value": "母鸭",
+    "value": "鸭 - 卡基康贝尔母鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Hen」改成「Duck - Khaki Campbell Hen」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_duck_mallard_drake": {
+    "as1_value": "公鸭",
+    "value": "鸭 - 绿头公鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Drake」改成「Duck - Mallard Drake」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_duck_mallard_duckling": {
+    "as1_value": "小鸭",
+    "value": "鸭 - 绿头小鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Duckling」改成「Duck - Mallard Duckling」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_duck_mallard_hen": {
+    "as1_value": "母鸭",
+    "value": "鸭 - 绿头母鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Hen」改成「Duck - Mallard Hen」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_duck_pekin_drake": {
+    "as1_value": "公鸭",
+    "value": "鸭 - 北京公鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Drake」改成「Duck - Pekin Drake」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_duck_pekin_duckling": {
+    "as1_value": "小鸭",
+    "value": "鸭 - 北京小鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Duckling」改成「Duck - Pekin Duckling」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_duck_pekin_hen": {
+    "as1_value": "母鸭",
+    "value": "鸭 - 北京母鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Hen」改成「Duck - Pekin Hen」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_gadwall_drake": {
+    "as1_value": "公鸭",
+    "value": "鸭 - 赤膀公鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Drake」改成「Duck - Gadwall Drake」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_gadwall_duckling": {
+    "as1_value": "小鸭",
+    "value": "鸭 - 赤膀小鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Duckling」改成「Duck - Gadwall Duckling」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_gadwall_hen": {
+    "as1_value": "母鸭",
+    "value": "鸭 - 赤膀母鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Hen」改成「Duck - Gadwall Hen」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_goose_african_gander": {
+    "as1_value": "公鹅",
+    "value": "鹅 - 非洲公鹅",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Gander」改成「Goose - African Gander」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_goose_african_goose": {
+    "as1_value": "母鹅",
+    "value": "鹅 - 非洲母鹅",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Goose」改成「Goose - African Goose」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_goose_african_gosling": {
+    "as1_value": "小鹅",
+    "value": "鹅 - 非洲小鹅",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Gosling」改成「Goose - African Gosling」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_goose_chinese_gander": {
+    "as1_value": "公鹅",
+    "value": "鹅 - 中国公鹅",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Gander」改成「Goose - Chinese Gander」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_goose_chinese_goose": {
+    "as1_value": "母鹅",
+    "value": "鹅 - 中国母鹅",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Goose」改成「Goose - Chinese Goose」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_goose_chinese_gosling": {
+    "as1_value": "小鹅",
+    "value": "鹅 - 中国小鹅",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Gosling」改成「Goose - Chinese Gosling」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_goose_embden_gander": {
+    "as1_value": "公鹅",
+    "value": "鹅 - 埃姆登公鹅",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Gander」改成「Goose - Embden Gander」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_goose_embden_goose": {
+    "as1_value": "母鹅",
+    "value": "鹅 - 埃姆登母鹅",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Goose」改成「Goose - Embden Goose」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_goose_embden_gosling": {
+    "as1_value": "小鹅",
+    "value": "鹅 - 埃姆登小鹅",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Gosling」改成「Goose - Embden Gosling」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_goose_pilgrim_gander": {
+    "as1_value": "公鹅",
+    "value": "鹅 - 朝圣公鹅",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Gander」改成「Goose - Pilgrim Gander」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_goose_pilgrim_goose": {
+    "as1_value": "母鹅",
+    "value": "鹅 - 朝圣母鹅",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Goose」改成「Goose - Pilgrim Goose」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_goose_pilgrim_gosling": {
+    "as1_value": "小鹅",
+    "value": "鹅 - 朝圣小鹅",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Gosling」改成「Goose - Pilgrim Gosling」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_goose_toulouse_gander": {
+    "as1_value": "公鹅",
+    "value": "鹅 - 图卢兹公鹅",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Gander」改成「Goose - Toulouse Gander」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_goose_toulouse_goose": {
+    "as1_value": "母鹅",
+    "value": "鹅 - 图卢兹母鹅",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Goose」改成「Goose - Toulouse Goose」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_goose_toulouse_gosling": {
+    "as1_value": "小鹅",
+    "value": "鹅 - 图卢兹小鹅",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Gosling」改成「Goose - Toulouse Gosling」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_greenwingedteal_drake": {
+    "as1_value": "公鸭",
+    "value": "鸭 - 绿翅公鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Drake」改成「Duck - Green Winged Teal Drake」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_greenwingedteal_duckling": {
+    "as1_value": "小鸭",
+    "value": "鸭 - 绿翅小鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Duckling」改成「Duck - Green Winged Teal Duckling」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_greenwingedteal_hen": {
+    "as1_value": "母鸭",
+    "value": "鸭 - 绿翅母鸭",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Hen」改成「Duck - Green Winged Teal Hen」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_jacob_ewe": {
+    "as1_value": "母绵羊",
+    "value": "绵羊 - 雅各布母绵羊",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Ewe」改成「Sheep - Jacob Ewe」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_jacob_lamb": {
+    "as1_value": "小绵羊",
+    "value": "绵羊 - 雅各布小绵羊",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Lamb」改成「Sheep - Jacob Lamb」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_jacob_ram": {
+    "as1_value": "公绵羊",
+    "value": "绵羊 - 雅各布公绵羊",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Ram」改成「Sheep - Jacob Ram」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_peafowl_blackshouldered_peachick": {
+    "as1_value": "小孔雀",
+    "value": "孔雀 - 黑肩小孔雀",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Peachick」改成「Peafowl - Black Shouldered Peachick」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_peafowl_blackshouldered_peacock": {
+    "as1_value": "公孔雀",
+    "value": "孔雀 - 黑肩公孔雀",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Peacock」改成「Peafowl - Black Shouldered Peacock」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_peafowl_blackshouldered_peahen": {
+    "as1_value": "母孔雀",
+    "value": "孔雀 - 黑肩母孔雀",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Peahen」改成「Peafowl - Black Shouldered Peahen」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_peafowl_indianblue_peachick": {
+    "as1_value": "小孔雀",
+    "value": "孔雀 - 印度蓝小孔雀",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Peachick」改成「Peafowl - Indian Blue Peachick」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_peafowl_indianblue_peacock": {
+    "as1_value": "公孔雀",
+    "value": "孔雀 - 印度蓝公孔雀",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Peacock」改成「Peafowl - Indian Blue Peacock」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_peafowl_indianblue_peahen": {
+    "as1_value": "母孔雀",
+    "value": "孔雀 - 印度蓝母孔雀",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Peahen」改成「Peafowl - Indian Blue Peahen」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_peafowl_pied_peachick": {
+    "as1_value": "小孔雀",
+    "value": "孔雀 - 花斑小孔雀",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Peachick」改成「Peafowl - Pied Peachick」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_peafowl_pied_peacock": {
+    "as1_value": "公孔雀",
+    "value": "孔雀 - 花斑公孔雀",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Peacock」改成「Peafowl - Pied Peacock」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_peafowl_pied_peahen": {
+    "as1_value": "母孔雀",
+    "value": "孔雀 - 花斑母孔雀",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Peahen」改成「Peafowl - Pied Peahen」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_peafowl_white_peachick": {
+    "as1_value": "小孔雀",
+    "value": "孔雀 - 白小孔雀",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Peachick」改成「Peafowl - White Peachick」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_peafowl_white_peacock": {
+    "as1_value": "公孔雀",
+    "value": "孔雀 - 白公孔雀",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Peacock」改成「Peafowl - White Peacock」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_peafowl_white_peahen": {
+    "as1_value": "母孔雀",
+    "value": "孔雀 - 白母孔雀",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Peahen」改成「Peafowl - White Peahen」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_woodduck_drake": {
+    "as1_value": "公鸳鸯",
+    "value": "鸭 - 公林鸳鸯",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Drake」改成「Duck - Wood Drake」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_woodduck_duckling": {
+    "as1_value": "小鸳鸯",
+    "value": "鸭 - 小林鸳鸯",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Duckling」改成「Duck - Wood Duckling」。"
+  },
+  "IG_UI.json|IGUI_AnimalType_amr_woodduck_hen": {
+    "as1_value": "母鸳鸯",
+    "value": "鸭 - 母林鸳鸯",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Hen」改成「Duck - Wood Hen」。"
+  },
+  "Sandbox.json|Sandbox_WoundExpansion.minigames_tooltip": {
+    "as1_value": "关节复位、清除异物、缝合和紧急手术将以小游戏开始. 表现良好可增加高达百分之25的成功率, 表现糟糕则减少高达百分之25, 且操作时间减半. 关闭此项以使用普通操作.",
+    "value": "关节复位、清除异物、缝合、紧急手术和接骨将以小游戏开始. 表现良好可增加高达百分之25的成功率, 表现糟糕则减少高达百分之25, 且操作时间减半. 关闭此项以使用普通操作.",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Reset Joint, Remove Debris, Stitching and Emergency Surgery start with a minigame. Doing well adds up to 25 to the success chance, doing badly takes up to 25 off, and the procedure itself takes half as long. Turn off to use the plain actions.」改成「Reset Joint, Remove Debris, Stitching, Emergency Surgery and setting a broken bone start with a minigame. Doing well adds up to 25 to the success chance, doing badly takes up to 25 off, and the procedure itself takes half as long. Turn off to use the plain actions.」。"
+  },
+  "Sandbox.json|Sandbox_WoundExpansion.preset_tooltip": {
+    "as1_value": "填充感染概率、坠落阈值、内出血技能和每个伤害开关. 简易模式关闭永久性和致命性伤害并使感染更罕见. 硬核模式使感染和严重坠落更可能发生. 你仍然可以在之后更改任何选项.",
+    "value": "填充感染概率、内出血技能和每个伤害开关. 简易模式关闭永久性和致命性伤害并使感染更罕见. 硬核模式使感染更可能发生, 并在急救达到 8 级前隐藏内出血. 你仍然可以在之后更改任何选项.",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「Fills in the infection odds, fall thresholds, internal bleeding skill and every injury switch. Light turns off the permanent and deadly injuries and makes infection rarer. Hardcore makes infection and bad falls more likely. You can still change any option afterwards.」改成「Fills in the infection odds, internal bleeding skill and every injury switch. Light turns off the permanent and deadly injuries and makes infection rarer. Hardcore makes infection more likely and hides internal bleeding until First Aid 8. You can still change any option afterwards.」。"
+  },
+  "IG_UI.json|IGUI_Knox_BagGrowsNoRoom": {
+    "as1_value": "背包变大后将无法放入当前位置",
+    "value": "没有空间让背包变大",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「The bag would grow and no longer fit where it lies」改成「No room for the bag to grow」。"
+  },
+  "Sandbox.json|Sandbox_OutfitControl_UndressBefore_tooltip": {
+    "as1_value": "启用后，角色会在切换套装前脱下身上衣物，获得更真实的体验。\n禁用则衣物直接存入衣柜，切换套装速度更快。",
+    "value": "启用后, 角色会在切换套装前脱下身上衣物.\n禁用则衣物直接存入衣柜, 切换套装速度更快.",
+    "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「If enabled, the character will remove clothing before changing outfits for a more immersive experience.\nIf disabled, clothing is transferred directly to the wardrobe, making outfit changes faster.」改成「If enabled, the character will remove clothing before changing outfits.\nIf disabled, clothing is transferred directly to the wardrobe, making outfit changes faster.」。"
   }
 }
