@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1467 個 Workshop 模組**（2116 個 mod ID）；另 **10 個已下架**（翻譯保留，見文末）。
+共支援 **1470 個 Workshop 模組**（2120 個 mod ID）；另 **10 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1221,7 +1221,7 @@
 | [LG Extended Plumbing](https://steamcommunity.com/sharedfiles/filedetails/?id=3779561845) | — | — | `LGExtendedPlumbing` | 27 | — | — |
 | [LG Extended Electricity](https://steamcommunity.com/sharedfiles/filedetails/?id=3779562002) | — | — | `LGExtendedElectricity`, `LGRealisticPowerUsage` | 42 | — | — |
 | [Fruit Farming](https://steamcommunity.com/sharedfiles/filedetails/?id=3779625821) | 水果農耕 | 新增可種植的水果與作物（蘋果、酪梨、香蕉、鳳梨、咖啡、水稻等），並提供對應種子與收集種子配方。 | `FruitFarming` | 77 | — | — |
-| [Working Gun Rack〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3779642984) | 可互動槍架 | 讓牆上槍架可實際放置、取下與管理槍械。 | `WorkingGunRack` | 9 | — | — |
+| [Working Gun Rack〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3779642984) | 可互動槍架 | 讓牆上槍架可實際放置、取下與管理槍械。 | `WorkingGunRack` | 11 | — | — |
 | [Massive Fridge Containers [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3779768844) | — | — | `MassiveFridgeContainers` | 85 | ⚠️ ≥2 | — |
 | [The Zims - Menu Style DLC [ML]](https://steamcommunity.com/sharedfiles/filedetails/?id=3779890822) | — | — | `ZimPie` | 1 | — | — |
 | [Cats Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=3779907776) | 貓咪模組 | 加入可飼養的貓，含多種品種（橘貓、短毛貓等）、幼貓與公母之分，並提供貓食盆、貓糧與牛奶等液體。 | `CatsMod` | 223 | — | — |
@@ -1391,6 +1391,7 @@
 | [Brita's Weapon Pack B42 Unofficial Port](https://steamcommunity.com/sharedfiles/filedetails/?id=3801670664) | Brita 武器包 B42 非官方移植版 | 以 Gunworks 框架將 Brita 武器包的槍械、彈匣、彈藥與配件移植到 B42。 | `BritaGunworksArmorCompat`, `BritaGunworksHotBrassViewpoint`, `BritaGunworksLegacyMagazines`, `BritaGunworksLocal`, `BritaGunworksViewpointCompatibility` | 338 | ⚠️ ≥16 | — |
 | [[42.20.4MP] Gunworks Heavy Ordnance](https://steamcommunity.com/sharedfiles/filedetails/?id=3802070967) | — | — | `HeavyOrdnance` | 7 | — | — |
 | [True Swimming](https://steamcommunity.com/sharedfiles/filedetails/?id=3802372726) | — | — | `TrueSwimming` | 27 | — | — |
+| [PM2 - Complete Repair Overhaul〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3802480042) | PM2 全面維修重製 | 重做武器、裝備與車輛的維修：右鍵維修會顯示成功、暴擊、部分修理與失敗機率，維護技能越高加成越多，耐久低於門檻時還有機會觸發預防性維修；各項機率與加成都能在沙盒設定調整。 | `PreventativeMaintenanceTwo`, `RamenTestMod` | 81 | — | ⚠️ 維修提示框裡的「History」統計（Stats for Nerds、Last Repair、True Repair Count 等約 12 句）與除錯選單寫死在 Lua（PMTwo_ContextMenu.lua 未包 getText），任何翻譯包都補不了；右鍵維修選單、成功率與加成提示、維修結果浮字、沙盒設定皆已涵蓋。作者附的相容測試子 MOD RamenTestMod 不在收錄範圍。 |
 | [Bruce Lee's Nunchaku](https://steamcommunity.com/sharedfiles/filedetails/?id=3802860016) | 李小龍的雙節棍 | 新增五款雙節棍武器與專屬戰鬥動作，搭配武術技能成長，可製作與修理。 | `BruceLeesNunchucks` | 21 | — | — |
 | [Definitive Descriptions (Occupations, Moodles, Skills & Traits + Mod Support!)](https://steamcommunity.com/sharedfiles/filedetails/?id=3802917504) | 詳盡說明（職業、狀態圖示、技能與特質） | 滑鼠懸停技能、特質、職業與狀態圖示時，分項列出實際效果，並支援多個模組。 | `DefinitiveDescriptions` | ? | — | — |
 | [Faster Actions](https://steamcommunity.com/sharedfiles/filedetails/?id=3803796255) | Faster Actions 動作加速 | 可依製作、鍛造、建造、伐木、維修、焊接、裁縫、裝備與物品欄等類別分別調整動作耗時。 | `FasterActions` | 75 | — | — |
@@ -1479,6 +1480,8 @@
 | [Living NPC](https://steamcommunity.com/sharedfiles/filedetails/?id=3820700754) | Living NPC 同伴生活 | Bandits2 附加模組，讓同伴擁有個性、記憶、人際關係與日常作息，可共住、成家並長期一起生活。 | `LNPCRoadCompanion`, `LivingNPC` | ? | ⚠️ ≥2 | — |
 | ['67 Chevrolet Impala](https://steamcommunity.com/sharedfiles/filedetails/?id=3820938264) | '67 Chevrolet Impala | 新增 1967 年 Chevrolet Impala 車輛，含《超自然檔案》黑色特別版與多款可替換零件。 | `67chevyImpala` | 25 | — | — |
 | [Xanny Arms](https://steamcommunity.com/sharedfiles/filedetails/?id=3820971639) | Xanny Arms 槍械包 | 新增 72 把槍械與對應彈匣、瞄具與消音器等配件，彈藥有散裝、盒裝與箱裝。 | `XannyArmsCore`, `XannyArmsGunPack` | ? | ⚠️ ≥5 | — |
+| [Vehicle Kit Library (VSK) - Framework for Vehicle Mods [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3828607335) | Vehicle Kit Library 車輛框架 | Roadworthy 等車輛 MOD 共用的框架，提供儀表板、燈號與修正功能；玩家平常只會看到儀表板上的遠光燈提示，其餘是開發者面板。 | `VehicleSwissKnife` | 11 | — | ⚠️ 儀表上的刻度字母（水溫 C／H、油壓 L／H、里程 km／mi）寫死在 Lua（VSK_DashboardCluster.lua），任何翻譯包都補不了；和實車儀表一樣維持英文。 |
+| [Roadworthy [BETA] - Realistic Driving & Car Maintenance [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3828608843) | Roadworthy 寫實駕駛與保養 | 讓開車與養車更寫實：手排換檔與離合器、燃料種類與加錯油、儀表板燈號、發動流程與失敗原因、機油與冷卻液的液位與油質、火星塞與濾清器等零件磨損，以及安全帶；難度與各項機制可在沙盒設定調整。需要 Vehicle Kit Library。 | `RealisticDrivingOverhaul` | 292 | — | — |
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 

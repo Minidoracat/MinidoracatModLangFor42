@@ -4,6 +4,24 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **新收錄三個 MOD 的繁簡中文（384 項）。** Roadworthy 寫實駕駛與保養（手排換檔與離合器、燃料種類、儀表板燈號、發動失敗原因、機油與冷卻液、火星塞等零件磨損、安全帶、沙盒設定，292 項）與它的必要相依 Vehicle Kit Library（儀表遠光燈提示與開發者面板，11 項），以及 PM2 全面維修重製（右鍵維修的成功、暴擊、部分修理與失敗機率、維護加成提示、維修結果浮字、沙盒設定，81 項）。
+  > 技術要點：#1174、#1175 翻譯申請，使用者 2026-10-31 核准 own lane 收錄（PM2 只收主 MOD PreventativeMaintenanceTwo，不收作者的相容測試子 MOD RamenTestMod）。三個 MOD 都是 As1 未收錄、作者只附 EN（與西語），零 vanilla 碰撞、與 As1 CN 鍵集無交集。建 `sources/mods/<wid>/` own 目錄（CN）＋`sources/ch`，登記名冊、watchlist、tracker 基準（`backfill-en`）與 `mod_names_zh`；3 路翻譯、2 路對抗複核。PM2 的 `_testing` 佔位鍵 2 個與 RamenTestMod 的配方名登記 `untranslatable_keys`；PM2 上游把 PartialChanceScaling 的說明誤寫成 critical，兩個選項依鍵分開譯。PM2 維修提示框的 History 統計與除錯選單、VSK 儀表刻度字母寫死在 Lua，翻譯包補不了，已寫進支援清單的涵蓋範圍說明。
+- **13 個 MOD 更新後新增的文字補上繁簡中文（478 項）。** Living NPC 的兒童健康與照護、流感與屍體病等四種疾病、外觀編輯器與服裝欄位、測試面板（181 項）；Snake's ModPack 的 Ammo Maker 遊戲內說明手冊 12 章、訊號干擾器介面、Numark 地下設施的屍檢報告與機密文件、防化服與毒氣區訊息（155 項）；Wounds Overhaul 對 A-Life NPC 抽血、問血型與輸血的互動和台詞（48 項）；Project Zomboid Optimiser 的新效能設定（23 項）；True Sewers 的下水道溺屍與深層坑道潛伏者（20 項）；Authentic Z 的螢光棒投擲與快捷列選項、背包升級介面（16 項）；Gunsmith 的 Beretta 21A／950 與 M249（14 項）；Ros's Radical Animal Remaster 的加拿大鵝（11 項），以及 Better Building Plus、Survivor Briefing、Radio Trader、Working Gun Rack、KR SolarOS 的新選項與提示。
+  > 技術要點：追蹤器 2026-10-31 #1176–#1192「可能過時」。476 鍵走 `apply_wf_result`／`apply_translations` 進 `own_translations.json`，Working Gun Rack（own 目錄）2 鍵寫 own 目錄 CN＋`sources/ch`，皆登記 `ch_review_state`；5 路翻譯、3 路對抗複核，採納 17 條（Noisy Cricket 被干擾器擋下是「沒有爆炸」而不是沒擊發、干擾器狀態欄改「已開啟／已關閉」以免和按鈕同字、獎勵彈窗句型、測試傷口名稱對齊健康面板、Gunsmith 槍械店的改裝機率是獨立設定等）。Snake's ModPack 手冊的 13 個分類圖示鍵值是材質路徑，登記 `untranslatable_keys`；Ammo Maker 改名的拆解槍械配方 `DismantleWeapons` 沿用舊鍵譯文。17 個 MOD 以 steamcmd 重抓現行版，corpus_hash 與 tracker state 逐一相符；重跑 prep 後 20 個 MOD 缺口 0。Surplus & Thrift 新增的 180 筆只是不帶顯示名的 script 物品；Hi Res Clock 新增的 182 筆全在 `42.22/` 分支（PZ 42.21.0 不載入）；Super Bulldozer 刪除的 20 筆是不載入的 `_EN.txt` 死檔，本來就沒出貨。
+
+### Changed
+
+- **上游改了英文的已出貨文字跟著改（40 項）。** Living NPC 戰鬥效果說明的百分號改成全形「％」（18 項）；Extraction Mode 的 NPC 攻擊整合從只支援 Bandits 改成可選 Bandits 或 A-Life（選項名與 6 條說明），以及周邊防禦任務改成單手斧或老式單手斧都收（11 項）；Gunsmith 三個護木改名 Ridgeline QR-4 系列；Authentic Z 的正裝襯衫拿掉人名 Brad；Radio Trader 的物品不足提示補上「沒穿戴、未收藏、放在自己背包裡才算」與收訊強度說明；Snake's ModPack 的皺紙條筆記、技能游標說明；KR SolarOS 的連結說明補上最後一句。
+  > 技術要點：As1 衍生層 10 鍵改 `sources/ch`＋`cn_overrides`（附 `as1_value`），own 層 30 鍵經 `apply_translations` 更新 `en` 錨點與譯文，皆登記 `ch_review_state`。Living NPC 上游把原本的 `%%` 也照字換成「％％」，英文玩家會看到兩個百分號，譯文只寫一個「％」（`_note` 記原因）。Authentic Z - Backpacks+ 的快捷列 Hotbar 9–20 改叫 Hotbar Slot N（#1193），12 個多 owner 鍵的中性譯名「快捷欄N」仍成立，`owner_conflict_decisions` 重新簽名、`owner_variants` 依新英文重新分組，譯文不變。
+- **修正寫錯或照舊版英文翻的已出貨譯文（140 項）。** Authentic Z 的女僕與護士洋裝、長裙（簡中寫成短裙）、充氣泳圈、羊排鬍、黑白運動鞋，雨衣的簡中統一照本體寫「雨衣」、Buzzers 隊名不再譯成「蜂鳴器」；Snake's ModPack 的魚苗（原為「油炸」）、扇貝、晾晒架、拖車外觀（原為「剝皮」「噴漆」）、警戒線、泡淡的馬黛茶、甘蔗晾架、《彈藥復裝台》雜誌、整盒鉛塊、蜂后暈眩，以及簡中把整發霰彈寫成「霰彈彈殼」；Extraction Mode 簡中仍說「所有隊員都必須就緒」（現在隊友可選擇不參加）、醫療補給的抗感染數值、地圖收件不限肯塔基州；Project Zomboid Optimiser 的「存在過久的動物足跡」（原為「舊版」）與「一般」分頁；Radio Trader 簡中的通話噪音、聲望、出售頁；Surplus & Thrift 的破舊棒球帽與針織蒙面頭套；Hi Res Clock 的錶面顏色說明；Snake's ModPack 的 Numark 設施廂型車。
+  > 技術要點：本批 12 個 MOD 的 As1 衍生層 9,536 鍵（扣掉前三批已稽核且值未變的 2,502 鍵）以 `judge_batch` 對照現行英文初篩，標出 343 鍵；扣掉本批重譯與衝突鍵，加上英文較長、信心低於 0.8 的 555 鍵，共 892 鍵由 4 路代理逐條裁決，改譯 64 鍵；另依代理回報把同類錯誤一併改 76 鍵（Authentic Z 雨衣簡中 44 鍵、Buzzers 15 鍵、Lite 版同類錯譯 3 鍵、Snake's ModPack 霰彈 5 鍵、Surplus & Thrift 帽子 5 鍵等）。CH 改 `sources/ch`，CN 偏離登記 `cn_overrides`（附 `as1_value`），own 層 4 鍵經 `apply_translations`，皆登記 `ch_review_state`。Snake's ModPack 的 4 個瞄準鏡（`Base.RedDot` 等）與 Gunsmith 的保險（`ContextMenu_FireMode_Safe`）分別是本體鍵與已裁決不出貨的衝突鍵，JSON 不出貨，未改。
+- **三個多 MOD 共用鍵補上衝突裁決。** Authentic Z 與 ebfchainsaw 的電鋸「砍伐樹木」（只差大小寫）、「取回電鋸燃油」（Retrieve Fuel 與 Drain Chainsaw Fuel），以及 Snake's ModPack 兩個子 MOD 的特殊門提示，現行譯文對每個 MOD 都成立，維持不變；啟用單一 MOD 時依各自英文套用條件譯文。
+  > 技術要點：`owner_conflict_decisions` 新增 3 筆 translate；`owner_variants` 新增 `Tooltip_UniqueSpecialDoor` 一條 2 組（電鋸兩鍵原已有條件譯文），`OWNER_CONFLICTS.md` 重生。
+
 ## [42.21.0-1.67.0] - 2026-10-31
 
 ### Added

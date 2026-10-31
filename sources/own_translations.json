@@ -6428,6 +6428,21 @@
     "en": "Strip Corpse to Ground",
     "ch": "扒光屍體物品放到地上",
     "cn": "扒光尸体物品放到地上"
+   },
+   "ContextMenu_AuthenticZ_ThrowGlowstick": {
+    "en": "Throw Glowstick",
+    "ch": "投擲螢光棒",
+    "cn": "投掷荧光棒"
+   },
+   "ContextMenu_AMU_ConfigureInhibitor": {
+    "en": "Configure inhibitor",
+    "ch": "設定干擾器",
+    "cn": "配置干扰器"
+   },
+   "ContextMenu_PickUpKey": {
+    "en": "Pick up key",
+    "ch": "撿起鑰匙",
+    "cn": "拾取钥匙"
    }
   },
   "Fluids.json": {
@@ -136322,6 +136337,991 @@
     "en": "Red and white",
     "ch": "紅白相間",
     "cn": "红白相间"
+   },
+   "IGUI_AZ_RequirementOr": {
+    "en": "or",
+    "ch": "或",
+    "cn": "或"
+   },
+   "IGUI_AZ_UpgradeBackpackTier": {
+    "en": "Upgrade Backpack - Tier %1",
+    "ch": "升級背包 - 第 %1 階",
+    "cn": "升级背包 - 第 %1 阶"
+   },
+   "IGUI_AZ_UpgradeRequirements": {
+    "en": "Requirements",
+    "ch": "需求",
+    "cn": "需求"
+   },
+   "IGUI_KRSolar_RowStore": {
+    "en": "Storage",
+    "ch": "儲能",
+    "cn": "储能"
+   },
+   "IGUI_Wounds_ALifeAskGroup": {
+    "en": "Ask their blood group",
+    "ch": "詢問對方的血型",
+    "cn": "询问对方的血型"
+   },
+   "IGUI_Wounds_ALifeBloodLevel": {
+    "en": "Blood: %s%%",
+    "ch": "血量: %s%%",
+    "cn": "血量: %s%%"
+   },
+   "IGUI_Wounds_ALifeClotted": {
+    "en": "The blood had clotted - a reaction.",
+    "ch": "血液已經凝結 - 出現輸血反應.",
+    "cn": "血液已经凝结 - 出现输血反应."
+   },
+   "IGUI_Wounds_ALifeDrag": {
+    "en": "Drag them",
+    "ch": "拖行對方",
+    "cn": "拖行对方"
+   },
+   "IGUI_Wounds_ALifeDrawBody": {
+    "en": "Draw blood from the body",
+    "ch": "從屍體抽血",
+    "cn": "从尸体抽血"
+   },
+   "IGUI_Wounds_ALifeDrawDown": {
+    "en": "Draw blood (they can't stop you)",
+    "ch": "抽血 (對方無法阻止你)",
+    "cn": "抽血 (对方无法阻止你)"
+   },
+   "IGUI_Wounds_ALifeFit": {
+    "en": "The blood took.",
+    "ch": "輸血成功了.",
+    "cn": "输血成功了."
+   },
+   "IGUI_Wounds_ALifeGroupIs1": {
+    "en": "I'm %s.",
+    "ch": "我是 %s 型.",
+    "cn": "我是 %s 型."
+   },
+   "IGUI_Wounds_ALifeGroupIs2": {
+    "en": "%s, I think.",
+    "ch": "應該是 %s 型吧.",
+    "cn": "应该是 %s 型吧."
+   },
+   "IGUI_Wounds_ALifeGroupIs3": {
+    "en": "%s. It was on a card once.",
+    "ch": "%s 型. 以前卡片上有寫過.",
+    "cn": "%s 型. 以前卡片上写过."
+   },
+   "IGUI_Wounds_ALifeGroupNo1": {
+    "en": "No idea, never had it checked.",
+    "ch": "不知道, 從來沒驗過.",
+    "cn": "不知道, 从来没验过."
+   },
+   "IGUI_Wounds_ALifeGroupNo2": {
+    "en": "Couldn't tell you.",
+    "ch": "這我可說不上來.",
+    "cn": "这我可说不上来."
+   },
+   "IGUI_Wounds_ALifeGroupNo3": {
+    "en": "Nobody ever told me.",
+    "ch": "從來沒人跟我說過.",
+    "cn": "从来没人跟我说过."
+   },
+   "IGUI_Wounds_ALifeHold": {
+    "en": "You have hold of them.",
+    "ch": "你抓住對方了.",
+    "cn": "你抓住对方了."
+   },
+   "IGUI_Wounds_ALifeHostile": {
+    "en": "Won't let you near",
+    "ch": "不讓你靠近",
+    "cn": "不让你靠近"
+   },
+   "IGUI_Wounds_ALifeLetGo": {
+    "en": "Let go",
+    "ch": "放開",
+    "cn": "放开"
+   },
+   "IGUI_Wounds_ALifeNo1": {
+    "en": "Not a chance.",
+    "ch": "門都沒有.",
+    "cn": "门都没有."
+   },
+   "IGUI_Wounds_ALifeNo2": {
+    "en": "Hands off me.",
+    "ch": "別碰我.",
+    "cn": "别碰我."
+   },
+   "IGUI_Wounds_ALifeNo3": {
+    "en": "My blood stays in me.",
+    "ch": "我的血我自己留著.",
+    "cn": "我的血我自己留着."
+   },
+   "IGUI_Wounds_ALifeNo4": {
+    "en": "What, now you want my blood?",
+    "ch": "什麼, 現在連我的血都要?",
+    "cn": "什么, 现在连我的血都要?"
+   },
+   "IGUI_Wounds_ALifeNoBlood": {
+    "en": "Requires a bag of blood",
+    "ch": "需要一袋血",
+    "cn": "需要一袋血"
+   },
+   "IGUI_Wounds_ALifeNoTalk": {
+    "en": "Won't talk to you",
+    "ch": "不肯跟你說話",
+    "cn": "不肯跟你说话"
+   },
+   "IGUI_Wounds_ALifeReaction": {
+    "en": "The blood didn't fit - a reaction.",
+    "ch": "血型不合 - 出現輸血反應.",
+    "cn": "血型不合 - 出现输血反应."
+   },
+   "IGUI_Wounds_ALifeRefused": {
+    "en": "Said no not long ago",
+    "ch": "不久前才拒絕過",
+    "cn": "不久前刚拒绝过"
+   },
+   "IGUI_Wounds_ALifeSaysGroup": {
+    "en": "says %s",
+    "ch": "自稱 %s 型",
+    "cn": "自称 %s 型"
+   },
+   "IGUI_Wounds_ALifeSeen": {
+    "en": "Their people saw that.",
+    "ch": "對方的同伴看到了.",
+    "cn": "对方的同伴看到了."
+   },
+   "IGUI_Wounds_ALifeSpoiled": {
+    "en": "Too long dead - the blood has spoiled",
+    "ch": "死亡太久 - 血液已經變質",
+    "cn": "死亡太久 - 血液已经变质"
+   },
+   "IGUI_Wounds_ALifeTellGroup": {
+    "en": "Tell them: their group is %s",
+    "ch": "告訴對方: 血型是 %s 型",
+    "cn": "告诉对方: 血型是 %s 型"
+   },
+   "IGUI_Wounds_ALifeThanks1": {
+    "en": "Thanks, I'll remember that.",
+    "ch": "謝了, 我會記住的.",
+    "cn": "谢了, 我会记住的."
+   },
+   "IGUI_Wounds_ALifeThanks2": {
+    "en": "Huh. Good to know.",
+    "ch": "喔. 這下知道了.",
+    "cn": "哦. 这下知道了."
+   },
+   "IGUI_Wounds_ALifeThanks3": {
+    "en": "So I had it wrong all this time.",
+    "ch": "原來我一直都記錯了.",
+    "cn": "原来我一直都记错了."
+   },
+   "IGUI_Wounds_ALifeTypeGroup": {
+    "en": "Type their blood (kit)",
+    "ch": "檢驗對方的血型 (套組)",
+    "cn": "检验对方的血型 (套件)"
+   },
+   "IGUI_Wounds_ALifeTypedGroup": {
+    "en": "group %s (typed)",
+    "ch": "血型 %s (已檢驗)",
+    "cn": "血型 %s (已检验)"
+   },
+   "IGUI_Wounds_ALifeWounded": {
+    "en": "(wounded)",
+    "ch": "(受傷)",
+    "cn": "(受伤)"
+   },
+   "IGUI_Wounds_ALifeYes1": {
+    "en": "Fine. Make it quick.",
+    "ch": "好吧. 快一點.",
+    "cn": "好吧. 快点."
+   },
+   "IGUI_Wounds_ALifeYes2": {
+    "en": "Take it, if it helps someone.",
+    "ch": "拿去吧, 如果能幫到別人的話.",
+    "cn": "拿去吧, 要是能帮到别人的话."
+   },
+   "IGUI_Wounds_ALifeYes3": {
+    "en": "Alright. Don't miss.",
+    "ch": "好吧. 別扎歪了.",
+    "cn": "好吧. 别扎偏了."
+   },
+   "IGUI_Wounds_BloodNoBag": {
+    "en": "Requires an empty blood bag",
+    "ch": "需要空的採血袋",
+    "cn": "需要空的采血袋"
+   },
+   "IGUI_Wounds_CheatBed": {
+    "en": "Dead tissue cut away (ready for a graft)",
+    "ch": "已切除壞死組織 (可植皮)",
+    "cn": "已切除坏死组织 (可植皮)"
+   },
+   "IGUI_Wounds_CheatBloodBags": {
+    "en": "Blood bags",
+    "ch": "採血袋",
+    "cn": "采血袋"
+   },
+   "IGUI_Wounds_CheatBloodClotted": {
+    "en": "Clotted (A+)",
+    "ch": "已凝結 (A+)",
+    "cn": "已凝结 (A+)"
+   },
+   "IGUI_Wounds_CheatBloodEmpty": {
+    "en": "Empty bag",
+    "ch": "空採血袋",
+    "cn": "空采血袋"
+   },
+   "IGUI_Wounds_CheatGraftDue": {
+    "en": "... the graft 3 days on",
+    "ch": "… 植皮經過 3 天",
+    "cn": "… 植皮经过 3 天"
+   },
+   "IGUI_Wounds_CheatRing": {
+    "en": "Deep burn all the way round",
+    "ch": "環繞一整圈的深度燒傷",
+    "cn": "环绕一整圈的深度烧伤"
+   },
+   "IGUI_Wounds_CheatRingLate": {
+    "en": "... the ring 2.5 hours on",
+    "ch": "… 環狀燒傷經過 2.5 小時",
+    "cn": "… 环状烧伤经过 2.5 小时"
+   },
+   "IGUI_Wounds_CheatScar": {
+    "en": "Healed deep burn (tight scar)",
+    "ch": "已癒合的深度燒傷 (緊繃的疤痕)",
+    "cn": "已愈合的深度烧伤 (紧绷的疤痕)"
+   },
+   "IGUI_Wounds_CheatSepsisUp": {
+    "en": "Sepsis +25",
+    "ch": "敗血症 +25",
+    "cn": "败血症 +25"
+   },
+   "IGUI_Wounds_CheatShape": {
+    "en": "Next shape, new place",
+    "ch": "換下一種形狀, 換個位置",
+    "cn": "换下一种形状, 换个位置"
+   },
+   "IGUI_AMU_InhibitorApply": {
+    "en": "Apply",
+    "ch": "套用",
+    "cn": "应用"
+   },
+   "IGUI_AMU_InhibitorEast": {
+    "en": "East",
+    "ch": "東",
+    "cn": "东"
+   },
+   "IGUI_AMU_InhibitorFloors": {
+    "en": "Floors",
+    "ch": "樓層",
+    "cn": "楼层"
+   },
+   "IGUI_AMU_InhibitorFloorsDown": {
+    "en": "Floors down",
+    "ch": "向下樓層數",
+    "cn": "向下楼层数"
+   },
+   "IGUI_AMU_InhibitorFloorsUp": {
+    "en": "Floors up",
+    "ch": "向上樓層數",
+    "cn": "向上楼层数"
+   },
+   "IGUI_AMU_InhibitorNoChanges": {
+    "en": "No changes",
+    "ch": "無變更",
+    "cn": "无更改"
+   },
+   "IGUI_AMU_InhibitorNorth": {
+    "en": "North",
+    "ch": "北",
+    "cn": "北"
+   },
+   "IGUI_AMU_InhibitorOff": {
+    "en": "Off",
+    "ch": "已關閉",
+    "cn": "已关闭"
+   },
+   "IGUI_AMU_InhibitorOn": {
+    "en": "On",
+    "ch": "已開啟",
+    "cn": "已开启"
+   },
+   "IGUI_AMU_InhibitorRange": {
+    "en": "Range",
+    "ch": "範圍",
+    "cn": "范围"
+   },
+   "IGUI_AMU_InhibitorSouth": {
+    "en": "South",
+    "ch": "南",
+    "cn": "南"
+   },
+   "IGUI_AMU_InhibitorStatus": {
+    "en": "Status",
+    "ch": "狀態",
+    "cn": "状态"
+   },
+   "IGUI_AMU_InhibitorTurnOff": {
+    "en": "Turn off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "IGUI_AMU_InhibitorTurnOn": {
+    "en": "Turn on",
+    "ch": "開啟",
+    "cn": "开启"
+   },
+   "IGUI_AMU_InhibitorWest": {
+    "en": "West",
+    "ch": "西",
+    "cn": "西"
+   },
+   "IGUI_AmmoMakerUnderfireAccDesc": {
+    "en": " <H1> ATTACHMENTS <BR> <TEXT> This is the Attachments section. <BR> <H2> DESCRIPTION <BR> <TEXT> <IMAGE:media/ui/icon.png> Ammo Maker, by merging with the Weapons Accessories mod, now adds various attachments for all firearms. <LINE> <IMAGE:media/ui/icon.png> Open and locked black and hi-tech cases have been added where attachments can be found inside. <BR> <H2> ATTACHMENTS <BR> <TEXT> <IMAGE:media/ui/icon.png> 2x, 4x, 8x, 20x, 40x Scopes. <LINE> <IMAGE:media/ui/icon.png> Silencers. <LINE> <IMAGE:media/ui/icon.png> Tactical flashlights. <LINE> <IMAGE:media/ui/icon.png> Lasers. <LINE> <IMAGE:media/ui/icon.png> Light Laser Combos. <LINE> <IMAGE:media/ui/icon.png> Recoil pads. <LINE> <IMAGE:media/ui/icon.png> Handguards. <LINE> <IMAGE:media/ui/icon.png> Unique Skins and much more!! <LINE> <IMAGECENTRE:AmAcc0.png> <BR> ",
+    "ch": " <H1> 配件 <BR> <TEXT> 這是配件章節. <BR> <H2> 說明 <BR> <TEXT> <IMAGE:media/ui/icon.png> Ammo Maker 與 Weapons Accessories 模組合併後, 現在為所有槍械新增了各種配件. <LINE> <IMAGE:media/ui/icon.png> 新增了黑色手提箱與 Hi-Tech 手提箱, 有開啟的也有上鎖的, 裡面可以找到配件. <BR> <H2> 配件 <BR> <TEXT> <IMAGE:media/ui/icon.png> 2 倍, 4 倍, 8 倍, 20 倍, 40 倍瞄準鏡. <LINE> <IMAGE:media/ui/icon.png> 消音器. <LINE> <IMAGE:media/ui/icon.png> 戰術手電筒. <LINE> <IMAGE:media/ui/icon.png> 雷射瞄準器. <LINE> <IMAGE:media/ui/icon.png> 雷射照明組合. <LINE> <IMAGE:media/ui/icon.png> 後座力緩衝墊. <LINE> <IMAGE:media/ui/icon.png> 護木. <LINE> <IMAGE:media/ui/icon.png> 獨特外觀, 以及更多內容!! <LINE> <IMAGECENTRE:AmAcc0.png> <BR> ",
+    "cn": " <H1> 配件 <BR> <TEXT> 这是配件章节. <BR> <H2> 说明 <BR> <TEXT> <IMAGE:media/ui/icon.png> Ammo Maker 与 Weapons Accessories 模组合并后, 现在为所有枪械新增了各种配件. <LINE> <IMAGE:media/ui/icon.png> 新增了黑色公文包与高科技公文包, 有打开的也有上锁的, 里面可以找到配件. <BR> <H2> 配件 <BR> <TEXT> <IMAGE:media/ui/icon.png> 2倍, 4倍, 8倍, 20倍, 40倍瞄准镜. <LINE> <IMAGE:media/ui/icon.png> 消音器. <LINE> <IMAGE:media/ui/icon.png> 战术手电筒. <LINE> <IMAGE:media/ui/icon.png> 激光. <LINE> <IMAGE:media/ui/icon.png> 激光灯组合. <LINE> <IMAGE:media/ui/icon.png> 缓冲垫. <LINE> <IMAGE:media/ui/icon.png> 护木. <LINE> <IMAGE:media/ui/icon.png> 独特皮肤, 以及更多内容!! <LINE> <IMAGECENTRE:AmAcc0.png> <BR> "
+   },
+   "IGUI_AmmoMakerUnderfireAccTitle": {
+    "en": "Accesories",
+    "ch": "配件",
+    "cn": "配件"
+   },
+   "IGUI_AmmoMakerUnderfireAmmoCreationDesc": {
+    "en": "<H1> RELOADING BENCH <BR> <TEXT> This is the Reloading Bench section. <BR> <H2> DESCRIPTION <BR> <TEXT> The reloading bench is the piece of furniture used to dismantle, craft ammunition, and dismantle firearms. <BR>  <BR> <H2> CRAFTING <BR> <TEXT> You can craft the reloading bench by having the Specialist Gunsmith profession or by reading the 'Reloading Benches' magazine; there are also VHS tapes that can teach you how to craft it. <LINE> Once the recipe is read, you unlock it in the construction recipe helper. <BR>  <BR> <H2> OPERATION <BR> <TEXT> Once built, and if you have level 0 in reloading, you can study its operation. <LINE> After practicing for the necessary time, you will raise your reloading level to 1 and unlock all its functionalities. <BR>  <BR> <H2> OTHER SPECIFICATIONS <BR> <TEXT> The reloading table can be destroyed like any other piece of furniture; it can also be dismantled or moved. <LINE> It has a capacity of 100 for each sector. <LINE> Remember that to interact with the reloading table, you must be positioned right next to it. <BR>  <BR> ",
+    "ch": "<H1> 彈藥復裝台 <BR> <TEXT> 這是彈藥復裝台章節. <BR> <H2> 說明 <BR> <TEXT> 彈藥復裝台是一件家具, 用來拆解與製作彈藥, 以及拆解槍械. <BR>  <BR> <H2> 製作 <BR> <TEXT> 具備彈藥專家職業, 或閱讀《彈藥復裝台》雜誌, 就能製作彈藥復裝台; 也有 VHS 錄影帶可以教你怎麼製作. <LINE> 讀過配方後, 就能在建造選單中解鎖它. <BR>  <BR> <H2> 操作方式 <BR> <TEXT> 建好後, 若你的軍械製作等級為 0, 可以研究它的操作方式. <LINE> 練習足夠的時間後, 你的軍械製作等級會提升到 1, 並解鎖它的所有功能. <BR>  <BR> <H2> 其他說明 <BR> <TEXT> 彈藥復裝台和其他家具一樣可以被摧毀, 也可以拆解或搬動. <LINE> 每個區塊的容量為 100. <LINE> 記得, 要與彈藥復裝台互動, 你必須站在它旁邊. <BR>  <BR> ",
+    "cn": "<H1> 装填台 <BR> <TEXT> 这是装填台章节. <BR> <H2> 说明 <BR> <TEXT> 装填台是一件家具, 用于拆解和制作弹药, 以及拆解枪械. <BR>  <BR> <H2> 制作 <BR> <TEXT> 拥有弹药专家职业, 或阅读《装填台》杂志, 即可制作装填台; 也有 VHS 录像带可以教你如何制作. <LINE> 读过配方后, 即可在建筑菜单中解锁它. <BR>  <BR> <H2> 操作方法 <BR> <TEXT> 建好后, 如果你的炮兵术等级为 0, 可以研究它的操作方法. <LINE> 练习足够的时间后, 你的炮兵术等级会提升到 1, 并解锁它的所有功能. <BR>  <BR> <H2> 其他说明 <BR> <TEXT> 装填台和其他家具一样可以被摧毁, 也可以拆解或搬动. <LINE> 每个区块的容量为 100. <LINE> 记住, 要与装填台互动, 你必须站在它旁边. <BR>  <BR> "
+   },
+   "IGUI_AmmoMakerUnderfireArtilleryDesc": {
+    "en": " <H1> ARTILLERY SKILL <BR> <TEXT> This is the Artillery skill section. <BR> <H2> HOW TO LEVEL UP ARTILLERY? <BR> <TEXT> <IMAGE:media/ui/icon.png> You can level up your Artillery skill by building and using a reloading bench. You can also watch VHS tapes about this skill. <LINE> <IMAGE:media/ui/icon.png> You can read Artillery books to apply multipliers. <BR> <IMAGECENTRE:AmArt2.png> <BR> <H2> WHAT DOES THE SKILL AFFECT? <BR> <TEXT> <IMAGE:media/ui/icon.png> The higher the Artillery level, the lower the crafting time for projectiles and cartridges. <LINE> <IMAGE:media/ui/icon.png> It is the skill that controls all ammunition crafting. <LINE> <IMAGE:media/ui/icon.png> With high Artillery levels, you will be able to craft higher caliber cartridges by reading their respective learning magazines. <LINE> <IMAGECENTRE:AmArt3.png> <BR> ",
+    "ch": " <H1> 軍械製作技能 <BR> <TEXT> 這是軍械製作技能章節. <BR> <H2> 如何提升軍械製作? <BR> <TEXT> <IMAGE:media/ui/icon.png> 建造並使用彈藥復裝台可以提升軍械製作技能. 你也可以觀看與這項技能有關的 VHS 錄影帶. <LINE> <IMAGE:media/ui/icon.png> 閱讀軍械製作書籍可以獲得經驗倍率加成. <BR> <IMAGECENTRE:AmArt2.png> <BR> <H2> 這項技能有什麼影響? <BR> <TEXT> <IMAGE:media/ui/icon.png> 軍械製作等級越高, 製作彈頭與子彈所需的時間越短. <LINE> <IMAGE:media/ui/icon.png> 這是掌管所有彈藥製作的技能. <LINE> <IMAGE:media/ui/icon.png> 軍械製作等級夠高時, 閱讀對應的學習雜誌就能製作更大口徑的子彈. <LINE> <IMAGECENTRE:AmArt3.png> <BR> ",
+    "cn": " <H1> 炮兵术技能 <BR> <TEXT> 这是炮兵术技能章节. <BR> <H2> 如何提升炮兵术? <BR> <TEXT> <IMAGE:media/ui/icon.png> 建造并使用装填台可以提升炮兵术技能. 你也可以观看与该技能相关的 VHS 录像带. <LINE> <IMAGE:media/ui/icon.png> 阅读炮兵术书籍可以获得经验倍率加成. <BR> <IMAGECENTRE:AmArt2.png> <BR> <H2> 该技能有什么影响? <BR> <TEXT> <IMAGE:media/ui/icon.png> 炮兵术等级越高, 制作弹头和子弹所需的时间越短. <LINE> <IMAGE:media/ui/icon.png> 这是控制所有弹药制作的技能. <LINE> <IMAGE:media/ui/icon.png> 炮兵术等级足够高时, 阅读相应的学习杂志即可制作更大口径的子弹. <LINE> <IMAGECENTRE:AmArt3.png> <BR> "
+   },
+   "IGUI_AmmoMakerUnderfireArtilleryTitle": {
+    "en": "Artillery Skill",
+    "ch": "軍械製作技能",
+    "cn": "炮兵术技能"
+   },
+   "IGUI_AmmoMakerUnderfireClothesDesc": {
+    "en": " <H1> CLOTHING <BR> <TEXT> This is the Clothing section.  <BR> <H2> DESCRIPTION <BR> <TEXT> <IMAGE:media/ui/icon.png> Ammo Maker Underfire adds different types of clothing. From bulletproof vests, masks, backpacks, and new ghillie-type outfits. <BR> <H2> NEW GHILLIE SUIT <BR> <IMAGECENTRE:AmC0.png> <LINE> <TEXT> <IMAGE:media/ui/icon.png> The new Ghillie suit provides better camouflage for multiplayer and, when linked with Le Gourmet Ultimate, it grants bonuses for the hunting system. <LINE> <IMAGE:media/ui/icon.png> It is composed of boots, gloves, suit, and backpack. <LINE> <IMAGE:media/ui/icon.png> The ghillie suit has the option to lower or raise the hood. <LINE> <IMAGECENTRE:AmC1.png> <BR>",
+    "ch": " <H1> 服裝 <BR> <TEXT> 這是服裝章節.  <BR> <H2> 說明 <BR> <TEXT> <IMAGE:media/ui/icon.png> Ammo Maker Underfire 新增了各種服裝, 包括防彈背心, 面罩, 背包, 以及新的吉利服類服裝. <BR> <H2> 新吉利服 <BR> <IMAGECENTRE:AmC0.png> <LINE> <TEXT> <IMAGE:media/ui/icon.png> 新的吉利服在多人遊戲中提供更好的偽裝, 並且在連動 Le Gourmet Ultimate 時, 可為狩獵系統提供加成. <LINE> <IMAGE:media/ui/icon.png> 它由靴子, 手套, 吉利服與背包組成. <LINE> <IMAGE:media/ui/icon.png> 吉利服可以放下或拉起兜帽. <LINE> <IMAGECENTRE:AmC1.png> <BR>",
+    "cn": " <H1> 服装 <BR> <TEXT> 这是服装章节.  <BR> <H2> 说明 <BR> <TEXT> <IMAGE:media/ui/icon.png> Ammo Maker Underfire 新增了各种服装, 包括防弹背心, 面罩, 背包, 以及新的吉利服类服装. <BR> <H2> 新吉利服 <BR> <IMAGECENTRE:AmC0.png> <LINE> <TEXT> <IMAGE:media/ui/icon.png> 新的吉利服在多人游戏中提供更好的伪装, 并且在联动 Le Gourmet Ultimate 时, 可为狩猎系统提供加成. <LINE> <IMAGE:media/ui/icon.png> 它由靴子, 手套, 吉利服和背包组成. <LINE> <IMAGE:media/ui/icon.png> 吉利服可以放下或拉起兜帽. <LINE> <IMAGECENTRE:AmC1.png> <BR>"
+   },
+   "IGUI_AmmoMakerUnderfireClothesTitle": {
+    "en": "Clothing",
+    "ch": "服裝",
+    "cn": "服装"
+   },
+   "IGUI_AmmoMakerUnderfireCraftAmmoDesc": {
+    "en": " <H1> CRAFT AMMUNITION <BR> <TEXT> This is the craft ammunition section. <BR> <H2> DESCRIPTION <BR> <TEXT> <IMAGE:media/ui/icon.png> This is the main goal of the mod: to be able to craft cartridges of all calibers. <BR> <IMAGECENTRE:AmFC1.png> <BR> <H2> OPERATION <BR> <TEXT> <IMAGE:media/ui/icon.png> To craft ammunition, you must read \"Ammunition\" magazines or have the Specialist Gunsmith profession. By right-clicking on the reloading table, you can access it from the context menu. You will need the following materials: <LINE> <IMAGE:AmFC2.png> <H2> Casings: <LINE> <TEXT> <IMAGE:media/ui/icon.png> They can be found on zombies, in gun stores, and various places where weapons usually appear. Also, if Ammo Maker is linked with the Le Gourmet Revolution mod, you will find casings with the metal detector while foraging. Remember that when firing firearms, casings also drop to the ground. If you are a Specialist Gunsmith, casings will appear directly in your inventory. <LINE> <IMAGE:AmFC3.png> <H2> Gunpowder: <LINE> <TEXT> <IMAGE:media/ui/icon.png> It can be found in gun stores and various places where weapons usually appear. The amount of gunpowder needed will vary depending on the caliber of ammunition to be crafted. <LINE> <IMAGE:AmFC4.png> <H2> Lead projectiles: <LINE> <TEXT> <IMAGE:media/ui/icon.png> They can be found in gun stores and various places where weapons usually appear. You can also craft them. See WORKING WITH LEAD. Also, if Ammo Maker is linked with the Le Gourmet Revolution mod, you will find lead projectiles with the metal detector while foraging. <BR> <H2> OTHER SPECIFICATIONS <BR> <TEXT> <IMAGE:media/ui/icon.png> You can place all the necessary materials inside the reloading table, and the system will detect the materials inside. <LINE> <IMAGE:media/ui/icon.png> If you are a Specialist Gunsmith, crafting ammunition will remove boredom and you will perform the actions in less time. <BR> ",
+    "ch": " <H1> 製作彈藥 <BR> <TEXT> 這是製作彈藥章節. <BR> <H2> 說明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 這是本模組的主要目標: 能夠製作所有口徑的子彈. <BR> <IMAGECENTRE:AmFC1.png> <BR> <H2> 操作方式 <BR> <TEXT> <IMAGE:media/ui/icon.png> 要製作彈藥, 你必須閱讀彈藥雜誌, 或具備彈藥專家職業. 在彈藥復裝台上按右鍵, 就能從右鍵選單使用這項功能. 你需要以下材料: <LINE> <IMAGE:AmFC2.png> <H2> 彈殼: <LINE> <TEXT> <IMAGE:media/ui/icon.png> 可以在殭屍身上, 槍械店, 以及各種常出現武器的地方找到. 此外, 若 Ammo Maker 與 Le Gourmet Revolution 模組連動, 搜尋時可以用金屬探測器找到彈殼. 記得, 開槍時彈殼也會掉到地上. 如果你是彈藥專家, 彈殼會直接出現在你的物品欄中. <LINE> <IMAGE:AmFC3.png> <H2> 火藥: <LINE> <TEXT> <IMAGE:media/ui/icon.png> 可以在槍械店以及各種常出現武器的地方找到. 所需的火藥量會依要製作的彈藥口徑而不同. <LINE> <IMAGE:AmFC4.png> <H2> 鉛彈頭: <LINE> <TEXT> <IMAGE:media/ui/icon.png> 可以在槍械店以及各種常出現武器的地方找到. 你也可以自己製作, 請見「鉛加工」. 此外, 若 Ammo Maker 與 Le Gourmet Revolution 模組連動, 搜尋時可以用金屬探測器找到鉛彈頭. <BR> <H2> 其他說明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 你可以把所有需要的材料放進彈藥復裝台裡, 系統會偵測裡面的材料. <LINE> <IMAGE:media/ui/icon.png> 如果你是彈藥專家, 製作彈藥會消除無聊, 而且你完成動作所需的時間更短. <BR> ",
+    "cn": " <H1> 制作弹药 <BR> <TEXT> 这是制作弹药章节. <BR> <H2> 说明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 这是本模组的主要目标: 能够制作所有口径的子弹. <BR> <IMAGECENTRE:AmFC1.png> <BR> <H2> 操作方法 <BR> <TEXT> <IMAGE:media/ui/icon.png> 要制作弹药, 你必须阅读《弹药杂志》, 或拥有弹药专家职业. 右键点击装填台, 即可从右键菜单使用该功能. 你需要以下材料: <LINE> <IMAGE:AmFC2.png> <H2> 弹壳: <LINE> <TEXT> <IMAGE:media/ui/icon.png> 可以在僵尸身上, 枪械店, 以及各种常出现武器的地方找到. 此外, 如果 Ammo Maker 与 Le Gourmet Revolution 模组联动, 搜寻时可以用金属探测器找到弹壳. 记住, 开枪时弹壳也会掉落到地上. 如果你是弹药专家, 弹壳会直接出现在你的物品栏中. <LINE> <IMAGE:AmFC3.png> <H2> 火药: <LINE> <TEXT> <IMAGE:media/ui/icon.png> 可以在枪械店以及各种常出现武器的地方找到. 所需的火药量会根据要制作的弹药口径而有所不同. <LINE> <IMAGE:AmFC4.png> <H2> 铅弹头: <LINE> <TEXT> <IMAGE:media/ui/icon.png> 可以在枪械店以及各种常出现武器的地方找到. 你也可以自己制作, 详见“铅加工”. 此外, 如果 Ammo Maker 与 Le Gourmet Revolution 模组联动, 搜寻时可以用金属探测器找到铅弹头. <BR> <H2> 其他说明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 你可以把所有需要的材料放进装填台里, 系统会检测里面的材料. <LINE> <IMAGE:media/ui/icon.png> 如果你是弹药专家, 制作弹药会消除无聊, 而且你完成动作所需的时间更短. <BR> "
+   },
+   "IGUI_AmmoMakerUnderfireCraftAmmoTitle": {
+    "en": "Craft Ammunition",
+    "ch": "製作彈藥",
+    "cn": "制作弹药"
+   },
+   "IGUI_AmmoMakerUnderfireDesc": {
+    "en": " <IMAGECENTRE:media/ui/SnakeManual/AmmoMakerUnderfire.png> <LINE> It arises from the merger of the mods Ammo Maker Reloaded, WPA, and Alice Backpacks from Build 41. <LINE> <LINE> This mod focuses on adding new firearms, clothing, weapon attachments, the ability to craft ammunition of different calibers, explosives, and the crafting of military-themed furniture, as well as adding new types of zombies that can carry items from this mod in their clothing. <LINE> <LINE> It also changes the models of all base game weapons, giving them more detail. <LINE> <LINE> The ammunition box icons have also been revamped. <LINE> <LINE> It adds a HUD to visualize the ammunition and the status of the attachments of the firearm being used. <LINE> <LINE> New traits, skills, and professions.",
+    "ch": " <IMAGECENTRE:media/ui/SnakeManual/AmmoMakerUnderfire.png> <LINE> 本模組由 Build 41 的 Ammo Maker Reloaded, WPA 與 Alice Backpacks 三個模組合併而成. <LINE> <LINE> 本模組著重於新增槍械, 服裝, 武器配件, 製作各種口徑彈藥的功能, 爆炸物, 以及製作軍事風格家具, 另外還新增了幾種殭屍, 牠們的衣服裡可能帶著本模組的物品. <LINE> <LINE> 本模組也更換了所有原版武器的模型, 讓細節更豐富. <LINE> <LINE> 彈藥盒圖示也重新設計了. <LINE> <LINE> 新增一個 HUD, 可以檢視手上槍械的彈藥與配件狀態. <LINE> <LINE> 新的特質, 技能與職業.",
+    "cn": " <IMAGECENTRE:media/ui/SnakeManual/AmmoMakerUnderfire.png> <LINE> 本模组由 Build 41 的 Ammo Maker Reloaded, WPA 和 Alice Backpacks 三个模组合并而成. <LINE> <LINE> 本模组着重于新增枪械, 服装, 武器配件, 制作各种口径弹药的功能, 爆炸物, 以及制作军事风格家具, 另外还新增了几种僵尸, 它们的衣服里可能带有本模组的物品. <LINE> <LINE> 本模组还更换了所有原版武器的模型, 使细节更加丰富. <LINE> <LINE> 弹药盒图标也重新设计了. <LINE> <LINE> 新增一个 HUD, 可以查看手中枪械的弹药和配件状态. <LINE> <LINE> 新的特质, 技能和职业."
+   },
+   "IGUI_AmmoMakerUnderfireDisassembleAmmoDesc": {
+    "en": " <H1> DISMANTLE AMMUNITION <BR> <TEXT> This is the disassemble ammunition section. <BR> <H2> DESCRIPTION <BR> <TEXT> <IMAGE:media/ui/icon.png> Ammunition dismantling is key for crafting cartridges, since by dismantling them we will gain Artillery XP and receive materials such as gunpowder, casings, and lead projectiles. <BR> <IMAGECENTRE:AmDM1.png> <BR> <H2> OPERATION <BR> <TEXT> <IMAGE:media/ui/icon.png> You can disassemble ammunition using base game recipes, but you will only get gunpowder and you won't gain Artillery XP. <LINE> <IMAGE:media/ui/icon.png> If you use the Reloading Table, you will get important materials for crafting any type of ammunition. <BR> <IMAGECENTRE:AmDM2.png> <BR> <H2> OTHER SPECIFICATIONS <BR> <TEXT> <IMAGE:media/ui/icon.png> To disassemble ammunition you won't need to learn any recipe; the reloading table already has the tool to dismantle each cartridge. <LINE> <IMAGE:media/ui/icon.png> The action of disassembling ammunition is automatic; you can store the cartridges in the reloading table and the system itself will automate the dismantling. <LINE> <IMAGE:media/ui/icon.png> Remember that in the recipe helper, under the Reloading section, you can pack casings, gunpowder, and lead projectiles to avoid having a large amount of scattered items and thus optimize the game. <BR> <IMAGECENTRE:AmDM3.png> <BR> ",
+    "ch": " <H1> 拆解彈藥 <BR> <TEXT> 這是拆解彈藥章節. <BR> <H2> 說明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 拆解彈藥是製作子彈的關鍵, 因為拆解子彈可以獲得軍械製作經驗, 並取得火藥, 彈殼與鉛彈頭等材料. <BR> <IMAGECENTRE:AmDM1.png> <BR> <H2> 操作方式 <BR> <TEXT> <IMAGE:media/ui/icon.png> 你可以用原版配方拆解彈藥, 但只會得到火藥, 也不會獲得軍械製作經驗. <LINE> <IMAGE:media/ui/icon.png> 如果使用彈藥復裝台, 就能取得製作各類彈藥的重要材料. <BR> <IMAGECENTRE:AmDM2.png> <BR> <H2> 其他說明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 拆解彈藥不需要學任何配方; 彈藥復裝台已經具備拆解每種子彈的工具. <LINE> <IMAGE:media/ui/icon.png> 拆解彈藥是自動進行的; 你可以把子彈存放在彈藥復裝台裡, 系統會自動拆解. <LINE> <IMAGE:media/ui/icon.png> 記得, 在配方介面的「裝填」分類中, 可以把彈殼, 火藥與鉛彈頭打包起來, 避免大量物品散落各處, 藉此提升遊戲效能. <BR> <IMAGECENTRE:AmDM3.png> <BR> ",
+    "cn": " <H1> 拆解弹药 <BR> <TEXT> 这是拆解弹药章节. <BR> <H2> 说明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 拆解弹药是制作子弹的关键, 因为拆解子弹可以获得炮兵术经验, 并获得火药, 弹壳和铅弹头等材料. <BR> <IMAGECENTRE:AmDM1.png> <BR> <H2> 操作方法 <BR> <TEXT> <IMAGE:media/ui/icon.png> 你可以用原版配方拆解弹药, 但只会得到火药, 也不会获得炮兵术经验. <LINE> <IMAGE:media/ui/icon.png> 如果使用装填台, 就能获得制作各类弹药的重要材料. <BR> <IMAGECENTRE:AmDM2.png> <BR> <H2> 其他说明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 拆解弹药不需要学习任何配方; 装填台已经具备拆解每种子弹的工具. <LINE> <IMAGE:media/ui/icon.png> 拆解弹药是自动进行的; 你可以把子弹存放在装填台里, 系统会自动拆解. <LINE> <IMAGE:media/ui/icon.png> 记住, 在配方界面的“装填”分类中, 可以把弹壳, 火药和铅弹头打包起来, 避免大量物品四处散落, 从而优化游戏性能. <BR> <IMAGECENTRE:AmDM3.png> <BR> "
+   },
+   "IGUI_AmmoMakerUnderfireDisassembleAmmoTitle": {
+    "en": "Dismantle Ammunition",
+    "ch": "拆解彈藥",
+    "cn": "拆解弹药"
+   },
+   "IGUI_AmmoMakerUnderfireDisassembleWeaponsDesc": {
+    "en": " <H1> DISASSEMBLE FIREARMS <BR> <TEXT> This is the Disassemble Firearms section. <BR> <H2> DESCRIPTION <BR> <TEXT> <IMAGE:media/ui/icon.png> First you must know how to dismantle weapons. To do this, you will need to read the 'Firearms' magazine. <LINE> <IMAGECENTRE:AmDAF3.png> <BR> <IMAGE:media/ui/icon.png> Disassemble firearms and obtain parts to perform better repairs, as well as to directly assemble a complete weapon. <BR> <IMAGECENTRE:AmDAF1.png> <BR> <H2> OPERATION <BR> <TEXT> <IMAGE:media/ui/icon.png> You can interact with the reloading table to disassemble firearms. They don't have to be completely broken. You will require a certain Artillery level to be able to dismantle them. <LINE> <IMAGE:media/ui/icon.png> Then, through another option on the reloading bench, you can use the obtained parts to assemble a new one. <BR> <IMAGECENTRE:AmDAF2.png> <BR> ",
+    "ch": " <H1> 拆解槍械 <BR> <TEXT> 這是拆解槍械章節. <BR> <H2> 說明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 首先你必須知道怎麼拆解武器. 為此, 你需要閱讀《槍械工作》雜誌. <LINE> <IMAGECENTRE:AmDAF3.png> <BR> <IMAGE:media/ui/icon.png> 拆解槍械可以取得零件, 用來進行更好的修理, 也能直接組裝出一把完整的武器. <BR> <IMAGECENTRE:AmDAF1.png> <BR> <H2> 操作方式 <BR> <TEXT> <IMAGE:media/ui/icon.png> 你可以和彈藥復裝台互動來拆解槍械. 槍械不必完全損壞. 你需要達到一定的軍械製作等級才能拆解. <LINE> <IMAGE:media/ui/icon.png> 接著透過彈藥復裝台的另一個選項, 就能用取得的零件組裝出一把新槍. <BR> <IMAGECENTRE:AmDAF2.png> <BR> ",
+    "cn": " <H1> 拆解枪械 <BR> <TEXT> 这是拆解枪械章节. <BR> <H2> 说明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 首先你必须知道如何拆解武器. 为此, 你需要阅读《枪械作业》杂志. <LINE> <IMAGECENTRE:AmDAF3.png> <BR> <IMAGE:media/ui/icon.png> 拆解枪械可以获得零件, 用来进行更好的维修, 也能直接组装出一把完整的武器. <BR> <IMAGECENTRE:AmDAF1.png> <BR> <H2> 操作方法 <BR> <TEXT> <IMAGE:media/ui/icon.png> 你可以与装填台互动来拆解枪械. 枪械不必完全损坏. 你需要达到一定的炮兵术等级才能拆解. <LINE> <IMAGE:media/ui/icon.png> 然后通过装填台的另一个选项, 就能用获得的零件组装出一把新枪. <BR> <IMAGECENTRE:AmDAF2.png> <BR> "
+   },
+   "IGUI_AmmoMakerUnderfireDisassembleWeaponsTitle": {
+    "en": "Disassemble Firearms",
+    "ch": "拆解槍械",
+    "cn": "拆解枪械"
+   },
+   "IGUI_AmmoMakerUnderfireExplosivesDesc": {
+    "en": " <H1> EXPLOSIVES <BR> <TEXT> This is the Explosives section. <BR> <H2> DESCRIPTION <BR> <TEXT> <IMAGE:media/ui/icon.png> Now you will be able to deal with zombies using certain explosives such as grenades or C4. <LINE> <IMAGE:media/ui/icon.png> You can find explosives in military zones or on special 'Artillery' zombies. <LINE> <IMAGECENTRE:AmExpl0.png> <BR> <H2> GRENADES <BR> <TEXT> <IMAGE:media/ui/icon.png> Grenades have an explosion radius of approximately 7 to 9 tiles depending on the type of grenade. <LINE> <IMAGE:media/ui/icon.png> They can be thrown through windows and even tossed to an upper floor. <LINE> <IMAGE:media/ui/icon.png> Remember that if you throw them poorly they can bounce and explode near you, causing serious injuries. <LINE> <IMAGE:media/ui/icon.png> The shockwave can break glass and even damage vehicles. <LINE> <IMAGE:media/ui/icon.png> For now they cannot be crafted, but in the future an artillery update will be made to the modpack where it will be enabled. <LINE> <IMAGECENTRE:AmExpl1.png> <BR> <H2> C4 Plastic Explosive <BR> <TEXT> <IMAGE:media/ui/icon.png> The C4 explosive has an explosion radius of 4 tiles and can destroy ceilings and floors. <LINE> <IMAGE:media/ui/icon.png> They can destroy furniture, walls, damage vehicles, kill zombies, animals, and even kill you if you are near the radius. <LINE> <IMAGE:media/ui/icon.png> Explosives need a detonator and must be paired in frequency. <LINE> <IMAGE:media/ui/icon.png> You can place the explosive on the ground and through the right-click menu you can assign its frequency. <LINE> <IMAGE:media/ui/icon.png> Also through the radial menu, if you have the detonator in your hand, you can control the pairing and detonation of the explosive. <LINE> <IMAGE:media/ui/icon.png> Remember that the detonator has a valid radius for detonation. <LINE> <IMAGE:media/ui/icon.png> There are signal jammers that interfere with the signal from the detonator to the explosive. <LINE> <IMAGECENTRE:AmExpl3.png> <BR>",
+    "ch": " <H1> 爆炸物 <BR> <TEXT> 這是爆炸物章節. <BR> <H2> 說明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 現在你可以用手榴彈或 C4 等特定爆炸物對付殭屍了. <LINE> <IMAGE:media/ui/icon.png> 你可以在軍事區域, 或特殊的「炮兵」殭屍身上找到爆炸物. <LINE> <IMAGECENTRE:AmExpl0.png> <BR> <H2> 手榴彈 <BR> <TEXT> <IMAGE:media/ui/icon.png> 手榴彈的爆炸半徑約為 7 到 9 格, 依手榴彈種類而定. <LINE> <IMAGE:media/ui/icon.png> 手榴彈可以從窗戶丟出去, 甚至能丟到上一層樓. <LINE> <IMAGE:media/ui/icon.png> 記得, 如果丟得不好, 手榴彈可能會反彈並在你附近爆炸, 造成重傷. <LINE> <IMAGE:media/ui/icon.png> 衝擊波可以震碎玻璃, 甚至損壞車輛. <LINE> <IMAGE:media/ui/icon.png> 目前還無法製作, 但未來模組包會推出一次軍械更新來開放製作. <LINE> <IMAGECENTRE:AmExpl1.png> <BR> <H2> C4 塑膠炸藥 <BR> <TEXT> <IMAGE:media/ui/icon.png> C4 炸藥的爆炸半徑為 4 格, 可以摧毀天花板與地板. <LINE> <IMAGE:media/ui/icon.png> 它能摧毀家具, 牆壁, 損壞車輛, 殺死殭屍與動物, 如果你在半徑內, 甚至會把你炸死. <LINE> <IMAGE:media/ui/icon.png> 炸藥需要起爆器, 而且必須配對頻率. <LINE> <IMAGE:media/ui/icon.png> 你可以把炸藥放在地上, 再透過右鍵選單設定它的頻率. <LINE> <IMAGE:media/ui/icon.png> 另外, 手上拿著起爆器時, 也可以透過徑向選單控制炸藥的配對與引爆. <LINE> <IMAGE:media/ui/icon.png> 記得, 起爆器有有效的引爆半徑. <LINE> <IMAGE:media/ui/icon.png> 有些訊號干擾器會干擾起爆器傳給炸藥的訊號. <LINE> <IMAGECENTRE:AmExpl3.png> <BR>",
+    "cn": " <H1> 爆炸物 <BR> <TEXT> 这是爆炸物章节. <BR> <H2> 说明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 现在你可以用手雷或 C4 等特定爆炸物对付僵尸了. <LINE> <IMAGE:media/ui/icon.png> 你可以在军事区域, 或特殊的“炮兵”僵尸身上找到爆炸物. <LINE> <IMAGECENTRE:AmExpl0.png> <BR> <H2> 手雷 <BR> <TEXT> <IMAGE:media/ui/icon.png> 手雷的爆炸半径约为 7 到 9 格, 具体取决于手雷类型. <LINE> <IMAGE:media/ui/icon.png> 手雷可以从窗户扔出去, 甚至能扔到上一层楼. <LINE> <IMAGE:media/ui/icon.png> 记住, 如果扔得不好, 手雷可能会反弹并在你附近爆炸, 造成重伤. <LINE> <IMAGE:media/ui/icon.png> 冲击波可以震碎玻璃, 甚至损坏车辆. <LINE> <IMAGE:media/ui/icon.png> 目前还无法制作, 但将来模组包会推出一次军械更新来开放制作. <LINE> <IMAGECENTRE:AmExpl1.png> <BR> <H2> C4塑胶炸药 <BR> <TEXT> <IMAGE:media/ui/icon.png> C4炸药的爆炸半径为 4 格, 可以摧毁天花板和地板. <LINE> <IMAGE:media/ui/icon.png> 它能摧毁家具, 墙壁, 损坏车辆, 杀死僵尸和动物, 如果你在半径内, 甚至会把你炸死. <LINE> <IMAGE:media/ui/icon.png> 炸药需要引爆器, 并且必须配对频率. <LINE> <IMAGE:media/ui/icon.png> 你可以把炸药放在地上, 再通过右键菜单设置它的频率. <LINE> <IMAGE:media/ui/icon.png> 此外, 手中拿着引爆器时, 也可以通过环形菜单控制炸药的配对和引爆. <LINE> <IMAGE:media/ui/icon.png> 记住, 引爆器有有效的引爆半径. <LINE> <IMAGE:media/ui/icon.png> 有些信号干扰器会干扰引爆器发往炸药的信号. <LINE> <IMAGECENTRE:AmExpl3.png> <BR>"
+   },
+   "IGUI_AmmoMakerUnderfireExplosivesTitle": {
+    "en": "Explosives",
+    "ch": "爆炸物",
+    "cn": "爆炸物"
+   },
+   "IGUI_AmmoMakerUnderfireFirearmsDesc": {
+    "en": " <H1> NEW FIREARMS <BR> <TEXT> This is the Disassemble Firearms section. <BR> <H2> DESCRIPTION <BR> <TEXT> <IMAGE:media/ui/icon.png> Ammo Maker Underfire adds a wide arsenal of new firearms to expand combat and survival options. <LINE> <IMAGECENTRE:AmMW0.png> <BR> <H2> MACHINE GUNS <BR> <TEXT> <IMAGE:media/ui/icon.png> M249 - Light machine gun. <LINE> <IMAGE:media/ui/icon.png> M60 - Machine gun. <LINE> <IMAGECENTRE:AmMW1.png> <BR> <H2> SHOTGUNS <BR> <TEXT> <IMAGE:media/ui/icon.png> SPAS-12 - Shotgun available in folded and unfolded configurations. <LINE> <IMAGECENTRE:AmMW2.png> <BR> <H2> RIFLES <BR> <TEXT> <IMAGE:media/ui/icon.png> FN-FAL - Battle rifle. <LINE> <IMAGE:media/ui/icon.png> AK-47 - Assault rifle. <LINE> <IMAGECENTRE:AmMW3.png> <BR> <H2> SNIPER RIFLES <BR> <TEXT> <IMAGE:media/ui/icon.png> M82 - Anti-materiel rifle. <LINE> <IMAGE:media/ui/icon.png> Dragunov SVD - Sniper rifle. <LINE> <IMAGE:media/ui/icon.png> M24 - Sniper rifle. <LINE> <IMAGE:media/ui/icon.png> M24 Camo - Camouflaged variant of the M24. <LINE> <IMAGECENTRE:AmMW4.png> <BR> <H2> SUBMACHINE GUNS <BR> <TEXT> <IMAGE:media/ui/icon.png> FN-P90 - Submachine gun. <LINE> <IMAGE:media/ui/icon.png> MP5 - Submachine gun. <LINE> <IMAGE:media/ui/icon.png> Tommy Gun - Submachine gun. <LINE> <IMAGECENTRE:AmMW5.png> <BR> <H2> ATTACHMENTS AND CONFIGURATIONS <BR> <TEXT> <IMAGE:media/ui/icon.png> Some of the weapons may have different configurations or attachments that allow adapting their operation to the player's needs. <LINE> <IMAGE:media/ui/icon.png> Some heavy firearms can cause damage and fractures to the player if they do not have the required training. <LINE> <IMAGE:media/ui/icon.png> You can level up the Fitness and Strength skills to be able to fire these weapons without complications. <LINE> <IMAGE:media/ui/icon.png> There is a trait called 'Military Training' (the Veteran profession includes it) that lowers the heavy weapon requirements to Fitness 5 and Strength 5. <LINE> <IMAGE:media/ui/icon.png> Locked military cases have been added. These can be opened with their respective keys. <BR>",
+    "ch": " <H1> 新槍械 <BR> <TEXT> 這是拆解槍械章節. <BR> <H2> 說明 <BR> <TEXT> <IMAGE:media/ui/icon.png> Ammo Maker Underfire 新增了大量新槍械, 擴展戰鬥與生存的選擇. <LINE> <IMAGECENTRE:AmMW0.png> <BR> <H2> 機槍 <BR> <TEXT> <IMAGE:media/ui/icon.png> M249 - 輕機槍. <LINE> <IMAGE:media/ui/icon.png> M60 - 機槍. <LINE> <IMAGECENTRE:AmMW1.png> <BR> <H2> 霰彈槍 <BR> <TEXT> <IMAGE:media/ui/icon.png> SPAS-12 - 霰彈槍, 有摺疊與展開兩種形態. <LINE> <IMAGECENTRE:AmMW2.png> <BR> <H2> 步槍 <BR> <TEXT> <IMAGE:media/ui/icon.png> FN-FAL - 戰鬥步槍. <LINE> <IMAGE:media/ui/icon.png> AK-47 - 突擊步槍. <LINE> <IMAGECENTRE:AmMW3.png> <BR> <H2> 狙擊步槍 <BR> <TEXT> <IMAGE:media/ui/icon.png> M82 - 反器材步槍. <LINE> <IMAGE:media/ui/icon.png> 德拉貢諾夫 SVD - 狙擊步槍. <LINE> <IMAGE:media/ui/icon.png> M24 - 狙擊步槍. <LINE> <IMAGE:media/ui/icon.png> M24 迷彩版 - M24 的迷彩塗裝版本. <LINE> <IMAGECENTRE:AmMW4.png> <BR> <H2> 衝鋒槍 <BR> <TEXT> <IMAGE:media/ui/icon.png> FN-P90 - 衝鋒槍. <LINE> <IMAGE:media/ui/icon.png> MP5 - 衝鋒槍. <LINE> <IMAGE:media/ui/icon.png> 湯普森衝鋒槍 - 衝鋒槍. <LINE> <IMAGECENTRE:AmMW5.png> <BR> <H2> 配件與形態 <BR> <TEXT> <IMAGE:media/ui/icon.png> 部分武器有不同的形態或配件, 可以依玩家需求調整其運作方式. <LINE> <IMAGE:media/ui/icon.png> 部分重型槍械在玩家沒有受過必要訓練時, 可能對玩家造成傷害與骨折. <LINE> <IMAGE:media/ui/icon.png> 你可以提升體格與力量技能, 就能順利使用這些武器射擊. <LINE> <IMAGE:media/ui/icon.png> 有個名為「軍事訓練」的特質 (退伍軍人職業內建), 會把重型武器的需求降為體格 5 與力量 5. <LINE> <IMAGE:media/ui/icon.png> 新增了上鎖的軍用箱, 可以用對應的鑰匙打開. <BR>",
+    "cn": " <H1> 新枪械 <BR> <TEXT> 这是拆解枪械章节. <BR> <H2> 说明 <BR> <TEXT> <IMAGE:media/ui/icon.png> Ammo Maker Underfire 新增了大量新枪械, 扩展战斗和生存的选择. <LINE> <IMAGECENTRE:AmMW0.png> <BR> <H2> 机枪 <BR> <TEXT> <IMAGE:media/ui/icon.png> M249 - 轻机枪. <LINE> <IMAGE:media/ui/icon.png> M60 - 机枪. <LINE> <IMAGECENTRE:AmMW1.png> <BR> <H2> 霰弹枪 <BR> <TEXT> <IMAGE:media/ui/icon.png> SPAS-12 - 霰弹枪, 有折叠和展开两种形态. <LINE> <IMAGECENTRE:AmMW2.png> <BR> <H2> 步枪 <BR> <TEXT> <IMAGE:media/ui/icon.png> FN-FAL - 战斗步枪. <LINE> <IMAGE:media/ui/icon.png> AK-47 - 突击步枪. <LINE> <IMAGECENTRE:AmMW3.png> <BR> <H2> 狙击步枪 <BR> <TEXT> <IMAGE:media/ui/icon.png> M82 - 反器材步枪. <LINE> <IMAGE:media/ui/icon.png> 德拉贡诺夫SVD - 狙击步枪. <LINE> <IMAGE:media/ui/icon.png> M24 - 狙击步枪. <LINE> <IMAGE:media/ui/icon.png> M24迷彩版 - M24的迷彩涂装版本. <LINE> <IMAGECENTRE:AmMW4.png> <BR> <H2> 冲锋枪 <BR> <TEXT> <IMAGE:media/ui/icon.png> FN-P90 - 冲锋枪. <LINE> <IMAGE:media/ui/icon.png> MP5 - 冲锋枪. <LINE> <IMAGE:media/ui/icon.png> 汤普森冲锋枪 - 冲锋枪. <LINE> <IMAGECENTRE:AmMW5.png> <BR> <H2> 配件与形态 <BR> <TEXT> <IMAGE:media/ui/icon.png> 部分武器有不同的形态或配件, 可以根据玩家需求调整其运作方式. <LINE> <IMAGE:media/ui/icon.png> 部分重型枪械在玩家没有受过必要训练时, 可能对玩家造成伤害和骨折. <LINE> <IMAGE:media/ui/icon.png> 你可以提升体格和力量技能, 就能顺利使用这些武器射击. <LINE> <IMAGE:media/ui/icon.png> 有个名为“军事训练”的特质 (退伍军人职业自带), 会将重型武器的需求降低到体格 5 和力量 5. <LINE> <IMAGE:media/ui/icon.png> 新增了上锁的军用箱, 可以用相应的钥匙打开. <BR>"
+   },
+   "IGUI_AmmoMakerUnderfireFirearmsTitle": {
+    "en": "New Firearms",
+    "ch": "新槍械",
+    "cn": "新枪械"
+   },
+   "IGUI_AmmoMakerUnderfireHudDesc": {
+    "en": " <H1> HUD <BR> <TEXT> This is the HUD section. <BR> <H2> DESCRIPTION <BR> <TEXT> <IMAGE:media/ui/icon.png> New HUD that allows the visualization of different aspects of the firearm held in the primary hand. <LINE> <IMAGE:media/ui/icon.png> The HUD consists of: <LINE> <IMAGE:media/ui/icon.png> Weapon image. <LINE> <IMAGE:media/ui/icon.png> Type of ammunition used. <LINE> <IMAGE:media/ui/icon.png> Firing mode. <LINE> <IMAGE:media/ui/icon.png> Ammunition amount. <LINE> <IMAGE:media/ui/icon.png> Equipped attachments such as silencers or flashlights and their condition/battery. <LINE> <IMAGE:media/ui/icon.png> Base tooltip display button. <LINE> <IMAGE:media/ui/icon.png> Magazine <LINE> <IMAGE:media/ui/icon.png> The use of the HUD can be enabled or disabled in the open world options. <LINE> <IMAGE:media/ui/icon.png> It can be enabled or disabled in the options menu, as well as changing its size and image resolution. <LINE> <IMAGECENTRE:AmHud0.png> <BR>",
+    "ch": " <H1> HUD <BR> <TEXT> 這是 HUD 章節. <BR> <H2> 說明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 新的 HUD 可以檢視主手所持槍械的各項資訊. <LINE> <IMAGE:media/ui/icon.png> HUD 包含: <LINE> <IMAGE:media/ui/icon.png> 武器圖像. <LINE> <IMAGE:media/ui/icon.png> 使用的彈藥類型. <LINE> <IMAGE:media/ui/icon.png> 射擊模式. <LINE> <IMAGE:media/ui/icon.png> 彈藥數量. <LINE> <IMAGE:media/ui/icon.png> 已裝備的配件, 例如消音器或手電筒, 以及它們的狀態/電量. <LINE> <IMAGE:media/ui/icon.png> 原版提示框顯示按鈕. <LINE> <IMAGE:media/ui/icon.png> 彈匣 <LINE> <IMAGE:media/ui/icon.png> HUD 可以在沙盒選項中啟用或停用. <LINE> <IMAGE:media/ui/icon.png> 也可以在選項選單中啟用或停用, 並調整它的大小與圖像解析度. <LINE> <IMAGECENTRE:AmHud0.png> <BR>",
+    "cn": " <H1> HUD <BR> <TEXT> 这是 HUD 章节. <BR> <H2> 说明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 新的 HUD 可以查看主手所持枪械的各项信息. <LINE> <IMAGE:media/ui/icon.png> HUD 包含: <LINE> <IMAGE:media/ui/icon.png> 武器图像. <LINE> <IMAGE:media/ui/icon.png> 使用的弹药类型. <LINE> <IMAGE:media/ui/icon.png> 射击模式. <LINE> <IMAGE:media/ui/icon.png> 弹药数量. <LINE> <IMAGE:media/ui/icon.png> 已装备的配件, 例如消音器或手电筒, 以及它们的状态/电量. <LINE> <IMAGE:media/ui/icon.png> 原版提示框显示按钮. <LINE> <IMAGE:media/ui/icon.png> 弹匣 <LINE> <IMAGE:media/ui/icon.png> HUD 可以在沙盒选项中启用或禁用. <LINE> <IMAGE:media/ui/icon.png> 也可以在选项菜单中启用或禁用, 并调整它的大小和图像分辨率. <LINE> <IMAGECENTRE:AmHud0.png> <BR>"
+   },
+   "IGUI_AmmoMakerUnderfireHudTitle": {
+    "en": "Hud",
+    "ch": "HUD",
+    "cn": "HUD"
+   },
+   "IGUI_AmmoMakerUnderfireLeadWorkDesc": {
+    "en": " <H1> WORKING WITH LEAD <BR> <TEXT> This is the working with lead section. <BR> <H2> DESCRIPTION <BR> <TEXT> <IMAGE:media/ui/icon.png> It is a very useful mechanic to transform lead into various projectiles of different calibers. <LINE> <IMAGE:media/ui/icon.png> Projectiles are one of the necessary materials for crafting cartridges. <BR> <IMAGECENTRE:AmPl1.png> <BR> <H2> OPERATION <BR> <TEXT> <IMAGE:media/ui/icon.png> Right-click on the side of the reloading table where the lead burner is visually located. <LINE> <IMAGE:media/ui/icon.png> You will have the option to load the table with a propane tank using a wrench, as well as options to melt and craft projectiles. <BR> <IMAGECENTRE:AmPl2.png> <BR> <H2> HOW TO FIND LEAD? <BR> <TEXT> <IMAGE:media/ui/icon.png> Lead can appear in hardware stores, on zombies, and you can get a lot of it by dismantling ammunition cartridges, as well as by breaking lead pipes. <LINE> <IMAGE:media/ui/icon.png> Also, if Ammo Maker is linked with the Le Gourmet Ultimate mod, you will find lead with the metal detector while foraging. <BR> <IMAGECENTRE:AmPl3.png> <BR> <H2> MELTING LEAD <BR> <TEXT> <IMAGE:media/ui/icon.png> You will need to learn how to work with lead. You can learn by reading the necessary magazine, 'Lead Works' magazine, or through a trait/profession. <LINE> <IMAGE:media/ui/icon.png> You will need a saucepan, to have loaded the lead burner with the gas cylinder, and a mask to protect yourself from the gases emitted by the action (Optional). <LINE> <IMAGE:media/ui/icon.png> You can melt projectiles of different calibers and then, with that melted lead, craft projectiles of other calibers. <BR> <IMAGECENTRE:AmPl4.png> <BR> <H2> CRAFTING LEAD PROJECTILES <BR> <TEXT> <IMAGE:media/ui/icon.png> To craft the lead projectiles, you will need to read the specific magazine for the caliber you want to craft. <LINE> <IMAGE:media/ui/icon.png> The magazine also teaches how to craft the full cartridge. <LINE> <IMAGE:media/ui/icon.png> You will need a saucepan with melted lead and mold pliers with the mold of the desired caliber screwed onto them. It requires a screwdriver and two screws. <LINE> <IMAGE:media/ui/icon.png> You can also remove the screws and attach another mold of a different caliber. <LINE> <IMAGECENTRE:AmPl5.png> <BR> ",
+    "ch": " <H1> 鉛加工 <BR> <TEXT> 這是鉛加工章節. <BR> <H2> 說明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 這是非常實用的機制, 可以把鉛加工成各種不同口徑的彈頭. <LINE> <IMAGE:media/ui/icon.png> 彈頭是製作子彈的必要材料之一. <BR> <IMAGECENTRE:AmPl1.png> <BR> <H2> 操作方式 <BR> <TEXT> <IMAGE:media/ui/icon.png> 在彈藥復裝台上熔鉛爐所在的那一側按右鍵. <LINE> <IMAGE:media/ui/icon.png> 你可以選擇用扳手為復裝台裝上丙烷罐, 也有熔化與製作彈頭的選項. <BR> <IMAGECENTRE:AmPl2.png> <BR> <H2> 如何取得鉛? <BR> <TEXT> <IMAGE:media/ui/icon.png> 鉛可能出現在五金行和殭屍身上, 拆解子彈也能取得大量的鉛, 打破鉛管同樣可以. <LINE> <IMAGE:media/ui/icon.png> 此外, 若 Ammo Maker 與 Le Gourmet Ultimate 模組連動, 搜尋時可以用金屬探測器找到鉛. <BR> <IMAGECENTRE:AmPl3.png> <BR> <H2> 熔化鉛 <BR> <TEXT> <IMAGE:media/ui/icon.png> 你需要先學會如何加工鉛. 你可以閱讀必要的雜誌《鉛加工》, 或透過特質/職業學會. <LINE> <IMAGE:media/ui/icon.png> 你需要一個平底煮鍋, 熔鉛爐要先裝上丙烷罐, 另外可準備面罩, 保護自己不吸入這個動作產生的氣體 (選用). <LINE> <IMAGE:media/ui/icon.png> 你可以把不同口徑的彈頭熔掉, 再用熔化的鉛製作其他口徑的彈頭. <BR> <IMAGECENTRE:AmPl4.png> <BR> <H2> 製作鉛彈頭 <BR> <TEXT> <IMAGE:media/ui/icon.png> 要製作鉛彈頭, 你需要閱讀想製作的口徑專屬的雜誌. <LINE> <IMAGE:media/ui/icon.png> 這本雜誌也會教你如何製作完整的子彈. <LINE> <IMAGE:media/ui/icon.png> 你需要一個裝有熔化的鉛的平底煮鍋, 以及已用螺絲固定所需口徑彈頭模具的模具鉗. 這需要一把螺絲起子與兩顆螺絲. <LINE> <IMAGE:media/ui/icon.png> 你也可以拆下螺絲, 換裝另一個不同口徑的模具. <LINE> <IMAGECENTRE:AmPl5.png> <BR> ",
+    "cn": " <H1> 铅加工 <BR> <TEXT> 这是铅加工章节. <BR> <H2> 说明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 这是非常实用的机制, 可以把铅加工成各种不同口径的弹头. <LINE> <IMAGE:media/ui/icon.png> 弹头是制作子弹的必要材料之一. <BR> <IMAGECENTRE:AmPl1.png> <BR> <H2> 操作方法 <BR> <TEXT> <IMAGE:media/ui/icon.png> 右键点击装填台上铅熔炉所在的那一侧. <LINE> <IMAGE:media/ui/icon.png> 你可以选择用扳手为装填台装上丙烷罐, 也有熔化和制作弹头的选项. <BR> <IMAGECENTRE:AmPl2.png> <BR> <H2> 如何获得铅? <BR> <TEXT> <IMAGE:media/ui/icon.png> 铅可能出现在五金店和僵尸身上, 拆解子弹也能获得大量的铅, 打破铅管同样可以. <LINE> <IMAGE:media/ui/icon.png> 此外, 如果 Ammo Maker 与 Le Gourmet Ultimate 模组联动, 搜寻时可以用金属探测器找到铅. <BR> <IMAGECENTRE:AmPl3.png> <BR> <H2> 熔化铅 <BR> <TEXT> <IMAGE:media/ui/icon.png> 你需要先学会如何加工铅. 你可以阅读必要的杂志《铅工艺》, 或通过特质/职业学会. <LINE> <IMAGE:media/ui/icon.png> 你需要一个平底煮锅, 铅熔炉要先装上丙烷罐, 另外可准备面罩, 保护自己不吸入该动作产生的气体 (可选). <LINE> <IMAGE:media/ui/icon.png> 你可以把不同口径的弹头熔化, 再用熔化的铅制作其他口径的弹头. <BR> <IMAGECENTRE:AmPl4.png> <BR> <H2> 制作铅弹头 <BR> <TEXT> <IMAGE:media/ui/icon.png> 要制作铅弹头, 你需要阅读想制作的口径专属的杂志. <LINE> <IMAGE:media/ui/icon.png> 这本杂志也会教你如何制作完整的子弹. <LINE> <IMAGE:media/ui/icon.png> 你需要一个装有熔铅的平底煮锅, 以及已用螺丝固定所需口径弹头模具的模具钳. 这需要一把螺丝刀和两颗螺丝. <LINE> <IMAGE:media/ui/icon.png> 你也可以拆下螺丝, 换装另一个不同口径的模具. <LINE> <IMAGECENTRE:AmPl5.png> <BR> "
+   },
+   "IGUI_AmmoMakerUnderfireLeadWorkTitle": {
+    "en": "Working with lead",
+    "ch": "鉛加工",
+    "cn": "铅加工"
+   },
+   "IGUI_AmmoMakerUnderfireReloadBenchDesc": {
+    "en": " <H1> RELOADING BENCH <BR> <TEXT> This is the Reloading Bench section. <BR> <H2> DESCRIPTION <BR> <TEXT> <IMAGE:media/ui/icon.png> The reloading bench is the piece of furniture used to dismantle ammunition, craft ammunition, and dismantle firearms. <BR> <IMAGECENTRE:AmBR1a.png> <BR> <H2> CRAFTING <BR> <TEXT> <IMAGE:media/ui/icon.png> You can craft the reloading bench by having the Specialist Gunsmith profession or by reading the 'Reloading Benches' magazine. There are also VHS tapes that can teach you how to craft it. <LINE> <IMAGE:media/ui/icon.png> Once the recipe is read, you can access the building recipe helper and you will have it unlocked. <BR> <IMAGECENTRE:AmBR1.png> <BR> <H2> OPERATION <BR> <TEXT> <IMAGE:media/ui/icon.png> Once built, and if you have level 0 in Artillery, you can study its operation. <LINE> <IMAGE:media/ui/icon.png> After practicing for the necessary time, you will raise your Artillery level to 1 and unlock all its functionalities. <BR> <IMAGECENTRE:AmBR2.png> <BR> <H2> OTHER SPECIFICATIONS <BR> <TEXT> <IMAGE:media/ui/icon.png> The reloading table can be destroyed like any other piece of furniture; it can also be dismantled or moved. <LINE> <IMAGE:media/ui/icon.png> It has a capacity of 100 for each sector. <LINE> <IMAGE:media/ui/icon.png> Remember that to interact with the reloading table, you must be positioned right next to it. <BR> <IMAGECENTRE:AmBR3.png> <BR> ",
+    "ch": " <H1> 彈藥復裝台 <BR> <TEXT> 這是彈藥復裝台章節. <BR> <H2> 說明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 彈藥復裝台是一件家具, 用來拆解彈藥, 製作彈藥, 以及拆解槍械. <BR> <IMAGECENTRE:AmBR1a.png> <BR> <H2> 製作 <BR> <TEXT> <IMAGE:media/ui/icon.png> 具備彈藥專家職業, 或閱讀《彈藥復裝台》雜誌, 就能製作彈藥復裝台. 也有 VHS 錄影帶可以教你怎麼製作. <LINE> <IMAGE:media/ui/icon.png> 讀過配方後, 就能在建造選單中找到它, 而且已經解鎖. <BR> <IMAGECENTRE:AmBR1.png> <BR> <H2> 操作方式 <BR> <TEXT> <IMAGE:media/ui/icon.png> 建好後, 若你的軍械製作等級為 0, 可以研究它的操作方式. <LINE> <IMAGE:media/ui/icon.png> 練習足夠的時間後, 你的軍械製作等級會提升到 1, 並解鎖它的所有功能. <BR> <IMAGECENTRE:AmBR2.png> <BR> <H2> 其他說明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 彈藥復裝台和其他家具一樣可以被摧毀, 也可以拆解或搬動. <LINE> <IMAGE:media/ui/icon.png> 每個區塊的容量為 100. <LINE> <IMAGE:media/ui/icon.png> 記得, 要與彈藥復裝台互動, 你必須站在它旁邊. <BR> <IMAGECENTRE:AmBR3.png> <BR> ",
+    "cn": " <H1> 装填台 <BR> <TEXT> 这是装填台章节. <BR> <H2> 说明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 装填台是一件家具, 用于拆解弹药, 制作弹药, 以及拆解枪械. <BR> <IMAGECENTRE:AmBR1a.png> <BR> <H2> 制作 <BR> <TEXT> <IMAGE:media/ui/icon.png> 拥有弹药专家职业, 或阅读《装填台》杂志, 即可制作装填台. 也有 VHS 录像带可以教你如何制作. <LINE> <IMAGE:media/ui/icon.png> 读过配方后, 即可在建筑菜单中找到它, 并且已经解锁. <BR> <IMAGECENTRE:AmBR1.png> <BR> <H2> 操作方法 <BR> <TEXT> <IMAGE:media/ui/icon.png> 建好后, 如果你的炮兵术等级为 0, 可以研究它的操作方法. <LINE> <IMAGE:media/ui/icon.png> 练习足够的时间后, 你的炮兵术等级会提升到 1, 并解锁它的所有功能. <BR> <IMAGECENTRE:AmBR2.png> <BR> <H2> 其他说明 <BR> <TEXT> <IMAGE:media/ui/icon.png> 装填台和其他家具一样可以被摧毁, 也可以拆解或搬动. <LINE> <IMAGE:media/ui/icon.png> 每个区块的容量为 100. <LINE> <IMAGE:media/ui/icon.png> 记住, 要与装填台互动, 你必须站在它旁边. <BR> <IMAGECENTRE:AmBR3.png> <BR> "
+   },
+   "IGUI_AmmoMakerUnderfireReloadBenchTitle": {
+    "en": "Reloading Bench",
+    "ch": "彈藥復裝台",
+    "cn": "装填台"
+   },
+   "IGUI_AmmoMakerUnderfireTitle": {
+    "en": "Ammo Maker Underfire",
+    "ch": "Ammo Maker Underfire",
+    "cn": "Ammo Maker Underfire"
+   },
+   "IGUI_AlienOutfitFound": {
+    "en": "<H1> SECRET OBTAINED <BR> <BR> <IMAGECENTRE:Reward_AlienSuit> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>You have obtained the Alien Skin!!! <LINE> <H1>",
+    "ch": "<H1> 獲得秘密 <BR> <BR> <IMAGECENTRE:Reward_AlienSuit> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你獲得了外星人服裝!!! <LINE> <H1>",
+    "cn": "<H1> 获得秘密 <BR> <BR> <IMAGECENTRE:Reward_AlienSuit> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了外星人服装!!! <LINE> <H1>"
+   },
+   "IGUI_ContainerTitle_laminar_flood_hood": {
+    "en": "Laminar Flood Hood",
+    "ch": "層流櫃",
+    "cn": "超净工作台"
+   },
+   "IGUI_ContainerTitle_tube_holder": {
+    "en": "Test Tube Holder",
+    "ch": "試管架",
+    "cn": "试管架"
+   },
+   "IGUI_EntityFolder": {
+    "en": " <H1> NUMARK UNDERGROUND COMPLEX - MED-FORENSIC LABORATORY <LINE> <TEXT> <CENTRE> AUTOPSY REPORT AND INCIDENT PROTOCOL <LINE> <CENTRE> CLASSIFIED EVENT LOG #04-B4 <LINE> <LINE> <FIELD> SUBJECT: <SPACE> <VALUE> Extraterrestrial Biological Entity \"EBE-02\" (Deceased) <LINE> <FIELD> STATUS: <SPACE> <VALUE> <RGB:1,0,0> CONTAINMENT BREACH - POST-MORTEM PROTOCOL <LINE> <SECTION> INCIDENT CHRONICLE <LINE> Yesterday at 03:40 AM, specimen EBE-02, housed in Stasis Capsule #03 (Cryogenic Sector), exhibited anomalous spikes in brain activity. Inexplicably breaking through the paralysis induced by the synthetic coolant, the entity utilized a localized kinetic energy pulse to fracture the capsule's reinforced armored glass. <SECTION> CASUALTY LOG AND TACTICAL RESPONSE <LINE> <BULLET> The subject immediately proceeded to attack the guard staff, causing the instant demise of Doctors Henderson and Vance through massive trauma and surgical-grade lacerations. <LINE> <BULLET> The Numark Rapid Response Security team intervened by sealing the laboratory's blast doors. The use of extreme lethal force was authorized, successfully neutralizing the entity following concentrated crossfire in the main operating room corridor. <SECTION> FORENSIC ANALYSIS (DISSECTION) <LINE> The cadaver was transferred to the main dissection table to evaluate how it was capable of disrupting the stasis state. <LINE> <LINE> Analysis reveals that the specimen's anatomy features a secondary organ in the parietal lobe capable of metabolizing the complex's electrical current to counteract cryogenic hypothermia. However, the most alarming finding was the presence of remnants of an exogenous chemical compound in its bloodstream, strongly suggesting a potential case of internal sabotage within the complex's feeding tanks. <LINE> <LINE> <QUOTE> <FIELD> Chief Pathologist's final note on the voice recorder: <SPACE> <VALUE> \"We finished opening it up and confirming the cause of death, but the disaster in this lab is horrific. Henderson's blood is still splattered across the cryogenic tanks. We left the ballistics report and the folder with the neurological readings on top of the desk. Do not clean up this butchery until the Numark internal audit team comes down to inspect the stasis tanks. Something tells me someone from above helped wake this creature up.\"",
+    "ch": " <H1> NUMARK 地下設施 - 法醫實驗室 <LINE> <TEXT> <CENTRE> 驗屍報告暨事故處置程序 <LINE> <CENTRE> 機密事件紀錄 #04-B4 <LINE> <LINE> <FIELD> 對象: <SPACE> <VALUE> 外星生物體「EBE-02」 (已死亡) <LINE> <FIELD> 狀態: <SPACE> <VALUE> <RGB:1,0,0> 收容失效 - 死後處置程序 <LINE> <SECTION> 事件經過 <LINE> 昨日凌晨 03:40, 收容於 #03 靜滯艙 (低溫區) 的樣本 EBE-02 腦部活動出現異常飆升. 該個體不明原因地掙脫了合成冷卻劑造成的麻痺, 以局部動能脈衝擊碎艙體的強化裝甲玻璃. <SECTION> 傷亡紀錄與戰術應變 <LINE> <BULLET> 該個體隨即攻擊警衛人員, Henderson 醫師與 Vance 醫師因大範圍創傷與手術刀般精準的撕裂傷當場死亡. <LINE> <BULLET> Numark 快速應變保全小組介入, 封閉了實驗室的防爆門. 上級授權動用極端致命武力, 在主手術室走廊集中交叉火力後, 成功擊斃該個體. <SECTION> 法醫分析 (解剖) <LINE> 屍體已移至主解剖台, 以評估它如何能打破靜滯狀態. <LINE> <LINE> 分析顯示, 該樣本的頂葉有一個次級器官, 能代謝設施的電流來抵抗低溫造成的失溫. 然而最令人憂心的發現是, 其血液中殘留外源性化合物, 強烈顯示設施的供液槽可能遭到內部破壞. <LINE> <LINE> <QUOTE> <FIELD> 首席病理學家在錄音機留下的最後紀錄: <SPACE> <VALUE> 「我們已經把它剖開並確認了死因, 但這間實驗室的慘狀令人不忍卒睹. Henderson 的血還濺在低溫槽上. 我們把彈道報告和裝著神經讀數的資料夾留在桌上. 在 Numark 內部稽核小組下來檢查靜滯槽之前, 不要清理這片屠宰場. 我總覺得上面有人幫忙喚醒了這個生物.」",
+    "cn": " <H1> NUMARK 地下设施 - 法医实验室 <LINE> <TEXT> <CENTRE> 尸检报告与事故处置规程 <LINE> <CENTRE> 机密事件记录 #04-B4 <LINE> <LINE> <FIELD> 对象: <SPACE> <VALUE> 外星生物体“EBE-02” (已死亡) <LINE> <FIELD> 状态: <SPACE> <VALUE> <RGB:1,0,0> 收容失效 - 死后处置规程 <LINE> <SECTION> 事件经过 <LINE> 昨日凌晨 03:40, 收容于 #03 停滞舱 (低温区) 的样本 EBE-02 脑部活动出现异常激增. 该个体不明原因地挣脱了合成冷却剂造成的麻痹, 以局部动能脉冲击碎了舱体的强化装甲玻璃. <SECTION> 伤亡记录与战术响应 <LINE> <BULLET> 该个体随即袭击警卫人员, Henderson 医生和 Vance 医生因大面积创伤和手术刀般精准的撕裂伤当场死亡. <LINE> <BULLET> Numark 快速反应安保小组介入, 封闭了实验室的防爆门. 上级授权动用极端致命武力, 在主手术室走廊集中交叉火力后, 成功击毙该个体. <SECTION> 法医分析 (解剖) <LINE> 尸体已转移至主解剖台, 以评估它如何能打破停滞状态. <LINE> <LINE> 分析显示, 该样本的顶叶有一个次级器官, 能代谢设施的电流来对抗低温导致的失温. 然而最令人担忧的发现是, 其血液中残留外源性化合物, 强烈表明设施的供液槽可能遭到内部破坏. <LINE> <LINE> <QUOTE> <FIELD> 首席病理学家在录音机里留下的最后记录: <SPACE> <VALUE> “我们已经把它剖开并确认了死因, 但这间实验室的惨状令人不忍直视. Henderson 的血还溅在低温槽上. 我们把弹道报告和装着神经读数的文件夹留在了桌上. 在 Numark 内部审计组下来检查停滞槽之前, 不要清理这片屠宰场. 我总觉得上面有人帮忙唤醒了这个生物.”"
+   },
+   "IGUI_KeypadError": {
+    "en": "ERROR",
+    "ch": "錯誤",
+    "cn": "错误"
+   },
+   "IGUI_MIBNote": {
+    "en": " <H1> ADVANCED WEAPONRY DEPARTMENT <LINE> <TEXT> <CENTRE> PROJECT STARLIGHT <LINE> <CENTRE> FIELD TEST REPORT #042 <LINE> <LINE> <FIELD> TEST SUBJECT: <VALUE> \"X-01\" Compact Energy Prototype (Classified) <LINE> <FIELD> LOCATION: <VALUE> Underground Firing Range - Sector Bravo <SECTION> TEST SUMMARY <LINE> The first dynamic live-fire test was conducted using the compact energy chassis recovered from the anomaly. The main objective was to evaluate the viability of a high-power handgun for close defense personnel. <SECTION> TEST RESULTS <LINE> <BULLET> <FIELD> Power Output: <VALUE> Extremely critical. A single pulse completely disintegrated the reinforced titanium target and pierced through three solid concrete walls at the back of the range. <LINE> <BULLET> <FIELD> Recoil Effect: <VALUE> Unmanageable under normal conditions. The kinetic repulsion force generated by the shot threw Test Agent Thomas 6 meters away, causing a double collarbone fracture and severe concussion. <SECTION> CONCLUSION AND DIRECTIVE <LINE> The X-01 prototype is too dangerous for standard deployment. Its deceptive size conceals a destructive force that poses a risk to both the target and the wielder themselves without the proper restraint suit. <LINE> <LINE> By order of Director Thompson, the prototype has been removed from the range and stored in the Platinum Airlock Extreme Security Box, alongside the biological hazard protection suit. <LINE> <RGB:0,1,0> CODE: %s . <LINE> <RGB:1,1,1> Further live-fire testing remains strictly prohibited without Level 6 authorization. <LINE> <LINE> <QUOTE> <FIELD> Offhand firing instructor note: <VALUE> \"That little piece of garbage almost brought down the facility's ceiling. Anyone using that without knowing what they're doing will end up embedded in the back wall.\"",
+    "ch": " <H1> 先進武器部門 <LINE> <TEXT> <CENTRE> 星光計畫 <LINE> <CENTRE> 實地測試報告 #042 <LINE> <LINE> <FIELD> 測試對象: <VALUE> 「X-01」緊湊型能量原型機 (機密) <LINE> <FIELD> 地點: <VALUE> 地下靶場 - Bravo 區 <SECTION> 測試摘要 <LINE> 首次動態實彈測試使用的是從異常體回收的緊湊型能量機殼. 主要目的是評估高功率手槍供近身防衛人員使用的可行性. <SECTION> 測試結果 <LINE> <BULLET> <FIELD> 威力輸出: <VALUE> 極度危險. 單次脈衝就把強化鈦合金靶完全分解, 還貫穿了靶場後方三面實心混凝土牆. <LINE> <BULLET> <FIELD> 後座力影響: <VALUE> 一般條件下無法控制. 射擊產生的動能反衝力把測試探員 Thomas 震飛 6 公尺, 造成雙側鎖骨骨折與嚴重腦震盪. <SECTION> 結論與指示 <LINE> X-01 原型機太過危險, 不適合常規配發. 它不起眼的體積下藏著毀滅性的威力, 若沒有合適的約束服, 對目標與持用者本身都有危險. <LINE> <LINE> 奉 Thompson 主任之命, 原型機已撤出靶場, 與生物危害防護服一同存放在白金氣閘的極限安全保險箱. <LINE> <RGB:0,1,0> 密碼: %s . <LINE> <RGB:1,1,1> 未經 6 級授權, 嚴禁再進行任何實彈測試. <LINE> <LINE> <QUOTE> <FIELD> 射擊教官的隨手附註: <VALUE> 「那個小垃圾差點把設施的天花板轟下來. 誰要是不懂就拿來用, 最後只會被嵌進後面的牆裡.」",
+    "cn": " <H1> 先进武器部门 <LINE> <TEXT> <CENTRE> 星光计划 <LINE> <CENTRE> 实地测试报告 #042 <LINE> <LINE> <FIELD> 测试对象: <VALUE> “X-01”紧凑型能量原型机 (机密) <LINE> <FIELD> 地点: <VALUE> 地下靶场 - Bravo 区 <SECTION> 测试摘要 <LINE> 首次动态实弹测试使用的是从异常体回收的紧凑型能量机壳. 主要目的是评估高功率手枪供近身防卫人员使用的可行性. <SECTION> 测试结果 <LINE> <BULLET> <FIELD> 威力输出: <VALUE> 极度危险. 单次脉冲就把强化钛合金靶完全分解, 还贯穿了靶场后方三堵实心混凝土墙. <LINE> <BULLET> <FIELD> 后坐力影响: <VALUE> 常规条件下无法控制. 射击产生的动能反冲力把测试特工 Thomas 震飞 6 米, 造成双侧锁骨骨折和严重脑震荡. <SECTION> 结论与指令 <LINE> X-01 原型机过于危险, 不适合常规部署. 它不起眼的体积下藏着毁灭性的威力, 若没有合适的约束服, 对目标和使用者本人都有危险. <LINE> <LINE> 奉 Thompson 主任之命, 原型机已撤出靶场, 与生物危害防护服一同存放在白金气闸的极限安全保险箱中. <LINE> <RGB:0,1,0> 密码: %s . <LINE> <RGB:1,1,1> 未经 6 级授权, 严禁再进行任何实弹测试. <LINE> <LINE> <QUOTE> <FIELD> 射击教官的随手备注: <VALUE> “那个小破玩意儿差点把设施的天花板轰下来. 谁要是不懂就拿来用, 最后只会被嵌进后面的墙里.”"
+   },
+   "IGUI_MIBNoteB": {
+    "en": " <H1> REVERSE ENGINEERING DIVISION <LINE> <TEXT> <CENTRE> PROJECT STARLIGHT - TECHNICAL MEETING <LINE> <CENTRE> ARTIFACT EVALUATION REPORT #109 <LINE> <LINE> <FIELD> ANALYSIS: <SPACE> <VALUE> Advanced Electronic Storage Chassis \"A-02\" <LINE> <FIELD> CLASSIFICATION: <SPACE> <VALUE> Top Secret - Level 4 Restricted Access <LINE> <SECTION> TECHNICAL SPECIFICATIONS <LINE> Thermal testing has been completed on the unknown alloy container recovered from the site. It is a rigid chassis utilizing advanced technology. Its central core emits a magnetic confinement field that generates a microgravity anomaly. This allows the bearer to store massive amounts of heavy equipment, achieving a 98%% kinetic fatigue reduction through a subatomic mass suppression effect. <SECTION> SECURITY DIRECTIVES <LINE> <BULLET> <FIELD> Safeguard Sector: <SPACE> <VALUE> Due to the electromagnetic pulses emitted by the chassis's antennas, the module has been stored in the Subsurface Level 4 (B4) Armored Vault, Experimental Weaponry and Explosives Sector. <LINE> <BULLET> <FIELD> Level 4 Access: <SPACE> <VALUE> A reminder to all Area Chiefs that the sealed blast doors strictly require a <SPACE> <RGB:1,0.5,0> Level 4 Access Keycard <RGB:1,1,1>. <SECTION> AUTHENTICATION PROTOCOL <LINE> The technological chassis has been locked within the High-Security Container of the Platinum Airlock. To open the titanium doors, the mandatory two-factor sequence must be followed: <LINE> <LINE> <BULLET> Swipe the <SPACE> <RGB:0.3,0.6,0.9> Platinum Keycard <SPACE> <RGB:1,1,1> through the physical reader to power up the keypad. <LINE> <BULLET> Manually enter the numeric code assigned by the central encryption terminal. <LINE> <LINE> <RGB:0,1,0> AIRLOCK ENCRYPTION LOG (B4): %s <LINE> <LINE> <QUOTE> <FIELD> Handwritten note by the Laboratory Chief Engineer: <SPACE> <VALUE> \"This technological chassis is a masterpiece of engineering. Whoever equips this core on their back will basically be able to carry an entire truck's worth of supplies without feeling the weight. But be careful: if you head down to B4 to retrieve it, make sure you bring the Level 4 card for the security door and the Platinum card for the container.\"",
+    "ch": " <H1> 逆向工程部 <LINE> <TEXT> <CENTRE> 星光計畫 - 技術會議 <LINE> <CENTRE> 器物評估報告 #109 <LINE> <LINE> <FIELD> 分析對象: <SPACE> <VALUE> 先進電子儲存機殼「A-02」 <LINE> <FIELD> 機密等級: <SPACE> <VALUE> 最高機密 - 4 級限制存取 <LINE> <SECTION> 技術規格 <LINE> 從現場回收的未知合金容器已完成熱測試. 這是一具採用先進技術的剛性機殼. 中央核心會發出磁約束場, 產生微重力異常. 攜帶者因此能收納大量重型裝備, 並透過次原子質量抑制效應, 減少 98%% 的動能疲勞. <SECTION> 安全指示 <LINE> <BULLET> <FIELD> 保管區: <SPACE> <VALUE> 由於機殼天線會發出電磁脈衝, 該模組已存放在地下 4 層 (B4) 裝甲金庫的實驗武器與爆裂物區. <LINE> <BULLET> <FIELD> 4 級權限: <SPACE> <VALUE> 提醒所有區域主管, 密封的防爆門一律需要 <SPACE> <RGB:1,0.5,0> 4 級鑰匙卡 <RGB:1,1,1>. <SECTION> 驗證程序 <LINE> 這具科技機殼已鎖在白金氣閘的高安全等級容器內. 要開啟鈦合金門, 必須依序完成雙重驗證: <LINE> <LINE> <BULLET> 在實體讀卡機上刷 <SPACE> <RGB:0.3,0.6,0.9> 白金鑰匙卡 <SPACE> <RGB:1,1,1> 以啟動數字鍵盤. <LINE> <BULLET> 手動輸入中央加密終端機分配的數字密碼. <LINE> <LINE> <RGB:0,1,0> 氣閘加密紀錄 (B4): %s <LINE> <LINE> <QUOTE> <FIELD> 實驗室總工程師的手寫附註: <SPACE> <VALUE> 「這具科技機殼是工程學的傑作. 誰把這個核心背在背上, 基本上就能扛起一整台卡車的物資而感覺不到重量. 不過要小心: 如果你要下去 B4 拿它, 記得帶上開安全門的 4 級卡, 還有開容器的白金卡.」",
+    "cn": " <H1> 逆向工程部 <LINE> <TEXT> <CENTRE> 星光计划 - 技术会议 <LINE> <CENTRE> 器物评估报告 #109 <LINE> <LINE> <FIELD> 分析对象: <SPACE> <VALUE> 先进电子存储机壳“A-02” <LINE> <FIELD> 密级: <SPACE> <VALUE> 绝密 - 4 级限制访问 <LINE> <SECTION> 技术规格 <LINE> 从现场回收的未知合金容器已完成热测试. 这是一具采用先进技术的刚性机壳. 中央核心会发出磁约束场, 产生微重力异常. 携带者因此能收纳大量重型装备, 并通过亚原子质量抑制效应, 减少 98%% 的动能疲劳. <SECTION> 安全指令 <LINE> <BULLET> <FIELD> 保管区: <SPACE> <VALUE> 由于机壳天线会发出电磁脉冲, 该模块已存放在地下 4 层 (B4) 装甲金库的实验武器与爆炸物区. <LINE> <BULLET> <FIELD> 4 级权限: <SPACE> <VALUE> 提醒所有区域主管, 密封的防爆门一律需要 <SPACE> <RGB:1,0.5,0> 4级门禁卡 <RGB:1,1,1>. <SECTION> 验证规程 <LINE> 这具科技机壳已锁在白金气闸的高安全等级容器内. 要打开钛合金门, 必须按顺序完成双重验证: <LINE> <LINE> <BULLET> 在实体读卡器上刷 <SPACE> <RGB:0.3,0.6,0.9> 白金门禁卡 <SPACE> <RGB:1,1,1> 以启动数字键盘. <LINE> <BULLET> 手动输入中央加密终端分配的数字密码. <LINE> <LINE> <RGB:0,1,0> 气闸加密记录 (B4): %s <LINE> <LINE> <QUOTE> <FIELD> 实验室总工程师的手写备注: <SPACE> <VALUE> “这具科技机壳是工程学的杰作. 谁把这个核心背在背上, 基本上就能扛起一整辆卡车的物资而感觉不到重量. 不过要小心: 如果你要下到 B4 去拿它, 记得带上开安全门的 4 级卡, 还有开容器的白金卡.”"
+   },
+   "IGUI_MichaelThompsonID": {
+    "en": " <IMAGECENTRE:MichaelThompsonID> ",
+    "ch": " <IMAGECENTRE:MichaelThompsonID> ",
+    "cn": " <IMAGECENTRE:MichaelThompsonID> "
+   },
+   "IGUI_NumarkComputer": {
+    "en": " <SOUND:KeyBoardPressKey> <H1> SURVEILLANCE CAMERA LEVEL B1 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoE> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> SURVEILLANCE CAMERA LEVEL B1 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoF> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> SURVEILLANCE CAMERA LEVEL B4 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoC> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> SURVEILLANCE CAMERA LEVEL B4 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoD> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> SURVEILLANCE CAMERA LEVEL B4 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoH> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> SURVEILLANCE CAMERA LEVEL B5 <BR> <BR> <IMAGECENTRE:SecurityCameraUfo> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> SURVEILLANCE CAMERA LEVEL B5 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoB> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> <BR> <BR> <SOUND:ZombieSurprisedPlayer> <IMAGECENTRE:SecurityCameraUfoG> <BR> ",
+    "ch": " <SOUND:KeyBoardPressKey> <H1> 監視攝影機 B1 層 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoE> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> 監視攝影機 B1 層 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoF> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> 監視攝影機 B4 層 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoC> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> 監視攝影機 B4 層 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoD> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> 監視攝影機 B4 層 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoH> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> 監視攝影機 B5 層 <BR> <BR> <IMAGECENTRE:SecurityCameraUfo> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> 監視攝影機 B5 層 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoB> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> <BR> <BR> <SOUND:ZombieSurprisedPlayer> <IMAGECENTRE:SecurityCameraUfoG> <BR> ",
+    "cn": " <SOUND:KeyBoardPressKey> <H1> 监控摄像头 B1 层 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoE> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> 监控摄像头 B1 层 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoF> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> 监控摄像头 B4 层 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoC> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> 监控摄像头 B4 层 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoD> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> 监控摄像头 B4 层 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoH> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> 监控摄像头 B5 层 <BR> <BR> <IMAGECENTRE:SecurityCameraUfo> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> 监控摄像头 B5 层 <BR> <BR> <IMAGECENTRE:SecurityCameraUfoB> <BR> <PAGE> <SOUND:KeyBoardPressKey> <H1> <BR> <BR> <SOUND:ZombieSurprisedPlayer> <IMAGECENTRE:SecurityCameraUfoG> <BR> "
+   },
+   "IGUI_OperationLightStarNote": {
+    "en": " <H1> CLASSIFIED DOCUMENT: OPERATION STARLIGHT <LINE> <TEXT> <CENTRE> INCIDENT REPORT - NATIONAL SECURITY <LINE> <LINE> The contamination breach at the Numark Complex has compromised the entire sector. Civilians believe this is just a public health crisis, but our true danger is the infection reaching the Hidden Complex on the adjacent perimeter. If infected subjects or looters get in there, the Recovered Device and the prototype weaponry will be lost forever. <LINE> <LINE> I have ordered the absolute sealing of the hidden complex's surface access hatch. The credentials have been split for security: <SECTION> SECURITY CREDENTIALS <LINE> <BULLET> <FIELD> Hatch Key: <VALUE> Held by Security Chief 'Engell D.'. He is in the control and barracks section of the Numark Complex, attempting to contain infected personnel. <LINE> <BULLET> <FIELD> Platinum Keycard: <VALUE> I have it. I will head to my office inside the Numark Complex to activate the facility's electronic containments. <SECTION> PERSONAL NOTE: MISPLACED KEY <LINE> I cannot find the Spade Key that opens my office door. I am almost certain I lost it this morning while getting dressed in my room. It is possible I dropped it somewhere, though I don't have time to search the entire house. <LINE> <LINE> I must return to Numark immediately. I will ask the Security Chief for a copy as soon as I arrive. I cannot afford to waste any more time on this matter. <SECTION> SECURITY DIRECTIVE <LINE> Before attempting to open the hatch, check my computer terminal in the office. I set up a network bridge to monitor the internal security camera of the isolation hangar. I need to ensure that the advanced biological hazard protection suit and the weapons are still in place, and that the cargo structure has not been breached. <LINE> <LINE> <QUOTE> If we don't make it... may God protect what we buried in those woods. <LINE> <RIGHT> — Michael Thompson, Numark Complex Director.",
+    "ch": " <H1> 機密文件: 星光行動 <LINE> <TEXT> <CENTRE> 事故報告 - 國家安全 <LINE> <LINE> Numark 設施的汙染外洩已危及整個區域. 平民以為這只是一場公共衛生危機, 但我們真正的危險是感染擴散到鄰近周界的隱藏設施. 一旦感染者或掠奪者闖進那裡, 回收裝置與原型武器就會永遠失落. <LINE> <LINE> 我已下令徹底封閉隱藏設施的地面出入艙門. 為了安全, 通行憑證已分開保管: <SECTION> 安全憑證 <LINE> <BULLET> <FIELD> 艙門鑰匙: <VALUE> 由保全主管 Engell D. 保管. 他在 Numark 設施的控制與營舍區, 正設法控制受感染的人員. <LINE> <BULLET> <FIELD> 白金鑰匙卡: <VALUE> 在我身上. 我會前往 Numark 設施內的辦公室, 啟動設施的電子封鎖系統. <SECTION> 個人備忘: 遺失的鑰匙 <LINE> 我找不到開辦公室門的黑桃鑰匙. 我幾乎可以肯定是今天早上在房間換衣服時弄丟的. 可能掉在某個地方, 但我沒時間把整間房子翻一遍. <LINE> <LINE> 我必須馬上回 Numark. 一到就向保全主管要一把備份. 我不能再把時間浪費在這件事上. <SECTION> 安全指示 <LINE> 嘗試開啟艙門之前, 先檢查我辦公室裡的電腦終端機. 我架了一條網路橋接, 用來監看隔離機庫的內部監視攝影機. 我必須確認先進生物危害防護服和武器都還在原處, 貨物結構也沒有遭到突破. <LINE> <LINE> <QUOTE> 如果我們撐不過去… 願上帝保佑我們埋在那片樹林裡的東西. <LINE> <RIGHT> — Michael Thompson, Numark 設施主任.",
+    "cn": " <H1> 机密文件: 星光行动 <LINE> <TEXT> <CENTRE> 事故报告 - 国家安全 <LINE> <LINE> Numark 设施的污染泄漏已危及整个区域. 平民以为这只是一场公共卫生危机, 但我们真正的危险是感染蔓延到邻近周界的隐藏设施. 一旦感染者或掠夺者闯进那里, 回收装置和原型武器就会永远丢失. <LINE> <LINE> 我已下令彻底封闭隐藏设施的地面出入舱门. 为了安全, 通行凭证已分开保管: <SECTION> 安全凭证 <LINE> <BULLET> <FIELD> 舱门钥匙: <VALUE> 由安保主管 Engell D. 保管. 他在 Numark 设施的控制与营房区, 正设法控制受感染的人员. <LINE> <BULLET> <FIELD> 白金门禁卡: <VALUE> 在我身上. 我会前往 Numark 设施内的办公室, 启动设施的电子封锁系统. <SECTION> 个人备忘: 丢失的钥匙 <LINE> 我找不到开办公室门的黑桃钥匙. 我几乎可以肯定是今天早上在房间换衣服时弄丢的. 可能掉在了某个地方, 但我没时间把整栋房子翻一遍. <LINE> <LINE> 我必须马上回 Numark. 一到就向安保主管要一把备用钥匙. 我不能再在这件事上浪费时间了. <SECTION> 安全指令 <LINE> 尝试打开舱门之前, 先检查我办公室里的电脑终端. 我搭建了一个网络桥接, 用来监视隔离机库的内部监控摄像头. 我必须确认先进生物危害防护服和武器都还在原处, 货物结构也没有被突破. <LINE> <LINE> <QUOTE> 如果我们撑不过去… 愿上帝保佑我们埋在那片树林里的东西. <LINE> <RIGHT> — Michael Thompson, Numark 设施主任."
+   },
+   "IGUI_Reward_AlienBagPack": {
+    "en": "<H1> SECRET OBTAINED <BR> <BR> <IMAGECENTRE:Reward_AlienBackPack> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>You have obtained the GTECH XS-R1 Alien Rucksack!!! <LINE> <H1>",
+    "ch": "<H1> 獲得秘密 <BR> <BR> <IMAGECENTRE:Reward_AlienBackPack> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你獲得了 GTECH XS-R1 外星背包!!! <LINE> <H1>",
+    "cn": "<H1> 获得秘密 <BR> <BR> <IMAGECENTRE:Reward_AlienBackPack> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了 GTECH XS-R1 外星背包!!! <LINE> <H1>"
+   },
+   "IGUI_Reward_NoisyCricket": {
+    "en": "<H1> SECRET OBTAINED <BR> <IMAGECENTRE:Reward_NoisyCricket> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>You have obtained the Noisy Cricket!!! <LINE> <H1>",
+    "ch": "<H1> 獲得秘密 <BR> <IMAGECENTRE:Reward_NoisyCricket> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你獲得了 Noisy Cricket!!! <LINE> <H1>",
+    "cn": "<H1> 获得秘密 <BR> <IMAGECENTRE:Reward_NoisyCricket> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了 Noisy Cricket!!! <LINE> <H1>"
+   },
+   "IGUI_Reward_SecretSafe": {
+    "en": "<H1> SECRET OBTAINED <BR> <IMAGECENTRE:Reward_NumarkBriefcase> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>You have obtained the 'Numark Corp' Briefcase!!! <LINE> <H1>",
+    "ch": "<H1> 獲得秘密 <BR> <IMAGECENTRE:Reward_NumarkBriefcase> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你獲得了 'Numark Corp' 手提箱!!! <LINE> <H1>",
+    "cn": "<H1> 获得秘密 <BR> <IMAGECENTRE:Reward_NumarkBriefcase> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了 'Numark Corp' 公文包!!! <LINE> <H1>"
+   },
+   "IGUI_SNoteReaded": {
+    "en": "<H1> A Secret!!! <BR> <BR> <IMAGECENTRE:secret1> <BR> <TEXT> Hello Community. Congratulations!! <LINE> <RGB:1,0.8,0> I will tell you about one of my secrets. <LINE> <RGB:0.7,0.7,0.7> Look for a room somewhere within my structures <SPACE> <RGB:1,0.8,0> <RGB:0.7,0.7,0.7> <SPACE> and <SPACE> <RGB:1,0.8,0> use this key to open the safe. <BR> <RGB:0.7,0.7,0.7> Signed: <RGB:0,0.4,0> Snake. <BR>",
+    "ch": "<H1> 一個秘密!!! <BR> <BR> <IMAGECENTRE:secret1> <BR> <TEXT> 哈囉, 社群的各位. 恭喜!! <LINE> <RGB:1,0.8,0> 我要告訴你們我的一個秘密. <LINE> <RGB:0.7,0.7,0.7> 在我建造的建築裡找找某個房間 <SPACE> <RGB:1,0.8,0> <RGB:0.7,0.7,0.7> <SPACE> 然後 <SPACE> <RGB:1,0.8,0> 用這把鑰匙打開保險箱. <BR> <RGB:0.7,0.7,0.7> 署名: <RGB:0,0.4,0> Snake. <BR>",
+    "cn": "<H1> 一个秘密!!! <BR> <BR> <IMAGECENTRE:secret1> <BR> <TEXT> 社区的各位好. 恭喜!! <LINE> <RGB:1,0.8,0> 我要告诉你们我的一个秘密. <LINE> <RGB:0.7,0.7,0.7> 在我建造的建筑里找找某个房间 <SPACE> <RGB:1,0.8,0> <RGB:0.7,0.7,0.7> <SPACE> 然后 <SPACE> <RGB:1,0.8,0> 用这把钥匙打开保险箱. <BR> <RGB:0.7,0.7,0.7> 署名: <RGB:0,0.4,0> Snake. <BR>"
+   },
+   "IGUI_SafeCodeIncorrect": {
+    "en": "Incorrect Security Code",
+    "ch": "安全密碼錯誤",
+    "cn": "安全密码错误"
+   },
+   "IGUI_SpadeKeyFound": {
+    "en": "<H1> SECRET OBTAINED <BR> <BR> <IMAGECENTRE:Reward_SpadeKey> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>You have obtained the spade key!!! <LINE> <H1>",
+    "ch": "<H1> 獲得秘密 <BR> <BR> <IMAGECENTRE:Reward_SpadeKey> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你獲得了黑桃鑰匙!!! <LINE> <H1>",
+    "cn": "<H1> 获得秘密 <BR> <BR> <IMAGECENTRE:Reward_SpadeKey> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了黑桃钥匙!!! <LINE> <H1>"
+   },
+   "IGUI_AlienOutFitEquipped": {
+    "en": "SPECIAL SUIT EQUIPPED",
+    "ch": "已裝備特殊服裝",
+    "cn": "已装备特殊服装"
+   },
+   "IGUI_AlienOutFitMessage": {
+    "en": "Toxic immunity is active.",
+    "ch": "毒物免疫已生效.",
+    "cn": "毒物免疫已生效."
+   },
+   "IGUI_AlienSuitMessage": {
+    "en": "The special suit grants complete immunity to toxic substances.",
+    "ch": "特殊服裝讓你完全免疫有毒物質.",
+    "cn": "特殊服装可让你完全免疫有毒物质."
+   },
+   "IGUI_HolesDetected": {
+    "en": "Holes detected: ",
+    "ch": "偵測到破洞: ",
+    "cn": "检测到破洞: "
+   },
+   "IGUI_IntegrityOk": {
+    "en": "Suit integrity is intact and the breathing system is active.",
+    "ch": "防護服完好無損, 呼吸系統運作中.",
+    "cn": "防护服完好无损, 呼吸系统运行中."
+   },
+   "IGUI_MaskActive": {
+    "en": "RESPIRATOR ACTIVE",
+    "ch": "防毒面具運作中",
+    "cn": "防毒面具工作中"
+   },
+   "IGUI_MaskNotWorking": {
+    "en": "Do not rely on the suit for protection.",
+    "ch": "別指望防護服能保護你.",
+    "cn": "不要依赖防护服的保护."
+   },
+   "IGUI_MaskOkSuitDamaged": {
+    "en": "Your respirator protects you, but your suit is compromised.",
+    "ch": "防毒面具仍能保護你, 但防護服已經破損.",
+    "cn": "防毒面具仍在保护你, 但防护服已经破损."
+   },
+   "IGUI_MaskWorkingNBQDamaged": {
+    "en": "Your respirator filters the air, but your hazmat suit is damaged.",
+    "ch": "防毒面具仍在過濾空氣, 但化學防護服已經損壞.",
+    "cn": "防毒面具仍在过滤空气, 但防化服已经损坏."
+   },
+   "IGUI_MaskWorkingNoTank": {
+    "en": "Your standalone respirator works, but the suit has no air tank.",
+    "ch": "你另外戴的防毒面具仍可運作, 但防護服沒有裝氣瓶.",
+    "cn": "你单独佩戴的防毒面具仍可工作, 但防护服没有安装气瓶."
+   },
+   "IGUI_NBQDamaged": {
+    "en": "Your hazmat suit is damaged. You have no functional respiratory protection.",
+    "ch": "化學防護服已損壞. 你沒有任何有效的呼吸防護.",
+    "cn": "防化服已损坏. 你没有任何有效的呼吸防护."
+   },
+   "IGUI_NBQEmpty": {
+    "en": "The suit's air tank is empty. Your standalone respirator is still working.",
+    "ch": "防護服的氣瓶已空. 你另外戴的防毒面具仍在運作.",
+    "cn": "防护服的气瓶已空. 你单独佩戴的防毒面具仍在工作."
+   },
+   "IGUI_NBQOff": {
+    "en": "HAZMAT SUIT OFF",
+    "ch": "化學防護服已關閉",
+    "cn": "防化服已关闭"
+   },
+   "IGUI_NoProtection": {
+    "en": "NO ADEQUATE PROTECTION",
+    "ch": "防護不足",
+    "cn": "防护不足"
+   },
+   "IGUI_NoRespirator": {
+    "en": "You have no functional respirator. Leave the contaminated area.",
+    "ch": "你沒有可用的防毒面具. 快離開汙染區.",
+    "cn": "你没有可用的防毒面具. 请离开污染区."
+   },
+   "IGUI_NotOxygenTank": {
+    "en": "No air tank is installed in the suit.",
+    "ch": "防護服沒有裝氣瓶.",
+    "cn": "防护服未安装气瓶."
+   },
+   "IGUI_OnlyMask": {
+    "en": "Your respirator protects your breathing, but it does not protect your body from toxic burns.",
+    "ch": "防毒面具能保護你的呼吸, 但無法保護身體免受毒性灼傷.",
+    "cn": "防毒面具能保护你的呼吸, 但无法保护身体免受毒性灼伤."
+   },
+   "IGUI_OxygenNotAvailable": {
+    "en": "AIR SUPPLY UNAVAILABLE",
+    "ch": "無法供氣",
+    "cn": "无法供气"
+   },
+   "IGUI_ProtectionFailed": {
+    "en": "RESPIRATORY PROTECTION FAILURE",
+    "ch": "呼吸防護失效",
+    "cn": "呼吸防护失效"
+   },
+   "IGUI_ProtectionFailedMessage": {
+    "en": "Check your filter, air tank, or equipment.",
+    "ch": "檢查濾芯、氣瓶或裝備.",
+    "cn": "检查滤芯、气瓶或装备."
+   },
+   "IGUI_ProtectionRestored": {
+    "en": "RESPIRATORY PROTECTION RESTORED",
+    "ch": "呼吸防護已恢復",
+    "cn": "呼吸防护已恢复"
+   },
+   "IGUI_ProtectionRestoredMessage": {
+    "en": "Your equipment is protecting you again.",
+    "ch": "你的裝備再次發揮防護作用.",
+    "cn": "你的装备重新开始保护你."
+   },
+   "IGUI_RespiratorOff": {
+    "en": "Your standalone respirator works, but the suit's breathing system is turned off.",
+    "ch": "你另外戴的防毒面具仍可運作, 但防護服的呼吸系統已關閉.",
+    "cn": "你单独佩戴的防毒面具仍可工作, 但防护服的呼吸系统已关闭."
+   },
+   "IGUI_RespiratorTurnOn": {
+    "en": "Turn on the suit's breathing system to use its air supply.",
+    "ch": "開啟防護服的呼吸系統, 才能使用它的供氣.",
+    "cn": "打开防护服的呼吸系统才能使用其供气."
+   },
+   "IGUI_SnakesModpackDesc": {
+    "en": "<IMAGECENTRE:media/ui/SnakeManual/SnakeModpack.png> <LINE> <H2> <RGB:1,0.7,0> What is Snake's Modpack? <LINE> <LINE> <TEXT> It is a collection of mods for Project Zomboid that aims to expand the gameplay experience and make our playthroughs longer and more unique through new game mechanics, maps, and items.",
+    "ch": "<IMAGECENTRE:media/ui/SnakeManual/SnakeModpack.png> <LINE> <H2> <RGB:1,0.7,0> 什麼是 Snake's Modpack? <LINE> <LINE> <TEXT> 這是一套殭屍毀滅工程的模組合集, 目標是透過新的遊戲機制、地圖與物品擴展遊戲體驗, 讓每一輪遊玩都更持久、更獨特.",
+    "cn": "<IMAGECENTRE:media/ui/SnakeManual/SnakeModpack.png> <LINE> <H2> <RGB:1,0.7,0> 什么是 Snake's Modpack? <LINE> <LINE> <TEXT> 这是一套僵尸毁灭工程的模组合集, 旨在通过新的游戏机制、地图和物品扩展游戏体验, 让每一局游戏都更持久、更独特."
+   },
+   "IGUI_SnakesModpackManual": {
+    "en": "'Snake's Modpack' Learning Manual",
+    "ch": "'Snake's Modpack' 學習手冊",
+    "cn": "'Snake's Modpack' 学习手册"
+   },
+   "IGUI_SuitIntegrityReduceWarning": {
+    "en": "SUIT INTEGRITY REDUCED",
+    "ch": "防護服完整度下降",
+    "cn": "防护服完整度下降"
+   },
+   "IGUI_SuitIntegrityWarning": {
+    "en": "SUIT INTEGRITY COMPROMISED",
+    "ch": "防護服已破損",
+    "cn": "防护服已破损"
+   },
+   "IGUI_SuitOperative": {
+    "en": "HAZMAT SUIT OPERATIONAL",
+    "ch": "化學防護服運作中",
+    "cn": "防化服运行中"
+   },
+   "IGUI_TankEmpty": {
+    "en": "The air tank is empty. You have no functional air supply.",
+    "ch": "氣瓶已空. 你沒有可用的供氣.",
+    "cn": "气瓶已空. 你没有可用的供气."
+   },
+   "IGUI_TankEmptyWarn": {
+    "en": "AIR TANK EMPTY",
+    "ch": "氣瓶已空",
+    "cn": "气瓶已空"
+   },
+   "IGUI_ToxicAirDetected": {
+    "en": "TOXIC CONTAMINATION DETECTED",
+    "ch": "偵測到有毒汙染",
+    "cn": "检测到有毒污染"
+   },
+   "IGUI_ToxicZoneExit": {
+    "en": "TOXIC ZONE CLEARED",
+    "ch": "已離開毒區",
+    "cn": "已离开毒区"
+   },
+   "IGUI_ToxicZoneExitMessage": {
+    "en": "You have left the contaminated area.",
+    "ch": "你已離開汙染區.",
+    "cn": "你已离开污染区."
+   },
+   "IGUI_BBP_FreePlace_LevelHud": {
+    "en": "On %1 (you are on %2)",
+    "ch": "放置於 %1 (你在 %2)",
+    "cn": "放置于 %1 (你在 %2)"
+   },
+   "IGUI_GS_side_rails_a_quad_rail_handguard__46638": {
+    "en": "side rails (a quad-rail handguard)",
+    "ch": "側邊導軌 (四面導軌護木)",
+    "cn": "侧边导轨 (四面导轨护木)"
+   },
+   "IGUI_AnimalType_Global_rrar_canadagoose": {
+    "en": "Canada Goose",
+    "ch": "加拿大鵝",
+    "cn": "加拿大鹅"
+   },
+   "IGUI_AnimalType_rrar_canadagoose_gander": {
+    "en": "Goose - Canada Gander",
+    "ch": "鵝 - 加拿大公鵝",
+    "cn": "鹅 - 加拿大公鹅"
+   },
+   "IGUI_AnimalType_rrar_canadagoose_goose": {
+    "en": "Goose - Canada Goose",
+    "ch": "鵝 - 加拿大母鵝",
+    "cn": "鹅 - 加拿大母鹅"
+   },
+   "IGUI_AnimalType_rrar_canadagoose_gosling": {
+    "en": "Goose - Canada Gosling",
+    "ch": "鵝 - 加拿大小鵝",
+    "cn": "鹅 - 加拿大小鹅"
+   },
+   "IGUI_Breed_rrar_canadagoose": {
+    "en": "Canada",
+    "ch": "加拿大",
+    "cn": "加拿大"
+   },
+   "IGUI_LNPCChildHealth_NeedCare": {
+    "en": "I am hurt. I need an adult and medical supplies to help me.",
+    "ch": "我受傷了. 我需要大人和醫療用品來幫我.",
+    "cn": "我受伤了. 我需要大人和医疗用品来帮我."
+   },
+   "IGUI_LNPCChildHealth_Pending": {
+    "en": "Needs care · play and learning paused",
+    "ch": "需要照護 · 已暫停玩耍與學習",
+    "cn": "需要照护 · 已暂停玩耍和学习"
+   },
+   "IGUI_LNPCChildHealth_Ready": {
+    "en": "Ready for daily life",
+    "ch": "可以恢復日常生活",
+    "cn": "可以恢复日常生活"
+   },
+   "IGUI_LNPCChildHealth_Rest": {
+    "en": "Recovery rest: %1 / 2 hours",
+    "ch": "恢復休養: %1 / 2 小時",
+    "cn": "恢复休养: %1 / 2 小时"
+   },
+   "IGUI_LNPCChildHealth_Treatment": {
+    "en": "Health / Care",
+    "ch": "健康 / 照護",
+    "cn": "健康 / 照护"
+   },
+   "IGUI_LNPCDisease_ColdEffect": {
+    "en": "Severity: %1 / 100. Per game hour: +%2 fatigue. Treated wounds recover %3% more slowly.",
+    "ch": "嚴重度: %1 / 100. 每遊戲小時: 疲勞 +%2. 已治療傷口的恢復速度減慢 %3%%",
+    "cn": "严重程度: %1 / 100. 每游戏小时: 疲劳 +%2. 已治疗伤口的恢复速度减慢 %3%%"
+   },
+   "IGUI_LNPCDisease_CorpseEffect": {
+    "en": "Severity: %1 / 100. Per game hour: +%2 fatigue, %3% maximum health lost. Health loss begins above 75 severity.",
+    "ch": "嚴重度: %1 / 100. 每遊戲小時: 疲勞 +%2, 失去 %3%% 的最大生命值. 嚴重度超過 75 時才會開始損失生命值.",
+    "cn": "严重程度: %1 / 100. 每游戏小时: 疲劳 +%2, 损失 %3%% 的最大生命值. 严重程度超过 75 时才开始损失生命值."
+   },
+   "IGUI_LNPCDisease_WoundEffect": {
+    "en": "Worst affected body part: %1% infection, %2% slower wound recovery. Total infection damage per game hour: %3% of maximum health.",
+    "ch": "受影響最嚴重的部位: 感染度 %1%%, 傷口恢復減慢 %2%%; 每遊戲小時的感染總傷害為最大生命值的 %3%%",
+    "cn": "受影响最严重的部位: 感染度 %1%%, 伤口恢复减慢 %2%%; 每游戏小时的感染总伤害为最大生命值的 %3%%"
+   },
+   "IGUI_LNPCDisease_ZombieEffect": {
+    "en": "Progress: %1%. Current health ceiling: %2%. Progressively reduces health and becomes fatal at the final stage.",
+    "ch": "進度: %1%%; 目前生命值上限: %2%%; 會逐步降低生命值, 並在最後階段致命.",
+    "cn": "进度: %1%%; 当前生命值上限: %2%%; 会逐步降低生命值, 并在最终阶段致命."
+   },
+   "IGUI_LNPCDisease_cold": {
+    "en": "Flu",
+    "ch": "流感",
+    "cn": "流感"
+   },
+   "IGUI_LNPCDisease_cold_Help": {
+    "en": "Cold / flu-like symptoms caused by sustained cold and wet exposure. Recover in a warm, dry shelter with enough food, water and rest.",
+    "ch": "長時間處於寒冷潮濕環境所引起的感冒 / 類流感症狀. 待在溫暖乾燥的庇護所, 並有充足的食物、飲水與休息即可康復.",
+    "cn": "长时间处于寒冷潮湿环境引起的感冒 / 类流感症状. 待在温暖干燥的庇护所, 并保证充足的食物、饮水和休息即可康复."
+   },
+   "IGUI_LNPCDisease_corpse": {
+    "en": "Corpse sickness",
+    "ch": "屍體病",
+    "cn": "尸体病"
+   },
+   "IGUI_LNPCDisease_corpse_Help": {
+    "en": "Sickness caused by sustained exposure to nearby corpses. Remove the corpses or leave the affected area to recover. Uses the world corpse health impact setting.",
+    "ch": "長時間待在屍體附近所引起的疾病. 移除屍體或離開受影響的區域即可康復. 沿用世界設定中的「腐爛屍體對健康的影響」.",
+    "cn": "长时间暴露在尸体附近引起的疾病. 移除尸体或离开受影响的区域即可康复. 沿用世界设置中的“腐烂尸体对健康的影响”."
+   },
+   "IGUI_LNPCDisease_wound": {
+    "en": "Bacterial infection",
+    "ch": "細菌感染",
+    "cn": "细菌感染"
+   },
+   "IGUI_LNPCDisease_wound_Help": {
+    "en": "Bacterial wound infection. Contamination and dirty dressings worsen it. Disinfect the wound and use clean dressings. This is separate from zombie infection.",
+    "ch": "細菌性傷口感染. 汙染與髒敷料會使其惡化. 請為傷口消毒並使用乾淨的敷料. 這與殭屍感染是不同的.",
+    "cn": "细菌性伤口感染. 污染和脏敷料会使其恶化. 请为伤口消毒并使用干净的敷料. 这与僵尸感染不同."
+   },
+   "IGUI_LNPCDisease_zombie": {
+    "en": "Zombie infection",
+    "ch": "殭屍感染",
+    "cn": "僵尸感染"
+   },
+   "IGUI_LNPCDisease_zombie_Help": {
+    "en": "Zombie infection confirmed by L-NPC. Uses the world transmission and infection mortality settings. Disinfection and bandages do not cure zombie infection.",
+    "ch": "經 L-NPC 確認的殭屍感染. 沿用世界設定中的「傳染」與「致死時間」. 消毒與繃帶都無法治癒殭屍感染.",
+    "cn": "经 L-NPC 确认的僵尸感染. 沿用世界设置中的“传染”与“致死时间”. 消毒和绷带都无法治愈僵尸感染."
+   },
+   "IGUI_LNPCTest_Applied": {
+    "en": "Test wound added. Open health / treatment to inspect it.",
+    "ch": "已加入測試傷口. 請開啟「健康 / 治療」來檢視.",
+    "cn": "已添加测试伤口. 请打开“健康 / 治疗”进行查看."
+   },
+   "IGUI_LNPCTest_Boy": {
+    "en": "Spawn boy companion",
+    "ch": "生成男孩同伴",
+    "cn": "生成男孩同伴"
+   },
+   "IGUI_LNPCTest_Busy": {
+    "en": "Wait until combat, treatment or work has finished.",
+    "ch": "請等待戰鬥、治療或工作結束.",
+    "cn": "请等待战斗、治疗或工作结束."
+   },
+   "IGUI_LNPCTest_ChildOnly": {
+    "en": "The child downed test is only available for child companions.",
+    "ch": "兒童倒地測試僅適用於兒童同伴.",
+    "cn": "儿童倒地测试仅适用于儿童同伴."
+   },
+   "IGUI_LNPCTest_ChoosePart": {
+    "en": "Choose body part",
+    "ch": "選擇身體部位",
+    "cn": "选择身体部位"
+   },
+   "IGUI_LNPCTest_ConfirmChild": {
+    "en": "Create serious injuries and down this child? Health will drop to 28％, requiring treatment and recovery rest. This change remains in the save. Continue?",
+    "ch": "要讓這個孩子重傷倒地嗎? 生命值會降到 28％, 需要治療與恢復休養. 此變更會保留在存檔中. 要繼續嗎?",
+    "cn": "要让这个孩子重伤倒地吗? 生命值会降到 28％, 需要治疗和恢复休养. 此更改会保留在存档中. 要继续吗?"
+   },
+   "IGUI_LNPCTest_Denied": {
+    "en": "Debug or administrator permission required.",
+    "ch": "需要除錯模式或管理員權限.",
+    "cn": "需要调试模式或管理员权限."
+   },
+   "IGUI_LNPCTest_Girl": {
+    "en": "Spawn girl companion",
+    "ch": "生成女孩同伴",
+    "cn": "生成女孩同伴"
+   },
+   "IGUI_LNPCTest_Invalid": {
+    "en": "Invalid test request.",
+    "ch": "無效的測試請求.",
+    "cn": "无效的测试请求."
+   },
+   "IGUI_LNPCTest_LowHP": {
+    "en": "Test wounds require at least 60％ health.",
+    "ch": "生命值需達 60％ 以上才能建立測試傷口.",
+    "cn": "生命值需达到 60％ 以上才能创建测试伤口."
+   },
+   "IGUI_LNPCTest_Menu": {
+    "en": "L-NPC Test Tools",
+    "ch": "L-NPC 測試工具",
+    "cn": "L-NPC 测试工具"
+   },
+   "IGUI_LNPCTest_MissingLimb": {
+    "en": "Cannot injure a missing limb.",
+    "ch": "無法對已不存在的肢體造成傷害.",
+    "cn": "无法对已缺失的肢体造成伤害."
+   },
+   "IGUI_LNPCTest_NoProfile": {
+    "en": "No companion profile found for this sex.",
+    "ch": "找不到此性別的同伴資料.",
+    "cn": "找不到该性别的同伴资料."
+   },
+   "IGUI_LNPCTest_NotReady": {
+    "en": "Wait for the companion and medical system to become ready.",
+    "ch": "請等待同伴與醫療系統準備就緒.",
+    "cn": "请等待同伴和医疗系统准备就绪."
+   },
+   "IGUI_LNPCTest_OpenHealth": {
+    "en": "Open health / treatment",
+    "ch": "開啟健康 / 治療",
+    "cn": "打开健康 / 治疗"
+   },
+   "IGUI_LNPCTest_Persistent": {
+    "en": "Spawned companions and wounds remain in the save.",
+    "ch": "生成的同伴與傷口會保留在存檔中.",
+    "cn": "生成的同伴和伤口会保留在存档中."
+   },
+   "IGUI_LNPCTest_Range": {
+    "en": "Use on your own nearby companion, on the same floor with a clear path.",
+    "ch": "僅能對附近屬於你的同伴使用, 需在同一層樓且路徑暢通.",
+    "cn": "仅能对附近属于你的同伴使用, 需在同一层楼且路径畅通."
+   },
+   "IGUI_LNPCTest_Selected": {
+    "en": "Selected part: ",
+    "ch": "已選部位: ",
+    "cn": "已选部位: "
+   },
+   "IGUI_LNPCTest_Spawned": {
+    "en": "Child companion spawn requested.",
+    "ch": "已請求生成兒童同伴.",
+    "cn": "已请求生成儿童同伴."
+   },
+   "IGUI_LNPCTest_StatusButton": {
+    "en": "Add test wound (admin / debug)",
+    "ch": "加入測試傷口 (管理員 / 除錯)",
+    "cn": "添加测试伤口 (管理员 / 调试)"
+   },
+   "IGUI_LNPCTest_TooMany": {
+    "en": "Too many wounds. Use another test companion.",
+    "ch": "傷口太多. 請改用其他測試同伴.",
+    "cn": "伤口太多. 请改用其他测试同伴."
+   },
+   "IGUI_LNPCTest_Wait": {
+    "en": "Please wait before trying again.",
+    "ch": "請稍候再試.",
+    "cn": "请稍候再试."
+   },
+   "IGUI_LNPCTest_Wounds": {
+    "en": "Add test wound to nearby companion",
+    "ch": "為附近的同伴加入測試傷口",
+    "cn": "为附近的同伴添加测试伤口"
+   },
+   "IGUI_LNPCTest_bullet": {
+    "en": "Embedded bullet (-4％ health)",
+    "ch": "體內殘留子彈 (生命值 -4％)",
+    "cn": "体内残留子弹 (生命值 -4％)"
+   },
+   "IGUI_LNPCTest_childCritical": {
+    "en": "Child serious injury / downed test (28％ health)",
+    "ch": "兒童重傷 / 倒地測試 (生命值 28％)",
+    "cn": "儿童重伤 / 倒地测试 (生命值 28％)"
+   },
+   "IGUI_LNPCTest_deep": {
+    "en": "Deep wound (-4％ health)",
+    "ch": "深傷口 (生命值 -4％)",
+    "cn": "深伤口 (生命值 -4％)"
+   },
+   "IGUI_LNPCTest_fracture": {
+    "en": "Fracture (-4％ health)",
+    "ch": "骨折 (生命值 -4％)",
+    "cn": "骨折 (生命值 -4％)"
+   },
+   "IGUI_LNPCTest_glass": {
+    "en": "Embedded glass (-4％ health)",
+    "ch": "傷口殘留玻璃 (生命值 -4％)",
+    "cn": "伤口残留玻璃 (生命值 -4％)"
+   },
+   "IGUI_LNPCTest_infection": {
+    "en": "Bacterial wound infection (-4％ health)",
+    "ch": "細菌性傷口感染 (生命值 -4％)",
+    "cn": "细菌性伤口感染 (生命值 -4％)"
+   },
+   "IGUI_LNPCTest_laceration": {
+    "en": "Laceration (-4％ health)",
+    "ch": "撕裂傷 (生命值 -4％)",
+    "cn": "撕裂伤 (生命值 -4％)"
+   },
+   "IGUI_LNPCTest_scratch": {
+    "en": "Minor scratch (-2％ health)",
+    "ch": "輕微刮傷 (生命值 -2％)",
+    "cn": "轻微刮伤 (生命值 -2％)"
    }
   },
   "ItemName.json": {
@@ -152554,8 +153554,8 @@
    },
    "AuthenticZBackpacksPlus.HoodieDOWN_Buzzers": {
     "en": "Buzzers Hoodie",
-    "ch": "連帽衫 (蜂鳴者)",
-    "cn": "连帽衫 (蜂鸣者)"
+    "ch": "連帽衫 (Buzzers)",
+    "cn": "连帽衫 (Buzzers)"
    },
    "AuthenticZBackpacksPlus.HoodieDOWN_Checkered": {
     "en": "Dark Red Plaid Hoodie",
@@ -152634,8 +153634,8 @@
    },
    "AuthenticZBackpacksPlus.HoodieTied_Buzzers": {
     "en": "Buzzers Hoodie (Tied)",
-    "ch": "連帽衫 (蜂鳴者, 綁腰)",
-    "cn": "连帽衫 (蜂鸣者, 绑腰)"
+    "ch": "連帽衫 (Buzzers, 綁腰)",
+    "cn": "连帽衫 (Buzzers, 绑腰)"
    },
    "AuthenticZBackpacksPlus.HoodieTied_Checkered": {
     "en": "Dark Red Plaid Hoodie (Tied)",
@@ -152719,8 +153719,8 @@
    },
    "AuthenticZBackpacksPlus.HoodieUP_Buzzers": {
     "en": "Buzzers Hoodie",
-    "ch": "連帽衫 (蜂鳴者)",
-    "cn": "连帽衫 (蜂鸣者)"
+    "ch": "連帽衫 (Buzzers)",
+    "cn": "连帽衫 (Buzzers)"
    },
    "AuthenticZBackpacksPlus.HoodieUP_Checkered": {
     "en": "Dark Red Plaid Hoodie",
@@ -153659,8 +154659,8 @@
    },
    "AuthenticZBackpacksPlus.Shirt_Buzzers": {
     "en": "Buzzers Shirt",
-    "ch": "襯衫 (蜂鳴者)",
-    "cn": "衬衫 (蜂鸣者)"
+    "ch": "襯衫 (Buzzers)",
+    "cn": "衬衫 (Buzzers)"
    },
    "AuthenticZBackpacksPlus.Shirt_Cheerleader": {
     "en": "Cheerleader Uniform",
@@ -171573,9 +172573,9 @@
     "cn": "蓝色短袖衬衫"
    },
    "ItemName_AuthenticZClothing.Shirt_FormalBrad": {
-    "en": "Brad's Formal Shirt",
-    "ch": "布萊德的正裝襯衫",
-    "cn": "布拉德的正装衬衫"
+    "en": "Formal Shirt",
+    "ch": "正裝襯衫",
+    "cn": "正装衬衫"
    },
    "ItemName_AuthenticZClothing.Shirt_FormalDayZ": {
     "en": "DayZ Plaid Shirt",
@@ -177588,9 +178588,9 @@
     "cn": "蓝色短袖衬衫"
    },
    "ItemName_AuthenticZLite.Shirt_FormalBrad": {
-    "en": "Brad's Formal Shirt",
-    "ch": "布萊德的正裝襯衫",
-    "cn": "布拉德的正装衬衫"
+    "en": "Formal Shirt",
+    "ch": "正裝襯衫",
+    "cn": "正装衬衫"
    },
    "ItemName_AuthenticZLite.Shirt_FormalDayZ": {
     "en": "DayZ Plaid Shirt",
@@ -290542,19 +291542,19 @@
     "cn": "CAR-15 细圆形塑料护木"
    },
    "ARGS.Part_HandguardRIS": {
-    "en": "Knight's Armament Company RIS Prototype",
-    "ch": "奈特軍械 RIS 原型",
-    "cn": "奈特军械 RIS 原型"
+    "en": "Ridgeline QR-4 Quad Rail Handguard (Carbine)",
+    "ch": "Ridgeline QR-4 四面導軌護木 (卡賓槍)",
+    "cn": "Ridgeline QR-4 四面导轨护木 (卡宾枪)"
    },
    "ARGS.Part_HandguardSIR": {
-    "en": "A.R.M.S. #5 S.I.R. Prototype Handguard System",
-    "ch": "A.R.M.S. #5 S.I.R. 原型護木系統",
-    "cn": "A.R.M.S. #5 S.I.R. 原型护木系统"
+    "en": "Ridgeline Rail Handguard System (Carbine)",
+    "ch": "Ridgeline 導軌護木系統 (卡賓槍)",
+    "cn": "Ridgeline 导轨护木系统 (卡宾枪)"
    },
    "ARGS.Part_HandguardSIRRifle": {
-    "en": "A.R.M.S. #5 S.I.R. Handguard System (Rifle Length)",
-    "ch": "A.R.M.S. #5 S.I.R. 護木系統 (步槍長度)",
-    "cn": "A.R.M.S. #5 S.I.R. 护木系统 (步枪长度)"
+    "en": "Ridgeline QR-4 Quad Rail Handguard (Rifle)",
+    "ch": "Ridgeline QR-4 四面導軌護木 (步槍)",
+    "cn": "Ridgeline QR-4 四面导轨护木 (步枪)"
    },
    "ARGS.Part_HandguardVMatch": {
     "en": "Bushmaster V-Match Aluminum Free-Float Tube",
@@ -302215,6 +303215,181 @@
     "en": "Wet Tanned Kid Hide",
     "ch": "小山羊皮 (已鞣製, 溼)",
     "cn": "小山羊皮 (已鞣制, 湿)"
+   },
+   "AuthenticZClothing.Hat_GarrisonCover": {
+    "en": "Garrison Cover",
+    "ch": "船形帽",
+    "cn": "船形帽"
+   },
+   "AuthenticZClothing.Shirt_FormalTan": {
+    "en": "Tan Formal Shirt",
+    "ch": "正裝襯衫 (棕褐)",
+    "cn": "正装衬衫 (棕褐)"
+   },
+   "AuthenticZClothing.Tshirt_NavyPT_1": {
+    "en": "Navy PT Shirt",
+    "ch": "T恤 (海軍體能訓練)",
+    "cn": "T 恤 (海军体能训练)"
+   },
+   "AuthenticZLite.Hat_GarrisonCover": {
+    "en": "Garrison Cover",
+    "ch": "船形帽",
+    "cn": "船形帽"
+   },
+   "AuthenticZLite.Shirt_FormalTan": {
+    "en": "Tan Formal Shirt",
+    "ch": "正裝襯衫 (棕褐)",
+    "cn": "正装衬衫 (棕褐)"
+   },
+   "AuthenticZLite.Tshirt_NavyPT_1": {
+    "en": "Navy PT Shirt",
+    "ch": "T恤 (海軍體能訓練)",
+    "cn": "T 恤 (海军体能训练)"
+   },
+   "AmmoMaker.NoisyCricket": {
+    "en": "Noisy Cricket",
+    "ch": "Noisy Cricket",
+    "cn": "Noisy Cricket"
+   },
+   "AmmoMaker.NoisyCricketCharge": {
+    "en": "X-01 Charge",
+    "ch": "X-01 充能彈",
+    "cn": "X-01 充能弹"
+   },
+   "Base.AlienFolder": {
+    "en": "Classified Documentation (C)",
+    "ch": "機密文件 (C)",
+    "cn": "机密文件 (C)"
+   },
+   "Base.MIBNote": {
+    "en": "Classified Documentation (A)",
+    "ch": "機密文件 (A)",
+    "cn": "机密文件 (A)"
+   },
+   "Base.MIBNoteB": {
+    "en": "Classified Documentation (B)",
+    "ch": "機密文件 (B)",
+    "cn": "机密文件 (B)"
+   },
+   "Base.MichaelThompsonID": {
+    "en": "ID Card - Michael Thompson",
+    "ch": "識別證 (Michael Thompson)",
+    "cn": "ID卡 (Michael Thompson)"
+   },
+   "Base.NCBunkerKeyA": {
+    "en": "Suspicious hatch key",
+    "ch": "可疑的艙門鑰匙",
+    "cn": "可疑的舱门钥匙"
+   },
+   "Base.NumarkChiefNote": {
+    "en": "Michael Thompson Note",
+    "ch": "Michael Thompson 的筆記",
+    "cn": "Michael Thompson 的笔记"
+   },
+   "Base.PlatinumCardKey": {
+    "en": "Key Card Platinum",
+    "ch": "鑰匙卡 (白金)",
+    "cn": "白金门禁卡"
+   },
+   "Base.SpadeKey": {
+    "en": "Spade Key",
+    "ch": "黑桃鑰匙",
+    "cn": "黑桃钥匙"
+   },
+   "Base.SnakeModdingManual": {
+    "en": "'Snake's Modpack' Learning Manual",
+    "ch": "'Snake's Modpack' 學習手冊",
+    "cn": "'Snake's Modpack' 学习手册"
+   },
+   "Base.Bag_GTech_XSR1": {
+    "en": "GTECH XS-R1 Alien Rucksack",
+    "ch": "GTECH XS-R1 外星背包",
+    "cn": "GTECH XS-R1 外星背包"
+   },
+   "Base.ChiefSuit_Jacket": {
+    "en": "Suit Jacket",
+    "ch": "西裝夾克",
+    "cn": "西装夹克"
+   },
+   "Base.ChiefTie_Full": {
+    "en": "Tie",
+    "ch": "領帶",
+    "cn": "领带"
+   },
+   "Base.ChiefTrousers_Suit": {
+    "en": "Trousers Suit",
+    "ch": "長褲 (西裝)",
+    "cn": "长裤 (西装)"
+   },
+   "Base.Hat_SecurityBaseballCap": {
+    "en": "Security Cap",
+    "ch": "保全帽",
+    "cn": "保安帽"
+   },
+   "Base.Hat_SecurityBaseballCap_Reverse": {
+    "en": "Security Cap",
+    "ch": "保全帽",
+    "cn": "保安帽"
+   },
+   "Base.NumarkBriefcase": {
+    "en": "Briefcase 'Numark Corp'",
+    "ch": "手提箱 'Numark Corp'",
+    "cn": "公文包 'Numark Corp'"
+   },
+   "Base.SuitcaseX": {
+    "en": "Briefcase 'X'",
+    "ch": "手提箱 'X'",
+    "cn": "公文包 'X'"
+   },
+   "Base.Vest_BulletBlack": {
+    "en": "Bulletproof Vest",
+    "ch": "防彈背心",
+    "cn": "防弹背心"
+   },
+   "GSBC.Bobcat21A": {
+    "en": "Beretta 21A Bobcat",
+    "ch": "貝瑞塔 21A Bobcat",
+    "cn": "伯莱塔 21A Bobcat"
+   },
+   "GSBC.Mag_Bobcat7": {
+    "en": "Beretta 21A 7-Round .22 Magazine",
+    "ch": "貝瑞塔 21A 7 發 .22 彈匣",
+    "cn": "伯莱塔 21A 7 发 .22 弹匣"
+   },
+   "GSJF.Jetfire950": {
+    "en": "Beretta 950 BS Jetfire",
+    "ch": "貝瑞塔 950 BS Jetfire",
+    "cn": "伯莱塔 950 BS Jetfire"
+   },
+   "GSJF.Mag_Jetfire8": {
+    "en": "Beretta 950 8-Round .25 Magazine",
+    "ch": "貝瑞塔 950 8 發 .25 彈匣",
+    "cn": "伯莱塔 950 8 发 .25 弹匣"
+   },
+   "GSSAW.M249": {
+    "en": "M249 Squad Automatic Weapon (SAW)",
+    "ch": "M249 班用自動武器 (SAW)",
+    "cn": "M249 班用自动武器 (SAW)"
+   },
+   "GSSAW.Mag_M249Box200": {
+    "en": "M249 200-Round Ammunition Box",
+    "ch": "M249 200 發彈藥箱",
+    "cn": "M249 200 发弹药箱"
+   },
+   "GSSAW.Part_BarrelM249": {
+    "en": "M249 465mm Quick-Change Barrel",
+    "ch": "M249 465mm 快拆槍管",
+    "cn": "M249 465mm 快拆枪管"
+   },
+   "GSSAW.Part_BipodM249": {
+    "en": "M249 Folding Bipod",
+    "ch": "M249 摺疊兩腳架",
+    "cn": "M249 折叠两脚架"
+   },
+   "GSSAW.Part_StockM249": {
+    "en": "M249 Fixed Buttstock",
+    "ch": "M249 固定槍托",
+    "cn": "M249 固定枪托"
    }
   },
   "Print_Media.json": {
@@ -324436,6 +325611,11 @@
     "ch": "鞣製小山羊皮",
     "cn": "鞣制小山羊皮",
     "_note": "2026-10-30 #1170：RRAR 上游 Recipes.json 只給 B41 前綴鍵 Recipe_<區塊名>，B42 配方名走 Translator.getRecipeName(裸 craftRecipe 區塊名)，前綴鍵不會被讀。裸鍵沿用同 MOD 前綴鍵的譯文，en 取前綴鍵英文（RRARGoatHideRecipes.txt 的 craftRecipe 區塊名即本鍵）。"
+   },
+   "DismantleWeapons": {
+    "en": "Disassemble and Assemble firearms",
+    "ch": "拆解與組裝槍械",
+    "cn": "拆解与组装枪械"
    }
   },
   "Sandbox.json": {
@@ -334689,27 +335869,27 @@
     "_note": "新增。sprinter 沿用同 mod own Sandbox_ExtractionMode_HordeSprinterPercent_tooltip（ch 衝刺殭屍／cn 跑者）; 場景清單與 BanditMetaEvents.lua:15-16 的 scene id 對應。"
    },
    "Sandbox_ExtractionMode_BanditAttackWindowMaximumHours_tooltip": {
-    "en": "Requires Bandits integration.\n\nLongest wait before checking for a bandit attack, in game hours. Set both time limits equally for a fixed wait. The separate friendly encounter timer uses these interval settings too.",
-    "ch": "需要匪徒整合.\n\n判定匪徒攻擊前的最長等待時間, 單位為遊戲內小時. 上下限設為相同即為固定等待. 友善遭遇的獨立計時器也沿用這組間隔設定.",
-    "cn": "需要匪徒集成.\n\n判定匪徒攻击前的最长等待时间, 单位为游戏内小时. 上下限设为相同即为固定等待. 友好遭遇的独立计时器也沿用这组间隔设置.",
+    "en": "Requires optional NPC attack integration.\n\nLongest wait before checking for an attack with the selected NPC provider, in game hours. Set both time limits equally for a fixed wait. The separate Bandits friendly encounter timer uses these interval settings too.",
+    "ch": "需要選用的 NPC 攻擊整合.\n\n使用所選 NPC 來源模組判定攻擊前的最長等待時間, 單位為遊戲內小時. 上下限設為相同即為固定等待. Bandits 友善遭遇的獨立計時器也沿用這組間隔設定.",
+    "cn": "需要可选的 NPC 攻击集成.\n\n使用所选 NPC 来源模组判定攻击前的最长等待时间, 单位为游戏内小时. 上下限设为相同即为固定等待. Bandits 友好遭遇的独立计时器也沿用这组间隔设置.",
     "_note": "改值。上游移除「and Bandit Attack Chance per Window above 0」前提、新增友善遭遇計時器共用說明; 保留原有句式僅增刪對應子句。"
    },
    "Sandbox_ExtractionMode_BanditAttackWindowMinimumHours_tooltip": {
-    "en": "Requires Bandits integration.\n\nShortest wait before checking for a bandit attack, in game hours. The wait is randomly chosen between the minimum and maximum, even if the previous check caused no attack. The separate friendly encounter timer uses these interval settings too.",
-    "ch": "需要匪徒整合.\n\n判定匪徒攻擊前的最短等待時間, 單位為遊戲內小時. 等待時間會在最短與最長之間隨機決定, 即使上一次判定沒有引發攻擊也一樣. 友善遭遇的獨立計時器也沿用這組間隔設定.",
-    "cn": "需要匪徒集成.\n\n判定匪徒攻击前的最短等待时间, 单位为游戏内小时. 等待时间会在最短与最长之间随机决定, 即使上一次判定没有引发攻击也一样. 友好遭遇的独立计时器也沿用这组间隔设置.",
+    "en": "Requires optional NPC attack integration.\n\nShortest wait before checking for an attack with the selected NPC provider, in game hours. The wait is randomly chosen between the minimum and maximum, even if the previous check caused no attack. The separate Bandits friendly encounter timer uses these interval settings too.",
+    "ch": "需要選用的 NPC 攻擊整合.\n\n使用所選 NPC 來源模組判定攻擊前的最短等待時間, 單位為遊戲內小時. 等待時間會在最短與最長之間隨機決定, 即使上一次判定沒有引發攻擊也一樣. Bandits 友善遭遇的獨立計時器也沿用這組間隔設定.",
+    "cn": "需要可选的 NPC 攻击集成.\n\n使用所选 NPC 来源模组判定攻击前的最短等待时间, 单位为游戏内小时. 等待时间会在最短与最长之间随机决定, 即使上一次判定没有引发攻击也一样. Bandits 友好遭遇的独立计时器也沿用这组间隔设置.",
     "_note": "改值。同 Maximum 版本的前提刪除＋友善遭遇計時器新增句。"
    },
    "Sandbox_ExtractionMode_BanditSpawnRadius_tooltip": {
-    "en": "Requires the Bandits mod and Enable Optional Bandits NPC Integration.\n\nPreferred distance from players where attacking bandits appear, in tiles. Spawns use loaded, clear ground within 25-65 tiles, moving inward if the preferred area is unavailable.",
-    "ch": "需要 Bandits 模組, 並開啟「啟用選用的匪徒 NPC 整合」.\n\n來襲匪徒出現在距離玩家多遠的位置, 單位為格; 此為偏好距離. 生成會使用 25-65 格內已載入的淨空地面, 若偏好區域無法使用則往內側靠近.",
-    "cn": "需要 Bandits 模组, 并开启“启用可选的匪徒 NPC 集成”.\n\n来袭匪徒出现在距离玩家多远的位置, 单位为格; 此为首选距离. 生成会使用 25-65 格内已加载的净空地面, 若首选区域无法使用则向内侧靠近.",
+    "en": "Requires optional NPC attack integration and the selected NPC provider.\n\nPreferred distance from players where attackers appear, in tiles. Spawns use loaded, clear ground within 25-65 tiles, moving inward if the preferred area is unavailable. A-Life also applies its native spawn policy and population capacity.",
+    "ch": "需要選用的 NPC 攻擊整合與所選的 NPC 來源模組.\n\n來襲者出現在距離玩家多遠的位置, 單位為格; 此為偏好距離. 生成會使用 25-65 格內已載入的淨空地面, 若偏好區域無法使用則往內側靠近. A-Life 還會套用其原生的生成規則與人口容量.",
+    "cn": "需要可选的 NPC 攻击集成和所选的 NPC 来源模组.\n\n来袭者出现在距离玩家多远的位置, 单位为格; 此为首选距离. 生成会使用 25-65 格内已加载的净空地面, 若首选区域无法使用则向内侧靠近. A-Life 还会应用其原生的生成规则与人口容量.",
     "_note": "改值。Approximate→Preferred, 並新增 25-65 格回退規則; 前段沿用原譯以維持與 As1 BanditSpawnRadius 標籤一致。"
    },
    "Sandbox_ExtractionMode_EnableBanditsIntegration_tooltip": {
-    "en": "Requires the Bandits mod to be installed and enabled.\n\nAdds hostile attacks, bandit horde replacements and separate friendly encounters. Clans follow the targeted player's personal or shared faction quest progress instead of save age. Military Checkpoint encounters use only Deserters.",
-    "ch": "需要已安裝並啟用 Bandits 模組.\n\n加入敵對攻擊、匪徒替換屍潮, 以及獨立的友善遭遇. 幫派取決於目標玩家的個人或陣營共享任務進度, 而非存檔天數. 軍事檢查站的遭遇只會出現逃兵.",
-    "cn": "需要已安装并启用 Bandits 模组.\n\n加入敌对攻击、匪徒替换尸潮, 以及独立的友好遭遇. 帮派取决于目标玩家的个人或派系共享任务进度, 而非存档天数. 军事检查站的遭遇只会出现逃兵.",
+    "en": "Requires the selected NPC provider to be installed and enabled.\n\nEnables regular hostile attack windows for Bandits or A-Life. A-Life uses native hostile faction eligibility, reputation, equipment and attack behavior. Bandits also supplies separate friendly encounters and horde replacements; its clans follow personal or shared faction quest progress, with only Deserters at Military Checkpoint. A-Life meta events and horde replacements keep their own settings.",
+    "ch": "需要已安裝並啟用所選的 NPC 來源模組.\n\n為 Bandits 或 A-Life 啟用一般的敵對攻擊時窗. A-Life 會使用其原生的敵對陣營資格、聲望、裝備與攻擊行為. Bandits 另外提供獨立的友善遭遇與屍潮替換; 其幫派取決於個人或陣營共享任務進度, 軍事檢查站只會出現逃兵. A-Life 的場景事件與屍潮替換維持各自的設定.",
+    "cn": "需要已安装并启用所选的 NPC 来源模组.\n\n为 Bandits 或 A-Life 启用普通的敌对攻击窗口. A-Life 会使用其原生的敌对派系资格、声望、装备与攻击行为. Bandits 另外提供独立的友好遭遇和尸潮替换; 其帮派取决于个人或派系共享任务进度, 军事检查站只会出现逃兵. A-Life 的场景事件和尸潮替换保留各自的设置.",
     "_note": "改值。上游整段改寫（加入友善遭遇、幫派依任務進度而非存檔天數、軍事檢查站只出 Deserters）。Deserters 為 Bandits 幫派名, 譯為逃兵。"
    },
    "Sandbox_HB_BanditsCasings": {
@@ -336357,14 +337537,14 @@
     "cn": "仅在原版僵尸速度设置未更改时适用.\n\n最初七个游戏日之后, 普通僵尸中可能成为跑者的百分比."
    },
    "Sandbox_ExtractionMode_BanditGroupMaximum_tooltip": {
-    "en": "Requires Bandits integration and Bandit Attack Chance per Window above 0.\n\nLargest group sent by a regular bandit attack. Bandits replacing a zombie horde use separate size settings.",
-    "ch": "需要匪徒整合, 且「每個時窗的匪徒攻擊機率」大於 0.\n\n一般匪徒攻擊派出的最大小隊規模. 替換屍潮的匪徒使用另外的規模設定.",
-    "cn": "需要匪徒集成, 且“匪徒攻击窗口概率”大于 0.\n\n普通匪徒攻击派出的最大小队规模. 替换尸潮的匪徒使用单独的规模设置."
+    "en": "Requires optional NPC attack integration and Bandit Attack Chance per Window above 0.\n\nLargest group requested by a regular attack using the selected provider, limited by usable faction profiles and safe tiles. NPC horde replacements use separate size settings.",
+    "ch": "需要選用的 NPC 攻擊整合, 且「每個時窗的匪徒攻擊機率」大於 0.\n\n使用所選來源模組的一般攻擊所要求的最大小隊規模, 實際規模受可用的陣營設定檔與安全地塊限制. NPC 替換屍潮使用另外的規模設定.",
+    "cn": "需要可选的 NPC 攻击集成, 且“匪徒攻击窗口概率”大于 0.\n\n使用所选来源模组的普通攻击所请求的最大小队规模, 实际规模受可用的派系配置和安全地块限制. NPC 替换尸潮使用单独的规模设置."
    },
    "Sandbox_ExtractionMode_BanditGroupMinimum_tooltip": {
-    "en": "Requires Bandits integration and Bandit Attack Chance per Window above 0.\n\nSmallest group sent by a regular bandit attack. Bandits replacing a zombie horde use separate size settings.",
-    "ch": "需要匪徒整合, 且「每個時窗的匪徒攻擊機率」大於 0.\n\n一般匪徒攻擊派出的最小小隊規模. 替換屍潮的匪徒使用另外的規模設定.",
-    "cn": "需要匪徒集成, 且“匪徒攻击窗口概率”大于 0.\n\n普通匪徒攻击派出的最小小队规模. 替换尸潮的匪徒使用单独的规模设置."
+    "en": "Requires optional NPC attack integration and Bandit Attack Chance per Window above 0.\n\nSmallest group requested by a regular attack using the selected provider, limited by usable faction profiles and safe tiles. NPC horde replacements use separate size settings.",
+    "ch": "需要選用的 NPC 攻擊整合, 且「每個時窗的匪徒攻擊機率」大於 0.\n\n使用所選來源模組的一般攻擊所要求的最小小隊規模, 實際規模受可用的陣營設定檔與安全地塊限制. NPC 替換屍潮使用另外的規模設定.",
+    "cn": "需要可选的 NPC 攻击集成, 且“匪徒攻击窗口概率”大于 0.\n\n使用所选来源模组的普通攻击所请求的最小小队规模, 实际规模受可用的派系配置和安全地块限制. NPC 替换尸潮使用单独的规模设置."
    },
    "Sandbox_ExtractionMode_BanditHordeGroupMaximum_tooltip": {
     "en": "Largest base NPC group that replaces a zombie horde, using the selected provider. Escalating Horde Waves scales this size from 20%% to 200%%. A-Life respects native population capacity, can reuse faction profiles, and caps each replacement at 32 NPCs.",
@@ -338194,9 +339374,9 @@
     "cn": "A-Life"
    },
    "Sandbox_ExtractionMode_NPCProvider_tooltip": {
-    "en": "Choose the mod used for NPC debug controls, meta events and late-raid horde replacements. Automatic uses A-Life when enabled, otherwise Bandits. Restart the session after changing this option. A-Life uses native faction eligibility, reputation and equipment. Regular timed attacks and friendly encounter schedules remain Bandits features.",
-    "ch": "選擇用於 NPC 除錯控制、場景事件與突襲後期屍潮替換的模組. 「自動」會在已啟用 A-Life 時使用 A-Life, 否則使用 Bandits. 變更此選項後需重新載入遊戲. A-Life 會使用其原生的陣營資格、聲望與裝備. 一般的定時攻擊與友善遭遇排程仍屬於 Bandits 的功能.",
-    "cn": "选择用于 NPC 调试控制、场景事件与突袭后期尸潮替换的模组. “自动”会在已启用 A-Life 时使用 A-Life, 否则使用 Bandits. 更改此选项后需重新加载游戏. A-Life 会使用其原生的派系资格、声望与装备. 普通的定时攻击与友好遭遇排程仍属于 Bandits 的功能."
+    "en": "Choose the mod used for regular attack windows, NPC debug controls, meta events and late-raid horde replacements. Automatic uses A-Life when enabled, otherwise Bandits. Restart the session after changing this option. A-Life uses native faction eligibility, reputation, equipment and attack behavior. Friendly encounter schedules and Bandit Behavior/withdrawal controls remain Bandits features.",
+    "ch": "選擇用於一般攻擊時窗、NPC 除錯控制、場景事件與突襲後期屍潮替換的模組. 「自動」會在已啟用 A-Life 時使用 A-Life, 否則使用 Bandits. 變更此選項後需重新載入遊戲. A-Life 會使用其原生的陣營資格、聲望、裝備與攻擊行為. 友善遭遇排程, 以及「匪徒行為」與撤退相關控制, 仍屬於 Bandits 的功能.",
+    "cn": "选择用于普通攻击窗口、NPC 调试控制、场景事件与突袭后期尸潮替换的模组. “自动”会在已启用 A-Life 时使用 A-Life, 否则使用 Bandits. 更改此选项后需重新加载游戏. A-Life 会使用其原生的派系资格、声望、装备与攻击行为. 友好遭遇排程, 以及“匪徒行为”和撤退相关控制, 仍属于 Bandits 的功能."
    },
    "Sandbox_GunsEscalator": {
     "en": "Functional Escalators",
@@ -376429,6 +377609,151 @@
     "en": "Relative selection weight for each enabled goat breed in sheep-compatible farm pools. Higher values make goats more common. Zero disables new goat ranch selections.",
     "ch": "每個已啟用的山羊品種在可出現綿羊的農場池中的相對選擇權重. 數值越高, 山羊越常見. 設為 0 會停用新的山羊農場選擇.",
     "cn": "每个已启用的山羊品种在可出现绵羊的农场池中的相对选择权重. 数值越高, 山羊越常见. 设为 0 将禁用新的山羊农场选择."
+   },
+   "Sandbox_RadioTraders_ThreadsBagsEnabled": {
+    "en": "Threads: Sells/Buys Bags",
+    "ch": "針線: 販售/收購包袋",
+    "cn": "布店: 出售/收购包袋"
+   },
+   "Sandbox_RadioTraders_ThreadsBagsEnabled_tooltip": {
+    "en": "Whether bags and backpacks can show up in Threads' stock or buy list at all. Off removes them entirely instead of just pricing them higher.",
+    "ch": "包袋與背包是否會出現在針線的貨品或收購清單中. 關閉後會完全移除它們, 而不只是提高價格.",
+    "cn": "包袋和背包是否会出现在布店的货品或收购列表中. 关闭后会彻底移除它们, 而不只是提高价格."
+   },
+   "Sandbox_TrueSewers_DrownedShare": {
+    "en": "Drowned in the sewers",
+    "ch": "下水道中的溺屍",
+    "cn": "下水道中的溺尸"
+   },
+   "Sandbox_TrueSewers_DrownedShare_Options_option1": {
+    "en": "None",
+    "ch": "無",
+    "cn": "无"
+   },
+   "Sandbox_TrueSewers_DrownedShare_Options_option2": {
+    "en": "Rare",
+    "ch": "稀少",
+    "cn": "稀少"
+   },
+   "Sandbox_TrueSewers_DrownedShare_Options_option3": {
+    "en": "Few",
+    "ch": "少量",
+    "cn": "少量"
+   },
+   "Sandbox_TrueSewers_DrownedShare_Options_option4": {
+    "en": "Normal",
+    "ch": "普通",
+    "cn": "普通"
+   },
+   "Sandbox_TrueSewers_DrownedShare_Options_option5": {
+    "en": "Many",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_TrueSewers_DrownedShare_Options_option6": {
+    "en": "Extreme",
+    "ch": "極多",
+    "cn": "极多"
+   },
+   "Sandbox_TrueSewers_DrownedShare_tooltip": {
+    "en": "Share of the sewer zombies that are bloated drowned bodies (ordinary zombies: only their look changes). Normal: about one in three. Changing it mid-game only affects places not visited yet.",
+    "ch": "下水道殭屍中屬於腫脹溺屍的比例 (仍是普通殭屍: 只有外觀不同). 普通: 大約三分之一. 遊戲中途更改只會影響尚未去過的地方.",
+    "cn": "下水道僵尸中属于肿胀溺尸的比例 (仍是普通僵尸: 只是外观不同). 普通: 大约三分之一. 游戏中途更改只会影响尚未去过的地方."
+   },
+   "Sandbox_TrueSewers_LurkerDensity": {
+    "en": "Number of Lurkers",
+    "ch": "潛伏者數量",
+    "cn": "潜伏者数量"
+   },
+   "Sandbox_TrueSewers_LurkerDensity_Options_option1": {
+    "en": "Rare",
+    "ch": "稀少",
+    "cn": "稀少"
+   },
+   "Sandbox_TrueSewers_LurkerDensity_Options_option2": {
+    "en": "Few",
+    "ch": "少量",
+    "cn": "少量"
+   },
+   "Sandbox_TrueSewers_LurkerDensity_Options_option3": {
+    "en": "Normal",
+    "ch": "普通",
+    "cn": "普通"
+   },
+   "Sandbox_TrueSewers_LurkerDensity_Options_option4": {
+    "en": "Many",
+    "ch": "大量",
+    "cn": "大量"
+   },
+   "Sandbox_TrueSewers_LurkerDensity_Options_option5": {
+    "en": "Extreme",
+    "ch": "極多",
+    "cn": "极多"
+   },
+   "Sandbox_TrueSewers_LurkerDensity_tooltip": {
+    "en": "How many lairs the deep galleries hold, one Lurker each, gone for good once killed. Rare: about 70 across the whole map; Extreme: about 1,400. Raising it mid-game adds lairs and never moves existing ones.",
+    "ch": "深層坑道中有多少個巢穴, 每個巢穴一隻潛伏者, 被殺死後就永遠消失. 稀少: 全地圖約 70 個; 極多: 約 1,400 個. 遊戲中途調高會增加巢穴, 但不會移動既有的巢穴.",
+    "cn": "深层坑道中有多少个巢穴, 每个巢穴一只潜伏者, 被杀死后就永远消失. 稀少: 全地图约 70 个; 极多: 约 1,400 个. 游戏中途调高会增加巢穴, 但不会移动已有的巢穴."
+   },
+   "Sandbox_TrueSewers_Lurkers": {
+    "en": "Lurkers in the deep galleries",
+    "ch": "深層坑道中的潛伏者",
+    "cn": "深层坑道中的潜伏者"
+   },
+   "Sandbox_TrueSewers_Lurkers_tooltip": {
+    "en": "Rare blind creatures that crawl through the deep earth galleries and hunt by sound: walk softly. Off: no new Lurker appears (those already met stay). Also none when Zombies in the sewers is set to None.",
+    "ch": "在深層土質坑道中爬行, 靠聲音獵食的稀有盲眼生物: 腳步放輕. 關閉: 不會再出現新的潛伏者 (已遇到的會保留). 「下水道中的殭屍」設為「無」時也不會出現.",
+    "cn": "在深层土质坑道中爬行, 靠声音捕猎的稀有盲眼生物: 脚步放轻. 关闭: 不会再出现新的潜伏者 (已遇到的会保留). “下水道中的僵尸”设为“无”时也不会出现."
+   },
+   "Sandbox_Gunsmith_KittedStore": {
+    "en": "Kitted-out guns (gun stores)",
+    "ch": "加裝配件的槍械 (槍械店)",
+    "cn": "加装配件的枪械 (枪械店)"
+   },
+   "Sandbox_Gunsmith_KittedStore_tooltip": {
+    "en": "The same chance for guns in gun stores. 5 = one gun in 20. 0 = never, 100 = every gun a store holds (handy for a look).",
+    "ch": "同一種機率, 但套用於槍械店內的槍械. 5 = 每 20 把槍有 1 把. 0 = 從不, 100 = 店內每把槍都是 (方便檢視效果).",
+    "cn": "同一种概率, 但用于枪械店内的枪械. 5 = 每 20 把枪有 1 把. 0 = 从不, 100 = 店内每把枪都是 (方便查看效果)."
+   },
+   "Sandbox_Gunsmith_KittedWorld": {
+    "en": "Kitted-out guns (world)",
+    "ch": "加裝配件的槍械 (世界)",
+    "cn": "加装配件的枪械 (世界)"
+   },
+   "Sandbox_Gunsmith_KittedWorld_tooltip": {
+    "en": "The chance, in percent, that a Gunsmith gun found anywhere but a gun store comes kitted out: a scope with its mount and rings, and some of a light, laser, bipod, foregrip, better grip or stock and muzzle device (now and then a suppressor), all parts a player could fit. 2 = one gun in 50. 0 = never.",
+    "ch": "在槍械店以外任何地方找到的槍匠槍械已加裝配件的機率 (百分比): 一具附鏡座與鏡環的瞄準鏡, 再加上戰術燈、雷射、兩腳架、前握把、更好的握把或槍托、槍口裝置中的幾項 (偶爾是消音器), 全是玩家自己裝得上的零件. 2 = 每 50 把槍有 1 把. 0 = 從不.",
+    "cn": "在枪械店以外任何地方找到的枪匠枪械已加装配件的概率 (百分比): 一具带镜座和镜环的瞄准镜, 再加上战术灯、激光、两脚架、前握把、更好的握把或枪托、枪口装置中的几项 (偶尔是消音器), 全是玩家自己装得上的零件. 2 = 每 50 把枪有 1 把. 0 = 从不."
+   },
+   "Sandbox_AnimalRemaster_CanadaGooseChance": {
+    "en": "Canada goose shoreline chance (%)",
+    "ch": "加拿大鵝岸邊生成機率 (%%)",
+    "cn": "加拿大鹅岸边生成概率 (%%)"
+   },
+   "Sandbox_AnimalRemaster_CanadaGooseChance_tooltip": {
+    "en": "Chance per 200 x 200 shoreline block, before the shared animal-spawn setting adjustment. One pair per accepted block. Default: 12.",
+    "ch": "每個 200 x 200 岸邊區塊的生成機率, 在套用共用的動物生成設定調整之前計算. 每個判定成功的區塊生成一對. 預設: 12.",
+    "cn": "每个 200 x 200 岸边区块的生成概率, 在应用共享的动物生成设置调整之前计算. 每个判定成功的区块生成一对. 默认: 12."
+   },
+   "Sandbox_AnimalRemaster_EnableCanadaGooseSpawns": {
+    "en": "Wild Canada geese",
+    "ch": "野生加拿大鵝",
+    "cn": "野生加拿大鹅"
+   },
+   "Sandbox_AnimalRemaster_EnableCanadaGooseSpawns_tooltip": {
+    "en": "Allow Canada goose pairs on dry shorelines near lakes, rivers and ponds. Does not change duck or farm-goose spawning.",
+    "ch": "允許成對的加拿大鵝出現在湖泊, 河流與池塘附近的乾燥岸邊. 不會改變鴨子或家鵝的生成.",
+    "cn": "允许成对的加拿大鹅出现在湖泊, 河流和池塘附近的干燥岸边. 不会改变鸭子或家鹅的生成."
+   },
+   "Sandbox_AnimalRemaster_NearbyCanadaGooseLimit": {
+    "en": "Nearby Canada goose limit",
+    "ch": "附近加拿大鵝數量上限",
+    "cn": "附近加拿大鹅数量限制"
+   },
+   "Sandbox_AnimalRemaster_NearbyCanadaGooseLimit_tooltip": {
+    "en": "Maximum living Canada geese within 150 tiles. Values below 2 prevent new pairs. Default: 4.",
+    "ch": "150 格內存活加拿大鵝的數量上限. 數值低於 2 時不會生成新的一對. 預設: 4.",
+    "cn": "150 格范围内存活加拿大鹅的数量上限. 数值低于 2 时不会生成新的一对. 默认: 4."
    }
   },
   "Tooltip.json": {
@@ -388814,6 +390139,121 @@
     "en": "Remove the glass first - it is still in the wound.",
     "ch": "請先取出玻璃 - 它還在傷口裡.",
     "cn": "请先取出玻璃 - 它还在伤口中."
+   },
+   "Tooltip_AMU_InhibitorShot": {
+    "en": "There is an inhibitor in this area: the shot did not go off.",
+    "ch": "此區域內有干擾器: 這一發沒有爆炸.",
+    "cn": "此区域存在干扰器: 这一发没有爆炸."
+   },
+   "Tooltip_AMU_NoisyCricket": {
+    "en": "No magazine required: automatically regenerates ammunition over time. <br> Every shot explodes on impact. <br> Use with extreme caution and fire from a distance. <br> According to the report, it may cause lacerations and fractures if not handled properly.",
+    "ch": "不需要彈匣: 會隨時間自動恢復彈藥. <br> 每一發都會在命中時爆炸. <br> 使用時務必極度小心, 並從遠處射擊. <br> 根據報告, 若操作不當, 可能造成撕裂傷與骨折.",
+    "cn": "无需弹匣: 会随时间自动恢复弹药. <br> 每一发都会在命中时爆炸. <br> 使用时务必极度小心, 并从远处射击. <br> 根据报告, 如果操作不当, 可能造成撕裂伤和骨折."
+   },
+   "Tooltip_DismantleWeapons": {
+    "en": "Weapon Jobs",
+    "ch": "武器加工",
+    "cn": "武器作业"
+   },
+   "Tooltip_AlienFolder": {
+    "en": "A folder containing classified information about an incident.",
+    "ch": "一個裝著某起事件機密資訊的資料夾.",
+    "cn": "一个装有某起事件机密信息的文件夹."
+   },
+   "Tooltip_AlreadyLooted": {
+    "en": "This has already been opened.",
+    "ch": "這已經被打開過了.",
+    "cn": "这已经被打开过了."
+   },
+   "Tooltip_KeyCardPlatinum": {
+    "en": "Advanced Armament Agency Maximum-Level Credential.",
+    "ch": "先進武器局最高等級通行憑證.",
+    "cn": "先进武器局最高级别通行凭证."
+   },
+   "Tooltip_KeyNeeded": {
+    "en": "I don't have the object needed to open it.",
+    "ch": "我沒有打開它所需的東西.",
+    "cn": "我没有打开它所需的东西."
+   },
+   "Tooltip_MIBNote": {
+    "en": "A classified report concerning some type of special weaponry.",
+    "ch": "一份關於某種特殊武器的機密報告.",
+    "cn": "一份关于某种特殊武器的机密报告."
+   },
+   "Tooltip_MIBNoteB": {
+    "en": "A classified report concerning some type of special equipment.",
+    "ch": "一份關於某種特殊裝備的機密報告.",
+    "cn": "一份关于某种特殊装备的机密报告."
+   },
+   "Tooltip_MichaelThompsonID": {
+    "en": "An identification badge of an important person.",
+    "ch": "某位重要人物的識別證.",
+    "cn": "某位重要人物的ID卡."
+   },
+   "Tooltip_NCBunkerKeyA": {
+    "en": "This dusty key has 'A-51' engraved on it. <br> It looks like it opens some kind of hatch.",
+    "ch": "這把積滿灰塵的鑰匙上刻著「A-51」. <br> 看起來能打開某種艙門.",
+    "cn": "这把积满灰尘的钥匙上刻着“A-51”. <br> 看起来能打开某种舱门."
+   },
+   "Tooltip_NumarkChiefNote": {
+    "en": "A note that apparently contains classified information.",
+    "ch": "一張似乎記載著機密資訊的筆記.",
+    "cn": "一张似乎记载着机密信息的笔记."
+   },
+   "Tooltip_OpenChestTT": {
+    "en": "It seems that this chest contains something important.",
+    "ch": "這個箱子裡似乎有重要的東西.",
+    "cn": "这个箱子里似乎有重要的东西."
+   },
+   "Tooltip_OpenSafeTT": {
+    "en": "It seems that this safe contains something very important.",
+    "ch": "這個保險箱裡似乎有非常重要的東西.",
+    "cn": "这个保险箱里似乎有非常重要的东西."
+   },
+   "Tooltip_PickKeyTT": {
+    "en": "It seems that this key is important.",
+    "ch": "這把鑰匙似乎很重要.",
+    "cn": "这把钥匙似乎很重要."
+   },
+   "Tooltip_SpadeKey": {
+    "en": "This key has a spade emblem engraved on it.",
+    "ch": "這把鑰匙上刻著黑桃圖案.",
+    "cn": "这把钥匙上刻有黑桃图案."
+   },
+   "Tooltip_TakeOutfitTT": {
+    "en": "Take the suit down from the wall.",
+    "ch": "從牆上取下這套服裝.",
+    "cn": "从墙上取下这套服装."
+   },
+   "Tooltip_ReadSnakeManual": {
+    "en": "Open this manual to learn about the modpack's new features.",
+    "ch": "打開這本手冊, 了解模組包的新功能.",
+    "cn": "打开这本手册, 了解模组包的新功能."
+   },
+   "Tooltip_SnakeModdingManual": {
+    "en": "Coming soon...",
+    "ch": "敬請期待…",
+    "cn": "敬请期待…"
+   },
+   "Tooltip_AlienBagPack": {
+    "en": "A high-tech artifact with massive carrying capacity and weight reduction.",
+    "ch": "一件高科技器物, 容量極大並能減輕負重.",
+    "cn": "一件高科技器物, 容量极大并能减轻负重."
+   },
+   "Tooltip_BBP_FreePlace_LevelDown": {
+    "en": "Place and erase one level down",
+    "ch": "在下一層放置與擦除",
+    "cn": "在下一层放置和擦除"
+   },
+   "Tooltip_BBP_FreePlace_LevelUp": {
+    "en": "Place and erase one level up",
+    "ch": "在上一層放置與擦除",
+    "cn": "在上一层放置和擦除"
+   },
+   "Tooltip_LNPC_RetiredCrutch": {
+    "en": "Legacy crutch. Retained for save compatibility; walking and equipping are retired. Use a wheelchair or a functional prosthetic leg.",
+    "ch": "舊版拐杖. 為了存檔相容而保留; 已停用行走與裝備功能. 請改用輪椅或可正常使用的腿部義肢.",
+    "cn": "旧版拐杖. 为了存档兼容而保留; 已停用行走和装备功能. 请改用轮椅或可正常使用的腿部假肢."
    }
   },
   "UI.json": {
@@ -442255,24 +443695,24 @@
     "cn": "发现敌人. 注意周围!"
    },
    "UI_LNPC_CombatEffect_ammo_saver": {
-    "en": "Shot interval +20%; accuracy +1. Uses fewer rounds per minute; never refunds ammunition.",
-    "ch": "射擊間隔 +20%%; 精準度 +1. 每分鐘消耗的子彈較少; 不會返還彈藥.",
-    "cn": "射击间隔 +20%%; 精准度 +1. 每分钟消耗的子弹更少; 不会返还弹药."
+    "en": "Shot interval +20％; accuracy +1. Uses fewer rounds per minute; never refunds ammunition.",
+    "ch": "射擊間隔 +20％; 精準度 +1. 每分鐘消耗的子彈較少; 不會返還彈藥.",
+    "cn": "射击间隔 +20％; 精准度 +1. 每分钟消耗的子弹更少; 不会返还弹药."
    },
    "UI_LNPC_CombatEffect_axe_expert": {
-    "en": "Melee damage +10% with axes.",
-    "ch": "近戰傷害 +10%% (使用斧頭時).",
-    "cn": "近战伤害 +10%% (使用斧头时)."
+    "en": "Melee damage +10％ with axes.",
+    "ch": "近戰傷害 +10％ (使用斧頭時).",
+    "cn": "近战伤害 +10％ (使用斧头时)."
    },
    "UI_LNPC_CombatEffect_blunt_expert": {
-    "en": "Melee damage +10% with blunt weapons.",
-    "ch": "近戰傷害 +10%% (使用鈍器時).",
-    "cn": "近战伤害 +10%% (使用钝器时)."
+    "en": "Melee damage +10％ with blunt weapons.",
+    "ch": "近戰傷害 +10％ (使用鈍器時).",
+    "cn": "近战伤害 +10％ (使用钝器时)."
    },
    "UI_LNPC_CombatEffect_brave": {
-    "en": "Dodge +5 percentage points; endurance cost -10%. Suppresses Fearful while active.",
-    "ch": "閃避 +5 個百分點; 耐力消耗 -10%%; 啟用期間壓制膽怯.",
-    "cn": "闪避 +5 个百分点; 耐力消耗 -10%%; 启用期间压制胆怯."
+    "en": "Dodge +5 percentage points; endurance cost -10％. Suppresses Fearful while active.",
+    "ch": "閃避 +5 個百分點; 耐力消耗 -10％; 啟用期間壓制膽怯.",
+    "cn": "闪避 +5 个百分点; 耐力消耗 -10％; 启用期间压制胆怯."
    },
    "UI_LNPC_CombatEffect_calm_fighter": {
     "en": "Shooting accuracy bonus +1.",
@@ -442280,24 +443720,27 @@
     "cn": "射击精准度加成 +1."
    },
    "UI_LNPC_CombatEffect_calm_survivor": {
-    "en": "Incoming combat damage -10%% at 40%% health or below. Does not trigger automatic retreat.",
-    "ch": "受到的戰鬥傷害 -10%% (生命值 40%% 以下時). 不會觸發自動撤退.",
-    "cn": "受到的战斗伤害 -10%% (生命值 40%% 以下时). 不会触发自动撤退."
+    "en": "Incoming combat damage -10％％ at 40％％ health or below. Does not trigger automatic retreat.",
+    "ch": "受到的戰鬥傷害 -10％ (生命值 40％ 以下時). 不會觸發自動撤退.",
+    "cn": "受到的战斗伤害 -10％ (生命值 40％ 以下时). 不会触发自动撤退.",
+    "_note": "2026-10-31 #1192：上游把字面 % 改成全形 ％，原本的 %% 也照字換成 ％％（英文玩家會看到兩個百分號）；譯文照意思只寫一個 ％。"
    },
    "UI_LNPC_CombatEffect_close_transition": {
-    "en": "Switch task duration -15%% when switching to the equipped melee weapon with no loaded rounds. No weapon grants.",
-    "ch": "切換耗時 -15%% (槍內無子彈, 切換為已裝備的近戰武器時). 不會給予武器.",
-    "cn": "切换耗时 -15%% (枪内无子弹, 切换为已装备的近战武器时). 不会给予武器."
+    "en": "Switch task duration -15％％ when switching to the equipped melee weapon with no loaded rounds. No weapon grants.",
+    "ch": "切換耗時 -15％ (槍內無子彈, 切換為已裝備的近戰武器時). 不會給予武器.",
+    "cn": "切换耗时 -15％ (枪内无子弹, 切换为已装备的近战武器时). 不会给予武器.",
+    "_note": "2026-10-31 #1192：上游把字面 % 改成全形 ％，原本的 %% 也照字換成 ％％（英文玩家會看到兩個百分號）；譯文照意思只寫一個 ％。"
    },
    "UI_LNPC_CombatEffect_combat_breath": {
-    "en": "Endurance cost -10%% while stationary in combat. Does not trigger automatic rest.",
-    "ch": "耐力消耗 -10%% (戰鬥中原地不動時). 不會觸發自動休息.",
-    "cn": "耐力消耗 -10%% (战斗中原地不动时). 不会触发自动休息."
+    "en": "Endurance cost -10％％ while stationary in combat. Does not trigger automatic rest.",
+    "ch": "耐力消耗 -10％ (戰鬥中原地不動時). 不會觸發自動休息.",
+    "cn": "耐力消耗 -10％ (战斗中原地不动时). 不会触发自动休息.",
+    "_note": "2026-10-31 #1192：上游把字面 % 改成全形 ％，原本的 %% 也照字換成 ％％（英文玩家會看到兩個百分號）；譯文照意思只寫一個 ％。"
    },
    "UI_LNPC_CombatEffect_cooperative_fighter": {
-    "en": "Melee damage +8% near an unobstructed same-owner ally within 6 tiles.",
-    "ch": "近戰傷害 +8%% (6 格內有同一擁有者且無阻隔的同伴時).",
-    "cn": "近战伤害 +8%% (6 格内有同一所有者且无阻隔的同伴时)."
+    "en": "Melee damage +8％ near an unobstructed same-owner ally within 6 tiles.",
+    "ch": "近戰傷害 +8％ (6 格內有同一擁有者且無阻隔的同伴時).",
+    "cn": "近战伤害 +8％ (6 格内有同一所有者且无阻隔的同伴时)."
    },
    "UI_LNPC_CombatEffect_covers_allies": {
     "en": "Accuracy +1.5 near an ally within 6 tiles; wider ally line-of-fire clearance.",
@@ -442305,24 +443748,24 @@
     "cn": "6 格内有同伴时精准度 +1.5; 加大避开同伴的射线净空范围."
    },
    "UI_LNPC_CombatEffect_crisis_rescuer": {
-    "en": "Melee damage +10% near a same-owner ally within 6 tiles at half health or downed, with an unobstructed path.",
-    "ch": "近戰傷害 +10%% (6 格內有同一擁有者的同伴生命值剩一半以下或倒地, 且路徑無阻隔時).",
-    "cn": "近战伤害 +10%% (6 格内有同一所有者的同伴生命值剩一半以下或倒地, 且路径无阻隔时)."
+    "en": "Melee damage +10％ near a same-owner ally within 6 tiles at half health or downed, with an unobstructed path.",
+    "ch": "近戰傷害 +10％ (6 格內有同一擁有者的同伴生命值剩一半以下或倒地, 且路徑無阻隔時).",
+    "cn": "近战伤害 +10％ (6 格内有同一所有者的同伴生命值剩一半以下或倒地, 且路径无阻隔时)."
    },
    "UI_LNPC_CombatEffect_fearful": {
-    "en": "Optional disposition: melee damage -10%, accuracy -1; endurance cost -15% when retreating. Suppressed by active Brave.",
-    "ch": "可選傾向: 近戰傷害 -10%%, 精準度 -1; 耐力消耗 -15%% (撤退時). 已啟用無所畏懼時會被壓制.",
-    "cn": "可选倾向: 近战伤害 -10%%, 精准度 -1; 耐力消耗 -15%% (撤退时). 已启用无所畏惧时会被压制."
+    "en": "Optional disposition: melee damage -10％, accuracy -1; endurance cost -15％ when retreating. Suppressed by active Brave.",
+    "ch": "可選傾向: 近戰傷害 -10％, 精準度 -1; 耐力消耗 -15％ (撤退時). 已啟用無所畏懼時會被壓制.",
+    "cn": "可选倾向: 近战伤害 -10％, 精准度 -1; 耐力消耗 -15％ (撤退时). 已启用无所畏惧时会被压制."
    },
    "UI_LNPC_CombatEffect_fire_discipline": {
-    "en": "Shot interval +10%; accuracy +1.5; wider ally line-of-fire clearance.",
-    "ch": "射擊間隔 +10%%; 精準度 +1.5; 加大避開同伴的射線淨空範圍.",
-    "cn": "射击间隔 +10%%; 精准度 +1.5; 加大避开同伴的射线净空范围."
+    "en": "Shot interval +10％; accuracy +1.5; wider ally line-of-fire clearance.",
+    "ch": "射擊間隔 +10％; 精準度 +1.5; 加大避開同伴的射線淨空範圍.",
+    "cn": "射击间隔 +10％; 精准度 +1.5; 加大避开同伴的射线净空范围."
    },
    "UI_LNPC_CombatEffect_hold_the_line": {
-    "en": "Incoming combat damage -10% while stationary.",
-    "ch": "受到的戰鬥傷害 -10%% (原地不動時).",
-    "cn": "受到的战斗伤害 -10%% (原地不动时)."
+    "en": "Incoming combat damage -10％ while stationary.",
+    "ch": "受到的戰鬥傷害 -10％ (原地不動時).",
+    "cn": "受到的战斗伤害 -10％ (原地不动时)."
    },
    "UI_LNPC_CombatEffect_last_round": {
     "en": "Accuracy +1 with 1–3 loaded rounds in total.",
@@ -442330,34 +443773,34 @@
     "cn": "已装填子弹合计剩 1–3 发时, 精准度 +1."
    },
    "UI_LNPC_CombatEffect_long_blade_expert": {
-    "en": "Melee damage +10% with long blades.",
-    "ch": "近戰傷害 +10%% (使用長刀時).",
-    "cn": "近战伤害 +10%% (使用长刀时)."
+    "en": "Melee damage +10％ with long blades.",
+    "ch": "近戰傷害 +10％ (使用長刀時).",
+    "cn": "近战伤害 +10％ (使用长刀时)."
    },
    "UI_LNPC_CombatEffect_protective_instinct": {
-    "en": "Incoming combat damage -10% near an unobstructed same-owner ally within 6 tiles at half health or downed.",
-    "ch": "受到的戰鬥傷害 -10%% (6 格內有同一擁有者且無阻隔的同伴生命值剩一半以下或倒地時).",
-    "cn": "受到的战斗伤害 -10%% (6 格内有同一所有者且无阻隔的同伴生命值剩一半以下或倒地时)."
+    "en": "Incoming combat damage -10％ near an unobstructed same-owner ally within 6 tiles at half health or downed.",
+    "ch": "受到的戰鬥傷害 -10％ (6 格內有同一擁有者且無阻隔的同伴生命值剩一半以下或倒地時).",
+    "cn": "受到的战斗伤害 -10％ (6 格内有同一所有者且无阻隔的同伴生命值剩一半以下或倒地时)."
    },
    "UI_LNPC_CombatEffect_reckless": {
-    "en": "Optional disposition: melee damage +10%, shot interval -10%, incoming damage +10%. Never auto-activated.",
-    "ch": "可選傾向: 近戰傷害 +10%%, 射擊間隔 -10%%, 受到的傷害 +10%%; 絕不會自動啟用.",
-    "cn": "可选倾向: 近战伤害 +10%%, 射击间隔 -10%%, 受到的伤害 +10%%; 绝不会自动启用."
+    "en": "Optional disposition: melee damage +10％, shot interval -10％, incoming damage +10％. Never auto-activated.",
+    "ch": "可選傾向: 近戰傷害 +10％, 射擊間隔 -10％, 受到的傷害 +10％; 絕不會自動啟用.",
+    "cn": "可选倾向: 近战伤害 +10％, 射击间隔 -10％, 受到的伤害 +10％; 绝不会自动启用."
    },
    "UI_LNPC_CombatEffect_retreat_master": {
-    "en": "Endurance cost -20% while moving away from a visible enemy.",
-    "ch": "耐力消耗 -20%% (遠離視野內的敵人時).",
-    "cn": "耐力消耗 -20%% (远离视野内的敌人时)."
+    "en": "Endurance cost -20％ while moving away from a visible enemy.",
+    "ch": "耐力消耗 -20％ (遠離視野內的敵人時).",
+    "cn": "耐力消耗 -20％ (远离视野内的敌人时)."
    },
    "UI_LNPC_CombatEffect_short_blade_expert": {
-    "en": "Melee damage +10% with short blades.",
-    "ch": "近戰傷害 +10%% (使用短刀時).",
-    "cn": "近战伤害 +10%% (使用短刀时)."
+    "en": "Melee damage +10％ with short blades.",
+    "ch": "近戰傷害 +10％ (使用短刀時).",
+    "cn": "近战伤害 +10％ (使用短刀时)."
    },
    "UI_LNPC_CombatEffect_spear_expert": {
-    "en": "Melee damage +10% with spears.",
-    "ch": "近戰傷害 +10%% (使用長矛時).",
-    "cn": "近战伤害 +10%% (使用长矛时)."
+    "en": "Melee damage +10％ with spears.",
+    "ch": "近戰傷害 +10％ (使用長矛時).",
+    "cn": "近战伤害 +10％ (使用长矛时)."
    },
    "UI_LNPC_CombatEffect_vigilant": {
     "en": "Warns of visible enemies within 16 tiles while waiting or guarding, at most every 30 seconds. Does not change orders.",
@@ -466694,6 +468137,861 @@
     "en": "Remove lodged bullet",
     "ch": "取出體內子彈",
     "cn": "取出体内子弹"
+   },
+   "UI_AuthenticZ_GlowstickThrow_Keybind": {
+    "en": "Throw Lit Glowstick",
+    "ch": "投擲點亮的螢光棒",
+    "cn": "投掷点亮的荧光棒"
+   },
+   "UI_AuthenticZ_GlowstickThrow_Keybind_Tooltip": {
+    "en": "Start glowstick throw targeting mode.",
+    "ch": "進入螢光棒投擲瞄準模式.",
+    "cn": "进入荧光棒投掷瞄准模式."
+   },
+   "UI_AuthenticZ_GlowstickThrow_Title": {
+    "en": "Authentic Z - Glowstick Throw",
+    "ch": "Authentic Z - 投擲螢光棒",
+    "cn": "Authentic Z - 投掷荧光棒"
+   },
+   "UI_AuthenticZ_Hotbar_HideSlots": {
+    "en": "Hide Backpack Attachment Slots",
+    "ch": "隱藏背包掛載槽位",
+    "cn": "隐藏背包挂载槽位"
+   },
+   "UI_AuthenticZ_Hotbar_HideSlots_Tooltip": {
+    "en": "Hides Authentic Z backpack attachment slots from the on-screen hotbar. Attachment functionality is unchanged.",
+    "ch": "在畫面上的快捷欄中隱藏 Authentic Z 背包的掛載槽位. 掛載功能不受影響.",
+    "cn": "在屏幕上的快捷栏中隐藏 Authentic Z 背包的挂载槽位. 挂载功能不受影响."
+   },
+   "UI_AuthenticZ_Hotbar_Title": {
+    "en": "Authentic Z - Hotbar",
+    "ch": "Authentic Z - 快捷欄",
+    "cn": "Authentic Z - 快捷栏"
+   },
+   "UI_MPOptim_Section_Zombieupkeep": {
+    "en": "Zombie upkeep",
+    "ch": "殭屍例行運算",
+    "cn": "僵尸例行运算"
+   },
+   "UI_MPOptim_SetHint_JVM_ChunkLoadDistance": {
+    "en": "Smaller loads less of the world around you.",
+    "ch": "數值越小, 載入你周圍的世界範圍越小.",
+    "cn": "数值越小, 加载你周围的世界范围越小."
+   },
+   "UI_MPOptim_SetNote_JVM_ChunkLoadDistance": {
+    "en": "Applies the next time a world loads. Zoomed far out, the screen edges may show black.",
+    "ch": "下次載入世界時生效. 視角拉得很遠時, 螢幕邊緣可能會出現黑色.",
+    "cn": "下次加载世界时生效. 视角拉得很远时, 屏幕边缘可能会显示黑色."
+   },
+   "UI_MPOptim_SetTip_JVM_ChunkLoadDistance": {
+    "en": "How many chunks around you are kept loaded and simulated. Auto is the game's own size for your screen (19 by 19 chunks at 1080p and above). Smaller saves CPU and memory while travelling and near hordes; zombies outside the loaded area stay inactive until you come closer.",
+    "ch": "你周圍保持載入並模擬的區塊數量. 「自動」是遊戲依你的螢幕自行決定的大小 (1080p 以上為 19 乘 19 個區塊). 數值越小, 移動途中與屍群附近越省 CPU 和記憶體; 載入範圍外的殭屍會保持不活動, 直到你靠近為止.",
+    "cn": "你周围保持加载并模拟的区块数量. “自动”是游戏根据你的屏幕自行决定的大小 (1080p及以上为19乘19个区块). 数值越小, 移动途中和尸群附近越省CPU和内存; 加载范围外的僵尸会保持不活动, 直到你靠近为止."
+   },
+   "UI_MPOptim_SetTip_JVM_CrowdEdgeMemo": {
+    "en": "When zombies in a crowd push each other apart, the wall, door and window check between two squares is worked out once per frame instead of once per zombie. Any door or wall change clears it at once. Same movement.",
+    "ch": "屍群中的殭屍互相推開時, 兩個地塊之間的牆壁、門與窗戶判定改為每個影格計算一次, 而不是每隻殭屍各算一次. 任何門或牆壁有變動都會立即清除這份結果. 移動結果不變.",
+    "cn": "尸群中的僵尸互相推开时, 两个地块之间的墙体、门和窗户判定改为每帧计算一次, 而不是每只僵尸各算一次. 任何门或墙体变化都会立即清除该结果. 移动结果不变."
+   },
+   "UI_MPOptim_SetTip_JVM_FarThumpCadence": {
+    "en": "Zombies more than 20 tiles from you look for a door, window or fence ahead of them every other frame instead of every frame. They reach it at most one frame later. Zombies near you are unchanged.",
+    "ch": "距離你超過 20 格的殭屍, 改為每隔一個影格才尋找前方的門、窗或圍欄, 而不是每個影格都找. 它們最多只會晚一個影格抵達. 你附近的殭屍不受影響.",
+    "cn": "距离你超过20格的僵尸改为每隔一帧才寻找前方的门、窗或围栏, 而不是每帧都找. 它们最多只会晚一帧到达. 你附近的僵尸不受影响."
+   },
+   "UI_MPOptim_SetTip_JVM_NoiseSweep": {
+    "en": "Noises zombies can hear are listed in every chunk they reach. Those lists are now cleaned only in a frame where a noise actually ran out, instead of checking every loaded chunk every frame. Same noises.",
+    "ch": "殭屍聽得見的噪音, 會登記在噪音所及的每個區塊中. 現在只在確實有噪音結束的影格才清理這些清單, 而不是每個影格檢查所有已載入的區塊. 噪音不變.",
+    "cn": "僵尸能听到的噪音会登记在噪音波及的每个区块中. 现在只在确实有噪音结束的那一帧才清理这些列表, 而不是每帧检查所有已加载的区块. 噪音不变."
+   },
+   "UI_MPOptim_SetTip_JVM_SilentZombieAudio": {
+    "en": "A zombie that is not making any sound no longer recalculates its sound settings (floor material, distance, inside or out) every frame. They are worked out fresh the moment it makes a sound. Same sounds.",
+    "ch": "沒有發出任何聲音的殭屍, 不再每個影格重新計算聲音參數 (地板材質、距離、室內或室外). 它一發出聲音就會立刻重新計算. 聲音不變.",
+    "cn": "没有发出任何声音的僵尸不再每帧重新计算声音参数 (地面材质、距离、室内或室外). 它一发出声音就会立即重新计算. 声音不变."
+   },
+   "UI_MPOptim_SetTip_JVM_ZombieArrivalPacing": {
+    "en": "When an area next to a horde loads, its zombies are created over a few frames instead of all in one long frame. Zombies within 25 tiles of you, and every zombie while you drive, still appear at once; none waits longer than half a second, and all are created before the game saves.",
+    "ch": "屍群旁的區域載入時, 其中的殭屍會分散在數個影格中生成, 而不是全部擠在一個漫長的影格裡. 距離你 25 格內的殭屍, 以及你駕駛時的所有殭屍, 仍會立即出現; 每隻殭屍最多只等半秒, 且全部會在遊戲存檔前生成完畢.",
+    "cn": "尸群旁的区域加载时, 其中的僵尸会分散到几帧内生成, 而不是全部挤在一个漫长的帧里. 距离你25格内的僵尸, 以及你驾驶时的所有僵尸, 仍会立即出现; 每只僵尸最多只等半秒, 且全部会在游戏存档前生成完毕."
+   },
+   "UI_MPOptim_SetTip_JVM_ZombieTravelStats": {
+    "en": "The distance zombies walk, crawl and run is added to the game's statistics once per frame instead of once per zombie, which also checks the achievements once instead of thousands of times. Same totals.",
+    "ch": "殭屍行走、爬行與奔跑的距離, 改為每個影格統一計入遊戲統計一次, 而不是每隻殭屍各計一次; 成就也因此只檢查一次, 而不是數千次. 總計不變.",
+    "cn": "僵尸行走、爬行和奔跑的距离改为每帧统一计入游戏统计一次, 而不是每只僵尸各计一次; 成就也因此只检查一次, 而不是数千次. 总数不变."
+   },
+   "UI_MPOptim_SetValue_JVM_ChunkLoadDistance": {
+    "en": "Loaded area",
+    "ch": "載入範圍",
+    "cn": "加载范围"
+   },
+   "UI_MPOptim_Set_JVM_ChunkLoadDistance": {
+    "en": "Chunk Load Distance",
+    "ch": "區塊載入距離",
+    "cn": "区块加载距离"
+   },
+   "UI_MPOptim_Set_JVM_CrowdEdgeMemo": {
+    "en": "Crowd Push-Apart Wall Memo",
+    "ch": "屍群推擠牆壁判定快取",
+    "cn": "尸群推挤墙体判定缓存"
+   },
+   "UI_MPOptim_Set_JVM_FarThumpCadence": {
+    "en": "Far Zombies Check Doors Every Other Frame",
+    "ch": "遠處殭屍隔一影格檢查門",
+    "cn": "远处僵尸隔帧检查门"
+   },
+   "UI_MPOptim_Set_JVM_NoiseSweep": {
+    "en": "Clear Old Noises Only When One Expires",
+    "ch": "僅在有噪音過期時清理舊噪音",
+    "cn": "仅在有噪音过期时清理旧噪音"
+   },
+   "UI_MPOptim_Set_JVM_SilentZombieAudio": {
+    "en": "Silent Zombies Skip Sound Upkeep",
+    "ch": "安靜的殭屍略過聲音更新",
+    "cn": "安静的僵尸跳过声音更新"
+   },
+   "UI_MPOptim_Set_JVM_ZombieArrivalPacing": {
+    "en": "Pace Zombie Arrivals",
+    "ch": "殭屍分批出現",
+    "cn": "僵尸分批出现"
+   },
+   "UI_MPOptim_Set_JVM_ZombieTravelStats": {
+    "en": "Zombie Travel Statistics Once a Frame",
+    "ch": "殭屍移動統計每影格一次",
+    "cn": "僵尸移动统计每帧一次"
+   },
+   "UI_MPOptim_Unit_Auto": {
+    "en": "Auto",
+    "ch": "自動",
+    "cn": "自动"
+   },
+   "UI_MPOptim_V2_Recommended": {
+    "en": "Recommended for this PC",
+    "ch": "此電腦的建議設定",
+    "cn": "此电脑的推荐设置"
+   },
+   "UI_MPOptim_V2_RecommendedApplied": {
+    "en": "%d settings changed to this PC's recommendations.",
+    "ch": "已將 %d 項設定改為此電腦的建議值.",
+    "cn": "已将%d项设置改为此电脑的推荐值."
+   },
+   "UI_MPOptim_V2_RecommendedLeftCleanup": {
+    "en": "Corpse and debris cleanup left for you to choose.",
+    "ch": "屍體與雜物清理交由你自行決定.",
+    "cn": "尸体和杂物清理交由你自行决定."
+   },
+   "UI_MPOptim_V2_VerdictValue": {
+    "en": "Recommended: %s",
+    "ch": "建議: %s",
+    "cn": "推荐: %s"
+   },
+   "UI_LGU_DiscoveredBaits": {
+    "en": "Baits Used:",
+    "ch": "使用過的餌料:",
+    "cn": "使用过的鱼饵:"
+   },
+   "UI_quick_tip_LGU_01": {
+    "en": "Le Gourmet Ultimate: Wear leather gloves or keep needle-nosed pliers in your inventory when fishing.",
+    "ch": "Le Gourmet Ultimate: 釣魚時請戴上皮手套, 或在物品欄中放一把尖嘴鉗.",
+    "cn": "Le Gourmet Ultimate: 钓鱼时请戴上皮手套, 或在物品栏中携带尖嘴钳."
+   },
+   "UI_quick_tip_LGU_02": {
+    "en": "Le Gourmet Ultimate: You can use fishing magnets to find sunken treasures.",
+    "ch": "Le Gourmet Ultimate: 你可以用釣魚磁鐵尋找沉沒的寶藏.",
+    "cn": "Le Gourmet Ultimate: 你可以用钓鱼磁铁寻找沉没的宝藏."
+   },
+   "UI_quick_tip_LGU_03": {
+    "en": "Le Gourmet Ultimate: Be careful when carrying hydrochloric acid, wear an appropriate suit.",
+    "ch": "Le Gourmet Ultimate: 攜帶鹽酸時要小心, 請穿上合適的防護服.",
+    "cn": "Le Gourmet Ultimate: 携带盐酸时要小心, 请穿上合适的防护服."
+   },
+   "UI_quick_tip_Numark_01": {
+    "en": "Snake's Modpack: No Aliens were added...",
+    "ch": "Snake's Modpack: 本模組包沒有加入任何外星人…",
+    "cn": "Snake's Modpack: 本模组包没有添加任何外星人…"
+   },
+   "UI_SurvivorBriefing_cinematicStart": {
+    "en": "Cinematic start",
+    "ch": "電影式開場",
+    "cn": "电影式开场"
+   },
+   "UI_SurvivorBriefing_cinematicStart_tooltip": {
+    "en": "After a loading screen, the screen stays black while the briefing comes in, then the game fades in behind it, like the opening of a film. Walking, a key or a click brings the game in at once.",
+    "ch": "載入畫面結束後, 簡報出現時畫面會維持全黑, 接著遊戲畫面在簡報後方淡入, 就像電影開場. 走動、按鍵或點選滑鼠會立即顯示遊戲畫面.",
+    "cn": "加载画面结束后, 简报出现时画面会保持全黑, 随后游戏画面在简报后方淡入, 就像电影开场. 走动、按键或点击鼠标会立即显示游戏画面."
+   },
+   "UI_TSEWROD_Apparaitre": {
+    "en": "Lurker (debug): spawn here",
+    "ch": "潛伏者 (除錯): 在此生成",
+    "cn": "潜伏者 (调试): 在此生成"
+   },
+   "UI_TSEWROD_Temoin": {
+    "en": "Lurker (debug): plain crawler control",
+    "ch": "潛伏者 (除錯): 生成普通爬行殭屍 (對照組)",
+    "cn": "潜伏者 (调试): 生成普通爬行僵尸 (对照组)"
+   },
+   "UI_TSEW_NoyeApparaitre": {
+    "en": "Drowned (debug): spawn here",
+    "ch": "溺屍 (除錯): 在此生成",
+    "cn": "溺尸 (调试): 在此生成"
+   },
+   "UI_IC_Status_child_needs_care": {
+    "en": "Needs treatment and recovery rest before following.",
+    "ch": "需要治療並恢復休養後才能跟隨.",
+    "cn": "需要治疗并恢复休养后才能跟随."
+   },
+   "UI_IC_Status_order_timeout": {
+    "en": "No command response received. Please try again.",
+    "ch": "未收到指令回應. 請再試一次.",
+    "cn": "未收到指令响应. 请再试一次."
+   },
+   "UI_LNPCMedLab_NoSuppliesSpeech": {
+    "en": "Sorry, I have run out of the supplies needed for your treatment.",
+    "ch": "抱歉, 治療你需要的醫療用品我已經用完了.",
+    "cn": "抱歉, 给你治疗需要的物资我已经用完了."
+   },
+   "UI_LNPC_Editor_Active": {
+    "en": "Active",
+    "ch": "生效中",
+    "cn": "生效中"
+   },
+   "UI_LNPC_Editor_AgeHint": {
+    "en": "Adults: 18-200. Child growth stages are not changed here.",
+    "ch": "成人: 18-200. 兒童的成長階段不會在此變更.",
+    "cn": "成人: 18-200. 儿童的成长阶段不会在此更改."
+   },
+   "UI_LNPC_Editor_All": {
+    "en": "All",
+    "ch": "全部",
+    "cn": "全部"
+   },
+   "UI_LNPC_Editor_AllModules": {
+    "en": "All modules",
+    "ch": "所有模組",
+    "cn": "所有模组"
+   },
+   "UI_LNPC_Editor_AppearanceAvailable": {
+    "en": "L-NPC Appearance Lab is available.",
+    "ch": "已可使用 L-NPC Appearance Lab.",
+    "cn": "已可使用 L-NPC Appearance Lab."
+   },
+   "UI_LNPC_Editor_AppearanceHint": {
+    "en": "Edit face, hair and skin details in the appearance add-on.",
+    "ch": "在外觀附加元件中編輯臉部、頭髮與皮膚細節.",
+    "cn": "在外观附加组件中编辑脸部、头发和皮肤细节."
+   },
+   "UI_LNPC_Editor_AppearanceMissing": {
+    "en": "Enable L-NPC Appearance Lab to edit appearance.",
+    "ch": "啟用 L-NPC Appearance Lab 即可編輯外觀.",
+    "cn": "启用 L-NPC Appearance Lab 即可编辑外观."
+   },
+   "UI_LNPC_Editor_AppearanceUnavailable": {
+    "en": "Appearance editing requires your own companion. Try near the companion.",
+    "ch": "只能編輯你自己的同伴外觀. 請靠近該同伴再試.",
+    "cn": "只能编辑你自己的同伴外观. 请靠近该同伴再试."
+   },
+   "UI_LNPC_Editor_ApplyTrait": {
+    "en": "Apply",
+    "ch": "套用",
+    "cn": "应用"
+   },
+   "UI_LNPC_Editor_Automatic": {
+    "en": "Automatic / original",
+    "ch": "自動 / 原始",
+    "cn": "自动 / 原始"
+   },
+   "UI_LNPC_Editor_AutomaticShort": {
+    "en": "Automatic",
+    "ch": "自動",
+    "cn": "自动"
+   },
+   "UI_LNPC_Editor_BackgroundHint": {
+    "en": "Saved background applies to the next Player2 conversation. Equipment and XP are preserved.",
+    "ch": "儲存的背景會在下一次 Player2 對話時套用. 裝備與經驗值會保留.",
+    "cn": "保存的背景将在下一次 Player2 对话时生效. 装备和经验值会保留."
+   },
+   "UI_LNPC_Editor_BackgroundLink": {
+    "en": "Edit in Background",
+    "ch": "請在「背景」中編輯",
+    "cn": "请在“背景”中编辑"
+   },
+   "UI_LNPC_Editor_ChooseClothes": {
+    "en": "Queue replacement",
+    "ch": "預定替換",
+    "cn": "预定替换"
+   },
+   "UI_LNPC_Editor_CurrentClothes": {
+    "en": "Current: ",
+    "ch": "目前: ",
+    "cn": "当前: "
+   },
+   "UI_LNPC_Editor_Disabled": {
+    "en": "Force off",
+    "ch": "強制關閉",
+    "cn": "强制关闭"
+   },
+   "UI_LNPC_Editor_Discard": {
+    "en": "Discard unsaved changes and leave?",
+    "ch": "要捨棄未儲存的變更並離開嗎?",
+    "cn": "要放弃未保存的更改并离开吗?"
+   },
+   "UI_LNPC_Editor_Effect_food_lover": {
+    "en": "More likely to seek a snack in safety even at low hunger.",
+    "ch": "即使不太餓, 在安全時也更常找零食吃.",
+    "cn": "即使不太饿, 在安全时也更常找零食吃."
+   },
+   "UI_LNPC_Editor_Effect_impulsive": {
+    "en": "Sometimes seeks a snack when safe.",
+    "ch": "安全時偶爾會找零食吃.",
+    "cn": "安全时偶尔会找零食吃."
+   },
+   "UI_LNPC_Editor_Effect_small_eater": {
+    "en": "Disables optional snacking between meals.",
+    "ch": "不會在兩餐之間額外吃零食.",
+    "cn": "不会在两餐之间额外吃零食."
+   },
+   "UI_LNPC_Editor_Enabled": {
+    "en": "Force on",
+    "ch": "強制開啟",
+    "cn": "强制开启"
+   },
+   "UI_LNPC_Editor_Error_body_failed": {
+    "en": "The body could not change sex. Review the current state.",
+    "ch": "無法變更身體性別. 請檢查目前的狀態.",
+    "cn": "无法更改身体性别. 请检查当前的状态."
+   },
+   "UI_LNPC_Editor_Error_body_state": {
+    "en": "Sex cannot change during pregnancy or postpartum recovery.",
+    "ch": "懷孕或產後恢復期間無法變更性別.",
+    "cn": "怀孕或产后恢复期间无法更改性别."
+   },
+   "UI_LNPC_Editor_Error_busy": {
+    "en": "Sex or clothing cannot change during combat, sleep or vehicle use.",
+    "ch": "戰鬥、睡眠或使用車輛時無法變更性別或服裝.",
+    "cn": "战斗、睡眠或使用车辆时无法更改性别或服装."
+   },
+   "UI_LNPC_Editor_Error_conflict": {
+    "en": "The companion changed. Reload and review your changes again.",
+    "ch": "同伴的狀態已變動. 請重新載入並再次檢視你的變更.",
+    "cn": "同伴的状态已变动. 请重新加载并再次查看你的更改."
+   },
+   "UI_LNPC_Editor_Error_denied": {
+    "en": "Editing permission denied.",
+    "ch": "沒有編輯權限.",
+    "cn": "没有编辑权限."
+   },
+   "UI_LNPC_Editor_Error_expired": {
+    "en": "Editor session expired. Reload current values.",
+    "ch": "編輯工作階段已過期. 請重新載入目前的數值.",
+    "cn": "编辑会话已过期. 请重新加载当前数值."
+   },
+   "UI_LNPC_Editor_Error_failed": {
+    "en": "The operation failed. Reload to check current values.",
+    "ch": "操作失敗. 請重新載入以確認目前的數值.",
+    "cn": "操作失败. 请重新加载以确认当前数值."
+   },
+   "UI_LNPC_Editor_Error_invalid": {
+    "en": "Check inputs: adult age 18-200, nonempty name, and no conflicting traits.",
+    "ch": "請檢查輸入: 成人年齡 18-200, 姓名不可空白, 且不可有互相衝突的特質.",
+    "cn": "请检查输入: 成人年龄 18-200, 姓名不能为空, 且不能有相互冲突的特质."
+   },
+   "UI_LNPC_Editor_Error_timeout": {
+    "en": "Response timed out. Reload to check whether the changes were saved.",
+    "ch": "回應逾時. 請重新載入以確認變更是否已儲存.",
+    "cn": "响应超时. 请重新加载以确认更改是否已保存."
+   },
+   "UI_LNPC_Editor_Error_unavailable": {
+    "en": "This companion is unavailable or ineligible.",
+    "ch": "此同伴無法使用或不符合條件.",
+    "cn": "此同伴不可用或不符合条件."
+   },
+   "UI_LNPC_Editor_Error_wardrobe_bag": {
+    "en": "Unequip the conflicting bag through the normal inventory first.",
+    "ch": "請先透過一般物品欄卸下有衝突的背包.",
+    "cn": "请先通过普通物品栏卸下冲突的背包."
+   },
+   "UI_LNPC_Editor_Error_wardrobe_conflict": {
+    "en": "Selected clothing slots are mutually exclusive. Adjust your choices.",
+    "ch": "選取的服裝欄位互相衝突. 請調整你的選擇.",
+    "cn": "所选的服装栏位相互冲突. 请调整你的选择."
+   },
+   "UI_LNPC_Editor_Error_wardrobe_failed": {
+    "en": "Clothing replacement was cancelled. Check the original equipment.",
+    "ch": "已取消更換服裝. 請檢查原本的裝備.",
+    "cn": "已取消更换服装. 请检查原有的装备."
+   },
+   "UI_LNPC_Editor_Error_wardrobe_full": {
+    "en": "Not enough inventory space to preserve clothes, or an item cannot be saved.",
+    "ch": "物品欄空間不足以保留衣物, 或有物品無法儲存.",
+    "cn": "物品栏空间不足以保留衣物, 或有物品无法保存."
+   },
+   "UI_LNPC_Editor_Error_wardrobe_item": {
+    "en": "This clothing item or slot is unavailable. Check the list.",
+    "ch": "此衣物或欄位無法使用. 請檢查清單.",
+    "cn": "此衣物或栏位不可用. 请检查列表."
+   },
+   "UI_LNPC_Editor_Error_wardrobe_uncertain": {
+    "en": "Clothing rollback failed. Check inventory before retrying.",
+    "ch": "服裝復原失敗. 重試前請先檢查物品欄.",
+    "cn": "服装回滚失败. 重试前请先检查物品栏."
+   },
+   "UI_LNPC_Editor_FooterHint": {
+    "en": "Background edits apply to the next Player2 conversation.",
+    "ch": "背景的修改會在下一次 Player2 對話時套用.",
+    "cn": "背景的修改将在下一次 Player2 对话时生效."
+   },
+   "UI_LNPC_Editor_Implemented": {
+    "en": "Implemented",
+    "ch": "已實作",
+    "cn": "已实现"
+   },
+   "UI_LNPC_Editor_KeepClothes": {
+    "en": "Keep current",
+    "ch": "維持現狀",
+    "cn": "保持现状"
+   },
+   "UI_LNPC_Editor_NoChanges": {
+    "en": "No changes to save.",
+    "ch": "沒有要儲存的變更.",
+    "cn": "没有要保存的更改."
+   },
+   "UI_LNPC_Editor_None": {
+    "en": "None",
+    "ch": "無",
+    "cn": "无"
+   },
+   "UI_LNPC_Editor_OpenAppearance": {
+    "en": "Open appearance add-on",
+    "ch": "開啟外觀附加元件",
+    "cn": "打开外观附加组件"
+   },
+   "UI_LNPC_Editor_OpenLinked": {
+    "en": "Edit linked field",
+    "ch": "編輯關聯欄位",
+    "cn": "编辑关联字段"
+   },
+   "UI_LNPC_Editor_Permission": {
+    "en": "Administrator / Debug",
+    "ch": "管理員 / 除錯",
+    "cn": "管理员 / 调试"
+   },
+   "UI_LNPC_Editor_PersonalityLink": {
+    "en": "Edit in Personality",
+    "ch": "請在「性格」中編輯",
+    "cn": "请在“性格”中编辑"
+   },
+   "UI_LNPC_Editor_Planned": {
+    "en": "Not implemented",
+    "ch": "未實作",
+    "cn": "未实现"
+   },
+   "UI_LNPC_Editor_PlannedHint": {
+    "en": "This trait has no implemented effect and cannot be assigned.",
+    "ch": "此特質尚未實作效果, 無法指派.",
+    "cn": "此特质尚未实现效果, 无法指派."
+   },
+   "UI_LNPC_Editor_Ready": {
+    "en": "Choose a section to edit.",
+    "ch": "請選擇要編輯的區塊.",
+    "cn": "请选择要编辑的部分."
+   },
+   "UI_LNPC_Editor_Reload": {
+    "en": "Reload current values",
+    "ch": "重新載入目前數值",
+    "cn": "重新加载当前数值"
+   },
+   "UI_LNPC_Editor_RemoveTrait": {
+    "en": "Remove",
+    "ch": "移除",
+    "cn": "移除"
+   },
+   "UI_LNPC_Editor_Reset": {
+    "en": "Reset draft",
+    "ch": "重設草稿",
+    "cn": "重置草稿"
+   },
+   "UI_LNPC_Editor_Review": {
+    "en": "Review changes",
+    "ch": "檢視變更",
+    "cn": "查看更改"
+   },
+   "UI_LNPC_Editor_ReviewHint": {
+    "en": "Review sex, clothing and profile changes. Existing items, XP and memories are preserved.",
+    "ch": "檢視性別、服裝與資料的變更. 現有的物品、經驗值與回憶都會保留.",
+    "cn": "查看性别、服装和资料的更改. 现有的物品、经验值和回忆都会保留."
+   },
+   "UI_LNPC_Editor_Save": {
+    "en": "Save",
+    "ch": "儲存",
+    "cn": "保存"
+   },
+   "UI_LNPC_Editor_Saved": {
+    "en": "Saved. The next Player2 conversation uses these changes.",
+    "ch": "已儲存. 下一次 Player2 對話會使用這些變更.",
+    "cn": "已保存. 下一次 Player2 对话将使用这些更改."
+   },
+   "UI_LNPC_Editor_Search": {
+    "en": "Search traits",
+    "ch": "搜尋特質",
+    "cn": "搜索特质"
+   },
+   "UI_LNPC_Editor_SelectTrait": {
+    "en": "Select a trait icon.",
+    "ch": "請選擇一個特質圖示.",
+    "cn": "请选择一个特质图标."
+   },
+   "UI_LNPC_Editor_SkillOverrideHint": {
+    "en": "Preserves earned XP while setting this combat effect to level:",
+    "ch": "保留已獲得的經驗值, 並將此戰鬥效果設為等級:",
+    "cn": "保留已获得的经验值, 并将此战斗效果设为等级:"
+   },
+   "UI_LNPC_Editor_Slot_belt": {
+    "en": "Belt",
+    "ch": "腰帶",
+    "cn": "腰带"
+   },
+   "UI_LNPC_Editor_Slot_belt_extra": {
+    "en": "Extra belt",
+    "ch": "額外腰帶",
+    "cn": "额外腰带"
+   },
+   "UI_LNPC_Editor_Slot_beltextra": {
+    "en": "Extra belt",
+    "ch": "額外腰帶",
+    "cn": "额外腰带"
+   },
+   "UI_LNPC_Editor_Slot_boilersuit": {
+    "en": "Boilersuit",
+    "ch": "連身工作服",
+    "cn": "连体工作服"
+   },
+   "UI_LNPC_Editor_Slot_dress": {
+    "en": "Dress",
+    "ch": "洋裝",
+    "cn": "连衣裙"
+   },
+   "UI_LNPC_Editor_Slot_ear": {
+    "en": "Ears",
+    "ch": "耳朵",
+    "cn": "耳朵"
+   },
+   "UI_LNPC_Editor_Slot_eyes": {
+    "en": "Eyewear",
+    "ch": "眼鏡",
+    "cn": "眼镜"
+   },
+   "UI_LNPC_Editor_Slot_fullsuit": {
+    "en": "Full suit",
+    "ch": "全身套裝",
+    "cn": "全身套装"
+   },
+   "UI_LNPC_Editor_Slot_fullsuithead": {
+    "en": "Full suit with hood",
+    "ch": "連帽全身套裝",
+    "cn": "连帽全身套装"
+   },
+   "UI_LNPC_Editor_Slot_gloves": {
+    "en": "Gloves",
+    "ch": "手套",
+    "cn": "手套"
+   },
+   "UI_LNPC_Editor_Slot_hands": {
+    "en": "Gloves",
+    "ch": "手套",
+    "cn": "手套"
+   },
+   "UI_LNPC_Editor_Slot_hat": {
+    "en": "Headwear",
+    "ch": "帽子",
+    "cn": "帽子"
+   },
+   "UI_LNPC_Editor_Slot_jacket": {
+    "en": "Jacket",
+    "ch": "夾克",
+    "cn": "夹克"
+   },
+   "UI_LNPC_Editor_Slot_jacketdown": {
+    "en": "Jacket (down)",
+    "ch": "夾克 (兜帽放下)",
+    "cn": "夹克 (兜帽放下)"
+   },
+   "UI_LNPC_Editor_Slot_jumper": {
+    "en": "Sweater",
+    "ch": "毛衣",
+    "cn": "毛衣"
+   },
+   "UI_LNPC_Editor_Slot_leftringfinger": {
+    "en": "Left ring",
+    "ch": "左手戒指",
+    "cn": "左手戒指"
+   },
+   "UI_LNPC_Editor_Slot_leftwrist": {
+    "en": "Left wrist",
+    "ch": "左手腕",
+    "cn": "左手腕"
+   },
+   "UI_LNPC_Editor_Slot_mask": {
+    "en": "Mask",
+    "ch": "面罩",
+    "cn": "面罩"
+   },
+   "UI_LNPC_Editor_Slot_maskeyes": {
+    "en": "Eye mask",
+    "ch": "眼罩",
+    "cn": "眼罩"
+   },
+   "UI_LNPC_Editor_Slot_neck": {
+    "en": "Neck",
+    "ch": "頸部",
+    "cn": "颈部"
+   },
+   "UI_LNPC_Editor_Slot_necklace": {
+    "en": "Necklace",
+    "ch": "項鍊",
+    "cn": "项链"
+   },
+   "UI_LNPC_Editor_Slot_pants": {
+    "en": "Trousers",
+    "ch": "長褲",
+    "cn": "长裤"
+   },
+   "UI_LNPC_Editor_Slot_rightringfinger": {
+    "en": "Right ring",
+    "ch": "右手戒指",
+    "cn": "右手戒指"
+   },
+   "UI_LNPC_Editor_Slot_rightwrist": {
+    "en": "Right wrist",
+    "ch": "右手腕",
+    "cn": "右手腕"
+   },
+   "UI_LNPC_Editor_Slot_scarf": {
+    "en": "Scarf",
+    "ch": "圍巾",
+    "cn": "围巾"
+   },
+   "UI_LNPC_Editor_Slot_shirt": {
+    "en": "Shirt",
+    "ch": "襯衫",
+    "cn": "衬衫"
+   },
+   "UI_LNPC_Editor_Slot_shoes": {
+    "en": "Shoes",
+    "ch": "鞋子",
+    "cn": "鞋子"
+   },
+   "UI_LNPC_Editor_Slot_shorts": {
+    "en": "Shorts",
+    "ch": "短褲",
+    "cn": "短裤"
+   },
+   "UI_LNPC_Editor_Slot_skirt": {
+    "en": "Skirt",
+    "ch": "裙子",
+    "cn": "裙子"
+   },
+   "UI_LNPC_Editor_Slot_socks": {
+    "en": "Socks",
+    "ch": "襪子",
+    "cn": "袜子"
+   },
+   "UI_LNPC_Editor_Slot_tanktop": {
+    "en": "Tank top",
+    "ch": "無袖背心",
+    "cn": "无袖背心"
+   },
+   "UI_LNPC_Editor_Slot_torsoextra": {
+    "en": "Extra torso layer",
+    "ch": "額外軀幹層",
+    "cn": "额外躯干层"
+   },
+   "UI_LNPC_Editor_Slot_torsoextra1": {
+    "en": "Extra torso layer 1",
+    "ch": "額外軀幹層1",
+    "cn": "额外躯干层1"
+   },
+   "UI_LNPC_Editor_Slot_tshirt": {
+    "en": "T-shirt",
+    "ch": "T恤",
+    "cn": "T恤"
+   },
+   "UI_LNPC_Editor_Slot_underwear": {
+    "en": "Underwear",
+    "ch": "內衣",
+    "cn": "内衣"
+   },
+   "UI_LNPC_Editor_Slot_underwearbottom": {
+    "en": "Underwear bottom",
+    "ch": "內褲",
+    "cn": "内裤"
+   },
+   "UI_LNPC_Editor_Slot_underwearextra1": {
+    "en": "Extra underwear",
+    "ch": "額外內衣",
+    "cn": "额外内衣"
+   },
+   "UI_LNPC_Editor_Slot_underweartop": {
+    "en": "Underwear top",
+    "ch": "上身內衣",
+    "cn": "上身内衣"
+   },
+   "UI_LNPC_Editor_State": {
+    "en": "State-dependent",
+    "ch": "依狀態而定",
+    "cn": "取决于状态"
+   },
+   "UI_LNPC_Editor_StateHint": {
+    "en": "This label reflects a real state such as pregnancy and cannot be granted independently.",
+    "ch": "此標籤反映懷孕等實際狀態, 無法單獨授予.",
+    "cn": "此标签反映怀孕等实际状态, 无法单独授予."
+   },
+   "UI_LNPC_Editor_Tab": {
+    "en": "Edit",
+    "ch": "編輯",
+    "cn": "编辑"
+   },
+   "UI_LNPC_Editor_Title": {
+    "en": "Companion editor",
+    "ch": "同伴編輯器",
+    "cn": "同伴编辑器"
+   },
+   "UI_LNPC_Editor_TraitReset": {
+    "en": "Restore selected trait defaults",
+    "ch": "將選取的特質恢復預設",
+    "cn": "将所选特质恢复默认"
+   },
+   "UI_LNPC_Editor_TraitsTitle": {
+    "en": "Edit traits",
+    "ch": "編輯特質",
+    "cn": "编辑特质"
+   },
+   "UI_LNPC_Editor_Unwear": {
+    "en": "Unequip",
+    "ch": "卸下",
+    "cn": "卸下"
+   },
+   "UI_LNPC_Editor_Waiting": {
+    "en": "Waiting for authority...",
+    "ch": "正在等待伺服器授權…",
+    "cn": "正在等待服务器授权…"
+   },
+   "UI_LNPC_Editor_WardrobeHint": {
+    "en": "Admin clothing creation/replacement. Previous clothes are kept; review and save to apply.",
+    "ch": "管理員服裝生成 / 更換. 原本的衣物會保留; 檢視並儲存後才會套用.",
+    "cn": "管理员服装生成 / 替换. 原有衣物会保留; 查看并保存后才会生效."
+   },
+   "UI_LNPC_Editor_age": {
+    "en": "Age",
+    "ch": "年齡",
+    "cn": "年龄"
+   },
+   "UI_LNPC_Editor_background": {
+    "en": "Background",
+    "ch": "背景",
+    "cn": "背景"
+   },
+   "UI_LNPC_Editor_basic": {
+    "en": "Identity",
+    "ch": "身分",
+    "cn": "身份"
+   },
+   "UI_LNPC_Editor_female": {
+    "en": "Female",
+    "ch": "女性",
+    "cn": "女性"
+   },
+   "UI_LNPC_Editor_food_lover": {
+    "en": "Food lover (snacking)",
+    "ch": "愛吃 (吃零食)",
+    "cn": "贪吃 (吃零食)"
+   },
+   "UI_LNPC_Editor_fullname": {
+    "en": "Name",
+    "ch": "姓名",
+    "cn": "姓名"
+   },
+   "UI_LNPC_Editor_impulsive": {
+    "en": "Impulsive snacking",
+    "ch": "衝動吃零食",
+    "cn": "冲动吃零食"
+   },
+   "UI_LNPC_Editor_independence": {
+    "en": "Sociability",
+    "ch": "社交傾向",
+    "cn": "社交倾向"
+   },
+   "UI_LNPC_Editor_loyalty": {
+    "en": "Loyalty",
+    "ch": "忠誠度",
+    "cn": "忠诚度"
+   },
+   "UI_LNPC_Editor_male": {
+    "en": "Male",
+    "ch": "男性",
+    "cn": "男性"
+   },
+   "UI_LNPC_Editor_personality": {
+    "en": "Personality",
+    "ch": "性格",
+    "cn": "性格"
+   },
+   "UI_LNPC_Editor_preset": {
+    "en": "Former profession",
+    "ch": "過去的職業",
+    "cn": "过去的职业"
+   },
+   "UI_LNPC_Editor_review": {
+    "en": "Review changes",
+    "ch": "檢視變更",
+    "cn": "查看更改"
+   },
+   "UI_LNPC_Editor_sex": {
+    "en": "Sex",
+    "ch": "性別",
+    "cn": "性别"
+   },
+   "UI_LNPC_Editor_small_eater": {
+    "en": "Avoids snacks",
+    "ch": "不吃零食",
+    "cn": "不吃零食"
+   },
+   "UI_LNPC_Editor_story": {
+    "en": "Custom biography (up to 2,000 characters)",
+    "ch": "自訂經歷 (最多 2,000 字元)",
+    "cn": "自定义经历 (最多 2,000 字符)"
+   },
+   "UI_LNPC_Editor_temperament": {
+    "en": "Temperament",
+    "ch": "性情",
+    "cn": "性情"
+   },
+   "UI_LNPC_Editor_traits": {
+    "en": "Traits",
+    "ch": "特質",
+    "cn": "特质"
+   },
+   "UI_LNPC_Editor_wardrobe": {
+    "en": "Clothing",
+    "ch": "服裝",
+    "cn": "服装"
+   },
+   "UI_LNPC_Help_medical": {
+    "en": "Medical supplies missing / treatment needed",
+    "ch": "缺少醫療用品 / 需要治療",
+    "cn": "缺少医疗用品 / 需要治疗"
+   },
+   "UI_LNPC_Help_medicalSplint": {
+    "en": "Needs a splint and bandage",
+    "ch": "需要夾板和繃帶",
+    "cn": "需要夹板和绷带"
+   },
+   "UI_LNPC_Inventory_MultiHint": {
+    "en": "Shift: select range · Ctrl: toggle · drag to transfer",
+    "ch": "Shift: 選取範圍 · Ctrl: 切換選取 · 拖曳以轉移",
+    "cn": "Shift: 选择范围 · Ctrl: 切换选择 · 拖拽以转移"
+   },
+   "UI_LNPC_Inventory_Transferred": {
+    "en": "Items transferred: %1 / %2",
+    "ch": "已轉移物品: %1 / %2",
+    "cn": "已转移物品: %1 / %2"
    }
   },
   "MakeUp.json": {
@@ -473804,6 +476102,91 @@
     "en": "Steel Ladder",
     "ch": "鋼梯",
     "cn": "钢梯"
+   },
+   "Laminar_Flow_Hood": {
+    "en": "Laminar_Flow_Hood",
+    "ch": "層流櫃",
+    "cn": "超净工作台"
+   },
+   "MIB_Poster": {
+    "en": "Agent J Sign",
+    "ch": "J 探員招牌",
+    "cn": "特工J标牌"
+   },
+   "Numark_AnalysisB_Equipment": {
+    "en": "Analysis Equipment",
+    "ch": "分析設備",
+    "cn": "分析设备"
+   },
+   "Operating_Lamp": {
+    "en": "Operating room lamp",
+    "ch": "手術燈",
+    "cn": "手术灯"
+   },
+   "Small_Black_Wire": {
+    "en": "Black wire roll",
+    "ch": "黑色電線捲",
+    "cn": "黑色电线卷"
+   },
+   "Small_Multi_Wire": {
+    "en": "Multi-colored wire roll",
+    "ch": "多色電線捲",
+    "cn": "多色电线卷"
+   },
+   "Small_Yellow_Wire": {
+    "en": "Colored wire roll",
+    "ch": "彩色電線捲",
+    "cn": "彩色电线卷"
+   },
+   "SpecialFolder_Alien_Note": {
+    "en": "Classified Documentation (C)",
+    "ch": "機密文件 (C)",
+    "cn": "机密文件 (C)"
+   },
+   "SpecialNoteB_MIB_Note": {
+    "en": "Classified Documentation (B)",
+    "ch": "機密文件 (B)",
+    "cn": "机密文件 (B)"
+   },
+   "SpecialNote_MIB_Note": {
+    "en": "Classified Documentation (A)",
+    "ch": "機密文件 (A)",
+    "cn": "机密文件 (A)"
+   },
+   "Test_Tube_Holder": {
+    "en": "Test Tube Holder",
+    "ch": "試管架",
+    "cn": "试管架"
+   },
+   "Wiring_Large_Black_Wire": {
+    "en": "Black wire with connector",
+    "ch": "附接頭的黑色電線",
+    "cn": "带接头的黑色电线"
+   },
+   "Wiring_Large_Multi_Wire": {
+    "en": "Multi-colored cables",
+    "ch": "多色纜線",
+    "cn": "多色线缆"
+   },
+   "Wiring_Large_Yellow_Wire": {
+    "en": "Colored wire with connector",
+    "ch": "附接頭的彩色電線",
+    "cn": "带接头的彩色电线"
+   },
+   "Wiring_Medium_Black_Wire": {
+    "en": "Damaged black wire",
+    "ch": "損壞的黑色電線",
+    "cn": "损坏的黑色电线"
+   },
+   "Wiring_Medium_Yellow_Wire": {
+    "en": "Damaged colored wire",
+    "ch": "損壞的彩色電線",
+    "cn": "损坏的彩色电线"
+   },
+   "Wiring_Small_Multi_Wire": {
+    "en": "Damaged multi-colored wires",
+    "ch": "損壞的多色電線",
+    "cn": "损坏的多色电线"
    }
   },
   "SurvivalGuide.json": {

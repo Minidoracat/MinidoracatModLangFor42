@@ -13481,8 +13481,8 @@
   },
   "Sandbox.json|Sandbox_ExtractionMode_BanditAttackWindowChancePercent_tooltip": {
     "as1_value": "突袭期间每过一个循环攻击窗口, 就有概率生成一队敌对匪徒. 每次判定后都会安排新的窗口.",
-    "reason": "EN 開頭的前置條件（需 Bandits 模組並啟用 Enable Optional Bandits NPC Integration）與 Set to 0 to disable these attacks 兩項皆未譯，會改變玩家是否啟用／如何關閉的判斷。選項名沿用同模組已出貨的 Sandbox_ExtractionMode_EnableBanditsIntegration（CH「啟用選用的匪徒 NPC 整合」／CN「启用可选的匪徒 NPC 集成」）與匪徒替換屍潮系列鍵。",
-    "value": "需安装 Bandits 模组并启用'启用可选的匪徒 NPC 集成'. 突袭期间每过一个循环攻击窗口, 就有概率生成一队敌对匪徒. 每次判定后都会安排新的窗口. 设为 0 可禁用这类攻击; 若已启用匪徒替换尸潮, 匪徒仍可能取代僵尸尸潮."
+    "value": "需启用“启用可选的 NPC 攻击集成”, 并使用所选的 NPC 来源模组.\n\n突袭期间每当攻击计时器结束, 就有概率发生普通敌对遭遇. 判定失败会开始另一轮计时. A-Life 会使用其原生的敌对派系资格与安全落点; 100%% 只保证判定成功, 不保证一定生成 NPC.\n\n设为 0 可禁用这类攻击. 随机场景事件和尸潮替换各自使用自己的概率.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192：上游英文從「Requires the Bandits mod and Enable Optional Bandits NPC Integration.\n\nChance of…」改成新版，照現行英文重譯。"
   },
   "Sandbox.json|Sandbox_ExtractionMode_BanditHordeReplacementChancePercent_tooltip": {
     "as1_value": "尸潮到来时, 有机会将僵尸尸潮替换为一支规模更大、装备轻便的敌对匪徒小队, 混合使用近战武器和枪械.",
@@ -66644,5 +66644,630 @@
     "as1_value": "启用后，角色会在切换套装前脱下身上衣物，获得更真实的体验。\n禁用则衣物直接存入衣柜，切换套装速度更快。",
     "value": "启用后, 角色会在切换套装前脱下身上衣物.\n禁用则衣物直接存入衣柜, 切换套装速度更快.",
     "reason": "2026-10-30 追蹤器 #1159–#1171：上游英文從「If enabled, the character will remove clothing before changing outfits for a more immersive experience.\nIf disabled, clothing is transferred directly to the wardrobe, making outfit changes faster.」改成「If enabled, the character will remove clothing before changing outfits.\nIf disabled, clothing is transferred directly to the wardrobe, making outfit changes faster.」。"
+  },
+  "IG_UI.json|IGUI_CrumpledNoteReaded": {
+    "as1_value": "<TEXT> 那位女士正从露台上用奇怪的眼神看着我. <LINE> 我觉得她已经意识到我进了老板的办公室. <LINE> 她知道那张卡的事. <LINE> 我把那件东西藏在了那个该死的女人唯一不敢爬上去的地方... <LINE> 在 <ORANGE> <SPACE> SV通信塔的顶层. <LINE> <TEXT> 如果我出了什么事, 让他们去那里找. <LINE> 我剩下的时间不多了...",
+    "value": "<PAPER> 那位女士正从露台上用奇怪的眼神看着我. 我觉得她已经意识到我进了老板的办公室. 她知道那张卡的事. <LINE> <LINE> 我把那件东西藏在了那个该死的女人唯一不敢爬上去的地方… 就在 <MARK> SV通信塔 <BODY> 的顶层. <LINE> <LINE> <TEXT> 如果我出了什么事, 让他们去那里找. 我剩下的时间不多了…",
+    "reason": "2026-10-31 追蹤器 #1176–#1192：上游英文從「<TEXT> The lady is giving me a strange look from the terrace. <LINE> I think he …」改成新版，照現行英文重譯。"
+  },
+  "IG_UI.json|IGUI_CustomSkillCursorDesc": {
+    "as1_value": "在技能面板中激活自定义图标. \n升级时, 仅最后一个技能框会以动画光标点亮.",
+    "value": "在技能面板中激活自定义图标. 升级时, 仅最后一个技能框会以动画光标点亮.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192：上游英文從「Activates a Custom Icon in Skill Panel. \nWhen leveling up, only the last skill b…」改成新版，照現行英文重譯。"
+  },
+  "ItemName.json|AuthenticZClothing.Shirt_FormalBrad": {
+    "as1_value": "正装衬衫 (布拉德)",
+    "value": "正装衬衫",
+    "reason": "2026-10-31 追蹤器 #1176–#1192：上游英文從「Brad's Formal Shirt」改成新版，照現行英文重譯。"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_ReceptionStrength_tooltip": {
+    "as1_value": "商人接听的概率. 1.0=默认. 越低越难 (0.5=明显更多无人应答), 越高越容易 (2.0=通常会接, 3.0=几乎总是). 它也会缩短被无视后再去尝试的等待时间. 商人有作息: 每个商人只在特定时段开台 (在商人列表里显示). 低于 2.0 时, 时段之外没人接, 你只会听到静默 —— 这很正常, 不是电台坏了. 从 2.0 起, 停播的商人有时也会接, 只是语气不太好: 2.0 时约十次有一次, 3.0 时约三次有一次. 天气仍会削弱信号.",
+    "value": "商人接听的概率. 1.0=默认. 越低越难 (0.5=明显更多无人应答), 越高越容易 (2.0=通常会接, 3.0=几乎总是). 它也会缩短被无视后再去尝试的等待时间. 商人有作息: 每个商人只在特定时段开台 (在商人列表里显示). 停播的商人仍可能接听, 只是语气不太好: 默认 1.0 时约七次有一次, 直到 2.0 都保持不变, 超过后才逐渐上升 —— 3.0 时约三次有一次. 天气仍会削弱信号.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192：上游英文從「How often traders pick up. 1.0 = default. Lower is harder (0.5 = noticeably more…」改成新版，照現行英文重譯。"
+  },
+  "UI.json|UI_RadioTraders_Job_notenough": {
+    "as1_value": "那个你数量还不够.",
+    "value": "那个你数量还不够. 必须是未穿戴、未收藏, 并且放在你自己背包里的才算数.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192：上游英文從「You don't have enough of that yet.」改成新版，照現行英文重譯。"
+  },
+  "IG_UI.json|IGUI_KRSolar_Help_LinkB": {
+    "as1_value": "范围内的其他KR发射器. 每张卡片显示其电池状态、接收量 (输入), 如果是太阳能充电器, 则显示其对发电机的贡献量. 按钮用于连接或断开连接该设备. 多个充电器的贡献会叠加, 但存在收益递减.",
+    "value": "范围内的其他KR发射器. 每张卡片显示其电池状态、接收量 (输入), 如果是太阳能充电器, 则显示其对发电机的贡献量. 按钮用于连接或断开连接该设备. 多个充电器的贡献会叠加, 但存在收益递减. 发电机模式关闭的设备会标记为“储能”: 处于发电机模式的设备在没有阳光时会从这些设备的内置电池取电, 它们的电量也会计入该设备的“备用”.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192：上游英文從「Other KR emitters in range. Each card shows its battery, what it receives (input…」改成新版，照現行英文重譯。"
+  },
+  "IG_UI.json|IGUI_ExtractionMode_Quest_perimeter_defense_Description": {
+    "as1_value": "提交 2 盒钉子、1 把锤子和 1 把手斧.",
+    "value": "提交 2 盒钉子、1 把锤子和 1 把单手斧或单手斧 (老式).",
+    "reason": "2026-10-31 追蹤器 #1176–#1192：上游英文從「Hand in 2 boxes of nails, 1 hammer, and 1 hand axe.」改成新版，照現行英文重譯。"
+  },
+  "IG_UI.json|IGUI_ExtractionMode_Quest_perimeter_defense_Requirement_3": {
+    "as1_value": "手斧",
+    "value": "单手斧或单手斧 (老式)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192：上游英文從「Hand Axe」改成新版，照現行英文重譯。"
+  },
+  "Sandbox.json|Sandbox_ExtractionMode_EnableBanditsIntegration": {
+    "as1_value": "启用可选的匪徒 NPC 集成",
+    "value": "启用可选的 NPC 攻击集成",
+    "reason": "2026-10-31 追蹤器 #1176–#1192：上游英文從「Enable Optional Bandits NPC Integration」改成新版，照現行英文重譯。"
+  },
+  "ContextMenu.json|ContextMenu_ChangeSkin": {
+    "as1_value": "更换喷漆",
+    "value": "更换外观",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：拖車換的是廣告貼紙 (CarAdv) 外觀, 不是噴漆; CN「更换喷漆」誤導成要油漆"
+  },
+  "ContextMenu.json|ContextMenu_RemoveSkin": {
+    "as1_value": "移除喷漆",
+    "value": "移除外观",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：移除拖車廣告外觀; CH「剝皮」譯成動物剝皮, CN「喷漆」同上誤導"
+  },
+  "IG_UI.json|IGUI_ContainerTitle_cane_support": {
+    "as1_value": "藤支架",
+    "value": "甘蔗晾架",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Cane support 是甘蔗乾燥架 (ES: Soporte de secado de caña, 配合 SugarcaneDried), CN「藤」成藤條"
+  },
+  "Moveables.json|Wood_Cane_Support": {
+    "as1_value": "干藤支架",
+    "value": "甘蔗晾干架",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：同上, Dry Cane Support 為晾乾甘蔗的架子, 不是藤"
+  },
+  "IG_UI.json|IGUI_Reward_Guadana": {
+    "as1_value": "<H1> 获得秘密 <BR> <IMAGECENTRE:Reward_Guadana> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了镰刀!!! <LINE> <H1>",
+    "value": "<H1> 获得秘密 <BR> <IMAGECENTRE:Reward_Guadana> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了邪教徒镰刀!!! <LINE> <H1>",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：漏掉 cultist's, 與物品名 SCM.Guadana「邪教徒镰刀」對不上, 易和原版鐮刀混淆"
+  },
+  "IG_UI.json|IGUI_WashedMate": {
+    "as1_value": "清洗过的马黛杯",
+    "value": "泡淡的马黛茶",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Lua 在馬黛茶用次歸零時改名, 指茶葉泡淡了; CN「清洗过的马黛杯」意思錯"
+  },
+  "Moveables.json|CrimeScene_Band": {
+    "as1_value": "犯罪现场乐队",
+    "value": "犯罪现场警戒线",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Band 指封鎖帶, CN「乐队」譯成樂團"
+  },
+  "Tooltip.json|Tooltip_SpecDescScallops": {
+    "as1_value": " <TEXT> <RGB:1,1,1>养殖场里的珍宝. <LINE>牡蛎是挑剔的滤食者,对清洁度和氧气要求极高. <LINE>与其他双壳类不同,它们的新陈代谢更活跃,因此需要持续监测水质.",
+    "value": " <TEXT> <RGB:1,1,1>养殖场里的珍宝. <LINE>扇贝是挑剔的滤食者,对清洁度和氧气要求极高. <LINE>与其他双壳类不同,它们的新陈代谢更活跃,因此需要持续监测水质.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：鍵為 Scallops, 西文 ostiones 在此指扇貝 (物種顯示名 Scallop), CN 誤成牡蠣, 與 CH 及物種名不符"
+  },
+  "Tooltip.json|Tooltip_Repro_FertilizeDeadline": {
+    "as1_value": "受精所需时间:",
+    "value": "受精剩余时间:",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Lua 後接 deadline - now 的剩餘時間, CN「所需时间」意思不對"
+  },
+  "Tooltip.json|Tooltip_SugarcanePile": {
+    "as1_value": "你可以把这堆甘蔗放在支撑架上晾干.",
+    "value": "你可以取出甘蔗, 放到晾晒架上晾干.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Drying Rack 官方簡中為晾晒架, CN「支撑架」指成別的東西"
+  },
+  "Tooltip.json|Tooltip_CoffeePan": {
+    "as1_value": "种子可以用研钵和研杵烘烤制成可可粉.",
+    "value": "种子可以先烘烤, 再用研钵和研杵磨成可可粉.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 寫成用研缽烘烤, 步驟錯; 應是烘烤後再用研缽磨粉"
+  },
+  "Tooltip.json|Tooltip_DSSAmmo": {
+    "as1_value": "拆解霰弹弹壳以获得1个弹壳, 25个弹丸和5个单位的火药.      ",
+    "value": "拆解霰弹以获得1个弹壳, 25个弹丸和5个单位的火药.      ",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：拆解的是整發霰彈, CN 寫成拆解彈殼又得到彈殼, 自相矛盾"
+  },
+  "Tooltip.json|Tooltip_ProjDescMPPellets": {
+    "as1_value": "制作霰弹弹丸. <LINE>  (制作霰弹弹壳的基础部件)",
+    "value": "制作霰弹弹丸. <LINE>  (制作霰弹的基础部件)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：彈丸是製作整發霰彈的部件, 不是彈殼的部件"
+  },
+  "Tooltip.json|Tooltip_GumRecord": {
+    "as1_value": "这款泡泡糖包装上印有蛇的个人纪录.",
+    "value": "这款泡泡糖包装上印有 Snake 的个人纪录.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Snake 是作者名, CN 譯成動物「蛇」意思錯"
+  },
+  "UI.json|UI_trait_argentino_des": {
+    "as1_value": "世界冠军老爹!!!<br>你有几座奖杯?<br>你会泡马黛茶和做其他阿根廷的东西吗?",
+    "value": "世界冠军老爹!!!<br>你有几座奖杯?<br>你会泡马黛茶, 也会做其他阿根廷的东西.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：特質說明是陳述你會泡馬黛茶, CN 改成疑問句意思錯"
+  },
+  "ItemName.json|AuthenticZClothing.Fat01_Skirt_Long": {
+    "as1_value": "短裙 (长款)",
+    "value": "长裙",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 寫成短裙 (长款), 和英文 Long Skirt 矛盾; 原版官方簡中 Base.Skirt_Long 為长裙"
+  },
+  "ItemName.json|AuthenticZClothing.Fat02_Skirt_Long": {
+    "as1_value": "短裙 (长款)",
+    "value": "长裙",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 寫成短裙 (长款), 和英文 Long Skirt 矛盾; 原版官方簡中 Base.Skirt_Long 為长裙"
+  },
+  "ItemName.json|AuthenticZClothing.Fat03_Skirt_Long": {
+    "as1_value": "短裙 (长款)",
+    "value": "长裙",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 寫成短裙 (长款), 和英文 Long Skirt 矛盾; 原版官方簡中 Base.Skirt_Long 為长裙"
+  },
+  "ItemName.json|AuthenticZLite.Fat01_Skirt_Long": {
+    "as1_value": "短裙 (长款)",
+    "value": "长裙",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 寫成短裙 (长款), 和英文 Long Skirt 矛盾; 原版官方簡中 Base.Skirt_Long 為长裙"
+  },
+  "ItemName.json|AuthenticZLite.Fat02_Skirt_Long": {
+    "as1_value": "短裙 (长款)",
+    "value": "长裙",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 寫成短裙 (长款), 和英文 Long Skirt 矛盾; 原版官方簡中 Base.Skirt_Long 為长裙"
+  },
+  "ItemName.json|AuthenticZLite.Fat03_Skirt_Long": {
+    "as1_value": "短裙 (长款)",
+    "value": "长裙",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 寫成短裙 (长款), 和英文 Long Skirt 矛盾; 原版官方簡中 Base.Skirt_Long 為长裙"
+  },
+  "ItemName.json|AuthenticZClothing.Hat_BaseballCapBuzzers_Reverse": {
+    "as1_value": "棒球帽 (蜂鸣器, 反戴)",
+    "value": "棒球帽 (Buzzers, 反戴)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CH 漏了 Reversed, 和非反戴版同名無法分辨; 對齊 Lite 同物品；Buzzers 是隊名，不是蜂鳴器；照繁中保留英文"
+  },
+  "ItemName.json|AuthenticZClothing.InflatableTube_AZ": {
+    "as1_value": "充气管",
+    "value": "充气泳圈",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 充气管是管子, 物品是游泳圈 (IconsForTexture InflatableTubeDuck 等), CH 已是充氣泳圈"
+  },
+  "ItemName.json|AuthenticZClothing.PonchoCamoDesertDOWN": {
+    "as1_value": "斗篷 (沙漠迷彩)",
+    "value": "雨衣 (沙漠迷彩)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CH 漏了沙漠迷彩, 和英文同名的 PonchoCamoDesert 不同名；Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.PonchoCamoDesertDOWN": {
+    "as1_value": "斗篷 (沙漠迷彩)",
+    "value": "雨衣 (沙漠迷彩)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CH 漏了沙漠迷彩, 和英文同名的 PonchoCamoDesert 不同名；Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.Fat01_PonchoDown": {
+    "as1_value": "斗篷 (黑)",
+    "value": "雨衣 (黑)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CH 漏了黑, 和英文同名的 PonchoBlack 雨衣 (黑) 不同名；Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.Fat01_PonchoUP": {
+    "as1_value": "斗篷 (黑)",
+    "value": "雨衣 (黑)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CH 漏了黑, 和英文同名的 PonchoBlack 雨衣 (黑) 不同名；Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.Shoes_TrainerBlackandWhite": {
+    "as1_value": "运动鞋 (黑)",
+    "value": "运动鞋 (黑白)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 寫成运动鞋 (黑), 和 Black Sneakers 撞名; 英文是 Black and White Sneakers"
+  },
+  "ItemName.json|AuthenticZLite.Shoes_TrainerBlackandWhite": {
+    "as1_value": "运动鞋 (黑)",
+    "value": "运动鞋 (黑白)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 寫成运动鞋 (黑), 和 Black Sneakers 撞名; 英文是 Black and White Sneakers"
+  },
+  "ItemName.json|AuthenticZLite.AZ_BeardStyle02": {
+    "as1_value": "络腮胡",
+    "value": "羊排胡",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Chops 是原版鬍型, 原版 IGUI_Beard_Chops 為羊排鬍/羊排胡; 絡腮鬍/络腮胡是原版 Full 鬍型, 會看錯"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_HeadphoneNoise": {
+    "as1_value": "耳塞/耳机: 通话音量 (百分比)",
+    "value": "耳塞/耳机: 通话噪音 (百分比)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 寫成通话音量, 會看成聲音音量設定; 實際是通話對殭屍的噪音 (見 tooltip), CH 為通話噪音"
+  },
+  "UI.json|UI_RadioTraders_Help_Advanced_2": {
+    "as1_value": "声望: 每个商人有五个等级, 从不信任到伙伴. 你的等级在呼叫窗口显示为 REP. 等级越高, 价格越好.",
+    "value": "声望: 每个商人有五个等级, 从不信任到伙伴. 你的等级在呼叫窗口显示为 “声望”. 等级越高, 价格越好.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 寫 REP, 但 CN 介面 UI_RadioTraders_RepShort 顯示的是声望, 玩家找不到 REP"
+  },
+  "UI.json|UI_RadioTraders_WN_7": {
+    "as1_value": "发电机又能卖给火花了: 拿在手上, 查看他的收购页.",
+    "value": "发电机又能卖给火花了: 拿在手上, 查看他的出售页.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 寫收购页, 但 CN 介面的分頁按鈕 UI_RadioTraders_BtnSell 是出售"
+  },
+  "IG_UI.json|IGUI_ExtractionMode_Message_DeploymentBegun": {
+    "as1_value": "所有队员已就绪. 突袭部署已开始.",
+    "value": "所有参与的队员已就绪. 突袭部署已开始.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 漏了 participating, 现行版队友可选择不参加, 写成所有队员会误导"
+  },
+  "IG_UI.json|IGUI_ExtractionMode_Message_DestinationSelected": {
+    "as1_value": "%1 选择了 %2. 所有队员都必须就绪才能部署.",
+    "value": "%1 选择了 %2. 队员必须就绪才能部署; 多人游戏的队友可以选择不参加.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 仍是旧版“所有队员都必须就绪”, 英文已改为多人队友可选择不参加"
+  },
+  "IG_UI.json|IGUI_ExtractionMode_ReadyCountDeploy": {
+    "as1_value": "就绪 %1/%2  |  所有队员都必须就绪才能部署.",
+    "value": "就绪 %1/%2  |  未就绪的队友可选择不参加.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 仍是旧版“所有队员都必须就绪才能部署”, 与现行英文相反"
+  },
+  "IG_UI.json|IGUI_ExtractionMode_Quest_keeping_them_running_Requirement_2": {
+    "as1_value": "轮胎扳手",
+    "value": "十字扳手",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：任务要交的原版物品 Base.LugWrench, 官方简中名为十字扳手, 写轮胎扳手对不上物品栏"
+  },
+  "IG_UI.json|IGUI_ExtractionMode_Quest_muldraugh_strip_Reward_3": {
+    "as1_value": "MSR788 狙击步枪",
+    "value": "MSR788 狩猎步枪",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：奖励是原版 Base.HuntingRifle, 官方简中为 MSR788狩猎步枪, 狙击步枪会让玩家找错物品"
+  },
+  "IG_UI.json|IGUI_ExtractionMode_Quest_one_last_flight_Description": {
+    "as1_value": "把候选疫苗带到大学俄亥俄购物中心屋顶停机坪, 完成交接.",
+    "value": "把候选疫苗带到大俄亥俄购物中心屋顶停机坪, 完成交接.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 错字「大学俄亥俄」, 地名应为大俄亥俄购物中心"
+  },
+  "IG_UI.json|IGUI_ExtractionMode_Upgrade_intel_center_Requirement_1": {
+    "as1_value": "肯塔基州地图",
+    "value": "地图",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Lua 为 acceptsAnyMap, 任何地图都收; 写肯塔基州地图会让玩家以为只收一种"
+  },
+  "IG_UI.json|IGUI_ExtractionMode_Upgrade_intel_center_Requirement_2": {
+    "as1_value": "笔记本",
+    "value": "记事本或笔记本",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Lua 收 Base.Notepad 与 Base.Notebook, CN 只写笔记本漏了记事本 (官方简中名)"
+  },
+  "IG_UI.json|IGUI_ExtractionMode_Upgrade_medical_delivery_Description": {
+    "as1_value": "每天收到药品, 治疗速度提升 20%%, 并抵抗 20%% 的诺克斯感染.",
+    "value": "首批补给会附带一剂诺克斯感染治疗药剂, 之后每天收到药品; 治疗速度提升 20%%, 并抵抗 10%% 的诺克斯感染.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 是旧版: 漏了首批附带治疗药剂, 抗感染写成 20%% (现行为 10%%)"
+  },
+  "ContextMenu.json|UI_ModOptions_Animal_CleanTracks": {
+    "as1_value": "清除旧版B42动物足迹与脚印",
+    "value": "清除陈旧的B42动物足迹与脚印",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Aged 指存在过久的足迹, 不是旧版 B42; 译成「旧版」意思错"
+  },
+  "Tooltip.json|UI_ModOptions_Animal_CleanTracks": {
+    "as1_value": "清除旧版B42动物足迹与脚印",
+    "value": "清除陈旧的B42动物足迹与脚印",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Aged 指存在过久的足迹, 不是旧版 B42; 译成「旧版」意思错"
+  },
+  "Tooltip.json|UI_MPOptim_TabGC": {
+    "as1_value": "常规与内存",
+    "value": "常规",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：分页已由旧版 General & Memory 改名 General, 上游各语言都只写一般"
+  },
+  "ItemName.json|RattyOliveCap.Hat_RattyBlackCap": {
+    "as1_value": "Ratty棒球帽 (黑)",
+    "value": "破旧棒球帽 (黑)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 把 Ratty 留英文没翻, 简中玩家看不懂"
+  },
+  "UI.json|UI_HiResClock_GlobalIgnoreSkinColors_Tooltip": {
+    "as1_value": "在选择其他皮肤时, 保留此槽位现有的用户颜色覆盖. 皮肤资源和兼容性设置仍会被加载.",
+    "value": "记录此槽位中每个已注册手表系列当前生效的颜色, 并在更换皮肤和重新进入游戏后保留. 更换手表物品时仍会使用该物品所属系列的颜色.",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CH/CN 描述的是旧版功能 (保留使用者颜色覆盖), 现行为快照各手表系列颜色并跨造型与游戏阶段保留"
+  },
+  "ItemName.json|AuthenticZClothing.Fat01_PonchoDown": {
+    "as1_value": "斗篷 (黑)",
+    "value": "雨衣 (黑)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.Fat01_PonchoUP": {
+    "as1_value": "斗篷 (黑)",
+    "value": "雨衣 (黑)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.Fat02_PonchoDown": {
+    "as1_value": "斗篷",
+    "value": "雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.Fat02_PonchoUP": {
+    "as1_value": "斗篷",
+    "value": "雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.Fat03_PonchoDown": {
+    "as1_value": "斗篷",
+    "value": "雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.Fat03_PonchoUP": {
+    "as1_value": "斗篷",
+    "value": "雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.PonchoBlack": {
+    "as1_value": "斗篷 (黑)",
+    "value": "雨衣 (黑)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.PonchoBlackDOWN": {
+    "as1_value": "斗篷 (黑)",
+    "value": "雨衣 (黑)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.PonchoCamoDesert": {
+    "as1_value": "斗篷 (沙漠迷彩)",
+    "value": "雨衣 (沙漠迷彩)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.PonchoCamoForest": {
+    "as1_value": "森林迷彩斗篷",
+    "value": "森林迷彩雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.PonchoCamoForest2": {
+    "as1_value": "森林迷彩斗篷",
+    "value": "森林迷彩雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.PonchoCamoForest2DOWN": {
+    "as1_value": "森林迷彩斗篷",
+    "value": "森林迷彩雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.PonchoCamoForestDOWN": {
+    "as1_value": "森林迷彩斗篷",
+    "value": "森林迷彩雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.PonchoOliveDrab": {
+    "as1_value": "斗篷 (橄榄绿)",
+    "value": "雨衣 (橄榄绿)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.PonchoOliveDrabDOWN": {
+    "as1_value": "斗篷 (橄榄绿)",
+    "value": "雨衣 (橄榄绿)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.PonchoOrangePunch": {
+    "as1_value": "斗篷 (橙)",
+    "value": "雨衣 (橙)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.PonchoOrangePunchDOWN": {
+    "as1_value": "斗篷 (橙)",
+    "value": "雨衣 (橙)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.PonchoUrbanForest": {
+    "as1_value": "斗篷 (城市迷彩)",
+    "value": "雨衣 (城市迷彩)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.PonchoUrbanForestDOWN": {
+    "as1_value": "斗篷 (城市迷彩)",
+    "value": "雨衣 (城市迷彩)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.PonchoWhiteTINT": {
+    "as1_value": "斗篷",
+    "value": "雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.PonchoWhiteTINTDOWN": {
+    "as1_value": "斗篷",
+    "value": "雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.Thin01_PonchoDown": {
+    "as1_value": "斗篷",
+    "value": "雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZClothing.Thin01_PonchoUP": {
+    "as1_value": "斗篷",
+    "value": "雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.Fat02_PonchoDown": {
+    "as1_value": "斗篷",
+    "value": "雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.Fat02_PonchoUP": {
+    "as1_value": "斗篷",
+    "value": "雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.Fat03_PonchoDown": {
+    "as1_value": "斗篷",
+    "value": "雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.Fat03_PonchoUP": {
+    "as1_value": "斗篷",
+    "value": "雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.PonchoBlack": {
+    "as1_value": "斗篷 (黑)",
+    "value": "雨衣 (黑)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.PonchoBlackDOWN": {
+    "as1_value": "斗篷 (黑)",
+    "value": "雨衣 (黑)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.PonchoCamoDesert": {
+    "as1_value": "斗篷 (沙漠迷彩)",
+    "value": "雨衣 (沙漠迷彩)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.PonchoCamoForest": {
+    "as1_value": "森林迷彩斗篷",
+    "value": "森林迷彩雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.PonchoCamoForest2": {
+    "as1_value": "森林迷彩斗篷",
+    "value": "森林迷彩雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.PonchoCamoForest2DOWN": {
+    "as1_value": "森林迷彩斗篷",
+    "value": "森林迷彩雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.PonchoCamoForestDOWN": {
+    "as1_value": "森林迷彩斗篷",
+    "value": "森林迷彩雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.PonchoOliveDrab": {
+    "as1_value": "斗篷 (橄榄绿)",
+    "value": "雨衣 (橄榄绿)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.PonchoOliveDrabDOWN": {
+    "as1_value": "斗篷 (橄榄绿)",
+    "value": "雨衣 (橄榄绿)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.PonchoOrangePunch": {
+    "as1_value": "斗篷 (橙)",
+    "value": "雨衣 (橙)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.PonchoOrangePunchDOWN": {
+    "as1_value": "斗篷 (橙)",
+    "value": "雨衣 (橙)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.PonchoUrbanForest": {
+    "as1_value": "斗篷 (城市迷彩)",
+    "value": "雨衣 (城市迷彩)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.PonchoUrbanForestDOWN": {
+    "as1_value": "斗篷 (城市迷彩)",
+    "value": "雨衣 (城市迷彩)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.PonchoWhiteTINT": {
+    "as1_value": "斗篷",
+    "value": "雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.PonchoWhiteTINTDOWN": {
+    "as1_value": "斗篷",
+    "value": "雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.Thin01_PonchoDown": {
+    "as1_value": "斗篷",
+    "value": "雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.Thin01_PonchoUP": {
+    "as1_value": "斗篷",
+    "value": "雨衣",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Poncho 照本體官方簡中「雨衣」（Base.PonchoGreen 等），與繁中及同 MOD 其他子 MOD 一致"
+  },
+  "ItemName.json|AuthenticZLite.InflatableTube_AZ": {
+    "as1_value": "充气管",
+    "value": "充气泳圈",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Inflatable Tube 是泳圈，不是充氣管（同 Clothing 版修正）"
+  },
+  "ItemName.json|AuthenticZClothing.Hat_BaseballCapBuzzers": {
+    "as1_value": "棒球帽 (蜂鸣器)",
+    "value": "棒球帽 (Buzzers)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Buzzers 是隊名，不是蜂鳴器；照繁中保留英文"
+  },
+  "ItemName.json|AuthenticZClothing.HoodieDOWN_Buzzers": {
+    "as1_value": "连帽衫 (蜂鸣器)",
+    "value": "连帽衫 (Buzzers)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Buzzers 是隊名，不是蜂鳴器；照繁中保留英文"
+  },
+  "ItemName.json|AuthenticZClothing.HoodieTied_Buzzers": {
+    "as1_value": "连帽衫 (蜂鸣器, 系起)",
+    "value": "连帽衫 (Buzzers, 系起)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Buzzers 是隊名，不是蜂鳴器；照繁中保留英文"
+  },
+  "ItemName.json|AuthenticZClothing.HoodieUP_Buzzers": {
+    "as1_value": "连帽衫 (蜂鸣器)",
+    "value": "连帽衫 (Buzzers)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Buzzers 是隊名，不是蜂鳴器；照繁中保留英文"
+  },
+  "ItemName.json|AuthenticZClothing.Shirt_Buzzers": {
+    "as1_value": "衬衫 (蜂鸣器)",
+    "value": "衬衫 (Buzzers)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Buzzers 是隊名，不是蜂鳴器；照繁中保留英文"
+  },
+  "ItemName.json|AuthenticZLite.Hat_BaseballCapBuzzers": {
+    "as1_value": "棒球帽 (蜂鸣器)",
+    "value": "棒球帽 (Buzzers)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Buzzers 是隊名，不是蜂鳴器；照繁中保留英文"
+  },
+  "ItemName.json|AuthenticZLite.Hat_BaseballCapBuzzers_Reverse": {
+    "as1_value": "棒球帽 (蜂鸣器, 反戴)",
+    "value": "棒球帽 (Buzzers, 反戴)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Buzzers 是隊名，不是蜂鳴器；照繁中保留英文"
+  },
+  "ItemName.json|AuthenticZLite.HoodieDOWN_Buzzers": {
+    "as1_value": "连帽衫 (蜂鸣器)",
+    "value": "连帽衫 (Buzzers)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Buzzers 是隊名，不是蜂鳴器；照繁中保留英文"
+  },
+  "ItemName.json|AuthenticZLite.HoodieTied_Buzzers": {
+    "as1_value": "连帽衫 (蜂鸣器, 系起)",
+    "value": "连帽衫 (Buzzers, 系起)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Buzzers 是隊名，不是蜂鳴器；照繁中保留英文"
+  },
+  "ItemName.json|AuthenticZLite.HoodieUP_Buzzers": {
+    "as1_value": "连帽衫 (蜂鸣器)",
+    "value": "连帽衫 (Buzzers)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Buzzers 是隊名，不是蜂鳴器；照繁中保留英文"
+  },
+  "ItemName.json|AuthenticZLite.Shirt_Buzzers": {
+    "as1_value": "衬衫 (蜂鸣器)",
+    "value": "衬衫 (Buzzers)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Buzzers 是隊名，不是蜂鳴器；照繁中保留英文"
+  },
+  "Recipes.json|Dismantle_shotgun_shells": {
+    "as1_value": "拆解霰弹弹壳",
+    "value": "拆解霰弹",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：指整發霰彈；「霰弹弹壳」是本 MOD 彈殼物品 AmmoMaker.CasqShotgun 的名稱"
+  },
+  "Recipes.json|Make shotgun shells": {
+    "as1_value": "制作霰弹弹壳",
+    "value": "制作霰弹",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：指製作整發霰彈；「霰弹弹壳」是彈殼物品名，會混淆"
+  },
+  "Recipes.json|Make_shotgun_shells": {
+    "as1_value": "制作霰弹弹壳",
+    "value": "制作霰弹",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：指製作整發霰彈；「霰弹弹壳」是彈殼物品名，會混淆"
+  },
+  "Tooltip.json|Tooltip_Make shotgun shells": {
+    "as1_value": "制作霰弹弹壳",
+    "value": "制作霰弹",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：指製作整發霰彈；「霰弹弹壳」是彈殼物品名，會混淆"
+  },
+  "Recipes.json|Put_shotgun_shells_boxes_in_a_canister": {
+    "as1_value": "将霰弹弹壳盒装入罐中",
+    "value": "将霰弹盒装入罐中",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：裝罐的是整盒霰彈，不是彈殼盒"
+  },
+  "ContextMenu.json|UI_MPOptim_TabGC": {
+    "as1_value": "常规与内存",
+    "value": "常规",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：分頁英文是 General；「與記憶體」是舊版分頁名（同 Tooltip 版修正）"
+  },
+  "UI.json|UI_ModOptions_Animal_CleanTracks": {
+    "as1_value": "清除旧版B42动物足迹与脚印",
+    "value": "清除陈旧的B42动物足迹与脚印",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Aged 指存在過久的足跡，不是舊版（同 ContextMenu、Tooltip 版修正）"
+  },
+  "ItemName.json|RattyOliveCap.Hat_RattyBlackCap_Reverse": {
+    "as1_value": "Ratty棒球帽 (黑, 反戴)",
+    "value": "破旧棒球帽 (黑, 反戴)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Ratty 是「破舊」，簡中原本留英文（同 Hat_RattyBlackCap 修正）"
+  },
+  "ItemName.json|RattyOliveCap.Hat_RattyOliveCap": {
+    "as1_value": "Ratty棒球帽 (橄榄绿)",
+    "value": "破旧棒球帽 (橄榄绿)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Ratty 是「破舊」，簡中原本留英文（同 Hat_RattyBlackCap 修正）"
+  },
+  "ItemName.json|RattyOliveCap.Hat_RattyOliveCap_Reverse": {
+    "as1_value": "Ratty棒球帽 (橄榄绿, 反戴)",
+    "value": "破旧棒球帽 (橄榄绿, 反戴)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：Ratty 是「破舊」，簡中原本留英文（同 Hat_RattyBlackCap 修正）"
+  },
+  "ItemName.json|DesertCargo.Hat_BalaclavaBlack": {
+    "as1_value": "针织露脸头套 (黑)",
+    "value": "针织蒙面头套 (黑)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：英文 Knit Balaclava 沒有 Open，對應本體 Balaclava「蒙面头套」，不是露脸款；與繁中一致"
+  },
+  "ItemName.json|DesertCargo.Hat_BalaclavaOlive": {
+    "as1_value": "针织露脸头套 (橄榄绿)",
+    "value": "针织蒙面头套 (橄榄绿)",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：同 Hat_BalaclavaBlack"
+  },
+  "IG_UI.json|IGUI_VehicleNameStepVanNumark": {
+    "as1_value": "Numark 综合厢式货车",
+    "value": "Numark 设施厢式货车",
+    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：與本批 Numark 地下設施譯名一致；簡中原把 Complex 誤成「综合」"
   }
 }
