@@ -4,7 +4,7 @@
 [h3]新增[/h3]
 [list]
 [*] 新支援 3 個 MOD（384 處）：Roadworthy 寫實駕駛與保養（手排換檔、儀表板燈號、發動失敗原因、零件磨損、沙盒設定）與它的必要相依 Vehicle Kit Library，以及 PM2 全面維修重製（維修成功與暴擊機率、維護加成提示、維修結果浮字、沙盒設定）。
-[*] 13 個 MOD 更新後新增的文字補上中文（478 處）：Living NPC 的兒童照護、四種疾病與外觀編輯器（181 處）、Snake's ModPack 的 Ammo Maker 說明手冊、訊號干擾器與 Numark 地下設施文件（155 處）、Wounds Overhaul 對 A-Life NPC 抽血與輸血（48 處），以及 Optimiser、True Sewers、Authentic Z、Gunsmith、Ros's Radical Animal Remaster 的加拿大鵝等。
+[*] 13 個 MOD 更新後新增的文字補上中文（482 處）：Living NPC 的兒童照護、四種疾病與外觀編輯器（181 處）、Snake's ModPack 的 Ammo Maker 說明手冊、訊號干擾器與 Numark 地下設施文件（155 處）、Wounds Overhaul 對 A-Life NPC 抽血與輸血（48 處），以及 Optimiser、True Sewers、Authentic Z、Gunsmith、Ros's Radical Animal Remaster 的加拿大鵝等。
 [/list]
 
 [h3]更新[/h3]
