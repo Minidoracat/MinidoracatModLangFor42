@@ -1,8 +1,11 @@
 {
-  "corpus_hash": "28a8a44732841e64eba8cf4f698b0c082d3f2a9796257dc3f933090e9c17c9a3",
+  "corpus_hash": "1d8af638746f0c30a8932339d5b22e84fba9f8ee625cf5c0b6fc06bbdf2c3444",
   "extractor_schema": 10,
   "mod_ids": [
-    "AnimalRemasterApproved"
+    "AnimalRemasterApproved",
+    "RRARCompatAnimalBarns",
+    "RRARCompatAnimalCrates",
+    "RRARCompatLivestockTraders"
   ],
   "records": {
     "script_craftRecipe|mods/RRAR/42/media/scripts/AnimalRemaster_DeerTrophies.txt|MakeAMRAlbinoDeerTrophy": "75f95c7a51cc",
@@ -1580,8 +1583,13 @@
     "script_item|mods/RRAR/42/media/scripts/amr_duck_products41.txt|AMRDucks.WoodDuck_Drake_Head": "45ba08820893",
     "script_item|mods/RRAR/42/media/scripts/amr_duck_products41.txt|AMRDucks.WoodDuck_Duckling_Head": "06711ab0ffc0",
     "script_item|mods/RRAR/42/media/scripts/amr_duck_products41.txt|AMRDucks.WoodDuck_Hen_Head": "6a4f895047de",
+    "script_item|mods/RRAR/42/media/scripts/rrar_canadagoose_items783.txt|AMRBirds321.CanadaGooseEgg783": "b6f731014e2b",
+    "script_item|mods/RRAR/42/media/scripts/rrar_canadagoose_items783.txt|AMRBirds321.RRARCanadaGoose783_Gander_Head": "b1ffc3c9f0a8",
+    "script_item|mods/RRAR/42/media/scripts/rrar_canadagoose_items783.txt|AMRBirds321.RRARCanadaGoose783_Goose_Head": "597bbe21d262",
+    "script_item|mods/RRAR/42/media/scripts/rrar_canadagoose_items783.txt|AMRBirds321.RRARCanadaGoose783_Gosling_Head": "4c7edbba8f66",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Fluids.json|Fluid_Name_RRARGoatMilk": "ff0257302312",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_AnimalMeat_Goat": "ac68bd931568",
+    "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_AnimalType_Global_rrar_canadagoose": "0d7cb75b1c88",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_AnimalType_amr_americanblackduck_drake": "dd85fa45dbaa",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_AnimalType_amr_americanblackduck_duckling": "962420fbeb05",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_AnimalType_amr_americanblackduck_hen": "da9d9eb94f2a",
@@ -1754,6 +1762,9 @@
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_AnimalType_ram_amrcorpse_sheep_shetland_ramsheared_v1": "76e11af94d35",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_AnimalType_ram_amrcorpse_sheep_shetland_ramsheared_v2": "76e11af94d35",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_AnimalType_ram_amrcorpse_sheep_shetland_ramsheared_v3": "76e11af94d35",
+    "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_AnimalType_rrar_canadagoose_gander": "32044519a639",
+    "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_AnimalType_rrar_canadagoose_goose": "6aa1a776bee1",
+    "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_AnimalType_rrar_canadagoose_gosling": "56253f9d58ab",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_AnimalType_rrar_goat_lamancha_buck": "c435c9e4b656",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_AnimalType_rrar_goat_lamancha_doe": "0258525ac632",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_AnimalType_rrar_goat_lamancha_kid": "0b746d9114df",
@@ -1917,6 +1928,7 @@
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_Breed_indianblue": "91c076642785",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_Breed_pied": "9cf77cfa8b1f",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_Breed_pilgrim": "42b4a09d1f83",
+    "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_Breed_rrar_canadagoose": "be55ef3f4c4e",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_Breed_rrar_goat_lamancha_blackpinto": "0e9790900933",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_Breed_rrar_goat_lamancha_chocolate": "01f8ddc7f090",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/IG_UI.json|IGUI_Breed_rrar_goat_lamancha_honeypinto": "42baf193fbe7",
@@ -3494,6 +3506,10 @@
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/ItemName.json|Base.RRARKidHideHairOn": "52b98650e0a6",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/ItemName.json|Base.RRARKidHideHairOnTanned": "3b622dfc1286",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/ItemName.json|Base.RRARKidHideHairOnWet": "62bc58e99a6c",
+    "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/ItemName.json|ItemName_AMRBirds321.CanadaGooseEgg783": "bcf5418ad943",
+    "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/ItemName.json|ItemName_AMRBirds321.RRARCanadaGoose783_Gander_Head": "bf0d25ea5caf",
+    "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/ItemName.json|ItemName_AMRBirds321.RRARCanadaGoose783_Goose_Head": "caace17f47b9",
+    "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/ItemName.json|ItemName_AMRBirds321.RRARCanadaGoose783_Gosling_Head": "1e2f61bde2d7",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Recipes.json|AMR_CutDuck": "eb0757fbc8ad",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Recipes.json|AMR_DryLargeLeather": "327bfd0db95d",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Recipes.json|AMR_DryMediumLeather": "b92987f4342a",
@@ -3597,8 +3613,12 @@
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_BreedWildDuckGreenWingedTeal_tooltip": "cd094fb994a2",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_BreedWildDuckWood": "c0e0290f2bda",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_BreedWildDuckWood_tooltip": "cd094fb994a2",
+    "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_CanadaGooseChance": "6e80f7121ea2",
+    "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_CanadaGooseChance_tooltip": "7f785f62cbc8",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_DomesticDuckChance": "e7754161cd4a",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_DomesticDuckChance_tooltip": "a7e77cd34d66",
+    "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_EnableCanadaGooseSpawns": "1cb89e7d62ae",
+    "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_EnableCanadaGooseSpawns_tooltip": "0545336def78",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_EnableDuckSpawns": "9f56773aaa50",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_EnableDuckSpawns_tooltip": "a616fe3dac18",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_EnableGooseSpawns": "aaad1eed8f98",
@@ -3609,6 +3629,8 @@
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_GooseSpawnChance_tooltip": "e103c1c1c3c7",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_MelanisticPer10000": "ba7d3463adc4",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_MelanisticPer10000_tooltip": "f56ec08eea2f",
+    "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_NearbyCanadaGooseLimit": "d4abd4936439",
+    "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_NearbyCanadaGooseLimit_tooltip": "eea70909183e",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_NearbyDuckLimit": "861a02201a8a",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_NearbyDuckLimit_tooltip": "5be122d085ed",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_AnimalRemaster_NearbyGooseLimit": "196a60c744e5",
@@ -3643,5 +3665,5 @@
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_RRARGoatTest_RanchWeight": "bcac033e90ce",
     "translate_en|mods/RRAR/42/media/lua/shared/Translate/EN/Sandbox.json|Sandbox_RRARGoatTest_RanchWeight_tooltip": "32b04c0dd9f6"
   },
-  "updated_at": "2026-10-30T10:56:05Z"
+  "updated_at": "2026-10-31T10:35:52Z"
 }

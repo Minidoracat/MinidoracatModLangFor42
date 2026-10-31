@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1467 個 Workshop 模組**（2113 個 mod ID）；另 **10 個已下架**（翻譯保留，見文末）。
+共支援 **1467 個 Workshop 模組**（2116 個 mod ID）；另 **10 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -23,7 +23,7 @@
 | [Firearms](https://steamcommunity.com/sharedfiles/filedetails/?id=2256623447) | 槍械擴充 | 新增多種真實槍械、彈藥、彈匣與消音器等武器配件。 | `2256623447/firearmmod`, `2256623447/firearmmodbeta`, `2256623447/firearmmodvanilla`, `firearmmod`, `firearmmodbeta`, `firearmmodvanilla` | 358 | ⚠️ ≥56 | — |
 | [Combat Text (B40+B41+B42)](https://steamcommunity.com/sharedfiles/filedetails/?id=2286124931) | 戰鬥文字 | 顯示浮動傷害數值與生命值等戰鬥資訊，字體與顏色皆可自訂。 | `CombatText` | 35 | — | — |
 | [Better Sorting](https://steamcommunity.com/sharedfiles/filedetails/?id=2313387159) | 更好的分類（原版） | 重新整理物品顯示類別的原版 mod（v2.1.0 全面翻修），物品欄分類與篩選更精細。 | `BetterSortCC` | 92 | — | — |
-| [Authentic Z](https://steamcommunity.com/sharedfiles/filedetails/?id=2335368829) | Authentic Z | 新增大量服裝與背包等外觀內容，並加入可用的電鋸工具。 | `Authentic Z - Current`, `AuthenticZBackpacks+`, `AuthenticZLite` | 1762 | ⚠️ ≥4 | — |
+| [Authentic Z](https://steamcommunity.com/sharedfiles/filedetails/?id=2335368829) | Authentic Z | 新增大量服裝與背包等外觀內容，並加入可用的電鋸工具。 | `Authentic Z - Current`, `AuthenticZBackpacks+`, `AuthenticZLite` | 1762 | ⚠️ ≥1 | — |
 | [Antibodies (v1.97) [B41 + B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=2392676812) | 抗體系統 | 加入抗體對抗感染機制，恢復進度受角色狀態與情緒影響，選項豐富可調。 | `2392676812/lgd_antibodies`, `lgd_antibodies` | 233 | — | — |
 | [Conditional-Speech](https://steamcommunity.com/sharedfiles/filedetails/?id=2398253681) | 情境自言自語 | 角色會依當前狀態與情境自言自語，說話可能吸引殭屍，內容可自訂停用。 | `Conditional-Speech` | 998 | — | — |
 | ['91 RANGE ROVER Classic](https://steamcommunity.com/sharedfiles/filedetails/?id=2409333430) | '91 RANGE ROVER Classic | 新增 1991 年 Land Rover Range Rover Classic 車輛，含雙門與四門版本。 | `91range` | 27 | — | — |
@@ -1472,7 +1472,7 @@
 | [Viewpoint - Grassier Grass Port](https://steamcommunity.com/sharedfiles/filedetails/?id=3818853354) | Viewpoint - 茂密草地移植版 | Viewpoint 附加模組，加入會生長的 3D 草葉，可被刀刃割除、被牲畜啃短，並支援自訂草葉材質。 | `GrassierGrassViewpoint` | 25 | — | — |
 | [Viewpoint - Right Click Fix](https://steamcommunity.com/sharedfiles/filedetails/?id=3819018807) | Viewpoint - 右鍵修正 | 在 Viewpoint 第一／第三人稱視角中，右鍵點游標指向的門窗、家具、容器、屍體或動物即可直接開啟選單。 | `ViewpointRightClick` | 5 | — | — |
 | [Wound Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3819438691) | Wound Expansion 傷口擴充 | 以原版風格擴充健康系統，新增擦傷、穿刺傷等傷口、病症、治療方式與醫療用品，多數內容可在沙盒開關。 | `WoundExpansion`, `WoundExpansionZB` | 260 | — | — |
-| [Ros's Radical Animal Remaster](https://steamcommunity.com/sharedfiles/filedetails/?id=3819478254) | Ros's Radical Animal Remaster 動物大改造 | 為家畜與野生動物新增品種與稀有毛色，含多種鵝與孔雀，沿用原版的生長、繁殖與飼養系統。 | `AnimalRemasterApproved` | 1896 | ⚠️ ≥1 | — |
+| [Ros's Radical Animal Remaster](https://steamcommunity.com/sharedfiles/filedetails/?id=3819478254) | Ros's Radical Animal Remaster 動物大改造 | 為家畜與野生動物新增品種與稀有毛色，含多種鵝與孔雀，沿用原版的生長、繁殖與飼養系統。 | `AnimalRemasterApproved`, `RRARCompatAnimalBarns`, `RRARCompatAnimalCrates`, `RRARCompatLivestockTraders` | 1896 | ⚠️ ≥1 | — |
 | [Off the Rack: The 1993 Military Gear](https://steamcommunity.com/sharedfiles/filedetails/?id=3819505238) | Off the Rack：1993 軍用裝備 | 將原版軍用裝備重製成 1993 年真實軍品外觀，物品與掉落不變；需 Surplus & Thrift：1993 衣櫥。 | `OffTheRackMilitary1993` | 7 | — | — |
 | [Viewpoint - 3D RVs [B42.21] [WIP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3820158673) | Viewpoint - 3D 露營車 | Viewpoint 附加模組，新增可走進內部的 Nomad 與 Dales Chieftain 露營車，可在車內烹飪、睡覺並擺放家具物資。 | `DaleChieftainRV`, `DeadWorksDaleRV`, `DeadWorksNomadRV`, `GridRV`, `GridRVHost` | 78 | — | — |
 | [Complete Vanilla Firearms Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3820580321) | Complete Vanilla Firearms Expansion 原版風槍械擴充整合版 | 整合 OG VFE、S.T.A.L.K.E.R.、Post 93' 等槍械擴充，新增大量槍械與對應彈藥、彈匣與配件。 | `ExtendedVanillaWeapons` | 413 | ⚠️ ≥22 | — |
