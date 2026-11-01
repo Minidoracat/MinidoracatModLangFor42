@@ -8401,8 +8401,8 @@
   },
   "ItemName.json|VFX.BowlVegetarianChili": {
     "as1_value": "碗 (素食辣椒)",
-    "reason": "EN Vegetarian Chili 是辣豆燉菜，As1「素食辣椒」把菜名讀成蔬菜辣椒（本體 Base.CannedChili「Canned Chili」官方作「辣酱罐头」），語意錯誤；own「素食辣酱」符合本體既定譯法。",
-    "value": "碗 (素食辣酱)"
+    "value": "碗 (素食辣豆酱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Vegetarian Chili"
   },
   "ItemName.json|VFX.ChorizoPack": {
     "as1_value": "西班牙辣香肠 (包装)",
@@ -8423,11 +8423,6 @@
     "as1_value": "烤饼面团",
     "reason": "隨 VFX.Crumpet 同族：中心詞改用「英式煎饼」，故為「英式煎饼面团」。",
     "value": "英式煎饼面团"
-  },
-  "ItemName.json|VFX.FoodStorageContainerChili": {
-    "as1_value": "食品储藏盒 (辣豆酱)",
-    "reason": "容器詞取 As1（見下方 as1 族群理由）；內容詞取本體官方 Base.CannedChili「Canned Chili」＝「辣酱罐头」。As1 在此寫「辣豆酱」、在 BowlVegetarianChili 又寫「辣椒」，同一道菜名兩種寫法互不一致，統一到本體既定的「辣酱」。",
-    "value": "食品储藏盒 (辣酱)"
   },
   "ItemName.json|VFX.GroundFrog": {
     "as1_value": "蛙肉末",
@@ -8483,11 +8478,6 @@
     "as1_value": "禽肉丸",
     "reason": "同 VFX.GroundSmallBird：本體 Base.Smallbirdmeat=小鸟肉，且與 鱼肉丸／兔肉丸／鹿肉丸 的「<動物>肉丸」句式一致。",
     "value": "小鸟肉丸"
-  },
-  "ItemName.json|VFX.MetalFoodStorageContainerChili": {
-    "as1_value": "金属食品储藏盒 (辣豆酱)",
-    "reason": "同 VFX.FoodStorageContainerChili：保留 As1 的「金属」區辨（否則與塑膠盒撞名），內容詞改回本體官方「辣酱」。",
-    "value": "金属食品储藏盒 (辣酱)"
   },
   "ItemName.json|VFX.PattyFrog": {
     "as1_value": "蛙肉饼",
@@ -10869,11 +10859,6 @@
     "reason": "產物 VFX.AcornFlour 出貨名=橡子粉，As1 寫「橡果粉」不符；保留 As1「研钵和研杵」句式只修產物名",
     "value": "用研钵和研杵研磨橡子粉"
   },
-  "Recipes.json|VFX_GrindOatFlourMortarPestle": {
-    "as1_value": "用研钵和研杵研磨面粉",
-    "reason": "腳本 outputs=VFX.OatFlour(燕麦粉)；上游 EN 誤複製成 \"Grind Flour\"，As1 照譯與 VFX_GrindFlourMortarPestle 撞名，改用實際產物名",
-    "value": "用研钵和研杵研磨燕麦粉"
-  },
   "Recipes.json|VFX_MakeBarleySourdough": {
     "as1_value": "制作大麦酸面团",
     "reason": "產物 VFX.BarleySourdough 已裁決為 大麦酸面团面包 (cn_overrides)，As1「制作大麦酸面团」缺「面包」",
@@ -10921,13 +10906,8 @@
   },
   "Recipes.json|VFX_MakeRyeSourdough": {
     "as1_value": "制作酸面团",
-    "reason": "腳本 inputs=VFX.RyeFlour、outputs=VFX.RyeSourdough(已裁決 黑麦酸面团面包)；上游 EN 漏了 Rye，As1 照譯成「制作酸面团」與 VFX_MakeSourdough 撞名",
-    "value": "制作黑麦酸面团面包"
-  },
-  "Recipes.json|VFX_MakeRyeSourdoughToast": {
-    "as1_value": "制作酸面团吐司",
-    "reason": "產物 Base.VFXRyeSourdoughToast=黑麦酸面团吐司；As1「制作酸面团吐司」與 VFX_MakeSourdoughToast 撞名",
-    "value": "制作黑麦酸面团吐司"
+    "value": "制作酸面团面包",
+    "reason": "2026-11-02 VFX 舊譯稽核：現行英文 Make Sourdough 沒有 Rye（鍵名才有），照英文；用語同 VFX.Sourdough（酸種麵包／酸面团面包）"
   },
   "Recipes.json|VFX_MakeSmallJarWithLid": {
     "as1_value": "制作带盖小罐",
@@ -10981,8 +10961,8 @@
   },
   "Recipes.json|VFX_PrepareHomemadeAppleButter": {
     "as1_value": "制作自制苹果酱",
-    "reason": "As1 在本 mod 把 Prepare 一律譯「准备」(准备一锅意面/准备油炸食品/准备骨头汤)，此鍵卻跳成「制作」；own 維持「准备」動詞一致",
-    "value": "准备自制苹果酱"
+    "value": "准备自制浓缩苹果酱",
+    "reason": "2026-11-02 VFX 舊譯稽核：產物 VFX.AppleButter CH 為「濃縮蘋果醬」，統一；主代理：CN 對齊 VFX.AppleButter 的浓缩苹果酱"
   },
   "Recipes.json|VFX_PreparePastaPot": {
     "as1_value": "准备一锅意面 (炖锅)",
@@ -62017,18 +61997,18 @@
   },
   "ItemName.json|BundleUp.VFX_CheepsCarton": {
     "as1_value": "芝士圈 (Cheeps, 纸箱)",
-    "value": "箱装 Cheeps 棉花糖",
-    "reason": "2026-10-26 As1 v3.12.0：Cheeps 是棉花糖类糖果（Candy），As1 译成芝士圈"
+    "value": "箱装啾啾棉花糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Cheeps」(ch/cn): Cheeps→啾啾棉花糖 (對齊 lane_fixes VFX.Cheeps; 現值留英文品牌, CN 為本包 cn_overrides)"
   },
   "ItemName.json|BundleUp.VFX_CheepsCase": {
     "as1_value": "芝士圈 (Cheeps, 整箱)",
-    "value": "大箱装 Cheeps 棉花糖",
-    "reason": "2026-10-26 As1 v3.12.0：Cheeps 是棉花糖类糖果（Candy），As1 译成芝士圈"
+    "value": "大箱装啾啾棉花糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Cheeps」(ch/cn): Cheeps→啾啾棉花糖 (對齊 lane_fixes VFX.Cheeps; 現值留英文品牌, CN 為本包 cn_overrides)"
   },
   "ItemName.json|BundleUp.VFX_CheepsCrate": {
     "as1_value": "芝士圈 (Cheeps, 木箱)",
-    "value": "板条箱装 Cheeps 棉花糖",
-    "reason": "2026-10-26 As1 v3.12.0：Cheeps 是棉花糖类糖果（Candy），As1 译成芝士圈"
+    "value": "板条箱装啾啾棉花糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Cheeps」(ch/cn): Cheeps→啾啾棉花糖 (對齊 lane_fixes VFX.Cheeps; 現值留英文品牌, CN 為本包 cn_overrides)"
   },
   "ItemName.json|BundleUp.VFX_JarApricotsCarton": {
     "as1_value": "杏 (纸箱)",
@@ -67387,18 +67367,18 @@
   },
   "ItemName.json|BundleUp.VFX_AppleButterCarton": {
     "as1_value": "苹果黄油 (纸箱)",
-    "value": "箱装苹果酱",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：Apple Butter 是果酱，VFX 本体简中为“苹果酱”；“苹果黄油”会被看成黄油。"
+    "value": "箱装浓缩苹果酱",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Apple Butter」(cn): Apple Butter CN 苹果酱→浓缩苹果酱 (與 Apple Sauce 撞名)"
   },
   "ItemName.json|BundleUp.VFX_AppleButterCase": {
     "as1_value": "苹果黄油 (整箱)",
-    "value": "大箱装苹果酱",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：Apple Butter 是果酱，VFX 本体简中为“苹果酱”；“苹果黄油”会被看成黄油。"
+    "value": "大箱装浓缩苹果酱",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Apple Butter」(cn): Apple Butter CN 苹果酱→浓缩苹果酱 (與 Apple Sauce 撞名)"
   },
   "ItemName.json|BundleUp.VFX_AppleButterCrate": {
     "as1_value": "苹果黄油 (木箱)",
-    "value": "板条箱装苹果酱",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：Apple Butter 是果酱，VFX 本体简中为“苹果酱”；“苹果黄油”会被看成黄油。"
+    "value": "板条箱装浓缩苹果酱",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Apple Butter」(cn): Apple Butter CN 苹果酱→浓缩苹果酱 (與 Apple Sauce 撞名)"
   },
   "ItemName.json|BundleUp.VFX_BottleTopsCarton": {
     "as1_value": "瓶盖 (纸箱)",
@@ -67467,28 +67447,28 @@
   },
   "ItemName.json|BundleUp.VFX_PushPopCherryCrate": {
     "as1_value": "扭扭冰棒 (樱桃, 木箱)",
-    "value": "板条箱装樱桃推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：推推乐：本体为糖果（FoodType = Candy），As1「扭扭冰棒」写成冰棒，品类错；内容物照本包 VFX 简中「樱桃推推乐」"
+    "value": "板条箱装樱桃扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopColaCarton": {
     "as1_value": "扭扭冰棒 (可乐, 纸箱)",
-    "value": "箱装可乐推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：推推乐：本体为糖果（FoodType = Candy），As1「扭扭冰棒」写成冰棒，品类错；内容物照本包 VFX 简中「可乐推推乐」"
+    "value": "箱装可乐扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopColaCase": {
     "as1_value": "扭扭冰棒 (可乐, 整箱)",
-    "value": "大箱装可乐推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：推推乐：本体为糖果（FoodType = Candy），As1「扭扭冰棒」写成冰棒，品类错；内容物照本包 VFX 简中「可乐推推乐」"
+    "value": "大箱装可乐扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopColaCrate": {
     "as1_value": "扭扭冰棒 (可乐, 木箱)",
-    "value": "板条箱装可乐推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：推推乐：本体为糖果（FoodType = Candy），As1「扭扭冰棒」写成冰棒，品类错；内容物照本包 VFX 简中「可乐推推乐」"
+    "value": "板条箱装可乐扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopWatermelonCase": {
     "as1_value": "扭扭冰棒 (西瓜, 整箱)",
-    "value": "大箱装西瓜推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：推推乐：本体为糖果（FoodType = Candy），As1「扭扭冰棒」写成冰棒，品类错；内容物照本包 VFX 简中「西瓜推推乐」"
+    "value": "大箱装西瓜扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "Sandbox.json|Sandbox_BundleUp_SpawnSeeds_tooltip": {
     "as1_value": "园艺店、农场库房与大卖场农资货架上的种子袋. '继承默认'沿用上方的总设置.",
@@ -67752,83 +67732,83 @@
   },
   "ItemName.json|BundleUp.VFX_PushPopCherryCarton": {
     "as1_value": "扭扭冰棒 (樱桃, 纸箱)",
-    "value": "箱装樱桃推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+    "value": "箱装樱桃扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopCherryCase": {
     "as1_value": "扭扭冰棒 (樱桃, 整箱)",
-    "value": "大箱装樱桃推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+    "value": "大箱装樱桃扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopFruitFrenzyCarton": {
     "as1_value": "扭扭冰棒 (水果狂欢, 纸箱)",
-    "value": "箱装水果狂欢推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+    "value": "箱装水果狂欢扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopFruitFrenzyCase": {
     "as1_value": "扭扭冰棒 (水果狂欢, 整箱)",
-    "value": "大箱装水果狂欢推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+    "value": "大箱装水果狂欢扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopFruitFrenzyCrate": {
     "as1_value": "扭扭冰棒 (水果狂欢, 木箱)",
-    "value": "板条箱装水果狂欢推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+    "value": "板条箱装水果狂欢扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopGrapeCarton": {
     "as1_value": "扭扭冰棒 (葡萄, 纸箱)",
-    "value": "箱装葡萄推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+    "value": "箱装葡萄扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopGrapeCase": {
     "as1_value": "扭扭冰棒 (葡萄, 整箱)",
-    "value": "大箱装葡萄推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+    "value": "大箱装葡萄扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopGrapeCrate": {
     "as1_value": "扭扭冰棒 (葡萄, 木箱)",
-    "value": "板条箱装葡萄推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+    "value": "板条箱装葡萄扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopRainbowSherbetCarton": {
     "as1_value": "扭扭冰棒 (彩虹雪泥, 纸箱)",
-    "value": "箱装彩虹冰沙推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+    "value": "箱装彩虹冰沙扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopRainbowSherbetCase": {
     "as1_value": "扭扭冰棒 (彩虹雪泥, 整箱)",
-    "value": "大箱装彩虹冰沙推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+    "value": "大箱装彩虹冰沙扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopRainbowSherbetCrate": {
     "as1_value": "扭扭冰棒 (彩虹雪泥, 木箱)",
-    "value": "板条箱装彩虹冰沙推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+    "value": "板条箱装彩虹冰沙扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopStrawberryCarton": {
     "as1_value": "扭扭冰棒 (草莓, 纸箱)",
-    "value": "箱装草莓推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+    "value": "箱装草莓扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopStrawberryCase": {
     "as1_value": "扭扭冰棒 (草莓, 整箱)",
-    "value": "大箱装草莓推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+    "value": "大箱装草莓扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopStrawberryCrate": {
     "as1_value": "扭扭冰棒 (草莓, 木箱)",
-    "value": "板条箱装草莓推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+    "value": "板条箱装草莓扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopWatermelonCarton": {
     "as1_value": "扭扭冰棒 (西瓜, 纸箱)",
-    "value": "箱装西瓜推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+    "value": "箱装西瓜扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "ItemName.json|BundleUp.VFX_PushPopWatermelonCrate": {
     "as1_value": "扭扭冰棒 (西瓜, 木箱)",
-    "value": "板条箱装西瓜推推乐",
-    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+    "value": "板条箱装西瓜扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Twist Pop」(ch/cn): 英文為新名, 現值是舊譯"
   },
   "Recipes.json|MergeBoxMedium": {
     "as1_value": "合并为满箱",
@@ -67869,5 +67849,2385 @@
     "as1_value": "铁渣概率 (%%)",
     "value": "铁坯概率 (%%)",
     "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：iron bloom 照原版名稱鐵坯，和同 MOD 上下限選項一致"
+  },
+  "ContextMenu.json|ContextMenu_EvolvedRecipe_VFX_CocoaPuffsBowl": {
+    "as1_value": "碗装可可泡芙",
+    "value": "碗装巧克力袋鼠麦片",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改名 Cocoa Puffs→Choco-Roos；譯名同 AuditVFXA 的 VFX.CocoaPuffsBowl 定案"
+  },
+  "ContextMenu.json|ContextMenu_EvolvedRecipe_VFX_WheatiesBowl": {
+    "as1_value": "碗装维他麦",
+    "value": "碗装小麦片",
+    "reason": "2026-11-02 VFX 舊譯稽核：Cereal - Wheat Flakes"
+  },
+  "EvolvedRecipeName.json|VFX.CannedApplePieFillingOpen": {
+    "as1_value": "苹果派馅",
+    "value": "苹果",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Apple；譯文多寫了「派餡」，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.CannedAppleSlicesOpen": {
+    "as1_value": "苹果片",
+    "value": "苹果",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Apple；譯文多寫了「片」，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.CannedBlackberryPieFillingOpen": {
+    "as1_value": "黑莓派馅",
+    "value": "黑莓",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Blackberry；譯文多寫了「派餡」，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.CannedBlueberryPieFillingOpen": {
+    "as1_value": "蓝莓派馅",
+    "value": "蓝莓",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Blueberry；譯文多寫了「派餡」，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.CannedCherryPieFillingOpen": {
+    "as1_value": "樱桃派馅",
+    "value": "樱桃",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Cherry；譯文多寫了「派餡」，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.CannedLemonCreamPieFillingOpen": {
+    "as1_value": "柠檬奶油派馅",
+    "value": "柠檬奶油",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Lemon Cream；譯文多寫了「派餡」，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.CannedMangoSlicesOpen": {
+    "as1_value": "芒果片",
+    "value": "芒果",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Mango；譯文多寫了「片」，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.CannedMixedBerryPieFillingOpen": {
+    "as1_value": "混合莓果派馅",
+    "value": "混合莓果",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Mixed Berry；譯文多寫了「派餡」，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.CannedPeachPieFillingOpen": {
+    "as1_value": "桃子派馅",
+    "value": "桃子",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Peach；譯文多寫了「派餡」（CH 水蜜桃也改同 VFX.JarPeachOpen 的桃子），照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.CannedPearSlicesOpen": {
+    "as1_value": "梨片",
+    "value": "梨",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Pear；譯文多寫了「片」，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.CannedRaspberryPieFillingOpen": {
+    "as1_value": "覆盆子派馅",
+    "value": "覆盆子",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Raspberry；譯文多寫了「派餡」，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.CannedSlicedMushroomOpen": {
+    "as1_value": "蘑菇片",
+    "value": "蘑菇",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Mushroom；譯文多寫了「片」，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.CannedStrawberryPieFillingOpen": {
+    "as1_value": "草莓派馅",
+    "value": "草莓",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Strawberry；譯文多寫了「派餡」，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.CannedVegetarianChiliOpen": {
+    "as1_value": "素食辣豆炖菜",
+    "value": "素食辣豆酱",
+    "reason": "2026-11-02 VFX 舊譯稽核：Vegetarian Chili"
+  },
+  "EvolvedRecipeName.json|VFX.ChickenMushroomRavioli": {
+    "as1_value": "意式鸡肉蘑菇饺子",
+    "value": "意式饺子",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Ravioli；譯文多寫了口味，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.CoffeeCreamerOriginal_2": {
+    "as1_value": "原味咖啡伴侣",
+    "value": "咖啡伴侣",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: EvolvedRecipeName 照英文泛稱"
+  },
+  "EvolvedRecipeName.json|VFX.DriedAppleSlices": {
+    "as1_value": "苹果片",
+    "value": "苹果",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Apple；譯文多寫了「片」，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.DriedMangoSlices": {
+    "as1_value": "芒果片",
+    "value": "芒果",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Mango；譯文多寫了「片」，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.FourCheeseTortellini": {
+    "as1_value": "意式四种奶酪馄饨",
+    "value": "意式馄饨",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Tortellini；譯文多寫了口味，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）；CH Tortellini 用「義式…餛飩」與 Ravioli 區分"
+  },
+  "EvolvedRecipeName.json|VFX.GroundBeefRavioli": {
+    "as1_value": "意式碎牛肉饺子",
+    "value": "意式饺子",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Ravioli；譯文多寫了口味，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.GroundBeefTortellini": {
+    "as1_value": "意式碎牛肉馄饨",
+    "value": "意式馄饨",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Tortellini；譯文多寫了口味，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）；CH Tortellini 用「義式…餛飩」與 Ravioli 區分"
+  },
+  "EvolvedRecipeName.json|VFX.HomemadeMarinara_Open": {
+    "as1_value": "自制意式番茄酱 (开封)",
+    "value": "意式番茄酱",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: EvolvedRecipeName 照英文泛稱"
+  },
+  "EvolvedRecipeName.json|VFX.HomemadeSpicyMarinara_Open": {
+    "as1_value": "自制辣味意式番茄酱 (开封)",
+    "value": "辣味意式番茄酱",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: EvolvedRecipeName 照英文泛稱"
+  },
+  "EvolvedRecipeName.json|VFX.LobsterRavioli": {
+    "as1_value": "意式龙虾饺子",
+    "value": "意式饺子",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Ravioli；譯文多寫了口味，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.PepperedPorkTortellini": {
+    "as1_value": "意式黑椒猪肉馄饨",
+    "value": "意式馄饨",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Tortellini；譯文多寫了口味，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）；CH Tortellini 用「義式…餛飩」與 Ravioli 區分"
+  },
+  "EvolvedRecipeName.json|VFX.PumpkinRavioli": {
+    "as1_value": "意式南瓜饺子",
+    "value": "意式饺子",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Ravioli；譯文多寫了口味，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.SpinachRicottaRavioli": {
+    "as1_value": "意式菠菜乳清干酪饺子",
+    "value": "意式饺子",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Ravioli；譯文多寫了口味，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "EvolvedRecipeName.json|VFX.SpinachRicottaTortellini": {
+    "as1_value": "意式菠菜乳清干酪馄饨",
+    "value": "意式馄饨",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Tortellini；譯文多寫了口味，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）；CH Tortellini 用「義式…餛飩」與 Ravioli 區分"
+  },
+  "EvolvedRecipeName.json|VFX.ThreeCheeseRavioli": {
+    "as1_value": "意式三种奶酪饺子",
+    "value": "意式饺子",
+    "reason": "2026-11-02 VFX 舊譯稽核：EvolvedRecipeName 是拼進菜名的食材名，英文只寫泛稱 Ravioli；譯文多寫了口味，照英文改泛稱（同原版 EvolvedRecipeName 與 VFX Jar*Open 寫法）"
+  },
+  "IG_UI.json|IGUI_VFX_CheeseName_Parmesan_Aged": {
+    "as1_value": "帕玛森奶酪-自制 (特浓)",
+    "value": "帕玛森奶酪-自制 (陈年)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Aged＝陈年（同鍵族 Blue/Swiss_Aged CN），「特浓」是 Extra Sharp 的譯法，錯譯"
+  },
+  "ItemName.json|Base.VFXPlateScallopedPotatoBake": {
+    "as1_value": "一盘扇贝形土豆烘烤",
+    "value": "一盘焗烤土豆片",
+    "reason": "2026-11-02 VFX 舊譯稽核：Scalloped（馬鈴薯片加鮮奶油焗烤，見配方 VFX_PrepareScallopedPotatoBake）誤譯成「扇贝形」；照 CN 右鍵選單既有「焗烤土豆片」"
+  },
+  "ItemName.json|Base.VFXScallopedPotatoBakeEvolved": {
+    "as1_value": "扇贝形土豆烘烤 (烹饪中)",
+    "value": "焗烤土豆片 (烹饪中)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Scalloped 誤譯成「扇贝形」；照 CN 右鍵選單既有「焗烤土豆片」；主代理：全形括號改半形加空格（本包標點慣例）"
+  },
+  "ItemName.json|Base.VFXScallopedPotatoBakePreparation": {
+    "as1_value": "扇贝形土豆烘烤 (烹饪中)",
+    "value": "焗烤土豆片 (烹饪中)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Scalloped 誤譯成「扇贝形」；照 CN 右鍵選單既有「焗烤土豆片」；主代理：全形括號改半形加空格（本包標點慣例）"
+  },
+  "ItemName.json|BundleUp.BeerImportedPack": {
+    "as1_value": "六罐装进口啤酒",
+    "value": "六连装进口啤酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.BlueberrySP": {
+    "as1_value": "六罐装蓝莓汽水",
+    "value": "六连装蓝莓汽水",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.BrandyPack": {
+    "as1_value": "六罐装白兰地",
+    "value": "六连装白兰地",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.BubblegumSP": {
+    "as1_value": "六罐装泡泡糖汽水",
+    "value": "六连装泡泡糖汽水",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.ChampagnePack": {
+    "as1_value": "六罐装香槟",
+    "value": "六连装香槟",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.CiderPack": {
+    "as1_value": "六罐装苹果酒",
+    "value": "六连装苹果酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.CoffeeLiquerPack": {
+    "as1_value": "六罐装咖啡利口酒",
+    "value": "六连装咖啡利口酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.CuracaoPack": {
+    "as1_value": "六罐装陈皮酒",
+    "value": "六连装陈皮酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.DietSodaPack": {
+    "as1_value": "六罐装汽水 (无糖)",
+    "value": "六连装汽水 (无糖)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.GinPack": {
+    "as1_value": "六罐装金酒",
+    "value": "六连装金酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.GrapeSP": {
+    "as1_value": "六罐装葡萄汽水",
+    "value": "六连装葡萄汽水",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.GrenadinePack": {
+    "as1_value": "六罐装石榴糖浆",
+    "value": "六连装石榴糖浆",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.JuiceBoxApplePack": {
+    "as1_value": "六罐装苹果汁 (盒装)",
+    "value": "六连装苹果汁 (盒装)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.JuiceBoxFruitpunchPack": {
+    "as1_value": "六罐装水果宾治果汁 (盒装)",
+    "value": "六连装水果宾治果汁 (盒装)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.JuiceBoxGrapePack": {
+    "as1_value": "六罐装葡萄汁 (盒装)",
+    "value": "六连装葡萄汁 (盒装)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.JuiceBoxOrangePack": {
+    "as1_value": "六罐装橙汁 (盒装)",
+    "value": "六连装橙汁 (盒装)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.JuiceCranberryPack": {
+    "as1_value": "六罐装蔓越莓汁",
+    "value": "六连装蔓越莓汁",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.JuiceFruitpunchPack": {
+    "as1_value": "六罐装水果宾治",
+    "value": "六连装水果宾治",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.JuiceGrapePack": {
+    "as1_value": "六罐装葡萄汁",
+    "value": "六连装葡萄汁",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.JuiceLemonPack": {
+    "as1_value": "六罐装柠檬汁",
+    "value": "六连装柠檬汁",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.JuiceOrangePack": {
+    "as1_value": "六罐装橙汁",
+    "value": "六连装橙汁",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.JuiceTomatoPack": {
+    "as1_value": "六罐装番茄汁",
+    "value": "六连装番茄汁",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.LimeSP": {
+    "as1_value": "六罐装青柠汽水",
+    "value": "六连装青柠汽水",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.MilkChocSmallPack": {
+    "as1_value": "六罐装巧克力牛奶",
+    "value": "六连装巧克力牛奶",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.MilkPack": {
+    "as1_value": "六罐装牛奶",
+    "value": "六连装牛奶",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.MilkSmallPack": {
+    "as1_value": "六罐装牛奶 (单人装)",
+    "value": "六连装牛奶 (单人装)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.OrangeSP": {
+    "as1_value": "六罐装橙味汽水",
+    "value": "六连装橙味汽水",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.PineappleSP": {
+    "as1_value": "六罐装菠萝汽水",
+    "value": "六连装菠萝汽水",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.PortPack": {
+    "as1_value": "六罐装波特酒",
+    "value": "六连装波特酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.QuaggaCakesCarton": {
+    "as1_value": "夸加蛋糕 (纸箱)",
+    "value": "斑纹蛋糕 (纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Quagga Cakes」, cn): lane_fixes VFX.ZebraCakesBox 斑纹蛋糕盒; 原版 Base.QuaggaCakes 官方简中亦为 斑纹蛋糕"
+  },
+  "ItemName.json|BundleUp.QuaggaCakesCase": {
+    "as1_value": "夸加蛋糕 (整箱)",
+    "value": "斑纹蛋糕 (整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Quagga Cakes」, cn): lane_fixes VFX.ZebraCakesBox 斑纹蛋糕盒; 原版 Base.QuaggaCakes 官方简中亦为 斑纹蛋糕"
+  },
+  "ItemName.json|BundleUp.QuaggaCakesCrate": {
+    "as1_value": "夸加蛋糕 (木箱)",
+    "value": "斑纹蛋糕 (木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Quagga Cakes」, cn): lane_fixes VFX.ZebraCakesBox 斑纹蛋糕盒; 原版 Base.QuaggaCakes 官方简中亦为 斑纹蛋糕"
+  },
+  "ItemName.json|BundleUp.RumPack": {
+    "as1_value": "六罐装朗姆酒",
+    "value": "六连装朗姆酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.ScotchPack": {
+    "as1_value": "六罐装苏格兰威士忌",
+    "value": "六连装苏格兰威士忌",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.SherryPack": {
+    "as1_value": "六罐装雪利酒",
+    "value": "六连装雪利酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.SodaPack": {
+    "as1_value": "六罐装汽水 (原味)",
+    "value": "六连装汽水 (原味)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.StrawberrySP": {
+    "as1_value": "六罐装草莓汽水",
+    "value": "六连装草莓汽水",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.TequilaPack": {
+    "as1_value": "六罐装龙舌兰酒",
+    "value": "六连装龙舌兰酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_BananaMilkPack": {
+    "as1_value": "六罐装香蕉牛奶 (盒装)",
+    "value": "六连装香蕉牛奶 (盒装)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_BerryMedleyCarton": {
+    "as1_value": "混合浆果 (纸箱)",
+    "value": "混合浆果 (整袋, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「CN 盒裝水果」(cn): Packaged 水果 CN 補「整袋」, 照 lane_fixes VFX.BerryMedley 格式"
+  },
+  "ItemName.json|BundleUp.VFX_BerryMedleyCase": {
+    "as1_value": "混合浆果 (整箱)",
+    "value": "混合浆果 (整袋, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「CN 盒裝水果」(cn): Packaged 水果 CN 補「整袋」, 照 lane_fixes VFX.BerryMedley 格式"
+  },
+  "ItemName.json|BundleUp.VFX_BerryMedleyCrate": {
+    "as1_value": "混合浆果 (木箱)",
+    "value": "混合浆果 (整袋, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「CN 盒裝水果」(cn): Packaged 水果 CN 補「整袋」, 照 lane_fixes VFX.BerryMedley 格式"
+  },
+  "ItemName.json|BundleUp.VFX_BlackberriesCarton": {
+    "as1_value": "黑莓 (纸箱)",
+    "value": "黑莓 (整袋, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「CN 盒裝水果」(cn): Packaged 水果 CN 補「整袋」, 照 lane_fixes VFX.Blackberries 格式"
+  },
+  "ItemName.json|BundleUp.VFX_BlackberriesCase": {
+    "as1_value": "黑莓 (整箱)",
+    "value": "黑莓 (整袋, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「CN 盒裝水果」(cn): Packaged 水果 CN 補「整袋」, 照 lane_fixes VFX.Blackberries 格式"
+  },
+  "ItemName.json|BundleUp.VFX_BlackberriesCrate": {
+    "as1_value": "黑莓 (木箱)",
+    "value": "黑莓 (整袋, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「CN 盒裝水果」(cn): Packaged 水果 CN 補「整袋」, 照 lane_fixes VFX.Blackberries 格式"
+  },
+  "ItemName.json|BundleUp.VFX_BlueberriesCarton": {
+    "as1_value": "蓝莓 (纸箱)",
+    "value": "蓝莓 (整袋, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「CN 盒裝水果」(cn): Packaged 水果 CN 補「整袋」, 照 lane_fixes VFX.Blueberries 格式"
+  },
+  "ItemName.json|BundleUp.VFX_BlueberriesCase": {
+    "as1_value": "蓝莓 (整箱)",
+    "value": "蓝莓 (整袋, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「CN 盒裝水果」(cn): Packaged 水果 CN 補「整袋」, 照 lane_fixes VFX.Blueberries 格式"
+  },
+  "ItemName.json|BundleUp.VFX_BlueberriesCrate": {
+    "as1_value": "蓝莓 (木箱)",
+    "value": "蓝莓 (整袋, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「CN 盒裝水果」(cn): Packaged 水果 CN 補「整袋」, 照 lane_fixes VFX.Blueberries 格式"
+  },
+  "ItemName.json|BundleUp.VFX_BlueberryStrudelsBoxCase": {
+    "as1_value": "果馅卷 (蓝莓, 整盒, 整箱)",
+    "value": "弹跳酥皮卷 (蓝莓, 整盒, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.*StrudelsBox …弹跳酥皮卷盒"
+  },
+  "ItemName.json|BundleUp.VFX_BlueberryStrudelsBoxCrate": {
+    "as1_value": "果馅卷 (蓝莓, 整盒, 木箱)",
+    "value": "弹跳酥皮卷 (蓝莓, 整盒, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.*StrudelsBox …弹跳酥皮卷盒"
+  },
+  "ItemName.json|BundleUp.VFX_BrownSugarStrudelsBoxCase": {
+    "as1_value": "果馅卷 (红糖肉桂, 整盒, 整箱)",
+    "value": "弹跳酥皮卷 (红糖肉桂, 整盒, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.*StrudelsBox …弹跳酥皮卷盒"
+  },
+  "ItemName.json|BundleUp.VFX_BrownSugarStrudelsBoxCrate": {
+    "as1_value": "果馅卷 (红糖肉桂, 整盒, 木箱)",
+    "value": "弹跳酥皮卷 (红糖肉桂, 整盒, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.*StrudelsBox …弹跳酥皮卷盒"
+  },
+  "ItemName.json|BundleUp.VFX_BubblegumTapeSourBlueRaspberryCarton": {
+    "as1_value": "条状泡泡糖 (酸蓝树莓, 纸箱)",
+    "value": "条状泡泡糖 (酸蓝覆盆子, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子；主代理：Bubblegum Tape 繁中寫捲（台灣用字）"
+  },
+  "ItemName.json|BundleUp.VFX_BubblegumTapeSourBlueRaspberryCase": {
+    "as1_value": "条状泡泡糖 (酸蓝树莓, 整箱)",
+    "value": "条状泡泡糖 (酸蓝覆盆子, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子；主代理：Bubblegum Tape 繁中寫捲（台灣用字）"
+  },
+  "ItemName.json|BundleUp.VFX_BubblegumTapeSourBlueRaspberryCrate": {
+    "as1_value": "条状泡泡糖 (酸蓝树莓, 木箱)",
+    "value": "条状泡泡糖 (酸蓝覆盆子, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子；主代理：Bubblegum Tape 繁中寫捲（台灣用字）"
+  },
+  "ItemName.json|BundleUp.VFX_CanAmberAlePack": {
+    "as1_value": "六罐装琥珀艾尔啤酒",
+    "value": "六连装琥珀艾尔啤酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_CanAmericanLagerPack": {
+    "as1_value": "六罐装美式拉格啤酒",
+    "value": "六连装美式拉格啤酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_CanAmericanLightLagerPack": {
+    "as1_value": "六罐装美式淡拉格啤酒",
+    "value": "六连装美式淡拉格啤酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_CanAmericanWheatBeerPack": {
+    "as1_value": "六罐装美式小麦啤酒",
+    "value": "六连装美式小麦啤酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_CanPaleAlePack": {
+    "as1_value": "六罐装淡色艾尔啤酒",
+    "value": "六连装淡色艾尔啤酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_CanPilsnerPack": {
+    "as1_value": "六罐装皮尔森啤酒",
+    "value": "六连装皮尔森啤酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_CanPorterPack": {
+    "as1_value": "六罐装波特啤酒",
+    "value": "六连装波特啤酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_CanStoutPack": {
+    "as1_value": "六罐装世涛啤酒",
+    "value": "六连装世涛啤酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_CanViennaLagerPack": {
+    "as1_value": "六罐装维也纳拉格啤酒",
+    "value": "六连装维也纳拉格啤酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_CannedGreenBeans_BoxCase": {
+    "as1_value": "青豆罐头 (整箱)",
+    "value": "四季豆罐头 (整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Canned Green Beans」(cn): Canned Green Beans CN 青豆→四季豆"
+  },
+  "ItemName.json|BundleUp.VFX_CannedGreenBeans_BoxCrate": {
+    "as1_value": "青豆罐头 (木箱)",
+    "value": "四季豆罐头 (木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Canned Green Beans」(cn): Canned Green Beans CN 青豆→四季豆"
+  },
+  "ItemName.json|BundleUp.VFX_CannedSloppyJoe_BoxCase": {
+    "as1_value": "邋遢乔罐头 (整箱)",
+    "value": "美式调味肉酱罐头 (整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Sloppy Joe」, cn): lane_fixes VFX.CannedSloppyJoe 美式调味肉酱罐头"
+  },
+  "ItemName.json|BundleUp.VFX_CannedSloppyJoe_BoxCrate": {
+    "as1_value": "邋遢乔罐头 (木箱)",
+    "value": "美式调味肉酱罐头 (木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Sloppy Joe」, cn): lane_fixes VFX.CannedSloppyJoe 美式调味肉酱罐头"
+  },
+  "ItemName.json|BundleUp.VFX_CannedVegetarianChili_BoxCase": {
+    "as1_value": "素辣豆罐头 (整箱)",
+    "value": "素食辣豆酱罐头 (整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Vegetarian Chili」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Vegetarian Chili」, cn): SWEEP 表 Vegetarian Chili CN 素食辣豆酱"
+  },
+  "ItemName.json|BundleUp.VFX_CannedVegetarianChili_BoxCrate": {
+    "as1_value": "素辣豆罐头 (木箱)",
+    "value": "素食辣豆酱罐头 (木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Vegetarian Chili」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Vegetarian Chili」, cn): SWEEP 表 Vegetarian Chili CN 素食辣豆酱"
+  },
+  "ItemName.json|BundleUp.VFX_CherryColaCanPack": {
+    "as1_value": "六罐装樱桃可乐",
+    "value": "六连装樱桃可乐",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_CherryStrudelsBoxCase": {
+    "as1_value": "果馅卷 (樱桃, 整盒, 整箱)",
+    "value": "弹跳酥皮卷 (樱桃, 整盒, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.*StrudelsBox …弹跳酥皮卷盒"
+  },
+  "ItemName.json|BundleUp.VFX_CherryStrudelsBoxCrate": {
+    "as1_value": "果馅卷 (樱桃, 整盒, 木箱)",
+    "value": "弹跳酥皮卷 (樱桃, 整盒, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.*StrudelsBox …弹跳酥皮卷盒"
+  },
+  "ItemName.json|BundleUp.VFX_ChocolateMilkPack": {
+    "as1_value": "六罐装巧克力牛奶 (盒装)",
+    "value": "六连装巧克力牛奶 (盒装)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_CookiesAndCreamStrudelsBoxCase": {
+    "as1_value": "果馅卷 (奶油饼干, 整盒, 整箱)",
+    "value": "弹跳酥皮卷 (曲奇奶油, 整盒, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.*StrudelsBox …弹跳酥皮卷盒；複核：Cookies and Cream 口味 CN 寫成「奶油饼干」(=butter cookie, 意思不同); 這鍵已依主代理裁定把 CN 對齊箱內 VFX 物品, 口味也要對齊箱內 VFX.CookiesAndCreamStrudelsBox／PackagedCookiesAndCreamStrudel 的「曲奇奶油」, 同包 BundleUp.VFX_CookiesAndCreamIceCream*、ChocolateBarCookiesAndCream* 的 CN 也都是「曲奇奶油」"
+  },
+  "ItemName.json|BundleUp.VFX_CookiesAndCreamStrudelsBoxCrate": {
+    "as1_value": "果馅卷 (奶油饼干, 整盒, 木箱)",
+    "value": "弹跳酥皮卷 (曲奇奶油, 整盒, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.*StrudelsBox …弹跳酥皮卷盒；複核：Cookies and Cream 口味 CN 寫成「奶油饼干」(=butter cookie, 意思不同); 這鍵已依主代理裁定把 CN 對齊箱內 VFX 物品, 口味也要對齊箱內 VFX.CookiesAndCreamStrudelsBox／PackagedCookiesAndCreamStrudel 的「曲奇奶油」, 同包 BundleUp.VFX_CookiesAndCreamIceCream*、ChocolateBarCookiesAndCream* 的 CN 也都是「曲奇奶油」"
+  },
+  "ItemName.json|BundleUp.VFX_CreamSodaCanPack": {
+    "as1_value": "六罐装奶油苏打",
+    "value": "六连装奶油苏打",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_DarkSweetCherriesCarton": {
+    "as1_value": "深色甜樱桃 (纸箱)",
+    "value": "深色甜樱桃 (整袋, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「CN 盒裝水果」(cn): Packaged 水果 CN 補「整袋」, 照 lane_fixes VFX.DarkSweetCherries 格式"
+  },
+  "ItemName.json|BundleUp.VFX_DarkSweetCherriesCase": {
+    "as1_value": "深色甜樱桃 (整箱)",
+    "value": "深色甜樱桃 (整袋, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「CN 盒裝水果」(cn): Packaged 水果 CN 補「整袋」, 照 lane_fixes VFX.DarkSweetCherries 格式"
+  },
+  "ItemName.json|BundleUp.VFX_DarkSweetCherriesCrate": {
+    "as1_value": "深色甜樱桃 (木箱)",
+    "value": "深色甜樱桃 (整袋, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「CN 盒裝水果」(cn): Packaged 水果 CN 補「整袋」, 照 lane_fixes VFX.DarkSweetCherries 格式"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipAppleCarton": {
+    "as1_value": "惊喜糖 (苹果, 纸箱)",
+    "value": "幸运蘸糖 (苹果, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipAppleCase": {
+    "as1_value": "惊喜糖 (苹果, 整箱)",
+    "value": "幸运蘸糖 (苹果, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipAppleCrate": {
+    "as1_value": "惊喜糖 (苹果, 木箱)",
+    "value": "幸运蘸糖 (苹果, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipCherryCarton": {
+    "as1_value": "惊喜糖 (樱桃, 纸箱)",
+    "value": "幸运蘸糖 (樱桃, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipCherryCase": {
+    "as1_value": "惊喜糖 (樱桃, 整箱)",
+    "value": "幸运蘸糖 (樱桃, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipCherryCrate": {
+    "as1_value": "惊喜糖 (樱桃, 木箱)",
+    "value": "幸运蘸糖 (樱桃, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipGrapeCarton": {
+    "as1_value": "惊喜糖 (葡萄, 纸箱)",
+    "value": "幸运蘸糖 (葡萄, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipGrapeCase": {
+    "as1_value": "惊喜糖 (葡萄, 整箱)",
+    "value": "幸运蘸糖 (葡萄, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipGrapeCrate": {
+    "as1_value": "惊喜糖 (葡萄, 木箱)",
+    "value": "幸运蘸糖 (葡萄, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipOrangeCarton": {
+    "as1_value": "惊喜糖 (橙子, 纸箱)",
+    "value": "幸运蘸糖 (橙子, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipOrangeCase": {
+    "as1_value": "惊喜糖 (橙子, 整箱)",
+    "value": "幸运蘸糖 (橙子, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipOrangeCrate": {
+    "as1_value": "惊喜糖 (橙子, 木箱)",
+    "value": "幸运蘸糖 (橙子, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipStrawberryCarton": {
+    "as1_value": "惊喜糖 (草莓, 纸箱)",
+    "value": "幸运蘸糖 (草莓, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipStrawberryCase": {
+    "as1_value": "惊喜糖 (草莓, 整箱)",
+    "value": "幸运蘸糖 (草莓, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipStrawberryCrate": {
+    "as1_value": "惊喜糖 (草莓, 木箱)",
+    "value": "幸运蘸糖 (草莓, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipWatermelonCarton": {
+    "as1_value": "惊喜糖 (西瓜, 纸箱)",
+    "value": "幸运蘸糖 (西瓜, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipWatermelonCase": {
+    "as1_value": "惊喜糖 (西瓜, 整箱)",
+    "value": "幸运蘸糖 (西瓜, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunDipWatermelonCrate": {
+    "as1_value": "惊喜糖 (西瓜, 木箱)",
+    "value": "幸运蘸糖 (西瓜, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Lucky Dip」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Lucky Dip」, cn): lane_fixes VFX.FunDip* …幸运蘸糖"
+  },
+  "ItemName.json|BundleUp.VFX_FunnyTaffyBlueRaspberryCarton": {
+    "as1_value": "趣味太妃糖 (蓝树莓, 纸箱)",
+    "value": "趣味太妃糖 (蓝覆盆子, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子"
+  },
+  "ItemName.json|BundleUp.VFX_FunnyTaffyBlueRaspberryCase": {
+    "as1_value": "趣味太妃糖 (蓝树莓, 整箱)",
+    "value": "趣味太妃糖 (蓝覆盆子, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子"
+  },
+  "ItemName.json|BundleUp.VFX_FunnyTaffyBlueRaspberryCrate": {
+    "as1_value": "趣味太妃糖 (蓝树莓, 木箱)",
+    "value": "趣味太妃糖 (蓝覆盆子, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子"
+  },
+  "ItemName.json|BundleUp.VFX_GiantLollipopBlueRaspberryCarton": {
+    "as1_value": "巨型棒棒糖 (蓝树莓, 纸箱)",
+    "value": "巨型棒棒糖 (蓝覆盆子, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子"
+  },
+  "ItemName.json|BundleUp.VFX_GiantLollipopBlueRaspberryCase": {
+    "as1_value": "巨型棒棒糖 (蓝树莓, 整箱)",
+    "value": "巨型棒棒糖 (蓝覆盆子, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子"
+  },
+  "ItemName.json|BundleUp.VFX_GiantLollipopBlueRaspberryCrate": {
+    "as1_value": "巨型棒棒糖 (蓝树莓, 木箱)",
+    "value": "巨型棒棒糖 (蓝覆盆子, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子"
+  },
+  "ItemName.json|BundleUp.VFX_GrapefruitJuicePack": {
+    "as1_value": "六罐装葡萄柚汁",
+    "value": "六连装葡萄柚汁",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_IcedTeaGreenPack": {
+    "as1_value": "六罐装绿茶冰茶",
+    "value": "六连装绿茶冰茶",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_IcedTeaLemonPack": {
+    "as1_value": "六罐装柠檬冰茶",
+    "value": "六连装柠檬冰茶",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_IcedTeaPeachPack": {
+    "as1_value": "六罐装桃子冰茶",
+    "value": "六连装桃子冰茶",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_IcedTeaRaspberryPack": {
+    "as1_value": "六罐装覆盆子冰茶",
+    "value": "六连装覆盆子冰茶",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_IcedTeaSweetPack": {
+    "as1_value": "六罐装甜冰茶",
+    "value": "六连装甜冰茶",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_JuiceBoxCranberryPack": {
+    "as1_value": "六罐装蔓越莓汁 (盒装)",
+    "value": "六连装蔓越莓汁 (盒装)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_JuiceBoxGrapefruitPack": {
+    "as1_value": "六罐装葡萄柚汁 (盒装)",
+    "value": "六连装葡萄柚汁 (盒装)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_JuiceBoxPineapplePack": {
+    "as1_value": "六罐装菠萝汁 (盒装)",
+    "value": "六连装菠萝汁 (盒装)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_JuiceBoxTropicalPack": {
+    "as1_value": "六罐装热带果汁 (盒装)",
+    "value": "六连装热带果汁 (盒装)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_LemonLimeSodaCanPack": {
+    "as1_value": "六罐装柠檬青柠汽水",
+    "value": "六连装柠檬青柠汽水",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_LemonSodaCanPack": {
+    "as1_value": "六罐装柠檬汽水",
+    "value": "六连装柠檬汽水",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_LollipopBlueRaspberryCarton": {
+    "as1_value": "棒棒糖 (蓝树莓, 纸箱)",
+    "value": "棒棒糖 (蓝覆盆子, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子"
+  },
+  "ItemName.json|BundleUp.VFX_LollipopBlueRaspberryCase": {
+    "as1_value": "棒棒糖 (蓝树莓, 整箱)",
+    "value": "棒棒糖 (蓝覆盆子, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子"
+  },
+  "ItemName.json|BundleUp.VFX_LollipopBlueRaspberryCrate": {
+    "as1_value": "棒棒糖 (蓝树莓, 木箱)",
+    "value": "棒棒糖 (蓝覆盆子, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子"
+  },
+  "ItemName.json|BundleUp.VFX_MangoChunksCarton": {
+    "as1_value": "芒果块 (纸箱)",
+    "value": "芒果块 (整袋, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_MangoChunksCase": {
+    "as1_value": "芒果块 (整箱)",
+    "value": "芒果块 (整袋, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_MangoChunksCrate": {
+    "as1_value": "芒果块 (木箱)",
+    "value": "芒果块 (整袋, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_MixedFruitCarton": {
+    "as1_value": "混合水果 (纸箱)",
+    "value": "混合水果 (整袋, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_MixedFruitCase": {
+    "as1_value": "混合水果 (整箱)",
+    "value": "混合水果 (整袋, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_MixedFruitCrate": {
+    "as1_value": "混合水果 (木箱)",
+    "value": "混合水果 (整袋, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_OrangeSodaCanPack": {
+    "as1_value": "六罐装橙味汽水",
+    "value": "六连装橙味汽水",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_PackagedBlueberryStrudelCarton": {
+    "as1_value": "Pop Strudel (蓝莓, 纸箱)",
+    "value": "包装弹跳酥皮卷 (蓝莓, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.Packaged*Strudel 包装…弹跳酥皮卷"
+  },
+  "ItemName.json|BundleUp.VFX_PackagedBlueberryStrudelCase": {
+    "as1_value": "Pop Strudel (蓝莓, 整箱)",
+    "value": "包装弹跳酥皮卷 (蓝莓, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.Packaged*Strudel 包装…弹跳酥皮卷"
+  },
+  "ItemName.json|BundleUp.VFX_PackagedBlueberryStrudelCrate": {
+    "as1_value": "Pop Strudel (蓝莓, 木箱)",
+    "value": "包装弹跳酥皮卷 (蓝莓, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.Packaged*Strudel 包装…弹跳酥皮卷"
+  },
+  "ItemName.json|BundleUp.VFX_PackagedBrownSugarStrudelCarton": {
+    "as1_value": "Pop Strudel (红糖肉桂, 纸箱)",
+    "value": "包装弹跳酥皮卷 (红糖肉桂, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.Packaged*Strudel 包装…弹跳酥皮卷"
+  },
+  "ItemName.json|BundleUp.VFX_PackagedBrownSugarStrudelCase": {
+    "as1_value": "Pop Strudel (红糖肉桂, 整箱)",
+    "value": "包装弹跳酥皮卷 (红糖肉桂, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.Packaged*Strudel 包装…弹跳酥皮卷"
+  },
+  "ItemName.json|BundleUp.VFX_PackagedBrownSugarStrudelCrate": {
+    "as1_value": "Pop Strudel (红糖肉桂, 木箱)",
+    "value": "包装弹跳酥皮卷 (红糖肉桂, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.Packaged*Strudel 包装…弹跳酥皮卷"
+  },
+  "ItemName.json|BundleUp.VFX_PackagedCherryStrudelCarton": {
+    "as1_value": "Pop Strudel (樱桃, 纸箱)",
+    "value": "包装弹跳酥皮卷 (樱桃, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.Packaged*Strudel 包装…弹跳酥皮卷"
+  },
+  "ItemName.json|BundleUp.VFX_PackagedCherryStrudelCase": {
+    "as1_value": "Pop Strudel (樱桃, 整箱)",
+    "value": "包装弹跳酥皮卷 (樱桃, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.Packaged*Strudel 包装…弹跳酥皮卷"
+  },
+  "ItemName.json|BundleUp.VFX_PackagedCherryStrudelCrate": {
+    "as1_value": "Pop Strudel (樱桃, 木箱)",
+    "value": "包装弹跳酥皮卷 (樱桃, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.Packaged*Strudel 包装…弹跳酥皮卷"
+  },
+  "ItemName.json|BundleUp.VFX_PackagedCookiesAndCreamStrudelCarton": {
+    "as1_value": "Pop Strudel (奶油饼干, 纸箱)",
+    "value": "包装弹跳酥皮卷 (曲奇奶油, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.Packaged*Strudel 包装…弹跳酥皮卷；複核：Cookies and Cream 口味 CN 寫成「奶油饼干」(=butter cookie, 意思不同); 這鍵已依主代理裁定把 CN 對齊箱內 VFX 物品, 口味也要對齊箱內 VFX.CookiesAndCreamStrudelsBox／PackagedCookiesAndCreamStrudel 的「曲奇奶油」, 同包 BundleUp.VFX_CookiesAndCreamIceCream*、ChocolateBarCookiesAndCream* 的 CN 也都是「曲奇奶油」"
+  },
+  "ItemName.json|BundleUp.VFX_PackagedCookiesAndCreamStrudelCase": {
+    "as1_value": "Pop Strudel (奶油饼干, 整箱)",
+    "value": "包装弹跳酥皮卷 (曲奇奶油, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.Packaged*Strudel 包装…弹跳酥皮卷；複核：Cookies and Cream 口味 CN 寫成「奶油饼干」(=butter cookie, 意思不同); 這鍵已依主代理裁定把 CN 對齊箱內 VFX 物品, 口味也要對齊箱內 VFX.CookiesAndCreamStrudelsBox／PackagedCookiesAndCreamStrudel 的「曲奇奶油」, 同包 BundleUp.VFX_CookiesAndCreamIceCream*、ChocolateBarCookiesAndCream* 的 CN 也都是「曲奇奶油」"
+  },
+  "ItemName.json|BundleUp.VFX_PackagedCookiesAndCreamStrudelCrate": {
+    "as1_value": "Pop Strudel (奶油饼干, 木箱)",
+    "value": "包装弹跳酥皮卷 (曲奇奶油, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.Packaged*Strudel 包装…弹跳酥皮卷；複核：Cookies and Cream 口味 CN 寫成「奶油饼干」(=butter cookie, 意思不同); 這鍵已依主代理裁定把 CN 對齊箱內 VFX 物品, 口味也要對齊箱內 VFX.CookiesAndCreamStrudelsBox／PackagedCookiesAndCreamStrudel 的「曲奇奶油」, 同包 BundleUp.VFX_CookiesAndCreamIceCream*、ChocolateBarCookiesAndCream* 的 CN 也都是「曲奇奶油」"
+  },
+  "ItemName.json|BundleUp.VFX_PackagedStrawberryStrudelCarton": {
+    "as1_value": "Pop Strudel (草莓, 纸箱)",
+    "value": "包装弹跳酥皮卷 (草莓, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.Packaged*Strudel 包装…弹跳酥皮卷"
+  },
+  "ItemName.json|BundleUp.VFX_PackagedStrawberryStrudelCase": {
+    "as1_value": "Pop Strudel (草莓, 整箱)",
+    "value": "包装弹跳酥皮卷 (草莓, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.Packaged*Strudel 包装…弹跳酥皮卷"
+  },
+  "ItemName.json|BundleUp.VFX_PackagedStrawberryStrudelCrate": {
+    "as1_value": "Pop Strudel (草莓, 木箱)",
+    "value": "包装弹跳酥皮卷 (草莓, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.Packaged*Strudel 包装…弹跳酥皮卷"
+  },
+  "ItemName.json|BundleUp.VFX_PineappleChunksCarton": {
+    "as1_value": "菠萝块 (纸箱)",
+    "value": "菠萝块 (整袋, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_PineappleChunksCase": {
+    "as1_value": "菠萝块 (整箱)",
+    "value": "菠萝块 (整袋, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_PineappleChunksCrate": {
+    "as1_value": "菠萝块 (木箱)",
+    "value": "菠萝块 (整袋, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_PineappleJuicePack": {
+    "as1_value": "六罐装菠萝汁",
+    "value": "六连装菠萝汁",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_PopRocksBlueRaspberryCarton": {
+    "as1_value": "跳跳糖 (蓝树莓, 纸箱)",
+    "value": "跳跳糖 (蓝覆盆子, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子"
+  },
+  "ItemName.json|BundleUp.VFX_PopRocksBlueRaspberryCase": {
+    "as1_value": "跳跳糖 (蓝树莓, 整箱)",
+    "value": "跳跳糖 (蓝覆盆子, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子"
+  },
+  "ItemName.json|BundleUp.VFX_PopRocksBlueRaspberryCrate": {
+    "as1_value": "跳跳糖 (蓝树莓, 木箱)",
+    "value": "跳跳糖 (蓝覆盆子, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子"
+  },
+  "ItemName.json|BundleUp.VFX_PruneJuicePack": {
+    "as1_value": "六罐装西梅汁",
+    "value": "六连装西梅汁",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_RaspberriesCarton": {
+    "as1_value": "树莓 (纸箱)",
+    "value": "覆盆子 (整袋, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_RaspberriesCase": {
+    "as1_value": "树莓 (整箱)",
+    "value": "覆盆子 (整袋, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_RaspberriesCrate": {
+    "as1_value": "树莓 (木箱)",
+    "value": "覆盆子 (整袋, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_RedTartCherriesCarton": {
+    "as1_value": "红酸樱桃 (纸箱)",
+    "value": "红酸樱桃 (整袋, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_RedTartCherriesCase": {
+    "as1_value": "红酸樱桃 (整箱)",
+    "value": "红酸樱桃 (整袋, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_RedTartCherriesCrate": {
+    "as1_value": "红酸樱桃 (木箱)",
+    "value": "红酸樱桃 (整袋, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_RingPopBlueRaspberryCarton": {
+    "as1_value": "戒指糖 (蓝树莓, 纸箱)",
+    "value": "戒指糖 (蓝覆盆子, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子"
+  },
+  "ItemName.json|BundleUp.VFX_RingPopBlueRaspberryCase": {
+    "as1_value": "戒指糖 (蓝树莓, 整箱)",
+    "value": "戒指糖 (蓝覆盆子, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子"
+  },
+  "ItemName.json|BundleUp.VFX_RingPopBlueRaspberryCrate": {
+    "as1_value": "戒指糖 (蓝树莓, 木箱)",
+    "value": "戒指糖 (蓝覆盆子, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理裁定 CN 對齊箱內 VFX 物品 (列「Blue Raspberry」, cn): lane_fixes VFX.*BlueRaspberry 蓝覆盆子"
+  },
+  "ItemName.json|BundleUp.VFX_RootBeerCanPack": {
+    "as1_value": "六罐装根汁汽水",
+    "value": "六连装根汁汽水",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_SlicedBananasCarton": {
+    "as1_value": "香蕉片 (纸箱)",
+    "value": "香蕉片 (整袋, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_SlicedBananasCase": {
+    "as1_value": "香蕉片 (整箱)",
+    "value": "香蕉片 (整袋, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_SlicedBananasCrate": {
+    "as1_value": "香蕉片 (木箱)",
+    "value": "香蕉片 (整袋, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_SlicedStrawberriesCarton": {
+    "as1_value": "草莓片 (纸箱)",
+    "value": "草莓片 (整袋, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_SlicedStrawberriesCase": {
+    "as1_value": "草莓片 (整箱)",
+    "value": "草莓片 (整袋, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_SlicedStrawberriesCrate": {
+    "as1_value": "草莓片 (木箱)",
+    "value": "草莓片 (整袋, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_SportsBerryBlastPack": {
+    "as1_value": "六罐装浆果冲击运动饮料",
+    "value": "六连装浆果冲击运动饮料",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_SportsFruitPunchPack": {
+    "as1_value": "六罐装水果宾治运动饮料",
+    "value": "六连装水果宾治运动饮料",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_SportsGrapePack": {
+    "as1_value": "六罐装葡萄运动饮料",
+    "value": "六连装葡萄运动饮料",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_SportsLemonLimePack": {
+    "as1_value": "六罐装柠檬青柠运动饮料",
+    "value": "六连装柠檬青柠运动饮料",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_SportsMelonPack": {
+    "as1_value": "六罐装甜瓜运动饮料",
+    "value": "六连装甜瓜运动饮料",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_SportsOrangePack": {
+    "as1_value": "六罐装橙味运动饮料",
+    "value": "六连装橙味运动饮料",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_SportsWhiteCherryPack": {
+    "as1_value": "六罐装白樱桃运动饮料",
+    "value": "六连装白樱桃运动饮料",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_StrawberryBananaBlendCarton": {
+    "as1_value": "草莓香蕉混合 (纸箱)",
+    "value": "草莓香蕉混合物 (整袋, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_StrawberryBananaBlendCase": {
+    "as1_value": "草莓香蕉混合 (整箱)",
+    "value": "草莓香蕉混合物 (整袋, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_StrawberryBananaBlendCrate": {
+    "as1_value": "草莓香蕉混合 (木箱)",
+    "value": "草莓香蕉混合物 (整袋, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_StrawberryMilkPack": {
+    "as1_value": "六罐装草莓牛奶 (盒装)",
+    "value": "六连装草莓牛奶 (盒装)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_StrawberryStrudelsBoxCase": {
+    "as1_value": "果馅卷 (草莓, 整盒, 整箱)",
+    "value": "弹跳酥皮卷 (草莓, 整盒, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.*StrudelsBox …弹跳酥皮卷盒"
+  },
+  "ItemName.json|BundleUp.VFX_StrawberryStrudelsBoxCrate": {
+    "as1_value": "果馅卷 (草莓, 整盒, 木箱)",
+    "value": "弹跳酥皮卷 (草莓, 整盒, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Pop Strudel」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Pop Strudel」, cn): lane_fixes VFX.*StrudelsBox …弹跳酥皮卷盒"
+  },
+  "ItemName.json|BundleUp.VFX_SwissRollCarton": {
+    "as1_value": "螺旋卷 (纸箱)",
+    "value": "旋涡卷 (纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Swirl Roll」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Swirl Roll」, cn): lane_fixes VFX.SwissRoll 旋涡卷"
+  },
+  "ItemName.json|BundleUp.VFX_SwissRollCase": {
+    "as1_value": "螺旋卷 (整箱)",
+    "value": "旋涡卷 (整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Swirl Roll」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Swirl Roll」, cn): lane_fixes VFX.SwissRoll 旋涡卷"
+  },
+  "ItemName.json|BundleUp.VFX_SwissRollCrate": {
+    "as1_value": "螺旋卷 (木箱)",
+    "value": "旋涡卷 (木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Swirl Roll」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Swirl Roll」, cn): lane_fixes VFX.SwissRoll 旋涡卷"
+  },
+  "ItemName.json|BundleUp.VFX_SwissRollsBoxCase": {
+    "as1_value": "螺旋卷 (整盒, 整箱)",
+    "value": "旋涡卷 (整盒, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Swirl Roll」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Swirl Roll」, cn): lane_fixes VFX.SwissRoll 旋涡卷"
+  },
+  "ItemName.json|BundleUp.VFX_SwissRollsBoxCrate": {
+    "as1_value": "螺旋卷 (整盒, 木箱)",
+    "value": "旋涡卷 (整盒, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Swirl Roll」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Swirl Roll」, cn): lane_fixes VFX.SwissRoll 旋涡卷"
+  },
+  "ItemName.json|BundleUp.VFX_TropicalJuicePack": {
+    "as1_value": "六罐装热带果汁",
+    "value": "六连装热带果汁",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_VanillaColaCanPack": {
+    "as1_value": "六罐装香草可乐",
+    "value": "六连装香草可乐",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_WheatiesCarton": {
+    "as1_value": "麦片 (小麦脆片, 纸箱)",
+    "value": "麦片 (小麦片, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Cereal - Wheat Flakes」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Cereal - Wheat Flakes」, cn): lane_fixes VFX.Wheaties 小麦片"
+  },
+  "ItemName.json|BundleUp.VFX_WheatiesCase": {
+    "as1_value": "麦片 (小麦脆片, 整箱)",
+    "value": "麦片 (小麦片, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Cereal - Wheat Flakes」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Cereal - Wheat Flakes」, cn): lane_fixes VFX.Wheaties 小麦片"
+  },
+  "ItemName.json|BundleUp.VFX_WheatiesCrate": {
+    "as1_value": "麦片 (小麦脆片, 木箱)",
+    "value": "麦片 (小麦片, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Cereal - Wheat Flakes」(ch): 英文為新名, 現值是舊譯; 主代理裁定 CN 對齊箱內 VFX 物品 (列「Cereal - Wheat Flakes」, cn): lane_fixes VFX.Wheaties 小麦片"
+  },
+  "ItemName.json|BundleUp.VFX_WholeStrawberriesCarton": {
+    "as1_value": "整颗草莓 (纸箱)",
+    "value": "整颗草莓 (整袋, 纸箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_WholeStrawberriesCase": {
+    "as1_value": "整颗草莓 (整箱)",
+    "value": "整颗草莓 (整袋, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_WholeStrawberriesCrate": {
+    "as1_value": "整颗草莓 (木箱)",
+    "value": "整颗草莓 (整袋, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：箱內 VFX 冷凍水果這批補了 (整袋)，箱子品名與格式對齊（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|BundleUp.VFX_WineBoxCabernetSauvignonPack": {
+    "as1_value": "六罐装盒装赤霞珠",
+    "value": "六连装盒装赤霞珠",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_WineBoxChardonnayPack": {
+    "as1_value": "六罐装盒装霞多丽",
+    "value": "六连装盒装霞多丽",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_WineBoxMerlotPack": {
+    "as1_value": "六罐装盒装梅洛",
+    "value": "六连装盒装梅洛",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_WineBoxPinotGrisPack": {
+    "as1_value": "六罐装盒装灰皮诺",
+    "value": "六连装盒装灰皮诺",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_WineBoxPinotNoirPack": {
+    "as1_value": "六罐装盒装黑皮诺",
+    "value": "六连装盒装黑皮诺",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_WineBoxRieslingPack": {
+    "as1_value": "六罐装盒装雷司令",
+    "value": "六连装盒装雷司令",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_WineBoxSauvignonBlancPack": {
+    "as1_value": "六罐装盒装长相思",
+    "value": "六连装盒装长相思",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VFX_ZebraCakesBoxCase": {
+    "as1_value": "夸加蛋糕 (整盒, 整箱)",
+    "value": "斑纹蛋糕 (整盒, 整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Quagga Cakes」(ch): Quagga Cakes→斑紋蛋糕 (同包 BundleUp.QuaggaCakes* 與 lane_fixes VFX.ZebraCakesBox 已是斑紋蛋糕); 主代理裁定 CN 對齊箱內 VFX 物品 (列「Quagga Cakes」, cn): lane_fixes VFX.ZebraCakesBox 斑纹蛋糕盒; 原版 Base.QuaggaCakes 官方简中亦为 斑纹蛋糕"
+  },
+  "ItemName.json|BundleUp.VFX_ZebraCakesBoxCrate": {
+    "as1_value": "夸加蛋糕 (整盒, 木箱)",
+    "value": "斑纹蛋糕 (整盒, 木箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：SWEEP 列「Quagga Cakes」(ch): Quagga Cakes→斑紋蛋糕 (同包 BundleUp.QuaggaCakes* 與 lane_fixes VFX.ZebraCakesBox 已是斑紋蛋糕); 主代理裁定 CN 對齊箱內 VFX 物品 (列「Quagga Cakes」, cn): lane_fixes VFX.ZebraCakesBox 斑纹蛋糕盒; 原版 Base.QuaggaCakes 官方简中亦为 斑纹蛋糕"
+  },
+  "ItemName.json|BundleUp.VarietyPack": {
+    "as1_value": "六罐装什锦汽水",
+    "value": "六连装什锦汽水",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VermouthPack": {
+    "as1_value": "六罐装苦艾酒",
+    "value": "六连装苦艾酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.VodkaPack": {
+    "as1_value": "六罐装伏特加",
+    "value": "六连装伏特加",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.WhiskeyPack": {
+    "as1_value": "六罐装威士忌",
+    "value": "六连装威士忌",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|BundleUp.WineScrewtopPack": {
+    "as1_value": "六罐装廉价红酒",
+    "value": "六连装廉价红酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|VFX.AppleButter": {
+    "as1_value": "苹果酱",
+    "value": "浓缩苹果酱",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN「苹果酱」與 VFX.AppleSauce（Apple Sauce）同名；照 CH 濃縮蘋果醬"
+  },
+  "ItemName.json|VFX.BagGreenBeans": {
+    "as1_value": "青豆袋",
+    "value": "四季豆袋",
+    "reason": "2026-11-02 VFX 舊譯稽核：Green Beans CN「青豆」與 VFX.JarGreenPeas（罐装青豆）撞名；照 CN EvolvedRecipeName 既有「四季豆」"
+  },
+  "ItemName.json|VFX.BagWingsRanch": {
+    "as1_value": "农家鸡翅 (整包)",
+    "value": "牧场鸡翅 (整包)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Ranch 是田園沙拉醬口味（原版 Base.Dip_Ranch：CH 田園沙拉醬、CN 牧场沙拉酱），「牧場／农家」錯譯；複核：CN 的 BagWings* 都是「對應 Wing* 的 CN 名 + (整包)」(烧烤酱鸡翅 (整包)↔WingBBQ 烧烤酱鸡翅)；WingRanch、SeasoningMixWingsRanch 這輪 CN 改成「牧场鸡翅」，SWEEP 定案表 Ranch 的 CN 也是只把农家改成牧场。新值「牧场沙拉酱鸡翅」與 WingRanch 不同名。CH 接受"
+  },
+  "ItemName.json|VFX.BeefPorkSausagePack": {
+    "as1_value": "猪肉盒牛肉香肠4根装",
+    "value": "猪肉和牛肉香肠4根装",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 錯字「盒」→「和」"
+  },
+  "ItemName.json|VFX.BerryMedley": {
+    "as1_value": "混合莓果",
+    "value": "混合莓果 (整袋)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 漏 Packaged，與散裝水果同名；照 CH 與 CN 既有「(整袋)」"
+  },
+  "ItemName.json|VFX.Blackberries": {
+    "as1_value": "黑莓",
+    "value": "黑莓 (整袋)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 漏 Packaged，與散裝水果同名；照 CH 與 CN 既有「(整袋)」"
+  },
+  "ItemName.json|VFX.Blueberries": {
+    "as1_value": "蓝莓",
+    "value": "蓝莓 (整袋)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 漏 Packaged，與散裝水果同名；照 CH 與 CN 既有「(整袋)」"
+  },
+  "ItemName.json|VFX.BlueberryStrudelsBox": {
+    "as1_value": "蓝莓烤面包酥盒",
+    "value": "蓝莓弹跳酥皮卷盒",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Box of Pop Strudels"
+  },
+  "ItemName.json|VFX.BlueberryToasterStrudel": {
+    "as1_value": "蓝莓烤面包酥",
+    "value": "蓝莓弹跳酥皮卷",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Pop Strudel，舊譯照 Toaster Strudel（烤麵包酥）"
+  },
+  "ItemName.json|VFX.BrownSugarStrudelsBox": {
+    "as1_value": "红糖烤面包酥盒",
+    "value": "红糖肉桂弹跳酥皮卷盒",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Box of Pop Strudels；CN 補漏譯 Cinnamon"
+  },
+  "ItemName.json|VFX.BrownSugarToasterStrudel": {
+    "as1_value": "红糖烤面包酥",
+    "value": "红糖肉桂弹跳酥皮卷",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Pop Strudel；並補漏譯口味 Cinnamon"
+  },
+  "ItemName.json|VFX.BubblegumTapeSourBlueRaspberry": {
+    "as1_value": "酸蓝莓泡泡糖卷",
+    "value": "酸蓝覆盆子泡泡糖卷",
+    "reason": "2026-11-02 VFX 舊譯稽核：Blue Raspberry 是藍覆盆子，CN「蓝莓」錯（CH 已對）；主代理：Bubblegum Tape 繁中寫捲（台灣用字）"
+  },
+  "ItemName.json|VFX.CannedGreenBeans": {
+    "as1_value": "青豆罐头",
+    "value": "四季豆罐头",
+    "reason": "2026-11-02 VFX 舊譯稽核：Canned Green Beans"
+  },
+  "ItemName.json|VFX.CannedGreenBeansOpen": {
+    "as1_value": "青豆罐头 (开封)",
+    "value": "四季豆罐头 (开封)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Canned Green Beans"
+  },
+  "ItemName.json|VFX.CannedGreenBeans_Box": {
+    "as1_value": "青豆罐头 (整箱)",
+    "value": "四季豆罐头 (整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Canned Green Beans"
+  },
+  "ItemName.json|VFX.CannedSloppyJoe": {
+    "as1_value": "美式调味肉酱",
+    "value": "美式调味肉酱罐头",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 漏 Canned（CH 有罐頭）"
+  },
+  "ItemName.json|VFX.CannedSloppyJoeOpen": {
+    "as1_value": "美式调味肉酱 (开封)",
+    "value": "美式调味肉酱罐头 (开封)",
+    "reason": "2026-11-02 VFX 舊譯稽核：漏 Canned；同其他 X罐頭 (開封) 格式"
+  },
+  "ItemName.json|VFX.CannedSloppyJoe_Box": {
+    "as1_value": "美式调味肉酱 (整箱)",
+    "value": "美式调味肉酱罐头 (整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: Sloppy Joe 罐頭"
+  },
+  "ItemName.json|VFX.CannedVegetarianChili": {
+    "as1_value": "素食辣椒罐头",
+    "value": "素食辣豆酱罐头",
+    "reason": "2026-11-02 VFX 舊譯稽核：Vegetarian Chili"
+  },
+  "ItemName.json|VFX.CannedVegetarianChiliOpen": {
+    "as1_value": "素食辣椒罐头 (开封)",
+    "value": "素食辣豆酱罐头 (开封)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Vegetarian Chili"
+  },
+  "ItemName.json|VFX.CannedVegetarianChili_Box": {
+    "as1_value": "素食辣椒罐头 (整箱)",
+    "value": "素食辣豆酱罐头 (整箱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Vegetarian Chili"
+  },
+  "ItemName.json|VFX.CaramelCakeCandles": {
+    "as1_value": "焦糖蛋糕 (蜡烛)",
+    "value": "焦糖蛋糕 (多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.CaramelCakeFrostingCaramelCandles": {
+    "as1_value": "焦糖蛋糕 (焦糖糖霜, 蜡烛)",
+    "value": "焦糖蛋糕 (焦糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.CaramelCakeFrostingChocolateCandles": {
+    "as1_value": "焦糖蛋糕 (巧克力糖霜, 蜡烛)",
+    "value": "焦糖蛋糕 (巧克力糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.CaramelCakeFrostingConfettiCandles": {
+    "as1_value": "焦糖蛋糕 (彩糖糖霜, 蜡烛)",
+    "value": "焦糖蛋糕 (彩糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.CaramelCakeFrostingCreamCheeseCandles": {
+    "as1_value": "焦糖蛋糕 (奶油芝士糖霜, 蜡烛)",
+    "value": "焦糖蛋糕 (奶油芝士糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.CaramelCakeFrostingLemonCandles": {
+    "as1_value": "焦糖蛋糕 (柠檬糖霜, 蜡烛)",
+    "value": "焦糖蛋糕 (柠檬糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.CaramelCakeFrostingStrawberryCandles": {
+    "as1_value": "焦糖蛋糕 (草莓糖霜, 蜡烛)",
+    "value": "焦糖蛋糕 (草莓糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.CaramelCakeFrostingVanillaCandles": {
+    "as1_value": "焦糖蛋糕 (香草糖霜, 蜡烛)",
+    "value": "焦糖蛋糕 (香草糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.CarrotCakeCandles": {
+    "as1_value": "胡萝卜蛋糕 (蜡烛)",
+    "value": "胡萝卜蛋糕 (多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.CarrotCakeFrostingCaramelCandles": {
+    "as1_value": "胡萝卜蛋糕 (焦糖糖霜, 蜡烛)",
+    "value": "胡萝卜蛋糕 (焦糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.CarrotCakeFrostingChocolateCandles": {
+    "as1_value": "胡萝卜蛋糕 (巧克力糖霜, 蜡烛)",
+    "value": "胡萝卜蛋糕 (巧克力糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.CarrotCakeFrostingConfettiCandles": {
+    "as1_value": "胡萝卜蛋糕 (彩糖糖霜, 蜡烛)",
+    "value": "胡萝卜蛋糕 (彩糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.CarrotCakeFrostingCreamCheeseCandles": {
+    "as1_value": "胡萝卜蛋糕 (奶油芝士糖霜, 蜡烛)",
+    "value": "胡萝卜蛋糕 (奶油芝士糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.CarrotCakeFrostingLemonCandles": {
+    "as1_value": "胡萝卜蛋糕 (柠檬糖霜, 蜡烛)",
+    "value": "胡萝卜蛋糕 (柠檬糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.CarrotCakeFrostingStrawberryCandles": {
+    "as1_value": "胡萝卜蛋糕 (草莓糖霜, 蜡烛)",
+    "value": "胡萝卜蛋糕 (草莓糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.CarrotCakeFrostingVanillaCandles": {
+    "as1_value": "胡萝卜蛋糕 (香草糖霜, 蜡烛)",
+    "value": "胡萝卜蛋糕 (香草糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.Cheeps": {
+    "as1_value": "跳跳糖",
+    "value": "啾啾棉花糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：Cheeps 是 Peeps 式小雞棉花糖（圖示為黃色小雞、上游 CH 亦註明棉花糖），「跳跳糖」是 popping candy，錯譯"
+  },
+  "ItemName.json|VFX.CherryStrudelsBox": {
+    "as1_value": "樱桃烤面包酥盒",
+    "value": "樱桃弹跳酥皮卷盒",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Box of Pop Strudels"
+  },
+  "ItemName.json|VFX.CherryToasterStrudel": {
+    "as1_value": "樱桃烤面包酥",
+    "value": "樱桃弹跳酥皮卷",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Pop Strudel，舊譯照 Toaster Strudel（烤麵包酥）"
+  },
+  "ItemName.json|VFX.ChocolateCakeCandles": {
+    "as1_value": "巧克力蛋糕 (蜡烛)",
+    "value": "巧克力蛋糕 (多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.ChocolateCakeFrostingCaramelCandles": {
+    "as1_value": "巧克力蛋糕 (焦糖糖霜, 蜡烛)",
+    "value": "巧克力蛋糕 (焦糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.ChocolateCakeFrostingChocolateCandles": {
+    "as1_value": "巧克力蛋糕 (巧克力糖霜, 蜡烛)",
+    "value": "巧克力蛋糕 (巧克力糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.ChocolateCakeFrostingConfettiCandles": {
+    "as1_value": "巧克力蛋糕 (彩糖糖霜, 蜡烛)",
+    "value": "巧克力蛋糕 (彩糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.ChocolateCakeFrostingCreamCheeseCandles": {
+    "as1_value": "巧克力蛋糕 (奶油芝士糖霜, 蜡烛)",
+    "value": "巧克力蛋糕 (奶油芝士糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.ChocolateCakeFrostingLemonCandles": {
+    "as1_value": "巧克力蛋糕 (柠檬糖霜, 蜡烛)",
+    "value": "巧克力蛋糕 (柠檬糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.ChocolateCakeFrostingStrawberryCandles": {
+    "as1_value": "巧克力蛋糕 (草莓糖霜, 蜡烛)",
+    "value": "巧克力蛋糕 (草莓糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.ChocolateCakeFrostingVanillaCandles": {
+    "as1_value": "巧克力蛋糕 (香草糖霜, 蜡烛)",
+    "value": "巧克力蛋糕 (香草糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.CocoaPuffs": {
+    "as1_value": "可可泡芙",
+    "value": "巧克力袋鼠麦片",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Cereal - Choco-Roos，舊譯照 Cocoa Puffs（可可泡芙）；與 AuditVFXB/C 對齊"
+  },
+  "ItemName.json|VFX.CocoaPuffsBowl": {
+    "as1_value": "碗装可可泡芙",
+    "value": "碗装巧克力袋鼠麦片",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Bowl of Choco-Roos"
+  },
+  "ItemName.json|VFX.ConfettiCakeCandles": {
+    "as1_value": "彩糖蛋糕 (蜡烛)",
+    "value": "彩糖蛋糕 (多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.ConfettiCakeFrostingCaramelCandles": {
+    "as1_value": "彩糖蛋糕 (焦糖糖霜, 蜡烛)",
+    "value": "彩糖蛋糕 (焦糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.ConfettiCakeFrostingChocolateCandles": {
+    "as1_value": "彩糖蛋糕 (巧克力糖霜, 蜡烛)",
+    "value": "彩糖蛋糕 (巧克力糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.ConfettiCakeFrostingConfettiCandles": {
+    "as1_value": "彩糖蛋糕 (彩糖糖霜, 蜡烛)",
+    "value": "彩糖蛋糕 (彩糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.ConfettiCakeFrostingCreamCheeseCandles": {
+    "as1_value": "彩糖蛋糕 (奶油芝士糖霜, 蜡烛)",
+    "value": "彩糖蛋糕 (奶油芝士糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.ConfettiCakeFrostingLemonCandles": {
+    "as1_value": "彩糖蛋糕 (柠檬糖霜, 蜡烛)",
+    "value": "彩糖蛋糕 (柠檬糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 多根蠟燭"
+  },
+  "ItemName.json|VFX.ConfettiCakeFrostingStrawberryCandles": {
+    "as1_value": "彩糖蛋糕 (草莓糖霜, 蜡烛)",
+    "value": "彩糖蛋糕 (草莓糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.ConfettiCakeFrostingVanillaCandles": {
+    "as1_value": "彩糖蛋糕 (香草糖霜, 蜡烛)",
+    "value": "彩糖蛋糕 (香草糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 多根蠟燭"
+  },
+  "ItemName.json|VFX.CookiesAndCreamStrudelsBox": {
+    "as1_value": "曲奇奶油烤面包酥盒",
+    "value": "曲奇奶油弹跳酥皮卷盒",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Box of Pop Strudels"
+  },
+  "ItemName.json|VFX.CookiesAndCreamToasterStrudel": {
+    "as1_value": "曲奇奶油烤面包酥",
+    "value": "曲奇奶油弹跳酥皮卷",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Pop Strudel，舊譯照 Toaster Strudel（烤麵包酥）"
+  },
+  "ItemName.json|VFX.CosmicBrownie": {
+    "as1_value": "宇宙布朗尼",
+    "value": "太空蛋糕",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Space Cake，舊譯照 Cosmic Brownie"
+  },
+  "ItemName.json|VFX.CosmicBrowniesBox": {
+    "as1_value": "宇宙布朗尼盒",
+    "value": "太空蛋糕盒",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Box of Space Cakes"
+  },
+  "ItemName.json|VFX.DarkSweetCherries": {
+    "as1_value": "深色甜樱桃",
+    "value": "深色甜樱桃 (整袋)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 漏 Packaged，與散裝水果同名；照 CH 與 CN 既有「(整袋)」"
+  },
+  "ItemName.json|VFX.FoodStorageContainerScallopedPotatoBake": {
+    "as1_value": "食品储藏盒 (扇贝形土豆烘烤)",
+    "value": "食品储藏盒 (焗烤土豆片)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Scalloped Potato Bake"
+  },
+  "ItemName.json|VFX.FrenchVanillaCakeCandles": {
+    "as1_value": "法式香草蛋糕 (蜡烛)",
+    "value": "法式香草蛋糕 (多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.FrenchVanillaCakeFrostingCaramelCandles": {
+    "as1_value": "法式香草蛋糕 (焦糖糖霜, 蜡烛)",
+    "value": "法式香草蛋糕 (焦糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 多根蠟燭"
+  },
+  "ItemName.json|VFX.FrenchVanillaCakeFrostingChocolateCandles": {
+    "as1_value": "法式香草蛋糕 (巧克力糖霜, 蜡烛)",
+    "value": "法式香草蛋糕 (巧克力糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 多根蠟燭"
+  },
+  "ItemName.json|VFX.FrenchVanillaCakeFrostingConfettiCandles": {
+    "as1_value": "法式香草蛋糕 (彩糖糖霜, 蜡烛)",
+    "value": "法式香草蛋糕 (彩糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.FrenchVanillaCakeFrostingCreamCheeseCandles": {
+    "as1_value": "法式香草蛋糕 (奶油芝士糖霜, 蜡烛)",
+    "value": "法式香草蛋糕 (奶油芝士糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Candles（多根）與 Candle（單根）是不同物品，CN 都寫「蜡烛」撞名、漏數量；CH 已區分"
+  },
+  "ItemName.json|VFX.FrenchVanillaCakeFrostingLemonCandles": {
+    "as1_value": "法式香草蛋糕 (柠檬糖霜, 蜡烛)",
+    "value": "法式香草蛋糕 (柠檬糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 多根蠟燭"
+  },
+  "ItemName.json|VFX.FrenchVanillaCakeFrostingStrawberryCandles": {
+    "as1_value": "法式香草蛋糕 (草莓糖霜, 蜡烛)",
+    "value": "法式香草蛋糕 (草莓糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 多根蠟燭"
+  },
+  "ItemName.json|VFX.FrenchVanillaCakeFrostingVanillaCandles": {
+    "as1_value": "法式香草蛋糕 (香草糖霜, 蜡烛)",
+    "value": "法式香草蛋糕 (香草糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 多根蠟燭"
+  },
+  "ItemName.json|VFX.FudgeRound": {
+    "as1_value": "软糖圆饼",
+    "value": "巧克力圆饼",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Choccy Round，CN 仍照舊名 Fudge Round（软糖圆饼）；CH 已是巧克力圓餅"
+  },
+  "ItemName.json|VFX.FudgeRoundsBox": {
+    "as1_value": "软糖圆饼盒",
+    "value": "巧克力圆饼盒",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Box of Choccy Rounds，舊譯照 Fudge Rounds"
+  },
+  "ItemName.json|VFX.FunDipApple": {
+    "as1_value": "苹果趣味蘸糖",
+    "value": "苹果幸运蘸糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Lucky Dip，舊譯照 Fun Dip（趣味蘸糖）"
+  },
+  "ItemName.json|VFX.FunDipCherry": {
+    "as1_value": "樱桃趣味蘸糖",
+    "value": "樱桃幸运蘸糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Lucky Dip，舊譯照 Fun Dip（趣味蘸糖）"
+  },
+  "ItemName.json|VFX.FunDipGrape": {
+    "as1_value": "葡萄趣味蘸糖",
+    "value": "葡萄幸运蘸糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：Lucky Dip"
+  },
+  "ItemName.json|VFX.FunDipOrange": {
+    "as1_value": "橙子趣味蘸糖",
+    "value": "橙子幸运蘸糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Lucky Dip，舊譯照 Fun Dip（趣味蘸糖）；主代理：Orange 口味繁中照 LangFor42 Base.Orange 寫柳橙（複核 ReviewSweeps 範圍外）"
+  },
+  "ItemName.json|VFX.FunDipStrawberry": {
+    "as1_value": "草莓趣味蘸糖",
+    "value": "草莓幸运蘸糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Lucky Dip，舊譯照 Fun Dip（趣味蘸糖）"
+  },
+  "ItemName.json|VFX.FunDipWatermelon": {
+    "as1_value": "西瓜趣味蘸糖",
+    "value": "西瓜幸运蘸糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Lucky Dip，舊譯照 Fun Dip（趣味蘸糖）"
+  },
+  "ItemName.json|VFX.FunnyTaffyBlueRaspberry": {
+    "as1_value": "蓝莓怪味太妃糖",
+    "value": "蓝覆盆子怪味太妃糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：Blue Raspberry"
+  },
+  "ItemName.json|VFX.GiantLollipopBlueRaspberry": {
+    "as1_value": "巨型蓝莓棒棒糖",
+    "value": "巨型蓝覆盆子棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：Blue Raspberry 是藍覆盆子，「藍莓」錯；同 LollipopBlueRaspberry"
+  },
+  "ItemName.json|VFX.Goldfish": {
+    "as1_value": "金鱼饼干",
+    "value": "锦鲤饼干",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改 Koi Crackers，舊譯照 Goldfish（金魚）"
+  },
+  "ItemName.json|VFX.JarGreenBeans": {
+    "as1_value": "罐装青豆",
+    "value": "罐装四季豆",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN「罐装青豆」與 Jar of Green Peas 同名；Green Beans=四季豆"
+  },
+  "ItemName.json|VFX.JarGreenBeansOpen": {
+    "as1_value": "罐装青豆 (开封)",
+    "value": "罐装四季豆 (开封)",
+    "reason": "2026-11-02 VFX 舊譯稽核：同 JarGreenBeans"
+  },
+  "ItemName.json|VFX.JarPickleJuiceOpen": {
+    "as1_value": "罐装腌黄瓜 (开封)",
+    "value": "罐装腌黄瓜汁 (开封)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 漏 Juice，變成與醃黃瓜罐同名"
+  },
+  "ItemName.json|VFX.LollipopBlueRaspberry": {
+    "as1_value": "蓝莓棒棒糖",
+    "value": "蓝覆盆子棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：Blue Raspberry 是藍覆盆子，CN「蓝莓」錯（CH 已對）"
+  },
+  "ItemName.json|VFX.MangoChunks": {
+    "as1_value": "芒果块",
+    "value": "芒果块 (整袋)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 盒裝水果 (整袋)"
+  },
+  "ItemName.json|VFX.MetalFoodStorageContainerScallopedPotatoBake": {
+    "as1_value": "金属食品储藏盒 (扇贝形土豆烘烤)",
+    "value": "金属食品储藏盒 (焗烤土豆片)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Scalloped Potato Bake 是焗烤馬鈴薯片, 不是扇貝形; 統一 VFX 他鍵 CH 奶油焗烤馬鈴薯 / CN 焗烤土豆片 (ContextMenu 既有)"
+  },
+  "ItemName.json|VFX.MixedFruit": {
+    "as1_value": "混合水果",
+    "value": "混合水果 (整袋)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 盒裝水果 (整袋)"
+  },
+  "ItemName.json|VFX.OrangePoppyseedCakeCandles": {
+    "as1_value": "橙香罂粟籽蛋糕 (蜡烛)",
+    "value": "橙香罂粟籽蛋糕 (多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.OrangePoppyseedCakeFrostingCaramelCandles": {
+    "as1_value": "橙香罂粟籽蛋糕 (焦糖糖霜, 蜡烛)",
+    "value": "橙香罂粟籽蛋糕 (焦糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.OrangePoppyseedCakeFrostingChocolateCandles": {
+    "as1_value": "橙香罂粟籽蛋糕 (巧克力糖霜, 蜡烛)",
+    "value": "橙香罂粟籽蛋糕 (巧克力糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.OrangePoppyseedCakeFrostingConfettiCandles": {
+    "as1_value": "橙香罂粟籽蛋糕 (彩糖糖霜, 蜡烛)",
+    "value": "橙香罂粟籽蛋糕 (彩糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.OrangePoppyseedCakeFrostingCreamCheeseCandles": {
+    "as1_value": "橙香罂粟籽蛋糕 (奶油芝士糖霜, 蜡烛)",
+    "value": "橙香罂粟籽蛋糕 (奶油芝士糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.OrangePoppyseedCakeFrostingLemonCandles": {
+    "as1_value": "橙香罂粟籽蛋糕 (柠檬糖霜, 蜡烛)",
+    "value": "橙香罂粟籽蛋糕 (柠檬糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 多根蠟燭"
+  },
+  "ItemName.json|VFX.OrangePoppyseedCakeFrostingStrawberryCandles": {
+    "as1_value": "橙香罂粟籽蛋糕 (草莓糖霜, 蜡烛)",
+    "value": "橙香罂粟籽蛋糕 (草莓糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.OrangePoppyseedCakeFrostingVanillaCandles": {
+    "as1_value": "橙香罂粟籽蛋糕 (香草糖霜, 蜡烛)",
+    "value": "橙香罂粟籽蛋糕 (香草糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.PBJUncrustable": {
+    "as1_value": "花生酱葡萄果冻去边三明治",
+    "value": "花生酱葡萄果酱去边三明治",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文 Grape (原 grape jelly 指葡萄果醬), CN 果冻 錯譯; 對齊 CH"
+  },
+  "ItemName.json|VFX.PBJUncrustable_Box": {
+    "as1_value": "花生酱葡萄果冻去边三明治盒",
+    "value": "花生酱葡萄果酱去边三明治盒",
+    "reason": "2026-11-02 VFX 舊譯稽核：同上, CN 果冻 錯譯"
+  },
+  "ItemName.json|VFX.PMCopperSaucepanCreamyPesto": {
+    "as1_value": "平底煮锅 (奶油青酱意面)",
+    "value": "铜制平底煮锅 (奶油青酱意面)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 漏了 Copper (铜制), 同類鍵都寫铜制平底煮锅"
+  },
+  "ItemName.json|VFX.PackagedBlueberryStrudel": {
+    "as1_value": "包装蓝莓烤面包酥",
+    "value": "包装蓝莓弹跳酥皮卷",
+    "reason": "2026-11-02 VFX 舊譯稽核：Toaster Strudel 改名 Pop Strudel, 舊譯 烤麵包酥/酥皮捲 不一致; 統一新名 彈跳酥皮捲"
+  },
+  "ItemName.json|VFX.PackagedBrownSugarStrudel": {
+    "as1_value": "包装红糖烤面包酥",
+    "value": "包装红糖肉桂弹跳酥皮卷",
+    "reason": "2026-11-02 VFX 舊譯稽核：Toaster Strudel 改名 Pop Strudel, 舊譯 烤麵包酥/酥皮捲 不一致; 統一新名 彈跳酥皮捲; CN 補漏掉的肉桂"
+  },
+  "ItemName.json|VFX.PackagedCherryStrudel": {
+    "as1_value": "包装樱桃烤面包酥",
+    "value": "包装樱桃弹跳酥皮卷",
+    "reason": "2026-11-02 VFX 舊譯稽核：Toaster Strudel 改名 Pop Strudel, 舊譯 烤麵包酥/酥皮捲 不一致; 統一新名 彈跳酥皮捲"
+  },
+  "ItemName.json|VFX.PackagedCookiesAndCreamStrudel": {
+    "as1_value": "包装曲奇奶油烤面包酥",
+    "value": "包装曲奇奶油弹跳酥皮卷",
+    "reason": "2026-11-02 VFX 舊譯稽核：Toaster Strudel 改名 Pop Strudel, 舊譯 烤麵包酥/酥皮捲 不一致; 統一新名 彈跳酥皮捲"
+  },
+  "ItemName.json|VFX.PackagedStrawberryStrudel": {
+    "as1_value": "包装草莓烤面包酥",
+    "value": "包装草莓弹跳酥皮卷",
+    "reason": "2026-11-02 VFX 舊譯稽核：Toaster Strudel 改名 Pop Strudel, 舊譯 烤麵包酥/酥皮捲 不一致; 統一新名 彈跳酥皮捲"
+  },
+  "ItemName.json|VFX.PineappleChunks": {
+    "as1_value": "菠萝块",
+    "value": "菠萝块 (整袋)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 盒裝水果 (整袋)"
+  },
+  "ItemName.json|VFX.PopRocksBlueRaspberry": {
+    "as1_value": "蓝莓跳跳糖",
+    "value": "蓝覆盆子跳跳糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：Blue Raspberry 是藍覆盆子口味, 不是蓝莓"
+  },
+  "ItemName.json|VFX.PushPopCherry": {
+    "as1_value": "樱桃推推乐",
+    "value": "樱桃扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：Push Pop (推推樂) 改名 Twist Pop, 照新英文"
+  },
+  "ItemName.json|VFX.PushPopCola": {
+    "as1_value": "可乐推推乐",
+    "value": "可乐扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：Push Pop (推推樂) 改名 Twist Pop, 照新英文"
+  },
+  "ItemName.json|VFX.PushPopFruitFrenzy": {
+    "as1_value": "水果狂欢推推乐",
+    "value": "水果狂欢扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：Push Pop (推推樂) 改名 Twist Pop, 照新英文"
+  },
+  "ItemName.json|VFX.PushPopGrape": {
+    "as1_value": "葡萄推推乐",
+    "value": "葡萄扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：Push Pop (推推樂) 改名 Twist Pop, 照新英文"
+  },
+  "ItemName.json|VFX.PushPopRainbowSherbet": {
+    "as1_value": "彩虹冰沙推推乐",
+    "value": "彩虹冰沙扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：Push Pop (推推樂) 改名 Twist Pop, 照新英文"
+  },
+  "ItemName.json|VFX.PushPopStrawberry": {
+    "as1_value": "草莓推推乐",
+    "value": "草莓扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：Push Pop (推推樂) 改名 Twist Pop, 照新英文"
+  },
+  "ItemName.json|VFX.PushPopWatermelon": {
+    "as1_value": "西瓜推推乐",
+    "value": "西瓜扭扭棒棒糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：Push Pop (推推樂) 改名 Twist Pop, 照新英文"
+  },
+  "ItemName.json|VFX.Raspberries": {
+    "as1_value": "覆盆子",
+    "value": "覆盆子 (整袋)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 盒裝水果 (整袋)"
+  },
+  "ItemName.json|VFX.RedTartCherries": {
+    "as1_value": "红酸樱桃",
+    "value": "红酸樱桃 (整袋)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 盒裝水果 (整袋)"
+  },
+  "ItemName.json|VFX.RedVelvetCakeCandles": {
+    "as1_value": "红丝绒蛋糕 (蜡烛)",
+    "value": "红丝绒蛋糕 (多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.RedVelvetCakeFrostingCaramelCandles": {
+    "as1_value": "红丝绒蛋糕 (焦糖糖霜, 蜡烛)",
+    "value": "红丝绒蛋糕 (焦糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.RedVelvetCakeFrostingChocolateCandles": {
+    "as1_value": "红丝绒蛋糕 (巧克力糖霜, 蜡烛)",
+    "value": "红丝绒蛋糕 (巧克力糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.RedVelvetCakeFrostingConfettiCandles": {
+    "as1_value": "红丝绒蛋糕 (彩糖糖霜, 蜡烛)",
+    "value": "红丝绒蛋糕 (彩糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.RedVelvetCakeFrostingCreamCheeseCandles": {
+    "as1_value": "红丝绒蛋糕 (奶油芝士糖霜, 蜡烛)",
+    "value": "红丝绒蛋糕 (奶油芝士糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 多根蠟燭"
+  },
+  "ItemName.json|VFX.RedVelvetCakeFrostingLemonCandles": {
+    "as1_value": "红丝绒蛋糕 (柠檬糖霜, 蜡烛)",
+    "value": "红丝绒蛋糕 (柠檬糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.RedVelvetCakeFrostingStrawberryCandles": {
+    "as1_value": "红丝绒蛋糕 (草莓糖霜, 蜡烛)",
+    "value": "红丝绒蛋糕 (草莓糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.RedVelvetCakeFrostingVanillaCandles": {
+    "as1_value": "红丝绒蛋糕 (香草糖霜, 蜡烛)",
+    "value": "红丝绒蛋糕 (香草糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.RingPopBlueRaspberry": {
+    "as1_value": "蓝莓戒指糖",
+    "value": "蓝覆盆子戒指糖",
+    "reason": "2026-11-02 VFX 舊譯稽核：Blue Raspberry 是藍覆盆子口味, 不是蓝莓"
+  },
+  "ItemName.json|VFX.RitzCrackers": {
+    "as1_value": "丽兹饼干",
+    "value": "爵士饼干",
+    "reason": "2026-11-02 VFX 舊譯稽核：Ritz (麗茲) 改名 Jazz Crackers"
+  },
+  "ItemName.json|VFX.SeasoningMixWingsRanch": {
+    "as1_value": "调味料包 (农家鸡翅)",
+    "value": "调味料包 (牧场鸡翅)",
+    "reason": "2026-11-02 VFX 舊譯稽核：Ranch"
+  },
+  "ItemName.json|VFX.SlicedBananas": {
+    "as1_value": "香蕉片",
+    "value": "香蕉片 (整袋)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 盒裝水果 (整袋)"
+  },
+  "ItemName.json|VFX.SlicedStrawberries": {
+    "as1_value": "草莓片",
+    "value": "草莓片 (整袋)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 盒裝水果 (整袋)"
+  },
+  "ItemName.json|VFX.SpiceCakeCandles": {
+    "as1_value": "香料蛋糕 (蜡烛)",
+    "value": "香料蛋糕 (多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.SpiceCakeFrostingCaramelCandles": {
+    "as1_value": "香料蛋糕 (焦糖糖霜, 蜡烛)",
+    "value": "香料蛋糕 (焦糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 多根蠟燭"
+  },
+  "ItemName.json|VFX.SpiceCakeFrostingChocolateCandles": {
+    "as1_value": "香料蛋糕 (巧克力糖霜, 蜡烛)",
+    "value": "香料蛋糕 (巧克力糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.SpiceCakeFrostingConfettiCandles": {
+    "as1_value": "香料蛋糕 (彩糖糖霜, 蜡烛)",
+    "value": "香料蛋糕 (彩糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 多根蠟燭"
+  },
+  "ItemName.json|VFX.SpiceCakeFrostingCreamCheeseCandles": {
+    "as1_value": "香料蛋糕 (奶油芝士糖霜, 蜡烛)",
+    "value": "香料蛋糕 (奶油芝士糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 多根蠟燭"
+  },
+  "ItemName.json|VFX.SpiceCakeFrostingLemonCandles": {
+    "as1_value": "香料蛋糕 (柠檬糖霜, 蜡烛)",
+    "value": "香料蛋糕 (柠檬糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 多根蠟燭"
+  },
+  "ItemName.json|VFX.SpiceCakeFrostingStrawberryCandles": {
+    "as1_value": "香料蛋糕 (草莓糖霜, 蜡烛)",
+    "value": "香料蛋糕 (草莓糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.SpiceCakeFrostingVanillaCandles": {
+    "as1_value": "香料蛋糕 (香草糖霜, 蜡烛)",
+    "value": "香料蛋糕 (香草糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 多根蠟燭"
+  },
+  "ItemName.json|VFX.StrawberryBananaBlend": {
+    "as1_value": "草莓香蕉混合物",
+    "value": "草莓香蕉混合物 (整袋)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 盒裝水果 (整袋)"
+  },
+  "ItemName.json|VFX.StrawberryCakeCandles": {
+    "as1_value": "草莓蛋糕 (蜡烛)",
+    "value": "草莓蛋糕 (多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.StrawberryCakeFrostingCaramelCandles": {
+    "as1_value": "草莓蛋糕 (焦糖糖霜, 蜡烛)",
+    "value": "草莓蛋糕 (焦糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.StrawberryCakeFrostingChocolateCandles": {
+    "as1_value": "草莓蛋糕 (巧克力糖霜, 蜡烛)",
+    "value": "草莓蛋糕 (巧克力糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.StrawberryCakeFrostingConfettiCandles": {
+    "as1_value": "草莓蛋糕 (彩糖糖霜, 蜡烛)",
+    "value": "草莓蛋糕 (彩糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.StrawberryCakeFrostingCreamCheeseCandles": {
+    "as1_value": "草莓蛋糕 (奶油芝士糖霜, 蜡烛)",
+    "value": "草莓蛋糕 (奶油芝士糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.StrawberryCakeFrostingLemonCandles": {
+    "as1_value": "草莓蛋糕 (柠檬糖霜, 蜡烛)",
+    "value": "草莓蛋糕 (柠檬糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 多根蠟燭"
+  },
+  "ItemName.json|VFX.StrawberryCakeFrostingStrawberryCandles": {
+    "as1_value": "草莓蛋糕 (草莓糖霜, 蜡烛)",
+    "value": "草莓蛋糕 (草莓糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.StrawberryCakeFrostingVanillaCandles": {
+    "as1_value": "草莓蛋糕 (香草糖霜, 蜡烛)",
+    "value": "草莓蛋糕 (香草糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.StrawberryStrudelsBox": {
+    "as1_value": "草莓烤面包酥盒",
+    "value": "草莓弹跳酥皮卷盒",
+    "reason": "2026-11-02 VFX 舊譯稽核：Pop Strudel 新名"
+  },
+  "ItemName.json|VFX.StrawberryToasterStrudel": {
+    "as1_value": "草莓烤面包酥",
+    "value": "草莓弹跳酥皮卷",
+    "reason": "2026-11-02 VFX 舊譯稽核：Pop Strudel 新名"
+  },
+  "ItemName.json|VFX.SwissRoll": {
+    "as1_value": "瑞士卷",
+    "value": "旋涡卷",
+    "reason": "2026-11-02 VFX 舊譯稽核：Swiss Roll 改名 Swirl Roll; Swirl 照 VFX 既有 漩渦/漩涡"
+  },
+  "ItemName.json|VFX.SwissRollsBox": {
+    "as1_value": "瑞士卷盒",
+    "value": "旋涡卷盒",
+    "reason": "2026-11-02 VFX 舊譯稽核：Swirl Roll"
+  },
+  "ItemName.json|VFX.TomatoRelish": {
+    "as1_value": "番茄酱",
+    "value": "番茄佐酱",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 番茄酱 和原版 Ketchup (番茄酱) 撞名, Relish 是佐醬; 對齊 CH"
+  },
+  "ItemName.json|VFX.Wheaties": {
+    "as1_value": "维他麦",
+    "value": "小麦片",
+    "reason": "2026-11-02 VFX 舊譯稽核：Wheaties (維他麥) 改名 Cereal - Wheat Flakes; 維他麥 是 Weetabix 品牌"
+  },
+  "ItemName.json|VFX.WheatiesBowl": {
+    "as1_value": "碗装维他麦",
+    "value": "碗装小麦片",
+    "reason": "2026-11-02 VFX 舊譯稽核：Cereal - Wheat Flakes"
+  },
+  "ItemName.json|VFX.WholeStrawberries": {
+    "as1_value": "整颗草莓",
+    "value": "整颗草莓 (整袋)",
+    "reason": "2026-11-02 VFX 舊譯稽核：另外: CN 盒裝水果 (整袋)"
+  },
+  "ItemName.json|VFX.WingRanch": {
+    "as1_value": "农家鸡翅",
+    "value": "牧场鸡翅",
+    "reason": "2026-11-02 VFX 舊譯稽核：Ranch"
+  },
+  "ItemName.json|VFX.YellowCakeCandles": {
+    "as1_value": "黄油蛋糕 (蜡烛)",
+    "value": "黄油蛋糕 (多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.YellowCakeFrostingCaramelCandles": {
+    "as1_value": "黄油蛋糕 (焦糖糖霜, 蜡烛)",
+    "value": "黄油蛋糕 (焦糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.YellowCakeFrostingChocolateCandles": {
+    "as1_value": "黄油蛋糕 (巧克力糖霜, 蜡烛)",
+    "value": "黄油蛋糕 (巧克力糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.YellowCakeFrostingConfettiCandles": {
+    "as1_value": "黄油蛋糕 (彩糖糖霜, 蜡烛)",
+    "value": "黄油蛋糕 (彩糖糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.YellowCakeFrostingCreamCheeseCandles": {
+    "as1_value": "黄油蛋糕 (奶油芝士糖霜, 蜡烛)",
+    "value": "黄油蛋糕 (奶油芝士糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.YellowCakeFrostingLemonCandles": {
+    "as1_value": "黄油蛋糕 (柠檬糖霜, 蜡烛)",
+    "value": "黄油蛋糕 (柠檬糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.YellowCakeFrostingStrawberryCandles": {
+    "as1_value": "黄油蛋糕 (草莓糖霜, 蜡烛)",
+    "value": "黄油蛋糕 (草莓糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.YellowCakeFrostingVanillaCandles": {
+    "as1_value": "黄油蛋糕 (香草糖霜, 蜡烛)",
+    "value": "黄油蛋糕 (香草糖霜, 多根蜡烛)",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN 單根 (Candle) 與多根 (Candles) 兩個物品同名, 漏了數量; 照英文複數寫 多根蜡烛 (與 VFX_A lane 同寫法)"
+  },
+  "ItemName.json|VFX.ZebraCakesBox": {
+    "as1_value": "斑马蛋糕盒",
+    "value": "斑纹蛋糕盒",
+    "reason": "2026-11-02 VFX 舊譯稽核：Zebra Cakes 改名 Quagga Cakes, 內容物是原版 Base.QuaggaCakes (CH 斑紋蛋糕/CN 斑纹蛋糕)"
+  },
+  "Recipes.json|PackBeerImportedSealed": {
+    "as1_value": "六罐装进口啤酒",
+    "value": "六连装进口啤酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Recipes.json|PackJuice": {
+    "as1_value": "六罐装果汁",
+    "value": "六连装果汁",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Recipes.json|PackJuiceSealed": {
+    "as1_value": "六罐装果汁",
+    "value": "六连装果汁",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Recipes.json|PackLiquor": {
+    "as1_value": "六罐装烈酒",
+    "value": "六连装烈酒",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Recipes.json|PackMilk": {
+    "as1_value": "六罐装牛奶",
+    "value": "六连装牛奶",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Recipes.json|PackVFXDrinks": {
+    "as1_value": "六罐装饮料",
+    "value": "六连装饮料",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Recipes.json|PackVFXDrinksSealed": {
+    "as1_value": "六罐装饮料",
+    "value": "六连装饮料",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Recipes.json|UnpackBeerImported": {
+    "as1_value": "拆开进口啤酒六罐装",
+    "value": "拆开进口啤酒六连装",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Recipes.json|UnpackJuice": {
+    "as1_value": "拆开果汁六罐装",
+    "value": "拆开果汁六连装",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Recipes.json|UnpackLiquor": {
+    "as1_value": "拆开烈酒六罐装",
+    "value": "拆开烈酒六连装",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Recipes.json|UnpackMilk": {
+    "as1_value": "拆开牛奶六罐装",
+    "value": "拆开牛奶六连装",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Recipes.json|UnpackVFXDrinks": {
+    "as1_value": "打开六罐装饮料",
+    "value": "打开六连装饮料",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Recipes.json|UnpackWine": {
+    "as1_value": "拆开葡萄酒六罐装",
+    "value": "拆开葡萄酒六连装",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Recipes.json|VFX_OpenPackagedStrudel": {
+    "as1_value": "打开烤面包酥",
+    "value": "打开弹跳酥皮卷",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改名 Toaster Strudel→Pop Strudel；譯名同 AuditVFXA／B 定案"
+  },
+  "Recipes.json|VFX_OpenToasterStrudelBox": {
+    "as1_value": "打开烤面包酥 (整盒)",
+    "value": "打开弹跳酥皮卷 (整盒)",
+    "reason": "2026-11-02 VFX 舊譯稽核：英文已改名 Toaster Strudel→Pop Strudel；譯名同 AuditVFXA／B 定案"
+  },
+  "Recipes.json|VFX_PrepareRanchWings": {
+    "as1_value": "制作农家鸡翅",
+    "value": "制作牧场鸡翅",
+    "reason": "2026-11-02 VFX 舊譯稽核：Ranch"
+  },
+  "Recipes.json|VFX_PrepareScallopedPotatoBake": {
+    "as1_value": "准备扇贝形土豆烘烤",
+    "value": "准备焗烤土豆片",
+    "reason": "2026-11-02 VFX 舊譯稽核：CN「扇贝形土豆烘烤」把 scalloped 直譯成扇貝形，錯譯；同 AuditVFXB 定案 焗烤土豆片（ContextMenu CN 已是）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_BeerImportedPack": {
+    "as1_value": "六罐装进口啤酒 - 减重%%",
+    "value": "六连装进口啤酒 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_BlueberrySP": {
+    "as1_value": "六罐装蓝莓汽水 - 减重%%",
+    "value": "六连装蓝莓汽水 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_BrandyPack": {
+    "as1_value": "六罐装白兰地 - 减重%%",
+    "value": "六连装白兰地 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_BubblegumSP": {
+    "as1_value": "六罐装泡泡糖汽水 - 减重%%",
+    "value": "六连装泡泡糖汽水 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_ChampagnePack": {
+    "as1_value": "六罐装香槟 - 减重%%",
+    "value": "六连装香槟 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CiderPack": {
+    "as1_value": "六罐装苹果酒 - 减重%%",
+    "value": "六连装苹果酒 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CoffeeLiquerPack": {
+    "as1_value": "六罐装咖啡利口酒 - 减重%%",
+    "value": "六连装咖啡利口酒 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_CuracaoPack": {
+    "as1_value": "六罐装陈皮酒 - 减重%%",
+    "value": "六连装陈皮酒 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_DietSodaPack": {
+    "as1_value": "六罐装汽水 (无糖, 减重%%)",
+    "value": "六连装汽水 (无糖, 减重%%)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GinPack": {
+    "as1_value": "六罐装金酒 - 减重%%",
+    "value": "六连装金酒 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GrapeSP": {
+    "as1_value": "六罐装葡萄汽水 - 减重%%",
+    "value": "六连装葡萄汽水 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_GrenadinePack": {
+    "as1_value": "六罐装石榴糖浆 - 减重%%",
+    "value": "六连装石榴糖浆 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceBoxApplePack": {
+    "as1_value": "六罐装苹果汁 (盒装, 减重%%)",
+    "value": "六连装苹果汁 (盒装, 减重%%)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceBoxFruitpunchPack": {
+    "as1_value": "六罐装水果宾治果汁 (盒装, 减重%%)",
+    "value": "六连装水果宾治果汁 (盒装, 减重%%)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceBoxGrapePack": {
+    "as1_value": "六罐装葡萄汁 (盒装, 减重%%)",
+    "value": "六连装葡萄汁 (盒装, 减重%%)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceBoxOrangePack": {
+    "as1_value": "六罐装橙汁 (盒装, 减重%%)",
+    "value": "六连装橙汁 (盒装, 减重%%)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceCranberryPack": {
+    "as1_value": "六罐装蔓越莓汁 - 减重%%",
+    "value": "六连装蔓越莓汁 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceFruitpunchPack": {
+    "as1_value": "六罐装水果宾治 - 减重%%",
+    "value": "六连装水果宾治 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceGrapePack": {
+    "as1_value": "六罐装葡萄汁 - 减重%%",
+    "value": "六连装葡萄汁 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceLemonPack": {
+    "as1_value": "六罐装柠檬汁 - 减重%%",
+    "value": "六连装柠檬汁 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceOrangePack": {
+    "as1_value": "六罐装橙汁 - 减重%%",
+    "value": "六连装橙汁 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_JuiceTomatoPack": {
+    "as1_value": "六罐装番茄汁 - 减重%%",
+    "value": "六连装番茄汁 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_LimeSP": {
+    "as1_value": "六罐装青柠汽水 - 减重%%",
+    "value": "六连装青柠汽水 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_MilkChocSmallPack": {
+    "as1_value": "六罐装巧克力牛奶 - 减重%%",
+    "value": "六连装巧克力牛奶 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_MilkPack": {
+    "as1_value": "六罐装牛奶 - 减重%%",
+    "value": "六连装牛奶 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_MilkSmallPack": {
+    "as1_value": "六罐装牛奶 (单人装, 减重%%)",
+    "value": "六连装牛奶 (单人装, 减重%%)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_OrangeSP": {
+    "as1_value": "六罐装橙味汽水 - 减重%%",
+    "value": "六连装橙味汽水 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PineappleSP": {
+    "as1_value": "六罐装菠萝汽水 - 减重%%",
+    "value": "六连装菠萝汽水 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_PortPack": {
+    "as1_value": "六罐装波特酒 - 减重%%",
+    "value": "六连装波特酒 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_RumPack": {
+    "as1_value": "六罐装朗姆酒 - 减重%%",
+    "value": "六连装朗姆酒 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_ScotchPack": {
+    "as1_value": "六罐装苏格兰威士忌 - 减重%%",
+    "value": "六连装苏格兰威士忌 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SherryPack": {
+    "as1_value": "六罐装雪利酒 - 减重%%",
+    "value": "六连装雪利酒 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_SodaPack": {
+    "as1_value": "六罐装汽水 (原味, 减重%%)",
+    "value": "六连装汽水 (原味, 减重%%)",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_StrawberrySP": {
+    "as1_value": "六罐装草莓汽水 - 减重%%",
+    "value": "六连装草莓汽水 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_TequilaPack": {
+    "as1_value": "六罐装龙舌兰酒 - 减重%%",
+    "value": "六连装龙舌兰酒 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_VarietyPack": {
+    "as1_value": "六罐装什锦汽水 - 减重%%",
+    "value": "六连装什锦汽水 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_VermouthPack": {
+    "as1_value": "六罐装苦艾酒 - 减重%%",
+    "value": "六连装苦艾酒 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_VodkaPack": {
+    "as1_value": "六罐装伏特加 - 减重%%",
+    "value": "六连装伏特加 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WhiskeyPack": {
+    "as1_value": "六罐装威士忌 - 减重%%",
+    "value": "六连装威士忌 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_Item_WineScrewtopPack": {
+    "as1_value": "六罐装廉价红酒 - 减重%%",
+    "value": "六连装廉价红酒 - 减重%%",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_SpawnSixPacks": {
+    "as1_value": "六罐装刷新率",
+    "value": "六连装刷新率",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_SpawnSixPacks_tooltip": {
+    "as1_value": "冰箱、饮料冷藏柜与商店货架上的汽水六罐装. '继承默认'沿用上方的总设置.",
+    "value": "冰箱、饮料冷藏柜与商店货架上的汽水六连装. '继承默认'沿用上方的总设置.",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_SpawnVFXDrinks": {
+    "as1_value": "原版食物扩展六罐装生成率",
+    "value": "原版食物扩展六连装生成率",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "Sandbox.json|Sandbox_BundleUp_SpawnVFXDrinks_tooltip": {
+    "as1_value": "商店、酒吧和已存放该类饮料的储物箱中的原版食物扩展六罐装. 继承默认值遵循Bundle Up主设置.",
+    "value": "商店、酒吧和已存放该类饮料的储物箱中的原版食物扩展六连装. 继承默认值遵循Bundle Up主设置.",
+    "reason": "2026-11-02 使用者裁定：Six-Pack 統一寫六连装（As1 寫六罐装，盒裝飲料與盒裝酒不是罐；同 MOD 的本包覆寫已用六连装）"
+  },
+  "ItemName.json|VFX.PlateMoussaka": {
+    "as1_value": "盘子 (希腊茄盒)",
+    "value": "盘子 (希腊茄子千层派)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：Moussaka 不是茄盒（中式菜），簡中對齊繁中「希腊茄子千层派」"
+  },
+  "ItemName.json|VFX.PotButterChicken": {
+    "as1_value": "炖锅 (黄油鸡)",
+    "value": "蒸煮锅 (黄油鸡)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：Cooking Pot 簡中照本體官方簡中 Base.Pot「蒸煮锅」，和 VFX 其他鍋一致"
+  },
+  "ItemName.json|VFX.PotChanaMasala": {
+    "as1_value": "炖锅 (鹰嘴豆玛萨拉)",
+    "value": "蒸煮锅 (鹰嘴豆玛萨拉)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：Cooking Pot 簡中照本體官方簡中 Base.Pot「蒸煮锅」，和 VFX 其他鍋一致"
+  },
+  "ItemName.json|VFX.PotMassamanCurry": {
+    "as1_value": "炖锅 (马萨曼咖喱)",
+    "value": "蒸煮锅 (马萨曼咖喱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：Cooking Pot 簡中照本體官方簡中 Base.Pot「蒸煮锅」，和 VFX 其他鍋一致"
+  },
+  "ItemName.json|VFX.PotSweetPotatoChickpeaCurry": {
+    "as1_value": "炖锅 (红薯鹰嘴豆咖喱)",
+    "value": "蒸煮锅 (红薯鹰嘴豆咖喱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：Cooking Pot 簡中照本體官方簡中 Base.Pot「蒸煮锅」，和 VFX 其他鍋一致"
+  },
+  "ItemName.json|VFX.PotThaiGreenCurry": {
+    "as1_value": "炖锅 (泰式绿咖喱)",
+    "value": "蒸煮锅 (泰式绿咖喱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：Cooking Pot 簡中照本體官方簡中 Base.Pot「蒸煮锅」，和 VFX 其他鍋一致"
+  },
+  "ItemName.json|VFX.PotTofuCurry": {
+    "as1_value": "炖锅 (豆腐咖喱)",
+    "value": "蒸煮锅 (豆腐咖喱)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：Cooking Pot 簡中照本體官方簡中 Base.Pot「蒸煮锅」，和 VFX 其他鍋一致"
+  },
+  "ItemName.json|VFX.TrayMoussaka": {
+    "as1_value": "烤盘 (希腊茄盒)",
+    "value": "烤盘 (希腊茄子千层派)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：Moussaka 不是茄盒（中式菜），簡中對齊繁中「希腊茄子千层派」"
+  },
+  "Recipes.json|VFX_PrepareFreshPastaPot": {
+    "as1_value": "准备一锅意面 (炖锅)",
+    "value": "准备一锅意面 (蒸煮锅)",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：Cooking Pot 簡中照本體官方簡中 Base.Pot「蒸煮锅」，和 VFX 其他鍋一致"
+  },
+  "Recipes.json|VFX_PrepareMoussaka": {
+    "as1_value": "准备希腊茄盒",
+    "value": "准备希腊茄子千层派",
+    "reason": "2026-11-02 VFX 舊譯稽核：主代理：Moussaka 不是茄盒（中式菜），簡中對齊繁中「希腊茄子千层派」"
   }
 }

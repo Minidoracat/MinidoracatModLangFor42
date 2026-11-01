@@ -4,6 +4,17 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Changed
+
+- **Vanilla Foods Expanded 照現行英文修正舊譯名（383 項）。** 這個 MOD 改過名的食品還照舊名翻：Space Cake（原「宇宙布朗尼」）改「太空蛋糕」、Pop Strudel「彈跳酥皮捲」、Twist Pop「扭扭棒棒糖」、Lucky Dip「幸運蘸糖」、Jazz Crackers「爵士餅乾」、Choco-Roos「巧克力袋鼠麥片」、Cheeps「啾啾棉花糖」、Koi Crackers「錦鯉餅乾」、Quagga Cakes「斑紋蛋糕」、Swirl Roll「漩渦捲」、Wheat Flakes「小麥片」。另修正錯譯：Tortellini 不再和 Ravioli 同名（義式餛飩／義大利餃）、Scalloped Potato Bake 不是「扇貝形」、Blue Raspberry 不是藍莓、Ranch 是田園沙拉醬、Moussaka 不是茄盒、簡中的四季豆和青豆同名、多根蠟燭的蛋糕和單根同名、Apple Butter 和蘋果醬同名；同一食物在物品、配方、料理名稱、右鍵選單統一譯名（義式馬鈴薯麵疙瘩、義式斜管麵、義式寬麵、比司吉、辣豆醬、簡中的蒸煮锅等）。
+  > 技術要點：VFX（3577903007）3,304 個出貨鍵以 `judge_batch` 對照現行英文初篩，標出 420 鍵，加上鍵名與英文對不上的 115 鍵，共 514 鍵由 3 路代理逐條裁決，改 212 鍵；依定案譯名表掃其餘鍵再改 157 鍵；2 路對抗複核採納 8 條，代理回報的同類問題另補 14 鍵（容器辣豆醬、柳橙口味、泡泡糖捲、英文相同的配方），並把簡中「炖锅」照本體官方簡中 `Base.Pot` 改「蒸煮锅」、「希腊茄盒」改「希腊茄子千层派」（10 鍵，多數與上列重疊）。舊譯來自 As1 2026-07 照更舊的英文翻，追蹤器 2026-08-06 建的 EN 基準已是新名，所以沒有「可能過時」issue。CH 改 `sources/ch`，CN 偏離登記 `cn_overrides`（附 `as1_value`），皆登記 `ch_review_state`。Biscuit 繁中照 LangFor42 `Base.Biscuit` 寫比司吉；EvolvedRecipeName 照英文泛稱（Ravioli、Apple 等不再帶口味或「派餡」）。VFX 繁中的全形括號 121 鍵改半形。英文仍是舊名的 `Base.VFXCocoaPuffsBowlEvolved`、`Base.VFXWheatiesBowlEvolved`、`VFX.ZebraCake` 照英文不換。
+- **Bundle Up 的食品箱跟著改名（219 項）。** 裝 Vanilla Foods Expanded 食品的箱子，品名對齊箱內物品（太空蛋糕、彈跳酥皮捲、扭扭棒棒糖、幸運蘸糖等），簡中的 Pop Strudel 箱不再留英文；冷凍水果箱補上「整袋」，柳橙口味與泡泡糖捲照台灣用字。
+  > 技術要點：Bundle Up（3746632343）`BundleUp.VFX_*` 等 5,685 個出貨鍵依同一份改名表逐鍵比對英文後改，CH 與 CN 都對齊箱內 VFX 物品的定案名，包裝格式不動；`BundleUp.QuaggaCakes*` 裝的是原版 `Base.QuaggaCakes`，照 LangFor42 與官方簡中。
+- **Bundle Up 簡中的「六罐装」改成「六连装」（143 項）。** 盒裝果汁、盒裝酒、紙盒牛奶也被寫成「罐」，和同一 MOD 設定說明的「六连装」不一致。
+  > 技術要點：使用者 2026-11-02 裁定；As1 原文「六罐装」登記 `cn_overrides`（附 `as1_value`），繁中維持「六入裝」。
+
 ## [42.21.0-1.69.0] - 2026-11-01
 
 ### Added
