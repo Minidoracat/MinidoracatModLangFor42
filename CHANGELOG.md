@@ -4,6 +4,27 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **20 個 MOD 更新後新增的文字補上繁簡中文（277 項）。** HDs Food Recipes 的韓式料理：部隊鍋、年糕湯、大醬湯與豬肉湯飯調理包、燒酒、生魚片與壽司、胡蘿蔔蛋糕、Zpam 午餐肉與飯糰（98 項）；Project Zomboid Optimiser 的效能分析器與 13 項 JVM 層修補設定（84 項）；Marriage Companion 的配偶隨手關門與休閒時的進食、收音機電視、洗澡洗衣選項（13 項）；Animal Crates 的貓狗計數與提示（12 項）；Abuelita Linda 的亡靈節食譜：尚普拉多、糖骷髏、南瓜蜜餞（10 項）；Project Cook 的介面與文字大小（10 項）；Palm Pilot 的行事曆提醒（9 項）；Blackout Predators Extended 的夜魔夜間追查噪音（8 項），以及直升機事件框架、The Only Cure+、Improved Farming Info Window、Long Term Preservation Extended、Neat Crafting、Dear Safehouse、Vanilla Fishing Fix、Bundle Up、Zero to Chad、Totally's NATO、Butchering Animals Plus、Break Big Rocks 的新選項、提示與物品。
+  > 技術要點：追蹤器 2026-11-01 #1194–#1216「可能過時」。276 鍵走 `apply_wf_result`／`apply_translations` 進 `own_translations.json` 並登記 `ch_review_state`；3 路翻譯、3 路對抗複核，採納 4 條（Optimiser 遮擋網格、Blackout Predators 的 poor hearing 是殭屍聽覺沙盒設定「耳背」與夜魔身上的穿戴物、Animal Crates 大型運輸籠照物品名、Break Big Rocks 坩堝選單與進度條的「倒入」）。Marriage Companion 的 `Sandbox_EN.txt` 第 1001 行漏了換行，tracker 抽不到 `Sandbox_RelaxSelfFeedingEnabled`，另以鍵級 `apply_translations` 補上（英文取 `Sandbox.json` 少了前綴的同名值，`_note` 記原因）。23 個 MOD 以 steamcmd 重抓現行版，corpus_hash 與 tracker state 逐一相符；重跑 prep 後缺口 0。HDs Food Recipes 的 `_EN.txt` 與 Project Cook、Optimiser、Neat Crafting、HEF、Break Big Rocks、Marriage Companion 的 `*_EN.txt`／`*_EN.json` 是 PZ 不讀的檔；Bundle Up 刪除又新增的 28 筆是子 MOD 資料夾從 `BundleUpUI` 改名 `Vanilla`；Long Term Preservation Extended（SE 版）新增的 374 筆除 4 個配方外早已出貨，刪除的 20 筆屬 As1 衍生層，依 split 不變式保留。
+
+### Changed
+
+- **上游改了英文的已出貨文字跟著改（13 項）。** Better Vehicle Dynamics 的灌木減速說明；Dry & Cure 三個「風乾大塊禽肉」配方；Animal Crates 5 種運輸籠的容量改成依物種與休息動畫所需空間而定；HDs Food Recipes 的開罐配方改成多種罐頭與調理包共用的「開啟」；The Only Cure+ 三個左側截肢特質補上說明（原本是空白）。
+  > 技術要點：As1 衍生層 8 鍵改 `sources/ch`＋`cn_overrides`（附 `as1_value`），own 層 5 鍵經 `apply_translations` 更新 `en` 錨點與譯文，皆登記 `ch_review_state`。截肢特質說明是 The Only Cure 原版（3580276809，英文留白）與 TOC+ 共用的鍵，As1 出貨一個空格；原版同樣不讓上臂截肢裝義肢（`ProsthesisHandler.CheckIfEquippable`），說明對兩個 MOD 都成立。
+- **修正寫錯或照舊版英文翻的已出貨譯文（142 項）。** Bundle Up 的調味料粉箱（羅勒粉等 8 種）不再和乾燥香草箱同名、鋼板與銅礦石照原版譯名、推推樂糖果的簡中不再寫成冰棒、仙女棒箱，以及簡中的汽水糖、巧克力豆餅乾、陶瓷蒸煮鍋、瓶蓋糖、去邊三明治、蘋果醬、警察雜誌、家常司康、自製木炭與合併成中盒／整盒；HDs Food Recipes 的簡中把堅果醬、甜菜糖漿、南瓜濃湯、熔煉碗譯成別的東西，4 個巧克力配方漏了抹茶，已開封的優格罐、未發酵米醋原液、閃電泡芙殼、橘子果醬餅乾；Blackout Predators 的簡中把阿爾法夜魔寫成「精英」、地名 Chestown 拆字譯成「箱鎮」；Palm Pilot 的開啟失敗提示、Better Vehicle Dynamics 的越野抓地力說明、The Only Cure+ 的殭屍截肢機率仍照舊版英文；Project Cook 的「不透明度」原譯意思相反；Break Big Rocks 的鐵坯；Abuelita Linda 的香草玉米糊飲名稱統一。
+  > 技術要點：本批 23 個 MOD 的 As1 衍生層 8,101 鍵（扣掉前幾批已稽核且值未變的 2,452 鍵）以 `judge_batch` 對照現行英文初篩，標出 444 鍵；加上英文較長、信心低於 0.8 的 821 鍵，共 1,265 鍵由 5 路代理逐條裁決，改譯 69 鍵；另依代理回報把同類錯誤一併改 73 鍵（Bundle Up 調味料粉箱 21、鋼板 18、推推樂 16、銅礦石 4、Abuelita Linda 玉米糊飲 3 等）。CH 改 `sources/ch`，CN 偏離登記 `cn_overrides`（附 `as1_value`），own 層 1 鍵經 `apply_translations`，皆登記 `ch_review_state`。Bundle Up 內容物照使用者裁定（2026-10-07）：繁中取 LangFor42、簡中取本體官方簡中；As1 簡中「內容物 (容器)」的寫法不算錯，只改內容物譯錯或同名的條目。
+- **Abuelita Linda 與 Realistic Recipes 共用的配方名補上衝突裁決。** 兩個 MOD 的 `MakeDough` 都產出麵糰，「製作麵糰」對兩方都成立，維持不變；啟用單一 MOD 時依各自英文套用條件譯文。
+  > 技術要點：`owner_conflict_decisions` 新增 `Recipes|MakeDough` 一筆 translate（`owner_variants` 原已有兩組），`OWNER_CONFLICTS.md` 重生。
+
+### Removed
+
+- **Long Term Preservation Extended 拿掉的功能，刪除 62 項失效譯文。** 上游移除「拾取附近物品／衣物／鑰匙／錢包／手錶」、剝下屍體衣物、拾取分類設定與 15 個開局城鎮選項。
+  > 技術要點：#1200 刪除 82 鍵，其中 As1 衍生層 20 鍵依 split 不變式保留；own 層 62 鍵在 `sources/en` 全庫與 tracker state 都已無 owner，steamcmd 重抓的現行版 Lua、script、`sandbox-options.txt` 也無引用，依 tracker.md 步驟 5-8 自 `own_translations.json` 與 `ch_review_state` 刪除。
+
 ## [42.21.0-1.68.0] - 2026-10-31
 
 ### Added

@@ -59836,9 +59836,9 @@
     "as1_value": "遵循与游戏自带时钟相同的规则. 如果你手腕上没有手表或手中没有钟表, 你只能知道大致时段 (上午、傍晚等). 日期和温度需要数字设备才能显示. 包里的手表不算数."
   },
   "Tooltip.json|Tooltip_SAB_CompactBox": {
-    "value": "仅限装载动物的容器. 装载的动物按体重计算负重; 每只成年鸡最多增加4点负重. 空箱负重: 1. 可装1只支持的成年动物或最多4只幼崽; 混装时共用容量. 右键点击可装入手中抓着的动物, 或取出已命名的动物. 放在地上时, 打开门可让动物在1-5秒的随机延迟后陆续离开. 装入动物、拿起或举起箱子会自动关门. 箱内动物仍需照料.",
-    "reason": "2026-10-18 As1 v3.11.0 新收此鍵，簡中依上游英文修正：CN 譯成「可裝1隻雞或最多4隻小雞; 其他小動物需體型合適」, en 為「1 隻支援的成年動物或最多 4 隻幼崽; 混裝共用容量」。",
-    "as1_value": "仅限装载动物的容器. 装载的动物按体重计算负重; 每只成年鸡最多增加4点负重. 空箱负重: 1. 可装1只鸡或最多4只小鸡; 其他小动物需体型合适. 右键点击可装入手中抓着的动物, 或取出已命名的动物. 放在地上时, 打开门可让动物在1-5秒的随机延迟后陆续离开. 装入动物、拿起或举起箱子会自动关门. 箱内动物仍需照料."
+    "as1_value": "仅限装载动物的容器. 装载的动物按体重计算负重; 每只成年鸡最多增加4点负重. 空箱负重: 1. 可装1只鸡或最多4只小鸡; 其他小动物需体型合适. 右键点击可装入手中抓着的动物, 或取出已命名的动物. 放在地上时, 打开门可让动物在1-5秒的随机延迟后陆续离开. 装入动物、拿起或举起箱子会自动关门. 箱内动物仍需照料.",
+    "value": "仅限装载动物的容器. 装载的动物按体重计算负重; 每只成年鸡最多增加4点负重. 空箱负重: 1. 容量取决于物种及其休息动画所需的空间; 混装时内容物必须能一起放下. 右键点击可装入手中抓着的动物, 或取出已命名的动物. 放在地上时, 打开门可让动物在1-5秒的随机延迟后陆续离开. 装入动物、拿起或举起箱子会自动关门. 箱内动物仍需照料.",
+    "reason": "2026-11-01 追蹤器 #1194–#1216：上游英文從「Animal-only carrier. Stored animals use body weight; adult chickens add at most …」改成新版，照現行英文重譯。"
   },
   "IG_UI.json|IGUI_SFC_ClaimDeed_UseOption": {
     "value": "预览安全屋认领范围",
@@ -67269,5 +67269,605 @@
     "as1_value": "Numark 综合厢式货车",
     "value": "Numark 设施厢式货车",
     "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：與本批 Numark 地下設施譯名一致；簡中原把 Complex 誤成「综合」"
+  },
+  "Sandbox.json|Sandbox_BVD_ShoveFoliage_tooltip": {
+    "as1_value": "车身接触灌木和小型植物时传递的推力.",
+    "value": "灌木和小型植物接触车身时使车辆减速的程度. 默认为 1.0: 动力弱的引擎会被拖慢, 动力强的则能直接冲过. 0 = 灌木毫无作用, 数值越高 = 越接近原版游戏, 即任何灌木都能挡住任何车辆.",
+    "reason": "2026-11-01 追蹤器 #1194–#1216：上游英文從「Force the body transfers into bushes and small plants on contact.」改成新版，照現行英文重譯。"
+  },
+  "Recipes.json|DC_Advanced_DryLargeMeat": {
+    "as1_value": "风干大块肉",
+    "value": "风干大块禽肉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216：上游英文從「Dry Large Meat」改成新版，照現行英文重譯。"
+  },
+  "Recipes.json|DC_Basic_DryLargeMeat": {
+    "as1_value": "风干大块肉",
+    "value": "风干大块禽肉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216：上游英文從「Dry Large Meat」改成新版，照現行英文重譯。"
+  },
+  "Recipes.json|DC_Professional_DryLargeMeat": {
+    "as1_value": "风干大块肉",
+    "value": "风干大块禽肉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216：上游英文從「Dry Large Meat」改成新版，照現行英文重譯。"
+  },
+  "UI.json|UI_trait_Amputee_ForeArm_desc": {
+    "as1_value": " ",
+    "value": "灾变之前你就失去了左前臂. 残肢已经愈合.",
+    "reason": "2026-11-01 追蹤器 #1194–#1216：上游補上說明（As1 值是一個空格），照現行英文翻。"
+  },
+  "UI.json|UI_trait_Amputee_Hand_desc": {
+    "as1_value": " ",
+    "value": "灾变之前你就失去了左手. 残肢已经愈合.",
+    "reason": "2026-11-01 追蹤器 #1194–#1216：上游補上說明（As1 值是一個空格），照現行英文翻。"
+  },
+  "UI.json|UI_trait_Amputee_UpperArm_desc": {
+    "as1_value": " ",
+    "value": "灾变之前你就失去了整条左臂. 无法安装义肢.",
+    "reason": "2026-11-01 追蹤器 #1194–#1216：上游補上說明（As1 值是一個空格），照現行英文翻。"
+  },
+  "ItemName.json|BundleUp.CandyNovapopsCarton": {
+    "as1_value": "诺瓦棒棒糖 (纸箱)",
+    "value": "箱装汽水糖",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是本體 CandyNovapops, 官方簡中為「汽水糖」; 「诺瓦棒棒糖」會被看成本體的棒棒糖 (Base.Lollipop)"
+  },
+  "ItemName.json|BundleUp.CandyNovapopsCase": {
+    "as1_value": "诺瓦棒棒糖 (整箱)",
+    "value": "大箱装汽水糖",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是本體 CandyNovapops, 官方簡中為「汽水糖」; 「诺瓦棒棒糖」會被看成本體的棒棒糖 (Base.Lollipop)"
+  },
+  "ItemName.json|BundleUp.CandyNovapopsCrate": {
+    "as1_value": "诺瓦棒棒糖 (木箱)",
+    "value": "板条箱装汽水糖",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是本體 CandyNovapops, 官方簡中為「汽水糖」; 「诺瓦棒棒糖」會被看成本體的棒棒糖 (Base.Lollipop)"
+  },
+  "ItemName.json|BundleUp.Chocolate_ButterchunkersCarton": {
+    "as1_value": "巧克力棒 (Butterchunkers, 纸箱)",
+    "value": "箱装巧克力豆饼干",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是本體 Chocolate_Butterchunkers, 官方簡中為「巧克力豆饼干」; 「巧克力棒」對不上背包裡的物品"
+  },
+  "ItemName.json|BundleUp.Chocolate_ButterchunkersCase": {
+    "as1_value": "巧克力棒 (Butterchunkers, 整箱)",
+    "value": "大箱装巧克力豆饼干",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是本體 Chocolate_Butterchunkers, 官方簡中為「巧克力豆饼干」; 「巧克力棒」對不上背包裡的物品"
+  },
+  "ItemName.json|BundleUp.Chocolate_ButterchunkersCrate": {
+    "as1_value": "巧克力棒 (Butterchunkers, 木箱)",
+    "value": "板条箱装巧克力豆饼干",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是本體 Chocolate_Butterchunkers, 官方簡中為「巧克力豆饼干」; 「巧克力棒」對不上背包裡的物品"
+  },
+  "ItemName.json|BundleUp.ClayPotBox": {
+    "as1_value": "陶瓷罐 (整盒)",
+    "value": "盒装陶瓷蒸煮锅",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是本體 ClayPot (烹飪用陶鍋), 官方簡中「陶瓷蒸煮锅」; 「陶瓷罐」會被當成儲物罐"
+  },
+  "ItemName.json|BundleUp.GamePieceBlackBox": {
+    "as1_value": "游戏币 (黑, Black, 整盒)",
+    "value": "盒装黑色游戏币",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：As1 複製貼上殘留英文「黑, Black」; 照同組 Red/White 已修的寫法改成官方名「黑色游戏币」"
+  },
+  "ItemName.json|BundleUp.Magazine_PoliceBundle": {
+    "as1_value": "警用车杂志 (整盒)",
+    "value": "盒装警察杂志",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：内容物是原版 Magazine_Police (警察/犯罪类杂志)，“警用车杂志”把它译成警车杂志。"
+  },
+  "ItemName.json|BundleUp.Magazine_Police_NewBundle": {
+    "as1_value": "警用车杂志 (整盒)",
+    "value": "盒装警察杂志",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：内容物是原版 Magazine_Police (警察/犯罪类杂志)，“警用车杂志”把它译成警车杂志。"
+  },
+  "ItemName.json|BundleUp.Seasoning_ThymeCarton": {
+    "as1_value": "百里香粉 (纸箱)",
+    "value": "箱装百里香粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Thyme (LangFor42: 百里香粉)；寫成「百里香 (乾燥)」會和同 MOD 裝 Base.ThymeDried 的箱子同名。；內容物是 Base.Seasoning_Thyme（LangFor42／官方簡中「百里香粉」），原譯和同 MOD 的乾燥香草箱（Base.ThymeDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_ThymeCase": {
+    "as1_value": "百里香粉 (整箱)",
+    "value": "大箱装百里香粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Thyme (LangFor42: 百里香粉)；寫成「百里香 (乾燥)」會和同 MOD 裝 Base.ThymeDried 的箱子同名。；內容物是 Base.Seasoning_Thyme（LangFor42／官方簡中「百里香粉」），原譯和同 MOD 的乾燥香草箱（Base.ThymeDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_ThymeCrate": {
+    "as1_value": "百里香粉 (木箱)",
+    "value": "板条箱装百里香粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Thyme (LangFor42: 百里香粉)；寫成「百里香 (乾燥)」會和同 MOD 裝 Base.ThymeDried 的箱子同名。；內容物是 Base.Seasoning_Thyme（LangFor42／官方簡中「百里香粉」），原譯和同 MOD 的乾燥香草箱（Base.ThymeDried）同名"
+  },
+  "ItemName.json|BundleUp.ThymeDriedCarton": {
+    "as1_value": "百里香粉 (纸箱)",
+    "value": "箱装百里香 (干燥)",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：内容物是 Base.ThymeDried (官方简中: 百里香 (干燥))，“百里香粉”是另一个物品 Seasoning_Thyme。"
+  },
+  "ItemName.json|BundleUp.ThymeDriedCase": {
+    "as1_value": "百里香粉 (整箱)",
+    "value": "大箱装百里香 (干燥)",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：内容物是 Base.ThymeDried (官方简中: 百里香 (干燥))，“百里香粉”是另一个物品 Seasoning_Thyme。"
+  },
+  "ItemName.json|BundleUp.ThymeDriedCrate": {
+    "as1_value": "百里香粉 (木箱)",
+    "value": "板条箱装百里香 (干燥)",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：内容物是 Base.ThymeDried (官方简中: 百里香 (干燥))，“百里香粉”是另一个物品 Seasoning_Thyme。"
+  },
+  "ItemName.json|BundleUp.VFX_AppleButterCarton": {
+    "as1_value": "苹果黄油 (纸箱)",
+    "value": "箱装苹果酱",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：Apple Butter 是果酱，VFX 本体简中为“苹果酱”；“苹果黄油”会被看成黄油。"
+  },
+  "ItemName.json|BundleUp.VFX_AppleButterCase": {
+    "as1_value": "苹果黄油 (整箱)",
+    "value": "大箱装苹果酱",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：Apple Butter 是果酱，VFX 本体简中为“苹果酱”；“苹果黄油”会被看成黄油。"
+  },
+  "ItemName.json|BundleUp.VFX_AppleButterCrate": {
+    "as1_value": "苹果黄油 (木箱)",
+    "value": "板条箱装苹果酱",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：Apple Butter 是果酱，VFX 本体简中为“苹果酱”；“苹果黄油”会被看成黄油。"
+  },
+  "ItemName.json|BundleUp.VFX_BottleTopsCarton": {
+    "as1_value": "瓶盖 (纸箱)",
+    "value": "箱装瓶盖糖",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：Bottle Tops 是 VFX 糖果 (本体简中“瓶盖糖”)，“瓶盖”会被看成瓶盖杂物。"
+  },
+  "ItemName.json|BundleUp.VFX_BottleTopsCase": {
+    "as1_value": "瓶盖 (整箱)",
+    "value": "大箱装瓶盖糖",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：Bottle Tops 是 VFX 糖果 (本体简中“瓶盖糖”)，“瓶盖”会被看成瓶盖杂物。"
+  },
+  "ItemName.json|BundleUp.VFX_BottleTopsCrate": {
+    "as1_value": "瓶盖 (木箱)",
+    "value": "板条箱装瓶盖糖",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：Bottle Tops 是 VFX 糖果 (本体简中“瓶盖糖”)，“瓶盖”会被看成瓶盖杂物。"
+  },
+  "ItemName.json|BundleUp.VFX_CHUncrustableCarton": {
+    "as1_value": "巧克力榛子无壳派 (纸箱)",
+    "value": "箱装巧克力榛子酱去边三明治",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：Crustless 是去边三明治 (VFX 本体简中)，“无壳派”译成了派。"
+  },
+  "ItemName.json|BundleUp.VFX_CSUncrustableCarton": {
+    "as1_value": "肉桂糖无壳派 (纸箱)",
+    "value": "箱装肉桂糖去边三明治",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：Crustless 是去边三明治 (VFX 本体简中)，“无壳派”译成了派。"
+  },
+  "ItemName.json|BundleUp.VFX_CSUncrustableCrate": {
+    "as1_value": "肉桂糖无壳派 (木箱)",
+    "value": "板条箱装肉桂糖去边三明治",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：Crustless 是去边三明治 (VFX 本体简中)，“无壳派”译成了派。"
+  },
+  "ItemName.json|BundleUp.VFX_CannedPepperSteakStew_BoxCase": {
+    "as1_value": "青椒牛排炖菜罐头 (整箱)",
+    "value": "大箱装黑椒牛排炖菜罐头",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：内容物 VFX 本体简中为“黑椒牛排炖菜罐头”，“青椒”与本体物品名不符，看不出是同一物品。"
+  },
+  "ItemName.json|BundleUp.VFX_CannedPepperSteakStew_BoxCrate": {
+    "as1_value": "青椒牛排炖菜罐头 (木箱)",
+    "value": "板条箱装黑椒牛排炖菜罐头",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：内容物 VFX 本体简中为“黑椒牛排炖菜罐头”，“青椒”与本体物品名不符，看不出是同一物品。"
+  },
+  "Recipes.json|MergeBoxSmall": {
+    "as1_value": "合并为中箱",
+    "value": "合并为中盒",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：产物是「钉子／螺丝 (中盒)」，CN 写「中箱」与物品名对不上，箱在本 MOD 指 Carton"
+  },
+  "Recipes.json|UnpackWoodCharcoal": {
+    "as1_value": "拆开木炭 (12件)",
+    "value": "拆开自制木炭 (12件)",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：产物是 Base.CharcoalCrafted（官方简中「自制木炭」），「木炭」是另一个原版物品 Base.Charcoal"
+  },
+  "ItemName.json|BundleUp.VFX_HomestyleBiscuitCarton": {
+    "as1_value": "家常饼干 (纸箱)",
+    "value": "箱装家常司康",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：Homestyle Biscuit 是美式司康，As1 写「家常饼干」会被当成饼干；内容物照本包 VFX 简中「家常司康」"
+  },
+  "ItemName.json|BundleUp.VFX_HomestyleBiscuitCase": {
+    "as1_value": "家常饼干 (整箱)",
+    "value": "大箱装家常司康",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：Homestyle Biscuit 是美式司康，As1 写「家常饼干」会被当成饼干；内容物照本包 VFX 简中「家常司康」"
+  },
+  "ItemName.json|BundleUp.VFX_HomestyleBiscuitCrate": {
+    "as1_value": "家常饼干 (木箱)",
+    "value": "板条箱装家常司康",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：Homestyle Biscuit 是美式司康，As1 写「家常饼干」会被当成饼干；内容物照本包 VFX 简中「家常司康」"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopCherryCrate": {
+    "as1_value": "扭扭冰棒 (樱桃, 木箱)",
+    "value": "板条箱装樱桃推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：推推乐：本体为糖果（FoodType = Candy），As1「扭扭冰棒」写成冰棒，品类错；内容物照本包 VFX 简中「樱桃推推乐」"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopColaCarton": {
+    "as1_value": "扭扭冰棒 (可乐, 纸箱)",
+    "value": "箱装可乐推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：推推乐：本体为糖果（FoodType = Candy），As1「扭扭冰棒」写成冰棒，品类错；内容物照本包 VFX 简中「可乐推推乐」"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopColaCase": {
+    "as1_value": "扭扭冰棒 (可乐, 整箱)",
+    "value": "大箱装可乐推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：推推乐：本体为糖果（FoodType = Candy），As1「扭扭冰棒」写成冰棒，品类错；内容物照本包 VFX 简中「可乐推推乐」"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopColaCrate": {
+    "as1_value": "扭扭冰棒 (可乐, 木箱)",
+    "value": "板条箱装可乐推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：推推乐：本体为糖果（FoodType = Candy），As1「扭扭冰棒」写成冰棒，品类错；内容物照本包 VFX 简中「可乐推推乐」"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopWatermelonCase": {
+    "as1_value": "扭扭冰棒 (西瓜, 整箱)",
+    "value": "大箱装西瓜推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：推推乐：本体为糖果（FoodType = Candy），As1「扭扭冰棒」写成冰棒，品类错；内容物照本包 VFX 简中「西瓜推推乐」"
+  },
+  "Sandbox.json|Sandbox_BundleUp_SpawnSeeds_tooltip": {
+    "as1_value": "园艺店、农场库房与大卖场农资货架上的种子袋. '继承默认'沿用上方的总设置.",
+    "value": "园艺店、农场库房与大卖场农资货架上的盒装种子包. '继承默认'沿用上方的总设置.",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：英文是 Boxes of seed packets, CN 只寫「种子袋」, 讀成控制原版種子包本身的生成; 補上盒装, 內容物照官方简中「种子包」"
+  },
+  "ContextMenu.json|ContextMenu_BPE_SpawnAlpha": {
+    "as1_value": "[管理员] 在附近生成精英夜魔",
+    "value": "[管理员] 在附近生成阿尔法夜魔",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：CN 把 alpha 译成「精英」, 但本 MOD 的 Elite 另指阿尔法+蓝夜魔+暴君 (E.isElite), 与诱饵/伪装说明的「精英」混淆; 统一成阿尔法, 与 CH 一致"
+  },
+  "ItemName.json|ItemName_BPE.AlphaBody": {
+    "as1_value": "精英夜魔",
+    "value": "阿尔法夜魔",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：同上: alpha 与 elite 是不同概念, CN 统一为阿尔法"
+  },
+  "ItemName.json|ItemName_BPE.NestMap_Chestown": {
+    "as1_value": "感染巢地图: 箱镇",
+    "value": "感染巢地图: 切斯镇",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：地名 Chestown 被拆字误译成「箱镇」, 玩家对不上地图; 照 CH 音译"
+  },
+  "Sandbox.json|Sandbox_BPE_AlphaChance": {
+    "as1_value": "有精英守卫的巢穴 (%%)",
+    "value": "有阿尔法守卫的巢穴 (%%)",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：alpha 统一为阿尔法, 避免与 Elite (精英) 混淆"
+  },
+  "Sandbox.json|Sandbox_BPE_AlphaChance_tooltip": {
+    "as1_value": "第一个沉睡者为精英夜魔的巢穴: 体型更大, 更耐打, 更快摆脱紫外线影响.",
+    "value": "第一个沉睡者为阿尔法的巢穴: 体型更大, 更耐打, 更快摆脱紫外线影响.",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：alpha 统一为阿尔法"
+  },
+  "Sandbox.json|Sandbox_BPE_RoamingAlphaChance_tooltip": {
+    "as1_value": "夜间在外游荡的夜魔中精英所占的比例.",
+    "value": "夜间在外游荡的夜魔中阿尔法所占的比例.",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：alpha 统一为阿尔法"
+  },
+  "Sandbox.json|Sandbox_TOC_ZombieAmputationDamageChance": {
+    "as1_value": "僵尸截肢伤害几率",
+    "value": "僵尸截肢: 每次命中的几率 (百分比)",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：舊譯照舊版英文, 漏掉「每次命中」與單位「百分比」"
+  },
+  "ItemName.json|HDF.BakingTrayEclairShell": {
+    "as1_value": "摆放泡芙壳的烤盘",
+    "value": "摆放闪电泡芙壳的烤盘",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：CN「泡芙壳」与 Choux Pastry Shell 同名, 分不出闪电泡芙壳"
+  },
+  "ItemName.json|HDF.BowlPumpkinSoup": {
+    "as1_value": "一碗土豆浓汤",
+    "value": "一碗南瓜浓汤",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：CN 写成土豆浓汤, 对应到别的食物"
+  },
+  "ItemName.json|HDF.CookingPotConcentratedSalineExtract": {
+    "as1_value": "一锅盐水",
+    "value": "一锅浓缩盐水",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：CN 漏掉「浓缩」, 与 Cooking Pot of Saline Extract (一锅盐水) 同名"
+  },
+  "ItemName.json|HDF.JarFoodYogurtOpen": {
+    "as1_value": "装有未发酵酸奶原液的罐子",
+    "value": "已开封的酸奶罐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：舊譯寫成未發酵的優格原液 (那是 Unfermented Yogurt Jar), 實為已開封的成品優格"
+  },
+  "ItemName.json|HDF.MarmaladeCookie": {
+    "as1_value": "果酱饼干",
+    "value": "橘子果酱曲奇",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：CN 漏掉 marmalade, 与 Jam Cookie 分不出；和 Jam Cookie 分不出來；同 MOD 餅乾 CN 用「曲奇」"
+  },
+  "ItemName.json|HDF.NutSpread": {
+    "as1_value": "一锅融化棉花糖膏",
+    "value": "坚果酱",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：CN 写成「一锅融化棉花糖膏」, 对应到别的物品"
+  },
+  "ItemName.json|HDF.NutsPowder": {
+    "as1_value": "坚果",
+    "value": "坚果粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：CN 漏掉「粉」, 变成坚果本身"
+  },
+  "ItemName.json|HDF.StrainedSyrup": {
+    "as1_value": "一锅水煮甜菜根",
+    "value": "过滤后的甜菜糖浆",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：CN 写成「一锅水煮甜菜根」, 对应到上一步的物品"
+  },
+  "ItemName.json|HDF.UnfermentedRiceVinegar": {
+    "as1_value": "勾兑米醋",
+    "value": "未发酵米醋原液",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：「勾兌米醋」是可直接用的成品醋, 實為還要發酵、不能吃的原液; 照同 MOD 未發酵醋原液格式"
+  },
+  "Recipes.json|HDF_ChocolateButterCream": {
+    "as1_value": "制作巧克力黄油糖霜",
+    "value": "制作巧克力/抹茶黄油糖霜",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：漏掉抹茶: 現行配方可用抹茶粉做抹茶奶油霜"
+  },
+  "Recipes.json|HDF_Forge_MeltingBowl": {
+    "as1_value": "打火石和钢",
+    "value": "锻造熔炼碗",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：CN 写成「打火石和钢」, 对应到别的物品"
+  },
+  "Recipes.json|HDF_Get2TomatoPaste": {
+    "as1_value": "获取2份番茄酱",
+    "value": "获取2份番茄膏",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：产出 Base.TomatoPaste (官方简中: 番茄膏); 「番茄酱」是原版 Ketchup 的名称"
+  },
+  "Recipes.json|HDF_LeafGelatin": {
+    "as1_value": "泡发吉利丁片",
+    "value": "制作吉利丁片",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：配方是把過濾後的吉利丁液倒模做成吉利丁片, 不是泡發"
+  },
+  "Recipes.json|HDF_MakeChocolatePoundCakeBatter": {
+    "as1_value": "制作巧克力磅蛋糕",
+    "value": "制作巧克力/抹茶磅蛋糕",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：漏掉抹茶: 現行配方可做抹茶磅蛋糕"
+  },
+  "Recipes.json|HDF_MakeChocolateWhippedCream": {
+    "as1_value": "制作巧克力鲜奶油",
+    "value": "制作巧克力/抹茶鲜奶油",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：漏掉抹茶: 現行配方可做抹茶鮮奶油"
+  },
+  "Recipes.json|HDF_MakeEclairShell": {
+    "as1_value": "制作泡芙壳",
+    "value": "制作闪电泡芙壳",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：CN「泡芙壳」与 Choux Pastry Shell 同名, 分不出"
+  },
+  "Recipes.json|HDF_RoastingPanChocolateSpongeCakeSheet": {
+    "as1_value": "制作巧克力海绵蛋糕片",
+    "value": "制作巧克力/抹茶海绵蛋糕片",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：漏掉抹茶: 現行配方可用抹茶粉"
+  },
+  "Recipes.json|HDF_ShellCacaoBeans": {
+    "as1_value": "可可豆 (带壳)",
+    "value": "剥可可豆壳",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：CN 写成物品名「可可豆 (带壳)」, 不是剥壳动作"
+  },
+  "IG_UI.json|IGUI_PJCK_SlotOpacity": {
+    "as1_value": "槽位透明度",
+    "value": "槽位不透明度",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：opacity 译成「透明度」意思相反, 数值方向会看反"
+  },
+  "Sandbox.json|Sandbox_DestroyBoulder_IronBloomChance_tooltip": {
+    "as1_value": "摧毁巨石时产生铁渣的概率.",
+    "value": "摧毁巨石时产生铁坯的概率.",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：掉落物是 Base.IronBloom (LangFor42 鐵坯 / 官方简中 铁坯), 「鐵渣」是另一種東西"
+  },
+  "Sandbox.json|Sandbox_BVD_OffroadGrip_tooltip": {
+    "as1_value": "在泥土, 草地和碎石路面上相对于铺装路面的抓地力系数.",
+    "value": "越野抓地力强度. 数值越高, 在泥土, 草地和碎石路面上的抓地力越强 (轮胎越不容易打滑). 默认 0.85 = 中等打滑; 1.5 = 接近铺装路面的手感. 不会改变滚动阻力, 滚动阻力请通过 “滚动阻力 (越野)” 调整.",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：舊譯照舊版英文, 漏掉數值方向, 預設值 0.85/1.5 與不影響滾動阻力的說明"
+  },
+  "UI.json|UI_PalmPilots_OpenFailed": {
+    "as1_value": "无法装备或打开这台 PalmPilot. 请将其移到主物品栏后重试.",
+    "value": "打开 PalmPilot 时被中断了. 请站着不动再试一次. 如果在多人游戏中反复出现, 请确认服务器和所有玩家的模组文件一致.",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：舊譯是舊版英文 (要移到主物品欄), 現行英文改為開啟被中斷, 要站著不動重試並檢查多人模組檔"
+  },
+  "ItemName.json|BundleUp.Seasoning_BasilCarton": {
+    "as1_value": "罗勒叶 (干燥, 纸箱)",
+    "value": "箱装罗勒粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Basil（LangFor42／官方簡中「罗勒粉」），原譯和同 MOD 的乾燥香草箱（Base.BasilDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_BasilCase": {
+    "as1_value": "罗勒叶 (干燥, 整箱)",
+    "value": "大箱装罗勒粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Basil（LangFor42／官方簡中「罗勒粉」），原譯和同 MOD 的乾燥香草箱（Base.BasilDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_BasilCrate": {
+    "as1_value": "罗勒叶 (干燥, 木箱)",
+    "value": "板条箱装罗勒粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Basil（LangFor42／官方簡中「罗勒粉」），原譯和同 MOD 的乾燥香草箱（Base.BasilDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_ChivesCarton": {
+    "as1_value": "细香葱 (干燥, 纸箱)",
+    "value": "箱装细香葱粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Chives（LangFor42／官方簡中「细香葱粉」），原譯和同 MOD 的乾燥香草箱（Base.ChivesDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_ChivesCase": {
+    "as1_value": "细香葱 (干燥, 整箱)",
+    "value": "大箱装细香葱粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Chives（LangFor42／官方簡中「细香葱粉」），原譯和同 MOD 的乾燥香草箱（Base.ChivesDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_ChivesCrate": {
+    "as1_value": "细香葱 (干燥, 木箱)",
+    "value": "板条箱装细香葱粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Chives（LangFor42／官方簡中「细香葱粉」），原譯和同 MOD 的乾燥香草箱（Base.ChivesDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_CilantroCarton": {
+    "as1_value": "香菜 (干燥, 纸箱)",
+    "value": "箱装香菜粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Cilantro（LangFor42／官方簡中「香菜粉」），原譯和同 MOD 的乾燥香草箱（Base.CilantroDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_CilantroCase": {
+    "as1_value": "香菜 (干燥, 整箱)",
+    "value": "大箱装香菜粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Cilantro（LangFor42／官方簡中「香菜粉」），原譯和同 MOD 的乾燥香草箱（Base.CilantroDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_CilantroCrate": {
+    "as1_value": "香菜 (干燥, 木箱)",
+    "value": "板条箱装香菜粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Cilantro（LangFor42／官方簡中「香菜粉」），原譯和同 MOD 的乾燥香草箱（Base.CilantroDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_OreganoCarton": {
+    "as1_value": "牛至 (干燥, 纸箱)",
+    "value": "箱装牛至粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Oregano（LangFor42／官方簡中「牛至粉」），原譯和同 MOD 的乾燥香草箱（Base.OreganoDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_OreganoCase": {
+    "as1_value": "牛至 (干燥, 整箱)",
+    "value": "大箱装牛至粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Oregano（LangFor42／官方簡中「牛至粉」），原譯和同 MOD 的乾燥香草箱（Base.OreganoDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_OreganoCrate": {
+    "as1_value": "牛至 (干燥, 木箱)",
+    "value": "板条箱装牛至粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Oregano（LangFor42／官方簡中「牛至粉」），原譯和同 MOD 的乾燥香草箱（Base.OreganoDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_ParsleyCarton": {
+    "as1_value": "欧芹 (干燥, 纸箱)",
+    "value": "箱装欧芹粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Parsley（LangFor42／官方簡中「欧芹粉」），原譯和同 MOD 的乾燥香草箱（Base.ParsleyDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_ParsleyCase": {
+    "as1_value": "欧芹 (干燥, 整箱)",
+    "value": "大箱装欧芹粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Parsley（LangFor42／官方簡中「欧芹粉」），原譯和同 MOD 的乾燥香草箱（Base.ParsleyDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_ParsleyCrate": {
+    "as1_value": "欧芹 (干燥, 木箱)",
+    "value": "板条箱装欧芹粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Parsley（LangFor42／官方簡中「欧芹粉」），原譯和同 MOD 的乾燥香草箱（Base.ParsleyDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_RosemaryCarton": {
+    "as1_value": "迷迭香 (干燥, 纸箱)",
+    "value": "箱装迷迭香粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Rosemary（LangFor42／官方簡中「迷迭香粉」），原譯和同 MOD 的乾燥香草箱（Base.RosemaryDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_RosemaryCase": {
+    "as1_value": "迷迭香 (干燥, 整箱)",
+    "value": "大箱装迷迭香粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Rosemary（LangFor42／官方簡中「迷迭香粉」），原譯和同 MOD 的乾燥香草箱（Base.RosemaryDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_RosemaryCrate": {
+    "as1_value": "迷迭香 (干燥, 木箱)",
+    "value": "板条箱装迷迭香粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Rosemary（LangFor42／官方簡中「迷迭香粉」），原譯和同 MOD 的乾燥香草箱（Base.RosemaryDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_SageCarton": {
+    "as1_value": "鼠尾草 (干燥, 纸箱)",
+    "value": "箱装鼠尾草粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Sage（LangFor42／官方簡中「鼠尾草粉」），原譯和同 MOD 的乾燥香草箱（Base.SageDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_SageCase": {
+    "as1_value": "鼠尾草 (干燥, 整箱)",
+    "value": "大箱装鼠尾草粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Sage（LangFor42／官方簡中「鼠尾草粉」），原譯和同 MOD 的乾燥香草箱（Base.SageDried）同名"
+  },
+  "ItemName.json|BundleUp.Seasoning_SageCrate": {
+    "as1_value": "鼠尾草 (干燥, 木箱)",
+    "value": "板条箱装鼠尾草粉",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：內容物是 Base.Seasoning_Sage（LangFor42／官方簡中「鼠尾草粉」），原譯和同 MOD 的乾燥香草箱（Base.SageDried）同名"
+  },
+  "ItemName.json|BundleUp.ChessBlackBox": {
+    "as1_value": "西洋棋子 (黑, Black, 整盒)",
+    "value": "盒装西洋棋子 (黑)",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：CN 殘留英文 Black；內容物照官方簡中「西洋棋子 (黑)」"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopCherryCarton": {
+    "as1_value": "扭扭冰棒 (樱桃, 纸箱)",
+    "value": "箱装樱桃推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopCherryCase": {
+    "as1_value": "扭扭冰棒 (樱桃, 整箱)",
+    "value": "大箱装樱桃推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopFruitFrenzyCarton": {
+    "as1_value": "扭扭冰棒 (水果狂欢, 纸箱)",
+    "value": "箱装水果狂欢推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopFruitFrenzyCase": {
+    "as1_value": "扭扭冰棒 (水果狂欢, 整箱)",
+    "value": "大箱装水果狂欢推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopFruitFrenzyCrate": {
+    "as1_value": "扭扭冰棒 (水果狂欢, 木箱)",
+    "value": "板条箱装水果狂欢推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopGrapeCarton": {
+    "as1_value": "扭扭冰棒 (葡萄, 纸箱)",
+    "value": "箱装葡萄推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopGrapeCase": {
+    "as1_value": "扭扭冰棒 (葡萄, 整箱)",
+    "value": "大箱装葡萄推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopGrapeCrate": {
+    "as1_value": "扭扭冰棒 (葡萄, 木箱)",
+    "value": "板条箱装葡萄推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopRainbowSherbetCarton": {
+    "as1_value": "扭扭冰棒 (彩虹雪泥, 纸箱)",
+    "value": "箱装彩虹冰沙推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopRainbowSherbetCase": {
+    "as1_value": "扭扭冰棒 (彩虹雪泥, 整箱)",
+    "value": "大箱装彩虹冰沙推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopRainbowSherbetCrate": {
+    "as1_value": "扭扭冰棒 (彩虹雪泥, 木箱)",
+    "value": "板条箱装彩虹冰沙推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopStrawberryCarton": {
+    "as1_value": "扭扭冰棒 (草莓, 纸箱)",
+    "value": "箱装草莓推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopStrawberryCase": {
+    "as1_value": "扭扭冰棒 (草莓, 整箱)",
+    "value": "大箱装草莓推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopStrawberryCrate": {
+    "as1_value": "扭扭冰棒 (草莓, 木箱)",
+    "value": "板条箱装草莓推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopWatermelonCarton": {
+    "as1_value": "扭扭冰棒 (西瓜, 纸箱)",
+    "value": "箱装西瓜推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+  },
+  "ItemName.json|BundleUp.VFX_PushPopWatermelonCrate": {
+    "as1_value": "扭扭冰棒 (西瓜, 木箱)",
+    "value": "板条箱装西瓜推推乐",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：腳本 FoodType = Candy，是糖果不是冰棒；內容物照本包 VFX 簡中"
+  },
+  "Recipes.json|MergeBoxMedium": {
+    "as1_value": "合并为满箱",
+    "value": "合并为整盒",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：產物是整盒（Base.NailsBox 官方簡中「盒装钉子」），這個 MOD 的「箱」指 Carton"
+  },
+  "Sandbox.json|Sandbox_BPE_RoamingAlphaChance": {
+    "as1_value": "游荡夜魔中精英的比例 (%%)",
+    "value": "游荡夜魔中阿尔法的比例 (%%)",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：CN 把 alpha 寫成「精英」，和 Lua 的 Elite（阿爾法、藍夜魔、暴君總稱）混淆；和同組說明一致"
+  },
+  "ItemName.json|HDF.EclairShell": {
+    "as1_value": "泡芙壳",
+    "value": "闪电泡芙壳",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：和 Choux Pastry Shell「泡芙壳」分不出來"
+  },
+  "ItemName.json|HDF.BakingTrayMarmaladeCookie": {
+    "as1_value": "摆放果酱饼干的烤盘",
+    "value": "摆放橘子果酱曲奇的烤盘",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：和 Jam Cookie 的烤盤同名"
+  },
+  "Recipes.json|HDF_MakeJamCookies": {
+    "as1_value": "制作果酱曲奇",
+    "value": "制作果酱夹心/橘子果酱曲奇",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：漏了 & Marmalade（配方也做橘子果醬餅乾）"
+  },
+  "Recipes.json|HDF_PourGenoiseBatterIntoPan": {
+    "as1_value": "将杰法式海绵蛋糕面糊倒入烤盘",
+    "value": "将法式海绵蛋糕面糊倒入烤盘",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：CN 多了一個「杰」字"
+  },
+  "Recipes.json|HDF_MakeHeavyCream": {
+    "as1_value": "制作淡奶油 ",
+    "value": "制作淡奶油",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：CN 結尾多一個空格"
+  },
+  "Sandbox.json|Sandbox_DestroyBoulder_IronBloomChance": {
+    "as1_value": "铁渣概率 (%%)",
+    "value": "铁坯概率 (%%)",
+    "reason": "2026-11-01 追蹤器 #1194–#1216 舊譯複查（對照 MOD 現行英文）：iron bloom 照原版名稱鐵坯，和同 MOD 上下限選項一致"
   }
 }

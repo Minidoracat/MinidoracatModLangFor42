@@ -23,7 +23,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1855** 個鍵（`unship` 342、`translate` 1513）。這些鍵的 owner 條目共 5344 筆：可載入 `.json` 3600、script 854、死檔 890。另有 **244** 個鍵尚未裁決。
+現況：已裁決 **1856** 個鍵（`unship` 342、`translate` 1514）。這些鍵的 owner 條目共 5346 筆：可載入 `.json` 3602、script 854、死檔 890。另有 **243** 個鍵尚未裁決。
 
 ## 不出貨的鍵（342）
 
@@ -374,7 +374,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_metalwelderdesc` | `2459400130/DynamicTraits` = XP boost for Welding _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Knows some metalworking recipes. _(json)_ | 2026-10-29 #1140：Dynamic Traits 把說明從空字串改成「XP boost for Welding」（金工經驗加成），SimpleOverhaulTraitsAndOccupations 是「Knows some metalworking recipes.」（會一些金工配方）。兩個 MOD 的同名特質效果不同，沒有對兩邊都成立的中性說明，不出貨；兩方都有可載入 JSON 英文，注入器失敗時玩家看各自 MOD 的英文，正常時由條件譯文寫入各自的譯文。 | — |
 | `UI\|UI_trait_trapperdesc` | `2459400130/DynamicTraits` = XP boost for Trapping _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Knows some trapping recipes. _(json)_ | 2026-10-29 #1140：Dynamic Traits 把說明從空字串改成「XP boost for Trapping」（誘捕經驗加成），SimpleOverhaulTraitsAndOccupations 是「Knows some trapping recipes.」（會一些誘捕配方）。兩個 MOD 的同名特質效果不同，沒有對兩邊都成立的中性說明，不出貨；兩方都有可載入 JSON 英文，注入器失敗時玩家看各自 MOD 的英文，正常時由條件譯文寫入各自的譯文。 | — |
 
-## 採中性譯名的鍵（1513）
+## 採中性譯名的鍵（1514）
 
 這些鍵有中文，且該譯名對每個 MOD 都成立。
 
@@ -1520,6 +1520,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `Recipes\|MakeBluntWrap` | `3404956403/N&C's Narcotics` = Make a Blunt Wrap _(json)_<br>`3414697768/jiggasGreenFire42` = Make Blunt Wrap _(json)_ | 2026-08-25 #279 裁決維持現行中性譯名。兩個 owner 都是「製作捲大麻用的菸葉包捲皮」這個同一道配方：3404956403/N&C's Narcotics 寫 'Make a Blunt Wrap'（Recipes.json，產出 NnC.BluntWrap）、3414697768/jiggasGreenFire42 寫 'Make Blunt Wrap'。英文差異只有不定冠詞 'a'，非不同實體。現行「製作菸葉捲皮」對兩者皆成立，且與本次補譯的 NnC.BluntWrap=「菸葉捲皮」、NnC.Blunt*=「…菸葉捲」同族一致。 | — |
 | `Recipes\|MakeButter` | `2875059598/Herbalist` = Make Butter _(json)_<br>`2875059598/Herbalist_NoBiofuel` = Make Butter _(json)_<br>`3795521454/RealisticRecipes` = Butter _(json)_ | 2026-10-04 #683–#702 裁決：Herbalist 兩版寫 Make Butter、RealisticRecipes 寫 Butter，皆為產出奶油的配方；配方名「製作奶油」對兩邊都成立，維持現值。 | — |
 | `Recipes\|MakeCannaButter` | `3404956403/N&C's Narcotics` = Make CannaButter _(json)_<br>`3414697768/jiggasGreenFire42` = Make Canna Butter _(json)_ | 2026-08-25 #279 裁決維持現行中性譯名。兩個 owner 都是「以大麻浸製奶油」這個同一道配方：3404956403/N&C's Narcotics 寫 'Make CannaButter'（Recipes.json，產出 NnC.CannaButter）、3414697768/jiggasGreenFire42 寫 'Make Canna Butter'。英文差異只有複合詞是否斷字，非不同實體。現行 CH「製作大麻奶油」／CN「制作大麻黄油」對兩者皆成立（butter 的台灣用語為奶油、大陸用語為黄油，兩欄各自在地化），且與本次補譯的 NnC.CannaButter 同族一致。 | — |
+| `Recipes\|MakeDough` | `3622474939/AbuelitaLindaMexicanFoods` = Make Dough _(json)_<br>`3795521454/RealisticRecipes` = Dough _(json)_ | 2026-11-01 #1201：Abuelita Linda 寫 Make Dough、Realistic Recipes 寫 Dough，兩個 craftRecipe MakeDough 都產出麵糰（AbuelitaLinda.AL_Dough／Base.Dough）；現行 As1 譯文「製作麵糰」對兩方都成立。條件譯文兩組照各自英文。 | — |
 | `Recipes\|MakeJar4` | `3597673472/LongTermPreservationExtended` = Make Jar of Preserved Food (Spices) _(json)_<br>`3789287166/LongTermPreservationExtendedSE` = Make Jar of Preserved Food (Spices) _(json)_ | 2026-09-29 #619: LongTermPreservationExtended 把此配方改成香料罐（Spices，同時涵蓋新加入的胡椒），LongTermPreservationExtendedSE 仍是鹽罐（Salt）；鹽與香料都屬調味料，取兩方皆成立的「調味料」。 | — |
 | `Recipes\|MakePanDulce` | `3600616323/Todo Caserito` = Prepare christmas sweet bread _(json)_<br>`3622474939/AbuelitaLindaMexicanFoods` = Make Sweet Bread _(json)_ | 兩個 owner 都是拉丁甜麵包 pan dulce：3600616323/Todo Caserito 的 Recipes 寫 'Prepare christmas sweet bread'，但其物品 TodoCaserito.PanDulce 本身是 'Sweet bread'；3622474939/AbuelitaLindaMexicanFoods 的 Recipes 與物品皆為 'Make Sweet Bread'／'Sweet Bread'。聖誕是 Todo Caserito 單側的配方名修飾，不是另一種食物。中性譯名「製作甜麵包」對兩者皆成立，與已出貨的 MakePanDulceRosa='製作粉紅甜麵包' 同族一致。 | — |
 | `Recipes\|MakeTacoShell` | `2875059598/Herbalist` = Make Taco Shell _(json)_<br>`2875059598/Herbalist_NoBiofuel` = Make Taco Shell _(json)_<br>`3600616323/Todo Caserito` = Prepare taco shell _(json)_<br>`3727395976/OGCookingExpanded` = Make Taco Shell _(json)_ | 三個 owner 都是製作塔可餅皮：2875059598/Herbalist 與 Herbalist_NoBiofuel 寫 'Make Taco Shell'，3600616323/Todo Caserito 寫 'Prepare taco shell'。同一食物、動詞 Make／Prepare 的風格差，不是不同食譜。現行「製作塔可餅皮」對三者皆成立。 ／2026-10-01 As1 名單納管複核：新增 owner 3727395976/OGCookingExpanded，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 | — |
@@ -1894,7 +1895,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_thickblooddesc` | `1299328280/More Traits` = You bleed more slowly from wounds. _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Wounds bleeds less.&lt;br&gt;(-50% damage from bleeding.) _(json)_ | 2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。 | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（244）
+## 尚未裁決的衝突（243）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
@@ -1987,7 +1988,6 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|USMRE.MREPorkwithRiceinBBQSauce` | `3406930410/MRE XIII (1993) - Meal Ready to Eat MOD Real version` = MRE(Pork with Rice in BBQ Sauce) _(script)_<br>`3738115503/MRE` = MRE(Pork with Rice in BBQ Sauce - Cold) _(script)_ | MRE BBQ 醬豬肉佐飯餐包 (冷食) |
 | `ItemName\|USMRE.MRESpaghettiwithMeatSauce` | `3406930410/MRE XIII (1993) - Meal Ready to Eat MOD Real version` = MRE(Spaghetti with Meat Sauce) _(script)_<br>`3738115503/MRE` = MRE(Spaghetti with Meat Sauce - Cold) _(script)_ | MRE 肉醬義大利麵餐包 (冷食) |
 | `ItemName\|USMRE.MRETunawithNoodles` | `3406930410/MRE XIII (1993) - Meal Ready to Eat MOD Real version` = MRE(Tuna with Noodles) _(script)_<br>`3738115503/MRE` = MRE(Tuna with Noodles - Cold) _(script)_ | MRE 鮪魚麵餐包 (冷食) |
-| `Recipes\|MakeDough` | `3622474939/AbuelitaLindaMexicanFoods` = Make Dough _(json)_<br>`3795521454/RealisticRecipes` = Dough _(json)_ | 製作麵糰 |
 | `Recipes\|MakeFrenchFries` | `3600616323/Todo Caserito` = Prepare french fries _(json)_<br>`3727395976/OGCookingExpanded` = Make French Fries _(json)_<br>`3795521454/RealisticRecipes` = Make French Fries _(json)_ | 製作薯條 |
 | `Recipes\|MakeKatanaHandle` | `3569158406/TacticalSheathsReborn` = Make Katana Handle _(json)_<br>`3795521454/RealisticRecipes` = Katana Handle _(json)_ | 製作武士刀刀柄 |
 | `Recipes\|MakeSausage` | `3600616323/Todo Caserito` = Stuff sausages _(json)_<br>`3795521454/RealisticRecipes` = Make Sausage _(json)_ | 灌製香腸 |
