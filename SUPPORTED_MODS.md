@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1470 個 Workshop 模組**（2120 個 mod ID）；另 **10 個已下架**（翻譯保留，見文末）。
+共支援 **1470 個 Workshop 模組**（2122 個 mod ID）；另 **10 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1015,7 +1015,7 @@
 | [The Best Lockpicking [B42.20]](https://steamcommunity.com/sharedfiles/filedetails/?id=3745815281) | — | — | `TheBestLockpickingB4219` | 89 | — | — |
 | [SoapZ](https://steamcommunity.com/sharedfiles/filedetails/?id=3746173075) | — | — | `SoapZ` | 116 | — | — |
 | [[B41/B42] Tripping Zombies: Reborn](https://steamcommunity.com/sharedfiles/filedetails/?id=3746603021) | — | — | `TrippingZombies`, `TrippingZombiesRealLimbs` | 36 | — | — |
-| [Bundle Up! - A Packing Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=3746632343) | — | — | `BundleUp`, `BundleUpGoM`, `BundleUpUI`, `BundleUpVFX` | 5683 | — | — |
+| [Bundle Up! - A Packing Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=3746632343) | — | — | `BundleUp`, `BundleUpGoM`, `BundleUpUI`, `BundleUpVFX`, `BundleUpVPUI` | 5683 | — | — |
 | [[B42] Madax Weapons Pack - Fixed 4.20.2](https://steamcommunity.com/sharedfiles/filedetails/?id=3747202678) | — | — | `MWPWeaponsB42` | 12 | — | — |
 | [New Ellroy and Shadyside B42〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3747339147) | 新艾爾羅伊與沙德賽德 | 荒廢腐朽的美國小鎮新艾爾羅伊地圖，另含瘋子與不幸之人聚居的沙德賽德。 | `NewEllroyShadysideB42` | 4 | — | — |
 | [Food Drying [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3747396551) | 食物乾燥 | 用晾乾架把漿果、水果、蔬菜、肉、魚、蘑菇風乾成耐放的乾貨，可煮鹽水醃製、刮取鹽磚；附 Vanilla Foods Expanded 聯動食材。 | `FoodDrying`, `FoodDrying_VFEPatch` | 160 | — | — |
@@ -1403,7 +1403,7 @@
 | [This Is Me - More Character Traits](https://steamcommunity.com/sharedfiles/filedetails/?id=3806020504) | — | — | `thisIsMe-Traits`, `thisIsMe-TraitsMP`, `thisIsMeTraits_TraitsAsSkills` | 276 | — | — |
 | [Distiller's Table - Brewing [B42.21]](https://steamcommunity.com/sharedfiles/filedetails/?id=3806129323) | 蒸餾師工作臺 - 釀酒 | 新增發酵桶、蒸餾器與酒窖，可自行釀造、蒸餾、陳釀各式酒類，並加入 10 種新作物。 | `CTBrewery` | ? | ⚠️ ≥3 | — |
 | [末日镇尸录\|Tales of Taoist Exorcism〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3806373669) | 末日鎮屍錄 | 以道士身分在末日中修煉道術，使用桃木劍、八卦鏡、五雷令牌、萬魂幡等法器鎮屍驅邪，另有玄門法市、收鬼罈役鬼與殭屍王等首領。 | `TalesOfTaoistExorcism` | 247 | — | ⚠️ 簡中為作者原文（本包逐字沿用），本包只翻繁中。作者在 Lua 裡寫死了幾段簡體字：服用糯米缸時的「感染度」浮字、五雷令牌畫面上的「五雷敕令」、四個「生成飛僵／鬼新娘／白僵／黑僵（測試）」右鍵選項。這些不走翻譯表，任何翻譯包都補不了。 |
-| [[42.21+] Animal Crates](https://steamcommunity.com/sharedfiles/filedetails/?id=3806526710) | 動物運輸箱 | 新增可製作的大小動物運輸箱，用來搬運雞、兔子、浣熊等小型動物。 | `AnimalCrates` | 48 | — | — |
+| [[42.21+] Animal Crates](https://steamcommunity.com/sharedfiles/filedetails/?id=3806526710) | 動物運輸箱 | 新增可製作的大小動物運輸箱，用來搬運雞、兔子、浣熊等小型動物。 | `AnimalCrates`, `AnimalCratesCompanionSupport` | 48 | — | — |
 | [True Water](https://steamcommunity.com/sharedfiles/filedetails/?id=3806657188) | True Water 真實水域 | 讓水域有實際深度，可涉水、游泳與潛水，水底能搜尋魚蝦與雜物，並新增魚叉槍、潛水衣與潛水員職業；需 True Swimming。 | `TrueWater` | 42 | — | — |
 | [Project A-Life - Jeem Extension](https://steamcommunity.com/sharedfiles/filedetails/?id=3806944055) | Project A-Life - Jeem 擴充 | Project A-Life 的附加模組，可建立基地、招募 NPC 入住並分派崗哨、工作與任務。 | `ProjectALifeJimmy` | ? | — | — |
 | [True Cargo - Project Full HD](https://steamcommunity.com/sharedfiles/filedetails/?id=3806955469) | True Cargo - Project Full HD | 將拖車貨物以實際 3D 模型擺在車斗上並自動排列，也可手動移動與旋轉。 | `PFHDTrueCargo` | 60 | — | — |
