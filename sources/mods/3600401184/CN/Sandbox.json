@@ -29,6 +29,10 @@
   "Sandbox_RealisticCold_ColdSicknessMultiplier_tooltip": "调整感冒对生病影响的严重程度. 默认为1.0. 数字越高感冒越严重",
   "Sandbox_RealisticCold_ColdWorsenPerHour": "感冒恶化速率 (小时)",
   "Sandbox_RealisticCold_ColdWorsenPerHour_tooltip": "不加护理时感冒恶化的速度. 默认为45.",
+  "Sandbox_RealisticCold_DryingRackHeatBridge": "晾晒架使用模拟室温",
+  "Sandbox_RealisticCold_DryingRackHeatBridge_tooltip": "晾晒架和皮革鞣制会使用本模组模拟的室温. 房间温度达到或高于下方设定的最低值时, 其中的晾晒架按正常速度干燥, 在高于20°C的房间里更快. 晾晒架的热量只留在架子上, 不会加热房间. 电网供电期间, 原版游戏本身就会为通电建筑保温, 所以这一项在电网断掉之后才起作用.",
+  "Sandbox_RealisticCold_DryingRackMinRoomTemp": "晾晒架的最低室温",
+  "Sandbox_RealisticCold_DryingRackMinRoomTemp_tooltip": "房间需要达到多少度 (°C), 其中的晾晒架才会按正常速度干燥. 更冷的房间交由原版游戏处理.",
   "Sandbox_RealisticCold_EnableFoodFreezingExperimental": "启用食物冻结 [实验功能]",
   "Sandbox_RealisticCold_EnableFoodFreezingExperimental_tooltip": "启用食物冻结, 食物冻结事件钩子以及备用冰箱扫描.",
   "Sandbox_RealisticCold_EvapCoolingStrength": "蒸发冷却速度 (基础 = 1.0)",
@@ -48,11 +52,15 @@
   "Sandbox_RealisticCold_Indoor": "真实寒冷 - 建筑",
   "Sandbox_RealisticCold_IndustrialHeaterSpawnRate": "工业暖炉生成几率 (%%)",
   "Sandbox_RealisticCold_IndustrialHeaterSpawnRate_tooltip": "在大型工业建筑中出现工业暖炉的百分比几率. 设为0以禁用.",
+  "Sandbox_RealisticCold_InsulationSpreadBias": "分部位保温偏置 (默认0.30)",
+  "Sandbox_RealisticCold_InsulationSpreadBias_tooltip": "控制穿着不均衡时 (例如派克大衣配光腿) 偏离全身平均值的幅度有多大. 0.0=纯平均值 (各部位同等对待); 1.0=寒冷时始终偏向最薄弱的部位, 炎热时始终偏向最捂得住的部位. 0.30是推荐的折中值.",
   "Sandbox_RealisticCold_SealedPassiveTransferStrength": "封闭房间热交换速度 (基础 = 1.0)",
   "Sandbox_RealisticCold_SealedPassiveTransferStrength_tooltip": "一间完全密封的房间 (没有破损的窗户, 没有开着的门, 没有裂缝) 通过墙壁和天花板与外界达成温度平衡的速度. 基础为1.0. 为0时房间不会损失温度. 为2时即使是密封的墙壁也会以两倍速损失温度. 为5时完全密封的房间也会飞快地漏风. 对未密封的房间无效.",
   "Sandbox_RealisticCold_Sickness": "真实寒冷 - 疾病",
   "Sandbox_RealisticCold_SweatRateMultiplier": "出汗速度 (基础 = 1.0)",
   "Sandbox_RealisticCold_SweatRateMultiplier_tooltip": "调整你过热时的出汗速度. 1.0是基本值. 数字越低, 出汗速度越慢 (衣服也会保持干燥); 数字越高, 你就越快变成肉干.",
   "Sandbox_RealisticCold_VehicleHeaterMaxDelta": "车载加热器供暖上限 (°C)",
-  "Sandbox_RealisticCold_VehicleHeaterMaxDelta_tooltip": "运行中的车载加热器能提供的高于室外温度的最大度数. 默认为25°C"
+  "Sandbox_RealisticCold_VehicleHeaterMaxDelta_tooltip": "运行中的车载加热器能提供的高于室外温度的最大度数. 默认为25°C",
+  "Sandbox_RealisticCold_WarmingRateCapCPM": "升温速度上限 (°C/分钟)",
+  "Sandbox_RealisticCold_WarmingRateCapCPM_tooltip": "环境升温 (暖空气、加热器、热饮合计) 能让体温上升多快的硬性上限. 默认0.5°C/分钟. 调低则从寒冷中恢复更慢; 调高则在火堆旁能瞬间回暖."
 }
