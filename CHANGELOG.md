@@ -6,6 +6,8 @@
 
 ## [Unreleased]
 
+## [42.21.0-1.70.0] - 2026-11-02
+
 ### Added
 
 - **同步如一漢化組 v3.13.0：新增 524 項繁簡中文，名冊補登 As1 這版收錄的 21 個 MOD。** Guns of Tien（Guns of Marz 擴充的 1993 年實彈：亞音速、空尖、軟尖、鋼芯、高壓彈與 AS VAL 的 SP-6，393 項）、Project A-Life 與同伴犬相容補丁（53 項）、Share Map Notes 共享地圖備註（28 項）、BZQuickSlots 快捷欄擴充（27 項）、PZ Relationship 玩家互動（11 項）、Xanny Arms 槍械分類（6 項）、Second Back Slot 第二背部欄位（4 項）、TwisTonFire 小地圖（2 項）。

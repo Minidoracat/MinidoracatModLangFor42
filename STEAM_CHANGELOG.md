@@ -1,15 +1,17 @@
-[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.21.0-1.69.0[/h1]
-[i]2026-11-01[/i]
+[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.21.0-1.70.0[/h1]
+[i]2026-11-02[/i]
 
 [h3]新增[/h3]
 [list]
-[*] 20 個 MOD 更新後新增的文字補上中文（277 處）：HDs Food Recipes 的韓式料理（部隊鍋、年糕湯、燒酒、生魚片與壽司、胡蘿蔔蛋糕等，98 處）、Project Zomboid Optimiser 的效能分析器與新效能設定（84 處）、Marriage Companion 的配偶隨手關門與休閒選項、Animal Crates 的貓狗計數、Abuelita Linda 的亡靈節食譜、Palm Pilot 行事曆、Blackout Predators Extended 的夜魔追查噪音等。
+[*] 同步如一漢化組 v3.13.0，新支援 21 個 MOD：Guns of Tien 的 1993 年實彈、Project A-Life 同伴犬相容、Share Map Notes 共享地圖備註、BZQuickSlots 快捷欄、PZ Relationship 玩家互動、Xanny Arms、Second Back Slot 第二背部欄位等（524 處）。
+[*] 這批新 MOD 裡如一漢化組還沒翻的文字，本包全部補上（15 個 MOD、12,589 處）：Escape From Zomboid Firearms 的 149 把槍、零件、彈藥與改槍介面（8,500 處）、Real Room Heat 2.0 室內溫度與暖爐（1,575 處）、DMM 模組管理器（928 處）、WINGSMITH 飛機、Knox Packs 可升級背包、Knox Claim 房產認領、xPhone 智慧型手機、The Last of Us Infected、Vietnam War Rations、Black Division 戰術裝備等。
 [/list]
 
 [h3]更新[/h3]
 [list]
-[*] 上游改了英文的文字跟著更新（13 處）：Animal Crates 運輸籠的容量說明、Dry & Cure 的風乾禽肉配方、Better Vehicle Dynamics 的灌木減速說明；The Only Cure+ 三個左側截肢特質原本沒有說明，現在補上。
-[*] 修正 142 處寫錯或照舊版英文翻的文字：Bundle Up 的調味料粉箱不再和乾燥香草箱同名、鋼板與銅礦石改用原版名稱、推推樂糖果的簡中不再寫成冰棒；HDs Food Recipes 的簡中把堅果醬、甜菜糖漿、南瓜濃湯譯成別的東西，巧克力配方漏了抹茶；Blackout Predators 的簡中把阿爾法夜魔寫成「精英」等。
-[*] Long Term Preservation Extended 拿掉了「拾取附近物品」與開局城鎮選項，對應的 62 處譯文一併移除。
+[*] Vanilla Foods Expanded 改過名的食品照現行英文改名（383 處）：太空蛋糕、彈跳酥皮捲、扭扭棒棒糖、幸運蘸糖、爵士餅乾等；義式餛飩不再和義大利餃同名、藍色覆盆子不再寫成藍莓。
+[*] Bundle Up 的箱子名稱整理：簡中統一成「品名 (纸箱／整箱／木箱)」，品名和箱內物品一致（1,045 處）；裝 VFX 食品的箱子跟著改名（219 處）；簡中「六罐装」改「六连装」（143 處）。VFX 的整盒罐頭改叫「(整盒)」，不再和 Bundle Up 的整箱同名。
+[*] 如一漢化組原本沒收、由本包自己翻的 1,233 處，這版如一漢化組收錄了：簡中改用如一漢化組譯文，繁中不變。
+[*] 修正如一漢化組新收簡中的 39 處錯誤：Xanny Arms 的 M1 卡賓槍被寫成春田步槍、鵝肉罐頭其實是鴨肉、PZ Relationship 的「区块」等。
 [*] 更新下載完成後，請重新啟動遊戲載入新翻譯；不需要重開存檔。
 [/list]
