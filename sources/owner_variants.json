@@ -15461,7 +15461,7 @@
   },
   "IG_UI|IGUI_perks_Martial Arts_Description": {
    "kind": "conflict",
-   "signature": "86f3fc939e1b7700",
+   "signature": "e2770fb41621bfef",
    "groups": [
     {
      "owners": [
@@ -15478,15 +15478,6 @@
      "en": "Improves combat techniques used by supported martial-arts styles. Experience is earned by landing damaging strikes.",
      "ch": "強化支援的武術流派所用的戰鬥技巧. 透過擊中目標並造成傷害獲取經驗.",
      "cn": "强化受支持的武术流派所用的战斗技巧. 通过击中目标并造成伤害获取经验."
-    },
-    {
-     "owners": [
-      "3812456765/SenatorMartialArtsCore"
-     ],
-     "en": "Raises attack speed and damage with every martial arts style, and lowers the stamina each strike costs. <LINE> Each style also has a hidden mastery (5 levels) that grows as you land hits with it and unlocks longer combinations and heavy attacks. Right-click the ground > Martial Arts (or press K) to see your mastery and unlocks.",
-     "ch": "提高所有武術流派的攻擊速度與傷害, 並降低每次出招消耗的耐力. <LINE> 每個流派另有隱藏精通度 (5 級), 用該流派擊中目標時會成長, 並解鎖更長的連段與重擊. 右鍵點選地面 > 武術 (或按 K) 可檢視你的精通度與解鎖內容.",
-     "cn": "提高所有武术流派的攻击速度和伤害, 并降低每次出招消耗的耐力. <LINE> 每个流派还有隐藏的精通度 (5 级), 用该流派击中目标时会提升, 并解锁更长的连招和重击. 右键点击地面 > 武术 (或按 K) 可查看你的精通度和解锁内容.",
-     "_note": "Senator 同 MOD 的 mastery 一律譯「精通度」(UI_SMA_AdminHint、UI_trait_SMABoxerDesc、UI_SMA_Mastery「精通」), 改掉「熟練度」; 選單名 UI_SMA_Menu 譯「武術」, 原譯正確保留"
     }
    ]
   },
@@ -28479,7 +28470,7 @@
   },
   "ItemName|Base.Laser": {
    "kind": "vanilla",
-   "signature": "7f99545f807b25e8",
+   "signature": "241faecf9f3edda2",
    "vanilla_en": "Laser Sight",
    "skip_owners": [
     "3773858287/B42 Rain's Firearms & Gun Parts",
@@ -28523,6 +28514,15 @@
      "ch": "手槍雷射瞄準器",
      "cn": "手枪激光瞄准器",
      "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
+    },
+    {
+     "owners": [
+      "3820580321/ExtendedVanillaWeapons"
+     ],
+     "en": "Red Laser",
+     "ch": "紅色雷射瞄準器",
+     "cn": "红色激光瞄准器",
+     "_note": "2026-11-02 #1238：Complete Vanilla Firearms Expansion 把 Base.Laser 改名 Red Laser 後新增；未送雙模型審核，不出貨（該 MOD 勝出時畫面維持本體譯文「雷射瞄準器」）"
     }
    ]
   },
