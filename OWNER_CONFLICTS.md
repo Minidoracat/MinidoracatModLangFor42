@@ -23,7 +23,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1869** 個鍵（`unship` 342、`translate` 1527）。這些鍵的 owner 條目共 5384 筆：可載入 `.json` 3639、script 854、死檔 891。另有 **244** 個鍵尚未裁決。
+現況：已裁決 **1869** 個鍵（`unship` 342、`translate` 1527）。這些鍵的 owner 條目共 5384 筆：可載入 `.json` 3639、script 854、死檔 891。另有 **247** 個鍵尚未裁決。
 
 ## 不出貨的鍵（342）
 
@@ -1908,7 +1908,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_thickblooddesc` | `1299328280/More Traits` = You bleed more slowly from wounds. _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Wounds bleeds less.&lt;br&gt;(-50% damage from bleeding.) _(json)_ | 2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。 | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（244）
+## 尚未裁決的衝突（247）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
@@ -2058,6 +2058,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `Sandbox\|Sandbox_BuildablePump_SheetMetalAmount_tooltip` | `3666938579/BuildablePump` = How many Sheet Metals are required. _(json)_<br>`3722348177/BuildableFuelPump` = How many Sheet Metal pieces are required. _(json)_ | 所需金屬板的數量. |
 | `Sandbox\|Sandbox_BuildablePump_SmallSheetMetalAmount_tooltip` | `3666938579/BuildablePump` = How many Small Sheet Metals are required. _(json)_<br>`3722348177/BuildableFuelPump` = How many Small Sheet Metal pieces are required. _(json)_ | 所需小塊金屬板的數量. |
 | `Sandbox\|Sandbox_BuildablePump_WeldingRodsUseCost_tooltip` | `3666938579/BuildablePump` = How many Welding Rod uses are consumed when building the wa… _(json)_<br>`3722348177/BuildableFuelPump` = How many Welding Rod uses are consumed when building the fu… _(json)_ | 建造加油泵時消耗的焊條使用次數. |
+| `Sandbox\|Sandbox_CompanionFancyRat` | `3798112588/CompanionBattleRat` = CD: Battle Rats _(json)_<br>`3798112588/CompanionFancyRat` = CD: Fancy Rats _(json)_ | CD: 花枝鼠 |
 | `Sandbox\|Sandbox_EHR_BloodRegenMinimumPercent` | `3638633196/ExtensiveHealthReworkB42` = Blood Regen Min Threshold (%) _(死檔 Sandbox_EN.txt)_<br>`3726328119/ExtensiveHealthReworkB42` = Blood Regen Min Threshold (%%) _(json)_ | 血液再生最低門檻值 (%%) |
 | `Sandbox\|Sandbox_EHR_BloodRegenMinimumPercent_tooltip` | `3638633196/ExtensiveHealthReworkB42` = Minimum blood percentage required for regeneration to work.… _(死檔 Sandbox_EN.txt)_<br>`3726328119/ExtensiveHealthReworkB42` = Minimum blood percentage required for regeneration to work.… _(json)_ | 再生生效所需的最低血液百分比. &lt;LINE&gt; &lt;LINE&gt; 運作方式: &lt;LINE&gt… |
 | `Sandbox\|Sandbox_EHR_BloodRegenRatePerHour_tooltip` | `3638633196/ExtensiveHealthReworkB42` = Milliliters of blood regenerated per in-game hour. &lt;LINE… _(死檔 Sandbox_EN.txt)_<br>`3726328119/ExtensiveHealthReworkB42` = Milliliters of blood regenerated per in-game hour. &lt;LINE… _(json)_ | 每遊戲小時再生的血液毫升數. &lt;LINE&gt; &lt;LINE&gt; 參考 (最大血液 5000 毫升):… |
@@ -2085,6 +2086,8 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `Sandbox\|Sandbox_InventoryTetris_PreventTardisStacking` | `3598501350/RE Tetris [B42]` = Prevent Infinite Container Stacking _(json)_<br>`3769773293/INVENTORY_TETRISP_MP` = Prevent Infinite Container Stacking _(json)_<br>`3775513231/InventoryTetris` = Prevent TARDIS Stacking _(json)_ | 防止無限容器堆疊 |
 | `Sandbox\|Sandbox_InventoryTetris_UseItemTransferTime` | `3598501350/RE Tetris [B42]` = Item Transfer Time _(json)_<br>`3769773293/INVENTORY_TETRISP_MP` = Item Transfer Time _(json)_<br>`3775513231/InventoryTetris` = Use Item Transfer Time _(json)_ | 物品轉移時間 |
 | `Sandbox\|Sandbox_MWPWeapons` | `2732407704/MWPWeapons` = MWP Weapons Loot _(死檔 Sandbox_EN.txt)_<br>`3747202678/MWPWeapons42` = MWP Weapons _(json)_ | MWP 武器 |
+| `Sandbox\|Sandbox_PZLinux_StartingBalanceMax` | `3414468585/B42 PZLinux` = Starting Bank Balance (Maximum) _(json)_<br>`3700371875/B42 PZLinux` = Starting Balance Max _(json)_ | 初始銀行餘額 (最大值) |
+| `Sandbox\|Sandbox_PZLinux_StartingBalanceMin` | `3414468585/B42 PZLinux` = Starting Bank Balance (Minimum) _(json)_<br>`3700371875/B42 PZLinux` = Starting Balance Min _(json)_ | 初始銀行餘額 (最小值) |
 | `Sandbox\|Sandbox_RefinedHotwiring_KeyMechanics` | `2930762705/KeyBlank` = Mechanics to create the car key: _(json)_<br>`3640448510/Fluffy's Key Blank` = Mechanics level needed to make a key using a blank _(json)_ | 使用鑰匙胚製作鑰匙所需的技工等級 |
 | `Sandbox\|Sandbox_RefinedHotwiring_KeyMetalworking` | `2930762705/KeyBlank` = Metalworking to create the car key: _(json)_<br>`3640448510/Fluffy's Key Blank` = Welding level needed to make a key using a blank _(json)_ | 使用鑰匙胚製作鑰匙所需的金工等級 |
 | `Sandbox\|Sandbox_RefinedHotwiring_UnhotwireElectrical` | `2930762705/KeyBlank` = Eletrical to Unhotwire: _(json)_<br>`3640448510/Fluffy's Key Blank` = Electrical level needed to allow unhotwiring cars _(json)_ | 允許解除車輛短接所需的電工等級 |

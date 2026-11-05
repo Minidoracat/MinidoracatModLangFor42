@@ -854,7 +854,7 @@
 | [[B42] Call of Duty MWII Firearms](https://steamcommunity.com/sharedfiles/filedetails/?id=3699585531) | — | — | `CODMW2` | 3 | — | — |
 | [Yumi's Meat Expansion 2.0 w/ Hunting](https://steamcommunity.com/sharedfiles/filedetails/?id=3700009701) | — | — | `MeatExpansion2.0` | 194 | — | — |
 | [AWS - Adaptative Wear System](https://steamcommunity.com/sharedfiles/filedetails/?id=3700283070) | — | — | `AdaptiveWearSystem` | 57 | — | — |
-| [PZLinux B42.17](https://steamcommunity.com/sharedfiles/filedetails/?id=3700371875) | — | — | `B42_PZLinux42` | 288 | — | — |
+| [PZLinux B42.17](https://steamcommunity.com/sharedfiles/filedetails/?id=3700371875) | — | — | `B42_PZLinux42` | 288 | ⚠️ ≥2 | — |
 | [Yumi's Fishing Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3700643615) | — | — | `FishingExpansion 2.0` | 31 | — | — |
 | [Yumi's Advanced Trapping Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=3700831155) | — | — | `AdvancedTrapping` | 41 | — | — |
 | [[OC] Ellie's Outfits [Tomb Body/B42.16+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3701066084) | — | — | `ElliesOutfits` | 48 | — | — |
