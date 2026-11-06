@@ -45,7 +45,7 @@
  "Sandbox_RDO_DieselPumpPercent": "柴油油泵 (百分比)",
  "Sandbox_RDO_DieselPumpPercent_tooltip": "供应柴油的油泵所占比例.",
  "Sandbox_RDO_Electrical": "电气与启动模拟",
- "Sandbox_RDO_Electrical_tooltip": "电池会像真实电池一样充电和耗电, 状况差的引擎可能打不着火. 关闭后电池与启动恢复原版机制.",
+ "Sandbox_RDO_Electrical_tooltip": "电池会像真实电池一样充电和耗电, 状况差的引擎可能打不着火. 关闭后电池与启动恢复原版机制. 启用 Maskarad's Summer Car 或 Under the Hood 时, 改由该模组负责电池与启动.",
  "Sandbox_RDO_EngineBrakeStrength": "引擎制动",
  "Sandbox_RDO_EngineBrakeStrength_tooltip": "松开油门时引擎制动的力度. 1 为难度设定的数值, 0 则完全取消.",
  "Sandbox_RDO_EngineBraking_tooltip": "隐藏选项, 只能在服务器的 SandboxVars 文件中修改. 松开油门时会产生引擎制动. 默认开启, 设为 false 则无论难度设定如何都会关闭.",
@@ -76,7 +76,7 @@
  "Sandbox_RDO_MaintenanceLoot": "备用零件物资",
  "Sandbox_RDO_MaintenanceLoot_tooltip": "本模组的备用零件与油液出现的频率. 设为 0 时完全不会出现.",
  "Sandbox_RDO_MaintenanceOn": "保养模拟",
- "Sandbox_RDO_MaintenanceOn_tooltip": "引擎会磨损, 需要保养. 关闭后引擎永远不会磨损.",
+ "Sandbox_RDO_MaintenanceOn_tooltip": "引擎会磨损, 需要保养. 关闭后引擎永远不会磨损. 启用 Maskarad's Summer Car 或 Under the Hood 时, 改由该模组负责引擎保养.",
  "Sandbox_RDO_MaintenanceWear": "磨损速度",
  "Sandbox_RDO_MaintenanceWear_tooltip": "零件与油液损耗的速度. 1 为难度设定的数值.",
  "Sandbox_RDO_Maintenance_tooltip": "隐藏选项, 只能在服务器的 SandboxVars 文件中修改. 保养程度 (1 无, 2 轻度, 3 写实, 4 硬核). 此值由难度设定决定, 请保持 3. 设为其他值会覆盖难度设定.",
@@ -123,5 +123,9 @@
  "Sandbox_RDO_WeatherGrip": "雪地、结冰与积水抓地力",
  "Sandbox_RDO_WeatherGrip_tooltip": "雪、冰和积水使抓地力下降的程度. 1 为难度设定的数值, 2 为两倍, 0 则完全不会下降.",
  "Sandbox_RDO_WheelLock_tooltip": "隐藏选项, 只能在服务器的 SandboxVars 文件中修改. 没有 ABS 时紧急制动会导致车轮抱死. 默认开启, 设为 false 则无论难度设定如何都会关闭.",
+ "Sandbox_RDO_WorldScale": "速度比例",
+ "Sandbox_RDO_WorldScale_option1": "游戏比例",
+ "Sandbox_RDO_WorldScale_option2": "真实数值",
+ "Sandbox_RDO_WorldScale_tooltip": "速度、加速和刹车距离会适配游戏地图, 而游戏地图比真实世界小. 车速表和转速仍显示真实数值. 选择“真实数值”时, 车辆会和真车一样快, 也需要长得多的距离才能停下.",
  "Sandbox_RDO_WrongFuelSpawnChance_tooltip": "隐藏选项, 只能在服务器的 SandboxVars 文件中修改. 油箱里是错误燃料的废弃车辆百分比 (0 到 20). 此值由难度设定决定, 请保持 3. 设为其他值会覆盖难度设定."
 }

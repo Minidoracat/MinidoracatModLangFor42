@@ -1793,14 +1793,6 @@
       "reason": "原值「在線上」已是台灣自然用語；finding 只匹配其中「在線」，機械替換會產生「線上上」，故保留並豁免。",
       "ch_value": "9511ac808cc45c16"
     },
-    "Sandbox.json|Sandbox_BVD_RealismHPWeight_tooltip": {
-      "patterns": [
-        "登(\\s*)錄",
-        "登錄"
-      ],
-      "reason": "「引擎推力與質量」是物理 mass；「API 登錄自己的資料」是資料登錄而非 login，兩個登錄 A/E pattern 均屬合法語境並予豁免。",
-      "ch_value": "130bcd1b7b26fd3f"
-    },
     "Sandbox.json|Sandbox_DynamicObjectives.QuestRewardPoolMedicine_tooltip": {
       "patterns": [
         "登(\\s*)錄",
@@ -3729,6 +3721,13 @@
       ],
       "reason": "2026-10-31 #1184 條件譯文裁決 keep：物理打開特殊門（Snake's ModPack 的暗門右鍵選項提示），口語合法；與同鍵 JSON 現行譯文一致",
       "ch_value": "d1fc893dd5503072"
+    },
+    "UI.json|UI_LNPC_RehabSafetyWarning": {
+      "patterns": [
+        "用(\\s*)戶"
+      ],
+      "reason": "「伺服器與用戶端」的用戶端是 client（台灣通行譯法），不是 user；保留並豁免用戶→使用者的 A pattern。",
+      "ch_value": "9e315588ce21fb85"
     }
   }
 }

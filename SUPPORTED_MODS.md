@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1490 個 Workshop 模組**（2147 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
+共支援 **1491 個 Workshop 模組**（2148 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1404,6 +1404,7 @@
 | [PM2 - Complete Repair Overhaul〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3802480042) | PM2 全面維修重製 | 重做武器、裝備與車輛的維修：右鍵維修會顯示成功、暴擊、部分修理與失敗機率，維護技能越高加成越多，耐久低於門檻時還有機會觸發預防性維修；各項機率與加成都能在沙盒設定調整。 | `PreventativeMaintenanceTwo`, `RamenTestMod` | 81 | — | ⚠️ 維修提示框裡的「History」統計（Stats for Nerds、Last Repair、True Repair Count 等約 12 句）與除錯選單寫死在 Lua（PMTwo_ContextMenu.lua 未包 getText），任何翻譯包都補不了；右鍵維修選單、成功率與加成提示、維修結果浮字、沙盒設定皆已涵蓋。作者附的相容測試子 MOD RamenTestMod 不在收錄範圍。 |
 | [Bruce Lee's Nunchaku](https://steamcommunity.com/sharedfiles/filedetails/?id=3802860016) | 李小龍的雙節棍 | 新增五款雙節棍武器與專屬戰鬥動作，搭配武術技能成長，可製作與修理。 | `BruceLeesNunchucks` | 21 | — | — |
 | [Definitive Descriptions (Occupations, Moodles, Skills & Traits + Mod Support!)](https://steamcommunity.com/sharedfiles/filedetails/?id=3802917504) | 詳盡說明（職業、狀態圖示、技能與特質） | 滑鼠懸停技能、特質、職業與狀態圖示時，分項列出實際效果，並支援多個模組。 | `DefinitiveDescriptions` | ? | — | — |
+| [Hags' Firearm Maintenance〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3803480704) | Hags 槍械保養 | 對任何槍械右鍵就能拆解、清潔、修理再重新組裝：用 CLP 槍油與抹布清潔零件、用槍匠工具組修理，重組後的槍保留原本的配件與耐久度，多人遊戲也安全；修理上限、經驗值與道具稀有度都能在沙盒設定調整。 | `HagsFirearmMaintenance` | 101 | — | — |
 | [Faster Actions](https://steamcommunity.com/sharedfiles/filedetails/?id=3803796255) | Faster Actions 動作加速 | 可依製作、鍛造、建造、伐木、維修、焊接、裁縫、裝備與物品欄等類別分別調整動作耗時。 | `FasterActions` | 75 | — | — |
 | [Project A-Life [ALIFE NPCS]](https://steamcommunity.com/sharedfiles/filedetails/?id=3803984183) | — | — | `ProjectALifeNPCs` | 1255 | — | — |
 | [BADLANDS Power](https://steamcommunity.com/sharedfiles/filedetails/?id=3804093735) | BADLANDS 電力 | 新增電池組、丙烷、廢油、廢料與工業用五種發電機，接入原版發電機系統。 | `BadlandsPower` | 35 | — | — |
@@ -1464,7 +1465,7 @@
 | [Too Many Emotes](https://steamcommunity.com/sharedfiles/filedetails/?id=3815468401) | Too Many Emotes 超多表情動作 | 在表情輪盤新增 300 多種表情動作，可瀏覽與收藏，多人模式可同步動作。 | `TooManyEmotes` | 359 | — | — |
 | [HydeCo. Orchard! 42.21.0](https://steamcommunity.com/sharedfiles/filedetails/?id=3815617457) | HydeCo. 果園！ | 新增果樹、漿果灌木與攀牆葡萄藤等 15 種植物，會隨四季變化，缺水可能生病枯死。 | `HydeCoOrchard` | 387 | — | — |
 | [FTZ Carts & Trolleys [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3815775971) | FTZ 各式推車 | 新增購物車、平板推車、洗衣推車、園藝推車、清潔推車、手推車與獨輪車七種推車，雙手推著走、像背包一樣裝東西，車內物品不計重量。會出現在超市、倉庫、洗衣房、工地等相符的地點，常留有少量合適的物品；容量與生成率都能調整。 | `FTZCartsTrolleys` | 51 | — | — |
-| [Cheat Menu 2.0 - Rax's Reborn [B42.21]](https://steamcommunity.com/sharedfiles/filedetails/?id=3815818643) | Cheat Menu 2.0 作弊選單 - Rax 重生版 | 整合作弊、沙盒與管理工具的選單，可治療、開無敵或隱身、調整技能經驗與配方，介面有多種主題樣式。 | `RaxCheatMenu` | 638 | — | — |
+| [Cheat Menu 2.0 - Rax's Reborn [B42.21]](https://steamcommunity.com/sharedfiles/filedetails/?id=3815818643) | Cheat Menu 2.0 作弊選單 - Rax 重生版 | 整合作弊、沙盒與管理工具的選單，可治療、開無敵或隱身、調整技能經驗與配方，介面有多種主題樣式。 | `RaxCheatMenu` | 638 | — | ⚠️ 簡中：MOD 讀介面文字時先查自帶的簡中語系表（RaxLang.lua 的 RaxLang.getText），自帶表有收錄的字串會顯示 MOD 自己的簡中，本包簡中只補它沒收的部分；繁中不受影響。 |
 | [Flesh & Blood: The 1993 Bodies](https://steamcommunity.com/sharedfiles/filedetails/?id=3815950578) | Flesh & Blood：1993 屍體 | 以原版畫風重繪更細緻的殭屍外觀，殭屍會隨時間腐爛，身上帶著其他倖存者與你的武器留下的傷痕。 | `FleshAndBlood1993`, `FleshAndBlood1993NoUnderwear` | 11 | — | — |
 | [Better Bodies](https://steamcommunity.com/sharedfiles/filedetails/?id=3815952291) | Better Bodies 更好的身體 | 重繪角色身體與皮膚材質，增加臉部選擇，身體會反映角色狀態，並新增傷口圖案與永久疤痕。 | `BetterBodies`, `BetterBodiesFaces` | 38 | — | — |
 | [Sandevistan](https://steamcommunity.com/sharedfiles/filedetails/?id=3816048725) | Sandevistan 斯安威斯坦 | 新增《電馭叛客 2077》風格的脊椎植入物，可讓周圍殭屍進入慢動作、自身行動加速，代價是身體負擔。 | `Sandevistan`, `SandevistanFX`, `SandevistanPsychosis`, `SandevistanViewpoint` | ? | — | — |
@@ -1501,7 +1502,7 @@
 | [Knox Packs: Upgradable Backpacks](https://steamcommunity.com/sharedfiles/filedetails/?id=3822813865) | Knox Packs 可升級背包 | 把升級套件縫進背包，另有五款新背包、隨機品質與稀有具名款，也能自己縫製拼布背包。 | `KnoxPacks` | ? | — | — |
 | [Escape From Zomboid Firearms](https://steamcommunity.com/sharedfiles/filedetails/?id=3824755284) | Escape From Zomboid 槍械 | 加入《逃離塔科夫》的 149 把槍械、相容零件、各口徑彈藥與戰術裝置。 | `EscapeFromZomboidFirearms`, `EscapeFromZomboidFirearmsServer` | 1 | ⚠️ ≥1 | — |
 | [Vehicle Kit Library (VSK) - Framework for Vehicle Mods [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3828607335) | Vehicle Kit Library 車輛框架 | Roadworthy 等車輛 MOD 共用的框架，提供儀表板、燈號與修正功能；玩家平常只會看到儀表板上的遠光燈提示，其餘是開發者面板。 | `VehicleSwissKnife` | 11 | — | ⚠️ 儀表上的刻度字母（水溫 C／H、油壓 L／H、里程 km／mi）寫死在 Lua（VSK_DashboardCluster.lua），任何翻譯包都補不了；和實車儀表一樣維持英文。 |
-| [Roadworthy [BETA] - Realistic Driving & Car Maintenance [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3828608843) | Roadworthy 寫實駕駛與保養 | 讓開車與養車更寫實：手排換檔與離合器、燃料種類與加錯油、儀表板燈號、發動流程與失敗原因、機油與冷卻液的液位與油質、火星塞與濾清器等零件磨損，以及安全帶；難度與各項機制可在沙盒設定調整。需要 Vehicle Kit Library。 | `RealisticDrivingOverhaul` | 292 | — | — |
+| [Roadworthy [BETA] - Realistic Driving & Car Maintenance [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3828608843) | Roadworthy 寫實駕駛與保養 | 讓開車與養車更寫實：手排換檔與離合器、燃料種類與加錯油、儀表板燈號、發動流程與失敗原因、機油與冷卻液的液位與油質、火星塞與濾清器等零件磨損，以及安全帶；難度與各項機制可在沙盒設定調整。需要 Vehicle Kit Library。 | `RealisticDrivingOverhaul` | 335 | — | — |
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 

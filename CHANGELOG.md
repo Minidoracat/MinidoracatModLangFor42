@@ -4,6 +4,29 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **新收錄 Hags' Firearm Maintenance 槍械保養（翻譯申請 #1219，101 項）。** 對任何槍械右鍵拆解、清潔、修理、重新組裝的選單與進度條、CLP 槍油與槍匠工具組等物品名、《美國槍匠》雜誌、零件提示，以及修理上限、經驗值、道具稀有度等沙盒設定，繁簡中文都有。
+  > 技術要點：使用者 2026-11-04 核准 own lane 收錄；As1 名單標「不收录」。建 own 目錄 `sources/mods/3803480704/`（CN）＋`sources/ch`，登記名冊、watchlist、`backfill-en` 基準與 `mod_names_zh`。上游 `ItemName.json` 只給 B41 前綴鍵，改收 B42 實際查的 8 個裸鍵；Lua 以 `HFM.text(鍵, 英文後備)` 讀、EN 檔沒列的 3 個零件提示鍵（`Tooltip_HFM_Parts*`）一併收錄。零 vanilla 碰撞。
+- **28 個 MOD 更新後新增的文字補上繁簡中文（2,777 項）。** Senator's Martial Arts Core 的八卦／劈掛、少林、街舞格鬥等新流派與武術成就、專長、稱號（589 項）；Living NPC 的隨行與遠征小隊、搬遷、醫療站與基地區域介面（556 項）；Junkyard Sentinel 的基地、圍籬、大門、瞭望塔、投光燈與管理員角色權限（551 項）；Aegis Panel 的工單系統與管理工具（312 項）；Radio Trader 的擊殺配額與獵殺委託、傳奇身分、死亡保留聲望（208 項）；Cheat Menu 2.0 的主頁、我的最愛與建造模式提示（203 項）；Project Zomboid Optimiser 改寫成白話的效能分析頁與設定測試（163 項）；Roadworthy 的檔位與變速箱說明（43 項）；Guns of Tien 的 P90 TR、MDRx 步槍、PMAG 與電木彈匣（36 項）；Knox Packs 的品質升級套件（28 項）；以及 Better Vehicle Dynamics、Improved Farming Info Window、Real Room Heat 等 18 個 MOD 的零星新字串。
+  > 技術要點：追蹤器 2026-11-02、11-03 #1220–#1255「可能過時」。2,734 鍵走 `apply_wf_result`／`apply_translations` 進 `own_translations.json`、Roadworthy 43 鍵落 own 目錄，全數登記 `ch_review_state`；9 路翻譯、7 路對抗複核，採納 57 條（例：Junkyard Sentinel 的 Rectangle 被貼成別句、圍籬材料照原版物品名「鐵絲」「碎布條」「門鉸鏈」；Living NPC 的 workshop 沿用「工坊」、Crafting 同時當工作狀態與職務群組標題改「製作」；Aegis 工單 open 分頁含處理中工單改「未結」；Radio Trader 簡中傷勢詞照原版「刮伤」「深伤口」「忧郁」）。Improved Farming Info Window 把沙盒選項搬到 MOD 選項（`Sandbox_*`→`UI_options_*`），沿用舊譯。Guns of Tien、Better Vehicle Dynamics、Living NPC 在追蹤器那輪之後又更新，以 `backfill-en --force` 重抽現行版，照現行英文翻；Guns of Tien 11-05 再加 MDRx 與 PMAG 的 10 個物品名（#1252 第二輪），照同 MOD 的 SCAR-H 彈匣與整合導軌譯法補上。Senator 新增的 1,837 筆中 1,179 筆是同一批鍵同時放在 `common` 與 `42`，另有 652 筆是已出貨的鍵換了檔案位置。34 個 MOD 以 steamcmd 重抓現行版，corpus_hash 與 tracker state 逐一相符。
+
+### Changed
+
+- **上游改了英文的已出貨文字跟著改（113 項）。** Project Zomboid Optimiser 的效能分析頁改成白話（23 項）；Junkyard Sentinel 的感應器分類改名「保全」、建造難度改成只加材料、砲塔權限改成依管理員角色（17 項）；Senator's Martial Arts Core 的堂島之龍改成精通度 5 進化、白眉派招式的耐力需求與反擊時間（18 項）；SSAULAVI 九個劍術特質的揮砍速度倍率（9 項）；Definitive Descriptions 的 PZTheMutants 嘔吐狀態改寫成影響格數與消退時間（8 項）；Radio Trader 的送件委託與更新公告；Aegis Panel 的溫度與旋轉角度改用「度」；Roadworthy 的變速箱說明與相容 MOD 說明等。
+  > 技術要點：As1 衍生層 31 鍵改 `sources/ch`＋`cn_overrides`，own 層 68 鍵經 `apply_translations` 更新 `en` 錨點，Roadworthy own 目錄 6 鍵；Senator 8 鍵英文只把 `%` 改成 `%%`，譯文原本就是 `%%`，只更新錨點。Optimiser 6 鍵與 The Last of Us Infected 6 鍵的 `en` 錨點原本取自同分支死檔（`UI_EN.txt` 多了 `\"` 跳脫、`Sandbox_EN.txt` 只寫單一 `%`），改填執行期 json 值，譯文不變。
+- **修正 16 個 MOD 的舊譯（172 項）。** SSAULAVI 特質說明的技能名改照原版（長刀、長矛、體格、靈活）、贄殿遮那與黑色日輪刀等刀名、Kensai 不再和 Kensei 同名；Aegis Panel 簡中把圈地寫成「声明」；VorpallySauced 的卷名、階段名、詞綴名對齊與「深化」；Guns of Tien 的莫辛-納甘零件、彈頭口徑、彈鏈節裝盒漏口徑；Complete VFE 的 MK12 是戰鬥步槍、M60 同槍兩名、槍盒、Trapper 是捕獸人；Cheat Menu 的作弊模式、版主、無敵模式；Locksmith 簡中滑桿標籤補上工具名；organizedCategories 跟上 7.62x51mm 與移除的分類等。
+  > 技術要點：受影響 MOD 的 As1 衍生層 5,038 鍵（扣前幾批已稽核且值未變者、本體鍵、unship 鍵與已裁決的 owner 衝突鍵）以 `judge_batch` 初篩標 271 鍵，加低信心長英文 490 鍵共 761 鍵由 4 路代理裁決，改 132 鍵；代理回報的同類問題另補 40 鍵。As1 衍生層改 `sources/ch`＋`cn_overrides`（附 `as1_value`），own 層經 `apply_translations`。槍名前 As1 加註的廠牌（短劍、春田、赫斯塔爾）只在 CH 與 CN 不一致或同一把槍兩個名字時改，CH、CN 一致且同系列都加廠牌的不改。多 owner 共用的槍械配件說明（已有中性譯名裁決）不改。
+- **Complete Vanilla Firearms Expansion 新增 AN-94、把雷射改名 Red Laser 後的 owner 衝突重新裁決。** `Base.AN94` 維持「AN-94 Abakan步槍」（四個 MOD 都是同一把槍），條件譯文補 Complete VFE 的「AN-94」組；`Base.LaserOn` 新增 translate 裁決維持「雷射瞄準器」，條件譯文給 Complete VFE「雷射瞄準器 (紅色)」，與同 MOD 的「雷射瞄準器 (綠色)」一致。
+  > 技術要點：#1238 裁決過時。`owner_conflict_decisions.json` 改簽 `Base.AN94`、新增 `Base.LaserOn`，`owner_variants.json` 對應更新；`Base.Laser` 的 Complete VFE 組（未審核、不出貨）同步改成括號格式。
+
+### Removed
+
+- **上游已拿掉的 59 項譯文。** Living NPC 舊的遠征成員視窗（`UI_LNPC_Party_*`，53 項，新的小隊介面已補譯）；Improved Farming Info Window 搬到 MOD 選項後的 4 個舊沙盒鍵；Junkyard Sentinel 的尖刺路障計數；Lost Province 的除錯海水瓶。
+  > 技術要點：own 層 59 鍵在 `sources/en` 全庫與 tracker state 都已無 owner，steamcmd 重抓的現行版 Lua、script 也無引用（含 `'UI_LNPC_'..key` 這類動態組鍵），依 tracker.md 步驟 5-8 刪除並移除 `ch_review_state`；As1 衍生層的刪除鍵（Aegis Panel 8、Improved Farming Info Window 7、Bandits Radio Expansion 2、Gunsmith 2）依 split 不變式保留。
+
 ## [42.21.0-1.70.0] - 2026-11-02
 
 ### Added
