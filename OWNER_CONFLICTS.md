@@ -23,7 +23,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **1869** 個鍵（`unship` 342、`translate` 1527）。這些鍵的 owner 條目共 5384 筆：可載入 `.json` 3639、script 854、死檔 891。另有 **247** 個鍵尚未裁決。
+現況：已裁決 **1869** 個鍵（`unship` 342、`translate` 1527）。這些鍵的 owner 條目共 5384 筆：可載入 `.json` 3639、script 854、死檔 891。另有 **251** 個鍵尚未裁決。
 
 ## 不出貨的鍵（342）
 
@@ -1908,7 +1908,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_thickblooddesc` | `1299328280/More Traits` = You bleed more slowly from wounds. _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Wounds bleeds less.&lt;br&gt;(-50% damage from bleeding.) _(json)_ | 2026-09-27 裁決：More Traits 寫「傷口流血較慢」，SOTO 寫「傷口流血較少 (流血傷害 -50%)」，同一特質的同一效果，只差詳略。現值「你的傷口流血更慢.」對兩邊都成立，沿用現值。 | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（247）
+## 尚未裁決的衝突（251）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
@@ -1924,6 +1924,8 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `IG_UI\|IGUI_HotbarAttachment_ChestRig` | `3625951765/Simple sling Mod` = ChestRig _(死檔 IG_UI_EN.txt)_<br>`3713038671/JSling` = Chest Rig Left _(死檔 IG_UI_EN.txt)_ | 胸掛 |
 | `IG_UI\|IGUI_HotbarAttachment_ChestRigRight` | `3625951765/Simple sling Mod` = ChestRigRight _(死檔 IG_UI_EN.txt)_<br>`3713038671/JSling` = Chest Rig Right _(死檔 IG_UI_EN.txt)_ | 胸掛 (右) |
 | `IG_UI\|IGUI_HotbarAttachment_KnifeSheath` | `3625951765/Simple sling Mod` = KnifeSheath _(死檔 IG_UI_EN.txt)_<br>`3713038671/JSling` = Knife Sheath _(死檔 IG_UI_EN.txt)_ | 刀鞘 |
+| `IG_UI\|IGUI_Knox_JavaMissing` | `3816775774/KnoxInventory` = Knox Inventory needs ZombieBuddy, but its Java part did not… _(json)_<br>`3816775774/KnoxInventoryBeta` = Knox Inventory needs ZombieBuddy, but its Java part did not… _(json)_ | Knox Inventory 需要 ZombieBuddy, 但它的 Java 部分沒有載入. 目前先使用遊戲原本的物… |
+| `IG_UI\|IGUI_Knox_JavaRestart` | `3816775774/KnoxInventory` = Knox Inventory is enabled, but it will only work after the … _(json)_<br>`3816775774/KnoxInventoryBeta` = Knox Inventory is enabled, but it will only work after the … _(json)_ | Knox Inventory 已啟用, 但要重新啟動遊戲後才會生效. 請完全關閉殭屍毀滅工程再重新啟動: 本模組的 J… |
 | `IG_UI\|IGUI_ProxInv_Text_ForceSelectOff` | `2847184718/ProximityInventory` = Prox Inv Force Selected: OFF _(json)_<br>`3669550831/ProximityInventory` = Force Selected: OFF _(json)_ | 強制選取: 關 |
 | `IG_UI\|IGUI_ProxInv_Text_ForceSelectOn` | `2847184718/ProximityInventory` = Prox Inv Force Selected: ON _(json)_<br>`3669550831/ProximityInventory` = Force Selected: ON _(json)_ | 強制選取: 開 |
 | `IG_UI\|IGUI_Pry_fail` | `3714335263/BB_CommonSenseRoy` = It won't give in. I can try again... _(json)_<br>`3717968421/CommonSense` = It won't give in. I can try again... _(json)_<br>`3718616260/ebfsensofencing` = Nao vai ceder. Posso tentar de novo... _(死檔 IG_UI_EN.txt)_ | 撬不動. 我可以再試一次… |
@@ -1954,6 +1956,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `ItemName\|Autotsar.ATAMotoHarleyOldTire` | `3402491515/tsarslib` = Xarley-Davitsan Sportstep - old tire _(json)_<br>`3404737883/AutotsarMotorClub` = Valu-Tire _(script)_<br>`3743911767/IVA` = Xarley-Davitsan Sportstep - old tire _(json)_ | 哈雷-戴維森Sportstep舊式輪胎 |
 | `ItemName\|Autotsar.ATAMotoHarleySeat` | `3402491515/tsarslib` = Xarley-Davitsan Sportstep - seat _(json)_<br>`3404737883/AutotsarMotorClub` = Standard Seat _(script)_<br>`3743911767/IVA` = Xarley-Davitsan Sportstep - seat _(json)_ | 哈雷-戴維森Sportstep座椅 |
 | `ItemName\|Autotsar.ATAMotoQuadSeat` | `3402491515/tsarslib` = Suvzuki Quadruiner - seat _(json)_<br>`3404737883/AutotsarMotorClub` = Standard Seat _(script)_<br>`3743911767/IVA` = Suvzuki Quadruiner - seat _(json)_ | 鈴木Quadruiner座椅 |
+| `ItemName\|Base.45Clip20` | `3633421539/Escape from Kentucky4215` = .45 ACP 20-Round Magazine _(json)_<br>`3780151182/MFS_community_fix` = .45-70 20-Round Christine Rifle Magazine _(json)_ | .45 ACP 20 發彈匣 |
 | `ItemName\|Base.45Clip_Attachment` | `3720484992/VanillaFirearmsRework` = Mag Attachment Model _(script)_<br>`3773858287/B42 Rain's Firearms & Gun Parts` = .45 ACP Magazine _(json)_<br>`3773858287/B42 Rain's Firearms & Gun Parts Expanded` = .45 ACP Magazine _(json)_ | .45 ACP彈匣 |
 | `ItemName\|Base.46Box` | `3611718925/VFEP93` = Box of 4.6mm Rounds _(json)_<br>`3762355926/VFEP93` = Box of 4.6 Rounds _(json)_ | 4.6mm彈藥 (整盒) |
 | `ItemName\|Base.46Bullets` | `3611718925/VFEP93` = 4.6mm Round _(json)_<br>`3762355926/VFEP93` = 4.6 Rounds _(json)_ | 4.6mm彈藥 |
@@ -2086,6 +2089,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `Sandbox\|Sandbox_InventoryTetris_PreventTardisStacking` | `3598501350/RE Tetris [B42]` = Prevent Infinite Container Stacking _(json)_<br>`3769773293/INVENTORY_TETRISP_MP` = Prevent Infinite Container Stacking _(json)_<br>`3775513231/InventoryTetris` = Prevent TARDIS Stacking _(json)_ | 防止無限容器堆疊 |
 | `Sandbox\|Sandbox_InventoryTetris_UseItemTransferTime` | `3598501350/RE Tetris [B42]` = Item Transfer Time _(json)_<br>`3769773293/INVENTORY_TETRISP_MP` = Item Transfer Time _(json)_<br>`3775513231/InventoryTetris` = Use Item Transfer Time _(json)_ | 物品轉移時間 |
 | `Sandbox\|Sandbox_MWPWeapons` | `2732407704/MWPWeapons` = MWP Weapons Loot _(死檔 Sandbox_EN.txt)_<br>`3747202678/MWPWeapons42` = MWP Weapons _(json)_ | MWP 武器 |
+| `Sandbox\|Sandbox_ModernFirearmsSystemSandboxGun_Christine45_cat_Spawn` | `3633421539/Escape from Kentucky4215` = Christine .45-70 DMR Spawn Chance [.45 ACP] _(json)_<br>`3780151182/MFS_community_fix` = Christine .45-70 DMR Spawn Chance [.45-70] _(json)_ | 克里斯汀 .45-70 精準射手步槍生成機率 [.45 ACP] |
 | `Sandbox\|Sandbox_PZLinux_StartingBalanceMax` | `3414468585/B42 PZLinux` = Starting Bank Balance (Maximum) _(json)_<br>`3700371875/B42 PZLinux` = Starting Balance Max _(json)_ | 初始銀行餘額 (最大值) |
 | `Sandbox\|Sandbox_PZLinux_StartingBalanceMin` | `3414468585/B42 PZLinux` = Starting Bank Balance (Minimum) _(json)_<br>`3700371875/B42 PZLinux` = Starting Balance Min _(json)_ | 初始銀行餘額 (最小值) |
 | `Sandbox\|Sandbox_RefinedHotwiring_KeyMechanics` | `2930762705/KeyBlank` = Mechanics to create the car key: _(json)_<br>`3640448510/Fluffy's Key Blank` = Mechanics level needed to make a key using a blank _(json)_ | 使用鑰匙胚製作鑰匙所需的技工等級 |

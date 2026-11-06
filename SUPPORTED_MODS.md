@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1491 個 Workshop 模組**（2147 個 mod ID）；另 **10 個已下架**（翻譯保留，見文末）。
+共支援 **1490 個 Workshop 模組**（2147 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -178,7 +178,7 @@
 | [Mod Update and Alert System](https://steamcommunity.com/sharedfiles/filedetails/?id=3077900375) | 模組更新警報系統 | Chuckleberry Finn 的模組更新提示系統，於遊戲內顯示更新警報訊息。 | `ChuckleberryFinnAlertSystem` | 6 | — | — |
 | ['93 Ford Taurus](https://steamcommunity.com/sharedfiles/filedetails/?id=3088951320) | '93 福特 Taurus | 新增 1993 年福特 Taurus 轎車，含 SHO 與旅行車版本。 | `93fordTaurus` | ? | — | — |
 | [True Music Radio](https://steamcommunity.com/sharedfiles/filedetails/?id=3100475013) | True Music 廣播電台 | 新增可播放 True Music 音樂庫的廣播電台與 MTV 頻道，支援 RDS 曲目播報。 | `TMRRemoveMumble`, `TrueMusicRadio` | 67 | — | — |
-| [Gunsmith [B42 + MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3105394500) | 槍匠 | 以槍匠工具取代原版槍械修理，拆解槍枝取得零件來修理或組裝武器，並新增槍匠技能。 | `weapongunsmith`, `weapongunsmith_GunsOfMarz`, `weapongunsmith_UndeadSurvivor`, `weapongunsmith_VFE` | 147 | — | — |
+| [Gunsmith [B42 + MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3105394500) | 槍匠 | 以槍匠工具取代原版槍械修理，拆解槍枝取得零件來修理或組裝武器，並新增槍匠技能。 | `weapongunsmith`, `weapongunsmith_GunsOfMarz`, `weapongunsmith_PostSovietArmory`, `weapongunsmith_UndeadSurvivor`, `weapongunsmith_VFE` | 147 | — | — |
 | ['87 Ford B700/F700 Trucks](https://steamcommunity.com/sharedfiles/filedetails/?id=3110911330) | '87 福特 B700/F700 卡車 | 新增 1987 年福特 B700/F700 卡車，含裝甲車、廂型貨車等版本與改裝。 | `87fordB700` | 98 | — | — |
 | ['90 BMW 3 Series (E30)](https://steamcommunity.com/sharedfiles/filedetails/?id=3110913021) | '90 BMW 3 系列 (E30) | 新增 1990 年 BMW E30 3 系列轎車，含敞篷版與多種裝甲改裝零件。 | `90bmwE30` | 43 | — | — |
 | [Taylorsville](https://steamcommunity.com/sharedfiles/filedetails/?id=3134394569) | 泰勒斯維爾地圖 | 新增 Taylorsville 地圖，並含對應的地圖物品。 | `Taylorsville` | ? | — | — |
@@ -1130,7 +1130,6 @@
 | [Knox Buildworks](https://steamcommunity.com/sharedfiles/filedetails/?id=3772269882) | 諾克斯建築工坊 | 新增大量可建造的家電與設施（柴火爐、水槽、冰箱等）、瀝青混合材料配方，並提供藍圖系統與可設定的藍圖半徑。 | `KnoxBuildworks`, `KnoxBuildworksVanillaExpanded` | 2940 | ⚠️ ≥1 | — |
 | [Water Pump](https://steamcommunity.com/sharedfiles/filedetails/?id=3772302032) | — | — | `WaterPump` | 87 | — | — |
 | [Indoor Climate](https://steamcommunity.com/sharedfiles/filedetails/?id=3772549209) | — | — | `IndoorClimateLiteB42` | 48 | — | — |
-| [Knox Immersivity B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3772609548) | — | — | `KnoxImersivityB42` | 92 | — | — |
 | [Companion Dogs - Chihuahua](https://steamcommunity.com/sharedfiles/filedetails/?id=3772779441) | — | — | `CompanionDogsChihuahua` | 12 | — | — |
 | [Inventory Item Pinning〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3773092190) | 物品欄項目置頂 | 可將常用物品固定在物品欄頂端，方便快速存取。 | `InventoryItemPins` | 2 | — | — |
 | [AutoLoot (B42)](https://steamcommunity.com/sharedfiles/filedetails/?id=3773340822) | — | — | `AutoDrop_B42` | 83 | — | — |
@@ -1506,7 +1505,7 @@
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
-## 已下架模組（10 個，翻譯保留）
+## 已下架模組（11 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
@@ -1520,5 +1519,6 @@
 | [Swim Skill](https://steamcommunity.com/sharedfiles/filedetails/?id=3654513156) | — | — | `swim_skill` | 13 | — | — | 2026-10-17 |
 | [[B42.20] Bag Upgrade Plus](https://steamcommunity.com/sharedfiles/filedetails/?id=3668094025) | — | — | `BagUpgradePlusUpdated` | 55 | — | — | 2026-10-24 |
 | [[B42.20] Bag Upgrade Plus Realistic](https://steamcommunity.com/sharedfiles/filedetails/?id=3669286020) | — | — | `BagUpgradePlusRealistic` | 55 | — | — | 2026-10-24 |
+| [Knox Immersivity B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3772609548) | — | — | `KnoxImersivityB42` | 92 | — | — | 2026-11-06 |
 | [Dildo GTA Weapon [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3777681298) | — | — | `DildoFunnyWeapon` | 105 | — | — | 2026-10-20 |
 | [Peachey Distillation](https://steamcommunity.com/sharedfiles/filedetails/?id=3784741776) | Peachey 蒸餾 | 加入發酵醪、蒸餾器與陳釀流程，可釀製苦艾烈酒、陳釀葡萄酒等酒品，並提供專屬蒸餾製作分類。 | `peacheysdistillation` | 122 | — | — | 2026-09-10 |
