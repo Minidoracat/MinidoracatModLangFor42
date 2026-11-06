@@ -21,6 +21,8 @@
   > 技術要點：受影響 MOD 的 As1 衍生層 5,038 鍵（扣前幾批已稽核且值未變者、本體鍵、unship 鍵與已裁決的 owner 衝突鍵）以 `judge_batch` 初篩標 271 鍵，加低信心長英文 490 鍵共 761 鍵由 4 路代理裁決，改 132 鍵；代理回報的同類問題另補 40 鍵。As1 衍生層改 `sources/ch`＋`cn_overrides`（附 `as1_value`），own 層經 `apply_translations`。槍名前 As1 加註的廠牌（短劍、春田、赫斯塔爾）只在 CH 與 CN 不一致或同一把槍兩個名字時改，CH、CN 一致且同系列都加廠牌的不改。多 owner 共用的槍械配件說明（已有中性譯名裁決）不改。
 - **Complete Vanilla Firearms Expansion 新增 AN-94、把雷射改名 Red Laser 後的 owner 衝突重新裁決。** `Base.AN94` 維持「AN-94 Abakan步槍」（四個 MOD 都是同一把槍），條件譯文補 Complete VFE 的「AN-94」組；`Base.LaserOn` 新增 translate 裁決維持「雷射瞄準器」，條件譯文給 Complete VFE「雷射瞄準器 (紅色)」，與同 MOD 的「雷射瞄準器 (綠色)」一致。
   > 技術要點：#1238 裁決過時。`owner_conflict_decisions.json` 改簽 `Base.AN94`、新增 `Base.LaserOn`，`owner_variants.json` 對應更新；`Base.Laser` 的 Complete VFE 組（未審核、不出貨）同步改成括號格式。
+- **Modern Firearms System Community Fix 改了彈藥名稱後，啟用它時的原版彈藥譯名跟著改（9 項）。** 它把 7.62、.45、9mm 三類的散裝、盒裝、箱裝彈藥改成列出多種口徑，例如「盒裝7.62×51/7.62x39/7.62x54R/.300BLK子彈」「.45 ACP/.45-70子彈」「箱裝9x19mm/9x39mm子彈」；Escape from Kentucky 的譯名不變。
+  > 技術要點：追蹤器 11-06 那輪 #1238「條件譯文過時」9 鍵、#1295。MFS_community_fix（3780151182）改英文後，原本和它同組的 Escape from Kentucky（3633421539）拆成獨立一組，沿用原譯文與原結論；MFS 9 組重譯。16 組送 GPT-6 Astra max 與 Claude 雙模型審核：13 組核准，EFK 的 .45 三組維持「無須覆寫」不出貨；`Bullets9mmCarton` EFK 組的 `_note` 改正（實際譯名是「帕拉貝倫」）。
 
 ### Removed
 
