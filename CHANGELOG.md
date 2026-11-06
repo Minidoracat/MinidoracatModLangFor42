@@ -4,7 +4,7 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
-## [42.21.0-1.71.0] - 2026-11-06
+## [42.21.0-1.71.0] - 2026-11-07
 
 ### Added
 
@@ -12,6 +12,10 @@
   > 技術要點：使用者 2026-11-04 核准 own lane 收錄；As1 名單標「不收录」。建 own 目錄 `sources/mods/3803480704/`（CN）＋`sources/ch`，登記名冊、watchlist、`backfill-en` 基準與 `mod_names_zh`。上游 `ItemName.json` 只給 B41 前綴鍵，改收 B42 實際查的 8 個裸鍵；Lua 以 `HFM.text(鍵, 英文後備)` 讀、EN 檔沒列的 3 個零件提示鍵（`Tooltip_HFM_Parts*`）一併收錄。零 vanilla 碰撞。
 - **28 個 MOD 更新後新增的文字補上繁簡中文（2,777 項）。** Senator's Martial Arts Core 的八卦／劈掛、少林、街舞格鬥等新流派與武術成就、專長、稱號（589 項）；Living NPC 的隨行與遠征小隊、搬遷、醫療站與基地區域介面（556 項）；Junkyard Sentinel 的基地、圍籬、大門、瞭望塔、投光燈與管理員角色權限（551 項）；Aegis Panel 的工單系統與管理工具（312 項）；Radio Trader 的擊殺配額與獵殺委託、傳奇身分、死亡保留聲望（208 項）；Cheat Menu 2.0 的主頁、我的最愛與建造模式提示（203 項）；Project Zomboid Optimiser 改寫成白話的效能分析頁與設定測試（163 項）；Roadworthy 的檔位與變速箱說明（43 項）；Guns of Tien 的 P90 TR、MDRx 步槍、PMAG 與電木彈匣（36 項）；Knox Packs 的品質升級套件（28 項）；以及 Better Vehicle Dynamics、Improved Farming Info Window、Real Room Heat 等 18 個 MOD 的零星新字串。
   > 技術要點：追蹤器 2026-11-02、11-03 #1220–#1255「可能過時」。2,734 鍵走 `apply_wf_result`／`apply_translations` 進 `own_translations.json`、Roadworthy 43 鍵落 own 目錄，全數登記 `ch_review_state`；9 路翻譯、7 路對抗複核，採納 57 條（例：Junkyard Sentinel 的 Rectangle 被貼成別句、圍籬材料照原版物品名「鐵絲」「碎布條」「門鉸鏈」；Living NPC 的 workshop 沿用「工坊」、Crafting 同時當工作狀態與職務群組標題改「製作」；Aegis 工單 open 分頁含處理中工單改「未結」；Radio Trader 簡中傷勢詞照原版「刮伤」「深伤口」「忧郁」）。Improved Farming Info Window 把沙盒選項搬到 MOD 選項（`Sandbox_*`→`UI_options_*`），沿用舊譯。Guns of Tien、Better Vehicle Dynamics、Living NPC 在追蹤器那輪之後又更新，以 `backfill-en --force` 重抽現行版，照現行英文翻；Guns of Tien 11-05 再加 MDRx 與 PMAG 的 10 個物品名（#1252 第二輪），照同 MOD 的 SCAR-H 彈匣與整合導軌譯法補上。Senator 新增的 1,837 筆中 1,179 筆是同一批鍵同時放在 `common` 與 `42`，另有 652 筆是已出貨的鍵換了檔案位置。34 個 MOD 以 steamcmd 重抓現行版，corpus_hash 與 tracker state 逐一相符。
+- **36 個 MOD 更新後新增的文字補上繁簡中文（2,274 項）。** Stay With Me 的同伴遭遇與戰鬥台詞、開局選單、儲物標記與沙盒按鍵選項（640 項）；Radio Trader 的銀行與提款機、側錄器、通訊員升級、異常現象與直升機、外星商人（517 項）；Hot Brass 的彈殼、坩堝與模具、Gunworks 與 Guns of Tien 子彈組裝拆解（246 項）；KR SolarOS 的電圍欄、地板陷阱、手榴彈與地雷（152 項）；PZLinux 的交易、合約、暗網與電腦設定（119 項）；Extreme Weather 的漩渦、強風與急凍（71 項）；Symbiosis 的骨爪、血刃與共生印記（54 項）；Project Zomboid Optimiser 的效能報告（52 項）；Hoarder's Delight 的整盒整箱（48 項）；Knox Inventory 的 R 鍵裝填選單與消息頁（43 項）；Central Heating Boilers（40 項）；Gunsmith 的俄系與二戰槍枝組裝配方（35 項）；Hardship: Brawling 的指虎、拳套與鐵鍊拳（35 項）；以及其他 23 個 MOD 的零星新字串。
+  > 技術要點：追蹤器 2026-11-03～11-06 #1221、#1228、#1231、#1234、#1245、#1256–#1296「可能過時」。2,239 鍵走 `apply_wf_result`／`apply_translations` 進 `own_translations.json`、Hardship: Brawling 35 鍵落 own 目錄（新增 `ContextMenu.json`、`Tooltip.json`），全數登記 `ch_review_state`；6 路翻譯、6 路對抗複核，採納 23 條（例：Stay With Me 的 Close 在相遇距離選單是「近」、激戰後的 Too close 是「好險」，以 `key_overrides` 逐鍵分開；清除儲物標記不是刪除容器；Radio Trader 猜 PIN 的 elsewhere 是「數字正確但位置不對」；PZLinux 賣出是需求「減量」；Hot Brass 液體裝箱要「裝滿」原液體）。Radio Trader 沙盒分頁標題保留上游頁碼「(n/8)」。Blackout Predators Extended 在追蹤器那輪之後又更新，以 `backfill-en --force` 重抽現行版。46 個 MOD 以 steamcmd 重抓現行版給譯者查 Lua；AutoTailoring（#1256）新增鍵只在 `42.22/`，現行 42.21 不載入，不翻。
+- **Knox Inventory 測試台的 353 個新鍵登記為不翻。** 讀這些鍵的 `KnoxTestBench.lua` 不隨 Workshop 版發布，玩家看不到（比照 2026-10-22 裁定，#996）。
+  > 技術要點：登記 `sources/untranslatable_keys.json`；現行版 Lua 無任何 `IGUI_KnoxTB_` 引用。
 
 ### Changed
 
@@ -23,11 +27,19 @@
   > 技術要點：#1238 裁決過時。`owner_conflict_decisions.json` 改簽 `Base.AN94`、新增 `Base.LaserOn`，`owner_variants.json` 對應更新；`Base.Laser` 的 Complete VFE 組（未審核、不出貨）同步改成括號格式。
 - **Modern Firearms System Community Fix 改了彈藥名稱後，啟用它時的原版彈藥譯名跟著改（9 項）。** 它把 7.62、.45、9mm 三類的散裝、盒裝、箱裝彈藥改成列出多種口徑，例如「盒裝7.62×51/7.62x39/7.62x54R/.300BLK子彈」「.45 ACP/.45-70子彈」「箱裝9x19mm/9x39mm子彈」；Escape from Kentucky 的譯名不變。
   > 技術要點：追蹤器 11-06 那輪 #1238「條件譯文過時」9 鍵、#1295。MFS_community_fix（3780151182）改英文後，原本和它同組的 Escape from Kentucky（3633421539）拆成獨立一組，沿用原譯文與原結論；MFS 9 組重譯。16 組送 GPT-6 Astra max 與 Claude 雙模型審核：13 組核准，EFK 的 .45 三組維持「無須覆寫」不出貨；`Bullets9mmCarton` EFK 組的 `_note` 改正（實際譯名是「帕拉貝倫」）。
+- **上游改了英文的已出貨文字跟著改（129 項）。** Real Room Heat 改名 Real Room Temperature（RRT，44 項）；Bodily Functions 的意外尿褲等沙盒選項（24 項）；Live to Fight Another Day 的場景與聲響說明（14 項）；Eat Smart 的自訂飢餓、口渴目標（7 項）；Senator's Martial Arts Core（6 項）；Evolving Traits World 設定頁的各語言翻譯完成度（5 項）；Stay With Me 的同伴拔槍門檻改成 10 隻、Radio Trader 的刷卡付款也能用電臺商人金融卡、Knox Inventory 的支持頁、Symbiosis、DMM、PZLinux、Optimiser 等。
+  > 技術要點：As1 衍生層 42 鍵改 `sources/ch`＋`cn_overrides`，own 層 81 鍵經 `apply_translations` 更新 `en` 錨點，Hardship: Brawling own 目錄 1 鍵。ETW 的 5 個 `UI_ETW_TranslationStats_*` 是數字（已登記 `untranslatable_keys.json`，但 As1 層照常出貨），照現行英文數字同步。
+- **修正 23 個 MOD 的舊譯（411 項）。** Evolving Traits World 的特質名照原版（簡中垂钓者、园艺师、猎人、嗜烟如命等；繁中同一特質兩個名字統一；「飲鴆止渴」改「嗜血」）；Guns of Marz 沙盒「啟用某槍」補上年代與口徑、Compensator 是補償器、M4A1 槍托展開；Snake's ModPack 熔鉛用的平底煮鍋、MSR700／MSR788 同槍兩名、磁鐵打撈物品、飛鏢靶；PZLinux 金額多寫一個 `$` 會顯示成「$$」、Stock 是股價不是庫存、以革倫；Radio Trader 沙盒說明的預設值寫錯（例：應為 15 卻寫 2）與分頁標題；Zombie Virus Vaccine 道具說明只翻了第一句、日記頁；Railroader 的舊版上車訊息；Stay With Me 簡中台詞（省省吧、生火不是放火、暴風雨台詞與繁中意思相反）；Hoarder's Delight 繁中字間多空格、簡中拆包寫成打包；KR SolarOS 的晴朗被寫成「清除」等。
+  > 技術要點：受影響 MOD 的 As1 衍生層 18,713 鍵以 `judge_batch` 初篩（US$0.48），標 wrong 1,073 鍵加低信心 839 鍵共 1,912 鍵由 5 路代理裁決；另以數字比對（英文的數字在譯文找不到）抓 113 鍵交 1 路代理。代理改 344 鍵、回報的同類問題另補 77 鍵、主代理補 13 鍵。20 鍵撞已有中性譯名的 owner 衝突裁決：19 鍵的修正只對其中一個 owner 成立（Zombie Virus Vaccine 與 zReVaccin、Home Inventory 兩版、ETW 與 Dynamic Traits、Guns of Marz 與 Brita Gunworks 等），維持中性譯名；`IGUI_ItemCat_Dye` 的另一個 owner 已不存在，裁決退役、改譯「天然染料」。MFS 的 Christine 繁中統一「克里斯汀」。
+- **7 個鍵變成兩個 MOD 英文不同的衝突，重新裁決並補上條件譯文。** PZLinux 兩個發行版的初始銀行餘額上下限沿用現值；Escape from Kentucky 與 MFS 社群修正版的 `Base.45Clip20`（.45 ACP 彈匣與 .45-70 克里斯汀步槍彈匣）口徑不同、不出貨，Christine 生成機率拿掉括號裡的彈藥分類；CD: Rats 新增和花枝鼠互斥的戰鬥鼠，設定頁標題改中性「CD: 老鼠」；Knox Inventory BETA 改寫 ZombieBuddy 未載入時的處理步驟，兩則訊息不出貨。啟用哪個 MOD，就寫入它自己的譯文。
+  > 技術要點：`owner_conflict_decisions.json` 新增 translate 4 鍵、unship 3 鍵（`unshipped_keys.json` 以 `owner_signature` 雙向背書），`owner_variants.json` 新增 7 鍵 14 組 `kind: conflict`。`Base.45Clip20` 比照 `Base.9mmDrum_cat`、`Base.762Bullets` 前例：兩方 GunType 不同（UMP45 與 Christine45），不用上位口徑「.45」遮掉差異；Knox 兩鍵比照 `IGUI_Knox_Page_game`。
 
 ### Removed
 
 - **上游已拿掉的 59 項譯文。** Living NPC 舊的遠征成員視窗（`UI_LNPC_Party_*`，53 項，新的小隊介面已補譯）；Improved Farming Info Window 搬到 MOD 選項後的 4 個舊沙盒鍵；Junkyard Sentinel 的尖刺路障計數；Lost Province 的除錯海水瓶。
   > 技術要點：own 層 59 鍵在 `sources/en` 全庫與 tracker state 都已無 owner，steamcmd 重抓的現行版 Lua、script 也無引用（含 `'UI_LNPC_'..key` 這類動態組鍵），依 tracker.md 步驟 5-8 刪除並移除 `ch_review_state`；As1 衍生層的刪除鍵（Aegis Panel 8、Improved Farming Info Window 7、Bandits Radio Expansion 2、Gunsmith 2）依 split 不變式保留。
+- **上游已拿掉的 2 項譯文。** Better Building Plus 的屋簷檢查警告、Knox Inventory 支持頁的「會在瀏覽器中開啟」。
+  > 技術要點：own 層 2 鍵在 steamcmd 重抓的現行版 Lua 已無引用（含 `"IGUI_BBP_" ..`、`"IGUI_Knox_Pinned" ..` 這類動態組鍵），刪除並移除 `ch_review_state`；As1 衍生層的 61 個刪除鍵依 split 不變式保留。
 
 ## [42.21.0-1.70.0] - 2026-11-02
 

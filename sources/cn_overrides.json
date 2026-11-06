@@ -8611,33 +8611,33 @@
   },
   "Print_Media.json|Print_Media_DiaryPage1_info": {
     "as1_value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: getTexture(\"media/textures/printMedia/FlyerPic/DiaryPage1EN.png\"), width: 1024, height: 1536>",
-    "reason": "PZ 42.20.4 改寫 Print Media 解析器（PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式），舊格式 texture:getTexture(\"X\") 一律失效，玩家開啟日記頁只會看到空白。純格式遷移：只去掉 getTexture(\" \") 外殼，材質路徑與版面數值逐字不動（上游 EN 鏡像 sources/en/3615135168.json 同路徑）。",
-    "value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: media/textures/printMedia/FlyerPic/DiaryPage1EN.png, width: 1024, height: 1536>"
+    "value": "<type:parent, width:1024, height:1536><type:texture, x:0, y:0, texture:media/textures/printMedia/FlyerPic/DiaryPage1EN.png, width:1024, height:1536>",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：版面標記被加了空格 (type: parent), 原版與上游 CH/CN 都是 type:parent 無空格; 照 EN 原樣"
   },
   "Print_Media.json|Print_Media_DiaryPage2_info": {
     "as1_value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: getTexture(\"media/textures/printMedia/FlyerPic/DiaryPage2EN.png\"), width: 1024, height: 1536>",
-    "reason": "PZ 42.20.4 改寫 Print Media 解析器（PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式），舊格式 texture:getTexture(\"X\") 一律失效，玩家開啟日記頁只會看到空白。純格式遷移：只去掉 getTexture(\" \") 外殼，材質路徑與版面數值逐字不動（上游 EN 鏡像 sources/en/3615135168.json 同路徑）。",
-    "value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: media/textures/printMedia/FlyerPic/DiaryPage2EN.png, width: 1024, height: 1536>"
+    "value": "<type:parent, width:1024, height:1536><type:texture, x:0, y:0, texture:media/textures/printMedia/FlyerPic/DiaryPage2EN.png, width:1024, height:1536>",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：版面標記被加了空格 (type: parent), 原版與上游 CH/CN 都是 type:parent 無空格; 照 EN 原樣"
   },
   "Print_Media.json|Print_Media_DiaryPage3_info": {
     "as1_value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: getTexture(\"media/textures/printMedia/FlyerPic/DiaryPage3EN.png\"), width: 1024, height: 1536>",
-    "reason": "PZ 42.20.4 改寫 Print Media 解析器（PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式），舊格式 texture:getTexture(\"X\") 一律失效，玩家開啟日記頁只會看到空白。純格式遷移：只去掉 getTexture(\" \") 外殼，材質路徑與版面數值逐字不動（上游 EN 鏡像 sources/en/3615135168.json 同路徑）。",
-    "value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: media/textures/printMedia/FlyerPic/DiaryPage3EN.png, width: 1024, height: 1536>"
+    "value": "<type:parent, width:1024, height:1536><type:texture, x:0, y:0, texture:media/textures/printMedia/FlyerPic/DiaryPage3EN.png, width:1024, height:1536>",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：版面標記被加了空格 (type: parent), 原版與上游 CH/CN 都是 type:parent 無空格; 照 EN 原樣"
   },
   "Print_Media.json|Print_Media_DiaryPage4_info": {
     "as1_value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: getTexture(\"media/textures/printMedia/FlyerPic/DiaryPage4EN.png\"), width: 1024, height: 1536>",
-    "reason": "PZ 42.20.4 改寫 Print Media 解析器（PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式），舊格式 texture:getTexture(\"X\") 一律失效，玩家開啟日記頁只會看到空白。純格式遷移：只去掉 getTexture(\" \") 外殼，材質路徑與版面數值逐字不動（上游 EN 鏡像 sources/en/3615135168.json 同路徑）。",
-    "value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: media/textures/printMedia/FlyerPic/DiaryPage4EN.png, width: 1024, height: 1536>"
+    "value": "<type:parent, width:1024, height:1536><type:texture, x:0, y:0, texture:media/textures/printMedia/FlyerPic/DiaryPage4EN.png, width:1024, height:1536>",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：版面標記被加了空格 (type: parent), 原版與上游 CH/CN 都是 type:parent 無空格; 照 EN 原樣"
   },
   "Print_Media.json|Print_Media_DiaryPage5_info": {
     "as1_value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: getTexture(\"media/textures/printMedia/FlyerPic/DiaryPage5EN.png\"), width: 1024, height: 1536>",
-    "reason": "PZ 42.20.4 改寫 Print Media 解析器（PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式），舊格式 texture:getTexture(\"X\") 一律失效，玩家開啟日記頁只會看到空白。純格式遷移：只去掉 getTexture(\" \") 外殼，材質路徑與版面數值逐字不動（上游 EN 鏡像 sources/en/3615135168.json 同路徑）。",
-    "value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: media/textures/printMedia/FlyerPic/DiaryPage5EN.png, width: 1024, height: 1536>"
+    "value": "<type:parent, width:1024, height:1536><type:texture, x:0, y:0, texture:media/textures/printMedia/FlyerPic/DiaryPage5EN.png, width:1024, height:1536>",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：版面標記被加了空格 (type: parent), 原版與上游 CH/CN 都是 type:parent 無空格; 照 EN 原樣"
   },
   "Print_Media.json|Print_Media_DiaryPage6_info": {
     "as1_value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: getTexture(\"media/textures/printMedia/FlyerPic/DiaryPage6EN.png\"), width: 1024, height: 1536>",
-    "reason": "PZ 42.20.4 改寫 Print Media 解析器（PrintMedia.lua init 直接 getTexture(value)、不再 eval Lua 表達式），舊格式 texture:getTexture(\"X\") 一律失效，玩家開啟日記頁只會看到空白。純格式遷移：只去掉 getTexture(\" \") 外殼，材質路徑與版面數值逐字不動（上游 EN 鏡像 sources/en/3615135168.json 同路徑）。",
-    "value": "<type: parent, width: 1024, height: 1536><type: texture, x: 0, y: 0, texture: media/textures/printMedia/FlyerPic/DiaryPage6EN.png, width: 1024, height: 1536>"
+    "value": "<type:parent, width:1024, height:1536><type:texture, x:0, y:0, texture:media/textures/printMedia/FlyerPic/DiaryPage6EN.png, width:1024, height:1536>",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：版面標記被加了空格 (type: parent), 原版與上游 CH/CN 都是 type:parent 無空格; 照 EN 原樣"
   },
   "RecipeGroups.json|RecipeGroup_CraftTireStack": {
     "as1_value": "制作轮胎堆叠",
@@ -13196,8 +13196,8 @@
   },
   "Sandbox.json|Sandbox_ETW_AsthmaticCounter_tooltip": {
     "as1_value": "你需要达到痊愈值的上限数字才能失去哮喘特质. 在寒冷温度下跑步或锻炼会降低痊愈值; 越冷降低越快. 如果你在室外, 降低更快. 如果你是烟瘾患者, 降低更快. 此外, 烟瘾患者跑步时计数器会缓慢降低, 即使天气良好. 达到计数器值会移除该特质. 只要你不在跑步或冲刺且呼吸高于0摄氏度的空气, 计数器会自行缓慢增加.此外, 它会根据你的健身水平和当前耐力水平增加. 烟瘾患者增加速率减半. 拥有哮喘特质再次减半",
-    "value": "获得或失去哮喘的计数器阈值. 在气温等于或低于设定的低温阈值时跑步或冲刺会降低计数器; 空气越冷, 身处室外, 冲刺, 烟瘾患者与哮喘都会影响降低幅度. 烟瘾患者在高于低温阈值时同样会降低. 只要不在跑步或冲刺, 且气温等于或高于设定的恢复温度, 计数器就会依体格与当前耐力增加. 烟瘾患者与哮喘各会让该增加量减半.",
-    "reason": "2026-09-09 #463 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane 鍵：上游整段改寫（舊文寫死 0 攝氏度與『越冷越快』, 新文改為引用兩個可設定溫度門檻, 並新增『吸菸者與哮喘各讓增加量減半』）。CH 改 sources/ch/Sandbox.json；CN 走 cn_overrides 登記——{\"value\": <上列 cn>, \"as1_value\": <現行 As1 原值>, \"reason\": \"上游 EN 語意變更（tracker stale 2914075159），CN 跟進新 EN\"}。CN 為對新 EN 的獨立直譯（非 CH 轉換）：Smoker 沿用同 mod CN 既有『烟瘾患者』, Fitness 取本體官方 CN IGUI_perks_Fitness『体格』（舊 As1 值作『健身水平』, 非技能面板用詞）, threshold 依 CN 既有語料作『阈值』。CH 側 Fitness 取『體格』。此鍵已登記於 ch_review_state.json，CN 有效值改變後需重登記 hash"
+    "value": "获得或失去哮喘患者特质的计数器阈值. 在气温等于或低于设定的低温阈值时跑步或冲刺会降低计数器; 空气越冷, 身处室外, 冲刺, 嗜烟如命与哮喘患者都会影响降低幅度. 嗜烟如命者在高于低温阈值时同样会降低. 只要不在跑步或冲刺, 且气温等于或高于设定的恢复温度, 计数器就会依体格与当前耐力增加. 嗜烟如命与哮喘患者各会让该增加量减半.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：原版特質名照官方簡中: Smoker=嗜烟如命 (原譯烟瘾患者), Asthmatic=哮喘患者"
   },
   "Sandbox.json|Sandbox_ETW_Axeman": {
     "as1_value": "伐木工人",
@@ -13301,8 +13301,8 @@
   },
   "Sandbox.json|Sandbox_ETW_BraverySystemKills_tooltip": {
     "as1_value": "在这里设置你需要多少击杀才能将勇气系统提升到满级. 近战击杀计为双倍进度. 进阶路线如下: 畏首畏尾->恐惧血液->和平主义->心惊肉跳->无所畏惧->麻木不仁<br>你需要前一个特质消失 (如果是负面的)或存在 (如果是正面的)才能获得/失去进阶中的下一个特质. <br>达到每个阶段所需数量如下:<br>畏首畏尾: 最大击杀数的10%%<br>恐惧血液: 20%%<br>和平主义: 30%%<br>心惊肉跳: 40%%<br>无所畏惧: 60%%<br>麻木不仁: 100%%<br>示例: 最大击杀数设为1000. 你从畏首畏尾开始. 需要100次击杀来移除它. 如果你获得50次近战击杀, 它会被移除. 如果你获得40次近战击杀 (x2=80次计数) 和20次枪械击杀也是如此",
-    "value": "在这里设置将勇气系统提升到满级所需的加权击杀进度. 每次击杀会依其设定的近战, 枪械或其他击杀值累加进度. 进阶路线如下: 畏首畏尾->恐惧血液->和平主义->心惊肉跳->无所畏惧->麻木不仁<br>你需要前一个特质消失 (如果是负面的)或存在 (如果是正面的)才能获得/失去进阶中的下一个特质. <br>达到每个阶段所需数量如下:<br>畏首畏尾: 最大进度的10%%<br>恐惧血液: 最大进度的20%%<br>和平主义: 最大进度的30%%<br>心惊肉跳: 最大进度的40%%<br>无所畏惧: 最大进度的60%%<br>麻木不仁: 最大进度的100%%",
-    "reason": "2026-09-09 #463 上游 EN 語意變更（tracker stale），CN 跟進新 EN；As1 lane 鍵：上游把『近戰擊殺計雙倍』改成三種可設定擊殺值的加權進度, 百分比基準由『最大擊殺數』改為『最大進度』, 並刪除整段舊範例。CH 改 sources/ch/Sandbox.json；CN 走 cn_overrides 登記——reason 用「上游 EN 語意變更（tracker stale 2914075159），CN 跟進新 EN」, as1_value 取現行 As1 原值。CN 為獨立直譯：六個特質名沿用 As1 CN 既有『畏首畏尾/恐惧血液/和平主义/心惊肉跳/无所畏惧/麻木不仁』（與 CH 的懦弱/怕血/… 各自成套, 不互轉）；9 個 <br>、6 個 %% 與 10/20/30/40/60/100 全對齊新 EN。此鍵已登記於 ch_review_state.json，CN 有效值改變後需重登記 hash"
+    "value": "在这里设置将勇气系统提升到满级所需的加权击杀进度. 每次击杀会依其设定的近战, 枪械或其他击杀值累加进度. 进阶路线如下: 畏首畏尾->恐惧血液->爱好和平->心惊肉跳->无所畏惧->麻木不仁<br>你需要前一个特质消失 (如果是负面的)或存在 (如果是正面的)才能获得/失去进阶中的下一个特质. <br>达到每个阶段所需数量如下:<br>畏首畏尾: 最大进度的10%%<br>恐惧血液: 最大进度的20%%<br>爱好和平: 最大进度的30%%<br>心惊肉跳: 最大进度的40%%<br>无所畏惧: 最大进度的60%%<br>麻木不仁: 最大进度的100%%",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Reluctant Fighter 官方簡中為「爱好和平」"
   },
   "Sandbox.json|Sandbox_ETW_Crafty": {
     "as1_value": "巧手良工",
@@ -20919,16 +20919,6 @@
     "reason": "As1 自家出貨鍵 IGUI_TABAS_BathTime = 沐浴时长 用「时长」, As1 本鍵卻改成「时间」自相矛盾; own 的 时长 一致｜原 own 裁決註記：非 tracker diff 觸發：處理 issue #144 時逐鍵複核發現的既存缺口——上游 42.20 有效分支已定義此鍵且有有效 lua_gettext consumer（TABAS_ModOprions.lua），我方 dist 卻無，屬玩家確證可見缺口。",
     "value": "一般洗澡时长"
   },
-  "UI.json|UI_TTF_WornKeep_Back": {
-    "as1_value": "背部",
-    "reason": "查表決定性: 本體 CN UI.json UI_ClothingType_Back = 背面, own 逐字照抄本體衣著部位名, As1 自行改譯",
-    "value": "背面"
-  },
-  "UI.json|UI_TTF_WornKeep_Eyes": {
-    "as1_value": "眼睛",
-    "reason": "查表決定性: 本體 CN UI.json UI_ClothingType_Eyes = 眼镜, own 逐字照抄本體衣著部位名, As1 自行改譯 (本體 EN 該槽位顯示名是 Glasses, As1 譯「眼睛」把槽位當成身體部位)",
-    "value": "眼镜"
-  },
   "UI.json|UI_TTF_WornKeep_FullHat": {
     "as1_value": "全包帽子",
     "reason": "查表決定性: 本體 CN UI.json UI_ClothingType_FullHat = 头盔, own 逐字照抄本體衣著部位名, As1 自行改譯",
@@ -21807,8 +21797,8 @@
   },
   "Sandbox.json|Sandbox_ETW_AsthmaticColdTemperatureThreshold_tooltip": {
     "as1_value": "气温达到或低于此摄氏值时, 跑步或冲刺会导致哮喘恶化进度. 烟瘾患者在阈值以上仍可产生此进度.",
-    "value": "气温达到或低于此摄氏值时, 跑步或冲刺会累积获得哮喘特质的进度. 烟瘾患者在阈值以上仍可累积此进度.",
-    "reason": "As1 v3.9.1 同步逐鍵審定：sources/en/2914075159.json 同鍵明示 developing Asthmatic，即朝獲得特質發展；CN 的哮喘惡化進度錯指已有病情加重，CH 已正確，保留並補完整 CN。"
+    "value": "气温达到或低于此摄氏值时, 跑步或冲刺会累积获得哮喘患者特质的进度. 嗜烟如命者在阈值以上仍可累积此进度.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Asthmatic 官方簡中特質名為哮喘患者; Smoker 官方簡中為嗜烟如命"
   },
   "Sandbox.json|Sandbox_GlobalStorageSiK_DebugCatSiKUI": {
     "as1_value": "   >> SiK界面: 点击与控件",
@@ -25207,8 +25197,8 @@
   },
   "Print_Text.json|Print_Text_DiaryPage4_info": {
     "as1_value": "1993年6月27日\n\n一名研究员失踪了. 他只是没来上早班. 前一天, 他带了一些样本回家.\n\n第二天早上, 当我们到达实验室时, 校园入口处设了军事检查站. 直升机在头顶盘旋. 警察要求每位员工出示身份证件.\n\n我们试着给路易斯维尔纪念医院打电话.\n暂时停用.\n\n媒体开始报道神秘的诺克斯县化学火灾.\n\n化学火灾?\n在整个县?\n还有军队封锁道路?\n谁会信这个?\n\n就在那时我明白了: \n没人会保护我们.\n没人会警告我们.\n没人会拯救我们.\n\n在那天结束时, 我做出了改变一切的决定: \n我抓起所有我能带走的研究文件…然后跑了.\n\n我不是科学家.\n我不是军人.\n我不是幸存者.\n\n我只是个实习生.\n但我是唯一意识到这一点的人: 如果政府封锁了这个县, 那不是为了保护民众.\n那是为了掩盖真正发生的事情.",
-    "reason": "三處與現行 EN 明確矛盾：(1) 日期 EN July 6, 1993 vs CH/CN「1993年6月27日」；(2) 專名 EN We tried calling St. Peregrin，CH/CN 卻作「路易斯維爾紀念醫院」，與同檔 DiaryPage5 的 the Memorial 是不同機構，不可混用；(3) “Temporarily unavailable.” 指電話暫時無法接通，CH/CN 譯「暫時停用」變成該院／該服務被停止營運，語意不同，並漏掉 EN 的引號。醫院譯名依既有出貨語料統一為聖佩格林醫院／圣佩格林医院（sources/ch/UI.json 與 sources/mods/3639628777/CN/UI.json 對應 EN St. Peregrin）。版本疑慮已排除：42.19 json、42.19 EN.txt、42.20 json 三個 rid 的 EN 值一致。其餘未經指認之處一律保留原譯（含「軍事檢查站」、「諾克斯縣」、CH 倖存者／CN 幸存者、既有行尾空白與換行分段），僅改上述三點；EN 無 %、<LINE>、<IMAGE> token，譯文亦未引入；CH 沿用字面 \\n、CN 沿用實體換行。",
-    "value": "1993年7月6日\n\n一名研究员失踪了. 他只是没来上早班. 前一天, 他带了一些样本回家.\n\n第二天早上, 当我们到达实验室时, 校园入口处设了军事检查站. 直升机在头顶盘旋. 警察要求每位员工出示身份证件.\n\n我们试着给圣佩格林医院打电话.\n'暂时无法接通.'\n\n媒体开始报道神秘的诺克斯县化学火灾.\n\n化学火灾?\n在整个县?\n还有军队封锁道路?\n谁会信这个?\n\n就在那时我明白了: \n没人会保护我们.\n没人会警告我们.\n没人会拯救我们.\n\n在那天结束时, 我做出了改变一切的决定: \n我抓起所有我能带走的研究文件…然后跑了.\n\n我不是科学家.\n我不是军人.\n我不是幸存者.\n\n我只是个实习生.\n但我是唯一意识到这一点的人: 如果政府封锁了这个县, 那不是为了保护民众.\n那是为了掩盖真正发生的事情."
+    "value": "1993年7月6日\n\n一名研究员失踪了. 他就这样没来上早班. 前一天, 他带了一些样本回家.\n\n第二天, 当我们到达实验室时, 校园入口已被军方封锁. 直升机在头顶盘旋. 警察要求每位员工出示身份证件.\n\n我们试着给圣佩格林医院打电话.\n“暂时无法接通.”\n\n媒体开始报道一场神秘的“诺克斯县化学火灾”.\n\n化学火灾?\n整个县都在烧?\n还有军队封锁道路?\n\n谁会信这个?\n\n就在那一刻我明白了: \n没人会保护我们.\n没人会警告我们.\n没人会拯救我们.\n\n那天结束时, 我做出了改变一切的决定: \n我带上了所有我拿得动的研究文件…\n…然后逃跑了.\n\n我不是科学家.\n我不是军人.\n我不是幸存者.\n\n我只是个实习生.\n但我是唯一意识到的人: 如果政府包围了这个县, 那不是为了保护民众. 而是为了掩盖真正发生的事.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：換行與 EN 不符 (「Who would believe that?」前少空行、「…and I ran.」併行、末句多拆一行), 引號遺漏, military lockdown 誤成檢查站; 換行寫法照原值 (CH 字面 \\n, CN 真換行)"
   },
   "RadioData.json|RD_1d1bb224-7035-48e7-a267-b4e3e09a1473": {
     "as1_value": "${t:3.82}我们看到成群的病人试图口头攻击行人.",
@@ -26972,18 +26962,18 @@
   },
   "Sandbox.json|Sandbox_ETW_InventoryTransferSystemItems_tooltip": {
     "as1_value": "指定你需要转移多少物品 (及其重量) 才能获得/失去与物品转移相关的特质: 杂乱无章, 井井有条, 笨手笨脚, 眼疾手快, 笨拙 (更多特质模组). <br>杂乱无章: 66%%重量计数器+33%%物品计数器<br>井井有条: 100%%重量计数器+66%%物品计数器<br>笨手笨脚: 33%%重量计数器+66%% 物品计数器<br>眼疾手快: 66%%重量计数器+100%% 物品计数器<br>笨拙 (更多特质): 150%%重量计数器+150%%物品计数器",
-    "value": "指定你需要转移多少物品 (及其重量) 才能获得/失去与物品转移相关的特质: 杂乱无章, 井井有条, 笨手笨脚, 眼疾手快, 手涂黄油. <br>杂乱无章: 66%%重量计数器+33%%物品计数器<br>井井有条: 100%%重量计数器+66%%物品计数器<br>笨手笨脚: 33%%重量计数器+66%% 物品计数器<br>眼疾手快: 66%%重量计数器+100%% 物品计数器<br>手涂黄油: 两个计数器皆 150%%",
-    "reason": "上游把 Butterfingers 正式納入清單並新增其門檻行（150%% of both counters）。既有 As1 譯文早已多出一行, 但把它標成「笨拙 (更多特質模組)」＝歸給別的 mod; Butterfingers 現為 ETW 自有特質, 且本 repo own 層既有譯名為 CH「手塗奶油」/CN「手涂黄油」(UI_ETW_Options_EnableButterfingersPopup)。故只把該特質名改為 own 既有譯名, 其餘行與 %% 雙百分號, <br> 全數原樣保留。CN 需登記 cn_overrides 並同步 ch_review_state。"
+    "value": "指定你需要转移多少物品 (及其重量) 才能获得/失去与物品转移相关的特质: 杂乱无章, 井井有条, 笨手笨脚, 眼疾手快, 手滑成性. <br>杂乱无章: 66%%重量计数器+33%%物品计数器<br>井井有条: 100%%重量计数器+66%%物品计数器<br>笨手笨脚: 33%%重量计数器+66%% 物品计数器<br>眼疾手快: 66%%重量计数器+100%% 物品计数器<br>手滑成性: 两个计数器皆 150%%",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Butterfingers CN 特質名為「手滑成性」(UI), 此處寫成手涂黄油"
   },
   "Sandbox.json|Sandbox_ETW_InventoryTransferSystemWeight_tooltip": {
     "as1_value": "指定你需要转移多少重量 (及多少物品) 才能获得/失去与物品转移相关的特质: 杂乱无章, 井井有条, 笨手笨脚, 眼疾手快, 笨拙 (更多特质模组).<br>杂乱无章: 66%% 重量计数器 + 33%% 物品计数器<br>井井有条: 100%% 重量计数器 + 66%% 物品计数器<br>笨手笨脚: 33%%重量计数器+66%%物品计数器<br>灵巧: 66%%重量计数器+100%%物品计数器<br>笨拙 (更多特质): 150%%重量计数器+150%%物品计数器",
-    "value": "指定你需要转移多少重量 (及多少物品) 才能获得/失去与物品转移相关的特质: 杂乱无章, 井井有条, 笨手笨脚, 眼疾手快, 手涂黄油.<br>杂乱无章: 66%% 重量计数器 + 33%% 物品计数器<br>井井有条: 100%% 重量计数器 + 66%% 物品计数器<br>笨手笨脚: 33%%重量计数器+66%%物品计数器<br>眼疾手快: 66%%重量计数器+100%%物品计数器<br>手涂黄油: 两个计数器皆 150%%",
-    "reason": "與上一鍵同一批上游改動（重量口徑版本）。除把「笨拙 (更多特質模組)」改成 own 既有的手塗奶油/手涂黄油外, 其餘原樣; 另 CN 側既有值第四行原本誤用『灵巧』與 items 版的『眼疾手快』不一致, 一併統一為眼疾手快（同一特質在同一 mod 兩句中必須同名）。%% 與 <br> 原樣保留。CN 需登記 cn_overrides 並同步 ch_review_state。"
+    "value": "指定你需要转移多少重量 (及多少物品) 才能获得/失去与物品转移相关的特质: 杂乱无章, 井井有条, 笨手笨脚, 眼疾手快, 手滑成性.<br>杂乱无章: 66%% 重量计数器 + 33%% 物品计数器<br>井井有条: 100%% 重量计数器 + 66%% 物品计数器<br>笨手笨脚: 33%%重量计数器+66%%物品计数器<br>眼疾手快: 66%%重量计数器+100%%物品计数器<br>手滑成性: 两个计数器皆 150%%",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
   },
   "Sandbox.json|Sandbox_ETW_SleepSystem_tooltip": {
     "as1_value": "启用获得/失去与睡眠相关的特质: 清醒和嗜睡.<br>---概述---<br>模组会追踪你喜欢在哪些时段睡觉, 只要你在这些时段附近睡觉, 就会强化你健康的睡眠作息. 如果你在作息外睡觉, 会损失一些作息完整性. 超过24小时不睡觉也会开始损害你的睡眠作息. 模组通过检查你上次睡眠的中点来追踪你喜欢的睡眠时段, 因此可以将作息调整到不同时段. <br>---技术描述, 不想了解细节可跳过---<br>每次你睡觉, 模组会追踪睡眠中点.例如, 如果你在23:00到05:30之间睡觉, 中点为03:45, 这将是你的最佳睡眠时间.如果你在此时间+-6小时内睡觉, 你会获得睡眠健康度进度, 范围-200到200.每10分钟检查一次, 如果在正确作息内睡觉则加+0.167, 基本上每小时正确睡眠加+1. 在作息外睡觉每10分钟减0.167. 超过24小时不睡觉后, 每10分钟开始减0.167. 如果你的进度条低于-100, 你获得嗜睡. 高于100获得清醒. 开局带有任一特质会将进度条设为最大或最小值: 清醒+200, 嗜睡-200",
-    "value": "启用获得/失去与睡眠相关的特质: 清醒和嗜睡.<br>---概述---<br>模组会追踪你喜欢在哪些时段睡觉, 只要你在这些时段附近睡觉, 就会强化你健康的睡眠作息. 如果你在作息外睡觉, 会损失一些作息完整性. 超过24小时不睡觉也会开始损害你的睡眠作息. 模组通过检查你上次睡眠的中点来追踪你喜欢的睡眠时段, 因此可以将作息调整到不同时段. 短暂醒来不会把一晚的睡眠拆成不同阶段: 你有一小时的宽限期可以重新入睡. <br>---技术描述, 不想了解细节可跳过---<br>每次你睡觉, 模组会追踪睡眠中点.例如, 如果你在23:00到05:30之间睡觉, 中点为03:45, 这将是你的最佳睡眠时间. 新的中点要在你保持清醒满一个游戏内小时后才会确定. 如果你在宽限期内重新入睡, 这段睡眠会从原本的就寝时间延续, 并以最后醒来的时间为准. 如果你保持清醒满一小时, 中点仍以你最初醒来的时间计算, 而不是宽限期结束的时间.如果你在此时间+-6小时内睡觉, 你会获得睡眠健康度进度, 范围介于所设定的正负上限之间.每10分钟检查一次, 如果在正确作息内睡觉则加+0.167, 基本上每小时正确睡眠加+1. 在作息外睡觉每10分钟减0.167. 超过24小时不睡觉后, 每10分钟开始减0.167. 进度达-66%%时获得嗜睡, -33%%时失去嗜睡; +33%%时失去清醒, +66%%时获得清醒. 开局带有任一特质会将进度条设为对应的负值或正值上限",
-    "reason": "上游把固定的 ±100/±200 門檻改成可設定上限的百分比門檻（新增 Sandbox_ETW_SleepSystemCounter 正是這個上限）。既有 As1 CN/CH 仍寫「範圍-200到200」「低於-100…高於100」「清醒+200, 嗜睡-200」, 全是過時數值。只改這三處, 前段概述與技術描述其餘文字, 標點與 <br> 全部逐字保留。%% 雙百分號依 format 安全規則書寫。CN 需登記 cn_overrides 並同步 ch_review_state。 2026-09-29 #617 上游改文：依新英文改譯（Enables obtaining/losing sleep-related traits, Wakeful and S…）。"
+    "value": "启用获得/失去与睡眠相关的特质: 精神抖擞和昏昏欲睡.<br>---概述---<br>模组会追踪你喜欢在哪些时段睡觉, 只要你在这些时段附近睡觉, 就会强化你健康的睡眠作息. 如果你在作息外睡觉, 会损失一些作息完整性. 超过24小时不睡觉也会开始损害你的睡眠作息. 模组通过检查你上次睡眠的中点来追踪你喜欢的睡眠时段, 因此可以将作息调整到不同时段. 短暂醒来不会把一晚的睡眠拆成不同阶段: 你有一小时的宽限期可以重新入睡. <br>---技术描述, 不想了解细节可跳过---<br>每次你睡觉, 模组会追踪睡眠中点.例如, 如果你在23:00到05:30之间睡觉, 中点为03:45, 这将是你的最佳睡眠时间. 新的中点要在你保持清醒满一个游戏内小时后才会确定. 如果你在宽限期内重新入睡, 这段睡眠会从原本的就寝时间延续, 并以最后醒来的时间为准. 如果你保持清醒满一小时, 中点仍以你最初醒来的时间计算, 而不是宽限期结束的时间.如果你在此时间+-6小时内睡觉, 你会获得睡眠健康度进度, 范围介于所设定的正负上限之间.每10分钟检查一次, 如果在正确作息内睡觉则加+0.167, 基本上每小时正确睡眠加+1. 在作息外睡觉每10分钟减0.167. 超过24小时不睡觉后, 每10分钟开始减0.167. 进度达-66%%时获得昏昏欲睡, -33%%时失去昏昏欲睡; +33%%时失去精神抖擞, +66%%时获得精神抖擞. 开局带有任一特质会将进度条设为对应的负值或正值上限",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Sleepyhead/Wakeful 官方簡中為昏昏欲睡/精神抖擞 (原譯嗜睡/清醒)"
   },
   "UI.json|UI_trait_VernDesc": {
     "as1_value": "拥抱弗恩之道! <br>弗恩厌恶枪械以及与之相关的一切.",
@@ -27148,11 +27138,6 @@
   "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_ChiappaTripleThreat_cat_Spawn": {
     "as1_value": "三管霰弹枪刷新几率",
     "value": "三管霰弹枪刷新几率 [12 号]",
-    "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
-  },
-  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Christine45_cat_Spawn": {
-    "as1_value": "克里斯汀 .45-70 精准射手刷新几率",
-    "value": "克里斯汀 .45-70 精准射手刷新几率 [.45 ACP]",
     "reason": "2026-09-24 #578/#579/#574：上游英文改值，依新英文重譯。"
   },
   "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_DP12_cat_Spawn": {
@@ -27677,18 +27662,18 @@
   },
   "Sandbox.json|Sandbox_ETW_BloodlustFromAnimalsMultiplier_tooltip": {
     "as1_value": "设定当击杀或者屠宰动物时填充的嗜血量表相较于击杀普通僵尸的填充量的倍数. 设置0以禁用它. 这同样不会直接增加饮鸩止渴特质的获取进度, 而是同样先增加嗜血量表进度, 满足条件后再增加.",
-    "reason": "2026-09-25 #580–#586 上游改文：改為直接給予嗜血進度",
-    "value": "击杀或屠宰动物所获得的饮鸩止渴进度, 相对于贴身击杀僵尸的倍率. 设为0表示禁用"
+    "value": "击杀或屠宰动物所获得的嗜血进度, 相对于贴身击杀僵尸的倍率. 设为0表示禁用",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Bloodlust 特質名統一為嗜血 (AU3 已把 UI_trait_Bloodlust 改嗜血; 飲鴆止渴是成語誤用)"
   },
   "Sandbox.json|Sandbox_ETW_BloodlustProgress_tooltip": {
     "as1_value": "获得特质所需的总饮鸩止渴进度. 注意, 如果此计量器低于50%%, 你也会失去饮鸩止渴. 如果你设得低, 获得特质容易但失去也容易. 这个进度的上限值为获取饮鸩止渴特质所需要的进度值的2倍",
-    "reason": "2026-09-25 #580–#586 上游改文：改為正負進度上限, 50%% 獲得／負 50%% 失去",
-    "value": "设定饮鸩止渴进度的正负上限. 进度达到此值的50%%时获得特质, 降至负50%%时失去特质"
+    "value": "设定嗜血进度的正负上限. 进度达到此值的50%%时获得特质, 降至负50%%时失去特质",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Bloodlust 特質名統一為嗜血 (AU3 已把 UI_trait_Bloodlust 改嗜血; 飲鴆止渴是成語誤用)"
   },
   "Sandbox.json|Sandbox_ETW_Bloodlust_tooltip": {
     "as1_value": "允许你通过填充和维持嗜血量表来获得增益. 嗜血量表的上限为72小时, 可通过击杀僵尸填充. 僵尸越近, 量表填充越快. 当量表超过一半时, 每小时会为饮鸩止渴特质逐渐提供进度; 低于一半时则会逐渐移除进度. 嗜血量表每小时自然衰减1点. 穿着沾血的衣服有助于增加嗜血量表",
-    "reason": "2026-09-25 #580–#586 上游改文：嗜血量表機制改為擊殺直接累積進度",
-    "value": "在附近击杀僵尸会直接增加饮鸩止渴进度. 击杀距离越近, 衣物沾血越多, 获得的进度越多. 过去一小时内 (滚动计算) 的击杀会让倍率从第一次击杀的0.1倍逐步提高到第十次的1倍, 之后每20次击杀再增加1倍. 进度每小时自然衰减"
+    "value": "在附近击杀僵尸会直接增加嗜血进度. 击杀距离越近, 衣物沾血越多, 获得的进度越多. 过去一小时内 (滚动计算) 的击杀会让倍率从第一次击杀的0.1倍逐步提高到第十次的1倍, 之后每20次击杀再增加1倍. 进度每小时自然衰减",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
   },
   "Sandbox.json|Sandbox_ETW_ButterfingersChanceOneIn_tooltip": {
     "as1_value": "数值越大, 每分钟一次的判定越不容易掉落手持物品. 携带重量, 奔跑, 冲刺, 笨手笨脚和眼疾手快特质都会修改此几率.",
@@ -65572,8 +65557,8 @@
   },
   "IG_UI.json|IGUI_RR_Note_Place": {
     "as1_value": "K&L 800, GP7. 马尔德劳车站, 棚内车位.\\n找到时处于冷机停放状态\\n靠近她 [E] 键 - 进入驾驶室.\\n[E] 键 进入驾驶室 - 离开驾驶室 (等她先自动停下).\\n[V] 键 - 驾驶室菜单: 睡觉, 大灯, 离开.\\n标准操作: 登车 -> 换向器调到N (空挡) -> 启动 [W] 键",
-    "value": "K&L 800, GP7. 马尔德劳机务段, 棚内车位.\\n找到时处于冷机停放状态.\\n在她旁边按 [E] 键 - 登上驾驶室.\\n在驾驶室内按 [E] 键 - 下车 (她会先停下).\\n或右键点击她: 爬进 / 离开.\\n[V] 键 - 驾驶室菜单: 睡觉, 大灯, 离开.\\n标准操作: 登车 -> 换向器调到N (空挡) -> 启动 [W] 键.\\n使用手柄时: 交互键可上下车.\\n她的操控也能用手柄操作 - 见下方.\\n在服务器上: 一人驾驶, 其他人搭乘.\\n仅限服务器: [V] 键可接手或交出操控.\\n在驾驶室内登出 - 会保留你的座位.",
-    "reason": "2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+    "value": "K&L 800, GP7. 马尔德劳机务段, 棚内车位.\\n找到时处于冷机停放状态.\\n爬上角落的梯子, 沿走道走到\\n驾驶室门口. 在门边按 [E] 键 - 坐上座位.\\n在座位上按 [E] 键 - 选一扇门离开.\\n在门边右键点击也可以.\\n她行驶时你也能在车上走动: 车速慢如步行时才能上车.\\n她行进中要下车: 长按 [E] 键. 可能会受伤.\\n[V] 键 - 驾驶室菜单: 睡觉, 大灯, 离开.\\n标准操作: 登车 -> 换向器调到N (空挡) -> 启动 [W] 键.\\n手柄: 在门边按交互键. 操控方式 - 见下方.\\n在服务器上: 一人驾驶, 其他人搭乘.\\n仅限服务器: [V] 键可接手或交出操控.\\n在驾驶室内登出 - 会保留你的座位.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
   },
   "IG_UI.json|IGUI_RR_Note_Start": {
     "as1_value": "启动\\n换向器必须在N否则无法启动.\\n按 [W] 键- 单次点火尝试.\\n点火流程: 自动预供油1.5秒, 曲轴转动1.6秒.\\n点火失败 - 重复按 [W] 键, 保持预供油.\\n启动后自动加热暖机4秒, 此时动力受限.\\n每次打火消耗电瓶电量.\\n低温, 潮湿, 变质柴油都会降低点火成功率.\\n没电或没油无法启动.\\n熄火\\n车辆完全停稳, 油门归零后按 [S] 键熄火",
@@ -65802,8 +65787,8 @@
   },
   "Sandbox.json|Sandbox_Symbiosis_SymbioteVisuals_tooltip": {
     "as1_value": "1=关闭, 2=仅头顶标识, 3=仅身体覆层, 4=两者同时显示 (默认). 身体覆层使用模组下的贴图资源路径 media/textures/Body/symbiosis/ ",
-    "value": "共生体身上显示的身体覆层. 1=无覆层. 2=半僵尸化, 从正中间左右对半. 3=僵尸斑块, 30%% 僵尸 / 70%% 人类 (默认). 4=僵尸斑块, 50%% 僵尸 / 50%% 人类. 衣物会像遮住皮肤一样遮住覆层, 裸露的部位才会显示.",
-    "reason": "2026-10-29 追蹤器 #1139–#1155：上游改英文：Body overlay shown on symbiotes. 1 = No overlay. 2 = Half zombie, split straight"
+    "value": "共生体身上显示的身体覆层. 1=无覆层. 2=半僵尸化, 从正中间左右对半. 3=僵尸斑块, 30%% 僵尸 / 70%% 人类 (默认). 4=僵尸斑块, 50%% 僵尸 / 50%% 人类. 5=血管: 人类皮肤, 带有发出红光的双眼, 以及从心脏蔓延开来的深色血管. 衣物会像遮住皮肤一样遮住覆层, 裸露的部位才会显示.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
   },
   "UI.json|UI_Symbiosis_BloodFamiliarEnduringDesc": {
     "as1_value": "血契眷属的绑定存续时长由30分钟延长至2小时",
@@ -65902,8 +65887,8 @@
   },
   "UI.json|UI_Symbiosis_CoagulateDesc": {
     "as1_value": "无需绷带道具, 即可在健康面板直接闭合开放性伤口. 技能会生成共生血凝块, 止住出血, 并在血凝块存续期间阻止该肢体持续掉血; 伤口底层仍会以正常速度缓慢愈合.",
-    "value": "无需绷带道具, 即可在健康面板直接闭合开放性伤口. 技能会生成共生血凝块, 止住出血, 并在血凝块存续期间阻止该肢体持续掉血; 伤口底层仍会以正常速度愈合.",
-    "reason": "2026-10-29 追蹤器 #1139–#1155：舊譯複查（對照 MOD 現行英文）：英文是正常速度癒合, 舊譯多出矛盾的「緩慢」"
+    "value": "无需绷带道具, 即可在健康面板直接闭合开放性伤口. 技能会生成共生血凝块, 止住出血, 并在血凝块存续期间阻止该肢体持续掉血; 底下的伤口会以与包扎后相同的速度愈合.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
   },
   "UI.json|UI_Symbiosis_MergeFailed": {
     "as1_value": "病毒正在吞噬你",
@@ -75539,5 +75524,1885 @@
     "as1_value": "每点灵活减少的断裂几率",
     "value": "每点灵活减少的回形针断裂几率",
     "reason": "2026-11-04 舊譯稽核：滑桿標籤漏了工具名, 與同組 BoltCutter／Crowbar 選項分不出"
+  },
+  "UI.json|UI_ETW_TranslationStats_NeedsEditing_RU": {
+    "as1_value": "0.6",
+    "value": "0.4",
+    "reason": "2026-11-06 #1221–#1297 批次：ETW 上游把統計數字 0.6 改為 0.4，照現行 EN 數字同步。"
+  },
+  "UI.json|UI_ETW_TranslationStats_ES": {
+    "as1_value": "44.0",
+    "value": "47.4",
+    "reason": "2026-11-06 #1221–#1297 批次：ETW 上游把統計數字 44.0 改為 47.4，照現行 EN 數字同步。"
+  },
+  "UI.json|UI_ETW_TranslationStats_KO": {
+    "as1_value": "38.8",
+    "value": "39.1",
+    "reason": "2026-11-06 #1221–#1297 批次：ETW 上游把統計數字 38.8 改為 39.1，照現行 EN 數字同步。"
+  },
+  "UI.json|UI_ETW_TranslationStats_NeedsEditing_ES": {
+    "as1_value": "0.0",
+    "value": "1.0",
+    "reason": "2026-11-06 #1221–#1297 批次：ETW 上游把統計數字 0.0 改為 1.0，照現行 EN 數字同步。"
+  },
+  "UI.json|UI_ETW_TranslationStats_RU": {
+    "as1_value": "99.4",
+    "value": "99.6",
+    "reason": "2026-11-06 #1221–#1297 批次：ETW 上游把統計數字 99.4 改為 99.6，照現行 EN 數字同步。"
+  },
+  "Sandbox.json|Sandbox_CompanionFancyRat": {
+    "as1_value": "CD: 花枝鼠",
+    "value": "CD: 老鼠",
+    "reason": "2026-11-06 #1221–#1297 批次：新增互斥子 MOD CompanionBattleRat（CD: Battle Rats），「花枝鼠」只對 Fancy Rats 成立，改中性「老鼠」。"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Christine45_cat_Spawn": {
+    "as1_value": "克里斯汀 .45-70 精准射手刷新几率",
+    "value": "克里斯汀 .45-70 精准射手步枪刷新几率",
+    "reason": "2026-11-06 #1221–#1297 批次：中性值補上「步枪」（DMR＝精準射手步槍，原值只寫「精准射手」）。"
+  },
+  "IG_UI.json|IGUI_NotAlone_OptLootMenuTip": {
+    "as1_value": "在右键菜单中显示同伴的搜刮、穿戴与赠礼选项.",
+    "value": "在右键菜单中显示同伴的搜刮、存入储物处、穿戴与赠礼选项.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "IG_UI.json|IGUI_NotAlone_OptLootMenu": {
+    "as1_value": "显示搜刮与赠礼菜单",
+    "value": "显示搜刮、储物与赠礼菜单",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_CardPayments_tooltip": {
+    "as1_value": "装了 PZLinux 且主物品栏里有信用卡时, 你现金不够可以由商人刷卡. 会从你的 PZLinux 银行余额里扣除并加收网络费. 读卡器有时会坏: 停电、风暴, 或者纯粹运气不好.",
+    "value": "主物品栏里有卡 (信用卡或你的电台商人银行卡) 时, 你现金不够可以由商人刷卡. 会从你的银行余额里扣除 (装了 PZLinux 时用 PZLinux 的; 否则如果开启了电台商人银行服务, 则用你的电台商人账户) 并加收网络费. 读卡器有时会坏: 停电、风暴, 或者纯粹运气不好. 余额仍会显示.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_CardPayments": {
+    "as1_value": "刷卡支付 (PZLinux)",
+    "value": "刷卡支付",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "UI.json|UI_Symbiosis_TraitAppetiteDesc": {
+    "as1_value": "提升进食、饮水的动作速度. 共5级, 满级将进食时长恢复至常态 (还原85%%正常进食速度).",
+    "value": "共生体进食、饮水需要多花 25%% 的时间. 每升一级可缩短部分时间; 满级时只比正常慢 4%% 左右.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_CanHavePeeAccident": {
+    "as1_value": "启用意外尿裤 (未完成)",
+    "value": "启用意外尿裤",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_EnableDefecation": {
+    "as1_value": "[排便] 启用排便 (未完成)",
+    "value": "[排便] 启用排便",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_EnableUrinationTraits": {
+    "as1_value": "启用排尿相关特质 (未完成)",
+    "value": "启用排尿相关特质",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_DefecateSpeedMultiplier_tooltip": {
+    "as1_value": "排便所需时间.",
+    "value": "排便所需时间的倍率. 数值越高越慢, 0 为最快.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_EnableUrination_tooltip": {
+    "as1_value": "启用/禁用排尿机制.",
+    "value": "整个排尿系统的总开关. 关闭时, 膀胱保持排空, 菜单选项会隐藏, 排尿特质也无法使用.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_EnableDefecationTraits": {
+    "as1_value": "启用排便相关特质 (未完成)",
+    "value": "启用排便相关特质",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_EnableDiarrhea_tooltip": {
+    "as1_value": "启用/禁用腹泻机制.",
+    "value": "食物中毒会让肠道充盈得更快, 最高可达正常速率的五倍.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_CanHavePoopAccident": {
+    "as1_value": "启用意外拉裤 (未完成)",
+    "value": "启用意外拉裤",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_EnableUrinationTraits_tooltip": {
+    "as1_value": "切换此存档是否允许使用排尿相关特质.",
+    "value": "是否可在角色创建时选择排尿特质. 关闭后, 现有角色身上的这些特质也会失效.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_DefecateSpeedMultiplier": {
+    "as1_value": "大便所需时间 (未完成)",
+    "value": "大便所需时间",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_CanHavePoopAccident_tooltip": {
+    "as1_value": "允许意外拉到自己身上.",
+    "value": "清醒的角色是否会因肠道充盈、便意或失禁而拉到自己身上.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_EnableDiarrhea": {
+    "as1_value": "启用腹泻 (未完成)",
+    "value": "启用腹泻",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_NightPeeAccidents": {
+    "as1_value": "启用尿床 (未完成)",
+    "value": "启用尿床",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_EnableUrination": {
+    "as1_value": "[排尿] 启用排尿 (未完成)",
+    "value": "[排尿] 启用排尿",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_CanHavePeeAccident_tooltip": {
+    "as1_value": "允许意外尿到自己身上.",
+    "value": "清醒的角色是否会因膀胱充盈、尿意或失禁而尿到自己身上.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_FliesOnPoop": {
+    "as1_value": "粪便周围有苍蝇 (未完成)",
+    "value": "粪便周围有苍蝇",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_UrinateSpeedMultiplier_tooltip": {
+    "as1_value": "排尿所需时间.",
+    "value": "排尿所需时间的倍率. 数值越高越慢, 0 为最快.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_FliesOnPoop_tooltip": {
+    "as1_value": "在粪便周围启用苍蝇粒子效果.",
+    "value": "附近的粪便周围会聚集苍蝇, 并伴有声音.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_NightPoopAccidents": {
+    "as1_value": "启用床上排便 (未完成)",
+    "value": "启用床上排便",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_EnableDefecation_tooltip": {
+    "as1_value": "启用/禁用排便机制.",
+    "value": "整个排便系统的总开关. 关闭时, 肠道保持排空, 菜单选项会隐藏, 排便特质也无法使用.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_EnableDefecationTraits_tooltip": {
+    "as1_value": "切换此存档是否允许使用排便相关特质.",
+    "value": "是否可在角色创建时选择排便特质. 关闭后, 现有角色身上的这些特质也会失效.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_NightPeeAccidents_tooltip": {
+    "as1_value": "允许睡觉时排尿.",
+    "value": "睡眠中的角色是否会尿到自己身上. 需要“尿床”特质或失禁. 膀胱满了仍会让角色醒来.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_UrinateSpeedMultiplier": {
+    "as1_value": "小便所需时间 (未完成)",
+    "value": "小便所需时间",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BF_NightPoopAccidents_tooltip": {
+    "as1_value": "允许睡觉时排便.",
+    "value": "睡眠中的角色是否会拉到自己身上. 需要“拉床上”特质或失禁. 肠道满了仍会让角色醒来.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "UI.json|UI_EatSmart_goalProteins1Enable_tooltip": {
+    "as1_value": "启用此选项后, 将尽可能精确进食以达到设定的 '蛋白质1' 目标. <LINE> 若无法达成目标 <LINE> (食物不足或已超过目标值), 该选项将自动禁用. <LINE> 当蛋白质值 > 50 且 < 300 时, 力量经验获取有x1.5倍加成. <LINE> 当蛋白质值 < - 300 时, 力量经验获取有x0.7倍惩罚.",
+    "value": "启用此选项后, 将尽可能精确进食以达到设定的 '蛋白质1' 目标. <LINE> 若无法达成目标 (食物不足或已超过目标值), 该选项将自动禁用. <LINE> 当蛋白质值 > 50 且 < 300 时, 力量经验获取有x1.5倍加成. <LINE> 当蛋白质值 < -300 时, 力量经验获取有x0.7倍惩罚.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BPE_UV": {
+    "as1_value": "黑暗捕食者扩展: 紫外线装备",
+    "value": "黑暗捕食者扩展: 紫外线装备与战利品",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_BPE_Other": {
+    "as1_value": "黑暗捕食者扩展: 其他与突袭装备",
+    "value": "黑暗捕食者扩展: 夜晚、病毒体与经验",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "Sandbox.json|Sandbox_LiveToFight_Talking_tooltip": {
+    "as1_value": "角色醒来时以及回到事发地点时会说上几句.",
+    "value": "角色醒来时以及回到事发地点时会说上几句, 也会对第二章放进世界中的事物发表看法: 第一次看到的场景、枪声、敲门声、信号弹、引擎声、警笛声 (最多每六小时一次). 关闭: 以上皆无.",
+    "reason": "2026-11-06 #1221–#1297 批次：上游英文改值，依新英文重譯。"
+  },
+  "ItemName.json|AmmoMaker.AM_WorkMagazine4": {
+    "as1_value": "《弹药制造杂志 第1期》",
+    "value": "《弹药制造建筑 第1期》",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 漏譯 Building, 與 CH「彈藥製造建築」不一致"
+  },
+  "ItemName.json|AquaFarm.CrayfishBucket": {
+    "as1_value": "AquaFarm水族箱 (螯虾)",
+    "value": "AquaFarm水族箱 (小龙虾)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同 MOD 其他 Crayfish 鍵 CN 都是「小龙虾」(官方簡中亦同), 這裡「螯虾」對不上"
+  },
+  "ItemName.json|Base.Chipote": {
+    "as1_value": "Chipote Chillón",
+    "value": "尖叫锤",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 留西班牙文未譯, CH 已譯「尖叫槌」; 兩側不一致"
+  },
+  "ItemName.json|Base.Vest_BulletMilitaryComplex": {
+    "as1_value": "军事区防弹背心",
+    "value": "军事基地防弹背心",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同 MOD 的 Military Complex 鑰匙 CN 多數(20 鍵)譯「军事基地」, 統一"
+  },
+  "ItemName.json|LGUFood.CocoaPan": {
+    "as1_value": "装有可可种子的烤盘",
+    "value": "装有可可种子的烘焙盘",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：配方 Putcocoaseedsinbakingpan 的輸入是 Base.BakingPan; LangFor42=烘焙盤、官方簡中=烘焙盘; CH「平底鍋」是別的鍋, CN「烤盘」是 RoastingPan"
+  },
+  "ItemName.json|AmmoMaker.WP_HuntingRifle": {
+    "as1_value": "MSR788步枪配件",
+    "value": "MSR788狩猎步枪配件",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：點名原版 MSR788 步槍: LangFor42=MSR788狩獵步槍、官方簡中=MSR788狩猎步枪; 同 MOD Tooltip 已用狩獵步槍"
+  },
+  "ItemName.json|AmmoMaker.WP_VarmintRifle": {
+    "as1_value": "MSR700步枪配件",
+    "value": "MSR700猎狐步枪配件",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：點名原版 MSR700: LangFor42=MSR700獵狐步槍、官方簡中=MSR700猎狐步枪; 同 MOD 其他鍵 CH 已用獵狐步槍, 一槍兩名"
+  },
+  "Recipes.json|Ensamble_VarmintRifle": {
+    "as1_value": "组装MSR700步枪",
+    "value": "组装MSR700猎狐步枪",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上, 原版槍名照 LangFor42/官方簡中"
+  },
+  "Tooltip.json|Tooltip_223Ammo": {
+    "as1_value": "适合MSR700步枪的.223口径弹药.      ",
+    "value": "适合MSR700猎狐步枪的.223口径弹药.      ",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 原版槍名照官方簡中 MSR700猎狐步枪"
+  },
+  "Tooltip.json|Tooltip_308Ammo": {
+    "as1_value": "适合猎枪的.308口径弹药.      ",
+    "value": "适合狩猎步枪的.308口径弹药.      ",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Hunting Rifle 是步槍, CN「猎枪」易誤為霰彈槍; 與 CH「狩獵步槍」及官方 MSR788狩猎步枪一致"
+  },
+  "Tooltip.json|Tooltip_DismantleVarmintRifle": {
+    "as1_value": "拆解MSR700步枪以获得一些用于维修的配件.      ",
+    "value": "拆解MSR700猎狐步枪以获得一些用于维修的配件.      ",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 原版槍名照官方簡中"
+  },
+  "Tooltip.json|Tooltip_MountVarmintRifle": {
+    "as1_value": "使用武器配件组装MSR700步枪",
+    "value": "使用武器配件组装MSR700猎狐步枪",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 原版槍名照官方簡中"
+  },
+  "ContextMenu.json|ContextMenu_BurnCataplasm": {
+    "as1_value": "焚烧敷剂",
+    "value": "烧伤敷剂",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Burn Cataplasm 是治燒傷的敷劑(同組 Honey Cataplasm), CN「焚烧」誤譯成燒掉"
+  },
+  "ContextMenu.json|ContextMenu_RTLead223TT": {
+    "as1_value": "在锅中熔化.223口径弹头, 以制作不同口径的弹头.",
+    "value": "在平底煮锅中熔化.223口径弹头, 以制作不同口径的弹头.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Lua 檢查的是 Base.Saucepan; CN「锅」分不出蒸煮锅/平底煮锅, 照官方簡中「平底煮锅」"
+  },
+  "ContextMenu.json|ContextMenu_RTLead3030TT": {
+    "as1_value": "在锅中熔化.30-30弹头, 以制作不同口径的弹头.",
+    "value": "在平底煮锅中熔化.30-30弹头, 以制作不同口径的弹头.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Lua 檢查的是 Base.Saucepan; CN「锅」分不出蒸煮锅/平底煮锅, 照官方簡中「平底煮锅」"
+  },
+  "ContextMenu.json|ContextMenu_RTLead308TT": {
+    "as1_value": "在锅中熔化.308口径弹头, 以制作不同口径的弹头.",
+    "value": "在平底煮锅中熔化.308口径弹头, 以制作不同口径的弹头.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Lua 檢查的是 Base.Saucepan; CN「锅」分不出蒸煮锅/平底煮锅, 照官方簡中「平底煮锅」"
+  },
+  "ContextMenu.json|ContextMenu_RTLead357TT": {
+    "as1_value": "在锅中熔化.357马格南弹头, 以制作不同口径的弹头.",
+    "value": "在平底煮锅中熔化.357马格南弹头, 以制作不同口径的弹头.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Lua 檢查的是 Base.Saucepan; CN「锅」分不出蒸煮锅/平底煮锅, 照官方簡中「平底煮锅」"
+  },
+  "ContextMenu.json|ContextMenu_RTLead38TT": {
+    "as1_value": "在锅中熔化.38口径弹头, 以制作不同口径的弹头.",
+    "value": "在平底煮锅中熔化.38口径弹头, 以制作不同口径的弹头.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Lua 檢查的是 Base.Saucepan; CN「锅」分不出蒸煮锅/平底煮锅, 照官方簡中「平底煮锅」"
+  },
+  "ContextMenu.json|ContextMenu_RTLead44TT": {
+    "as1_value": "在锅中熔化.44口径弹头, 以制作不同口径的弹头.",
+    "value": "在平底煮锅中熔化.44口径弹头, 以制作不同口径的弹头.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Lua 檢查的是 Base.Saucepan; CN「锅」分不出蒸煮锅/平底煮锅, 照官方簡中「平底煮锅」"
+  },
+  "ContextMenu.json|ContextMenu_RTLead45TT": {
+    "as1_value": "在锅中熔化.45口径弹头, 以制作不同口径的弹头.",
+    "value": "在平底煮锅中熔化.45口径弹头, 以制作不同口径的弹头.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Lua 檢查的是 Base.Saucepan; CN「锅」分不出蒸煮锅/平底煮锅, 照官方簡中「平底煮锅」"
+  },
+  "ContextMenu.json|ContextMenu_RTLead50TT": {
+    "as1_value": "在锅中熔化.50BMG弹头, 以制作不同口径的弹头.",
+    "value": "在平底煮锅中熔化.50BMG弹头, 以制作不同口径的弹头.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Lua 檢查的是 Base.Saucepan; CN「锅」分不出蒸煮锅/平底煮锅, 照官方簡中「平底煮锅」"
+  },
+  "ContextMenu.json|ContextMenu_RTLead556TT": {
+    "as1_value": "在锅中熔化5.56口径弹头, 以制作不同口径的弹头.",
+    "value": "在平底煮锅中熔化5.56口径弹头, 以制作不同口径的弹头.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Lua 檢查的是 Base.Saucepan; CN「锅」分不出蒸煮锅/平底煮锅, 照官方簡中「平底煮锅」"
+  },
+  "ContextMenu.json|ContextMenu_RTLead762TT": {
+    "as1_value": "在锅中熔化7.62口径弹头, 以制作不同口径的弹头.",
+    "value": "在平底煮锅中熔化7.62口径弹头, 以制作不同口径的弹头.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Lua 檢查的是 Base.Saucepan; CN「锅」分不出蒸煮锅/平底煮锅, 照官方簡中「平底煮锅」"
+  },
+  "ContextMenu.json|ContextMenu_RTLead9mmTT": {
+    "as1_value": "在锅中熔化9mm弹头, 以制作不同口径的弹头.",
+    "value": "在平底煮锅中熔化9mm弹头, 以制作不同口径的弹头.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Lua 檢查的是 Base.Saucepan; CN「锅」分不出蒸煮锅/平底煮锅, 照官方簡中「平底煮锅」"
+  },
+  "Tooltip.json|Tooltip_Lead": {
+    "as1_value": "可在锅中熔化.",
+    "value": "可在平底煮锅中熔化.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：saucepan=原版 Base.Saucepan, 官方簡中「平底煮锅」"
+  },
+  "Recorded_Media.json|RM_f8e5faeb-1bd3-4e0e-a5am-3ee90daamred": {
+    "as1_value": "夹具, 模具, 螺丝, 铅和一口锅.",
+    "value": "夹具, 模具, 螺丝, 铅和一个平底煮锅.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：saucepan=原版平底煮锅, 熔鉛實際需要 Base.Saucepan"
+  },
+  "Tooltip.json|Tooltip_AFDesc_Ostion": {
+    "as1_value": "内含牡蛎苗.",
+    "value": "内含扇贝苗.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：本 MOD 的 ostión 指扇貝(Tooltip_SpecDescScallops「Los ostiones」=扇貝), 牡蠣另有 Tooltip_AFDesc_Oyster; CN 譯成牡蛎苗與牡蠣鍵重複"
+  },
+  "Tooltip.json|Tooltip_Crankbait": {
+    "as1_value": "动作: 中速深潜. 极具吸引力的动作.",
+    "value": "动作: 中等深度. 极具吸引力的动作.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Intermediate deep=中等泳層深度, CN「中速深潜」多出速度且意思不同"
+  },
+  "Tooltip.json|Tooltip_FishingMagnet1": {
+    "as1_value": "用于钓取文物. <br> 弱磁性.",
+    "value": "用于磁铁钓鱼打捞物品. <br> 弱磁性.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：artifacts 指打撈到的物品, CN「文物」誤譯; 同 MOD 特質描述 CN 用「磁铁钓鱼」"
+  },
+  "Tooltip.json|Tooltip_FishingMagnet2": {
+    "as1_value": "用于钓取文物. <br> 普通磁性.",
+    "value": "用于磁铁钓鱼打捞物品. <br> 普通磁性.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：artifacts 指打撈到的物品, CN「文物」誤譯; 同 MOD 特質描述 CN 用「磁铁钓鱼」"
+  },
+  "Tooltip.json|Tooltip_FishingMagnet3": {
+    "as1_value": "用于钓取文物. <br> 强磁性.",
+    "value": "用于磁铁钓鱼打捞物品. <br> 强磁性.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：artifacts 指打撈到的物品, CN「文物」誤譯; 同 MOD 特質描述 CN 用「磁铁钓鱼」"
+  },
+  "Tooltip.json|Tooltip_ShotgunShellsCan": {
+    "as1_value": "含有25盒霰弹弹壳.",
+    "value": "含有25盒霰弹.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：shotgun shells 是霰彈(整發), CN「霰弹弹壳」誤譯成空殼, 與 Tooltip_ShotgunShellsCasesCan 撞意思"
+  },
+  "Recipes.json|MakeSauteedShrimp": {
+    "as1_value": "制作黄油炒虾",
+    "value": "制作黄油煎虾",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：產物 AquaFarm.SauteedShrimp CH=嫩炒蝦、CN=黄油煎虾, 配方名兩側都對不上"
+  },
+  "IG_UI.json|IGUI_Fish_LG_Walleye": {
+    "as1_value": "大眼狮鲈",
+    "value": "碧古鱼",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Walleye 原版官方簡中=碧古鱼(CH 已用碧古魚), CN「大眼狮鲈」另起名"
+  },
+  "ContextMenu.json|ContextMenu_walleye_info": {
+    "as1_value": "大眼狮鲈",
+    "value": "碧古鱼",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "IG_UI.json|IGUI_Fish_Trophy": {
+    "as1_value": "战利品",
+    "value": "奖杯级",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：魚體型等級(小/中/大/Trophy), CN「战利品」誤譯; CH 為「標本級」"
+  },
+  "IG_UI.json|IGUI_ItemCat_Dye": {
+    "as1_value": "染料",
+    "value": "天然染料",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：現行英文 Natural Dyes, 兩側漏「天然」"
+  },
+  "IG_UI.json|IGUI_NeedPickaxe": {
+    "as1_value": "我需要装备一把镐才能获取此资源.",
+    "value": "我需要装备一把丁字镐才能获取此资源.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Pickaxe 原版官方簡中=丁字镐(CH 已用丁字鎬)"
+  },
+  "Moveables.json|Wall_Diana": {
+    "as1_value": "戴安娜壁饰",
+    "value": "壁挂镖靶",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Diana 是西語「靶」(AR 版=Diana de dardos 飛鏢靶), CN「戴安娜」誤當人名; 原版 Dartboard 官方簡中=镖靶"
+  },
+  "UI.json|UI_trait_Leadwork": {
+    "as1_value": "中级铅匠",
+    "value": "中级技工",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：現行英文 Intermediate mechanics, CN「铅匠」照舊英文"
+  },
+  "UI.json|UI_trait_Leadwork2": {
+    "as1_value": "初级铅匠",
+    "value": "初级技工",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：現行英文 Novice mechanics, CN「铅匠」照舊英文"
+  },
+  "Recorded_Media.json|RM_2ea2d091-5ada-49d9-adam-fc50e5eamre3": {
+    "as1_value": "FFFFFFFZZZZZZ!!!",
+    "value": "滋滋滋滋滋滋!!!",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：熔鉛擬聲, CH 已中文化, CN 留英文; 照 RM 擬聲中文化慣例"
+  },
+  "Recipes.json|Putcocoaseedsinbakingpan": {
+    "as1_value": "将可可种子放入烤盘",
+    "value": "将可可种子放入烘焙盘",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：輸入是 Base.BakingPan; LangFor42=烘焙盤、官方簡中=烘焙盘, 「烤盤/烤盘」是 RoastingPan"
+  },
+  "Recipes.json|Ensamble_HuntingRifle": {
+    "as1_value": "组装MSR788步枪",
+    "value": "组装MSR788狩猎步枪",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：原版槍名照 LangFor42/官方簡中 MSR788狩獵步槍/狩猎步枪"
+  },
+  "Tooltip.json|Tooltip_DismantleHuntingRifle": {
+    "as1_value": "拆解MSR788步枪以获得一些用于维修的配件.      ",
+    "value": "拆解MSR788狩猎步枪以获得一些用于维修的配件.      ",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 原版槍名照官方簡中 MSR788狩猎步枪"
+  },
+  "Tooltip.json|Tooltip_MountHuntingRifle": {
+    "as1_value": "使用武器配件组装MSR788步枪",
+    "value": "使用武器配件组装MSR788狩猎步枪",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 原版槍名照官方簡中 MSR788狩猎步枪"
+  },
+  "Recorded_Media.json|RM_48420ad7-7467-48ce-89am-69e36c5amre5": {
+    "as1_value": "首先我们要在锅里熔化铅.",
+    "value": "首先我们要在平底煮锅里熔化铅.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：saucepan=原版 Base.Saucepan, 官方簡中平底煮锅"
+  },
+  "ItemName.json|Base.Key_156": {
+    "as1_value": "军事区军械库钥匙",
+    "value": "军事基地军械库钥匙",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Military Complex 在同 MOD CN 多數譯「军事基地」, 統一"
+  },
+  "ItemName.json|Base.Key_256": {
+    "as1_value": "军事区医院钥匙",
+    "value": "军事基地医院钥匙",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Military Complex 在同 MOD CN 多數譯「军事基地」, 統一"
+  },
+  "ItemName.json|Base.Key_56": {
+    "as1_value": "军事区军队钥匙",
+    "value": "军事基地军队钥匙",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Military Complex 在同 MOD CN 多數譯「军事基地」, 統一"
+  },
+  "Tooltip.json|Tooltip_FTAcc_heater": {
+    "as1_value": "加热器",
+    "value": "鱼缸加热器",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：對齊物品名 AquaFarm.AquaCalefactor (CH 魚缸加熱器/CN 鱼缸加热器)"
+  },
+  "Tooltip.json|Tooltip_FTHeater": {
+    "as1_value": "加热器:",
+    "value": "鱼缸加热器:",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "IG_UI.json|IGUI_NotAlone_Keep": {
+    "as1_value": "待在原地",
+    "value": "跟随站位",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：\"Stay\" 是站位子選單 (靠近/遠一點/在我後面/左/右), 不是原地等候; 「待命」「待在原地」會和 WaitHere 混淆"
+  },
+  "IG_UI.json|IGUI_NotAlone_Say_Equip": {
+    "as1_value": "拿到手了.",
+    "value": "收到.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：裝備到身上部位時的應答 \"Got it.\", CN「拿到手了」誤為取得物品; 對齊 CH"
+  },
+  "IG_UI.json|IGUI_NotAlone_SocM_Compliment_Bad_Far_1": {
+    "as1_value": "留着吧.",
+    "value": "省省吧.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：\"Save it.\" 此處是拒絕好意 (=省省吧), CN「留着吧」誤為保留東西"
+  },
+  "IG_UI.json|IGUI_NotAlone_SocM_Joke_Bad_Far_3": {
+    "as1_value": "留着吧.",
+    "value": "省省吧.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上, \"Save it.\" = 省省吧"
+  },
+  "IG_UI.json|IGUI_NotAlone_Soc_Compliment_Bad_2": {
+    "as1_value": "留着吧.",
+    "value": "省省吧.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上, \"Save it.\" = 省省吧"
+  },
+  "IG_UI.json|IGUI_NotAlone_Soc_Compliment_Bad_Far_1": {
+    "as1_value": "留着吧.",
+    "value": "省省吧.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上, \"Save it.\" = 省省吧"
+  },
+  "IG_UI.json|IGUI_NotAlone_Soc_Joke_Bad_Far_3": {
+    "as1_value": "留着吧.",
+    "value": "省省吧.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上, \"Save it.\" = 省省吧"
+  },
+  "IG_UI.json|IGUI_NotAlone_Soc_EvCarThirstyIn_Far_1": {
+    "as1_value": "你脱水了.",
+    "value": "你渴了.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：\"You're dry.\" = 口渴 (EvCarThirsty), CN「脱水了」誇大且與 CH 不一致"
+  },
+  "IG_UI.json|IGUI_NotAlone_Soc_EvLull_Close_1": {
+    "as1_value": "被咬到了吗? 我看看.",
+    "value": "被伤到了吗? 我看看.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：\"Did it get you?\" 泛指受傷, CN 限定為「咬到」(PZ 咬傷是致命專指), 與 CH 不一致"
+  },
+  "IG_UI.json|IGUI_NotAlone_Soc_EvPlayerHit_Close_1": {
+    "as1_value": "它咬到你了! 马上到我后面!",
+    "value": "它伤到你了! 马上到我后面!",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：EvPlayerHit 是任何被擊中, CN「咬到」誤指咬傷; 對齊 CH「傷到」"
+  },
+  "IG_UI.json|IGUI_NotAlone_Soc_EvPlayerHit_Far_2": {
+    "as1_value": "它咬到你了.",
+    "value": "它伤到你了.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上, EvPlayerHit 不限咬傷"
+  },
+  "IG_UI.json|IGUI_NotAlone_Soc_EvPlayerHit_Near_1": {
+    "as1_value": "它咬到你了! 退后!",
+    "value": "它伤到你了! 退后!",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上, EvPlayerHit 不限咬傷"
+  },
+  "IG_UI.json|IGUI_NotAlone_Soc_EvSitIdle_Far_2": {
+    "as1_value": "你坐我就坐. 我盯着点.",
+    "value": "要坐就坐吧. 我盯着点.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：原意「你要坐就坐, 我負責警戒」, CN「你坐我就坐」譯反"
+  },
+  "IG_UI.json|IGUI_NotAlone_Soc_ReceiveBooze_Close_1": {
+    "as1_value": "等活下来再喝. 以后.",
+    "value": "我们为活下来干一杯. 以后再喝.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：\"drink to surviving\" 是為活下來乾杯, CN「等活下来再喝」變成條件句"
+  },
+  "IG_UI.json|IGUI_NotAlone_Soc_ReceiveCologne_Far_1": {
+    "as1_value": "古龙水. 不是给我的.",
+    "value": "古龙水. 我用不上.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：\"Not for me\" = 不合我用 (玩家送她的), CN「不是给我的」意思相反"
+  },
+  "IG_UI.json|IGUI_NotAlone_Soc_ReceiveFuel_Far_2": {
+    "as1_value": "燃料. 给车用, 还是放火用.",
+    "value": "燃料. 给车用, 或是生火用.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：\"for fire\" = 生火, CN「放火」是縱火"
+  },
+  "IG_UI.json|IGUI_NotAlone_Soc_ReceiveGame_Close_2": {
+    "as1_value": "之前就没再玩过. 来吧.",
+    "value": "出事以后就没玩过了. 来吧.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：\"since before\" = 自從災變前之後, CN「之前就没再玩过」語意不清; 對齊 CH"
+  },
+  "Moodles.json|Moodles_SleepHealthMoodle_Good_lvl1": {
+    "as1_value": "现在入睡刚好不会破坏生物钟",
+    "value": "比平均稍好的入睡时机.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：原譯 CH 像在講睡眠時長, CN 講「不會破壞生物鐘」, 都不是 EN「睡覺時機略優於平均」"
+  },
+  "Sandbox.json|Sandbox_ETWTS_BloodlustEnabled": {
+    "as1_value": "启用饮鸩止渴",
+    "value": "启用嗜血",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Bloodlust 特質名: 饮鸩止渴是成語誤用 (意為飲毒解渴), 與 CH 嗜血不一致; 統一為嗜血"
+  },
+  "Sandbox.json|Sandbox_ETWTS_BloodlustPointValue": {
+    "as1_value": "饮鸩止渴点数价值",
+    "value": "嗜血点数值",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上, Bloodlust 統一嗜血"
+  },
+  "Sandbox.json|Sandbox_ETWTS_PackMouseEnabled_tooltip": {
+    "as1_value": "控制角色创建时是否可用, 以及 (若未启用全局覆盖) ETW在游戏中的获得途径.",
+    "value": "控制角色创建时是否可用, 以及 (若未启用全局覆盖) ETW在游戏中的失去途径.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：EN 是 gameplay removal (失去), 原譯寫成取得"
+  },
+  "Sandbox.json|Sandbox_ETWTS_PackMuleEnabled_tooltip": {
+    "as1_value": "控制角色创建时是否可用.",
+    "value": "控制角色创建时是否可用, 以及 (若未启用全局覆盖) ETW在游戏中的获得途径.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏譯後半「除非啟用全域覆寫, 也控制遊戲中取得」; 照同 MOD 其他 27 鍵同句譯法"
+  },
+  "Sandbox.json|Sandbox_ETW_AffinitySystem": {
+    "as1_value": "天赋系统",
+    "value": "亲和系统",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Affinity 譯「天赋系统」(Talent) 誤譯, 且與 CH 親和系統不一致"
+  },
+  "Sandbox.json|Sandbox_ETW_AffinitySystemGainMultiplier": {
+    "as1_value": "天赋系统增加系数",
+    "value": "亲和系统增加系数",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_AffinitySystemGainMultiplier_tooltip": {
+    "as1_value": "拥有天赋系统功能的特质变得多容易获得 (仅影响你开局时已有的特质!). 设为1表示无效. 设为2表示获得速度翻一倍. 设为1.5表示快50%%, 以此类推. 所以如果你开局后有一个动态特质在后来失去了, 你可以更快地重新获得它. 但这对负面特质也有效!",
+    "value": "拥有亲和系统功能的特质变得多容易获得 (仅影响你开局时已有的特质!). 设为1表示无效. 设为2表示获得速度翻一倍. 设为1.5表示快50%%, 以此类推. 所以如果你开局后有一个动态特质在后来失去了, 你可以更快地重新获得它. 但这对负面特质也有效!",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_AffinitySystemLoseDivider": {
+    "as1_value": "天赋系统降低系数",
+    "value": "亲和系统降低系数",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_AffinitySystemLoseDivider_tooltip": {
+    "as1_value": "拥有天赋系统功能的特质变得多难失去 (仅影响你开局时已有的特质!). 设为1表示无效. 设为2表示失去速度减半. 设为1.5表示慢50%%, 以此类推. 所以如果你开局有一个可能失去的正面特质, 它会更难失去. 但这对负面特质也有效!",
+    "value": "拥有亲和系统功能的特质变得多难失去 (仅影响你开局时已有的特质!). 设为1表示无效. 设为2表示失去速度减半. 设为1.5表示慢50%%, 以此类推. 所以如果你开局有一个可能失去的正面特质, 它会更难失去. 但这对负面特质也有效!",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_AffinitySystem_tooltip": {
+    "as1_value": "定义天赋系统是否对某些与系统绑定的特质和一些复杂特质启用 (例如, 体重特质相关系统, 开阔和幽闭恐惧症的相关系统, 睡眠特质相关系统. 哪些系统和特质受天赋系统影响, 请查看Google表格). <br>天赋系统让你更容易保住角色创建时选择的特质, 使其不容易随便失去, 无论正面还是负面特质. 启用后, 你失去这些特质的速度将会减半 (可修改), 获得这些特质的速度翻倍 (也可修改)",
+    "value": "定义亲和系统是否对某些与系统绑定的特质和一些复杂特质启用 (例如, 地点恐惧系统或睡眠系统的特质). <br>亲和系统让你更容易保住角色创建时选择的特质, 无论正面还是负面特质. 启用后, 你失去这些特质的速度将会减半 (可修改), 获得这些特质的速度翻倍 (也可修改)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 的例子 (体重系统、Google 表格) 是舊英文內容, 現行 EN 例子為恐懼地點系統或睡眠系統; Affinity 改亲和系统"
+  },
+  "Sandbox.json|Sandbox_ETW_AsthmaticCounter": {
+    "as1_value": "哮喘痊愈值",
+    "value": "哮喘患者计数器",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Asthmatic 官方簡中特質名「哮喘患者」; 原譯「痊愈值」也不是 counter (計數器, 兼管獲得與失去)"
+  },
+  "Sandbox.json|Sandbox_ETW_AsthmaticProgressGainMultiplier": {
+    "as1_value": "哮喘恢复进度倍率",
+    "value": "哮喘患者恢复进度倍率",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Asthmatic 官方簡中特質名「哮喘患者」"
+  },
+  "Sandbox.json|Sandbox_ETW_AsthmaticProgressGainMultiplier_tooltip": {
+    "as1_value": "乘以克服并失去哮喘特质的计数器进度. 设为0可禁用此进度.",
+    "value": "乘以克服并失去哮喘患者特质的计数器进度. 设为0可禁用此进度.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_AsthmaticProgressLossMultiplier": {
+    "as1_value": "哮喘加重进度倍率",
+    "value": "哮喘患者加重进度倍率",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_AsthmaticProgressLossMultiplier_tooltip": {
+    "as1_value": "乘以恶化并获得哮喘特质的计数器进度. 设为0可禁用此进度.",
+    "value": "乘以恶化并获得哮喘患者特质的计数器进度. 设为0可禁用此进度.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_AsthmaticRecoveryTemperatureThreshold": {
+    "as1_value": "哮喘恢复温度阈值",
+    "value": "哮喘患者恢复温度阈值",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_AsthmaticRecoveryTemperatureThreshold_tooltip": {
+    "as1_value": "当既不跑步也不冲刺, 且气温达到或高于此摄氏值时, 计数器才会朝克服哮喘的方向推进.",
+    "value": "当既不跑步也不冲刺, 且气温达到或高于此摄氏值时, 计数器才会朝克服哮喘患者特质的方向推进.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_Bloodlust": {
+    "as1_value": "饮鸩止渴",
+    "value": "嗜血",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上, Bloodlust 統一嗜血"
+  },
+  "Sandbox.json|Sandbox_ETW_BloodlustProgress": {
+    "as1_value": "饮鸩止渴进度",
+    "value": "嗜血进度",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_BraverySystemRemovesOtherFearPerks_tooltip": {
+    "as1_value": "如果启用, 达到无所畏惧阶段会移除恐雨患者、恐雾患者、幽闭恐惧和开阔恐惧特质, 并且会阻止你获得它们",
+    "value": "如果启用, 通过勇气系统达到麻木不仁时, 也会移除恐雨患者, 恐雾患者, 开阔恐惧和幽闭恐惧等其他恐惧特质, 并阻止你获得它们",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 把 desensitized 譯成「无所畏惧」(Brave), 應為麻木不仁; CH 恐霧症/幽閉恐懼 照特質名. EN 寫 Pluviophile 是上游筆誤, 程式實際移除 Pluviophobia (ETW_ByKills.lua), 維持恐雨患者"
+  },
+  "Sandbox.json|Sandbox_ETW_Burglar": {
+    "as1_value": "开门撬锁",
+    "value": "窃贼",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Burglar 官方簡中為「窃贼」"
+  },
+  "Sandbox.json|Sandbox_ETW_BurglarSkill": {
+    "as1_value": "获得开门撬锁特质的相关技能要求",
+    "value": "获得窃贼特质的相关技能要求",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_CatEyesCounter_tooltip": {
+    "as1_value": "允许你通过观察角色一定半径内的区域来获得积分. 你获得的积分数量受时间, 区域黑暗程度以及你和区域是否在室内/室外等因素影响. 你看到的区域越多, 越暗, 获得的积分越多. 拥有鹰眼特质可获得双倍收益. 夜间击杀会触发额外的进度获取",
+    "value": "允许你通过观察角色一定半径内的区域来获得积分. 你获得的积分数量受时间, 区域黑暗程度以及你和区域是否在室内/室外等因素影响. 你看到的区域越多, 越暗, 获得的积分越多. 拥有目光锐利特质可获得双倍收益. 夜间击杀会触发额外的进度获取",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Eagle Eyed 官方簡中為「目光锐利」"
+  },
+  "Sandbox.json|Sandbox_ETW_CookSkill": {
+    "as1_value": "获得餐厅主厨特质的烹饪+屠宰技能要求",
+    "value": "获得厨师特质的烹饪+屠宰技能要求",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Keen Cook 官方簡中為「厨师」"
+  },
+  "Sandbox.json|Sandbox_ETW_EagleEyedDistance_tooltip": {
+    "as1_value": "僵尸需要在多远的距离外才算作目光锐利击杀计数的一次击杀. 原版建议保持20, 对于添加了让枪械变得更'正义'的模组(如Gunfighter或者贝雷塔模组), 建议设为25左右",
+    "value": "僵尸需要在多远的距离外, 击杀才算作目光锐利击杀计数的一次击杀. 原版建议保持20, 对于添加了优秀枪械的模组(如Gunfighter+Brita), 建议设为25左右",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：程式是距離 >= 設定值才計數 (ETW_ByKills.lua), CH「距離內」方向反了; CN 把 Brita 譯成貝雷塔且加了 EN 沒有的「正义」"
+  },
+  "Sandbox.json|Sandbox_ETW_Fishing": {
+    "as1_value": "不会空军",
+    "value": "垂钓者",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Angler 官方簡中為「垂钓者」(原譯「不会空军」是網路梗)"
+  },
+  "Sandbox.json|Sandbox_ETW_FishingSkill": {
+    "as1_value": "获得不会空军特质的钓鱼技能要求",
+    "value": "获得垂钓者特质的钓鱼技能要求",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_Gardener": {
+    "as1_value": "修枝剪叶",
+    "value": "园艺师",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Gardener 官方簡中為「园艺师」"
+  },
+  "Sandbox.json|Sandbox_ETW_GardenerSkill": {
+    "as1_value": "获得修枝剪叶特质的耕作技能要求",
+    "value": "获得园艺师特质的耕作技能要求",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_HandySkill_tooltip": {
+    "as1_value": "相关技能指维护+木工",
+    "value": "木工+雕刻+维护+石工",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 只列维护+木工, 漏雕刻與石工"
+  },
+  "Sandbox.json|Sandbox_ETW_Hiker": {
+    "as1_value": "远足专家",
+    "value": "远足者",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Hiker 官方簡中為「远足者」"
+  },
+  "Sandbox.json|Sandbox_ETW_HikerSkill": {
+    "as1_value": "获得远足专家特质的相关技能要求",
+    "value": "获得远足者特质的相关技能要求",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_HunterSkill": {
+    "as1_value": "获得荒野猎手特质的相关技能要求",
+    "value": "获得猎人特质的相关技能要求",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Hunter 官方簡中為「猎人」"
+  },
+  "Sandbox.json|Sandbox_ETW_Sewer": {
+    "as1_value": "裁缝工人",
+    "value": "裁缝",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Sewer 原版特質名 CH/CN 為「裁縫/裁缝」"
+  },
+  "Sandbox.json|Sandbox_ETW_SewerSkill": {
+    "as1_value": "获得裁缝工人特质的缝纫技能要求",
+    "value": "获得裁缝特质的缝纫技能要求",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_SewerUniqueClothesRipped": {
+    "as1_value": "获得裁缝工人特质所需要撕开不同衣物数",
+    "value": "获得裁缝特质所需要撕开不同衣物数",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_SewerUniqueClothesRipped_tooltip": {
+    "as1_value": "你需要撕开多少件不同的衣物才能获得裁缝工人. 如果你正在使用模组衣物, 请相应增加此值. 例如, AuthenticZ或Brita护甲包都添加了大量可撕开的衣物",
+    "value": "你需要撕开多少件不同的衣物才能获得裁缝. 如果你正在使用模组衣物, 请相应增加此值. 例如, AuthenticZ或Brita护甲包都添加了大量可撕开的衣物",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_SleepMoodle": {
+    "as1_value": "睡眠系统情绪",
+    "value": "睡眠系统状态图标",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Moodle 依術語表/官方簡中譯 狀態圖示/状态图标"
+  },
+  "Sandbox.json|Sandbox_ETW_SleepMoodle_tooltip": {
+    "as1_value": "如果禁用此选项, 情绪将不会显示. 对于单人游戏, 保持启用并通过模组选项更改是否可见. 但如果是服务器设置, 玩家将无法在客户端启用情绪.",
+    "value": "如果禁用此选项, 状态图标将不会显示. 对于单人游戏, 保持启用并通过模组选项更改是否可见. 但如果是服务器设置, 玩家将无法在客户端启用状态图标.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_SleepSystemCounter_tooltip": {
+    "as1_value": "设置睡眠系统计数器的正负上限. 计数器达到-66%%时获得嗜睡, 达到-33%%时失去嗜睡; 降到+33%%及以下时失去清醒, 达到+66%%时获得清醒. 以嗜睡或清醒开局的角色, 将从对应的负向或正向最大值开始.",
+    "value": "设置睡眠系统计数器的正负上限. 计数器达到-66%%时获得昏昏欲睡, 达到-33%%时失去昏昏欲睡; 降到+33%%及以下时失去精神抖擞, 达到+66%%时获得精神抖擞. 以昏昏欲睡或精神抖擞开局的角色, 将从对应的负向或正向最大值开始.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Sleepyhead/Wakeful 官方簡中為「昏昏欲睡/精神抖擞」(原譯嗜睡/清醒)"
+  },
+  "Sandbox.json|Sandbox_ETW_TraitsLockSystemCanGainNegative_tooltip": {
+    "as1_value": "如果启用, 你可以在游戏过程中获得负面特质. 这主要适用于天气/地点爱恶系统或体重系统等特质系统, 因为很少有负面特质可以获取",
+    "value": "如果启用, 你可以在游戏过程中获得负面特质. 这主要适用于动态管理成对正负特质的系统",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 是舊英文內容 (天气/地点爱恶系统、体重系统), 與現行 EN 不同"
+  },
+  "Sandbox.json|Sandbox_ETW_TraitsLockSystemCanLoseNegative_tooltip": {
+    "as1_value": "如果启用, 你可以在游戏过程中失去负面特质.这主要适用于天气/地点爱恶系统或体重系统, 以及一些简单特质",
+    "value": "如果启用, 你可以在游戏过程中失去负面特质. 这适用于动态特质系统以及一些简单特质",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_TraitsLockSystemCanLosePositive_tooltip": {
+    "as1_value": "如果启用, 你可以在游戏过程中失去正面特质. 这主要适用于天气/地点爱恶系统或体重系统, 因为很少有正面特质可以失去",
+    "value": "如果启用, 你可以在游戏过程中失去正面特质. 这主要适用于动态管理成对正负特质的系统",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_WhittlerSkill": {
+    "as1_value": "获得雕刻工人特质的雕刻技能要求",
+    "value": "获得雕刻工特质的雕刻技能要求",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Whittler 官方簡中為「雕刻工」"
+  },
+  "UI.json|UI_ETW_AffinitySystemEnabled": {
+    "as1_value": "天赋系统已启用",
+    "value": "亲和系统已启用",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "UI.json|UI_ETW_Chance": {
+    "as1_value": "分之一",
+    "value": "/",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：程式拼成「(1 \"+text+\" X)」, 「分之一」會變成「1 分之一 5」; 改「/」顯示為 1 / 5"
+  },
+  "UI.json|UI_ETW_DelayedNotificationsStringRemove": {
+    "as1_value": "符合失去",
+    "value": "符合失去条件: ",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：程式直接接特質名, 原譯「符合失去嗜血」句子不完整, 也缺結尾空格"
+  },
+  "UI.json|UI_ETW_TranslationsStatus_Language_PTBR": {
+    "as1_value": "葡萄牙语",
+    "value": "巴西葡萄牙语",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏了「巴西」"
+  },
+  "UI.json|UI_trait_Bloodlust": {
+    "as1_value": "饮鸩止渴",
+    "value": "嗜血",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Bloodlust 特質本名: 飲鴆止渴/饮鸩止渴為成語誤用, 改嗜血, 與同 MOD 沙盒多數鍵一致"
+  },
+  "UI.json|UI_trait_BrokenLeg": {
+    "as1_value": "一瘸一拐",
+    "value": "腿部骨折",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 特質名「一瘸一拐」與同 MOD 其他 10 個 CN 鍵 (腿部骨折) 及 CH 不一致"
+  },
+  "UI.json|UI_trait_HeavyDresserDesc": {
+    "as1_value": "你穿得越多越舒服. 穿着超过配置的衣物数量每分钟减少压力和不适; 穿着更少则增加它们. 离该范围越多, 效果越强.",
+    "value": "你裹得严严实实才最舒服. 穿着的衣物件数超过设定的中性范围时, 每分钟都会降低压力和不适; 穿得比范围少则会增加. 离该范围越远, 效果越强.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 漏了「中性范围」, 後句的「该范围」沒有來源; 「离该范围越多」也不通"
+  },
+  "UI.json|UI_trait_LightDresserDesc": {
+    "as1_value": "你穿得越少越舒服. 穿着少于配置的衣物数量每分钟减少压力和不适; 穿着更多则增加它们. 离该范围越多, 效果越强.",
+    "value": "你穿得轻便才最舒服. 穿着的衣物件数少于设定的中性范围时, 每分钟都会降低压力和不适; 穿得比范围多则会增加. 离该范围越远, 效果越强.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "UI.json|UI_trait_PackMuleDesc": {
+    "as1_value": "你知道如何打包好所有需要的东西.<br>最大负重能力提高20%%.",
+    "value": "你知道如何打包好所有需要的东西.<br>最大负重能力提高50%%.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：數字錯: EN 50%%, 譯文 20%%"
+  },
+  "UI.json|UI_trait_PetTherapyDesc": {
+    "as1_value": "宠物显然比僵尸可爱多了. 抚摸动物会使得心情变好: 减少恐慌, 无聊, 不高兴和压力.<br>默认情况下, 每5分钟只能触发一次, 提升5%%心情. 可在沙盒中调整",
+    "value": "你一直爱宠物胜过爱人类. 抚摸动物会让你心情变好: 减少恐慌, 无聊, 不开心和压力.<br>默认情况下, 每5分钟只能触发一次, 提升5%%心情. 可在沙盒中调整",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 首句「宠物显然比僵尸可爱多了」與 EN 不同"
+  },
+  "ContextMenu.json|ContextMenu_LabMustHaveItemsOr": {
+    "as1_value": "或者",
+    "value": "     或",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：EN 開頭 5 個空格是 tooltip 縮排 (程式接 \" <LINE>\"), 原譯吃掉縮排; 用詞照「或」"
+  },
+  "IG_UI.json|IGUI_PlayerText_AutopsyAlready6": {
+    "as1_value": "太对了, 就好像这么忙活下去能有什么用一样. ",
+    "value": "得了吧, 好像这么做真能得到什么似的.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：EN「Yeah right」是反諷, 原譯「太對了」是字面誤譯"
+  },
+  "Print_Text.json|Print_Text_DiaryPage1_title": {
+    "as1_value": "最初数月: 末日的开端",
+    "value": "末日的开端",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：「最初數月」是舊英文標題, 現行 EN 只有 THE BEGINNING OF THE END"
+  },
+  "Print_Text.json|Print_Text_DiaryPage3_info": {
+    "as1_value": "1993年6月3日\n\n一个不明样本送到了-本身并不稀奇. 但当我分析细胞结构时, 情况立即变得清晰起来: 它不是人类.\n\n蛋白质不对劲.热反应极具侵略性. 血细胞…不是血细胞. 我从未见过这样的东西. 我叫来了休森, 他沉默地盯着载玻片看了几秒钟, 最后说道: \n\n记录为环境污染.\n\n然后他离开了房间.\n他没能说服任何人.\n\n团队产生了分歧: 有些人认为这是一种变异的人畜共患病; 其他人认为这是军事泄漏. 老实说, 我只是记录了数据, 并试图不去想太多.",
+    "value": "1993年7月4日\n\n又一个不明样本送到了, 和之前许多样本一样. 但当我分析细胞结构时, 有件事立刻变得很清楚: 它不是人类.\n\n蛋白质不对劲. 热反应极为剧烈. 血细胞…不是血细胞. 我从未见过这样的东西.\n\n我叫来了休森博士. 他沉默地盯着载玻片看了几秒钟, 然后说:\n\n“记录为环境污染.”\n\n接着他就离开了房间.\n这说服不了任何人.\n\n团队产生了分歧: 有些人认为这是一种变异的人畜共患病; 其他人怀疑是军方泄漏. 至于我, 老实说, 我只是记录了数据, 尽量不去多想.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：日期錯 (EN July 4, 譯文 6月3日); 漏「和之前許多樣本一樣」、引號; 「It convinced no one」誤譯成「他沒能說服任何人」"
+  },
+  "Sandbox.json|Sandbox_ZombieVirusVaccineBETA_EnableLightPaints": {
+    "as1_value": "允许生成灯光绘画杂志",
+    "value": "允许灯泡涂色",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Light Painting 是給燈泡上色 (tooltip: learn how to paint lights), 不是燈光繪畫; 且 EN 沒說「生成雜誌」"
+  },
+  "IG_UI.json|IGUI_RR_HudDead": {
+    "as1_value": "损毁",
+    "value": "失效",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：HUD 在脫軌時顯示 DEAD (RR_HudModel.lua), 指油門無作用, 不是「損毀」"
+  },
+  "IG_UI.json|IGUI_RR_HudLampGen": {
+    "as1_value": "引擎",
+    "value": "发电机",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：GEN 燈 = 發電機 (主發電機運轉指示), 另有 ENG 燈 (機況); 譯「引擎」是誤譯"
+  },
+  "IG_UI.json|IGUI_RR_LocoServiced": {
+    "as1_value": "机车已保养完毕",
+    "value": "机车状况良好, 没有需要修理的地方",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：EN 是「狀況良好, 無需修理」, 原譯「已保養完畢」意思不同"
+  },
+  "IG_UI.json|IGUI_RR_Reject_Derailed": {
+    "as1_value": "机车已脱轨",
+    "value": "机车已脱轨, 操控毫无反应",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏了「nothing answers」"
+  },
+  "IG_UI.json|IGUI_RR_Reject_DieselCan": {
+    "as1_value": "需要柴油罐",
+    "value": "那个容器里没有柴油",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：EN 是「容器裡沒有柴油」, 原譯「需要柴油桶」"
+  },
+  "IG_UI.json|IGUI_RR_Reject_DriverSeat": {
+    "as1_value": "需要驾驶员座位",
+    "value": "你不在驾驶位置上",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：EN 是「你不在操控位置」, 原譯「需要駕駛座」"
+  },
+  "IG_UI.json|IGUI_RR_Reject_EmptyContainer": {
+    "as1_value": "需要空柴油容器",
+    "value": "那个容器装不了柴油",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：EN 是「容器不能裝柴油」, 原譯「需要空的柴油容器」"
+  },
+  "IG_UI.json|IGUI_RR_Reject_NoLoco": {
+    "as1_value": "未找到机车",
+    "value": "那辆机车已经不在了",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：EN 是「火車頭已經不在那裡」"
+  },
+  "IG_UI.json|IGUI_RR_Reject_NoProfession": {
+    "as1_value": "需要铁路工人职业",
+    "value": "你不会驾驶机车",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：EN 是「你不會開火車頭」; 原譯「需要鐵路工人職業」, 且特質名是火車司機"
+  },
+  "IG_UI.json|IGUI_RR_Reject_TooFastBoard": {
+    "as1_value": "减速至 5 km/h 以下再上车",
+    "value": "机车速度太快, 上不了车",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：原譯「減速至 5 km/h 以下再上車」是舊英文; 現行 EN 不含數字"
+  },
+  "IG_UI.json|IGUI_RR_Reject_TooFastLeave": {
+    "as1_value": "减速至 5 km/h 以下再离开",
+    "value": "速度太快, 下不了车 - 等它慢下来",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "IG_UI.json|IGUI_RR_Reject_Transfer": {
+    "as1_value": "燃料传输不可用",
+    "value": "没有转移任何燃料",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：EN 是「沒有轉移任何東西」(加油/抽油失敗), 原譯「燃料傳輸不可用」"
+  },
+  "IG_UI.json|IGUI_RR_Reject_Unknown": {
+    "as1_value": "未知服务",
+    "value": "服务器拒绝了这项操作",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：原譯「未知服務」與 EN 無關"
+  },
+  "IG_UI.json|IGUI_RR_Reject_Wrench": {
+    "as1_value": "需要扳手",
+    "value": "你没有可用的扳手",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：EN 是「沒有可用的扳手」(含磨損不可用)"
+  },
+  "IG_UI.json|IGUI_RR_RepairOption": {
+    "as1_value": "修理机车",
+    "value": "用扳手修理机车",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏了「用扳手」"
+  },
+  "IG_UI.json|IGUI_RR_WrenchRequired": {
+    "as1_value": "需要扳手",
+    "value": "你没有可用的扳手",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "UI.json|UI_HomeQuartermaster_Error_loading": {
+    "as1_value": "正在等待区域规则.",
+    "value": "正在等待所有整理区域的规则.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 漏了「所有整理」"
+  },
+  "IG_UI.json|IGUI_NC_ShowOnlyBenefitFromRecipes": {
+    "as1_value": "手头的制作方法只要能帮上忙就好",
+    "value": "仅显示手中配方可受益的配方",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN「手头的制作方法只要能帮上忙就好」語意偏離, 是篩選器: 只顯示手中配方可受益的配方"
+  },
+  "Sandbox.json|Sandbox_ETW_BloodlustMultiplier": {
+    "as1_value": "饮鸩止渴所造成的效果倍率",
+    "value": "嗜血效果倍率",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Bloodlust 特質名統一為嗜血 (AU3 已把 UI_trait_Bloodlust 改嗜血; 飲鴆止渴是成語誤用)"
+  },
+  "Sandbox.json|Sandbox_ETW_BloodlustMultiplier_tooltip": {
+    "as1_value": "将饮鸩止渴特质效果乘以此值. 默认情况下, 每次击杀减少4%%的不高兴, 压力和恐慌. 此倍率应用于那4%%. 所以设为0.5会使这些属性仅减少2%%",
+    "value": "将嗜血特质效果乘以此值. 默认情况下, 每次击杀减少4%%的不高兴, 压力和恐慌. 此倍率应用于那4%%. 所以设为0.5会使这些属性仅减少2%%",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Bloodlust 特質名統一為嗜血 (AU3 已把 UI_trait_Bloodlust 改嗜血; 飲鴆止渴是成語誤用)"
+  },
+  "Sandbox.json|Sandbox_ETWMoodles": {
+    "as1_value": "ETW-情绪状态",
+    "value": "ETW-状态图标",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Moodle 依家族術語表/官方譯「狀態圖示/状态图标」, 不譯情緒條/情绪"
+  },
+  "UI.json|UI_ETW_Options_EnableSleepHealthMoodle": {
+    "as1_value": "启用睡眠健康情绪",
+    "value": "启用睡眠健康状态图标",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Moodle 依家族術語表/官方譯「狀態圖示/状态图标」, 不譯情緒條/情绪"
+  },
+  "Sandbox.json|Sandbox_ETW_AsthmaticColdTemperatureThreshold": {
+    "as1_value": "哮喘寒冷温度阈值",
+    "value": "哮喘患者寒冷温度阈值",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Asthmatic 官方簡中特質名為哮喘患者; Smoker 官方簡中為嗜烟如命"
+  },
+  "Sandbox.json|Sandbox_ETW_Smoker": {
+    "as1_value": "烟瘾患者",
+    "value": "嗜烟如命",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Smoker 官方簡中特質名為嗜烟如命 (原譯烟瘾患者)"
+  },
+  "Sandbox.json|Sandbox_ETW_SmokerCounter_tooltip": {
+    "as1_value": "计数器达到此值时获得烟瘾患者特质. 降至相反值时失去特质. 计数器边界为-2x计数器到2x计数器. <br><br>工作原理: 每次吸烟都会增加你的烟瘾计数器. 两次吸烟之间休息时间越长, 增加越少. 在恐慌或压力状态下吸烟会大幅增加计数器, 基于恐慌和压力等级. 不吸烟会缓慢衰减计数器. 恐慌或压力会减缓衰减速度",
+    "value": "计数器达到此值时获得嗜烟如命特质. 降至相反值时失去特质. 计数器边界为-2x计数器到2x计数器. <br><br>工作原理: 每次吸烟都会增加你的烟瘾计数器. 两次吸烟之间休息时间越长, 增加越少. 在恐慌或压力状态下吸烟会大幅增加计数器, 基于恐慌和压力等级. 不吸烟会缓慢衰减计数器. 恐慌或压力会减缓衰减速度",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Smoker 官方簡中特質名為嗜烟如命 (原譯烟瘾患者)"
+  },
+  "UI.json|UI_ETW_Options_HideSmokerUI": {
+    "as1_value": "[UI]隐藏烟瘾患者进度条",
+    "value": "[UI]隐藏嗜烟如命进度条",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Smoker 官方簡中特質名為嗜烟如命 (原譯烟瘾患者)"
+  },
+  "UI.json|UI_ETW_Options_HideSmokerUI_tooltip": {
+    "as1_value": "在ETW UI中隐藏烟瘾患者特质进度 (例如, 如果你没有该特质且不打算吸烟). 需要重新加载存档或重新加入服务器",
+    "value": "在ETW UI中隐藏嗜烟如命特质进度 (例如, 如果你没有该特质且不打算吸烟). 需要重新加载存档或重新加入服务器",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Smoker 官方簡中特質名為嗜烟如命 (原譯烟瘾患者)"
+  },
+  "Sandbox.json|Sandbox_ETW_SleepSystemMultiplier_tooltip": {
+    "as1_value": "决定你增加/减少睡眠健康度计数器的速度, 这决定了你是否获得/失去清醒和嗜睡.更高的值意味着更快的获得和失去. 更低的值意味着更慢的获得和失去",
+    "value": "决定你增加/减少睡眠健康度计数器的速度, 这决定了你是否获得/失去精神抖擞和昏昏欲睡.更高的值意味着更快的获得和失去. 更低的值意味着更慢的获得和失去",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Sleepyhead/Wakeful 官方簡中為昏昏欲睡/精神抖擞 (原譯嗜睡/清醒)"
+  },
+  "Sandbox.json|Sandbox_ETW_Hunter": {
+    "as1_value": "荒野猎手",
+    "value": "猎人",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Hunter 官方簡中為猎人"
+  },
+  "Sandbox.json|Sandbox_ETW_HunterKills": {
+    "as1_value": "获得荒野猎手特质的击杀要求",
+    "value": "获得猎人特质的击杀要求",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ETW_Whittler": {
+    "as1_value": "雕刻工人",
+    "value": "雕刻工",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Whittler 官方簡中為雕刻工"
+  },
+  "UI.json|UI_ETW_DelayedNotificationsStringAdd": {
+    "as1_value": "符合获得",
+    "value": "符合获得条件: ",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：程式直接接特質名; 與 AU3 的 Remove 鍵一致, 補完整句與結尾空格"
+  },
+  "ContextMenu.json|ContextMenu_LabNeedSpectrometer": {
+    "as1_value": "需要分光计.",
+    "value": "需要光谱仪.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：物品名 LabSpectrometer 是光譜儀/光谱仪, 不是分光計"
+  },
+  "IG_UI.json|IGUI_PlayerText_NeedSpectrometer": {
+    "as1_value": "我需要一个分光计来做这个.",
+    "value": "我需要一台光谱仪来做这个.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同上"
+  },
+  "Sandbox.json|Sandbox_ZombieVirusVaccineBETA_EnableLightPaints_tooltip": {
+    "as1_value": "启用或禁用灯光绘画杂志的生成. 若禁用, 玩家将无法学习灯光绘画技能.",
+    "value": "启用或禁用灯泡涂色杂志的生成. 若禁用, 玩家将无法学习如何给灯泡涂色.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：light painting 是給燈泡上色, 不是燈光繪畫 (同 AU3 EnableLightPaints)"
+  },
+  "Print_Text.json|Print_Text_DiaryPage6_info": {
+    "as1_value": "1993年7月9日\n\n我仍然不知道如何独自完成所有事情.\n但通过观察休森博士我学到了很多————现在, 有了我设法保存的手册, 我想我可以尝试重建部分流程.\n\n1. 第一步: 建造工作台.\n没有它, 我什么都做不了.\n\n2. 然后我需要建造实验室熔炉. 因为没有玻璃器皿————烧瓶、试管、罐子————什么都做不成.\n一切从玻璃开始.\n\n一旦我有足够的试管和烧瓶, 我终于可以组装其他设备了.\n\n6. 我记得的实验室程序基本工作流程: \n\n采血\n根据手册 (和我记得的), 我必须做的第一件事是: \nI. 收集新鲜的受感染血液.\nII. 我需要五管来进行下一步.\n\n分离\n有了五管, 我可以使用离心机将它们分离成: \na. 血浆\nb. 血细胞\n\n血浆用于疫苗.\n细胞用于白细胞.\n\n白细胞\n利用血细胞, 在显微镜下, 我可以分离出白细胞.\n它们至关重要.\n\n抗体\n然后, 在色谱仪中 (打开电脑), 我可以从白细胞中提取抗体.\n这才是真正重要的.\n没有它们, 就没有疫苗, 当然也没有解药.\n\n疫苗\n利用血浆, 白细胞和试剂, 我可以尝试制造: \nI. 简易疫苗\nII. 优质疫苗\nIII. 高级疫苗\\n\n但是解药…\n解药需要大量抗体.\n远比我记忆中的要多.\n\n我花了一整晚写这个.希望它有点用.\n警报声停止了.也许这就是终结.\n\n现在我独自一人.\n没有团队, 没有真正的实验室, 没有无限的补给.\n\n只有一个包, 几本书, 以及我在一切崩溃前偷来的知识.\n\n但我会尝试.\n\n因为总得有人去做…",
+    "value": "1993年7月9日\n\n我仍然不知道如何独自完成所有事情.\n但通过观察休森博士我学到了很多————现在, 有了我设法保存的手册, 我想我可以尝试重建部分流程.\n\n1. 第一步: 建造工作台.\n没有它, 我什么都做不了.\n\n2. 然后我需要建造马弗炉.\n因为没有玻璃器皿————烧瓶、试管、罐子————什么都做不成.\n一切从玻璃开始.\n\n一旦我有足够的试管和烧瓶, 我终于可以组装其他设备了.\n\n6. 我记得的实验室程序基本工作流程: \n\n采血\n根据手册 (和我记得的), 我必须做的第一件事是: \nI. 收集新鲜的受感染血液.\nII. 我需要五管来进行下一步.\n\n分离\n有了五管, 我可以使用离心机将它们分离成: \na. 血浆\nb. 血细胞\n\n血浆用于疫苗.\n细胞用于白细胞.\n\n白细胞\n利用血细胞, 在显微镜下, 我可以分离出白细胞.\n它们至关重要.\n\n抗体\n然后, 在色谱仪中 (打开电脑), 我可以从白细胞中提取抗体.\n这才是真正重要的.\n没有它们, 就没有疫苗, 当然也没有解药.\n\n疫苗\n利用血浆, 白细胞和试剂, 我可以尝试制造: \nI. 简易疫苗\nII. 优质疫苗\nIII. 高级疫苗\\n\n但是解药…\n解药需要大量抗体.\n远比我记忆中的要多.\n\n我花了一整晚写这个.希望它有点用.\n警报声停止了.也许这就是终结.\n\n现在我独自一人.\n没有团队, 没有真正的实验室, 没有无限的补给.\n\n只有一个包, 几本书, 以及我在一切崩溃前偷来的知识.\n\n但我会尝试.\n\n因为总得有人去做…",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：muffle furnace 是物品「馬弗爐/马弗炉」, 原譯實驗室熔爐對不上; CN 第 2 點兩行併成一行, 少一個換行 (補真換行; 原有那個混用的字面 \\n 照留不動)"
+  },
+  "Tooltip.json|Tooltip_DiaryPage6": {
+    "as1_value": "一张撕下的日记页, 包含如何建立实验室的笔记-你最后一次尝试保存你在实习期间设法学到的一些知识.",
+    "value": "一张撕下的日记页, 记载了如何设置实验室的笔记.<br>这是你最后一次尝试保存实习期间学到的部分知识.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：EN 有 <br>, 原譯用「 - 」取代, 標記數不符"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_AA12": {
+    "as1_value": "启用艾奇逊AA-12霰弹枪",
+    "value": "启用艾奇逊AA-12霰弹枪 (约1972年 - 12号弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_AK47": {
+    "as1_value": "启用AK-47自动步枪",
+    "value": "启用AK-47自动步枪 (约1947年 - 7.62x39mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_AK74": {
+    "as1_value": "启用AK-74自动步枪",
+    "value": "启用AK-74自动步枪 (约1974年 - 5.45x39mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_AKS74U": {
+    "as1_value": "启用AKS-74U自动步枪",
+    "value": "启用AKS-74U自动步枪 (约1979年 - 5.45x39mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_AR15": {
+    "as1_value": "启用柯尔特AR-15自动步枪",
+    "value": "启用柯尔特AR-15民用步枪 (约1958年 - 5.56x45mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊; 另修正槍名與 ItemName 一致"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_ASVAL": {
+    "as1_value": "启用AS VAL自动步枪",
+    "value": "启用AS VAL自动步枪 (约1985年 - 9x39mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_BAR": {
+    "as1_value": "启用勃朗宁自动步枪",
+    "value": "启用勃朗宁自动步枪 (约1918年 - .30-06春田弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_BENELLI_M4": {
+    "as1_value": "启用贝内利M4霰弹枪",
+    "value": "启用贝内利M4霰弹枪 (约1998年 - 12号弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_CAR15": {
+    "as1_value": "启用柯尔特CAR-15自动步枪",
+    "value": "启用柯尔特CAR-15自动步枪 (约1964年 - 5.56x45mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_COLT_SINGLE": {
+    "as1_value": "启用柯尔特单动左轮手枪",
+    "value": "启用柯尔特单动左轮手枪 (19世纪 - .45柯尔特弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_DEAGLE": {
+    "as1_value": "启用沙漠之鹰",
+    "value": "启用沙漠之鹰 (约1982年 - .50 AE)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_DETECTIVE_38": {
+    "as1_value": "启用柯尔特侦搜型左轮手枪",
+    "value": "启用柯尔特.38侦搜型左轮手枪 (约1990年 - .38特殊弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊; 另修正槍名與 ItemName 一致"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_DOUBLEBARREL": {
+    "as1_value": "启用双管霰弹枪",
+    "value": "启用双管霰弹枪 (约19世纪 - 12号弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_FAL": {
+    "as1_value": "启用赫斯塔尔FAL自动步枪",
+    "value": "启用赫斯塔尔FAL自动步枪 (约1953年 - 7.62x51mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_FAMAS": {
+    "as1_value": "启用圣艾蒂安FAMAS自动步枪",
+    "value": "启用圣艾蒂安FAMAS自动步枪 (约1978年 - 5.56x45mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_FNC": {
+    "as1_value": "启用赫斯塔尔FNC自动步枪",
+    "value": "启用赫斯塔尔FNC自动步枪 (约1979年 - 5.56x45mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_G3": {
+    "as1_value": "启用黑克勒-科赫G3自动步枪",
+    "value": "启用黑克勒-科赫G3自动步枪 (约1959年 - 7.62x51mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_G36": {
+    "as1_value": "启用黑克勒-科赫G36自动步枪",
+    "value": "启用黑克勒-科赫G36自动步枪 (约1990年 - 5.56x45mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_G36C": {
+    "as1_value": "启用黑克勒-科赫G36C自动步枪",
+    "value": "启用黑克勒-科赫G36C自动步枪 (约2001年 - 5.56x45mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_HIPOWER": {
+    "as1_value": "启用勃朗宁Hi-Power手枪",
+    "value": "启用勃朗宁Hi-Power手枪 (约1935年 - 9x19mm帕拉贝鲁姆弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_M14": {
+    "as1_value": "启用M14自动步枪",
+    "value": "启用M14自动步枪 (约1959年 - 7.62x51mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_M16A1": {
+    "as1_value": "启用柯尔特M16A1自动步枪",
+    "value": "启用柯尔特M16A1自动步枪 (约1967年 - 5.56x45mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_M16A2": {
+    "as1_value": "启用柯尔特M16A2自动步枪",
+    "value": "启用柯尔特M16A2自动步枪 (约1982年 - 5.56x45mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_M16A2_M203": {
+    "as1_value": "启用柯尔特M16A2自动步枪 (M203榴弹发射器)",
+    "value": "启用柯尔特M16A2自动步枪 (M203榴弹发射器) (约1982年 - 5.56x45mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_M16A3": {
+    "as1_value": "启用柯尔特M16A3自动步枪",
+    "value": "启用柯尔特M16A3自动步枪 (约1990年 - 5.56x45mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_M1895": {
+    "as1_value": "启用马林1895步枪",
+    "value": "启用马林1895步枪 (约1895年 - .45-70军用弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_M1903": {
+    "as1_value": "启用春田M1903步枪",
+    "value": "启用春田M1903步枪 (约1903年 - .30-06春田弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_M1911": {
+    "as1_value": "启用柯尔特M1911手枪",
+    "value": "启用柯尔特M1911手枪 (约1911年 - .45 ACP)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_M1_GARAND": {
+    "as1_value": "启用春田M1加兰德半自动步枪",
+    "value": "启用春田M1加兰德半自动步枪 (约1936年 - .30-06春田弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_M24": {
+    "as1_value": "启用雷明顿M24狙击步枪",
+    "value": "启用雷明顿M24狙击步枪 (约1988年 - 7.62x51mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_M4": {
+    "as1_value": "启用柯尔特M4自动步枪",
+    "value": "启用柯尔特M4自动步枪 (约2012年 - 5.56x45mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_M4A1": {
+    "as1_value": "启用柯尔特M4A1自动步枪",
+    "value": "启用柯尔特M4A1自动步枪 (约1994年 - 5.56x45mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_M60": {
+    "as1_value": "启用春田M60通用机枪",
+    "value": "启用春田M60通用机枪 (约1957年 - 7.62x51mm北约弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_M79": {
+    "as1_value": "启用春田M79榴弹发射器",
+    "value": "启用春田M79榴弹发射器 (约1961年 - 40x46mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_M92FS": {
+    "as1_value": "启用伯莱塔M92FS手枪",
+    "value": "启用伯莱塔M92FS手枪 (约1976年 - 9x19mm帕拉贝鲁姆弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_M93R": {
+    "as1_value": "启用伯莱塔M93R连发手枪",
+    "value": "启用伯莱塔M93R连发手枪 (约1979年 - 9x19mm帕拉贝鲁姆弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_MAC10": {
+    "as1_value": "启用英格拉姆MAC-10冲锋枪",
+    "value": "启用英格拉姆MAC-10冲锋枪 (约1970年 - .45 ACP)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_MOSIN": {
+    "as1_value": "启用莫辛-纳甘步枪",
+    "value": "启用莫辛-纳甘步枪 (约1891年 - 7.62x54mmR)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_MOSSBERG_590": {
+    "as1_value": "启用莫斯伯格590霰弹枪",
+    "value": "启用莫斯伯格590霰弹枪 (约1983年 - 12号弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_MP5": {
+    "as1_value": "启用黑克勒-科赫MP5冲锋枪",
+    "value": "启用黑克勒-科赫MP5冲锋枪 (约1966年 - 9x19mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_MP5A2": {
+    "as1_value": "启用黑克勒-科赫MP5A2冲锋枪",
+    "value": "启用黑克勒-科赫MP5A2冲锋枪 (约1966年 - 9x19mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_MP5K": {
+    "as1_value": "启用黑克勒-科赫MP5K冲锋枪",
+    "value": "启用黑克勒-科赫MP5K冲锋枪 (约1976年 - 9x19mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_MP5SD": {
+    "as1_value": "启用黑克勒-科赫MP5SD冲锋枪",
+    "value": "启用黑克勒-科赫MP5SD冲锋枪 (约1970年 - 9x19mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_P226": {
+    "as1_value": "启用西格绍尔P226手枪",
+    "value": "启用西格绍尔P226手枪 (约1975年 - 9x19mm帕拉贝鲁姆弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊; 上游英文誤寫 Beretta P226, 照 ItemName 保留西格紹爾避免同槍兩名"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_PSG1": {
+    "as1_value": "启用黑克勒-科赫PSG-1狙击步枪",
+    "value": "启用黑克勒-科赫PSG-1狙击步枪 (约1978年 - 7.62x51mm北约弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_PYTHON": {
+    "as1_value": "启用柯尔特巨蟒左轮手枪",
+    "value": "启用柯尔特巨蟒左轮手枪 (约1955年 - .357马格南弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_REMINGTON_870": {
+    "as1_value": "启用雷明顿870霰弹枪",
+    "value": "启用雷明顿870霰弹枪 (约1950年 - 12号弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_RHINO": {
+    "as1_value": "启用齐亚帕犀牛左轮手枪",
+    "value": "启用齐亚帕犀牛左轮手枪 (约2002年 - .357马格南弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_SKS": {
+    "as1_value": "启用SKS半自动步枪",
+    "value": "启用SKS半自动步枪 (约1945年 - 7.62x39mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_SPAS12": {
+    "as1_value": "启用弗兰齐SPAS-12霰弹枪",
+    "value": "启用弗兰齐SPAS-12半自动霰弹枪 (约1979年 - 12号弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊; 另修正槍名與 ItemName 一致"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_STEVENS_555": {
+    "as1_value": "启用史蒂文斯555霰弹枪",
+    "value": "启用史蒂文斯555双管霰弹枪 (约1970年 - 12号弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊; 另修正槍名與 ItemName 一致"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_SVD": {
+    "as1_value": "启用SVD狙击步枪",
+    "value": "启用SVD狙击步枪 (约1963年 - 7.62x54mmR)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_SW629": {
+    "as1_value": "启用史密斯-韦森M629左轮手枪",
+    "value": "启用史密斯-韦森M629左轮手枪 (约1955年 - .44马格南弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_TEC9": {
+    "as1_value": "启用英特拉泰克TEC-9手枪",
+    "value": "启用英特拉泰克TEC-9手枪 (约1980年 - 9x19mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_TRENCHGUN": {
+    "as1_value": "启用温彻斯特堑壕霰弹枪",
+    "value": "启用温彻斯特堑壕霰弹枪 (约1918年 - 12号弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_USP": {
+    "as1_value": "启用黑克勒-科赫USP手枪",
+    "value": "启用黑克勒-科赫USP手枪 (约1980年 - .45 ACP)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_W1873": {
+    "as1_value": "启用温彻斯特1873步枪",
+    "value": "启用温彻斯特1873步枪 (约1873年 - .357)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_W1873_CARBINE": {
+    "as1_value": "启用温彻斯特1873短步枪",
+    "value": "启用温彻斯特1873短步枪 (约1873年 - .357)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_W1887": {
+    "as1_value": "启用温彻斯特1887霰弹枪",
+    "value": "启用温彻斯特1887霰弹枪 (约1887年 - 12号弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_W1894": {
+    "as1_value": "启用温彻斯特1894步枪",
+    "value": "启用温彻斯特1894步枪 (约1894年 - .30-30温彻斯特弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_XM177": {
+    "as1_value": "启用柯尔特XM177冲锋枪",
+    "value": "启用柯尔特XM177自动步枪 (约1967年 - 5.56x45mm)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑 (circa/口徑), 舊譯缺這段資訊; 另修正槍名與 ItemName 一致"
+  },
+  "ItemName.json|MarzGuns.556x45Magazine30_G36": {
+    "as1_value": "5.56x45mm 30发半透明弹匣",
+    "value": "G36 5.56x45mm 30发半透明弹匣",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 漏槍名 G36, 與 CH 不一致"
+  },
+  "ItemName.json|MarzGuns.BENELLI_M4": {
+    "as1_value": "贝内利M4霰弹枪",
+    "value": "贝内利M4半自动霰弹枪",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 漏 Semi (半自動), 與 CH 不一致"
+  },
+  "ItemName.json|MarzGuns.SAIGAS12": {
+    "as1_value": "Saiga-12霰弹枪",
+    "value": "Saiga-12半自动霰弹枪",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 漏 Semi (半自動), 與 CH 不一致"
+  },
+  "ItemName.json|MarzGuns.SPAS12": {
+    "as1_value": "弗兰齐SPAS-12霰弹枪",
+    "value": "弗兰齐SPAS-12半自动霰弹枪",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏 Semi; 同 MOD Semi-Shotgun 都譯半自動霰彈槍"
+  },
+  "ItemName.json|MarzGuns.BENELLI_M4_TAC": {
+    "as1_value": "贝内利M4战术霰弹枪",
+    "value": "贝内利M4战术半自动霰弹枪",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏 Semi; 與基本型 Benelli M4 譯法不一致"
+  },
+  "ItemName.json|MarzGuns.M1903": {
+    "as1_value": "春田M1903步枪",
+    "value": "春田M1903栓动步枪",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏 Bolt; 同 MOD Bolt Rifle (M70, 700) 都譯栓動步槍"
+  },
+  "ItemName.json|MarzGuns.MOSIN": {
+    "as1_value": "莫辛-纳甘步枪",
+    "value": "莫辛-纳甘栓动步枪",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏 Bolt; 同 MOD Bolt Rifle 都譯栓動步槍"
+  },
+  "ItemName.json|MarzGuns.DEAGLE": {
+    "as1_value": "沙漠之鹰",
+    "value": ".50沙漠之鹰手枪",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 漏 .50 與種類, 與 CH 不一致"
+  },
+  "ItemName.json|MarzGuns.4570_Bullet": {
+    "as1_value": ".45-70子弹",
+    "value": ".45-70军用子弹",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏 Government; 同 MOD 盒/箱/彈殼都譯軍用"
+  },
+  "ItemName.json|MarzGuns.LR2_Compensator": {
+    "as1_value": "LR2制退器",
+    "value": "LR2补偿器",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Compensator 是槍口補償器, 不是制退器 (同 MOD Muzzlebreak 才是制退器)"
+  },
+  "ItemName.json|MarzGuns.M&P_Suppressor": {
+    "as1_value": "M&P消音器",
+    "value": "M&P消音器 (9mm手枪)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 漏括號裡的適用槍種, 與 CH 不一致"
+  },
+  "ItemName.json|MarzGuns.MKI_Suppressor": {
+    "as1_value": "MKI消音器",
+    "value": "MKI消音器 (5.56mm步枪)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 漏括號裡的適用槍種, 與 CH 不一致"
+  },
+  "ItemName.json|MarzGuns.NDR_Suppressor": {
+    "as1_value": "NDR消音器",
+    "value": "NDR消音器 (5.56mm步枪)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 漏括號裡的適用槍種, 與 CH 不一致"
+  },
+  "ItemName.json|MarzGuns.P45_Suppressor": {
+    "as1_value": "P45消音器",
+    "value": "P45消音器 (.45 ACP枪械)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 漏括號裡的適用槍種, 與 CH 不一致"
+  },
+  "ItemName.json|MarzGuns.PBS-1_Suppressor": {
+    "as1_value": "PBS-1消音器",
+    "value": "PBS-1消音器 (AK系列步枪)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 漏括號裡的適用槍種, 與 CH 不一致"
+  },
+  "ItemName.json|MarzGuns.Shh9_Suppressor": {
+    "as1_value": "Shh9消音器",
+    "value": "Shh9消音器 (9mm手枪)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 漏括號裡的適用槍種, 與 CH 不一致"
+  },
+  "ItemName.json|MarzGuns.M4A1_Integrated_Stock_Deployed": {
+    "as1_value": "柯尔特M4A1集成枪托 (折叠)",
+    "value": "柯尔特M4A1集成枪托 (展开)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Deployed 誤譯成折叠, 與 Folded 撞名"
+  },
+  "ItemName.json|MarzGuns.Slide_Fired": {
+    "as1_value": "套筒待击",
+    "value": "套筒 (已击发)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Fired 誤譯成待擊; 同組 Bolt/Lever/Pump_Fired 都是「(已擊發)」"
+  },
+  "ItemName.json|MarzGuns.Underbarrel_Close": {
+    "as1_value": "下挂关闭",
+    "value": "下挂枪管 (闭合)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN「下挂关闭」語意不明, 與 CH 不一致"
+  },
+  "ItemName.json|MarzGuns.explosion_0": {
+    "as1_value": "爆炸弹头",
+    "value": "爆炸特效",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Explosion FX 是特效, CN 誤譯成爆炸弹头"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_AR15_tooltip": {
+    "as1_value": "启用柯尔特AR-15自动步枪在战利品中生成.",
+    "value": "启用柯尔特AR-15民用步枪在战利品中生成.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：AR-15 是民用步槍, ItemName 也譯民用步槍"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_DETECTIVE_38_tooltip": {
+    "as1_value": "启用柯尔特侦搜型左轮手枪在战利品中生成.",
+    "value": "启用柯尔特.38侦搜型左轮手枪在战利品中生成.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 漏 .38, 與 CH 與 ItemName 不一致"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_XM177_tooltip": {
+    "as1_value": "启用柯尔特XM177冲锋枪在战利品中生成.",
+    "value": "启用柯尔特XM177自动步枪在战利品中生成.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 譯冲锋枪, 與 CH 及 ItemName (自动步枪) 不一致"
+  },
+  "Sandbox.json|Sandbox_RadioTradersEvents": {
+    "as1_value": "电台商人: 稀有事件",
+    "value": "电台商人 (7/8): 夜间事件",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游改成 Night Events 並加分頁編號 (7/8)"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_BlackmarketWalkieChance_tooltip": {
+    "as1_value": "每次呼叫时火花有货的百分比概率. 默认 2.",
+    "value": "每次呼叫时火花有货的百分比概率. 默认 4.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：預設值上游改為 4"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_Bounties_tooltip": {
+    "as1_value": "铁壁偶尔会悬赏两个拖车公园的欠债人. 需要 Bandits 模组. (开发中)",
+    "value": "铁壁偶尔会悬赏两个拖车公园的欠债人. 需要 Bandits 模组.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游已拿掉開發中標示, 舊譯多了 (開發中)"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_GraveyardShiftChance_tooltip": {
+    "as1_value": "每次呼叫时的百分比概率, 仅限真正的夜晚. 默认 2.",
+    "value": "每次呼叫时的百分比概率, 仅限真正的夜晚. 默认 15.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：預設值上游改為 15"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_HouseCallChance_tooltip": {
+    "as1_value": "每次呼叫医生的触发概率.",
+    "value": "每次呼叫医生的触发概率. 默认 5.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏了預設值 5"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_IronsideMayhemChance_tooltip": {
+    "as1_value": "每次呼叫铁壁的触发概率.",
+    "value": "每次呼叫铁壁的触发概率. 默认 20.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏了預設值 20"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_MoonshineRunChance_tooltip": {
+    "as1_value": "每次呼叫的百分比概率. 默认2.",
+    "value": "每次呼叫的百分比概率. 默认 15.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：預設值上游改為 15"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_OpenSeasonChance_tooltip": {
+    "as1_value": "每次呼叫游侠的触发概率.",
+    "value": "每次呼叫游侠的触发概率. 默认 15.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏了預設值 15"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_SparksSideJobChance_tooltip": {
+    "as1_value": "每次呼叫时火花有副业箱子的百分比概率. 默认 10.",
+    "value": "每次呼叫时火花有副业箱子的百分比概率. 默认 15.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：預設值上游改為 15"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_ThreadsNightEventChance_tooltip": {
+    "as1_value": "每次呼叫的百分比概率, 仅限深夜. 默认 2.",
+    "value": "每次呼叫的百分比概率, 仅限深夜. 默认 15.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：預設值上游改為 15"
+  },
+  "UI.json|UI_RadioTraders_FieldworkNear": {
+    "as1_value": "你在邮局附近. 箱子可以在这儿交接.",
+    "value": "你在邮局附近. 箱子可以在这儿交接: 放进邮局的邮筒 (蓝色那个), 或者邮局里面或附近的垃圾桶.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏了後半句交付方式 (藍色郵筒或郵局內外垃圾桶)"
+  },
+  "UI.json|UI_RadioTraders_LoanLogTaken": {
+    "as1_value": "已借款: 手提箱里有 $%1.%3天后你要还 $%2.",
+    "value": "已借款: 手提箱里有 $%1. %3天后你要还 $%2.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 句點後缺空格 ($%1.%3 黏在一起)"
+  },
+  "UI.json|UI_RadioTraders_LoanRowTake": {
+    "as1_value": "借款: 拿 $%1,%3天后还 $%2",
+    "value": "借款: 拿 $%1, %3天后还 $%2",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 逗號後缺空格"
+  },
+  "UI.json|UI_RadioTraders_LoanTaken_2": {
+    "as1_value": "想点就点.%2天后还 $%1. 家族账目清楚.",
+    "value": "想点就点. %2天后还 $%1. 家族账目清楚.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 句點後缺空格"
+  },
+  "UI.json|UI_PZLinux_AccountBalance": {
+    "as1_value": "账户余额 $%1",
+    "value": "账户余额 %1",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：多了 $; %1 已由 PZLinuxFormatCurrency 帶 $ 或 C 幣別符號, 譯文多寫 $ 會顯示成 $$"
+  },
+  "UI.json|UI_PZLinux_Balance": {
+    "as1_value": "余额：$%1",
+    "value": "余额: %1",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：多了 $; %1 已由 PZLinuxFormatCurrency 帶 $ 或 C 幣別符號, 譯文多寫 $ 會顯示成 $$"
+  },
+  "UI.json|UI_PZLinux_BankBalance": {
+    "as1_value": "银行余额：$%1",
+    "value": "银行余额: %1",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：多了 $; %1 已由 PZLinuxFormatCurrency 帶 $ 或 C 幣別符號, 譯文多寫 $ 會顯示成 $$"
+  },
+  "UI.json|UI_PZLinux_RequestTotal": {
+    "as1_value": "总计：$%1",
+    "value": "总计: %1",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：多了 $; %1 已由 PZLinuxFormatCurrency 帶 $ 或 C 幣別符號, 譯文多寫 $ 會顯示成 $$"
+  },
+  "UI.json|UI_PZLinux_ContractRewardLine": {
+    "as1_value": "* [%1] %2 报酬 $%3",
+    "value": "* [%1] %2 报酬 %3",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：多了 $; %3 已由 PZLinuxFormatCurrency 帶幣別符號"
+  },
+  "UI.json|UI_PZLinux_HackingBalanceZero": {
+    "as1_value": "黑客余额：$0\n",
+    "value": "黑客余额: 0C\n",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游把幣別改成 0C, 舊譯仍寫 $0"
+  },
+  "UI.json|UI_PZLinux_City_FallasLake": {
+    "as1_value": "三湖镇",
+    "value": "法拉斯湖镇",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Fallas Lake 誤譯成三湖鎮; 照 LangFor42 / 官方簡中地名"
+  },
+  "UI.json|UI_PZLinux_DarkWebHelpMessage": {
+    "as1_value": "要出售物品，必须将其放在主物品栏中。进入物品栏后，\n点击“卖出”将出售该类型的所有物品，并且一个可疑包裹\n会出现在您的物品栏中。要完成出售，您需要通过邮箱\n寄送该物品\n\n以下是可买卖的物品列表：",
+    "value": "要出售物品, 必须将其放在主物品栏中. 点击“卖出”会卖出该类型\n所有符合条件的物品, 并将款项直接存入\n你的 PZLinux 银行账户.\n\n以下是可买卖的物品列表:",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游改了機制: 賣出後直接入帳, 不再產生可疑包裹、不用寄信箱; 舊譯照舊英文"
+  },
+  "IG_UI.json|IGUI_KRSolar_GenHelp_L2b": {
+    "as1_value": "半径范围内为电器供电.",
+    "value": "   半径范围内为电器供电.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：格式; CN 漏了續行前導縮排 3 個空格 (英文與上游 CN 都有, 用來對齊編號清單)"
+  },
+  "IG_UI.json|IGUI_KRSolar_GenHelp_L3c": {
+    "as1_value": "电池 (中/大) 进行充电.",
+    "value": "   电池 (中/大) 进行充电.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：格式; CN 漏了續行前導縮排 3 個空格 (英文與上游 CN 都有, 用來對齊編號清單)"
+  },
+  "IG_UI.json|IGUI_KRSolar_Help_L1b": {
+    "as1_value": "(上方无屋顶遮挡) 以利用",
+    "value": "   (上方无屋顶遮挡) 以利用",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：格式; CN 漏了續行前導縮排 3 個空格 (英文與上游 CN 都有, 用來對齊編號清單)"
+  },
+  "IG_UI.json|IGUI_KRSolar_Help_L3b": {
+    "as1_value": "电网, 充电器会将其作为",
+    "value": "   电网, 充电器会将其作为",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：格式; CN 漏了續行前導縮排 3 個空格 (英文與上游 CN 都有, 用來對齊編號清單)"
+  },
+  "IG_UI.json|IGUI_KRSolar_Help_L4b": {
+    "as1_value": "的物品栏中以开始充电.",
+    "value": "   的物品栏中以开始充电.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：格式; CN 漏了續行前導縮排 3 個空格 (英文與上游 CN 都有, 用來對齊編號清單)"
+  },
+  "Sandbox.json|Sandbox_LiveToFight_RescueChance_tooltip": {
+    "as1_value": "第一次濒死以救援而非死亡告终的几率.",
+    "value": "第一次濒死以救援而非死亡告终的几率. 保持 60 时会按游戏模式调整: 复兴与爆发中必定获救, 启示录为 60, 绝灭为 30. 设为 100 则所有模式下第一次救援都必定发生.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 只譯了第一句, 漏後面各模式數值"
+  },
+  "Sandbox.json|Sandbox_LiveToFight_Warden_tooltip": {
+    "as1_value": "从外面把门封死, 锁上门并留下钥匙. 只留少量食物和水. 屋里某处藏着一件破门工具. 若一两天后看守者回来时角色还在屋内, 随身携带的一切都会被再次拿走.",
+    "value": "从外面把门封死, 锁上门并带走钥匙. 只留少量食物和水. 屋里某处藏着一件破门工具. 若一两天后看守者回来时角色还在屋内, 随身携带的一切都会被再次拿走.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：keeps the key 是看守者帶走鑰匙, CN 誤譯成留下钥匙"
+  },
+  "UI.json|UI_EatSmart_goalCalories1Value_tooltip": {
+    "as1_value": "设定希望达成的卡路里摄入量. <LINE> 若无法达成目标 <LINE> (食物不足或已超过目标值), 该选项将自动禁用.",
+    "value": "自定义要达成的卡路里数值 (尽可能达成).",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文改短, 舊譯多出已刪除的說明"
+  },
+  "UI.json|UI_EatSmart_goalHunger1Value_tooltip": {
+    "as1_value": "设定希望达成的饥饿度百分比 [%%]",
+    "value": "自定义要达成的饥饿度数值 (尽可能达成).",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文改短; 舊譯多了英文沒有的 %% token"
+  },
+  "UI.json|UI_EatSmart_goalProteins1Value_tooltip": {
+    "as1_value": "设定希望达成的蛋白质摄入量. <LINE> 若无法达成目标 <LINE> (食物不足或已超过目标值), 该选项将自动禁用. <LINE> 当角色蛋白质值 > 50 且 < 300 时, 力量经验获取有x1.5倍加成. <LINE> 当角色蛋白质值 < - 300 时, 力量经验获取有x0.7倍惩罚.",
+    "value": "自定义要达成的蛋白质数值 (尽可能达成).",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文改短, 舊譯多出已刪除的說明"
+  },
+  "ItemName.json|ItemName_BPE.NestMap_FallasLake": {
+    "as1_value": "感染巢地图: 法雅斯湖",
+    "value": "感染巢地图: 法拉斯湖镇",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 地名照官方簡中 (法拉斯湖镇)"
+  },
+  "ItemName.json|ItemName_BPE.NestMap_Riverside": {
+    "as1_value": "感染巢地图: 河滨",
+    "value": "感染巢地图: 河畔镇",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 地名照官方簡中 (河畔镇)"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_MP412": {
+    "as1_value": "启用MP-412左轮手枪",
+    "value": "启用MP-412左轮手枪 (约1990年 - .357马格南弹)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑, 舊譯缺這段資訊 (格式同 AU4 其他 Enable_* 標題)"
+  },
+  "Sandbox.json|Sandbox_MarzGuns_Enable_THOMPSON": {
+    "as1_value": "启用汤普森冲锋枪",
+    "value": "启用汤普森冲锋枪 (约1928年 - .45 ACP)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游英文加了年代與口徑, 舊譯缺這段資訊 (格式同 AU4 其他 Enable_* 標題)"
+  },
+  "ItemName.json|MarzGuns.Underbarrel_Open": {
+    "as1_value": "下挂打开",
+    "value": "下挂枪管 (打开)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN「下挂打开」語意不明, 與 CH 不一致 (同 AU4 的 Underbarrel_Close)"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_ChefsTableChance_tooltip": {
+    "as1_value": "每次呼叫夜猫子的触发概率.",
+    "value": "每次呼叫夜猫子的触发概率. 默认 15.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏了預設值 15"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_LateNightOwlChance_tooltip": {
+    "as1_value": "每次呼叫夜猫子的触发概率.",
+    "value": "每次呼叫夜猫子的触发概率. 默认 15.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏了預設值 15"
+  },
+  "Sandbox.json|Sandbox_RadioTraders": {
+    "as1_value": "电台商人 (Radio Traders)",
+    "value": "电台商人 (1/8): 基础设置",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游改成分頁標題 (1/8): Basics"
+  },
+  "Sandbox.json|Sandbox_RadioTradersAdvanced": {
+    "as1_value": "电台商人: 进阶交易",
+    "value": "电台商人 (4/8): 进阶交易",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏了分頁編號 (4/8)"
+  },
+  "UI.json|UI_PZLinux_BettingYourBet": {
+    "as1_value": "您的押注：$%1 押僵尸 [%2]",
+    "value": "您的押注：%1 押僵尸 [%2]",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：多了 $; 呼叫處以 PZLinuxFormatCurrency 傳入, 已自帶 $ 或 C 幣別符號, 譯文再寫 $ 會顯示成 $$"
+  },
+  "UI.json|UI_PZLinux_HackingIntro": {
+    "as1_value": "%1 银行余额：$%2\n找到 4 位数字的密码。\n",
+    "value": "%1 银行余额：%2\n找到 4 位数字的密码。\n",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：多了 $; 呼叫處以 PZLinuxFormatCurrency 傳入, 已自帶 $ 或 C 幣別符號, 譯文再寫 $ 會顯示成 $$"
+  },
+  "UI.json|UI_PZLinux_HackingTotalMoney": {
+    "as1_value": "已黑入的总金额：$%1",
+    "value": "已黑入的总金额：%1",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：多了 $; 呼叫處以 PZLinuxFormatCurrency 傳入, 已自帶 $ 或 C 幣別符號, 譯文再寫 $ 會顯示成 $$"
+  },
+  "UI.json|UI_PZLinux_HackingTransferBalance": {
+    "as1_value": "银行余额：$%1 < $%2",
+    "value": "银行余额：%1 < %2",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：多了 $; 呼叫處以 PZLinuxFormatCurrency 傳入, 已自帶 $ 或 C 幣別符號, 譯文再寫 $ 會顯示成 $$"
+  },
+  "UI.json|UI_PZLinux_HackingTransferStatus": {
+    "as1_value": "银行余额：$%1 < $%2\n转账进行中...",
+    "value": "银行余额：%1 < %2\n转账进行中...",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：多了 $; 呼叫處以 PZLinuxFormatCurrency 傳入, 已自帶 $ 或 C 幣別符號, 譯文再寫 $ 會顯示成 $$"
+  },
+  "UI.json|UI_PZLinux_HackingTransferCompleted": {
+    "as1_value": "银行余额：$%1 < $%2\n转账完成",
+    "value": "银行余额：%1 < %2\n转账完成",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：多了 $; 呼叫處以 PZLinuxFormatCurrency 傳入, 已自帶 $ 或 C 幣別符號, 譯文再寫 $ 會顯示成 $$"
+  },
+  "UI.json|UI_PZLinux_TotalMoneyEarned": {
+    "as1_value": "已赚取资金总额：$%1",
+    "value": "已赚取资金总额：%1",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：多了 $; 呼叫處以 PZLinuxFormatCurrency 傳入, 已自帶 $ 或 C 幣別符號, 譯文再寫 $ 會顯示成 $$"
+  },
+  "UI.json|UI_PZLinux_WalletBalance": {
+    "as1_value": "钱包余额：$%1",
+    "value": "钱包余额：%1",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：多了 $; 呼叫處以 PZLinuxFormatCurrency 傳入, 已自帶 $ 或 C 幣別符號, 譯文再寫 $ 會顯示成 $$"
+  },
+  "UI.json|UI_PZLinux_PortfolioPositionLine": {
+    "as1_value": "平均买入 $%1 | 盈亏 $%2 (%3%%)",
+    "value": "平均买入 %1 | 盈亏 %2 (%3%%)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：多了 $; 呼叫處以 PZLinuxFormatCurrency 傳入, 已自帶 $ 或 C 幣別符號, 譯文再寫 $ 會顯示成 $$ (%2 用 PZLinuxTradingFormatSignedNumber, 內部同樣呼叫 PZLinuxFormatCurrency)"
+  },
+  "UI.json|UI_PZLinux_City_Ekron": {
+    "as1_value": "埃克伦",
+    "value": "以革伦",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：地名照 LangFor42 / 官方簡中 (MapLabel_Ekron)"
+  },
+  "IG_UI.json|IGUI_KRSolar_GenHelp_L1b": {
+    "as1_value": "太阳能板, 无需燃料, 无噪音.",
+    "value": "   太阳能板, 无需燃料, 无噪音.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：格式; CN 漏了續行前導縮排 3 個空格 (英文與上游 CN 都有, 用來對齊編號清單)"
+  },
+  "IG_UI.json|IGUI_KRSolar_GenHelp_L3b": {
+    "as1_value": "汽车电池或KR太阳能",
+    "value": "   汽车电池或KR太阳能",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：格式; CN 漏了續行前導縮排 3 個空格 (英文與上游 CN 都有, 用來對齊編號清單)"
+  },
+  "IG_UI.json|IGUI_KRSolar_GenHelp_L4b": {
+    "as1_value": "在接收阳光时为其供电.",
+    "value": "   在接收阳光时为其供电.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：格式; CN 漏了續行前導縮排 3 個空格 (英文與上游 CN 都有, 用來對齊編號清單)"
+  },
+  "IG_UI.json|IGUI_KRSolar_Help_L1c": {
+    "as1_value": "阳光为电池充电.",
+    "value": "   阳光为电池充电.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：格式; CN 漏了續行前導縮排 3 個空格 (英文與上游 CN 都有, 用來對齊編號清單)"
+  },
+  "IG_UI.json|IGUI_KRSolar_Help_L2b": {
+    "as1_value": "循环: 季节和天气会改变",
+    "value": "   循环: 季节和天气会改变",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：格式; CN 漏了續行前導縮排 3 個空格 (英文與上游 CN 都有, 用來對齊編號清單)"
+  },
+  "IG_UI.json|IGUI_KRSolar_Help_L2c": {
+    "as1_value": "充电时间和速度.",
+    "value": "   充电时间和速度.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：格式; CN 漏了續行前導縮排 3 個空格 (英文與上游 CN 都有, 用來對齊編號清單)"
+  },
+  "IG_UI.json|IGUI_KRSolar_Help_L3c": {
+    "as1_value": "电源 — 可在室内或",
+    "value": "   电源 — 可在室内或",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：格式; CN 漏了續行前導縮排 3 個空格 (英文與上游 CN 都有, 用來對齊編號清單)"
+  },
+  "IG_UI.json|IGUI_KRSolar_Help_L3d": {
+    "as1_value": "地下全速工作.",
+    "value": "   地下全速工作.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：格式; CN 漏了續行前導縮排 3 個空格 (英文與上游 CN 都有, 用來對齊編號清單)"
+  },
+  "IG_UI.json|IGUI_KnoxHP_NeedSplint": {
+    "as1_value": "需要夹板, 或者木板和碎布条",
+    "value": "需要夹板, 或者木棍和碎布条",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：stick 是木棍, CN 誤作木板 (plank); 上游作者簡中也寫木棍"
+  },
+  "IG_UI.json|IGUI_KnoxHP_Pace": {
+    "as1_value": "恢复速度",
+    "value": "变化速率",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Pace 是健康每小時變化速率 (同面板有 PaceStable、PaceOther 飢餓/疾病等負向項), CN「恢复速度」只講回復, 與 CH「變化率」不一致"
+  },
+  "Fluids.json|Fluid_Container_BagS_cat_19": {
+    "as1_value": "MFS HLS2背包",
+    "value": "MFS HLS2重型背包",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：液體容器名要和同鍵 ItemName|Base.BagS_cat_19「MFS HLS2重型背包」一致, 否則玩家對不上"
+  },
+  "Fluids.json|Fluid_Container_BagS_cat_23": {
+    "as1_value": "MFS重型徒步背包",
+    "value": "MFS重型登山背包",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同 MOD ItemName|Base.BagS_cat_23 已是「MFS重型登山背包」(owner 裁決 Hiking 一律譯登山), 液體容器名寫徒步對不上"
+  },
+  "ItemName.json|Base.MFS_MTL30_cat": {
+    "as1_value": "赫斯塔尔MTL-30榴弹发射器",
+    "value": "赫斯塔尔MTL-30榴弹发射器 (新版)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏英文 (New); 同 MOD 其他 (New) 物品 (GrenadeAmmo40、MFS_M203、MFS_GP25) 都寫 (新版), 也用來和舊 MTL30_cat 區分"
+  },
+  "ItemName.json|MFS_Explosives.40mmExplosives": {
+    "as1_value": "40mm弹头",
+    "value": "40mm 高爆榴弹弹头 (新版)",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏 HE grenade 與 (New); 照同 MOD Base.GrenadeAmmo40「40mm 高爆榴彈 (新版)」寫法補齊"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_DoubleBarrelShotgunSawnoff_Spawn": {
+    "as1_value": "原版锯短双管霰弹枪刷新几率",
+    "value": "原版锯短双管霰弹枪刷新几率 [12 号]",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏口徑括號 [12 Gauge]; 同 MOD 135 條生成機率都保留, 12 Gauge 照既有寫 [12 號]／[12 号] (同類 ShotgunSawnoff_Spawn)"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_MFS_MTL30_cat_Spawn": {
+    "as1_value": "赫斯塔尔MTL-30榴弹发射器刷新",
+    "value": "赫斯塔尔MTL-30榴弹发射器刷新 [40mm 榴弹]",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏括號 [40mm Grenade]; 同 MOD 生成選項都保留彈種括號"
+  },
+  "Sandbox.json|Sandbox_ModernFirearmsSystemSandboxGun_Revolver_Short_Spawn": {
+    "as1_value": "原版SN38左轮手枪刷新几率",
+    "value": "原版SN38左轮手枪刷新几率 [.38]",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏口徑括號 [.38]; 同 MOD 原版槍生成選項 (Revolver_Spawn、L92 等) 都保留"
+  },
+  "Recipes.json|OCP_UnpackCarton12": {
+    "as1_value": "纸箱拆包",
+    "value": "打开12个装纸箱",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 漏 12 個裝, 與 6 個裝配方同名分不出來; 照 CH 與英文補上"
+  },
+  "Recipes.json|OCP_UnpackCarton6": {
+    "as1_value": "纸箱拆包",
+    "value": "打开6个装纸箱",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CH／CN 都漏 6 個裝, 與 12 個裝配方同名; CH 照同 MOD 12 入版寫法"
+  },
+  "Recipes.json|UnpackFoodBox12": {
+    "as1_value": "食品盒拆包",
+    "value": "打开12个装食品盒",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN 漏 12 個裝, 與 6／24 個裝同名分不出來"
+  },
+  "Recipes.json|UnpackFoodBox24": {
+    "as1_value": "食品盒打包",
+    "value": "打开24个装食品盒",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN「食品盒打包」把 Open 譯成打包, 意思相反, 且漏 24 個裝"
+  },
+  "Recipes.json|UnpackFoodBox6": {
+    "as1_value": "食品和拆包",
+    "value": "打开6个装食品盒",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CN「食品和拆包」錯字 (和→盒) 且漏 6 個裝"
+  },
+  "Tooltip.json|Tooltip_TTF_Tent_NoPackedVariant": {
+    "as1_value": "物品栏中没有打包帐篷.",
+    "value": "未找到此物品的已打包帐篷版本.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：原譯「物品欄中沒有打包帳篷」講別的事; 英文是這個物品沒有對應的已打包帳篷版本 (原版 Tent (Packed)=帳篷 (已打包))"
+  },
+  "UI.json|UI_CHB_Power": {
+    "as1_value": "功率",
+    "value": "电力",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：CHB_BoilerUI.lua 這列顯示供電來源 (電網／發電機／無電力), 不是功率; CN「功率」誤譯, 與 CH「電力」、同 MOD「无电力」不一致"
+  },
+  "Sandbox.json|Sandbox_LanternFix_PropaneLanternHeader": {
+    "as1_value": "____________丙烷喷灯____________",
+    "value": "____________丙烷提灯____________",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Propane Lantern 是丙烷提燈, CN「喷灯」是噴槍 (torch); 官方簡中 Base.Lantern_Propane 是「丙烷提灯」"
+  },
+  "UI.json|UI_propaneLanternVolume": {
+    "as1_value": "丙烷喷灯容量",
+    "value": "丙烷提灯音量",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：LanternFix_Light.lua 用這個滑桿 setVolume 調 PropaneLanternRunning 音效, 是音量不是容量; CN 另把提燈誤作喷灯"
+  },
+  "ContextMenu.json|ContextMenu_MetroCharger_NoBattery": {
+    "as1_value": "背包中无电池",
+    "value": "物品栏中没有兼容的电池",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：漏 compatible (有電池但不相容時原譯會誤導); inventory 是物品欄不是背包"
+  },
+  "Tooltip.json|Tooltip_item_UniversalCharger": {
+    "as1_value": "苏联手摇发电机. 可以在没有电源的情况下给电池充电, 只是要消耗你的体力. 在地铁系统里结实又可靠.",
+    "value": "苏联手摇发电机. 可为物品栏中的普通电池和已拆下的汽车电池充电, 代价是消耗你的耐力.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游改了英文: 現行說明充的是物品欄中的一般電池與拆下的汽車電池; 舊譯「沒有電源也能充」「在地鐵系統裡結實可靠」都是舊英文內容"
+  },
+  "Fluids.json|Fluid_Container_BagS_cat_21": {
+    "as1_value": "MFS战术徒步背包",
+    "value": "MFS D3战术登山背包",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：液體容器名對齊同 MOD 現行出貨 ItemName|Base.BagS_cat_21 (CH sources/ch、CN cn_overrides 皆為 D3 戰術登山背包)"
+  },
+  "Fluids.json|Fluid_Container_BagS_cat_17": {
+    "as1_value": "MFS GT1户外徒步背包",
+    "value": "MFS GT1户外登山背包",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：液體容器名對齊同 MOD 現行出貨 ItemName|Base.BagS_cat_17 (Hiking 一律譯登山)"
+  },
+  "Fluids.json|Fluid_Container_BagS_cat_14": {
+    "as1_value": "MFS野战背包",
+    "value": "MFS野战徒步背包",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：液體容器名對齊同 MOD 現行出貨 ItemName|Base.BagS_cat_14「MFS野戰徒步背包」"
+  },
+  "Sandbox.json|Sandbox_PZLinux_ContractTradingImpactEnabled": {
+    "as1_value": "启用合同库存影响",
+    "value": "启用合同对股价的影响",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Stock 在此指股價（PZLinuxTradingCore.lua 合約造成的股價變動），原譯「庫存」錯。"
+  },
+  "Sandbox.json|Sandbox_PZLinux_ContractTradingImpactMaxPercent": {
+    "as1_value": "合同库存影响最大百分比",
+    "value": "合同对股价影响的最大百分比",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：Stock 在此指股價，原譯「庫存」錯。"
+  },
+  "IG_UI.json|IGUI_NotAlone_Soc_EvStorm_Near_1": {
+    "as1_value": "暴风雨! 我们可不是这外面最高的.",
+    "value": "暴风雨! 别当这外面最高的东西.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：同組台詞是勸人蹲低、進屋（Get low, get inside），德文版也是「別當最高的東西」；CN 原譯意思和 CH 相反，照 CH 改。"
+  },
+  "IG_UI.json|IGUI_NotAlone_Soc_EvEngage_Far_1": {
+    "as1_value": "我的.",
+    "value": "归我.",
+    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：\"Mine.\" 是搶下目標的喊話，CN「我的.」不通順，照 CH「歸我.」。"
   }
 }

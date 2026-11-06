@@ -641,6 +641,10 @@ c	IG_UI	IGUI_ItemCat_WepMelee	3774523641	BetterSortingReborn	武器-近戰
 c	IG_UI	IGUI_ItemCat_WepMelee	3780151182	MFS_community_fix	武器-近戰
 c	IG_UI	IGUI_Knox_Choice_loot_scope_Info	3816775774	KnoxInventory	「周圍」欄會列出哪些容器. 「只限開啟的」: 你在世界中點選開啟或用 Viewpoint 的按鍵開啟的那個容器, 以及你旁邊的地板. 「自動」: 使用 Viewpoint 的鏡頭時同前者, 使用一般鏡頭時列出周圍全部. 在車內時一律全部顯示.
 c	IG_UI	IGUI_Knox_Choice_loot_scope_Info	3816775774	KnoxInventoryBeta	「周圍」欄會列出哪些容器. 「只限開啟的」: 你在世界中點選開啟或用 Viewpoint 的按鍵開啟的那個容器, 以及你旁邊的地板. 「自動」: 使用 Viewpoint 的鏡頭時同前者, 使用一般鏡頭與 OldPoint 的俯視鏡頭時列出周圍全部. 在車內時一律全部顯示.
+c	IG_UI	IGUI_Knox_JavaMissing	3816775774	KnoxInventory	Knox Inventory 需要 ZombieBuddy, 但它的 Java 部分沒有載入.\n\n目前先使用遊戲原本的物品欄. 請依 ZombieBuddy 的工作坊頁面說明安裝 (它需要從遊戲的啟動選項啟動), 然後重新啟動遊戲.\n\n已經安裝 ZombieBuddy 了? 本模組每次更新後, 它都會再問一次是否載入 KnoxInventoryJava.jar - 請回答 Allow. 如果它沒有詢問, 或你回答了否, 本模組就會維持關閉.
+c	IG_UI	IGUI_Knox_JavaMissing	3816775774	KnoxInventoryBeta	Knox Inventory 需要 ZombieBuddy, 但它的 Java 部分沒有載入.\n\n目前先使用遊戲原本的物品欄. 請依 ZombieBuddy 的工作坊頁面說明安裝 (它需要從遊戲的啟動選項啟動), 然後重新啟動遊戲.\n\n已經安裝 ZombieBuddy 了? 本模組每次更新後, ZombieBuddy 都會再詢問一次 KnoxInventoryJava.jar: 在 Knox Inventory 那一列勾選 Yes, 然後按 OK.\n\n沒有出現詢問? ZombieBuddy 可能已記住拒絕的選擇: 重新安裝遊戲或模組都無法清除. 啟動遊戲後立刻按住 Shift, 一直按住直到 ZombieBuddy 視窗開啟. 勾選 Yes, 開啟 Save decisions to disk, 然後按 OK.\n\n視窗沒有開啟? 關閉遊戲, 刪除 C:\\Users\\YourName\\.zombie_buddy\\mod_approvals.json, 再重新啟動遊戲.
+c	IG_UI	IGUI_Knox_JavaRestart	3816775774	KnoxInventory	Knox Inventory 已啟用, 但要重新啟動遊戲後才會生效.\n\n請完全關閉殭屍毀滅工程再重新啟動: 本模組的 Java 部分只在遊戲啟動時載入.\n\n如果重新啟動後這則訊息又出現: 本模組每次更新後, ZombieBuddy 都會再問一次是否載入 KnoxInventoryJava.jar - 請回答 Allow. 如果它完全沒有詢問, 代表 ZombieBuddy 沒有在執行: 請依它的創意工坊頁面說明安裝.
+c	IG_UI	IGUI_Knox_JavaRestart	3816775774	KnoxInventoryBeta	Knox Inventory 已啟用, 但要重新啟動遊戲後才會生效.\n\n請完全關閉殭屍毀滅工程再重新啟動: 本模組的 Java 部分只在遊戲啟動時載入.\n\n這則訊息又出現了? 本模組每次更新後, ZombieBuddy 都會再詢問一次 KnoxInventoryJava.jar: 在 Knox Inventory 那一列勾選 Yes, 然後按 OK.\n\n沒有出現詢問? ZombieBuddy 可能已記住拒絕的選擇: 重新安裝遊戲或模組都無法清除. 啟動遊戲後立刻按住 Shift, 一直按住直到 ZombieBuddy 視窗開啟. 勾選 Yes, 開啟 Save decisions to disk, 然後按 OK.\n\n視窗沒有開啟? 關閉遊戲, 刪除 C:\\Users\\YourName\\.zombie_buddy\\mod_approvals.json, 再重新啟動遊戲. 如果這樣也沒用, 代表 ZombieBuddy 沒有在執行: 請依它的創意工坊頁面說明安裝.
 c	IG_UI	IGUI_Knox_Module_hotbar_Info	3816775774	KnoxInventory	畫面底部的 Knox 風格快捷欄位列, 包含你的雙手. 若你使用其他快捷欄模組 (Clean UI 等), 請關閉此項: 遊戲原本的快捷欄或該模組的快捷欄會回來.
 c	IG_UI	IGUI_Knox_Module_hotbar_Info	3816775774	KnoxInventoryBeta	包含你雙手的快捷欄位列. 使用 Clean UI 等其他快捷欄模組時, 請關閉此項.
 c	IG_UI	IGUI_Knox_Page_game	3816775774	KnoxInventory	遊戲
@@ -2056,6 +2060,8 @@ c	ItemName	Base.44Drum50	3616176188	GaelGunStore	.44馬格南彈鼓 (50 發)
 c	ItemName	Base.44Drum50	3623297453	GaelGunStore_Legacy	.44彈鼓 (50 發)
 c	ItemName	Base.44Speed	3777433827	BritaCombinedB42	44-MAG快速裝彈器
 c	ItemName	Base.44Speed	3801670664	BritaGunworksLocal	S&W N-Frame .44 Mag 6發快速裝彈器
+c	ItemName	Base.45Clip20	3633421539	Escape from Kentucky4215	.45 ACP 20 發彈匣
+c	ItemName	Base.45Clip20	3780151182	MFS_community_fix	.45-70 克里斯汀步槍 20 發彈匣
 c	ItemName	Base.45Clip25	3611718925	VFES	黑克勒-科赫UMP45衝鋒槍彈匣
 c	ItemName	Base.45Clip25	3616176188	GaelGunStore	.45 ACP彈匣 (25 發)
 c	ItemName	Base.45Clip25	3623297453	GaelGunStore_Legacy	.45 Auto彈匣 (25 發)
@@ -4732,6 +4738,8 @@ c	Sandbox	Sandbox_CommonSense_CanWoundChance_tooltip	3750253491	CommonSense	用�
 c	Sandbox	Sandbox_CommonSense_PryAllDoors_tooltip	3714335263	BB_CommonSenseRoy	切換是否所有門都能被撬開. <br>預設情況下, 加固門 (監獄門, 金屬格柵門等) 只有在玩家力量等級達到或超過「撬開加固門最低力量等級」時才能被撬開.
 c	Sandbox	Sandbox_CommonSense_PryAllDoors_tooltip	3717968421	CommonSense	切換是否所有門都能被撬開. <br>預設情況下, 加固門 (監獄門, 金屬格柵門等) 只有在玩家力量等級達到或超過「撬開加固門最低力量等級」時才能被撬開.
 c	Sandbox	Sandbox_CommonSense_PryAllDoors_tooltip	3750253491	CommonSense	切換是否所有門都能被撬開. <br>預設情況下, 加固門 (監獄門, 金屬格柵門等) 只有在玩家力量等級達到或超過「撬開加固門最低力量等級」時才能被撬開.
+c	Sandbox	Sandbox_CompanionFancyRat	3798112588	CompanionBattleRat	CD: 戰鬥鼠
+c	Sandbox	Sandbox_CompanionFancyRat	3798112588	CompanionFancyRat	CD: 花枝鼠
 c	Sandbox	Sandbox_DynamicTradingNPC	3635333613	DynamicTradingCommon	動態交易: NPC 交易
 c	Sandbox	Sandbox_DynamicTradingNPC	3635333613	DynamicTradingV2	動態交易: NPC 事件
 c	Sandbox	Sandbox_EHR_BloodRegenMinimumPercent	3638633196	ExtensiveHealthReworkB42	血液再生最低門檻值 (%%)
@@ -4956,6 +4964,8 @@ c	Sandbox	Sandbox_ModernFirearmsSystemSandboxGun_AS_VAL_MOD4_cat_Spawn	363342153
 c	Sandbox	Sandbox_ModernFirearmsSystemSandboxGun_AS_VAL_MOD4_cat_Spawn	3780151182	MFS_community_fix	AS Val MOD4 生成機率 [9x39mm]
 c	Sandbox	Sandbox_ModernFirearmsSystemSandboxGun_AS_VAL_cat_Spawn	3633421539	Escape from Kentucky4215	AS Val 消音步槍生成機率 [9mm]
 c	Sandbox	Sandbox_ModernFirearmsSystemSandboxGun_AS_VAL_cat_Spawn	3780151182	MFS_community_fix	AS Val 消音步槍生成機率 [9x39mm]
+c	Sandbox	Sandbox_ModernFirearmsSystemSandboxGun_Christine45_cat_Spawn	3633421539	Escape from Kentucky4215	克里斯汀 .45-70 精準射手步槍生成機率 [.45 ACP]
+c	Sandbox	Sandbox_ModernFirearmsSystemSandboxGun_Christine45_cat_Spawn	3780151182	MFS_community_fix	克里斯汀 .45-70 精準射手步槍生成機率 [.45-70]
 c	Sandbox	Sandbox_ModernFirearmsSystemSandboxGun_HuntingRifle_Spawn	3633421539	Escape from Kentucky4215	雷明頓 MSR 生成機率 [7.62mm]
 c	Sandbox	Sandbox_ModernFirearmsSystemSandboxGun_HuntingRifle_Spawn	3780151182	MFS_community_fix	雷明頓 MSR2 生成機率 [7.62mm]
 c	Sandbox	Sandbox_ModernFirearmsSystemSandboxGun_M7_cat_Spawn	3633421539	Escape from Kentucky4215	M7 突擊步槍生成機率 [.38]
@@ -4972,6 +4982,10 @@ c	Sandbox	Sandbox_MultiplierConfig_Lockpicking	3783535220	NeatLockpicking	開鎖
 c	Sandbox	Sandbox_MultiplierConfig_Lockpicking_tooltip	3440867775	TheBestLockpicking	開鎖技能升級的速度. 僅在「使用全域經驗倍率」關閉時生效.
 c	Sandbox	Sandbox_MultiplierConfig_Lockpicking_tooltip	3745815281	TheBestLockpickingB4219	開鎖技能升級的速率. (僅在「使用全域經驗倍率」關閉時生效)
 c	Sandbox	Sandbox_MultiplierConfig_Lockpicking_tooltip	3783535220	NeatLockpicking	開鎖技能升級的速率. 預設 1. 與其他技能倍率的範圍相同 (0 至 1000).
+c	Sandbox	Sandbox_PZLinux_StartingBalanceMax	3414468585	B42 PZLinux	初始銀行餘額 (最大值)
+c	Sandbox	Sandbox_PZLinux_StartingBalanceMax	3700371875	B42 PZLinux	初始餘額 (最大值)
+c	Sandbox	Sandbox_PZLinux_StartingBalanceMin	3414468585	B42 PZLinux	初始銀行餘額 (最小值)
+c	Sandbox	Sandbox_PZLinux_StartingBalanceMin	3700371875	B42 PZLinux	初始餘額 (最小值)
 c	Sandbox	Sandbox_PhunCure_ExpiredChance_tooltip	3628843367	PhunCure	解藥被發現時就已失效的機率 (0-100), 可進一步提高稀有度. 注意: 如果你在下方停用了有效期 (例如有效期 = 0), 此數值將無效. 0 表示解藥永遠保持新鮮, 50 表示找到的解藥有一半無法使用.
 c	Sandbox	Sandbox_PhunCure_ExpiredChance_tooltip	3676251425	PhunCure2	解藥被發現時就已失效的機率 (0-100), 可進一步提高稀有度. 注意: 如果你在下方停用了有效期 (例如有效期 = 0), 此數值將無效. 0 表示解藥永遠保持新鮮, 50 表示找到的解藥有一半無法使用.
 c	Sandbox	Sandbox_PhunSprinters_Debug_tooltip	3532685233	PhunSprinters	輸出詳細日誌 (便於排查模組問題). 修改後需重新啟動遊戲

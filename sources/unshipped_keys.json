@@ -1868,6 +1868,21 @@
    "as1_value": "了解一些诱捕配方.",
    "owner_signature": "d66bcebb2f1d59db",
    "reason": "2026-10-29 #1140：Dynamic Traits 把說明從空字串改成「XP boost for Trapping」（誘捕經驗加成），SimpleOverhaulTraitsAndOccupations 是「Knows some trapping recipes.」（會一些誘捕配方）。兩個 MOD 的同名特質效果不同，沒有對兩邊都成立的中性說明，不出貨；兩方都有可載入 JSON 英文，注入器失敗時玩家看各自 MOD 的英文，正常時由條件譯文寫入各自的譯文。"
+  },
+  "ItemName.json|Base.45Clip20": {
+   "as1_value": ".45 ACP 20 发弹匣",
+   "owner_signature": "4a9921e42b348f50",
+   "reason": "2026-11-06 #1221–#1297 批次：MFS 社群修正版（3780151182）把 Base.45Clip20 改成 '.45-70 20-Round Christine Rifle Magazine'（script GunType=Base.Christine45_cat），Escape from Kentucky（3633421539）仍是 '.45 ACP 20-Round Magazine'（GunType=Base.UMP45_cat）。兩方是不同槍、標不同口徑的彈匣，口徑是承重資訊；比照 Base.9mmDrum_cat、Base.762Bullets 前例不用上位口徑 .45 遮掉差異，不出貨。兩方都有可載入 ItemName.json：繁中玩家看到各自英文、簡中玩家看到 As1 以外的來源；條件譯文依啟用的 MOD 寫入各自譯名。"
+  },
+  "IG_UI.json|IGUI_Knox_JavaMissing": {
+   "as1_value": "诺克斯物品栏 (Knox Inventory) 需要ZombieBuddy, 但其Java部分未加载.\n\n目前使用游戏原生物品栏. 请按照创意工坊页面的说明安装ZombieBuddy (它需要从游戏启动选项中启动), 然后重启游戏.\n\n已经安装了ZombieBuddy? 每次模组更新后, 它都会再次询问是否加载KnoxInventoryJava.jar - 请选择 '允许'. 如果未询问或你选择了 '否', 模组将保持禁用状态.",
+   "owner_signature": "a4fb9af80e6931a8",
+   "reason": "2026-11-06 #1221–#1297 批次：Knox Inventory 的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）改寫 ZombieBuddy 未載入時的處理步驟（勾 Yes、按 OK，問不出來時按 Shift 開視窗、刪 mod_approvals.json），KnoxInventory 仍是回答 Allow。兩方步驟不同，照任一方翻都會讓另一方玩家照錯誤步驟操作，沒有誠實中性譯文，不出貨。比照 IGUI_Knox_Page_game 前例：兩方都有可載入 IG_UI.json 並自帶 Translate/CN，繁中玩家看到各自英文、簡中玩家看到作者簡中；條件譯文依啟用的子 MOD 寫入各自譯文。"
+  },
+  "IG_UI.json|IGUI_Knox_JavaRestart": {
+   "as1_value": "诺克斯物品栏 (Knox Inventory) 已启用, 但只有在重启游戏后才能生效.\n\n请完全关闭《僵尸毁灭工程》并重新启动: 模组的Java部分仅在游戏启动时加载.\n\n如果重启后仍出现此消息: 每次模组更新后, ZombieBuddy都会再次询问是否加载KnoxInventoryJava.jar - 请选择 '允许'. 如果完全没有询问, 说明ZombieBuddy未运行: 请按照其创意工坊页面的说明进行安装.",
+   "owner_signature": "800a114c93010482",
+   "reason": "2026-11-06 #1221–#1297 批次：Knox Inventory 的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）改寫重啟後訊息仍出現時的處理步驟（勾 Yes、按 OK，問不出來時按 Shift 開視窗、刪 mod_approvals.json），KnoxInventory 仍是回答 Allow。兩方步驟不同，沒有誠實中性譯文，不出貨。比照 IGUI_Knox_Page_game 前例：兩方都有可載入 IG_UI.json 並自帶 Translate/CN，繁中玩家看到各自英文、簡中玩家看到作者簡中；條件譯文依啟用的子 MOD 寫入各自譯文。"
   }
  }
 }

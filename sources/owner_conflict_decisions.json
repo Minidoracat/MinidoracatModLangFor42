@@ -8,13 +8,6 @@
       "ch": "彈藥",
       "cn": "弹药"
     },
-    "IG_UI|IGUI_ItemCat_Dye": {
-      "action": "translate",
-      "signature": "2148a9b738052d37",
-      "reason": "2026-09-22 #501: 一般染料與天然染料皆屬染料分類；不把天然限定套到其他 owner，保留現有中性譯名。",
-      "ch": "染料",
-      "cn": "染料"
-    },
     "ContextMenu|ContextMenu_LoadedAmmo": {
       "action": "translate",
       "signature": "c3823bcce09d437a",
@@ -12406,6 +12399,49 @@
       "reason": "2026-11-04 #1236：VFE 寫 Laser，Complete Vanilla Firearms Expansion 改名 Red Laser（同為開啟中的雷射瞄準器，紅色是光點顏色）。「雷射瞄準器」對兩方都成立，沿用 As1 現值。",
       "ch": "雷射瞄準器",
       "cn": "激光瞄准器"
+    },
+    "Sandbox|Sandbox_PZLinux_StartingBalanceMax": {
+      "action": "translate",
+      "signature": "46d54914724b60f4",
+      "reason": "2026-11-06 #1221–#1297 批次：B42 PZLinux 的兩個 Workshop 項目（3414468585、3700371875，同名 MOD 的兩個發行版）分別寫 'Starting Bank Balance (Maximum)' 與 'Starting Balance Max'，都是 PZLinux 銀行 app 的初始帳戶餘額上限，同一設定的不同措辭。現行「初始銀行餘額 (最大值)」對兩方都成立，維持現值；條件譯文依啟用的項目寫入各自措辭。",
+      "ch": "初始銀行餘額 (最大值)",
+      "cn": "初始银行余额 (最大值)"
+    },
+    "Sandbox|Sandbox_PZLinux_StartingBalanceMin": {
+      "action": "translate",
+      "signature": "3383624b4b744a7e",
+      "reason": "2026-11-06 #1221–#1297 批次：B42 PZLinux 的兩個 Workshop 項目（3414468585、3700371875）分別寫 'Starting Bank Balance (Minimum)' 與 'Starting Balance Min'，都是 PZLinux 銀行 app 的初始帳戶餘額下限，同一設定的不同措辭。現行「初始銀行餘額 (最小值)」對兩方都成立，維持現值；條件譯文依啟用的項目寫入各自措辭。",
+      "ch": "初始銀行餘額 (最小值)",
+      "cn": "初始银行余额 (最小值)"
+    },
+    "ItemName|Base.45Clip20": {
+      "action": "unship",
+      "signature": "4a9921e42b348f50",
+      "reason": "2026-11-06 #1221–#1297 批次：MFS 社群修正版（3780151182）把 Base.45Clip20 改成 '.45-70 20-Round Christine Rifle Magazine'（script GunType=Base.Christine45_cat），Escape from Kentucky（3633421539）仍是 '.45 ACP 20-Round Magazine'（GunType=Base.UMP45_cat）。兩方是不同槍、標不同口徑的彈匣，口徑是承重資訊；比照 Base.9mmDrum_cat、Base.762Bullets 前例不用上位口徑 .45 遮掉差異，不出貨。兩方都有可載入 ItemName.json：繁中玩家看到各自英文、簡中玩家看到 As1 以外的來源；條件譯文依啟用的 MOD 寫入各自譯名。"
+    },
+    "Sandbox|Sandbox_ModernFirearmsSystemSandboxGun_Christine45_cat_Spawn": {
+      "action": "translate",
+      "signature": "6bb1c5c8d5f4f132",
+      "reason": "2026-11-06 #1221–#1297 批次：MFS 社群修正版（3780151182）把沙盒分類括號由 [.45 ACP] 改為 [.45-70]，Escape from Kentucky（3633421539）仍是 [.45 ACP]；兩方都寫同一把 Christine .45-70 DMR 的生成機率，只差括號裡的彈藥分類。拿掉括號後「克里斯汀 .45-70 精準射手步槍生成機率」對兩方都成立（CN 照 As1 原值補上「步枪」）；條件譯文依啟用的 MOD 寫入帶各自括號的譯名。",
+      "ch": "克里斯汀 .45-70 精準射手步槍生成機率",
+      "cn": "克里斯汀 .45-70 精准射手步枪刷新几率"
+    },
+    "Sandbox|Sandbox_CompanionFancyRat": {
+      "action": "translate",
+      "signature": "f3cbbb8f846867fa",
+      "reason": "2026-11-06 #1221–#1297 批次：CD: Rats（3798112588）新增與 CompanionFancyRat 互斥的子 MOD CompanionBattleRat，同鍵寫 'CD: Battle Rats'，CompanionFancyRat 仍是 'CD: Fancy Rats'。兩者都是這個 MOD 的鼠類同伴設定頁標題，現行「CD: 花枝鼠」對 Battle Rats 不成立，改成中性「CD: 老鼠」；條件譯文依啟用的子 MOD 寫入「CD: 戰鬥鼠」或「CD: 花枝鼠」。",
+      "ch": "CD: 老鼠",
+      "cn": "CD: 老鼠"
+    },
+    "IG_UI|IGUI_Knox_JavaMissing": {
+      "action": "unship",
+      "signature": "a4fb9af80e6931a8",
+      "reason": "2026-11-06 #1221–#1297 批次：Knox Inventory 的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）改寫 ZombieBuddy 未載入時的處理步驟（勾 Yes、按 OK，問不出來時按 Shift 開視窗、刪 mod_approvals.json），KnoxInventory 仍是回答 Allow。兩方步驟不同，照任一方翻都會讓另一方玩家照錯誤步驟操作，沒有誠實中性譯文，不出貨。比照 IGUI_Knox_Page_game 前例：兩方都有可載入 IG_UI.json 並自帶 Translate/CN，繁中玩家看到各自英文、簡中玩家看到作者簡中；條件譯文依啟用的子 MOD 寫入各自譯文。"
+    },
+    "IG_UI|IGUI_Knox_JavaRestart": {
+      "action": "unship",
+      "signature": "800a114c93010482",
+      "reason": "2026-11-06 #1221–#1297 批次：Knox Inventory 的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）改寫重啟後訊息仍出現時的處理步驟（勾 Yes、按 OK，問不出來時按 Shift 開視窗、刪 mod_approvals.json），KnoxInventory 仍是回答 Allow。兩方步驟不同，沒有誠實中性譯文，不出貨。比照 IGUI_Knox_Page_game 前例：兩方都有可載入 IG_UI.json 並自帶 Translate/CN，繁中玩家看到各自英文、簡中玩家看到作者簡中；條件譯文依啟用的子 MOD 寫入各自譯文。"
     }
   }
 }
