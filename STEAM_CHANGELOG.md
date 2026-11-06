@@ -1,17 +1,18 @@
-[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.21.0-1.70.0[/h1]
-[i]2026-11-02[/i]
+[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.21.0-1.71.0[/h1]
+[i]2026-11-06[/i]
 
 [h3]新增[/h3]
 [list]
-[*] 同步如一漢化組 v3.13.0，新支援 21 個 MOD：Guns of Tien 的 1993 年實彈、Project A-Life 同伴犬相容、Share Map Notes 共享地圖備註、BZQuickSlots 快捷欄、PZ Relationship 玩家互動、Xanny Arms、Second Back Slot 第二背部欄位等（524 處）。
-[*] 這批新 MOD 裡如一漢化組還沒翻的文字，本包全部補上（15 個 MOD、12,589 處）：Escape From Zomboid Firearms 的 149 把槍、零件、彈藥與改槍介面（8,500 處）、Real Room Heat 2.0 室內溫度與暖爐（1,575 處）、DMM 模組管理器（928 處）、WINGSMITH 飛機、Knox Packs 可升級背包、Knox Claim 房產認領、xPhone 智慧型手機、The Last of Us Infected、Vietnam War Rations、Black Division 戰術裝備等。
+[*] 新支援 Hags' Firearm Maintenance 槍械保養（101 處）：右鍵拆解、清潔、修理、重新組裝槍械的選單，CLP 槍油、槍匠工具組、《美國槍匠》雜誌與沙盒設定。
+[*] 28 個 MOD 更新後新增的文字補上中文（2,777 處）：Senator's Martial Arts Core 的新流派與武術成就（589 處）、Living NPC 的隨行與遠征小隊、醫療站與基地介面（556 處）、Junkyard Sentinel 的基地圍籬、瞭望塔與管理員權限（551 處）、Aegis Panel 的工單系統（312 處）、Radio Trader 的獵殺委託與傳奇身分（208 處）、Cheat Menu 2.0（203 處）、Project Zomboid Optimiser 的效能分析頁（163 處）、Guns of Tien 的 P90 TR、MDRx 步槍與 PMAG 彈匣等。
 [/list]
 
 [h3]更新[/h3]
 [list]
-[*] Vanilla Foods Expanded 改過名的食品照現行英文改名（383 處）：太空蛋糕、彈跳酥皮捲、扭扭棒棒糖、幸運蘸糖、爵士餅乾等；義式餛飩不再和義大利餃同名、藍色覆盆子不再寫成藍莓。
-[*] Bundle Up 的箱子名稱整理：簡中統一成「品名 (纸箱／整箱／木箱)」，品名和箱內物品一致（1,045 處）；裝 VFX 食品的箱子跟著改名（219 處）；簡中「六罐装」改「六连装」（143 處）。VFX 的整盒罐頭改叫「(整盒)」，不再和 Bundle Up 的整箱同名。
-[*] 如一漢化組原本沒收、由本包自己翻的 1,233 處，這版如一漢化組收錄了：簡中改用如一漢化組譯文，繁中不變。
-[*] 修正如一漢化組新收簡中的 39 處錯誤：Xanny Arms 的 M1 卡賓槍被寫成春田步槍、鵝肉罐頭其實是鴨肉、PZ Relationship 的「区块」等。
+[*] MOD 改了英文的地方，中文跟著改（113 處）：Junkyard Sentinel 的感應器改叫「保全」、Senator 的堂島之龍進化條件、SSAULAVI 劍術特質的揮砍速度、Optimiser 的效能分析頁等。
+[*] 修正 16 個 MOD 的舊譯（172 處）：SSAULAVI 特質說明的技能名改照原版、Aegis Panel 簡中把圈地寫成「声明」、Complete VFE 的 MK12 是戰鬥步槍、Guns of Tien 的莫辛-納甘零件與彈頭口徑等。
+[*] Complete Vanilla Firearms Expansion 加入 AN-94、雷射改名紅色雷射後，啟用它時的名稱跟著改：「AN-94」「雷射瞄準器 (紅色)」。
+[*] Modern Firearms System Community Fix 的彈藥改成列出多種口徑後，啟用它時的彈藥名跟著改，例如「盒裝7.62×51/7.62x39/7.62x54R/.300BLK子彈」「.45 ACP/.45-70子彈」。
+[*] MOD 已經拿掉的 59 處舊文字一併移除（Living NPC 舊的遠征成員視窗等）。
 [*] 更新下載完成後，請重新啟動遊戲載入新翻譯；不需要重開存檔。
 [/list]
