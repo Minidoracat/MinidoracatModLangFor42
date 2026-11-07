@@ -338,6 +338,14 @@ with tempfile.TemporaryDirectory() as td:
     assert "Base.Pistol" in sup["ItemName.json"], "抑制鍵未納入 lint 排除集合"
     assert "IGUI_Vanilla" in sup["IG_UI.json"], "跨檔抑制鍵未納入"
 
+    uk = Path(td) / "unshipped_keys.json"
+    uk.write_text(json.dumps({"entries": {"IG_UI.json|IGUI_Unshipped": {"reason": "測試"}}}),
+                  encoding="utf-8")
+    lint_ch.UNSHIPPED_KEYS_JSON = uk
+    sup = lint_ch._load_suppressed()
+    assert "IGUI_Unshipped" in sup["IG_UI.json"], "unshipped_keys 登記鍵未納入 lint 排除集合"
+    assert "IGUI_Vanilla" in sup["IG_UI.json"], "併入 unshipped 後 vanilla 抑制鍵不見了"
+
     vk.write_text(json.dumps({"keys": []}), encoding="utf-8")  # 基準壞損
     try:
         lint_ch._load_suppressed()

@@ -4,6 +4,18 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Changed
+
+- **Evolving Traits World 角色頁「翻譯狀態」的數字改用 ETW 自己提供的值。** 這 25 個數字是 ETW 每版重算的各語言翻譯完成度與總行數，本包不再出貨；繁簡中文玩家看到的數字跟著已安裝的 ETW 版本走，不會停在本包同步的那一版。同時訂閱 As1 原包的簡中玩家仍會看到 As1 收錄的舊數字。
+  > 技術要點：`UI_ETW_TranslationStats_*` 25 鍵登記 `sources/unshipped_keys.json` 第五類（MOD 自己維護的資料值），還原 1.71.0 為同步數字加的 5 筆 `cn_overrides` 與 `sources/ch`、`ch_review_state` 對應值。上游中文語言檔這些鍵都留空，引擎先載 EN、空值不覆寫（`Translator.java:366`）。追蹤器照樣會為 ETW 改數字開「可能過時」issue，處理時不必同步數字。
+
+### Removed
+
+- **Knox Inventory 測試台的 338 個介面文字不再出貨。** 測試台不隨 Workshop 版發布，玩家看不到這些文字，遊戲內沒有變化。2026-10-22 已裁定移除（#996），10-26 同步 As1 時被帶回，1.62.0–1.71.0 都有出貨。
+  > 技術要點：`IGUI_KnoxTB_*` 338 鍵登記 `sources/unshipped_keys.json` 第六類（讀鍵的程式不隨 Workshop 版發布），`as1_value` 取抑制前的有效 CN 值；這批鍵原本就登記在 `untranslatable_keys.json`，但那份清單只擋補譯，不擋 As1 層出貨。
+
 ## [42.21.0-1.71.0] - 2026-11-07
 
 ### Added

@@ -1,7 +1,7 @@
 {
  "_comment": "已裁決不出貨的 (檔名|鍵)。**真相層照樣保留**——`sources/_unsorted/CN` 是 As1 lane 的忠實鏡像，刪掉會讓 tracker 的 layer-B 把它報成永久差異、每次 As1 更新都開假的『待同步』issue；`sources/ch` 也必須逐鍵鏡像 CN 才過 corpus 鍵集 gate。所以抑制只發生在出貨那一步，語意與 vanilla 出貨抑制相同。",
- "_recheck": "兩類判準不同。第一類：As1 每次更新後重查一次；as1_value 漂移是重新搜尋 mod／正確落點的訊號。第二類：as1_value 是抑制前有效 CN 值錨點（own lane 也適用），值漂移代表真相層改動；as1_value 缺失／漂移或 owner_signature 漂移代表 owner 增減／上游英文改值，兩者任一漂移都要重審 unship 裁決。",
- "_rule": "登記前先分類。第一類（檔名不可載入／落點不明）：必須先試著指認 mod；Workshop 搜尋端點查『內部 id』 https://steamcommunity.com/workshop/browse/?appid=108600&searchtext=<內部id> ——鍵名前綴多半是內部 id 而非顯示名，語意搜尋常找不到。能指認 mod 就該補正確鍵，不能把本檔當丟棄場（BarrEx／Super Bulldozer／Last Cup Coffee 都曾因此救回，見 744670b、da34211）。第二類（#230 owner 衝突）：須查證為不同實體、無誠實中性譯名，且 JSON 無法依 mod 啟用狀態條件化；與 owner_conflict_decisions.json 的 action=unship 雙向背書，條目必帶 as1_value 與 owner_signature；ItemName 裸鍵若存在 B41 前綴孿生鍵，兩者必須一起抑制。 第三類（原版名稱鍵歸本體翻譯包）：原版程式、腳本或圖塊會查、原版翻譯檔未定義、由 CatLangFor42 負責譯名的鍵（原版選項、物品、車輛、製作站名稱等）；不需 owner 背書，條目帶 as1_value 錨點與使用者裁決日期。收尾閘門 ⑦ 比對本體翻譯包出貨鍵：撞到的鍵原版會顯示就登記本類，原版不會顯示（MOD 自有、B42 不讀）就登記 langfor42_shared_keys.json。",
+ "_recheck": "兩類判準不同。第一類：As1 每次更新後重查一次；as1_value 漂移是重新搜尋 mod／正確落點的訊號。第二類：as1_value 是抑制前有效 CN 值錨點（own lane 也適用），值漂移代表真相層改動；as1_value 缺失／漂移或 owner_signature 漂移代表 owner 增減／上游英文改值，兩者任一漂移都要重審 unship 裁決。 第五類：漂移不必處理（值本來就會變）；重審條件是 MOD 改成在中文語言檔自己填值，或該鍵改成文字。 第六類：漂移不必處理；重審條件是作者把讀這些鍵的程式放進 Workshop 版。",
+ "_rule": "登記前先分類。第一類（檔名不可載入／落點不明）：必須先試著指認 mod；Workshop 搜尋端點查『內部 id』 https://steamcommunity.com/workshop/browse/?appid=108600&searchtext=<內部id> ——鍵名前綴多半是內部 id 而非顯示名，語意搜尋常找不到。能指認 mod 就該補正確鍵，不能把本檔當丟棄場（BarrEx／Super Bulldozer／Last Cup Coffee 都曾因此救回，見 744670b、da34211）。第二類（#230 owner 衝突）：須查證為不同實體、無誠實中性譯名，且 JSON 無法依 mod 啟用狀態條件化；與 owner_conflict_decisions.json 的 action=unship 雙向背書，條目必帶 as1_value 與 owner_signature；ItemName 裸鍵若存在 B41 前綴孿生鍵，兩者必須一起抑制。 第三類（原版名稱鍵歸本體翻譯包）：原版程式、腳本或圖塊會查、原版翻譯檔未定義、由 CatLangFor42 負責譯名的鍵（原版選項、物品、車輛、製作站名稱等）；不需 owner 背書，條目帶 as1_value 錨點與使用者裁決日期。收尾閘門 ⑦ 比對本體翻譯包出貨鍵：撞到的鍵原版會顯示就登記本類，原版不會顯示（MOD 自有、B42 不讀）就登記 langfor42_shared_keys.json。 第四類（名稱改由家族 MOD 提供）：家族 MOD 以同名物品接手已下架 MOD 的舊存檔物品、自帶各語言名稱，本包排 Mods= 最後會蓋掉它；只收它自己定義名稱的鍵，條目帶 as1_value 與使用者裁決日期。 第五類（MOD 自己維護的資料值）：值不是給人看的文字，而是 MOD 每版自己重算、只填在 Translate/EN 的資料（其他語言檔留空，引擎退回 EN 值）；本包出貨會把值凍結在同步當下。條目帶 as1_value 與使用者裁決日期，同一組鍵要整組登記（例：ETW 的 UI_ETW_TranslationStats_*）。 第六類（讀鍵的程式不隨 Workshop 版發布）：測試台、開發者面板這類鍵，玩家看不到，另登記 untranslatable_keys.json 不補譯；As1 同步帶回時照樣不出貨。條目帶 as1_value（抑制前有效 CN 值）與使用者裁決日期（例：Knox Inventory 的 IGUI_KnoxTB_*，2026-10-22 #996）。",
  "entries": {
   "IG_UI.json|IGUI_VehicleNamefhq240SXCabrio": {
    "as1_value": "日产240SX 敞篷版 (S13)",
@@ -1883,6 +1883,1458 @@
    "as1_value": "诺克斯物品栏 (Knox Inventory) 已启用, 但只有在重启游戏后才能生效.\n\n请完全关闭《僵尸毁灭工程》并重新启动: 模组的Java部分仅在游戏启动时加载.\n\n如果重启后仍出现此消息: 每次模组更新后, ZombieBuddy都会再次询问是否加载KnoxInventoryJava.jar - 请选择 '允许'. 如果完全没有询问, 说明ZombieBuddy未运行: 请按照其创意工坊页面的说明进行安装.",
    "owner_signature": "800a114c93010482",
    "reason": "2026-11-06 #1221–#1297 批次：Knox Inventory 的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）改寫重啟後訊息仍出現時的處理步驟（勾 Yes、按 OK，問不出來時按 Shift 開視窗、刪 mod_approvals.json），KnoxInventory 仍是回答 Allow。兩方步驟不同，沒有誠實中性譯文，不出貨。比照 IGUI_Knox_Page_game 前例：兩方都有可載入 IG_UI.json 並自帶 Translate/CN，繁中玩家看到各自英文、簡中玩家看到作者簡中；條件譯文依啟用的子 MOD 寫入各自譯文。"
+  },
+  "UI.json|UI_ETW_TranslationStats_CH": {
+   "as1_value": "30.0",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_CN": {
+   "as1_value": "100.0",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_DE": {
+   "as1_value": "50.0",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_ES": {
+   "as1_value": "44.0",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_FR": {
+   "as1_value": "86.9",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_IT": {
+   "as1_value": "75.0",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_JP": {
+   "as1_value": "76.5",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_KO": {
+   "as1_value": "38.8",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_NeedsEditing_CH": {
+   "as1_value": "0.0",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_NeedsEditing_CN": {
+   "as1_value": "0.0",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_NeedsEditing_DE": {
+   "as1_value": "0.0",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_NeedsEditing_ES": {
+   "as1_value": "0.0",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_NeedsEditing_FR": {
+   "as1_value": "0.4",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_NeedsEditing_IT": {
+   "as1_value": "0.0",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_NeedsEditing_JP": {
+   "as1_value": "0.0",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_NeedsEditing_KO": {
+   "as1_value": "0.0",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_NeedsEditing_PTBR": {
+   "as1_value": "0.2",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_NeedsEditing_RU": {
+   "as1_value": "0.6",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_NeedsEditing_TR": {
+   "as1_value": "0.0",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_NeedsEditing_UA": {
+   "as1_value": "0.0",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_PTBR": {
+   "as1_value": "25.6",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_RU": {
+   "as1_value": "99.4",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_TR": {
+   "as1_value": "100.0",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_Total": {
+   "as1_value": "1057",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "UI.json|UI_ETW_TranslationStats_UA": {
+   "as1_value": "76.5",
+   "reason": "2026-11-07 使用者裁決不出貨（第五類：MOD 自己維護的資料值）：ETW（2914075159）角色頁的翻譯狀態面板以 tonumber(getText(...)) 讀這組 Weblate 統計數字（各語言完成度、待修訂比例、總行數，ETW_CharacterPage.lua），不是文字。上游只在 Translate/EN 填數字、其他語言檔留空；引擎先載 EN，空值不覆寫（Translator.tryFillMapFromFile），本包不出貨時玩家拿到已安裝 ETW 版本自己的數字，出貨則凍結在同步當下。同時訂閱 As1 原包的簡中玩家仍會看到 As1 的舊數字，本包管不到。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_AddLine": {
+   "as1_value": "添加配置行",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Back3": {
+   "as1_value": "放回 (无固定位置)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Bandages": {
+   "as1_value": "绷带: 3个放口袋, 2个放地面",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Car": {
+   "as1_value": "轿车",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_ClearDump": {
+   "as1_value": "清除堆积物",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Day": {
+   "as1_value": "白天",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Dry": {
+   "as1_value": "油箱近乎耗尽",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Dump": {
+   "as1_value": "丢弃300个物品",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_Foot_L": {
+   "as1_value": "左脚",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_Foot_R": {
+   "as1_value": "右脚",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_ForeArm_L": {
+   "as1_value": "左前臂",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_ForeArm_R": {
+   "as1_value": "右前臂",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_Groin": {
+   "as1_value": "腹股沟",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_Hand_L": {
+   "as1_value": "左手",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_Hand_R": {
+   "as1_value": "右手",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_Head": {
+   "as1_value": "头部",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_LowerLeg_L": {
+   "as1_value": "左小腿",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_LowerLeg_R": {
+   "as1_value": "右小腿",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_Neck": {
+   "as1_value": "颈部",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_Torso_Lower": {
+   "as1_value": "腹部",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_Torso_Upper": {
+   "as1_value": "胸部",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_UpperArm_L": {
+   "as1_value": "左上臂",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_UpperArm_R": {
+   "as1_value": "右上臂",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_UpperLeg_L": {
+   "as1_value": "左大腿",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_F_UpperLeg_R": {
+   "as1_value": "右大腿",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Fractures": {
+   "as1_value": "所有骨折",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Gen": {
+   "as1_value": "发电机",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_GenDry": {
+   "as1_value": "油箱几乎空了",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_GenNew": {
+   "as1_value": "全新 (100%%)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_GenWorn": {
+   "as1_value": "磨损 (30%%)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Generator": {
+   "as1_value": "发电机",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Hammer": {
+   "as1_value": "添加一把锤子",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Heal": {
+   "as1_value": "治愈",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Hotwire": {
+   "as1_value": "短接启动",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Kit": {
+   "as1_value": "急救包",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Night": {
+   "as1_value": "夜间",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Pickup": {
+   "as1_value": "皮卡",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Pile": {
+   "as1_value": "羽毛、种子、弹匣、钥匙",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Prepare": {
+   "as1_value": "准备",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_RemoveBodies": {
+   "as1_value": "移除尸体",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_RemoveLine": {
+   "as1_value": "移除配置行",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Same": {
+   "as1_value": "再来一把螺丝刀",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Shuffle": {
+   "as1_value": "打乱",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Take3": {
+   "as1_value": "取出3件物品",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Tent": {
+   "as1_value": "帐篷",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_TwoBodies": {
+   "as1_value": "两具尸体",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_W_Bleed": {
+   "as1_value": "出血",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_W_Bullet": {
+   "as1_value": "枪伤",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_W_Burn": {
+   "as1_value": "烧伤",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_W_Cut": {
+   "as1_value": "割伤",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_W_Deep": {
+   "as1_value": "深伤口",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_W_Destroy": {
+   "as1_value": "损坏",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_W_Fracture": {
+   "as1_value": "骨折",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_W_Glass": {
+   "as1_value": "玻璃碎片",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_W_Infect": {
+   "as1_value": "感染",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_W_Scratch": {
+   "as1_value": "刮伤",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_WaterPot": {
+   "as1_value": "一锅水",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Wounds": {
+   "as1_value": "所有伤势",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_BackBusy": {
+   "as1_value": "背部被占用: 测试背包已在窗口中打开",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Broken": {
+   "as1_value": "异常",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Check": {
+   "as1_value": "检查",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Cleanup": {
+   "as1_value": "清理",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_DevOff": {
+   "as1_value": "Knox: 开发者模式已关闭",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_DevOn": {
+   "as1_value": "Knox: 开发者模式已开启 (DEV按钮)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Do": {
+   "as1_value": "操作",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Done": {
+   "as1_value": "已标记: %1/%2",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Items": {
+   "as1_value": "物品",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Note": {
+   "as1_value": "备注 (直接写入报告):",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Report": {
+   "as1_value": "报告位置: Zomboid/Lua/knox_testbench.txt",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_Bandages": {
+   "as1_value": "你身上的绷带格子数: %1 (%2)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_BodyKeys": {
+   "as1_value": "网格键: %1/%2",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_CatFirst": {
+   "as1_value": "第一个分类, %1, 从第%2行开始 - 上方无其他物品",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_CatNotFirst": {
+   "as1_value": "%1不是第一个: 从第%2行开始, 有其他分类在其上方",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_Covered": {
+   "as1_value": "布局位置被其他物品占据: %1",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_DashKnox": {
+   "as1_value": "Knox仪表盘已显示在屏幕上",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_DashNo": {
+   "as1_value": "无Knox仪表盘 (请进入驾驶座)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_EyeNo": {
+   "as1_value": "背包无布局: 标题栏无眼睛图标",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_EyeYes": {
+   "as1_value": "背包有布局: 标题栏应显示眼睛图标",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_Filled": {
+   "as1_value": "所有%1个布局位置都持有其对应物品",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_FloorCost": {
+   "as1_value": "地面网格: 绘制每帧%1毫秒, 平均构建每帧%2毫秒 (上次构建%3毫秒)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_FloorFps": {
+   "as1_value": "格子数%1, FPS%2, 测量帧数%3",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_Fractures": {
+   "as1_value": "%1个部位骨折",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_Gen": {
+   "as1_value": "窗口: %1. 燃料%2L, 状态%3%%, %4",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_GenNone": {
+   "as1_value": "附近没有发电机",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_HammerFar": {
+   "as1_value": "锤子远离工具 (格子%1)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_HammerNear": {
+   "as1_value": "锤子在工具旁边 (格子%1)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_HealthKnox": {
+   "as1_value": "Knox健康标签页已打开",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_HealthNo": {
+   "as1_value": "Knox健康标签页未打开",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_HealthZones": {
+   "as1_value": "%1个区域受伤, %2个区域损坏",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_Java": {
+   "as1_value": "Java组件v%1, Knox开启: %2, Knox字体: %3",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_LayoutClean": {
+   "as1_value": "布局位置%1, 空位%2, 无其他物品占据",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_Missing": {
+   "as1_value": "未在指定位置: %1",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_Moving": {
+   "as1_value": "传输中: %1个物品, 帧率%2",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_MusicNet": {
+   "as1_value": "服务器响应: %1; 分享中: %2; 收听中: %3; 下载中: %4",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_MusicNetNo": {
+   "as1_value": "非多人游戏, 或缺少Knox Java组件",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_NoBag": {
+   "as1_value": "无测试背包: 请点击第1点的 '准备'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_NoBodies": {
+   "as1_value": "无尸体: 请点击 '两具尸体'",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_NoFloor": {
+   "as1_value": "请在 '周围' 中选择 '地面'",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_NoHammer": {
+   "as1_value": "尚未添加锤子 (或不在背包中)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_NoLayout": {
+   "as1_value": "背包无布局: 右键点击标题栏>保存布局.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_NoSame": {
+   "as1_value": "尚无第二把螺丝刀 (或第一把不在背包中)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_OverrideNo": {
+   "as1_value": "文件中未读取到配置行: 请退出到主菜单并重新加载",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_OverrideOk": {
+   "as1_value": "配置行已读取: 锤子 - %1",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_SameFar": {
+   "as1_value": "螺丝刀远离第一把 (格子%1)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_SameNear": {
+   "as1_value": "螺丝刀在第一把旁边 (格子%1)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_Silh": {
+   "as1_value": "布局已保存, 轮廓数: %1 (预期3个)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_ZonesBad": {
+   "as1_value": "区块顺序错误或物品未适配: %1",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_ZonesOk": {
+   "as1_value": "区块遵循分类顺序 (第一行): %1",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_TilesJava": {
+   "as1_value": "格子: Java",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_TilesLua": {
+   "as1_value": "格子: Lua",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Title": {
+   "as1_value": "测试台%1",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Want": {
+   "as1_value": "预期结果",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Works": {
+   "as1_value": "正常",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_b_bike": {
+   "as1_value": "自行车包及其他模组的容器 (Sari-n)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_b_bike_Do": {
+   "as1_value": "使用redchili的自行车模组: 将物品放入自行车鞍袋或货袋. 若无此模组: 将物品放入旅行袋中的书包里 ('包中包' 功能的 '包中包' 按钮).",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_b_bike_Want": {
+   "as1_value": "物品成功放入. \"背包膨胀后将无法放入当前位置\"仅适用于网格中的背包, 且仅在确实没有空间膨胀时出现.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_b_cursor": {
+   "as1_value": "和Viewpoint模组的鼠标指针兼容性 (Hókuszpókusz)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_b_cursor_Do": {
+   "as1_value": "开启Viewpoint第一人称视角: 使用Knox快捷键开关界面10次, 使用Viewpoint搜刮键对板条箱开关界面5次. 期间环顾四周.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_b_cursor_Want": {
+   "as1_value": "每次鼠标指针立即显示, 无需左键点击; 关闭后, 鼠标视角恢复. 记录15次中有多少次未成功.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_b_mp_host": {
+   "as1_value": "自行开服 (K0mak1no)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_b_mp_host_Do": {
+   "as1_value": "在主菜单使用Knox1.0 BETA和ZombieBuddy开服, 用第二个客户端 (另一台电脑或账号) 加入. 双方打开Knox, 在橱柜中移动物品, 重新加入游戏.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_b_mp_host_Want": {
+   "as1_value": "双方均显示Knox界面, 而非游戏原生窗口; 橱柜布局对双方一致且在重连后保持. 若无Knox - 检查主机和客户端的console.txt.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_b_stacks": {
+   "as1_value": "按状态堆叠",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_b_stacks_Do": {
+   "as1_value": "点击 '羽毛、种子、弹匣、钥匙', 将地板上所有物品放入背包. 右键点击每个弹匣.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_b_stacks_Want": {
+   "as1_value": "羽毛、种子和草堆叠放置 (草每格10个, 6丛为一堆); 两个9mm弹匣 - 分为两个格子, 满的和空的, 不合并为一堆; 满弹匣菜单有 '退弹', 空弹匣菜单有 '装填'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_cat_drag": {
+   "as1_value": "鼠标拖动调整分类顺序",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_cat_drag_Do": {
+   "as1_value": "打开设置 - '顺序' 选项卡. 用鼠标抓住分类行并向上或向下拖动. 然后尝试行左侧的箭头.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_cat_drag_Want": {
+   "as1_value": "拖动行时, 其他行会为它腾出空间; 松开鼠标, 它就留在那里. 箭头每次移动一行; 第一行没有向上箭头, 最后一行没有向下箭头.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_cat_order": {
+   "as1_value": "分类顺序",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_cat_order_Do": {
+   "as1_value": "打开设置 - 打开 '顺序' 选项卡. 使用 '上移' 将 '食物和水' 移到顶部, 关闭窗口并整理背包.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_cat_order_Want": {
+   "as1_value": "食物现在是左上角的第一个区块. 该选项卡上的规则和 '新物品' 设置也会立即生效.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_card": {
+   "as1_value": "收音机卡片界面",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_card_Do": {
+   "as1_value": "点击收音机显示屏. 浏览卡片界面: 电台、曲目、文件夹、搜索、音量、收音机方块. 再次点击显示屏. 再次打开它并下车.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_card_Want": {
+   "as1_value": "Knox卡片悬浮在收音机上方的面板上, 直到再次点击显示屏或点击面板和卡片以外的区域 (点击卡片本身不会关闭它). 其中所有功能和之前一致. 下车时, 卡片消失.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_heater": {
+   "as1_value": "暖气",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_heater_Do": {
+   "as1_value": "插入钥匙, 点击暖气 (皮卡为拉杆). 点击并旋转温度旋钮 (皮卡为拉杆), 右键点击: 返回. 打开车窗. 右键点击暖气. 拔出钥匙再试一次.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_heater_Want": {
+   "as1_value": "暖气开启, LED灯变绿; 旋钮经过7个位置, 从蓝色到红色 (-25...+25, 同游戏原生暖气窗口): 点击可循环转动, 滚轮可转到底. 车窗打开时车窗灯亮. 右键点击打开游戏原生暖气窗口, 数值相同. 无钥匙或发动机未启动时暖气无反应, 提示说明原因.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_hot": {
+   "as1_value": "短接启动",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_hot_Do": {
+   "as1_value": "在车内点击 '短接': 钥匙弹出, 锁芯损坏. 点击锁芯: 发动机启动. 再次点击: 发动机停止. 悬停在锁芯上: 查看提示.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_hot_Want": {
+   "as1_value": "无钥匙, 两根电线从锁芯垂下. 启动时, 线头接触产生火花, 发动机灯呈橙色; 发动机运行时电线绞合在一起. 提示说明点击可连接或断开电线.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_low": {
+   "as1_value": "低油量",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_low_Do": {
+   "as1_value": "在车内插入钥匙, 点击 '油箱近乎耗尽'. 悬停在油量表上.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_low_Want": {
+   "as1_value": "指针指向E, 油量表的泵图标红色闪烁, 旁边的三角形指向加油口一侧. 提示: 油箱剩余4%%, 带进度条.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_news": {
+   "as1_value": "新闻中的实时面板",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_news_Do": {
+   "as1_value": "在主菜单打开帖子\"Behind the wheel\" (游戏内Knox界面的新闻标签页中也有). 在仪表盘部分: 点击钥匙, 等待发动机启动, 在速度表上滚动鼠标滚轮, 切换灯光、门锁、后备箱、暖气, 插入和弹出磁带, 切换电台. 在轿车和皮卡部分点击电线. 滚动帖子使面板位于标题下方. 在面板空白处滚动鼠标滚轮.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_news_Want": {
+   "as1_value": "显示实际面板而非图片 (一辆轿车和一辆短接的皮卡), 宽度不超过文本列. 钥匙: 指示灯依次亮起, 指针扫至尽头并返回, 伴有钥匙声; 启动耗时约一秒; 在速度表或转速表上滚动滚轮相当于踩油门: 速度增加, 档位切换, 转速跳动, 速度表提示会说明这一点. 其余部分行为和车内一致. 营地收音机和你自己的音乐不受影响. 滚动时, 面板在帖子边缘被截断; 在非旋钮区域滚动滚轮可滚动帖子. console.txt中无错误.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_night": {
+   "as1_value": "夜间和背光",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_night_Do": {
+   "as1_value": "在车内点击 '夜间'. 用旋钮打开大灯, 然后关闭. 点击 '白天' 并再次打开大灯.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_night_Want": {
+   "as1_value": "夜间未开大灯时, 刻度和标识几乎不可见. 开启大灯后, 刻度、数字和旋钮标识以沙色光晕平滑亮起: 夜间明亮, 白天微弱. 点火时指针发光. 收音机显示屏在开启时自动点亮.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_screens": {
+   "as1_value": "屏幕尺寸",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_screens_Do": {
+   "as1_value": "在游戏选项中依次设置1920×1080, 2560×1440, 3840×2160 (如果有) 和1280×1024. 在每个分辨率下进入轿车和皮卡, 打开所有功能.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_screens_Want": {
+   "as1_value": "底部中间的面板外观一致, 在大屏幕上更大; 标题和数字不重叠, 文字居中, 2像素边框. 1080p下轿车为812×158像素, 皮卡为838×152; 1440p下分别为1083×211和1117×203.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_tape": {
+   "as1_value": "收音机: 磁带",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_tape_Do": {
+   "as1_value": "将音乐放入Zomboid/knox_music文件夹. 打开收音机, 点击卡带槽 (或磁带). 按1和2 (曲目), 3 (混合), 4 (重复), 搜索 (快进/退). 按弹出键 (横杠上的三角形). 点击伸出的磁带. 若无自有音乐, 点击磁带.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_tape_Want": {
+   "as1_value": "磁带插入, 播放时卷轴在窗口中转动; 显示屏显示磁带、闪烁三角形、曲目编号、混合和重复标志 (1表示单曲). 播放音乐时广播静音. 弹出: 音乐停止, 磁带伸出插槽, 广播恢复播放; 点击将其推回并继续播放同一文件夹. 若无自有音乐, 显示屏显示 '无磁带', 广播正常播放.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_truck": {
+   "as1_value": "仪表盘: 皮卡",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_truck_Do": {
+   "as1_value": "点击 '皮卡': 一辆皮卡停在东面, 钥匙在你口袋里. 进入驾驶座, 插入钥匙, 启动, 换挡行驶. 拉出大灯旋钮. 悬停在仪表右侧的指示灯上.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_dash_truck_Want": {
+   "as1_value": "皮卡车身: 带螺栓和遮阳板的矩形仪表组, 大灯为拉出式旋钮 (拉出后变大且阴影更长), 门锁拨杆, 无后备箱按钮 (游戏中皮卡也无锁止后备箱). 油量表下方是档位行R N 1-5, 当前档位高亮. 玻璃后方一列显示发动机、电池、大灯和巡航指示灯. 仪表盘上仪表组右侧有锁. 带拉杆的加热器: 温度调节和开关. 收音机和轿车相同.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_drag_inertia": {
+   "as1_value": "拖动惯性",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_drag_inertia_Do": {
+   "as1_value": "用鼠标拾起绷带, 快速来回摆动, 然后急停鼠标. 对斧头和满载背包做同样操作 (如果没有, 请先执行第1点的 '准备').",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_drag_inertia_Want": {
+   "as1_value": "轻物品几乎不滞后于光标. 重物品会跟随滞后并在停止后轻微摆动 - 越重摆动越明显. 物品放置在光标位置, 而非滞后图像的位置.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_floor_perf": {
+   "as1_value": "大量地面物品",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_floor_perf_Do": {
+   "as1_value": "丢弃300个物品 - 你周围会出现一堆物品. 在 '周围' 中选择 '地面', 移动鼠标, 整理, 观察FPS. 然后点击 '检查' 并 '清除堆积物'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_floor_perf_Want": {
+   "as1_value": "打开地面界面时的FPS几乎和未打开物品栏时相同. '检查' 显示自上次按下以来地面网格每帧消耗的毫秒数: 按一次, 让地面显示在屏幕上等待五秒, 再按一次. 低于1毫秒为良好.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_found_select": {
+   "as1_value": "在 '已找到' 窗口中选取",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_found_select_Do": {
+   "as1_value": "搜索分布在多个位置的物品 (如绷带), 打开 '已找到' 窗口. 从空白处拖动框选几件物品, Ctrl+左键点击以增减选中项, 然后对已选中的物品执行Shift+左键点击或拖动.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_found_select_Want": {
+   "as1_value": "被选中的格子会在白色框中高亮显示; 网格中对应的相同物品也会被选中. Shift键和拖动操作会同时移动所有选中物品. 点击空白处可取消选中.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_fuel": {
+   "as1_value": "发电机: 燃料",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_fuel_Do": {
+   "as1_value": "按下 '油箱几乎空了'. 点击油箱旁的油罐, 在倾倒时再次点击. 然后将油罐从Knox网格拖放到其位置. 尝试使用地上的油罐.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_fuel_Want": {
+   "as1_value": "燃料指针在弹簧作用下回到E (空), 剩余时间显示为数小时. 点击一次: 角色开始倾倒 - 播放游戏手持油罐的加油动画和倾倒声; 汽油分批次注入 (约每秒1.2升), 油罐放置位框晃动, 指针缓慢移向F (满), 计时器滚筒转动 (小时带十分位: 三个深色滚筒、一个白点、明亮的十分位滚筒, 下方标有 '小时'). 再次点击 - 倾倒停止, 角色重新在发电机旁蹲下. 油箱已满或油罐已空 - 倾倒自动停止. 油罐悬停在放置位上时显示绿色, 其他物品显示红色. 若油罐不在身上 (在地上) - 无法倾倒.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_house": {
+   "as1_value": "发电机: 房屋供电",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_house_Do": {
+   "as1_value": "停止发电机并点击 '房屋供电' 拉杆. 再次点击. 尝试在发电机运行时操作. 尝试在断开连接时启动它. 让一个电工技能不足 (低于3级) 且未阅读发电机使用指南的角色尝试连接它.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_house_Want": {
+   "as1_value": "拉杆因反冲立即滑向 '关闭', '开启' 淡出, '关闭' 显示, 伴随开关咔哒声. 运行时, 拉杆不会移动. 断开连接时无法启动. 若无相应技能 (电工低于3级, 未阅读指南)则无法连接 - 拉杆保持在 '关闭' 位置; 断开连接始终有效.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_indoor": {
+   "as1_value": "发电机: 室内使用",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_indoor_Do": {
+   "as1_value": "将发电机放入屋内并启动它.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_indoor_Want": {
+   "as1_value": "在室内运行时, '一氧化碳' 灯闪烁; 在室外则该灯熄灭.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_menu": {
+   "as1_value": "发电机: 右键菜单和模块",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_menu_Do": {
+   "as1_value": "打开发电机的右键菜单 (运行中和停止时). 在它旁边放一盏灯, 打开同时包含两者的菜单. 然后在Knox设置中关闭 '发电机' 模块, 重载Lua并再次打开菜单.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_menu_Want": {
+   "as1_value": "发电机子菜单中没有 '开启' 和 '关闭' - 它在窗口中启动 (左键点击打开窗口). '信息'、'接线/拆线'、'添加燃料'、'修理' 位于主要的 '使用' 组中, 而非 '其他' 下, 每项都有对应图标. 灯的 '开启' 选项也在其中. 模块关闭后 - 恢复游戏原生样式: '开启' 选项存在, 显示游戏原生窗口.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_open": {
+   "as1_value": "发电机: 窗口",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_open_Do": {
+   "as1_value": "按下发电机: 一台发电机位于东侧两格处 (已连接房屋, 油箱62%%, 状态82%%), 一满罐汽油进入物品栏. 左键点击发电机. 然后通过右键菜单 - 信息打开它.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_open_Want": {
+   "as1_value": "Knox的发电机界面如原型图18所示, 替代游戏原生窗口: 带有油表的KNOX POWER油箱、油罐放置位、带开关的面板、拉绳、负载指针、剩余时间计时器、指示灯、插座和房屋供电拉杆. 油箱恰好位于框架和面板中间. 右上角的叉号 (距边缘6像素) 和Esc键可关闭它. 可通过任何空白处拖动窗口. 标题文字恰好位于其位置中央.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_outlets": {
+   "as1_value": "发电机: 插座",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_outlets_Do": {
+   "as1_value": "在带有冰箱、灯光和炉灶的房屋旁启动发电机. 将鼠标悬停在插头和空闲插座上. 观察负载刻度.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_outlets_Want": {
+   "as1_value": "插座中插着带线的插头, 上面有图标: 冰箱、灯泡、炉灶, 其他物品显示为通用插头. 提示框显示名称和油耗 (冰箱 · 0.008L/h), 空插座显示 '空闲插座'. 超过四种类型 - 第四个显示+N, 其余在提示框中列出. 负载刻度范围0 - 0.1L/h (当发电机燃料消耗设定为0.1时), 房屋负载约占三分之一, 中心下方的窗口显示游戏内数值 (0.030L/h). 停止时, 显示上次运行时的插头状态.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_pull": {
+   "as1_value": "发电机: 拉绳",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_pull_Do": {
+   "as1_value": "首先在不触碰开关的情况下猛拉拉绳. 然后将开关拨至 '运行'. 缓慢将手柄拉到底, 然后拉到接近末端时松手, 接着用力猛拉. 也可以向侧面拉.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_pull_Want": {
+   "as1_value": "发电机上方无消息提示行. 未开启 '运行'、拉得太慢或太短 - 无法启动, 拉绳缩回. 用力猛拉 - 立即启动: 机身震动, 刻度和标题亮起, 负载指针在弹簧上跳动并颤抖, '运行' 灯亮起, 计时器的十分位滚筒下降. 开关发出咔哒声. 拉绳随鼠标移动, 手柄随之转动, 松手 - 拉绳因反冲缩回并摆动. 开关拨至 '关闭' - 立即停止, 指针回落.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_use": {
+   "as1_value": "发电机: 角色交互",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_use_Do": {
+   "as1_value": "打开发电机窗口并点击其中的所有部件. 用叉号关闭. 再次打开并用Esc关闭. 打开它并移动 (WASD或点击地面). 打开它并从Knox物品栏中拿取物品.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_use_Want": {
+   "as1_value": "窗口打开时, 角色面向发电机蹲下, 动画不会中断; 开关、拉绳、拉杆和油罐立即生效, 无需动作条. 点击叉号或按 Esc - 角色站起. 移动 - 窗口关闭. 执行其他动作 (移动物品)- 窗口关闭, 动作完成.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_worn": {
+   "as1_value": "发电机: 磨损",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_worn_Do": {
+   "as1_value": "发电机已停止. 按下 '磨损 (30%%)' 并猛拉拉绳约十次 (每次尝试间停止它). 然后按下 '全新 (100%%)' 再试几次.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_gen_worn_Want": {
+   "as1_value": "30%%磨损时, '机油' 灯闪烁. 约有一半的拉动无法启动: 指针抽动, 播放游戏启动失败音效. 全新的发电机每次都能启动, '机油' 灯熄灭.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ghost_pair": {
+   "as1_value": "下一具尸体中的淡化副本 (Sharp)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ghost_pair_Do": {
+   "as1_value": "点击 '两具尸体': 你旁边的一个格子上出现两具尸体, 一具有斧头、撬棍、大锤和锤子, 另一具有苹果和铅笔. 打开物品栏, 在 '周围' 中选择有工具的尸体, 逐个Shift+左键点击工具 (或 '全部拿走'), 在它们移动过程中, 在列表中选择另一具尸体.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ghost_pair_Want": {
+   "as1_value": "当前BUG: 另一具尸体的网格中显示正在移动工具的淡化副本. 修复后: 淡化副本仅保留在工具离开的尸体中. '检查' 会显示两具尸体是否共享网格键 (原因所在).",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ghosts_eye": {
+   "as1_value": "眼睛图标: 布局轮廓",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ghosts_eye_Do": {
+   "as1_value": "在一个有布局且有空位的背包上, 点击整理按钮旁边的眼睛图标. 然后再点击一次.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ghosts_eye_Want": {
+   "as1_value": "眼睛闭合 (眼睑合拢成一条带睫毛的线), 轮廓淡出; 再次点击则睁开, 轮廓恢复. 眼睛图标仅在有布局时出现, 且对所有背包同时生效.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_bones": {
+   "as1_value": "健康: 骨骼 (折断任意部位)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_bones_Do": {
+   "as1_value": "使用下方按钮折断某个部位 (或选择 '所有骨折'), 打开健康标签页, 将鼠标悬停在模型上的该部位, 然后悬停在其区域面板上.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_bones_Want": {
+   "as1_value": "鼠标悬停时, 骨折部位变为半透明并显示内部断裂的3D骨骼 (从中间断裂): 头骨、颈椎、带胸骨和脊柱的肋骨、下脊柱、骨盆、肱骨、桡骨和尺骨、手部、股骨、胫骨和腓骨、足部. 骨骼随角色模型一起移动 (包括动作中). 鼠标移开后效果消失. 悬停在区域面板上时, 一次性显示该区域所有骨折部位.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_heal": {
+   "as1_value": "健康: 完全治愈",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_heal_Do": {
+   "as1_value": "点击 '治愈'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_heal_Want": {
+   "as1_value": "数值滚动至100, 生命条增长, 卡片消失, 右侧显示 '无伤害'; 身体上的颜色消退, 面板恢复平静.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_menu": {
+   "as1_value": "健康: 身体部位菜单",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_menu_Do": {
+   "as1_value": "右键点击模型上的身体部位、区域面板或卡片. 点击卡片上的状态行. 使用 '治疗' 和 '菜单' 按钮.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_menu_Want": {
+   "as1_value": "沙色边框的Knox菜单, 带有标题栏: 区域图标、以健康颜色显示的部位名称、下方的生命值和伤势. 顶部为快速治疗 (提示说明操作内容). 仅显示可治疗该部位的物品, 使用Knox图标; 无法执行的操作呈灰色并显示原因 (如 '请先移除绷带'). 状态行: 仅显示其治疗方法. 保留其他模组的条目.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_tab": {
+   "as1_value": "健康: 标签页",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_tab_Do": {
+   "as1_value": "按下H (健康键) 或点击Knox界面中的健康标签页. 再次按下H.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_tab_Want": {
+   "as1_value": "Knox界面显示在健康标签页, 下方有沙色阶段1面板. 三列内容平滑升起: 状态 (大号生命值数字、生命条、恢复速度、计数器、条形统计图、带有游戏图标的效果卡片)、身体 (身穿内衣面向你的角色模型、七个通过线条连接身体的区域面板、急救等级、底部按键提示)、伤害 (以小标签显示的区域、卡片、底部的急救包). 第二次按下H关闭界面.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_treat": {
+   "as1_value": "健康: 治疗",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_treat_Do": {
+   "as1_value": "点击急救包. 悬停查看包内物品. 将绷带拖动至左前臂. Shift+点击右手. 点击身体上的左大腿, 然后点击急救包中的夹板.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_treat_Want": {
+   "as1_value": "鼠标悬停在急救包物品上: 显示工具提示并以沙色高亮可治疗的部位. 拖动时, 鼠标提示 '会有帮助' 或 '对此无效'. 放置到部位上后, 角色进行治疗, 模型同步反映, 卡片上显示沙色进度条和百分比, 部位变绿. Shift+点击按顺序排队处理 (先玻璃碎片, 后绷带). 选定部位后, 可治疗该部位的物品会有沙色呼吸框; 点击即可使用.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_vanilla": {
+   "as1_value": "健康: 模块关闭",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_vanilla_Do": {
+   "as1_value": "在Knox设置中关闭健康标签页模块, 返回主菜单再重新进入. 按下H键或点击健康标签页.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_vanilla_Want": {
+   "as1_value": "打开游戏原生的健康窗口, 和之前一样. 在使用手柄或教程模式中, 也打开游戏原生窗口.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_wounds": {
+   "as1_value": "健康: 伤势",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_wounds_Do": {
+   "as1_value": "打开健康标签页. 依次点击伤势按钮: 刮伤 (左前臂)、割伤出血 (右前臂)、深伤口 (左上臂)、玻璃碎片 (右手)、骨折 (左大腿)、烧伤 (头部)、枪伤 (腹股沟)、割伤 (腹部)、感染 (左小腿)、损坏 - 右脚归零. 每个按钮会将治疗该伤势所需的物品放入口袋 (如果尚未拥有). '所有伤势' 一次性添加所有物品, '治愈' 则清除所有伤势. 等待10-15游戏分钟, 悬停查看身体、区域面板和生命条.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_health_wounds_Want": {
+   "as1_value": "每种伤势独立显示: 身体部位呈现伤势颜色 (出血处有呼吸灯效果), 区域面板显示其数值, 部位条和状态方块 (出血的红色边框闪烁), 右侧显示对应卡片, 10分钟后显示愈合时间. 损坏: 右腿显示黑色 '损坏', 脚部在身体模型上变黑. 急救包中包含治疗该伤势的物品; 鼠标悬停时以沙色高亮对应部位.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_heat_tint": {
+   "as1_value": "冷热格子 (沸水)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_heat_tint_Do": {
+   "as1_value": "点击\"一锅水\": 口袋里会出现一锅污染的水. 将其放在点燃的炉灶上 (或烤箱中), 观察加热时其在炉灶网格中的格子变化. 然后取下让它冷却. 同时也观察一下正在工作的冰箱里的一瓶水.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_heat_tint_Want": {
+   "as1_value": "锅的格子随加热变红, 越热越亮 - 如同游戏原生物品栏中的显示. 取下后颜色逐渐消退. 冰箱里的冷物品呈蓝色调. 食物保持其自身的烹饪颜色.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_heavy_trunk": {
+   "as1_value": "发电机放入后备箱 (Khudoz)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_heavy_trunk_Do": {
+   "as1_value": "站在车旁, 打开后备箱 ('周围' 中显示). 点击 '发电机': 手中会出现一台发电机. 将其从手部槽位拖入后备箱网格 (也可以尝试将其拖到列表中的后备箱行上).",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_heavy_trunk_Want": {
+   "as1_value": "进度条结束后, 发电机会进入后备箱, 正如移动动作所示. 它不会掉到地上. 双击从手中取出时, 它仍会像游戏原版那样掉到地上.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_hover_lift": {
+   "as1_value": "鼠标下的格子",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_hover_lift_Do": {
+   "as1_value": "在网格的格子上缓慢移动鼠标, 并悬停在其中一个上.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_hover_lift_Want": {
+   "as1_value": "鼠标下的格子会轻微跳起几个像素, 下方出现阴影; 上方的格子不会遮挡它. 鼠标移开后恢复原位. 关闭动画后无此效果.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_layers_back": {
+   "as1_value": "衣物层: 后退",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_layers_back_Do": {
+   "as1_value": "在角色屏幕上向后翻页浏览衣物层 (左箭头): 到达第一层后再按一次.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_layers_back_Want": {
+   "as1_value": "从第一层后退会跳到最后一层, 无错误, 无空层.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_layout_cat": {
+   "as1_value": "按分类布局",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_layout_cat_Do": {
+   "as1_value": "在测试背包中将螺丝刀放在角落 (左下角), 移开其他工具并保存布局. 从背包中取出螺丝刀, 然后 '添加一把锤子'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_layout_cat_Want": {
+   "as1_value": "锤子会落在螺丝刀的位置 (它在布局中没有专属位置, 而工具位是空的). 第二把锤子会尽可能靠近其他工具的位置放置. 整理功能会保持这种布局.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_layout_return": {
+   "as1_value": "布局: 归位",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_layout_return_Do": {
+   "as1_value": "对口袋中的三件物品分别执行Shift+左键点击 (背包必须是活动容器 - 点击其标题栏).",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_layout_return_Want": {
+   "as1_value": "每件物品都准确回到其轮廓位置; 不再剩余任何轮廓.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_layout_save": {
+   "as1_value": "布局: 保存",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_layout_save_Do": {
+   "as1_value": "手动移动背包中的几件物品. 右键点击标题栏>保存布局. 然后点击此处的 '取出3件物品'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_layout_save_Want": {
+   "as1_value": "三件物品进入口袋; 它们在背包中的位置显示为带有图标的浅色轮廓. 标题栏菜单现在包含 '清除布局' 选项.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_layout_sort": {
+   "as1_value": "布局+整理",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_layout_sort_Do": {
+   "as1_value": "取出3件物品, 整理背包, 更改规则并再次整理. 然后执行 '放回 (无固定位置)' - 它们会像普通拾取物品一样进入.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_layout_sort_Want": {
+   "as1_value": "无论使用何种规则, 布局中的物品都保持在原位, 其余物品围绕排列, 没有其他物品占据轮廓位置. 返回的物品会回到其轮廓位置.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_near_same": {
+   "as1_value": "同类物品相邻放置",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_near_same_Do": {
+   "as1_value": "点击 '准备', 然后右键点击背包标题栏>清除布局. 将螺丝刀移到任意角落. 然后点击 '再来一把螺丝刀': 第二把螺丝刀进入背包, 但没有预设位置.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_near_same_Want": {
+   "as1_value": "新螺丝刀紧挨着第一把放置, 无论第一把在哪里, 而不是放在工具类的第一个格子.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_control": {
+   "as1_value": "车主控制 - 所有人同步收听",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_control_Do": {
+   "as1_value": "第一位玩家暂停/继续、在曲目内跳转、跳过曲目、关闭收音机、拔出钥匙 (断电).",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_control_Want": {
+   "as1_value": "第二位玩家在一秒内同步收到所有操作: 暂停、搜索后的位置、新曲目; 收音机关闭或断电时立即静音.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_fetch": {
+   "as1_value": "缺失文件通过服务器传输",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_fetch_Do": {
+   "as1_value": "第一位玩家播放一首第二位玩家没有的曲目 (最大15MB). 第二位玩家站在车旁等待. 然后第一位玩家播放一个超过15MB的文件.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_fetch_Want": {
+   "as1_value": "先静音, 然后 (8MB约需一分钟) 从当前位置开始播放音乐; 文件保存在第二位玩家的Zomboid\\knox_music_cache目录中; 后续该曲目可立即播放. 超过15MB的文件不会传输: 第二位玩家保持静音, 无错误提示.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_off": {
+   "as1_value": "关闭 - 和之前一致",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_off_Do": {
+   "as1_value": "第二位玩家取消勾选\"收听他人音乐\", 然后第一位玩家取消勾选\"分享我的音乐\". 然后在主机端Zomboid\\Lua\\knox_server.txt中设置music.share=0, 并重启主机.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_off_Want": {
+   "as1_value": "取消勾选: 第二位玩家立即静音; 未分享时无人能听到第一位玩家的音乐; 设置music.share=0后, 所有人只能听到自己的音乐, 如同Beta版之前. console.txt中无错误.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_outside": {
+   "as1_value": "车外收听他人音乐: 距离、门窗影响",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_outside_Do": {
+   "as1_value": "第二位玩家缓慢远离汽车再返回. 第一位玩家开关车门, 摇下车窗.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_outside_Want": {
+   "as1_value": "距离越远, 声音越轻越沉闷; 超出收音机范围则无声, 返回时声音逐渐恢复. 车门或车窗打开: 声音更清晰响亮 - 如同车主在车外收听.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_parked": {
+   "as1_value": "其他玩家的停放车辆",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_parked_Do": {
+   "as1_value": "第一位玩家在1号车中播放音乐, 然后进入2号车驾驶座并播放另一首曲目. 第二位玩家站在两车之间.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_parked_Want": {
+   "as1_value": "第二位玩家能听到两辆车的声音, 分别来自各自的位置并经过车身隔音处理.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_passenger": {
+   "as1_value": "乘客如同在车内收听",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_passenger_Do": {
+   "as1_value": "第二位玩家作为乘客坐在第一位玩家的车里. 第一位玩家在卡片上开关收音机声音.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_passenger_Want": {
+   "as1_value": "乘客听到的声音如同在车厢内: 无车身隔音效果. 当第一位玩家开启收音机声音时, 乘客听到的高音也被削减.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_share": {
+   "as1_value": "自定义音乐: 他人收听",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_share_Do": {
+   "as1_value": "主机使用Knox BETA, 第二个客户端; 双方安装ZombieBuddy. 双方均开启\"分享我的音乐\"和\"收听他人音乐\" (Knox设置, 游戏页面). 第一位玩家上车 (汽车按钮), 打开收音机, 选择 '我的' 以及双方在knox_music中都有的曲目. 第二位玩家站在车旁.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_net_share_Want": {
+   "as1_value": "第二位玩家立即听到同一首曲目, 来自同一位置 (最多延迟一秒), 声音比车内沉闷且轻微. 检查结果: 第一位玩家显示 'sharing: 1', 第二位玩家显示 'hearing: 1 (1)' - 括号内为播放源数量.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_new_item": {
+   "as1_value": "新物品位于其分类旁",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_new_item_Do": {
+   "as1_value": "右键点击标题栏>清除布局, 整理. 然后在此处 '添加一把锤子': 它会进入背包, 但没有预设位置.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_new_item_Want": {
+   "as1_value": "锤子落在工具类旁边, 而不是第一个空闲格子.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_other_places": {
+   "as1_value": "周围和背包窗口",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_other_places_Do": {
+   "as1_value": "在 '周围' 中选择一个橱柜并右键点击其标题栏. 然后打开一个背包窗口 (双击背包) 并右键点击其标题栏. 尝试在那里的整理和保存布局功能.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_other_places_Want": {
+   "as1_value": "包含整理、规则和布局的菜单无处不在; 橱柜的布局在你离开并返回后依然保留. 地面和尸体不保留布局 - 这是正确的.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_overrides": {
+   "as1_value": "来自文件的分类",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_overrides_Do": {
+   "as1_value": "'添加配置行' 会将 'Base.Hammer=category mat' 写入Zomboid/Lua/knox_overrides.txt. 退出到主菜单, 加载存档, 再次打开测试台并点击 '检查'. 最后 '移除配置行'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_overrides_Want": {
+   "as1_value": "锤子拥有材料类的背景并整理到材料区块. 执行 '移除配置行' 并重载后 - 恢复为工具类.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_quick_topup": {
+   "as1_value": "Shift补充堆叠",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_quick_topup_Do": {
+   "as1_value": "'绷带' 操作会将3个绷带放入口袋, 2个放在地面. 点击背包标题栏 (使其成为活动容器), 在 '周围' 中选择 '地面', 然后对那里的绷带执行Shift+左键点击.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_quick_topup_Want": {
+   "as1_value": "地面的绷带加入了口袋中的堆叠, 而不是在背包中占据新格子. 满堆叠会吸收能容纳的数量, 剩余的分开. '检查' 会统计你身上的绷带格子数.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_skins": {
+   "as1_value": "皮肤 (测试版)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_skins_Do": {
+   "as1_value": "打开设置 - '外观' 选项卡, 找到带有 'Beta' 标识的皮肤部分. 切换不同皮肤, 然后调整自定义色相/饱和度/亮度滑块. 观察物品栏、周围、物品提示框、背包窗口、'已找到' 窗口、菜单和加载界面的变化.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_skins_Want": {
+   "as1_value": "皮肤立即更改, 无需重新加载: 主色调 (边框、按钮、选中项) 和窗口色调发生变化. 格子保持其分类颜色. 彩色按钮上的文字保持可读. 退出后保留选择. 注意任何仍显示为沙色的部分.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_sort_rules": {
+   "as1_value": "其他规则",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_sort_rules_Do": {
+   "as1_value": "右键点击背包标题栏>整理规则>依次选择 '紧凑'、'按名称'、'按重量'. 中间可以随意打乱.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_sort_rules_Want": {
+   "as1_value": "背包立即按规则重新整理: 紧凑 - 大物品优先, 无空隙; 按名称 - 字母顺序; 按重量 - 重者优先. 当前规则会有标记 (当前). 最后请改回 '按分类'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_sort_zones": {
+   "as1_value": "按分类整理",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_sort_zones_Do": {
+   "as1_value": "点击 '准备': 一个装有约30件杂乱物品的测试ALICE背包将装备到你背上 (如果背部被占用, 则以窗口形式打开). 然后点击其标题栏上的整理按钮 (三条横线).",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_sort_zones_Want": {
+   "as1_value": "物品按设置中的顺序以分类区块排列, 相同物品并排, 两堆绷带和两堆钉子分别合并. '打乱' 会再次弄乱顺序.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_stack_hint": {
+   "as1_value": "你的堆叠高亮显示",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_stack_hint_Do": {
+   "as1_value": "如果尚未执行 '绷带' 操作, 请先执行. 将鼠标悬停在地面的绷带上, 然后用鼠标拾起它.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_stack_hint_Want": {
+   "as1_value": "当鼠标悬停其上 (或手持时), 你的绷带堆叠显示绿色 - 表示有空间. 满堆叠显示红色. 不可堆叠的物品 (衣服、武器) 不显示高亮.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_tent_slot": {
+   "as1_value": "背包上的帐篷 (Steam评论)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_tent_slot_Do": {
+   "as1_value": "点击 '帐篷': 测试用ALICE背包装备到背上, 一个打包好的帐篷放在地上. 像玩家一样拾取帐篷: Shift+左键点击, 将其拖入背包, 或 '全部拿走'. 然后寻找它: 在背包网格、屏幕底部的快捷栏、以及关闭物品栏时的快捷键中查找. 尝试将其取下.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_tent_slot_Want": {
+   "as1_value": "记录帐篷的位置以及你在哪里能看到它. 预期结果: 如果它挂在 '背包底部' 槽位, 该槽位会在快捷栏中显示并包含帐篷, 且可以通过拖动或其菜单取下帐篷.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_tv_back": {
+   "as1_value": "电视: 频道后退",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_tv_back_Do": {
+   "as1_value": "在Knox窗口中打开有多个频道的电视或收音机. 转到第一个频道并按下后退, 然后再按一次.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_tv_back_Want": {
+   "as1_value": "从第一个频道后退会跳到最后一个频道, 然后按顺序后退. 无错误.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_cn": {
+   "as1_value": "中文测试 (如果你有时间)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_cn_Do": {
+   "as1_value": "选项: 语言设为简体中文. 坐在车里: 检查仪表盘及其提示; 设置: 检查车载音乐开关. 将语言改回.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_cn_Want": {
+   "as1_value": "仪表盘的文字和提示以游戏字体显示为中文, 无问号方块, 除FM、km/h 和 START外无英文内容.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_equip": {
+   "as1_value": "装备: 标题栏和替换物品",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_equip_Do": {
+   "as1_value": "查看装备列的标题栏. 从背包中拖动夹克 (或帽子) 到身体上; 将不同衣物悬停在相应槽位上.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_equip_Want": {
+   "as1_value": "标题栏显示角色名称和生存天数, 和之前一致. 手持物品将替换的槽位像以前一样高亮, 并在四分之一秒内跟随更新.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_eye": {
+   "as1_value": "背包标题栏上的眼睛图标",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_eye_Do": {
+   "as1_value": "点击 '准备'(测试背包). 右键点击其标题栏 - 记住布局. 然后在同一菜单中 - 忘记布局. 每次操作后点击 '检查'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_eye_Want": {
+   "as1_value": "当记住布局时, 眼睛图标 (布局位置) 立即出现在 '整理' 旁边, 忘记时立即消失; 它像以前一样显示和隐藏位置. 检查结果会说明背包是否有布局.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_found": {
+   "as1_value": "搜索和 '已找到' 窗口",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_found_Do": {
+   "as1_value": "在顶部的搜索栏中输入名称 (如绷带、钉子), 打开 '已找到' 窗口. 滚动列表, 从中取出一个物品, 关闭并再次打开. 更改游戏分辨率或UI大小后再次打开.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_found_Want": {
+   "as1_value": "窗口及其格子和之前一致: 格子位置正确, 卡片位于标题下方, 鼠标能准确找到物品; 尺寸变更后, 所有内容适应新尺寸.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_inspect": {
+   "as1_value": "关闭Knox界面时检查物品",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_inspect_Do": {
+   "as1_value": "关闭Knox. 右键点击屏幕底部快捷栏快速槽位中的物品, 选择 '检查'. (世界中的物品没有 '检查' 选项: 那是游戏原生的世界菜单. )",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_inspect_Want": {
+   "as1_value": "Knox界面打开, 检查窗口显示该物品, 和之前一致.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_java": {
+   "as1_value": "Java组件v57 (全面检查)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_java_Do": {
+   "as1_value": "启动游戏: ZombieBuddy再次询问关于KnoxInventoryJava.jar的事项 - 请允许. 打开Knox并检查列、工具提示、菜单和设置. 点击 '检查'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_java_Want": {
+   "as1_value": "所有文本均使用Knox自带字体 (而非游戏字体), 无空白或模糊文字. 检查结果显示v57且均为true.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_loot": {
+   "as1_value": "周围: 列表和对象按钮",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_loot_Do": {
+   "as1_value": "保持Knox打开, 穿过房屋: 房间、厨房、车库, 走到车旁. 在 '周围' 中选择炉灶或烤箱, 并按下其标题栏中的按钮 (开/关及其他); 对其他带有按钮的对象执行相同操作. 打开并关闭容器旁边的门.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_loot_Want": {
+   "as1_value": "站立时, 列表不闪烁或跳动; 容器在进入范围时出现, 离开时消失, 顺序和之前一致. 标题栏按钮在点击后立即显示新状态 (当游戏本身改变状态时 - 在几分之一秒内).",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_menu": {
+   "as1_value": "上下文菜单",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_menu_Do": {
+   "as1_value": "右键点击苹果 (食用: 行上的方块)、锤子、黑暗中的书 (无法阅读)、背包; 在世界中 - 炉灶和水槽. 将鼠标移至 '其他' 并移开. 打开子菜单 (移动到).",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_menu_Want": {
+   "as1_value": "每个菜单的外观和功能和之前一致: 标题栏、分组、图标、红色选项在最后、无法选择选项的原因、食用行上的方块. '其他' 展开和折叠平滑. 子菜单按行打开. 无闪烁或跳动.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_move": {
+   "as1_value": "同时移动三十个物品 (此前帧率为30-35FPS)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_move_Do": {
+   "as1_value": "丢弃300个物品, 打开Knox, 在 '周围' 中选择地面. 一次性将30个或更多物品移入背包: 使用 '搜刮全部', 或按住Ctrl点击选择并拖动. 在物品移动过程中点击 '检查'. 然后清除堆积物.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_move_Want": {
+   "as1_value": "帧率保持在接近未移动时的水平 (此前: 30-35). 每个物品在原地显示为带有进度条的虚影, 仅当轮次完成时才出现在背包中; 每条传输链一个进度条. 检查结果会记录正在传输的物品数量和帧率 - 请将数字复制到备注中.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_mp": {
+   "as1_value": "多人游戏测试 (自行开服)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_mp_Do": {
+   "as1_value": "开一个服务器, 如果可能, 用第二个客户端加入. 打开一个无人打开过的汽车后备箱. 当背包几乎满时, 从一堆物品中搜刮全部.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_mp_Want": {
+   "as1_value": "后备箱内的物品散乱放置, 如同家具中 (非行排列) - 两名玩家看到的一致. 无法装入的物品以堆叠形式留在地上 - 另一名玩家看到的一致.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_search_off": {
+   "as1_value": "关闭搜索功能",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_search_off_Do": {
+   "as1_value": "设置: 关闭 '搜索容器'. 打开一个从未打开过的容器. 重新开启该选项并打开另一个新容器.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_search_off_Want": {
+   "as1_value": "关闭: 容器内所有物品立即显示. 开启: 物品逐个被发现, 和之前一致.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_tooltip": {
+   "as1_value": "物品提示",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_tooltip_Do": {
+   "as1_value": "悬停在水瓶上, 喝一口, 再次悬停. 悬停在一堆钉子上, 拆分一些, 分别悬停两者. 悬停在一本名字很长的书上. 在物品提示显示时, 打开物品的菜单.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_tooltip_Want": {
+   "as1_value": "标题栏和之前一致: 图标、名称、分类 · 尺寸 · 重量; 重量和堆叠数量随即更新. 长名称最多显示三行. 物品提示平滑过渡到菜单, 标题栏像素级对齐. 无闪烁.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_tv": {
+   "as1_value": "电视和收音机",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_tv_Do": {
+   "as1_value": "开发者模式: 收音机、电视、背包 (开发面板). 打开电视, 切换频道, 停留在无信号频道; 观看带字幕的节目. 在收音机上保存一个电台并移除它 (右键点击).",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_u_tv_Want": {
+   "as1_value": "无信号时的雪花屏看起来像真实的雪花 (随机点状, 无条纹, 无重复图案). 频道名称和字幕和之前一致. 保存的电台立即出现, 移除的电台立即消失.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
   }
  }
 }
