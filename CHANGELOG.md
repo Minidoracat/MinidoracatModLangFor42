@@ -6,8 +6,17 @@
 
 ## [Unreleased]
 
+### Added
+
+- **10 個 MOD 更新後新增的文字補上繁簡中文（755 項）。** The MRE Chronicles 的新口糧包與餐點、物品說明、加熱後名稱與沙盒清單（520 項，含 60 個加熱後菜名）；Map Mod Manager 改版後的預設組合、載入順序、檢查清單與說明面板（98 項）；Project Zomboid Optimiser 的 LuaJIT 排除清單與 JVM 精簡物件標頭設定（51 項）；IRON MAN MARK XI 的推進器、主控台分頁與瞄準模式（34 項）；Stay With Me 的夜視與對話字型、顯示時間沙盒選項（18 項）；organizedCategories 的 16 種口徑分類；以及 Real Room Heat、Live to Fight Another Day、Dynamic Outposts、Radio Trader 的零星新字串。
+  > 技術要點：追蹤器 2026-11-07 #1298–#1308「可能過時」。695 鍵走 `apply_wf_result`／`apply_translations` 進 `own_translations.json`，全數登記 `ch_review_state`；3 路翻譯、2 路對抗複核，採納 3 條（例：Mark XI 的 CH 統一「戰甲」、說明面板「查看」改「檢視」、甜麵包捲說明對齊物品名）。The MRE Chronicles 加熱後名稱：Lua `mgsText(key, fallback)` 以 `getText` 查 `IGUI_MGsMRE_*Hot`／`*HotSauce`，上游 EN 只把其中 30 鍵放在 `Tooltip.json`、另 60 鍵（含 `IGUI_MGsMRE_GenericMRE`、`IGUI_MGsMRE_WithHotSauceSuffix`）根本沒有，本包以 Lua 的英文後備值當 `en` 補進 `IG_UI.json`，譯文取加熱後物品的 ItemName（`_note` 記出處）。Project Zomboid Optimiser 與 Radio Trader 在追蹤器那輪之後又更新，以 `backfill-en --force` 重抽現行版。Moodle Effects Explained（#1301）新增的 370 鍵只在 `42.22/`，現行 42.21 不載入，不翻。11 個 MOD 以 steamcmd 重抓現行版給譯者查 Lua。
+
 ### Changed
 
+- **上游改了英文的已出貨文字跟著改（20 項）。** The MRE Chronicles 把「&」改寫成「and」、沙盒清單加進新口糧包（10 項）；Dynamic Outposts 的守衛與襲擊者數量說明加上「最小與最大都設 0 就停用」（6 項）；Radio Trader 的 NPC 來源選項擴大到懸賞、伏擊與外星人（3 項）；Map Mod Manager 整段改寫的說明面板（1 項）。
+  > 技術要點：As1 衍生層 14 鍵改 `sources/ch`＋`cn_overrides`，own 層 6 鍵經 `apply_translations` 更新 `en` 錨點。
+- **修正 5 個 MOD 的舊譯與名稱不一致（266 項）。** The MRE Chronicles 同一道菜、同一個口糧包在物品名、說明、加熱後名稱與沙盒清單之間的寫法統一（簡中 Umbrella 一律「保护伞」、Elk 一律「麋鹿」、Spiffo「斯皮福」、Vanilla 糖果包是「原版」不是「香草」），並修正簡中把 Diced 譯成「丁香」、shot 飲料譯成「注射剂」、永不結凍寫成會結凍等誤譯；Dynamic Outposts 簡中「暴徒」改成和繁中一致的「敌对NPC」；IRON MAN MARK XI 繁中「戰衣」統一「戰甲」，簡中「请先战甲」改「请先装备」。
+  > 技術要點：受影響 MOD 的 As1 衍生層 2,012 鍵（扣前幾批已稽核、本體鍵、unship 鍵與已裁決的 owner 衝突鍵）以 `judge_batch` 初篩，連同數字比對共標 408 鍵，由 3 路代理裁決，改 114 鍵；The MRE Chronicles 另由一路代理對全部 2,666 鍵做名稱一致性掃描，改 161 鍵（As1 層 141、own 層 20）；加熱後名稱對齊 ItemName 12 鍵。`Tooltip_MGsMRE_IRPmenuOne` 的「菜單」是餐飲語境，登記 `lint_exemptions`。
 - **Evolving Traits World 角色頁「翻譯狀態」的數字改用 ETW 自己提供的值。** 這 25 個數字是 ETW 每版重算的各語言翻譯完成度與總行數，本包不再出貨；繁簡中文玩家看到的數字跟著已安裝的 ETW 版本走，不會停在本包同步的那一版。同時訂閱 As1 原包的簡中玩家仍會看到 As1 收錄的舊數字。
   > 技術要點：`UI_ETW_TranslationStats_*` 25 鍵登記 `sources/unshipped_keys.json` 第五類（MOD 自己維護的資料值），還原 1.71.0 為同步數字加的 5 筆 `cn_overrides` 與 `sources/ch`、`ch_review_state` 對應值。上游中文語言檔這些鍵都留空，引擎先載 EN、空值不覆寫（`Translator.java:366`）。追蹤器照樣會為 ETW 改數字開「可能過時」issue，處理時不必同步數字。
 

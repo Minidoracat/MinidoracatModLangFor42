@@ -77379,5 +77379,1200 @@
     "as1_value": "我的.",
     "value": "归我.",
     "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：\"Mine.\" 是搶下目標的喊話，CN「我的.」不通順，照 CH「歸我.」。"
+  },
+  "UI.json|UI_helpPanelText": {
+    "as1_value": "Map Mod Manager 是一个用于识别地图模组之间单元格冲突的工具.\n\n虽然冲突在特定地图和仔细调整的加载顺序下或许可行, 但这并不总是被推荐. 如果你不介意覆盖原版城镇, 那么与原版单元格的冲突是可以接受的.\n\n将鼠标悬停在网格中的任意单元格上, 可以查看哪些地图占用了该单元格.\n\n绿色和蓝色单元格代表原版地图.\n紫色单元格代表没有冲突的地图模组.\n黄色单元格代表覆盖了原版区域 (城镇) 的地图模组.\n红色单元格代表彼此冲突的地图模组.\n\n右侧列表显示了创意工坊中可用的地图模组. 选择它们可以在单元格网格上显示. 如果你尚未订阅某个模组, 或想了解更多信息, 请点击地图名称旁边的 Steam 图标. 如果你订阅了新地图, 需要重启游戏.\n\n左侧列表显示了你已订阅的地图模组及其依赖项. 选择它们可以在单元格网格上显示. 通过点击地图名称旁边的复选框来切换启用状态. 当你选择和切换模组时, 依赖项会显示出来; 将鼠标悬停在某个依赖项上, 可以查看它是否为已激活模组, 已选择且已订阅的模组, 或已选择但你尚未订阅的模组所需要. 如果某个依赖项显示为红色, 说明你尚未订阅它.\n\n使用已订阅地图模组列表下方的 '移动' 按钮调整加载顺序. 通常情况下, 如果单元格不冲突, 你就不需要调整. 如果单元格确实冲突, 请查看冲突地图模组的 Steam 创意工坊页面, 以获取加载顺序方面的建议.\n\n导出将生成一个文本文件, 其中包含所选地图, 依赖项以及所需的多人游戏数据, 以便粘贴到你的服务器配置文件中. 文件位于: C:\\Users\\User\\Zomboid\\Lua\\path. 按钮带有工具提示, 可以准确说明它们的功能.",
+    "value": "地图模组管理器会显示你的地图模组在世界网格上的位置, 让你在加载游戏前就能发现单元格冲突.\n\n已订阅地图模组\n你已安装的地图模组, 分为“已启用”和“未启用”两组. 勾选某一行的复选框即可在网格上显示该地图, 用它的“开/关”按钮启用或禁用, 点击 Steam 标志可打开它的创意工坊页面. 点击任意一行即可在“模组详情”中查看. “快速选择”会添加与当前选中项没有共用单元格的地图.\n\n依赖项\n已启用或已选中的地图模组所需的模组. 将鼠标悬停在某一项上, 可以查看哪些地图需要它. 请务必查看地图的创意工坊页面, 确认是否还有其他前置要求.\n\n检查\n列出你已启用和已选中的地图模组的共用单元格、与原版区域重叠、缺失的依赖项以及未启用的依赖项. 将鼠标悬停在某项检查上可了解详情.\n\n网格\n将鼠标悬停在单元格上, 可以查看哪些地图占用了它. 使用鼠标滚轮或缩放按钮进行缩放. 放大后, 可以拖动网格或使用方向键 (Shift: 5 格) 移动. 按“全览”或双击网格, 可查看单元格 0-60 以及所有已选中或已启用的地图模组. 若只想列出使用某个单元格的地图模组, 先用 X 和 Y 下拉菜单选择该单元格, 再按“筛选地图”. “隐藏原版”会从网格中移除原版地图, 与它们重叠的部分不再显示为黄色, 但“检查”仍会列出.\n\n紫色: 地图模组.\n浅紫色: 已选中但未启用的地图模组.\n红色: 共用单元格的地图模组.\n黄色: 与原版城镇重叠的地图模组.\n绿色: 原版城镇.\n蓝色: 俄亥俄河.\n\n共用单元格的地图配合仔细调整的加载顺序, 有些可以正常运作, 但请先查看这些地图的创意工坊页面. 与原版城镇重叠通常是有意为之.\n\n预设\n选择一个预设即可应用. 预设只会更改地图模组及其依赖项, 你的其他模组保持不变, 也可以用“撤销”还原. “保存”会将你已启用的地图模组、加载顺序和已选中的地图存为预设. “分享”会将所选预设复制到剪贴板, “添加”则可导入从“分享”粘贴的预设或导出的 mapmodmanager.txt.\n\n加载顺序\n调整已启用地图模组和依赖项的 ModID 与 MapFolder 加载顺序. 通常只有在共用单元格时才需要调整.\n\n导出\n将你已选中的已订阅地图、其依赖项以及服务器配置所需的多人游戏数据写入 Zomboid/Lua/path/mapmodmanager.txt.\n\n只有按下“接受”时才会保存更改. “返回”会放弃更改, “撤销”/“重做”可逐步回退或重做更改.",
+    "reason": "2026-11-07 #1298–#1308 批次：上游改英文：Map Mod Manager shows where your map mods sit on the world g"
+  },
+  "Sandbox.json|Sandbox_ClaimableOutposts_banditRaidersMin_tooltip": {
+    "as1_value": "需要 Bandits2 或 Project A Life. 暴徒袭击爆发时, 生成袭击者的最少数量.",
+    "value": "需要 Bandits2 或 Project A Life. 敌对NPC袭击爆发时, 生成袭击者的最少数量. 将最小值与最大值都设为 0 即可禁用这些NPC的生成.",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：兩側都漏了新增句「Set both minimum and maximum to 0 to disable these NPC spawns.」；CN 另改「暴"
+  },
+  "Sandbox.json|Sandbox_ClaimableOutposts_banditOutpostBanditsMin_tooltip": {
+    "as1_value": "需要 Bandits2 或 Project A Life. 新建暴徒占据时随机生成的敌对守卫数量下限. 将最小值与最大值设为相同即可固定数量. 已有驻守部队保留其存档中的数量.",
+    "value": "需要 Bandits2 或 Project A Life. 新建敌对NPC占据时随机生成的敌对守卫数量下限. 将最小值与最大值设为相同即可固定数量. 已有驻守部队保留其存档中的数量. 将最小值与最大值都设为 0 即可禁用这些NPC的生成.",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：兩側都漏了新增句「Set both minimum and maximum to 0 to disable these NPC spawns.」；CN 另改「暴"
+  },
+  "Sandbox.json|Sandbox_ClaimableOutposts_banditOutpostBanditsMax_tooltip": {
+    "as1_value": "需要 Bandits2 或 Project A Life. 新建暴徒占据时随机生成的敌对守卫数量上限. 若低于最小值, 则按最小值处理. 已有驻守部队保留其存档中的数量.",
+    "value": "需要 Bandits2 或 Project A Life. 新建敌对NPC占据时随机生成的敌对守卫数量上限. 若低于最小值, 则按最小值处理. 已有驻守部队保留其存档中的数量. 将最小值与最大值都设为 0 即可禁用这些NPC的生成.",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：兩側都漏了新增句「Set both minimum and maximum to 0 to disable these NPC spawns.」；CN 另改「暴"
+  },
+  "Sandbox.json|Sandbox_ClaimableOutposts_friendlyOutpostNpcsMax_tooltip": {
+    "as1_value": "需要 Bandits2 或 Project A Life. 占领前哨站时随机生成的友好防守者数量上限. 已占领前哨站的驻守部队不会重新随机.",
+    "value": "需要 Bandits2 或 Project A Life. 占领前哨站时随机生成的友好防守者数量上限. 已占领前哨站的驻守部队不会重新随机. 将最小值与最大值都设为 0 即可禁用这些 NPC 的生成.",
+    "reason": "2026-11-07 #1298–#1308 批次：上游改英文：Requires Bandits2 or Project A Life. Maximum friendly defend"
+  },
+  "Sandbox.json|Sandbox_ClaimableOutposts_friendlyOutpostNpcsMin_tooltip": {
+    "as1_value": "需要 Bandits2 或 Project A Life. 占领前哨站时随机生成的友好防守者数量下限. 已占领前哨站的驻守部队不会重新随机.",
+    "value": "需要 Bandits2 或 Project A Life. 占领前哨站时随机生成的友好防守者数量下限. 已占领前哨站的驻守部队不会重新随机. 将最小值与最大值都设为 0 即可禁用这些 NPC 的生成.",
+    "reason": "2026-11-07 #1298–#1308 批次：上游改英文：Requires Bandits2 or Project A Life. Minimum friendly defend"
+  },
+  "Sandbox.json|Sandbox_ClaimableOutposts_banditRaidersMax_tooltip": {
+    "as1_value": "需要 Bandits2 或 Project A Life. 暴徒袭击爆发时, 生成袭击者的最多数量.",
+    "value": "需要 Bandits2 或 Project A Life. 敌对NPC袭击爆发时, 生成袭击者的最多数量. 将最小值与最大值都设为 0 即可禁用这些NPC的生成.",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：兩側都漏了新增句「Set both minimum and maximum to 0 to disable these NPC spawns.」；CN 另改「暴"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_CollectorBackend": {
+    "as1_value": "借款: 收债 NPC 来源",
+    "value": "NPC 来源 (收债人、赏金、伏击、外星人)",
+    "reason": "2026-11-07 #1298–#1308 批次：上游改英文：NPC Source (collectors, bounty, ambushes, aliens)"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_CollectorBackend_tooltip": {
+    "as1_value": "由哪个 NPC 模组生成被派去追讨违约玩家的人. 一个都没装时, 就没有收债人, 债务直接注销.",
+    "value": "由哪个 NPC 模组在本模组的事件中安置人物: 收债人、赏金目标、伏击者, 以及飞碟旁的活体外星人. “自动”会使用已安装的模组 (依次为流浪幸存者、Bandits、Project A-Life). 一个都没装时, 就没有收债人, 债务直接注销.",
+    "reason": "2026-11-07 #1298–#1308 批次：上游改英文：Which NPC mod places the people at our events: loan collecto"
+  },
+  "UI.json|UI_MarkXI_POWER_INSERT_NEED_SUIT": {
+    "as1_value": "请先战甲马克XI胸甲",
+    "value": "请先装备马克XI胸甲",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN 把動詞「装备」誤寫成「战甲」，句子不通"
+  },
+  "UI.json|UI_MarkXI_HUD_MODE_SUIT": {
+    "as1_value": "整套",
+    "value": "战甲",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN「整套」與同 MOD 其他處 SUIT＝战甲不一致（HUD 模式 SUIT/HELMET/PREVIEW）"
+  },
+  "UI.json|UI_MarkXI_MP_WARNING_TEXT": {
+    "as1_value": "马克XI战甲主要针对单人游戏开发.\n\n由于《僵尸生存模拟》的多人机制, 加上这套战甲包含大量彼此关联的系统与部件, 多人支持目前仍处于测试阶段.\n\n多人游戏中可能出现各种问题与错误, 包括可能影响你的战甲、战甲状态或角色安全的严重问题.\n\n模组作者仍在持续进行多人更新与修复, 但目前无法保证这套战甲在多人游戏中完全稳定运行.\n\n在多人游戏中使用这套战甲, 风险自负.",
+    "value": "马克XI战甲主要针对单人游戏开发.\n\n由于《僵尸毁灭工程》的多人机制, 加上这套战甲包含大量彼此关联的系统与部件, 多人支持目前仍处于测试阶段.\n\n多人游戏中可能出现各种问题与错误, 包括可能影响你的装备、战甲状态或角色安全的严重问题.\n\n模组作者仍在持续进行多人更新与修复, 但目前无法保证这套战甲在多人游戏中完全稳定运行.\n\n在多人游戏中使用这套战甲, 风险自负.",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN 把 equipment 誤譯成「战甲」（與後面「战甲状态」重複）；遊戲名改用官方簡中《僵尸毁灭工程》"
+  },
+  "UI.json|UI_MarkXI_REACTOR_CRITICAL": {
+    "as1_value": "方舟反应堆告急 - 请立即拆卸反应堆",
+    "value": "方舟反应堆告急 - 请拆卸反应堆",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN 多了英文沒有的「立即」，和下一級警告 REACTOR_EXPLOSION_RISK（IMMEDIATELY）分不出輕重"
+  },
+  "IG_UI.json|IGUI_CO_MsgBanditsRemain": {
+    "as1_value": "前哨站仍被暴徒占据. 剩余暴徒: %1",
+    "value": "前哨站仍被敌对NPC占据. 剩余敌人: %1",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：上游把 Bandit 改成 hostile NPC；CN「暴徒」是照舊英文，且與 CH「敵對NPC」不一致"
+  },
+  "Sandbox.json|Sandbox_ClaimableOutposts_banditOccupationChance": {
+    "as1_value": "暴徒占据概率 (%%)",
+    "value": "敌对NPC占据概率 (%%)",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：上游把 Bandit 改成 hostile NPC；CN「暴徒」是照舊英文，且與 CH「敵對NPC」不一致"
+  },
+  "Sandbox.json|Sandbox_ClaimableOutposts_banditRaidIntervalDays_tooltip": {
+    "as1_value": "需要 Bandits2 或 Project A Life. 从占领或击退暴徒袭击, 到下一次预定袭击之间的游戏天数.",
+    "value": "需要 Bandits2 或 Project A Life. 从占领或击退敌对NPC袭击, 到下一次预定袭击之间的游戏天数.",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：上游把 Bandit 改成 hostile NPC；CN「暴徒」是照舊英文，且與 CH「敵對NPC」不一致"
+  },
+  "Sandbox.json|Sandbox_ClaimableOutposts_ekronAllowAgricultural": {
+    "as1_value": "以革伦: 允许农业前哨站",
+    "value": "农业前哨站",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN 照舊英文「Ekron: allow …」多了地名與「允许」；現行英文只有類別名，同 MOD 其他城鎮同類鍵 CN 都寫「农业前哨站」"
+  },
+  "Sandbox.json|Sandbox_ClaimableOutposts_ekronAllowIndustrial": {
+    "as1_value": "以革伦: 允许工业前哨站",
+    "value": "工业前哨站",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN 照舊英文多了「以革伦: 允许」；同 MOD 其他城鎮同類鍵寫「工业前哨站」"
+  },
+  "Sandbox.json|Sandbox_ClaimableOutposts_irvingtonAllowIndustrial": {
+    "as1_value": "欧文顿: 允许工业前哨站",
+    "value": "工业前哨站",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN 照舊英文多了「欧文顿: 允许」；同 MOD 其他城鎮同類鍵寫「工业前哨站」"
+  },
+  "Sandbox.json|Sandbox_ClaimableOutposts_lootAmountPercent": {
+    "as1_value": "已启用的前哨站战利品数量 (%%)",
+    "value": "活跃前哨站战利品数量 (%%)",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：Active outpost 是前哨站狀態名，CN 其他處（IGUI_CO_StatusActiveOutpost）寫「活跃前哨站」，「已启用的」對不上"
+  },
+  "Sandbox.json|Sandbox_ClaimableOutposts_banditOccupationChance_tooltip": {
+    "as1_value": "需要 Bandits2 或 Project A Life. 未清空前哨站中一开始即被暴徒驻守的百分比. 已占领或此前已清空的前哨站不会被追溯占据.",
+    "value": "需要 Bandits2 或 Project A Life. 未清空前哨站中一开始即被敌对NPC驻守的百分比. 已占领或此前已清空的前哨站不会被追溯占据.",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：上游 Bandit 改 hostile NPC，CN 對齊 CH「敵對NPC」"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_MorelBoarHot": {
+    "as1_value": "热炖羊肚菌和野猪肉猪油酱",
+    "value": "焖羊肚菌野猪油膏 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN 與 ItemName CN「焖羊肚菌野猪油膏 (热)」不一致, 且多出「肉」"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_PottedElkHot": {
+    "as1_value": "热罐焖山地麋鹿骨髓和云杉酱",
+    "value": "罐封山地麋鹿骨髓云杉酱 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.PottedElkOpen; 說明即物品名"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SyncPaste": {
+    "as1_value": "光滑银箔袋, 内含高黏度彩虹色粉色凝胶\n由大型企业设计, 一口即可提供每日50%%的热量需求",
+    "value": "光滑银箔袋, 内含高黏度彩虹色粉色凝胶\n由大型企业设计, 一口即可提供每日所需热量的百分之五十",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：英文 50percent 是文字, CN 多出 %% token"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_VanillaPack": {
+    "as1_value": "终极糖果包 - 100%%香草友好",
+    "value": "终极糖果包 - 百分之百原版友好",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：Vanilla 指原版遊戲(開包產出全是 Base 物品, CH 已譯原版), CN 誤譯香草且多出 %% token"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_VaultJuice": {
+    "as1_value": "明亮的人工黄色色调, 风味基质隐约\n类似菠萝和橙子 - 但含0%%真实水果",
+    "value": "明亮的人工黄色色调, 风味基质隐约\n类似菠萝和橙子 - 但真实水果含量为零",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：英文 0 percent 是文字, CN 多出 %% token"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiritWipesPack": {
+    "as1_value": "烈酒湿巾包",
+    "value": "一包灵体湿巾",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：名稱照 ItemName 靈體濕紙巾／灵体湿巾; CH 靈性、CN 烈酒都對不上"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_PolymerSheetOpen": {
+    "as1_value": "抗菌聚合物片\n用于在末日中幸存伤口的无菌湿巾",
+    "value": "一张抗菌聚合物薄膜\n熬过末日的无菌伤口擦拭巾",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：名稱照 ItemName 抗菌聚合物薄膜; CN 誤讀成「傷口熬過末日」"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SterilWipeOpen": {
+    "as1_value": "大气消毒湿巾\n用于消毒伤口并防止腐烂",
+    "value": "一张大气灭菌擦拭巾\n用于消毒伤口并防止腐烂",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN 名稱照 ItemName 大气灭菌擦拭巾"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SurplusRagOpen": {
+    "as1_value": "多余抹布, 浸在烈酒中\n消毒伤口但如果你太用力想会灼烧",
+    "value": "一块浸了烈酒的剩余破布\n能给伤口消毒, 但想得太用力就会灼痛",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN 名稱照 ItemName 剩余破布(原「多余抹布」), 後句語意不通"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_RiceBlockBowl": {
+    "as1_value": "复水快炒米块",
+    "value": "复水速炸米饭块",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN「快炒」與 ItemName 速炸不一致"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_TongueLard": {
+    "as1_value": "保存的牛舌和猪油罐",
+    "value": "罐装保存的舌肉和猪油",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN 多出「牛」, ItemName 為舌肉"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_WrappedHorkerMammoth": {
+    "as1_value": "霍克肉块, 配猛犸奶酪和猪油",
+    "value": "一块海象肉, 配猛犸奶酪和猪油",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN「霍克」與 ItemName 海象不一致"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_TrenchFish": {
+    "as1_value": "便携挤压管, 含浓缩盐渍海洋卤水 - 丰富油性战壕鱼组织\n深度泥土和淀粉土豆酱和干净金属铁鲣鱼高汤余味",
+    "value": "便携挤压管, 含浓缩盐渍海洋卤水 - 丰富油性海沟鱼组织\n深度泥土和淀粉土豆酱和干净金属铁鲣鱼高汤余味",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN「战壕鱼」誤譯, ItemName 為海沟鱼"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_ScribJellyTube": {
+    "as1_value": "鼓鼓的柔韧动物膀胱囊, 装着浓稠的半透明酸甜果冻\n取自蠕虫幼虫的血淋巴 - 用炼金防腐剂大幅稳定, 可快速恢复体力",
+    "value": "鼓鼓的柔韧动物膀胱囊, 装着浓稠的半透明酸甜果冻\n取自斯克里布幼虫的血淋巴 - 用炼金防腐剂大幅稳定, 可快速恢复体力",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN「蠕虫」與 ItemName 斯克里布不一致"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_PorkBiscuitPack": {
+    "as1_value": "真空密封包装的两块苍白易碎猪肉饼干",
+    "value": "真空密封包装的两块苍白易碎猪油饼干",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN「猪肉饼干」與 ItemName 猪油饼干不一致"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_TallowChews": {
+    "as1_value": "苦涩高抗氧化北极黑果, 粘合在甜熬制脂肪块中",
+    "value": "苦涩高抗氧化北极岩高兰果, 粘合在甜熬制脂肪块中",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN「黑果」與 ItemName 岩高兰不一致"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SaltedLard": {
+    "as1_value": "致密干小麦饼干, 与一罐箔纸装猪油并排包装",
+    "value": "致密干小麦饼干, 与一盒铝箔装腌猪脂并排包装",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：Salo 照 ItemName LardSpreadSealed「盒装腌猪脂」, 原 CN 譯成猪油"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_UmbrellaCorpBox": {
+    "as1_value": "一个密封的安布雷拉公司收藏箱\n里面有五份主题口粮 - 统计上勉强能活",
+    "value": "一个密封的保护伞公司合集盒\n里面有五份主题口粮 - 统计上勉强能活",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN「安布雷拉公司收藏箱」與 ItemName CN「保护伞公司合集盒」對不上"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_UmbrellaCorpBoxEmpty": {
+    "as1_value": "被清空的安布雷拉公司收藏箱\n我们的业务是剩饭",
+    "value": "被清空的保护伞公司合集盒\n我们的业务是剩饭",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN 名稱照 ItemName CN「保护伞公司合集盒」"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SiltBoiledHot": {
+    "as1_value": "热淤泥煮合成猪肉和拉面酱",
+    "value": "淤泥水煮合成猪肉拉面糊 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.SiltBoiled; 說明即物品名"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SurvivingTheWasteland": {
+    "as1_value": "一本在末日中手手相传的翻旧幸存者手册\n300页关于采集 - 简易武器 - 和修补衣物的来之不易的经验\n第100页获得采集 - 第200页获得短钝器 - 第300页获得裁缝",
+    "value": "一本在末日中手手相传的翻旧幸存者手册\n300页关于搜寻 - 简易武器 - 和修补衣物的来之不易的经验\n第100页获得搜寻 - 第200页获得短棍 - 第300页获得缝纫",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：技能名照官方 CN: Foraging 搜寻、Short Blunt 短棍、Tailoring 缝纫"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_Vault777": {
+    "as1_value": "来自传奇避难所777的操作和维修手册\n300页战前工程知识, 关于保持装备 - 线路 - 和引擎运转\n第100页获得维修 - 第200页获得电气 - 第300页获得机械",
+    "value": "来自传奇避难所777的操作和维修手册\n300页战前工程知识, 关于保持装备 - 线路 - 和引擎运转\n第100页获得维护 - 第200页获得电工 - 第300页获得技工",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：技能名照官方 CN: Maintenance 维护、Electrical 电工、Mechanics 技工"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SaltLimeTonic": {
+    "as1_value": "高钠柑橘注射剂, 设计用于\n防止高压服中的严重电解质流失",
+    "value": "高钠柑橘浓缩饮, 设计用于\n防止高压服中的严重电解质流失",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：shot 是飲料(腳本 CustomContextMenu=Drink), CN 誤譯注射剂"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SaltRot": {
+    "as1_value": "重盐卤电解质注射剂, 带尖锐柠檬\n酸味, 在喉咙留下冰冷刺痛",
+    "value": "重盐卤电解质浓缩饮, 带尖锐柠檬\n酸味, 在喉咙留下冰冷刺痛",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：shot 是飲料(Drink), CN 誤譯注射剂"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_StaminaSip": {
+    "as1_value": "回收工业兴奋剂注射剂, 快速提升耐力",
+    "value": "回收工业兴奋剂, 一口饮下即可快速提升耐力",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：shot 是飲料(Drink), CN 誤譯注射剂"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_StasisWaterConserve": {
+    "as1_value": "补给元素 - 氧化氢 - 经过彻底的分子稳定和\n超滤 - 真空密封于带压的反射性聚合物箔袋中以确保\n永不泄漏 - 在宇宙辐射或极端环境衰变下冻结或汽化",
+    "value": "补给元素 - 氧化氢 - 经过彻底的分子稳定和\n超滤 - 真空密封于带压的反射性聚合物箔袋中以确保它\n在宇宙辐射或极端环境衰变下永不泄漏、冻结或汽化",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN 把「永不洩漏、結凍或汽化」譯成會結凍或汽化, 意思相反"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SalmonBarley": {
+    "as1_value": "零掉渣高黏度酱, 为亚零度提取区和高压\n海底潜水装备环设计 - 缓释复合淀粉和丰富单不饱和脂质",
+    "value": "零掉渣高黏度酱, 为零下撤离区和高压\n海底潜水装备环设计 - 缓释复合淀粉和丰富单不饱和脂质",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：extraction zone 是撤离区, CN 誤譯提取区; sub-zero 寫零下"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SalmonBarleyHot": {
+    "as1_value": "热零掉渣高黏度酱, 为亚零度提取区和高压\n海底潜水装备环设计 - 缓释复合淀粉和丰富单不饱和脂质",
+    "value": "热零掉渣高黏度酱, 为零下撤离区和高压\n海底潜水装备环设计 - 缓释复合淀粉和丰富单不饱和脂质",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：同 SalmonBarley: 提取区→撤离区, 亚零度→零下"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SmokedGator": {
+    "as1_value": "山胡桃烟熏鳄鱼肉 - 鸭油和秋葵粉",
+    "value": "山胡桃烟熏鳄鱼肉 - 鸭油和檫树叶粉",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：File powder 是檫樹葉粉(同 Hot/Open 兩鍵), CN 誤譯秋葵粉"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_ScavengedCandy": {
+    "as1_value": "旧凹痕铁罐中的硬糖果, 从毁灭日前回收\n通过未知保存方式保持完全可食用 - 尘封的旧糖\n合成樱桃和人工葡萄 - 留下沉重苦甜的长久生活余味",
+    "value": "旧凹痕铁罐中的硬糖果, 从毁灭日前回收\n通过未知保存方式保持完全可食用 - 尘封的旧糖\n合成樱桃和人工葡萄 - 留下浓重的苦甜滋味, 宛如早已逝去的生活",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：a Life long past 是逝去的生活, CN 誤譯成「长久生活」"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoMREbox": {
+    "as1_value": "一箱Spiffo公司的单兵口粮 - 装满了各式各样的小食品",
+    "value": "一箱斯皮福公司的单兵口粮 - 装满了各式各样的慰藉食物",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Spiffo 照 ItemName CN 與官方簡中寫「斯皮福」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_PitaPasteBowl": {
+    "as1_value": "盐渍皮塔饼浸泡在用番茄和大蒜酱制成的肉汤中",
+    "value": "盐渍皮塔饼浸泡在用番茄和大蒜酱调成的汤汁中",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：湯底是番茄大蒜醬調成(ItemName 番茄大蒜汤), CN 多出肉"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoChiliPotatoHot": {
+    "as1_value": "热腾腾的丰盛餐食, 由煮土豆和黑豆做成\n浸在香浓肉汁里 - 清淡又顶饱的素食选择",
+    "value": "热腾腾的丰盛餐食, 由煮土豆和黑豆做成\n浸在香浓酱汁里 - 清淡又顶饱的素食选择",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：素食選項, CN「肉汁」自相矛盾"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoChiliPotatoOpen": {
+    "as1_value": "用煮土豆和黑豆做的丰盛餐食, 浇上\n香浓肉汁 - 清淡又顶饱的素食选择",
+    "value": "用煮土豆和黑豆做的丰盛餐食, 浇上\n香浓酱汁 - 清淡又顶饱的素食选择",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：素食選項, CN「肉汁」自相矛盾"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_NeuroThawPen": {
+    "as1_value": "高效神经刺激器 - 瞬间清除\n低温症 - 疲劳和严重定向障碍",
+    "value": "高效神经刺激器 - 瞬间清除\n低温休眠症 - 疲劳和严重定向障碍",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：Cryo-sickness 是冷凍休眠後遺症, CN「低温症」是失溫(遊戲另有此狀態), 易誤會"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoBurgerSauce": {
+    "as1_value": "铝箔袋装的那款传奇上瘾酱料, 曾经\n是每个Spiffo汉堡的 配料 - 为灾后生存真空密封\n酸香烟熏的蛋黄酱与番茄酱融合, 佐以秘方香料\n以及大量化学防腐剂, 让它能存放数十年",
+    "value": "铝箔袋装的那款传奇上瘾酱料, 曾经\n是每个斯皮福汉堡的配料 - 为灾后生存真空密封\n酸香烟熏的蛋黄酱与番茄酱融合, 佐以秘方香料\n以及大量化学防腐剂, 让它能存放数十年",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Spiffo 照 ItemName CN 與官方簡中寫「斯皮福」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoAppleStrip": {
+    "as1_value": "铝箔泡罩包装的粉白苹果味咀嚼片\n含有合成维生素、咖啡因和大量盐分\n用于消除疲惫, 并在狭窄逃亡中防止恐慌",
+    "value": "铝箔泡罩包装的粉白苹果味咀嚼片\n含有合成维生素、咖啡因和大量盐分\n用于消除疲惫, 并在千钧一发的逃亡中防止恐慌",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：Narrow escape 是千鈞一髮, CN「狭窄逃亡」誤譯"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoBlueStrip": {
+    "as1_value": "铝箔泡罩包装的粉白蓝莓味咀嚼片\n含有合成维生素、咖啡因和大量盐分\n用于消除疲惫, 并在狭窄逃亡中防止恐慌",
+    "value": "铝箔泡罩包装的粉白蓝莓味咀嚼片\n含有合成维生素、咖啡因和大量盐分\n用于消除疲惫, 并在千钧一发的逃亡中防止恐慌",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：Narrow escape 是千鈞一髮, CN「狭窄逃亡」誤譯"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoLemonStrip": {
+    "as1_value": "铝箔泡罩包装的粉白柠檬味咀嚼片\n含有合成维生素、咖啡因和大量盐分\n用于消除疲惫, 并在狭窄逃亡中防止恐慌",
+    "value": "铝箔泡罩包装的粉白柠檬味咀嚼片\n含有合成维生素、咖啡因和大量盐分\n用于消除疲惫, 并在千钧一发的逃亡中防止恐慌",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：Narrow escape 是千鈞一髮, CN「狭窄逃亡」誤譯"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoStrip": {
+    "as1_value": "铝箔泡罩包装的粉白樱桃味咀嚼片\n含有合成维生素、咖啡因和大量盐分\n用于消除疲惫, 并在狭窄逃亡中防止恐慌",
+    "value": "铝箔泡罩包装的粉白樱桃味咀嚼片\n含有合成维生素、咖啡因和大量盐分\n用于消除疲惫, 并在千钧一发的逃亡中防止恐慌",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：Narrow escape 是千鈞一髮, CN「狭窄逃亡」誤譯"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoWintergreenStrip": {
+    "as1_value": "铝箔泡罩包装的粉白冬青味咀嚼片\n含有合成维生素、咖啡因和大量盐分\n用于消除疲惫, 并在狭窄逃亡中防止恐慌",
+    "value": "铝箔泡罩包装的粉白冬青味咀嚼片\n含有合成维生素、咖啡因和大量盐分\n用于消除疲惫, 并在千钧一发的逃亡中防止恐慌",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：Narrow escape 是千鈞一髮, CN「狭窄逃亡」誤譯"
+  },
+  "Print_Media.json|Print_Media_MGsMRE_UmbrellaSmile_text": {
+    "as1_value": "微笑雨伞计划提醒员工: 保持积极心态是强制性的生产力要求. 微笑. 你的配合会受到嘉奖并被记录在案.",
+    "value": "UmbrellaSmile 计划提醒员工: 保持积极心态是强制性的生产力要求. 微笑. 感谢你的配合, 已记录在案.",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN「会受到嘉奖」把 appreciated (感謝) 譯成受表揚, 意思不同; 計畫名照 ItemName CN「UmbrellaSmile 员工小册子」保留"
+  },
+  "Tooltip.json|MGsMRE_UmbrellaSmile_text": {
+    "as1_value": "微笑雨伞计划提醒员工: 保持积极心态是强制性的生产力要求. 微笑. 你的配合会受到嘉奖并被记录在案.",
+    "value": "UmbrellaSmile 计划提醒员工: 保持积极心态是强制性的生产力要求. 微笑. 感谢你的配合, 已记录在案.",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN「会受到嘉奖」把 appreciated (感謝) 譯成受表揚, 意思不同; 計畫名照 ItemName CN「UmbrellaSmile 员工小册子」保留"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnDeepSea_tooltip": {
+    "as1_value": "切换水生包: 高能口粮、深海深渊、热泉砖、几丁质胶囊、公海、底栖生物.",
+    "value": "切换水生包: 高压口粮、深海深渊、热液喷口砖、甲壳素胶囊、公海、底栖生物.",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN HP Ration 譯成「高能」(物品名是高压口粮); 热泉砖/几丁质胶囊 與 ItemName CN「热液喷口砖」「甲壳素胶囊」不一致"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnElderScrolls_tooltip": {
+    "as1_value": "切换联动包: 佛克瑞斯包、风盔城包、冬堡奥术、黑暗单兵口粮、杰拉尔套件、索尔斯坦海姆包裹.",
+    "value": "切换联动包: 福克瑞斯包、风盔城包、冬堡奥术、黑暗 MRE、杰拉尔套装、索瑟姆叶卷.",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：沙盒清單短名對齊 ItemName (方向 5); Dark 對齊 ItemName「黑暗口糧」; 沙盒清單短名對齊 ItemName (方向 5)"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnNeoNoir_tooltip": {
+    "as1_value": "切换赛博朋克包: 霓虹故障、几何托盘、辖区配给、导管胶囊、企业口粮单元、网格区域包、快速运输、单人砖、千叶口粮、雨票、小巷口粮、三角洲科技、夜市、地下层、长途运输、黑色修补匠、高层、复制套件.",
+    "value": "切换赛博朋克包: 霓虹故障、几何餐盘、警局配发、导管胶囊、企业口粮单位、网格区段包、快速运输、孤独砖、千叶口粮、防雨、小巷口粮、德尔塔科技、夜市、地下层、长途、黑市掮客、高楼、REPLI-KIT.",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：沙盒清單短名對齊 ItemName (方向 5)"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnSpiffoSpecials_tooltip": {
+    "as1_value": "启用后, 特殊的Spiffo单兵口粮储藏箱 (儿童餐储藏箱、蒙面吉祥物、墓园、午夜班、幸存者扩散、口粮收藏) 会在快餐店员工休息室、商业后仓和生存主义者储藏点生成 - 绝不会出现在军需品中.",
+    "value": "启用后, 特殊的斯皮福单兵口粮储藏箱 (儿童餐储备包、蒙面吉祥物、通宵班、午夜班、幸存者盛宴、MRE 合集) 会在快餐店员工休息室、商业后仓和生存主义者储藏点生成 - 绝不会出现在军用剩余物资中.",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：沙盒清單短名對齊 ItemName (方向 5); 沙盒清單短名對齊 ItemName (方向 5); Spiffo 照 ItemName CN 寫「斯皮福」"
+  },
+  "Tooltip.json|IGUI_MGsMRE_MorelBoarHot": {
+    "as1_value": "热炖羊肚菌和野猪肉猪油酱",
+    "value": "焖羊肚菌野猪油膏 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.MorelBoarOpen; Lua setName 用作物"
+  },
+  "Tooltip.json|IGUI_MGsMRE_MorelBoarHotSauce": {
+    "as1_value": "热炖羊肚菌和野猪肉猪油酱 + 辣酱",
+    "value": "焖羊肚菌野猪油膏 (热) + 辣酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.MorelBoarOpen; Lua setName 用作物"
+  },
+  "Tooltip.json|IGUI_MGsMRE_PottedElkHot": {
+    "as1_value": "热罐焖山地麋鹿骨髓和云杉酱",
+    "value": "罐封山地麋鹿骨髓云杉酱 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.PottedElkOpen; Lua setName 用作物"
+  },
+  "Tooltip.json|IGUI_MGsMRE_PottedElkHotSauce": {
+    "as1_value": "热罐焖山地麋鹿骨髓和云杉酱 + 辣酱",
+    "value": "罐封山地麋鹿骨髓云杉酱 (热) + 辣酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.PottedElkOpen; Lua setName 用作物"
+  },
+  "Tooltip.json|IGUI_MGsMRE_PottedWhaleHotSauce": {
+    "as1_value": "热罐焖鲸脂和驯鹿骨髓 + 辣酱",
+    "value": "罐封鲸脂与驯鹿骨髓 (热) + 辣酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.PottedWhaleOpen; Lua setName 用"
+  },
+  "Tooltip.json|IGUI_MGsMRE_SalisburySlurryHotSauce": {
+    "as1_value": "热加压索尔兹伯里牛肉饼酱 + 辣酱",
+    "value": "加压索尔兹伯里牛排糊 (热) + 辣酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.SalisburySlurry; Lua setName 用"
+  },
+  "Tooltip.json|IGUI_MGsMRE_SiltBoiledHot": {
+    "as1_value": "热淤泥煮合成猪肉和拉面酱",
+    "value": "淤泥水煮合成猪肉拉面糊 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.SiltBoiled; Lua setName 用作物品名"
+  },
+  "Tooltip.json|IGUI_MGsMRE_SiltBoiledHotSauce": {
+    "as1_value": "热淤泥煮合成猪肉和拉面酱 + 辣酱",
+    "value": "淤泥水煮合成猪肉拉面糊 (热) + 辣酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.SiltBoiled; Lua setName 用作物品名"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_AlpineChowder": {
+    "as1_value": "坚固的铝箔袋, 装着浓郁的奶油浓汤, 满是丁香欧防风、\n芜菁 - 炼制的培根肥丁和粗磨黑胡椒 - 其高油脂含量可防止\n这道菜在零下寒风中长时间暴露后分层或冻成硬块",
+    "value": "坚固的铝箔袋, 装着浓郁的奶油浓汤, 满是欧防风丁、\n芜菁 - 炼制的培根肥丁和粗磨黑胡椒 - 其高油脂含量可防止\n这道菜在零下寒风中长时间暴露后分层或冻成硬块",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN「丁香欧防风」把 Diced (切丁) 譯成丁香"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_ArklayDumplingsOpen": {
+    "as1_value": "厚实面皮裹着咸香的肉馅, 由禽肉和粗切的\n灾后合法绿草药制成, 草药品来自亚克雷合作农场",
+    "value": "厚实的小麦面皮裹着咸香的肉馅, 由禽肉和粗切的\n灾后合法绿草药制成, 草药来自亚克雷合作农场",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN「草药品」是錯字, 並補回 wheat"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_AscorbicDrops": {
+    "as1_value": "半透明绿色糖玻璃硬滴剂 - 过度工程化的糖果\n注入大剂量合成维生素C和稳定矿物质",
+    "value": "半透明绿色糖玻璃硬糖 - 过度工程化的糖果\n注入大剂量合成维生素C和稳定矿物质",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN Hard drops 譯成「硬滴剂」(藥水滴劑), 這是糖果 (ItemName CN 抗坏血酸柑橘糖)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_AshBerries": {
+    "as1_value": "酸味橙色花楸果滴, 在煮沸枫糖中结晶",
+    "value": "酸味橙色花楸果糖, 在熬煮的枫糖中结晶",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN Rowanberry drops 譯成「花楸果滴」, 這是糖果 (ItemName CN 糖渍花楸果糖)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_BerryCompote": {
+    "as1_value": "由复水越橘和野生玫瑰果制成的浆果蜜饯",
+    "value": "由复水越橘和野生玫瑰果制成的糖煮浆果",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN compote 譯成「蜜饯」(糖漬果乾), 與 ItemName CN「马克杯 (糖煮浆果)」不符"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_BerryPellet": {
+    "as1_value": "压缩饼, 干越橘和野生玫瑰果, 放入沸水\n膨胀成酸味富含维生素的蜜饯",
+    "value": "压缩饼, 干越橘和野生玫瑰果, 放入沸水\n膨胀成酸味富含维生素的糖煮浆果",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：同 BerryCompote: compote 不是蜜饯"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_BioGelSheet": {
+    "as1_value": "不反光的黑色箔袋, 内含一块紧密\n折叠的布, 浸透了冰冷的无味化合物",
+    "value": "不会沙沙作响的黑色箔袋, 内含一块紧密\n折叠的布, 浸透了冰冷的无味化合物",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN Non-crinkling 譯成「不反光」, 意思錯"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_BitterBar": {
+    "as1_value": "野采的浆果悬浮在生蜂蜜中, 既是\n高糖食物来源, 也是温和的天然抗生素",
+    "value": "野采的浆果悬浮在深色生蜂蜜中, 既是\n高糖食物来源, 也是温和的天然抗生素",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN 漏 Dark (深色) 蜂蜜"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_BloodorangePowder": {
+    "as1_value": "为快速水合工程设计的重质电解质混合物",
+    "value": "专为快速补水而设计的高浓度电解质混合物",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN「快速水合工程设计的重质」硬譯, hydration 是補水、Heavy 是高濃度"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_BlueGelatin": {
+    "as1_value": "蓝得像蓝草药 - 不含任何草药, 也不含病毒\n相信标签 - 它治愈无聊, 不是中毒",
+    "value": "蓝得像蓝草药 - 不含任何草药, 也不含病毒\n相信标签 - 能治无聊, 不能解毒",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN「不是中毒」把 Cures boredom not Poison (不能解毒) 譯錯"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_BlueUmbrella": {
+    "as1_value": "改过自新的反恐PMC - 现代 - 干净 - 努力赎罪\n现代海军蓝白色蒸煮袋, 重新设计的白底蓝伞 - 自2007年起保护生命.",
+    "value": "改过自新的反生化恐怖PMC - 现代 - 干净 - 努力赎罪\n现代海军蓝白色蒸煮袋, 重新设计的蓝底白伞 - 自2007年起保护生命.",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN white-on-blue 譯反成「白底蓝伞」; anti-bioterror 漏「生化」"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_CarbonWeaveSheet": {
+    "as1_value": "超薄碳聚合物片 - 生病时抑制打喷嚏和咳嗽 - 可用作引火物",
+    "value": "超薄碳聚合物片 - 生病时可掩住喷嚏和咳嗽声 - 可用作引火物",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN Muffles (壓低聲音) 譯成「抑制打喷嚏」, 變成防止打噴嚏"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_CelluloseWipe": {
+    "as1_value": "无绒压制纤维素片 - 生病时抑制打喷嚏和咳嗽 - 可用作引火物",
+    "value": "无绒压制纤维素片 - 生病时可掩住喷嚏和咳嗽声 - 可用作引火物",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：同 CarbonWeaveSheet: Muffles 不是抑制"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_MGsTissue": {
+    "as1_value": "标准单兵口粮面巾纸 - 生病时抑制打喷嚏和咳嗽 - 可用作引火物",
+    "value": "标准单兵口粮面巾纸 - 生病时可掩住喷嚏和咳嗽声 - 可用作引火物",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：同 CarbonWeaveSheet: Muffles 不是抑制"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_CathodeElectrolyte": {
+    "as1_value": "高效快速起效饮料, 设计用于同时刷新生物系统和\n内部电网 - 重离子负荷快速平衡细胞水合, 同时\n提供覆盖身体疲惫的激进系统性冲击",
+    "value": "高效快速起效饮料, 设计用于同时恢复生物系统和\n内部电网 - 重离子负荷快速平衡细胞水分, 同时\n带来强烈的全身刺激, 压过身体的疲惫",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN refresh 譯成「刷新」、aggressive 譯成「激进」(政治義), 誤譯"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_ChagaBarley": {
+    "as1_value": "深色咖啡状草本注入, 富含抗氧化剂 - 清洁\n疲劳和空间焦虑而不引发抖动肌肉震颤",
+    "value": "深色咖啡般的草本浸泡饮, 富含抗氧化剂 - 消除\n疲劳和空间焦虑, 且不会引发手抖和肌肉震颤",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN Herbal infusion 譯成「草本注入」、Cleanses 譯成「清洁」, 誤譯"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_ChickenOat": {
+    "as1_value": "浓缩咸香鸡肉高汤 - 厚重盐渍家禽牛脂波浪\n烤燕麦谷物粘合剂和尖锐明显的涩味和苦味绿茶余味",
+    "value": "浓缩咸香鸡肉高汤 - 浓重的盐渍禽类脂油\n烤燕麦谷物粘合剂和尖锐明显的涩味和苦味绿茶余味",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN Poultry tallow 譯成「家禽牛脂」(牛脂錯) 並硬譯 wave 為「波浪」"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_CocoaMintWrapper": {
+    "as1_value": "致密85%%可可固体, 注入椰子脂肪中链甘油三酯",
+    "value": "致密的百分之八十五可可固体, 注入椰子脂肪中链甘油三酯",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：英文用文字寫 85 percent, 契約規定寫「百分之 N」; CN 寫成「85%%」, 非格式化字串時會顯示兩個 %"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_FatBar": {
+    "as1_value": "85%%高可可块, 注入椰子脂肪以快速提供热能",
+    "value": "百分之八十五高可可块, 注入椰子脂肪以快速提供热能",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：同 CocoaMintWrapper: 85 percent 不寫 %%"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_ColdHerringOpen": {
+    "as1_value": "油浸波罗的海鲱鱼罐头, 浸在无味油中\n气味浓烈到足以警告50米半径内的每一名PMC",
+    "value": "油浸波罗的海鲱鱼罐头, 浸在无味油中\n 气味浓烈到足以惊动方圆50米内的每一名PMC",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN Alert 譯成「警告」, 應為驚動; 補回英文第二行開頭空格"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_ComberryCandy": {
+    "as1_value": "酸涩的深紫色糖锭, 由煮制的悬钩子果花蜜制成\n外层裹着闪亮的粗粒蔗糖结晶外壳",
+    "value": "酸涩的深紫色糖锭, 由熬煮的康伯莓花蜜制成\n外层裹着闪亮的粗粒蔗糖结晶外壳",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN comberry 譯成「悬钩子」, 與 ItemName CN「康伯莓糖壳硬糖」不一致"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_CrudePill": {
+    "as1_value": "未上漆的淡黄色片剂, 装于微小的手工密封透明塑料套中\n吞咽时极苦且粉感 - 10分钟内以令人震惊的\n抖动肾上腺素浪潮冲击系统, 迫使双眼睁大 - 完全锁定疲劳",
+    "value": "未上糖衣的淡黄色片剂, 装于微小的手工密封透明塑料套中\n吞咽时极苦且有粉笔味 - 10分钟内一阵令人震颤的\n肾上腺素冲击全身, 迫使双眼睁大 - 完全压制疲劳",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN Unvarnished 譯成「未上漆」、locking down fatigue 譯成「锁定疲劳」、System 譯成「系统」, 誤譯"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_DiamondCity": {
+    "as1_value": "临时午餐包, 用蜡纸新闻纸包裹并系紧\n用体育场作物和当地牲畜拼凑的绳子",
+    "value": "临时拼凑的午餐包, 用涂蜡旧报纸包裹并以麻绳系紧\n由体育场种植的作物和当地牲畜拼凑而成",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN 把「由體育場作物和牲畜拼湊」接到繩子上, 主詞錯 (拼湊的是午餐包)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_DriedBeefChili": {
+    "as1_value": "商业包装的西部餐 - 需200ml水复水\n但如果绝望或困在海关交火中可以生嚼",
+    "value": "商业包装的西式餐 - 需200ml水复水\n但如果绝望或困在海关交火中可以生嚼",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN Western meal 譯成「西部餐」(美國西部), 應為西式"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_DriedTato": {
+    "as1_value": "皱巴巴的日晒土豆 - 皮又厚又韧, 表面沾着细碎的废土沙砾",
+    "value": "皱巴巴的日晒番茄薯 - 皮又厚又韧, 表面沾着细碎的废土沙砾",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN tato (番茄薯) 譯成土豆, 與 ItemName CN「整颗番茄薯干」不一致"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_DustBowlSoft": {
+    "as1_value": "盐水浇在尘碗硬饼干上, 使其软化",
+    "value": "盐水浇在尘暴硬饼干上, 使其软化",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN Dust-Bowl 譯成「尘碗」, 與 ItemName CN「尘暴硬饼干」不一致"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_EFTmreBox": {
+    "as1_value": "付出巨大代价撤离 - 吃饱再走版本",
+    "value": "付出巨大代价撤离 - Cheeki breeki 晚餐版",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN 把 Cheeki breeki dinner edition 改寫成「吃饱再走版本」, 梗與 dinner 都不見了; 照 CH 保留原梗"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_FatBlocks": {
+    "as1_value": "丰富咸香的牛脂油脂涂层, 覆以令人目眩的麻木舌头的\n四川辣椒素波浪, 带胡椒粒灰壳的尖锐烟熏碱性余味",
+    "value": "丰富咸香的牛脂油脂, 裹着一波令人目眩、舌头发麻的\n四川辣椒素, 带有花椒灰外壳的尖锐烟熏碱味余韵",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN Peppercorn (四川花椒) 譯成「胡椒粒」, 與同 MOD FatBlocksPouch「四川花椒」不一致"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_FermentedMilk": {
+    "as1_value": "浓稠酸味淡黄色牛奶, 从压碎的半个变质野生\n橡子和松子中榨取, 用雨水浸泡以浸出苦涩单宁",
+    "value": "浓稠酸味的淡黄色奶液, 从压碎的半变质野生\n橡子和松子中榨取, 这些坚果先用雨水浸泡以去除苦涩单宁",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN semi-spoiled 譯成「半个变质」, 意思錯"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_GraveFlour": {
+    "as1_value": "灰色骨干饼干, 印有模糊护符, 碎裂时发出如折枝般的声音",
+    "value": "灰色干透的饼干, 印有晦涩的护符, 碎裂时发出如折断树枝般的声音",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN bone-dry 譯成「骨干」(骨幹), 意思錯"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_GreenInfusion": {
+    "as1_value": "纯净的实验室级饮用水, 浸入亚临床液体化提取物\n取自亚克雷变异的绿草药株 - 呈现淡淡的荧光",
+    "value": "纯净的实验室级饮用水, 浸入亚临床液体化提取物\n取自亚克雷翠绿系绿草药株 - 呈现淡淡的荧光",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN virent (翠綠) 譯成「变异」, 與 CH 及同 MOD FieldGreen CN「亚克雷翠绿系」不一致"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_HadalZeroBook": {
+    "as1_value": "从哈达尔零号深海站打捞的浸水日志\n300页关于读水 - 追踪 - 和耐心突刺的战壕检验笔记\n第100页获得钓鱼 - 第200页获得追踪 - 第300页获得长矛",
+    "value": "从超深渊零点深海站打捞的浸水日志\n300页关于读水 - 追踪足迹 - 和耐心突刺的海沟检验笔记\n第100页获得钓鱼 - 第200页获得追踪 - 第300页获得长矛",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：Hadal Zero 照 ItemName「超深淵零點/超深渊零点的打捞」(CH 原留英文、CN 原譯哈达尔零号); CN trench-tested 譯成「战"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_MREChroniclesBook": {
+    "as1_value": "关于各个时代和维度的即食餐权威野外指南\n300页的单兵口粮历史 - 野外笔记 - 和生存烹饪技术记录\n第100页获得采集 - 第200页获得烹饪 - 第300页获得急救",
+    "value": "关于各个时代和维度的即食餐权威野外指南\n300页的单兵口粮历史 - 野外笔记 - 和生存烹饪技术记录\n第100页获得搜寻 - 第200页获得烹饪 - 第300页获得急救",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：技能名 Foraging 照官方簡中 IGUI_perks_Foraging「搜寻」, 不是「采集」"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_KashaMushroomOpen": {
+    "as1_value": "完整的烘焙荞麦粒, 浇在\n野生蘑菇、洋葱和葵花籽油的浓汁上",
+    "value": "完整的烘焙荞麦粒, 浇满\n野生蘑菇、洋葱和葵花籽油熬成的浓汁",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN「浇在…浓汁上」把淋醬方向寫反 (是醬汁淋在蕎麥上)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_KeroseneCanEmpty": {
+    "as1_value": "冲洗过 - 大部分 - 储存风险自负",
+    "value": "冲洗过 - 大概吧 - 储存时嗅觉风险自负",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN 漏 Olfactory (嗅覺), 且 Mostly 譯成「大部分」語意不通"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_MGsSpork": {
+    "as1_value": "伊斯拉莫尔的汤匙 - 用来喝古代英雄的汤. 也能喝炖菜",
+    "value": "伊斯格拉莫尔的汤勺 - 用来喝古代英雄的汤. 也能喝炖菜",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：Ysgramor 照 ItemName「伊斯格拉莫爾的湯匙 / 伊斯格拉莫尔的汤勺」(CH 漏「爾」、CN 漏「格」)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_MarrowAsh": {
+    "as1_value": "真空密封袋装骨髓和灰浆",
+    "value": "真空密封袋装骨髓灰烬浆",
+    "reason": "2026-11-07 #1298–#1308 批次：舊譯稽核：CN Ash Slurry 譯成「灰浆」(砌牆砂漿), 照 ItemName CN「骨髓灰烬浆」"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnEerie_tooltip": {
+    "as1_value": "切换诡异包: 幽灵迷雾、游荡幽魂、诡异深渊、生物公司、诅咒口粮.",
+    "value": "切换诡异包: 幻雾、游荡幽灵、邪异深渊、Bio-Corp、诅咒口粮、地下墓穴包.",
+    "reason": "2026-11-07 #1298–#1308 批次：上游改英文：Toggle spooky packs: Phantom Fog, Wandering Specter, Eldritc"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnPostApoc_tooltip": {
+    "as1_value": "切换废土风格包: 拾荒者包、锈蚀块、终端口粮、废料箱、劫掠者口粮、煤油箱、灰烬地住民包、临时拼凑套件、钻石城、发光海、邪教徒收获、淤泥包、油脂手工、地下地铁.",
+    "value": "切换废土风格包: 拾荒包、锈蚀蛋白块、终末口粮、拾荒者盒、掠夺者口粮、煤油罐、灰原采集者包、临时拼凑套装、钻石城、光辉之海、邪教徒收获、泥浆包、油渍蜡帆布牛皮纸包装、深层地铁、废土套袋.",
+    "reason": "2026-11-07 #1298–#1308 批次：上游改英文：Toggle wasteland-style packs: Scav Pak, Rusted Block, Termin"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnTarkov_tooltip": {
+    "as1_value": "将塔科夫包与上古卷轴分开切换: USEC包、拾荒者特别版、特种部队、7号菜单.",
+    "value": "将塔科夫包与上古卷轴分开切换: USEC 包、拾荒特制、俄罗斯特种部队、7 号套餐、北方路线.",
+    "reason": "2026-11-07 #1298–#1308 批次：上游改英文：Toggle Tarkov packs separately from Elder Scrolls: USEC Pack"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnMilitary_tooltip": {
+    "as1_value": "切换战斗口粮、橄榄单兵口粮、寒冷天气、丛林、城市、特种部队、海上、危险、沙漠侦察、山地狙击手、笔记本套件、23号菜单、军规、单兵口粮、8号菜单、北方先锋、苔原巡逻队、冰川边境、南极口粮及相关包.",
+    "value": "切换战斗口粮、橄榄绿 MRE、寒地、丛林、城市、特种部队、海上、危险区、沙漠侦察、山地狙击手、笔记本套装、#23 号套餐、军规、MRE、8 号套餐、北方先锋、冻原巡逻、冰川之境、南极口粮、第一类补给、切尔诺贝利口粮及相关包.",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：沙盒清單短名對齊 ItemName (方向 5); 包名內的 MRE 照 CN ItemName 保留 MRE (例: 军用 MRE 合集)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SweetrollBar": {
+    "as1_value": "致密高热量蛋白棒, 注入\n传统天际甜卷的甜香草奶油釉",
+    "value": "致密高热量蛋白棒, 注入香甜的香草奶油糖霜\n源自传统天际甜面包卷, 压制成口粮棒, 供漫漫长路食用\n卫兵从第一纪元起就一直在偷这东西, 要是有人拿走你的, 别说没警告过你",
+    "reason": "2026-11-07 #1298–#1308 批次：上游改英文：Dense high-calorie protein bar Infused with the Sweet vanill"
+  },
+  "Tooltip.json|IGUI_MGsMRE_CentrifugedCoreHot": {
+    "as1_value": "热复原离心蛋白核心",
+    "value": "复水离心蛋白核心 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.CentrifugedCoreOpen; Lua setNa"
+  },
+  "Tooltip.json|IGUI_MGsMRE_CentrifugedCoreHotSauce": {
+    "as1_value": "热复原离心蛋白核心 + 辣酱",
+    "value": "复水离心蛋白核心 (热) + 辣酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.CentrifugedCoreOpen; Lua setNa"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_CentrifugedCoreHot": {
+    "as1_value": "热复原离心蛋白核心",
+    "value": "复水离心蛋白核心 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.CentrifugedCoreOpen; 說明即物品名"
+  },
+  "Tooltip.json|IGUI_MGsMRE_AlgalKelpHot": {
+    "as1_value": "热藻类营养酱和海带蛋白脆片",
+    "value": "藻类营养糊与海带蛋白脆片 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.AlgalKelpOpen; Lua setName 用作物"
+  },
+  "Tooltip.json|IGUI_MGsMRE_AlgalKelpHotSauce": {
+    "as1_value": "热藻类营养酱和海带蛋白脆片 + 辣酱",
+    "value": "藻类营养糊与海带蛋白脆片 (热) + 辣酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.AlgalKelpOpen; Lua setName 用作物"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_AlgalKelpHot": {
+    "as1_value": "热藻类营养酱和海带蛋白脆片",
+    "value": "藻类营养糊与海带蛋白脆片 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.AlgalKelpOpen; 說明即物品名"
+  },
+  "Tooltip.json|IGUI_MGsMRE_PorkPotatoHot": {
+    "as1_value": "热猪肉土豆猪油浓汤",
+    "value": "猪肉土豆猪油浓汤 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.PorkPotato; Lua setName 用作物品名"
+  },
+  "Tooltip.json|IGUI_MGsMRE_PorkPotatoHotSauce": {
+    "as1_value": "热猪肉土豆猪油浓汤 + 辣酱",
+    "value": "猪肉土豆猪油浓汤 (热) + 辣酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.PorkPotato; Lua setName 用作物品名"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_PorkPotatoHot": {
+    "as1_value": "热猪肉土豆猪油浓汤",
+    "value": "猪肉土豆猪油浓汤 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.PorkPotato; 說明即物品名"
+  },
+  "Tooltip.json|IGUI_MGsMRE_JasmineBeefHot": {
+    "as1_value": "热香辣盐渍牛肉条和茉莉香米",
+    "value": "辣味盐腌牛肉条配茉莉香米 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.JasmineBeefOpen; Lua setName 用"
+  },
+  "Tooltip.json|IGUI_MGsMRE_JasmineBeefHotSauce": {
+    "as1_value": "热香辣盐渍牛肉条和茉莉香米 + 辣酱",
+    "value": "辣味盐腌牛肉条配茉莉香米 (热) + 辣酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.JasmineBeefOpen; Lua setName 用"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_JasmineBeefHot": {
+    "as1_value": "热香辣盐渍牛肉条和茉莉香米",
+    "value": "辣味盐腌牛肉条配茉莉香米 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.JasmineBeefOpen; 說明即物品名"
+  },
+  "Tooltip.json|IGUI_MGsMRE_SpicedLambHot": {
+    "as1_value": "热香辣小扁豆羊肉脂炖菜",
+    "value": "香料小扁豆羊油炖菜 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.SpicedLamb; Lua setName 用作物品名"
+  },
+  "Tooltip.json|IGUI_MGsMRE_SpicedLambHotSauce": {
+    "as1_value": "热香辣小扁豆羊肉脂炖菜 + 辣酱",
+    "value": "香料小扁豆羊油炖菜 (热) + 辣酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.SpicedLamb; Lua setName 用作物品名"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpicedLambHot": {
+    "as1_value": "热香辣小扁豆羊肉脂炖菜",
+    "value": "香料小扁豆羊油炖菜 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.SpicedLamb; 說明即物品名"
+  },
+  "Tooltip.json|IGUI_MGsMRE_VenisonRiceHot": {
+    "as1_value": "热杜松腌制鹿肉和野米",
+    "value": "杜松腌鹿肉配野米 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.VenisonRiceOpen; Lua setName 用"
+  },
+  "Tooltip.json|IGUI_MGsMRE_VenisonRiceHotSauce": {
+    "as1_value": "热杜松腌制鹿肉和野米 + 辣酱",
+    "value": "杜松腌鹿肉配野米 (热) + 辣酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.VenisonRiceOpen; Lua setName 用"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_VenisonRiceHot": {
+    "as1_value": "热杜松腌制鹿肉和野米",
+    "value": "杜松腌鹿肉配野米 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.VenisonRiceOpen; 說明即物品名"
+  },
+  "Tooltip.json|IGUI_MGsMRE_TroutCattailHot": {
+    "as1_value": "热烟熏河鳟和香蒲根泥",
+    "value": "烟熏河鳟配香蒲根泥 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.TroutCattailOpen; Lua setName "
+  },
+  "Tooltip.json|IGUI_MGsMRE_TroutCattailHotSauce": {
+    "as1_value": "热烟熏河鳟和香蒲根泥 + 辣酱",
+    "value": "烟熏河鳟配香蒲根泥 (热) + 辣酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.TroutCattailOpen; Lua setName "
+  },
+  "Tooltip.json|Tooltip_MGsMRE_TroutCattailHot": {
+    "as1_value": "热烟熏河鳟和香蒲根泥",
+    "value": "烟熏河鳟配香蒲根泥 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.TroutCattailOpen; 說明即物品名"
+  },
+  "Tooltip.json|IGUI_MGsMRE_PottedWhaleHot": {
+    "as1_value": "热罐焖鲸脂和驯鹿骨髓",
+    "value": "罐封鲸脂与驯鹿骨髓 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.PottedWhaleOpen; Lua setName 用"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_PottedWhaleHot": {
+    "as1_value": "热罐焖鲸脂和驯鹿骨髓",
+    "value": "罐封鲸脂与驯鹿骨髓 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.PottedWhaleOpen; 說明即物品名"
+  },
+  "Tooltip.json|IGUI_MGsMRE_SalisburySlurryHot": {
+    "as1_value": "热加压索尔兹伯里牛肉饼酱",
+    "value": "加压索尔兹伯里牛排糊 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.SalisburySlurry; Lua setName 用"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SalisburySlurryHot": {
+    "as1_value": "热加压索尔兹伯里牛肉饼酱",
+    "value": "加压索尔兹伯里牛排糊 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.SalisburySlurry; 說明即物品名"
+  },
+  "Tooltip.json|IGUI_MGsMRE_LambChickpeaHot": {
+    "as1_value": "热香辣羊肉鹰嘴豆炖菜",
+    "value": "香料羊肉鹰嘴豆炖菜 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.LambChickpea; Lua setName 用作物品"
+  },
+  "Tooltip.json|IGUI_MGsMRE_LambChickpeaHotSauce": {
+    "as1_value": "热香辣羊肉鹰嘴豆炖菜 + 辣酱",
+    "value": "香料羊肉鹰嘴豆炖菜 (热) + 辣酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.LambChickpea; Lua setName 用作物品"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_LambChickpeaHot": {
+    "as1_value": "热香辣羊肉鹰嘴豆炖菜",
+    "value": "香料羊肉鹰嘴豆炖菜 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.LambChickpea; 說明即物品名"
+  },
+  "Tooltip.json|IGUI_MGsMRE_GoatBeansHot": {
+    "as1_value": "热炖山羊肉白豆炖菜",
+    "value": "焖山羊肉白豆炖菜 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.GoatBeansOpen; Lua setName 用作物"
+  },
+  "Tooltip.json|IGUI_MGsMRE_GoatBeansHotSauce": {
+    "as1_value": "热炖山羊肉白豆炖菜 + 辣酱",
+    "value": "焖山羊肉白豆炖菜 (热) + 辣酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.GoatBeansOpen; Lua setName 用作物"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_GoatBeansHot": {
+    "as1_value": "热炖山羊肉白豆炖菜",
+    "value": "焖山羊肉白豆炖菜 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.GoatBeansOpen; 說明即物品名"
+  },
+  "Tooltip.json|IGUI_MGsMRE_PorkPeasHot": {
+    "as1_value": "热盐渍猪肉干豌豆粥",
+    "value": "咸猪肉干豌豆粥 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.PorkPeasOpen; Lua setName 用作物品"
+  },
+  "Tooltip.json|IGUI_MGsMRE_PorkPeasHotSauce": {
+    "as1_value": "热盐渍猪肉干豌豆粥 + 辣酱",
+    "value": "咸猪肉干豌豆粥 (热) + 辣酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.PorkPeasOpen; Lua setName 用作物品"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_PorkPeasHot": {
+    "as1_value": "热盐渍猪肉干豌豆粥",
+    "value": "咸猪肉干豌豆粥 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.PorkPeasOpen; 說明即物品名"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpatzHot": {
+    "as1_value": "热牛肉饼配番茄酱",
+    "value": "番茄酱汁牛肉饼 (热)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：加熱名稱照未加熱物品 ItemName 組字, 只差「熱」後綴 (方向 3); 對齊 MGsMRE.SpatzOpen; 說明即物品名"
+  },
+  "Print_Media.json|Print_Media_MGsMRE_YourHealth_text": {
+    "as1_value": "安布雷拉健康理念简介: 你的健康就是我们的底线, 而底线不容更改. 副作用请咨询Safsprin.",
+    "value": "保护伞健康理念简介: 您的健康就是我们的底线, 而底线不容更改. 副作用请咨询Safsprin.",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：CN Umbrella 一律寫「保护伞」, 對齊 ItemName CN (方向 1); 手冊標題語對齊 ItemName CN「您的健康就是我们的底线」(方向"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnUmbrella": {
+    "as1_value": "生成安布雷拉公司口粮",
+    "value": "生成保护伞公司口粮",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：CN Umbrella 一律寫「保护伞」, 對齊 ItemName CN (方向 1)"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnUmbrella_tooltip": {
+    "as1_value": "允许安布雷拉公司主题的单兵口粮套件和收藏箱出现在战利品中.",
+    "value": "允许保护伞公司主题的单兵口粮套件和合集盒出现在战利品中.",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：CN Umbrella 一律寫「保护伞」, 對齊 ItemName CN (方向 1); 合集盒對齊 ItemName CN「保护伞公司合集盒」(方向 5)"
+  },
+  "Tooltip.json|MGsMRE_YourHealth_text": {
+    "as1_value": "安布雷拉健康理念简介: 你的健康就是我们的底线, 而底线不容更改. 副作用请咨询Safsprin.",
+    "value": "保护伞健康理念简介: 您的健康就是我们的底线, 而底线不容更改. 副作用请咨询Safsprin.",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：CN Umbrella 一律寫「保护伞」, 對齊 ItemName CN (方向 1); 手冊標題語對齊 ItemName CN「您的健康就是我们的底线」(方向"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_KashaMushroom": {
+    "as1_value": "生长在安布雷拉未公开经营的国家\n产自一个完全未被安布雷拉公司触及的隐秘国度\n因此完全不含致突变病毒生物制品或药物稳定剂",
+    "value": "生长在保护伞未公开经营的国家\n产自一个完全未被保护伞公司触及的隐秘国度\n因此完全不含致突变病毒生物制品或药物稳定剂",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：CN Umbrella 一律寫「保护伞」, 對齊 ItemName CN (方向 1)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_Safsprin": {
+    "as1_value": "安布雷拉的家用止痛药\n两片药 - 一杯水, 换来安静的服从",
+    "value": "保护伞的家用止痛药\n两片药 - 一杯水, 换来安静的服从",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：CN Umbrella 一律寫「保护伞」, 對齊 ItemName CN (方向 1)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_UBCS": {
+    "as1_value": "橄榄绿蒸煮袋, 印着红色雨伞徽记 - U.B.C.S.财产 - 失窃将被追究.\n安布雷拉生化灾害对策服务处 - 前苏联雇佣兵的硬派作风",
+    "value": "橄榄绿蒸煮袋, 印着红色雨伞徽记 - U.B.C.S.财产 - 失窃将被追究.\n保护伞生化灾害对策服务处 - 前苏联雇佣兵的硬派作风",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：CN Umbrella 一律寫「保护伞」, 對齊 ItemName CN (方向 1)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_USSration": {
+    "as1_value": "安布雷拉保安服务处 - HUNK的黑色行动单位 - 安静. 冷静. 专业\n哑光黑箱体 - 除了一个红白相间的Mmbrella小标签外没有任何标记\nU.S.S.财产. 如拾得 - 请归还. 我们无论如何都会找到它.",
+    "value": "保护伞保安服务处 - HUNK的黑色行动单位 - 安静. 冷静. 专业\n哑光黑箱体 - 除了一个红白相间的保护伞小标签外没有任何标记\nU.S.S.财产. 如拾得 - 请归还. 我们无论如何都会找到它.",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：CN Umbrella 一律寫「保护伞」, 對齊 ItemName CN (方向 1); CN Umbrella 一律寫「保护伞」, 對齊 ItemName C"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_UmbrellaAccPacket": {
+    "as1_value": "标准安布雷拉公司附件包\n静音开袋包装 - 保证不会发出窸窣声",
+    "value": "标准保护伞公司配件包\n静音开袋包装 - 保证不会发出窸窣声",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：CN Umbrella 一律寫「保护伞」, 對齊 ItemName CN (方向 1); 對齊 ItemName CN「保护伞公司配件包」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_UmbrellaCreamer": {
+    "as1_value": "安布雷拉公司奶精",
+    "value": "保护伞公司咖啡伴侣",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：CN Umbrella 一律寫「保护伞」, 對齊 ItemName CN (方向 1); 對齊 ItemName CN「保护伞公司咖啡伴侣」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_UmbrellaGum": {
+    "as1_value": "安布雷拉公司口香糖片 - 薄荷味, 持久有效",
+    "value": "保护伞公司口香糖片 - 薄荷味, 持久有效",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：CN Umbrella 一律寫「保护伞」, 對齊 ItemName CN (方向 1)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_UmbrellaSalt": {
+    "as1_value": "安布雷拉公司盐",
+    "value": "保护伞公司盐",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：CN Umbrella 一律寫「保护伞」, 對齊 ItemName CN (方向 1)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_UmbrellaSugar": {
+    "as1_value": "安布雷拉公司糖",
+    "value": "保护伞公司糖",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：CN Umbrella 一律寫「保护伞」, 對齊 ItemName CN (方向 1)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_YourHealth": {
+    "as1_value": "安布雷拉的健康宣传册\n你的健康就是我们的底线. 而底线不容更改.",
+    "value": "保护伞的健康宣传册\n您的健康就是我们的底线. 而底线不容更改.",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：CN Umbrella 一律寫「保护伞」, 對齊 ItemName CN (方向 1); 手冊標題語對齊 ItemName CN「您的健康就是我们的底线」(方向"
+  },
+  "Print_Media.json|Print_Media_MGsMRE_UmbrellaSmile_title": {
+    "as1_value": "微笑雨伞员工手册",
+    "value": "UmbrellaSmile 员工小册子",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：_title 對齊 ItemName CN「UmbrellaSmile 员工小册子」(方向 6)"
+  },
+  "Tooltip.json|MGsMRE_UmbrellaSmile_title": {
+    "as1_value": "微笑雨伞员工手册",
+    "value": "UmbrellaSmile 员工小册子",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：_title 對齊 ItemName CN「UmbrellaSmile 员工小册子」(方向 6)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_UmbrellaSmile": {
+    "as1_value": "企业士气手册, 微笑雨伞特别版\n保持积极心态是强制性的生产力要求",
+    "value": "企业士气手册, UmbrellaSmile 版\n保持积极心态是强制性的生产力要求",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：計畫名對齊 ItemName CN 保留 UmbrellaSmile (方向 6)"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnMisc_tooltip": {
+    "as1_value": "切换杂项包: 罗马鲈鱼、日本忍者、香草包.",
+    "value": "切换杂项包: 罗马鲈鱼、日本忍者、原版糖果包.",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：開包配方 Open_VanillaPack 產出全是 Base.* 原版物品 (Crackers, Chocolate, Wine 等), Vanilla 指原"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_HorkerMammoth": {
+    "as1_value": "致密厚重盐卤霍克肉块\n混合刺鼻陈年猛犸奶酪和猪油",
+    "value": "致密厚重盐卤海象肉块\n混合刺鼻陈年猛犸奶酪和猪油",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Horker 對齊 ItemName CN「海象」(方向 6)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_VoidEngineBook": {
+    "as1_value": "一本从虚空引擎低语中转录的狂热手稿\n300页关于调理身体 - 无声移动 - 和隐密行走的深奥教义\n第100页获得健身 - 第200页获得灵活 - 第300页获得轻步",
+    "value": "一本从虚空引擎低语中转录的狂热手稿\n300页关于调理身体 - 无声移动 - 和隐密行走的深奥教义\n第100页获得体格 - 第200页获得灵活 - 第300页获得轻巧",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：技能名照官方簡中 IGUI_perks_Fitness「体格」、IGUI_perks_Lightfooted「轻巧」(方向 6)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_NewspaperTissue": {
+    "as1_value": "粗剪方形新闻纸 - 生病时抑制打喷嚏和咳嗽 - 可用作引火物",
+    "value": "粗剪方形新闻纸 - 生病时可掩住喷嚏和咳嗽声 - 可用作引火物",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Muffles 是壓低聲音, 不是抑制症狀; 照 MGsTissue 既有寫法「可掩住喷嚏和咳嗽声」(方向 6)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiritWipes": {
+    "as1_value": "空灵清洁湿巾\n生病时抑制打喷嚏\n可用作引火物",
+    "value": "空灵清洁湿巾\n生病时可掩住喷嚏声\n可用作引火物",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Muffles 是壓低聲音, 不是抑制症狀 (方向 6)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_TatoCrisps": {
+    "as1_value": "皱缩重盐干土豆皮和\n茄科果皮, 提供尖锐泥土脆感",
+    "value": "皱缩重盐干番茄薯皮和\n茄科果皮, 提供尖锐泥土脆感",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Tato 對齊 ItemName CH「番茄薯皮脆片」(方向 6); Tato 對齊 ItemName CN「番茄薯皮脆片」(方向 6)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_TripeBrine": {
+    "as1_value": "移除牛肚卷后剩余的盐醋卤水\n将其加入尘暴硬面包中制成更可口的餐食",
+    "value": "移除牛肚卷后剩余的盐醋卤水\n将其加入尘暴硬饼干中制成更可口的餐食",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Dust-Bowl Hardtack 對齊 ItemName CH「塵暴硬餅乾」(方向 6); Dust-Bowl Hardtack 對齊 ItemName C"
+  },
+  "Print_Media.json|Print_Media_MGsMRE_BOWcard_title": {
+    "as1_value": "B.O.W.野外识别卡",
+    "value": "B.O.W. 野外识别卡",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：_title 對齊 ItemName CN (方向 5)"
+  },
+  "Print_Media.json|Print_Media_MGsMRE_ExfilFailure_title": {
+    "as1_value": "撤离失败指示 (机密)",
+    "value": "撤离失败应急指示 (机密)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：_title 對齊 ItemName CN (方向 5)"
+  },
+  "Print_Media.json|Print_Media_MGsMRE_Satisfied_title": {
+    "as1_value": "用餐满意度调查 (已预填)",
+    "value": "餐食满意度调查 (已预填)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：_title 對齊 ItemName CN (方向 5)"
+  },
+  "Print_Media.json|Print_Media_MGsMRE_YourHealth_title": {
+    "as1_value": "你的健康就是我们的底线",
+    "value": "您的健康就是我们的底线",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：_title 對齊 ItemName CN (方向 5)"
+  },
+  "Tooltip.json|MGsMRE_BOWcard_title": {
+    "as1_value": "B.O.W.野外识别卡",
+    "value": "B.O.W. 野外识别卡",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：_title 對齊 ItemName CN (方向 5)"
+  },
+  "Tooltip.json|MGsMRE_ExfilFailure_title": {
+    "as1_value": "撤离失败指示 (机密)",
+    "value": "撤离失败应急指示 (机密)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：_title 對齊 ItemName CN (方向 5)"
+  },
+  "Tooltip.json|MGsMRE_Satisfied_title": {
+    "as1_value": "用餐满意度调查 (已预填)",
+    "value": "餐食满意度调查 (已预填)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：_title 對齊 ItemName CN (方向 5)"
+  },
+  "Tooltip.json|MGsMRE_YourHealth_title": {
+    "as1_value": "你的健康就是我们的底线",
+    "value": "您的健康就是我们的底线",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：_title 對齊 ItemName CN (方向 5)"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnMedicalMRE": {
+    "as1_value": "医疗单兵口粮",
+    "value": "医疗 MRE",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：選項名即物品名, 對齊 ItemName CN「医疗 MRE」(方向 5)"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnMedicalMRE_tooltip": {
+    "as1_value": "切换医疗单兵口粮是否在医疗和军事容器中生成, 且不受其他单兵口粮组影响.",
+    "value": "切换医疗 MRE是否在医疗和军事容器中生成, 且不受其他单兵口粮组影响.",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「医疗 MRE」(方向 5)"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnWaterStraw_tooltip": {
+    "as1_value": "切换个人净水吸管是否在医疗和医院容器中生成, 且不受其他物品影响.",
+    "value": "切换个人滤水吸管是否在医疗和医院容器中生成, 且不受其他物品影响.",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「个人滤水吸管」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_WaterStraw": {
+    "as1_value": "个人水过滤吸管\n直接从受污染水源饮用\n无中毒风险\n约20次使用后过滤器堵塞",
+    "value": "个人滤水吸管\n直接从受污染水源饮用\n无中毒风险\n约20次使用后过滤器堵塞",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「个人滤水吸管」(方向 5)"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnNature_tooltip": {
+    "as1_value": "切换荒野风格口粮: 日晒、贫瘠松林、高山峰顶、河流三角洲、深洞、亚苔原、沙丘奔跑者、绿洲游牧民、盐滩、果园蜂巢、潮池、沼泽潜行者、高耸峭壁.",
+    "value": "切换荒野风格口粮: 日晒、松林荒原、高山峰顶、河口三角洲、深洞、亚北极苔原、沙丘行者、绿洲游牧民、盐滩、果园蜂巢、潮池、沼泽潜行者、高崖.",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：沙盒清單短名對齊 ItemName (方向 5)"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnVaultStasis_tooltip": {
+    "as1_value": "切换避难所 / 静滞包: 低温舱、化石袋、静滞生存包、蛛丝袋、生物穹顶包、防静电箔、密封瓦、安全屋套件、地堡科技、避难所安保、低温标准.",
+    "value": "切换避难所 / 静滞包: 低温休眠套舱、化石袋、静滞求生包、蛛丝袋、生物穹顶包、防静电铝箔、密封砖、安全屋套件、地堡科技、避难所安保、低温标准.",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：沙盒清單短名對齊 ItemName (方向 5)"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnDeepSpace_tooltip": {
+    "as1_value": "切换轨道包: 轨道单兵口粮、超级包、舱外活动套件、静滞包、极光口粮、深空虚空.",
+    "value": "切换轨道包: 轨道 MRE、超跃迁包、EVA 套装、静滞包、极光口粮、深空虚无.",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：沙盒清單短名對齊 ItemName (方向 5)"
+  },
+  "Sandbox.json|Sandbox_MGsMRE_SpawnSpiffoSpecials": {
+    "as1_value": "生成Spiffo公司单兵口粮储藏箱",
+    "value": "生成斯皮福公司单兵口粮储藏箱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Spiffo 照 ItemName CN 與官方簡中寫「斯皮福」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_AppleQuail": {
+    "as1_value": "干鹌鹑胸配苹果浓缩酱",
+    "value": "鹌鹑胸肉干配苹果浓汁",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：說明即物品名, 對齊 ItemName CN (方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_AshStarch": {
+    "as1_value": "焦橡树木灰面粉饼干, 浸在桦树茸蘑菇和烤大麦冲泡饮中",
+    "value": "焦黑橡木灰面粉咸饼干, 浸在白桦茸烘焙大麦茶中",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CH「白樺茸烘焙大麥茶」(方向 5); 兩個物品名對齊 ItemName CN「焦黑橡木灰面粉咸饼干」「白桦茸烘焙大麦茶」(方向 "
+  },
+  "Tooltip.json|Tooltip_MGsMRE_BurritoBowl": {
+    "as1_value": "棕色铝箔蒸煮袋装的鸡肉丝墨西哥卷饼碗",
+    "value": "棕色铝箔蒸煮袋装的鸡肉丝墨西哥拌饭",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Burrito Bowl 對齊 ItemName CH「墨西哥雞肉拌飯」(方向 5); Burrito Bowl 對齊 ItemName CN「墨西哥鸡肉拌饭」"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_BurritoBowlHot": {
+    "as1_value": "滚烫的鸡肉丝墨西哥卷饼碗 - 加热可释放全部风味并提振士气",
+    "value": "滚烫的鸡肉丝墨西哥拌饭 - 加热可释放全部风味并提振士气",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Burrito Bowl 對齊 ItemName CH「墨西哥雞肉拌飯」(方向 5); Burrito Bowl 對齊 ItemName CN「墨西哥鸡肉拌饭」"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_ChocChipCookieOpen": {
+    "as1_value": "填满营养晶体的高热量巧克力碎点心",
+    "value": "填满营养晶体的高热量巧克力豆酥皮点心",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「巧克力豆酥皮点心」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_ChocChipCookiePastry": {
+    "as1_value": "铝箔包装的高热量巧克力碎点心",
+    "value": "铝箔包装的高热量巧克力豆酥皮点心",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「巧克力豆酥皮点心」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_CoffeeThermos": {
+    "as1_value": "高咖啡因咖啡保温瓶",
+    "value": "高咖啡因咖啡保温杯",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「咖啡保温杯」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_TeaThermos": {
+    "as1_value": "黑莲茶保温瓶",
+    "value": "黑莲茶保温杯",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「茶水保温杯」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_EFTarmyCrackersWrapper": {
+    "as1_value": "包装军用饼干",
+    "value": "军用咸饼干 (包装)",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：說明即物品名, 對齊 ItemName CN (方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_EFTewr": {
+    "as1_value": "应急水配给袋 - 干净清爽",
+    "value": "应急配给饮水袋 - 干净清爽",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Emergency Water Ration 對齊 ItemName「緊急配給飲水／应急配给饮水」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_MREewr": {
+    "as1_value": "单兵口粮应急饮用水配给",
+    "value": "MRE 应急配给饮水",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：說明即物品名, 對齊 ItemName (方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_FatBlocksPouch": {
+    "as1_value": "防油袋, 内含9块蘸焦四川花椒的脂肪块",
+    "value": "防油袋, 内含9块蘸花椒的炭烤油脂块",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CH「沾花椒的炭烤油脂塊」(方向 5); 物品名對齊 ItemName CN「蘸花椒的炭烤油脂块」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_HighFatHotChocolate": {
+    "as1_value": "一杯高脂热巧克力",
+    "value": "一杯高脂热可可",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「高脂热可可」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_JalapenoSpread": {
+    "as1_value": "速效钠和脂肪配料 - 完美的饼干润滑剂\n香辣墨西哥辣椒奶酪酱 - 每管3次使用",
+    "value": "速效钠和脂肪配料 - 完美的饼干润滑剂\n香辣墨西哥辣椒芝士酱 - 每管3次使用",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「墨西哥辣椒芝士酱」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_JasmineBeef": {
+    "as1_value": "透气箔纸包装, 内含牛肉条和茉莉米饭",
+    "value": "透气箔纸包装, 内含牛肉条和茉莉香米",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「牛肉条配茉莉香米」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_LuxuryContrast": {
+    "as1_value": "钙化磷虾酱的结构性砂砾咬感与深渊鱼子酱软糖的\n流体爆裂机制交替, 提供卓越的心理重置循环 - 尖锐的\n盐渍焦糖和海浮游生物糖浆液体爆炸瞬间清除虾壳的砂砾粉感\n口感, 掩盖重药性特征, 同时输送大量\n简单碳水化合物以清除深度行动厌倦",
+    "value": "钙化磷虾泥的结构性砂砾咬感与深海鱼子酱软糖的\n流体爆裂机制交替, 提供卓越的心理重置循环 - 尖锐的\n盐渍焦糖和海浮游生物糖浆液体爆炸瞬间清除虾壳的砂砾粉感\n口感, 掩盖重药性特征, 同时输送大量\n简单碳水化合物以清除深度行动厌倦",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「钙化磷虾泥」「深海鱼子酱软糖」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_MusselKelp": {
+    "as1_value": "密封袋装烟熏贻贝和海带膏",
+    "value": "密封袋装烟熏青口海带酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName「煙燻淡菜海帶醬／烟熏青口海带酱」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_NeoNoirAccPacket": {
+    "as1_value": "标准新黑色配件包",
+    "value": "标准新黑色风格配件包",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「新黑色风格配件包」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_PorkPeas": {
+    "as1_value": "真空密封袋, 内含咸猪肉和干豌豆粥",
+    "value": "真空密封袋, 内含咸猪肉干豌豆粥",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CH「鹹豬肉乾豌豆粥」(方向 5); 物品名對齊 ItemName CN「咸猪肉干豌豆粥」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SporeSlabSlice": {
+    "as1_value": "孢子腌制菌饼切片",
+    "value": "孢子腌制蘑菇块切片",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「孢子腌制蘑菇块」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_StasisAccPacket": {
+    "as1_value": "避难所级附件包",
+    "value": "避难所级配件包",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「避难所级配件包」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_StasisBrothCup": {
+    "as1_value": "一杯牛脂汤",
+    "value": "一杯牛羊油高汤",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：說明即物品名, 對齊 ItemName CN (方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_StasisCoffeeCup": {
+    "as1_value": "一杯低温浓缩咖啡",
+    "value": "一杯冷冻浓缩咖啡",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：說明即物品名, 對齊 ItemName CN (方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SynthMREslice": {
+    "as1_value": "崩塌前合成单兵口粮切片",
+    "value": "崩溃前合成 MRE 切片",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「崩溃前合成MRE」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SynthMeatVegOpen": {
+    "as1_value": "融化的低温合成肉和蔬菜炖立方体 - 散发出\n加工牛油和泥土味根茎蔬菜的浓郁咸香香气",
+    "value": "融化的低温合成肉炖蔬菜块 - 散发出\n加工牛油和泥土味根茎蔬菜的浓郁咸香香气",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CH「低溫合成肉燉蔬菜」(方向 5); 物品名對齊 ItemName CN「低温合成肉炖蔬菜」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_WheatCrustSlice": {
+    "as1_value": "小麦硬皮面包切片",
+    "value": "小麦脆皮面包切片",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CH「小麥脆皮麵包」(方向 5); 物品名對齊 ItemName CN「小麦脆皮面包」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_WildApple": {
+    "as1_value": "由野生海棠果 - 红糖和肉桂制成的浓缩物\n用于涂抹在干鹌鹑胸片上",
+    "value": "由野生海棠果 - 红糖和肉桂制成的浓缩物\n用于涂抹在鹌鹑胸肉干片上",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「鹌鹑胸肉干」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_MGsMRECoffeeMug": {
+    "as1_value": "一杯浓煮单兵口粮咖啡 - 消除疲劳, 提神醒脑",
+    "value": "一杯浓煮MRE 咖啡 - 消除疲劳, 提神醒脑",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「马克杯 (MRE 咖啡)」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_MGsMRECocoaMug": {
+    "as1_value": "一杯浓郁的热单兵口粮可可 - 杯中的慰藉",
+    "value": "一杯浓郁的MRE 热可可 - 杯中的慰藉",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「马克杯 (MRE 热可可)」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_MGsMRETeaMug": {
+    "as1_value": "一杯热单兵口粮茶 - 舒缓且滋补",
+    "value": "一杯热 MRE 茶 - 舒缓且滋补",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「马克杯 (MRE 茶)」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoAccPacket": {
+    "as1_value": "Spiffo品牌附件包",
+    "value": "斯皮福品牌配件包",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Spiffo 照 ItemName CN 與官方簡中寫「斯皮福」(方向 5); 物品名對齊 ItemName CN「斯皮福配件包」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoCricketSlab": {
+    "as1_value": "砖块般致密的口粮棒, 由压缩大豆蛋白和\n烘焙昆虫粉制成, 外面裹着一层人造枫糖浆\n上面盖着Spiffo的眨眼笑脸印章",
+    "value": "砖块般致密的口粮棒, 由压缩大豆蛋白和\n烘焙昆虫粉制成, 外面裹着一层人造枫糖浆\n上面盖着斯皮福的眨眼笑脸印章",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Spiffo 照 ItemName CN 與官方簡中寫「斯皮福」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoDrink": {
+    "as1_value": "Spiffo的秘制饮料 - 调配得恰到好处",
+    "value": "斯皮福的秘制饮料 - 调配得恰到好处",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Spiffo 照 ItemName CN 與官方簡中寫「斯皮福」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoDrinkBase": {
+    "as1_value": "Spiffo品牌秘制饮料糖浆",
+    "value": "斯皮福品牌秘制饮料糖浆",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Spiffo 照 ItemName CN 與官方簡中寫「斯皮福」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoMREboxEmpty": {
+    "as1_value": "Spiffo公司单兵口粮箱 - 空着, 可以存放你的战利品",
+    "value": "斯皮福公司单兵口粮箱 - 空着, 可以存放你的战利品",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Spiffo 照 ItemName CN 與官方簡中寫「斯皮福」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoMREtoy": {
+    "as1_value": "这个吉祥物会守望着你的营地 - Spiffo依然相信你 - 把他放下, 就能获得舒适的士气光环.",
+    "value": "这个吉祥物会守望着你的营地 - 斯皮福依然相信你 - 把他放下, 就能获得舒适的士气光环.",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Spiffo 照 ItemName CN 與官方簡中寫「斯皮福」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoMaskedMascot": {
+    "as1_value": "轻量化试制口粮包, 据称由公司保安部门测试\n他们在隔离初期负责看守Spiffo的加盟店仓库",
+    "value": "轻量化试制口粮包, 据称由公司保安部门测试\n他们在隔离初期负责看守斯皮福的加盟店仓库",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Spiffo 照 ItemName CN 與官方簡中寫「斯皮福」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoPeanutSlabPouch": {
+    "as1_value": "致密的高蛋白能量块, 裹在防潮的铝箔袋中\n袋上印着举着警示旗的Spiffo",
+    "value": "致密的高蛋白能量块, 裹在防潮的铝箔袋中\n袋上印着举着警示旗的斯皮福",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Spiffo 照 ItemName CN 與官方簡中寫「斯皮福」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoSurvivorRationBox": {
+    "as1_value": "由Spiffo公司办公室推出的提振士气慰问口粮\n就在诺克斯事件彻底失控之前\n旨在让关键岗位的工人在危机中保持笑容",
+    "value": "由斯皮福公司办公室推出的提振士气慰问口粮\n就在诺克斯事件彻底失控之前\n旨在让关键岗位的工人在危机中保持笑容",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Spiffo 照 ItemName CN 與官方簡中寫「斯皮福」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoTissues": {
+    "as1_value": "Spiffo品牌纸巾包",
+    "value": "斯皮福品牌纸巾包",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Spiffo 照 ItemName CN 與官方簡中寫「斯皮福」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoWipe": {
+    "as1_value": "Spiffo品牌酒精湿巾",
+    "value": "斯皮福品牌酒精湿巾",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Spiffo 照 ItemName CN 與官方簡中寫「斯皮福」(方向 5); 物品名對齊 ItemName CH「斯皮福酒精棉片」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_SpiffoWipePack": {
+    "as1_value": "Spiffo品牌酒精湿巾包",
+    "value": "斯皮福品牌酒精湿巾包",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：Spiffo 照 ItemName CN 與官方簡中寫「斯皮福」(方向 5); 物品名對齊 ItemName CH「斯皮福酒精棉片包」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_AccPacket": {
+    "as1_value": "标准军用附件包",
+    "value": "标准军用配件包",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：accessory packet 對齊同 MOD ItemName CN「配件包」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_MGsAlcoholWipeOpen": {
+    "as1_value": "打开的酒精布\n紧急情况下消毒伤口",
+    "value": "打开的酒精擦拭布\n紧急情况下消毒伤口",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「MGs 酒精擦拭布」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_MGsCSpread": {
+    "as1_value": "单兵口粮中的奶酪酱",
+    "value": "单兵口粮中的芝士酱",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：物品名對齊 ItemName CN「小份芝士酱」(方向 5)"
+  },
+  "Tooltip.json|Tooltip_MGsMRE_UmbrellaCare": {
+    "as1_value": "光亮的白红色口粮包, 印着雨伞公司的徽记\n上面写着 - 我们的业务就是生命本身™-",
+    "value": "光亮的白红色口粮包, 印着保护伞徽记\n上面写着 - 我们的业务就是生命本身™-",
+    "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：CN Umbrella 一律寫「保护伞」, 對齊 ItemName CN (方向 1); umbrella crest 指保护伞公司徽記, 「雨伞公司」是另一種"
   }
 }
