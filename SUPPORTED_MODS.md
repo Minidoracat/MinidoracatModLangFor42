@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1491 個 Workshop 模組**（2148 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
+共支援 **1492 個 Workshop 模組**（2149 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1489,6 +1489,7 @@
 | [Wound Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3819438691) | Wound Expansion 傷口擴充 | 以原版風格擴充健康系統，新增擦傷、穿刺傷等傷口、病症、治療方式與醫療用品，多數內容可在沙盒開關。 | `WoundExpansion`, `WoundExpansionZB` | 256 | — | — |
 | [Ros's Radical Animal Remaster](https://steamcommunity.com/sharedfiles/filedetails/?id=3819478254) | Ros's Radical Animal Remaster 動物大改造 | 為家畜與野生動物新增品種與稀有毛色，含多種鵝與孔雀，沿用原版的生長、繁殖與飼養系統。 | `AnimalRemasterApproved`, `RRARCompatAnimalBarns`, `RRARCompatAnimalCrates`, `RRARCompatLivestockTraders` | 1896 | ⚠️ ≥1 | — |
 | [Off the Rack: The 1993 Military Gear](https://steamcommunity.com/sharedfiles/filedetails/?id=3819505238) | Off the Rack：1993 軍用裝備 | 將原版軍用裝備重製成 1993 年真實軍品外觀，物品與掉落不變；需 Surplus & Thrift：1993 衣櫥。 | `OffTheRackMilitary1993` | 7 | — | — |
+| [ModOrderPlus - Mod Manager & Auto-Sort〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3819661138) | ModOrderPlus 模組管理與自動排序 | 在一個畫面管理模組、資料夾與預設：一鍵自動排序模組與地圖的載入順序，也能自己調整；儲存前可檢視變更、還原先前的清單，還能備份個人設定或匯出伺服器清單。 | `ModOrderPlus` | 590 | — | — |
 | [Viewpoint - 3D RVs [B42.21] [WIP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3820158673) | Viewpoint - 3D 露營車 | Viewpoint 附加模組，新增可走進內部的 Nomad 與 Dales Chieftain 露營車，可在車內烹飪、睡覺並擺放家具物資。 | `DaleChieftainRV`, `DeadWorksDaleRV`, `DeadWorksNomadRV`, `GridRV`, `GridRVHost` | 108 | — | — |
 | [Guns of Marz Extension: Guns of Tien](https://steamcommunity.com/sharedfiles/filedetails/?id=3820183693) | Guns of Tien 馬茲槍械彈藥擴充 | 替馬茲槍械加入 1993 年實際存在的彈藥：亞音速、空尖、軟尖、鋼芯、高壓彈等。 | `GoMExtensionGunsOfTien`, `GoMExtensionGunsOfTienPost93` | 407 | — | — |
 | [Complete Vanilla Firearms Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3820580321) | Complete Vanilla Firearms Expansion 原版風槍械擴充整合版 | 整合 OG VFE、S.T.A.L.K.E.R.、Post 93' 等槍械擴充，新增大量槍械與對應彈藥、彈匣與配件。 | `ExtendedVanillaWeapons` | 463 | ⚠️ ≥23 | — |

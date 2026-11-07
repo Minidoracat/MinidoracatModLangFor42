@@ -4,6 +4,13 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **新收錄 ModOrderPlus 模組管理與自動排序（Steam 許願，590 項）。** 主選單的模組管理器整個畫面都有繁簡中文：模組清單與篩選、資料夾、分類、收藏與備註、載入順序與地圖順序、一鍵自動排序的規則與檢查結果、預設、先前的模組清單與個人設定備份、匯出給伺服器、手把操作與說明頁。ModOrderPlus 在主選單運作，本翻譯包也要在主選單的模組清單啟用，管理畫面才會顯示中文。
+  > 技術要點：使用者 2026-11-08 核准 own lane 收錄（Steam「支援清單＆翻譯許願」串）；As1 名單沒有。建 own 目錄 `sources/mods/3819661138/`（CN）＋`sources/ch`，登記名冊、watchlist、`backfill-en` 基準與 `mod_names_zh`。上游只有 `common/.../Translate/EN/UI.json`（590 鍵，574 條不同英文；Lua 一律經 `Text.get` → `getText("UI_MOP_" .. key, ...)`），零 vanilla 碰撞。用詞對齊原版模組畫面（選擇模組、模組順序、預設、創意工坊）；1 路翻譯、1 路對抗複核（Codex），採納 13 條（說明文字引用的按鈕改寫完整標籤、「Copy missing links」是複製未安裝模組包的創意工坊網址、更新標記比的是前後兩次記錄的更新時間）。實機 E2E（9950X3D）：`load-sweep-sp` `mll-sweep-mop-1108x1` CH／CN 各 310,180 鍵 thrown／unloaded／mismatch 0；一次性主選單情境 `mll-menu-mop-1108x1`：本包在 `default.txt` 時，主選單階段 590 個 `UI_MOP_*` 鍵都已是本包的值（比對 506 鍵、0 不符）。
+
 ## [42.21.0-1.72.0] - 2026-11-08
 
 ### Added
