@@ -4,17 +4,12 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
-## [Unreleased]
-
-### Added
-
-- **新收錄 ModOrderPlus 模組管理與自動排序（Steam 許願，590 項）。** 主選單的模組管理器整個畫面都有繁簡中文：模組清單與篩選、資料夾、分類、收藏與備註、載入順序與地圖順序、一鍵自動排序的規則與檢查結果、預設、先前的模組清單與個人設定備份、匯出給伺服器、手把操作與說明頁。ModOrderPlus 在主選單運作，本翻譯包也要在主選單的模組清單啟用，管理畫面才會顯示中文。
-  > 技術要點：使用者 2026-11-08 核准 own lane 收錄（Steam「支援清單＆翻譯許願」串）；As1 名單沒有。建 own 目錄 `sources/mods/3819661138/`（CN）＋`sources/ch`，登記名冊、watchlist、`backfill-en` 基準與 `mod_names_zh`。上游只有 `common/.../Translate/EN/UI.json`（590 鍵，574 條不同英文；Lua 一律經 `Text.get` → `getText("UI_MOP_" .. key, ...)`），零 vanilla 碰撞。用詞對齊原版模組畫面（選擇模組、模組順序、預設、創意工坊）；1 路翻譯、1 路對抗複核（Codex），採納 13 條（說明文字引用的按鈕改寫完整標籤、「Copy missing links」是複製未安裝模組包的創意工坊網址、更新標記比的是前後兩次記錄的更新時間）。實機 E2E（9950X3D）：`load-sweep-sp` `mll-sweep-mop-1108x1` CH／CN 各 310,180 鍵 thrown／unloaded／mismatch 0；一次性主選單情境 `mll-menu-mop-1108x1`：本包在 `default.txt` 時，主選單階段 590 個 `UI_MOP_*` 鍵都已是本包的值（比對 506 鍵、0 不符）。
-
 ## [42.21.0-1.72.0] - 2026-11-08
 
 ### Added
 
+- **新收錄 ModOrderPlus 模組管理與自動排序（Steam 許願，590 項）。** 主選單的模組管理器整個畫面都有繁簡中文：模組清單與篩選、資料夾、分類、收藏與備註、載入順序與地圖順序、一鍵自動排序的規則與檢查結果、預設、先前的模組清單與個人設定備份、匯出給伺服器、手把操作與說明頁。ModOrderPlus 在主選單運作，本翻譯包也要在主選單的模組清單啟用，管理畫面才會顯示中文。
+  > 技術要點：使用者 2026-11-08 核准 own lane 收錄（Steam「支援清單＆翻譯許願」串），同日裁定併入 1.72.0；As1 名單沒有。建 own 目錄 `sources/mods/3819661138/`（CN）＋`sources/ch`，登記名冊、watchlist、`backfill-en` 基準與 `mod_names_zh`。上游只有 `common/.../Translate/EN/UI.json`（590 鍵，574 條不同英文；Lua 一律經 `Text.get` → `getText("UI_MOP_" .. key, ...)`），零 vanilla 碰撞。用詞對齊原版模組畫面（選擇模組、模組順序、預設、創意工坊）；1 路翻譯、1 路對抗複核（Codex），採納 13 條（說明文字引用的按鈕改寫完整標籤、「Copy missing links」是複製未安裝模組包的創意工坊網址、更新標記比的是前後兩次記錄的更新時間）。實機 E2E（9950X3D）：`load-sweep-sp` `mll-sweep-mop-1108x1` CH／CN 各 310,180 鍵 thrown／unloaded／mismatch 0；一次性主選單情境 `mll-menu-mop-1108x1`：本包在 `default.txt` 時，主選單階段 590 個 `UI_MOP_*` 鍵都已是本包的值（比對 506 鍵、0 不符）。
 - **10 個 MOD 更新後新增的文字補上繁簡中文（755 項）。** The MRE Chronicles 的新口糧包與餐點、物品說明、加熱後名稱與沙盒清單（520 項，含 60 個加熱後菜名）；Map Mod Manager 改版後的預設組合、載入順序、檢查清單與說明面板（98 項）；Project Zomboid Optimiser 的 LuaJIT 排除清單與 JVM 精簡物件標頭設定（51 項）；IRON MAN MARK XI 的推進器、主控台分頁與瞄準模式（34 項）；Stay With Me 的夜視與對話字型、顯示時間沙盒選項（18 項）；organizedCategories 的 16 種口徑分類；以及 Real Room Heat、Live to Fight Another Day、Dynamic Outposts、Radio Trader 的零星新字串。
   > 技術要點：追蹤器 2026-11-07 #1298–#1308「可能過時」。695 鍵走 `apply_wf_result`／`apply_translations` 進 `own_translations.json`，全數登記 `ch_review_state`；3 路翻譯、2 路對抗複核，採納 3 條（例：Mark XI 的 CH 統一「戰甲」、說明面板「查看」改「檢視」、甜麵包捲說明對齊物品名）。The MRE Chronicles 加熱後名稱：Lua `mgsText(key, fallback)` 以 `getText` 查 `IGUI_MGsMRE_*Hot`／`*HotSauce`，上游 EN 只把其中 30 鍵放在 `Tooltip.json`、另 60 鍵（含 `IGUI_MGsMRE_GenericMRE`、`IGUI_MGsMRE_WithHotSauceSuffix`）根本沒有，本包以 Lua 的英文後備值當 `en` 補進 `IG_UI.json`，譯文取加熱後物品的 ItemName（`_note` 記出處）。Project Zomboid Optimiser 與 Radio Trader 在追蹤器那輪之後又更新，以 `backfill-en --force` 重抽現行版。Moodle Effects Explained（#1301）新增的 370 鍵只在 `42.22/`，現行 42.21 不載入，不翻。11 個 MOD 以 steamcmd 重抓現行版給譯者查 Lua。
 

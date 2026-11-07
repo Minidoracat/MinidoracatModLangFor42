@@ -3,6 +3,7 @@
 
 [h3]新增[/h3]
 [list]
+[*] 新收錄 ModOrderPlus 模組管理與自動排序（玩家許願）：主選單的模組管理器整個畫面都有中文（590 處）。它在主選單運作，本翻譯包也要在主選單的模組清單啟用，管理畫面才會顯示中文。
 [*] 10 個 MOD 更新後新增的文字補上中文（755 處）：The MRE Chronicles 的新口糧包、餐點、物品說明與沙盒清單（520 處）、Map Mod Manager 改版後的預設組合、載入順序與檢查清單（98 處）、Project Zomboid Optimiser 的 LuaJIT 排除清單與 JVM 設定（51 處）、IRON MAN MARK XI 的推進器與主控台分頁（34 處）、Stay With Me 的夜視與對話字型選項（18 處）、organizedCategories 的 16 種口徑分類等。
 [*] The MRE Chronicles 加熱後的菜名原本一直顯示英文，現在也有中文了（60 處）。
 [/list]
