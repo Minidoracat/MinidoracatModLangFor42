@@ -52,6 +52,7 @@ PLACEHOLDER_EXCEPTIONS_JSON = SOURCES / "placeholder_exceptions.json"
 OWN_TRANSLATIONS_JSON = SOURCES / "own_translations.json"
 VANILLA_KEYS_JSON = SOURCES / "vanilla_keys.json"
 UNSHIPPED_KEYS_JSON = SOURCES / "unshipped_keys.json"
+UNTRANSLATABLE_KEYS_JSON = SOURCES / "untranslatable_keys.json"
 MOD_REGISTRY_JSON = SOURCES / "mod_registry.json"
 
 MOD_MEDIA = (
@@ -617,6 +618,31 @@ def suppress_unshipped(
     # vanilla 抑制早就把 6 個檔（Brandenburg, KY／CisternsName／PZKMZ_* 等）清成空檔
     # 並照常寫出，本函式沿用同一慣例。（我一度加了「空檔就不寫」，直接炸掉那 6 個檔。）
     return dropped, drift, unused
+
+
+def find_untranslatable_shipped(
+    merged_cn: dict[str, dict], merged_ch: dict[str, dict]
+) -> list[str]:
+    """出貨抑制後仍會出貨、卻登記在 `untranslatable_keys.json` 的 `檔名|鍵`（gate 用）。
+
+    untranslatable 只讓補譯與覆蓋率扣掉這些鍵，**不擋 As1 衍生層已有的值出貨**。登記不翻的
+    鍵多半玩家看不到，或值不該由本包提供（測試台、MOD 每版重算的數字），一出貨就要逐鍵
+    裁決：登記 `unshipped_keys.json` 不出貨，或從 untranslatable 移除。2026-10-26 同步
+    As1 v3.12.0 帶回 338 個 Knox 測試台鍵，1.62.0–1.71.0 連出 10 版沒人發現，才加這道。
+    身分沿用 `tracker.load_untranslatable` 的 canonical 口徑（`UI.json|UI_Foo` 與 `Foo`、
+    `ItemName_Base.X` 與 `Base.X` 視為同一鍵），和 prep／coverage 扣缺口用的是同一把尺。
+    """
+    import tracker  # untranslatable 身分的單一實作
+
+    pairs, _items = tracker.load_untranslatable(UNTRANSLATABLE_KEYS_JSON)
+    hits = {
+        f"{fname}|{key}"
+        for merged in (merged_cn, merged_ch)
+        for fname, fmap in merged.items()
+        for key in fmap
+        if (tracker._key_stem(fname), tracker._canon_key(fname, key)) in pairs
+    }
+    return sorted(hits)
 
 
 def load_vanilla_scoped() -> tuple[dict[str, set[str]], dict[str, dict]]:
@@ -1614,13 +1640,21 @@ def cmd_build() -> int:
               f"登記可退役）：{', '.join(unshipped_unused[:10])}")
 
     # gate：合併衝突 + CH 值層 + format 安全 + placeholder 崩潰簽名/token 不一致 + Lua 衝突
-    # → 不寫出、非零退出
+    # + 不翻鍵出貨 → 不寫出、非零退出
     if keep_anchor_errors:
         print(f"\n❌ vanilla keep 錨點失效 {len(keep_anchor_errors)} 處：")
         for e in keep_anchor_errors:
             print(e)
+    untr_shipped = find_untranslatable_shipped(merged_cn, merged_ch)
+    if untr_shipped:
+        print(f"\n❌ 登記不翻（untranslatable_keys.json）的鍵仍會出貨 {len(untr_shipped)} 個。"
+              "逐鍵裁決：不出貨就登記 sources/unshipped_keys.json，要出貨就從 untranslatable 移除：")
+        for p in untr_shipped[:50]:
+            print(f"  {p}")
+        if len(untr_shipped) > 50:
+            print(f"  ...（還有 {len(untr_shipped) - 50} 個）")
     if (conflicts or ch_value_errors or fmt_errors or errors or lua_conflicts
-            or keep_anchor_errors or pack_ui_errors or variant_errors):
+            or keep_anchor_errors or pack_ui_errors or variant_errors or untr_shipped):
         for label, errs in (("本包介面文字（pack_ui.json）", pack_ui_errors),
                             ("條件譯文（owner_variants.json）", variant_errors)):
             if errs:

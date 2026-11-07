@@ -16,6 +16,8 @@ tracker 的 layer-B 永遠報差異、每次 As1 更新都開假的「待同步�
   3. `as1_value` 錨點漂移要報——那是「上游動過這個鍵、該重查 mod」的唯一訊號，
      沒有它這批登記會靜默腐爛。
   4. 登記了但合併結果查無的條目要報「可退役」，避免清單爛掉。
+  5. 登記不翻（untranslatable_keys.json）的鍵若仍出貨要擋下：不翻清單不擋 As1 層出貨，
+     2026-10-26 同步 As1 帶回 338 個 Knox 測試台鍵、連出 10 版沒人發現。
 
 執行：uv run scripts/test_unshipped_keys.py
 不依賴測試框架，assert 失敗即測試失敗（exit code != 0）。
@@ -125,4 +127,50 @@ with tempfile.TemporaryDirectory() as td:
         "", str(dist), {}, {"Dead.json": {"K": {"cn": "原創值"}}},
         as1_available=False, suppressed={"Dead.json|K"}, unshipped=set())
     assert "vanilla 出貨抑制" in "\n".join(vanilla_warn), vanilla_warn
-print("✅ test_unshipped_keys：9 組情境全過")
+
+# 9. 不翻鍵出貨 gate：登記不翻的鍵出貨就列出（身分走 canonical：`UI.json|UI_Foo`＝`Foo`、
+#    `ItemName_Base.X`＝`Base.X`），登記 unshipped 剔除後清空；沒登記不翻的鍵不列（控制組）。
+with tempfile.TemporaryDirectory() as td:
+    up = Path(td) / "untranslatable_keys.json"
+    up.write_text(json.dumps({"entries": {
+        "IG_UI.json|IGUI_Bench_Open": "測試台鍵", "UI.json|UI_Stats_CH": "MOD 重算的數字",
+        "ItemName.json|ItemName_Base.Fake": "假物件"}}, ensure_ascii=False), encoding="utf-8")
+    orig = build_mod.UNTRANSLATABLE_KEYS_JSON
+    build_mod.UNTRANSLATABLE_KEYS_JSON = up
+    try:
+        cn = {"IG_UI.json": {"IGUI_Bench_Open": "打开", "IGUI_Real": "真文字"},
+              "UI.json": {"Stats_CH": "30.0"}, "ItemName.json": {"Base.Fake": "假"}}
+        ch = {"IG_UI.json": {"IGUI_Bench_Open": "開啟", "IGUI_Real": "真文字"},
+              "UI.json": {"Stats_CH": "30.0"}, "ItemName.json": {"Base.Fake": "假"}}
+        hits = build_mod.find_untranslatable_shipped(cn, ch)
+        assert hits == ["IG_UI.json|IGUI_Bench_Open", "ItemName.json|Base.Fake", "UI.json|Stats_CH"], \
+            f"不翻鍵出貨未列齊或多列：{hits}"
+        run({"IG_UI.json|IGUI_Bench_Open": A, "UI.json|Stats_CH": A, "ItemName.json|Base.Fake": A},
+            cn, ch)
+        assert build_mod.find_untranslatable_shipped(cn, ch) == [], "登記 unshipped 剔除後仍被擋"
+    finally:
+        build_mod.UNTRANSLATABLE_KEYS_JSON = orig
+
+# 10. verify [20] 獨立重驗：dist 裡出現 unshipped 或 untranslatable 登記鍵即 FAIL，乾淨的 dist PASS。
+with tempfile.TemporaryDirectory() as td:
+    src = Path(td) / "sources"
+    src.mkdir()
+    (src / "untranslatable_keys.json").write_text(json.dumps(
+        {"entries": {"UI.json|UI_Stats_CH": "MOD 重算的數字"}}, ensure_ascii=False), encoding="utf-8")
+    dirs = {lang: Path(td) / lang for lang in ("CN", "CH")}
+    for d in dirs.values():
+        d.mkdir()
+        (d / "UI.json").write_text(json.dumps({"Stats_CH": "30.0", "UI_Real": "x"}), encoding="utf-8")
+        (d / "IG_UI.json").write_text(json.dumps({"IGUI_Bench": "x"}), encoding="utf-8")
+    ok, fail, _ = verify_dist.check_not_shipped(td, str(dirs["CN"]), str(dirs["CH"]),
+                                                {"IG_UI.json|IGUI_Bench"})
+    joined = "\n".join(fail)
+    assert not ok and len(fail) == 4, f"[20] 應列 CN/CH 各 2 個登記鍵：{fail}"
+    assert "IGUI_Bench" in joined and "Stats_CH" in joined and "UI_Real" not in joined, joined
+    for d in dirs.values():
+        (d / "UI.json").write_text(json.dumps({"UI_Real": "x"}), encoding="utf-8")
+        (d / "IG_UI.json").write_text("{}", encoding="utf-8")
+    ok, fail, _ = verify_dist.check_not_shipped(td, str(dirs["CN"]), str(dirs["CH"]),
+                                                {"IG_UI.json|IGUI_Bench"})
+    assert ok and not fail, f"[20] 乾淨的 dist 不該 FAIL：{fail}"
+print("✅ test_unshipped_keys：11 組情境全過")

@@ -14,7 +14,7 @@
 ### Removed
 
 - **Knox Inventory 測試台的 338 個介面文字不再出貨。** 測試台不隨 Workshop 版發布，玩家看不到這些文字，遊戲內沒有變化。2026-10-22 已裁定移除（#996），10-26 同步 As1 時被帶回，1.62.0–1.71.0 都有出貨。
-  > 技術要點：`IGUI_KnoxTB_*` 338 鍵登記 `sources/unshipped_keys.json` 第六類（讀鍵的程式不隨 Workshop 版發布），`as1_value` 取抑制前的有效 CN 值；這批鍵原本就登記在 `untranslatable_keys.json`，但那份清單只擋補譯，不擋 As1 層出貨。
+  > 技術要點：`IGUI_KnoxTB_*` 338 鍵登記 `sources/unshipped_keys.json` 第六類（讀鍵的程式不隨 Workshop 版發布），`as1_value` 取抑制前的有效 CN 值；這批鍵原本就登記在 `untranslatable_keys.json`，但那份清單只擋補譯，不擋 As1 層出貨。為了不再漏掉，build 新增閘門：登記不翻的鍵在出貨抑制後仍會出貨就失敗（`find_untranslatable_shipped`）；`verify_dist.py` 新增 [20]，獨立重驗 dist 裡沒有 unshipped 與不翻登記鍵（verify 改為 19 項）。`lint_ch.py` 的抑制集合也納入 unshipped 鍵，否則登記後 [C] 會把它們全部退回「待裁決」。
 
 ## [42.21.0-1.71.0] - 2026-11-07
 

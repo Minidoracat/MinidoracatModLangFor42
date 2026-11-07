@@ -50,8 +50,10 @@ verify_dist.py — MinidoracatModLangFor42 的獨立 dist 驗證器（oracle）�
                       核准：未核准組寫空值列）；
                       `conflicts.tsv` 的 K 列＝sources/owner_conflicts.tsv、V 列已涵蓋數重算
   [19] 本包 Lua      ：`media/lua/{shared,client}/CatModLang/*.lua` 與 sources/pack_lua 檔集、bytes 一致
+  [20] 不出貨登記     ：登記在 unshipped_keys.json（不出貨）與 untranslatable_keys.json（不翻）的鍵
+                      都不得出現在 dist CN/CH；[1]／[9] 只容許登記鍵缺席，抑制失效時要靠本項
   pack_ui.json 的介面鍵併入 [1]／[9] 的原創層期望（dist 值＝sanitize 後真相值）。
-  （編號歷史上缺 [5]；實際驗證項數為 18。）
+  （編號歷史上缺 [5]；實際驗證項數為 19。）
 
 冪等子命令（獨立於預設全跑，供「連跑兩次 build 第二次零 diff」驗證）：
   --snapshot-dist <dir>：把 dist 現況（.json + language.txt + client/*.lua + 本包資料檔與 Lua 的 sha256）
@@ -2546,6 +2548,32 @@ def check_pack_lua(repo: str, media: str) -> tuple[bool, list[str], list[str]]:
     return not fail, fail, []
 
 
+def check_not_shipped(
+    repo: str, dist_cn: str, dist_ch: str, unshipped: set[str]
+) -> tuple[bool, list[str], list[str]]:
+    """[20] 登記不出貨（unshipped_keys）與登記不翻（untranslatable_keys）的鍵都不得在 dist。
+
+    builder 以 suppress_unshipped 剔除前者、find_untranslatable_shipped 擋後者；本項獨立讀 dist
+    重驗。untranslatable 的身分沿用 `tracker.load_untranslatable`（prep／coverage 共用的 canonical
+    口徑：`UI.json|UI_Foo`＝`Foo`、`ItemName_Base.X`＝`Base.X`），不是 builder 的函式。
+    """
+    untr, _items = tracker.load_untranslatable(
+        Path(repo) / "sources" / "untranslatable_keys.json")
+    fail: list[str] = []
+    for lang, directory in (("CN", dist_cn), ("CH", dist_ch)):
+        files, errors = _load_json_dir(directory)
+        fail += errors
+        for fname, fmap in sorted(files.items()):
+            for key in fmap:
+                pair = f"{fname}|{key}"
+                if pair in unshipped:
+                    fail.append(f"{lang} {pair}：登記在 unshipped_keys.json 卻出貨")
+                elif (tracker._key_stem(fname), tracker._canon_key(fname, key)) in untr:
+                    fail.append(f"{lang} {pair}：登記在 untranslatable_keys.json 卻出貨"
+                                "（不出貨就登記 unshipped_keys.json，要出貨就從 untranslatable 移除）")
+    return not fail, fail, []
+
+
 
 def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
     repo = paths["repo"]
@@ -2689,6 +2717,10 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         ok19, d19, w19 = check_pack_lua(repo, paths["media"])
     except Exception as exc:  # noqa: BLE001
         ok19, d19, w19 = False, [f"本包 Lua 檢查失敗（{exc}）"], []
+    try:
+        ok20, d20, w20 = check_not_shipped(repo, dist_cn, dist_ch, unshipped)
+    except Exception as exc:  # noqa: BLE001 — 登記檔壞損直接判 FAIL（gate 資料是受版控真相）
+        ok20, d20, w20 = False, [f"不出貨登記檢查失敗（{exc}）"], []
 
     rows = [
         ("1", "CN 逐檔 parity（As1 缺席時僅降級 As1 比對）" if as1_missing else "CN 逐檔 parity",
@@ -2710,6 +2742,7 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         ("17", "Print Media 42.20.4 契約", ok17, d17, w17),
         ("18", "條件譯文資料檔", ok18, d18, w18),
         ("19", "本包 Lua", ok19, d19, w19),
+        ("20", "不出貨登記", ok20, d20, w20),
     ]
 
     n_pass = sum(1 for _, _, ok, _, _ in rows if ok is True)
