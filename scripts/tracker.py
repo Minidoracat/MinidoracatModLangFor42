@@ -13,7 +13,7 @@ tracker.py — MinidoracatModLangFor42 雙上游追蹤器（PZ B42 如一模組�
   * 純標準函式庫（urllib / subprocess / hashlib）→ 供 `uv run scripts/tracker.py` 直接執行，CI 免裝依賴。
   * API client 免 key 為主（研究實證端點無 key 參數）；STEAM_API_KEY 為設定選項、非 429 解藥（附加而已）。
   * 交易順序：取數 → diff → 開/更 issue → 最後 commit 成功子集 state；--dry-run 保證零 issue 零 commit。
-  * 核心邏輯（diff / issue 冪等 / git 重試）皆以可注入依賴實作，供內建 self-test 二十情境 mock 驗證。
+  * 核心邏輯（diff / issue 冪等 / git 重試）皆以可注入依賴實作，供內建 self-test 二十一情境 mock 驗證。
 
 命令（uv run scripts/tracker.py <命令>）：
   as1-list       擷取 As1 網站模組清單 → sources/as1_modlist.json（參考快照），並把標「正常」與 split 已歸屬、
@@ -26,7 +26,7 @@ tracker.py — MinidoracatModLangFor42 雙上游追蹤器（PZ B42 如一模組�
   check          僅打 API 查時間戳，寫 changed 清單 artifact（workflow check job；無寫權限）
   diff           讀 changed，下載+裁剪+抽取+diff，寫 diffs artifact（workflow download job；無 GitHub 權限）
   issue          讀 diffs，列 open issue 冪等開/更，commit 成功子集 state（workflow issue+state job）
-  self-test      內建二十情境 mock 測試
+  self-test      內建二十一情境 mock 測試
 """
 from __future__ import annotations
 
@@ -1360,18 +1360,23 @@ def steamcmd_download(
         workshop_id,
         "+quit",
     ]
-    # 匿名下載兩大失敗模式，皆以原地重試（最多 3 次）處理：
+    # 匿名下載三種失敗模式，皆以原地重試（最多 3 次）處理：
     #   1. workshop manifest（ACF）連續下載後毒化 → 之後所有物品固定 Failure（實測換新目錄立即成功）
     #      → 重試前刪 ACF 讓 steamcmd 重建，內容檔不受影響。
     #   2. 大型物品逾時斷線 → steamcmd 於 downloads/ staging 續傳。
+    #   3. steamcmd 卡住超過 1800 秒 → subprocess.run 先殺掉它再丟 TimeoutExpired：算本次失敗，
+    #      不往外丟（排程 run 的 _diff_changed 不接例外，一個 MOD 卡住會中止整輪）。
     acf = install_dir / "steamapps" / "workshop" / f"appworkshop_{STEAM_APPID}.acf"
     for attempt in range(1, 4):
-        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=1800)
-        out = proc.stdout + proc.stderr
+        try:
+            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=1800)
+        except subprocess.TimeoutExpired:
+            proc = None
         # 三項全過才算成功；任一不滿足視為本次失敗（steamcmd rc 不可靠，故三重把關）
         if (
-            proc.returncode == 0
-            and STEAMCMD_SUCCESS_SIGNAL in out
+            proc is not None
+            and proc.returncode == 0
+            and STEAMCMD_SUCCESS_SIGNAL in proc.stdout + proc.stderr
             and content.is_dir()
             and any(content.iterdir())
         ):
@@ -3074,11 +3079,11 @@ def cmd_backfill_en(args) -> int:
 
 
 # ============================================================
-# 命令：self-test（二十情境 mock 測試，assert-based）
+# 命令：self-test（二十一情境 mock 測試，assert-based）
 # ============================================================
 def cmd_self_test() -> int:
     print("=" * 60)
-    print("self-test：二十情境 mock 測試")
+    print("self-test：二十一情境 mock 測試")
     print("=" * 60)
 
     def rec(kind, rel, key, val):
@@ -4002,7 +4007,34 @@ def cmd_self_test() -> int:
     assert not meta20["93"]["removed"] and "last_result" not in meta20["93"], "情境20：讀不到頁面卻判了結果"
     print("  ✅ 情境20 不公開（result=9＋更新紀錄頁可讀）照常追蹤，錯誤頁維持下架，429 本輪不判")
 
-    print("\n✅ self-test 二十情境全通過。")
+    # 情境 21：steamcmd 卡住逾時＝該次嘗試失敗、照常重試；三次都逾時回 None（進 failed_ids），
+    # 不得把 TimeoutExpired 丟出去中止整輪排程（2026-11-08 手動複驗時 3812456765 的下載卡住）。
+    saved21 = (subprocess.run, time.sleep)
+    plan21: list[str] = []
+    try:
+        with tempfile.TemporaryDirectory() as td:
+            inst21 = Path(td)
+            got21 = inst21 / "steamapps" / "workshop" / "content" / STEAM_APPID / "777"
+
+            def fake_run21(cmd, **kw):
+                if plan21.pop(0) == "hang":
+                    raise subprocess.TimeoutExpired(cmd, kw.get("timeout"))
+                got21.mkdir(parents=True, exist_ok=True)
+                (got21 / "mod.info").write_text("id=X", encoding="utf-8")
+                return subprocess.CompletedProcess(cmd, 0, STEAMCMD_SUCCESS_SIGNAL, "")
+
+            subprocess.run, time.sleep = fake_run21, (lambda _s: None)
+            plan21[:] = ["hang", "ok"]
+            assert steamcmd_download("777", Path("steamcmd"), inst21) == got21, "情境21：逾時後重試成功卻沒回內容"
+            shutil.rmtree(got21)
+            plan21[:] = ["hang"] * 3
+            assert steamcmd_download("777", Path("steamcmd"), inst21) is None, "情境21：三次都逾時應回 None"
+            assert not plan21, "情境21：逾時後沒有照常重試到第三次"
+    finally:
+        subprocess.run, time.sleep = saved21
+    print("  ✅ 情境21 steamcmd 逾時算一次失敗、照常重試，三次都逾時回 None（不中止整輪）")
+
+    print("\n✅ self-test 二十一情境全通過。")
     return 0
 
 
@@ -4018,7 +4050,7 @@ def main() -> None:
   uv run scripts/tracker.py as1-list               # 擷取 As1 網站名單（參考快照），As1 支援的 MOD 補登進名冊
   uv run scripts/tracker.py gen-watchlist          # metadata ∪ registry active → watchlist.json（含 As1）
   uv run scripts/tracker.py --dry-run --limit 5    # 真打 API 查 5 個時間戳，不下載/不開 issue
-  uv run scripts/tracker.py self-test              # 二十情境 mock 測試
+  uv run scripts/tracker.py self-test              # 二十一情境 mock 測試
   uv run scripts/tracker.py check  --out c.json    # workflow check job
   uv run scripts/tracker.py diff   --in c.json --out d.json --steamcmd <path>
   uv run scripts/tracker.py issue  --in d.json     # workflow issue+state job
