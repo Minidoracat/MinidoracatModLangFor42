@@ -4,6 +4,20 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **11 個 MOD 更新後新增的文字補上繁簡中文（987 項）。** Xanny Arms 新增的約 400 個物品（槍、彈匣、槍托、護木、握把、瞄具、消音器、彈藥）與雷射設定、說明（457 項）；Gunsmith 替 Guns of Marz、VFE、Post Soviet Armory 彈匣與配件新增的組裝配方、配件零件與武器分類（192 項）；Aegis Panel 的投票、玩家面板與車輛認領（124 項）；Dan's OP Weapons 新增的工具分頁與價格設定（77 項）；Project Zomboid Optimiser 的智慧 FPS 上限（39 項）；Senator's Martial Arts Core 的武術對決與 PvP 設定，以及 3 本原本只顯示物品代碼的武術書（37 項）；Sunshi's Cooler System 的肉罐頭、肉乾、鍛造保溫箱與配方（35 項）；Totally's NATO and Commonwealth Firearms 的配件、Immersive Snow 的無雪血腳印與 Viewpoint 附加模組提示、Plysken Attachments Reborn 的掛件槽位選單、My So-Called Fashion 的兔女郎服飾（共 26 項）。
+  > 技術要點：追蹤器 2026-11-08 #1309–#1320「可能過時」。984 鍵走 `apply_wf_result`／`apply_translations` 進 `own_translations.json`，全數登記 `ch_review_state`；5 路翻譯、5 路對抗複核（Codex），採納 19 條、未採 1 條（例：Gunsmith 的 R788 彈匣配方照原版物品名「MSR788 彈匣」；Aegis 的 screen size 是遊戲畫面解析度；Dan's OP Weapons 的 ElectroGate 導覽照原版介面「製作 > 金屬加工」；Senators 的 armour 是受擊無效，不譯「霸體」；Xanny Arms 的 HK417 簡中對齊既有 HK416A5 寫法）。Gunsmith 171 個配方名先由 craftRecipe `outputs` 解出產物，對齊已出貨物品名；原版產物照 LangFor42 與官方簡中，B42 英文檔已刪的原版遺留鍵（`Base.IronSight`、`Base.308Clip` 等）照官方繁中。Senators 的 `SMA_BajiquanManual`、`SMA_WingChunManual`、`kickboxingMagazine` 上游只給 B41 前綴鍵、script 沒有 DisplayName，補 3 個裸鍵（`_note` 記原因）。
+
+### Changed
+
+- **上游改了英文的已出貨文字跟著改（212 項）。** Dan's OP Weapons 把商店商品說明整批改寫成短句（196 項）；Xanny Arms 的 MCX Spear 改用 6.8x51 口徑、彈匣適用槍型清單變長、AK 護蓋改成側掛瞄具座（10 項）；Aegis Panel 的車況說明與指派提示（3 項）；Immersive Snow 的雪地說明拿掉限速與車輛減速、Symbiosis 的血契說明拿掉警告、Project Zomboid Optimiser 的百分號寫法（各 1 項）。
+  > 技術要點：As1 衍生層 210 鍵改 `sources/ch`＋`cn_overrides`，own 層 2 鍵經 `apply_translations` 更新 `en` 錨點。
+- **修正 5 個 MOD 的舊譯與名稱不一致（136 項）。** Dan's OP Weapons 的油箱名稱與價格照現行英文（原本標準、性能型、大型三款對錯，價格也是舊值）、商店分頁 Survival 統一「生存」，商品名對齊原版物品名（汽車電池、消聲器、鋼板、鐵管、碎石袋、條裝香菸、捆裝鈔票等，簡中照官方）；Immersive Snow 的「使用這些設定取代沙盒」條件（繁中寫成覆寫後仍依沙盒，簡中多了「僅在單人模式生效」）與雪粉數量、腳印、引擎罩融雪的說明；Sunshi's Cooler System 兩個配方名少了「製作」且和產物不同名；Guns of Marz 的簡中彈匣名語序；Plysken Attachments Reborn 的 ALICE 背包多了「附袋」。另修 Knox Imersivity 1 個上游已改英文的沙盒說明。
+  > 技術要點：受影響 MOD 的 As1 衍生層 1,411 鍵（扣前幾批已稽核、本體鍵、unship 鍵與已裁決的 owner 衝突鍵）以 `judge_batch` 初篩，連同數字比對標 62 鍵，代理裁決改 18 鍵；同類錯誤另補 5 個 Immersive Snow 說明（對照 `ISnow_Config.lua` 的 UseOwn 語意）。Dan's OP Weapons 另由一路代理對全部 1,065 鍵做名稱一致性掃描，改 149 鍵（38 鍵是本批重譯的說明）；Trunk Lid 照 LangFor42 物品名「後備箱蓋」。Knox Imersivity 的 `Sandbox_KnoxImersivity_realisticsit_tooltip` 上游 11-05 改英文、前批漏改，由 build `own_anchor_drift` 報出。
+
 ## [42.21.0-1.72.0] - 2026-11-08
 
 ### Added

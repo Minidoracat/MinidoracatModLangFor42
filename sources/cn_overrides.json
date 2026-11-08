@@ -65782,8 +65782,8 @@
   },
   "UI.json|UI_Symbiosis_BloodFamiliarDesc": {
     "as1_value": "将共生血源注入僵尸尸身. 你的血契眷属会蹒跚跟在你身后, 感知周遭亡灵, 直至血契消散; 同一具尸体可反复缔结血契. <LINE> <LINE> (警告该功能目前存在较多BUG, 后续将重新重构代码.)",
-    "value": "将共生血源注入僵尸尸身. 你的血契眷属会跟随你 4 小时, 察觉到亡者时会向你示警. 右键点击可命令它跟随你、原地待命、前往指定地点, 或发出嚎叫把亡者引向它. 眷属消散或被摧毁后, 血契需经过 24 小时才能恢复. 同一具尸体可反复缔结血契. <LINE> <LINE> (警告: 该功能近期刚重写, 可能仍有 BUG.)",
-    "reason": "2026-10-29 追蹤器 #1139–#1155：上游改英文：Bind symbiotic blood into a zombie corpse. Your familiar follows you for 4 hours"
+    "value": "将共生血源注入僵尸尸身. 你的血契眷属会跟随你 4 小时, 察觉到亡者时会向你示警. 右键点击可命令它跟随你、原地待命、前往指定地点, 或发出嚎叫把亡者引向它. 眷属消散或被摧毁后, 血契需经过 24 小时才能恢复. 同一具尸体可反复缔结血契.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Bind symbiotic blood into a zombie corpse. Your familiar fol"
   },
   "Sandbox.json|Sandbox_Symbiosis_SymbioteVisuals_tooltip": {
     "as1_value": "1=关闭, 2=仅头顶标识, 3=仅身体覆层, 4=两者同时显示 (默认). 身体覆层使用模组下的贴图资源路径 media/textures/Body/symbiosis/ ",
@@ -74877,8 +74877,8 @@
   },
   "UI.json|UI_Aegis_WearWreckTip": {
     "as1_value": "部件严重受损, 接近废弃车辆翻新.",
-    "value": "部件严重受损, 接近从谷仓里翻出来的废弃老车.",
-    "reason": "2026-11-04 舊譯稽核：barn find 是穀倉裡找到的廢車, CN「废弃车辆翻新」意思不同"
+    "value": "部件严重受损, 接近从谷仓里翻出来的废弃老车. 发动机会熄火.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Heavily damaged parts, close to a barn find. The engine stal"
   },
   "UI.json|UI_Aegis_ZoneOne": {
     "as1_value": "处",
@@ -78574,5 +78574,1615 @@
     "as1_value": "光亮的白红色口粮包, 印着雨伞公司的徽记\n上面写着 - 我们的业务就是生命本身™-",
     "value": "光亮的白红色口粮包, 印着保护伞徽记\n上面写着 - 我们的业务就是生命本身™-",
     "reason": "2026-11-07 #1298–#1308 批次：名稱一致性：CN Umbrella 一律寫「保护伞」, 對齊 ItemName CN (方向 1); umbrella crest 指保护伞公司徽記, 「雨伞公司」是另一種"
+  },
+  "UI.json|UI_Aegis_WearNewTip": {
+    "as1_value": "全新生成, 所有部件均为满耐久.",
+    "value": "全新生成, 所有部件均为满耐久, 油箱加满.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Spawns as new, every part at full condition and a full tank."
+  },
+  "UI.json|UI_Aegis_HeadTagUnconfirmed": {
+    "as1_value": "指派已重复发送, 但从未得到服务器确认. 自我指派时: 如果这种情况反复出现, 请改用另一个管理员账号 (目标 = 你) 来尝试, 这样可以避开与你账号相关的潜在服务器端问题.",
+    "value": "指派已重复发送, 但从未得到服务器确认. 自我指派时: 如果这种情况反复出现, 请改用另一个管理员账号 (目标 = 你) 来尝试. 这样可以避开与你账号相关的潜在服务器端问题.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Assignment sent repeatedly, but never confirmed by the serve"
+  },
+  "UI.json|UI_DansShop_Product_mapleSyrup_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "黏稠的枫糖浆. 松饼可有可无.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Sticky maple syrup. Pancakes are optional."
+  },
+  "UI.json|UI_DansShop_Product_silverToBronze_Desc": {
+    "as1_value": "将一枚白银代币兑换为10枚青铜代币.",
+    "value": "按当前汇率将一枚白银代币拆换成青铜代币.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Break one Silver Token into Bronze Tokens at the current rat"
+  },
+  "UI.json|UI_DansShop_Product_electroTile1_Desc": {
+    "as1_value": "低矮的单板地面电气陷阱, 以平整路面涂装伪装, 适合狭窄通道与隐蔽的周边防御.",
+    "value": "一格通电地板. 很容易藏在狭小的角落.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：One tile of electrified floor. Easy to hide in a tight spot."
+  },
+  "UI.json|UI_DansShop_Product_vehTankSmall_Desc": {
+    "as1_value": "小型更换用燃油箱.",
+    "value": "标准型车辆用的大油箱. 加一次油跑得更远.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A large fuel tank for standard vehicles. More range between "
+  },
+  "UI.json|UI_DansShop_Product_riceVinegar_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "较温和的米醋, 适合调酱汁和腌渍.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Milder rice vinegar for dressings and pickles."
+  },
+  "UI.json|UI_DansShop_Product_cashToBronzeAll_Desc": {
+    "as1_value": "将现金与钞票捆兑换为青铜代币. $100或1捆钞票 = 1枚青铜代币.",
+    "value": "按当前汇率将多余的现金与捆装钞票换成青铜代币.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：原版物品 Base.MoneyBundle 照 LangFor42/官方簡中 (捆裝鈔票/捆装钞票)"
+  },
+  "UI.json|UI_DansShop_Product_opFannyBack_Desc": {
+    "as1_value": "D特工紧凑型后挂腰包, 无需占用背部槽位即可增加大容量存储.",
+    "value": "挂在后方的腰包, 能装的不只必需品.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A rear-worn waist pack with room for more than the essential"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_AllowElectroGateCrafting_tooltip": {
+    "as1_value": "默认开启. 控制ElectroGate制作配方. 简化模式开启: 按B后, 简化版2格 / 4格配方会显示在手工 > 金工中. 简化模式关闭: 简化版配方完全隐藏, 而标准版2格 / 4格配方仍可通过有效的AnySurfaceCraft工作台按正常技能与材料需求制作. 关闭此选项会隐藏所有ElectroGate配方. 已安装的ElectroGate始终无需电力即可运行.",
+    "value": "允许ElectroGate制作配方. 开启简化制作时, 2格与4格配方位于B > 制作 > 金工. 关闭简化制作时, 请在合适的工作台使用标准配方. 关闭此设置会隐藏这两种配方. 已放置的陷阱无需电力仍可运行.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Allow ElectroGate crafting recipes. With simplified crafting"
+  },
+  "UI.json|UI_DansShop_Product_pepper_Desc": {
+    "as1_value": "可改善大量熟食与食谱风味的常见调味料.",
+    "value": "胡椒粉. 让寡淡的食物没那么惨.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Ground pepper. Makes plain food a little less miserable."
+  },
+  "UI.json|UI_DansShop_Product_opFlashlight_Desc": {
+    "as1_value": "D特工高功率战术手电筒. 广域扩散光学阵列以强烈而均匀的光线照亮周围, 长寿命电池专为长时间野外使用打造.",
+    "value": "明亮又宽广的光束, 没有一般的电池烦恼.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A bright, wide beam without the usual battery trouble."
+  },
+  "UI.json|UI_DansShop_Product_matWoodGlue_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "木工用的木胶. 让接缝牢牢粘住.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehSuspStd_Desc": {
+    "as1_value": "标准悬挂总成.",
+    "value": "标准型车辆用的替换悬挂. 崎岖路面的颠簸都由它扛.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Replacement suspension for standard-class vehicles. Takes th"
+  },
+  "UI.json|UI_DansShop_Product_seedLettuce_Desc": {
+    "as1_value": "用于耕作与长期食物生产的种子.",
+    "value": "一包生菜种子. 最好赶在冬天前种下.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A packet of lettuce seeds. Better to plant them before winte"
+  },
+  "UI.json|UI_DansShop_Product_cigaretteCarton_Desc": {
+    "as1_value": "出厂密封整箱香烟, 适合长途行动与长期驻留.",
+    "value": "一整条香烟. 口袋可塞不下.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：carton=一條, 配合商品名; carton=一条, 配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_matNails_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一盒钉子. 木墙可不会自己粘在一起.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A box of nails. Wooden walls do not hold themselves together"
+  },
+  "UI.json|UI_DansShop_Product_matGlass_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一块玻璃板. 很易碎, 但补破窗用得上.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A pane of glass. Fragile, but useful for a broken window."
+  },
+  "UI.json|UI_DansShop_Product_seedZucchini_Desc": {
+    "as1_value": "用于耕作与长期食物生产的种子.",
+    "value": "一包西葫芦种子. 最好赶在冬天前种下.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A packet of zucchini seeds. Better to plant them before wint"
+  },
+  "UI.json|UI_DansShop_Product_soySauce_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "咸香的酱油, 配饭, 配肉, 入菜都行.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Salty soy sauce for rice, meat and cooked dishes."
+  },
+  "UI.json|UI_DansShop_Product_laserSword_Desc": {
+    "as1_value": "D特工旗舰级激光武士刀, 采用先进部件组装, 近战性能无可匹敌.",
+    "value": "全尺寸激光武士刀. 挥一刀就见分晓.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A full-sized laser katana. One swing should make a differenc"
+  },
+  "UI.json|UI_DansShop_Product_scatterSniper_Desc": {
+    "as1_value": "D特工远程散射激光系统, 可同时向远距离目标投射多发弹束.",
+    "value": "把多发激光塞进一次远程齐射.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Multiple laser shots packed into one long-range burst."
+  },
+  "UI.json|UI_DansShop_Product_ammoShotgun_Desc": {
+    "as1_value": "霰弹60发.",
+    "value": "一批60发霰弹.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A lot of 60 shotgun shells."
+  },
+  "UI.json|UI_DansShop_Product_matRope_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "粗绳索. 总比相信一个松垮的细绳结强.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_ShowLifeShopCategory_tooltip": {
+    "as1_value": "默认开启. 关闭后将从D商店隐藏生活类别及其商品. 这些物品仍可出售.",
+    "value": "在D商店显示生存标签页. 隐藏后无法从该标签页购买, 但仍可出售这些物品.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Show the Survival tab in D's Shop. Hiding it stops purchases"
+  },
+  "UI.json|UI_DansShop_Product_electroGate2_Desc": {
+    "as1_value": "D特工紧凑型两格地面电气陷阱, 用于封锁狭窄入口与要害通道.",
+    "value": "两格通电地板. 最适合横跨狭窄通道.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Two tiles of electrified floor. Best used across a narrow pa"
+  },
+  "UI.json|UI_DansShop_Product_goldToken_Desc": {
+    "as1_value": "用10枚白银代币兑换1枚黄金代币.",
+    "value": "按当前汇率用白银代币兑换一枚黄金代币.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Trade Silver Tokens for one Gold Token at the current rate."
+  },
+  "UI.json|UI_DansShop_Product_rosemary_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "带木质调, 香气浓郁的迷迭香. 配烤肉很棒.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Woody rosemary with a strong scent. Good with roast meat."
+  },
+  "UI.json|UI_DansShop_Product_opEngine_Desc": {
+    "as1_value": "D特工发动机校准核心. 其精密诊断组件可将车辆发动机重新调校至出厂级公差, 恢复巅峰制造品质.",
+    "value": "发动机校准装置, 能让磨损的发动机恢复到最佳制造品质.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：An engine calibration unit for bringing a worn motor back to"
+  },
+  "UI.json|UI_DansShop_Product_matDuctTape_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "强力胶带, 适合快速修补与临时修理.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Strong tape for quick patches and makeshift repairs."
+  },
+  "UI.json|UI_DansShop_Product_matIronIngot_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一块实心铁锭. 金工用料.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A solid iron ingot. Metalworking stock."
+  },
+  "UI.json|UI_DansShop_Product_vehSeatHeavy_Desc": {
+    "as1_value": "重型车辆座椅.",
+    "value": "重型车辆用的替换驾驶座椅.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A replacement driver seat for heavy-class vehicles."
+  },
+  "UI.json|UI_DansShop_Product_matFlint_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一块燧石结核. 坚硬, 锋利, 值得留着.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A flint nodule. Hard, sharp and worth keeping."
+  },
+  "UI.json|UI_DansShop_Product_waterCondenser_Desc": {
+    "as1_value": "由Neralyn Industries设计, 适用于长期野外部署的自动供水装置. 工业外壳内藏独立的100,000L净水储备, 即使市政供水中断也能稳定获取饮用水.",
+    "value": "独立运作的供水装置, 最多可储存100,000L净水. 需要时再补充.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A self-contained water unit holding up to 100,000 L of clean"
+  },
+  "UI.json|UI_DansShop_Product_vehRearWindshield_Desc": {
+    "as1_value": "更换用后挡风玻璃.",
+    "value": "替换用后挡风玻璃. 让车尾重新封好.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Replacement rear glass. Seals the back of the car again."
+  },
+  "UI.json|UI_DansShop_Product_laserMachete_Desc": {
+    "as1_value": "D特工重型激光砍刀, 攻击距离, 速度与极致切割力兼备的近战武器.",
+    "value": "又长又猛的激光刀刃, 用来杀出一条路.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A long, hard-hitting laser blade for clearing a path."
+  },
+  "UI.json|UI_DansShop_Product_seedBroccoli_Desc": {
+    "as1_value": "用于耕作与长期食物生产的种子.",
+    "value": "一包西兰花种子. 最好赶在冬天前种下.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A packet of broccoli seeds. Better to plant them before wint"
+  },
+  "UI.json|UI_DansShop_Product_vinegar_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "一瓶酸劲十足的醋, 适合烹调和腌渍.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A bottle of sharp vinegar for cooking and pickling."
+  },
+  "UI.json|UI_DansShop_Product_rifle556_Desc": {
+    "as1_value": "D武器库会从当前库存中发出一支可用的步枪.",
+    "value": "从现有库存随机拿一支步枪.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：One random rifle from the available stock."
+  },
+  "UI.json|UI_DansShop_Product_matConcrete_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "干燥的混凝土预拌料. 加上该加的东西就能开工.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Dry concrete mix. Add what is needed and get to work."
+  },
+  "UI.json|UI_DansShop_Product_opSuitWinter_Desc": {
+    "as1_value": "OP防护服 (白). 适合严寒环境的保暖防护服, 完全密封防风防雨并提供强效保暖.",
+    "value": "白色保暖防护服, 适合严寒, 防风防雨效果良好.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A white insulated suit for bitter cold, with good wind and r"
+  },
+  "UI.json|UI_DansShop_Product_cannonRifle_Desc": {
+    "as1_value": "D特工试作型加农步枪, 兼具激光精度与毁灭性的爆炸冲击.",
+    "value": "步枪的手感, 大炮的威力. 真正危险的是爆炸.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Rifle handling, cannon impact. The blast is the dangerous pa"
+  },
+  "UI.json|UI_DansShop_Product_seedOnion_Desc": {
+    "as1_value": "用于耕作与长期食物生产的种子.",
+    "value": "用来种洋葱的种子. 一点点土就能大有收获.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Seeds for growing onions. A little dirt goes a long way."
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_fishingLine_tooltip": {
+    "as1_value": "单根钓线的现金价格. 范围: 1-10000. 默认: 10.",
+    "value": "单根鱼线的价格. 默认: $10; 范围: $1-$10,000.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_matGoldBar_Desc": {
+    "as1_value": "来自D材料储备的一块认证精炼金锭.",
+    "value": "一块精炼金锭. 小到能随身带, 值得好好留着.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A refined gold bar. Small enough to carry, worth hanging on "
+  },
+  "UI.json|UI_DansShop_Product_vehBatterySport_Desc": {
+    "as1_value": "高级性能型车辆蓄电池.",
+    "value": "性能型车辆用的备用电池. 总比打不着火强.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_bronzeToCash_Desc": {
+    "as1_value": "将一枚青铜代币兑换为$100现金.",
+    "value": "按当前汇率将一枚青铜代币换成现金.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Cash out one Bronze Token at the current rate."
+  },
+  "UI.json|UI_DansShop_Product_oliveOil_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "橄榄油. 煎炒, 调沙拉汁, 凡是值得下厨的菜都用得上.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Olive oil for frying, dressings and anything worth cooking."
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_fishingHook_tooltip": {
+    "as1_value": "单枚鱼钩的现金价格. 范围: 1-10000. 默认: 5.",
+    "value": "单枚鱼钩的价格. 默认: $5; 范围: $1-$10,000.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Price of one fishing hook. Default: $5; range: $1–$10,000."
+  },
+  "UI.json|UI_DansShop_Product_vegetableOil_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "日常食用油. 灶台边放一瓶.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Everyday cooking oil. Keep some by the stove."
+  },
+  "UI.json|UI_DansShop_Product_pickledGinger_Desc": {
+    "as1_value": "备餐通用的多功能调味品或烹饪食材.",
+    "value": "腌姜薄片. 辛辣, 带甜又带酸.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Thin pickled ginger slices. Sharp, sweet and sour."
+  },
+  "UI.json|UI_DansShop_Product_shotgun_Desc": {
+    "as1_value": "D武器库会从当前库存中发出一支可用的霰弹枪.",
+    "value": "从库存随机挑选的一支霰弹枪.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：One shotgun, chosen at random from stock."
+  },
+  "UI.json|UI_DansShop_Product_matLog_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一根结实的原木. 很重, 但好木材都从这里开始.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A solid log. Heavy, but good lumber starts here."
+  },
+  "UI.json|UI_DansShop_Product_seedCorn_Desc": {
+    "as1_value": "用于耕作与长期食物生产的种子.",
+    "value": "用来种玉米的种子. 一点点土就能大有收获.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Seeds for growing corn. A little dirt goes a long way."
+  },
+  "UI.json|UI_DansShop_Product_opVehicleRepairKit_Desc": {
+    "as1_value": "D特工车辆全面修复包. 结构, 机械, 电气与车身修理物资一应俱全, 可让重创车辆恢复战备状态.",
+    "value": "完整的车辆修理包. 给勉强撑回家的车用.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A full vehicle repair kit. For when the car barely made it h"
+  },
+  "UI.json|UI_DansShop_Product_vehTankLarge_Desc": {
+    "as1_value": "大容量更换用燃油箱.",
+    "value": "性能型车辆用的大油箱. 车上能多带点油.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A large fuel tank for sport vehicles. More fuel on board."
+  },
+  "UI.json|UI_DansShop_Product_mustard_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "冲辣的黄芥末酱, 配三明治和热狗.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Sharp yellow mustard for sandwiches and hot dogs."
+  },
+  "UI.json|UI_DansShop_Product_ammo9_Desc": {
+    "as1_value": "9mm子弹100发.",
+    "value": "一批100发9mm子弹.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A lot of 100 rounds of 9mm ammunition."
+  },
+  "UI.json|UI_DansShop_Product_matSmallSheet_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一块小金属板. 补洞很好用.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A small metal sheet. Handy for patching holes."
+  },
+  "UI.json|UI_DansShop_Product_matSteelIngot_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "精炼钢制成的实心锭.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Refined steel in a solid bar."
+  },
+  "UI.json|UI_DansShop_Product_gravy_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "浓稠的肉汁, 配肉和土豆正好.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Thick gravy for meat and potatoes."
+  },
+  "UI.json|UI_DansShop_Product_seedCabbage_Desc": {
+    "as1_value": "用于耕作与长期食物生产的种子.",
+    "value": "用来种卷心菜的种子. 一点点土就能大有收获.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Seeds for growing cabbage. A little dirt goes a long way."
+  },
+  "UI.json|UI_DansShop_Product_specialToken_Desc": {
+    "as1_value": "用5枚黄金代币兑换1枚特殊代币.",
+    "value": "按当前汇率用黄金代币兑换一枚特殊代币.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Trade Gold Tokens for one Special Token at the current rate."
+  },
+  "UI.json|UI_DansShop_Product_emergencyKit_Desc": {
+    "as1_value": "D特工急救箱可止血, 消毒伤口, 取出玻璃与子弹, 缝合深伤口, 固定骨折并贴上持久绷带.",
+    "value": "一盒搞定出血, 脏污伤口, 嵌在体内的玻璃, 子弹和骨折.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：One kit for bleeding, dirty wounds, embedded glass, bullets "
+  },
+  "UI.json|UI_DansShop_Product_randomCookingIngredient_Desc": {
+    "as1_value": "从当前干货库存中封装一种主要烹饪食材, 包括面粉, 意面, 面条, 大米, 燕麦与烘焙原料.",
+    "value": "随机一种干货食材: 面粉, 大米, 意大利面之类的.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：原版物品 Base.Pasta 官方简中=意大利面"
+  },
+  "UI.json|UI_DansShop_Product_honey_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "香甜的蜂蜜. 耐放, 还能让难吃的饭菜好下咽一点.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Sweet honey. Keeps well and makes rough meals easier to swal"
+  },
+  "UI.json|UI_DansShop_Product_seedSpinach_Desc": {
+    "as1_value": "用于耕作与长期食物生产的种子.",
+    "value": "用来种菠菜的种子. 一点点土就能大有收获.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Seeds for growing spinach. A little dirt goes a long way."
+  },
+  "UI.json|UI_DansShop_Product_seedRadish_Desc": {
+    "as1_value": "用于耕作与长期食物生产的种子.",
+    "value": "一包红萝卜种子. 最好赶在冬天前种下.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_mayonnaise_Desc": {
+    "as1_value": "备餐通用的多功能调味品或烹饪食材.",
+    "value": "浓稠的蛋黄酱, 适合三明治与简便餐食.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Thick mayonnaise for sandwiches and quick meals."
+  },
+  "UI.json|UI_DansShop_Product_vehTrunk_Desc": {
+    "as1_value": "更换用后备箱盖.",
+    "value": "备用后备箱盖. 总比让货物露在外面强.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A spare trunk lid. Better than leaving the cargo exposed."
+  },
+  "UI.json|UI_DansShop_Product_matDenim_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "裁好的牛仔布条, 用来加固衣物.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Denim strips cut for reinforcing clothes."
+  },
+  "UI.json|UI_DansShop_Product_vehSuspSport_Desc": {
+    "as1_value": "高性能型悬挂总成.",
+    "value": "性能型车辆用的替换悬挂. 崎岖路面的颠簸都由它扛.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Replacement suspension for sport-class vehicles. Takes the b"
+  },
+  "UI.json|UI_DansShop_Product_matSheetMetal_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一整块金属板, 适合较大的修理与加工.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A full sheet of metal for larger repairs and fabrication."
+  },
+  "UI.json|UI_DansShop_Product_opSuit_Desc": {
+    "as1_value": "OP防护服 (黑). 适合炎热天气的轻型防护服, 完全密封防风防雨, 同时减少热量积聚.",
+    "value": "适合温暖天气的黑色轻量防护装. 能挡风挡雨; 摔下去可挡不住.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Lightweight black protective gear for warm weather. Keeps ou"
+  },
+  "UI.json|UI_DansShop_Product_opToolbox_Desc": {
+    "as1_value": "D特工万能工具箱, 集成众多常用建筑, 修理与维护工具的功能.",
+    "value": "一个工具箱, 顶得上一堆零散工具.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：One toolbox in place of a pile of separate tools."
+  },
+  "UI.json|UI_DansShop_Product_thyme_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "干百里香, 适合炖菜, 汤和烤肉.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Dried thyme for stews, soups and roasted meat."
+  },
+  "UI.json|UI_DansShop_Product_bandage_Desc": {
+    "as1_value": "基础医疗绷带.",
+    "value": "用来包扎伤口的干净布料.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Clean cloth for dressing a wound."
+  },
+  "UI.json|UI_DansShop_Product_opBelt_Desc": {
+    "as1_value": "D特工野战腰带, 带八个快速取用挂点与扩展存储, 磁力回收夹可自动搜集附近尸体及其携带容器中的散落现金与钞票捆.",
+    "value": "八个快速取用挂环, 容量比看起来还大. 会从附近尸体收走现金与捆装钞票.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：原版物品 Base.MoneyBundle 照 LangFor42/官方簡中 (捆裝鈔票/捆装钞票)"
+  },
+  "UI.json|UI_DansShop_Product_foodPack_Desc": {
+    "as1_value": "D特工战斗口粮包, 内装适合长时间野外行动的高能量食物.",
+    "value": "打包好的战斗口粮. 分量充足, 又不会腐坏.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Packed combat rations. Plenty of food without the spoilage."
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_SimplifiedElectroGateCrafting_tooltip": {
+    "as1_value": "默认关闭. 开启: 按B > 手工 > 金工即可使用简化配方; 无需制作台与技能, 仅消耗电线 (2格2根 / 4格4根). 关闭: 简化版配方完全隐藏, 也不会以锁定或必须学习的形式出现. 此时改用标准配方, 需要AnySurfaceCraft, 金工3, 电工5以及正常材料.",
+    "value": "默认: 关闭. 开启: 按B > 制作 > 金工即可制作, 不需要技能也不需要工作台. 只消耗电线: 2格陷阱2根, 4格陷阱4根. 关闭: 简化配方消失; 标准配方需要合适的工作台, 金工3, 电工5及常规所需材料.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Default: Off. On: use B > Handcraft > Metalworking, with no "
+  },
+  "UI.json|UI_DansShop_Product_seedGarlic_Desc": {
+    "as1_value": "用于耕作与长期食物生产的种子.",
+    "value": "把这些大蒜种子种进菜地吧.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Put these garlic seeds to work in a garden plot."
+  },
+  "UI.json|UI_DansShop_Product_matReceiver_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "无线电接收器. 如果你还需要收听, 就用得上.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A radio receiver. Good if you still need to listen."
+  },
+  "UI.json|UI_DansShop_Product_seedTomato_Desc": {
+    "as1_value": "用于耕作与长期食物生产的种子.",
+    "value": "把这些番茄种子种进菜地吧.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Put these tomatoes seeds to work in a garden plot."
+  },
+  "UI.json|UI_DansShop_Product_salt_Desc": {
+    "as1_value": "日常备餐的基础调味料与烹饪食材.",
+    "value": "普通食盐. 食品柜空了也还用得上.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Plain table salt. Still useful when the pantry is bare."
+  },
+  "UI.json|UI_DansShop_Product_matAluminumIngot_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "铝废料. 轻巧的金属, 什么要修都用得上.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_remoulade_Desc": {
+    "as1_value": "备餐通用的多功能调味品或烹饪食材.",
+    "value": "酸香的法式蛋黄酱. 总比干吃鱼肉强.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_matThread_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一卷线. 没有它, 针就没用了.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A spool of thread. Needles are useless without it."
+  },
+  "UI.json|UI_DansShop_Product_randomFishingBait_Desc": {
+    "as1_value": "从渔获库存中封装一小盒天然鱼饵, 通常为蚯蚓或可作钓饵的昆虫.",
+    "value": "一把随机鱼饵. 通常是蚯蚓或昆虫.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A handful of random bait. Worms or insects, usually."
+  },
+  "UI.json|UI_DansShop_Product_randomCookedFood_Desc": {
+    "as1_value": "从熟食库存中封装一份即食餐, 涵盖披萨, 汉堡到薯条, 蛋糕与煎饼.",
+    "value": "随机挑选的一份熟食. 趁坏掉前吃掉.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：One prepared meal chosen at random. Eat before it goes bad."
+  },
+  "UI.json|UI_DansShop_Product_bronzeTokenCash_Desc": {
+    "as1_value": "使用现金购买一枚青铜代币.",
+    "value": "用现金购买一枚青铜代币. 汇率按沙盒设置.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：One Bronze Token for cash. The rate follows the sandbox sett"
+  },
+  "UI.json|UI_DansShop_Product_opFannyFront_Desc": {
+    "as1_value": "D特工紧凑型前挂腰包, 无需占用背部槽位即可增加大容量存储.",
+    "value": "挂在前方的腰包, 空间大得惊人.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A front-worn waist pack with a surprising amount of space."
+  },
+  "UI.json|UI_DansShop_Product_ketchup_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "一瓶番茄酱. 几乎什么炸过的东西都能配.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A bottle of ketchup. Goes with nearly any fried scrap of foo"
+  },
+  "UI.json|UI_DansShop_Product_opCrate_Desc": {
+    "as1_value": "D特工强化军用板条箱. 使用前需先安装; 部署后可为装备与物资提供加固存储.",
+    "value": "强化储物板条箱. 先放到地上再装东西.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A reinforced storage crate. Put it on the ground before fill"
+  },
+  "UI.json|UI_DansShop_Product_vehTireHeavy_Desc": {
+    "as1_value": "重型更换用轮胎.",
+    "value": "重型车辆用的备胎. 轮子烂了就别开太远.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A spare tire for heavy-class vehicles. Don't drive far on a "
+  },
+  "UI.json|UI_DansShop_Product_randomAlcohol_Desc": {
+    "as1_value": "从D信使当前可得的酒类库存中封装一瓶.",
+    "value": "从酒架剩下的酒里随机拿一瓶.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：One random bottle from what remains of the liquor shelf."
+  },
+  "UI.json|UI_DansShop_Product_vehMufflerStd_Desc": {
+    "as1_value": "标准更换用消声器.",
+    "value": "标准型车辆用的替换消声器.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A replacement muffler for standard-class vehicles."
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_EnableShopEconomy_tooltip": {
+    "as1_value": "仅控制D商店与金钱/代币经济. 关闭此项可将ElectroGate作为独立功能使用: D商店菜单, Dan的僵尸现金掉落, OP腰带现金自动收集与现金自动兑换代币将被禁用, 但ElectroGate的制作, 物品栏放置, 已安装的ElectroGate与管理员/调试放置仍按照下方ElectroGate选项保持可用. 已存在的OP物品不会被删除.",
+    "value": "开启或关闭D商店及其现金/代币系统. 关闭后也会停止僵尸掉落现金, OP腰带收集现金与代币自动兑换. ElectroGate制作与已放置的陷阱按各自的设置照常运行. 现有物品会保留在存档中.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Turns D's Shop and its cash/token system on or off. Off also"
+  },
+  "UI.json|UI_DansShop_Product_scatterPistol_Desc": {
+    "as1_value": "D特工实验型散射激光手枪, 紧凑三发平台可齐射密集多束激光.",
+    "value": "三发式手枪, 一次射出一簇激光光束.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A three-shot sidearm that throws out a cluster of laser beam"
+  },
+  "UI.json|UI_DansShop_Product_vehBrakeStd_Desc": {
+    "as1_value": "标准刹车总成.",
+    "value": "标准型车辆用的制动器总成. 最好在需要之前就备着.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_opFishingRod_Desc": {
+    "as1_value": "D特工强化鱼竿, 耐磨耐用, 并能显著提升渔获体型.",
+    "value": "强化鱼竿, 经久耐用, 还能钓起更大的鱼.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A reinforced rod built to last and pull in bigger catches."
+  },
+  "UI.json|UI_DansShop_Product_vehMufflerHeavy_Desc": {
+    "as1_value": "重型更换用消声器.",
+    "value": "重型车辆用的替换消声器.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A replacement muffler for heavy-class vehicles."
+  },
+  "UI.json|UI_DansShop_Product_opLighter_Desc": {
+    "as1_value": "D特工免维护打火机, 永不燃油耗尽, 持续可用.",
+    "value": "好像永远用不完的打火机.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A lighter that never seems to run dry."
+  },
+  "UI.json|UI_DansShop_Product_vehMufflerSport_Desc": {
+    "as1_value": "高级性能型消声器.",
+    "value": "性能型车辆用的替换消声器.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A replacement muffler for sport-class vehicles."
+  },
+  "UI.json|UI_DansShop_Product_laserPistol_Desc": {
+    "as1_value": "与枪械专家Tomori共同研发的紧凑, 静音可充能手枪. 传统手枪操作手感搭配高功率激光发射器, 针对快速锁定目标与可靠野战使用调校.",
+    "value": "安静的激光手枪. 充电就好, 不必到处找子弹.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A quiet laser sidearm. Recharge it instead of looking for bu"
+  },
+  "UI.json|UI_DansShop_Product_cigarettes_Desc": {
+    "as1_value": "来自D便利店库存的出厂密封盒装香烟.",
+    "value": "一包香烟. 总会有人想要.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A pack of cigarettes. Someone will want them."
+  },
+  "UI.json|UI_DansShop_Product_gasMask_Desc": {
+    "as1_value": "基础款军用防毒面具, 配备可更换滤芯系统.",
+    "value": "军用款式的防毒面具, 滤芯可更换.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A military-style gas mask with a replaceable filter."
+  },
+  "UI.json|UI_DansShop_Product_vehSeatStd_Desc": {
+    "as1_value": "标准车辆座椅.",
+    "value": "标准型车辆用的替换驾驶座椅.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A replacement driver seat for standard-class vehicles."
+  },
+  "UI.json|UI_DansShop_Product_opWeldingTorch_Desc": {
+    "as1_value": "D特工工业焊枪, 配备超大压力储罐与闭环燃料回收系统. 可与OP工具箱的集成防护装备配合, 适合长时间金工与车辆修理.",
+    "value": "超大号焊枪, 燃料会循环再利用.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：An oversized welding torch that keeps its fuel in circulatio"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_ShowMaterialsShopCategory_tooltip": {
+    "as1_value": "默认开启. 关闭后将从D商店隐藏材料类别及其商品. 这些物品仍可出售.",
+    "value": "在D商店显示材料标签页. 隐藏后无法从该标签页购买, 但仍可出售这些物品.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Show the Materials tab in D's Shop. Hiding it stops purchase"
+  },
+  "UI.json|UI_DansShop_Product_laserShotgun_Desc": {
+    "as1_value": "D特工可充能散射激光武器, 可在近距离大范围投射多束激光.",
+    "value": "散射多道激光光束. 近距离挨一发最疼.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A spread of laser beams. Close range is where it hurts."
+  },
+  "UI.json|UI_DansShop_Product_matRipped_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "撕好的布条. 便宜的补丁, 也能紧急包扎.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Torn cloth strips. Cheap patches and emergency dressings."
+  },
+  "UI.json|UI_DansShop_Product_vehLightbar_Desc": {
+    "as1_value": "稀有紧急警光灯总成.",
+    "value": "装在车顶的紧急警示灯. 很难得的备件.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_seasoningSalt_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "调味盐. 菜太淡时的快速补救.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Seasoned salt. A quick fix for bland cooking."
+  },
+  "UI.json|UI_DansShop_Product_vehRearDoor_Desc": {
+    "as1_value": "更换用车辆后车门.",
+    "value": "给破车用的替换车后门.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名 (LangFor42 車後門); 配合商品名"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_CashPerBronze_tooltip": {
+    "as1_value": "用于现金购买青铜代币, 双向兑换与OP腰带自动兑换.",
+    "value": "兑换一枚青铜代币所需的现金. 同时决定代币换回现金与OP腰带自动兑换的汇率.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Cash needed for one Bronze Token. Also sets the rate for cas"
+  },
+  "UI.json|UI_DansShop_Product_matElectronics_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "坏掉的电子零件. 手巧的人还是用得上.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Broken electronic bits. Someone handy can still use them."
+  },
+  "UI.json|UI_DansShop_Product_matGlue_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "普通胶水, 适合小修小补.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Ordinary glue for smaller fixes."
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_CombatRationCalories_tooltip": {
+    "as1_value": "打开一包时产出的单个OP战斗口粮的热量. 范围: 100-5000. 默认: 每份2000.",
+    "value": "从OP战斗口粮包取出的每份口粮热量. 默认: 2,000. 范围: 100-5,000.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Calories in each individual ration taken from an OP Combat R"
+  },
+  "UI.json|UI_DansShop_Product_vehTireSport_Desc": {
+    "as1_value": "高级性能型更换轮胎.",
+    "value": "性能型车辆用的备胎. 轮子烂了就别开太远.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A spare tire for sport-class vehicles. Don't drive far on a "
+  },
+  "UI.json|UI_DansShop_Product_matElectricWire_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "绝缘电线, 用于电路与修理.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Insulated electrical wire for circuits and repairs."
+  },
+  "UI.json|UI_DansShop_Product_seedStrawberry_Desc": {
+    "as1_value": "用于耕作与长期食物生产的种子.",
+    "value": "用来种草莓的种子. 一点点土就能大有收获.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Seeds for growing strawberries. A little dirt goes a long wa"
+  },
+  "UI.json|UI_DansShop_Product_matClay_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一团黏土. 趁还没干掉前塑形.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A lump of clay. Shape it before it dries out."
+  },
+  "UI.json|UI_DansShop_Product_accessoryBulkSell_Desc": {
+    "as1_value": "D回收终端会评估你携带物品中所有未佩戴的耳环, 戒指, 项链与手链, 每件以$1结算. 佩戴中的首饰除外.",
+    "value": "把闲置的首饰和手表换成现金, 每件$1. 宝石可卖$150-$600. 穿戴中和已收藏的物品不会被卖掉.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Cash in spare jewelry and watches for $1 each. Gems fetch $1"
+  },
+  "UI.json|UI_DansShop_Product_opBackpack_Desc": {
+    "as1_value": "由Neralyn Industries为D特工团队定制的野战后勤背包. 强化悬挂系统几乎完全抵消负重, 自供电通讯终端可保持与D商店的联系, 微型修理机器人会在隔层中巡视并修复受损装备.",
+    "value": "背起来几乎没重量. 内置无线电可联系D商店, 收在里面的装备还会慢慢自我修复.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Barely feels loaded. The built-in radio reaches D's Shop, an"
+  },
+  "UI.json|UI_DansShop_Product_pistol9_Desc": {
+    "as1_value": "D武器库会从当前库存中发出一支可用的9mm手枪.",
+    "value": "随机一支9mm手枪. 架上剩什么就拿什么.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：One random 9mm pistol. Whatever is left in the rack."
+  },
+  "UI.json|UI_DansShop_Product_vehHeadlight_Desc": {
+    "as1_value": "更换用车辆前大灯.",
+    "value": "备用前大灯. 天黑已经够糟了, 别再加上灯坏掉.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A spare headlight. Darkness is bad enough without a broken l"
+  },
+  "UI.json|UI_DansShop_Product_laserDagger_Desc": {
+    "as1_value": "D特工紧凑型激光刀刃, 专为极速, 干脆的近战攻击打造.",
+    "value": "小型激光刀刃. 近身时出手很快.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Small laser blade. Fast in close quarters."
+  },
+  "UI.json|UI_DansShop_Product_matTwine_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "细麻绳, 可用来捆东西或做些粗糙的手工活.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名, CH 側同為細麻繩"
+  },
+  "UI.json|UI_DansShop_Product_matScrapMetal_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "零碎的金属废料. 有用的钢料千万别扔.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehTireStd_Desc": {
+    "as1_value": "标准更换用轮胎.",
+    "value": "标准型车辆用的备胎. 轮子烂了就别开太远.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A spare tire for standard-class vehicles. Don't drive far on"
+  },
+  "UI.json|UI_DansShop_Product_canned_Desc": {
+    "as1_value": "从现有保存食品库存中封装一份密封罐头.",
+    "value": "从食品柜随机挑一罐. 不是每罐都是好东西.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：One random can from the pantry. Not every label is a winner."
+  },
+  "UI.json|UI_DansShop_Product_electroGate_Desc": {
+    "as1_value": "D特工四格地面电气防御系统, 用于覆盖更宽的通道与防线.",
+    "value": "四格通电地板. 能封住较宽的通道.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Four tiles of electrified floor. Covers a wider approach."
+  },
+  "UI.json|UI_DansShop_Product_matStone_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "普通的石块. 工具短缺时用途多多.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_melee_Desc": {
+    "as1_value": "D商店库存货架会从当前库存中发出一把可用的近战武器.",
+    "value": "从剩余库存随机拿一把近战武器. 不能挑.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：One random melee weapon from the remaining stock. No choosin"
+  },
+  "UI.json|UI_DansShop_Product_handCannon_Desc": {
+    "as1_value": "D特工重型激光手炮, 以紧凑平台释放爆炸性的破坏力.",
+    "value": "小巧的激光炮, 带有爆炸威力. 注意目标附近有什么.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A compact laser cannon with an explosive punch. Mind what is"
+  },
+  "UI.json|UI_DansShop_Product_marinara_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "番茄底的意面酱. 热的好吃, 冷的勉强能吃.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Tomato-based pasta sauce. Good hot, tolerable cold."
+  },
+  "UI.json|UI_DansShop_Product_matGravel_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一袋碎石. 重到这趟绝对不算白跑.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehBatteryStd_Desc": {
+    "as1_value": "标准车辆蓄电池.",
+    "value": "标准型车辆用的备用电池. 总比打不着火强.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_vaccine_Desc": {
+    "as1_value": "D特工急救药物, 及时使用可清除僵尸感染及相关感染症状.",
+    "value": "被僵尸咬伤后的最后机会. 能清除感染.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A last chance after a zombie bite. Clears the infection."
+  },
+  "UI.json|UI_DansShop_Product_vehBrakeSport_Desc": {
+    "as1_value": "高性能型刹车总成.",
+    "value": "性能型车辆用的制动器总成. 最好在需要之前就备着.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_bronzeToSilverAll_Desc": {
+    "as1_value": "将所有青铜代币按10:1兑换为白银代币.",
+    "value": "将青铜代币尽可能全部兑换为白银代币.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Convert as many Bronze Tokens as possible into Silver Tokens"
+  },
+  "UI.json|UI_DansShop_Product_guacamole_Desc": {
+    "as1_value": "备餐通用的多功能调味品或烹饪食材.",
+    "value": "牛油果泥蘸酱. 配点脆的东西更好吃.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_wasabi_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "一小坨冲鼻的芥末. 瞬间让你脑袋清醒.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_matTransmitter_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "无线电发射器. 用来把信号发出去.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A radio transmitter. For sending a signal out."
+  },
+  "UI.json|UI_DansShop_Product_oregano_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "干牛至. 番茄菜和肉类撒一小撮.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Dried oregano. A pinch for tomato dishes and meat."
+  },
+  "UI.json|UI_DansShop_Product_matAmplifier_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一块扬声器电路板. 可拆用的无线电电子零件.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehFrontDoor_Desc": {
+    "as1_value": "更换用车辆前车门.",
+    "value": "替换用车前门. 挡住风雨, 也挡住不该伸进来的手.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_supplementPack_Desc": {
+    "as1_value": "D特工恢复包, 内含用于恢复整体身体状态的浓缩补剂.",
+    "value": "浓缩补剂, 专治倒霉的一天.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Concentrated supplements for a bad day."
+  },
+  "UI.json|UI_DansShop_Product_sesameOil_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "香气十足的芝麻油. 一点点就能改变整碗的味道.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Fragrant sesame oil. A little changes the whole bowl."
+  },
+  "UI.json|UI_DansShop_Product_tomatoPaste_Desc": {
+    "as1_value": "备餐通用的多功能调味品或烹饪食材.",
+    "value": "浓缩番茄膏, 适合做酱汁和炖菜.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Concentrated tomato paste for sauces and stews."
+  },
+  "UI.json|UI_DansShop_Product_opGenerator_Desc": {
+    "as1_value": "由Drumz Electric Company为D特工长期部署制造的野战发电机. 闭环燃料回收器与维护核心让机组在长时间运行中保持燃料充足与状态良好.",
+    "value": "会自己照顾燃料与状况的发电机. 装好就能让灯一直亮着.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A generator that looks after its own fuel and condition. Ins"
+  },
+  "UI.json|UI_DansShop_Product_vehWindshield_Desc": {
+    "as1_value": "更换用前挡风玻璃.",
+    "value": "前挡风玻璃. 看路不用再隔着裂纹.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A front windshield. See the road without looking through cra"
+  },
+  "UI.json|UI_DansShop_Product_battery_Desc": {
+    "as1_value": "来自D杂项库存的密封通用电池.",
+    "value": "普通的电池. 没电之前都很好用.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A plain battery. Useful until it runs flat."
+  },
+  "UI.json|UI_DansShop_Product_salsa_Desc": {
+    "as1_value": "备餐通用的多功能调味品或烹饪食材.",
+    "value": "颗粒感十足的莎莎酱. 直接舀来吃, 或浇在晚餐上.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Chunky salsa. Scoop it up or throw it on dinner."
+  },
+  "UI.json|UI_DansShop_Product_matPropane_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一罐丙烷. 只要还有燃料就派得上用场.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A propane tank. Useful as long as there is fuel left."
+  },
+  "UI.json|UI_DansShop_Product_seedPepper_Desc": {
+    "as1_value": "用于耕作与长期食物生产的种子.",
+    "value": "把这些甜椒种子种进菜地吧.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Put these bell peppers seeds to work in a garden plot."
+  },
+  "UI.json|UI_DansShop_Product_matScrews_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "满满一盒螺丝. 小零件就该收在一起.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A full box of screws. Keep the small bits together."
+  },
+  "UI.json|UI_DansShop_Product_randomRawMeat_Desc": {
+    "as1_value": "从当日可用的冷藏食品库存中封装一份生肉.",
+    "value": "随机一块生肉. 煮熟再吃.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A random cut of raw meat. Cook it before eating."
+  },
+  "UI.json|UI_DansShop_Product_gasMaskFilter_Desc": {
+    "as1_value": "适用于兼容防毒面具的原装替换滤芯.",
+    "value": "适配防毒面具的备用滤芯.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A spare filter for a compatible gas mask."
+  },
+  "UI.json|UI_DansShop_Product_matPlank_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一块木板. 路障就是一块一块钉起来的.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A wooden plank. Barricades are built one board at a time."
+  },
+  "UI.json|UI_DansShop_Product_fishingLine_Desc": {
+    "as1_value": "用于重新缠线与修理鱼竿的标准钓线.",
+    "value": "给坏掉的鱼竿换上的备用鱼线.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehRearWindow_Desc": {
+    "as1_value": "更换用后侧窗玻璃.",
+    "value": "后侧车门用的替换车窗.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A replacement window for a rear-side door."
+  },
+  "UI.json|UI_DansShop_Product_matSand_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一袋沙子, 用于建筑与整地.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A sack of sand for construction and ground work."
+  },
+  "UI.json|UI_DansShop_Product_matWire_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一卷铁丝. 捆扎, 修理, 临时凑合都用得上.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A coil of wire. Ties, repairs and improvised jobs."
+  },
+  "UI.json|UI_DansShop_Product_matMetalBar_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一根金属棒. 很硬的料.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_matCharcoal_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "木炭, 可用来取暖, 也能用在几种实用配方.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Charcoal for heat and a few useful recipes."
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_ShowVehicleShopCategory_tooltip": {
+    "as1_value": "默认开启. 关闭后将从D商店隐藏车辆类别及其商品. 这些物品仍可出售.",
+    "value": "在D商店显示车辆标签页. 隐藏后无法从该标签页购买, 但仍可出售这些物品.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Show the Vehicle tab in D's Shop. Hiding it stops purchases "
+  },
+  "UI.json|UI_DansShop_Product_matScrews_Price": {
+    "as1_value": "$15",
+    "value": "$100",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：$100"
+  },
+  "UI.json|UI_DansShop_Product_vehBatteryHeavy_Desc": {
+    "as1_value": "重型车辆蓄电池.",
+    "value": "重型车辆用的备用电池. 总比打不着火强.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_matMetalPipe_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一根坚固的金属管. 可当建材, 也能当最后的武器.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A sturdy metal pipe. Building material or a last-resort weap"
+  },
+  "UI.json|UI_DansShop_Product_vehSeatSport_Desc": {
+    "as1_value": "高级性能型车辆座椅.",
+    "value": "性能型车辆用的替换驾驶座椅.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A replacement driver seat for sport-class vehicles."
+  },
+  "UI.json|UI_DansShop_Product_goldToSpecialAll_Desc": {
+    "as1_value": "将所有黄金代币按5:1兑换为特殊代币.",
+    "value": "将黄金代币尽可能全部兑换为特殊代币.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Convert as many Gold Tokens as possible into Special Tokens."
+  },
+  "UI.json|UI_DansShop_Product_silverToken_Desc": {
+    "as1_value": "用10枚青铜代币兑换1枚白银代币.",
+    "value": "按当前汇率用青铜代币兑换一枚白银代币.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Exchange Bronze Tokens for one Silver Token at the current r"
+  },
+  "UI.json|UI_DansShop_Product_sourCream_Desc": {
+    "as1_value": "备餐通用的多功能调味品或烹饪食材.",
+    "value": "冰凉的酸奶油, 适合配土豆, 做蘸酱与酱汁.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Cool sour cream for potatoes, dips and sauces."
+  },
+  "UI.json|UI_DansShop_Product_matLeather_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "皮革条, 用来把衣物补得更耐用.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehEngineParts_Desc": {
+    "as1_value": "用于车辆维护的更换发动机零件.",
+    "value": "备用引擎零件. 让快不行的发动机继续运转.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_fishingHook_Desc": {
+    "as1_value": "用于制作与修理鱼竿的标准鱼钩.",
+    "value": "备用鱼钩. 很容易弄丢, 少了它又很难钓鱼.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A spare hook. Easy to lose, hard to fish without."
+  },
+  "UI.json|UI_DansShop_Product_matWeldingRods_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "焊条. 拿出喷灯时手边备几根.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Welding rods. Keep a few handy when the torch comes out."
+  },
+  "UI.json|UI_DansShop_Product_sugar_Desc": {
+    "as1_value": "用于饮料, 烘焙与各式食谱的烹饪食材.",
+    "value": "一袋糖, 可用来烘焙或给饮料加甜.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A bag of sugar for baking or sweetening drinks."
+  },
+  "UI.json|UI_DansShop_Product_ammo556_Desc": {
+    "as1_value": "5.56mm子弹80发.",
+    "value": "一批80发5.56mm子弹.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A lot of 80 rounds of 5.56mm ammunition."
+  },
+  "UI.json|UI_DansShop_Product_vehFrontWindow_Desc": {
+    "as1_value": "更换用前侧窗玻璃.",
+    "value": "前侧车门用的替换车窗.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A replacement window for a front-side door."
+  },
+  "UI.json|UI_DansShop_Product_silverToGoldAll_Desc": {
+    "as1_value": "将所有白银代币按10:1兑换为黄金代币.",
+    "value": "将白银代币尽可能全部兑换为黄金代币.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Convert as many Silver Tokens as possible into Gold Tokens."
+  },
+  "UI.json|UI_DansShop_Product_accessoryBulkSell_Price": {
+    "as1_value": "固定价格: 每件$1",
+    "value": "首饰$1 / 宝石$150-$600",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Jewelry $1 / Gems $150–$600"
+  },
+  "UI.json|UI_DansShop_Product_goldToSilver_Desc": {
+    "as1_value": "将一枚黄金代币兑换为10枚白银代币.",
+    "value": "按当前汇率将一枚黄金代币拆换成白银代币.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Break one Gold Token into Silver Tokens at the current rate."
+  },
+  "UI.json|UI_DansShop_Product_matDirt_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一袋泥土. 地面不给力的地方就靠它了.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A bag of dirt. Put it where the ground is not doing you favo"
+  },
+  "UI.json|UI_DansShop_Product_randomDrink_Desc": {
+    "as1_value": "从D当前救济储备中封装一瓶密封饮料, 大型容器与军用供水仅出现在限量批次中.",
+    "value": "从剩下的饮料里随机挑一份.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：One drink picked at random from what is left."
+  },
+  "UI.json|UI_DansShop_Product_vehTankStd_Desc": {
+    "as1_value": "标准更换用燃油箱.",
+    "value": "重型车辆用的大油箱. 装得多, 适合长途.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A large fuel tank for heavy vehicles. Holds more for the lon"
+  },
+  "UI.json|UI_DansShop_Product_vehSuspHeavy_Desc": {
+    "as1_value": "重型悬挂总成.",
+    "value": "重型车辆用的替换悬挂. 崎岖路面的颠簸都由它扛.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Replacement suspension for heavy-class vehicles. Takes the b"
+  },
+  "UI.json|UI_DansShop_Product_seedPea_Desc": {
+    "as1_value": "用于耕作的一包大豆种子.",
+    "value": "把这些大豆种子种进菜地吧.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Put these soybeans seeds to work in a garden plot."
+  },
+  "UI.json|UI_DansShop_Product_matCopperIngot_Desc": {
+    "as1_value": "单件供应的制作与建筑材料.",
+    "value": "一块铜锭. 值得存着备用的金属.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A bar of copper. Useful metal to have in reserve."
+  },
+  "UI.json|UI_DansShop_Product_vehBrakeHeavy_Desc": {
+    "as1_value": "重型刹车总成.",
+    "value": "重型车辆用的制动器总成. 最好在需要之前就备着.",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：配合商品名"
+  },
+  "UI.json|UI_DansShop_Product_seedPotato_Desc": {
+    "as1_value": "用于耕作与长期食物生产的种子.",
+    "value": "一包土豆种子. 最好赶在冬天前种下.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A packet of potatoes seeds. Better to plant them before wint"
+  },
+  "UI.json|UI_DansShop_Product_laserRifle_Desc": {
+    "as1_value": "D特工可充能激光步枪, 专为远距离精准, 猛烈的火力打造.",
+    "value": "可充电的激光步枪, 用来对付路上更远的目标.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：A rechargeable laser rifle for targets farther down the road"
+  },
+  "UI.json|UI_DansShop_Product_hotSauce_Desc": {
+    "as1_value": "可用于烹饪与备餐的多功能调味料.",
+    "value": "辣酱. 几滴就够味了.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Hot sauce. A few drops go a long way."
+  },
+  "UI.json|UI_DansShop_Product_seedCarrot_Desc": {
+    "as1_value": "用于耕作与长期食物生产的种子.",
+    "value": "把这些胡萝卜种子种进菜地吧.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Put these carrots seeds to work in a garden plot."
+  },
+  "UI.json|UI_DansShop_Product_nachoCheese_Desc": {
+    "as1_value": "备餐通用的多功能调味品或烹饪食材.",
+    "value": "浓稠的奶酪酱. 可以的话热一下.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Thick cheese sauce. Warm it up if you can."
+  },
+  "UI.json|UI_DansShop_Product_accessoryBulkSell_Name": {
+    "as1_value": "出售全部未佩戴首饰",
+    "value": "出售闲置首饰, 手表与宝石",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Sell Spare Jewelry, Watches & Gems"
+  },
+  "UI.json|UI_DansShop_Product_specialToGold_Desc": {
+    "as1_value": "将一枚特殊代币兑换为5枚黄金代币.",
+    "value": "按当前汇率将一枚特殊代币拆换成黄金代币.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Break one Special Token into Gold Tokens at the current rate"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Enable_vehTankStd": {
+    "as1_value": "显示大油箱 - 标准",
+    "value": "显示大油箱 - 大型",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：現行英文分類是 Large, CN 仍寫標準; CH 已正確, 只修 CN."
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_vehTankSmall": {
+    "as1_value": "燃油箱 - 小型价格 ($)",
+    "value": "大油箱 - 标准价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：英文是大型油箱的 Standard 車種版本, 不是小型油箱. 沿用同系列 Enable 選項既有的大油箱與標準名稱."
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_vehTankStd": {
+    "as1_value": "燃油箱 - 标准价格 ($)",
+    "value": "大油箱 - 大型价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：英文是 Large Fuel Tank - Large, 兩側仍寫標準且漏掉大型油箱的容量分類; 與同系列 Enable 選項名稱對齊."
+  },
+  "Sandbox.json|Sandbox_ImmersiveSnow_CharSnowIndoorMeltHours_tooltip": {
+    "as1_value": "在屋顶下或车内, 只要温度高于0°C, 无论房间多冷, 角色身上的一层雪都会在此游戏小时数内融化; 更温暖的房间融化速度更快 (见上一选项).",
+    "value": "在屋顶下或车内, 温度略高于0°C时, 无论房间多冷, 角色身上的完整一层雪都会在此游戏小时数内融化; 更温暖的房间融化速度更快 (见上一选项).",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：英文以 just above 0 C 作為這個融雪時數的基準, CN 漏掉略高於的限定; 同時明確保留 full layer 的完整積雪層含義."
+  },
+  "Sandbox.json|Sandbox_ImmersiveSnow_SnowKickRun_tooltip": {
+    "as1_value": "跑步踏入雪地时扬起雪粉的概率 (小数部分为扬起一团的几率): 0为无, 0.4约为每两步一次, 3为大量.",
+    "value": "跑步每一步踏入雪地时扬起的雪粉团数 (小数表示扬起一团的几率): 0为无, 0.4约为每两步一次, 3为大量.",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：設定值表示每步揚起的雪粉團數, 不是整體機率; 只有小數值以揚起一團的機率解釋. 原譯將可大於 1 的數量設定誤稱為概率."
+  },
+  "Sandbox.json|Sandbox_ImmersiveSnow_SnowKickSprint_tooltip": {
+    "as1_value": "冲刺踏入雪地时扬起雪粉的概率, 并有几率扬起雪块.",
+    "value": "冲刺每一步踏入雪地时扬起的雪粉团数, 并有几率扬起雪块.",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：Powder puffs 指每步揚起的雪粉團數, 原譯誤寫成揚起雪粉的概率; 機率只屬於後半句額外揚起雪塊的條件."
+  },
+  "Sandbox.json|Sandbox_ImmersiveSnow_TrampledPathSteps_tooltip": {
+    "as1_value": "在同一格子上累积多少脚印会形成一条路径 (旧脚印权重较低, 3游戏小时后减半); 脚印越多路径颜色越深. 每次有人走过大约产生2个脚印.",
+    "value": "在同一格子上累积多少脚印会形成一条路径 (旧脚印权重较低, 3游戏小时后减半); 脚印越多路径颜色越深. 每次有人走过, 每个格子大约产生2个脚印.",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：CH 的 darker 應明確指顏色變深, 不是小徑深度增加; CN 最後一句漏掉 a square, 把每格約 2 個腳印變成每次通過總共約 2 個."
+  },
+  "Sandbox.json|Sandbox_ImmersiveSnow_VehicleHoodMelt_tooltip": {
+    "as1_value": "当引擎预热时, 引擎盖上的积雪比车顶融化得更快: 引擎越热, 融化越快 (基于原版引擎温度: 运行约一小时后升温, 熄火后保持一段时间余热). 仅适用于引擎盖为独立模型的车辆 (如KI5、Vanilla Vehicles Animated等); 原版车辆的引擎盖是车身的一部分. 在多人游戏中由服务器决定; 每位玩家可以在\"选项>模组\"中对自己隐藏此效果.",
+    "value": "当引擎温热时, 引擎盖上的积雪比车顶融化得更快: 引擎越热, 融化越快 (基于原版引擎温度: 开始运行后的约一小时内逐渐升温, 熄火后保持一段时间余热). 仅适用于引擎盖为独立模型的车辆 (如KI5、Vanilla Vehicles Animated等); 原版车辆的引擎盖是车身的一部分. 在多人游戏中由服务器决定; 每位玩家可以在“选项 > 模组”中对自己隐藏此效果.",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：英文是引擎處於溫熱狀態時生效, 並在開始運轉後約一小時內逐漸升溫; 原譯的預熱時與運行約一小時後升溫改變了狀態及時間條件."
+  },
+  "UI.json|UI_DansShop_NoAccessories": {
+    "as1_value": "未发现未佩戴的耳环, 戒指, 项链或手链.",
+    "value": "没有多余的东西可以放上柜台.",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：現行英文是沒有多餘物品可交售, 不再限定耳環、戒指、項鍊與手鍊; 現行商品也包含手錶與寶石, 原譯列舉的範圍已過時."
+  },
+  "UI.json|UI_DansShop_Product_vehTankLarge_Name": {
+    "as1_value": "燃油箱 - 大型",
+    "value": "大油箱 - 性能型",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：指定: Sport=性能型"
+  },
+  "UI.json|UI_DansShop_Product_vehTankLarge_Price": {
+    "as1_value": "$140",
+    "value": "$70",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：現行英文價格是 $70, 兩側仍保留舊價格 $140; 上游商店及伺服器商品表亦為 70."
+  },
+  "UI.json|UI_DansShop_Product_vehTankSmall_Name": {
+    "as1_value": "燃油箱 - 小型",
+    "value": "大油箱 - 标准",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：現行英文是 Large Fuel Tank - Standard, 不是小型油箱. Small 只是保留的鍵名, 不應據此決定商品名稱."
+  },
+  "UI.json|UI_DansShop_Product_vehTankSmall_Price": {
+    "as1_value": "$70",
+    "value": "$35",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：現行英文價格是 $35, 兩側仍保留舊價格 $70; 上游商店及伺服器商品表亦為 35."
+  },
+  "UI.json|UI_DansShop_Product_vehTankStd_Name": {
+    "as1_value": "燃油箱 - 标准",
+    "value": "大油箱 - 大型",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：現行英文是 Large Fuel Tank - Large, 原譯仍為標準. 前一個 Large 表示油箱容量, 後一個 Large 表示適用車種分類."
+  },
+  "UI.json|UI_DansShop_Product_vehTankStd_Price": {
+    "as1_value": "$100",
+    "value": "$50",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：現行英文價格是 $50, 兩側仍保留舊價格 $100; 上游商店及伺服器商品表亦為 50."
+  },
+  "UI.json|UI_ImmersiveSnow_FrostScreen_tooltip": {
+    "as1_value": "关闭: 无论沙盒设置如何, 失温时屏幕边缘不会出现结霜效果. 开启: 遵循沙盒设置, 仅在单人模式且启用\"使用这些设置代替沙盒设置\"时生效. 在多人游戏中, 你可以对自己隐藏此效果; 结霜厚度及触发等级由服务器决定.",
+    "value": "关闭: 无论沙盒设置如何, 失温时屏幕边缘不会出现结霜效果. 开启: 遵循沙盒设置; 单人模式下若启用“使用这些设置代替沙盒设置”, 则开启此效果. 在多人游戏中, 你可以对自己隐藏此效果; 结霜厚度及触发等级由服务器决定.",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：CN 多加僅在單人且啟用覆寫時才生效的限制; CH 則把覆寫啟用後仍解釋為依沙盒設定. 對照同 MOD 的 UI_ImmersiveSnow_UseOwn_to"
+  },
+  "UI.json|UI_ImmersiveSnow_BloodyFootprints_tooltip": {
+    "as1_value": "关闭: 无论沙盒设置如何, 踩踏尸体后对你而言不会出现红色血脚印. 开启: 遵循沙盒设置, 仅在单人模式且启用\"使用这些设置代替沙盒设置\"时生效. 若原版血液贴图量已关闭, 此项也会强制关闭.",
+    "value": "关闭: 无论沙盒设置如何, 踩踏尸体后对你而言不会出现红色血脚印. 开启: 遵循沙盒设置; 单人模式下若启用“使用这些设置代替沙盒设置”, 则开启此效果. 若原版血液贴图量已关闭, 此项也会强制关闭.",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：同 FrostScreen：開啟＝依沙盒；單人遊戲啟用「使用這些設定取代沙盒」時由這個開關決定（開啟＝開啟效果）。CH 舊譯寫成覆寫後仍依沙盒，CN 誤加「僅在"
+  },
+  "UI.json|UI_ImmersiveSnow_BloodyTireTracks_tooltip": {
+    "as1_value": "关闭: 无论沙盒设置如何, 碾压尸体后对你而言不会出现红色血车辙. 开启: 遵循沙盒设置, 仅在单人模式且启用\"使用这些设置代替沙盒设置\"时生效. 若原版血液贴图量已关闭, 此项也会强制关闭.",
+    "value": "关闭: 无论沙盒设置如何, 碾压尸体后对你而言不会出现红色血车辙. 开启: 遵循沙盒设置; 单人模式下若启用“使用这些设置代替沙盒设置”, 则开启此效果. 若原版血液贴图量已关闭, 此项也会强制关闭.",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：同 FrostScreen：開啟＝依沙盒；單人遊戲啟用「使用這些設定取代沙盒」時由這個開關決定（開啟＝開啟效果）。CH 舊譯寫成覆寫後仍依沙盒，CN 誤加「僅在"
+  },
+  "UI.json|UI_ImmersiveSnow_TireTracks_tooltip": {
+    "as1_value": "关闭: 无论沙盒设置如何, 对你而言均无车辙印, 轮胎也不沾雪. 如果驾驶时游戏卡顿, 请首先尝试此选项. 开启: 遵循沙盒设置, 仅在单人模式且启用\"使用这些设置代替沙盒设置\"时生效.",
+    "value": "关闭: 无论沙盒设置如何, 对你而言均无车辙印, 轮胎也不沾雪. 如果驾驶时游戏卡顿, 请首先尝试此选项. 开启: 遵循沙盒设置; 单人模式下若启用“使用这些设置代替沙盒设置”, 则开启此效果.",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：同 FrostScreen：開啟＝依沙盒；單人遊戲啟用「使用這些設定取代沙盒」時由這個開關決定（開啟＝開啟效果）。CH 舊譯寫成覆寫後仍依沙盒，CN 誤加「僅在"
+  },
+  "UI.json|UI_ImmersiveSnow_VehicleFrost_tooltip": {
+    "as1_value": "关闭: 无论沙盒设置如何, 对你而言车窗上无结霜 (无需刮除, 内部视野清晰). 开启: 遵循沙盒设置, 仅在单人模式且启用\"使用这些设置代替沙盒设置\"时生效. 在多人游戏中, 你可以对自己隐藏此效果; 结霜生成与融化速度由服务器决定.",
+    "value": "关闭: 无论沙盒设置如何, 对你而言车窗上无结霜 (无需刮除, 内部视野清晰). 开启: 遵循沙盒设置; 单人模式下若启用“使用这些设置代替沙盒设置”, 则开启此效果. 在多人游戏中, 你可以对自己隐藏此效果; 结霜生成与融化速度由服务器决定.",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：同 FrostScreen：開啟＝依沙盒；單人遊戲啟用「使用這些設定取代沙盒」時由這個開關決定（開啟＝開啟效果）。CH 舊譯寫成覆寫後仍依沙盒，CN 誤加「僅在"
+  },
+  "UI.json|UI_ImmersiveSnow_VehicleHoodMelt_tooltip": {
+    "as1_value": "关闭: 无论沙盒设置如何, 对你而言引擎盖不会因引擎发热而加速融雪; 引擎盖上的积雪将与车身其他部分保持一致. 开启: 遵循沙盒设置, 仅在单人模式且启用\"使用这些设置代替沙盒设置\"时生效. 仅适用于引擎盖为独立模型的车辆 (如KI5、Vanilla Vehicles Animated等). 在多人游戏中, 你可以对自己隐藏此效果; 是否融化及融化速度由服务器决定.",
+    "value": "关闭: 无论沙盒设置如何, 对你而言引擎盖不会因引擎发热而加速融雪; 引擎盖上的积雪将与车身其他部分保持一致. 开启: 遵循沙盒设置; 单人模式下若启用“使用这些设置代替沙盒设置”, 则开启此效果. 仅适用于引擎盖为独立模型的车辆 (如KI5、Vanilla Vehicles Animated等). 在多人游戏中, 你可以对自己隐藏此效果; 是否融化及融化速度由服务器决定.",
+    "reason": "2026-11-08 #1309–#1320 批次：舊譯稽核：同 FrostScreen：開啟＝依沙盒；單人遊戲啟用「使用這些設定取代沙盒」時由這個開關決定（開啟＝開啟效果）。CH 舊譯寫成覆寫後仍依沙盒，CN 誤加「僅在"
+  },
+  "ItemName.json|MarzGuns.762x39Magazine75": {
+    "as1_value": "7.62x39mm 75加长发弹匣",
+    "value": "7.62x39mm 75发加长弹匣",
+    "reason": "2026-11-08 #1309–#1320 批次：As1 簡中語序錯：75加长发弹匣→75发加长弹匣（Gunsmith 配方名同步發現）"
+  },
+  "Recipes.json|SunCS_ImprovisedColdPack": {
+    "as1_value": "简易冷敷包",
+    "value": "制作简易冰袋",
+    "reason": "2026-11-08 #1309–#1320 批次：As1 譯成簡易冷敷包、少了製作；產物是本體 Base.Coldpack（LangFor42「冰袋」、官方簡中「冰袋」），對齊同 MOD 的「製作工業冰袋」"
+  },
+  "Recipes.json|SunCS_ImprovisedCooler": {
+    "as1_value": "简易冷却器",
+    "value": "制作简易保温箱",
+    "reason": "2026-11-08 #1309–#1320 批次：As1 譯成簡易冷卻器、少了製作；產物 SCoolerSystem.ImprovisedCooler 已出貨名是簡易保溫箱"
+  },
+  "Tooltip.json|Tooltip_XA_XA_Vz58": {
+    "as1_value": "口径: 7.62x39mm | 弹匣: 6L2弹匣30发 (7.62x39mm)",
+    "value": "口径: 7.62x39mm | 弹匣: Vz.58自动步枪弹匣30发 (7.62x39mm)",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Caliber: 7.62x39 | Magazines: Vz58 Magazine 30 (7.62x39)"
+  },
+  "Tooltip.json|Tooltip_XA_STANAG30": {
+    "as1_value": "口径: 5.56x45mm | 容量: 30 | 适配: 柯尔特M4A1自动步枪, ADAR 2-15自动步枪, AR15SAIGRY自动步枪, 柯尔特723自动步枪, 黑克勒&科赫416A5自动步枪, 柯尔特M16A1自动步枪, …",
+    "value": "口径: 5.56x45mm | 容量: 30 | 适配: ADAR 2-15自动步枪, AR15SAIGRY自动步枪, 伯莱塔ARX160自动步枪, CZ BREN 2自动步枪, 柯尔特723自动步枪, 沙漠科技MDR自动步枪, FN F2000自动步枪, FN FNC自动步枪, FN SCAR-L自动步枪, 黑克勒&科赫416A5自动步枪, 丰和20式自动步枪, 柯尔特M16A1自动步枪, 柯尔特M4A1自动步枪, 柯尔特M4A1自动步枪 (SOPMOD II), Mk18 Mod 0自动步枪, NL556自动步枪, 西格516自动步枪, STM-556自动步枪",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Caliber: 5.56x45 | Capacity: 30 | Fits: ADAR215, AR15SAIGRY,"
+  },
+  "Tooltip.json|Tooltip_XA_XA_AKRailCover": {
+    "as1_value": "适配: 卡拉什尼科夫AK-47自动步枪, 卡拉什尼科夫AK-74M自动步枪, 卡拉什尼科夫AKM自动步枪, PM md.63自动步枪, 伊兹玛什Saiga12K霰弹枪, 56式自动步枪, …",
+    "value": "低位侧装瞄准镜座. 先装上镜座, 再装兼容的瞄准镜; 拆卸时先拆瞄准镜, 再拆镜座.",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Low Side Optic Mount. Install the mount before its compatibl"
+  },
+  "Tooltip.json|Tooltip_XA_XA_Glock18_Mag": {
+    "as1_value": "口径: 9x19mm | 容量: 17 | 适配: 格洛克18手枪",
+    "value": "口径: 9x19mm | 容量: 17 | 适配: 格洛克17手枪, 格洛克18手枪",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Caliber: 9x19 | Capacity: 17 | Fits: Glock 17, Glock18"
+  },
+  "Tooltip.json|Tooltip_XA_XA_MCXSpear_Mag": {
+    "as1_value": "口径: .300 BLK | 容量: 20 | 适配: 西格MCX Spear自动步枪",
+    "value": "口径: 6.8x51mm | 容量: 20 | 适配: 西格MCX Spear自动步枪",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Caliber: 6.8x51 | Capacity: 20 | Fits: MCXSpear"
+  },
+  "ItemName.json|XannyArms.XA_MCXSpear_Mag": {
+    "as1_value": "西格MCX Spear自动步枪弹匣20发 (.300 BLK)",
+    "value": "西格MCX Spear自动步枪弹匣20发 (6.8x51mm)",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：MCXSpear Magazine 20 (6.8x51)"
+  },
+  "Tooltip.json|Tooltip_XA_XA_6L2_30Mag": {
+    "as1_value": "口径: 7.62x39mm | 容量: 30 | 适配: 卡拉什尼科夫AK-15自动步枪, 卡拉什尼科夫AK-47自动步枪, 卡拉什尼科夫AKM自动步枪, PM md.63自动步枪, 56式自动步枪, 56式自动步枪 (短管), …",
+    "value": "口径: 7.62x39mm | 容量: 30 | 适配: 卡拉什尼科夫AK-103自动步枪, 卡拉什尼科夫AK-104自动步枪, 卡拉什尼科夫AK-15自动步枪, 卡拉什尼科夫AK-47自动步枪, 卡拉什尼科夫AKM自动步枪, MK47 Mutant自动步枪",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Caliber: 7.62x39 | Capacity: 30 | Fits: AK-103, AK-104, AK15"
+  },
+  "Tooltip.json|Tooltip_XA_XA_MCXSpear": {
+    "as1_value": "口径: .300 BLK | 弹匣: 西格MCX Spear自动步枪弹匣20发 (.300 BLK) | 配件: 8",
+    "value": "口径: 6.8x51mm | 弹匣: 西格MCX Spear自动步枪弹匣20发 (6.8x51mm) | 配件: 8",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Caliber: 6.8x51 | Magazines: MCXSpear Magazine 20 (6.8x51) |"
+  },
+  "ItemName.json|XannyArms.XA_AKRailCover": {
+    "as1_value": "AK皮卡汀尼导轨护盖",
+    "value": "低位侧装瞄准镜座",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Low Side Optic Mount"
+  },
+  "Tooltip.json|Tooltip_XA_XA_6L23_30Mag": {
+    "as1_value": "口径: 5.45x39mm | 容量: 30 | 适配: 卡拉什尼科夫AK-74M自动步枪",
+    "value": "口径: 5.45x39mm | 容量: 30 | 适配: AEK-971自动步枪, 卡拉什尼科夫AK-105自动步枪, 卡拉什尼科夫AK-12自动步枪, 卡拉什尼科夫AK-205自动步枪, 卡拉什尼科夫AK-74M自动步枪, AN-94自动步枪, 卡拉什尼科夫RPK-16轻机枪",
+    "reason": "2026-11-08 #1309–#1320 批次：上游改英文：Caliber: 5.45x39 | Capacity: 30 | Fits: AEK-971, AK-105, AK-"
+  },
+  "UI.json|UI_DansShop_Product_cigaretteCarton_Name": {
+    "as1_value": "香烟 (整箱)",
+    "value": "条装香烟",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (Base.CigaretteCarton=條裝香菸/条装香烟); carton 是一條不是一箱;"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_cigaretteCarton": {
+    "as1_value": "香烟 (整箱)价格",
+    "value": "条装香烟价格",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中, 同商品名"
+  },
+  "UI.json|UI_DansShop_Product_cigarettes_Name": {
+    "as1_value": "香烟 (盒装)",
+    "value": "盒装香烟",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (Base.CigarettePack=盒裝香菸/盒装香烟), 與條裝同格式; 商品是原版物品, "
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_cigarettes": {
+    "as1_value": "香烟 (盒装)价格",
+    "value": "盒装香烟价格",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_marinara_Name": {
+    "as1_value": "意式番茄酱",
+    "value": "蒜香酱",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (官方简中 Base.Marinara=蒜香酱)"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_marinara": {
+    "as1_value": "意式番茄酱价格 ($)",
+    "value": "蒜香酱价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名, 官方简中 Base.Marinara=蒜香酱"
+  },
+  "UI.json|UI_DansShop_Product_matAluminumIngot_Name": {
+    "as1_value": "废铝",
+    "value": "铝废料",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matAluminumIngot": {
+    "as1_value": "废铝价格 ($)",
+    "value": "铝废料价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名 (LangFor42 鋁廢料); 同商品名 (官方铝废料)"
+  },
+  "UI.json|UI_DansShop_Product_matAmplifier_Name": {
+    "as1_value": "放大器",
+    "value": "扬声器",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (官方简中 Base.Amplifier=扬声器)"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matAmplifier": {
+    "as1_value": "放大器价格 ($)",
+    "value": "扬声器价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_matConcrete_Name": {
+    "as1_value": "混凝土粉",
+    "value": "袋装混凝土",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (Base.ConcretePowder); 商品是原版物品, 名稱照 LangFor42 CH/"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matConcrete": {
+    "as1_value": "混凝土粉价格 ($)",
+    "value": "袋装混凝土价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_matDirt_Name": {
+    "as1_value": "泥土 (整袋)",
+    "value": "泥土袋",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matDirt": {
+    "as1_value": "泥土 (整袋)价格 ($)",
+    "value": "泥土袋价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_matGravel_Name": {
+    "as1_value": "砾石 (整袋)",
+    "value": "碎石袋",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matGravel": {
+    "as1_value": "砾石 (整袋)价格 ($)",
+    "value": "碎石袋价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_matSand_Name": {
+    "as1_value": "沙子 (整袋)",
+    "value": "沙袋",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matSand": {
+    "as1_value": "沙子 (整袋)价格 ($)",
+    "value": "沙袋价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_matDuctTape_Name": {
+    "as1_value": "布基胶带",
+    "value": "管道胶带",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matDuctTape": {
+    "as1_value": "布基胶带价格 ($)",
+    "value": "管道胶带价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_matLeather_Name": {
+    "as1_value": "皮条",
+    "value": "皮革条",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matLeather": {
+    "as1_value": "皮条价格 ($)",
+    "value": "皮革条价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_matMetalBar_Name": {
+    "as1_value": "金属杆",
+    "value": "金属棒",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (Base.MetalBar 英文顯示名 Steel Rod); 商品是原版物品, 名稱照 Lan"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matMetalBar": {
+    "as1_value": "金属杆价格 ($)",
+    "value": "金属棒价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_matNails_Name": {
+    "as1_value": "钉子 (整盒)",
+    "value": "盒装钉子",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matNails": {
+    "as1_value": "钉子 (整盒)价格 ($)",
+    "value": "盒装钉子价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_matScrews_Name": {
+    "as1_value": "螺丝 (整盒)",
+    "value": "盒装螺丝",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matScrews": {
+    "as1_value": "螺丝 (整盒)价格 ($)",
+    "value": "盒装螺丝价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_matRipped_Name": {
+    "as1_value": "破布条",
+    "value": "碎布条",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matRipped": {
+    "as1_value": "破布条价格 ($)",
+    "value": "碎布条价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_matRope_Name": {
+    "as1_value": "绳子",
+    "value": "绳索",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matRope": {
+    "as1_value": "绳子价格 ($)",
+    "value": "绳索价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_matScrapMetal_Name": {
+    "as1_value": "废金属",
+    "value": "金属废料",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matScrapMetal": {
+    "as1_value": "废金属价格 ($)",
+    "value": "金属废料价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_matStone_Name": {
+    "as1_value": "石头",
+    "value": "石块",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matStone": {
+    "as1_value": "石头价格 ($)",
+    "value": "石块价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_matTwine_Name": {
+    "as1_value": "细绳",
+    "value": "麻绳",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matTwine": {
+    "as1_value": "细绳价格 ($)",
+    "value": "麻绳价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_matWoodGlue_Name": {
+    "as1_value": "木工胶",
+    "value": "木胶",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_matWoodGlue": {
+    "as1_value": "木工胶价格 ($)",
+    "value": "木胶价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_mayonnaise_Name": {
+    "as1_value": "蛋黄酱",
+    "value": "蛋黄酱 (满)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (官方 Base.MayonnaiseFull=蛋黄酱 (满)), 與 CH 美乃滋 (滿) 一致"
+  },
+  "UI.json|UI_DansShop_Product_mustard_Name": {
+    "as1_value": "芥末",
+    "value": "芥末酱",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (官方 Base.Mustard=芥末酱; 芥末是 Wasabi)"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_mustard": {
+    "as1_value": "芥末价格 ($)",
+    "value": "芥末酱价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名; 芥末是 Wasabi"
+  },
+  "UI.json|UI_DansShop_Product_nachoCheese_Name": {
+    "as1_value": "墨西哥奶酪酱",
+    "value": "玉米片奶酪酱",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_nachoCheese": {
+    "as1_value": "墨西哥奶酪酱价格 ($)",
+    "value": "玉米片奶酪酱价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_guacamole_Name": {
+    "as1_value": "鳄梨酱",
+    "value": "牛油果酱",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_guacamole": {
+    "as1_value": "鳄梨酱价格 ($)",
+    "value": "牛油果酱价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_fishingLine_Name": {
+    "as1_value": "钓线",
+    "value": "鱼线",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_fishingLine": {
+    "as1_value": "钓线价格 ($)",
+    "value": "鱼线价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_pepper_Name": {
+    "as1_value": "胡椒",
+    "value": "胡椒粉",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_pepper": {
+    "as1_value": "胡椒价格 ($)",
+    "value": "胡椒粉价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_remoulade_Name": {
+    "as1_value": "雷莫拉酱",
+    "value": "法式蛋黄酱 (满)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (官方 Base.RemouladeFull=法式蛋黄酱 (满)), 與 CH 一致"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_remoulade": {
+    "as1_value": "雷莫拉酱价格 ($)",
+    "value": "法式蛋黄酱价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名; 同商品名 (LangFor42 法式蛋黃醬)"
+  },
+  "UI.json|UI_DansShop_Product_seedRadish_Name": {
+    "as1_value": "萝卜种子包",
+    "value": "红萝卜种子包",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (Base.RedRadishBagSeed2); 商品是原版物品, 名稱照 LangFor42 "
+  },
+  "UI.json|UI_DansShop_Product_sugar_Name": {
+    "as1_value": "白糖",
+    "value": "糖",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (官方 Base.Sugar=糖)"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_sugar": {
+    "as1_value": "白糖价格 ($)",
+    "value": "糖价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehBatteryStd_Name": {
+    "as1_value": "汽车蓄电池 - 标准",
+    "value": "汽车电池 - 标准",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：指定: Car Battery=汽車電池 (LangFor42 Base.CarBattery1); 指定: Car Battery=汽车电池 (官方 Base"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_vehBatteryStd": {
+    "as1_value": "汽车蓄电池 - 标准价格 ($)",
+    "value": "汽车电池 - 标准价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehBrakeStd_Name": {
+    "as1_value": "刹车 - 标准",
+    "value": "制动器 - 标准",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (官方 Base.ModernBrake1=制动器)"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_vehBrakeStd": {
+    "as1_value": "刹车 - 标准价格 ($)",
+    "value": "制动器 - 标准价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehBatteryHeavy_Name": {
+    "as1_value": "汽车蓄电池 - 大型",
+    "value": "汽车电池 - 大型",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：指定: Car Battery=汽車電池 (LangFor42 Base.CarBattery1); 指定: Car Battery=汽车电池 (官方 Base"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_vehBatteryHeavy": {
+    "as1_value": "汽车蓄电池 - 大型价格 ($)",
+    "value": "汽车电池 - 大型价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehBrakeHeavy_Name": {
+    "as1_value": "刹车 - 大型",
+    "value": "制动器 - 大型",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (官方 Base.ModernBrake1=制动器)"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_vehBrakeHeavy": {
+    "as1_value": "刹车 - 大型价格 ($)",
+    "value": "制动器 - 大型价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehBatterySport_Name": {
+    "as1_value": "汽车蓄电池 - 性能型",
+    "value": "汽车电池 - 性能型",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：指定: Car Battery=汽車電池 (LangFor42 Base.CarBattery1); 指定: Car Battery=汽车电池 (官方 Base"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_vehBatterySport": {
+    "as1_value": "汽车蓄电池 - 性能型价格 ($)",
+    "value": "汽车电池 - 性能型价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehBrakeSport_Name": {
+    "as1_value": "刹车 - 性能型",
+    "value": "制动器 - 性能型",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (官方 Base.ModernBrake1=制动器)"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_vehBrakeSport": {
+    "as1_value": "刹车 - 性能型价格 ($)",
+    "value": "制动器 - 性能型价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehEngineParts_Name": {
+    "as1_value": "发动机零件",
+    "value": "引擎零件",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (官方 Base.EngineParts=引擎零件)"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_vehEngineParts": {
+    "as1_value": "发动机零件价格 ($)",
+    "value": "引擎零件价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_vehFrontDoor": {
+    "as1_value": "前车门价格 ($)",
+    "value": "车前门价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名 (LangFor42 車前門); 同商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehFrontDoor_Name": {
+    "as1_value": "前车门",
+    "value": "车前门",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (官方 Base.FrontCarDoor1=车前门)"
+  },
+  "UI.json|UI_DansShop_Product_vehRearDoor_Name": {
+    "as1_value": "后车门",
+    "value": "车后门",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (官方 Base.RearCarDoor1=车后门)"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_vehRearDoor": {
+    "as1_value": "后车门价格 ($)",
+    "value": "车后门价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehFrontWindow_Name": {
+    "as1_value": "前侧窗玻璃",
+    "value": "车前窗",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (LangFor42 Base.FrontWindow1=前側車窗); 商品是原版物品, 名稱照 "
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_vehFrontWindow": {
+    "as1_value": "前侧窗玻璃价格 ($)",
+    "value": "车前窗价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehRearWindow_Name": {
+    "as1_value": "后侧窗玻璃",
+    "value": "车后窗",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (LangFor42 Base.RearWindow1=後側車窗); 商品是原版物品, 名稱照 L"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_vehRearWindow": {
+    "as1_value": "后侧窗玻璃价格 ($)",
+    "value": "车后窗价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "UI.json|UI_DansShop_Product_vehLightbar_Name": {
+    "as1_value": "紧急警光灯",
+    "value": "紧急警示灯",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (官方 Base.LightbarRedBlue=警示灯 (红蓝))"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_vehLightbar": {
+    "as1_value": "紧急警光灯价格 ($)",
+    "value": "紧急警示灯价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Enable_vehTankLarge": {
+    "as1_value": "展示大油箱 - 运动版",
+    "value": "显示大油箱 - 性能型",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名, Sport=性能型 (CN 展示→显示同其他兩條)"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_vehTankLarge": {
+    "as1_value": "燃油箱 - 大型价格 ($)",
+    "value": "大油箱 - 性能型价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：英文是 Large Fuel Tank - Sport, 原譯「燃油箱 - 大型」意思不同; 同商品名"
+  },
+  "UI.json|UI_DansShop_Product_wasabi_Name": {
+    "as1_value": "芥末膏",
+    "value": "芥末",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：商品是原版物品, 名稱照 LangFor42 CH/官方簡中 (官方 Base.Wasabi=芥末)"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_Price_wasabi": {
+    "as1_value": "芥末膏价格 ($)",
+    "value": "芥末价格 ($)",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：同商品名; 同商品名 (CH 商品名芥末)"
+  },
+  "Sandbox.json|Sandbox_DansOPWeaponsShopLiving": {
+    "as1_value": "D商店 - 生活",
+    "value": "D商店 - 生存",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：指定: 商店分頁 Survival 一律 生存"
+  },
+  "Sandbox.json|Sandbox_DansOPWeapons_ShowLifeShopCategory": {
+    "as1_value": "显示生活商品类别",
+    "value": "显示生存商品类别",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：指定: 商店分頁 Survival 一律 生存"
+  },
+  "UI.json|UI_DansShop_Living": {
+    "as1_value": "生活",
+    "value": "生存",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：指定: 商店分頁 Survival 一律 生存 (英文 SURVIVAL)"
+  },
+  "Sandbox.json|Sandbox_DansOPWeaponsGeneral": {
+    "as1_value": "Dan's OP武器 - 常规",
+    "value": "Dan的OP武器 - 常规",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：MOD 名與 General 頁名兩種寫法: 照 Sandbox_DansOPWeapons (Dan 的 OP 武器) 與 Sandbox_Title_Dan"
+  },
+  "UI.json|UI_DansShop_Product_cashToBronzeAll_Name": {
+    "as1_value": "现金 / 钞票捆兑换",
+    "value": "现金 / 捆装钞票兑换",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：原版物品 Base.MoneyBundle 照 LangFor42/官方簡中 (捆裝鈔票/捆装钞票)"
+  },
+  "UI.json|UI_DansShop_Product_cashToBronzeAll_Price": {
+    "as1_value": "$100 / 钞票捆x1 -> 青铜代币x1",
+    "value": "$100 / 捆装钞票x1 -> 青铜代币x1",
+    "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：原版物品 Base.MoneyBundle 照 LangFor42/官方簡中 (捆裝鈔票/捆装钞票)"
   }
 }

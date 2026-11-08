@@ -7279,6 +7279,16 @@
     "en": "Remove dead battery",
     "ch": "取出沒電的電池",
     "cn": "取出没电的电池"
+   },
+   "ContextMenu_XannyArms_LaserOff": {
+    "en": "Laser off",
+    "ch": "關閉雷射",
+    "cn": "关闭激光"
+   },
+   "ContextMenu_XannyArms_LaserOn": {
+    "en": "Laser on",
+    "ch": "開啟雷射",
+    "cn": "开启激光"
    }
   },
   "Fluids.json": {
@@ -168318,6 +168328,141 @@
     "ch": " + 辣醬",
     "cn": " + 辣酱",
     "_note": "上游 Translate 沒有這個鍵；MGsMRE_FRH_Core.lua 的 mgsText(key, fallback) 以 getText 查它、查不到用 Lua 的英文 fallback（en 欄即此 fallback）。譯文照同 MOD 已出貨的寫法。2026-11-07 #1302"
+   },
+   "IGUI_GSmith_Disassemble": {
+    "en": "Disassemble: %1",
+    "ch": "拆解: %1",
+    "cn": "拆解: %1"
+   },
+   "IGUI_GSmith_DisassembleChance": {
+    "en": "Disassemble: %1 [Chance: %2%%]",
+    "ch": "拆解: %1 [機率: %2%%]",
+    "cn": "拆解: %1 [几率: %2%%]"
+   },
+   "IGUI_GSmith_Inspect": {
+    "en": "Inspect: %1",
+    "ch": "檢查: %1",
+    "cn": "检查: %1"
+   },
+   "IGUI_GSmith_Type_AssaultRifle": {
+    "en": "Assault Rifle",
+    "ch": "突擊步槍",
+    "cn": "突击步枪"
+   },
+   "IGUI_GSmith_Type_Handgun": {
+    "en": "Handgun",
+    "ch": "手槍",
+    "cn": "手枪"
+   },
+   "IGUI_GSmith_Type_Other": {
+    "en": "Other",
+    "ch": "其他",
+    "cn": "其他"
+   },
+   "IGUI_GSmith_Type_Revolver": {
+    "en": "Revolver",
+    "ch": "左輪手槍",
+    "cn": "左轮手枪"
+   },
+   "IGUI_GSmith_Type_Rifle": {
+    "en": "Rifle",
+    "ch": "步槍",
+    "cn": "步枪"
+   },
+   "IGUI_GSmith_Type_RifleBolt": {
+    "en": "Rifle (Bolt Action)",
+    "ch": "步槍 (栓動式)",
+    "cn": "步枪 (栓动式)"
+   },
+   "IGUI_GSmith_Type_RifleBoltMagazine": {
+    "en": "Rifle (Bolt Action, Magazine)",
+    "ch": "步槍 (栓動式, 彈匣)",
+    "cn": "步枪 (栓动式, 弹匣)"
+   },
+   "IGUI_GSmith_Type_RifleLever": {
+    "en": "Rifle (Lever Action)",
+    "ch": "步槍 (槓桿式)",
+    "cn": "步枪 (杠杆式)"
+   },
+   "IGUI_GSmith_Type_Shotgun": {
+    "en": "Shotgun",
+    "ch": "霰彈槍",
+    "cn": "霰弹枪"
+   },
+   "IGUI_XannyArms_Laser_Beam": {
+    "en": "Show the beam",
+    "ch": "顯示光束",
+    "cn": "显示光束"
+   },
+   "IGUI_XannyArms_Laser_Beam_tt": {
+    "en": "A faint beam from the laser to the spot; off = spot only",
+    "ch": "從雷射器延伸到光點的淡淡光束; 關閉 = 只顯示光點",
+    "cn": "从激光器延伸到光点的淡淡光束; 关闭 = 仅显示光点"
+   },
+   "IGUI_XannyArms_Laser_Key": {
+    "en": "Laser on / off",
+    "ch": "雷射開啟 / 關閉",
+    "cn": "激光开启 / 关闭"
+   },
+   "IGUI_XannyArms_Laser_Title": {
+    "en": "Xanny Arms: laser",
+    "ch": "Xanny Arms: 雷射",
+    "cn": "Xanny Arms: 激光"
+   },
+   "IGUI_XannyArms_Vol_Mech": {
+    "en": "Bolts, magazines, attachments volume",
+    "ch": "槍機、彈匣與配件音量",
+    "cn": "枪机, 弹匣与配件音量"
+   },
+   "IGUI_XannyArms_Vol_Shots": {
+    "en": "Shots volume",
+    "ch": "槍聲音量",
+    "cn": "枪声音量"
+   },
+   "IGUI_XannyArms_Vol_Supp": {
+    "en": "Suppressed shots volume",
+    "ch": "裝消音器時的槍聲音量",
+    "cn": "装消音器时的枪声音量"
+   },
+   "IGUI_XannyArms_Vol_Tip": {
+    "en": "Percent of the normal volume, applied at once",
+    "ch": "正常音量的百分比, 立即套用",
+    "cn": "正常音量的百分比, 立即生效"
+   },
+   "IGUI_XannyArms_Vol_Title": {
+    "en": "Xanny Arms: sound",
+    "ch": "Xanny Arms: 音效",
+    "cn": "Xanny Arms: 音效"
+   },
+   "IGUI_PAR_SlotsAdd": {
+    "en": "Add",
+    "ch": "新增",
+    "cn": "添加"
+   },
+   "IGUI_PAR_SlotsCanAdd": {
+    "en": "Can be added",
+    "ch": "可新增",
+    "cn": "可添加"
+   },
+   "IGUI_PAR_SlotsMenu": {
+    "en": "Attachment Slots",
+    "ch": "附件槽位",
+    "cn": "附件槽位"
+   },
+   "IGUI_PAR_SlotsNone": {
+    "en": "None",
+    "ch": "無",
+    "cn": "无"
+   },
+   "IGUI_PAR_SlotsRemove": {
+    "en": "Remove",
+    "ch": "移除",
+    "cn": "移除"
+   },
+   "IGUI_PAR_SlotsSewn": {
+    "en": "Sewn on this bag",
+    "ch": "已縫在此背包上",
+    "cn": "已缝在此背包上"
    }
   },
   "ItemName.json": {
@@ -351340,6 +351485,2204 @@
     "en": "Zavod-Standard Bacon Fat and Pepper Spread",
     "ch": "工廠標準胡椒豬脂抹醬",
     "cn": "工厂标准胡椒猪脂酱"
+   },
+   "GSmith.AttachmentPartsMagazine": {
+    "en": "Attachment Parts (Magazine)",
+    "ch": "配件零件 (彈匣)",
+    "cn": "配件零件 (弹匣)"
+   },
+   "GSmith.AttachmentPartsMuzzle": {
+    "en": "Attachment Parts (Muzzle)",
+    "ch": "配件零件 (槍口)",
+    "cn": "配件零件 (枪口)"
+   },
+   "GSmith.AttachmentPartsOther": {
+    "en": "Attachment Parts (Other)",
+    "ch": "配件零件 (其他)",
+    "cn": "配件零件 (其他)"
+   },
+   "GSmith.AttachmentPartsPeripheral": {
+    "en": "Attachment Parts (Peripheral)",
+    "ch": "配件零件 (周邊)",
+    "cn": "配件零件 (外设)"
+   },
+   "GSmith.AttachmentPartsRails": {
+    "en": "Attachment Parts (Rails)",
+    "ch": "配件零件 (導軌)",
+    "cn": "配件零件 (导轨)"
+   },
+   "GSmith.AttachmentPartsScope": {
+    "en": "Attachment Parts (Scope)",
+    "ch": "配件零件 (瞄具)",
+    "cn": "配件零件 (瞄具)"
+   },
+   "GSmith.AttachmentPartsStock": {
+    "en": "Attachment Parts (Stock)",
+    "ch": "配件零件 (槍托)",
+    "cn": "配件零件 (枪托)"
+   },
+   "GSmith.AttachmentPartsUnderbarrel": {
+    "en": "Attachment Parts (Underbarrel)",
+    "ch": "配件零件 (下掛)",
+    "cn": "配件零件 (下挂)"
+   },
+   "XannyArms.XA_408CTBox": {
+    "en": ".408 CheyTac Pack",
+    "ch": "盒裝 .408 CheyTac 子彈",
+    "cn": ".408 CheyTac子弹 (整盒)"
+   },
+   "XannyArms.XA_408CTBullets": {
+    "en": ".408 CheyTac Rounds",
+    "ch": ".408 CheyTac 子彈",
+    "cn": ".408 CheyTac子弹"
+   },
+   "XannyArms.XA_408CTCase": {
+    "en": ".408 CheyTac Case",
+    "ch": "箱裝 .408 CheyTac 子彈",
+    "cn": ".408 CheyTac子弹 (整箱)"
+   },
+   "XannyArms.XA_46x30Box": {
+    "en": "4.6x30 Pack",
+    "ch": "盒裝 4.6x30 子彈",
+    "cn": "4.6x30mm子弹 (整盒)"
+   },
+   "XannyArms.XA_46x30Bullets": {
+    "en": "4.6x30 Rounds",
+    "ch": "4.6x30 子彈",
+    "cn": "4.6x30mm子弹"
+   },
+   "XannyArms.XA_46x30Case": {
+    "en": "4.6x30 Case",
+    "ch": "箱裝 4.6x30 子彈",
+    "cn": "4.6x30mm子弹 (整箱)"
+   },
+   "XannyArms.XA_50AEBox": {
+    "en": ".50 AE Pack",
+    "ch": "盒裝 .50 AE 子彈",
+    "cn": ".50 AE子弹 (整盒)"
+   },
+   "XannyArms.XA_50AEBullets": {
+    "en": ".50 AE Rounds",
+    "ch": ".50 AE 子彈",
+    "cn": ".50 AE子弹"
+   },
+   "XannyArms.XA_50AECase": {
+    "en": ".50 AE Case",
+    "ch": "箱裝 .50 AE 子彈",
+    "cn": ".50 AE子弹 (整箱)"
+   },
+   "XannyArms.XA_50BMGBox": {
+    "en": ".50 BMG Pack",
+    "ch": "盒裝 .50 BMG 子彈",
+    "cn": ".50 BMG子弹 (整盒)"
+   },
+   "XannyArms.XA_50BMGBullets": {
+    "en": ".50 BMG Rounds",
+    "ch": ".50 BMG 子彈",
+    "cn": ".50 BMG子弹"
+   },
+   "XannyArms.XA_50BMGCase": {
+    "en": ".50 BMG Case",
+    "ch": "箱裝 .50 BMG 子彈",
+    "cn": ".50 BMG子弹 (整箱)"
+   },
+   "XannyArms.XA_68x51Box": {
+    "en": "6.8x51 Pack",
+    "ch": "盒裝 6.8x51 子彈",
+    "cn": "6.8x51mm子弹 (整盒)"
+   },
+   "XannyArms.XA_68x51Bullets": {
+    "en": "6.8x51 Rounds",
+    "ch": "6.8x51 子彈",
+    "cn": "6.8x51mm子弹"
+   },
+   "XannyArms.XA_68x51Case": {
+    "en": "6.8x51 Case",
+    "ch": "箱裝 6.8x51 子彈",
+    "cn": "6.8x51mm子弹 (整箱)"
+   },
+   "XannyArms.XA_9A91": {
+    "en": "9A-91",
+    "ch": "9A-91",
+    "cn": "9A-91自动步枪"
+   },
+   "XannyArms.XA_9A91_Mag": {
+    "en": "9A-91 Magazine 20",
+    "ch": "9A-91 彈匣 20 發",
+    "cn": "9A-91自动步枪弹匣20发"
+   },
+   "XannyArms.XA_9x39Box": {
+    "en": "9x39 Pack",
+    "ch": "盒裝 9x39 子彈",
+    "cn": "9x39mm子弹 (整盒)"
+   },
+   "XannyArms.XA_9x39Bullets": {
+    "en": "9x39 Rounds",
+    "ch": "9x39 子彈",
+    "cn": "9x39mm子弹"
+   },
+   "XannyArms.XA_9x39Case": {
+    "en": "9x39 Case",
+    "ch": "箱裝 9x39 子彈",
+    "cn": "9x39mm子弹 (整箱)"
+   },
+   "XannyArms.XA_ADAR215_Handguard": {
+    "en": "ADAR215 Handguard",
+    "ch": "ADAR215 護木",
+    "cn": "ADAR 2-15护木"
+   },
+   "XannyArms.XA_ADAR215_Stock": {
+    "en": "ADAR215 Stock",
+    "ch": "ADAR215 槍托",
+    "cn": "ADAR 2-15枪托"
+   },
+   "XannyArms.XA_AEK971": {
+    "en": "AEK-971",
+    "ch": "AEK-971",
+    "cn": "AEK-971自动步枪"
+   },
+   "XannyArms.XA_AK101": {
+    "en": "AK-101",
+    "ch": "AK-101",
+    "cn": "卡拉什尼科夫AK-101自动步枪"
+   },
+   "XannyArms.XA_AK101_Grip": {
+    "en": "AK-101 Grip",
+    "ch": "AK-101 握把",
+    "cn": "AK-101握把"
+   },
+   "XannyArms.XA_AK101_Handguard": {
+    "en": "AK-101 Handguard",
+    "ch": "AK-101 護木",
+    "cn": "AK-101护木"
+   },
+   "XannyArms.XA_AK101_Mag": {
+    "en": "AK-101 Magazine 30",
+    "ch": "AK-101 彈匣 30 發",
+    "cn": "卡拉什尼科夫AK-101自动步枪弹匣30发"
+   },
+   "XannyArms.XA_AK101_Stock": {
+    "en": "AK-101 Stock",
+    "ch": "AK-101 槍托",
+    "cn": "AK-101枪托"
+   },
+   "XannyArms.XA_AK103": {
+    "en": "AK-103",
+    "ch": "AK-103",
+    "cn": "卡拉什尼科夫AK-103自动步枪"
+   },
+   "XannyArms.XA_AK103_Grip": {
+    "en": "AK-103 Grip",
+    "ch": "AK-103 握把",
+    "cn": "AK-103握把"
+   },
+   "XannyArms.XA_AK103_Handguard": {
+    "en": "AK-103 Handguard",
+    "ch": "AK-103 護木",
+    "cn": "AK-103护木"
+   },
+   "XannyArms.XA_AK103_Stock": {
+    "en": "AK-103 Stock",
+    "ch": "AK-103 槍托",
+    "cn": "AK-103枪托"
+   },
+   "XannyArms.XA_AK104": {
+    "en": "AK-104",
+    "ch": "AK-104",
+    "cn": "卡拉什尼科夫AK-104自动步枪"
+   },
+   "XannyArms.XA_AK104_Grip": {
+    "en": "AK-104 Grip",
+    "ch": "AK-104 握把",
+    "cn": "AK-104握把"
+   },
+   "XannyArms.XA_AK104_Handguard": {
+    "en": "AK-104 Handguard",
+    "ch": "AK-104 護木",
+    "cn": "AK-104护木"
+   },
+   "XannyArms.XA_AK104_Stock": {
+    "en": "AK-104 Stock",
+    "ch": "AK-104 槍托",
+    "cn": "AK-104枪托"
+   },
+   "XannyArms.XA_AK105": {
+    "en": "AK-105",
+    "ch": "AK-105",
+    "cn": "卡拉什尼科夫AK-105自动步枪"
+   },
+   "XannyArms.XA_AK105_Grip": {
+    "en": "AK-105 Grip",
+    "ch": "AK-105 握把",
+    "cn": "AK-105握把"
+   },
+   "XannyArms.XA_AK105_Handguard": {
+    "en": "AK-105 Handguard",
+    "ch": "AK-105 護木",
+    "cn": "AK-105护木"
+   },
+   "XannyArms.XA_AK105_Stock": {
+    "en": "AK-105 Stock",
+    "ch": "AK-105 槍托",
+    "cn": "AK-105枪托"
+   },
+   "XannyArms.XA_AK12": {
+    "en": "AK-12",
+    "ch": "AK-12",
+    "cn": "卡拉什尼科夫AK-12自动步枪"
+   },
+   "XannyArms.XA_AK12_Grip": {
+    "en": "AK-12 Grip",
+    "ch": "AK-12 握把",
+    "cn": "AK-12握把"
+   },
+   "XannyArms.XA_AK12_Grip_Sand": {
+    "en": "AK-12 Grip Sand",
+    "ch": "AK-12 握把 (沙色)",
+    "cn": "AK-12握把 (沙色)"
+   },
+   "XannyArms.XA_AK12_Handguard": {
+    "en": "AK-12 Handguard",
+    "ch": "AK-12 護木",
+    "cn": "AK-12护木"
+   },
+   "XannyArms.XA_AK12_Handguard_Sand": {
+    "en": "AK-12 Handguard Sand",
+    "ch": "AK-12 護木 (沙色)",
+    "cn": "AK-12护木 (沙色)"
+   },
+   "XannyArms.XA_AK12_Stock": {
+    "en": "AK-12 Stock",
+    "ch": "AK-12 槍托",
+    "cn": "AK-12枪托"
+   },
+   "XannyArms.XA_AK12_Stock_Sand": {
+    "en": "AK-12 Stock Sand",
+    "ch": "AK-12 槍托 (沙色)",
+    "cn": "AK-12枪托 (沙色)"
+   },
+   "XannyArms.XA_AK15_Grip": {
+    "en": "AK15 Grip",
+    "ch": "AK15 握把",
+    "cn": "AK-15握把"
+   },
+   "XannyArms.XA_AK15_Grip_Sand": {
+    "en": "AK15 Grip Sand",
+    "ch": "AK15 握把 (沙色)",
+    "cn": "AK-15握把 (沙色)"
+   },
+   "XannyArms.XA_AK15_Handguard": {
+    "en": "AK15 Handguard",
+    "ch": "AK15 護木",
+    "cn": "AK-15护木"
+   },
+   "XannyArms.XA_AK15_Handguard_Sand": {
+    "en": "AK15 Handguard Sand",
+    "ch": "AK15 護木 (沙色)",
+    "cn": "AK-15护木 (沙色)"
+   },
+   "XannyArms.XA_AK15_Stock": {
+    "en": "AK15 Stock",
+    "ch": "AK15 槍托",
+    "cn": "AK-15枪托"
+   },
+   "XannyArms.XA_AK15_Stock_Sand": {
+    "en": "AK15 Stock Sand",
+    "ch": "AK15 槍托 (沙色)",
+    "cn": "AK-15枪托 (沙色)"
+   },
+   "XannyArms.XA_AK205": {
+    "en": "AK-205",
+    "ch": "AK-205",
+    "cn": "卡拉什尼科夫AK-205自动步枪"
+   },
+   "XannyArms.XA_AK205_Grip": {
+    "en": "AK-205 Grip",
+    "ch": "AK-205 握把",
+    "cn": "AK-205握把"
+   },
+   "XannyArms.XA_AK205_Handguard": {
+    "en": "AK-205 Handguard",
+    "ch": "AK-205 護木",
+    "cn": "AK-205护木"
+   },
+   "XannyArms.XA_AK205_Stock": {
+    "en": "AK-205 Stock",
+    "ch": "AK-205 槍托",
+    "cn": "AK-205枪托"
+   },
+   "XannyArms.XA_AK308": {
+    "en": "AK-308",
+    "ch": "AK-308",
+    "cn": "卡拉什尼科夫AK-308自动步枪"
+   },
+   "XannyArms.XA_AK308_Grip": {
+    "en": "AK-308 Grip",
+    "ch": "AK-308 握把",
+    "cn": "AK-308握把"
+   },
+   "XannyArms.XA_AK308_Grip_Sand": {
+    "en": "AK-308 Grip Sand",
+    "ch": "AK-308 握把 (沙色)",
+    "cn": "AK-308握把 (沙色)"
+   },
+   "XannyArms.XA_AK308_Handguard": {
+    "en": "AK-308 Handguard",
+    "ch": "AK-308 護木",
+    "cn": "AK-308护木"
+   },
+   "XannyArms.XA_AK308_Handguard_Sand": {
+    "en": "AK-308 Handguard Sand",
+    "ch": "AK-308 護木 (沙色)",
+    "cn": "AK-308护木 (沙色)"
+   },
+   "XannyArms.XA_AK308_Mag": {
+    "en": "AK-308 Magazine 20",
+    "ch": "AK-308 彈匣 20 發",
+    "cn": "卡拉什尼科夫AK-308自动步枪弹匣20发"
+   },
+   "XannyArms.XA_AK308_Stock": {
+    "en": "AK-308 Stock",
+    "ch": "AK-308 槍托",
+    "cn": "AK-308枪托"
+   },
+   "XannyArms.XA_AK308_Stock_Sand": {
+    "en": "AK-308 Stock Sand",
+    "ch": "AK-308 槍托 (沙色)",
+    "cn": "AK-308枪托 (沙色)"
+   },
+   "XannyArms.XA_AK47_Grip": {
+    "en": "AK47 Grip",
+    "ch": "AK47 握把",
+    "cn": "AK-47握把"
+   },
+   "XannyArms.XA_AK47_Handguard": {
+    "en": "AK47 Handguard",
+    "ch": "AK47 護木",
+    "cn": "AK-47护木"
+   },
+   "XannyArms.XA_AK47_Stock": {
+    "en": "AK47 Stock",
+    "ch": "AK47 槍托",
+    "cn": "AK-47枪托"
+   },
+   "XannyArms.XA_AK74M_Grip": {
+    "en": "AK74M Grip",
+    "ch": "AK74M 握把",
+    "cn": "AK-74M握把"
+   },
+   "XannyArms.XA_AK74M_Handguard": {
+    "en": "AK74M Handguard",
+    "ch": "AK74M 護木",
+    "cn": "AK-74M护木"
+   },
+   "XannyArms.XA_AK74M_Stock": {
+    "en": "AK74M Stock",
+    "ch": "AK74M 槍托",
+    "cn": "AK-74M枪托"
+   },
+   "XannyArms.XA_AKM_Grip": {
+    "en": "AKM Grip",
+    "ch": "AKM 握把",
+    "cn": "AKM握把"
+   },
+   "XannyArms.XA_AKM_Handguard": {
+    "en": "AKM Handguard",
+    "ch": "AKM 護木",
+    "cn": "AKM护木"
+   },
+   "XannyArms.XA_AKM_Stock": {
+    "en": "AKM Stock",
+    "ch": "AKM 槍托",
+    "cn": "AKM枪托"
+   },
+   "XannyArms.XA_AN94": {
+    "en": "AN-94",
+    "ch": "AN-94",
+    "cn": "AN-94自动步枪"
+   },
+   "XannyArms.XA_APC9K": {
+    "en": "APC9K",
+    "ch": "APC9K",
+    "cn": "B&T APC9K冲锋枪"
+   },
+   "XannyArms.XA_APC9K_Mag": {
+    "en": "APC9K Magazine 30",
+    "ch": "APC9K 彈匣 30 發",
+    "cn": "B&T APC9K冲锋枪弹匣30发"
+   },
+   "XannyArms.XA_AR15SAIGRY_Grip": {
+    "en": "AR15SAIGRY Grip",
+    "ch": "AR15SAIGRY 握把",
+    "cn": "AR15SAIGRY握把"
+   },
+   "XannyArms.XA_AR15SAIGRY_Handguard": {
+    "en": "AR15SAIGRY Handguard",
+    "ch": "AR15SAIGRY 護木",
+    "cn": "AR15SAIGRY护木"
+   },
+   "XannyArms.XA_AR15SAIGRY_Stock": {
+    "en": "AR15SAIGRY Stock",
+    "ch": "AR15SAIGRY 槍托",
+    "cn": "AR15SAIGRY枪托"
+   },
+   "XannyArms.XA_ARTube": {
+    "en": "AR Buffer Tube",
+    "ch": "AR 緩衝管",
+    "cn": "AR缓冲管"
+   },
+   "XannyArms.XA_ARX160": {
+    "en": "Beretta ARX160",
+    "ch": "Beretta ARX160",
+    "cn": "伯莱塔ARX160自动步枪"
+   },
+   "XannyArms.XA_ASVal": {
+    "en": "AS Val",
+    "ch": "AS Val",
+    "cn": "AS Val自动步枪"
+   },
+   "XannyArms.XA_ASVal_Mag": {
+    "en": "AS Val Magazine 20",
+    "ch": "AS Val 彈匣 20 發",
+    "cn": "AS Val自动步枪弹匣20发"
+   },
+   "XannyArms.XA_AUG": {
+    "en": "Steyr AUG",
+    "ch": "Steyr AUG",
+    "cn": "斯泰尔AUG自动步枪"
+   },
+   "XannyArms.XA_AUG_Mag": {
+    "en": "Steyr AUG Magazine 30",
+    "ch": "Steyr AUG 彈匣 30 發",
+    "cn": "斯泰尔AUG自动步枪弹匣30发"
+   },
+   "XannyArms.XA_AX50": {
+    "en": "AI AX50",
+    "ch": "AI AX50",
+    "cn": "精密国际AX50狙击步枪"
+   },
+   "XannyArms.XA_AX50_Mag": {
+    "en": "AI AX50 Magazine 5",
+    "ch": "AI AX50 彈匣 5 發",
+    "cn": "精密国际AX50狙击步枪弹匣5发"
+   },
+   "XannyArms.XA_BREN2": {
+    "en": "CZ BREN 2",
+    "ch": "CZ BREN 2",
+    "cn": "CZ BREN 2自动步枪"
+   },
+   "XannyArms.XA_BRX1": {
+    "en": "Beretta BRX1",
+    "ch": "Beretta BRX1",
+    "cn": "伯莱塔BRX1狙击步枪"
+   },
+   "XannyArms.XA_BRX1_Mag": {
+    "en": "Beretta BRX1 Magazine 5",
+    "ch": "Beretta BRX1 彈匣 5 發",
+    "cn": "伯莱塔BRX1狙击步枪弹匣5发"
+   },
+   "XannyArms.XA_BarrettM82": {
+    "en": "Barrett M82",
+    "ch": "Barrett M82",
+    "cn": "巴雷特M82狙击步枪"
+   },
+   "XannyArms.XA_BarrettM82_Mag": {
+    "en": "Barrett M82 Magazine 10",
+    "ch": "Barrett M82 彈匣 10 發",
+    "cn": "巴雷特M82狙击步枪弹匣10发"
+   },
+   "XannyArms.XA_BenelliM3": {
+    "en": "Benelli M3",
+    "ch": "Benelli M3",
+    "cn": "贝内利M3霰弹枪"
+   },
+   "XannyArms.XA_BenelliM4": {
+    "en": "Benelli M4",
+    "ch": "Benelli M4",
+    "cn": "贝内利M4霰弹枪"
+   },
+   "XannyArms.XA_CZ75": {
+    "en": "CZ 75",
+    "ch": "CZ 75",
+    "cn": "CZ 75手枪"
+   },
+   "XannyArms.XA_CZ75_Mag": {
+    "en": "CZ 75 Magazine 16",
+    "ch": "CZ 75 彈匣 16 發",
+    "cn": "CZ 75手枪弹匣16发"
+   },
+   "XannyArms.XA_CarryHandle": {
+    "en": "Carry Handle",
+    "ch": "提把",
+    "cn": "提把"
+   },
+   "XannyArms.XA_CarryRail": {
+    "en": "Flat Top Rail",
+    "ch": "平頂導軌",
+    "cn": "平顶导轨"
+   },
+   "XannyArms.XA_CheyTacM200": {
+    "en": "CheyTac M200",
+    "ch": "CheyTac M200",
+    "cn": "夏伊塔克M200狙击步枪"
+   },
+   "XannyArms.XA_CheyTacM200_Mag": {
+    "en": "CheyTac M200 Magazine 7",
+    "ch": "CheyTac M200 彈匣 7 發",
+    "cn": "夏伊塔克M200狙击步枪弹匣7发"
+   },
+   "XannyArms.XA_Colt723_Grip": {
+    "en": "Colt723 Grip",
+    "ch": "Colt723 握把",
+    "cn": "柯尔特723握把"
+   },
+   "XannyArms.XA_Colt723_Handguard": {
+    "en": "Colt723 Handguard",
+    "ch": "Colt723 護木",
+    "cn": "柯尔特723护木"
+   },
+   "XannyArms.XA_Colt723_Stock": {
+    "en": "Colt723 Stock",
+    "ch": "Colt723 槍托",
+    "cn": "柯尔特723枪托"
+   },
+   "XannyArms.XA_CoverRail": {
+    "en": "Receiver Cover Rail",
+    "ch": "機匣蓋導軌",
+    "cn": "机匣盖导轨"
+   },
+   "XannyArms.XA_DP_AK105_Modern": {
+    "en": "AK-105 Modern Stock",
+    "ch": "AK-105 現代化槍托",
+    "cn": "AK-105现代化枪托"
+   },
+   "XannyArms.XA_DP_AK12_EVO": {
+    "en": "AK-12 EVO Stock",
+    "ch": "AK-12 EVO 槍托",
+    "cn": "AK-12 EVO枪托"
+   },
+   "XannyArms.XA_DP_AK12_SK": {
+    "en": "AK-12 SK Stock",
+    "ch": "AK-12 SK 槍托",
+    "cn": "AK-12 SK枪托"
+   },
+   "XannyArms.XA_DP_AK15_K": {
+    "en": "AK-15 K Stock",
+    "ch": "AK-15 K 槍托",
+    "cn": "AK-15 K枪托"
+   },
+   "XannyArms.XA_DP_AK205_Tube_Stock": {
+    "en": "AK-205 Style Tube Stock",
+    "ch": "AK-205 式管狀槍托",
+    "cn": "AK-205式管状枪托"
+   },
+   "XannyArms.XA_DP_AK_Bakelite_Grip": {
+    "en": "AK Bakelite Grip",
+    "ch": "AK 電木握把",
+    "cn": "AK胶木握把"
+   },
+   "XannyArms.XA_DP_AK_Lanthanotus": {
+    "en": "AK Tuning Rail Handguard",
+    "ch": "AK 改裝導軌護木",
+    "cn": "AK改装导轨护木"
+   },
+   "XannyArms.XA_DP_AK_Plastic_Grip": {
+    "en": "AK Plastic Grip",
+    "ch": "AK 塑膠握把",
+    "cn": "AK塑料握把"
+   },
+   "XannyArms.XA_DP_AK_Vepr": {
+    "en": "Vepr Rail Handguard",
+    "ch": "Vepr 導軌護木",
+    "cn": "Vepr导轨护木"
+   },
+   "XannyArms.XA_DP_AN_PEQ15": {
+    "en": "AN/PEQ-15",
+    "ch": "AN/PEQ-15",
+    "cn": "AN/PEQ-15激光模块"
+   },
+   "XannyArms.XA_DP_AN_PEQ15_B": {
+    "en": "AN/PEQ-15 Block II",
+    "ch": "AN/PEQ-15 Block II",
+    "cn": "AN/PEQ-15 Block II激光模块"
+   },
+   "XannyArms.XA_DP_AN_PEQ2": {
+    "en": "AN/PEQ-2",
+    "ch": "AN/PEQ-2",
+    "cn": "AN/PEQ-2激光模块"
+   },
+   "XannyArms.XA_DP_AR15_Adjustable_Stock": {
+    "en": "AR-15 Adjustable Stock",
+    "ch": "AR-15 可調式槍托",
+    "cn": "AR-15可调式枪托"
+   },
+   "XannyArms.XA_DP_AR15_Custom_Grip": {
+    "en": "AR-15 Custom Grip",
+    "ch": "AR-15 客製握把",
+    "cn": "AR-15定制握把"
+   },
+   "XannyArms.XA_DP_AR15_Custom_Handguard": {
+    "en": "AR-15 Custom Handguard",
+    "ch": "AR-15 客製護木",
+    "cn": "AR-15定制护木"
+   },
+   "XannyArms.XA_DP_AR15_Custom_Stock": {
+    "en": "AR-15 Custom Stock",
+    "ch": "AR-15 客製槍托",
+    "cn": "AR-15定制枪托"
+   },
+   "XannyArms.XA_DP_AR15_Foregrip_A": {
+    "en": "AR-15 Foregrip A",
+    "ch": "AR-15 前握把 A",
+    "cn": "AR-15前握把 A"
+   },
+   "XannyArms.XA_DP_AR15_Foregrip_B": {
+    "en": "AR-15 Foregrip B",
+    "ch": "AR-15 前握把 B",
+    "cn": "AR-15前握把 B"
+   },
+   "XannyArms.XA_DP_AR15_Grip_A": {
+    "en": "AR-15 Grip A",
+    "ch": "AR-15 握把 A",
+    "cn": "AR-15握把 A"
+   },
+   "XannyArms.XA_DP_AR15_Grip_B": {
+    "en": "AR-15 Grip B",
+    "ch": "AR-15 握把 B",
+    "cn": "AR-15握把 B"
+   },
+   "XannyArms.XA_DP_AR15_Grip_C": {
+    "en": "AR-15 Grip C",
+    "ch": "AR-15 握把 C",
+    "cn": "AR-15握把 C"
+   },
+   "XannyArms.XA_DP_AR15_Grip_D": {
+    "en": "AR-15 Grip D",
+    "ch": "AR-15 握把 D",
+    "cn": "AR-15握把 D"
+   },
+   "XannyArms.XA_DP_AR15_Handguard_A": {
+    "en": "AR-15 Handguard A",
+    "ch": "AR-15 護木 A",
+    "cn": "AR-15护木 A"
+   },
+   "XannyArms.XA_DP_AR15_Handguard_B": {
+    "en": "AR-15 Handguard B",
+    "ch": "AR-15 護木 B",
+    "cn": "AR-15护木 B"
+   },
+   "XannyArms.XA_DP_AR15_Handguard_C": {
+    "en": "AR-15 Handguard C",
+    "ch": "AR-15 護木 C",
+    "cn": "AR-15护木 C"
+   },
+   "XannyArms.XA_DP_AR15_Light_A": {
+    "en": "AR-15 Light A",
+    "ch": "AR-15 戰術燈 A",
+    "cn": "AR-15战术灯 A"
+   },
+   "XannyArms.XA_DP_AR15_Light_B": {
+    "en": "AR-15 Light B",
+    "ch": "AR-15 戰術燈 B",
+    "cn": "AR-15战术灯 B"
+   },
+   "XannyArms.XA_DP_ARAK_Adapter": {
+    "en": "AR-AK Stock Adapter",
+    "ch": "AR-AK 槍托轉接座",
+    "cn": "AR-AK枪托转接座"
+   },
+   "XannyArms.XA_DP_Angled_Grip": {
+    "en": "Angled Foregrip",
+    "ch": "斜角前握把",
+    "cn": "斜角前握把"
+   },
+   "XannyArms.XA_DP_Angled_Grip_B": {
+    "en": "Angled Foregrip B",
+    "ch": "斜角前握把 B",
+    "cn": "斜角前握把 B"
+   },
+   "XannyArms.XA_DP_C8_Grip": {
+    "en": "C8 IUR Grip",
+    "ch": "C8 IUR 握把",
+    "cn": "C8 IUR握把"
+   },
+   "XannyArms.XA_DP_CAR15_Grip": {
+    "en": "CAR-15 Grip",
+    "ch": "CAR-15 握把",
+    "cn": "CAR-15握把"
+   },
+   "XannyArms.XA_DP_CAR15_Handguard": {
+    "en": "CAR-15 Handguard",
+    "ch": "CAR-15 護木",
+    "cn": "CAR-15护木"
+   },
+   "XannyArms.XA_DP_CMMG_Ripstock": {
+    "en": "CMMG Ripstock",
+    "ch": "CMMG Ripstock",
+    "cn": "CMMG Ripstock枪托"
+   },
+   "XannyArms.XA_DP_CQR_Foregrip": {
+    "en": "CQR Foregrip",
+    "ch": "CQR 前握把",
+    "cn": "CQR前握把"
+   },
+   "XannyArms.XA_DP_Colt_SCW_Grip": {
+    "en": "Colt SCW Grip",
+    "ch": "Colt SCW 握把",
+    "cn": "柯尔特SCW握把"
+   },
+   "XannyArms.XA_DP_Colt_SCW_Handguard": {
+    "en": "Colt SCW Handguard",
+    "ch": "Colt SCW 護木",
+    "cn": "柯尔特SCW护木"
+   },
+   "XannyArms.XA_DP_Colt_SCW_Stock": {
+    "en": "Colt SCW Stock",
+    "ch": "Colt SCW 槍托",
+    "cn": "柯尔特SCW枪托"
+   },
+   "XannyArms.XA_DP_Compact_AK_Adjustable": {
+    "en": "Compact AK Adjustable Stock",
+    "ch": "緊湊型 AK 可調式槍托",
+    "cn": "紧凑型AK可调式枪托"
+   },
+   "XannyArms.XA_DP_Compact_AK_Stock": {
+    "en": "Compact AK Stock",
+    "ch": "緊湊型 AK 槍托",
+    "cn": "紧凑型AK枪托"
+   },
+   "XannyArms.XA_DP_DD4_Stock": {
+    "en": "DD4 Stock",
+    "ch": "DD4 槍托",
+    "cn": "DD4枪托"
+   },
+   "XannyArms.XA_DP_DD_Grip": {
+    "en": "Daniel Defense Grip",
+    "ch": "Daniel Defense 握把",
+    "cn": "Daniel Defense握把"
+   },
+   "XannyArms.XA_DP_DD_RIS2": {
+    "en": "Daniel Defense RIS II",
+    "ch": "Daniel Defense RIS II",
+    "cn": "Daniel Defense RIS II护木"
+   },
+   "XannyArms.XA_DP_DD_Stock": {
+    "en": "Daniel Defense Stock",
+    "ch": "Daniel Defense 槍托",
+    "cn": "Daniel Defense枪托"
+   },
+   "XannyArms.XA_DP_DMR_Stock": {
+    "en": "DMR Stock",
+    "ch": "DMR 槍托",
+    "cn": "DMR枪托"
+   },
+   "XannyArms.XA_DP_Kit_Foregrip_A": {
+    "en": "Tactical Foregrip A",
+    "ch": "戰術前握把 A",
+    "cn": "战术前握把 A"
+   },
+   "XannyArms.XA_DP_Kit_Foregrip_B": {
+    "en": "Tactical Foregrip B",
+    "ch": "戰術前握把 B",
+    "cn": "战术前握把 B"
+   },
+   "XannyArms.XA_DP_Kit_Torch": {
+    "en": "Tactical Torch",
+    "ch": "戰術手電筒",
+    "cn": "战术手电筒"
+   },
+   "XannyArms.XA_DP_L119A2_Stock": {
+    "en": "L119A2 Stock",
+    "ch": "L119A2 槍托",
+    "cn": "L119A2枪托"
+   },
+   "XannyArms.XA_DP_LR300_Grip": {
+    "en": "LR-300 Grip",
+    "ch": "LR-300 握把",
+    "cn": "LR-300握把"
+   },
+   "XannyArms.XA_DP_Light_Stock": {
+    "en": "Lightweight Stock",
+    "ch": "輕量化槍托",
+    "cn": "轻量化枪托"
+   },
+   "XannyArms.XA_DP_MAB_Gen2": {
+    "en": "MAB Gen2 Stock",
+    "ch": "MAB Gen2 槍托",
+    "cn": "MAB Gen2枪托"
+   },
+   "XannyArms.XA_DP_Magpul_AFG2": {
+    "en": "Magpul AFG-2",
+    "ch": "Magpul AFG-2",
+    "cn": "Magpul AFG-2前握把"
+   },
+   "XannyArms.XA_DP_Magpul_PRS": {
+    "en": "Precision Adjustable Stock",
+    "ch": "精準可調式槍托",
+    "cn": "精准可调式枪托"
+   },
+   "XannyArms.XA_DP_Magpul_RVG": {
+    "en": "Magpul RVG",
+    "ch": "Magpul RVG",
+    "cn": "Magpul RVG前握把"
+   },
+   "XannyArms.XA_DP_Magpul_UBR": {
+    "en": "Magpul UBR Gen2 Stock",
+    "ch": "Magpul UBR Gen2 槍托",
+    "cn": "Magpul UBR Gen2枪托"
+   },
+   "XannyArms.XA_DP_Magpul_Zhukov": {
+    "en": "Magpul Zhukov Type Stock",
+    "ch": "Magpul Zhukov 型槍托",
+    "cn": "Magpul Zhukov型枪托"
+   },
+   "XannyArms.XA_DP_Magpul_Zhukov_S": {
+    "en": "Magpul Zhukov-S Type Stock",
+    "ch": "Magpul Zhukov-S 型槍托",
+    "cn": "Magpul Zhukov-S型枪托"
+   },
+   "XannyArms.XA_DP_Merc_Foregrip": {
+    "en": "Merc Foregrip",
+    "ch": "Merc 前握把",
+    "cn": "Merc前握把"
+   },
+   "XannyArms.XA_DP_Modular_Grip": {
+    "en": "Modular Grip",
+    "ch": "模組化握把",
+    "cn": "模块化握把"
+   },
+   "XannyArms.XA_DP_Modular_Grip_Elvi": {
+    "en": "Modular Grip Elvi",
+    "ch": "模組化握把 (Elvi)",
+    "cn": "模块化握把 (Elvi)"
+   },
+   "XannyArms.XA_DP_Modular_Grip_Holes": {
+    "en": "Modular Grip Holes",
+    "ch": "模組化握把 (開孔款)",
+    "cn": "模块化握把 (开孔款)"
+   },
+   "XannyArms.XA_DP_Modular_K_Handguard": {
+    "en": "Modular K Handguard",
+    "ch": "模組化 K 護木",
+    "cn": "模块化K护木"
+   },
+   "XannyArms.XA_DP_Modular_MK18_Handguard": {
+    "en": "Modular MK18 Handguard",
+    "ch": "模組化 MK18 護木",
+    "cn": "模块化MK18护木"
+   },
+   "XannyArms.XA_DP_Modular_Vertical": {
+    "en": "Modular Vertical Grip",
+    "ch": "模組化垂直握把",
+    "cn": "模块化垂直握把"
+   },
+   "XannyArms.XA_DP_NGAL": {
+    "en": "NGAL Aiming Laser",
+    "ch": "NGAL 雷射瞄準器",
+    "cn": "NGAL激光瞄准器"
+   },
+   "XannyArms.XA_DP_PT1_Type": {
+    "en": "PT-1 Type Stock",
+    "ch": "PT-1 型槍托",
+    "cn": "PT-1型枪托"
+   },
+   "XannyArms.XA_DP_R20_Rahe_Grip": {
+    "en": "R20 Rahe Grip",
+    "ch": "R20 Rahe 握把",
+    "cn": "R20 Rahe握把"
+   },
+   "XannyArms.XA_DP_R20_Rahe_Handguard": {
+    "en": "R20 Rahe Handguard",
+    "ch": "R20 Rahe 護木",
+    "cn": "R20 Rahe护木"
+   },
+   "XannyArms.XA_DP_R20_Rahe_Stock": {
+    "en": "R20 Rahe Stock",
+    "ch": "R20 Rahe 槍托",
+    "cn": "R20 Rahe枪托"
+   },
+   "XannyArms.XA_DP_RIII_Stock": {
+    "en": "RIII Stock",
+    "ch": "RIII 槍托",
+    "cn": "RIII枪托"
+   },
+   "XannyArms.XA_DP_RPK16_Tube_Stock": {
+    "en": "RPK-16 Style Tube Stock",
+    "ch": "RPK-16 式管狀槍托",
+    "cn": "RPK-16式管状枪托"
+   },
+   "XannyArms.XA_DP_Ribbed_Grip": {
+    "en": "Ribbed Foregrip",
+    "ch": "稜紋前握把",
+    "cn": "棱纹前握把"
+   },
+   "XannyArms.XA_DP_SLR_Grip": {
+    "en": "SLR Grip",
+    "ch": "SLR 握把",
+    "cn": "SLR握把"
+   },
+   "XannyArms.XA_DP_SLR_Handguard": {
+    "en": "SLR Handguard",
+    "ch": "SLR 護木",
+    "cn": "SLR护木"
+   },
+   "XannyArms.XA_DP_SLR_Light": {
+    "en": "SLR Light",
+    "ch": "SLR 戰術燈",
+    "cn": "SLR战术灯"
+   },
+   "XannyArms.XA_DP_SOPMOD_White": {
+    "en": "SOPMOD Stock Arctic White",
+    "ch": "SOPMOD 槍托 (極地白)",
+    "cn": "SOPMOD枪托 (极地白)"
+   },
+   "XannyArms.XA_DP_SVDM_Grip": {
+    "en": "SVDM Grip",
+    "ch": "SVDM 握把",
+    "cn": "SVDM握把"
+   },
+   "XannyArms.XA_DP_Sako_M23_Stock": {
+    "en": "Sako M23 Stock",
+    "ch": "Sako M23 槍托",
+    "cn": "Sako M23枪托"
+   },
+   "XannyArms.XA_DP_Skeleton_Grip": {
+    "en": "Skeleton Grip",
+    "ch": "鏤空握把",
+    "cn": "镂空握把"
+   },
+   "XannyArms.XA_DP_Skeleton_Stock": {
+    "en": "Skeleton Stock",
+    "ch": "鏤空槍托",
+    "cn": "镂空枪托"
+   },
+   "XannyArms.XA_DP_SureFire_M600DF": {
+    "en": "SureFire M600DF",
+    "ch": "SureFire M600DF",
+    "cn": "SureFire M600DF步枪灯"
+   },
+   "XannyArms.XA_DP_SureFire_M952V": {
+    "en": "SureFire M952V",
+    "ch": "SureFire M952V",
+    "cn": "SureFire M952V步枪灯"
+   },
+   "XannyArms.XA_DP_Tac_Vertical": {
+    "en": "Tactical Vertical Grip",
+    "ch": "戰術垂直握把",
+    "cn": "战术垂直握把"
+   },
+   "XannyArms.XA_DP_Tactical_Grip_A": {
+    "en": "Tactical Grip A",
+    "ch": "戰術握把 A",
+    "cn": "战术握把 A"
+   },
+   "XannyArms.XA_DP_Tactical_Grip_B": {
+    "en": "Tactical Grip B",
+    "ch": "戰術握把 B",
+    "cn": "战术握把 B"
+   },
+   "XannyArms.XA_DP_Tactical_Grip_C": {
+    "en": "Tactical Grip C",
+    "ch": "戰術握把 C",
+    "cn": "战术握把 C"
+   },
+   "XannyArms.XA_DP_Tactical_Grip_D": {
+    "en": "Tactical Grip D",
+    "ch": "戰術握把 D",
+    "cn": "战术握把 D"
+   },
+   "XannyArms.XA_DP_UAR15_Stock": {
+    "en": "UAR-15 Stock",
+    "ch": "UAR-15 槍托",
+    "cn": "UAR-15枪托"
+   },
+   "XannyArms.XA_DP_URGI_Foregrip": {
+    "en": "URG-I Foregrip",
+    "ch": "URG-I 前握把",
+    "cn": "URG-I前握把"
+   },
+   "XannyArms.XA_DP_URGI_Grip": {
+    "en": "URG-I SOCOM Grip",
+    "ch": "URG-I SOCOM 握把",
+    "cn": "URG-I SOCOM握把"
+   },
+   "XannyArms.XA_DP_URGI_Laser": {
+    "en": "URG-I Laser Module",
+    "ch": "URG-I 雷射模組",
+    "cn": "URG-I激光模块"
+   },
+   "XannyArms.XA_DP_Vepr_Grip": {
+    "en": "Vepr Grip",
+    "ch": "Vepr 握把",
+    "cn": "Vepr握把"
+   },
+   "XannyArms.XA_DP_Vertical_Grip": {
+    "en": "Vertical Foregrip",
+    "ch": "垂直前握把",
+    "cn": "垂直前握把"
+   },
+   "XannyArms.XA_DP_WAC47_Stock": {
+    "en": "WAC-47 Stock",
+    "ch": "WAC-47 槍托",
+    "cn": "WAC-47枪托"
+   },
+   "XannyArms.XA_DP_Weapon_Light": {
+    "en": "Weapon Light",
+    "ch": "槍燈",
+    "cn": "枪灯"
+   },
+   "XannyArms.XA_DP_Zenitco_PT1": {
+    "en": "Zenitco PT-1 Stock",
+    "ch": "Zenitco PT-1 槍托",
+    "cn": "Zenitco PT-1枪托"
+   },
+   "XannyArms.XA_DP_Zenitco_PT1_Short": {
+    "en": "Zenitco PT-1 Short Stock",
+    "ch": "Zenitco PT-1 短槍托",
+    "cn": "Zenitco PT-1短枪托"
+   },
+   "XannyArms.XA_DP_Zenitco_Perst4": {
+    "en": "Zenitco Perst-4",
+    "ch": "Zenitco Perst-4",
+    "cn": "Zenitco Perst-4激光模块"
+   },
+   "XannyArms.XA_DP_Zenitco_RK0": {
+    "en": "Zenitco RK-0",
+    "ch": "Zenitco RK-0",
+    "cn": "Zenitco RK-0前握把"
+   },
+   "XannyArms.XA_DP_Zenitco_RK1": {
+    "en": "Zenitco RK-1",
+    "ch": "Zenitco RK-1",
+    "cn": "Zenitco RK-1前握把"
+   },
+   "XannyArms.XA_DP_Zenitco_RK1_Angled": {
+    "en": "Zenitco RK-1 Angled",
+    "ch": "Zenitco RK-1 斜角款",
+    "cn": "Zenitco RK-1斜角前握把"
+   },
+   "XannyArms.XA_DP_Zenitco_RK2": {
+    "en": "Zenitco RK-2",
+    "ch": "Zenitco RK-2",
+    "cn": "Zenitco RK-2前握把"
+   },
+   "XannyArms.XA_DP_Zenitco_RK3": {
+    "en": "Zenitco RK-3 Grip",
+    "ch": "Zenitco RK-3 握把",
+    "cn": "Zenitco RK-3握把"
+   },
+   "XannyArms.XA_DP_Zenitco_ZEK": {
+    "en": "Zenitco ZEK Stock",
+    "ch": "Zenitco ZEK 槍托",
+    "cn": "Zenitco ZEK枪托"
+   },
+   "XannyArms.XA_DesertEagle": {
+    "en": "Desert Eagle",
+    "ch": "Desert Eagle",
+    "cn": "沙漠之鹰手枪"
+   },
+   "XannyArms.XA_DesertEagle_Mag": {
+    "en": "Desert Eagle Magazine 7",
+    "ch": "Desert Eagle 彈匣 7 發",
+    "cn": "沙漠之鹰手枪弹匣7发"
+   },
+   "XannyArms.XA_F2000": {
+    "en": "FN F2000",
+    "ch": "FN F2000",
+    "cn": "FN F2000自动步枪"
+   },
+   "XannyArms.XA_FNC": {
+    "en": "FN FNC",
+    "ch": "FN FNC",
+    "cn": "FN FNC自动步枪"
+   },
+   "XannyArms.XA_FNX45": {
+    "en": "FNX-45",
+    "ch": "FNX-45",
+    "cn": "FN FNX-45手枪"
+   },
+   "XannyArms.XA_FNX45_Mag": {
+    "en": "FNX-45 Magazine 15",
+    "ch": "FNX-45 彈匣 15 發",
+    "cn": "FN FNX-45手枪弹匣15发"
+   },
+   "XannyArms.XA_FabarmFP6": {
+    "en": "Fabarm FP6",
+    "ch": "Fabarm FP6",
+    "cn": "Fabarm FP6霰弹枪"
+   },
+   "XannyArms.XA_Glock17": {
+    "en": "Glock 17",
+    "ch": "Glock 17",
+    "cn": "格洛克17手枪"
+   },
+   "XannyArms.XA_Glock17_Mag": {
+    "en": "Glock 17 Magazine 17",
+    "ch": "Glock 17 彈匣 17 發",
+    "cn": "格洛克17手枪弹匣17发"
+   },
+   "XannyArms.XA_HK21E": {
+    "en": "HK21E",
+    "ch": "HK21E",
+    "cn": "黑克勒&科赫HK21E通用机枪"
+   },
+   "XannyArms.XA_HK21E_Mag": {
+    "en": "HK21E Magazine 100",
+    "ch": "HK21E 彈匣 100 發",
+    "cn": "黑克勒&科赫HK21E通用机枪弹匣100发"
+   },
+   "XannyArms.XA_HK416A5_Grip": {
+    "en": "HK416A5 Grip",
+    "ch": "HK416A5 握把",
+    "cn": "HK416A5握把"
+   },
+   "XannyArms.XA_HK416A5_Grip_Sand": {
+    "en": "HK416A5 Grip Sand",
+    "ch": "HK416A5 握把 (沙色)",
+    "cn": "HK416A5握把 (沙色)"
+   },
+   "XannyArms.XA_HK416A5_Handguard": {
+    "en": "HK416A5 Handguard",
+    "ch": "HK416A5 護木",
+    "cn": "HK416A5护木"
+   },
+   "XannyArms.XA_HK416A5_Handguard_Sand": {
+    "en": "HK416A5 Handguard Sand",
+    "ch": "HK416A5 護木 (沙色)",
+    "cn": "HK416A5护木 (沙色)"
+   },
+   "XannyArms.XA_HK416A5_Stock": {
+    "en": "HK416A5 Stock",
+    "ch": "HK416A5 槍托",
+    "cn": "HK416A5枪托"
+   },
+   "XannyArms.XA_HK416A5_Stock_Sand": {
+    "en": "HK416A5 Stock Sand",
+    "ch": "HK416A5 槍托 (沙色)",
+    "cn": "HK416A5枪托 (沙色)"
+   },
+   "XannyArms.XA_HK417": {
+    "en": "HK417",
+    "ch": "HK417",
+    "cn": "黑克勒&科赫417自动步枪"
+   },
+   "XannyArms.XA_HK417_Grip": {
+    "en": "HK417 Grip",
+    "ch": "HK417 握把",
+    "cn": "HK417握把"
+   },
+   "XannyArms.XA_HK417_Grip_Sand": {
+    "en": "HK417 Grip Sand",
+    "ch": "HK417 握把 (沙色)",
+    "cn": "HK417握把 (沙色)"
+   },
+   "XannyArms.XA_HK417_Handguard": {
+    "en": "HK417 Handguard",
+    "ch": "HK417 護木",
+    "cn": "HK417护木"
+   },
+   "XannyArms.XA_HK417_Handguard_Sand": {
+    "en": "HK417 Handguard Sand",
+    "ch": "HK417 護木 (沙色)",
+    "cn": "HK417护木 (沙色)"
+   },
+   "XannyArms.XA_HK417_Mag": {
+    "en": "HK417 Magazine 20",
+    "ch": "HK417 彈匣 20 發",
+    "cn": "黑克勒&科赫417自动步枪弹匣20发"
+   },
+   "XannyArms.XA_HK417_Stock": {
+    "en": "HK417 Stock",
+    "ch": "HK417 槍托",
+    "cn": "HK417枪托"
+   },
+   "XannyArms.XA_HK417_Stock_Sand": {
+    "en": "HK417 Stock Sand",
+    "ch": "HK417 槍托 (沙色)",
+    "cn": "HK417枪托 (沙色)"
+   },
+   "XannyArms.XA_HK45C": {
+    "en": "HK45 Compact",
+    "ch": "HK45 Compact",
+    "cn": "黑克勒&科赫HK45紧凑型手枪"
+   },
+   "XannyArms.XA_HK45C_Mag": {
+    "en": "HK45 Compact Magazine 8",
+    "ch": "HK45 Compact 彈匣 8 發",
+    "cn": "黑克勒&科赫HK45紧凑型手枪弹匣8发"
+   },
+   "XannyArms.XA_HoneyBadger_Grip": {
+    "en": "HoneyBadger Grip",
+    "ch": "HoneyBadger 握把",
+    "cn": "AAC蜜獾握把"
+   },
+   "XannyArms.XA_HoneyBadger_Grip_FDE": {
+    "en": "HoneyBadger Grip FDE",
+    "ch": "HoneyBadger 握把 (沙色)",
+    "cn": "AAC蜜獾握把 (沙色)"
+   },
+   "XannyArms.XA_HoneyBadger_Handguard": {
+    "en": "HoneyBadger Handguard",
+    "ch": "HoneyBadger 護木",
+    "cn": "AAC蜜獾护木"
+   },
+   "XannyArms.XA_HoneyBadger_Handguard_FDE": {
+    "en": "HoneyBadger Handguard FDE",
+    "ch": "HoneyBadger 護木 (沙色)",
+    "cn": "AAC蜜獾护木 (沙色)"
+   },
+   "XannyArms.XA_HoneyBadger_Stock": {
+    "en": "HoneyBadger Stock",
+    "ch": "HoneyBadger 槍托",
+    "cn": "AAC蜜獾枪托"
+   },
+   "XannyArms.XA_HoneyBadger_Stock_FDE": {
+    "en": "HoneyBadger Stock FDE",
+    "ch": "HoneyBadger 槍托 (沙色)",
+    "cn": "AAC蜜獾枪托 (沙色)"
+   },
+   "XannyArms.XA_HowaType20": {
+    "en": "Howa Type 20",
+    "ch": "Howa Type 20",
+    "cn": "丰和20式自动步枪"
+   },
+   "XannyArms.XA_IZH27": {
+    "en": "IZH-27",
+    "ch": "IZH-27",
+    "cn": "IZH-27霰弹枪"
+   },
+   "XannyArms.XA_KS23": {
+    "en": "KS-23",
+    "ch": "KS-23",
+    "cn": "KS-23霰弹枪"
+   },
+   "XannyArms.XA_M110_Grip": {
+    "en": "M110 Grip",
+    "ch": "M110 握把",
+    "cn": "M110握把"
+   },
+   "XannyArms.XA_M110_Grip_FDE": {
+    "en": "M110 Grip FDE",
+    "ch": "M110 握把 (沙色)",
+    "cn": "M110握把 (沙色)"
+   },
+   "XannyArms.XA_M110_Handguard": {
+    "en": "M110 Handguard",
+    "ch": "M110 護木",
+    "cn": "M110护木"
+   },
+   "XannyArms.XA_M110_Handguard_FDE": {
+    "en": "M110 Handguard FDE",
+    "ch": "M110 護木 (沙色)",
+    "cn": "M110护木 (沙色)"
+   },
+   "XannyArms.XA_M110_Stock": {
+    "en": "M110 Stock",
+    "ch": "M110 槍托",
+    "cn": "M110枪托"
+   },
+   "XannyArms.XA_M110_Stock_FDE": {
+    "en": "M110 Stock FDE",
+    "ch": "M110 槍托 (沙色)",
+    "cn": "M110枪托 (沙色)"
+   },
+   "XannyArms.XA_M16A1_Grip": {
+    "en": "M16A1 Grip",
+    "ch": "M16A1 握把",
+    "cn": "M16A1握把"
+   },
+   "XannyArms.XA_M16A1_Handguard": {
+    "en": "M16A1 Handguard",
+    "ch": "M16A1 護木",
+    "cn": "M16A1护木"
+   },
+   "XannyArms.XA_M16A1_Stock": {
+    "en": "M16A1 Stock",
+    "ch": "M16A1 槍托",
+    "cn": "M16A1枪托"
+   },
+   "XannyArms.XA_M24_Mag": {
+    "en": "M24 Magazine 10 (7.62x51)",
+    "ch": "M24 彈匣 10 發 (7.62x51)",
+    "cn": "M24狙击步枪弹匣10发 (7.62x51mm)"
+   },
+   "XannyArms.XA_M4A1_Grip": {
+    "en": "M4A1 Grip",
+    "ch": "M4A1 握把",
+    "cn": "M4A1握把"
+   },
+   "XannyArms.XA_M4A1_Grip_FDE": {
+    "en": "M4A1 Grip FDE",
+    "ch": "M4A1 握把 (沙色)",
+    "cn": "M4A1握把 (沙色)"
+   },
+   "XannyArms.XA_M4A1_Grip_OD": {
+    "en": "M4A1 Grip OD",
+    "ch": "M4A1 握把 (橄欖綠)",
+    "cn": "M4A1握把 (橄榄绿)"
+   },
+   "XannyArms.XA_M4A1_Handguard": {
+    "en": "M4A1 Handguard",
+    "ch": "M4A1 護木",
+    "cn": "M4A1护木"
+   },
+   "XannyArms.XA_M4A1_Handguard_FDE": {
+    "en": "M4A1 Handguard FDE",
+    "ch": "M4A1 護木 (沙色)",
+    "cn": "M4A1护木 (沙色)"
+   },
+   "XannyArms.XA_M4A1_Handguard_OD": {
+    "en": "M4A1 Handguard OD",
+    "ch": "M4A1 護木 (橄欖綠)",
+    "cn": "M4A1护木 (橄榄绿)"
+   },
+   "XannyArms.XA_M4A1_Stock": {
+    "en": "M4A1 Stock",
+    "ch": "M4A1 槍托",
+    "cn": "M4A1枪托"
+   },
+   "XannyArms.XA_M4A1_Stock_FDE": {
+    "en": "M4A1 Stock FDE",
+    "ch": "M4A1 槍托 (沙色)",
+    "cn": "M4A1枪托 (沙色)"
+   },
+   "XannyArms.XA_M4A1_Stock_OD": {
+    "en": "M4A1 Stock OD",
+    "ch": "M4A1 槍托 (橄欖綠)",
+    "cn": "M4A1枪托 (橄榄绿)"
+   },
+   "XannyArms.XA_M4SOPMODII_Grip": {
+    "en": "M4SOPMODII Grip",
+    "ch": "M4SOPMODII 握把",
+    "cn": "M4A1 SOPMOD II握把"
+   },
+   "XannyArms.XA_M4SOPMODII_Handguard": {
+    "en": "M4SOPMODII Handguard",
+    "ch": "M4SOPMODII 護木",
+    "cn": "M4A1 SOPMOD II护木"
+   },
+   "XannyArms.XA_M4SOPMODII_Stock": {
+    "en": "M4SOPMODII Stock",
+    "ch": "M4SOPMODII 槍托",
+    "cn": "M4A1 SOPMOD II枪托"
+   },
+   "XannyArms.XA_MCXSpear_Grip": {
+    "en": "MCXSpear Grip",
+    "ch": "MCXSpear 握把",
+    "cn": "MCX Spear握把"
+   },
+   "XannyArms.XA_MCXSpear_Grip_Coyote": {
+    "en": "MCXSpear Grip Coyote",
+    "ch": "MCXSpear 握把 (狼棕色)",
+    "cn": "MCX Spear握把 (狼棕色)"
+   },
+   "XannyArms.XA_MCXSpear_Handguard": {
+    "en": "MCXSpear Handguard",
+    "ch": "MCXSpear 護木",
+    "cn": "MCX Spear护木"
+   },
+   "XannyArms.XA_MCXSpear_Handguard_Coyote": {
+    "en": "MCXSpear Handguard Coyote",
+    "ch": "MCXSpear 護木 (狼棕色)",
+    "cn": "MCX Spear护木 (狼棕色)"
+   },
+   "XannyArms.XA_MCXSpear_Stock": {
+    "en": "MCXSpear Stock",
+    "ch": "MCXSpear 槍托",
+    "cn": "MCX Spear枪托"
+   },
+   "XannyArms.XA_MCXSpear_Stock_Coyote": {
+    "en": "MCXSpear Stock Coyote",
+    "ch": "MCXSpear 槍托 (狼棕色)",
+    "cn": "MCX Spear枪托 (狼棕色)"
+   },
+   "XannyArms.XA_MDR": {
+    "en": "Desert Tech MDR",
+    "ch": "Desert Tech MDR",
+    "cn": "沙漠科技MDR自动步枪"
+   },
+   "XannyArms.XA_MK18": {
+    "en": "Mk18 Mod 0",
+    "ch": "Mk18 Mod 0",
+    "cn": "Mk18 Mod 0自动步枪"
+   },
+   "XannyArms.XA_MK18_Grip": {
+    "en": "Mk18 Mod 0 Grip",
+    "ch": "Mk18 Mod 0 握把",
+    "cn": "Mk18 Mod 0握把"
+   },
+   "XannyArms.XA_MK18_Grip_FDE": {
+    "en": "Mk18 Mod 0 Grip FDE",
+    "ch": "Mk18 Mod 0 握把 (沙色)",
+    "cn": "Mk18 Mod 0握把 (沙色)"
+   },
+   "XannyArms.XA_MK18_Handguard": {
+    "en": "Mk18 Mod 0 Handguard",
+    "ch": "Mk18 Mod 0 護木",
+    "cn": "Mk18 Mod 0护木"
+   },
+   "XannyArms.XA_MK18_Handguard_FDE": {
+    "en": "Mk18 Mod 0 Handguard FDE",
+    "ch": "Mk18 Mod 0 護木 (沙色)",
+    "cn": "Mk18 Mod 0护木 (沙色)"
+   },
+   "XannyArms.XA_MK18_Stock": {
+    "en": "Mk18 Mod 0 Stock",
+    "ch": "Mk18 Mod 0 槍托",
+    "cn": "Mk18 Mod 0枪托"
+   },
+   "XannyArms.XA_MK18_Stock_FDE": {
+    "en": "Mk18 Mod 0 Stock FDE",
+    "ch": "Mk18 Mod 0 槍托 (沙色)",
+    "cn": "Mk18 Mod 0枪托 (沙色)"
+   },
+   "XannyArms.XA_MK47": {
+    "en": "MK47 Mutant",
+    "ch": "MK47 Mutant",
+    "cn": "MK47 Mutant自动步枪"
+   },
+   "XannyArms.XA_MK47_Grip": {
+    "en": "MK47 Mutant Grip",
+    "ch": "MK47 Mutant 握把",
+    "cn": "MK47 Mutant握把"
+   },
+   "XannyArms.XA_MK47_Grip_FDE": {
+    "en": "MK47 Mutant Grip FDE",
+    "ch": "MK47 Mutant 握把 (沙色)",
+    "cn": "MK47 Mutant握把 (沙色)"
+   },
+   "XannyArms.XA_MK47_Handguard": {
+    "en": "MK47 Mutant Handguard",
+    "ch": "MK47 Mutant 護木",
+    "cn": "MK47 Mutant护木"
+   },
+   "XannyArms.XA_MK47_Handguard_FDE": {
+    "en": "MK47 Mutant Handguard FDE",
+    "ch": "MK47 Mutant 護木 (沙色)",
+    "cn": "MK47 Mutant护木 (沙色)"
+   },
+   "XannyArms.XA_MK47_Stock": {
+    "en": "MK47 Mutant Stock",
+    "ch": "MK47 Mutant 槍托",
+    "cn": "MK47 Mutant枪托"
+   },
+   "XannyArms.XA_MK47_Stock_FDE": {
+    "en": "MK47 Mutant Stock FDE",
+    "ch": "MK47 Mutant 槍托 (沙色)",
+    "cn": "MK47 Mutant枪托 (沙色)"
+   },
+   "XannyArms.XA_MP153": {
+    "en": "MP-153",
+    "ch": "MP-153",
+    "cn": "MP-153霰弹枪"
+   },
+   "XannyArms.XA_MP7A1": {
+    "en": "HK MP7A1",
+    "ch": "HK MP7A1",
+    "cn": "黑克勒&科赫MP7A1冲锋枪"
+   },
+   "XannyArms.XA_MP7A1_Mag": {
+    "en": "HK MP7A1 Magazine 40",
+    "ch": "HK MP7A1 彈匣 40 發",
+    "cn": "黑克勒&科赫MP7A1冲锋枪弹匣40发"
+   },
+   "XannyArms.XA_MPX": {
+    "en": "SIG MPX",
+    "ch": "SIG MPX",
+    "cn": "西格MPX冲锋枪"
+   },
+   "XannyArms.XA_MPX_Mag": {
+    "en": "SIG MPX Magazine 30",
+    "ch": "SIG MPX 彈匣 30 發",
+    "cn": "西格MPX冲锋枪弹匣30发"
+   },
+   "XannyArms.XA_NL545": {
+    "en": "NL545",
+    "ch": "NL545",
+    "cn": "NL545自动步枪"
+   },
+   "XannyArms.XA_NL545_Grip": {
+    "en": "NL545 Grip",
+    "ch": "NL545 握把",
+    "cn": "NL545握把"
+   },
+   "XannyArms.XA_NL545_Handguard": {
+    "en": "NL545 Handguard",
+    "ch": "NL545 護木",
+    "cn": "NL545护木"
+   },
+   "XannyArms.XA_NL545_Mag": {
+    "en": "NL545 Magazine 30",
+    "ch": "NL545 彈匣 30 發",
+    "cn": "NL545自动步枪弹匣30发"
+   },
+   "XannyArms.XA_NL545_Stock": {
+    "en": "NL545 Stock",
+    "ch": "NL545 槍托",
+    "cn": "NL545枪托"
+   },
+   "XannyArms.XA_NL556": {
+    "en": "NL556",
+    "ch": "NL556",
+    "cn": "NL556自动步枪"
+   },
+   "XannyArms.XA_NL556_Grip": {
+    "en": "NL556 Grip",
+    "ch": "NL556 握把",
+    "cn": "NL556握把"
+   },
+   "XannyArms.XA_NL556_Handguard": {
+    "en": "NL556 Handguard",
+    "ch": "NL556 護木",
+    "cn": "NL556护木"
+   },
+   "XannyArms.XA_NL556_Stock": {
+    "en": "NL556 Stock",
+    "ch": "NL556 槍托",
+    "cn": "NL556枪托"
+   },
+   "XannyArms.XA_OP_Barrett_Scope": {
+    "en": "Barrett M82 Scope",
+    "ch": "Barrett M82 瞄準鏡",
+    "cn": "巴雷特M82瞄准镜"
+   },
+   "XannyArms.XA_OP_Coyote_RedDot": {
+    "en": "Coyote Red Dot",
+    "ch": "Coyote 紅點瞄準鏡",
+    "cn": "Coyote红点瞄准镜"
+   },
+   "XannyArms.XA_OP_Holosun_HE509T": {
+    "en": "Holosun HE509T",
+    "ch": "Holosun HE509T",
+    "cn": "Holosun HE509T瞄准镜"
+   },
+   "XannyArms.XA_OP_Winchester_M70_Scope": {
+    "en": "Winchester M70 Scope",
+    "ch": "Winchester M70 瞄準鏡",
+    "cn": "温彻斯特M70瞄准镜"
+   },
+   "XannyArms.XA_P09": {
+    "en": "CZ P-09",
+    "ch": "CZ P-09",
+    "cn": "CZ P-09手枪"
+   },
+   "XannyArms.XA_P09_Mag": {
+    "en": "CZ P-09 Magazine 19",
+    "ch": "CZ P-09 彈匣 19 發",
+    "cn": "CZ P-09手枪弹匣19发"
+   },
+   "XannyArms.XA_P320": {
+    "en": "SIG P320",
+    "ch": "SIG P320",
+    "cn": "西格P320手枪"
+   },
+   "XannyArms.XA_P320_Mag": {
+    "en": "SIG P320 Magazine 17",
+    "ch": "SIG P320 彈匣 17 發",
+    "cn": "西格P320手枪弹匣17发"
+   },
+   "XannyArms.XA_PP19Vityaz": {
+    "en": "PP-19 Vityaz",
+    "ch": "PP-19 Vityaz",
+    "cn": "PP-19勇士冲锋枪"
+   },
+   "XannyArms.XA_PP19Vityaz_Grip": {
+    "en": "PP-19 Vityaz Grip",
+    "ch": "PP-19 Vityaz 握把",
+    "cn": "PP-19勇士握把"
+   },
+   "XannyArms.XA_PP19Vityaz_Handguard": {
+    "en": "PP-19 Vityaz Handguard",
+    "ch": "PP-19 Vityaz 護木",
+    "cn": "PP-19勇士护木"
+   },
+   "XannyArms.XA_PP19Vityaz_Mag": {
+    "en": "PP-19 Vityaz Magazine 30",
+    "ch": "PP-19 Vityaz 彈匣 30 發",
+    "cn": "PP-19勇士冲锋枪弹匣30发"
+   },
+   "XannyArms.XA_PP19Vityaz_Stock": {
+    "en": "PP-19 Vityaz Stock",
+    "ch": "PP-19 Vityaz 槍托",
+    "cn": "PP-19勇士枪托"
+   },
+   "XannyArms.XA_PSG1": {
+    "en": "HK PSG1",
+    "ch": "HK PSG1",
+    "cn": "黑克勒&科赫PSG1狙击步枪"
+   },
+   "XannyArms.XA_PSG1_Mag": {
+    "en": "HK PSG1 Magazine 20",
+    "ch": "HK PSG1 彈匣 20 發",
+    "cn": "黑克勒&科赫PSG1狙击步枪弹匣20发"
+   },
+   "XannyArms.XA_PX4": {
+    "en": "Beretta Px4",
+    "ch": "Beretta Px4",
+    "cn": "伯莱塔Px4手枪"
+   },
+   "XannyArms.XA_PX4_Mag": {
+    "en": "Beretta Px4 Magazine 17",
+    "ch": "Beretta Px4 彈匣 17 發",
+    "cn": "伯莱塔Px4手枪弹匣17发"
+   },
+   "XannyArms.XA_Pistol_APL": {
+    "en": "Inforce APL",
+    "ch": "Inforce APL",
+    "cn": "Inforce APL手枪灯"
+   },
+   "XannyArms.XA_Pistol_HE509T": {
+    "en": "Holosun HE509T / Pistol",
+    "ch": "Holosun HE509T / 手槍",
+    "cn": "Holosun HE509T瞄准镜 (手枪)"
+   },
+   "XannyArms.XA_Pistol_RMR": {
+    "en": "Trijicon RMR / Pistol",
+    "ch": "Trijicon RMR / 手槍",
+    "cn": "Trijicon RMR瞄准镜 (手枪)"
+   },
+   "XannyArms.XA_Pistol_X300": {
+    "en": "SureFire X300U-B / FDE",
+    "ch": "SureFire X300U-B (沙色)",
+    "cn": "SureFire X300U-B手枪灯 (沙色)"
+   },
+   "XannyArms.XA_RO635_Grip": {
+    "en": "RO635 Grip",
+    "ch": "RO635 握把",
+    "cn": "RO635握把"
+   },
+   "XannyArms.XA_RO635_Handguard": {
+    "en": "RO635 Handguard",
+    "ch": "RO635 護木",
+    "cn": "RO635护木"
+   },
+   "XannyArms.XA_RO635_Stock": {
+    "en": "RO635 Stock",
+    "ch": "RO635 槍托",
+    "cn": "RO635枪托"
+   },
+   "XannyArms.XA_RPK16": {
+    "en": "RPK-16",
+    "ch": "RPK-16",
+    "cn": "卡拉什尼科夫RPK-16轻机枪"
+   },
+   "XannyArms.XA_RPK16_Grip": {
+    "en": "RPK-16 Grip",
+    "ch": "RPK-16 握把",
+    "cn": "RPK-16握把"
+   },
+   "XannyArms.XA_RPK16_Handguard": {
+    "en": "RPK-16 Handguard",
+    "ch": "RPK-16 護木",
+    "cn": "RPK-16护木"
+   },
+   "XannyArms.XA_RPK16_Mag": {
+    "en": "RPK-16 Magazine 95",
+    "ch": "RPK-16 彈匣 95 發",
+    "cn": "卡拉什尼科夫RPK-16轻机枪弹匣95发"
+   },
+   "XannyArms.XA_RPK16_Stock": {
+    "en": "RPK-16 Stock",
+    "ch": "RPK-16 槍托",
+    "cn": "RPK-16枪托"
+   },
+   "XannyArms.XA_Remington788_Mag": {
+    "en": "Remington 788 Magazine 3 (7.62x51)",
+    "ch": "Remington788 彈匣 3 發 (7.62x51)",
+    "cn": "雷明顿788狙击步枪弹匣3发 (7.62x51mm)"
+   },
+   "XannyArms.XA_Remington870Tactical": {
+    "en": "Remington 870 Tactical",
+    "ch": "Remington 870 Tactical",
+    "cn": "雷明顿870战术型霰弹枪"
+   },
+   "XannyArms.XA_RifleRail": {
+    "en": "Low Rifle Optic Base",
+    "ch": "低位步槍瞄準鏡底座",
+    "cn": "低位步枪瞄准镜底座"
+   },
+   "XannyArms.XA_SCARL": {
+    "en": "FN SCAR-L",
+    "ch": "FN SCAR-L",
+    "cn": "FN SCAR-L自动步枪"
+   },
+   "XannyArms.XA_SIG516": {
+    "en": "SIG516",
+    "ch": "SIG516",
+    "cn": "西格516自动步枪"
+   },
+   "XannyArms.XA_SIG516_Grip": {
+    "en": "SIG516 Grip",
+    "ch": "SIG516 握把",
+    "cn": "SIG516握把"
+   },
+   "XannyArms.XA_SIG516_Grip_FDE": {
+    "en": "SIG516 Grip FDE",
+    "ch": "SIG516 握把 (沙色)",
+    "cn": "SIG516握把 (沙色)"
+   },
+   "XannyArms.XA_SIG516_Handguard": {
+    "en": "SIG516 Handguard",
+    "ch": "SIG516 護木",
+    "cn": "SIG516护木"
+   },
+   "XannyArms.XA_SIG516_Handguard_FDE": {
+    "en": "SIG516 Handguard FDE",
+    "ch": "SIG516 護木 (沙色)",
+    "cn": "SIG516护木 (沙色)"
+   },
+   "XannyArms.XA_SIG516_Stock": {
+    "en": "SIG516 Stock",
+    "ch": "SIG516 槍托",
+    "cn": "SIG516枪托"
+   },
+   "XannyArms.XA_SIG516_Stock_FDE": {
+    "en": "SIG516 Stock FDE",
+    "ch": "SIG516 槍托 (沙色)",
+    "cn": "SIG516枪托 (沙色)"
+   },
+   "XannyArms.XA_SPAS12": {
+    "en": "SPAS-12",
+    "ch": "SPAS-12",
+    "cn": "弗兰基SPAS-12霰弹枪"
+   },
+   "XannyArms.XA_STM556": {
+    "en": "STM-556",
+    "ch": "STM-556",
+    "cn": "STM-556自动步枪"
+   },
+   "XannyArms.XA_STM556_Grip": {
+    "en": "STM-556 Grip",
+    "ch": "STM-556 握把",
+    "cn": "STM-556握把"
+   },
+   "XannyArms.XA_STM556_Handguard": {
+    "en": "STM-556 Handguard",
+    "ch": "STM-556 護木",
+    "cn": "STM-556护木"
+   },
+   "XannyArms.XA_STM556_Stock": {
+    "en": "STM-556 Stock",
+    "ch": "STM-556 槍托",
+    "cn": "STM-556枪托"
+   },
+   "XannyArms.XA_SU_ATS_4_D154": {
+    "en": "ATS-4 Suppressor (7.62x51)",
+    "ch": "ATS-4 消音器 (7.62x51)",
+    "cn": "ATS-4消音器 (7.62x51mm)"
+   },
+   "XannyArms.XA_SU_AWC_Thundertrap_D288": {
+    "en": "AWC Thundertrap Suppressor (7.62x51)",
+    "ch": "AWC Thundertrap 消音器 (7.62x51)",
+    "cn": "AWC Thundertrap消音器 (7.62x51mm)"
+   },
+   "XannyArms.XA_SU_AWC_Thundertrap_D288_76239": {
+    "en": "AWC Thundertrap Suppressor (7.62x39)",
+    "ch": "AWC Thundertrap 消音器 (7.62x39)",
+    "cn": "AWC Thundertrap消音器 (7.62x39mm)"
+   },
+   "XannyArms.XA_SU_Angstadt_Arms_Prophet_D287": {
+    "en": "Angstadt Arms Prophet Suppressor (5.56x45)",
+    "ch": "Angstadt Arms Prophet 消音器 (5.56x45)",
+    "cn": "Angstadt Arms Prophet消音器 (5.56x45mm)"
+   },
+   "XannyArms.XA_SU_Black_45_D303": {
+    "en": "Black 45 Suppressor (.45 ACP)",
+    "ch": "Black 45 消音器 (.45 ACP)",
+    "cn": "Black 45消音器 (.45 ACP)"
+   },
+   "XannyArms.XA_SU_DTKP_D146": {
+    "en": "DTKP Suppressor (5.45x39)",
+    "ch": "DTKP 消音器 (5.45x39)",
+    "cn": "DTKP消音器 (5.45x39mm)"
+   },
+   "XannyArms.XA_SU_Engraved_D152": {
+    "en": "Engraved Suppressor (7.62x51)",
+    "ch": "雕花消音器 (7.62x51)",
+    "cn": "雕花消音器 (7.62x51mm)"
+   },
+   "XannyArms.XA_SU_Hex_D312": {
+    "en": "Hex Suppressor (9x19)",
+    "ch": "六角消音器 (9x19)",
+    "cn": "六角消音器 (9x19mm)"
+   },
+   "XannyArms.XA_SU_INS_9_D310": {
+    "en": "INS 9 Suppressor (9x19)",
+    "ch": "INS 9 消音器 (9x19)",
+    "cn": "INS 9消音器 (9x19mm)"
+   },
+   "XannyArms.XA_SU_KAC_Mk23_D149": {
+    "en": "KAC Mk23 Suppressor (.45 ACP)",
+    "ch": "KAC Mk23 消音器 (.45 ACP)",
+    "cn": "KAC Mk23消音器 (.45 ACP)"
+   },
+   "XannyArms.XA_SU_Long_QD_D299": {
+    "en": "Long QD Suppressor (7.62x54R)",
+    "ch": "長型快拆消音器 (7.62x54R)",
+    "cn": "长型快拆消音器 (7.62x54mmR)"
+   },
+   "XannyArms.XA_SU_MD_3_D155": {
+    "en": "MD-3 Suppressor (7.62x54R)",
+    "ch": "MD-3 消音器 (7.62x54R)",
+    "cn": "MD-3消音器 (7.62x54mmR)"
+   },
+   "XannyArms.XA_SU_PBS_1_D308": {
+    "en": "PBS-1 Suppressor (7.62x39)",
+    "ch": "PBS-1 消音器 (7.62x39)",
+    "cn": "PBS-1消音器 (7.62x39mm)"
+   },
+   "XannyArms.XA_SU_PBS_4_D295": {
+    "en": "PBS-4 Suppressor (5.45x39)",
+    "ch": "PBS-4 消音器 (5.45x39)",
+    "cn": "PBS-4消音器 (5.45x39mm)"
+   },
+   "XannyArms.XA_SU_PBS_D294": {
+    "en": "PBS Suppressor (7.62x39)",
+    "ch": "PBS 消音器 (7.62x39)",
+    "cn": "PBS消音器 (7.62x39mm)"
+   },
+   "XannyArms.XA_SU_Ribbed_D157": {
+    "en": "Ribbed Suppressor (7.62x54R)",
+    "ch": "稜紋消音器 (7.62x54R)",
+    "cn": "棱纹消音器 (7.62x54mmR)"
+   },
+   "XannyArms.XA_SU_SEC_9_D305": {
+    "en": "SEC 9 Suppressor (9x19)",
+    "ch": "SEC 9 消音器 (9x19)",
+    "cn": "SEC 9消音器 (9x19mm)"
+   },
+   "XannyArms.XA_SU_SilencerCo_Velos_LBP_D153": {
+    "en": "SilencerCo Velos LBP Suppressor (5.56x45)",
+    "ch": "SilencerCo Velos LBP 消音器 (5.56x45)",
+    "cn": "SilencerCo Velos LBP消音器 (5.56x45mm)"
+   },
+   "XannyArms.XA_SU_Slim_D300": {
+    "en": "Slim Suppressor (5.45x39)",
+    "ch": "細型消音器 (5.45x39)",
+    "cn": "细型消音器 (5.45x39mm)"
+   },
+   "XannyArms.XA_SU_Ti_RANT_45_D302": {
+    "en": "Ti-RANT 45 Suppressor (.45 ACP)",
+    "ch": "Ti-RANT 45 消音器 (.45 ACP)",
+    "cn": "Ti-RANT 45消音器 (.45 ACP)"
+   },
+   "XannyArms.XA_SU_Titan_Defense_MTX_570_D151": {
+    "en": "Titan Defense MTX-570 Suppressor (5.56x45)",
+    "ch": "Titan Defense MTX-570 消音器 (5.56x45)",
+    "cn": "Titan Defense MTX-570消音器 (5.56x45mm)"
+   },
+   "XannyArms.XA_SV98": {
+    "en": "SV-98",
+    "ch": "SV-98",
+    "cn": "SV-98狙击步枪"
+   },
+   "XannyArms.XA_SV98_Mag": {
+    "en": "SV-98 Magazine 10",
+    "ch": "SV-98 彈匣 10 發",
+    "cn": "SV-98狙击步枪弹匣10发"
+   },
+   "XannyArms.XA_SVDM": {
+    "en": "SVDM",
+    "ch": "SVDM",
+    "cn": "德拉贡诺夫SVDM狙击步枪"
+   },
+   "XannyArms.XA_SW22_4": {
+    "en": "S&W 22-4",
+    "ch": "S&W 22-4",
+    "cn": "史密斯&韦森22-4左轮手枪"
+   },
+   "XannyArms.XA_Saiga12K_Grip": {
+    "en": "Saiga12K Grip",
+    "ch": "Saiga12K 握把",
+    "cn": "Saiga-12K握把"
+   },
+   "XannyArms.XA_Saiga12K_Handguard": {
+    "en": "Saiga12K Handguard",
+    "ch": "Saiga12K 護木",
+    "cn": "Saiga-12K护木"
+   },
+   "XannyArms.XA_Saiga12K_Stock": {
+    "en": "Saiga12K Stock",
+    "ch": "Saiga12K 槍托",
+    "cn": "Saiga-12K枪托"
+   },
+   "XannyArms.XA_Saiga9": {
+    "en": "Saiga-9",
+    "ch": "Saiga-9",
+    "cn": "伊兹玛什Saiga-9冲锋枪"
+   },
+   "XannyArms.XA_Saiga9_Grip": {
+    "en": "Saiga-9 Grip",
+    "ch": "Saiga-9 握把",
+    "cn": "Saiga-9握把"
+   },
+   "XannyArms.XA_Saiga9_Handguard": {
+    "en": "Saiga-9 Handguard",
+    "ch": "Saiga-9 護木",
+    "cn": "Saiga-9护木"
+   },
+   "XannyArms.XA_Saiga9_Mag": {
+    "en": "Saiga-9 Magazine 30",
+    "ch": "Saiga-9 彈匣 30 發",
+    "cn": "伊兹玛什Saiga-9冲锋枪弹匣30发"
+   },
+   "XannyArms.XA_Saiga9_Stock": {
+    "en": "Saiga-9 Stock",
+    "ch": "Saiga-9 槍托",
+    "cn": "Saiga-9枪托"
+   },
+   "XannyArms.XA_SavageAxis2": {
+    "en": "Savage Axis II",
+    "ch": "Savage Axis II",
+    "cn": "萨维奇Axis II狙击步枪"
+   },
+   "XannyArms.XA_SavageAxis2_Mag": {
+    "en": "Savage Axis II Magazine 4",
+    "ch": "Savage Axis II 彈匣 4 發",
+    "cn": "萨维奇Axis II狙击步枪弹匣4发"
+   },
+   "XannyArms.XA_ScorpionEVO3": {
+    "en": "CZ Scorpion EVO 3",
+    "ch": "CZ Scorpion EVO 3",
+    "cn": "CZ蝎式EVO 3冲锋枪"
+   },
+   "XannyArms.XA_ScorpionEVO3_Mag": {
+    "en": "CZ Scorpion EVO 3 Magazine 30",
+    "ch": "CZ Scorpion EVO 3 彈匣 30 發",
+    "cn": "CZ蝎式EVO 3冲锋枪弹匣30发"
+   },
+   "XannyArms.XA_ShotgunRail": {
+    "en": "Low Shotgun Optic Bridge",
+    "ch": "低位霰彈槍瞄準鏡橋座",
+    "cn": "低位霰弹枪瞄准镜桥座"
+   },
+   "XannyArms.XA_SteyrM9A2": {
+    "en": "Steyr M9-A2",
+    "ch": "Steyr M9-A2",
+    "cn": "斯泰尔M9-A2手枪"
+   },
+   "XannyArms.XA_SteyrM9A2_Mag": {
+    "en": "Steyr M9-A2 Magazine 17",
+    "ch": "Steyr M9-A2 彈匣 17 發",
+    "cn": "斯泰尔M9-A2手枪弹匣17发"
+   },
+   "XannyArms.XA_T5000M": {
+    "en": "ORSIS T-5000M",
+    "ch": "ORSIS T-5000M",
+    "cn": "ORSIS T-5000M狙击步枪"
+   },
+   "XannyArms.XA_T5000M_Mag": {
+    "en": "ORSIS T-5000M Magazine 5",
+    "ch": "ORSIS T-5000M 彈匣 5 發",
+    "cn": "ORSIS T-5000M狙击步枪弹匣5发"
+   },
+   "XannyArms.XA_TEC9": {
+    "en": "TEC-9",
+    "ch": "TEC-9",
+    "cn": "TEC-9手枪"
+   },
+   "XannyArms.XA_TEC9_Mag": {
+    "en": "TEC-9 Magazine 32",
+    "ch": "TEC-9 彈匣 32 發",
+    "cn": "TEC-9手枪弹匣32发"
+   },
+   "XannyArms.XA_TRR8": {
+    "en": "S&W 327 TRR8",
+    "ch": "S&W 327 TRR8",
+    "cn": "史密斯&韦森327 TRR8左轮手枪"
+   },
+   "XannyArms.XA_VSS": {
+    "en": "VSS Vintorez",
+    "ch": "VSS Vintorez",
+    "cn": "VSS Vintorez狙击步枪"
+   },
+   "XannyArms.XA_VSSK": {
+    "en": "VSSK Vykhlop",
+    "ch": "VSSK Vykhlop",
+    "cn": "VSSK Vykhlop狙击步枪"
+   },
+   "XannyArms.XA_VSSK_Mag": {
+    "en": "VSSK Vykhlop Magazine 5",
+    "ch": "VSSK Vykhlop 彈匣 5 發",
+    "cn": "VSSK Vykhlop狙击步枪弹匣5发"
+   },
+   "XannyArms.XA_VSS_Mag": {
+    "en": "VSS Vintorez Magazine 10",
+    "ch": "VSS Vintorez 彈匣 10 發",
+    "cn": "VSS Vintorez狙击步枪弹匣10发"
+   },
+   "XannyArms.XA_Vz58_Mag": {
+    "en": "Vz58 Magazine 30 (7.62x39)",
+    "ch": "Vz58 彈匣 30 發 (7.62x39)",
+    "cn": "Vz.58自动步枪弹匣30发 (7.62x39mm)"
+   },
+   "XannyArms.XA_Winchester1897": {
+    "en": "Winchester 1897",
+    "ch": "Winchester 1897",
+    "cn": "温彻斯特1897霰弹枪"
+   },
+   "XannyArms.XA_XDMod2": {
+    "en": "Springfield XD Mod.2",
+    "ch": "Springfield XD Mod.2",
+    "cn": "春田XD Mod.2手枪"
+   },
+   "XannyArms.XA_XDMod2_Mag": {
+    "en": "Springfield XD Mod.2 Magazine 16",
+    "ch": "Springfield XD Mod.2 彈匣 16 發",
+    "cn": "春田XD Mod.2手枪弹匣16发"
+   },
+   "Base.ACOG": {
+    "en": "Trijicon 4×32 TA01 ACOG",
+    "ch": "Trijicon TA01 ACOG 4×32瞄準鏡",
+    "cn": "Trijicon TA01 ACOG 4×32 瞄准镜"
+   },
+   "Base.M16A2E4": {
+    "en": "Prototype M16A2E4",
+    "ch": "M16A2E4原型步槍",
+    "cn": "M16A2E4原型步枪"
+   },
+   "Base.M4A1Foregrip": {
+    "en": "KAC Vertical Foregrip",
+    "ch": "KAC垂直前握把",
+    "cn": "KAC 垂直前握把"
+   },
+   "Base.M4A1SOPMOD": {
+    "en": "BLOCK 1 SOPMOD M4A1",
+    "ch": "BLOCK 1 SOPMOD M4A1卡賓槍",
+    "cn": "BLOCK 1 SOPMOD M4A1 卡宾枪"
+   },
+   "Base.M4CarryHandle": {
+    "en": "M4/AR15 Detachable Carry Handle",
+    "ch": "M4/AR15可拆式提把",
+    "cn": "M4/AR15 可拆卸提把"
+   },
+   "Base.M4IronSights": {
+    "en": "M4/AR15 Flattop Iron Sights",
+    "ch": "M4/AR15平頂型機械瞄具",
+    "cn": "M4/AR15 平顶型机械瞄具"
+   },
+   "SCoolerSystem.CannedBeef": {
+    "en": "Jar of Beef",
+    "ch": "罐裝牛肉",
+    "cn": "罐装牛肉"
+   },
+   "SCoolerSystem.CannedBeef_Open": {
+    "en": "Jar of Beef (Open)",
+    "ch": "罐裝牛肉 (已開啟)",
+    "cn": "罐装牛肉 (已打开)"
+   },
+   "SCoolerSystem.CannedMutton": {
+    "en": "Jar of Mutton",
+    "ch": "罐裝羊肉",
+    "cn": "罐装羊肉"
+   },
+   "SCoolerSystem.CannedMutton_Open": {
+    "en": "Jar of Mutton (Open)",
+    "ch": "罐裝羊肉 (已開啟)",
+    "cn": "罐装羊肉 (已打开)"
+   },
+   "SCoolerSystem.CannedPork": {
+    "en": "Jar of Pork",
+    "ch": "罐裝豬肉",
+    "cn": "罐装猪肉"
+   },
+   "SCoolerSystem.CannedPork_Open": {
+    "en": "Jar of Pork (Open)",
+    "ch": "罐裝豬肉 (已開啟)",
+    "cn": "罐装猪肉 (已打开)"
+   },
+   "SCoolerSystem.CannedRabbit": {
+    "en": "Jar of Rabbit",
+    "ch": "罐裝兔肉",
+    "cn": "罐装兔肉"
+   },
+   "SCoolerSystem.CannedRabbit_Open": {
+    "en": "Jar of Rabbit (Open)",
+    "ch": "罐裝兔肉 (已開啟)",
+    "cn": "罐装兔肉 (已打开)"
+   },
+   "SCoolerSystem.CannedVenison": {
+    "en": "Jar of Venison",
+    "ch": "罐裝鹿肉",
+    "cn": "罐装鹿肉"
+   },
+   "SCoolerSystem.CannedVenison_Open": {
+    "en": "Jar of Venison (Open)",
+    "ch": "罐裝鹿肉 (已開啟)",
+    "cn": "罐装鹿肉 (已打开)"
+   },
+   "SCoolerSystem.ForgedChestCooler": {
+    "en": "Forged Thermal Chest",
+    "ch": "鍛造保溫箱",
+    "cn": "锻造保温箱"
+   },
+   "SCoolerSystem.JerkyBeef": {
+    "en": "Homemade Beef Jerky",
+    "ch": "自製牛肉乾",
+    "cn": "自制牛肉干"
+   },
+   "SCoolerSystem.JerkyMutton": {
+    "en": "Homemade Mutton Jerky",
+    "ch": "自製羊肉乾",
+    "cn": "自制羊肉干"
+   },
+   "SCoolerSystem.JerkyPork": {
+    "en": "Homemade Pork Jerky",
+    "ch": "自製豬肉乾",
+    "cn": "自制猪肉干"
+   },
+   "SCoolerSystem.JerkyRabbit": {
+    "en": "Homemade Rabbit Jerky",
+    "ch": "自製兔肉乾",
+    "cn": "自制兔肉干"
+   },
+   "SCoolerSystem.JerkyVenison": {
+    "en": "Homemade Venison Jerky",
+    "ch": "自製鹿肉乾",
+    "cn": "自制鹿肉干"
+   },
+   "SCoolerSystem.ReinforcedCooler": {
+    "en": "Reinforced Metal Cooler",
+    "ch": "強化金屬保溫箱",
+    "cn": "加固金属保温箱"
+   },
+   "P4MySoCalledFashion.P4BunnyEars_TINT": {
+    "en": "Bunny Ears",
+    "ch": "兔耳",
+    "cn": "兔耳"
+   },
+   "P4MySoCalledFashion.P4BunnySuit_TINT": {
+    "en": "Bunny Suit",
+    "ch": "兔子裝",
+    "cn": "兔子装"
+   },
+   "P4MySoCalledFashion.P4BunnyTail_TINT": {
+    "en": "Bunny Tail",
+    "ch": "兔尾巴",
+    "cn": "兔尾巴"
+   },
+   "P4MySoCalledFashion.P4Garter_TINT": {
+    "en": "Garter",
+    "ch": "襪帶",
+    "cn": "袜带"
+   },
+   "SenatorMartialArts.SMA_BajiquanManual": {
+    "en": "Bajiquan Training Manual",
+    "ch": "《八極拳訓練手冊》",
+    "cn": "《八极拳训练手册》",
+    "_note": "上游 ItemName.json 只有 B41 前綴鍵 ItemName_<fullType>，script 沒有 DisplayName；B42 只查裸 fullType，補裸鍵（en 取前綴鍵英文）。2026-11-08 #1318"
+   },
+   "SenatorMartialArts.SMA_WingChunManual": {
+    "en": "Wing Chun Manual",
+    "ch": "《詠春拳手冊》",
+    "cn": "《咏春拳手册》",
+    "_note": "上游 ItemName.json 只有 B41 前綴鍵 ItemName_<fullType>，script 沒有 DisplayName；B42 只查裸 fullType，補裸鍵（en 取前綴鍵英文）。2026-11-08 #1318"
+   },
+   "SenatorMartialArts.kickboxingMagazine": {
+    "en": "Kickboxing Monthly",
+    "ch": "《踢拳月刊》",
+    "cn": "《踢拳月刊》",
+    "_note": "上游 ItemName.json 只有 B41 前綴鍵 ItemName_<fullType>，script 沒有 DisplayName；B42 只查裸 fullType，補裸鍵（en 取前綴鍵英文）。2026-11-08 #1318"
    }
   },
   "Print_Media.json": {
@@ -374493,6 +376836,1031 @@
     "en": "Paint RV Christmas Spiked Ram back",
     "ch": "將房車聖誕尖刺撞角刷漆還原",
     "cn": "将房车圣诞尖刺撞角涂装还原"
+   },
+   "GSmithCraft_44Clip": {
+    "en": "Assemble B-F Magazine",
+    "ch": "組裝B-F彈匣",
+    "cn": "组装B-F弹匣"
+   },
+   "GSmithCraft_45Clip": {
+    "en": "Assemble M1911 Auto Magazine",
+    "ch": "組裝M1911 .45彈匣",
+    "cn": "组装M1911 .45弹匣"
+   },
+   "GSmithCraft_556Clip": {
+    "en": "Assemble M16 Magazine",
+    "ch": "組裝M16 5.56mm彈匣",
+    "cn": "组装M16 5.56mm弹匣"
+   },
+   "GSmithCraft_9mmClip": {
+    "en": "Assemble M9 Magazine",
+    "ch": "組裝M9 9mm彈匣",
+    "cn": "组装M9 9mm弹匣"
+   },
+   "GSmithCraft_AmmoStraps": {
+    "en": "Assemble Ammo Straps",
+    "ch": "組裝彈藥帶",
+    "cn": "组装弹药带"
+   },
+   "GSmithCraft_ChokeTubeFull": {
+    "en": "Assemble Choke Tube - Full",
+    "ch": "組裝喉縮 (全縮口)",
+    "cn": "组装喉缩 (收缩)"
+   },
+   "GSmithCraft_ChokeTubeImproved": {
+    "en": "Assemble Choke Tube - Improved",
+    "ch": "組裝喉縮 (改良縮口)",
+    "cn": "组装喉缩 (扩散)"
+   },
+   "GSmithCraft_GunLight": {
+    "en": "Assemble Gun Light",
+    "ch": "組裝戰術手電筒",
+    "cn": "组装战术手电"
+   },
+   "GSmithCraft_HeadhunterScope": {
+    "en": "Assemble x4-x12 Headhunter Scope",
+    "ch": "組裝x4-x12 獵頭者瞄準鏡",
+    "cn": "组装x4-x12 猎头者瞄准镜"
+   },
+   "GSmithCraft_JS14_Clip": {
+    "en": "Assemble JS-14 Magazine",
+    "ch": "組裝JS-14彈匣",
+    "cn": "组装JS-14弹匣"
+   },
+   "GSmithCraft_Laser": {
+    "en": "Assemble Laser Sight",
+    "ch": "組裝雷射瞄準器",
+    "cn": "组装激光瞄准器"
+   },
+   "GSmithCraft_M14Clip": {
+    "en": "Assemble M1A Magazine",
+    "ch": "組裝M1A彈匣",
+    "cn": "组装M1A弹匣"
+   },
+   "GSmithCraft_MarzGuns_12GMagazine20_AA12": {
+    "en": "Assemble 12 Gauge AA-12 Drum 20Rds Magazine",
+    "ch": "組裝艾奇遜AA-12 12號彈 20發彈鼓",
+    "cn": "组装艾奇逊AA-12 12号弹 20发弹鼓"
+   },
+   "GSmithCraft_MarzGuns_12GMagazine8_AA12": {
+    "en": "Assemble 12 Gauge AA-12 8Rds Magazine",
+    "ch": "組裝艾奇遜AA-12 12號彈 8發彈匣",
+    "cn": "组装艾奇逊AA-12 12号弹 8发弹匣"
+   },
+   "GSmithCraft_MarzGuns_223Magazine10_Mini14": {
+    "en": "Assemble .223 10Rds Mini-14 Magazine",
+    "ch": "組裝儒格Mini-14 .223 10發彈匣",
+    "cn": "组装鲁格Mini-14 .223 10发弹匣"
+   },
+   "GSmithCraft_MarzGuns_223Magazine20_Mini14": {
+    "en": "Assemble .223 20Rds Mini-14 Magazine",
+    "ch": "組裝儒格Mini-14 .223 20發彈匣",
+    "cn": "组装鲁格Mini-14 .223 20发弹匣"
+   },
+   "GSmithCraft_MarzGuns_223Magazine30_Mini14": {
+    "en": "Assemble .223 30Rds Mini-14 Magazine",
+    "ch": "組裝儒格Mini-14 .223 30發彈匣",
+    "cn": "组装鲁格Mini-14 .223 30发弹匣"
+   },
+   "GSmithCraft_MarzGuns_3006Clip8": {
+    "en": "Assemble En Bloc 8Rds .30-06 Clip",
+    "ch": "組裝.30-06 8發彈夾",
+    "cn": "组装.30-06 8发弹夹"
+   },
+   "GSmithCraft_MarzGuns_3006Magazine20_BAR": {
+    "en": "Assemble BAR 20Rds .30-06 Magazine",
+    "ch": "組裝勃朗寧.30-06 20發彈匣",
+    "cn": "组装勃朗宁.30-06 20发弹匣"
+   },
+   "GSmithCraft_MarzGuns_38357SpeedLoader6": {
+    "en": "Assemble 6Rds .38 Special/.357 Magnum Speedloader",
+    "ch": "組裝.38特殊彈/.357馬格南彈 6發快速裝彈器",
+    "cn": "组装.38特殊弹/.357马格南弹 6发装填器"
+   },
+   "GSmithCraft_MarzGuns_45Magazine100_THOMPSON": {
+    "en": "Assemble Thompson 100Rds .45 ACP Drum Magazine",
+    "ch": "組裝湯普森.45 ACP 100發彈鼓",
+    "cn": "组装汤普森.45 ACP 100发弹鼓"
+   },
+   "GSmithCraft_MarzGuns_45Magazine12_USP": {
+    "en": "Assemble USP 12Rds .45 ACP Magazine",
+    "ch": "組裝黑克勒-科赫USP .45 ACP 12發彈匣",
+    "cn": "组装黑克勒-科赫USP .45 ACP 12发弹匣"
+   },
+   "GSmithCraft_MarzGuns_45Magazine20_THOMPSON": {
+    "en": "Assemble Thompson 20Rds .45 ACP Magazine",
+    "ch": "組裝湯普森.45 ACP 20發彈匣",
+    "cn": "组装汤普森.45 ACP 20发弹匣"
+   },
+   "GSmithCraft_MarzGuns_45Magazine20_USP": {
+    "en": "Assemble USP 20Rds .45 ACP Magazine",
+    "ch": "組裝黑克勒-科赫USP .45 ACP 20發彈匣",
+    "cn": "组装黑克勒-科赫USP .45 ACP 20发弹匣"
+   },
+   "GSmithCraft_MarzGuns_45Magazine30_MAC10": {
+    "en": "Assemble MAC-10 30Rds .45 ACP Magazine",
+    "ch": "組裝英格拉姆MAC-10 .45 ACP 30發彈匣",
+    "cn": "组装英格拉姆MAC-10 .45 ACP 30发弹匣"
+   },
+   "GSmithCraft_MarzGuns_45Magazine30_THOMPSON": {
+    "en": "Assemble Thompson 30Rds .45 ACP Magazine",
+    "ch": "組裝湯普森.45 ACP 30發彈匣",
+    "cn": "组装汤普森.45 ACP 30发弹匣"
+   },
+   "GSmithCraft_MarzGuns_45Magazine40_MAC10": {
+    "en": "Assemble MAC-10 40Rds .45 ACP Extended Magazine",
+    "ch": "組裝英格拉姆MAC-10 .45 ACP 40發擴容彈匣",
+    "cn": "组装英格拉姆MAC-10 .45 ACP 40发扩容弹匣"
+   },
+   "GSmithCraft_MarzGuns_45Magazine7_M1911": {
+    "en": "Assemble M1911 7Rds .45 ACP Magazine",
+    "ch": "組裝柯爾特M1911 .45 ACP 7發彈匣",
+    "cn": "组装柯尔特M1911 .45 ACP 7发弹匣"
+   },
+   "GSmithCraft_MarzGuns_45_Muzzle_Mount_Device": {
+    "en": "Assemble .45 ACP Family Muzzle Mounting Device",
+    "ch": "組裝.45 ACP系列槍口安裝裝置",
+    "cn": "组装.45 ACP系列枪口安装装置"
+   },
+   "GSmithCraft_MarzGuns_50Magazine12_DEAGLE": {
+    "en": "Assemble .50 AE 12Rds Magazine",
+    "ch": "組裝.50 AE 12發彈匣",
+    "cn": "组装.50 AE 12发弹匣"
+   },
+   "GSmithCraft_MarzGuns_50Magazine8_DEAGLE": {
+    "en": "Assemble .50 AE 8Rds Magazine",
+    "ch": "組裝.50 AE 8發彈匣",
+    "cn": "组装.50 AE 8发弹匣"
+   },
+   "GSmithCraft_MarzGuns_545x39Magazine100_Drum": {
+    "en": "Assemble Drum 100Rds 5.45x39mm Magazine",
+    "ch": "組裝5.45x39mm 100發彈鼓",
+    "cn": "组装5.45x39mm 100发弹鼓"
+   },
+   "GSmithCraft_MarzGuns_545x39Magazine30_Bakelite": {
+    "en": "Assemble Bakelite 30Rds 5.45x39mm Magazine",
+    "ch": "組裝5.45x39mm 30發膠木彈匣",
+    "cn": "组装5.45x39mm 30发胶木弹匣"
+   },
+   "GSmithCraft_MarzGuns_545x39Magazine45_Bakelite": {
+    "en": "Assemble Bakelite 45Rds Extended 5.45x39mm Magazine",
+    "ch": "組裝5.45x39mm 45發加長膠木彈匣",
+    "cn": "组装5.45x39mm 45发加长胶木弹匣"
+   },
+   "GSmithCraft_MarzGuns_545x39Magazine60_Bakelite": {
+    "en": "Assemble Bakelite 60Rds Extended 5.45x39mm Magazine",
+    "ch": "組裝5.45x39mm 60發加長膠木彈匣",
+    "cn": "组装5.45x39mm 60发扩容胶木弹匣"
+   },
+   "GSmithCraft_MarzGuns_556x45Magazine100_STANAG": {
+    "en": "Assemble STANAG 100Rds 5.56x45mm Magazine",
+    "ch": "組裝5.56x45mm 100發STANAG彈匣",
+    "cn": "组装5.56x45mm 100发STANAG弹匣"
+   },
+   "GSmithCraft_MarzGuns_556x45Magazine150_STANAG": {
+    "en": "Assemble STANAG 150Rds 5.56x45mm Magazine",
+    "ch": "組裝5.56x45mm 150發STANAG彈匣",
+    "cn": "组装5.56x45mm 150发STANAG弹匣"
+   },
+   "GSmithCraft_MarzGuns_556x45Magazine20_STANAG": {
+    "en": "Assemble STANAG 20Rds 5.56x45mm Magazine",
+    "ch": "組裝5.56x45mm 20發STANAG彈匣",
+    "cn": "组装5.56x45mm 20发STANAG弹匣"
+   },
+   "GSmithCraft_MarzGuns_556x45Magazine25_STANAG": {
+    "en": "Assemble STANAG 25Rds 5.56x45mm Magazine",
+    "ch": "組裝5.56x45mm 25發STANAG彈匣",
+    "cn": "组装5.56x45mm 25发STANAG弹匣"
+   },
+   "GSmithCraft_MarzGuns_556x45Magazine30_G36": {
+    "en": "Assemble G36 30Rds 5.56x45mm Translucent Magazine",
+    "ch": "組裝G36 5.56x45mm 30發半透明彈匣",
+    "cn": "组装G36 5.56x45mm 30发半透明弹匣"
+   },
+   "GSmithCraft_MarzGuns_556x45Magazine30_STANAG": {
+    "en": "Assemble STANAG 30Rds 5.56x45mm Magazine",
+    "ch": "組裝5.56x45mm 30發STANAG彈匣",
+    "cn": "组装5.56x45mm 30发STANAG弹匣"
+   },
+   "GSmithCraft_MarzGuns_556x45Magazine50_STANAG": {
+    "en": "Assemble STANAG 50Rds 5.56x45mm Magazine",
+    "ch": "組裝5.56x45mm 50發STANAG彈匣",
+    "cn": "组装5.56x45mm 50发STANAG弹匣"
+   },
+   "GSmithCraft_MarzGuns_556x45Magazine60_STANAG": {
+    "en": "Assemble STANAG 60Rds Jungle-Style 5.56x45mm Magazine",
+    "ch": "組裝5.56x45mm 雙聯30發STANAG彈匣",
+    "cn": "组装5.56x45mm 双联30发STANAG弹匣"
+   },
+   "GSmithCraft_MarzGuns_556x45Magazine75_STANAG": {
+    "en": "Assemble STANAG 75Rds 5.56x45mm Magazine",
+    "ch": "組裝5.56x45mm 75發STANAG彈匣",
+    "cn": "组装5.56x45mm 75发STANAG弹匣"
+   },
+   "GSmithCraft_MarzGuns_762x39Magazine30": {
+    "en": "Assemble 7.62x39mm 30Rds Magazine",
+    "ch": "組裝7.62x39mm 30發彈匣",
+    "cn": "组装7.62x39mm 30发弹匣"
+   },
+   "GSmithCraft_MarzGuns_762x39Magazine75": {
+    "en": "Assemble 7.62x39mm 75Rds Extended Magazine",
+    "ch": "組裝7.62x39mm 75發加長彈匣",
+    "cn": "组装7.62x39mm 75发加长弹匣"
+   },
+   "GSmithCraft_MarzGuns_762x51Box100_M60": {
+    "en": "Assemble M60 100Rds 7.62x51mm Box",
+    "ch": "組裝春田M60 7.62x51mm 100發彈箱",
+    "cn": "组装春田M60 7.62x51mm 100发弹箱"
+   },
+   "GSmithCraft_MarzGuns_762x51Magazine20_FAL": {
+    "en": "Assemble FAL 20Rds 7.62x51mm Magazine",
+    "ch": "組裝赫斯塔爾FAL 7.62x51mm 20發彈匣",
+    "cn": "组装赫斯塔尔FAL 7.62x51mm 20发弹匣"
+   },
+   "GSmithCraft_MarzGuns_762x51Magazine20_G3": {
+    "en": "Assemble G3 20Rds 7.62x51mm Magazine",
+    "ch": "組裝黑克勒-科赫G3 7.62x51mm 20發彈匣",
+    "cn": "组装黑克勒-科赫G3 7.62x51mm 20发弹匣"
+   },
+   "GSmithCraft_MarzGuns_762x51Magazine20_M14": {
+    "en": "Assemble M14 20Rds 7.62x51mm Magazine",
+    "ch": "組裝M14 7.62x51mm 20發彈匣",
+    "cn": "组装M14 7.62x51mm 20发弹匣"
+   },
+   "GSmithCraft_MarzGuns_762x51Magazine5_PSG1": {
+    "en": "Assemble PSG-1 5Rds 7.62x51mm Magazine",
+    "ch": "組裝黑克勒-科赫PSG-1 7.62x51mm 5發彈匣",
+    "cn": "组装黑克勒-科赫PSG-1 7.62x51mm 5发弹匣"
+   },
+   "GSmithCraft_MarzGuns_762x54Magazine10_SVD": {
+    "en": "Assemble SVD 10Rds 7.62x54mm Magazine",
+    "ch": "組裝SVD 7.62x54mm 10發彈匣",
+    "cn": "组装SVD 7.62x54mm 10发弹匣"
+   },
+   "GSmithCraft_MarzGuns_762x54StripperClip5_MOSIN": {
+    "en": "Assemble Mosin-Nagant 5Rds 7.62x54mm Stripper Clip",
+    "ch": "組裝莫辛-納甘7.62x54mm 5發橋夾",
+    "cn": "组装莫辛-纳甘 7.62x54mm 5发桥夹"
+   },
+   "GSmithCraft_MarzGuns_9x19Magazine100_MP5": {
+    "en": "Assemble MP5 100Rds Drum 9x19mm Magazine",
+    "ch": "組裝黑克勒-科赫MP5 9x19mm 100發彈鼓",
+    "cn": "组装黑克勒-科赫MP5 9x19mm 100发弹鼓"
+   },
+   "GSmithCraft_MarzGuns_9x19Magazine10_P226": {
+    "en": "Assemble P226 10Rds 9x19mm Magazine",
+    "ch": "組裝西格紹爾P226 9x19mm 10發彈匣",
+    "cn": "组装西格绍尔P226 9x19mm 10发弹匣"
+   },
+   "GSmithCraft_MarzGuns_9x19Magazine13_HIPOWER": {
+    "en": "Assemble Hi-Power 13Rds 9x19mm Magazine",
+    "ch": "組裝勃朗寧Hi-Power 9x19mm 13發彈匣",
+    "cn": "组装勃朗宁Hi-Power 9x19mm 13发弹匣"
+   },
+   "GSmithCraft_MarzGuns_9x19Magazine15_M92FS": {
+    "en": "Assemble M92FS 15Rds 9x19mm Magazine",
+    "ch": "組裝貝瑞塔M92FS 9x19mm 15發彈匣",
+    "cn": "组装伯莱塔M92FS 9x19mm 15发弹匣"
+   },
+   "GSmithCraft_MarzGuns_9x19Magazine17_GLOCK": {
+    "en": "Assemble Glock-17 17Rds 9x19mm Magazine",
+    "ch": "組裝格洛克17 9x19mm 17發彈匣",
+    "cn": "组装格洛克-17 9x19mm 17发弹匣"
+   },
+   "GSmithCraft_MarzGuns_9x19Magazine18_M93R": {
+    "en": "Assemble M93R 18Rds 9x19mm Magazine",
+    "ch": "組裝貝瑞塔M93R 9x19mm 18發彈匣",
+    "cn": "组装伯莱塔M93R 9x19mm 18发弹匣"
+   },
+   "GSmithCraft_MarzGuns_9x19Magazine18_VP70M": {
+    "en": "Assemble VP70M 18Rds 9x19mm Magazine",
+    "ch": "組裝黑克勒-科赫VP70M 9x19mm 18發彈匣",
+    "cn": "组装黑克勒-科赫VP70M 9x19mm 18发弹匣"
+   },
+   "GSmithCraft_MarzGuns_9x19Magazine20_MP5": {
+    "en": "Assemble MP5 20Rds 9x19mm Magazine",
+    "ch": "組裝黑克勒-科赫MP5 9x19mm 20發彈匣",
+    "cn": "组装黑克勒-科赫MP5 9x19mm 20发弹匣"
+   },
+   "GSmithCraft_MarzGuns_9x19Magazine20_TEC9": {
+    "en": "Assemble TEC-9 20Rds 9x19mm Magazine",
+    "ch": "組裝英特拉泰克TEC-9 9x19mm 20發彈匣",
+    "cn": "组装英特拉泰克TEC-9 9x19mm 20发弹匣"
+   },
+   "GSmithCraft_MarzGuns_9x19Magazine25_MP5": {
+    "en": "Assemble MP5 25Rds 9x19mm Magazine",
+    "ch": "組裝黑克勒-科赫MP5 9x19mm 25發彈匣",
+    "cn": "组装黑克勒-科赫MP5 9x19mm 25发弹匣"
+   },
+   "GSmithCraft_MarzGuns_9x19Magazine30_M92FS": {
+    "en": "Assemble M92FS 30Rds 9x19mm Extended Magazine",
+    "ch": "組裝貝瑞塔M92FS 9x19mm 30發加長彈匣",
+    "cn": "组装伯莱塔M92FS 9x19mm 30发加长弹匣"
+   },
+   "GSmithCraft_MarzGuns_9x19Magazine30_MP5": {
+    "en": "Assemble MP5 30Rds 9x19mm Magazine",
+    "ch": "組裝黑克勒-科赫MP5 9x19mm 30發彈匣",
+    "cn": "组装黑克勒-科赫MP5 9x19mm 30发弹匣"
+   },
+   "GSmithCraft_MarzGuns_9x19Magazine30_VP70M": {
+    "en": "Assemble VP70M 30Rds 9x19mm Magazine",
+    "ch": "組裝黑克勒-科赫VP70M 9x19mm 30發彈匣",
+    "cn": "组装黑克勒-科赫VP70M 9x19mm 30发弹匣"
+   },
+   "GSmithCraft_MarzGuns_9x19Magazine50_M92FS": {
+    "en": "Assemble M92FS 50Rds 9x19mm Drum Magazine",
+    "ch": "組裝貝瑞塔M92FS 9x19mm 50發彈鼓",
+    "cn": "组装伯莱塔M92FS 9x19mm 50发弹鼓"
+   },
+   "GSmithCraft_MarzGuns_9x19Magazine60_M93R": {
+    "en": "Assemble M93R 60Rds 9x19mm Extended Magazine",
+    "ch": "組裝貝瑞塔M93R 9x19mm 60發加長彈匣",
+    "cn": "组装伯莱塔M93R 9x19mm 60发加长弹匣"
+   },
+   "GSmithCraft_MarzGuns_9x19Magazine60_MP5": {
+    "en": "Assemble MP5 Dual 30Rds 9x19mm Magazine",
+    "ch": "組裝黑克勒-科赫MP5 9x19mm 雙聯30發彈匣",
+    "cn": "组装黑克勒-科赫MP5 9x19mm 双联30发弹匣"
+   },
+   "GSmithCraft_MarzGuns_9x39Magazine10": {
+    "en": "Assemble 9x39mm 10Rds Magazine",
+    "ch": "組裝9x39mm 10發彈匣",
+    "cn": "组装9x39mm 10发弹匣"
+   },
+   "GSmithCraft_MarzGuns_9x39Magazine20": {
+    "en": "Assemble 9x39mm 20Rds Magazine",
+    "ch": "組裝9x39mm 20發彈匣",
+    "cn": "组装9x39mm 20发弹匣"
+   },
+   "GSmithCraft_MarzGuns_9x39Magazine30": {
+    "en": "Assemble 9x39mm 30Rds Magazine",
+    "ch": "組裝9x39mm 30發彈匣",
+    "cn": "组装9x39mm 30发弹匣"
+   },
+   "GSmithCraft_MarzGuns_AK_Mount": {
+    "en": "Assemble AK Mounting Rail",
+    "ch": "組裝AK安裝導軌",
+    "cn": "组装AK安装导轨"
+   },
+   "GSmithCraft_MarzGuns_AK_Muzzle_Mount_Device": {
+    "en": "Assemble AK Family Muzzle Mounting Device",
+    "ch": "組裝AK系列槍口安裝裝置",
+    "cn": "组装AK系列枪口安装装置"
+   },
+   "GSmithCraft_MarzGuns_AR_Muzzle_Mount_Device": {
+    "en": "Assemble AR Family Muzzle Mounting Device",
+    "ch": "組裝AR系列槍口安裝裝置",
+    "cn": "组装AR系列枪口安装装置"
+   },
+   "GSmithCraft_MarzGuns_AimRight_Laser": {
+    "en": "Assemble AimRight Laser",
+    "ch": "組裝AimRight雷射",
+    "cn": "组装AimRight激光"
+   },
+   "GSmithCraft_MarzGuns_Aimpoint_Sight": {
+    "en": "Assemble Aimpoint Sight",
+    "ch": "組裝Aimpoint瞄具",
+    "cn": "组装Aimpoint瞄具"
+   },
+   "GSmithCraft_MarzGuns_Beretta_Mount": {
+    "en": "Assemble Beretta Mounting Rail",
+    "ch": "組裝貝瑞塔安裝導軌",
+    "cn": "组装伯莱塔安装导轨"
+   },
+   "GSmithCraft_MarzGuns_Beretta_Stock_Folded": {
+    "en": "Assemble Beretta Stock (Folded)",
+    "ch": "組裝貝瑞塔槍托 (摺疊)",
+    "cn": "组装伯莱塔枪托 (折叠)"
+   },
+   "GSmithCraft_MarzGuns_Bipod_Folded": {
+    "en": "Assemble Bipod (Folded)",
+    "ch": "組裝兩腳架 (摺疊)",
+    "cn": "组装两脚架 (折叠)"
+   },
+   "GSmithCraft_MarzGuns_Colt_Mount": {
+    "en": "Assemble Colt Mounting Rail",
+    "ch": "組裝柯爾特安裝導軌",
+    "cn": "组装柯尔特安装导轨"
+   },
+   "GSmithCraft_MarzGuns_EXPS1_Sight": {
+    "en": "Assemble EXPS1 Sight",
+    "ch": "組裝EXPS1瞄具",
+    "cn": "组装EXPS1瞄具"
+   },
+   "GSmithCraft_MarzGuns_EXPS3_Sight": {
+    "en": "Assemble EXPS3 Sight",
+    "ch": "組裝EXPS3瞄具",
+    "cn": "组装EXPS3瞄具"
+   },
+   "GSmithCraft_MarzGuns_ElcanX2_Scope": {
+    "en": "Assemble Elcan X2 Scope",
+    "ch": "組裝Elcan X2瞄準鏡",
+    "cn": "组装Elcan二倍瞄准镜"
+   },
+   "GSmithCraft_MarzGuns_Heavy_Pistol_Rail": {
+    "en": "Assemble Heavy Pistol Mounting Rail",
+    "ch": "組裝重型手槍安裝導軌",
+    "cn": "组装重型手枪安装导轨"
+   },
+   "GSmithCraft_MarzGuns_JS14_Sight": {
+    "en": "Assemble JS14 Sight",
+    "ch": "組裝JS14瞄具",
+    "cn": "组装JS14瞄具"
+   },
+   "GSmithCraft_MarzGuns_Kobra_Sight": {
+    "en": "Assemble Kobra Sight",
+    "ch": "組裝Kobra瞄具",
+    "cn": "组装Kobra瞄具"
+   },
+   "GSmithCraft_MarzGuns_LP_Light": {
+    "en": "Assemble LP Tactical Light",
+    "ch": "組裝LP戰術燈",
+    "cn": "组装LP战术灯"
+   },
+   "GSmithCraft_MarzGuns_LR10X_Scope": {
+    "en": "Assemble LR10X Scope",
+    "ch": "組裝LR10X瞄準鏡",
+    "cn": "组装LR10X瞄准镜"
+   },
+   "GSmithCraft_MarzGuns_LR2_Compensator": {
+    "en": "Assemble LR2 Compensator",
+    "ch": "組裝LR2補償器",
+    "cn": "组装LR2补偿器"
+   },
+   "GSmithCraft_MarzGuns_LR4X_Scope": {
+    "en": "Assemble LR4X Scope",
+    "ch": "組裝LR4X瞄準鏡",
+    "cn": "组装LR4X瞄准镜"
+   },
+   "GSmithCraft_MarzGuns_LRX12X_Scope": {
+    "en": "Assemble LRX12X Scope",
+    "ch": "組裝LRX12X瞄準鏡",
+    "cn": "组装LRX12X瞄准镜"
+   },
+   "GSmithCraft_MarzGuns_LX_Flashhider": {
+    "en": "Assemble LX Flashhider",
+    "ch": "組裝LX消焰器",
+    "cn": "组装LX消焰器"
+   },
+   "GSmithCraft_MarzGuns_MK2_Foregrip": {
+    "en": "Assemble MK2 Foregrip",
+    "ch": "組裝MK2握把",
+    "cn": "组装MK2握把"
+   },
+   "GSmithCraft_MarzGuns_MKC_Foregrip": {
+    "en": "Assemble MKC Foregrip",
+    "ch": "組裝MKC握把",
+    "cn": "组装MKC握把"
+   },
+   "GSmithCraft_MarzGuns_MKI_Suppressor": {
+    "en": "Assemble MKI Suppressor (5.56mm Rifles)",
+    "ch": "組裝MKI消音器 (5.56mm步槍)",
+    "cn": "组装MKI消音器 (5.56mm步枪)"
+   },
+   "GSmithCraft_MarzGuns_Model_70_Sling": {
+    "en": "Assemble Model 70 Sling",
+    "ch": "組裝溫徹斯特M70槍帶",
+    "cn": "组装温彻斯特M70枪带"
+   },
+   "GSmithCraft_MarzGuns_NDR_Suppressor": {
+    "en": "Assemble NDR Suppressor (5.56mm Rifles)",
+    "ch": "組裝NDR消音器 (5.56mm步槍)",
+    "cn": "组装NDR消音器 (5.56mm步枪)"
+   },
+   "GSmithCraft_MarzGuns_OKP3_Sight": {
+    "en": "Assemble OKP3 Sight",
+    "ch": "組裝OKP3瞄具",
+    "cn": "组装OKP3瞄具"
+   },
+   "GSmithCraft_MarzGuns_P45_Suppressor": {
+    "en": "Assemble P45 Suppressor (.45 ACP Weapons)",
+    "ch": "組裝P45消音器 (.45 ACP槍械)",
+    "cn": "组装P45消音器 (.45 ACP枪械)"
+   },
+   "GSmithCraft_MarzGuns_PL4_Sight": {
+    "en": "Assemble PL-4 Sight",
+    "ch": "組裝PL-4瞄具",
+    "cn": "组装PL-4瞄具"
+   },
+   "GSmithCraft_MarzGuns_PM2_Sight": {
+    "en": "Assemble PM-2 Sight",
+    "ch": "組裝PM-2瞄具",
+    "cn": "组装PM-2瞄具"
+   },
+   "GSmithCraft_MarzGuns_PRL1_Scope": {
+    "en": "Assemble PRL-1 Sight",
+    "ch": "組裝PRL-1瞄具",
+    "cn": "组装PRL-1瞄具"
+   },
+   "GSmithCraft_MarzGuns_PS1_Sight": {
+    "en": "Assemble PS1 Sight",
+    "ch": "組裝PS1瞄具",
+    "cn": "组装PS1瞄具"
+   },
+   "GSmithCraft_MarzGuns_PSO1_Scope": {
+    "en": "Assemble PSO1 Scope",
+    "ch": "組裝PSO1瞄準鏡",
+    "cn": "组装PSO1瞄准镜"
+   },
+   "GSmithCraft_MarzGuns_PX1_Laser": {
+    "en": "Assemble PX1 Laser",
+    "ch": "組裝PX1雷射",
+    "cn": "组装PX1激光"
+   },
+   "GSmithCraft_MarzGuns_Picatinny_Rail": {
+    "en": "Assemble Picatinny Rail",
+    "ch": "組裝皮卡汀尼導軌",
+    "cn": "组装皮卡汀尼导轨"
+   },
+   "GSmithCraft_MarzGuns_Pistol_Muzzle_Mount_Device": {
+    "en": "Assemble Pistol Family Muzzle Mounting Device",
+    "ch": "組裝手槍系列槍口安裝裝置",
+    "cn": "组装手枪系列枪口安装装置"
+   },
+   "GSmithCraft_MarzGuns_ReflexS2_Sight": {
+    "en": "Assemble Reflex S2 Sight",
+    "ch": "組裝Reflex S2瞄具",
+    "cn": "组装Reflex S2瞄具"
+   },
+   "GSmithCraft_MarzGuns_Rem700_Sling": {
+    "en": "Assemble Remington 700 Sling",
+    "ch": "組裝雷明頓700槍帶",
+    "cn": "组装雷明顿700枪带"
+   },
+   "GSmithCraft_MarzGuns_RepairPack_Converted": {
+    "en": "Unpack: 4x Weapon Parts",
+    "ch": "拆封: 4 個武器零件 (通用)",
+    "cn": "拆包: 4 个武器零件 (通用)"
+   },
+   "GSmithCraft_MarzGuns_SR7_Light": {
+    "en": "Assemble SR7 Tactical Light",
+    "ch": "組裝SR7戰術燈",
+    "cn": "组装SR7战术灯"
+   },
+   "GSmithCraft_MarzGuns_Shellholder": {
+    "en": "Assemble Shellholder",
+    "ch": "組裝彈殼收集袋",
+    "cn": "组装弹壳收集袋"
+   },
+   "GSmithCraft_VFE_ShellHolder": {
+    "en": "Assemble Shellholder",
+    "ch": "組裝彈殼托",
+    "cn": "组装弹壳托"
+   },
+   "GSmithCraft_MarzGuns_Shh9_Suppressor": {
+    "en": "Assemble Shh9 Suppressor (9mm Pistols)",
+    "ch": "組裝Shh9消音器 (9mm手槍)",
+    "cn": "组装Shh9消音器 (9mm手枪)"
+   },
+   "GSmithCraft_MarzGuns_Sniper_Mount": {
+    "en": "Assemble Sniper Mounting Rail",
+    "ch": "組裝狙擊步槍安裝導軌",
+    "cn": "组装狙击步枪安装导轨"
+   },
+   "GSmithCraft_MarzGuns_Stub_Foregrip": {
+    "en": "Assemble Stub Foregrip",
+    "ch": "組裝短握把",
+    "cn": "组装短握把"
+   },
+   "GSmithCraft_MarzGuns_TA28_Scope": {
+    "en": "Assemble TA28 Scope",
+    "ch": "組裝TA28瞄準鏡",
+    "cn": "组装TA28瞄准镜"
+   },
+   "GSmithCraft_MarzGuns_TL_Light": {
+    "en": "Assemble TL Tactical Light",
+    "ch": "組裝TL戰術燈",
+    "cn": "组装TL战术灯"
+   },
+   "GSmithCraft_MarzGuns_TR06X_Scope": {
+    "en": "Assemble TR06X Scope",
+    "ch": "組裝TR06X瞄準鏡",
+    "cn": "组装TR06X瞄准镜"
+   },
+   "GSmithCraft_MarzGuns_Trix42_Muzzlebreak": {
+    "en": "Assemble Trix42 Muzzlebreak",
+    "ch": "組裝Trix42槍口制退器",
+    "cn": "组装Trix42枪口制退器"
+   },
+   "GSmithCraft_PSA_1P29": {
+    "en": "Assemble 1P29",
+    "ch": "組裝1P29",
+    "cn": "组装1P29"
+   },
+   "GSmithCraft_PSA_22LR_Magazine": {
+    "en": "Assemble TOZ-78 Magazine",
+    "ch": "組裝TOZ-78彈匣",
+    "cn": "组装TOZ-78弹匣"
+   },
+   "GSmithCraft_PSA_545x39_Magazine": {
+    "en": "Assemble 5.45x39 Magazine",
+    "ch": "組裝5.45x39彈匣",
+    "cn": "组装5.45x39弹匣"
+   },
+   "GSmithCraft_PSA_762x25_Magazine": {
+    "en": "Assemble TT-33 Magazine",
+    "ch": "組裝TT-33彈匣",
+    "cn": "组装TT-33弹匣"
+   },
+   "GSmithCraft_PSA_762x25_PPSH_Magazine": {
+    "en": "Assemble PPSh-41 Magazine",
+    "ch": "組裝PPSh-41彈匣",
+    "cn": "组装PPSh-41弹匣"
+   },
+   "GSmithCraft_PSA_762x25_PPS_Magazine": {
+    "en": "Assemble PPS-43 Magazine",
+    "ch": "組裝PPS-43彈匣",
+    "cn": "组装PPS-43弹匣"
+   },
+   "GSmithCraft_PSA_762x39_Clip": {
+    "en": "Assemble 7.62x39 Clip",
+    "ch": "組裝7.62x39彈夾",
+    "cn": "组装7.62x39弹夹"
+   },
+   "GSmithCraft_PSA_762x39_Magazine": {
+    "en": "Assemble 7.62x39 Magazine",
+    "ch": "組裝7.62x39彈匣",
+    "cn": "组装7.62x39弹匣"
+   },
+   "GSmithCraft_PSA_762x54R_Magazine": {
+    "en": "Assemble 762x54R Magazine",
+    "ch": "組裝7.62x54R彈匣",
+    "cn": "组装7.62x54R弹匣"
+   },
+   "GSmithCraft_PSA_762x54R_PKMMagazine": {
+    "en": "Assemble PKM Magazine",
+    "ch": "組裝PKM彈匣",
+    "cn": "组装PKM弹匣"
+   },
+   "GSmithCraft_PSA_762x54R_SVDMagazine": {
+    "en": "Assemble SVD Magazine",
+    "ch": "組裝SVD彈匣",
+    "cn": "组装SVD弹匣"
+   },
+   "GSmithCraft_PSA_9x18mm_LargeMagazine": {
+    "en": "Assemble Stechkin Magazine",
+    "ch": "組裝斯捷奇金彈匣",
+    "cn": "组装斯捷奇金弹匣"
+   },
+   "GSmithCraft_PSA_9x18mm_Magazine": {
+    "en": "Assemble Makarov PM Magazine",
+    "ch": "組裝馬卡洛夫PM彈匣",
+    "cn": "组装马卡洛夫PM弹匣"
+   },
+   "GSmithCraft_PSA_9x19mm_LugerMagazine": {
+    "en": "Assemble Luger P08 Magazine",
+    "ch": "組裝魯格P08彈匣",
+    "cn": "组装鲁格P08弹匣"
+   },
+   "GSmithCraft_PSA_9x19mm_MP40Magazine": {
+    "en": "Assemble MP-40 Magazine",
+    "ch": "組裝MP-40彈匣",
+    "cn": "组装MP-40弹匣"
+   },
+   "GSmithCraft_PSA_9x39_Magazine": {
+    "en": "Assemble 9x39mm Magazine",
+    "ch": "組裝9x39mm彈匣",
+    "cn": "组装9x39mm弹匣"
+   },
+   "GSmithCraft_PSA_APBsuppressor": {
+    "en": "Assemble APB Suppressor",
+    "ch": "組裝APB消音器",
+    "cn": "组装APB消音器"
+   },
+   "GSmithCraft_PSA_PBS1suppressor": {
+    "en": "Assemble PBS-1 Suppressor",
+    "ch": "組裝PBS-1消音器",
+    "cn": "组装PBS-1消音器"
+   },
+   "GSmithCraft_PSA_PBS4suppressor": {
+    "en": "Assemble PBS-4 Suppressor",
+    "ch": "組裝PBS-4消音器",
+    "cn": "组装PBS-4消音器"
+   },
+   "GSmithCraft_PSA_PSO1": {
+    "en": "Assemble PSO-1",
+    "ch": "組裝PSO-1",
+    "cn": "组装PSO-1"
+   },
+   "GSmithCraft_PSA_PU": {
+    "en": "Assemble PU",
+    "ch": "組裝PU",
+    "cn": "组装PU"
+   },
+   "GSmithCraft_RecoilPad": {
+    "en": "Assemble Recoil Pad",
+    "ch": "組裝緩衝墊",
+    "cn": "组装缓冲垫"
+   },
+   "GSmithCraft_RedDot": {
+    "en": "Assemble Red Dot Sight",
+    "ch": "組裝紅點瞄準器",
+    "cn": "组装红点瞄准器"
+   },
+   "GSmithCraft_TritiumSights": {
+    "en": "Assemble Tritium Pistol Sights",
+    "ch": "組裝氚光手槍瞄具",
+    "cn": "组装氚光手枪瞄具"
+   },
+   "GSmithCraft_VFE_223Clip20": {
+    "en": "Assemble Mini-14 Magazine",
+    "ch": "組裝Mini-14 步槍彈匣",
+    "cn": "组装Mini-14 步枪弹匣"
+   },
+   "GSmithCraft_VFE_22ClipPistol": {
+    "en": "Assemble Mk2 Magazine",
+    "ch": "組裝儒格MK2手槍彈匣",
+    "cn": "组装鲁格MK2手枪弹匣"
+   },
+   "GSmithCraft_VFE_22ClipRifle": {
+    "en": "Assemble R1022 Magazine",
+    "ch": "組裝R1022 步槍彈匣",
+    "cn": "组装R1022 步枪弹匣"
+   },
+   "GSmithCraft_VFE_308Clip": {
+    "en": "Assemble R788 Magazine",
+    "ch": "組裝MSR788 彈匣",
+    "cn": "组装.308弹夹"
+   },
+   "GSmithCraft_VFE_45Clip12": {
+    "en": "Assemble MK23 Magazine",
+    "ch": "組裝MK23 手槍彈匣",
+    "cn": "组装MK23 手枪弹匣"
+   },
+   "GSmithCraft_VFE_45Clip32": {
+    "en": "Assemble M10 Magazine",
+    "ch": "組裝M10 衝鋒槍彈匣",
+    "cn": "组装M10 冲锋枪弹匣"
+   },
+   "GSmithCraft_VFE_762Clip": {
+    "en": "Assemble AK-47 Magazine",
+    "ch": "組裝AK系列7.62x39mm彈匣",
+    "cn": "组装AK系列7.62x39mm弹匣"
+   },
+   "GSmithCraft_VFE_9mmClip13": {
+    "en": "Assemble P229 Magazine",
+    "ch": "組裝西格紹爾P229手槍彈匣",
+    "cn": "组装西格绍尔P229手枪弹匣"
+   },
+   "GSmithCraft_VFE_9mmClip16": {
+    "en": "Assemble CZ 75 Magazine",
+    "ch": "組裝捷克CZ75手槍彈匣",
+    "cn": "组装CZ 75 手枪弹匣"
+   },
+   "GSmithCraft_VFE_9mmClip17": {
+    "en": "Assemble G17 Magazine",
+    "ch": "組裝G17 手槍彈匣",
+    "cn": "组装G17 手枪弹匣"
+   },
+   "GSmithCraft_VFE_9mmClip20": {
+    "en": "Assemble TEC9 Magazine",
+    "ch": "組裝英特拉泰克TEC-9手槍彈匣",
+    "cn": "组装TEC9 手枪弹匣"
+   },
+   "GSmithCraft_VFE_9mmClip30": {
+    "en": "Assemble MP5 Magazine",
+    "ch": "組裝9mm彈匣 (30 發)",
+    "cn": "组装9mm弹匣 (30 发)"
+   },
+   "GSmithCraft_VFE_9mmClip32": {
+    "en": "Assemble Uzi Magazine",
+    "ch": "組裝Uzi衝鋒槍彈匣",
+    "cn": "组装Uzi 冲锋枪弹匣"
+   },
+   "GSmithCraft_VFE_Bipod": {
+    "en": "Assemble Bipod",
+    "ch": "組裝兩腳架",
+    "cn": "组装两脚架"
+   },
+   "GSmithCraft_VFE_FALClip": {
+    "en": "Assemble FAL Magazine",
+    "ch": "組裝FAL 自動步槍彈匣",
+    "cn": "组装FAL 自动步枪弹匣"
+   },
+   "GSmithCraft_VFE_FiberglassStock": {
+    "en": "Assemble Fiberglass Stock",
+    "ch": "組裝玻璃纖維槍托",
+    "cn": "组装纤维枪托"
+   },
+   "GSmithCraft_VFE_IronSight": {
+    "en": "Assemble Improved Iron Sights",
+    "ch": "組裝改良機械瞄具",
+    "cn": "组装改良机械瞄准器"
+   },
+   "GSmithCraft_VFE_LightenedStock": {
+    "en": "Assemble Lightened Stock",
+    "ch": "組裝輕量化槍托",
+    "cn": "组装轻量化枪托"
+   },
+   "GSmithCraft_VFE_M60Belt": {
+    "en": "Assemble M60 Belt Pouch",
+    "ch": "組裝M60彈鏈包",
+    "cn": "组装M60 弹链包"
+   },
+   "GSmithCraft_VFE_M60BrassCatcher": {
+    "en": "Assemble Brass Catcher",
+    "ch": "組裝彈殼收集器",
+    "cn": "组装弹壳收集器"
+   },
+   "GSmithCraft_VFE_ShellStraps": {
+    "en": "Assemble Shell Straps",
+    "ch": "組裝彈殼綁帶",
+    "cn": "组装弹壳绑带"
+   },
+   "GSmithCraft_VFE_Sling": {
+    "en": "Assemble Leather Sling",
+    "ch": "組裝皮革槍背帶",
+    "cn": "组装皮革枪背带"
+   },
+   "GSmithCraft_VFE_Sling2": {
+    "en": "Assemble Nylon Sling",
+    "ch": "組裝尼龍槍背帶",
+    "cn": "组装尼龙枪背带"
+   },
+   "GSmithCraft_x2Scope": {
+    "en": "Assemble x2 Scope",
+    "ch": "組裝瞄準鏡 (2 倍)",
+    "cn": "组装瞄准镜 (2 倍)"
+   },
+   "GSmithCraft_x4Scope": {
+    "en": "Assemble x4 Scope",
+    "ch": "組裝瞄準鏡 (4 倍)",
+    "cn": "组装瞄准镜 (4 倍)"
+   },
+   "GSmithCraft_x8Scope": {
+    "en": "Assemble x8 Scope",
+    "ch": "組裝瞄準鏡 (8 倍)",
+    "cn": "组装瞄准镜 (8 倍)"
+   },
+   "XA_OpenCase_408CT": {
+    "en": "xxanyarms: Open case (.408 CheyTac)",
+    "ch": "xxanyarms: 開啟箱裝子彈 (.408 CheyTac)",
+    "cn": "拆开.408 CheyTac子弹 (整箱)"
+   },
+   "XA_OpenCase_46x30": {
+    "en": "xxanyarms: Open case (4.6x30)",
+    "ch": "xxanyarms: 開啟箱裝子彈 (4.6x30)",
+    "cn": "拆开4.6x30mm子弹 (整箱)"
+   },
+   "XA_OpenCase_50AE": {
+    "en": "xxanyarms: Open case (.50 AE)",
+    "ch": "xxanyarms: 開啟箱裝子彈 (.50 AE)",
+    "cn": "拆开.50 AE子弹 (整箱)"
+   },
+   "XA_OpenCase_50BMG": {
+    "en": "xxanyarms: Open case (.50 BMG)",
+    "ch": "xxanyarms: 開啟箱裝子彈 (.50 BMG)",
+    "cn": "拆开.50 BMG子弹 (整箱)"
+   },
+   "XA_OpenCase_68x51": {
+    "en": "xxanyarms: Open case (6.8x51)",
+    "ch": "xxanyarms: 開啟箱裝子彈 (6.8x51)",
+    "cn": "拆开6.8x51mm子弹 (整箱)"
+   },
+   "XA_OpenCase_9x39": {
+    "en": "xxanyarms: Open case (9x39)",
+    "ch": "xxanyarms: 開啟箱裝子彈 (9x39)",
+    "cn": "拆开9x39mm子弹 (整箱)"
+   },
+   "XA_Open_408CT": {
+    "en": "xxanyarms: Open pack (.408 CheyTac)",
+    "ch": "xxanyarms: 開啟盒裝子彈 (.408 CheyTac)",
+    "cn": "拆开.408 CheyTac子弹 (整盒)"
+   },
+   "XA_Open_46x30": {
+    "en": "xxanyarms: Open pack (4.6x30)",
+    "ch": "xxanyarms: 開啟盒裝子彈 (4.6x30)",
+    "cn": "拆开4.6x30mm子弹 (整盒)"
+   },
+   "XA_Open_50AE": {
+    "en": "xxanyarms: Open pack (.50 AE)",
+    "ch": "xxanyarms: 開啟盒裝子彈 (.50 AE)",
+    "cn": "拆开.50 AE子弹 (整盒)"
+   },
+   "XA_Open_50BMG": {
+    "en": "xxanyarms: Open pack (.50 BMG)",
+    "ch": "xxanyarms: 開啟盒裝子彈 (.50 BMG)",
+    "cn": "拆开.50 BMG子弹 (整盒)"
+   },
+   "XA_Open_68x51": {
+    "en": "xxanyarms: Open pack (6.8x51)",
+    "ch": "xxanyarms: 開啟盒裝子彈 (6.8x51)",
+    "cn": "拆开6.8x51mm子弹 (整盒)"
+   },
+   "XA_Open_9x39": {
+    "en": "xxanyarms: Open pack (9x39)",
+    "ch": "xxanyarms: 開啟盒裝子彈 (9x39)",
+    "cn": "拆开9x39mm子弹 (整盒)"
+   },
+   "XA_PackCase_408CT": {
+    "en": "xxanyarms: Pack case (.408 CheyTac)",
+    "ch": "xxanyarms: 將盒裝子彈裝箱 (.408 CheyTac)",
+    "cn": "打包.408 CheyTac子弹 (整箱)"
+   },
+   "XA_PackCase_46x30": {
+    "en": "xxanyarms: Pack case (4.6x30)",
+    "ch": "xxanyarms: 將盒裝子彈裝箱 (4.6x30)",
+    "cn": "打包4.6x30mm子弹 (整箱)"
+   },
+   "XA_PackCase_50AE": {
+    "en": "xxanyarms: Pack case (.50 AE)",
+    "ch": "xxanyarms: 將盒裝子彈裝箱 (.50 AE)",
+    "cn": "打包.50 AE子弹 (整箱)"
+   },
+   "XA_PackCase_50BMG": {
+    "en": "xxanyarms: Pack case (.50 BMG)",
+    "ch": "xxanyarms: 將盒裝子彈裝箱 (.50 BMG)",
+    "cn": "打包.50 BMG子弹 (整箱)"
+   },
+   "XA_PackCase_68x51": {
+    "en": "xxanyarms: Pack case (6.8x51)",
+    "ch": "xxanyarms: 將盒裝子彈裝箱 (6.8x51)",
+    "cn": "打包6.8x51mm子弹 (整箱)"
+   },
+   "XA_PackCase_9x39": {
+    "en": "xxanyarms: Pack case (9x39)",
+    "ch": "xxanyarms: 將盒裝子彈裝箱 (9x39)",
+    "cn": "打包9x39mm子弹 (整箱)"
+   },
+   "XA_Pack_408CT": {
+    "en": "xxanyarms: Pack rounds (.408 CheyTac)",
+    "ch": "xxanyarms: 將子彈裝盒 (.408 CheyTac)",
+    "cn": "打包.408 CheyTac子弹 (整盒)"
+   },
+   "XA_Pack_46x30": {
+    "en": "xxanyarms: Pack rounds (4.6x30)",
+    "ch": "xxanyarms: 將子彈裝盒 (4.6x30)",
+    "cn": "打包4.6x30mm子弹 (整盒)"
+   },
+   "XA_Pack_50AE": {
+    "en": "xxanyarms: Pack rounds (.50 AE)",
+    "ch": "xxanyarms: 將子彈裝盒 (.50 AE)",
+    "cn": "打包.50 AE子弹 (整盒)"
+   },
+   "XA_Pack_50BMG": {
+    "en": "xxanyarms: Pack rounds (.50 BMG)",
+    "ch": "xxanyarms: 將子彈裝盒 (.50 BMG)",
+    "cn": "打包.50 BMG子弹 (整盒)"
+   },
+   "XA_Pack_68x51": {
+    "en": "xxanyarms: Pack rounds (6.8x51)",
+    "ch": "xxanyarms: 將子彈裝盒 (6.8x51)",
+    "cn": "打包6.8x51mm子弹 (整盒)"
+   },
+   "XA_Pack_9x39": {
+    "en": "xxanyarms: Pack rounds (9x39)",
+    "ch": "xxanyarms: 將子彈裝盒 (9x39)",
+    "cn": "打包9x39mm子弹 (整盒)"
+   },
+   "SunCS_CanBeef": {
+    "en": "Make Jar of Beef",
+    "ch": "製作罐裝牛肉",
+    "cn": "制作罐装牛肉"
+   },
+   "SunCS_CanMutton": {
+    "en": "Make Jar of Mutton",
+    "ch": "製作罐裝羊肉",
+    "cn": "制作罐装羊肉"
+   },
+   "SunCS_CanPork": {
+    "en": "Make Jar of Pork",
+    "ch": "製作罐裝豬肉",
+    "cn": "制作罐装猪肉"
+   },
+   "SunCS_CanRabbit": {
+    "en": "Make Jar of Rabbit",
+    "ch": "製作罐裝兔肉",
+    "cn": "制作罐装兔肉"
+   },
+   "SunCS_CanVenison": {
+    "en": "Make Jar of Venison",
+    "ch": "製作罐裝鹿肉",
+    "cn": "制作罐装鹿肉"
+   },
+   "SunCS_ForgedChestCooler": {
+    "en": "Forge Thermal Chest",
+    "ch": "鍛造保溫箱",
+    "cn": "锻造保温箱"
+   },
+   "SunCS_MakeJerky": {
+    "en": "Make Jerky",
+    "ch": "製作肉乾",
+    "cn": "制作肉干"
+   },
+   "SunCS_MakeRollingPapers": {
+    "en": "Make Rolling Papers",
+    "ch": "製作捲菸紙",
+    "cn": "制作卷烟纸"
+   },
+   "SunCS_OpenMeatJar": {
+    "en": "Open Jar of Meat",
+    "ch": "開啟罐裝肉",
+    "cn": "打开罐装肉"
+   },
+   "SunCS_ReinforcedCooler": {
+    "en": "Craft Reinforced Metal Cooler",
+    "ch": "製作強化金屬保溫箱",
+    "cn": "制作加固金属保温箱"
    }
   },
   "Sandbox.json": {
@@ -399206,8 +402574,8 @@
    },
    "Sandbox_Title_DansOPWeapons_Cash": {
     "en": "D's Shop - Cash / Tier 0",
-    "ch": "D商店 - 現金 / 第0級",
-    "cn": "D商店 - 现金 / 第0级"
+    "ch": "D商店 - 現金 / 等級0",
+    "cn": "D商店 - 现金 / 等级0"
    },
    "Sandbox_Title_DansOPWeapons_ElectroGate": {
     "en": "ElectroGate",
@@ -422615,9 +425983,9 @@
     "cn": "3D 积雪会减慢你的速度"
    },
    "Sandbox_ImmersiveSnow_SnowSlowdown_tooltip": {
-    "en": "Only with the Immersive Snow - Viewpoint add-on (its 3D snow on the ground): from 10 cm of snow (Snow depth) wading through it tires you, from 30 cm you cannot sprint, and a vehicle you drive goes slower (at 45 cm about half its top speed). Not on squares cleared with a shovel; on trampled paths it is easier. In MP the server decides.",
-    "ch": "僅限搭配 Immersive Snow - Viewpoint 附加模組 (其地面 3D 積雪): 積雪達 10 公分 (「積雪深度」) 起, 在雪中跋涉會消耗耐力; 從 30 公分起無法衝刺. 積雪也會讓你駕駛的車輛變慢 (45 公分時約為最高速度的一半). 用鏟子清過的格子不受影響; 在踩踏小徑上比較輕鬆. 多人遊戲中由伺服器決定.",
-    "cn": "仅限搭配 Immersive Snow - Viewpoint 附加模组 (其地面 3D 积雪): 积雪达到 10 厘米 (“积雪深度”) 起, 在雪中跋涉会消耗耐力; 从 30 厘米起无法冲刺. 积雪也会使你驾驶的车辆减速 (45 厘米时约为最高速度的一半). 用铲子清理过的格子不受影响; 在踩踏路径上比较轻松. 多人游戏中由服务器决定."
+    "en": "Only with the Immersive Snow - Viewpoint add-on (its 3D snow on the ground): from 10 cm of snow (Snow depth) wading through it tires you; no speed limits. Not on squares cleared with a shovel; on trampled paths it is easier. In MP the server decides.",
+    "ch": "僅限搭配 Immersive Snow - Viewpoint 附加模組 (其地面 3D 積雪): 積雪達 10 公分 (「積雪深度」) 起, 在雪中跋涉會消耗耐力; 不限制速度. 用鏟子清過的格子不受影響; 在踩踏小徑上比較輕鬆. 多人遊戲中由伺服器決定.",
+    "cn": "仅限搭配 Immersive Snow - Viewpoint 附加模组 (其地面 3D 积雪): 积雪达到 10 厘米 (“积雪深度”) 起, 在雪中跋涉会消耗耐力; 不限制速度. 用铲子清理过的格子不受影响; 在踩踏路径上比较轻松. 多人游戏中由服务器决定."
    },
    "Sandbox_ImmersiveSnow_SnowThickness3D": {
     "en": "Snow thickness on vehicles in 3D (%%)",
@@ -429343,9 +432711,9 @@
     "cn": "真实坐姿"
    },
    "Sandbox_KnoxImersivity_realisticsit_tooltip": {
-    "en": "While seated, keep the character body facing its original direction while looking around with Project Viewpoint. Requires Project Viewpoint; head and neck animation follows its own third-person settings.",
-    "ch": "坐著時, 用 Project Viewpoint 環顧四周, 角色身體仍會朝向原本的方向. 需要 Project Viewpoint; 頭部與頸部動畫依照它自己的第三人稱設定.",
-    "cn": "坐着时, 用 Project Viewpoint 环顾四周, 角色身体仍会朝向原本的方向. 需要 Project Viewpoint; 头部和颈部动画遵循它自己的第三人称设置."
+    "en": "While seated, keep the body facing its original direction and turn the head toward the current Viewpoint look direction. Requires Project Viewpoint.",
+    "ch": "坐著時, 身體維持原本的朝向, 頭部轉向 Viewpoint 目前的視線方向. 需要 Project Viewpoint.",
+    "cn": "坐着时, 身体保持原来的朝向, 头部转向 Viewpoint 当前的视线方向. 需要 Project Viewpoint."
    },
    "Sandbox_BGWL_DisablePost93Guns": {
     "en": "Disable firearm models introduced after 1993",
@@ -432931,6 +436299,286 @@
     "en": "Toggle Slavic-themed packs: Deep Taiga, Hermits Pack, Deathless Tin, Rusalka Ration, Warden Pack, Kikimora Packet, Night Pack, Veles Pack, Slavic Box.",
     "ch": "切換斯拉夫主題口糧包: 深泰加林, 隱士研缽包, 不死者靜滯罐, 露莎卡口糧, 森林守衛袋, 基基莫拉求生包, 寒夜袋, 韋萊斯根袋, 斯拉夫木製口糧盒.",
     "cn": "切换斯拉夫主题包: 深泰加林、隐士研钵包、不死者静滞罐、鲁萨尔卡口粮、森林守卫袋、基基莫拉求生包、寒夜袋、维莱斯根袋、斯拉夫木制口粮盒."
+   },
+   "Sandbox_AegisPlayerVehicleClaims": {
+    "en": "Vehicle claims per player",
+    "ch": "每位玩家可認領車輛數",
+    "cn": "每位玩家可认领载具数"
+   },
+   "Sandbox_AegisPlayerVehicleClaimsOn": {
+    "en": "Aegis vehicle claims active",
+    "ch": "啟用 Aegis 車輛認領",
+    "cn": "启用Aegis载具认领"
+   },
+   "Sandbox_AegisPlayerVehicleClaimsOn_tooltip": {
+    "en": "Turn this off if your server uses another claim system for vehicles. There is then no button and no lock here, claimed vehicles stand open to everyone. Saved claims are kept and apply again once you turn it back on. Knox Claim is detected automatically.",
+    "ch": "如果你的伺服器使用其他車輛認領系統, 請關閉此項. 關閉後這裡不會有認領按鈕, 也不會上鎖, 已認領的車輛對所有人開放. 已儲存的認領會保留, 重新開啟後再次生效. Knox Claim 會自動偵測.",
+    "cn": "如果你的服务器使用其他载具认领系统, 请关闭此项. 关闭后这里没有认领按钮, 也不会上锁, 已认领的载具对所有人开放. 已保存的认领会保留, 重新开启后再次生效. Knox Claim会被自动检测."
+   },
+   "Sandbox_AegisPlayerVehicleClaims_tooltip": {
+    "en": "How many of their remembered vehicles a player may claim. A claimed vehicle stays shut for everyone else. 0 turns claims off. Stays off while Knox Claim handles vehicles.",
+    "ch": "玩家可在已記住的車輛中認領幾輛. 已認領的車輛對其他人保持上鎖. 0 會關閉認領功能. 由 Knox Claim 管理車輛時, 此功能維持關閉.",
+    "cn": "玩家可以在已记录的载具中认领多少辆. 已认领的载具对其他人保持锁定. 0表示关闭认领. 由Knox Claim管理载具时, 此功能保持关闭."
+   },
+   "Sandbox_DansOPWeaponsShopTools": {
+    "en": "D's Shop - Tools",
+    "ch": "D商店 - 工具",
+    "cn": "D商店 - 工具"
+   },
+   "Sandbox_Title_DansOPWeapons_Tools": {
+    "en": "D's Shop - Tools",
+    "ch": "D商店 - 工具",
+    "cn": "D商店 - 工具"
+   },
+   "Sandbox_DansOPWeapons_Price_matScrew": {
+    "en": "Loose Screw Price ($)",
+    "ch": "螺絲 (單顆)價格 ($)",
+    "cn": "螺丝 (单颗)价格 ($)"
+   },
+   "Sandbox_DansOPWeapons_Price_matScrew_tooltip": {
+    "en": "One loose screw costs $1 by default. The shop always buys it back for $1.",
+    "ch": "單顆螺絲預設售價$1. 商店一律以$1回收.",
+    "cn": "单颗螺丝默认售价$1. 商店一律以$1回收."
+   },
+   "Sandbox_DansOPWeapons_Price_matScrews_tooltip": {
+    "en": "One box of screws costs $100 by default. Sell-back is always $100.",
+    "ch": "一盒螺絲預設售價$100. 賣回商店一律為$100.",
+    "cn": "一盒螺丝默认售价$100. 卖回商店一律为$100."
+   },
+   "Sandbox_DansOPWeapons_Price_toolBlowTorch": {
+    "en": "Welding Torch Price ($)",
+    "ch": "丙烷噴燈價格 ($)",
+    "cn": "丙烷喷灯价格 ($)"
+   },
+   "Sandbox_DansOPWeapons_Price_toolBlowTorch_tooltip": {
+    "en": "Cash price of one welding torch. Default: $145.",
+    "ch": "單支丙烷噴燈的現金價格. 預設: $145.",
+    "cn": "单支丙烷喷灯的现金价格. 默认: $145."
+   },
+   "Sandbox_DansOPWeapons_Price_toolFishingRod": {
+    "en": "Fishing Rod Price ($)",
+    "ch": "魚竿價格 ($)",
+    "cn": "鱼竿价格 ($)"
+   },
+   "Sandbox_DansOPWeapons_Price_toolFishingRod_tooltip": {
+    "en": "Cash price of one fishing rod. Default: $65.",
+    "ch": "單根魚竿的現金價格. 預設: $65.",
+    "cn": "单根鱼竿的现金价格. 默认: $65."
+   },
+   "Sandbox_DansOPWeapons_Price_toolGardenSaw": {
+    "en": "Wood Saw Price ($)",
+    "ch": "園藝鋸價格 ($)",
+    "cn": "园艺锯价格 ($)"
+   },
+   "Sandbox_DansOPWeapons_Price_toolGardenSaw_tooltip": {
+    "en": "Cash price of one wood saw. Default: $15.",
+    "ch": "單把園藝鋸的現金價格. 預設: $15.",
+    "cn": "单把园艺锯的现金价格. 默认: $15."
+   },
+   "Sandbox_DansOPWeapons_Price_toolHammer": {
+    "en": "Hammer Price ($)",
+    "ch": "羊角錘價格 ($)",
+    "cn": "羊角锤价格 ($)"
+   },
+   "Sandbox_DansOPWeapons_Price_toolHammer_tooltip": {
+    "en": "Cash price of one hammer. Default: $12.",
+    "ch": "單把羊角錘的現金價格. 預設: $12.",
+    "cn": "单把羊角锤的现金价格. 默认: $12."
+   },
+   "Sandbox_DansOPWeapons_Price_toolHandShovel": {
+    "en": "Garden Trowel Price ($)",
+    "ch": "園藝鏟價格 ($)",
+    "cn": "园艺铲价格 ($)"
+   },
+   "Sandbox_DansOPWeapons_Price_toolHandShovel_tooltip": {
+    "en": "Cash price of one garden trowel. Default: $16.",
+    "ch": "單把園藝鏟的現金價格. 預設: $16.",
+    "cn": "单把园艺铲的现金价格. 默认: $16."
+   },
+   "Sandbox_DansOPWeapons_Price_toolNeedle": {
+    "en": "Needle Price ($)",
+    "ch": "針價格 ($)",
+    "cn": "针价格 ($)"
+   },
+   "Sandbox_DansOPWeapons_Price_toolNeedle_tooltip": {
+    "en": "Cash price of one needle. Default: $3.",
+    "ch": "單根針的現金價格. 預設: $3.",
+    "cn": "单根针的现金价格. 默认: $3."
+   },
+   "Sandbox_DansOPWeapons_Price_toolPipeWrench": {
+    "en": "Pipe Wrench Price ($)",
+    "ch": "管鉗價格 ($)",
+    "cn": "管钳价格 ($)"
+   },
+   "Sandbox_DansOPWeapons_Price_toolPipeWrench_tooltip": {
+    "en": "Cash price of one pipe wrench. Default: $35.",
+    "ch": "單把管鉗的現金價格. 預設: $35.",
+    "cn": "单把管钳的现金价格. 默认: $35."
+   },
+   "Sandbox_DansOPWeapons_Price_toolPliers": {
+    "en": "Pliers Price ($)",
+    "ch": "鉗子價格 ($)",
+    "cn": "钳子价格 ($)"
+   },
+   "Sandbox_DansOPWeapons_Price_toolPliers_tooltip": {
+    "en": "Cash price of one pliers. Default: $25.",
+    "ch": "單把鉗子的現金價格. 預設: $25.",
+    "cn": "单把钳子的现金价格. 默认: $25."
+   },
+   "Sandbox_DansOPWeapons_Price_toolSaw": {
+    "en": "Hacksaw Price ($)",
+    "ch": "鋼鋸價格 ($)",
+    "cn": "手锯价格 ($)"
+   },
+   "Sandbox_DansOPWeapons_Price_toolSaw_tooltip": {
+    "en": "Cash price of one hacksaw. Default: $22.",
+    "ch": "單把鋼鋸的現金價格. 預設: $22.",
+    "cn": "单把手锯的现金价格. 默认: $22."
+   },
+   "Sandbox_DansOPWeapons_Price_toolScissors": {
+    "en": "Scissors Price ($)",
+    "ch": "剪刀價格 ($)",
+    "cn": "剪刀价格 ($)"
+   },
+   "Sandbox_DansOPWeapons_Price_toolScissors_tooltip": {
+    "en": "Cash price of one scissors. Default: $6.",
+    "ch": "單把剪刀的現金價格. 預設: $6.",
+    "cn": "单把剪刀的现金价格. 默认: $6."
+   },
+   "Sandbox_DansOPWeapons_Price_toolScrewdriver": {
+    "en": "Screwdriver Price ($)",
+    "ch": "螺絲起子價格 ($)",
+    "cn": "螺丝刀价格 ($)"
+   },
+   "Sandbox_DansOPWeapons_Price_toolScrewdriver_tooltip": {
+    "en": "Cash price of one screwdriver. Default: $8.",
+    "ch": "單支螺絲起子的現金價格. 預設: $8.",
+    "cn": "单把螺丝刀的现金价格. 默认: $8."
+   },
+   "Sandbox_DansOPWeapons_Price_toolWeldingMask": {
+    "en": "Welding Mask Price ($)",
+    "ch": "焊工面罩價格 ($)",
+    "cn": "焊工面罩价格 ($)"
+   },
+   "Sandbox_DansOPWeapons_Price_toolWeldingMask_tooltip": {
+    "en": "Cash price of one welding mask. Default: $110.",
+    "ch": "單個焊工面罩的現金價格. 預設: $110.",
+    "cn": "单个焊工面罩的现金价格. 默认: $110."
+   },
+   "Sandbox_DansOPWeapons_Price_toolWrench": {
+    "en": "Wrench Price ($)",
+    "ch": "扳手價格 ($)",
+    "cn": "扳手价格 ($)"
+   },
+   "Sandbox_DansOPWeapons_Price_toolWrench_tooltip": {
+    "en": "Cash price of one wrench. Default: $18.",
+    "ch": "單把扳手的現金價格. 預設: $18.",
+    "cn": "单把扳手的现金价格. 默认: $18."
+   },
+   "Sandbox_DansOPWeapons_ShowToolsShopCategory": {
+    "en": "Show Shop Tools Category",
+    "ch": "顯示工具商品類別",
+    "cn": "显示工具商品类别"
+   },
+   "Sandbox_DansOPWeapons_ShowToolsShopCategory_tooltip": {
+    "en": "Show or hide the Tools tab in D's Shop. It contains ordinary fishing, repair and metalworking tools.",
+    "ch": "顯示或隱藏D商店的工具分頁. 內含一般的釣魚, 修理與金工工具.",
+    "cn": "显示或隐藏D商店的工具标签页. 包含普通的钓鱼, 维修与金工工具."
+   },
+   "Sandbox_SunCS": {
+    "en": "Sunshi's Cooler System",
+    "ch": "Sunshi 的保溫箱系統",
+    "cn": "Sunshi 的保温箱系统"
+   },
+   "Sandbox_SunCS_PacksCoolIndustrial": {
+    "en": "Industrial cold packs to cool",
+    "ch": "冷藏所需工業冰袋數",
+    "cn": "冷藏所需工业冰袋数"
+   },
+   "Sandbox_SunCS_PacksCoolIndustrial_tooltip": {
+    "en": "How many industrial cold packs a cooler needs to keep food like a fridge.",
+    "ch": "保溫箱需要多少個工業冰袋, 才能像冰箱一樣保存食物.",
+    "cn": "保温箱需要多少个工业冰袋, 才能像冰箱一样保存食物."
+   },
+   "Sandbox_SunCS_PacksCoolNormal": {
+    "en": "Cold packs to cool",
+    "ch": "冷藏所需冰袋數",
+    "cn": "冷藏所需冰袋数"
+   },
+   "Sandbox_SunCS_PacksCoolNormal_tooltip": {
+    "en": "How many vanilla cold packs a cooler needs to keep food like a fridge.",
+    "ch": "保溫箱需要多少個原版冰袋, 才能像冰箱一樣保存食物.",
+    "cn": "保温箱需要多少个原版冰袋, 才能像冰箱一样保存食物."
+   },
+   "Sandbox_SunCS_PacksFreeze": {
+    "en": "Industrial cold packs to freeze",
+    "ch": "冷凍所需工業冰袋數",
+    "cn": "冷冻所需工业冰袋数"
+   },
+   "Sandbox_SunCS_PacksFreeze_tooltip": {
+    "en": "How many industrial cold packs a cooler needs to work like a freezer.",
+    "ch": "保溫箱需要多少個工業冰袋, 才能像冷凍櫃一樣運作.",
+    "cn": "保温箱需要多少个工业冰袋, 才能像冷冻柜一样工作."
+   },
+   "Sandbox_ImmersiveSnow_BloodyFootprintsNoSnow": {
+    "en": "Bloody footprints without snow",
+    "ch": "無雪時的血腳印",
+    "cn": "无雪时的血脚印"
+   },
+   "Sandbox_ImmersiveSnow_BloodyFootprintsNoSnow_tooltip": {
+    "en": "Bloody footprints are also left when no snow lies: red prints on clear ground after stepping on a corpse, in any season, like the bloody tire tracks. Only with Bloody footprints on, and for whoever leaves footprints (players, zombies).",
+    "ch": "沒有積雪時也會留下血腳印: 踩到屍體後, 會在無雪地面上留下紅色腳印, 不分季節, 就像血胎痕一樣. 僅在「血腳印」開啟時生效, 且只限會留下腳印的對象 (玩家、殭屍).",
+    "cn": "没有积雪时也会留下血脚印: 踩到尸体后, 会在无雪地面上留下红色脚印, 不分季节, 就像血车辙一样. 仅在“血脚印”开启时生效, 且仅限会留下脚印的对象 (玩家、僵尸)."
+   },
+   "Sandbox_MartialArts_DuelRoundSeconds": {
+    "en": "Duel round length (seconds)",
+    "ch": "決鬥回合時長 (秒)",
+    "cn": "决斗回合时长 (秒)"
+   },
+   "Sandbox_MartialArts_DuelRounds": {
+    "en": "Duel rounds (best of)",
+    "ch": "決鬥回合數 (多勝制)",
+    "cn": "决斗回合数 (多胜制)"
+   },
+   "Sandbox_MartialArts_DuelSparring": {
+    "en": "Duels are sparring",
+    "ch": "決鬥為切磋",
+    "cn": "决斗为切磋"
+   },
+   "Sandbox_MartialArts_DuelSparring_tooltip": {
+    "en": "Duel hits drain round health only and cause no real injuries.",
+    "ch": "決鬥中的攻擊只會扣除回合血量, 不會造成真正的傷勢.",
+    "cn": "决斗中的攻击只会扣除回合血量, 不会造成真正的伤势."
+   },
+   "Sandbox_MartialArts_PvPComboCap": {
+    "en": "PvP combo cap",
+    "ch": "PvP 連段上限",
+    "cn": "PvP 连招上限"
+   },
+   "Sandbox_MartialArts_PvPComboCap_tooltip": {
+    "en": "After this many unanswered hits from one attacker, the defender breaks free with brief armour.",
+    "ch": "被同一名攻擊者連續命中達到此次數, 且期間未還擊後, 防守方會掙脫並獲得短暫保護.",
+    "cn": "被同一名攻击者连续命中达到此次数, 且期间未还击后, 防守方会挣脱并获得短暂保护."
+   },
+   "Sandbox_MartialArts_PvPKnockdowns": {
+    "en": "PvP knockdowns",
+    "ch": "PvP 擊倒",
+    "cn": "PvP 击倒"
+   },
+   "Sandbox_MartialArts_PvPKnockdowns_tooltip": {
+    "en": "Power hits and knockdown moves knock players down; heavy hits stagger them.",
+    "ch": "強力一擊與擊倒招式會把玩家擊倒; 重擊會讓玩家踉蹌.",
+    "cn": "强力一击和击倒招式会把玩家击倒; 重击会使玩家踉跄."
+   },
+   "Sandbox_MartialArts_PvPWakeupArmor": {
+    "en": "PvP wake-up armour (ms)",
+    "ch": "PvP 起身保護時間 (毫秒)",
+    "cn": "PvP 起身保护时间 (毫秒)"
+   },
+   "Sandbox_MartialArts_PvPWakeupArmor_tooltip": {
+    "en": "Time after getting up from a knockdown during which hits are ignored. Only one hit lands on a downed player.",
+    "ch": "被擊倒後起身的這段時間內, 攻擊都會被忽略. 倒地的玩家只會受到一次命中.",
+    "cn": "被击倒后起身的这段时间内, 攻击都会被忽略. 倒地的玩家只会受到一次命中."
    }
   },
   "Tooltip.json": {
@@ -458169,6 +461817,131 @@
     "en": "Cured back-fat whipped with Crushed caraway seeds -Black peppercorns and Garlic\nDesigned to provide Slow-burning high-octane thermal Energy in sub-zero environments\nThey call it Salo -I call it thermal Armor -If the thermometer drops Low enough to freeze your Canteen solid\nSpread a finger-thick layer of This white gold across Your hardtack -Sure, your arteries will\nFile a formal complaint with the Geneva Convention -But at least you Won't freeze to death before the Raiders find you",
     "ch": "醃製背脂, 與碾碎的葛縷子籽, 黑胡椒粒和大蒜一起打發\n專為在零下環境中提供緩慢燃燒的高辛烷值熱能而設計\n他們叫它醃豬脂, 我叫它保暖裝甲. 要是溫度計降到能把你的水壺凍成冰塊\n就在你的硬餅乾上抹一層手指厚的白色黃金. 當然, 你的動脈會\n向日內瓦公約正式提出申訴, 但至少你不會在掠奪者找到你之前凍死",
     "cn": "腌制背膘, 与碾碎的葛缕子籽, 黑胡椒粒和大蒜一起打发\n专为在零下环境中提供缓慢燃烧的高辛烷值热能而设计\n他们叫它腌猪脂, 我叫它保暖装甲. 要是温度计降到能把你的水壶冻成冰坨\n就在你的硬饼干上抹一层手指厚的白色黄金. 当然, 你的动脉会\n向日内瓦公约正式提出投诉, 但至少你不会在掠夺者找到你之前冻死"
+   },
+   "Tooltip_WeaponPartsGeneric": {
+    "en": "Can be used to repair weapons of any type",
+    "ch": "可用來修理任何類型的武器",
+    "cn": "可用于修理任何类型的武器"
+   },
+   "Tooltip_XA_XA_408CTBox": {
+    "en": ".408 CheyTac | 30 rounds",
+    "ch": ".408 CheyTac | 30 發",
+    "cn": ".408 CheyTac子弹 (整盒, 30发)"
+   },
+   "Tooltip_XA_XA_408CTCase": {
+    "en": ".408 CheyTac | 360 rounds",
+    "ch": ".408 CheyTac | 360 發",
+    "cn": ".408 CheyTac子弹 (整箱, 360发)"
+   },
+   "Tooltip_XA_XA_46x30Box": {
+    "en": "4.6x30 | 30 rounds",
+    "ch": "4.6x30 | 30 發",
+    "cn": "4.6x30mm子弹 (整盒, 30发)"
+   },
+   "Tooltip_XA_XA_46x30Case": {
+    "en": "4.6x30 | 360 rounds",
+    "ch": "4.6x30 | 360 發",
+    "cn": "4.6x30mm子弹 (整箱, 360发)"
+   },
+   "Tooltip_XA_XA_50AEBox": {
+    "en": ".50 AE | 30 rounds",
+    "ch": ".50 AE | 30 發",
+    "cn": ".50 AE子弹 (整盒, 30发)"
+   },
+   "Tooltip_XA_XA_50AECase": {
+    "en": ".50 AE | 360 rounds",
+    "ch": ".50 AE | 360 發",
+    "cn": ".50 AE子弹 (整箱, 360发)"
+   },
+   "Tooltip_XA_XA_50BMGBox": {
+    "en": ".50 BMG | 30 rounds",
+    "ch": ".50 BMG | 30 發",
+    "cn": ".50 BMG子弹 (整盒, 30发)"
+   },
+   "Tooltip_XA_XA_50BMGCase": {
+    "en": ".50 BMG | 360 rounds",
+    "ch": ".50 BMG | 360 發",
+    "cn": ".50 BMG子弹 (整箱, 360发)"
+   },
+   "Tooltip_XA_XA_68x51Box": {
+    "en": "6.8x51 | 30 rounds",
+    "ch": "6.8x51 | 30 發",
+    "cn": "6.8x51mm子弹 (整盒, 30发)"
+   },
+   "Tooltip_XA_XA_68x51Case": {
+    "en": "6.8x51 | 360 rounds",
+    "ch": "6.8x51 | 360 發",
+    "cn": "6.8x51mm子弹 (整箱, 360发)"
+   },
+   "Tooltip_XA_XA_9x39Box": {
+    "en": "9x39 | 30 rounds",
+    "ch": "9x39 | 30 發",
+    "cn": "9x39mm子弹 (整盒, 30发)"
+   },
+   "Tooltip_XA_XA_9x39Case": {
+    "en": "9x39 | 360 rounds",
+    "ch": "9x39 | 360 發",
+    "cn": "9x39mm子弹 (整箱, 360发)"
+   },
+   "Tooltip_XA_XA_CarryHandle": {
+    "en": "Carry handle with the rear sight. Take it off to fit the flat top rail.",
+    "ch": "附後照門的提把. 拆下後才能裝上平頂導軌.",
+    "cn": "带后照门的提把. 拆下后才能装上平顶导轨."
+   },
+   "Tooltip_XA_XA_CarryRail": {
+    "en": "Flat top rail with a rear sight. Takes the place of the carry handle; every rail optic fits on it. Remove the optic before the rail.",
+    "ch": "附後照門的平頂導軌. 用來取代提把; 所有導軌式瞄準鏡都能裝在上面. 拆下導軌前要先拆下瞄準鏡.",
+    "cn": "带后照门的平顶导轨. 用来取代提把; 所有导轨式瞄准镜都能装在上面. 拆下导轨前需先拆下瞄准镜."
+   },
+   "Tooltip_XA_XA_CoverRail": {
+    "en": "Receiver Cover Rail. Install the mount before its compatible optic; remove the optic before the mount.",
+    "ch": "機匣蓋導軌. 先裝上鏡座, 再裝相容的瞄準鏡; 拆卸時先拆瞄準鏡, 再拆鏡座.",
+    "cn": "机匣盖导轨. 先装上镜座, 再装兼容的瞄准镜; 拆卸时先拆瞄准镜, 再拆镜座."
+   },
+   "Tooltip_XA_XA_M24_Mag": {
+    "en": "Caliber: 7.62x51 | Capacity: 10 | Fits: M24",
+    "ch": "口徑: 7.62x51 | 容量: 10 | 適用: M24",
+    "cn": "口径: 7.62x51mm | 容量: 10 | 适配: M24狙击步枪"
+   },
+   "Tooltip_XA_XA_Remington788_Mag": {
+    "en": "Caliber: 7.62x51 | Capacity: 3 | Fits: Remington788",
+    "ch": "口徑: 7.62x51 | 容量: 3 | 適用: Remington788",
+    "cn": "口径: 7.62x51mm | 容量: 3 | 适配: 雷明顿788狙击步枪"
+   },
+   "Tooltip_XA_XA_Remington870Tactical": {
+    "en": "Caliber: 12 Gauge",
+    "ch": "口徑: 12 號",
+    "cn": "口径: 12号"
+   },
+   "Tooltip_XA_XA_RifleRail": {
+    "en": "Low Rifle Optic Base. Install the mount before its compatible optic; remove the optic before the mount.",
+    "ch": "低位步槍瞄準鏡底座. 先裝上鏡座, 再裝相容的瞄準鏡; 拆卸時先拆瞄準鏡, 再拆鏡座.",
+    "cn": "低位步枪瞄准镜底座. 先装上镜座, 再装兼容的瞄准镜; 拆卸时先拆瞄准镜, 再拆镜座."
+   },
+   "Tooltip_XA_XA_ShotgunRail": {
+    "en": "Low Shotgun Optic Bridge. Install the mount before its compatible optic; remove the optic before the mount.",
+    "ch": "低位霰彈槍瞄準鏡橋座. 先裝上鏡座, 再裝相容的瞄準鏡; 拆卸時先拆瞄準鏡, 再拆鏡座.",
+    "cn": "低位霰弹枪瞄准镜桥座. 先装上镜座, 再装兼容的瞄准镜; 拆卸时先拆瞄准镜, 再拆镜座."
+   },
+   "Tooltip_XA_XA_Vz58_Mag": {
+    "en": "Caliber: 7.62x39 | Capacity: 30 | Fits: Vz58",
+    "ch": "口徑: 7.62x39 | 容量: 30 | 適用: Vz58",
+    "cn": "口径: 7.62x39mm | 容量: 30 | 适配: Vz.58自动步枪"
+   },
+   "Tooltip_item_M16A2E4": {
+    "en": "A prototype flattop M16 requested by the Marines post Gulf War.<br>Cutting edge, this is planned to solve the Height Over Bore issue.",
+    "ch": "波斯灣戰爭後應海軍陸戰隊要求研製的平頂型 M16 原型槍. <br>採用尖端設計, 預計用來解決瞄準線高於槍膛軸線 (Height Over Bore) 的問題.",
+    "cn": "海湾战争后应海军陆战队要求研制的平顶型 M16 原型枪. <br>设计前沿, 计划用于解决瞄准线高于枪膛轴线 (Height Over Bore) 的问题."
+   },
+   "Tooltip_item_M4SOPMOD": {
+    "en": "The M4A1 SOPMOD Block 1 is a Prototype Carbine for USSOCOM.<br>Still heavily in the development stage, the Carbine is Cutting Edge, allowing SOCOM unrivaled levels of modularity",
+    "ch": "M4A1 SOPMOD Block 1 是為美國特種作戰司令部 (USSOCOM) 研製的原型卡賓槍. <br>這款卡賓槍仍處於密集開發階段, 採用尖端設計, 讓 SOCOM 享有無可匹敵的模組化程度",
+    "cn": "M4A1 SOPMOD Block 1 是为美国特种作战司令部 (USSOCOM) 研制的原型卡宾枪. <br>这款卡宾枪仍处于密集研发阶段, 技术前沿, 为 SOCOM 提供无可比拟的模块化程度"
+   },
+   "Tooltip_SunCS_IndustrialColdPack": {
+    "en": "Stronger than a regular cold pack. You need fewer in a cooler to keep food cold, and with enough of them the cooler freezes food.",
+    "ch": "比一般冰袋更強. 保溫箱只需較少數量就能讓食物保持低溫, 放入足夠數量時保溫箱還能冷凍食物.",
+    "cn": "比普通冰袋更强. 保温箱只需较少数量就能让食物保持低温, 放入足够数量时保温箱还能冷冻食物."
    }
   },
   "UI.json": {
@@ -553668,7 +557441,7 @@
     "cn": "游戏原本每绘制几百个精灵图, 就会重新创建、映射再取消映射精灵图缓冲区, 每次需要调用驱动程序六次, 拉远视角时一帧内会发生很多次. 在 OpenGL 4.4 下, 缓冲区现在会保持映射并直接写入, CPU 将精灵图交给显卡时的驱动开销大幅减少. 画面相同. 较旧的显卡驱动保持常规路径."
    },
    "UI_MPOptim_SetTip_JVM_TranslucentNearBake": {
-    "en": "Chain-link fences, scaffolding, street decorations and ornamental plants near you are drawn into the chunk's cached image too, instead of one by one every frame. On a bench they were 91% of what was still drawn every frame. They don't sway, so the picture is the same; ones the cache can't draw faithfully stay as they were.",
+    "en": "Chain-link fences, scaffolding, street decorations and ornamental plants near you are drawn into the chunk's cached image too, instead of one by one every frame. On a bench they were 91%% of what was still drawn every frame. They don't sway, so the picture is the same; ones the cache can't draw faithfully stay as they were.",
     "ch": "你附近的鐵絲網圍籬、鷹架、街道裝飾與觀賞植物也會畫進區塊的快取影像, 而不是每個影格逐一繪製. 在基準測試中, 每個影格仍需繪製的內容有 91%% 是它們. 它們不會搖曳, 所以畫面相同; 快取無法如實繪製的物件維持原樣.",
     "cn": "你附近的铁丝网围栏、脚手架、街道装饰和观赏植物也会绘制进区块的缓存图像, 而不是每帧逐个绘制. 在基准测试中, 每帧仍需绘制的内容有 91%% 是它们. 它们不会摇曳, 所以画面相同; 缓存无法如实绘制的物件保持原样."
    },
@@ -555086,6 +558859,1171 @@
     "en": "Changed: the NPC Source option (Sandbox) now covers the loan collectors, bounty targets, ambushes and saucer aliens, and has a new value: Project A-Life. Auto is unchanged.",
     "ch": "變更: 沙盒的「NPC 來源」選項現在涵蓋討債人、懸賞目標、伏擊與飛碟外星人, 並新增選項: Project A-Life. 「自動」維持不變.",
     "cn": "变更: 沙盒的“NPC 来源”选项现在涵盖收债人、赏金目标、伏击和飞碟外星人, 并新增选项: Project A-Life. “自动”保持不变."
+   },
+   "UI_AegisPlayer_VehClaim": {
+    "en": "Claim",
+    "ch": "認領",
+    "cn": "认领"
+   },
+   "UI_AegisPlayer_VehClaimed": {
+    "en": "Vehicle claimed.",
+    "ch": "已認領車輛.",
+    "cn": "载具已认领."
+   },
+   "UI_AegisPlayer_VehErrClaimLimit": {
+    "en": "You cannot claim more vehicles.",
+    "ch": "你無法再認領更多車輛.",
+    "cn": "你无法再认领更多载具."
+   },
+   "UI_AegisPlayer_VehErrFriends": {
+    "en": "The access list is full.",
+    "ch": "授權名單已滿.",
+    "cn": "授权名单已满."
+   },
+   "UI_AegisPlayer_VehErrGiveFull": {
+    "en": "That player has no free slot for this vehicle.",
+    "ch": "該玩家沒有可容納這輛車的空位.",
+    "cn": "该玩家没有可容纳此载具的空位."
+   },
+   "UI_AegisPlayer_VehErrOffline": {
+    "en": "That player is not online.",
+    "ch": "這名玩家目前沒有上線.",
+    "cn": "该玩家不在线."
+   },
+   "UI_AegisPlayer_VehErrTaken": {
+    "en": "Someone else already claimed this vehicle.",
+    "ch": "這輛車已被其他人認領.",
+    "cn": "此载具已被其他人认领."
+   },
+   "UI_AegisPlayer_VehErrTrailer": {
+    "en": "A trailer has no key. Hitch it to a car you hold the key for.",
+    "ch": "拖車沒有鑰匙. 請把它掛到你持有鑰匙的車上.",
+    "cn": "拖车没有钥匙. 请将其挂到你持有钥匙的车辆上."
+   },
+   "UI_AegisPlayer_VehFriendOff": {
+    "en": "Access removed.",
+    "ch": "已取消授權.",
+    "cn": "已取消授权."
+   },
+   "UI_AegisPlayer_VehFriendOn": {
+    "en": "Access given.",
+    "ch": "已授權.",
+    "cn": "已授权."
+   },
+   "UI_AegisPlayer_VehFriends": {
+    "en": "Access",
+    "ch": "授權",
+    "cn": "授权"
+   },
+   "UI_AegisPlayer_VehFriendsHint": {
+    "en": "Player name",
+    "ch": "玩家名稱",
+    "cn": "玩家名称"
+   },
+   "UI_AegisPlayer_VehFriendsNone": {
+    "en": "nobody",
+    "ch": "無",
+    "cn": "无"
+   },
+   "UI_AegisPlayer_VehFriendsPrompt": {
+    "en": "Allowed: %1. Type a name to add it, a name on the list comes off.",
+    "ch": "已授權: %1. 輸入名稱即可加入, 若名稱已在名單上則會移除.",
+    "cn": "已授权: %1. 输入名称即可添加, 若名称已在名单中则会移除."
+   },
+   "UI_AegisPlayer_VehGive": {
+    "en": "Hand over claim",
+    "ch": "轉讓認領",
+    "cn": "转让认领"
+   },
+   "UI_AegisPlayer_VehGiveConfirm": {
+    "en": "Hand %1 over to %2? You lose access, the new owner gets a key.",
+    "ch": "要將 %1 轉讓給 %2 嗎? 你會失去使用權, 新車主會拿到一把鑰匙.",
+    "cn": "要将%1转让给%2吗? 你将失去使用权, 新车主会获得一把钥匙."
+   },
+   "UI_AegisPlayer_VehGiven": {
+    "en": "Claim handed over to %1.",
+    "ch": "已將認領轉讓給 %1.",
+    "cn": "已将认领转让给%1."
+   },
+   "UI_AegisPlayer_VehGot": {
+    "en": "%1 handed you a vehicle: %2",
+    "ch": "%1 轉讓了一輛車給你: %2",
+    "cn": "%1向你转让了一辆载具: %2"
+   },
+   "UI_AegisPlayer_VehLocked": {
+    "en": "Claimed by %1",
+    "ch": "已被 %1 認領",
+    "cn": "已被%1认领"
+   },
+   "UI_AegisPlayer_VehUnclaim": {
+    "en": "Give up claim",
+    "ch": "放棄認領",
+    "cn": "放弃认领"
+   },
+   "UI_AegisPlayer_VehUnclaimed": {
+    "en": "Claim given up.",
+    "ch": "已放棄認領.",
+    "cn": "已放弃认领."
+   },
+   "UI_AegisPolls_AnswerPh": {
+    "en": "Enter an answer",
+    "ch": "輸入選項",
+    "cn": "输入选项"
+   },
+   "UI_AegisPolls_Answers": {
+    "en": "Answers (2 to 5)",
+    "ch": "選項 (2 到 5 個)",
+    "cn": "选项 (2至5个)"
+   },
+   "UI_AegisPolls_By": {
+    "en": "by %1",
+    "ch": "由 %1",
+    "cn": "由%1"
+   },
+   "UI_AegisPolls_Clear": {
+    "en": "Clear",
+    "ch": "清除",
+    "cn": "清空"
+   },
+   "UI_AegisPolls_Copy": {
+    "en": "Copy",
+    "ch": "複製",
+    "cn": "复制"
+   },
+   "UI_AegisPolls_Count": {
+    "en": "%1 (%2)",
+    "ch": "%1 (%2)",
+    "cn": "%1 (%2)"
+   },
+   "UI_AegisPolls_Days": {
+    "en": "%1 days",
+    "ch": "%1 天",
+    "cn": "%1天"
+   },
+   "UI_AegisPolls_Delete": {
+    "en": "Delete",
+    "ch": "刪除",
+    "cn": "删除"
+   },
+   "UI_AegisPolls_DeleteConfirm": {
+    "en": "Delete this poll for good?",
+    "ch": "確定要永久刪除這項投票?",
+    "cn": "永久删除此投票?"
+   },
+   "UI_AegisPolls_DeleteTitle": {
+    "en": "Delete poll",
+    "ch": "刪除投票",
+    "cn": "删除投票"
+   },
+   "UI_AegisPolls_Dur0": {
+    "en": "Until I end it",
+    "ch": "直到我結束為止",
+    "cn": "直到我结束为止"
+   },
+   "UI_AegisPolls_Dur1": {
+    "en": "1 hour",
+    "ch": "1 小時",
+    "cn": "1小时"
+   },
+   "UI_AegisPolls_Dur168": {
+    "en": "7 days",
+    "ch": "7 天",
+    "cn": "7天"
+   },
+   "UI_AegisPolls_Dur24": {
+    "en": "24 hours",
+    "ch": "24 小時",
+    "cn": "24小时"
+   },
+   "UI_AegisPolls_Duration": {
+    "en": "Duration",
+    "ch": "持續時間",
+    "cn": "持续时间"
+   },
+   "UI_AegisPolls_Empty": {
+    "en": "No polls yet.",
+    "ch": "目前還沒有投票.",
+    "cn": "暂无投票."
+   },
+   "UI_AegisPolls_EmptyEnded": {
+    "en": "No ended polls yet.",
+    "ch": "還沒有已結束的投票.",
+    "cn": "暂无已结束的投票."
+   },
+   "UI_AegisPolls_EmptyRunning": {
+    "en": "No poll is running right now.",
+    "ch": "目前沒有進行中的投票.",
+    "cn": "当前没有进行中的投票."
+   },
+   "UI_AegisPolls_EndConfirm": {
+    "en": "End this poll now?",
+    "ch": "要立即結束這項投票嗎?",
+    "cn": "立即结束此投票?"
+   },
+   "UI_AegisPolls_EndNow": {
+    "en": "End now",
+    "ch": "立即結束",
+    "cn": "立即结束"
+   },
+   "UI_AegisPolls_EndTitle": {
+    "en": "End poll",
+    "ch": "結束投票",
+    "cn": "结束投票"
+   },
+   "UI_AegisPolls_EndedAgo": {
+    "en": "%1 ago",
+    "ch": "%1 前",
+    "cn": "%1前"
+   },
+   "UI_AegisPolls_EndsIn": {
+    "en": "ends in %1",
+    "ch": "%1 後結束",
+    "cn": "%1后结束"
+   },
+   "UI_AegisPolls_Err_bad": {
+    "en": "Please enter a question and at least 2 answers.",
+    "ch": "請輸入問題和至少 2 個選項.",
+    "cn": "请输入问题和至少2个选项."
+   },
+   "UI_AegisPolls_Err_ended": {
+    "en": "This poll has already ended.",
+    "ch": "這項投票已經結束.",
+    "cn": "此投票已结束."
+   },
+   "UI_AegisPolls_Err_full": {
+    "en": "5 polls are already running.",
+    "ch": "已有 5 項投票正在進行.",
+    "cn": "已有5个投票正在进行."
+   },
+   "UI_AegisPolls_Err_missing": {
+    "en": "This poll no longer exists.",
+    "ch": "這項投票已不存在.",
+    "cn": "此投票已不存在."
+   },
+   "UI_AegisPolls_Err_off": {
+    "en": "The player panel is off on this server.",
+    "ch": "本伺服器已關閉玩家面板.",
+    "cn": "此服务器已关闭玩家面板."
+   },
+   "UI_AegisPolls_Err_solo": {
+    "en": "This only works on a server.",
+    "ch": "這只能在伺服器上使用.",
+    "cn": "此功能仅在服务器上可用."
+   },
+   "UI_AegisPolls_Err_store": {
+    "en": "Saving failed.",
+    "ch": "儲存失敗.",
+    "cn": "保存失败."
+   },
+   "UI_AegisPolls_Err_voted": {
+    "en": "You have already voted here.",
+    "ch": "你已經投過票了.",
+    "cn": "你已经投过票了."
+   },
+   "UI_AegisPolls_Err_wait": {
+    "en": "Please wait %1 s more.",
+    "ch": "請再等 %1 秒.",
+    "cn": "请再等待%1秒."
+   },
+   "UI_AegisPolls_Head": {
+    "en": "%1 running, %2 ended",
+    "ch": "%1 項進行中, %2 項已結束",
+    "cn": "%1个进行中, %2个已结束"
+   },
+   "UI_AegisPolls_HideResults": {
+    "en": "Result for players only after the end",
+    "ch": "結束後才向玩家公開結果",
+    "cn": "结束后才向玩家公开结果"
+   },
+   "UI_AegisPolls_Live": {
+    "en": "You see the result live.",
+    "ch": "你可以即時看到結果.",
+    "cn": "你可以实时查看结果."
+   },
+   "UI_AegisPolls_MyVote": {
+    "en": "Your vote",
+    "ch": "你的投票",
+    "cn": "你的投票"
+   },
+   "UI_AegisPolls_MyVoteIs": {
+    "en": "Your vote: %1",
+    "ch": "你的投票: %1",
+    "cn": "你的投票: %1"
+   },
+   "UI_AegisPolls_Nav": {
+    "en": "Polls",
+    "ch": "投票",
+    "cn": "投票"
+   },
+   "UI_AegisPolls_New": {
+    "en": "New poll",
+    "ch": "新增投票",
+    "cn": "新建投票"
+   },
+   "UI_AegisPolls_NoEnd": {
+    "en": "no fixed end",
+    "ch": "無固定結束時間",
+    "cn": "无固定结束时间"
+   },
+   "UI_AegisPolls_NoticeNew": {
+    "en": "New poll: %1",
+    "ch": "新投票: %1",
+    "cn": "新投票: %1"
+   },
+   "UI_AegisPolls_NoticeOpen": {
+    "en": "A poll is waiting for your vote.",
+    "ch": "有一項投票正在等你投票.",
+    "cn": "有一个投票等待你参与."
+   },
+   "UI_AegisPolls_OnePerAccount": {
+    "en": "One vote per account.",
+    "ch": "每個帳號限投一票.",
+    "cn": "每个账号限投一票."
+   },
+   "UI_AegisPolls_Pct": {
+    "en": "%1%%",
+    "ch": "%1%%",
+    "cn": "%1%%"
+   },
+   "UI_AegisPolls_PillEnded": {
+    "en": "ENDED",
+    "ch": "已結束",
+    "cn": "已结束"
+   },
+   "UI_AegisPolls_PillRunning": {
+    "en": "RUNNING",
+    "ch": "進行中",
+    "cn": "进行中"
+   },
+   "UI_AegisPolls_Publish": {
+    "en": "Publish",
+    "ch": "發布",
+    "cn": "发布"
+   },
+   "UI_AegisPolls_Question": {
+    "en": "Question",
+    "ch": "問題",
+    "cn": "问题"
+   },
+   "UI_AegisPolls_QuestionPh": {
+    "en": "Enter a question",
+    "ch": "輸入問題",
+    "cn": "输入问题"
+   },
+   "UI_AegisPolls_ResultAfter": {
+    "en": "You will see the result after it ends.",
+    "ch": "投票結束後你才能看到結果.",
+    "cn": "投票结束后你才能看到结果."
+   },
+   "UI_AegisPolls_ResultAfterVote": {
+    "en": "You will see the result after you vote.",
+    "ch": "投票後你才能看到結果.",
+    "cn": "投票后你才能看到结果."
+   },
+   "UI_AegisPolls_SoloHint": {
+    "en": "Polls only exist on a server.",
+    "ch": "投票只在伺服器上可用.",
+    "cn": "投票仅在服务器上可用."
+   },
+   "UI_AegisPolls_TabEnded": {
+    "en": "Ended",
+    "ch": "已結束",
+    "cn": "已结束"
+   },
+   "UI_AegisPolls_TabRunning": {
+    "en": "Running",
+    "ch": "進行中",
+    "cn": "进行中"
+   },
+   "UI_AegisPolls_ToastDeleted": {
+    "en": "Poll deleted.",
+    "ch": "投票已刪除.",
+    "cn": "投票已删除."
+   },
+   "UI_AegisPolls_ToastEnded": {
+    "en": "Poll ended.",
+    "ch": "投票已結束.",
+    "cn": "投票已结束."
+   },
+   "UI_AegisPolls_ToastPublished": {
+    "en": "Poll published.",
+    "ch": "投票已發布.",
+    "cn": "投票已发布."
+   },
+   "UI_AegisPolls_ToastVoted": {
+    "en": "Your vote is counted.",
+    "ch": "已計入你的投票.",
+    "cn": "你的投票已计入."
+   },
+   "UI_AegisPolls_Vote": {
+    "en": "Vote",
+    "ch": "投票",
+    "cn": "投票"
+   },
+   "UI_AegisPolls_Voted": {
+    "en": "%1 have voted so far.",
+    "ch": "目前已有 %1 人投票.",
+    "cn": "目前已有%1人投票."
+   },
+   "UI_AegisPolls_Voted1": {
+    "en": "1 has voted so far.",
+    "ch": "目前已有 1 人投票.",
+    "cn": "目前已有1人投票."
+   },
+   "UI_AegisPolls_Votes": {
+    "en": "%1 votes",
+    "ch": "%1 票",
+    "cn": "%1票"
+   },
+   "UI_AegisPolls_Votes1": {
+    "en": "1 vote",
+    "ch": "1 票",
+    "cn": "1票"
+   },
+   "UI_Aegis_CapacityReset": {
+    "en": "Reset to default",
+    "ch": "重設為預設值",
+    "cn": "重置为默认值"
+   },
+   "UI_Aegis_CapacityResetDone": {
+    "en": "Capacity back to default.",
+    "ch": "容量已恢復預設值.",
+    "cn": "容量已恢复默认值."
+   },
+   "UI_Aegis_ClaimsDrop": {
+    "en": "Remove claim",
+    "ch": "移除認領",
+    "cn": "移除认领"
+   },
+   "UI_Aegis_ClaimsDropConfirm": {
+    "en": "Really remove the claim of %1?",
+    "ch": "確定要移除 %1 的認領嗎?",
+    "cn": "确定要移除%1的认领吗?"
+   },
+   "UI_Aegis_ClaimsEmpty": {
+    "en": "No claimed vehicles",
+    "ch": "沒有已認領的車輛",
+    "cn": "没有已认领的载具"
+   },
+   "UI_Aegis_ContAll": {
+    "en": "All",
+    "ch": "全部",
+    "cn": "全部"
+   },
+   "UI_Aegis_ContBags": {
+    "en": "Bags",
+    "ch": "背包",
+    "cn": "背包"
+   },
+   "UI_Aegis_ContEmpty": {
+    "en": "No changed containers yet",
+    "ch": "尚無已變更的容器",
+    "cn": "暂无已更改的容器"
+   },
+   "UI_Aegis_ContForget": {
+    "en": "Remove from list",
+    "ch": "從清單移除",
+    "cn": "从列表移除"
+   },
+   "UI_Aegis_ContForgetTip": {
+    "en": "Only takes the entry off this list, the capacity stays.",
+    "ch": "只會從這份清單移除此項目, 容量維持不變.",
+    "cn": "只会从此列表移除该条目, 容量保持不变."
+   },
+   "UI_Aegis_ContHolder": {
+    "en": "Last held by %1",
+    "ch": "最後持有者: %1",
+    "cn": "最后持有者: %1"
+   },
+   "UI_Aegis_ContLastSeen": {
+    "en": "Last seen at %1",
+    "ch": "最後出現位置: %1",
+    "cn": "最后出现位置: %1"
+   },
+   "UI_Aegis_ContPending": {
+    "en": "Reset runs when this area loads",
+    "ch": "此區域載入時才會執行重設",
+    "cn": "该区域加载时执行重置"
+   },
+   "UI_Aegis_ContPick": {
+    "en": "Pick a container first",
+    "ch": "請先選擇一個容器",
+    "cn": "请先选择一个容器"
+   },
+   "UI_Aegis_ContResetFailed": {
+    "en": "Could not reset, the container is out of reach.",
+    "ch": "無法重設, 容器不在範圍內.",
+    "cn": "无法重置, 容器不在范围内."
+   },
+   "UI_Aegis_ContResetPending": {
+    "en": "Noted, the reset runs when the container loads.",
+    "ch": "已記下, 容器載入時會執行重設.",
+    "cn": "已记录, 容器加载时将执行重置."
+   },
+   "UI_Aegis_ContUnknown": {
+    "en": "unknown",
+    "ch": "未知",
+    "cn": "未知"
+   },
+   "UI_Aegis_ContVehicles": {
+    "en": "Vehicles",
+    "ch": "車輛",
+    "cn": "载具"
+   },
+   "UI_Aegis_ContWorld": {
+    "en": "World",
+    "ch": "世界",
+    "cn": "世界"
+   },
+   "UI_Aegis_MoreCopied": {
+    "en": "Link copied.",
+    "ch": "已複製連結.",
+    "cn": "已复制链接."
+   },
+   "UI_Aegis_MoreCopy": {
+    "en": "Copy link",
+    "ch": "複製連結",
+    "cn": "复制链接"
+   },
+   "UI_Aegis_MoreGroupDesc": {
+    "en": "Persistent teams and squads for multiplayer. A team HUD with health and direction arrows, orders and markers on the map and your own team chat.",
+    "ch": "多人遊戲用的常駐隊伍與小隊. 提供顯示生命值與方向箭頭的隊伍 HUD, 地圖上的命令與標記, 以及專屬的隊伍聊天.",
+    "cn": "多人游戏的常驻队伍与小队. 提供显示生命值和方向箭头的队伍HUD, 地图上的指令和标记, 以及专属的队伍聊天."
+   },
+   "UI_Aegis_MoreGroupTag": {
+    "en": "Team and squad management",
+    "ch": "隊伍與小隊管理",
+    "cn": "队伍与小队管理"
+   },
+   "UI_Aegis_MoreHint": {
+    "en": "Other mods by the Aegis author. Just a tip, Aegis works without them.",
+    "ch": "Aegis 作者的其他模組. 只是推薦, 沒有它們 Aegis 也能正常運作.",
+    "cn": "Aegis作者的其他模组. 仅作推荐, 没有它们Aegis也能正常运行."
+   },
+   "UI_Aegis_MoreOff": {
+    "en": "You can turn this page off in the optional extras.",
+    "ch": "你可以在附加功能中關閉此頁面.",
+    "cn": "你可以在附加功能中关闭此页面."
+   },
+   "UI_Aegis_MoreOpen": {
+    "en": "Open in Workshop",
+    "ch": "在創意工坊開啟",
+    "cn": "在创意工坊打开"
+   },
+   "UI_Aegis_NavContainers": {
+    "en": "Containers",
+    "ch": "容器",
+    "cn": "容器"
+   },
+   "UI_Aegis_NavMoreMods": {
+    "en": "More mods",
+    "ch": "更多模組",
+    "cn": "更多模组"
+   },
+   "UI_Aegis_NavVehClaims": {
+    "en": "Vehicle claims",
+    "ch": "車輛認領",
+    "cn": "载具认领"
+   },
+   "UI_Aegis_PartInstall": {
+    "en": "Install: %1",
+    "ch": "安裝: %1",
+    "cn": "安装: %1"
+   },
+   "UI_Aegis_PartMissing": {
+    "en": "Not installed",
+    "ch": "未安裝",
+    "cn": "未安装"
+   },
+   "UI_Aegis_SearchContainer": {
+    "en": "Search container, place or admin...",
+    "ch": "搜尋容器、地點或管理員…",
+    "cn": "搜索容器、地点或管理员…"
+   },
+   "UI_Aegis_WearFull": {
+    "en": "Fully equipped",
+    "ch": "全配",
+    "cn": "满配"
+   },
+   "UI_Aegis_WearFullTip": {
+    "en": "Like new, and every empty slot gets a part. On vehicle mods that means armor, roof racks and spare tires too.",
+    "ch": "如同全新, 且每個空的零件槽都會裝上零件. 在載具模組上, 這也包括裝甲、車頂架與備胎.",
+    "cn": "如同全新, 且每个空槽位都会装上部件. 对于载具模组, 这还包括装甲、车顶架和备胎."
+   },
+   "UI_Aegis_XMoreMods": {
+    "en": "More mods page",
+    "ch": "更多模組頁面",
+    "cn": "更多模组页面"
+   },
+   "UI_Aegis_XMoreModsDesc": {
+    "en": "Shows other mods by the Aegis author in the sidebar.",
+    "ch": "在側邊欄顯示 Aegis 作者的其他模組.",
+    "cn": "在侧边栏显示Aegis作者的其他模组."
+   },
+   "UI_MPOptim_Prof_DxSmartCap": {
+    "en": "A steadier frame rate: %s FPS",
+    "ch": "更平穩的影格率: %s FPS",
+    "cn": "更平稳的帧率: %s FPS"
+   },
+   "UI_MPOptim_Prof_DxSmartCapEv": {
+    "en": "Most of the time it ran at %s FPS, but it held %s FPS steadily. A cap at %s FPS keeps it even.",
+    "ch": "大部分時間以 %s FPS 執行, 但能穩定維持的是 %s FPS. 將上限設在 %s FPS 可讓它保持平穩.",
+    "cn": "大部分时间以%s FPS运行, 但能稳定保持的是%s FPS. 将上限设为%s FPS可以让它保持平稳."
+   },
+   "UI_MPOptim_Prof_DxSmartCapHitch": {
+    "en": "%s freezes a cap can't fix (%s s in total). The other findings say what caused them.",
+    "ch": "%s 次上限無法解決的停頓 (共 %s 秒). 其他發現會說明它們的成因.",
+    "cn": "%s次上限无法解决的停顿 (共%s秒). 其他发现会说明它们的成因."
+   },
+   "UI_MPOptim_Prof_DxSmartCapWhy": {
+    "en": "Swinging between fast and slow moments feels like stutter even when the average is high. A cap just under what the PC holds steadily evens that out and leaves the CPU and graphics card spare time. Laptops also run cooler.",
+    "ch": "在快與慢的時刻之間來回擺盪, 即使平均值很高, 也會感覺卡頓. 把上限設在略低於電腦能穩定維持的水準, 就能抹平這種起伏, 並讓 CPU 與顯示卡有空閒時間. 筆電的溫度也會比較低.",
+    "cn": "在快慢时刻之间来回波动, 即使平均值很高, 也会感觉卡顿. 把上限设在略低于电脑能稳定保持的水平, 就能抹平这种起伏, 并让CPU和显卡有空闲时间. 笔记本的温度也会更低."
+   },
+   "UI_MPOptim_Prof_FixSmartCap": {
+    "en": "Caps the frame rate at %s FPS, measured from this recording.",
+    "ch": "依這次錄製的測量結果, 將影格率上限設為 %s FPS.",
+    "cn": "根据本次录制的测量结果, 将帧率上限设为%s FPS."
+   },
+   "UI_MPOptim_Section_ForYou": {
+    "en": "Recommended for this PC",
+    "ch": "此電腦的建議設定",
+    "cn": "此电脑的推荐设置"
+   },
+   "UI_MPOptim_Section_Framerate": {
+    "en": "Frame rate",
+    "ch": "影格率",
+    "cn": "帧率"
+   },
+   "UI_MPOptim_SetTip_FPS_SmartCap": {
+    "en": "Caps the frame rate at what this PC holds steadily, measured from a performance recording, so the game stops swinging between fast and slow moments. It picks a rate that divides your screen's refresh rate when it can, and never goes above the game's own limit. Laptops run cooler and slow down less when hot. It can't fix freezes from loading the map, saving or mods; the recording's report says where those come from. Lifted while a new recording runs, and every new recording measures again.",
+    "ch": "依效能錄製的測量結果, 將影格率上限設在這台電腦能穩定維持的數值, 讓遊戲不再於快與慢的時刻之間來回擺盪. 可行時會選擇能整除螢幕更新率的數值, 且絕不超過遊戲本身的上限. 筆電溫度較低, 過熱時也較少降速. 它無法解決載入地圖、存檔或模組造成的停頓; 錄製報告會說明這些停頓的來源. 新的錄製進行時會暫時解除, 每次新的錄製都會重新測量.",
+    "cn": "根据性能录制的测量结果, 将帧率上限设在这台电脑能稳定保持的数值, 让游戏不再在快慢时刻之间来回波动. 条件允许时会选择能整除屏幕刷新率的数值, 且绝不超过游戏自身的上限. 笔记本温度更低, 过热时也更少降速. 它无法解决加载地图、存档或模组造成的停顿; 录制报告会说明这些停顿的来源. 新的录制进行时会暂时解除, 每次新的录制都会重新测量."
+   },
+   "UI_MPOptim_Set_FPS_SmartCap": {
+    "en": "Smart FPS Cap",
+    "ch": "智慧 FPS 上限",
+    "cn": "智能FPS上限"
+   },
+   "UI_MPOptim_SmartCap_Busy": {
+    "en": "Recording now. Play normally until it finishes.",
+    "ch": "正在錄製. 請照常遊玩, 直到錄製結束.",
+    "cn": "正在录制. 请正常游玩, 直到录制结束."
+   },
+   "UI_MPOptim_SmartCap_DaysAgo": {
+    "en": "%s days ago",
+    "ch": "%s 天前",
+    "cn": "%s天前"
+   },
+   "UI_MPOptim_SmartCap_Held": {
+    "en": "The game's own limit of %s FPS held that recording. Set the game's frame rate to Uncapped and record again to let it find more.",
+    "ch": "那次錄製受到遊戲本身 %s FPS 上限的限制. 請將遊戲的「鎖定幀率」設為「不設上限」後重新錄製, 才能測出更高的數值.",
+    "cn": "那次录制受到游戏自身%s FPS上限的限制. 请将游戏的“锁定帧率”设为“不设上限”后重新录制, 才能测出更高的数值."
+   },
+   "UI_MPOptim_SmartCap_IsOn": {
+    "en": "Smart FPS Cap on: %s FPS.",
+    "ch": "已開啟智慧 FPS 上限: %s FPS.",
+    "cn": "智能FPS上限已开启: %s FPS."
+   },
+   "UI_MPOptim_SmartCap_Lifted": {
+    "en": "Lifted while a recording runs.",
+    "ch": "錄製期間暫時解除.",
+    "cn": "录制期间暂时解除."
+   },
+   "UI_MPOptim_SmartCap_NeedsRec": {
+    "en": "Make a performance recording first: Performance tab, at least 30 seconds of normal play.",
+    "ch": "請先進行一次效能錄製: 「效能」分頁, 至少 30 秒的正常遊玩.",
+    "cn": "请先进行一次性能录制: “性能”标签页, 至少30秒的正常游玩."
+   },
+   "UI_MPOptim_SmartCap_Never": {
+    "en": "Don't ask again",
+    "ch": "不再詢問",
+    "cn": "不再询问"
+   },
+   "UI_MPOptim_SmartCap_NotNow": {
+    "en": "Not now",
+    "ch": "以後再說",
+    "cn": "以后再说"
+   },
+   "UI_MPOptim_SmartCap_Offer": {
+    "en": "Recommended: Smart FPS Cap",
+    "ch": "建議: 智慧 FPS 上限",
+    "cn": "推荐: 智能FPS上限"
+   },
+   "UI_MPOptim_SmartCap_OnTip": {
+    "en": "Turn it on to keep the frame rate even instead of swinging between fast and slow moments.",
+    "ch": "開啟後影格率會保持平穩, 不會在快與慢的時刻之間來回擺盪.",
+    "cn": "开启后帧率会保持平稳, 不会在快慢时刻之间来回波动."
+   },
+   "UI_MPOptim_SmartCap_PromptLaptop": {
+    "en": "This PC looks like a laptop. Laptops get the most from the Smart FPS Cap: the frame rate stays even, and the PC stays cooler, so it doesn't slow itself down when it gets hot.",
+    "ch": "這台電腦看起來是筆電. 筆電最能從智慧 FPS 上限受益: 影格率保持平穩, 電腦溫度也比較低, 所以不會因為過熱而自行降速.",
+    "cn": "这台电脑看起来是笔记本. 笔记本从智能FPS上限中获益最多: 帧率保持平稳, 电脑温度也更低, 因此不会因为过热而自行降速."
+   },
+   "UI_MPOptim_SmartCap_PromptReady": {
+    "en": "Your recording shows the game swinging between %s FPS and the %s FPS it holds steadily. Capping it at %s FPS keeps it even.",
+    "ch": "你的錄製顯示遊戲在 %s FPS 與能穩定維持的 %s FPS 之間來回擺盪. 將上限設為 %s FPS 可讓它保持平穩.",
+    "cn": "你的录制显示游戏在%s FPS和能稳定保持的%s FPS之间来回波动. 将上限设为%s FPS可以让它保持平稳."
+   },
+   "UI_MPOptim_SmartCap_PromptRecord": {
+    "en": "To set it up, PZO records two minutes of normal play and works out the frame rate this PC holds steadily. Keep playing as usual; you are told when it is done.",
+    "ch": "為了完成設定, PZO 會錄製兩分鐘的正常遊玩, 並算出這台電腦能穩定維持的影格率. 請照常繼續遊玩; 完成時會通知你.",
+    "cn": "为了完成设置, PZO会录制两分钟的正常游玩, 并算出这台电脑能稳定保持的帧率. 请照常继续游玩; 完成后会通知你."
+   },
+   "UI_MPOptim_SmartCap_PromptTitle": {
+    "en": "A steadier frame rate for this PC",
+    "ch": "讓這台電腦的影格率更平穩",
+    "cn": "让这台电脑的帧率更平稳"
+   },
+   "UI_MPOptim_SmartCap_RecTip": {
+    "en": "Record two minutes of normal play and PZO works out the frame rate this PC holds steadily, then caps the game there so it stops swinging between fast and slow moments. Laptops also run cooler.",
+    "ch": "錄製兩分鐘的正常遊玩, PZO 就會算出這台電腦能穩定維持的影格率, 再把遊戲的上限設在那裡, 讓它不再於快與慢的時刻之間來回擺盪. 筆電的溫度也會比較低.",
+    "cn": "录制两分钟的正常游玩, PZO就会算出这台电脑能稳定保持的帧率, 再把游戏的上限设在那里, 让它不再在快慢时刻之间来回波动. 笔记本的温度也会更低."
+   },
+   "UI_MPOptim_SmartCap_RecordNow": {
+    "en": "Record now",
+    "ch": "立即錄製",
+    "cn": "立即录制"
+   },
+   "UI_MPOptim_SmartCap_Recording": {
+    "en": "Recording: play normally for two minutes. PZO tells you when it is done.",
+    "ch": "錄製中: 請照常遊玩兩分鐘. 完成時 PZO 會通知你.",
+    "cn": "录制中: 请正常游玩两分钟. 完成后PZO会通知你."
+   },
+   "UI_MPOptim_SmartCap_Slow": {
+    "en": "The last recording stayed under 30 FPS most of the time, so a cap would not help. Its report says what slows the game down.",
+    "ch": "上次錄製大部分時間都低於 30 FPS, 所以設定上限沒有幫助. 它的報告會說明是什麼拖慢了遊戲.",
+    "cn": "上次录制大部分时间都低于30 FPS, 所以设置上限没有帮助. 它的报告会说明是什么拖慢了游戏."
+   },
+   "UI_MPOptim_SmartCap_Stale": {
+    "en": "Record again: your screen size or mods changed since the last recording.",
+    "ch": "請重新錄製: 自上次錄製以來, 你的遊戲畫面解析度或模組已變更.",
+    "cn": "请重新录制: 自上次录制以来, 你的游戏画面分辨率或模组已更改."
+   },
+   "UI_MPOptim_SmartCap_StaleOn": {
+    "en": "Not capping: your screen size or mods changed since the last recording. Record again.",
+    "ch": "未套用上限: 自上次錄製以來, 你的遊戲畫面解析度或模組已變更. 請重新錄製.",
+    "cn": "未应用上限: 自上次录制以来, 你的游戏画面分辨率或模组已更改. 请重新录制."
+   },
+   "UI_MPOptim_SmartCap_Status": {
+    "en": "Measured cap: %s FPS. Your PC held %s FPS steadily in a recording %s.",
+    "ch": "測得的上限: %s FPS. 你的電腦穩定維持 %s FPS (%s的錄製).",
+    "cn": "测得的上限: %s FPS. 你的电脑稳定保持%s FPS (%s的录制)."
+   },
+   "UI_MPOptim_SmartCap_Strong": {
+    "en": "Strongly recommended: Smart FPS Cap",
+    "ch": "強烈建議: 智慧 FPS 上限",
+    "cn": "强烈推荐: 智能FPS上限"
+   },
+   "UI_MPOptim_SmartCap_Today": {
+    "en": "today",
+    "ch": "今天",
+    "cn": "今天"
+   },
+   "UI_MPOptim_SmartCap_TurnOn": {
+    "en": "Turn on",
+    "ch": "開啟",
+    "cn": "开启"
+   },
+   "UI_MPOptim_SmartCap_Where": {
+    "en": "Where the setting is",
+    "ch": "設定在哪裡",
+    "cn": "设置在哪里"
+   },
+   "UI_MPOptim_SmartCap_WhereTip": {
+    "en": "Graphics & CPU, Frame rate. You can turn it off there at any time.",
+    "ch": "「圖形與 CPU」分頁的「影格率」區塊. 你隨時可以在那裡關閉它.",
+    "cn": "“图形与CPU”标签页的“帧率”区块. 你可以随时在那里关闭它."
+   },
+   "UI_MPOptim_SmartCap_Yesterday": {
+    "en": "yesterday",
+    "ch": "昨天",
+    "cn": "昨天"
+   },
+   "UI_MPOptim_V2_CheckAgain": {
+    "en": "Check again",
+    "ch": "重新檢查",
+    "cn": "重新检查"
+   },
+   "UI_MPOptim_V2_CheckNotFound": {
+    "en": "Still not found. If the engine switched itself off when the game started, restart the game; otherwise see the help above.",
+    "ch": "仍然找不到. 如果引擎在遊戲啟動時自行關閉, 請重新啟動遊戲; 否則請參閱上方的說明.",
+    "cn": "仍未找到. 如果引擎在游戏启动时自行关闭, 请重启游戏; 否则请参阅上方的帮助."
+   },
+   "UI_MPOptim_V2_Checking": {
+    "en": "Checking...",
+    "ch": "檢查中…",
+    "cn": "检查中…"
+   },
+   "UI_DansShop_Processing": {
+    "en": "Processing purchase...",
+    "ch": "正在處理購買…",
+    "cn": "正在处理购买…"
+   },
+   "UI_DansShop_Product_matScrew_Desc": {
+    "en": "One loose screw. Small, but somebody always needs one.",
+    "ch": "一顆散裝螺絲. 雖小, 但總有人需要.",
+    "cn": "一颗散装螺丝. 虽小, 但总有人需要."
+   },
+   "UI_DansShop_Product_matScrew_Name": {
+    "en": "Screw",
+    "ch": "螺絲",
+    "cn": "螺丝"
+   },
+   "UI_DansShop_Product_matScrew_Price": {
+    "en": "$1",
+    "ch": "$1",
+    "cn": "$1"
+   },
+   "UI_DansShop_Product_toolBlowTorch_Desc": {
+    "en": "A propane torch for metalwork. Keep fuel nearby.",
+    "ch": "金工用的丙烷噴燈. 燃料記得放在手邊.",
+    "cn": "金工用的丙烷喷灯. 燃料记得放在手边."
+   },
+   "UI_DansShop_Product_toolBlowTorch_Name": {
+    "en": "Welding Torch",
+    "ch": "丙烷噴燈",
+    "cn": "丙烷喷灯"
+   },
+   "UI_DansShop_Product_toolBlowTorch_Price": {
+    "en": "$145",
+    "ch": "$145",
+    "cn": "$145"
+   },
+   "UI_DansShop_Product_toolFishingRod_Desc": {
+    "en": "A plain fishing rod. Find some water and try your luck.",
+    "ch": "普通的魚竿. 找片水域碰碰運氣吧.",
+    "cn": "普通的鱼竿. 找片水域碰碰运气吧."
+   },
+   "UI_DansShop_Product_toolFishingRod_Name": {
+    "en": "Fishing Rod",
+    "ch": "魚竿",
+    "cn": "鱼竿"
+   },
+   "UI_DansShop_Product_toolFishingRod_Price": {
+    "en": "$65",
+    "ch": "$65",
+    "cn": "$65"
+   },
+   "UI_DansShop_Product_toolGardenSaw_Desc": {
+    "en": "A wood saw. Keep the teeth sharp.",
+    "ch": "鋸木頭用的鋸子. 鋸齒要保持鋒利.",
+    "cn": "锯木头用的锯子. 锯齿要保持锋利."
+   },
+   "UI_DansShop_Product_toolGardenSaw_Name": {
+    "en": "Wood Saw",
+    "ch": "園藝鋸",
+    "cn": "园艺锯"
+   },
+   "UI_DansShop_Product_toolGardenSaw_Price": {
+    "en": "$15",
+    "ch": "$15",
+    "cn": "$15"
+   },
+   "UI_DansShop_Product_toolHammer_Desc": {
+    "en": "A carpenter's hammer. Nails, boards and the occasional skull.",
+    "ch": "木工用的羊角錘. 敲釘子, 釘木板, 偶爾也敲頭骨.",
+    "cn": "木工用的羊角锤. 敲钉子, 钉木板, 偶尔也敲头骨."
+   },
+   "UI_DansShop_Product_toolHammer_Name": {
+    "en": "Hammer",
+    "ch": "羊角錘",
+    "cn": "羊角锤"
+   },
+   "UI_DansShop_Product_toolHammer_Price": {
+    "en": "$12",
+    "ch": "$12",
+    "cn": "$12"
+   },
+   "UI_DansShop_Product_toolHandShovel_Desc": {
+    "en": "A small garden trowel for working the soil.",
+    "ch": "翻土用的小園藝鏟.",
+    "cn": "翻土用的小园艺铲."
+   },
+   "UI_DansShop_Product_toolHandShovel_Name": {
+    "en": "Garden Trowel",
+    "ch": "園藝鏟",
+    "cn": "园艺铲"
+   },
+   "UI_DansShop_Product_toolHandShovel_Price": {
+    "en": "$16",
+    "ch": "$16",
+    "cn": "$16"
+   },
+   "UI_DansShop_Product_toolNeedle_Desc": {
+    "en": "A small sewing needle. Easy to drop, hard to replace.",
+    "ch": "一根小縫衣針. 很容易弄掉, 卻很難找到新的.",
+    "cn": "一根小缝衣针. 很容易弄掉, 却很难找到新的."
+   },
+   "UI_DansShop_Product_toolNeedle_Name": {
+    "en": "Needle",
+    "ch": "針",
+    "cn": "针"
+   },
+   "UI_DansShop_Product_toolNeedle_Price": {
+    "en": "$3",
+    "ch": "$3",
+    "cn": "$3"
+   },
+   "UI_DansShop_Product_toolPipeWrench_Desc": {
+    "en": "A heavy pipe wrench. Grips where smaller tools slip.",
+    "ch": "沉重的管鉗. 小工具打滑的地方, 它照樣咬得住.",
+    "cn": "沉重的管钳. 小工具打滑的地方, 它照样咬得住."
+   },
+   "UI_DansShop_Product_toolPipeWrench_Name": {
+    "en": "Pipe Wrench",
+    "ch": "管鉗",
+    "cn": "管钳"
+   },
+   "UI_DansShop_Product_toolPipeWrench_Price": {
+    "en": "$35",
+    "ch": "$35",
+    "cn": "$35"
+   },
+   "UI_DansShop_Product_toolPliers_Desc": {
+    "en": "Pliers for gripping, bending and pulling stubborn parts.",
+    "ch": "鉗子, 用來夾住, 折彎和拔出頑固的零件.",
+    "cn": "钳子, 用来夹住, 折弯和拔出顽固的零件."
+   },
+   "UI_DansShop_Product_toolPliers_Name": {
+    "en": "Pliers",
+    "ch": "鉗子",
+    "cn": "钳子"
+   },
+   "UI_DansShop_Product_toolPliers_Price": {
+    "en": "$25",
+    "ch": "$25",
+    "cn": "$25"
+   },
+   "UI_DansShop_Product_toolSaw_Desc": {
+    "en": "A hacksaw for cutting metal. Slow work, but it gets through.",
+    "ch": "切割金屬用的鋼鋸. 慢歸慢, 但總能鋸斷.",
+    "cn": "切割金属用的手锯. 慢归慢, 但总能锯断."
+   },
+   "UI_DansShop_Product_toolSaw_Name": {
+    "en": "Hacksaw",
+    "ch": "鋼鋸",
+    "cn": "手锯"
+   },
+   "UI_DansShop_Product_toolSaw_Price": {
+    "en": "$22",
+    "ch": "$22",
+    "cn": "$22"
+   },
+   "UI_DansShop_Product_toolScissors_Desc": {
+    "en": "A pair of scissors. Cloth will not cut itself.",
+    "ch": "一把剪刀. 布可不會自己裁開.",
+    "cn": "一把剪刀. 布可不会自己裁开."
+   },
+   "UI_DansShop_Product_toolScissors_Name": {
+    "en": "Scissors",
+    "ch": "剪刀",
+    "cn": "剪刀"
+   },
+   "UI_DansShop_Product_toolScissors_Price": {
+    "en": "$6",
+    "ch": "$6",
+    "cn": "$6"
+   },
+   "UI_DansShop_Product_toolScrewdriver_Desc": {
+    "en": "A screwdriver for screws and fiddly repairs.",
+    "ch": "螺絲起子, 用來轉螺絲和處理瑣碎的修理.",
+    "cn": "螺丝刀, 用来拧螺丝和处理琐碎的修理."
+   },
+   "UI_DansShop_Product_toolScrewdriver_Name": {
+    "en": "Screwdriver",
+    "ch": "螺絲起子",
+    "cn": "螺丝刀"
+   },
+   "UI_DansShop_Product_toolScrewdriver_Price": {
+    "en": "$8",
+    "ch": "$8",
+    "cn": "$8"
+   },
+   "UI_DansShop_Product_toolWeldingMask_Desc": {
+    "en": "A welding mask. Keep the sparks out of your eyes.",
+    "ch": "焊工面罩. 別讓火花噴進眼睛.",
+    "cn": "焊工面罩. 别让火花溅进眼睛."
+   },
+   "UI_DansShop_Product_toolWeldingMask_Name": {
+    "en": "Welding Mask",
+    "ch": "焊工面罩",
+    "cn": "焊工面罩"
+   },
+   "UI_DansShop_Product_toolWeldingMask_Price": {
+    "en": "$110",
+    "ch": "$110",
+    "cn": "$110"
+   },
+   "UI_DansShop_Product_toolWrench_Desc": {
+    "en": "A wrench. Plenty of bolts still need turning.",
+    "ch": "一把扳手. 還有一大堆螺栓等著轉.",
+    "cn": "一把扳手. 还有一大堆螺栓等着拧."
+   },
+   "UI_DansShop_Product_toolWrench_Name": {
+    "en": "Wrench",
+    "ch": "扳手",
+    "cn": "扳手"
+   },
+   "UI_DansShop_Product_toolWrench_Price": {
+    "en": "$18",
+    "ch": "$18",
+    "cn": "$18"
+   },
+   "UI_DansShop_Tools": {
+    "en": "TOOLS",
+    "ch": "工具",
+    "cn": "工具"
+   },
+   "UI_ImmersiveSnow_VPNoJava": {
+    "en": "The add-on is enabled, but its Java part is not loaded, so there is no snow in Viewpoint's 3D view. Allow it when ZombieBuddy asks at game start (and check that ZombieBuddy is installed and started with the game), then restart the game.",
+    "ch": "附加模組已啟用, 但其 Java 部分沒有載入, 因此 Viewpoint 3D 視角中不會有雪. 請在遊戲啟動時 ZombieBuddy 詢問時允許它 (並確認 ZombieBuddy 已安裝且隨遊戲一起啟動), 然後重新啟動遊戲.",
+    "cn": "附加模组已启用, 但其 Java 部分没有加载, 因此 Viewpoint 3D 视角中没有雪. 请在游戏启动时 ZombieBuddy 询问时允许它 (并确认 ZombieBuddy 已安装且随游戏一同启动), 然后重启游戏."
+   },
+   "UI_ImmersiveSnow_VPNoJavaMP": {
+    "en": "The add-on is on this server, but its Java part is not loaded, so there is no snow in Viewpoint's 3D view. ZombieBuddy loads Java mods only when the game starts: enable Immersive Snow - Viewpoint in Main menu > Mods as well, then restart the game and join again.",
+    "ch": "此伺服器有啟用這個附加模組, 但其 Java 部分沒有載入, 因此 Viewpoint 3D 視角中不會有雪. ZombieBuddy 只會在遊戲啟動時載入 Java 模組: 請也在「主選單 > 模組」中啟用 Immersive Snow - Viewpoint, 然後重新啟動遊戲並重新加入.",
+    "cn": "此服务器启用了该附加模组, 但其 Java 部分没有加载, 因此 Viewpoint 3D 视角中没有雪. ZombieBuddy 只在游戏启动时加载 Java 模组: 请同时在“主菜单 > 模组”中启用 Immersive Snow - Viewpoint, 然后重启游戏并重新加入."
+   },
+   "UI_ImmersiveSnow_VPTitle": {
+    "en": "Immersive Snow - Viewpoint",
+    "ch": "Immersive Snow - Viewpoint",
+    "cn": "Immersive Snow - Viewpoint"
+   },
+   "UI_ImmersiveSnow_VPUnknownViewpoint": {
+    "en": "This version of Project Viewpoint is not supported by the add-on yet, so the snow is off in Viewpoint's 3D view. It comes back when the add-on is updated for it.",
+    "ch": "附加模組尚未支援此版本的 Project Viewpoint, 因此 Viewpoint 3D 視角中的雪已關閉. 附加模組更新支援後就會恢復.",
+    "cn": "附加模组尚未支持此版本的 Project Viewpoint, 因此 Viewpoint 3D 视角中的雪已关闭. 附加模组更新适配后即会恢复."
+   },
+   "UI_ImmersiveSnow_VPUpdateAddon": {
+    "en": "This Immersive Snow is newer than the Immersive Snow - Viewpoint add-on: update the add-on (unsubscribe and subscribe again in Steam if it does not update). Until then there is no snow in Viewpoint's 3D view.",
+    "ch": "此 Immersive Snow 的版本比 Immersive Snow - Viewpoint 附加模組新: 請更新附加模組 (若沒有更新, 請在 Steam 取消訂閱後重新訂閱). 在此之前, Viewpoint 3D 視角中不會有雪.",
+    "cn": "此 Immersive Snow 的版本比 Immersive Snow - Viewpoint 附加模组新: 请更新附加模组 (如果没有更新, 请在 Steam 中取消订阅后重新订阅). 在此之前, Viewpoint 3D 视角中没有雪."
+   },
+   "UI_ImmersiveSnow_VPUpdateMain": {
+    "en": "The Immersive Snow - Viewpoint add-on is newer than this Immersive Snow: update Immersive Snow. Until then there is no snow in Viewpoint's 3D view.",
+    "ch": "Immersive Snow - Viewpoint 附加模組的版本比此 Immersive Snow 新: 請更新 Immersive Snow. 在此之前, Viewpoint 3D 視角中不會有雪.",
+    "cn": "Immersive Snow - Viewpoint 附加模组的版本比此 Immersive Snow 新: 请更新 Immersive Snow. 在此之前, Viewpoint 3D 视角中没有雪."
+   },
+   "UI_SMA_DuelBusy": {
+    "en": "A duel is not possible right now.",
+    "ch": "目前無法進行決鬥.",
+    "cn": "目前无法进行决斗."
+   },
+   "UI_SMA_DuelChallenge": {
+    "en": "Challenge %1 to a martial duel",
+    "ch": "向 %1 發起武術決鬥",
+    "cn": "向 %1 发起武术决斗"
+   },
+   "UI_SMA_DuelDeclined": {
+    "en": "Challenge declined.",
+    "ch": "挑戰遭到拒絕.",
+    "cn": "挑战被拒绝."
+   },
+   "UI_SMA_DuelDraw": {
+    "en": "Round drawn.",
+    "ch": "本回合平手.",
+    "cn": "本回合平局."
+   },
+   "UI_SMA_DuelFight": {
+    "en": "FIGHT!",
+    "ch": "開打!",
+    "cn": "开打!"
+   },
+   "UI_SMA_DuelForfeit": {
+    "en": "Forfeit martial duel",
+    "ch": "武術決鬥認輸",
+    "cn": "武术决斗认输"
+   },
+   "UI_SMA_DuelInvite": {
+    "en": "%1 challenges you to a martial duel (best of %2). Accept?",
+    "ch": "%1 向你發起武術決鬥 (%2 回合多勝制). 要接受嗎?",
+    "cn": "%1 向你发起武术决斗 (%2 回合多胜制). 是否接受?"
+   },
+   "UI_SMA_DuelNoPvP": {
+    "en": "PvP is off on this server.",
+    "ch": "此伺服器已關閉 PvP.",
+    "cn": "此服务器已关闭 PvP."
+   },
+   "UI_SMA_DuelOver": {
+    "en": "Duel over.",
+    "ch": "決鬥結束.",
+    "cn": "决斗结束."
+   },
+   "UI_SMA_DuelReason_ko": {
+    "en": "(KO)",
+    "ch": "(KO)",
+    "cn": "(KO)"
+   },
+   "UI_SMA_DuelReason_ringout": {
+    "en": "(Ring out)",
+    "ch": "(出界)",
+    "cn": "(出界)"
+   },
+   "UI_SMA_DuelReason_time": {
+    "en": "(Time)",
+    "ch": "(時間到)",
+    "cn": "(时间到)"
+   },
+   "UI_SMA_DuelRingWarning": {
+    "en": "Stay in the ring!",
+    "ch": "留在擂台內!",
+    "cn": "留在擂台内!"
+   },
+   "UI_SMA_DuelRound": {
+    "en": "Round %1",
+    "ch": "第 %1 回合",
+    "cn": "第 %1 回合"
+   },
+   "UI_SMA_DuelRoundTo": {
+    "en": "Round to %1.",
+    "ch": "本回合由 %1 獲勝.",
+    "cn": "本回合由 %1 获胜."
+   },
+   "UI_SMA_DuelSent": {
+    "en": "Duel challenge sent.",
+    "ch": "已送出決鬥挑戰.",
+    "cn": "已发送决斗挑战."
+   },
+   "UI_SMA_DuelTooFar": {
+    "en": "Too far away to challenge.",
+    "ch": "距離太遠, 無法發起挑戰.",
+    "cn": "距离太远, 无法发起挑战."
+   },
+   "UI_SMA_DuelWinner": {
+    "en": "%1 wins the duel.",
+    "ch": "%1 贏得決鬥.",
+    "cn": "%1 赢得决斗."
+   },
+   "UI_SMA_DuelYouWin": {
+    "en": "You win the duel!",
+    "ch": "你贏得決鬥!",
+    "cn": "你赢得决斗!"
+   },
+   "UI_SMA_Guard": {
+    "en": "Guard",
+    "ch": "防守",
+    "cn": "防守"
+   },
+   "UI_SMA_GuardBroken": {
+    "en": "Guard broken!",
+    "ch": "防守被破!",
+    "cn": "防守被破!"
+   },
+   "UI_SMA_GuardPerfect": {
+    "en": "Perfect guard!",
+    "ch": "完美防守!",
+    "cn": "完美防守!"
+   },
+   "UI_SMA_PvPComboEscape": {
+    "en": "Combo broken!",
+    "ch": "連段被打斷!",
+    "cn": "连招被打断!"
+   },
+   "UI_optionscreen_binding_SMA_Block": {
+    "en": "Martial arts block (hold while in your stance; guard wears down and breaks)",
+    "ch": "武術格擋 (處於架式時按住; 防守會逐漸削弱, 最後被破)",
+    "cn": "武术格挡 (处于架势时按住; 防守会逐渐削弱, 最后被破)"
    }
   },
   "MakeUp.json": {
