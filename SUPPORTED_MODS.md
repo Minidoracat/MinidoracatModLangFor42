@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1492 個 Workshop 模組**（2149 個 mod ID）；另 **11 個已下架**（翻譯保留，見文末）。
+共支援 **1491 個 Workshop 模組**（2147 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -484,7 +484,6 @@
 | [[B42] SecretZ Pandemic (Alpha)](https://steamcommunity.com/sharedfiles/filedetails/?id=3494374578) | SecretZ 大流行（Alpha） | 新增劇情任務式內容，含鑰匙卡門禁與設施探索要素。 | `SecretZ_Operations_B42`, `Secretz42` | 104 | ⚠️ ≥1 | — |
 | [[B41/B42.16] Hephas Vitamins](https://steamcommunity.com/sharedfiles/filedetails/?id=3494803855) | Hephas 維生素 | 新增維生素道具，服用可回復健康並調整疲勞與壓力。 | `HephasVitamins` | 39 | — | — |
 | [[B42MP] Lantern Fix](https://steamcommunity.com/sharedfiles/filedetails/?id=3495594275) | — | — | `LanternFix` | 15 | — | — |
-| [Matheba's Cheat Menu](https://steamcommunity.com/sharedfiles/filedetails/?id=3495695428) | Matheba 的作弊選單 | 透過右鍵選單提供作弊功能，例如添加火焰、添加柴火、學會所有配方等。 | `MathebasInfiniteAmmo` | 230 | — | — |
 | [[B42] Survival HUD](https://steamcommunity.com/sharedfiles/filedetails/?id=3495906499) | 生存 HUD | 新增可自訂的生存狀態 HUD，顯示健康、飽食度、疲勞等需求。 | `SurvivalHUD` | 18 | — | — |
 | [榛果庄园Hazelnut Manor〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3495993590) | 榛果莊園 | 榛果莊園地圖，另附簡樸版。 | `HazelnutManor`, `HazelnutManor[Poor Version]` | 4 | — | — |
 | [Craftable Welding Rods](https://steamcommunity.com/sharedfiles/filedetails/?id=3496263414) | — | — | `WeldingRodMod` | 1 | — | — |
@@ -930,7 +929,7 @@
 | [UmaBoid B42 [ UNOFFICIAL PORT]](https://steamcommunity.com/sharedfiles/filedetails/?id=3722974110) | — | — | `UmaBoid_B42_Miroki` | 1 | — | — |
 | [Nihontō - Authentic Katana Overhaul [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3723127305) | 正宗日本刀大修 | 重做武士刀、脇差、短刀、大太刀等日本刀，加入刀鞘上漆與染色、丁子油保養、山茶花種子榨油與刀身鈍化保護。 | `Nihonto` | 332 | — | — |
 | [Neat Rocco's UI [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3723726293) | — | — | `Neat_Rocco` | 44 | — | — |
-| [Till Death Do Us Part - Marriage Companion](https://steamcommunity.com/sharedfiles/filedetails/?id=3723942896) | — | — | `TDDUPCompanionCombatCore`, `TDDUPMarriageCompanion`, `TDDUPMedicalFramework`, `TDDUPRelaxation`, `TDDUPUnified` | 2 | — | — |
+| [Till Death Do Us Part - Marriage Companion](https://steamcommunity.com/sharedfiles/filedetails/?id=3723942896) | — | — | `TDDUPCompanionCombatCore`, `TDDUPMarriageCompanion`, `TDDUPRelaxation`, `TDDUPUnified`, `TDDUPZBFullBridge` | 2 | — | — |
 | [Infoteo's Solar Arrays](https://steamcommunity.com/sharedfiles/filedetails/?id=3723961714) | — | — | `InfoteoImmersiveSolarArrays` | 132 | — | — |
 | [[B42.17+] Water Pipes - Fully fixed](https://steamcommunity.com/sharedfiles/filedetails/?id=3724525696) | — | — | `WaterpipesFix` | 52 | — | — |
 | [Plysken Solar Revolution](https://steamcommunity.com/sharedfiles/filedetails/?id=3725311427) | Plysken 太陽能革命 | 加入太陽能板、儲能設備與相關供電系統。 | `PSR` | 214 | — | — |
@@ -1473,7 +1472,7 @@
 | [True Sleep Everywhere](https://steamcommunity.com/sharedfiles/filedetails/?id=3816309551) | True Sleep Everywhere 真實睡眠動作 | 啟用遊戲內建卻未使用的睡眠動畫，角色會躺上床入睡再起身，也能席地打盹。 | `TrueSleepEverywhere` | 15 | — | — |
 | [My So-Called Fashion](https://steamcommunity.com/sharedfiles/filedetails/?id=3816335149) | My So-Called Fashion 我的時尚 | 新增將上衣綁腰、背包鬆背、眼鏡戴頭上、耳罩掛脖子等穿搭方式與原創服裝。 | `P4MySoCalledFashion` | 24 | — | — |
 | [Dog Tired Armory〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3816701056) | Dog Tired 軍械庫 | 沿牆組裝槍架、掛板、儲物櫃與櫃檯，打造連續的軍械庫；收納的槍枝以 3D 模型陳列，彈藥盒擺在架上。構件分木製、金屬、管架、軍用、收藏五種等級，都能上掛鎖。 | `DogTiredArmory` | 245 | — | — |
-| [[B42] Knox Inventory - Tarkov-style UI Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=3816775774) | Knox Inventory - 塔科夫風格介面大改 | 以《逃離塔科夫》風格重做介面，物品依實際尺寸放入格狀物品欄，並顯示 3D 角色。 | `KnoxInventory`, `KnoxInventoryBeta` | 1050 | — | — |
+| [[B42] Knox Inventory - Tarkov-style UI Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=3816775774) | Knox Inventory - 塔科夫風格介面大改 | 以《逃離塔科夫》風格重做介面，物品依實際尺寸放入格狀物品欄，並顯示 3D 角色。 | `KnoxInventoryBeta` | 1050 | — | — |
 | [Extreme Weather](https://steamcommunity.com/sharedfiles/filedetails/?id=3816847772) | 極端天氣 | 新增龍捲風、冰雹等致命風暴，會摧毀建築、拋飛車輛與殭屍，來襲前有緊急廣播預警。 | `ExtremeWeather` | ? | — | — |
 | [Burning Vehicles [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3817190138) | Burning Vehicles 車輛燃燒 | 加入完整的車輛起火模擬，火勢會在零件間蔓延並逐步燒毀整輛車。 | `VehicleFire` | 97 | — | — |
 | [Analog Memories](https://steamcommunity.com/sharedfiles/filedetails/?id=3817404599) | Analog Memories 類比回憶 | 加入動態模糊、景深、鏡頭晃動、底片顆粒、色差、光暈、眼睛適應與 VHS 模式等畫面效果，各效果可開關並調整強度。 | `CameraMotionBlur` | 81 | — | — |
@@ -1507,12 +1506,13 @@
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
-## 已下架模組（11 個，翻譯保留）
+## 已下架模組（12 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 | 下架偵測 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| [Matheba's Cheat Menu](https://steamcommunity.com/sharedfiles/filedetails/?id=3495695428) | Matheba 的作弊選單 | 透過右鍵選單提供作弊功能，例如添加火焰、添加柴火、學會所有配方等。 | `MathebasInfiniteAmmo` | 230 | — | — | 2026-11-09 |
 | [[Federal Rangers] CHIMERA V11 [B42.13.1+]](https://steamcommunity.com/sharedfiles/filedetails/?id=3564110652) | [Federal Rangers] CHIMERA V11 | 新增大量戰術服裝與裝備，如背包、頭盔耳機與護具。 | `Federal_Rangers_Chimera`, `Federal_Rangers_Chimera_PatchN1` | 110 | — | — | 2026-07-18 |
 | [Todo Caserito [Build 42/42.19 SP/MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3600616323) | Todo Caserito 家常料理 | 新增拉美風家常料理與配方，如薯條、塔可、玉米餅與布丁等。 | `Todo Caserito` | 410 | — | ⚠️ 有一項配方名稱（代號 MakeTortilla）與草藥師、Abuelita Linda 兩個 MOD 撞名、卻是不同的食物——本 MOD 的是阿根廷豬油餅（tortillas de grasa），那兩邊的同一代號是墨西哥玉米餅。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故此鍵不出貨、遊戲內顯示該 MOD 自己的英文原文。本 MOD 另有專門表示玉米餅的配方（MakeTortillaCasera），該項不受影響。 | 2026-09-12 |
 | [[42] Vanilla Firearms Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3611718925) | 原版槍械擴充 | 擴充原版風格槍械與彈藥，新增多款步槍、霰彈槍與各式彈匣。 | `VFExpansion2Reduxb42`, `VFExpansion3Reduxb42`, `VFExpansionReduxb42` | 457 | ⚠️ ≥24 | — | 2026-10-30 |
