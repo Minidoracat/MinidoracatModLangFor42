@@ -78,7 +78,7 @@ OUT_DATA = MOD_MEDIA / "CatModLang"
 OUT_PACK_SHARED = MOD_MEDIA / "lua" / "shared" / "CatModLang"
 OUT_PACK_CLIENT = OUT_LUA / "CatModLang"
 # 注入器寫得進去、且查詢時才讀表的翻譯表（`Translator.BY_NAME` 名；42.21.0 反編譯靜態查證，
-# 2026-10-23）。不在此集合的條目 build fail，不靜默丟。
+# 2026-10-23；42.22.2 重驗 Translator 與下方引用的定義類別都未變，2026-11-09）。不在此集合的條目 build fail，不靜默丟。
 VARIANT_FILES = frozenset({
     "IG_UI", "UI", "ItemName", "Tooltip", "Sandbox", "ContextMenu", "Recipes", "Moodles",
     "Recorded_Media", "Moveables", "Fluids", "Entity",

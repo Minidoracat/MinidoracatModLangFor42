@@ -1312,28 +1312,6 @@
     }
    ]
   },
-  "ContextMenu|ContextMenu_WBHM_TreatPartner": {
-   "kind": "conflict",
-   "signature": "af397052c439e223",
-   "groups": [
-    {
-     "owners": [
-      "3723942896/TDDUPMarriageCompanion"
-     ],
-     "en": "Medical Care: Treat Partner",
-     "ch": "醫療照護: 治療伴侶",
-     "cn": "医疗护理: 治疗伴侣"
-    },
-    {
-     "owners": [
-      "3723942896/TDDUPMedicalFramework"
-     ],
-     "en": "Treat Patient",
-     "ch": "治療病患",
-     "cn": "治疗病人"
-    }
-   ]
-  },
   "ContextMenu|ContextMenu_WearLeft": {
    "kind": "conflict",
    "signature": "5fa432a2e672936e",
@@ -4295,52 +4273,6 @@
      "en": "Weapons - Melee",
      "ch": "武器-近戰",
      "cn": "武器-近战"
-    }
-   ]
-  },
-  "IG_UI|IGUI_Knox_Choice_loot_scope_Info": {
-   "kind": "conflict",
-   "signature": "4436ab4388bb848e",
-   "groups": [
-    {
-     "owners": [
-      "3816775774/KnoxInventory"
-     ],
-     "en": "Which containers the Surroundings column lists. \"Only the opened one\": the one you opened by clicking it in the world or with Viewpoint's key, and the floor next to you. \"Auto\": that with Viewpoint's camera, everything around with the usual camera. In a car everything is always shown.",
-     "ch": "「周圍」欄會列出哪些容器. 「只限開啟的」: 你在世界中點選開啟或用 Viewpoint 的按鍵開啟的那個容器, 以及你旁邊的地板. 「自動」: 使用 Viewpoint 的鏡頭時同前者, 使用一般鏡頭時列出周圍全部. 在車內時一律全部顯示.",
-     "cn": "“周围”栏会列出哪些容器. “仅限打开的”: 你在世界中点击打开或用 Viewpoint 的按键打开的那个容器, 以及你旁边的地板. “自动”: 使用 Viewpoint 的镜头时同前者, 使用普通镜头时列出周围全部. 在车内时总是全部显示."
-    },
-    {
-     "owners": [
-      "3816775774/KnoxInventoryBeta"
-     ],
-     "en": "Which containers the Surroundings column lists. \"Only the opened one\": the one you opened by clicking it in the world or with Viewpoint's key, and the floor next to you. \"Auto\": that with Viewpoint's camera, everything around with the usual camera and with OldPoint's overhead camera. In a car everything is always shown.",
-     "ch": "「周圍」欄會列出哪些容器. 「只限開啟的」: 你在世界中點選開啟或用 Viewpoint 的按鍵開啟的那個容器, 以及你旁邊的地板. 「自動」: 使用 Viewpoint 的鏡頭時同前者, 使用一般鏡頭與 OldPoint 的俯視鏡頭時列出周圍全部. 在車內時一律全部顯示.",
-     "cn": "“周围”栏会列出哪些容器. “仅限打开的”: 你在世界中点击打开或用 Viewpoint 的按键打开的那个容器, 以及你旁边的地板. “自动”: 使用 Viewpoint 的镜头时同前者, 使用普通镜头和 OldPoint 的俯视镜头时列出周围全部. 在车内时总是全部显示."
-    }
-   ]
-  },
-  "IG_UI|IGUI_Knox_Module_hotbar_Info": {
-   "kind": "conflict",
-   "signature": "270e0a1a3254b39d",
-   "groups": [
-    {
-     "owners": [
-      "3816775774/KnoxInventory"
-     ],
-     "en": "The quick slots bar at the bottom of the screen in Knox's look, with your hands on it. Switch it off if you use another hotbar mod (Clean UI and the like): the game's bar, or that mod's, comes back.",
-     "ch": "畫面底部的 Knox 風格快捷欄位列, 包含你的雙手. 若你使用其他快捷欄模組 (Clean UI 等), 請關閉此項: 遊戲原本的快捷欄或該模組的快捷欄會回來.",
-     "cn": "屏幕底部的 Knox 风格快捷栏, 包含你的双手. 如果你使用其他快捷栏模组 (Clean UI 等), 请关闭此项: 游戏原版的快捷栏或该模组的快捷栏会恢复.",
-     "_note": "「快捷栏位行」不是簡中說法; 同 MOD 模組名 IGUI_Knox_Module_hotbar 與 ingame_Info 都用「快捷栏」"
-    },
-    {
-     "owners": [
-      "3816775774/KnoxInventoryBeta"
-     ],
-     "en": "The quick slots bar with your hands on it. Switch it off for Clean UI and other hotbar mods.",
-     "ch": "包含你雙手的快捷欄位列. 使用 Clean UI 等其他快捷欄模組時, 請關閉此項.",
-     "cn": "包含你双手的快捷栏. 使用 Clean UI 等其他快捷栏模组时, 请关闭此项.",
-     "_note": "同 gid 0: 「快捷栏位行」改為同 MOD 一致的「快捷栏」"
     }
    ]
   },
@@ -44336,7 +44268,7 @@
   },
   "Moodles|Moodles_NoxiousSmell_desc_lvl1": {
    "kind": "vanilla",
-   "signature": "0a7d971d318fca73",
+   "signature": "9348c1fdab34e04b",
    "vanilla_en": "Pee-ew. Something smells.",
    "skip_owners": [],
    "groups": [
@@ -44351,13 +44283,23 @@
     },
     {
      "owners": [
-      "3747745835/MoodleEffectsExplained",
+      "3747745835/MoodleEffectsExplained"
+     ],
+     "en": "Corpse sickness rate > 0<br>Food Sickness rises over time<br>Protection and traits can reduce it<br>Sleep blocked unless sufficiently sedated",
+     "ch": "屍毒累積速率 > 0<br>食物中毒值隨時間上升<br>防護裝備與特質可以減輕<br>除非鎮靜劑藥效足夠, 否則無法入睡",
+     "cn": "尸毒累积速率 > 0<br>食物中毒值随时间上升<br>防护装备和特质可以减轻<br>除非镇静剂药效足够, 否则无法入睡",
+     "_note": "2026-11-10 PZ 42.22.2 對版: 有效版本夾由 42.20 換成 42.22, 上游英文加了一句 Sleep blocked unless sufficiently sedated; 其餘句子沿用原核准譯文, 新增部分經雙模型審核.",
+     "approved": "2026-11-10 雙模型審核（GPT-6 Astra max＋Claude Fable 5.2）"
+    },
+    {
+     "owners": [
       "3747745835/MoodleEffectsExplained_DTEM",
       "3747745835/MoodleEffectsExplained_ExpandedMoodles"
      ],
      "en": "Corpse sickness rate > 0<br>Food Sickness rises over time<br>Protection and traits can reduce it",
      "ch": "屍毒累積速率 > 0<br>食物中毒值隨時間上升<br>防護裝備與特質可以減輕",
      "cn": "尸毒累积速率 > 0<br>食物中毒值随时间上升<br>防护装备和特质可以减轻",
+     "_note": "2026-11-10: 主 MOD 改讀 42.22 夾後英文不同、另立一組; 本組英文與譯文沒變, 核准沿用.",
      "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
     },
     {
@@ -44373,7 +44315,7 @@
   },
   "Moodles|Moodles_NoxiousSmell_desc_lvl2": {
    "kind": "vanilla",
-   "signature": "950ce1ad3800e403",
+   "signature": "b716ac376230b066",
    "vanilla_en": "Eurgh. Something smells awful.",
    "skip_owners": [],
    "groups": [
@@ -44388,13 +44330,23 @@
     },
     {
      "owners": [
-      "3747745835/MoodleEffectsExplained",
+      "3747745835/MoodleEffectsExplained"
+     ],
+     "en": "Corpse sickness rate > 0.001<br>Food Sickness rises faster over time<br>Protection and traits can reduce it<br>Sleep blocked unless sufficiently sedated",
+     "ch": "屍毒累積速率 > 0.001<br>食物中毒值隨時間更快上升<br>防護裝備與特質可以減輕<br>除非鎮靜劑藥效足夠, 否則無法入睡",
+     "cn": "尸毒累积速率 > 0.001<br>食物中毒值随时间更快上升<br>防护装备和特质可以减轻<br>除非镇静剂药效足够, 否则无法入睡",
+     "_note": "2026-11-10 PZ 42.22.2 對版: 有效版本夾由 42.20 換成 42.22, 上游英文加了一句 Sleep blocked unless sufficiently sedated; 其餘句子沿用原核准譯文, 新增部分經雙模型審核.",
+     "approved": "2026-11-10 雙模型審核（GPT-6 Astra max＋Claude Fable 5.2）"
+    },
+    {
+     "owners": [
       "3747745835/MoodleEffectsExplained_DTEM",
       "3747745835/MoodleEffectsExplained_ExpandedMoodles"
      ],
      "en": "Corpse sickness rate > 0.001<br>Food Sickness rises faster over time<br>Protection and traits can reduce it",
      "ch": "屍毒累積速率 > 0.001<br>食物中毒值隨時間更快上升<br>防護裝備與特質可以減輕",
      "cn": "尸毒累积速率 > 0.001<br>食物中毒值随时间更快上升<br>防护装备和特质可以减轻",
+     "_note": "2026-11-10: 主 MOD 改讀 42.22 夾後英文不同、另立一組; 本組英文與譯文沒變, 核准沿用.",
      "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
     },
     {
@@ -44410,7 +44362,7 @@
   },
   "Moodles|Moodles_NoxiousSmell_desc_lvl3": {
    "kind": "vanilla",
-   "signature": "a6597b79e1432123",
+   "signature": "7d7463d68e2f0e4d",
    "vanilla_en": "A vile stink makes you feel ill.",
    "skip_owners": [],
    "groups": [
@@ -44425,13 +44377,23 @@
     },
     {
      "owners": [
-      "3747745835/MoodleEffectsExplained",
+      "3747745835/MoodleEffectsExplained"
+     ],
+     "en": "Corpse sickness rate > 0.002<br>Food Sickness rises faster over time<br>Protection and traits can reduce it<br>Sleep blocked unless sufficiently sedated",
+     "ch": "屍毒累積速率 > 0.002<br>食物中毒值隨時間更快上升<br>防護裝備與特質可以減輕<br>除非鎮靜劑藥效足夠, 否則無法入睡",
+     "cn": "尸毒累积速率 > 0.002<br>食物中毒值随时间更快上升<br>防护装备和特质可以减轻<br>除非镇静剂药效足够, 否则无法入睡",
+     "_note": "2026-11-10 PZ 42.22.2 對版: 有效版本夾由 42.20 換成 42.22, 上游英文加了一句 Sleep blocked unless sufficiently sedated; 其餘句子沿用原核准譯文, 新增部分經雙模型審核.",
+     "approved": "2026-11-10 雙模型審核（GPT-6 Astra max＋Claude Fable 5.2）"
+    },
+    {
+     "owners": [
       "3747745835/MoodleEffectsExplained_DTEM",
       "3747745835/MoodleEffectsExplained_ExpandedMoodles"
      ],
      "en": "Corpse sickness rate > 0.002<br>Food Sickness rises faster over time<br>Protection and traits can reduce it",
      "ch": "屍毒累積速率 > 0.002<br>食物中毒值隨時間更快上升<br>防護裝備與特質可以減輕",
      "cn": "尸毒累积速率 > 0.002<br>食物中毒值随时间更快上升<br>防护装备和特质可以减轻",
+     "_note": "2026-11-10: 主 MOD 改讀 42.22 夾後英文不同、另立一組; 本組英文與譯文沒變, 核准沿用.",
      "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
     },
     {
@@ -44447,7 +44409,7 @@
   },
   "Moodles|Moodles_NoxiousSmell_desc_lvl4": {
    "kind": "vanilla",
-   "signature": "f8ce59d66039df5f",
+   "signature": "e80cceb18a59676a",
    "vanilla_en": "You can't breathe. Get away from here!",
    "skip_owners": [],
    "groups": [
@@ -44464,10 +44426,11 @@
      "owners": [
       "3747745835/MoodleEffectsExplained"
      ],
-     "en": "Toxic building fumes<br>Fatigue rises over IRL minutes<br>Upper torso takes damage; head too above 80%% fatigue<br>Gas mask, respirator or active SCBA blocks it",
-     "ch": "建築內的有毒廢氣<br>疲勞值隨現實分鐘上升<br>上身受到傷害; 疲勞值超過 80%% 時頭部也會受傷<br>防毒面具, 呼吸器或啟用中的自給式呼吸器可以阻擋",
-     "cn": "建筑内的有毒废气<br>疲劳值随现实分钟上升<br>上身受到伤害; 疲劳值超过 80%% 时头部也会受伤<br>防毒面具, 呼吸器或启用中的自给式呼吸器可以阻挡",
-     "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
+     "en": "Toxic building fumes<br>Fatigue rises over IRL minutes<br>Upper torso takes damage; head too above 80%% fatigue<br>Gas mask, respirator or active SCBA blocks it<br>Sleep blocked unless sufficiently sedated",
+     "ch": "建築內的有毒廢氣<br>疲勞值隨現實分鐘上升<br>上身受到傷害; 疲勞值超過 80%% 時頭部也會受傷<br>防毒面具, 呼吸器或啟用中的自給式呼吸器可以阻擋<br>除非鎮靜劑藥效足夠, 否則無法入睡",
+     "cn": "建筑内的有毒废气<br>疲劳值随现实分钟上升<br>上身受到伤害; 疲劳值超过 80%% 时头部也会受伤<br>防毒面具, 呼吸器或启用中的自给式呼吸器可以阻挡<br>除非镇静剂药效足够, 否则无法入睡",
+     "_note": "2026-11-10 PZ 42.22.2 對版: 有效版本夾由 42.20 換成 42.22, 上游英文加了一句 Sleep blocked unless sufficiently sedated; 其餘句子沿用原核准譯文, 新增部分經雙模型審核.",
+     "approved": "2026-11-10 雙模型審核（GPT-6 Astra max＋Claude Fable 5.2）"
     },
     {
      "owners": [
@@ -47154,7 +47117,7 @@
   },
   "Moodles|Moodles_Windchill_desc_lvl1": {
    "kind": "vanilla",
-   "signature": "715fdae0dff53210",
+   "signature": "c1f8a23c561804e3",
    "vanilla_en": "The wind's making it feel a little colder.",
    "skip_owners": [],
    "groups": [
@@ -47171,10 +47134,11 @@
      "owners": [
       "3747745835/MoodleEffectsExplained"
      ],
-     "en": "Wind chill > 5 °C<br>Would lower outdoor effective temperature<br>Clothing wind resistance reduces exposure<br>Level 1 is unreachable in checked builds 42.15.3-42.20.4",
-     "ch": "風寒值>5 °C<br>理論上會降低戶外體感溫度<br>服裝的防風性可降低暴露<br>經檢查的版本42.15.3-42.20.4中無法達到等級1",
-     "cn": "风寒值>5 °C<br>理论上会降低户外体感温度<br>服装的防风性可降低暴露<br>经检查的版本42.15.3-42.20.4中无法达到等级1",
-     "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
+     "en": "Wind chill > 5 °C<br>Would lower outdoor effective temperature<br>Clothing wind resistance reduces exposure<br>Level 1 is unreachable in checked builds 42.15.3-42.22.0",
+     "ch": "風寒值>5 °C<br>理論上會降低戶外體感溫度<br>服裝的防風性可降低暴露<br>經檢查的版本42.15.3-42.22.0中無法達到等級1",
+     "cn": "风寒值>5 °C<br>理论上会降低户外体感温度<br>服装的防风性可降低暴露<br>经检查的版本42.15.3-42.22.0中无法达到等级1",
+     "_note": "2026-11-10 PZ 42.22.2 對版: 有效版本夾由 42.20 換成 42.22, 上游英文把檢查版本範圍改成 42.15.3-42.22.0; 其餘句子沿用原核准譯文, 新增部分經雙模型審核.",
+     "approved": "2026-11-10 雙模型審核（GPT-6 Astra max＋Claude Fable 5.2）"
     },
     {
      "owners": [
@@ -59643,138 +59607,6 @@
     }
    ]
   },
-  "Tooltip|Tooltip_WBHM_AntiDiarrhealTablets": {
-   "kind": "conflict",
-   "signature": "fec95f73be228785",
-   "groups": [
-    {
-     "owners": [
-      "3723942896/TDDUPMarriageCompanion"
-     ],
-     "en": "Helps reduce fluid loss and cramping during stomach illness.",
-     "ch": "有助於在腸胃疾病期間減輕體液流失與絞痛.",
-     "cn": "有助于在肠胃疾病期间减轻体液流失和绞痛."
-    },
-    {
-     "owners": [
-      "3723942896/TDDUPMedicalFramework"
-     ],
-     "en": "Reduces fluid-loss/cramping states in the diagnostic medical stomach-illness model.",
-     "ch": "在診斷醫療的腸胃疾病模型中, 減輕體液流失/絞痛狀態.",
-     "cn": "在诊断医疗的肠胃疾病模型中, 减轻体液流失/绞痛状态."
-    }
-   ]
-  },
-  "Tooltip|Tooltip_WBHM_AntiNauseaTablets": {
-   "kind": "conflict",
-   "signature": "5239c84671a3aa22",
-   "groups": [
-    {
-     "owners": [
-      "3723942896/TDDUPMarriageCompanion"
-     ],
-     "en": "Helps reduce nausea and vomiting during stomach illness.",
-     "ch": "有助於在腸胃疾病期間減輕噁心與嘔吐.",
-     "cn": "有助于在肠胃疾病期间减轻恶心和呕吐."
-    },
-    {
-     "owners": [
-      "3723942896/TDDUPMedicalFramework"
-     ],
-     "en": "Reduces nausea and vomiting-risk states in the diagnostic medical stomach-illness model.",
-     "ch": "在診斷醫療的腸胃疾病模型中, 減輕噁心與嘔吐風險狀態.",
-     "cn": "在诊断医疗的肠胃疾病模型中, 减轻恶心和呕吐风险状态."
-    }
-   ]
-  },
-  "Tooltip|Tooltip_WBHM_AntihistamineTablets": {
-   "kind": "conflict",
-   "signature": "d26606fe574e518c",
-   "groups": [
-    {
-     "owners": [
-      "3723942896/TDDUPMarriageCompanion"
-     ],
-     "en": "Helps reduce allergy symptoms.",
-     "ch": "有助於減輕過敏症狀.",
-     "cn": "有助于减轻过敏症状."
-    },
-    {
-     "owners": [
-      "3723942896/TDDUPMedicalFramework"
-     ],
-     "en": "Reduces simulated allergy flare symptoms in the medical model.",
-     "ch": "在醫療模型中減輕模擬的過敏發作症狀.",
-     "cn": "在医疗模型中减轻模拟的过敏发作症状."
-    }
-   ]
-  },
-  "Tooltip|Tooltip_WBHM_ElectrolytePowder": {
-   "kind": "conflict",
-   "signature": "7cb1d35430705dc1",
-   "groups": [
-    {
-     "owners": [
-      "3723942896/TDDUPMarriageCompanion"
-     ],
-     "en": "Electrolyte powder for dehydration recovery and fluid replacement.",
-     "ch": "用於脫水恢復與補充體液的電解質粉.",
-     "cn": "用于脱水恢复和补充体液的电解质粉."
-    },
-    {
-     "owners": [
-      "3723942896/TDDUPMedicalFramework"
-     ],
-     "en": "Diagnostic medical supply for dehydration recovery. Restores fluids/electrolyte balance in the health model.",
-     "ch": "診斷醫療用品, 用於脫水恢復. 在健康模型中恢復體液/電解質平衡.",
-     "cn": "诊断医疗用品, 用于脱水恢复. 在健康模型中恢复体液/电解质平衡."
-    }
-   ]
-  },
-  "Tooltip|Tooltip_WBHM_RecoveryCareKit": {
-   "kind": "conflict",
-   "signature": "c8e4d97c535c531d",
-   "groups": [
-    {
-     "owners": [
-      "3723942896/TDDUPMarriageCompanion"
-     ],
-     "en": "A broad field-care kit for short-term recovery.",
-     "ch": "用於短期恢復的綜合野外照護包.",
-     "cn": "用于短期恢复的综合野外护理包."
-    },
-    {
-     "owners": [
-      "3723942896/TDDUPMedicalFramework"
-     ],
-     "en": "Broad field-care kit for simulated short-term recovery states.",
-     "ch": "用於模擬短期恢復狀態的綜合野外照護包.",
-     "cn": "用于模拟短期恢复状态的综合野外护理包."
-    }
-   ]
-  },
-  "Tooltip|Tooltip_WBHM_Sling": {
-   "kind": "conflict",
-   "signature": "a9a28adc49a41d5c",
-   "groups": [
-    {
-     "owners": [
-      "3723942896/TDDUPMarriageCompanion"
-     ],
-     "en": "Supports an injured arm during short-term recovery.",
-     "ch": "在短期恢復期間支撐受傷的手臂.",
-     "cn": "在短期恢复期间支撑受伤的手臂."
-    },
-    {
-     "owners": [
-      "3723942896/TDDUPMedicalFramework"
-     ],
-     "en": "Supports an injured arm during short-term recovery. The medical model can mark the arm as temporarily limited.",
-     "ch": "在短期恢復期間支撐受傷的手臂. 醫療模型可能會將該手臂標記為暫時受限.",
-     "cn": "在短期恢复期间支撑受伤的手臂. 医疗模型可能会将该手臂标记为暂时受限."
-    }
-   ]
-  },
   "Tooltip|Tooltip_WarSword": {
    "kind": "conflict",
    "signature": "1e824bacee5982a5",
@@ -65913,7 +65745,7 @@
   "UI|UI_trait_BurglarDesc": {
    "kind": "vanilla",
    "signature": "9009784f5d69b33e",
-   "vanilla_en": "Can hotwire vehicles. Less chance of breaking window locks.",
+   "vanilla_en": "Can hotwire vehicles. Bonuses to forcing open doors and windows.",
    "skip_owners": [],
    "groups": [
     {
@@ -65923,7 +65755,8 @@
      "en": "Can steal, move while hidden, and hotwire vehicles. Has a lower chance of breaking window locks.",
      "ch": "可以偷竊, 隱蔽移動和接線發動車輛, 且較不容易弄壞窗鎖.",
      "cn": "可以偷窃, 隐蔽移动和短接车辆. 弄坏窗锁的几率更小.",
-     "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
+     "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）",
+     "_note": "2026-11-09：PZ 42.22.2 本體把英文改成 Bonuses to forcing open doors and windows；本組英文與譯文都沒變、仍和本體不同，核准沿用，只更新 vanilla_en 錨點。"
     },
     {
      "owners": [
@@ -65932,7 +65765,8 @@
      "en": "Can hotwire vehicles. Less chance of breaking window locks.<br><br>-50%% Chance to break window lock.<br>Less chance to fall while climbing walls and rope.<br>Climbs rope faster.<br>",
      "ch": "可以接線發動車輛, 且較不容易弄壞窗鎖. <br><br>弄壞窗鎖的機率 -50%%.<br>攀爬牆壁和繩索時較不容易摔落.<br>爬繩速度更快.<br>",
      "cn": "可以短接车辆, 弄坏窗锁的几率更小.<br><br>弄坏窗锁的几率 -50%%.<br>攀爬墙壁和绳索时更不容易摔落.<br>爬绳速度更快.<br>",
-     "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
+     "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）",
+     "_note": "2026-11-09：PZ 42.22.2 本體把英文改成 Bonuses to forcing open doors and windows；本組英文與譯文都沒變、仍和本體不同，核准沿用，只更新 vanilla_en 錨點。"
     }
    ]
   },
@@ -68208,28 +68042,6 @@
     }
    ]
   },
-  "IG_UI|IGUI_Knox_Page_game": {
-   "kind": "conflict",
-   "signature": "c6552ad68a275feb",
-   "groups": [
-    {
-     "owners": [
-      "3816775774/KnoxInventory"
-     ],
-     "en": "Game",
-     "ch": "遊戲",
-     "cn": "游戏"
-    },
-    {
-     "owners": [
-      "3816775774/KnoxInventoryBeta"
-     ],
-     "en": "Loot and bags",
-     "ch": "搜刮與背包",
-     "cn": "搜刮与背包"
-    }
-   ]
-  },
   "ItemName|Base.Glock18": {
    "kind": "conflict",
    "signature": "3e9da5871ce4d805",
@@ -69201,47 +69013,25 @@
     }
    ]
   },
-  "IG_UI|IGUI_Knox_JavaMissing": {
+  "ItemName|Base.JS5_SMG": {
    "kind": "conflict",
-   "signature": "a4fb9af80e6931a8",
+   "signature": "fb51963410d6e932",
    "groups": [
     {
      "owners": [
-      "3816775774/KnoxInventory"
+      "3715977706/BetterVanillaFirearms42"
      ],
-     "en": "Knox Inventory needs ZombieBuddy, but its Java part did not load.\n\nThe game's own inventory is used for now. Install ZombieBuddy as its Workshop page says (it is started from the game's launch options), then restart the game.\n\nZombieBuddy already installed? After each update of the mod it asks once more whether to load KnoxInventoryJava.jar - answer Allow. If it did not ask, or you answered no, the mod stays off.",
-     "ch": "Knox Inventory 需要 ZombieBuddy, 但它的 Java 部分沒有載入.\n\n目前先使用遊戲原本的物品欄. 請依 ZombieBuddy 的工作坊頁面說明安裝 (它需要從遊戲的啟動選項啟動), 然後重新啟動遊戲.\n\n已經安裝 ZombieBuddy 了? 本模組每次更新後, 它都會再問一次是否載入 KnoxInventoryJava.jar - 請回答 Allow. 如果它沒有詢問, 或你回答了否, 本模組就會維持關閉.",
-     "cn": "诺克斯物品栏 (Knox Inventory) 需要ZombieBuddy, 但其Java部分未加载.\n\n目前使用游戏原生物品栏. 请按照创意工坊页面的说明安装ZombieBuddy (它需要从游戏启动选项中启动), 然后重启游戏.\n\n已经安装了ZombieBuddy? 每次模组更新后, 它都会再次询问是否加载KnoxInventoryJava.jar - 请选择 '允许'. 如果未询问或你选择了 '否', 模组将保持禁用状态."
+     "en": "KH-5 Submachinegun",
+     "ch": "KH-5 衝鋒槍",
+     "cn": "KH-5 冲锋枪"
     },
     {
      "owners": [
-      "3816775774/KnoxInventoryBeta"
+      "3803984183/ProjectALifeNPCs"
      ],
-     "en": "Knox Inventory needs ZombieBuddy, but its Java part did not load.\n\nThe game's own inventory is used for now. Install ZombieBuddy as its Workshop page says (it is started from the game's launch options), then restart the game.\n\nZombieBuddy already installed? After each update of the mod ZombieBuddy asks again about KnoxInventoryJava.jar: tick Yes on the Knox Inventory row and press OK.\n\nNo question appears? ZombieBuddy may have stored a denial: reinstalling the game or the mods does not clear it. Start the game, hold Shift right away and keep holding until the ZombieBuddy window opens. Tick Yes, turn on Save decisions to disk and press OK.\n\nThe window did not open? Close the game, delete C:\\Users\\YourName\\.zombie_buddy\\mod_approvals.json and start the game again.",
-     "ch": "Knox Inventory 需要 ZombieBuddy, 但它的 Java 部分沒有載入.\n\n目前先使用遊戲原本的物品欄. 請依 ZombieBuddy 的工作坊頁面說明安裝 (它需要從遊戲的啟動選項啟動), 然後重新啟動遊戲.\n\n已經安裝 ZombieBuddy 了? 本模組每次更新後, ZombieBuddy 都會再詢問一次 KnoxInventoryJava.jar: 在 Knox Inventory 那一列勾選 Yes, 然後按 OK.\n\n沒有出現詢問? ZombieBuddy 可能已記住拒絕的選擇: 重新安裝遊戲或模組都無法清除. 啟動遊戲後立刻按住 Shift, 一直按住直到 ZombieBuddy 視窗開啟. 勾選 Yes, 開啟 Save decisions to disk, 然後按 OK.\n\n視窗沒有開啟? 關閉遊戲, 刪除 C:\\Users\\YourName\\.zombie_buddy\\mod_approvals.json, 再重新啟動遊戲.",
-     "cn": "诺克斯物品栏 (Knox Inventory) 需要ZombieBuddy, 但其Java部分未加载.\n\n目前使用游戏原生物品栏. 请按照创意工坊页面的说明安装ZombieBuddy (它需要从游戏启动选项中启动), 然后重启游戏.\n\n已经安装了ZombieBuddy? 每次模组更新后, ZombieBuddy都会再次询问KnoxInventoryJava.jar: 在Knox Inventory那一行勾选 “Yes”, 然后点击 “OK”.\n\n没有出现询问? ZombieBuddy可能已保存了拒绝的选择: 重新安装游戏或模组都无法清除. 启动游戏后立即按住Shift, 一直按住直到ZombieBuddy窗口打开. 勾选 “Yes”, 开启 “Save decisions to disk”, 然后点击 “OK”.\n\n窗口没有打开? 关闭游戏, 删除C:\\Users\\YourName\\.zombie_buddy\\mod_approvals.json, 然后重新启动游戏."
-    }
-   ]
-  },
-  "IG_UI|IGUI_Knox_JavaRestart": {
-   "kind": "conflict",
-   "signature": "800a114c93010482",
-   "groups": [
-    {
-     "owners": [
-      "3816775774/KnoxInventory"
-     ],
-     "en": "Knox Inventory is enabled, but it will only work after the game is restarted.\n\nClose Project Zomboid completely and start it again: the mod's Java part loads only when the game starts.\n\nIf this message comes back after the restart: after each update of the mod ZombieBuddy asks once more whether to load KnoxInventoryJava.jar - answer Allow. If it does not ask at all, ZombieBuddy is not running: install it as its Workshop page says.",
-     "ch": "Knox Inventory 已啟用, 但要重新啟動遊戲後才會生效.\n\n請完全關閉殭屍毀滅工程再重新啟動: 本模組的 Java 部分只在遊戲啟動時載入.\n\n如果重新啟動後這則訊息又出現: 本模組每次更新後, ZombieBuddy 都會再問一次是否載入 KnoxInventoryJava.jar - 請回答 Allow. 如果它完全沒有詢問, 代表 ZombieBuddy 沒有在執行: 請依它的創意工坊頁面說明安裝.",
-     "cn": "诺克斯物品栏 (Knox Inventory) 已启用, 但只有在重启游戏后才能生效.\n\n请完全关闭《僵尸毁灭工程》并重新启动: 模组的Java部分仅在游戏启动时加载.\n\n如果重启后仍出现此消息: 每次模组更新后, ZombieBuddy都会再次询问是否加载KnoxInventoryJava.jar - 请选择 '允许'. 如果完全没有询问, 说明ZombieBuddy未运行: 请按照其创意工坊页面的说明进行安装."
-    },
-    {
-     "owners": [
-      "3816775774/KnoxInventoryBeta"
-     ],
-     "en": "Knox Inventory is enabled, but it will only work after the game is restarted.\n\nClose Project Zomboid completely and start it again: the mod's Java part loads only when the game starts.\n\nMessage came back? After each update of the mod ZombieBuddy asks again about KnoxInventoryJava.jar: tick Yes on the Knox Inventory row and press OK.\n\nNo question appears? ZombieBuddy may have stored a denial: reinstalling the game or the mods does not clear it. Start the game, hold Shift right away and keep holding until the ZombieBuddy window opens. Tick Yes, turn on Save decisions to disk and press OK.\n\nThe window did not open? Close the game, delete C:\\Users\\YourName\\.zombie_buddy\\mod_approvals.json and start the game again. If that does not help either, ZombieBuddy is not running: install it as its Workshop page says.",
-     "ch": "Knox Inventory 已啟用, 但要重新啟動遊戲後才會生效.\n\n請完全關閉殭屍毀滅工程再重新啟動: 本模組的 Java 部分只在遊戲啟動時載入.\n\n這則訊息又出現了? 本模組每次更新後, ZombieBuddy 都會再詢問一次 KnoxInventoryJava.jar: 在 Knox Inventory 那一列勾選 Yes, 然後按 OK.\n\n沒有出現詢問? ZombieBuddy 可能已記住拒絕的選擇: 重新安裝遊戲或模組都無法清除. 啟動遊戲後立刻按住 Shift, 一直按住直到 ZombieBuddy 視窗開啟. 勾選 Yes, 開啟 Save decisions to disk, 然後按 OK.\n\n視窗沒有開啟? 關閉遊戲, 刪除 C:\\Users\\YourName\\.zombie_buddy\\mod_approvals.json, 再重新啟動遊戲. 如果這樣也沒用, 代表 ZombieBuddy 沒有在執行: 請依它的創意工坊頁面說明安裝.",
-     "cn": "诺克斯物品栏 (Knox Inventory) 已启用, 但只有在重启游戏后才能生效.\n\n请完全关闭《僵尸毁灭工程》并重新启动: 模组的Java部分仅在游戏启动时加载.\n\n此消息又出现了? 每次模组更新后, ZombieBuddy都会再次询问KnoxInventoryJava.jar: 在Knox Inventory那一行勾选 “Yes”, 然后点击 “OK”.\n\n没有出现询问? ZombieBuddy可能已保存了拒绝的选择: 重新安装游戏或模组都无法清除. 启动游戏后立即按住Shift, 一直按住直到ZombieBuddy窗口打开. 勾选 “Yes”, 开启 “Save decisions to disk”, 然后点击 “OK”.\n\n窗口没有打开? 关闭游戏, 删除C:\\Users\\YourName\\.zombie_buddy\\mod_approvals.json, 然后重新启动游戏. 如果仍然无效, 说明ZombieBuddy未运行: 请按照其创意工坊页面的说明进行安装."
+     "en": "JS-5 Submachine Gun",
+     "ch": "JS-5 衝鋒槍",
+     "cn": "JS-5 冲锋枪"
     }
    ]
   }

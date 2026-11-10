@@ -4,6 +4,35 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **16 個 MOD 更新後新增的文字補上繁簡中文（3,959 項）。** Project A-Life 1.5 的同伴指令、野外無線電任務、直升機撤離結局、聲望與小隊地圖、GM 小隊命令、NPC 編輯器與沙盒設定（3,070 項）；Project A-Life - Jeem Extension 的基地土地與伐木區、居民工作、交易視窗與測試清單（343 項）；Arcadia RV Interiors 的房車電力、電池艙與保險絲盒（306 項）；Radio Trader 的現場任務（變電站、中繼塔）與設定（100 項）；Till Death Do Us Part 的家庭控制與場景設定（40 項）；Whose Key Is This 的鑰匙方位與鑰匙環追蹤（36 項）；Hybrid Combat Overhaul 的武器右鍵選單（檢查彈藥、單發上膛、檢查零件、副武器、磨利）（20 項）；Gunsmith 的槍械保養技能、Surplus & Thrift 的帽子與防毒面具、Knox Inventory 的快速使用、GPS Route 的分享目的地，以及 Project Zomboid Optimiser、Senators Martial Arts Core、Zombie Visibility Fix、Auto All 的設定說明（各 1–9 項）；原創翻譯的 ReloadAllAmmo 輪盤裝填、Hardship: Brawling 的踢擊速度與門朝向提示（各 3 項）。
+  > 技術要點：追蹤器 2026-11-09 #1321–#1337「可能過時」。steamcmd 重抓 17 個 MOD，corpus_hash 全數相符；prep 缺口 3,953 鍵（3,888 條相異字串）分 14 路翻譯、14 路對抗複核（Codex），採納 94 條（例：A-Life 的 disband 是解除 GM 命令、不是解散小隊；`In the weapon` 讀的是 `getCurrentAmmoCount()`，寫「武器內彈藥」；Jeem 測試清單的 watering can 照 LangFor42 物品名「灑水壺」，按鈕名照已出貨的「收回一個」「土地」「交談」分頁）。own 目錄 MOD（3774932027、3814487652）的 6 鍵另寫 `sources/mods/<wid>/CN`＋`sources/ch`（gap-fill.md #89）。A-Life 人名一律音譯，與同 MOD 既有 1,385 條「名字 - 職稱」一致（哈蘭、戴爾等沿用），新人名全名以「·」連接（妮爾·布蘭諾克、戴爾·惠特科姆）；聲望等級名同步進沙盒說明（頭號惡棍、傳奇）。Knox 測試台新增的 31 個 `IGUI_KnoxTB_*` 登記 `untranslatable_keys.json`（`KnoxTestBench.lua` 不在 Workshop 內容）。
+- **Project A-Life 上游英文檔漏收、遊戲卻會查翻譯的 173 項也補上。** 同伴指令輪盤的按鈕、分類與每個指令的說明，聲望等級的名稱與說明（頭號惡棍、掠奪者、兇徒、法外之徒、禿鷹、幫手、守護者、警長、英雄、傳奇），直升機撤離結局的回答選項與任務欄標題，以及任務、快速生成與對話視窗的按鈕。
+  > 技術要點：A-Life 以 `IGUI_ALifeUI_`＋英文雜湊查表，作者的 EN 檔沒收 `Client.text`／`M.text`／`Q.text`／`Talk2.text`／`Wheel.text` 包裝呼叫與資料表（`Client.LABELS`、`Wheel.DESC`、`ALifeRepLevels`、`ALifeEndingData`）的字串。逐條追顯示路徑後只收會查表的，鍵照 Lua `Text.hash` 算（300 個既有鍵驗證全符），寫進 own 層、`_note` 記 Lua 出處；對抗複核 1 路，採納 3 條。飛行員台詞、無線電問話、HaloText 提示與伺服器端先填好參數的任務摘要不經查表，沒有收（36 條，open-issues.md）。
+- **遊戲 42.22.2 對版：Auto Tailoring 在 42.22 才載入的新功能補上繁簡中文（32 項）。** 「練習縫紉」的四種循環（碎布條頭巾、麻袋、編織、皮帶）的選單、提示、停止訊息與 8 個沙盒設定。
+  > 技術要點：`tracker.GAME_VERSION_INT` 由 42021 改 42022（引擎只載入 `common/`＋不超過遊戲版本的最高版本夾），兩支測試的「未來分支」fixture 推到 `42.23`。追蹤器 state 裡 8 個 MOD 已帶 `42.22/`：Auto Tailoring 多 32 鍵，Moodle Effects Explained 主 MOD 5 個本體鍵改英文（見 Changed），其餘 6 個（AutoCook、TchernoLib、CleanUI、Aquatsar Yacht Club、Hi-Res Clock、Better Pause）勝出值與原有效分支相同。32 鍵 1 路翻譯，GPT-6 Astra 與 Claude 兩輪審核採納 9 條（皮帶、麻袋的動詞照原版配方名「切割皮帶」「拆解麻袋」；提示裡串在清單中的條件改寫成「已學會配方」「附近有製作平面」「拆解所需:」）。
+- **遊戲 42.22.2 對版：7 個 MOD 自訂技能的說明在技能面板顯示中文（18 項）。** The Only Cure 與 The Only Cure Plus 的左側、右側截肢與義肢熟悉度，Lock Picking Skill 的撬鎖，Armor Wearing Skill 的穿戴護甲，Ammo Maker 的彈藥製作與 Le Gourmet 的狩獵，CT Brewery 的釀造（含 10 級各自的說明）。
+  > 技術要點：42.22 的 `ISSkillProgressBar:updateTooltip` 改用 `perk:getId()` 拼 `IGUI_perks_<id>_Description`（42.21 以前用當前語言的技能顯示名，中文環境查不到、畫面顯示鍵名）。這 7 個 MOD 的英文檔只有以英文顯示名為鍵的說明（例 `IGUI_perks_Lock Picking_Description`），42.22 起任何語言都不再被查。逐一讀各 MOD `media/perks.txt` 的技能 id，以 id 鍵收進 own 層，英文與譯文照已出貨的舊鍵，`_note` 記出處；舊鍵照舊保留。全庫 33 個有技能說明鍵的 MOD 都對過（31 個讀到 perks.txt、共 53 個自訂技能；其餘的說明鍵本來就是 id 鍵）。
+
+### Changed
+
+- **上游改了英文的已出貨文字跟著改（28 項）。** Project A-Life 沙盒分頁改名「A-Life: 專家 - …」，警告機率、難度預設、殭屍數量停火（預設改 24）、前哨站上限等說明照新英文（19 項）；Radio Trader 的委託難度改成件數、聲望等級說明與報到台詞（7 項）；Jeem 的宿舍房間上限提示、Zombie Visibility Fix 的客戶端設定標題（各 1 項）。
+  > 技術要點：own 層 22 鍵經 `apply_translations` 更新 `en` 錨點，As1 衍生層 6 鍵改 `sources/ch`＋`cn_overrides`。
+- **修正 6 個 MOD 的舊譯與名稱不一致（143 項）。** Project A-Life 的角色職稱照所屬陣營改正（簡中州警誤作騎警、工兵誤作工程師、勞改隊逃犯誤作逃兵、跑腿誤作奔跑者，另有正式成員、頭目、打手、老闆、店員、急救員；同一個標籤兩個陣營共用的，改成兩邊都成立的「物資收集員」「醫護人員」），沙盒說明的門窗加固（原作路障）、全自動打光彈匣、脫離交戰與倍率；Whose Key Is This 的代表鑰匙與鑰匙環追蹤說明；Hybrid Combat Overhaul 的倍率設定（原作「增加」）、雙持連擊與開發中標示；Arcadia RV Interiors 統一稱「房車」；Auto All 的料理心情效果與碎布條；GPS Route 轉彎提示的動作與道路順序。
+  > 技術要點：受影響 MOD 的 As1 衍生層 2,015 鍵（扣前幾批已稽核、本體鍵、unship 鍵與已裁決的 owner 衝突鍵）以 `judge_batch` 初篩，連同數字比對標出 899 鍵交 4 路代理（Codex）裁決，改 135 鍵，同類錯誤另補 8 鍵（As1 衍生層 142 鍵改 `sources/ch`＋`cn_overrides`，own 層 1 鍵）。A-Life 職稱以本機 Workshop 的 `common/alife_runtime/catalog/npc_profiles.alife` 查陣營（steamcmd 快照沒有 `.alife`）。WolfBond 2 鍵與 Knox 測試台 1 鍵是 unship 登記鍵，修正不採。
+- **Knox Inventory 設定頁只剩 1.0 Beta 子 MOD 使用，相關文字改照 Beta 版。** 「搜刮與背包」分頁、Java 元件未載入與需要重開遊戲的提示原本不出貨，現在出貨；周邊欄範圍說明不再用兩版的中性譯名。Long Term Preservation Extended 的醃製食品配方名與調味罐說明、Till Death Do Us Part 的 7 個醫療用品說明也因衝突消失改照現行英文。Better Vanilla Firearms 與 Project A-Life 同鍵的 `Base.JS5_SMG` 改不出貨中性名，由條件譯文依啟用的 MOD 顯示「KH-5 衝鋒槍」或「JS-5 衝鋒槍」。
+  > 技術要點：追蹤器 #1339。`owner_conflict_decisions.json` 退役 17 筆（衝突已消失：7 個 WBHM、Knox 6 鍵、`IGUI_CraftingCategories_Mechanics`、`UI_trait_metalwelder`、`MakeJar4`、`Tooltip_item_UseForRefill`），`owner_variants.json` 同步刪 12 筆；`IGUI_KnoxTB_A_Settings` 改登記 unshipped 第六類。WBHM 7 鍵的 own 層 `en` 錨點改為 TDDUPMarriageCompanion 現行英文（譯文原本就照它寫）。新衝突 `Base.JS5_SMG` 裁 unship（比照 #965 `Base.JS5_Clip`），兩組條件譯文；BVF 自帶簡中「KH-5 冲锋枪」，A-Life 只有英文。
+- **遊戲 42.22.2 對版。** 翻譯載入方式沒有變，既有譯文照常生效。本體鍵基準重抽（新增 29、移除 16，出貨抑制鍵數不變）；條件譯文 `UI_trait_BurglarDesc` 的本體英文錨點跟著更新，兩組 MOD 英文與譯文都沒變、仍和本體不同，核准沿用。Moodle Effects Explained 主 MOD 在 42.22 改讀新版本夾，臭味 moodle 四個等級的說明多一句「除非鎮靜劑藥效足夠, 否則無法入睡」、風寒等級 1 的檢查版本範圍改成 42.15.3-42.22.0（5 組條件譯文）。
+  > 技術要點：反編譯快照 42.21.0→42.22.2 有 490 個檔案不同，`Translator`／`Language`／`Languages`／`ScriptManager`／`CraftRecipe`／`PerkFactory`／`CustomPerks`／`UIFont`、特質與職業定義類別整檔相同；`ZomboidFileSystem` 的版本夾選擇、`ChooseGameInfo` 的 mod.info 解析沒變；本包兩支 Lua 用到的全域函式與曝露類別都還在。`PrintMedia.lua`／`ISReadABook.lua` 的 `_info` 解析契約不變，verify [17] 對 42.22.2 本體英文 `Print_Media.json` 校準只命中本體自己的 `shadow:true`。本體 Lua 以動態鍵查翻譯的寫法，和 42.20.2 相比只有技能說明改 id、容器標題多查 `getDisplayType()` 兩處會查到不同的鍵。Moodle 5 組：主 MOD 自成一組（新英文、新簽名），DTEM／Expanded Moodles 兩個附加包維持舊英文與原核准；新增句與版本範圍經 GPT-6 Astra（max）與 Claude 審核同意。`versionMin` 維持 42.20.4（沒用到 42.22 才有的 API；新補的 id 鍵在舊版只是不被查）。
+
+### Removed
+
+- **上游刪除的 60 項原創翻譯一併移除。** Till Death Do Us Part 醫療框架（WBHM）的 57 項、Project A-Life 舊的世界預設選項 1 項、Gunsmith 改名前的 2 個移動配方。
+  > 技術要點：own 層刪鍵並同步移除 `ch_review_state`；Lua 唯一命中是 TDDUP 生育任務對已不存在物品 `OralRehydrationDrink` 的型別判斷。As1 衍生層的刪除鍵依 split 不變式保留（Knox 129、A-Life 7、WKT 2）。#1338 Matheba's Cheat Menu 下架查證屬實（登入開頁錯誤、API result 9），保留 230 項譯文，名冊維持 active 繼續監看。
+
 ## [42.21.0-1.73.0] - 2026-11-08
 
 ### Added

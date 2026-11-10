@@ -1826,13 +1826,7 @@
   },
   "IG_UI.json|IGUI_KnoxTB_A_Settings": {
    "as1_value": "打开设置",
-   "owner_signature": "9fbb5a43512011ea",
-   "reason": "2026-10-25 #1063：Knox Inventory 新增的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）把測試台按鈕說明寫成 Open the settings，KnoxInventory 寫 Open settings。這是測試台鍵：讀它的 KnoxTestBench.lua 兩個子 MOD 的 Workshop 版都不含（KnoxScreen.lua 註解 the bench is left out of the Workshop build），其餘 IGUI_KnoxTB_* 已依 2026-10-22 裁定登記 untranslatable_keys.json，本鍵照同一裁定不出貨。兩方都有可載入 IG_UI.json，玩家看不到此鍵。"
-  },
-  "IG_UI.json|IGUI_Knox_Page_game": {
-   "as1_value": "游戏",
-   "owner_signature": "c6552ad68a275feb",
-   "reason": "2026-10-25 #1063：Knox Inventory 新增的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）把設定頁分頁 Game 改名 Loot and bags（分頁內容改成 Search and loot、Bags and pockets 兩節），KnoxInventory 仍是 Game；兩個分頁名指不同內容，沒有誠實中性譯名，不出貨。兩方都有可載入 IG_UI.json 並自帶 Translate/CN：不出貨後繁中玩家看到各自英文分頁名、簡中玩家看到作者簡中（「游戏」／「战利品与背包」）；條件譯文依啟用的子 MOD 寫入各自譯名。"
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-10-25 #1063 原以 owner 衝突（KnoxInventory 與 KnoxInventoryBeta 英文不同）登記第二類；2026-11-09 #1337 上游拿掉 KnoxInventory 子 MOD、衝突消失，改登記第六類，steamcmd 重抓現行版仍不含 KnoxTestBench.lua。"
   },
   "ItemName.json|Base.Glock18": {
    "as1_value": "G18 手枪",
@@ -1873,16 +1867,6 @@
    "as1_value": ".45 ACP 20 发弹匣",
    "owner_signature": "4a9921e42b348f50",
    "reason": "2026-11-06 #1221–#1297 批次：MFS 社群修正版（3780151182）把 Base.45Clip20 改成 '.45-70 20-Round Christine Rifle Magazine'（script GunType=Base.Christine45_cat），Escape from Kentucky（3633421539）仍是 '.45 ACP 20-Round Magazine'（GunType=Base.UMP45_cat）。兩方是不同槍、標不同口徑的彈匣，口徑是承重資訊；比照 Base.9mmDrum_cat、Base.762Bullets 前例不用上位口徑 .45 遮掉差異，不出貨。兩方都有可載入 ItemName.json：繁中玩家看到各自英文、簡中玩家看到 As1 以外的來源；條件譯文依啟用的 MOD 寫入各自譯名。"
-  },
-  "IG_UI.json|IGUI_Knox_JavaMissing": {
-   "as1_value": "诺克斯物品栏 (Knox Inventory) 需要ZombieBuddy, 但其Java部分未加载.\n\n目前使用游戏原生物品栏. 请按照创意工坊页面的说明安装ZombieBuddy (它需要从游戏启动选项中启动), 然后重启游戏.\n\n已经安装了ZombieBuddy? 每次模组更新后, 它都会再次询问是否加载KnoxInventoryJava.jar - 请选择 '允许'. 如果未询问或你选择了 '否', 模组将保持禁用状态.",
-   "owner_signature": "a4fb9af80e6931a8",
-   "reason": "2026-11-06 #1221–#1297 批次：Knox Inventory 的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）改寫 ZombieBuddy 未載入時的處理步驟（勾 Yes、按 OK，問不出來時按 Shift 開視窗、刪 mod_approvals.json），KnoxInventory 仍是回答 Allow。兩方步驟不同，照任一方翻都會讓另一方玩家照錯誤步驟操作，沒有誠實中性譯文，不出貨。比照 IGUI_Knox_Page_game 前例：兩方都有可載入 IG_UI.json 並自帶 Translate/CN，繁中玩家看到各自英文、簡中玩家看到作者簡中；條件譯文依啟用的子 MOD 寫入各自譯文。"
-  },
-  "IG_UI.json|IGUI_Knox_JavaRestart": {
-   "as1_value": "诺克斯物品栏 (Knox Inventory) 已启用, 但只有在重启游戏后才能生效.\n\n请完全关闭《僵尸毁灭工程》并重新启动: 模组的Java部分仅在游戏启动时加载.\n\n如果重启后仍出现此消息: 每次模组更新后, ZombieBuddy都会再次询问是否加载KnoxInventoryJava.jar - 请选择 '允许'. 如果完全没有询问, 说明ZombieBuddy未运行: 请按照其创意工坊页面的说明进行安装.",
-   "owner_signature": "800a114c93010482",
-   "reason": "2026-11-06 #1221–#1297 批次：Knox Inventory 的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）改寫重啟後訊息仍出現時的處理步驟（勾 Yes、按 OK，問不出來時按 Shift 開視窗、刪 mod_approvals.json），KnoxInventory 仍是回答 Allow。兩方步驟不同，沒有誠實中性譯文，不出貨。比照 IGUI_Knox_Page_game 前例：兩方都有可載入 IG_UI.json 並自帶 Translate/CN，繁中玩家看到各自英文、簡中玩家看到作者簡中；條件譯文依啟用的子 MOD 寫入各自譯文。"
   },
   "UI.json|UI_ETW_TranslationStats_CH": {
    "as1_value": "30.0",
@@ -3335,6 +3319,11 @@
   "IG_UI.json|IGUI_KnoxTB_u_tv_Want": {
    "as1_value": "无信号时的雪花屏看起来像真实的雪花 (随机点状, 无条纹, 无重复图案). 频道名称和字幕和之前一致. 保存的电台立即出现, 移除的电台立即消失.",
    "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、已出貨的一併移除（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容（KnoxScreen.lua 註解 the bench is left out of the Workshop build），玩家看不到。2026-10-26 同步 As1 v3.12.0 時 As1 衍生層帶回這批鍵，1.62.0–1.71.0 照常出貨，2026-11-07 補登記。"
+  },
+  "ItemName.json|Base.JS5_SMG": {
+   "as1_value": "KH-5 冲锋枪",
+   "owner_signature": "fb51963410d6e932",
+   "reason": "2026-11-09 #1329 裁決不出貨：Project A-Life（3803984183）新增自己的 Base.JS5_SMG，名稱 JS-5 Submachine Gun；Better Vanilla Firearms（3715977706）的同鍵是 KH-5 Submachinegun（同 MOD 另有 KH-5/10）。兩邊模型、作者不同，型號名不同，比照同系列 Base.JS5_Clip（#965）不出貨。抑制後：兩方都有可載入的 ItemName.json，繁中玩家看到各自英文；BVF 自帶 Translate/CN，簡中玩家裝 BVF 時看到 MOD 自帶簡中、只裝 A-Life 時看到英文；條件譯文依啟用的 MOD 寫入各自譯名。"
   }
  }
 }

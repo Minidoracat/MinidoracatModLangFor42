@@ -141,9 +141,11 @@ EXTRACTOR_KINDS = CURRENT_EXTRACTOR_KINDS | LEGACY_LUA_KINDS
 #     裡的 EN 定義在執行期並不存在，不能拿來當補譯依據。
 # 42.21.0 重驗（2026-09-29）：上述語意未變，只有行號位移（loadMod():660/:677、
 # getModVersionDirName():463、getGameVersionIntFromName():569）。
-# 預設值＝玩家實跑版本（Core.gameVersion＝GameVersion(42, 21) → getInt()＝42021），不是本包
+# 42.22.2 重驗（2026-11-09，快照 42.22.2-20261109）：ZomboidFileSystem 只改 GameMode 寫法，
+# 上述方法與行號同 42.21.0；Translator 整檔未變。
+# 預設值＝玩家實跑版本（Core.gameVersion＝GameVersion(42, 22) → getInt()＝42022），不是本包
 # versionMin；PZ 每出一個 minor 版就要跟著改——漏改不會有任何 gate 變紅，新版本夾只會被靜默當成死分支。
-GAME_VERSION_INT = int(os.environ.get("PZ_GAME_VERSION_INT", "42021"))
+GAME_VERSION_INT = int(os.environ.get("PZ_GAME_VERSION_INT", "42022"))
 MIN_REQUIRED_INT = 42000  # ChooseGameInfo.getMinRequiredVersion() = GameVersion(42, 0)
 
 

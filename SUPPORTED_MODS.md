@@ -1150,7 +1150,7 @@
 | [Jumbo Tree Indoor Fix](https://steamcommunity.com/sharedfiles/filedetails/?id=3774826484) | — | — | `JumboTreeIndoorFix` | 20 | — | — |
 | [Weight Reduction - Building Materials & Tools](https://steamcommunity.com/sharedfiles/filedetails/?id=3774841057) | — | — | `WeightReduction` | 5 | — | — |
 | [TTRP Hairstyles](https://steamcommunity.com/sharedfiles/filedetails/?id=3774898489) | — | — | `TTRPHairstyles` | 260 | — | — |
-| [ReloadAllAmmo [SP/MP]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3774932027) | 一鍵裝填所有彈匣 | 右鍵一次把子彈裝進多個彈匣，或一次清空所有彈匣。 | `ReloadAllAmmo` | 11 | — | — |
+| [ReloadAllAmmo [SP/MP]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3774932027) | 一鍵裝填所有彈匣 | 右鍵一次把子彈裝進多個彈匣，或一次清空所有彈匣。 | `ReloadAllAmmo` | 14 | — | — |
 | [Wounds Overhaul [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3775026731) | — | — | `WoundsOverhaul` | 121 | — | — |
 | [PZTrainer [B42.20]](https://steamcommunity.com/sharedfiles/filedetails/?id=3775055964) | — | — | `PZTrainer` | 485 | — | — |
 | [Peri's Random Scenarios 42.20 (Pillow Fork)](https://steamcommunity.com/sharedfiles/filedetails/?id=3775191731) | — | — | `PeriRandomScenarios` | 20 | — | — |
@@ -1459,7 +1459,7 @@
 | [Crosshair Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=3814251221) | 準心大改 | 每把槍都有仿照其實際瞄具的準心，外觀、大小與顏色皆可調整。 | `CompleteCrosshairOverhaul` | 111 | — | — |
 | [Surplus & Thrift: The 1993 Wardrobe](https://steamcommunity.com/sharedfiles/filedetails/?id=3814472954) | Surplus & Thrift：1993 衣櫥 | 新增 1993 年肯塔基可見的軍品店與二手衣服飾，多數衣物可用不同方式穿著。 | `DesertCargo` | 301 | — | — |
 | [colinel's Division Gadgets](https://steamcommunity.com/sharedfiles/filedetails/?id=3814484099) | colinel 的全境封鎖裝備 | 新增《全境封鎖 2》的 SHD 特工特質與掃描脈衝、無人機、追蹤地雷等科技裝備。 | `DivisionGadgets` | 47 | — | — |
-| [Hardship: Brawling〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3814487652) | Hardship：肉搏 | Hardship 系列的徒手格鬥：空手瞄準就能舉拳出拳，新增徒手技能、好勇鬥狠特質與拳擊手職業，出拳也會讓指節痠痛、刮傷。另有格擋、前踢、奔跑衝撞、踹門與持槍砸擊；玩家互毆多半只會打昏，刀殺動作也變快。 | `HardshipBrawling` | 138 | ⚠️ ≥1 | — |
+| [Hardship: Brawling〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3814487652) | Hardship：肉搏 | Hardship 系列的徒手格鬥：空手瞄準就能舉拳出拳，新增徒手技能、好勇鬥狠特質與拳擊手職業，出拳也會讓指節痠痛、刮傷。另有格擋、前踢、奔跑衝撞、踹門與持槍砸擊；玩家互毆多半只會打昏，刀殺動作也變快。 | `HardshipBrawling` | 141 | ⚠️ ≥1 | — |
 | [Lost Province [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3815128534) | Lost Province 失落省份 | 完整重現加拿大愛德華王子島的大型獨立地圖，含所有城鎮與鄉村農地。 | `Lost Province` | ? | — | — |
 | [Too Many Emotes](https://steamcommunity.com/sharedfiles/filedetails/?id=3815468401) | Too Many Emotes 超多表情動作 | 在表情輪盤新增 300 多種表情動作，可瀏覽與收藏，多人模式可同步動作。 | `TooManyEmotes` | 359 | — | — |
 | [HydeCo. Orchard! 42.21.0](https://steamcommunity.com/sharedfiles/filedetails/?id=3815617457) | HydeCo. 果園！ | 新增果樹、漿果灌木與攀牆葡萄藤等 15 種植物，會隨四季變化，缺水可能生病枯死。 | `HydeCoOrchard` | 387 | — | — |

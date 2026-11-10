@@ -949,13 +949,6 @@
       "ch": "座椅6",
       "cn": "座椅6"
     },
-    "IG_UI|IGUI_CraftingCategories_Mechanics": {
-      "action": "translate",
-      "signature": "a5ca0a50d7f462a7",
-      "reason": "三個 owner 都是車輛維修類配方分類：3520758551/More Car Features + Spawn Zones Expansion 寫 'Mechanics'，3730070661 的 Gores Spare Engine Parts Crafting 與 Gores Vanilla Vehicle Parts Crafting 寫 'Mechanical'。不是不同分類，只是名詞／形容詞。本體官方技能名 IGUI_perks_Mechanics＝「技工」，現行分類譯名跟技能走，對三者皆成立。vanilla scoped_keys 有其他 IGUI_CraftingCategories_* 但沒有 Mechanics，故非本體覆寫。 ／2026-10-01 As1 名單納管複核：新增 owner 3765795716/CraftingSkillsPractice、3765795716/CraftingSkillsPracticeCompatability、3765795716/CraftingSkillsPracticeHard、3765795716/CraftingSkillsPracticeHardCompatability，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。",
-      "ch": "技工",
-      "cn": "技工"
-    },
     "UI|UI_TTF_Sounds_ResetFiltered": {
       "action": "translate",
       "signature": "4f4901b1f355a929",
@@ -7009,13 +7002,6 @@
       "ch": "好運常在，你期望的事情經常發生",
       "cn": "好运常在，你期望的事情经常发生"
     },
-    "UI|UI_trait_metalwelder": {
-      "action": "translate",
-      "signature": "481adecb6450d825",
-      "reason": "首次裁決. 2459400130/DynamicTraits 'Metalwelder' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Metal Welder' 是同一個金屬焊接特質的兩種拼寫 (連寫 vs 分寫), 無實體分歧. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_ammetalworker (own_translations 既有 en 錨點 'Metalwelder', 譯『金屬焊工／金属焊工』) 改名成與 SOTO 同名的 UI_trait_metalwelder, 亦即上游是刻意向 SOTO 鍵名靠攏、而非另立一個不同特質. 現行值『金屬焊工／金属焊工』正是我方對 DynamicTraits 舊鍵早已採用的同一譯名, 對兩個 owner 都成立, 維持現值.",
-      "ch": "金屬焊工",
-      "cn": "金属焊工"
-    },
     "UI|UI_trait_spearman": {
       "action": "translate",
       "signature": "6da14645133b8338",
@@ -8371,20 +8357,6 @@
       "ch": "彈匣生成機率",
       "cn": "弹匣生成几率"
     },
-    "Recipes|MakeJar4": {
-      "action": "translate",
-      "signature": "e111acc512dc249f",
-      "reason": "2026-09-29 #619: LongTermPreservationExtended 把此配方改成香料罐（Spices，同時涵蓋新加入的胡椒），LongTermPreservationExtendedSE 仍是鹽罐（Salt）；鹽與香料都屬調味料，取兩方皆成立的「調味料」。",
-      "ch": "製作罐裝醃製食品 (調味料)",
-      "cn": "制作罐装食品 (调味料)"
-    },
-    "Tooltip|Tooltip_item_UseForRefill": {
-      "action": "translate",
-      "signature": "f8a53cf58747ba31",
-      "reason": "2026-09-29 #619: LongTermPreservationExtended 指空的調味罐（Shaker，鹽與胡椒共用），LongTermPreservationExtendedSE 指空的鹽容器；兩者都是裝調味料的容器，取「調味料容器」。",
-      "ch": "用於補充空的調味料容器.",
-      "cn": "用于补充空的调味料容器."
-    },
     "UI|UI_Lockpick_boltcutter": {
       "action": "translate",
       "signature": "1d1865f4c095acef",
@@ -9286,13 +9258,6 @@
       "ch": "消音器",
       "cn": "消音器"
     },
-    "ContextMenu|ContextMenu_WBHM_TreatPartner": {
-      "action": "translate",
-      "signature": "af397052c439e223",
-      "reason": "2026-10-03 裁決: TDDUPMarriageCompanion 寫 Medical Care: Treat Partner, TDDUPMedicalFramework 寫 Treat Patient, 兩者的 WBHM_Client.lua 都是用 getPartnerFor 取得伴侶後才加這個右鍵選單, 指的是同一個動作, 治療對象都是伴侶. 現值「治療病患」偏向 Framework 的措辭, 改成「醫療照護: 治療伴侶」, 對兩方都成立, 也跟同組的「醫療照護」用詞一致.",
-      "ch": "醫療照護: 治療伴侶",
-      "cn": "医疗护理: 治疗伴侣"
-    },
     "IG_UI|IGUI_ItemCat_FoodPerishable": {
       "action": "translate",
       "signature": "f845d01d764dfa52",
@@ -9446,48 +9411,6 @@
       "reason": "2026-10-03 裁決: GaelGunStore 寫 Heckler & Koch XM8 Rifle, Brita 的 script 寫 H&K XM8, 是同一把槍, 只差廠牌全名與種類字. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
       "ch": "黑克勒-科赫XM8步槍",
       "cn": "黑克勒-科赫XM8步枪"
-    },
-    "Tooltip|Tooltip_WBHM_AntiDiarrhealTablets": {
-      "action": "translate",
-      "signature": "fec95f73be228785",
-      "reason": "2026-10-03 裁決: 同一 workshop 項目 (3723942896) 的 TDDUPMarriageCompanion 與 TDDUPMedicalFramework 共用 WBHM 醫療系統, 是同一種藥品; Companion 是白話版, Framework 多了「診斷醫療模型」的系統說明. 現值照 Framework 翻, 改成照 Companion 的白話說法, 內容是 Framework 說明的子集, 對兩方都成立.",
-      "ch": "有助於在腸胃疾病期間減輕體液流失與絞痛.",
-      "cn": "有助于在肠胃疾病期间减轻体液流失和绞痛."
-    },
-    "Tooltip|Tooltip_WBHM_AntiNauseaTablets": {
-      "action": "translate",
-      "signature": "5239c84671a3aa22",
-      "reason": "2026-10-03 裁決: TDDUPMarriageCompanion 與 TDDUPMedicalFramework 是同一 WBHM 醫療系統的同一種藥品, Companion 是白話版, Framework 多了「診斷醫療模型」的說明. 改成照 Companion 的白話說法, 對兩方都成立.",
-      "ch": "有助於在腸胃疾病期間減輕噁心與嘔吐.",
-      "cn": "有助于在肠胃疾病期间减轻恶心和呕吐."
-    },
-    "Tooltip|Tooltip_WBHM_AntihistamineTablets": {
-      "action": "translate",
-      "signature": "d26606fe574e518c",
-      "reason": "2026-10-03 裁決: TDDUPMarriageCompanion 與 TDDUPMedicalFramework 是同一 WBHM 醫療系統的同一種藥品, Companion 寫 Helps reduce allergy symptoms, Framework 寫在醫療模型中減輕模擬的過敏發作症狀. 改成照 Companion 的白話說法, 對兩方都成立.",
-      "ch": "有助於減輕過敏症狀.",
-      "cn": "有助于减轻过敏症状."
-    },
-    "Tooltip|Tooltip_WBHM_ElectrolytePowder": {
-      "action": "translate",
-      "signature": "7cb1d35430705dc1",
-      "reason": "2026-10-03 裁決: TDDUPMarriageCompanion 與 TDDUPMedicalFramework 是同一 WBHM 醫療系統的同一種用品, 兩方都說用於脫水恢復與補充體液/電解質, Framework 多了「診斷醫療用品, 健康模型」的系統說明. 改成照 Companion 的白話說法, 對兩方都成立.",
-      "ch": "用於脫水恢復與補充體液的電解質粉.",
-      "cn": "用于脱水恢复和补充体液的电解质粉."
-    },
-    "Tooltip|Tooltip_WBHM_RecoveryCareKit": {
-      "action": "translate",
-      "signature": "c8e4d97c535c531d",
-      "reason": "2026-10-03 裁決: TDDUPMarriageCompanion 與 TDDUPMedicalFramework 是同一 WBHM 醫療系統的同一種用品, 只差 Framework 多寫 simulated ... states. 改成去掉「模擬狀態」的白話說法, 對兩方都成立.",
-      "ch": "用於短期恢復的綜合野外照護包.",
-      "cn": "用于短期恢复的综合野外护理包."
-    },
-    "Tooltip|Tooltip_WBHM_Sling": {
-      "action": "translate",
-      "signature": "a9a28adc49a41d5c",
-      "reason": "2026-10-03 裁決: TDDUPMarriageCompanion 與 TDDUPMedicalFramework 是同一 WBHM 醫療系統的同一種用品, Companion 的英文是 Framework 第一句, Framework 多一句「醫療模型可將手臂標記為暫時受限」. 只保留兩方共有的第一句, 對兩方都成立.",
-      "ch": "在短期恢復期間支撐受傷的手臂.",
-      "cn": "在短期恢复期间支撑受伤的手臂."
     },
     "ContextMenu|ContextMenu_TuckIn": {
       "action": "translate",
@@ -11716,13 +11639,6 @@
       "ch": "索利達爾生成機率 [.50 BMG]",
       "cn": "索利达尔刷新几率 [.50 BMG]"
     },
-    "IG_UI|IGUI_Knox_Module_hotbar_Info": {
-      "action": "translate",
-      "signature": "270e0a1a3254b39d",
-      "reason": "2026-10-20 #953：Knox Inventory 新增 KnoxInventoryBeta 子模組，同鍵英文較短：'The quick slots bar with your hands on it. Switch it off for Clean UI and other hotbar mods.'；主模組 KnoxInventory 另寫位置（畫面底部）、外觀（Knox 風格）與關閉後遊戲或該模組的快捷欄會回來。改譯成兩方共通的內容：快捷欄包含雙手、使用 Clean UI 等其他快捷欄模組時關閉。 2026-10-26 As1 v3.12.0：As1 收錄此鍵，簡中改用 As1 值（對兩個 owner 都成立），更新 cn 錨點。",
-      "ch": "包含你雙手的快捷欄位列. 使用 Clean UI 等其他快捷欄模組時, 請關閉此項.",
-      "cn": "包含双手的快捷栏. 若使用Clean UI或其他快捷栏模组, 请关闭此项."
-    },
     "ItemName|Base.CampCarbine": {
       "action": "unship",
       "signature": "5100213f38e0821c",
@@ -11739,13 +11655,6 @@
       "reason": "2026-10-21 #971 裁決維持現值：Nihonto（3723127305）寫 'Assemble Wakizashi'，Rain's Axes & Blades（3774213378）寫 'Assemble Wakizashi (A)'。兩方都是組裝脇差的配方；(A) 是 Rain's 區分自家 A、B 兩款脇差的標記，Rain's 另一個配方 AssembleWakizashiB 仍顯示「組裝脅差 (B)」，不寫 (A) 也分得出來；寫 (A) 則對 Nihonto 不成立。",
       "ch": "組裝脅差",
       "cn": "组装胁差"
-    },
-    "IG_UI|IGUI_Knox_Choice_loot_scope_Info": {
-      "action": "translate",
-      "signature": "4436ab4388bb848e",
-      "reason": "2026-10-21 #978 裁決：Knox Inventory 1.0 BETA（KnoxInventoryBeta）在「自動」一項多寫 'and with OldPoint's overhead camera'；Lua 只有 Beta 支援 OldPoint（KnoxCompat.lua），主模組 KnoxInventory 沒有。照 2026-10-11 使用者裁定採「共通內容＋具名專屬句」：保留兩方共通的說明，句末加「Knox Inventory 1.0 BETA: 使用 OldPoint 的俯視鏡頭時也列出周圍全部.」。",
-      "ch": "「周圍」欄會列出哪些容器. 「只限開啟的」: 你在世界中點選開啟或用 Viewpoint 的按鍵開啟的那個容器, 以及你旁邊的地板. 「自動」: 使用 Viewpoint 的鏡頭時同前者, 使用一般鏡頭時列出周圍全部. 在車內時一律全部顯示. Knox Inventory 1.0 BETA: 使用 OldPoint 的俯視鏡頭時也列出周圍全部.",
-      "cn": "“周围”栏会列出哪些容器. “仅限打开的”: 你在世界中点击打开或用 Viewpoint 的按键打开的那个容器, 以及你旁边的地板. “自动”: 使用 Viewpoint 的镜头时同前者, 使用普通镜头时列出周围全部. 在车内时总是全部显示. Knox Inventory 1.0 BETA: 使用 OldPoint 的俯视镜头时也列出周围全部."
     },
     "UI|UI_MEE_LegacyVariantNotice": {
       "action": "translate",
@@ -11962,16 +11871,6 @@
       "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Escape from Kentucky（3633421539）寫 Thompson SMG Spawn Chance [9mm]，MFS 社群修正版（3780151182）改寫 Thompson SMG Spawn Chance [.45 ACP]；同一把槍的生成機率設定。兩方湯普森的 script 不同（EFK：base:bullets_9mm、MagazineType 9mmDrum_cat；社群修正版：base:bullets_45、100 發彈鼓），口徑括號互斥。比照 Sandbox_ModernFirearmsSystemSandboxGun_M7_cat_Spawn 的前例省略口徑括號，其餘維持現行譯名。",
       "ch": "湯普森衝鋒槍生成機率",
       "cn": "汤普森冲锋枪刷新几率"
-    },
-    "IG_UI|IGUI_KnoxTB_A_Settings": {
-      "action": "unship",
-      "signature": "9fbb5a43512011ea",
-      "reason": "2026-10-25 #1063：Knox Inventory 新增的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）把測試台按鈕說明寫成 Open the settings，KnoxInventory 寫 Open settings。這是測試台鍵：讀它的 KnoxTestBench.lua 兩個子 MOD 的 Workshop 版都不含（KnoxScreen.lua 註解 the bench is left out of the Workshop build），其餘 IGUI_KnoxTB_* 已依 2026-10-22 裁定登記 untranslatable_keys.json，本鍵照同一裁定不出貨。兩方都有可載入 IG_UI.json，玩家看不到此鍵。"
-    },
-    "IG_UI|IGUI_Knox_Page_game": {
-      "action": "unship",
-      "signature": "c6552ad68a275feb",
-      "reason": "2026-10-25 #1063：Knox Inventory 新增的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）把設定頁分頁 Game 改名 Loot and bags（分頁內容改成 Search and loot、Bags and pockets 兩節），KnoxInventory 仍是 Game；兩個分頁名指不同內容，沒有誠實中性譯名，不出貨。兩方都有可載入 IG_UI.json 並自帶 Translate/CN：不出貨後繁中玩家看到各自英文分頁名、簡中玩家看到作者簡中（「游戏」／「战利品与背包」）；條件譯文依啟用的子 MOD 寫入各自譯名。"
     },
     "ItemName|Base.223Carton": {
       "action": "translate",
@@ -12433,15 +12332,10 @@
       "ch": "CD: 老鼠",
       "cn": "CD: 老鼠"
     },
-    "IG_UI|IGUI_Knox_JavaMissing": {
+    "ItemName|Base.JS5_SMG": {
       "action": "unship",
-      "signature": "a4fb9af80e6931a8",
-      "reason": "2026-11-06 #1221–#1297 批次：Knox Inventory 的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）改寫 ZombieBuddy 未載入時的處理步驟（勾 Yes、按 OK，問不出來時按 Shift 開視窗、刪 mod_approvals.json），KnoxInventory 仍是回答 Allow。兩方步驟不同，照任一方翻都會讓另一方玩家照錯誤步驟操作，沒有誠實中性譯文，不出貨。比照 IGUI_Knox_Page_game 前例：兩方都有可載入 IG_UI.json 並自帶 Translate/CN，繁中玩家看到各自英文、簡中玩家看到作者簡中；條件譯文依啟用的子 MOD 寫入各自譯文。"
-    },
-    "IG_UI|IGUI_Knox_JavaRestart": {
-      "action": "unship",
-      "signature": "800a114c93010482",
-      "reason": "2026-11-06 #1221–#1297 批次：Knox Inventory 的 1.0 BETA 子 MOD（KnoxInventoryBeta，與 KnoxInventory 互斥）改寫重啟後訊息仍出現時的處理步驟（勾 Yes、按 OK，問不出來時按 Shift 開視窗、刪 mod_approvals.json），KnoxInventory 仍是回答 Allow。兩方步驟不同，沒有誠實中性譯文，不出貨。比照 IGUI_Knox_Page_game 前例：兩方都有可載入 IG_UI.json 並自帶 Translate/CN，繁中玩家看到各自英文、簡中玩家看到作者簡中；條件譯文依啟用的子 MOD 寫入各自譯文。"
+      "signature": "fb51963410d6e932",
+      "reason": "2026-11-09 #1329 裁決不出貨：Project A-Life（3803984183）新增自己的 Base.JS5_SMG，名稱 JS-5 Submachine Gun；Better Vanilla Firearms（3715977706）的同鍵是 KH-5 Submachinegun（同 MOD 另有 KH-5/10）。兩邊模型、作者不同，型號名不同，比照同系列 Base.JS5_Clip（#965）不出貨。抑制後：兩方都有可載入的 ItemName.json，繁中玩家看到各自英文；BVF 自帶 Translate/CN，簡中玩家裝 BVF 時看到 MOD 自帶簡中、只裝 A-Life 時看到英文；條件譯文依啟用的 MOD 寫入各自譯名。"
     }
   }
 }

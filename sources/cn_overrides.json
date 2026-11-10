@@ -27900,11 +27900,6 @@
     "value": "制作 40mm 下挂榴弹",
     "reason": "2026-10-03 #680 owner 衝突裁決：改為對各 owner 都成立的譯名 (理由見 owner_conflict_decisions.json)。"
   },
-  "Recipes.json|MakeJar4": {
-    "as1_value": "制作罐装食品 (香料)",
-    "value": "制作罐装食品 (调味料)",
-    "reason": "2026-09-29 #619 owner 衝突中性譯名：LongTermPreservationExtended 改為 Spices／Shaker、LongTermPreservationExtendedSE 仍為 Salt，取兩方皆成立的「調味料」；裁決見 owner_conflict_decisions.json。"
-  },
   "Sandbox.json|Sandbox_ETW_ImmunitySystemCounter_tooltip": {
     "as1_value": "达到计数器一半值时失去易生病, 达到计数器值时获得强韧. 每分钟当前感冒强度被加入计数器. 感染诺克斯病毒也有贡献(所以如果你运行可以帮助对抗感染的模组, 如抗体, 它会对免疫系统有帮助)",
     "value": "免疫系统进度的上限. 进度达 12.5%% 时失去易患疾病, 25%% 时失去免疫缺陷, 37.5%% 时获得生命强韧, 100%% 时获得超级免疫. 已禁用的自定义特质会被跳过. 每分钟会把当前的感冒强度加入进度. 诺克斯感染也会按其倍率计入进度.",
@@ -27972,8 +27967,8 @@
   },
   "Tooltip.json|Tooltip_item_UseForRefill": {
     "as1_value": "用于重新填充空的盐容器.",
-    "value": "用于补充空的调味料容器.",
-    "reason": "2026-09-29 #619 owner 衝突中性譯名：LongTermPreservationExtended 改為 Spices／Shaker、LongTermPreservationExtendedSE 仍為 Salt，取兩方皆成立的「調味料」；裁決見 owner_conflict_decisions.json。"
+    "value": "用于补充空的调味瓶.",
+    "reason": "2026-11-09 #1339 批次：兩版英文都改成 Shaker，owner 衝突消失，中性譯名「調味料容器」改回照英文（調味罐／调味瓶同 Base.ShakerEmpty）"
   },
   "UI.json|UI_ETW_Options_EnableSleepHealthMoodle_tooltip": {
     "as1_value": "显示你是否在最佳时段内睡觉. 仅在角色睡觉时激活",
@@ -58197,8 +58192,8 @@
   },
   "Sandbox.json|Sandbox_ProjectALife.Support_SpotlightChance_tooltip": {
     "as1_value": "有几率发起一次经授权的直升机探照灯请求. 仅地面的请求者无法使用此功能.",
-    "value": "设置获准请求直升机支援的NPC呼叫探照灯的概率. 仅限地面的呼叫者无法请求.\n默认: 20.",
-    "reason": "2026-10-15 #865：上游預設值改為 20（原 12），依新英文更新。"
+    "value": "设置获准请求直升机支援的NPC呼叫探照灯的概率. 只能呼叫地面支援的NPC无法请求.\n默认: 20.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：Ground-only 指支援權限只允許地面增援, 不是呼叫者位於地面; Lua 以支援類型 heli 或 both 判斷探照燈資格."
   },
   "Sandbox.json|Sandbox_ProjectALife.Support_SpotlightSeconds": {
     "as1_value": "探照灯持续时间 (实际秒数)",
@@ -58267,8 +58262,8 @@
   },
   "Sandbox.json|Sandbox_ProjectALife.NpcNight_tooltip": {
     "as1_value": "手电筒: NPC携带光源, 在黑暗中能看到12格 (若光源在你身上, 则能看到20格). 夜视: NPC仅在夜间能看见东西; 请自行为他们配备护目镜.",
-    "value": "手电筒: NPC在黑暗中能看到12格, 光源照到你时则为20格. 夜视: NPC在夜间也能看见, 但护目镜必须由你自行提供.\n默认: 手电筒 (1).",
-    "reason": "2026-10-13 #839：上游英文改寫（Flashlights: NPCs carry a light and see … → Flashlights: NPCs see 12 tiles in darkne…），依新英文重譯。"
+    "value": "手电筒: NPC在黑暗中能看到12格, 光源照到你时则为20格. 夜视: NPC在夜间也能看见, 但夜视镜必须由你自行提供.\n默认: 手电筒 (1).",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：夜視語境中的 goggles 指夜視鏡, 不是一般護目鏡."
   },
   "Sandbox.json|Sandbox_ProjectALife.NightActivity": {
     "as1_value": "夜间行动几率",
@@ -58537,8 +58532,8 @@
   },
   "Sandbox.json|Sandbox_ProjectALife.DropsWeaponCondition_tooltip": {
     "as1_value": "掉落武器的状态如何. 每个NPC的档案都会保留各自的评分和早期游戏曲线, 在早期游戏的前几周, 你大多会获得损坏或接近损坏的枪支. 除此之外, 还包括每个NPC掉落的每件武器的状态. 损坏意味着它必须先修复才能使用. NPC仍然会用它全力战斗.",
-    "value": "设置掉落武器的状态, 不影响NPC的战斗力. “每个NPC档案”沿用该档案的评级和游戏初期磨损曲线; “破碎”需要先修理才能使用.\n默认: 每个NPC档案 (1).",
-    "reason": "2026-10-13 #839：上游英文改寫（What shape a dropped weapon is in. Per N… → Sets dropped weapon condition, not NPC c…），依新英文重譯。"
+    "value": "设置掉落武器的状态, 不影响NPC的战斗力. “每个NPC档案”沿用该档案的评级和游戏初期磨损曲线; “损坏”需要先修理才能使用.\n默认: 每个NPC档案 (1).",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：同步修正 Broken 的誤譯, 並讓說明引用的名稱與修正後的選項一致."
   },
   "Sandbox.json|Sandbox_ProjectALife.WeaponJamming": {
     "as1_value": "启用NPC武器卡壳",
@@ -58612,8 +58607,8 @@
   },
   "Sandbox.json|Sandbox_ProjectALife.Clues_tooltip": {
     "as1_value": "当没有敌人可打时, NPC会在发现幸存者迹象的区域进行搜索.",
-    "value": "没有战斗时, NPC会搜索有幸存者在附近迹象的区域, 例如路障或运行中的发电机.\n默认: 开启.",
-    "reason": "2026-10-13 #839：上游英文改寫（With nothing to fight, NPCs search areas… → When not fighting, NPCs search areas wit…），依新英文重譯。"
+    "value": "没有战斗时, NPC会搜索有幸存者在附近迹象的区域, 例如加固过的门窗或运行中的发电机.\n默认: 开启.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：barricades 指加固過的門窗（ALifeClues.lua:305-312）"
   },
   "Sandbox.json|Sandbox_ProjectALife.CluesVehicles": {
     "as1_value": "注意车辆",
@@ -58627,8 +58622,8 @@
   },
   "Sandbox.json|Sandbox_ProjectALife.CluesBarricades": {
     "as1_value": "注意路障",
-    "value": "路障踪迹",
-    "reason": "2026-10-13 #839：上游英文改寫（Notice barricades… → Barricade traces…），依新英文重譯。"
+    "value": "门窗加固痕迹",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：ALifeClues.lua:305-312 只記錄門窗等物件的 isBarricaded()，不是道路路障"
   },
   "Sandbox.json|Sandbox_ProjectALife.CluesBarricades_tooltip": {
     "as1_value": "门窗上装有木板, 表明这座建筑归某人所有.",
@@ -64242,8 +64237,8 @@
   },
   "IG_UI.json|IGUI_Knox_Choice_loot_scope_Info": {
     "as1_value": "'周围' 一栏列出哪些容器. \"仅已打开的\": 你在世界中点击打开或使用Viewpoint按键打开的容器, 以及你身边的地面. \"自动\": 使用Viewpoint视角时显示对应内容, 使用普通视角时显示周围所有内容. 在车内时始终显示所有内容.",
-    "value": "“周围”栏会列出哪些容器. “仅限打开的”: 你在世界中点击打开或用 Viewpoint 的按键打开的那个容器, 以及你旁边的地板. “自动”: 使用 Viewpoint 的镜头时同前者, 使用普通镜头时列出周围全部. 在车内时总是全部显示. Knox Inventory 1.0 BETA: 使用 OldPoint 的俯视镜头时也列出周围全部.",
-    "reason": "2026-10-26 As1 v3.12.0：多 owner 裁決鍵（KnoxInventory／KnoxInventoryBeta），As1 譯文漏了 Beta 版 OldPoint 俯視鏡頭那句，維持裁決譯文"
+    "value": "“周围”栏会列出哪些容器. “仅限打开的”: 你在世界中点击打开或用 Viewpoint 的按键打开的那个容器, 以及你旁边的地板. “自动”: 使用 Viewpoint 的镜头时同前者, 使用普通镜头和 OldPoint 的俯视镜头时列出周围全部. 在车内时总是全部显示.",
+    "reason": "2026-11-09 #1339：上游拿掉 KnoxInventory 子 MOD、只剩 KnoxInventoryBeta，owner 衝突消失，改照 Beta 英文（沿用條件譯文 Beta 組譯文）"
   },
   "IG_UI.json|IGUI_Breed_amr_rabbit_dutch_v1": {
     "as1_value": "荷兰兔",
@@ -65237,8 +65232,8 @@
   },
   "Sandbox.json|Sandbox_RadioTraders_ContractDifficulty_tooltip": {
     "as1_value": "委托单子能有多大. 每件物品的报酬在每种设置下都一样, 所以小单子给的钱少. 简单: 最多 10 件, 期限更长. 中等: 最多 15 件. 困难: 最多 20 件, 期限更短, 报酬 +10%%, 声望更多.",
-    "value": "委托单子能有多大. 每件物品的报酬在每种设置下都一样, 所以小单子给的钱少. 简单: 最多 10 件, 期限更长. 中等: 最多 15 件. 困难: 最多 20 件, 期限更短, 报酬多百分之 10, 声望更多.",
-    "reason": "2026-10-26 As1 v3.12.0：As1 把 en 文字 percent 寫成 %%，改寫「百分之 N」"
+    "value": "委托要求某种物品的数量. 普通: 1 件. 困难: 2 件. 更困难: 3 到 5 件. 物品委托、剧情步骤和现场委托都一样. 期限、声望和报酬会随设置提高.",
+    "reason": "2026-11-09 #1321–#1337 批次：上游改英文：How many of an item a job asks for. Normal: 1. Hard: 2. Hard"
   },
   "Sandbox.json|Sandbox_RadioTraders_CustomCurrencyItems": {
     "as1_value": "自定义货币物品 (原版硬币)*",
@@ -66812,8 +66807,8 @@
   },
   "UI.json|UI_RadioTraders_Help_Advanced_2": {
     "as1_value": "声望: 每个商人有五个等级, 从不信任到伙伴. 你的等级在呼叫窗口显示为 REP. 等级越高, 价格越好.",
-    "value": "声望: 每个商人有五个等级, 从不信任到伙伴. 你的等级在呼叫窗口显示为 “声望”. 等级越高, 价格越好.",
-    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：CN 寫 REP, 但 CN 介面 UI_RadioTraders_RepShort 顯示的是声望, 玩家找不到 REP"
+    "value": "声望: 每个商人有七个等级, 从不信任一直到核心圈. 你的等级在呼叫窗口显示为 “声望”. 等级越高, 价格越好.",
+    "reason": "2026-11-09 #1321–#1337 批次：上游改英文：Reputation: seven standings per trader, from Distrusted up t"
   },
   "UI.json|UI_RadioTraders_WN_7": {
     "as1_value": "发电机又能卖给火花了: 拿在手上, 查看他的收购页.",
@@ -80184,5 +80179,690 @@
     "as1_value": "$100 / 钞票捆x1 -> 青铜代币x1",
     "value": "$100 / 捆装钞票x1 -> 青铜代币x1",
     "reason": "2026-11-08 #1309–#1320 批次：Dan's 全 MOD 名稱一致性：原版物品 Base.MoneyBundle 照 LangFor42/官方簡中 (捆裝鈔票/捆装钞票)"
+  },
+  "IG_UI.json|IGUI_Knox_Page_game": {
+    "as1_value": "游戏",
+    "value": "搜刮与背包",
+    "reason": "2026-11-09 #1339：上游拿掉 KnoxInventory 子 MOD、只剩 KnoxInventoryBeta，owner 衝突消失，改照 Beta 英文（沿用條件譯文 Beta 組譯文）"
+  },
+  "IG_UI.json|IGUI_Knox_JavaMissing": {
+    "as1_value": "诺克斯物品栏 (Knox Inventory) 需要ZombieBuddy, 但其Java部分未加载.\n\n目前使用游戏原生物品栏. 请按照创意工坊页面的说明安装ZombieBuddy (它需要从游戏启动选项中启动), 然后重启游戏.\n\n已经安装了ZombieBuddy? 每次模组更新后, 它都会再次询问是否加载KnoxInventoryJava.jar - 请选择 '允许'. 如果未询问或你选择了 '否', 模组将保持禁用状态.",
+    "value": "诺克斯物品栏 (Knox Inventory) 需要ZombieBuddy, 但其Java部分未加载.\n\n目前使用游戏原生物品栏. 请按照创意工坊页面的说明安装ZombieBuddy (它需要从游戏启动选项中启动), 然后重启游戏.\n\n已经安装了ZombieBuddy? 每次模组更新后, ZombieBuddy都会再次询问KnoxInventoryJava.jar: 在Knox Inventory那一行勾选 “Yes”, 然后点击 “OK”.\n\n没有出现询问? ZombieBuddy可能已保存了拒绝的选择: 重新安装游戏或模组都无法清除. 启动游戏后立即按住Shift, 一直按住直到ZombieBuddy窗口打开. 勾选 “Yes”, 开启 “Save decisions to disk”, 然后点击 “OK”.\n\n窗口没有打开? 关闭游戏, 删除C:\\Users\\YourName\\.zombie_buddy\\mod_approvals.json, 然后重新启动游戏.",
+    "reason": "2026-11-09 #1339：上游拿掉 KnoxInventory 子 MOD、只剩 KnoxInventoryBeta，owner 衝突消失，改照 Beta 英文（沿用條件譯文 Beta 組譯文）"
+  },
+  "IG_UI.json|IGUI_Knox_JavaRestart": {
+    "as1_value": "诺克斯物品栏 (Knox Inventory) 已启用, 但只有在重启游戏后才能生效.\n\n请完全关闭《僵尸毁灭工程》并重新启动: 模组的Java部分仅在游戏启动时加载.\n\n如果重启后仍出现此消息: 每次模组更新后, ZombieBuddy都会再次询问是否加载KnoxInventoryJava.jar - 请选择 '允许'. 如果完全没有询问, 说明ZombieBuddy未运行: 请按照其创意工坊页面的说明进行安装.",
+    "value": "诺克斯物品栏 (Knox Inventory) 已启用, 但只有在重启游戏后才能生效.\n\n请完全关闭《僵尸毁灭工程》并重新启动: 模组的Java部分仅在游戏启动时加载.\n\n此消息又出现了? 每次模组更新后, ZombieBuddy都会再次询问KnoxInventoryJava.jar: 在Knox Inventory那一行勾选 “Yes”, 然后点击 “OK”.\n\n没有出现询问? ZombieBuddy可能已保存了拒绝的选择: 重新安装游戏或模组都无法清除. 启动游戏后立即按住Shift, 一直按住直到ZombieBuddy窗口打开. 勾选 “Yes”, 开启 “Save decisions to disk”, 然后点击 “OK”.\n\n窗口没有打开? 关闭游戏, 删除C:\\Users\\YourName\\.zombie_buddy\\mod_approvals.json, 然后重新启动游戏. 如果仍然无效, 说明ZombieBuddy未运行: 请按照其创意工坊页面的说明进行安装.",
+    "reason": "2026-11-09 #1339：上游拿掉 KnoxInventory 子 MOD、只剩 KnoxInventoryBeta，owner 衝突消失，改照 Beta 英文（沿用條件譯文 Beta 組譯文）"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_ContractDifficulty_option3": {
+    "as1_value": "困难",
+    "value": "更困难 (最多 5 件)",
+    "reason": "2026-11-09 #1321–#1337 批次：上游改英文：Harder (up to 5 items)"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_ContractDifficulty_option1": {
+    "as1_value": "简单",
+    "value": "普通 (1 件)",
+    "reason": "2026-11-09 #1321–#1337 批次：上游改英文：Normal (1 item)"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_ContractDifficulty_option2": {
+    "as1_value": "中等",
+    "value": "困难 (2 件)",
+    "reason": "2026-11-09 #1321–#1337 批次：上游改英文：Hard (2 items)"
+  },
+  "UI.json|UI_ZomVisFix_Options_Title": {
+    "as1_value": "僵尸可见性修复",
+    "value": "僵尸可见性修复 - 客户端设置",
+    "reason": "2026-11-09 #1321–#1337 批次：上游改英文：zombie visibility fix - client settings"
+  },
+  "IG_UI.json|IGUI_ALifeUI_07686ffa3bd9579c": {
+    "as1_value": "厄尔 - 奔跑者",
+    "value": "厄尔 - 跑腿",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Runner 是角色職責, 不是單純奔跑的人; 同 MOD 的 Leon、Roy、Boyd 等同職稱均譯為跑腿."
+  },
+  "IG_UI.json|IGUI_ALifeUI_088bf8fc03d718c9": {
+    "as1_value": "Travis - 核心成员",
+    "value": "Travis - 正式成员",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Made Man 指黑幫正式接納的成員身分, 不等同核心幹部; 原譯改變了職級含義."
+  },
+  "IG_UI.json|IGUI_ALifeUI_0a09e06a7417c336": {
+    "as1_value": "A-Life: 事件 {kind}",
+    "value": "A-Life: 环境事件 {kind}",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：漏掉 meta 所指的事件類型; 依 existing 的 Play a meta event here 使用環境事件, 並保留 {kind}."
+  },
+  "IG_UI.json|IGUI_ALifeUI_0c6437e309253a7a": {
+    "as1_value": "道路两侧路肩埋伏的枪手, 在目标进入中间区域前会保持停火.",
+    "value": "道路两侧路肩埋伏的枪手, 会按兵不动, 直到有车辆驶入中间区域.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：原譯漏掉 drives 的車輛觸發條件. ALifeEncounters.lua 的 highway_ambush 明確設定 trigger = vehicle"
+  },
+  "IG_UI.json|IGUI_ALifeUI_1a018058618ac6aa": {
+    "as1_value": "Curtis - 采摘工",
+    "value": "Curtis - 物资收集员",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：同一英文標籤同時用於倉庫夜班與路邊拾荒陣營（npc_profiles.alife），改用兩者都成立的物資收集員"
+  },
+  "IG_UI.json|IGUI_ALifeUI_1ded54d55131f5bc": {
+    "as1_value": "路易斯 - 骑警",
+    "value": "路易斯 - 州警",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：此 MOD 的 Trooper 是 Kentucky State Police 州警, 台詞與 Veteran Trooper、Trooper First Cl"
+  },
+  "IG_UI.json|IGUI_ALifeUI_206f2aec51224664": {
+    "as1_value": "Napier 采集者",
+    "value": "Napier 收账帮",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Collectors 在此是收帳幫派, 原譯採集者與 CH 及同 MOD 的 Collector 收帳角色系列不一致; 保留既有 Napier 專名寫法."
+  },
+  "IG_UI.json|IGUI_ALifeUI_2259f43c4c6d4ee9": {
+    "as1_value": "韦德 - 逃兵",
+    "value": "韦德 - 逃犯",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：此 Runaway 屬勞改隊逃離者系列, 不是軍人逃兵; 沿用同組 Luis、Curtis、Vernon 等既有的逃犯."
+  },
+  "IG_UI.json|IGUI_ALifeUI_2b8846102bc60665": {
+    "as1_value": "沃克连排住宅",
+    "value": "沃克双拼住宅",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Duplex 指雙戶住宅, 不是泛稱連排住宅; 原譯丟失雙戶的建築類型資訊."
+  },
+  "IG_UI.json|IGUI_ALifeUI_2e6ff5b7558bafa1": {
+    "as1_value": "Daniel - 发令者",
+    "value": "Daniel - 头目",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Shot Caller 是幫派中作主的頭目, 不是字面上的發令者; 與 CH 的身分含義對齊."
+  },
+  "IG_UI.json|IGUI_ALifeUI_2f1885b002791314": {
+    "as1_value": "Terrence - 军医",
+    "value": "Terrence - 医护兵",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Medic 不等於具有醫師身分的軍醫; 同 MOD 已另列 Doctor、Medical Officer, 且多個 Medic 採用医护兵."
+  },
+  "IG_UI.json|IGUI_ALifeUI_326c4d504af0d9d1": {
+    "as1_value": "弗兰克 - 逃兵",
+    "value": "弗兰克 - 逃犯",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：此 Runaway 屬勞改隊逃離者系列, 不是軍人逃兵; 沿用同組既有的逃犯."
+  },
+  "IG_UI.json|IGUI_ALifeUI_33ac44ba61b23873": {
+    "as1_value": "雷 - 骑警",
+    "value": "雷 - 州警",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Trooper 在此 MOD 指肯塔基州警, 不是騎警; 與既有資深州警、一等州警保持一致."
+  },
+  "IG_UI.json|IGUI_ALifeUI_40c59ec56819a75a": {
+    "as1_value": "为了物资（药品、食物、弹药或工具）而来的小队, 在队长带领下逐户搜寻, 仅通过正门进入.",
+    "value": "一支只为一种物资而来的小队——药品, 食物, 弹药或工具——在队长带领下逐户搜寻整条街道, 只从门进入.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：CN 漏掉只找一種物資與沿整條街逐戶搜尋的資訊, 並把 doors 窄化成正門; CH 的進出則多加了原文未限定的離開方式."
+  },
+  "IG_UI.json|IGUI_ALifeUI_42a9cc6f1d98fef6": {
+    "as1_value": "Andre - 首领",
+    "value": "Andre - 消防队长",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：此 Chief 位於消防人員組, 同組有 Volunteer、Driver、消防車 Engineer 與 Probationary Firefighter; 首"
+  },
+  "IG_UI.json|IGUI_ALifeUI_457af5755536aa12": {
+    "as1_value": "弗兰克 - 骑警",
+    "value": "弗兰克 - 州警",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Trooper 在此 MOD 指肯塔基州警, 不是騎警; 與既有資深州警、一等州警保持一致."
+  },
+  "IG_UI.json|IGUI_ALifeUI_47910951105127ab": {
+    "as1_value": "丹尼尔 - 逃兵",
+    "value": "丹尼尔 - 逃犯",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：此 Runaway 屬勞改隊逃離者系列, 不是軍人逃兵; 沿用同組既有的逃犯."
+  },
+  "IG_UI.json|IGUI_ALifeUI_4810d37f4d1cc2f9": {
+    "as1_value": "静音环境音频 (被困住的直升机)",
+    "value": "静音环境音频 (直升机音效卡住时)",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：這是停止卡住音效的管理員功能, 不是處理被困的直升機; ALifeAdminActions.lua 將其說明為 Stop stuck sounds."
+  },
+  "IG_UI.json|IGUI_ALifeUI_4ff956d60132c73b": {
+    "as1_value": "亚当 - 奔跑者",
+    "value": "亚当 - 跑腿",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Runner 是跑腿職責, 不是奔跑者; 與同 MOD 其他同職稱及 CH 一致."
+  },
+  "IG_UI.json|IGUI_ALifeUI_51a1920f04c8439e": {
+    "as1_value": "Travis - 收集者头目",
+    "value": "Travis - 收账头目",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Collector Boss 是收帳幫派的頭目, 不是收集者頭目; 與 Napier Collectors 及既有 Collector 收帳系列一致."
+  },
+  "IG_UI.json|IGUI_ALifeUI_5a80346b260e9205": {
+    "as1_value": "自动分配势力",
+    "value": "自动分配阵营",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Faction 應沿用本 MOD 的陣營／阵营, 不另稱勢力; ALifeSpawnerBrowser.lua 說明此選項由伺服器挑選陣營."
+  },
+  "IG_UI.json|IGUI_ALifeUI_67b7e55b61140546": {
+    "as1_value": "A-Life: 警报启动",
+    "value": "A-Life: 会话警报",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：原譯警報啟動漏掉 session, 且與玩家選單上的 Session siren 不同名; 沿用 existing 的会话警报."
+  },
+  "IG_UI.json|IGUI_ALifeUI_6d633d18690f67c4": {
+    "as1_value": "玛丽亚 - 职员",
+    "value": "玛丽亚 - 店员",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：此 Clerk 位於當鋪人員組, 與 Owner、Appraiser、Counter Clerk 同組, 是店員而非泛稱職員; CH 已正確表達."
+  },
+  "IG_UI.json|IGUI_ALifeUI_70b9c69b5d1d12db": {
+    "as1_value": "Ada - 骑警",
+    "value": "Ada - 州警",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Trooper 在此 MOD 指肯塔基州警, 不是騎警; 與既有資深州警、一等州警保持一致."
+  },
+  "IG_UI.json|IGUI_ALifeUI_7397ab1c78ab329a": {
+    "as1_value": "一群占领了重要据点（如车站、仓库）并打算长期据守的队伍.",
+    "value": "一群占领了重要据点 (如警局, 仓库) 并打算长期据守的队伍.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Station 在此不是鐵路車站. ALifeEncounters.lua 的 poi_defenders 列出 police、fire、guns、medica"
+  },
+  "IG_UI.json|IGUI_ALifeUI_7721c2147a73e6e0": {
+    "as1_value": "骑警残部",
+    "value": "州警残部",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Trooper 指肯塔基州警, 不是騎警; 與該陣營人物及 CH 一致."
+  },
+  "IG_UI.json|IGUI_ALifeUI_7b3861b9085b7cdb": {
+    "as1_value": "服务器的 A-Life 诊断已为你开启 - 请再次按下",
+    "value": "服务器上为你设置的 A-Life 诊断原本处于关闭状态 - 现已开启, 请再次按下",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：原譯省略原本關閉的狀態, 只留下已開啟; 補回完整的狀態變更與再次操作提示."
+  },
+  "IG_UI.json|IGUI_ALifeUI_7dc710e058079516": {
+    "as1_value": "Dwight - 工程师",
+    "value": "Dwight - 工兵",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：此 Engineer 屬裝甲旅工兵堅守者系列, 與 Platoon Sergeant、Combat Engineer、Demolitions Specialis"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.BreachStrength_tooltip": {
+    "as1_value": "非玩家角色 (NPC) 在破门而入时, 对门, 窗户或防护的破坏力度有多大? 经过测试默认值为100: 窗户需要三次挥击, 木板需要四次, 普通门大约需要半分钟, 而且只会由一个人挥击, 其他人则掩护他. 降低数值, 他们需要更长的时间; 提高数值, 他们则能更快地突破.",
+    "value": "非玩家角色 (NPC) 在破门而入时, 对门, 窗户或门窗加固物的破坏力度有多大? 经过测试默认值为100: 窗户需要三次挥击, 木板需要四次, 普通门大约需要半分钟, 而且只会由一个人挥击, 其他人则掩护他. 降低数值, 他们需要更长的时间; 提高数值, 他们则能更快地突破.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Barricade 在此是釘在門窗上的加固物, 不是道路路障或泛稱防護; ALifeObstacleTraversal.lua 從門窗取得 barricade,"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.DropsWeaponChance_option8": {
+    "as1_value": "非常高 (50-70%%)",
+    "value": "几乎总是 (70-99%%)",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：CN 沿用了上一選項的非常高與 50-70, 與現行 Almost always (70-99%%) 不符; 保留一組 %%."
+  },
+  "Sandbox.json|Sandbox_ProjectALife.ModuleGunner_tooltip": {
+    "as1_value": "失去目标视野的射手会以全自动模式将弹匣倾倒在最后已知的位置, 左右扫射. 手枪也会进行弹匣倾倒.",
+    "value": "失去目标视野的射手会以全自动模式朝目标最后出现的位置打光弹匣内的子弹, 左右扫射. 手枪也会打光弹匣内的子弹.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Dumps the magazine／magdump 指連續射擊打光彈匣內的子彈, 不是把彈匣傾倒出去."
+  },
+  "Sandbox.json|Sandbox_ProjectALife.ModuleWithdraw_tooltip": {
+    "as1_value": "落败的射击手会中断联系, 跑回一个街区外, 躲进视线之外的地方: 如果有建筑物的话, 就躲进去: 然后从另一侧回来. 只能远程攻击; 近战总是关闭.",
+    "value": "处于劣势的射手会脱离交战, 后撤约一个街区, 躲到视线之外 (附近有建筑物就躲进去), 然后从另一侧再攻回来. 仅适用于远程攻击者; 近战攻击者总会逼近目标.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Breaks contact 是脫離交戰, 不是中斷聯繫; ranged only 限定撤退行為適用對象, 不是只能遠程攻擊; melee always clo"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.WorldMode_option2": {
+    "as1_value": "仅限本地 (玩家附近的群体; 前哨站保持不变)",
+    "value": "仅限本地 (团体只在玩家附近; 哨所保留)",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU1：Outposts stay 表示哨所仍保留, 不是狀態保持不變; 同設定 tooltip 明說兩種模式下哨所仍可發展. 同時沿用既有哨所用詞."
+  },
+  "IG_UI.json|IGUI_ALifeUI_05e8b01405780e7d": {
+    "as1_value": "Henry - 核心成员",
+    "value": "Henry - 正式成员",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：Made Man 指經正式接納的黑手黨成員, 不是泛指核心人物; 繁中已正確."
+  },
+  "IG_UI.json|IGUI_ALifeUI_06afc4c02dbbffe9": {
+    "as1_value": "监狱局残部",
+    "value": "狱警残部",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：陣營說明指守住監獄側翼後撤離的獄警, 並非原文未提及的監獄局."
+  },
+  "IG_UI.json|IGUI_ALifeUI_0e9b82bd288cb2ab": {
+    "as1_value": "A-Life: 遭遇战箭头已开启",
+    "value": "A-Life: 遭遇指示箭头已开启",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：箭頭涵蓋駐軍、巡行及維修等遭遇, 不限戰鬥; 遭遇戰誤縮了功能範圍."
+  },
+  "IG_UI.json|IGUI_ALifeUI_0ef54c452f6a8367": {
+    "as1_value": "切换遭遇战箭头指示",
+    "value": "切换遭遇指示箭头",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：encounter 在這個功能中不限戰鬥, 並與開關狀態名稱保持一致."
+  },
+  "IG_UI.json|IGUI_ALifeUI_126317725ccabcea": {
+    "as1_value": "奥蒂斯 - 站长",
+    "value": "奥蒂斯 - 电台台长",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：角色屬於 alife_radio_station, 同組有 DJ 與廣播工程師; 此處是電台台長."
+  },
+  "IG_UI.json|IGUI_ALifeUI_12c9ac977b92f3a0": {
+    "as1_value": "Bonnie - 骑警",
+    "value": "Bonnie - 州警",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：此處 Trooper 指肯塔基州警, 不是騎警; 同 MOD 已有一等州警與資深州警的譯名."
+  },
+  "IG_UI.json|IGUI_ALifeUI_1bab024976b44359": {
+    "as1_value": "环保局残部",
+    "value": "保育官残部",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：陣營說明指在森林營地維持保育工作的執法人員, 不是環保局; 與既有 Conservation Officers 譯名對齊."
+  },
+  "IG_UI.json|IGUI_ALifeUI_225ae9503a2d6238": {
+    "as1_value": "奥蒂斯 - 县职员",
+    "value": "奥蒂斯 - 县书记官",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：County Clerk 是具體的縣級書記官職務, 縣職員漏掉了職務身分."
+  },
+  "IG_UI.json|IGUI_ALifeUI_23c4014e051998c5": {
+    "as1_value": "4号哨所骑警",
+    "value": "第4分局州警",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：陣營是仍在 US-31W 執勤的肯塔基州警第4分局人員, 不是哨所騎警."
+  },
+  "IG_UI.json|IGUI_ALifeUI_243661b54a8ad190": {
+    "as1_value": "Beth - 工程师",
+    "value": "Beth - 工兵",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：角色屬於第149裝甲旅工兵殘部 alife_engineer_holdouts, 此處不是一般工程師."
+  },
+  "IG_UI.json|IGUI_ALifeUI_2dc7f2da77ce2496": {
+    "as1_value": "服务器的 A-Life 诊断已为你开启 - 正在重试",
+    "value": "服务器上你的 A-Life 诊断原本处于关闭状态 - 已开启, 正在重试",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：原譯漏掉診斷原本在伺服器端為關閉狀態的資訊."
+  },
+  "IG_UI.json|IGUI_ALifeUI_320f42411742fa77": {
+    "as1_value": "Andre - 核心成员",
+    "value": "Andre - 正式成员",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：Made Man 表示正式獲接納的黑手黨成員, 不等同於核心成員."
+  },
+  "IG_UI.json|IGUI_ALifeUI_32d824f4432d2d18": {
+    "as1_value": "Scott - 工程师",
+    "value": "Scott - 工兵",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：角色屬於第149裝甲旅工兵殘部 alife_engineer_holdouts, 應譯為工兵."
+  },
+  "IG_UI.json|IGUI_ALifeUI_34ea06d771587c26": {
+    "as1_value": "孤立据点",
+    "value": "坚守据点",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：此字串是 holdout_house 據點類型, Lua 說明為一家人據守的房屋; 不是人物, 原文也未表示孤立."
+  },
+  "IG_UI.json|IGUI_ALifeUI_3dc8881f60ec17b8": {
+    "as1_value": "Henry - 负责人",
+    "value": "Henry - 老板",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：角色是拆車場業主; Owner 表示擁有該生意的人, 不只是負責人."
+  },
+  "IG_UI.json|IGUI_ALifeUI_3fac48cd051d2338": {
+    "as1_value": "坑洞区",
+    "value": "斗坑",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：陣營說明明確是從倉庫鬥場發展的團體, 坑洞區誤當成一般地形."
+  },
+  "IG_UI.json|IGUI_ALifeUI_42cc5a0075e98615": {
+    "as1_value": "达内尔 - 勤务员",
+    "value": "达内尔 - 护工",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：角色屬於醫院 alife_hospital, Orderly 在此是護工; 與同 MOD 其他 Orderly 譯名一致."
+  },
+  "IG_UI.json|IGUI_ALifeUI_438b417b72416623": {
+    "as1_value": "Andre - 负责人",
+    "value": "Andre - 老板",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：此名稱用於汽車修理店與五金行的業主, 原譯負責人未表達 Owner 的所有人身分."
+  },
+  "IG_UI.json|IGUI_ALifeUI_44bab77f6242cc0e": {
+    "as1_value": "Joan - 军医",
+    "value": "Joan - 医护兵",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：Medic 指醫護兵, 不應直接升格成醫師職務的軍醫; 同 MOD 已有醫護兵譯名."
+  },
+  "IG_UI.json|IGUI_ALifeUI_4821e49140f533d4": {
+    "as1_value": "Marcus - 执行者",
+    "value": "Marcus - 打手",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：幫派職稱 Enforcer 指以武力執行命令的打手, 執行者未表達該角色職責."
+  },
+  "IG_UI.json|IGUI_ALifeUI_524d51bd5f6e8b49": {
+    "as1_value": "亨利 - 医护人员",
+    "value": "亨利 - 急救员",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：角色屬於縣緊急醫療服務, Paramedic 是急救員而非泛稱醫護人員; 沿用同 MOD 既有譯名."
+  },
+  "IG_UI.json|IGUI_ALifeUI_5417d8236c96499c": {
+    "as1_value": "Frank - 执行者",
+    "value": "Frank - 打手",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：幫派語境的 Enforcer 是打手, 應與同 MOD 已正確翻譯的同職稱一致."
+  },
+  "IG_UI.json|IGUI_ALifeUI_583e3d8c62ba3019": {
+    "as1_value": "旅馆住客",
+    "value": "汽车旅馆旅客",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：原譯漏掉 Motel 的汽車旅館種類, 也將 Travellers 泛化為住客."
+  },
+  "IG_UI.json|IGUI_ALifeUI_59a11b2434faf87a": {
+    "as1_value": "Kessinger 乳品厂",
+    "value": "Kessinger 乳场",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：陣營說明提到家族據守擠乳間, Dairy 在此是酪農場而非乳品或乳品工廠; 沿用 Bauer Dairy 的既有格式."
+  },
+  "IG_UI.json|IGUI_ALifeUI_5a97f4ae2f5893eb": {
+    "as1_value": "车站",
+    "value": "电台",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：陣營說明是持續用發射機與發電機播音的人員, 此處 Station 是電台而非車站."
+  },
+  "IG_UI.json|IGUI_ALifeUI_68a020dc388b9b7d": {
+    "as1_value": "Calvin - 负责人",
+    "value": "Calvin - 老板",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：角色是 Crume Scrap 的業主, Owner 並非一般負責人."
+  },
+  "IG_UI.json|IGUI_ALifeUI_69e1766c7106d384": {
+    "as1_value": "县界跑者",
+    "value": "县界走私客",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：陣營說明明確是往返禁酒縣與非禁酒縣的私酒走私客, Runners 不是跑步者."
+  },
+  "IG_UI.json|IGUI_ALifeUI_6d3e385d2f64840b": {
+    "as1_value": "没想到这儿还有同伴.",
+    "value": "没想到这种地方还会有人来.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：company 在此指有人到訪或出現, 並未表示對方已經是同伴."
+  },
+  "IG_UI.json|IGUI_ALifeUI_715ce48b790f568a": {
+    "as1_value": "Otis - 发令者",
+    "value": "Otis - 头目",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：Shot Caller 是幫派中發號施令的頭目, 不是僅傳達命令的發令者."
+  },
+  "IG_UI.json|IGUI_ALifeUI_72c675df3649c6ac": {
+    "as1_value": "蕾妮 - 骑警",
+    "value": "蕾妮 - 州警",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：此處 Trooper 是州警, 原譯騎警誤解了警種."
+  },
+  "IG_UI.json|IGUI_ALifeUI_7c111b5c5097e7a6": {
+    "as1_value": "Henry - 发令者",
+    "value": "Henry - 头目",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：Shot Caller 是幫派頭目職稱, 原譯發令者未表達其領導身分."
+  },
+  "IG_UI.json|IGUI_ALifeUI_7f2c4ed135bf3138": {
+    "as1_value": "一名追踪者和一把步枪:悄无声息的接近, 致命的一瞬.",
+    "value": "一名追踪者和一把步枪: 悄然接近, 枪响一瞬.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：原文對比安靜接近與短暫槍聲, 原譯將 loud 改成致命而漏掉聲響意象."
+  },
+  "Sandbox.json|Sandbox_ProjectALife.BulletPenetration_tooltip": {
+    "as1_value": "NPC对僵尸的攻击会作用于站在其正后方的僵尸 (最多三个方格). 仅对僵尸有效, 对人无效; 对抗成群僵尸效果更佳. 默认关闭.",
+    "value": "NPC射进僵尸的子弹会继续穿入其正后方的僵尸 (最多三格). 仅对僵尸有效, 对人无效; 对抗成群僵尸效果更佳. 默认关闭.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：原譯把子彈穿透寫成所有攻擊都會作用於後方目標, 漏掉僅限子彈及穿透的機制."
+  },
+  "Sandbox.json|Sandbox_ProjectALife.DropsWeaponCondition_option4": {
+    "as1_value": "非常差, 只拍了几张 (2/10)",
+    "value": "非常差, 只能开几枪 (2/10)",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：shots 指開槍次數, 不是拍照張數."
+  },
+  "Sandbox.json|Sandbox_ProjectALife.ModuleStrafe_tooltip": {
+    "as1_value": "武装NPC在行走, 后退或侧身时, 会保持枪口对准目标, 或者对准枪口最后出现的位置.",
+    "value": "武装NPC在行走, 后退或侧移时, 会保持枪口对准目标, 或者对准目标最后出现的位置.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：it 指目標而非槍口; sidestep 也應為側移, 不是僅將身體側過去."
+  },
+  "Sandbox.json|Sandbox_ProjectALife.MultiHit_tooltip": {
+    "as1_value": "NPC的双手挥击能击中弧形范围内的第二个僵尸, 但只能击中四分之三的位置. 只针对僵尸, 从不针对人类. 默认情况下仅限于此.",
+    "value": "NPC的双手挥击能击中弧形范围内的第二个僵尸, 造成四分之三的伤害. 只针对僵尸, 不针对人类. 默认关闭.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：四分之三指傷害比例, 不是擊中位置; Off by default 也被誤譯而未表達預設關閉."
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_CheckMinutes_tooltip": {
+    "as1_value": "突袭指挥官检查自动资格的频率.",
+    "value": "突袭调度系统检查是否符合自动突袭条件的频率.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：raid director 是執行自動突襲判定的系統, 不是 NPC 指揮官; automatic eligibility 指自動突襲條件."
+  },
+  "Sandbox.json|Sandbox_ProjectALife.Raid_WaveDelayMinutes_tooltip": {
+    "as1_value": "初始预警后的后续波次节奏.",
+    "value": "调节初始预警后增援波次的节奏.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：原譯只寫後續波次, 漏掉 reinforcement 的增援性質."
+  },
+  "IG_UI.json|IGUI_ALifeUI_08202fd307fbfdbd": {
+    "as1_value": "Paul - 工程师",
+    "value": "Paul - 工兵",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：角色隸屬第149裝甲旅工兵殘部, Engineer 在此是工兵, 不是一般工程師."
+  },
+  "IG_UI.json|IGUI_ALifeUI_08ac571f4e94456d": {
+    "as1_value": "迪克西修路组",
+    "value": "迪克西公路帮",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：陣營介紹明言這是一群設伏搶劫的公路盜匪, 不是修路工班."
+  },
+  "IG_UI.json|IGUI_ALifeUI_09d67c9a25cb52d9": {
+    "as1_value": "黑匣子",
+    "value": "飞行记录器 (黑匣子)",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：補回原文的 Flight recorder 名稱, 並與同 MOD 說明中的飛行記錄器稱呼對應."
+  },
+  "IG_UI.json|IGUI_ALifeUI_0b7d4b3c47002e95": {
+    "as1_value": "工作组逃兵",
+    "value": "劳改队逃犯",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：陣營介紹與囚服設定確認這是趁監管警員失聯而逃離的囚犯勞動隊, 不是軍隊逃兵."
+  },
+  "IG_UI.json|IGUI_ALifeUI_0cc5d1127b516908": {
+    "as1_value": "仓库伙计",
+    "value": "陈酿仓伙计",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：Rickhouse 特指酒桶陳釀倉; 陣營介紹亦明確是酒廠工人, 原譯漏掉倉庫種類."
+  },
+  "IG_UI.json|IGUI_ALifeUI_10bcb683587dd7cf": {
+    "as1_value": "Travis - 值班官员",
+    "value": "Travis - 值班狱警",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：角色隸屬 Rosewood Corrections, 此處 Shift Officer 是值班獄警, 不是一般警官或行政官員."
+  },
+  "IG_UI.json|IGUI_ALifeUI_10f65b837e3693ea": {
+    "as1_value": "Lyle - 特工",
+    "value": "Lyle - 特战队员",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：角色隸屬 KSP Special Response Team, 是警察戰術隊員, 不是情報特工; 沿用同鍵 CH 的職稱."
+  },
+  "IG_UI.json|IGUI_ALifeUI_11877ac75a225066": {
+    "as1_value": "谷仓帮",
+    "value": "谷仓拆车帮",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：陣營介紹明確是設在菸草穀倉裡的拆車場, 原譯漏掉 Cutters 所指的拆車身分."
+  },
+  "IG_UI.json|IGUI_ALifeUI_1211822a032b3c57": {
+    "as1_value": "Clyde - 骑警",
+    "value": "Clyde - 州警",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：角色屬於州警殘部; Trooper 在此指州警, 不是騎警, 也應與同 MOD 的資深州警等職稱一致."
+  },
+  "IG_UI.json|IGUI_ALifeUI_196c7d9472e75ca5": {
+    "as1_value": "卫队机枪手",
+    "value": "卫队自动步枪手",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：原文是 Automatic Rifleman, 角色裝備亦為制式步槍, 不應改成機槍手."
+  },
+  "IG_UI.json|IGUI_ALifeUI_19fbda594ed24555": {
+    "as1_value": "雷 - 职员",
+    "value": "雷 - 店员",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：角色隸屬經營典當與槍械交易的 Coyle Pawn, Clerk 在此是店員, 不是辦公室職員."
+  },
+  "IG_UI.json|IGUI_ALifeUI_209d9c95576c6832": {
+    "as1_value": "雷 - 逃兵",
+    "value": "雷 - 逃犯",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：角色隸屬 Work Crew Runaways 囚犯勞動隊, Runaway 指逃犯, 不是逃兵."
+  },
+  "IG_UI.json|IGUI_ALifeUI_2ebd51f648d65bed": {
+    "as1_value": "Calvin - 发令者",
+    "value": "Calvin - 头目",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：Shot Caller 是幫派中作決策、發號施令的頭目, 原譯發令者未表達這個幫派職位."
+  },
+  "IG_UI.json|IGUI_ALifeUI_30f1b85b3183d6a2": {
+    "as1_value": "Scott - 执行者",
+    "value": "Scott - 打手",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：角色隸屬 Undertakers MC, Enforcer 是幫派打手, 並與同 MOD 其他 Enforcer 的既有譯名對齊."
+  },
+  "IG_UI.json|IGUI_ALifeUI_31e963aa35bb8815": {
+    "as1_value": "Grace - 军医",
+    "value": "Grace - 医护人员",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：同一英文標題同時用於軍方醫療隊及倖存者聚落的角色; 軍醫或醫護兵把共用的 Medic 限定成軍事身分, 改用可涵蓋兩者的名稱."
+  },
+  "IG_UI.json|IGUI_ALifeUI_37df5ed5190fc67c": {
+    "as1_value": "Monica - 收集者",
+    "value": "Monica - 收账人",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：角色屬於沿路掠奪索取財物的 Napier Collectors, 不是收藏或蒐集物品的人; 沿用同陣營其他 Collector 的收帳人譯法."
+  },
+  "IG_UI.json|IGUI_ALifeUI_3dcb487e59e4fff7": {
+    "as1_value": "重置创建器覆盖设置",
+    "value": "重置编辑器覆盖设置",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：Creator 是同 MOD 已定名的編輯器; 此選項與確認視窗操作同一工具, 不應另稱建立器."
+  },
+  "IG_UI.json|IGUI_ALifeUI_4278c43334da4869": {
+    "as1_value": "Otis - 负责人",
+    "value": "Otis - 老板",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：Owner 表示業主, 原譯負責人未保留所有者身分; 沿用 CH 與同類商業角色的老闆稱呼."
+  },
+  "IG_UI.json|IGUI_ALifeUI_49989c3c70271e4c": {
+    "as1_value": "巡逻队",
+    "value": "巡逻",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：此共用字串亦用於與 Hold position、Roam 並列的行為選項, 應是巡邏動作而不是巡邏隊."
+  },
+  "IG_UI.json|IGUI_ALifeUI_4ad695f97d9a11cd": {
+    "as1_value": "Carla - 采摘工",
+    "value": "Carla - 拣货员",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：角色隸屬 Warehouse Night Shift, 與堆高機駕駛及裝卸工同組, Picker 是倉庫揀貨員而非採摘工."
+  },
+  "IG_UI.json|IGUI_ALifeUI_4cae7bbe681d92c7": {
+    "as1_value": "消防站医疗辅助人员",
+    "value": "消防站急救员",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：Paramedic 是急救員, 不只是泛稱的醫療輔助人員; 與同 MOD 其他 Paramedic 譯名一致."
+  },
+  "IG_UI.json|IGUI_ALifeUI_509071b12a05febc": {
+    "as1_value": "休班医护人员",
+    "value": "休班急救员",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：原文指休班的院前急救人員, 原譯醫護人員把明確職種泛化; 沿用同 MOD 的急救員名稱."
+  },
+  "IG_UI.json|IGUI_ALifeUI_50aa3c89724166d6": {
+    "as1_value": "拖车邻居",
+    "value": "拖车房邻居",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：陣營介紹指拖車屋社區居民, 不是拖車車輛; 與既有 Tom - Trailer Park Neighbour 的拖車房用詞一致."
+  },
+  "IG_UI.json|IGUI_ALifeUI_541fae132a6b4b71": {
+    "as1_value": "Curtis - 特工",
+    "value": "Curtis - 特战队员",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：角色屬於 KSP 警察戰術小組, Operator 不是情報特工; 與同組 Lyle 及 CH 職稱一致."
+  },
+  "IG_UI.json|IGUI_ALifeUI_5e635a8e4eda4bfe": {
+    "as1_value": "{n} 区块",
+    "value": "{n} 格",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：tiles 是遊戲距離的格數, 不是地圖區塊; 同 MOD 其他距離字串也使用格."
+  },
+  "IG_UI.json|IGUI_ALifeUI_6d6f91e93f16de52": {
+    "as1_value": "防御森严的车站",
+    "value": "防御森严的警局",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：Lua 將此標題對應 police_station 前哨站, station 在此不是車站; CH 亦補回被泛化為據點的建築種類."
+  },
+  "IG_UI.json|IGUI_ALifeUI_6f6c3afb437ba007": {
+    "as1_value": "卡拉 - 骑警",
+    "value": "卡拉 - 州警",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：角色隸屬 KSP 州警分局, Trooper 指州警而非騎警."
+  },
+  "IG_UI.json|IGUI_ALifeUI_7567c8113173978e": {
+    "as1_value": "韦德 - 奔跑者",
+    "value": "韦德 - 跑腿",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：角色用於線路工班與清潔工班, Runner 是替工班跑腿的人, 不是描述正在奔跑的人."
+  },
+  "IG_UI.json|IGUI_ALifeUI_7686973864d88d3a": {
+    "as1_value": "巡线小组",
+    "value": "线路作业组",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：陣營介紹是配有高空作業車的公用事業線路工班, 原譯巡線小組把其工作限縮為巡查."
+  },
+  "IG_UI.json|IGUI_ALifeUI_7f3914626eaf2973": {
+    "as1_value": "发动机坏了, 油箱也空了, 有人在修车, 其余的人在警戒道路.",
+    "value": "发动机坏了, 油箱也空了, 一个人在发动机盖下修车, 其余的人在警戒道路.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：補回 one pair of hands 所指的一人, 以及 under the bonnet 的修理位置; 原譯只剩有人修車."
+  },
+  "Sandbox.json|Sandbox_ProjectALife.DropsWeaponCondition_option2": {
+    "as1_value": "破碎 (0/10)",
+    "value": "损坏 (0/10)",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：此選項表示武器耐久歸零、需修理才能使用, 不表示物品碎裂; 與掉落說明中的損壞用詞一致."
+  },
+  "Sandbox.json|Sandbox_ProjectALife.ModuleCover_tooltip": {
+    "as1_value": "武装NPC会在远离火线时重新装弹, 受伤时会脱离接触, 并从墙壁和角落后进行战斗.",
+    "value": "武装NPC会离开火线再重新装弹, 受伤时会脱离接触, 并从墙壁和角落后进行战斗.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：原文表示 NPC 為了裝填而主動離開火線, 不是僅在已遠離火線的條件下裝填."
+  },
+  "Sandbox.json|Sandbox_ProjectALife.SprintEnabled_tooltip": {
+    "as1_value": "允许在冲刺窗口内进行近战收尾, 掩护动作和撤退. 关闭此功能则会使这些动作保持在跑步或步行状态.",
+    "value": "允许在近战接近, 向掩体移动和撤退时短暂冲刺. 关闭此功能则会使这些动作保持在跑步或步行状态.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU3：melee closing 是接近敵人進入近戰, 不是近戰收尾; sprint windows 是允許短暫衝刺, 並將 cover moves 明確寫成向掩體移"
+  },
+  "IG_UI.json|IGUI_GPSRoute_OnFmt": {
+    "as1_value": "从%1转入%2",
+    "value": "%1, 进入%2",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：GPSRoute_UI.lua 的 textoPasso 傳入 %1 的是左轉、直行等動作, %2 才是道路名稱; 原譯錯把 %1 當成起點, 會顯示從左轉轉入"
+  },
+  "IG_UI.json|IGUI_WKT_LeadTag": {
+    "as1_value": "追踪中",
+    "value": "显示中",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：此標記表示摺疊鑰匙堆疊所顯示的代表鑰匙, 不是正在追蹤; WKT_KeyListPanel.lua 的 onMakeLead 只切換代表項目."
+  },
+  "IG_UI.json|IGUI_WKT_MakeLead": {
+    "as1_value": "设为当前追踪钥匙",
+    "value": "设为当前显示的钥匙",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：此操作選擇鑰匙堆疊的顯示代表項目, 不會啟用追蹤, 原簡中誤述操作功能."
+  },
+  "IG_UI.json|IGUI_WKT_NotCarried": {
+    "as1_value": "不在背包内, 选择该钥匙会先拾取",
+    "value": "不在物品栏内, 选择此处任何操作都会先拾取它",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：英文說明選擇此處任何操作都會先拾取, 原簡中縮成選擇鑰匙本身, 漏掉操作觸發條件."
+  },
+  "IG_UI.json|IGUI_WKT_Opt_GroundRadius_tt": {
+    "as1_value": "仅显示该范围内的钥匙; 越近显示越清晰, 最多同时显示10把钥匙.",
+    "value": "仅显示该范围内钥匙的名称; 越近显示越清晰, 最多同时显示10把钥匙.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：距離限制的是鑰匙名稱提示, 不是鑰匙物件是否顯示; 原簡中漏譯名稱."
+  },
+  "IG_UI.json|IGUI_WKT_Opt_NotifyRingSwap_tt": {
+    "as1_value": "默认开启. 背包内只能追踪一个钥匙环, 开启新追踪会取消旧追踪, 提示被取消追踪的钥匙环.",
+    "value": "默认开启. 物品栏内一次只能追踪一个钥匙环, 开启一个的追踪会移除另一个的星标. 此提示会指出哪个钥匙环失去了星标.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：原簡中漏掉星標會被移除、通知指出哪個鑰匙環失去星標的具體介面資訊."
+  },
+  "IG_UI.json|IGUI_WKT_Opt_PointerFadeStart_tt": {
+    "as1_value": "在目标点处箭头最清晰, 到该距离时淡化至最低透明度.",
+    "value": "在目标点处箭头最清晰, 随距离逐渐淡化, 到该距离时达到并保持最低不透明度.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：最淡應是最低不透明度, 原簡中寫最低透明度而反轉效果; 同時補回逐漸淡化並保持最淡的含義."
+  },
+  "IG_UI.json|IGUI_WKT_Opt_TrackRings_tt": {
+    "as1_value": "标记钥匙环后, 角色死亡, 携带它的尸体会标记在地图. 取回钥匙环清除标记. 开启会在钥匙列表增加钥匙环标签页; 关闭则移除标签页并清空全部追踪.",
+    "value": "标记钥匙环后, 角色死亡, 携带它的尸体会标记在地图. 取回钥匙环清除标记. 开启会在钥匙列表增加钥匙环标签页, 可在此选择要追踪的钥匙环; 关闭则移除标签页并清空全部追踪.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：繁中原文寫成清除鑰匙環本身, 應是清除追蹤設定; 簡中漏掉在新增分頁選擇追蹤對象的操作說明."
+  },
+  "IG_UI.json|IGUI_WKT_RingQuietDesc": {
+    "as1_value": "追踪中, 方向箭头已静音",
+    "value": "追踪中, 方向箭头已隐藏",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：quiet 狀態保留追蹤記錄但不顯示箭頭, 不是箭頭音效靜音."
+  },
+  "Sandbox.json|Sandbox_HCO_BaseMuscleFatigueMult_tooltip": {
+    "as1_value": "增加每次拳击的肌肉僵硬",
+    "value": "设置每次拳击造成的肌肉僵硬量倍率.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：Multiplies 表示乘上倍率, 並非固定增加; 此設定允許小於 1, 包括 0."
+  },
+  "Sandbox.json|Sandbox_HCO_BasePunchDamageMult_tooltip": {
+    "as1_value": "增加徒手攻击的基础伤害",
+    "value": "设置徒手攻击的基础伤害倍率.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：此值是傷害倍率且允許小於 1, 原譯增加會誤導玩家以為只能提高傷害."
+  },
+  "Sandbox.json|Sandbox_HCO_BaseThrowDistanceMult_tooltip": {
+    "as1_value": "增加武器投掷的最大距离",
+    "value": "设置武器最大投掷距离的倍率.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：此值是距離倍率且允許小於 1, 不是單向增加最大距離."
+  },
+  "Sandbox.json|Sandbox_HCO_BaseThrowSpeedMult_tooltip": {
+    "as1_value": "增加投掷武器的飞行速度",
+    "value": "设置投掷武器飞行速度的倍率.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：此值是速度倍率且允許小於 1, 不是單向增加飛行速度."
+  },
+  "Sandbox.json|Sandbox_HCO_DualWieldAutoCombo": {
+    "as1_value": "启用双手组合",
+    "value": "启用双持连击",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：Combo 在此是左右手交替攻擊的連擊, 不是雙手組合."
+  },
+  "Sandbox.json|Sandbox_HCO_EnableDualGuns": {
+    "as1_value": "[不稳定!!!] 双持枪械",
+    "value": "[开发中!!!] 双持枪械",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：WIP 表示尚在開發中, 原譯不穩定未傳達功能尚未完成的狀態."
+  },
+  "Sandbox.json|Sandbox_HCO_EnableThrowDeviation_tooltip": {
+    "as1_value": "如启用, 灵巧等级和恐慌可能导致武器扔不准",
+    "value": "如启用, 灵活技能等级过低和恐慌可能导致武器扔不准.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：漏譯 low 條件; Nimble 的現行 LangFor42 繁中及官方簡中技能名稱均為靈活／灵活, 不是靈巧／灵巧."
+  },
+  "Sandbox.json|Sandbox_HCO_HCO_EnableDualGuns_tooltip": {
+    "as1_value": "如启用, 将成为勇敢的枪械双持测试员 (开发中不稳定请小心!!)",
+    "value": "如启用, 你可以测试双持枪械 (开发中!!!) (请小心!!).",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：依現行英文保留測試功能、開發中與警告, 移除原文沒有的勇敢測試員身分描述及不穩定斷言."
+  },
+  "Sandbox.json|Sandbox_HCO_RequireLeftArmModifier": {
+    "as1_value": "启用徒手战斗",
+    "value": "启用徒手连击",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：依現行英文翻譯 Unarmed Combo; 原譯徒手戰鬥漏掉連擊, 並與另一個控制徒手戰鬥的選項混淆. 此英文標題與實作的矛盾另列範圍外."
+  },
+  "UI.json|UI_AA_opt_cookSameTypeMax_tt": {
+    "as1_value": "反复放同一种食物正是让这道菜变得难吃的原因. 2是比较稳妥的值.",
+    "value": "反复放同一种食物会让这道菜吃了使人心情变差. 2是比较稳妥的值.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：depressing to eat 指食用後影響心情, 原譯難吃只描述口味, 漏掉遊戲效果; 同 MOD 的 cook_option_tt 也使用心情變差."
+  },
+  "UI.json|UI_AA_opt_ripResultsToSource_tt": {
+    "as1_value": "撕下的床单和布条会放回衣服原本所在的容器中.",
+    "value": "碎布条和布条会放回衣服原本所在的容器中.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：Ripped Sheets 是原版物品碎布條／碎布条, 不是撕下的床單; 與同 MOD 的 UI_AA_fabric_sheets 及原版物品名對齊."
+  },
+  "UI.json|UI_MM_summary_fitness": {
+    "as1_value": "体质",
+    "value": "体格",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：此欄是 Fitness 技能訓練成果; 官方簡中 IGUI_perks_Fitness 為体格, 原簡中的体质與技能名稱不一致. 繁中體格正確."
+  },
+  "UI.json|UI_rvdebug_sit": {
+    "as1_value": "坐在 (或站在) 车辆旁以进行调试.",
+    "value": "坐进车内 (或站在车旁) 以进行调试.",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU4：Sit in 指坐進車內, 原譯坐在或站在車輛旁把兩種位置都譯成車旁."
+  },
+  "IG_UI.json|IGUI_ALifeUI_620bd99e3fff6cba": {
+    "as1_value": "A-Life: 遭遇战箭头已关闭",
+    "value": "A-Life: 遭遇指示箭头已关闭",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：舊譯稽核同類錯誤（AU2 回報）：簡中職稱／狀態對齊繁中與同 MOD 既有譯名"
+  },
+  "IG_UI.json|IGUI_ALifeUI_10dee1284a1cf5b6": {
+    "as1_value": "卡拉 - 职员",
+    "value": "卡拉 - 店员",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：Coyle Pawn 當鋪的 Clerk 是店員（與 Ray、Maria 同組）"
+  },
+  "IG_UI.json|IGUI_ALifeUI_6ac253dc0257d53c": {
+    "as1_value": "警戒线机枪手",
+    "value": "警戒线自动步枪手",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：Automatic Rifleman 是自動步槍手，不是機槍手"
+  },
+  "IG_UI.json|IGUI_ALifeUI_03644164134ad7d6": {
+    "as1_value": "打开势力与 NPC 创建器",
+    "value": "打开阵营与NPC编辑器",
+    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：faction 與 Creator 沿用同 MOD 既有的阵营／编辑器"
   }
 }
