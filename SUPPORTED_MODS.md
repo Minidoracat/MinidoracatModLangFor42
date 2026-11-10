@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1491 個 Workshop 模組**（2147 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
+共支援 **1491 個 Workshop 模組**（2149 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -665,7 +665,7 @@
 | [Printer3D: Manufacturing & Recycling System](https://steamcommunity.com/sharedfiles/filedetails/?id=3628922658) | 3D 列印：製造與回收系統 | 新增 3D 列印機與塑膠回收系統，可掃描並列印多種物品。 | `3DPrinter` | 628 | — | — |
 | [Realistic Disease Mod[B42 stable]](https://steamcommunity.com/sharedfiles/filedetails/?id=3629659534) | 擬真疾病模組 | 新增疾病與治療用品，包含胰島素、葡萄糖注射用品及降血糖藥物。 | `DiseaseMod` | 265 | — | — |
 | [Architect](https://steamcommunity.com/sharedfiles/filedetails/?id=3629755641) | 建築師 | 可把建好的建築存成藍圖並在別處整棟放置，含清除區域與管理員清檔功能。 | `Architect` | 35 | — | — |
-| [Ladders?! B42.20 SP/MP (Unofficial)](https://steamcommunity.com/sharedfiles/filedetails/?id=3629835761) | — | — | `Ladders4220`, `Ladders42204` | 14 | — | — |
+| [Ladders?! B42.20 SP/MP (Unofficial)](https://steamcommunity.com/sharedfiles/filedetails/?id=3629835761) | — | — | `Ladders4220`, `Ladders42204`, `Ladders4222` | 14 | — | — |
 | [[WAR] REDUX](https://steamcommunity.com/sharedfiles/filedetails/?id=3630196063) | [WAR] REDUX | 戰爭主題內容重製版，為遊戲新增額外物品。 | `WAR_REDUX` | 10 | — | — |
 | [Bandits Improved AI & Radio Expansion 42.19 MP (Unofficial addon)](https://steamcommunity.com/sharedfiles/filedetails/?id=3630494926) | — | — | `BanditsRadioExp` | 30 | — | — |
 | [Paranormal Z](https://steamcommunity.com/sharedfiles/filedetails/?id=3631306028) | — | — | `ParanormalZ` | 156 | — | — |
@@ -895,7 +895,7 @@
 | [Vehicle Skin Changer - SP/MP B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3715220670) | — | — | `VCS` | 61 | — | — |
 | [TwisTonFire - Tool Priority](https://steamcommunity.com/sharedfiles/filedetails/?id=3715296334) | TwisTonFire - 工具優先順序 | 在製作選單自訂可重複使用工具的優先順序，製作時優先使用排在前面的工具。 | `twisttool` | 7 | — | — |
 | [Objectives - Dynamic Trading Addon](https://steamcommunity.com/sharedfiles/filedetails/?id=3715741925) | — | — | `DynamicObjectives` | 23 | — | — |
-| [[42.18] Better Vanilla Firearms (Fixes, Improvements, and Additions)](https://steamcommunity.com/sharedfiles/filedetails/?id=3715977706) | — | — | `BVF42` | 23 | ⚠️ ≥14 | — |
+| [[42.18] Better Vanilla Firearms (Fixes, Improvements, and Additions)](https://steamcommunity.com/sharedfiles/filedetails/?id=3715977706) | — | — | `BVF42` | 23 | ⚠️ ≥17 | — |
 | [Dynamic Horde Events B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3716405632) | — | — | `DynamicHordeEventsB42` | 158 | — | — |
 | [The Ark Professions!](https://steamcommunity.com/sharedfiles/filedetails/?id=3716904170) | — | — | `ProfessionsTheArk` | 177 | — | — |
 | [Playable Minigames (Previously Playable Pool)](https://steamcommunity.com/sharedfiles/filedetails/?id=3716934959) | 互動小遊戲（原 Playable Pool） | 新增可多人同步遊玩的撞球、飛鏢、文字、撲克與棋盤小遊戲，支援不同難度的電腦玩家及遊戲規則設定。 | `playable_pool` | 186 | — | — |
@@ -1136,7 +1136,7 @@
 | [[42.20MP] Vanilla Weapons PLUS - Gunworks Edition](https://steamcommunity.com/sharedfiles/filedetails/?id=3773834525) | — | — | `MarzVanillaGuns` | 57 | ⚠️ ≥4 | — |
 | [B42 Rain's Firearms & Gun Parts](https://steamcommunity.com/sharedfiles/filedetails/?id=3773858287) | — | — | `B42RainsFirearmsAndGunParts4220`, `B42RainsFirearmsAndGunPartsExpanded4220` | 641 | ⚠️ ≥82 | — |
 | [This Is Your Life [B42 Stable] WIP](https://steamcommunity.com/sharedfiles/filedetails/?id=3773911887) | — | — | `ThisIsYourLife` | 747 | — | — |
-| [Arcadia RV Interiors [B42.20]](https://steamcommunity.com/sharedfiles/filedetails/?id=3773972040) | — | — | `ArcadiaRVInterior_B42_MP`, `ArcadiaRVInterior_B42_Vanilla` | 80 | — | — |
+| [Arcadia RV Interiors [B42.20]](https://steamcommunity.com/sharedfiles/filedetails/?id=3773972040) | — | — | `ArcadiaRVInterior_B42_MP`, `ArcadiaRVInterior_B42_Vanilla`, `ArcadiaRVInterior_RealUSA_B42` | 80 | — | — |
 | [O.C.D. Inventory](https://steamcommunity.com/sharedfiles/filedetails/?id=3773985930) | — | — | `OCDInventory` | 7 | — | — |
 | [B42 Rain's Axes & Blades](https://steamcommunity.com/sharedfiles/filedetails/?id=3774213378) | — | — | `B42RainsAxesAndBlades4220` | 112 | — | — |
 | [Survival Planner List (TO DO List)](https://steamcommunity.com/sharedfiles/filedetails/?id=3774251699) | — | — | `SurvivalPlannerList` | 115 | — | — |
@@ -1236,7 +1236,7 @@
 | [Cats Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=3779907776) | 貓咪模組 | 加入可飼養的貓，含多種品種（橘貓、短毛貓等）、幼貓與公母之分，並提供貓食盆、貓糧與牛奶等液體。 | `CatsMod` | 223 | — | — |
 | [Machinery](https://steamcommunity.com/sharedfiles/filedetails/?id=3780027195) | Machinery（機械設備） | 新增台鋸、台式砂輪機、液壓機等可用機械與帶鋸條、鑽頭組等耗材，操作時可能發生手部割傷等事故。 | `Machinery` | 412 | ⚠️ ≥2 | — |
 | [Reading Reworked - Faster Reading & Walking [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3780124271) | 閱讀機制重做 | 坐著閱讀更快、可邊走邊讀，並依書本頁數、閱讀快／閱讀慢特質與老花眼鏡調整閱讀時間。 | `ReadingReworked` | 17 | — | — |
-| [[On hold] Modern Firearms System Community Fix Patch [On hold]](https://steamcommunity.com/sharedfiles/filedetails/?id=3780151182) | — | — | `MFSCP_PSA_ammoconversion`, `MFSCP_range_extension_parts`, `MFS_BackpackSystem_fix`, `MFS_BladesmithSystem_fix`, `MFS_community_fix`, `MFS_community_fix_low_RPM` | 1219 | ⚠️ ≥63 | — |
+| [[On hold] Modern Firearms System Community Fix Patch [On hold]](https://steamcommunity.com/sharedfiles/filedetails/?id=3780151182) | — | — | `MFSCP_PSA_ammoconversion`, `MFSCP_range_extension_parts`, `MFS_BackpackSystem_fix`, `MFS_BladesmithSystem_fix`, `MFS_community_fix`, `MFS_community_fix_low_RPM` | 1219 | ⚠️ ≥64 | — |
 | [Elevators](https://steamcommunity.com/sharedfiles/filedetails/?id=3780306632) | 可運作的電梯 | 建築內的電梯可以實際搭乘並選擇樓層，可設定是否需要電力。 | `Elevators` | 13 | — | — |
 | [Beyond The Infection](https://steamcommunity.com/sharedfiles/filedetails/?id=3780539123) | Beyond The Infection 感染之外 | 重做感染系統，新增即時感染分頁顯示病程階段與效果，以及可延緩感染的實驗藥物。 | `beyondTheInfection` | 229 | — | — |
 | [[B42.20+ MP] - Push Vehicle](https://steamcommunity.com/sharedfiles/filedetails/?id=3780639614) | — | — | `PushVehicle` | 5 | — | — |
