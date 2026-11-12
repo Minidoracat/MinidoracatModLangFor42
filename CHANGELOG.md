@@ -4,6 +4,44 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **As1「統一模組漢化」v3.14.0 新收的 29 個 MOD 同步提供繁中，As1 還沒翻到的文字由本包補上（11,373 項）。** Under the Hood Summer Car 的引擎、油液、電系、冷卻、煞車、點火、冷氣與各診斷工作台（6,395 項）；Girlfriend Mod 的同伴 Emily 對話、指令與設定（2,415 項）；Live Wire 的離網供電與電工技能（494 項）；直升機包（黑鷹、阿帕契、小鳥、EC135、奇歐瓦）（404 項）；They Knew Too Much 的試驗藥物與受試病患（283 項）；Ellie 的刺青店 V4（179 項）；Loot Tracker 搜刮追蹤（157 項）；Albion 的識字模組（130 項）；Size Matters 體型自訂、更好的原版 ALICE 背包（各 122 項）；可閱讀的 HottieZ 雜誌（95 項）、Real Water 真實水體（93 項）；另有 It's Quiet, Too quiet.、GarageWorks 車庫收納、自製獨木舟、Steel Sights 戰車砲手視角、豐田 Tacoma 越野皮卡、Viewpoint x A-LIFE、真實匍匐、Theodore 兒子同伴、M151A2 吉普車、即時刮刮樂、Operator Gear、'49 Ford 8N 曳引機、CD: 牲畜護衛犬、KI5 引擎聲、'85 Club Car 高爾夫球車、Ithaca 近戰動作、簡易腰掛手電筒+（各 3–61 項）。
+  > 技術要點：追蹤器 #1362。`as1-list` 補登 29 個 MOD、`backfill-en` 29/29；`snapshot.json` 重釘 v3.14.0（time_updated 1794372911、source_tree 42.22；As1 89 檔、唯一鍵 213,505、歸屬 209,074、覆蓋 96.1%）。split 帶 `--allow-low-evidence`，接受 379 條 owner edge 消失（上游改版移除，EN 鏡像都在）。worklist 20,920 鍵全數處理：19,749 鍵原本在 own 層，繁中移進 `sources/ch` 並刪 own 條目；72 鍵從 git 歷史取回舊譯；As1 新收的 1,085 鍵由本包補繁中（12 條 `cn_fix`）；Knox 測試台 157 鍵登記 unshipped 第六類（2026-10-22 裁定）。prep 缺口 11,505 鍵分 17 路翻譯（M1–M6、G1–G3；Under the Hood 先建 500 詞術語表再分 U1–U8），每路對抗複核（Codex），採納 137 條（例：Under the Hood 的 Oil Used 是保養貼紙記的機油種類、不是耗油量；dead cylinder 是那一缸不作動、不是汽缸報廢；cranks fine 是啟動馬達能帶轉、不是已發動；towel 照原版物品名「浴巾」，grill brush 照「燒烤刷」）。Under the Hood 的 VDA-93 手持診斷器螢幕 104 鍵登記 `untranslatable_keys.json`、維持英文：LCD 只有拉丁字模（`RVM_ScannerDevice.lua:85-96` 的 `SD.GLYPHS`，`RVM_ScannerDevicePaint.lua:129-134` 把表外字元畫成「?」），中文會整行顯示問號；機身印字與按鍵用一般字型，照常翻譯。
+- **30 個 MOD 更新後新增的文字補上繁簡中文（834 項）。** Arcadia RV Interiors 的房車設備（313 項）；Moodle Effects Explained（95 項）；DMM 模組管理器（69 項）；汐汐的靜謐小屋（56 項）；Knox Survivors（48 項）；SpawnPoint Overhaul 的出生點名稱與說明（42 項）；更多車輛功能＋生成區擴充（32 項）；挑戰特質（30 項）；Knox Inventory（26 項）；Snake 模組包（22 項）；車輛維修大修（20 項）；Aegis 管理面板（17 項）；其餘 Better Vanilla Firearms、SMB 爬梯、Guns of Tien 等各 1–11 項。
+  > 技術要點：追蹤器 2026-11-11 #1340–#1370「可能過時」。steamcmd 重抓 30 個本批 MOD 與 29 個新收 MOD，corpus_hash 全數相符。
+- **安瑞斯鎮（AnruisiTown）由只翻地圖選單擴大為整包翻譯（42 項）。** 軍用直升機的飛行儀表與操作說明、裝甲車與直升機車名、軍用儲物背包的說明與槍位、3 個配方與製作分類，以及 6 個物品名（軍用大砍刀、電鋸、軍用儲物背包、防暴棍等）。
+  > 技術要點：追蹤器 #1363，使用者 2026-11-12 核准擴大收錄。own 目錄新增 `IG_UI`（30）、`Recipes`（3）、`RecipeGroups`（1）、`ItemName`（6）、`Fluids`（2）；簡中照抄作者 `Translate/CN`，繁中對照作者簡中與英文直寫。6 個物品名與 2 個液體容器名上游只有簡中（EN 已刪、script 沒有 DisplayName，英文玩家看到 fullType）。不收 `Streets.json`（引擎不載入這個檔名）、`ItemName.json` 裡沒有路由前綴的 `Anruisi_Saw_*`（Lua 顯示寫死的簡中）與本 MOD 沒有的 `Base.Mit_*`。
+- **新支援 Project JoJo 附加包「天堂之門」（Heaven's Door），As1 沒翻的 125 項補上繁簡中文。** 書頁命令清單、延遲與方向選單、對殭屍下的工作命令、命令生效與結束的通知、改寫槽與不可用原因。
+  > 技術要點：As1 包收了這個附加包的 `IGUI_JJS_HD_*`（217 鍵），As1 名單卻只列 Core，鍵一直落 `_unsorted`、沒有英文對照。查出來源是 Workshop 3817697288 後登記名冊、`backfill-en`（341 鍵）、重跑 split（216 鍵歸屬，1 鍵上游已刪留在 `_unsorted`）；125 鍵缺口由代理翻譯、Codex 複核採納 2 條（開關房子寫明是門窗）。
+- **5 個地圖 MOD 自帶的物品、配方與互動文字補上繁簡中文（115 項），另補 4 個 MOD 的零星缺口（16 項）。** 夕湖鎮（Sunset Lake Town）劇情附加包的 12 張倖存者筆記、符咒配方與說明（51 項）；貓又嶺（Nekomata Ridge）的能量武器、彈藥、背包、疫苗、應援棒與 3 個音效名（37 項）；Yanghu Town 的霜之哀傷、雷霆之怒與兩種藥劑（11 項）；Iris Eyot 的吉他背包 4 階與升級配方（11 項）；Greenleaf 的背包與音樂互動（5 項）。IDBFS 的 6 本技能書與配方（10 項）、Knox Immersivity 的視角修正沙盒設定（3 項）、Proximity Inventory（2 項）、Knox Packs（1 項）。有英文可對照的文字，覆蓋率由 99.8% 升到 99.9%。
+  > 技術要點：發版前 `coverage_survey.py` 缺口 552 鍵，prep 判定可補 120 鍵。地圖 MOD 原本只收地圖選單，使用者 2026-11-12 裁定已收錄 MOD 的可載入 JSON 鍵直接收；作者自附簡中，簡中照抄 `Translate/CN`、繁中以作者簡中為主直寫。Iris Eyot 10 鍵與貓又嶺 1 鍵上游只有簡中（英文放在引擎不載入的 `*_EN.txt` 或沒寫）。新出貨檔 `GameSound.json`。Codex 複核採納 1 條（雷霆之怒的台版全名）。補完後 `coverage_survey` 仍列 432 鍵，prep 重跑回 0 鍵可補（抽樣多是引擎不讀的 B41 前綴鍵 `ItemName_<fullType>`）。
+
+### Changed
+
+- **簡中改用 As1 v3.14.0 的新版譯文（約 12,400 項）。** 這些文字原本由本包自行翻譯，As1 收錄後簡中照 As1；As1 譯錯的 966 項保留本包原譯（例：magazine 譯成「杂志」、rounds 譯成「轮」、零件名照抄英文、彈藥包漏了數量）。繁中不受影響。
+  > 技術要點：12,823 鍵 As1 值與本包不同，`judge` 初篩 1,320 鍵判錯，4 路代理裁決後登記 `cn_overrides`；另補登 As1 值多反斜線 123 鍵、EFZ 零件短名照抄英文 181 鍵、彈藥包漏 (pcs) 4 鍵、percent token 不對稱 2 鍵。ReloadAllAmmo（3774932027）的 own 目錄退役（As1 已收），11 鍵 As1 機翻走 `cn_overrides` 保留原譯、3 鍵遷進 own 層。
+- **上游改了英文的已出貨文字跟著改（158 項）。** Knox Survivors 的跟隨隊形、倖存者上限等沙盒說明（75 項）；DMM（27 項）；Modern Firearms System 社群修正版的彈匣名（22 項）；發電機路燈恢復的燈光設定說明（14 項）；更多車輛功能（8 項）；Senator 武術核心（4 項）；其他 8 個 MOD 各 1–2 項。
+  > 技術要點：own 層 129 鍵經 `apply_translations` 更新 `en` 錨點，As1 衍生層 29 鍵改 `sources/ch`＋`cn_overrides`。
+- **Modern Firearms System 社群修正版的彈藥與彈匣名稱統一寫「X系列子彈」。** 上游把彈藥名改成「X Family Ammo」；彈匣後綴與彈藥品名一字不差，玩家照後綴就找得到能用的子彈。原版鍵的 21 組條件譯文一併更新（例：盒裝7.62系列子彈、步槍瞄準鏡 (2 倍)）。
+  > 技術要點：追蹤器 #1339。`owner_conflict_decisions.json` 17 筆過時裁決重新簽名（3 筆 unship）、新登記 40 筆（35 translate、5 unship）；條件譯文重建 42 組、新增 36 組，MFS 77 組重譯；用詞經 GPT-6 Astra（xhigh）與 Claude 審核，「Family」三案選 C（全 MOD 統一「X系列子彈」），21 組本體鍵條件譯文雙方同意後寫 `approved`。own 層 MFS 彈匣後綴 38 個值同步。
+- **修正舊譯與現行英文不符的地方（67 項）。** Guns of Marz 的槍名照現行英文（M14 戰鬥步槍、PSG-1 與 SVD 半自動步槍、M9 刺刀、雙聯彈匣、槍口安裝座）；Bandits NPC 的台詞（中槍改受傷、彈夾改彈匣）；經典弓箭的弩箭配方；Better Vanilla Firearms 的 10mm Auto 彈藥等。
+  > 技術要點：受影響 MOD 的 As1 衍生層 1,615 鍵以 `judge_batch` 初篩，2 路代理裁決，改 67 鍵（87 鍵屬本批 owner 裁決已處理的鍵，跳過）。
+- **繁中的車輛引擎蓋與消聲器用詞全包統一（196 項）。** 照原版的分法：物品名與配方名寫「引擎罩」，零件欄位、介面與說明寫「引擎蓋」；Muffler 一律寫「消聲器」（零件欄位單獨一個 Muffler 寫「排氣消聲器」），「消音器」只留給槍械。Pursuit Special 的 Muffler 原本譯成「排氣管」，一併改正。
+  > 技術要點：使用者 2026-11-12 裁定。`sources/ch` 144 個值、own 層 46 個、條件譯文 6 組；只改繁中，簡中照 As1（Pursuit Special 那一鍵兩邊都改）。兩個 lint 豁免的錨點跟著更新。
+- **239 個「多個 MOD 共用、英文各不相同」的鍵補完裁決，全庫不再有未裁決的衝突。** 其中 110 項的出貨文字改成對每個 MOD 都成立的寫法：Extensive Health Rework 新舊兩版的藥品說明只留共通內容（保存方式、療程、治療對象兩版不同）；Alice's 行李袋不再顯示 Skully's 附加包才有的變體名；MRE 餐包拿掉只有其中一版成立的「(冷食)」；Named skill VHS tapes 的技能標籤不再出現在沒裝它的玩家畫面；Buildable Pump 的說明不再寫成加油泵。裝了對應 MOD 時，畫面照舊顯示該 MOD 自己的完整譯文（條件譯文）。Extensive Health Rework Evolved 的 8 個介面文字改用它實際的參數寫法，原本的寫法會讓數字顯示不出來。
+  > 技術要點：`owner_conflict_decisions.json` 新登記 239 筆（238 translate、1 unship），分 5 路代理裁決、Codex 對抗複核；條件譯文順手修正 31 組（Autotsar Motor Club 相依 tsarslib、英文顯示的是 tsarslib 的物品名，19 組改成同譯；census 取到死檔英文的 3 組改照執行期英文）。EHR 舊版（3638633196）英文只在 B42 不讀的 `*_EN.txt`，Lua 以 `string.format` 填值；Evolved（3726328119）以帶參 `getText` 填值，兩版都查的 5 鍵寫兩種呼叫都能代入的 `%s`。
+- **As1 的譯文逐條對照英文審過後修正 8 項。** Project JoJo 天堂之門 3 項（放大疼痛的倍率 x100 改 x10、陽光命令補上「被陽光照到時」、AI 鎖定能力的提示）；Emergency TV Channel 的節目名統一（勝利菜園、活下去，4 項）；CT Brewery 釀造進度的百分號在簡中不見了。Rax Cheat Menu 的上次存檔時間在繁中顯示成字面「%02d:%02d」，改寫成「第 N 天 N 時 N 分」。
+  > 技術要點：使用者 2026-11-12 裁定 As1 譯文不照單全收。JoJo 216 鍵由代理與 Codex 各審一輪。`IGUI_CTB_Ilerleme` 的 As1 值「%%%3」被 `normalize_over_escape` 當成過度逸出還原，登記 `cn_overrides`；`UI_RAKS_LastSaveFormat` 的 `%02d` 不在 sanitize 的安全 token，被逸出成字面，而該 MOD 以 `pcall(string.format, …)` 消費（`RaxCharacterSave.lua:263`）。
+
+### Removed
+
+- **上游刪除的 132 項原創翻譯一併移除。** Moodle Effects Explained 改名前的舊鍵 95 項、DMM 28 項、Knox Survivors 6 項、汐汐的靜謐小屋 3 項（兩種床與電視櫃）。
+- **6 個同鍵撞到不同東西的文字改為不出貨。** `ContextMenu_Base` 與 Guns of Marz 的 4 個 STANAG 彈匣；車輛零件分類 `IGUI_VehiclePartCatarmor`（一個 MOD 當裝甲、另一個當配件）。裝了對應 MOD 時仍由條件譯文顯示中文。
+  > 技術要點：裁決 unship，登記 `unshipped_keys.json`。
+
 ## [42.22.2-1.74.0] - 2026-11-10
 
 ### Added

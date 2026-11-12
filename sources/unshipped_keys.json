@@ -1727,8 +1727,8 @@
   },
   "ItemName.json|Base.CampCarbine": {
    "as1_value": "MC-45 卡宾枪",
-   "owner_signature": "5100213f38e0821c",
-   "reason": "2026-10-21 #965 裁決不出貨：同一 key 是兩把不同的槍。VFE（3611718925、3761077099）是 MC-45 Carbine，.45 ACP、7 發（Base.45Clip）；Better Vanilla Firearms（3715977706）是 LN-9 Trapper Carbine，9mm、15 發（Base.SN506_Clip）。型號與口徑都不同，「卡賓槍」上位詞在 BVF 會和它其他卡賓槍（LN-45、WC-66、WC-92、R-M-6520、R-M-727）分不出來，比照 Base.Glock23 不出貨。抑制後：兩方都有可載入的 ItemName.json，繁中玩家看到各自的英文；BVF 自帶 Translate/CN（「LN-9 狩猎卡宾枪」），簡中玩家裝 BVF 時看到 MOD 自帶簡中，裝 VFE 時看到英文（VFE 只有 EN／ES／IT／RU）。"
+   "owner_signature": "a93d6df63baca657",
+   "reason": "2026-10-21 #965 裁決不出貨：同一 key 是兩把不同的槍。VFE（3611718925、3761077099）是 MC-45 Carbine，.45 ACP、7 發（Base.45Clip）；Better Vanilla Firearms（3715977706）是 LN-9 Trapper Carbine，9mm、15 發（Base.SN506_Clip）。型號與口徑都不同，「卡賓槍」上位詞在 BVF 會和它其他卡賓槍（LN-45、WC-66、WC-92、R-M-6520、R-M-727）分不出來，比照 Base.Glock23 不出貨。抑制後：兩方都有可載入的 ItemName.json，繁中玩家看到各自的英文；BVF 自帶 Translate/CN（「LN-9 狩猎卡宾枪」），簡中玩家裝 BVF 時看到 MOD 自帶簡中，裝 VFE 時看到英文（VFE 只有 EN／ES／IT／RU）。 2026-10-26 As1 v3.12.0 同步後複核：新增的 owner（多為 Complete Vanilla Firearms Expansion）英文都與既有 owner 相同，現行譯文仍對每個 owner 成立，重新簽名。 ／2026-11-12 #1339–#1370 複核：Better Vanilla Firearms（3715977706）把 LN-9 改名 'LN.355 Trapper Carbine'（.355＝9mm 彈徑，同一把 9mm 卡賓槍），仍和 VFE 的 MC-45（.45 ACP）不同，維持不出貨，重新簽名。"
   },
   "ItemName.json|Base.JS5_Clip": {
    "as1_value": "JS5 20发弹匣",
@@ -1811,8 +1811,8 @@
   },
   "ItemName.json|Base.9mmDrum_cat": {
    "as1_value": "9mm 帕拉贝鲁姆 50 发弹鼓",
-   "owner_signature": "6bbb8db27b87ac79",
-   "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：同一 key 在兩方是不同槍用、標不同口徑的彈鼓。Escape from Kentucky（3633421539）寫 9mm Parabellum 50-Round Drum Magazine，GunType Base.KrissVector_cat，並是 EFK 湯普森（9mm）的 MagazineType；MFS 社群修正版（3780151182）改寫 9x39mm 50-Round Rifle Drum，GunType 是 AMB17／AS VAL／AS VAL MOD4。口徑是承重資訊：現行「9mm 帕拉貝倫 50發彈鼓」讓社群修正版玩家誤以為能裝進同 MOD 的 9x19mm 彈鼓槍（Base.9mmDrum_p_cat）；拿掉口徑只剩「50 發彈鼓」也分不出槍種，「步槍彈鼓」對 EFK（Vector、湯普森衝鋒槍）不成立。兩方都有可載入 ItemName.json，且都自帶 Translate/CH、CN：不出貨後繁中玩家看到 EFK「9mm 帕拉貝魯姆 50 發彈鼓」或社群修正版「9x39mm 50 發步槍彈鼓」，各自正確。B41 前綴孿生鍵在 sources/en、真相層與 dist 都不存在，不需同步登記。"
+   "owner_signature": "def466c56355e6c5",
+   "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：同一 key 在兩方是不同槍用、標不同口徑的彈鼓。Escape from Kentucky（3633421539）寫 9mm Parabellum 50-Round Drum Magazine，GunType Base.KrissVector_cat，並是 EFK 湯普森（9mm）的 MagazineType；MFS 社群修正版（3780151182）改寫 9x39mm 50-Round Rifle Drum，GunType 是 AMB17／AS VAL／AS VAL MOD4。口徑是承重資訊：現行「9mm 帕拉貝倫 50發彈鼓」讓社群修正版玩家誤以為能裝進同 MOD 的 9x19mm 彈鼓槍（Base.9mmDrum_p_cat）；拿掉口徑只剩「50 發彈鼓」也分不出槍種，「步槍彈鼓」對 EFK（Vector、湯普森衝鋒槍）不成立。兩方都有可載入 ItemName.json，且都自帶 Translate/CH、CN：不出貨後繁中玩家看到 EFK「9mm 帕拉貝魯姆 50 發彈鼓」或社群修正版「9x39mm 50 發步槍彈鼓」，各自正確。B41 前綴孿生鍵在 sources/en、真相層與 dist 都不存在，不需同步登記。 ／2026-11-12 #1339–#1370 複核：MFS 社群修正版（3780151182）改為 '9x39mm 50-Round Rifle Drum (9mm Family Ammo)'，只多了彈藥族標示，仍是 9x39mm 步槍彈鼓、和 EFK 的 9mm 帕拉貝倫彈鼓不同，維持不出貨，重新簽名。"
   },
   "ItemName.json|Gunpart.Clip_9mmDrum_cat": {
    "as1_value": "9mm 50 发弹鼓 (装饰件)",
@@ -1865,8 +1865,8 @@
   },
   "ItemName.json|Base.45Clip20": {
    "as1_value": ".45 ACP 20 发弹匣",
-   "owner_signature": "4a9921e42b348f50",
-   "reason": "2026-11-06 #1221–#1297 批次：MFS 社群修正版（3780151182）把 Base.45Clip20 改成 '.45-70 20-Round Christine Rifle Magazine'（script GunType=Base.Christine45_cat），Escape from Kentucky（3633421539）仍是 '.45 ACP 20-Round Magazine'（GunType=Base.UMP45_cat）。兩方是不同槍、標不同口徑的彈匣，口徑是承重資訊；比照 Base.9mmDrum_cat、Base.762Bullets 前例不用上位口徑 .45 遮掉差異，不出貨。兩方都有可載入 ItemName.json：繁中玩家看到各自英文、簡中玩家看到 As1 以外的來源；條件譯文依啟用的 MOD 寫入各自譯名。"
+   "owner_signature": "8bbccaf250d60bae",
+   "reason": "2026-11-06 #1221–#1297 批次：MFS 社群修正版（3780151182）把 Base.45Clip20 改成 '.45-70 20-Round Christine Rifle Magazine'（script GunType=Base.Christine45_cat），Escape from Kentucky（3633421539）仍是 '.45 ACP 20-Round Magazine'（GunType=Base.UMP45_cat）。兩方是不同槍、標不同口徑的彈匣，口徑是承重資訊；比照 Base.9mmDrum_cat、Base.762Bullets 前例不用上位口徑 .45 遮掉差異，不出貨。兩方都有可載入 ItemName.json：繁中玩家看到各自英文、簡中玩家看到 As1 以外的來源；條件譯文依啟用的 MOD 寫入各自譯名。 ／2026-11-12 #1339–#1370 複核：MFS 社群修正版（3780151182）改為 '.45-70 20-Round Christine Rifle Magazine (.45 Family Ammo)'，只多了彈藥族標示，仍是 .45-70 步槍彈匣、和 EFK 的 .45 ACP 彈匣不同，維持不出貨，重新簽名。"
   },
   "UI.json|UI_ETW_TranslationStats_CH": {
    "as1_value": "30.0",
@@ -3324,6 +3324,664 @@
    "as1_value": "KH-5 冲锋枪",
    "owner_signature": "fb51963410d6e932",
    "reason": "2026-11-09 #1329 裁決不出貨：Project A-Life（3803984183）新增自己的 Base.JS5_SMG，名稱 JS-5 Submachine Gun；Better Vanilla Firearms（3715977706）的同鍵是 KH-5 Submachinegun（同 MOD 另有 KH-5/10）。兩邊模型、作者不同，型號名不同，比照同系列 Base.JS5_Clip（#965）不出貨。抑制後：兩方都有可載入的 ItemName.json，繁中玩家看到各自英文；BVF 自帶 Translate/CN，簡中玩家裝 BVF 時看到 MOD 自帶簡中、只裝 A-Life 時看到英文；條件譯文依啟用的 MOD 寫入各自譯名。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Die": {
+   "as1_value": "死亡",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Disinfect": {
+   "as1_value": "给予酒精",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Editor": {
+   "as1_value": "打开编辑器",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Mark": {
+   "as1_value": "标记",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_OpenClose": {
+   "as1_value": "开关50次",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_PerfOff": {
+   "as1_value": "关闭测量",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_PerfOn": {
+   "as1_value": "开启测量",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_Sizes25": {
+   "as1_value": "给予列表物品",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_A_VpBag": {
+   "as1_value": "放置一个装有物品的袋子",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_PerfCycleDone": {
+   "as1_value": "完成: %1次",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_PerfMark": {
+   "as1_value": "标记%1",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_PerfOffHalo": {
+   "as1_value": "测量将在下次加载时停止",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_PerfOnHalo": {
+   "as1_value": "测量将在下次加载时开始",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_Editor": {
+   "as1_value": "窗口%1/%2px · 预设数: %3 · 编辑保存至: %4 · 绘图步数: %5 · 未保存项: %6",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_EditorNone": {
+   "as1_value": "编辑器未开启",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_Perf": {
+   "as1_value": "Java v%1, 计数器%2, dev.perf%3, 函数和处理器: %4",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_Settings": {
+   "as1_value": "窗口%1, 屏幕大小%2px, 页面%3: 高度%4, 显示%5, 滚动到%6",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_SettingsNone": {
+   "as1_value": "设置窗口未打开",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_Res_VpPanel": {
+   "as1_value": "Java组件v%1, Viewpoint拥有面板: %2, 开关: %3, Knox面板: %4, 损坏: %5",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_720": {
+   "as1_value": "编辑器: 1280×720分辨率和居中",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_720_Do": {
+   "as1_value": "分辨率设为1280×720. 打开编辑器, 浏览一个物品 (如背包、夹克) 及每个预设页面. 观察 '未生效'/'覆盖' 条带和名称字段.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_720_Want": {
+   "as1_value": "窗口完整显示在屏幕上, 所有内容可滚动. 按钮、条带和名称字段中的文字垂直居中: 大写字母上方和基线下方的空间差异最多为1像素. 已编辑预设的铅笔图标位于名称之后, 清晰可读. 无元素重叠.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_bag": {
+   "as1_value": "编辑器: 背包隔层",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_bag_Do": {
+   "as1_value": "选择书包. 内部结构: 点击一个隔层, 更改宽/高, 切换对称模式, 使用 '行内添加'、'上方添加行'、'移除'. 切换到 '单网格模式', 设置列/行数. 保存并在物品栏中打开该背包.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_bag_Want": {
+   "as1_value": "选中的隔层显示浅色边框, 内部标注尺寸. 对称模式下: 对应的镜像隔层也会同步变化. 面板下方显示 '格子数: N' 和 '游戏原生容量: M'; 宽度超过8或高度超过15时会发出警告. 物品栏中的背包形状和编辑器中一致.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_defaults": {
+   "as1_value": "编辑器: 模组默认值 (开发者模式)",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_defaults_Do": {
+   "as1_value": "开启开发者模式后打开编辑器: 底部显示 '保存至我的设置、模组默认值'. 选择模组默认值, 修改某物品尺寸, 保存. 查看模组文件夹中的media/knox/item_defaults.txt.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_defaults_Want": {
+   "as1_value": "配置行已写入模组的item_defaults.txt; 游戏中该物品变为新尺寸. 在 '我的设置' 中, 该物品现在显示为 'Knox默认值' (因为默认值已包含该编辑). 非开发者模式下不显示这些按钮.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_export": {
+   "as1_value": "编辑器: 导出",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_export_Do": {
+   "as1_value": "选择一个包含编辑内容的预设>点击 '复制到剪贴板', 粘贴到记事本中. 点击 '保存到文件'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_export_Want": {
+   "as1_value": "记事本中显示: '# Knox Inventory preset', 预设名称, '# for = ...' 以及物品配置行. 提示 '已复制行数: N'/'已保存: ...', 文件位于knox_presets文件夹中.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_import": {
+   "as1_value": "编辑器: 导入",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_import_Do": {
+   "as1_value": "复制一段导出的文本, 修改其名称, 添加一行 'No.Such = 1x1' 和一行乱码. 点击导入>从剪贴板. 然后点击 '添加预设'. 将一个.txt文件拖入knox_presets文件夹并再次打开导入界面.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_import_Want": {
+   "as1_value": "'读取内容': 显示每一行; 有效的行显示物品名称, 错误行显示红色 ('无此物品', '无法读取'), 统计 '行数 · 物品数 · 错误数'. 预设以文件名命名添加. 新文件在 '来源' 下显示及其日期.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_layers": {
+   "as1_value": "编辑器: 预设层级",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_layers_Do": {
+   "as1_value": "启用一个通用预设和一个背包预设, 两者对同一背包设置了不同尺寸. 编辑通用预设 (点击 '编辑它') 并选中该背包. 点击 '在此处编辑'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_layers_Want": {
+   "as1_value": "出现黄色条带提示: '游戏中, 预设 '...' 将覆盖此物品'. '在此处编辑' 会将编辑内容移动到该标签页对应的预设中. 在游戏中, 该背包将应用标签页预设的尺寸.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_look": {
+   "as1_value": "编辑器: 分类和音效",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_look_Do": {
+   "as1_value": "选择钢笔: 打开分类, 选择另一项; 打开音效, 选择玻璃. 点击展开列表旁边的空白处. 保存, 移动钢笔.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_look_Want": {
+   "as1_value": "列表在字段下方展开 (靠近窗口底部时在上方展开), 当前选中项高亮. 点击旁边空白处会关闭列表且不触发其他操作. 钢笔图块变为新颜色; 移动时发出玻璃音效.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_mainmenu": {
+   "as1_value": "从主菜单打开编辑器",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_mainmenu_Do": {
+   "as1_value": "进入主菜单. 顶部中间位置, 在Knox标签页下: 'KNOX INVENTORY | SETTINGS | ITEM EDITOR'. 将鼠标悬停在标签上, 点击 '物品编辑器', 修改某个背包的尺寸, 点击 '保存' 并关闭. 点击 '设置' 以打开设置界面. 进入游戏查看该背包.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_mainmenu_Want": {
+   "as1_value": "单个标签页, 鼠标移开时保持静止; 鼠标悬停时高亮显示, 并在鼠标所在部分覆盖一层淡淡的高亮条带. '物品编辑器' 会在菜单上方打开背包编辑器; 搜索框和文本字段功能正常. '设置' 功能如前. 在游戏中, 该背包已应用新尺寸.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_mask": {
+   "as1_value": "编辑器: 自定义格子背包",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_mask_Do": {
+   "as1_value": "选择腰包>'自定义格子模式'. 左键点击圆点添加格子, 右键移除; 按住按钮拖动可连续操作. 清空, 从隔层生成. 绘制一个由两部分组成的形状, 保存, 打开该背包.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_mask_Want": {
+   "as1_value": "可通过拖动来绘制和擦除格子. 侧面相邻的格子组成一个隔层, 分离的格子各自独立. 配置行显示为 'mask xx|.x' 格式. 物品栏中的背包呈现该形状.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_mp": {
+   "as1_value": "编辑器: 服务器",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_mp_Do": {
+   "as1_value": "联机模式. 以管理员身份打开编辑器, 修改某物品, 保存. 以普通玩家身份打开编辑器.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_mp_Want": {
+   "as1_value": "管理员底部提示: '保存在服务器上 — 对所有玩家生效'; 保存后所有玩家的物品尺寸立即变更. 普通玩家看到提示: 联机时服务器尺寸配置生效.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_open": {
+   "as1_value": "编辑器: 打开",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_open_Do": {
+   "as1_value": "点击 '打开编辑器' (会给予书包、腰包、夹克、两把手枪、钉子和一支笔, 并针对书包打开编辑器). 关闭它. 然后在物品栏中右键点击钢笔>'物品编辑器'. 点击 '检查'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_open_Want": {
+   "as1_value": "窗口位于屏幕中央, 如同设计稿所示: 左侧为标签页, 中间为带搜索功能的物品列表, 右侧为选中物品的详情. 从物品菜单打开编辑器时, 会直接定位到该物品 ('其他' 标签页, 选中钢笔). 窗口可通过标题栏拖动. 检查结果: 通过.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_pockets": {
+   "as1_value": "编辑器: 口袋",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_pockets_Do": {
+   "as1_value": "选择夹克. '口袋格子数'+2. 勾选 '适用于所有穿戴位置为...'. 保存, 穿上夹克, 查看角色口袋. 脱下夹克.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_pockets_Want": {
+   "as1_value": "勾选后, 显示角色口袋总数: 手部+夹克格子数 (高亮). 配置行显示 'pockets.all N'. 保存后, 所穿夹克 (及任何夹克) 的口袋立即变为该尺寸.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_presets": {
+   "as1_value": "编辑器: 预设",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_presets_Do": {
+   "as1_value": "预设标签页. 新建: 输入名称, 选择 '所属标签页'>背包, 点击 '创建预设'. 修改一个背包: 显示 '未生效' 条带, 点击 '启用'. 制作副本, 重命名 (在名称字段按回车), 删除它 (需点击两次). 保存.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_presets_Want": {
+   "as1_value": "列表显示: Knox (默认)、通用、标签页、模组预设, 均分组显示; 已启用的预设标记 '生效中', 编辑目标预设旁有铅笔图标 (720p分辨率下: 位于名称后). 底部提示: '编辑保存至 '...'' — 点击可跳转至该预设. 文件位于Zomboid/Lua/knox_presets.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_reset": {
+   "as1_value": "编辑器: 重置",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_reset_Do": {
+   "as1_value": "在有修改的标签页>点击 '重置所有更改' (需点击两次). 撤销. 在预设页面点击 '全部重置'. 关闭带有未保存编辑的窗口 (按Esc或点击关闭).",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_reset_Want": {
+   "as1_value": "第一次点击询问 '确定吗? 再次点击确认', 第二次点击重置预设中的所有物品; 撤销可恢复所有更改. 关闭带有未保存编辑的窗口时询问一次, 第二次点击则不保存直接关闭.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_size": {
+   "as1_value": "编辑器: 尺寸",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_size_Do": {
+   "as1_value": "选择钢笔. 点击长度旁的 '+'. 查看页面底部的提示行. 撤销 (或Ctrl+Z). 再次点击 '+', 然后保存. 关闭编辑器, 查看物品栏中的钢笔. 然后在物品头部点击 '重置' 并保存.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_size_Want": {
+   "as1_value": "步进器右侧的图块尺寸发生变化. 出现 '已修改' 和 '重置' 按钮, 数值被高亮框包围, 底部提示'未保存: 1'. 撤销可恢复原状. 保存后, 物品栏中的钢笔立即变为新尺寸, 无需重载. 重置后, 恢复为Knox默认值.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_stack": {
+   "as1_value": "编辑器: 堆叠",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_stack_Do": {
+   "as1_value": "手枪: 勾选 '允许堆叠', '每格数量' 设为5. 钉子: 取消勾选. 保存. 将两把手枪并排摆放, 两盒钉子并排摆放.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_stack_Want": {
+   "as1_value": "手枪显示黄色提示 '仅相同物品可堆叠...'. 配置行显示 'stack 5' 和 'stack 1'. 在物品栏中, 空的完整手枪会作为一堆共享一个格子, 钉子不再堆叠. 装弹的手枪不会加入堆叠.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_tabs": {
+   "as1_value": "编辑器: 标签页和搜索",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_tabs_Do": {
+   "as1_value": "浏览左侧每个标签页. 搜索 'jacket', 然后搜索ID的一部分 ('base.bag'), 随后清除搜索. 滚动长列表 (服装).",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_ed_tabs_Want": {
+   "as1_value": "背包和服装按组显示 (背包/肩部和腰带/箱子..., 带口袋/无口袋). 模组: 按模组显示其他模组的物品. 搜索可在每个标签页中通过名称和ID查找. 列表滚动平滑, 两端有柔和阴影. 鼠标悬停的行会高亮显示.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_menu_icons25": {
+   "as1_value": "菜单: 图标和\"爬过\"",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_menu_icons25_Do": {
+   "as1_value": "你需要一个伤口, 刮伤即可 (例如徒手砸碎窗户). 点击\"给予酒精\", 打开游戏健康窗口并右键点击受伤部位. 然后从外部右键点击一扇有碎玻璃的房屋窗户.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_menu_icons25_Want": {
+   "as1_value": "\"消毒\"有一个带十字的瓶子图标; 游戏健康窗口中的其他治疗手段 (拆除绷带、缝合、取出玻璃或子弹、夹板、烧伤、敷药) 使用Knox自身健康面板的图标. 在窗口菜单中, \"移除碎玻璃\"有碎片图标, \"爬过\"有带箭头的窗户图标; \"爬过\"位于 '操作' 下, 而非 '其他'. \"翻越\" (围栏) 使用和\"爬过\"相同的图标.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_car": {
+   "as1_value": "测量: 车辆",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_car_Do": {
+   "as1_value": "上车, 驾驶座, 点击 '标记'. 每项持续一分钟, 每项结束后点击 '标记': 收音机关闭; 广播开启; 播放自定义音乐. 然后下车, 站在车旁播放音乐一分钟, 点击 '标记'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_car_Want": {
+   "as1_value": "声音和画面均正常.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_death": {
+   "as1_value": "测量: 死亡和新角色",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_death_Do": {
+   "as1_value": "点击 '死亡' - 角色死亡. 创建一个新角色, 游玩几分钟, 多次打开和关闭物品栏.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_death_Want": {
+   "as1_value": "新角色运行正常, 物品栏可正常打开.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_loot": {
+   "as1_value": "测量: 大型仓库",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_loot_Do": {
+   "as1_value": "丢弃300个物品, 点击 '标记', 打开Knox, 选择 '地面', 滚动列表, 将一堆物品移入背包. 然后寻找一个大商店或仓库, 在那里搜刮几分钟. 点击 '标记', 然后清理堆叠.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_loot_Want": {
+   "as1_value": "一切正常.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_on": {
+   "as1_value": "测量: 开启计数器",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_on_Do": {
+   "as1_value": "点击 '开启测量'. 返回主菜单并重新加载此存档: 计数器在游戏加载时启动. ZombieBuddy询问关于新的KnoxInventoryJava.jar - 允许它. 测量期间关闭PeePee (两者会相互干扰). 点击 '检查'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_on_Want": {
+   "as1_value": "检查结果显示: Java v58, 计数器true, dev.perf 1, 末尾两个数字均大于20. Zomboid/Lua目录下生成knox_perf.txt文件. 完成所有测量点后 - 关闭测量, 并发送knox_perf.txt和console.txt.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_play": {
+   "as1_value": "测量: 正常游玩10分钟",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_play_Do": {
+   "as1_value": "点击 '标记' 并像往常一样游玩10分钟: 行走、搜刮、按需打开物品栏. 然后再次点击 '标记'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_play_Want": {
+   "as1_value": "游戏内无异常变化. 两个标记之间记录了正常游玩数据.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_reload": {
+   "as1_value": "测量: 进出菜单3次",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_reload_Do": {
+   "as1_value": "返回主菜单并加载同一存档, 在游戏中停留一分钟. 连续执行三次.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_reload_Want": {
+   "as1_value": "游戏正常加载. 计数器会自动在文件中标记菜单和每次加载过程.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_windows": {
+   "as1_value": "测量: 窗口开关50次",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_windows_Do": {
+   "as1_value": "点击 '开启并关闭50次': Knox屏幕自动开关50次 (约一分钟), 测试台随之关闭 - 这是正确的. 在显示 '完成' 前不要触碰鼠标或键盘. 然后打开测试台 (Insert键), 点击 '标记', 手动开关电视、收音机和倾倒窗口几次, 再次点击 '标记'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_perf_windows_Want": {
+   "as1_value": "屏幕开关无错误, 之后游戏运行正常.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_apply": {
+   "as1_value": "设置: 应用按钮",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_apply_Do": {
+   "as1_value": "查看 '模块' 和 '外观' 页面底部的窗口区域. 在 '模块' 页面关闭一个模块, 然后切换到 '外观' 页面. 再将其重新开启.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_apply_Want": {
+   "as1_value": "'应用' 按钮仅出现在 '模块' 页面; 其他页面没有, 且 '关闭' 按钮位于右边缘. 当模块状态发生改变时, '应用' 按钮会在每个页面显示 (高亮). 恢复原状后, 它再次消失.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_binds": {
+   "as1_value": "设置: 控制",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_binds_Do": {
+   "as1_value": "在 '控制' 页面: 点击 '旋转拖动中的物品' 的按钮, 按下一个键; 对另一个按钮进行Shift+点击; 按Esc取消. 然后点击标题旁的 '默认'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_binds_Want": {
+   "as1_value": "按钮等待输入 (高亮, 显示 '按下按键...'), 绑定的按键立即显示. 较长的操作名称会换行显示, 而不是挤在按钮下方. 底部有帮助信息, 最后一句关于游戏物品栏按键. '默认' 会将所有设置还原并变灰.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_cats": {
+   "as1_value": "设置: 分类顺序",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_cats_Do": {
+   "as1_value": "在 '排序' 页面: 向下滚动到分类列表. 用鼠标将一个分类拖拽到其他位置, 然后使用箭头交换两个分类的位置.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_cats_Want": {
+   "as1_value": "拖动时, 其他分类会腾出空间; 松开鼠标, 它会落在显示的位置. 箭头每次移动一个位置; 第一个分类没有向上箭头, 最后一个没有向下箭头.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_cn": {
+   "as1_value": "设置: 中文",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_cn_Do": {
+   "as1_value": "将游戏语言设置为中文, 打开Knox设置, 浏览各个页面. 然后将语言改回.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_cn_Want": {
+   "as1_value": "所有文本位置正确, 无溢出. 已知问题: 游戏的自动换行按字符断开中文, 导致行首可能出现标点符号 (. , ) - 和此前一样; 如果这困扰你, 请标记出来.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_menu": {
+   "as1_value": "设置: 主菜单中",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_menu_Do": {
+   "as1_value": "退出到主菜单, 打开顶部的Knox标签页. 浏览各个页面; 在 '主菜单' 页面切换新闻的开启和关闭, 点击两次 '将营地恢复原状'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_menu_Want": {
+   "as1_value": "窗口默认打开在 '模块'页面.  '主菜单'页面包含新闻和营地设置; 第一次点击 '重置营地布局' 会要求确认, 第二次则执行恢复. 在此处关闭并应用某个模块会立即重载Lua.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_open": {
+   "as1_value": "设置: 左侧页面",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_open_Do": {
+   "as1_value": "点击 '打开设置' (或Knox顶部栏的设置按钮). 浏览左侧的每一个页面. 点击 '检查'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_open_Want": {
+   "as1_value": "左侧有一列七个页面: 模块、外观、搜刮和背包、排序、声音、控制、主菜单. 选中的页面有高亮进度条. 窗口在每个页面保持相同高度, 不会跳动. 页面名称位于该页面第一个标题所在的行. 检查结果显示为true.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_scroll": {
+   "as1_value": "设置: 滚动",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_scroll_Do": {
+   "as1_value": "在 '外观' 页面: 在页面上滚动鼠标滚轮, 拖动右侧的滚动条滑块, 点击滑块上方和下方的轨道. 在左侧页面列表上滚动鼠标滚轮.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_scroll_Want": {
+   "as1_value": "滚轮滑动平滑, 每格滚动三行. 滑块随鼠标移动; 点击轨道可翻页. 当上下还有更多内容时, 页面边缘会有柔和的淡出效果, 在起始和结束位置则没有. 在左侧页面列表上滚动滚轮无反应. 标题栏和底部按钮保持固定不动.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_slider": {
+   "as1_value": "设置: 滚动页面上的滑块",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_slider_Do": {
+   "as1_value": "打开Knox物品栏, 然后进入设置中的 '外观' 页面. 向下滚动并调整 '背景不透明度' 及其他滑块. 选择一个皮肤并调整 '自定义: 色相'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_slider_Want": {
+   "as1_value": "滑块跟随鼠标位置 (不受滚动偏移影响), 背景窗口即时变化. 调整 '自定义: 色相' 会自动选中 '自定义' 皮肤.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_small": {
+   "as1_value": "设置: 小屏幕",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_small_Do": {
+   "as1_value": "在游戏选项中将分辨率设置为1280×720 (或同等高度的窗口). 打开Knox设置, 浏览各个页面. 然后将分辨率恢复原状.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_small_Want": {
+   "as1_value": "整个窗口都在屏幕内, 上下留有空间; 底部按钮始终可见. 较长的页面 (外观、模块) 可滚动, 右侧显示滚动条滑块. 检查结果显示为true, 窗口高度小于屏幕高度.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_vp": {
+   "as1_value": "设置: 准星面板开关",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_vp_Do": {
+   "as1_value": "在启用和禁用Viewpoint的情况下, 查看 '搜刮和背包' 页面.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_set_vp_Want": {
+   "as1_value": "启用Viewpoint时, '周围' 下有 '自有Viewpoint准星面板' 选项; 禁用Viewpoint时, 该选项不存在, 且不留空白.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_sizes25": {
+   "as1_value": "作者列表中的尺寸",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_sizes25_Do": {
+   "as1_value": "点击\"给予列表物品\"并在物品栏中查看它们.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_sizes25_Want": {
+   "as1_value": "砧板2x2, 便条1x1, 对讲机1x2, 涂鸦1x1, 剥皮工具1x3, 钉耙1x4, 带刺铁丝2x2, 小麦1x2, 吸管1x1, 宣传册1x1.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_actions": {
+   "as1_value": "准星面板: 操作",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_actions_Do": {
+   "as1_value": "看向一扇窗户、一扇门、一扇锁着的门.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_actions_Want": {
+   "as1_value": "标题下方 - 带有Knox图标的操作, 危险操作 (如砸窗) 以红色显示在分隔线下方, 不可用的操作变暗. 选中的操作通过 '拿取' 键执行. 锁住的门 - 显示红色的 '已上锁' 及锁图标.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_bag": {
+   "as1_value": "准星面板: 背包",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_bag_Do": {
+   "as1_value": "点击 '放置一个装有物品的袋子' 并看向脚边的地面. 用滚轮选择背包所在行. 轻点 '拿取', 再次轻点. 然后按住 '拿取' 并在完成前松开; 最后按住直到完成.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_bag_Want": {
+   "as1_value": "轻点直接在列表中打开背包 (从其图块延伸出物品行), 再次轻点则折叠; 提示变为 '查看'/'折叠'. 按住执行拿取背包: 进度条从左向右填充; 提前松开 - 转移取消, 进度条回退. 坚持到底 - 背包归角色所有, 行折叠.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_keys": {
+   "as1_value": "准星面板: 自定义按键",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_keys_Do": {
+   "as1_value": "在Viewpoint选项中, 将 '拿取'、'全部拿取' 和战利品窗口绑定到其他按键. 看向一个装有物品的容器.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_keys_Want": {
+   "as1_value": "面板底部显示新绑定的按键, 而非F/R/Tab. 功能正常: 滚轮选择行, '拿取' 获取单个物品, '全部拿取' 获取所有物品. 将按键恢复原状.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_off": {
+   "as1_value": "准星面板: 关闭",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_off_Do": {
+   "as1_value": "在Knox设置的 '游戏' 页面, 关闭 '自有Viewpoint准星面板'. 看向橱柜. 点击 '检查'. 然后重新开启它.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_off_Want": {
+   "as1_value": "关闭后 - 恢复为Viewpoint自带的面板, console.txt中无错误. 检查结果显示true, false, false, false. 若无Viewpoint, 设置中无此开关.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_on": {
+   "as1_value": "准星面板: 开启",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_on_Do": {
+   "as1_value": "开启Viewpoint (ZombieBuddy会询问关于新的KnoxInventoryJava.jar - 允许它). 看向橱柜或冰箱. 点击 '检查'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_on_Want": {
+   "as1_value": "Knox的面板在准星处展开, 替代了Viewpoint的面板: 头部包含图片和名称, 其下显示数量和重量, 物品行带有其分类颜色的图块. 检查结果显示v61, true, true, true, false.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_overhead": {
+   "as1_value": "准星面板: OldPoint俯视相机",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_overhead_Do": {
+   "as1_value": "使用OldPoint时, 开启俯视相机. 将鼠标悬停在橱柜上, 转动滚轮. 切换到第一人称并看向同一个橱柜.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_overhead_Want": {
+   "as1_value": "俯视相机下无准星面板 (Knox和Viewpoint均不显示), 滚轮用于缩放相机. 在第一人称下, Knox面板再次在准星处展开.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_scroll": {
+   "as1_value": "准星面板: 长列表",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_scroll_Do": {
+   "as1_value": "点击 '丢弃300个物品' 并看向地面. 快速和慢速上下滚动鼠标滚轮.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_scroll_Want": {
+   "as1_value": "最多显示8行, 上下有带箭头的条纹. 选中的行放大并保持在中间位置, 列表不卡顿或跳动. 然后点击 '清理堆叠'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_search": {
+   "as1_value": "准星面板: 搜索",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_search_Do": {
+   "as1_value": "开启 '搜索容器'. 看向一个角色尚未搜索过的容器.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_search_Want": {
+   "as1_value": "面板显示 '搜索中...' 行, 图块逐渐填充高亮色; 找到的物品逐一展开到列表中, 头部的计数滚动并在搜索期间高亮. 移开视线 - 搜索暂停; 回看 - 继续搜索.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_tab": {
+   "as1_value": "准星面板: Knox窗口",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_tab_Do": {
+   "as1_value": "看向冰箱. 用滚轮选择冷冻室中的一件物品, 按下Viewpoint的战利品窗口按键.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_tab_Want": {
+   "as1_value": "Knox窗口打开, 选中冰柜而非冰箱整体. 当Knox窗口打开时, 准星处无面板显示.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_take": {
+   "as1_value": "准星面板: 拿取物品",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_take_Do": {
+   "as1_value": "点击 '放置一个装有物品的袋子', 轻点打开背包. 从背包中拿取一件物品, 然后执行 '全部拿取'.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "IG_UI.json|IGUI_KnoxTB_vp_take_Want": {
+   "as1_value": "进度条从面板边缘开始填充 (而非从缩进处), 完成后折叠. 在打开的背包中执行 '全部拿取' 会拿走背包内的物品. 头部的重量和数量平滑变化.",
+   "reason": "2026-10-22 使用者裁定（#996）測試台鍵不翻、不出貨（第六類：讀鍵的程式不隨 Workshop 版發布）：Knox Inventory 的 KnoxTestBench.lua 不在 Workshop 內容。2026-11-12 As1 v3.14.0 新收此鍵，照裁定登記。"
+  },
+  "ContextMenu.json|ContextMenu_Base": {
+   "as1_value": "佩戴面罩",
+   "owner_signature": "9254d5648e1798ea",
+   "reason": "2026-11-12 #1339–#1370 新裁決不出貨：HaloArmor（3507919075）的 'Wear with Visor' 是戴上面罩的選項（同 MOD 另有 ContextMenu_NoVisorNoMask 'Wear Base Version'），NMS（3791086306）是 'Base Version'，Operator Gear（3823941573）是 'Base'（戰術胸掛的基本款）。意思互斥：寫「基本款式」會讓 HaloArmor 出現兩個「基本」選項，寫「戴上面罩」對另兩方是錯的，沒有誠實中性譯名。抑制後三方都有可載入 ContextMenu.json，玩家看到各自英文（Operator Gear 下載內容查無 CH／CN；HaloArmor、NMS 本機無副本，沒查）；條件譯文依啟用的 MOD 寫入各自譯名。"
+  },
+  "ItemName.json|MarzGuns.556x45Magazine100_STANAG": {
+   "as1_value": "5.56x45mm 100发STANAG弹匣",
+   "owner_signature": "4606b2044a5cebcb",
+   "reason": "2026-11-12 #1339–#1370 新裁決不出貨：Guns of Marz（3722134990/GunsOfMarz）新版把這個物品改成 75 發（script MaxAmmo=75），同 Workshop 項目的 GunsOfMarzPreviousVersion 與 Brita Legacy Magazines（3801670664）仍是 100 發。容量是承重資訊，拿掉數字後 Guns of Marz 的 50／75／100／150 四個 STANAG 擴容彈匣會同名，沒有誠實中性譯名。抑制後各方都有可載入 ItemName.json，玩家看到各自英文（Guns of Marz 只附 EN／IT）；條件譯文依啟用的 MOD 寫入各自容量。B41 前綴孿生鍵在真相層與 dist 都不存在。"
+  },
+  "ItemName.json|MarzGuns.556x45Magazine150_STANAG": {
+   "as1_value": "5.56x45mm 150发STANAG弹匣",
+   "owner_signature": "ea2dd618fb432a92",
+   "reason": "2026-11-12 #1339–#1370 新裁決不出貨：Guns of Marz（3722134990/GunsOfMarz）新版把這個物品改成 90 發（script MaxAmmo=90），同 Workshop 項目的 GunsOfMarzPreviousVersion 與 Brita Legacy Magazines（3801670664）仍是 150 發。容量是承重資訊，拿掉數字後 Guns of Marz 的 50／75／100／150 四個 STANAG 擴容彈匣會同名，沒有誠實中性譯名。抑制後各方都有可載入 ItemName.json，玩家看到各自英文（Guns of Marz 只附 EN／IT）；條件譯文依啟用的 MOD 寫入各自容量。B41 前綴孿生鍵在真相層與 dist 都不存在。"
+  },
+  "ItemName.json|MarzGuns.556x45Magazine50_STANAG": {
+   "as1_value": "5.56x45mm 50发STANAG弹匣",
+   "owner_signature": "50a5accae116e7be",
+   "reason": "2026-11-12 #1339–#1370 新裁決不出貨：Guns of Marz（3722134990/GunsOfMarz）新版把這個物品改成 60 發加長彈匣（script MaxAmmo=60），同 Workshop 項目的 GunsOfMarzPreviousVersion 與 Brita Legacy Magazines（3801670664）仍是 50 發。容量是承重資訊，拿掉數字後 Guns of Marz 的 50／75／100／150 四個 STANAG 擴容彈匣會同名，沒有誠實中性譯名。抑制後各方都有可載入 ItemName.json，玩家看到各自英文（Guns of Marz 只附 EN／IT）；條件譯文依啟用的 MOD 寫入各自容量。B41 前綴孿生鍵在真相層與 dist 都不存在。"
+  },
+  "ItemName.json|MarzGuns.556x45Magazine75_STANAG": {
+   "as1_value": "5.56x45mm 75发STANAG弹匣",
+   "owner_signature": "ca6f3544eef5d0d2",
+   "reason": "2026-11-12 #1339–#1370 新裁決不出貨：Guns of Marz（3722134990/GunsOfMarz）新版把這個物品改成 60 發彈鼓（script MaxAmmo=60），同 Workshop 項目的 GunsOfMarzPreviousVersion 與 Brita Legacy Magazines（3801670664）仍是 75 發。容量是承重資訊，拿掉數字後 Guns of Marz 的 50／75／100／150 四個 STANAG 擴容彈匣會同名，沒有誠實中性譯名。抑制後各方都有可載入 ItemName.json，玩家看到各自英文（Guns of Marz 只附 EN／IT）；條件譯文依啟用的 MOD 寫入各自容量。B41 前綴孿生鍵在真相層與 dist 都不存在。"
+  },
+  "IG_UI.json|IGUI_VehiclePartCatarmor": {
+   "as1_value": "装甲",
+   "owner_signature": "55987821d2c997f0",
+   "reason": "2026-11-12 全庫補裁決不出貨：Military Tool Kit 與 Ford Excursion by Papa_Chad 的 armor 分類是裝甲（MTK 42.20 另有 Cataddons=Addons 分類），REDLIBRARY 把同一分類標成 Addons，底下是擾流板、遮陽板、保險桿、車頂架等外觀加裝件，現值「裝甲」對 REDLIBRARY 不成立，改成「配件」又會和 MTK 自己的 Addons 分類撞名，沒有誠實的中性譯名。抑制後認不出 owner 時：MTK 與 REDLIBRARY 顯示各自 IG_UI.json 英文 Armor／Addons，Ford Excursion 的英文只在死檔 IG_UI_EN.txt，單裝它時顯示字面鍵名（已接受殘留）；三者本機都沒有訂閱，未查到是否自帶 CH／CN。"
   }
  }
 }

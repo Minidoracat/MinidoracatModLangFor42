@@ -1856,7 +1856,7 @@
         "黃油"
       ],
       "reason": "「石化了的黃油、鏽成一坨的螺絲」明確是車底機件上的潤滑脂，不是 butter；改成「奶油」會造成機械語境錯譯。",
-      "ch_value": "ebe8cfd35778bcbf"
+      "ch_value": "3f46720fbd7d033c"
     },
     "IG_UI.json|IGUI_Dream169": {
       "patterns": [
@@ -2662,34 +2662,6 @@
       "reason": "2026-10-23 條件譯文裁決 keep：指令代碼、官方代碼、燈具型號代碼，非程式碼",
       "ch_value": "f5a66917d2d4db6d"
     },
-    "owner_variants|ItemName|Autotsar.ATAMotoBMWClassicMuffler#2": {
-      "patterns": [
-        "性能"
-      ],
-      "reason": "2026-10-23 條件譯文裁決 keep：改裝零件「高性能」消音器／輪胎，汽車性能語境",
-      "ch_value": "5ef6aa9e87d91fff"
-    },
-    "owner_variants|ItemName|Autotsar.ATAMotoBMWModernTire#2": {
-      "patterns": [
-        "性能"
-      ],
-      "reason": "2026-10-23 條件譯文裁決 keep：改裝零件「高性能」消音器／輪胎，汽車性能語境",
-      "ch_value": "ab16b2e6cd1e87c4"
-    },
-    "owner_variants|ItemName|Autotsar.ATAMotoHarleyModernTire#2": {
-      "patterns": [
-        "性能"
-      ],
-      "reason": "2026-10-23 條件譯文裁決 keep：改裝零件「高性能」消音器／輪胎，汽車性能語境",
-      "ch_value": "ab16b2e6cd1e87c4"
-    },
-    "owner_variants|ItemName|Autotsar.ATAMotoHarleyMuffler#2": {
-      "patterns": [
-        "性能"
-      ],
-      "reason": "2026-10-23 條件譯文裁決 keep：改裝零件「高性能」消音器／輪胎，汽車性能語境",
-      "ch_value": "5ef6aa9e87d91fff"
-    },
     "owner_variants|Moodles|Moodles_Drunk_desc_lvl1#2": {
       "patterns": [
         "遠程"
@@ -3278,8 +3250,8 @@
       "patterns": [
         "交(\\s*)互"
       ],
-      "reason": "2026-10-23：醫療語境的「藥物交互作用」為台灣專業用語（陸用語作「相互作用」）。",
-      "ch_value": "9c1e6e06dbb2da94"
+      "reason": "「藥物交互作用」是台灣藥學與健保用語（drug interactions），不是介面的「互動」；保留並豁免。",
+      "ch_value": "4a8a3c3894fe695c"
     },
     "UI.json|UI_EHR_DrugInteractions": {
       "patterns": [
@@ -3686,6 +3658,69 @@
       ],
       "reason": "2026-11-07 裁決 keep：英文 Issued as a fixed Menu 指俄軍口糧的固定菜色（Menu 1 號套餐），是餐飲菜單語境，不是 UI 選單。",
       "ch_value": "1ee76a104f545dca"
+    },
+    "IG_UI.json|IGUI_WP_GF_Eating_5_1": {
+      "patterns": [
+        "菜(\\s*)單"
+      ],
+      "reason": "2026-11-12 #1340–#1370：Girlfriend Mod 台詞講的是餐廳的菜單（restaurant with menus），不是介面選單，保留。",
+      "ch_value": "daf7637741de0bfd"
+    },
+    "Sandbox.json|Sandbox_QuietDark_Sight_option1": {
+      "patterns": [
+        "^鷹眼$|['「]鷹眼['」]|鷹眼特[質性]|特質雜誌-鷹眼"
+      ],
+      "reason": "2026-11-12 #1340–#1370：It's Quiet, Too quiet. 的殭屍視力選項 Eagle-eyed，對應原版沙盒 Sandbox_ZSight_option1（LangFor42「鷹眼」），不是玩家特質。",
+      "ch_value": "7f5bb4a44be1448a"
+    },
+    "MakeUp.json|MakeUpType_Back_Tattoo_Veteran": {
+      "patterns": [
+        "^老兵$|['「]老兵['」]|老兵特[質性]|特質雜誌-老兵"
+      ],
+      "reason": "2026-11-12 As1 v3.14.0：Ellie's Tattoo Parlor 的刺青圖案名 Veteran，不是特質。",
+      "ch_value": "97f18652da004b77"
+    },
+    "UI.json|UI_RVM_DD_ReadyAssembly": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "2026-11-12 裁決 keep（Under the Hood）：「組裝檢查通過」是檢查結果合格（pass），不是 via/through。",
+      "ch_value": "2e5cdd545333522f"
+    },
+    "UI.json|UI_RVM_DD_StatusFail": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "2026-11-12 裁決 keep（Under the Hood）：「檢查未通過」是檢查結果不合格（fail），不是 via/through。",
+      "ch_value": "acf4f53d5d0f86ae"
+    },
+    "UI.json|UI_RVM_Scanner_Pass": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "2026-11-12 裁決 keep（Under the Hood）：診斷器監測結果 PASS 的「通過」，不是 via/through。",
+      "ch_value": "dd55c6c25912cfba"
+    },
+    "UI.json|UI_RVM_OilJob_Pickup_Caked": {
+      "patterns": [
+        "通(\\s*)過(?!\\s*[測考審檢])"
+      ],
+      "reason": "2026-11-12 裁決 keep（Under the Hood）：「幾乎沒有油能通過」是機油實際流過集濾網的通行義，不是藉由手段的「透過」。",
+      "ch_value": "1d0c2e44ff5e2b96"
+    },
+    "owner_variants|UI|UI_EHR_Compact_DrugInteractions#1": {
+      "patterns": [
+        "交(\\s*)互"
+      ],
+      "reason": "「藥物交互作用」是台灣藥學與健保用語（drug interactions），不是介面的「互動」；保留並豁免。",
+      "ch_value": "9c1e6e06dbb2da94"
+    },
+    "owner_variants|UI|UI_EHR_Compact_DrugInteractions#2": {
+      "patterns": [
+        "交(\\s*)互"
+      ],
+      "reason": "「藥物交互作用」是台灣藥學與健保用語（drug interactions），不是介面的「互動」；保留並豁免。",
+      "ch_value": "5f5a4874d51d58e7"
     }
   }
 }

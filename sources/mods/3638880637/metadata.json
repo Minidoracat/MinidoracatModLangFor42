@@ -5,5 +5,6 @@
     ],
     "name": "Yanghu Town",
     "origin": "own",
-    "note": "原創翻譯（使用者 2026-10-04 核准收錄）。As1 未收錄。地圖 MOD；只收地圖選單標題／說明（map.info），落 `Yanghu Town.json`，共 1 鍵。CH/CN 皆逐鍵對照 EN 人工直寫；零 vanilla 碰撞。"
+    "cn_source": "upstream",
+    "note": "原創翻譯（使用者 2026-10-04 核准收錄地圖選單；2026-11-12 裁定已收錄 MOD 的可載入 JSON 鍵直接收）。As1 未收錄。地圖 MOD；地圖選單標題／說明（map.info）落 `Yanghu Town.json`，共 1 鍵（map.info 沒有簡中，CH/CN 對照 EN 人工直寫）。另收武器、藥劑與互動選單的 11 鍵（ItemName 4、Tooltip 4、ContextMenu 3）。作者的 `CN/ItemName.json`、`CN/Tooltip.json` 結尾多一個逗號，不是合法 JSON（引擎的解析較寬鬆；本包讀取時去掉逗號比對）。作者自附簡中：這些鍵的 CN 逐字照抄上游 `Translate/CN`，CH 以作者簡中為主、EN 為輔人工直寫；零 vanilla 碰撞。全包共 12 鍵。"
 }
