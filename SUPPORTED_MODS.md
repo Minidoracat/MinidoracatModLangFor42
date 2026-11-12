@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1521 個 Workshop 模組**（2185 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
+共支援 **1521 個 Workshop 模組**（2188 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1430,7 +1430,7 @@
 | [True Cargo - Project Full HD](https://steamcommunity.com/sharedfiles/filedetails/?id=3806955469) | True Cargo - Project Full HD | 將拖車貨物以實際 3D 模型擺在車斗上並自動排列，也可手動移動與旋轉。 | `PFHDTrueCargo` | 60 | — | — |
 | [Hug the Plushie!](https://steamcommunity.com/sharedfiles/filedetails/?id=3807099610) | 擁抱玩偶！ | 可擁抱玩偶以緩慢降低不快樂與壓力，持有玩偶也有小幅心情加成，支援多個玩偶模組。 | `HugThePlushie` | 14 | — | — |
 | [Blackout Predators Extended](https://steamcommunity.com/sharedfiles/filedetails/?id=3807510799) | 黑暗捕食者擴充（Blackout Predators Extended） | 黑暗捕食者附加模組，為巢穴加入繁殖體、補給箱與巢穴地圖，並新增多種特殊夜魔，讓夜晚更凶險。 | `BlackoutPredatorsExtended` | 347 | — | — |
-| [Radio Trader B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3807707103) | Radio Trader 電臺商人 | 用對講機或業餘無線電呼叫各類商人買賣物資，含營業時間、訊號強弱，以及可選的聲望、議價與委託任務。 | `RadioTraders`, `RadioTraders_Drugs93`, `RadioTraders_GOM`, `RadioTraders_Guns93`, `RadioTraders_SmartWatch` | 1096 | — | — |
+| [Radio Trader B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3807707103) | Radio Trader 電臺商人 | 用對講機或業餘無線電呼叫各類商人買賣物資，含營業時間、訊號強弱，以及可選的聲望、議價與委託任務。 | `RadioTraders`, `RadioTraders_Drugs93`, `RadioTraders_GOM`, `RadioTraders_Gael`, `RadioTraders_Guns93`, `RadioTraders_SmartWatch`, `RadioTraders_VFE` | 1096 | — | — |
 | [Project A-Life & Companion Dogs Compatibility Patch](https://steamcommunity.com/sharedfiles/filedetails/?id=3807738026) | A-Life 與同伴犬相容補丁 | 修正同伴犬攻擊 Project A-Life 非敵對 NPC 的問題。 | `CDALifePatch` | 53 | — | — |
 | [Project JoJo (MP/SP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3807750510) | Project JoJo | 新增《JoJo》風格的替身系統，以箭覺醒替身並使用時停等能力對抗殭屍。 | `JoJoStandSystem0183Standalone` | 23 | — | — |
 | [HydeCo. Squirrels! 42.21.0](https://steamcommunity.com/sharedfiles/filedetails/?id=3808150913) | HydeCo. 松鼠！ | 新增棲息在樹上巢穴的活體松鼠，會覓食與逃竄，砍倒巢樹可捕捉並取得儲藏的橡實。 | `HydeCoSquirrels` | 29 | — | — |
@@ -1477,7 +1477,7 @@
 | [FTZ Carts & Trolleys [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3815775971) | FTZ 各式推車 | 新增購物車、平板推車、洗衣推車、園藝推車、清潔推車、手推車與獨輪車七種推車，雙手推著走、像背包一樣裝東西，車內物品不計重量。會出現在超市、倉庫、洗衣房、工地等相符的地點，常留有少量合適的物品；容量與生成率都能調整。 | `FTZCartsTrolleys` | 51 | — | — |
 | [Cheat Menu 2.0 - Rax's Reborn [B42.21]](https://steamcommunity.com/sharedfiles/filedetails/?id=3815818643) | Cheat Menu 2.0 作弊選單 - Rax 重生版 | 整合作弊、沙盒與管理工具的選單，可治療、開無敵或隱身、調整技能經驗與配方，介面有多種主題樣式。 | `RaxCheatMenu` | 1423 | — | ⚠️ 簡中：MOD 讀介面文字時先查自帶的簡中語系表（RaxLang.lua 的 RaxLang.getText），自帶表有收錄的字串會顯示 MOD 自己的簡中，本包簡中只補它沒收的部分；繁中不受影響。 |
 | [Flesh & Blood: The 1993 Bodies](https://steamcommunity.com/sharedfiles/filedetails/?id=3815950578) | Flesh & Blood：1993 屍體 | 以原版畫風重繪更細緻的殭屍外觀，殭屍會隨時間腐爛，身上帶著其他倖存者與你的武器留下的傷痕。 | `FleshAndBlood1993`, `FleshAndBlood1993NoUnderwear` | 11 | — | — |
-| [Better Bodies](https://steamcommunity.com/sharedfiles/filedetails/?id=3815952291) | Better Bodies 更好的身體 | 重繪角色身體與皮膚材質，增加臉部選擇，身體會反映角色狀態，並新增傷口圖案與永久疤痕。 | `BetterBodies`, `BetterBodiesFaces` | 38 | — | — |
+| [Better Bodies](https://steamcommunity.com/sharedfiles/filedetails/?id=3815952291) | Better Bodies 更好的身體 | 重繪角色身體與皮膚材質，增加臉部選擇，身體會反映角色狀態，並新增傷口圖案與永久疤痕。 | `BetterBodies`, `BetterBodiesFaces`, `BetterBodiesNoUnderwear` | 38 | — | — |
 | [Sandevistan](https://steamcommunity.com/sharedfiles/filedetails/?id=3816048725) | Sandevistan 斯安威斯坦 | 新增《電馭叛客 2077》風格的脊椎植入物，可讓周圍殭屍進入慢動作、自身行動加速，代價是身體負擔。 | `Sandevistan`, `SandevistanFX`, `SandevistanPsychosis`, `SandevistanViewpoint` | ? | — | — |
 | [Hardship: Inertia〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3816083168) | Hardship：慣性 | Hardship 系列的身體動作：可以趴下、四肢著地或仰躺移動，也能靠牆坐下、翻過櫃檯等矮家具；起步、停步與轉向帶有慣性，撞牆會彈開，被身後殭屍抓住會被往後拉。另能趴著或蹲低射擊，並加入手動換彈匣與拉動槍機。 | `HardshipInertia` | 88 | — | — |
 | [True Sleep Everywhere](https://steamcommunity.com/sharedfiles/filedetails/?id=3816309551) | True Sleep Everywhere 真實睡眠動作 | 啟用遊戲內建卻未使用的睡眠動畫，角色會躺上床入睡再起身，也能席地打盹。 | `TrueSleepEverywhere` | 15 | — | — |

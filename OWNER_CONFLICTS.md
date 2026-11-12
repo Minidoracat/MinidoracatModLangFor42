@@ -23,7 +23,7 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 
 **上游回報責任**：本包負責把可驗證的檔名、鍵名、上游原文與機制原因查清楚並記錄在本檔，但**不代為向 MOD 作者回報，也不代為追蹤上游是否修復**。需要該 MOD 中文化的玩家（實際使用者或翻譯申請者）請自行拿本檔資訊向原作者反映。上游把文字改成標準的 JSON 翻譯機制、或把撞名的代號改開之後，本包就能接手翻譯；在那之前維持現行裁決。「已回報上游」欄僅在有人回報並提供連結時才會填寫。
 
-現況：已裁決 **2139** 個鍵（`unship` 348、`translate` 1791）。這些鍵的 owner 條目共 6019 筆：可載入 `.json` 4083、script 958、死檔 978。另有 **0** 個鍵尚未裁決。
+現況：已裁決 **2139** 個鍵（`unship` 348、`translate` 1791）。這些鍵的 owner 條目共 6019 筆：可載入 `.json` 4083、script 958、死檔 978。另有 **11** 個鍵尚未裁決。
 
 ## 不出貨的鍵（348）
 
@@ -2178,9 +2178,20 @@ mod 啟用時生效」這種機制。因此當兩個 MOD 用同一個代號指�
 | `UI\|UI_trait_tinkererdesc` | `1299328280/More Traits` = You have a habit of tinkering with things. _(json)_<br>`3761145498/RGM` = Faster and better tinkering.&lt;br&gt;+20% chance to not co… _(json)_ | 2026-11-12 全庫補裁決：More Traits 是「習慣東修西弄」的風味句, RGM 是修補更快更好、+20% 機率不耗物品的機制說明. 現值只寫「有東修西弄的習慣」, 沒寫任何一方的數值或機制, 對 RGM 的 Tinkerer 也成立 (本包 RGM 的 Tinkering 一律譯「修補」), 維持現值. | — |
 | `UI\|UI_trait_woodworker` | `2459400130/DynamicTraits` = Carpenter _(json)_<br>`2840805724/SimpleOverhaulTraitsAndOccupations` = Woodworker _(json)_ | 首次裁決, 並更正現值. 2459400130/DynamicTraits 'Carpenter' 與 2840805724/SimpleOverhaulTraitsAndOccupations 'Woodworker' 同指木作／木工技能特質. 現行出貨值『伐木工人／伐木工人』對兩個 owner 都不成立: 伐木工人＝lumberjack／伐木者, 是砍樹的職業, 與 Carpenter (木匠) 和 Woodworker (木工) 都不是同一件事, 且會與本體既有的 Lumberjack 職業在玩家眼中混淆. 佐證: DynamicTraits 本批把自己的舊鍵 UI_trait_amcarpenter (own_translations 既有 en 錨點 'Carpenter', 我方譯『木匠』) 改名成與 SOTO 同名的 UI_trait_woodworker, 可確認兩邊是同一個木作特質. 採『木工』是兩者的中性交集: 它同時涵蓋 Carpenter 的木匠與 Woodworker 的木作, 不偏向任一 owner 的字面; 若改採『木匠』則偏向 DynamicTraits 一方. **落地提醒**: 現值來自 As1 lane, 改值須在 sources/cn_overrides.json 登記 CN 新值 (帶 as1_value 錨點) 並同步 sources/… | — |
 
-## 尚未裁決的衝突（0）
+## 尚未裁決的衝突（11）
 
 這些鍵被多個 MOD 定義成不同的英文，還沒查證出對每個 MOD 都成立的譯名。「目前出貨的繁中」通常是照其中一個 MOD 的英文翻的，不一定符合你裝的那一個。
 
 | 鍵 | owner 與上游英文 | 目前出貨的繁中 |
 |---|---|---|
+| `ItemName\|Base.308BulletsAP` | `3616176188/GaelGunStore` = .308 Winchester AP Rounds _(json)_<br>`3780151182/MFS_community_fix` = 7.62 Family AP Rounds _(json)_ | .308 Winchester 穿甲彈 |
+| `ItemName\|Base.556BulletsAP` | `3616176188/GaelGunStore` = 5.56x45mm AP Rounds _(json)_<br>`3780151182/MFS_community_fix` = 5.56mm AP Rounds _(json)_ | 5.56x45mm 穿甲彈 |
+| `ItemName\|Base.Avalon_cat` | `3633421539/BladesmithSystem` = 阿瓦隆Avalon _(script)_<br>`3780151182/MFS_BladesmithSystem_fix` = Avalon (Excalibur Scabbard) _(json)_ | 阿瓦隆 |
+| `ItemName\|Base.Bullets357APBox` | `3616176188/GaelGunStore` = Box of .357 Magnum AP ammunition (30 rounds) _(json)_<br>`3780151182/MFS_community_fix` = Box of .357 Magnum AP Rounds _(json)_ | .357 Magnum 穿甲彈藥 (整盒，30 發) |
+| `ItemName\|Base.Bullets38AP` | `3616176188/GaelGunStore` = .38 Special AP Rounds _(json)_<br>`3780151182/MFS_community_fix` = 6.8mm AP Rounds _(json)_ | .38 Special 穿甲彈 |
+| `ItemName\|Base.Bullets38APBox` | `3616176188/GaelGunStore` = Box of .38 Special AP ammunition (50 rounds) _(json)_<br>`3780151182/MFS_community_fix` = Box of 6.8mm AP Rounds _(json)_ | .38 Special 穿甲彈藥 (整盒，50 發) |
+| `ItemName\|Base.Bullets44APBox` | `3616176188/GaelGunStore` = Box of .44 Magnum AP ammunition (50 rounds) _(json)_<br>`3780151182/MFS_community_fix` = Box of .44 Magnum AP Rounds _(json)_ | .44 Magnum 穿甲彈藥 (整盒，50 發) |
+| `ItemName\|Base.Bullets45AP` | `3616176188/GaelGunStore` = .45 ACP AP Rounds _(json)_<br>`3780151182/MFS_community_fix` = .45 Family AP Rounds _(json)_ | .45 ACP 穿甲彈 |
+| `ItemName\|Base.Bullets45APBox` | `3616176188/GaelGunStore` = Box of .45 ACP AP ammunition (50 rounds) _(json)_<br>`3780151182/MFS_community_fix` = Box of .45 Family AP Rounds _(json)_ | .45 ACP 穿甲彈藥 (整盒，50 發) |
+| `ItemName\|Base.Bullets9mmAPBox` | `3616176188/GaelGunStore` = Box of 9mm AP ammunition (50 rounds) _(json)_<br>`3780151182/MFS_community_fix` = Box of 9mm AP Bullets _(json)_ | 9mm 穿甲彈藥 (整盒，50 發) |
+| `ItemName\|Base.Excalibur_cat` | `3633421539/BladesmithSystem` = 由此_展现誓约胜利之剑Excalibur _(script)_<br>`3780151182/MFS_BladesmithSystem_fix` = Excalibur _(json)_ | 誓約勝利之劍 |
