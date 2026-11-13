@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1521 個 Workshop 模組**（2188 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
+共支援 **1521 個 Workshop 模組**（2190 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -768,7 +768,7 @@
 | [Hardwood's FireFighter's Finery](https://steamcommunity.com/sharedfiles/filedetails/?id=3671351750) | Hardwood 消防員裝備 | 新增消防員裝備，包含消防斧、哈利根撬棍、呼吸器與整套消防服。 | `HardwoodsTurnoutGear` | 12 | — | — |
 | [Jeeve's Hordes](https://steamcommunity.com/sharedfiles/filedetails/?id=3672042113) | Jeeve's 屍潮 | 新增屍潮夜事件與相關物品，如殭屍燉菜與吸引用香水。 | `JeevesHordes` | 56 | — | — |
 | [Spawn Horse](https://steamcommunity.com/sharedfiles/filedetails/?id=3672339774) | 開局生成馬匹 | 開局可獲得一匹初始馬，並提供生成機率（百分比）、冷卻時間與每名玩家/每個世界限制等沙盒設定。 | `SpawnHorseOnStart` | 71 | — | — |
-| [Jeeve's Drops](https://steamcommunity.com/sharedfiles/filedetails/?id=3672451284) | — | — | `JeevesDrops` | 254 | ⚠️ ≥4 | — |
+| [Jeeve's Drops](https://steamcommunity.com/sharedfiles/filedetails/?id=3672451284) | — | — | `JeevesDrops` | 254 | — | — |
 | [HEF - Helicopter Event Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=3672792485) | HEF 直升機事件框架 | 擴充直升機事件，加入毒氣、空中支援、敵襲、煙幕及其他可調整的次要事件。 | `HelicopterEventExpansionFramework` | 1 | — | — |
 | [[B42.15] M250 (XM250)](https://steamcommunity.com/sharedfiles/filedetails/?id=3673271351) | — | — | `M250` | 78 | — | — |
 | [X-Virus [B42][MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3673979113) | X-Virus | 新增病毒相關內容，可透過右鍵選單注射針劑。 | `XVirus` | 1 | — | — |
@@ -1430,7 +1430,7 @@
 | [True Cargo - Project Full HD](https://steamcommunity.com/sharedfiles/filedetails/?id=3806955469) | True Cargo - Project Full HD | 將拖車貨物以實際 3D 模型擺在車斗上並自動排列，也可手動移動與旋轉。 | `PFHDTrueCargo` | 60 | — | — |
 | [Hug the Plushie!](https://steamcommunity.com/sharedfiles/filedetails/?id=3807099610) | 擁抱玩偶！ | 可擁抱玩偶以緩慢降低不快樂與壓力，持有玩偶也有小幅心情加成，支援多個玩偶模組。 | `HugThePlushie` | 14 | — | — |
 | [Blackout Predators Extended](https://steamcommunity.com/sharedfiles/filedetails/?id=3807510799) | 黑暗捕食者擴充（Blackout Predators Extended） | 黑暗捕食者附加模組，為巢穴加入繁殖體、補給箱與巢穴地圖，並新增多種特殊夜魔，讓夜晚更凶險。 | `BlackoutPredatorsExtended` | 347 | — | — |
-| [Radio Trader B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3807707103) | Radio Trader 電臺商人 | 用對講機或業餘無線電呼叫各類商人買賣物資，含營業時間、訊號強弱，以及可選的聲望、議價與委託任務。 | `RadioTraders`, `RadioTraders_Drugs93`, `RadioTraders_GOM`, `RadioTraders_Gael`, `RadioTraders_Guns93`, `RadioTraders_SmartWatch`, `RadioTraders_VFE` | 1096 | — | — |
+| [Radio Trader B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3807707103) | Radio Trader 電臺商人 | 用對講機或業餘無線電呼叫各類商人買賣物資，含營業時間、訊號強弱，以及可選的聲望、議價與委託任務。 | `RadioTraders`, `RadioTraders_Drugs93`, `RadioTraders_EFZ`, `RadioTraders_GOM`, `RadioTraders_Gael`, `RadioTraders_Guns93`, `RadioTraders_SmartWatch`, `RadioTraders_VFE` | 1096 | — | — |
 | [Project A-Life & Companion Dogs Compatibility Patch](https://steamcommunity.com/sharedfiles/filedetails/?id=3807738026) | A-Life 與同伴犬相容補丁 | 修正同伴犬攻擊 Project A-Life 非敵對 NPC 的問題。 | `CDALifePatch` | 53 | — | — |
 | [Project JoJo (MP/SP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3807750510) | Project JoJo | 新增《JoJo》風格的替身系統，以箭覺醒替身並使用時停等能力對抗殭屍。 | `JoJoStandSystem0183Standalone` | 23 | — | — |
 | [HydeCo. Squirrels! 42.21.0](https://steamcommunity.com/sharedfiles/filedetails/?id=3808150913) | HydeCo. 松鼠！ | 新增棲息在樹上巢穴的活體松鼠，會覓食與逃竄，砍倒巢樹可捕捉並取得儲藏的橡實。 | `HydeCoSquirrels` | 29 | — | — |
@@ -1512,7 +1512,7 @@
 | [Xanny Arms](https://steamcommunity.com/sharedfiles/filedetails/?id=3820971639) | Xanny Arms 槍械包 | 新增 72 把槍械與對應彈匣、瞄具與消音器等配件，彈藥有散裝、盒裝與箱裝。 | `XannyArmsCore`, `XannyArmsGunPack` | 411 | ⚠️ ≥5 | — |
 | [DMM - Definitive Mod Manager](https://steamcommunity.com/sharedfiles/filedetails/?id=3821006088) | DMM 模組管理器 | 視覺化模組管理器，支援拖放分類、依相依性排列載入順序、群組、模組包與設定檔匯入匯出。 | `DefinitiveModManager` | ? | — | — |
 | [Size Matter](https://steamcommunity.com/sharedfiles/filedetails/?id=3821185516) | Size Matters 體型自訂 | 自訂倖存者、殭屍與 NPC 的身高、體型與肌肉量，建立角色時可即時預覽。 | `SizeMatter` | ? | — | — |
-| [Live Wire - Electrical Skill Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=3821807453) | Live Wire 電工技能大修 | 自建離網電力：太陽能板、風力發電機或水車接上逆變器替整棟房子供電，可加電池夜間使用，電工等級影響裝設品質。 | `batman_LiveWire`, `batman_LiveWireViewpoint` | ? | — | — |
+| [Live Wire - Electrical Skill Overhaul](https://steamcommunity.com/sharedfiles/filedetails/?id=3821807453) | Live Wire 電工技能大修 | 自建離網電力：太陽能板、風力發電機或水車接上逆變器替整棟房子供電，可加電池夜間使用，電工等級影響裝設品質。 | `batman_LiveWire`, `batman_LiveWireExtended`, `batman_LiveWireViewpoint` | ? | — | — |
 | [Heli Pack - Black Hawk, Apache, Little Bird, EC135 & Kiowa [B42] [No ZombieBuddy]](https://steamcommunity.com/sharedfiles/filedetails/?id=3822141121) | 直升機包：黑鷹、阿帕契、小鳥、EC135 與奇歐瓦 | 一次加入五架可駕駛的直升機，三架可作戰、兩架代步，不需要其他前置模組。 | `UH60BlackHawk` | ? | — | — |
 | [[RKC]WINGSMITH Aircraft](https://steamcommunity.com/sharedfiles/filedetails/?id=3822736282) | [RKC] WINGSMITH 飛機框架 | RKC 飛機的基礎模組，提供可駕駛飛機的飛行系統，本身不含飛機。 | `Wingsmith` | ? | — | — |
 | [[RKC]LV-93 Business Jet (Based on Learjet 60) - Flyable Airplane](https://steamcommunity.com/sharedfiles/filedetails/?id=3822736890) | [RKC] LV-93 商務噴射機 | 加入可駕駛的 10 座商務噴射機（以 Learjet 60 為原型），需要 WINGSMITH Aircraft。 | `LV93BusinessJet` | 1 | — | — |
