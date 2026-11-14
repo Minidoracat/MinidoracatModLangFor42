@@ -58562,8 +58562,8 @@
   },
   "Sandbox.json|Sandbox_ProjectALife.BulletPenetration": {
     "as1_value": "子弹穿透 (实验)",
-    "value": "[专家] 子弹穿透 (实验性)",
-    "reason": "2026-10-13 #839：上游英文改寫（Bullet penetration (experimental)… → [Expert] Bullet penetration (experimenta…），依新英文重譯。"
+    "value": "[专家] 子弹穿透",
+    "reason": "2026-11-15 #1402–#1411 批次：上游改英文：[Expert] Bullet penetration"
   },
   "Sandbox.json|Sandbox_ProjectALife.PopulateOnStart": {
     "as1_value": "在启动时填充地点 (实验性)",
@@ -80537,8 +80537,8 @@
   },
   "Sandbox.json|Sandbox_ProjectALife.BulletPenetration_tooltip": {
     "as1_value": "NPC对僵尸的攻击会作用于站在其正后方的僵尸 (最多三个方格). 仅对僵尸有效, 对人无效; 对抗成群僵尸效果更佳. 默认关闭.",
-    "value": "NPC射进僵尸的子弹会继续穿入其正后方的僵尸 (最多三格). 仅对僵尸有效, 对人无效; 对抗成群僵尸效果更佳. 默认关闭.",
-    "reason": "2026-11-09 #1321–#1337 批次舊譯稽核：AU2：原譯把子彈穿透寫成所有攻擊都會作用於後方目標, 漏掉僅限子彈及穿透的機制."
+    "value": "NPC射进僵尸的子弹会继续穿入其正后方的僵尸. 步枪最多穿透三格, 霰弹枪两格. 仅对僵尸有效, 对人无效; 对抗成群僵尸效果更佳.\n默认: 步枪和霰弹枪 (2). 只有选择“所有枪械”时, 手枪和冲锋枪才会计入.",
+    "reason": "2026-11-15 #1402–#1411 批次：上游改英文：A round an NPC puts into a zombie goes on into the zombie st"
   },
   "Sandbox.json|Sandbox_ProjectALife.DropsWeaponCondition_option4": {
     "as1_value": "非常差, 只拍了几张 (2/10)",
@@ -86549,5 +86549,25 @@
     "as1_value": "后备厢容量",
     "value": "行李箱",
     "reason": "2026-11-14 #1390–#1401 批次：零件欄位名，照原版 IGUI_VehiclePartTruckBed；和同 MOD 新車型一致"
+  },
+  "Sandbox.json|Sandbox_DarkPresence_TaintEnabled_tooltip": {
+    "as1_value": "在户外靠近被夺者逗留会缓慢积累'污染'; 达到阈值时黑暗会留下诡异的笔记, 达到最大值时会吸引一只被夺者向你走来. 设计上较为罕见 (需逗留约10分钟以上). 关闭=无污染笔记或由此生成的敌人.",
+    "value": "在户外靠近被夺者逗留会缓慢积累'污染'; 达到阈值时黑暗会留下诡异的笔记, 达到最大值时会再吸引一只被夺者向你走来. 这只被夺者与其他被夺者遵循相同规则: 只在黑暗的地面上出现, 不会比你的生成距离更近, 也不会超出被夺者数量上限. 默认较为罕见 (需逗留约10分钟以上). 关闭=无污染笔记或由此生成的敌人.",
+    "reason": "2026-11-15 #1402–#1411 批次：上游改英文：Lingering outdoors near Taken slowly builds 'taint'; at thre"
+  },
+  "UI.json|UI_optionscreen_ExactMinuteClock_AlarmSafetyNet": {
+    "as1_value": "闹钟安全机制 (单人模式)",
+    "value": "闹钟安全机制",
+    "reason": "2026-11-15 #1402–#1411 批次：上游改英文：Alarm safety net"
+  },
+  "UI.json|UI_optionscreen_ExactMinuteClock_AlarmSafetyNet_tooltip": {
+    "as1_value": "修复原版游戏的一个Bug: 睡觉时时间快进速度过快, 可能会跳过设定的闹钟分钟数, 导致闹钟不响 (仅限单人模式). 关闭此项以完全保留原版游戏的闹钟行为.",
+    "value": "让闹钟在设定的分钟数准时响起: 修复睡觉或快进时跳过闹钟时间的问题 (单人模式); 而在多人模式中, 游戏只会在10分钟的整数倍时让闹钟响起, 开启后设定在任意分钟的闹钟也能响. 适用于手表、随身携带的闹钟以及放置在房屋中的闹钟. 关闭此项以完全保留原版游戏的闹钟行为.",
+    "reason": "2026-11-15 #1402–#1411 批次：上游改英文：Makes the alarm ring at its exact minute: fixes sleeping or "
+  },
+  "Sandbox.json|Sandbox_QoLC_PryingEnabled_tooltip": {
+    "as1_value": "用撬棍把上锁的门、窗、车门或后备箱撬开, 前提是你读过它新增的说明书, 或者以窃贼身份开局. 比撬锁更吵、更粗暴, 而且除撬棍外不需要别的工具. 被撬开的车锁会彻底损坏, 那扇门再也锁不上了.",
+    "value": "用撬棍把上锁的车门或后备箱撬开, 前提是你读过它新增的说明书, 或者以窃贼身份开局. 比撬锁更吵、更粗暴, 而且除撬棍外不需要别的工具. 被撬开的车锁会彻底损坏, 那扇门再也锁不上了. 在 42.22 版之前, 它也能撬开房屋的门和窗. 从 42.22 版起, 这些改由原版游戏自带的“撬开”选项处理.",
+    "reason": "2026-11-15 #1402–#1411 批次：上游改英文：Lever a locked car door or boot open with a crowbar, once yo"
   }
 }
