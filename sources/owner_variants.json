@@ -32693,7 +32693,7 @@
   },
   "ItemName|Base.Revolver": {
    "kind": "vanilla",
-   "signature": "4cf2a1e36d6de5a8",
+   "signature": "e3abee256beea098",
    "vanilla_en": "Patrol Revolver",
    "skip_owners": [],
    "groups": [
@@ -32727,12 +32727,12 @@
     },
     {
      "owners": [
-      "3633421539/Escape from Kentucky4215",
-      "3780151182/MFS_community_fix"
+      "3633421539/Escape from Kentucky4215"
      ],
      "en": "Smith & Wesson Model 625 Revolver",
      "ch": "史密斯-韋森625型左輪手槍",
      "cn": "史密斯-韦森625型左轮手枪",
+     "_note": "2026-11-14 #1378：MFS 社群修正版改了英文、拆到另一組；本組英文與譯文沒變，核准沿用。",
      "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
     },
     {
@@ -32762,6 +32762,15 @@
      "ch": "S&W M625左輪手槍",
      "cn": "S&W M625左轮手枪",
      "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "Smith & Wesson Model 625 Revolver (4 inches) ",
+     "ch": "史密斯-韋森625型左輪手槍 (4 英吋)",
+     "cn": "史密斯-韦森625型左轮手枪 (4 英寸)",
+     "approved": "2026-11-14 雙模型審核（GPT-6 Astra xhigh＋Claude Fable 5.2）"
     }
    ]
   },
@@ -32790,7 +32799,7 @@
   },
   "ItemName|Base.Revolver_Long": {
    "kind": "vanilla",
-   "signature": "337c4d7e146e3a7e",
+   "signature": "f4c764682ca5a608",
    "vanilla_en": "Magnum",
    "skip_owners": [],
    "groups": [
@@ -32826,12 +32835,12 @@
     },
     {
      "owners": [
-      "3633421539/Escape from Kentucky4215",
-      "3780151182/MFS_community_fix"
+      "3633421539/Escape from Kentucky4215"
      ],
      "en": "Smith & Wesson Model 500 Revolver",
      "ch": "史密斯-韋森500型左輪手槍",
      "cn": "史密斯-韦森500型左轮手枪",
+     "_note": "2026-11-14 #1378：MFS 社群修正版改了英文、拆到另一組；本組英文與譯文沒變，核准沿用。",
      "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
     },
     {
@@ -32861,6 +32870,15 @@
      "ch": "柯爾特水蟒左輪手槍",
      "cn": "柯尔特水蟒左轮手枪",
      "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "Smith & Wesson Model 625 Revolver (6 inches)",
+     "ch": "史密斯-韋森625型左輪手槍 (6 英吋)",
+     "cn": "史密斯-韦森625型左轮手枪 (6 英寸)",
+     "approved": "2026-11-14 雙模型審核（GPT-6 Astra xhigh＋Claude Fable 5.2）"
     }
    ]
   },
@@ -69941,6 +69959,446 @@
      "en": "STANAG 75Rds 5.56x45mm Magazine",
      "ch": "5.56x45mm 75發STANAG彈匣",
      "cn": "5.56x45mm 75发STANAG弹匣"
+    }
+   ]
+  },
+  "ItemName|Base.308BulletsAP": {
+   "kind": "conflict",
+   "signature": "aa7402e74c36a351",
+   "groups": [
+    {
+     "owners": [
+      "3616176188/GaelGunStore"
+     ],
+     "en": ".308 Winchester AP Rounds",
+     "ch": ".308 Winchester 穿甲彈",
+     "cn": ".308 Winchester 穿甲弹"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "7.62 Family AP Rounds",
+     "ch": "7.62系列穿甲彈",
+     "cn": "7.62系列穿甲弹"
+    }
+   ]
+  },
+  "ItemName|Base.556BulletsAP": {
+   "kind": "conflict",
+   "signature": "5f96ed679e3152e3",
+   "groups": [
+    {
+     "owners": [
+      "3616176188/GaelGunStore"
+     ],
+     "en": "5.56x45mm AP Rounds",
+     "ch": "5.56x45mm 穿甲彈",
+     "cn": "5.56x45mm 穿甲弹"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "5.56mm AP Rounds",
+     "ch": "5.56mm 穿甲彈",
+     "cn": "5.56mm 穿甲弹"
+    }
+   ]
+  },
+  "ItemName|Base.Bullets357APBox": {
+   "kind": "conflict",
+   "signature": "b419775afd35d4fb",
+   "groups": [
+    {
+     "owners": [
+      "3616176188/GaelGunStore"
+     ],
+     "en": "Box of .357 Magnum AP ammunition (30 rounds)",
+     "ch": ".357 Magnum 穿甲彈藥 (整盒，30 發)",
+     "cn": ".357 Magnum 穿甲弹药 (整盒，30 发)"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "Box of .357 Magnum AP Rounds",
+     "ch": ".357 Magnum 穿甲彈藥 (整盒)",
+     "cn": ".357 Magnum 穿甲弹药 (整盒)"
+    }
+   ]
+  },
+  "ItemName|Base.Bullets44APBox": {
+   "kind": "conflict",
+   "signature": "242c624bf9a33a58",
+   "groups": [
+    {
+     "owners": [
+      "3616176188/GaelGunStore"
+     ],
+     "en": "Box of .44 Magnum AP ammunition (50 rounds)",
+     "ch": ".44 Magnum 穿甲彈藥 (整盒，50 發)",
+     "cn": ".44 Magnum 穿甲弹药 (整盒，50 发)"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "Box of .44 Magnum AP Rounds",
+     "ch": ".44 Magnum 穿甲彈藥 (整盒)",
+     "cn": ".44 Magnum 穿甲弹药 (整盒)"
+    }
+   ]
+  },
+  "ItemName|Base.Bullets45AP": {
+   "kind": "conflict",
+   "signature": "635ec8bcaf5fb76c",
+   "groups": [
+    {
+     "owners": [
+      "3616176188/GaelGunStore"
+     ],
+     "en": ".45 ACP AP Rounds",
+     "ch": ".45 ACP 穿甲彈",
+     "cn": ".45 ACP 穿甲弹"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": ".45 Family AP Rounds",
+     "ch": ".45系列穿甲彈",
+     "cn": ".45系列穿甲弹"
+    }
+   ]
+  },
+  "ItemName|Base.Bullets45APBox": {
+   "kind": "conflict",
+   "signature": "d7c746bb49ba68d1",
+   "groups": [
+    {
+     "owners": [
+      "3616176188/GaelGunStore"
+     ],
+     "en": "Box of .45 ACP AP ammunition (50 rounds)",
+     "ch": ".45 ACP 穿甲彈藥 (整盒，50 發)",
+     "cn": ".45 ACP 穿甲弹药 (整盒，50 发)"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "Box of .45 Family AP Rounds",
+     "ch": ".45系列穿甲彈藥 (整盒)",
+     "cn": ".45系列穿甲弹药 (整盒)"
+    }
+   ]
+  },
+  "ItemName|Base.Bullets9mmAPBox": {
+   "kind": "conflict",
+   "signature": "121772e4c6b57eff",
+   "groups": [
+    {
+     "owners": [
+      "3616176188/GaelGunStore"
+     ],
+     "en": "Box of 9mm AP ammunition (50 rounds)",
+     "ch": "9mm 穿甲彈藥 (整盒，50 發)",
+     "cn": "9mm 穿甲弹药 (整盒，50 发)"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "Box of 9mm AP Bullets",
+     "ch": "9mm 穿甲子彈 (整盒)",
+     "cn": "9mm 穿甲子弹 (整盒)"
+    }
+   ]
+  },
+  "ItemName|Base.Bullets38AP": {
+   "kind": "conflict",
+   "signature": "8c28c39300d96259",
+   "groups": [
+    {
+     "owners": [
+      "3616176188/GaelGunStore"
+     ],
+     "en": ".38 Special AP Rounds",
+     "ch": ".38 Special 穿甲彈",
+     "cn": ".38 Special 穿甲弹"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "6.8mm AP Rounds",
+     "ch": "6.8mm 穿甲彈",
+     "cn": "6.8mm 穿甲弹"
+    }
+   ]
+  },
+  "ItemName|Base.Bullets38APBox": {
+   "kind": "conflict",
+   "signature": "5fed602273515623",
+   "groups": [
+    {
+     "owners": [
+      "3616176188/GaelGunStore"
+     ],
+     "en": "Box of .38 Special AP ammunition (50 rounds)",
+     "ch": ".38 Special 穿甲彈藥 (整盒，50 發)",
+     "cn": ".38 Special 穿甲弹药 (整盒，50 发)"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "Box of 6.8mm AP Rounds",
+     "ch": "6.8mm 穿甲彈藥 (整盒)",
+     "cn": "6.8mm 穿甲弹药 (整盒)"
+    }
+   ]
+  },
+  "ItemName|Base.Avalon_cat": {
+   "kind": "conflict",
+   "signature": "7dfdd44f60ef74f5",
+   "groups": [
+    {
+     "owners": [
+      "3633421539/BladesmithSystem"
+     ],
+     "en": "阿瓦隆Avalon",
+     "ch": "阿瓦隆",
+     "cn": "阿瓦隆"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_BladesmithSystem_fix"
+     ],
+     "en": "Avalon (Excalibur Scabbard)",
+     "ch": "阿瓦隆 (誓約勝利之劍劍鞘)",
+     "cn": "阿瓦隆 (誓约胜利之剑剑鞘)"
+    }
+   ]
+  },
+  "ItemName|Base.Excalibur_cat": {
+   "kind": "conflict",
+   "signature": "5cbf8e798dcb7a11",
+   "groups": [
+    {
+     "owners": [
+      "3633421539/BladesmithSystem"
+     ],
+     "en": "由此_展现誓约胜利之剑Excalibur",
+     "ch": "誓約勝利之劍",
+     "cn": "誓约胜利之剑"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_BladesmithSystem_fix"
+     ],
+     "en": "Excalibur",
+     "ch": "誓約勝利之劍",
+     "cn": "誓约胜利之剑"
+    }
+   ]
+  },
+  "ItemName|LTPE.BerryBarMix": {
+   "kind": "conflict",
+   "signature": "6d8fa3e7e1e61711",
+   "groups": [
+    {
+     "owners": [
+      "3597673472/LongTermPreservationExtended"
+     ],
+     "en": "Baking Tray with Berry Bars",
+     "ch": "烤板 (莓果棒)",
+     "cn": "烤板 (浆果棒)"
+    },
+    {
+     "owners": [
+      "3789287166/LongTermPreservationExtendedSE"
+     ],
+     "en": "Tray of Berry Bars",
+     "ch": "烤板 (莓果棒)",
+     "cn": "浆果棒 (整托)"
+    }
+   ]
+  },
+  "ItemName|LTPE.CerealBarMix": {
+   "kind": "conflict",
+   "signature": "045c512d4534cc98",
+   "groups": [
+    {
+     "owners": [
+      "3597673472/LongTermPreservationExtended"
+     ],
+     "en": "Baking Tray with Cereal Bars",
+     "ch": "烤板 (穀物棒)",
+     "cn": "烤板 (谷物棒)"
+    },
+    {
+     "owners": [
+      "3789287166/LongTermPreservationExtendedSE"
+     ],
+     "en": "Tray of Cereal Bars",
+     "ch": "烤板 (穀物棒)",
+     "cn": "谷物棒 (整托)"
+    }
+   ]
+  },
+  "ItemName|LTPE.FruitBarMix": {
+   "kind": "conflict",
+   "signature": "2f155963c13ec947",
+   "groups": [
+    {
+     "owners": [
+      "3597673472/LongTermPreservationExtended"
+     ],
+     "en": "Baking Tray with Fruit Bars",
+     "ch": "烤板 (水果棒)",
+     "cn": "烤板 (水果棒)"
+    },
+    {
+     "owners": [
+      "3789287166/LongTermPreservationExtendedSE"
+     ],
+     "en": "Tray of Fruit Bars",
+     "ch": "烤板 (水果棒)",
+     "cn": "水果棒 (整托)"
+    }
+   ]
+  },
+  "ItemName|LTPE.MuesliBarMix": {
+   "kind": "conflict",
+   "signature": "97e4569ac580e79f",
+   "groups": [
+    {
+     "owners": [
+      "3597673472/LongTermPreservationExtended"
+     ],
+     "en": "Baking Tray with Muesli Bars",
+     "ch": "烤板 (什錦果麥棒)",
+     "cn": "烤板 (什锦燕麦棒)"
+    },
+    {
+     "owners": [
+      "3789287166/LongTermPreservationExtendedSE"
+     ],
+     "en": "Tray of Muesli Bars",
+     "ch": "烤板 (什錦果麥棒)",
+     "cn": "什锦燕麦棒 (整托)"
+    }
+   ]
+  },
+  "ItemName|LTPE.OatBarMix": {
+   "kind": "conflict",
+   "signature": "9630e44d6c052eb0",
+   "groups": [
+    {
+     "owners": [
+      "3597673472/LongTermPreservationExtended"
+     ],
+     "en": "Baking Tray with Oat Bars",
+     "ch": "烤板 (燕麥棒)",
+     "cn": "烤板 (燕麦棒)"
+    },
+    {
+     "owners": [
+      "3789287166/LongTermPreservationExtendedSE"
+     ],
+     "en": "Tray of Oat Bars",
+     "ch": "烤板 (燕麥棒)",
+     "cn": "燕麦棒 (整托)"
+    }
+   ]
+  },
+  "ItemName|LTPE.PeanutButterBarMix": {
+   "kind": "conflict",
+   "signature": "245c33cc4a209e5e",
+   "groups": [
+    {
+     "owners": [
+      "3597673472/LongTermPreservationExtended"
+     ],
+     "en": "Baking Tray with Peanut Butter Bars",
+     "ch": "烤板 (花生醬棒)",
+     "cn": "烤板 (花生酱棒)"
+    },
+    {
+     "owners": [
+      "3789287166/LongTermPreservationExtendedSE"
+     ],
+     "en": "Tray of Peanut Butter Bars",
+     "ch": "烤板 (花生醬棒)",
+     "cn": "花生酱棒 (整托)"
+    }
+   ]
+  },
+  "ItemName|LTPE.PemmicanBarMix": {
+   "kind": "conflict",
+   "signature": "f3ff72e059ce22cb",
+   "groups": [
+    {
+     "owners": [
+      "3597673472/LongTermPreservationExtended"
+     ],
+     "en": "Baking Tray with Pemmican Bars",
+     "ch": "烤板 (乾肉餅棒)",
+     "cn": "烤板 (干肉饼棒)"
+    },
+    {
+     "owners": [
+      "3789287166/LongTermPreservationExtendedSE"
+     ],
+     "en": "Tray of Pemmican Bars",
+     "ch": "烤板 (乾肉餅棒)",
+     "cn": "干肉饼棒 (整托)"
+    }
+   ]
+  },
+  "ItemName|LTPE.VeggieBarMix": {
+   "kind": "conflict",
+   "signature": "36885ae8326b3e37",
+   "groups": [
+    {
+     "owners": [
+      "3597673472/LongTermPreservationExtended"
+     ],
+     "en": "Baking Tray with Veggie Bars",
+     "ch": "烤板 (蔬菜棒)",
+     "cn": "烤板 (蔬菜棒)"
+    },
+    {
+     "owners": [
+      "3789287166/LongTermPreservationExtendedSE"
+     ],
+     "en": "Tray of Veggie Bars",
+     "ch": "烤板 (蔬菜棒)",
+     "cn": "蔬菜棒 (整托)"
+    }
+   ]
+  },
+  "ItemName|Base.SW629_cat": {
+   "kind": "conflict",
+   "signature": "ca264dcb5efd0ea6",
+   "groups": [
+    {
+     "owners": [
+      "3633421539/Escape from Kentucky4215"
+     ],
+     "en": "Smith & Wesson Model 629 Revolver",
+     "ch": "史密斯-韋森 M629 左輪手槍",
+     "cn": "史密斯-韦森 M629 左轮手枪"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "Smith & Wesson Model 629 Revolver Stealth Hunter",
+     "ch": "史密斯-韋森 M629 Stealth Hunter 左輪手槍",
+     "cn": "史密斯-韦森 M629 Stealth Hunter 左轮手枪"
     }
    ]
   }

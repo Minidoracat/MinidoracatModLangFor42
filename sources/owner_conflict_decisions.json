@@ -14277,6 +14277,142 @@
       "reason": "2026-11-12 全庫補裁決：舊版（3638633196，英文只在死檔）以 Lua string.format(getText(key), …) 填值，Evolved（3726328119）以帶參 getText 填值，兩版傳入的參數與順序相同。照 placeholder.md 的多 owner 佔位方言規則寫 %s：兩種呼叫都能代入，資訊不必刪。",
       "ch": "診斷: %s, 階段 %s. 嚴重程度: %s/5.",
       "cn": "诊断: %s, 阶段 %s. 严重程度: %s/5."
+    },
+    "ItemName|Base.308BulletsAP": {
+      "action": "translate",
+      "signature": "aa7402e74c36a351",
+      "reason": "2026-11-13 #1378 新衝突：MFS 社群修正版（3780151182）新增穿甲彈物品名，和 GaelGunStore（3616176188）同鍵。Gael 寫 .308 Winchester AP Rounds，社群修正版寫 7.62 Family AP Rounds（該 MOD 一種彈藥供多種 7.62 口徑共用）。.308 Winchester 就是 7.62×51mm，比照 Base.308ClipU 用上位口徑「7.62mm」，對兩方都成立；各自完整名稱走條件譯文。",
+      "ch": "7.62mm 穿甲彈",
+      "cn": "7.62mm 穿甲弹"
+    },
+    "ItemName|Base.556BulletsAP": {
+      "action": "translate",
+      "signature": "5f96ed679e3152e3",
+      "reason": "2026-11-13 #1378 新衝突：MFS 社群修正版（3780151182）新增穿甲彈物品名，和 GaelGunStore（3616176188）同鍵。Gael 寫 5.56x45mm AP Rounds，社群修正版寫 5.56mm AP Rounds，同一口徑；中性值拿掉只有一方寫的彈殼長度。",
+      "ch": "5.56mm 穿甲彈",
+      "cn": "5.56mm 穿甲弹"
+    },
+    "ItemName|Base.Bullets357APBox": {
+      "action": "translate",
+      "signature": "b419775afd35d4fb",
+      "reason": "2026-11-13 #1378 新衝突：MFS 社群修正版（3780151182）新增穿甲彈物品名，和 GaelGunStore（3616176188）同鍵。Gael 寫 Box of .357 Magnum AP ammunition (30 rounds)，社群修正版寫 Box of .357 Magnum AP Rounds，同一口徑；中性值拿掉只有 Gael 寫的發數。",
+      "ch": ".357 Magnum 穿甲彈藥 (整盒)",
+      "cn": ".357 Magnum 穿甲弹药 (整盒)"
+    },
+    "ItemName|Base.Bullets44APBox": {
+      "action": "translate",
+      "signature": "242c624bf9a33a58",
+      "reason": "2026-11-13 #1378 新衝突：MFS 社群修正版（3780151182）新增穿甲彈物品名，和 GaelGunStore（3616176188）同鍵。Gael 寫 Box of .44 Magnum AP ammunition (50 rounds)，社群修正版寫 Box of .44 Magnum AP Rounds，同一口徑；中性值拿掉只有 Gael 寫的發數。",
+      "ch": ".44 Magnum 穿甲彈藥 (整盒)",
+      "cn": ".44 Magnum 穿甲弹药 (整盒)"
+    },
+    "ItemName|Base.Bullets45AP": {
+      "action": "translate",
+      "signature": "635ec8bcaf5fb76c",
+      "reason": "2026-11-13 #1378 新衝突：MFS 社群修正版（3780151182）新增穿甲彈物品名，和 GaelGunStore（3616176188）同鍵。Gael 寫 .45 ACP AP Rounds，社群修正版寫 .45 Family AP Rounds（.45 系列共用彈藥），中性值只寫兩方都成立的 .45。",
+      "ch": ".45 穿甲彈",
+      "cn": ".45 穿甲弹"
+    },
+    "ItemName|Base.Bullets45APBox": {
+      "action": "translate",
+      "signature": "d7c746bb49ba68d1",
+      "reason": "2026-11-13 #1378 新衝突：MFS 社群修正版（3780151182）新增穿甲彈物品名，和 GaelGunStore（3616176188）同鍵。Gael 寫 Box of .45 ACP AP ammunition (50 rounds)，社群修正版寫 Box of .45 Family AP Rounds；中性值只寫 .45，拿掉 Gael 的 ACP 與發數。",
+      "ch": ".45 穿甲彈藥 (整盒)",
+      "cn": ".45 穿甲弹药 (整盒)"
+    },
+    "ItemName|Base.Bullets9mmAPBox": {
+      "action": "translate",
+      "signature": "121772e4c6b57eff",
+      "reason": "2026-11-13 #1378 新衝突：MFS 社群修正版（3780151182）新增穿甲彈物品名，和 GaelGunStore（3616176188）同鍵。Gael 寫 Box of 9mm AP ammunition (50 rounds)，社群修正版寫 Box of 9mm AP Bullets，同一口徑；中性值拿掉只有 Gael 寫的發數。",
+      "ch": "9mm 穿甲彈藥 (整盒)",
+      "cn": "9mm 穿甲弹药 (整盒)"
+    },
+    "ItemName|Base.Bullets38AP": {
+      "action": "unship",
+      "signature": "8c28c39300d96259",
+      "reason": "2026-11-13 #1378 新衝突：MFS 社群修正版（3780151182）新增穿甲彈物品名，和 GaelGunStore（3616176188）同鍵。Gael 寫 .38 Special AP Rounds，社群修正版寫 6.8mm AP Rounds（它把 Base.Bullets38 系列當 6.8mm 彈藥，自帶 CH「6.8mm 穿甲彈」）。口徑是承重資訊（比照 Base.9mmDrum_cat），兩個口徑沒有共同上位詞，不出貨。不出貨後：社群修正版玩家看到它自帶的繁中；Gael 沒有 CH，繁中玩家看到英文 .38 Special AP Rounds、簡中玩家看到 Gael 自帶 CN；兩方啟用時由條件譯文寫入各自譯名。"
+    },
+    "ItemName|Base.Bullets38APBox": {
+      "action": "unship",
+      "signature": "5fed602273515623",
+      "reason": "2026-11-13 #1378 新衝突：MFS 社群修正版（3780151182）新增穿甲彈物品名，和 GaelGunStore（3616176188）同鍵。Gael 寫 Box of .38 Special AP ammunition (50 rounds)，社群修正版寫 Box of 6.8mm AP Rounds；理由同 Base.Bullets38AP（口徑互斥、無共同上位詞），不出貨，各自譯名走條件譯文。"
+    },
+    "ItemName|Base.Avalon_cat": {
+      "action": "translate",
+      "signature": "7dfdd44f60ef74f5",
+      "reason": "2026-11-13 #1378：MFS 劍匠系統修正版（3780151182/MFS_BladesmithSystem_fix）把英文改成 Avalon (Excalibur Scabbard)，主 MOD（3633421539/BladesmithSystem）script 名仍是「阿瓦隆Avalon」。兩方是同一件物品（Excalibur 的劍鞘），現值「阿瓦隆」對兩方都成立，維持；修正版的劍鞘說明走條件譯文。",
+      "ch": "阿瓦隆",
+      "cn": "阿瓦隆"
+    },
+    "ItemName|Base.Excalibur_cat": {
+      "action": "translate",
+      "signature": "5cbf8e798dcb7a11",
+      "reason": "2026-11-13 #1378：MFS 劍匠系統修正版（3780151182/MFS_BladesmithSystem_fix）把英文改成 Excalibur，主 MOD（3633421539/BladesmithSystem）script 名仍是「由此_展现誓约胜利之剑Excalibur」。同一把劍，現值「誓約勝利之劍」對兩方都成立，維持。",
+      "ch": "誓約勝利之劍",
+      "cn": "誓约胜利之剑"
+    },
+    "ItemName|LTPE.BerryBarMix": {
+      "action": "translate",
+      "signature": "6d8fa3e7e1e61711",
+      "reason": "2026-11-14 #1391：Long Term Preservation Extended（3597673472）把英文從「Tray of … Bars」改成「Baking Tray with … Bars」（原版餅乾烤板的句型），SE 版（3789287166）仍是舊句。同一個物品，現值對兩方都成立，維持。",
+      "ch": "烤板 (莓果棒)",
+      "cn": "浆果棒 (整托)"
+    },
+    "ItemName|LTPE.CerealBarMix": {
+      "action": "translate",
+      "signature": "045c512d4534cc98",
+      "reason": "2026-11-14 #1391：Long Term Preservation Extended（3597673472）把英文從「Tray of … Bars」改成「Baking Tray with … Bars」（原版餅乾烤板的句型），SE 版（3789287166）仍是舊句。同一個物品，現值對兩方都成立，維持。",
+      "ch": "烤板 (穀物棒)",
+      "cn": "谷物棒 (整托)"
+    },
+    "ItemName|LTPE.FruitBarMix": {
+      "action": "translate",
+      "signature": "2f155963c13ec947",
+      "reason": "2026-11-14 #1391：Long Term Preservation Extended（3597673472）把英文從「Tray of … Bars」改成「Baking Tray with … Bars」（原版餅乾烤板的句型），SE 版（3789287166）仍是舊句。同一個物品，現值對兩方都成立，維持。",
+      "ch": "烤板 (水果棒)",
+      "cn": "水果棒 (整托)"
+    },
+    "ItemName|LTPE.MuesliBarMix": {
+      "action": "translate",
+      "signature": "97e4569ac580e79f",
+      "reason": "2026-11-14 #1391：Long Term Preservation Extended（3597673472）把英文從「Tray of … Bars」改成「Baking Tray with … Bars」（原版餅乾烤板的句型），SE 版（3789287166）仍是舊句。同一個物品，現值對兩方都成立，維持。",
+      "ch": "烤板 (什錦果麥棒)",
+      "cn": "什锦燕麦棒 (整托)"
+    },
+    "ItemName|LTPE.OatBarMix": {
+      "action": "translate",
+      "signature": "9630e44d6c052eb0",
+      "reason": "2026-11-14 #1391：Long Term Preservation Extended（3597673472）把英文從「Tray of … Bars」改成「Baking Tray with … Bars」（原版餅乾烤板的句型），SE 版（3789287166）仍是舊句。同一個物品，現值對兩方都成立，維持。",
+      "ch": "烤板 (燕麥棒)",
+      "cn": "燕麦棒 (整托)"
+    },
+    "ItemName|LTPE.PeanutButterBarMix": {
+      "action": "translate",
+      "signature": "245c33cc4a209e5e",
+      "reason": "2026-11-14 #1391：Long Term Preservation Extended（3597673472）把英文從「Tray of … Bars」改成「Baking Tray with … Bars」（原版餅乾烤板的句型），SE 版（3789287166）仍是舊句。同一個物品，現值對兩方都成立，維持。",
+      "ch": "烤板 (花生醬棒)",
+      "cn": "花生酱棒 (整托)"
+    },
+    "ItemName|LTPE.PemmicanBarMix": {
+      "action": "translate",
+      "signature": "f3ff72e059ce22cb",
+      "reason": "2026-11-14 #1391：Long Term Preservation Extended（3597673472）把英文從「Tray of … Bars」改成「Baking Tray with … Bars」（原版餅乾烤板的句型），SE 版（3789287166）仍是舊句。同一個物品，現值對兩方都成立，維持。",
+      "ch": "烤板 (乾肉餅棒)",
+      "cn": "干肉饼棒 (整托)"
+    },
+    "ItemName|LTPE.VeggieBarMix": {
+      "action": "translate",
+      "signature": "36885ae8326b3e37",
+      "reason": "2026-11-14 #1391：Long Term Preservation Extended（3597673472）把英文從「Tray of … Bars」改成「Baking Tray with … Bars」（原版餅乾烤板的句型），SE 版（3789287166）仍是舊句。同一個物品，現值對兩方都成立，維持。",
+      "ch": "烤板 (蔬菜棒)",
+      "cn": "蔬菜棒 (整托)"
+    },
+    "ItemName|Base.SW629_cat": {
+      "action": "translate",
+      "signature": "ca264dcb5efd0ea6",
+      "reason": "2026-11-14 #1378：MFS 社群修正版（3780151182）把英文加上型號後綴 Stealth Hunter，Escape from Kentucky（3633421539）仍是 Smith & Wesson Model 629 Revolver。Stealth Hunter 是 629 的衍生型，現值沒有寫只屬於一方的資訊，對兩方都成立，維持。",
+      "ch": "史密斯-韋森 M629 左輪手槍",
+      "cn": "史密斯-韦森 M629 左轮手枪"
     }
   }
 }

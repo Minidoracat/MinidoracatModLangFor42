@@ -3982,6 +3982,16 @@
    "as1_value": "装甲",
    "owner_signature": "55987821d2c997f0",
    "reason": "2026-11-12 全庫補裁決不出貨：Military Tool Kit 與 Ford Excursion by Papa_Chad 的 armor 分類是裝甲（MTK 42.20 另有 Cataddons=Addons 分類），REDLIBRARY 把同一分類標成 Addons，底下是擾流板、遮陽板、保險桿、車頂架等外觀加裝件，現值「裝甲」對 REDLIBRARY 不成立，改成「配件」又會和 MTK 自己的 Addons 分類撞名，沒有誠實的中性譯名。抑制後認不出 owner 時：MTK 與 REDLIBRARY 顯示各自 IG_UI.json 英文 Armor／Addons，Ford Excursion 的英文只在死檔 IG_UI_EN.txt，單裝它時顯示字面鍵名（已接受殘留）；三者本機都沒有訂閱，未查到是否自帶 CH／CN。"
+  },
+  "ItemName.json|Base.Bullets38AP": {
+   "as1_value": ".38 Special 穿甲弹",
+   "owner_signature": "8c28c39300d96259",
+   "reason": "2026-11-13 #1378 新衝突：MFS 社群修正版（3780151182）新增穿甲彈物品名，和 GaelGunStore（3616176188）同鍵。Gael 寫 .38 Special AP Rounds，社群修正版寫 6.8mm AP Rounds（它把 Base.Bullets38 系列當 6.8mm 彈藥，自帶 CH「6.8mm 穿甲彈」）。口徑是承重資訊（比照 Base.9mmDrum_cat），兩個口徑沒有共同上位詞，不出貨。不出貨後：社群修正版玩家看到它自帶的繁中；Gael 沒有 CH，繁中玩家看到英文 .38 Special AP Rounds、簡中玩家看到 Gael 自帶 CN；兩方啟用時由條件譯文寫入各自譯名。"
+  },
+  "ItemName.json|Base.Bullets38APBox": {
+   "as1_value": ".38 Special 穿甲弹药 (整盒，50 发)",
+   "owner_signature": "5fed602273515623",
+   "reason": "2026-11-13 #1378 新衝突：MFS 社群修正版（3780151182）新增穿甲彈物品名，和 GaelGunStore（3616176188）同鍵。Gael 寫 Box of .38 Special AP ammunition (50 rounds)，社群修正版寫 Box of 6.8mm AP Rounds；理由同 Base.Bullets38AP（口徑互斥、無共同上位詞），不出貨，各自譯名走條件譯文。"
   }
  }
 }

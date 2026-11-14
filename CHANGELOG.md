@@ -4,6 +4,46 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **16 個 MOD 更新後新增的文字補上繁簡中文（1,358 項）。** Under the Hood Summer Car 的排氣系統（觸媒轉換器、排氣管、吊耳、背壓檢查）、漏液汙漬與儀表震動設定（480 項）；柳溪堡壘新增的武學系統「天地人我行」與武器詞條（373 項）；Stay With Me 的同伴親密互動、字幕與語音設定（203 項）；Aegis 管理面板的建造規劃器與藍圖（81 項）；Radio Trader 的尋寶委託、密封箱與金屬探測器（75 項）；Modern Firearms System 社群修正版的穿甲彈、40mm 榴彈與配方（42 項）；Live to Fight Another Day 的場景設定（28 項）；Project Zomboid Optimiser（25 項）；Guns of Tien 的 SR-25、TMP、Groza 等槍械（23 項）；Mailbox Stories 信件收藏夾（11 項）；另有 Flesh & Blood、IDBFS、Book Tracker、Project Dirtroad、Sun Is Gone、Cry of Fear 怪物 NPC（各 2–6 項）。
+  > 技術要點：追蹤器 2026-11-12 #1371–#1389「可能過時」。steamcmd 重抓 19 個本批 MOD，18 個 corpus_hash 相符；Project Zomboid Optimiser 在排程之後又更新（新增 755 鍵），以 `backfill-en --force` 重抽後在本機套用 state 與鏡像，照現行版翻。6 路翻譯、每路 Codex 對抗複核，採納 23 條（例：Radio Trader 的挖掘加成是百分點、Aegis 的 Stick fence 照原版「粗糙木圍欄」、Project Dirtroad 的 powered railcars 是動力軌道車）。柳溪堡壘是 own 目錄、`cn_source: upstream`：簡中 374 鍵逐字取作者 `Translate/CN`（機械比對零差異），繁中以作者簡中為主直寫；Workshop 項目新增第三個子模組 `TianDiRenWoXing`，補進 metadata 的 `mod_ids`。
+- **'93 Ford F-Series 新增的 F-350 平板貨車與 F-450 系列補上繁簡中文（54 項）。** 玩家回報 F-350 雙排座平板貨車的車名、行李箱與左右側儲物箱顯示英文；F-450 拖吊車、救護車、廂式貨車、傾卸車的車名、零件與製作配方一併補上。
+  > 技術要點：追蹤器 #1390。車名 7、零件欄位 16、零件物品名 16、配方 16（含 `Dismantle Tires`）；零件欄位照原版 `IGUI_VehiclePart*` 寫法（`Trunk Storage` 照 `IGUI_VehiclePartTruckBed`「行李箱」）。未實機截圖，依 prep 缺口歸零判定。
+- **另外 12 個 MOD 更新後新增的文字補上繁簡中文（1,493 項）。** Girlfriend Mod 女友同伴的雙人活動（跳舞、按摩、猜拳、睡前聊天）、送禮與工作陪伴台詞（878 項）；The Mission 的自訂任務、任務線與層級、金幣餘額與管理設定（272 項）；Live Wire 擴充的斷路器箱、斷路器、光控開關與市電（191 項）；Companion Dogs（56 項）；Long Term Preservation Extended 的蔬菜糊、餅乾與巨石採鹽設定（44 項）；Plysken Solar Revolution 的電池組群組（14 項）；柳溪堡壘重排的沙盒選項（14 項）；Jeeve's Claims 的管理員代領與選人視窗、Jeeve's Drops、Jeeve's Zones（共 16 項）；Modern Firearms System 社群修正版的 40mm 彈藥掉落設定（5 項）；Radio Trader 的車輛分級（3 項）。
+  > 技術要點：追蹤器 2026-11-13 #1390–#1400，另含同一輪排程在 #1371、#1378、#1384 追加的更新。steamcmd 重抓 14 個 MOD，12 個 corpus_hash 相符；柳溪堡壘與 Jeeve's Claims 在排程之後又更新，以 `backfill-en --force` 重抽後在本機套用 state 與鏡像。6 路翻譯、每路 GPT-6 Astra 對抗複核，採納 76 條（例：Live Wire 新的 Breaker Board 簡中改「断路器箱」以免和既有 Electrical panel「配电箱」同名；The Mission 交付任務照指定物品寫「M9 手槍」「軍用對講機」；柳溪堡壘 13 條沙盒說明的預設值照 `sandbox-options.txt` 實際值寫，上游英文與簡中仍是舊值）。
+- **新收錄「天地任我行」（柳溪堡壘作者把武學系統獨立成新的 Workshop 項目）。** 原本跟著柳溪堡壘翻好的武學、招式與秘笈說明搬到新項目名下，作者改過的 27 項說明跟著更新，並補上新增的音效音量設定（29 項）。
+  > 技術要點：使用者 2026-11-14 核准 own lane 收錄 3839474970（`cn_source: upstream`）。`TianDiRenWoXing` 自 3479667649 移出：335 鍵由 `sources/mods/3479667649/` 搬到 `sources/mods/3839474970/`（307 鍵作者簡中未變、27 鍵重譯繁中並改取新簡中），新增 29 鍵；`IGUI_TDRWX_Node_SHXZ_S2` 上游已清空（`TDRWX_Def.lua:1958` 註明暫無效果），不出貨。名冊、watchlist 與 EN 基準一併建立。
+
+### Changed
+
+- **上游改了英文的已出貨文字跟著改（20 項）。** Stay With Me 的每日友誼與戀愛上限、同伴輪盤預設按鍵等沙盒說明（5 項）；Gunsmith 的 SWAT 車輛 AR-15 生成說明（3 項）；Better Vehicle Dynamics 的 ZombieBuddy 安裝提示（2 項）；Under the Hood 的漏液清理選項與漏點判斷（2 項）；Radio Trader 的服飾來源選項（2 項）；Modern Firearms System 社群修正版的彈藥掉落說明與誓約勝利之劍配方名（3 項）；柳溪堡壘灰燼使者的武器說明、Sun Is Gone、Guns of Tien 各 1 項。
+  > 技術要點：own 層 13 鍵經 `apply_translations` 更新 `en` 錨點，As1 衍生層 6 鍵改 `sources/ch`＋`cn_overrides`，柳溪堡壘 1 鍵改 own 目錄。
+- **上游改了英文的已出貨文字跟著改（90 項）。** 柳溪堡壘沙盒選項加上章節編號、槍聲音量拆成槍聲與消音器各四項、戰爭使者改名與武器說明（49 項）；Live Wire 產品名改成 LiveWire、嗡嗡聲音量說明（25 項）；The Mission 擊殺與步行任務的數量（11 項）；'93 Ford 的 F-350 輪胎與雙式車輪（4 項）；Modern Firearms System 社群修正版的彈藥掉落說明（1 項）。
+  > 技術要點：own 層 29 鍵更新 `en` 錨點，As1 衍生層 12 鍵改 `sources/ch`＋`cn_overrides`，柳溪堡壘 49 鍵改 own 目錄（簡中逐字取作者 `Translate/CN`，只把「」改成 “”）。Real Room Heat 2.0（#1398）8 鍵英文只把 `%` 改成 `%%`，譯文不變、更新錨點。
+- **The Mission 與 '93 Ford 的幾處舊譯修正（8 項）。** The Mission 追蹤器的「預備」改成「可領取」、「活的足夠久」錯字、擊殺任務量詞統一、「啟用初夜」改「啟用第一夜」、任務欄位已滿的提示照現行英文、距離單位改「公尺」；'93 Ford 舊車型的貨廂零件欄位「後車廂容量」改「行李箱」。
+  > 技術要點：譯者與複核回報的範圍外項目，As1 衍生層 7 鍵走 `sources/ch`＋`cn_overrides`，own 層 1 鍵。
+- **Long Term Preservation Extended 的 8 個烤板物品名與 Modern Firearms System 社群修正版的 M629 左輪登記共用鍵裁決，名稱不變。** 兩個版本同時存在時，各自啟用會顯示自己的名稱（例：M629 Stealth Hunter）。Modern Firearms System 社群修正版把原版兩把左輪改名為 M625 4 英吋與 6 英吋，啟用時跟著顯示。
+  > 技術要點：追蹤器 #1391、#1378、#1401。`owner_conflict_decisions.json` 新登記 9 筆 translate，`owner_variants.json` 新增 9 鍵 18 組；`Base.Revolver`、`Base.Revolver_Long` 照 `_stale_variants` 重分組，MFS 兩組經 GPT-6 Astra xhigh 與 Claude 雙模型審核核准，Escape from Kentucky 兩組核准沿用。
+- **Modern Firearms System 社群修正版新增的穿甲彈和 Gael Gun Store 共用物品鍵，9 個改成兩邊都成立的名稱，2 個不出貨。** 7.62mm、5.56mm、.45 穿甲彈與整盒名稱不再帶只有一方寫的口徑細節與發數；`.38 Special`／6.8mm 穿甲彈兩個 MOD 指的是不同口徑，改由各 MOD 啟用時顯示自己的名稱。
+  > 技術要點：`owner_conflict_decisions.json` 新登記 11 筆（9 translate、2 unship），`owner_variants.json` 新增 11 鍵 22 組條件譯文；`unshipped_keys.json` 新增 `Base.Bullets38AP`、`Base.Bullets38APBox`。
+
+### Fixed
+
+- **Under the Hood Summer Car 手持診斷器的故障碼說明改回英文（39 項）。** 診斷器螢幕只有英文字模，中文會整行顯示成問號；這些文字原本也會出現在舊的診斷視窗，MOD 更新後只剩診斷器螢幕會顯示。
+  > 技術要點：追蹤器 #1379。`RVM_ShowDiagnosticScannerWindow` 已無呼叫者（`RVM_ConnectDiagnosticReader.lua:100-108`、`RVM_ScanFromDriverSeat.lua:77-85` 都只開 `RVM_ScannerDevice`）；`UI_RVM_Scanner_E*`／`P*`／`Generic_*`／`Age*` 37 鍵自 own 層撤下並登記 `untranslatable_keys.json`，本批新增的 2 鍵直接登記不翻。未實機截圖，依原始碼判定。
+- **Project Russia 的切爾諾澤姆斯克地圖在選單恢復顯示中文。** 作者把地圖資料夾改名後，選單標題與說明讀不到原本的譯文。
+  > 技術要點：追蹤器 #1375。地圖資料夾 `Chernozemsk` 改名 `Chernozyomsk`，英文未變；沿用舊譯補進 own 層 `Chernozyomsk.json`。
+
+### Removed
+
+- **柳溪堡壘上游已刪除的 7 個武器詞條說明。** 舊存檔仍會讀到的「聖焰」「淨化」兩個詞條名稱保留。
+  > 技術要點：追蹤器 #1371。7 鍵在現行 Lua 只剩註解或未使用的常數；`Tooltip_WB_Perk_HolyFlame`、`Tooltip_WB_Perk_Purify` 仍由 `WB_RHT.perkLabel` 拼鍵讀取（`WB_RingHiltTier_Def.lua:1947`），保留。
+- **Live Wire 上游已刪除的 24 個介面文字，以及柳溪堡壘已刪除的 4 個沙盒選項。**
+  > 技術要點：追蹤器 #1399、#1371。Live Wire 24 鍵在三個子 MOD 的 Lua 與 script 逐鍵搜尋（含拼接鍵名）無引用，自 own 層刪除；柳溪堡壘 `SuppressorVolume`、`VestDropChance` 與說明在現行版只剩註解。
+
 ## [42.22.2-1.75.0] - 2026-11-12
 
 ### Added
