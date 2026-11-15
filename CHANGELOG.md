@@ -4,6 +4,22 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **11 個 MOD 更新後新增的文字補上繁簡中文（90 項）。** Long Term Preservation Extended 的削皮系統：骨製、石製削皮器、去皮蔬果、果皮與菜皮（45 項）；Hybrid Gun Repair 的槍身與機匣升級名稱、升級提示（11 項）；PhunLewt 的區域戰利品上限與穿戴物品保護（10 項）；Exact Minute Clock 的體重單位選項、Radio Trader 的更新說明與 Last Ones Standing 1993 選項、Survivor Briefing 的兩種新簡報外觀（各 4 項）；Railroader 的柴油消耗設定、Project Zomboid Optimiser 的效能分析畫面（各 3 項）；Definitive Descriptions、Live Wire、SSAULAVI（各 2 項）。
+  > 技術要點：追蹤器 2026-11-15 #1412–#1424「可能過時」。steamcmd 重抓 13 個 MOD，corpus_hash 全數相符。2 路翻譯、每路 GPT 對抗複核，採納 1 條（Exact Minute Clock 的 weight 是 `getNutrition():getWeight()` 的角色體重，標題寫「體重單位」）。Hybrid Gun Repair 新增的 10 鍵英文只寫在上游死檔 `IG_UI_EN.txt`，Lua 以 `getText`／`getTextOrNull` 讀，照英文補；另一鍵 `IGUI_HGR_Upg_Receiver_PolishedSeer` 是 Lua 實際查的鍵名（上游翻譯檔拼成 `PolishedSear`），以 Lua 的 `displayName` 當英文補進 own 層。#1413 Pallontras Crossbows 把 `42.20` 夾的內容搬回 `42.0`，有效分支的文字、物品與配方不變；#1412 SSAULAVI 新增的 4 個刀鞘物品只當身上外觀、不進物品欄，沒有名稱。LTPE 的 `LTPE.VegetablePeeler`、`LTPE.OrganicAnimalFeedBag` 只在上游 `ItemName.json`、現行 script 沒有定義，照樣補譯。
+
+### Changed
+
+- **上游改了英文的已出貨文字跟著改（35 項）。** Legendary Katana Wakizashi 的刀鞘配方由「製作」改成「上色」（20 項）；Long Term Preservation Extended 的採集時間與岩鹽比例選項（12 項，其中 11 項只是英文寫法改變、譯文不變）；Radio Trader 的 NPC 模組選項說明加上 Last Ones Standing 1993、Survivor Briefing 的簡報外觀數量改成 25 種、Railroader 的贊助者名單（各 1 項）。
+  > 技術要點：own 層 34 鍵經 `apply_translations` 更新 `en` 錨點，As1 衍生層 1 鍵改 `sources/ch`＋`cn_overrides`。LTPE 的 `EnableSaltRockFromBoulders_tooltip` 英文把 `%` 改寫成 perventage（上游錯字），繁簡中文拿掉 `(%%)`。
+- **Long Term Preservation Extended 的果汁名稱改用原版蔬果名（14 項，只改繁中）。** 水蜜桃汁改桃子汁、梨子汁改梨汁、地瓜汁改紅薯汁、白花椰菜汁改花椰菜汁，和這次新增的去皮蔬果、原版物品同名。
+  > 技術要點：As1 衍生層 14 鍵（物品名 12、液體名 2）改 `sources/ch`，簡中原本就照官方名、不動；依 2026-10-24 使用者裁定（MOD 物品以原版物品為組成時照 LangFor42 名稱）。
+- **Hybrid Gun Repair 新舊兩版共用的 33 個介面文字改由同一份譯文顯示。** 啟用新版時不再另外套用新版專用的寫法，例如零件更換選單顯示「更換為此零件: 零件名」。
+  > 技術要點：追蹤器 #1425。新版 `HybridGunRepair_v2` 把舊版的 `IG_UI_EN.txt` 複製進自己的 `42/`，census 同分支取死檔值後兩個 owner 英文相同、衝突消失，33 組條件譯文報過時；執行期新版仍讀 `IG_UI.json`。照 variants.md「上游移除一方 owner」退役：刪 `owner_variants.json` 33 鍵 66 組與 `owner_conflict_decisions.json` 33 筆 translate 裁決，JSON 中性譯名原本就對兩版成立、不變。
+
 ## [42.22.2-1.76.0] - 2026-11-14
 
 ### Added
