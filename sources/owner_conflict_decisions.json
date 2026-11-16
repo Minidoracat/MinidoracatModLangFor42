@@ -7607,8 +7607,8 @@
     },
     "Sandbox|Sandbox_Bandits.DensityScore": {
       "action": "translate",
-      "signature": "a24301247fde40c2",
-      "reason": "2026-09-27 裁決：Bandits Extra Options（3412682512）是 Bandits NPC（3268487204）的附加選項模組，這個鍵是同一個沙盒選項，附加模組的 \"Bandits spawn more in towns\" 是本體說明的簡略版。現值對兩者都成立，沿用。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3796757031/BanditsNPCTweaks 把標題改寫為 'Spawn density in towns [DOES NOTHING]'，它同時提供的說明鍵（As1 v3.11.0 已收）寫明此設定無作用；Bandits 的 BanditServerSpawner.lua（42.20、42.21 第 1106–1109 行）確實把套用此設定的程式註解掉。標題描述選項本意、說明寫明無作用，兩者並陳對三個 owner 都成立，維持原譯。",
+      "signature": "213e9076ba4a181d",
+      "reason": "2026-09-27 裁決：Bandits Extra Options（3412682512）是 Bandits NPC（3268487204）的附加選項模組，這個鍵是同一個沙盒選項，附加模組的 \"Bandits spawn more in towns\" 是本體說明的簡略版。現值對兩者都成立，沿用。 ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3796757031/BanditsNPCTweaks 把標題改寫為 'Spawn density in towns [DOES NOTHING]'，它同時提供的說明鍵（As1 v3.11.0 已收）寫明此設定無作用；Bandits 的 BanditServerSpawner.lua（42.20、42.21 第 1106–1109 行）確實把套用此設定的程式註解掉。標題描述選項本意、說明寫明無作用，兩者並陳對三個 owner 都成立，維持原譯。 ／2026-11-16 #1425 重簽：Tweaks 把標題改成 'Spawn density in towns (not active)'. 已重查 Bandits 42.22 BanditServerSpawner.lua:1127-1130 套用此設定的程式仍被註解掉, 標題描述選項本意、Tweaks 說明寫明未生效, 維持原譯.",
       "ch": "城鎮中匪徒生成率提高, 偏僻地區生成率降低",
       "cn": "城镇中匪徒生成率提高, 偏僻地区生成率降低"
     },
@@ -11224,15 +11224,15 @@
     },
     "Sandbox|Sandbox_Bandits.CorpseSwapper": {
       "action": "translate",
-      "signature": "e95221350cbea651",
-      "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決：Bandits 原版寫 'Attempt to remove frozen standing corpses', Tweaks 改標成 'Remove frozen standing corpses [DOES NOTHING]', 兩者是同一個沙盒選項. 已查 Bandits 原始碼: BanditUpdate.lua 中讀取 General_CorpseSwapper 的整段程式碼都在 --[[ ]] 註解內, 不論裝不裝 Tweaks 此選項都沒有作用. 加註「無作用」對兩方都是事實, 也和已出貨的 tooltip 一致.",
+      "signature": "fcffed6331d5b1e5",
+      "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決：Bandits 原版寫 'Attempt to remove frozen standing corpses', Tweaks 改標成 'Remove frozen standing corpses [DOES NOTHING]', 兩者是同一個沙盒選項. 已查 Bandits 原始碼: BanditUpdate.lua 中讀取 General_CorpseSwapper 的整段程式碼都在 --[[ ]] 註解內, 不論裝不裝 Tweaks 此選項都沒有作用. 加註「無作用」對兩方都是事實, 也和已出貨的 tooltip 一致. ／2026-11-16 #1425 重簽：Tweaks 把標題改成 'Remove frozen standing corpses (not active)', 說明改成 'not active in the current Bandits mod'. 已重查 Bandits 42.22 BanditUpdate.lua:2469-2472, 讀取 General_CorpseSwapper 的整段仍在 --[[ ]] 註解內, 中性譯名照舊對兩方成立.",
       "ch": "嘗試移除凍結的站立屍體 [無作用]",
       "cn": "尝试移除定格的站立尸体 [不起作用]"
     },
     "Sandbox|Sandbox_Bandits.OriginalBandits": {
       "action": "translate",
-      "signature": "1bcbb6180bf5f434",
-      "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決：同一個選項 Bandits.General_OriginalBandits. 已查 BanditCustom.lua: 開啟時才會載入 modid Bandits2 (即 Bandits 本體) 自帶的幫派檔, 本地與其他模組的匪徒不論開關都會載入. Bandits 原版英文 'Only LOCAL and other mod bandits allowed to spawn' 與實際效果相反, Tweaks 的 'Allow this mod's own gangs to spawn' 才正確. 依實際行為翻譯對兩方都成立, 現值則照抄了相反的說法, 對兩方都會誤導.",
+      "signature": "812a305e3c6c2479",
+      "reason": "2026-10-19 As1 v3.11.0 新 owner 裁決：同一個選項 Bandits.General_OriginalBandits. 已查 BanditCustom.lua: 開啟時才會載入 modid Bandits2 (即 Bandits 本體) 自帶的幫派檔, 本地與其他模組的匪徒不論開關都會載入. Bandits 原版英文 'Only LOCAL and other mod bandits allowed to spawn' 與實際效果相反, Tweaks 的 'Allow this mod's own gangs to spawn' 才正確. 依實際行為翻譯對兩方都成立, 現值則照抄了相反的說法, 對兩方都會誤導. ／2026-11-16 #1425 重簽：Tweaks 把 'this mod's own gangs' 改成 'the Bandits mod's own gangs', 意思不變; Bandits 42.22 BanditCustom.lua:233 行為未變, 維持原譯.",
       "ch": "允許生成匪徒模組內建的幫派",
       "cn": "允许生成土匪模组自带的帮派"
     },
@@ -14182,6 +14182,13 @@
       "reason": "2026-11-14 #1378：MFS 社群修正版（3780151182）把英文加上型號後綴 Stealth Hunter，Escape from Kentucky（3633421539）仍是 Smith & Wesson Model 629 Revolver。Stealth Hunter 是 629 的衍生型，現值沒有寫只屬於一方的資訊，對兩方都成立，維持。",
       "ch": "史密斯-韋森 M629 左輪手槍",
       "cn": "史密斯-韦森 M629 左轮手枪"
+    },
+    "UI|UI_CMRB_Message_AdminGrant": {
+      "action": "translate",
+      "signature": "9a076d64914e2feb",
+      "reason": "2026-11-16 #1439：Cheat Menu 2.0 - Rax's Reborn（3815818643）把英文改成 The server granted you … You can now use Rax's Cheat Menu.，CheatMenuPX（3453422228）、Cheat Menu Reloaded（3683918273）仍寫 You can use Cheat Menu: RB mod.。三方都在 ISUICheatMenu.lua 以 getPlayer():Say 顯示；譯文拿掉 MOD 名，只說可以使用作弊選單，對三方都成立。",
+      "ch": "伺服器已授予您管理員/GM/版主權限. 您現在可以使用作弊選單了.",
+      "cn": "服务器已授予您管理员/GM/版主权限. 您现在可以使用作弊菜单了."
     }
   }
 }

@@ -26217,13 +26217,13 @@
   },
   "Sandbox.json|Sandbox_UnseasonalWeather_HardcoreSummerTemps_tooltip": {
     "as1_value": "启动夏季异常天气设定, 可能会出现持续极度高温天气 (默认关闭)",
-    "reason": "EN 是每個夏季日各自對 Daily event chance 擲判定；現值「可能會出現持續極度高溫天氣」把逐日判定寫成持續性天氣，也未帶出與同模組設定的連動。選項名沿用 Sandbox_UnseasonalWeather_DailyEventChance（CH「每日天氣異常機率」／CN「每日天气异常概率」）。",
-    "value": "启用后, 每个夏季日会依'每日天气异常概率'判定当天是否应用硬核高温 (默认关闭)"
+    "value": "启用后, 每个夏季日会依“每日天气异常概率”判定当天是否应用硬核高温, 除非已启用“持续硬核温度” (默认关闭)",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：If enabled, each summer day rolls against Daily event chance"
   },
   "Sandbox.json|Sandbox_UnseasonalWeather_HardcoreWinterTemps_tooltip": {
     "as1_value": "启动冬季极端天气, 可能出现强寒潮和暴风雪 (默认关闭)",
-    "reason": "同 C04794：逐日擲判定機制消失，且現值另加 EN 沒有的具體天氣「強寒潮和暴風雪」。",
-    "value": "启用后, 每个冬季日会依'每日天气异常概率'判定当天是否应用硬核低温 (默认关闭)"
+    "value": "启用后, 每个冬季日会依“每日天气异常概率”判定当天是否应用硬核低温, 除非已启用“持续硬核温度” (默认关闭)",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：If enabled, each winter day rolls against Daily event chance"
   },
   "Sandbox.json|Sandbox_UsefulBarrels": {
     "as1_value": "有用的汽油桶",
@@ -66672,8 +66672,8 @@
   },
   "IG_UI.json|IGUI_Reward_Guadana": {
     "as1_value": "<H1> 获得秘密 <BR> <IMAGECENTRE:Reward_Guadana> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了镰刀!!! <LINE> <H1>",
-    "value": "<H1> 获得秘密 <BR> <IMAGECENTRE:Reward_Guadana> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了邪教徒镰刀!!! <LINE> <H1>",
-    "reason": "2026-10-31 追蹤器 #1176–#1192 舊譯複查（對照 MOD 現行英文）：漏掉 cultist's, 與物品名 SCM.Guadana「邪教徒镰刀」對不上, 易和原版鐮刀混淆"
+    "value": "<H1> 获得秘密 <BR> <IMAGECENTRE:Reward_Guadana> <LINE> <H1><IMAGECENTRE:CMBEasterEggText_EN> <LINE> <H1>你获得了邪教徒镰刀!!! <LINE> <H1>",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：<H1> SECRET OBTAINED <BR> <IMAGECENTRE:Reward_Guadana> <LINE"
   },
   "IG_UI.json|IGUI_WashedMate": {
     "as1_value": "清洗过的马黛杯",
@@ -74937,13 +74937,13 @@
   },
   "UI.json|UI_CMRB_Message_AdminGrant": {
     "as1_value": "服务器已授予您管理员/GM/moderator权限. 您可以使用Cheat Menu: RB模组. ",
-    "value": "服务器已授予您管理员/GM/版主权限. 您可以使用Cheat Menu: RB模组. ",
-    "reason": "2026-11-04 舊譯稽核：Moderator 沒譯"
+    "value": "服务器已授予您管理员/GM/版主权限. 您现在可以使用作弊菜单了.",
+    "reason": "2026-11-16 #1426–#1444 批次：三個 Cheat Menu 共用鍵，Rax 版改英文、拿掉 MOD 名的中性譯文（見 owner_conflict_decisions）"
   },
   "UI_CMRB.json|UI_CMRB_Message_AdminGrant": {
     "as1_value": "服务器已授予您管理员/GM/moderator权限. 您可以使用Cheat Menu: RB模组. ",
-    "value": "服务器已授予您管理员/GM/版主权限. 您可以使用Cheat Menu: RB模组. ",
-    "reason": "2026-11-04 舊譯稽核：同上"
+    "value": "服务器已授予您管理员/GM/版主权限. 您现在可以使用作弊菜单了.",
+    "reason": "2026-11-16 #1426–#1444 批次：三個 Cheat Menu 共用鍵，Rax 版改英文、拿掉 MOD 名的中性譯文（見 owner_conflict_decisions）"
   },
   "UI.json|UI_CMRB_Message_TimeChange_2": {
     "as1_value": ": ",
@@ -86569,5 +86569,305 @@
     "as1_value": "用撬棍把上锁的门、窗、车门或后备箱撬开, 前提是你读过它新增的说明书, 或者以窃贼身份开局. 比撬锁更吵、更粗暴, 而且除撬棍外不需要别的工具. 被撬开的车锁会彻底损坏, 那扇门再也锁不上了.",
     "value": "用撬棍把上锁的车门或后备箱撬开, 前提是你读过它新增的说明书, 或者以窃贼身份开局. 比撬锁更吵、更粗暴, 而且除撬棍外不需要别的工具. 被撬开的车锁会彻底损坏, 那扇门再也锁不上了. 在 42.22 版之前, 它也能撬开房屋的门和窗. 从 42.22 版起, 这些改由原版游戏自带的“撬开”选项处理.",
     "reason": "2026-11-15 #1402–#1411 批次：上游改英文：Lever a locked car door or boot open with a crowbar, once yo"
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.AimSecondsFar_tooltip": {
+    "as1_value": "当土匪距你6格或更远时, 从它决定开枪到子弹打到你身上之间有多长时间. 最小0.5, 最大10, 默认1.00.",
+    "value": "当土匪距你6格或更远时, 从它决定开枪到子弹打到你身上之间有多长时间.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：How long you get between a bandit deciding to shoot and the "
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.MaxHostileGang_tooltip": {
+    "as1_value": "限制一个敌对帮派最多能生成多少人. 最小1, 最大60, 默认30. 默认值不会限制任何常规敌对帮派, 其中最大的规模为16人. 只有当土匪生成倍率提高到1以上时, 本选项才开始起作用.",
+    "value": "限制一个敌对帮派最多能生成多少人. 默认值不会限制任何敌对帮派, 其中最大的规模为16人. 设为低于16可让敌对帮派规模变小.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：Caps how many people a hostile gang can spawn. The default d"
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.MaxFriendlyGang_tooltip": {
+    "as1_value": "限制一个友好帮派最多能生成多少人. 最小1, 最大60, 默认30. 默认值不会限制常规友好帮派, 其通常的最大规模为14人. 只有当土匪生成倍率提高到1以上时, 本选项才开始起作用.",
+    "value": "限制一个友好帮派最多能生成多少人. 默认值不会限制常规友好帮派, 其通常的最大规模为14人. 只有当土匪生成倍率提高到1以上时, 本选项才开始起作用.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：Caps how many people a friendly gang can spawn. The default "
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.AllowWanderer_tooltip": {
+    "as1_value": "允许游荡帮派在本县境内四处游荡. 有18个帮派会游荡. 其中仅4个是友好的, 而这4个也是你唯一能招募并带同行的幸存者. 关闭后只会移除游荡, 兼有其他身份的帮派仍会出现.",
+    "value": "允许游荡帮派在诺克斯县境内四处游荡. 有18个帮派会游荡. 其中仅4个是友好的, 而这4个也是你唯一能招募并带同行的幸存者. 关闭后只会移除游荡, 兼有其他身份的帮派仍会出现.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：Allows wandering gangs to roam Knox Country. 18 gangs wander"
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.RangeShotgun_tooltip": {
+    "as1_value": "土匪使用霰弹枪开火的最远距离, 以格计算, 与枪上装了什么无关. 最小4, 最大16, 默认16.",
+    "value": "土匪使用霰弹枪开火的最远距离, 以格计算, 与枪上装了什么无关.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：The furthest away a bandit will open fire with a shotgun, in"
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.RangeRifle_tooltip": {
+    "as1_value": "土匪使用步枪开火的最远距离, 以格计算, 与枪上装了什么无关. 最小4, 最大62, 默认40.",
+    "value": "土匪使用步枪开火的最远距离, 以格计算, 与枪上装了什么无关.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：The furthest away a bandit will open fire with a rifle, in t"
+  },
+  "Sandbox.json|Sandbox_Bandits.DensityScore_tooltip": {
+    "as1_value": "本设置不起作用. 原本用于计算并应用它的代码在土匪模组中已被注释掉, 因此无论你在这里怎么设置, 生成都会均匀分布在整张地图上.",
+    "value": "本设置在当前版本的土匪模组中不起作用, 因此无论你在这里怎么设置, 生成都会均匀分布在整张地图上.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：This setting is not active in the current Bandits mod, so sp"
+  },
+  "Sandbox.json|Sandbox_Bandits.CorpseSwapper_tooltip": {
+    "as1_value": "本设置不起作用. 原本用于完成这项工作的整段代码在土匪模组中已被注释掉.",
+    "value": "本设置在当前版本的土匪模组中不起作用.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：This setting is not active in the current Bandits mod."
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.RadioChannel1_tooltip": {
+    "as1_value": "以MHz为单位的某个频率, 用于播出幸存者电台, 填0表示不使用. 本项共有四个输入框, 最多可设四个频率. 本作中的收音机总共只能存十个频道, 还要与玩家已保存的电台共用, 所以这里设四个频率仍余下六个空位. 超出88.0至108.0范围, 或不是以0.2为步进的频率都会被忽略. 玩家打开每台收音机时, 这些频率都会被加入其频道列表, 因此不必再把数字告诉任何人. 真实音乐广播电台默认把各电台设在92.0至92.8, 因此这些频率会同时播出音乐和CB电台. 91.8则避开了它们.",
+    "value": "玩家打开每台收音机时, 这个频率都会被加入其频道列表, 因此不必再把数字告诉任何人. 请输入88.0至108.0之间、以0.2为步进的频率 (MHz), 填0表示不使用. 其他数值都会被忽略.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：Players get this frequency as a preset on every radio they o"
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.RadioChannel3_tooltip": {
+    "as1_value": "以MHz为单位的某个频率, 用于播出幸存者电台, 填0表示不使用. 完整说明参见\"CB电台频率1\".",
+    "value": "另一个CB电台频率, 填0表示不使用. 规则同\"CB电台频率1\".",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：Another CB radio frequency, or 0 for none. Same rules as CB "
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.RadioChannel4_tooltip": {
+    "as1_value": "以MHz为单位的某个频率, 用于播出幸存者电台, 填0表示不使用. 完整说明参见\"CB电台频率1\".",
+    "value": "另一个CB电台频率, 填0表示不使用. 规则同\"CB电台频率1\".",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：Another CB radio frequency, or 0 for none. Same rules as CB "
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.GangStartDelay_tooltip": {
+    "as1_value": "土匪模组会在第0天到第365天之间逐步放出它自带的36个帮派. 本选项会把整份时间表往后推. 设为30时, 本该在第100天出现的帮派会改在第130天出现.",
+    "value": "土匪模组会在第0天到第365天之间逐步放出它自带的36个帮派. 本选项会把整份时间表往后推你设置的天数. 设为30时, 本该在第100天出现的帮派会改在第130天出现.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：The Bandits mod releases its 36 gangs gradually, from day 0 "
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.RadioMode_tooltip": {
+    "as1_value": "选择玩家如何收听有关帮派的幸存者广播. \"关闭\"会禁用广播. \"随处可听\"会把每条广播播放给所有人, 不需要收音机. \"仅限收音机\"则要求有一台已通电、已开机并调到本模组某个CB频道的收音机, 无论是随身携带、放在身边, 还是放在附近的车里. \"仅限收音机, 并在信号范围内\"还会额外检查收音机的\"范围\"数值, 从廉价对讲机的750米到业余电台的20000米不等. 只收听的收音机按2000计算. 帮派到来提示还需要在\"土匪通用\"页面启用\"指向土匪刷新点的图标标记\".",
+    "value": "决定玩家是否需要收音机才能收听帮派广播. \"随处可听\"不需要收音机. \"仅限收音机\"要求有一台已通电、已开机并调到CB频率的收音机, 随身携带或在15格以内均可. \"仅限收音机, 并在信号范围内\"还要求帮派位于该收音机的信号范围内. 只有在\"匪徒通用\"页面开启\"指向匪徒刷新点的图标标记\"时, 才会广播帮派到来.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：Decides whether players need a radio to hear gang broadcasts"
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.AimQuality_tooltip": {
+    "as1_value": "它们的枪弹打中你的频率. 无论属于哪个帮派, 每个土匪都会获得你选择的等级. 选择\"因帮派而异\"则改为保留土匪模组自身的配比. 近战不受影响. 数值越高, 配给它们的瞄准镜也越好, 因此命中率更高的土匪会在更远处开火. 只影响修改本设置后生成的土匪.",
+    "value": "土匪的枪弹打中你的频率. 近战不受影响. 每个土匪都会获得你选择的等级. 选择\"因帮派而异\"则保留土匪模组自身的配比. 数值越高, 配给它们的瞄准镜也越好, 因此命中率更高的土匪会在更远处开火. 只影响修改本设置后生成的土匪.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：How often bandit gunfire hits you. Melee is not affected. Ev"
+  },
+  "Sandbox.json|Sandbox_Bandits.OriginalBandits_tooltip": {
+    "as1_value": "开启后土匪模组会生成它自带的36个帮派. 关闭后只保留由你或其他模组放置的土匪. 原本的选项文本所说的与实际效果恰好相反.",
+    "value": "开启后土匪模组会生成它自带的36个帮派. 关闭后只保留由你或其他模组放置的土匪.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：On means the Bandits mod spawns the 36 gangs it ships with. "
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.AssaultGap_tooltip": {
+    "as1_value": "设置一个袭击帮派到达后, 距离下一次袭击还需等待多久. 默认为无间隔. 每次的延迟都会在你选择的范围内随机取值. 如果某个帮派还兼有其他身份, 例如游荡者, 它仍会以那些身份出现.",
+    "value": "在袭击帮派到达后给你一段喘息时间. 在随后的若干天内不会再发生袭击, 天数会在你选择的范围内随机取值. 兼有其他身份的帮派仍会出现.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：Gives you a break after an assault gang arrives. No other as"
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.BroadcastSides_tooltip": {
+    "as1_value": "控制哪些帮派的出现会在CB电台上广播. \"敌对与友好\"两类都会播报. \"仅敌对\"永远不广播友好帮派. \"仅友好\"永远不广播敌对帮派. 本选项不会改变生成哪些帮派, 也不会改变它们的行为. 玩家仍可在自己的收音机设置中单独屏蔽其中任意一类.",
+    "value": "限制CB电台会播报哪些帮派, 不会改变生成哪些帮派. 玩家仍可在自己的收音机设置中单独屏蔽其中任意一方.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：Limits which gangs the CB radio reports, without changing wh"
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.RadioChannel2_tooltip": {
+    "as1_value": "以MHz为单位的某个频率, 用于播出幸存者电台, 填0表示不使用. 完整说明参见\"CB电台频率1\".",
+    "value": "另一个CB电台频率, 填0表示不使用. 规则同\"CB电台频率1\".",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：Another CB radio frequency, or 0 for none. Same rules as CB "
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.AllowCompanion_tooltip": {
+    "as1_value": "同伴是指与你同行、你所打的就是它所打的、你开车时它会坐进你车里的幸存者. 通常要由你自己找到对方并开口相邀. 有4个帮派无需相邀便直接与你同行: 道场学员, 警察, 军队逃兵和婚礼队伍, 其中婚礼队伍可达32人. 一个帮派常常同时兼有其中两三项身份. 关闭本选项只会取消这一项, 它们仍会保留其余身份出现. 如果一个帮派的所有身份都被关闭, 它就不会再出现.",
+    "value": "关闭本选项可阻止幸存者不经邀请便加入你. 有4个帮派无需相邀便直接与你同行: 道场学员, 警察, 军队逃兵和婚礼队伍. 兼有其他身份的帮派仍会出现.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：Turn this off to stop survivors joining you unasked. Four ga"
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.AllowAssault_tooltip": {
+    "as1_value": "允许那些专程来找你并见人就攻击的帮派出现. 有17个帮派可以袭击. 关闭后只会移除它们的袭击行为. 如果某个帮派还兼有其他身份, 例如游荡者, 它仍会以那些身份出现.",
+    "value": "允许那些专程来找你并见人就攻击的帮派出现. 有17个帮派可以袭击. 关闭后只会移除袭击, 兼有其他身份的帮派仍会出现.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：Allows gangs that come looking for you and attack on sight. "
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.Stamina_tooltip": {
+    "as1_value": "土匪能追击和战斗多久才会疲惫. 无论属于哪个帮派, 每个土匪都会获得你选择的等级. 选择\"因帮派而异\"则改为保留土匪模组自身的配比. 低于\"普通\"时它们会很快疲惫, 你就有机会脱身. 只影响修改本设置后生成的土匪.",
+    "value": "土匪能追击和战斗多久才会疲惫. 低于\"普通\"时它们会很快疲惫, 你就有机会脱身. 每个土匪都会获得你选择的等级. 选择\"因帮派而异\"则保留土匪模组自身的配比. 只影响修改本设置后生成的土匪.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：How long a bandit can chase and fight before tiring. Below N"
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.CorpseHours_tooltip": {
+    "as1_value": "死去的土匪尸体要躺多久才会被清理, 以游戏内小时数计算. 最小0, 最大720, 默认0. 设为0时土匪尸体会随僵尸尸体一同消失, 因为此时改用游戏自带的\"尸体移除前的时间\"设置. 设为其他数值则只对土匪尸体生效, 不影响僵尸. 只有当附近有玩家且该片区域的地图已加载时, 尸体才会被清理.",
+    "value": "死去的土匪尸体要躺多久才会被清理, 以游戏内小时数计算. 设为0时土匪尸体会随僵尸尸体一同消失, 改用游戏自带的\"尸体移除前的时间\"设置. 只有当附近有玩家时, 尸体才会被清理.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：How many in-game hours a dead bandit lies there before its b"
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.RangeHandgun_tooltip": {
+    "as1_value": "土匪使用手枪或左轮手枪开火的最远距离, 以格计算, 与枪上装了什么无关. 最小4, 最大20, 默认20.",
+    "value": "土匪使用手枪或左轮手枪开火的最远距离, 以格计算, 与枪上装了什么无关.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：The furthest away a bandit will open fire with a pistol or r"
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.ToughnessLevel_tooltip": {
+    "as1_value": "以普通僵尸为基准, 衡量土匪能承受多少伤害: 脆弱为1.0倍, 柔弱为1.4, 普通为1.8, 强韧为2.2, 坚韧为2.6. 无论属于哪个帮派, 每个土匪都会获得你选择的等级. 选择\"因帮派而异\"则改为保留土匪模组自身的配比. 在该配比中, 大多数帮派处于1.8, 最强韧的可达2.6. 只影响修改本设置后生成的土匪.",
+    "value": "以普通僵尸为基准, 衡量土匪能承受多少伤害: 脆弱为1.0倍, 柔弱为1.4, 普通为1.8, 强韧为2.2, 坚韧为2.6. 每个土匪都会获得你选择的等级. 选择\"因帮派而异\"则保留土匪模组自身的配比, 其中大多数帮派处于1.8, 最强韧的可达2.6. 只影响修改本设置后生成的土匪.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：How much damage a bandit can take, compared with an ordinary"
+  },
+  "Sandbox.json|Sandbox_BanditsNPCTweaks.AimSecondsClose_tooltip": {
+    "as1_value": "当土匪距你2格以内时, 从它决定开枪到子弹打到你身上之间有多长时间. 最小0.5, 最大10, 默认0.70.",
+    "value": "当土匪距你2格以内时, 从它决定开枪到子弹打到你身上之间有多长时间.",
+    "reason": "2026-11-16 #1425、#1433 批次：上游改英文：How long you get between a bandit deciding to shoot and the "
+  },
+  "Sandbox.json|Sandbox_TM42_MissionResetDays_tooltip": {
+    "as1_value": "必须经过多少真实世界的天数, 已完成的任务记录才会被自动清除",
+    "value": "必须经过多少真实世界的天数, 已完成的每周任务才会被自动清除. 默认: 7.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：How many real-world days must pass before the completed week"
+  },
+  "Sandbox.json|Sandbox_TM42_EnableMissionReset_tooltip": {
+    "as1_value": "在 X 个现实世界天数后重置已完成的任务记录, 以便一次性任务再次可用",
+    "value": "在 X 个现实世界天数后, 只重置已完成的每周任务, 使其可以再次接取. 普通任务, 剧情章节和职业任务线永远不会重置.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Resets only the completed weekly missions after X real-world"
+  },
+  "Sandbox.json|Sandbox_TM42_MissionResetDays": {
+    "as1_value": "距离重置的真实天数",
+    "value": "距离每周重置的真实天数",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Real Days Until Weekly Reset"
+  },
+  "Sandbox.json|Sandbox_TM42_EnableMissionReset": {
+    "as1_value": "启用任务重置",
+    "value": "启用每周重置",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Enable Weekly Reset"
+  },
+  "Sandbox.json|Sandbox_ProjectALife.ReputationHysteresis_tooltip": {
+    "as1_value": "需要超出等级边界这么多点, 你的声望称号才会改变. 数值越大越不容易频繁改名.\n默认15.",
+    "value": "远离“中立”时, 你的称号会立即改变. 向“中立”靠近时, 要等你的分数越过所离开等级的边界这么多点才会改变. 数值越大, 越不容易来回跳动\n默认15.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Moving away from Neutral changes your label at once. Moving "
+  },
+  "Sandbox.json|Sandbox_ALifeJimmy_BaseMaxSide_tooltip": {
+    "as1_value": "玩家可标记的单个基地区域的最长边. 管理员最多可以标记到400.",
+    "value": "玩家在尚无人居住的基地中, 单个基地区域的最长边; 每名居民会增加“每名居民增加的基地边长”, 最多到400. 管理员最多可以标记到400.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Longest side of one base area for players, at a base nobody "
+  },
+  "IG_UI.json|IGUI_ALJ_Bases_ReasonTooManyAreas": {
+    "as1_value": "这个基地的区域已达上限 (Base_MaxAreas)",
+    "value": "这个基地的区域已达上限 (Base_MaxAreas; 居民越多上限越高)",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：more areas in this base (Base_MaxAreas; more residents raise"
+  },
+  "Sandbox.json|Sandbox_ALifeJimmy_ResidentsNeedBeds": {
+    "as1_value": "居民需要床位",
+    "value": "居民需要床位 (旧)",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Residents need beds (old)"
+  },
+  "IG_UI.json|IGUI_ALJ_Bases_ReasonTooLarge": {
+    "as1_value": "区域太大 (Base_MaxSide)",
+    "value": "区域太大 (Base_MaxSide; 居民越多上限越高)",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：an area that large (Base_MaxSide; more residents raise it)"
+  },
+  "Sandbox.json|Sandbox_ALifeJimmy_BaseMaxAreas_tooltip": {
+    "as1_value": "一个基地可以有多少个矩形区域 (主楼、生活区、院子). 管理员不受限制.",
+    "value": "在有居民之前, 一个基地可以有多少个矩形区域 (主楼、生活区、院子); 有人搬进来后, “每多一个基地区域所需居民数”会再增加区域数. 管理员不受限制.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Rectangles (main, quarters, yard) one base may have before r"
+  },
+  "Sandbox.json|Sandbox_ALifeJimmy_ResidentsNeedBeds_tooltip": {
+    "as1_value": "只有基地生活区里每人都有床时, 他们才会搬进来: 单人床和睡袋算1个, 双人床算2个, 双层床再翻倍. 每个基地的居民上限仍然有效.",
+    "value": "已被“居民床位”取代, 保留此项是为了让旧世界保持原来的选择: 在这里关闭时, 如果“居民床位”保持“舒适加成”, 床位会按“忽略”处理. 请保持开启并改用“居民床位”.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Replaced by Beds for residents, kept so a world from before "
+  },
+  "Sandbox_EN.json|Sandbox_UnseasonalWeather_HardcoreSummerTemps_tooltip": {
+    "as1_value": "启动夏季异常天气设定, 可能会出现持续极度高温天气 (默认关闭)",
+    "value": "启用后, 每个夏季日会依“每日天气异常概率”判定当天是否应用硬核高温, 除非已启用“持续硬核温度” (默认关闭)",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：If enabled, each summer day rolls against Daily event chance"
+  },
+  "Sandbox_EN.json|Sandbox_UnseasonalWeather_HardcoreWinterTemps_tooltip": {
+    "as1_value": "启动冬季极端天气, 可能出现强寒潮和暴风雪 (默认关闭)",
+    "value": "启用后, 每个冬季日会依“每日天气异常概率”判定当天是否应用硬核低温, 除非已启用“持续硬核温度” (默认关闭)",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：If enabled, each winter day rolls against Daily event chance"
+  },
+  "Sandbox.json|Sandbox_Bandits.Addon_RadioVolume": {
+    "as1_value": "附加: 对讲机音量",
+    "value": "附加: 对讲机音效音量",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Addon: Walkie-Talkie SFX Volume"
+  },
+  "Sandbox.json|Sandbox_Bandits.Addon_RadioVolume_tooltip": {
+    "as1_value": "控制活跃对讲机音频杂音和效果的音量大小 (0 到 100).",
+    "value": "控制对讲机运作时的音频效果 (咔哒声和杂音) 的音量大小 (0 到 200). 默认: 60.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Controls the volume level of active walkie-talkie audio effe"
+  },
+  "UI.json|UI_trait_BladderControlDesc": {
+    "as1_value": "尿到身上的进度达到5%%时, 有75%%的概率会止住排尿.",
+    "value": "尿意急迫时失控的概率减半, 并且尿到身上的进度达到5%%时, 有75%%的概率会止住排尿.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Half as likely to lose control during an urge, and 75% chanc"
+  },
+  "Sandbox.json|Sandbox_BF_CreatePeeObject_tooltip": {
+    "as1_value": "启用地面/自身上的尿液实体.",
+    "value": "在地上小便会留下一滩尿液.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Peeing on the ground leaves a urine puddle."
+  },
+  "Sandbox.json|Sandbox_BF_BladderMaxValue": {
+    "as1_value": "膀胱最大容量",
+    "value": "平均膀胱容量 (毫升)",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Average Bladder Capacity (mL)"
+  },
+  "UI.json|UI_trait_SmallBladderDesc": {
+    "as1_value": "膀胱充盈得更快, 尿意也更急迫.",
+    "value": "膀胱容量少四分之一, 所以需要更早、更频繁地上厕所.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Bladder holds a quarter less, so you need to go sooner and m"
+  },
+  "UI.json|UI_trait_BigBladderDesc": {
+    "as1_value": "膀胱充盈得更慢.",
+    "value": "膀胱容量多四分之一, 两次上厕所之间可以憋得更久.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Bladder holds a quarter more, so you can wait longer between"
+  },
+  "UI.json|UI_trait_BigBowelsDesc": {
+    "as1_value": "肠道充盈得更慢.",
+    "value": "肠道容量多四分之一, 两次上厕所之间可以憋得更久.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Bowels hold a quarter more, so you can wait longer between t"
+  },
+  "Sandbox.json|Sandbox_BF_BladderMaxValue_tooltip": {
+    "as1_value": "膀胱充盈度上限.",
+    "value": "普通角色的膀胱容量, 单位为毫升. “小膀胱”与“大膀胱”特质会按角色调整此数值.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：How much an average character's bladder holds, in milliliter"
+  },
+  "UI.json|UI_trait_SmallBowelsDesc": {
+    "as1_value": "肠道充盈得更快, 便意也更急迫.",
+    "value": "肠道容量少四分之一, 所以需要更早、更频繁地上厕所.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Bowels hold a quarter less, so you need to go sooner and mor"
+  },
+  "UI.json|UI_trait_BowelControlDesc": {
+    "as1_value": "拉在身上的进度达到5%%时, 有75%%的概率会止住排便.",
+    "value": "便意急迫时失控的概率减半, 并且拉在身上的进度达到5%%时, 有75%%的概率会止住排便.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Half as likely to lose control during an urge, and 75% chanc"
+  },
+  "Sandbox.json|Sandbox_BF_BowelsMaxValue": {
+    "as1_value": "肠道最大容量",
+    "value": "平均肠道容量 (毫升)",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Average Bowel Capacity (mL)"
+  },
+  "Sandbox.json|Sandbox_BF_BowelsMaxValue_tooltip": {
+    "as1_value": "肠道充盈度上限.",
+    "value": "普通角色的肠道容量, 单位为毫升. “小肠道”与“大肠道”特质会按角色调整此数值.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：How much an average character's bowels hold, in milliliters."
+  },
+  "IG_UI.json|IGUI_GoldCardFound": {
+    "as1_value": "<H1> 获得秘密 <BR> <BR> <IMAGECENTRE:Reward_GoldCard> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了金色钥匙卡!!! <LINE> <H1>",
+    "value": "<H1> 获得秘密 <BR> <BR> <IMAGECENTRE:Reward_GoldCard> <LINE> <H1><IMAGECENTRE:CMBEasterEggText_EN> <LINE> <H1>你获得了金色钥匙卡!!! <LINE> <H1>",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：<H1> SECRET OBTAINED <BR> <BR> <IMAGECENTRE:Reward_GoldCard>"
+  },
+  "IG_UI.json|IGUI_Reward_MorningStar": {
+    "as1_value": "<H1> 获得秘密 <BR> <BR> <IMAGECENTRE:Reward_MorningStar> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了晨星锤!!! <LINE> <H1>",
+    "value": "<H1> 获得秘密 <BR> <BR> <IMAGECENTRE:Reward_MorningStar> <LINE> <H1><IMAGECENTRE:CMBEasterEggText_EN> <LINE> <H1>你获得了晨星锤!!! <LINE> <H1>",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：<H1> SECRET OBTAINED <BR> <BR> <IMAGECENTRE:Reward_MorningSt"
+  },
+  "IG_UI.json|IGUI_Reward_SkullSword": {
+    "as1_value": "<H1> 获得秘密 <BR> <IMAGECENTRE:Reward_SkullSword> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了骷髅剑!!! <LINE> <H1>",
+    "value": "<H1> 获得秘密 <BR> <IMAGECENTRE:Reward_SkullSword> <LINE> <H1><IMAGECENTRE:CMBEasterEggText_EN> <LINE> <H1>你获得了骷髅剑!!! <LINE> <H1>",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：<H1> SECRET OBTAINED <BR> <IMAGECENTRE:Reward_SkullSword> <L"
+  },
+  "IG_UI.json|IGUI_Reward_SacrificialDagger": {
+    "as1_value": "<H1> 获得秘密 <BR> <IMAGECENTRE:Reward_SacrificialDagger> <LINE> <H1><IMAGECENTRE:CMBEasterEggText> <LINE> <H1>你获得了献祭匕首!!! <LINE> <H1>",
+    "value": "<H1> 获得秘密 <BR> <IMAGECENTRE:Reward_SacrificialDagger> <LINE> <H1><IMAGECENTRE:CMBEasterEggText_EN> <LINE> <H1>你获得了献祭匕首!!! <LINE> <H1>",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：<H1> SECRET OBTAINED <BR> <IMAGECENTRE:Reward_SacrificialDag"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_CustomItems_tooltip": {
+    "as1_value": "为指定商人手工挑定具体物品, 而不依赖自动识别 —— 适用于没能被自动识别的模组物品, 或者想精确编排商人卖什么. 格式: trader:item:price:qty, 用分号分隔. 示例: ironside:Marz.PulseRifle:250:2;ironside:Marz.PulseAmmoBox:40:6. 不写数量时默认为 5. 商人不存在或服务器没有该物品的条目会被静默跳过, 与其他配置一致.",
+    "value": "为指定商人手工挑定具体物品, 而不依赖自动识别 —— 适用于没能被自动识别的模组物品, 或者想精确编排商人卖什么. 格式: trader:item:price:qty, 用分号分隔. 示例: ironside:Marz.PulseRifle:250:2;ironside:Marz.PulseAmmoBox:40:6. 不写数量时默认为 5. 商人不存在或服务器没有该物品的条目会被静默跳过, 与其他配置一致. 在 trader 的位置写 all, 即可让该条目适用于所有商人 (针对单个商人的那一行对该物品优先).",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Hand-pick specific items for specific traders instead of rel"
+  },
+  "UI.json|UI_RadioTraders_Threads_sold_3": {
+    "as1_value": "这料子不错. 我用得上. 钱这就到.",
+    "value": "料子不错. 我用得上. 钱这就到.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Good fabric. I can use it. Cash is coming."
+  },
+  "UI.json|UI_RadioTraders_SparksWalkieSecret": {
+    "as1_value": "这个不是从我这儿来的. 我们没通过这话.",
+    "value": "普通货都摆在架上. 这件是从后门出去的.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Ordinary stock stays on the shelf. This one went out the bac"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_CustomBuys_tooltip": {
+    "as1_value": "格式与自定义物品 (出售) 相同, 但这些是商人会向玩家收购的东西: trader:item:price:max. 示例: ironside:Marz.PulseAmmoBox:15:10.",
+    "value": "格式与自定义物品 (出售) 相同, 但这些是商人会向玩家收购的东西: trader:item:price:max. 示例: ironside:Marz.PulseAmmoBox:15:10. 在 trader 的位置写 all, 即可让该条目适用于所有商人 (针对单个商人的那一行对该物品优先).",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Same format as Custom Items (Sell), but for things the trade"
+  },
+  "UI.json|UI_RadioTraders_OptGlowColor_tooltip": {
+    "as1_value": "对讲机屏幕微光的颜色.",
+    "value": "对讲机屏幕微光的颜色. 配合 Viewpoint 0.1.7 时, 手持的对讲机会发出游戏自带的暖白光; 此时该颜色改为作用于业余电台和基地电台.",
+    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Color of the walkie screen glow. With Viewpoint 0.1.7 a held"
   }
 }

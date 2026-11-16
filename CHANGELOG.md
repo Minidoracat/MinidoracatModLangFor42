@@ -4,6 +4,24 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **Bandits NPC Tweaks 新增的 CB 無線電廣播補上繁簡中文（531 項）。** 六位播報員（迪克、露比、卡爾、汪達、桑尼、海斯）各有口吻的開場、目擊、移動回報與收尾台詞，地點與人數用語，無線電設定頁、廣播紀錄、匪徒管理器介面，以及「匪徒 NPC 調整 CB 無線電」分頁與兩個新沙盒選項。
+  > 技術要點：追蹤器 2026-11-16 #1433「可能過時」。steamcmd 重抓 3796757031，corpus_hash 相符。廣播由 `BNT_Radio.lua` 以佔位（`{here}`、`{there}`、`{n}`、`{place}`）與上色標記（`{h:…}`、`{f:…}`、`{p:…}`）拼接：地點與人數用語先定好再分 3 路翻譯，每路 GPT 對抗複核，採納 33 條（例：Cal、Ruby 的「一群／幾個」改「一夥／一些」，避免代入「共兩人」「共二十人」時不通；barricaded 是設障固守、不是路障；四個按鈕開的是收音機操作面板）。城鎮名與目的地由 Lua 填英文，譯文照實保留英文。MOD 自帶 CH／CN 只當參考（全形標點、用語不同）。
+- **16 個 MOD 更新後新增的文字補上繁簡中文（1,641 項）。** The Mission 的每週任務、劇情章節、職業任務線與管理員建立任務的引導畫面（306 項）；Project A-Life - Jeem 擴充的基地區域、居民、同伴與發布前檢查步驟（299 項）；Junkyard Sentinel 的無人機塔、特斯拉塔、彈簧板與廢料迫擊砲（280 項）；Bandits Improved AI & Radio Expansion 的對講機語音、招募伐木工與營地台詞（229 項）；Knox Inventory 的傷口處置面板與用藥提示（216 項）；Radio Trader 的匯入匯出設定檔、車場與新對話（166 項）；Bodily Functions 的內急發作與沖馬桶（54 項）；Arcadia RV Interiors 的房車認領與電源（30 項）；Snake's ModPack 的剪報、邪教雕像與 Le Gourmet Ultimate 介紹（27 項）；Project A-Life（11 項）；Project Zomboid Optimiser（8 項）；AHS（6 項）；Theodore（4 項）；Unseasonal Weather、Hardship: Inertia（各 2 項）；Xanny Arms（1 項）。
+  > 技術要點：追蹤器 2026-11-16 #1426–#1444「可能過時」。steamcmd 重抓 18 個 MOD，corpus_hash 全數相符。6 路翻譯、每路 GPT 對抗複核，採納 36 條（例：The Mission 的伏擊摘要是「遭到」殭屍伏擊；Knox 的 `Take it` 同時用於菸品，寫「使用」；Snake's ModPack 的 caña 是甘蔗牆；A-Life Jeem 測試步驟引用的按鈕照簡中「准备环境」）。Knox Inventory 新增的 93 個 `IGUI_KnoxTB_*` 測試台鍵照 2026-10-22 裁定登記 `untranslatable_keys.json`、不翻。Jeem 另寫的原版車名鍵 `IGUI_VehicleNameSportsCar_ez` 歸本體翻譯包，登記 `unshipped_keys.json` 第三類、不出貨。Hardship: Inertia 是 own 目錄，2 鍵寫 own 目錄 CN＋`sources/ch`。Bandits Improved AI 的 Bandit 照同 MOD 已出貨譯文寫繁中「暴徒」、簡中「匪徒」。上游 EN 檔裡的 4 條西班牙文（Snake's ModPack）照原意翻成中文。
+
+### Changed
+
+- **Bandits NPC Tweaks 改寫的 25 個沙盒說明跟著改。** 說明文字拿掉最小、最大、預設數值，改寫 CB 無線電頻率、廣播模式、同伴與襲擊間隔等說明；兩個沒有作用的選項說明改成「在目前版本的匪徒模組中沒有作用」，啟用 Bandits NPC Tweaks 時選項名稱標示「(未生效)」。
+  > 技術要點：追蹤器 #1433。As1 衍生層 25 鍵改 `sources/ch`＋`cn_overrides`。追蹤器 #1425：Tweaks 把 `Sandbox_Bandits.CorpseSwapper`、`.DensityScore` 的 `[DOES NOTHING]` 改成 `(not active)`、`.OriginalBandits` 的 this mod 改成 the Bandits mod，3 鍵的裁決與條件譯文重新簽名；Tweaks 組的條件譯文改成「(未生效)」，重查 Bandits 42.22 原始碼三個選項的行為未變，JSON 中性譯名不動。
+- **10 個 MOD 改了英文的已出貨文字跟著改（55 項）。** Bodily Functions 的膀胱、腸道容量改以毫升設定，大小膀胱與腸道特質說明改寫（12 項）；Project A-Life - Jeem 擴充的基地上限隨居民增加、跟隨同伴的步調（12 項）；Snake's ModPack 的彩蛋獎勵訊息換成新的標題圖（10 項）；The Mission 的任務重置改成只重置每週任務，sequence 改稱任務線（7 項）；Radio Trader 的自訂物品說明與商人台詞（5 項）；Unseasonal Weather 的極端溫度說明（4 項）；Bandits Improved AI 的對講機音效音量、Project A-Life 的聲望門檻說明（各 2 項）；Project Zomboid Optimiser（1 項）。
+  > 技術要點：追蹤器 #1426–#1444。As1 衍生層改 `sources/ch`＋`cn_overrides`，own 層經 `apply_translations` 更新 `en` 錨點。They Knew Too Much 的 28 鍵只把 `%` 改成 `%%`，譯文原本就是 `%%`，只更新錨點。Bodily Functions 刪掉的 own 鍵 `IGUI_BF_CleanWasteFailed` 在現行 Lua 已無引用，自 `own_translations` 與 `ch_review_state` 刪除；另 9 個刪除鍵屬 As1 衍生層，照 split 不變式保留。
+- **三個 Cheat Menu 共用的管理員權限訊息改成不帶 MOD 名。** Rax 重生版把訊息改成 You can now use Rax's Cheat Menu，和 CheatMenuPX、Cheat Menu Reloaded 的英文不同，譯文改成「您現在可以使用作弊選單了」，三個版本都適用。
+  > 技術要點：追蹤器 #1439。`UI|UI_CMRB_Message_AdminGrant` 新增 translate 裁決（signature `9a076d64914e2feb`），As1 層 `UI`、`UI_CMRB` 兩檔同改 `sources/ch`＋`cn_overrides`。
+
 ## [42.22.2-1.77.0] - 2026-11-15
 
 ### Added
