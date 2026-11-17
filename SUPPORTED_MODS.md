@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1522 個 Workshop 模組**（2192 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
+共支援 **1522 個 Workshop 模組**（2195 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -199,7 +199,7 @@
 | ['84 Cadillac Gage LAV-300](https://steamcommunity.com/sharedfiles/filedetails/?id=3171184800) | — | — | `84gageV300` | 46 | — | — |
 | [Medical Meister](https://steamcommunity.com/sharedfiles/filedetails/?id=3173649443) | 醫療大師 | 自動偵測角色的負面狀態，並取用背包內對應的藥品、食物或物品處理。 | `P4MedicalMeister` | 85 | — | — |
 | [Carrying Capacity Tweak](https://steamcommunity.com/sharedfiles/filedetails/?id=3173879440) | 負重能力調整 | 提供調整角色負重能力的沙盒設定。 | `CarryingCapacityTweak` | ? | — | — |
-| [Guns of 93: B42.17 Test Build (Unstable)](https://steamcommunity.com/sharedfiles/filedetails/?id=3183820077) | Guns of 93 | 新增大量 1993 年代槍械與彈藥，涵蓋多種口徑子彈與消音器。 | `guns93` | 1810 | ⚠️ ≥41 | ⚠️ 有一項手槍名稱（代號 Base.Glock23）與 GaelGunStore 系列撞名、卻是不同的槍——本 MOD 的是 Glock 23，那邊的同一代號是 USP-45。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故此鍵不出貨、遊戲內顯示該 MOD 自己的英文原文。 |
+| [Guns of 93: B42.17 Test Build (Unstable)](https://steamcommunity.com/sharedfiles/filedetails/?id=3183820077) | Guns of 93 | 新增大量 1993 年代槍械與彈藥，涵蓋多種口徑子彈與消音器。 | `guns93` | 1810 | ⚠️ ≥44 | ⚠️ 有一項手槍名稱（代號 Base.Glock23）與 GaelGunStore 系列撞名、卻是不同的槍——本 MOD 的是 Glock 23，那邊的同一代號是 USP-45。翻譯包只有一份全域文字表、無法依玩家啟用了哪些 MOD 切換，任一譯名都會讓另一批玩家看到錯的內容，故此鍵不出貨、遊戲內顯示該 MOD 自己的英文原文。 |
 | ['87 Chevrolet Suburban](https://steamcommunity.com/sharedfiles/filedetails/?id=3196180339) | '87 雪佛蘭 Suburban | 新增 1987 年雪佛蘭 Suburban，含 CUCV、越野版與側置油桶等零件。 | `87chevySuburban` | 27 | — | — |
 | [Decoholic](https://steamcommunity.com/sharedfiles/filedetails/?id=3197857648) | Decoholic | 裝飾輔助工具，可調整物品擺放位置偏移與更改家具外觀顯示。 | `P4Decoholic` | 7 | — | — |
 | [[J&G] Flecktarn Gear [B42/41]](https://steamcommunity.com/sharedfiles/filedetails/?id=3206579556) | J&G 斑點迷彩裝備 | 新增德軍斑點迷彩系列服裝與護具，可自行製作，殭屍生成機率可調。 | `[J&G] Flecktarn Uniform` | 37 | — | — |
@@ -799,7 +799,7 @@
 | [Second Dawn Weaponry](https://steamcommunity.com/sharedfiles/filedetails/?id=3680810727) | — | — | `SecondDawnWeaponry18` | 11 | — | — |
 | [Unified Carry Weight Framework (UCWF)](https://steamcommunity.com/sharedfiles/filedetails/?id=3682045254) | — | — | `UnifiedCarryWeightFramework` | 5 | — | — |
 | [Better Vanilla ALICE Backpacks](https://steamcommunity.com/sharedfiles/filedetails/?id=3682395520) | 更好的原版 ALICE 背包 | 重新平衡原版 ALICE 軍用背包，加入鬆開／束緊兩種背法、大錘綁帶與實用的攜行升級。 | `bettervanillaalicebackpacksID`, `bettervanillaalicebackpacksauthzlitepatchID`, `bettervanillaalicebackpacksauthzpatchID` | 1 | ⚠️ ≥4 | — |
-| [[B42] Sunshi's Cooler System \| (SP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3682702613) | — | — | `SunshiCS` | 2 | — | — |
+| [[B42] Sunshi's Cooler System \| (SP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3682702613) | — | — | `LVGGSunshiCS`, `SunshiCS` | 2 | — | — |
 | [Equipment UI – STABLE +](https://steamcommunity.com/sharedfiles/filedetails/?id=3682936016) | — | — | `EQUIPMENT_UI`, `EQUIPMENT_UI_B42` | 22 | — | — |
 | [Zombie Penetration [B42.15]](https://steamcommunity.com/sharedfiles/filedetails/?id=3683154388) | — | — | `ZP_FirearmsPenetration_B4215`, `ZP_G93Penetration_B4215`, `ZP_GGSPenetration_B4215`, `ZP_MFSPenetration_B4215`, `ZombiePenetration_B4215` | 197 | — | — |
 | [[B42.19] Filibuster Rhymes' Certified Used Cars](https://steamcommunity.com/sharedfiles/filedetails/?id=3683878228) | — | — | `B42FRUsedCarsAnimAlpha`, `B42FRUsedCarsAnimTitle` | 402 | ⚠️ ≥3 | — |
@@ -1430,7 +1430,7 @@
 | [True Cargo - Project Full HD](https://steamcommunity.com/sharedfiles/filedetails/?id=3806955469) | True Cargo - Project Full HD | 將拖車貨物以實際 3D 模型擺在車斗上並自動排列，也可手動移動與旋轉。 | `PFHDTrueCargo` | 60 | — | — |
 | [Hug the Plushie!](https://steamcommunity.com/sharedfiles/filedetails/?id=3807099610) | 擁抱玩偶！ | 可擁抱玩偶以緩慢降低不快樂與壓力，持有玩偶也有小幅心情加成，支援多個玩偶模組。 | `HugThePlushie` | 14 | — | — |
 | [Blackout Predators Extended](https://steamcommunity.com/sharedfiles/filedetails/?id=3807510799) | 黑暗捕食者擴充（Blackout Predators Extended） | 黑暗捕食者附加模組，為巢穴加入繁殖體、補給箱與巢穴地圖，並新增多種特殊夜魔，讓夜晚更凶險。 | `BlackoutPredatorsExtended` | 347 | — | — |
-| [Radio Trader B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3807707103) | Radio Trader 電臺商人 | 用對講機或業餘無線電呼叫各類商人買賣物資，含營業時間、訊號強弱，以及可選的聲望、議價與委託任務。 | `RadioTraders`, `RadioTraders_Drugs93`, `RadioTraders_EFZ`, `RadioTraders_GOM`, `RadioTraders_Gael`, `RadioTraders_Guns93`, `RadioTraders_SmartWatch`, `RadioTraders_VFE`, `RadioTraders_Viewpoint` | 1096 | — | — |
+| [Radio Trader B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3807707103) | Radio Trader 電臺商人 | 用對講機或業餘無線電呼叫各類商人買賣物資，含營業時間、訊號強弱，以及可選的聲望、議價與委託任務。 | `RadioTraders`, `RadioTraders_DrugTime89`, `RadioTraders_Drugs93`, `RadioTraders_EFZ`, `RadioTraders_GOM`, `RadioTraders_Gael`, `RadioTraders_Guns93`, `RadioTraders_NCNarcotics`, `RadioTraders_SmartWatch`, `RadioTraders_VFE`, `RadioTraders_Viewpoint` | 1096 | — | — |
 | [Project A-Life & Companion Dogs Compatibility Patch](https://steamcommunity.com/sharedfiles/filedetails/?id=3807738026) | A-Life 與同伴犬相容補丁 | 修正同伴犬攻擊 Project A-Life 非敵對 NPC 的問題。 | `CDALifePatch` | 53 | — | — |
 | [Project JoJo (MP/SP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3807750510) | Project JoJo | 新增《JoJo》風格的替身系統，以箭覺醒替身並使用時停等能力對抗殭屍。 | `JoJoStandSystem0183Standalone` | 23 | — | — |
 | [HydeCo. Squirrels! 42.21.0](https://steamcommunity.com/sharedfiles/filedetails/?id=3808150913) | HydeCo. 松鼠！ | 新增棲息在樹上巢穴的活體松鼠，會覓食與逃竄，砍倒巢樹可捕捉並取得儲藏的橡實。 | `HydeCoSquirrels` | 29 | — | — |
