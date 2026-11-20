@@ -18,6 +18,7 @@ from pathlib import Path
 from types import SimpleNamespace
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import coverage_survey  # noqa: E402
 import tracker  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -92,8 +93,54 @@ for payload, why in [
             raised = True
         check(raised, f"{why} 應 ValueError，不得靜默退化")
 
+# `prefixes`：使用者裁定「整個前綴不翻」的類別。判定只走 `untranslatable_matcher`，
+# 同檔域、canonical 口徑；前綴邊界不能吞到相鄰的正式鍵。
+with tempfile.TemporaryDirectory() as td:
+    q = Path(td) / "prefix.json"
+    q.write_text(json.dumps({"entries": {"UI.json|UI_Foo": "理由"},
+                             "prefixes": {"IG_UI.json|IGUI_Bench_": "測試台",
+                                          "UI.json|UI_Pre_": "理由"}}, ensure_ascii=False),
+                 encoding="utf-8", newline="\n")
+    hit = tracker.untranslatable_matcher(q)
+    check(hit("IG_UI", "IGUI_Bench_New"), "前綴命中上游新加的鍵")
+    check(not hit("IG_UI", "IGUI_BenchX"), "前綴邊界：IGUI_BenchX 不得被 IGUI_Bench_ 吞掉")
+    check(not hit("Tooltip", "IGUI_Bench_New"), "前綴只比同檔域")
+    check(hit("UI", "Pre_X"), "前綴同樣走 canonical（UI.json|UI_Pre_ 吃 UI_Pre_X）")
+    check(hit("UI", "Foo"), "逐鍵登記照舊命中")
+    check(tracker.load_untranslatable(q) == ({("UI", "Foo")}, set()),
+          "load_untranslatable 只回逐鍵視圖，不把前綴混進身分集")
+for payload, why in [
+    ({"entries": {}, "prefixes": []}, "prefixes 非 dict"),
+    ({"entries": {}, "prefixes": {"IGUI_X_": "理由"}}, "前綴缺 |"),
+    ({"entries": {}, "prefixes": {"IG_UI|IGUI_X_": "理由"}}, "前綴檔名漏 .json"),
+    ({"entries": {}, "prefixes": {"IG_UI.json|": "理由"}}, "前綴空值"),
+    ({"entries": {}, "prefixes": {"IG_UI.json|IGUI_X_": " "}}, "前綴理由空值"),
+    ({"entries": {}, "prefixes": {"UI.json|UI_": "理由"}}, "去檔名前綴後為空（會吞掉整個檔）"),
+]:
+    with tempfile.TemporaryDirectory() as td:
+        q = Path(td) / "u.json"
+        q.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8", newline="\n")
+        for fn in (tracker.load_untranslatable, tracker.untranslatable_matcher):
+            try:
+                fn(q)
+                raised = False
+            except ValueError:
+                raised = True
+            check(raised, f"{why}：{fn.__name__} 應 ValueError，不得靜默退化")
 
-def run_coverage(mirrors: dict[str, dict], *, registry: dict | None = None):
+# 真 repo：Knox 測試台走前綴規則；逐鍵登記不得回流到前綴已涵蓋的鍵（同一裁決只留一個家）。
+real_hit = tracker.untranslatable_matcher(p)
+check(real_hit("IG_UI", "IGUI_KnoxTB_zz_new"), "Knox 測試台上游新鍵由前綴規則扣掉")
+check(not real_hit("IG_UI", "IGUI_Knox_Module_generator"), "Knox 正式介面鍵不被測試台前綴吞掉")
+rules = tracker._load_untranslatable_rules(p)[2]
+dup = [k for k in entries
+       if any(tracker._key_stem(k.split("|")[0]) == s
+              and tracker._canon_key(*k.split("|", 1)).startswith(pre) for s, pre in rules)]
+check(not dup, f"entries 有 {len(dup)} 條已被 prefixes 涵蓋（如 {dup[:2]}），刪掉逐鍵登記")
+
+
+def run_coverage(mirrors: dict[str, dict], *, registry: dict | None = None,
+                 prefixes: dict | None = None):
     """在臨時 repo 跑 `tracker.cmd_coverage()`，回 `(rc, artifact, stdout)`。
 
     state 由鏡像實值推導：record 值就是鏡像值的 hash（`records_to_map` 口徑），否則
@@ -104,24 +151,7 @@ def run_coverage(mirrors: dict[str, dict], *, registry: dict | None = None):
     """
     with tempfile.TemporaryDirectory() as td:
         t = Path(td)
-        src = t / "sources"
-        en_dir = src / "en"
-        state_dir = t / "tracker-state"
-        en_dir.mkdir(parents=True)
-        state_dir.mkdir()
-        mods = {wid: {"extractor_schema": tracker.ITEM_MODULE_SCHEMA,
-                      "records": {r: tracker.value_hash(v) for r, v in m.items()}}
-                for wid, m in mirrors.items()}
-        tracker.write_corpus_hashes({"mods": mods}, state_dir / "en_corpus_hashes")
-        for wid, m in mirrors.items():
-            (en_dir / f"{wid}.json").write_text(json.dumps(m), encoding="utf-8", newline="\n")
-        (src / "vanilla_keys.json").write_text(
-            json.dumps({"keys": [], "scoped_keys": {"ItemName.json": []}}),
-            encoding="utf-8", newline="\n")
-        if registry is not None:
-            (src / "untranslatable_keys.json").write_text(
-                json.dumps({"entries": registry}, ensure_ascii=False),
-                encoding="utf-8", newline="\n")
+        src, en_dir, state_dir = _mk_repo(t, mirrors, registry, prefixes)
         old = (tracker.SOURCES, tracker.EN_TEXT_DIR, tracker.EN_CORPUS_HASHES_DIR)
         buf = io.StringIO()
         try:
@@ -133,6 +163,50 @@ def run_coverage(mirrors: dict[str, dict], *, registry: dict | None = None):
             return rc, json.loads(out.read_text(encoding="utf-8")), buf.getvalue()
         finally:
             tracker.SOURCES, tracker.EN_TEXT_DIR, tracker.EN_CORPUS_HASHES_DIR = old
+
+
+def _mk_repo(t: Path, mirrors: dict[str, dict], registry: dict | None, prefixes: dict | None):
+    """臨時 repo：state（由鏡像實值推 hash）、`sources/en` 鏡像、空 vanilla 基準與 registry。"""
+    src = t / "sources"
+    en_dir = src / "en"
+    state_dir = t / "tracker-state"
+    en_dir.mkdir(parents=True)
+    state_dir.mkdir()
+    mods = {wid: {"extractor_schema": tracker.ITEM_MODULE_SCHEMA,
+                  "records": {r: tracker.value_hash(v) for r, v in m.items()}}
+            for wid, m in mirrors.items()}
+    tracker.write_corpus_hashes({"mods": mods}, state_dir / "en_corpus_hashes")
+    for wid, m in mirrors.items():
+        (en_dir / f"{wid}.json").write_text(json.dumps(m), encoding="utf-8", newline="\n")
+    (src / "vanilla_keys.json").write_text(
+        json.dumps({"keys": [], "scoped_keys": {"ItemName.json": []}}),
+        encoding="utf-8", newline="\n")
+    if registry is not None or prefixes is not None:
+        (src / "untranslatable_keys.json").write_text(
+            json.dumps({"entries": registry or {}, "prefixes": prefixes or {}}, ensure_ascii=False),
+            encoding="utf-8", newline="\n")
+    return src, en_dir, state_dir
+
+
+def run_survey(mirrors: dict[str, dict], *, registry: dict | None = None,
+               prefixes: dict | None = None) -> str:
+    """在臨時 repo 跑 `coverage_survey.main()`，回 stdout（「N 個鍵已裁決不補譯」只在人讀輸出）。"""
+    with tempfile.TemporaryDirectory() as td:
+        t = Path(td)
+        src, _, _ = _mk_repo(t, mirrors, registry, prefixes)
+        (src / "unshipped_keys.json").write_text('{"entries": {}}', encoding="utf-8", newline="\n")
+        dist = t / "dist_CH"
+        dist.mkdir()
+        (dist / "UI.json").write_text("{}", encoding="utf-8", newline="\n")
+        old = (coverage_survey.ROOT, coverage_survey.DIST_CH, sys.argv)
+        buf = io.StringIO()
+        try:
+            coverage_survey.ROOT, coverage_survey.DIST_CH, sys.argv = t, dist, ["coverage_survey"]
+            with contextlib.redirect_stdout(buf):
+                coverage_survey.main()
+            return buf.getvalue()
+        finally:
+            coverage_survey.ROOT, coverage_survey.DIST_CH, sys.argv = old
 
 
 # 兩個 consumer 不能只「共用 loader」卻沒真的使用結果：直接跑 coverage 的最小臨時 state，
@@ -158,6 +232,33 @@ check(artifact["totals"]["dn_gap"] == 0,
       f"dn_gap={artifact['totals']['dn_gap']} mods={artifact['mods']}")
 check(artifact["totals"]["en_gap"] == 0,
       "coverage 有使用 canonical untr_pairs 扣 UI.json|UI_Internal")
+
+# 前綴規則同樣要被 coverage 真的使用（translate_en 與 script_item_dn 兩口徑）。
+prefix_mirror = {"1": {
+    "translate_en|mods/M/common/media/lua/shared/Translate/EN/IG_UI.json|IGUI_Bench_New": "Bench",
+    f"script_item_dn|{SCRIPTS}|Base.HidThing": "Hid Thing"}}
+_, ctrl, _ = run_coverage(prefix_mirror)
+check(ctrl["totals"]["en_gap"] == 1 and ctrl["totals"]["dn_gap"] == 1,
+      f"控制組（無前綴）兩口徑應各 1 個缺口：totals={ctrl['totals']}")
+rc, artifact, _ = run_coverage(
+    prefix_mirror, prefixes={"IG_UI.json|IGUI_Bench_": "測試台", "ItemName.json|Base.Hid": "內部物品"})
+check(rc == 0, f"coverage 前綴 state 應 rc=0，實得 {rc}")
+check(artifact["totals"]["en_gap"] == 0 and artifact["totals"]["dn_gap"] == 0,
+      f"coverage 沒吃 prefixes：totals={artifact['totals']}")
+
+# coverage_survey 是第三個 consumer：同一份登記（canonical 逐鍵＋前綴）要在它的人讀輸出裡
+# 算成「已裁決不補譯」；它曾用 raw 鍵比對、以 `UI.json|UI_*` 登記的鍵全沒扣到（2026-11-20 修）。
+# 另放一個沒登記的正式鍵，分母才不會是 0。
+EN_DIR = "translate_en|mods/M/common/media/lua/shared/Translate/EN"
+survey_mirror = {"1": {f"{EN_DIR}/UI.json|UI_Internal": "Internal",
+                       f"{EN_DIR}/IG_UI.json|IGUI_Bench_New": "Bench",
+                       f"{EN_DIR}/UI.json|UI_Real": "Real"}}
+ctrl_out = run_survey(survey_mirror)
+check("0 個鍵已裁決不補譯" in ctrl_out, f"coverage_survey 控制組（無登記）不該扣：{ctrl_out[:300]!r}")
+got_out = run_survey(survey_mirror, registry={"UI.json|UI_Internal": "內部"},
+                     prefixes={"IG_UI.json|IGUI_Bench_": "測試台"})
+check("2 個鍵已裁決不補譯" in got_out and "有效鍵合計 1" in got_out,
+      f"coverage_survey 沒用 canonical 逐鍵登記或前綴規則扣除：{got_out[:300]!r}")
 
 # `stale_schema`（號稱現行 schema 卻仍是裸 key）必須與 schema／mirror／stale_state 同屬
 # 「重抽即消除」桶。漏掉它時 `kinds == {"stale_schema"}` 的 mod 一項行動分類都不落：

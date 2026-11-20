@@ -34,6 +34,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import prep_mod_strings  # noqa: E402
 import tracker  # noqa: E402
+import test_vanilla_no_override as base_gate  # noqa: E402
 
 # fixture 路徑落在有效版本分支（`tracker._version_int` 只取前兩段，門檻 42000..`tracker.GAME_VERSION_INT`）。
 EFF = "mods/M/42.20/media/scripts/items.txt"
@@ -56,14 +57,20 @@ def run(*, records: dict, mirror: dict, dist_items: dict, vanilla: list[str],
         bad_ledger: str | None = None, state_entry_raw: object = None,
         unshipped: dict | None = None, bad_unshipped: str | None = None,
         untranslatable: dict | None = None, bad_untranslatable: str | None = None,
+        untranslatable_prefixes: dict | None = None,
+        base_pack: dict | None = None, shared_allow: dict | None = None,
         old_artifact: dict | None = None, check_decisions: bool = False,
         owner_report_check: bool = False, owner_report_md: str | None = None):
-    """組臨時 repo + dist，跑 `prep_mod_strings.main()`，回 (rc, artifact, stdout)。"""
+    """組臨時 repo + dist，跑 `prep_mod_strings.main()`，回 (rc, artifact, stdout)。
+
+    `base_pack`（`{"檔名.json": {鍵: 值}}`，同時寫 CH、CN）放在臨時 repo 的 sibling，
+    即 prep 以 `ROOT.parent` 推導的本體翻譯包位置；另補一個量級 filler 檔過 ⑦ 的門檻。
+    """
     bad_hash = bad_hash or set()
     global CASES
     CASES += 1
     with tempfile.TemporaryDirectory() as td:
-        root = Path(td)
+        root = Path(td) / "repo"
         (root / "sources" / "en").mkdir(parents=True)
         (root / "tracker-state").mkdir()
         if bad_ledger is not None:
@@ -78,9 +85,20 @@ def run(*, records: dict, mirror: dict, dist_items: dict, vanilla: list[str],
         if bad_unshipped is not None:
             (root / "sources" / "unshipped_keys.json").write_text(
                 bad_unshipped, encoding="utf-8")
-        if untranslatable is not None:
+        if untranslatable is not None or untranslatable_prefixes is not None:
             (root / "sources" / "untranslatable_keys.json").write_text(
-                json.dumps({"entries": untranslatable}, ensure_ascii=False), encoding="utf-8")
+                json.dumps({"entries": untranslatable or {}, "prefixes": untranslatable_prefixes or {}},
+                           ensure_ascii=False), encoding="utf-8")
+        if base_pack is not None:
+            bp = Path(td) / base_gate.BASE_PACK_REL
+            for lang in ("CH", "CN"):
+                (bp / lang).mkdir(parents=True)
+                for fname, data in base_pack.items():
+                    (bp / lang / fname).write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+            (bp / "CH" / "Filler.json").write_text(
+                json.dumps({f"F{i}": "x" for i in range(base_gate.MIN_BASE_PACK_KEYS)}), encoding="utf-8")
+            (root / "sources" / "langfor42_shared_keys.json").write_text(
+                json.dumps({"entries": shared_allow or {}}, ensure_ascii=False), encoding="utf-8")
         if bad_untranslatable is not None:
             (root / "sources" / "untranslatable_keys.json").write_text(
                 bad_untranslatable, encoding="utf-8")
@@ -254,10 +272,12 @@ rc, art = run(records={r_internal: "h-int"}, mirror={r_internal: "Internal"},
               dist_items={}, vanilla=[],
               untranslatable={"UI.json|UI_Internal": "內部鍵"})
 assert art["_gap"] == {}, f"4c. prep 未以 canonical identity 扣除 UI prefix key：{art['_gap']}"
+assert art["_langfor42_keys"] == {}, \
+    f"4c. 零缺口時不該去讀本體翻譯包（讀了在臨時 repo 會落 null）：{art['_langfor42_keys']}"
 
 # 4c4. 同一筆裁決寫成 **B41 前綴形**時兩個 consumer 也必須扣同一個 runtime 身分：
 #      `ItemName.json|ItemName_Base.Prefixed` 對 prep gap `ItemName|Base.Prefixed` 應命中。
-#      coverage 側的對照案例在 `test_untranslatable_keys`（`untr_items` 同樣走 `_canon_key`）；
+#      coverage 側的對照案例在 `test_untranslatable_keys`（matcher 同樣走 `_canon_key`）；
 #      任一側留 raw 前綴形，同一筆人工裁決就會在兩支工具給出相反結論。
 r_prefixed = f"script_item_dn|{EFF}|Base.Prefixed"
 rc, art = run(records={r_prefixed: "h-pre"}, mirror={r_prefixed: "Prefixed Item"},
@@ -282,8 +302,43 @@ rc, art = run(records={r_vname: "h-vn"}, mirror={r_vname: "Chevalier Duravan"},
 assert set(art["_gap"]) == {"IG_UI|IGUI_VehicleNameVanSeats_Mural"}, \
     f"4c5. 控制組：未登記時應列為缺口：{art['_gap']}"
 
+# 4c6. 本體翻譯包 LangFor42 同鍵的缺口（MOD 另寫英文的原版名稱鍵；fixture 鍵名刻意不在真包裡，
+#      prep 若把路徑寫死成真 LangFor42 本機也會紅）不送譯者：移到
+#      `_langfor42_keys` 等使用者裁決；登記可共存的照常留在缺口；讀不到 LangFor42 時不扣、寫 null。
+#      同英文的普通鍵留在缺口，確認 strings 的連動鍵數也跟著扣（by_en 在扣除之後才建）。
+r_ez = f"translate_en|{EFF.replace('scripts/items.txt', 'lua/shared/Translate/EN/IG_UI.json')}|IGUI_VehicleNameFixtureCar_zz"
+r_plain = f"translate_en|{EFF.replace('scripts/items.txt', 'lua/shared/Translate/EN/IG_UI.json')}|IGUI_MyCarLabel"
+EZ = {"records": {r_ez: "h-ez", r_plain: "h-pl"},
+      "mirror": {r_ez: "Chevalier Cossette", r_plain: "Chevalier Cossette"},
+      "dist_items": {}, "vanilla": []}
+BASE = {"IG_UI.json": {"IGUI_VehicleNameFixtureCar_zz": "騎士·珂賽特 (EZ)"}}
+rc, art = run(**EZ, base_pack=BASE)
+assert rc == 0 and set(art["_gap"]) == {"IG_UI|IGUI_MyCarLabel"}, \
+    f"4c6a. LangFor42 同鍵仍留在缺口：rc={rc} {art['_gap']}"
+assert art["strings"][0]["keys"] == 1, f"4c6a. strings 連動鍵數沒扣：{art['strings']}"
+assert art["_langfor42_keys"] == {"IG_UI|IGUI_VehicleNameFixtureCar_zz":
+                                  {"en": "Chevalier Cossette", "wid": "1"}}, art["_langfor42_keys"]
+rc, art = run(**EZ, base_pack=BASE,
+              shared_allow={"IG_UI.json|IGUI_VehicleNameFixtureCar_zz": "原版不顯示"})
+assert "IG_UI|IGUI_VehicleNameFixtureCar_zz" in art["_gap"] and art["_langfor42_keys"] == {}, \
+    f"4c6b. 登記可共存的鍵被扣掉：{art['_gap']} {art['_langfor42_keys']}"
+rc, art = run(**EZ)
+assert rc == 0 and "IG_UI|IGUI_VehicleNameFixtureCar_zz" in art["_gap"] \
+    and art["_langfor42_keys"] is None, \
+    f"4c6c. 讀不到 LangFor42 時應不扣並寫 null：rc={rc} {art['_gap']} {art['_langfor42_keys']}"
+
+# 4c7. `prefixes` 前綴規則：已裁定整個前綴不翻（Knox 測試台）的上游新鍵自動扣掉，
+#      相鄰的正式鍵照常列缺口。
+r_bench = f"translate_en|{EFF.replace('scripts/items.txt', 'lua/shared/Translate/EN/IG_UI.json')}|IGUI_KnoxTB_New"
+r_real = f"translate_en|{EFF.replace('scripts/items.txt', 'lua/shared/Translate/EN/IG_UI.json')}|IGUI_Knox_Real"
+rc, art = run(records={r_bench: "h-b", r_real: "h-r"}, mirror={r_bench: "Bench", r_real: "Real"},
+              dist_items={}, vanilla=[],
+              untranslatable_prefixes={"IG_UI.json|IGUI_KnoxTB_": "測試台"})
+assert rc == 0 and set(art["_gap"]) == {"IG_UI|IGUI_Knox_Real"}, \
+    f"4c7. 前綴規則沒扣掉測試台新鍵：rc={rc} {art['_gap']}"
+
 # 4c2. temp ROOT 隔離：真 repo 已登記這個 Mirage 鍵，但臨時 repo 沒有 registry，prep 必須
-#      把它視為缺口。若呼叫 `tracker.load_untranslatable()` 不傳 temp ROOT，就會穿透讀真 repo、
+#      把它視為缺口。若呼叫 `tracker.untranslatable_matcher()` 不傳 temp ROOT，就會穿透讀真 repo、
 #      測試假綠且正式工具在 linked/fixture repo 讀錯來源。
 r_isolated = f"script_item_dn|{EFF}|MirageWardrobeRender.JacketBulky01"
 rc, art = run(records={r_isolated: "h-iso"}, mirror={r_isolated: "Render Carrier"},

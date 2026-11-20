@@ -2468,8 +2468,46 @@ def _load_shipped_keys() -> tuple[set[tuple[str, str]], set[str]]:
     return ident, itemnames
 
 
+def _load_untranslatable_rules(
+        path: Path | None = None) -> tuple[set[tuple[str, str]], set[str], list[tuple[str, str]]]:
+    """讀 registry 一次、驗證一處：回 `(entries 身分集, ItemName fullType 集, prefixes 規則)`。"""
+    p = path or SOURCES / "untranslatable_keys.json"
+    if not p.is_file():
+        return set(), set(), []
+    data = load_json(p)
+    shape = f"{p.name}：形狀壞損（需 {{'entries': {{'<檔.json>|<鍵>': '<理由>'}}, 'prefixes': {{…同形…}}}}）"
+    entries = data.get("entries") if isinstance(data, dict) else None
+    prefixes = data.get("prefixes", {}) if isinstance(data, dict) else None
+    if not isinstance(entries, dict) or not isinstance(prefixes, dict):
+        raise ValueError(shape)
+
+    def ident(pair, reason) -> tuple[str, str, str]:
+        if not isinstance(pair, str) or "|" not in pair or not isinstance(reason, str) or not reason.strip():
+            raise ValueError(shape)
+        fname, key = pair.split("|", 1)
+        if not fname.endswith(".json") or not fname[:-5] or not key:
+            raise ValueError(f"{p.name}：非法 pair {pair!r}（檔名須以 .json 結尾、兩側非空）")
+        canon = _canon_key(fname, key)
+        if not canon:  # `UI.json|UI_` 去前綴後是空字串，當前綴會吞掉整個檔
+            raise ValueError(f"{p.name}：非法 pair {pair!r}（去檔名前綴後為空）")
+        return fname, _key_stem(fname), canon
+
+    pairs: set[tuple[str, str]] = set()
+    items: set[str] = set()
+    for pair, reason in entries.items():
+        fname, stem, canon = ident(pair, reason)
+        pairs.add((stem, canon))
+        if fname == "ItemName.json":
+            items.add(canon)
+    rules = [ident(pair, reason)[1:] for pair, reason in prefixes.items()]
+    return pairs, items, rules
+
+
 def load_untranslatable(path: Path | None = None) -> tuple[set[tuple[str, str]], set[str]]:
-    """讀 registry，回 `(canonical 檔域身分集, ItemName canonical runtime fullType 集)`。
+    """讀 registry 的逐鍵登記，回 `(canonical 檔域身分集, ItemName canonical runtime fullType 集)`。
+
+    **判定一律走 `untranslatable_matcher()`**：它另含 `prefixes` 規則；本函式只給 entries
+    的視圖（測試與形狀檢查用）。
 
     缺檔＝空集合（漸進登記）；存在但形狀壞損一律炸。registry key 嚴格是
     `<非空檔名.json>|<非空鍵>`——漏 `.json` 時 prep 可能仍扣、coverage 的 ItemName
@@ -2477,32 +2515,23 @@ def load_untranslatable(path: Path | None = None) -> tuple[set[tuple[str, str]],
     `(UI, UI_Foo)`，同樣分岔。兩個 consumer 必須吃同一個 identity。
 
     **ItemName 那一套口徑同樣是 canonical，不是 raw**：`ItemName.json|ItemName_Base.Foo`
-    一律回 `Base.Foo`。coverage 拿它扣 `dn["gap"]`（`script_item_dn` 的鍵恆是裸
-    `Module.Item`），prep 走 `untr_pairs` 的 `(ItemName, Base.Foo)`——留 raw 前綴形時
-    prep 扣得掉、coverage 扣不掉，同一筆人工裁決在兩支工具給出相反結論。B41 前綴形本身
-    是引擎不讀的死鍵（見 `_is_runtime_item_key`），登記者寫哪一種形都必須落到同一個
-    runtime 身分。
+    一律回 `Base.Foo`。coverage 以 `("ItemName", 裸 Module.Item)` 查 matcher（`script_item_dn`
+    的鍵恆是裸 fullType），prep 以 `(ItemName, Base.Foo)` 查——留 raw 前綴形時兩邊都扣不掉
+    或只有一邊扣得掉。B41 前綴形本身是引擎不讀的死鍵（見 `_is_runtime_item_key`），登記者
+    寫哪一種形都必須落到同一個 runtime 身分。
     """
-    p = path or SOURCES / "untranslatable_keys.json"
-    if not p.is_file():
-        return set(), set()
-    data = load_json(p)
-    entries = data.get("entries") if isinstance(data, dict) else None
-    if not isinstance(entries, dict):
-        raise ValueError(f"{p.name}：形狀壞損（需 {{'entries': {{'<檔.json>|<鍵>': '<理由>'}}}}）")
-    pairs: set[tuple[str, str]] = set()
-    items: set[str] = set()
-    for pair, reason in entries.items():
-        if not isinstance(pair, str) or "|" not in pair or not isinstance(reason, str) or not reason.strip():
-            raise ValueError(f"{p.name}：形狀壞損（需 {{'entries': {{'<檔.json>|<鍵>': '<理由>'}}}}）")
-        fname, key = pair.split("|", 1)
-        if not fname.endswith(".json") or not fname[:-5] or not key:
-            raise ValueError(f"{p.name}：非法 pair {pair!r}（檔名須以 .json 結尾、兩側非空）")
-        canon = _canon_key(fname, key)
-        pairs.add((_key_stem(fname), canon))
-        if fname == "ItemName.json":
-            items.add(canon)
-    return pairs, items
+    return _load_untranslatable_rules(path)[:2]
+
+
+def untranslatable_matcher(path: Path | None = None):
+    """回 `hit(檔 stem, canonical 鍵) -> bool`：逐鍵登記或 `prefixes` 規則命中。
+
+    prep、`cmd_coverage`、coverage_survey、build gate、verify [20] 的唯一判定入口；
+    前綴只比同檔域（`IG_UI` 的規則不吃 `Tooltip` 的同名鍵）。
+    """
+    pairs, _, rules = _load_untranslatable_rules(path)
+    return lambda stem, canon: (stem, canon) in pairs or any(
+        s == stem and canon.startswith(pre) for s, pre in rules)
 
 
 def _is_runtime_item_key(key: str) -> bool:
@@ -2693,10 +2722,10 @@ def cmd_coverage(args) -> int:
     # fail-closed 慣例）：靜默退化成空集合＝這道本體排除整批失效，於是本體鍵被
     # 當成缺口送進補譯管線，違反「不得覆寫本體」鐵律的第一道防線。
     vanilla_items = set(vjson["scoped_keys"]["ItemName.json"])
-    # 已裁決不補譯的鍵。兩個口徑各自形狀：EN 走 `(檔 stem, canonical 鍵)`、物品名走
-    # canonical runtime fullType（登記寫 `ItemName_Base.Foo` 也會落成 `Base.Foo`，與
-    # `script_item_dn` 的裸 `Module.Item` 及 prep 的 `untr_pairs` 同一個身分）。
-    untr_pairs, untr_items = load_untranslatable()
+    # 已裁決不補譯的鍵（逐鍵登記＋前綴規則）。EN 走 `(檔 stem, canonical 鍵)`、物品名走
+    # `("ItemName", canonical runtime fullType)`（登記寫 `ItemName_Base.Foo` 也會落成 `Base.Foo`，與
+    # `script_item_dn` 的裸 `Module.Item` 及 prep 同一個身分）。
+    untr = untranslatable_matcher()
 
     rows: list[dict] = []
     tot = {"en": 0, "en_gap": 0, "dn": 0, "dn_gap": 0, "dn_idonly": 0, "dn_blind": 0}
@@ -2731,7 +2760,7 @@ def cmd_coverage(args) -> int:
             elif kind == "script_item":
                 o_item.setdefault(owner_of(rid), set()).add(key)
         en_gap = {x for x in en_ids - shipped_ident
-                  if x[1] not in vanilla and x not in untr_pairs}
+                  if x[1] not in vanilla and not untr(*x)}
         # DisplayName 值只在 sources/en 鏡像裡（狀態檔只有 hash）。缺鏡像／缺該筆值的
         # 後果交給 _item_dn_stats 計成盲區，不在這裡靜默跳過。
         # **值一律走 `winning_dn_text`**：勝出 rid 由 state 決定（同 owner 內 common 先、
@@ -2785,7 +2814,7 @@ def cmd_coverage(args) -> int:
                             else f"[{o}] {st_o['why']}")
         # 已裁決不補譯者在**逐 owner 累加之後**統一扣：`_item_dn_stats` 的 total／idonly／
         # blind 是同一份輸入的分類統計，只從 gap 扣才不會讓那些分母跟著失真。
-        dn["gap"] -= untr_items
+        dn["gap"] = {k for k in dn["gap"] if not untr("ItemName", k)}
         dn["why"] = "；".join(whys) or None
         if stale_dn:
             # **不重複計 blind**：`stale_ok ∩ 宇宙` 已因上面的剔除自然落入 `missing`

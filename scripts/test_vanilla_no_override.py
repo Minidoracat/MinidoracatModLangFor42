@@ -42,8 +42,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_TRANSLATE = Path("D:/SteamLibrary/steamapps/common/ProjectZomboid/media/lua/shared/Translate")
-DEFAULT_BASE_PACK = ROOT.parent / ("MinidoracatLangFor42/MOD/MinidoracatLangFor42/Contents/mods/"
-                                   "MinidoracatLangFor42/42/media/lua/shared/Translate")
+BASE_PACK_REL = ("MinidoracatLangFor42/MOD/MinidoracatLangFor42/Contents/mods/"
+                 "MinidoracatLangFor42/42/media/lua/shared/Translate")
+DEFAULT_BASE_PACK = ROOT.parent / BASE_PACK_REL
 DIST = ROOT / "MOD/MinidoracatModLangFor42/Contents/mods/MinidoracatModLangFor42/42/media/lua/shared/Translate"
 SHARED_KEYS_JSON = ROOT / "sources/langfor42_shared_keys.json"
 LANGS = ("EN", "CH", "CN")
@@ -82,6 +83,19 @@ def shared_with_base_pack(dist_pairs: set[str], base_pairs: set[str],
     """回 (未登記的撞鍵, 登記了卻已不再撞鍵的條目)；pairs 都是「檔名.json|鍵」、CH∪CN。"""
     shared = dist_pairs & base_pairs
     return sorted(shared - allow.keys()), sorted(allow.keys() - shared)
+
+
+def base_pack_pairs(bdir: Path) -> set[str]:
+    """本體翻譯包出貨的 CH∪CN「檔名.json|鍵」。目錄缺、鍵數量級不對或 JSON 壞損都 raise ValueError。"""
+    if not all((bdir / lang).is_dir() for lang in ("CH", "CN")):
+        raise ValueError(f"找不到本體翻譯包的 Translate/CH、CN（{bdir}）")
+    try:
+        pairs = {f"{f}|{k}" for lang in ("CH", "CN") for f, d in load_dir(bdir / lang).items() for k in d}
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ValueError(f"本體翻譯包讀不到：{exc}") from exc
+    if len(pairs) < MIN_BASE_PACK_KEYS:
+        raise ValueError(f"本體翻譯包只讀到 {len(pairs)} 個 (檔,鍵)，量級不對（門檻 {MIN_BASE_PACK_KEYS}）")
+    return pairs
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -173,12 +187,10 @@ def main(argv: list[str] | None = None) -> int:
 
     # [4] 不撞本體翻譯包出貨的鍵（交集都要登記可共存，原版會顯示的走 unshipped_keys 第三類）
     bdir = Path(args.base_pack_dir)
-    if not all((bdir / lang).is_dir() for lang in ("CH", "CN")):
-        print(f"❌ 找不到本體翻譯包的 Translate/CH、CN（{bdir}）——[4] 無法降級為通過。")
-        return 1
-    base_pairs = {f"{f}|{k}" for lang in ("CH", "CN") for f, d in load_dir(bdir / lang).items() for k in d}
-    if len(base_pairs) < MIN_BASE_PACK_KEYS:
-        print(f"❌ 本體翻譯包只讀到 {len(base_pairs)} 個 (檔,鍵)，量級不對（門檻 {MIN_BASE_PACK_KEYS}）。")
+    try:
+        base_pairs = base_pack_pairs(bdir)
+    except ValueError as exc:
+        print(f"❌ {exc}——[4] 無法降級為通過。")
         return 1
     try:
         allow = load_shared_allow(SHARED_KEYS_JSON)

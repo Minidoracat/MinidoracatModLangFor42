@@ -20,6 +20,9 @@ per-mod `extractor_schema >= 9` 才有 module 可精確比對；不可判定者�
 輸出每項：
     en / keys（連動出貨鍵數）/ files（落點檔）/ key_samples / wid
 並附 `_gap`：`"<落點檔>|<鍵>" -> en`，落地時用它把譯文展開回所有鍵。
+`_langfor42_keys`：和本機本體翻譯包 LangFor42 同鍵、又沒登記 `langfor42_shared_keys.json` 的缺口，
+已移出 `_gap`／`strings`（`{"<落點檔>|<鍵>": {en, wid}}`；`null`＝沒比對，例如找不到 LangFor42）。
+這些多半是 MOD 另寫英文的原版名稱鍵，要使用者裁決登記 `unshipped_keys.json` 第三類或可共存。
 
 `_owner_conflicts`／`_owner_conflicts_other`／`_owner_conflicts_resolved` 的每個 owner
 條目帶 `{en, has_json_en, en_source}`（見 `annotate`）：`has_json_en` 決定「抑制後這個
@@ -46,6 +49,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import tracker  # noqa: E402
 from coverage_survey import DIST_CH, WHITELIST, target_file  # noqa: E402
+import test_vanilla_no_override as base_gate  # noqa: E402  ⑦ [4] 的本體翻譯包讀法與可共存清單，同一把尺
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -1116,24 +1120,42 @@ def main() -> int:
     # first-wins 英文重新寫回真相層；已裁決不補譯者殘留則會被送去翻譯。`unshipped_keys.json`
     # 的其他類（原版名稱鍵歸本體翻譯包等）沒有 owner 衝突裁決，dist 已抑制，不扣就每次都列成
     # 缺口（#1065 `IGUI_VehicleNameVanSeats_Mural`）；照登記的檔名與鍵精確比對，不做前綴正規化。
-    # registry 的解析與 fail-closed 驗證共用 `tracker.load_untranslatable()`，避免兩 consumer
-    # 分岔；路徑同其他 registry 走 `ROOT`，否則測試 harness 的臨時 repo 會讀到真 repo 的登記。
+    # registry 的解析、fail-closed 驗證與 `prefixes` 前綴規則共用 `tracker.untranslatable_matcher()`，
+    # 避免 consumer 分岔；路徑同其他 registry 走 `ROOT`，否則測試 harness 的臨時 repo 會讀到真 repo 的登記。
     try:
-        untr_pairs, _ = tracker.load_untranslatable(ROOT / "sources/untranslatable_keys.json")
+        untr = tracker.untranslatable_matcher(ROOT / "sources/untranslatable_keys.json")
     except (ValueError, OSError) as exc:
         # **producer 失敗也必須重寫 artifact**：例外逃逸發生在下方 json.dump 之前，
         # 舊成功檔會留在 `--out`，`apply_wf_result` 讀到那份安全形狀仍可放行——與
         # load_wid／裁決台帳壞損的既有 fail-closed contract 完全相同。故轉 `_unchecked`、
         # 用空扣除集繼續到 artifact 寫出，最後由統一 rc 判定回 1。
         unchecked.append(f"untranslatable registry 不可用：{type(exc).__name__}: {exc}")
-        untr_pairs = set()
+        untr = lambda stem, canon: False  # noqa: E731
     for fk in set(conflicts) | resolved_unship_keys:
         gap.pop(fk, None)
     for fk in list(gap):
         stem, _, key = fk.partition("|")
-        if ((stem, tracker._canon_key(f"{stem}.json", key)) in untr_pairs
+        if (untr(stem, tracker._canon_key(f"{stem}.json", key))
                 or f"{stem}.json|{key}" in unship_entries):
             gap.pop(fk)
+    # 本體翻譯包同鍵：本包排在它之後，同鍵出貨會改到原版名稱（⑦ [4] 擋），要使用者裁決，不送譯者。
+    # 路徑在執行期由 ROOT 推導，測試 harness 的臨時 repo 不會讀到真的 LangFor42。讀不到就不扣、
+    # 寫 null 明示沒比對（CI 沒有 LangFor42；正確性仍由收尾的 ⑦ [4] 把關）。
+    base_keys: dict[str, dict] | None = {}
+    base_why = None
+    if gap:
+        try:
+            base_pairs = base_gate.base_pack_pairs(ROOT.parent / base_gate.BASE_PACK_REL)
+            shared_allow = base_gate.load_shared_allow(ROOT / "sources/langfor42_shared_keys.json")
+        except (OSError, ValueError) as exc:
+            base_keys, base_why = None, f"{type(exc).__name__}: {exc}"
+        else:
+            for fk in list(gap):
+                stem, _, key = fk.partition("|")
+                pair = f"{stem}.json|{key}"
+                if pair in base_pairs and pair not in shared_allow:
+                    en, wid = gap.pop(fk)
+                    base_keys[fk] = {"en": en, "wid": wid}
     by_en: dict[str, list[str]] = collections.defaultdict(list)
     wid_of: dict[str, set[str]] = collections.defaultdict(set)
     for fk, (en, wid) in gap.items():
@@ -1151,6 +1173,7 @@ def main() -> int:
     out.parent.mkdir(parents=True, exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:
         json.dump({"strings": rows, "_gap": {k: v[0] for k, v in gap.items()},
+                   "_langfor42_keys": base_keys,
                    "_unchecked": unchecked, "_undecidable": undecidable,
                    "_stale_decisions": redo,
                    # 條件譯文過時／分組不符者的重新分組建議（新簽名＋分組，譯文欄留給維護者重譯）
@@ -1172,6 +1195,16 @@ def main() -> int:
     print(f"{len(gap)} 鍵 → {len(rows)} 條相異字串"
           f"（重複率 {(1 - len(rows) / max(len(gap), 1)) * 100:.1f}%）→ {out}")
     print("  落點:", dict(collections.Counter(k.split("|")[0] for k in gap).most_common(8)))
+    if base_keys:
+        print(f"  ⚠️ {len(base_keys)} 個缺口和本體翻譯包 LangFor42 同鍵，已移出缺口、不送譯者"
+              "（要使用者裁決：原版會顯示就登記 sources/unshipped_keys.json 第三類，"
+              "不會顯示就登記 sources/langfor42_shared_keys.json 後重跑）：")
+        for fk, v in list(base_keys.items())[:20]:
+            print(f"    {fk}  {v['en'][:60]!r}  ({v['wid']})")
+        if len(base_keys) > 20:
+            print(f"    ...（還有 {len(base_keys) - 20} 個）")
+    elif base_keys is None:
+        print(f"  ⚠️ 未比對本體翻譯包（{base_why}）——原版名稱鍵可能仍在缺口裡；收尾 ⑦ [4] 會擋")
     if idonly_total:
         print(f"  · 另扣除 {idonly_total} 筆物品名 DisplayName 等於 item id 或為空白（上游沒給真英文名）")
     if undecidable:

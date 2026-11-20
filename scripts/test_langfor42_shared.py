@@ -40,4 +40,23 @@ with tempfile.TemporaryDirectory() as td:
     p.write_text(json.dumps({"entries": {"UI.json|UI_X": "理由"}}, ensure_ascii=False), encoding="utf-8")
     assert gate.load_shared_allow(p) == {"UI.json|UI_X": "理由"}
 
-print("✅ test_langfor42_shared：撞鍵判定與可共存清單形狀檢查全過")
+# 本體翻譯包讀取（⑦ [4] 與 prep 共用）：目錄缺、量級不對都 raise，足量時回 CH∪CN 聯集。
+with tempfile.TemporaryDirectory() as td:
+    b = Path(td)
+    for case in ("缺目錄", "量級不對"):
+        try:
+            gate.base_pack_pairs(b)
+        except ValueError:
+            pass
+        else:
+            raise AssertionError(f"base_pack_pairs {case}沒擋下")
+        for lang in ("CH", "CN"):
+            (b / lang).mkdir(exist_ok=True)
+    filler = {f"UI_F{i}": "x" for i in range(gate.MIN_BASE_PACK_KEYS)}
+    (b / "CH" / "UI.json").write_text(json.dumps(filler), encoding="utf-8")
+    (b / "CN" / "IG_UI.json").write_text(json.dumps({"IGUI_OnlyCN": "x"}), encoding="utf-8")
+    got = gate.base_pack_pairs(b)
+    assert "IG_UI.json|IGUI_OnlyCN" in got and "UI.json|UI_F0" in got, sorted(got)[:3]
+    assert len(got) == gate.MIN_BASE_PACK_KEYS + 1, len(got)
+
+print("✅ test_langfor42_shared：撞鍵判定、可共存清單形狀與本體翻譯包讀取檢查全過")

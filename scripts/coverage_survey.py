@@ -115,11 +115,10 @@ def main() -> int:
                  if not fk.startswith("_")
                  for f, _, k in (fk.partition("|"),)}
     n_unshipped = 0
-    # 已裁決不補譯（untranslatable_keys.json：render carrier／HEADER_ 檔頭註記等內部鍵）同樣不是
-    # 積壓。與 prep_mod_strings／tracker.py coverage 共用 tracker.load_untranslatable() 的身分，
+    # 已裁決不補譯（untranslatable_keys.json：逐鍵登記與 prefixes 前綴規則）同樣不是積壓。
+    # 與 prep_mod_strings／tracker.py coverage 共用 tracker.untranslatable_matcher() 的 canonical 身分，
     # 三支工具對同一筆人工裁決不得給出相反結論。
-    untr_pairs, _ = tracker.load_untranslatable()
-    untranslatable = {f"{stem}|{key}" for stem, key in untr_pairs}
+    untr = tracker.untranslatable_matcher(ROOT / "sources/untranslatable_keys.json")
     n_untranslatable = 0
 
     state = tracker.load_corpus_hashes(ROOT / "tracker-state" / "en_corpus_hashes",
@@ -159,7 +158,7 @@ def main() -> int:
             if pair in unshipped:       # 已裁決不出貨，非積壓
                 n_unshipped += 1
                 continue
-            if pair in untranslatable:  # 已裁決不補譯，非積壓
+            if untr(tgt, tracker._canon_key(f"{tgt}.json", key)):  # 已裁決不補譯，非積壓
                 n_untranslatable += 1
                 continue
             need.add(pair)

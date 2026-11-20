@@ -629,18 +629,19 @@ def find_untranslatable_shipped(
     鍵多半玩家看不到，或值不該由本包提供（測試台、MOD 每版重算的數字），一出貨就要逐鍵
     裁決：登記 `unshipped_keys.json` 不出貨，或從 untranslatable 移除。2026-10-26 同步
     As1 v3.12.0 帶回 338 個 Knox 測試台鍵，1.62.0–1.71.0 連出 10 版沒人發現，才加這道。
-    身分沿用 `tracker.load_untranslatable` 的 canonical 口徑（`UI.json|UI_Foo` 與 `Foo`、
-    `ItemName_Base.X` 與 `Base.X` 視為同一鍵），和 prep／coverage 扣缺口用的是同一把尺。
+    身分沿用 `tracker.untranslatable_matcher` 的 canonical 口徑（`UI.json|UI_Foo` 與 `Foo`、
+    `ItemName_Base.X` 與 `Base.X` 視為同一鍵，另含 `prefixes` 前綴規則），和 prep／coverage
+    扣缺口用的是同一把尺。
     """
     import tracker  # untranslatable 身分的單一實作
 
-    pairs, _items = tracker.load_untranslatable(UNTRANSLATABLE_KEYS_JSON)
+    hit = tracker.untranslatable_matcher(UNTRANSLATABLE_KEYS_JSON)
     hits = {
         f"{fname}|{key}"
         for merged in (merged_cn, merged_ch)
         for fname, fmap in merged.items()
         for key in fmap
-        if (tracker._key_stem(fname), tracker._canon_key(fname, key)) in pairs
+        if hit(tracker._key_stem(fname), tracker._canon_key(fname, key))
     }
     return sorted(hits)
 
@@ -1647,8 +1648,9 @@ def cmd_build() -> int:
             print(e)
     untr_shipped = find_untranslatable_shipped(merged_cn, merged_ch)
     if untr_shipped:
-        print(f"\n❌ 登記不翻（untranslatable_keys.json）的鍵仍會出貨 {len(untr_shipped)} 個。"
-              "逐鍵裁決：不出貨就登記 sources/unshipped_keys.json，要出貨就從 untranslatable 移除：")
+        print(f"\n❌ 登記不翻（untranslatable_keys.json，含 prefixes 前綴規則）的鍵仍會出貨 {len(untr_shipped)} 個。"
+              "逐鍵裁決：不出貨就登記 sources/unshipped_keys.json（照其 _rule 分類），"
+              "要出貨就從 untranslatable 移除：")
         for p in untr_shipped[:50]:
             print(f"  {p}")
         if len(untr_shipped) > 50:

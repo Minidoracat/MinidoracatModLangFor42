@@ -2554,10 +2554,10 @@ def check_not_shipped(
     """[20] 登記不出貨（unshipped_keys）與登記不翻（untranslatable_keys）的鍵都不得在 dist。
 
     builder 以 suppress_unshipped 剔除前者、find_untranslatable_shipped 擋後者；本項獨立讀 dist
-    重驗。untranslatable 的身分沿用 `tracker.load_untranslatable`（prep／coverage 共用的 canonical
-    口徑：`UI.json|UI_Foo`＝`Foo`、`ItemName_Base.X`＝`Base.X`），不是 builder 的函式。
+    重驗。untranslatable 的身分沿用 `tracker.untranslatable_matcher`（prep／coverage 共用的 canonical
+    口徑：`UI.json|UI_Foo`＝`Foo`、`ItemName_Base.X`＝`Base.X`，含 `prefixes` 前綴規則），不是 builder 的函式。
     """
-    untr, _items = tracker.load_untranslatable(
+    untr = tracker.untranslatable_matcher(
         Path(repo) / "sources" / "untranslatable_keys.json")
     fail: list[str] = []
     for lang, directory in (("CN", dist_cn), ("CH", dist_ch)):
@@ -2568,7 +2568,7 @@ def check_not_shipped(
                 pair = f"{fname}|{key}"
                 if pair in unshipped:
                     fail.append(f"{lang} {pair}：登記在 unshipped_keys.json 卻出貨")
-                elif (tracker._key_stem(fname), tracker._canon_key(fname, key)) in untr:
+                elif untr(tracker._key_stem(fname), tracker._canon_key(fname, key)):
                     fail.append(f"{lang} {pair}：登記在 untranslatable_keys.json 卻出貨"
                                 "（不出貨就登記 unshipped_keys.json，要出貨就從 untranslatable 移除）")
     return not fail, fail, []
