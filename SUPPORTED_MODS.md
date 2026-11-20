@@ -901,7 +901,7 @@
 | [Vehicle Skin Changer - SP/MP B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3715220670) | — | — | `VCS` | 61 | — | — |
 | [TwisTonFire - Tool Priority](https://steamcommunity.com/sharedfiles/filedetails/?id=3715296334) | TwisTonFire - 工具優先順序 | 在製作選單自訂可重複使用工具的優先順序，製作時優先使用排在前面的工具。 | `twisttool` | 7 | — | — |
 | [Objectives - Dynamic Trading Addon](https://steamcommunity.com/sharedfiles/filedetails/?id=3715741925) | — | — | `DynamicObjectives` | 23 | — | — |
-| [[42.18] Better Vanilla Firearms (Fixes, Improvements, and Additions)](https://steamcommunity.com/sharedfiles/filedetails/?id=3715977706) | — | — | `BVF42` | 23 | ⚠️ ≥17 | — |
+| [[42.18] Better Vanilla Firearms (Fixes, Improvements, and Additions)](https://steamcommunity.com/sharedfiles/filedetails/?id=3715977706) | — | — | `BVF42` | 23 | ⚠️ ≥18 | — |
 | [Dynamic Horde Events B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3716405632) | — | — | `DynamicHordeEventsB42` | 158 | — | — |
 | [The Ark Professions!](https://steamcommunity.com/sharedfiles/filedetails/?id=3716904170) | — | — | `ProfessionsTheArk` | 177 | — | — |
 | [Playable Minigames (Previously Playable Pool)](https://steamcommunity.com/sharedfiles/filedetails/?id=3716934959) | 互動小遊戲（原 Playable Pool） | 新增可多人同步遊玩的撞球、飛鏢、文字、撲克與棋盤小遊戲，支援不同難度的電腦玩家及遊戲規則設定。 | `playable_pool` | 186 | — | — |
