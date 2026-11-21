@@ -4,6 +4,16 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Changed
+
+- **Guns of 93 改了彈藥與槍名的英文，啟用它時顯示的專屬譯名跟著改。** .308、.30-30 彈藥加上「溫徹斯特」，9mm 改稱「9mm 帕拉貝倫子彈」，.30-06 加上「春田」，10mm 整箱寫成「10mm Auto」，Cobray M10 衝鋒槍與彈匣、7.62x39mm 橋夾、.308／.223 彈鏈都照新英文改。.357、.38、.44 只拿掉 Round 字樣，照舊顯示本體翻譯包的譯名。Guns of 93 新加的消音器說明也有專屬譯文（武器配件、無需工具）。
+  > 技術要點：追蹤器 #1425（owner 衝突裁決過時 66 條）。11-17～11-20 Guns of 93（3183820077）改彈藥英文、NATO 槍械包 American Prototypes 附加包與 Better Vanilla Firearms 進 census、Exhaustive Power Rework 改沙盒說明。19 條 translate 裁決與 2 條 unship 裁決（`Base.308Belt`、`Base.556Belt`，`unshipped_keys.json` 的 `owner_signature` 同步）重新簽名，JSON 中性譯名都不變。45 條條件譯文照 `_stale_variants` 重分組：衝突鍵的 Guns of 93 組照新英文重譯；本體鍵新組送 GPT-6.2 Astra max＋Claude 雙模型審核，15 組核准（.30-30、.308、.223、9mm Parabellum 單發／盒裝／箱裝各 3 組，.45 Auto 盒裝與箱裝 2 組，加上彈藥帶），.357／.38／.44 的 9 組只差 Round 判無須覆寫、不出貨。`Bullets45` 的 Guns of 93 改成 `.45 Auto` 後併入 GaelGunStore_Legacy 已核准的同英文組，核准沿用。Guns of 93 拿掉 `Recipes|OpenBoxOfBullets100` 後只剩 Better Vanilla Firearms 一個 owner，條件譯文與裁決退役，出貨的「彈藥拆盒 (100發)」不變。
+- **Better Vanilla Firearms 把原版彈藥帶改名 Shotgun Shell Holder，啟用它時顯示「霰彈托架」。** 和其他 MOD 的 `Base.ShellHolder` 同名物品譯名一致。
+- **Exhaustive Power Rework 的「工具會損壞」沙盒說明補上「噴燈也會消耗丙烷」。** 只在啟用這個版本時顯示；另外兩個 EPR 版本照舊。
+  > 技術要點：JSON 中性譯名維持三版共通的「工具用於維修時會損失耐久度. 預設: 開啟」；steamcmd 重抓 3786970737，`sandbox-options.txt` 的 `EPR.ToolsConsumed` 預設仍是 true。
+
 ## [42.22.2-1.78.0] - 2026-11-16
 
 ### Added

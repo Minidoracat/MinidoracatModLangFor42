@@ -64,8 +64,8 @@
     },
     "ItemName|Base.22Bullets": {
       "action": "translate",
-      "signature": "8b9761d8007be19b",
-      "reason": "兩者同為 .22 LR 邊緣底火彈：Guns93Test 明寫 '.22 LR Round'（同族 Base.22Box='Box of .22 LR Rounds'、Base.22BulletsBrass='.22 LR Empty Brass'）；VFE 雖只寫 '.22 Round'，但其 .22 槍械是 Ruger Mk2（Base.MK2）與 R1022（Base.1022，即 Ruger 10/22）、M15-22、CP33，全為 .22 LR 平台，可確認同一彈種。英文差異僅在有無標註 LR，屬命名精度差異。現行 '.22彈藥' 未宣稱任何獨有規格，對兩 owner 都成立，且與已出貨的 Base.22Box='.22彈藥 (整盒)'、Base.22Carton='.22彈藥 (整件)' 同族一致，建議維持。 ／2026-10-01 As1 名單納管複核：新增 3761077099/VFE 寫 .22 Rounds、3773858287/Rain 寫 .22 Round，與既有 .22 Round 同義（僅單複數），現行「.22彈藥」成立。 2026-10-26 As1 v3.12.0 同步後複核：新增的 owner（多為 Complete Vanilla Firearms Expansion）英文都與既有 owner 相同，現行譯文仍對每個 owner 成立，重新簽名。",
+      "signature": "c1d54f7bc6f47ca7",
+      "reason": "兩者同為 .22 LR 邊緣底火彈：Guns93Test 明寫 '.22 LR Round'（同族 Base.22Box='Box of .22 LR Rounds'、Base.22BulletsBrass='.22 LR Empty Brass'）；VFE 雖只寫 '.22 Round'，但其 .22 槍械是 Ruger Mk2（Base.MK2）與 R1022（Base.1022，即 Ruger 10/22）、M15-22、CP33，全為 .22 LR 平台，可確認同一彈種。英文差異僅在有無標註 LR，屬命名精度差異。現行 '.22彈藥' 未宣稱任何獨有規格，對兩 owner 都成立，且與已出貨的 Base.22Box='.22彈藥 (整盒)'、Base.22Carton='.22彈藥 (整件)' 同族一致，建議維持。 ／2026-10-01 As1 名單納管複核：新增 3761077099/VFE 寫 .22 Rounds、3773858287/Rain 寫 .22 Round，與既有 .22 Round 同義（僅單複數），現行「.22彈藥」成立。 2026-10-26 As1 v3.12.0 同步後複核：新增的 owner（多為 Complete Vanilla Firearms Expansion）英文都與既有 owner 相同，現行譯文仍對每個 owner 成立，重新簽名。 ／2026-11-21 #1425 複核：Guns of 93（3183820077）把英文改成 '.22 LR'，只改型號／口徑寫法、仍是同一物品，現值對所有 owner 仍成立，重新簽名。",
       "ch": ".22彈藥",
       "cn": ".22弹药"
     },
@@ -92,8 +92,8 @@
     },
     "ItemName|Base.792Box": {
       "action": "translate",
-      "signature": "30c8a5b310240b90",
-      "reason": "7.92mm 與 8mm Mauser 是同一彈種（7.92×57mm Mauser）的兩種標註法，不是兩種彈：Guns93Test 的 script 原名就是 'Box of 7.92x57 Mauser Rounds'，自家 ItemName 才改標成 '8mm Mauser'；WarThunderVehicleLibrary 的 7.92mm 用於 IGUI_MainGun792mm『7.92mm Machine Gun』，即德系 7.92×57 機槍彈。功能上一邊是步槍彈盒、一邊是車載機槍彈盒，但同 key 即同一 item（載入時只有一份 script 定義生效），名稱層無誠實性問題。現行值與已出貨同族（Base.792Bullets/792Carton/792BulletsBrass 全用 '8mm Mauser'）一致，另有獨立的 Base.792x57* 家族使用 '7.92x57mm' 寫法，故此鍵維持現值即可，不建議單獨改成 7.92mm 造成家族分裂。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+      "signature": "eea121a4e976f536",
+      "reason": "7.92mm 與 8mm Mauser 是同一彈種（7.92×57mm Mauser）的兩種標註法，不是兩種彈：Guns93Test 的 script 原名就是 'Box of 7.92x57 Mauser Rounds'，自家 ItemName 才改標成 '8mm Mauser'；WarThunderVehicleLibrary 的 7.92mm 用於 IGUI_MainGun792mm『7.92mm Machine Gun』，即德系 7.92×57 機槍彈。功能上一邊是步槍彈盒、一邊是車載機槍彈盒，但同 key 即同一 item（載入時只有一份 script 定義生效），名稱層無誠實性問題。現行值與已出貨同族（Base.792Bullets/792Carton/792BulletsBrass 全用 '8mm Mauser'）一致，另有獨立的 Base.792x57* 家族使用 '7.92x57mm' 寫法，故此鍵維持現值即可，不建議單獨改成 7.92mm 造成家族分裂。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。 ／2026-11-21 #1425 複核：Guns of 93（3183820077）把英文改成 'Box of 8mm Mauser'，只改型號／口徑寫法、仍是同一物品，現值對所有 owner 仍成立，重新簽名。",
       "ch": "8mm毛瑟子彈 (整盒)",
       "cn": "8mm毛瑟子弹 (整盒)"
     },
@@ -127,8 +127,8 @@
     },
     "ItemName|Base.MAC10Mag": {
       "action": "translate",
-      "signature": "fd7ca9bbc251dde8",
-      "reason": "同物中性裁決：Firearms 為 MAC 10 Magazine，Guns93 為 30rd Cobray MAC-10 Magazine (.45 Auto)；兩者都是 MAC-10 的 .45 ACP 彈匣。移除 owner 專屬廠牌，採 MAC-10衝鋒槍彈匣，與本批已中性化的 Base.MAC10='MAC-10衝鋒槍' 一致。",
+      "signature": "0ac260a4bb1672c2",
+      "reason": "同物中性裁決：Firearms 為 MAC 10 Magazine，Guns93 為 30rd Cobray MAC-10 Magazine (.45 Auto)；兩者都是 MAC-10 的 .45 ACP 彈匣。移除 owner 專屬廠牌，採 MAC-10衝鋒槍彈匣，與本批已中性化的 Base.MAC10='MAC-10衝鋒槍' 一致。 ／2026-11-21 #1425 複核：Guns of 93（3183820077）把英文改成 '30rd Cobray M10 Magazine (.45 Auto)'，只改型號／口徑寫法、仍是同一物品，現值對所有 owner 仍成立，重新簽名。",
       "ch": "MAC-10衝鋒槍彈匣",
       "cn": "MAC-10冲锋枪弹匣"
     },
@@ -183,8 +183,8 @@
     },
     "ItemName|Base.22Carton": {
       "action": "translate",
-      "signature": "d23f2c14d6526c5d",
-      "reason": "Guns93 寫 .22 LR、VFE 寫 .22，同一口徑家族（.22 通稱即 .22 LR），差異僅命名精細度。現行譯名只寫 .22 未主張 LR，對兩 owner 皆成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 3715977706/BetterVanillaFirearms42 寫 Carton of .22 Long Rifle Rounds、3761077099/VFE 寫 Carton of .22 Boxes，同為 .22 LR 整件，現行「.22彈藥 (整件)」成立。 2026-10-26 As1 v3.12.0 同步後複核：新增的 owner（多為 Complete Vanilla Firearms Expansion）英文都與既有 owner 相同，現行譯文仍對每個 owner 成立，重新簽名。",
+      "signature": "c87eb091ae39a65d",
+      "reason": "Guns93 寫 .22 LR、VFE 寫 .22，同一口徑家族（.22 通稱即 .22 LR），差異僅命名精細度。現行譯名只寫 .22 未主張 LR，對兩 owner 皆成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 3715977706/BetterVanillaFirearms42 寫 Carton of .22 Long Rifle Rounds、3761077099/VFE 寫 Carton of .22 Boxes，同為 .22 LR 整件，現行「.22彈藥 (整件)」成立。 2026-10-26 As1 v3.12.0 同步後複核：新增的 owner（多為 Complete Vanilla Firearms Expansion）英文都與既有 owner 相同，現行譯文仍對每個 owner 成立，重新簽名。 ／2026-11-21 #1425 複核：Guns of 93（3183820077）把英文改成 'Carton of .22 LR'，只改型號／口徑寫法、仍是同一物品，現值對所有 owner 仍成立，重新簽名。",
       "ch": ".22彈藥 (整件)",
       "cn": ".22弹药 (整件)"
     },
@@ -211,8 +211,8 @@
     },
     "ItemName|Base.792Bullets": {
       "action": "translate",
-      "signature": "9a52c8a2664a9e95",
-      "reason": "「8mm Mauser Round」與「7.92 Ammo」是同一彈藥：7.92×57mm Mauser 的通稱即 8mm Mauser，兩名指同一 cartridge。現行譯名對兩 owner 皆成立，且與同倉的 Base.792BulletsBrass「空黃銅彈殼 (8mm Mauser)」寫法一致，維持現值。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。",
+      "signature": "4836b939900f624f",
+      "reason": "「8mm Mauser Round」與「7.92 Ammo」是同一彈藥：7.92×57mm Mauser 的通稱即 8mm Mauser，兩名指同一 cartridge。現行譯名對兩 owner 皆成立，且與同倉的 Base.792BulletsBrass「空黃銅彈殼 (8mm Mauser)」寫法一致，維持現值。 2026-08-30 #325：逐鍵複核 As1 v3.8.0 值與排版；現行 CH/CN 對完整 owner census 仍成立，必要的語意分歧已由 cn_overrides 收斂為中性值，故更新出貨錨點。 ／2026-11-21 #1425 複核：Guns of 93（3183820077）把英文改成 '8mm Mauser'，只改型號／口徑寫法、仍是同一物品，現值對所有 owner 仍成立，重新簽名。",
       "ch": "8mm毛瑟子彈",
       "cn": "8mm毛瑟子弹"
     },
@@ -407,8 +407,8 @@
     },
     "ItemName|Base.22Box": {
       "action": "translate",
-      "signature": "be1ee3fb8a973ffb",
-      "reason": "兩 owner 均為一盒 .22 口徑子彈，差異僅在 Guns93Test 標明 LR 而 VFE 未標。現行譯名不指定 LR，對兩邊都成立，維持現行。 ／2026-10-01 As1 名單納管複核：新增 owner 3761077099/VFE，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 2026-10-26 As1 v3.12.0 同步後複核：新增的 owner（多為 Complete Vanilla Firearms Expansion）英文都與既有 owner 相同，現行譯文仍對每個 owner 成立，重新簽名。",
+      "signature": "aefeebf51897ac60",
+      "reason": "兩 owner 均為一盒 .22 口徑子彈，差異僅在 Guns93Test 標明 LR 而 VFE 未標。現行譯名不指定 LR，對兩邊都成立，維持現行。 ／2026-10-01 As1 名單納管複核：新增 owner 3761077099/VFE，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 2026-10-26 As1 v3.12.0 同步後複核：新增的 owner（多為 Complete Vanilla Firearms Expansion）英文都與既有 owner 相同，現行譯文仍對每個 owner 成立，重新簽名。 ／2026-11-21 #1425 複核：Guns of 93（3183820077）把英文改成 'Box of .22 LR'，只改型號／口徑寫法、仍是同一物品，現值對所有 owner 仍成立，重新簽名。",
       "ch": ".22彈藥 (整盒)",
       "cn": ".22弹药 (整盒)"
     },
@@ -470,8 +470,8 @@
     },
     "ItemName|Base.MAC10": {
       "action": "translate",
-      "signature": "960bb33c761bed63",
-      "reason": "兩組 owner 均指 MAC-10 衝鋒槍（Cobray M-10 即 MAC-10 的 Cobray 製版本，同一槍）。現行 '科布雷M-10' 偏向 Guns93 的廠牌寫法，對 GaelGun 玩家辨識度低；'MAC-10' 是通用名，對兩邊皆誠實且更易辨識，建議改用。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3773858287/B42 Rain's Firearms & Gun Parts（含 Expanded），英文 'MAC-10'，與通用名譯「MAC-10衝鋒槍」完全一致，原譯成立。",
+      "signature": "d98cbffb398b7d00",
+      "reason": "兩組 owner 均指 MAC-10 衝鋒槍（Cobray M-10 即 MAC-10 的 Cobray 製版本，同一槍）。現行 '科布雷M-10' 偏向 Guns93 的廠牌寫法，對 GaelGun 玩家辨識度低；'MAC-10' 是通用名，對兩邊皆誠實且更易辨識，建議改用。 2026-08-26 重新錨定：上游 3616176188/GaelGunStore 把 Translate/EN/ItemName.json 的 B41 前綴鍵 ItemName_Base.* 改為裸鍵 Base.*（該 owner 的值即其自家 ItemName 覆寫值，本 reason 原已引用）、3597471949 移除部分 IGUI_Empty 變體，本落點 census 因此變動。已逐鍵複核現行譯文對新 census 的每個 owner 仍成立，裁決與出貨譯文不變，僅更新 signature。 ／2026-10-01 As1 名單納管複核：新增 3773858287/B42 Rain's Firearms & Gun Parts（含 Expanded），英文 'MAC-10'，與通用名譯「MAC-10衝鋒槍」完全一致，原譯成立。 ／2026-11-21 #1425 複核：Guns of 93（3183820077）把英文改成 'Cobray M10'，只改型號／口徑寫法、仍是同一物品，現值對所有 owner 仍成立，重新簽名。",
       "ch": "MAC-10衝鋒槍",
       "cn": "MAC-10冲锋枪"
     },
@@ -825,8 +825,8 @@
     },
     "Tooltip|Tooltip_Silencer": {
       "action": "translate",
-      "signature": "0aeeb855b6375c40",
-      "reason": "四個 owner 收斂成三份英文，但仍有誠實交集，且交集正是現行值。三方語意差異：Firearms／FirearmsBETA（同 wid 兩 root，值相同）只講通用效果 'Suppresses the sound of a firing gun.'，且它根本沒有 Base.Silencer 這個 item——它用這個通用鍵服務自家一整排口徑專屬消音器（Base.9mmSilencer／.45Silencer／ShotgunSilencer／ImprovisedSilencer…），其抑制效果依口徑並由 sandbox 選項 Sandbox_Firearms_SuppressorEffectiveness* 逐一調整，沒有固定百分比、也沒有射程懲罰；Simple Silencers 與 Improvised Silencers 則都綁在 Base.Silencer 上，兩者對本鍵的數值一致（皆 80%）且都帶「略微降低射程」。因此：寫 80% 對 Firearms 是假（其值可變且無固定數字），寫「略微降低射程」對 Firearms 也是假（無此懲罰）；反向來看，Firearms 的通用句是另兩者的嚴格上位敘述，取交集（降低開槍噪音傳播範圍）對三方全真。這不是擅自平均數字，而是「有數字 vs 無數字」取交集。本鍵已有既有裁決在案：sources/mods/3779164273/metadata.json 明載 Tooltip_Silencer 為跨 mod 共用鍵、數值不一致、寫任一方專屬全文都會砸掉另一方，故該 mod 收錄時刻意不收此鍵、維持現行出貨值不動。維持 decision；若日後要各自精確，需 isModActive 覆寫或獨立子包（該 metadata 亦已記載此路線）。 ／2026-10-01 As1 名單納管複核：新增 3773834525/MarzVanillaGuns，英文 'Needs a wrench in order to install or remove'。現譯「降低槍聲傳播範圍」對它仍為真（滅音器本身確實降噪），只是沒寫出扳手需求；若加上扳手句又對 Firearms／SimpleSilencers／Improvised Silencers 不實，故維持原譯、重新背書。 2026-10-26 As1 v3.12.0 同步後複核：新增的 owner（多為 Complete Vanilla Firearms Expansion）英文都與既有 owner 相同，現行譯文仍對每個 owner 成立，重新簽名。",
+      "signature": "6ff240605162ffd2",
+      "reason": "四個 owner 收斂成三份英文，但仍有誠實交集，且交集正是現行值。三方語意差異：Firearms／FirearmsBETA（同 wid 兩 root，值相同）只講通用效果 'Suppresses the sound of a firing gun.'，且它根本沒有 Base.Silencer 這個 item——它用這個通用鍵服務自家一整排口徑專屬消音器（Base.9mmSilencer／.45Silencer／ShotgunSilencer／ImprovisedSilencer…），其抑制效果依口徑並由 sandbox 選項 Sandbox_Firearms_SuppressorEffectiveness* 逐一調整，沒有固定百分比、也沒有射程懲罰；Simple Silencers 與 Improvised Silencers 則都綁在 Base.Silencer 上，兩者對本鍵的數值一致（皆 80%）且都帶「略微降低射程」。因此：寫 80% 對 Firearms 是假（其值可變且無固定數字），寫「略微降低射程」對 Firearms 也是假（無此懲罰）；反向來看，Firearms 的通用句是另兩者的嚴格上位敘述，取交集（降低開槍噪音傳播範圍）對三方全真。這不是擅自平均數字，而是「有數字 vs 無數字」取交集。本鍵已有既有裁決在案：sources/mods/3779164273/metadata.json 明載 Tooltip_Silencer 為跨 mod 共用鍵、數值不一致、寫任一方專屬全文都會砸掉另一方，故該 mod 收錄時刻意不收此鍵、維持現行出貨值不動。維持 decision；若日後要各自精確，需 isModActive 覆寫或獨立子包（該 metadata 亦已記載此路線）。 ／2026-10-01 As1 名單納管複核：新增 3773834525/MarzVanillaGuns，英文 'Needs a wrench in order to install or remove'。現譯「降低槍聲傳播範圍」對它仍為真（滅音器本身確實降噪），只是沒寫出扳手需求；若加上扳手句又對 Firearms／SimpleSilencers／Improvised Silencers 不實，故維持原譯、重新背書。 2026-10-26 As1 v3.12.0 同步後複核：新增的 owner（多為 Complete Vanilla Firearms Expansion）英文都與既有 owner 相同，現行譯文仍對每個 owner 成立，重新簽名。 ／2026-11-21 #1425 複核：新增 owner Guns of 93（3183820077）'Weapon attachment. No tool required. Will reduce the sound radius firearm.'；現值「降低開槍時的聲音傳播範圍」對它也成立，各 owner 對工具需求說法不同（Marz 要扳手、Guns93 免工具），不寫進共用譯文，重新簽名。",
       "ch": "降低開槍時的聲音傳播範圍.",
       "cn": "降低开枪时的声音传播范围."
     },
@@ -2422,8 +2422,8 @@
     },
     "ContextMenu|ContextMenu_Loosen": {
       "action": "translate",
-      "signature": "ec5ec0ebd61d765e",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 owner 3791086306/NMS，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 ／2026-11-12 #1339–#1370 複核：新增 owner Operator Gear（3823941573/GhosteGear）寫 'Loosen'，和既有 owner 相同，原裁決仍成立，重新簽名。",
+      "signature": "74b8a4a420669a87",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 owner 3791086306/NMS，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 ／2026-11-12 #1339–#1370 複核：新增 owner Operator Gear（3823941573/GhosteGear）寫 'Loosen'，和既有 owner 相同，原裁決仍成立，重新簽名。 ／2026-11-21 #1425 複核：新增 owner 3243805556/Totally's NATO Firearms Pack B42 -American Prototypes（NATO 槍械包的附加包，英文與既有 owner 相同），原裁決仍成立，重新簽名。",
       "ch": "寬鬆穿戴",
       "cn": "宽松穿戴"
     },
@@ -2604,8 +2604,8 @@
     },
     "ContextMenu|ContextMenu_Tight": {
       "action": "translate",
-      "signature": "e01fd21cd6b7c01a",
-      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 owner 3791086306/NMS，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 ／2026-11-12 #1339–#1370 複核：新增 owner Operator Gear（3823941573/GhosteGear）寫 'Tight'，和既有 owner 相同，原裁決仍成立，重新簽名。",
+      "signature": "dc3fb9945add71ae",
+      "reason": "2026-08-27 #283–#292 上游改文／新 owner 進 census。相異英文 2 種，屬同一物品的命名粒度或排版差異（正式名 vs script 代號、有無類別後綴），不是不同實體。現行出貨譯文未宣稱任一 owner 獨有的型號／口徑／廠牌，對每個 owner 都成立，維持現值。 ／2026-10-01 As1 名單納管複核：新增 owner 3791086306/NMS，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 ／2026-11-12 #1339–#1370 複核：新增 owner Operator Gear（3823941573/GhosteGear）寫 'Tight'，和既有 owner 相同，原裁決仍成立，重新簽名。 ／2026-11-21 #1425 複核：3243805556/Totally's NATO Firearms Pack 把 'Tight Fit' 改成 'Tight'，仍是同一個緊身穿戴選項，現值對所有 owner 成立，重新簽名。",
       "ch": "緊身穿戴",
       "cn": "紧身穿戴"
     },
@@ -6563,15 +6563,15 @@
     },
     "ContextMenu|ContextMenu_Back": {
       "action": "translate",
-      "signature": "d5d0da4ea896478a",
-      "reason": "NATO Firearms(3243805556) 'Back' 是槍套位置（同組另有 Head／Attach To Belt），RandomClothing(3397182976) 'Wear on Back' 是穿在背上；現值「戴在後方」對兩者皆真。NATO 側為 _EN.txt 死檔，unship 會顯示字面鍵名，故不 unship。",
+      "signature": "2e76e9c01c35c782",
+      "reason": "NATO Firearms(3243805556) 'Back' 是槍套位置（同組另有 Head／Attach To Belt），RandomClothing(3397182976) 'Wear on Back' 是穿在背上；現值「戴在後方」對兩者皆真。NATO 側為 _EN.txt 死檔，unship 會顯示字面鍵名，故不 unship。 ／2026-11-21 #1425 複核：新增 owner 3243805556/Totally's NATO Firearms Pack B42 -American Prototypes（NATO 槍械包的附加包，英文與既有 owner 相同），原裁決仍成立，重新簽名。",
       "ch": "戴在後方",
       "cn": "戴在后方"
     },
     "ContextMenu|ContextMenu_Open": {
       "action": "translate",
-      "signature": "7497ce11e6be3d84",
-      "reason": "#494 wid 3616536783 於 42.20 把泛用鍵改名為 ContextMenu_TW… 後, 本 wid 兩個 owner （3616536783/Tomb's Wardrobe - Alternative、3616536783/Tomb's Wardrobe - Alternative - Vanilla，舊值皆 \"Wear Open\"）自本鍵 census 退場, 造成裁決簽名漂移。已用 prep_mod_strings.census_signature 攤平 {owner: raw_en} 重算, 並以 _owner_conflicts_resolved 未過時的 1065 筆自檢 100% 相符驗證方法正確；把兩個 owner 加回即可還原台帳現值 5eb1696a7c3706cb（實測相符）, 證明漂移完全由本 wid 造成、與其他 owner 無關。本鍵譯文來源 lane 為 As1 衍生層 sources/mods/*/CN（own_translations 無此鍵）, 依契約凍結保留、不因本 wid 退場刪除全域譯文。剩餘 5 個 owner 仍有 2 種上游英文, 本鍵維持 owner 衝突, action 續為 translate。現值「開啟／打开」對每個剩餘 owner 仍成立, 只需換簽名。台帳 reason 需一併移除已不存在的 \"Tomb's 'Wear Open'\" 舉例——本 mod 已改用 ContextMenu_TWOpen, 該鍵在本批以精確譯「敞開穿著／敞开穿着」落地, 不再受此折衷約束。 [簽名證據] 台帳現值 signature=5eb1696a7c3706cb；本 wid 退場後以 census_signature(sorted({owner: raw_en})) 重算 = a4d618d787970ee2。退場前的完整 census（把本 wid 兩個 owner 加回）= {\"3243805556/Totally's NATO Firearms Pack\": \"Open\", \"3307376332/Frockin Splendor!\": \"Open Jacket\", \"3411888105/Frockin Splendor! Vol.2\": \"Open Jacket\", \"3453676250/Frockin Shirts n Ties\": \"Open Jacket\", \"3616536783/Tomb's Wardrobe - Alternative\": \"Wear Open\", \"3616536783/Tomb's Wardrobe - Alternative - Vanilla\": \"Wear Open\", \"3661164291/MedievalZ\": \"Open\"}，其簽名重算結果與台帳現值 5eb1696a7c3706cb 相符, 故本鍵漂移可完全歸因於本 wid。owners 欄為**現行**完整 owner→上游原始英文對映, 供主 agent 計算新簽名。 ／2026-10-01 As1 名單納管複核：新增 owner 3701066084/ElliesOutfits、3791086306/NMS、3798146388/Frockin Backstage!，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。",
+      "signature": "2142cf20ec1d0c67",
+      "reason": "#494 wid 3616536783 於 42.20 把泛用鍵改名為 ContextMenu_TW… 後, 本 wid 兩個 owner （3616536783/Tomb's Wardrobe - Alternative、3616536783/Tomb's Wardrobe - Alternative - Vanilla，舊值皆 \"Wear Open\"）自本鍵 census 退場, 造成裁決簽名漂移。已用 prep_mod_strings.census_signature 攤平 {owner: raw_en} 重算, 並以 _owner_conflicts_resolved 未過時的 1065 筆自檢 100% 相符驗證方法正確；把兩個 owner 加回即可還原台帳現值 5eb1696a7c3706cb（實測相符）, 證明漂移完全由本 wid 造成、與其他 owner 無關。本鍵譯文來源 lane 為 As1 衍生層 sources/mods/*/CN（own_translations 無此鍵）, 依契約凍結保留、不因本 wid 退場刪除全域譯文。剩餘 5 個 owner 仍有 2 種上游英文, 本鍵維持 owner 衝突, action 續為 translate。現值「開啟／打开」對每個剩餘 owner 仍成立, 只需換簽名。台帳 reason 需一併移除已不存在的 \"Tomb's 'Wear Open'\" 舉例——本 mod 已改用 ContextMenu_TWOpen, 該鍵在本批以精確譯「敞開穿著／敞开穿着」落地, 不再受此折衷約束。 [簽名證據] 台帳現值 signature=5eb1696a7c3706cb；本 wid 退場後以 census_signature(sorted({owner: raw_en})) 重算 = a4d618d787970ee2。退場前的完整 census（把本 wid 兩個 owner 加回）= {\"3243805556/Totally's NATO Firearms Pack\": \"Open\", \"3307376332/Frockin Splendor!\": \"Open Jacket\", \"3411888105/Frockin Splendor! Vol.2\": \"Open Jacket\", \"3453676250/Frockin Shirts n Ties\": \"Open Jacket\", \"3616536783/Tomb's Wardrobe - Alternative\": \"Wear Open\", \"3616536783/Tomb's Wardrobe - Alternative - Vanilla\": \"Wear Open\", \"3661164291/MedievalZ\": \"Open\"}，其簽名重算結果與台帳現值 5eb1696a7c3706cb 相符, 故本鍵漂移可完全歸因於本 wid。owners 欄為**現行**完整 owner→上游原始英文對映, 供主 agent 計算新簽名。 ／2026-10-01 As1 名單納管複核：新增 owner 3701066084/ElliesOutfits、3791086306/NMS、3798146388/Frockin Backstage!，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 ／2026-11-21 #1425 複核：新增 owner 3243805556/Totally's NATO Firearms Pack B42 -American Prototypes（NATO 槍械包的附加包，英文與既有 owner 相同），原裁決仍成立，重新簽名。",
       "ch": "開啟",
       "cn": "打开"
     },
@@ -8268,8 +8268,8 @@
     },
     "ItemName|Base.556Belt": {
       "action": "unship",
-      "signature": "aae385f7ece12d65",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Base.556Belt 是「Belted .223 Rem Rounds」(上好鏈節的 .223 彈鏈, 該 MOD 另有 M249Box 彈藥箱物品); Brita 的同代號物品是「5.56x45mm Box Magazine」(盒式彈匣). 彈鏈與盒式彈匣是不同的彈藥形態, 找不到對雙方都誠實又有用的上位詞 (現值「.223 Rem彈鏈」對 Brita 是錯的). 抑制後 Guns of 93 顯示自己 ItemName.json 的英文, Brita 顯示 script 英文, 無鍵名殘留. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal 寫 'M249 5.56 100rd Belt Box'（彈鏈盒）、BritaGunworksLegacyMagazines 寫 '5.56x45mm Box Magazine'；與 Guns of 93 的彈鏈仍是不同彈藥形態，維持不出貨。"
+      "signature": "0eb3a9f1ad645af6",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Base.556Belt 是「Belted .223 Rem Rounds」(上好鏈節的 .223 彈鏈, 該 MOD 另有 M249Box 彈藥箱物品); Brita 的同代號物品是「5.56x45mm Box Magazine」(盒式彈匣). 彈鏈與盒式彈匣是不同的彈藥形態, 找不到對雙方都誠實又有用的上位詞 (現值「.223 Rem彈鏈」對 Brita 是錯的). 抑制後 Guns of 93 顯示自己 ItemName.json 的英文, Brita 顯示 script 英文, 無鍵名殘留. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal 寫 'M249 5.56 100rd Belt Box'（彈鏈盒）、BritaGunworksLegacyMagazines 寫 '5.56x45mm Box Magazine'；與 Guns of 93 的彈鏈仍是不同彈藥形態，維持不出貨。 ／2026-11-21 #1425 複核：Guns of 93（3183820077）改名 '.223/5.56x45mm Ammo Belt'，仍是彈鏈，與 Brita 的盒式彈匣仍是不同物品，維持 unship，重新簽名（unshipped_keys.json 的 owner_signature 同步）。"
     },
     "ItemName|Base.GunCleaningKit": {
       "action": "translate",
@@ -8301,8 +8301,8 @@
     },
     "ItemName|Base.3006Bullets": {
       "action": "translate",
-      "signature": "890d3dd310b44bda",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 .30-06 Round 與 Brita 的 30-06 SPRG Round (script 名, SPRG = Springfield) 是同一種 .30-06 春田步槍彈, 只差寫法. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
+      "signature": "fc72edd4dbae771a",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的 .30-06 Round 與 Brita 的 30-06 SPRG Round (script 名, SPRG = Springfield) 是同一種 .30-06 春田步槍彈, 只差寫法. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。 ／2026-11-21 #1425 複核：Guns of 93（3183820077）把英文改成 '.30-06 Springfield'，只改型號／口徑寫法、仍是同一物品，現值對所有 owner 仍成立，重新簽名。",
       "ch": ".30-06子彈",
       "cn": ".30-06子弹"
     },
@@ -8322,13 +8322,13 @@
     },
     "ItemName|Base.308Belt": {
       "action": "unship",
-      "signature": "fa2827a0166ba34f",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Base.308Belt 是「Belted .308 Rounds」(.308 彈鏈, 該 MOD 另有 M60Box 彈藥箱); Brita 的同代號物品是「308 Box Magazine」(盒式彈匣). 彈鏈與盒式彈匣是不同彈藥形態, 現值「.308彈鏈」對 Brita 不成立, 也找不到雙方都成立的上位詞. 抑制後 Guns of 93 顯示 ItemName.json 英文, Brita 顯示 script 英文, 無鍵名殘留. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal 寫 '7.62x51 100rd Belt Box'、BritaGunworksLegacyMagazines 寫 '308 Box Magazine'；與 Guns of 93 的 .308 彈鏈仍是不同彈藥形態，維持不出貨。"
+      "signature": "f35e3028a9a2f788",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Base.308Belt 是「Belted .308 Rounds」(.308 彈鏈, 該 MOD 另有 M60Box 彈藥箱); Brita 的同代號物品是「308 Box Magazine」(盒式彈匣). 彈鏈與盒式彈匣是不同彈藥形態, 現值「.308彈鏈」對 Brita 不成立, 也找不到雙方都成立的上位詞. 抑制後 Guns of 93 顯示 ItemName.json 英文, Brita 顯示 script 英文, 無鍵名殘留. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal 寫 '7.62x51 100rd Belt Box'、BritaGunworksLegacyMagazines 寫 '308 Box Magazine'；與 Guns of 93 的 .308 彈鏈仍是不同彈藥形態，維持不出貨。 ／2026-11-21 #1425 複核：Guns of 93（3183820077）改名 '.308/7.62x51mm Ammo Belt'，仍是彈鏈，與 Brita 的盒式彈匣仍是不同物品，維持 unship，重新簽名（unshipped_keys.json 的 owner_signature 同步）。"
     },
     "ItemName|Base.3006Box": {
       "action": "translate",
-      "signature": "36ffbccae22f1be0",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Box of .30-06 Rounds 與 Brita 的 Box of 30-06 SPRG Rounds (script 名) 是同一盒 .30-06 子彈, 只差寫法. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。",
+      "signature": "9e1747d836668a03",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Box of .30-06 Rounds 與 Brita 的 Box of 30-06 SPRG Rounds (script 名) 是同一盒 .30-06 子彈, 只差寫法. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal（英文同 3777433827/BritaCombinedB42）；現行裁決對全部 owner 仍成立。 ／2026-11-21 #1425 複核：Guns of 93（3183820077）把英文改成 'Box of .30-06 Springfield'，只改型號／口徑寫法、仍是同一物品，現值對所有 owner 仍成立，重新簽名。",
       "ch": ".30-06子彈 (整盒)",
       "cn": ".30-06子弹 (整盒)"
     },
@@ -8341,8 +8341,8 @@
     },
     "ItemName|Base.10mmCarton": {
       "action": "translate",
-      "signature": "1c2169d26de98630",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Carton of 10mm Rounds 與 Better Vanilla Firearms 的 Carton of 10mm Auto Rounds 是同一箱 10mm 子彈 (10mm 即 10mm Auto), 只差寫法. 沿用現值.",
+      "signature": "763198ba7c4961ce",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Carton of 10mm Rounds 與 Better Vanilla Firearms 的 Carton of 10mm Auto Rounds 是同一箱 10mm 子彈 (10mm 即 10mm Auto), 只差寫法. 沿用現值. ／2026-11-21 #1425 複核：Guns of 93（3183820077）把英文改成 'Carton of 10mm Auto'，只改型號／口徑寫法、仍是同一物品，現值對所有 owner 仍成立，重新簽名。",
       "ch": "10mm子彈 (整箱)",
       "cn": "10mm子弹 (整箱)"
     },
@@ -8355,17 +8355,10 @@
     },
     "ItemName|Base.SKSClip": {
       "action": "translate",
-      "signature": "bf7e026cad992a7e",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Stripper Clip (7.62x39) 與 Brita 的 7.62x39mm Stripper Clip (script 名) 是同一種 7.62x39 橋夾, 只差詞序. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal 'SKS 7.62x39 10rd Stripper Clip'、BritaGunworksLegacyMagazines '7.62x39mm Stripper Clip'，同為 7.62x39 橋夾；現行譯名對全部 owner 仍成立。",
+      "signature": "8382a2d35cfaa9ce",
+      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Stripper Clip (7.62x39) 與 Brita 的 7.62x39mm Stripper Clip (script 名) 是同一種 7.62x39 橋夾, 只差詞序. 沿用現值. ／2026-10-18 As1 v3.11.0 名冊納管複核：新增 3801670664/BritaGunworksLocal 'SKS 7.62x39 10rd Stripper Clip'、BritaGunworksLegacyMagazines '7.62x39mm Stripper Clip'，同為 7.62x39 橋夾；現行譯名對全部 owner 仍成立。 ／2026-11-21 #1425 複核：Guns of 93（3183820077）把英文改成 'Stripper Clip (7.62x39mm)'，只改型號／口徑寫法、仍是同一物品，現值對所有 owner 仍成立，重新簽名。",
       "ch": "7.62x39橋夾",
       "cn": "7.62x39桥夹"
-    },
-    "Recipes|OpenBoxOfBullets100": {
-      "action": "translate",
-      "signature": "b3e26d7a1cb3dc3e",
-      "reason": "2026-10-02 #644 裁決：Guns of 93 的 Open Box (100 Bullets) 與 Better Vanilla Firearms 的 Open Box (100 Rounds) 是同一個拆開百發彈藥盒的配方, 只差 Bullets/Rounds. 沿用現值.",
-      "ch": "彈藥拆盒 (100發)",
-      "cn": "弹药拆盒 (100发)"
     },
     "Tooltip|Tooltip_AmmoCarrier": {
       "action": "translate",
@@ -9981,8 +9974,8 @@
     },
     "Sandbox|Sandbox_EPR_ToolsConsumed_tooltip": {
       "action": "translate",
-      "signature": "641973e7a09ee65e",
-      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。",
+      "signature": "f2b63ce30c294695",
+      "reason": "2026-10-12 #827 裁決：EPR 三個版本（EPR_B42 停更版、EPR_Community、Exhaustive Power Rework fork）主句同義，只有前兩版附 Default 句；三版 sandbox-options.txt 的預設值相同，現譯（含預設值）對三方都成立，維持現值。 ／2026-11-21 #1425 複核：3786970737/EPR 改成 'Tools lose durability and blowtorches burn propane when used for repairs.'，多出的噴燈耗丙烷是該 owner 獨有的補充，不寫進共用譯文；其 sandbox-options.txt 的 EPR.ToolsConsumed 預設仍是 true（steamcmd 重抓查證），「預設: 開啟」對三方仍成立，重新簽名。",
       "ch": "工具用於維修時會損失耐久度. 預設: 開啟",
       "cn": "工具用于维修时会损失耐久度. 默认: 开启"
     },
