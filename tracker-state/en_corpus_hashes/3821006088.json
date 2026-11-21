@@ -1,5 +1,5 @@
 {
-  "corpus_hash": "087e9908bd41de126e01e45409d7ae4098b6c97155d7e5c263bd1ac97bac4fc2",
+  "corpus_hash": "85c872fafa83a167d14e8eff9a19edade8c18dc8fc2f4d817c56df1b7a57a323",
   "extractor_schema": 10,
   "mod_ids": [
     "DefinitiveModManager"
@@ -26,6 +26,7 @@
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_cancel_library": "bb5e6ee5e7fd",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_capture_current": "e1de358ae4ef",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_capture_hint": "f5492549cc8e",
+    "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_catalog_archive_incomplete": "bcbbee28bf4f",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_catalog_by_categories": "39a8581a5c48",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_catalog_by_categories_hint": "c426c446ddb3",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_catalog_capture_scope": "5a02cd404e15",
@@ -579,8 +580,13 @@
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_library_empty_hint": "36fbc492e06f",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_library_error_archive": "78e5485cd0e8",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_library_error_backup": "f46494a21f81",
+    "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_library_error_encode": "6407735b731e",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_library_error_existing_invalid": "2d7940872347",
+    "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_library_error_group_order": "803f3be3b340",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_library_error_invalid": "896d771cc1a6",
+    "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_library_error_mod_dependency": "128b6588abfc",
+    "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_library_error_mod_order": "33cd6b710c89",
+    "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_library_error_mod_workshop": "f906fff993e7",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_library_error_read": "4cf36c903449",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_library_error_restore_failed": "3fbf84e659c7",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_library_error_size": "808b5b66bf95",
@@ -763,6 +769,9 @@
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_mp_tool_changes": "8a7c7245de50",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_mp_unsaved": "9619cb6a82cc",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_name_prompt": "e623e43ccc04",
+    "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_native_preset_library_rollback_failed": "07cd1a86f055",
+    "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_native_preset_recovery_failed": "e6ccab92ed8b",
+    "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_native_preset_save_failed": "3f814686f424",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_need_two_profiles": "96f62a2801b5",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_new": "18fdd549b2ed",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_new_game_context": "946ed70539f0",
@@ -933,8 +942,10 @@
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_server_txt_pasted": "4f14d6007261",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_server_txt_review": "df750ab9990f",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_server_txt_title": "3aa8cfec8a08",
+    "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_server_txt_workshop_change": "8b178aba46b0",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_server_txt_workshop_label": "a30afc18a902",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_server_txt_workshop_missing": "ef89b9736b46",
+    "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_server_txt_workshop_pending": "004f8f7f8480",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_server_txt_workshop_placeholder": "c2fae44b8cc9",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_server_txt_workshop_unlisted": "7aee7358a58c",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_share_copied": "6346aaa657ed",
@@ -1027,5 +1038,5 @@
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_warnings_open": "fc2b619de02e",
     "translate_en|mods/DMM/common/media/lua/shared/Translate/EN/UI.json|UI_MD_warnings_title": "47dca1fcd7b8"
   },
-  "updated_at": "2026-11-20T13:02:35Z"
+  "updated_at": "2026-11-21T04:44:40Z"
 }
