@@ -13,6 +13,8 @@
 - **Better Vanilla Firearms 把原版彈藥帶改名 Shotgun Shell Holder，啟用它時顯示「霰彈托架」。** 和其他 MOD 的 `Base.ShellHolder` 同名物品譯名一致。
 - **Exhaustive Power Rework 的「工具會損壞」沙盒說明補上「噴燈也會消耗丙烷」。** 只在啟用這個版本時顯示；另外兩個 EPR 版本照舊。
   > 技術要點：JSON 中性譯名維持三版共通的「工具用於維修時會損失耐久度. 預設: 開啟」；steamcmd 重抓 3786970737，`sandbox-options.txt` 的 `EPR.ToolsConsumed` 預設仍是 true。
+- **Knox Drugs 的右鍵「注射」併入同英文的條件譯文組。** 顯示的字和之前一樣。
+  > 技術要點：追蹤器 #1509（11-22 排程）：3674663295/KnoxDrugs 進 census，`ContextMenu|ContextMenu_Inject` 英文是裸 `Inject`，裁決「注射」照舊成立、重新簽名，條件譯文併入 Inject 組。
 
 ## [42.22.2-1.78.0] - 2026-11-16
 

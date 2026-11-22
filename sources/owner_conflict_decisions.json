@@ -2345,8 +2345,8 @@
     },
     "ContextMenu|ContextMenu_Inject": {
       "action": "translate",
-      "signature": "c87e93fe3438e2f5",
-      "reason": "2026-08-25 #279 裁決中性譯名「注射」。上游 EN 是右鍵選單的動作詞：2900366269/DrugMod、3404956403/N&C's Narcotics、3437429771/Injectors 三家都是裸 'Inject'，3580511016/SCP Pack 為 'Inject Serum'、3615135168/ZVirusVaccine42BETA 為 'Injecting'、3673979113/XVirus 為 'Inject X-Virus'——六個 owner 都是「把某物注射進體內」這同一個動作，差別只在有無標註注射物，非不同實體。原 As1 CN 值「注射针剂模组」是上游誤譯（把動詞 Inject 當成 mod 名稱翻成「注射針劑模組」），對六個 owner 全部不成立且會讓玩家在右鍵選單看到模組名，故 CH 改寫為「注射」、CN 走 cn_overrides 登記同值。裸動詞對每個 owner 都成立——注射物由玩家實際點選的物品決定；已核對六個 owner 的 sources/en 鍵集，沒有任何一家另設「標示注射物」的子選單鍵（XVirus 另有的 ContextMenu_InjectPlayer='Inject %1' 是對其他玩家注射、語意不同，ZVirus 的 ContextMenu_LabInjectVaccine 是另一個動作）。 ／2026-10-01 As1 名單納管複核：新增 owner 3707475814/BanditsWeekOneTheArk、3777949201/ZombieCureSyringe，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。2026-10-24 #1049 重新背書：Injectors（3437429771）已不在這個鍵的 owner 名單，其餘 owner 不變，維持「注射」。",
+      "signature": "f391d2e68ea08c7d",
+      "reason": "2026-08-25 #279 裁決中性譯名「注射」。上游 EN 是右鍵選單的動作詞：2900366269/DrugMod、3404956403/N&C's Narcotics、3437429771/Injectors 三家都是裸 'Inject'，3580511016/SCP Pack 為 'Inject Serum'、3615135168/ZVirusVaccine42BETA 為 'Injecting'、3673979113/XVirus 為 'Inject X-Virus'——六個 owner 都是「把某物注射進體內」這同一個動作，差別只在有無標註注射物，非不同實體。原 As1 CN 值「注射针剂模组」是上游誤譯（把動詞 Inject 當成 mod 名稱翻成「注射針劑模組」），對六個 owner 全部不成立且會讓玩家在右鍵選單看到模組名，故 CH 改寫為「注射」、CN 走 cn_overrides 登記同值。裸動詞對每個 owner 都成立——注射物由玩家實際點選的物品決定；已核對六個 owner 的 sources/en 鍵集，沒有任何一家另設「標示注射物」的子選單鍵（XVirus 另有的 ContextMenu_InjectPlayer='Inject %1' 是對其他玩家注射、語意不同，ZVirus 的 ContextMenu_LabInjectVaccine 是另一個動作）。 ／2026-10-01 As1 名單納管複核：新增 owner 3707475814/BanditsWeekOneTheArk、3777949201/ZombieCureSyringe，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。2026-10-24 #1049 重新背書：Injectors（3437429771）已不在這個鍵的 owner 名單，其餘 owner 不變，維持「注射」。／2026-11-23 #1509 複核：新增 owner 3674663295/KnoxDrugs，英文是裸 Inject，同一個注射動作，「注射」照舊成立，重新簽名；條件譯文併入 Inject 組。",
       "ch": "注射",
       "cn": "注射"
     },
