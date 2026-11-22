@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1522 個 Workshop 模組**（2196 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
+共支援 **1522 個 Workshop 模組**（2198 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1430,7 +1430,7 @@
 | [True Cargo - Project Full HD](https://steamcommunity.com/sharedfiles/filedetails/?id=3806955469) | True Cargo - Project Full HD | 將拖車貨物以實際 3D 模型擺在車斗上並自動排列，也可手動移動與旋轉。 | `PFHDTrueCargo` | 60 | — | — |
 | [Hug the Plushie!](https://steamcommunity.com/sharedfiles/filedetails/?id=3807099610) | 擁抱玩偶！ | 可擁抱玩偶以緩慢降低不快樂與壓力，持有玩偶也有小幅心情加成，支援多個玩偶模組。 | `HugThePlushie` | 14 | — | — |
 | [Blackout Predators Extended](https://steamcommunity.com/sharedfiles/filedetails/?id=3807510799) | 黑暗捕食者擴充（Blackout Predators Extended） | 黑暗捕食者附加模組，為巢穴加入繁殖體、補給箱與巢穴地圖，並新增多種特殊夜魔，讓夜晚更凶險。 | `BlackoutPredatorsExtended` | 347 | — | — |
-| [Radio Trader B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3807707103) | Radio Trader 電臺商人 | 用對講機或業餘無線電呼叫各類商人買賣物資，含營業時間、訊號強弱，以及可選的聲望、議價與委託任務。 | `RadioTraders`, `RadioTraders_DrugTime89`, `RadioTraders_Drugs93`, `RadioTraders_EFZ`, `RadioTraders_GOM`, `RadioTraders_Gael`, `RadioTraders_Guns93`, `RadioTraders_MarzVanillaGuns`, `RadioTraders_NCNarcotics`, `RadioTraders_SmartWatch`, `RadioTraders_VFE`, `RadioTraders_Viewpoint` | 1096 | — | — |
+| [Radio Trader B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3807707103) | Radio Trader 電臺商人 | 用對講機或業餘無線電呼叫各類商人買賣物資，含營業時間、訊號強弱，以及可選的聲望、議價與委託任務。 | `RadioTraders`, `RadioTraders_DrugTime89`, `RadioTraders_Drugs93`, `RadioTraders_EFZ`, `RadioTraders_GOM`, `RadioTraders_Gael`, `RadioTraders_Guns93`, `RadioTraders_HGO`, `RadioTraders_MarzVanillaGuns`, `RadioTraders_NCNarcotics`, `RadioTraders_SmartWatch`, `RadioTraders_VFE`, `RadioTraders_Viewpoint`, `RadioTraders_Xanny` | 1096 | — | — |
 | [Project A-Life & Companion Dogs Compatibility Patch](https://steamcommunity.com/sharedfiles/filedetails/?id=3807738026) | A-Life 與同伴犬相容補丁 | 修正同伴犬攻擊 Project A-Life 非敵對 NPC 的問題。 | `CDALifePatch` | 53 | — | — |
 | [Project JoJo (MP/SP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3807750510) | Project JoJo | 新增《JoJo》風格的替身系統，以箭覺醒替身並使用時停等能力對抗殭屍。 | `JoJoStandSystem0183Standalone` | 23 | — | — |
 | [HydeCo. Squirrels! 42.21.0](https://steamcommunity.com/sharedfiles/filedetails/?id=3808150913) | HydeCo. 松鼠！ | 新增棲息在樹上巢穴的活體松鼠，會覓食與逃竄，砍倒巢樹可捕捉並取得儲藏的橡實。 | `HydeCoSquirrels` | 29 | — | — |
