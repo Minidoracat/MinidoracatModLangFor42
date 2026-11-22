@@ -405,7 +405,7 @@
 | [Vehicle Military Zones](https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337) | 軍事區域車輛 | 在軍事區域生成軍用車輛，可調整生成率、鑰匙與損壞機率。 | `VMZNEW` | 19 | — | — |
 | [[B42] Useful Barrels](https://steamcommunity.com/sharedfiles/filedetails/?id=3436537035) | 有用的汽油桶 | 讓汽油桶可儲存燃料、酒類、飲料與染料等多種液體，可沙盒調整。 | `UsefulBarrels`, `UsefulBarrelsMP` | 80 | — | — |
 | [[B41/B42.18] Injectors [Distribution Update]](https://steamcommunity.com/sharedfiles/filedetails/?id=3437429771) | 注射針劑 | 新增腎上腺素、嗎啡等多種注射針劑，提供各類增益效果。 | `Injectors` | ? | — | — |
-| [CleanUI [B42.12]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3437629766) | 簡潔介面 | 以更精簡快速的版面取代原版物品欄、戰利品與右鍵選單介面。 | `CleanUI` | 55 | — | — |
+| [CleanUI [B42.12]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3437629766) | 簡潔介面 | 以更精簡快速的版面取代原版物品欄、戰利品與右鍵選單介面。 | `CleanUI` | 61 | — | — |
 | [Nepenthe's High Beams](https://steamcommunity.com/sharedfiles/filedetails/?id=3438126404) | Nepenthe 的遠光燈 | 為車輛新增遠光燈控制，支援快捷鍵、徑向選單與常亮模式。 | `NepHighBeams` | 21 | — | — |
 | [HydeCo. Unlimited Cars 42.16.3](https://steamcommunity.com/sharedfiles/filedetails/?id=3438759949) | HydeCo. 無限車輛 | 調整車輛生成機制，可自訂燒毀、鑰匙、零件損壞機率與拖車生成。 | `hydecounlimitedcars` | 59 | — | — |
 | [Military Ponchos: RELOADED](https://steamcommunity.com/sharedfiles/filedetails/?id=3439247001) | 軍用雨披：重製版 | 新增多國迷彩軍用雨披，兼具雨具與偽裝用途。 | `MilitaryPonchosRELOADED` | 79 | — | — |
@@ -737,7 +737,7 @@
 | [Radio Frequency Manager [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3659543622) | 無線電頻道管理器 | 可儲存已知的無線電頻道，並一鍵加入或調到任何收音機與車用無線電。 | `Kaldo_RadioFrequencyManagerB42` | 15 | — | — |
 | [Project Thiccener - PZ realistic body shapes](https://steamcommunity.com/sharedfiles/filedetails/?id=3659585445) | — | — | `Project_Thiccener` | 16 | — | — |
 | [Goose's Kentucky National Guard Professions [B42.19.0] [MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3659605156) | — | — | `kentuckynationalguardprofessionsgoose` | 31 | — | — |
-| [AnruisiTown (Military Bastion)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3659676359) | 安瑞斯鎮（軍事堡壘） | 軍事化的小鎮地圖，鎮雖小但居民相處融洽，生活步調緩慢、景色優美。 | `AnruisiTown` | 44 | — | — |
+| [AnruisiTown (Military Bastion)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3659676359) | 安瑞斯鎮（軍事堡壘） | 軍事化的小鎮地圖，鎮雖小但居民相處融洽，生活步調緩慢、景色優美。 | `AnruisiTown` | 73 | — | — |
 | [Body Count Rewards](https://steamcommunity.com/sharedfiles/filedetails/?id=3660382016) | 擊殺數獎勵 | 累積殭屍擊殺數達里程碑即可獲得正面特質或移除負面特質，獎勵池與門檻可調。 | `BCR` | 66 | — | — |
 | [Jeeve's Integration](https://steamcommunity.com/sharedfiles/filedetails/?id=3660924327) | Jeeve's 整合 | 伺服器管理輔助模組，在重啟或模組更新前播放警告提示音。 | `JeevesIntegration` | 32 | — | — |
 | [[B42.15+] Medieval Z [Beta]](https://steamcommunity.com/sharedfiles/filedetails/?id=3661164291) | 中世紀 Z | 新增中世紀武器與盔甲，如裝甲劍與各式頭盔等裝備。 | `MedievalZ` | 268 | ⚠️ ≥1 | — |
@@ -1527,8 +1527,8 @@
 | [It's Quiet, Too quiet.](https://steamcommunity.com/sharedfiles/filedetails/?id=3827348913) | It's Quiet, Too quiet. 晝靜夜湧 | 白天街道空無一人，入夜後殭屍湧上街頭聚集成屍潮；殭屍視力差、聽覺敏銳。 | `QuietDark` | ? | — | — |
 | [Toyota Tacoma - Overland Pickup [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3827381192) | 豐田 Tacoma 越野皮卡 | 附可用絞盤與重型拖曳能力的裝甲雙排越野皮卡，四人座、大油箱與大貨斗。 | `ToyotaTacoma` | 40 | — | — |
 | [Girlfriend Mod (In the Spirit of Kate)](https://steamcommunity.com/sharedfiles/filedetails/?id=3828333447) | Girlfriend Mod 女友同伴 | 新增與你一起出生、並肩作戰的同伴 NPC Emily；名字、外觀、衣著與性別都能自訂，換成男性就是有自己台詞的男友。 | `GirlfriendMod` | ? | — | — |
-| [Vehicle Kit Library (VSK) - Framework for Vehicle Mods [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3828607335) | Vehicle Kit Library 車輛框架 | Roadworthy 等車輛 MOD 共用的框架，提供儀表板、燈號與修正功能；玩家平常只會看到儀表板上的遠光燈提示，其餘是開發者面板。 | `VehicleSwissKnife` | 11 | — | ⚠️ 儀表上的刻度字母（水溫 C／H、油壓 L／H、里程 km／mi）寫死在 Lua（VSK_DashboardCluster.lua），任何翻譯包都補不了；和實車儀表一樣維持英文。 |
-| [Roadworthy [BETA] - Realistic Driving & Car Maintenance [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3828608843) | Roadworthy 寫實駕駛與保養 | 讓開車與養車更寫實：手排換檔與離合器、燃料種類與加錯油、儀表板燈號、發動流程與失敗原因、機油與冷卻液的液位與油質、火星塞與濾清器等零件磨損，以及安全帶；難度與各項機制可在沙盒設定調整。需要 Vehicle Kit Library。 | `RealisticDrivingOverhaul` | 335 | — | — |
+| [Vehicle Kit Library (VSK) - Framework for Vehicle Mods [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3828607335) | Vehicle Kit Library 車輛框架 | Roadworthy 等車輛 MOD 共用的框架，提供儀表板、燈號與修正功能；玩家平常只會看到儀表板上的遠光燈提示，其餘是開發者面板。 | `VehicleSwissKnife` | 15 | — | ⚠️ 儀表上的刻度字母（水溫 C／H、油壓 L／H、里程 km／mi）寫死在 Lua（VSK_DashboardCluster.lua），任何翻譯包都補不了；和實車儀表一樣維持英文。 |
+| [Roadworthy [BETA] - Realistic Driving & Car Maintenance [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3828608843) | Roadworthy 寫實駕駛與保養 | 讓開車與養車更寫實：手排換檔與離合器、燃料種類與加錯油、儀表板燈號、發動流程與失敗原因、機油與冷卻液的液位與油質、火星塞與濾清器等零件磨損，以及安全帶；難度與各項機制可在沙盒設定調整。需要 Vehicle Kit Library。 | `RealisticDrivingOverhaul` | 357 | — | — |
 | [Theodore](https://steamcommunity.com/sharedfiles/filedetails/?id=3830500541) | Theodore 兒子同伴 | 你的 10 歲兒子 Theodore：會跟著你、會餓會怕、講冷笑話還畫畫給你，要照顧他吃飽、平安長大。 | `Theodore` | ? | — | — |
 | [Readable HottieZ - 1992 & 1993 Collectible Magazines (27 Issues) [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3831390901) | 可閱讀的 HottieZ 雜誌 | 讓原版 HottieZ 雜誌可以翻閱，收錄 1992 與 1993 年共 27 期收藏刊。 | `ReadableHottieZ` | 95 | — | — |
 | [[42] Ithaca Melee Anims](https://steamcommunity.com/sharedfiles/filedetails/?id=3831633833) | Ithaca 近戰動作 | 球棒、撬棍、消防斧、開山刀、長刀與小刀各有專屬揮擊動作，隨機變化，大多也有專屬爆擊與倒地攻擊。 | `ithacaMeleeAnims` | ? | — | — |

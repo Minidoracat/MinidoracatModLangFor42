@@ -4,6 +4,26 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **49 個 MOD 更新後新增的文字補上繁簡中文（5,868 項）。** Knox Buildworks 建造選單的商店招牌、Vanilla Expanded 家具、海報與招牌（1,857 項）；Escape From Zomboid 槍械的新槍、配件與改裝欄位（1,288 項）；Radio Trader 的夜間商人匿名者、銀行搶案、存款箱、吃角子老虎機與委託重製（446 項）；Stay With Me 的牧場與農務工作、同伴台詞（286 項）；Guns of Tien 的彈藥部件裝箱、槍械出現範圍與刺刀設定（280 項）；Companion Dogs: Squad 的崗哨與駐守（215 項）；Guns of 93 的新彈種與彈藥說明（184 項）；Aegis 管理面板的建造規劃器、藍圖與建築修復（178 項）；HDs Food Recipes 的食譜書（157 項）；My So-Called Toy 的 CARDDAM 卡片機（140 項）；The Mission（95 項）；Senators Martial Arts Core（80 項）；Pinoy Survival Foods（76 項）；農耕擴充（73 項）；DMM 模組管理器（60 項）；AnruisiTown 的直升機操作說明（29 項）；Roadworthy 的儀表板與保養設定（22 項）；其餘 32 個 MOD 合計 402 項。
+  > 技術要點：追蹤器 2026-11-22 #1445–#1508「可能過時」（62 個 MOD）。steamcmd 重抓 62 個 MOD：59 個 corpus_hash 相符；Companion Dogs: Squad（3797252771）、NATO 槍械包（3243805556）、DMM（3821006088）在排程之後又更新，照 tracker.md 在本機以 `_persist_state`＋`refresh_manifest` 套用現行版，照現行版翻。14 路翻譯、每路 GPT 對抗複核，採納 352 條（例：EFZ 的 front trunnion 是「前節套」、短名同步改；Guns of 93 的 total hit count 是單次射擊可命中的目標數上限；Radio Trader 匿名者要每位玩家親自接聽才會解鎖；Companion Dogs 的 Treat 是治傷，不是一般照料）。own 目錄 4 個 MOD（AnruisiTown、Roadworthy、CleanUI、Vehicle Kit Library）寫 own 目錄 CN＋`sources/ch`，`cn_source: upstream` 的簡中照抄作者。Daisy County 新增的 5 個物品名照 2026-10-04 裁定（只收地圖選單）不收。
+
+### Changed
+
+- **上游改了英文的已出貨文字跟著改（408 項）。** Escape From Zomboid 槍械（129 項）、Guns of 93 的彈種名（114 項，例：10mm Auto、.22 LR、.30-06 春田）、Radio Trader 的沙盒說明補上「需要開啟進階交易」（37 項）、農耕擴充（34 項）、Whose Key Is This（15 項）、The Mission（12 項）等。
+  > 技術要點：As1 衍生層 330 鍵改 `sources/ch`＋`cn_overrides`，own 層 62 鍵經 `apply_translations` 更新；另 16 鍵只改英文寫法（Arcadia 的亂碼 `â€“`、DMM 的 `->`），只更新 own `en` 錨點。40 個重譯鍵不落地：24 個是本體鍵（JSON 不出貨），16 個已有 owner 衝突裁決（中性值由裁決定）。上游刪除的 20 個 own 鍵（現行 Workshop 已無引用）自 `own_translations` 與 `ch_review_state` 刪除；As1 衍生層的刪除鍵照 split 不變式保留。
+- **多個槍械 MOD 共用的 Shellholder／Shotgun Shell Holder（`Base.ShellHolder`）通用譯名改成「霰彈托架」。** 舊譯「彈殼托」把霰彈誤作彈殼；所有加入這個物品的 MOD 都顯示新譯名。
+  > 技術要點：translate 裁決改 ch／cn 並補 reason，As1 層 `sources/ch`＋`cn_overrides` 同改（open-issues.md 2026-11-23 第 (1) 項）。
+- **5 個新出現的同鍵衝突改成對每個 MOD 都成立的譯名，各 MOD 專屬的寫法改由條件譯文顯示。** ALICE 黑色揹帶（NATO 槍械包 American Prototypes 與 Better Vanilla ALICE Suspenders）統一為「愛麗絲揹帶 (黑色)」，簡中一併修掉「皮带和吊袜带」的誤譯（同 MOD 的護林綠、城市迷彩、冬季迷彩一起改）；車輛零件「微波爐」在 Whennyago Initiative 啟用時寫「房車微波爐」；EFK 的輕型槍背帶在 MFS 社群修正版啟用時寫「槍背帶 (輕型)」，提示各自顯示「重量 -0.5」與「雙手槍械, 重量低於 4」；Common Sense 撬開門窗的沙盒說明改成三版都成立的「開啟或關閉本模組的撬開門窗機制.」，新版另寫「取代原版撬開門窗的機制, 也可以撬開車門.」。
+  > 技術要點：open-issues.md 2026-11-23 第 (2) 項。`owner_conflict_decisions.json` 新增 4 筆 translate（`Base.Bag_ALICE_BeltSus_Black`、`IGUI_VehiclePartmicrowave`、`Gunpart.Sling_cat`、`Sandbox_CommonSense_PryingMechanic_tooltip`）與 1 筆 unship（`Tooltip_Sling_cat`，`unshipped_keys.json` 同步），`owner_variants.json` 補對應條件譯文；`--owner-report` 重生 OWNER_CONFLICTS.md。
+- **簡中修正幾個明顯的錯譯。** Escape From Zomboid 槍械約 90 個開彈藥盒配方由「弹匣拆盒」改成「打开盒子」（開的是彈藥盒，不是彈匣）；Saiga-9 卡賓槍的簡中名稱改用拉丁字母；Propane Refuelling 的「Take Propane」由「拆下丙烷」改成「取出丙烷」；Stay With Me 男性同伴的「你坐下時跟著坐下」不再寫成「她」。
+  > 技術要點：As1 衍生層改 `cn_overrides`；開盒配方對齊同 MOD 既有的繁中「開啟盒子 (N 發)」與 7 個簡中「打开盒子 (N 发)」。
+- **其他順手修正。** Radio Trader 接下懸賞的訊息補上漏譯的「已標示在你的地圖上」；Knox Buildworks 的 Dr. Oids 海報統一用原版譯名「奧茲博士」；Ammo Maker 的鹿彈彈丸與它的整盒、模具、製作與回收配方補上英文寫明的「00號」規格（7 項），和這批 Guns of Tien 的整箱、整件同名。
+  > 技術要點：Dr. Oids 一般海報屬 As1 衍生層（`sources/ch`＋`cn_overrides`），大幅／寬幅海報與畫作屬 own 層；Ammo Maker 6 鍵屬 As1 衍生層、`ProduceBalls00` 屬 own 層。
+
 ## [42.22.2-1.79.0] - 2026-11-23
 
 ### Changed

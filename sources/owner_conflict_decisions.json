@@ -5050,9 +5050,9 @@
     "ItemName|Base.ShellHolder": {
       "action": "translate",
       "signature": "9f7df7602378bbcd",
-      "reason": "2026-08-27 #283–#292／Codex 複核：Shellholder 與 Shotgun Shell Holder 都指容納霰彈槍彈藥的托具；現譯「彈殼托」未加入衝突型號或容量，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 owner 3761077099/VFE，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 2026-10-26 As1 v3.12.0 同步後複核：新增的 owner（多為 Complete Vanilla Firearms Expansion）英文都與既有 owner 相同，現行譯文仍對每個 owner 成立，重新簽名。",
-      "ch": "彈殼托",
-      "cn": "弹壳托"
+      "reason": "2026-08-27 #283–#292／Codex 複核：Shellholder 與 Shotgun Shell Holder 都指容納霰彈槍彈藥的托具；現譯「彈殼托」未加入衝突型號或容量，對兩個 owner 均成立。 ／2026-10-01 As1 名單納管複核：新增 owner 3761077099/VFE，其英文與既有 owner 相同或同義，原裁決仍成立，重新背書。 2026-10-26 As1 v3.12.0 同步後複核：新增的 owner（多為 Complete Vanilla Firearms Expansion）英文都與既有 owner 相同，現行譯文仍對每個 owner 成立，重新簽名。 ／2026-11-23 改中性譯名：Shell 指霰彈，舊值「彈殼托／弹壳托」誤作彈殼；「霰彈托架／霰弹托架」對每個 owner（Shellholder、Shotgun Shell Holder）都成立，也與兩組條件譯文一致。",
+      "ch": "霰彈托架",
+      "cn": "霰弹托架"
     },
     "ItemName|Base.HK416": {
       "action": "translate",
@@ -14182,6 +14182,39 @@
       "reason": "2026-11-16 #1439：Cheat Menu 2.0 - Rax's Reborn（3815818643）把英文改成 The server granted you … You can now use Rax's Cheat Menu.，CheatMenuPX（3453422228）、Cheat Menu Reloaded（3683918273）仍寫 You can use Cheat Menu: RB mod.。三方都在 ISUICheatMenu.lua 以 getPlayer():Say 顯示；譯文拿掉 MOD 名，只說可以使用作弊選單，對三方都成立。",
       "ch": "伺服器已授予您管理員/GM/版主權限. 您現在可以使用作弊選單了.",
       "cn": "服务器已授予您管理员/GM/版主权限. 您现在可以使用作弊菜单了."
+    },
+    "ItemName|Base.Bag_ALICE_BeltSus_Black": {
+      "action": "translate",
+      "signature": "0109be2cde960467",
+      "reason": "2026-11-23 #1445–#1508 新衝突：NATO 原型（3243805556）新增 Black ALICE Webbing，和 BVAS（3676721528）的 ALICE Belt and Suspenders (Black) 同鍵。兩者都是原版 Base.Bag_ALICE_BeltSus 的黑色款（腰帶加背帶的 ALICE 攜行具），中性譯名照 LangFor42／官方簡中的原版譯名「愛麗絲揹帶／爱丽丝背带」加顏色，對兩方都成立，不另立條件譯文。CN 一併修掉 As1「皮带和吊袜带」的誤譯（同 MOD 三個兄弟色一起改）。",
+      "ch": "愛麗絲揹帶 (黑色)",
+      "cn": "爱丽丝背带 (黑色)"
+    },
+    "IG_UI|IGUI_VehiclePartmicrowave": {
+      "action": "translate",
+      "signature": "856f24c70dbf8f47",
+      "reason": "2026-11-23 #1445–#1508 新衝突：Whennyago Initiative（3790153201）把車輛零件名寫成 RV Microwave，另三個 owner（tsarslib、ATA Petyarbuilt、IVA）寫 Microwave。房車微波爐也是微波爐，中性譯名維持「微波爐／微波炉」；Whennyago 啟用時由條件譯文寫「房車微波爐」。",
+      "ch": "微波爐",
+      "cn": "微波炉"
+    },
+    "ItemName|Gunpart.Sling_cat": {
+      "action": "translate",
+      "signature": "dd4050299ac455fd",
+      "reason": "2026-11-23 #1445–#1508 新衝突：MFS 社群修正版（3780151182）把 EFK（3633421539）的 Lightweight Gun Sling 改名 Gun Sling (Light)，並新增 Gun Sling (Medium)／(Heavy)。同一件輕型槍背帶，中性譯名維持「輕型槍背帶／轻型枪带」；MFS 啟用時由條件譯文寫「槍背帶 (輕型)」，和它的中型、重型槍背帶同一格式。",
+      "ch": "輕型槍背帶",
+      "cn": "轻型枪带"
+    },
+    "Tooltip|Tooltip_Sling_cat": {
+      "action": "unship",
+      "signature": "a6d6a7220ed23416",
+      "reason": "2026-11-23 #1445–#1508 新衝突：EFK（3633421539）的 Tooltip_Sling_cat 寫 Weight -0.5（減重數值），MFS 社群修正版（3780151182）改寫成 Two-handed guns, weight under 4（適用槍械條件，由 MFSPartTooltipExtras.lua 顯示）。兩句說的是不同資訊，沒有對兩方都成立的中性句，不出貨；兩方啟用時由條件譯文寫入各自的句子。"
+    },
+    "Sandbox|Sandbox_CommonSense_PryingMechanic_tooltip": {
+      "action": "translate",
+      "signature": "a1a09d222a3311f2",
+      "reason": "2026-11-23 #1445–#1508 新衝突：Common Sense 新版（3750253491）把說明改成 Overrides the vanilla prying doors and windows open mechanic. Also allows to force cars open.（取代原版撬開機制，關閉時原版撬開照舊可用），另兩個 owner（3714335263、3717968421）仍寫 Toggles whether Players can pry open doors, windows, etc. using a Crowbar.。As1 譯文「是否可使用撬棍撬開門窗」對新版不成立，中性句改成「開啟或關閉本模組的撬開門窗機制」，三方都成立；各自原句走條件譯文。",
+      "ch": "開啟或關閉本模組的撬開門窗機制.",
+      "cn": "开启或关闭本模组的撬开门窗机制."
     }
   }
 }

@@ -58127,8 +58127,8 @@
   },
   "Sandbox.json|Sandbox_ProjectALife.Raid_Helicopter_tooltip": {
     "as1_value": "每架A-Life直升机: 突袭和增援空投, 夜间探照灯和飞越. 关闭意味着它们都不会飞行.",
-    "value": "允许所有A-Life直升机: 突袭和支援抵达, 夜间探照灯和飞越. 关闭: 这些直升机都不会出动.\n默认: 开启.",
-    "reason": "2026-10-13 #839：上游英文改寫（Every A-Life helicopter: raid and reinfo… → Allows all A-Life helicopters: raid and …），依新英文重譯。"
+    "value": "允许所有A-Life直升机: 突袭和支援抵达, 夜间探照灯和飞越. 关闭: 这些直升机都不会出动. 出动频率由“从这里开始”页的“直升机出现频率”设置.\n默认: 开启.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Allows all A-Life helicopters: raid and backup arrivals, nig"
   },
   "Sandbox.json|Sandbox_ProjectALife.Raid_ScoutBuildupHours": {
     "as1_value": "侦查兵集结 (游戏时长)",
@@ -59247,13 +59247,13 @@
   },
   "ItemName.json|Base.556ReflexCan": {
     "as1_value": "Reflx步枪消音器(.22口径)",
-    "value": "Reflex步枪消音器(.223口径)",
-    "reason": "2026-10-17 #883：上游英文改寫（Reflx Rifle Silencer (.22 cal) → Reflx Rifle Silencer (.223 cal)），依新英文重譯。 2026-10-26 追蹤器：上游改英文，依新英文重譯。"
+    "value": "Reflex步枪消音器(.223口径/5.56mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Reflex Rifle Silencer (.223 cal/5.56mm)"
   },
   "ItemName.json|Base.556Silencer": {
     "as1_value": "步枪消音器(.22口径)",
-    "value": "步枪消音器(.223口径)",
-    "reason": "2026-10-17 #883：上游英文改寫（Rifle Silencer (.22 cal) → Rifle Silencer (.223 cal)），依新英文重譯。"
+    "value": "步枪消音器(.223口径/5.56mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Rifle Silencer (.223 cal/5.56mm)"
   },
   "ItemName.json|Base.DIY30Silencer": {
     "as1_value": "自制步枪消音器(.30口径)",
@@ -59262,8 +59262,8 @@
   },
   "ItemName.json|Base.DIY556Silencer": {
     "as1_value": "自制步枪消音器(.22口径)",
-    "value": "自制步枪消音器(.223口径)",
-    "reason": "2026-10-17 #883：上游英文改寫（Homemade Rifle Silencer (.22 cal) → Homemade Rifle Silencer (.223 cal)），依新英文重譯。"
+    "value": "自制步枪消音器(.223口径/5.56mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Homemade Rifle Silencer (.223 cal/5.56mm)"
   },
   "Recipes.json|Craft22LRSilencer": {
     "as1_value": "制作自制.22 LR消音器",
@@ -59302,8 +59302,8 @@
   },
   "Tooltip.json|Tooltip_30Silencer": {
     "as1_value": "需要螺纹枪管. 将减少枪械的声音半径.<br>可以安装在任何有螺纹枪管的枪械上, 除了7.92x57毛瑟, .45自动, .44 MAG, 10mm, .40子弹, 9mm, .38特制和.380自动枪械.",
-    "value": "武器配件. 无需工具. 需要螺纹枪管. 将减少枪械的声音半径. 可以安装在任何有螺纹枪管的枪械上, 除了7.92x57毛瑟, .45自动, .44 MAG, 10mm, .40 S&W, 9mm, .38特制和.380自动枪械.",
-    "reason": "2026-10-17 #883：上游英文改寫（Requires threaded barrel. Will reduce th… → Weapon attachment. No tool required. Req…），依新英文重譯。"
+    "value": "武器配件. 无需工具. 需要螺纹枪管. 将减少枪械的声音半径. 可以安装在任何有螺纹枪管的枪械上, 除了8mm毛瑟, .45自动, .44 MAG, 10mm, .40 S&W, 9mm, .38特制和.380自动枪械.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Weapon attachment. No tool required. Requires threaded barre"
   },
   "Tooltip.json|Tooltip_45Silencer": {
     "as1_value": "需要螺纹枪管. 将减少.45自动, .44 MAG, 9mm, .38特制, .380自动, .25自动和.22 LR枪械的声音半径.<br>可以适配于大部分步枪口径, 但耐久度会下降得更快.",
@@ -59317,8 +59317,8 @@
   },
   "Tooltip.json|Tooltip_8mmSilencer": {
     "as1_value": "需要螺纹枪管. 将减少枪械的声音半径.<br>可以安装在有螺纹枪管的7.92x57毛瑟枪械上. 在.30口径的枪械上效果会较差.<br>不适用于.45自动, .44 MAG, 10mm, .40子弹, 9mm, .38特制和.380自动枪械.",
-    "value": "武器配件. 无需工具. 需要螺纹枪管. 将减少枪械的声音半径. 可以安装在有螺纹枪管的7.92x57毛瑟枪械上. 在.30口径的枪械上效果会较差. 不适用于.45自动, .44 MAG, 10mm, .40 S&W, 9mm, .38特制和.380自动枪械.",
-    "reason": "2026-10-17 #883：上游英文改寫（Requires threaded barrel. Will reduce th… → Weapon attachment. No tool required. Req…），依新英文重譯。"
+    "value": "武器配件. 无需工具. 需要螺纹枪管. 将减少枪械的声音半径. 可以安装在有螺纹枪管的8mm毛瑟枪械上. 在.30口径的枪械上效果会较差. 不适用于.45自动, .44 MAG, 10mm, .40 S&W, 9mm, .38特制和.380自动枪械.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Weapon attachment. No tool required. Requires threaded barre"
   },
   "Tooltip.json|Tooltip_AmmoSleeve": {
     "as1_value": "武器配件. 减少枪械装填时间.",
@@ -59338,7 +59338,7 @@
   "Tooltip.json|Tooltip_OilFilterSilencer": {
     "as1_value": "需要螺纹枪管. 将减少枪械的声音半径. 枪械威力越大, 耐久度下降越快.",
     "value": "武器配件. 无需工具. 需要螺纹枪管. 将减少枪械的声音半径. 枪械威力越大, 耐久度下降越快.",
-    "reason": "2026-10-17 #883：上游英文改寫（Requires threaded barrel. Will reduce th… → Weapon attachment. No tool required. Req…），依新英文重譯。"
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Weapon attachment. No tool required. Requires threaded barre"
   },
   "Tooltip.json|Tooltip_Riser": {
     "as1_value": "武器配件. 提高命中率和暴击率, 但会减慢瞄准时间.",
@@ -59368,7 +59368,7 @@
   "Tooltip.json|Tooltip_WeaponLight": {
     "as1_value": "这种夹装式战术手电可以安装在许多枪械的枪管或弹仓管上.",
     "value": "武器配件. 需要一把螺丝刀进行安装. 这种夹装式战术手电可以安装在许多枪械的枪管或弹仓管上.",
-    "reason": "2026-10-17 #883：上游英文改寫（This clamp mounted light can be install … → Weapon attachment. Requires a screwdrive…），依新英文重譯。"
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Weapon attachment. Requires a screwdriver to install. This c"
   },
   "Sandbox.json|Sandbox_ImmersiveBlackouts_ElectricityShutoffDayRange": {
     "as1_value": "停电日期范围",
@@ -60567,8 +60567,8 @@
   },
   "IG_UI.json|IGUI_TM42_Gather03_Desc": {
     "as1_value": "在主物品栏中携带4条绳子",
-    "value": "在主物品栏中携带4条逃脱绳",
-    "reason": "2026-10-24：英文是 sheet ropes，「绳子」漏了床單繩；照本體簡中物品名「逃脱绳」。"
+    "value": "在物品栏或随身包里携带4条逃脱绳.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Carry 4 sheet ropes in your inventory or bags."
   },
   "IG_UI.json|IGUI_TM42_Gather04_Title": {
     "as1_value": "年轮花纹",
@@ -65257,8 +65257,8 @@
   },
   "Sandbox.json|Sandbox_RadioTraders_PriceFloorMargin_tooltip": {
     "as1_value": "任何东西的售价都不会低于该商人的收购价加上标价的这个百分比, 所以低价买入再卖回去永远不赚. 商人不收购的物品按标价的 60%% 计算.",
-    "value": "任何东西的售价都不会低于该商人的收购价加上标价的这个百分比, 所以低价买入再卖回去永远不赚. 商人不收购的物品按标价的百分之 60 计算.",
-    "reason": "2026-10-26 As1 v3.12.0：As1 把 en 文字 percent 寫成 %%，改寫「百分之 N」"
+    "value": "任何东西的售价都不会低于该商人的收购价加上标价的这个百分比, 所以低价买入再卖回去永远不赚. 商人不收购的物品按标价的百分之 60 计算. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Nothing ever sells below what that trader pays for it, plus "
   },
   "Sandbox.json|Sandbox_RadioTraders_WrenchCars_tooltip": {
     "as1_value": "扳手出售旧车: 来自所有已装车辆模组 (含 Ki5 及同类) 的二手车, 状况 30%% 到 60%%, 四分之一箱油, 附带钥匙. 车会被放在离你约 45 格 (可调) 的空地上.",
@@ -65812,8 +65812,8 @@
   },
   "IG_UI.json|IGUI_TM42_Gather05_Desc": {
     "as1_value": "在主物品栏中携带8布条",
-    "value": "在主物品栏中携带8条碎布条",
-    "reason": "2026-10-29 追蹤器 #1139–#1155：舊譯複查（對照 MOD 現行英文）：漏量詞「條」, 物品名照原版 RippedSheets (碎布條/碎布条)"
+    "value": "在物品栏或随身包里携带8条碎布条.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Carry 8 ripped sheets in your inventory or bags."
   },
   "IG_UI.json|IGUI_TM42_Halo_Busy": {
     "as1_value": "请先完成或放弃当前任务",
@@ -66047,8 +66047,8 @@
   },
   "Tooltip.json|Tooltip_Item_BoxBalls00": {
     "as1_value": "鹿弹弹丸",
-    "value": "鹿弹弹丸 (25个装, 整盒)",
-    "reason": "2026-10-30 追蹤器 #1156 Ammo Maker 舊譯複查（對照 MOD 現行英文）：Box of 25 的說明漏了盒裝與數量，照同 MOD 新的底火盒說明寫「(25个装, 整盒)」。"
+    "value": "00号鹿弹弹丸 (25个装, 整盒)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Balls 00：補上 00 號規格，和 Guns of Tien 整箱／整件的 00號鹿彈彈丸一致"
   },
   "Tooltip.json|Tooltip_Item_BoxBulletsHandgunL": {
     "as1_value": "手枪大口径弹头",
@@ -81127,8 +81127,8 @@
   },
   "IG_UI.json|IGUI_TW_Short_58a5c12e86f7745d585a2b9e": {
     "as1_value": "MPX 4\"\\",
-    "value": "MPX 4\"",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 在英吋記號 \" 後多出反斜線 \\，記號與 en 不對稱，遊戲內會顯示多餘的 \\"
+    "value": "GEN1 4\"",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：GEN1 4\""
   },
   "IG_UI.json|IGUI_TW_Short_58d2912286f7744e27117493": {
     "as1_value": "MOE RBP",
@@ -81387,13 +81387,13 @@
   },
   "IG_UI.json|IGUI_TW_Short_5b363dea5acfc4771e1c5e7e": {
     "as1_value": "12ga adpt.",
-    "value": "12ga 转接座",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 照抄英文縮寫名，整句沒翻（零件種類、材質、顏色等字都留英文）"
+    "value": "Salvo 12",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Salvo 12"
   },
   "IG_UI.json|IGUI_TW_Short_5b363e1b5acfc4771e1c5e80": {
     "as1_value": "12ga thr.",
-    "value": "12ga 螺纹",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 照抄英文縮寫名，整句沒翻（零件種類、材質、顏色等字都留英文）"
+    "value": "Salvo 12",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Salvo 12"
   },
   "IG_UI.json|IGUI_TW_Short_5b3a08b25acfc4001754880c": {
     "as1_value": "P226 Bridge",
@@ -81508,12 +81508,12 @@
   "IG_UI.json|IGUI_TW_Short_5beec9450db83400970084fd": {
     "as1_value": "RPK16 RS base",
     "value": "RPK16 照门底座",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 照抄英文縮寫名，整句沒翻（零件種類、材質、顏色等字都留英文）"
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：RPK16 RSB"
   },
   "IG_UI.json|IGUI_TW_Short_5beecbb80db834001d2c465e": {
     "as1_value": "RPK-16 rail",
-    "value": "RPK-16 导轨",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 照抄英文縮寫名，整句沒翻（零件種類、材質、顏色等字都留英文）"
+    "value": "AK-12 导轨",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK-12 rail"
   },
   "IG_UI.json|IGUI_TW_Short_5bfd297f0db834001a669119": {
     "as1_value": "Mosin Infantry",
@@ -81607,8 +81607,8 @@
   },
   "IG_UI.json|IGUI_TW_Short_5c471c2d2e22164bef5d077f": {
     "as1_value": "SVDS UB",
-    "value": "SVDS 护木箍",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 照抄英文縮寫名，整句沒翻（零件種類、材質、顏色等字都留英文）"
+    "value": "SVDS 前节套",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：SVDS FT"
   },
   "IG_UI.json|IGUI_TW_Short_5c471c842e221615214259b5": {
     "as1_value": "SVDS gas",
@@ -81812,8 +81812,8 @@
   },
   "IG_UI.json|IGUI_TW_Short_5dcbd6dddbd3d91b3e5468de": {
     "as1_value": "MDR Black",
-    "value": "MDR 黑色",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 照抄英文縮寫名，整句沒翻（零件種類、材質、顏色等字都留英文）"
+    "value": "MDR",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：MDR"
   },
   "IG_UI.json|IGUI_TW_Short_5de6556a205ddc616a6bc4f7": {
     "as1_value": "215 thr.",
@@ -82967,13 +82967,13 @@
   },
   "ItemName.json|EscapeFromZomboidFirearms.AB_5cde8864d7f00c0010373be1": {
     "as1_value": "12.7x108mm B-32 子弹 (整盒)",
-    "value": "12.7x108mm B-32 弹药包 (10 发)",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 把「(N pcs)」改成「(整盒)」，漏掉發數"
+    "value": "12.7x108mm B-32 弹药包 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：12.7x108mm B-32 ammo pack (20 pcs)"
   },
   "ItemName.json|EscapeFromZomboidFirearms.AB_5d2f2ab648f03550091993ca": {
     "as1_value": "12.7x108mm BZT-44M 子弹 (整盒)",
-    "value": "12.7x108mm BZT-44M 弹药包 (10 发)",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 把「(N pcs)」改成「(整盒)」，漏掉發數"
+    "value": "12.7x108mm BZT-44M 弹药包 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：12.7x108mm BZT-44M ammo pack (20 pcs)"
   },
   "ItemName.json|EscapeFromZomboidFirearms.AB_5d6e67fba4b9361bc73bc779": {
     "as1_value": "12/70 6.5mm Express 霰弹 (整盒)",
@@ -83182,23 +83182,23 @@
   },
   "ItemName.json|EscapeFromZomboidFirearms.AB_67d41936f378a36c4706eeb9": {
     "as1_value": ".50 BMG HP 子弹 (整盒)",
-    "value": ".50 BMG HP 弹药包 (5 发)",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 把「(N pcs)」改成「(整盒)」，漏掉發數"
+    "value": ".50 BMG HP 弹药包 (15 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：.50 BMG HP ammo pack (15 pcs)"
   },
   "ItemName.json|EscapeFromZomboidFirearms.AB_67dc212493ce32834b0fa446": {
     "as1_value": ".50 BMG M21 子弹 (整盒)",
-    "value": ".50 BMG M21 弹药包 (5 发)",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 把「(N pcs)」改成「(整盒)」，漏掉發數"
+    "value": ".50 BMG M21 弹药包 (15 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：.50 BMG M21 ammo pack (15 pcs)"
   },
   "ItemName.json|EscapeFromZomboidFirearms.AB_67dc255ee3028a8b120efc48": {
     "as1_value": ".50 BMG M33 子弹 (整盒)",
-    "value": ".50 BMG M33 弹药包 (5 发)",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 把「(N pcs)」改成「(整盒)」，漏掉發數"
+    "value": ".50 BMG M33 弹药包 (15 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：.50 BMG M33 ammo pack (15 pcs)"
   },
   "ItemName.json|EscapeFromZomboidFirearms.AB_67dc2648ba5b79876906a166": {
     "as1_value": ".50 BMG M903 SLAP 子弹 (整盒)",
-    "value": ".50 BMG M903 SLAP 弹药包 (5 发)",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 把「(N pcs)」改成「(整盒)」，漏掉發數"
+    "value": ".50 BMG M903 SLAP 弹药包 (15 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：.50 BMG M903 SLAP ammo pack (15 pcs)"
   },
   "ItemName.json|EscapeFromZomboidFirearms.Box545x39": {
     "as1_value": "5.45x39mm FMJ 子弹 (整盒)",
@@ -83532,8 +83532,8 @@
   },
   "Sandbox.json|Sandbox_EscapeFromZomboidFirearms_NoTraderWeapons_tooltip": {
     "as1_value": "源战利品数据中没有商人库存的武器. 为 1 时使用其类别的普通战利品权重. 倍数: 0 移除, 1 为默认, 2 使几率翻倍. 倍数叠加计算. 仅影响更改后生成的战利品.",
-    "value": "没有商人出售的武器 (金色 TT、PKP、M60 等); 设为 1 时与同类别的其他武器一样生成. 0 为移除, 2 为加倍. 仅影响新生成的战利品.",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 依別版英文翻譯，內容與現行 en 不符（多出 en 沒有的說明或改了意思）"
+    "value": "没有商人出售的武器 (金色 TT、QBZ-191、M60 等); 设为 1 时与同类别的其他武器一样生成. 0 为移除, 2 为加倍. 仅影响新生成的战利品.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Weapons no trader sells (golden TT, QBZ-191, M60 and others)"
   },
   "Sandbox.json|Sandbox_EscapeFromZomboidFirearms_PactLoot_tooltip": {
     "as1_value": "除国家武装地点 (住宅, 车库, 商店, 枪店, 当铺, 幸存者藏匿处等) 外, 所有容器, 载具, 采集和世界故事中的战利品. 默认 -5: 北约 75 / 华约 25. 左为北约和其他西方武器, 右为华约武器, 即苏联或俄罗斯制造 (卡拉什尼科夫, 马卡洛夫, TT, SVD, 莫辛, PKM, 赛加...). 0: 各半; 每档使其一方在每 100 件武器中多 5 件: -5 北约 75 / 华约 25, -9 北约 95 / 华约 5, -10 仅北约, +10 仅华约. 该比例在每次抽取的每个武器类别中都保持; 武器总数不变 (在 -10 或 +10 时, 缺少该方武器的类别会把其份额让给该地点的其他类别). 发射器弹药, 下挂发射器和手雷也以相同方式分配. 仅影响更改后生成的战利品.",
@@ -84012,8 +84012,8 @@
   },
   "IG_UI.json|IGUI_TW_Short_58a56f8d86f774651579314c": {
     "as1_value": "MPX 2\"\\",
-    "value": "MPX 2\"",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 值結尾多一個反斜線（英吋引號跳脫殘留），保留原譯。"
+    "value": "GEN1 2\"",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：GEN1 2\""
   },
   "IG_UI.json|IGUI_TW_Short_58aeaaa886f7744fc1560f81": {
     "as1_value": "MPX-SD 6.5\"\\",
@@ -84082,8 +84082,8 @@
   },
   "IG_UI.json|IGUI_TW_Short_59fafc9386f774067d462453": {
     "as1_value": "AK30 FDE",
-    "value": "AK30 沙色",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 原樣照抄英文（零件縮寫未譯），保留原譯，和同批裁決的其他短名一致。"
+    "value": "AK30",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK30"
   },
   "IG_UI.json|IGUI_TW_Short_5a0ed824fcdbcb0176308b0d": {
     "as1_value": "AKMP RS",
@@ -84557,8 +84557,8 @@
   },
   "IG_UI.json|IGUI_TW_Short_5dcbd6b46ec07c0c4347a564": {
     "as1_value": "MDR Black",
-    "value": "MDR 黑色",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 原樣照抄英文（零件縮寫未譯），保留原譯，和同批裁決的其他短名一致。"
+    "value": "MDR",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：MDR"
   },
   "IG_UI.json|IGUI_TW_Short_5dcbe9431e1f4616d354987e": {
     "as1_value": "MDR 762 16\"\\",
@@ -84627,8 +84627,8 @@
   },
   "IG_UI.json|IGUI_TW_Short_5e87071478f43e51ca2de5e1": {
     "as1_value": "590 20\"\\",
-    "value": "590 20\"",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 值結尾多一個反斜線（英吋引號跳脫殘留），保留原譯。"
+    "value": "590A1 20\"",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：590A1 20\""
   },
   "IG_UI.json|IGUI_TW_Short_5e8708d4ae379e67d22e0102": {
     "as1_value": "590 GR FS",
@@ -85017,13 +85017,13 @@
   },
   "IG_UI.json|IGUI_TW_Short_634f04d82e5def262d0b30c6": {
     "as1_value": "SKS UB",
-    "value": "SKS 护木箍",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 原樣照抄英文（零件縮寫未譯），保留原譯，和同批裁決的其他短名一致。"
+    "value": "SKS 前节套",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：SKS FT"
   },
   "IG_UI.json|IGUI_TW_Short_634f05a21f9f536910079b56": {
     "as1_value": "OP-SKS UB",
-    "value": "OP-SKS 护木箍",
-    "reason": "2026-11-12 As1 v3.14.0 同步：As1 原樣照抄英文（零件縮寫未譯），保留原譯，和同批裁決的其他短名一致。"
+    "value": "OP-SKS 前节套",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：OP-SKS FT"
   },
   "IG_UI.json|IGUI_TW_Short_634f05ca517ccc8a960fc748": {
     "as1_value": "SKS DC",
@@ -86869,5 +86869,1610 @@
     "as1_value": "对讲机屏幕微光的颜色.",
     "value": "对讲机屏幕微光的颜色. 配合 Viewpoint 0.1.7 时, 手持的对讲机会发出游戏自带的暖白光; 此时该颜色改为作用于业余电台和基地电台.",
     "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Color of the walkie screen glow. With Viewpoint 0.1.7 a held"
+  },
+  "ItemName.json|Base.ShellHolder": {
+    "as1_value": "弹壳托",
+    "value": "霰弹托架",
+    "reason": "2026-11-23 #1445–#1508 批次：Shellholder／Shotgun Shell Holder 都是放霰彈的托架，舊值「彈殼托」誤作彈殼；與兩組條件譯文對齊（2026-11-23 open-issues (1)）"
+  },
+  "ItemName.json|Base.Bag_ALICE_BeltSus_Black": {
+    "as1_value": "爱丽丝皮带和吊袜带 (黑色)",
+    "value": "爱丽丝背带 (黑色)",
+    "reason": "2026-11-23 #1445–#1508 批次：owner 衝突裁決（NATO 原型 3243805556 的 Black ALICE Webbing 與 BVAS 3676721528 的 ALICE Belt and Suspenders (Black) 同鍵）：中性譯名照官方簡中原版 Base.Bag_ALICE_BeltSus「爱丽丝背带」；As1「皮带和吊袜带」把 suspenders 誤作吊襪帶"
+  },
+  "ItemName.json|Base.Bag_ALICE_BeltSus_RangerGreen": {
+    "as1_value": "爱丽丝皮带和吊袜带 (护林绿)",
+    "value": "爱丽丝背带 (护林绿)",
+    "reason": "2026-11-23 #1445–#1508 批次：同 MOD 兄弟色與 Base.Bag_ALICE_BeltSus_Black 對齊：suspenders 是背帶，不是吊袜带（官方簡中原版「爱丽丝背带」）"
+  },
+  "ItemName.json|Base.Bag_ALICE_BeltSus_Urban_Camo": {
+    "as1_value": "爱丽丝皮带和吊袜带 (城市迷彩)",
+    "value": "爱丽丝背带 (城市迷彩)",
+    "reason": "2026-11-23 #1445–#1508 批次：同上"
+  },
+  "ItemName.json|Base.Bag_ALICE_BeltSus_Winter_Camo": {
+    "as1_value": "爱丽丝皮带和吊袜带 (冬季迷彩)",
+    "value": "爱丽丝背带 (冬季迷彩)",
+    "reason": "2026-11-23 #1445–#1508 批次：同上"
+  },
+  "Sandbox.json|Sandbox_CommonSense_PryingMechanic_tooltip": {
+    "as1_value": "切换玩家是否可使用撬棍撬开门, 窗户等.",
+    "value": "开启或关闭本模组的撬开门窗机制.",
+    "reason": "2026-11-23 #1445–#1508 批次：owner 衝突裁決：3750253491 改寫成「取代原版撬開門窗的機制, 也可撬開車輛」，關閉時原版撬開照舊可用，As1 的「是否可使用撬棍撬開門窗」對它不成立；改成對三個 owner 都成立的中性句，各自原句走條件譯文"
+  },
+  "IG_UI.json|IGUI_NotAlone_OptSitWithRedMale": {
+    "as1_value": "你坐下时她也坐下",
+    "value": "你坐下时他也坐下",
+    "reason": "2026-11-23 #1445–#1508 批次：男性同伴版（…Male）CN 誤寫「她」"
+  },
+  "UI.json|UI_RadioTraders_BountyTakenAt": {
+    "as1_value": "已接赏金. 他们躲在 %1附近的拖车营地.",
+    "value": "已接赏金. 他们躲在 %1 附近的拖车营地. 已在你的地图上标出.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Bounty taken. They're holed up in the trailer park near %1. "
+  },
+  "Recipes.json|TW_OpenAB_54527a984bdc2d4e668b4567": {
+    "as1_value": "弹匣拆盒 (50发)",
+    "value": "打开盒子 (50 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_56d59d3ad2720bdb418b4577": {
+    "as1_value": "弹匣拆盒 (16发)",
+    "value": "打开盒子 (16 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_56dff216d2720bbd668b4568": {
+    "as1_value": "弹匣拆盒 (30发)",
+    "value": "打开盒子 (30 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_56dff4ecd2720b5f5a8b4568": {
+    "as1_value": "弹匣拆盒 (30发)",
+    "value": "打开盒子 (30 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5735ff5c245977640e39ba7e": {
+    "as1_value": "弹匣拆盒 (25发)",
+    "value": "打开盒子 (25 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_573602322459776445391df1": {
+    "as1_value": "弹匣拆盒 (25发)",
+    "value": "打开盒子 (25 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_573603562459776430731618": {
+    "as1_value": "弹匣拆盒 (25发)",
+    "value": "打开盒子 (25 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_573719df2459775a626ccbc2": {
+    "as1_value": "弹匣拆盒 (16发)",
+    "value": "打开盒子 (16 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5737207f24597760ff7b25f2": {
+    "as1_value": "弹匣拆盒 (16发)",
+    "value": "打开盒子 (16 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_573720e02459776143012541": {
+    "as1_value": "弹匣拆盒 (16发)",
+    "value": "打开盒子 (16 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_57372140245977611f70ee91": {
+    "as1_value": "弹匣拆盒 (16发)",
+    "value": "打开盒子 (16 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_57a0dfb82459774d3078b56c": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_58864a4f2459770fcc257101": {
+    "as1_value": "弹匣拆盒 (50发)",
+    "value": "打开盒子 (50 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_59e4d24686f7741776641ac7": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_59e4d3d286f774176a36250a": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_59e6542b86f77411dc52a77a": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_59e655cb86f77411dc52a77b": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_59e6658b86f77411d949b250": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5a269f97c4a282000b151807": {
+    "as1_value": "弹匣拆盒 (30发)",
+    "value": "打开盒子 (30 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5a26ac06c4a282000c5a90a8": {
+    "as1_value": "弹匣拆盒 (30发)",
+    "value": "打开盒子 (30 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5a26ac0ec4a28200741e1e18": {
+    "as1_value": "弹匣拆盒 (30发)",
+    "value": "打开盒子 (30 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5a6086ea4f39f99cd479502f": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5ba2678ad4351e44f824b344": {
+    "as1_value": "弹匣拆盒 (40发)",
+    "value": "打开盒子 (40 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5ba26812d4351e003201fef1": {
+    "as1_value": "弹匣拆盒 (40发)",
+    "value": "打开盒子 (40 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5ba26835d4351e0035628ff5": {
+    "as1_value": "弹匣拆盒 (40发)",
+    "value": "打开盒子 (40 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5c0d56a986f774449d5de529": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5c0d591486f7744c505b416f": {
+    "as1_value": "弹匣拆盒 (5发)",
+    "value": "打开盒子 (5 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5c0d5ae286f7741e46554302": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5c0d5e4486f77478390952fe": {
+    "as1_value": "弹匣拆盒 (30发)",
+    "value": "打开盒子 (30 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5c0d688c86f77413ae3407b2": {
+    "as1_value": "弹匣拆盒 (8发)",
+    "value": "打开盒子 (8 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5cadf6ddae9215051e1c23b2": {
+    "as1_value": "弹匣拆盒 (10发)",
+    "value": "打开盒子 (10 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5cadf6e5ae921500113bb973": {
+    "as1_value": "弹匣拆盒 (10发)",
+    "value": "打开盒子 (10 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5cadf6eeae921500134b2799": {
+    "as1_value": "弹匣拆盒 (10发)",
+    "value": "打开盒子 (10 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5cc80f38e4a949001152b560": {
+    "as1_value": "弹匣拆盒 (50发)",
+    "value": "打开盒子 (50 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5cc80f8fe4a949033b0224a2": {
+    "as1_value": "弹匣拆盒 (50发)",
+    "value": "打开盒子 (50 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5cc86832d7f00c000d3a6e6c": {
+    "as1_value": "弹匣拆盒 (50发)",
+    "value": "打开盒子 (50 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5cde8864d7f00c0010373be1": {
+    "as1_value": "弹匣拆盒 (10发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Open Box (20 Rounds)"
+  },
+  "Recipes.json|TW_OpenAB_5d2f2ab648f03550091993ca": {
+    "as1_value": "弹匣拆盒 (10发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Open Box (20 Rounds)"
+  },
+  "Recipes.json|TW_OpenAB_5d6e68a8a4b9360b6c0d54e2": {
+    "as1_value": "弹匣拆盒 (25发)",
+    "value": "打开盒子 (25 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5d6e6911a4b9361bd5780d52": {
+    "as1_value": "弹匣拆盒 (25发)",
+    "value": "打开盒子 (25 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5d6e6a5fa4b93614ec501745": {
+    "as1_value": "弹匣拆盒 (25发)",
+    "value": "打开盒子 (25 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5e023d34e8a400319a28ed44": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5e023d48186a883be655e551": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5e023e53d4353e3302577c4c": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5e023e88277cce2b522ff2b1": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5e81f423763d9f754677bf2e": {
+    "as1_value": "弹匣拆盒 (50发)",
+    "value": "打开盒子 (50 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5e85aa1a988a8701445df1f5": {
+    "as1_value": "弹匣拆盒 (5发)",
+    "value": "打开盒子 (5 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5ea2a8e200685063ec28c05a": {
+    "as1_value": "弹匣拆盒 (50发)",
+    "value": "打开盒子 (50 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5efb0c1bd79ff02a1f5e68d9": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5efb0da7a29a85116f6ea05f": {
+    "as1_value": "弹匣拆盒 (50发)",
+    "value": "打开盒子 (50 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5f0596629e22f464da6bbdd9": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5f647f31b6238e5dd066e196": {
+    "as1_value": "弹匣拆盒 (5发)",
+    "value": "打开盒子 (5 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5fbe3ffdf8b6a877a729ea82": {
+    "as1_value": "弹匣拆盒 (50发)",
+    "value": "打开盒子 (50 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5fc275cf85fd526b824a571a": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5fc382a9d724d907e2077dab": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5fc382b6d6fa9c00c571bbc3": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5fc382c1016cce60e8341b20": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_5fd20ff893a8961fc660a954": {
+    "as1_value": "弹匣拆盒 (50发)",
+    "value": "打开盒子 (50 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_601aa3d2b2bcb34913271e6d": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_61962d879bb3d20b0946d385": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_619636be6db0f2477964e710": {
+    "as1_value": "弹匣拆盒 (50发)",
+    "value": "打开盒子 (50 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_62330b3ed4dc74626d570b95": {
+    "as1_value": "弹匣拆盒 (25发)",
+    "value": "打开盒子 (25 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_62330bfadc5883093563729b": {
+    "as1_value": "弹匣拆盒 (25发)",
+    "value": "打开盒子 (25 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_62330c18744e5e31df12f516": {
+    "as1_value": "弹匣拆盒 (25发)",
+    "value": "打开盒子 (25 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_62330c40bdd19b369e1e53d1": {
+    "as1_value": "弹匣拆盒 (25发)",
+    "value": "打开盒子 (25 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_64b6979341772715af0f9c39": {
+    "as1_value": "弹匣拆盒 (40发)",
+    "value": "打开盒子 (40 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_64b8f7c241772715af0f9c3d": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_6529243824cbe3c74a05e5c1": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_6529302b8c26af6326029fb7": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_6576f4708ca9c4381d16cd9d": {
+    "as1_value": "弹匣拆盒 (30发)",
+    "value": "打开盒子 (30 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_6576f96220d53a5b8f3e395e": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_660137d8481cc6907a0c5cda": {
+    "as1_value": "弹匣拆盒 (25发)",
+    "value": "打开盒子 (25 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_6601380580e77cfd080e3418": {
+    "as1_value": "弹匣拆盒 (25发)",
+    "value": "打开盒子 (25 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_668fe62ac62660a5d8071446": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_66a0d1c87d0d369e270bb9de": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_66a0d1e0ed648d72fe064d06": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_66a0d1f88486c69fce00fdf6": {
+    "as1_value": "弹匣拆盒 (20发)",
+    "value": "打开盒子 (20 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Open Box (N Rounds) 是打開彈藥盒，As1「弹匣拆盒」誤作彈匣；對齊 CH「開啟盒子」與同 MOD 既有「打开盒子 (N 发)」"
+  },
+  "Recipes.json|TW_OpenAB_67d41936f378a36c4706eeb9": {
+    "as1_value": "弹匣拆盒 (5发)",
+    "value": "打开盒子 (15 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Open Box (15 Rounds)"
+  },
+  "Recipes.json|TW_OpenAB_67dc212493ce32834b0fa446": {
+    "as1_value": "弹匣拆盒 (5发)",
+    "value": "打开盒子 (15 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Open Box (15 Rounds)"
+  },
+  "Recipes.json|TW_OpenAB_67dc255ee3028a8b120efc48": {
+    "as1_value": "弹匣拆盒 (5发)",
+    "value": "打开盒子 (15 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Open Box (15 Rounds)"
+  },
+  "Recipes.json|TW_OpenAB_67dc2648ba5b79876906a166": {
+    "as1_value": "弹匣拆盒 (5发)",
+    "value": "打开盒子 (15 发)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Open Box (15 Rounds)"
+  },
+  "IG_UI.json|IGUI_TWK_StatAccuracy": {
+    "as1_value": "精度",
+    "value": "命中率",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：HIT CHANCE"
+  },
+  "IG_UI.json|IGUI_TWK_StatFireModes": {
+    "as1_value": "射击类型",
+    "value": "射击模式",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：FIRE MODES"
+  },
+  "IG_UI.json|IGUI_TWK_StatLoudness": {
+    "as1_value": "噪音",
+    "value": "枪声传播范围",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：GUNSHOT NOISE"
+  },
+  "IG_UI.json|IGUI_TWK_StatRange": {
+    "as1_value": "有效射程",
+    "value": "射程",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：RANGE"
+  },
+  "IG_UI.json|IGUI_TWK_StatRecoilBack": {
+    "as1_value": "水平后坐力",
+    "value": "枪身后坐幅度",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：REARWARD RECOIL"
+  },
+  "IG_UI.json|IGUI_TW_Short_55802d5f4bdc2dac148b458e": {
+    "as1_value": "GEN M3",
+    "value": "GEN M3 W",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：GEN M3 W"
+  },
+  "IG_UI.json|IGUI_TW_Short_56ea8180d2720bf2698b456a": {
+    "as1_value": "QDC 556",
+    "value": "QDC FSK",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：QDC FSK"
+  },
+  "IG_UI.json|IGUI_TW_Short_59e6152586f77473dc057aa1": {
+    "as1_value": "VPO-136 Vepr-KM",
+    "value": "VPO-136",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：VPO-136"
+  },
+  "IG_UI.json|IGUI_TW_Short_5a33ca0fc4a282000d72292f": {
+    "as1_value": "Colt A2",
+    "value": "ERE",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：ERE"
+  },
+  "IG_UI.json|IGUI_TW_Short_5a37cb10c4a282329a73b4e7": {
+    "as1_value": "6.5-20x50",
+    "value": "Mark 4 LR",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Mark 4 LR"
+  },
+  "IG_UI.json|IGUI_TW_Short_5aa66be6e5b5b0214e506e97": {
+    "as1_value": "ATACR 7-35x56",
+    "value": "ATACR 7-35",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：ATACR 7-35"
+  },
+  "IG_UI.json|IGUI_TW_Short_5aafa1c2e5b5b00015042a56": {
+    "as1_value": "SOCOM16 M1A",
+    "value": "SOCOM16",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：SOCOM16"
+  },
+  "IG_UI.json|IGUI_TW_Short_5b3b99475acfc432ff4dcbee": {
+    "as1_value": "Vudu 1-6x24",
+    "value": "Vudu 1-6",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Vudu 1-6"
+  },
+  "IG_UI.json|IGUI_TW_Short_5c501a4d2e221602b412b540": {
+    "as1_value": "VPO-101 Vepr-Hunter",
+    "value": "VPO-101",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：VPO-101"
+  },
+  "IG_UI.json|IGUI_TW_Short_5d0a3a58d7ad1a669c15ca14": {
+    "as1_value": "1P59",
+    "value": "1P59 3-10",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：1P59 3-10"
+  },
+  "IG_UI.json|IGUI_TW_Short_5d0a3e8cd7ad1a6f6a3d35bd": {
+    "as1_value": "1P69",
+    "value": "1P69 3-10",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：1P69 3-10"
+  },
+  "IG_UI.json|IGUI_TW_Short_5d1340b3d7ad1a0b52682ed7": {
+    "as1_value": "GEN M3",
+    "value": "GEN M3 沙色",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：GEN M3 FDE"
+  },
+  "IG_UI.json|IGUI_TW_Short_5d1340cad7ad1a0b0b249869": {
+    "as1_value": "GEN M3",
+    "value": "GEN M3 W 沙色",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：GEN M3 W FDE"
+  },
+  "IG_UI.json|IGUI_TW_Short_5dfa3cd1b33c0951220c079b": {
+    "as1_value": "KAC QDC",
+    "value": "QDC FSK",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：QDC FSK"
+  },
+  "IG_UI.json|IGUI_TW_Short_5e87076ce2db31558c75a11d": {
+    "as1_value": "590 SFeed",
+    "value": "590A1 SFeed",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：590A1 SFeed"
+  },
+  "IG_UI.json|IGUI_TW_Short_5e87080c81c4ed43e83cefda": {
+    "as1_value": "590A1x8",
+    "value": "590x8",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：590x8"
+  },
+  "IG_UI.json|IGUI_TW_Short_5fbcc1d9016cce60e8341ab3": {
+    "as1_value": "MCX .300 BLK",
+    "value": "MCX",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：MCX"
+  },
+  "IG_UI.json|IGUI_TW_Short_5fbe7618d6fa9c00c571bb6c": {
+    "as1_value": "SRD762",
+    "value": "SRD762Ti",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：SRD762Ti"
+  },
+  "IG_UI.json|IGUI_TW_Short_6130c43c67085e45ef1405a1": {
+    "as1_value": "QDC 762",
+    "value": "QDC MBK",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：QDC MBK"
+  },
+  "IG_UI.json|IGUI_TW_Short_61714eec290d254f5e6b2ffc": {
+    "as1_value": "PM II 3-20x50",
+    "value": "PM II 3-20",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：PM II 3-20"
+  },
+  "IG_UI.json|IGUI_TW_Short_617151c1d92c473c770214ab": {
+    "as1_value": "PM II 1-8x24",
+    "value": "PM II 1-8",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：PM II 1-8"
+  },
+  "IG_UI.json|IGUI_TW_Short_62850c28da09541f43158cca": {
+    "as1_value": "PM II 5-25x56",
+    "value": "PM II 5-25",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：PM II 5-25"
+  },
+  "IG_UI.json|IGUI_TW_Short_649ec2da59cbb3c813042dca": {
+    "as1_value": "AK-12 RSM",
+    "value": "AK-12 照门底座",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK-12 RSB"
+  },
+  "IG_UI.json|IGUI_TW_Short_674d6121c09f69dfb201a888": {
+    "as1_value": "Velociraptor .300 BLK",
+    "value": "Velociraptor",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Velociraptor"
+  },
+  "IG_UI.json|IGUI_TW_Short_676175789dcee773150c6925": {
+    "as1_value": "Mark 5HD 5-25x56",
+    "value": "Mark 5HD 5-25",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Mark 5HD 5-25"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.AK50": {
+    "as1_value": "TheAKGuy AK-50 .50 BMG 狙击步枪",
+    "value": "TheAKGuy AK-50 .50 BMG 反器材步枪",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：TheAKGuy AK-50 .50 BMG anti-materiel rifle"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5649aa744bdc2ded0b8b457e": {
+    "as1_value": "AK-74 5.45x39 制退补偿器",
+    "value": "AK-74 5.45x39 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK-74 5.45x39 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5649ab884bdc2ded0b8b457f": {
+    "as1_value": "AK Zenit DTK-1 7.62x39/5.45x39 制退补偿器",
+    "value": "AK Zenit DTK-1 7.62x39/5.45x39 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK Zenit DTK-1 7.62x39/5.45x39 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_58a56f8d86f774651579314c": {
+    "as1_value": "MPX GEN1 护木 2 英寸导轨",
+    "value": "SIG GEN1 护木 2 英寸导轨",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：SIG GEN1 handguard 2 inch rail"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_58a56f8d86f774651579314c_1": {
+    "as1_value": "MPX GEN1 护木 2 英寸导轨",
+    "value": "SIG GEN1 护木 2 英寸导轨",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：SIG GEN1 handguard 2 inch rail"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_58a56f8d86f774651579314c_2": {
+    "as1_value": "MPX GEN1 护木 2 英寸导轨",
+    "value": "SIG GEN1 护木 2 英寸导轨",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：SIG GEN1 handguard 2 inch rail"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_58a56f8d86f774651579314c_3": {
+    "as1_value": "MPX GEN1 护木 2 英寸导轨",
+    "value": "SIG GEN1 护木 2 英寸导轨",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：SIG GEN1 handguard 2 inch rail"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_58a5c12e86f7745d585a2b9e": {
+    "as1_value": "MPX GEN1 护木 4 英寸导轨",
+    "value": "SIG GEN1 护木 4 英寸导轨",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：SIG GEN1 handguard 4 inch rail"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_58a5c12e86f7745d585a2b9e_1": {
+    "as1_value": "MPX GEN1 护木 4 英寸导轨",
+    "value": "SIG GEN1 护木 4 英寸导轨",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：SIG GEN1 handguard 4 inch rail"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5998597786f77414ea6da093": {
+    "as1_value": "PP-19-01 Vityaz 9x19 制退补偿器",
+    "value": "PP-19-01 Vityaz 9x19 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：PP-19-01 Vityaz 9x19 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5998598e86f7740b3f498a86": {
+    "as1_value": "Saiga-9 9x19 制退补偿器",
+    "value": "Saiga-9 9x19 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Saiga-9 9x19 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_59d64fc686f774171b243fe2": {
+    "as1_value": "AKM 7.62x39 制退补偿器",
+    "value": "AKM 7.62x39 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AKM 7.62x39 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_59e61eb386f77440d64f5daf": {
+    "as1_value": "VPO-136 Vepr-KM 7.62x39 制退补偿器",
+    "value": "VPO-136 Vepr-KM 7.62x39 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：VPO-136 Vepr-KM 7.62x39 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_59fafc5086f7740dbe19f6c3": {
+    "as1_value": "AK 7.62x39 US Palm \"AK30\" 30发弹匣 (黑)",
+    "value": "AK 7.62x39 US Palm AK30 30发弹匣 (黑)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK 7.62x39 US Palm AK30 30-round magazine (Black)"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_59fafc5086f7740dbe19f6c3_366": {
+    "as1_value": "AK 7.62x39 US Palm \"AK30\" 30发弹匣 (黑) (.366 TKM)",
+    "value": "AK 7.62x39 US Palm AK30 30发弹匣 (黑) (.366 TKM)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK 7.62x39 US Palm AK30 30-round magazine (Black) (.366 TKM)"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_59fafc9386f774067d462453": {
+    "as1_value": "AK 7.62x39 US Palm \"AK30\" 30发弹匣 (沙色)",
+    "value": "AK 7.62x39 US Palm AK30 30发弹匣 (沙色)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK 7.62x39 US Palm AK30 30-round magazine (FDE)"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_59fafc9386f774067d462453_366": {
+    "as1_value": "AK 7.62x39 US Palm \"AK30\" 30发弹匣 (沙色) (.366 TKM)",
+    "value": "AK 7.62x39 US Palm AK30 30发弹匣 (沙色) (.366 TKM)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK 7.62x39 US Palm AK30 30-round magazine (FDE) (.366 TKM)"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5a33ca0fc4a282000d72292f": {
+    "as1_value": "AR-15 柯尔特 A2 缓冲管",
+    "value": "AR-15 Magpul Enhanced Receiver Extension 缓冲管",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AR-15 Magpul Enhanced Receiver Extension"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5a9ea27ca2750c00137fa672": {
+    "as1_value": "AK Spikes Tactical Dynacomp 7.62x39 制退补偿器",
+    "value": "AK Spikes Tactical Dynacomp 7.62x39 补偿器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK Spikes Tactical Dynacomp 7.62x39 compensator"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5aafa1c2e5b5b00015042a56": {
+    "as1_value": "M1A SOCOM 16 7.62x51 制退补偿器",
+    "value": "M1A SOCOM 16 7.62x51 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：M1A SOCOM 16 7.62x51 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5ac72e615acfc43f67248aa0": {
+    "as1_value": "AK-101 5.56x45 制退补偿器",
+    "value": "AK-101 5.56x45 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK-101 5.56x45 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5ac72e725acfc400180ae701": {
+    "as1_value": "AK-102 5.56x45 制退补偿器",
+    "value": "AK-102 5.56x45 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK-102 5.56x45 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5ac72e7d5acfc40016339a02": {
+    "as1_value": "AK-103 7.62x39 制退补偿器",
+    "value": "AK-103 7.62x39 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK-103 7.62x39 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5ac72e895acfc43b321d4bd5": {
+    "as1_value": "AK-104 7.62x39 制退补偿器",
+    "value": "AK-104 7.62x39 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK-104 7.62x39 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5ac72e945acfc43f3b691116": {
+    "as1_value": "AK-105 5.45x39 制退补偿器",
+    "value": "AK-105 5.45x39 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK-105 5.45x39 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5ac7655e5acfc40016339a19": {
+    "as1_value": "AK-74M 5.45x39 制退补偿器",
+    "value": "AK-74M 5.45x39 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK-74M 5.45x39 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5beec3420db834001b095429": {
+    "as1_value": "RPK-16 5.45x39 制退补偿器",
+    "value": "RPK-16 5.45x39 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：RPK-16 5.45x39 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5beecbb80db834001d2c465e": {
+    "as1_value": "RPK-16 护木导轨",
+    "value": "AK-12 型护木用导轨",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK-12 handguard type rail"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5beecbb80db834001d2c465e_1": {
+    "as1_value": "RPK-16 护木导轨",
+    "value": "AK-12 型护木用导轨",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK-12 handguard type rail"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5beecbb80db834001d2c465e_2": {
+    "as1_value": "RPK-16 护木导轨",
+    "value": "AK-12 型护木用导轨",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK-12 handguard type rail"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5bffd7ed0db834001d23ebf9": {
+    "as1_value": "TT PM-Laser DTK-TT 制退补偿器",
+    "value": "TT PM-Laser DTK-TT 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：TT PM-Laser DTK-TT muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5c07c5ed0db834001b73571c": {
+    "as1_value": "HK MP5 Noveske 式 9x19 制退补偿器",
+    "value": "HK MP5 Noveske 式 9x19 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：HK MP5 Noveske-style 9x19 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5c471bfc2e221602b21d4e17": {
+    "as1_value": "SVDS 7.62x54R 制退补偿器",
+    "value": "SVDS 7.62x54R 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：SVDS 7.62x54R muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5c471c2d2e22164bef5d077f": {
+    "as1_value": "SVDS 上箍",
+    "value": "SVDS 前节套",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：SVDS front trunnion"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5c471c2d2e22164bef5d077f_1": {
+    "as1_value": "SVDS 上箍",
+    "value": "SVDS 前节套",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：SVDS front trunnion"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5c4ee3d62e2216152006f302": {
+    "as1_value": "SV-98 SRVV Mk.2.0 7.62x54R 制退补偿器",
+    "value": "SV-98 SRVV Mk.2.0 7.62x54R 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：SV-98 SRVV Mk.2.0 7.62x54R muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5c7951452e221644f31bfd5c": {
+    "as1_value": "AK Venom Tactical Antidote 7.62x39 制退补偿器",
+    "value": "AK Venom Tactical Antidote 7.62x39 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK Venom Tactical Antidote 7.62x39 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5c878e9d2e2216000f201903": {
+    "as1_value": "AR-10 Lantac Dragon 7.62x51 制退补偿器",
+    "value": "AR-10 Lantac Dragon 7.62x51 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AR-10 Lantac Dragon 7.62x51 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5caf17c9ae92150b30006be1": {
+    "as1_value": "ASh-12 12.7x55 制退补偿器",
+    "value": "ASh-12 12.7x55 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：ASh-12 12.7x55 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5cc9ad73d7f00c000e2579d4": {
+    "as1_value": "AK SRVV 7.62x39 制退补偿器",
+    "value": "AK SRVV 7.62x39 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AK SRVV 7.62x39 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5df35e7f2a78646d96665dd4": {
+    "as1_value": "ORSIS T-5000M 7.62x51 制退补偿器",
+    "value": "ORSIS T-5000M 7.62x51 制退器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：ORSIS T-5000M 7.62x51 muzzle brake"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5e87071478f43e51ca2de5e1": {
+    "as1_value": "莫斯伯格 590A1 12ga 20 英寸枪管",
+    "value": "M590A1 12ga 20 英寸枪管",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：M590A1 12ga 20 inch barrel"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5e87076ce2db31558c75a11d": {
+    "as1_value": "莫斯伯格 590A1 SpeedFeed 短护木",
+    "value": "M590A1 SpeedFeed 短护木",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：M590A1 SpeedFeed short handguard"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5e87080c81c4ed43e83cefda": {
+    "as1_value": "莫斯伯格 590A1 12ga 8发弹匣盖",
+    "value": "M590 12ga 8发弹仓管盖",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：M590 12ga 8-shell magazine cap"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5e8708d4ae379e67d22e0102": {
+    "as1_value": "莫斯伯格 590 鬼环前准星",
+    "value": "M590 鬼环前准星",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：M590 Ghost Ring front sight"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5e87114fe2db31558c75a120": {
+    "as1_value": "莫斯伯格 590 鬼环照门",
+    "value": "M590 鬼环照门",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：M590 Ghost Ring rear sight"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5e87116b81c4ed43e83cefdd": {
+    "as1_value": "莫斯伯格 590A1 聚合物枪托",
+    "value": "M590A1 聚合物枪托",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：M590A1 polymer stock"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5eea21647547d6330471b3c9": {
+    "as1_value": "莫斯伯格 590A1 Magpul MOE 前护木",
+    "value": "M590 Magpul MOE 前护木",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：M590 Magpul MOE forend"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5eea217fc64c5d0dfc05712a": {
+    "as1_value": "莫斯伯格 590A1 Magpul SGA 枪托",
+    "value": "M590 Magpul SGA 枪托",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：M590 Magpul SGA stock"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5eeb2ff5ea4f8b73c827350b": {
+    "as1_value": "莫斯伯格 590A1 战术导轨",
+    "value": "M590 战术导轨",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：M590 Tactical rail"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5eeb2ff5ea4f8b73c827350b_1": {
+    "as1_value": "莫斯伯格 590A1 战术导轨",
+    "value": "M590 战术导轨",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：M590 Tactical rail"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_5ef1b9f0c64c5d0dfc0571a1": {
+    "as1_value": "莫斯伯格 590A1 Mesa Tactical LEO gen.1 枪托适配器",
+    "value": "M590 Mesa Tactical LEO gen.1 枪托适配器",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：M590 Mesa Tactical LEO gen.1 stock adapter"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_619f4f8c4c58466fe1228439": {
+    "as1_value": "齐亚帕犀牛红色光纤照门",
+    "value": "齐亚帕犀牛光纤照门",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Chiappa Rhino Fiber Optic rear sight"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_619f52454c58466fe122843b": {
+    "as1_value": "齐亚帕犀牛红色光纤前准星",
+    "value": "齐亚帕犀牛光纤前准星",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Chiappa Rhino Fiber Optic front sight"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_634f04d82e5def262d0b30c6": {
+    "as1_value": "SKS 上箍",
+    "value": "SKS 前节套",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：SKS front trunnion"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_634f04d82e5def262d0b30c6_1": {
+    "as1_value": "SKS 上箍",
+    "value": "SKS 前节套",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：SKS front trunnion"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_634f05a21f9f536910079b56": {
+    "as1_value": "OP-SKS 上箍",
+    "value": "OP-SKS 前节套",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：OP-SKS front trunnion"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_634f05a21f9f536910079b56_1": {
+    "as1_value": "OP-SKS 上箍",
+    "value": "OP-SKS 前节套",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：OP-SKS front trunnion"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_63888bbd28e5cc32cc09d2b6": {
+    "as1_value": "AR-15 Precision Reflex GEN III Delta Carbon 护木",
+    "value": "AR-15 Precision Reflex GEN III Delta Carbon 护木 (沙色)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AR-15 Precision Reflex GEN III Delta Carbon handguard (FDE)"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.P_6895bd19d55f0ebf6a0c0306": {
+    "as1_value": "AR-15 Radian Model 1 14 英寸护木",
+    "value": "AR-15 Radian Weapons Model 1 14 英寸护木",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：AR-15 Radian Weapons Model 1 14 inch handguard"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.TT": {
+    "as1_value": "TT-33 7.62x25 TT 手枪",
+    "value": "托卡列夫 TT-33 7.62x25 TT 手枪",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Tokarev TT-33 7.62x25 TT pistol"
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.TTGOLD": {
+    "as1_value": "TT-33 7.62x25 TT 手枪 (金色)",
+    "value": "托卡列夫 TT-33 7.62x25 TT 手枪 (金色)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Tokarev TT-33 7.62x25 TT pistol (Golden)"
+  },
+  "Tooltip.json|Tooltip_TW_A_5a6086ea4f39f99cd479502f": {
+    "as1_value": "增强穿透. 在 PZ 中: 伤害 x0.9, 穿透目标, 暴击 -1%%, 磨损 x1.4, 后坐力 x1.03, 精度 x0.98.",
+    "value": "增强穿透. 在 PZ 中: 伤害 x0.88, 穿透目标, 暴击 -1%%, 磨损 x1.4, 后坐力 x1.03, 精度 x1.05.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Enhanced penetration. In PZ: damage x0.88, pierces the targe"
+  },
+  "Tooltip.json|Tooltip_TW_A_5e023e88277cce2b522ff2b1": {
+    "as1_value": "扩张弹. 在 PZ 中: 伤害 x1.26, 不穿透, 最多 1 个目标, 暴击 +10%%, 磨损 x0.95, 后坐力 x0.95, 精度 x1.05.",
+    "value": "扩张弹. 在 PZ 中: 伤害 x1.26, 不穿透, 最多 1 个目标, 暴击 +10%%, 磨损 x0.95, 后坐力 x0.95, 精度 x1.15.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Expanding. In PZ: damage x1.26, does not pierce, up to 1 tar"
+  },
+  "Tooltip.json|Tooltip_TW_A_5efb0c1bd79ff02a1f5e68d9": {
+    "as1_value": "穿甲弹. 在 PZ 中: 伤害 x0.84, 穿透目标, +1 目标, 暴击 -1%%, 磨损 x1.65, 后坐力 x1.06, 精度 x0.96.",
+    "value": "穿甲弹. 在 PZ 中: 伤害 x0.84, 穿透目标, +1 目标, 暴击 -1%%, 磨损 x1.65, 后坐力 x1.06, 精度 x1.15.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Armor-piercing. In PZ: damage x0.84, pierces the target, +1 "
+  },
+  "UI.json|UI_TW_ReadyToggle_tooltip": {
+    "as1_value": "按一次切换到下一个携行姿势: 低位待命, 高位待命, 巡逻. 按住打开姿势菜单: 姿势, 蹲伏或站起. 多人模式下游戏的保险开关默认使用同一按键; 如需要请重新绑定.",
+    "value": "按下: 切换到下一个携行姿势 (低位待命、高位待命、巡逻). 按住: 打开姿势菜单, 可蹲伏或站起.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Press: next carry stance (low ready, high ready, patrol). Ho"
+  },
+  "IG_UI.json|IGUI_KBWVE_Buildable_decorations_posters_location_entertainment_theatre_01_82": {
+    "as1_value": "奥伊兹博士海报",
+    "value": "奥兹博士海报",
+    "reason": "2026-11-23 #1445–#1508 批次：對齊原版 Base.Mov_PosterDroids／Dr_Oids_Poster 譯名「奧茲博士」與同 MOD 其他 Dr. Oids 物件"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_AirdropFee_tooltip": {
+    "as1_value": "请求空投而不去信箱取件的费用. 默认 500.",
+    "value": "请求空投而不去信箱取件的费用. 默认 500. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Cost to request an airdrop instead of a mailbox pickup. Defa"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_BroadcastFrequency_tooltip": {
+    "as1_value": "0=自动: 挑一个世界上所有电台 (原版、紧急广播与模组) 都没占用的频率, 并在服务器日志里打印出来. 填入数值可强制指定, 例如 105.4.",
+    "value": "0=自动: 挑一个世界上所有电台 (原版、紧急广播与模组) 都没占用的频率, 并在服务器日志里打印出来. 填入数值可强制指定, 例如 105.4. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：0 = automatic: picks a frequency clear of every station in t"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_BroadcastsPerDay_tooltip": {
+    "as1_value": "每天大约播出多少条公告.",
+    "value": "每个游戏日大约播出多少条公告. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：RvR1 複核：對齊 EN（in-game day／選單「领取包裹」／power or water）"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_Broadcasts_tooltip": {
+    "as1_value": "商人会在一个真实的电台频率上播报优惠、委托与缺货信息, 你可以调过去听.",
+    "value": "商人会在一个真实的电台频率上播报优惠、委托与缺货信息, 你可以调过去听. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Traders announce deals, jobs and shortages on a real radio c"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_DeadDrops_tooltip": {
+    "as1_value": "购买的东西不会当场交付. 订单备好后, 买家到任意信箱领取 (右键信箱 > 取包裹), 包裹会掉在他脚下. 默认关闭.",
+    "value": "购买的东西不会当场交付. 订单备好后, 买家到任意信箱领取 (右键信箱 > 领取包裹), 包裹会掉在他脚下. 默认关闭. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：RvR1 複核：對齊 EN（in-game day／選單「领取包裹」／power or water）"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_DealDiscountMax_tooltip": {
+    "as1_value": "广播优惠能给到的最大折扣. 优惠幅度从该值减 10 到该值之间, 持续 24 游戏小时, 对所有玩家生效.",
+    "value": "广播优惠能给到的最大折扣. 优惠幅度从该值减 10 到该值之间, 持续 24 游戏小时, 对所有玩家生效. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Biggest discount a broadcast deal can offer. Deals run from "
+  },
+  "Sandbox.json|Sandbox_RadioTraders_DeliveryDelayMax_tooltip": {
+    "as1_value": "订单可以领取之前最长的游戏内延迟.",
+    "value": "订单可以领取之前最长的游戏内延迟. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Longest in-game delay before an order is ready to collect. R"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_DeliveryDelayMin_tooltip": {
+    "as1_value": "订单可以领取之前最短的游戏内延迟.",
+    "value": "订单可以领取之前最短的游戏内延迟. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Shortest in-game delay before an order is ready to collect. "
+  },
+  "Sandbox.json|Sandbox_RadioTraders_Haggling_tooltip": {
+    "as1_value": "新增\"出价\"按钮. 成功率取决于你的声望和折扣幅度. 逼得太紧, 商人会挂断.",
+    "value": "新增“出价”按钮. 成功率取决于你的声望和折扣幅度. 逼得太紧, 商人会挂断. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Adds a Make offer button. Odds depend on your standing and h"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_MarketPressureCap_tooltip": {
+    "as1_value": "价格上下波动的最大幅度.",
+    "value": "价格上下波动的最大幅度. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：The most prices can swing up or down. Requires \"Advanced Tra"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_MarketPressure_tooltip": {
+    "as1_value": "大量出售同一种物品会压低那个商人收购它的价格 (几天后恢复). 在计划性停水停电之后, 电池、燃料、发电机和干净水的价格会上涨. 其他模组提供的临时电力不算在内.",
+    "value": "大量出售同一种物品会压低那个商人收购它的价格 (几天后恢复). 在计划性停电或停水之后, 电池、燃料、发电机和干净水的价格会上涨. 其他模组提供的临时电力不算在内. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：RvR1 複核：對齊 EN（in-game day／選單「领取包裹」／power or water）"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_MaxHaggleDiscount_tooltip": {
+    "as1_value": "玩家能要求到的最大折扣.",
+    "value": "玩家能要求到的最大折扣. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：The biggest discount a player can ask for. Requires \"Advance"
+  },
+  "IG_UI.json|IGUI_PSRComputerPanel_ColDrain": {
+    "as1_value": "耗量 (安时)",
+    "value": "负载电流 (A)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Drain (A)"
+  },
+  "ItemName.json|Base.10M14Mag": {
+    "as1_value": "M14自动步枪弹匣 (10发, .308 Win)",
+    "value": "M14自动步枪弹匣 (10发, .308/7.62x51mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：10rd M14 Magazine (.308/7.62x51mm)"
+  },
+  "ItemName.json|Base.10mmBox": {
+    "as1_value": "10mm子弹 (整盒)",
+    "value": "10mm Auto子弹 (整盒)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Box of 10mm Auto"
+  },
+  "ItemName.json|Base.10mmBullets": {
+    "as1_value": "10mm子弹",
+    "value": "10mm Auto子弹",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：10mm Auto"
+  },
+  "ItemName.json|Base.20M16AR180Mag": {
+    "as1_value": "改装AR-15/AR-180弹匣(20发, .223 Rem)",
+    "value": "改装AR-15/AR-180弹匣(20发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：20rd Modified AR-15/AR-180 Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.20M16Mag": {
+    "as1_value": "STANAG弹匣 (20发, .223 Rem)",
+    "value": "STANAG弹匣 (20发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：20rd STANAG Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.223BulletsBrass": {
+    "as1_value": "空黄铜弹壳(.223 Rem)",
+    "value": "空黄铜弹壳 (.223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Empty Brass Ammo Casing (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.223Rem760Mag": {
+    "as1_value": "雷明顿760猎手大师步枪弹匣 (.223 Rem)",
+    "value": "雷明顿760猎手大师步枪弹匣 (.223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Remington 760 Gamemaster Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.223RemMag": {
+    "as1_value": "雷明顿788步枪弹匣 (4发, .223 Rem)",
+    "value": "雷明顿788步枪弹匣 (4发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：4rd Remington 788 Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.3006Carton": {
+    "as1_value": ".30-06子弹 (整箱)",
+    "value": ".30-06春田子弹 (整箱)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Carton of .30-06 Springfield"
+  },
+  "ItemName.json|Base.308BARMag": {
+    "as1_value": "勃朗宁BAR自动步枪弹匣 (.308 Win)",
+    "value": "勃朗宁BAR自动步枪弹匣 (.308/7.62x51mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Browning BAR Magazine (.308/7.62x51mm)"
+  },
+  "ItemName.json|Base.308BeltLink": {
+    "as1_value": ".308弹链",
+    "value": "M13 .308/7.62x51mm弹链节",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：M13 .308/7.62x51mm Belt Link"
+  },
+  "ItemName.json|Base.308LinkBox": {
+    "as1_value": ".308弹链(整盒)",
+    "value": "M13 .308/7.62x51mm弹链节 (整盒)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Box of M13 .308/7.62x51mm Belt Links"
+  },
+  "ItemName.json|Base.308Rem760Mag": {
+    "as1_value": "雷明顿760猎手大师步枪弹匣 (.308 Win)",
+    "value": "雷明顿760猎手大师步枪弹匣 (.308/7.62x51mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Remington 760 Gamemaster Magazine (.308/7.62x51mm)"
+  },
+  "ItemName.json|Base.308Rem788Mag": {
+    "as1_value": "雷明顿788步枪弹匣 (3发, .308 Win)",
+    "value": "雷明顿788步枪弹匣 (3发, .308/7.62x51mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：3rd Remington 788 Magazine (.308/7.62x51mm)"
+  },
+  "ItemName.json|Base.308WinMag": {
+    "as1_value": "温彻斯特7400型步枪弹匣 (.308 Win)",
+    "value": "温彻斯特7400型步枪弹匣 (.308/7.62x51mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Winchester Model 7400 Magazine (.308/7.62x51mm)"
+  },
+  "ItemName.json|Base.30M14Mag": {
+    "as1_value": "M14自动步枪弹匣 (30发, .308 Win)",
+    "value": "M14自动步枪弹匣 (30发, .308/7.62x51mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：30rd M14 Magazine (.308/7.62x51mm)"
+  },
+  "ItemName.json|Base.30M16AR180Mag": {
+    "as1_value": "改装AR-15/AR-180弹匣(30发, .223 Rem)",
+    "value": "改装AR-15/AR-180弹匣(30发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：30rd Modified AR-15/AR-180 Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.30Mini14Mag": {
+    "as1_value": "鲁格Mini-14步枪弹匣 (30发, .223 Rem)",
+    "value": "鲁格Mini-14步枪弹匣 (30发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：30rd Ruger Mini-14 Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.30Mini14MagSS": {
+    "as1_value": "鲁格Mini-14步枪弹匣 (30发, .223 Rem)",
+    "value": "鲁格Mini-14步枪弹匣 (30发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：30rd Ruger Mini-14 Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.30Mini30Mag": {
+    "as1_value": "鲁格Mini-30步枪弹匣 (30发, 7.62x39)",
+    "value": "鲁格Mini-30步枪弹匣 (30发, 7.62x39mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：30rd Ruger Mini-30 Magazine (7.62x39mm)"
+  },
+  "ItemName.json|Base.40AKMag": {
+    "as1_value": "AK自动步枪弹匣(40发, 7.62x39)",
+    "value": "AK自动步枪弹匣(40发, 7.62x39mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：40rd AK Magazine (7.62x39mm)"
+  },
+  "ItemName.json|Base.40AR180Mag": {
+    "as1_value": "AR-180自动步枪弹匣 (40发, .223 Rem)",
+    "value": "AR-180自动步枪弹匣 (40发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：40rd AR-180 Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.40M16AR180Mag": {
+    "as1_value": "改装AR-180/AR-15弹匣(40发, .223 Rem)",
+    "value": "改装AR-180/AR-15弹匣(40发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：40rd Modified AR-180/AR-15 Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.40Mini14Mag": {
+    "as1_value": "鲁格Mini-14步枪弹匣 (40发, .223 Rem)",
+    "value": "鲁格Mini-14步枪弹匣 (40发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：40rd Ruger Mini-14 Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.40Mini14MagSS": {
+    "as1_value": "鲁格Mini-14步枪弹匣 (40发, .223 Rem)",
+    "value": "鲁格Mini-14步枪弹匣 (40发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：40rd Ruger Mini-14 Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.45TwoStageSilencer": {
+    "as1_value": "两级消音器(.45口径)",
+    "value": "MAC两级消音器(.45口径)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：MAC Two-Stage Silencer (.45 cal)"
+  },
+  "ItemName.json|Base.556BeltLink": {
+    "as1_value": ".223弹链",
+    "value": "M27 .223/5.56x45mm弹链节",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：M27 .223/5.56x45mm Belt Link"
+  },
+  "ItemName.json|Base.556BulletsBrass": {
+    "as1_value": "空黄铜弹壳(.223 Rem)",
+    "value": "空黄铜弹壳 (.223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Empty Brass Ammo Casing (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.556LinkBox": {
+    "as1_value": ".223弹链(整盒)",
+    "value": "M27 .223/5.56x45mm弹链节 (整盒)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Box of M27 .223/5.56x45mm Belt Links"
+  },
+  "ItemName.json|Base.76239BulletsBrass": {
+    "as1_value": "空金属弹壳(7.62x39)",
+    "value": "空黄铜弹壳(7.62x39mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Empty Brass Ammo Casing (7.62x39mm)"
+  },
+  "ItemName.json|Base.AK5Mag": {
+    "as1_value": "AK自动步枪弹匣(5发, 7.62x39)",
+    "value": "AK自动步枪弹匣(5发, 7.62x39mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：5rd AK Magazine (7.62x39mm)"
+  },
+  "ItemName.json|Base.AKBakeMag": {
+    "as1_value": "AK自动步枪胶木弹匣(30发, 7.62x39)",
+    "value": "AK自动步枪胶木弹匣(30发, 7.62x39mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：30rd AK Bakelite Magazine (7.62x39mm)"
+  },
+  "ItemName.json|Base.AKDrumMag": {
+    "as1_value": "AK自动步枪弹鼓(75发, 7.62x39)",
+    "value": "AK自动步枪弹鼓(75发, 7.62x39mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：75rd AK Drum Magazine (7.62x39mm)"
+  },
+  "ItemName.json|Base.AKMag": {
+    "as1_value": "AK自动步枪弹匣(30发, 7.62x39)",
+    "value": "AK自动步枪弹匣(30发, 7.62x39mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：30rd AK Magazine (7.62x39mm)"
+  },
+  "ItemName.json|Base.AR180Mag": {
+    "as1_value": "AR-180自动步枪弹匣 (30发, .223 Rem)",
+    "value": "AR-180自动步枪弹匣 (30发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：30rd AR-180 Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.BetaCMag": {
+    "as1_value": "Beta C-Mag弹鼓(100发, .223 Rem)",
+    "value": "Beta C-Mag弹鼓(100发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：100rd Beta C-Mag Drum (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.CrudeMAC10AutoTrigger": {
+    "as1_value": "简陋全自动扳机(仅全自动)(MAC-10冲锋枪)",
+    "value": "简陋全自动扳机(仅全自动)(M10冲锋枪)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Crude Auto Trigger (Full-Auto Only) (M10)"
+  },
+  "ItemName.json|Base.FALMag": {
+    "as1_value": "赫斯塔尔FAL自动步枪弹匣 (.308 Win)",
+    "value": "赫斯塔尔FAL自动步枪弹匣 (.308/7.62x51mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：FN FAL Magazine (.308/7.62x51mm)"
+  },
+  "ItemName.json|Base.HK91Mag": {
+    "as1_value": "黑克勒-科赫HK91自动步枪弹匣 (.308 Win)",
+    "value": "黑克勒-科赫HK91自动步枪弹匣 (.308/7.62x51mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：HK91 Magazine (.308/7.62x51mm)"
+  },
+  "ItemName.json|Base.HKS10A357": {
+    "as1_value": "HKS 10-A快速装弹器(.357 Magnum)",
+    "value": "HKS 10-A快速装弹器(.38 Spc/.357 Mag)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：HKS 10-A Speedloader (.38 Spc/.357 Mag)"
+  },
+  "ItemName.json|Base.HKS36A357": {
+    "as1_value": "HKS 36-A快速装弹器(.357 Magnum)",
+    "value": "HKS 36-A快速装弹器(.38 Spc/.357 Mag)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：HKS 36-A Speedloader (.38 Spc/.357 Mag)"
+  },
+  "ItemName.json|Base.HKS586A357": {
+    "as1_value": "HKS 586-A快速装弹器(.357 Magnum)",
+    "value": "HKS 586-A快速装弹器(.38 Spc/.357 Mag)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：HKS 586-A Speedloader (.38 Spc/.357 Mag)"
+  },
+  "ItemName.json|Base.HKSMK3A357": {
+    "as1_value": "HKS MK3-A快速装弹器(.357 Magnum)",
+    "value": "HKS MK3-A快速装弹器(.38 Spc/.357 Mag)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：HKS MK3-A Speedloader (.38 Spc/.357 Mag)"
+  },
+  "ItemName.json|Base.HKSPYA357": {
+    "as1_value": "HKS PYA快速装弹器(.357 Magnum)",
+    "value": "HKS PYA快速装弹器(.38 Spc/.357 Mag)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：HKS PYA Speedloader (.38 Spc/.357 Mag)"
+  },
+  "ItemName.json|Base.L395KMag": {
+    "as1_value": "莱克菲尔德莫斯伯格L395K霰弹枪弹匣 (12g鹿弹)",
+    "value": "莱克菲尔德莫斯伯格L395K霰弹枪弹匣 (12g)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Lakefield Mossberg L395K Magazine (12ga)"
+  },
+  "ItemName.json|Base.M14Mag": {
+    "as1_value": "M14自动步枪弹匣 (20发, .308 Win)",
+    "value": "M14自动步枪弹匣 (20发, .308/7.62x51mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：20rd M14 Magazine (.308/7.62x51mm)"
+  },
+  "ItemName.json|Base.M16Mag": {
+    "as1_value": "STANAG弹匣 (30发, .223 Rem)",
+    "value": "STANAG弹匣 (30发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：30rd STANAG Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.M249Box": {
+    "as1_value": "M249弹药箱(.223弹链)",
+    "value": "M249弹药箱(.223/5.56x45mm弹链)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：M249 Ammo Box (Belted .223/5.56x45mm)"
+  },
+  "ItemName.json|Base.M60Box": {
+    "as1_value": "M60弹药箱(.308弹链)",
+    "value": "M60弹药箱(.308/7.62x51mm弹链)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：M60 Ammo Box (Belted .308/7.62x51mm)"
+  },
+  "ItemName.json|Base.MAC10AutoTrigger": {
+    "as1_value": "扳机和枪机部件(半自动/全自动)(MAC-10冲锋枪)",
+    "value": "扳机和枪机部件(半自动/全自动)(M10冲锋枪)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Trigger and Bolt Parts (Semi/Full-Auto) (M10)"
+  },
+  "ItemName.json|Base.MAC10Trigger": {
+    "as1_value": "扳机和枪机部件(半自动)(MAC-10冲锋枪)",
+    "value": "扳机和枪机部件(半自动)(M10冲锋枪)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Trigger and Bolt Parts (Semi) (M10)"
+  },
+  "ItemName.json|Base.Mini14Mag": {
+    "as1_value": "鲁格Mini-14步枪弹匣 (20发, .223 Rem)",
+    "value": "鲁格Mini-14步枪弹匣 (20发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：20rd Ruger Mini-14 Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.Mini14MagSS": {
+    "as1_value": "鲁格Mini-14步枪弹匣 (20发, .223 Rem)",
+    "value": "鲁格Mini-14步枪弹匣 (20发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：20rd Ruger Mini-14 Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.Mini30Mag": {
+    "as1_value": "鲁格Mini-30步枪弹匣 (20发, 7.62x39)",
+    "value": "鲁格Mini-30步枪弹匣 (20发, 7.62x39mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：20rd Ruger Mini-30 Magazine (7.62x39mm)"
+  },
+  "ItemName.json|Base.Size3CompII357": {
+    "as1_value": "Safariland Size 3 Comp II快速装弹器(.357 Magnum)",
+    "value": "Safariland Size 3 Comp II快速装弹器(.38 Spc/.357 Mag)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Safariland Size 3 Comp II Speedloader (.38 Spc/.357 Mag)"
+  },
+  "ItemName.json|Base.Size3CompIII357": {
+    "as1_value": "Safariland Size 3 Comp III快速装弹器(.357 Magnum)",
+    "value": "Safariland Size 3 Comp III快速装弹器(.38 Spc/.357 Mag)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Safariland Size 3 Comp III Speedloader (.38 Spc/.357 Mag)"
+  },
+  "ItemName.json|Base.Size4CompII357": {
+    "as1_value": "Safariland Size 4 Comp II快速装弹器(.357 Magnum)",
+    "value": "Safariland Size 4 Comp II快速装弹器(.38 Spc/.357 Mag)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Safariland Size 4 Comp II Speedloader (.38 Spc/.357 Mag)"
+  },
+  "ItemName.json|Base.Size4CompIII357": {
+    "as1_value": "Safariland Size 4 Comp III快速装弹器(.357 Magnum)",
+    "value": "Safariland Size 4 Comp III快速装弹器(.38 Spc/.357 Mag)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Safariland Size 4 Comp III Speedloader (.38 Spc/.357 Mag)"
+  },
+  "ItemName.json|Base.Size5CompII357": {
+    "as1_value": "Safariland Size 5 Comp II快速装弹器(.357 Magnum)",
+    "value": "Safariland Size 5 Comp II快速装弹器(.38 Spc/.357 Mag)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Safariland Size 5 Comp II Speedloader (.38 Spc/.357 Mag)"
+  },
+  "ItemName.json|Base.Size5CompIII357": {
+    "as1_value": "Safariland Size 5 Comp III快速装弹器(.357 Magnum)",
+    "value": "Safariland Size 5 Comp III快速装弹器(.38 Spc/.357 Mag)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Safariland Size 5 Comp III Speedloader (.38 Spc/.357 Mag)"
+  },
+  "ItemName.json|Base.Size6CompII357": {
+    "as1_value": "Safariland Size 6 Comp II快速装弹器(.357 Magnum)",
+    "value": "Safariland Size 6 Comp II快速装弹器(.38 Spc/.357 Mag)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Safariland Size 6 Comp II Speedloader (.38 Spc/.357 Mag)"
+  },
+  "ItemName.json|Base.Size6CompIII357": {
+    "as1_value": "Safariland Size 6 Comp III快速装弹器(.357 Magnum)",
+    "value": "Safariland Size 6 Comp III快速装弹器(.38 Spc/.357 Mag)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Safariland Size 6 Comp III Speedloader (.38 Spc/.357 Mag)"
+  },
+  "ItemName.json|Base.SpeedStrip357": {
+    "as1_value": ".357 Magnum快速装弹条",
+    "value": ".38 Spc/.357 Mag快速装弹条",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Speed Strip (.38 Spc/.357 Mag)"
+  },
+  "ItemName.json|Base.TherARMag": {
+    "as1_value": "Thermold AR-15弹匣 (30发, .223 Rem)",
+    "value": "Thermold AR-15弹匣 (30发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：30rd Thermold AR15 Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.TherMini14Mag": {
+    "as1_value": "Thermold Mini-14弹匣 (30发, .223 Rem)",
+    "value": "Thermold Mini-14弹匣 (30发, .223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：30rd Thermold Mini-14 Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.ValmetMag": {
+    "as1_value": "瓦尔梅特M76步枪弹匣 (.223 Rem)",
+    "value": "瓦尔梅特M76步枪弹匣 (.223/5.56x45mm)",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Valmet M76 Magazine (.223/5.56x45mm)"
+  },
+  "ItemName.json|Base.WhiskeyPowder": {
+    "as1_value": "磨碎的麦芽汁",
+    "value": "麦芽粉",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Ground Malt"
+  },
+  "Recipes.json|HDF_ChocolateCreamCupcake": {
+    "as1_value": "制作巧克力奶油纸杯蛋糕",
+    "value": "给巧克力纸杯蛋糕挤上奶油",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Make Chocolate Cupcakes with Cream"
+  },
+  "Sandbox.json|Sandbox_PropaneRefuel_PropaneTruckReserveMax_tooltip": {
+    "as1_value": "一辆油罐车能装多少丙烷, 以及它最多能装载多少丙烷. 每辆卡车都会随机装载一定数量的丙烷, 但数量不会超过这个上限. <br>在默认的200单位中, 一辆满载的油罐车相当于十个丙烷储罐的价值.",
+    "value": "没有自带丙烷罐的油罐车能装多少丙烷, 也是被发现时的最大载量. 默认值200时, 一辆满载的油罐车相当于十个丙烷罐. <br>装有实际丙烷罐部件的油罐车则改用该罐自身的容量.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：How much propane a tanker with no tank of its own can hold, "
+  },
+  "Sandbox.json|Sandbox_PropaneRefuel_PropaneTruckReserveMin_tooltip": {
+    "as1_value": "至少可以找到一辆载有丙烷的油罐车. <br>选项为0时, 已发现的一些油轮是空的.",
+    "value": "没有自带丙烷罐的油罐车被发现时的最低丙烷载量. 设为0时, 有些被发现时是空的. <br>装有实际丙烷罐部件的油罐车 (例如 Filibuster Rhymes 的 B42 油罐车) 会改用该罐, 并忽略此设置.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Least propane a tanker with no tank of its own can be found "
+  },
+  "Tooltip.json|Tooltip_CTB_Agave": {
+    "as1_value": "一片厚实多肉的龙舌兰叶, 叶缘带刺; 土耳其语叫它\"sabir otu\", 耐心草. 压榨机能把它压出蜂蜜般甜的糖浆, 龙舌兰酒链就从这里开始.<br>采集不到, 只能播种, 而且要在地里长好几年.",
+    "value": "一片厚实多肉的龙舌兰叶, 叶缘带刺. 土耳其语称它为“sabir otu”, 意为“耐心草”. 压榨后可得到像蜂蜜一样甜的糖浆, 这是酿制龙舌兰酒的第一步.<br>用种子包里的种子播种后, 植株能在地里生长多年. 如果服务器禁用了本模组的作物, 则改为在野外采集.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：A thick, fleshy agave leaf with spined edges; in Turkish it "
+  },
+  "Tooltip.json|Tooltip_CTB_TohumTopla": {
+    "as1_value": "用镊子或小刀把整个果实拆开: 一个果实, 一粒种子. <LINE>果实烂了也行. 工具只会磨损; 钝刀子不行. <LINE>适用于葡萄、樱桃、苹果、桃、梨、黑莓、蓝莓和茴芹.",
+    "value": "用镊子或小刀把整个果实拆开: 一个果实, 一粒种子. <LINE>果实烂了也行. 工具只会磨损; 钝刀子不行. <LINE>适用于葡萄、樱桃、苹果、桃、梨、黑莓、蓝莓和茴芹. <LINE>如果服务器关闭了本模组的作物, 则无法使用.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Picks a whole fruit apart with tweezers or a knife: one frui"
+  },
+  "Tooltip.json|Tooltip_driedmalt": {
+    "as1_value": "研磨成麦芽汁粉",
+    "value": "用石磨盘研磨成麦芽粉",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Grind in a stone quern to make ground malt"
+  },
+  "Tooltip.json|Tooltip_fermentatedwhiskeywort": {
+    "as1_value": "蒸馏以进一步陈酿成威士忌, 或过筛后放置成熟以获得啤酒",
+    "value": "蒸馏后陈酿可制成威士忌, 或用奶酪布过滤后静置陈酿可制成啤酒",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Distill it and age it to make whiskey, or strain it through "
+  },
+  "Tooltip.json|Tooltip_germinatingmalt": {
+    "as1_value": "进一步使用前放置2天",
+    "value": "放置2天使其发芽",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Leave it for 2 days to sprout"
+  },
+  "Tooltip.json|Tooltip_maturingbeerbarrel": {
+    "as1_value": "放置3天使其成熟",
+    "value": "静置3天让啤酒完成陈酿",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Leave for 3 days to mature"
+  },
+  "Tooltip.json|Tooltip_maturingwhiskeybarrel": {
+    "as1_value": "放置4天使其成熟",
+    "value": "静置4天让威士忌完成陈酿",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Leave for 4 days to mature"
+  },
+  "Tooltip.json|Tooltip_maturingwinebarrel": {
+    "as1_value": "放置2天使其成熟",
+    "value": "静置2天让葡萄酒完成陈酿",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Leave for 2 days to mature"
+  },
+  "Tooltip.json|Tooltip_readybarrel": {
+    "as1_value": "倒入桶中以储存和饮用",
+    "value": "倒入木桶以储存和饮用",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Pour into a wooden barrel for storage and drinking"
+  },
+  "Tooltip.json|Tooltip_whiskeypowder": {
+    "as1_value": "加入发酵罐, 并加入10升水",
+    "value": "将麦芽粉加入装有10升水的发酵罐",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Add to a Fermentation Pot with 10 liters of water"
+  },
+  "Tooltip.json|Tooltip_whiskeywort": {
+    "as1_value": "在炉子上煮至完成, 煮好后倒入发酵桶并加入酵母",
+    "value": "在炉子上煮至完成, 然后倒入发酵桶并加入酵母",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Cook on the stove until done, then pour into a fermentation "
+  },
+  "ContextMenu.json|ContextMenu_PropaneRefuel_Refill": {
+    "as1_value": "拆下丙烷",
+    "value": "取出丙烷",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Take Propane 是從油泵取用丙烷，As1「拆下丙烷」誤作拆零件；對齊 CH「取出丙烷」"
+  },
+  "ContextMenu.json|ContextMenu_BuildingGenerator_conditionLineTooltip": {
+    "as1_value": "发电机机械状况 (0-100%%). 请在关闭状态下使用废料进行修理; 状况过低可能导致故障.",
+    "value": "发电机机械状况 (0-100%%). 请在关闭状态下使用废料进行修理; 状况在 20%% 及以下时无法启动.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Generator mechanical condition (0-100%%). Repair with scrap "
+  },
+  "ContextMenu.json|ContextMenu_BuildingGenerator_powerOnTooltip": {
+    "as1_value": "启动地堡发电机. 需要燃料且状况高于零.",
+    "value": "启动地堡发电机. 需要燃料, 且状况要高于 20%% 才能启动.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Start the bunker generator. Requires fuel and condition abov"
+  },
+  "ContextMenu.json|ContextMenu_P4MySoCalledToy_SpinCapsuleToy": {
+    "as1_value": "旋转扭蛋机",
+    "value": "使用扭蛋机",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Use Capsule Toy Machine"
+  },
+  "IG_UI.json|IGUI_TM42_Cat_Gather_Desc": {
+    "as1_value": "在你的主物品栏中携带特定材料",
+    "value": "在物品栏或随身包里携带指定材料.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Bring specific materials in your inventory or bags."
+  },
+  "IG_UI.json|IGUI_TM42_Gather01_Desc": {
+    "as1_value": "在主物品栏中携带10木板",
+    "value": "在物品栏或随身包里携带10块木板.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Carry 10 planks in your inventory or bags."
+  },
+  "IG_UI.json|IGUI_TM42_Gather02_Desc": {
+    "as1_value": "在主物品栏中携带2盒钉子",
+    "value": "在物品栏或随身包里携带2盒钉子.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Carry 2 boxes of nails in your inventory or bags."
+  },
+  "IG_UI.json|IGUI_TM42_Gather04_Desc": {
+    "as1_value": "在主物品栏中携带3原木",
+    "value": "在物品栏或随身包里携带3根原木.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Carry 3 logs in your inventory or bags."
+  },
+  "Sandbox.json|Sandbox_P4MySoCalledToy_WorldSpawn": {
+    "as1_value": "固定扭蛋机生成",
+    "value": "在固定地点生成扭蛋机和卡片机",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Fixed Toy Machine Spawns"
+  },
+  "Sandbox.json|Sandbox_P4MySoCalledToy_WorldSpawn_tooltip": {
+    "as1_value": "在世界中的固定位置自动放置扭蛋机.<br>禁用时, 已存在的扭蛋机不会被移除, 服务器管理员仍可使用调试生成工具手动放置扭蛋机.",
+    "value": "在世界中的固定地点自动放置扭蛋机和卡片机.<br>禁用后, 已放置的机器不会消失, 服务器管理员仍可用调试生成工具手动放置这两种机器.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Automatically places toy machines at fixed locations in the "
+  },
+  "Sandbox.json|Sandbox_WhoseKeyIsThis_AllowGroundKeys_tooltip": {
+    "as1_value": "默认开启. 在附近地面钥匙上方显示名称. 关闭后, 即使玩家模组内开启该选项也不会显示.",
+    "value": "显示地面上钥匙的名称. 默认开启.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Name keys lying on the ground. Default on."
+  },
+  "Sandbox.json|Sandbox_WhoseKeyIsThis_MovedBodyCountsAsTaken_tooltip": {
+    "as1_value": "默认开启, 仅多人, 依赖上方选项开启. 尸体被远距离拖动、装车、放入容器, 即使钥匙环没被拿出来, 追踪就终止. 关闭, 标记跟随尸体移动. 仅把尸体挪开门口不会触发终止.",
+    "value": "把尸体搬走也视为拿走钥匙环. 仅限多人游戏. 默认开启.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Count hauling the body off as taking it. Multiplayer only. D"
+  },
+  "Sandbox.json|Sandbox_WhoseKeyIsThis_RequireCompass_tooltip": {
+    "as1_value": "默认关闭, 单机模式该限制较为苛刻. 开启后, 距离显示、地图跳转、方向箭头功能必须持有指南针才生效; 重命名钥匙不受影响. 独立于其他规则.",
+    "value": "需要指南针才能读取任何位置. 默认关闭.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：A compass is needed to read any location. Default off."
+  },
+  "Sandbox.json|Sandbox_WhoseKeyIsThis_RequireExplored_tooltip": {
+    "as1_value": "默认开启. 只有地图已经揭开该区域 (亲自走到、阅读过地图), 钥匙才显示位置. 指向未探索黑区的钥匙会隐藏位置直到你探索该地. 独立其他规则.",
+    "value": "只能读取你去过的区域中的位置. 默认开启.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Only locations in areas you have been to are readable. Defau"
+  },
+  "Sandbox.json|Sandbox_WhoseKeyIsThis_RequireMapItem_tooltip": {
+    "as1_value": "默认关闭. 开启后, 查看钥匙位置需要携带覆盖目标地点的纸质地图; 读取过一次位置后, 就算丢掉地图依旧可以查看. 独立其他规则.",
+    "value": "需要该区域的地图才能读取位置. 默认关闭.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：The map for that area is needed to read a location. Default "
+  },
+  "Sandbox.json|Sandbox_WhoseKeyIsThis_StopWhenTaken_tooltip": {
+    "as1_value": "默认开启, 仅多人. 其他幸存者把钥匙环从尸体拿进背包, 追踪立刻终止. 关闭则标记跟随拾取者. 拖动尸体、把尸体装上车不算拾取钥匙环, 标记继续生效.",
+    "value": "其他幸存者把钥匙环收进口袋后就停止追踪. 仅限多人游戏. 默认开启.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Stop following once another survivor pockets the ring. Multi"
+  },
+  "Sandbox.json|Sandbox_WhoseKeyIsThis_TakerCanStop_tooltip": {
+    "as1_value": "默认开启, 仅多人. 拾取带有别人追踪标记的钥匙环, 可以右键关闭追踪, 同时终止原玩家端追踪. 关闭则拾取者无权修改标记.",
+    "value": "让捡起钥匙环的人可以关闭该标记. 仅限多人游戏. 默认开启.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Let whoever picks the ring up switch the mark off. Multiplay"
+  },
+  "Sandbox.json|Sandbox_WhoseKeyIsThis_TrackLostKeyRings_tooltip": {
+    "as1_value": "默认开启. 被标记追踪的钥匙环离开玩家背包 (大多留在死亡尸体上), 最后出现位置被标记直到被拾取. 开启后钥匙列表出现钥匙环标签页. 关闭后所有玩家都无法追踪钥匙环, 标签页消失, 无视玩家本地模组设置.",
+    "value": "死亡后持续追踪已标记的钥匙环, 并在地图中加入它的分页. 默认开启.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Follow a marked key ring after death, and add its tab to the"
+  },
+  "Tooltip.json|Tooltip_P4MySoCalledToy_NeedMoney": {
+    "as1_value": "旋转扭蛋机需要投入钱币.",
+    "value": "使用扭蛋机需要钞票.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Money is required to use a capsule toy machine."
+  },
+  "UI.json|UI_Aegis_Builder": {
+    "as1_value": "建造者",
+    "value": "建造菜单",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Build menu"
+  },
+  "UI.json|UI_Aegis_BuilderTooltip": {
+    "as1_value": "选择一个部件, 沿格子拖拽, 确认后建造, R键旋转",
+    "value": "打开蓝图规划器及其教程",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Opens the blueprint planner with its tutorial"
+  },
+  "UI.json|UI_Aegis_Follow": {
+    "as1_value": "跟随",
+    "value": "旁观",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Spectate"
+  },
+  "UI.json|UI_Aegis_FollowTooltip": {
+    "as1_value": "镜头跟随该玩家, 即使距离很远. 再次点击可停止",
+    "value": "你会隐身跟随这名玩家移动, 看到他所看到的一切. 面板、建造和聊天仍可正常使用. 按 Esc 结束并返回原处",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：You travel invisibly with this player and see what they see."
+  },
+  "IG_UI.json|IGUI_PDSQ_IndoorHint": {
+    "as1_value": "散开的宠物会离开行军队列, 在房间内自由移动. 它们会停留在你所在的建筑物内, 当你走出时返回, 且之前下达的命令依然有效.",
+    "value": "散开的宠物会沿着你走过的路线跟随, 在远离门口的角落安顿下来, 你朝它们走去时会让开. 之前下达的命令依然有效.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Loose pets follow the path you walked, settle in a corner aw"
+  },
+  "IG_UI.json|IGUI_PDSQ_IndoorNeedsForm": {
+    "as1_value": "需要保持队形. 自由漫游时无效.",
+    "value": "需要保持队形. 没有编队时, 宠物会在房间内散开.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Needs a formation. With no formation, pets are loose in the "
+  },
+  "Sandbox.json|Sandbox_RadioTraders_ParcelDespawnHours_tooltip": {
+    "as1_value": "商人会把备好的包裹保管多久. 没及时领取就没了.",
+    "value": "商人会把备好的包裹保管多久. 没及时领取就没了. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：How long a trader holds a ready package. Not collected in ti"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_ParcelWorldDespawnHours_tooltip": {
+    "as1_value": "已送出的包裹 (信箱或空投) 放到世界后, 多久会被清理. 默认 36.",
+    "value": "已送出的包裹 (信箱或空投) 放到世界后, 多久会被清理. 默认 36. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：How long a delivered parcel (mailbox or airdrop) sits in the"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_PreciousRush_tooltip": {
+    "as1_value": "有些广播会宣布游侠到明天为止高价收购金、银或宝石. 加成是真的, 对所有玩家生效.",
+    "value": "有些广播会宣布游侠到明天为止高价收购金、银或宝石. 加成是真的, 对所有玩家生效. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Some broadcasts announce that Ranger pays extra for gold, si"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_ReputationGainMultiplier_tooltip": {
+    "as1_value": "声望上升的快慢. 1.0=正常.",
+    "value": "声望上升的快慢. 1.0=正常. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：How fast standing goes up. 1.0 = normal. Requires \"Advanced "
+  },
+  "Sandbox.json|Sandbox_RadioTraders_ReputationLossMultiplier_tooltip": {
+    "as1_value": "声望下降的快慢. 1.0=正常.",
+    "value": "声望下降的快慢. 1.0=正常. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：How fast standing goes down. 1.0 = normal. Requires \"Advance"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_Reputation_tooltip": {
+    "as1_value": "每个玩家会分别获得与每个商人的声望: 不信任、中立、常客、信任、伙伴. 声望越高, 价格越好, 委托越多.",
+    "value": "每个玩家会分别获得与每个商人的声望: 不信任、中立、常客、信任、伙伴. 声望越高, 价格越好, 委托越多. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Each player earns standing with each trader: Distrusted, Neu"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_RushBonusMax_tooltip": {
+    "as1_value": "抢购能给出的最高加成. 抢购加成从该值的一半到该值之间.",
+    "value": "抢购能给出的最高加成. 抢购加成从该值的一半到该值之间. 需要开启“进阶交易”.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Biggest bonus a rush can pay. Rushes pay from half of this u"
+  },
+  "UI.json|UI_RadioTraders_Bc_Jobs": {
+    "as1_value": "%1有活儿给能送货的人. 在电台里报到.",
+    "value": "有个商人有活儿给能送货的人. 在电台里报到.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：A trader has work for anyone who can deliver. Check in on th"
+  },
+  "UI.json|UI_RadioTraders_BountyNear": {
+    "as1_value": "欠债的人就在附近. 小心点.",
+    "value": "欠债的人就在附近, 大约 80 格以内. 小心点.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：The debtors are close, within about 80 tiles. Watch yourself"
+  },
+  "UI.json|UI_RadioTraders_OptVolumeLabel": {
+    "as1_value": "电台音效音量 - 静电、静噪、挂断与音乐. 人声以文字呈现.",
+    "value": "电台音效音量 - 静电、静噪、挂断、音乐、语音台词, 以及本模组的事件与特效音效. 金属探测器有单独的滑块.",
+    "reason": "2026-11-23 #1445–#1508 批次：上游改英文：Radio sound volume - static, squelch, hang-up, music, voice "
+  },
+  "ItemName.json|EscapeFromZomboidFirearms.SAIGA9": {
+    "as1_value": "Сайга-9 9x19 卡宾枪",
+    "value": "Saiga-9 9x19 卡宾枪",
+    "reason": "2026-11-23 #1445–#1508 批次：EN 是拉丁字母 Saiga-9，As1 CN 誤用西里爾字母 Сайга-9（玩家無法用拉丁字母搜尋）；對齊 CH"
+  },
+  "ItemName.json|ammomaker.ammomaker_Balls00": {
+    "as1_value": "鹿弹弹丸",
+    "value": "00号鹿弹弹丸",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Balls 00：補上 00 號規格，和 Guns of Tien 整箱／整件的 00號鹿彈彈丸一致"
+  },
+  "ItemName.json|ammomaker.ammomaker_BoxBalls00": {
+    "as1_value": "鹿弹弹丸 (整盒)",
+    "value": "00号鹿弹弹丸 (整盒)",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Balls 00：補上 00 號規格，和 Guns of Tien 整箱／整件的 00號鹿彈彈丸一致"
+  },
+  "ItemName.json|ammomaker.ammomaker_MoldBalls00": {
+    "as1_value": "模具: 鹿弹弹丸",
+    "value": "模具: 00号鹿弹弹丸",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Balls 00：補上 00 號規格，和 Guns of Tien 整箱／整件的 00號鹿彈彈丸一致"
+  },
+  "Recipes.json|MakeBalls00": {
+    "as1_value": "制作鹿弹弹丸",
+    "value": "制作00号鹿弹弹丸",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Balls 00：補上 00 號規格，和 Guns of Tien 整箱／整件的 00號鹿彈彈丸一致"
+  },
+  "Recipes.json|RecycleBalls00": {
+    "as1_value": "回收鹿弹弹丸",
+    "value": "回收00号鹿弹弹丸",
+    "reason": "2026-11-23 #1445–#1508 批次：EN Balls 00：補上 00 號規格，和 Guns of Tien 整箱／整件的 00號鹿彈彈丸一致"
   }
 }
