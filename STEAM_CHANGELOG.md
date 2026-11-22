@@ -3,6 +3,7 @@
 
 [b]English summary[/b]
 [list]
+[*] Added full Traditional and Simplified Chinese for Living World [NPC] [B42] (2,218 texts): NPC dialogue, the management window, the narrator, radio broadcasts, sandbox options and the built-in help pages.
 [*] Added Traditional and Simplified Chinese for 5,868 new texts across 49 mods, including Knox Buildworks, Escape From Zomboid Firearms, Radio Trader, Stay With Me, Guns of Tien and Companion Dogs: Squad.
 [*] Updated 408 Chinese texts whose English changed in mod updates (Escape From Zomboid Firearms, Guns of 93, Radio Trader, Farming Expansion and more).
 [*] The Shellholder / Shotgun Shell Holder shared by several gun mods now has a Chinese name meaning "shotgun shell holder" instead of "casing holder".
@@ -12,6 +13,7 @@
 
 [h3]新增[/h3]
 [list]
+[*] Living World [NPC] [B42] 整包繁簡中文（2,218 項）：NPC 對話與心情、管理視窗、隊伍人物卡、NPC 建立器、敘事者、倖存者廣播與隊伍無線電、右鍵選單、沙盒選項與內建說明頁。
 [*] 49 個 MOD 更新後新增的文字補上繁簡中文，共 5,868 項。
 [*] Knox Buildworks：建造選單的商店招牌、Vanilla Expanded 家具、海報與招牌（1,857 項）。
 [*] Escape From Zomboid 槍械：新槍、配件與改裝欄位（1,288 項）。

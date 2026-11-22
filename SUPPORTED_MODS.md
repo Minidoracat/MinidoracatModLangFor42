@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1522 個 Workshop 模組**（2198 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
+共支援 **1523 個 Workshop 模組**（2199 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1533,6 +1533,7 @@
 | [Readable HottieZ - 1992 & 1993 Collectible Magazines (27 Issues) [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3831390901) | 可閱讀的 HottieZ 雜誌 | 讓原版 HottieZ 雜誌可以翻閱，收錄 1992 與 1993 年共 27 期收藏刊。 | `ReadableHottieZ` | 95 | — | — |
 | [[42] Ithaca Melee Anims](https://steamcommunity.com/sharedfiles/filedetails/?id=3831633833) | Ithaca 近戰動作 | 球棒、撬棍、消防斧、開山刀、長刀與小刀各有專屬揮擊動作，隨機變化，大多也有專屬爆擊與倒地攻擊。 | `ithacaMeleeAnims` | ? | — | — |
 | [Real Water (NOT Viewpoint)](https://steamcommunity.com/sharedfiles/filedetails/?id=3832474484) | Real Water 真實水體 | 大改遊戲中的水：加入游泳與水體物理等功能，幾乎每項都能在模組或沙盒設定開關。 | `RealWater` | 93 | — | — |
+| [Living World [NPC] [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3837614147) | — | — | `LivingWorld` | 2218 | — | — |
 | [天地任我行（联机未测试）〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3839474970) | — | — | `TianDiRenWoXing` | 363 | — | — |
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
