@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1523 個 Workshop 模組**（2199 個 mod ID）；另 **12 個已下架**（翻譯保留，見文末）。
+共支援 **1520 個 Workshop 模組**（2191 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1022,7 +1022,6 @@
 | [Linterna B42 (Electric & Gas Lantern)](https://steamcommunity.com/sharedfiles/filedetails/?id=3744840515) | — | — | `LinternaB42` | 6 | ⚠️ ≥2 | — |
 | [SimpleBows](https://steamcommunity.com/sharedfiles/filedetails/?id=3744846617) | — | — | `SimpleBows` | 52 | — | — |
 | [Params Tab](https://steamcommunity.com/sharedfiles/filedetails/?id=3745391359) | — | — | `HUDParams` | 53 | — | — |
-| [Claimable Outposts B42.20](https://steamcommunity.com/sharedfiles/filedetails/?id=3745620322) | — | — | `claimableoutposts`, `claimableoutposts_bandits_npc`, `claimableoutposts_guns_of_marz_legacy_loot`, `claimableoutposts_guns_of_marz_loot`, `claimableoutposts_real_firearms_loot`, `claimableoutposts_us_military_grenades_loot` | 249 | — | — |
 | [Tools of the Trade B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3745630569) | 行家工具 B42（Tools of the Trade B42） | B42 版行業工具：新增扁斧、軍用開罐器等多用途工具與武器，並可透過沙盒設定自訂生成倍率。 | `ToolsOfTheTrade42` | 117 | — | — |
 | [US Military Grenades [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3745718141) | — | — | `Explosives` | 65 | — | — |
 | [The Best Lockpicking [B42.20]](https://steamcommunity.com/sharedfiles/filedetails/?id=3745815281) | — | — | `TheBestLockpickingB4219` | 89 | — | — |
@@ -1094,7 +1093,6 @@
 | [Propane Exchange Cabinets](https://steamcommunity.com/sharedfiles/filedetails/?id=3763470184) | — | — | `PropaneExchangeCabinet` | 17 | — | — |
 | [Raining Zombies](https://steamcommunity.com/sharedfiles/filedetails/?id=3763651059) | — | — | `RainingZombies` | 19 | — | — |
 | [Vanilla Tracking Fix](https://steamcommunity.com/sharedfiles/filedetails/?id=3763931962) | — | — | `VanillaTrackingFix` | 113 | — | — |
-| [Nuclear Protocol B42.19](https://steamcommunity.com/sharedfiles/filedetails/?id=3764265933) | — | — | `NuclearProtocolB42` | 32 | — | — |
 | [World Item Removal List [SP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3764947570) | — | — | `LWIRL_SP` | 28 | — | — |
 | [MRT Multiple Generators](https://steamcommunity.com/sharedfiles/filedetails/?id=3765006871) | MRT 多發電機 | 新增發電機控制器與套件，可將控制器接入電網並於介面查看狀態，另含管理員電力選項。 | `MRT_MultipleGenerators` | 106 | — | — |
 | [Beyond Ten - Level 15 Skills [B41/B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3765241705) | — | — | `BeyondTen` | 2 | — | — |
@@ -1103,7 +1101,6 @@
 | [Practice Crafting Skills](https://steamcommunity.com/sharedfiles/filedetails/?id=3765795716) | — | — | `CraftingSkillsPractice`, `CraftingSkillsPracticeCompatability`, `CraftingSkillsPracticeHard`, `CraftingSkillsPracticeHardCompatability` | 1 | — | — |
 | [Black Powder Gunsmithing](https://steamcommunity.com/sharedfiles/filedetails/?id=3766140920) | — | — | `BlackPowderGunsmithing` | 98 | — | — |
 | [Aegis Panel](https://steamcommunity.com/sharedfiles/filedetails/?id=3766508989) | Aegis 管理面板 | 功能完整的多人伺服器管理員與玩家管理工具面板. | `AP` | 1127 | — | ⚠️ 內建說明、更新記錄與導覽刻意寫死 EN/DE，部分建材名稱與操作日誌也走英文；這些文字不經 PZ JSON 翻譯表，任何翻譯包都無法補上。 |
-| [Blackout Predators](https://steamcommunity.com/sharedfiles/filedetails/?id=3766513120) | 黑暗捕食者（Blackout Predators） | 新增夜魔捕食者，含固定巢穴系統（可設定活躍巢穴上限）與環境尖叫間隔等沙盒及選項設定。 | `blackoutpredators` | 33 | — | — |
 | [Ammo Reloading Bench](https://steamcommunity.com/sharedfiles/filedetails/?id=3766525060) | — | — | `ammobench` | 41 | — | — |
 | ['70 Chevrolet Chevelle / El Camino](https://steamcommunity.com/sharedfiles/filedetails/?id=3766571591) | — | — | `70chevelle` | 50 | — | — |
 | [Federal Rangers Chimera](https://steamcommunity.com/sharedfiles/filedetails/?id=3766693411) | 聯邦遊騎兵：Chimera | 新增戰術裝備（胸掛槍套、槍械背心、頭盔、背包等），可掛載至快捷列掛點、調整貼片大小並切換掛載位置。 | `Federal_Rangers_Chimera` | 183 | — | — |
@@ -1538,7 +1535,7 @@
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
-## 已下架模組（12 個，翻譯保留）
+## 已下架模組（15 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
@@ -1553,6 +1550,9 @@
 | [Swim Skill](https://steamcommunity.com/sharedfiles/filedetails/?id=3654513156) | — | — | `swim_skill` | 13 | — | — | 2026-10-17 |
 | [[B42.20] Bag Upgrade Plus](https://steamcommunity.com/sharedfiles/filedetails/?id=3668094025) | — | — | `BagUpgradePlusUpdated` | 55 | — | — | 2026-10-24 |
 | [[B42.20] Bag Upgrade Plus Realistic](https://steamcommunity.com/sharedfiles/filedetails/?id=3669286020) | — | — | `BagUpgradePlusRealistic` | 55 | — | — | 2026-10-24 |
+| [Claimable Outposts B42.20](https://steamcommunity.com/sharedfiles/filedetails/?id=3745620322) | — | — | `claimableoutposts`, `claimableoutposts_bandits_npc`, `claimableoutposts_guns_of_marz_legacy_loot`, `claimableoutposts_guns_of_marz_loot`, `claimableoutposts_real_firearms_loot`, `claimableoutposts_us_military_grenades_loot` | 249 | — | — | 2026-11-23 |
+| [Nuclear Protocol B42.19](https://steamcommunity.com/sharedfiles/filedetails/?id=3764265933) | — | — | `NuclearProtocolB42` | 32 | — | — | 2026-11-23 |
+| [Blackout Predators](https://steamcommunity.com/sharedfiles/filedetails/?id=3766513120) | 黑暗捕食者（Blackout Predators） | 新增夜魔捕食者，含固定巢穴系統（可設定活躍巢穴上限）與環境尖叫間隔等沙盒及選項設定。 | `blackoutpredators` | 33 | — | — | 2026-11-23 |
 | [Knox Immersivity B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3772609548) | — | — | `KnoxImersivityB42` | 88 | — | — | 2026-11-06 |
 | [Dildo GTA Weapon [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3777681298) | — | — | `DildoFunnyWeapon` | 105 | — | — | 2026-10-20 |
 | [Peachey Distillation](https://steamcommunity.com/sharedfiles/filedetails/?id=3784741776) | Peachey 蒸餾 | 加入發酵醪、蒸餾器與陳釀流程，可釀製苦艾烈酒、陳釀葡萄酒等酒品，並提供專屬蒸餾製作分類。 | `peacheysdistillation` | 122 | — | — | 2026-09-10 |
