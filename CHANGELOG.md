@@ -11,8 +11,7 @@
 - **27 個 MOD 更新後新增的文字補上繁簡中文（2,165 項）。**
   - Aegis 管理面板的規則手冊、自動化排程、設定包與玩家面板（783 項）。
   - Vanilla Foods Expanded 的新料理與食材（437 項）；Under the Hood Summer Car 的架車、焊接與車輛故障（277 項）。
-  - Guns of Tien（273 項）、Complete Vanilla Firearms Expansion（112 項）、Beyond Ten（65 項）。
-  - Readable HottieZ 雜誌（50 項）、Escape From Zomboid 槍械（47 項）、Pinoy Survival Foods（27 項）等。
+  - Guns of Tien（273 項）、Complete Vanilla Firearms Expansion（112 項）、Beyond Ten（65 項）等。
   > 技術要點：追蹤器 2026-11-25 #1510–#1519、#1523–#1539「可能過時」（27 個 MOD）。steamcmd 重抓核對 corpus_hash；Guns of Tien（3820183693）、Guns of 93（3183820077）在排程之後又更新，以 `backfill-en` 重抽後照現行版翻。11 路翻譯、每路 GPT 對抗複核，採納 313 條（例：Aegis 規則手冊開關啟用時拒絕接受會斷線，譯「必須接受規則手冊」；Under the Hood 動作選單的參數是車頭／車尾；Beyond Ten 的 above 10 從 11 級起算，譯「超過 10 級後」）。上游刪除且現行 Workshop 已無引用的 own 鍵 9 個自 `own_translations` 與 `ch_review_state` 刪除。#1520–#1522 三個 MOD 已下架，已保留的翻譯照舊出貨。
 
 ### Changed
@@ -23,6 +22,8 @@
   - 例：M1911手槍、870型霰彈槍；沒裝 Guns of Tien 時照舊顯示原名（柯爾特M1911手槍、雷明頓870霰彈槍）。
   > 技術要點：追蹤器 #1509（裁決過時）。39 筆 translate 裁決重新簽名、JSON 中性值不變，`owner_variants.json` 補 Guns of Tien 組；英文的 `Model N` 一律寫「N型」（沿用 corpus 的 1875型、666型）。Thompson .45 ACP 100 發彈鼓的衝突已消失（MFS 移除該物品），裁決與條件譯文退役，譯文不變。
 - **M&P、Shh9 消音器與手槍槍口安裝裝置的共用名稱改成兩個 MOD 都說得通的寫法。** 消音器寫「(9mm)」，槍口安裝裝置寫「9mm系列」；啟用個別 MOD 時照舊顯示它自己的寫法。
+- **幾個 MOD 的舊譯名稱與句型統一（507 項）。** Vanilla Foods Expanded 的碗、鍋料理照本體譯名，Bundle Up! 設定說明、Guns of Marz 槍名與零件等。
+  > 技術要點：#1510–#1539 複核回報的舊譯不一致。VFE 128 項（碗、蒸煮鍋、粗製鍋具、烘焙盤、烘烤板）、Bundle Up! 337 項（說明句型、滑桿標題、中型手柄、鐵管）、Guns of Marz 與格洛克彈匣 17 項、EFZ 簡中 inventory 19 項、Aegis 玩家面板 6 項。FAL 維持「自動步槍」（中文通稱，corpus 22 鍵同寫法）。Guns of Marz 的 4 個衝突鍵連同 `owner_conflict_decisions`、`owner_variants` 一起改。
 
 ### Fixed
 
