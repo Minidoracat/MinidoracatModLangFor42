@@ -10196,8 +10196,8 @@
     },
     "ItemName|MarzGuns.GLOCK17": {
       "action": "translate",
-      "signature": "21d6d973bad93797",
-      "reason": "2026-10-16 #875 裁決：Guns of Marz 新版（GunsOfMarz）把 Glock 17 改寫成 Glock-17，舊版（GunsOfMarzPreviousVersion，凍結）仍是 Glock 17；兩者是同一把槍、只差連字號。現行「格洛克17手槍」不含連字號寫法，對兩版都成立，維持原譯。",
+      "signature": "60eb73968775d421",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 新版寫 Glock-17、舊版寫 Glock 17、Guns of Tien 寫 Glock-17 Pistol，三者是同一把格洛克 17 手槍，只差連字號與 Pistol；2026-10-16 #875 的「格洛克17手槍」對新 owner 仍成立，維持原譯。",
       "ch": "格洛克17手槍",
       "cn": "格洛克17手枪"
     },
@@ -11570,13 +11570,6 @@
       "ch": "9mm 帕拉貝倫 30發彈匣",
       "cn": "9mm 帕拉贝鲁姆 30 发弹匣"
     },
-    "ItemName|Base.45_Thompson_Drum": {
-      "action": "translate",
-      "signature": "de57f18966e03b0b",
-      "reason": "2026-10-24 #1025–#1046 批次（上游改文／新 owner 進 census）：Escape from Kentucky（3633421539）寫 Thompson 100-Round .45 ACP Drum，MFS 社群修正版（3780151182）的 script DisplayName 寫 Thompson 100 Round .45ACP Drum（script：base:bullets_45、MaxAmmo 100、GunType Thompson_cat），只差連字號與空格。現行譯文對兩方成立，維持現值。",
-      "ch": "湯普森 .45 ACP 100 發彈鼓",
-      "cn": "汤普森 .45 ACP 100 发弹鼓"
-    },
     "Recipes|9mmDrum(50)(手枪)": {
       "action": "translate",
       "signature": "15490e7990b11bf8",
@@ -12028,8 +12021,8 @@
     },
     "ItemName|MarzGuns.FIVESEVEN": {
       "action": "translate",
-      "signature": "83d631c370b75254",
-      "reason": "2026-11-02 As1 v3.13.0 同步新 owner 裁決（維持現值）：Guns of Marz 寫 5.7x28mm Five-SeveN、Guns of Tien 寫 Five-SeveN，是同一把手槍。現值「赫斯塔爾57手槍」成立；條件譯文各組照自己的英文。",
+      "signature": "b8075a330be8c3de",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 兩版寫 5.7x28mm Five-SeveN、Guns of Tien - Post-93 現在寫 Five-SeveN Pistol，是同一把 FN 手槍；2026-11-02 裁決的「赫斯塔爾57手槍」對新英文仍成立（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
       "ch": "赫斯塔爾57手槍",
       "cn": "赫斯塔尔57手枪"
     },
@@ -12350,14 +12343,16 @@
       "reason": "2026-11-12 #1339–#1370 新裁決不出貨：HaloArmor（3507919075）的 'Wear with Visor' 是戴上面罩的選項（同 MOD 另有 ContextMenu_NoVisorNoMask 'Wear Base Version'），NMS（3791086306）是 'Base Version'，Operator Gear（3823941573）是 'Base'（戰術胸掛的基本款）。意思互斥：寫「基本款式」會讓 HaloArmor 出現兩個「基本」選項，寫「戴上面罩」對另兩方是錯的，沒有誠實中性譯名。抑制後三方都有可載入 ContextMenu.json，玩家看到各自英文（Operator Gear 下載內容查無 CH／CN；HaloArmor、NMS 本機無副本，沒查）；條件譯文依啟用的 MOD 寫入各自譯名。"
     },
     "ItemName|MarzGuns.556x45Magazine100_STANAG": {
-      "action": "unship",
-      "signature": "4606b2044a5cebcb",
-      "reason": "2026-11-12 #1339–#1370 新裁決不出貨：Guns of Marz（3722134990/GunsOfMarz）新版把這個物品改成 75 發（script MaxAmmo=75），同 Workshop 項目的 GunsOfMarzPreviousVersion 與 Brita Legacy Magazines（3801670664）仍是 100 發。容量是承重資訊，拿掉數字後 Guns of Marz 的 50／75／100／150 四個 STANAG 擴容彈匣會同名，沒有誠實中性譯名。抑制後各方都有可載入 ItemName.json，玩家看到各自英文（Guns of Marz 只附 EN／IT）；條件譯文依啟用的 MOD 寫入各自容量。B41 前綴孿生鍵在真相層與 dist 都不存在。"
+      "action": "translate",
+      "signature": "0590264ef4a10a46",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 新版改回 100 發（script MaxAmmo=100），英文為 STANAG 100Rds 5.56x45mm Extended Magazine，只比舊版 GunsOfMarzPreviousVersion 與 Brita Legacy Magazines 的 STANAG 100Rds 5.56x45mm Magazine 多 Extended；三方容量相同，「5.56x45mm 100發STANAG彈匣」對各方都成立，取消 2026-11-12 的 unship。",
+      "ch": "5.56x45mm 100發STANAG彈匣",
+      "cn": "5.56x45mm 100发STANAG弹匣"
     },
     "ItemName|MarzGuns.556x45Magazine150_STANAG": {
       "action": "unship",
-      "signature": "ea2dd618fb432a92",
-      "reason": "2026-11-12 #1339–#1370 新裁決不出貨：Guns of Marz（3722134990/GunsOfMarz）新版把這個物品改成 90 發（script MaxAmmo=90），同 Workshop 項目的 GunsOfMarzPreviousVersion 與 Brita Legacy Magazines（3801670664）仍是 150 發。容量是承重資訊，拿掉數字後 Guns of Marz 的 50／75／100／150 四個 STANAG 擴容彈匣會同名，沒有誠實中性譯名。抑制後各方都有可載入 ItemName.json，玩家看到各自英文（Guns of Marz 只附 EN／IT）；條件譯文依啟用的 MOD 寫入各自容量。B41 前綴孿生鍵在真相層與 dist 都不存在。"
+      "signature": "c3b7c11483fa3ded",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 新版把這個物品改成 BETA CMAG 100 發（script MaxAmmo=100，英文 BETA CMAG 100Rds 5.56x45mm Magazine），GunsOfMarzPreviousVersion 與 Brita Legacy Magazines 仍是 STANAG 150 發；容量是承重資訊，型式也不同，沒有誠實中性譯名，維持不出貨，各 owner 由條件譯文寫入各自容量。"
     },
     "ItemName|MarzGuns.556x45Magazine50_STANAG": {
       "action": "unship",
@@ -12366,8 +12361,8 @@
     },
     "ItemName|MarzGuns.556x45Magazine75_STANAG": {
       "action": "unship",
-      "signature": "ca6f3544eef5d0d2",
-      "reason": "2026-11-12 #1339–#1370 新裁決不出貨：Guns of Marz（3722134990/GunsOfMarz）新版把這個物品改成 60 發彈鼓（script MaxAmmo=60），同 Workshop 項目的 GunsOfMarzPreviousVersion 與 Brita Legacy Magazines（3801670664）仍是 75 發。容量是承重資訊，拿掉數字後 Guns of Marz 的 50／75／100／150 四個 STANAG 擴容彈匣會同名，沒有誠實中性譯名。抑制後各方都有可載入 ItemName.json，玩家看到各自英文（Guns of Marz 只附 EN／IT）；條件譯文依啟用的 MOD 寫入各自容量。B41 前綴孿生鍵在真相層與 dist 都不存在。"
+      "signature": "fac60108cde3143c",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 新版英文改成 PMAG 60Rds 5.56x45mm Drum Magazine（script MaxAmmo=60 的 PMAG 彈鼓），GunsOfMarzPreviousVersion 與 Brita Legacy Magazines 仍是 STANAG 75 發彈匣；容量是承重資訊，沒有誠實中性譯名，維持不出貨，各 owner 由條件譯文寫入各自容量。"
     },
     "Recorded_Media|RM_6f98888f-2e1c-4895-b465-8e97d94adee5": {
       "action": "translate",
@@ -14215,6 +14210,265 @@
       "reason": "2026-11-23 #1445–#1508 新衝突：Common Sense 新版（3750253491）把說明改成 Overrides the vanilla prying doors and windows open mechanic. Also allows to force cars open.（取代原版撬開機制，關閉時原版撬開照舊可用），另兩個 owner（3714335263、3717968421）仍寫 Toggles whether Players can pry open doors, windows, etc. using a Crowbar.。As1 譯文「是否可使用撬棍撬開門窗」對新版不成立，中性句改成「開啟或關閉本模組的撬開門窗機制」，三方都成立；各自原句走條件譯文。",
       "ch": "開啟或關閉本模組的撬開門窗機制.",
       "cn": "开启或关闭本模组的撬开门窗机制."
+    },
+    "ItemName|MarzGuns.BENELLI_M4": {
+      "action": "translate",
+      "signature": "59de244dea0f284d",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Benelli M4 Semi-Shotgun，Guns of Tien 寫 M4 Super 90 Semi-Shotgun（貝內利 M4 的原廠型號名，去掉廠牌），指同一把槍；現值「貝內利M4半自動霰彈槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "貝內利M4半自動霰彈槍",
+      "cn": "贝内利M4半自动霰弹枪"
+    },
+    "ItemName|MarzGuns.CAMP_CARBINE": {
+      "action": "translate",
+      "signature": "410355b44db860c9",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Marlin Camp Carbine，Guns of Tien 寫 Camp Carbine（去掉廠牌 Marlin），指同一把槍或同一個零件；現值「馬林Camp Carbine短步槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "馬林Camp Carbine短步槍",
+      "cn": "马林营地短步枪"
+    },
+    "ItemName|MarzGuns.COLT_SINGLE": {
+      "action": "translate",
+      "signature": "c05460c6327b3357",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Colt Single Action Revolver，Guns of Tien 寫 Single Action Revolver（去掉廠牌 Colt），指同一把槍或同一個零件；現值「柯爾特單動左輪手槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "柯爾特單動左輪手槍",
+      "cn": "柯尔特单动左轮手枪"
+    },
+    "ItemName|MarzGuns.DEAGLE": {
+      "action": "translate",
+      "signature": "d1c5102ce664a0dc",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 兩版寫 .50 Desert Eagle、Guns of Tien 寫 .50 Desert Eagle Pistol，只多了 Pistol、是同一把槍；現值「.50沙漠之鷹手槍」本來就帶「手槍」，對兩方都成立，維持現值。",
+      "ch": ".50沙漠之鷹手槍",
+      "cn": ".50沙漠之鹰手枪"
+    },
+    "ItemName|MarzGuns.DOUBLE_DEUCE": {
+      "action": "translate",
+      "signature": "3fad95e411195d16",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Stolzer & Son of Kansas 2-Bore Rifle，Guns of Tien 寫 2-Bore Rifle（去掉廠牌 Stolzer & Son of Kansas），指同一把槍或同一個零件；現值「Stolzer & Son of Kansas 2號口徑步槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "Stolzer & Son of Kansas 2號口徑步槍",
+      "cn": "斯托尔泽2号口径步枪"
+    },
+    "ItemName|MarzGuns.FAL": {
+      "action": "translate",
+      "signature": "ad576c6991ccd70d",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 FN FAL Battle Rifle，Guns of Tien 寫 FAL Battle Rifle（去掉廠牌 FN），指同一把槍或同一個零件；現值「赫斯塔爾FAL自動步槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "赫斯塔爾FAL自動步槍",
+      "cn": "赫斯塔尔FAL自动步枪"
+    },
+    "ItemName|MarzGuns.FNC": {
+      "action": "translate",
+      "signature": "858854b4b5ec7fbd",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 FN FNC Assault Rifle，Guns of Tien 寫 FNC Assault Rifle（去掉廠牌 FN），指同一把槍或同一個零件；現值「赫斯塔爾FNC自動步槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "赫斯塔爾FNC自動步槍",
+      "cn": "赫斯塔尔FNC自动步枪"
+    },
+    "ItemName|MarzGuns.FNC_Integrated_Stock_Deployed": {
+      "action": "translate",
+      "signature": "93256005a6d0d6a6",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 FN FNC Integrated Stock (Deployed)，Guns of Tien 寫 FNC Integrated Stock (Deployed)（去掉廠牌 FN），指同一把槍或同一個零件；現值「赫斯塔爾FNC整合槍托 (展開)」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "赫斯塔爾FNC整合槍托 (展開)",
+      "cn": "赫斯塔尔FNC集成枪托 (展开)"
+    },
+    "ItemName|MarzGuns.FNC_Integrated_Stock_Folded": {
+      "action": "translate",
+      "signature": "bd91899d15f73aae",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 FN FNC Integrated Stock (Folded)，Guns of Tien 寫 FNC Integrated Stock (Folded)（去掉廠牌 FN），指同一把槍或同一個零件；現值「赫斯塔爾FNC整合槍托 (摺疊)」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "赫斯塔爾FNC整合槍托 (摺疊)",
+      "cn": "赫斯塔尔FNC集成枪托 (折叠)"
+    },
+    "ItemName|MarzGuns.HIPOWER": {
+      "action": "translate",
+      "signature": "4dafb0956fe19be0",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Browning Hi-Power，Guns of Tien 寫 Hi-Power Pistol（去掉廠牌 Browning），指同一把槍或同一個零件；現值「勃朗寧Hi-Power手槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "勃朗寧Hi-Power手槍",
+      "cn": "勃朗宁Hi-Power手枪"
+    },
+    "ItemName|MarzGuns.M&P_Suppressor": {
+      "action": "translate",
+      "signature": "825890e82cd7cbfa",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 兩版寫 M&P Suppressor (9mm Pistols)，Guns of Tien 寫 (9mm Weapons)（Tien 讓它也能裝在 9mm 衝鋒槍上，Suppressors.lua）；兩邊共通的是 9mm，括號拿掉「手槍」寫「(9mm)」對兩方都成立。",
+      "ch": "M&P消音器 (9mm)",
+      "cn": "M&P消音器 (9mm)"
+    },
+    "ItemName|MarzGuns.M1895": {
+      "action": "translate",
+      "signature": "a0be441824b0f12a",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Marlin 1895 Rifle，Guns of Tien 寫 Model 1895 Rifle（把廠牌 Marlin 換成 Model），指同一把槍或同一個零件；現值「馬林1895步槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "馬林1895步槍",
+      "cn": "马林1895步枪"
+    },
+    "ItemName|MarzGuns.M1903": {
+      "action": "translate",
+      "signature": "c3e4b67ff73a0b7d",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 M1903 Springfield Bolt Rifle，Guns of Tien 寫 M1903 Bolt Rifle（去掉廠牌 Springfield），指同一把槍或同一個零件；現值「春田M1903栓動步槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "春田M1903栓動步槍",
+      "cn": "春田M1903栓动步枪"
+    },
+    "ItemName|MarzGuns.M1911": {
+      "action": "translate",
+      "signature": "83fd7b6045ec169f",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Colt M1911，Guns of Tien 寫 M1911 Pistol（去掉廠牌 Colt），指同一把槍或同一個零件；現值「柯爾特M1911手槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "柯爾特M1911手槍",
+      "cn": "柯尔特M1911手枪"
+    },
+    "ItemName|MarzGuns.M92FS": {
+      "action": "translate",
+      "signature": "2ad0d5a6fefc00fb",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Beretta M92FS，Guns of Tien 寫 M92FS Pistol（去掉廠牌 Beretta），指同一把槍或同一個零件；現值「貝瑞塔M92FS手槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "貝瑞塔M92FS手槍",
+      "cn": "伯莱塔M92FS手枪"
+    },
+    "ItemName|MarzGuns.M93R": {
+      "action": "translate",
+      "signature": "ce72ce880e7a42c8",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Beretta Burst M93R，Guns of Tien 寫 M93R Pistol（去掉廠牌 Beretta 與 Burst），指同一把槍或同一個零件；現值「貝瑞塔M93R連發手槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "貝瑞塔M93R連發手槍",
+      "cn": "伯莱塔M93R连发手枪"
+    },
+    "ItemName|MarzGuns.MAC10": {
+      "action": "translate",
+      "signature": "25d27fa2fa82dab2",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Ingram MAC-10 Machine Pistol，Guns of Tien 寫 MAC-10 Machine Pistol（去掉廠牌 Ingram），指同一把槍或同一個零件；現值「英格拉姆MAC-10衝鋒槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "英格拉姆MAC-10衝鋒槍",
+      "cn": "英格拉姆MAC-10冲锋枪"
+    },
+    "ItemName|MarzGuns.MOSSBERG_590": {
+      "action": "translate",
+      "signature": "97eadc6b9add768d",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Mossberg 590 Shotgun，Guns of Tien 寫 Model 590 Shotgun（把廠牌 Mossberg 換成 Model），指同一把槍或同一個零件；現值「莫斯伯格590霰彈槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "莫斯伯格590霰彈槍",
+      "cn": "莫斯伯格590霰弹枪"
+    },
+    "ItemName|MarzGuns.P226": {
+      "action": "translate",
+      "signature": "458a6e4fa6cc2500",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Sig Sauer P226，Guns of Tien 寫 P226 Pistol（去掉廠牌 Sig Sauer），指同一把槍或同一個零件；現值「西格紹爾P226手槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "西格紹爾P226手槍",
+      "cn": "西格绍尔P226手枪"
+    },
+    "ItemName|MarzGuns.PYTHON": {
+      "action": "translate",
+      "signature": "da91cab87c83b0c0",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Colt Python Revolver，Guns of Tien 寫 Python Revolver（去掉廠牌 Colt），指同一把槍或同一個零件；現值「柯爾特蟒蛇左輪手槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "柯爾特蟒蛇左輪手槍",
+      "cn": "柯尔特巨蟒左轮手枪"
+    },
+    "ItemName|MarzGuns.Pistol_Muzzle_Mount_Device": {
+      "action": "translate",
+      "signature": "eeaa6a991c8e7fb0",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 兩版寫 Pistol Family Muzzle Mounting Device（script MountOn 只有 M92FS、M93R、Hi-Power、P226、Glock 17、VP70M 六把 9x19mm 手槍，.45 手槍另有 .45 ACP 系列裝置），Guns of Tien 寫 9x19mm Family（Tien 讓它也用在 9mm 衝鋒槍上）；兩方共通的是 9mm 口徑，「9mm系列槍口安裝裝置」對兩方都成立，也和同 MOD 的「.45 ACP系列」「AR系列」並列。",
+      "ch": "9mm系列槍口安裝裝置",
+      "cn": "9mm系列枪口安装装置"
+    },
+    "ItemName|MarzGuns.REMINGTON_700": {
+      "action": "translate",
+      "signature": "027ce20d963ddda7",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Remington 700 Bolt Rifle，Guns of Tien 寫 Model 700 Bolt Rifle（把廠牌 Remington 換成 Model），指同一把槍或同一個零件；現值「雷明頓700栓動步槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "雷明頓700栓動步槍",
+      "cn": "雷明顿700栓动步枪"
+    },
+    "ItemName|MarzGuns.REMINGTON_870": {
+      "action": "translate",
+      "signature": "7505ce7c39a9b66b",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Remington 870 Shotgun，Guns of Tien 寫 Model 870 Shotgun（把廠牌 Remington 換成 Model），指同一把槍或同一個零件；現值「雷明頓870霰彈槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "雷明頓870霰彈槍",
+      "cn": "雷明顿870霰弹枪"
+    },
+    "ItemName|MarzGuns.Rem700_Sling": {
+      "action": "translate",
+      "signature": "5e75ac455d5fdee5",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Remington 700 Sling，Guns of Tien 寫 Model 700 Sling（把廠牌 Remington 換成 Model），指同一把槍或同一個零件；現值「雷明頓700槍帶」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "雷明頓700槍帶",
+      "cn": "雷明顿700枪带"
+    },
+    "ItemName|MarzGuns.STEVENS_555": {
+      "action": "translate",
+      "signature": "1151d2e9b60bd985",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Stevens 555 Double Barrel Shotgun，Guns of Tien 寫 Model 555 Double Barrel Shotgun（把廠牌 Stevens 換成 Model），指同一把槍或同一個零件；現值「史蒂文斯555雙管霰彈槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "史蒂文斯555雙管霰彈槍",
+      "cn": "史蒂文斯555双管霰弹枪"
+    },
+    "ItemName|MarzGuns.STEVENS_555_Barrel_Close": {
+      "action": "translate",
+      "signature": "ad28c64139d0f489",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Stevens 555 Barrel，Guns of Tien 寫 Model 555 Barrel（把廠牌 Stevens 換成 Model），指同一把槍或同一個零件；現值「史蒂文斯555槍管」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "史蒂文斯555槍管",
+      "cn": "史蒂文斯555枪管"
+    },
+    "ItemName|MarzGuns.STEVENS_555_Barrel_Open": {
+      "action": "translate",
+      "signature": "ad28c64139d0f489",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Stevens 555 Barrel，Guns of Tien 寫 Model 555 Barrel（把廠牌 Stevens 換成 Model），指同一把槍或同一個零件；現值「史蒂文斯555槍管」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "史蒂文斯555槍管",
+      "cn": "史蒂文斯555枪管"
+    },
+    "ItemName|MarzGuns.STEVENS_555_Barrel_Sawnoff_Close": {
+      "action": "translate",
+      "signature": "2d925710f92c2733",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Stevens 555 Barrel Sawnoff，Guns of Tien 寫 Model 555 Barrel Sawnoff（把廠牌 Stevens 換成 Model），指同一把槍或同一個零件；現值「史蒂文斯555雙管結構 (鋸短)」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "史蒂文斯555雙管結構 (鋸短)",
+      "cn": "史蒂文斯555双管结构 (锯短)"
+    },
+    "ItemName|MarzGuns.STEVENS_555_Barrel_Sawnoff_Open": {
+      "action": "translate",
+      "signature": "2d925710f92c2733",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Stevens 555 Barrel Sawnoff，Guns of Tien 寫 Model 555 Barrel Sawnoff（把廠牌 Stevens 換成 Model），指同一把槍或同一個零件；現值「史蒂文斯555雙管結構 (鋸短)」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "史蒂文斯555雙管結構 (鋸短)",
+      "cn": "史蒂文斯555双管结构 (锯短)"
+    },
+    "ItemName|MarzGuns.SW629": {
+      "action": "translate",
+      "signature": "66d037f5974d9659",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Smith & Wesson Model 629，Guns of Tien 寫 Model 629 Revolver（把廠牌 Smith & Wesson 換成 Model，多了 Revolver），指同一把槍或同一個零件；現值「史密斯-韋森M629左輪手槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "史密斯-韋森M629左輪手槍",
+      "cn": "史密斯-韦森M629左轮手枪"
+    },
+    "ItemName|MarzGuns.Shh9_Suppressor": {
+      "action": "translate",
+      "signature": "3ceb169eb3899a21",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 兩版寫 Shh9 Suppressor (9mm Pistols)，Guns of Tien 寫 (9mm Weapons)（Tien 讓它也能裝在 9mm 衝鋒槍上，Suppressors.lua）；兩邊共通的是 9mm，括號拿掉「手槍」寫「(9mm)」對兩方都成立。",
+      "ch": "Shh9消音器 (9mm)",
+      "cn": "Shh9消音器 (9mm)"
+    },
+    "ItemName|MarzGuns.USP": {
+      "action": "translate",
+      "signature": "595b2dcd3dca504e",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Heckler & Koch USP，Guns of Tien 寫 USP Pistol（去掉廠牌 Heckler & Koch），指同一把槍或同一個零件；現值「黑克勒-科赫USP手槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "黑克勒-科赫USP手槍",
+      "cn": "黑克勒-科赫USP手枪"
+    },
+    "ItemName|MarzGuns.VP70M": {
+      "action": "translate",
+      "signature": "c01132f55348b977",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Heckler & Koch VP70M，Guns of Tien 寫 VP70M Pistol（去掉廠牌 Heckler & Koch），指同一把槍或同一個零件；現值「黑克勒-科赫VP70M手槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "黑克勒-科赫VP70M手槍",
+      "cn": "黑克勒-科赫VP70M手枪"
+    },
+    "ItemName|MarzGuns.W1873": {
+      "action": "translate",
+      "signature": "ef82e329e088eb34",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Winchester 1873 Rifle，Guns of Tien 寫 Model 1873 Rifle（把廠牌 Winchester 換成 Model），指同一把槍或同一個零件；現值「溫徹斯特1873步槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "溫徹斯特1873步槍",
+      "cn": "温彻斯特1873步枪"
+    },
+    "ItemName|MarzGuns.W1873_CARBINE": {
+      "action": "translate",
+      "signature": "b5c9c4e06d081942",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Winchester 1873 Short Carbine，Guns of Tien 寫 Model 1873 Short Carbine（把廠牌 Winchester 換成 Model），指同一把槍或同一個零件；現值「溫徹斯特1873短步槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "溫徹斯特1873短步槍",
+      "cn": "温彻斯特1873短步枪"
+    },
+    "ItemName|MarzGuns.W1887": {
+      "action": "translate",
+      "signature": "849376ecef2ce9f7",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Winchester 1887 Shotgun，Guns of Tien 寫 Model 1887 Shotgun（把廠牌 Winchester 換成 Model），指同一把槍或同一個零件；現值「溫徹斯特1887霰彈槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "溫徹斯特1887霰彈槍",
+      "cn": "温彻斯特1887霰弹枪"
+    },
+    "ItemName|MarzGuns.W1894": {
+      "action": "translate",
+      "signature": "7b3b9594309d54a4",
+      "reason": "2026-11-26 #1510–#1539：Guns of Marz 寫 Winchester 1894 Rifle，Guns of Tien 寫 Model 1894 Rifle（把廠牌 Winchester 換成 Model），指同一把槍或同一個零件；現值「溫徹斯特1894步槍」事實上仍正確（As1 慣例在槍名前加廠牌），維持現值；條件譯文 Tien 組照英文不帶廠牌。",
+      "ch": "溫徹斯特1894步槍",
+      "cn": "温彻斯特1894步枪"
     }
   }
 }
