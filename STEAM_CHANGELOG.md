@@ -3,9 +3,9 @@
 
 [b]English summary[/b]
 [list]
-[*] Without a Chinese font mod, ellipses, dashes, curly quotes and arrows used to show as blank space; they now use characters the vanilla Chinese font can draw.
-[*] Added Chinese for 2,165 new texts across 27 mods, including Aegis Panel, Vanilla Foods Expanded, Under the Hood Summer Car and Guns of Tien.
-[*] Updated 451 Chinese texts whose English changed (Bundle Up!, Escape From Zomboid Firearms, Guns of Tien and more).
+[*] Without a Chinese font mod, ellipses, dashes, quotes and arrows showed as blanks; they now use characters the vanilla font can draw.
+[*] Added Chinese for 2,165 new texts in 27 mods, including Aegis Panel, Vanilla Foods Expanded and Under the Hood Summer Car.
+[*] Updated 451 Chinese texts whose English changed; unified older names and wording in Vanilla Foods Expanded, Bundle Up! and Guns of Marz.
 [*] With Guns of Tien enabled, the 39 Guns of Marz items it renamed show matching Chinese names.
 [*] The Guns of Marz 5.56x45mm 100-round STANAG magazine shows its Chinese name again.
 [/list]
@@ -16,8 +16,7 @@
 [list]
 [*] Aegis 管理面板的規則手冊、自動化排程、設定包與玩家面板（783 項）。
 [*] Vanilla Foods Expanded 的新料理與食材（437 項）；Under the Hood Summer Car 的架車、焊接與車輛故障（277 項）。
-[*] Guns of Tien（273 項）、Complete Vanilla Firearms Expansion（112 項）、Beyond Ten（65 項）。
-[*] Readable HottieZ 雜誌（50 項）、Escape From Zomboid 槍械（47 項）、Pinoy Survival Foods（27 項）等。
+[*] Guns of Tien（273 項）、Complete Vanilla Firearms Expansion（112 項）、Beyond Ten（65 項）等。
 [/list]
 [/list]
 
@@ -29,6 +28,7 @@
 [*] 例：M1911手槍、870型霰彈槍；沒裝 Guns of Tien 時照舊顯示原名（柯爾特M1911手槍、雷明頓870霰彈槍）。
 [/list]
 [*] [b]M&P、Shh9 消音器與手槍槍口安裝裝置的共用名稱改成兩個 MOD 都說得通的寫法。[/b] 消音器寫「(9mm)」，槍口安裝裝置寫「9mm系列」；啟用個別 MOD 時照舊顯示它自己的寫法。
+[*] [b]幾個 MOD 的舊譯名稱與句型統一（507 項）。[/b] Vanilla Foods Expanded 的碗、鍋料理照本體譯名，Bundle Up! 設定說明、Guns of Marz 槍名與零件等。
 [/list]
 
 [h3]🔧 Fixed[/h3]
