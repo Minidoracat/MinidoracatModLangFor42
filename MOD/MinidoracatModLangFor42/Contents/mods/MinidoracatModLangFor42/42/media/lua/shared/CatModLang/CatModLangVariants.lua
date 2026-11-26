@@ -35,8 +35,9 @@ end
 -- Iterative merge sort (stable). Kahlua's table.sort is a recursive quicksort that overflows on a few
 -- hundred already-sorted entries; same as the family's sortSafe.
 local function less(a, b) return a < b end
-function CatModLang.sortSafe(list, comp)
-    comp = comp or less
+-- comp is optional: take it from ... (Kahlua does not nil-fill missing fixed parameters).
+function CatModLang.sortSafe(list, ...)
+    local comp = ... or less
     local n, buf, width = #list, {}, 1
     while width < n do
         for i = 1, n, width * 2 do
