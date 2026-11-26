@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1520 個 Workshop 模組**（2193 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
+共支援 **1520 個 Workshop 模組**（2199 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1071,7 +1071,7 @@
 | [Big Bottles〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3759421894) | 大型瓶罐 | 新增大型塑膠瓶、水瓶、水壺與軍用水壺。 | `BigBottles` | 4 | — | — |
 | [Clover Lake (Homestead & Cottage)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3759558202) | 四葉草湖畔農莊 | 水草豐沛、人煙稀少的湖畔農莊地圖，適合畜牧耕作，道路兩端各有絕佳的建基地點。 | `Clover Lake`, `Clover Lake Highway KY-316` | 2 | — | — |
 | [Fists of Survival](https://steamcommunity.com/sharedfiles/filedetails/?id=3759676725) | — | — | `FightZ` | 34 | — | — |
-| [Wandering Hordes: Dynamic Zombie Migration & Hordes System [Hordes Hordes Hordes]](https://steamcommunity.com/sharedfiles/filedetails/?id=3759920384) | — | — | `WanderingHordes`, `WanderingHordes28DaysLater`, `WanderingHordesCore`, `WanderingHordesNightPredators`, `WanderingHordesVanillaPlus`, `WanderingHordesWalkingDead` | 119 | — | — |
+| [Wandering Hordes: Dynamic Zombie Migration & Hordes System [Hordes Hordes Hordes]](https://steamcommunity.com/sharedfiles/filedetails/?id=3759920384) | — | — | `OldWanderingHordes`, `OldWanderingHordes28DaysLater`, `OldWanderingHordesCore`, `OldWanderingHordesNightPredators`, `OldWanderingHordesVanillaPlus`, `OldWanderingHordesWalkingDead`, `WanderingHordes`, `WanderingHordes28DaysLater`, `WanderingHordesCore`, `WanderingHordesNightPredators`, `WanderingHordesVanillaPlus`, `WanderingHordesWalkingDead` | 119 | — | — |
 | [Magic Accessories](https://steamcommunity.com/sharedfiles/filedetails/?id=3760442018) | — | — | `MagicAccessories` | 27 | — | — |
 | [Immersive Searching [B42.18-42.20][MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3760450908) | — | — | `ImmersiveSearching`, `OpenAllContainersISCompat` | 37 | — | — |
 | [NeatUI XP Drop〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3760545452) | NeatUI 經驗值浮窗 | 以 NeatUI 風格顯示技能經驗值進度與獲得提示，支援技能追蹤、配色、縮放與位置設定。 | `NeatUI_XPDrop` | 2 | — | — |
