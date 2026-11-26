@@ -85,6 +85,14 @@ n, drift, unused, _, _ = run(
     {"Dead.json": {"K": "原值"}}, {"Dead.json": {"K": "x"}})
 assert unused == [], f"owner 衝突登記未命中不該報可退役：{unused}"
 
+# 4c. 錨點記 As1 原文、合併 CN 已過出貨字元代換：純代換不算漂移，值真的不同才報
+n, drift, _, _, _ = run({"Dead.json|K": {"as1_value": "等…", "reason": "測試"}},
+                        {"Dead.json": {"K": "等..."}}, {"Dead.json": {"K": "x"}})
+assert n == 1 and not drift, f"純字元代換被當成漂移：{drift}"
+n, drift, _, _, _ = run({"Dead.json|K": {"as1_value": "等…", "reason": "測試"}},
+                        {"Dead.json": {"K": "等一下..."}}, {"Dead.json": {"K": "x"}})
+assert drift, "代換後仍不同的值應報漂移"
+
 # 5. 無 as1_value 錨點者仍剔除、不報漂移（錨點為選用欄）
 n, drift, _, cn, _ = run({"Dead.json|K": {"reason": "無錨點"}},
                          {"Dead.json": {"K": "任意值"}}, {"Dead.json": {"K": "x"}})

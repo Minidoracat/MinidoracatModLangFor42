@@ -15,9 +15,9 @@ verify_dist.py — MinidoracatModLangFor42 的獨立 dist 驗證器（oracle）�
   ※ As1 快照樹缺席（Steam 覆蓋了 Workshop 版本目錄）時只有 [8] 判 **SKIP**；
     [1] 仍照跑並降級「對 As1 原值」的比對。SKIP≠PASS，退出碼仍為 1，
     除非明示 --allow-missing-as1。
-  [1] CN 逐檔 parity：dist CN/*.json 對 sanitize(As1 快照值) 逐檔逐鍵一致
-      （42.20.1 formatted() 安全逸出後的應出貨值；登記例外鍵改為對
-      sanitize(cn_safe_value) 核對，見 sources/placeholder_exceptions.json）
+  [1] CN 逐檔 parity：dist CN/*.json 對 fold(sanitize(As1 快照值)) 逐檔逐鍵一致
+      （42.20.1 formatted() 安全逸出、再做出貨字元代換後的應出貨值；登記例外鍵改為對
+      fold(sanitize(cn_safe_value)) 核對，見 sources/placeholder_exceptions.json）
   [2] CH 鏡像       ：dist CH/*.json 與 dist CN 檔案集合、逐檔鍵集一致（值不比）
   [3] 編碼          ：dist 全部 .json 為 UTF-8 無 BOM 且可解析
   [4] placeholder   ：dist 兩側殘留 grammar 外的必炸 % 序列 → FAIL（42.20.1 硬性）；
@@ -27,7 +27,7 @@ verify_dist.py — MinidoracatModLangFor42 的獨立 dist 驗證器（oracle）�
   [7] lua 防護       ：dist media/lua/client/*.lua 與 sources/lua/*/*.lua basename 集合、
                       逐檔 bytes 一致，且每檔含 getActivatedMods/isModActive 防護
   [8] As1 來源漂移   ：sources/as1_manifest.json 存在時重算 As1 CN 逐檔 sha256 比對
-  [9] CH corpus parity：dist CH 逐檔逐鍵值對 sources/ch/ 人工真相 corpus 逐字一致
+  [9] CH corpus parity：dist CH 逐檔逐鍵值對 fold(sources/ch/ 人工真相 corpus) 逐字一致
                       （原創鍵對 own_translations 的 ch；CH 已斷絕 OpenCC 機轉，值有真相源）
   [10] sync worklist ：sources/ch_sync_worklist.json 未處理條目必須清空（上游變更未反映不得出貨）
   [11] 已審鍵漂移     ：ch_review_state.json 已審鍵重算現行 CN hash，不符 → WARN（須重審）
@@ -52,8 +52,11 @@ verify_dist.py — MinidoracatModLangFor42 的獨立 dist 驗證器（oracle）�
   [19] 本包 Lua      ：`media/lua/{shared,client}/CatModLang/*.lua` 與 sources/pack_lua 檔集、bytes 一致
   [20] 不出貨登記     ：登記在 unshipped_keys.json（不出貨）與 untranslatable_keys.json（不翻）的鍵
                       都不得出現在 dist CN/CH；[1]／[9] 只容許登記鍵缺席，抑制失效時要靠本項
-  pack_ui.json 的介面鍵併入 [1]／[9] 的原創層期望（dist 值＝sanitize 後真相值）。
-  （編號歷史上缺 [5]；實際驗證項數為 19。）
+  [21] 出貨字元代換   ：dist CN/CH 全部值與 variants_{CH,CN}.tsv 值欄不得殘留 sources/glyph_fold.json
+                      的鍵或 `‘’–‑`（原版字型畫不出）；識別欄與 JSON 鍵不檢
+  pack_ui.json 的介面鍵併入 [1]／[9] 的原創層期望（dist 值＝fold(sanitize 後真相值)）。
+  [1]／[9] 的期望值最後套 fold_expectation，[18] 先 fold 再 format_fixer（出貨字元代換，表為 sources/glyph_fold.json）。
+  （編號歷史上缺 [5]；實際驗證項數為 20。）
 
 冪等子命令（獨立於預設全跑，供「連跑兩次 build 第二次零 diff」驗證）：
   --snapshot-dist <dir>：把 dist 現況（.json + language.txt + client/*.lua + 本包資料檔與 Lua 的 sha256）
@@ -222,6 +225,60 @@ def sanitize_expectation(value: object) -> object:
             continue
         out.append("%%")
         i += 1
+    return "".join(out)
+
+
+# 出貨字元代換（獨立實作，與 builder 同語意不共用碼）：表＝sources/glyph_fold.json，
+# 看前後文的四個字寫在程式裡、不進表。
+_FOLD_CONTEXT_CHARS = "‘’–‑"
+_FOLD_RANGE_NEIGHBORS = frozenset("0123456789%")
+_FOLD_FORBIDDEN_KEYS = frozenset("‘’–‑『』～")
+_FOLD_FORBIDDEN_IN_VALUE = frozenset("‘’–‑%<>\\\t\n\r")
+
+
+def _load_glyph_fold(repo: str) -> dict[str, str]:
+    """讀 sources/glyph_fold.json 的 map；缺檔或壞形一律擲例外（fail-closed）。
+
+    值不得含任何來源字（＝冪等）、不得含 `% < > \\`／TAB／換行（不撞 token、標籤、TSV 跳脫）。
+    """
+    path = os.path.join(repo, "sources", "glyph_fold.json")
+    data = _read_json(path)
+    table = data.get("map")
+    if not isinstance(table, dict) or not table:
+        raise ValueError("glyph_fold.json 缺 map 物件或 map 為空")
+    for src, dst in table.items():
+        if (len(src) != 1 or src.isascii() or _TAG_CJK_RE.match(src)
+                or src in _FOLD_FORBIDDEN_KEYS):
+            raise ValueError(f"glyph_fold.json 鍵不合法（須單一非 ASCII、非漢字、非 ‘’–‑『』～）：{src!r}")
+        if not isinstance(dst, str) or any(c in table or c in _FOLD_FORBIDDEN_IN_VALUE for c in dst):
+            raise ValueError(f"glyph_fold.json 值不合法（含來源字或 % < > \\ TAB 換行）：{src!r}→{dst!r}")
+    return dict(table)
+
+
+def fold_expectation(value: object, glyph: dict[str, str] | None) -> object:
+    """出貨字元代換的期望：左到右單次掃描，只看原值的相鄰字元；glyph=None 或非字串原樣返還。"""
+    if glyph is None or not isinstance(value, str):
+        return value
+    out: list[str] = []
+    open_quotes = 0
+    last = len(value) - 1
+    for i, ch in enumerate(value):
+        if ch == "‘":
+            out.append("『")
+            open_quotes += 1
+        elif ch == "’":
+            # shortcut: 引號內的撇號（‘Don’t’）會配錯，語料 0 例；出現再改成看詞中位置。
+            if open_quotes:
+                out.append("』")
+                open_quotes -= 1
+            else:
+                out.append("'")
+        elif ch in "–‑":
+            ranged = (0 < i < last and value[i - 1] in _FOLD_RANGE_NEIGHBORS
+                      and value[i + 1] in _FOLD_RANGE_NEIGHBORS)
+            out.append("～" if ranged else "-")
+        else:
+            out.append(glyph.get(ch, ch))
     return "".join(out)
 
 # lua 防護規則：每個 client lua 必須含這兩個 API 之一（未啟用目標 MOD 即 no-op）。
@@ -636,6 +693,7 @@ def check_cn_parity(
     as1_available: bool = True,
     suppressed: set[str] | None = None,
     unshipped: set[str] | None = None,
+    glyph: dict[str, str] | None = None,
 ) -> tuple[bool, list[str], list[str], int, int]:
     """[1] dist CN 對 As1 快照：檔案集合 + 逐檔鍵集 + 逐鍵值逐字一致。
 
@@ -673,6 +731,7 @@ def check_cn_parity(
         if expect is None:
             return False
         applied_own.add(f"{fname}|{key}")
+        expect = fold_expectation(expect, glyph)
         if dist_val != expect:
             details.append(
                 f"{fname}: 原創鍵 {key!r} 值不符 | dist={dist_val!r} 應為 own cn={expect!r}"
@@ -715,28 +774,28 @@ def check_cn_parity(
             if isinstance(exc, dict) and isinstance(exc.get("cn_safe_value"), str):
                 # 例外鍵：與登記安全值核對（不再對 As1 原值）
                 applied.add(f"{fname}|{key}")
-                if d[key] != sanitize_expectation(exc["cn_safe_value"]):
+                want = fold_expectation(sanitize_expectation(exc["cn_safe_value"]), glyph)
+                if d[key] != want:
                     details.append(
                         f"{fname}: 例外鍵 {key!r} 未套用安全值 | "
-                        f"dist={d[key]!r} 應為 sanitize(cn_safe_value)="
-                        f"{sanitize_expectation(exc['cn_safe_value'])!r}"
+                        f"dist={d[key]!r} 應為 fold(sanitize(cn_safe_value))={want!r}"
                     )
             elif isinstance(
                 (cov := cn_overrides.get(f"{fname}|{key}")), dict
             ) and isinstance(cov.get("value"), str):
                 # CN 人工修正鍵：與登記值核對（不再對 As1 原值）
                 applied_cn_ov.add(f"{fname}|{key}")
-                if d[key] != sanitize_expectation(cov["value"]):
+                want = fold_expectation(sanitize_expectation(cov["value"]), glyph)
+                if d[key] != want:
                     details.append(
                         f"{fname}: CN 修正鍵 {key!r} 未套用登記值 | "
-                        f"dist={d[key]!r} 應為 sanitize(value)="
-                        f"{sanitize_expectation(cov['value'])!r}"
+                        f"dist={d[key]!r} 應為 fold(sanitize(value))={want!r}"
                     )
-            elif key in a and as1_expectation(a[key]) != d[key]:
+            elif key in a and (want := fold_expectation(as1_expectation(a[key]), glyph)) != d[key]:
                 # `key in a` 守門：As1 缺席時 a 為空，此比對無從進行（其餘核對照跑）
                 details.append(
-                    f"{fname}: 鍵 {key!r} 值不符 | 期望(As1 還原+sanitize)="
-                    f"{as1_expectation(a[key])!r} dist={d[key]!r}"
+                    f"{fname}: 鍵 {key!r} 值不符 | 期望(As1 還原+sanitize+代換)="
+                    f"{want!r} dist={d[key]!r}"
                 )
 
     # 登記但未命中任何 dist(檔,鍵) 的例外 → WARN（多半是打錯 key 名）。
@@ -921,7 +980,8 @@ def check_placeholder(
 
 
 def check_ch_corpus_parity(
-    repo: str, dist_ch: str, own: dict[str, dict], suppressed: set[str] | None = None
+    repo: str, dist_ch: str, own: dict[str, dict], suppressed: set[str] | None = None,
+    glyph: dict[str, str] | None = None,
 ) -> tuple[bool, list[str]]:
     """[9] dist CH 逐檔逐鍵值對 sources/ch corpus 逐字一致（雙向）。
 
@@ -938,16 +998,17 @@ def check_ch_corpus_parity(
         for key in sorted(dist[fname]):
             val = dist[fname][key]
             if key in cmap:
-                if val != cmap[key]:
+                want = fold_expectation(cmap[key], glyph)
+                if val != want:
                     details.append(
-                        f"{fname}: 鍵 {key!r} 值不符 corpus | dist={val!r} corpus={cmap[key]!r}"
+                        f"{fname}: 鍵 {key!r} 值不符 corpus | dist={val!r} corpus={want!r}"
                     )
             else:
                 spec = own.get(fname, {}).get(key)
                 own_ch = spec.get("ch") if isinstance(spec, dict) else None
                 if own_ch is None:
                     details.append(f"{fname}: 鍵 {key!r} 無真相源（corpus 與原創層皆無）")
-                elif val != own_ch:
+                elif val != (own_ch := fold_expectation(own_ch, glyph)):
                     details.append(
                         f"{fname}: 原創鍵 {key!r} 值不符 own ch | dist={val!r} own={own_ch!r}"
                     )
@@ -1144,14 +1205,14 @@ def _git_show_json(repo: str, ref: str, relpath: str) -> dict | None:
     return data if isinstance(data, dict) else None
 
 
-def cmd_cn_diff(paths: dict, base_ref: str) -> int:
+def cmd_cn_diff(paths: dict, base_ref: str, glyph: dict[str, str] | None = None) -> int:
     """列出 base_ref → 現況間 dist CN 值有變、而 CH 真相層未同步變動的鍵。
 
     觀察「輸出」而非輸入：不論變動來自 As1 同步、cn_overrides、placeholder 例外
     還是 own 層，一律在此匯流受檢。CH 真相層＝`sources/ch/`（corpus 鍵）＋
     `own_translations.json` 與 `pack_ui.json` 的 ch（原創鍵與本包介面文字）。已審台帳中 hash 與現行 CN 相符的鍵
     視為已背書，不列待複核。範圍註記：只看現況存在的鍵——被移除的鍵由 build
-    corpus gate（孤兒鍵）把關，不在本檢查視野。
+    corpus gate（孤兒鍵）把關，不在本檢查視野。舊值經出貨字元代換即等於新值的鍵（純代換）不算變動。
     有待複核鍵 → 退出 1（供 release 前把關）；base_ref 無法解析 → 退出 2。
     """
     repo = paths["repo"]
@@ -1193,7 +1254,7 @@ def cmd_cn_diff(paths: dict, base_ref: str) -> int:
         new_ch: dict | None = None
         old_ch: dict = {}
         for key in sorted(new_cn):
-            if old_cn.get(key) == new_cn[key]:
+            if old_cn.get(key) == new_cn[key] or fold_expectation(old_cn.get(key), glyph) == new_cn[key]:
                 continue
             n_changed += 1
             skey = f"{name}|{key}"
@@ -2463,7 +2524,9 @@ def _load_pack_ui(repo: str) -> dict[str, dict]:
     return entries
 
 
-def check_variants(repo: str, media: str) -> tuple[bool, list[str], list[str]]:
+def check_variants(
+    repo: str, media: str, glyph: dict[str, str] | None = None
+) -> tuple[bool, list[str], list[str]]:
     """[18] 條件譯文資料檔＝由真相檔獨立重算的期望；conflicts.tsv 的 K 列＝sources/owner_conflicts.tsv。"""
     fail: list[str] = []
     entries = _load_owner_variants(repo)
@@ -2493,7 +2556,7 @@ def check_variants(repo: str, media: str) -> tuple[bool, list[str], list[str]]:
         code = "v" if kind == "vanilla" else "c"
         for lang in expected:
             for g, ok in zip(e["groups"], ok_groups):
-                val = format_fixer_expectation(g[lang.lower()]) if ok else ""
+                val = format_fixer_expectation(fold_expectation(g[lang.lower()], glyph)) if ok else ""
                 expected[lang] += [[code, fname, key, *o.split("/", 1), val] for o in g["owners"]]
             expected[lang] += [[code, fname, key, *o.split("/", 1), ""] for o in skip]
         if kind == "vanilla":
@@ -2574,6 +2637,41 @@ def check_not_shipped(
     return not fail, fail, []
 
 
+def check_glyph_fold(
+    dist_cn: str, dist_ch: str, media: str, glyph: dict[str, str]
+) -> tuple[bool, list[str], list[str]]:
+    """[21] 出貨值不得殘留代換表的鍵或 `‘’–‑`：dist CN/CH 全部字串值、variants TSV 值欄（第 6 欄）。
+
+    As1 快照缺席時 [1] 降級、沒人驗 CN 代換；verify_mod 第 14 項不掃 TSV 且要本機字型——本項兜底。
+    JSON 鍵與 TSV 識別欄是比對用的識別字，不代換、不檢。
+    """
+    banned = set(glyph) | set(_FOLD_CONTEXT_CHARS)
+    fail: list[str] = []
+
+    def scan(where: str, value: object) -> None:
+        if isinstance(value, str) and (hit := sorted({c for c in value if c in banned})):
+            fail.append(f"{where}：殘留 {''.join(hit)!r} | {value[:60]!r}")
+
+    for lang, directory in (("CN", dist_cn), ("CH", dist_ch)):
+        files, errors = _load_json_dir(directory)
+        fail += errors
+        for fname, fmap in sorted(files.items()):
+            for key, value in sorted(fmap.items()):
+                scan(f"{lang} {fname}|{key}", value)
+    for lang in ("CH", "CN"):
+        name = f"variants_{lang}.tsv"
+        try:
+            rows = _read_tsv(os.path.join(media, "CatModLang", name))
+        except (OSError, ValueError) as exc:
+            fail.append(f"{name} 無法讀取（{exc}）")
+            continue
+        for r in rows:
+            if len(r) == 6:
+                scan(f"{name} {'/'.join(r[:5])}", r[5])
+            else:
+                fail.append(f"{name} 列欄數 {len(r)} ≠ 6：{r}")
+    return not fail, fail, []
+
 
 def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
     repo = paths["repo"]
@@ -2612,6 +2710,11 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         cn_overrides = _load_cn_overrides(repo)
     except Exception as exc:  # noqa: BLE001
         print(f"ERROR：cn_overrides.json 無法解析（{exc}）")
+        return 1
+    try:
+        glyph = _load_glyph_fold(repo)
+    except Exception as exc:  # noqa: BLE001 — 代換表缺失／壞損直接判 FAIL（[1]/[9]/[18]/[21] 都靠它）
+        print(f"ERROR：glyph_fold.json 無法載入（{exc}）")
         return 1
     try:
         own = _load_own(repo)
@@ -2666,6 +2769,7 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         as1_available=not as1_missing,
         suppressed=suppressed,
         unshipped=unshipped,
+        glyph=glyph,
     )
     ok2, d2 = check_ch_mirror(dist_cn, dist_ch)
     ok3, d3 = check_encoding(dist_translate)
@@ -2674,7 +2778,7 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
     ok7, d7 = check_lua(repo, lua_client)
     ok8, d8, w8 = (None, [], []) if as1_missing else check_as1_drift(repo, as1_cn)
     try:
-        ok9, d9 = check_ch_corpus_parity(repo, dist_ch, own, suppressed)
+        ok9, d9 = check_ch_corpus_parity(repo, dist_ch, own, suppressed, glyph)
     except Exception as exc:  # noqa: BLE001 — corpus 壞掉直接判 FAIL
         ok9, d9 = False, [f"corpus 無法載入（{exc}）"]
     try:
@@ -2710,7 +2814,7 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
     except Exception as exc:  # noqa: BLE001 — 出貨檔壞損直接判 FAIL
         ok17, d17, w17 = False, [f"Print Media 契約檢查失敗（{exc}）"], []
     try:
-        ok18, d18, w18 = check_variants(repo, paths["media"])
+        ok18, d18, w18 = check_variants(repo, paths["media"], glyph)
     except Exception as exc:  # noqa: BLE001 — 真相檔／資料檔壞損直接判 FAIL
         ok18, d18, w18 = False, [f"條件譯文資料檔檢查失敗（{exc}）"], []
     try:
@@ -2721,6 +2825,10 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         ok20, d20, w20 = check_not_shipped(repo, dist_cn, dist_ch, unshipped)
     except Exception as exc:  # noqa: BLE001 — 登記檔壞損直接判 FAIL（gate 資料是受版控真相）
         ok20, d20, w20 = False, [f"不出貨登記檢查失敗（{exc}）"], []
+    try:
+        ok21, d21, w21 = check_glyph_fold(dist_cn, dist_ch, paths["media"], glyph)
+    except Exception as exc:  # noqa: BLE001 — 出貨檔壞損直接判 FAIL
+        ok21, d21, w21 = False, [f"出貨字元代換檢查失敗（{exc}）"], []
 
     rows = [
         ("1", "CN 逐檔 parity（As1 缺席時僅降級 As1 比對）" if as1_missing else "CN 逐檔 parity",
@@ -2743,6 +2851,7 @@ def run_all(paths: dict, allow_missing_as1: bool = False) -> int:
         ("18", "條件譯文資料檔", ok18, d18, w18),
         ("19", "本包 Lua", ok19, d19, w19),
         ("20", "不出貨登記", ok20, d20, w20),
+        ("21", "出貨字元代換", ok21, d21, w21),
     ]
 
     n_pass = sum(1 for _, _, ok, _, _ in rows if ok is True)
@@ -2792,7 +2901,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument(
         "--allow-missing-as1", action="store_true",
-        help="As1 快照樹缺席時，以其餘 10 項當 gate（[1]/[8] 判 SKIP 但不影響退出碼）。"
+        help="As1 快照樹缺席時，以其餘 19 項當 gate（[8] 判 SKIP 但不影響退出碼；[1] 降級照跑）。"
              "僅供快照重釘期間的過渡使用，release 前務必移除。",
     )
     args = parser.parse_args(argv)
@@ -2817,7 +2926,12 @@ def main(argv: list[str] | None = None) -> int:
     if args.compare_dist:
         return cmd_compare_dist(dist_translate, lua_client, args.compare_dist)
     if args.cn_diff is not None:
-        return cmd_cn_diff(paths, args.cn_diff)
+        try:
+            glyph = _load_glyph_fold(repo)
+        except Exception as exc:  # noqa: BLE001 — 表壞掉時純代換鍵會全被誤列，不如直接停
+            print(f"ERROR：glyph_fold.json 無法載入（{exc}）")
+            return 2
+        return cmd_cn_diff(paths, args.cn_diff, glyph)
     return run_all(paths, allow_missing_as1=args.allow_missing_as1)
 
 

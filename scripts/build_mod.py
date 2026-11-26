@@ -17,14 +17,17 @@ MinidoracatModLangFor42 build 管線（PZ B42 如一模組翻譯繁中版）
 
 真相模型：CN 為衍生佈局的 canonical import；CH 為 sources/ch/ 人工真相 corpus
 （已斷絕 OpenCC 機轉；新增/變更鍵由 AI/人工對照 EN＋術語表直譯後落 corpus）。
-build 僅做合併與把關，不做任何文字轉換——唯一例外：CN 值全量過
-sanitize_format_tokens（42.20.1 Translator.formatted() 安全逸出，機械冪等；
-As1 快照不可手改故於 build 期處理；CH/own 為人工真相須直寫安全值、gate 把關）。
+build 僅做合併與把關，不做任何文字轉換——例外兩項，都只動出貨值、真相層照寫：
+(1) CN 值全量過 sanitize_format_tokens（42.20.1 Translator.formatted() 安全逸出，機械冪等；
+As1 快照不可手改故於 build 期處理；CH/own 為人工真相須直寫安全值、gate 把關）；
+(2) CN／CH 全部出貨值與條件譯文值過 fold_glyphs（原版字型畫不出的字代換，表在
+sources/glyph_fold.json；「有效 CN 值」＝代換後的出貨值，ch_review_state 對它算 hash）。
 全程確定性輸出。
 """
 from __future__ import annotations
 
 import argparse
+import functools
 import hashlib
 import json
 import os
@@ -54,6 +57,7 @@ VANILLA_KEYS_JSON = SOURCES / "vanilla_keys.json"
 UNSHIPPED_KEYS_JSON = SOURCES / "unshipped_keys.json"
 UNTRANSLATABLE_KEYS_JSON = SOURCES / "untranslatable_keys.json"
 MOD_REGISTRY_JSON = SOURCES / "mod_registry.json"
+GLYPH_FOLD_JSON = SOURCES / "glyph_fold.json"
 
 MOD_MEDIA = (
     PROJECT_ROOT
@@ -308,6 +312,94 @@ def scan_percents(value: str) -> tuple[list[str], list[str]]:
         else:
             i += 1
     return blocking, warning
+
+
+# ============================================================
+# 出貨字元代換（原版字型畫不出的字）
+# ============================================================
+# 看前後文的四個字寫在 fold_glyphs，不進表；表的鍵也不得是它們的輸出字，代換才冪等。
+_GLYPH_CONTEXT = "‘’–‑"
+_GLYPH_CONTEXT_OUT = "『』～"
+_GLYPH_RANGE_SIDE = frozenset("0123456789%")
+
+
+def _cjk_ideograph(ch: str) -> bool:
+    cp = ord(ch)
+    return (0x3400 <= cp <= 0x4DBF or 0x4E00 <= cp <= 0x9FFF or 0xF900 <= cp <= 0xFAFF
+            or 0x20000 <= cp <= 0x3FFFF)
+
+
+@functools.lru_cache(maxsize=1)
+def load_glyph_fold() -> tuple[dict[str, str], re.Pattern]:
+    """sources/glyph_fold.json 的代換表與「值裡有沒有要代換的字」樣式；缺檔或壞形即 fail。
+
+    鍵：單一非 ASCII、非漢字字元，不是 ‘’–‑ 也不是它們的輸出字 『』～。
+    值：不含任何鍵或 ‘’–‑（冪等），不含 % < > \\ TAB 換行（不撞 format token、rich text 標籤、TSV 跳脫）。
+    """
+    _require_truth_file(GLYPH_FOLD_JSON, "出貨字元代換表")
+    table = load_json(GLYPH_FOLD_JSON).get("map")
+    problems: list[str] = []
+    if not isinstance(table, dict) or not table:
+        problems.append("map 不是非空物件")
+        table = {}
+    for src, dst in table.items():
+        if (len(src) != 1 or src.isascii() or _cjk_ideograph(src)
+                or src in _GLYPH_CONTEXT or src in _GLYPH_CONTEXT_OUT):
+            problems.append(f"鍵 {src!r} 不合規")
+        if not isinstance(dst, str) or any(
+                c in table or c in _GLYPH_CONTEXT or c in "%<>\\\t\n\r" for c in dst):
+            problems.append(f"{src!r} 的值 {dst!r} 不合規")
+    if problems:
+        print(f"❌ {GLYPH_FOLD_JSON.name} 壞形：" + "；".join(problems), file=sys.stderr)
+        sys.exit(1)
+    return table, re.compile("[" + re.escape("".join(table) + _GLYPH_CONTEXT) + "]")
+
+
+def fold_glyphs(value):
+    """出貨值的字元代換（原版 CH／CN 字型畫不出的字，沒裝 CatLang 字型的玩家看到空白）。
+
+    由左至右單次掃描、只看原值的相鄰字元，冪等。‘→『；’→ 前面有未配對的 ‘ 時 』，否則 '
+    （撇號，如 Italia ’90）；–／‑→ 前後都是數字或 % 時 ～（範圍 15–30、%2–%3），否則 -；
+    其餘查表。非字串原樣返回。verify_dist 另有獨立實作。
+    """
+    if not isinstance(value, str):
+        return value
+    table, pattern = load_glyph_fold()
+    if not pattern.search(value):
+        return value
+    out: list[str] = []
+    opened = 0
+    last = len(value) - 1
+    for i, ch in enumerate(value):
+        if ch == "‘":
+            opened += 1
+            out.append("『")
+        elif ch == "’":
+            # shortcut: 引號裡的詞中撇號（‘Don’t’）會被當成收尾，2026-11-26 語料 0 例；出現時改看前後是不是字母
+            out.append("』" if opened else "'")
+            opened = max(opened - 1, 0)
+        elif ch in "–‑":
+            ranged = (i > 0 and value[i - 1] in _GLYPH_RANGE_SIDE
+                      and i < last and value[i + 1] in _GLYPH_RANGE_SIDE)
+            out.append("～" if ranged else "-")
+        else:
+            out.append(table.get(ch, ch))
+    return "".join(out)
+
+
+def fold_glyph_map(merged: dict[str, dict]) -> tuple[int, list[str]]:
+    """就地代換 {檔: {鍵: 值}}；回 (變動鍵數, 代換後變空值的錯誤)。"""
+    changed = 0
+    errors: list[str] = []
+    for fname, fmap in merged.items():
+        for key, val in fmap.items():
+            folded = fold_glyphs(val)
+            if folded != val:
+                fmap[key] = folded
+                changed += 1
+                if val and not folded:
+                    errors.append(f"  {fname} | {key}: 字元代換後變空值｜{val[:40]!r}")
+    return changed, errors
 
 
 # ============================================================
@@ -605,7 +697,8 @@ def suppress_unshipped(
                 unused.append(pair)
             continue
         anchor = spec.get("as1_value")
-        if isinstance(anchor, str) and cn_map[key] != anchor:
+        # 錨點記的是 As1 原文（真相層照寫原字），合併 CN 已代換過字元，比對前先同樣代換
+        if isinstance(anchor, str) and cn_map[key] != fold_glyphs(anchor):
             drift.append(
                 f"  {pair}：上游值已變（登記時 {anchor!r} → 現行 {cn_map[key]!r}），"
                 "請重查該 mod 是否已可指認（見 unshipped_keys.json 的 _recheck）"
@@ -1127,6 +1220,8 @@ def variant_gate(
                 elif (got := token_multiset(val)) != want:
                     errors.append(f"{tag}: format token／標記與該組 EN 不符 "
                                   f"EN多={dict(want - got)} 譯文多={dict(got - want)}｜{val[:40]!r}")
+                elif not fold_glyphs(val):
+                    errors.append(f"{tag}: 字元代換後變空值｜{val[:40]!r}")
                 if lang == "CH" and (bad := sorted(set(val) & _SIMPLIFIED_ONLY)):
                     errors.append(f"{tag}: 含簡體專用字「{''.join(bad)}」｜{val[:40]!r}")
         shipped, any_ok = variant_shipped_owners(e)
@@ -1134,7 +1229,7 @@ def variant_gate(
         code = "v" if e["kind"] == "vanilla" else "c"
         for lang, out in rows.items():
             out += [(code, fname, key, *o.split("/", 1),
-                     format_fixer(g[lang.lower()]) if g is not None else "")
+                     format_fixer(fold_glyphs(g[lang.lower()])) if g is not None else "")
                     for o, g in shipped.items()]
     for out in rows.values():
         out.sort()
@@ -1348,12 +1443,13 @@ def apply_cn_registry(
 # 簡體專用字集（斷絕機轉後 CH 為手寫真相，防 CN 值誤貼直接出貨）：
 # 僅收「繁中不合法」的簡化字——已排除 后/干/面/里/云/谷/系/准 等繁中亦有效字。
 # 2026-08-02 實測：凍結 corpus＋own ch 零命中（零基線噪音）、CN 語料 174/176 字觸發。
+# 2026-11-26 補「闻榅鲃」：CH corpus 漏網 22 鍵（OpenCC STCharacters 單字表掃出，已修為 聞／榲／䰾）。
 _SIMPLIFIED_ONLY = frozenset(
     "们这边变币笔毕车陈迟达带单当导灯敌电东动断对队尔发费风刚钢国过华画欢环还会"
     "击鸡际间将节结进举觉开课块来乐离丽历联连两辆灵龙楼录虑论罗妈马买卖满门梦亩"
     "难鸟农盘钱枪桥亲轻请让认荣伞烧绍师时实识视试书数双谁说丝苏虽岁孙态谈汤铁听"
     "头图团万为伟卫温稳问乡响项写兴学寻压亚严盐养样阳药页业叶义亿忆艺阴银应营优"
-    "邮语员远运杂载脏则泽张账阵证织职执纸钟种众专转装状驻总组"
+    "邮语员远运杂载脏则泽张账阵证织职执纸钟种众专转装状驻总组闻榅鲃"
 )
 
 
@@ -1534,6 +1630,9 @@ def cmd_build() -> int:
     if n_sanitized:
         print(f"  CN sanitize：{n_sanitized} 鍵含裸 % 等必炸序列，已逸出為 formatted() 安全形式")
 
+    # 出貨字元代換：在 registry 背書之前，有效 CN 值（背書 hash、已審台帳）＝代換後的出貨值
+    n_folded, glyph_errors = fold_glyph_map(merged_cn)
+
     # registry 背書 gate：registry 改值不經 split（worklist 看不到），
     # 強制每個命中鍵的有效 CN hash 與已審台帳一致（改值必經 CH 同步檢視）
     review_state = load_review_state()
@@ -1605,6 +1704,14 @@ def cmd_build() -> int:
     scoped, _ = load_vanilla_scoped()
     pack_ui_errors = apply_pack_ui(merged_cn, merged_ch, load_pack_ui(), scoped)
 
+    # 出貨字元代換（第二次）：CH 全部、CN 補上 own／pack_ui 併入的鍵（已代換的值不變，冪等）
+    for fmap in (merged_cn, merged_ch):
+        n, errs = fold_glyph_map(fmap)
+        n_folded += n
+        glyph_errors += errs
+    if n_folded:
+        print(f"  出貨字元代換：{n_folded} 個 (檔,鍵) 換成原版字型畫得出的字（sources/glyph_fold.json）")
+
     # CH 值層 gate 須在 apply_own 之後：own_translations 的 ch 也走這道簡繁不變式檢查
     ch_value_errors = ch_value_gate(merged_cn, merged_ch)
     errors, warnings = placeholder_gate(merged_cn, merged_ch)
@@ -1656,9 +1763,10 @@ def cmd_build() -> int:
         if len(untr_shipped) > 50:
             print(f"  ...（還有 {len(untr_shipped) - 50} 個）")
     if (conflicts or ch_value_errors or fmt_errors or errors or lua_conflicts
-            or keep_anchor_errors or pack_ui_errors or variant_errors or untr_shipped):
+            or keep_anchor_errors or pack_ui_errors or variant_errors or untr_shipped or glyph_errors):
         for label, errs in (("本包介面文字（pack_ui.json）", pack_ui_errors),
-                            ("條件譯文（owner_variants.json）", variant_errors)):
+                            ("條件譯文（owner_variants.json）", variant_errors),
+                            ("出貨字元代換（glyph_fold.json）", glyph_errors)):
             if errs:
                 print(f"\n❌ {label} gate {len(errs)} 處：")
                 for e in errs[:50]:

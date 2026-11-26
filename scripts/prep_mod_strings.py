@@ -569,6 +569,7 @@ def main() -> int:
     if not args.wids and not args.check_decisions:
         ap.error("至少給一個 wid；若只驗裁決台帳，使用 --check-decisions")
 
+    from build_mod import fold_glyphs as fold  # 裁決錨點記真相值、dist 是代換後的出貨值
     shipped_ch = {f"{p[:-5]}|{k}": v
                   for p in os.listdir(DIST_CH) if p.endswith(".json")
                   for k, v in _jload(DIST_CH / p).items()}
@@ -1051,7 +1052,9 @@ def main() -> int:
                     why = "裁決缺 ch／cn 出貨錨點（兩側都是裁決產物，缺一即不完整）"
                 elif fk not in shipped:
                     why = "已登記中性譯名裁決但譯文尚未出貨"
-                elif d["ch"] != shipped_ch.get(fk) or d["cn"] != shipped_cn.get(fk):
+                elif (fold(d["ch"]) != shipped_ch.get(fk)
+                      or fold(d["cn"]) != shipped_cn.get(fk)):
+                    # 錨點記真相值，出貨值已過字元代換（build_mod.fold_glyphs），比對前先同樣代換
                     why = (f"出貨譯文已漂移（登記 ch={d['ch']!r} cn={d['cn']!r}，"
                            f"現況 ch={shipped_ch.get(fk)!r} cn={shipped_cn.get(fk)!r}）")
             else:

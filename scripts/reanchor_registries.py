@@ -17,6 +17,11 @@
 **fail-closed**：以 `--base` 的版本為對照，把兩邊的空白與標點全部剝除後比對；
 不相同者＝語意有變，**一律不重錨**並列出來要求人工重新裁決。
 不帶 `--write` 只報告。
+
+`--glyph-fold`：出貨字元代換表（`sources/glyph_fold.json`）新增來源字後，含該字的已審
+有效 CN 值（dist）跟著變；只對「`--base` 版背書有效、且新值就是 base 值代換後」的條目重錨，
+其餘不動。base 一律對 base 版的 dist 與台帳算，commit 前改了表要重跑：先
+`git restore sources/ch_review_state.json` 再跑。改既有來源字的代換字（不是新增）不支援。
 """
 from __future__ import annotations
 
@@ -28,9 +33,11 @@ import subprocess
 import sys
 from pathlib import Path
 
+from build_mod import fold_glyphs, sanitize_format_tokens
+
 ROOT = Path(__file__).resolve().parent.parent
-DIST_CN = (ROOT / "MOD/MinidoracatModLangFor42/Contents/mods/MinidoracatModLangFor42/42"
-           "/media/lua/shared/Translate/CN")
+DIST_CN_REL = "MOD/MinidoracatModLangFor42/Contents/mods/MinidoracatModLangFor42/42/media/lua/shared/Translate/CN"
+DIST_CN = ROOT / DIST_CN_REL
 # 剝除域：空白 ＋ 兩岸半形/全形標點。刻意**不含**頓號與省略號——那兩個是實詞層級的
 # 選擇（rules.md 明列為例外），動了就該重審。
 STRIP = re.compile(r"[\s,.;:!?，。？！：；]")
@@ -52,6 +59,54 @@ def git_show(ref: str, path: str) -> dict:
     return json.loads(out.stdout)
 
 
+def git_load_dir(ref: str, path: str) -> dict[str, dict]:
+    """`ref:path` 底下全部 *.json（一次 `git cat-file --batch`；檔名含 `[` 不能走 pathspec）。"""
+    ls = subprocess.run(["git", "ls-tree", "-z", "--name-only", f"{ref}:{path}"], cwd=ROOT,
+                        capture_output=True)
+    if ls.returncode != 0:
+        raise SystemExit(f"讀不到 {ref}:{path} — {ls.stderr.decode('utf-8', 'replace').strip()}")
+    names = [n for n in ls.stdout.decode("utf-8").split("\0") if n.endswith(".json")]
+    req = "".join(f"{ref}:{path}/{n}\n" for n in names).encode("utf-8")
+    raw = subprocess.run(["git", "cat-file", "--batch"], cwd=ROOT, input=req,
+                         capture_output=True, check=True).stdout
+    out: dict[str, dict] = {}
+    pos = 0
+    for name in names:
+        nl = raw.index(b"\n", pos)
+        header = raw[pos:nl].split()
+        if len(header) != 3 or header[1] != b"blob":
+            raise SystemExit(f"讀不到 {ref}:{path}/{name}")
+        size = int(header[2])
+        out[name] = json.loads(raw[nl + 1 : nl + 1 + size].decode("utf-8-sig"))
+        pos = nl + 1 + size + 1
+    return out
+
+
+def glyph_fold_anchors(st: dict, base_st: dict, base_cn: dict[str, dict]) -> tuple[int, list[str]]:
+    """就地重錨 st（工作樹台帳）；回 (重錨數, 拒絕說明)。
+
+    只動 base 版背書有效（`base_st` 錨點＝h16(base dist CN 值)）、且代換後值不同的條目；
+    工作樹錨點已是新 hash 視為完成，既不是舊 hash 也不是新 hash 就拒絕（有人另改過）。
+    """
+    fixed, refused = 0, []
+    for rkey, old in sorted(base_st.items()):
+        if "|" not in rkey:
+            continue                       # 非錨點條目（如 _keep_rationale）
+        f, _, k = rkey.partition("|")
+        was = base_cn.get(f, {}).get(k)
+        if not isinstance(was, str) or old != h16(was):
+            continue                       # base 版就沒有有效背書，不代為背書
+        new = h16(fold_glyphs(was))
+        if new == old or st.get(rkey) == new:
+            continue
+        if st.get(rkey) == old:
+            st[rkey] = new
+            fixed += 1
+        else:
+            refused.append(f"  ⚠ ch_review_state {rkey}：工作樹錨點已另外改過，未重錨")
+    return fixed, refused
+
+
 def write_json(path: Path, data: dict, sort_keys: bool = False) -> None:
     """就地改寫，**一律 LF**。
 
@@ -64,7 +119,7 @@ def write_json(path: Path, data: dict, sort_keys: bool = False) -> None:
     沿用嗅探反而會在 CRLF 因任何路徑回流時**原樣固化**，讓 gate 紅燈而成因難查。
     """
     with open(path, "w", encoding="utf-8", newline="\n") as f:
-        json.dump(data, f, ensure_ascii=False, indent=1, sort_keys=sort_keys)
+        json.dump(data, f, ensure_ascii=False, indent=2, sort_keys=sort_keys)  # 兩個目標檔都是 indent 2
         f.write("\n")
 
 
@@ -95,7 +150,32 @@ def main() -> int:
     ap = argparse.ArgumentParser(description="標點正規化後的登記簿錨點重算")
     ap.add_argument("--base", default="HEAD", help="對照版本（預設 HEAD）")
     ap.add_argument("--write", action="store_true", help="實際寫檔（預設只報告）")
+    ap.add_argument("--glyph-fold", action="store_true",
+                    help="出貨字元代換表新增來源字後重錨 ch_review_state（見檔頭）")
     args = ap.parse_args()
+
+    if args.glyph_fold:
+        st_p = ROOT / "sources/ch_review_state.json"
+        st = json.loads(st_p.read_text(encoding="utf-8"))
+        base_cn = git_load_dir(args.base, DIST_CN_REL)
+        # registry 背書對「出貨抑制前」的合併值算（build check_registry_ack），被本體／unshipped
+        # 抑制、不在 dist 的 registry 鍵改用 base 版登記值補上（2026-11-26 實測 1 鍵：Tooltip_PillsBetablocker）
+        for rel, field in (("sources/cn_overrides.json", "value"),
+                           ("sources/placeholder_exceptions.json", "cn_safe_value")):
+            for rkey, spec in git_show(args.base, rel).items():
+                f, _, k = rkey.partition("|")
+                if k and isinstance(spec, dict) and isinstance(spec.get(field), str):
+                    base_cn.setdefault(f, {}).setdefault(k, sanitize_format_tokens(spec[field]))
+        n, refused = glyph_fold_anchors(st, git_show(args.base, "sources/ch_review_state.json"), base_cn)
+        print(f"ch_review_state 字元代換重錨 {n}　拒絕 {len(refused)}")
+        for line in refused:
+            print(line)
+        if args.write and n:
+            write_json(st_p, st)  # 保留原鍵序（台帳不是排序檔），diff 只有改到的錨點
+            print("✅ 已寫入")
+        elif not args.write:
+            print("（唯讀模式，加 --write 才寫檔）")
+        return 1 if refused else 0
 
     refused: list[str] = []
     total = 0
@@ -117,7 +197,8 @@ def main() -> int:
         if not isinstance(now, str) or anchor == h16(now):
             continue                       # 不在 dist / 錨點仍有效
         was = base_cn.get(f, {}).get(k)
-        if isinstance(was, str) and norm(was) == norm(now):
+        # dist 值已過出貨字元代換，own 真相的 cn 欄沒有，比對前先同樣代換
+        if isinstance(was, str) and norm(fold_glyphs(was)) == norm(now):
             st[rkey] = h16(now)
             n1 += 1
         else:
@@ -158,7 +239,7 @@ def main() -> int:
         print("（唯讀模式，加 --write 才寫檔）")
         return 1 if refused else 0
     if n1:
-        write_json(st_p, st, sort_keys=True)
+        write_json(st_p, st)  # 保留原鍵序：台帳不是排序檔，sort_keys 會整檔重排
     if n2:
         write_json(fx_p, fx)
     print("✅ 已寫入")

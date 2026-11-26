@@ -365,4 +365,30 @@ with tempfile.TemporaryDirectory() as td:
     out = buf.getvalue()
     assert rc == 1 and "IG_UI.json|kOld" in out and "kNew" not in out, out
 
-print("PASS: CH corpus lane 17/17 案例通過")
+# 16. cn-diff 純代換：舊值經出貨字元代換即等於新值者不算變動（發版 --cn-diff <上次 tag> 不得誤列上千鍵）；
+#     值另有變動的照列。不帶 glyph 時兩鍵都算變動（既有行為不變）。
+with tempfile.TemporaryDirectory() as td:
+    import contextlib
+    import io
+    import subprocess
+    root = Path(td)
+    git = ["git", "-C", td, "-c", "user.name=t", "-c", "user.email=t@t"]
+    subprocess.run(["git", "-C", td, "init", "-q"], check=True)
+    wjson(root / "sources" / "ch_review_state.json", {})
+    wjson(root / "distCN" / "UI.json", {"kFold": "等待…‘好’", "kEdit": "旧—值"})
+    subprocess.run(git + ["add", "-A"], check=True)
+    subprocess.run(git + ["commit", "-q", "-m", "base"], check=True)
+    wjson(root / "distCN" / "UI.json", {"kFold": "等待...『好』", "kEdit": "新－值"})
+    paths = {"repo": td, "dist_cn": str(root / "distCN")}
+    for glyph, want_changed, want_listed in (
+        ({"…": "...", "—": "－"}, 1, ["UI.json|kEdit"]),
+        (None, 2, ["UI.json|kEdit", "UI.json|kFold"]),
+    ):
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            rc = verify_dist.cmd_cn_diff(paths, "HEAD", glyph)
+        out = buf.getvalue()
+        assert rc == 1 and f"CN 值變動 {want_changed} 鍵" in out, out
+        assert [k for k in ("UI.json|kEdit", "UI.json|kFold") if k in out] == want_listed, out
+
+print("PASS: CH corpus lane 18/18 案例通過")
