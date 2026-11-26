@@ -1,37 +1,42 @@
-[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.22.2-1.80.0[/h1]
-[i]2026-11-23[/i]
+[h1][B42]繁體簡體模組翻譯 By Minidoracat 如一漢化組 42.22.2-1.81.0[/h1]
+[i]2026-11-26[/i]
 
 [b]English summary[/b]
 [list]
-[*] Added full Traditional and Simplified Chinese for Living World [NPC] [B42] (2,218 texts): NPC dialogue, the management window, the narrator, radio broadcasts, sandbox options and the built-in help pages.
-[*] Added Traditional and Simplified Chinese for 5,868 new texts across 49 mods, including Knox Buildworks, Escape From Zomboid Firearms, Radio Trader, Stay With Me, Guns of Tien and Companion Dogs: Squad.
-[*] Updated 408 Chinese texts whose English changed in mod updates (Escape From Zomboid Firearms, Guns of 93, Radio Trader, Farming Expansion and more).
-[*] The Shellholder / Shotgun Shell Holder shared by several gun mods now has a Chinese name meaning "shotgun shell holder" instead of "casing holder".
-[*] Five new cases where two mods use the same text key with different English now show a name that fits every mod; each mod's own wording appears when that mod is enabled.
-[*] Fixed several Simplified Chinese mistranslations (Escape From Zomboid ammo box recipes, Saiga-9, Propane Refuelling, a Stay With Me line for male companions).
+[*] Without a Chinese font mod, ellipses, dashes, curly quotes and arrows used to show as blank space; they now use characters the vanilla Chinese font can draw.
+[*] Added Chinese for 2,165 new texts across 27 mods, including Aegis Panel, Vanilla Foods Expanded, Under the Hood Summer Car and Guns of Tien.
+[*] Updated 451 Chinese texts whose English changed (Bundle Up!, Escape From Zomboid Firearms, Guns of Tien and more).
+[*] With Guns of Tien enabled, the 39 Guns of Marz items it renamed show matching Chinese names.
+[*] The Guns of Marz 5.56x45mm 100-round STANAG magazine shows its Chinese name again.
 [/list]
 
-[h3]新增[/h3]
+[h3]✨ Added[/h3]
 [list]
-[*] Living World [NPC] [B42] 整包繁簡中文（2,218 項）：NPC 對話與心情、管理視窗、隊伍人物卡、NPC 建立器、敘事者、倖存者廣播與隊伍無線電、右鍵選單、沙盒選項與內建說明頁。
-[*] 49 個 MOD 更新後新增的文字補上繁簡中文，共 5,868 項。
-[*] Knox Buildworks：建造選單的商店招牌、Vanilla Expanded 家具、海報與招牌（1,857 項）。
-[*] Escape From Zomboid 槍械：新槍、配件與改裝欄位（1,288 項）。
-[*] Radio Trader：夜間商人匿名者、銀行搶案、存款箱、吃角子老虎機與委託重製（446 項）。
-[*] Stay With Me：牧場與農務工作、同伴台詞（286 項）。
-[*] Guns of Tien 的彈藥裝箱與刺刀設定、Companion Dogs: Squad 的崗哨與駐守、Guns of 93 的新彈種、Aegis 管理面板的建造規劃器。
-[*] HDs Food Recipes 的食譜書、My So-Called Toy 的卡片機、The Mission、Senators Martial Arts、Pinoy Survival Foods、農耕擴充、DMM、AnruisiTown、Roadworthy 等其他 MOD 的新文字。
+[*] [b]27 個 MOD 更新後新增的文字補上繁簡中文（2,165 項）。[/b]
+[list]
+[*] Aegis 管理面板的規則手冊、自動化排程、設定包與玩家面板（783 項）。
+[*] Vanilla Foods Expanded 的新料理與食材（437 項）；Under the Hood Summer Car 的架車、焊接與車輛故障（277 項）。
+[*] Guns of Tien（273 項）、Complete Vanilla Firearms Expansion（112 項）、Beyond Ten（65 項）。
+[*] Readable HottieZ 雜誌（50 項）、Escape From Zomboid 槍械（47 項）、Pinoy Survival Foods（27 項）等。
+[/list]
 [/list]
 
-[h3]更新[/h3]
+[h3]🔄 Changed[/h3]
 [list]
-[*] MOD 改了英文的 408 項中文跟著改：Escape From Zomboid 槍械、Guns of 93 的彈種名（例：10mm Auto、.30-06 春田）、Radio Trader 的沙盒說明、農耕擴充、Whose Key Is This、The Mission 等。
-[*] 多個槍械 MOD 共用的彈藥帶（Shellholder／Shotgun Shell Holder）名稱由「彈殼托」改成「霰彈托架」。
-[*] 5 處兩個 MOD 共用同一個翻譯、英文卻不同的地方，改成對每個 MOD 都說得通的名稱，啟用特定 MOD 時顯示它自己的寫法：ALICE 黑色揹帶、房車微波爐、輕型槍背帶與它的提示、Common Sense 撬開門窗的沙盒說明。
+[*] [b]MOD 改了英文的已出貨文字跟著改（451 項）。[/b] Bundle Up! 的打包設定說明（252 項）、Escape From Zomboid 槍械的彈藥包（132 項）、Guns of Tien（31 項）、Beyond Ten（14 項）等。
+[*] [b]Guns of Tien 新版改了 39 個 Guns of Marz 物品的英文名稱（多半拿掉廠牌），啟用它時顯示照新英文翻的名稱。[/b]
+[list]
+[*] 例：M1911手槍、870型霰彈槍；沒裝 Guns of Tien 時照舊顯示原名（柯爾特M1911手槍、雷明頓870霰彈槍）。
+[/list]
+[*] [b]M&P、Shh9 消音器與手槍槍口安裝裝置的共用名稱改成兩個 MOD 都說得通的寫法。[/b] 消音器寫「(9mm)」，槍口安裝裝置寫「9mm系列」；啟用個別 MOD 時照舊顯示它自己的寫法。
 [/list]
 
-[h3]修正[/h3]
+[h3]🔧 Fixed[/h3]
 [list]
-[*] 簡中：Escape From Zomboid 槍械開彈藥盒的配方由「弹匣拆盒」改成「打开盒子」；Saiga-9 名稱改用正確的字母；Propane Refuelling 改為「取出丙烷」；Stay With Me 男性同伴的台詞不再寫成「她」。
-[*] Radio Trader 接下懸賞的訊息補上「已標示在你的地圖上」；Knox Buildworks 的 Dr. Oids 海報統一為「奧茲博士」；Ammo Maker 的鹿彈彈丸補上「00號」規格。
+[*] [b]沒裝中文字型 MOD 的玩家，原本看不到的標點補回來。[/b] 原版中文字型畫不出 … — “” – → 等字，以前顯示成空白（例：「15–30°」變「1530°」），現在換成畫得出的字（......、「」、－、～、￫）。
+[list]
+[*] 繁中 6,149 項、簡中 7,355 項；已裝 MinidoracatLangFor42 字型的玩家也會看到換過的字。
+[/list]
+[*] [b]繁中幾個簡體與日文字形改正（28 項）。[/b] 闻→聞、榅→榲、鲃→䰾、暁→曉、隠→隱；傑克羅素㹴犬、斯塔福郡鬥牛㹴的「㹴」原版字型畫不出，改寫成「梗」（16 項）。
+[*] [b]Guns of Marz 的 5.56x45mm 100 發 STANAG 彈匣恢復顯示中文。[/b] 以前顯示英文，現在顯示「5.56x45mm 100發STANAG彈匣」。
 [/list]
