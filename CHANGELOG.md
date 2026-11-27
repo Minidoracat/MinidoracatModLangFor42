@@ -4,6 +4,13 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [42.22.2-1.81.1] - 2026-11-27
+
+### Fixed
+
+- **翻譯衝突提醒與清單的排序改得更穩，避免少數情況下排序出錯、提醒跳不出來。**
+  > 技術要點：`CatModLang.sortSafe(list, comp)` 有 2 處呼叫不傳 `comp`；Kahlua 對少傳的固定參數不保證補 nil，`comp` 可能讀到堆疊殘值（家族 `pitfalls.md`「選用參數用 `...` 接」）。改成 `sortSafe(list, ...)`、`local comp = ... or less`。家族 `verify_mod.py` 換新模板（第 1c 項）後抓到。E2E `conflict-notice-sp`（9950X3D `mlv-notice-ch-1c1127`）25 項全 ok。
+
 ## [42.22.2-1.81.0] - 2026-11-26
 
 ### Added
