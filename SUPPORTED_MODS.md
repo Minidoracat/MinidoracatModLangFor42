@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1520 個 Workshop 模組**（2199 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
+共支援 **1520 個 Workshop 模組**（2197 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -935,7 +935,7 @@
 | [UmaBoid B42 [ UNOFFICIAL PORT]](https://steamcommunity.com/sharedfiles/filedetails/?id=3722974110) | — | — | `UmaBoid_B42_Miroki` | 1 | — | — |
 | [Nihontō - Authentic Katana Overhaul [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3723127305) | 正宗日本刀大修 | 重做武士刀、脇差、短刀、大太刀等日本刀，加入刀鞘上漆與染色、丁子油保養、山茶花種子榨油與刀身鈍化保護。 | `Nihonto` | 332 | — | — |
 | [Neat Rocco's UI [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3723726293) | — | — | `Neat_Rocco` | 44 | — | — |
-| [Till Death Do Us Part - Marriage Companion](https://steamcommunity.com/sharedfiles/filedetails/?id=3723942896) | — | — | `TDDUPCompanionCombatCore`, `TDDUPMarriageCompanion`, `TDDUPRelaxation`, `TDDUPUnified`, `TDDUPZBFullBridge` | 2 | — | — |
+| [Till Death Do Us Part - Marriage Companion](https://steamcommunity.com/sharedfiles/filedetails/?id=3723942896) | — | — | `TDDUPCompanionCombatCore`, `TDDUPMarriageCompanion`, `TDDUPRelaxation`, `TDDUPStandaloneBridge`, `TDDUPUnified`, `TDDUPZBFullBridge` | 2 | — | — |
 | [Infoteo's Solar Arrays](https://steamcommunity.com/sharedfiles/filedetails/?id=3723961714) | — | — | `InfoteoImmersiveSolarArrays` | 132 | — | — |
 | [[B42.17+] Water Pipes - Fully fixed](https://steamcommunity.com/sharedfiles/filedetails/?id=3724525696) | — | — | `WaterpipesFix` | 52 | — | — |
 | [Plysken Solar Revolution](https://steamcommunity.com/sharedfiles/filedetails/?id=3725311427) | Plysken 太陽能革命 | 加入太陽能板、儲能設備與相關供電系統。 | `PSR` | 214 | — | — |
@@ -1500,7 +1500,7 @@
 | [Ros's Radical Animal Remaster](https://steamcommunity.com/sharedfiles/filedetails/?id=3819478254) | Ros's Radical Animal Remaster 動物大改造 | 為家畜與野生動物新增品種與稀有毛色，含多種鵝與孔雀，沿用原版的生長、繁殖與飼養系統。 | `AnimalRemasterApproved`, `RRARCompatAnimalBarns`, `RRARCompatAnimalCrates`, `RRARCompatLivestockTraders` | 1896 | ⚠️ ≥1 | — |
 | [Off the Rack: The 1993 Military Gear](https://steamcommunity.com/sharedfiles/filedetails/?id=3819505238) | Off the Rack：1993 軍用裝備 | 將原版軍用裝備重製成 1993 年真實軍品外觀，物品與掉落不變；需 Surplus & Thrift：1993 衣櫥。 | `OffTheRackMilitary1993` | 7 | — | — |
 | [ModOrderPlus - Mod Manager & Auto-Sort〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3819661138) | ModOrderPlus 模組管理與自動排序 | 在一個畫面管理模組、資料夾與預設：一鍵自動排序模組與地圖的載入順序，也能自己調整；儲存前可檢視變更、還原先前的清單，還能備份個人設定或匯出伺服器清單。 | `ModOrderPlus` | 590 | — | — |
-| [Viewpoint - 3D RVs [B42.21] [WIP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3820158673) | Viewpoint - 3D 露營車 | Viewpoint 附加模組，新增可走進內部的 Nomad 與 Dales Chieftain 露營車，可在車內烹飪、睡覺並擺放家具物資。 | `DaleChieftainRV`, `DeadWorksDaleRV`, `DeadWorksNomadRV`, `GridRV`, `GridRVHost` | 108 | — | — |
+| [Viewpoint - 3D RVs [B42.21] [WIP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3820158673) | Viewpoint - 3D 露營車 | Viewpoint 附加模組，新增可走進內部的 Nomad 與 Dales Chieftain 露營車，可在車內烹飪、睡覺並擺放家具物資。 | `DeadWorksDaleRV`, `DeadWorksNomadRV` | 108 | — | — |
 | [Guns of Marz Extension: Guns of Tien](https://steamcommunity.com/sharedfiles/filedetails/?id=3820183693) | Guns of Tien 馬茲槍械彈藥擴充 | 替馬茲槍械加入 1993 年實際存在的彈藥：亞音速、空尖、軟尖、鋼芯、高壓彈等。 | `GoMExtensionGunsOfTien`, `GoMExtensionGunsOfTienPost93` | 407 | — | — |
 | [Complete Vanilla Firearms Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3820580321) | Complete Vanilla Firearms Expansion 原版風槍械擴充整合版 | 整合 OG VFE、S.T.A.L.K.E.R.、Post 93' 等槍械擴充，新增大量槍械與對應彈藥、彈匣與配件。 | `ExtendedVanillaWeapons` | 470 | ⚠️ ≥23 | — |
 | [PZ Relationship (Build 42)](https://steamcommunity.com/sharedfiles/filedetails/?id=3820590495) | PZ Relationship 玩家互動 | 在雙方同意下和其他玩家握手、碰拳、擁抱或慢舞。 | `PlayerGreetings` | 11 | — | — |
