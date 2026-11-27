@@ -23199,7 +23199,7 @@
   },
   "ItemName|Base.Bullets357": {
    "kind": "vanilla",
-   "signature": "83418e695a333776",
+   "signature": "c2d906df9e2433fe",
    "vanilla_en": ".357 Magnum Round",
    "skip_owners": [
     "3773858287/B42 Rain's Firearms & Gun Parts",
@@ -23228,6 +23228,7 @@
     {
      "owners": [
       "3616176188/GaelGunStore",
+      "3780151182/MFS_community_fix",
       "3820971639/XannyArmsGunPack"
      ],
      "en": ".357 Magnum Rounds",
@@ -23267,11 +23268,12 @@
   },
   "ItemName|Base.Bullets357Box": {
    "kind": "vanilla",
-   "signature": "5a3264b8247cd263",
+   "signature": "700cdb7b69349d9d",
    "vanilla_en": "Box of .357 Magnum Rounds",
    "skip_owners": [
     "3773858287/B42 Rain's Firearms & Gun Parts",
-    "3773858287/B42 Rain's Firearms & Gun Parts Expanded"
+    "3773858287/B42 Rain's Firearms & Gun Parts Expanded",
+    "3780151182/MFS_community_fix"
    ],
    "groups": [
     {
@@ -23335,7 +23337,7 @@
   },
   "ItemName|Base.Bullets357Carton": {
    "kind": "vanilla",
-   "signature": "9fbec0e2b75dfa7e",
+   "signature": "bbce5a8b975ac536",
    "vanilla_en": "Carton of .357 Magnum Rounds",
    "groups": [
     {
@@ -23376,6 +23378,15 @@
      "cn": "箱装.357马格南子弹 (原版)",
      "_note": "多屬性併入同一括號, 與 v02/v03 Guns of Marz (整箱, 原版) 一致",
      "approved": "2026-10-23 雙模型審核（GPT-6 Astra max＋Claude Opus 5.5）"
+    },
+    {
+     "owners": [
+      "3780151182/MFS_community_fix"
+     ],
+     "en": "Carton of .357 Magnum Ammo",
+     "ch": "箱裝.357馬格南子彈",
+     "cn": "箱装.357马格南子弹",
+     "_note": "審核不核准（無須覆寫）：只把 Rounds 換成 Ammo, 口徑與包裝都沒變, 照本體譯文最好; 2026-11-27 #1553 新增 owner 時登記, 未送審"
     }
    ]
   },
@@ -67660,78 +67671,6 @@
      "ch": "製作消音器",
      "cn": "制作消音器",
      "_note": "同 MOD 的 CraftSilencer (Craft Silencer) 現行也是「製作消音器」, 英文本身就只差 Suppressor/Silencer 同義詞"
-    }
-   ]
-  },
-  "IG_UI|IGUI_GridRV_BackupNotice": {
-   "kind": "conflict",
-   "signature": "b6a2e14b18202307",
-   "groups": [
-    {
-     "owners": [
-      "3820158673/DeadWorksNomadRV"
-     ],
-     "en": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> RVs moved to the framework <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> The Nomad and Dale RVs now run on DeadWorks Vehicle Framework. Each RV and everything inside it, furniture, fridges, cupboards, water and batteries, converts the first time it loads. <LINE> That is meant to be automatic, but keep a backup from before this update in case anything goes wrong. <LINE>  <LINE> <RGB:1,0.75,0.25> How to back up <RGB:1,1,1> <LINE> 1. Quit to the main menu. <LINE> 2. Open your <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> folder, on Windows usually <RGB:0.55,0.85,1> C:/Users/your name/Zomboid <RGB:1,1,1> <LINE> 3. Copy the <RGB:0.55,0.85,1> Saves <RGB:1,1,1> folder somewhere safe. <LINE> To undo, put that copy back and go back to the previous version. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> This message only shows once.",
-     "ch": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 房車已改用車輛框架 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 遊牧者房車與戴爾的酋長房車現在改由 DeadWorks Vehicle Framework 運作. 每輛房車及其中的一切, 包括家具、冰箱、櫥櫃、水和電池, 都會在第一次載入時轉換. <LINE> 這應該會自動完成, 但請保留這次更新前的備份, 以防出錯. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何備份 <RGB:1,1,1> <LINE> 1. 退回主選單. <LINE> 2. 開啟你的 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 資料夾, 在 Windows 上通常是 <RGB:0.55,0.85,1> C:/Users/你的使用者名稱/Zomboid <RGB:1,1,1> <LINE> 3. 把 <RGB:0.55,0.85,1> Saves <RGB:1,1,1> 資料夾複製到安全的地方. <LINE> 若要復原, 把這份副本放回去, 並改回上一個版本. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 這則訊息只會顯示一次.",
-     "cn": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 房车已改用车辆框架 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 游牧者房车与戴尔的酋长房车现在改由 DeadWorks Vehicle Framework 运行. 每辆房车及其中的一切, 包括家具、冰箱、橱柜、水和电池, 都会在首次加载时转换. <LINE> 这本应自动完成, 但请保留此次更新前的备份, 以防万一. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何备份 <RGB:1,1,1> <LINE> 1. 退回主菜单. <LINE> 2. 打开你的 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 文件夹, 在Windows上通常是 <RGB:0.55,0.85,1> C:/Users/你的用户名/Zomboid <RGB:1,1,1> <LINE> 3. 把 <RGB:0.55,0.85,1> Saves <RGB:1,1,1> 文件夹复制到安全的地方. <LINE> 若要撤销, 把这个副本放回去, 并换回之前的版本. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 此消息只显示一次.",
-     "_note": "Dale RV＝本包譯名「戴爾的酋長房車」(IGUI_VehicleNameDaleChieftainRV)"
-    },
-    {
-     "owners": [
-      "3820158673/GridRV"
-     ],
-     "en": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> Big Nomad RV update coming <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> The next update rebuilds how RV interiors are stored: furniture, fridges, cupboards and everything inside them. <LINE> Your RVs and their contents are meant to move over automatically, but please keep a backup in case anything goes wrong. <LINE>  <LINE> <RGB:1,0.75,0.25> How to back up <RGB:1,1,1> <LINE> 1. Quit to the main menu. <LINE> 2. Open your <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> folder, on Windows usually <RGB:0.55,0.85,1> C:/Users/your name/Zomboid <RGB:1,1,1> <LINE> 3. Copy the <RGB:0.55,0.85,1> Saves <RGB:1,1,1> folder somewhere safe. <LINE> To undo the update later, put that copy back. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> This message only shows once.",
-     "ch": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 遊牧者房車即將大更新 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 下次更新將重建房車內部的儲存方式: 家具、冰箱、櫥櫃以及其中的所有物品. <LINE> 你的房車與其中物品應該會自動轉移, 但請務必保留備份, 以防出錯. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何備份 <RGB:1,1,1> <LINE> 1. 退回主選單. <LINE> 2. 開啟你的 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 資料夾, 在 Windows 上通常是 <RGB:0.55,0.85,1> C:/Users/你的使用者名稱/Zomboid <RGB:1,1,1> <LINE> 3. 把 <RGB:0.55,0.85,1> Saves <RGB:1,1,1> 資料夾複製到安全的地方. <LINE> 之後若要復原這次更新, 把這份副本放回去即可. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 這則訊息只會顯示一次.",
-     "cn": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 游牧者房车即将迎来大更新 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 下次更新会重建房车内部的存储方式: 家具, 冰箱, 橱柜以及里面的一切. <LINE> 你的房车及其内容物本应会自动迁移, 但请务必备份, 以防万一. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何备份 <RGB:1,1,1> <LINE> 1. 退回主菜单. <LINE> 2. 打开你的 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 文件夹, 在Windows上通常是 <RGB:0.55,0.85,1> C:/Users/你的用户名/Zomboid <RGB:1,1,1> <LINE> 3. 把 <RGB:0.55,0.85,1> Saves <RGB:1,1,1> 文件夹复制到安全的地方. <LINE> 之后若要撤销更新, 把这个副本放回去即可. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 此消息只显示一次.",
-     "_note": "沿用 As1 譯文"
-    }
-   ]
-  },
-  "IG_UI|IGUI_GridRV_BackupNoticeServer": {
-   "kind": "conflict",
-   "signature": "d8a38181472473f8",
-   "groups": [
-    {
-     "owners": [
-      "3820158673/DeadWorksNomadRV"
-     ],
-     "en": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> RVs moved to the framework <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> The Nomad and Dale RVs now run on DeadWorks Vehicle Framework. Each RV and everything inside it, furniture, fridges, cupboards, water and batteries, converts the first time it loads. <LINE> That is meant to be automatic, but keep a backup from before this update in case anything goes wrong. <LINE>  <LINE> <RGB:1,0.75,0.25> How to back up <RGB:1,1,1> <LINE> 1. Stop the server. <LINE> 2. Open your <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> folder, on Windows usually <RGB:0.55,0.85,1> C:/Users/your name/Zomboid <RGB:1,1,1> <LINE> 3. Copy this server's folder under <RGB:0.55,0.85,1> Saves/Multiplayer <RGB:1,1,1> somewhere safe. <LINE> To undo, put that copy back and go back to the previous version. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> This message only shows once.",
-     "ch": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 房車已改用車輛框架 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 遊牧者房車與戴爾的酋長房車現在改由 DeadWorks Vehicle Framework 運作. 每輛房車及其中的一切, 包括家具、冰箱、櫥櫃、水和電池, 都會在第一次載入時轉換. <LINE> 這應該會自動完成, 但請保留這次更新前的備份, 以防出錯. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何備份 <RGB:1,1,1> <LINE> 1. 停止伺服器. <LINE> 2. 開啟你的 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 資料夾, 在 Windows 上通常是 <RGB:0.55,0.85,1> C:/Users/你的使用者名稱/Zomboid <RGB:1,1,1> <LINE> 3. 把 <RGB:0.55,0.85,1> Saves/Multiplayer <RGB:1,1,1> 底下這個伺服器的資料夾複製到安全的地方. <LINE> 若要復原, 把這份副本放回去, 並改回上一個版本. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 這則訊息只會顯示一次.",
-     "cn": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 房车已改用车辆框架 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 游牧者房车与戴尔的酋长房车现在改由 DeadWorks Vehicle Framework 运行. 每辆房车及其中的一切, 包括家具、冰箱、橱柜、水和电池, 都会在首次加载时转换. <LINE> 这本应自动完成, 但请保留此次更新前的备份, 以防万一. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何备份 <RGB:1,1,1> <LINE> 1. 停止服务器. <LINE> 2. 打开你的 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 文件夹, 在Windows上通常是 <RGB:0.55,0.85,1> C:/Users/你的用户名/Zomboid <RGB:1,1,1> <LINE> 3. 把 <RGB:0.55,0.85,1> Saves/Multiplayer <RGB:1,1,1> 下这个服务器的文件夹复制到安全的地方. <LINE> 若要撤销, 把这个副本放回去, 并换回之前的版本. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 此消息只显示一次.",
-     "_note": "Dale RV＝本包譯名「戴爾的酋長房車」"
-    },
-    {
-     "owners": [
-      "3820158673/GridRV"
-     ],
-     "en": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> Big Nomad RV update coming <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> The next update rebuilds how RV interiors are stored: furniture, fridges, cupboards and everything inside them. <LINE> Your RVs and their contents are meant to move over automatically, but please keep a backup in case anything goes wrong. <LINE>  <LINE> <RGB:1,0.75,0.25> How to back up the server <RGB:1,1,1> <LINE> 1. Stop the server before it updates. <LINE> 2. In the <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> folder, copy <RGB:0.55,0.85,1> Saves/Multiplayer/server name <RGB:1,1,1> and <RGB:0.55,0.85,1> db/server name.db <RGB:1,1,1> somewhere safe. <LINE> To undo the update later, put both back. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> This message only shows once.",
-     "ch": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 遊牧者房車即將大更新 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 下次更新將重建房車內部的儲存方式: 家具、冰箱、櫥櫃以及其中的所有物品. <LINE> 你的房車與其中物品應該會自動轉移, 但請務必保留備份, 以防出錯. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何備份伺服器 <RGB:1,1,1> <LINE> 1. 更新前先停止伺服器. <LINE> 2. 在 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 資料夾中, 把 <RGB:0.55,0.85,1> Saves/Multiplayer/伺服器名稱 <RGB:1,1,1> 和 <RGB:0.55,0.85,1> db/伺服器名稱.db <RGB:1,1,1> 複製到安全的地方. <LINE> 之後若要復原這次更新, 把兩者都放回去. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 這則訊息只會顯示一次.",
-     "cn": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 游牧者房车即将迎来大更新 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 下次更新会重建房车内部的存储方式: 家具, 冰箱, 橱柜以及里面的一切. <LINE> 你的房车及其内容物本应会自动迁移, 但请务必备份, 以防万一. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何备份服务器 <RGB:1,1,1> <LINE> 1. 在更新前先停服. <LINE> 2. 在 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 文件夹里, 把 <RGB:0.55,0.85,1> Saves/Multiplayer/服务器名 <RGB:1,1,1> 和 <RGB:0.55,0.85,1> db/服务器名.db <RGB:1,1,1> 复制到安全的地方. <LINE> 之后若要撤销更新, 把这两个都放回去. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 此消息只显示一次.",
-     "_note": "沿用 As1 譯文"
-    }
-   ]
-  },
-  "Tooltip|Tooltip_item_GridRVArmourManual": {
-   "kind": "conflict",
-   "signature": "68a132e05ff74a63",
-   "groups": [
-    {
-     "owners": [
-      "3820158673/DeadWorksNomadRV"
-     ],
-     "en": "Teaches: Weld RV Spiked Ram (V Wedge), Weld RV Side Armour, Weld RV Cow Catcher",
-     "ch": "可學習: 焊接房車尖刺撞角 (V 形楔), 焊接房車側面裝甲, 焊接房車排障器",
-     "cn": "可学习: 焊接房车尖刺撞角 (V形楔), 焊接房车侧面装甲, 焊接房车排障器",
-     "_note": "配方名照本包 GridRVMakeRamV／GridRVMakeArmorSkirts; Cow Catcher 譯排障器"
-    },
-    {
-     "owners": [
-      "3820158673/GridRV"
-     ],
-     "en": "Teaches: Weld RV Spiked Ram (V Wedge), Weld RV Side Armour",
-     "ch": "可學習: 焊接房車尖刺撞角 (V 形楔), 焊接房車側面裝甲",
-     "cn": "可学习: 焊接房车尖刺撞角 (V形楔), 焊接房车侧面装甲",
-     "_note": "沿用 As1 譯文"
     }
    ]
   },

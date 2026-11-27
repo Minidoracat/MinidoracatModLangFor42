@@ -65482,8 +65482,8 @@
   },
   "Tooltip.json|Tooltip_item_GridRVArmourManual": {
     "as1_value": "可学习: 焊接房车尖刺撞角 (V形楔), 焊接房车侧面装甲",
-    "value": "可学习: 房车装甲焊接配方",
-    "reason": "2026-10-26 owner 衝突裁決：2026-10-26 首次裁決: 房車裝甲手冊的說明. GridRV 教 2 個配方 (尖刺撞角 V 形楔、側面裝甲), DeadWorksNomadRV 多教「焊接房車排障器」. 現行 As1 值只列兩項, 對 DeadWorksNomadRV 漏列一個實際會學到的配方. 改成不列舉的「可學習: 房車裝甲焊接配方」, 排障器也在該 MOD 的 GridRVArmourItems 裝甲物品內, 對兩個 owner 都成立."
+    "value": "可学习: 焊接房车尖刺撞角 (V形楔), 焊接房车侧面装甲, 焊接房车排障器",
+    "reason": "2026-11-27 #1553：GridRV 子 MOD 被上游移除, 只剩 DeadWorksNomadRV, owner 衝突消失; 改出 DeadWorksNomadRV 英文的譯文 (原條件譯文組)"
   },
   "ContextMenu.json|ContextMenu_InstallProstLeft": {
     "as1_value": "为左臂安装假肢",
@@ -76957,8 +76957,8 @@
   },
   "Sandbox.json|Sandbox_RadioTraders_Bounties_tooltip": {
     "as1_value": "铁壁偶尔会悬赏两个拖车公园的欠债人. 需要 Bandits 模组. (开发中)",
-    "value": "铁壁偶尔会悬赏两个拖车公园的欠债人. 需要 Bandits 模组.",
-    "reason": "2026-11-06 #1221–#1297 批次：舊譯稽核：上游已拿掉開發中標示, 舊譯多了 (開發中)"
+    "value": "铁壁偶尔会悬赏两个拖车公园的欠债人. 需要流浪幸存者、Project A-Life、Last Ones Standing 或 Bandits.",
+    "reason": "2026-11-27 #1540–#1553 批次：上游改英文：Ironside sometimes offers a bounty on two trailer park debto"
   },
   "Sandbox.json|Sandbox_RadioTraders_GraveyardShiftChance_tooltip": {
     "as1_value": "每次呼叫时的百分比概率, 仅限真正的夜晚. 默认 2.",
@@ -89464,5 +89464,35 @@
     "as1_value": "打开玩家区域",
     "value": "打开玩家面板",
     "reason": "2026-11-26 1.81.0 舊譯潤色：Aegis 的 player area 統一寫玩家面板"
+  },
+  "IG_UI.json|IGUI_GridRV_BackupNotice": {
+    "as1_value": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 游牧者房车即将迎来大更新 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 下次更新会重建房车内部的存储方式: 家具, 冰箱, 橱柜以及里面的一切. <LINE> 你的房车及其内容物本应会自动迁移, 但请务必备份, 以防万一. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何备份 <RGB:1,1,1> <LINE> 1. 退回主菜单. <LINE> 2. 打开你的 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 文件夹, 在Windows上通常是 <RGB:0.55,0.85,1> C:/Users/你的用户名/Zomboid <RGB:1,1,1> <LINE> 3. 把 <RGB:0.55,0.85,1> Saves <RGB:1,1,1> 文件夹复制到安全的地方. <LINE> 之后若要撤销更新, 把这个副本放回去即可. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 此消息只显示一次.",
+    "value": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 房车已改用车辆框架 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 游牧者房车与戴尔的酋长房车现在改由 DeadWorks Vehicle Framework 运行. 每辆房车及其中的一切, 包括家具、冰箱、橱柜、水和电池, 都会在首次加载时转换. <LINE> 这本应自动完成, 但请保留此次更新前的备份, 以防万一. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何备份 <RGB:1,1,1> <LINE> 1. 退回主菜单. <LINE> 2. 打开你的 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 文件夹, 在Windows上通常是 <RGB:0.55,0.85,1> C:/Users/你的用户名/Zomboid <RGB:1,1,1> <LINE> 3. 把 <RGB:0.55,0.85,1> Saves <RGB:1,1,1> 文件夹复制到安全的地方. <LINE> 若要撤销, 把这个副本放回去, 并换回之前的版本. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 此消息只显示一次.",
+    "reason": "2026-11-27 #1553：GridRV 子 MOD 被上游移除, 只剩 DeadWorksNomadRV, owner 衝突消失; 改出 DeadWorksNomadRV 英文的譯文 (原條件譯文組)"
+  },
+  "IG_UI.json|IGUI_GridRV_BackupNoticeServer": {
+    "as1_value": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 游牧者房车即将迎来大更新 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 下次更新会重建房车内部的存储方式: 家具, 冰箱, 橱柜以及里面的一切. <LINE> 你的房车及其内容物本应会自动迁移, 但请务必备份, 以防万一. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何备份服务器 <RGB:1,1,1> <LINE> 1. 在更新前先停服. <LINE> 2. 在 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 文件夹里, 把 <RGB:0.55,0.85,1> Saves/Multiplayer/服务器名 <RGB:1,1,1> 和 <RGB:0.55,0.85,1> db/服务器名.db <RGB:1,1,1> 复制到安全的地方. <LINE> 之后若要撤销更新, 把这两个都放回去. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 此消息只显示一次.",
+    "value": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 房车已改用车辆框架 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 游牧者房车与戴尔的酋长房车现在改由 DeadWorks Vehicle Framework 运行. 每辆房车及其中的一切, 包括家具、冰箱、橱柜、水和电池, 都会在首次加载时转换. <LINE> 这本应自动完成, 但请保留此次更新前的备份, 以防万一. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何备份 <RGB:1,1,1> <LINE> 1. 停止服务器. <LINE> 2. 打开你的 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 文件夹, 在Windows上通常是 <RGB:0.55,0.85,1> C:/Users/你的用户名/Zomboid <RGB:1,1,1> <LINE> 3. 把 <RGB:0.55,0.85,1> Saves/Multiplayer <RGB:1,1,1> 下这个服务器的文件夹复制到安全的地方. <LINE> 若要撤销, 把这个副本放回去, 并换回之前的版本. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 此消息只显示一次.",
+    "reason": "2026-11-27 #1553：GridRV 子 MOD 被上游移除, 只剩 DeadWorksNomadRV, owner 衝突消失; 改出 DeadWorksNomadRV 英文的譯文 (原條件譯文組)"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_IronsideLoans_tooltip": {
+    "as1_value": "铁壁通过家族放贷. 从他的列表里借一笔, 拿到一手提箱现金, 随便在哪儿花, 只要在期限前全额还清即可. 错过期限, 会有持枪的收债人来找你 (需要 Bandits 模组; Frockin Wiseguys 会给西装). 没有 Bandits 时, 违约只会让你进黑名单. 默认关闭.",
+    "value": "铁壁通过家族放贷. 从他的列表里借一笔, 拿到一手提箱现金, 随便在哪儿花, 只要在期限前全额还清即可. 错过期限, 会有持枪的收债人来找你 (需要流浪幸存者、Project A-Life、Last Ones Standing 或 Bandits; Frockin Wiseguys 会给西装). 如果前面四个 NPC 模组一个都没装, 违约只会让你进黑名单. 默认关闭.",
+    "reason": "2026-11-27 #1540–#1553 批次：上游改英文：Ironside lends money through the Family. Take a loan from hi"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_LoanCollectors_tooltip": {
+    "as1_value": "错过期限会派出持枪的收债人来追你. 需要 Bandits 模组. 关闭后, 违约只会损失声望并进黑名单.",
+    "value": "错过期限会派出持枪的收债人来追你. 需要流浪幸存者、Project A-Life、Last Ones Standing 或 Bandits. 关闭后, 违约只会损失声望并进黑名单.",
+    "reason": "2026-11-27 #1540–#1553 批次：上游改英文：Missing the deadline sends armed collectors after you. Needs"
+  },
+  "Sandbox.json|Sandbox_RadioTraders_LoanDeadly_tooltip": {
+    "as1_value": "开启: 错过期限会派出持枪收债人 (需要 Bandits). 关闭: 错过期限只会让你在\"停止放贷天数\"内无法借款并损失铁壁的声望. 没人来找你.",
+    "value": "开启: 错过期限会派出持枪收债人 (需要流浪幸存者、Project A-Life、Last Ones Standing 或 Bandits). 关闭: 错过期限只会让你在“停止放贷天数”内无法借款并损失铁壁的声望. 没人来找你.",
+    "reason": "2026-11-27 #1540–#1553 批次：上游改英文：On: missing a deadline sends armed collectors (needs Roaming"
+  },
+  "Sandbox.json|Sandbox_VanillaFishingFix_EnableFishSchools_tooltip": {
+    "as1_value": "部分约三十格的水域更富鱼. 钓获仍会消耗原版的丰度, 双倍收获会消耗两倍.",
+    "value": "部分约三十格的水域更富鱼. 钓获仍会消耗原版的丰度, 双倍收获会消耗两倍. 抛竿落入鱼群后, 若在第一次咬钩前就收线, 会把鱼群吓跑, 持续游戏内 3 小时.",
+    "reason": "2026-11-27 #1540–#1553 批次：上游改英文：Some thirty-tile water areas are richer. Catches still deple"
   }
 }

@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1520 個 Workshop 模組**（2197 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
+共支援 **1521 個 Workshop 模組**（2198 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1523,6 +1523,7 @@
 | [GarageWorks [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3827271522) | GarageWorks 車庫收納 | 新增可焊接建造的車庫貨架，輪胎、電池、消聲器、油桶與丙烷罐放在上面大幅減重。 | `GarageWorks`, `GarageWorksSafeRemoval` | 50 | — | — |
 | [It's Quiet, Too quiet.](https://steamcommunity.com/sharedfiles/filedetails/?id=3827348913) | It's Quiet, Too quiet. 晝靜夜湧 | 白天街道空無一人，入夜後殭屍湧上街頭聚集成屍潮；殭屍視力差、聽覺敏銳。 | `QuietDark` | ? | — | — |
 | [Toyota Tacoma - Overland Pickup [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3827381192) | 豐田 Tacoma 越野皮卡 | 附可用絞盤與重型拖曳能力的裝甲雙排越野皮卡，四人座、大油箱與大貨斗。 | `ToyotaTacoma` | 40 | — | — |
+| [Pond Keeper - Fischzucht & Kaviar (Fish Farming & Caviar)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3827721851) | — | — | `PondKeeper` | 102 | — | — |
 | [Girlfriend Mod (In the Spirit of Kate)](https://steamcommunity.com/sharedfiles/filedetails/?id=3828333447) | Girlfriend Mod 女友同伴 | 新增與你一起出生、並肩作戰的同伴 NPC Emily；名字、外觀、衣著與性別都能自訂，換成男性就是有自己台詞的男友。 | `GirlfriendMod` | ? | — | — |
 | [Vehicle Kit Library (VSK) - Framework for Vehicle Mods [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3828607335) | Vehicle Kit Library 車輛框架 | Roadworthy 等車輛 MOD 共用的框架，提供儀表板、燈號與修正功能；玩家平常只會看到儀表板上的遠光燈提示，其餘是開發者面板。 | `VehicleSwissKnife` | 15 | — | ⚠️ 儀表上的刻度字母（水溫 C／H、油壓 L／H、里程 km／mi）寫死在 Lua（VSK_DashboardCluster.lua），任何翻譯包都補不了；和實車儀表一樣維持英文。 |
 | [Roadworthy [BETA] - Realistic Driving & Car Maintenance [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3828608843) | Roadworthy 寫實駕駛與保養 | 讓開車與養車更寫實：手排換檔與離合器、燃料種類與加錯油、儀表板燈號、發動流程與失敗原因、機油與冷卻液的液位與油質、火星塞與濾清器等零件磨損，以及安全帶；難度與各項機制可在沙盒設定調整。需要 Vehicle Kit Library。 | `RealisticDrivingOverhaul` | 357 | — | — |
@@ -1530,7 +1531,7 @@
 | [Readable HottieZ - 1992 & 1993 Collectible Magazines (27 Issues) [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3831390901) | 可閱讀的 HottieZ 雜誌 | 讓原版 HottieZ 雜誌可以翻閱，收錄 1992 與 1993 年共 27 期收藏刊。 | `ReadableHottieZ` | 95 | — | — |
 | [[42] Ithaca Melee Anims](https://steamcommunity.com/sharedfiles/filedetails/?id=3831633833) | Ithaca 近戰動作 | 球棒、撬棍、消防斧、開山刀、長刀與小刀各有專屬揮擊動作，隨機變化，大多也有專屬爆擊與倒地攻擊。 | `ithacaMeleeAnims` | ? | — | — |
 | [Real Water (NOT Viewpoint)](https://steamcommunity.com/sharedfiles/filedetails/?id=3832474484) | Real Water 真實水體 | 大改遊戲中的水：加入游泳與水體物理等功能，幾乎每項都能在模組或沙盒設定開關。 | `RealWater` | 93 | — | — |
-| [Living World [NPC] [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3837614147) | — | — | `LivingWorld` | 2218 | — | — |
+| [Living World [NPC] [B42]〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3837614147) | — | — | `LivingWorld` | 2220 | — | — |
 | [天地任我行（联机未测试）〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=3839474970) | — | — | `TianDiRenWoXing` | 363 | — | — |
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |

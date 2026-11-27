@@ -4,6 +4,24 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **新增支援 Pond Keeper - Fischzucht & Kaviar (Fish Farming & Caviar)（養魚池與魚子醬）的繁簡中文（102 項）。**
+  > 技術要點：#1545 翻譯申請（Steam 討論串，Patzzzz），使用者 2026-11-27 核准 own lane 收錄 3827721851。上游 1.0 只附英文與德文；`Translate/EN` 6 檔 102 鍵、零本體鍵碰撞。CH 與 CN 都對照英文直寫，GPT 對抗複核採納 12 條（例：水太髒時暫停的是繁殖，飢餓死亡倒數照走；同種魚提示的 `%1` 是每池上限，不是現有魚數；注水只看主物品欄）。名冊、`gen-watchlist`、`backfill-en` 建基準。
+- **7 個 MOD 更新後新增的文字補上繁簡中文（110 項）。**
+  - Radio Trader B42 的面對面交易跑腿、據點與包裹委託（71 項）。
+  - Loot Tracker 的群組分享（14 項）、Black Powder Gunsmithing 的新槍（8 項）、'79 Chevrolet Camaro 的 Apocalypse 版零件（7 項）、MFS Community Fix（7 項）等。
+  > 技術要點：追蹤器 2026-11-27 #1540–#1544、#1546–#1552「可能過時」（12 個 MOD），另含已關的 #1535 在 11-26 收到、沒處理到的一輪（Arcadia RV Interiors 3773972040）。steamcmd 重抓 13 個 MOD 全部對上 tracker state。2 路翻譯（Living World 2 項由主代理直寫），每路 GPT 對抗複核，採納 18 條（例：Radio Trader 包裹提示的 `%1` 已展開成「某商人 的跑腿」；「Trader voice lines」要取消勾選才靜音；Camaro 車頂架照安裝欄位寫「車頂行李架」）。Wandering Hordes 新增的 `Old_*` 子 MOD 594 鍵、Forged by Combat 的 `42.22` 夾 15 鍵英文都和已出貨的相同，不用改；ETW 3 個翻譯統計鍵照第五類不出貨。
+
+### Changed
+
+- **MOD 改了英文的已出貨文字跟著改（9 項）。** Radio Trader 的懸賞與借款討債，需要的 NPC 模組從只有 Bandits 改成四選一（4 項）、ApocalipseBR Regioes 的區域設定說明（4 項）、Vanilla Fishing Fix 的魚群說明（1 項）。
+  > 技術要點：As1 衍生層改 `sources/ch`＋`cn_overrides`，own 層經 `apply_translations` 更新。Arcadia RV Interiors 上游修了 14 個 own 鍵英文的亂碼，只更新 `own_translations` 的 `en` 錨點，譯文不變。
+- **Viewpoint - 3D RVs 的 GridRV 子 MOD 被上游拿掉，房車備份提醒與裝甲手冊說明改成直接出 Dead Works Nomad RV 的譯文（3 項）。**
+  > 技術要點：#1553（裁決過時）。owner 衝突消失：2 筆 unship 與 1 筆 translate 裁決、3 組條件譯文、2 筆 `unshipped_keys` 退役，DeadWorksNomadRV 組的譯文寫進 `sources/ch`＋`cn_overrides`。MFS Community Fix 新增 .357 彈藥 3 鍵的 owner：散裝併入 GaelGunStore 組、盒裝加進 `skip_owners`、整箱新增不核准組（只把 Rounds 換成 Ammo，照本體譯文），重新簽名。
+
 ## [42.22.2-1.81.1] - 2026-11-27
 
 ### Fixed

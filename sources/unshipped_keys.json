@@ -1838,16 +1838,6 @@
    "owner_signature": "e41062f54d116dbb",
    "reason": "2026-10-26：2026-10-26 裁決：VFES 兩版與 Complete Vanilla Firearms Expansion 的 Base.PPSHDrum 是 PPSH-41 Drum（彈鼓彈匣，在 VFES_items.txt），Rain's Firearms & Gun Parts Expanded 的 Base.PPSHDrum 英文是 PPSh，是裝彈鼓的槍本體（同該 MOD 的 Base.AK105Drum＝AK-105、彈匣另有 Base.AK105Clip）；一方是彈匣、一方是槍，沒有誠實中性值，現行「波波沙衝鋒槍彈鼓」會把 Rain's 的槍標成彈匣。unship 後：VFES 兩版與 Complete Vanilla Firearms Expansion（has_json_en）看到 PPSH-41 Drum，Rain's Expanded（has_json_en）看到 PPSh；正常情況由條件譯文各自顯示 PPSh-41彈鼓／波波沙衝鋒槍。各 owner 是否自帶 Translate/CH、CN 沒查（本機沒有這些 MOD 的檔案）."
   },
-  "IG_UI.json|IGUI_GridRV_BackupNotice": {
-   "as1_value": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 游牧者房车即将迎来大更新 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 下次更新会重建房车内部的存储方式: 家具, 冰箱, 橱柜以及里面的一切. <LINE> 你的房车及其内容物本应会自动迁移, 但请务必备份, 以防万一. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何备份 <RGB:1,1,1> <LINE> 1. 退回主菜单. <LINE> 2. 打开你的 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 文件夹, 在Windows上通常是 <RGB:0.55,0.85,1> C:/Users/你的用户名/Zomboid <RGB:1,1,1> <LINE> 3. 把 <RGB:0.55,0.85,1> Saves <RGB:1,1,1> 文件夹复制到安全的地方. <LINE> 之后若要撤销更新, 把这个副本放回去即可. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 此消息只显示一次.",
-   "owner_signature": "b6a2e14b18202307",
-   "reason": "2026-10-26：2026-10-26 首次裁決: 同一 Workshop 項目 3820158673 的兩個子 MOD 公告內容互斥. GridRV 是更新前的預告 (Big Nomad RV update coming: 下次更新才會重建房車內部儲存方式, 請先備份), DeadWorksNomadRV 是更新後的通知 (遊牧者與戴爾房車已改由 DeadWorks Vehicle Framework 運作, 第一次載入時轉換, 復原要放回備份並改回舊版). 「即將更新」與「已經更新」互斥, 現行 As1 出貨的 GridRV 預告對 DeadWorksNomadRV 玩家是錯誤資訊; 寫成不分時態的中性句會讓預告讀起來像已完成或反之, 沒有誠實中性值. unship 後兩個 owner 都有 IG_UI.json 英文 (has_json_en), 注入器認不出 owner 時玩家看到各自 MOD 的英文, 正常情況由條件譯文顯示各自中文."
-  },
-  "IG_UI.json|IGUI_GridRV_BackupNoticeServer": {
-   "as1_value": "<CENTRE> <SIZE:medium> <RGB:1,0.75,0.25> 游牧者房车即将迎来大更新 <LINE> <LINE> <LEFT> <SIZE:small> <RGB:1,1,1> 下次更新会重建房车内部的存储方式: 家具, 冰箱, 橱柜以及里面的一切. <LINE> 你的房车及其内容物本应会自动迁移, 但请务必备份, 以防万一. <LINE>  <LINE> <RGB:1,0.75,0.25> 如何备份服务器 <RGB:1,1,1> <LINE> 1. 在更新前先停服. <LINE> 2. 在 <RGB:0.55,0.85,1> Zomboid <RGB:1,1,1> 文件夹里, 把 <RGB:0.55,0.85,1> Saves/Multiplayer/服务器名 <RGB:1,1,1> 和 <RGB:0.55,0.85,1> db/服务器名.db <RGB:1,1,1> 复制到安全的地方. <LINE> 之后若要撤销更新, 把这两个都放回去. <LINE>  <LINE> <CENTRE> <RGB:0.6,0.6,0.6> 此消息只显示一次.",
-   "owner_signature": "d8a38181472473f8",
-   "reason": "2026-10-26：2026-10-26 首次裁決: 同 IGUI_GridRV_BackupNotice 的伺服器版. GridRV 是更新前預告 (更新前停服, 備份 Saves/Multiplayer/伺服器名稱 和 db/伺服器名稱.db 兩處), DeadWorksNomadRV 是更新後通知 (已改用 DeadWorks Vehicle Framework, 只備份 Saves/Multiplayer 下該伺服器資料夾, 復原要改回舊版). 時態互斥, 備份步驟與標記數也不同 (GridRV 26 個 <, DeadWorksNomadRV 27 個), 沒有誠實中性值. unship 後兩個 owner 都有 IG_UI.json 英文, 認不出 owner 時顯示各自英文, 正常情況由條件譯文顯示中文."
-  },
   "UI.json|UI_quick_tip_joke27": {
    "as1_value": "你身后什么都没有.",
    "owner_signature": "c8c1cc890c74bd78",

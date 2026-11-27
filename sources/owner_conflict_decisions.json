@@ -11763,16 +11763,6 @@
       "ch": "製作金屬管消音器",
       "cn": "制作金属管消音器"
     },
-    "IG_UI|IGUI_GridRV_BackupNotice": {
-      "action": "unship",
-      "signature": "b6a2e14b18202307",
-      "reason": "2026-10-26 首次裁決: 同一 Workshop 項目 3820158673 的兩個子 MOD 公告內容互斥. GridRV 是更新前的預告 (Big Nomad RV update coming: 下次更新才會重建房車內部儲存方式, 請先備份), DeadWorksNomadRV 是更新後的通知 (遊牧者與戴爾房車已改由 DeadWorks Vehicle Framework 運作, 第一次載入時轉換, 復原要放回備份並改回舊版). 「即將更新」與「已經更新」互斥, 現行 As1 出貨的 GridRV 預告對 DeadWorksNomadRV 玩家是錯誤資訊; 寫成不分時態的中性句會讓預告讀起來像已完成或反之, 沒有誠實中性值. unship 後兩個 owner 都有 IG_UI.json 英文 (has_json_en), 注入器認不出 owner 時玩家看到各自 MOD 的英文, 正常情況由條件譯文顯示各自中文."
-    },
-    "IG_UI|IGUI_GridRV_BackupNoticeServer": {
-      "action": "unship",
-      "signature": "d8a38181472473f8",
-      "reason": "2026-10-26 首次裁決: 同 IGUI_GridRV_BackupNotice 的伺服器版. GridRV 是更新前預告 (更新前停服, 備份 Saves/Multiplayer/伺服器名稱 和 db/伺服器名稱.db 兩處), DeadWorksNomadRV 是更新後通知 (已改用 DeadWorks Vehicle Framework, 只備份 Saves/Multiplayer 下該伺服器資料夾, 復原要改回舊版). 時態互斥, 備份步驟與標記數也不同 (GridRV 26 個 <, DeadWorksNomadRV 27 個), 沒有誠實中性值. unship 後兩個 owner 都有 IG_UI.json 英文, 認不出 owner 時顯示各自英文, 正常情況由條件譯文顯示中文."
-    },
     "IG_UI|IGUI_RS_EmptyWaterTank": {
       "action": "translate",
       "signature": "597d7b2dfb4480e0",
@@ -11793,13 +11783,6 @@
       "reason": "2026-10-26 首次裁決: PZK Vanilla Plus Car Pack, Dotol 水罐車與其 KI5 M50A3 附加包三個 owner 的英文只差大小寫, 同指水罐車的濾水器部件, 現值「水過濾器」對每個 owner 都成立, 維持.",
       "ch": "水過濾器",
       "cn": "水过滤器"
-    },
-    "Tooltip|Tooltip_item_GridRVArmourManual": {
-      "action": "translate",
-      "signature": "68a132e05ff74a63",
-      "reason": "2026-10-26 首次裁決: 房車裝甲手冊的說明. GridRV 教 2 個配方 (尖刺撞角 V 形楔、側面裝甲), DeadWorksNomadRV 多教「焊接房車排障器」. 現行 As1 值只列兩項, 對 DeadWorksNomadRV 漏列一個實際會學到的配方. 改成不列舉的「可學習: 房車裝甲焊接配方」, 排障器也在該 MOD 的 GridRVArmourItems 裝甲物品內, 對兩個 owner 都成立.",
-      "ch": "可學習: 房車裝甲焊接配方",
-      "cn": "可学习: 房车装甲焊接配方"
     },
     "UI|UI_CMRB_Combat_NoDelayShots": {
       "action": "translate",
