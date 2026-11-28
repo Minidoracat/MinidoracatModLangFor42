@@ -7733,6 +7733,11 @@
     "en": "Detach %1 from %2 and take it into your inventory?",
     "ch": "要把 %1 從 %2 拆下, 放進物品欄嗎?",
     "cn": "要把 %1 从 %2 上拆下, 放进物品栏吗?"
+   },
+   "ContextMenu_ReadMemorial": {
+    "en": "Read Memorial",
+    "ch": "閱讀紀念碑",
+    "cn": "阅读纪念碑"
    }
   },
   "Fluids.json": {
@@ -191636,6 +191641,621 @@
     "en": "'79 Chevrolet Camaro Apocalypse",
     "ch": "79款雪佛蘭科邁羅Apocalypse",
     "cn": "79款雪佛兰科迈罗Apocalypse"
+   },
+   "IGUI_ContainerTitle_SNTBatCab": {
+    "en": "Battery cabinet",
+    "ch": "電池櫃",
+    "cn": "电池柜"
+   },
+   "IGUI_SNT_PW_Cab": {
+    "en": "Battery cabinet",
+    "ch": "電池櫃",
+    "cn": "电池柜"
+   },
+   "IGUI_SNT_BF_K1_q": {
+    "en": "1 power part",
+    "ch": "1 項電力設備",
+    "cn": "1 件电力设备"
+   },
+   "IGUI_SNT_BF_K_q": {
+    "en": "%1 power parts",
+    "ch": "%1 項電力設備",
+    "cn": "%1 件电力设备"
+   },
+   "IGUI_SNT_B_CatPower": {
+    "en": "Power",
+    "ch": "電力",
+    "cn": "电力"
+   },
+   "IGUI_SNT_MineKG_q": {
+    "en": "Power (%1)",
+    "ch": "電力 (%1)",
+    "cn": "电力 (%1)"
+   },
+   "IGUI_SNT_MineKindPower": {
+    "en": "Power part",
+    "ch": "電力設備",
+    "cn": "电力设备"
+   },
+   "IGUI_SNT_PW_Away": {
+    "en": "%1 sq. away",
+    "ch": "距離 %1 格",
+    "cn": "距离 %1 格"
+   },
+   "IGUI_SNT_PW_BatsBack": {
+    "en": "%1 car batteries",
+    "ch": "%1 個汽車電池",
+    "cn": "%1 个汽车电池"
+   },
+   "IGUI_SNT_PW_Built": {
+    "en": "Built",
+    "ch": "已建造",
+    "cn": "已建造"
+   },
+   "IGUI_SNT_PW_CabDesc": {
+    "en": "Stores the power in car batteries (8 batteries, 1 kWh each). Right-click to put batteries in or take them out. Up to 2 for one inverter.",
+    "ch": "用汽車電池儲存電力 (8 顆電池, 每顆 1 kWh). 右鍵點選可放入或取出電池. 每台逆變器最多 2 座.",
+    "cn": "用汽车电池储存电力 (8 块电池, 每块 1 kWh). 右键点击可放入或取出电池. 每台逆变器最多 2 个."
+   },
+   "IGUI_SNT_PW_CabN": {
+    "en": "Cabinet %1",
+    "ch": "電池櫃 %1",
+    "cn": "电池柜 %1"
+   },
+   "IGUI_SNT_PW_Cabs": {
+    "en": "Battery cabinets",
+    "ch": "電池櫃",
+    "cn": "电池柜"
+   },
+   "IGUI_SNT_PW_Calm": {
+    "en": "calm",
+    "ch": "無風",
+    "cn": "无风"
+   },
+   "IGUI_SNT_PW_Charge": {
+    "en": "Charge",
+    "ch": "電量",
+    "cn": "电量"
+   },
+   "IGUI_SNT_PW_Cloudy": {
+    "en": "cloudy",
+    "ch": "多雲",
+    "cn": "多云"
+   },
+   "IGUI_SNT_PW_DefName": {
+    "en": "Power %1",
+    "ch": "電力 %1",
+    "cn": "电力 %1"
+   },
+   "IGUI_SNT_PW_Dismantle": {
+    "en": "Dismantle",
+    "ch": "拆除",
+    "cn": "拆除"
+   },
+   "IGUI_SNT_PW_DismantleCheat": {
+    "en": "Built with cheat: nothing comes back",
+    "ch": "以建造作弊建造: 不會拿回任何東西",
+    "cn": "以建造作弊建造: 不会拿回任何东西"
+   },
+   "IGUI_SNT_PW_DismantleTip": {
+    "en": "You get back: %1",
+    "ch": "可拿回: %1",
+    "cn": "可拿回: %1"
+   },
+   "IGUI_SNT_PW_DragHint": {
+    "en": "drag car batteries in",
+    "ch": "把汽車電池拖入電池櫃",
+    "cn": "将汽车电池拖入电池柜"
+   },
+   "IGUI_SNT_PW_Empty": {
+    "en": "empty",
+    "ch": "空",
+    "cn": "空"
+   },
+   "IGUI_SNT_PW_Full": {
+    "en": "full",
+    "ch": "已充滿",
+    "cn": "已充满"
+   },
+   "IGUI_SNT_PW_TagFull": {
+    "en": "full",
+    "ch": "已充滿",
+    "cn": "已充满"
+   },
+   "IGUI_SNT_PW_FullBy": {
+    "en": "full by %1",
+    "ch": "%1 前充滿",
+    "cn": "%1 前充满"
+   },
+   "IGUI_SNT_PW_FullDay": {
+    "en": "full in more than a day",
+    "ch": "需一天以上才會充滿",
+    "cn": "需要一天以上才能充满"
+   },
+   "IGUI_SNT_PW_Ground": {
+    "en": "Only on the ground",
+    "ch": "僅限地面層",
+    "cn": "仅限地面层"
+   },
+   "IGUI_SNT_PW_Here": {
+    "en": "here",
+    "ch": "此處",
+    "cn": "此处"
+   },
+   "IGUI_SNT_PW_HintIndoor": {
+    "en": "%1 solar panel(s) under a roof - no sun",
+    "ch": "%1 片太陽能板被屋頂遮住 - 照不到陽光",
+    "cn": "%1 块太阳能板被屋顶遮住 - 晒不到太阳"
+   },
+   "IGUI_SNT_PW_HintMore": {
+    "en": "The base uses more than it makes",
+    "ch": "基地用電量大於發電量",
+    "cn": "基地用电量大于发电量"
+   },
+   "IGUI_SNT_PW_HintNight": {
+    "en": "Batteries last until %1 - sunrise %2",
+    "ch": "電池電力可用到 %1 - 日出 %2",
+    "cn": "电池电量可用到 %1 - 日出 %2"
+   },
+   "IGUI_SNT_PW_HintNightOk": {
+    "en": "Batteries last until sunrise (%1)",
+    "ch": "電池電力可用到日出 (%1)",
+    "cn": "电池电量可用到日出 (%1)"
+   },
+   "IGUI_SNT_PW_HintNoBat": {
+    "en": "No batteries - power only while it makes enough",
+    "ch": "沒有電池 - 只有發電量足夠時才會供電",
+    "cn": "没有电池 - 只有发电量足够时才会供电"
+   },
+   "IGUI_SNT_PW_HintNoGrid": {
+    "en": "This game version does not let the power reach the base",
+    "ch": "此遊戲版本無法讓電力送達基地",
+    "cn": "此游戏版本无法让电力送达基地"
+   },
+   "IGUI_SNT_PW_HintOff": {
+    "en": "Switched off - the batteries only charge",
+    "ch": "已關閉 - 電池只會充電",
+    "cn": "已关闭 - 电池只会充电"
+   },
+   "IGUI_SNT_PW_Inv": {
+    "en": "Inverter",
+    "ch": "逆變器",
+    "cn": "逆变器"
+   },
+   "IGUI_SNT_PW_InvDesc": {
+    "en": "Hangs on a wall (indoors too) and gives the stored power to the base around it, like a generator. Solar panels, wind turbines and battery cabinets within 15 squares belong to it. See the Power tab.",
+    "ch": "掛在牆上 (室內也可以), 像發電機一樣把儲存的電力供給周圍的基地. 15 格內的太陽能板、風力發電機與電池櫃都歸它管理. 請見公用設施分頁.",
+    "cn": "挂在墙上 (室内也可以), 像发电机一样把储存的电力供给周围的基地. 15 格内的太阳能板、风力发电机和电池柜都归它管理. 请见公用设施标签页."
+   },
+   "IGUI_SNT_PW_InvNear": {
+    "en": "Another inverter is too close (15 squares)",
+    "ch": "附近已有其他逆變器 (15 格內)",
+    "cn": "附近已有其他逆变器 (15 格内)"
+   },
+   "IGUI_SNT_PW_KWh": {
+    "en": "%1 kWh",
+    "ch": "%1 kWh",
+    "cn": "%1 kWh"
+   },
+   "IGUI_SNT_PW_Last24": {
+    "en": "Last 24 hours",
+    "ch": "過去 24 小時",
+    "cn": "过去 24 小时"
+   },
+   "IGUI_SNT_PW_LastsDay": {
+    "en": "lasts more than a day",
+    "ch": "可用超過一天",
+    "cn": "可用超过一天"
+   },
+   "IGUI_SNT_PW_LastsUntil": {
+    "en": "lasts until %1",
+    "ch": "可用到 %1",
+    "cn": "可用到 %1"
+   },
+   "IGUI_SNT_PW_LeftOver": {
+    "en": "left over",
+    "ch": "結餘",
+    "cn": "结余"
+   },
+   "IGUI_SNT_PW_Limit": {
+    "en": "The inverter here has enough of these already (%1)",
+    "ch": "此處的逆變器已達此類設備的上限 (%1)",
+    "cn": "此处的逆变器已达此类设备的上限 (%1)"
+   },
+   "IGUI_SNT_PW_LowMsg": {
+    "en": "%1: power low (%2)",
+    "ch": "%1: 電量低 (%2)",
+    "cn": "%1: 电量低 (%2)"
+   },
+   "IGUI_SNT_PW_Made": {
+    "en": "made",
+    "ch": "發電",
+    "cn": "发电"
+   },
+   "IGUI_SNT_PW_MenuCab": {
+    "en": "Battery cabinet (%1/%2, %3, %4 kWh)",
+    "ch": "電池櫃 (%1/%2, %3, %4 kWh)",
+    "cn": "电池柜 (%1/%2, %3, %4 kWh)"
+   },
+   "IGUI_SNT_PW_MenuGives": {
+    "en": "%1 (%2)",
+    "ch": "%1 (%2)",
+    "cn": "%1 (%2)"
+   },
+   "IGUI_SNT_PW_MenuInv": {
+    "en": "Power: %1 (%2, %3 kWh)",
+    "ch": "電力: %1 (%2, %3 kWh)",
+    "cn": "电力: %1 (%2, %3 kWh)"
+   },
+   "IGUI_SNT_PW_NeedTool": {
+    "en": "Needs: %1",
+    "ch": "需要: %1",
+    "cn": "需要: %1"
+   },
+   "IGUI_SNT_PW_NeedWall": {
+    "en": "Needs a wall (north or west side of the square)",
+    "ch": "需要牆壁 (該格的北側或西側)",
+    "cn": "需要墙壁 (该格的北侧或西侧)"
+   },
+   "IGUI_SNT_PW_Night": {
+    "en": "night",
+    "ch": "夜間",
+    "cn": "夜间"
+   },
+   "IGUI_SNT_PW_NoBatteries": {
+    "en": "no batteries",
+    "ch": "無電池",
+    "cn": "无电池"
+   },
+   "IGUI_SNT_PW_NoCabs": {
+    "en": "No battery cabinet",
+    "ch": "沒有電池櫃",
+    "cn": "没有电池柜"
+   },
+   "IGUI_SNT_PW_NoHistory": {
+    "en": "collecting...",
+    "ch": "收集中…",
+    "cn": "收集中…"
+   },
+   "IGUI_SNT_PW_NoInverter": {
+    "en": "No inverter within %1 squares",
+    "ch": "%1 格內沒有逆變器",
+    "cn": "%1 格内没有逆变器"
+   },
+   "IGUI_SNT_PW_NoSystems": {
+    "en": "No power yet - build an inverter (Build tab, Power)",
+    "ch": "尚無電力 - 請建造逆變器 (建造分頁, 電力)",
+    "cn": "暂无电力 - 请建造逆变器 (建造标签页, 电力)"
+   },
+   "IGUI_SNT_PW_NotLoaded": {
+    "en": "(not loaded - last known)",
+    "ch": "(未載入 - 最後已知狀態)",
+    "cn": "(未加载 - 最后已知状态)"
+   },
+   "IGUI_SNT_PW_NothingUses": {
+    "en": "Nothing uses power now",
+    "ch": "目前沒有東西在用電",
+    "cn": "当前没有东西在用电"
+   },
+   "IGUI_SNT_PW_Now": {
+    "en": "now",
+    "ch": "現在",
+    "cn": "现在"
+   },
+   "IGUI_SNT_PW_Off": {
+    "en": "off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "IGUI_SNT_PW_TagOff": {
+    "en": "off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "IGUI_SNT_PW_On": {
+    "en": "on",
+    "ch": "開啟",
+    "cn": "开启"
+   },
+   "IGUI_SNT_PW_OpenTab": {
+    "en": "Open power window",
+    "ch": "開啟電力視窗",
+    "cn": "打开电力窗口"
+   },
+   "IGUI_SNT_PW_Outdoor": {
+    "en": "Needs open sky: outdoors, nothing above",
+    "ch": "需要露天: 戶外且上方無遮蔽",
+    "cn": "需要露天: 户外且上方无遮挡"
+   },
+   "IGUI_SNT_PW_Parts": {
+    "en": "Parts",
+    "ch": "設備",
+    "cn": "设备"
+   },
+   "IGUI_SNT_PW_PartsHint": {
+    "en": "click a line: it lights up",
+    "ch": "點選一列, 對應的設備就會亮起",
+    "cn": "点击一行, 对应的设备就会高亮"
+   },
+   "IGUI_SNT_PW_PickOne": {
+    "en": "Pick a system on the left",
+    "ch": "從左側選擇一個系統",
+    "cn": "从左侧选择一个系统"
+   },
+   "IGUI_SNT_PW_Powers": {
+    "en": "powers %1 squares",
+    "ch": "供電半徑 %1 格",
+    "cn": "供电半径 %1 格"
+   },
+   "IGUI_SNT_PW_Removed": {
+    "en": "Taken apart",
+    "ch": "已拆除",
+    "cn": "已拆除"
+   },
+   "IGUI_SNT_PW_Rename": {
+    "en": "Rename",
+    "ch": "重新命名",
+    "cn": "重命名"
+   },
+   "IGUI_SNT_PW_RenameHint": {
+    "en": "click Rename (or double-click the name) to give it a name",
+    "ch": "點選「重新命名」 (或按兩下名稱) 為它命名",
+    "cn": "点击“重命名” (或双击名称) 为它命名"
+   },
+   "IGUI_SNT_PW_Save": {
+    "en": "Save",
+    "ch": "儲存",
+    "cn": "保存"
+   },
+   "IGUI_SNT_PW_ShowRange": {
+    "en": "Show range",
+    "ch": "顯示範圍",
+    "cn": "显示范围"
+   },
+   "IGUI_SNT_PW_Shown": {
+    "en": "shown for 5 s",
+    "ch": "顯示 5 秒",
+    "cn": "显示 5 秒"
+   },
+   "IGUI_SNT_PW_Solar": {
+    "en": "Solar panel",
+    "ch": "太陽能板",
+    "cn": "太阳能板"
+   },
+   "IGUI_SNT_PW_SolarDesc": {
+    "en": "Gives power in the sun (0.4 kW at noon, less in clouds and rain, nothing at night). Outdoors with nothing above it. Up to 12 for one inverter.",
+    "ch": "在陽光下發電 (正午 0.4 kW, 陰天與雨天較少, 夜間不發電). 須放在戶外且上方無遮蔽. 每台逆變器最多 12 片.",
+    "cn": "在阳光下发电 (正午 0.4 kW, 阴天和雨天较少, 夜间不发电). 须放在户外且上方无遮挡. 每台逆变器最多 12 块."
+   },
+   "IGUI_SNT_PW_Solars": {
+    "en": "Solar panels",
+    "ch": "太陽能板",
+    "cn": "太阳能板"
+   },
+   "IGUI_SNT_PW_StateEmpty": {
+    "en": "no power",
+    "ch": "無電力",
+    "cn": "无电力"
+   },
+   "IGUI_SNT_PW_TagNoPower": {
+    "en": "no power",
+    "ch": "無電力",
+    "cn": "无电力"
+   },
+   "IGUI_SNT_PW_StateOff": {
+    "en": "switched off",
+    "ch": "已關閉",
+    "cn": "已关闭"
+   },
+   "IGUI_SNT_PW_StateOn": {
+    "en": "supplying power",
+    "ch": "供電中",
+    "cn": "供电中"
+   },
+   "IGUI_SNT_PW_Steady": {
+    "en": "steady",
+    "ch": "穩定",
+    "cn": "稳定"
+   },
+   "IGUI_SNT_PW_TagIdle": {
+    "en": "steady",
+    "ch": "穩定",
+    "cn": "稳定"
+   },
+   "IGUI_SNT_PW_Stored": {
+    "en": "%1 / %2 kWh",
+    "ch": "%1 / %2 kWh",
+    "cn": "%1 / %2 kWh"
+   },
+   "IGUI_SNT_PW_Storm": {
+    "en": "storm",
+    "ch": "暴風",
+    "cn": "暴风"
+   },
+   "IGUI_SNT_PW_SumIn": {
+    "en": "%1 made - %2 used = %3 into the batteries",
+    "ch": "發電 %1 - 用電 %2 = %3 存入電池",
+    "cn": "发电 %1 - 用电 %2 = %3 存入电池"
+   },
+   "IGUI_SNT_PW_SumOff": {
+    "en": "%1 made - all into the batteries",
+    "ch": "發電 %1 - 全部存入電池",
+    "cn": "发电 %1 - 全部存入电池"
+   },
+   "IGUI_SNT_PW_SumOut": {
+    "en": "%1 made - %2 used = %3 taken from the batteries",
+    "ch": "發電 %1 - 用電 %2 = 從電池取用 %3",
+    "cn": "发电 %1 - 用电 %2 = 从电池取用 %3"
+   },
+   "IGUI_SNT_PW_SunWind": {
+    "en": "Sun %1 - Wind %2 km/h",
+    "ch": "日照 %1 - 風速 %2 km/h",
+    "cn": "日照 %1 - 风速 %2 km/h"
+   },
+   "IGUI_SNT_PW_Sunny": {
+    "en": "sunny",
+    "ch": "晴天",
+    "cn": "晴天"
+   },
+   "IGUI_SNT_PW_TagCharging": {
+    "en": "charging",
+    "ch": "充電中",
+    "cn": "充电中"
+   },
+   "IGUI_SNT_PW_TagDraining": {
+    "en": "draining",
+    "ch": "放電中",
+    "cn": "放电中"
+   },
+   "IGUI_SNT_PW_TagNone": {
+    "en": "none",
+    "ch": "無",
+    "cn": "无"
+   },
+   "IGUI_SNT_PW_TagUsing": {
+    "en": "using",
+    "ch": "使用中",
+    "cn": "使用中"
+   },
+   "IGUI_SNT_PW_ThingsOn": {
+    "en": "%1 things on",
+    "ch": "%1 個裝置已開啟",
+    "cn": "%1 个设备已开启"
+   },
+   "IGUI_SNT_PW_TileBase": {
+    "en": "Base",
+    "ch": "基地",
+    "cn": "基地"
+   },
+   "IGUI_SNT_PW_TileBatteries": {
+    "en": "Batteries",
+    "ch": "電池",
+    "cn": "电池"
+   },
+   "IGUI_SNT_PW_TileMaking": {
+    "en": "Making",
+    "ch": "發電",
+    "cn": "发电"
+   },
+   "IGUI_SNT_PW_Today": {
+    "en": "Today",
+    "ch": "今天",
+    "cn": "今天"
+   },
+   "IGUI_SNT_PW_TurnOff": {
+    "en": "Turn off",
+    "ch": "關閉",
+    "cn": "关闭"
+   },
+   "IGUI_SNT_PW_TurnOn": {
+    "en": "Turn on",
+    "ch": "開啟",
+    "cn": "开启"
+   },
+   "IGUI_SNT_PW_TurnedOff": {
+    "en": "Inverter off",
+    "ch": "逆變器已關閉",
+    "cn": "逆变器已关闭"
+   },
+   "IGUI_SNT_PW_TurnedOn": {
+    "en": "Inverter on",
+    "ch": "逆變器已開啟",
+    "cn": "逆变器已开启"
+   },
+   "IGUI_SNT_PW_UseDryer": {
+    "en": "Dryer",
+    "ch": "烘乾機",
+    "cn": "烘干机"
+   },
+   "IGUI_SNT_PW_UseFreezer": {
+    "en": "Freezer",
+    "ch": "冷凍櫃",
+    "cn": "冷冻柜"
+   },
+   "IGUI_SNT_PW_UseFridge": {
+    "en": "Fridge",
+    "ch": "冰箱",
+    "cn": "冰箱"
+   },
+   "IGUI_SNT_PW_UseLight": {
+    "en": "Lights",
+    "ch": "電燈",
+    "cn": "电灯"
+   },
+   "IGUI_SNT_PW_UseMicro": {
+    "en": "Microwave",
+    "ch": "微波爐",
+    "cn": "微波炉"
+   },
+   "IGUI_SNT_PW_UseOther": {
+    "en": "Other",
+    "ch": "其他",
+    "cn": "其他"
+   },
+   "IGUI_SNT_PW_UseRadio": {
+    "en": "Radio",
+    "ch": "收音機",
+    "cn": "收音机"
+   },
+   "IGUI_SNT_PW_UseStove": {
+    "en": "Stove",
+    "ch": "爐具",
+    "cn": "炉灶"
+   },
+   "IGUI_SNT_PW_UseTv": {
+    "en": "TV",
+    "ch": "電視",
+    "cn": "电视"
+   },
+   "IGUI_SNT_PW_UseWasher": {
+    "en": "Washer",
+    "ch": "洗衣機",
+    "cn": "洗衣机"
+   },
+   "IGUI_SNT_PW_Used": {
+    "en": "used",
+    "ch": "用電",
+    "cn": "用电"
+   },
+   "IGUI_SNT_PW_UsingNow": {
+    "en": "Using power now",
+    "ch": "目前用電",
+    "cn": "当前用电"
+   },
+   "IGUI_SNT_PW_Wind": {
+    "en": "Wind turbine",
+    "ch": "風力發電機",
+    "cn": "风力发电机"
+   },
+   "IGUI_SNT_PW_WindDesc": {
+    "en": "Gives power day and night when there is wind (about 0.3 kW, up to 1 kW in a storm). Two floors high: outdoors with nothing above it. Up to 4 for one inverter.",
+    "ch": "有風時日夜都能發電 (約 0.3 kW, 暴風時最高 1 kW). 高兩層樓: 須放在戶外且上方無遮蔽. 每台逆變器最多 4 座.",
+    "cn": "有风时昼夜都能发电 (约 0.3 kW, 暴风时最高 1 kW). 高两层楼: 须放在户外且上方无遮挡. 每台逆变器最多 4 座."
+   },
+   "IGUI_SNT_PW_Winds": {
+    "en": "Wind turbines",
+    "ch": "風力發電機",
+    "cn": "风力发电机"
+   },
+   "IGUI_SNT_PW_Windy": {
+    "en": "windy",
+    "ch": "有風",
+    "cn": "有风"
+   },
+   "IGUI_SNT_TabPower": {
+    "en": "Utilities",
+    "ch": "公用設施",
+    "cn": "公用设施"
+   },
+   "IGUI_FoundBookofTheLiving": {
+    "en": "<H1> SECRET OBTAINED <BR> <BR> <IMAGECENTRE:Reward_BookOfTheLiving> <LINE> <H1><IMAGECENTRE:CMBEasterEggText_EN> <LINE> <H1>You have obtained the Book of the Living!!! <LINE> <H1>",
+    "ch": "<H1> 獲得秘密 <BR> <BR> <IMAGECENTRE:Reward_BookOfTheLiving> <LINE> <H1><IMAGECENTRE:CMBEasterEggText_EN> <LINE> <H1>你獲得了生者之書!!! <LINE> <H1>",
+    "cn": "<H1> 获得秘密 <BR> <BR> <IMAGECENTRE:Reward_BookOfTheLiving> <LINE> <H1><IMAGECENTRE:CMBEasterEggText_EN> <LINE> <H1>你获得了生者之书!!! <LINE> <H1>"
+   },
+   "IGUI_MemorialLegionSnake": {
+    "en": "<H1> <CENTRE> SNAKE LEGION MEMORIAL <LINE> <QUOTE> <CENTRE> \"In eternal gratitude to those who drive, sustain, and grow this world alongside Snake, and who willingly agreed to have their names engraved on this memorial.\" <SECTION> HIGH COMMAND (Students) <LINE> %s <SECTION> CENTURIONS (Donors) <LINE> %s <SECTION> LEGIONNAIRES (Twitch Subscribers) <LINE> <QUOTE> \"To all the soldiers who stood in the trenches day after day:\" <LINE> <TEXT> %s",
+    "ch": "<H1> <CENTRE> Snake 軍團紀念碑 <LINE> <QUOTE> <CENTRE> 「永遠感謝那些與 Snake 一同推動、支撐並壯大這個世界, 並且願意將名字刻在這座紀念碑上的人.」 <SECTION> 最高指揮部 (學生) <LINE> %s <SECTION> 百夫長 (贊助者) <LINE> %s <SECTION> 軍團士兵 (Twitch 訂閱者) <LINE> <QUOTE> 「獻給日復一日堅守戰壕的每一位士兵:」 <LINE> <TEXT> %s",
+    "cn": "<H1> <CENTRE> Snake 军团纪念碑 <LINE> <QUOTE> <CENTRE> “永远感谢那些与 Snake 一同推动、支撑并壮大这个世界, 并且愿意将名字刻在这座纪念碑上的人.” <SECTION> 最高指挥部 (学生) <LINE> %s <SECTION> 百夫长 (赞助者) <LINE> %s <SECTION> 军团士兵 (Twitch 订阅者) <LINE> <QUOTE> “献给日复一日坚守战壕的每一位士兵:” <LINE> <TEXT> %s"
    }
   },
   "ItemName.json": {
@@ -359904,6 +360524,166 @@
     "en": "Shotgun shells",
     "ch": "霰彈",
     "cn": "霰弹"
+   },
+   "AmmoMaker.AM_WP_RifleSilencerCammo": {
+    "en": "Rifle Silencer Camo",
+    "ch": "步槍消音器 (迷彩)",
+    "cn": "步枪消音器 (迷彩)"
+   },
+   "Base.GS2355_Clip": {
+    "en": "GS-2355 Magazine",
+    "ch": "GS-2355 彈匣",
+    "cn": "GS-2355 弹匣"
+   },
+   "Base.GS2355_Pistol": {
+    "en": "GS-2355 Pistol",
+    "ch": "GS-2355 手槍",
+    "cn": "GS-2355 手枪"
+   },
+   "Base.GS2450_Clip": {
+    "en": "GS-2450 Magazine",
+    "ch": "GS-2450 彈匣",
+    "cn": "GS-2450 弹匣"
+   },
+   "Base.GS2450_Pistol": {
+    "en": "GS-2450 Pistol",
+    "ch": "GS-2450 手槍",
+    "cn": "GS-2450 手枪"
+   },
+   "Base.HiTechShop": {
+    "en": "Flier",
+    "ch": "傳單",
+    "cn": "传单"
+   },
+   "Base.PelaNightClub": {
+    "en": "Flier",
+    "ch": "傳單",
+    "cn": "传单"
+   },
+   "Base.TShirt_GhostBusters": {
+    "en": "TShirt Ghostbusters",
+    "ch": "T恤 (魔鬼剋星)",
+    "cn": "T恤 (捉鬼敢死队)"
+   },
+   "GunsOfTienPost93.762x25Magazine35_BIZON": {
+    "en": "Bizon-2-07 35Rds 7.62x25mm Magazine",
+    "ch": "Bizon-2-07 7.62x25mm 35發彈匣",
+    "cn": "Bizon-2-07 35发7.62x25mm弹匣"
+   },
+   "GunsOfTienPost93.762x25Magazine45_BIZON": {
+    "en": "Bizon-2-07 45Rds 7.62x25mm Helical Magazine (Invented)",
+    "ch": "Bizon-2-07 7.62x25mm 45發螺旋彈匣 (虛構)",
+    "cn": "Bizon-2-07 45发7.62x25mm螺旋弹匣 (虚构)"
+   },
+   "GunsOfTienPost93.9x18Magazine64_BIZON": {
+    "en": "Bizon 64Rds 9x18mm Helical Magazine",
+    "ch": "Bizon 9x18mm 64發螺旋彈匣",
+    "cn": "Bizon 64发9x18mm螺旋弹匣"
+   },
+   "GunsOfTienPost93.9x19Magazine30_VITYAZ": {
+    "en": "Vityaz 30Rds 9x19mm Magazine",
+    "ch": "Vityaz 9x19mm 30發彈匣",
+    "cn": "Vityaz 30发9x19mm弹匣"
+   },
+   "GunsOfTienPost93.9x19Magazine30_VITYAZ_PAIR": {
+    "en": "Vityaz Dual 30Rds 9x19mm Magazine",
+    "ch": "Vityaz 9x19mm 30發雙聯彈匣",
+    "cn": "Vityaz 30发9x19mm双联弹匣"
+   },
+   "GunsOfTienPost93.9x19Magazine30_VITYAZ_PAIR_2": {
+    "en": "Vityaz Dual 30Rds 9x19mm Magazine",
+    "ch": "Vityaz 9x19mm 30發雙聯彈匣",
+    "cn": "Vityaz 30发9x19mm双联弹匣"
+   },
+   "GunsOfTienPost93.9x19Magazine53_BIZON": {
+    "en": "Bizon 53Rds 9x19mm Helical Magazine",
+    "ch": "Bizon 9x19mm 53發螺旋彈匣",
+    "cn": "Bizon 53发9x19mm螺旋弹匣"
+   },
+   "GunsOfTienPost93.BIZON": {
+    "en": "PP-19 Bizon Submachine Gun",
+    "ch": "PP-19 Bizon衝鋒槍",
+    "cn": "PP-19 Bizon冲锋枪"
+   },
+   "GunsOfTienPost93.BIZON201": {
+    "en": "Bizon-2-01 Submachine Gun",
+    "ch": "Bizon-2-01衝鋒槍",
+    "cn": "Bizon-2-01冲锋枪"
+   },
+   "GunsOfTienPost93.BIZON201_Integrated_Stock_Deployed": {
+    "en": "Bizon-2-01 Integrated Stock (Deployed)",
+    "ch": "Bizon-2-01整合槍托 (展開)",
+    "cn": "Bizon-2-01一体式枪托 (展开)"
+   },
+   "GunsOfTienPost93.BIZON201_Integrated_Stock_Folded": {
+    "en": "Bizon-2-01 Integrated Stock (Folded)",
+    "ch": "Bizon-2-01整合槍托 (摺疊)",
+    "cn": "Bizon-2-01一体式枪托 (折叠)"
+   },
+   "GunsOfTienPost93.BIZON207": {
+    "en": "Bizon-2-07 Submachine Gun",
+    "ch": "Bizon-2-07衝鋒槍",
+    "cn": "Bizon-2-07冲锋枪"
+   },
+   "GunsOfTienPost93.BIZON207_Integrated_Rail_Left": {
+    "en": "Bizon-2-07 Integrated Rail (Left)",
+    "ch": "Bizon-2-07整合導軌 (左)",
+    "cn": "Bizon-2-07一体式导轨 (左)"
+   },
+   "GunsOfTienPost93.BIZON207_Integrated_Rail_Right": {
+    "en": "Bizon-2-07 Integrated Rail (Right)",
+    "ch": "Bizon-2-07整合導軌 (右)",
+    "cn": "Bizon-2-07一体式导轨 (右)"
+   },
+   "GunsOfTienPost93.VITYAZ": {
+    "en": "Vityaz Submachine Gun",
+    "ch": "Vityaz衝鋒槍",
+    "cn": "Vityaz冲锋枪"
+   },
+   "GunsOfTienPost93.VITYAZ_Integrated_Stock_Deployed": {
+    "en": "Vityaz Integrated Stock (Deployed)",
+    "ch": "Vityaz整合槍托 (展開)",
+    "cn": "Vityaz一体式枪托 (展开)"
+   },
+   "GunsOfTienPost93.VITYAZ_Integrated_Stock_Folded": {
+    "en": "Vityaz Integrated Stock (Folded)",
+    "ch": "Vityaz整合槍托 (摺疊)",
+    "cn": "Vityaz一体式枪托 (折叠)"
+   },
+   "LGUFishing.TunaFillet": {
+    "en": "Tuna Fillet",
+    "ch": "鮪魚片",
+    "cn": "金枪鱼柳"
+   },
+   "LGUFishing.TunaSkipjack": {
+    "en": "Skipjack Tuna",
+    "ch": "鰹魚",
+    "cn": "鲣鱼"
+   },
+   "LastCupCoffee.LCC_CoffeeBranch": {
+    "en": "Fresh Coffee Branch",
+    "ch": "咖啡樹枝 (新鮮)",
+    "cn": "咖啡树枝 (新鲜)"
+   },
+   "LastCupCoffee.LCC_CoffeeBranchDried": {
+    "en": "Dried Coffee Branch",
+    "ch": "咖啡樹枝 (乾燥)",
+    "cn": "咖啡树枝 (干燥)"
+   },
+   "TableSaw.LargeBranchStacks": {
+    "en": "Stack of 12 Large Tree Branches",
+    "ch": "大樹枝堆 (12 根)",
+    "cn": "12根大树枝堆"
+   },
+   "TableSaw.SaplingStack": {
+    "en": "Stack of 24 Saplings",
+    "ch": "樹苗堆 (24 株)",
+    "cn": "24株树苗堆"
+   },
+   "TableSaw.TreeBranch2Stacks": {
+    "en": "Stack of 24 Tree Branches",
+    "ch": "樹枝堆 (24 根)",
+    "cn": "24根树枝堆"
    }
   },
   "Print_Media.json": {
@@ -360088,6 +360868,26 @@
     "en": "Spiffotchi Quick Start Guide",
     "ch": "斯皮福電子雞快速入門指南",
     "cn": "Spiffotchi快速入门指南"
+   },
+   "Print_Media_HiTech:Shop_info": {
+    "en": "<type:parent, width:800, height:1131><type:texture, texture:media/textures/printMedia/FlyerPics/HiTechShop.png, width:800, height:1131>",
+    "ch": "<type:parent, width:800, height:1131><type:texture, texture:media/textures/printMedia/FlyerPics/HiTechShop.png, width:800, height:1131>",
+    "cn": "<type:parent, width:800, height:1131><type:texture, texture:media/textures/printMedia/FlyerPics/HiTechShop.png, width:800, height:1131>"
+   },
+   "Print_Media_HiTech:Shop_title": {
+    "en": "Hi-Tech Gunstore",
+    "ch": "高科技槍械店",
+    "cn": "Hi-Tech 枪械店"
+   },
+   "Print_Media_PelaNighClub:Shop_info": {
+    "en": "<type:parent, width:800, height:1131><type:texture, texture:media/textures/printMedia/FlyerPics/PelaNightClub.png, width:800, height:1131>",
+    "ch": "<type:parent, width:800, height:1131><type:texture, texture:media/textures/printMedia/FlyerPics/PelaNightClub.png, width:800, height:1131>",
+    "cn": "<type:parent, width:800, height:1131><type:texture, texture:media/textures/printMedia/FlyerPics/PelaNightClub.png, width:800, height:1131>"
+   },
+   "Print_Media_PelaNighClub:Shop_title": {
+    "en": "Pela's NightClub",
+    "ch": "Pela 夜店",
+    "cn": "Pela's夜总会"
    }
   },
   "Print_Text.json": {
@@ -360215,6 +361015,16 @@
     "en": "A quick start guide for Spiffotchi.",
     "ch": "斯皮福電子雞的快速入門指南.",
     "cn": "Spiffotchi的快速入门指南."
+   },
+   "Print_Text_HiTech:Shop_info": {
+    "en": "\n\nCome and get your defense and hunting gear...\nWe have trained staff who will help you find the ideal firearm for any need you may have.\nWe carry ammunition, magazines, and tactical equipment.\nWe feature the latest in firearm technology so you are always protected.\n\nWe'll see you soon!\n",
+    "ch": "\n\n快來選購你的防身與狩獵裝備…\n我們有訓練有素的店員, 協助你找到最符合各種需求的理想槍械.\n我們供應彈藥、彈匣與戰術裝備.\n我們提供最新的槍械科技, 讓你隨時受到保護.\n\n期待很快見到你!\n",
+    "cn": "\n\n快来选购你的防身与狩猎装备…\n我们有训练有素的店员, 帮你找到满足各种需求的理想枪械.\n我们供应弹药、弹匣和战术装备.\n我们提供最新的枪械科技, 让你时刻受到保护.\n\n期待很快见到你!\n"
+   },
+   "Print_Text_PelaNighClub:Shop_info": {
+    "en": "\n\nPela's Nightclub opens its doors completely renovated!\nCome enjoy the best live shows, striptease, and music all night long.\nWe feature a full bar, an exclusive VIP section (21+), and the best atmosphere in town.\nPlus, bald guys get a special discount on cover!\nOpen Friday and Saturday from 9:00 PM till dawn.\n\nWe'll be waiting for you!\n",
+    "ch": "\n\nPela 夜店全新裝修, 重新開幕!\n快來享受最棒的現場表演、脫衣舞秀, 還有整夜不停的音樂.\n我們的酒吧備有各式酒水, 還有專屬 VIP 區 (限 21 歲以上) 和全鎮最棒的氣氛.\n另外, 光頭男士入場費享有特別折扣!\n每週五、六從晚上 9:00 營業到天亮.\n\n我們等你來!\n",
+    "cn": "\n\nPela's夜总会全新装修, 重新开业!\n快来享受最棒的现场表演、脱衣舞, 还有通宵不停的音乐.\n我们的酒吧酒水齐全, 还设有专属 VIP 区 (限 21 岁及以上), 气氛全镇最佳.\n另外, 光头男士可享入场费特别折扣!\n每周五、六从晚上 9:00 营业到天亮.\n\n我们等着你!\n"
    }
   },
   "Recipes.json": {
@@ -384434,6 +385244,76 @@
     "en": "Make 79 Chevrolet Camaro Apocalypse Roofrack",
     "ch": "製作79款雪佛蘭科邁羅Apocalypse版車頂行李架",
     "cn": "制作79款雪佛兰科迈罗Apocalypse版车顶行李架"
+   },
+   "GunsOfTienPost93_MakeVityazDualMag": {
+    "en": "Make Vityaz Dual Magazine",
+    "ch": "製作Vityaz雙聯彈匣",
+    "cn": "制作Vityaz双联弹匣"
+   },
+   "GunsOfTienPost93_SeparateVityazDualMag": {
+    "en": "Separate Vityaz Dual Magazine",
+    "ch": "拆開Vityaz雙聯彈匣",
+    "cn": "拆开Vityaz双联弹匣"
+   },
+   "LCC_DryCoffeeBranches": {
+    "en": "Dry Coffee Branches",
+    "ch": "乾燥咖啡樹枝",
+    "cn": "干燥咖啡树枝"
+   },
+   "Recipe_LCC_DryCoffeeBranches": {
+    "en": "Dry Coffee Branches",
+    "ch": "乾燥咖啡樹枝",
+    "cn": "干燥咖啡树枝"
+   },
+   "LCC_ExtractDriedCoffeeBeans": {
+    "en": "Extract Dried Coffee Beans",
+    "ch": "取出乾燥咖啡豆",
+    "cn": "提取干燥咖啡豆"
+   },
+   "Recipe_LCC_ExtractDriedCoffeeBeans": {
+    "en": "Extract Dried Coffee Beans",
+    "ch": "取出乾燥咖啡豆",
+    "cn": "提取干燥咖啡豆"
+   },
+   "MakeTunaTin": {
+    "en": "Make Tuna Tin",
+    "ch": "製作金槍魚罐頭",
+    "cn": "制作金枪鱼罐头"
+   },
+   "SliceTuna": {
+    "en": "Slice Tuna",
+    "ch": "切片鮪魚",
+    "cn": "切片金枪鱼"
+   },
+   "TieTwelveLargeBranch": {
+    "en": "Make 12 Large Tree Branch",
+    "ch": "製作大樹枝堆 (12 根)",
+    "cn": "制作12根大树枝堆"
+   },
+   "TieTwentyFourSaplings": {
+    "en": "Make 24 Saplings",
+    "ch": "製作樹苗堆 (24 株)",
+    "cn": "制作24株树苗堆"
+   },
+   "TieTwentyFourTreeBranch2": {
+    "en": "Make 24 Tree Branch",
+    "ch": "製作樹枝堆 (24 根)",
+    "cn": "制作24根树枝堆"
+   },
+   "UntieLargeBranch": {
+    "en": "Untie stack of Large Tree Branch",
+    "ch": "解開大樹枝堆",
+    "cn": "解开大树枝堆"
+   },
+   "UntieSaplings": {
+    "en": "Untie stack of Saplings",
+    "ch": "解開樹苗堆",
+    "cn": "解开树苗堆"
+   },
+   "UntieTreeBranch2": {
+    "en": "Untie stack of Tree Branch",
+    "ch": "解開樹枝堆",
+    "cn": "解开树枝堆"
    }
   },
   "Sandbox.json": {
@@ -431179,9 +432059,9 @@
     "cn": "游侠: 怪物猎杀委托"
    },
    "Sandbox_RadioTraders_HuntJobs_tooltip": {
-    "en": "Ranger offers jobs to kill special creatures from supported zombie mods (Necromass, The Crossing, Blackout Predators Extended, The Mutants, Cordyceps Infected, Zombie Skins: Expanded). Only offered when at least one of those mods is installed. Needs Advanced Trading and Contracts.",
-    "ch": "遊俠會提供委託, 要你擊殺支援的殭屍模組中的特殊生物 (Necromass、The Crossing、Blackout Predators Extended、The Mutants、Cordyceps Infected、Zombie Skins: Expanded). 只有安裝了其中至少一個模組時才會出現. 需要開啟進階交易與委託.",
-    "cn": "游侠会提供委托, 让你击杀受支持僵尸模组中的特殊生物 (Necromass、The Crossing、Blackout Predators Extended、The Mutants、Cordyceps Infected、Zombie Skins: Expanded). 只有装了其中至少一个模组时才会出现. 需要开启进阶交易与委托."
+    "en": "Ranger offers jobs to kill special creatures from supported zombie mods (Necromass, The Crossing, Blackout Predators Extended, The Mutants, Cordyceps Infected, Zombie Skins: Expanded, Dying Light X Zomboid). Only offered when at least one of those mods is installed. Needs Advanced Trading and Contracts.",
+    "ch": "遊俠會提供委託, 要你擊殺支援的殭屍模組中的特殊生物 (Necromass、The Crossing、Blackout Predators Extended、The Mutants、Cordyceps Infected、Zombie Skins: Expanded、Dying Light X Zomboid). 只有安裝了其中至少一個模組時才會出現. 需要開啟進階交易與委託.",
+    "cn": "游侠会提供委托, 让你击杀受支持僵尸模组中的特殊生物 (Necromass、The Crossing、Blackout Predators Extended、The Mutants、Cordyceps Infected、Zombie Skins: Expanded、Dying Light X Zomboid). 只有装了其中至少一个模组时才会出现. 需要开启进阶交易与委托."
    },
    "Sandbox_RadioTraders_HuntMaxKills": {
     "en": "Ranger: Hunt Maximum Kills",
@@ -447603,6 +448483,46 @@
     "en": "On a server, players in the same faction or safehouse see each other's looting progress on the map: searched containers, building totals, buildings marked cleared and resets. Tags and notes stay private unless you share a tag with your group. Item memory and vehicles are never shared. Off = every player only sees their own progress, as before. No effect in single player.",
     "ch": "在伺服器上, 同一陣營或安全屋的玩家能在地圖上看到彼此的搜刮進度: 已搜刮的容器、各棟建築的容器總數、已標記為清空的建築, 以及進度的重設. 標籤與備註保持不公開, 除非你把某個標籤分享給群組. 記住的容器物品與車輛永遠不會分享. 關閉 = 每位玩家只看得到自己的進度, 和以前一樣. 對單人遊戲沒有影響.",
     "cn": "在服务器上, 同一阵营或安全屋的玩家可以在地图上看到彼此的搜索进度: 已搜索的容器、各建筑的容器总数、已标记为清空的建筑, 以及进度的重置. 标签和笔记保持私密, 除非你将某个标签分享给群组. 记住的容器物品和车辆永远不会分享. 关闭 = 每位玩家只能看到自己的进度, 和以前一样. 对单人游戏没有影响."
+   },
+   "Sandbox_RadioTraders_HeliHordeChance": {
+    "en": "Helicopter: Horde Chance (percent)",
+    "ch": "直升機: 屍群機率 (百分比)",
+    "cn": "直升机: 尸群概率 (百分比)"
+   },
+   "Sandbox_RadioTraders_HeliHordeChance_tooltip": {
+    "en": "Chance that a crash is a horde: dozens of infected around the wreck, the guards among them, and the loot grows with their number. Not rolled when the crash has an ambush. Default 35.",
+    "ch": "墜機現場出現屍群的機率. 殘骸周圍會聚集數十名感染者, 守衛也在其中; 屍群越大, 戰利品就越多. 現場有伏擊時不擲骰. 預設 35.",
+    "cn": "坠机现场出现尸群的概率. 残骸周围会聚集数十名感染者, 其中包括守卫; 尸群越大, 战利品就越多. 现场有伏击时不进行此项判定. 默认 35."
+   },
+   "Sandbox_RadioTraders_HeliHordeMax": {
+    "en": "Helicopter: Horde Maximum",
+    "ch": "直升機: 屍群上限",
+    "cn": "直升机: 尸群上限"
+   },
+   "Sandbox_RadioTraders_HeliHordeMax_tooltip": {
+    "en": "Most infected in a horde, the guards included. Default 100.",
+    "ch": "屍群中感染者的最多數量, 包含守衛. 預設 100.",
+    "cn": "尸群中感染者的最多数量, 包括守卫. 默认 100."
+   },
+   "Sandbox_RadioTraders_HeliHordeMin": {
+    "en": "Helicopter: Horde Minimum",
+    "ch": "直升機: 屍群下限",
+    "cn": "直升机: 尸群下限"
+   },
+   "Sandbox_RadioTraders_HeliHordeMin_tooltip": {
+    "en": "Fewest infected in a horde, the guards included. Default 50.",
+    "ch": "屍群中感染者的最少數量, 包含守衛. 預設 50.",
+    "cn": "尸群中感染者的最少数量, 包括守卫. 默认 50."
+   },
+   "Sandbox_RadioTraders_UVGlowZone": {
+    "en": "Dying Light: UV glow of special walkies burns zombies",
+    "ch": "Dying Light: 特殊對講機的紫外線光會灼燒殭屍",
+    "cn": "Dying Light: 特殊对讲机的紫外线光会灼烧僵尸"
+   },
+   "Sandbox_RadioTraders_UVGlowZone_tooltip": {
+    "en": "With Dying Light Zombies installed, a player carrying the Black Market walkie, the alien walkie or the US military walkie with the glow colour set to UV burns zombies within about 2 tiles, more weakly than a UV lantern. Other radios only change colour. Off removes the burning. Default on.",
+    "ch": "安裝 Dying Light Zombies 時, 攜帶黑市對講機、外星對講機或軍用對講機並把發光顏色設為紫外線的玩家, 會灼燒約 2 格內的殭屍, 效果比紫外線提燈弱. 其他無線電只會改變顏色. 關閉後就不會灼燒. 預設開啟.",
+    "cn": "安装 Dying Light Zombies 时, 携带黑市对讲机、外星对讲机或军用对讲机并把发光颜色设为紫外线的玩家, 会灼烧约 2 格内的僵尸, 效果比紫外线提灯弱. 其他电台只会改变颜色. 关闭后就不会灼烧. 默认开启."
    }
   },
   "Tooltip.json": {
@@ -464466,6 +465386,11 @@
     "en": "Leather work gloves. Take most of a scrape or a cut when a wrench slips, and keep the heat of a warm radiator, hose or engine off your hands (up to about 220 C).<br>Not enough for an exhaust that has just been running hard. Leather soaks up battery acid: no use against it.",
     "ch": "皮革工作手套. 扳手滑脫時能減輕大部分擦傷或割傷, 也能保護雙手不被溫熱的水箱、水管或引擎燙傷 (最高約 220 C).<br>引擎剛高負荷運轉過時, 這副手套擋不住排氣管的高溫. 皮革會吸收電池酸液, 防不了酸液.",
     "cn": "皮革工作手套. 扳手打滑时能减轻大部分擦伤或割伤, 也能保护双手不被温热的散热器、水管或引擎烫伤 (最高约 220 C).<br>引擎刚高负荷运转过时, 这副手套挡不住排气管的高温. 皮革会吸收电池酸液, 防不了酸液."
+   },
+   "Tooltip_Memorial": {
+    "en": "Read the Snake Legion Memorial",
+    "ch": "閱讀 Snake 軍團紀念碑",
+    "cn": "阅读 Snake 军团纪念碑"
    }
   },
   "UI.json": {
@@ -497814,9 +498739,9 @@
     "cn": "咏春拳"
    },
    "UI_optionscreen_binding_SMA_Dodge": {
-    "en": "Martial arts dodge (in your stance: strafe left or right to pick a side, otherwise back)",
-    "ch": "武術閃避 (處於架式時: 向左或向右平移可選擇閃避方向, 否則向後閃)",
-    "cn": "武术闪避 (处于架势时: 向左或向右平移可选择闪避方向, 否则向后闪避)"
+    "en": "Dodge",
+    "ch": "閃避",
+    "cn": "闪避"
    },
    "UI_optionscreen_binding_SMA_Menu": {
     "en": "Open the Martial Arts window",
@@ -556450,9 +557375,9 @@
     "cn": "连招被打断!"
    },
    "UI_optionscreen_binding_SMA_Block": {
-    "en": "Martial arts block (hold while in your stance; guard wears down and breaks)",
-    "ch": "武術格擋 (處於架式時按住; 防守會逐漸削弱, 最後被破)",
-    "cn": "武术格挡 (处于架势时按住; 防守会逐渐削弱, 最后被破)"
+    "en": "Block",
+    "ch": "格擋",
+    "cn": "格挡"
    },
    "UI_HCO_AmmoLabel": {
     "en": "Ammo",
@@ -591980,9 +592905,9 @@
     "cn": "对讲机发光当前为关闭. 点击即可开启. 与模组选项中的“夜间电台发光”是同一项设置."
    },
    "UI_RadioTraders_TooltipToggleGlowOn": {
-    "en": "Walkie glow is ON. Click to turn off the glow of walkies, and of ham radios near you. Same setting as \"Radio glow at night\" in the mod options.",
-    "ch": "對講機發光目前為開啟. 點選即可關閉對講機以及你附近業餘無線電臺的發光. 與模組選項中的「夜間電臺發光」是同一項設定.",
-    "cn": "对讲机发光当前为开启. 点击即可关闭对讲机以及你附近业余电台的发光. 与模组选项中的“夜间电台发光”是同一项设置."
+    "en": "Walkie glow is ON. Click to turn off the glow of walkies. Same setting as \"Radio glow at night\" in the mod options.",
+    "ch": "對講機發光目前為開啟. 點選即可關閉對講機的發光. 與模組選項中的「夜間電臺發光」是同一項設定.",
+    "cn": "对讲机发光当前为开启. 点击即可关闭对讲机的发光. 与模组选项中的“夜间电台发光”是同一项设置."
    },
    "UI_RadioTraders_WN_350_1": {
     "en": "New: Artifact Hunt. Sparks (Regular, 300 rep) sends you to dig sites with a Metal Detector he sells: tune the scanner until the spot is marked, dig, and bring him the artifact. Retainer 100 per stash, plus the artifact at his price plus 25 percent. Needs Advanced Trading with Contracts.",
@@ -604348,6 +605273,151 @@
     "en": "You walk away from the trade.",
     "ch": "你走遠了, 交易已結束.",
     "cn": "你走远了, 交易已结束."
+   },
+   "UI_MPOptim_Section_Companion": {
+    "en": "This server",
+    "ch": "此伺服器",
+    "cn": "此服务器"
+   },
+   "UI_MPOptim_Section_ViewpointOwn": {
+    "en": "PZO's own versions",
+    "ch": "PZO 自有版本",
+    "cn": "PZO 自有版本"
+   },
+   "UI_MPOptim_SetNote_JVM_ClassWarmup": {
+    "en": "Takes effect on the next launch.",
+    "ch": "下次啟動遊戲時生效.",
+    "cn": "下次启动游戏时生效."
+   },
+   "UI_MPOptim_SetNote_JVM_ShaderWarmup": {
+    "en": "Needs Keep Compiled Shaders Between Launches. The list fills as you play, so the next loads gain the most.",
+    "ch": "需要開啟「保留已編譯的著色器供下次啟動使用」. 清單會隨著遊玩逐漸累積, 所以之後的載入獲益最多.",
+    "cn": "需要开启“保留已编译的着色器供下次启动使用”. 列表会随着游玩逐渐累积, 所以之后的加载受益最大."
+   },
+   "UI_MPOptim_SetTip_JVM_AnimSetsAhead": {
+    "en": "Each kind of animal's animations are read from disk the first time one shows up, so meeting your first deer, pig or rat could hitch. They are now read at the end of the loading screen instead. Loading takes a moment longer; the animations are the same.",
+    "ch": "每種動物的動畫都要等到牠第一次出現時才從磁碟讀取, 所以第一次遇到鹿、豬或老鼠時可能會卡頓一下. 現在改為在載入畫面結束時讀取. 載入會稍微久一點; 動畫完全相同.",
+    "cn": "每种动物的动画都要等到它第一次出现时才从磁盘读取, 所以第一次遇到鹿、猪或老鼠时可能会卡顿一下. 现在改为在加载界面结束时读取. 加载会稍微久一点; 动画完全相同."
+   },
+   "UI_MPOptim_SetTip_JVM_ChunkHeadingOrder": {
+    "en": "While you drive, the map pieces in front of the car are taken in before the ones beside and behind it, so the road ahead fills in first. In multiplayer no map piece waits longer than 0.15 s, because updates the server sends for a piece that isn't in yet are lost.",
+    "ch": "駕駛時, 車輛前方的地圖區塊會比兩側與後方的區塊先載入, 所以前方的道路會最先出現. 多人遊戲中, 任何地圖區塊的等待都不會超過 0.15 秒, 因為伺服器為尚未載入的區塊傳送的更新會遺失.",
+    "cn": "驾驶时, 车辆前方的地图区块会比两侧和后方的区块先加载, 所以前方的道路会最先出现. 多人游戏中, 任何地图区块的等待都不会超过 0.15 秒, 因为服务器为尚未加载的区块发送的更新会丢失."
+   },
+   "UI_MPOptim_SetTip_JVM_ClassWarmup": {
+    "en": "The game loads each piece of its code the first time it is needed, which can hitch the first zombie hit, the first car or the first time a window opens. PZO remembers which parts your sessions use and loads them in the background while the main menu sits idle. Only loading: the game behaves the same. Uses a little more memory.",
+    "ch": "遊戲要到第一次需要某段程式碼時才載入它, 因此第一次打中殭屍、第一次開車或第一次開啟某個視窗時可能會卡頓. PZO 會記住你遊玩時用到哪些部分, 並在主選單閒置時於背景載入. 這只影響載入: 遊戲行為不變. 會多用一點記憶體.",
+    "cn": "游戏要到第一次需要某段代码时才加载它, 因此第一次打中僵尸、第一次开车或第一次打开某个窗口时可能会卡顿. PZO 会记住你游玩时用到哪些部分, 并在主菜单闲置时于后台加载. 这只影响加载: 游戏行为不变. 会多占用一点内存."
+   },
+   "UI_MPOptim_SetTip_JVM_LootRollPacer": {
+    "en": "When new map comes in, the game fills every unopened container in it at once (the loot tables plus every mod that adds loot), all in one frame. Containers are now filled over the next frames, about 1 ms per frame, the nearest first. Nothing within 12 tiles of you waits, and a container is always filled before you can reach it, so the loot is the same. Single player only.",
+    "ch": "載入新地圖區域時, 遊戲原本會在同一個影格內, 根據戰利品表和所有新增戰利品的模組, 一次產生區域內所有未開啟容器的物資. 現在改為從最近的容器開始, 分散到接下來幾個影格處理, 每個影格約用 1 毫秒. 距離你 12 格內的容器會立即處理, 其他容器也一定會在你到達前處理完畢, 所以拿到的戰利品不變. 僅限單人遊戲.",
+    "cn": "加载新地图区域时, 游戏原本会根据战利品表和所有添加战利品的模组, 在同一帧内生成区域内所有未打开容器中的物资. 现在改为优先处理最近的容器, 把工作分摊到接下来的几帧, 每帧约用 1 毫秒. 距你 12 格内的容器会立即处理, 其他容器也一定会在你抵达前处理完毕, 所以能拿到的战利品不变. 仅限单人游戏."
+   },
+   "UI_MPOptim_SetTip_JVM_ShaderWarmup": {
+    "en": "PZO remembers every shader the game has used (its own, other mods' and the ones PZO Enhancements changes). When a save loads, it checks each against the shader cache, and any that are missing (a new setting, a mod, a game or driver update) are compiled then, all at once where your graphics driver can, instead of the first time you aim, open the map or meet the effect. The loading screen waits until they are ready, with a bar in the bottom right corner, for 2 minutes at most.",
+    "ch": "PZO 會記住遊戲用過的每個著色器 (遊戲本身的、其他模組的, 以及 PZO Enhancements 修改過的). 載入存檔時, 它會逐一對照著色器快取檢查, 缺少的著色器 (新設定、新模組、遊戲或驅動程式更新造成) 會在這時編譯, 顯示卡驅動程式支援時會一次同時編譯, 不必等到你第一次瞄準、開啟地圖或遇到該效果時才編譯. 載入畫面會等到它們準備好, 右下角會顯示進度條, 最多等待 2 分鐘.",
+    "cn": "PZO 会记住游戏用过的每个着色器 (游戏自带的、其他模组的, 以及 PZO Enhancements 修改过的). 加载存档时, 它会逐一对照着色器缓存检查, 缺少的着色器 (新设置、新模组、游戏或驱动更新造成) 会在这时编译, 显卡驱动支持时会一次同时编译, 不必等到你第一次瞄准、打开地图或遇到该效果时才编译. 加载界面会等到它们准备好, 右下角会显示进度条, 最多等待 2 分钟."
+   },
+   "UI_MPOptim_SetTip_JVM_SoundFilesAhead": {
+    "en": "Sounds from the game's sound banks play at once, but a sound stored as a plain file (most mods' guns, voices and music) is decoded the first time it plays, so the first shot of a modded gun could hitch. Once a save has loaded, these files are now decoded in the background, smallest first, and are ready when the game asks. Uses up to 256 MB of memory (less on PCs with under 8 GB); long music files are left as they were.",
+    "ch": "遊戲音效庫中的聲音可以立即播放, 但以一般檔案儲存的聲音 (大多數模組的槍聲、語音與音樂) 要到第一次播放時才解碼, 所以模組槍械的第一槍可能會卡頓. 現在存檔載入完成後, 這些檔案會在背景解碼, 由小到大, 遊戲需要時就已經準備好. 最多使用 256 MB 記憶體 (記憶體不到 8 GB 的電腦會用得更少); 較長的音樂檔案維持原樣.",
+    "cn": "游戏音效库中的声音可以立即播放, 但以普通文件存储的声音 (大多数模组的枪声、语音和音乐) 要到第一次播放时才解码, 所以模组枪械的第一枪可能会卡顿. 现在存档加载完成后, 这些文件会在后台解码, 从小到大, 游戏需要时就已经准备好. 最多使用 256 MB 内存 (内存不足 8 GB 的电脑会用得更少); 较长的音乐文件保持原样."
+   },
+   "UI_MPOptim_Set_JVM_AnimSetsAhead": {
+    "en": "Load Animal Animations With the Save",
+    "ch": "隨存檔一起載入動物動畫",
+    "cn": "随存档一起加载动物动画"
+   },
+   "UI_MPOptim_Set_JVM_ChunkHeadingOrder": {
+    "en": "Load the Road Ahead First",
+    "ch": "優先載入前方道路",
+    "cn": "优先加载前方道路"
+   },
+   "UI_MPOptim_Set_JVM_ClassWarmup": {
+    "en": "Load Game Code Ahead",
+    "ch": "預先載入遊戲程式碼",
+    "cn": "预先加载游戏代码"
+   },
+   "UI_MPOptim_Set_JVM_LootRollPacer": {
+    "en": "Spread Loot Rolls Over Frames",
+    "ch": "將戰利品生成分散到多個影格",
+    "cn": "将战利品生成分散到多帧"
+   },
+   "UI_MPOptim_Set_JVM_ShaderWarmup": {
+    "en": "Prepare Every Shader Before Play",
+    "ch": "開始遊玩前準備好所有著色器",
+    "cn": "开始游玩前准备好所有着色器"
+   },
+   "UI_MPOptim_Set_JVM_SoundFilesAhead": {
+    "en": "Decode Mod Sounds Ahead",
+    "ch": "預先解碼模組音效",
+    "cn": "预先解码模组音效"
+   },
+   "UI_MPOptim_ShaderCache_Preparing": {
+    "en": "PZO: preparing shaders, the game starts when they are ready",
+    "ch": "PZO: 正在準備著色器, 準備好後遊戲就會開始",
+    "cn": "PZO: 正在准备着色器, 准备好后游戏就会开始"
+   },
+   "UI_MPOptim_V2_CompanionAsk": {
+    "en": "To get them back, ask the server owner to add the mod (Workshop ID 3787481250).",
+    "ch": "若要在這個伺服器使用這些功能, 請伺服器擁有者安裝此模組 (Workshop ID 3787481250).",
+    "cn": "要在这个服务器上使用这些功能, 请让服务器所有者安装此模组 (Workshop ID 3787481250)."
+   },
+   "UI_MPOptim_V2_CompanionCount": {
+    "en": "{1} of your settings are off for this server.",
+    "ch": "你有 {1} 項設定在此伺服器上已關閉.",
+    "cn": "你有 {1} 项设置在此服务器上已关闭."
+   },
+   "UI_MPOptim_V2_CompanionOff": {
+    "en": "Needs the PZO Lua mod on this server",
+    "ch": "需要此伺服器安裝 PZO Lua 模組",
+    "cn": "需要此服务器安装 PZO Lua 模组"
+   },
+   "UI_MPOptim_V2_CompanionTip": {
+    "en": "The PZO Java engine and its settings work as usual. Lua-side features such as cleanup, horde and weather tweaks stay off here.",
+    "ch": "PZO Java 引擎及其設定照常運作. 清理、屍群與天氣調整等 Lua 端功能在這裡會保持關閉.",
+    "cn": "PZO Java 引擎及其设置照常运行. 清理、尸群和天气调整等 Lua 端功能在这里会保持关闭."
+   },
+   "UI_MPOptim_V2_CompanionTitle": {
+    "en": "This server doesn't run the PZO Lua mod",
+    "ch": "此伺服器沒有執行 PZO Lua 模組",
+    "cn": "此服务器没有运行 PZO Lua 模组"
+   },
+   "UI_MPOptim_V2_CopyId": {
+    "en": "Copy ID",
+    "ch": "複製 ID",
+    "cn": "复制 ID"
+   },
+   "UI_MPOptim_V2_IdCopied": {
+    "en": "Workshop ID copied.",
+    "ch": "已複製 Workshop ID.",
+    "cn": "已复制 Workshop ID."
+   },
+   "UI_MPOptim_V2_VpOwn": {
+    "en": "PZO's own versions: %s",
+    "ch": "PZO 自有版本: %s",
+    "cn": "PZO 自有版本: %s"
+   },
+   "UI_MPOptim_V2_VpOwnIntro": {
+    "en": "PZO runs these itself this session:",
+    "ch": "本次遊戲中由 PZO 自行執行:",
+    "cn": "本次游戏中由 PZO 自行运行:"
+   },
+   "UI_MPOptim_V2_VpOwnTip": {
+    "en": "Viewpoint ships its own versions of some PZO speed-ups (Lua table reads, wall checks while zombies push past each other, light switch power, the zombie sort, zombie posing and a few more). On, PZO keeps its own versions running and Viewpoint's step aside, so PZO's other changes to the same game code stay on too. Viewpoint's own 3D view keeps its sort and everything it needs to draw. Turning it off hands them back to Viewpoint at once; which PZO features stay on next to Viewpoint changes from the next launch.",
+    "ch": "Viewpoint 內建了部分 PZO 加速功能的另一套實作, 包括讀取 Lua 表、殭屍互相擠過時的牆壁檢查、電燈開關供電、殭屍排序和姿勢處理等. 開啟時, 這些功能由 PZO 而非 Viewpoint 執行, 讓 PZO 對同一段遊戲程式碼的其他修改也能繼續生效. Viewpoint 的 3D 視角仍會使用自己的排序及繪製所需的全部功能. 關閉時, 這些加速功能會立即交回 Viewpoint; 其他哪些 PZO 功能能與 Viewpoint 同時啟用, 則要到下次啟動才會改變.",
+    "cn": "Viewpoint 为部分 PZO 加速功能提供了自己的实现, 包括读取 Lua 表、僵尸相互挤过时的墙体检查、电灯开关供电、僵尸排序和姿势处理等. 开启后, 这些功能由 PZO 而不是 Viewpoint 运行, 因此 PZO 对同一段游戏代码的其他修改也能继续生效. Viewpoint 的 3D 视角仍会使用自己的排序和绘制所需的全部功能. 关闭后, 这些加速功能会立即交还给 Viewpoint; 其他哪些 PZO 功能能与 Viewpoint 同时启用, 则要到下次启动时才会改变."
+   },
+   "UI_RadioTraders_Glow_uv": {
+    "en": "UV (special walkies burn zombies with Dying Light Zombies)",
+    "ch": "紫外線 (搭配 Dying Light Zombies 時, 特殊對講機會灼燒殭屍)",
+    "cn": "紫外线 (配合 Dying Light Zombies 时, 特殊对讲机会灼烧僵尸)"
+   },
+   "UI_RadioTraders_HuntGroup_dlz": {
+    "en": "Dying Light zombies",
+    "ch": "Dying Light 殭屍",
+    "cn": "Dying Light 僵尸"
    }
   },
   "MakeUp.json": {

@@ -86867,8 +86867,8 @@
   },
   "UI.json|UI_RadioTraders_OptGlowColor_tooltip": {
     "as1_value": "对讲机屏幕微光的颜色.",
-    "value": "对讲机屏幕微光的颜色. 配合 Viewpoint 0.1.7 时, 手持的对讲机会发出游戏自带的暖白光; 此时该颜色改为作用于业余电台和基地电台.",
-    "reason": "2026-11-16 #1426–#1444 批次：上游改英文：Color of the walkie screen glow. With Viewpoint 0.1.7 a held"
+    "value": "对讲机屏幕微光的颜色. 选择“紫外线”时, 发光颜色与 Dying Light 的紫外线灯相同. 安装 Dying Light Zombies 时, 设为紫外线的黑市对讲机、外星对讲机和军用对讲机还会灼烧约 2 格内的僵尸 (管理员可以关闭灼烧效果).",
+    "reason": "2026-11-28 #1554–#1562 批次：上游改英文：Color of the walkie screen glow. UV matches the Dying Light "
   },
   "ItemName.json|Base.ShellHolder": {
     "as1_value": "弹壳托",
@@ -89559,5 +89559,20 @@
     "as1_value": "你一次只能设置 %d 个寻呼机塔.",
     "value": "你一次只能设置 %s 个寻呼机塔.",
     "reason": "2026-11-28 佔位照上游 EN（%s）：PagerMod.fmt 把數字轉字串再帶參 getText，%d 拋 IllegalFormatConversion、畫面顯示字面 %d"
+  },
+  "ItemName.json|TableSaw.StickStacks": {
+    "as1_value": "20根长棍堆",
+    "value": "24根长棍堆",
+    "reason": "2026-11-28 #1554–#1562 批次：上游改英文：Stack of 24 Long Sticks"
+  },
+  "Recipes.json|TieTwentyFourLargeSticks": {
+    "as1_value": "捆绑24根长棍",
+    "value": "制作24根长棍堆",
+    "reason": "2026-11-28 #1554–#1562 批次：上游改英文：Make 24 long sticks"
+  },
+  "UI.json|UI_RadioTraders_OptGlow_tooltip": {
+    "as1_value": "对讲机开机时会发出微光, 附近的业余电台也会照亮一小片. 亮度不足以看字.",
+    "value": "对讲机开机时会发出微光. 亮度不足以看字.",
+    "reason": "2026-11-28 #1554–#1562 批次：上游改英文：Walkies glow faintly while switched on. Too weak to read by."
   }
 }

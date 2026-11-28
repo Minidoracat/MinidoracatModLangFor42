@@ -4,6 +4,23 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Added
+
+- **7 個 MOD 更新後新增的文字補上繁簡中文（214 項）。**
+  - Junkyard Sentinel 的電力系統：電池櫃、逆變器、太陽能板與風力發電機（121 項）。
+  - Snake's ModPack 的鮪魚、樹枝堆配方、紀念碑與兩張傳單（27 項），Project Zomboid Optimiser 的新設定（27 項）。
+  - Guns of Tien 的 Bizon 與 Vityaz（19 項）、Radio Trader B42 的直升機屍群選項（10 項）、Last Cup Coffee（6 項）、Better Vanilla Firearms（4 項）。
+  > 技術要點：追蹤器 2026-11-28 #1554–#1562「可能過時」（9 個 MOD），steamcmd 重抓全部對上 tracker state。2 路翻譯＋GPT 對抗複核採納 16 條。Surplus & Thrift 新增的 20 個物品都是 `hidden = true` 的替身、沒有名稱，不用翻。Snake's ModPack 傳單的 `Print_Media_*_info` 版面值照抄英文。
+
+### Changed
+
+- **MOD 改了英文的已出貨文字跟著改（8 項）。** Radio Trader 的對講機發光說明（4 項）、Snake's ModPack 的長木棍堆改成 24 根（2 項）、Senators Martial Arts 的閃避與格擋按鍵名（2 項）。
+  > 技術要點：As1 衍生層 4 項改 `sources/ch`＋`cn_overrides`，own 層 4 項經 `apply_translations` 更新。
+- **關掉「衝突提醒」選項的玩家，進遊戲時不再先檢查翻譯衝突。** 開著的玩家照舊。
+  > 技術要點：`CatModLang.maybeNotify` 先看選項再讀衝突資料；`openList` 呼叫 `open` 時補傳第三個參數 `nil`（家族 `verify_mod.py` 第 1c 項，`kahlua_args_baseline.txt` 清空）。
+
 ## [42.22.2-1.82.1] - 2026-11-28
 
 ### Fixed
