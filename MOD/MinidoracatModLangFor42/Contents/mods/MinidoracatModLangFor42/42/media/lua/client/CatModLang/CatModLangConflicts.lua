@@ -274,7 +274,7 @@ end
 
 function CatModLang.openList()
     local res, mods = current()
-    return open("list", CatModLang.listText(res, mods))
+    return open("list", CatModLang.listText(res, mods), nil)
 end
 
 local function readSeen()
@@ -305,9 +305,10 @@ options:addButton("openList", "UI_CatModLang_OpenList", nil, function() CatModLa
 
 -- Opens the notice when the set of MODs overwriting each other is not one of the recently seen sets.
 function CatModLang.maybeNotify()
+    if not notify:getValue() then return nil end
     local res, mods = current()
     local sig = res.signature
-    if sig == "" or not notify:getValue() then return nil end
+    if sig == "" then return nil end
     local seen = readSeen()
     for _, s in ipairs(seen) do
         if s == sig then return nil end
