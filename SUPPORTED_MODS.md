@@ -10,7 +10,7 @@
 > 「涵蓋範圍」欄若有 ⚠️，代表該 MOD 有部分文字沒有走遊戲的翻譯機制（Lua 寫死、自有文字系統等），本包（以及任何翻譯包）都無法覆蓋，該部分會維持英文。
 > 此欄為**遇到才查證**的登記，並非全庫普查；空白只代表未發現或未查證，不保證完全涵蓋。
 
-共支援 **1521 個 Workshop 模組**（2198 個 mod ID）；另 **15 個已下架**（翻譯保留，見文末）。
+共支援 **1520 個 Workshop 模組**（2198 個 mod ID）；另 **16 個已下架**（翻譯保留，見文末）。
 
 | MOD | 中文名稱 | 摘要 | Mod IDs | 鍵數 | 覆寫本體 | 涵蓋範圍 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -1172,7 +1172,6 @@
 | [Weight Thresholds +10 B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3776034993) | — | — | `WeightThreshold95` | 18 | — | — |
 | [[B42][C] Safehouse & Faction Control](https://steamcommunity.com/sharedfiles/filedetails/?id=3776063020) | 安全屋與陣營管理 | 新增陣營副首領與安全屋共同擁有者、人數與數量上限，以及可隨處圈地的安全屋地契。 | `SafehouseFactionControl` | 158 | — | — |
 | [inu's Simple Horde Mod [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3776086831) | — | — | `inuHorde` | 28 | — | — |
-| [[STABLE] The Last of Us Infected (WIP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3776164832) | The Last of Us Infected 最後生還者感染者 | 加入《最後生還者》的追逐者、潛行者、循聲者與巨無霸等感染者（非官方相容版）。 | `TLOU_Infected_42_20` | ? | — | — |
 | [Excrementum [42.20 Fix - Unofficial]](https://steamcommunity.com/sharedfiles/filedetails/?id=3776175202) | — | — | `ExcrementumB42Patched` | 275 | — | — |
 | [CH Status HUD](https://steamcommunity.com/sharedfiles/filedetails/?id=3776182375) | — | — | `CHStatusHUD` | 74 | — | — |
 | [Ping Items! Friends! 42.20 MP Official](https://steamcommunity.com/sharedfiles/filedetails/?id=3776262249) | — | — | `PingItemsFriends`, `PingItemsFriendsDefaultWheel`, `PingItemsFriendsLoLWheel` | 54 | — | — |
@@ -1400,7 +1399,7 @@
 | [Forest Wildlife Density (B42)](https://steamcommunity.com/sharedfiles/filedetails/?id=3799499804) | 森林野生動物密度 | 定期在玩家周圍森林生成野生動物群，另可選擇生成野化家畜，舊存檔也適用。 | `ForestWildlifeDensity` | 127 | — | — |
 | [ProjectHoomans WIP](https://steamcommunity.com/sharedfiles/filedetails/?id=3799685526) | — | — | `ProjectHoomans` | ? | — | — |
 | ['83 GMC G-Series Vans](https://steamcommunity.com/sharedfiles/filedetails/?id=3799732653) | — | — | `83gmcGseriesVans`, `83gmcVanduraATeam` | 22 | — | — |
-| [Snake's ModPack Build 42](https://steamcommunity.com/sharedfiles/filedetails/?id=3800233932) | Snake 模組包 Build 42 | 整合料理、農漁業、彈藥製作、汽車維修、服飾、工具與多張地圖的模組包。 | `SMP_AmmoMaker`, `SMP_AquaFarm`, `SMP_AquaFarmResources`, `SMP_BarcoAbandonado`, `SMP_BatesMetalicos`, `SMP_CustomMapBridge`, `SMP_Factory`, `SMP_LeGourmetUltimate`, `SMP_LootZetaEnhancedEdition`, `SMP_MilitaryComplex`, `SMP_NumarkComplex`, `SMP_ROxygenTank`, `SMP_RPropaneTank`, `SMP_SkillsMag`, `SMP_SnakeMechanicalOverhaul`, `SMP_SnakeUtilsPack`, `SMP_SnakeClothingMod`, `SMP_SnakeMansion`, `SMP_SnakeVille`, `SMP_TableSaw`, `SMP_ZStreamersCars` | 4574 | ⚠️ ≥21 | — |
+| [Snake's ModPack Build 42](https://steamcommunity.com/sharedfiles/filedetails/?id=3800233932) | Snake 模組包 Build 42 | 整合料理、農漁業、彈藥製作、汽車維修、服飾、工具與多張地圖的模組包。 | `SMP_AmmoMaker`, `SMP_AquaFarm`, `SMP_AquaFarmResources`, `SMP_BarcoAbandonado`, `SMP_BatesMetalicos`, `SMP_CustomMapBridge`, `SMP_Factory`, `SMP_LeGourmetUltimate`, `SMP_LootZetaEnhancedEdition`, `SMP_MilitaryComplex`, `SMP_NumarkComplex`, `SMP_ROxygenTank`, `SMP_RPropaneTank`, `SMP_SkillsMag`, `SMP_SnakeMechanicalOverhaul`, `SMP_SnakeUtilsPack`, `SMP_SnakeClothingMod`, `SMP_SnakeMansion`, `SMP_SnakeVille`, `SMP_TableSaw`, `SMP_ZStreamersCars` | 4574 | ⚠️ ≥22 | — |
 | [RPG Inventory - NeatUI [SP/MP]](https://steamcommunity.com/sharedfiles/filedetails/?id=3800660445) | — | — | `RPGInventory` | 364 | — | — |
 | [ShadowZ](https://steamcommunity.com/sharedfiles/filedetails/?id=3800671550) | — | — | `ShadowZ` | 43 | — | — |
 | [Stay With Me - Companion NPC [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3800989007) | — | — | `Bridge` | 3665 | — | — |
@@ -1427,7 +1426,7 @@
 | [True Cargo - Project Full HD](https://steamcommunity.com/sharedfiles/filedetails/?id=3806955469) | True Cargo - Project Full HD | 將拖車貨物以實際 3D 模型擺在車斗上並自動排列，也可手動移動與旋轉。 | `PFHDTrueCargo` | 60 | — | — |
 | [Hug the Plushie!](https://steamcommunity.com/sharedfiles/filedetails/?id=3807099610) | 擁抱玩偶！ | 可擁抱玩偶以緩慢降低不快樂與壓力，持有玩偶也有小幅心情加成，支援多個玩偶模組。 | `HugThePlushie` | 14 | — | — |
 | [Blackout Predators Extended](https://steamcommunity.com/sharedfiles/filedetails/?id=3807510799) | 黑暗捕食者擴充（Blackout Predators Extended） | 黑暗捕食者附加模組，為巢穴加入繁殖體、補給箱與巢穴地圖，並新增多種特殊夜魔，讓夜晚更凶險。 | `BlackoutPredatorsExtended` | 347 | — | — |
-| [Radio Trader B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3807707103) | Radio Trader 電臺商人 | 用對講機或業餘無線電呼叫各類商人買賣物資，含營業時間、訊號強弱，以及可選的聲望、議價與委託任務。 | `RadioTraders`, `RadioTraders_DrugTime89`, `RadioTraders_Drugs93`, `RadioTraders_EFZ`, `RadioTraders_GOM`, `RadioTraders_Gael`, `RadioTraders_Guns93`, `RadioTraders_HGO`, `RadioTraders_MarzVanillaGuns`, `RadioTraders_NCNarcotics`, `RadioTraders_SmartWatch`, `RadioTraders_VFE`, `RadioTraders_VFEP93`, `RadioTraders_VFES`, `RadioTraders_Viewpoint`, `RadioTraders_Xanny` | 1096 | — | — |
+| [Radio Trader B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3807707103) | Radio Trader 電臺商人 | 用對講機或業餘無線電呼叫各類商人買賣物資，含營業時間、訊號強弱，以及可選的聲望、議價與委託任務。 | `DLZViewpointLights`, `RadioTraders`, `RadioTraders_DrugTime89`, `RadioTraders_Drugs93`, `RadioTraders_EFZ`, `RadioTraders_GOM`, `RadioTraders_Gael`, `RadioTraders_Guns93`, `RadioTraders_HGO`, `RadioTraders_MarzVanillaGuns`, `RadioTraders_NCNarcotics`, `RadioTraders_SmartWatch`, `RadioTraders_VFE`, `RadioTraders_VFEP93`, `RadioTraders_VFES`, `RadioTraders_Viewpoint`, `RadioTraders_Xanny` | 1096 | — | — |
 | [Project A-Life & Companion Dogs Compatibility Patch](https://steamcommunity.com/sharedfiles/filedetails/?id=3807738026) | A-Life 與同伴犬相容補丁 | 修正同伴犬攻擊 Project A-Life 非敵對 NPC 的問題。 | `CDALifePatch` | 53 | — | — |
 | [Project JoJo (MP/SP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3807750510) | Project JoJo | 新增《JoJo》風格的替身系統，以箭覺醒替身並使用時停等能力對抗殭屍。 | `JoJoStandSystem0183Standalone` | 23 | — | — |
 | [HydeCo. Squirrels! 42.21.0](https://steamcommunity.com/sharedfiles/filedetails/?id=3808150913) | HydeCo. 松鼠！ | 新增棲息在樹上巢穴的活體松鼠，會覓食與逃竄，砍倒巢樹可捕捉並取得儲藏的橡實。 | `HydeCoSquirrels` | 29 | — | — |
@@ -1536,7 +1535,7 @@
 | [More Builds (B42)〔原創翻譯〕](https://steamcommunity.com/sharedfiles/filedetails/?id=515555911) | 更多建築 | 新增大量原版風格家具、家電、牆面、門窗、地板與戶外物件的建造介面. | `MoreBuilds` | 1363 | — | — |
 | [US Military Pack [B 41\|42.12\|42.13]](https://steamcommunity.com/sharedfiles/filedetails/?id=612100872) | 美軍裝備包 | 新增 OCP 與 UCP 迷彩的美軍制服與多款軍用背包，殭屍生成機率可調。 | `USMilitaryPack` | 9 | — | — |
 
-## 已下架模組（15 個，翻譯保留）
+## 已下架模組（16 個，翻譯保留）
 
 以下模組已無法於 Workshop 存取（作者隱藏／移除或遭下架）。翻譯內容保留，既有訂閱者與側載玩家仍可使用；若重新上架會自動恢復追蹤並移回上表。
 
@@ -1555,5 +1554,6 @@
 | [Nuclear Protocol B42.19](https://steamcommunity.com/sharedfiles/filedetails/?id=3764265933) | — | — | `NuclearProtocolB42` | 32 | — | — | 2026-11-23 |
 | [Blackout Predators](https://steamcommunity.com/sharedfiles/filedetails/?id=3766513120) | 黑暗捕食者（Blackout Predators） | 新增夜魔捕食者，含固定巢穴系統（可設定活躍巢穴上限）與環境尖叫間隔等沙盒及選項設定。 | `blackoutpredators` | 33 | — | — | 2026-11-23 |
 | [Knox Immersivity B42](https://steamcommunity.com/sharedfiles/filedetails/?id=3772609548) | — | — | `KnoxImersivityB42` | 88 | — | — | 2026-11-06 |
+| [[STABLE] The Last of Us Infected (WIP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3776164832) | The Last of Us Infected 最後生還者感染者 | 加入《最後生還者》的追逐者、潛行者、循聲者與巨無霸等感染者（非官方相容版）。 | `TLOU_Infected_42_20` | ? | — | — | 2026-11-28 |
 | [Dildo GTA Weapon [B42]](https://steamcommunity.com/sharedfiles/filedetails/?id=3777681298) | — | — | `DildoFunnyWeapon` | 105 | — | — | 2026-10-20 |
 | [Peachey Distillation](https://steamcommunity.com/sharedfiles/filedetails/?id=3784741776) | Peachey 蒸餾 | 加入發酵醪、蒸餾器與陳釀流程，可釀製苦艾烈酒、陳釀葡萄酒等酒品，並提供專屬蒸餾製作分類。 | `peacheysdistillation` | 122 | — | — | 2026-09-10 |
