@@ -89494,5 +89494,70 @@
     "as1_value": "部分约三十格的水域更富鱼. 钓获仍会消耗原版的丰度, 双倍收获会消耗两倍.",
     "value": "部分约三十格的水域更富鱼. 钓获仍会消耗原版的丰度, 双倍收获会消耗两倍. 抛竿落入鱼群后, 若在第一次咬钩前就收线, 会把鱼群吓跑, 持续游戏内 3 小时.",
     "reason": "2026-11-27 #1540–#1553 批次：上游改英文：Some thirty-tile water areas are richer. Catches still deple"
+  },
+  "IG_UI.json|IGUI_HGR_TotalCondFmt": {
+    "as1_value": "武器状况: %1%%",
+    "value": "武器状况: %d%%",
+    "reason": "2026-11-28 佔位照上游 EN（Overall Condition: %d%%）：HGR v2 零件面板 render 以 string.format(getTextOrNull(key), avg) 消費，%1 經 formatFixer 變 %1$s，Kahlua format 每幀報錯"
+  },
+  "UI.json|UI_EHR_DiseaseDetail_StageTimeRest": {
+    "as1_value": "阶段 %d 需要时间和休息",
+    "value": "阶段 %1 需要时间和休息",
+    "reason": "2026-11-28 佔位照上游 EN（Stage %1   Time and rest）：EHR 帶參 getText，%d 收字串參數拋 IllegalFormatConversion，每次繪製記 WARN、畫面顯示字面 %d"
+  },
+  "UI.json|UI_EHR_StageSeverity": {
+    "as1_value": "阶段 %d 严重程度 %.1f/5",
+    "value": "阶段 %1 严重程度 %2/5",
+    "reason": "2026-11-28 佔位照上游 EN（Stage %1   Severity %2/5）：EHR 帶參 getText（嚴重度先 string.format 成字串），%d／%.1f 收字串參數拋 IllegalFormatConversion，每次繪製記 WARN、畫面顯示字面"
+  },
+  "IG_UI.json|IGUI_TABAS_BathtubInfo_LastUpdateMoreThanHours": {
+    "as1_value": "超过 %2 小时前",
+    "value": "超过 %1 小时前",
+    "reason": "2026-11-28 佔位照上游 EN（More than %1 hours ago）：TABAS 只傳一個參數，%2 拋 MissingFormatArgument、畫面顯示字面"
+  },
+  "IG_UI.json|IGUI_PSRComputerPanel_MoreDevices": {
+    "as1_value": "…以及%d个其他设备",
+    "value": "…以及%%d个其他设备",
+    "reason": "2026-11-28 佔位照上游 EN（... and %%d more device(s)）：無參 getText 取回 %d 交 string.format，不記 WARN"
+  },
+  "IG_UI.json|IGUI_PagerMod_BroadcastSent": {
+    "as1_value": "广播已发送至 %d 个寻呼机.",
+    "value": "广播已发送至 %s 个寻呼机.",
+    "reason": "2026-11-28 佔位照上游 EN（%s）：PagerMod.fmt 把數字轉字串再帶參 getText，%d 拋 IllegalFormatConversion、畫面顯示字面 %d"
+  },
+  "IG_UI.json|IGUI_PagerMod_ChannelSent": {
+    "as1_value": "频道 %s 已传呼 (%d 个寻呼机).",
+    "value": "频道 %s 已传呼 (%s 个寻呼机).",
+    "reason": "2026-11-28 佔位照上游 EN（%s）：PagerMod.fmt 把數字轉字串再帶參 getText，%d 拋 IllegalFormatConversion、畫面顯示字面 %d"
+  },
+  "IG_UI.json|IGUI_PagerMod_Cooldown": {
+    "as1_value": "请稍等 - 等待 %d 秒后才能再次传呼.",
+    "value": "请稍等 - 等待 %s 秒后才能再次传呼.",
+    "reason": "2026-11-28 佔位照上游 EN（%s）：PagerMod.fmt 把數字轉字串再帶參 getText，%d 拋 IllegalFormatConversion、畫面顯示字面 %d"
+  },
+  "IG_UI.json|IGUI_PagerMod_GlobalSent": {
+    "as1_value": "已发布到全局聊天 (送达 %d 台).",
+    "value": "已发布到全局聊天 (送达 %s 台).",
+    "reason": "2026-11-28 佔位照上游 EN（%s）：PagerMod.fmt 把數字轉字串再帶參 getText，%d 拋 IllegalFormatConversion、畫面顯示字面 %d"
+  },
+  "IG_UI.json|IGUI_PagerMod_SOSSent": {
+    "as1_value": "SOS 已广播至 %d 个寻呼机!",
+    "value": "SOS 已广播至 %s 个寻呼机!",
+    "reason": "2026-11-28 佔位照上游 EN（%s）：PagerMod.fmt 把數字轉字串再帶參 getText，%d 拋 IllegalFormatConversion、畫面顯示字面 %d"
+  },
+  "IG_UI.json|IGUI_PagerMod_SharedNearby": {
+    "as1_value": "已将你的号码分享给附近的 %d 个寻呼机.",
+    "value": "已将你的号码分享给附近的 %s 个寻呼机.",
+    "reason": "2026-11-28 佔位照上游 EN（%s）：PagerMod.fmt 把數字轉字串再帶參 getText，%d 拋 IllegalFormatConversion、畫面顯示字面 %d"
+  },
+  "IG_UI.json|IGUI_PagerMod_SigTowerOn": {
+    "as1_value": "信号: 塔 #%d",
+    "value": "信号: 塔 #%s",
+    "reason": "2026-11-28 佔位照上游 EN（%s）：PagerWindow:prerender 每幀帶參取值，%d 拋 IllegalFormatConversion、畫面顯示字面 %d"
+  },
+  "IG_UI.json|IGUI_PagerMod_TowerLimitHit": {
+    "as1_value": "你一次只能设置 %d 个寻呼机塔.",
+    "value": "你一次只能设置 %s 个寻呼机塔.",
+    "reason": "2026-11-28 佔位照上游 EN（%s）：PagerMod.fmt 把數字轉字串再帶參 getText，%d 拋 IllegalFormatConversion、畫面顯示字面 %d"
   }
 }

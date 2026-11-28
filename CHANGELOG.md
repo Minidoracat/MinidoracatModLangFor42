@@ -4,6 +4,13 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
+## [Unreleased]
+
+### Fixed
+
+- **4 個 MOD 的介面數字顯示成「%d」、「%2$s」或每幀報錯的問題修正（12 項）：Extensive Health Rework Evolved 的疾病階段與嚴重程度、Functional Pager 的訊號塔編號與傳呼人數、Hybrid Gun Repair 的武器整體狀況、Take A Bath And Shower 的浴缸更新時間。** 這些介面開著時不再每幀往 console 寫錯誤。
+  > 技術要點：2026-11-28 查證 Workshop 玩家「TICK 占用高」時全掃出貨值對上游 EN 的佔位寫法。這幾處照 As1 原版同步的簡中，佔位寫法和上游 MOD 現在的寫法對不上：MOD 帶參 `getText`（數字先轉字串）遇到 `%d`／`%.1f` 拋 `IllegalFormatConversionException`，每次呼叫記 WARN、畫面顯示字面；EHR 疾病列與 PagerMod 訊號列在繪製函式裡取值，每幀一次。TABAS 寫 `%2`、MOD 只傳一個參數。HGR v2 改成 render 裡 `string.format(getTextOrNull(key), avg)`，本包 `%1%%` 經 formatFixer 變 `%1$s`，Kahlua `string.format` 每幀報錯、狀況值畫不出來。另把 Plysken Solar Revolution `IGUI_PSRComputerPanel_MoreDevices` 改回上游的 `%%d`（無參取值不記 WARN；本機版本找不到呼叫處）。全部照上游 EN 的寫法改 `sources/ch`＋`cn_overrides`＋`ch_review_state`。
+
 ## [42.22.2-1.82.0] - 2026-11-28
 
 ### Added
