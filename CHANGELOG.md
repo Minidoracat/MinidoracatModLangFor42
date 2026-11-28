@@ -4,7 +4,7 @@
 
 格式基於 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/)，版本號遵循 `{PZ版本}-{Mod主版本}.{次版本}.{修訂}` 格式。
 
-## [Unreleased]
+## [42.22.2-1.83.0] - 2026-11-29
 
 ### Added
 
@@ -18,7 +18,7 @@
 
 - **MOD 改了英文的已出貨文字跟著改（8 項）。** Radio Trader 的對講機發光說明（4 項）、Snake's ModPack 的長木棍堆改成 24 根（2 項）、Senators Martial Arts 的閃避與格擋按鍵名（2 項）。
   > 技術要點：As1 衍生層 4 項改 `sources/ch`＋`cn_overrides`，own 層 4 項經 `apply_translations` 更新。
-- **關掉「衝突提醒」選項的玩家，進遊戲時不再先檢查翻譯衝突。** 開著的玩家照舊。
+- **關掉「有新的 MOD 文字衝突時提醒我」選項的玩家，進遊戲時不再先檢查翻譯衝突。** 開著的玩家照舊。
   > 技術要點：`CatModLang.maybeNotify` 先看選項再讀衝突資料；`openList` 呼叫 `open` 時補傳第三個參數 `nil`（家族 `verify_mod.py` 第 1c 項，`kahlua_args_baseline.txt` 清空）。
 
 ## [42.22.2-1.82.1] - 2026-11-28
